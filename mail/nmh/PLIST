@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/01/02 20:54:17 cjep Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/01/16 19:19:46 jmmv Exp $
 bin/ali
 bin/anno
 bin/burst
@@ -38,33 +38,6 @@ bin/sortm
 bin/viamail
 bin/whatnow
 bin/whom
-etc/nmh/MailAliases
-etc/nmh/components
-etc/nmh/digestcomps
-etc/nmh/distcomps
-etc/nmh/forwcomps
-etc/nmh/mhl.body
-etc/nmh/mhl.digest
-etc/nmh/mhl.format
-etc/nmh/mhl.forward
-etc/nmh/mhl.headers
-etc/nmh/mhl.reply
-etc/nmh/mhn.defaults.dist
-etc/nmh/mts.conf.dist
-etc/nmh/rcvdistcomps
-etc/nmh/rcvdistcomps.outbox
-etc/nmh/replcomps
-etc/nmh/replgroupcomps
-etc/nmh/scan.MMDDYY
-etc/nmh/scan.YYYYMMDD
-etc/nmh/scan.default
-etc/nmh/scan.mailx
-etc/nmh/scan.nomime
-etc/nmh/scan.size
-etc/nmh/scan.time
-etc/nmh/scan.timely
-etc/nmh/scan.unseen
-etc/nmh/tmac.h
 libexec/nmh/ap
 libexec/nmh/conflict
 libexec/nmh/dp
@@ -148,6 +121,33 @@ share/doc/nmh/FAQ
 share/doc/nmh/MAIL.FILTERING
 share/doc/nmh/README
 share/doc/nmh/TODO
-@dirrm libexec/nmh
+share/examples/nmh/MailAliases
+share/examples/nmh/components
+share/examples/nmh/digestcomps
+share/examples/nmh/distcomps
+share/examples/nmh/forwcomps
+share/examples/nmh/mhl.body
+share/examples/nmh/mhl.digest
+share/examples/nmh/mhl.format
+share/examples/nmh/mhl.forward
+share/examples/nmh/mhl.headers
+share/examples/nmh/mhl.reply
+share/examples/nmh/mhn.defaults
+share/examples/nmh/mts.conf
+share/examples/nmh/rcvdistcomps
+share/examples/nmh/rcvdistcomps.outbox
+share/examples/nmh/replcomps
+share/examples/nmh/replgroupcomps
+share/examples/nmh/scan.MMDDYY
+share/examples/nmh/scan.YYYYMMDD
+share/examples/nmh/scan.default
+share/examples/nmh/scan.mailx
+share/examples/nmh/scan.nomime
+share/examples/nmh/scan.size
+share/examples/nmh/scan.time
+share/examples/nmh/scan.timely
+share/examples/nmh/scan.unseen
+share/examples/nmh/tmac.h
+@dirrm share/examples/nmh
 @dirrm share/doc/nmh
-@unexec ${RMDIR} %D/etc/nmh 2>/dev/null || ${TRUE}
+@dirrm libexec/nmh
