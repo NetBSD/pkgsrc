@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2004/03/14 19:26:37 abs Exp $
+$NetBSD: patch-af,v 1.1.2.1 2004/05/30 09:01:43 grant Exp $
 
---- src/daemon.c.orig	2003-08-18 13:52:53.000000000 +0100
+--- src/daemon.c.orig	Wed May  5 11:08:35 2004
 +++ src/daemon.c
-@@ -719,6 +719,7 @@ daemon_go(void)
+@@ -756,6 +756,7 @@ daemon_go(void)
  {
  int *listen_sockets = NULL;
  int listen_socket_count = 0;
@@ -10,7 +10,7 @@ $NetBSD: patch-af,v 1.1 2004/03/14 19:26:37 abs Exp $
  ip_address_item *addresses = NULL;
  
  /* If any debugging options are set, turn on the D_pid bit so that all
-@@ -736,9 +737,17 @@ if (background_daemon)
+@@ -1082,9 +1083,17 @@ if (background_daemon)
    {
    log_close_all();  /* Just in case anything was logged earlier */
    search_tidyup();  /* Just in case any were used in reading the config. */
