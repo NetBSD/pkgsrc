@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/06/22 16:16:06 jlam Exp $
-# FreeBSD Id: Makefile,v 1.8 1996/11/21 11:27:26 asami Exp
-#
+# $NetBSD: Makefile,v 1.12 2001/07/19 16:22:41 tron Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	mm-2.7
@@ -11,9 +9,11 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	packages@netbsd.org
 COMMENT=	Implementation of MIME, the Multipurpose Internet Mail Extensions
 
+CONFLICTS+=	elm>=2.5.5
+
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
-USE_BUILDLINK_ONLY=	yes
-USE_X11=		yes
+USE_BUILDLINK_ONLY=	YES
+USE_X11=		YES
 
 .include "../../mk/bsd.prefs.mk"
 
