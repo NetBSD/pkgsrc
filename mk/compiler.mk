@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.28 2004/05/08 06:03:26 grant Exp $
+# $NetBSD: compiler.mk,v 1.29 2004/05/08 15:09:31 grant Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -138,7 +138,7 @@ _PKGSRC_COMPILER:=	${_COMPILER}
 
 .for _compiler_ in ${_PSEUDO_COMPILERS}
 .  if !empty(PKGSRC_COMPILER:M${_compiler_})
-_PKGSRC_COMPILER:=     ${_compiler_} ${_PKGSRC_COMPILER}
+_PKGSRC_COMPILER:=	${_PKGSRC_COMPILER} ${_compiler_}
 .  endif
 .endfor
 
