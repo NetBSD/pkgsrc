@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/11/27 00:33:40 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2004/11/27 21:02:02 wiz Exp $
 #
 
 DISTNAME=       spruce-0.5.17
@@ -6,7 +6,7 @@ PKGREVISION=	5
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=spruce/}
 
-MAINTAINER=	mellon@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://spruce.sourceforge.net/
 COMMENT=	MIME-aware, GNOME-based email program
 
