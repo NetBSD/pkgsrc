@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/01/20 12:18:15 agc Exp $
+# $NetBSD: Makefile,v 1.21 2004/07/09 16:51:59 xtraeme Exp $
 
 DISTNAME=	GMT3.4
 PKGNAME=	GMT-3.4
@@ -19,7 +19,7 @@ COMMENT=	Generic Mapping Tools
 
 DEPENDS+=	netcdf>=3.4:../../devel/netcdf
 
-EXTRACT_SUFFIX= .tar.bz2
+EXTRACT_SUFX=	.tar.bz2
 DIST_SUBDIR=	${DISTNAME}
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
