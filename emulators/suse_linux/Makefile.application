@@ -1,12 +1,9 @@
-# $NetBSD: Makefile.application,v 1.1 2002/04/04 11:55:58 tron Exp $
+# $NetBSD: Makefile.application,v 1.2 2002/04/04 12:10:08 tron Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
-LINUX_KERNEL_OSRELEASE=		2.0.38
-
 .if (${OPSYS} == NetBSD) && (${MACHINE_ARCH} == i386)
 LINUX_KERNEL_OSRELEASE!=	(/sbin/sysctl -n emul.linux.kern.osrelease 2>/dev/null; ${ECHO} 2.0.38) | ${HEAD} -1
-.endif
 
 .if (${LINUX_KERNEL_OSRELEASE} == 2.0.38)
 SUSE_DIR_PREFIX=		suse64
@@ -18,6 +15,10 @@ SUSE_VERSION=			7.3
 
 .if defined(RPM_FILES)
 .include "../../emulators/${SUSE_DIR_PREFIX}_linux/Makefile.common"
+.else
+.include "../../mk/bsd.pkg.mk"
+.endif
+
 .else
 .include "../../mk/bsd.pkg.mk"
 .endif
