@@ -1,11 +1,11 @@
-$NetBSD: patch-ag,v 1.4 2001/05/28 21:02:28 jlam Exp $
+$NetBSD: patch-ag,v 1.5 2003/12/29 21:59:01 heas Exp $
 
---- configure.in.orig	Fri Jan 19 18:26:13 2001
-+++ configure.in	Mon May 28 16:27:43 2001
-@@ -185,7 +185,10 @@
+--- configure.ac.orig	2003-12-21 02:10:57.000000000 +0000
++++ configure.ac	2003-12-21 02:08:46.000000000 +0000
+@@ -200,7 +200,10 @@
  case "${enable_vtysh}" in
    "yes") VTYSH="vtysh";
-          AC_DEFINE(VTYSH)
+          AC_DEFINE(VTYSH,,VTY shell)
 -	 AC_CHECK_LIB(tinfo, tputs, , AC_CHECK_LIB(ncurses, tputs))
 +	 AC_CHECK_LIB(termcap, tputs, ,
 +		AC_CHECK_LIB(tinfo, tputs, ,
