@@ -1,0 +1,47 @@
+$NetBSD: patch-ac,v 1.1 1999/05/31 22:22:09 tron Exp $
+
+--- floppyd.cpp.orig	Sun May 30 18:05:46 1999
++++ floppyd.cpp	Sun May 30 18:25:37 1999
+@@ -527,12 +527,12 @@
+ {
+ 	int					new_sock;
+ 	struct sockaddr_in	addr;
+-	int					len;
++	socklen_t					len;
+ 
+ 	/*
+ 	 * Ignore dead servers so no zombies should be left hanging.
+ 	 */
+-	signal(SIGCLD, SIG_IGN);
++	signal(SIGCHLD, SIG_IGN);
+ 
+ 	for (;;)
+ 	{
+@@ -615,6 +615,7 @@
+ 	short			bind_port = FLOPPYD_DEFAULT_PORT;
+ 	uid_t			run_uid = 65535;
+ 	gid_t			run_gid = 65535;
++	pid_t			run_pid;
+ 	int			sock;
+ 	int			port_is_supplied = 0;
+ 	int			no_local = 0;
+@@ -665,7 +666,7 @@
+ 	}
+ 	if(!run_as_server) {
+ 		struct sockaddr_in	addr;
+-		int len = sizeof(addr);
++		socklen_t len = sizeof(addr);
+ 		
+ 		/* try to find out port that we are connected to */
+ 		if(getsockname(0, (sockaddr*) &addr, &len) >= 0 && 
+@@ -836,8 +837,8 @@
+ 			/*
+ 			 * Start a new session and group.
+ 			 */
+-			setsid();
+-			setpgrp();
++			run_pid = setsid();
++			setpgrp(0, run_pid);
+ 
+ 		  	close(2);
+ 			open("/dev/null", O_WRONLY);
