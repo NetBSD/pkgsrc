@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2000/08/16 00:38:49 hubertf Exp $
+# $NetBSD: Makefile,v 1.34 2000/08/22 21:23:23 skrll Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/05 04:19:46 asami Exp
 #
 
@@ -12,6 +12,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.kde.org/
 
 USE_LIBTOOL=	yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/admin/ltconfig
 GNU_CONFIGURE=	yes
 
 EVAL_PREFIX+=	QT1DIR=qt1
