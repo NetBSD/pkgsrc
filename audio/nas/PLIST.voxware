@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST.voxware,v 1.1 2001/11/01 00:20:13 zuntum Exp $
+bin/nasd
+man/cat1/auvoxware.0
+man/cat1/nasd.0
+man/cat1/nasd.conf.0
+share/examples/nas/nasd.conf.eg
+@dirrm share/examples/nas
