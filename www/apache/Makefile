@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 1998/10/03 22:00:22 tv Exp $
+# $NetBSD: Makefile,v 1.23 1998/10/05 14:26:01 tv Exp $
 #
 # The apache-modssl pkg .include's us, so that pkg tuning rules work for
 # both without a major duplication of Makefiles.  So we use ?= and += in
@@ -17,7 +17,7 @@ MAINTAINER=	cjs@netbsd.org
 HOMEPAGE=	http://www.apache.org/
 
 EXTRACT_ONLY+=	${DISTNAME}${EXTRACT_SUFX}
-CONFLICTS?=	apache-1.3.0 apache-1.3.1 apache-modssl-1.3.1 apache-modssl-1.3.2
+CONFLICTS?=	apache-1.3.0 apache-1.3.1 apache-modssl-1.3.1 apache-modssl-1.3.2.2012
 HAS_CONFIGURE=	YES
 CONFIGURE_ARGS+=--compat --prefix=${PREFIX}/http --exec-prefix=${PREFIX} \
 		--mandir=${PREFIX}/man --libexecdir=${PREFIX}/lib/apache \
