@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/09/27 23:18:44 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/01/18 11:04:04 drochner Exp $
 #
 
 DISTNAME=	tdir-1.58
@@ -8,13 +8,9 @@ MASTER_SITES=	http://www.tundraware.com/Software/tdir/
 MAINTAINER=	zuntum@netbsd.org
 COMMENT=	Display directories with files ordered by ending "extension"
 
-DEPENDS+=	python-[0-9]*:../../lang/python
-
 LICENSE=	tdir-license
 
-post-patch:
-	${SED} "s,/usr/local/bin/python,${LOCALBASE}/bin/python,"		\
-		${WRKSRC}/tdir > ${WRKSRC}/tdir.done
-	${MV} -f ${WRKSRC}/tdir.done ${WRKSRC}/tdir
+PYTHON_PATCH_SCRIPTS=	tdir
 
+.include "../../lang/python/application.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
