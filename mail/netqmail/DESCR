@@ -1,0 +1,12 @@
+Charles Cazabon, Dave Sill, Henning Brauer, Peter Samuel, and
+Russell Nelson have put together a netqmail-1.05 distribution of
+qmail. It is comprised of qmail-1.03 plus a patch file, some
+documentation, and a shell script which prepares the files for
+compilation.
+
+We have done this because in our opinion, too many new users are
+confused by the out-of-date INSTALL file, and too much time is
+spent arguing on the mailing list over bugs. We have tried to stick
+to the barest minimum number of changes. We have fixed only those
+things which are out-and-out wrong, or which have been approved by
+djb (specifically QMAILQUEUE).
