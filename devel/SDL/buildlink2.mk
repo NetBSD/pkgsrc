@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.7 2003/07/26 21:38:22 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2003/07/26 23:05:34 jmmv Exp $
 
 .if !defined(SDL_BUILDLINK2_MK)
 SDL_BUILDLINK2_MK=	# defined
@@ -19,9 +19,6 @@ USE_X11=		YES
 
 PTHREAD_OPTS+=		require
 
-.if defined(SDL_USE_NAS)
-.  include "../../audio/nas/buildlink2.mk"
-.endif
 .include "../../graphics/MesaLib/buildlink2.mk"
 .include "../../graphics/glut/buildlink2.mk"
 .include "../../graphics/aalib-x11/buildlink2.mk"
