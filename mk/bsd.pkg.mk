@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1452 2004/04/26 05:13:06 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1453 2004/04/27 19:23:34 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1378,6 +1378,8 @@ USE_LANGUAGES?=		# empty
 #
 .include "../../mk/compiler.mk"
 
+.include "../../mk/tools.mk"
+
 .if !empty(USE_BUILDLINK2:M[nN][oO]) && !empty(USE_BUILDLINK3:M[nN][oO])
 NO_BUILDLINK=		# defined
 .endif
@@ -1388,8 +1390,6 @@ NO_BUILDLINK=		# defined
 .    include "../../mk/buildlink2/bsd.buildlink2.mk"
 .  endif
 .endif
-
-.include "../../mk/tools.mk"
 
 .if defined(USE_DIRS) && !empty(USE_DIRS) && \
     ${PKG_INSTALLATION_TYPE} == "overwrite"
