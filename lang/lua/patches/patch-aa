@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2004/05/02 17:40:27 xtraeme Exp $
+$NetBSD: patch-aa,v 1.7 2004/06/12 03:01:59 grant Exp $
 
---- config.orig	Fri Apr 11 14:00:41 2003
+--- config.orig	2003-04-12 00:00:41.000000000 +1000
 +++ config
 @@ -25,7 +25,7 @@ USERCONF=
  # interface (e.g., Linux, Solaris, IRIX, BSD, AIX, HPUX, and probably others),
@@ -20,6 +20,17 @@ $NetBSD: patch-aa,v 1.6 2004/05/02 17:40:27 xtraeme Exp $
  
  # ------------------------------------------------------------- Lua interpreter
  
+@@ -108,8 +108,8 @@ EXTRA_LIBS= -lm
+ # You need an ANSI C compiler. gcc is a popular one. We do not use -ansi in
+ # WARN because it disables POSIX features used in the libraries.
+ #
+-CC= gcc
+-WARN= -Wall
++# CC= gcc
++# WARN= -Wall
+ 
+ # ------------------------------------------------------------------ C options
+ 
 @@ -119,11 +119,11 @@ WARN= -Wall
  # debug information. If you only want the shared libraries, you may want to
  # add -fPIC to MYCFLAGS.
@@ -30,9 +41,18 @@ $NetBSD: patch-aa,v 1.6 2004/05/02 17:40:27 xtraeme Exp $
  
  # Write here any options you may need for your C linker.
 -#MYLDFLAGS=
-+MYLDFLAGS= $(LDFLAGS) -Wl,-E
++MYLDFLAGS= $(LDFLAGS) $(LIBS) # -Wl,-E
  
  # ------------------------------------------------------------------ librarian
+ 
+@@ -134,7 +134,7 @@ AR= ar rcu
+ # If your system doesn't have (or need) ranlib, use RANLIB=true.
+ # On some systems, "ar s" does what ranlib would do.
+ #
+-RANLIB= ranlib
++# RANLIB= ranlib
+ #RANLIB= ar s
+ #RANLIB= true
  
 @@ -148,7 +148,7 @@ STRIP= strip
  
