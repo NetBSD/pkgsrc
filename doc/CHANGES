@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1487 2003/02/26 09:46:50 wiz Exp $
+$NetBSD: CHANGES,v 1.1488 2003/02/26 10:16:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -836,3 +836,10 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated autogen to 5.5.2 [kristerw 2003-02-25]
 	Added pciutils-2.1.11 [kristerw 2003-02-26]
 	Updated capc-calc to 2.11.7 [wiz 2003-02-26]
+	Updated libdvdread to 0.9.4 [wiz 2003-02-26]
+	Updated dvdbackup to 0.1.1nb1 [wiz 2003-02-26]
+	Updated mplayer to 0.90rc3nb1 [wiz 2003-02-26]
+	Updated gmplayer to 0.90rc3nb2 [wiz 2003-02-26]
+	Updated mencoder to 0.90rc3nb1 [wiz 2003-02-26]
+	Updated ogle to 0.8.5nb2 [wiz 2003-02-26]
+	Updated ogle_gui to 0.8.5nb2 [wiz 2003-02-26]
