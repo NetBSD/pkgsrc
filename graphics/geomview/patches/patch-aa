@@ -1,88 +1,79 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/02/09 03:27:02 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2001/03/29 00:02:18 jtb Exp $
 
---- configure.orig	Sun Nov 19 23:20:25 2000
+--- configure.orig	Mon Mar 26 05:23:02 2001
 +++ configure
-@@ -2020,7 +2020,7 @@
+@@ -2028,7 +2028,7 @@
+ 
+   # It would also be nice to do this for all -L options, not just this one.
+   if test -n "$x_libraries"; then
+-    X_LIBS="$X_LIBS -L$x_libraries"
++    X_LIBS="$X_LIBS -Wl,-R$x_libraries -L$x_libraries"
+     # For Solaris; some versions of Sun CC require a space after -R and
+     # others require no space.  Words are not sufficient . . . .
+     case "`(uname -sr) 2>/dev/null`" in
+@@ -2563,7 +2563,7 @@
+ 
+   # Check for libraries that X11R6 Xt/Xaw programs need.
+   ac_save_LDFLAGS="$LDFLAGS"
+-  test -n "$x_libraries" && LDFLAGS="$LDFLAGS -L$x_libraries"
++  test -n "$x_libraries" && LDFLAGS="$LDFLAGS -Wl,-R$x_libraries -L$x_libraries"
+   # SM needs ICE to (dynamically) link under SunOS 4.x (so we have to
+   # check for ICE first), but we must link in the order -lSM -lICE or
+   # we get undefined symbols.  So assume we have SM if we have ICE.
+@@ -2643,7 +2643,7 @@
  for geom_z in $geom_dirs ; do
    geom_z=`eval echo $geom_z`
-   if test "$geom_z" != "" ; then
--    geom_l_option="-L$geom_z"
-+    geom_l_option="-R$geom_z -L$geom_z"
-   else
-     geom_l_option=""
-   fi
-@@ -2069,7 +2069,7 @@
+   geom_l_option=
+-  test -n "$geom_z" && geom_l_option="-L$geom_z"
++  test -n "$geom_z" && geom_l_option="-Wl,-R$geom_z -L$geom_z"
+   LIBS="$geom_l_option $geom_lib $geom_otherlibs"
+   echo "configure:2649: checking for $geom_func with $geom_l_option" >&5
+   cat > conftest.$ac_ext <<EOF
+@@ -2781,7 +2781,7 @@
  for geom_z in $geom_dirs ; do
    geom_z=`eval echo $geom_z`
-   if test "$geom_z" != "" ; then
--    geom_l_option="-L$geom_z"
-+    geom_l_option="-R$geom_z -L$geom_z"
-   else
-     geom_l_option=""
-   fi
-@@ -2122,7 +2122,7 @@
+   geom_l_option=
+-  test -n "$geom_z" && geom_l_option="-L$geom_z"
++  test -n "$geom_z" && geom_l_option="-Wl,-R$geom_z -L$geom_z"
+   LIBS="$geom_l_option $geom_lib $geom_otherlibs"
+   echo "configure:2787: checking for $geom_func with $geom_l_option" >&5
+   cat > conftest.$ac_ext <<EOF
+@@ -2910,7 +2910,7 @@
  for geom_z in $geom_dirs ; do
    geom_z=`eval echo $geom_z`
-   if test "$geom_z" != "" ; then
--    geom_l_option="-L$geom_z"
-+    geom_l_option="-R$geom_z -L$geom_z"
-   else
-     geom_l_option=""
-   fi
-@@ -2190,7 +2190,7 @@
+   geom_l_option=
+-  test -n "$geom_z" && geom_l_option="-L$geom_z"
++  test -n "$geom_z" && geom_l_option="-Wl,-R$geom_z -L$geom_z"
+   LIBS="$geom_l_option $geom_lib $geom_otherlibs"
+   echo "configure:2916: checking for $geom_func with $geom_l_option" >&5
+   cat > conftest.$ac_ext <<EOF
+@@ -2964,7 +2964,7 @@
  for geom_z in $geom_dirs ; do
    geom_z=`eval echo $geom_z`
-   if test "$geom_z" != "" ; then
--    geom_l_option="-L$geom_z"
-+    geom_l_option="-R$geom_z -L$geom_z"
-   else
-     geom_l_option=""
-   fi
-@@ -2336,7 +2336,7 @@
+   geom_l_option=
+-  test -n "$geom_z" && geom_l_option="-L$geom_z"
++  test -n "$geom_z" && geom_l_option="-Wl,-R$geom_z -L$geom_z"
+   LIBS="$geom_l_option $geom_lib $geom_otherlibs"
+   echo "configure:2970: checking for $geom_func with $geom_l_option" >&5
+   cat > conftest.$ac_ext <<EOF
+@@ -3106,7 +3106,7 @@
  for geom_z in $geom_dirs ; do
    geom_z=`eval echo $geom_z`
-   if test "$geom_z" != "" ; then
--    geom_l_option="-L$geom_z"
-+    geom_l_option="--R$geom_z L$geom_z"
-   else
-     geom_l_option=""
-   fi
-@@ -2470,7 +2470,7 @@
- for geom_z in $geom_dirs ; do
-   geom_z=`eval echo $geom_z`
-   if test "$geom_z" != "" ; then
--    geom_l_option="-L$geom_z"
-+    geom_l_option="-R$geom_z -L$geom_z"
-   else
-     geom_l_option=""
-   fi
-@@ -2527,7 +2527,7 @@
- for geom_z in $geom_dirs ; do
-   geom_z=`eval echo $geom_z`
-   if test "$geom_z" != "" ; then
--    geom_l_option="-L$geom_z"
-+    geom_l_option="-R$geom_z -L$geom_z"
-   else
-     geom_l_option=""
-   fi
-@@ -2690,7 +2690,7 @@
- for geom_z in $geom_dirs ; do
-   geom_z=`eval echo $geom_z`
-   if test "$geom_z" != "" ; then
--    geom_l_option="-L$geom_z"
-+    geom_l_option="-R$geom_z -L$geom_z"
-   else
-     geom_l_option=""
-   fi
-@@ -3118,6 +3118,7 @@
+   geom_l_option=
+-  test -n "$geom_z" && geom_l_option="-L$geom_z"
++  test -n "$geom_z" && geom_l_option="-Wl,-R$geom_z -L$geom_z"
+   LIBS="$geom_l_option $geom_lib $geom_otherlibs"
+   echo "configure:3112: checking for $geom_func with $geom_l_option" >&5
+   cat > conftest.$ac_ext <<EOF
+@@ -3462,6 +3462,7 @@
  cat > conftest.$ac_ext <<EOF
- #line 3120 "configure"
+ #line 3464 "configure"
  #include "confdefs.h"
 +#include <stdio.h>
   #include <sys/socket.h> 
  int main() {
   int s = socket(AF_UNIX, SOCK_STREAM, 0); 
-@@ -3362,7 +3363,7 @@
+@@ -3865,7 +3866,7 @@
  moduledir="\$(exec_prefix)/bin"
  
  

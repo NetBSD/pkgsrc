@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 2001/02/09 03:27:02 jtb Exp $
+$NetBSD: md5,v 1.2 2001/03/29 00:02:18 jtb Exp $
 
-MD5 (geomview-1.8.0.tar.gz) = f925e7cf057ff9ea5bbecdc2331e3822
+SHA1 (geomview-1.8.1.tar.gz) = 026a22ecba471f7d55c407de4fc409213d166477
