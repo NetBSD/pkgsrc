@@ -1,4 +1,4 @@
-$NetBSD: patch-png3,v 1.2 1999/11/18 12:54:06 rh Exp $
+$NetBSD: patch-av,v 1.1 2001/04/05 13:57:18 wiz Exp $
 
 The source for this file can be found at
 http://www.mit.edu/afs/athena/contrib/graphics/src/xv/patches/png/bits/br_png

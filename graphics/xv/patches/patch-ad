@@ -1,4 +1,5 @@
-$NetBSD: patch-ad,v 1.7 1999/04/23 22:16:07 tron Exp $
+$NetBSD: patch-ad,v 1.8 2001/04/05 13:57:15 wiz Exp $
+
 --- Imakefile.orig	Tue Oct 27 00:45:53 1998
 +++ Imakefile	Tue Oct 27 01:13:26 1998
 @@ -6,13 +6,15 @@

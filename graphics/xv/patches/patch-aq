@@ -1,4 +1,4 @@
-$NetBSD: patch-png2-xvgam.c,v 1.1 1999/11/14 13:26:01 rh Exp $
+$NetBSD: patch-aq,v 1.1 2001/04/05 13:57:17 wiz Exp $
 
 --- xvgam.c.orig	Fri Jan 13 20:51:14 1995
 +++ xvgam.c	Sun Nov 14 14:05:49 1999
