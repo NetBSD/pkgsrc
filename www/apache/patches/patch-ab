@@ -1,0 +1,15 @@
+--- support/apachectl.old	Sat Oct 25 15:35:19 1997
++++ support/apachectl	Wed Mar  4 22:54:49 1998
+@@ -21,10 +21,10 @@
+ # --------------------                              --------------------
+ # 
+ # the path to your PID file
+-PIDFILE=/usr/local/apache/logs/httpd.pid
++PIDFILE=/usr/pkg/http/logs/httpd.pid
+ #
+ # the path to your httpd binary
+-HTTPD=/usr/local/apache/src/httpd
++HTTPD=/usr/pkg/sbin/httpd
+ #
+ # a command that outputs a formatted text version of the HTML at the
+ # url given on the command line.  Designed for lynx, however other
