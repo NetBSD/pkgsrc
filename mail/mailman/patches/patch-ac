@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/08/23 15:28:17 bouyer Exp $
+$NetBSD: patch-ac,v 1.2 2003/12/23 11:02:13 xtraeme Exp $
 
---- misc/Makefile.in.orig	Thu Jul 25 17:07:03 2002
-+++ misc/Makefile.in	Thu Jul 25 17:07:36 2002
-@@ -68,7 +68,7 @@
- 	    dir=$(prefix)/$$d; \
- 	    $(INSTALL) -m $(FILEMODE) paths.py $$dir; \
- 	done
--	$(INSTALL) -m $(DATAMODE) pending_subscriptions.db $(DATADIR)
-+	$(INSTALL) -m $(DATAMODE) pending_subscriptions.db $(prefix)/support
+--- INSTALL.orig	Mon Sep 15 15:01:56 2003
++++ INSTALL
+@@ -331,7 +331,7 @@ upgrade.
+       for a generic site list in misc/sitelist.cfg to help you with
+       this.  The template can be applied to your site list by running:
  
- finish:
+-          % bin/config_list -i data/sitelist.cfg mailman
++          % bin/config_list -i support/sitelist.cfg mailman
  
+       Before doing this, review the configuration options in the
+       template (note that many options are not changed by

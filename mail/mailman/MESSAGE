@@ -1,21 +1,27 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:15 wiz Exp $
+$NetBSD: MESSAGE,v 1.3 2003/12/23 11:02:13 xtraeme Exp $
+
+Mailman needs to know your mail domain and Web server hostname.  Edit
+${PREFIX}/lib/mailman/Mailman/mm_cfg.py and insert your hostname
+in place of "localhost" in DEFAULT_EMAIL_HOST and DEFAULT_URL_HOST.
 
 You will need to make mailman accessible through your HTTP server.
 If you are running Apache, then you may add the following line to httpd.conf:
 
 	Include ${PKG_SYSCONFDIR}/mailman.conf
 
-to make mailman accessible through:
-	
-	http://www.domain.com/mailman/
+to make mailman and its archive accessible through, respectively,
 
-and the archive accessible though
+	http://www.domain.com/mailman/
 	http://www.domain.com/pipermail/
 
 You will also need to add some crontab entries for the user ${MAILMAN_USER}.
 You can use ${EXECDIR}/cron/crontab.in as template.
-See the files in ${DOCDIR} for how to use mailman, especially
-${DOCDIR}/INSTALL starting at section 5 for post-install configurations.
+
+See the files in ${DOCDIR} for how to use mailman,
+especially the sections:
+
+	4, starting with 'Create a "site-wide" mailing list'.
+	5, 'Customizing Mailman'
 
 ===========================================================================

@@ -1,13 +1,16 @@
-$NetBSD: patch-ad,v 1.1.1.1 2002/08/23 15:28:17 bouyer Exp $
+$NetBSD: patch-ad,v 1.2 2003/12/23 11:02:13 xtraeme Exp $
 
---- filters/Makefile.in.orig	Thu Jul 25 17:08:08 2002
-+++ filters/Makefile.in	Thu Jul 25 17:08:40 2002
-@@ -37,7 +37,7 @@
+--- Mailman/mm_cfg.py.dist.in.orig	Mon Sep 15 15:20:02 2003
++++ Mailman/mm_cfg.py.dist.in
+@@ -42,3 +42,11 @@ from Defaults import *
  
- OPT=		@OPT@
- CFLAGS=		$(OPT) $(DEFS)
--FILTERSDIR= 	$(var_prefix)/filters
-+FILTERSDIR= 	$(prefix)/support
- 
- SHELL=		/bin/sh
- 
+ ##################################################
+ # Put YOUR site-specific settings below this line.
++
++# IMPORTANT: Edit the following two definitions to provide the domain
++# name of your mail lists, and host name of the Web server.
++# (Leave the add_virtualhost line alone.)
++#
++DEFAULT_EMAIL_HOST = '@MAILHOST@'
++DEFAULT_URL_HOST = '@URLHOST@'
++add_virtualhost(DEFAULT_URL_HOST, DEFAULT_EMAIL_HOST)

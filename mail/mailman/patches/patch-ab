@@ -1,26 +1,17 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/08/23 15:28:17 bouyer Exp $
+$NetBSD: patch-ab,v 1.2 2003/12/23 11:02:13 xtraeme Exp $
 
---- Makefile.in.orig	Fri Sep 22 10:06:19 2000
-+++ Makefile.in	Thu Jul 25 17:06:34 2002
-@@ -49,7 +49,7 @@
- 	bin templates scripts cron \
- 	Mailman Mailman/Cgi Mailman/Logging Mailman/Archiver \
- 	Mailman/Handlers Mailman/Bouncers Mailman/pythonlib \
--	icons
-+	icons support
- ARCH_DEP_DIRS=	cgi-bin mail
- 
- # Directories make should decend into
-@@ -63,7 +63,7 @@
+--- Makefile.in.orig	Mon Sep 15 14:36:04 2003
++++ Makefile.in
+@@ -65,7 +65,7 @@ DIRMODE=	775
  EXEMODE=	755
  FILEMODE=	644
  INSTALL_PROGRAM=$(INSTALL) -m $(EXEMODE)
 -DIRSETGID=	chmod g+s
-+DIRSETGID=	true
++DIRSETGID=	:
  
- 
- # Rules
-@@ -76,22 +76,9 @@
+ DATE = $(shell python -c 'import time; print time.strftime("%d-%b-%Y"),')
+ LANGPACK = README-I18N.en templates messages
+@@ -81,22 +81,10 @@ subdirs: $(SUBDIRS)
  	    (cd $$d; $(MAKE)); \
  	done
  
@@ -28,19 +19,19 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/08/23 15:28:17 bouyer Exp $
 +install: doinstall
  
  doinstall: $(SUBDIRS)
--	@echo "Creating architecture independent directories..."
+ 	@echo "Creating architecture independent directories..."
 -	@for d in $(VAR_DIRS); \
 -	do \
--	    dir=$(var_prefix)/$$d; \
+-	    dir=$(DESTDIR)$(var_prefix)/$$d; \
 -	    if test ! -d $$dir; then \
 -		echo "Creating directory hierarchy $$dir"; \
--		./mkinstalldirs $$dir; \
+-		$(srcdir)/mkinstalldirs $$dir; \
 -		chmod $(DIRMODE) $$dir; \
 -		$(DIRSETGID) $$dir; \
 -	    else true; \
 -	    fi; \
 -	done
--	chmod o-r $(var_prefix)/archives/private
+-	chmod o-r $(DESTDIR)$(var_prefix)/archives/private
  	@for d in $(ARCH_INDEP_DIRS); \
  	do \
- 	    dir=$(prefix)/$$d; \
+ 	    dir=$(DESTDIR)$(prefix)/$$d; \
