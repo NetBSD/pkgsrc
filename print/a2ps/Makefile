@@ -3,7 +3,7 @@
 # Date created:         18 August 1997
 # Whom:                 Chuck Robey (chuckr@freebsd.org)
 #
-# $NetBSD: Makefile,v 1.3 1998/02/16 23:06:40 tron Exp $
+# $NetBSD: Makefile,v 1.4 1998/02/18 11:39:10 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/02/15 21:24:42 steve Exp
 #
 
@@ -25,8 +25,8 @@ CONFIGURE_ENV+=		LPR=lpr
 ALL_TARGET=	all PAPERSIZE=${PAPER_SIZE}
 
 pre-build:
-	${TOUCH} $(WRKSRC)/doc/*.info
-	${TOUCH} $(WRKSRC)/doc/*.dvi
+	${TOUCH} ${WRKSRC}/doc/*.info
+	${TOUCH} ${WRKSRC}/doc/*.dvi
 
 pre-configure:
 	@(case "X${PAPER_SIZE}" in 					\
@@ -39,7 +39,7 @@ pre-configure:
 		;; 							\
 	*) 								\
 		goodsize=no; 						\
-		${ECHO} "PAPER_SIZE incorrect value: $(PAPER_SIZE)."; 	\
+		${ECHO} "PAPER_SIZE incorrect value: ${PAPER_SIZE}."; 	\
 		;; 							\
 	esac; 								\
 	if [ $goodsize = "no" ]; then 					\
@@ -50,7 +50,7 @@ pre-configure:
 		${ECHO} " Note that each PAPER_SIZE has a leading "; 	\
 		${ECHO} "capital letter, and Letterdj allows a ";	\
 		${ECHO} "slightly larger margins for DeskJets.";	\
-		false; 							\
+		${FALSE}; 							\
 	fi)
 
 .include <bsd.port.mk>
