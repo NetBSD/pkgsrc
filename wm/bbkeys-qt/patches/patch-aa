@@ -1,0 +1,39 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/10 20:00:43 hubertf Exp $
+
+--- Makefile.orig	Thu Sep 28 22:30:22 2000
++++ Makefile
+@@ -1,11 +1,9 @@
+-CXX=		/usr/bin/g++
+-QTDIR =		/usr/lib/qt2
+-MOC =		/usr/bin/moc
+-LIBS =		-L$(QTDIR)/lib -L/usr/lib -L/usr/X11R6/lib -lqt -lX11
++QTDIR =		$(X11BASE)/qt2
++MOC =		$(QTDIR)/bin/moc
++LIBS =		-L$(QTDIR)/lib -L/usr/lib -L$(LOCALBASE)/lib -L$(X11BASE)/lib -lqt -lX11 -ljpeg -Wl,-R${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${QTDIR}/lib
+ CXXFLAGS =	-g -I/usr/include -I$(QTDIR)/include -I/usr/X11R6/include
+ 
+ TARGET =	bbkeysconf
+-PREFIX = /usr/local/bin
+ OBJECTS =	gui.o main.o myapplication.o
+ SOURCES = 	gui.cc main.cc myapplication.cc
+ MOCSRC = 	gui.hh
+@@ -37,13 +35,13 @@
+     if ! test -x $(TARGET) ; then \
+        exit; \
+     fi; \
+-	echo "Checking existance of $(PREFIX)...."; \
+-    if ! test -d $(PREFIX) ; then \
+-       echo "Heyyyyy.  $(PREFIX) doesn't exist. Creating it...."; \
+-       /usr/bin/install -d $(PREFIX); \
++	echo "Checking existance of $(PREFIX)/bin...."; \
++    if ! test -d $(PREFIX)/bin ; then \
++       echo "Heyyyyy.  $(PREFIX)/bin doesn't exist. Creating it...."; \
++       /usr/bin/install -d $(PREFIX)/bin; \
+     fi ; \
+-	echo "Installing $(TARGET) in $(PREFIX)..."; \
+-    /usr/bin/install -s $(TARGET) $(PREFIX)/$(TARGET)
++	echo "Installing $(TARGET) in $(PREFIX)/bin..."; \
++    /usr/bin/install -s $(TARGET) $(PREFIX)/bin/$(TARGET)
+ 
+ gui.o: gui.cc gui.moc
+ main.o: main.cc
