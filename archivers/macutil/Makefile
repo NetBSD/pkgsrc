@@ -1,22 +1,20 @@
-# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:08 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/05/10 15:29:19 frueauf Exp $
 
-DISTNAME=	macutil
-PKGNAME=	macutil-2.0b3
-CATEGORIES=	archivers
-MASTER_SITES=	ftp://ftp.cwi.nl/pub/dik/
-DISTFILES=	macutil2.0b3.shar.Z
+DISTNAME=		macutil
+PKGNAME=		macutil-2.0b3
+CATEGORIES=		archivers
+MASTER_SITES=		ftp://ftp.cwi.nl/pub/dik/
+DISTFILES=		macutil2.0b3.shar.Z
 
-MAINTAINER=	mycroft@NetBSD.ORG
+MAINTAINER=		mycroft@NetBSD.ORG
 
-MAKEFILE=	makefile
+MAKEFILE=		makefile
+EXTRACT_CMD=		zcat
+EXTRACT_BEFORE_ARGS=
+EXTRACT_AFTER_ARGS=	|sh
 
 MAN1=		macunpack.1 hexbin.1 macsave.1 macstream.1 binhex.1 tomac.1 \
 		frommac.1 macutil.1
-
-do-extract:
-	@${RM} -rf ${WRKDIR}
-	@${MKDIR} ${WRKDIR}
-	cd ${WRKDIR} && ${GUNZIP_CMD} <${_DISTDIR}/${DISTFILES} | sh
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/macunpack/macunpack \
