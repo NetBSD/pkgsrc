@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.1 2000/01/01 20:08:27 christos Exp $
+$NetBSD: patch-al,v 1.2 2002/03/16 02:07:34 christos Exp $
 
---- dates.c.orig	Sat Jan  1 15:06:01 2000
-+++ dates.c	Sat Jan  1 15:06:07 2000
+--- dates.c.orig	Fri Mar 15 21:01:54 2002
++++ dates.c	Fri Mar 15 21:06:33 2002
 @@ -101,7 +101,7 @@
  {
      long year, julian;
@@ -11,3 +11,15 @@ $NetBSD: patch-al,v 1.1 2000/01/01 20:08:27 christos Exp $
  	year = tym->tm_year + 1900;
      if (year < 69)
  	year += 100;
+@@ -375,6 +375,11 @@
+     }
+     if (Year > 1900)
+ 	Year -= 1900;
++    else if (Year < 0) {
++	print("Unknown date format: %s\n", p);
++	return NULL;
++    }
++	
+     if (!Month && (Month = month_to_n(month)) == -1) {
+ 	print("bad month: %s\n", p);
+ 	return NULL;
