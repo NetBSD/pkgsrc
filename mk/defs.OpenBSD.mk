@@ -1,4 +1,4 @@
-# $NetBSD: defs.OpenBSD.mk,v 1.33 2004/05/12 14:10:18 jschauma Exp $
+# $NetBSD: defs.OpenBSD.mk,v 1.34 2004/05/31 16:47:00 jschauma Exp $
 #
 # Variable definitions for the OpenBSD operating system.
 
@@ -53,6 +53,9 @@ PS?=		/bin/ps
 PWD_CMD?=	/bin/pwd	# needs to print physical path
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
+# XXX: default from bsd.pkg.defaults.mk.  Verify/corerct for this platform
+# and remove this comment.
+RSH?=		/usr/bin/rsh
 SED?=		/usr/bin/sed
 SETENV?=	/usr/bin/env
 SH?=		/bin/sh
