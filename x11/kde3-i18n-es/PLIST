@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/02/06 02:47:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/03/09 13:36:49 markd Exp $
 share/doc/kde/HTML/es/KRegExpEditor/common
 share/doc/kde/HTML/es/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/es/KRegExpEditor/index.docbook
@@ -112,7 +112,10 @@ share/doc/kde/HTML/es/kasteroids/common
 share/doc/kde/HTML/es/kasteroids/fuel.png
 share/doc/kde/HTML/es/kasteroids/index.cache.bz2
 share/doc/kde/HTML/es/kasteroids/index.docbook
+share/doc/kde/HTML/es/kate-plugins/common
 share/doc/kde/HTML/es/kate-plugins/htmltools.docbook
+share/doc/kde/HTML/es/kate-plugins/index.cache.bz2
+share/doc/kde/HTML/es/kate-plugins/index.docbook
 share/doc/kde/HTML/es/kate-plugins/insertcommand.docbook
 share/doc/kde/HTML/es/kate-plugins/openheader.docbook
 share/doc/kde/HTML/es/kate-plugins/projectmanager.docbook
@@ -479,6 +482,9 @@ share/doc/kde/HTML/es/khelpcenter/whatiskde.docbook
 share/doc/kde/HTML/es/khexedit/common
 share/doc/kde/HTML/es/khexedit/index.cache.bz2
 share/doc/kde/HTML/es/khexedit/index.docbook
+share/doc/kde/HTML/es/kicker-applets/common
+share/doc/kde/HTML/es/kicker-applets/index.cache.bz2
+share/doc/kde/HTML/es/kicker-applets/index.docbook
 share/doc/kde/HTML/es/kicker-applets/kolourpicker.docbook
 share/doc/kde/HTML/es/kicker-applets/ktimemon.docbook
 share/doc/kde/HTML/es/kicker/bookmarks_icon.png
@@ -612,11 +618,14 @@ share/doc/kde/HTML/es/klipper/common
 share/doc/kde/HTML/es/klipper/index.cache.bz2
 share/doc/kde/HTML/es/klipper/index.docbook
 share/doc/kde/HTML/es/klipper/screenshot.png
+share/doc/kde/HTML/es/kmail/common
 share/doc/kde/HTML/es/kmail/configure.docbook
 share/doc/kde/HTML/es/kmail/credits-and-licenses.docbook
 share/doc/kde/HTML/es/kmail/faq.docbook
 share/doc/kde/HTML/es/kmail/getting-started.docbook
 share/doc/kde/HTML/es/kmail/importing.docbook
+share/doc/kde/HTML/es/kmail/index.cache.bz2
+share/doc/kde/HTML/es/kmail/index.docbook
 share/doc/kde/HTML/es/kmail/intro.docbook
 share/doc/kde/HTML/es/kmail/menus.docbook
 share/doc/kde/HTML/es/kmail/using-kmail.docbook
@@ -651,9 +660,6 @@ share/doc/kde/HTML/es/kmines/kmines2.png
 share/doc/kde/HTML/es/kmix/common
 share/doc/kde/HTML/es/kmix/index.cache.bz2
 share/doc/kde/HTML/es/kmix/index.docbook
-share/doc/kde/HTML/es/kmoon/common
-share/doc/kde/HTML/es/kmoon/index.cache.bz2
-share/doc/kde/HTML/es/kmoon/index.docbook
 share/doc/kde/HTML/es/kmouth/common
 share/doc/kde/HTML/es/kmouth/index.cache.bz2
 share/doc/kde/HTML/es/kmouth/index.docbook
@@ -737,6 +743,9 @@ share/doc/kde/HTML/es/kontact/index.docbook
 share/doc/kde/HTML/es/kooka/common
 share/doc/kde/HTML/es/kooka/index.cache.bz2
 share/doc/kde/HTML/es/kooka/index.docbook
+share/doc/kde/HTML/es/kopete/common
+share/doc/kde/HTML/es/kopete/index.cache.bz2
+share/doc/kde/HTML/es/kopete/index.docbook
 share/doc/kde/HTML/es/korganizer/common
 share/doc/kde/HTML/es/korganizer/exchange-plugin.docbook
 share/doc/kde/HTML/es/korganizer/group-scheduling.docbook
@@ -906,9 +915,15 @@ share/doc/kde/HTML/es/kview/snapshot9.png
 share/doc/kde/HTML/es/kvoctrain/common
 share/doc/kde/HTML/es/kvoctrain/index.cache.bz2
 share/doc/kde/HTML/es/kvoctrain/index.docbook
+share/doc/kde/HTML/es/kwallet/common
+share/doc/kde/HTML/es/kwallet/index.cache.bz2
+share/doc/kde/HTML/es/kwallet/index.docbook
 share/doc/kde/HTML/es/kweather/common
 share/doc/kde/HTML/es/kweather/index.cache.bz2
 share/doc/kde/HTML/es/kweather/index.docbook
+share/doc/kde/HTML/es/kwifimanager/common
+share/doc/kde/HTML/es/kwifimanager/index.cache.bz2
+share/doc/kde/HTML/es/kwifimanager/index.docbook
 share/doc/kde/HTML/es/kwin4/common
 share/doc/kde/HTML/es/kwin4/index.cache.bz2
 share/doc/kde/HTML/es/kwin4/index.docbook
@@ -933,18 +948,6 @@ share/doc/kde/HTML/es/megami/index.docbook
 share/doc/kde/HTML/es/noatun/common
 share/doc/kde/HTML/es/noatun/index.cache.bz2
 share/doc/kde/HTML/es/noatun/index.docbook
-share/doc/kde/HTML/es/quanta/adv-quanta.docbook
-share/doc/kde/HTML/es/quanta/common
-share/doc/kde/HTML/es/quanta/debugging-quanta.docbook
-share/doc/kde/HTML/es/quanta/extending-quanta.docbook
-share/doc/kde/HTML/es/quanta/fundamentals.docbook
-share/doc/kde/HTML/es/quanta/index.cache.bz2
-share/doc/kde/HTML/es/quanta/index.docbook
-share/doc/kde/HTML/es/quanta/installation.docbook
-share/doc/kde/HTML/es/quanta/introduction.docbook
-share/doc/kde/HTML/es/quanta/quanta-menus.docbook
-share/doc/kde/HTML/es/quanta/quanta-projects.docbook
-share/doc/kde/HTML/es/quanta/using-quanta.docbook
 share/doc/kde/HTML/es/umbrello/authors.docbook
 share/doc/kde/HTML/es/umbrello/credits.docbook
 share/doc/kde/HTML/es/umbrello/faq.docbook
@@ -1480,7 +1483,6 @@ share/kde/locale/es/flag.png
 @dirrm share/kde/apps/ktuberling/sounds/es
 @comment dirrm share/kde/apps/ktuberling/sounds
 @dirrm share/doc/kde/HTML/es/umbrello
-@dirrm share/doc/kde/HTML/es/quanta
 @dirrm share/doc/kde/HTML/es/noatun
 @dirrm share/doc/kde/HTML/es/megami
 @dirrm share/doc/kde/HTML/es/lskat
@@ -1489,7 +1491,9 @@ share/kde/locale/es/flag.png
 @dirrm share/doc/kde/HTML/es/kwuftpd
 @dirrm share/doc/kde/HTML/es/kworldclock
 @dirrm share/doc/kde/HTML/es/kwin4
+@dirrm share/doc/kde/HTML/es/kwifimanager
 @dirrm share/doc/kde/HTML/es/kweather
+@dirrm share/doc/kde/HTML/es/kwallet
 @dirrm share/doc/kde/HTML/es/kvoctrain
 @dirrm share/doc/kde/HTML/es/kview
 @dirrm share/doc/kde/HTML/es/kverbos
@@ -1523,6 +1527,7 @@ share/kde/locale/es/flag.png
 @dirrm share/doc/kde/HTML/es/kpackage
 @dirrm share/doc/kde/HTML/es/korn
 @dirrm share/doc/kde/HTML/es/korganizer
+@dirrm share/doc/kde/HTML/es/kopete
 @dirrm share/doc/kde/HTML/es/kooka
 @dirrm share/doc/kde/HTML/es/kontact
 @dirrm share/doc/kde/HTML/es/konsolekalendar
@@ -1536,7 +1541,6 @@ share/kde/locale/es/flag.png
 @dirrm share/doc/kde/HTML/es/knode
 @dirrm share/doc/kde/HTML/es/kmplot
 @dirrm share/doc/kde/HTML/es/kmouth
-@dirrm share/doc/kde/HTML/es/kmoon
 @dirrm share/doc/kde/HTML/es/kmix
 @dirrm share/doc/kde/HTML/es/kmines
 @dirrm share/doc/kde/HTML/es/kmid

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/02/06 10:21:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/03/09 13:36:50 markd Exp $
 share/doc/kde/HTML/nl/artsbuilder/digitalaudio.docbook
 share/doc/kde/HTML/nl/artsbuilder/gui.docbook
 share/doc/kde/HTML/nl/common/1.png
@@ -55,6 +55,9 @@ share/doc/kde/HTML/nl/common/xml.dcl
 share/doc/kde/HTML/nl/kaddressbook/common
 share/doc/kde/HTML/nl/kaddressbook/index.cache.bz2
 share/doc/kde/HTML/nl/kaddressbook/index.docbook
+share/doc/kde/HTML/nl/kalzium/common
+share/doc/kde/HTML/nl/kalzium/index.cache.bz2
+share/doc/kde/HTML/nl/kalzium/index.docbook
 share/doc/kde/HTML/nl/kate-plugins/htmltools.docbook
 share/doc/kde/HTML/nl/kate-plugins/insertcommand.docbook
 share/doc/kde/HTML/nl/kate-plugins/openheader.docbook
@@ -348,6 +351,10 @@ share/doc/kde/HTML/nl/kioslave/webdavs.docbook
 share/doc/kde/HTML/nl/kmoon/common
 share/doc/kde/HTML/nl/kmoon/index.cache.bz2
 share/doc/kde/HTML/nl/kmoon/index.docbook
+share/doc/kde/HTML/nl/kmplot/commands.docbook
+share/doc/kde/HTML/nl/kmplot/configuration.docbook
+share/doc/kde/HTML/nl/kmplot/credits.docbook
+share/doc/kde/HTML/nl/kmplot/developer.docbook
 share/doc/kde/HTML/nl/kompare/common
 share/doc/kde/HTML/nl/kompare/index.cache.bz2
 share/doc/kde/HTML/nl/kompare/index.docbook
@@ -355,6 +362,38 @@ share/doc/kde/HTML/nl/konsole/konsole.png
 share/doc/kde/HTML/nl/kspell/common
 share/doc/kde/HTML/nl/kspell/index.cache.bz2
 share/doc/kde/HTML/nl/kspell/index.docbook
+share/doc/kde/HTML/nl/kstars/ai-contents.docbook
+share/doc/kde/HTML/nl/kstars/altvstime.docbook
+share/doc/kde/HTML/nl/kstars/astroinfo.docbook
+share/doc/kde/HTML/nl/kstars/blackbody.docbook
+share/doc/kde/HTML/nl/kstars/calc-apcoords.docbook
+share/doc/kde/HTML/nl/kstars/calc-dayduration.docbook
+share/doc/kde/HTML/nl/kstars/calc-eqgal.docbook
+share/doc/kde/HTML/nl/kstars/calc-geodetic.docbook
+share/doc/kde/HTML/nl/kstars/calc-horizontal.docbook
+share/doc/kde/HTML/nl/kstars/calc-julianday.docbook
+share/doc/kde/HTML/nl/kstars/calc-precess.docbook
+share/doc/kde/HTML/nl/kstars/calc-sidereal.docbook
+share/doc/kde/HTML/nl/kstars/calculator.docbook
+share/doc/kde/HTML/nl/kstars/cequator.docbook
+share/doc/kde/HTML/nl/kstars/colorandtemp.docbook
+share/doc/kde/HTML/nl/kstars/commands.docbook
+share/doc/kde/HTML/nl/kstars/config.docbook
+share/doc/kde/HTML/nl/kstars/cpoles.docbook
+share/doc/kde/HTML/nl/kstars/credits.docbook
+share/doc/kde/HTML/nl/kstars/csphere.docbook
+share/doc/kde/HTML/nl/kstars/darkmatter.docbook
+share/doc/kde/HTML/nl/kstars/dcop.docbook
+share/doc/kde/HTML/nl/kstars/details.docbook
+share/doc/kde/HTML/nl/kstars/dumpmode.docbook
+share/doc/kde/HTML/nl/kstars/ecliptic.docbook
+share/doc/kde/HTML/nl/kstars/ellipticalgalaxies.docbook
+share/doc/kde/HTML/nl/kstars/equinox.docbook
+share/doc/kde/HTML/nl/kstars/flux.docbook
+share/doc/kde/HTML/nl/kstars/geocoords.docbook
+share/doc/kde/HTML/nl/ktouch/common
+share/doc/kde/HTML/nl/ktouch/index.cache.bz2
+share/doc/kde/HTML/nl/ktouch/index.docbook
 share/doc/kde/HTML/nl/kweather/common
 share/doc/kde/HTML/nl/kweather/index.cache.bz2
 share/doc/kde/HTML/nl/kweather/index.docbook
@@ -895,9 +934,12 @@ share/kde/locale/nl/flag.png
 @comment dirrm share/kde/apps/ktuberling/sounds
 @dirrm share/doc/kde/HTML/nl/kworldclock
 @dirrm share/doc/kde/HTML/nl/kweather
+@dirrm share/doc/kde/HTML/nl/ktouch
+@dirrm share/doc/kde/HTML/nl/kstars
 @dirrm share/doc/kde/HTML/nl/kspell
 @dirrm share/doc/kde/HTML/nl/konsole
 @dirrm share/doc/kde/HTML/nl/kompare
+@dirrm share/doc/kde/HTML/nl/kmplot
 @dirrm share/doc/kde/HTML/nl/kmoon
 @dirrm share/doc/kde/HTML/nl/kioslave
 @dirrm share/doc/kde/HTML/nl/kinfocenter/xserver
@@ -959,7 +1001,8 @@ share/kde/locale/nl/flag.png
 @dirrm share/doc/kde/HTML/nl/kbugbuster
 @dirrm share/doc/kde/HTML/nl/kate-plugins
 @dirrm share/doc/kde/HTML/nl/kate
+@dirrm share/doc/kde/HTML/nl/kalzium
 @dirrm share/doc/kde/HTML/nl/kaddressbook
-@comment dirrm share/doc/kde/HTML/nl/common
+@dirrm share/doc/kde/HTML/nl/common
 @dirrm share/doc/kde/HTML/nl/artsbuilder
 @comment dirrm share/doc/kde/HTML/nl

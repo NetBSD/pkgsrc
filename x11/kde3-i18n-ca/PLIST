@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/02/05 22:33:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/03/09 13:36:49 markd Exp $
 share/doc/kde/HTML/ca/katomic/common
 share/doc/kde/HTML/ca/katomic/index.cache.bz2
 share/doc/kde/HTML/ca/katomic/index.docbook
@@ -31,6 +31,7 @@ share/doc/kde/HTML/ca/kdf/kdf_config.png
 share/doc/kde/HTML/ca/keduca/common
 share/doc/kde/HTML/ca/keduca/index.cache.bz2
 share/doc/kde/HTML/ca/keduca/index.docbook
+share/doc/kde/HTML/ca/keduca/screenshot.png
 share/doc/kde/HTML/ca/kgpgcertmanager/common
 share/doc/kde/HTML/ca/kgpgcertmanager/index.cache.bz2
 share/doc/kde/HTML/ca/kgpgcertmanager/index.docbook
@@ -164,16 +165,21 @@ share/doc/kde/HTML/ca/kmoon/index.docbook
 share/doc/kde/HTML/ca/kompare/common
 share/doc/kde/HTML/ca/kompare/index.cache.bz2
 share/doc/kde/HTML/ca/kompare/index.docbook
+share/doc/kde/HTML/ca/kpercentage/answer.png
 share/doc/kde/HTML/ca/kpercentage/commands.docbook
 share/doc/kde/HTML/ca/kpercentage/common
 share/doc/kde/HTML/ca/kpercentage/credits.docbook
 share/doc/kde/HTML/ca/kpercentage/devel.docbook
+share/doc/kde/HTML/ca/kpercentage/edu-logo.png
 share/doc/kde/HTML/ca/kpercentage/faq.docbook
+share/doc/kde/HTML/ca/kpercentage/help.png
 share/doc/kde/HTML/ca/kpercentage/index.cache.bz2
 share/doc/kde/HTML/ca/kpercentage/index.docbook
 share/doc/kde/HTML/ca/kpercentage/install.docbook
 share/doc/kde/HTML/ca/kpercentage/introduction.docbook
+share/doc/kde/HTML/ca/kpercentage/main.png
 share/doc/kde/HTML/ca/kpercentage/using.docbook
+share/doc/kde/HTML/ca/kpercentage/welcome.png
 share/doc/kde/HTML/ca/kpf/common
 share/doc/kde/HTML/ca/kpf/index.cache.bz2
 share/doc/kde/HTML/ca/kpf/index.docbook
@@ -361,6 +367,7 @@ share/kde/locale/ca/LC_MESSAGES/kbattleship.mo
 share/kde/locale/ca/LC_MESSAGES/kbinaryclock.mo
 share/kde/locale/ca/LC_MESSAGES/kblackbox.mo
 share/kde/locale/ca/LC_MESSAGES/kbounce.mo
+share/kde/locale/ca/LC_MESSAGES/kbruch.mo
 share/kde/locale/ca/LC_MESSAGES/kbugbuster.mo
 share/kde/locale/ca/LC_MESSAGES/kcalc.mo
 share/kde/locale/ca/LC_MESSAGES/kcardchooser.mo
@@ -436,8 +443,10 @@ share/kde/locale/ca/LC_MESSAGES/kcmspellchecking.mo
 share/kde/locale/ca/LC_MESSAGES/kcmstyle.mo
 share/kde/locale/ca/LC_MESSAGES/kcmtaskbar.mo
 share/kde/locale/ca/LC_MESSAGES/kcmusb.mo
+share/kde/locale/ca/LC_MESSAGES/kcmview1394.mo
 share/kde/locale/ca/LC_MESSAGES/kcmvim.mo
 share/kde/locale/ca/LC_MESSAGES/kcmwifi.mo
+share/kde/locale/ca/LC_MESSAGES/kcmxinerama.mo
 share/kde/locale/ca/LC_MESSAGES/kcoloredit.mo
 share/kde/locale/ca/LC_MESSAGES/kcontrol.mo
 share/kde/locale/ca/LC_MESSAGES/kcron.mo
@@ -457,6 +466,7 @@ share/kde/locale/ca/LC_MESSAGES/kdesu.mo
 share/kde/locale/ca/LC_MESSAGES/kdesud.mo
 share/kde/locale/ca/LC_MESSAGES/kdevtipofday.mo
 share/kde/locale/ca/LC_MESSAGES/kdf.mo
+share/kde/locale/ca/LC_MESSAGES/kdgantt.mo
 share/kde/locale/ca/LC_MESSAGES/kdialog.mo
 share/kde/locale/ca/LC_MESSAGES/kdict.mo
 share/kde/locale/ca/LC_MESSAGES/kdictapplet.mo
@@ -507,6 +517,7 @@ share/kde/locale/ca/LC_MESSAGES/kfilereplace.mo
 share/kde/locale/ca/LC_MESSAGES/kfindpart.mo
 share/kde/locale/ca/LC_MESSAGES/kfloppy.mo
 share/kde/locale/ca/LC_MESSAGES/kfmclient.mo
+share/kde/locale/ca/LC_MESSAGES/kfontinst.mo
 share/kde/locale/ca/LC_MESSAGES/kfouleggs.mo
 share/kde/locale/ca/LC_MESSAGES/kgamma.mo
 share/kde/locale/ca/LC_MESSAGES/kgantt.mo
@@ -635,9 +646,11 @@ share/kde/locale/ca/LC_MESSAGES/ksnapshot.mo
 share/kde/locale/ca/LC_MESSAGES/ksokoban.mo
 share/kde/locale/ca/LC_MESSAGES/kspaceduel.mo
 share/kde/locale/ca/LC_MESSAGES/ksplash.mo
+share/kde/locale/ca/LC_MESSAGES/ksplashthemes.mo
 share/kde/locale/ca/LC_MESSAGES/kstars.mo
 share/kde/locale/ca/LC_MESSAGES/kstart.mo
 share/kde/locale/ca/LC_MESSAGES/kstartperf.mo
+share/kde/locale/ca/LC_MESSAGES/kstyle_keramik_config.mo
 share/kde/locale/ca/LC_MESSAGES/kstyle_plastik_config.mo
 share/kde/locale/ca/LC_MESSAGES/ksvgplugin.mo
 share/kde/locale/ca/LC_MESSAGES/ksync.mo
@@ -660,6 +673,7 @@ share/kde/locale/ca/LC_MESSAGES/ktuberling.mo
 share/kde/locale/ca/LC_MESSAGES/ktux.mo
 share/kde/locale/ca/LC_MESSAGES/kuick_plugin.mo
 share/kde/locale/ca/LC_MESSAGES/kuickshow.mo
+share/kde/locale/ca/LC_MESSAGES/kuiviewer.mo
 share/kde/locale/ca/LC_MESSAGES/kuser.mo
 share/kde/locale/ca/LC_MESSAGES/kview.mo
 share/kde/locale/ca/LC_MESSAGES/kview_scale.mo

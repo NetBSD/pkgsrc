@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/02/06 12:34:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/03/09 13:36:50 markd Exp $
 share/doc/kde/HTML/sl/common/1.png
 share/doc/kde/HTML/sl/common/10.png
 share/doc/kde/HTML/sl/common/2.png
@@ -169,6 +169,9 @@ share/doc/kde/HTML/sl/khelpcenter/lines.png
 share/doc/kde/HTML/sl/khelpcenter/links.docbook
 share/doc/kde/HTML/sl/khelpcenter/main.html
 share/doc/kde/HTML/sl/khelpcenter/pointers.png
+share/doc/kde/HTML/sl/khelpcenter/quickstart/common
+share/doc/kde/HTML/sl/khelpcenter/quickstart/index.cache.bz2
+share/doc/kde/HTML/sl/khelpcenter/quickstart/index.docbook
 share/doc/kde/HTML/sl/khelpcenter/shadow1.png
 share/doc/kde/HTML/sl/khelpcenter/support.docbook
 share/doc/kde/HTML/sl/khelpcenter/tinylogo.png
@@ -874,6 +877,7 @@ share/kde/locale/sl/flag.png
 @dirrm share/doc/kde/HTML/sl/kinfocenter
 @dirrm share/doc/kde/HTML/sl/khelpcenter/visualdict
 @dirrm share/doc/kde/HTML/sl/khelpcenter/userguide
+@dirrm share/doc/kde/HTML/sl/khelpcenter/quickstart
 @dirrm share/doc/kde/HTML/sl/khelpcenter/glossary
 @dirrm share/doc/kde/HTML/sl/khelpcenter/faq
 @dirrm share/doc/kde/HTML/sl/khelpcenter

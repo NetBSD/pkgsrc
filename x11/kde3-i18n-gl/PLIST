@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/06 02:39:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/09 13:36:49 markd Exp $
 share/kde/locale/gl/LC_MESSAGES/alsaplayerui.mo
 share/kde/locale/gl/LC_MESSAGES/amor.mo
 share/kde/locale/gl/LC_MESSAGES/appletproxy.mo
@@ -14,6 +14,7 @@ share/kde/locale/gl/LC_MESSAGES/clockapplet.mo
 share/kde/locale/gl/LC_MESSAGES/crashesplugin.mo
 share/kde/locale/gl/LC_MESSAGES/dcopservice.mo
 share/kde/locale/gl/LC_MESSAGES/desktop_kde-i18n.mo
+share/kde/locale/gl/LC_MESSAGES/desktop_kdeaddons.mo
 share/kde/locale/gl/LC_MESSAGES/desktop_kdeadmin.mo
 share/kde/locale/gl/LC_MESSAGES/desktop_kdebase.mo
 share/kde/locale/gl/LC_MESSAGES/desktop_kdeedu.mo
@@ -23,6 +24,7 @@ share/kde/locale/gl/LC_MESSAGES/desktop_kdelibs.mo
 share/kde/locale/gl/LC_MESSAGES/desktop_kdemultimedia.mo
 share/kde/locale/gl/LC_MESSAGES/desktop_kdenetwork.mo
 share/kde/locale/gl/LC_MESSAGES/desktop_kdepim.mo
+share/kde/locale/gl/LC_MESSAGES/desktop_kdesdk.mo
 share/kde/locale/gl/LC_MESSAGES/desktop_kdetoys.mo
 share/kde/locale/gl/LC_MESSAGES/desktop_kdeutils.mo
 share/kde/locale/gl/LC_MESSAGES/desktop_quanta.mo
@@ -110,6 +112,7 @@ share/kde/locale/gl/LC_MESSAGES/kcmnic.mo
 share/kde/locale/gl/LC_MESSAGES/kcmnotify.mo
 share/kde/locale/gl/LC_MESSAGES/kcmperformance.mo
 share/kde/locale/gl/LC_MESSAGES/kcmprintmgr.mo
+share/kde/locale/gl/LC_MESSAGES/kcmsamba.mo
 share/kde/locale/gl/LC_MESSAGES/kcmscreensaver.mo
 share/kde/locale/gl/LC_MESSAGES/kcmsmartcard.mo
 share/kde/locale/gl/LC_MESSAGES/kcmsmserver.mo
@@ -118,6 +121,7 @@ share/kde/locale/gl/LC_MESSAGES/kcmspellchecking.mo
 share/kde/locale/gl/LC_MESSAGES/kcmstyle.mo
 share/kde/locale/gl/LC_MESSAGES/kcmtaskbar.mo
 share/kde/locale/gl/LC_MESSAGES/kcmthemes.mo
+share/kde/locale/gl/LC_MESSAGES/kcmusb.mo
 share/kde/locale/gl/LC_MESSAGES/kcmview1394.mo
 share/kde/locale/gl/LC_MESSAGES/kcmxinerama.mo
 share/kde/locale/gl/LC_MESSAGES/kcoloredit.mo
@@ -217,10 +221,12 @@ share/kde/locale/gl/LC_MESSAGES/klickety.mo
 share/kde/locale/gl/LC_MESSAGES/klines.mo
 share/kde/locale/gl/LC_MESSAGES/klipper.mo
 share/kde/locale/gl/LC_MESSAGES/kmail.mo
+share/kde/locale/gl/LC_MESSAGES/kmathtool.mo
 share/kde/locale/gl/LC_MESSAGES/kmcop.mo
 share/kde/locale/gl/LC_MESSAGES/kmenuapplet.mo
 share/kde/locale/gl/LC_MESSAGES/kmenuedit.mo
 share/kde/locale/gl/LC_MESSAGES/kmessedwords.mo
+share/kde/locale/gl/LC_MESSAGES/kmid.mo
 share/kde/locale/gl/LC_MESSAGES/kminipagerapplet.mo
 share/kde/locale/gl/LC_MESSAGES/kmix.mo
 share/kde/locale/gl/LC_MESSAGES/kmoon.mo
@@ -259,6 +265,7 @@ share/kde/locale/gl/LC_MESSAGES/ksmserver.mo
 share/kde/locale/gl/LC_MESSAGES/ksnake.mo
 share/kde/locale/gl/LC_MESSAGES/ksnapshot.mo
 share/kde/locale/gl/LC_MESSAGES/ksplash.mo
+share/kde/locale/gl/LC_MESSAGES/ksplashthemes.mo
 share/kde/locale/gl/LC_MESSAGES/kstart.mo
 share/kde/locale/gl/LC_MESSAGES/kstyle_keramik_config.mo
 share/kde/locale/gl/LC_MESSAGES/ksysctrl.mo
@@ -272,6 +279,7 @@ share/kde/locale/gl/LC_MESSAGES/ktexteditor_insertfile.mo
 share/kde/locale/gl/LC_MESSAGES/ktexteditor_kdatatool.mo
 share/kde/locale/gl/LC_MESSAGES/ktimer.mo
 share/kde/locale/gl/LC_MESSAGES/ktip.mo
+share/kde/locale/gl/LC_MESSAGES/ktouch.mo
 share/kde/locale/gl/LC_MESSAGES/ktron.mo
 share/kde/locale/gl/LC_MESSAGES/ktux.mo
 share/kde/locale/gl/LC_MESSAGES/kuick_plugin.mo
@@ -326,4 +334,3 @@ share/kde/locale/gl/entry.desktop
 share/kde/locale/gl/flag.png
 @comment dirrm share/kde/locale/gl/LC_MESSAGES
 @comment dirrm share/kde/locale/gl
-@comment dirrm share/kde/locale

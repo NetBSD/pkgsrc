@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/02/05 22:33:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/03/09 13:36:49 markd Exp $
 share/doc/kde/HTML/da/KRegExpEditor/altntool.png
 share/doc/kde/HTML/da/KRegExpEditor/anychartool.png
 share/doc/kde/HTML/da/KRegExpEditor/boundarytools.png
@@ -17,6 +17,22 @@ share/doc/kde/HTML/da/amor/index.docbook
 share/doc/kde/HTML/da/ark/common
 share/doc/kde/HTML/da/ark/index.cache.bz2
 share/doc/kde/HTML/da/ark/index.docbook
+share/doc/kde/HTML/da/artsbuilder/apis.docbook
+share/doc/kde/HTML/da/artsbuilder/artsbuilder.docbook
+share/doc/kde/HTML/da/artsbuilder/detail.docbook
+share/doc/kde/HTML/da/artsbuilder/digitalaudio.docbook
+share/doc/kde/HTML/da/artsbuilder/faq.docbook
+share/doc/kde/HTML/da/artsbuilder/future.docbook
+share/doc/kde/HTML/da/artsbuilder/glossary.docbook
+share/doc/kde/HTML/da/artsbuilder/gui.docbook
+share/doc/kde/HTML/da/artsbuilder/helping.docbook
+share/doc/kde/HTML/da/artsbuilder/mcop.docbook
+share/doc/kde/HTML/da/artsbuilder/midi.docbook
+share/doc/kde/HTML/da/artsbuilder/midiintro.docbook
+share/doc/kde/HTML/da/artsbuilder/modules.docbook
+share/doc/kde/HTML/da/artsbuilder/porting.docbook
+share/doc/kde/HTML/da/artsbuilder/references.docbook
+share/doc/kde/HTML/da/artsbuilder/tools.docbook
 share/doc/kde/HTML/da/atlantik/common
 share/doc/kde/HTML/da/atlantik/index.cache.bz2
 share/doc/kde/HTML/da/atlantik/index.docbook
@@ -833,6 +849,7 @@ share/doc/kde/HTML/da/kooka/index.docbook
 share/doc/kde/HTML/da/kopete/common
 share/doc/kde/HTML/da/kopete/index.cache.bz2
 share/doc/kde/HTML/da/kopete/index.docbook
+share/doc/kde/HTML/da/kopete/menus.docbook
 share/doc/kde/HTML/da/korganizer/common
 share/doc/kde/HTML/da/korganizer/exchange-plugin.docbook
 share/doc/kde/HTML/da/korganizer/group-scheduling.docbook
@@ -1942,6 +1959,7 @@ share/kde/locale/da/flag.png
 @dirrm share/doc/kde/HTML/da/common
 @dirrm share/doc/kde/HTML/da/cervisia
 @dirrm share/doc/kde/HTML/da/atlantik
+@dirrm share/doc/kde/HTML/da/artsbuilder
 @dirrm share/doc/kde/HTML/da/ark
 @dirrm share/doc/kde/HTML/da/amor
 @dirrm share/doc/kde/HTML/da/KRegExpEditor

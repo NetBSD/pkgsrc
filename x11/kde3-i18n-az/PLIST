@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/05 22:24:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/09 13:36:48 markd Exp $
 share/kde/locale/az/LC_MESSAGES/aktion.mo
 share/kde/locale/az/LC_MESSAGES/amor.mo
 share/kde/locale/az/LC_MESSAGES/appletproxy.mo
@@ -140,7 +140,6 @@ share/kde/locale/az/LC_MESSAGES/kdesktop.mo
 share/kde/locale/az/LC_MESSAGES/kdessh.mo
 share/kde/locale/az/LC_MESSAGES/kdesu.mo
 share/kde/locale/az/LC_MESSAGES/kdesud.mo
-share/kde/locale/az/LC_MESSAGES/kdevelop.mo
 share/kde/locale/az/LC_MESSAGES/kdevtipofday.mo
 share/kde/locale/az/LC_MESSAGES/kdf.mo
 share/kde/locale/az/LC_MESSAGES/kdialog.mo
