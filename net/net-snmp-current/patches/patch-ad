@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2002/03/14 06:29:03 itojun Exp $
+
+--- agent/mibgroup/host/hr_system.c-	Thu Mar 14 11:45:56 2002
++++ agent/mibgroup/host/hr_system.c	Thu Mar 14 11:46:28 2002
+@@ -253,7 +253,7 @@
+ #if HAVE_UTMPX_H
+ #define setutent setutxent
+ #define getutent getutxent
+-#define entutent entutxent
++#define endutent endutxent
+      struct utmpx *utmp_p;
+ #else
+      struct utmp *utmp_p;
