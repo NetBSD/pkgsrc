@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/01/02 23:28:33 rh Exp $
+# $NetBSD: Makefile,v 1.3 2000/02/22 08:38:56 rh Exp $
 #
 
 DISTNAME=		libgeda-${PKGVERSION}
@@ -20,7 +20,7 @@ DEPENDS+=		gtk+>=1.2.0:../../x11/gtk
 CONFLICTS+=		gEDA<19991011
 
 DIST_SUBDIR=		geda
-PKGVERSION=		19991011
+PKGVERSION=		20000220
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
