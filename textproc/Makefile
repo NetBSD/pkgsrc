@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.198 2003/05/16 01:46:41 simonb Exp $
+# $NetBSD: Makefile,v 1.199 2003/06/23 08:48:18 jlam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -150,6 +150,7 @@ SUBDIR+=	p5-XML-Writer-String
 SUBDIR+=	p5-XML-XPath
 SUBDIR+=	p5-XML-XQL
 SUBDIR+=	p5-XML-XSLT
+SUBDIR+=	p5-XML-Xerces
 SUBDIR+=	p5-XML-YAWriter
 SUBDIR+=	p5-libxml
 SUBDIR+=	p5-libxml-enno
@@ -204,7 +205,6 @@ SUBDIR+=	xalan-c
 SUBDIR+=	xalan-j
 SUBDIR+=	xerces-c
 SUBDIR+=	xerces-j
-SUBDIR+=	xerces-p
 SUBDIR+=	xml-i18n-tools
 SUBDIR+=	xmlcatmgr
 SUBDIR+=	xp
