@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2003/06/10 00:25:16 jmc Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/08 14:05:29 wiz Exp $
 
 .if (${MACHINE_ARCH} == "powerpc")
-DISTNAME=		fftw-3.0-fma
+DISTNAME=		fftw-3.0.1-fma
 .else
-DISTNAME=		fftw-3.0
+DISTNAME=		fftw-3.0.1
 .endif
-PKGNAME=		fftw-3.0
-PKGREVISION=		1
+PKGNAME=		fftw-3.0.1
 CATEGORIES=		math
 MASTER_SITES=		ftp://ftp.fftw.org/pub/fftw/ \
 			http://www.fftw.org/
@@ -21,10 +20,10 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/fftw.pc.in
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--enable-shared
 USE_FORTRAN=		yes
+USE_NEW_TEXINFO=	yes
 USE_GMAKE=		yes
 INFO_FILES=		fftw3.info
-TEXINFO_OVERRIDE=	yes
-TEXINFO_REQD=		4.5
 
-.include "../../mk/texinfo.mk"
+TEST_TARGET=		check
+
 .include "../../mk/bsd.pkg.mk"
