@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.73 2001/12/08 06:14:09 wiz Exp $
+$NetBSD: TODO,v 1.74 2001/12/19 23:22:38 jlam Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
@@ -58,7 +58,13 @@ packages TODO (Suggested new packages)
 
 package update TODO (Suggested package updates)
 ^^^^^^^^^^^^^^^^^^^
-	o update print/ghostscript to 6.51/7.00
+	o update print/ghostscript to 6.52.  I will be adding the
+	  STP/gimp-print and probably the IBM Omni drivers to this package.
+	  This update will _not_ include the Japanese PDF support, so our
+	  existing gs6.01vflib package will migrate to japanese/ja-ghostscript
+	  and be deprecated by to-be-released gs6.53, which includes the
+	  gs-cjk changes. [jlam]
+
 	o update autoconf to 2.52 (or newer)
 	o update automake to 1.5
 
