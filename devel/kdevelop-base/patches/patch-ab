@@ -1,3 +1,4 @@
+$NetBSD: patch-ab,v 1.3 2002/11/26 21:38:24 cjep Exp $
 --- kdevelop/tools/processesend.pl.orig	Tue Jul  9 15:48:09 2002
 +++ kdevelop/tools/processesend.pl	Tue Jul  9 15:48:13 2002
 @@ -3,10 +3,10 @@
