@@ -1,68 +1,22 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1 2001/11/01 00:59:46 zuntum Exp $
-#
+# $NetBSD: DEINSTALL,v 1.2 2001/11/24 20:49:42 jlam Exp $
 
-PKGNAME=$1
-STAGE=$2
+IMAPDCONF=@IMAPDCONF@
 
-AWK="@AWK@"
-CAT="@CAT@"
-RM="@RM@"
-
-IMAPDCONF=/etc/imapd.conf
-
-case ${STAGE} in
-DEINSTALL)
-	;;
-
-POST-DEINSTALL)
-	existing_dirs=''
-	if [ -f ${IMAPDCONF} ]
-	then
-		imap_dirs=`\
-			${AWK} '/configdirectory:/      { print $2 }; \
-				/partition-.*:/         { print $2 }; \
-				/sievedir:/             { print $2 }' \
-				${IMAPDCONF}`
-		for dir in ${imap_dirs}
-		do
-			if [ -d ${dir} ]
-			then
-				existing_dirs="${existing_dirs} ${dir}"
-			fi
-		done
-	fi
-
-	${CAT} << EOF
-===========================================================================
-If you won't be using ${PKGNAME} any longer, you may want
-to remove:
-
-  * the following files:
-
-	${IMAPDCONF}
-EOF
-	if [ -n "${existing_dirs}" ]
-	then
-		${CAT} << EOF
-
-  * the following directories:
-
-EOF
-		for dir in ${existing_dirs}
-		do
-			echo "	${dir}"
-		done
-	fi
-		${CAT} << EOF
-===========================================================================
-EOF
-        ;;
-
-*)
-	echo "Unexpected argument: ${STAGE}"
-	exit 1
-	;;
-esac
-exit 0
+if [ -f ${IMAPDCONF} ]
+then
+	imap_dirs=`							\
+		${AWK} '/configdirectory:/      { print $2 };		\
+			/partition-.*:/         { print $2 };		\
+			/sievedir:/             { print $2 }'		\
+			${IMAPDCONF}					\
+	`
+	for dir in ${imap_dirs}
+	do
+		if [ -d ${dir} ]
+		then
+			ALL_DIRS="${ALL_DIRS} ${dir}"
+		fi
+	done
+fi
