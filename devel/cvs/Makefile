@@ -10,6 +10,9 @@ MASTER_SITES=   ${MASTER_SITE_GNU}
 
 MAINTAINER=	lamj@stat.cmu.edu
 
+BUILD_DEPENDS=	${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
+RUN_DEPENDS=	${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
+
 GNU_CONFIGURE=	yes
 
 .if exists(/usr/lib/libkrb.a)
