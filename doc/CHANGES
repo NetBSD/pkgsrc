@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.303 2002/10/18 21:57:48 abs Exp $
+$NetBSD: CHANGES,v 1.304 2002/10/18 22:08:40 abs Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3315,3 +3315,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated w3 to 4.0b47 [minoura 2002-10-18]
 	Added pyca-0.6.5.20020902 [jlam 2002-10-18]
 	Added p5-Number-Latin-1.01 [abs 2002-10-18]
+	Added cmu-dhcpd-3.3.7.9 [abs 2002-10-18]
