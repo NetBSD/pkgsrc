@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2000/06/01 17:54:23 rh Exp $
+# $NetBSD: Makefile,v 1.39 2000/10/04 11:04:58 toshii Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/11/30 19:37:48 vanilla Exp
 #
 
@@ -24,9 +24,12 @@ CONFIGURE_ENV+=		LIBS="-lm -ltermcap" CPPFLAGS="-I${LOCALBASE}/include"
 CFLAGS+=		-Dunix -I${LOCALBASE}/include -DxBSD
 LDFLAGS+=		-L${LOCALBASE}/lib
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../mk/bsd.prefs.mk"
+
 .if ${OPSYS} == "SunOS"
 PLIST_SUBST+=	LOCALEBASE=lib
 .else
 PLIST_SUBST+=	LOCALEBASE=share
 .endif
+
+.include "../../mk/bsd.pkg.mk"
