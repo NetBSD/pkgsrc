@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.9 2004/09/21 17:09:32 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/10/28 19:08:30 jmmv Exp $
 bin/eog
 share/applications/eog.desktop
 share/eog/glade/eog.glade
 share/gconf/schemas/eog.schemas
 share/gnome-2.0/ui/eog-gtk-ui.xml
 share/gnome/help/eog/C/eog.xml
+share/gnome/help/eog/C/figures/eog_save_as_window.png
 share/gnome/help/eog/C/figures/eog_start_window.png
 share/gnome/help/eog/C/legal.xml
 share/gnome/help/eog/de/eog.xml
