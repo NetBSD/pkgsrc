@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.2 1998/08/20 15:16:50 tsarna Exp $
+# $NetBSD: pkglint.pl,v 1.3 1998/10/23 21:16:20 tsarna Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -679,7 +679,7 @@ EXTRACT_SUFX DISTFILES
 EOF
 	if ($osname eq "NetBSD") {
 	    push(@tocheck,"ONLY_FOR_ARCHS");
-	    push(@tocheck,"MIRROR_DISTFILES");
+	    push(@tocheck,"MIRROR_DISTFILE");
 	}
         &checkorder('DISTNAME', $tmp, @tocheck);
 
