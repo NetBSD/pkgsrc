@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2004/05/03 20:57:14 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2004/05/11 13:09:17 markd Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -96,13 +97,9 @@ PLIST_SUBST+=		HAVE_XCURSOR="@comment "
 
 ICONDIR=		share/kde/icons
 
-# Several programs need to be setuid-root, but due to the way that KDE3
-# finds executables, the files must have their read bit set so that
-# KStandardDir::findResource() will find them.
-#
-_KDE_SETUID_ROOT=	${ROOT_USER} ${ROOT_GROUP} 4755
-SPECIAL_PERMS+=	${PREFIX}/bin/kcheckpass	${_KDE_SETUID_ROOT}
-SPECIAL_PERMS+=	${PREFIX}/bin/ksysguardd	${_KDE_SETUID_ROOT}
+.if ${OPSYS} == "NetBSD"
+SPECIAL_PERMS+=	${PREFIX}/bin/ksysguardd	${ROOT_USER} kmem 2755
+.endif
 
 pre-configure:
 	cd ${WRKSRC};							\
