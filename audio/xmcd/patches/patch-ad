@@ -1,13 +1,14 @@
---- libdi_d/config.sh.orig	Wed Nov 26 12:23:57 1997
-+++ libdi_d/config.sh	Wed Nov 26 12:24:03 1997
-@@ -382,10 +382,11 @@
+--- libdi_d/config.sh.orig	Mon Dec  1 00:36:16 1997
++++ libdi_d/config.sh	Sun Dec 21 00:57:00 1997
+@@ -382,11 +382,11 @@
  ask_nonscsi_config()
  {
  	$ECHO "\n  Non-SCSI drives are currently supported only on the"
--	$ECHO "  Digital UNIX, IBM AIX, Linux, FreeBSD, SCO Open Server,"
--	$ECHO "  QNX and Sun Solaris/x86 platforms.  You must have the"
--	$ECHO "  appropriate CD-ROM driver configured in your kernel.  QNX"
--	$ECHO "  users must use the QNX ioctl method, even for SCSI drives."
+-	$ECHO "  Digital UNIX, FreeBSD, IBM AIX, Linux, NetBSD, OpenBSD, QNX,"
+-	$ECHO "  SCO Open Server and Sun Solaris/x86 platforms.  You must"
+-	$ECHO "  have the appropriate CD-ROM driver configured in your kernel."
+-	$ECHO "  QNX users must use the QNX ioctl method, even for SCSI"
+-	$ECHO "  drives."
 +	$ECHO "  Digital UNIX, IBM AIX, Linux, FreeBSD, NetBSD,"
 +	$ECHO "  SCO Open Server, QNX and Sun Solaris/x86 platforms."
 +	$ECHO "  You must have the appropriate CD-ROM driver configured"
@@ -16,21 +17,3 @@
  
  	YNDEF=y
  	getyn "\n  Do you want to continue"
-@@ -399,7 +400,7 @@
- 	#
- 	$ECHO "\n  Please select a Device Interface Method:\n"
- 	$ECHO "  1.\tSunOS/Solaris/Linux/QNX ioctl method"
--	$ECHO "  2.\tFreeBSD ioctl method"
-+	$ECHO "  2.\tFreeBSD/NetBSD ioctl method"
- 	$ECHO "  3.\tIBM AIX IDE ioctl method"
- 	$ECHO "  4.\tSCO Open Server ATAPI BTLD"
- 	$ECHO "  5.\tDigital UNIX ATAPI"
-@@ -482,7 +483,7 @@
- 		CURPOSFMT=False
- 		PLAYNOTUR=False
- 		;;
--	2)	# FreeBSD ioctl method
-+	2)	# FreeBSD/NetBSD ioctl method
- 		METHOD=2
- 		VENDOR=0
- 		VOLBASE=0
