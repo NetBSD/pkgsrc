@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3508 2003/09/24 10:16:19 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3509 2003/09/24 10:56:29 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3919,3 +3919,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libesmtp to 1.0.1 [xtraeme 2003-09-24]
 	Added sma-1.3.2 [tron 2003-09-24]
 	Updated naim to 0.11.6.1 [xtraeme 2003-09-24]
+	Added arnold-20020127 [dillo 2003-09-24]
