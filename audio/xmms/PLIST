@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/03/21 18:52:31 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/04/10 12:59:05 grant Exp $
 bin/wmxmms
 bin/xmms
 bin/xmms-config
@@ -51,9 +51,9 @@ lib/xmms/Input/libvorbis.so
 lib/xmms/Input/libwav.la
 lib/xmms/Input/libwav.a
 lib/xmms/Input/libwav.so
-lib/xmms/Output/libOSS.la
-lib/xmms/Output/libOSS.a
-lib/xmms/Output/libOSS.so
+lib/xmms/Output/${LIBAUDIO}.la
+lib/xmms/Output/${LIBAUDIO}.a
+lib/xmms/Output/${LIBAUDIO}.so
 lib/xmms/Output/libdisk_writer.la
 lib/xmms/Output/libdisk_writer.a
 lib/xmms/Output/libdisk_writer.so
