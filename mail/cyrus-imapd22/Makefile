@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/11/15 17:54:49 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2004/11/17 07:57:28 jlam Exp $
 
 DISTNAME=	cyrus-imapd-2.2.8
 PKGREVISION=	4
@@ -125,7 +125,6 @@ PERL5_PACKLIST= \
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
 
 # Change references of some manpages from foo.8 to cyrus-foo.8 to avoid
 # manpage conflicts with other packages.  Also change references to
