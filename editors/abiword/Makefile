@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/11/22 13:19:41 abs Exp $
+# $NetBSD: Makefile,v 1.14 2000/12/03 04:33:16 mycroft Exp $
 #
 
 # According to AbiSource's explanation of their trademark rights,
@@ -18,6 +18,7 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.abisource.com/
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/unzip:../../archivers/unzip
+DEPENDS+=	ispell-*:../../textproc/ispell
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	png>=1.0.6:../../graphics/png
 
@@ -45,5 +46,7 @@ MAKE_ENV+=	ABI_BUILD_VERSION="${ABIWORD_VERS}" \
 
 post-install:
 	${CHMOD} -R a+r ${PREFIX}/share/AbiSuite
+	rm ${PREFIX}/share/AbiSuite/dictionary/american.hash
+	ln -s ../../../lib/american.hash ${PREFIX}/share/AbiSuite/dictionary/american.hash
 
 .include "../../mk/bsd.pkg.mk"

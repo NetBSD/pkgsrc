@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2000/11/09 20:19:56 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.7 2000/12/03 04:33:16 mycroft Exp $
 bin/AbiWord
 bin/abiword
 libexec/AbiSuite/AbiWord
@@ -320,7 +320,9 @@ share/AbiSuite/AbiWord/strings/pt-PT.strings
 share/AbiSuite/AbiWord/strings/sv-SE.strings
 share/AbiSuite/AbiWord/system.profile
 share/AbiSuite/COPYING
-share/AbiSuite/dictionary/american.hash
+@exec mkdir -p %D/share/AbiSuite/dictionary
+@exec ln -s ../../../lib/american.hash %D/share/AbiSuite/dictionary/american.hash
+@unexec rm %D/share/AbiSuite/dictionary/american.hash
 share/AbiSuite/fonts/p052004l.afm
 share/AbiSuite/fonts/p052004l.pfa
 share/AbiSuite/fonts/p052023l.afm
