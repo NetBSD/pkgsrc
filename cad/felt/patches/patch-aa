@@ -1,12 +1,14 @@
-$NetBSD: patch-aa,v 1.4 2001/04/07 19:00:10 jtb Exp $
+$NetBSD: patch-aa,v 1.5 2001/05/22 16:48:59 jlam Exp $
 
---- etc/Makefile.conf.orig	Sun Mar  5 01:37:06 2000
-+++ etc/Makefile.conf
-@@ -1,26 +1,22 @@
+--- etc/Makefile.conf.orig	Sat Mar  4 20:37:06 2000
++++ etc/Makefile.conf	Tue May 22 12:21:18 2001
+@@ -1,26 +1,26 @@
 -AR		= ar
 -CC		= gcc
 -CCOPTS		= -O3 -g
-+CCOPTS		= -O2
++#AR		= ar
++#CC		= gcc
++#CCOPTS		= -O3 -g
  CONTRIBDIR	= none
  CONTRIBFLAGS	= 
 -CPP		= /lib/cpp
@@ -15,11 +17,12 @@ $NetBSD: patch-aa,v 1.4 2001/04/07 19:00:10 jtb Exp $
 -DESTMAN		= /usr/local/man
 -INSTALL		= sh $(TOPDIR)/etc/install.sh -c
 -LDOPTS		= -g
++#CPP		= /lib/cpp
 +DESTBIN		= ${PREFIX}/bin
 +DESTLIB		= ${PREFIX}/share/felt
 +DESTMAN		= ${PREFIX}/man
-+INSTALL		= /bin/sh $(TOPDIR)/etc/install.sh -c
-+LDOPTS		= -s -Wl,-R${X11BASE}/lib
++INSTALL		= ${SH} $(TOPDIR)/etc/install.sh -c
++#LDOPTS		= -g
  LIBELT		= $(TOPDIR)/lib/Elements/libelt.a
  LIBFELT		= $(TOPDIR)/lib/Felt/libfelt.a
  LIBGEN		= $(TOPDIR)/lib/Generate/libgen.a
@@ -28,15 +31,16 @@ $NetBSD: patch-aa,v 1.4 2001/04/07 19:00:10 jtb Exp $
  LIBWIDGETS	= $(TOPDIR)/lib/Widgets/libwidgets.a
 -MKDIR		= sh $(TOPDIR)/etc/mkdirhier.sh
 -RANLIB		= ranlib
-+MKDIR		= /bin/sh $(TOPDIR)/etc/mkdirhier.sh
++MKDIR		= ${SH} $(TOPDIR)/etc/mkdirhier.sh
++#RANLIB		= ranlib
  READLINE	= -DREADLINE
 -READLIBS	= -L/usr/lib -lreadline -ltermcap
-+READLIBS	= -L${RL_PREFIX}/lib -Wl,-R${RL_PREFIX}/lib -lreadline -ltermcap
++READLIBS	= -lreadline -ltermcap
  RM		= rm -f
  SYSLIBS		=
 -X11DEF		= /usr/X11R6/lib/X11/app-defaults
 -X11INC		= /usr/X11R6/include
 -X11LIB		= /usr/X11R6/lib
-+X11DEF		= ${X11BASE}/lib/X11/app-defaults
++X11DEF		= ${PREFIX}/lib/X11/app-defaults
 +X11INC		= ${X11BASE}/include
 +X11LIB		= ${X11BASE}/lib
