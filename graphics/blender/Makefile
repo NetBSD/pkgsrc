@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/05/28 15:51:38 jschauma Exp $
+# $NetBSD: Makefile,v 1.19 2003/06/05 01:47:36 jschauma Exp $
 #
 
 DISTNAME=		blender-2.27
@@ -16,6 +16,8 @@ USE_X11=		YES
 HAS_CONFIGURE=		YES
 USE_GMAKE=		YES
 USE_BUILDLINK2=		YES
+USE_LIBTOOL=		YES
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 LDFLAGS+=		-lcrypto
 CFLAGS+=		-DGLX_GLXEXT_LEGACY
@@ -64,11 +66,12 @@ CONFIGURE_ARGS+=	--enable-exppython
 CONFIGURE_ARGS+=	--disable-exppython
 .endif
 
+.include "../../devel/libtool/buildlink2.mk"
+.include "../../devel/zlib/buildlink2.mk"
 .include "../../graphics/Mesa/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
 
 .include "../../lang/python/pyversion.mk"
 
