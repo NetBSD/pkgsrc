@@ -30,6 +30,7 @@
 #    SUBDIR += getbdf
 #    SUBDIR += gwm
 #    SUBDIR += iv
+    SUBDIR += kdelibs
     SUBDIR += lesstif
 #    SUBDIR += libdnd
 #    SUBDIR += libsx
