@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/29 16:58:03 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2004/03/10 14:12:51 xtraeme Exp $
 #
 
 DISTNAME=	fluxbox-0.9.8
@@ -12,7 +12,7 @@ COMMENT=	Window Manager for X based on Blackbox
 
 DEPENDS=	bsetroot>=0.1nb1:../../wm/bsetroot
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_X11=	YES
 USE_GCC_SHLIB=	YES
 GNU_CONFIGURE=	YES
@@ -39,7 +39,7 @@ CONFIGURE_ARGS+=	--disable-gnome
 FLUXBOX_USE_XFT?=	YES
 .if !empty(FLUXBOX_USE_XFT:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-xft
-.include "../../fonts/Xft2/buildlink2.mk"
+.include "../../fonts/Xft2/buildlink3.mk"
 .elseif
 CONFIGURE_ARGS+=	--disable-xft
 .endif

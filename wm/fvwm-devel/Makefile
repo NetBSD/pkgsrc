@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/12/24 09:53:50 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/10 14:12:51 xtraeme Exp $
 
 DISTNAME=	fvwm-2.5.7
 PKGNAME=	${DISTNAME:S/fvwm/&-devel/}
@@ -12,7 +12,7 @@ COMMENT=	Development version of X11 Virtual window manager
 
 CONFLICTS=	fvwm-[0-9]* fvwm1-[0-9]* fvwm2-[0-9]*
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
@@ -29,10 +29,10 @@ post-install:
 		`${LS} | ${GREP} -v Makefile` \
 		${PREFIX}/share/examples/fvwm
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/readline/buildlink2.mk"
-.include "../../fonts/Xft2/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../fonts/Xft2/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/01/27 00:53:10 heinz Exp $
+# $NetBSD: Makefile,v 1.21 2004/03/10 14:12:51 xtraeme Exp $
 #
 
 DISTNAME=		enlightenment-0.16.6
@@ -10,7 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.enlightenment.org/
 COMMENT=		Highly themeable and configurable window manager
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_X11=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
@@ -29,10 +29,10 @@ post-install:
 	${FIND} ${PREFIX}/share/enlightenment/themes -type f -print | \
 	${XARGS} ${CHMOD} ${SHAREMODE}
 
-.include "../../audio/esound/buildlink2.mk"
-.include "../../graphics/fnlib/buildlink2.mk"
-.include "../../graphics/freetype-lib/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
-.include "../../www/libghttp/buildlink2.mk"
+.include "../../audio/esound/buildlink3.mk"
+.include "../../graphics/fnlib/buildlink3.mk"
+.include "../../graphics/freetype-lib/buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
+.include "../../www/libghttp/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
