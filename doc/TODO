@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2751 2004/12/25 16:48:40 wiz Exp $
+$NetBSD: TODO,v 1.2752 2004/12/25 19:34:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -8,10 +8,6 @@ Suggested new packages
 
 	any complete, polished packages in pkgsrc-wip (ditto)
 	http://pkgsrc-wip.sourceforge.net/
-
-	figfonts
-	More fonts for figlet.
-	ftp://ftp.plig.org/pub/figlet/fonts/contributed/
 
 	jgloss
 	application for adding reading and translation annotations to Japanese
