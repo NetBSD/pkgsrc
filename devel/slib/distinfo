@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.5 2003/09/16 18:51:32 xtraeme Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 22:24:34 agc Exp $
 
 SHA1 (slib2d6.zip) = 402f7997a3d7ee72fa5c356487daef8420162338
+RMD160 (slib2d6.zip) = f1520a98646675a10a0d17853cbbf7bf03d3f3df
 Size (slib2d6.zip) = 793668 bytes

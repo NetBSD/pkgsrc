@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2004/06/30 19:14:12 kristerw Exp $
+$NetBSD: distinfo,v 1.9 2005/02/23 22:24:09 agc Exp $
 
 SHA1 (anjuta-1.2.2.tar.gz) = ee956653effb91467b64efd50609d31b17fde789
+RMD160 (anjuta-1.2.2.tar.gz) = 4cfda271baaa1677d538bc28f1ecd80f25f6d960
 Size (anjuta-1.2.2.tar.gz) = 8556051 bytes
 SHA1 (patch-aa) = dada6542f50dc70086cb03b9812af23527515d57
 SHA1 (patch-ab) = 7079a915de78ea2cd7c3182c47afab6f5a78c8c7

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/01/05 12:30:00 adam Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 22:24:08 agc Exp $
 
 SHA1 (SDL_ttf-2.0.7.tar.gz) = b0dd7646be46869279293bf384cb4b9a0f8c5dab
+RMD160 (SDL_ttf-2.0.7.tar.gz) = 32d5c78b9d630687446c3d81e2d9fd2980b37a58
 Size (SDL_ttf-2.0.7.tar.gz) = 1889705 bytes
