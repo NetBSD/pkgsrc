@@ -1,12 +1,16 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:44 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/10/05 14:23:18 drochner Exp $
+bin/cd-drive
 bin/cd-info
 bin/cd-read
 bin/iso-info
 bin/iso-read
 include/cdio/cd_types.h
 include/cdio/cdio.h
+include/cdio/cdtext.h
+include/cdio/dvd.h
 include/cdio/iso9660.h
 include/cdio/logging.h
+include/cdio/scsi_mmc.h
 include/cdio/sector.h
 include/cdio/types.h
 include/cdio/util.h
