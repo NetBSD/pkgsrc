@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3199 2005/03/05 13:50:22 wiz Exp $
+$NetBSD: TODO,v 1.3200 2005/03/05 14:12:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -270,7 +270,6 @@ Suggested package updates
 	o aap-0.144
 	o acpi-iasl-20040715
 	o advancecomp-1.14
-	o adzap-20041124
 	o aewm++-1.0.27
 	o afterstep-2.00.03
 	o aim-1.5.286
@@ -402,10 +401,8 @@ Suggested package updates
 	o devIL-1.6.7
 	o devhelp-0.9.3
 	o devtodo-0.1.18
-	o dhisd-5.1 [pkg/28704]
 	o diction-1.08
 	o diffstat-1.38
-	o dinotrace-9.2a
 	o dirac-0.5.1
 	o dircproxy-1.1.0
 	o dirdiff-2.0
@@ -414,7 +411,6 @@ Suggested package updates
 	o dnstop-20050203
 	o dnstracer-1.8
 	o doclifter-2.1
-	o docsis-0.9.1
 	o dpkg-1.13.0
 	o drivel-1.3.2
 	o dvdrip-0.52.2
@@ -424,12 +420,10 @@ Suggested package updates
 	o dylan-interpreter-2.4.0
 	o e2fsprogs-1.35
 	o eagle-4.13r1
-	o eblook-1.6.1
 	o ec-fonts-mftraced-1.0.9
 	o edb-1.0.5
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o efax-gtk-2.2.15
-	o efont-unicode-0.4.2
 	o egtk-0.3.6
 	o electricfence-2.4.13
 	o elf-0.5.4
@@ -484,7 +478,6 @@ Suggested package updates
 	o gdm1-2.2.5.5
 	o getmail-4.3.3
 	o gettext-0.14.1
-	o gftp-2.0.18
 	o ggv-2.8.3
 	o ghc-6.2.2
 	o ghostscript-8.00 (apfl)
@@ -706,7 +699,6 @@ Suggested package updates
 	o ng-1.4.4
 	o nget-0.27.1
 	o nhc98-1.17
-	o nicotine-1.0.8
 	o nn-6.6.5
 	o nrg2iso-0.4
 	o ns-2.28
@@ -735,7 +727,6 @@ Suggested package updates
 	o p11-2.10c
 	o p5-Apache-ASP-2.57
 	o p5-Apache-AuthCookieDBI-2.01
-	o p5-Apache-Gallery-0.9.1
 	o p5-Apache-SSI-2.17
 	o p5-Audio-Wav-0.04
 	o p5-Authen-SASL-2.08
@@ -768,7 +759,6 @@ Suggested package updates
 	o p5-FD-2.06c
 	o p5-File-DirSync-1.12
 	o p5-FileHandle-Unget-0.16.2.1
-	o p5-Filter-1.30
 	o p5-Font-AFM-1.19
 	o p5-Graph-0.20105
 	o p5-GraphViz-2.01
@@ -787,7 +777,6 @@ Suggested package updates
 	o p5-MP3-Info-1.02
 	o p5-Mac-Macbinary-0.06
 	o p5-Mail-Audit-2.1
-	o p5-Mail-ClamAV-0.13
 	o p5-Mail-ListDetector-0.31
 	o p5-Mail-Mbox-MessageParser-1.2130
 	o p5-Mail-SPF-Query-1.997
@@ -814,7 +803,6 @@ Suggested package updates
 	o p5-PerlIO-via-symlink-0.03
 	o p5-PerlMagick-6.2.0-4
 	o p5-Pod-POM-0.15
-	o p5-PostScript-MailLabels-2.10
 	o p5-SQL-Statement-1.09
 	o p5-SVN-Web-0.38
 	o p5-SWF-File-0.37
@@ -885,7 +873,6 @@ Suggested package updates
 	o poedit-1.3.2
 	o poppy-4.01
 	o posh-0.3.14
-	o postgresql-autodoc-1.24
 	o potrace-1.6
 	o pptp-1.5.0 [http://pptpclient.sourceforge.net/]
 	o pptpd-1.2.3
@@ -1029,7 +1016,6 @@ Suggested package updates
 	o splint-3.1.1
 	o spruce-0.6.5
 	o sqlrelay-0.35
-	o squid-2.5.9
 	o sqwebmail-5.0.1
 	o srp_client-1.7.5 [jlam]
 	o ssam-1.10
@@ -1068,10 +1054,8 @@ Suggested package updates
 	o tdir-1.67
 	o tds-1.6.2
 	o teTeX-3.0
-	o teapop-0.3.8
 	o ted-2.17
 	o tela-2.01
-	o tex-musixtex-112
 	o tfmxplay-1.1.6
 	o thunderbird-bin-1.0
 	o tinc-1.0.3
@@ -1079,7 +1063,6 @@ Suggested package updates
 	o tk83-8.3.5
 	o tkcvs-7.2.2
 	o tkdesk-2.0
-	o tkdiff-4.0.2
 	o tkgate-1.8.5
 	o tkhylafax-3.2
 	o tkman-2.2
@@ -1150,7 +1133,6 @@ Suggested package updates
 	o xdaliclock-2.20
 	o xdesktopwaves-1.3
 	o xdialog-2.1.2
-	o xdx-1.2
 	o xerces-c-2.5.0 [heinz?|p5-XML-Xerces requires xerces-c-2.3.0]
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.6.2
@@ -1189,7 +1171,6 @@ Suggested package updates
 	o xtide-2.8.2
 	o xtraceroute-0.9.1
 	o xtux-20030306
-	o xzgv-0.8
 	o xzip-182
 	o yafc-1.1
 	o yamt-0.6
