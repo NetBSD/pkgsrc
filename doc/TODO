@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1908 2004/07/07 20:00:14 schmonz Exp $
+$NetBSD: TODO,v 1.1909 2004/07/07 20:56:02 salo Exp $
 
 Suggested new packages
 ======================
@@ -314,7 +314,6 @@ Suggested package updates
 	o napshare-1.2
 	o netatalk-1.6.3 [pkg/21930]
 	o netcdf-3.5.1
-	o nmap-3.55
 	o nosefart-2.1
 	o ns-flash-6.0.79
 	o nsd-2.1.0
