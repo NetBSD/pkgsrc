@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1 2001/02/06 07:07:44 itojun Exp $
+$NetBSD: patch-ae,v 1.2 2001/02/08 19:52:04 fredb Exp $
 
---- WWW/Library/Implementation/HTParse.c.orig	Wed Dec 15 20:03:18 1999
-+++ WWW/Library/Implementation/HTParse.c	Tue Feb  6 15:58:26 2001
+--- WWW/Library/Implementation/HTParse.c.orig	Wed Oct 25 11:35:28 2000
++++ WWW/Library/Implementation/HTParse.c	Tue Feb  6 15:26:57 2001
 @@ -291,7 +291,11 @@
  		char *p2, *h;
  		if ((p2 = strchr(result, '@')) != NULL)
@@ -11,6 +11,6 @@ $NetBSD: patch-ae,v 1.1 2001/02/06 07:07:44 itojun Exp $
 +#else
  		p2 = strchr(tail, ':');
 +#endif
- 		if (p2 != NULL && !isdigit((unsigned char)p2[1]))
+ 		if (p2 != NULL && !isdigit(UCH(p2[1])))
  		    /*
  		    **	Colon not followed by a port number.
