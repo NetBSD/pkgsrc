@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.16 2000/12/22 17:26:18 jlam Exp $
+$NetBSD: patch-aa,v 1.17 2001/03/28 14:57:55 drochner Exp $
 
---- Makefile.am.orig	Mon Dec 18 07:58:29 2000
-+++ Makefile.am
+--- Makefile.am.orig	Fri Dec 22 13:25:49 2000
++++ Makefile.am	Wed Mar 28 13:44:48 2001
 @@ -3,25 +3,32 @@
  #
  
@@ -37,17 +37,17 @@ $NetBSD: patch-aa,v 1.16 2000/12/22 17:26:18 jlam Exp $
 -		BUG-REPORTING CREDITS KNOWN_BUGS RELEASE-POLICY NOTES
 -
  @MAINT@changelog:
- @MAINT@	@ cvs -Q -z8 log -rrelease_@MAJOR_VERSION@_@MINOR_VERSION@_@PICO_VERSION@: \
- @MAINT@              include \
-@@ -32,7 +39,6 @@
- @MAINT@              clients \
- @MAINT@	      | $(srcdir)/scripts/parselog >ChangeLog
+ @MAINT@	@ cvs -Q -z9 log -rrelease_@MAJOR_VERSION@_@MINOR_VERSION@_@PICO_VERSION@: \
+ @MAINT@                  acconfig.h acinclude.m4 configure.in Makefile.am \
+@@ -34,7 +41,6 @@
+ @MAINT@                  doc/lessdox \
+ @MAINT@	    | $(srcdir)/scripts/parselog >ChangeLog
  
 -htmldir=	$(exec_prefix)/LessTif/doc
  html_DATA=	release-notes.html
  
  all-local: BUG-REPORTING
-@@ -49,6 +55,7 @@
+@@ -51,6 +57,7 @@
  
  #install-data-hook:
  #	${INSTALL_DATA} $(srcdir)/NOTES $(DESTDIR)$(htmldir)/release-notes.html
