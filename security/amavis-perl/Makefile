@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/06/02 01:17:21 jschauma Exp $
+# $NetBSD: Makefile,v 1.11 2003/06/09 09:36:20 wiz Exp $
 
 DISTNAME=	amavisd-${VERSION}
 PKGNAME=	amavis-perl-${VERSION}
@@ -58,7 +58,7 @@ CONFIGURE_ARGS+=--sysconfdir=${PREFIX}/etc/amavis
 CONFIGURE_ARGS+=--with-virusdir=${VIRUSDIR}
 CONFIGURE_ARGS+=--with-mailto=${VIRUSMAILTO}
 CONFIGURE_ARGS+=--enable-all
-CONFIGURE6ARGS+=--with-amavisuser=amavis
+CONFIGURE_ARGS+=--with-amavisuser=amavis
 
 .if defined(USE_MILTER) && ${USE_MILTER} == "YES"
 CONFIGURE_ARGS+=--enable-milter
