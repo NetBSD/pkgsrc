@@ -1,3 +1,4 @@
+# $NetBSD: Makefile,v 1.2 1997/10/06 15:32:32 agc Exp $
 # New ports collection makefile for:	tcl8.0
 # Version required:	8.0
 # Date created:		19 August 1997
