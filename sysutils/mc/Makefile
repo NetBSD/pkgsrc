@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 1999/10/15 23:59:18 mjl Exp $
+# $NetBSD: Makefile,v 1.32 1999/10/22 23:40:31 tron Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/11/30 19:37:48 vanilla Exp
 #
 
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.gnome.org/mc/
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mc/}
 
 DEPENDS+=	libslang-1.3.9:../../devel/libslang
-DEPENDS+=	glib-1.2.4:../../devel/glib
+DEPENDS+=	glib-1.2.*:../../devel/glib
 
 CONFLICTS+=	gmc-*
 
