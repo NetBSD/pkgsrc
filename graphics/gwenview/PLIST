@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/12/10 06:40:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/01/07 12:35:10 markd Exp $
 bin/gwenview
 lib/kde3/libgvdirpart.la
 lib/kde3/libgvimagepart.la
@@ -110,6 +110,14 @@ ${PKGLOCALEDIR}/locale/xx/LC_MESSAGES/gwenview.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gwenview.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gwenview.mo
 ${PKGLOCALEDIR}/locale/zu/LC_MESSAGES/gwenview.mo
+@comment in kde: @dirrm share/kde/services
+@comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/apps
+@comment in kde: @dirrm share/kde/apps/konqueror/servicemenus
 @dirrm share/kde/apps/gwenview/tools
 @dirrm share/kde/apps/gwenview/thumbnail
 @dirrm share/kde/apps/gwenview/icons/hicolor/48x48/actions
@@ -126,3 +134,6 @@ ${PKGLOCALEDIR}/locale/zu/LC_MESSAGES/gwenview.mo
 @dirrm share/kde/apps/gwenview
 @dirrm share/kde/apps/gvimagepart
 @dirrm share/kde/apps/gvdirpart
+@comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/applications/kde
+@comment in kde: @dirrm lib/kde3
