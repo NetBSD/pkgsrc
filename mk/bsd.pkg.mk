@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.730 2001/04/26 08:35:38 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.731 2001/05/03 13:01:04 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2787,53 +2787,54 @@ build-depends-list:
 # the target used to generate the README.html file.
 .if !target(binpkg-list)
 binpkg-list:
-	@\
-	cd ${PACKAGES};							\
-	case ${.CURDIR} in						\
-	*/pkgsrc/packages)						\
-		for pkg in ${PKGREPOSITORYSUBDIR}/${PKGWILDCARD}${PKG_SUFX} ; \
-		do 							\
-			if [ -f "$$pkg" ] ; then			\
-				pkgname=`${ECHO} $$pkg | ${SED} 's@.*/@@'`; \
-				${ECHO} "<TR><TD>${MACHINE_ARCH}:<TD><a href=\"${PKG_URL}/$$pkg\">$$pkgname</a><TD>(${OPSYS} ${OS_VERSION})"; \
-			fi ;						\
-		done ; 							\
-		;;							\
-	*)								\
-		cd ${PACKAGES}/../..;					\
-		for i in [1-9].*/*; do  				\
-			if cd ${PACKAGES}/../../$$i/${PKGREPOSITORYSUBDIR} 2>/dev/null; then \
-				for j in ${PKGWILDCARD}${PKG_SUFX};	\
-				do 					\
-					if [ -f "$$j" ]; then		\
-						${ECHO} $$i/$$j; 	\
-					fi;				\
-				done; 					\
-			fi; 						\
-		done | ${AWK} -F/ '					\
-			{						\
-				release = $$1;				\
-				arch = $$2; 				\
-				pkg = $$3;				\
-				gsub("\.tgz","", pkg);			\
-				if (arch != "m68k" && arch != "mipsel") {			\
-					if (arch in urls)		\
-						urls[arch "/" pkg "/" release] = "<a href=\"${PKG_URL}/" release "/" arch "/${PKGREPOSITORYSUBDIR}/" pkg "${PKG_SUFX}\">" pkg "</a>, " urls[arch]; \
-					else				\
-						urls[arch "/" pkg "/" release] = "<a href=\"${PKG_URL}/" release "/" arch "/${PKGREPOSITORYSUBDIR}/" pkg "${PKG_SUFX}\">" pkg "</a> "; \
-				}					\
-			} 						\
-			END { 						\
-				for (av in urls) {			\
-					split(av, ava, "/");		\
-					arch=ava[1];			\
-					pkg=ava[2];			\
-					release=ava[3];			\
-					print "<TR><TD>" arch ":<TD>" urls[av] "<TD>(${OPSYS} " release ")"; \
-				}					\
-			}' | sort					\
-		;;							\
-	esac
+	@if [ -e ${PACKAGES} ]; then					\
+		cd ${PACKAGES};						\
+		case ${.CURDIR} in					\
+		*/pkgsrc/packages)					\
+			for pkg in ${PKGREPOSITORYSUBDIR}/${PKGWILDCARD}${PKG_SUFX} ; \
+			do 						\
+				if [ -f "$$pkg" ] ; then		\
+					pkgname=`${ECHO} $$pkg | ${SED} 's@.*/@@'`; \
+					${ECHO} "<TR><TD>${MACHINE_ARCH}:<TD><a href=\"${PKG_URL}/$$pkg\">$$pkgname</a><TD>(${OPSYS} ${OS_VERSION})"; \
+				fi ;					\
+			done ; 						\
+			;;						\
+		*)							\
+			cd ${PACKAGES}/../..;				\
+			for i in [1-9].*/*; do  			\
+				if cd ${PACKAGES}/../../$$i/${PKGREPOSITORYSUBDIR} 2>/dev/null; then \
+					for j in ${PKGWILDCARD}${PKG_SUFX}; \
+					do 				\
+						if [ -f "$$j" ]; then	\
+							${ECHO} $$i/$$j;\
+						fi;			\
+					done; 				\
+				fi; 					\
+			done | ${AWK} -F/ '				\
+				{					\
+					release = $$1;			\
+					arch = $$2; 			\
+					pkg = $$3;			\
+					gsub("\.tgz","", pkg);		\
+					if (arch != "m68k" && arch != "mipsel") { \
+						if (arch in urls)	\
+							urls[arch "/" pkg "/" release] = "<a href=\"${PKG_URL}/" release "/" arch "/${PKGREPOSITORYSUBDIR}/" pkg "${PKG_SUFX}\">" pkg "</a>, " urls[arch]; \
+						else			\
+							urls[arch "/" pkg "/" release] = "<a href=\"${PKG_URL}/" release "/" arch "/${PKGREPOSITORYSUBDIR}/" pkg "${PKG_SUFX}\">" pkg "</a> "; \
+					}				\
+				} 					\
+				END { 					\
+					for (av in urls) {		\
+						split(av, ava, "/");	\
+						arch=ava[1];		\
+						pkg=ava[2];		\
+						release=ava[3];		\
+						print "<TR><TD>" arch ":<TD>" urls[av] "<TD>(${OPSYS} " release ")"; \
+					}				\
+				}' | sort				\
+			;;						\
+		esac;							\
+	fi
 .endif
 
 ################################################################
