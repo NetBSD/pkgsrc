@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/10/30 07:20:44 skrll Exp $
+# $NetBSD: Makefile,v 1.3 2002/12/28 21:16:05 jlam Exp $
 #
 
 DISTNAME=	acunia-jam-1.0
@@ -11,6 +11,8 @@ HOMEPAGE=	http://wonka.acunia.com/
 COMMENT=	Acunia version of the program construction tool, like make(1)
 
 CONFLICTS=	jam-[0-9]*
+
+USE_BUILDLINK2=	# defined
 
 DOCDIR=		share/doc/${PKGBASE}
 HTMLDIR=	share/doc/html/${PKGBASE}
