@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/17 22:51:20 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/25 00:25:01 wiz Exp $
 #
 
 DISTNAME=	ares-1.1.1
@@ -10,7 +10,7 @@ MAINTAINER=	sommerfeld@NetBSD.org
 #HOMEPAGE=	none
 COMMENT=	Asynchronous DNS resolver library
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
 .include "../../mk/bsd.pkg.mk"
