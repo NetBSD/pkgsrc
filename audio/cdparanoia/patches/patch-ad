@@ -1,0 +1,39 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
+
+--- utils.h.orig	Sat Oct  9 04:18:21 1999
++++ utils.h	Sun Jan 16 19:05:14 2000
+@@ -1,5 +1,10 @@
+ #include <stdlib.h>
++#ifdef __linux__
+ #include <endian.h>
++#endif
++#ifdef __NetBSD__
++#include <sys/endian.h>
++#endif
+ #include <stdio.h>
+ #include <errno.h>
+ #include <string.h>
+@@ -19,15 +24,23 @@
+ }
+ 
+ static inline size32 swap32(size32 x){
++#ifdef __NetBSD__
++  return bswap32(x);
++#else
+   return((((unsigned size32)x & 0x000000ffU) << 24) | 
+ 	 (((unsigned size32)x & 0x0000ff00U) <<  8) | 
+ 	 (((unsigned size32)x & 0x00ff0000U) >>  8) | 
+ 	 (((unsigned size32)x & 0xff000000U) >> 24));
++#endif
+ }
+ 
+ static inline size16 swap16(size16 x){
++#ifdef __NetBSD__
++  return bswap16(x);
++#else
+   return((((unsigned size16)x & 0x00ffU) <<  8) | 
+ 	 (((unsigned size16)x & 0xff00U) >>  8));
++#endif
+ }
+ 
+ #if BYTE_ORDER == LITTLE_ENDIAN

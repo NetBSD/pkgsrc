@@ -1,0 +1,75 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
+
+--- configure.orig	Mon Aug 16 07:29:42 1999
++++ configure	Mon Jan 17 23:05:54 2000
+@@ -1272,6 +1272,62 @@
+ done
+ 
+ 
++for ac_func in getopt_long
++do
++echo $ac_n "checking for $ac_func""... $ac_c" 1>&6
++echo "configure:1356: checking for $ac_func" >&5
++if eval "test \"`echo '$''{'ac_cv_func_$ac_func'+set}'`\" = set"; then
++  echo $ac_n "(cached) $ac_c" 1>&6
++else
++  cat > conftest.$ac_ext <<EOF
++#line 1361 "configure"
++#include "confdefs.h"
++/* System header to define __stub macros and hopefully few prototypes,
++    which can conflict with char $ac_func(); below.  */
++#include <assert.h>
++/* Override any gcc2 internal prototype to avoid an error.  */
++/* We use char because int might match the return type of a gcc2
++    builtin and then its argument prototype would still apply.  */
++char $ac_func();
++
++int main() {
++
++/* The GNU C library defines this for functions which it implements
++    to always fail with ENOSYS.  Some functions are actually named
++    something starting with __ and the normal name is an alias.  */
++#if defined (__stub_$ac_func) || defined (__stub___$ac_func)
++choke me
++#else
++$ac_func();
++#endif
++
++; return 0; }
++EOF
++if { (eval echo configure:1384: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
++  rm -rf conftest*
++  eval "ac_cv_func_$ac_func=yes"
++else
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
++  eval "ac_cv_func_$ac_func=no"
++fi
++rm -f conftest*
++fi
++
++if eval "test \"`echo '$ac_cv_func_'$ac_func`\" = yes"; then
++  echo "$ac_t""yes" 1>&6
++    ac_tr_func=HAVE_`echo $ac_func | tr 'abcdefghijklmnopqrstuvwxyz' 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'`
++  cat >> confdefs.h <<EOF
++#define $ac_tr_func 1
++EOF
++ GETOPT_LONG="-DGETOPT_LONG='1' "
++else
++  echo "$ac_t""no" 1>&6
++fi
++done
++
++
+ echo $ac_n "checking whether ${MAKE-make} sets \${MAKE}""... $ac_c" 1>&6
+ echo "configure:1277: checking whether ${MAKE-make} sets \${MAKE}" >&5
+ set dummy ${MAKE-make}; ac_make=`echo "$2" | sed 'y%./+-%__p_%'`
+@@ -1537,6 +1593,7 @@
+ s%@SET_MAKE@%$SET_MAKE%g
+ s%@SBPCD_H@%$SBPCD_H%g
+ s%@UCDROM_H@%$UCDROM_H%g
++s%@GETOPT_LONG@%$GETOPT_LONG%g
+ s%@TYPESIZES@%$TYPESIZES%g
+ s%@OPT@%$OPT%g
+ s%@DEBUG@%$DEBUG%g

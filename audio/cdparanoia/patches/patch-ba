@@ -1,0 +1,21 @@
+$NetBSD: patch-ba,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
+
+--- paranoia/Makefile.in.orig	Tue Dec 14 13:28:04 1999
++++ paranoia/Makefile.in	Mon Jan 17 23:26:01 2000
+@@ -22,7 +22,6 @@
+ #TFILES = isort.t gap.t p_block.t paranoia.t
+ 
+ LIBS = ../interface/libcdda_interface.a -lm
+-export VERSION
+ 
+ all: lib slib
+ 
+@@ -34,7 +33,7 @@
+ 
+ slib:	
+ 	$(MAKE) lessmessy
+-	$(MAKE) libcdda_paranoia.so CFLAGS="$(OPT) -fpic" 
++	$(MAKE) libcdda_paranoia.so VERSION=$(VERSION) CFLAGS="$(OPT) -fpic" 
+ 
+ #test:	$(TFILES)
+ #
