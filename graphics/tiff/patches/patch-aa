@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.15 2004/12/28 23:10:09 reed Exp $
+$NetBSD: patch-aa,v 1.16 2005/03/23 01:17:45 wiz Exp $
 
---- man/Makefile.in.orig	Mon Dec 20 11:41:54 2004
+--- man/Makefile.in.orig	2005-03-11 16:49:52.000000000 +0100
 +++ man/Makefile.in
-@@ -373,11 +373,7 @@ install-man3: $(man3_MANS) $(man_MANS)
+@@ -376,11 +376,7 @@ install-man3: $(man3_MANS) $(man_MANS)
  	for i in $$list; do \
  	  if test -f $(srcdir)/$$i; then file=$(srcdir)/$$i; \
  	  else file=$$i; fi; \
