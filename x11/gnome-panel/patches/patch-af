@@ -1,0 +1,40 @@
+$NetBSD: patch-af,v 1.1.1.1 2002/11/04 08:28:00 rh Exp $
+
+--- applets/fish/fish.c.orig	Wed Jul 17 09:33:10 2002
++++ applets/fish/fish.c
+@@ -711,7 +711,7 @@ display_properties_dialog (BonoboUICompo
+ 	gtk_window_set_title (GTK_WINDOW (fish->pb),
+ 			      _("GNOME Fish Preferences"));
+ 	gnome_window_icon_set_from_file (GTK_WINDOW (fish->pb),
+-					 GNOME_ICONDIR "/gnome-fish.png");
++					 GNOME_ICONDIR "/gnome2-fish.png");
+ 
+ 	vbox = gtk_vbox_new (FALSE, GNOME_PAD);
+ 	gtk_container_set_border_width (GTK_CONTAINER (vbox), GNOME_PAD);
+@@ -952,7 +952,7 @@ update_fortune_dialog (Fish *fish)
+ 				  G_CALLBACK (response), NULL);
+ 		gtk_window_set_wmclass (GTK_WINDOW (fish->fortune_dialog), "fish", "Fish");
+ 		gnome_window_icon_set_from_file (GTK_WINDOW (fish->fortune_dialog),
+-						 GNOME_ICONDIR"/gnome-fish.png");
++						 GNOME_ICONDIR"/gnome2-fish.png");
+ 
+ 		gtk_window_set_default_size (GTK_WINDOW (fish->fortune_dialog),
+ 					     MIN (600, gdk_screen_width () * 0.9),
+@@ -1220,7 +1220,7 @@ display_about_dialog (BonoboUIComponent 
+ 
+ 	g_free (name);
+ 
+-	file = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_PIXMAP, "gnome-fish.png", FALSE, NULL);
++	file = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_PIXMAP, "gnome2-fish.png", FALSE, NULL);
+ 
+ 	pixbuf = gdk_pixbuf_new_from_file (file, &error);
+ 
+@@ -1253,7 +1253,7 @@ display_about_dialog (BonoboUIComponent 
+ 
+ 	gtk_window_set_wmclass (GTK_WINDOW (fish->aboutbox), "fish", "Fish");
+ 	gnome_window_icon_set_from_file (GTK_WINDOW (fish->aboutbox),
+-					 GNOME_ICONDIR"/gnome-fish.png");
++					 GNOME_ICONDIR"/gnome2-fish.png");
+ 	gtk_signal_connect (GTK_OBJECT (fish->aboutbox), "destroy",
+ 			    GTK_SIGNAL_FUNC(gtk_widget_destroyed),
+ 			    &fish->aboutbox);

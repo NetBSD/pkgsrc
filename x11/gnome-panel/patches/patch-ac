@@ -1,0 +1,29 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/11/04 08:28:00 rh Exp $
+
+--- applets/gen_util/Makefile.in.orig	Sun Sep 15 16:18:36 2002
++++ applets/gen_util/Makefile.in
+@@ -173,7 +173,7 @@ PRINTER_BITMAPS = print.xpm
+ MAILCHECK_BITMAPS = email.png email-e.png tux-anim.png email-eclouds.png                     email-tiny.png eclouds.png
+ 
+ 
+-mailcheckbitmapsdir = $(datadir)/pixmaps/mailcheck
++mailcheckbitmapsdir = $(datadir)/pixmaps/mailcheck2
+ mailcheckbitmaps_DATA = $(MAILCHECK_BITMAPS)
+ 
+ soundlistdir = $(sysconfdir)/sound/events
+@@ -390,12 +390,13 @@ install-soundlistDATA: $(soundlist_DATA)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(soundlistdir)
+ 	@list='$(soundlist_DATA)'; for p in $$list; do \
++	inst=`echo "$$p" | sed s/mailcheck/mailcheck2/`; \
+ 	  if test -f $(srcdir)/$$p; then \
+ 	    echo " $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(soundlistdir)/$$p"; \
+-	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(soundlistdir)/$$p; \
++	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(soundlistdir)/$$inst; \
+ 	  else if test -f $$p; then \
+ 	    echo " $(INSTALL_DATA) $$p $(DESTDIR)$(soundlistdir)/$$p"; \
+-	    $(INSTALL_DATA) $$p $(DESTDIR)$(soundlistdir)/$$p; \
++	    $(INSTALL_DATA) $$p $(DESTDIR)$(soundlistdir)/$$inst; \
+ 	  fi; fi; \
+ 	done
+ 
