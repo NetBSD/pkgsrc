@@ -1,9 +1,15 @@
-$NetBSD: patch-ab,v 1.17 2004/05/10 18:12:24 wiz Exp $
+$NetBSD: patch-ab,v 1.18 2004/08/04 06:43:52 minskim Exp $
 
---- configure.ac.orig	2004-04-17 05:03:07.000000000 +0200
+--- configure.ac.orig	Fri Apr 16 22:03:07 2004
 +++ configure.ac
-@@ -456,6 +456,9 @@ mips-sony-bsd|mips-sony-newsos4)
+@@ -454,8 +454,15 @@ mips-sony-bsd|mips-sony-newsos4)
+ 	AC_DEFINE(MISSING_HOWMANY)
+ 	AC_DEFINE(MISSING_FD_MASK)
  	;;
++
++*-*-interix3)
++	AC_DEFINE(MISSING_HOWMANY)
++	;;
  esac
  
 +# pkgsrc handles any rpath settings this package needs
@@ -12,7 +18,7 @@ $NetBSD: patch-ab,v 1.17 2004/05/10 18:12:24 wiz Exp $
  # Allow user to specify flags
  AC_ARG_WITH(cflags,
  	[  --with-cflags           Specify additional flags to pass to compiler],
-@@ -2824,9 +2827,17 @@ AC_TRY_COMPILE([
+@@ -2824,9 +2831,17 @@ AC_TRY_COMPILE([
  )
  if test -z "$conf_utmpx_location"; then
  	if test x"$system_utmpx_path" = x"no" ; then
@@ -32,7 +38,7 @@ $NetBSD: patch-ab,v 1.17 2004/05/10 18:12:24 wiz Exp $
  	AC_DEFINE_UNQUOTED(CONF_UTMPX_FILE, "$conf_utmpx_location")
  fi	
  
-@@ -2849,9 +2860,17 @@ AC_TRY_COMPILE([
+@@ -2849,9 +2864,17 @@ AC_TRY_COMPILE([
  )
  if test -z "$conf_wtmpx_location"; then
  	if test x"$system_wtmpx_path" = x"no" ; then
@@ -52,7 +58,7 @@ $NetBSD: patch-ab,v 1.17 2004/05/10 18:12:24 wiz Exp $
  	AC_DEFINE_UNQUOTED(CONF_WTMPX_FILE, "$conf_wtmpx_location")
  fi	
  
-@@ -2892,7 +2911,7 @@ echo "OpenSSH has been configured with t
+@@ -2892,7 +2915,7 @@ echo "OpenSSH has been configured with t
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"
