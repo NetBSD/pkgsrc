@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2004/04/20 23:22:26 epg Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/05/31 01:57:25 epg Exp $
 bin/trac-admin
+bin/tracd
+bin/tracdb2env
 ${PYSITELIB}/trac/About.py
 ${PYSITELIB}/trac/About.pyc
 ${PYSITELIB}/trac/About.pyo
@@ -9,6 +11,9 @@ ${PYSITELIB}/trac/Browser.pyo
 ${PYSITELIB}/trac/Changeset.py
 ${PYSITELIB}/trac/Changeset.pyc
 ${PYSITELIB}/trac/Changeset.pyo
+${PYSITELIB}/trac/Environment.py
+${PYSITELIB}/trac/Environment.pyc
+${PYSITELIB}/trac/Environment.pyo
 ${PYSITELIB}/trac/File.py
 ${PYSITELIB}/trac/File.pyc
 ${PYSITELIB}/trac/File.pyo
@@ -18,9 +23,21 @@ ${PYSITELIB}/trac/Href.pyo
 ${PYSITELIB}/trac/Log.py
 ${PYSITELIB}/trac/Log.pyc
 ${PYSITELIB}/trac/Log.pyo
+${PYSITELIB}/trac/Logging.py
+${PYSITELIB}/trac/Logging.pyc
+${PYSITELIB}/trac/Logging.pyo
+${PYSITELIB}/trac/Mimeview.py
+${PYSITELIB}/trac/Mimeview.pyc
+${PYSITELIB}/trac/Mimeview.pyo
 ${PYSITELIB}/trac/Module.py
 ${PYSITELIB}/trac/Module.pyc
 ${PYSITELIB}/trac/Module.pyo
+${PYSITELIB}/trac/Notify.py
+${PYSITELIB}/trac/Notify.pyc
+${PYSITELIB}/trac/Notify.pyo
+${PYSITELIB}/trac/PermissionError.py
+${PYSITELIB}/trac/PermissionError.pyc
+${PYSITELIB}/trac/PermissionError.pyo
 ${PYSITELIB}/trac/Report.py
 ${PYSITELIB}/trac/Report.pyc
 ${PYSITELIB}/trac/Report.pyo
@@ -42,9 +59,33 @@ ${PYSITELIB}/trac/__init__.pyo
 ${PYSITELIB}/trac/auth.py
 ${PYSITELIB}/trac/auth.pyc
 ${PYSITELIB}/trac/auth.pyo
+${PYSITELIB}/trac/core.py
+${PYSITELIB}/trac/core.pyc
+${PYSITELIB}/trac/core.pyo
 ${PYSITELIB}/trac/db.py
 ${PYSITELIB}/trac/db.pyc
 ${PYSITELIB}/trac/db.pyo
+${PYSITELIB}/trac/db_default.py
+${PYSITELIB}/trac/db_default.pyc
+${PYSITELIB}/trac/db_default.pyo
+${PYSITELIB}/trac/mimeviewers/__init__.py
+${PYSITELIB}/trac/mimeviewers/__init__.pyc
+${PYSITELIB}/trac/mimeviewers/__init__.pyo
+${PYSITELIB}/trac/mimeviewers/default.py
+${PYSITELIB}/trac/mimeviewers/default.pyc
+${PYSITELIB}/trac/mimeviewers/default.pyo
+${PYSITELIB}/trac/mimeviewers/enscript.py
+${PYSITELIB}/trac/mimeviewers/enscript.pyc
+${PYSITELIB}/trac/mimeviewers/enscript.pyo
+${PYSITELIB}/trac/mimeviewers/image.py
+${PYSITELIB}/trac/mimeviewers/image.pyc
+${PYSITELIB}/trac/mimeviewers/image.pyo
+${PYSITELIB}/trac/mimeviewers/silvercity.py
+${PYSITELIB}/trac/mimeviewers/silvercity.pyc
+${PYSITELIB}/trac/mimeviewers/silvercity.pyo
+${PYSITELIB}/trac/mimeviewers/test.py
+${PYSITELIB}/trac/mimeviewers/test.pyc
+${PYSITELIB}/trac/mimeviewers/test.pyo
 ${PYSITELIB}/trac/perm.py
 ${PYSITELIB}/trac/perm.pyc
 ${PYSITELIB}/trac/perm.pyo
@@ -54,9 +95,15 @@ ${PYSITELIB}/trac/siteconfig.pyo
 ${PYSITELIB}/trac/sync.py
 ${PYSITELIB}/trac/sync.pyc
 ${PYSITELIB}/trac/sync.pyo
-${PYSITELIB}/trac/trac.py
-${PYSITELIB}/trac/trac.pyc
-${PYSITELIB}/trac/trac.pyo
+${PYSITELIB}/trac/test.py
+${PYSITELIB}/trac/test.pyc
+${PYSITELIB}/trac/test.pyo
+${PYSITELIB}/trac/upgrades/__init__.py
+${PYSITELIB}/trac/upgrades/__init__.pyc
+${PYSITELIB}/trac/upgrades/__init__.pyo
+${PYSITELIB}/trac/upgrades/db3.py
+${PYSITELIB}/trac/upgrades/db3.pyc
+${PYSITELIB}/trac/upgrades/db3.pyo
 ${PYSITELIB}/trac/util.py
 ${PYSITELIB}/trac/util.pyc
 ${PYSITELIB}/trac/util.pyo
@@ -72,6 +119,9 @@ ${PYSITELIB}/trac/wikimacros/__init__.pyo
 ${PYSITELIB}/trac/wikimacros/rst.py
 ${PYSITELIB}/trac/wikimacros/rst.pyc
 ${PYSITELIB}/trac/wikimacros/rst.pyo
+share/examples/trac/README
+share/examples/trac/bugzilla2trac.py
+share/examples/trac/sourceforge2trac.py
 share/examples/trac/trac-post-commit-hook
 share/examples/trac/trac-pre-commit-hook
 share/trac/cgi-bin/trac.cgi
@@ -80,6 +130,7 @@ share/trac/htdocs/changeset.png
 share/trac/htdocs/closedticket.png
 share/trac/htdocs/css/browser.css
 share/trac/htdocs/css/changeset.css
+share/trac/htdocs/css/code.css
 share/trac/htdocs/css/report.css
 share/trac/htdocs/css/search.css
 share/trac/htdocs/css/ticket.css
@@ -89,8 +140,9 @@ share/trac/htdocs/dots.gif
 share/trac/htdocs/edgewall_logo_left-226x43.png
 share/trac/htdocs/file.png
 share/trac/htdocs/folder.png
-share/trac/htdocs/navbar_gradient.png
+share/trac/htdocs/milestone.png
 share/trac/htdocs/newticket.png
+share/trac/htdocs/topbar_active.png
 share/trac/htdocs/topbar_gradient.png
 share/trac/htdocs/trac.js
 share/trac/htdocs/trac_banner.png
@@ -98,9 +150,11 @@ share/trac/htdocs/trac_logo_mini.png
 share/trac/htdocs/wiki.png
 share/trac/htdocs/xml.png
 share/trac/templates/README
+share/trac/templates/attachment.cs
 share/trac/templates/browser.cs
 share/trac/templates/changeset.cs
 share/trac/templates/error.cs
+share/trac/templates/file.cs
 share/trac/templates/footer.cs
 share/trac/templates/header.cs
 share/trac/templates/log.cs
@@ -111,29 +165,42 @@ share/trac/templates/report.cs
 share/trac/templates/report_rss.cs
 share/trac/templates/search.cs
 share/trac/templates/ticket.cs
+share/trac/templates/ticket_notify_email.cs
 share/trac/templates/timeline.cs
 share/trac/templates/timeline_rss.cs
 share/trac/templates/wiki.cs
 share/trac/wiki-default/CamelCase
 share/trac/wiki-default/SandBox
+share/trac/wiki-default/TracAccessibility
 share/trac/wiki-default/TracAdmin
 share/trac/wiki-default/TracBrowser
 share/trac/wiki-default/TracChangeset
 share/trac/wiki-default/TracGuide
+share/trac/wiki-default/TracIni
 share/trac/wiki-default/TracInstall
 share/trac/wiki-default/TracLinks
+share/trac/wiki-default/TracLogging
+share/trac/wiki-default/TracNotification
 share/trac/wiki-default/TracOnNetBsd
 share/trac/wiki-default/TracOnOsx
 share/trac/wiki-default/TracPermissions
 share/trac/wiki-default/TracReports
 share/trac/wiki-default/TracRss
+share/trac/wiki-default/TracSearch
 share/trac/wiki-default/TracSupport
+share/trac/wiki-default/TracSyntaxColoring
 share/trac/wiki-default/TracTickets
 share/trac/wiki-default/TracTimeline
+share/trac/wiki-default/TracUnicode
 share/trac/wiki-default/TracWiki
 share/trac/wiki-default/WikiFormatting
+share/trac/wiki-default/WikiHtml
+share/trac/wiki-default/WikiMacros
 share/trac/wiki-default/WikiNewPage
 share/trac/wiki-default/WikiPageNames
+share/trac/wiki-default/WikiProcessors
+share/trac/wiki-default/WikiRestructuredText
+share/trac/wiki-default/WikiRestructuredTextLinks
 share/trac/wiki-default/WikiStart
 @dirrm share/trac/wiki-default
 @dirrm share/trac/templates
@@ -143,4 +210,6 @@ share/trac/wiki-default/WikiStart
 @dirrm share/trac
 @dirrm share/examples/trac
 @dirrm ${PYSITELIB}/trac/wikimacros
+@dirrm ${PYSITELIB}/trac/upgrades
+@dirrm ${PYSITELIB}/trac/mimeviewers
 @dirrm ${PYSITELIB}/trac
