@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/03 14:04:56 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/08/12 21:11:29 tron Exp $
 share/texmf/xdvi/XDvi
 @dirrm share/texmf/xdvi
 share/texmf/web2c/cp8bit.tcx
@@ -7800,4 +7800,4 @@ share/texmf/bibtex/bib/README
 @dirrm share/texmf/bibtex
 share/texmf/aliases
 share/texmf/ChangeLog
-@dirrm share/texmf
+@unexec rmdir %D/share/texmf || true
