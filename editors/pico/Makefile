@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2004/10/03 00:14:39 tv Exp $
+# $NetBSD: Makefile,v 1.58 2005/01/18 03:15:07 jschauma Exp $
 
 DISTNAME=	pine4.61
 PKGNAME=	pico-4.8
@@ -19,13 +19,19 @@ USE_LIBTOOL=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS"
-BUILDNAME=	so5
-.elif ${OPSYS} == "Darwin"
+.if ${OPSYS} == "Darwin"
 BUILDNAME=	osx
 LIBS+=		-lcurses
+.elif ${OPSYS} == "IRIX"
+.  if ${OS_VERSION} >= 6.5
+BUILDNAME=	sg6
+.  else
+BUILDNAME=	sgi
+.  endif
 .elif ${OPSYS} == "Linux"
 BUILDNAME=	lnx
+.elif ${OPSYS} == "SunOS"
+BUILDNAME=	so5
 .else
 BUILDNAME=	neb
 .endif
