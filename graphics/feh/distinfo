@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2004/10/30 00:50:46 xtraeme Exp $
+$NetBSD: distinfo,v 1.9 2004/11/25 20:00:05 snj Exp $
 
-SHA1 (feh-1.2.7.tar.gz) = 768b8cc63906ed39798b46f7aabd3338c880f376
-Size (feh-1.2.7.tar.gz) = 373323 bytes
+SHA1 (feh-1.2.9.tar.gz) = 0763071f296f4f1e7ef56eaa4731e04c5e10a369
+Size (feh-1.2.9.tar.gz) = 373408 bytes
 SHA1 (patch-aa) = 745c9ca77355a0beaacbe32bc33174e8dc057cbd
-SHA1 (patch-ab) = 57bb0f304a8f8ae002c85ca41618a3b5e02de0bf
+SHA1 (patch-ab) = 1899f65deb3a5c3d9825b381298b752f0bec54cc
