@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2005/02/15 15:55:25 minskim Exp $
+
+--- wwwroot/cgi-bin/awstats.model.conf.orig	2005-01-22 09:26:06.000000000 -0600
++++ wwwroot/cgi-bin/awstats.model.conf
+@@ -701,9 +701,9 @@ ErrorMessages=""
+ # security reasons) to disable debugging, set this parameter to 0.
+ # Change : Effective immediatly
+ # Possible values: 0 or 1
+-# Default: 1
++# Default: 0
+ #
+-DebugMessages=1
++DebugMessages=0
+ 
+ 
+ # To help you to detect if your log format is good, AWStats report an error
