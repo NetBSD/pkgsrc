@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.447 2002/11/03 08:54:28 rh Exp $
+$NetBSD: CHANGES,v 1.448 2002/11/03 09:04:01 martti Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3512,3 +3512,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Added gconf-editor-0.3.1 [rh 2002-11-02]
 	Updated hanterm to 3.1.6nb1 [junyoung 2002-11-02]
 	Added gedit-2.0.5 [rh 2002-11-03]
+	Updated xpmroot to 2.4.13 [martti 2002-11-03]
+	Updated fvwm2 to 2.4.13 [martti 2002-11-03]
