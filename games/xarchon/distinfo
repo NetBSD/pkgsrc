@@ -1,6 +1,16 @@
-$NetBSD: distinfo,v 1.6 2003/12/20 01:51:34 hubertf Exp $
+$NetBSD: distinfo,v 1.7 2005/02/22 16:35:55 wiz Exp $
 
 SHA1 (xarchon-0.60.tar.gz) = e68f79a712a8bff5ca18e5011d1582f7e5196f49
 Size (xarchon-0.60.tar.gz) = 435088 bytes
-SHA1 (patch-aa) = 03d8cdc6a8ba77a8b28fb7b4464823f6066f3993
-SHA1 (patch-ab) = 2f35eb718bd47089ee545abbdb10ed8adba7807f
+SHA1 (patch-aa) = f6049d4298cd1363d10bbea35957334fa496e2c0
+SHA1 (patch-ab) = d6ce4b8b5d9053debff34cc7d6ec396e8d8f2306
+SHA1 (patch-ac) = 0021cba328bbfc4da5a3093d5a338495ee3681f4
+SHA1 (patch-ad) = 28dea7e4fd285791d42df7ee43ff6623b15dad55
+SHA1 (patch-ae) = b80aa4bd8ee51d9798aac15da917235b7ae2b106
+SHA1 (patch-af) = bd789fa299cea2d8ed9d89bddbfda642c0744e55
+SHA1 (patch-ag) = d87bae0c62787165eda3384ebaff8fa4b85c3b41
+SHA1 (patch-ah) = 63c7c2bbb9767072ac5804e8ae0686fff6d43d8c
+SHA1 (patch-ai) = ebb7809f3c2bef22ccc73afe507826d46347a14d
+SHA1 (patch-aj) = feeca49101109695a09a2e5a526e306659cc7089
+SHA1 (patch-ak) = bff38380e7b40161c8135a1d04ee0468a1135991
+SHA1 (patch-al) = 55693517ab21d4393b724844f091fc3e6833d764
