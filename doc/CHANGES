@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7572 2004/10/26 05:56:57 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7573 2004/10/26 14:00:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4872,3 +4872,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated lcms to 1.13 [minskim 2004-10-25]
 	Updated bogofilter to 0.92.8 [snj 2004-10-26]
 	Updated gtk-send-pr to 0.3.4 [xtraeme 2004-10-26]
+	Updated MesaLib to 6.2 [adam 2004-10-26]
+	Updated glu to 6.2 [adam 2004-10-26]
+	Updated glut to 6.2 [adam 2004-10-26]
+	Updated MesaDemos to 6.2 [adam 2004-10-26]
+	Updated Mesa to 6.2 [adam 2004-10-26]
