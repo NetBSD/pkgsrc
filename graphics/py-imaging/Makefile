@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2001/02/16 15:22:32 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/03/10 13:46:29 wiz Exp $
 
-DISTNAME=	Imaging-1.0b1
-PKGNAME=	py-imaging-1.0b1
+DISTNAME=	Imaging-1.1.1
+PKGNAME=	py-imaging-1.1.1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.pythonware.com/downloads/
 
@@ -29,16 +29,28 @@ post-build:
 	(cd ${WRKSRC}/PIL; python ${PREFIX}/lib/python2.0/compileall.py .)
 	(cd ${WRKSRC}/PIL; python -O ${PREFIX}/lib/python2.0/compileall.py .)
 
-post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/PIL/*.py ${WRKSRC}/PIL/*.py[co] \
+do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/python2.0/site-packages
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/python2.0/site-packages/PIL
+	${INSTALL_SCRIPT} ${WRKSRC}/PIL.pth \
 		${PREFIX}/lib/python2.0/site-packages
+	${INSTALL_SCRIPT} ${WRKSRC}/_imaging.so \
+		${WRKSRC}/PIL/*.py ${WRKSRC}/PIL/*.py[co] \
+		${PREFIX}/lib/python2.0/site-packages/PIL
 	${INSTALL_DATA_DIR} ${PREFIX}/include/PIL
 	${INSTALL_DATA} ${WRKSRC}/libImaging/*.h ${PREFIX}/include/PIL
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
 	(cd ${WRKSRC}/PIL; ${FIND} . -name \*.py\* -print \
-		| ${SED} -e 's,^./,lib/python2.0/site-packages/,g' \
+		| ${SED} -e 's,^./,lib/python2.0/site-packages/PIL/,g' \
 		>>${PLIST_SRC})
 	(cd ${PREFIX}; ${FIND} include/PIL -type f -print >>${PLIST_SRC})
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/py-imaging
+	(cd ${WRKSRC}/Scripts; \
+	 for i in  README bdf2pil.py explode.py gifmaker.py image2py.py pil*.py; do \
+	 ${INSTALL_DATA} $$i ${PREFIX}/share/examples/py-imaging; \
+	 ${ECHO} share/examples/py-imaging/$$i >>${PLIST_SRC}; done )
+	${ECHO} "@dirrm share/examples/py-imaging" >>${PLIST_SRC}
 	${ECHO} "@dirrm include/PIL" >>${PLIST_SRC}
+	${ECHO} "@dirrm lib/python2.0/site-packages/PIL" >> ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Setup.in,v 1.1.1.1 1998/12/26 23:42:01 tsarna Exp $
+# $NetBSD: Setup.in,v 1.2 2001/03/10 13:46:30 wiz Exp $
 #
 
 *shared*
@@ -9,6 +9,6 @@
 # 6.0a and zlib 1.0.4 (or newer versions of these libraries) in a
 # standard location.
 
-_imaging _imaging.c decode.c encode.c map.c display.c path.c \
+_imaging _imaging.c decode.c encode.c map.c display.c outline.c path.c \
 	-IlibImaging libImaging/libImaging.a \
 	-I@PREFIX@/include -L@PREFIX@/lib -R@PREFIX@/lib -ljpeg -lz
