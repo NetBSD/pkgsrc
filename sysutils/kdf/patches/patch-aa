@@ -1,0 +1,72 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/07/03 23:27:47 hubertf Exp $
+
+--- configure.orig	Sun Jul  4 00:48:03 1999
++++ configure	Sun Jul  4 00:49:09 1999
+@@ -505,9 +505,9 @@
+ # Prefer explicitly selected file to automatically selected ones.
+ if test -z "$CONFIG_SITE"; then
+   if test "x$prefix" != xNONE; then
+-    CONFIG_SITE="$prefix/share/config.site $prefix/etc/config.site"
++    CONFIG_SITE="$prefix/share/kde/config.site $prefix/etc/config.site"
+   else
+-    CONFIG_SITE="$ac_default_prefix/share/config.site $ac_default_prefix/etc/config.site"
++    CONFIG_SITE="$ac_default_prefix/share/kde/config.site $ac_default_prefix/etc/config.site"
+   fi
+ fi
+ for ac_site_file in $CONFIG_SITE; do
+@@ -4065,17 +4065,17 @@
+ 
+ 
+ if test "$ac_use_path_checking" = "default"; then
+-  kde_htmldir="\$(prefix)/share/doc/HTML"
+-  kde_appsdir="\$(prefix)/share/applnk"
+-  kde_icondir="\$(prefix)/share/icons"
+-  kde_minidir="\$(prefix)/share/icons/mini"
+-  kde_datadir="\$(prefix)/share/apps"
+-  kde_locale="\$(prefix)/share/locale"
++  kde_htmldir="\$(prefix)/share/kde/doc/HTML"
++  kde_appsdir="\$(prefix)/share/kde/applnk"
++  kde_icondir="\$(prefix)/share/kde/icons"
++  kde_minidir="\$(prefix)/share/kde/icons/mini"
++  kde_datadir="\$(prefix)/share/kde/apps"
++  kde_locale="\$(prefix)/share/kde/locale"
+   kde_cgidir="\$(exec_prefix)/cgi-bin"
+-  kde_confdir="\$(prefix)/share/config"
+-  kde_mimedir="\$(prefix)/share/mimelnk"
+-  kde_toolbardir="\$(prefix)/share/toolbar"
+-  kde_wallpaperdir="\$(prefix)/share/wallpapers"
++  kde_confdir="\$(prefix)/share/kde/config"
++  kde_mimedir="\$(prefix)/share/kde/mimelnk"
++  kde_toolbardir="\$(prefix)/share/kde/toolbar"
++  kde_wallpaperdir="\$(prefix)/share/kde/wallpapers"
+   kde_bindir="\$(exec_prefix)/bin"
+   kde_partsdir="\$(exec_prefix)/parts"
+   echo "$ac_t""defaults" 1>&6	
+@@ -4240,17 +4240,17 @@
+ 
+ 
+ if test "default" = "default"; then
+-  kde_htmldir="\$(prefix)/share/doc/HTML"
+-  kde_appsdir="\$(prefix)/share/applnk"
+-  kde_icondir="\$(prefix)/share/icons"
+-  kde_minidir="\$(prefix)/share/icons/mini"
+-  kde_datadir="\$(prefix)/share/apps"
+-  kde_locale="\$(prefix)/share/locale"
++  kde_htmldir="\$(prefix)/share/kde/doc/HTML"
++  kde_appsdir="\$(prefix)/share/kde/applnk"
++  kde_icondir="\$(prefix)/share/kde/icons"
++  kde_minidir="\$(prefix)/share/kde/icons/mini"
++  kde_datadir="\$(prefix)/share/kde/apps"
++  kde_locale="\$(prefix)/share/kde/locale"
+   kde_cgidir="\$(exec_prefix)/cgi-bin"
+-  kde_confdir="\$(prefix)/share/config"
+-  kde_mimedir="\$(prefix)/share/mimelnk"
+-  kde_toolbardir="\$(prefix)/share/toolbar"
+-  kde_wallpaperdir="\$(prefix)/share/wallpapers"
++  kde_confdir="\$(prefix)/share/kde/config"
++  kde_mimedir="\$(prefix)/share/kde/mimelnk"
++  kde_toolbardir="\$(prefix)/share/kde/toolbar"
++  kde_wallpaperdir="\$(prefix)/share/kde/wallpapers"
+   kde_bindir="\$(exec_prefix)/bin"
+   kde_partsdir="\$(exec_prefix)/parts"
+   echo "$ac_t""defaults" 1>&6	
