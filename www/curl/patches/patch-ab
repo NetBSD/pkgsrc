@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2003/02/09 08:46:36 shell Exp $
+$NetBSD: patch-ab,v 1.5 2003/05/20 11:54:13 wiz Exp $
 
---- lib/ftp.c.orig	Sun Feb  9 16:35:53 2003
+--- lib/ftp.c.orig	Wed May 14 08:31:00 2003
 +++ lib/ftp.c
-@@ -1998,12 +1998,13 @@ CURLcode ftp_perform(struct connectdata 
+@@ -2050,12 +2050,13 @@ CURLcode ftp_perform(struct connectdata 
  
  #ifdef HAVE_STRFTIME
      if(data->set.get_filetime && (data->info.filetime>=0) ) {
@@ -17,4 +17,4 @@ $NetBSD: patch-ab,v 1.4 2003/02/09 08:46:36 shell Exp $
 +      tm = localtime(&filetime);
  #endif
        /* format: "Tue, 15 Nov 1994 12:45:26 GMT" */
-       strftime(buf, BUFSIZE-1, "Last-Modified: %a, %d %b %Y %H:%M:%S %Z\r\n",
+       strftime(buf, BUFSIZE-1, "Last-Modified: %a, %d %b %Y %H:%M:%S GMT\r\n",
