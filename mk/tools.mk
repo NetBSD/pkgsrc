@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.43 2004/10/14 09:54:04 grant Exp $
+# $NetBSD: tools.mk,v 1.44 2004/10/14 09:56:52 grant Exp $
 #
 # This Makefile creates a ${TOOLS_DIR} directory and populates the bin
 # subdir with tools that hide the ones outside of ${TOOLS_DIR}.
@@ -209,7 +209,7 @@ _TOOLS_NEED_GNU.${_tool_}=	YES
 _TOOLS_REPLACE.${_tool_}=	YES
 .    endif
 .  endfor
-.endfor	_TOOLS
+.endfor	# _TOOLS
 
 .if ${_TOOLS_REPLACE.awk} == "YES"
 _TOOLS_OVERRIDE.awk=	YES
