@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6166 2004/06/06 16:01:48 taca Exp $
+$NetBSD: CHANGES,v 1.6167 2004/06/06 16:38:46 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2823,3 +2823,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-BerkeleyDB-0.25 [mjl 2004-06-06]
 	Updated anomy-sanitizer to 1.68 [mjl 2004-06-06]
 	Updated squid to 2.5.5nb4 [taca 2004-06-06]
+	Updated pkglint to 3.77 [schmonz 2004-06-06]
