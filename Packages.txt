@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.317 2003/10/29 19:55:19 reed Exp $
+# $NetBSD: Packages.txt,v 1.318 2003/11/12 21:16:39 wiz Exp $
 ###########################################################################
 
 			==========================
@@ -2648,6 +2648,11 @@ You have to separate between binary and "normal" (source) packages here:
 
    If you want to submit several packages, please send a separate PR for
    each one, it's easier for us to track things that way.
+
+   Alternatively, you can also import new packages into pkgsrc-wip
+   (pkgsrc work-in-progress); see the homepage at
+	http://pkgsrc-wip.sourceforge.net/
+   for details.
 
 
  11.2 Committing: Importing the package into CVS
