@@ -1,6 +1,6 @@
 # start of install
 #
-# $NetBSD: install,v 1.20 2003/06/25 08:26:51 jlam Exp $
+# $NetBSD: install,v 1.20.2.1 2003/07/24 23:45:10 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -346,6 +346,13 @@ EOF
 EOF
 		fi
 	fi
+	if [ "${PKG_INSTALLATION_TYPE}" = "overwrite" ]; then
+		${SETENV} PKG_PREFIX="${PKG_PREFIX}" \
+			$0 ${PKGNAME} VIEW-INSTALL
+	fi
+	;;
+
+VIEW-INSTALL)
 	if [ -n "${PKG_SHELL}" -a "${PKG_REGISTER_SHELLS}" = "YES" ]; then
 		${ECHO} "===> Updating /etc/shells"
 		${TOUCH} /etc/shells
@@ -353,11 +360,6 @@ EOF
 		(${GREP} -v ${PKG_SHELL} /etc/shells.pkgsrc."$$" || ${TRUE}; ${ECHO} ${PKG_SHELL}) > /etc/shells
 		${RM} /etc/shells.pkgsrc."$$"
 	fi
-	;;
-
-*)
-	${ECHO} "Unexpected argument: ${STAGE}"
-	exit 1
 	;;
 esac
 

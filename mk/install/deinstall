@@ -1,6 +1,6 @@
 # start of deinstall
 #
-# $NetBSD: deinstall,v 1.17 2003/05/06 17:42:04 jmmv Exp $
+# $NetBSD: deinstall,v 1.17.2.1 2003/07/24 23:45:09 jlam Exp $
 
 eval set -- ${PKG_USERS}
 for userset; do
@@ -70,7 +70,21 @@ ALL_DIRS=`
 `
 
 case ${STAGE} in
+VIEW-DEINSTALL)
+	if [ -n "${PKG_SHELL}" -a "${PKG_REGISTER_SHELLS}" = "YES" ]; then
+		${ECHO} "===> Updating /etc/shells"
+		${CP} /etc/shells /etc/shells.pkgsrc."$$"
+		(${GREP} -v ${PKG_SHELL} /etc/shells.pkgsrc."$$" || ${TRUE}) > /etc/shells
+		${RM} /etc/shells.pkgsrc."$$"
+	fi
+	;;
+
 DEINSTALL)
+	if [ "${PKG_INSTALLATION_TYPE}" = "overwrite" ]; then
+		${SETENV} PKG_PREFIX="${PKG_PREFIX}" \
+			$0 ${PKGNAME} VIEW-DEINSTALL
+	fi
+
 	# Remove configuration files if they don't differ from the default
 	# config file.
 	#
@@ -87,12 +101,6 @@ DEINSTALL)
 				fi
 			fi
 		done
-	fi
-	if [ -n "${PKG_SHELL}" -a "${PKG_REGISTER_SHELLS}" = "YES" ]; then
-		${ECHO} "===> Updating /etc/shells"
-		${CP} /etc/shells /etc/shells.pkgsrc."$$"
-		(${GREP} -v ${PKG_SHELL} /etc/shells.pkgsrc."$$" || ${TRUE}) > /etc/shells
-		${RM} /etc/shells.pkgsrc."$$"
 	fi
 	;;
 
@@ -215,11 +223,6 @@ EOF
 ===========================================================================
 EOF
 	fi
-	;;
-
-*)
-	${ECHO} "Unexpected argument: ${STAGE}"
-	exit 1
 	;;
 esac
 
