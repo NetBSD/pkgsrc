@@ -1,4 +1,4 @@
-$NetBSD: PKGVIEWS,v 1.1.2.2 2003/07/24 09:17:57 jlam Exp $
+$NetBSD: PKGVIEWS,v 1.1.2.3 2003/07/24 23:19:00 jlam Exp $
 
 Package views integration plan:
 ==============================
@@ -51,8 +51,7 @@ Possible problems:
     depot directory: handling users/group creation, config files, and
     non-${PREFIX} directories.  There are some things that we want to
     happen every time a package is added to a view: adding info files
-    to info/dir and shell registration.  How do we modify pkg_add(1)
-    and pkg_view(1) to do this?
+    to info/dir and shell registration.
 
 (3) DEINSTALL scripts also do several things.  The main things are to
     remove: config files, directories, info files, and de-register
@@ -60,32 +59,55 @@ Possible problems:
     is pkg_delete'd from it's depot directory: removing config files
     and non-${PREFIX} directories.  We want some things to happen every
     time a package is removed from a view: removing info file entries
-    from info/dir and de-registering shells.  How do we modify
-    pkg_delete(1) and pkg_view(1) to do this?
+    from info/dir and de-registering shells.
 
-I think we need to have the scripts learn two new actions:
-VIEW-INSTALL and VIEW-DEINSTALL for the INSTALL and DEINSTALL scripts,
-respectively.  We need to separate out the stuff we want to happen
-for views into these new actions, and we must enhance pkg_add(1) and
-pkg_delete(1) to invoke the INSTALL/DEINSTALL scripts with the new
-actions.  We want the order to be:
-	
-        INSTALL:   PRE-INSTALL POST-INSTALL VIEW-INSTALL
-        DEINSTALL: VIEW-DEINSTALL DEINSTALL POST-DEINSTALL
+> => I don't really agree here. $PREFIX is the base dir from where
+> a package is supposed to be run from.
+> So I think PKG_SYSCONFBASE must be PREFIX/etc. I surely mean that
+> PKG_SYSCONFBASE can't really be a user setable variable anymore.
 
-We teach pkg_view(1) to run only the VIEW-INSTALL action of the
-INSTALL script after adding a package to a view, and to run only the
-VIEW-DEINSTALL action of the DEINSTALL script after deleting a package
-from a view.
+I think there may be some knashing of teeth if we make
+PKG_SYSCONFBASE non-tweakable.  I think it'll be okay to leave it as
+user-settable, but that users should be made aware that this restricts
+them from having the full flexibility allowed by pkgviews.  This is,
+of course, moot for the integration effort, since we won't be
+supporting multiple views until later.
 
-For depoted packages, /var/db/pkg/${PKGNAME} should contain a +DEPOT
-file token that contains the path of the depot directory for
-${PKGNAME}.  Then we teach pkg_delete(1) to only run the
-VIEW-DEINSTALL action of the DEINSTALL script if the +DEPOT file token
-is present, but to run all of the actions otherwise.  For non-depoted
-packages, pkg_delete runs all of the actions since they don't have
-+DEPOT file tokens.  Running pkg_delete on the depoted package itself
-would also cause all of the actions to be executed since the depoted
-package also wouldn't have a +DEPOT file token.  Also, pkg_delete(1)
-should remove the relevant PKG_DBDIR from the +VIEWS file of the
-package named in +DEPOT when it's invoked to remove a package.
+> Example config file copy is definitively a POST-INSTALL op.
+> Symlinks to $PREFIX/etc from VIEW/etc should be made of course as a
+> convenient knob of course. 
+
+I'm trying to see how they interact with dynamic PLISTs, which are
+generated _after_ all of the INSTALL script actions are run.  If we
+copy all of the config files into place (into $PREFIX/etc), then
+they'll all be stored into the the PLIST when it's generated, so when
+the package is deleted, pkg_delete(1) will generate warnings that the
+customized config files have been modified and won't be removed, so
+the pkg_delete will be unsuccessful.  I don't think we want this.  I
+can certainly move the dynamic PLIST generation a little earlier so
+that it occurs before "make post-install-script" is executed during
+the "make install" process, but I'm not sure if this will break
+anything (although I don't think it will).
+
+I'm happy with your argument, though, and I'll start my initial
+integration work with leaving the config file copies as a POST-INSTALL
+operation (which is actually much easier than my proposed change).
+
+> Then for the modified config file not deleted problem perhaps we
+> should come up with something new. Something along the mutable flag
+> of svr4 pkg inventory perhaps and perhaps adding a token in the
+> depotted dir stating that this pkg is not really longer installed but
+> some file are stilll there because of the intend to preserve modified
+> config file. Well perhaps only the fact that there is no other
+> metafiles left in PREFIX would be enough to mean just that.
+
+The last step that pkg_delete(1) does is "rm -r ${PKG_DBDIR}/${PKGNAME}",
+which is a cleanup step that avoids problems of undeleted temp files
+hanging around in the directory and preventing a clean removal of the
+package when PKG_DBDIR is "/var/db/pkg".  This is key behaviour that
+we should preserve for when we use pkg_delete(1) to remove a package
+from a view.  I can enhance pkg_delete to do an alternative cleanup
+step of just removing all of the package metafiles if it's the package
+in its depot directory (I can test for the presence of +VIEWS), and
+then have pkg_delete(1) note that it can't remove the ${PKGNAME}
+directory because it's nonempty.
