@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genindex.awk,v 1.1.2.2 2003/07/24 09:26:02 jlam Exp $
+# $NetBSD: genindex.awk,v 1.1.2.3 2003/08/16 17:14:28 jlam Exp $
 #
 # Copyright (c) 2002, 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -124,25 +124,32 @@ BEGIN {
 }
 
 /^categories /{
-  dir = $2;
-	gsub(/^categories[ \t]*/, "");
-	tmp = substr($0, length($1) + 1);
-	gsub(/^[ \t]*/, "", tmp);
-	categories[dir] = tmp;
+	# note:  we pick out the categories slightly differently than the comment
+	# and homepage because the category name will be included in the directory
+	# name and hence the index() call points to the wrong location
+	categories[$2] = $3;
+	for(i = 4; i <= NF; i = i + 1) {
+		categories[$2] = categories[$2] " " $i;
+	}
 	next;
 }
 
 /^comment /{
-	dir = $2;
-	gsub(/^comment[ \t]*/, "");
-	tmp = substr($0, length($1) + 1);
-	gsub(/^[ \t]*/, "", tmp);
-	comment[dir] = tmp;
+	comment[$2] = substr($0, index($0, $3));
 	next;
 }
 
 /^descr /{
-	descr[$2] = $3;
+	descr[$2] = substr($0, index($0, $3));
+	next;
+}
+
+/^homepage /{
+	if( NF>=3 ) {
+		homepage[$2] = substr($0, index($0, $3));
+	} else {
+		homepage[$2] = "";
+	}
 	next;
 }
 
@@ -163,40 +170,33 @@ BEGIN {
 }
 
 /^license /{
-	license[$2] = $3;
+	license[$2] = substr($0, index($0, $3));
 	next;
 }
 
 /^maintainer /{
-	maintainer[$2] = $3;
+	maintainer[$2] = substr($0, index($0, $3));
 	next;
 }
 
 /^notfor /{
-        dir = $2;
-	gsub(/^notfor[ \t]*/, "");
-	tmp = substr($0, length($1) + 1);
-	gsub(/^[ \t]*/, "", tmp);
-	notfor[dir] = tmp;
+	notfor[$2] = substr($0, index($0, $3));
 	next;
 }
 
 /^onlyfor /{
-	dir = $2;
-	gsub(/^onlyfor[ \t]*/, "");
-	tmp = substr($0, length($1) + 1);
-	gsub(/^[ \t]*/, "", tmp);
-	onlyfor[dir] = tmp;
+	onlyfor[$2] = substr($0, index($0, $3));
 	next;
 }
 
 /^prefix /{
-	prefix[$2] = $3;
+	prefix[$2] = substr($0, index($0, $3));
 	next;
 }
 
 /^wildcard /{
-	wildcard[$2] = $3;
+	wildcard[$2] = substr($0, index($0, $3));
+	next;
 }
 
 #
@@ -243,14 +243,13 @@ END {
 # Output format:       
 #  package-name|package-path|installation-prefix|comment| \
 #  description-file|maintainer|categories|build deps|run deps|for arch| \
-#  not for opsys
+#  not for opsys|homepage
 	
 	pkgcnt = 0;
 	for (toppkg in topdepends){
 		pkgcnt++;
-		pkgdir = PKGSRCDIR "/" toppkg;
 		printf("%s|", pkgdir2name[toppkg]) | indexf;
-		printf("%s|", pkgdir) | indexf;
+		printf("%s|", toppkg) | indexf;
 		printf("%s|", prefix[toppkg]) | indexf;
 		printf("%s|", comment[toppkg]) | indexf;
 		printf("%s|", descr[toppkg]) | indexf;
@@ -263,7 +262,8 @@ END {
 		gsub(/ $/, "", flatdepends[toppkg]);
 		printf("%s|", flatdepends[toppkg]) | indexf;
 		printf("%s|", onlyfor[toppkg]) | indexf;
-		printf("%s", notfor[toppkg]) | indexf;
+		printf("%s|", notfor[toppkg]) | indexf;
+		printf("%s", homepage[toppkg]) | indexf;
 		printf("\n") | indexf;
 	}
 	close(indexf);
