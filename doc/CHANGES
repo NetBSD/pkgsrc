@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4273 2003/12/28 16:12:02 zuntum Exp $
+$NetBSD: CHANGES,v 1.4274 2003/12/28 16:15:43 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5403,3 +5403,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated GConf2 to 2.4.0.1nb1 [jmmv 2003-12-28]
 	Updated gnome-panel to 2.4.1nb1 [jmmv 2003-12-28]
 	Updated devtodo to 0.1.17 [zuntum 2003-12-28]
+	Updated icewm to 1.2.13 [xtraeme 2003-12-28]
+	Updated icewm-gnome to 1.2.13 [xtraeme 2003-12-28]
+	Updated icewm-imlib to 1.2.13 [xtraeme 2003-12-28]
