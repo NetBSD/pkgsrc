@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.7 2005/03/27 10:27:21 recht Exp $
+
+--- config/mh-darwin.orig	Wed Mar 23 21:28:45 2005
++++ config/mh-darwin	Wed Mar 23 21:28:48 2005
+@@ -25,7 +25,7 @@
+ SHLIB.cc=	$(CXX) -dynamiclib -dynamic $(CXXFLAGS) $(LDFLAGS)
+ 
+ ## Compiler switches to embed a library name and version information
+-LD_SONAME = -Wl,-compatibility_version -Wl,$(SO_TARGET_VERSION_MAJOR) -Wl,-current_version -Wl,$(SO_TARGET_VERSION) -install_name $(notdir $(MIDDLE_SO_TARGET))
++LD_SONAME = -Wl,-compatibility_version -Wl,$(SO_TARGET_VERSION_MAJOR) -Wl,-current_version -Wl,$(SO_TARGET_VERSION) -install_name ${prefix}/lib/$(notdir $(MIDDLE_SO_TARGET))
+ 
+ ## Compiler switch to embed a runtime search path
+ LD_RPATH=
