@@ -1,16 +1,9 @@
-A GTK+-based implementation of the wxWindows cross-platform GUI library.
+wxGTK is the GTK based version of wxWindows.
 
-wxWindows is a set of libraries that allows C++ applications to compile
-and run on several different types of computer, with minimal source code
-changes.  There is one library per supported GUI (such as Windows, GTK+,
-Motif, and Mac). 
+wxWindows is a free C++ library for cross-platform GUI development.
 
-wxWindows is free, well-established, well-documented, and very broad in
-its coverage of GUI functionality.  It has some extras that make it
-stand out from the crowd, such as the many convenience dialogs, built-in
-HTML display and printing, virtual filesystems, easy-to-use OLE
-automation controller class, Open GL support, and many other features
-that make it easier to write modern and user-friendly applications. 
+This lets you create native applications for different operating systems
+from the same source code. 
 
-There is also a python interface available, wxPython (see the
-py-wxWindows pkg).
+wxWindows is currently merging libraries based on GTK+, Windows, Motif
+and Mac with OS/2 started. 
