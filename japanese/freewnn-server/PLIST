@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:29:08 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:45 skrll Exp $
 @cwd ${DICT_DIR}
 @cwd ${DICT_DIR}
 wnn/ja_JP/pubdic/bio.dic
@@ -67,4 +67,4 @@ sbin/wnnstat
 sbin/wnntouch
 etc/rc.d/ja_freewnn
 @exec ln -s ${DICT_DIR}/wnn/ja_JP %D/share/wnn/ja_JP/dic
-@unexec rm %D/share/wnn/ja_JP/dic
+@unexec ${RM} %D/share/wnn/ja_JP/dic

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:26:58 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:58 skrll Exp $
 bin/esh
 @unexec install-info --delete --info-dir=%D/info %D/info/esh.info
 info/esh.info
@@ -18,8 +18,8 @@ share/examples/esh/test4.esh
 share/examples/esh/test5.esh
 share/examples/esh/test6.esh
 share/examples/esh/test7.esh
-@unexec rmdir %D/share/emacs/site-lisp 2>/dev/null || true
-@unexec rmdir %D/share/emacs 2>/dev/null || true
-@unexec rmdir %D/share 2>/dev/null || true
+@unexec ${RMDIR} %D/share/emacs/site-lisp 2>/dev/null || true
+@unexec ${RMDIR} %D/share/emacs 2>/dev/null || true
+@unexec ${RMDIR} %D/share 2>/dev/null || true
 @dirrm share/examples/esh
 @dirrm share/doc/esh

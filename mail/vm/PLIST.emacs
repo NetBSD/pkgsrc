@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.emacs,v 1.2 2001/12/11 15:49:26 wiz Exp $
+@comment $NetBSD: PLIST.emacs,v 1.3 2002/02/15 10:12:49 skrll Exp $
 bin/base64-decode
 bin/base64-encode
 bin/qp-decode
@@ -178,4 +178,4 @@ share/emacs/site-lisp/vm/vm.el
 share/emacs/site-lisp/vm/vm.elc
 @dirrm share/emacs/site-lisp/vm/pixmaps
 @dirrm share/emacs/site-lisp/vm
-@unexec rmdir %D/share/emacs/site-lisp 2>/dev/null || true
+@unexec ${RMDIR} %D/share/emacs/site-lisp 2>/dev/null || true

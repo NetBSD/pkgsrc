@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:03:26 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:32 skrll Exp $
 include/ansidecl.h
 include/bfd.h
 lib/ldscripts/armnbsd.x
@@ -139,6 +139,6 @@ libexec/binutils/strip
 libexec/binutils/windres
 @dirrm libexec/binutils
 @exec ln -s %D/libexec/binutils/cross-env ${LOCALBASE}/bin/cross-env
-@unexec rm ${LOCALBASE}/bin/cross-env
-@unexec rm -f %D/lib/libbfd.so %D/lib/libopcodes.so 2> /dev/null || true
-@unexec rmdir %D/lib/ldscripts 2>/dev/null || true
+@unexec ${RM} ${LOCALBASE}/bin/cross-env
+@unexec ${RM} -f %D/lib/libbfd.so %D/lib/libopcodes.so 2> /dev/null || true
+@unexec ${RMDIR} %D/lib/ldscripts 2>/dev/null || true

@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2001/11/29 17:37:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/02/15 10:12:38 skrll Exp $
 lib/X11/fonts/TrueType/bkai00mp.ttf
 lib/X11/fonts/TrueType/bsmi00lp.ttf
 lib/X11/fonts/TrueType/gbsn00lp.ttf
 lib/X11/fonts/TrueType/gkai00mp.ttf
 @exec mkttfdir %D/lib/X11/fonts/TrueType
 @unexec mkttfdir %D/lib/X11/fonts/TrueType
-@unexec rmdir %D/lib/X11/fonts/TrueType
+@unexec ${RMDIR} %D/lib/X11/fonts/TrueType

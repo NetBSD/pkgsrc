@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/05 22:39:05 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/02/15 10:12:51 skrll Exp $
 bin/gcalc
 bin/gcharmap
 bin/gcolorsel
@@ -841,7 +841,7 @@ share/stripchart/stripchart.params
 @dirrm share/gnome/help/gsearchtool/C
 @dirrm share/gnome/help/gsearchtool
 @dirrm share/gnome/help/gnome-exe-handler/C/stylesheet-images
-@exec mkdir -p %D/share/gnome/help/gnome-exe-handler/C/figures
+@exec ${MKDIR} -p %D/share/gnome/help/gnome-exe-handler/C/figures
 @dirrm share/gnome/help/gnome-exe-handler/C/figures
 @dirrm share/gnome/help/gnome-exe-handler/C
 @dirrm share/gnome/help/gnome-exe-handler

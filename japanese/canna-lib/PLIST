@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:29:02 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:45 skrll Exp $
 @cwd ${DICT_DIR}
 @cwd ${DICT_DIR}
 canna/default.cbp
@@ -112,10 +112,10 @@ share/canna/sample/unix.canna
 share/canna/sample/vje.canna
 share/canna/sample/wx2+.canna
 @exec ln -s ${DICT_DIR}/canna ${PREFIX}/share/canna/dic
-@exec chown ${CANNAOWNER}:${CANNAGROUP} ${DICT_DIR}/canna
-@unexec rm ${PREFIX}/share/canna/dic
+@exec ${CHOWN} ${CANNAOWNER}:${CANNAGROUP} ${DICT_DIR}/canna
+@unexec ${RM} ${PREFIX}/share/canna/dic
 @dirrm share/canna/sample/src
 @dirrm share/canna/sample
 @dirrm share/canna
 @dirrm include/canna
-@unexec rmdir ${DICT_DIR}/canna
+@unexec ${RMDIR} ${DICT_DIR}/canna
