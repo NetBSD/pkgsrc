@@ -1,3 +1,0 @@
-Secret Labs' xmlrpclib module is an implementation of the XML-RPC protocol.
-This implementation is tightly integrated with Python, which makes it very easy
-to call remote methods.
