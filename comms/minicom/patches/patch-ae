@@ -1,0 +1,12 @@
+--- minicom.c.orig	Sat Sep 27 17:03:30 1997
++++ minicom.c	Fri Jan  9 19:59:13 1998
+@@ -530,7 +530,8 @@
+     /* Loop again if more options */
+   } while(optind < argk);
+ 
+-  if (real_uid == 0 && dosetup == 0) {
++  /* also allow root to run minicom with `-d' switch */
++  if (real_uid == 0 && dosetup == 0 && cmd_dial == NULL) {
+ 	fprintf(stderr, "%s%s%s",
+   "minicom: WARNING: please don't run minicom as root when not maintaining\n",
+   "                  it (with the -s switch) since all changes to the\n",
