@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/09/13 10:58:51 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/14 10:51:59 hubertf Exp $
 
 DISTNAME=	cvsup-bin-nogui-16.1d
 PKGNAME=	cvsup-16.1.d
@@ -13,7 +13,6 @@ WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 ONLY_FOR_PLATFORM=	NetBSD-1.5*-i386
-USE_X11=	yes
 
 do-install:
 	for i in cvpasswd cvsup ; do \
