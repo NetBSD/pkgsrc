@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/02/16 00:28:03 itohy Exp $
+# $NetBSD: Makefile,v 1.16 2000/02/21 03:10:34 fredb Exp $
 
 DISTNAME=	wwwoffle-2.5c
 CATEGORIES=	www
@@ -63,7 +63,7 @@ post-install:
 	    ${PREFIX}/etc/wwwoffle/wwwoffle.conf.default; \
 	fi
 	${INSTALL_SCRIPT} ${WRKDIR}/wwwoffle.sh ${PREFIX}/etc/rc.d
-	${CHOWN} -R ${BINOWN}:${BINGRP} /var/wwwoffle
+	${CHOWN} -R -h ${BINOWN}:${BINGRP} /var/wwwoffle
 	# directories other than html are automatically created at run time
 	${GTAR} czCf / ${PREFIX}/libdata/wwwoffle-spool.tar.gz	\
 	  var/wwwoffle/html var/wwwoffle/outgoing
