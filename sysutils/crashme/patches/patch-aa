@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.3 1998/11/24 00:20:13 hubertf Exp $
+$NetBSD: patch-aa,v 1.4 1998/11/24 05:23:23 mycroft Exp $
 
 --- makefile.orig	Tue Nov 24 01:08:49 1998
 +++ makefile	Tue Nov 24 01:09:26 1998
 @@ -1,12 +1,19 @@
-+CFLAGS=	-O6
++CFLAGS=	-O2
 +
  all: crashme pddet
  

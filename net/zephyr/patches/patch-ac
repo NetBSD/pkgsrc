@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 1998/11/24 00:06:35 hubertf Exp $
+$NetBSD: patch-ac,v 1.2 1998/11/24 05:23:23 mycroft Exp $
 
 --- ./configure.BAKKK	Thu Apr  4 01:42:30 1996
 +++ ./configure	Tue Nov 24 00:47:01 1998
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.1 1998/11/24 00:06:35 hubertf Exp $
  
  ac_ext=c
 -# CFLAGS is not in ac_cpp because -g, -O, etc. are not valid cpp options.
-+# CFLAGS is not in ac_cpp because -g, -O6, etc. are not valid cpp options.
++# CFLAGS is not in ac_cpp because -g, -O2, etc. are not valid cpp options.
  ac_cpp='echo $CPP $CPPFLAGS 1>&5;
  $CPP $CPPFLAGS'
  ac_compile='echo ${CC-cc} -c $CFLAGS $CPPFLAGS conftest.$ac_ext 1>&5;
@@ -16,10 +16,10 @@ $NetBSD: patch-ac,v 1.1 1998/11/24 00:06:35 hubertf Exp $
  echo "$ac_t""$ac_cv_prog_gcc_g" 1>&6
      if test $ac_cv_prog_gcc_g = yes; then
 -      CFLAGS="-g -O"
-+      CFLAGS="-g -O6"
++      CFLAGS="-g -O2"
      else
 -      CFLAGS="-O"
-+      CFLAGS="-O6"
++      CFLAGS="-O2"
      fi
    fi
  else
@@ -30,7 +30,7 @@ $NetBSD: patch-ac,v 1.1 1998/11/24 00:06:35 hubertf Exp $
  SYSLOG_CONFPREFIX=n
  
 -DEBUG=-O
-+DEBUG=-O6
++DEBUG=-O2
  CFLAGS=$(DEBUG) -I$(srcdir) -I$(top_srcdir)/h -I$(BUILDTOP)/h \
  	-DCONFPREFIX=\"$(SYSLOG_CONFPREFIX)\" @CPPFLAGS@
  LDFLAGS=$(DEBUG) -L$(BUILDTOP)/lib/zephyr @ET_LDFLAGS@ @LDFLAGS@
@@ -41,7 +41,7 @@ $NetBSD: patch-ac,v 1.1 1998/11/24 00:06:35 hubertf Exp $
  INSTALL=@INSTALL@
  
 -DEBUG=-O
-+DEBUG=-O6
++DEBUG=-O2
  CFLAGS=$(DEBUG) -DDATADIR=\"$(datadir)\" -I$(top_srcdir)/h -I$(BUILDTOP)/h \
  	@X_CFLAGS@ @CPPFLAGS@
  LDFLAGS=$(DEBUG) -L$(BUILDTOP)/lib/zephyr -L$(BUILDTOP)/lib/dyn @ET_LDFLAGS@ \
@@ -52,7 +52,7 @@ $NetBSD: patch-ac,v 1.1 1998/11/24 00:06:35 hubertf Exp $
  MK_CMDS=@MK_CMDS@
  
 -DEBUG=-O
-+DEBUG=-O6
++DEBUG=-O2
  CFLAGS=$(DEBUG) -I$(top_srcdir)/h -I$(BUILDTOP)/h @CPPFLAGS@
  LDFLAGS=$(DEBUG) -L$(BUILDTOP)/lib/zephyr @ET_LDFLAGS@ @SS_LDFLAGS@ @LDFLAGS@
  LIBS=-lzephyr -lss @LIBS@ -lcom_err
@@ -63,7 +63,7 @@ $NetBSD: patch-ac,v 1.1 1998/11/24 00:06:35 hubertf Exp $
  INSTALL=@INSTALL@
  
 -DEBUG=-O
-+DEBUG=-O6
++DEBUG=-O2
  CFLAGS=$(DEBUG) -I$(top_srcdir)/h -I$(BUILDTOP)/h @CPPFLAGS@
  LDFLAGS=$(DEBUG) -L$(BUILDTOP)/lib/zephyr @ET_LDFLAGS@ @LDFLAGS@
  LIBS=-lzephyr @LIBS@ -lcom_err
@@ -74,7 +74,7 @@ $NetBSD: patch-ac,v 1.1 1998/11/24 00:06:35 hubertf Exp $
  INSTALL=@INSTALL@
  
 -DEBUG=-O
-+DEBUG=-O6
++DEBUG=-O2
  CFLAGS=$(DEBUG) -I$(top_srcdir)/h -I$(BUILDTOP)/h -DKPOP @CPPFLAGS@
  LDFLAGS=$(DEBUG) -L$(BUILDTOP)/lib/zephyr @ET_LDFLAGS@ @LDFLAGS@
  LIBS=-lzephyr @LIBS@ -lcom_err
@@ -85,7 +85,7 @@ $NetBSD: patch-ac,v 1.1 1998/11/24 00:06:35 hubertf Exp $
  INSTALL=@INSTALL@
  
 -DEBUG=-O
-+DEBUG=-O6
++DEBUG=-O2
  CFLAGS=$(DEBUG) -I$(top_srcdir)/h -I$(BUILDTOP)/h @CPPFLAGS@
  LDFLAGS=$(DEBUG) -L$(BUILDTOP)/lib/zephyr @ET_LDFLAGS@ @LDFLAGS@
  LIBS=-lzephyr @LIBS@ -lcom_err
@@ -96,7 +96,7 @@ $NetBSD: patch-ac,v 1.1 1998/11/24 00:06:35 hubertf Exp $
  INSTALL=@INSTALL@
  
 -DEBUG=-O
-+DEBUG=-O6
++DEBUG=-O2
  CFLAGS=$(DEBUG) -I$(top_srcdir)/h -I$(BUILDTOP)/h @CPPFLAGS@
  LDFLAGS=$(DEBUG) -L$(BUILDTOP)/lib/zephyr @ET_LDFLAGS@ @LDFLAGS@
  LIBS=-lzephyr @LIBS@ -lcom_err
@@ -107,7 +107,7 @@ $NetBSD: patch-ac,v 1.1 1998/11/24 00:06:35 hubertf Exp $
  INSTALL=@INSTALL@
  
 -DEBUG=-O
-+DEBUG=-O6
++DEBUG=-O2
  CFLAGS=$(DEBUG) -I$(top_srcdir)/h -I$(BUILDTOP)/h @CPPFLAGS@
  LDFLAGS=$(DEBUG) -L$(BUILDTOP)/lib/zephyr @ET_LDFLAGS@ @LDFLAGS@
  LIBS=-lzephyr @LIBS@ -lcom_err
@@ -118,7 +118,7 @@ $NetBSD: patch-ac,v 1.1 1998/11/24 00:06:35 hubertf Exp $
  INSTALL=@INSTALL@
  
 -DEBUG=-O
-+DEBUG=-O6
++DEBUG=-O2
  CFLAGS=$(DEBUG) -I$(top_srcdir)/h -I$(BUILDTOP)/h @CPPFLAGS@
  LDFLAGS=$(DEBUG) -L$(BUILDTOP)/lib/zephyr @ET_LDFLAGS@ @LDFLAGS@
  LIBS=-lzephyr @LIBS@ -lcom_err
@@ -129,7 +129,7 @@ $NetBSD: patch-ac,v 1.1 1998/11/24 00:06:35 hubertf Exp $
  INSTANTIATE=$(srcdir)/instantiate
  
 -DEBUG=-O
-+DEBUG=-O6
++DEBUG=-O2
  CFLAGS=	$(DEBUG) -DDATADIR=\"$(datadir)\" -I$(top_srcdir)/h -I$(BUILDTOP)/h \
  	-I$(srcdir) -I. @X_CFLAGS@ @CPPFLAGS@
  YFLAGS=-d
@@ -140,7 +140,7 @@ $NetBSD: patch-ac,v 1.1 1998/11/24 00:06:35 hubertf Exp $
  INSTALL=@INSTALL@
  
 -DEBUG=-O
-+DEBUG=-O6
++DEBUG=-O2
  CFLAGS=$(DEBUG) -I$(top_srcdir)/h -I$(BUILDTOP)/h @CPPFLAGS@
  LDFLAGS=$(DEBUG) -L$(BUILDTOP)/lib/zephyr @ET_LDFLAGS@ @LDFLAGS@
  LIBS=-lzephyr @LIBS@ -lcom_err
@@ -151,7 +151,7 @@ $NetBSD: patch-ac,v 1.1 1998/11/24 00:06:35 hubertf Exp $
  RANLIB=@RANLIB@
  
 -DEBUG=-O
-+DEBUG=-O6
++DEBUG=-O2
  CFLAGS=$(DEBUG) -I$(top_srcdir)/h -I$(BUILDTOP)/h @CPPFLAGS@
  
  OBJS =	dyn_append.o dyn_create.o dyn_debug.o dyn_delete.o dyn_insert.o \
@@ -162,7 +162,7 @@ $NetBSD: patch-ac,v 1.1 1998/11/24 00:06:35 hubertf Exp $
  RANLIB=@RANLIB@
  
 -DEBUG=-O
-+DEBUG=-O6
++DEBUG=-O2
  CFLAGS=$(DEBUG) -I$(top_srcdir)/h -I$(BUILDTOP)/h -I$(srcdir) -I. @CPPFLAGS@
  
  OBJS=	com_err.o error_message.o et_name.o init_et.o
@@ -173,7 +173,7 @@ $NetBSD: patch-ac,v 1.1 1998/11/24 00:06:35 hubertf Exp $
  COMPILE_ET=@COMPILE_ET@
  
 -DEBUG=-O
-+DEBUG=-O6
++DEBUG=-O2
  CFLAGS=$(DEBUG) -I$(srcdir) -I$(top_srcdir)/h -I$(BUILDTOP)/h -I. @CPPFLAGS@
  YFLAGS=-d
  
@@ -184,7 +184,7 @@ $NetBSD: patch-ac,v 1.1 1998/11/24 00:06:35 hubertf Exp $
  COMPILE_ET=@COMPILE_ET@
  
 -DEBUG=-O
-+DEBUG=-O6
++DEBUG=-O2
  CFLAGS= $(DEBUG) -DCONFDIR=\"$(confdir)\" -I$(top_srcdir)/h -I$(BUILDTOP)/h \
  	@X_CFLAGS@ @CPPFLAGS@
  
@@ -195,7 +195,7 @@ $NetBSD: patch-ac,v 1.1 1998/11/24 00:06:35 hubertf Exp $
  COMPILE_ET=@COMPILE_ET@
  
 -DEBUG=-O
-+DEBUG=-O6
++DEBUG=-O2
  CFLAGS=	$(DEBUG) -DCONFDIR=\"$(confdir)\" -I$(top_srcdir)/h -I$(BUILDTOP)/h \
  	-I. @CPPFLAGS@
  LDFLAGS=$(DEBUG) -L$(BUILDTOP)/lib/zephyr @ET_LDFLAGS@ @LDFLAGS@
@@ -206,7 +206,7 @@ $NetBSD: patch-ac,v 1.1 1998/11/24 00:06:35 hubertf Exp $
  INSTALL=@INSTALL@
  
 -DEBUG=-O
-+DEBUG=-O6
++DEBUG=-O2
  CFLAGS=	$(DEBUG) -DCONFDIR=\"$(confdir)\" -I$(top_srcdir)/h -I$(BUILDTOP)/h \
  	@CPPFLAGS@
  LDFLAGS=$(DEBUG) -L$(BUILDTOP)/lib/zephyr @ET_LDFLAGS@ @LDFLAGS@
