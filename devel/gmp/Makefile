@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/09/17 16:24:37 grant Exp $
+# $NetBSD: Makefile,v 1.22 2003/09/27 15:09:05 grant Exp $
 #
 
 DISTNAME=		gmp-4.1.2
@@ -9,17 +9,15 @@ MAINTAINER=		hubertf@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/gmp/gmp.html
 COMMENT=		Library for arbitrary precision arithmetic
 
-BUILD_DEPENDS+=		m4>=1.4:../../devel/m4
-
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
+USE_GCC_SHLIB=		# defined
+USE_GNU_TOOLS+=		m4
 CONFIGURE_ARGS+=	--enable-cxx --without-readline
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-USE_GCC_SHLIB=		# defined
 
 INFO_FILES=		gmp.info
-M4=			${PREFIX}/bin/gm4
 
 TEST_TARGET=		check
 
