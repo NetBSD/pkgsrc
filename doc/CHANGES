@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3428 2003/09/17 16:43:24 jmmv Exp $
+$NetBSD: CHANGES,v 1.3429 2003/09/17 17:22:39 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3537,8 +3537,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Added p5-Compress-Bzip2-1.01 [xtraeme 2003-09-04]
 	Added bbdb-2.34 [minoura 2003-09-04]
 	Updated mserv to 0.05nb2 [abs 2003-09-04]
-	apache.mk: create this to allow apache modules to be written that
-		can use any version of apache [erh 2003-09-04]
 	Updated quagga to 0.96.2 [itojun 2003-09-05]
 	Updated mtree to 20030905 [grant 2003-09-05]
 	Added p5-Net-Telnet-Cisco-1.10 [grant 2003-09-05]
