@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1500 2003/02/27 17:17:38 fredb Exp $
+$NetBSD: CHANGES,v 1.1501 2003/02/27 21:02:06 mrauch Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -857,3 +857,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cyrus-imapd to 2.1.12 [seb 2003-02-27]
 	Updated cyrus-sasl to 2.1.12 [seb 2003-02-27]
 	Updated mgetty to 1.1.28nb3 [fredb 2003-02-27]
+	Updated openoffice-linux to 1.0.2nb3 [mrauch 2003-02-27]
