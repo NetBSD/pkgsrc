@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2962 2003/07/31 19:06:59 wiz Exp $
+$NetBSD: CHANGES,v 1.2963 2003/07/31 19:25:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3162,3 +3162,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkglint to 3.58 [seb 2003-07-31]
 	Updated blender to 2.28 [jschauma 2003-07-31]
 	Updated bluefish to 0.11 [wiz 2003-07-31]
+	Added ap-auth-pgsql-1.9.2 [wiz 2003-07-31]
