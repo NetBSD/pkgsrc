@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.245 2004/07/06 17:31:02 agc Exp $
+# $NetBSD: Makefile,v 1.246 2004/07/10 17:04:11 cube Exp $
 
 COMMENT=	System utilities
 
@@ -61,6 +61,7 @@ SUBDIR+=	gcombust
 SUBDIR+=	genpasswd
 SUBDIR+=	gentoo
 SUBDIR+=	gkrellm
+SUBDIR+=	gkrellm-est
 SUBDIR+=	gkrellm-server
 SUBDIR+=	gkrellm-share
 SUBDIR+=	gkrellm1
