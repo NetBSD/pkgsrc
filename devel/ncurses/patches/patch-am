@@ -1,0 +1,91 @@
+$NetBSD: patch-am,v 1.3 2000/10/12 14:56:47 jlam Exp $
+
+--- progs/Makefile.in.orig	Thu Oct 12 04:52:58 2000
++++ progs/Makefile.in
+@@ -59,6 +59,8 @@
+ includedir	= @includedir@
+ datadir		= @datadir@
+ 
++LIBTOOL		= @LIBTOOL@
++
+ INSTALL		= @INSTALL@
+ INSTALL_PROGRAM	= @INSTALL_PROGRAM@
+ transform	= @program_transform_name@
+@@ -76,6 +78,7 @@
+ 
+ CCFLAGS		= $(CPPFLAGS) $(CFLAGS)
+ 
++CFLAGS_LIBTOOL	= $(CCFLAGS)
+ CFLAGS_NORMAL	= $(CCFLAGS)
+ CFLAGS_DEBUG	= $(CCFLAGS) @CC_G_OPT@ -DTRACE
+ CFLAGS_PROFILE	= $(CCFLAGS) -pg
+@@ -84,10 +87,11 @@
+ CFLAGS_DEFAULT	= $(CFLAGS_@DFT_UPR_MODEL@)
+ 
+ LD		= @LD@
+-LINK		= @LINK_PROGS@ $(CC)
++LINK		= @LINK_PROGS@ $(LIBTOOL) $(CC)
+ LDFLAGS		= @EXTRA_LDFLAGS@ \
+ 		@PROG_ARGS@ @LDFLAGS@ @LD_MODEL@ @LIBS@ @EXTRA_LIBS@
+ 
++LDFLAGS_LIBTOOL	= $(LDFLAGS)
+ LDFLAGS_NORMAL	= $(LDFLAGS)
+ LDFLAGS_DEBUG	= $(LDFLAGS) @CC_G_OPT@
+ LDFLAGS_PROFILE	= $(LDFLAGS) -pg
+@@ -103,7 +107,7 @@
+ 	termsort.c \
+ 	transform.h
+ 
+-PROGS = tic$x toe$x infocmp$x clear$x tput$x tset$x
++PROGS = tic$x toe$x infocmp$x # clear$x tput$x tset$x
+ 
+ TESTPROGS = mvcur$x tctest$x hardscroll$x hashmap$x
+ 
+@@ -143,12 +147,12 @@
+ 	echo "#define PROG_INIT      \"$(actual_init)\""      >>$@
+ 
+ install.progs: $(AUTO_SRC) $(PROGS) $(DESTDIR)$(bindir)
+-	$(INSTALL_PROGRAM) tic$x     $(DESTDIR)$(bindir)/$(actual_tic)
+-	$(INSTALL_PROGRAM) toe$x     $(DESTDIR)$(bindir)/$(actual_toe)
+-	$(INSTALL_PROGRAM) infocmp$x $(DESTDIR)$(bindir)/$(actual_infocmp)
+-	$(INSTALL_PROGRAM) clear$x   $(DESTDIR)$(bindir)/$(actual_clear)
+-	$(INSTALL_PROGRAM) tput$x    $(DESTDIR)$(bindir)/$(actual_tput)
+-	$(INSTALL_PROGRAM) tset$x    $(DESTDIR)$(bindir)/$(actual_tset)
++	$(LIBTOOL) $(INSTALL_PROGRAM) tic$x     $(DESTDIR)$(bindir)/$(actual_tic)
++	$(LIBTOOL) $(INSTALL_PROGRAM) toe$x     $(DESTDIR)$(bindir)/$(actual_toe)
++	$(LIBTOOL) $(INSTALL_PROGRAM) infocmp$x $(DESTDIR)$(bindir)/$(actual_infocmp)
++#	$(LIBTOOL) $(INSTALL_PROGRAM) clear$x   $(DESTDIR)$(bindir)/$(actual_clear)
++#	$(LIBTOOL) $(INSTALL_PROGRAM) tput$x    $(DESTDIR)$(bindir)/$(actual_tput)
++#	$(LIBTOOL) $(INSTALL_PROGRAM) tset$x    $(DESTDIR)$(bindir)/$(actual_tset)
+ 	@echo "linking $(actual_captoinfo) to $(actual_tic)"
+ 	-@rm -f $(DESTDIR)$(bindir)/$(actual_captoinfo)
+ 	(cd $(DESTDIR)$(bindir) && $(LN_S) $(actual_tic) $(actual_captoinfo))
+@@ -156,19 +160,19 @@
+ 	-@rm -f $(DESTDIR)$(bindir)/$(actual_infotocap)
+ 	(cd $(DESTDIR)$(bindir) && $(LN_S) $(actual_tic) $(actual_infotocap))
+ 	@echo "linking $(actual_reset) to $(actual_tset)"
+-	-@rm -f $(DESTDIR)$(bindir)/$(actual_reset)
+-	(cd $(DESTDIR)$(bindir) && $(LN_S) $(actual_tset) $(actual_reset))
++#	-@rm -f $(DESTDIR)$(bindir)/$(actual_reset)
++#	(cd $(DESTDIR)$(bindir) && $(LN_S) $(actual_tset) $(actual_reset))
+ 
+ uninstall.progs:
+-	-@rm -f $(DESTDIR)$(bindir)/$(actual_tic)
+-	-@rm -f $(DESTDIR)$(bindir)/$(actual_toe)
+-	-@rm -f $(DESTDIR)$(bindir)/$(actual_infocmp)
+-	-@rm -f $(DESTDIR)$(bindir)/$(actual_clear)
+-	-@rm -f $(DESTDIR)$(bindir)/$(actual_tput)
+-	-@rm -f $(DESTDIR)$(bindir)/$(actual_tset)
++	-@$(LIBTOOL) rm -f $(DESTDIR)$(bindir)/$(actual_tic)
++	-@$(LIBTOOL) rm -f $(DESTDIR)$(bindir)/$(actual_toe)
++	-@$(LIBTOOL) rm -f $(DESTDIR)$(bindir)/$(actual_infocmp)
++#	-@$(LIBTOOL) rm -f $(DESTDIR)$(bindir)/$(actual_clear)
++#	-@$(LIBTOOL) rm -f $(DESTDIR)$(bindir)/$(actual_tput)
++#	-@$(LIBTOOL) rm -f $(DESTDIR)$(bindir)/$(actual_tset)
+ 	-@rm -f $(DESTDIR)$(bindir)/$(actual_captoinfo)
+ 	-@rm -f $(DESTDIR)$(bindir)/$(actual_infotocap)
+-	-@rm -f $(DESTDIR)$(bindir)/$(actual_reset)
++#	-@rm -f $(DESTDIR)$(bindir)/$(actual_reset)
+ 
+ $(DESTDIR)$(bindir) :
+ 	$(srcdir)/../mkinstalldirs $@
