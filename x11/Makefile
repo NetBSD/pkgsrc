@@ -29,6 +29,7 @@
 #    SUBDIR += fvwm2-english
     SUBDIR += fvwm95
 #    SUBDIR += getbdf
+    SUBDIR += gtk
 #    SUBDIR += gwm
 #    SUBDIR += iv
     SUBDIR += kde
