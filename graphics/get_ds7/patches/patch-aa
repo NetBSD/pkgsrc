@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/11/23 04:20:23 hubertf Exp $
+
+--- get_ds7.orig	Sat Aug  1 19:22:59 1998
++++ get_ds7	Tue Nov 23 03:59:05 1999
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl
++#!@LOCALBASE@/bin/perl
+ ;#
+ ;# get_ds7 version 1.2.4 1998/08/01
+ ;#                          Copyright (C) 1997,1998 Mamoru Ohno
+@@ -64,12 +64,12 @@
+ ;# COM1 の場合は "/dev/cua0"
+ ;# COM2 の場合は "/dev/cua1"
+ 
+-$serial_line = "/dev/cua1";
++$serial_line = "/dev/tty00";
+ 
+ ;# 通信速度を $serial_speed に設定
+ ;# 通信速度には、57600,38400,19200,9600 の中のひとつを選択
+ 
+-$serial_speed = "57600";
++$serial_speed = "38400";
+ 
+ ;#
+ ;#
