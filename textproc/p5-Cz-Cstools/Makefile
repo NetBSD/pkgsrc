@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:54:33 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/04 23:46:36 snj Exp $
 #
 
 DISTNAME=	Cstools-3.42
@@ -15,7 +15,7 @@ COMMENT=	Tools for dealing with Czech and Slovak texts in Perl
 DEPENDS+=	p5-MIME-tools>=5.411.1:../../mail/p5-MIME-tools
 DEPENDS+=	p5-DBD-XBase>=0.232:../../databases/p5-DBD-XBase
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Cz/.packlist
 
 .include "../../lang/perl5/module.mk"

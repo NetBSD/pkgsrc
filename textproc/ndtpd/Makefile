@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/03/21 12:30:33 uebayasi Exp $
+# $NetBSD: Makefile,v 1.14 2004/05/04 23:46:36 snj Exp $
 #
 
 DISTNAME=	ndtpd-3.1.5
@@ -9,7 +9,7 @@ MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://www.sra.co.jp/people/m-kasahr/ndtpd/
 COMMENT=	Server for accessing CD-ROM books with NDTP
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
@@ -39,7 +39,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/ndtpd.conf.sample \
 		${EGDIR}/ndtpd.conf.default
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../textproc/eb/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../textproc/eb/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

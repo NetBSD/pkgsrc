@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/03/26 02:27:55 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2004/05/04 23:46:37 snj Exp $
 
 DISTNAME=	libxml-enno-1.05a
 PKGNAME=	p5-${DISTNAME}
@@ -21,7 +21,7 @@ CONFLICTS+=	p5-XML-DOM-[0-9]* p5-XML-XQL-[0-9]*
 CONFLICTS+=	p5-XML-Checker-[0-9]* p5-XML-RegExp-[0-9]*
 
 WRKSRC=			${WRKDIR}/libxml-enno-1.05
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/libxml-enno/.packlist
 
 .include "../../lang/perl5/module.mk"

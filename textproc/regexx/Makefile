@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/14 17:21:53 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/04 23:46:37 snj Exp $
 #
 
 DISTNAME=		regexx-0.98.1
@@ -9,10 +9,10 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://bazar.conectiva.com.br/~niemeyer/projects/regexx/
 COMMENT=		C++ regular expression library
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 
-.include "../../devel/pcre/buildlink2.mk"
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

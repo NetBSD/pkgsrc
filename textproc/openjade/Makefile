@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/24 15:13:20 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/04 23:46:36 snj Exp $
 #
 
 DISTNAME=	openjade-1.3.2
@@ -9,7 +9,7 @@ MAINTAINER=	kogule@mars.dti.ne.jp
 HOMEPAGE=	http://openjade.sourceforge.net/
 COMMENT=	SGML/XML parser toolkit and DSSSL engine, successor to "jade"
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 USE_PERL5=	build
 GNU_CONFIGURE=	YES
@@ -33,5 +33,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/jadedoc/*.htm ${OPENJADE_DOC_DIR}/jadedoc
 	${INSTALL_DATA} ${WRKSRC}/jadedoc/images/* ${OPENJADE_DOC_DIR}/jadedoc/images
 
-.include "../../textproc/opensp/buildlink2.mk"
+.include "../../textproc/opensp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/02/10 02:22:50 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2004/05/04 23:46:36 snj Exp $
 
 DISTNAME=	eperl-2.2.14
 CATEGORIES=	lang perl5 textproc
@@ -8,7 +8,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.engelschall.com/sw/eperl/
 COMMENT=	Interpreter/preprocessor for Perl embedded in text documents
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Parse/ePerl/.packlist
 
 GNU_CONFIGURE=		YES
@@ -18,6 +18,6 @@ BUILD_DIRS=		${WRKSRC} ${WRKSRC}/mod/Parse
 
 post-configure: perl5-configure
 
-.include "../../lang/libperl/buildlink2.mk"
+.include "../../lang/libperl/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
