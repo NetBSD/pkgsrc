@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2002/03/13 17:37:52 fredb Exp $
+# $NetBSD: Makefile,v 1.16 2002/03/17 15:43:43 fredb Exp $
 #
 
-DISTNAME=		${PKGNAME}-source
+DISTNAME=		htmldoc-1.7-source
 PKGNAME=		htmldoc-1.7
 PKGREVISION=		1
-WRKSRC=			${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/htmldoc-1.7
 CATEGORIES=		www
 MASTER_SITES=		ftp://ftp.easysw.com/pub/htmldoc/1.7/
 
