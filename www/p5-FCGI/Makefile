@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2001/02/17 17:22:22 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/03/21 16:47:10 mjl Exp $
 #
 
-PKGVER=				0.55
+PKGVER=			0.58
 DISTNAME=       	FCGI-${PKGVER}
 PKGNAME=        	p5-FCGI-${PKGVER}
 CATEGORIES=		www perl5
