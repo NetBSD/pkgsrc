@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/06 00:26:43 grant Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/06 01:06:43 grant Exp $
 #
 
 DISTNAME=	SOAP-Lite-0.55
 PKGNAME=	p5-${DISTNAME}
-CATEGORIES=	devel perl5
+CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=soaplite/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
