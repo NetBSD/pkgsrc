@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.64 2001/11/21 14:10:06 agc Exp $
+# $NetBSD: bsd.prefs.mk,v 1.65 2001/11/28 19:58:13 tv Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -103,6 +103,11 @@ MACHINE_GNU_PLATFORM?=	${LOWER_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
 # Needed on NetBSD and SunOS (zoularis) to prevent an "install:" target
 # from being created in bsd.own.mk.
 NEED_OWN_INSTALL_TARGET=no
+
+# This prevents default use of the cross-tool harness in the "src" tree,
+# in the odd possible case of someone extracting "pkgsrc" underneath "src".
+USETOOLS=		no
+MAKE_ENV+=		USETOOLS=no
 
 .include <bsd.own.mk>
 
