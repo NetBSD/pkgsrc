@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 1998/11/04 10:36:41 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 1999/04/06 11:48:07 cjs Exp $
 # FreeBSD Id: Makefile,v 1.24 1997/05/14 14:40:34 ache Exp
 #
 
-DISTNAME=       procmail-3.11pre7
-PKGNAME=        procmail-3.11p7
+DISTNAME=       procmail-3.13
+PKGNAME=        procmail-3.13
 CATEGORIES=	mail
-MASTER_SITES=	ftp://ftp.informatik.rwth-aachen.de/pub/packages/procmail/
+MASTER_SITES=	ftp://ftp.procmail.org/pub/procmail/
 
 MAINTAINER=     packages@netbsd.org
 
