@@ -1,18 +1,77 @@
 #!/bin/sh
-cd @PREFIX@/libexec/uvscan/
-ftp http://download.nai.com/products/datfiles/4.x/nai/readme.txt >/dev/null
-AVVER=`head -1 readme.txt | cut -d' ' -f11`
-if [ ! -f dat-$AVVER.tar ]; then
-	for i in *.tar ; do
-		mv $i $i.old
-	done
-	if ftp http://download.nai.com/products/datfiles/4.x/nai/dat-$AVVER.tar >/dev/null ; then
-		for i in *.dat ; do
-			cp -p $i $i.bak
-		done
-		if tar xf dat-$AVVER.tar ; then
-			rm -f *.old
-			echo `date` Successfully updated AntiVirus DAT files to $AVVER
+#
+# $NetBSD: update_dat,v 1.2 2001/08/16 00:01:25 jlam Exp $
+#
+# Script to update the VirusScan data files.
+
+UVSCANDIR=@PREFIX@/libexec/uvscan
+DAT_SITE=http://download.nai.com/products/datfiles/4.x/nai/
+DAT_FILES="@DATFILES@"
+TMPDIR=${TMPDIR:-/tmp}/$$
+
+mkdir -p ${TMPDIR}
+mkdir -p ${UVSCANDIR}
+cd ${TMPDIR}
+
+# Fetch the ReadMe file to read the latest version of the DAT files.
+if ! ( ftp ${DAT_SITE}/readme.txt >/dev/null )
+then
+	echo "$0: unable to fetch ${DAT_SITE}/readme.txt"
+	rm -rf ${TMPDIR}
+	exit 1
+fi
+
+CURVER=`head -1 readme.txt | cut -d' ' -f11`
+OLDVER=`head -1 ${UVSCANDIR}/readme.txt | cut -d' ' -f11`
+exitcode=0
+if [ "${CURVER}" = "${OLDVER}" ]
+then
+	echo "$0: VirusScan DAT files are current (${CURVER})"
+else
+	DAT_TAR=dat-${CURVER}.tar
+	if ftp ${DAT_SITE}/${DAT_TAR} >/dev/null
+	then
+		if tar xf ${DAT_TAR} ${DAT_FILES}
+		then
+			# Backup old dat-* tar files.
+			if [ "`echo ${UVSCANDIR}/*.tar`" != "${UVSCANDIR}/*.tar" ]
+			then
+				for file in ${UVSCANDIR}/*.tar
+				do
+					rm -f ${file}.old
+					mv ${file} ${file}.old
+				done
+			fi
+
+			# Backup old DAT files.
+			for file in ${DAT_FILES}
+			do
+				file=${UVSCANDIR}/${file}
+				if [ -f ${file} ]
+				then
+					rm -f ${file}.bak
+					mv ${file} ${file}.bak
+				fi
+			done
+
+			# Copy new DAT files into place.
+			for file in ${DAT_FILES}
+			do
+				cp -p ${file} ${UVSCANDIR}/${file}
+			done
+			cp -p ${DAT_TAR} ${UVSCANDIR}/${DAT_TAR}
+			rm -f ${UVSCANDIR}/*.old
+			echo `date` Successfully updated VirusScan DAT files to ${CURVER}.
+		else
+			echo "$0: unable to update VirusScan DAT files"
+			exitcode=1
 		fi
+	else
+		echo "$0: unable to fetch ${DAT_SITE}/${DAT_TAR}"
+		exitcode=1
 	fi
 fi
+
+cd /
+rm -rf ${TMPDIR}
+exit ${exitcode}
