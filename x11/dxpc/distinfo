@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.4 2004/03/26 18:39:31 minskim Exp $
+$NetBSD: distinfo,v 1.5 2005/01/19 15:10:12 adam Exp $
 
-SHA1 (dxpc-3.8.1.tar.gz) = 5b6a5b4754704bce1e22f16982bc92e53761d357
-Size (dxpc-3.8.1.tar.gz) = 129417 bytes
-SHA1 (patch-aa) = b731a26c47d33391aece8e9485b1419189ee05b5
+SHA1 (dxpc-3.8.2.tar.gz) = 208245e27788776b9f5a6424acb65ce05feb92a0
+Size (dxpc-3.8.2.tar.gz) = 144909 bytes

@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.20 2004/10/03 00:18:28 tv Exp $
-#
+# $NetBSD: Makefile,v 1.21 2005/01/19 15:10:12 adam Exp $
 
-DISTNAME=		dxpc-3.8.1
-PKGREVISION=	1
-CATEGORIES=		x11
-MASTER_SITES=		http://www.vigor.nu/dxpc/3.8.1/
+DISTNAME=	dxpc-3.8.2
+CATEGORIES=	x11
+MASTER_SITES=	http://www.vigor.nu/dxpc/3.8.2/
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.vigor.nu/dxpc/
-COMMENT=		Differential X Protocol Compressor
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.vigor.nu/dxpc/
+COMMENT=	Differential X Protocol Compressor
 
-GNU_CONFIGURE=		yes
-USE_X11BASE=		yes
 USE_BUILDLINK3=		yes
+USE_X11=		yes
+GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
