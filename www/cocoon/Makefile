@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/03/28 03:57:32 jwise Exp $
+# $NetBSD: Makefile,v 1.10 2001/03/29 21:16:13 jwise Exp $
 
 DISTNAME=	Cocoon-1.8.2
 PKGNAME=	cocoon-1.8.2
@@ -40,16 +40,11 @@ post-extract:
 		${WRKSRC}/lib/xml.jar ${WRKSRC}/lib/xt.jar \
 		${WRKSRC}/lib/fesi.jar
 
-# Yes -- you have to run build.sh _twice_.  The first time triggers a bug in JDK-1.1 javac,
-# and the second time completes successfully.  While we're at it, note that we can't
-# rebuild the javadoc documentation, and have to use that which it shipped with, as the
-# javadoc target requires StyleBook, which uses features of JDK 1.2
+# note that we can't rebuild the javadoc documentation, and have to use that
+# which it shipped with, as the javadoc target requires StyleBook, which uses
+# features of JDK 1.2
+
 do-build:
-	@${ECHO} "------------------------------------------------------------------------"
-	@${ECHO} "  Please ignore any compiler errors during this build.  They are"
-	@${ECHO} "              handled properly by the build process"
-	@${ECHO} "------------------------------------------------------------------------"
-	-(cd ${WRKSRC} && ${SH} build.sh)
 	cd ${WRKSRC} && ${SH} build.sh
 
 # For now, we install the turbine-pool.jar which ships with cocoon.  When there is an actual
