@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/03/10 10:28:31 agc Exp $
+bin/aide
+man/man1/aide.1
+man/man5/aide.conf.5
