@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/10/03 00:18:21 tv Exp $
+# $NetBSD: Makefile,v 1.7 2004/10/05 13:16:56 wiz Exp $
 
 DISTNAME=	dic
 PKGNAME=	stardic-1.31
@@ -9,7 +9,7 @@ MASTER_SITES=	http://download.linuxbyte.net/Chinese/dictionary/
 MAINTAINER=	rxg@NetBSD.org
 COMMENT=	English-Chinese dictionary
 
-DIST_SUBDIR=	${PKGNAME}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 USE_BUILDLINK3=	# defined
 USE_X11=	# defined
