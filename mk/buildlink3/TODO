@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2 2003/09/02 06:59:53 jlam Exp $
+$NetBSD: TODO,v 1.3 2004/01/20 22:16:02 snj Exp $
 
 Package views integration plan:
 ==============================
@@ -7,7 +7,7 @@ Package views integration plan:
     install depoted packages if PKG_INSTALLATION_TYPE is set to
     "pkgviews" in the package Makefile, and to add the depoted
     package to the default view.  The depoted package will include
-    all of it's metadata files in the depot directory, and we rely
+    all of its metadata files in the depot directory, and we rely
     on pkg_view to copy the metadata files into /var/db/pkg as
     part of adding the package to the default view.  We only
     support the default view.  Depoted packages will install into

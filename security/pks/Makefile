@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/01/28 22:04:07 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/20 22:17:55 snj Exp $
 
 DISTNAME=		pks-0.9.4
 CATEGORIES=		security www
@@ -21,7 +21,7 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/pks
 CONFIGURE_ARGS+=	--localstatedir=/var/pks
 #
-# pksd doesn't actually look for it's config file anywhere; it must be
+# pksd doesn't actually look for its config file anywhere; it must be
 # specified directly on the command-line.  Setting sysconfdir here just
 # causes the example pksd.conf file to be installed at the named location.
 #
