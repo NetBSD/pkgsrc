@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1113 2003/12/03 13:05:13 jmmv Exp $
+$NetBSD: TODO,v 1.1114 2003/12/03 13:12:24 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -194,7 +194,6 @@ Suggested package updates
 	o evilwm-0.99.17 [sketch]
 	o evolution-1.4.4
 	o exim-4.24
-	o fastdep-0.16 [jmmv]
 	o festival-1.4.3
 	o findutils-4.1.20
 	o fix-mime-charset-0.5
