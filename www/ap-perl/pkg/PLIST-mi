@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 1999/05/04 20:16:37 tv Exp $
+@comment $NetBSD: PLIST-mi,v 1.1 1999/12/02 21:16:28 rh Exp $
 lib/httpd/mod_perl.so
 lib/perl5/man/man3/Apache.3
 lib/perl5/man/man3/Apache::Constants.3
@@ -72,10 +72,6 @@ lib/perl5/site_perl/Apache/httpd_conf.pm
 lib/perl5/site_perl/Apache/src.pm
 lib/perl5/site_perl/Apache/test.pm
 lib/perl5/site_perl/Bundle/Apache.pm
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/Leak/Leak.bs
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/Leak/Leak.so
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/Symbol/Symbol.bs
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/Symbol/Symbol.so
 lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/mod_perl/.packlist
 lib/perl5/site_perl/cgi_to_mod_perl.pod
 lib/perl5/site_perl/mod_perl.pm
@@ -90,7 +86,4 @@ share/httpd/htdocs/manual/mod/mod_perl.html
 @dirrm lib/perl5/site_perl/Apache/Constants
 @dirrm lib/perl5/site_perl/Apache
 @unexec rmdir %D/lib/perl5/site_perl/Bundle 2>/dev/null || true
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/Leak
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache/Symbol
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Apache
 @dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/mod_perl
