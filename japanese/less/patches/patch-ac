@@ -1,0 +1,69 @@
+$NetBSD: patch-ac,v 1.1 2000/04/11 07:44:10 sakamoto Exp $
+
+--- configure.orig	Tue Apr 11 15:20:55 2000
++++ configure	Tue Apr 11 15:25:04 2000
+@@ -920,45 +920,4 @@
+ 
+ 
+-echo $ac_n "checking for initscr in -lncurses""... $ac_c" 1>&6
+-echo "configure:924: checking for initscr in -lncurses" >&5
+-ac_lib_var=`echo ncurses'_'initscr | sed 'y%./+-%__p_%'`
+-if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+-  echo $ac_n "(cached) $ac_c" 1>&6
+-else
+-  ac_save_LIBS="$LIBS"
+-LIBS="-lncurses  $LIBS"
+-cat > conftest.$ac_ext <<EOF
+-#line 932 "configure"
+-#include "confdefs.h"
+-/* Override any gcc2 internal prototype to avoid an error.  */
+-/* We use char because int might match the return type of a gcc2
+-    builtin and then its argument prototype would still apply.  */
+-char initscr();
+-
+-int main() {
+-initscr()
+-; return 0; }
+-EOF
+-if { (eval echo configure:943: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
+-  rm -rf conftest*
+-  eval "ac_cv_lib_$ac_lib_var=yes"
+-else
+-  echo "configure: failed program was:" >&5
+-  cat conftest.$ac_ext >&5
+-  rm -rf conftest*
+-  eval "ac_cv_lib_$ac_lib_var=no"
+-fi
+-rm -f conftest*
+-LIBS="$ac_save_LIBS"
+-
+-fi
+-if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+-  echo "$ac_t""yes" 1>&6
+-  have_ncurses=yes
+-else
+-  echo "$ac_t""no" 1>&6
+-have_ncurses=no
+-fi
+-
+ echo $ac_n "checking for initscr in -lcurses""... $ac_c" 1>&6
+ echo "configure:965: checking for initscr in -lcurses" >&5
+@@ -1230,13 +1189,9 @@
+ echo "configure:1231: checking for working terminal libraries" >&5
+ TERMLIBS=
+-if test $have_ncurses = yes; then
+-  TERMLIBS="$TERMLIBS -lncurses"
+-  else
+-  if test $have_curses = yes; then
+-    TERMLIBS="$TERMLIBS -lcurses"
+-  fi
+-  if test $have_termcap = yes; then
+-    TERMLIBS="$TERMLIBS -ltermcap"
+-  fi
++if test $have_curses = yes; then
++  TERMLIBS="$TERMLIBS -lcurses"
++fi
++if test $have_termcap = yes; then
++  TERMLIBS="$TERMLIBS -ltermcap"
+ fi
+ 
