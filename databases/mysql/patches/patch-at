@@ -1,0 +1,21 @@
+$NetBSD: patch-at,v 1.1 1998/10/28 18:18:09 bad Exp $
+
+--- mit-pthreads/machdep/engine-i386-netbsd-1.3.h.orig	Mon Mar  2 19:44:34 1998
++++ mit-pthreads/machdep/engine-i386-netbsd-1.3.h	Thu Oct 22 18:24:46 1998
+@@ -8,6 +8,7 @@
+ #include <unistd.h>
+ #include <setjmp.h>
+ #include <sys/time.h>
++#include <sys/signal.h>	/* for _NSIG */
+ 
+ /*
+  * The first machine dependent functions are the SEMAPHORES
+@@ -37,7 +38,7 @@
+  * sigset_t macros
+  */
+ #define	SIG_ANY(sig)		(sig)
+-#define SIGMAX				31
++#define SIGMAX				(_NSIG-1)
+ 
+ /*
+  * New Strutures
