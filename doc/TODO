@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1173 2003/12/13 10:44:31 wiz Exp $
+$NetBSD: TODO,v 1.1174 2003/12/13 10:49:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -212,7 +212,6 @@ Suggested package updates
 	o hpijs-1.4.1
 	o icepref-2.2
 	o inn-2.4.0
-	o iozone-3.207
 	o isync-0.9.1 [pkg/22189]
 	o ivtools-1.1.2
 	o jakarta-tomcat-3.3.1a
