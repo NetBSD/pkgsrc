@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/07/02 16:51:49 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/07/02 16:53:31 jlam Exp $
 #
 
 DISTNAME=		jwhois-2.4.1
@@ -9,6 +9,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/jwhois/
 COMMENT=		Configurable WHOIS client
 
+USE_BUILDLINK_ONLY=	# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--sysconfdir=/etc
 CONFIGURE_ARGS+=	--localstatedir=/var/db
