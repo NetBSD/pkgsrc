@@ -1,4 +1,4 @@
-<!-- $NetBSD: getting.xml,v 1.1.1.1 2004/10/21 14:27:40 grant Exp $ -->
+<!-- $NetBSD: getting.xml,v 1.2 2004/12/10 22:20:18 hubertf Exp $ -->
 
 <chapter id="getting">
   <title>Where to get pkgsrc</title>
@@ -11,7 +11,7 @@
     
     <para>To get pkgsrc going, you need to get the pkgsrc.tar.gz file
       from <ulink
-      url="ftp://ftp.NetBSD.org/pub/NetBSD-current/tar_files/pkgsrc.tar.gz">ftp.NetBSD.org</ulink>
+      url="ftp://ftp.NetBSD.org/pub/NetBSD/NetBSD-current/tar_files/pkgsrc.tar.gz">ftp.NetBSD.org</ulink>
       and unpack it into <filename>/usr/pkgsrc</filename>.</para> 
   
   </sect1>
