@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/01/25 14:51:52 kleink Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/02/11 19:17:29 tv Exp $
 bin/recode
-@unexec %D/bin/install-info --delete %D/info/recode.info %D/info/dir
+@unexec install-info --delete %D/info/recode.info %D/info/dir
 info/recode.info
-@exec %D/bin/install-info %D/info/recode.info %D/info/dir
+@exec install-info %D/info/recode.info %D/info/dir

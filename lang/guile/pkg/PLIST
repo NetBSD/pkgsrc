@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/11/15 21:28:09 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/02/11 19:17:32 tv Exp $
 bin/guile
 bin/guile-config
 bin/guile-snarf
@@ -81,9 +81,9 @@ include/libguile/vectors.h
 include/libguile/version.h
 include/libguile/vports.h
 include/libguile/weaks.h
-@unexec %D/bin/install-info --delete %D/info/data-rep.info %D/info/dir
+@unexec install-info --delete %D/info/data-rep.info %D/info/dir
 info/data-rep.info
-@exec %D/bin/install-info %D/info/data-rep.info %D/info/dir
+@exec install-info %D/info/data-rep.info %D/info/dir
 lib/libguile.a
 lib/libguile.so.4.0
 share/aclocal/guile.m4

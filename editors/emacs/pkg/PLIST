@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 1999/02/04 14:54:25 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.19 1999/02/11 19:17:31 tv Exp $
 bin/emacs
 bin/emacs-20.3
 bin/emacs-etags
@@ -6,44 +6,44 @@ bin/emacs-ctags
 bin/emacsclient
 bin/emacs-b2m
 bin/emacs-rcs-checkin
-@unexec %D/bin/install-info --delete %D/info/widget %D/info/dir
+@unexec install-info --delete %D/info/widget %D/info/dir
 info/widget
-@exec   %D/bin/install-info          %D/info/widget %D/info/dir
+@exec   install-info          %D/info/widget %D/info/dir
 info/viper-5
 info/viper-4
 info/viper-3
 info/viper-2
 info/viper-1
-@unexec %D/bin/install-info --delete %D/info/viper %D/info/dir
+@unexec install-info --delete %D/info/viper %D/info/dir
 info/viper
-@exec   %D/bin/install-info          %D/info/viper %D/info/dir
+@exec   install-info          %D/info/viper %D/info/dir
 info/vip-2
 info/vip-1
-@unexec %D/bin/install-info --delete %D/info/vip %D/info/dir
+@unexec install-info --delete %D/info/vip %D/info/dir
 info/vip
-@exec   %D/bin/install-info          %D/info/vip %D/info/dir
+@exec   install-info          %D/info/vip %D/info/dir
 info/sc-3
 info/sc-2
 info/sc-1
-@unexec %D/bin/install-info --delete %D/info/sc %D/info/dir
+@unexec install-info --delete %D/info/sc %D/info/dir
 info/sc
-@exec   %D/bin/install-info          %D/info/sc %D/info/dir
+@exec   install-info          %D/info/sc %D/info/dir
 info/reftex-3
 info/reftex-2
 info/reftex-1
-@unexec %D/bin/install-info --delete %D/info/reftex %D/info/dir
+@unexec install-info --delete %D/info/reftex %D/info/dir
 info/reftex
-@exec   %D/bin/install-info          %D/info/reftex %D/info/dir
+@exec   install-info          %D/info/reftex %D/info/dir
 info/mh-e-4
 info/mh-e-3
 info/mh-e-2
 info/mh-e-1
-@unexec %D/bin/install-info --delete %D/info/mh-e %D/info/dir
+@unexec install-info --delete %D/info/mh-e %D/info/dir
 info/mh-e
-@exec   %D/bin/install-info          %D/info/mh-e %D/info/dir
-@unexec %D/bin/install-info --delete %D/info/message %D/info/dir
+@exec   install-info          %D/info/mh-e %D/info/dir
+@unexec install-info --delete %D/info/message %D/info/dir
 info/message
-@exec   %D/bin/install-info          %D/info/message %D/info/dir
+@exec   install-info          %D/info/message %D/info/dir
 info/gnus-9
 info/gnus-8
 info/gnus-7
@@ -57,12 +57,12 @@ info/gnus-12
 info/gnus-11
 info/gnus-10
 info/gnus-1
-@unexec %D/bin/install-info --delete %D/info/gnus %D/info/dir
+@unexec install-info --delete %D/info/gnus %D/info/dir
 info/gnus
-@exec   %D/bin/install-info          %D/info/gnus %D/info/dir
-@unexec %D/bin/install-info --delete %D/info/forms %D/info/dir
+@exec   install-info          %D/info/gnus %D/info/dir
+@unexec install-info --delete %D/info/forms %D/info/dir
 info/forms
-@exec   %D/bin/install-info          %D/info/forms %D/info/dir
+@exec   install-info          %D/info/forms %D/info/dir
 info/emacs-9
 info/emacs-8
 info/emacs-7
@@ -94,36 +94,36 @@ info/emacs-12
 info/emacs-11
 info/emacs-10
 info/emacs-1
-@unexec %D/bin/install-info --delete %D/info/emacs %D/info/dir
+@unexec install-info --delete %D/info/emacs %D/info/dir
 info/emacs
-@exec   %D/bin/install-info          %D/info/emacs %D/info/dir
+@exec   install-info          %D/info/emacs %D/info/dir
 info/ediff-3
 info/ediff-2
 info/ediff-1
-@unexec %D/bin/install-info --delete %D/info/ediff %D/info/dir
+@unexec install-info --delete %D/info/ediff %D/info/dir
 info/ediff
-@exec   %D/bin/install-info          %D/info/ediff %D/info/dir
-@unexec %D/bin/install-info --delete %D/info/dired-x %D/info/dir
+@exec   install-info          %D/info/ediff %D/info/dir
+@unexec install-info --delete %D/info/dired-x %D/info/dir
 info/dired-x
-@exec   %D/bin/install-info          %D/info/dired-x %D/info/dir
-@unexec %D/bin/install-info --delete %D/info/customize %D/info/dir
+@exec   install-info          %D/info/dired-x %D/info/dir
+@unexec install-info --delete %D/info/customize %D/info/dir
 info/customize
-@exec   %D/bin/install-info          %D/info/customize %D/info/dir
+@exec   install-info          %D/info/customize %D/info/dir
 info/cl-6
 info/cl-5
 info/cl-4
 info/cl-3
 info/cl-2
 info/cl-1
-@unexec %D/bin/install-info --delete %D/info/cl %D/info/dir
+@unexec install-info --delete %D/info/cl %D/info/dir
 info/cl
-@exec   %D/bin/install-info          %D/info/cl %D/info/dir
+@exec   install-info          %D/info/cl %D/info/dir
 info/ccmode-3
 info/ccmode-2
 info/ccmode-1
-@unexec %D/bin/install-info --delete %D/info/ccmode %D/info/dir
+@unexec install-info --delete %D/info/ccmode %D/info/dir
 info/ccmode
-@exec   %D/bin/install-info          %D/info/ccmode %D/info/dir
+@exec   install-info          %D/info/ccmode %D/info/dir
 libexec/emacs/20.3/${MACHINE_GNU_ARCH}--netbsd/vcdiff
 libexec/emacs/20.3/${MACHINE_GNU_ARCH}--netbsd/rcs2log
 libexec/emacs/20.3/${MACHINE_GNU_ARCH}--netbsd/hexl

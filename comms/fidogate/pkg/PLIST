@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 1998/07/19 16:01:31 tv Exp $
+@comment $NetBSD: PLIST,v 1.4 1999/02/11 19:17:28 tv Exp $
 bin/pktdebug
 bin/pktmore
 bin/sumcrc
 etc/rc.d/fidogate.sh
-@unexec %D/bin/install-info --delete %D/info/fidogate.info %D/info/dir
+@unexec install-info --delete %D/info/fidogate.info %D/info/dir
 info/fidogate.info
 info/fidogate.info-1
 info/fidogate.info-2
-@exec %D/bin/install-info %D/info/fidogate.info %D/info/dir
+@exec install-info %D/info/fidogate.info %D/info/dir
 lib/fidogate/ffx
 lib/fidogate/ffxbatch
 lib/fidogate/ffxmail
