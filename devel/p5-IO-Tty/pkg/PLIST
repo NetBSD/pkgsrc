@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/16 00:52:14 thorpej Exp $
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/IO/Tty/Tty.so
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/IO/Tty/Tty.bs
+lib/perl5/site_perl/IO/Pty.pm
+lib/perl5/site_perl/IO/Tty.pm
+lib/perl5/man/man3/IO::Pty.3
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/IO/Tty/.packlist
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/IO/Tty
+@dirrm lib/perl5/site_perl/IO
