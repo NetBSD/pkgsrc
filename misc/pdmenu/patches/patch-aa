@@ -1,16 +1,19 @@
-$NetBSD: patch-aa,v 1.4 2002/01/01 17:36:29 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2003/09/22 09:32:21 wiz Exp $
 
---- autoconf/makeinfo.in.orig	Sat Aug 28 05:27:37 1999
-+++ autoconf/makeinfo.in
-@@ -33,7 +33,7 @@
+--- autoconf/makeinfo.in.orig	Sat Aug 28 04:27:37 1999
++++ autoconf/makeinfo.in	Mon Sep 22 10:14:07 2003
+@@ -16,9 +16,9 @@
+ VER		= @VER@
+ DEFINES		= -DETCDIR=\"${SYSCONFDIR}/\" -DVER=\"${VER}\" @DEFS@ \
+ 		  $(PROFILE) -D__USE_FIXED_PROTOTYPES__ -D_GNU_SOURCE
+-CFLAGS_FOR_GCC	= -Wall -fstrict-prototypes
++#CFLAGS_FOR_GCC	= -Wall -fstrict-prototypes
+ CFLAGS		= $(DEFINES) @gcc_cflags@ @CFLAGS@
+-LIBS		= @LIBS@ $(EFENCE)
++LIBS		= @LIBS@ $(EFENCE) @LDFLAGS@
+ SRCDIR		= src
  
- all: pdmenu
- pdmenu: .dep $(OBJFILES)
--	${CC} -o pdmenu $(OBJFILES) $(CFLAGS) $(LIBS)
-+	${CC} -o pdmenu -Wl,-R${LOCALBASE}/lib $(OBJFILES) $(CFLAGS) $(LIBS)
- 
- 
- depend: .dep
+ #------------------- end user configurable section ------------------------#
 @@ -68,11 +68,6 @@
  	$(INSTALL) -s pdmenu $(INSTALL_PREFIX)/$(BINDIR)
  	$(INSTALL) doc/pdmenu.man $(INSTALL_PREFIX)/$(MANDIR)/man1/pdmenu.1 -m 0644

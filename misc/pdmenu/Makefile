@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/17 21:49:45 grant Exp $
+# $NetBSD: Makefile,v 1.15 2003/09/22 09:32:20 wiz Exp $
 #
 
 DISTNAME=	pdmenu_1.2.65
@@ -30,9 +30,9 @@ pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/pdmenu
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pdmenu \
-		${PREFIX}/share/examples/pdmenu	\
-		${PREFIX}/share/examples/pdmenu/newbie
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pdmenu
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/pdmenu
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/pdmenu/newbie
 	cd ${WRKSRC}/doc && ${INSTALL_DATA} ANNOUNCE BUGS TODO \
 		${PREFIX}/share/doc/pdmenu
 	cd ${WRKSRC}/examples && ${INSTALL_DATA} README ba.lpd pdmenurc \
