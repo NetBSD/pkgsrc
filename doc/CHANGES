@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2133 2003/05/03 16:40:03 jmmv Exp $
+$NetBSD: CHANGES,v 1.2134 2003/05/03 18:31:19 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1825,8 +1825,8 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ekg to 1.0 [zuntum 2003-05-02]
 	Added sigrot-1.2 [jmmv 2003-05-02]
 	Updated gcc to 2.95.3nb1 [jmmv 2003-05-02]
-	Updated sun-jre13 to 1.0.8 [abs 2003-05-02]
-	Updated sun-jdk13 to 1.0.8 [abs 2003-05-02]
+	Updated sun-jre13 to 1.0.8nb1 [abs 2003-05-02]
+	Updated sun-jdk13 to 1.0.8nb1 [abs 2003-05-02]
 	Updated libdnet to 1.7 [seb 2003-05-02]
 	Updated pth to 2.0.0 [skrll 2003-05-02]
 	Lots of packages updated because of pth library major bump
