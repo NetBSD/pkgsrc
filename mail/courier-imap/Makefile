@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2002/01/22 22:08:50 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/01/23 02:22:20 jlam Exp $
 
 DISTNAME=	courier-imap-1.4.2
+PKGREVISION=	1
 COMMENT=	IMAP server for access to Maildir-style mailboxes
 HOMEPAGE=	http://www.inter7.com/courierimap/
 
 DEPENDS+=	courier-auth>=0.37.1:../../mail/courier-auth
-DEPENDS+=	courier-maildirmake>=0.37.1:../../mail/courier-maildirmake
+DEPENDS+=	courier-maildirmake>=0.37.1nb1:../../mail/courier-maildirmake
 
 USE_BUILDLINK_ONLY=	yes
 USE_PERL5=		yes
@@ -24,7 +25,6 @@ INSTALL_TARGET=         install
 SYSCONFTOOL=		${PREFIX}/sbin/imapd.sysconftool
 GEN_FILES=		imapd imapd-ssl pop3d pop3d-ssl
 SSLCNF_FILES=		imapd.cnf pop3d.cnf
-CONF_FILES=		${EGDIR}/quotawarnmsg.example ${PKG_SYSCONFDIR}/quotawarnmsg
 RCD_SCRIPTS=		courierimap courierimaps courierpop courierpops
 
 CONF_FILES_PERMS=	# empty
