@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/10/10 17:46:07 jdolecek Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/28 19:19:51 jlam Exp $
 
 PKGNAME=		postgresql73-server-${BASE_VERS}
-PKGREVISION=		# empty
+PKGREVISION=		1
 SVR4_PKGNAME=		pstgs
 COMMENT=		PostgreSQL database server programs
 
@@ -20,6 +20,9 @@ DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 BUILD_DIRS=		${WRKSRC}/src/backend
 BUILD_DIRS+=		${WRKSRC}/src/backend/utils/mb/conversion_procs
+
+# PostgreSQL has loadable server-side language modules.
+.include "../../mk/dlopen.buildlink3.mk"
 
 .if defined(USE_PAM)
 .  include "../../security/PAM/buildlink3.mk"
@@ -44,7 +47,7 @@ PKG_GROUPS=		${PGGROUP}
 
 RCD_SCRIPTS=		pgsql
 
-post-buildlink:
+post-wrapper:
 #
 # Avoid conflict between "${LOCALBASE}/include/openssl/des.h" and
 # "/usr/include/crypt.h" -- we want the definitions in the former.

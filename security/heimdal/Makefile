@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/11/19 23:16:02 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2004/11/28 19:19:52 jlam Exp $
 
 DISTNAME=	heimdal-0.6.3
 PKGREVISION=	2
@@ -101,7 +101,7 @@ SUBST_SED.heimdal=							\
 # The configure script only groks the OpenSSL 0.9.6 DES API, so make the
 # newer OpenSSL releases look more like the old one.
 #
-post-buildlink:
+post-wrapper:
 	if ${GREP} -q des_cblock ${SSLBASE}/include/openssl/des.h 2>/dev/null; then \
 		: ;							\
 	else								\

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.15 2004/11/27 23:35:37 wiz Exp $
+# $NetBSD: builtin.mk,v 1.16 2004/11/28 19:19:52 jlam Exp $
 
 .for _lib_ in intl
 .  if !defined(_BLNK_LIB_FOUND.${_lib_})
@@ -213,7 +213,7 @@ USE_PERL5?=		build
 CONFIGURE_ENV+=		MSGFMT=${BUILDLINK_DIR}/bin/msgfmt
 
 SUBST_CLASSES+=			fix-msgfmt
-SUBST_STAGE.fix-msgfmt=		post-buildlink
+SUBST_STAGE.fix-msgfmt=		post-wrapper
 SUBST_MESSAGE.fix-msgfmt=	"Fixing paths in msgfmt wrapper."
 SUBST_FILES.fix-msgfmt=		${BUILDLINK_DIR}/bin/msgfmt
 SUBST_SED.fix-msgfmt=		-e 's|@PERL@|${PERL5}|g'

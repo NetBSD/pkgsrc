@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/11/05 02:58:56 xtraeme Exp $
+# $NetBSD: Makefile,v 1.10 2004/11/28 19:19:52 jlam Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		xorg-clients-${XORG_VER}
@@ -48,7 +48,7 @@ CONF_FILES_PERMS+=	${EGDIR}/GiveConsole ${PKG_SYSCONFDIR}/GiveConsole \
 CONF_FILES_PERMS+=	${EGDIR}/Xwilling ${PKG_SYSCONFDIR}/Xwilling \
 	${ROOT_USER} ${ROOT_GROUP} 0755
 
-post-buildlink:
+post-wrapper:
 	@${MKDIR} ${WRKSRC}/exports/include
 	@${CP} ${X11ROOT}/include/X11/fonts/*.h ${BUILDLINK_DIR}/include
 
