@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/12/07 21:29:09 tv Exp $
+# $NetBSD: Makefile,v 1.5 1998/12/28 07:56:35 marc Exp $
 #
 
 DISTNAME=	mod_ssl-2.1.3-1.3.3
@@ -15,6 +15,8 @@ DEPENDS=	ssleay-0.9.0b:../../security/ssleay \
 BUILD_DEPENDS=	${PREFIX}/bin/perl:../../lang/perl5
 
 CONFLICTS=	apache-1.3.[012] apache-*modssl-*
+
+.include "../../mk/bsd.prefs.mk"
 
 fetch-depends:
 .if !defined(USE_RSAREF2) || ${USE_RSAREF2} != YES && ${USE_RSAREF2} != NO
