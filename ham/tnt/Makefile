@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/09/06 21:42:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2000/01/15 18:46:29 jlam Exp $
 #
 
 DISTNAME=	tnt1.9-pre3
@@ -11,7 +11,7 @@ MAINTAINER=	wulf@ping.net.au
 HOMEPAGE=	http://excelsior.kullen.rwth-aachen.de
 
 DEPENDS+=	dialog-0.6z:../../misc/dialog
-DEPENDS+=	ncurses-4.2:../../devel/ncurses
+DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 
 USE_GMAKE=	yes
 IS_INTERACTIVE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/10/04 20:39:23 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2000/01/15 18:46:28 jlam Exp $
 #
 
 DISTNAME=	libggi-2.0b2.1
@@ -9,7 +9,7 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.ggi-project.org/
 
 DEPENDS+=	libgii-0.6:../libgii
-DEPENDS+=	ncurses-4.2:../../devel/ncurses
+DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=--disable-debug \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/08/18 09:11:31 agc Exp $
+# $NetBSD: Makefile,v 1.19 2000/01/15 18:46:32 jlam Exp $
 # FreeBSD Id: Makefile,v 1.39 1998/01/31 17:49:48 jseger Exp
 #
 
@@ -17,7 +17,7 @@ BUILD_DEFS+=		USE_SOCKS
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-DEPENDS+=		ncurses-4.2:../../devel/ncurses
+DEPENDS+=		ncurses>=4.2:../../devel/ncurses
 .endif
 
 # Check for readline.h as standard

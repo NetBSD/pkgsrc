@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/08/08 22:56:13 tron Exp $
+# $NetBSD: Makefile,v 1.19 2000/01/15 18:46:24 jlam Exp $
 #
 
 DISTNAME=	xmcd-2.5
@@ -8,7 +8,7 @@ MASTER_SITES=	http://metalab.unc.edu/tkan/download/xmcd/src/
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://metalab.unc.edu/tkan/xmcd/
 
-DEPENDS+=	ncurses-4.2:../../devel/ncurses
+DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 
 USE_MOTIF=	yes
 USE_IMAKE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/12/14 07:16:04 sakamoto Exp $
+# $NetBSD: Makefile,v 1.8 2000/01/15 18:46:29 jlam Exp $
 #
 
 DISTNAME=	ruby-1.4.3
@@ -16,7 +16,7 @@ HOMEPAGE=	http://www.ruby-lang.org/
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/bison:../../devel/bison
 DEPENDS+=	gdbm-1.7.3:../../databases/gdbm
-DEPENDS+=	ncurses-4.2:../../devel/ncurses
+DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 DEPENDS+=	readline-4.0:../../devel/readline
 
 GNU_CONFIGURE=	yes

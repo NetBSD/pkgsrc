@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/12/21 17:36:33 pooka Exp $
+# $NetBSD: Makefile,v 1.4 2000/01/15 18:46:27 jlam Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -21,7 +21,7 @@ INSTALL_TARGET=		installvimbin
 .include "../../mk/bsd.prefs.mk"
 
 .if (${OPSYS} == "NetBSD")
-DEPENDS+=		ncurses-4.2:../../devel/ncurses
+DEPENDS+=		ncurses>=4.2:../../devel/ncurses
 .endif
 
 post-install:

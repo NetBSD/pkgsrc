@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/01/09 06:10:43 jwise Exp $
+# $NetBSD: Makefile,v 1.12 2000/01/15 18:46:33 jlam Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -14,7 +14,7 @@ BUILD_DEPENDS+=	${LOCALBASE}/bin/bison:../../devel/bison
 DEPENDS+=	teTeX-share-1.0:../teTeX-share
 DEPENDS+=	dialog-0.6z:../../misc/dialog
 DEPENDS+=	libwww-5.2.8:../../www/libwww
-DEPENDS+=	ncurses-4.2:../../devel/ncurses
+DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 DEPENDS+=	png-1.0.3:../../graphics/png
 
 CONFLICTS+=	omega-*

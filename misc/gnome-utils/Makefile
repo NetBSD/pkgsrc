@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/01/15 09:58:15 tron Exp $
+# $NetBSD: Makefile,v 1.15 2000/01/15 18:46:30 jlam Exp $
 
 DISTNAME=	gnome-utils-1.0.50
 CATEGORIES=	misc x11 gnome
@@ -8,7 +8,7 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/bison:../../devel/bison
-DEPENDS+=	ncurses-4.2:../../devel/ncurses
+DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 DEPENDS+=	gnome-core-*:../../x11/gnome-core
 
 GNU_CONFIGURE=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/07/06 07:54:05 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2000/01/15 18:46:22 jlam Exp $
 #
 
 DISTNAME=	cam-1.02
@@ -8,6 +8,6 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
 
-DEPENDS+=	ncurses-4.2:../../devel/ncurses
+DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 
 .include "../../mk/bsd.pkg.mk"
