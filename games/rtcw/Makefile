@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/21 07:40:33 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/15 00:33:24 xtraeme Exp $
 
 DISTNAME=	wolf-linux-1.33.x86
 PKGNAME=	rtcw-1.33
@@ -10,7 +10,8 @@ MAINTAINER=	david@netbsd-fr.org
 HOMEPAGE=	http://games.activision.com/games/wolfenstein/
 COMMENT=	Return to Castle Wolfenstein for Linux
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-i386
+ONLY_FOR_PLATFORM=	*-*-i386
+CHECK_SHLIBS=		no
 NO_BUILD=		yes
 RTCWDIR=		${PREFIX}/lib/lokigames/rtcw
 RESTRICTED=		"Size; the data set is much too big"

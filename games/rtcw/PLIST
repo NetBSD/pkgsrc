@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/21 07:40:37 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/15 00:33:24 xtraeme Exp $
 lib/lokigames/rtcw/CHANGES
 lib/lokigames/rtcw/Docs/ATVIsmall.jpg
 lib/lokigames/rtcw/Docs/Dedicated Server Notes.html
@@ -214,7 +214,7 @@ lib/lokigames/rtcw/setup.data/bin/FreeBSD
 lib/lokigames/rtcw/setup.data/bin/Linux/x86/glibc-2.1/setup.gtk
 lib/lokigames/rtcw/setup.data/bin/Linux/x86/glibc-2.1/xsu
 lib/lokigames/rtcw/setup.data/bin/Linux/x86/setup
-lib/lokigames/rtcw/setup.data/bin/${OPSYS}
+lib/lokigames/rtcw/setup.data/bin/NetBSD
 lib/lokigames/rtcw/setup.data/bin/OpenBSD
 lib/lokigames/rtcw/setup.data/config.sh
 lib/lokigames/rtcw/setup.data/locale/de/LC_MESSAGES/setup.mo
