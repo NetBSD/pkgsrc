@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2949 2005/01/21 15:06:32 drochner Exp $
+$NetBSD: TODO,v 1.2950 2005/01/21 16:30:11 kei Exp $
 
 Suggested new packages
 ======================
@@ -473,7 +473,6 @@ Suggested package updates
 	o garmin-utils-2.2
 	o gated-3.6
 	o gattrib-20041120
-	o gauche-0.8.3
 	o gbib-0.1.3rc1
 	o gcombust-0.1.55
 	o gconfmm26-2.8.0?
@@ -572,7 +571,6 @@ Suggested package updates
 	o ivan-0.50
 	o ja-ptex-bin-3.1.8
 	o ja-ptex-share-2.2
-	o ja-shinonome-0.9.11
 	o ja-vflib-lib-2.25.6
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
@@ -1154,7 +1152,6 @@ Suggested package updates
 	o xlog-1.0
 	o xm7-303
 	o xmame-0.90
-	o xmbdfed-4.5
 	o xmcd-3.3.0
 	o xmess-0.90
 	o xmlstarlet-0.9.5
