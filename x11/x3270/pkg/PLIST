@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1998/01/30 16:39:23 agc Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/09/22 10:11:47 agc Exp $
 bin/x3270
 bin/x3270if
 lib/X11/fonts/misc/3270.pcf.gz
@@ -19,10 +19,10 @@ lib/X11/fonts/misc/3270gt24b.pcf.gz
 lib/X11/fonts/misc/3270gt32.pcf.gz
 lib/X11/fonts/misc/3270gt32b.pcf.gz
 lib/X11/x3270/ibm_hosts
-@exec /bin/chmod u+w /usr/X11R6/lib/X11/fonts/misc /usr/X11R6/lib/X11/fonts/misc/fonts.dir
-@exec /usr/X11R6/bin/mkfontdir /usr/X11R6/lib/X11/fonts/misc
-@exec /bin/chmod u=rwx,go=rx /usr/X11R6/lib/X11/fonts/misc
-@exec /bin/chmod a=r /usr/X11R6/lib/X11/fonts/misc/fonts.dir
+@exec /bin/chmod u+w %D/lib/X11/fonts/misc %D/lib/X11/fonts/misc/fonts.dir
+@exec %D/bin/mkfontdir %D/lib/X11/fonts/misc
+@exec /bin/chmod u=rwx,go=rx %D/lib/X11/fonts/misc
+@exec /bin/chmod a=r %D/lib/X11/fonts/misc/fonts.dir
 man/cat1/x3270.0.gz
 man/cat1/x3270if.0.gz
 man/cat1/x3270-script.0.gz
