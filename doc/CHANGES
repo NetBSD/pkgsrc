@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2587 2003/06/25 16:41:19 wiz Exp $
+$NetBSD: CHANGES,v 1.2588 2003/06/25 19:25:14 tsarna Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2569,3 +2569,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated vic to 2.8nb1 [uebayasi 2003-06-25]
 	Updated icdprog to 0.3nb1 [tsarna 2003-06-25]
 	Updated ja-jsclasses to 030624 [wiz 2003-06-25]
+	Updated sqlite to 2.8.3 [tsarna 2003-06-25]
