@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:19:32 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/02 14:05:04 abs Exp $
 #
 
 DISTNAME=		aqsis-0.6.4
@@ -18,7 +18,7 @@ USE_X11=		yes
 
 USE_BUILDLINK2=		yes
 
-.include "../../lang/gcc/buildlink2.mk"
+.include "../../mk/gcc.buildlink2.mk"
 .include "../../devel/libargparse/buildlink2.mk"
 .include "../../graphics/Mesa/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2003/03/29 12:42:15 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.45 2003/06/02 14:05:07 abs Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -135,7 +135,7 @@ ALL_TARGET=		std
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-.  include "../../lang/gcc/buildlink2.mk"
+.  include "../../mk/gcc.buildlink2.mk"
 .endif
 .if defined(ZOULARISBASE)
 LDFLAGS+=	-L${ZOULARISBASE}/lib -Wl,${RPATH_FLAG}${ZOULARISBASE}/lib

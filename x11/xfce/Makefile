@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2003/05/05 14:42:02 jmmv Exp $
+# $NetBSD: Makefile,v 1.34 2003/06/02 14:05:09 abs Exp $
 
 DISTNAME=		xfce-3.8.18
 PKGREVISION=		1
@@ -22,7 +22,7 @@ USE_GMAKE=		# defined
 GNU_CONFIGURE=		# defined
 
 .if ${MACHINE_ARCH} == "alpha"
-.  include "../../lang/gcc/buildlink2.mk"
+.  include "../../mk/gcc.buildlink2.mk"
 .endif
 
 CONFIGURE_ARGS+=	--without-included-gettext

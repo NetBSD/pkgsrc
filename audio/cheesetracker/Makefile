@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/05/02 11:53:38 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2003/06/02 14:05:00 abs Exp $
 #
 
 DISTNAME=		cheesetracker-0.5.5
@@ -26,8 +26,8 @@ pre-configure:
 	cd ${WRKSRC} && ${AUTOMAKE} --add-missing
 
 .include "../../mk/automake.mk"
-.include "../../lang/gcc/buildlink2.mk"
-.include "../../x11/gtk--/buildlink2.mk"
+.include "../../mk/gcc.buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
+.include "../../x11/gtk--/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"

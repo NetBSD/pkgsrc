@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2003/05/23 09:39:52 wiz Exp $
+# $NetBSD: Makefile.common,v 1.48 2003/06/02 14:05:09 abs Exp $
 #
 
 DISTNAME=		xscreensaver-4.10
@@ -49,7 +49,7 @@ CONFIGURE_ARGS+=	--without-kerberos
 .endif
 
 .if (${MACHINE_ARCH} == "arm32")
-.  include "../../lang/gcc/buildlink2.mk"
+.  include "../../mk/gcc.buildlink2.mk"
 .endif
 
 .include "../../graphics/gle/buildlink2.mk"

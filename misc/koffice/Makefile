@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/06/02 01:18:13 jschauma Exp $
+# $NetBSD: Makefile,v 1.22 2003/06/02 14:05:06 abs Exp $
 
 DISTNAME=	koffice-1.2.1
 PKGREVISION=	2
@@ -38,12 +38,12 @@ post-install:
 	@# their local directories.
 	${CHMOD} u+w ${PREFIX}/share/kde/templates/.source/*
 
-.include "../../lang/gcc/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../textproc/libxslt/buildlink2.mk"
 .include "../../graphics/libart2/buildlink2.mk"
 .include "../../x11/kde3/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"
+.include "../../mk/gcc.buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
