@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8512 2004/12/29 11:52:43 adrianp Exp $
+$NetBSD: CHANGES,v 1.8513 2004/12/29 13:00:29 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6688,3 +6688,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cvsgraph to 1.5.1 [adrianp 2004-12-29]
 	Updated p5-INET6 to 2.01 [adrianp 2004-12-29]
 	Updated tcpflow to 0.21 [adrianp 2004-12-29]
+	Updated glade2 to 2.6.5nb1 [jmmv 2004-12-29]
+	Added glade2-gnome-2.6.5 [jmmv 2004-12-29]
