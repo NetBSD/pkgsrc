@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/01/19 03:54:08 mjl Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/02 15:26:25 seb Exp $
 #
 
 DISTNAME=	Text-Balanced-1.89
@@ -11,11 +11,8 @@ MAINTAINER=	packages@netbsd.org
 #HOMEPAGE=	
 COMMENT=	Extract delimited text sequences from strings
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Text/Balanced/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
