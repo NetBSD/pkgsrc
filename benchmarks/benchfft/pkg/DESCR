@@ -1,0 +1,6 @@
+This is benchFFT 2.0, a program to measure the speed and accuracy of a
+wide variety of FFT implementations in both C and Fortran.
+
+Included (in the c_source/ and f_source/ directories) are the source
+codes for many publicly available FFTs, all of which are incorporated
+into the benchmark.
