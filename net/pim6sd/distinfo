@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/06/02 05:05:21 itojun Exp $
+$NetBSD: distinfo,v 1.2 2002/04/03 05:37:00 itojun Exp $
 
-SHA1 (pim6sd-20010602a.tar.gz) = 48185efee39aefcb8028dc0c627f6f461444e828
-Size (pim6sd-20010602a.tar.gz) = 155339 bytes
+SHA1 (pim6sd-20020403a.tar.gz) = e00e1b6acdce1d605eb4f61e70618f4b7c37773e
+Size (pim6sd-20020403a.tar.gz) = 165983 bytes
 SHA1 (patch-aa) = 8346bedaff00ed1b37226a5f53fb720890f19a68
 SHA1 (patch-ab) = 93ada333baf53c023d6bcd229d10afa25453cfaf
