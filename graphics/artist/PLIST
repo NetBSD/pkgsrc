@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/11/29 08:59:48 martti Exp $
+share/emacs/site-lisp/artist/artist.el
+share/emacs/site-lisp/artist/artist.elc
+share/doc/artist/BUGS
+share/doc/artist/COPYING
+share/doc/artist/ChangeLog
+share/doc/artist/INSTALL
+share/doc/artist/README
+share/doc/artist/TODO
+@dirrm share/emacs/site-lisp/artist
+@dirrm share/doc/artist

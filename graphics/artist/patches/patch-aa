@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/11/29 08:59:48 martti Exp $
+--- Makefile.in.orig	Tue Aug 28 00:17:46 2001
++++ Makefile.in	Tue Aug 28 00:17:42 2001
+@@ -11,7 +11,7 @@
+ datadir = $(prefix)/share
+ 
+ # Where to put the .el and .elc files
+-lispdir=$(datadir)/emacs/site-lisp
++lispdir=$(datadir)/emacs/site-lisp/artist
+ 
+ # Installation command
+ INSTALL = @INSTALL@
