@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/03 17:48:11 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/07 06:04:48 snj Exp $
 #
 
 DISTNAME=	dosbox-0.61
@@ -9,7 +9,7 @@ MAINTAINER=	cube@cubidou.net
 HOMEPAGE=	http://dosbox.sourceforge.net/
 COMMENT=	Multi-platform DOS emulator using SDL
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
 SUBST_CLASSES=		fixme
@@ -21,7 +21,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dosbox
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/dosbox
 
-.include "../../devel/SDL/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../net/SDL_net/buildlink2.mk"
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../net/SDL_net/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
