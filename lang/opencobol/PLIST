@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/29 02:57:36 xtraeme Exp $
+bin/cob-config
+bin/cobc
+include/libcob.h
+include/libcob/call.h
+include/libcob/common.h
+include/libcob/exception.def
+include/libcob/fileio.h
+include/libcob/move.h
+include/libcob/numeric.h
+include/libcob/screenio.h
+include/libcob/strings.h
+include/libcob/termio.h
+lib/libcob.a
+lib/libcob.la
+lib/libcob.so
+lib/libcob.so.1
+lib/libcob.so.1.0
+share/examples/open-cobol/libcob.conf
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/open-cobol.mo
+@dirrm share/examples/open-cobol
+@dirrm include/libcob
