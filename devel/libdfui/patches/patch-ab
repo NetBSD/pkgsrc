@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2005/02/20 00:33:18 xtraeme Exp $
+
+--- decode.c.orig	2005-02-20 01:27:53.000000000 +0100
++++ decode.c	2005-02-20 01:28:18.000000000 +0100
+@@ -61,7 +61,7 @@
+ 	int i = 0;
+ 	int len = 0;
+ 
+-	while (isdigit(aura_buffer_peek_char(e)) && !aura_buffer_eof(e)) {
++	while (isdigit((int)aura_buffer_peek_char(e)) && !aura_buffer_eof(e)) {
+ 		len = len * 10 + aura_buffer_scan_char(e) - '0';
+ 	}
+ 
+@@ -83,7 +83,7 @@
+ {
+ 	int x = 0;
+ 
+-	while (isdigit(aura_buffer_peek_char(e)) && !aura_buffer_eof(e)) {
++	while (isdigit((int)aura_buffer_peek_char(e)) && !aura_buffer_eof(e)) {
+ 		x = x * 10 + aura_buffer_scan_char(e) - '0';
+ 	}
+ 	if (aura_buffer_expect(e, " ")) {
