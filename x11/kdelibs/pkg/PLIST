@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 1998/07/20 00:01:57 tv Exp $
+@comment $NetBSD: PLIST,v 1.10 1998/07/21 21:13:46 tv Exp $
 include/kpixmap.h
 include/kled.h
 include/kcontainer.h
@@ -101,18 +101,25 @@ include/kpreview.h
 include/xview.h
 include/kfilepreview.h
 lib/libkdecore.a
+lib/libkdecore.la
 lib/libkdecore.so.1.0
 lib/libkdeui.a
+lib/libkdeui.la
 lib/libkdeui.so.1.0
 lib/libjscript.a
+lib/libjscript.la
 lib/libjscript.so.0.90
 lib/libkhtmlw.a
+lib/libkhtmlw.la
 lib/libkhtmlw.so.1.0
 lib/libkfile.a
+lib/libkfile.la
 lib/libkfile.so.1.0
 lib/libkfm.a
+lib/libkfm.la
 lib/libkfm.so.1.0
 lib/libmediatool.a
+lib/libmediatool.la
 lib/libmediatool.so.1.0
 share/apps/kde/pics/arrow_up.xbm
 share/apps/kde/pics/arrow_down.xbm
