@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.27 2002/04/09 18:24:51 jwise Exp $
+# $NetBSD: Makefile,v 1.28 2002/04/19 15:54:21 jwise Exp $
 
-DISTNAME=	jakarta-tomcat-3.2.3-src
-PKGNAME=	jakarta-tomcat-3.2.3
-PKGREVISION=	1
+DISTNAME=	jakarta-tomcat-3.2.4-src
+PKGNAME=	jakarta-tomcat-3.2.4
 CATEGORIES=	www
-MASTER_SITES=	http://jakarta.apache.org/builds/jakarta-tomcat/release/v3.2.3/src/
+MASTER_SITES=	http://jakarta.apache.org/builds/jakarta-tomcat/release/v3.2.4/src/
 
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://jakarta.apache.org/
 COMMENT=	the Apache Project's Java Servlet 2.2 and JSP 1.1 server
 
 DEPENDS+=	jakarta-servletapi-[0-9]*:../../www/jakarta-servletapi
+BUILD_DEPENDS+=	jakarta-ant>=1.4.1:../../devel/jakarta-ant
 
 USE_JAVA=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}
@@ -32,6 +32,7 @@ post-patch:
 	${RM} -f ${WRKSRC}/src/etc/workers.properties.orig
 	${RM} -f ${WRKSRC}/src/share/org/apache/tomcat/facade/RequestDispatcherImpl.java.orig
 	${RM} -f ${WRKSRC}/src/share/org/apache/tomcat/task/ApacheConfig.java.orig
+	${RM} -f ${WRKSRC}/src/share/org/apache/tomcat/loader/AdaptiveClassLoader.java.orig
 
 post-build:
 	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
