@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/10/20 01:53:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/11/15 13:55:07 wiz Exp $
 bin/autoconf
 bin/autoheader
 bin/autom4te
@@ -28,6 +28,7 @@ share/autoconf/INSTALL
 share/autoconf/autoconf/autoconf.m4
 share/autoconf/autoconf/autoconf.m4f
 share/autoconf/autoconf/autoheader.m4
+share/autoconf/autoconf/autoscan.m4
 share/autoconf/autoconf/autotest.m4
 share/autoconf/autoconf/autoupdate.m4
 share/autoconf/autoconf/c.m4
@@ -43,12 +44,7 @@ share/autoconf/autoconf/specific.m4
 share/autoconf/autoconf/status.m4
 share/autoconf/autoconf/types.m4
 share/autoconf/autom4te.cfg
-share/autoconf/autoscan/functions
-share/autoconf/autoscan/headers
-share/autoconf/autoscan/identifiers
-share/autoconf/autoscan/libraries
-share/autoconf/autoscan/makevars
-share/autoconf/autoscan/programs
+share/autoconf/autoscan/autoscan.list
 share/autoconf/autotest/autotest.m4
 share/autoconf/autotest/autotest.m4f
 share/autoconf/autotest/general.m4
