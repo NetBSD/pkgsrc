@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3096 2005/02/22 15:36:48 adam Exp $
+$NetBSD: TODO,v 1.3097 2005/02/22 16:13:12 adam Exp $
 
 Suggested new packages
 ======================
@@ -386,8 +386,6 @@ Suggested package updates
 	o devhelp-0.9.3
 	o devtodo-0.1.18
 	o dhisd-5.1 [pkg/28704]
-	o dict-client-1.9.11
-	o dict-server-1.9.11
 	o diction-1.07
 	o diffstat-1.37
 	o dinotrace-9.2a

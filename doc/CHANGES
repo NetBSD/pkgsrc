@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9264 2005/02/22 15:36:48 adam Exp $
+$NetBSD: CHANGES,v 1.9265 2005/02/22 16:13:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1031,3 +1031,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated octave-current to 2.1.65 [adam 2005-02-22]
 	Added gtmess-0.9 [minskim 2005-02-22]
 	Updated codeville to 0.1.10 [adam 2005-02-22]
+	Updated dict-server to 1.9.15 [adam 2005-02-22]
+	Updated dict-client to 1.9.15 [adam 2005-02-22]
