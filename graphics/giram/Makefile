@@ -1,28 +1,25 @@
-# New ports collection makefile for:	giram
-# Version required:    0.0.18
-# Date created:        17 June 1999
-# Whom:                Brandon Fosdick <bfoz@glue.umd.edu>
-#
-# $Id: Makefile,v 1.1.1.1 1999/06/21 09:12:03 sakamoto Exp $
-#
+# $NetBSD: Makefile,v 1.2 1999/06/21 09:17:20 sakamoto Exp $
+# FreeBSD Id: Makefile,v 1.1.1.1 1999/06/19 17:38:24 cpiazza Exp $
 
 DISTNAME=	Giram-0.0.18
 PKGNAME=	giram-0.0.18
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.minet.net/pub/giram/
 
-MAINTAINER=	bfoz@glue.umd.edu
+MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.minet.net/giram/
 
-LIB_DEPENDS=	gtk12.2:${PORTSDIR}/x11-toolkits/gtk12
-RUN_DEPENDS=	povray:${PORTSDIR}/graphics/povray31
+DEPENDS+=	gtk+-1.2.2:../../x11/gtk
+DEPENDS+=	Mesa-3.0:../../graphics/Mesa
+RUN_DEPENDS=	povray:../../graphics/povray
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	GTK_CONFIG="${X11BASE}/bin/gtk12-config" \
+CONFIGURE_ENV=	GTK_CONFIG="${X11BASE}/bin/gtk-config" \
 		CFLAGS="-I${LOCALBASE}/include ${CFLAGS}"
 
 post-install:
 	@${MKDIR} ${PREFIX}/Giram/SampleScenes
 	${INSTALL_DATA} ${WRKSRC}/SampleScenes/* ${PREFIX}/Giram/SampleScenes/
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
