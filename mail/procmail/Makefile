@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/20 11:56:26 frueauf Exp $
+# $NetBSD: Makefile,v 1.5 1998/05/07 09:42:43 tron Exp $
 # FreeBSD Id: Makefile,v 1.24 1997/05/14 14:40:34 ache Exp
 #
 
@@ -10,6 +10,7 @@ MASTER_SITES=	ftp://ftp.informatik.rwth-aachen.de/pub/packages/procmail/
 MAINTAINER=     packages@netbsd.org
 
 INSTALL_TARGET= install-suid install.man
+IS_INTERACTIVE=	yes
 
 MAN1=		procmail.1 formail.1 lockfile.1
 MAN5=		procmailex.5 procmailrc.5 procmailsc.5
