@@ -1,46 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 1998/03/06 02:48:28 mycroft Exp $
-include/com_err.h
-lib/libcom_err.a
-man/man3/com_err.3
-include/zephyr/mit-copyright.h
-include/zephyr/zephyr.h
-include/zephyr/zephyr_err.h
-lib/libzephyr.a
-man/man1/zephyr.1
-sbin/syslogd
-man/man8/syslogd.8
+@comment $NetBSD: PLIST,v 1.4 1998/05/09 10:18:09 frueauf Exp $
 bin/xzwrite
-man/man1/xzwrite.1
-share/XZwrite
-share/xzwrite.bitmap
 bin/zaway
-man/man1/zaway.1
 bin/zctl
-man/man1/zctl.1
 bin/zleave
-man/man1/zleave.1
 bin/zlocate
-man/man1/zlocate.1
-sbin/zmailnotify
-man/man1/zmailnotify.1
 bin/znol
-man/man1/znol.1
-sbin/zpopnotify
-man/man8/zpopnotify.8
-sbin/zshutdown_notify
-man/man8/zshutdown_notify.8
 bin/zstat
-man/man8/zstat.8
 bin/zwgc
-man/man1/zwgc.1
-share/zwgc.desc
-share/zwgc_resources
-etc/zephyr/zephyr.vars
 bin/zwrite
-man/man1/zwrite.1
-sbin/zephyrd
-man/man8/zephyrd.8
-etc/zephyr/default.subscriptions
 etc/zephyr/acl/class-registry.acl
 etc/zephyr/acl/iui-filsrv.acl
 etc/zephyr/acl/iui-hm_ctl.acl
@@ -86,8 +53,47 @@ etc/zephyr/acl/xmt-wg_ctl.acl
 etc/zephyr/acl/xmt-zephyr_admin.acl
 etc/zephyr/acl/xmt-zephyr_ctl.acl
 etc/zephyr/acl/xmt-zmatch_all.acl
-sbin/zhm
+etc/zephyr/default.subscriptions
+etc/zephyr/zephyr.vars
+include/com_err.h
+include/zephyr/mit-copyright.h
+include/zephyr/zephyr.h
+include/zephyr/zephyr_err.h
+lib/libcom_err.a
+lib/libzephyr.a
+man/man1/xzwrite.1
+man/man1/zaway.1
+man/man1/zctl.1
+man/man1/zephyr.1
+man/man1/zleave.1
+man/man1/zlocate.1
+man/man1/zmailnotify.1
+man/man1/znol.1
+man/man1/zwgc.1
+man/man1/zwrite.1
+man/man3/com_err.3
+man/man8/syslogd.8
+man/man8/zephyrd.8
 man/man8/zhm.8
-@dirrm etc/zephyr/acl
+man/man8/zpopnotify.8
+man/man8/zshutdown_notify.8
+man/man8/zstat.8
+sbin/syslogd
+sbin/zephyrd
+sbin/zhm
+sbin/zmailnotify
+sbin/zpopnotify
+sbin/zshutdown_notify
+share/XZwrite
+share/xzwrite.bitmap
+share/zwgc.desc
+share/zwgc_resources
+share/doc/zephyr/INSTALL
+share/doc/zephyr/NOTES
+share/doc/zephyr/OPERATING
+share/doc/zephyr/README
+share/doc/zephyr/USING
 @dirrm etc/zephyr
+@dirrm etc/zephyr/acl
 @dirrm include/zephyr
+@dirrm share/doc/zephyr
