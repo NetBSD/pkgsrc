@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.9 2002/09/02 21:53:23 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.10 2002/09/03 03:14:10 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -581,6 +581,12 @@ ${_BLNK_WRAP_PRE_CACHE}: ${.CURDIR}/../../mk/buildlink2/pre-cache
 		-e "s|@BUILDLINK_X11_DIR@|${BUILDLINK_X11_DIR}|g"	\
 		-e "s|@BUILDLINK_X11PKG_DIR@|${BUILDLINK_X11PKG_DIR}|g"		\
 		${.ALLSRC} > ${.TARGET}.tmp
+.if defined(ZOULARISBASE) && (${ZOULARISBASE} != ${LOCALBASE})
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO}				\
+		"-I${ZOULARISBASE}/*)" >> ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO}				\
+		"	;;" >> ${.TARGET}.tmp
+.endif
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 ${_BLNK_WRAP_POST_CACHE}: ${.CURDIR}/../../mk/buildlink2/post-cache
