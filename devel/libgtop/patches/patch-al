@@ -1,7 +1,16 @@
-$NetBSD: patch-al,v 1.6 2000/02/01 16:43:44 rh Exp $
+$NetBSD: patch-al,v 1.7 2000/05/02 00:27:35 fredb Exp $
 
---- sysdeps/freebsd/prockernel.c.orig	Sat Oct 16 20:31:43 1999
-+++ sysdeps/freebsd/prockernel.c	Sun Jan 30 20:00:03 2000
+--- sysdeps/freebsd/prockernel.c.orig	Fri Jan 21 17:20:51 2000
++++ sysdeps/freebsd/prockernel.c	Mon May  1 18:56:00 2000
+@@ -34,7 +34,7 @@
+ #if (!defined __OpenBSD__) && (!defined __bsdi__)
+ #include <sys/user.h>
+ #endif
+-#if !defined(__bsdi__) && !(defined(__FreeBSD__) && defined(__alpha__))
++#if !defined(__bsdi__) && !(defined(__FreeBSD__) && defined(__alpha__)) && !defined(__NetBSD__)
+ #include <machine/pcb.h>
+ #endif
+ #if defined(__FreeBSD__) && !defined(__alpha__)
 @@ -48,6 +48,11 @@
  #include <osreldate.h>
  #endif
@@ -14,7 +23,36 @@ $NetBSD: patch-al,v 1.6 2000/02/01 16:43:44 rh Exp $
  static const unsigned long _glibtop_sysdeps_proc_kernel_pstats =
  (1L << GLIBTOP_PROC_KERNEL_MIN_FLT) +
  (1L << GLIBTOP_PROC_KERNEL_MAJ_FLT) +
-@@ -167,14 +172,32 @@
+@@ -129,8 +134,15 @@
+ 
+ 	glibtop_suid_enter (server);
+ 
++#ifdef __NetBSD__
++	/* On NetBSD, there is no kvm_uread(), and kvm_read() always reads
++	 * from kernel memory.  */
++
++	if (kvm_read (server->machine.kd,
++#else
+ 	if ((pinfo [0].kp_proc.p_flag & P_INMEM) &&
+ 	    kvm_uread (server->machine.kd, &(pinfo [0]).kp_proc,
++#endif
+ 		       (unsigned long) &u_addr->u_stats,
+ 		       (char *) &pstats, sizeof (pstats)) == sizeof (pstats))
+ 		{
+@@ -149,8 +161,12 @@
+ 			buf->flags |= _glibtop_sysdeps_proc_kernel_pstats;
+ 		}
+ 
++#ifdef __NetBSD__
++	if (kvm_read (server->machine.kd,
++#else
+ 	if ((pinfo [0].kp_proc.p_flag & P_INMEM) &&
+ 	    kvm_uread (server->machine.kd, &(pinfo [0]).kp_proc,
++#endif
+ 		       (unsigned long) &u_addr->u_pcb,
+ 		       (char *) &pcb, sizeof (pcb)) == sizeof (pcb))
+ 		{
+@@ -167,14 +183,32 @@
  			/*xxx FreeBSD/Alpha? */
  #endif
  #else
