@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/03/20 02:42:12 mjl Exp $
+# $NetBSD: Makefile,v 1.19 2001/04/02 14:45:13 rh Exp $
 
 DISTNAME=	gdm-2.2.0
 CATEGORIES=	x11 gnome
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Gnome Display Manager - a re-implementation of the xdm program
 
 DEPENDS+=	gnome-libs-*:../../x11/gnome-libs
+DEPENDS+=	libglade>=0.16:../../devel/libglade
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
