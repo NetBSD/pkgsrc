@@ -1,92 +1,13 @@
-$NetBSD: patch-ae,v 1.1.1.1 2002/03/05 23:24:07 jlam Exp $
+$NetBSD: patch-ae,v 1.2 2002/03/05 23:56:24 jlam Exp $
 
---- docs/conf/httpd-std.conf.orig	Thu Nov  8 23:31:28 2001
-+++ docs/conf/httpd-std.conf	Thu Dec  6 15:02:14 2001
-@@ -53,7 +53,7 @@
- # The accept serialization lock file MUST BE STORED ON A LOCAL DISK.
- #
- <IfModule !mpm_winnt.c>
--#LockFile logs/accept.lock
-+#LockFile /var/log/httpd/accept.lock
- </IfModule>
+--- configure.in.orig	Tue Mar  5 14:37:53 2002
++++ configure.in
+@@ -464,7 +464,7 @@
+     ;;
+ esac
  
- #
-@@ -64,7 +64,7 @@
- #
- <IfModule !mpm_winnt.c>
- <IfModule !perchild.c>
--ScoreBoardFile logs/apache_runtime_status
-+ScoreBoardFile /var/log/httpd/apache_runtime_status
- </IfModule>
- </IfModule>
+-AC_OUTPUT($APACHE_OUTPUT_FILES support/apxs support/apachectl support/dbmmanage support/envvars-std support/log_server_status support/logresolve.pl support/phf_abuse_log.cgi support/split-logfile build/rules.mk,[true],[
++AC_OUTPUT($APACHE_OUTPUT_FILES support/apxs.pl support/apachectl.sh support/dbmmanage.pl support/envvars-std support/log_server_status support/logresolve.pl support/phf_abuse_log.cgi support/split-logfile build/rules.mk,[true],[
+   APACHE_GEN_MAKEFILES
+ ])
  
-@@ -73,7 +73,7 @@
- # PidFile: The file in which the server should record its process
- # identification number when it starts.
- #
--PidFile logs/httpd.pid
-+PidFile /var/log/httpd/httpd.pid
- 
- #
- # Timeout: The number of seconds before receives and sends time out.
-@@ -377,7 +377,7 @@
- # TypesConfig describes where the mime.types file (or equivalent) is
- # to be found.
- #
--TypesConfig conf/mime.types
-+TypesConfig PKG_PREFIX/etc/httpd/mime.types
- 
- #
- # DefaultType is the default MIME type the server will use for a document
-@@ -396,7 +396,7 @@
- # directive tells the module where the hint definitions are located.
- #
- <IfModule mod_mime_magic.c>
--    MIMEMagicFile conf/magic
-+    MIMEMagicFile PKG_PREFIX/etc/httpd/magic
- </IfModule>
- 
- #
-@@ -416,7 +416,7 @@
- # logged here.  If you *do* define an error logfile for a <VirtualHost>
- # container, that host's errors will be logged there and not here.
- #
--ErrorLog logs/error_log
-+ErrorLog /var/log/httpd/error_log
- 
- #
- # LogLevel: Control the number of messages logged to the error_log.
-@@ -441,20 +441,20 @@
- # define per-<VirtualHost> access logfiles, transactions will be
- # logged therein and *not* in this file.
- #
--CustomLog logs/access_log common
-+CustomLog /var/log/httpd/access_log common
- 
- #
- # If you would like to have agent and referer logfiles, uncomment the
- # following directives.
- #
--#CustomLog logs/referer_log referer
--#CustomLog logs/agent_log agent
-+#CustomLog /var/log/httpd/referer_log referer
-+#CustomLog /var/log/httpd/agent_log agent
- 
- #
- # If you prefer a single logfile with access, agent, and referer information
- # (Combined Logfile Format) you can use the following directive.
- #
--#CustomLog logs/access_log combined
-+#CustomLog /var/log/httpd/access_log combined
- 
- #
- # Optionally add a line containing the server version and virtual host
-@@ -997,6 +997,6 @@
- #    ServerAdmin webmaster@dummy-host.example.com
- #    DocumentRoot /www/docs/dummy-host.example.com
- #    ServerName dummy-host.example.com
--#    ErrorLog logs/dummy-host.example.com-error_log
--#    CustomLog logs/dummy-host.example.com-access_log common
-+#    ErrorLog /var/log/httpd/dummy-host.example.com-error_log
-+#    CustomLog /var/log/httpd/dummy-host.example.com-access_log common
- #</VirtualHost>
