@@ -3,7 +3,7 @@
 # Date created:			11 Feb. 1995
 # Whom:				torstenb
 #
-# $NetBSD: Makefile,v 1.4 1998/02/24 15:42:34 tron Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/14 18:35:59 tron Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/09/26 08:23:14 torstenb Exp
 #
 
@@ -35,6 +35,7 @@ MAN1=		zsh.1 zshbuiltins.1 zshcompctl.1 zshexpn.1 zshmisc.1 \
 #LDFLAGS+=-static
 
 post-install:
+	${CP} /etc/shells /etc/shells.bak
 	(${GREP} -v ${PREFIX}/bin/zsh /etc/shells.bak; ${ECHO} ${PREFIX}/bin/zsh) >/etc/shells
 	${RM} /etc/shells.bak
 	@if [ ! -f ${PREFIX}/info/dir ]; then \
