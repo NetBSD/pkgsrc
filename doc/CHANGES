@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4341 2004/01/04 11:59:49 recht Exp $
+$NetBSD: CHANGES,v 1.4342 2004/01/04 16:23:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -34,7 +34,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kopete to 0.7.4 [jmmv 2004-01-03]
 	Updated cvs to 1.11.11 [wiz 2004-01-03]
 	Updated silc-server to 0.9.16 [salo 2004-01-03]
-	Updated tiff to 3.6.1 [reed 2004-01-3]
+	Updated tiff to 3.6.1 [reed 2004-01-03]
 	Added oidentd-2.0.7 [tron 2004-01-03]
 	Updated xpkgwedge to 1.9 [jlam 2004-01-03]
 	Updated pkg_install to 20040104 [hubertf 2004-01-04]
