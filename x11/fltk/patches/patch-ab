@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/05/06 07:23:28 sakamoto Exp $
+$NetBSD: patch-ab,v 1.2 1999/06/10 01:15:47 nathanw Exp $
 
---- src/Makefile.orig	Tue Mar 30 02:39:28 1999
-+++ src/Makefile	Mon Apr 26 13:49:20 1999
+--- src/Makefile.orig	Mon Apr 26 08:36:17 1999
++++ src/Makefile	Sun Jun  6 17:31:02 1999
 @@ -146,30 +146,25 @@
  
  include ../makeinclude
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/05/06 07:23:28 sakamoto Exp $
 -	@$(LIBCOMMAND) $@ $(OBJECTS)
 -	@$(RANLIB) $@
 -
--$(DSONAME): $(OBJECTS)
+-libfltk.so.1 libfltk.sl.1: $(OBJECTS)
 -	@echo $(DSOCOMMAND) $@ ...
 -	@$(DSOCOMMAND) $@ $(OBJECTS)
 -
@@ -46,7 +46,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/05/06 07:23:28 sakamoto Exp $
  	@touch makedepend
  
  depend:
-@@ -178,36 +173,19 @@
+@@ -178,34 +173,17 @@
  
  ################################################################
  
@@ -88,6 +88,4 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/05/06 07:23:28 sakamoto Exp $
 +	  done)
  	@-ln -s FL $(includedir)/Fl
  
- #
- # End of "$Id: patch-ab,v 1.1.1.1 1999/05/06 07:23:28 sakamoto Exp $".
  #
