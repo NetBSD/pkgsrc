@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/05/01 06:02:23 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/05/01 21:53:33 jlam Exp $
 
 PKGNAME=		freetype-lib-${FT_VERS}
-
-DEPENDS+=		gettext-0.10.*:../../devel/gettext
 
 CONFIGURE_ARGS+=	--without-x
 
