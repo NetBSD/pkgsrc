@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/12/30 08:19:05 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2004/12/31 20:58:44 wiz Exp $
 #
 
 DISTNAME=	lilypond-2.4.3
@@ -11,6 +11,8 @@ COMMENT=	GNU Music Typesetter
 
 DEPENDS+=	ec-fonts-mftraced-[0-9]*:../../fonts/ec-fonts-mftraced
 BUILD_DEPENDS+=	bison>=1.875nb1:../../devel/bison
+
+BUILDLINK_DEPENDS.mftrace+=	mftrace>=1.1.0
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
