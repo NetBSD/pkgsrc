@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5165 2004/03/08 23:45:12 ben Exp $
+$NetBSD: CHANGES,v 1.5166 2004/03/08 23:59:18 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1263,3 +1263,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated oss to 3.9.8d [wiz 2004-03-08]
 	Removed TreeText [wiz 2004-03-08]
 	Added ppmd-9.1 [ben 2004-03-08]
+	Updated tcl-otcl to 1.8 [minskim 2004-03-08]
+	Updated tcl-tclcl to 1.15 [minskim 2004-03-08]
+	Updated ns to 2.27 [minskim 2004-03-08]
+	Updated nam to 1.10 [minskim 2004-03-08]
