@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.119 2004/07/07 16:23:10 schmonz Exp $
+# $NetBSD: Makefile,v 1.120 2004/07/17 00:33:15 schmonz Exp $
 
 DISTNAME=		mutt-1.4.2.1i
 PKGNAME=		${DISTNAME:C/i$//}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.mutt.org/mutt/ \
 			ftp://ftp.stealth.net/pub/mirrors/ftp.mutt.org/pub/mutt/ \
@@ -13,9 +13,9 @@ MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.mutt.org/
 COMMENT=		Text-based MIME mail client with PGP support
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
 BUILD_USES_MSGFMT=	yes
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/${DISTNAME:C/i$$//}
 USE_BUILDLINK3=		yes
@@ -86,6 +86,9 @@ post-install:
 	@if [ -f ${PREFIX}/bin/mutt_dotlock ]; then \
 		${ECHO} "bin/mutt_dotlock" >> ${PLIST_SRC}; \
 	fi
+.if (${PKG_INSTALLATION_TYPE} == "pkgviews")
+	${MV} ${PREFIX}/man/man5/mutt-mbox.5 ${PREFIX}/man/man5/mbox.5
+.endif
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
