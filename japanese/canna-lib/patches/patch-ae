@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.2 2000/11/30 16:00:07 itojun Exp $
+$NetBSD: patch-ae,v 1.3 2000/12/01 03:15:34 itojun Exp $
 
 PATCH_SITES+=	http://apps.v6.linux.or.jp/pub/Linux/IPv6-2/canna/
 PATCHFILES+=	Canna35b2-v6-20000602.diff.gz
@@ -98,8 +98,8 @@ diff -ru server/Imakefile server/Imakefile
  
              IRSRCS = $(SRCS) $(HEADER)
 diff -ru server/connection.c server/connection.c
---- server/connection.c.orig	Wed Nov 27 16:26:10 1996
-+++ server/connection.c	Fri Dec  1 00:55:14 2000
+--- server/connection.c	Wed Nov 27 16:26:10 1996
++++ server/connection.c	Fri Dec  1 11:52:10 2000
 @@ -133,2 +133,63 @@
  #ifdef USE_INET_SOCKET  /* ＩＮＥＴドメインの作成 */
 +#ifdef INET6
@@ -195,3 +195,40 @@ diff -ru server/connection.c server/connection.c
      return 0; /* 作成に失敗 */
 +#endif
    }
+@@ -609,6 +691,11 @@
+ {
++#ifdef INET6
++    struct sockaddr_storage from;
++#else
+     struct sockaddr_in	from;
+     struct hostent	*hp;
+-    char		buf[MAXDATA], *inet_ntoa();
+-    int 		fromlen = sizeof( struct sockaddr_in ) ;
++    char		*inet_ntoa();
++#endif
++    char		buf[MAXDATA];
++    int 		fromlen = sizeof(from);
+ 
+@@ -622,2 +709,15 @@
+ 
++#ifdef INET6
++#ifdef AF_UNIX
++    if (from.ss_family != AF_UNIX)
++#else
++    if (from.ss_family != AF_LOCAL)
++#endif
++    {
++	if (getnameinfo((struct sockaddr *)&from, fromlen, buf, sizeof(buf),
++	    NULL, 0, 0) != 0) {
++	    strcpy(buf, "invalid");
++	}
++    }
++#else
+     if( from.sin_family == AF_INET ) {
+@@ -630,3 +730,5 @@
+ 	    strncpy( buf, inet_ntoa( from.sin_addr ), MAXDATA-1 ) ;
+-    } else {
++    }
++#endif
++    else {
+         client->hostaddr = IR_UNIX_ADDRESS;
