@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8361 2004/12/18 08:43:48 adrianp Exp $
+$NetBSD: CHANGES,v 1.8362 2004/12/18 16:59:25 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5945,3 +5945,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated openmotif to 2.1.30nb3 [tron 2004-12-18]
 	Updated cgoban-java to 2.6.8 [salo 2004-12-17]
 	Updated apache to 2.0.52nb5 [adrianp 2004-12-18]
+	Updated pkgconfig to 0.15.0nb2 [grant 2004-12-18]
