@@ -1,23 +1,23 @@
-# $NetBSD: Makefile,v 1.3 1998/08/20 15:16:52 tsarna Exp $
+# $NetBSD: Makefile,v 1.4 1999/05/24 20:39:40 tv Exp $
 #
 
-DISTNAME=	doscmd-19960502-2
-PKGNAME=	doscmd-19960502.2
-CATEGORIES=	emulators
-MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/arch/i386/doscmd/
+DISTNAME=		doscmd-19960502-2
+PKGNAME=		doscmd-19960502.2
+CATEGORIES=		emulators
+MASTER_SITES=		ftp://ftp.netbsd.org/pub/NetBSD/arch/i386/doscmd/
 
-MAINTAINER=	tsarna@netbsd.org
+MAINTAINER=		tsarna@netbsd.org
 
-ONLY_FOR_ARCHS=	i386
+ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
-WRKSRC=		${WRKDIR}/doscmd
+WRKSRC=			${WRKDIR}/doscmd
 
-MAKE_ENV+=      X11BASE=${X11BASE}
+MAKE_ENV=		X11BASE=${X11BASE}
 
 .include "../../mk/bsd.prefs.mk"
 
 .ifdef MANZ
-MANCOMPRESSED=	1
+MANCOMPRESSED=
 .endif
 
 do-configure:

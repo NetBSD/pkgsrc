@@ -1,22 +1,22 @@
-# $NetBSD: Makefile,v 1.12 1999/04/05 17:23:01 mycroft Exp $
+# $NetBSD: Makefile,v 1.13 1999/05/24 20:39:42 tv Exp $
 #
 
-DISTNAME=	battalion
-PKGNAME=	battalion-1.4
-WRKSRC=		${WRKDIR}/battalionSource
-CATEGORIES=	games x11
-MASTER_SITES=	http://www.evl.uic.edu/aej/
-DISTFILES=	battalionSource1.4.tar.Z battalionSUN4.tar.gz
+DISTNAME=		battalion
+PKGNAME=		battalion-1.4
+WRKSRC=			${WRKDIR}/battalionSource
+CATEGORIES=		games x11
+MASTER_SITES=		http://www.evl.uic.edu/aej/
+DISTFILES=		battalionSource1.4.tar.Z battalionSUN4.tar.gz
 
-MAINTAINER=	root@garbled.net
-HOMEPAGE=	http://www.evl.uic.edu/aej/AndyBattalion.html
+MAINTAINER=		root@garbled.net
+HOMEPAGE=		http://www.evl.uic.edu/aej/AndyBattalion.html
 
-DEPENDS+=	Mesa-3.0:../../graphics/Mesa
+DEPENDS=		Mesa-3.0:../../graphics/Mesa
 
-NOT_FOR_ARCHS=	alpha	# relies on Mesa (gcc)
+NOT_FOR_PLATFORM=	*-*-alpha	# relies on Mesa (gcc)
 
-EXTRACT_ONLY=	battalionSource1.4.tar.Z
-USE_X11BASE=	yes
+EXTRACT_ONLY=		battalionSource1.4.tar.Z
+USE_X11BASE=		yes
 
 do-install:
 	${INSTALL} -c -s -o root -g games -m 2755 ${WRKSRC}/battalion ${PREFIX}/bin

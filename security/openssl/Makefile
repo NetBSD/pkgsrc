@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/05/23 21:15:20 tv Exp $
+# $NetBSD: Makefile,v 1.3 1999/05/24 20:39:48 tv Exp $
 #
 
 DISTNAME=		openssl-0.9.2b
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.openssl.org/source/
 PATCH_SITES=		${MASTER_SITES}
 PATCHFILES=		openssl-0.9.2b-rsaoaep.patch
 
-MAINTAINER=		packages@NetBSD.ORG
+MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.openssl.org/
 
 CONFLICTS=		SSLeay-* ssleay-*
@@ -18,8 +18,7 @@ USE_PERL5=		yes
 RESTRICTED=		"Crypto; export-controlled"
 MIRROR_DISTFILE=	no
 # matches what's in `Configure' (except sparc64)
-ONLY_FOR_ARCHS=		alpha arm32 i386 m68k mips mipse[bl] ns32k powerpc \
-			sparc vax
+ONLY_FOR_PLATFORM=	NetBSD-*-{alpha,arm32,i386,m68k,mips,mipse[bl],ns32k,powerpc,sparc,vax}
 
 CONFIGURE_ARGS=		-fPIC -DPIC ${LDFLAGS}
 #CONFIGURE_ENV=		PREFIX=${PREFIX}

@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.8 1998/11/13 01:16:35 frueauf Exp $
+# $NetBSD: Makefile,v 1.9 1999/05/24 20:39:43 tv Exp $
 # FreeBSD Id: Makefile,v 1.15 1997/09/01 12:28:30 tg Exp
 #
 
-DISTNAME=	elk-3.0
-PKGNAME=	elk-3.0.2
-CATEGORIES=	lang
-MASTER_SITES=	ftp://ftp.uni-bremen.de/pub/programming/languages/scheme/elk/
+DISTNAME=		elk-3.0
+PKGNAME=		elk-3.0.2
+CATEGORIES=		lang
+MASTER_SITES=		ftp://ftp.uni-bremen.de/pub/programming/languages/scheme/elk/
 
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www-rn.informatik.uni-bremen.de/software/elk/
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www-rn.informatik.uni-bremen.de/software/elk/
 
-NOT_FOR_ARCHS=	alpha mips	#elf loading problems, LP64
+NOT_FOR_PLATFORM=	*-*-{alpha,mips}	#elf loading problems, LP64
 
-ALL_TARGET=	default
+ALL_TARGET=		default
 
 .include "../../mk/bsd.pkg.mk"

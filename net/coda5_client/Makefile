@@ -1,27 +1,27 @@
-# $NetBSD: Makefile,v 1.13 1999/04/28 20:22:09 rvb Exp $
+# $NetBSD: Makefile,v 1.14 1999/05/24 20:39:46 tv Exp $
 #
 
-DISTNAME=	coda-5.2.2
-PKGNAME=	coda-client-5.2.2
-CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.coda.cs.cmu.edu/pub/coda/src/
-EXTRACT_SUFX=	.tgz
+DISTNAME=		coda-5.2.2
+PKGNAME=		coda-client-5.2.2
+CATEGORIES=		net
+MASTER_SITES=		ftp://ftp.coda.cs.cmu.edu/pub/coda/src/
+EXTRACT_SUFX=		.tgz
 
-MAINTAINER=	rvb@cs.cmu.edu
-HOMEPAGE=	http://www.coda.cs.cmu.edu/
+MAINTAINER=		rvb@cs.cmu.edu
+HOMEPAGE=		http://www.coda.cs.cmu.edu/
 
-DEPENDS+=	gdbm-1.7.3:../../databases/gdbm
-DEPENDS+=	readline-2.2:../../devel/readline
+DEPENDS=		gdbm-1.7.3:../../databases/gdbm \
+			readline-2.2:../../devel/readline
 
-ONLY_FOR_ARCHS=	arm32 i386 ns32k
+ONLY_FOR_PLATFORM=	NetBSD-*-{arm32,i386,ns32k}
 
-#LICENSE=	GPL
+#LICENSE=		GPL
 
-ALL_TARGET=	coda
-INSTALL_TARGET=	client-install
+ALL_TARGET=		coda
+INSTALL_TARGET=		client-install
 
-USE_PERL5=	yes
-GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USE_PERL5=		yes
+GNU_CONFIGURE=		yes
+USE_GMAKE=		yes
 
 .include "../../mk/bsd.pkg.mk"

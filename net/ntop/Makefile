@@ -1,28 +1,28 @@
-# $NetBSD: Makefile,v 1.7 1998/11/04 00:06:32 bad Exp $
+# $NetBSD: Makefile,v 1.8 1999/05/24 20:39:47 tv Exp $
 
-DISTNAME=	ntop-1.0
-CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.unipi.it/pub/local/ntop/source/
-EXTRACT_SUFX=	.src.tar.gz
+DISTNAME=		ntop-1.0
+CATEGORIES=		net
+MASTER_SITES=		ftp://ftp.unipi.it/pub/local/ntop/source/
+EXTRACT_SUFX=		.src.tar.gz
 
-MAINTAINER=	kim@tac.nyc.ny.us
+MAINTAINER=		kim@tac.nyc.ny.us
 
-BUILD_DEPENDS+=	autoconf:../../devel/autoconf
-DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
+BUILD_DEPENDS=		autoconf:../../devel/autoconf
+DEPENDS=		ncurses-1.9.9g:../../devel/ncurses
 
-HOMEPAGE=	http://www-serra.unipi.it/~ntop/
+HOMEPAGE=		http://www-serra.unipi.it/~ntop/
 
-NOT_FOR_ARCHS=	alpha mips # elf problems WRT libcurses
+NOT_FOR_PLATFORM=	*-*-{alpha,mips}	# elf problems WRT libcurses
 
-HAS_CONFIGURE=	yes
-GNU_CONFIGURE=	yes
+HAS_CONFIGURE=		yes
+GNU_CONFIGURE=		yes
 
-CFLAGS+=	-I${PREFIX}/include
-LDFLAGS+=	-L${PREFIX}/lib
+CFLAGS+=		-I${PREFIX}/include
+LDFLAGS+=		-L${PREFIX}/lib
 
-CONFIGURE_ENV+=	CPPFLAGS=-I${PREFIX}/include
-CONFIGURE_ENV+=	CFLAGS=-I${PREFIX}/include
-CONFIGURE_ENV+=	LDFLAGS=-L${PREFIX}/lib
+CONFIGURE_ENV+=		CPPFLAGS=-I${PREFIX}/include
+CONFIGURE_ENV+=		CFLAGS=-I${PREFIX}/include
+CONFIGURE_ENV+=		LDFLAGS=-L${PREFIX}/lib
 
 pre-configure:
 	(cd ${WRKSRC}; autoconf)

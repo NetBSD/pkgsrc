@@ -1,40 +1,36 @@
-# $NetBSD: Makefile,v 1.2 1999/05/20 20:09:50 tron Exp $
+# $NetBSD: Makefile,v 1.3 1999/05/24 20:39:36 tv Exp $
 #
 
-DISTNAME=	mysql-3.22.22
-PKGNAME=	${DISTNAME:S/-/-server-/}
-CATEGORIES=	databases
-MASTER_SITES=	ftp://ftp.mysql.com/pub/mysql/Downloads/MySQL-3.22/ \
-		ftp://ftp.netcasting.net/pub/mysql/Downloads/MySQL-3.22/
+DISTNAME=		mysql-3.22.22
+PKGNAME=		${DISTNAME:S/-/-server-/}
+CATEGORIES=		databases
+MASTER_SITES=		ftp://ftp.mysql.com/pub/mysql/Downloads/MySQL-3.22/ \
+			ftp://ftp.netcasting.net/pub/mysql/Downloads/MySQL-3.22/
 
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.mysql.com/
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.mysql.com/
 
-DEPENDS=	${DISTNAME:S/-/-client-/}:../../databases/mysql-client
+DEPENDS=		${DISTNAME:S/-/-client-/}:../../databases/mysql-client
 
-NO_CDROM=	"Restrictive license."
+NO_CDROM=		"Restrictive license."
 
 .include "../../mk/bsd.prefs.mk"
 
-MYSQL_DATADIR?=	/var/mysql
+MYSQL_DATADIR?=		/var/mysql
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--localstatedir=${MYSQL_DATADIR} \
-		--with-named-z-libs=z --with-named-curses=curses \
-		--without-perl --without-debug --without-bench \
-		--without-docs --with-low-memory
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--localstatedir=${MYSQL_DATADIR} \
+			--with-named-z-libs=z --with-named-curses=curses \
+			--without-perl --without-debug --without-bench \
+			--without-docs --with-low-memory
 
-CFLAGS+=	-Dunix
-
-# not yet... works on some platforms but not all
-#CC=		${LOCALBASE}/bin/ptlgcc
-#CXX=		${LOCALBASE}/bin/ptlg++
+CFLAGS+=		-Dunix
 
 # platforms on which included mit-pthreads is usable
-ONLY_FOR_ARCHS=	alpha arm32 i386 sparc
+ONLY_FOR_PLATFORM=	NetBSD-*-{alpha,arm32,i386,sparc} SunOS-*-sparc
 
-USE_GMAKE=	yes
-USE_PERL5=	yes
+USE_GMAKE=
+USE_PERL5=
 
 post-extract:
 	@cd ${WRKSRC} && for dir in dbug heap isam merge mysys strings; do \

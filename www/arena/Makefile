@@ -1,32 +1,32 @@
-# $NetBSD: Makefile,v 1.12 1999/03/20 00:48:30 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 1999/05/24 20:39:49 tv Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/05/04 20:22:31 jseger Exp
 #
 
-DISTNAME=	arena-0.3.61
-WRKSRC=		${WRKDIR}/Arena-0.3.61
-CATEGORIES=	www
-MASTER_SITES=	ftp://ftp.yggdrasil.com/pub/dist/web/arena/
+DISTNAME=		arena-0.3.61
+WRKSRC=			${WRKDIR}/Arena-0.3.61
+CATEGORIES=		www
+MASTER_SITES=		ftp://ftp.yggdrasil.com/pub/dist/web/arena/
 
-MAINTAINER=	tv@netbsd.org
-HOMEPAGE=	http://www.yggdrasil.com/Products/Arena/
+MAINTAINER=		tv@netbsd.org
+HOMEPAGE=		http://www.yggdrasil.com/Products/Arena/
 
-DEPENDS=	libwww-5.1m1:../../www/libwww \
-		jpeg-6b:../../graphics/jpeg \
-		png-1.0.3:../../graphics/png \
-		xpm-3.4k:../../graphics/xpm
+DEPENDS=		libwww-5.1m1:../../www/libwww \
+			jpeg-6b:../../graphics/jpeg \
+			png-1.0.3:../../graphics/png \
+			xpm-3.4k:../../graphics/xpm
 
-NOT_FOR_ARCHS=	alpha	#Runs, displays black screen
+NOT_FOR_PLATFORM=	*-*-alpha	#Runs, displays black screen
 
-LDFLAGS+=	-L${LOCALBASE}/lib -L${X11BASE}/lib
-USE_GMAKE=	yes
-MAKEFILE=	makefile
-GNU_CONFIGURE=	yes
-USE_X11BASE=	yes
+LDFLAGS+=		-L${LOCALBASE}/lib -L${X11BASE}/lib
+USE_GMAKE=		yes
+MAKEFILE=		makefile
+GNU_CONFIGURE=		yes
+USE_X11BASE=		yes
 CONFIGURE_ARGS+=	--without-debug
 CONFIGURE_ARGS+=	--with-libwww-include=${LOCALBASE}/include/w3c-libwww
 CONFIGURE_ARGS+=	--with-libwww-libdir=${LOCALBASE}/lib
 CONFIGURE_ARGS+=	--with-libwww-config-h-dir=${LOCALBASE}/include/w3c-libwww
-CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include -I${WRKDIR}"
+CONFIGURE_ENV+=		CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include -I${WRKDIR}"
 
 # Arena requires libwww's "config.h" header - it is installed as "wwwconf.h",
 # so make a symlink in ${WRKDIR} and add it to the -I list.

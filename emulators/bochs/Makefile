@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/01/30 23:18:46 agc Exp $
+# $NetBSD: Makefile,v 1.5 1999/05/24 20:39:39 tv Exp $
 
 DISTNAME=		bochs-980707a
 CATEGORIES=		emulators
@@ -7,7 +7,7 @@ MASTER_SITES=		ftp://ftp.std.com/pub/bochs/
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://world.std.com/~bochs/
 
-NOT_FOR_ARCHS=		alpha	#runs, SEGV.
+NOT_FOR_PLATFORM=	*-*-alpha	#runs, SEGV.
 
 LICENSE=		shareware
 WRKSRC=			${WRKDIR}/bochs-980707

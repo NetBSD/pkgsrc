@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/02/20 22:48:32 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 1999/05/24 20:39:44 tv Exp $
 
 DISTNAME=		jdk1.1.6
 PKGNAME=		jdk-1.1.6
@@ -14,7 +14,7 @@ RESTRICTED=		'No redistribution of the Java(tm) Development Kit'
 NO_PACKAGE=		${RESTRICTED}
 MIRROR_DISTFILE=	no
 
-ONLY_FOR_ARCHS=		i386
+ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
