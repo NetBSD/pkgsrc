@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/06/16 01:32:51 simonb Exp $
+bin/watch
+man/cat1/watch.0
+man/man1/watch.1
