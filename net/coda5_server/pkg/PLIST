@@ -1,5 +1,4 @@
-@owner bin
-@group bin
+@comment $NetBSD: PLIST,v 1.2 1998/10/02 14:19:21 agc Exp $
 bin/filcon
 bin/norton
 bin/norton-reinit
@@ -42,6 +41,4 @@ sbin/vice-setup-scm
 sbin/vice-setup-srvdir
 sbin/vice-setup-user
 sbin/volutil
-@owner root
-@group wheel
 etc/rc.vice
