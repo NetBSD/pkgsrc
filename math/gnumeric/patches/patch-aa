@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2000/04/16 15:11:22 rh Exp $
+$NetBSD: patch-aa,v 1.6 2000/05/02 18:48:42 danw Exp $
 
 --- configure.orig	Thu Apr 13 03:43:02 2000
 +++ configure	Sun Apr 16 08:06:05 2000
@@ -20,16 +20,3 @@ $NetBSD: patch-aa,v 1.5 2000/04/16 15:11:22 rh Exp $
  	
  else
    echo "$ac_t""no" 1>&6
-@@ -6310,10 +6310,12 @@
-     top_srcdir="$ac_dots$ac_given_srcdir" ;;
-   esac
- 
-+if false; then
-   case "$ac_given_INSTALL" in
-   [/$]*) INSTALL="$ac_given_INSTALL" ;;
-   *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
-   esac
-+fi
- 
-   echo creating "$ac_file"
-   rm -f "$ac_file"

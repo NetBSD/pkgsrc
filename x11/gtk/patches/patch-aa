@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.16 2000/03/12 22:30:07 tron Exp $
+$NetBSD: patch-aa,v 1.17 2000/05/02 18:48:44 danw Exp $
 
 --- configure.orig	Wed Feb 16 12:28:06 2000
 +++ configure	Sun Mar 12 22:45:47 2000
@@ -38,16 +38,3 @@ $NetBSD: patch-aa,v 1.16 2000/03/12 22:30:07 tron Exp $
  
  
  echo $ac_n "checking for extra flags to get ANSI library prototypes""... $ac_c" 1>&6
-@@ -6902,10 +6904,12 @@
-     top_srcdir="$ac_dots$ac_given_srcdir" ;;
-   esac
- 
-+if false; then
-   case "$ac_given_INSTALL" in
-   [/$]*) INSTALL="$ac_given_INSTALL" ;;
-   *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
-   esac
-+fi
- 
-   echo creating "$ac_file"
-   rm -f "$ac_file"
