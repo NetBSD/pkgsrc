@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2001/12/20 11:24:07 tron Exp $
+$NetBSD: patch-ab,v 1.6 2004/05/30 18:05:54 minskim Exp $
 
 --- Makefile.orig	Wed Feb 18 15:43:00 1998
 +++ Makefile	Thu Dec 20 12:22:50 2001
@@ -22,7 +22,7 @@ $NetBSD: patch-ab,v 1.5 2001/12/20 11:24:07 tron Exp $
 -	${INSTALL} -C -o ${BINOWN} -g ${BINGRP} -m 444 ${.CURDIR}/scsi.h \
 -	    ${DESTDIR}/usr/include
 +	${INSTALL} -c -o ${BINOWN} -g ${BINGRP} -m 444 ${.CURDIR}/scsi.h \
-+	    ${LOCALBASE}/include
++	    ${PREFIX}/include
  
  
  .include <bsd.lib.mk>
