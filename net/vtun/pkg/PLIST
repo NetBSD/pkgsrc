@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/02/07 01:37:34 hubertf Exp $
+sbin/vtund
+etc/vtund.conf.example
+@exec if [ ! -f ${PREFIX}/etc/vtund.conf ]; then echo "Installing example /vtund.conf in ${PREFIX}/etc ..." ; /usr/bin/install -c -o root -g wheel -m 0600 %D/etc/vtund.conf.example ${PREFIX}/etc/vtund.conf ; fi
+man/man8/vtund.8
+man/man8/vtun.8
