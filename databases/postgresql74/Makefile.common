@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2005/02/05 14:31:20 jdolecek Exp $
+# $NetBSD: Makefile.common,v 1.20 2005/02/05 14:50:52 jdolecek Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
