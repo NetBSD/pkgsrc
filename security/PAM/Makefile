@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/10/18 12:40:11 cjep Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/08 00:07:26 jlam Exp $
 #
 
 DISTNAME=	Linux-${PKGNAME}
@@ -13,7 +13,9 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.kernel.org/pub/linux/libs/pam/
 COMMENT=	Pluggable Authentication Modules (PAM)
 
-USE_BUILDLINK2=		yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 USE_GMAKE=		yes
 USE_DB185=		yes
@@ -30,10 +32,13 @@ CONFIGURE_ENV+=		ac_cv_prog_HAVE_SGML2LATEX=no
 CONFIGURE_ENV+=		ac_cv_prog_HAVE_SGML2PS=no
 CONFIGURE_ENV+=		ac_cv_prog_HAVE_PS2PDF=no
 
+PAM_MODULEDIR=		${VIEWBASE}/lib/security
+MAKE_ENV+=		PAM_MODULEDIR="${PAM_MODULEDIR}"
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${USE_LIBCRACK} == YES
-.include "../../security/libcrack/buildlink2.mk"
+.  include "../../security/libcrack/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libcrack
 PLIST_SUBST+=		USE_LIBCRACK=
 .else
@@ -63,7 +68,7 @@ PLIST_SUBST+=		PAM_LIMITS=
 PLIST_SUBST+=		PAM_LIMITS="@comment "
 .endif
 
-CONF_FILES=		${EGDIR}/pam.conf ${PKG_SYSCONFBASE}/pam.conf
+CONF_FILES=		${EGDIR}/pam.conf ${PKG_SYSCONFBASEDIR}/pam.conf
 .for FILE in ${CFILES}
 CONF_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 .endfor
@@ -86,5 +91,5 @@ post-install:
 .endif
 	${INSTALL_DATA_DIR} ${DOCDIR}
 
-.include "../../databases/db/buildlink2.mk"
+.include "../../databases/db/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
