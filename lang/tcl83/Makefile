@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/09 15:29:41 tv Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/10 11:58:29 grant Exp $
 #
 
 DISTNAME=		tcl8.3.4
@@ -28,8 +28,6 @@ USE_LIBTOOL=		yes
 
 INSTALL_TARGET=		install
 
-PLIST_SUBST+=		SHLIB_SUFX="${SHLIB_SUFX}"
-
 # Initially install the man pages into ${WRKDIR}/man, as we need a staged
 # install to avoid overwriting existing manpages in ${PREFIX}/man.
 #
@@ -39,12 +37,6 @@ CONFIGURE_ARGS+=	--mandir=${WRKDIR}/man
 CONFIGURE_ENV+=		TCL_PACKAGE_PATH="${VIEWBASE}/lib/tcl"
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin"
-SHLIB_SUFX=		dylib
-.else
-SHLIB_SUFX=		la
-.endif
 
 # NetBSD-1.5.x-m68k platforms apparently have a compiler optimization bug
 # tickled by the Tcl code that manifests in code generation problems.
