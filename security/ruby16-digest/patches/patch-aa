@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/03/18 05:25:32 taca Exp $
+
+--- defs.h.orig	2002-01-16 18:22:41.000000000 +0900
++++ defs.h
+@@ -19,7 +19,9 @@
+ #if defined(HAVE_INTTYPES_H)
+ # include <inttypes.h>
+ #else
++# if !defined(__sgi)
+   typedef unsigned char uint8_t;
++# endif
+   typedef unsigned int  uint32_t;
+ # if SIZEOF_LONG == 8
+   typedef unsigned long uint64_t;
+@@ -27,6 +29,8 @@
+   typedef unsigned long long uint64_t;
+ # elif defined(_MSC_VER)
+   typedef unsigned _int64 uint64_t;
++# elif defined(__sgi)
++  typedef unsigned long long int uint64_t;
+ # else
+ #  define NO_UINT64_T
+ # endif
