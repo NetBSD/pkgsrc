@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/08/05 00:23:14 hubertf Exp $
+$NetBSD: distinfo,v 1.2 2001/10/21 10:50:00 wiz Exp $
 
 SHA1 (dfm-0.99.9.tar.gz) = 491f7ed1f8f82a0272143fa79b1b7ca705d34664
 Size (dfm-0.99.9.tar.gz) = 389444 bytes
+SHA1 (patch-aa) = e30096229341008235a70d84620b877dac8d461e
