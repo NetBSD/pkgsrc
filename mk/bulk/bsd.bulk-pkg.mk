@@ -1,4 +1,4 @@
-#	$Id: bsd.bulk-pkg.mk,v 1.11 2000/08/24 15:48:12 dmcmahill Exp $
+#	$Id: bsd.bulk-pkg.mk,v 1.12 2000/08/25 12:43:28 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -85,14 +85,16 @@ bulk-check-uptodate:
 		for dep in $$deps ; do \
 			${SHCOMMENT} "check against the binary pkg that pkg_add would pick, too:" ; \
 			${SHCOMMENT} "(Only one should be returned here, really...)" ; \
-			for pkg in `${PKG_ADMIN} lsbest ${PACKAGES}/All/$$dep` ; do \
-				if [ "$$pkg" -nt "${REF}" ]; then \
-					${ECHO_MSG} >&2 ">> Required binary package $$dep (`basename $$pkg`) is newer, rebuilding... " ; \
-					uptodate=0 ; \
-				else \
-					${ECHO_MSG} >&2 ">> Required binary package $$dep (`basename $$pkg`) is usable. " ; \
-				fi ; \
-			done ; \
+			pkg=`${PKG_ADMIN} lsbest "${PACKAGES}/All/$$dep"` ;  \
+			if [ -z $$pkg ]; then \
+				${ECHO_MSG} >&2 ">> Required binary package $$dep does not exist, rebuilding... " ; \
+				uptodate=0 ; \
+			elif [ "$$pkg" -nt "${REF}" ]; then \
+				${ECHO_MSG} >&2 ">> Required binary package $$dep (`basename $$pkg`) is newer, rebuilding... " ; \
+				uptodate=0 ; \
+			else \
+				${ECHO_MSG} >&2 ">> Required binary package $$dep (`basename $$pkg`) is usable. " ; \
+			fi ; \
 		done ; \
 	fi ; \
 	${ECHO_MSG} $$uptodate
