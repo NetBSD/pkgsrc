@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/19 14:47:22 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/11/14 14:47:55 agc Exp $
 
 DISTNAME=	lua-4.0
 CATEGORIES=	lang
@@ -27,7 +27,6 @@ post-install:
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html *.gif  \
 		${PREFIX}/share/doc/html/lua
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/lua
-	(cd ${WRKSRC}/test/; ${GTAR} cf - . ) | 	\
-	(cd ${PREFIX}/share/examples/lua/; ${GTAR} xf -)
+	cd ${WRKSRC}/test && ${PAX} -rw . ${PREFIX}/share/examples/lua
 
 .include "../../mk/bsd.pkg.mk"

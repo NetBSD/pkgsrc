@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/05/03 21:06:12 jtb Exp $
+# $NetBSD: Makefile,v 1.16 2001/11/14 14:47:54 agc Exp $
 
 DISTNAME=	GMT3.4
 PKGNAME=	GMT-3.4
@@ -60,7 +60,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/../share/* ${PREFIX}/share/gmt
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gmt
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${WRKSRC}/examples/
-	(cd ${WRKSRC}/examples; ${GTAR} cf - . ) |			\
-	(cd ${PREFIX}/share/examples/gmt/; ${GTAR} xf - )
+	cd ${WRKSRC}/examples && ${PAX} -rw . ${PREFIX}/share/examples/gmt
 
 .include "../../mk/bsd.pkg.mk"

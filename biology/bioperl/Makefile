@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/04/05 21:48:40 jtb Exp $
+# $NetBSD: Makefile,v 1.5 2001/11/14 14:47:53 agc Exp $
 #
 
 DISTNAME=		bioperl-0.7.0
@@ -17,7 +17,6 @@ do-configure:
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bioperl
-	cd ${WRKSRC}/examples; ${GTAR} cf - . \
-		| (cd ${PREFIX}/share/examples/bioperl; ${GTAR} xf -)
+	cd ${WRKSRC}/examples && ${PAX} -rw . ${PREFIX}/share/examples/bioperl
 
 .include "../../mk/bsd.pkg.mk"

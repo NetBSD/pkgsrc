@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/06/11 22:52:10 jtb Exp $
+# $NetBSD: Makefile,v 1.4 2001/11/14 14:47:55 agc Exp $
 
 DISTNAME=		mercury-compiler-0.10.1
 PKGNAME=		mercury-0.10.1
@@ -33,7 +33,6 @@ post-install:
 	${FIND} ${WRKSRC} -type f -name ".cvsignore" | ${XARGS} ${RM} -f
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mercury
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${WRKSRC}/samples
-	(cd ${WRKSRC}/samples; ${GTAR} cpf - . ) |			\
-	(cd ${PREFIX}/share/examples/mercury; ${GTAR} xpf -)
+	cd ${WRKSRC}/samples && ${PAX} -rw . ${PREFIX}/share/examples/mercury
 
 .include "../../mk/bsd.pkg.mk"
