@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2004/04/18 12:08:42 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.25 2004/04/20 14:21:19 uebayasi Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -40,7 +40,7 @@ DOCDIR=		share/doc/w3m
 #
 
 BUILD_DEFS+=	W3M_USE_M17N
-#BUILD_DEFS+=	W3M_USE_UNICODE
+BUILD_DEFS+=	W3M_USE_UNICODE
 BUILD_DEFS+=	W3M_USE_LYNX_KEY
 
 .if ${W3M_USE_M17N} == YES
@@ -49,12 +49,11 @@ CONFIGURE_ARGS+=	--enable-m17n
 CONFIGURE_ARGS+=	--disable-m17n
 .endif
 
-# XXX "M17N without Unicode" is broken now.  Need to be fixed.
-#.if ${W3M_USE_UNICODE} == YES
-#CONFIGURE_ARGS+=	--enable-unicode
-#.else
-#CONFIGURE_ARGS+=	--disable-unicode
-#.endif
+.if ${W3M_USE_UNICODE} == YES
+CONFIGURE_ARGS+=	--enable-unicode
+.else
+CONFIGURE_ARGS+=	--disable-unicode
+.endif
 
 .if ${W3M_USE_LYNX_KEY} == YES
 CONFIGURE_ARGS+=	--enable-keymap=lynx
