@@ -1,0 +1,6 @@
+Avidemux is a graphical tool to edit video.  It can open AVI, MPEG, Nuppelvideo
+and BMPs.  Most common codecs are supported (M-JPEG, MPEG, DivX, Xvid, huffyuv,
+WMA, etc.) thanks to libavcodec.  Video can be edited, cut, appended, filtered
+(resize/crop/denoise), and re-encoded to either AVI (DivX/Xvid) or MPEG 1/2. 
+
+Note that this package does not support DivX.
