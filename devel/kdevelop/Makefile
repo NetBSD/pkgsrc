@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/12/14 17:20:33 wennmach Exp $
+# $NetBSD: Makefile,v 1.10 1999/12/14 20:03:42 tron Exp $
 
 DISTNAME=	kdevelop-1.0
 CATEGORIES=	devel kde
@@ -13,7 +13,6 @@ DEPENDS+=	gdbm-1.*:../../databases/gdbm
 DEPENDS+=	glimpse-*:../../textproc/glimpse
 DEPENDS+=	kdegraphics-1.*:../../graphics/kdegraphics
 DEPENDS+=	libungif-*:../../graphics/libungif
-DEPENDS+=	kdbg-1.*:../../devel/kdbg
 
 USE_PERL5=	yes
 USE_X11BASE=	yes
