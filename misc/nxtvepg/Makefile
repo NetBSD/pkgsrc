@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/12/15 11:28:54 magick Exp $
+# $NetBSD: Makefile,v 1.21 2003/01/04 18:25:10 cjep Exp $
 
 DISTNAME=	nxtvepg-2.4.2
 CATEGORIES=	misc
@@ -14,6 +14,7 @@ ONLY_FOR_PLATFORM=      NetBSD-1.4[Y-Z]-* NetBSD-1.4Z[A-Z]-* \
 USE_PERL5=	yes
 USE_GMAKE=	yes
 USE_X11=	yes
+USE_X11BASE=	yes
 USE_BUILDLINK2= yes
 pre-configure:
 	cd ${WRKSRC};							\
