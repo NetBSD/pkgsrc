@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/11/14 08:42:28 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2004/11/14 08:44:26 jlam Exp $
 #
 
 DISTNAME=		syncdir-1.0
@@ -18,12 +18,13 @@ USE_LIBTOOL=		# defined
 INSTALLATION_DIRS=	lib
 
 do-build:
-	cd ${WRKSRC};							\
-	${LIBTOOL} --mode=compile ${CC} ${CFLAGS} -c syncdir.c;	\
-	${LIBTOOL} --mode=link ${CC} ${LDFLAGS} -version-info 1:0:0 -rpath ${PREFIX}/lib -o libsyncdir.la syncdir.lo
+	cd ${WRKSRC} && ${LIBTOOL} --mode=compile ${CC} ${CFLAGS} -c syncdir.c
+	cd ${WRKSRC} && ${LIBTOOL} --mode=link ${CC} ${LDFLAGS}		\
+		-o libsyncdir.la syncdir.lo				\
+		-version-info 1:0:0 -rpath ${PREFIX}/lib
 
 do-install:
-	cd ${WRKSRC};							\
-	${LIBTOOL} --mode=install ${INSTALL_LIB} -c libsyncdir.la ${PREFIX}/lib/libsyncdir.la
+	cd ${WRKSRC} && ${LIBTOOL} --mode=install ${INSTALL_LIB}	\
+		-c libsyncdir.la ${PREFIX}/lib/libsyncdir.la
 
 .include "../../mk/bsd.pkg.mk"
