@@ -1,15 +1,17 @@
-$NetBSD: patch-ad,v 1.1.1.1 2000/11/09 16:43:42 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2001/07/17 15:31:25 wiz Exp $
 
---- port.h.orig	Mon Jan 24 16:13:54 2000
-+++ port.h
-@@ -164,6 +164,10 @@
- #define TITLE "Snes9X: Linux"
+--- netplay.cpp.orig	Wed Feb 28 22:12:22 2001
++++ netplay.cpp
+@@ -75,8 +75,12 @@
+ 
+ #ifdef USE_THREADS
+ #include <pthread.h>
++#ifdef __NetBSD__
++#include <sys/sched.h>
++#else
+ #include <sched.h>
+ #include <semaphore.h>
++#endif
  #endif
  
-+#ifdef __NetBSD__
-+#define TITLE "Snes9X: NetBSD"
-+#endif
-+
- #ifndef TITLE
- #define TITLE "Snes9x"
- #endif
+ #include "snes9x.h"
