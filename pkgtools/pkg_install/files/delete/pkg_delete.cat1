@@ -72,15 +72,17 @@ OOPPTTIIOONNSS
              packages, the prefix will be set automatically to the installed
              location by pkg_add(1).
 
-     --RR      Like the --rr option, this does a recursive delete.  The --RR option
-             deletes the given package and any packages required by it, unless
-             some other package still needs them.  This can be used to delete
-             a package and all the packages it needs.
+     --RR      This option triggers a recursive delete of the given package and
+             any packages it depends on, unless some other package still needs
+             a dependent package.  This --RR option can be used to clean up by
+             deleting a package and all its then-unneeded dependent packages.
 
      --rr      ppkkgg__ddeelleettee first builds a list of all packages that require
              (directly and indirectly) the one being deleted.  It then deletes
              these packages using ppkkgg__ddeelleettee with the given options before
-             deleting the user specified package.
+             deleting the user specified package.  This --rr option can be used
+             to recursively delete a package and all of the packages which
+             depend on that package.
 
      --VV      Print version number and exit.
 

@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.8 2004/01/14 23:55:29 jlam Exp $ */
+/* $NetBSD: lib.h,v 1.9 2004/02/07 10:37:53 grant Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -215,10 +215,12 @@ typedef struct package_t {
 	plist_t *tail;		/* tail of list */
 }       package_t;
 
+#define SYMLINK_HEADER	"Symlink:"
 #define CHECKSUM_HEADER	"MD5:"
 
 enum {
 	ChecksumHeaderLen = 4,	/* strlen(CHECKSUM_HEADER) */
+	SymlinkHeaderLen = 8,	/* strlen(SYMLINK_HEADER) */
 	ChecksumLen = 16,
 	LegibleChecksumLen = 33
 };
