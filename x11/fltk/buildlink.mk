@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/06/05 22:15:34 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/06/09 15:13:07 wiz Exp $
 #
 # This Makefile fragment is included by packages that use FLTK.
 #
@@ -43,7 +43,7 @@ link-fltk-headers:
 			${RM} -f $${dest};				\
 			${LN} -sf $${inc} $${dest};			\
 		fi;							\
-        done
+	done
 
 # This target links the libraries into ${BUILDLINK_LIBDIR}, which should
 # be searched first by the linker.

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/05/26 07:23:34 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/06/09 15:12:04 wiz Exp $
 #
 # This Makefile fragment is included by packages that use libcups.
 #
@@ -42,7 +42,7 @@ link-cups-headers:
 			${RM} -f $${dest};				\
 			${LN} -sf $${inc} $${dest};			\
 		fi;							\
-        done
+	done
 
 # This target links the libraries into ${BUILDLINK_LIBDIR}, which should
 # be searched first by the linker.
