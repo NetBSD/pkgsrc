@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.8 2000/06/14 16:33:49 he Exp $
+$NetBSD: patch-aa,v 1.9 2000/12/11 05:49:49 jlam Exp $
 
---- Makefile.orig	Sat Jun  3 21:26:12 2000
-+++ Makefile	Wed Jun 14 17:43:30 2000
+--- Makefile.orig	Sat Jun  3 15:26:12 2000
++++ Makefile
 @@ -5,16 +5,18 @@
  #compiler; get gcc if you are still using it). 
  COMPILER=gcc
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.8 2000/06/14 16:33:49 he Exp $
  #If you do have FreeType, libjpeg and/or Xpm fully installed, uncomment a
  #variation of this and comment out the line above. See also LIBS below.
 -#CFLAGS=-O  -DHAVE_XPM -DHAVE_JPEG -DHAVE_LIBTTF
-+CFLAGS=-O  -DHAVE_XPM -DHAVE_JPEG -DHAVE_LIBTTF
++CFLAGS+=-O  -DHAVE_XPM -DHAVE_JPEG -DHAVE_LIBTTF
  
  #If you don't have FreeType and/or Xpm fully installed, uncomment this
  #(default).
