@@ -1,18 +1,18 @@
-$NetBSD: patch-aa,v 1.2 1999/07/06 07:57:22 jlam Exp $
+$NetBSD: patch-aa,v 1.3 1999/08/29 15:29:41 jlam Exp $
 
---- Makefile.in.orig	Thu Jan 21 11:11:06 1999
-+++ Makefile.in	Tue Jul  6 01:46:36 1999
+--- Makefile.in.orig	Fri Jul  9 01:24:13 1999
++++ Makefile.in	Sun Aug 29 09:59:59 1999
 @@ -31,18 +31,21 @@
  #  SUCH DAMAGE.
  # 
  
 -CDKLIB		= libcdk.a
 +CDKLIB		= libcdk.la
- VERSION		= 4.9.8
+ VERSION		= 4.9.9
 -CFLAGS		= -Iinclude @CFLAGS@ @DEFS@
 -CC		= @CC@
 +SHLIB_MAJOR	= 4
-+SHLIB_MINOR	= 9
++SHLIB_MINOR	= 10
 +CFLAGS		= -Iinclude @CFLAGS@ @DEFS@ @CPPFLAGS@
 +CC		= ${LIBTOOL} --mode=compile @CC@
  LDFLAGS		= @LDFLAGS@
@@ -34,7 +34,7 @@ $NetBSD: patch-aa,v 1.2 1999/07/06 07:57:22 jlam Exp $
  cdklib $(CDKLIB): $(CDKOBJS)
 -	$(AR) -cr $(CDKLIB) $(CDKOBJS)
 -	$(RANLIB) $(CDKLIB)
-+	${LIBTOOL} --mode=link ${CC} -o ${CDKLIB} ${CDKOBJS:.o=.lo} \
++	${LIBTOOL} --mode=link @CC@ -o ${CDKLIB} ${CDKOBJS:.o=.lo} \
 +		-rpath ${LIB_DIR} -version-info ${SHLIB_MAJOR}:${SHLIB_MINOR}
  
  #
@@ -60,7 +60,7 @@ $NetBSD: patch-aa,v 1.2 1999/07/06 07:57:22 jlam Exp $
  	fi
 -	@echo "	$(INSTALL) $(CDKLIB) $(LIB_DIR)"
 -	@$(INSTALL) $(CDKLIB) $(LIB_DIR)
-+	@echo "	${LIBTOOL} --mode=install $(INSTALL) $(CDKLIB) $(LIB_DIR)"
++	@echo " ${LIBTOOL} --mode=install $(INSTALL) $(CDKLIB) $(LIB_DIR)"
 +	@${LIBTOOL} --mode=install $(INSTALL) $(CDKLIB) $(LIB_DIR)
  
  #
