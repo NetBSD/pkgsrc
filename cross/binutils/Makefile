@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/04/01 14:07:53 agc Exp $
+# $NetBSD: Makefile,v 1.9 1999/04/14 21:39:01 tron Exp $
 #
 # GNU binutils configured to hold `as many targets as the cross system is
 # capable of using'.  Configures and builds everything except gas, which
@@ -7,7 +7,7 @@
 DISTNAME=		binutils-2.9.1
 PKGNAME=		cross-binutils-2.9.1.0
 CATEGORIES=		cross lang
-MASTER_SITES=		${MASTER_SITE_GNU:=/binutils/}
+MASTER_SITES=		${MASTER_SITE_GNU:=binutils/}
 
 MAINTAINER=		tv@netbsd.org
 HOMEPAGE=		http://www.gnu.org/
