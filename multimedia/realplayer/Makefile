@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/18 09:11:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/15 13:28:39 mrg Exp $
 
 PKGNAME=		realplayer-8.0.1
 PKGREVISION=		1
@@ -12,7 +12,10 @@ EXTRACT_SUFX=		.bin
 DISTNAME=		rp8_linux20_libc6_i386_cs2
 EXTRA_DIST=		rv9_libc6_i386_cs2.tgz
 PLIST_SUBST+=		RV9=""
-.elif ${MACHINE_ARCH} == "sparc"
+.elif ${MACHINE_ARCH} == "powerpc"
+DISTNAME=		rp8_linux_powerpc_cs1
+PLIST_SUBST+=		RV9="@comment "
+.elif ${MACHINE_ARCH} == "sparc" || ${MACHINE_ARCH} == "sparc64"
 DISTNAME=		rp8_solaris27_sparc_cs2
 PLIST_SUBST+=		RV9="@comment "
 .else
@@ -25,9 +28,9 @@ HOMEPAGE=		http://www.real.com/products/player/
 COMMENT=		RealAudio and RealVideo player
 
 .if ${OPSYS} == "NetBSD"
-.  if ${MACHINE_ARCH} == "i386"
+.  if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "powerpc"
 DEPENDS+=		suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
-.  elif ${MACHINE_ARCH} == "sparc"
+.  elif ${MACHINE_ARCH} == "sparc" || ${MACHINE_ARCH} == "sparc64"
 .    if !exists(/emul/svr4/usr/lib/ld.so)
 PKG_FAIL_REASON= "${PKGNAME} requires Solaris libraries - see compat_svr4(8)"
 .    endif
@@ -40,7 +43,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-sparc SunOS-*-sparc
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-sparc64 NetBSD-*-sparc NetBSD-*-powerpc SunOS-*-sparc
 
 CONFLICTS=		realplayer-codecs<8nb2
 

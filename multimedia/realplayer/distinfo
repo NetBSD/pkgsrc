@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/02/17 19:24:42 wiz Exp $
+$NetBSD: distinfo,v 1.3 2004/07/15 13:28:39 mrg Exp $
 
 SHA1 (rp8_linux20_libc6_i386_cs2.bin) = b0a6b503560d92844ec92b18f723aeff357e6c11
 Size (rp8_linux20_libc6_i386_cs2.bin) = 5890331 bytes
@@ -6,6 +6,8 @@ SHA1 (rv9_libc6_i386_cs2.tgz) = ed524485fbbb08712d0a471a352d59d69b8c380e
 Size (rv9_libc6_i386_cs2.tgz) = 814305 bytes
 SHA1 (rp8_solaris27_sparc_cs2.bin) = a0df9924a39eeadadb3fe73220a42e4e9cb3d901
 Size (rp8_solaris27_sparc_cs2.bin) = 9579245 bytes
+SHA1 (rp8_linux_powerpc_cs1.bin) = 965588e877a9e9ef3285423286aaf4ed6bf89656
+Size (rp8_linux_powerpc_cs1.bin) = 8758422 bytes
 SHA1 (patch-aa) = cede957cc13166c30e6ab89476e0190f187f48b6
 SHA1 (patch-ab) = 22e2eb6260bec208e64db89308f0492baa307adf
 SHA1 (patch-ac) = 2a5d80db6c7deb2d68b1470f09a824bc093648e4
