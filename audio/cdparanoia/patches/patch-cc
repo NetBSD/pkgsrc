@@ -1,0 +1,15 @@
+$NetBSD: patch-cc,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
+
+--- interface/utils.h.orig	Mon Aug 16 07:13:44 1999
++++ interface/utils.h	Sat Jan 15 19:51:10 2000
+@@ -1,4 +1,10 @@
++#ifdef __linux__
+ #include <endian.h>
++#endif
++#ifdef __NetBSD__
++#include <sys/endian.h>
++#include <err.h>	/* XXX */
++#endif
+ #include <stdio.h>
+ #include <errno.h>
+ #include <string.h>
