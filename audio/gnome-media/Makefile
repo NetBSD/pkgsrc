@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2002/07/17 13:22:49 rh Exp $
+# $NetBSD: Makefile,v 1.14 2002/07/26 09:17:05 rh Exp $
 
 DISTNAME=	gnome-media-1.2.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/gnome-media/}
 
