@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7458 2004/10/17 22:09:48 recht Exp $
+$NetBSD: CHANGES,v 1.7459 2004/10/18 02:15:23 ben Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4748,3 +4748,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pkglint to 3.93 [wiz 2004-10-16]
 	Updated fam to 2.7.0nb4 [jmmv 2004-10-17]
 	Updated cyrus-imapd22 to 2.2.8nb4 [recht 2004-10-17]
+	Updated wmi to 10 [ben 2004-10-17]
