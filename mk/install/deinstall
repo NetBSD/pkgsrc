@@ -1,6 +1,6 @@
 # start of deinstall
 #
-# $NetBSD: deinstall,v 1.25 2003/11/23 07:14:43 jlam Exp $
+# $NetBSD: deinstall,v 1.26 2004/04/07 14:25:41 tv Exp $
 
 eval set -- ${PKG_USERS}
 for userset; do
@@ -194,25 +194,25 @@ If you won't be using ${PKGNAME} any longer, you may want to remove
 EOF
 		if [ -n "${ALL_USERS}" ]; then
 			${ECHO} ""
-			${ECHO} -n "  * the following users"
+			allusersmsg="  * the following users"
 			sep=":   "
 			eval set -- ${ALL_USERS}
 			for user; do
-				${ECHO} -n "${sep}${user}"
+				allusersmsg="${allusersmsg}${sep}${user}"
 				sep=", "
 			done
-			${ECHO} ""
+			${ECHO} "${allusersmsg}"
 		fi
 		if [ -n "${ALL_GROUPS}" ]; then
 			${ECHO} ""
-			${ECHO} -n "  * the following groups"
+			allgroupsmsg="  * the following groups"
 			sep=":  "
 			eval set -- ${ALL_GROUPS}
 			for group; do
-				${ECHO} -n "${sep}${group}"
+				allgroupsmsg="${allgroupsmsg}${sep}${group}"
 				sep=", "
 			done
-			${ECHO} ""
+			${ECHO} "${allgroupsmsg}"
 		fi
 		if [ -n "${modified_files}" ]; then
 			${CAT} << EOF
