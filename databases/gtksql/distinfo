@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:06:59 agc Exp $
+
+MD5 (gtksql-0.3.tar.gz) = 8f7a0a565e761fb649240cb46d6dd9cb
+SHA1 (patch-aa) = 6e440bb7d5f04d154e4c59ad56416062233a0865
