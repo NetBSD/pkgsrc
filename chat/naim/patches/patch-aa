@@ -1,11 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/01/25 15:53:56 tv Exp $
+$NetBSD: patch-aa,v 1.2 2002/02/06 14:40:38 tv Exp $
 
---- firetalk/lclint.h.orig	Thu Jan 24 12:34:58 2002
-+++ firetalk/lclint.h	Thu Jan 24 12:35:09 2002
-@@ -24,4 +24,6 @@
- #define _NETDB_H
- #endif
- 
+--- firetalk/firetalk.h.orig	Fri Feb  1 12:00:18 2002
++++ firetalk/firetalk.h	Fri Feb  1 12:00:27 2002
+@@ -22,4 +22,5 @@
+ #include <sys/time.h>
+ #include <unistd.h>
+ #include <netinet/in.h>
 +#include <inttypes.h>
-+
- #endif
+ 
