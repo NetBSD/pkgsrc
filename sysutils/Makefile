@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1998/07/09 20:52:05 tron Exp $
+# $NetBSD: Makefile,v 1.17 1998/07/20 10:27:41 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/09/30 06:14:59 asami Exp
 #
 
@@ -18,6 +18,7 @@
     SUBDIR += mkisofs
     SUBDIR += mtools
 #    SUBDIR += pib
+    SUBDIR += psmisc
     SUBDIR += rtty
 #    SUBDIR += setquota
 #    SUBDIR += skill
