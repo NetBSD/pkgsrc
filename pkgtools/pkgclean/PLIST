@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/22 20:02:41 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/18 22:32:01 tv Exp $
 bin/pkgclean
-man/cat1/pkgclean.0
 man/man1/pkgclean.1
