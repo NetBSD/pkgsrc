@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/02/15 12:03:59 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2004/02/15 12:33:48 grant Exp $
 
 DISTNAME=		audiofile-0.2.5
 PKGNAME=		lib${DISTNAME}
@@ -16,9 +16,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
+LIBTOOL_OVERRIDE+=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	audiofile.pc.in
-
-LDFLAGS.SunOS+=		-Wl,${RPATH_FLAG}/usr/ucblib -L/usr/ucblib
 
 DOCDIR=			${PREFIX}/share/doc/libaudiofile
 
