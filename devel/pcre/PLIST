@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:25:48 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/30 10:20:02 martti Exp $
 bin/pcre-config
 bin/pcregrep
+bin/pcretest
 include/pcre.h
 include/pcreposix.h
 lib/libpcre.a
@@ -14,5 +15,6 @@ lib/libpcreposix.so
 lib/libpcreposix.so.0
 lib/libpcreposix.so.0.0
 man/man1/pcregrep.1
+man/man1/pcretest.1
 man/man3/pcre.3
 man/man3/pcreposix.3
