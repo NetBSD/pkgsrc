@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.948 2002/03/15 07:16:23 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.949 2002/03/15 10:05:56 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -492,7 +492,7 @@ PLIST_SUBST+=	OPSYS=${OPSYS}						\
 		LOWER_OPSYS=${LOWER_OPSYS}				\
 		LOWER_OS_VERSION=${LOWER_OS_VERSION}			\
 		PKGBASE=${PKGBASE}					\
-		PKGNAME=${PKGNAME}					\
+		PKGNAME=${PKGNAME_NOREV}				\
 		PKGLOCALEDIR=${PKGLOCALEDIR}				\
 		PKGVERSION=${PKGVERSION:C/nb[0-9]*$//}			\
 		LOCALBASE=${LOCALBASE}					\
@@ -823,12 +823,15 @@ MASTER_SITE_LOCAL?= \
 DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
 .if defined(PKGREVISION) && ${PKGREVISION} != "" && ${PKGREVISION} != "0"
 .  if defined(PKGNAME)
+PKGNAME_NOREV:=		${PKGNAME}
 PKGNAME:=		${PKGNAME}nb${PKGREVISION}
 .  else
 PKGNAME?=		${DISTNAME}nb${PKGREVISION}
+PKGNAME_NOREV=		${DISTNAME}
 .  endif
 .else
 PKGNAME?=		${DISTNAME}
+PKGNAME_NOREV=		${PKGNAME}
 .endif
 SVR4_PKGNAME?=		${PKGNAME}
 
