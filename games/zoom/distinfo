@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/08/16 14:28:34 dillo Exp $
+$NetBSD: distinfo,v 1.2 2004/03/29 00:54:22 dillo Exp $
 
 SHA1 (zoom-1.0.1.tar.gz) = 8cfed626d025150ae49e2ce7d0b5afd0516dd176
 Size (zoom-1.0.1.tar.gz) = 719460 bytes
 SHA1 (zoom-1.0.1-1.0.1a.patch) = f664c5c5cba73db0c9e0d607e9561abdb231b5af
 Size (zoom-1.0.1-1.0.1a.patch) = 11860 bytes
 SHA1 (patch-aa) = b09e11f30ca1b4d2dc7dbeae114952b17590ed72
+SHA1 (patch-ab) = 06b7a96b4827ce941645a7ba20124b499b59725d
