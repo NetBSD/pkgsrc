@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/02/26 05:50:23 epg Exp $
+$NetBSD: patch-aa,v 1.2 2004/03/22 20:07:48 epg Exp $
 
 --- rules.mk.in.orig	Mon Aug 11 16:37:09 2003
 +++ rules.mk.in
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/02/26 05:50:23 epg Exp $
  RUBY       = @RUBY@
  
 -CFLAGS     = @CFLAGS@ -Wall -c -I$(NEOTONIC_ROOT) @CPPFLAGS@
-+CFLAGS     = @CFLAGS@ -Wall -I$(NEOTONIC_ROOT) @CPPFLAGS@
++CFLAGS     = @CFLAGS@ -I$(NEOTONIC_ROOT) @CPPFLAGS@
  CPPFLAGS   = -I$(NEOTONIC_ROOT) @CPPFLAGS@
  OUTPUT_OPTION = -o $@
  LD         = $(CC) -o
