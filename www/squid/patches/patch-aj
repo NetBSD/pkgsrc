@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.4 2000/11/02 10:41:45 jdolecek Exp $
+$NetBSD: patch-aj,v 1.5 2001/12/12 17:06:20 taca Exp $
 
---- src/access_log.c.orig	Thu Nov  2 10:00:04 2000
-+++ src/access_log.c	Thu Nov  2 11:06:28 2000
-@@ -122,6 +122,8 @@ log_quote(const char *header)
+--- src/access_log.c.orig	Fri Jan 12 09:51:44 2001
++++ src/access_log.c
+@@ -120,6 +120,8 @@
  {
      int c;
      int i;
@@ -11,7 +11,7 @@ $NetBSD: patch-aj,v 1.4 2000/11/02 10:41:45 jdolecek Exp $
      char *buf;
      char *buf_cursor;
      if (header == NULL) {
-@@ -131,13 +133,41 @@ log_quote(const char *header)
+@@ -129,13 +131,41 @@
      }
      buf = xcalloc((strlen(header) * 3) + 1, 1);
      buf_cursor = buf;
@@ -54,7 +54,7 @@ $NetBSD: patch-aj,v 1.4 2000/11/02 10:41:45 jdolecek Exp $
  #if !OLD_LOG_MIME
  	if (c == '\r') {
  	    *buf_cursor++ = '\\';
-@@ -145,6 +175,7 @@ log_quote(const char *header)
+@@ -143,6 +173,7 @@
  	} else if (c == '\n') {
  	    *buf_cursor++ = '\\';
  	    *buf_cursor++ = 'n';
