@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/23 17:06:37 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/12/16 00:16:43 hubertf Exp $
 bin/png2html
 share/doc/png2html/COPYING
 share/doc/png2html/CHANGES
 share/doc/png2html/README
+@dirrm share/doc/png2html
