@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2005/01/13 19:51:19 jmmv Exp $
+
+--- engines/crux/src/crux-rc-style.c.orig	2004-12-01 13:55:55.000000000 +0100
++++ engines/crux/src/crux-rc-style.c
+@@ -20,9 +20,10 @@ GtkRcStyleClass *rc_parent_class;
+ static void
+ crux_rc_style_init (CruxRcStyle *style)
+ {
++  gchar *path;
+   style->theme_data = NULL;
+   
+-  gchar *path = g_malloc (strlen (DATADIR) + 15);
++  path = g_malloc (strlen (DATADIR) + 15);
+   sprintf (path, "pixmap_path \"%s\"", DATADIR);
+ 
+   gtk_rc_parse_string (path);
