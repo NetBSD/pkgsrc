@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1998/11/13 01:41:16 frueauf Exp $
+# $NetBSD: Makefile,v 1.17 1999/03/22 09:38:26 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1996/12/07 23:43:56 asami Exp
 #
 
@@ -10,14 +10,7 @@ MASTER_SITES=   ftp://ftp.ecf.toronto.edu/pub/plan9/matty/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.psrg.cs.usyd.edu.au/~matty/9term/index.html
 
-.include "../../mk/bsd.prefs.mk"
-
 # needs library and private header, but not during runtime
-.ifdef WRKOBJDIR
-BUILD_ROOT=	${WRKOBJDIR}
-.else
-BUILD_ROOT=	${PKGSRCDIR}
-.endif
 BUILD_DEPENDS=	${BUILD_ROOT}/plan9/sam/${WRKDIR:T}/libframe/libframe.a:../../plan9/sam
 
 NOT_FOR_ARCHS=	alpha	#LP64 Problems

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/11/13 01:12:57 frueauf Exp $
+# $NetBSD: Makefile,v 1.4 1999/03/22 09:38:23 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/02/11 08:48:26 tg Exp
 #
 
@@ -13,14 +13,6 @@ PATCHFILES=	urt-3.1b-3.1b1.patch
 PATCH_DIST_STRIP=-p1
 
 MAINTAINER=	packages@netbsd.org
-
-.include "../../mk/bsd.prefs.mk"
-
-.ifdef WRKOBJDIR
-BUILD_ROOT=	${WRKOBJDIR}
-.else
-BUILD_ROOT=	${PKGSRCDIR}
-.endif
 
 DEPENDS+=	tiff-3.4:../../graphics/tiff
 BUILD_DEPENDS+=	${BUILD_ROOT}/graphics/netpbm/${WRKDIR:T}/netpbm:../../graphics/netpbm:build
