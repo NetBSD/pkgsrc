@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2004/03/21 07:06:58 snj Exp $
+# $NetBSD: Makefile,v 1.15 2004/03/28 20:16:09 mycroft Exp $
 #
 
-DISTNAME=	faad2-1.1
+DISTNAME=	faad2-2.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=faac/}
 
@@ -23,11 +23,13 @@ AUTOMAKE_REQD=		1.4
 AUTOCONF_REQD=		2.50
 GNU_CONFIGURE=		YES
 
+CONFIGURE_ARGS+=	--with-mp4v2
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE}
 
 pre-configure:
-	for dir in . common/mp4v2 ; do					\
+	${CP} ${WRKSRC}/common/faad/getopt.* ${WRKSRC}/frontend
+	for dir in . ; do					\
 		cd ${WRKSRC}/$$dir;					\
 		${ACLOCAL} -I .;					\
 		${AUTOHEADER};						\
@@ -36,17 +38,5 @@ pre-configure:
 		${AUTOCONF};						\
 	done
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-post-configure:
-	${CP} ${WRKSRC}/common/faad/getopt.* ${WRKSRC}/frontend
-	${CP} ${WRKSRC}/frontend/Makefile ${WRKSRC}/frontend/Makefile.orig
-	${SED} -e "s|^faad_SOURCES.*|& getopt.c|" \
-	       -e "s|^faad_OBJECTS.*|& getopt.$$(OBJEXT)|" \
-	${WRKSRC}/frontend/Makefile.orig > ${WRKSRC}/frontend/Makefile
-.endif
-
-.include "../../audio/libsndfile/buildlink3.mk"
 .include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
