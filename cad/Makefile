@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2000/11/19 17:06:28 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.31 2000/11/27 23:32:11 jtb Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/11/17 10:53:52 tg Exp
 #
 
@@ -9,6 +9,7 @@
     SUBDIR += eagle
     SUBDIR += fastcap
     SUBDIR += fasthenry
+    SUBDIR += felt
     SUBDIR += geda
     SUBDIR += geda-docs
     SUBDIR += geda-symbols
