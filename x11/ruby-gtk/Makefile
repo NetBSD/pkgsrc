@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/10/23 00:05:18 tron Exp $
+# $NetBSD: Makefile,v 1.5 1999/11/29 08:20:01 rh Exp $
 # FreeBSD Id: ports/x11-toolkits/ruby-gtk/Makefile,v 1.3 1999/08/31 02:59:33 peter Exp
 
 DISTNAME=	ruby-gtk-0.21
@@ -16,7 +16,7 @@ HOMEPAGE=	http://www.ueda.info.waseda.ac.jp/~igarashi/ruby/gtk.html
 
 DEPENDS+=	ruby-1.4.2:../../lang/ruby
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
-DEPENDS+=	imlib-1.9.4:../../graphics/imlib
+DEPENDS+=	imlib-*:../../graphics/imlib
 
 USE_X11=	YES
 WRKSRC=		${WRKDIR}/gtk
