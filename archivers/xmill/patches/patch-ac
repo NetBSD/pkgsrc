@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/02/17 09:20:26 grant Exp $
+
+--- src/Main.cpp.orig	Sat Feb 15 03:17:07 2003
++++ src/Main.cpp
+@@ -599,7 +599,7 @@ void Compress(char *srcfile,char *destfi
+       return;
+    }
+ 
+-   if(output.CreateFile((no_output==0) ? destfile : "")==0)
++   if(output.CreateFile((no_output==0) ? destfile : (char *)"")==0)
+    {
+       Error("Could not create output file '");
+       ErrorCont(destfile);
+@@ -816,7 +816,7 @@ void Uncompress(char *sourcefile,char *d
+ 
+    globallabeldict.Init();
+ 
+-   if(output.CreateFile((no_output==0) ? destfile : "")==0)
++   if(output.CreateFile((no_output==0) ? destfile : (char *)"")==0)
+    {
+       Error("Could not create output file '");
+       ErrorCont(destfile);
