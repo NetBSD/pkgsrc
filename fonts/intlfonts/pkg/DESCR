@@ -1,0 +1,12 @@
+International Fonts Ver.1.1
+
+This directory contains free X11 fonts (BDF format) for all characters
+that Emacs 20 can handle. They are classified into several categories.
+
+Asian -- Asian (non-CJK) fonts
+Chinese  -- Chinese normal size fonts excluding what distributed with X
+Ethiopic -- Ethiopic fonts
+European -- European normal size fonts (suitable with the other fonts)
+European-BIG -- European big fonts
+Japanese -- Japanese normal size fonts excluding what distributed with X
+Misc -- fonts for the other regions
