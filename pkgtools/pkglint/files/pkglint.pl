@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.53 2001/07/08 16:41:53 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.54 2001/07/13 08:20:55 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -728,10 +728,10 @@ sub checkmakefile {
 	#
 	print "OK: checking direct use of command names.\n" if ($verbose);
 	foreach $i (split(/\s+/, <<EOF)) {
-awk basename cat chmod chown chgrp cp cut digest echo egrep false file find
-gmake grep gtar gzcat id ident install ldconfig ln md5 mkdir mtree mv
-patch pax pkg_add pkg_create pkg_delete pkg_info rm rmdir sed setenv sh
-su tail test touch tr true type xmkmf
+awk basename cat chmod chown chgrp cmp cp cut digest dirname echo egrep false
+file find gmake grep gtar gzcat id ident install ldconfig ln md5 mkdir mtree mv
+patch pax pkg_add pkg_create pkg_delete pkg_info rm rmdir sed setenv sh sort
+su tail test touch tr true type wc xmkmf
 EOF
 		$cmdnames{$i} = "\$\{\U$i\E\}";
 	}
