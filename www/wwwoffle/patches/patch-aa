@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2000/02/16 00:24:41 itohy Exp $
+$NetBSD: patch-aa,v 1.8 2000/02/21 03:10:35 fredb Exp $
 
 --- Makefile.orig	Sat Dec 18 21:27:03 1999
 +++ Makefile	Wed Feb 16 07:46:20 2000
@@ -59,6 +59,15 @@ $NetBSD: patch-aa,v 1.7 2000/02/16 00:24:41 itohy Exp $
  	  done )
  
  
+@@ -340,7 +340,7 @@
+ # These two will fail unless you are root, that is OK because the owner is already you.
+ 	-chown -R 0 $(SPOOLDIR)/html > /dev/null 2>&1
+ 	-chgrp -R 0 $(SPOOLDIR)/html > /dev/null 2>&1
+-	chmod -R o-rwx $(SPOOLDIR)/html
++#	chmod -R o-rwx $(SPOOLDIR)/html
+ 
+ install_config :
+ 	sed -e 's%SPOOLDIR%$(SPOOLDIR)%' -e 's%CONFDIR%$(CONFDIR)%' < wwwoffle.conf > wwwoffle.conf.install
 @@ -354,7 +354,7 @@
  	[    -f $(CONFDIR)/wwwoffle.conf ] || $(INSTALL) -c -m 640 wwwoffle.conf.install $(CONFDIR)/wwwoffle.conf
  
