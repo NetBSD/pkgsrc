@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2000/02/25 01:04:16 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2000/02/25 17:18:39 jdolecek Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -8,6 +8,7 @@
     SUBDIR += ap-Embperl
     SUBDIR += ap-auth-cookie
     SUBDIR += ap-auth-postgresql
+    SUBDIR += ap-csacek
     SUBDIR += ap-dtcl
     SUBDIR += ap-fastcgi
 #    SUBDIR += ap-jserv		# depends on disabled jsdk0
