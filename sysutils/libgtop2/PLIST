@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/02 12:09:16 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/07 11:39:48 jmmv Exp $
 bin/libgtop_daemon2
 ${LIBGTOP_SERVER}bin/libgtop_server2
 include/libgtop-2.0/glibtop.h
@@ -62,6 +62,8 @@ ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/libgtop-2.0.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/libgtop-2.0.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libgtop-2.0.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/libgtop-2.0.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/libgtop-2.0.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/libgtop-2.0.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libgtop-2.0.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/libgtop-2.0.mo
 ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/libgtop-2.0.mo
@@ -86,6 +88,7 @@ ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/libgtop-2.0.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libgtop-2.0.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/libgtop-2.0.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/libgtop-2.0.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/libgtop-2.0.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/libgtop-2.0.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/libgtop-2.0.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/libgtop-2.0.mo
