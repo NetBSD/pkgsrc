@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2000/03/22 08:43:56 rh Exp $
+# $NetBSD: Makefile,v 1.59 2000/03/22 08:50:15 rh Exp $
 #
 
     SUBDIR += ac3dec
@@ -62,7 +62,6 @@
     SUBDIR += musicbox
     SUBDIR += nas
     SUBDIR += nspmod
-    SUBDIR += realplayerG2
     SUBDIR += realplayer7
     SUBDIR += rio
     SUBDIR += rplay
