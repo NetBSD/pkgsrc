@@ -1,5 +1,5 @@
 # build.conf
-# $NetBSD: build.conf-example,v 1.10 2001/07/08 14:36:56 dmcmahill Exp $
+# $NetBSD: build.conf-example,v 1.11 2002/08/07 10:56:12 agc Exp $
 #
 # config file in /bin/sh syntax for {,pre,post}-build
 #
@@ -31,7 +31,7 @@ CVS_USER="yourlogin"
 
 # prune distfiles to remove those which are out of date
 # can be set to 'yes' or 'no'.
-PRUNEDISTFILES=yes
+PRUNEDISTFILES=no
 
 # Proxies (optional):
 #ftp_proxy=http://proxy.machi.ne:3128/
