@@ -1,8 +1,72 @@
-$NetBSD: patch-ac,v 1.1 1999/05/05 17:40:38 bad Exp $
+$NetBSD: patch-ac,v 1.2 1999/05/20 10:32:37 kleink Exp $
 
 --- dialects/n+obsd/dproc.c.orig	Tue Nov 24 02:11:24 1998
-+++ dialects/n+obsd/dproc.c	Wed May  5 19:29:31 1999
-@@ -394,11 +394,11 @@
++++ dialects/n+obsd/dproc.c	Thu May 20 10:45:27 1999
+@@ -150,6 +150,9 @@
+ gather_proc_info()
+ {
+ 	struct filedesc fd;
++#if __NetBSD_Version__ >= 104010000
++	struct cwdinfo cwdi;
++#endif
+ 	int i, nf;
+ 	static int nofb = 0;
+ 	static struct file **ofb = NULL;
+@@ -208,23 +211,53 @@
+ 		(UID_ARG)uid, p->P_COMM, (int)pss, (int)sf);
+ 	    Plf = (struct lfile *)NULL;
+ 	    Kpa = (KA_T)p->P_ADDR;
++#if __NetBSD_Version__ >= 104010000
++	/*
++	 * Save current working directory framework information.
++	 */
++	    (void)memset(&cwdi, 0, sizeof(cwdi));
++	    if (p->kp_proc.p_cwdi) {
++	        if (kvm_read(Kd, (u_long)p->kp_proc.p_cwdi, &cwdi, sizeof(cwdi))
++	            != sizeof(cwdi)) {
++	                fprintf(stderr, "%s: cannot read cwdinfo: %s\n", Pn,
++			    kvm_geterr(Kd));
++			Exit(1);
++		}
++	    }
++#endif
+ 	/*
+ 	 * Save current working directory information.
+ 	 */
++#if __NetBSD_Version__ >= 104010000
++	    if (cwdi.cwdi_cdir) {
++#else
+ 	    if (fd.fd_cdir) {
++#endif
+ 		alloc_lfile(CWD, -1);
+ 		Cfp = (struct file *)NULL;
++#if __NetBSD_Version__ >= 104010000
++		process_node((KA_T)cwdi.cwdi_cdir);
++#else
+ 		process_node((KA_T)fd.fd_cdir);
++#endif
+ 		if (Lf->sf)
+ 		    link_lfile();
+ 	    }
+ 	/*
+ 	 * Save root directory information.
+ 	 */
++#if __NetBSD_Version__ >= 104010000
++	    if (cwdi.cwdi_rdir) {
++#else
+ 	    if (fd.fd_rdir) {
++#endif
+ 		alloc_lfile(RTD, -1);
+ 		Cfp = (struct file *)NULL;
++#if __NetBSD_Version__ >= 104010000
++		process_node((KA_T)cwdi.cwdi_rdir);
++#else
+ 		process_node((KA_T)fd.fd_rdir);
++#endif
+ 		if (Lf->sf)
+ 		    link_lfile();
+ 	    }
+@@ -394,11 +427,11 @@
  	int i, j;
  	KA_T ka;
  	int n = 0;
