@@ -1,7 +1,16 @@
-$NetBSD: patch-aj,v 1.4 2001/04/17 16:27:22 rh Exp $
+$NetBSD: patch-aj,v 1.5 2001/05/05 13:47:13 rh Exp $
 
 --- configure.in.orig	Tue Mar 27 05:39:19 2001
 +++ configure.in
+@@ -389,7 +389,7 @@
+                   NASMFLAGS="-f win32"
+                   ;;
+               *)
+-                  NASMFLAGS="-f elf"
++                  test -n "$NASMFLAGS" || NASMFLAGS="-f elf"
+                   ;;
+             esac
+             AC_SUBST(NASMFLAGS)
 @@ -1199,7 +1199,11 @@
              COPY_ARCH_SRC(src/thread, linux, SDL_systhread_c.h)
              COPY_ARCH_SRC(src/thread, linux, SDL_sysmutex.c)
