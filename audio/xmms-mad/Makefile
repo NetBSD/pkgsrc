@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/26 04:00:50 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/08 15:23:29 jlam Exp $
 #
 
 DISTNAME=		xmms-mad-0.0.9
@@ -14,7 +14,6 @@ DEPENDS+=		mad>=0.14:../../audio/mad
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		LDFLAGS="-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib"
 CONFIGURE_ENV+=		CFLAGS="-I${LOCALBASE}/include"
-CPPFLAGS+=              -D_POSIX_THREAD_SYSCALL_SOFT=1
 
 .include "../../mk/bsd.prefs.mk"
 
