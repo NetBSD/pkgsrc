@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.677 2002/12/04 11:51:42 scw Exp $
+$NetBSD: CHANGES,v 1.678 2002/12/04 11:58:29 agc Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3804,3 +3804,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated mutt to 1.4nb3 [jmmv 2002-12-03]
 	Updated openh323 to 1.10.4 [jdolecek 2002-12-03]
 	Updated tits to 1.0.3 [scw 2002-12-04]
+	Added pv-0.4.0 [agc 2002-12-04]
