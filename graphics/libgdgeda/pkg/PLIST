@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/02 17:33:02 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/08/14 19:14:41 wiz Exp $
 bin/libgdgeda-config
 include/gdgeda/gd.h
 include/gdgeda/gd_io.h
@@ -10,5 +10,6 @@ include/gdgeda/gdfontt.h
 include/gdgeda/mtables.h
 include/gdgeda/gdcache.h
 lib/libgdgeda.a
+lib/libgdgeda.la
 lib/libgdgeda.so.3.0
 @dirrm include/gdgeda
