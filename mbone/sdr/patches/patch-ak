@@ -1,0 +1,29 @@
+--- common/configure.orig	Mon Jun 21 12:53:35 1999
++++ common/configure	Sat Oct  2 21:51:43 1999
+@@ -53,7 +53,7 @@
+ 
+ echo "Configuring common code library v$VERSION for $OSTYPE"
+ 
+-GCCWFLAGS="-W -Wall -Wbad-function-cast -Wmissing-prototypes -Werror"
++GCCWFLAGS="-W -Wall -Wbad-function-cast -Wmissing-prototypes"
+ DEFS=""
+ 
+ AR="ar"
+@@ -120,7 +120,7 @@
+             ;;
+   NetBSD )  CC="gcc"
+             WFLAGS=$GCCWFLAGS
+-	    INCLUDE="-I/usr/local/include"
++	    INCLUDE="-I${LOCALBASE}/include"
+ 	    LDLIBS="-lm"
+ 	    DEBUG="-g"
+ 	    CHAR="-fsigned-char"
+@@ -130,7 +130,7 @@
+ esac
+ 
+ ${ECHO} "Searching for in_addr_t in <netinet/in.h>... \c"
+-T1=`grep -c in_addr_t /usr/include/netinet/in.h`
++T1=`grep -c in_addr_t /usr/include/netinet/in.h /usr/include/machine/endian.h | grep -v :0 | sed 's/.*://'`
+ if [ $T1 = 0 ]; then
+ 	DEFS="$DEFS -DNEED_IN_ADDR_T"
+ 	${ECHO} "no"
