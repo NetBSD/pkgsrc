@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2069 2004/08/22 21:15:58 cjep Exp $
+$NetBSD: TODO,v 1.2070 2004/08/23 14:42:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -157,6 +157,10 @@ Suggested new packages
 	http://exult.sourceforge.net/
 	Open source game engine for Ultima 7
 
+	Sunbird
+	http://www.mozilla.org/projects/calendar/sunbird.html
+	Stand-alone calendaring application
+
 
 Suggested package updates
 =========================
@@ -175,8 +179,10 @@ Suggested package updates
 	o aranym-0.8.10
 	o asc-1.15.0
 	o atari800-1.3.3
+	o auctex-11.52
 	o avidemux-2.0.28
 	o balsa-1.4.4
+	o balsa2-2.2.3
 	o bash3-3.0
 	o biew-5.61
 	o bind-9.3
@@ -211,7 +217,7 @@ Suggested package updates
 	o dmalloc-5.3.0
 	o docbook-4.3
 	o docsis-0.9.1
-	o dvipng-1.1 [http://sourceforge.net/projects/dvipng/]
+	o dvipng-1.2 [http://sourceforge.net/projects/dvipng/]
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
 	o efax-gtk-2.2.9a
@@ -235,6 +241,7 @@ Suggested package updates
 	o galeon-1.3.17
 	o gcvs-1.0
 	o gdb-6.2
+	o gdm-2.6.0.4
 	o generator-0.35
 	o gettext-0.14.1
 	o ghostscript-8.00 (apfl)
@@ -265,6 +272,7 @@ Suggested package updates
 	o host-20040812 [cjep,talking to greg woods about this]
 	o hp2xx-3.4.4
 	o icepref-2.3
+	o icewm-1.2.16
 	o idesk-0.5.6
 	o imp-3.2.5
 	o inform-6.30 [pkg/24631]
@@ -291,7 +299,10 @@ Suggested package updates
 	o libsigc++-2.0.3
 	o libstatgrab-0.10.1
 	o libtool-1.5.8
+	o libxml2-2.6.12
+	o libxslt-1.1.9
 	o licq-1.2.7
+	o liferea-0.5.3b
 	o lilypond-2.2
 	o lmbench-2.0.4
 	o lout-3.29
@@ -302,15 +313,18 @@ Suggested package updates
 	o maradns-1.0.23
 	o marbles-1.0.6
 	o matchbox-0.8.2 [pkgsrc-wip]
+	o mathomatic-11.3d
 	o micq-0.4.11
 	o midnight-commander-4.6.0
 	o minicom-2.1
+	o mkvtoolnix-0.9.5
 	o mono-1.0.1
 	o mowitz-0.3.0
 	o moz-bin-flash-7.0r25 [pkgsrc-wip]
 	o moz-bin-plugger-1.5.1
 	o moz-mplayer-2.65
 	o mozilla-stable-1.4.2
+	o mp3splt-2.0e
 	o mpi-ch-1.2.6
 	o mrproject-0.9.1
 	o mrtg-2.10.15
@@ -368,7 +382,7 @@ Suggested package updates
 	o realplayer-10.0
 	o rep-gtk-0.17
 	o rox-1.2.2
-	o rox-session-0.1.23
+	o rox-session-0.1.24
 	o rrdtool-1.0.48
 	o ruby-1.8.1 [taca]
 	o sablecc-2.18.1
@@ -393,6 +407,7 @@ Suggested package updates
 	o staroffice-7p1
 	o streamtuner-0.12.5
 	o sweep-0.8.3
+	o sylpheed-claws-0.9.12a
 	o tcl-8.4.7
 	o tcl-expect-5.39.0
 	o tcl-itcl-3.2.1
@@ -405,13 +420,14 @@ Suggested package updates
 	o tk-8.4.7
 	o tkdesk-2.0
 	o tkman-2.2
+	o trac-0.7.1 [pkg/26735]
 	o tripwire-2.3.1 [see also pkg/22362]
 	o txt2html-2.24 [wennmach]
 	o uptimec-0.2p3 [pkg/26082]
 	o uvscan-4.3.2 [jlam]
 	o vba-1.7.2
 	o vfu-4.03
-	o vnc-4.0 [http://www.realvnc.com/download.html]
+	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vttest-20030301
 	o wavesurfer-1.5.3
 	o wdm-1.27
