@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/10/15 03:11:50 reed Exp $
+
+--- src/main.cpp.orig	Tue Jul 13 00:52:19 2004
++++ src/main.cpp
+@@ -236,7 +236,7 @@ main(int argc, char const **argv)
+     }
+ 
+ #ifdef HAVE_FPSETMASK
+-    fpresetsticky(FP_X_DZ|FP_X_INV);
++    fpsetsticky(FP_X_DZ|FP_X_INV);
+     fpsetmask(FP_X_DZ|FP_X_INV);
+ #endif
+     return result;
