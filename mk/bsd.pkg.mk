@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1047 2002/09/16 09:56:31 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1048 2002/09/16 10:04:39 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -2926,8 +2926,8 @@ ${DDIR}: ${DLIST}
 	ddir=`${SED} 's:-[^-]*$$::' ${DLIST}`;				\
 	${ECHO} >${DDIR};						\
 	for pkg in $${ddir} ; do					\
-		if ${PKG_INFO} -b $${pkg} >/dev/null 2>&1 ; then	\
-			${PKG_INFO} -b $${pkg} | ${SED}	-ne		\
+		if ${PKG_INFO} -b "$${pkg}" >/dev/null 2>&1 ; then	\
+			${PKG_INFO} -b "$${pkg}" | ${SED}	-ne	\
 			    's,\([^/]*/[^/]*\)/Makefile:.*,\1,p' | 	\
 			    ${HEAD} -1 >>${DDIR};			\
 		fi ;							\
@@ -2939,15 +2939,15 @@ ${DLIST}: ${WRKDIR}
 
 # The 'info' target can be used to display information about a package.
 info: uptodate-pkgtools
-	${_PKG_SILENT}${_PKG_DEBUG}${PKG_INFO} ${PKGWILDCARD}
+	${_PKG_SILENT}${_PKG_DEBUG}${PKG_INFO} "${PKGWILDCARD}"
 
 # The 'check' target can be used to check an installed package.
 check: uptodate-pkgtools
-	${_PKG_SILENT}${_PKG_DEBUG}${PKG_ADMIN} check ${PKGWILDCARD}
+	${_PKG_SILENT}${_PKG_DEBUG}${PKG_ADMIN} check "${PKGWILDCARD}"
 
 # The 'list' target can be used to list the files installed by a package.
 list: uptodate-pkgtools
-	${_PKG_SILENT}${_PKG_DEBUG}${PKG_INFO} -L ${PKGWILDCARD}
+	${_PKG_SILENT}${_PKG_DEBUG}${PKG_INFO} -L "${PKGWILDCARD}"
 
 # Run pkglint:
 lint:
@@ -2995,7 +2995,7 @@ real-su-replace:
 		exit 1;							\
 	fi
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	oldpkgname=`${PKG_INFO} -e ${PKGBASE}`;				\
+	oldpkgname=`${PKG_INFO} -e "${PKGBASE}"`;			\
 	newpkgname=${PKGNAME};						\
 	${ECHO} "$$oldpkgname" > ${WRKDIR}/.replace;			\
 	replace_action="${MAKE} install";				\
@@ -3398,7 +3398,7 @@ bin-install:
 				break ; 				\
 			fi ; 						\
 		done ; 							\
-		if ! ${PKG_INFO} -qe ${PKGNAME} ; then 			\
+		if ! ${PKG_INFO} -qe "${PKGNAME}" ; then 		\
 			${SHCOMMENT} Cycle through some FTP server here ;\
 			${ECHO_MSG} "Installing from source" ;		\
 			${MAKE} ${MAKEFLAGS} package 			\
