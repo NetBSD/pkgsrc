@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/05/20 21:16:17 tron Exp $
+# $NetBSD: Makefile,v 1.2 1999/05/22 22:12:08 tron Exp $
 
-DISTNAME=	pilot-link.0.9.0
-PKGNAME=	p5-pilot-link-0.9.0
+DISTNAME=	pilot-link.0.9.3
+PKGNAME=	p5-pilot-link-0.9.3
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ryeham.ee.ryerson.ca/pub/PalmOS/
 
 MAINTAINER=	tron@netbsd.org
 
-DEPENDS+=	pilot-link-0.9.0:../pilot-link
+DEPENDS+=	pilot-link-0.9.3:../pilot-link
 
 USE_PERL5=	yes
 USE_LIBTOOL=	yes
