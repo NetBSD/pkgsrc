@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/03/12 21:50:54 recht Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/06/23 18:40:41 minskim Exp $
 awstats/bin/awstats_buildstaticpages.pl
 awstats/bin/awstats_exportlib.pl
 awstats/bin/awstats_updateall.pl
@@ -9,6 +9,7 @@ awstats/bin/urlaliasbuilder.pl
 awstats/cgi-bin/awredir.pl
 awstats/cgi-bin/awstats.pl
 awstats/cgi-bin/lang/awstats-al.txt
+awstats/cgi-bin/lang/awstats-ar.txt
 awstats/cgi-bin/lang/awstats-ba.txt
 awstats/cgi-bin/lang/awstats-bg.txt
 awstats/cgi-bin/lang/awstats-br.txt
@@ -44,39 +45,45 @@ awstats/cgi-bin/lang/awstats-se.txt
 awstats/cgi-bin/lang/awstats-sk.txt
 awstats/cgi-bin/lang/awstats-sr.txt
 awstats/cgi-bin/lang/awstats-tr.txt
-awstats/cgi-bin/lang/awstats-tt-al.txt
-awstats/cgi-bin/lang/awstats-tt-ba.txt
-awstats/cgi-bin/lang/awstats-tt-bg.txt
-awstats/cgi-bin/lang/awstats-tt-ca.txt
-awstats/cgi-bin/lang/awstats-tt-cn.txt
-awstats/cgi-bin/lang/awstats-tt-cz.txt
-awstats/cgi-bin/lang/awstats-tt-de.txt
-awstats/cgi-bin/lang/awstats-tt-dk.txt
-awstats/cgi-bin/lang/awstats-tt-en.txt
-awstats/cgi-bin/lang/awstats-tt-es.txt
-awstats/cgi-bin/lang/awstats-tt-fi.txt
-awstats/cgi-bin/lang/awstats-tt-fr.txt
-awstats/cgi-bin/lang/awstats-tt-gl.txt
-awstats/cgi-bin/lang/awstats-tt-hu.txt
-awstats/cgi-bin/lang/awstats-tt-is.txt
-awstats/cgi-bin/lang/awstats-tt-it.txt
-awstats/cgi-bin/lang/awstats-tt-jp.txt
-awstats/cgi-bin/lang/awstats-tt-kr.txt
-awstats/cgi-bin/lang/awstats-tt-nb.txt
-awstats/cgi-bin/lang/awstats-tt-nl.txt
-awstats/cgi-bin/lang/awstats-tt-nn.txt
-awstats/cgi-bin/lang/awstats-tt-pl.txt
-awstats/cgi-bin/lang/awstats-tt-ro.txt
-awstats/cgi-bin/lang/awstats-tt-ru.txt
-awstats/cgi-bin/lang/awstats-tt-se.txt
-awstats/cgi-bin/lang/awstats-tt-sk.txt
-awstats/cgi-bin/lang/awstats-tt-sr.txt
-awstats/cgi-bin/lang/awstats-tt-tr.txt
-awstats/cgi-bin/lang/awstats-tt-tw.txt
-awstats/cgi-bin/lang/awstats-tt-ua.txt
 awstats/cgi-bin/lang/awstats-tw.txt
 awstats/cgi-bin/lang/awstats-ua.txt
 awstats/cgi-bin/lang/awstats-wlk.txt
+awstats/cgi-bin/lang/tooltips_f/awstats-tt-en.txt
+awstats/cgi-bin/lang/tooltips_m/awstats-tt-en.txt
+awstats/cgi-bin/lang/tooltips_m/awstats-tt-fr.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-al.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-ba.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-bg.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-ca.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-cn.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-cz.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-de.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-dk.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-en.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-es.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-fi.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-fr.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-gl.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-hu.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-is.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-it.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-jp.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-kr.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-nb.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-nl.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-nn.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-pl.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-ro.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-ru.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-se.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-sk.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-sr.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-tr.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-tw.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-ua.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tw.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-ua.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-wlk.txt
 awstats/cgi-bin/lib/browsers.pm
 awstats/cgi-bin/lib/domains.pm
 awstats/cgi-bin/lib/mime.pm
@@ -119,6 +126,7 @@ awstats/icon/browser/dillo.png
 awstats/icon/browser/dreamcast.png
 awstats/icon/browser/ecatch.png
 awstats/icon/browser/encompass.png
+awstats/icon/browser/firefox.png
 awstats/icon/browser/fpexpress.png
 awstats/icon/browser/fresco.png
 awstats/icon/browser/galeon.png
@@ -580,6 +588,9 @@ share/examples/awstats/example.pm
 @dirrm awstats/classes
 @dirrm awstats/cgi-bin/plugins
 @dirrm awstats/cgi-bin/lib
+@dirrm awstats/cgi-bin/lang/tooltips_w
+@dirrm awstats/cgi-bin/lang/tooltips_m
+@dirrm awstats/cgi-bin/lang/tooltips_f
 @dirrm awstats/cgi-bin/lang
 @dirrm awstats/cgi-bin
 @dirrm awstats/bin
