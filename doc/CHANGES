@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7661 2004/11/02 20:55:58 wiz Exp $
+$NetBSD: CHANGES,v 1.7662 2004/11/02 21:22:02 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5030,3 +5030,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cassowary to 0.60nb7 [wiz 2004-11-02]
 	Updated gtl to 1.2.0 [wiz 2004-11-02]
 	Updated gtl to 1.2.1 [wiz 2004-11-02]
+	Updated gstreamer to 0.8.7nb1 [jmmv 2004-11-02]
