@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/01/10 08:40:07 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/01/24 03:12:32 jlam Exp $
 #
 # Optionally define USE_GNU_READLINE to force use of GNU readline.
 #
@@ -12,7 +12,7 @@ READLINE_BUILDLINK3_MK:=	${READLINE_BUILDLINK3_MK}+
 
 .if !empty(READLINE_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		readline
-BUILDLINK_DEPENDS.readline?=	readline>=2.2
+BUILDLINK_DEPENDS.readline+=	readline>=2.2
 BUILDLINK_PKGSRCDIR.readline?=	../../devel/readline
 .endif	# READLINE_BUILDLINK3_MK
 

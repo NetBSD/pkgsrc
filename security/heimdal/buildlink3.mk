@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/01/13 00:00:32 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/01/24 03:12:32 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 HEIMDAL_BUILDLINK3_MK:=	${HEIMDAL_BUILDLINK3_MK}+
@@ -7,7 +7,7 @@ HEIMDAL_BUILDLINK3_MK:=	${HEIMDAL_BUILDLINK3_MK}+
 
 .if !empty(HEIMDAL_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		heimdal
-BUILDLINK_DEPENDS.heimdal?=	heimdal>=0.4e
+BUILDLINK_DEPENDS.heimdal+=	heimdal>=0.4e
 BUILDLINK_PKGSRCDIR.heimdal?=	../../security/heimdal
 BUILDLINK_INCDIRS.heimdal?=	include/krb5
 .endif	# HEIMDAL_BUILDLINK3_MK
@@ -69,13 +69,17 @@ MAKEFLAGS+=	_HEIMDAL_VERSION="${_HEIMDAL_VERSION}"
 .    endif
 
 _HEIMDAL_PKG=		heimdal-${_HEIMDAL_VERSION}
-_HEIMDAL_DEPENDS=	${BUILDLINK_DEPENDS.heimdal}
+BUILDLINK_USE_BUILTIN.heimdal?=	YES
+.    for _depend_ in ${BUILDLINK_DEPENDS.heimdal}
+.      if !empty(BUILDLINK_USE_BUILTIN.heimdal:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.heimdal!=		\
-	if ${PKG_ADMIN} pmatch '${_HEIMDAL_DEPENDS}' ${_HEIMDAL_PKG}; then \
+	if ${PKG_ADMIN} pmatch '${_depend_}' ${_HEIMDAL_PKG}; then	\
 		${ECHO} "YES";						\
 	else								\
 		${ECHO} "NO";						\
 	fi
+.      endif
+.    endfor
 .  endif
 MAKEFLAGS+=	\
 	BUILDLINK_USE_BUILTIN.heimdal="${BUILDLINK_USE_BUILTIN.heimdal}"
@@ -86,7 +90,7 @@ MAKEFLAGS+=	\
 # If we depend on the package, depend on the latest version with a library
 # major number bump.
 #
-BUILDLINK_DEPENDS.heimdal=	heimdal>=0.6
+BUILDLINK_DEPENDS.heimdal+=	heimdal>=0.6
 .  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=		heimdal
 .  endif

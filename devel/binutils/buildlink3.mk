@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/01/05 11:05:45 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/01/24 03:12:32 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 BINUTILS_BUILDLINK3_MK:=	${BINUTILS_BUILDLINK3_MK}+
@@ -7,7 +7,7 @@ BINUTILS_BUILDLINK3_MK:=	${BINUTILS_BUILDLINK3_MK}+
 
 .if !empty(BINUTILS_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=			binutils
-BUILDLINK_DEPENDS.binutils?=		binutils>=2.14.0
+BUILDLINK_DEPENDS.binutils+=		binutils>=2.14.0
 BUILDLINK_PKGSRCDIR.binutils?=		../../devel/binutils
 BUILDLINK_DEPMETHOD.binutils?=		build
 .endif	# BINUTILS_BUILDLINK3_MK
