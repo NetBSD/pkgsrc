@@ -5,7 +5,7 @@
 
 CMD=$(basename $0)
 
-if [ x = x$1 ]
+if [ -z "$*" ]
 then
 	echo "
 Usage: $CMD <module>
@@ -23,14 +23,14 @@ FATAL: I can't find sox in your path.  Is it installed?
 	exit
 fi
 
-WAVDIR=$(dirname $1)
-WAVNAME=$(basename $1|tr 'A-Z' 'a-z').wav
+WAVDIR=$(dirname "$*")
+WAVNAME=$(basename "$*").wav
 
-echo -e "$1 -> $WAVDIR/$WAVNAME\c"
+echo -e "$* -> $WAVDIR/$WAVNAME\c"
 
 
 echo -e " [step 1]\c"
-gmodplay -n -w $1 >/dev/null 2>&1
+gmodplay -n -w "$*" >/dev/null 2>&1
 if [ $? -ne 0 ]
 then
 	echo "
@@ -41,7 +41,7 @@ fi
 
 echo -e " [step 2]\c"
 chmod a+r output.raw
-sox -t raw -r 44100 -s -w -c 2 output.raw $WAVDIR/$WAVNAME >/dev/null 2>&1
+sox -t raw -r 44100 -s -w -c 2 output.raw "$WAVDIR/$WAVNAME" >/dev/null 2>&1
 if [ $? -ne 0 ]
 then
 	echo "
