@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6089 2004/06/01 22:14:58 chris Exp $
+$NetBSD: CHANGES,v 1.6090 2004/06/02 06:56:49 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2745,3 +2745,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed Mosaic [kristerw 2004-06-01]
 	Removed lesstif12 [kristerw 2004-06-01]
 	Updated sylpheed to 0.9.11 [chris 2004-06-01]
+	Updated chicken to 1.51 [itojun 2004-06-02]
