@@ -99,15 +99,15 @@ struct {								\
 } while (/*CONSTCOND*/0)
 #endif
 
-#if ! LIST_EMPTY
+#ifndef LIST_EMPTY
 #define	LIST_EMPTY(head)		((head)->lh_first == NULL)
 #endif
 
-#if ! LIST_FIRST
+#ifndef LIST_FIRST
 #define	LIST_FIRST(head)		((head)->lh_first)
 #endif
 
-#if ! LIST_NEXT
+#ifndef LIST_NEXT
 #define	LIST_NEXT(elm, field)		((elm)->field.le_next)
 #endif
 
@@ -216,55 +216,55 @@ void	 tputs(const char *, int, int (*)(int));
 # include "vis.h"
 #endif
 
-#if ! HAVE_D_NAMLEN
+#ifndef HAVE_D_NAMLEN
 # define DIRENT_MISSING_D_NAMLEN
 #endif
 
-#if ! HAVE_H_ERRNO_D
+#ifndef HAVE_H_ERRNO_D
 extern int	h_errno;
 #endif
 #define HAVE_H_ERRNO	1		/* XXX: an assumption for now... */
 
-#if ! HAVE_FCLOSE_D
+#ifndef HAVE_FCLOSE_D
 int	fclose(FILE *);
 #endif
 
-#if ! HAVE_ISBLANK
+#ifndef HAVE_ISBLANK
 int     isblank(int);
 #endif
 
-#if ! HAVE_GETPASS_D
+#ifndef HAVE_GETPASS_D
 char	*getpass(const char *);
 #endif
 
-#if ! HAVE_OPTARG_D
+#ifndef HAVE_OPTARG_D
 extern char    *optarg;
 #endif
 
-#if ! HAVE_OPTIND_D
+#ifndef HAVE_OPTIND_D
 extern int	optind;
 #endif
 
-#if ! HAVE_PCLOSE_D
+#ifndef HAVE_PCLOSE_D
 int	pclose(FILE *);
 #endif
 
-#if ! HAVE_ERR
+#ifndef HAVE_ERR
 void	err(int, const char *, ...);
 void	errx(int, const char *, ...);
 void	warn(const char *, ...);
 void	warnx(const char *, ...);
 #endif
 
-#if ! HAVE_FGETLN
+#ifndef HAVE_FGETLN
 char   *fgetln(FILE *, size_t *);
 #endif
 
-#if ! HAVE_FSEEKO
+#ifndef HAVE_FSEEKO
 int	fseeko(FILE *, off_t, int);
 #endif
 
-#if ! HAVE_FPARSELN
+#ifndef HAVE_FPARSELN
 # define FPARSELN_UNESCESC	0x01
 # define FPARSELN_UNESCCONT	0x02
 # define FPARSELN_UNESCCOMM	0x04
@@ -273,41 +273,41 @@ int	fseeko(FILE *, off_t, int);
 char   *fparseln(FILE *, size_t *, size_t *, const char[3], int);
 #endif
 
-#if ! HAVE_INET_NTOP
+#ifndef HAVE_INET_NTOP
 const char *inet_ntop(int, const void *, char *, size_t);
 #endif
 
-#if ! HAVE_INET_PTON
+#ifndef HAVE_INET_PTON
 int inet_pton(int, const char *, void *);
 #endif
 
-#if ! HAVE_MKSTEMP
+#ifndef HAVE_MKSTEMP
 int	mkstemp(char *);
 #endif
 
-#if ! HAVE_SETPROGNAME
+#ifndef HAVE_SETPROGNAME
 const char *getprogname(void);
 void	setprogname(const char *);
 #endif
 
-#if ! HAVE_SNPRINTF
+#ifndef HAVE_SNPRINTF
 int	snprintf(char *, size_t, const char *, ...);
 #endif
 
-#if ! HAVE_STRDUP
+#ifndef HAVE_STRDUP
 char   *strdup(const char *);
 #endif
 
-#if ! HAVE_STRERROR
+#ifndef HAVE_STRERROR
 char   *strerror(int);
 #endif
 
-#if ! HAVE_STRPTIME || ! HAVE_STRPTIME_D
+#if !defined(HAVE_STRPTIME) || !defined(HAVE_STRPTIME_D)
 char   *strptime(const char *, const char *, struct tm *);
 #endif
 
 #if HAVE_QUAD_SUPPORT
-# if ! HAVE_STRTOLL && HAVE_LONG_LONG
+# if !defined(HAVE_STRTOLL) && defined(HAVE_LONG_LONG)
 long long strtoll(const char *, char **, int);
 #  if ! defined(QUAD_MIN)
 #   define QUAD_MIN	(-0x7fffffffffffffffL-1)
@@ -320,27 +320,27 @@ long long strtoll(const char *, char **, int);
 # define NO_LONG_LONG	1
 #endif	/* ! HAVE_QUAD_SUPPORT */
 
-#if ! HAVE_TIMEGM
+#ifndef HAVE_TIMEGM
 time_t	timegm(struct tm *);
 #endif
 
-#if ! HAVE_HSTRERROR
+#ifndef HAVE_HSTRERROR
 char   *strerror(int);
 #endif
 
-#if ! HAVE_STRLCAT
+#ifndef HAVE_STRLCAT
 size_t	strlcat(char *, const char *, size_t);
 #endif
 
-#if ! HAVE_STRLCPY
+#ifndef HAVE_STRLCPY
 size_t	strlcpy(char *, const char *, size_t);
 #endif
 
-#if ! HAVE_STRSEP
+#ifndef HAVE_STRSEP
 char   *strsep(char **stringp, const char *delim);
 #endif
 
-#if ! HAVE_MEMMOVE
+#ifndef HAVE_MEMMOVE
 # define memmove(a,b,c)	bcopy((b),(a),(c))
 	/* XXX: add others #defines for borken systems? */
 #endif
