@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2002/06/26 14:33:29 itojun Exp $
+# $NetBSD: Makefile,v 1.79 2002/06/27 02:15:14 grant Exp $
 
 DISTNAME=		openssh-3.4p1
 PKGNAME=		openssh-3.4.0.1
@@ -109,6 +109,7 @@ RCD_SCRIPTS=		sshd
 PLIST_SRC+=		${.CURDIR}/PLIST
 FILES_SUBST+=		SSH_PID_DIR=${SSH_PID_DIR}
 MESSAGE_SUBST+=		EGDIR=${EGDIR}
+INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
 
 post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/sshd.sh > ${WRKDIR}/sshd
