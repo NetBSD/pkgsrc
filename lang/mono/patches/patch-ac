@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/03/01 13:11:47 jmmv Exp $
+
+--- data/Makefile.in.orig	2003-02-27 23:28:21.000000000 +0100
++++ data/Makefile.in
+@@ -99,7 +99,7 @@ arch_target = @arch_target@
+ libmono_cflags = @libmono_cflags@
+ libmono_ldflags = @libmono_ldflags@
+ 
+-monodir = $(sysconfdir)/mono
++monodir = $(datadir)/examples/mono
+ 
+ EXTRA_DIST = config.in machine.config
+ 
