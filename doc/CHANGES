@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5609 2004/04/16 14:34:44 recht Exp $
+$NetBSD: CHANGES,v 1.5610 2004/04/16 15:05:34 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2004,3 +2004,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated qt3-psql to 3.3.1 [recht 2004-04-15]
 	Updated qt3-mysql to 3.3.1 [recht 2004-04-15]
 	Updated qt3 to 3.3.1 [recht 2004-04-15]
+	Added quake2forge-0.2.1 [xtraeme 2004-04-15]
