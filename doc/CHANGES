@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5588 2004/04/15 12:52:57 martti Exp $
+$NetBSD: CHANGES,v 1.5589 2004/04/15 14:14:33 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1964,3 +1964,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added yasql-1.81 [grant 2004-04-15]
 	Updated p5-Config-General to 2.26 [mjl 2004-04-15]
 	Updated doxygen to 1.3.6 [martti 2004-04-15]
+	Updated t1lib to 5.0.2 [minskim 2004-04-15]

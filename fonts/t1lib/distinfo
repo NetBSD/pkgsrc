@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2004/03/03 11:28:11 adam Exp $
+$NetBSD: distinfo,v 1.4 2004/04/15 14:14:34 minskim Exp $
 
-SHA1 (t1lib-5.0.1.tar.gz) = c368b2553fb357b9f2c7c3f1a6f7dfff15eb6c78
-Size (t1lib-5.0.1.tar.gz) = 1647836 bytes
+SHA1 (t1lib-5.0.2.tar.gz) = 71a6ec6c84a2e28a21f261be865e0dabe52daeb5
+Size (t1lib-5.0.2.tar.gz) = 1697086 bytes
 SHA1 (patch-aa) = 1a09e0f8c3b35987a963bd73b2d18722c0a67fba
 SHA1 (patch-ac) = aae10307ac7da8f095e7b294273503b5900e52aa
