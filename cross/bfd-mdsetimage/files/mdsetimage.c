@@ -1,4 +1,4 @@
-/* $NetBSD: mdsetimage.c,v 1.3 2001/10/01 23:39:25 cgd Exp $ */
+/* $NetBSD: mdsetimage.c,v 1.4 2004/09/09 01:33:10 wiz Exp $ */
 /* from: NetBSD: mdsetimage.c,v 1.15 2001/03/21 23:46:48 cgd Exp $ */
 
 /*
@@ -38,7 +38,7 @@ __COPYRIGHT(
 #endif /* not lint */
 
 #ifndef lint
-__RCSID("$NetBSD: mdsetimage.c,v 1.3 2001/10/01 23:39:25 cgd Exp $");
+__RCSID("$NetBSD: mdsetimage.c,v 1.4 2004/09/09 01:33:10 wiz Exp $");
 #endif /* not lint */
 
 #include <sys/types.h>
@@ -59,9 +59,9 @@ struct symbols {
 	size_t offset;
 } md_root_symbols[] = {
 #define	X_MD_ROOT_IMAGE	0
-	{ "_md_root_image", NULL, 0 },
+	{ "_md_root_image", 0, 0 },
 #define	X_MD_ROOT_SIZE	1
-	{ "_md_root_size", NULL, 0 },
+	{ "_md_root_size", 0, 0 },
 	{ NULL }
 };
 
@@ -206,7 +206,7 @@ find_md_root(abfd, symbols)
 	long number_of_symbols;
 	asymbol **symbol_table = NULL;
 	struct symbols *s;
-	struct sec *p;
+	struct bfd_section *p;
 
 	storage_needed = bfd_get_symtab_upper_bound(abfd);
 	if (storage_needed <= 0)
@@ -239,7 +239,7 @@ find_md_root(abfd, symbols)
 	free(symbol_table);
 
 	for (s = symbols; s->name != NULL; s++) {
-		if (s->vma == NULL)
+		if (s->vma == 0)
 			return (1);
 
 		for (p = abfd->sections; p != NULL; p = p->next) {
