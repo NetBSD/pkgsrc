@@ -1,8 +1,16 @@
-$NetBSD: patch-ad,v 1.1 2004/11/11 10:19:29 martin Exp $
+$NetBSD: patch-ad,v 1.2 2004/11/12 19:01:57 kristerw Exp $
 
---- rw2300.h.orig	2004-04-14 03:41:10.000000000 +0200
-+++ rw2300.h	2004-11-10 23:50:50.000000000 +0100
-@@ -283,14 +283,16 @@
+--- rw2300.h.orig	Sun Nov  7 12:18:45 2004
++++ rw2300.h	Fri Nov 12 19:57:46 2004
+@@ -20,7 +20,6 @@
+ #include <stdio.h>
+ #include <time.h>
+ #include <stdlib.h>
+-#include <stdbool.h>
+ #include <math.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+@@ -283,14 +282,16 @@
  void reset_06(WEATHERSTATION ws2300);
  
  int read_data(WEATHERSTATION ws2300, int address, int number,
