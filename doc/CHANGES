@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2744 2003/07/12 08:43:40 wiz Exp $
+$NetBSD: CHANGES,v 1.2745 2003/07/12 09:04:23 zuntum Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2763,3 +2763,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated subversion-python to 0.25 [epg 2003-07-12]
 	Updated cscope to 15.4 [wiz 2003-07-12]
 	Updated automake to 1.7.6 [wiz 2003-07-12]
+	Updated wap-utils to 1.3.2 [zuntum 2003-07-12]
