@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2003/12/03 17:29:12 erh Exp $
+# $NetBSD: Makefile,v 1.73 2003/12/05 05:31:12 reed Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -61,6 +61,7 @@ LIBSWANTED.FreeBSD=	m crypt
 LIBSWANTED.IRIX=	m crypt
 LIBSWANTED.NetBSD=	m crypt
 LIBSWANTED.SunOS=	m crypt dl socket nsl
+LIBSWANTED.BSDOS=	m crypt dl bind
 
 # Nail down the directories in which the system libraries may be found.
 # If this isn't defined, then use the perl defaults for the particular
@@ -68,6 +69,7 @@ LIBSWANTED.SunOS=	m crypt dl socket nsl
 #
 SYSLIBPATH.NetBSD=	/usr/lib
 SYSLIBPATH.SunOS=	/usr/lib
+SYSLIBPATH.BSDOS=	/usr/lib
 
 # Nail down the directories in which headers and libraries of
 # locally-installed software may be found.
