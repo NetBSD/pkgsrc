@@ -1,14 +1,14 @@
-$NetBSD: patch-ab,v 1.6 2000/05/11 16:37:53 hubertf Exp $
+$NetBSD: patch-ab,v 1.7 2000/08/15 03:54:17 hubertf Exp $
 
---- xlock/xlock.c.orig	Wed Mar 22 17:55:32 2000
-+++ xlock/xlock.c	Tue May  9 13:35:51 2000
-@@ -592,7 +592,9 @@
- #ifdef USE_DPMS
- #define MIN_DPMS 30		/* 30 second minimum */
+--- xlock/xlock.c.orig	Mon Jul 10 17:46:19 2000
++++ xlock/xlock.c	Tue Aug 15 05:38:20 2000
+@@ -597,7 +597,9 @@
+ #include <X11/extensions/dpms.h>
+ #else /* XFree86 < 4.x */
  #include <X11/extensions/dpms.h>
 +#ifndef __NetBSD__
  extern unsigned char DPMSQueryExtension(Display *, int *, int *);
 +#endif
  extern int  DPMSGetTimeouts(Display *, unsigned short *, unsigned short *, unsigned short *);
  extern int  DPMSSetTimeouts(Display *, unsigned short, unsigned short, unsigned short);
- extern int  dpmsstandby;
+ #endif
