@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/26 03:54:37 ben Exp $
+bin/ivan
+share/ivan/Bones
+share/ivan/Graphics/Char.pcx
+share/ivan/Graphics/Cursor.pcx
+share/ivan/Graphics/Effect.pcx
+share/ivan/Graphics/FOW.pcx
+share/ivan/Graphics/Font.pcx
+share/ivan/Graphics/GLTerra.pcx
+share/ivan/Graphics/Humanoid.pcx
+share/ivan/Graphics/Icon.bmp
+share/ivan/Graphics/Item.pcx
+share/ivan/Graphics/Menu.pcx
+share/ivan/Graphics/OLTerra.pcx
+share/ivan/Graphics/Symbol.pcx
+share/ivan/Graphics/WTerra.pcx
+share/ivan/Script/char.dat
+share/ivan/Script/define.dat
+share/ivan/Script/dungeon.dat
+share/ivan/Script/glterra.dat
+share/ivan/Script/item.dat
+share/ivan/Script/material.dat
+share/ivan/Script/olterra.dat
+share/ivan/ivan-highscore.scores
+@dirrm share/ivan/Graphics
+@dirrm share/ivan/Script
+@dirrm share/ivan
