@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7409 2004/10/12 08:17:07 jmmv Exp $
+$NetBSD: CHANGES,v 1.7410 2004/10/12 08:31:17 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4621,3 +4621,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated jakarta-tomcat to 5.0.28 [abs 2004-10-11]
 	Updated spamassassin to 3.0.0 [heinz 2004-10-12]
 	Updated dbus to 0.22nb1 [jmmv 2004-10-12]
+	Updated dbus-glib to 0.22nb1 [jmmv 2004-10-12]
