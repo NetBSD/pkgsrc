@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/01/24 09:07:03 xtraeme Exp $
+
+SHA1 (X430src-1.tgz) = 3aaf219e8c2d3eb299f150bd4a2554a84a19354b
+Size (X430src-1.tgz) = 10993622 bytes
+SHA1 (patch-aa) = 821eb4eb70307f1b8072ccc8e6242e1edb9823f9
