@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7671 2004/11/03 13:44:24 adam Exp $
+$NetBSD: CHANGES,v 1.7672 2004/11/03 14:22:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5040,3 +5040,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gd to 2.0.32 [adam 2004-11-03]
 	Updated gimp to 2.0.6 [adam 2004-11-03]
 	Updated gg2 to 2.2.1 [adam 2004-11-03]
+	Updated freeciv-share to 1.14.2 [adam 2004-11-03]
+	Updated freeciv-client to 1.14.2 [adam 2004-11-03]
+	Updated freeciv-client-gtk to 1.14.2 [adam 2004-11-03]
+	Updated freeciv-client-gtk2 to 1.14.2 [adam 2004-11-03]
+	Updated freeciv-server to 1.14.2 [adam 2004-11-03]
