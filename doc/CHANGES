@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3836 2003/11/18 14:44:27 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3837 2003/11/18 14:49:12 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4612,3 +4612,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xgalaga to 2.0.34nb2 [xtraeme 2003-11-18]
 	Updated xnibbles to 1.0b4nb1 [xtraeme 2003-11-18]
 	Updated xbomber to 0.8nb1 [xtraeme 2003-11-18]
+	Updated wmmp3 to 0.12nb1 [xtraeme 2003-11-18]
