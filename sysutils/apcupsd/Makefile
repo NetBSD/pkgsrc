@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/10/02 22:20:49 dillo Exp $
+# $NetBSD: Makefile,v 1.17 2002/10/23 10:44:38 wiz Exp $
 
 DISTNAME=		apcupsd-3.6.2
 CATEGORIES=		sysutils
@@ -10,6 +10,7 @@ COMMENT=		UPS power management for APCC Products
 
 BUILD_USES_MSGFMT=	yes
 
+USE_BUILDLINK2=		# defined
 USE_GMAKE=		# defined
 
 GNU_CONFIGURE=		# defined
@@ -18,7 +19,7 @@ GNU_CONFIGURE=		# defined
 # which has a curses interface
 #
 #CONFIGURE_ARGS+=	--enable-http		# include http support
-#DEPENDS+=		ncurses-[0-9]*:../../devel/ncurses
+#.include "../../devel/ncurses/buildlink2.mk"
 #CONFIGURE_ARGS+=	--enable-threads	# compile threading code
 #CONFIGURE_ARGS+=	--enable-powerflute	# compile powerflute program
 
@@ -57,5 +58,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/${file} ${PREFIX}/share/doc/apcupsd
 .endfor
 
-.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
