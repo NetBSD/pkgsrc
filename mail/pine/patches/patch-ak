@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.4 1998/08/07 11:09:48 agc Exp $
+$NetBSD: patch-ak,v 1.5 1999/11/11 17:40:18 tv Exp $
 
---- imap/Makefile.orig	Sat Jul 18 22:13:09 1998
-+++ imap/Makefile	Sat Jul 18 22:13:27 1998
-@@ -274,8 +274,6 @@
+--- imap/Makefile.orig	Thu Sep 30 02:03:17 1999
++++ imap/Makefile	Thu Nov 11 12:00:35 1999
+@@ -417,8 +417,6 @@
  bundled:
  	@echo Building bundled tools...
  	$(CD) mtest;$(MAKE)

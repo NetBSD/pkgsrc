@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 1999/05/02 03:16:59 tv Exp $
+@comment $NetBSD: PLIST,v 1.10 1999/11/11 17:40:17 tv Exp $
 bin/pico
 bin/pilot
 include/pico/ebind.h
@@ -12,6 +12,6 @@ include/pico/pico.h
 include/pico/resource.h
 @dirrm include/pico
 lib/libpico.a
-lib/libpico.so.2.0
+lib/libpico.so.3.0
 man/man1/pico.1
 man/man1/pilot.1
