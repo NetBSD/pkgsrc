@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.4 2004/05/15 14:55:38 seb Exp $
+$NetBSD: patch-ag,v 1.5 2004/08/16 15:21:45 seb Exp $
 
---- tests/Makefile.am.orig	2004-03-08 19:13:31.000000000 +0000
+--- tests/Makefile.am.orig	2004-07-11 12:58:38.000000000 +0000
 +++ tests/Makefile.am
-@@ -255,7 +255,7 @@ check_sml: test.sml.html
- 	@echo expect no output from diff
- 	diff $(srcdir)/test.sml.html test.sml.out.html
+@@ -279,7 +279,7 @@ check_log: test.log.html
+ 	diff $(srcdir)/error.log.html error.log.out.html
+ 	diff $(srcdir)/syslog.log.html syslog.log.out.html
  
 -source_highlightdoc_DATA = test.php3.html test.pl.html test.pm.html \
 +source_highlightdochtml_DATA = test.php3.html test.pl.html test.pm.html \
  test.py.html test.rb.html test.js.html test.lua.html test.ml.html \
- test.sml.html
- 
+ test.sml.html test.log.html access.log.html auth.log.html error.log.html syslog.log.html \
+ tags.syslog
