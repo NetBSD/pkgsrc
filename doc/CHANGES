@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5844 2004/05/06 14:46:18 taca Exp $
+$NetBSD: CHANGES,v 1.5845 2004/05/06 15:24:21 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2383,3 +2383,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated qpopper to 4.0.5nb3 [taca 2004-05-06]
 	Updated p5-Text-ChaSen to 1.0.3nb2 [taca 2004-05-06]
 	Updated squid to 2.5.5nb2 [taca 2004-05-06]
+	Updated gnome-netstatus to 2.6.1 [jmmv 2004-05-06]
