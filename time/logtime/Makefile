@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/01/11 21:37:02 kim Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/08 23:30:53 kim Exp $
 #
 
-DISTNAME=		logtime-1.1
+DISTNAME=		logtime-1.2
 CATEGORIES=		sysutils time
 MASTER_SITES=		ftp://ftp.gw.com/pub/people/kim/
 
