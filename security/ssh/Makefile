@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 1999/07/01 14:21:59 mrg Exp $
+# $NetBSD: Makefile,v 1.50 1999/07/08 17:10:57 itojun Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -86,6 +86,19 @@ CONFIGURE_ARGS+=	--disable-suid-ssh
 CFLAGS+=		-DLIBWRAP_FWD
 .endif
 
+# IPv6 support
+# always fetch IPv6 related patch files.  simplify files/md5 generation.
+.if defined(USE_INET6)
+PATCHFILES+=		ssh-1.2.27-IPv6-1.5-patch.gz
+PATCH_DIST_STRIP+=	-p1
+PATCHDIR=		${WRKDIR}/.patches
+.else
+MASTER_SITES+=		ftp://ftp.kyoto.wide.ad.jp/IPv6/ssh/
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
+			ssh-1.2.27-IPv6-1.5-patch.gz
+EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
+.endif
+
 # be more effective on M68060 machines
 .if defined(M68060)
 CONFIGURE_ARGS+=	--disable-asm
@@ -99,6 +112,11 @@ PLIST_SRC=	${WRKDIR}/PLIST
 pre-patch:
 	@${MV} -f ${WRKSRC}/make-ssh-known-hosts.pl \
 	    ${WRKSRC}/make-ssh-known-hosts.pl.in
+.if defined(USE_INET6)
+	${MKDIR} ${WRKDIR}/.patches
+	${CP} ${.CURDIR}/patches/patch-* ${WRKDIR}/.patches
+	${CP} ${.CURDIR}/patches.v6/patch-* ${WRKDIR}/.patches
+.endif
 
 fetch-depends:
 .if !defined(USE_RSAREF2) || ${USE_RSAREF2} != YES && ${USE_RSAREF2} != NO
