@@ -1,5 +1,5 @@
 --- lib-src/Makefile.in.orig	Mon Jul 28 07:50:45 1997
-+++ lib-src/Makefile.in	Thu Feb 12 12:00:56 1998
++++ lib-src/Makefile.in	Sat Feb 21 23:22:00 1998
 @@ -276,7 +276,7 @@
          if [ `(cd ${archlibdir} && /bin/pwd)` \
               != `(cd ${srcdir} && /bin/pwd)` ]; then \
@@ -9,12 +9,22 @@
  	  done ; \
  	fi
  
-@@ -288,7 +288,7 @@
- 	  chmod a+rx ${bindir}/$${file}; \
+@@ -284,12 +284,14 @@
+ 	@echo
+ 	@echo "Installing utilities for users to run."
+ 	for file in ${INSTALLABLES} ; do \
+-	  $(INSTALL_PROGRAM) $${file} ${bindir}/$${file} ; \
+-	  chmod a+rx ${bindir}/$${file}; \
++	  if [ $${file} = emacsclient ]; then \
++	    $(INSTALL_PROGRAM) $${file} ${bindir}/$${file} ; \
++	  else \
++	    $(INSTALL_PROGRAM) $${file} ${bindir}/emacs-$${file} ; \
++	  fi ; \
  	done
  	for file in ${INSTALLABLE_SCRIPTS} ; do \
 -	  $(INSTALL_PROGRAM) ${srcdir}/$${file} ${bindir}/$${file} ; \
-+	  $(INSTALL_SCRIPT) ${srcdir}/$${file} ${bindir}/$${file} ; \
- 	  chmod a+rx ${bindir}/$${file}; \
+-	  chmod a+rx ${bindir}/$${file}; \
++	  $(INSTALL_SCRIPT) ${srcdir}/$${file} ${bindir}/emacs-$${file} ; \
  	done
  
+ uninstall:
