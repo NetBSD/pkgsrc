@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.443 2003/12/19 06:46:03 grant Exp $
+# $NetBSD: Makefile,v 1.444 2003/12/27 23:05:06 salo Exp $
 #
 
 COMMENT=	Development utilities
@@ -37,6 +37,7 @@ SUBDIR+=	avltree
 SUBDIR+=	bcc
 SUBDIR+=	binutils
 SUBDIR+=	bison
+SUBDIR+=	blib
 SUBDIR+=	bmake
 SUBDIR+=	boehm-gc
 SUBDIR+=	bonobo
