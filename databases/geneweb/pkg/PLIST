@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2000/09/03 03:20:28 wulf Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/09/03 03:29:59 jlam Exp $
 bin/consang
 bin/ged2gwb
 bin/gwb2ged
@@ -499,4 +499,3 @@ share/geneweb/setup/se/welcome.htm
 @unexec rmdir %D/share/geneweb/db 2>/dev/null || true
 @unexec rmdir %D/share/geneweb/images 2>/dev/null || true
 @unexec rmdir %D/share/geneweb 2>/dev/null || true
-
