@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:33:57 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 16:31:45 zuntum Exp $
 
-MD5 (getmail-2.0.18.tar.gz) = 981495a82f98b12b0fd862fab75e16f1
-SHA1 (patch-aa) = 33b7345b1cfcc5fbfa0a0520e2216f78e2ea802e
+SHA1 (getmail-2.0.19.tar.gz) = 8bb2ad9a3da6e09fb684eee2b0e0369c85d52a07
+Size (getmail-2.0.19.tar.gz) = 37903 bytes
