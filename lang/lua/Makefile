@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2004/10/15 21:17:50 minskim Exp $
+# $NetBSD: Makefile,v 1.19 2004/10/23 19:10:25 kristerw Exp $
 
 DISTNAME=	lua-5.0.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.tecgraf.puc-rio.br/pub/lua/ \
 		ftp://ftp.ntua.gr/pub/lang/lua/ \
@@ -26,6 +26,7 @@ USE_BUILDLINK3=	yes
 ALL_TARGET=	all so
 INSTALL_TARGET=	install soinstall
 
+CFLAGS+=	-fPIC
 LIBS.Interix+=	-ldl
 LIBS.SunOS+=	-ldl
 MAKE_ENV+=	LIBS="${LIBS}"
