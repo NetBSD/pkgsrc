@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/12/17 13:21:19 tron Exp $
+# $NetBSD: Makefile,v 1.8 2000/12/31 12:54:44 tron Exp $
 
 DISTNAME=	opera-4.0-b4-20001211.012-static.i386
 PKGNAME=	opera-4.0b4
@@ -12,6 +12,7 @@ MASTER_SITES=	http://opera.online.no/linux/tgz/ \
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.opera.com/
 
+DEPENDS+=	suse_compat>=6.4:../../emulators/suse_compat
 DEPENDS+=	suse_libjpeg>=6.4:../../emulators/suse_libjpeg
 DEPENDS+=	suse_libpng>=6.4:../../emulators/suse_libpng
 DEPENDS+=	suse_x11>=6.4:../../emulators/suse_x11
