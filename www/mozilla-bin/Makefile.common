@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2004/06/23 13:32:05 grant Exp $
+# $NetBSD: Makefile.common,v 1.21 2004/06/29 14:19:42 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -13,11 +13,17 @@ MOZILLA_SHORT=		${MOZILLA}
 MOZ_DIR=		${MOZ_VER}
 .endif
 
-MASTER_SITES?=		http://ftp.mozilla.org/pub/mozilla.org/${MOZILLA_SHORT}/releases/${MOZ_DIR}/${MOZ_CONTRIB} \
-			ftp://ftp.mozilla.org/pub/mozilla.org/${MOZILLA_SHORT}/releases/${MOZ_DIR}/${MOZ_CONTRIB} \
-			http://public.planetmirror.com.au/pub/${MOZILLA_SHORT}/releases/${MOZ_DIR}/${MOZ_CONTRIB} \
-			ftp://public.planetmirror.com.au/pub/${MOZILLA_SHORT}/releases/${MOZ_DIR}/${MOZ_CONTRIB} \
-			ftp://ftp.tuwien.ac.at/infosys/browsers/${MOZILLA_SHORT}/releases/${MOZ_DIR}/${MOZ_CONTRIB}
+.if !defined(MASTER_SITES)
+_MASTER_SITES+=		http://ftp.mozilla.org/pub/mozilla.org/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
+_MASTER_SITES+=		ftp://ftp.mozilla.org/pub/mozilla.org/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
+_MASTER_SITES+=		http://public.planetmirror.com.au/pub/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
+_MASTER_SITES+=		ftp://public.planetmirror.com.au/pub/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
+_MASTER_SITES+=		ftp://ftp.tuwien.ac.at/infosys/browsers/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
+.  for _site_ in ${_MASTER_SITES}
+MASTER_SITES+=		${_site_}
+MASTER_SITES+=		${_site_}contrib/
+.  endfor
+.endif
 
 MAINTAINER=		grant@NetBSD.org
 HOMEPAGE?=		http://www.mozilla.org/
@@ -61,12 +67,6 @@ PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
 .  if ${OPSYS} == "NetBSD" && ${MOZ_PLATFORM} == "linux"
 MESSAGE_SRC+=	${.CURDIR}/../../www/mozilla-bin/MESSAGE.compat_linux
-.  endif
-
-# non-linux builds are "unofficial" and in contrib/
-MOZ_CONTRIB?=	contrib/
-.  if defined(MOZ_PLATFORM) && ${MOZ_PLATFORM} == "linux"
-MOZ_CONTRIB?=	# empty
 .  endif
 
 # Linux builds on NetBSD
