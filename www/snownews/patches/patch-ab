@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/12/27 23:04:23 wiz Exp $
+
+--- ../snownews-1.4.2.orig/conversions.c	2003-12-23 04:10:35.000000000 -0700
++++ conversions.c	2003-12-23 15:19:48.000000000 -0700
+@@ -55,7 +55,7 @@
+ 		return NULL;
+ 	}
+ 
+-	if (iconv (cd, &inbuf, &inbytesleft, &outbuf, &outbytesleft) == -1) {
++	if (iconv (cd, (const char **)&inbuf, &inbytesleft, &outbuf, &outbytesleft) == -1) {
+ 		return NULL;
+ 	}
+ 
