@@ -1,13 +1,68 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/03/30 00:25:20 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2001/11/13 21:23:43 jlam Exp $
 
---- kchart/engine.h.orig	Sat Oct 14 16:30:40 2000
-+++ kchart/engine.h
-@@ -13,7 +13,7 @@
+--- filters/kspread/qpro/libqpro/qpro/formula.h.orig	Fri May 25 17:47:33 2001
++++ filters/kspread/qpro/libqpro/qpro/formula.h
+@@ -53,50 +53,37 @@
+    char* formula();
  
- #include <qfont.h>
- #include <qcolor.h>
--#include <values.h>
-+#include <limits.h>
- #include <kchart_part.h>
  
- class KChartParameters;
+-   static void binaryOperand(QpFormula& pThis, const char* pOper)
+-                      {pThis.binaryOperandReal(pOper);}
++   static void binaryOperand(QpFormula& pThis, const char* pOper);
+ 
+-   static void floatFunc(QpFormula& pThis, const char* pFunc)
+-                      {pThis.floatFuncReal(pFunc);}
++   static void floatFunc(QpFormula& pThis, const char* pFunc);
+ 
+    void               formulaStart(const char* pFirstChar);
+ 
+-   static void absKludge(QpFormula& pThis, const char* pFunc)
+-                      {pThis.absKludgeReal(pFunc);}
++   static void absKludge(QpFormula& pThis, const char* pFunc);
+ 
+-   static void func0(QpFormula& pThis, const char* pFunc)
+-                      {pThis.func0Real(pFunc);}
++   static void func0(QpFormula& pThis, const char* pFunc);
+ 
+-   static void func1(QpFormula& pThis, const char* pFunc)
+-                      {pThis.func1Real(pFunc);}
++   static void func1(QpFormula& pThis, const char* pFunc);
+ 
+-   static void func2(QpFormula& pThis, const char* pFunc)
+-                      {pThis.func2Real(pFunc);}
++   static void func2(QpFormula& pThis, const char* pFunc);
+ 
+-   static void func3(QpFormula& pThis, const char* pFunc)
+-                      {pThis.func3Real(pFunc);}
++   static void func3(QpFormula& pThis, const char* pFunc);
+ 
+-   static void func4(QpFormula& pThis, const char* pFunc)
+-                      {pThis.func4Real(pFunc);}
++   static void func4(QpFormula& pThis, const char* pFunc);
+ 
+-   static void funcV(QpFormula& pThis, const char* pFunc)
+-                      {pThis.funcVReal(pFunc);}
++   static void funcV(QpFormula& pThis, const char* pFunc);
+ 
+-   static void intFunc(QpFormula& pThis, const char* pFunc)
+-                      {pThis.intFuncReal(pFunc);}
++   static void intFunc(QpFormula& pThis, const char* pFunc);
+ 
+    void               dropLeadingAt(int pBool=-1);
+ 
+-   static void ref(QpFormula& pThis, const char* pFunc)
+-                      {pThis.refReal(pFunc);}
++   static void ref(QpFormula& pThis, const char* pFunc);
+ 
+    void               replaceFunc(QpFormulaConv* pFuncEntry);
+ 
+-   static void stringFunc(QpFormula& pThis, const char* pFunc)
+-                      {pThis.stringFuncReal(pFunc);}
++   static void stringFunc(QpFormula& pThis, const char* pFunc);
+ 
+-   static void unaryOperand(QpFormula& pThis, const char* pOper)
+-                      {pThis.unaryOperandReal(pOper);}
++   static void unaryOperand(QpFormula& pThis, const char* pOper);
+ 
+ protected:
+    char*              cArgSeparator;

@@ -1,31 +1,57 @@
-$NetBSD: patch-ag,v 1.1.1.1 2001/03/30 00:25:20 hubertf Exp $
+$NetBSD: patch-ag,v 1.2 2001/11/13 21:23:43 jlam Exp $
 
---- kchart/kchartWizardSetupAxesPage.cc.orig	Mon Aug  7 12:17:15 2000
-+++ kchart/kchartWizardSetupAxesPage.cc
-@@ -104,7 +104,7 @@
-   QString tmp;
-   y_interval=new QLineEdit(tmpQGroupBox);
-   grid2->addWidget(y_interval,0,1);
--  if( _chart->params()->requested_yinterval != -MAXDOUBLE)
-+  if( _chart->params()->requested_yinterval != -DBL_MAX)
-     y_interval->setText( tmp.setNum(_chart->params()->requested_yinterval));
+--- lib/kformula/elementindex.h.orig	Sun May 27 15:07:03 2001
++++ lib/kformula/elementindex.h
+@@ -30,7 +30,52 @@
  
-   tmpLabel=new QLabel(tmpQGroupBox);
-@@ -112,7 +112,7 @@
-   grid2->addWidget(tmpLabel,1,0);
-   y_min=new QLineEdit(tmpQGroupBox);
-   grid2->addWidget(y_min,1,1);
--  if( _chart->params()->requested_ymin != MAXDOUBLE)
-+  if( _chart->params()->requested_ymin != DBL_MAX)
-     y_min->setText( tmp.setNum(_chart->params()->requested_ymin));
+ class ElementIndex;
  
-   tmpLabel=new QLabel(tmpQGroupBox);
-@@ -120,7 +120,7 @@
-   grid2->addWidget(tmpLabel,2,0);
-   y_max=new QLineEdit(tmpQGroupBox);
-   grid2->addWidget(y_max,2,1);
--  if( _chart->params()->requested_ymax != -MAXDOUBLE)
-+  if( _chart->params()->requested_ymax != -DBL_MAX)
-     y_max->setText( tmp.setNum(_chart->params()->requested_ymax));
++#if defined(__GNUC__)
++#if __GNUC__ < 2 || (__GNUC__ == 2 && __GNUC_MINOR__ < 93)
++/*
++ * We add a quick 'n' dirty inline implementation of auto_ptr for older
++ * releases of GCC, which don't include an auto_ptr implementation in
++ * <memory>.
++ */
++
++template <class T> class auto_ptr {
++private:
++	T* _ptr;
++
++public:
++	typedef T element_type;
++	explicit auto_ptr(T* p = 0) : _ptr(p) {}
++	auto_ptr(auto_ptr& a) : _ptr(a.release()) {}
++	template <class T1> auto_ptr(auto_ptr<T1>& a) : _ptr(a.release()) {}
++	auto_ptr& operator=(auto_ptr& a) {
++		if (&a != this) {
++			delete _ptr;
++			_ptr = a.release();
++		}
++		return *this;
++	}
++	template <class T1>
++	auto_ptr& operator=(auto_ptr<T1>& a) {
++		if (a.get() != this->get()) {
++			delete _ptr;
++			_ptr = a.release();
++		}
++		return *this;
++	}
++	~auto_ptr() { delete _ptr; }
++
++	T& operator*() const { return *_ptr; }
++	T* operator->() const { return _ptr; }
++	T* get() const { return _ptr; }
++	T* release() { T* tmp = _ptr; _ptr = 0; return tmp; }
++	void reset(T* p = 0) { delete _ptr; _ptr = p; }
++};
++
++typedef auto_ptr<ElementIndex> ElementIndexPtr;
++#endif
++#else
+ typedef std::auto_ptr<ElementIndex> ElementIndexPtr;
++#endif
  
-   grid1->addWidget(tmpQGroupBox,1,0);
+ 
+ /**
