@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/10/19 15:38:36 taya Exp $
+
+diff -ru ../Orig/mozilla/nsprpub/pr/src/pthreads/ptthread.c ./nsprpub/pr/src/pthreads/ptthread.c
+--- ../Orig/mozilla/nsprpub/pr/src/pthreads/ptthread.c	Wed Jul 24 13:06:42 2002
++++ ./nsprpub/pr/src/pthreads/ptthread.c	Wed Aug 28 11:21:40 2002
+@@ -360,7 +360,7 @@
+     /*
+      * Linux doesn't have pthread_attr_setstacksize.
+      */
+-#ifndef LINUX
++#if !defined(LINUX) && !defined(NETBSD)
+     rv = pthread_attr_setstacksize(&tattr, stackSize);
+     PR_ASSERT(0 == rv);
+ #endif
