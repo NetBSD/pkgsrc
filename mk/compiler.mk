@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.15 2003/09/28 09:53:56 grant Exp $
+# $NetBSD: compiler.mk,v 1.16 2003/10/06 07:11:19 grant Exp $
 
 # This Makefile fragment implements handling for supported
 # C/C++/fortran compilers.
@@ -159,7 +159,7 @@ CC=			${_GCC_PREFIX}bin/gcc
 CPP=			${_GCC_PREFIX}bin/cpp
 CXX=			${_GCC_PREFIX}bin/g++
 F77=			${_GCC_PREFIX}bin/g77
-PKG_FC=			${F77}
+PKG_FC:=		${F77}
 
 .elif defined(USE_GCC3) && empty(PKGPATH:Mlang/gcc3) && empty(_PKGSRC_DEPS:Mgcc-3*)
 GCC_REQD=		3.3
@@ -194,7 +194,7 @@ CC=			${_GCC_PREFIX}bin/gcc
 CPP=			${_GCC_PREFIX}bin/cpp
 CXX=			${_GCC_PREFIX}bin/g++
 F77=			${_GCC_PREFIX}bin/g77
-PKG_FC=			${F77}
+PKG_FC:=		${F77}
 .endif	# USE_GCC3
 
 # Ensure that the correct rpath is passed to the linker if we need to
