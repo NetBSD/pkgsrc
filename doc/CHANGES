@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4928 2004/02/21 00:10:42 kristerw Exp $
+$NetBSD: CHANGES,v 1.4929 2004/02/21 00:15:44 sjg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -941,5 +941,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-finance-quote to 1.08 [cube 2004-02-20]
 	Added dcraw-1.169 [drochner 2004-02-20]
 	Updated gphoto2 to 2.1.4 [drochner 2004-02-20]
+	Updated mk-files to 20040214 [sjg 2004-02-20]
+	Updated bmake to 20040220 [sjg 2004-02-20]
 	Updates xmame to 0.79.1 [kristerw 2004-02-21]
 	Updated xmess to 0.79.1 [kristerw 2004-02-21]
