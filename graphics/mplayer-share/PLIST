@@ -1,5 +1,17 @@
-@comment $NetBSD: PLIST,v 1.4 2002/09/29 16:18:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/10/25 18:20:48 wiz Exp $
 man/man1/mplayer.1
+share/mplayer/DOCS/Chinese/bugreports.html
+share/mplayer/DOCS/Chinese/cd-dvd.html
+share/mplayer/DOCS/Chinese/codecs.html
+share/mplayer/DOCS/Chinese/default.css
+share/mplayer/DOCS/Chinese/documentation.html
+share/mplayer/DOCS/Chinese/encoding.html
+share/mplayer/DOCS/Chinese/faq.html
+share/mplayer/DOCS/Chinese/formats.html
+share/mplayer/DOCS/Chinese/skin-zh.html
+share/mplayer/DOCS/Chinese/sound.html
+share/mplayer/DOCS/Chinese/users_against_developers.html
+share/mplayer/DOCS/Chinese/video.html
 share/mplayer/DOCS/German/bugreports.html
 share/mplayer/DOCS/German/cd-dvd.html
 share/mplayer/DOCS/German/codecs.html
@@ -70,7 +82,6 @@ share/mplayer/DOCS/tech/codecs.conf.txt
 share/mplayer/DOCS/tech/colorspaces.txt
 share/mplayer/DOCS/tech/cvs-howto.txt
 share/mplayer/DOCS/tech/dr-methods.txt
-share/mplayer/DOCS/tech/formats-hun.txt
 share/mplayer/DOCS/tech/formats.txt
 share/mplayer/DOCS/tech/general.txt
 share/mplayer/DOCS/tech/hwac3.txt
