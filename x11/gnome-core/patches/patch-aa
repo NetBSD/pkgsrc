@@ -1,20 +1,30 @@
-$NetBSD: patch-aa,v 1.4 1999/08/29 12:42:57 rh Exp $
+$NetBSD: patch-aa,v 1.5 1999/10/23 11:01:44 tron Exp $
 
---- configure.orig	Tue Jul 20 00:59:19 1999
-+++ configure	Sun Aug 29 13:16:08 1999
-@@ -2351,6 +2351,7 @@
-   ac_tool_prefix=
+--- configure.orig	Wed Oct  6 08:52:20 1999
++++ configure	Sat Oct 23 11:52:52 1999
+@@ -2139,6 +2139,7 @@
  fi
  
+ 
 +if false; then
+ # Check for any special flags to pass to ltconfig.
+ #
+ # the following will cause an existing older ltconfig to fail, so
+@@ -2297,6 +2298,7 @@
+ 
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
- 
-@@ -2583,6 +2584,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
 +fi
  
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
+@@ -6660,6 +6662,9 @@
+ s%@CATALOGS@%$CATALOGS%g
+ s%@CATOBJEXT@%$CATOBJEXT%g
+ s%@DATADIRNAME@%$DATADIRNAME%g
++s%@ESD_CFLAGS@%$ESD_CFLAGS%g
++s%@ESD_CONFIG@%$ESD_CONFIG%g
++s%@ESD_LIBS@%$ESD_LIBS%g
+ s%@GMOFILES@%$GMOFILES%g
+ s%@INSTOBJEXT@%$INSTOBJEXT%g
+ s%@INTLDEPS@%$INTLDEPS%g
