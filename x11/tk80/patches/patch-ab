@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.5 1998/08/07 11:18:16 agc Exp $
+$NetBSD: patch-ab,v 1.6 1998/09/10 14:22:32 agc Exp $
 
---- Makefile.in.orig	Tue Nov 25 17:41:56 1997
-+++ Makefile.in	Sun Mar  1 17:38:40 1998
+--- Makefile.in.orig	Tue Nov 25 16:41:56 1997
++++ Makefile.in	Thu Sep 10 14:10:29 1998
 @@ -56,7 +56,9 @@
  BIN_DIR =		$(exec_prefix)/bin
  
@@ -36,35 +36,44 @@ $NetBSD: patch-ab,v 1.5 1998/08/07 11:18:16 agc Exp $
  INSTALL_PROGRAM =	${INSTALL}
  INSTALL_DATA =		${INSTALL} -m 644
  
-@@ -290,6 +292,11 @@
- 	@MAKE_LIB@
- 	$(RANLIB) @TK_LIB_FILE@
+@@ -286,9 +288,7 @@
+ # The following target is configured by autoconf to generate either
+ # a shared library or non-shared library for Tk.
+ @TK_LIB_FILE@: ${OBJS}
+-	rm -f @TK_LIB_FILE@
+-	@MAKE_LIB@
+-	$(RANLIB) @TK_LIB_FILE@
++	${LIBTOOL} --mode=link cc -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:0
  
-+libtk80.a: ${OBJS}
-+	rm -f libtk80.a
-+	ar cr libtk80.a ${OBJS}
-+	$(RANLIB) libtk80.a
-+
  # Make target which outputs the list of the .o contained in the Tk lib
  # usefull to build a single big shared library containing Tcl/Tk and other
- # extensions.  used for the Tcl Plugin.  -- dl
-@@ -340,7 +347,7 @@
- # some ranlibs write to current directory, and this might not always be
- # possible (e.g. if installing as root).
+@@ -301,15 +301,15 @@
  
--install-binaries: $(TK_LIB_FILE) wish
-+install-binaries: $(TK_LIB_FILE) libtk80.a wish
- 	@for i in $(LIB_INSTALL_DIR) $(BIN_INSTALL_DIR) ; \
- 	    do \
- 	    if [ ! -d $$i ] ; then \
-@@ -354,13 +361,19 @@
- 	@$(INSTALL_DATA) $(TK_LIB_FILE) $(LIB_INSTALL_DIR)/$(TK_LIB_FILE)
- 	@(cd $(LIB_INSTALL_DIR); $(RANLIB) $(TK_LIB_FILE))
+ 
+ wish: $(WISH_OBJS) $(TK_LIB_FILE)
+-	$(CC) @LD_FLAGS@ $(WISH_OBJS) @TK_BUILD_LIB_SPEC@ $(LIBS) \
++	${LIBTOOL} --mode=link $(CC) @LD_FLAGS@ $(WISH_OBJS) @TK_BUILD_LIB_SPEC@ $(LIBS) \
+ 		$(TK_CC_SEARCH_FLAGS) -o wish
+ 
+ tktest: $(TKTEST_OBJS) $(TK_LIB_FILE)
+-	${CC} @LD_FLAGS@ $(TKTEST_OBJS) @TK_BUILD_LIB_SPEC@ $(LIBS) \
++	${LIBTOOL} --mode=link ${CC} @LD_FLAGS@ $(TKTEST_OBJS) @TK_BUILD_LIB_SPEC@ $(LIBS) \
+ 		$(TK_CC_SEARCH_FLAGS) -o tktest
+ 
+ xttest: test.o tkTest.o tkSquare.o $(TK_LIB_FILE)
+-	${CC} @LD_FLAGS@ test.o tkTest.o tkSquare.o \
++	${LIBTOOL} --mode=link ${CC} @LD_FLAGS@ test.o tkTest.o tkSquare.o \
+ 		@TK_BUILD_LIB_SPEC@ $(LIBS) \
+ 		@TK_LD_SEARCH_FLAGS@ -lXt -o xttest
+ 
+@@ -351,16 +351,17 @@
+ 		fi; \
+ 	    done;
+ 	@echo "Installing $(TK_LIB_FILE)"
+-	@$(INSTALL_DATA) $(TK_LIB_FILE) $(LIB_INSTALL_DIR)/$(TK_LIB_FILE)
+-	@(cd $(LIB_INSTALL_DIR); $(RANLIB) $(TK_LIB_FILE))
++	@${LIBTOOL} --mode=install $(INSTALL_DATA) ${TK_LIB_FILE:.a=.la} $(LIB_INSTALL_DIR)/$(TK_LIB_FILE)
  	@chmod 555 $(LIB_INSTALL_DIR)/$(TK_LIB_FILE)
-+	@echo "Installing libtk80.a"
-+	@$(INSTALL_DATA) libtk80.a $(LIB_INSTALL_DIR)/libtk80.a
-+	@(cd $(LIB_INSTALL_DIR); $(RANLIB) libtk80.a)
-+	@chmod 555 $(LIB_INSTALL_DIR)/libtk80.a
  	@echo "Installing wish"
  	@$(INSTALL_PROGRAM) wish $(BIN_INSTALL_DIR)/wish$(VERSION)
  	@echo "Installing tkConfig.sh"
@@ -78,7 +87,7 @@ $NetBSD: patch-ab,v 1.5 1998/08/07 11:18:16 agc Exp $
  		$(SCRIPT_INSTALL_DIR) $(SCRIPT_INSTALL_DIR)/images; \
  	    do \
  	    if [ ! -d $$i ] ; then \
-@@ -370,8 +383,18 @@
+@@ -370,8 +371,18 @@
  		else true; \
  		fi; \
  	    done;
@@ -99,7 +108,7 @@ $NetBSD: patch-ab,v 1.5 1998/08/07 11:18:16 agc Exp $
  	for i in $(SRC_DIR)/library/*.tcl $(SRC_DIR)/library/tclIndex $(SRC_DIR)/library/prolog.ps $(UNIX_DIR)/tkAppInit.c; \
  	    do \
  	    echo "Installing $$i"; \
-@@ -430,7 +453,7 @@
+@@ -430,7 +441,7 @@
  	@cd $(SRC_DIR)/doc; for i in *.1; \
  	    do \
  	    echo "Installing doc/$$i"; \
@@ -108,7 +117,7 @@ $NetBSD: patch-ab,v 1.5 1998/08/07 11:18:16 agc Exp $
  	    sed -e '/man\.macros/r man.macros' -e '/man\.macros/d' \
  		    $$i > $(MAN1_INSTALL_DIR)/$$i; \
  	    chmod 444 $(MAN1_INSTALL_DIR)/$$i; \
-@@ -439,7 +462,7 @@
+@@ -439,7 +450,7 @@
  	@cd $(SRC_DIR)/doc; for i in *.3; \
  	    do \
  	    echo "Installing doc/$$i"; \
@@ -117,7 +126,7 @@ $NetBSD: patch-ab,v 1.5 1998/08/07 11:18:16 agc Exp $
  	    sed -e '/man\.macros/r man.macros' -e '/man\.macros/d' \
  		    $$i > $(MAN3_INSTALL_DIR)/$$i; \
  	    chmod 444 $(MAN3_INSTALL_DIR)/$$i; \
-@@ -448,7 +471,7 @@
+@@ -448,7 +459,7 @@
  	@cd $(SRC_DIR)/doc; for i in *.n; \
  	    do \
  	    echo "Installing doc/$$i"; \
@@ -126,3 +135,367 @@ $NetBSD: patch-ab,v 1.5 1998/08/07 11:18:16 agc Exp $
  	    sed -e '/man\.macros/r man.macros' -e '/man\.macros/d' \
  		    $$i > $(MANN_INSTALL_DIR)/$$i; \
  	    chmod 444 $(MANN_INSTALL_DIR)/$$i; \
+@@ -474,275 +485,267 @@
+ # because this doesn't work on some strange compilers (e.g. UnixWare).
+ 
+ tkTestInit.o: $(UNIX_DIR)/tkAppInit.c
+-	@if test -f tkAppInit.o ; then \
+-	    rm -f tkAppInit.sav; \
+-	    mv tkAppInit.o tkAppInit.sav; \
+-	fi;
+-	$(CC) -c $(CC_SWITCHES) -DTK_TEST $(UNIX_DIR)/tkAppInit.c
+-	rm -f tkTestInit.o
+-	mv tkAppInit.o tkTestInit.o
+-	@if test -f tkAppInit.sav ; then \
+-	    mv tkAppInit.sav tkAppInit.o; \
+-	fi;
++	ln -fs ${UNIX_DIR}/tkAppInit.c tkTestInit.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) -DTK_TEST $(UNIX_DIR)/tkTestInit.c
+ 
+ tk3d.o: $(GENERIC_DIR)/tk3d.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tk3d.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tk3d.c
+ 
+ tkAppInit.o: $(UNIX_DIR)/tkAppInit.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkAppInit.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkAppInit.c
+ 
+ tkArgv.o: $(GENERIC_DIR)/tkArgv.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkArgv.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkArgv.c
+ 
+ tkAtom.o: $(GENERIC_DIR)/tkAtom.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkAtom.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkAtom.c
+ 
+ tkBind.o: $(GENERIC_DIR)/tkBind.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkBind.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkBind.c
+ 
+ tkBitmap.o: $(GENERIC_DIR)/tkBitmap.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkBitmap.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkBitmap.c
+ 
+ tkClipboard.o: $(GENERIC_DIR)/tkClipboard.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkClipboard.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkClipboard.c
+ 
+ tkCmds.o: $(GENERIC_DIR)/tkCmds.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkCmds.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkCmds.c
+ 
+ tkColor.o: $(GENERIC_DIR)/tkColor.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkColor.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkColor.c
+ 
+ tkConfig.o: $(GENERIC_DIR)/tkConfig.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkConfig.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkConfig.c
+ 
+ tkCursor.o: $(GENERIC_DIR)/tkCursor.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkCursor.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkCursor.c
+ 
+ tkError.o: $(GENERIC_DIR)/tkError.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkError.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkError.c
+ 
+ tkEvent.o: $(GENERIC_DIR)/tkEvent.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkEvent.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkEvent.c
+ 
+ tkFocus.o: $(GENERIC_DIR)/tkFocus.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkFocus.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkFocus.c
+ 
+ tkFont.o: $(GENERIC_DIR)/tkFont.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkFont.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkFont.c
+ 
+ tkGet.o: $(GENERIC_DIR)/tkGet.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkGet.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkGet.c
+ 
+ tkGC.o: $(GENERIC_DIR)/tkGC.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkGC.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkGC.c
+ 
+ tkGeometry.o: $(GENERIC_DIR)/tkGeometry.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkGeometry.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkGeometry.c
+ 
+ tkGrab.o: $(GENERIC_DIR)/tkGrab.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkGrab.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkGrab.c
+ 
+ tkGrid.o: $(GENERIC_DIR)/tkGrid.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkGrid.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkGrid.c
+ 
+ tkMain.o: $(GENERIC_DIR)/tkMain.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkMain.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkMain.c
+ 
+ tkOption.o: $(GENERIC_DIR)/tkOption.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkOption.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkOption.c
+ 
+ tkPack.o: $(GENERIC_DIR)/tkPack.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkPack.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkPack.c
+ 
+ tkPlace.o: $(GENERIC_DIR)/tkPlace.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkPlace.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkPlace.c
+ 
+ tkSelect.o: $(GENERIC_DIR)/tkSelect.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkSelect.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkSelect.c
+ 
+ tkUtil.o: $(GENERIC_DIR)/tkUtil.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkUtil.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkUtil.c
+ 
+ tkVisual.o: $(GENERIC_DIR)/tkVisual.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkVisual.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkVisual.c
+ 
+ tkWindow.o: $(GENERIC_DIR)/tkWindow.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkWindow.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkWindow.c
+ 
+ tkButton.o: $(GENERIC_DIR)/tkButton.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkButton.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkButton.c
+ 
+ tkEntry.o: $(GENERIC_DIR)/tkEntry.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkEntry.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkEntry.c
+ 
+ tkFrame.o: $(GENERIC_DIR)/tkFrame.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkFrame.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkFrame.c
+ 
+ tkListbox.o: $(GENERIC_DIR)/tkListbox.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkListbox.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkListbox.c
+ 
+ tkMenu.o: $(GENERIC_DIR)/tkMenu.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkMenu.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkMenu.c
+ 
+ tkMenubutton.o: $(GENERIC_DIR)/tkMenubutton.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkMenubutton.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkMenubutton.c
+ 
+ tkMenuDraw.o: $(GENERIC_DIR)/tkMenuDraw.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkMenuDraw.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkMenuDraw.c
+ 
+ tkMessage.o: $(GENERIC_DIR)/tkMessage.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkMessage.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkMessage.c
+ 
+ tkScale.o: $(GENERIC_DIR)/tkScale.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkScale.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkScale.c
+ 
+ tkScrollbar.o: $(GENERIC_DIR)/tkScrollbar.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkScrollbar.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkScrollbar.c
+ 
+ tkSquare.o: $(GENERIC_DIR)/tkSquare.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkSquare.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkSquare.c
+ 
+ tkCanvas.o: $(GENERIC_DIR)/tkCanvas.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkCanvas.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkCanvas.c
+ 
+ tkCanvArc.o: $(GENERIC_DIR)/tkCanvArc.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkCanvArc.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkCanvArc.c
+ 
+ tkCanvBmap.o: $(GENERIC_DIR)/tkCanvBmap.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkCanvBmap.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkCanvBmap.c
+ 
+ tkCanvImg.o: $(GENERIC_DIR)/tkCanvImg.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkCanvImg.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkCanvImg.c
+ 
+ tkCanvLine.o: $(GENERIC_DIR)/tkCanvLine.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkCanvLine.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkCanvLine.c
+ 
+ tkCanvPoly.o: $(GENERIC_DIR)/tkCanvPoly.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkCanvPoly.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkCanvPoly.c
+ 
+ tkCanvPs.o: $(GENERIC_DIR)/tkCanvPs.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkCanvPs.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkCanvPs.c
+ 
+ tkCanvText.o: $(GENERIC_DIR)/tkCanvText.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkCanvText.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkCanvText.c
+ 
+ tkCanvUtil.o: $(GENERIC_DIR)/tkCanvUtil.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkCanvUtil.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkCanvUtil.c
+ 
+ tkCanvWind.o: $(GENERIC_DIR)/tkCanvWind.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkCanvWind.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkCanvWind.c
+ 
+ tkRectOval.o: $(GENERIC_DIR)/tkRectOval.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkRectOval.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkRectOval.c
+ 
+ tkTrig.o: $(GENERIC_DIR)/tkTrig.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkTrig.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkTrig.c
+ 
+ tkImage.o: $(GENERIC_DIR)/tkImage.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkImage.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkImage.c
+ 
+ tkImgBmap.o: $(GENERIC_DIR)/tkImgBmap.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkImgBmap.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkImgBmap.c
+ 
+ tkImgGIF.o: $(GENERIC_DIR)/tkImgGIF.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkImgGIF.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkImgGIF.c
+ 
+ tkImgPPM.o: $(GENERIC_DIR)/tkImgPPM.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkImgPPM.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkImgPPM.c
+ 
+ tkImgPhoto.o: $(GENERIC_DIR)/tkImgPhoto.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkImgPhoto.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkImgPhoto.c
+ 
+ tkTest.o: $(GENERIC_DIR)/tkTest.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkTest.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkTest.c
+ 
+ tkText.o: $(GENERIC_DIR)/tkText.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkText.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkText.c
+ 
+ tkTextBTree.o: $(GENERIC_DIR)/tkTextBTree.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkTextBTree.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkTextBTree.c
+ 
+ tkTextDisp.o: $(GENERIC_DIR)/tkTextDisp.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkTextDisp.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkTextDisp.c
+ 
+ tkTextImage.o: $(GENERIC_DIR)/tkTextImage.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkTextImage.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkTextImage.c
+ 
+ tkTextIndex.o: $(GENERIC_DIR)/tkTextIndex.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkTextIndex.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkTextIndex.c
+ 
+ tkTextMark.o: $(GENERIC_DIR)/tkTextMark.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkTextMark.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkTextMark.c
+ 
+ tkTextTag.o: $(GENERIC_DIR)/tkTextTag.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkTextTag.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkTextTag.c
+ 
+ tkTextWind.o: $(GENERIC_DIR)/tkTextWind.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkTextWind.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tkTextWind.c
+ 
+ tkUnix.o: $(UNIX_DIR)/tkUnix.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnix.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnix.c
+ 
+ tkUnix3d.o: $(UNIX_DIR)/tkUnix3d.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnix3d.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnix3d.c
+ 
+ tkUnixButton.o: $(UNIX_DIR)/tkUnixButton.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixButton.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixButton.c
+ 
+ tkUnixColor.o: $(UNIX_DIR)/tkUnixColor.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixColor.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixColor.c
+ 
+ tkUnixCursor.o: $(UNIX_DIR)/tkUnixCursor.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixCursor.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixCursor.c
+ 
+ tkUnixDialog.o: $(UNIX_DIR)/tkUnixDialog.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixDialog.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixDialog.c
+ 
+ tkUnixDraw.o: $(UNIX_DIR)/tkUnixDraw.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixDraw.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixDraw.c
+ 
+ tkUnixEmbed.o: $(UNIX_DIR)/tkUnixEmbed.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixEmbed.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixEmbed.c
+ 
+ tkUnixEvent.o: $(UNIX_DIR)/tkUnixEvent.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixEvent.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixEvent.c
+ 
+ tkUnixFocus.o: $(UNIX_DIR)/tkUnixFocus.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixFocus.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixFocus.c
+ 
+ tkUnixFont.o: $(UNIX_DIR)/tkUnixFont.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixFont.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixFont.c
+ 
+ tkUnixInit.o: $(UNIX_DIR)/tkUnixInit.c $(GENERIC_DIR)/tkInitScript.h tkConfig.sh
+-	$(CC) -c $(CC_SWITCHES) -DTK_LIBRARY=\"${TK_LIBRARY}\" \
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) -DTK_LIBRARY=\"${TK_LIBRARY}\" \
+ 	    $(UNIX_DIR)/tkUnixInit.c
+ 
+ tkUnixMenu.o: $(UNIX_DIR)/tkUnixMenu.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixMenu.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixMenu.c
+ 
+ tkUnixMenubu.o: $(UNIX_DIR)/tkUnixMenubu.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixMenubu.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixMenubu.c
+ 
+ tkUnixScale.o: $(UNIX_DIR)/tkUnixScale.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixScale.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixScale.c
+ 
+ tkUnixScrlbr.o: $(UNIX_DIR)/tkUnixScrlbr.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixScrlbr.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixScrlbr.c
+ 
+ tkUnixSelect.o: $(UNIX_DIR)/tkUnixSelect.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixSelect.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixSelect.c
+ 
+ tkUnixSend.o: $(UNIX_DIR)/tkUnixSend.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixSend.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixSend.c
+ 
+ tkUnixWm.o: $(UNIX_DIR)/tkUnixWm.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixWm.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixWm.c
+ 
+ tkUnixXId.o: $(UNIX_DIR)/tkUnixXId.c
+-	$(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixXId.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(UNIX_DIR)/tkUnixXId.c
+ 
+ .c.o:
+-	$(CC) -c $(CC_SWITCHES) $<
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $<
+ 
+ #
+ # Target to check for proper usage of UCHAR macro.
