@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/03/26 02:27:39 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/17 23:59:21 snj Exp $
 #
 
 .include "./Makefile.common"
@@ -16,5 +16,5 @@ CONFIGURE_ARGS+= 	--with-extra-prefix=${BUILDLINK_PREFIX.qt3-libs} \
 			--with-qt-libraries=${BUILDLINK_PREFIX.qt3-libs}/qt3/lib \
 			--with-frontend=qt
 
-.include "../../x11/qt3-tools/buildlink2.mk"
+.include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
