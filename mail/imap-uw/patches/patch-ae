@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.4 1998/08/07 11:09:37 agc Exp $
+$NetBSD: patch-ae,v 1.5 1998/11/22 22:59:25 tv Exp $
 
 --- src/osdep/unix/Makefile.orig	Thu Jul 16 21:12:22 1998
 +++ src/osdep/unix/Makefile	Tue Aug  4 22:23:05 1998
@@ -31,7 +31,7 @@ $NetBSD: patch-ae,v 1.4 1998/08/07 11:09:37 agc Exp $
 -	@cat ARCHIVE
 -	@$(SH) ARCHIVE
 +	$(CC) -o $(ARCHIVE) $(BINARIES:.o=.lo) -rpath $(PREFIX)/lib \
-+		-version-info 1:0
++		-version-info 2:0
  
  # Cleanup
  
