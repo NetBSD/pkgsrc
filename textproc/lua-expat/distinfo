@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/04/05 13:57:53 xtraeme Exp $
+
+SHA1 (luaexpat-1.0a.tar.gz) = f9393bf4cc1f41b34336b4f2e14fdbf7adf06c55
+Size (luaexpat-1.0a.tar.gz) = 16460 bytes
+SHA1 (patch-aa) = 6c7d49c6d153170b6475b4fcbfedc67cd8e34cd7
+SHA1 (patch-ab) = 3e083f15ef99fc6e0931416f092093ed821f4927
