@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/10/03 00:15:00 tv Exp $
+# $NetBSD: Makefile,v 1.27 2004/11/26 09:39:30 jlam Exp $
 #
 
 DISTNAME=	Gauche-0.8.1
@@ -32,8 +32,8 @@ CONFIGURE_ARGS+=	--enable-multibyte=${GAUCHE_MULTIBYTE}
 .endif
 
 .include "../../devel/boehm-gc/buildlink3.mk"
-.include "../../devel/dlcompat/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
 .if !empty(_WITH_ICONV_LIB)
