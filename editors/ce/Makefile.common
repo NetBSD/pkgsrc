@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2003/07/17 21:34:21 grant Exp $
+# $NetBSD: Makefile.common,v 1.4 2004/02/14 15:29:15 jlam Exp $
 #
 
 DISTNAME=		ce-${VERSION}
@@ -15,8 +15,6 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--without-ce-malloc
 CONFIGURE_ARGS+=	--with-curses
-CONFIG_GUESS_OVERRIDE=	${WRKSRC}/support/config.guess
-CONFIG_SUB_OVERRIDE=	${WRKSRC}/support/config.sub
 
 PATCHDIR=		${.CURDIR}/../ce/patches
 DISTINFO_FILE=		${.CURDIR}/../ce/distinfo
