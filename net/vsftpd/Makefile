@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/19 11:32:02 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/22 11:24:06 martti Exp $
 #
 
-DISTNAME=	vsftpd-0.9.1
+DISTNAME=	vsftpd-1.0.1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ferret.lmh.ox.ac.uk/pub/linux/
 
@@ -17,7 +17,9 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/vsftpd
 	${INSTALL_DATA} ${WRKSRC}/vsftpd.conf ${PREFIX}/share/examples/vsftpd
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/vsftpd
+	${INSTALL_DATA} ${WRKSRC}/FAQ ${PREFIX}/share/doc/vsftpd
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/vsftpd
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/vsftpd
+	${INSTALL_DATA} ${WRKSRC}/TUNING ${PREFIX}/share/doc/vsftpd
 
 .include "../../mk/bsd.pkg.mk"

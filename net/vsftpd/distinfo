@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/06/19 11:32:02 zuntum Exp $
+$NetBSD: distinfo,v 1.2 2002/08/22 11:24:06 martti Exp $
 
-SHA1 (vsftpd-0.9.1.tar.gz) = 8c076fa74b05c82d9c4bce013af59757508b10f9
-Size (vsftpd-0.9.1.tar.gz) = 87136 bytes
-SHA1 (patch-aa) = 152f1a73b3bb08dd36458a20bf2be47e253184bd
+SHA1 (vsftpd-1.0.1.tar.gz) = e2bfc8dc670b93e449d3a7edb836b43b44edc017
+Size (vsftpd-1.0.1.tar.gz) = 92976 bytes
+SHA1 (patch-aa) = 040eddd45fce6c8700731d74edca84c19b86ff3e
