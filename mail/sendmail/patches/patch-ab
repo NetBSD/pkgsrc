@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.10 2001/04/13 05:07:51 itojun Exp $
+$NetBSD: patch-ab,v 1.11 2001/04/15 01:18:07 itojun Exp $
 
---- devtools/OS/SunOS.5.6.orig	Mon Dec 18 01:17:51 2000
-+++ devtools/OS/SunOS.5.6	Fri Mar 16 09:22:38 2001
-@@ -7,6 +7,7 @@
+--- devtools/OS/SunOS.5.6	Tue Jun  6 02:03:29 2000
++++ devtools/OS/SunOS.5.6	Wed Jul 26 13:07:21 2000
+@@ -6,6 +6,7 @@
+ define(`confMAPDEF', `-DNDBM -DNIS -DNISPLUS -DMAP_REGEX')
  define(`confENVDEF', `-DSOLARIS=20600')
- define(`confSM_OS_HEADER', `sm_os_sunos')
  define(`confLIBS', `-lsocket -lnsl -lkstat')
 +define(`confLDOPTS', `${LDFLAGS}')
  define(`confMTLDOPTS', `-lpthread')

@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.35 2001/04/13 05:07:50 itojun Exp $
+# $NetBSD: Makefile,v 1.36 2001/04/15 01:18:06 itojun Exp $
 
-DISTNAME=	sendmail.8.12.0.Beta7
-PKGNAME=	sendmail-8.11.99.7
+DISTNAME=	sendmail.8.11.3
+PKGNAME=	sendmail-8.11.3
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
 		ftp://ftp.fu-berlin.de/pub/unix/mail/sendmail/ \
 		ftp://ftp.kyoto.wide.ad.jp/pub/mail/sendmail/
 
-#PATCH_SITES=	ftp://ftp.kyoto.wide.ad.jp/pub/mail/smtpfeed/
-#PATCHFILES=	sendmail8.11.3+3.4W.patch.gz
-#PATCH_DIST_ARGS=-d ${WRKSRC}/sendmail -E ${PATCH_DIST_STRIP}
-#.if !(defined(PATCH_DEBUG) || defined(PKG_VERBOSE))
-#PATCH_DIST_ARGS+=--forward --quiet
-#.endif
-#PATCH_DIST_STRIP=	-p1
+PATCH_SITES=	ftp://ftp.kyoto.wide.ad.jp/pub/mail/smtpfeed/
+PATCHFILES=	sendmail8.11.3+3.4W.patch.gz
+PATCH_DIST_ARGS=-d ${WRKSRC}/sendmail -E ${PATCH_DIST_STRIP}
+.if !(defined(PATCH_DEBUG) || defined(PKG_VERBOSE))
+PATCH_DIST_ARGS+=--forward --quiet
+.endif
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.sendmail.org/
@@ -25,7 +25,7 @@ NO_CONFIGURE=	yes
 MAKE_ENV+=	BSD_BINOWN="${BINOWN}" BSD_BINGRP="${BINGRP}" \
 		BSD_MANOWN="${MANOWN}" BSD_MANGRP="${MANGRP}"
 
-WRKSRC=		${WRKDIR}/sendmail-8.12.0.Beta7
+WRKSRC=		${WRKDIR}/${PKGNAME}
 SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
 
 BUILD_DEFS+=    USE_INET6
@@ -58,7 +58,7 @@ post-patch:
 	${CP} ${PKGDIR}/DESCR ${DESCR_SRC}
 	${ECHO} '---' >> ${DESCR_SRC}
 	${ECHO} -n 'compiled features:' >> ${DESCR_SRC}
-#	${ECHO} -n ' WIDE' >> ${DESCR_SRC}
+	${ECHO} -n ' WIDE' >> ${DESCR_SRC}
 .if defined(USE_INET6) && ${USE_INET6} == YES
 	${CAT} ${FILESDIR}/site.config.m4-v6 >> ${SITECONFIG}
 	${ECHO} -n ' INET6' >> ${DESCR_SRC}

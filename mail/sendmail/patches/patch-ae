@@ -1,18 +1,13 @@
-$NetBSD: patch-ae,v 1.3 2001/04/13 05:07:52 itojun Exp $
+$NetBSD: patch-ae,v 1.4 2001/04/15 01:18:07 itojun Exp $
 
---- devtools/OS/SunOS.5.9.orig	Mon Dec 18 01:17:51 2000
-+++ devtools/OS/SunOS.5.9	Fri Mar 16 09:23:59 2001
-@@ -2,10 +2,11 @@
- define(`confCC', `gcc')
- define(`confLDOPTS_SO', `-G')
+--- devtools/OS/SunOS.5.9.orig	Tue Oct 10 19:25:30 2000
++++ devtools/OS/SunOS.5.9	Tue Oct 10 19:26:27 2000
+@@ -3,5 +3,6 @@
  define(`confBEFORE', `sysexits.h')
 -define(`confMAPDEF', `-DNDBM -DNIS -DNISPLUS -DMAP_REGEX -DLDAPMAP')
 +define(`confMAPDEF', `-DNDBM -DNIS -DNISPLUS -DMAP_REGEX')
  define(`confENVDEF', `-DSOLARIS=20900 -DNETINET6')
- define(`confSM_OS_HEADER', `sm_os_sunos')
 -define(`confLIBS', `-lsocket -lnsl -lldap')
 +define(`confLIBS', `-lsocket -lnsl')
 +define(`confLDOPTS', `${LDFLAGS}')
  define(`confMTLDOPTS', `-lpthread')
- define(`confMBINDIR', `/usr/lib')
- define(`confEBINDIR', `/usr/lib')
