@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/12/04 23:37:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.31 2005/01/07 01:10:14 minskim Exp $
 #
 
 DISTNAME=	${OPENCM_VERSION}-2-src
@@ -17,6 +17,7 @@ USE_PKGINSTALL=	YES
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/${INFO_DIR}
+CONFIGURE_ARGS+=	--with-ssl-dir=${BUILDLINK_PREFIX.openssl}
 
 OPENCM_VERSION=	opencm-0.1.2alpha8
 
