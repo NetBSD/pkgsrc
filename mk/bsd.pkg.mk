@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.221 1999/03/08 17:26:54 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.222 1999/03/09 11:14:52 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -621,7 +621,7 @@ DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
 PKGNAME?=		${DISTNAME}
 
 # Latest version of pkgtools required for this file.
-# XXX There's a condiotinal hack for "pkg_delete -O" for
+# XXX There's a conditional hack for "pkg_delete -O" for
 #     _PKGTOOLS_VER>=19990302 below which should be backed out if this
 #     is bumped beyond 19990302.  - HF
 PKGTOOLS_REQD=		19990119
@@ -1113,7 +1113,8 @@ do-package: ${PLIST} ${DESCR}
 		${ECHO_MSG} "===>  Building package for ${PKGNAME}";	\
 		if [ -d ${PACKAGES} ]; then				\
 			if [ ! -d ${PKGREPOSITORY} ]; then		\
-				if [ ! ${MKDIR} ${PKGREPOSITORY} ]; then \
+				${MKDIR} ${PKGREPOSITORY};		\
+				if [ $$? -ne 0 ]; then			\
 					${ECHO_MSG} ">> Can't create directory ${PKGREPOSITORY}."; \
 					exit 1;				\
 				fi;					\
@@ -1137,7 +1138,8 @@ package-links:
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${.MAKEFLAGS} delete-package-links
 	${_PKG_SILENT}${_PKG_DEBUG}for cat in ${CATEGORIES}; do		\
 		if [ ! -d ${PACKAGES}/$$cat ]; then			\
-			if [ ! ${MKDIR} ${PACKAGES}/$$cat ]; then	\
+			${MKDIR} ${PACKAGES}/$$cat;			\
+			if [ $$? -ne 0 ]; then				\
 				${ECHO_MSG} ">> Can't create directory ${PACKAGES}/$$cat."; \
 				exit 1;					\
 			fi;						\
@@ -1480,8 +1482,9 @@ deinstall: uptodate-pkgtools
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${INSTALL_COOKIE} ${PACKAGE_COOKIE}
 .if (${DEINSTALLDEPENDS} != "NO")
 	${_PKG_SILENT}${_PKG_DEBUG}				\
-	if ! ${PKG_INFO} -qe ${PKGNAME} ; then			\
-		${MAKE} deinstall-depends ;			\
+	${PKG_INFO} -qe ${PKGNAME};				\
+	if [ $$? -ne 0 ]; then					\
+		${MAKE} deinstall-depends;			\
 	fi
 .endif # DEINSTALLDEPENDS != "NO"
 .endif # target(deinstall)
