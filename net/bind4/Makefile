@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/11/23 21:39:41 tv Exp $
+# $NetBSD: Makefile,v 1.2 1999/04/30 17:02:45 tv Exp $
 #
 
 DISTNAME=	bind-4.9.7-REL
@@ -10,6 +10,10 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.isc.org/
 
 NO_WRKSUBDIR=	yes
+
+.if !exists(/usr/sbin/named-bootconf)
+IGNORE=		"Used with NetBSD 1.4 or higher"
+.endif
 
 post-extract:
 	@${RM} -f ${WRKSRC}/compat/include/sys/cdefs.h
