@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8091 2004/11/27 22:34:19 jdolecek Exp $
+$NetBSD: CHANGES,v 1.8092 2004/11/27 23:01:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5553,3 +5553,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated psi to 0.9.2 [jdolecek 2004-11-27]
 	Removed psi-ssl [jdolecek 2004-11-27]
 	Updated php-jpgraph to 2.16 [jdolecek 2004-11-27]
+	Updated scmxx to 0.7.4 [wiz 2004-11-27]
