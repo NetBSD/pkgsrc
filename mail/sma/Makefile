@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/12/03 15:15:03 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/01/04 15:34:23 wiz Exp $
 
 DISTNAME=       sma-1.3.2
 CATEGORIES=	mail
@@ -16,6 +16,10 @@ MAKEFILE=	Makefile
 BUILD_TARGET=	sma
 
 .include "../../mk/bsd.prefs.mk"
+
+.if empty(LOWER_OPSYS:Mirix5*)                                                                     
+CFLAGS+=	-DUSE_REGEXP                                                                        
+.endif                                                                                             
 
 do-install:
 	cd ${WRKSRC};						\
