@@ -1,4 +1,4 @@
-/*	$NetBSD: extern.h,v 1.1.1.1 2003/06/23 11:46:17 grant Exp $	*/
+/*	$NetBSD: extern.h,v 1.2 2003/07/08 18:40:29 jschauma Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -258,6 +258,7 @@ extern int pids;
 extern int rmleadslash;
 extern int exit_val;
 extern int docrc;
+extern int to_stdout;
 extern char *dirptr;
 extern char *ltmfrmt;
 extern char *argv0;

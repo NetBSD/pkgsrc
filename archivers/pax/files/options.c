@@ -1,4 +1,4 @@
-/*	$NetBSD: options.c,v 1.1.1.1 2003/06/23 11:46:25 grant Exp $	*/
+/*	$NetBSD: options.c,v 1.2 2003/07/08 18:40:30 jschauma Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -47,7 +47,7 @@
 #if 0
 static char sccsid[] = "@(#)options.c	8.2 (Berkeley) 4/18/94";
 #else
-__RCSID("$NetBSD: options.c,v 1.1.1.1 2003/06/23 11:46:25 grant Exp $");
+__RCSID("$NetBSD: options.c,v 1.2 2003/07/08 18:40:30 jschauma Exp $");
 #endif
 #endif /* not lint */
 
@@ -725,6 +725,7 @@ struct option tar_longopts[] = {
 	{ "gunzip",		no_argument,		0,	'z' },
 	{ "read-full-blocks",	no_argument,		0,	'B' },
 	{ "directory",		required_argument,	0,	'C' },
+	{ "to-stdout",		no_argument,		0,	'O' },
 	{ "absolute-paths",	no_argument,		0,	'P' },
 	{ "files-from",		required_argument,	0,	'T' },
 	{ "exclude-from",	required_argument,	0,	'X' },
@@ -765,7 +766,6 @@ struct option tar_longopts[] = {
 	{ "multi-volume",	no_argument,		0,	'M' },
 	{ "after-date",		required_argument,	0,	'N' },
 	{ "newer",		required_argument,	0,	'N' },
-	{ "to-stdout",		no_argument,		0,	'O' },
 	{ "record-number",	no_argument,		0,	'R' },
 	{ "remove-files",	no_argument,		0,
 						OPT_REMOVE_FILES },
@@ -1092,8 +1092,13 @@ tar_options(int argc, char **argv)
 	if (act == ARCHIVE || act == APPND)
 		frmt = &(fsub[Oflag ? F_TAR : F_USTAR]);
 	else if (Oflag) {
-		tty_warn(1, "The -O/-o options are only valid when writing an archive");
-		tar_usage();		/* only valid when writing */
+		if (act == EXTRACT)
+			to_stdout = 1;
+		else {
+			tty_warn(1, "The -O/-o options are only valid when "
+			    "writing or extracting an archive");
+			tar_usage();
+		}
 	}
 
 	/*

@@ -1,4 +1,4 @@
-.\" $NetBSD: tar.1,v 1.1.1.1 2003/06/23 11:46:39 grant Exp $
+.\" $NetBSD: tar.1,v 1.2 2003/07/08 18:40:30 jschauma Exp $
 .\"
 .\" Copyright (c) 1996 SigmaSoft, Th. Lockert
 .\" All rights reserved.
@@ -124,7 +124,8 @@ Do not cross filesystems.
 .It Fl m , -modification-time
 Do not preserve modification time.
 .It Fl O
-Write old-style (non-POSIX) archives.
+When creating and appending to an archive, write old-style (non-POSIX) archives.
+When extracting from an archive, extract to standard output.
 .It Fl o , -portability , -old-archive
 Don't write directory information that the older (V7) style
 .Nm
