@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 16:30:47 martti Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/22 20:43:04 jmmv Exp $
 #
 
 DISTNAME=		SpiralSynth-0.1.7
@@ -19,6 +19,8 @@ USE_BUILDLINK2=		yes
 USE_X11=		yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
+MAKE_ENV+=		CXXFLAGS="${CXXFLAGS}"
+CXXFLAGS+=		-DDEVOSSAUDIO="\"\\\"$(DEVOSSAUDIO)\\\"\""
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/SpiralSynth ${PREFIX}/bin
@@ -27,4 +29,5 @@ do-install:
 		${WRKSRC}/.Spiralrc ${PREFIX}/share/spiralsynth
 
 .include "../../x11/fltk/buildlink2.mk"
+.include "../../mk/ossaudio.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
