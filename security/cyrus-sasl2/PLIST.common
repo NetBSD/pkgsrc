@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.7 2003/03/19 22:24:21 jlam Exp $
+@comment $NetBSD: PLIST.common,v 1.8 2003/05/26 06:53:07 martti Exp $
 etc/rc.d/saslauthd
 include/sasl/hmac-md5.h
 include/sasl/md5.h
@@ -11,7 +11,7 @@ lib/libsasl2.a
 lib/libsasl2.la
 lib/libsasl2.so
 lib/libsasl2.so.2
-lib/libsasl2.so.2.12
+lib/libsasl2.so.2.13
 man/cat8/saslauthd.8
 man/man3/sasl.3
 man/man3/sasl_authorize_t.3
@@ -62,13 +62,13 @@ share/doc/html/cyrus-sasl/advanced.html
 share/doc/html/cyrus-sasl/appconvert.html
 share/doc/html/cyrus-sasl/draft-burdis-cat-srp-sasl-06.txt
 share/doc/html/cyrus-sasl/draft-ietf-cat-sasl-gssapi-05.txt
-share/doc/html/cyrus-sasl/draft-melnikov-rfc2831bis-02.txt
+share/doc/html/cyrus-sasl/draft-ietf-sasl-anon-00.txt
+share/doc/html/cyrus-sasl/draft-ietf-sasl-plain-00.txt
+share/doc/html/cyrus-sasl/draft-ietf-sasl-rfc2831bis-00.txt
 share/doc/html/cyrus-sasl/draft-myers-saslrev-02.txt
 share/doc/html/cyrus-sasl/draft-nerenberg-sasl-crammd5-03.txt
-share/doc/html/cyrus-sasl/draft-newman-sasl-c-api-00.txt
+share/doc/html/cyrus-sasl/draft-newman-sasl-c-api-01.txt
 share/doc/html/cyrus-sasl/draft-sasl-login.txt
-share/doc/html/cyrus-sasl/draft-zeilenga-sasl-anon-01.txt
-share/doc/html/cyrus-sasl/draft-zeilenga-sasl-plain-01.txt
 share/doc/html/cyrus-sasl/gssapi.html
 share/doc/html/cyrus-sasl/index.html
 share/doc/html/cyrus-sasl/install.html
