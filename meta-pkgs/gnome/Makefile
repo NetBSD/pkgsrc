@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/07/11 19:39:01 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/07/11 19:44:28 wiz Exp $
 
 DISTNAME=	gnome-1.4.0.6
 CATEGORIES=	meta-pkgs x11 gnome
@@ -7,7 +7,7 @@ DISTFILES=	# empty
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
-COMMENT=	meackageta-package for the GNU Network Object Model Environment
+COMMENT=	meta-package for the GNU Network Object Model Environment
 
 DEPENDS+=	gnome-core>=1.4.0.4nb1:../../x11/gnome-core
 DEPENDS+=	ee>=0.3.12:../../graphics/ee

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/14 00:51:24 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/07/11 19:44:27 wiz Exp $
 #
 
 DISTNAME=	fxtv-capture-1.0
@@ -7,7 +7,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	wiz@netbsd.org
-COMMENT=	meta-pkg including all pkgs to capture video with bktr(4)
+COMMENT=	meta-package including all packages to capture video with bktr(4)
 
 DEPENDS+=	sox>=12.17.1:../../audio/sox
 DEPENDS+=	mpegaudio>=3.9:../../audio/mpegaudio
