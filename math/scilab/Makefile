@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2004/03/08 20:27:15 minskim Exp $
+# $NetBSD: Makefile,v 1.50 2004/03/10 23:41:44 dmcmahill Exp $
 #
 
 DISTNAME=	${SCIBASE}.src
@@ -23,17 +23,19 @@ SITES_scicos_blocks.tar.gz=	ftp://ftp.inria.fr/INRIA/Projects/Meta2/Scilab/misc/
 NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
 			NetBSD-1.5.*-alpha NetBSD-1.5[A-U]-alpha
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_FORTRAN=		yes
 USE_X11BASE=		yes
 USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-xaw3d
-CONFIGURE_ARGS+=	--with-tcl-library=${BUILDLINK_DIR}/lib
-CONFIGURE_ARGS+=	--with-tcl-include=${BUILDLINK_DIR}/include
-CONFIGURE_ARGS+=	--with-tk-library=${BUILDLINK_DIR}/lib
-CONFIGURE_ARGS+=	--with-tk-include=${BUILDLINK_DIR}/include
+
+TCL_DIR=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-tcl-library=${TCL_DIR}/lib
+CONFIGURE_ARGS+=	--with-tcl-include=${TCL_DIR}/include
+CONFIGURE_ARGS+=	--with-tk-library=${TCL_DIR}/lib
+CONFIGURE_ARGS+=	--with-tk-include=${TCL_DIR}/include
 
 # override HOME to avoid picking up a bad ${HOME}/.scilab during the build
 MAKE_ENV+=		HOME=${WRKSRC}
@@ -44,6 +46,8 @@ PVM_ROOT?=		${LOCALBASE}/pvm3
 CONFIGURE_ENV+=		PVM_ROOT=${PVM_ROOT}
 CONFIGURE_ENV+=		X11BASE=${X11BASE}
 PLIST_SUBST+=		SCIBASE=${SCIBASE}
+
+UNBUILDLINK_FILES+=	Makemex config/configuration config/Makeso.incl
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -68,13 +72,25 @@ post-extract:
 		cd ${WRKSRC}/macros/${f} && ${EXTRACT_CMD}
 .endfor
 
+# clean up any possible leftovers from 'make test' so that our PLIST
+# will still be right.  Also clean up a reference to WRKSRC.
+pre-install:
+	cd ${WRKSRC}/tests && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} distclean
+	cd ${WRKSRC}/examples && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} distclean
+	mv ${WRKSRC}/maple/maple2scilab.mpl ${WRKSRC}/maple/maple2scilab.mpl.bak
+	${SED} 's;${WRKSRC};${PREFIX}/lib/${SCIBASE};g' ${WRKSRC}/maple/maple2scilab.mpl.bak > \
+		${WRKSRC}/maple/maple2scilab.mpl
+	${RM} -f ${WRKSRC}/maple/maple2scilab.mpl.bak
+
 # delete some .orig files that got created by patching
 # also fix the libtool link
 post-install:
 	${RM} -f ${PREFIX}/lib/${SCIBASE}/config/Makeso.incl.in.orig
 	${RM} -f ${PREFIX}/lib/${SCIBASE}/macros/util/scipad.sci.orig
+	${RM} -f ${PREFIX}/lib/${SCIBASE}/config/Makeso.incl.subst.sav
+	${RM} -f ${PREFIX}/lib/${SCIBASE}/config/configuration.subst.sav
 	${RM} -f ${PREFIX}/lib/${SCIBASE}/libtool
-	${LN} -s ${LIBTOOL} ${PREFIX}/lib/${SCIBASE}/libtool
+	${LN} -s ${LOCALBASE}/bin/libtool ${PREFIX}/lib/${SCIBASE}/libtool
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=		2.95.3
@@ -90,6 +106,6 @@ do-test:
 		${MAKE_ENV} ${MAKE_PROGRAM} tests 2>&1 | \
 		tee ${WRKDIR}/examples.log
 
-.include "../../parallel/pvm3/buildlink2.mk"
-.include "../../x11/tk83/buildlink2.mk"
+.include "../../parallel/pvm3/buildlink3.mk"
+.include "../../x11/tk83/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
