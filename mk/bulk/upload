@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.14 2004/02/16 20:25:35 hubertf Exp $
+# $NetBSD: upload,v 1.15 2004/02/25 09:20:59 grant Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
@@ -32,17 +32,17 @@ if [ -z "$RSYNC_DST_SPECIFIC" -o -z "$RSYNC_DST_OTHER" ]; then
 	echo "RSYNC_DST_SPECIFIC should be set to the destination for packages"
 	echo "which have the OSVERSION_SPECIFIC flag set.  I.e., the complete OS"
 	echo "version number is required.  For example:"
-	echo "  user@ftp.netbsd.org:/pub/NetBSD/packages/1.5.1/alpha"
+	echo "  user@ftp.NetBSD.org:/pub/NetBSD/packages/1.5.1/alpha"
 	echo " "
 	echo "RSYNC_DST_OTHER should be set to the destination for packages"
 	echo "which do _not_ have the OSVERSION_SPECIFIC flag set.  I.e., only"
 	echo "the major.minor release string is used.  For example, on a 1.5.1"
 	echo "alpha system you would use:"
-	echo "  user@ftp.netbsd.org:/pub/NetBSD/packages/1.5/alpha"
+	echo "  user@ftp.NetBSD.org:/pub/NetBSD/packages/1.5/alpha"
 	echo "If you are building from pkgsrc current, set the destination"
 	echo "to major.minor-latest. For example, on a 1.6.1 m68k system where"
 	echo "building pkgsrc current (assuming pkgsrc-1-6 is already built):"
-	echo "  user@ftp.netbsd.org:/pub/NetBSD/packages/1.6-latest/m68k"
+	echo "  user@ftp.NetBSD.org:/pub/NetBSD/packages/1.6-latest/m68k"
 	echo " "
 	exit 1
 fi
