@@ -1,15 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2003/06/05 21:41:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/06/23 19:21:40 jmc Exp $
 bin/fftw-wisdom
 bin/fftw-wisdom-to-conf
 include/fftw3.f
 include/fftw3.h
 @unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/fftw3.info
 info/fftw3.info
-info/fftw3.info-1
-info/fftw3.info-2
-info/fftw3.info-3
-info/fftw3.info-4
-info/fftw3.info-5
 @exec ${INSTALL_INFO} --info-dir=%D/info %D/info/fftw3.info
 lib/libfftw3.a
 lib/libfftw3.la
