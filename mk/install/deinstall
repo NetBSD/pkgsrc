@@ -1,45 +1,59 @@
 # start of deinstall
 #
-# $NetBSD: deinstall,v 1.6 2001/11/25 18:54:57 jlam Exp $
+# $NetBSD: deinstall,v 1.7 2001/11/26 14:48:53 jlam Exp $
 
-ALL_FILES="${ALL_FILES} ${CONF_FILES} ${SUPPORT_FILES}"
-set -- ${RCD_SCRIPTS}
-while [ $# -gt 0 ]
+eval set -- ${CONF_FILES} ${SUPPORT_FILES}
+for file
 do
-	samplefile="${PKG_PREFIX}/etc/rc.d/$1"
-	file="${RCD_SCRIPTS_DIR}/$1"
-	shift
-	ALL_FILES="${ALL_FILES} ${samplefile} ${file}"
+	ALL_FILES="${ALL_FILES} \"${file}\""
 done
-set -- ${CONF_FILES_PERMS} ${SUPPORT_FILES_PERMS}
+eval set -- ${RCD_SCRIPTS}
+for script
+do
+	samplefile="${PKG_PREFIX}/etc/rc.d/${script}"
+	file="${RCD_SCRIPTS_DIR}/${script}"
+	shift
+	ALL_FILES="${ALL_FILES} \"${samplefile}\" \"${file}\""
+done
+eval set -- ${CONF_FILES_PERMS} ${SUPPORT_FILES_PERMS}
 while [ $# -gt 0 ]
 do
 	samplefile="$1"; file="$2"; owner="$3"; group="$4"; mode="$5"
 	shift; shift; shift; shift; shift 
-	ALL_FILES="${ALL_FILES} ${samplefile} ${file}"
+	ALL_FILES="${ALL_FILES} \"${samplefile}\" \"${file}\""
 done
 
-ALL_MAKE_DIRS="${ALL_MAKE_DIRS} ${MAKE_DIRS}"
-set -- ${MAKE_DIRS_PERMS}
+eval set -- ${MAKE_DIRS}
+for dir
+do
+	ALL_MAKE_DIRS="${ALL_MAKE_DIRS} \"${dir}\""
+done
+eval set -- ${MAKE_DIRS_PERMS}
 while [ $# -gt 0 ]
 do
 	dir="$1"; owner="$2"; group="$3"; mode="$4"
 	shift; shift; shift; shift
-	ALL_MAKE_DIRS="${ALL_MAKE_DIRS} ${dir}"
+	ALL_MAKE_DIRS="${ALL_MAKE_DIRS} \"${dir}\""
 done
-ALL_DIRS="${ALL_DIRS} ${ALL_MAKE_DIRS} ${OWN_DIRS}"
-set -- ${OWN_DIRS_PERMS}
+eval set -- ${ALL_MAKE_DIRS} ${OWN_DIRS}
+for dir
+do
+	ALL_DIRS="${ALL_DIRS} \"${dir}\""
+done
+eval set -- ${OWN_DIRS_PERMS}
 while [ $# -gt 0 ]
 do
 	dir="$1"; owner="$2"; group="$3"; mode="$4"
 	shift; shift; shift; shift
-	ALL_DIRS="${ALL_DIRS} ${dir}"
+	ALL_DIRS="${ALL_DIRS} \"${dir}\""
 done
-ALL_DIRS=`								\
-	${ECHO} ${ALL_DIRS} |						\
-	${SED} "s,[ 	][ 	]*, ,g" |				\
-	${TR} ' ' "\012" |						\
-	${SORT} -r							\
+ALL_DIRS=`
+	(	eval set -- ${ALL_DIRS}
+		for dir
+		do
+			${ECHO} "\"${dir}\""
+		done
+	) | ${SORT} -r
 `
 
 case ${STAGE} in
@@ -47,18 +61,18 @@ DEINSTALL)
 	# Remove configuration files if they don't differ from the default
 	# config file.
 	#
-	set -- ${ALL_FILES}
+	eval set -- ${ALL_FILES}
 	while [ $# -gt 0 ]
 	do
 		samplefile="$1"; file="$2"
 		shift; shift
 
 		if [ "${file}" != "${samplefile}" -a			\
-		     -e ${file} -a -e ${samplefile} ]
+		     -e "${file}" -a -e "${samplefile}" ]
 		then
-			if ${CMP} -s ${file} ${samplefile}
+			if ${CMP} -s "${file}" "${samplefile}"
 			then
-				${RM} -f ${file}
+				${RM} -f "${file}"
 			fi
 		fi
 	done
@@ -66,38 +80,40 @@ DEINSTALL)
 
 POST-DEINSTALL)
 	modified_files=''
-	set -- ${ALL_FILES}
+	eval set -- ${ALL_FILES}
 	while [ $# -gt 0 ]
 	do
 		samplefile="$1"; file="$2"
 		shift; shift
 
-		if [ -e ${file} ]
+		if [ -e "${file}" ]
 		then
-			modified_files="${modified_files} ${file}"
+			modified_files="${modified_files} \"${file}\""
 		fi
 	done
 
 	existing_dirs=''
-	set -- ${ALL_DIRS}
-	while [ $# -gt 0 ]
+	eval set -- ${ALL_DIRS}
+	for dir
 	do
-		dir=$1; shift
-		is_make_dir=0
-		for make_dir in __dummy ${ALL_MAKE_DIRS}
-		do
-			if [ "${make_dir}" != "__dummy" -a		\
-			     "${dir}" = "${make_dir}" ]
-			then
-				is_make_dir=1
-				break
-			fi
-		done
-
-		${RMDIR} -p ${dir} 2>/dev/null || ${TRUE}
-		if [ ${is_make_dir} -eq 0 -a -d ${dir} ]
+		is_make_dir=`
+			(	eval set -- ${ALL_MAKE_DIRS}
+				is_make_dir=0
+				for make_dir
+				do
+					if [ "${dir}" = "${make_dir}" ]
+					then
+						is_make_dir=1
+						break
+					fi
+				done
+				${ECHO} ${is_make_dir}
+			)
+		`
+		${RMDIR} -p "${dir}" 2>/dev/null || ${TRUE}
+		if [ ${is_make_dir} -eq 0 -a -d "${dir}" ]
 		then
-			existing_dirs="${existing_dirs} ${dir}"
+			existing_dirs="${existing_dirs} \"${dir}\""
 		fi
 	done
 
@@ -129,7 +145,8 @@ EOF
   * the following files:
 
 EOF
-			for file in ${modified_files}
+			eval set -- ${modified_files}
+			for file
 			do
 				${ECHO} "	${file}"
 			done
@@ -141,7 +158,8 @@ EOF
   * the following directories:
 
 EOF
-			for dir in ${existing_dirs}
+			eval set -- ${existing_dirs}
+			for dir
 			do
 				${ECHO} "	${dir}"
 			done
