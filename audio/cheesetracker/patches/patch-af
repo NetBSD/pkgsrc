@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 2001/11/22 15:37:20 agc Exp $
+
+--- src/loader_it_info.cpp.orig	Wed Sep  5 22:40:40 2001
++++ src/loader_it_info.cpp
+@@ -24,6 +24,7 @@
+ 
+ 	file_read.get_byte_array((Uint8*)header.identifier,4);
+ 	header.identifier[4]=0;
++	aux_string=(char*)header.identifier;
+         if ( aux_string!="IMPM" ) return FILE_FORMAT_NOT_RECOGNIZED;
+ 
+ 	file_read.get_byte_array((Uint8*)header.songname,26);
