@@ -1,4 +1,4 @@
-# $NetBSD: bsd.hacks.mk,v 1.1 2004/11/14 07:23:07 jlam Exp $
+# $NetBSD: bsd.hacks.mk,v 1.2 2004/11/30 15:09:45 tv Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -57,12 +57,10 @@
 # .endif  # FOO_HACKS_MK
 # -------------8<-------------8<-------------8<-------------8<-------------
 
-.include "../../mk/bsd.prefs.mk"
-
 PKG_HACKS?=	# empty
 
-.if exists(${.CURDIR}/hacks.mk)
-.  include "${.CURDIR}/hacks.mk"
+.if exists(${PKGDIR}/hacks.mk)
+.  include "${PKGDIR}/hacks.mk"
 .endif
 
 # Record any package hacks that we use in the installed package.
