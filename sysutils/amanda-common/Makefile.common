@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2004/12/28 09:06:42 minskim Exp $
+# $NetBSD: Makefile.common,v 1.16 2004/12/28 09:10:50 minskim Exp $
 #
 # common make file fragment shared by all amanda-* pkgs.
 #
@@ -20,7 +20,7 @@ AMANDA_GROUP?=		operator
 
 AMANDA_USER?=		backup
 AMANDA_TMP?=		/tmp/amanda
-AMANDA_VAR?=		/var/amanda
+AMANDA_VAR?=		${VARBASE}/amanda
 
 BUILD_DEFS+=		AMANDA_USER AMANDA_GROUP AMANDA_SMB
 BUILD_DEFS+=		AMANDA_TMP AMANDA_VAR
