@@ -1,9 +1,9 @@
-$NetBSD: patch-ae,v 1.7 2003/12/07 13:17:11 kristerw Exp $
+$NetBSD: patch-ae,v 1.8 2003/12/14 17:14:40 wiz Exp $
 
---- libguile/gc_os_dep.c.orig	Sat Dec  7 23:41:31 2002
-+++ libguile/gc_os_dep.c	Sat Dec  6 14:16:54 2003
-@@ -93,12 +93,27 @@
- #    define OPENBSD
+--- libguile/gc_os_dep.c.orig	2003-04-16 22:16:21.000000000 +0200
++++ libguile/gc_os_dep.c
+@@ -98,12 +98,27 @@ typedef int GC_bool;
+ #    define NETBSD
  #    define mach_type_known
  # endif
 -# if defined(__NetBSD__) && defined(m68k)
@@ -32,7 +32,7 @@ $NetBSD: patch-ae,v 1.7 2003/12/07 13:17:11 kristerw Exp $
  #    define ARM32
  #    define NETBSD
  #    define mach_type_known
-@@ -217,7 +232,7 @@
+@@ -227,7 +242,7 @@ typedef int GC_bool;
  # endif
  # if defined(__alpha) || defined(__alpha__)
  #   define ALPHA
