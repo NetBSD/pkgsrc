@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1.1.1 2003/03/15 20:28:01 kei Exp $
+
+case ${STAGE} in
+PRE-DEINSTALL)
+	;;
+
+DEINSTALL)
+	;;
+
+POST-DEINSTALL)
+	${MV} @VFONTCAPDIR@/vfontcap.orig @VFONTCAPDIR@/vfontcap
+	;;
+
+*)
+	${ECHO} "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+
+esac

@@ -1,0 +1,9 @@
+# $NetBSD: vfontcap,v 1.1.1.1 2003/03/15 20:28:01 kei Exp $
+# vfontcap - configuration file for VFlib
+
+min|min5|min6|min7|min8|min9|min10|min12|min17|Mincho Font:\
+	:ft=freetype:\
+	:ff=/usr/pkg/lib/X11/fonts/TrueType/kochi-mincho.ttf:
+goth|goth5||goth6|goth7|goth8|goth9|goth10|goth12|goth17|Gothic Font:\
+	:ft=freetype:\
+	:ff=/usr/pkg/lib/X11/fonts/TrueType/kochi-gothic.ttf:

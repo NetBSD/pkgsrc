@@ -1,0 +1,18 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2003/03/15 20:28:01 kei Exp $
+
+case ${STAGE} in
+PRE-INSTALL)
+	${MV} @VFONTCAPDIR@/vfontcap @VFONTCAPDIR@/vfontcap.orig
+	;;
+
+POST-INSTALL)
+	;;
+
+*)
+	${ECHO} "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+
+esac
