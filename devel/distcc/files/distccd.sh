@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: distccd.sh,v 1.6 2004/11/17 11:45:49 xtraeme Exp $
+# $NetBSD: distccd.sh,v 1.7 2005/02/18 07:50:49 xtraeme Exp $
 #
 
 # PROVIDE: distccd
@@ -17,6 +17,16 @@ pidfile="@DISTCC_PIDDIR@/${name}.pid"
 command_args="--daemon --pid-file ${pidfile}"
 distccd_user="@DISTCC_USER@"
 distccd_group="@DISTCC_GROUP@"
+start_precmd="distcc_precmd"
+
+distcc_precmd()
+{
+    if [ ! -d @DISTCC_PIDDIR@ ]; then
+	@MKDIR@ @DISTCC_PIDDIR@
+	@CHMOD@ 0700 @DISTCC_PIDDIR@
+	@CHOWN@ @DISTCC_USER@ @DISTCC_PIDDIR@
+    fi
+}
 
 if [ -f /etc/rc.subr -a -f /etc/rc.conf -a -f /etc/rc.d/DAEMON ]; then
 	load_rc_config $name
@@ -24,6 +34,7 @@ if [ -f /etc/rc.subr -a -f /etc/rc.conf -a -f /etc/rc.d/DAEMON ]; then
 else
 	case ${1:-start} in
 	start)
+		distcc_precmd
 		if [ -x ${command} ]; then
 			echo "Starting ${name}."
 			eval ${command} ${distccd_flags} ${command_args}
