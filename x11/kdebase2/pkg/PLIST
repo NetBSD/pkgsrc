@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/03/24 13:42:05 skrll Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/05/08 15:58:05 dmcmahill Exp $
 bin/appletproxy
 bin/chooser
 bin/conttest
@@ -209,6 +209,7 @@ lib/kde2/libkcm_email.la
 lib/kde2/libkcm_email.so
 lib/kde2/libkcm_energy.a
 lib/kde2/libkcm_energy.la
+lib/kde2/libkcm_energy.so
 lib/kde2/libkcm_filetypes.a
 lib/kde2/libkcm_filetypes.la
 lib/kde2/libkcm_filetypes.so
@@ -268,6 +269,7 @@ lib/kde2/libkcm_samba.la
 lib/kde2/libkcm_samba.so
 lib/kde2/libkcm_screensaver.a
 lib/kde2/libkcm_screensaver.la
+lib/kde2/libkcm_screensaver.so
 lib/kde2/libkcm_smserver.a
 lib/kde2/libkcm_smserver.la
 lib/kde2/libkcm_smserver.so
