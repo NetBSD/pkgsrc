@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2001/06/11 06:34:20 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2001/07/03 18:23:46 dmcmahill Exp $
 #
 
-DISTNAME=	verilog-20010520
-PKGNAME=	verilog-current-20010520
+DISTNAME=	verilog-20010630
+PKGNAME=	verilog-current-20010630
 CATEGORIES=	cad
 MASTER_SITES=	ftp://icarus.com/pub/eda/verilog/snapshots/
 
@@ -19,5 +19,6 @@ CONFLICTS+=	verilog-[0-9]*
 GNU_CONFIGURE=	yes
 USE_GMAKE=      yes
 CPPFLAGS+=      -I${LOCALBASE}/include
+CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}" LDFLAGS+="${LDFLAGS}"
 
 .include "../../mk/bsd.pkg.mk"
