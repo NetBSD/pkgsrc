@@ -1,0 +1,29 @@
+--- uml/mylistview.cpp.orig	2004-06-15 19:29:10.000000000 +0200
++++ uml/mylistview.cpp	2004-06-15 19:30:09.000000000 +0200
+@@ -264,7 +264,7 @@
+ 	}else if(pt == ACTOR || pt == USECASE)
+ 	{
+ 		item = ucv;
+-	}else{ cerr<<"ERROR:listview:find"<<endl;return 0;}
++	}else{ std::cerr<<"ERROR:listview:find"<<std::endl;return 0;}
+ 	temp = (MyListViewItem *)item->firstChild();
+ 	while(temp)
+ 	{
+@@ -333,7 +333,7 @@
+ 		}
+ 		item =(MyListViewItem *)item -> nextSibling();
+ 	}//end while
+-	cerr<<"Error findchild"<<endl;
++	std::cerr<<"Error findchild"<<std::endl;
+ 	return 0;
+ }
+ ////////////////////////////////////////////////////////////////////////////////////////////////////
+@@ -379,7 +379,7 @@
+ 	for( ; (temp = (MyListViewItem*)it.current()); ++it )
+ 		if(temp->getID() == id)
+ 			return temp;
+-	cerr<<"Can't find list item by id"<<endl;
++	std::cerr<<"Can't find list item by id"<<std::endl;
+ 	return 0;
+ }
+ ////////////////////////////////////////////////////////////////////////////////////////////////////

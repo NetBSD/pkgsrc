@@ -1,0 +1,26 @@
+--- uml/classopspage.cpp.orig	2004-06-15 19:33:30.000000000 +0200
++++ uml/classopspage.cpp	2004-06-15 19:34:27.000000000 +0200
+@@ -308,12 +308,12 @@
+ 	oldA = o -> findParm( parmsLB -> currentText());
+ 	if(!o)
+ 	{
+-		cerr<<"can't find op from selection"<<endl;
++		std::cerr<<"can't find op from selection"<<std::endl;
+ 		return;
+ 	}
+ 	if(id == RENAME || id == PROPERTIES)
+ 	{
+-		if(!oldA){cerr<<"THE impossible has occurred for:"<<parmsLB -> currentText()<<endl;
++		if(!oldA){std::cerr<<"THE impossible has occurred for:"<<parmsLB -> currentText()<<std::endl;
+ 			return;}//should never occur
+ 		ParmPropDlg d((QWidget *)doc, oldA);
+ 		result = d.exec();
+@@ -420,7 +420,7 @@
+ 	Operation * o = (Operation *)concept -> findChildObject(OPERATION, s);
+ 	if(!o && id != NEWOP)
+ 	{
+-		cerr<<"can't find op from selection"<<endl;
++		std::cerr<<"can't find op from selection"<<std::endl;
+ 		return;
+ 	}
+ 	switch(id)

@@ -1,0 +1,45 @@
+--- uml/umldoc.cpp.orig	2004-06-15 19:25:09.000000000 +0200
++++ uml/umldoc.cpp	2004-06-15 19:27:14.000000000 +0200
+@@ -352,7 +352,7 @@
+ 				}
+ 				else
+ 				{
+-					cerr<<"CreateUMLObject(int) error"<<endl;
++					std::cerr<<"CreateUMLObject(int) error"<<std::endl;
+ 					return;
+ 				}
+ 				objectList.append(o);
+@@ -398,7 +398,7 @@
+ 				}
+ 				else
+ 				{
+-					cerr<<"ERROR _CREATEUMLOBJECT"<<endl;
++					std::cerr<<"ERROR _CREATEUMLOBJECT"<<std::endl;
+ 					return;
+ 				}
+ 				loop = false;
+@@ -514,7 +514,7 @@
+ 	bool loop = true;
+ 	UMLObject *p = (UMLObject *)o->parent();
+ 	if(!p){
+-		cerr<<"Can't create object, no parent found"<<endl;
++		std::cerr<<"Can't create object, no parent found"<<std::endl;
+ 		return;}		
+ 	QString oldName= o->name();
+ 	while(loop)
+@@ -844,13 +844,13 @@
+ {
+ 	if(!clipboard)
+ 	{
+-		cerr <<"clipboard deleted and trying to paste.  WHAT!!!"<<endl;
++		std::cerr <<"clipboard deleted and trying to paste.  WHAT!!!"<<std::endl;
+ 		return;
+ 	}
+ 	currentView -> pasteSelection(clipboard);
+ }
+ 
+-void UMLDoc::setModified(bool _m=true)
++void UMLDoc::setModified(bool _m)
+ {	
+ 	modified = _m;
+ 	((UMLApp *) parent()) -> setModified(_m);

@@ -1,0 +1,11 @@
+--- uml/messagewidget.cpp.orig	2004-06-15 19:30:28.000000000 +0200
++++ uml/messagewidget.cpp	2004-06-15 19:30:43.000000000 +0200
+@@ -201,7 +201,7 @@
+ 		connect(wB, SIGNAL(sigWidgetMoved(int)), this, SLOT(slotWidgetMoved(int)));
+ 		if(!wA || !wB)
+ 		{
+-			cerr<<"Can't make message"<<endl;
++			std::cerr<<"Can't make message"<<std::endl;
+ 			status = false;
+ 		}
+ 

@@ -1,0 +1,11 @@
+--- uml/classpropdlg.cpp.orig	2004-06-15 19:32:55.000000000 +0200
++++ uml/classpropdlg.cpp	2004-06-15 19:33:20.000000000 +0200
+@@ -87,7 +87,7 @@
+ 	UMLObject * o = ((Concept*)object) -> findChildObject(id);
+ 	if(o)
+ 		doc -> signalChildUMLObjectUpdate(o);
+-	else cerr<<"slot dlg: can't find child"<<endl;
++	else std::cerr<<"slot dlg: can't find child"<<std::endl;
+ }
+ ////////////////////////////////////////////////////////////////////////////////////////////////////
+ void ClassPropDlg::slotApply()

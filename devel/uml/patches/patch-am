@@ -1,0 +1,11 @@
+--- uml/umlwidget.cpp.orig	2004-06-15 19:22:01.000000000 +0200
++++ uml/umlwidget.cpp	2004-06-15 19:22:41.000000000 +0200
+@@ -376,7 +376,7 @@
+ 		object = view -> getDocument() -> findUMLObject(id);
+ 		if(!object && type >= ACTOR && type <= OBJECT)
+    	{
+-   		cerr<<"CAN'T FIND OBJECT TO USE IN VIEW id : "<<id<<endl;
++   		std::cerr<<"CAN'T FIND OBJECT TO USE IN VIEW id : "<<id<<std::endl;
+    		status = false;
+    	}
+    	else if(object)
