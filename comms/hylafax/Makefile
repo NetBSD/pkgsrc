@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2003/09/23 21:39:46 abs Exp $
+# $NetBSD: Makefile,v 1.33 2003/10/08 10:07:15 taca Exp $
 #
 
 DISTNAME=	hylafax-4.1.7
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.hylafax.org/
 COMMENT=	Telecommunication and fax server system
 
 DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
-DEPENDS+=	jpeg-6b:../../graphics/jpeg
+DEPENDS+=	jpeg>=6b:../../graphics/jpeg
 DEPENDS+=	mawk>=1.2.2:../../lang/mawk
 
 DIST_SUBDIR=	hylafax
