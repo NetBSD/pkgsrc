@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/08 16:06:45 sakamoto Exp $
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/termios.so
+share/examples/ruby/termios/test0.rb
+share/examples/ruby/termios/test1.rb
+share/examples/ruby/termios/test2.rb
+share/examples/ruby/termios/test3.rb
+@dirrm share/examples/ruby/termios
