@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/07/06 20:44:05 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:30 tv Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.4.
 # XXX After this file as been verified as correct, the comment lines
@@ -22,6 +22,7 @@ BUILDLINK_PACKAGES+=	libgnomeuimm20
 
 .if !empty(LIBGNOMEUIMM20_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libgnomeuimm20+=	libgnomeuimm20>=2.0.0
+BUILDLINK_RECOMMENDED.libgnomeuimm20+=	libgnomeuimm20>=2.0.0nb1
 BUILDLINK_PKGSRCDIR.libgnomeuimm20?=	../../devel/libgnomeuimm20
 .endif	# LIBGNOMEUIMM20_BUILDLINK3_MK
 

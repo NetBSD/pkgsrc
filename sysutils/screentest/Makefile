@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/04/18 23:07:05 snj Exp $
+# $NetBSD: Makefile,v 1.7 2004/10/03 00:18:16 tv Exp $
 #
 
 DISTNAME=	screentest-1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils x11
 MASTER_SITES=	ftp://ftp.linux.cz/pub/linux/people/jan_kasprzak/screentest/
 

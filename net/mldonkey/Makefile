@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2004/05/25 10:38:18 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2004/10/03 00:17:55 tv Exp $
 #
 
 DISTNAME=	mldonkey-2.5.21
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://savannah.nongnu.org/download/mldonkey/
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/13 23:00:36 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/03 00:13:17 tv Exp $
 #
 
 DISTNAME=	atasm104
 PKGNAME=        atasm-1.04
+PKGREVISION=	1
 CATEGORIES=	devel cross emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=atasm/}
 EXTRACT_SUFX=	.zip

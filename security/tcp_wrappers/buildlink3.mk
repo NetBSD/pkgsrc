@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/03/10 17:57:15 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/10/03 00:18:13 tv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 TCP_WRAPPERS_BUILDLINK3_MK:=	${TCP_WRAPPERS_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	tcp_wrappers
 
 .if !empty(TCP_WRAPPERS_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.tcp_wrappers+=	tcp_wrappers>=7.6.1nb1
+BUILDLINK_RECOMMENDED.tcp_wrappers+=	tcp_wrappers>=7.6.1nb3
 BUILDLINK_PKGSRCDIR.tcp_wrappers?=	../../security/tcp_wrappers
 .endif	# TCP_WRAPPERS_BUILDLINK3_MK
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/06 12:23:17 salo Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/03 00:13:33 tv Exp $
 #
 
 DISTNAME=		silc-toolkit-0.9.12
+PKGREVISION=		1
 CATEGORIES=		devel chat security
 MASTER_SITES=		http://www.silcnet.org/download/toolkit/sources/ \
 			ftp://ftp.silcnet.org/silc/toolkit/sources/ \

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/09/30 10:53:19 agc Exp $
+# $NetBSD: Makefile,v 1.5 2004/10/03 00:15:00 tv Exp $
 #
 
 PKGNAME=	dylan-interpreter-${DYLAN_VERSION}
+PKGREVISION=	1
 
 AUTOGEN_TARGET=	--disable-d2c
 

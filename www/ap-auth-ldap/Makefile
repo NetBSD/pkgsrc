@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2004/05/08 19:48:27 snj Exp $
+# $NetBSD: Makefile,v 1.21 2004/10/03 00:18:24 tv Exp $
 
 DISTNAME=	auth_ldap-1.6.0
-PKGREVISION=	2
+PKGREVISION=	3
 PKGNAME=	ap-auth-ldap-1.6.0
 SVR4_PKGNAME=	apldap
 CATEGORIES=	www databases

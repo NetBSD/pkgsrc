@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2004/09/24 16:17:53 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/03 00:13:03 tv Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}-src
 PKGNAME=		openquicktime-1.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=openquicktime/}
 EXTRACT_SUFX=		.tgz

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 09:12:09 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/10/03 00:13:16 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 JPILOT_BUILDLINK3_MK:=	${JPILOT_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	jpilot
 
 .if !empty(JPILOT_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.jpilot+=	jpilot>=0.99.5nb4
+BUILDLINK_RECOMMENDED.jpilot+=	jpilot>=0.99.5nb5
 BUILDLINK_PKGSRCDIR.jpilot?=	../../comms/jpilot
 .endif	# JPILOT_BUILDLINK3_MK
 

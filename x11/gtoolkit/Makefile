@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/09/24 01:56:54 rh Exp $
+# $NetBSD: Makefile,v 1.9 2004/10/03 00:18:34 tv Exp $
 #
 .include "Makefile.common"
-PKGREVISION=		6
+PKGREVISION=		7
 
 COMMENT=		Objective-C interface to the GTK+ widget set
 

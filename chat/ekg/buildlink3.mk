@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/03/26 02:27:35 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/10/03 00:13:14 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EKG_BUILDLINK3_MK:=	${EKG_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	ekg
 
 .if !empty(EKG_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.ekg+=		ekg>=1.1
-BUILDLINK_RECOMMENDED.ekg?=	ekg>=1.4nb1
+BUILDLINK_RECOMMENDED.ekg?=	ekg>=1.5nb1
 BUILDLINK_PKGSRCDIR.ekg?=	../../chat/ekg
 .endif	# EKG_BUILDLINK3_MK
 

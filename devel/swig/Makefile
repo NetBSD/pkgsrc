@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2004/03/20 23:18:09 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2004/10/03 00:13:33 tv Exp $
 
 DISTNAME=       swig1.1p5
 PKGNAME=	swig-1.1p5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=   ftp://ftp.swig.org/pub/
 

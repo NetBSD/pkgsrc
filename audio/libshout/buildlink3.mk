@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 09:12:08 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/10/03 00:13:07 tv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBSHOUT_BUILDLINK3_MK:=	${LIBSHOUT_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	libshout
 
 .if !empty(LIBSHOUT_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libshout+=	libshout>=2.0
+BUILDLINK_RECOMMENDED.libshout+=	libshout>=2.0nb1
 BUILDLINK_PKGSRCDIR.libshout?=	../../audio/libshout
 .endif	# LIBSHOUT_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/05/04 08:17:23 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:18:36 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MOWITZ_BUILDLINK3_MK:=	${MOWITZ_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	Mowitz
 
 .if !empty(MOWITZ_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.Mowitz+=	Mowitz>=0.2.1
+BUILDLINK_RECOMMENDED.Mowitz+=	Mowitz>=0.2.2nb1
 BUILDLINK_PKGSRCDIR.Mowitz?=	../../x11/mowitz
 .endif	# MOWITZ_BUILDLINK3_MK
 

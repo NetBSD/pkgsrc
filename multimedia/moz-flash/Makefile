@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2004/04/24 22:25:31 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2004/10/03 00:13:03 tv Exp $
 #
 
 .include "../../multimedia/libflash/Makefile.common"
 
 PKGNAME=	moz-flash-1.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES+=	www
 
 MAINTAINER=	joda@NetBSD.org

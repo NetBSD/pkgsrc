@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2004/03/11 23:01:16 snj Exp $
+# $NetBSD: Makefile,v 1.9 2004/10/03 00:13:11 tv Exp $
 
 DISTNAME=	Blursk-1.3
 PKGNAME=	xmms-blursk-1.3
+PKGREVISION=	1
 CATEGORIES=	xmms audio
 MASTER_SITES=	http://www.cs.pdx.edu/~kirkenda/blursk/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} blursk-presets

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2003/07/21 16:43:30 martti Exp $
+# $NetBSD: Makefile,v 1.10 2004/10/03 00:13:30 tv Exp $
 #
 
 DISTNAME=	hfsutils-3.2.6
 PKGNAME=	libhfs-3.2.6
+PKGREVISION=	1
 CATEGORIES=	devel sysutils
 MASTER_SITES=	ftp://ftp.mars.org/pub/hfs/
 

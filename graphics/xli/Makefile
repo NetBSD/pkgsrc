@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2004/04/21 04:48:44 snj Exp $
+# $NetBSD: Makefile,v 1.23 2004/10/03 00:14:58 tv Exp $
 
 DISTNAME=	xli-1.17.0
+PKGREVISION=	1
 CATEGORIES=	graphics x11
 MASTER_SITES=	http://pantransit.reptiles.org/prog/
 
