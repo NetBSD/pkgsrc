@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2003/07/27 20:01:36 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.37 2003/08/04 11:43:48 jmmv Exp $
 #
 
 MPLAYER_DIST_VERSION=	0.90
@@ -67,12 +67,11 @@ CONFIGURE_ARGS+=	--disable-mlib
 # MPLAYER_DISABLE_DRIVERS is explained.
 MPLAYER_DRIVERS=	arts		audio/arts \
 			esd		audio/esound \
-			faad		audio/faad2 \
 			nas		audio/nas \
 			sdl		devel/SDL
 
 .if defined(PKGNAME) && !empty(PKGNAME:M*encoder*)
-MPLAYER_DISABLE_DRIVERS=arts esd faad nas sdl
+MPLAYER_DISABLE_DRIVERS=arts esd nas sdl
 .else
 BUILD_DEFS+=		MPLAYER_DISABLE_DRIVERS
 .endif
