@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.549 2000/08/23 22:22:53 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.550 2000/08/24 23:29:26 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1745,16 +1745,21 @@ root-install:
 #
 check-shlibs:
 	${_PKG_SILENT}${_PKG_DEBUG}\
-	bins=`${PKG_INFO} -qL ${PKGNAME} | ( ${EGREP} -h '/(bin|sbin|libexec)/' || true )`; \
+	bins=`${PKG_INFO} -qL ${PKGNAME} | ( ${EGREP} -h '/(bin|sbin|libexec)/' || ${TRUE} )`; \
 	if [ "${OBJECT_FMT}" = "ELF" ]; then \
-		shlibs=`${PKG_INFO} -qL ${PKGNAME} | ( ${EGREP} -h '/lib/lib.*.so' || true )`; \
+		shlibs=`${PKG_INFO} -qL ${PKGNAME} | ( ${EGREP} -h '/lib/lib.*.so' || ${TRUE} )`; \
 	else \
 		shlibs=""; \
 	fi ; \
+	if [ X${LDD} = X ]; then \
+		ldd=`${TYPE} ldd | ${AWK} '{ print $$NF }'` ; \
+	else \
+		ldd="${LDD}" ; \
+	fi ; \
 	for i in $${bins} $${shlibs} ; do \
-		err=`( ldd $$i 2>&1 || true ) | ( grep "not found" || true )`; \
+		err=`( $$ldd $$i 2>&1 || ${TRUE} ) | ( ${GREP} "not found" || ${TRUE} )`; \
 		if [ "${PKG_VERBOSE}" != "" ]; then \
-			echo "ldd $$i" ; \
+			echo "$$ldd $$i" ; \
 		fi ; \
 		if [ "$$err" != "" ]; then \
 			echo "$$i: $$err" ; \
