@@ -1,9 +1,8 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.18 2004/04/19 18:39:09 hubertf Exp $
+# $NetBSD: upload,v 1.19 2005/01/20 02:02:50 tv Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
-# Must be called in $USR_PKGSRC
 #
 
 opsys=`uname -s`
@@ -25,6 +24,8 @@ if [ -f "$BULK_BUILD_CONF" ]; then
 else
     . `dirname $0`/build.conf
 fi
+
+cd $USR_PKGSRC
 
 if [ "$RSYNC_DST_SPECIFIC" != "" -o "$RSYNC_DST_OTHER" != "" ]; then
 	echo Use of RSYNC_DST_SPECIFIC and RSYNC_DST_OTHER is deprecated.
@@ -74,15 +75,23 @@ else
 	echo '(skipped)'
 fi
 
+case $LINTPKGSRC_CACHE in
+yes|YES)
+	lintpkgsrc_cache="-I `cd pkgtools/pkglint ; ${BMAKE} show-var VARNAME=LINTPKGSRC_DB`"
+	;;
+*)
+	lintpkgsrc_cache=''
+	;;
+esac
+
 echo "Checking for restricted, out of date, and vulnerable packages:"
 # -p  =  report old versions of packages
 # -R  =  report restricted packages
 # -V  =  report vulnerable packages
-lintpkgsrc -K $packages -P $pkgsrcdir -pRV  | sed 's@'$packages'/@@' > $exf
+lintpkgsrc $lintpkgsrc_cache -K $packages -P $pkgsrcdir -pRV  | sed 's@'$packages'/@@' > $exf
 
 echo "Checking for OSVERSION_SPECIFIC pkgs:"
-lintpkgsrc -K $packages -P $pkgsrcdir -O  | sed 's@'$packages'/@@' > $osf
-
+lintpkgsrc $lintpkgsrc_cache -K $packages -P $pkgsrcdir -O  | sed 's@'$packages'/@@' > $osf
 
 RSFLAGS="-vap --progress $RSYNC_OPTS"
 
