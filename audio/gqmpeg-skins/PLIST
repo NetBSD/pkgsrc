@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/12 19:38:46 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/12 22:52:52 tron Exp $
 share/gqmpeg/skins/2black/b-conf.png
 share/gqmpeg/skins/2black/b-min.png
 share/gqmpeg/skins/2black/b-next.png
@@ -1145,7 +1145,6 @@ share/gqmpeg/skins/kpanel-dock/skindata_alt
 share/gqmpeg/skins/kpanel-dock/slider.png
 share/gqmpeg/skins/kpanel-dock/stop.png
 share/gqmpeg/skins/kpanel-normal-horizontal/GQmpeg-panel.kdelnk
-share/gqmpeg/skins/kpanel-normal-horizontal/GQmpeg-panel.kdelnk~
 share/gqmpeg/skins/kpanel-normal-horizontal/README
 share/gqmpeg/skins/kpanel-normal-horizontal/back_sm.png
 share/gqmpeg/skins/kpanel-normal-horizontal/back_sm_mask.png
