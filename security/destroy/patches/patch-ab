@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2004/01/23 23:32:43 recht Exp $
+
+--- destroy.c.orig	2003-03-25 16:56:34.000000000 +0100
++++ destroy.c
+@@ -58,6 +58,10 @@ main(int argc, char *argv[]) {
+ 	char		*buf;
+ 	char		*devrand = "/dev/urandom";
+ 	char		*devzero = "/dev/zero";
++	int		mode = O_WRONLY | O_EXCL;
++#if defined(O_NOFOLLOW)
++	mode |=	O_NOFOLLOW;
++#endif
+ 
+ 	if(argc < 2) {
+ 		usage();

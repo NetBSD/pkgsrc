@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1 2004/01/23 23:32:43 recht Exp $
+
+--- Makefile.orig	2003-03-25 16:35:57.000000000 +0100
++++ Makefile
+@@ -13,12 +13,12 @@ COMMENT=        A program to destroy fil
+ 
+ INSTALL=	/usr/bin/install -c -o root -g wheel
+ CC?=		${CC}
+-CFLAGS+=	-Wall -Werror
++CFLAGS?=	${CFLAGS}
+ RM?=		${RM}
+ STRIP?=		${STRIP}
+ 
+ all:
+-	${CC} -o ${PORTNAME} destroy.c
++	${CC} ${CFLAGS} -o ${PORTNAME} destroy.c
+ 
+ install:
+ 	${INSTALL} ${PORTNAME} ${LOCALBASE}/bin/
