@@ -1,6 +1,6 @@
 # /bin/sh
 #
-# $NetBSD: print-la-libnames,v 1.2 2004/09/21 17:54:38 jlam Exp $
+# $NetBSD: print-la-libnames,v 1.3 2004/10/05 22:34:07 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -64,7 +64,11 @@ do
 				exit 1
 			fi
 			for lib in $library_names $old_library; do
-				${ECHO} "$dir$lib"
+				libpath="$dir$lib"
+				if [ ! -f "$libpath" ]; then
+					${ECHO} 1>&2 "$0: \`$libpath' was not found"
+				fi
+				${ECHO} "$libpath"
 			done
 		fi
 	else
