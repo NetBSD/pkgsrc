@@ -1,35 +1,40 @@
-$NetBSD: patch-aa,v 1.2 2001/01/21 02:04:56 jtb Exp $
+$NetBSD: patch-aa,v 1.3 2001/04/21 01:00:38 jtb Exp $
 
---- /dev/null	Sun Jan 21 00:09:25 2001
+--- /dev/null	Sat Apr 21 01:44:52 2001
 +++ Makefile
-@@ -0,0 +1,30 @@
-+CFLAGS	= -O2 -fomit-frame-pointer -freg-struct-return
-+CFLAGS_ALPHA= -O2 -fomit-frame-pointer
-+INCLUDES= -I${GC_PREFIX}/include -I${X11BASE}/include -I${MESA_PREFIX}/include
-+LDFLAGS	= -L${GC_PREFIX}/lib -L${X11BASE}/lib -L${MESA_PREFIX}/lib
-+LIBS	= -lgc -lm
+@@ -0,0 +1,35 @@
++.if (${MACHINE_ARCH} == "alpha") || (${MACHINE_ARCH} == "sparc64")
++STALIN=	stalin-alpha
++.else
++STALIN=	stalin-32
++.endif
 +
-+all-32:	stalin-32 libstalin.a
++all: ${STALIN} libstalin.a
 +
-+all-alpha: stalin-alpha libstalin.a
++CPPFLAGS+= -I${GC_PREFIX}/include -I${X11BASE}/include
++
++.if (${MACHINE_ARCH} != "i386")
++CFLAGS	+= -O
++.endif
++
++CFLAGS+= -fomit-frame-pointer 
++
++LDFLAGS+= -Wl,-R${GC_PREFIX}/lib -L${GC_PREFIX}/lib
++LDFLAGS+= -Wl,-R${X11BASE}/lib -L${X11BASE}/lib
++
++LDLIBS	= -lgc -lm
 +
 +stalin-32: stalin-32.o
-+	$(CC) $(CFLAGS) -o stalin $@.o $(LDFLAGS) $(LIBS)
++	$(CC) -o stalin $? $(LDFLAGS) $(LDLIBS)
 +
 +stalin-alpha: stalin-alpha.o
-+	$(CC) $(CFLAGS_ALPHA) -o stalin $@.o $(LDFLAGS) $(LIBS)
++	$(CC) -o stalin $? $(LDFLAGS) $(LDLIBS)
 +
 +LIBOBJS = xlib-c.o gl-c.o
 +
 +libstalin.a: include/xlib-c.o include/gl-c.o
-+	$(AR) $(ARFLAGS) $@ $(LIBOBJS)
++	$(AR) cru $@ $(LIBOBJS)
 +	$(RANLIB) $@
 +
-+stalin-32.o:
-+	$(CC) $(CFLAGS) $(INCLUDES) -c stalin-32.c
-+
-+stalin-alpha.o:
-+	$(CC) $(CFLAGS_ALPHA) $(INCLUDES) -c stalin-alpha.c
-+
-+.c.o:
-+	$(CC) $(CFLAGS) $(INCLUDES) -c $<
++clean:
++	rm -f ${STALIN} libstalin.a *.o include/*.o
