@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5699 2004/04/20 23:24:58 epg Exp $
+$NetBSD: CHANGES,v 1.5700 2004/04/21 01:05:51 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2202,3 +2202,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added acidrip-0.12 [xtraeme 2004-04-20]
 	Updated subversion to 1.0.2 [epg 2004-04-20]
 	Updated trac to 0.6.1 [epg 2004-04-20]
+	Updated freesci to 0.3.4c [dillo 2004-04-21]
