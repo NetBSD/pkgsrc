@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1999/12/28 04:20:03 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2000/01/02 03:07:31 wiz Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/06/13 16:17:01 ache Exp
 #
 
@@ -18,7 +18,7 @@ CONFIGURE_ENV+=        LDFLAGS=-L${PREFIX}/lib # XXX
 INFO_FILES=	RPTP.info RPLAY.info rplay.info librplay.info
 
 pre-configure:
-	for f in `find ${WRKDIR}/. -type f -print|xargs ${GREP} -l '/usr/local'`; do \
+	for f in `${FIND} ${WRKDIR}/. -type f -print|xargs ${GREP} -l '/usr/local'`; do \
 		${SED} -e 's:/usr/local:'${PREFIX}':g' < $$f > $$f.pdone && ${MV} $$f.pdone $$f; \
 	done
 	${CHMOD} +x ${WRKSRC}/configure
