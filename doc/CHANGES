@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5580 2004/04/15 09:44:18 jmmv Exp $
+$NetBSD: CHANGES,v 1.5581 2004/04/15 10:34:14 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1955,3 +1955,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xchat to 1.8.11nb7 [tron 2004-04-14]
 	Updated gimp to 2.0.1 [adam 2004-04-15]
 	Updated pkglint to 3.71 [jmmv 2004-04-15]
+	Added rudiments-0.25.1 [grant 2004-04-15]
