@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/09/09 19:40:17 fredb Exp $
+# $NetBSD: Makefile,v 1.10 2001/01/11 20:13:49 dent Exp $
 #
 
 DISTNAME=	zip1-1.1
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.cdrom.com/pub/infozip/src/ \
 DISTFILES=	zip11.zip
 
 MAINTAINER=	tv@netbsd.org
-HOMEPAGE=	http://www.cdrom.com/pub/infozip/
+HOMEPAGE=	http://www.info-zip.org/pub/infozip/
 
 BUILD_DEPENDS=	unzip:../../archivers/unzip
 
