@@ -1,0 +1,3 @@
+SZIP implements an extended Rice adaptive lossless compression algorithm
+for sample data.  The primary algorithm was developed by R. F. Rice at
+Jet Propulsion Laboratory.

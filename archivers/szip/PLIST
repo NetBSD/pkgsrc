@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/20 18:03:29 drochner Exp $
+include/rice.h
+include/ricehdf.h
+include/szip_adpt.h
+include/szlib.h
+lib/libsz.a
