@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 1999/08/23 21:37:28 hubertf Exp $
+# $NetBSD: Makefile,v 1.27 1999/10/22 00:54:23 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.35 1997/08/19 07:10:01 fenner Exp
 #
 
@@ -103,15 +103,20 @@ README-all.html:
 		| sed -e 's|"|"${category}/|' \
 		      -e 's| <TD>| <TD>(<A HREF="${category}/README.html">${category}</A>) <TD>|' \
 		      -e 's|<TR>|<TR VALIGN=TOP>|' \
+		      -e 's|<TD VALIGN=TOP>|<TD>|' \
 		>> $@.new ; \
 	fi
 .endfor
 	@echo "."
 	@sort -t '">' +2 <$@.new >$@.newsorted
+	@wc -l $@.newsorted | awk '{ print $$1 }'  >$@.npkgs
 	@cat templates/README.all \
 	| ${SED} \
+                -e '/%%NPKGS%%/r$@.npkgs' \
+                -e '/%%NPKGS%%/d' \
                 -e '/%%PKGS%%/r$@.newsorted' \
                 -e '/%%PKGS%%/d' \
         	> $@ 
+	@rm -f $@.npkgs
 	@rm -f $@.new
 	@rm -f $@.newsorted
