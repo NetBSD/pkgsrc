@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3036 2003/08/13 13:26:26 atatat Exp $
+$NetBSD: CHANGES,v 1.3037 2003/08/13 23:47:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3261,3 +3261,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sun-jdk14 to 2.0 [jschauma 2003-08-13]
 	Added quagga-0.96 [itojun 2003-08-13]
 	Updated lsof to 4.68nb1 [atatat 2003-08-13]
+	Updated netris to 0.52 [wiz 2003-08-14]
