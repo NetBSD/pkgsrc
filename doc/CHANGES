@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1398 2003/02/16 08:06:37 salo Exp $
+$NetBSD: CHANGES,v 1.1399 2003/02/16 11:15:58 markd Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -702,3 +702,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added streamtuner-live365-0.3.0 [salo 2003-02-16]
 	Updated squid to 2.5.1nb3 [taca 2003-02-16]
 	Added fvwm2-themes-0.6.2 [salo 2003-02-16]
+	Added kssh-0.7 [markd 2003-02-16]
