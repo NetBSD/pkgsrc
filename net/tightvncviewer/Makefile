@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2003/09/17 19:40:54 grant Exp $
+# $NetBSD: Makefile,v 1.14 2003/11/27 16:19:22 recht Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
-DISTNAME=		tightvnc-1.2.8
-PKGNAME=		tightvncviewer-1.2.8
-PKGREVISION=		1
+DISTNAME=		tightvnc-1.2.9
+PKGNAME=		${DISTNAME:S/tightvnc/tightvncviewer/}
 WRKSRC=			${WRKDIR}/vnc_unixsrc
 CATEGORIES=		net x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vnc-tight/}
