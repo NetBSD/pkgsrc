@@ -1,4 +1,4 @@
-/*	$NetBSD: xpkgwedge.def,v 1.8 2001/07/02 21:03:02 jlam Exp $	*/
+/*	$NetBSD: xpkgwedge.def,v 1.9 2003/09/10 17:31:44 gavan Exp $	*/
 
 #ifdef AfterVendorCF
 
@@ -6,9 +6,6 @@
  * The following defines inject a "PREFIX=" make-time option that lets the
  * user twiddle the ProjectRoot setting with a single switch.  This makes
  * the command "make PREFIX=/path/to/install all install" work as expected.
- *
- * Note that ?= is a special Pmake construct and probably will not work on
- * other makes.
  */
 
 #ifndef ProjectRoot
@@ -19,7 +16,6 @@
 #define ProjectRoot /usr/X11
 #endif
 
-PREFIX ?= ProjectRoot
 X11_ROOT = ProjectRoot
 
 #undef ProjectRoot
