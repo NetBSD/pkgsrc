@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.812 2003/08/31 19:21:42 wiz Exp $
+$NetBSD: TODO,v 1.813 2003/08/31 19:24:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -69,6 +69,8 @@ Suggested package updates
 	o TeXmacs-1.0.1.21
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
+	o Xft2-2.1.2
+	o Xrender-0.8.3
 	o angband-3.0.3
 	o anjuta-1.0.2
 	o anomy-sanitizer-1.63 [pkg/22368]
