@@ -4723,6 +4723,7 @@ esac
 fi
 
 
+pkg_use_nbcompat_getopt_long=yes
 
 for ac_header in getopt.h
 do
@@ -4926,24 +4927,9 @@ fi
 echo "$as_me:$LINENO: result: $pkg_cv_have_struct_option" >&5
 echo "${ECHO_T}$pkg_cv_have_struct_option" >&6
 	if test "x$pkg_cv_have_struct_option" = "xyes"; then
-		:
+		pkg_use_nbcompat_getopt_long=no
 	else
-
-			cat >>confdefs.h <<\_ACEOF
-#define HAVE_NBCOMPAT_GETOPT_LONG 1
-_ACEOF
-
-
-
-			case $LIBOBJS in
-    "getopt_long.$ac_objext"   | \
-  *" getopt_long.$ac_objext"   | \
-    "getopt_long.$ac_objext "* | \
-  *" getopt_long.$ac_objext "* ) ;;
-  *) LIBOBJS="$LIBOBJS getopt_long.$ac_objext" ;;
-esac
-
-
+		pkg_use_nbcompat_getopt_long=yes
 		:
 	fi
 
@@ -4952,6 +4938,23 @@ fi
 
 done
 
+
+if test $pkg_use_nbcompat_getopt_long = yes; then
+	cat >>confdefs.h <<\_ACEOF
+#define HAVE_NBCOMPAT_GETOPT_LONG 1
+_ACEOF
+
+
+
+	case $LIBOBJS in
+    "getopt_long.$ac_objext"   | \
+  *" getopt_long.$ac_objext"   | \
+    "getopt_long.$ac_objext "* | \
+  *" getopt_long.$ac_objext "* ) ;;
+  *) LIBOBJS="$LIBOBJS getopt_long.$ac_objext" ;;
+esac
+
+fi
 
 pkg_use_nbcompat_vis=yes
 
