@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.10 2004/06/11 10:05:06 salo Exp $
+
+--- lib/contrib/Makefile.in.orig	2004-02-29 16:10:01.000000000 +0100
++++ lib/contrib/Makefile.in	2004-06-11 11:31:45.000000000 +0200
+@@ -287,7 +298,9 @@
+ target_os = @target_os@
+ target_vendor = @target_vendor@
+ AUTOMAKE_OPTIONS = 1.0 no-dependencies foreign
+-noinst_LTLIBRARIES = libcontrib.la
++@HAVE_GETOPT_LONG_FALSE@noinst_LTLIBRARIES = libcontrib.la
++@HAVE_GETOPT_LONG_TRUE@@HAVE_REGEX_FALSE@noinst_LTLIBRARIES = libcontrib.la
++@HAVE_GETOPT_LONG_TRUE@@HAVE_REGEX_TRUE@noinst_LTLIBRARIES = 
+ @HAVE_GETOPT_LONG_FALSE@GETOPT = getopt.c getopt1.c
+ @HAVE_GETOPT_LONG_TRUE@GETOPT = 
+ @HAVE_REGEX_FALSE@REGEX = regex.c
