@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/02/10 14:18:35 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2002/02/24 22:36:49 wiz Exp $
 
 --- Makefile.orig	Fri Mar 17 09:35:33 2000
 +++ Makefile	Fri Feb  9 23:21:25 2001
@@ -38,8 +38,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/02/10 14:18:35 hubertf Exp $
 -LIBS= -lform -lncurses
 -CFLAGS= -g -O -Inevlib
 -CC= gcc
-+LIBS= -lform -lncurses -L$(LOCALBASE)/lib -Wl,-R$(LOCALBASE)/lib
-+CFLAGS+= -Inevlib -I$(LOCALBASE)/include
++LIBS= ${LDFLAGS} -lform -lncurses
++CFLAGS+= -Inevlib
 +CC?= gcc
  OBJS= cmp3common.o cmp3fileio.o cmp3manager.o cmp3curses.o \
        cmp3llist.o cmp3main.o cmp3listfiles.o cmp3playlist.o cmp3volume.o \
