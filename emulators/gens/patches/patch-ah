@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.1.1.1 2004/07/26 18:23:25 dillo Exp $
+$NetBSD: patch-ah,v 1.2 2004/08/15 12:13:53 dillo Exp $
 
 --- src/gens/util/rom.c.orig	2004-05-18 22:33:59.000000000 +0200
 +++ src/gens/util/rom.c
@@ -38,14 +38,28 @@ $NetBSD: patch-ah,v 1.1.1.1 2004/07/26 18:23:25 dillo Exp $
    else
      {
        strcpy (zname, Name);
-@@ -402,6 +417,10 @@ Get_Rom ()
-       filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (widget));
+@@ -389,7 +404,7 @@ Get_Rom ()
+   GtkWidget *widget;
+   gint res;
+   char Name[2048];
+-  gchar *filename;
++  gchar *filename = NULL;
+   int sys;
+ 
+   widget =
+@@ -403,9 +418,12 @@ Get_Rom ()
      }
    gtk_widget_destroy (widget);
-+  if (res != GTK_RESPONSE_OK)
+ 
+-  strncpy (Name, filename, 2048);
+-  g_free (filename);
+-  Free_Rom (Game);
++  if (filename)
 +    {
-+      return;
++      strncpy (Name, filename, 2048);
++      g_free (filename);
++      Free_Rom (Game);
 +    }
  
-   strncpy (Name, filename, 2048);
-   g_free (filename);
+   sys = Detect_Format (Name);
+ 

@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/07/26 18:23:22 dillo Exp $
+$NetBSD: patch-aa,v 1.2 2004/08/15 12:13:53 dillo Exp $
 
 --- src/gens/Makefile.in.orig	2004-05-19 22:48:47.000000000 +0200
 +++ src/gens/Makefile.in
