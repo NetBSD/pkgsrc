@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.33 1999/08/18 09:16:40 agc Exp $
+# $NetBSD: Makefile,v 1.34 1999/09/21 18:05:38 tron Exp $
 
-DISTNAME=		WindowMaker-0.60.0
-PKGNAME=		windowmaker-0.60.0
+DISTNAME=		WindowMaker-0.61.0
+PKGNAME=		windowmaker-0.61.0
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.windowmaker.org/pub/beta/srcs/ \
 			ftp://shadowmere.student.utwente.nl/pub/WindowMaker/ \
 			ftp://ftp.univie.ac.at/systems/linux/linuxberg/files/x11/xwin/ \
 			ftp://ftp.ics.es.osaka-u.ac.jp/pub/mirrors/WindowMaker/beta/srcs/
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.windowmaker.org/

@@ -1,22 +1,22 @@
-$NetBSD: patch-ab,v 1.9 1999/06/21 04:46:53 jlam Exp $
+$NetBSD: patch-ab,v 1.10 1999/09/21 18:05:39 tron Exp $
 
---- configure.orig	Thu Jun  3 07:42:09 1999
-+++ configure	Thu Jun 10 23:19:53 1999
-@@ -1478,7 +1478,8 @@
+--- configure.orig	Thu Sep 16 05:21:30 1999
++++ configure	Tue Sep 21 19:40:37 1999
+@@ -1303,6 +1303,8 @@
+   echo "$ac_t""no" 1>&6
  fi
- rm -f confcache
  
--
 +# Use NetBSD's pkglibtool.
 +if false; then
- # Actually configure libtool.  ac_aux_dir is where install-sh is found.
- CC="$CC" CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" \
- LD="$LD" LDFLAGS="$LDFLAGS" LIBS="$LIBS" \
-@@ -1507,6 +1508,7 @@
- # Redirect the config.log output again, so that the ltconfig log is not
- # clobbered by the next message.
- exec 5>>./config.log
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+@@ -1364,7 +1366,7 @@
+ esac
+ 
+ W_SYSTEM=`uname -s`
+-
 +fi
  
  
- # by Marcelo Magallon <mmagallo@efis.ucr.ac.cr>
+ 
