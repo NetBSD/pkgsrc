@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/12/08 04:26:27 salo Exp $
+# $NetBSD: Makefile,v 1.17 2002/12/10 17:59:39 drochner Exp $
 #
 
 DISTNAME=	easytag-0.23.2
@@ -16,10 +16,10 @@ USE_GMAKE=		yes
 USE_X11BASE=		yes
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
+USE_LIBTOOL=	yes
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../audio/id3lib/buildlink2.mk"
 .include "../../audio/libvorbis/buildlink2.mk"
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
