@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/12/18 08:49:39 itojun Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/05/10 13:40:36 agc Exp $
 sbin/arpspoof
 sbin/dnsspoof
 sbin/dsniff
@@ -12,6 +12,7 @@ sbin/tcpnice
 sbin/urlsnarf
 sbin/webmitm
 sbin/webspy
+lib/dnsspoof.hosts
 lib/dsniff.magic
 lib/dsniff.services
 man/man8/arpspoof.8
