@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 1998/05/03 11:00:36 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/05/04 22:01:17 tron Exp $
 bin/gimp
-man/man1/gimp.1
 include/gck/gck.h
 include/gck/gckcolor.h
 include/gck/gckcommon.h
@@ -14,6 +13,9 @@ include/libgimp/gimp.h
 include/libgimp/gimpenums.h
 include/libgimp/gimpmenu.h
 include/libgimp/gimpui.h
+info/pdb.info
+info/pdb.info-1
+info/pdb.info-2
 lib/gimp/0.99/plug-ins/AlienMap
 lib/gimp/0.99/plug-ins/CEL
 lib/gimp/0.99/plug-ins/CML_explorer
@@ -56,6 +58,7 @@ lib/gimp/0.99/plug-ins/fractaltrace
 lib/gimp/0.99/plug-ins/gauss_iir
 lib/gimp/0.99/plug-ins/gauss_rle
 lib/gimp/0.99/plug-ins/gbr
+lib/gimp/0.99/plug-ins/gee
 lib/gimp/0.99/plug-ins/gfig
 lib/gimp/0.99/plug-ins/gfli
 lib/gimp/0.99/plug-ins/gicon
@@ -99,14 +102,17 @@ lib/gimp/0.99/plug-ins/pnm
 lib/gimp/0.99/plug-ins/polar
 lib/gimp/0.99/plug-ins/print
 lib/gimp/0.99/plug-ins/ps
+lib/gimp/0.99/plug-ins/psd
 lib/gimp/0.99/plug-ins/randomize
 lib/gimp/0.99/plug-ins/ripple
 lib/gimp/0.99/plug-ins/rotate
 lib/gimp/0.99/plug-ins/rotators
 lib/gimp/0.99/plug-ins/scatter_hsv
+lib/gimp/0.99/plug-ins/screenshot
 lib/gimp/0.99/plug-ins/script-fu
 lib/gimp/0.99/plug-ins/semiflatten
 lib/gimp/0.99/plug-ins/sgi
+lib/gimp/0.99/plug-ins/sharpen
 lib/gimp/0.99/plug-ins/shift
 lib/gimp/0.99/plug-ins/sinus
 lib/gimp/0.99/plug-ins/smooth_palette
@@ -142,6 +148,7 @@ lib/libgimp.so.1.0
 lib/libgimpui.a
 lib/libgimpui.la
 lib/libgimpui.so.1.0
+man/man1/gimp.1
 share/gimp/brushes/10x10square.gbr
 share/gimp/brushes/10x10squareBlur.gbr
 share/gimp/brushes/11circle.gbr
@@ -555,6 +562,7 @@ share/gimp/scripts/coolmetal-logo.scm
 share/gimp/scripts/copy-visible.scm
 share/gimp/scripts/crystal-logo.scm
 share/gimp/scripts/drop-shadow.scm
+share/gimp/scripts/egg.scm
 share/gimp/scripts/erase-rows.scm
 share/gimp/scripts/flatland.scm
 share/gimp/scripts/font-map.scm
@@ -603,12 +611,6 @@ share/gimp/scripts/weave.scm
 share/gimp/scripts/web-browser.scm
 share/gimp/scripts/xach-effect.scm
 share/gimp/user_install
-@unexec install-info --delete %D/info/pdb.info %D/info/dir
-info/pdb.info
-info/pdb.info-1
-info/pdb.info-2
-@exec ([ ! -f %D/info/dir ] && /usr/bin/sed -ne '1,/Menu:/p' ${LOCALBASE}/info/dir > %D/info/dir) || /usr/bin/true
-@exec install-info %D/info/pdb.info %D/info/dir
 @dirrm include/libgimp
 @dirrm include/gck
 @dirrm lib/gimp/0.99/plug-ins
