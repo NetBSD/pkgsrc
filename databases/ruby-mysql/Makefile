@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/01/27 15:19:06 taca Exp $
+# $NetBSD: Makefile,v 1.2 2002/03/21 04:48:05 fredb Exp $
 #
 
 DISTNAME=	mysql-ruby-2.4.2
 PKGNAME=	${RUBY_PKGNAMEPREFIX}mysql-2.4
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://www.tmtm.org/mysql/ruby/
 
 MAINTAINER=	neumann@s-direktnet.de
 HOMEPAGE=       http://www.tmtm.org/mysql/ruby/
 COMMENT=	Ruby extension for MySQL
+
+DEPENDS+=	ruby-base>=1.6.7nb1:../../lang/ruby-base
 
 DIST_SUBDIR=	ruby
 USE_RUBY_EXTCONF= yes
