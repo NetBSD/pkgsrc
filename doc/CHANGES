@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4715 2004/02/07 00:10:26 minskim Exp $
+$NetBSD: CHANGES,v 1.4716 2004/02/07 00:31:29 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -683,3 +683,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome to 2.4.2 [jmmv 2004-02-06]
 	Updated gnome-extras to 2.4.2 [jmmv 2004-02-06]
 	Updated gnome-vfs2 to 2.4.2nb1 [minskim 2004-02-06]
+	Added nautilus-media-0.3.3.1 [jmmv 2004-02-07]
