@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/04/17 02:52:48 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2002/10/08 12:38:25 jlam Exp $
 # FreeBSD: Makefile,v 1.8 1996/11/18 09:53:36 asami Exp
 #
 
@@ -17,6 +17,7 @@ PATCHFILES=		pixmap_2.6.patch1.gz \
 MAINTAINER=		packages@netbsd.org
 COMMENT=		Pixmap editor based on XPM library
 
+USE_BUILDLINK2=		YES
 USE_IMAKE=		YES
 
 WRKSRC=			${WRKDIR}/pixmap
@@ -24,6 +25,7 @@ WRKSRC=			${WRKDIR}/pixmap
 MAKE_ENV+=		LOCAL_LDFLAGS="${LDFLAGS}"
 MAKE_ENV+=		MOTIFBASE="${MOTIFBASE}"
 
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../mk/motif.buildlink.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../mk/motif.buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
