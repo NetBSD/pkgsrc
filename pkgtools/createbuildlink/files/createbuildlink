@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: createbuildlink,v 1.16 2003/12/22 01:15:50 uebayasi Exp $
+#	$NetBSD: createbuildlink,v 1.17 2004/01/14 08:53:57 rh Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -36,18 +36,22 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 #
-# Create an initial buildlink2.mk from a package's Makefile and PLIST
+# Create an initial buildlink2.mk or buildlink3.mk from a package's Makefile
+# and PLIST
 #
 
-REV=`echo '$Revision: 1.16 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.17 $' | sed 's/\\$//g'`
 tmpdir=/tmp
 makefile=Makefile
 sedrules=$tmpdir/sedrules.buildlink.$$
 PLIST=PLIST
+blver=2
+otherver=3
 
-args=`getopt j $*`
+args=`getopt j23 $*`
 if [ $? != 0 ]; then
-	echo "Usage: $0 [-j] > buildlink2.mk"
+	echo "Usage: $0 -2 [-j] > buildlink2.mk"
+	echo "   or: $0 -3 > buildlink3.mk"
 	exit 2
 fi
 set -- $args
@@ -55,6 +59,14 @@ while [ $# -gt 0 ]; do
 	case "$1" in
 	-j)
 		join=YES
+		;;
+	-2)
+		blver=2
+		otherver=3
+		;;
+	-3)
+		blver=3
+		otherver=2
 		;;
 	--)
 		shift; break
@@ -67,14 +79,14 @@ done
 ## some simple integrity checking
 ##
 if [ ! -f $makefile ]; then
-	echo "===> Incomplete package! To create a buildlink2.mk <==="
-	echo "===> a working $makefile is required!               <==="
+	echo "===> Incomplete package! To create a buildlink file <==="
+	echo "===> a working $makefile is required!                <==="
 	exit 1
 fi
 
 if [ ! -f "$PLIST" ]; then
-	echo "===> Incomplete package! To create a buildlink2.mk <==="
-	echo "===> a working PLIST is required!                  <==="
+	echo "===> Incomplete package! To create a buildlink file <==="
+	echo "===> a working PLIST is required!                   <==="
 	exit 1
 fi
 
@@ -121,22 +133,55 @@ sed -f $sedrules <<EOF
 #
 # This Makefile fragment is included by packages that use $PKGNOVER.
 #
-# This file was created automatically using createbuildlink @PKGVERSION@.
+# This file was created automatically using createbuildlink-@PKGVERSION@.
 #
 
+EOF
+
+##
+## buildlink 2
+##
+if [ $blver = 2 ]; then
+
+sed -f $sedrules <<EOF
 .if !defined(${PKGUPPER}_BUILDLINK2_MK)
 ${PKGUPPER}_BUILDLINK2_MK=	# defined
 
+EOF
+
+else	# buildlink 3
+
+sed -f $sedrules <<EOF
+BUILDLINK_DEPTH:=	\${BUILDLINK_DEPTH}+
+${PKGUPPER}_BUILDLINK3_MK:=	\${${PKGUPPER}_BUILDLINK3_MK}+
+
+.if !empty(BUILDLINK_DEPTH:M+)
+BUILDLINK_DEPENDS+=	${PKGNOVER}
+.endif
+
+.if !empty(${PKGUPPER}_BUILDLINK3_MK:M+)
+EOF
+
+fi	# buildlink 2/3
+
+sed -f $sedrules <<EOF
 BUILDLINK_PACKAGES+=			$PKGNOVER
 BUILDLINK_DEPENDS.$PKGNOVER?=		$PKGNOVER>=$PKGVER
 BUILDLINK_PKGSRCDIR.$PKGNOVER?=		../../$CURDIR
 
+EOF
+
+##
+## buildlink2-only part
+##
+if [ $blver = 2 ]; then
+sed -f $sedrules <<EOF
 EVAL_PREFIX+=	BUILDLINK_PREFIX.$PKGNOVER=$PKGNOVER
 BUILDLINK_PREFIX.${PKGNOVER}_DEFAULT=	\${$PREFIX}
 EOF
 
 ##
-## buildlinked includes
+## buildlinked includes (buildlink2 only)
 ##
 if [ "$join" = "YES" ]; then
 	for i in `egrep "^include/|/Headers/.*\.h" $PLIST \
@@ -150,7 +195,7 @@ else
 fi
 
 ##
-## buildlinked libraries
+## buildlinked libraries (buildlink2 only)
 ##
 for i in \
 `egrep '^lib/|/Libraries/.*/lib[^\.]*\.a$|/Libraries/.*/lib[^\.]*\.so' $PLIST \
@@ -161,16 +206,23 @@ done
 
 echo ""
 
+fi	## end of buildlink2-only part
+
 ##
 ## buildlinked dependencies
 ##
 for i in $makefile $commons ; do
-	[ ! -f $i ] || grep '^.include.*\.\.\/.*\/.*/buildlink2.mk\"' $i |
+	[ ! -f $i ] || grep '^.include.*\.\.\/.*\/.*/buildlink[23].mk\"' $i |
+		sed "s/buildlink$otherver/buildlink$blver/"		|
 		egrep -v '/devel/pkgconfig/|/textproc/intltool/'
 done
-grep -l '^.include.*\.\.\/.*\/.*/buildlink2.mk\"' $makefile $commons \
+grep -l '^.include.*\.\.\/.*\/.*/buildlink[23].mk\"' $makefile $commons \
 	>/dev/null 2>&1 && echo ""	# Be careful not to print duplicate \n
 
+##
+## buildlink2-only part
+##
+if [ $blver = 2 ]; then
 ##
 ## main buildlink target for this package
 ##
@@ -184,5 +236,15 @@ echo "${PKGNOVER}-buildlink: _BUILDLINK_USE"
 echo ""
 
 echo ".endif	# ${PKGUPPER}_BUILDLINK2_MK"
+
+else	# buildlink 3
+
+sed -f $sedrules <<EOF
+.endif # ${PKGUPPER}_BUILDLINK3_MK
+
+BUILDLINK_DEPTH:=     \${BUILDLINK_DEPTH:S/+\$//}
+EOF
+
+fi	# buildlink 2/3
 
 rm -f $sedrules
