@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/03/27 03:20:15 hubertf Exp $
+# $NetBSD: Makefile,v 1.15 2001/08/14 03:41:39 jlam Exp $
 
 DISTNAME=		cyrus-sasl-1.5.24
 PKGNAME=		${DISTNAME}nb3
@@ -110,7 +110,7 @@ pre-install:
 		-e "s,@CHGRP@,${CHGRP},g" \
 		-e "s,@CHMOD@,${CHMOD},g" \
 		-e "s,@CHOWN@,${CHOWN},g" \
-		-e "s,@GREP@,${GREP},g" \
+		-e "s,@ID@,${ID},g" \
 		-e "s,@MKDIR@,${MKDIR},g" \
 		-e "s,@RM@,${RM},g" \
 		-e "s,@TOUCH@,${TOUCH},g" \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/06/11 06:34:21 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/08/14 03:41:37 jlam Exp $
 #
 
 DISTNAME=	gale-0.99a
@@ -57,7 +57,7 @@ pre-install:
 		-e 's|@ADDUSER@|${ADDUSER}|g' \
 		-e 's|@ADDGROUP@|${ADDGROUP}|g' \
 		-e 's|@CHGRP@|${CHGRP}|g' \
-		-e 's|@GREP@|${GREP}|g' \
+		-e 's|@ID@|${ID}|g' \
 		-e 's|@RM@|${RM}|g' \
 		-e 's|@TOUCH@|${TOUCH}|g' \
 		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
