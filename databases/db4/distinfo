@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/03/30 05:35:58 uebayasi Exp $
+
+SHA1 (db-4.0.14.tar.gz) = a0fcf0ec521ffb7a7ea342b1ec2ea9bc9f8402ee
+Size (db-4.0.14.tar.gz) = 2701799 bytes
+SHA1 (patch-aa) = 56cfc57a92b30ca25b8ccc46676a4e7d99ac4000
+SHA1 (patch-ab) = bfe64ff7ca92e73bb6c00a7333e57b30950fbf2e
