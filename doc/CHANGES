@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1821 2003/04/01 10:23:16 rh Exp $
+$NetBSD: CHANGES,v 1.1822 2003/04/01 11:44:20 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1367,3 +1367,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnustep-back to 0.8.5 [rh 2003-04-01]
 	Updated cvsync to 0.18.0 [gehenna 2003-04-01]
 	Updated gnustep to 1.6.0 [rh 2003-04-01]
+	Updated Gorm to 0.2.6 [rh 2003-04-01]
