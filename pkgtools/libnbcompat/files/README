@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.9 2004/08/20 23:30:30 schmonz Exp $
+$NetBSD: README,v 1.10 2004/08/23 03:32:12 jlam Exp $
 
  0 Introduction
  ==============
@@ -13,6 +13,7 @@ this includes the following packages:
 	archivers/pax
 	pkgtools/mtree
 	pkgtools/pkg_install
+	textproc/nbsed
 
 A script, src2nbcompat, is also included in the sources that simplifies
 importing software from the NetBSD src module into pkgsrc.
@@ -43,22 +44,24 @@ breakage seep in.  Proper methodology for updating this package is:
 *NOTE* the most recent libnbcompat.
 *NOTE*
 
-libnbcompat-20040814 has been tested to build and install correctly
+libnbcompat-20040822 has been tested to build and install correctly
 on the following operating systems:
 
 	FreeBSD-4.8/i386		<jlam@NetBSD.org>
-	Debian Linux 3.0 (woody)	<wiz@NetBSD.org>
-	Interix 3.5			<schmonz@NetBSD.org>
+	FreeBSD-5.1/alpha		<grant@NetBSD.org>
 	IRIX 6.5			<schmonz@NetBSD.org>
 	MacOS X 10.2.8			<jlam@NetBSD.org>
 	MacOS X 10.3.5			<schmonz@NetBSD.org>
+	MS Interix 3.5			<schmonz@NetBSD.org>
+	NetBSD-1.5/i386			<cgd@NetBSD.org>
 	NetBSD-1.6.2/i386		<jlam@NetBSD.org>
-	NetBSD-2.0_BETA/i386		<wiz@NetBSD.org>
-	Red Hat Linux 7.3		<schmonz@NetBSD.org>
-	Red Hat Enterprise Linux 3	<schmonz@NetBSD.org>
-	Solaris 7/sparc			<blsecres@ssdtgsm.com>
-	Solaris 8/sparc			<roland.illig@gmx.de>
-	Solaris 9/sparc			<schmonz@NetBSD.org>
+	NetBSD-2.0_BETA/i386		<schmonz@NetBSD.org>
+	Red Hat Linux 6.0/i386		<cgd@NetBSD.org>
+	Red Hat Linux 7.2/i386		<cgd@NetBSD.org>
+	Red Hat Linux 7.3/i386		<cgd@NetBSD.org>
+	Solaris 2.6/sparc		<cgd@NetBSD.org>
+	Solaris 8/sparc			<cgd@NetBSD.org>
+	Solaris 9/sparc			<grant@NetBSD.org>
 
 
  3 Usage
@@ -68,7 +71,9 @@ This library is intended to simplify porting NetBSD software.  To that
 end, the changes to NetBSD sources to use libnbcompat are minor.  The
 procedure is:
 
-    (1) Add #include <nbcompat.h> at the top of the source file.
+    (1) Add #include <nbcompat.h> at the top of the source files that
+	include system headers, but below the inclusion of any
+	"config.h".
 
     (2) Surround each system header file included in the source file
 	with #if HAVE_<header_name>_H ... #endif.

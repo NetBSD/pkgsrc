@@ -1,8 +1,8 @@
-/*	$NetBSD: getenv.c,v 1.3 2003/09/06 23:03:02 grant Exp $	*/
+/*	$NetBSD: getenv.c,v 1.4 2004/08/23 03:32:12 jlam Exp $	*/
 
 /*
- * Copyright (c) 1987 Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1987, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -29,15 +29,42 @@
  * SUCH DAMAGE.
  */
 
+#include <nbcompat.h>
+#include <nbcompat/cdefs.h>
 #if defined(LIBC_SCCS) && !defined(lint)
-/*static char *sccsid = "from: @(#)getenv.c	5.8 (Berkeley) 2/23/91";*/
-static char *rcsid = "$Id: getenv.c,v 1.3 2003/09/06 23:03:02 grant Exp $";
+#if 0
+static char sccsid[] = "@(#)getenv.c	8.1 (Berkeley) 6/4/93";
+#else
+__RCSID("$NetBSD: getenv.c,v 1.4 2004/08/23 03:32:12 jlam Exp $");
+#endif
 #endif /* LIBC_SCCS and not lint */
 
-#include <stdlib.h>
-#include <stddef.h>
-#include <string.h>
-#include <sys/cdefs.h>
+#include <nbcompat/assert.h>
+#if HAVE_ERRNO_H
+#include <errno.h>
+#endif
+#include <nbcompat/stdlib.h>
+#include <nbcompat/string.h>
+#if 0
+#include "local.h"
+#include "reentrant.h"
+#endif
+
+char *__findenv __P((const char *, int *));
+
+#if 0
+#ifdef _REENTRANT
+rwlock_t __environ_lock = RWLOCK_INITIALIZER;
+#endif
+#endif
+extern char **environ;
+
+#ifndef rwlock_rdlock
+#define rwlock_rdlock(lock)	((void)0)
+#endif
+#ifndef rwlock_unlock
+#define rwlock_unlock(lock)	((void)0)
+#endif
 
 /*
  * getenv --
@@ -48,9 +75,14 @@ getenv(name)
 	const char *name;
 {
 	int offset;
-	char *__findenv();
+	char *result;
 
-	return(__findenv(name, &offset));
+	_DIAGASSERT(name != NULL);
+
+	rwlock_rdlock(&__environ_lock);
+	result = __findenv(name, &offset);
+	rwlock_unlock(&__environ_lock);
+	return (result);
 }
 
 /*
@@ -64,19 +96,22 @@ getenv(name)
  */
 char *
 __findenv(name, offset)
-	register char *name;
+	const char *name;
 	int *offset;
 {
-	extern char **environ;
-	register int len;
-	register char **P, *C;
+	size_t len;
+	const char *np;
+	char **p, *c;
 
-	for (C = name, len = 0; *C && *C != '='; ++C, ++len);
-	for (P = environ; *P; ++P)
-		if (!strncmp(*P, name, len))
-			if (*(C = *P + len) == '=') {
-				*offset = P - environ;
-				return(++C);
-			}
-	return(NULL);
+	if (name == NULL || environ == NULL)
+		return (NULL);
+	for (np = name; *np && *np != '='; ++np)
+		continue;
+	len = np - name;
+	for (p = environ; (c = *p) != NULL; ++p)
+		if (strncmp(c, name, len) == 0 && c[len] == '=') {
+			*offset = p - environ;
+			return (c + len + 1);
+		}
+	return (NULL);
 }

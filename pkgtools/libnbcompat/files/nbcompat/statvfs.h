@@ -1,4 +1,4 @@
-/*	$NetBSD: statvfs.h,v 1.2 2004/08/10 18:47:55 jlam Exp $	*/
+/*	$NetBSD: statvfs.h,v 1.3 2004/08/23 03:32:13 jlam Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -45,13 +45,8 @@
 
 #if !HAVE_STATVFS
 
-#if HAVE_SYS_TYPES_H
-#include <sys/types.h>
-#endif
-
-#if HAVE_SYS_PARAM_H
-#include <sys/param.h>
-#endif
+#include <nbcompat/types.h>
+#include <nbcompat/param.h>
 
 #if HAVE_SYS_MOUNT_H
 #include <sys/mount.h>

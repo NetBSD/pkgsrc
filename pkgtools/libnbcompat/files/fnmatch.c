@@ -1,4 +1,4 @@
-/*	$NetBSD: fnmatch.c,v 1.2 2004/08/16 17:24:56 jlam Exp $	*/
+/*	$NetBSD: fnmatch.c,v 1.3 2004/08/23 03:32:12 jlam Exp $	*/
 
 /*
  * Copyright (c) 1989, 1993, 1994
@@ -32,17 +32,13 @@
  * SUCH DAMAGE.
  */
 
-#include "nbcompat/nbconfig.h"
-
-#if HAVE_SYS_CDEFS_H
-#include <sys/cdefs.h>
-#endif
-
+#include <nbcompat.h>
+#include <nbcompat/cdefs.h>
 #if defined(LIBC_SCCS) && !defined(lint)
 #if 0
-static char sccsid[] = "@(#)fnmatch.c	8.2 (Berkeley) 4/16/94";
+static char sccsid[] = "@(#)fnmatch.c  8.2 (Berkeley) 4/16/94";
 #else
-__RCSID("$NetBSD: fnmatch.c,v 1.2 2004/08/16 17:24:56 jlam Exp $");
+__RCSID("$NetBSD: fnmatch.c,v 1.3 2004/08/23 03:32:12 jlam Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
@@ -51,18 +47,16 @@ __RCSID("$NetBSD: fnmatch.c,v 1.2 2004/08/16 17:24:56 jlam Exp $");
  * Compares a filename or pathname to a pattern.
  */
 
-/* #include "namespace.h" */
+#if 0
+#include "namespace.h"
+#endif
 
-#include <assert.h>
-#include <ctype.h>
-#include "nbcompat/fnmatch.h"
-#include <string.h>
+#include <nbcompat/assert.h>
+#include <nbcompat/ctype.h>
+#include <nbcompat/fnmatch.h>
+#include <nbcompat/string.h>
 
 #define	EOS	'\0'
-
-#ifndef _DIAGASSERT
-#define _DIAGASSERT(cond)	assert(cond)
-#endif
 
 static const char *rangematch(const char *, int, int);
 

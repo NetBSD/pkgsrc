@@ -1,4 +1,4 @@
-/*	$NetBSD: getopt_long.c,v 1.7 2004/08/16 17:24:56 jlam Exp $	*/
+/*	$NetBSD: getopt_long.c,v 1.8 2004/08/23 03:32:12 jlam Exp $	*/
 
 /*-
  * Copyright (c) 2000 The NetBSD Foundation, Inc.
@@ -36,44 +36,41 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "nbcompat.h"
-
-#if HAVE_SYS_CDEFS_H
-#include <sys/cdefs.h>
+#if HAVE_NBTOOL_CONFIG_H
+#include "nbtool_config.h"
 #endif
 
+#include <nbcompat.h>
+#include <nbcompat/cdefs.h>
 #if defined(LIBC_SCCS) && !defined(lint)
-__RCSID("$NetBSD: getopt_long.c,v 1.7 2004/08/16 17:24:56 jlam Exp $");
+__RCSID("$NetBSD: getopt_long.c,v 1.8 2004/08/23 03:32:12 jlam Exp $");
 #endif /* LIBC_SCCS and not lint */
 
-/* #include "namespace.h" */
-
-#include <assert.h>
-
-#if HAVE_ERR_H
-#include <err.h>
+#if 0
+#include "namespace.h"
 #endif
 
+#include <nbcompat/assert.h>
+#include <nbcompat/err.h>
+#if HAVE_ERRNO_H
 #include <errno.h>
-#include <stdlib.h>
-#include <string.h>
-
-#ifndef _DIAGASSERT
-#define _DIAGASSERT(cond)	assert(cond)
 #endif
+#if HAVE_NBTOOL_CONFIG_H
+#include "compat_getopt.h"
+#else
+#include <nbcompat/getopt.h>
+#endif
+#include <nbcompat/stdlib.h>
+#include <nbcompat/string.h>
 
-#if HAVE_CONFIG_H && !HAVE_GETOPT_LONG && !HAVE_OPTIND_D
+#if (HAVE_NBTOOL_CONFIG_H && !HAVE_GETOPT_LONG && !HAVE_DECL_OPTIND) || 1
 #define REPLACE_GETOPT
 #endif
 
 #ifdef REPLACE_GETOPT
 #if 0
-#ifndef __ELF__
-#define _getopt getopt
-#else
 #ifdef __weak_alias
 __weak_alias(getopt,_getopt)
-#endif
 #endif
 #endif
 int	opterr = 1;		/* if error message should be printed */
@@ -81,17 +78,13 @@ int	optind = 1;		/* index into parent argv vector */
 int	optopt = '?';		/* character checked for validity */
 int	optreset;		/* reset getopt */
 char    *optarg;		/* argument associated with option */
-#elif HAVE_CONFIG_H && !HAVE_DECL_OPTRESET
+#elif HAVE_NBTOOL_CONFIG_H && !HAVE_DECL_OPTRESET
 static int optreset;
 #endif
 
 #if 0
-#ifndef __ELF__
-#define _getopt_long getopt_long
-#else
 #ifdef __weak_alias
 __weak_alias(getopt_long,_getopt_long)
-#endif
 #endif
 #endif
 

@@ -1,8 +1,8 @@
-/*	$NetBSD: md5c.c,v 1.5 2004/08/16 17:24:56 jlam Exp $	*/
+/*	$NetBSD: md5c.c,v 1.6 2004/08/23 03:32:12 jlam Exp $	*/
 
 /*
  * This file is derived from the RSA Data Security, Inc. MD5 Message-Digest
- * Algorithm and has been modifed by Jason R. Thorpe <thorpej@NetBSD.ORG>
+ * Algorithm and has been modified by Jason R. Thorpe <thorpej@NetBSD.org>
  * for portability and formatting.
  */
 
@@ -29,29 +29,36 @@
  * documentation and/or software.
  */
 
-#include "nbcompat/nbconfig.h"
-#include "nbcompat/nbtypes.h"
-
 #if defined(_KERNEL) || defined(_STANDALONE)
 #include <lib/libkern/libkern.h>
 #include <sys/param.h>
 #include <sys/md5.h>
 #define _DIAGASSERT(x)	(void)0
 #else
-/* #include "namespace.h" */
-#include <assert.h>
-#include <string.h>
-#include "nbcompat/md5.h"
+#if 0
+#include "namespace.h"
+#endif
+#include <nbcompat.h>
+#include <nbcompat/types.h>
+#include <nbcompat/assert.h>
+#include <nbcompat/string.h>
+#include <nbcompat/md5.h>
 #endif /* _KERNEL || _STANDALONE */
 
+#if HAVE_NBTOOL_CONFIG_H
+#include "nbtool_config.h"
+#endif
+
+#if !HAVE_MD5_H
+
 #if defined(HAVE_MEMSET)
-#define	ZEROIZE(d, l)		memset((d), 0, (l))
-#else
+#define ZEROIZE(d, l)		memset((d), 0, (l)) 
+#else 
 # if defined(HAVE_BZERO)
 #define ZEROIZE(d, l)		bzero((d), (l))
 # else
-#error You need either memset or bzero
-# endif
+#error You need either memset or bzero 
+# endif 
 #endif
 
 typedef unsigned char *POINTER;
@@ -84,10 +91,6 @@ __weak_alias(MD5Init,_MD5Init)
 __weak_alias(MD5Update,_MD5Update)
 __weak_alias(MD5Final,_MD5Final)
 #endif
-#endif
-
-#ifndef _DIAGASSERT
-#define _DIAGASSERT(cond)	assert(cond)
 #endif
 
 static void MD5Transform __P((UINT4 [4], const unsigned char [64]));
@@ -229,7 +232,7 @@ MD5Update(context, input, inputLen)
 	if (inputLen >= partLen) {
 		/* LINTED const castaway ok */
 		memcpy((POINTER)&context->buffer[idx],
-		    input, partLen);
+		    (POINTER)input, partLen);
 		MD5Transform(context->state, context->buffer);
 
 		for (i = partLen; i + 63 < inputLen; i += 64)
@@ -241,7 +244,7 @@ MD5Update(context, input, inputLen)
 
 	/* Buffer remaining input */
 	/* LINTED const castaway ok */
-	memcpy((POINTER)&context->buffer[idx], &input[i],
+	memcpy((POINTER)&context->buffer[idx], (POINTER)&input[i],
 	    inputLen - i);
 }
 
@@ -370,3 +373,5 @@ MD5Transform(state, block)
 	/* Zeroize sensitive information. */
 	ZEROIZE((POINTER)(void *)x, sizeof (x));
 }
+
+#endif /* HAVE_MD5_H */

@@ -1,4 +1,4 @@
-/*	$NetBSD: pwcache.h,v 1.4 2004/03/11 13:17:34 grant Exp $	*/
+/*	$NetBSD: pwcache.h,v 1.1 2004/08/23 03:32:13 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -35,15 +35,12 @@
  *      @(#)cache.h	8.1 (Berkeley) 5/31/93
  */
 
-#ifndef _NBCOMPAT_PWCACHE_H
-#define _NBCOMPAT_PWCACHE_H
-
 /*
  * Constants and data structures used to implement group and password file
  * caches. Traditional passwd/group cache routines perform quite poorly with
  * archives. The chances of hitting a valid lookup with an archive is quite a
  * bit worse than with files already resident on the file system. These misses
- * create a MAJOR performance cost. To adress this problem, these routines
+ * create a MAJOR performance cost. To address this problem, these routines
  * cache both hits and misses.
  *
  * NOTE:  name lengths must be as large as those stored in ANY PROTOCOL and
@@ -73,21 +70,3 @@ typedef struct gidc {
 	char name[GNMLEN];	/* gid name */
 	gid_t gid;		/* cached gid */
 } GIDC;
-
-#ifndef HAVE_USER_FROM_UID
-const char *user_from_uid(uid_t, int);
-#endif
-
-#ifndef HAVE_GROUP_FROM_GID
-const char *group_from_gid(gid_t, int);
-#endif
-
-#ifndef HAVE_UID_FROM_USER
-int uid_from_user(const char *, uid_t *);
-#endif
-
-#ifndef HAVE_GID_FROM_GROUP
-int gid_from_group(const char *, gid_t *);
-#endif
-
-#endif /* !_NBCOMPAT_PWCACHE_H */

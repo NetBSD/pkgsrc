@@ -1,4 +1,4 @@
-/*	$NetBSD: poll.c,v 1.1 2003/09/03 13:35:48 jlam Exp $	*/
+/*	$NetBSD: poll.c,v 1.2 2004/08/23 03:32:12 jlam Exp $	*/
 
 /*-
  * Copyright (c) 2003 The NetBSD Foundation, Inc.
@@ -36,7 +36,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "nbcompat.h"
+#include <nbcompat.h>
+#include <nbcompat/types.h>
+#include <nbcompat/time.h>
+#include <nbcompat/unistd.h>
+#include <nbcompat/poll.h>
 
 int
 poll(struct pollfd *p, nfds_t nfds, int timout)

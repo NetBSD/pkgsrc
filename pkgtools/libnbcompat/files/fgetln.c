@@ -1,4 +1,4 @@
-/*	$NetBSD: fgetln.c,v 1.1.1.1 2003/03/31 05:02:43 grant Exp $	*/
+/*	$NetBSD: fgetln.c,v 1.2 2004/08/23 03:32:12 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1998 The NetBSD Foundation, Inc.
@@ -36,8 +36,40 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "nbcompat.h"
+#include <nbcompat.h>
+#include <nbcompat/cdefs.h>
+#if defined(LIBC_SCCS) && !defined(lint)
+#if 0
+static char sccsid[] = "@(#)fgetline.c  8.1 (Berkeley) 6/4/93";
+#else
+__RCSID("$NetBSD: fgetln.c,v 1.2 2004/08/23 03:32:12 jlam Exp $");
+#endif
+#endif /* LIBC_SCCS and not lint */
 
+#if 0
+#include "namespace.h"
+#endif
+
+#include <nbcompat/stdio.h>
+
+#if 0
+#include "reentrant.h"
+#include "local.h"
+#endif
+
+#if 0
+#ifdef __weak_alias
+__weak_alias(fgetln,_fgetln)
+#endif
+#endif
+
+/*
+ * Get an input line.  The returned pointer often (but not always)
+ * points into a stdio buffer.  Fgetline does not alter the text of
+ * the returned line (which is thus not a C string because it will
+ * not necessarily end with '\0'), but does allow callers to modify
+ * it if they wish.  Thus, we set __SMOD in case the caller does.
+ */
 char *
 fgetln(fp, len)
 	FILE *fp;
@@ -81,4 +113,3 @@ fgetln(fp, len)
 	*len = (ptr - buf) + 1;
 	return buf;
 }
-

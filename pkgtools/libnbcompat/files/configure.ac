@@ -1,8 +1,8 @@
-dnl $NetBSD: configure.ac,v 1.48 2004/08/21 06:36:13 jlam Exp $
+dnl $NetBSD: configure.ac,v 1.49 2004/08/23 03:32:12 jlam Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
-AC_INIT([libnbcompat], [20040814], [grant@NetBSD.org])
+AC_INIT([libnbcompat], [20040822], [grant@NetBSD.org])
 AC_CONFIG_HEADER(nbcompat/config.h)
 AC_ARG_PROGRAM
 
@@ -36,13 +36,14 @@ dnl Used by bits.c to check for sizes of integer types
 AC_CHECK_HEADERS([inttypes.h sys/types.h sys/bitypes.h bind/bitypes.h \
 	netinet/in6_machtypes.h])
 
-AC_CHECK_HEADERS([assert.h dirent.h err.h errno.h fcntl.h fnmatch.h fts.h \
-	grp.h libutil.h limits.h machine/endian.h memory.h ndir.h paths.h \
-	pwd.h stdint.h stdio.h stdlib.h stringlist.h strings.h string.h \
-	sys/byteorder.h sys/cdefs.h sys/dir.h sys/endian.h sys/file.h \
-	sys/mkdev.h sys/ndir.h sys/param.h sys/time.h sys/ttycom.h \
-	sys/stat.h sys/statfs.h sys/statvfs.h sys/types.h sys/vfs.h \
-	termcap.h termios.h time.h tzfile.h unistd.h util.h utmp.h
+AC_CHECK_HEADERS([alloca.h assert.h ctype.h dirent.h err.h errno.h fcntl.h \
+	fnmatch.h fts.h grp.h libutil.h limits.h machine/endian.h ndir.h \
+	paths.h pwd.h signal.h stdarg.h stddef.h stdint.h stdio.h stdlib.h \
+	string.h sys/byteorder.h sys/cdefs.h sys/dir.h sys/endian.h \
+	sys/file.h sys/mkdev.h sys/ndir.h sys/param.h sys/stat.h \
+	sys/statfs.h sys/statvfs.h sys/time.h sys/ttycom.h sys/types.h \
+	sys/uio.h sys/vfs.h termcap.h time.h tzfile.h unistd.h \
+	util.h utime.h
 ])
 AC_CHECK_HEADERS([sys/mount.h], [:], [:], [
 	AC_INCLUDES_DEFAULT
@@ -57,6 +58,7 @@ AC_DEFINE(HAVE_NBCOMPAT_GLOB)
 AH_TEMPLATE([HAVE_NBCOMPAT_GLOB], [
 	Define to 1 if the `glob' function is built into the library.
 ])
+AC_LIBOBJ(glob)
 
 dnl Always use our own queue(3) implementation.
 AC_CHECK_HEADERS([sys/queue.h])
@@ -150,8 +152,8 @@ AC_CHECK_HEADERS([vis.h], [
 		#include <sys/types.h>
 		#include <vis.h>
 	], [ int X = VIS_WHITE; ], [
-		AC_CHECK_FUNCS([strunvis strvis strsvis])
-		AC_CHECK_FUNCS([strunvis strvis strsvis],
+		AC_CHECK_FUNCS([strunvis strvis strsvis svis unvis vis])
+		AC_CHECK_FUNCS([strunvis strvis strsvis svis unvis vis],
 			[pkg_use_nbcompat_vis=no],
 			[pkg_use_nbcompat_vis=yes; break])
 	])
@@ -204,21 +206,26 @@ AC_FUNC_MALLOC
 AC_FUNC_STRERROR_R
 AC_FUNC_VPRINTF
 
-AC_REPLACE_FUNCS([err fgetln fnmatch fparseln getenv isblank lchflags \
-	lchmod lchown lutimes mkstemp mkdtemp setgroupent setpassent \
-	setprogname snprintf statvfs strdup strerror strlcat strlcpy \
-	strmode strsep strtoll usleep utimes
+AC_REPLACE_FUNCS([err fgetln fnmatch fparseln getenv isblank \
+	lchflags lchmod lchown lutimes mkdtemp mkstemp setenv setgroupent \
+	setpassent setprogname snprintf statvfs strdup strerror strlcat \
+	strlcpy strmode strsep strtoll unsetenv usleep utimes warn
+])
+
+AC_CHECK_FUNCS([getenv setenv unsetenv], [:], [
+	AC_LIBOBJ(findenv)
+	break
+])
+
+AC_CHECK_FUNCS([mkdtemp mkstemp], [:], [
+	AC_LIBOBJ(gettemp)
+	break
 ])
 
 AC_CHECK_FUNCS([bcopy bzero memset memcpy setlocale])
 AC_CHECK_FUNCS([getmode setmode])
 AC_CHECK_FUNCS([getmode setmode], [:], [
 	AC_LIBOBJ(setmode)
-	break
-])
-AC_CHECK_FUNCS([setenv unsetenv])
-AC_CHECK_FUNCS([setenv unsetenv], [:], [
-	AC_LIBOBJ(setenv)
 	break
 ])
 
@@ -238,25 +245,24 @@ AC_CHECK_FUNC(fts_open, [:], [
 		Define to 1 if the `fts_*' functions are built into the
 		library.
 	])
-	AC_LIBOBJ(__fts13)
+	AC_LIBOBJ(fts)
 ])
 
-# handle Darwin 7 having a poll() compatibility function. be
-# conservative, if we don't find one of poll.h or sys/poll.h, use our
-# local poll() implementation.
-pkg_use_nbcompat_poll=no
+# Handle Darwin 7 having a poll() compatibility function.  Be
+# conservative -- if we don't find one of <poll.h> or <sys/poll.h>, then
+# use our own poll() implementation.
+#
+pkg_cv_have_poll_h=no
 AC_CHECK_HEADERS([poll.h sys/poll.h])
+AC_CHECK_HEADERS([poll.h sys/poll.h], [pkg_cv_have_poll_h=yes])
 
-if test $ac_cv_header_poll_h = no && test $ac_cv_header_sys_poll_h = no; then
-	pkg_use_nbcompat_poll=yes
-fi
-
-if test $pkg_use_nbcompat_poll = yes; then
-	pkg_cv_POLL_NATIVE=no
+pkg_use_nbcompat_poll=yes
+if test $pkg_cv_have_poll_h = yes; then
+	pkg_use_nbcompat_poll=no
 else
 	AC_CHECK_FUNC(poll, [
         	AC_MSG_TRY_COMPILE([if poll() is implemented natively],
-                pkg_cv_POLL_NATIVE,
+                pkg_cv_native_poll,
 		[ #if HAVE_POLL_H
 		  #include <poll.h>
 		  #endif
@@ -268,21 +274,17 @@ else
 		  #error "poll() is emulated"
 	 	  #endif
 		],
-                [:], [:])
+                [pkg_use_nbcompat_poll=no],
+		[pkg_use_nbcompat_poll=yes])
 	])
 fi
 
-if test $pkg_cv_POLL_NATIVE = yes; then
-	AC_DEFINE(HAVE_POLL, 1)
-	AH_TEMPLATE([HAVE_POLL], [
-		Define to 1 if you have the `poll' function.
-	])
-else
-	AC_LIBOBJ(poll)
+if test $pkg_use_nbcompat_poll = yes; then
 	AC_DEFINE(HAVE_NBCOMPAT_POLL, 1)
 	AH_TEMPLATE([HAVE_NBCOMPAT_POLL], [
 		Define to 1 if the `poll' function is built into the library.
 	])
+	AC_LIBOBJ(poll)
 fi
 
 AC_CHECK_FUNCS([getpassphrase getpgrp memmove select])
@@ -293,6 +295,22 @@ AC_CHECK_MEMBERS([struct statfs.f_fsize], [:], [:],
 	[ #include <sys/statfs.h> ])
 AC_CHECK_MEMBERS([struct statfs.f_iosize], [:], [:],
 	[ #include <sys/statfs.h> ])
+AC_CHECK_MEMBERS([struct dirent.d_namlen], [:], [:],
+	[ #include <sys/types.h>
+	  #if HAVE_DIRENT_H
+	  # include <dirent.h>
+	  #else
+	  # define dirent direct
+	  # if HAVE_SYS_NDIR_H
+	  #  include <sys/ndir.h>
+	  # endif
+	  # if HAVE_SYS_DIR_H
+	  #  include <sys/dir.h>
+	  # endif
+	  # if HAVE_NDIR_H
+	  #  include <ndir.h>
+	  # endif
+	  #endif ])
 
 if test $ac_cv_type_long_long = yes; then
 
@@ -349,24 +367,10 @@ dnl		support because we don't know how to display it.
 
 fi
 
-AC_MSG_TRY_COMPILE([for optarg declaration], ftp_cv_HAVE_OPTARG_D, [
+AC_CHECK_DECLS([optind, optreset], [:], [:], [
+	#include <stdio.h>
 	#include <stdlib.h>
 	#include <unistd.h>
-], [ char *X = optarg ], [:], [
-	AC_DEFINE(HAVE_OPTARG_D, 1)
-	AH_TEMPLATE([HAVE_OPTARG_D], [
-		Define to 1 if optarg is declared in <stdlib.h> or <unistd.h>
-	])
-])
-
-AC_MSG_TRY_COMPILE([for optind declaration], ftp_cv_HAVE_OPTIND_D, [
-	#include <stdlib.h>
-	#include <unistd.h>
-], [ int X = optind ], [:] [
-	AC_DEFINE(HAVE_OPTIND_D, 1)
-	AH_TEMPLATE([HAVE_OPTIND_D], [
-		Define to 1 if optind is declared in <stdlib.h> or <unistd.h>
-	])
 ])
 
 AH_BOTTOM([
@@ -374,115 +378,6 @@ AH_BOTTOM([
 
 #ifndef HAVE___ATTRIBUTE__
 # define __attribute__(x)
-#endif
-
-#if HAVE_SYS_CDEFS_H
-#include <sys/cdefs.h>
-#endif
-
-#ifndef __IDSTRING
-# define __IDSTRING(name,string) \
-       static const char name[] __attribute__((__unused__)) = string
-#endif
-
-#ifndef  __RCSID
-# define __RCSID(_s)     __IDSTRING(rcsid,_s)
-#endif
-
-#ifndef __COPYRIGHT
-# define __COPYRIGHT(_s) __IDSTRING(copyright,_s)
-#endif
-
-#ifndef __P
-# if defined(__STDC__) || defined(__cplusplus)
-#  define __P(protos)     protos          /* full-blown ANSI C */
-# else
-#  define __P(protos)     ()              /* traditional C preprocessor */
-# endif
-#endif
-
-#ifndef __CONCAT
-#  if defined(__STDC__) || defined(__cplusplus)
-#  define __CONCAT(x,y)   x ## y
-# else
-#  define __CONCAT(x,y)   x/**/y
-# endif
-#endif
-
-#ifndef __BEGIN_DECLS
-# if defined(__cplusplus)
-#  define __BEGIN_DECLS   extern "C" {
-# else
-#  define __BEGIN_DECLS
-# endif
-#endif
-
-#ifndef __END_DECLS
-# if defined(__cplusplus)
-#  define __END_DECLS     };
-# else
-#  define __END_DECLS
-# endif
-#endif
-
-#if HAVE_SYS_PARAM_H
-#include <sys/param.h>
-#endif
-
-#if HAVE_SYS_ENDIAN_H
-#include <sys/endian.h>
-#endif
-
-#if HAVE_MACHINE_ENDIAN_H
-#include <machine/endian.h>
-#endif
-
-#if HAVE_SYS_BYTEORDER_H
-#include <sys/byteorder.h>
-#endif
-
-#if HAVE_LIMITS_H
-#include <limits.h>
-#endif
-
-#ifndef LITTLE_ENDIAN
-# define LITTLE_ENDIAN 1234
-#endif
-
-#ifndef BIG_ENDIAN
-# define BIG_ENDIAN    4321
-#endif
-
-#ifndef UINT_MAX
-# define UINT_MAX 4294967295U
-#endif
-
-#ifndef BYTE_ORDER
-# if defined(_BIG_ENDIAN)
-#  define BYTE_ORDER BIG_ENDIAN
-# elif defined(_LITTE_ENDIAN)
-#  define BYTE_ORDER LITTLE_ENDIAN
-# elif defined(WORDS_BIGENDIAN)
-#  define BYTE_ORDER BIG_ENDIAN
-# else 
-#  define BYTE_ORDER LITTLE_ENDIAN
-# endif
-#endif
-
-#if defined(HAVE_MEMSET)
-# define MEMSET_BZERO(p,l)	memset((p), 0, (l))
-#elif defined(HAVE_BZERO)
-# define MEMSET_BZERO(p,l)	bzero((p), (l))
-#else
-# error You need either memset or bzero
-#endif
-
-#if defined(HAVE_MEMCPY)
-# define MEMCPY_BCOPY(d,s,l)	memcpy((d), (s), (l))
-#elif defined(HAVE_BCOPY)
-# define MEMCPY_BCOPY(d,s,l)	bcopy((s), (d), (l))
-#else
-# error You need either memcpy or bcopy
 #endif
 ])
 

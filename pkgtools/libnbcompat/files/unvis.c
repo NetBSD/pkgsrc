@@ -1,4 +1,4 @@
-/*	$NetBSD: unvis.c,v 1.6 2004/08/16 17:24:56 jlam Exp $	*/
+/*	$NetBSD: unvis.c,v 1.7 2004/08/23 03:32:13 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1989, 1993
@@ -29,31 +29,44 @@
  * SUCH DAMAGE.
  */
 
-#include "nbcompat/nbconfig.h"
-
-#if HAVE_SYS_CDEFS_H
-#include <sys/cdefs.h>
-#endif
-
+#include <nbcompat.h>
+#include <nbcompat/cdefs.h>
 #if defined(LIBC_SCCS) && !defined(lint)
 #if 0
 static char sccsid[] = "@(#)unvis.c	8.1 (Berkeley) 6/4/93";
 #else
-__RCSID("$NetBSD: unvis.c,v 1.6 2004/08/16 17:24:56 jlam Exp $");
+__RCSID("$NetBSD: unvis.c,v 1.7 2004/08/23 03:32:13 jlam Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
+#if 0
 #define __LIBC12_SOURCE__
+#endif
 
-/* #include "namespace.h" */
-#include <sys/types.h>
+#if 0
+#include "namespace.h"
+#endif
+#include <nbcompat/types.h>
 
-#include <assert.h>
-#include <ctype.h>
-#include <stdio.h>
-#include "nbcompat/vis.h"
+#include <nbcompat/assert.h>
+#include <nbcompat/ctype.h>
+#include <nbcompat/stdio.h>
+#include <nbcompat/vis.h>
 
-#ifndef S_GROUND
+#if 0
+#ifdef __weak_alias
+__weak_alias(strunvis,_strunvis)
+__weak_alias(unvis,_unvis)
+#endif
+#endif
+
+#if 0
+#ifdef __warn_references
+__warn_references(unvis,
+    "warning: reference to compatibility unvis(); include <vis.h> for correct reference")
+#endif
+#endif
+
 /*
  * decode driven by state machine
  */
@@ -66,17 +79,10 @@ __RCSID("$NetBSD: unvis.c,v 1.6 2004/08/16 17:24:56 jlam Exp $");
 #define	S_OCTAL3	6	/* octal digit 3 */
 #define S_HEX1		7	/* hex digit */
 #define S_HEX2		8	/* hex digit 2 */
-#endif
 
-#ifndef isoctal
 #define	isoctal(c)	(((u_char)(c)) >= '0' && ((u_char)(c)) <= '7')
-#endif
-
-#ifndef xtod
 #define xtod(c)		(isdigit(c) ? (c - '0') : ((tolower(c) - 'a') + 10))
-#endif
 
-#if !HAVE_UNVIS
 int
 unvis(cp, c, astate, flag)
 	char *cp;
@@ -268,7 +274,6 @@ __unvis13(cp, c, astate, flag)
 		return (UNVIS_SYNBAD);
 	}
 }
-#endif
 
 /*
  * strunvis - decode src into dst 
@@ -277,7 +282,6 @@ __unvis13(cp, c, astate, flag)
  *	Dst is null terminated.
  */
 
-#if !HAVE_STRUNVIS
 int
 strunvisx(dst, src, flag)
 	char *dst;
@@ -320,4 +324,3 @@ strunvis(dst, src)
 {
 	return strunvisx(dst, src, 0);
 }
-#endif

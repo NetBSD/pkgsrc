@@ -1,4 +1,4 @@
-/*	$NetBSD: utils.h,v 1.1 2004/08/16 17:24:57 jlam Exp $	*/
+/*	$NetBSD: utils.h,v 1.1 2004/08/23 03:32:13 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1992, 1993, 1994
@@ -83,9 +83,7 @@ typedef unsigned char uch;
 #define	NDEBUG	/* no assertions please */
 #endif
 #endif
-#if HAVE_ASSERT_H
-#include <assert.h>
-#endif
+#include <nbcompat/assert.h>
 
 /*
  * Workaround bug in some assert.h.  This is okay since we really don't

@@ -1,4 +1,4 @@
-/*	$NetBSD: setgroupent.c,v 1.1 2004/08/10 18:47:55 jlam Exp $	*/
+/*	$NetBSD: setgroupent.c,v 1.2 2004/08/23 03:32:12 jlam Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -36,13 +36,8 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "nbcompat/nbconfig.h"
-
-#if HAVE_GRP_H
-#include <grp.h>
-#endif
-
-#include "nbcompat/grp.h"
+#include <nbcompat.h>
+#include <nbcompat/grp.h>
 
 int
 setgroupent(int stayopen)

@@ -1,4 +1,4 @@
-/*	$NetBSD: setpassent.c,v 1.1 2004/08/10 18:47:55 jlam Exp $	*/
+/*	$NetBSD: setpassent.c,v 1.2 2004/08/23 03:32:12 jlam Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -36,13 +36,8 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "nbcompat/nbconfig.h"
-
-#if HAVE_PWD_H
-#include <pwd.h>
-#endif
-
-#include "nbcompat/pwd.h"
+#include <nbcompat.h>
+#include <nbcompat/pwd.h>
 
 int
 setpassent(int stayopen)

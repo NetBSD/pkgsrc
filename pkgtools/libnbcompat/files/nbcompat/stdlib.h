@@ -1,4 +1,4 @@
-/*	$NetBSD: stdlib.h,v 1.1 2004/08/10 18:47:55 jlam Exp $	*/
+/*	$NetBSD: stdlib.h,v 1.2 2004/08/23 03:32:13 jlam Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -42,9 +42,13 @@
 #if HAVE_STDLIB_H
 # include <stdlib.h>
 #endif
+#if HAVE_ALLOCA_H
+# include <alloca.h>
+#endif
 
 /*
- * Declare functions and macros that may be missing in <stdlib.h>.
+ * Declare functions and macros that may be missing in <stdlib.h> and
+ * <alloca.h>.
  */
 
 #if !HAVE_MKSTEMP

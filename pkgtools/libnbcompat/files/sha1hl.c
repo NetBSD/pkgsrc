@@ -1,4 +1,4 @@
-/*	$NetBSD: sha1hl.c,v 1.5 2004/08/16 17:24:56 jlam Exp $	*/
+/*	$NetBSD: sha1hl.c,v 1.6 2004/08/23 03:32:12 jlam Exp $	*/
 
 /* sha1hl.c
  * ----------------------------------------------------------------------------
@@ -9,40 +9,48 @@
  * ----------------------------------------------------------------------------
  */
 
-#include "nbcompat/nbconfig.h"
-#include "nbcompat/nbtypes.h"
-
-/* #include "namespace.h" */
-
-#if HAVE_FCNTL_H
-#include <fcntl.h>
+#if 0
+#include "namespace.h"
 #endif
+
+#include <nbcompat.h>
+#include <nbcompat/cdefs.h>
 #if HAVE_SYS_FILE_H
 #include <sys/file.h>
 #endif
+#include <nbcompat/types.h>
+#if HAVE_SYS_UIO_H
 #include <sys/uio.h>
-
-#include <assert.h>
-#include <errno.h>
-#include "nbcompat/sha1.h"
-#include <stdio.h>
-#include <stdlib.h>
-#if HAVE_UNISTD_H
-#include <unistd.h>
 #endif
+
+#include <nbcompat/assert.h>
+#if HAVE_ERRNO_H
+#include <errno.h>
+#endif
+#if HAVE_FCNTL_H
+#include <fcntl.h>
+#endif
+#include <nbcompat/sha1.h>
+#include <nbcompat/stdio.h>
+#include <nbcompat/stdlib.h>
+#include <nbcompat/unistd.h>
+
+#if HAVE_NBTOOL_CONFIG_H
+#include "nbtool_config.h"
+#endif
+
+#if !HAVE_SHA1_H
 
 #if defined(LIBC_SCCS) && !defined(lint)
-__RCSID("$NetBSD: sha1hl.c,v 1.5 2004/08/16 17:24:56 jlam Exp $");
+__RCSID("$NetBSD: sha1hl.c,v 1.6 2004/08/23 03:32:12 jlam Exp $");
 #endif /* LIBC_SCCS and not lint */
 
-#ifndef _DIAGASSERT
-#define _DIAGASSERT(cond)	assert(cond)
-#endif
-
 #if 0
+#if defined(__weak_alias)
 __weak_alias(SHA1End,_SHA1End)
 __weak_alias(SHA1File,_SHA1File)
 __weak_alias(SHA1Data,_SHA1Data)
+#endif
 #endif
 
 /* ARGSUSED */
@@ -112,3 +120,5 @@ SHA1Data (data, len, buf)
     SHA1Update(&ctx, data, len);
     return(SHA1End(&ctx, buf));
 }
+
+#endif /* HAVE_SHA1_H */
