@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.52 2005/02/11 15:59:41 tv Exp $
+# $NetBSD: tools.mk,v 1.53 2005/03/21 13:58:22 tv Exp $
 #
 # This Makefile creates a ${TOOLS_DIR} directory and populates the bin
 # subdir with tools that hide the ones outside of ${TOOLS_DIR}.
@@ -132,7 +132,8 @@ USE_GNU_TOOLS=	${_tools}
 # system, so no need to pull in the pkgsrc versions; we will use these
 # instead.
 #
-_TOOLS_OPSYS_HAS_GNU.awk+=	FreeBSD-*-* Interix-*-* Linux-*-* OpenBSD-*-*
+#_TOOLS_OPSYS_HAS_GNU.awk+=	Interix-*-* # too old and buggy; use lang/gawk
+_TOOLS_OPSYS_HAS_GNU.awk+=	FreeBSD-*-* Linux-*-* OpenBSD-*-*
 _TOOLS_OPSYS_HAS_GNU.awk+=	NetBSD-1.[0-6]*-* DragonFly-*-*
 _TOOLS_OPSYS_HAS_GNU.grep+=	Darwin-*-* FreeBSD-*-* Linux-*-*
 _TOOLS_OPSYS_HAS_GNU.grep+=	NetBSD-*-* OpenBSD-*-* DragonFly-*-*
