@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/12/19 18:39:25 tsarna Exp $
+# $NetBSD: Makefile,v 1.2 1998/12/23 06:49:44 tsarna Exp $
 #
 
-DISTNAME=	ZmySQLDA-1.0.5-nonbin
-PKGNAME=	zope-mysql-1.0.5
+DISTNAME=	ZMySQLDA-1.1.0-nonbin
+PKGNAME=	zope-mysql-1.1.0
 CATEGORIES=	www
-MASTER_SITES=   http://www.zope.org/Download/ZmySQLDA/
+MASTER_SITES=   http://www.zope.org/Download/ZMySQLDA/
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.zope.org/
 
-DEPENDS+=	zope-1.9.0b3:../../www/zope
+DEPENDS+=	zope-1.9.0:../../www/zope
 DEPENDS+=	py-mysql-1.4:../../databases/py-mysql
 
 WRKSRC=		${WRKDIR}/lib
@@ -17,15 +17,14 @@ WRKSRC=		${WRKDIR}/lib
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 ZOPEDIR=	${PREFIX}/zope
-DAPATH=		lib/python/Products/ZmySQLDA
+DAPATH=		lib/python/Products/ZMySQLDA
 
 do-configure:
-	(cd ${WRKDIR}/${DAPATH}; ${RM} -f Makefile* *.pyc *.orig Setup)
+	(cd ${WRKDIR}/${DAPATH}; ${RM} -rf Makefile* *.pyc *.orig src Setup)
 
 do-build:
 	(cd ${WRKDIR}/${DAPATH} ; \
-	${PREFIX}/bin/python ${PREFIX}/lib/python1.5/compileall.py . ; \
-	${PREFIX}/bin/python -O ${PREFIX}/lib/python1.5/compileall.py . ; )
+	${PREFIX}/bin/python ${PREFIX}/lib/python1.5/compileall.py . ; )
 	
 do-install:
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
