@@ -4,8 +4,8 @@
  # Indicates whether or not Cocoon should be visible if
  # the requested URI equals the specified one.
  selfservlet.enabled = true
--selfservlet.uri = /cocoon/Cocoon.xml
-+selfservlet.uri = /Cocoon.xml
+-selfservlet.uri = /Cocoon.xml
++selfservlet.uri = /cocoon/Cocoon.xml
  
  # Indicates whether or not Cocoon should handle errors internally
  # and format the error and the exception stack trace to the client

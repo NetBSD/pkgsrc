@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/05/31 21:55:15 jwise Exp $
+# $NetBSD: Makefile,v 1.2 2000/05/31 23:49:27 jwise Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of Xerces-J,
 # because although Xerces runs fine under JDK 1.1, JDK 1.2 or greater is
@@ -28,7 +28,6 @@ DEPENDS+=	jakarta-tomcat-*:../../www/jakarta-tomcat
 #	FESI 1.21+ (http://home.worldcom.ch/jmlugrin/fesi/download.html)
 
 WRKSRC=		${WRKDIR}/${PKGNAME}
-NO_PATCH=
 NO_CONFIGURE=
 
 USE_JAVA=	yes
