@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7432 2004/10/14 16:35:06 ben Exp $
+$NetBSD: CHANGES,v 1.7433 2004/10/14 17:04:51 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4716,3 +4716,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated sun-jdk14 to 2.6 [jschauma 2004-10-14]
 	Updated pkgclean to 20041014 [ben 2004-10-14]
 	Updated slurm to 0.3.3 [ben 2004-10-14]
+	Updated dia to 0.94 [jmmv 2004-10-14]
