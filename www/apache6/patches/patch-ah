@@ -1,9 +1,9 @@
-$NetBSD: patch-ah,v 1.1.1.1 1999/07/23 17:53:30 itojun Exp $
+$NetBSD: patch-ah,v 1.2 2000/04/26 03:30:27 hubertf Exp $
 
---- src/modules/standard/mod_so.c.orig	Sat Sep 19 08:27:24 1998
-+++ src/modules/standard/mod_so.c	Thu Dec  3 07:59:19 1998
-@@ -289,6 +296,9 @@
-     void *handle;
+--- src/modules/standard/mod_so.c.orig	Tue Apr 25 21:22:13 2000
++++ src/modules/standard/mod_so.c	Tue Apr 25 21:22:34 2000
+@@ -294,6 +294,9 @@
+     ap_os_dso_handle_t handle;
      char *file;
  
 +/* XXX Hack: ask dlopen() without translating for ServerRoot. */
