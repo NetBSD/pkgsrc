@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5964 2004/05/15 21:03:36 itojun Exp $
+$NetBSD: CHANGES,v 1.5965 2004/05/15 23:42:24 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2566,3 +2566,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome to 2.6.1 [jmmv 2004-05-15]
 	Updated gnome-extras to 2.6.1 [jmmv 2004-05-15]
 	Re-added bind9-current with bind 9.3.0beta3 [itojun 2004-05-15]
+	Updated gkrellm to 2.2.0 [xtraeme 2004-05-15]
