@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1009 2002/07/21 11:53:18 mrauch Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1010 2002/07/22 02:33:55 jschauma Exp $
 #
 # This file is in the public domain.
 #
@@ -1479,7 +1479,7 @@ show-downlevel:
 	if [ "X$$found" != "X" -a "X$$found" != "X${PKGNAME}" ]; then	\
 		${ECHO} "${PKGBASE} package: $$found installed, pkgsrc version ${PKGNAME}"; \
 		if [ "X$$STOP_DOWNLEVEL_AFTER_FIRST" != "X" ]; then	\
-			${ECHO} "stoping after first downlevel pkg found"; \
+			${ECHO} "stopping after first downlevel pkg found"; \
 			exit 1;						\
 		fi;							\
 	fi
