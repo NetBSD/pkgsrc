@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2000/07/25 06:36:25 tron Exp $
+# $NetBSD: Makefile.common,v 1.14 2000/07/25 06:53:13 tron Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -45,7 +45,7 @@ VENDOR_NAME=	BSD/OS 2.1
 PLIST_ARCH=	linux-i386
 DEPENDS=	suse_linux>=6.1:../../emulators/suse_linux
 DISTUNAME=	x86-unknown-linux2.2
-DIST_DIR_NAME=	unsupported/linux22
+DIST_DIR_NAME=	supported/linux22
 WRKNAME=	x86-unknown-linux2.2
 VENDOR_NAME=	Linux 2.2
 #
