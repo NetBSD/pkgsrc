@@ -3,7 +3,7 @@
 # Date created:		22 August 1994
 # Whom:			jkh
 #
-# $NetBSD: Makefile,v 1.6 1998/03/05 14:28:32 tv Exp $
+# $NetBSD: Makefile,v 1.7 1998/03/07 21:24:23 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.17 1996/12/17 05:18:09 asami Exp
 #
 
@@ -34,7 +34,7 @@ post-install:
 	cd ${WRKSRC}; ${INSTALL_DATA} tcsh.german.cat ${PREFIX}/share/nls/de_DE.ISO_8859-1/tcsh.cat
 	ln -f ${PREFIX}/share/nls/de_DE.ISO_8859-1/tcsh.cat ${PREFIX}/share/nls/de_AT.ISO_8859-1/tcsh.cat
 	ln -f ${PREFIX}/share/nls/de_DE.ISO_8859-1/tcsh.cat ${PREFIX}/share/nls/de_CH.ISO_8859-1/tcsh.cat
-	install -d -o ${BINOWN} -g ${BINGRP} -m 755 ${PREFIX}/share/nls/el_GR.ISO_8859-7
+	${INSTALL_DATA_DIR} ${PREFIX}/share/nls/el_GR.ISO_8859-7
 	cd ${WRKSRC}; ${INSTALL_DATA} tcsh.greek.cat ${PREFIX}/share/nls/el_GR.ISO_8859-7/tcsh.cat
 	${ECHO} "updating /etc/shells"; ${CP} /etc/shells /etc/shells.bak; (grep -v ${PREFIX}/bin/tcsh /etc/shells.bak; ${ECHO} ${PREFIX}/bin/tcsh) >/etc/shells
 
