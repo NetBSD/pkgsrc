@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 2002/09/15 06:03:04 rh Exp $
+
+--- man/Makefile.in.orig	Sun Sep 15 14:05:37 2002
++++ man/Makefile.in
+@@ -178,6 +178,7 @@ install-man1:
+ 	  ext=`echo $$i | sed -e 's/^.*\\.//'`; \
+ 	  inst=`echo $$i | sed -e 's/\\.[0-9a-z]*$$//'`; \
+ 	  inst=`echo $$inst | sed '$(transform)'`.$$ext; \
++	  inst=`echo $$inst | sed 's/session-prop/gnome2-session-prop/'`; \
+ 	  echo " $(INSTALL_DATA) $$file $(DESTDIR)$(man1dir)/$$inst"; \
+ 	  $(INSTALL_DATA) $$file $(DESTDIR)$(man1dir)/$$inst; \
+ 	done

@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/09/15 06:03:04 rh Exp $
+
+--- gnome-session/splash-widget.c.orig	Fri Jul 26 03:01:04 2002
++++ gnome-session/splash-widget.c
+@@ -336,6 +336,10 @@ read_background (SplashWidget *sw)
+ 	
+ 	if (!pb)
+ 		pb = gdk_pixbuf_new_from_file (
++			GNOME_ICONDIR "/splash/gnome2-splash.png", NULL);
++	
++	if (!pb)
++		pb = gdk_pixbuf_new_from_file (
+ 			GNOME_ICONDIR "/splash/gnome-splash.png", NULL);
+ 
+ 	sw->background = pb;

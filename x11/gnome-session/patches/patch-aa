@@ -1,0 +1,53 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/09/15 06:03:04 rh Exp $
+
+--- gnome-session/Makefile.in.orig	Thu Sep  5 12:25:10 2002
++++ gnome-session/Makefile.in
+@@ -413,6 +413,8 @@ install-man1:
+ 	  ext=`echo $$i | sed -e 's/^.*\\.//'`; \
+ 	  inst=`echo $$i | sed -e 's/\\.[0-9a-z]*$$//'`; \
+ 	  inst=`echo $$inst | sed '$(transform)'`.$$ext; \
++	  inst=`echo $$inst | sed 's/save/gnome2-save/'`; \
++	  inst=`echo $$inst | sed 's/session-prop/gnome2-session-prop/'`; \
+ 	  echo " $(INSTALL_DATA) $$file $(DESTDIR)$(man1dir)/$$inst"; \
+ 	  $(INSTALL_DATA) $$file $(DESTDIR)$(man1dir)/$$inst; \
+ 	done
+@@ -447,7 +449,7 @@ install-man5:
+ 	  inst=`echo $$i | sed -e 's/\\.[0-9a-z]*$$//'`; \
+ 	  inst=`echo $$inst | sed '$(transform)'`.$$ext; \
+ 	  echo " $(INSTALL_DATA) $$file $(DESTDIR)$(man5dir)/$$inst"; \
+-	  $(INSTALL_DATA) $$file $(DESTDIR)$(man5dir)/$$inst; \
++	  $(INSTALL_DATA) $$file $(DESTDIR)$(man5dir)/gnome2-$$inst; \
+ 	done
+ 
+ uninstall-man5:
+@@ -477,10 +479,10 @@ install-defaultDATA: $(default_DATA)
+ 	@list='$(default_DATA)'; for p in $$list; do \
+ 	  if test -f $(srcdir)/$$p; then \
+ 	    echo " $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(defaultdir)/$$p"; \
+-	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(defaultdir)/$$p; \
++	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(defaultdir)/gnome2-$$p; \
+ 	  else if test -f $$p; then \
+ 	    echo " $(INSTALL_DATA) $$p $(DESTDIR)$(defaultdir)/$$p"; \
+-	    $(INSTALL_DATA) $$p $(DESTDIR)$(defaultdir)/$$p; \
++	    $(INSTALL_DATA) $$p $(DESTDIR)$(defaultdir)/gnome2-$$p; \
+ 	  fi; fi; \
+ 	done
+ 
+@@ -494,12 +496,13 @@ install-pixmapDATA: $(pixmap_DATA)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(pixmapdir)
+ 	@list='$(pixmap_DATA)'; for p in $$list; do \
++	  inst=`echo $$p | sed '$(transform)'`; \
+ 	  if test -f $(srcdir)/$$p; then \
+-	    echo " $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(pixmapdir)/$$p"; \
+-	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(pixmapdir)/$$p; \
++	    echo " $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(pixmapdir)/$$inst"; \
++	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(pixmapdir)/$$inst; \
+ 	  else if test -f $$p; then \
+-	    echo " $(INSTALL_DATA) $$p $(DESTDIR)$(pixmapdir)/$$p"; \
+-	    $(INSTALL_DATA) $$p $(DESTDIR)$(pixmapdir)/$$p; \
++	    echo " $(INSTALL_DATA) $$p $(DESTDIR)$(pixmapdir)/$$inst"; \
++	    $(INSTALL_DATA) $$p $(DESTDIR)$(pixmapdir)/$$inst; \
+ 	  fi; fi; \
+ 	done
+ 
