@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2004/06/21 16:22:26 martti Exp $
+# $NetBSD: Makefile,v 1.26 2004/11/08 16:50:13 wiz Exp $
 #
 
 DISTNAME=	bins-1.1.26
 CATEGORIES=	www graphics
-MASTER_SITES=	http://jsautret.free.fr/BINS/
+MASTER_SITES=	http://zubro.chez.tiscali.fr/BINS/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	dmcmahill@NetBSD.org
