@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2003/09/26 13:35:36 wiz Exp $
+$NetBSD: patch-ab,v 1.6 2003/10/20 12:16:40 hubertf Exp $
 
 --- KeyRing/keyring.c.orig	2002-12-25 07:19:04.000000000 +0100
 +++ KeyRing/keyring.c
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.5 2003/09/26 13:35:36 wiz Exp $
  /* Opensll header files */
  #include <openssl/md5.h>
 -#include <openssl/des.h>
-+#include <des.h>
++#include <kerberosIV/des.h>
  
  #include "libplugin.h"
  
