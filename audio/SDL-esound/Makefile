@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/26 21:43:34 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/03 19:24:43 drochner Exp $
 #
 
 .include "../../devel/SDL/Makefile.common"
@@ -16,7 +16,7 @@ BUILD_DIRS=		${WRKSRC}/src/audio/esd
 
 do-install:
 	cd ${WRKSRC}/src/audio/esd && ${SHLIBTOOL} --mode=install \
-		${INSTALL} libaudio_esd.la ${PREFIX}/lib
+		${INSTALL_DATA} libaudio_esd.la ${PREFIX}/lib
 
 .include "../../audio/esound/buildlink2.mk"
 .include "../../devel/SDL/buildlink2.mk"
