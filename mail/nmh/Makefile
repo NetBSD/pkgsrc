@@ -3,7 +3,7 @@
 # Date created:				26 July 1997
 # Whom:					Scott Blachowicz <Scott.Blachowicz@seaslug.org>
 #
-# $NetBSD: Makefile,v 1.8 1998/01/19 09:11:52 agc Exp $
+# $NetBSD: Makefile,v 1.9 1998/01/24 20:32:34 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/04 06:51:28 markm Exp
 #
 
@@ -16,8 +16,8 @@ MAINTAINER=     Scott.Blachowicz@seaslug.org
 NMH_MTA?=	smtp
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= --libexecdir=$(PREFIX)/libexec/nmh \
-		--sysconfdir=$(PREFIX)/etc/nmh --enable-nmh-pop \
+CONFIGURE_ARGS+= --libexecdir=${PREFIX}/libexec/nmh \
+		--sysconfdir=${PREFIX}/etc/nmh --enable-nmh-pop \
 		--with-mts=${NMH_MTA}
 
 MAN1= ali.1 anno.1 burst.1 comp.1 dist.1 flist.1 folder.1 forw.1 inc.1 \
@@ -37,6 +37,6 @@ post-patch:
 	${ECHO} > ${WRKSRC}/stamp-h.in
 
 post-install:
-	@PKG_PREFIX='${PREFIX}' sh -f ./pkg/INSTALL
+	@PKG_PREFIX='${PREFIX}' sh -f ${PKGDIR}/INSTALL
 
 .include <bsd.port.mk>
