@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.5 2000/03/20 12:03:45 agc Exp $
+# $NetBSD: Makefile,v 1.6 2000/12/27 10:08:35 rh Exp $
 #
 
-DISTNAME=	snort-1.6
+DISTNAME=	snort-1.6.3-patch2
+PKGNAME=	${DISTNAME:S/-patch/./}
 CATEGORIES=	net security
-MASTER_SITES=	http://www.clark.net/~roesch/ \
+MASTER_SITES=	http://www.snort.org/Files/				\
 		ftp://the.wiretapped.net/pub/security/network-intrusion-detection/snort/ \
-		http://www.centus.com/snort/ \
-		http://snort.whitehats.com/ \
-		http://snort.safenetworks.com/ \
+		http://www.centus.com/snort/				\
+		http://snort.whitehats.com/				\
+		http://snort.safenetworks.com/				\
 		ftp://gd.tuwien.ac.at/infosys/security/snort/
 
 MAINTAINER=	rh@netbsd.org
-HOMEPAGE=	http://www.clark.net/~roesch/security.html
+HOMEPAGE=	http://www.snort.org/
 
 GNU_CONFIGURE=	YES
 
@@ -27,11 +28,14 @@ ROOTGROUP?=	wheel
 post-install:
 	${INSTALL_DATA_DIR} -m 700 -o root -g ${ROOTGROUP} /var/log/snort
 	${INSTALL_DATA_DIR} ${PREFIX}/share/snort
-.for f in backdoor-lib misc-lib overflow-lib scan-lib snort-lib web-lib
+.for f in backdoor-lib ddos-lib finger-lib ftp-lib misc-lib netbios-lib \
+	overflow-lib ping-lib rpc-lib scan-lib smtp-lib snort-lib telnet-lib \
+	webcf-lib webcgi-lib webfp-lib webiis-lib webmisc-lib
 	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/snort
 .endfor
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/snort
-.for f in README README.PLUGINS NEWS RULES.SAMPLE USAGE
+.for f in BUGS CREDITS README README.FLEXRESP README.PLUGINS NEWS	\
+	RULES.SAMPLE USAGE
 	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/doc/snort
 .endfor
 	${INSTALL_MAN} ${WRKSRC}/snort.8 ${PREFIX}/man/man8
