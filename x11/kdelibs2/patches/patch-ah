@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.3 2001/12/03 15:37:21 skrll Exp $
+$NetBSD: patch-ah,v 1.4 2001/12/16 20:33:41 skrll Exp $
 
 --- dcop/Makefile.in.orig	Tue Nov 13 20:57:03 2001
 +++ dcop/Makefile.in
@@ -17,18 +17,16 @@ $NetBSD: patch-ah,v 1.3 2001/12/03 15:37:21 skrll Exp $
  libDCOP_la_LIBADD = KDE-ICE/libkICE.la $(LIB_QT)
  libDCOP_la_LDFLAGS = -version-info 1:0 $(all_libraries) -no-undefined
  
-@@ -303,13 +303,17 @@
+@@ -303,13 +303,16 @@
  # dcopstub needs to go first for --enable-final to work
  libDCOP_la_SOURCES = dcopstub.cpp dcopclient.cpp dcopobject.cpp dcopref.cpp
  
--dcopserver_la_LDFLAGS = -module -avoid-version
--dcopserver_la_SOURCES = dcopserver.cpp dcopsignals.cpp
--dcopserver_la_LIBADD = libDCOP.la
-+#libdcopserver_main_la_LDFLAGS = -export-dynamic
 +libdcopserver_main_la_SOURCES = dcopserver.cpp dcopsignals.cpp
 +libdcopserver_main_la_LIBADD = libDCOP.la
 +
-+dcopserver_la_LDFLAGS = -Wl,-export-dynamic -module -avoid-version
+ dcopserver_la_LDFLAGS = -module -avoid-version
+-dcopserver_la_SOURCES = dcopserver.cpp dcopsignals.cpp
+-dcopserver_la_LIBADD = libDCOP.la
 +dcopserver_la_SOURCES = dcopserver_main.cpp
 +dcopserver_la_LIBADD = libdcopserver_main.la
  
@@ -40,7 +38,7 @@ $NetBSD: patch-ah,v 1.3 2001/12/03 15:37:21 skrll Exp $
  
  testdcop_SOURCES = testdcop.cpp
  testdcop_LDADD = ../kdecore/libkdecore.la
-@@ -334,21 +338,26 @@
+@@ -334,21 +337,26 @@
  libDCOP_la_nofinal_OBJECTS = dcopstub.lo dcopclient.lo dcopobject.lo dcopref.lo
  @KDE_USE_FINAL_FALSE@libDCOP_la_OBJECTS = $(libDCOP_la_nofinal_OBJECTS)
  @KDE_USE_FINAL_TRUE@libDCOP_la_OBJECTS = $(libDCOP_la_final_OBJECTS)
@@ -76,7 +74,7 @@ $NetBSD: patch-ah,v 1.3 2001/12/03 15:37:21 skrll Exp $
  #>- testdcop_OBJECTS =  testdcop.$(OBJEXT)
  #>+ 1
  testdcop_OBJECTS = testdcop.$(OBJEXT)
-@@ -392,8 +401,8 @@
+@@ -392,8 +400,8 @@
  
  TAR = tar
  GZIP_ENV = --best
@@ -87,7 +85,7 @@ $NetBSD: patch-ah,v 1.3 2001/12/03 15:37:21 skrll Exp $
  
  #>- all: all-redirect
  #>+ 1
-@@ -486,6 +495,9 @@
+@@ -486,6 +494,9 @@
  @KDE_USE_CLOSURE_FALSE@libDCOP.la: $(libDCOP_la_OBJECTS) $(libDCOP_la_DEPENDENCIES)
  	$(CXXLINK) -rpath $(libdir) $(libDCOP_la_LDFLAGS) $(libDCOP_la_OBJECTS) $(libDCOP_la_LIBADD) $(LIBS)
  
@@ -97,7 +95,7 @@ $NetBSD: patch-ah,v 1.3 2001/12/03 15:37:21 skrll Exp $
  dcopserver.la: $(dcopserver_la_OBJECTS) $(dcopserver_la_DEPENDENCIES)
  	$(CXXLINK) -rpath $(libdir) $(dcopserver_la_LDFLAGS) $(dcopserver_la_OBJECTS) $(dcopserver_la_LIBADD) $(LIBS)
  
-@@ -770,9 +782,6 @@
+@@ -770,9 +781,6 @@
  	maintainer-clean-generic clean mostlyclean distclean maintainer-clean
  
  
@@ -107,7 +105,7 @@ $NetBSD: patch-ah,v 1.3 2001/12/03 15:37:21 skrll Exp $
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
-@@ -828,11 +837,23 @@
+@@ -828,11 +836,23 @@
  	rm -f libDCOP_la.all_cpp.final libDCOP_la.all_cpp.files
  
  #>+ 11
@@ -133,7 +131,7 @@ $NetBSD: patch-ah,v 1.3 2001/12/03 15:37:21 skrll Exp $
  	  echo "#include \"$$file\"" >> dcopserver_la.all_cpp.files; \
  	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> dcopserver_la.all_cpp.final; \
  	done; \
-@@ -840,11 +861,11 @@
+@@ -840,11 +860,11 @@
  	rm -f dcopserver_la.all_cpp.final dcopserver_la.all_cpp.files
  
  #>+ 11
@@ -147,7 +145,7 @@ $NetBSD: patch-ah,v 1.3 2001/12/03 15:37:21 skrll Exp $
  	  echo "#include \"$$file\"" >> dcopserver.all_cpp.files; \
  	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> dcopserver.all_cpp.final; \
  	done; \
-@@ -865,20 +886,20 @@
+@@ -865,20 +885,20 @@
  
  #>+ 3
  clean-final:
