@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/10/11 15:11:48 agc Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/09 12:49:12 wiz Exp $
 
 DISTNAME=	firewalk-1.0
 CATEGORIES=	net security
@@ -10,11 +10,12 @@ COMMENT=	Firewalk determines the filter rules on a packet forwarding device
 
 WRKSRC=         ${WRKDIR}/${DISTNAME:C/f/F/}
 
-GNU_CONFIGURE=	#defined
+USE_BUILDLINK2=	# defined
+GNU_CONFIGURE=	# defined
 CONFIGURE_ENV+=	CFLAGS=-I${LOCALBASE}/include
 CONFIGURE_ARGS+= --with-gtk=no
 
-MAKE_ENV+=	LIBS="-L${LOCALBASE}/lib" FIREWALK_LOC=${LOCALBASE}
+MAKE_ENV+=	FIREWALK_LOC=${LOCALBASE}
 
-.include "../../devel/libnet/buildlink.mk"
+.include "../../devel/libnet/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

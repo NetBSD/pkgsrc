@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/10/11 15:13:49 agc Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/09 12:51:11 wiz Exp $
 
 DISTNAME=	firewalk-1.0
 PKGNAME=	firewalk-gtk-1.0
@@ -12,14 +12,14 @@ COMMENT=	Firewalk determines the filter rules on a packet forwarding device
 WRKSRC=         ${WRKDIR}/${DISTNAME:C/f/F/}
 
 GNU_CONFIGURE=	#defined
-CONFIGURE_ENV+=	CFLAGS="-I${LOCALBASE}/include `gtk-config --cflags`"
+CONFIGURE_ENV+=	CFLAGS="-I${BUILDLINK_PREFIX.libnet}/include `gtk-config --cflags`"
 CONFIGURE_ENV+= GTK_CFLAGS="`gtk-config --cflags`"
 
-MAKE_ENV+=	LIBS="-L${LOCALBASE}/lib" FIREWALK_LOC=${LOCALBASE}
+MAKE_ENV+=	FIREWALK_LOC=${LOCALBASE}
 
 pre-install:
 	${MV} ${WRKSRC}/firewalk.1 ${WRKSRC}/firewalk-gtk.1
 
-.include "../../x11/gtk/buildlink.mk"
-.include "../../devel/libnet/buildlink.mk"
+.include "../../x11/gtk/buildlink2.mk"
+.include "../../devel/libnet/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

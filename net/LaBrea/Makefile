@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/02/06 16:58:15 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/09 12:47:11 wiz Exp $
 #
 
 DISTNAME=	LaBrea
@@ -11,6 +11,8 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://hts.dshield.org/LaBrea/
 COMMENT=	builds tarpits/honeypots for scanners
 
+USE_BUILDLINK2=	YES
+
 post-extract:
 	cd ${WRKSRC};							\
 		${MV} LaBrea.c LaBrea.c.in &&				\
@@ -20,5 +22,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/LaBrea ${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/LaBrea.README ${PREFIX}/share/doc/LaBrea
 
-.include "../../devel/libnet/buildlink.mk"
+.include "../../devel/libnet/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
