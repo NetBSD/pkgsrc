@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/01/28 22:03:21 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/08 01:24:49 snj Exp $
 # FreeBSD: ports/games/xpat2/Makefile,v 1.11 2000/04/14 12:27:59 asami Exp
 
 DISTNAME=	xpat2-1.06
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=games/solitaires/}
 MAINTAINER=	kuebart@mathematik.uni-ulm.de
 COMMENT=	X11 solitaire game with 14 variations
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 USE_X11BASE=	YES
 
@@ -26,5 +26,5 @@ post-install:
 	${CHOWN} root.games ${PREFIX}/bin/xpat2
 	${CHMOD} 2555 ${PREFIX}/bin/xpat2
 
-.include "../../graphics/xpm/buildlink2.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
