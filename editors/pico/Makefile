@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2004/05/13 18:27:48 adam Exp $
+# $NetBSD: Makefile,v 1.52 2004/05/17 10:56:17 grant Exp $
 
 DISTNAME=	pine4.60
 PKGNAME=	pico-4.7
@@ -19,13 +19,13 @@ USE_LIBTOOL=	YES
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-BUILDNAME= so5
+BUILDNAME=	so5
 .elif ${OPSYS} == "Darwin"
-BUILDNAME= osx
+BUILDNAME=	osx
 .elif ${OPSYS} == "Linux"
-BUILDNAME= lnx
+BUILDNAME=	lnx
 .else
-BUILDNAME= neb
+BUILDNAME=	neb
 .endif
 
 MAKE_ENV+=	_STRIPFLAG_INSTALL=	# debug...

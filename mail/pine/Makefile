@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2004/05/14 09:36:53 tron Exp $
+# $NetBSD: Makefile,v 1.91 2004/05/17 11:02:45 grant Exp $
 
 DISTNAME=       pine4.60
 PKGNAME=        pine-4.60
@@ -22,17 +22,17 @@ CONF_FILES=    ${PREFIX}/share/examples/pine/pine.conf ${PKG_SYSCONFDIR}/pine.co
 .include "../../mk/compiler.mk"
 
 .if ${OPSYS} == "SunOS"
-BUILDNAME= so5
-BUILDFILE= sol
+BUILDNAME=	so5
+BUILDFILE=	sol
 .elif ${OPSYS} == "Linux"
-BUILDNAME= lnx
-BUILDFILE= lnx
+BUILDNAME=	lnx
+BUILDFILE=	lnx
 .elif ${OPSYS} == "Darwin"
-BUILDNAME= osx
-BUILDFILE= osx
+BUILDNAME=	osx
+BUILDFILE=	osx
 .else
-BUILDNAME= neb
-BUILDFILE= neb
+BUILDNAME=	neb
+BUILDFILE=	neb
 .endif
 
 .if !empty(CC_VERSION:Mgcc-*)
