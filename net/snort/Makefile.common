@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2002/10/13 04:42:12 hubertf Exp $
+# $NetBSD: Makefile.common,v 1.6 2002/11/09 13:44:43 wiz Exp $
 #
 
 DISTNAME?=	snort-1.9.0
@@ -13,7 +13,6 @@ MASTER_SITES?=	http://www.snort.org/releases/				\
 
 MAINTAINER?=	packages@netbsd.org
 HOMEPAGE?=	http://www.snort.org/
-COMMENT?=	Libpcap-based packet sniffer/logger
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=--with-libpcap-includes=${BUILDLINK_PREFIX.libpcap}/include
