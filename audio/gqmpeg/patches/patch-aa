@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.14 2002/01/14 20:48:52 hubertf Exp $
+$NetBSD: patch-aa,v 1.15 2002/08/20 11:39:10 wiz Exp $
 
---- Makefile.in.orig    Fri Jan  4 04:42:19 2002
+--- Makefile.in.orig	Tue Aug 20 12:25:47 2002
 +++ Makefile.in
-@@ -116,11 +116,11 @@
+@@ -120,11 +120,11 @@ EXTRA_DIST = config.rpath  \
  skindir = $(prefix)/share/gqmpeg/skins
  skin_DATA = SKIN-SPECS README
  
@@ -15,6 +15,6 @@ $NetBSD: patch-aa,v 1.14 2002/01/14 20:48:52 hubertf Exp $
 -@HAVE_GNOME_TRUE@icon_DATA = @HAVE_GNOME_TRUE@gqmpeg.png
 +icondir = $(GNOME_DATADIR)/pixmaps
 +icon_DATA = gqmpeg.png
+ 
+ ACLOCAL_AMFLAGS = -I m4
  ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
- CONFIG_HEADER = config.h

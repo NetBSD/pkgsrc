@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.7 2002/03/18 01:26:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2002/08/20 11:39:08 wiz Exp $
 bin/gqmpeg
 bin/gqmpeg-shoutcast-plugin.sh
+@comment from libiconv: lib/charset.alias
 man/man1/gqmpeg.1
 share/gnome/apps/Multimedia/gqmpeg.desktop
 share/gqmpeg/skins/README
 share/gqmpeg/skins/SKIN-SPECS
+@comment shared with at least bison: share/locale/locale.alias
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gqmpeg.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gqmpeg.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gqmpeg.mo
@@ -57,6 +59,8 @@ share/gqmpeg/skins/mrclean/focus-rect-border-1.png
 share/gqmpeg/skins/mrclean/focus-rect-border-7b.png
 share/gqmpeg/skins/mrclean/item-ab-static.png
 share/gqmpeg/skins/mrclean/item-clear-load-aa.png
+share/gqmpeg/skins/mrclean/item-colon-15.png
+share/gqmpeg/skins/mrclean/item-colon-24.png
 share/gqmpeg/skins/mrclean/item-pda-minus.png
 share/gqmpeg/skins/mrclean/item-pda-random-static.png
 share/gqmpeg/skins/mrclean/item-pda-repeat-static.png
@@ -75,8 +79,6 @@ share/gqmpeg/skins/mrclean/skindata_flyby
 share/gqmpeg/skins/mrclean/skindata_menu
 share/gqmpeg/skins/mrclean/skindata_playlist
 share/gqmpeg/skins/mrclean/skindata_submenu
-share/gqmpeg/skins/mrclean/text-std-13.png
-share/gqmpeg/skins/mrclean/text-std-15-bold.png
 share/pixmaps/gqmpeg.png
 @dirrm share/gqmpeg/skins/mrclean
 @unexec ${RMDIR} -p %D/share/gqmpeg/skins 2> /dev/null || true
