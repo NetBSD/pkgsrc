@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/14 17:21:36 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/27 07:56:33 xtraeme Exp $
 #
 
 DISTNAME=	DevIL-1.6.6
@@ -13,17 +13,17 @@ COMMENT=	Developer's Image Library
 
 WRKSRC=			${WRKDIR}/DevIL
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 USE_X11=		yes
 
 CONFIGURE_ARGS+=	--disable-lcms
 
-.include "../../devel/SDL/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/libungif/buildlink2.mk"
-.include "../../graphics/mng/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/tiff/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/libungif/buildlink3.mk"
+.include "../../graphics/mng/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
