@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2004/02/18 13:33:41 jlam Exp $
+# $NetBSD: Makefile.common,v 1.30 2004/03/30 21:50:19 xtraeme Exp $
 #
 DISTNAME=		qt-x11-free-${QTVERSION}
 CATEGORIES=		x11
@@ -25,7 +25,9 @@ QTPREFIX=		${PREFIX}/qt3
 CONFIGURE_ARGS+=	-prefix ${QTPREFIX}
 CONFIGURE_ARGS+=	-shared -sm -thread -no-stl \
 			-system-zlib -system-libpng \
-			-system-libmng -system-libjpeg
+			-system-libmng -system-libjpeg \
+			-I${BUILDLINK_DIR}/include \
+			-L${BUILDLINK_DIR}/lib
 CONFIGURE_ARGS+=	-qt-gif	# qt3 does not write compressed GIFs
 
 CONFIGURE_ARGS+=	< ${FILESDIR}/license-acceptance
