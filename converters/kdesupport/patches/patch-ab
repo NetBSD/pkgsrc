@@ -1,9 +1,7 @@
-$NetBSD: patch-ab,v 1.5 1999/11/22 20:31:03 jdolecek Exp $
+$NetBSD: patch-ab,v 1.6 2000/08/22 21:23:24 skrll Exp $
 
-Pulled into KDE	(jdolecek)
-
---- ./mimelib/mimelib/config.h	Sat Sep 27 13:55:18 1997
-+++ /usr/pkgsrc/converters/kdesupport/work.i386.unpatched/kdesupport-1.1.2/mimelib/mimelib/config.h	Fri Nov 12 06:31:53 1999
+--- mimelib/mimelib/config.h.orig	Sat Sep 27 12:55:18 1997
++++ mimelib/mimelib/config.h	Mon Aug 14 17:48:31 2000
 @@ -35,7 +35,7 @@
  #   define DW_WIN32
  #endif
@@ -13,4 +11,3 @@ Pulled into KDE	(jdolecek)
  #   define DW_UNIX
  #endif
  
-
