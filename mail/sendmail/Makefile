@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2004/08/30 20:16:28 adrianp Exp $
+# $NetBSD: Makefile,v 1.74 2005/02/10 22:17:24 adrianp Exp $
 
 .include "../../mail/sendmail/Makefile.common"
 
@@ -57,12 +57,6 @@ post-build:
 	@${CP} ${PKGDIR}/MESSAGE ${MESSAGE_SRC}
 	@${CP} ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
 
-.if !empty(PKG_OPTIONS:Mdb2)
-	@${ECHO} "" >>${MESSAGE_SRC}
-	@${ECHO} "If you are upgrading from \"sendmail\" 8.8.x don't forget to rebuild all" >>${MESSAGE_SRC}
-	@${ECHO} "databases with \"${PREFIX}/bin/newaliases\" and \"${PREFIX}/sbin/makemap\"." >>${MESSAGE_SRC}
-.endif
-
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/libexec/sendmail
 
@@ -75,10 +69,6 @@ post-install:
 		${PREFIX}/share/examples/sendmail/
 	cd ${WRKSRC}/cf && ${PAX} -rw -pp -pm . ${PREFIX}/share/sendmail
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/sendmail
-
-.if !empty(PKG_OPTIONS:Mdb2)
-	@${MV} -f /usr/sbin/makemap /usr/sbin/makemap.8.8 || ${TRUE}
-.endif
 
 	${INSTALL_DATA} ${WRKSRC}/obj.`${UNAME} -srm | ${TR} \  . | ${TR} \/ - | ${SED} s/sun4./sun4/`/libsm/libsm.a \
 		${PREFIX}/lib
