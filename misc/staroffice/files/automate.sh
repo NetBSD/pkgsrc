@@ -110,12 +110,12 @@ FROMSITE=
 [ x$http_proxy != x ] && FROMSITE=$SITE
 export LEN FIRSTNAME LASTNAME ADDR CITY STATE COUNTRY ZIP PHONE ACCT PASS EMAIL FROMSITE
 ftp -o index.html $HOMEPAGE
-if grep 'A.*FREE.*' index.html >/dev/null 2>&1 ; then true; else
+if grep 'staroffice.get.cgi' index.html >/dev/null 2>&1 ; then true; else
 	echo 'getting index failed, answer was:'
 	cat index.html
 	exit 1
 fi
-FOO=`grep 'A.*FREE.*' index.html | sed -e 's/.*[hH][rR][eE][fF]="\(.*\)".*/\1/'`
+FOO=`grep 'staroffice.get.cgi' index.html | tail +3 | head -1 | sed -e 's/.*[hH][rR][eE][fF]="\(.*\)".*/\1/'`
 ftp -o get.html $SUNPAGE$FOO
 ftp -o Welcome.jhtml "$SITE/servlet/EComActionServlet?LMLoadBalanced=&LMLoadBalanced="
 if grep action Welcome.jhtml >/dev/null 2>&1 ; then true; else
