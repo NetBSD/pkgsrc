@@ -1,0 +1,15 @@
+$NetBSD: patch-aj,v 1.1 1999/03/05 00:25:10 tron Exp $
+
+--- src/IIOP/Makefile.in.orig	Thu Feb 25 16:17:16 1999
++++ src/IIOP/Makefile.in	Fri Mar  5 00:29:31 1999
+@@ -90,9 +90,7 @@
+ VERSION = @VERSION@
+ YACC = @YACC@
+ 
+-LIBWRAP_PATH = @LIBWRAP_PATH@
+-@HAVE_HOSTS_ACCESS_TRUE@libwrap_files = $(addsuffix .lo, $(basename $(filter %.o, $(shell ar t $(LIBWRAP_PATH)))))
+-@HAVE_HOSTS_ACCESS_FALSE@libwrap_files = 
++libwrap_files = 
+ 
+ libIIOPincludedir = $(includedir)/IIOP
+ 
