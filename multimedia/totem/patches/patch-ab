@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/03/22 16:37:32 jmmv Exp $
+
+--- src/Makefile.in.orig	2005-03-07 18:01:00.000000000 +0100
++++ src/Makefile.in
+@@ -686,7 +686,8 @@ clean-noinstLTLIBRARIES:
+ 	  rm -f "$${dir}/so_locations"; \
+ 	done
+ pluginLTLIBRARIES_INSTALL = $(INSTALL)
+-install-pluginLTLIBRARIES: $(plugin_LTLIBRARIES)
++install-pluginLTLIBRARIES:
++dont-install-pluginLTLIBRARIES: $(plugin_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(plugindir)
+ 	@list='$(plugin_LTLIBRARIES)'; for p in $$list; do \
