@@ -1,0 +1,22 @@
+$NetBSD: patch-aj,v 1.1 1999/05/30 18:18:32 tron Exp $
+
+--- local/Makefile.orig	Sun May 30 18:49:13 1999
++++ local/Makefile	Sun May 30 18:49:13 1999
+@@ -0,0 +1,17 @@
++#	$NetBSD: patch-aj,v 1.1 1999/05/30 18:18:32 tron Exp $
++
++.include "../conf/main.cf"
++PROG=	local
++BINDIR=${daemon_directory}
++
++SRCS	= alias.c command.c delivered.c dotforward.c file.c forward.c \
++	include.c indirect.c local.c mailbox.c recipient.c resolve.c token.c \
++	deliver_attr.c feature.c maildir.c biff_notify.c unknown.c
++
++DPADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
++LDADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
++
++# XXX
++NOMAN=1
++
++.include <bsd.prog.mk>
