@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 1999/03/08 10:53:56 agc Exp $
+# $NetBSD: Makefile,v 1.14 1999/03/22 16:08:31 bad Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/01/28 08:11:23 asami Exp 
 #
 
 DISTNAME=	gdbm-1.7.3
 CATEGORIES=	databases
-MASTER_SITES=	${MASTER_SITE_GNU}
+MASTER_SITES=	${MASTER_SITE_GNU:=/gdbm/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/gdbm/gdbm.html

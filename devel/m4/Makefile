@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 1998/04/22 11:05:03 agc Exp $
+# $NetBSD: Makefile,v 1.10 1999/03/22 16:08:32 bad Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/06/16 08:22:35 max Exp
 #
 
 DISTNAME=       m4-1.4
 CATEGORIES=	devel
-MASTER_SITES=   ${MASTER_SITE_GNU}
+MASTER_SITES=   ${MASTER_SITE_GNU:=/m4/}
 
 MAINTAINER=	packages@netbsd.org
 
