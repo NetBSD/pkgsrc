@@ -1,16 +1,20 @@
-# $NetBSD: Makefile,v 1.3 1999/01/06 18:04:19 tv Exp $
+# $NetBSD: Makefile,v 1.4 2000/02/06 02:34:26 wiz Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/06/16 06:39:51 max Exp
 
-DISTNAME=	tinpre-1.4-981225
-PKGNAME=	tin-1.4.19981225
+DISTNAME=	tin-1.4.2
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.tin.org/pub/news/clients/tin/current/ \
-		ftp://ftp.cs.tu-berlin.de/pub/net/news/tin/pre-v1.4/
-EXTRACT_SUFX=	.tgz
+		ftp://ftp.cs.tu-berlin.de/pub/net/news/tin/current/ \
+		ftp://mirror.aarnet.edu.au/pub/tin/current/ \
+		ftp://gd.tuwien.ac.at/infosys/newsreaders/tin/current/ \
+		ftp://ftp.funet.fi/pub/unix/news/tin-unoff/ \
+		ftp://ftp.nuxi.com/pub/tin/current/ \
+		ftp://uiarchive.uiuc.edu/pub/packages/news/client/tin/unoff/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	udo@keks.franken.de
+HOMEPAGE=	http://www.tin.org/
 
-WRKSRC=		${WRKDIR}/${DISTNAME:S/pre-1.4//}
 GNU_CONFIGURE=	yes
 
 # Curses support too buggy to activate
@@ -26,6 +30,7 @@ CONFIGURE_ARGS=	--with-nntp-default-server=news  \
 		--enable-nntp-only \
 		--disable-mime-strict-charset \
 		--with-defaults-dir=${PREFIX}/etc \
+		--enable-mh-mail-handling \
 		--with-coffee
 MAKEFILE=	makefile
 ALL_TARGET=	build
