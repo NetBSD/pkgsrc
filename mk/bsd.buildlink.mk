@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.33 2001/10/03 23:27:07 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.34 2001/10/04 01:02:16 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -117,7 +117,7 @@ _BUILDLINK_USE: .USE
 		${ECHO_MSG} "Linking ${.TARGET:S/-buildlink//} files into ${BUILDLINK_DIR}."; \
 		${MKDIR} ${BUILDLINK_DIR};				\
 		files="${BUILDLINK_FILES.${.TARGET:S/-buildlink//}:S/^/${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}\//g}"; \
-		files="`${ECHO} $${files} | ${LIBTOOL_ARCHIVE_FILTER}`"; \
+		files="`${ECHO} $${files} | ${_LIBTOOL_ARCHIVE_FILTER}`"; \
 		for file in $${files}; do				\
 			rel_file=`${ECHO} $${file} | ${SED} -e "s|${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}/||"` ; \
 			if [ -z "${BUILDLINK_TRANSFORM.${.TARGET:S/-buildlink//}:Q}" ]; then \
