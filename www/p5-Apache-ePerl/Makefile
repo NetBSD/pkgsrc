@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/08/27 10:37:05 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/29 00:55:00 jlam Exp $
 #
 
 DISTNAME=		eperl-2.2.14
@@ -10,7 +10,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.engelschall.com/sw/eperl/
 
 DEPENDS+=		eperl-2.2.14:../../textproc/eperl
-DEPENDS+=		ap-perl-1.19:../../www/ap-perl
+DEPENDS+=		ap-perl>=1.19:../../www/ap-perl
 
 USE_PERL5=		# defined
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Apache/ePerl/.packlist
