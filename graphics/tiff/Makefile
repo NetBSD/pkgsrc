@@ -1,3 +1,4 @@
+# $NetBSD: Makefile,v 1.2 1997/10/06 13:44:56 agc Exp $
 # New ports collection makefile for:	tiff
 # Version required:	3.3 beta 021
 # Date created:		14 November 1994
@@ -12,7 +13,7 @@ CATEGORIES=	graphics
 MASTER_SITES=   ftp://ftp.isri.unlv.edu/pub/mirror/tiff/ \
 		ftp://ftp.coli.uni-sb.de/pub/graphics/ \
 		ftp://ftp.funet.fi/pub/graphics/packages/tiff/
-# Original master site not keeps old versions
+# Original master site doesn't keep old versions
 # MASTER_SITES=   ftp://ftp.sgi.com/graphics/tiff/
 
 NO_WRKSUBDIR=	yes

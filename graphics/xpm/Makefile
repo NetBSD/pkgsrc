@@ -1,3 +1,4 @@
+# $NetBSD: Makefile,v 1.2 1997/10/06 13:45:46 agc Exp $
 # New ports collection makefile for:	xpm
 # Version required:     3.4j
 # Date created:		14 September 1994
