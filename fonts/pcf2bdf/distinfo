@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/12/31 05:44:43 kei Exp $
+
+SHA1 (pcf2bdf-1.04.tgz) = 6fdcc10132e27d3c26ff7e4be541332ee5d4e927
+Size (pcf2bdf-1.04.tgz) = 9686 bytes
+SHA1 (patch-aa) = d750333e3ac74db0666a40a6902af02d85d02ba0
