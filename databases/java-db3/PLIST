@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:11:47 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/30 11:58:31 martti Exp $
 lib/db3.jar
 lib/libdb3_java.a
 lib/libdb3_java.la
 lib/libdb3_java.so
-lib/libdb3_java.so.2
-lib/libdb3_java.so.2.9
+lib/libdb3_java.so.3
+lib/libdb3_java.so.3.11
