@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2003/12/05 22:21:17 cjep Exp $
+# $NetBSD: Makefile,v 1.8 2004/04/06 19:00:39 cjep Exp $
 
-DISTNAME=	nail-10.6
+DISTNAME=	nail-10.7
 CATEGORIES=	mail
-MASTER_SITES=	http://omnibus.ruf.uni-freiburg.de/~gritter/archive/nail/
+MASTER_SITES=	http://nail.berlios.de/archive/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	cjep@NetBSD.org
 HOMEPAGE=	http://omnibus.ruf.uni-freiburg.de/~gritter/
