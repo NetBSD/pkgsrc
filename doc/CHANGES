@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7393 2004/10/10 17:28:36 snj Exp $
+$NetBSD: CHANGES,v 1.7394 2004/10/10 17:30:35 kim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4603,3 +4603,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added postgresql74-plpython 7.4.5 [jdolecek 2004-10-10]
 	Updated jdbc-postgresql74 to 7.4.5 [jdolecek 2004-10-10]
 	Updated prboom to 2.2.6 [snj 2004-10-10]
+	Added rsnapshot-1.1.6 [kim 2004-10-10]
