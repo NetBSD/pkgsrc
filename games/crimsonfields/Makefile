@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2004/11/26 21:14:41 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2005/03/07 14:27:54 wiz Exp $
 #
 
-DISTNAME=		crimson-0.4.5
+DISTNAME=		crimson-0.4.7
 PKGNAME=		${DISTNAME:S/crimson/crimsonfields/}
 CATEGORIES=		games
 MASTER_SITES=		http://crimson.seul.org/files/
@@ -18,7 +18,10 @@ USE_GNU_TOOLS+=		make
 #USE_PKGLOCALEDIR=	no
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--enable-bi2cf --enable-cfed --enable-comet
+CONFIGURE_ARGS+=	--enable-bi2cf
+CONFIGURE_ARGS+=	--enable-cf2bmp
+CONFIGURE_ARGS+=	--enable-cfed
+CONFIGURE_ARGS+=	--enable-comet
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
