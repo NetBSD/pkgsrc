@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.270 2004/12/23 10:58:10 agc Exp $
+# $NetBSD: Makefile,v 1.271 2005/01/12 14:02:05 xtraeme Exp $
 #
 
 COMMENT=	Audio tools
@@ -107,6 +107,7 @@ SUBDIR+=	id3v2
 SUBDIR+=	ifp-line
 SUBDIR+=	juke
 SUBDIR+=	kmp
+SUBDIR+=	ladspa
 SUBDIR+=	lame
 SUBDIR+=	liba52
 SUBDIR+=	libac3
@@ -216,6 +217,7 @@ SUBDIR+=	streamtuner
 SUBDIR+=	sweep
 SUBDIR+=	taglib
 SUBDIR+=	tcl-snack
+SUBDIR+=	terminatorx
 SUBDIR+=	tfmxplay
 SUBDIR+=	timidity
 SUBDIR+=	toolame
