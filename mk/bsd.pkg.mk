@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.566 2000/09/07 15:26:52 fredb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.567 2000/09/09 18:45:16 fredb Exp $
 #
 # This file is in the public domain.
 #
@@ -19,6 +19,9 @@
 
 ##### Include any preferences, if not already included, and common definitions
 .include "../../mk/bsd.prefs.mk"
+
+##### Build crypto packages by default.
+MKCRYPTO?=		yes
 
 ##### Some overrides of defaults below on a per-OS basis.
 .if (${OPSYS} == "NetBSD")
@@ -967,6 +970,9 @@ ACCEPTABLE_LICENSES=	${ACCEPTABLE_LICENCES}
 # Don't build a package if it's restricted and we don't want to
 # get into that.
 #
+# Don't build any package that utilizes strong cryptography, for
+# when the law of the land forbids it.
+#
 # Don't attempt to build packages against X if we don't have X.
 #
 # Don't build a package if it's broken.
@@ -990,6 +996,11 @@ IGNORE+= "${PKGNAME} may not be placed in source form on a CDROM:" \
 .if (defined(RESTRICTED) && defined(NO_RESTRICTED))
 IGNORE+= "${PKGNAME} is restricted:" \
 	 "    "${RESTRICTED:Q}
+.endif
+.if !(${MKCRYPTO} == "YES" || ${MKCRYPTO} == yes)
+.  if (defined(CRYPTO) || defined(USE_SSL))
+IGNORE+= "${PKGNAME} may not be built, because it utilizes strong cryptography"
+.  endif
 .endif
 .if ((defined(USE_IMAKE) || defined(USE_MOTIF) || \
 	defined(USE_X11BASE) || defined(USE_X11)) && \
