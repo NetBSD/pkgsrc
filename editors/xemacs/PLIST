@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2003/02/25 02:14:58 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/02/25 12:08:21 tron Exp $
 bin/${DISTNAME}
 bin/ellcc
 bin/gnuattach
 bin/gnuclient
 bin/gnudoit
 bin/ootags
+bin/xemacs
 bin/xemacs-b2m
 bin/xemacs-ctags
 bin/xemacs-etags
@@ -1384,3 +1385,7 @@ man/man1/xemacs.1
 @dirrm lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/m
 @dirrm lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include
 @dirrm lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}
+@dirrm lib/${DISTNAME}
+@dirrm lib/xemacs/site-modules
+@dirrm lib/xemacs/site-lisp
+@dirrm lib/xemacs
