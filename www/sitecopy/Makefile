@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/09/23 09:05:23 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2003/09/23 09:05:52 wiz Exp $
 
 DISTNAME=		sitecopy-0.13.4
 CATEGORIES=		www
@@ -8,10 +8,11 @@ MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://www.lyra.org/sitecopy/
 COMMENT=		Utility for synchronizing remote and local web sites
 
+BUILD_USES_MSGFMT=	# defined
+
 USE_GMAKE=		# defined
 USE_BUILDLINK2=		# defined
 USE_PKGLOCALEDIR=	# defined
-BUILD_USES_MSGFMT=	# defined
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
