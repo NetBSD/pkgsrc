@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/10/27 13:54:41 xtraeme Exp $
+# $NetBSD: Makefile,v 1.14 2004/11/10 10:34:50 xtraeme Exp $
 #
 
 DISTNAME=		jabberd-2.0s4
@@ -62,7 +62,7 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 CONF_FILES+=		${EGDIR}/roster.xml ${PKG_SYSCONFDIR}/roster.xml
 .undef f
 
-PKG_OPTIONS.jabberd2?=	mysql4
+PKG_OPTIONS.jabberd2?=	mysql
 
 .include "options.mk"
 
