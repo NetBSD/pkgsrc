@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 1998/12/28 03:16:57 tv Exp $
+# $NetBSD: Makefile,v 1.24 1999/02/04 00:07:27 hubertf Exp $
 #
 
     SUBDIR += amp
@@ -21,6 +21,7 @@
     SUBDIR += tosha
     SUBDIR += tracker
     SUBDIR += xcdplayer
+    SUBDIR += xhippo
     SUBDIR += xmcd
     SUBDIR += xmix
     SUBDIR += xmmix
