@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/08/18 22:46:50 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/23 23:24:07 wiz Exp $
 #
 
 DISTNAME=		srp-1.4.4
@@ -32,6 +32,17 @@ CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 .if exists(/usr/lib/libkrb.a)
 CONFIGURE_ARGS+=	--with-krb4
+
+post-patch:
+	for FILE in ftp/ftp/Makefile.in ftp/ftpd/Makefile.in		\
+		telnet/configure telnet/configure.in;			\
+	do								\
+		cd ${WRKSRC} &&						\
+		${SED}  -e "s,include/kerberos,include/kerberosIV,"	\
+			-e "s,-ldes,-ldes -lroken -lcom_err,"		\
+			$$FILE > $$FILE.patched &&			\
+		${MV} $$FILE.patched $$FILE;				\
+	done
 .endif
 
 do-install:
