@@ -1,0 +1,36 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/12 04:28:27 rh Exp $
+include/libgnomeprintui-2.0/libgnomeprintui/gnome-font-dialog.h
+include/libgnomeprintui-2.0/libgnomeprintui/gnome-print-copies.h
+include/libgnomeprintui-2.0/libgnomeprintui/gnome-print-dialog.h
+include/libgnomeprintui-2.0/libgnomeprintui/gnome-print-master-preview.h
+include/libgnomeprintui-2.0/libgnomeprintui/gnome-print-paper-selector.h
+include/libgnomeprintui-2.0/libgnomeprintui/gnome-print-preview.h
+include/libgnomeprintui-2.0/libgnomeprintui/gnome-printer-dialog.h
+lib/libgnomeprintui-2.a
+lib/libgnomeprintui-2.la
+lib/libgnomeprintui-2.so
+lib/libgnomeprintui-2.so.0
+lib/libgnomeprintui-2.so.0.0
+lib/pkgconfig/libgnomeprintui-2.0.pc
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/libgnomeprintui.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/libgnomeprintui.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/libgnomeprintui.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libgnomeprintui.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libgnomeprintui.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/libgnomeprintui.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/libgnomeprintui.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/libgnomeprintui.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/libgnomeprintui.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/libgnomeprintui.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/libgnomeprintui.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/libgnomeprintui.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/libgnomeprintui.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/libgnomeprintui.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libgnomeprintui.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/libgnomeprintui.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/libgnomeprintui.mo
+${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/libgnomeprintui.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libgnomeprintui.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/libgnomeprintui.mo
+@dirrm include/libgnomeprintui-2.0/libgnomeprintui
+@dirrm include/libgnomeprintui-2.0
