@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2004/08/07 08:11:26 jlam Exp $
+# $NetBSD: options.mk,v 1.3 2004/08/07 17:08:26 jlam Exp $
 
 # Global and legacy options
 #
@@ -57,17 +57,35 @@ PKG_SUPPORTED_OPTIONS=	ldap mysql mysql4 pcre pgsql sasl
 # ###
 # ### IPv6 and STARTTLS support (http://www.ipnet6.org/postfix/)
 # ###
-# .if !empty(PKG_OPTIONS:Minet6) || !empty(PKG_OPTIONS:Mtls)
+# .if !empty(PKG_OPTIONS:Minet6)
+# .  if empty(PKG_OPTIONS:Mtls)
+# PKG_OPTIONS+=		tls
+# .  endif
+# IPV6TLS_PATCH=		tls+ipv6-1.25-pf-2.2-20040616.patch.gz
+# PATCHFILES+=		${IPV6TLS_PATCH}
+# SITES_${IPV6TLS_PATCH}=	ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.25/
+# PATCH_DIST_STRIP.${IPV6TLS_PATCH}=	-p1
+# PLIST_SRC+=		${PKGDIR}/PLIST.inet6
+# .endif
+#
+# ###
+# ### STARTTLS support (http://mirrors.loonybin.net/postfix_tls/)
+# ###
+# .if !empty(PKG_OPTIONS:Mtls)
 # .  include "../../security/openssl/buildlink3.mk"
-# PATCHFILES+=		tls+ipv6-1.25-pf-2.2-20040616.patch.gz
-# PATCH_SITES+=		ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.25/
-# PATCH_DIST_STRIP=	-p1
-# 
+# .  if empty(PKG_OPTIONS:Minet6)
+# TLS_PATCH=		pfixtls-0.8.18-2.1.3-0.9.7d.tar.gz
+# PATCHFILES+=		${TLS_PATCH}
+# SITES_${TLS_PATCH}=	http://mirrors.loonybin.net/postfix_tls/	\
+# 			ftp://mirrors.loonybin.net/pub/postfix_tls/	\
+# 			ftp://ftp.aet.tu-cottbus.de/pub/postfix_tls/
+# PATCH_DIST_CAT.${TLS_PATCH}=	${TAR} -zxOf ${TLS_PATCH} "*/pfixtls.diff"
+# PATCH_DIST_STRIP.${TLS_PATCH}=	-p1
+# .  endif
 # CCARGS+=	-DHAS_SSL
 # AUXLIBS+=	-L${BUILDLINK_PREFIX.openssl}/lib			\
 # 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib	\
 # 		-lssl -lcrypto
-# 
 # PLIST_SRC+=	${PKGDIR}/PLIST.tls
 # MESSAGE_SRC+=	${PKGDIR}/MESSAGE.tls
 # .endif
