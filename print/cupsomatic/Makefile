@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2001/05/14 17:54:31 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/05/15 18:10:03 jlam Exp $
 
 DISTNAME=	cupsomatic
-PKGNAME=	cupsomatic-1.6
+PKGNAME=	${DISTNAME}-1.6
 CATEGORIES=	print
 EXTRACT_SUFX=	# empty
 
@@ -32,19 +32,19 @@ DEPENDS+=	mpage-[0-9]*:../../print/mpage
 USE_PERL5=	# defined
 NO_WRKSUBDIR=	# defined
 NO_CONFIGURE=	# defined
-EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}/cupsomatic
+EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}/${DISTNAME}
 
 FILTERDIR=	${PREFIX}/libexec/cups/filter
 
 post-extract:
-	cd ${WRKSRC}; ${MV} cupsomatic cupsomatic.in
+	cd ${WRKSRC}; ${MV} ${DISTNAME} ${DISTNAME}.in
 
 do-build:
 	${SED}	-e "s,@PERL@,${PERL5},g"				\
 		-e "s,@LOCALBASE@,${LOCALBASE},g"			\
-		${WRKSRC}/cupsomatic.in > ${WRKSRC}/cupsomatic
+		${WRKSRC}/${DISTNAME}.in > ${WRKSRC}/${DISTNAME}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/cupsomatic ${FILTERDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${FILTERDIR}
 
 .include "../../mk/bsd.pkg.mk"
