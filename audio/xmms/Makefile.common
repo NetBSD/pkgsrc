@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.2 2003/08/08 09:27:16 grant Exp $
+# $NetBSD: Makefile.common,v 1.3 2003/09/26 07:28:38 rh Exp $
 #
 
 DISTNAME=	xmms-1.2.7
 CATEGORIES=	audio
-MASTER_SITES=	ftp://ftp.xmms.org/xmms/1.2.x/ \
+MASTER_SITES=	ftp://ftp.xmms.org/pub/xmms/1.2.x/ \
 		ftp://ftp.sunet.se/pub/multimedia/xmms/1.2.x/
 
 MAINTAINER=	rh@NetBSD.org
