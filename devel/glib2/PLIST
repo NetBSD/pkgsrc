@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2004/09/22 08:09:25 jlam Exp $
+@comment $NetBSD: PLIST,v 1.20 2004/10/08 19:18:25 jmmv Exp $
 bin/glib-genmarshal
 bin/glib-gettextize
 bin/glib-mkenums
@@ -199,6 +199,7 @@ ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/glib20.mo
+${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/glib20.mo
@@ -235,6 +236,7 @@ ${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/glib20.mo
+${PKGLOCALEDIR}/locale/or/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/glib20.mo
