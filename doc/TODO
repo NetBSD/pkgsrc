@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2183 2004/09/30 14:42:39 epg Exp $
+$NetBSD: TODO,v 1.2184 2004/09/30 22:59:47 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -377,7 +377,6 @@ Suggested package updates
 	o p5-Exception-Class-1.17
 	o p5-gtk2-1.060
 	o pdmenu-1.2.81
-	o pearpc-0.3.1
 	o perl-5.8.5
 	o pgplot-5.2 [grant]
 	o php-5.0.2
