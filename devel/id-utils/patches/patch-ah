@@ -1,72 +1,21 @@
-$NetBSD: patch-ah,v 1.1 2001/08/04 09:52:28 wiz Exp $
+$NetBSD: patch-ah,v 1.2 2001/11/03 09:59:36 seb Exp $
 
---- configure.in.orig	Wed Aug  7 05:16:19 1996
-+++ configure.in
-@@ -10,7 +10,7 @@
- ##############################################################################
+--- src/Makefile.am.orig	Sun Jun  9 02:22:34 1996
++++ src/Makefile.am
+@@ -1,5 +1,8 @@
+ ## Process this file with automake to create Makefile.in
  
- AC_INIT(src/mkid.c)
--AC_CONFIG_HEADER(config.h)
-+AM_CONFIG_HEADER(config.h)
- AC_PREREQ(2.10)
- AC_ARG_PROGRAM
++# Makefile.in's patch is produced after regen from Makefile.am with
++# `automake-1.1b --include-deps,' then it is hand-trimmed
++
+ AUTOMAKE_OPTIONS = ansi2knr
  
-@@ -50,7 +50,7 @@
+ bin_PROGRAMS = mkid lid fid fnid xtokid
+@@ -16,5 +19,6 @@
+ 	   -I.. -I$(top_srcdir) 
+ DEFS = -DLOCALEDIR=\"$(localedir)\" @DEFS@
+ LDADD = @INTLLIBS@ ../libidu/libidu.a ../lib/libsys.a
++DEPLIBS = ../libidu/libidu.a ../lib/libsys.a
  
- AC_PROG_CC
- AC_PROG_LN_S
--AM_PROG_INSTALL
-+AC_PROG_INSTALL
- AC_PROG_MAKE_SET
- AC_PROG_CPP
- AC_PROG_GCC_TRADITIONAL
-@@ -81,12 +81,12 @@
- ################ Check for typedefs, structs, and compiler params ############
- ##############################################################################
- 
--AC_C_CONST
- AM_C_PROTOTYPES
-+AC_C_CONST
- AC_TYPE_SIGNAL
- AC_TYPE_OFF_T
- AC_TYPE_SIZE_T
--md_TYPE_PTRDIFF_T
-+AM_TYPE_PTRDIFF_T
- 
- ##############################################################################
- ################ Set default compilation flags ###############################
-@@ -102,20 +102,20 @@
- ##############################################################################
- 
- AC_FUNC_ALLOCA
--ud_WITH_REGEX
-+AM_WITH_REGEX
- AC_FUNC_VPRINTF
- AC_CHECK_FUNCS(getwd getcwd link strerror isascii bcopy bzero memcpy)
- AC_REPLACE_FUNCS(strdup strndup strspn strcspn strpbrk strstr strtok)
- AC_REPLACE_FUNCS(basename dirname fnmatch error memcpy memset)
--AC_REPLACE_GNU_GETOPT
--AC_REPLACE_OBSTACK
-+AC_CHECK_FUNC(getopt_long, , [LIBOBJS="$LIBOBJS getopt1.o getopt.o"])
-+AC_SUBST(LIBOBJS)
-+AM_FUNC_OBSTACK
- 
- ##############################################################################
- ################ Internationalization ########################################
- ##############################################################################
- 
--ud_GNU_GETTEXT
--AC_LINK_FILES($nls_cv_header_libgt, $nls_cv_header_intl)
-+AM_GNU_GETTEXT
- 
- ##############################################################################
- ################ Find a home for language map ################################
-@@ -134,7 +134,7 @@
- ################ Find a home for Emacs Lisp code #############################
- ##############################################################################
- 
--ud_PATH_LISPDIR
-+AM_PATH_LISPDIR
- 
- ##############################################################################
- ################ Generate the configure script ###############################
+-$(PROGRAMS): $(LDADD)
++$(PROGRAMS): $(DEPLIBS)
