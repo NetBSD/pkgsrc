@@ -1,21 +1,14 @@
-# $NetBSD: Makefile,v 1.35 2000/10/21 22:24:47 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2000/12/12 18:23:12 drochner Exp $
 
 DISTNAME=		ncurses-${NC_VERS}
-NC_VERS=		5.1
+NC_VERS=		5.2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=ncurses/} \
 			ftp://dickey.his.com/ncurses/ \
 			ftp://dickey.his.com/ncurses/${NC_VERS}/
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${NC_PATCH}
-
-PATCHFILES=		${DISTNAME}-20001014.patch.gz
-PATCH_SITES=		ftp://dickey.his.com/ncurses/${NC_VERS}/
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://dickey.his.com/ncurses/ncurses.html
-
-EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
-NC_PATCH=		patch-5.1-20001009.sh
 
 USE_LIBTOOL=		# defined
 
@@ -31,10 +24,6 @@ CONFIGURE_ARGS+=	--with-manpage-tbl
 
 # Remove these manpages from the distribution so they won't get installed
 CURSES_NO_MAN=		clear.1 tput.1 tset.1
-
-post-extract:
-	cd ${WRKSRC} && ${SH} ${DISTDIR}/${DIST_SUBDIR}/${NC_PATCH}
-	${FIND} ${WRKSRC} -name "*.orig" -exec ${RM} -f {} \;
 
 post-configure:
 	cd ${WRKSRC}/man;					\
