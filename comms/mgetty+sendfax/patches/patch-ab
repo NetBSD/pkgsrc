@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.2 1998/11/15 20:45:30 tron Exp $
+$NetBSD: patch-ab,v 1.3 1998/11/16 02:49:48 tron Exp $
 
 --- Makefile.orig	Sun Jul  5 23:24:36 1998
-+++ Makefile	Sun Nov 15 20:14:36 1998
++++ Makefile	Mon Nov 16 03:36:37 1998
 @@ -4,8 +4,8 @@
  #
  # this is the C compiler to use (on SunOS, the standard "cc" does not
@@ -140,7 +140,7 @@ $NetBSD: patch-ab,v 1.2 1998/11/15 20:45:30 tron Exp $
  		BINDIR=$$bd$(BINDIR) SBINDIR=$$bd$(SBINDIR) \
  		LIBDIR=$$bd$(LIBDIR) CONFDIR=$$bd$(CONFDIR) \
  		spool=$$bd$(spool) FAX_SPOOL=$$bd$(FAX_SPOOL) \
-@@ -560,15 +560,15 @@
+@@ -560,7 +560,7 @@
  	cd bindist; gtar cvvfz mgetty$(MR).$(SR)-bin.tgz *
  
  
@@ -148,9 +148,8 @@ $NetBSD: patch-ab,v 1.2 1998/11/15 20:45:30 tron Exp $
 +install: install.bin install.doc install-vgetty
  
  install.bin: mgetty sendfax newslock \
--		login.config mgetty.config sendfax.config 
-+		login.config #mgetty.config sendfax.config 
- #
+ 		login.config mgetty.config sendfax.config 
+@@ -568,7 +568,7 @@
  # binaries
  #
  	-test -d $(BINDIR)  || ( ./mkidirs $(BINDIR)  ; chmod 755 $(BINDIR)  )
@@ -159,18 +158,3 @@ $NetBSD: patch-ab,v 1.2 1998/11/15 20:45:30 tron Exp $
  
  	-test -d $(SBINDIR) || ( ./mkidirs $(SBINDIR) ; chmod 755 $(SBINDIR) )
  	-mv -f $(SBINDIR)/mgetty $(SBINDIR)/mgetty.old
-@@ -584,10 +584,10 @@
- 		( ./mkidirs $(CONFDIR); chmod 755 $(CONFDIR))
- 	test -f $(CONFDIR)/login.config || \
- 		$(INSTALL) -o root -m 600 login.config $(CONFDIR)/
--	test -f $(CONFDIR)/mgetty.config || \
--		$(INSTALL) -o root -m 600 mgetty.config $(CONFDIR)/
--	test -f $(CONFDIR)/sendfax.config || \
--		$(INSTALL) -o root -m 644 sendfax.config $(CONFDIR)/
-+#	test -f $(CONFDIR)/mgetty.config || \
-+#		$(INSTALL) -o root -m 600 mgetty.config $(CONFDIR)/
-+#	test -f $(CONFDIR)/sendfax.config || \
-+#		$(INSTALL) -o root -m 644 sendfax.config $(CONFDIR)/
- 	test -f $(CONFDIR)/dialin.config || \
- 		$(INSTALL) -o root -m 600 dialin.config $(CONFDIR)/
- 	test -f $(CONFDIR)/faxrunq.config || \
