@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2001/07/12 17:38:18 fredb Exp $
+# $NetBSD: Makefile,v 1.19 2001/08/14 06:10:41 fredb Exp $
 #
 
-DISTNAME=	ntp-4.0.99m-rc3
-PKGNAME=	ntp-4.0.99.13.3
+DISTNAME=	ntp-4.1.0
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.udel.edu/pub/ntp/ntp4/ \
 		http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/
@@ -16,7 +15,7 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PATH_PERL="${PERL5}"
 CONFIGURE_ENV+=	ac_cv_lib_readline_readline=no
 
-DOCDIR=		${PREFIX}/share/doc
+DOCDIR=		${PREFIX}/share/doc/html
 EXAMPLESDIR=	${PREFIX}/share/examples
 
 pre-configure:
