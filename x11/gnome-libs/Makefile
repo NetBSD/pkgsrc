@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2001/06/19 04:56:34 jlam Exp $
+# $NetBSD: Makefile,v 1.65 2001/06/19 07:38:33 jlam Exp $
 
 DISTNAME=		gnome-libs-1.2.13
 CATEGORIES=		x11 gnome
@@ -41,8 +41,9 @@ PLIST_SUBST+=		LOCALBASE=${LOCALBASE} \
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-DEPENDS+=		db-*:../../databases/db
-CPPFLAGS+=		-I${LOCALBASE}/include/db2
+.include "../../databases/db/buildlink.mk"
+
+CPPFLAGS+=		-I${BUILDLINK_DIR}/include/db2
 
 pre-configure:
 	${MV} ${WRKSRC}/configure ${WRKSRC}/configure-pre-db-sub && \
