@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/10/14 09:59:29 rh Exp $
+# $NetBSD: Makefile,v 1.8 2002/12/13 05:19:45 dmcmahill Exp $
 #
 
 DISTNAME=		geda-docs-${PKGVERSION}
@@ -15,19 +15,9 @@ COMMENT=		HTML documentation for gEDA
 CONFLICTS+=		gEDA<19991011
 
 DIST_SUBDIR=		geda
-PKGVERSION=		20020209
+PKGVERSION=		20021103
 
-NO_PATCH=		YES
-NO_CONFIGURE=		YES
-NO_BUILD=		YES
+GNU_CONFIGURE=		YES
 USE_X11BASE=		YES
-
-do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gEDA
-.for file in README attributes.txt hooks_and_scheme.txt keymapping.tex \
-symbols.html README.keymapping fileformats.html keymapping.html \
-netattrib.txt
-	${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/share/doc/gEDA
-.endfor
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,36 @@
+$NetBSD: patch-aa,v 1.1 2002/12/13 05:19:47 dmcmahill Exp $
+
+--- documentation/Makefile.am.orig	Sun Nov  3 22:03:36 2002
++++ documentation/Makefile.am
+@@ -9,7 +9,7 @@ EXTRA_DIST = nc.doc geda.fig
+ #
+ %.pic: %.fig
+ 	@echo "Creating pic (using fig2dev)"
+-	@if which fig2dev >/dev/null 2>/dev/null; then           \
++	@if ! which fig2dev >/dev/null 2>/dev/null; then           \
+ 		fig2dev -L pic $*.fig >$*.pic		       ;\
+ 	else                                                    \
+ 		echo "** Did not find fig2dev **"              ;\
+@@ -20,19 +20,19 @@ EXTRA_DIST = nc.doc geda.fig
+ %.ps: %.doc
+ 	@echo "Creating ps (using groff)"
+ 	@rm -rf $*.tmp
+-	@if which groff >/dev/null 2>/dev/null; then              \
++	@if ! which groff >/dev/null 2>/dev/null; then              \
+ 		groff -t -sp -ms $*.doc >$*.tmp		        ;\
+ 	else						         \
+ 		echo "** Did not find groff **"                 ;\
+ 		echo "Some Documentation might not be correct!" ;\
+-		touch $*.ps                                     ;\
++		touch $*.tmp                                     ;\
+ 	fi
+ 	@mv -f $*.tmp $*.ps
+ 
+ %.pdf: %.ps
+ 	@echo "Creating pdf (using ps2pdf)"
+ 	@rm -rf $*.pdf
+-	@if which ps2pdf >/dev/null 2>/dev/null; then             \
++	@if ! which ps2pdf >/dev/null 2>/dev/null; then             \
+ 		ps2pdf $*.ps					;\
+ 	else                                                     \
+ 		echo "** Did not find ps2pdf **"                ;\

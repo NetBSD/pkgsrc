@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2002/12/13 05:19:49 dmcmahill Exp $
+
+--- src/Makefile.in.orig	Sun Nov  3 23:00:44 2002
++++ src/Makefile.in
+@@ -157,7 +157,7 @@ gmk_sym_LDADD = $(LIBERTY)
+ smash_megafile_LDADD = 
+ convert_sym_LDADD = $(LIBERTY) -lm
+ sarlacc_schem_LDADD = 
+-olib_LDADD = @LEXLIB@
++olib_LDADD = @LEXLIB@ -lm
+ 
+ EXTRA_DIST = 
+ 

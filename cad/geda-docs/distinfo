@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/05/18 14:25:48 dmcmahill Exp $
+$NetBSD: distinfo,v 1.5 2002/12/13 05:19:45 dmcmahill Exp $
 
-SHA1 (geda/geda-docs-20020209.tar.gz) = e6d909bcbb6f2d3f6067b15aad18cb1eca1201c4
-Size (geda/geda-docs-20020209.tar.gz) = 18938 bytes
+SHA1 (geda/geda-docs-20021103.tar.gz) = 2d0c2552ce76e0129e00cbee71ac721247958e24
+Size (geda/geda-docs-20021103.tar.gz) = 378007 bytes

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2002/10/14 09:59:30 rh Exp $
+# $NetBSD: Makefile,v 1.13 2002/12/13 05:19:49 dmcmahill Exp $
 #
 
 DISTNAME=		geda-gnetlist-${PKGVERSION}
 PKGNAME=		gnetlist-${PKGVERSION}
-PKGREVISION=		2
 CATEGORIES=		cad
 MASTER_SITES=		ftp://ftp.geda.seul.org/pub/geda/devel/${PKGVERSION}/ \
 			ftp://ieee.ing.uniroma1.it/pub/geda/devel/${PKGVERSION}/ \
@@ -15,9 +14,8 @@ HOMEPAGE=		http://www.geda.seul.org/
 COMMENT=		Netlist generation program
 
 DIST_SUBDIR=		geda
-PKGVERSION=		20020414
+PKGVERSION=		20021103
 
-DEPENDS+=		libgeda-${PKGVERSION}:../../cad/libgeda
 DEPENDS+=		geda-symbols-${PKGVERSION}:../../cad/geda-symbols
 # needs GNU m4 for the PCBboard netlister
 DEPENDS+=		m4-1.4:../../devel/m4
@@ -28,7 +26,7 @@ GNU_CONFIGURE=		YES
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
 USE_GMAKE=		YES
-
+USE_BUILDLINK2=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 post-patch:
@@ -37,4 +35,5 @@ post-patch:
 		${WRKSRC}/scheme/gnet-PCBboard.scm.bak > ${WRKSRC}/scheme/gnet-PCBboard.scm
 	${RM} -f ${WRKSRC}/scheme/gnet-PCBboard.scm.bak
 
+.include "../../cad/libgeda/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
