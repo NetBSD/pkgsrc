@@ -1,0 +1,31 @@
+# $NetBSD: Makefile,v 1.1.1.1 1999/01/20 02:03:40 hubertf Exp $
+#
+
+DISTNAME=	xtraceroute-0.8.12
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
+		ndg_files.tar.gz
+CATEGORIES=	net x11
+MASTER_SITES=	http://www.dtek.chalmers.se/~d3august/xt/dl/
+
+MAINTAINER=	hubertf@netbsd.org
+HOMEPAGE=	http://www.dtek.chalmers.se/~d3august/xt/index.html
+
+DEPENDS+=	Mesa-3.0:../../graphics/Mesa
+DEPENDS+=	gtk+-1.1.12:../../x11/gtk
+DEPENDS+=	gtkglarea-1.1:../../x11/gtkglarea
+DEPENDS+=	tiff-3.4:../../graphics/tiff
+
+GNU_CONFIGURE=	YES
+CONFIGURE_ARGS+= --with-gtk-prefix=${X11BASE}
+# XXX Actually, Mesa's in X11BASE too, but as our tiff is in LOCALBASE
+# and xtraceroute doesn't have a switch to tell it so (yet?), we abuse
+# the --with-GL-prefix switch for this.
+CONFIGURE_ARGS+= --with-GL-prefix=${LOCALBASE}
+CONFIGURE_ARGS+= --with-lib-MesaGL
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/xtraceroute
+	${INSTALL_DATA} ${WRKDIR}/lib/hosts.cache    ${PREFIX}/share/xtraceroute/site_hosts.cache
+	${INSTALL_DATA} ${WRKDIR}/lib/networks.cache ${PREFIX}/share/xtraceroute/site_networks.cache
+
+.include "../../mk/bsd.pkg.mk"

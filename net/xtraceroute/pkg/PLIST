@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/01/20 02:03:40 hubertf Exp $
+bin/xtraceroute
+share/xtraceroute/earth.tif
+share/xtraceroute/site_hosts.cache
+share/xtraceroute/site_networks.cache
