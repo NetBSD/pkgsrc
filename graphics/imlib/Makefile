@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2000/02/09 20:20:54 tron Exp $
+# $NetBSD: Makefile,v 1.31 2000/02/12 03:24:15 wiz Exp $
 #
 
 DISTNAME=	imlib-1.9.8
@@ -20,6 +20,7 @@ USE_X11BASE=	yes
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
+PLIST_SUBST+=	LOCALBASE=${LOCALBASE}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -33,5 +34,8 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/imlib
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.gif *.html \
 		${PREFIX}/share/doc/imlib
+	${TEST} ${PREFIX} = ${LOCALBASE} || \
+	${LN} -fs ${PREFIX}/share/aclocal/imlib.m4 \
+		${LOCALBASE}/share/aclocal/imlib.m4
 
 .include "../../mk/bsd.pkg.mk"
