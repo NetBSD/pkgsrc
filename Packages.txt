@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.34 1998/06/05 12:21:36 frueauf Exp $
+# $NetBSD: Packages.txt,v 1.35 1998/06/10 09:01:12 agc Exp $
 ###########################################################################
 
 			==========================
@@ -28,7 +28,7 @@ The NetBSD package system is used to enable such freely available
 third-party software to be built easily on NetBSD hosts. Once the software
 has been built, it is manipulated with the pkg_* tools so that installation
 and de-installation, printing of an inventory of all installed packages and
-retrieval of one-line comments or more verbose descriptions are simple.
+retrieval of one-line comments or more verbose descriptions are all simple.
 
 Both the NetBSD packages collection and the NetBSD package system are
 derived from FreeBSD.
@@ -37,12 +37,13 @@ derived from FreeBSD.
  0.1 Overview
  =============
 
-This document is divided into two parts. The first, "User's Guide",
-describes how one can get a prepared package going, either by installing a
-precompiled binary package, or by building with the NetBSD package system.
-The second part, "Package Porter's Guide", explains how to prepare a
-package so it can be easily built by other NetBSD users without knowing
-about the package's building details.
+This document is divided into two parts.  The first, "User's Guide",
+describes how one can use one of the packages in the Package
+Collection, either by installing a precompiled binary package, or by
+building your own copy using the NetBSD package system.  The second
+part, "Package Constructor's Guide", explains how to prepare a package so
+it can be easily built by other NetBSD users without knowing about the
+package's building details.
 
 
  0.2 Terminology
@@ -54,7 +55,7 @@ is a description of all the terminology used within this document:
  * Package:
    A set of files and building instructions that describe what's necessary
    to build a certain piece of software using the NetBSD package
-   system. Packages are stored under /usr/pkgsrc.
+   system. Packages are traditionally stored under /usr/pkgsrc.
 
  * The NetBSD package system:
    This is the part of the NetBSD operating system handling building
@@ -160,7 +161,7 @@ your system by indiscriminate adding of such files.
 
 This assumes that the package is already part of the NetBSD package system.
 If it is not, then you are advised to read part II of this document,
-"Package Porter's Guide".
+"Package Constructor's Guide".
 
 
  2.1 Where to get pkgsrc
@@ -209,13 +210,26 @@ Taking the top system utility as an example, we can install it on our
 system by building as shown in A.1.
 
 The program is installed under the default root of the packages tree -
-/usr/pkg. Should this not conform to your tastes, simply set the PREFIX
+/usr/pkg. Should this not conform to your tastes, simply set the LOCALBASE
 variable in your environment, and it will use that value as the root of
 your packages tree. So, to use /usr/local, set
 
-	PREFIX=/usr/local
+	LOCALBASE=/usr/local
+
+in your environment.  There is, of course, one exception to this - X11
+packages are traditionally installed in the X11 tree.  The environment
+variable which governs an X11 package's location is X11BASE.  So to
+install an X11 package into /usr/local/X11R6, set
+
+	X11BASE=/usr/local/X11R6
 
 in your environment.
+
+However, beware that strange things may happen if you install X11
+packages outside the X11 tree, in that libraries and header files may
+not be found by other software, and Application Defaults may not be
+found.  For that reason, you are advised to leave X11 packages in the
+X11 tree.  We are looking at ways to change this. 
 
 
  3 Making a precompiled package
@@ -241,9 +255,9 @@ Please see the "submitting" section later in this document on how to submit
 such a binary package.
 
 
-===============================
-Part II: Package Porter's Guide
-===============================
+====================================
+Part II: Package Constructor's Guide
+====================================
 
  4 Package components - files, directories and contents
  ======================================================
@@ -585,7 +599,7 @@ and PLIST-md.* contain:
         @dirrm foo/mi
 
 This will lead to some @dirrm statements being duplicated, but it's the
-only way to ensure everything is propperly removed. The same care must be
+only way to ensure everything is properly removed. The same care must be
 taken when PLIST_SRC is set to some package-specific settings.
   
 
@@ -672,14 +686,14 @@ Support the idea of free software!
  7 The build process
  ===================
 
-The basic steps for building a program are always the same. First the
+The basic steps for building a program are always the same.  First the
 program's source (distfile) must be brought to the local system and
-extracted afterwards. After some patches to compile properly on NetBSD are
-applied, the software can be configured, then built (usually by compiling),
-and finally the produced binaries etc. can be put into place on the system.
-These are exactly the steps performed by the NetBSD package system, which
-is implemented as a series of targets in a central Makefile(include) -
-/usr/pkgsrc/mk/bsd.pkg.mk.
+then extracted.  After any patches to compile properly on NetBSD are
+applied, the software can be configured, then built (usually by
+compiling), and finally the produced binaries etc.  can be put into
+place on the system.  These are exactly the steps performed by the
+NetBSD package system, which is implemented as a series of targets in
+a central Makefile, /usr/pkgsrc/mk/bsd.pkg.mk.
 
 
  7.1 Program location
@@ -719,8 +733,8 @@ The main targets used during the build process defined in bsd.pkg.mk are:
 
  * extract:
    When the distfiles are present on the local system, they need to be
-   extracted, as they are usually in the for of some compressed archive
-   format, most commonly .tar.gz. If not all of the distfiles need to be
+   extracted, as they are usually in the form of some compressed archive
+   format, most commonly .tar.gz. If only some of the distfiles need to be
    uncompressed, the files to be uncompressed should be put into
    EXTRACT_ONLY. If the distfiles are not in .tar.gz format, they can be
    extracted by setting EXTRACT_CMD, EXTRACT_BEFORE_ARGS and/or
@@ -728,17 +742,18 @@ The main targets used during the build process defined in bsd.pkg.mk are:
 
  * patch:
    After extraction, all the patches named by the PATCHFILES and those
-   present in the patches subdirectory of the package are
-   applied. Patchfiles ending in .Z or .gz are uncompressed before they are
-   applied, files ending in .orig or .rej are ignored. Any special options
-   to patch(1) can be handed in PATCH_DIST_ARGS. See section 4.3 for more
-   details.
+   present in the patches subdirectory of the package are applied. 
+   Patchfiles ending in .Z or .gz are uncompressed before they are
+   applied, files ending in .orig or .rej are ignored.  Any special
+   options to patch(1) can be handed in PATCH_DIST_ARGS.  See section
+   4.3 for more details.
 
  * configure:
-   Now that the source is in a form that has a chance to compile under
-   NetBSD, the program usually must be configured to be built on the local
-   system. This procedure is usually automated with some script supplied
-   with the program, and it results in generation of header files,
+   Most pieces of software need information on the header files,
+   system calls, and library routines which are available in NetBSD. 
+   This is the process known as configuration, and is usually
+   automated.  In most cases, a script is supplied with the source,
+   and its invokcation results in generation of header files,
    Makefiles, etc.
 
    If the program doesn't come with its own configure script, one can be
@@ -758,23 +773,30 @@ The main targets used during the build process defined in bsd.pkg.mk are:
    instead!)
 
  * build:
-   If everything is set up for compilation, this target cares to do so by
-   invoking $MAKE_PROGRAM on $MAKEFILE with $ALL_TARGET as the target to
-   build. The defaults MAKE_PROGRAM is "gmake" if USE_GMAKE is set, "make"
-   otherwise. MAKEFILE is by default set to "Makefile:, and ALL_TARGET
-   defaults to "all". Any of these variables can be set to change the
-   default build process.
+   Once configuration has taken place, the software can be built on
+   NetBSD by invoking $MAKE_PROGRAM on $MAKEFILE with $ALL_TARGET as
+   the target to build.  The default MAKE_PROGRAM is "gmake" if
+   USE_GMAKE is set, "make" otherwise.  MAKEFILE is set to "Makefile"
+   by default, and ALL_TARGET defaults to "all".  Any of these
+   variables can be set to change the default build process.
 
  * install:
-   After all files are properly digested and compiled, the final step is
-   to move them into the place where they can be used from anyone. As in
-   the build-target, $MAKE_PROGRAM is invoked on $MAKEFILE here, but with
-   the $INSTALL_TARGET instead, the latter defaulting to "install" (plus
-   "install.man", if USE_IMAKE is set). 
+   Once the build stage has completed, the final step is to install
+   the software in public directories, for users.  As in the
+   build-target, $MAKE_PROGRAM is invoked on $MAKEFILE here, but with
+   the $INSTALL_TARGET instead, the latter defaulting to "install"
+   (plus "install.man", if USE_IMAKE is set). 
 
-If any of these targets is invoked with "make XXX" and the preceeding
-targets were not performed before, they will be executed prior to the given
-target in the order given above.
+If no target is specified, the default is "build". If a subsequent stage
+is requested, all prior stages are made: e.g. "make build" will also
+perform the equivalent of:
+
+	make fetch
+	make checksum
+	make extract
+	make patch
+	make configure
+	make build
 
 
  7.3 Other helpful targets
@@ -782,19 +804,21 @@ target in the order given above.
 
  * pre/post-*
    For any of the main targets described in the previous section, two
-   auxiliary targets exist with "pre-" and "post-" prepended to the main
-   target's name. These targets are invoked before and after the main
-   target is called, giving the possibility to fix anything the
-   program's configure script or install target left out.  For any of these
-   auxiliary targets, equally named scripts can be placed in the package's
+   auxiliary targets exist with "pre-" and "post-" used as a prefix
+   for the main target's name.  These targets are invoked before and
+   after the main target is called, allowing extra configuration or
+   installation steps, for example, which program's configure script
+   or install target omitted.  For any of these auxiliary targets,
+   scripts of the same name can be placed in the package's
    scripts-subdirectory that will be executed at the given time, see
    section 4.5.
 
  * do-*:
-   Should one of the main targets do the wrong thing and there be no
-   variable to fix this, you can redefine it with the do-* target. (Note
-   that redefining the target itself instead of the do-* target is a bad
-   idea, as the pre-* and post-* targets won't be called anymore, etc.)
+   Should one of the main targets do the wrong thing, and should there
+   be no variable to fix this, you can redefine it with the do-*
+   target.  (Note that redefining the target itself instead of the
+   do-* target is a bad idea, as the pre-* and post-* targets won't be
+   called anymore, etc.) You will not usually ned to do this.
 
  * reinstall:
    If you did a "make install" and you noticed some file was not installed
@@ -834,7 +858,7 @@ only with some debugging aids.
  - pkg_delete blub
  - find /usr/pkg/ /usr/X11R6/ -newer /tmp/bla: if this brings up any files,
    they are missing in pkg/PLIST*; add them.
- - Compare pkg/PLIST* against /tmp/x, fix the further one
+ - Compare pkg/PLIST* against /tmp/x, fix the former one
    ( sort /tmp/x >/tmp/x2 ; sort pkg/PLIST >/tmp/P ; sdiff /tmp/x2 /tmp/P )
  - make reinstall && make package
  - pkg_delete blub
@@ -865,7 +889,7 @@ have to do that yourself, and this may not be what you want.
  ======================================
 
 If your package uses a different distribution method from .tar.gz, take a
-look at the packages for plan9/sam, which uses a gzipped shell archive
+look at the package for plan9/sam, which uses a gzipped shell archive
 (shar), but the quick solution is to set EXTRACT_SUFX to the name after the
 DIST_NAME field, and add the following to your package's Makefile:
 
@@ -923,7 +947,7 @@ resulting list.
 If you are sitting behind a firewall, you must specify the relevant proxy
 hosts to enable you to talk to other machines on the Internet which are not
 behind your firewall. This is an environment variable in the form of a URL
-e.g. in Amdahl, the machine orpheus.amdahl.com is one of our firewalls, and
+e.g. in Amdahl, the machine orpheus.amdahl.com is one of the firewalls, and
 it uses port 80 as the proxy port number. So the proxy environment
 variables look like:
 
