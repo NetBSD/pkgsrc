@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.10 2004/11/03 13:41:43 jmmv Exp $
+
+--- camel/camel-service.c.orig	2004-10-11 17:24:23.000000000 +0200
++++ camel/camel-service.c
+@@ -36,6 +36,9 @@
+ #include <errno.h>
+ 
+ #include <sys/poll.h>
++#ifndef ENABLE_IPv6
++#include <sys/socket.h>
++#endif
+ 
+ #include "e-util/e-msgport.h"
+ 
+@@ -896,7 +899,7 @@ camel_getaddrinfo(const char *name, cons
+ 	else
+ 		memcpy (&myhints, hints, sizeof (myhints));
+ 	
+-	myhints.ai_faimily = AF_INET;
++	myhints.ai_family = AF_INET;
+ 	hints = &myhints;
+ #endif
+ 
