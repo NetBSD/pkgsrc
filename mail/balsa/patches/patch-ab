@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.4 2000/08/29 11:37:17 rh Exp $
+$NetBSD: patch-ab,v 1.5 2000/10/22 09:33:24 rh Exp $
 
---- libbalsa/send.c.orig	Mon Aug 28 12:03:59 2000
+--- libbalsa/send.c.orig	Fri Oct  6 20:20:20 2000
 +++ libbalsa/send.c
-@@ -22,6 +22,9 @@
+@@ -24,6 +24,9 @@
  
- #include "config.h"
- 
+ /* #include <radlib.h>  */
+ /* FreeBSD 4.1-STABLE FreeBSD 4.1-STABLE */
 +#include <sys/types.h>
 +#include <sys/socket.h>
 +#include <netinet/in.h>

@@ -1,13 +1,14 @@
-@comment $NetBSD: PLIST,v 1.5 2000/08/29 11:37:17 rh Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/10/22 09:33:24 rh Exp $
 bin/balsa
 etc/sound/events/balsa.soundlist
 etc/sound/events/email.soundlist
 man/man1/balsa.1
 share/gnome/apps/Internet/balsa.desktop
-share/gnome/help/balsa/C/authours.html
-share/gnome/help/balsa/C/common-tasks.html
-share/gnome/help/balsa/C/getting-started.html
-share/gnome/help/balsa/C/glossary.html
+share/gnome/help/balsa/C/images/address-book-ldap.png
+share/gnome/help/balsa/C/images/address-book-modify.png
+share/gnome/help/balsa/C/images/address-book-start.png
+share/gnome/help/balsa/C/images/address-book-vcard.png
+share/gnome/help/balsa/C/images/address-book.png
 share/gnome/help/balsa/C/images/balsa_logo.png
 share/gnome/help/balsa/C/images/druid-start.png
 share/gnome/help/balsa/C/images/example-alias.png
@@ -16,8 +17,8 @@ share/gnome/help/balsa/C/images/main-window.png
 share/gnome/help/balsa/C/images/newmsg-window-attachments.png
 share/gnome/help/balsa/C/images/newmsg-window-toolbar.png
 share/gnome/help/balsa/C/images/newmsg-window.png
-share/gnome/help/balsa/C/index.html
-share/gnome/help/balsa/C/its-not-working.html
+share/gnome/help/balsa/C/images/preferences-window.png
+share/gnome/help/balsa/C/images/spell-check.png
 share/gnome/help/balsa/C/stylesheet-images/caution.gif
 share/gnome/help/balsa/C/stylesheet-images/home.gif
 share/gnome/help/balsa/C/stylesheet-images/important.gif
@@ -31,18 +32,6 @@ share/gnome/help/balsa/C/stylesheet-images/toc-plus.gif
 share/gnome/help/balsa/C/stylesheet-images/up.gif
 share/gnome/help/balsa/C/stylesheet-images/warning.gif
 share/gnome/help/balsa/C/topic.dat
-share/gnome/help/balsa/C/win-composer.html
-share/gnome/help/balsa/C/win-config-0.html
-share/gnome/help/balsa/C/win-config-1.html
-share/gnome/help/balsa/C/win-config-2.html
-share/gnome/help/balsa/C/win-config-3.html
-share/gnome/help/balsa/C/win-config-4.html
-share/gnome/help/balsa/C/win-config-5.html
-share/gnome/help/balsa/C/win-config-6.html
-share/gnome/help/balsa/C/win-config-7.html
-share/gnome/help/balsa/C/win-config-8.html
-share/gnome/help/balsa/C/win-config.html
-share/gnome/help/balsa/C/win-main.html
 share/locale/ca/LC_MESSAGES/balsa.mo
 share/locale/da/LC_MESSAGES/balsa.mo
 share/locale/de/LC_MESSAGES/balsa.mo
@@ -60,6 +49,7 @@ share/locale/ja/LC_MESSAGES/balsa.mo
 share/locale/ko/LC_MESSAGES/balsa.mo
 share/locale/lt/LC_MESSAGES/balsa.mo
 share/locale/nl/LC_MESSAGES/balsa.mo
+share/locale/nn/LC_MESSAGES/balsa.mo
 share/locale/no/LC_MESSAGES/balsa.mo
 share/locale/pl/LC_MESSAGES/balsa.mo
 share/locale/pt/LC_MESSAGES/balsa.mo
@@ -80,9 +70,9 @@ share/pixmaps/balsa/balsa_logo.png
 share/pixmaps/gnome-balsa2.png
 share/sounds/balsa/newmail.wav
 share/sounds/balsa/startup.wav
+@dirrm share/sounds/balsa
+@dirrm share/pixmaps/balsa
 @dirrm share/gnome/help/balsa/C/stylesheet-images
 @dirrm share/gnome/help/balsa/C/images
 @dirrm share/gnome/help/balsa/C
 @dirrm share/gnome/help/balsa
-@dirrm share/sounds/balsa
-@dirrm share/pixmaps/balsa
