@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4496 2004/01/18 14:32:11 taca Exp $
+$NetBSD: CHANGES,v 1.4497 2004/01/18 16:40:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -322,3 +322,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gltron to 0.70 [cube 2004-01-18]
 	Added icbirc-1.6 [tron 2004-01-18]
 	Updated squid to 2.5.4nb7 [taca 2004-01-18]
+	Updated xpdf-chinese-traditional to 20040116 [wiz 2004-01-18]
+	Updated xpdf-japanese to 20040116 [wiz 2004-01-18]
+	Updated xpdf-korean to 20040116 [wiz 2004-01-18]
