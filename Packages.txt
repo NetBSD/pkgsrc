@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.361 2004/10/16 00:36:10 dan Exp $
+# $NetBSD: Packages.txt,v 1.362 2004/10/16 00:41:40 dan Exp $
 ###########################################################################
 
 			==========================
@@ -3083,10 +3083,10 @@ Utilities used by pkgsrc (automatically installed when needed):
 
 OS tool augmentation (automatically installed when needed):
   digest - calculates SHA1 checksums (and other kinds)
-	        use on operating systems where pkg_install is not present
   libnbcompat - compat library for pkg tools
   mtree - installed on non-BSD systems due to lack of native mtree
   pkg_install - up-to-date replacement for /usr/sbin/pkg_install, or for
+	        use on operating systems where pkg_install is not present
 
 Utilities used by pkgsrc (not automatically installed):
   pkg_tarup - create a binary package from an already-installed package.
