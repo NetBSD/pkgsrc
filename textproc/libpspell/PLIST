@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:57:17 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/15 01:05:14 wiz Exp $
 bin/pspell-config
 include/pspell/app_string.hh
-include/pspell/conf.h
 include/pspell/config.h
 include/pspell/config_impl.hh
 include/pspell/convert.hh
@@ -28,8 +27,8 @@ include/pspell/wordlist.h
 lib/libpspell-impl.a
 lib/libpspell-impl.la
 lib/libpspell-impl.so
-lib/libpspell-impl.so.3
-lib/libpspell-impl.so.3.1
+lib/libpspell-impl.so.6
+lib/libpspell-impl.so.6.0
 lib/libpspell-modules.a
 lib/libpspell-modules.la
 lib/libpspell-modules.so
@@ -38,15 +37,16 @@ lib/libpspell-modules.so.1.1
 lib/libpspell.a
 lib/libpspell.la
 lib/libpspell.so
-lib/libpspell.so.2
-lib/libpspell.so.2.2
+lib/libpspell.so.4
+lib/libpspell.so.4.3
 share/doc/pspell/man-html/1_Introduction.html
 share/doc/pspell/man-html/2_Getting.html
-share/doc/pspell/man-html/3_Library.html
-share/doc/pspell/man-html/4_Status.html
-share/doc/pspell/man-html/5_Feedback.html
-share/doc/pspell/man-html/6_Changelog.html
-share/doc/pspell/man-html/7_Copyright.html
+share/doc/pspell/man-html/3_Keeping.html
+share/doc/pspell/man-html/4_Library.html
+share/doc/pspell/man-html/5_Status.html
+share/doc/pspell/man-html/6_Feedback.html
+share/doc/pspell/man-html/7_Changelog.html
+share/doc/pspell/man-html/8_Copyright.html
 share/doc/pspell/man-html/About_this.html
 share/doc/pspell/man-html/Contents.html
 share/doc/pspell/man-html/contents.png
@@ -61,11 +61,12 @@ share/doc/pspell/man-html/up.png
 share/doc/pspell/man-html/up_g.png
 share/doc/pspell/man-text/1_Introduction.txt
 share/doc/pspell/man-text/2_Getting.txt
-share/doc/pspell/man-text/3_Library.txt
-share/doc/pspell/man-text/4_Status.txt
-share/doc/pspell/man-text/5_Feedback.txt
-share/doc/pspell/man-text/6_Changelog.txt
-share/doc/pspell/man-text/7_Copyright.txt
+share/doc/pspell/man-text/3_Keeping.txt
+share/doc/pspell/man-text/4_Library.txt
+share/doc/pspell/man-text/5_Status.txt
+share/doc/pspell/man-text/6_Feedback.txt
+share/doc/pspell/man-text/7_Changelog.txt
+share/doc/pspell/man-text/8_Copyright.txt
 share/doc/pspell/man-text/About_this.txt
 share/doc/pspell/man-text/Contents.txt
 share/doc/pspell/man-text/index.txt
@@ -77,6 +78,8 @@ share/doc/pspell/manual.tex
 share/pspell/cp1252.map
 share/pspell/iso8859-1.map
 share/pspell/iso8859-10.map
+share/pspell/iso8859-13.map
+share/pspell/iso8859-14.map
 share/pspell/iso8859-15.map
 share/pspell/iso8859-2.map
 share/pspell/iso8859-3.map
@@ -87,6 +90,7 @@ share/pspell/iso8859-7.map
 share/pspell/iso8859-8.map
 share/pspell/iso8859-9.map
 share/pspell/koi8-r.map
+share/pspell/region-to-spelling.map
 share/pspell/viscii.map
 @dirrm share/pspell
 @dirrm share/doc/pspell/man-text
