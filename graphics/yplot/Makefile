@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/04/27 02:39:00 hubertf Exp $
+# $NetBSD: Makefile,v 1.12 2002/04/28 18:08:27 hubertf Exp $
 
 DISTNAME=		yplot-1.1.0
 PKGREVISION=		1
@@ -14,7 +14,7 @@ DEPENDS+=		plplot>=5.0.3:../../graphics/plplot
 BUILD_DEPENDS+=		teTeX>=1.0:../../print/teTeX
 
 .if (${MACHINE_ARCH} == "sparc64")
-IS_INTERACTIVE=		yes		# Hangs sparc64 bulk builds
+BROKEN=			Compiling hangs, needs attention.
 .endif
 
 EVAL_PREFIX+=		PLPLOT_PREFIX=plplot
