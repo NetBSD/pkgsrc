@@ -1,57 +1,15 @@
-$NetBSD: patch-ab,v 1.7 2001/09/10 17:23:47 wiz Exp $
+$NetBSD: patch-ab,v 1.8 2001/12/14 16:26:03 mrg Exp $
 
---- bozohttpd.8.in.orig	Fri Aug 10 08:43:16 2001
-+++ bozohttpd.8.in
-@@ -44,7 +44,7 @@
- .Sh DESCRIPTION
- The
- .Nm
--program reads a
-+program reads an
- .Em HTTP
- request from the standard input, and sends a reply
- to the standard output.  Besides ~user translation and virtual
-@@ -130,12 +130,15 @@
- on the command line with little change of functionality.)  A typical
+--- bozohttpd.8.in.orig	Sat Sep 22 20:10:00 2001
++++ bozohttpd.8.in	Sat Dec 15 03:15:41 2001
+@@ -172,8 +172,8 @@
  .Xr inetd.conf 5
  entry would be:
--.Dl www stream tcp nowait httpd /usr/pkg/libexec/httpd httpd /var/www
-+.Bd -literal
-+www stream tcp  nowait httpd @PREFIX@/libexec/bozohttpd bozohttpd /var/www
-+www stream tcp6 nowait httpd @PREFIX@/libexec/bozohttpd bozohttpd /var/www
-+.Ed
+ .Bd -literal
+-www stream tcp  nowait:600 httpd /usr/pkg/libexec/bozohttpd bozohttpd /var/www
+-www stream tcp6 nowait:600 httpd /usr/pkg/libexec/bozohttpd bozohttpd /var/www
++www stream tcp  nowait:600 httpd @PREFIX@/libexec/bozohttpd bozohttpd /var/www
++www stream tcp6 nowait:600 httpd @PREFIX@/libexec/bozohttpd bozohttpd /var/www
+ .Ed
  .Pp
- Using the
- .Nx
- .Xr inetd 8 ,
--you can provide multiple IP-address based HTTP servers by having mulitple
-+you can provide multiple IP-address based HTTP servers by having multiple
- listening ports with different configurations.
- .Sh NOTES
- This server supports the
-@@ -158,10 +161,10 @@
- program was first written in perl, based on another perl http server
- called
- .Dq tinyhttpd .
--It was then rewritten from scratch in perl, and then once again in C.  
-+It was then rewritten from scratch in perl, and then once again in C.
- This version documents
- .Nm
--version 5.07.
-+version 5.08.
- .Sh AUTHOR
- The
- .Nm
-@@ -176,10 +179,10 @@
- .Aq ad@netbsd.org .
- .Sh BUGS
- .Nm
--only know about the file types built in to the program.  This means it
-+only knows about the file types built into the program.  This means it
- either needs a large embedded list of file extensions to types, or needs
- to use a configuration file with this.  Currently, only a reasonable
- sized embedded list is used, that supports the most common files.
- .Sh SEE ALSO
- .Xr inetd.conf 5 ,
--.Xr inetd 8 .
-+.Xr inetd 8
+ This would serve web pages from
