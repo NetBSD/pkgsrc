@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/01/05 15:20:10 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2005/01/23 20:41:45 recht Exp $
 #
 
 DISTNAME=	myhdl-0.4.1
@@ -12,7 +12,7 @@ COMMENT=	Hardware description in Python
 
 USE_BUILDLINK3=	YES
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_ACCEPTED=	23 23pth 24 24pth
+PYTHON_VERSIONS_ACCEPTED=	23 24
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/10/05 19:49:28 tsarna Exp $
+# $NetBSD: Makefile,v 1.8 2005/01/23 20:41:45 recht Exp $
 #
 
 DISTNAME=	sybase-0.36
@@ -11,7 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.object-craft.com.au/projects/sybase/
 COMMENT=	Sybase interface for Python using FreeTDS
 
-PYTHON_VERSIONS_ACCEPTED=	21pth 22pth 23pth
+PYTHON_VERSIONS_ACCEPTED=	21 22 23
 
 BUILDLINK_DEPENDS.freetds=	freetds-0.61*
 PYSETUPBUILDARGS=	build_ext -D HAVE_FREETDS=61 -U WANT_BULKCOPY

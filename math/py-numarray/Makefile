@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/07/09 15:50:25 recht Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/23 20:41:48 recht Exp $
 #
 
 DISTNAME=	numarray-1.0
@@ -12,7 +12,7 @@ COMMENT=	Array manipulation
 
 USE_BUILDLINK3=		yes
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_ACCEPTED= 23pth 22pth
+PYTHON_VERSIONS_ACCEPTED= 23 22
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
