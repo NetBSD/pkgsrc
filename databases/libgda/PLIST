@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/02/18 14:55:56 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/06/10 14:20:31 jmmv Exp $
 bin/gda-report-test
 bin/gda-run
 bin/gda-test
@@ -13,6 +13,7 @@ include/libgda-report/gda-report-item-reportfooter.h
 include/libgda-report/gda-report-item-reportheader.h
 include/libgda-report/gda-report-item-sqlquery.h
 include/libgda-report/gda-report-item.h
+include/libgda-report/gda-report-result.h
 include/libgda-report/gda-report-types.h
 include/libgda-report/gda-report-valid.h
 include/libgda-report/gda-report.h
@@ -66,13 +67,13 @@ include/libgda/libgda.h
 lib/libgda-2.a
 lib/libgda-2.la
 lib/libgda-2.so
-lib/libgda-2.so.1
-lib/libgda-2.so.1.2
+lib/libgda-2.so.2
+lib/libgda-2.so.2.0
 lib/libgda-report-2.a
 lib/libgda-report-2.la
 lib/libgda-report-2.so
-lib/libgda-report-2.so.1
-lib/libgda-report-2.so.1.2
+lib/libgda-report-2.so.2
+lib/libgda-report-2.so.2.0
 lib/libgda/providers/libgda-default.a
 lib/libgda/providers/libgda-default.la
 lib/libgda/providers/libgda-default.so
@@ -83,10 +84,8 @@ lib/libgdasql.so.0
 lib/libgdasql.so.0.0
 lib/pkgconfig/libgda.pc
 share/doc/html/libgda/architecture.html
-share/doc/html/libgda/c680.html
-share/doc/html/libgda/c685.html
-share/doc/html/libgda/c687.html
 share/doc/html/libgda/c689.html
+share/doc/html/libgda/c694.html
 share/doc/html/libgda/compiling.html
 share/doc/html/libgda/connecting.html
 share/doc/html/libgda/connections.html
@@ -171,16 +170,14 @@ share/doc/html/libgda/migration-configuration.html
 share/doc/html/libgda/migration-executing-commands.html
 share/doc/html/libgda/migration.html
 share/doc/html/libgda/processing-queries.html
-share/doc/html/libgda/x849.html
-share/doc/html/libgda/x851.html
 share/doc/html/libgda/x853.html
-share/doc/html/libgda/x878.html
-share/doc/html/libgda/x880.html
+share/doc/html/libgda/x863.html
 share/doc/html/libgda/x882.html
-share/doc/html/libgda/x883.html
-share/doc/html/libgda/x885.html
 share/doc/html/libgda/x887.html
+share/doc/html/libgda/x892.html
+share/doc/html/libgda/x897.html
 share/examples/libgda/config
+share/libgda/xml/gda-report-result.dtd
 share/libgda/xml/gda-report.dtd
 share/libgda/xml/gda-xml-query.dtd
 share/libgda/xml/gda-xml-query.xsl
@@ -191,6 +188,7 @@ ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/libgda-2.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libgda-2.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/libgda-2.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libgda-2.mo
+${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/libgda-2.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/libgda-2.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libgda-2.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/libgda-2.mo
@@ -208,6 +206,8 @@ ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/libgda-2.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/libgda-2.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/libgda-2.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/libgda-2.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/libgda-2.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/libgda-2.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libgda-2.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/libgda-2.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/libgda-2.mo
@@ -217,6 +217,7 @@ share/omf/libgda/libgda-C.omf
 @dirrm share/omf/libgda
 @comment in scrollkeeper: @dirrm share/omf
 @dirrm share/libgda/xml
+@dirrm share/libgda
 @dirrm share/examples/libgda
 @dirrm share/doc/html/libgda
 @dirrm lib/libgda/providers
