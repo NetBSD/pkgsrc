@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 2000/04/06 22:36:57 jlam Exp $
+$NetBSD: md5,v 1.4 2000/04/07 17:44:43 tron Exp $
 
-MD5 (libPropList-0.10.0.tar.gz) = 22462ba84d54c8106fd83eb17ec9d29e
+MD5 (libPropList-0.10.1.tar.gz) = ff32a4edbf9d0861012b2f10fd302ad5
