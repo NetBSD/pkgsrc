@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/13 16:31:16 tron Exp $#
+# $NetBSD: Makefile,v 1.2 2001/04/30 15:02:49 tron Exp $#
 
 DISTNAME=	xservers-3.3.6.0
 CATEGORIES=	x11
@@ -15,8 +15,9 @@ NO_CHECKSUM=	YES
 PLIST_SRC=	${WRKDIR}/PLIST
 USE_X11BASE=	YES
 
-.if !defined(CHECK_X11)
+.if !defined(X11_RELEASE) && !defined(CHECK_X11)
 X11_RELEASE!=	${MAKE} CHECK_X11=YES print-x11-release
+MAKEFLAGS+=	X11_RELEASE="${X11_RELEASE}
 .if (${X11_RELEASE} == "6.3")
 IGNORE=		"The X11 servers are included in your X11 distribution."
 .endif
