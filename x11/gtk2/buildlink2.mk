@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.11 2004/02/19 17:54:07 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.12 2004/03/09 22:15:01 recht Exp $
 
 .if !defined(GTK2_BUILDLINK2_MK)
 GTK2_BUILDLINK2_MK=	# defined
@@ -27,6 +27,7 @@ USE_X11=	YES
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
+.include "../../x11/Xrandr/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	gtk2-buildlink
 
