@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2002/02/18 15:14:05 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/06/26 10:03:35 seb Exp $
 bin/recode
 include/recode.h
 include/recodext.h
-@unexec ${INSTALL_INFO} --delete %D/info/recode.info %D/info/dir
 info/recode.info
 info/recode.info-1
 info/recode.info-2
@@ -11,7 +10,6 @@ info/recode.info-4
 info/recode.info-5
 info/recode.info-6
 info/recode.info-7
-@exec ${INSTALL_INFO} %D/info/recode.info %D/info/dir
 lib/librecode.a
 lib/librecode.la
 lib/librecode.so
