@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2004/01/31 16:47:25 xtraeme Exp $
+bin/xfs
+lib/X11/fs/config
+${IMAKE_MAN_DIR}/xfs.${IMAKE_MANNEWSUFFIX}
