@@ -1,7 +1,20 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 11:14:13 agc Exp $
+$NetBSD: patch-ab,v 1.3 1998/12/21 00:36:00 frueauf Exp $
 
 --- Makefile.orig	Thu Oct 12 20:04:06 1995
-+++ Makefile	Wed Jun  4 05:05:47 1997
++++ Makefile	Mon Dec 21 01:09:49 1998
+@@ -240,9 +240,9 @@
+ 	  set $(SHELLDEBUG); \
+ 	  if [ -d $$TEXINFODIR -a -r ispell.info ]; then \
+ 	    set -ex; \
+-	    rm -f $$TEXINFODIR/ispell; \
+-	    $$INSTALL ispell.info $$TEXINFODIR/ispell; \
+-	    chmod 644 $$TEXINFODIR/ispell; \
++	    rm -f $$TEXINFODIR/ispell.info; \
++	    $$INSTALL ispell.info $$TEXINFODIR/ispell.info; \
++	    chmod 644 $$TEXINFODIR/ispell.info; \
+ 	  else \
+ 	    : ; \
+ 	  fi
 @@ -253,7 +253,7 @@
  	    set -ex; \
  	    rm -f $$ELISPDIR/ispell.el; \
@@ -11,6 +24,15 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:14:13 agc Exp $
  		echo '(byte-compile-file "'"$$ELISPDIR/ispell.el"'")' \
  		  > /tmp/emi$$$$; \
  		$$EMACS -batch -l /tmp/emi$$$$; \
+@@ -324,7 +324,7 @@
+ 	  set $(SHELLDEBUG); \
+ 	  if [ -d $$TEXINFODIR ]; then \
+ 	    if sh iwhich makeinfo >/dev/null \
+-	      &&  makeinfo ispell.texinfo 2>/dev/null; then \
++	      &&  $$BINDIR/makeinfo --no-split --force ispell.texinfo 2>/dev/null; then \
+ 		:; \
+ 	    elif sh iwhich $$EMACS >/dev/null; then \
+ 		set -e; \
 @@ -508,7 +508,7 @@
  local.h:
  	set +e; [ -r local.h ]  ||  cp local.h.samp local.h

@@ -1,0 +1,16 @@
+$NetBSD: patch-aj,v 1.1 1998/12/21 00:36:00 frueauf Exp $
+
+--- ispell.texinfo-orig	Wed Nov  2 19:44:23 1994
++++ ispell.texinfo	Sun Dec 20 23:22:20 1998
+@@ -4,6 +4,11 @@
+ @settitle ISPELL V3.1
+ @comment %**end of header (This is for running Texinfo on a region.)
+ 
++@dircategory Miscellaneous
++@direntry
++* ISPELL: (ispell).             An interactive spelling corrector.
++@end direntry
++
+ @iftex
+ @finalout
+ @end iftex
