@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/02/10 03:50:03 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2005/02/18 22:12:43 jlam Exp $
 
 .include "Makefile.common"
 
-DISTNAME=	courier-authlib-0.53
+DISTNAME=	courier-authlib-0.54
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -43,6 +43,8 @@ AUTHEXAMPLEDIR=		share/examples/courier-authlib
 FILES_SUBST+=		AUTHLIBEXECDIR=${AUTHLIBEXECDIR}
 FILES_SUBST+=		AUTHEXAMPLEDIR=${AUTHEXAMPLEDIR}
 
+PKG_SYSCONFSUBDIR?=	courier
+
 EGDIR=			${PREFIX}/${AUTHEXAMPLEDIR}
 RCD_SCRIPTS=		authdaemond
 GEN_FILES=		authdaemonrc
@@ -73,9 +75,11 @@ GENERATE_PLIST+=	${ECHO} "@dirrm ${AUTHEXAMPLEDIR}";
 GENERATE_PLIST+=	${ECHO} "@dirrm ${AUTHLIBEXECDIR}";
 GENERATE_PLIST+=	${ECHO} "@dirrm ${AUTHLIBDIR}";
 
-INSTALLATION_DIRS=	${EGDIR} ${PREFIX}/sbin
+INSTALLATION_DIRS=	bin sbin
 
 post-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/makedat/makedat ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/authldap.schema ${EGDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/sysconftool ${PREFIX}/sbin
 
