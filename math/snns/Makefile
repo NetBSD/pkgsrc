@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/03/07 07:13:59 jmc Exp $
+# $NetBSD: Makefile,v 1.6 2002/03/19 08:48:17 skrll Exp $
 
 DISTNAME=	SNNSv4.2
 PKGNAME=	snns-4.2
@@ -9,18 +9,14 @@ MAINTAINER=	wulf@netbsd.org
 HOMEPAGE=	http://www-ra.informatik.uni-tuebingen.de/SNNS/
 COMMENT=	Software simulator for neural networks
 
-BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
-
 USE_XPM=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS= --enable-global --prefix=${LOCALBASE}
 
 XGUILOADPATH=	${LOCALBASE}/share/snns
 
-#
-# Avoids a double configure loop that looses the install directory
-post-configure:
-		cd ${WRKSRC} && touch configuration/* configure Makefile.def config.h
+AUTOMAKE_PATTERNS+= \
+		config.hin
 
 post-install:
 		${INSTALL_DATA_DIR} ${XGUILOADPATH};
