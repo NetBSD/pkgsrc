@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2004/04/11 08:44:52 snj Exp $
+# $NetBSD: Makefile,v 1.17 2004/08/02 21:22:52 minskim Exp $
 #
 
 DISTNAME=	tnt-1.9.1
+PKGREVISION=	1
 CATEGORIES=	ham
 MASTER_SITES=	ftp://excelsior.kullen.rwth-aachen.de/pub/packet_radio/tnt/
 EXTRACT_SUFX=	.tar.bz2
