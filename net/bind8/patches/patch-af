@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2002/05/08 16:20:57 taca Exp $
+
+--- lib/irs/getaddrinfo.c.orig	Fri Nov 30 09:36:54 2001
++++ lib/irs/getaddrinfo.c
+@@ -602,7 +602,7 @@
+ 	char tmp[NS_MAXDNAME];
+ 	const char *cp;
+ 
+-	result = NULL;
++	*res = NULL;
+ 
+ 	/*
+ 	 * if the servname does not match socktype/protocol, ignore it.
