@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.22 2005/01/06 00:25:06 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.23 2005/01/06 00:40:33 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -51,3 +51,5 @@ Pullup ticket 207 - requested by Mark Davies
 portability fix for kdelibs3
 Pullup ticket 208 - requested by Mark Davies
 security fix for kdelibs3
+Pullup ticket 209 - requested by Julio M. Merino Vidal
+usability fix for fam
