@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5743 2004/04/26 12:25:14 adam Exp $
+$NetBSD: CHANGES,v 1.5744 2004/04/26 14:01:45 taya Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2249,3 +2249,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nvtv to 0.4.7 [cube 2004-04-26]
 	Updated nvtv-gtk2 to 0.4.7 [cube 2004-04-26]
 	Updated gd to 2.0.23 [adam 2004-04-26]
+	Updated thunderbird to 0.5nb1 [taya 2004-04-26]
+	Added thunderbird-gtk2-0.5 [taya 2004-04-26]
