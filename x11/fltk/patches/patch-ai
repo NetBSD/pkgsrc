@@ -1,0 +1,22 @@
+$NetBSD: patch-ai,v 1.1 2004/02/18 05:07:34 ben Exp $
+
+--- src/fl_draw_pixmap.cxx.orig	2003-01-30 13:43:43.000000000 -0800
++++ src/fl_draw_pixmap.cxx
+@@ -147,14 +147,15 @@ int fl_draw_pixmap(const char*const* di,
+     // if first color is ' ' it is transparent (put it later to make
+     // it not be transparent):
+     if (*p == ' ') {
+-      uchar* c = (uchar*)&d.colors[' '];
++      uchar* c;
++      transparent_index = ' ';
++      c = (uchar*)&d.colors[transparent_index];
+ #ifdef U64
+       *(U64*)c = 0;
+ #  if WORDS_BIGENDIAN
+       c += 4;
+ #  endif
+ #endif
+-      transparent_index = ' ';
+       Fl::get_color(bg, c[0], c[1], c[2]); c[3] = 0;
+       p += 4;
+       ncolors--;

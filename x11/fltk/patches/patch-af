@@ -1,36 +1,39 @@
-$NetBSD: patch-af,v 1.4 2003/12/01 16:35:51 ben Exp $
+$NetBSD: patch-af,v 1.5 2004/02/18 05:07:34 ben Exp $
 
---- makeinclude.in.orig	Sat Apr 14 07:11:43 2001
+--- makeinclude.in.orig	2003-01-30 13:38:24.000000000 -0800
 +++ makeinclude.in
-@@ -39,8 +39,8 @@
- NROFF		=@NROFF@
+@@ -47,8 +47,8 @@ SHELL		= /bin/sh
+ STRIP		= strip
  
  # compiler names:
--CXX		=@CXX@
--CC		=@CC@
-+CXX		=$(LIBTOOL) @CXX@
-+CC		=$(LIBTOOL) @CC@
- MAKEDEPEND	=@MAKEDEPEND@
+-CXX		= @CXX@
+-CC		= @CC@
++CXX		= $(LIBTOOL) @CXX@
++CC		= $(LIBTOOL) @CC@
+ MAKEDEPEND	= @MAKEDEPEND@
  
  # flags for C++ compiler:
-@@ -49,15 +49,26 @@
+@@ -58,6 +58,7 @@ CXXFLAGS	= $(OPTIM) @CXXFLAGS@
  
  # program to make the archive:
- LIBNAME		=@LIBNAME@
-+LIBRARY		=@LIBRARY@
-+LIBFLTK		=@LIBFLTK@
-+LINKFLTK	=@LINKFLTK@
- LIBCOMMAND	=@LIBCOMMAND@
-+LIBTOOL		=@LIBTOOL@
- RANLIB		=@RANLIB@
- DSONAME		=@DSONAME@
- DSOCOMMAND	=@DSOCOMMAND@
+ LIBNAME		= @LIBNAME@
++LIBTOOL		= @LIBTOOL@
+ FLLIBNAME	= @FLLIBNAME@
+ GLLIBNAME	= @GLLIBNAME@
+ IMGLIBNAME	= @IMGLIBNAME@
+@@ -70,7 +71,8 @@ IMGDSONAME	= @IMGDSONAME@
+ DSOCOMMAND	= @DSOCOMMAND@
  
  # libraries to link with:
--LDLIBS		=@LDFLAGS@ @LIBS@ -lX11 -lXext @X_EXTRA_LIBS@ -lm
-+#LDLIBS		=@LDFLAGS@ @LIBS@ -lX11 -lXext @X_EXTRA_LIBS@ -lm
-+LDLIBS		=$(GLDLIBS)
- GLDLIBS		=@LDFLAGS@ @LIBS@ @GLLIB@ -lX11 -lXext @X_EXTRA_LIBS@ -lm
+-LDLIBS		= @LDFLAGS@ @LIBS@
++#LDLIBS		= @LDFLAGS@ @LIBS@
++LDLIBS		= $(GLDLIBS)
+ GLDLIBS		= @LDFLAGS@ @GLLIB@ @LIBS@
+ LINKFLTK	= -L../lib @LINKFLTK@
+ LINKFLTKGL	= -L../lib @LINKFLTKGL@
+@@ -79,6 +81,12 @@ LINKFLTKIMG	= -L../lib -lfltk_images @LI
+ LINKSHARED	= @DSOLINK@ @LINKSHARED@ $(IMAGELIBS)
+ IMAGELIBS	= @IMAGELIBS@
  
 +# installation programs:
 +INSTALL_BIN	=$(LIBTOOL) cp
@@ -38,15 +41,6 @@ $NetBSD: patch-af,v 1.4 2003/12/01 16:35:51 ben Exp $
 +INSTALL_LIB	=$(LIBTOOL) cp
 +INSTALL_MAN	=cp
 +
- # Man page extensions...
- CAT1EXT		=@CAT1EXT@
- CAT3EXT		=@CAT3EXT@
-@@ -70,7 +81,7 @@
+ # The extension to use for executables...
+ EXEEXT		= @EXEEXT@
  
- .cxx:
- 	echo Compiling and linking $@...
--	$(CXX) -I.. -L../lib $(CXXFLAGS) $< -lfltk $(LDLIBS) -o $@
-+	$(CXX) -I.. $(CXXFLAGS) $< $(LINKFLTK) $(LDLIBS) -o $@
- 
- .c.o:
- 	echo Compiling $@...

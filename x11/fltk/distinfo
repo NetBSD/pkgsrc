@@ -1,12 +1,13 @@
-$NetBSD: distinfo,v 1.6 2003/12/01 16:35:51 ben Exp $
+$NetBSD: distinfo,v 1.7 2004/02/18 05:07:34 ben Exp $
 
-SHA1 (fltk-1.0.11-source.tar.bz2) = daf8593ca6d794ac779cf8e0ec43dd5d275a39ad
-Size (fltk-1.0.11-source.tar.bz2) = 999099 bytes
-SHA1 (patch-aa) = f7da8bfeaf5918a60d42ed87da252ff6cbd0cec0
-SHA1 (patch-ab) = 84510f2453d627fa5add785443e8ad0f5bfc794c
-SHA1 (patch-ac) = bc7139dfd49f162d2b7a2ff3d0b088b0cc619717
-SHA1 (patch-ad) = 3d20ba261a675f508a270ef7864626a74ba1a357
-SHA1 (patch-ae) = 4c020ba0ffd321a1d9c0b083698c53dd3e354e0a
-SHA1 (patch-af) = f44d69eda82621e14c395ededfaa64ed3b1ac972
-SHA1 (patch-ag) = c03b860c9506c95f60947a0c08bec677f40d5cc6
-SHA1 (patch-ah) = 0514008f3c66fe8e5533ff01d12d0063b885fc25
+SHA1 (fltk-1.1.4-source.tar.bz2) = e42839662bfbbdb8d61eaa2798c8687a629ddc02
+Size (fltk-1.1.4-source.tar.bz2) = 1305766 bytes
+SHA1 (patch-aa) = d75bb3c9772cb7b5920d2a32513cdc0f40694d8f
+SHA1 (patch-ab) = 04323aa95488755351e67c07273063aac18d465b
+SHA1 (patch-ac) = cf4b6038b6b72b11f2d3e67ac6c8c7e7e3407eb3
+SHA1 (patch-ad) = 46f5aff720c4172c24afc3342ea6d1273046d7ff
+SHA1 (patch-ae) = e1449b1b69379453c84287efe4c27ccafe1ed78a
+SHA1 (patch-af) = a9577b27ffc3b4c477a473def92adac025a43f45
+SHA1 (patch-ag) = d4a4042897c94d3c83cd0aa9245f074ce9366c1a
+SHA1 (patch-ah) = d1ea67737633097475dc7634484cbfb2c9df098d
+SHA1 (patch-ai) = 3bc18b682fb341e8e465bb8d5be5930776500abc
