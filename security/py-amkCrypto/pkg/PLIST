@@ -1,0 +1,74 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/05/07 00:56:48 wiz Exp $
+PYSITELIB/Crypto/Cipher/ARC2.py
+PYSITELIB/Crypto/Cipher/ARC2.pyc
+PYSITELIB/Crypto/Cipher/ARC4.py
+PYSITELIB/Crypto/Cipher/ARC4.pyc
+PYSITELIB/Crypto/Cipher/Blowfish.py
+PYSITELIB/Crypto/Cipher/Blowfish.pyc
+PYSITELIB/Crypto/Cipher/CAST.py
+PYSITELIB/Crypto/Cipher/CAST.pyc
+PYSITELIB/Crypto/Cipher/DES.py
+PYSITELIB/Crypto/Cipher/DES.pyc
+PYSITELIB/Crypto/Cipher/DES3.py
+PYSITELIB/Crypto/Cipher/DES3.pyc
+PYSITELIB/Crypto/Cipher/IDEA.py
+PYSITELIB/Crypto/Cipher/IDEA.pyc
+PYSITELIB/Crypto/Cipher/RC5.py
+PYSITELIB/Crypto/Cipher/RC5.pyc
+PYSITELIB/Crypto/Cipher/__init__.py
+PYSITELIB/Crypto/Cipher/__init__.pyc
+PYSITELIB/Crypto/Ciphers.py
+PYSITELIB/Crypto/Ciphers.pyc
+PYSITELIB/Crypto/Hash/HMAC.py
+PYSITELIB/Crypto/Hash/HMAC.pyc
+PYSITELIB/Crypto/Hash/MD2.py
+PYSITELIB/Crypto/Hash/MD2.pyc
+PYSITELIB/Crypto/Hash/MD5.py
+PYSITELIB/Crypto/Hash/MD5.pyc
+PYSITELIB/Crypto/Hash/RIPEMD.py
+PYSITELIB/Crypto/Hash/RIPEMD.pyc
+PYSITELIB/Crypto/Hash/SHA.py
+PYSITELIB/Crypto/Hash/SHA.pyc
+PYSITELIB/Crypto/Hash/__init__.py
+PYSITELIB/Crypto/Hash/__init__.pyc
+PYSITELIB/Crypto/Hashes.py
+PYSITELIB/Crypto/Hashes.pyc
+PYSITELIB/Crypto/Protocol/AllOrNothing.py
+PYSITELIB/Crypto/Protocol/AllOrNothing.pyc
+PYSITELIB/Crypto/Protocol/__init__.py
+PYSITELIB/Crypto/Protocol/__init__.pyc
+PYSITELIB/Crypto/PublicKey/DSA.py
+PYSITELIB/Crypto/PublicKey/DSA.pyc
+PYSITELIB/Crypto/PublicKey/ElGamal.py
+PYSITELIB/Crypto/PublicKey/ElGamal.pyc
+PYSITELIB/Crypto/PublicKey/RSA.py
+PYSITELIB/Crypto/PublicKey/RSA.pyc
+PYSITELIB/Crypto/PublicKey/__init__.py
+PYSITELIB/Crypto/PublicKey/__init__.pyc
+PYSITELIB/Crypto/PublicKey/pubkey.py
+PYSITELIB/Crypto/PublicKey/pubkey.pyc
+PYSITELIB/Crypto/PublicKey/qNEW.py
+PYSITELIB/Crypto/PublicKey/qNEW.pyc
+PYSITELIB/Crypto/Util/RFC1751.py
+PYSITELIB/Crypto/Util/RFC1751.pyc
+PYSITELIB/Crypto/Util/__init__.py
+PYSITELIB/Crypto/Util/__init__.pyc
+PYSITELIB/Crypto/Util/number.py
+PYSITELIB/Crypto/Util/number.pyc
+PYSITELIB/Crypto/Util/randpool.py
+PYSITELIB/Crypto/Util/randpool.pyc
+PYSITELIB/Crypto/Util/test.py
+PYSITELIB/Crypto/Util/test.pyc
+PYSITELIB/Crypto/Util/testdata.py
+PYSITELIB/Crypto/Util/testdata.pyc
+PYSITELIB/Crypto/Utils.py
+PYSITELIB/Crypto/Utils.pyc
+PYSITELIB/Crypto/__init__.py
+PYSITELIB/Crypto/__init__.pyc
+PYSITELIB/Crypto/mxCrypto.so
+@dirrm PYSITELIB/Crypto/Util
+@dirrm PYSITELIB/Crypto/PublicKey
+@dirrm PYSITELIB/Crypto/Protocol
+@dirrm PYSITELIB/Crypto/Hash
+@dirrm PYSITELIB/Crypto/Cipher
+@dirrm PYSITELIB/Crypto
