@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/09/06 19:30:20 bad Exp $
+# $NetBSD: Makefile,v 1.9 2000/02/05 06:51:44 wiz Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -23,7 +23,7 @@ MAKE_ENV+=		CPPFLAGS=-D_LARGEFILE64_SOURCE
 
 CONFIGURE_ARGS+=	--without-server --without-restore --without-client
 
-CPPFLAGS=		
+CPPFLAGS=		# empty
 
 BUILD_DEFS+=		AMANDA_USER AMANDA_SMB AMANDA_VAR
 
