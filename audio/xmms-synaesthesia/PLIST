@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/14 23:56:39 hubertf Exp $
+lib/xmms/Visualization/libsynaesthesia.a
+lib/xmms/Visualization/libsynaesthesia.la
+lib/xmms/Visualization/libsynaesthesia.so
+@dirrm lib/xmms/Visualization

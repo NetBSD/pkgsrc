@@ -1,0 +1,84 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/14 23:56:39 hubertf Exp $
+lib/xmms/Visualization/FunTimeDancer/BreakMan/0.bmp
+lib/xmms/Visualization/FunTimeDancer/BreakMan/1.bmp
+lib/xmms/Visualization/FunTimeDancer/BreakMan/2.bmp
+lib/xmms/Visualization/FunTimeDancer/BreakMan/3.bmp
+lib/xmms/Visualization/FunTimeDancer/BreakMan/4.bmp
+lib/xmms/Visualization/FunTimeDancer/BreakMan/5.bmp
+lib/xmms/Visualization/FunTimeDancer/BreakMan/6.bmp
+lib/xmms/Visualization/FunTimeDancer/BreakMan/7.bmp
+lib/xmms/Visualization/FunTimeDancer/Flairin/0.bmp
+lib/xmms/Visualization/FunTimeDancer/Flairin/1.bmp
+lib/xmms/Visualization/FunTimeDancer/Flairin/2.bmp
+lib/xmms/Visualization/FunTimeDancer/Flairin/3.bmp
+lib/xmms/Visualization/FunTimeDancer/Flairin/4.bmp
+lib/xmms/Visualization/FunTimeDancer/Flairin/5.bmp
+lib/xmms/Visualization/FunTimeDancer/Flairin/6.bmp
+lib/xmms/Visualization/FunTimeDancer/Flairin/7.bmp
+lib/xmms/Visualization/FunTimeDancer/GreenThing/0.bmp
+lib/xmms/Visualization/FunTimeDancer/GreenThing/1.bmp
+lib/xmms/Visualization/FunTimeDancer/GreenThing/2.bmp
+lib/xmms/Visualization/FunTimeDancer/GreenThing/3.bmp
+lib/xmms/Visualization/FunTimeDancer/GreenThing/4.bmp
+lib/xmms/Visualization/FunTimeDancer/GreenThing/5.bmp
+lib/xmms/Visualization/FunTimeDancer/GreenThing/6.bmp
+lib/xmms/Visualization/FunTimeDancer/GreenThing/7.bmp
+lib/xmms/Visualization/FunTimeDancer/Kitten/0.bmp
+lib/xmms/Visualization/FunTimeDancer/Kitten/1.bmp
+lib/xmms/Visualization/FunTimeDancer/Kitten/2.bmp
+lib/xmms/Visualization/FunTimeDancer/Kitten/3.bmp
+lib/xmms/Visualization/FunTimeDancer/Kitten/4.bmp
+lib/xmms/Visualization/FunTimeDancer/Kitten/5.bmp
+lib/xmms/Visualization/FunTimeDancer/Kitten/6.bmp
+lib/xmms/Visualization/FunTimeDancer/Kitten/7.bmp
+lib/xmms/Visualization/FunTimeDancer/KittenSinging/0.bmp
+lib/xmms/Visualization/FunTimeDancer/KittenSinging/1.bmp
+lib/xmms/Visualization/FunTimeDancer/KittenSinging/2.bmp
+lib/xmms/Visualization/FunTimeDancer/KittenSinging/3.bmp
+lib/xmms/Visualization/FunTimeDancer/KittenSinging/4.bmp
+lib/xmms/Visualization/FunTimeDancer/KittenSinging/5.bmp
+lib/xmms/Visualization/FunTimeDancer/KittenSinging/6.bmp
+lib/xmms/Visualization/FunTimeDancer/KittenSinging/7.bmp
+lib/xmms/Visualization/FunTimeDancer/SpaceGhost/0.bmp
+lib/xmms/Visualization/FunTimeDancer/SpaceGhost/1.bmp
+lib/xmms/Visualization/FunTimeDancer/SpaceGhost/2.bmp
+lib/xmms/Visualization/FunTimeDancer/SpaceGhost/3.bmp
+lib/xmms/Visualization/FunTimeDancer/SpaceGhost/4.bmp
+lib/xmms/Visualization/FunTimeDancer/SpaceGhost/5.bmp
+lib/xmms/Visualization/FunTimeDancer/SpaceGhost/6.bmp
+lib/xmms/Visualization/FunTimeDancer/SpaceGhost/7.bmp
+lib/xmms/Visualization/FunTimeDancer/Test-Digits/0.bmp
+lib/xmms/Visualization/FunTimeDancer/Test-Digits/1.bmp
+lib/xmms/Visualization/FunTimeDancer/Test-Digits/2.bmp
+lib/xmms/Visualization/FunTimeDancer/Test-Digits/3.bmp
+lib/xmms/Visualization/FunTimeDancer/Test-Digits/4.bmp
+lib/xmms/Visualization/FunTimeDancer/Test-Digits/5.bmp
+lib/xmms/Visualization/FunTimeDancer/Test-Digits/6.bmp
+lib/xmms/Visualization/FunTimeDancer/Test-Digits/7.bmp
+lib/xmms/Visualization/FunTimeDancer/Test-Dot/0.bmp
+lib/xmms/Visualization/FunTimeDancer/Test-Dot/1.bmp
+lib/xmms/Visualization/FunTimeDancer/Test-Dot/2.bmp
+lib/xmms/Visualization/FunTimeDancer/Test-Dot/3.bmp
+lib/xmms/Visualization/FunTimeDancer/Test-Dot/4.bmp
+lib/xmms/Visualization/FunTimeDancer/Test-Dot/5.bmp
+lib/xmms/Visualization/FunTimeDancer/Test-Dot/6.bmp
+lib/xmms/Visualization/FunTimeDancer/Test-Dot/7.bmp
+lib/xmms/Visualization/FunTimeDancer/YellowDancer/0.bmp
+lib/xmms/Visualization/FunTimeDancer/YellowDancer/1.bmp
+lib/xmms/Visualization/FunTimeDancer/YellowDancer/2.bmp
+lib/xmms/Visualization/FunTimeDancer/YellowDancer/3.bmp
+lib/xmms/Visualization/FunTimeDancer/YellowDancer/4.bmp
+lib/xmms/Visualization/FunTimeDancer/YellowDancer/5.bmp
+lib/xmms/Visualization/FunTimeDancer/YellowDancer/6.bmp
+lib/xmms/Visualization/FunTimeDancer/YellowDancer/7.bmp
+lib/xmms/Visualization/libfuntimedancer.so
+@dirrm lib/xmms/Visualization/FunTimeDancer/YellowDancer
+@dirrm lib/xmms/Visualization/FunTimeDancer/Test-Dot
+@dirrm lib/xmms/Visualization/FunTimeDancer/Test-Digits
+@dirrm lib/xmms/Visualization/FunTimeDancer/SpaceGhost
+@dirrm lib/xmms/Visualization/FunTimeDancer/KittenSinging
+@dirrm lib/xmms/Visualization/FunTimeDancer/Kitten
+@dirrm lib/xmms/Visualization/FunTimeDancer/GreenThing
+@dirrm lib/xmms/Visualization/FunTimeDancer/Flairin
+@dirrm lib/xmms/Visualization/FunTimeDancer/BreakMan
+@dirrm lib/xmms/Visualization/FunTimeDancer
