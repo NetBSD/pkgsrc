@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/07 15:14:25 bouyer Exp $
+lib/Tclgdbm/Tclgdbm0.6.so
+lib/Tclgdbm/pkgIndex.tcl
+man/mann/tclgdbm.n
+@dirrm lib/Tclgdbm
