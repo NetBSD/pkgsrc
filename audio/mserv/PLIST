@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2002/02/12 14:22:14 martin Exp $
+bin/mserv
+bin/mservcmd
+bin/mservedit
+bin/mservplay
+include/mservcli.h
+lib/libmservcli.a
+lib/libmservplus.a
+man/man1/mserv.1
+man/man1/mservcmd.1
+share/mserv/english.lang
+@dirrm share/mserv
