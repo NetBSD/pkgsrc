@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/05 15:08:33 peter Exp $
+
+SHA1 (pftop-0.4.tar.gz) = 717d8a9527a412cf21c1a6b7e6fa054bf0298ab2
+Size (pftop-0.4.tar.gz) = 23631 bytes
+SHA1 (patch-aa) = f8b273c9c81edf44b42d6379aa7ac92ceb1147f7
+SHA1 (patch-ab) = 7c3d45c2bfd1e8c24b6a442c5a4e8e3def9113b4
