@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.363 2003/03/11 03:16:39 salo Exp $
+$NetBSD: TODO,v 1.364 2003/03/11 09:30:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -99,7 +99,7 @@ Suggested package updates
 	o ctwm-3.6 [pkg/20648]
 	o db4-4.1.25 [pkg/20289]
 	o dctc-0.85.0
-	o dillo-0.7.0
+	o dillo-0.7.1
 	o distcc-1.2.2
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
@@ -129,6 +129,7 @@ Suggested package updates
 	o gnome-python-1.99.13
 	o gnome2-terminal-2.0.2 [pkg/19415]
 	o gnomeicu-0.99
+	o gnucash-1.8.2
 	o gpa-0.6.1
 	o gperiodic-2.0.2
 	o grace-5.1.12
