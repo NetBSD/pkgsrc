@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/10/04 09:05:27 uebayasi Exp $
+
+Unset LIBS not to pass the value to a subsequent `configure'.  ---uebayasi
+
+
+--- configure.orig	Fri Sep 13 23:37:04 2002
++++ configure
+@@ -2813,6 +2813,13 @@
+ rm -fr confdefs* $ac_clean_files
+ test "$no_create" = yes || ${CONFIG_SHELL-/bin/sh} $CONFIG_STATUS || exit 1
+ 
++# XXX libmaa/configure fails if a variable LIBS is set to something like
++# '-Llibmaa -lmaa'.  The problem is that if we path LIBS as a member of
++# CONFIGURE_ENV, LIBS becomes an environment variable so that it's passed
++# to the followint libmaa/configure.  To prevent this, we unset LIBS here.
++# ---uebayasi
++unset LIBS
++
+ if test "$no_recursion" != yes; then
+ 
+   # Remove --cache-file and --srcdir arguments so they do not pile up.

@@ -1,0 +1,7 @@
+DICTD is a DICT protocol server.
+
+The Dictionary Server Protocol (DICT), described in RFC 2229, is a TCP
+transaction based query/response protocol that allows a client to access
+dictionary definitions from a set of natural language dictionary databases.
+
+Some dictionary databases are freely available at dict.org.
