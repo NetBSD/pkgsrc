@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3845 2003/11/19 12:50:36 adam Exp $
+$NetBSD: CHANGES,v 1.3846 2003/11/20 01:09:11 fredb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4629,3 +4629,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ivtools to 1.1.0 [markd 2003-11-18]
 	Updated rocksndiamonds to 3.0.7 [adam 2003-11-19]
 	Updated rocksndiamonds-sdl to 3.0.7 [adam 2003-11-19]
+	Updated dt to 1.1.7nb3 [fredb 2003-11-19]
