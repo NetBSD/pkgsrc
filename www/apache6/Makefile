@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2001/10/08 13:23:37 martti Exp $
+# $NetBSD: Makefile,v 1.36 2001/10/09 13:20:17 martti Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -8,7 +8,7 @@
 #
 
 DISTNAME=		apache_1.3.20
-PKGNAME=		apache6-1.3.20
+PKGNAME=		apache6-1.3.20nb1
 CATEGORIES=		www
 MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
 			http://www.apache.de/dist/httpd/ \
@@ -18,7 +18,7 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 
 MASTER_SITES+=		ftp://ftp.piuha.net/pub/misc/
 DISTFILES+=		${IPV6_PATCH}
-IPV6_PATCH=		apache-1.3.20-v6-20010807.diff.gz
+IPV6_PATCH=		apache-1.3.20-v6-20011009.diff.gz
 PATCH_DIST_STRIP=	-p1	# IPv6 patch needs -p1
 
 MAINTAINER=		itojun@netbsd.org
