@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:22:45 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/06/27 15:58:30 agc Exp $
 bin/awka
-include/dfa.h
 include/libawka.h
 lib/libawka.a
-lib/libdfa.a
 man/man1/awka.1
 man/man5/awka-elm.5
 man/man5/awka-elmref.5
