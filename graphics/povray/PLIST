@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/11/18 15:59:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/11/18 16:15:35 adam Exp $
 bin/povray
 man/man1/povray.1.gz
 share/doc/${POVRAY}/AUTHORS
@@ -1119,6 +1119,9 @@ share/${POVRAY}/scripts/render_anim.sh
 share/${POVRAY}/scripts/render_scene.sh
 share/${POVRAY}/scripts/rerunpov.sh
 share/${POVRAY}/scripts/runpov.sh
+share/examples/povray/povray.conf
+share/examples/povray/povray.ini
+@dirrm share/examples/povray
 @dirrm share/doc/${POVRAY}/html/images/tutorial
 @dirrm share/doc/${POVRAY}/html/images/reference/colors
 @dirrm share/doc/${POVRAY}/html/images/reference
