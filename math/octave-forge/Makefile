@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/03/16 02:10:30 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.9 2005/03/19 20:47:46 dmcmahill Exp $
 
 DISTNAME=	octave-forge-2004.11.16
 CATEGORIES=	cad
@@ -7,13 +7,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=octave/}
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://octave.sourceforge.net/
 COMMENT=	Extensions to Octave
-
-.if exists(/bin/csplit)
-MAKE_ENV+=	CSPLIT=/bin/csplit
-.else
-BUILD_DEPENDS+=	coreutils-*:../../sysutils/coreutils
-MAKE_ENV+=	CSPLIT=${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}csplit
-.endif
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
