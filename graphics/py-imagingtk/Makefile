@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/01/28 17:37:24 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2002/02/14 11:39:47 drochner Exp $
 #
 
-DISTNAME=	Imaging-1.1.1
-PKGNAME=	py20-imagingtk-1.1.1
+DISTNAME=	Imaging-1.1.2
+PKGNAME=	py20-imagingtk-1.1.2
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.pythonware.com/downloads/
 
