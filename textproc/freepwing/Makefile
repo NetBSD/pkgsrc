@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/03/19 11:07:44 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2003/02/06 04:24:13 uebayasi Exp $
 
-DISTNAME=	freepwing-1.4.1
+DISTNAME=	freepwing-1.4.3
 CATEGORIES=	japanese textproc
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/misc/freepwing/
 
-MAINTAINER=	uebayasi@soum.co.jp
+MAINTAINER=	uebayasi@netbsd.org
 HOMEPAGE=	http://www.sra.co.jp/people/m-kasahr/freepwing/
 COMMENT=	Free JIS X 4081 (subset of EPWING V1) formatter
 

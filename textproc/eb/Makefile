@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2002/08/25 18:39:59 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2003/02/06 04:24:12 uebayasi Exp $
 # FreeBSD Id: ports/japanese/eb/Makefile,v 1.21 2000/08/21 03:39:42 kevlo Exp
 
-DISTNAME=	eb-3.2.2
+DISTNAME=	eb-3.2.3
 CATEGORIES=	textproc japanese
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/misc/eb/appendix/ \
 		ftp://ftp.sra.co.jp/pub/misc/eb/
@@ -9,7 +9,7 @@ DISTFILES=	${EB_DISTFILES} \
 		${EB_LISTS} \
 		${EB_APPENDICES}
 
-MAINTAINER=	uebayasi@soum.co.jp
+MAINTAINER=	uebayasi@netbsd.org
 HOMEPAGE=	http://www.sra.co.jp/people/m-kasahr/eb/
 COMMENT=	C library for accessing EB, EBG, EBXA and EPWING CD-ROM dictionaries
 
@@ -29,6 +29,7 @@ EB_APPENDICES=	\
 		daijirin-2.0.tar.gz \
 		dd75-2.0.tar.gz \
 		genius-1.0.tar.gz \
+		genius2-1.0.tar.gz \
 		global-2.0.tar.gz \
 		heritage-2.2.tar.gz \
 		izumi-2.0.tar.gz \
