@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2004/05/01 17:57:54 snj Exp $
+# $NetBSD: Makefile.common,v 1.9 2004/06/02 15:38:00 minskim Exp $
 
 DISTNAME=	wmx-6
 WMX_VERS=	6.0
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.all-day-breakfast.com/wmx/
 
 CONFLICTS+=	wmx-[0-9]* wmx-gnome-[0-9]*
 
+USE_BUILDLINK3=	yes
 USE_X11BASE=	# defined
 USE_GCC_SHLIB=	# defined
 GNU_CONFIGURE=	# defined
