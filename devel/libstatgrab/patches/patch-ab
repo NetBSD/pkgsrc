@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/05/20 20:48:58 xtraeme Exp $
+
+--- src/libstatgrab/disk_stats.c.bak	2004-05-20 21:17:27.000000000 +0100
++++ src/libstatgrab/disk_stats.c	2004-05-20 21:17:34.000000000 +0100
+@@ -122,8 +122,12 @@
+ #endif
+ #ifdef ALLBSD
+ 	int nummnt;
++#if defined(__NetBSD__) && (__NetBSD_Version__ > 200030000)
++	struct statvfs *mp;
++#else
+ 	struct statfs *mp;
+ #endif
++#endif
+ 
+ #ifdef ALLBSD
+ 	nummnt=getmntinfo(&mp , MNT_LOCAL);
