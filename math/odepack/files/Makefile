@@ -2,7 +2,7 @@ LIB	= odepack
 
 LIBDIR	= ${PREFIX}/lib
 FORTRAN = %%FORTRAN%%
-FFLAGS	= %%FOPTS%%
+FOPTS	= -O3
 
 all:	lib$(LIB)
 
