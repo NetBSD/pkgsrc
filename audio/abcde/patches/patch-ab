@@ -1,0 +1,60 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/08/16 06:02:46 lukem Exp $
+
+--- abcde.orig	Thu Aug 16 07:39:29 2001
++++ abcde	Thu Aug 16 15:53:55 2001
+@@ -552,7 +552,7 @@
+ 			fi
+ 			# List out disc title/author and contents
+ 			echo ---- $(cut '-d ' -f4- "$ABCDETEMPDIR/cddbquery") ---- >> "$ABCDETEMPDIR/cddbchoices"
+-			for TRACK in $(seq 1 $TRACKS)
++			for TRACK in $(jot $TRACKS)
+ 			do
+ 				echo $TRACK: $(grep ^TTITLE$(expr $TRACK - 1)= "$ABCDETEMPDIR/cddbread.1" | cut -f2- -d= | tr -d \\r\\n) >> "$ABCDETEMPDIR/cddbchoices"
+ 			done
+@@ -568,7 +568,7 @@
+ 			$CDDBTOOL template $(cat "$ABCDETEMPDIR/discid") > "$ABCDETEMPDIR/cddbread.1"
+ 			# List out disc title/author and contents of template
+ 			echo ---- Unknown Artist / Unknown Album ---- >> "$ABCDETEMPDIR/cddbchoices"
+-			for TRACK in $(seq 1 $TRACKS)
++			for TRACK in $(jot $TRACKS)
+ 			do
+ 				echo $TRACK: $(grep ^TTITLE$(expr $TRACK - 1)= "$ABCDETEMPDIR/cddbread.1" | cut -f2- -d= | tr -d \\r\\n) >> "$ABCDETEMPDIR/cddbchoices"
+ 			done
+@@ -598,7 +598,7 @@
+ 				fi
+ 				# List out disc title/author and contents
+ 				echo \#$X: ---- "$DISCINFO" ---- >> "$ABCDETEMPDIR/cddbchoices"
+-				for TRACK in $(seq 1 $TRACKS)
++				for TRACK in $(jot $TRACKS)
+ 				do
+ 					echo $TRACK: $(grep ^TTITLE$(expr $TRACK - 1)= $ABCDETEMPDIR/cddbread.$X | cut -f2- -d= | tr -d \\r\\n) >> "$ABCDETEMPDIR/cddbchoices"
+ 				done
+@@ -935,8 +935,8 @@
+ fi
+ 
+ # Load system defaults
+-if [ -r /etc/abcde.conf ]; then
+-	. /etc/abcde.conf
++if [ -r @ETCDIR@/abcde.conf ]; then
++	. @ETCDIR@/abcde.conf
+ fi
+ # Load user preference defaults
+ if [ -r $HOME/.abcde.conf ]; then
+@@ -972,7 +972,7 @@
+ 	if [ "$RSTART" = "$REND" ]; then 
+ 		NEWTRACKS="$RSTART"
+ 	else
+-		NEWTRACKS=$(seq -s ' ' $RSTART $REND)
++ 		NEWTRACKS=$(jot -s ' ' $(($REND - $RSTART + 1)) $RSTART $REND)
+ 	fi
+ 	TRACKQUEUE=$(echo "$TRACKQUEUE" "$NEWTRACKS")
+ 
+@@ -1145,7 +1145,7 @@
+ do
+ 	ENCODELOCATIONS="$ENCODELOCATIONS $REMOTEHOST"
+ done
+-for NUM in $(seq 1 "$MAXPROCS")
++for NUM in $(jot "$MAXPROCS")
+ do
+ 	ENCODELOCATIONS="$ENCODELOCATIONS %local%"
+ done
