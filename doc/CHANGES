@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1347 2003/02/13 19:17:52 jdolecek Exp $
+$NetBSD: CHANGES,v 1.1348 2003/02/13 20:56:02 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -596,3 +596,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sh-utils to 2.0nb2 [grant 2003-02-13]
 	Updated libgda to 0.10.0 [jmmv 2003-02-13]
 	Added php4-iconv 4.2.3 [jdolecek 2003-02-13]
+	Updated xmame to 0.65.1 [kristerw 2003-02-13]
