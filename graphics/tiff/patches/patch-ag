@@ -1,15 +1,17 @@
-$NetBSD: patch-ag,v 1.11 2005/01/13 15:39:20 jlam Exp $
+$NetBSD: patch-ag,v 1.12 2005/01/17 08:04:26 jlam Exp $
 
 --- libtiff/Makefile.in.orig	2004-12-20 14:41:54.000000000 -0500
 +++ libtiff/Makefile.in
-@@ -409,6 +409,10 @@ clean-libLTLIBRARIES:
+@@ -407,7 +407,11 @@ clean-libLTLIBRARIES:
+ 	  rm -f "$${dir}/so_locations"; \
+ 	done
  libtiff.la: $(libtiff_la_OBJECTS) $(libtiff_la_DEPENDENCIES) 
- 	$(CXXLINK) -rpath $(libdir) $(libtiff_la_LDFLAGS) $(libtiff_la_OBJECTS) $(libtiff_la_LIBADD) $(LIBS)
- 
+-	$(CXXLINK) -rpath $(libdir) $(libtiff_la_LDFLAGS) $(libtiff_la_OBJECTS) $(libtiff_la_LIBADD) $(LIBS)
++	$(LINK) -rpath $(libdir) $(libtiff_la_LDFLAGS) $(libtiff_la_OBJECTS) $(libtiff_la_LIBADD) $(LIBS)
++
 +libtiffcxx_la_OBJECTS = tif_stream.lo
 +libtiffcxx.la: $(libtiffcxx_la_OBJECTS) $(libtiff_la_DEPENDENCIES) 
 +	$(CXXLINK) -rpath $(libdir) $(libtiff_la_LDFLAGS) $(libtiffcxx_la_OBJECTS) libtiff.la $(libtiff_la_LIBADD) $(LIBS)
-+
+ 
  clean-noinstPROGRAMS:
  	@list='$(noinst_PROGRAMS)'; for p in $$list; do \
- 	  f=`echo $$p|sed 's/$(EXEEXT)$$//'`; \
