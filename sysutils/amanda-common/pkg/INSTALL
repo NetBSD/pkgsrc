@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.2 2000/08/17 02:40:45 hubertf Exp $
+# $NetBSD: INSTALL,v 1.3 2000/09/03 12:03:17 veego Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -9,30 +9,34 @@ AMUSER=@AMUSER@
 AMGROUP=@AMGROUP@
 ADDUSER=@ADDUSER@
 ADDGROUP=@ADDGROUP@
+CHGRP=@CHGRP@
+ID=@ID@
+TOUCH=@TOUCH@
+RM=@RM@
 
 case ${STAGE} in
 PRE-INSTALL)
 	# Group... the default's shipped with NetBSD
 	# We need to check that ${AMGROUP} exists before adding the user.
 	#
-	if grep -q "^${AMGROUP}:" /etc/group
-	then
+	${TOUCH} "/tmp/grouptestamanda.$$"
+	${CHGRP} ${AMGROUP} "/tmp/grouptestamanda.$$" >/dev/null 2>&1
+	if [ $? -eq 0 ]; then
 		echo "Group '${AMGROUP}' already exists...proceeding."
 	else
 		echo "Creating '${AMGROUP}' group..."
 		${ADDGROUP} ${AMGROUP}
 		echo "Done."
 	fi
+	${RM} -f "/tmp/grouptestamanda.$$"
 
-	# use finger to be able to use NIS, ...
-	#
-	if finger ${AMUSER} 2>&1 | grep >/dev/null "no such user"
-	then
+	${ID} ${AMUSER} >/dev/null 2>&1
+	if [ $? -eq 0 ]; then
+		echo "User '${AMUSER}' already exists...proceeding."
+	else
 		echo "Creating '${AMUSER}' user..."
 		${ADDUSER} -c "Amanda User" -g ${AMGROUP} -s /bin/sh ${AMUSER}
 		echo "Done."
-	else
-		echo "User '${AMUSER}' already exists...proceeding."
 	fi
 	;;
 POST-INSTALL)
