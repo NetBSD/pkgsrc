@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/01/24 22:13:23 dmcmahill Exp $
+
+--- src/Makefile.orig	Thu Nov  4 01:52:00 1999
++++ src/Makefile	Sun Jan 23 21:47:29 2000
+@@ -54,4 +54,9 @@
+ 	-(cd ULTRIX-G++; make -k)
+ #-----------------------------------------------------------------------------
++sunos:
++	-mkdir SUNOS 
++	cat Make1 Make2.g++ Make3 Make.depend >SUNOS/Makefile
++	(cd SUNOS; make -k)
++#-----------------------------------------------------------------------------
+ sun3-g++:
+ 	-mkdir SUN3-G++
