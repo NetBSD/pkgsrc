@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/03/26 01:19:57 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/03/26 10:39:41 wiz Exp $
 #
 
 DISTNAME=		digger-20020314
@@ -19,8 +19,8 @@ MAKEFILE=		Makefile.sdl
 USE_GNU_TOOLS+=		make
 .else
 MAKEFILE=		Makefile.fbsd
-.endif
 MAKE_FLAGS+=		-DSDL
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/digger ${PREFIX}/bin/digger
