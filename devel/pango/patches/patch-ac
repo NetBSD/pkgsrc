@@ -1,0 +1,67 @@
+$NetBSD: patch-ac,v 1.8 2004/08/06 02:09:38 minskim Exp $
+
+--- modules/hangul/hangul-fc.c.orig	2003-09-23 18:11:51.000000000 -0500
++++ modules/hangul/hangul-fc.c
+@@ -1,7 +1,7 @@
+ /* Pango
+  * hangul-fc.c: Hangul shaper for FreeType based backends
+  *
+- * Copyright (C) 2002 Changwoo Ryu
++ * Copyright (C) 2002-2004 Changwoo Ryu
+  * Author: Changwoo Ryu <cwryu@debian.org>
+  *
+  * This library is free software; you can redistribute it and/or
+@@ -275,6 +275,21 @@ render_syllable (PangoFont *font, gunich
+     render_tone(font, tone, glyphs, n_glyphs, cluster_offset);
+ }
+ 
++static void
++render_basic (PangoFont *font, gunichar wc,
++	      PangoGlyphString *glyphs, int *n_glyphs, int cluster_offset)
++{
++  int index;
++  index = find_char (font, wc);
++  pango_glyph_string_set_size (glyphs, *n_glyphs + 1);
++  if (index)
++    set_glyph (font, glyphs, *n_glyphs, cluster_offset, index);
++  else 
++    set_glyph (font, glyphs, *n_glyphs, cluster_offset,
++	       get_unknown_glyph (font, wc));
++  (*n_glyphs)++;
++}
++
+ static void 
+ hangul_engine_shape (PangoEngineShape *engine,
+ 		     PangoFont        *font,
+@@ -307,13 +322,14 @@ hangul_engine_shape (PangoEngineShape *e
+       if (n_jamos)
+ 	{
+ 	  gunichar prev = jamos[n_jamos - 1];
+-	  if ((!IS_L (prev) && IS_S (wc)) ||
++	  if ((!IS_JAMO (wc) && !IS_S (wc) && !IS_M (wc)) ||
++	      (!IS_L (prev) && IS_S (wc)) ||
+ 	      (IS_T (prev) && IS_L (wc)) ||
+ 	      (IS_V (prev) && IS_L (wc)) ||
+ 	      (IS_T (prev) && IS_V (wc)) ||
+-	      IS_M(prev))
++	      IS_M (prev))
+ 	    {
+-	      /* Draw a syllable. */
++	      /* Draw a syllable with these jamos. */
+ 	      render_syllable (font, jamos, n_jamos, glyphs,
+ 			       &n_glyphs, start - text);
+ 	      n_jamos = 0;
+@@ -333,7 +349,12 @@ hangul_engine_shape (PangoEngineShape *e
+ 	    jamos = g_renew (gunichar, jamos, max_jamos);
+ 	}
+ 
+-      if (IS_S (wc))
++      if (!IS_JAMO (wc) && !IS_S (wc) && !IS_M (wc))
++	{
++	  render_basic (font, wc, glyphs, &n_glyphs, start - text);
++	  start = g_utf8_next_char (p);
++	}
++      else if (IS_S (wc))
+ 	{
+ 	  jamos[n_jamos++] = L_FROM_S (wc);
+ 	  jamos[n_jamos++] = V_FROM_S (wc);
