@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2003/12/20 18:20:36 epg Exp $
+
+--- src/svncpp/context.cpp.orig	Sat Dec  6 16:42:26 2003
++++ src/svncpp/context.cpp
+@@ -293,7 +293,7 @@ namespace svn
+     onSslServerTrustPrompt (svn_auth_cred_ssl_server_trust_t **cred, 
+                             void *baton,
+                             const char *realm,
+-                            int failures,
++                            unsigned int failures,
+                             const svn_auth_ssl_server_cert_info_t *info,
+                             apr_pool_t *pool)
+     {
