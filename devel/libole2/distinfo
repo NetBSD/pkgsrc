@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2001/05/22 06:05:41 rh Exp $
+$NetBSD: distinfo,v 1.4 2001/11/11 20:00:13 damon Exp $
 
-SHA1 (libole2-0.2.3.tar.gz) = 4756d567c127b5ffd042d10fa684526fa890e0c0
-Size (libole2-0.2.3.tar.gz) = 257806 bytes
+SHA1 (libole2-0.2.4.tar.gz) = 58d576df763fe4e93d8911c89ea0768bc5e813ff
+Size (libole2-0.2.4.tar.gz) = 273908 bytes
 SHA1 (patch-aa) = 4ca5adb36c42c7f492dc6a1505978388bed9399a
