@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.184 2001/03/19 14:53:11 dmcmahill Exp $
+# $NetBSD: mk.conf.example,v 1.185 2001/03/20 12:02:03 wiz Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -126,7 +126,7 @@
 #
 # Default: none
 
-#ACCEPTABLE_LICENSES+= adobe-acrobat-license
+#ACCEPTABLE_LICENSES+=	adobe-acrobat-license
 # Enable it if you accept the usage policy for Adobe Acrobat
 # and would like to build it.  see pkgsrc/print/acroread.
 #ACCEPTABLE_LICENSES+=	csound-license
@@ -143,6 +143,10 @@
 # Enable it if you are okay to build/use third-party software, which has
 # restriction on redistribution (i.e. you will obey the restriction on
 # redistribution it imposes).
+#ACCEPTABLE_LICENSES+=	maude-license
+# Enable it if you filled out and returned the license found at
+# http://maude.csl.sri.com/license/license.html
+# and want to build maude.
 #ACCEPTABLE_LICENSES+=	no-commercial-use
 # Enable it if you are okay to build/use third-party software, which is not
 # for commercial use (i.e. you are non-commerical)
@@ -154,10 +158,10 @@
 # like to build opera.  see pkgsrc/licenses/opera-license
 #ACCEPTABLE_LICENSES+=	shareware
 # Enable it if you are okay to build/use shareware.
-#ACCEPTABLE_LICENSES+=	 sun-jsdk20-license
+#ACCEPTABLE_LICENSES+=	sun-jsdk20-license
 # Enable it if you accept the download license for Sun JSDK and would
 # like to build Sun JSDK.  see pkgsrc/lang/jdk.
-#ACCEPTABLE_LICENSES+=	 sun-swing-license
+#ACCEPTABLE_LICENSES+=	sun-swing-license
 # Enable it if you accept the download license for Sun's Swing (JFC) toolkit
 # and would like to build JFC.  see pkgsrc/x11/swing.
 
