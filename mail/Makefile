@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2002/06/17 19:27:57 tron Exp $
+# $NetBSD: Makefile,v 1.134 2002/06/26 05:52:47 grant Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -36,6 +36,7 @@ SUBDIR+=	fetchmailconf
 SUBDIR+=	fromto
 SUBDIR+=	getmail
 SUBDIR+=	grepmail
+SUBDIR+=	hypermail
 SUBDIR+=	imap-uw
 SUBDIR+=	imap-uw-utils
 SUBDIR+=	imapfilter
