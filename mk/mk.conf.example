@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.93 1999/10/28 20:13:07 kim Exp $
+# $NetBSD: mk.conf.example,v 1.94 1999/10/31 17:47:44 jdolecek Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -17,28 +17,30 @@
 #	Firstly, definitions for NetBSD and package collection
 #
 
-#MANZ=		1		# gzip manual pages at installation time
+#MANZ=				# gzip manual pages at installation time
                                 # Possible: defined, not defined
                                 # Default: not defined
 
-#OBJMACHINE=	1		# use machine-specific object directories,
+#OBJMACHINE=			# use machine-specific object directories,
                                 # e.g. work.i386, work.sparc
                                 # Possible: defined, not defined
                                 # Default: not defined
 
 #WRKOBJDIR=	/usr/tmp	# build here instead of in pkgsrc
+                                # Possible: any path
+                                # Default: not defined
+
+#UVM=				# Use the new UVM virtual memory subsystem
+                                # XXX this variable is obsolete - UVM is no
+                                # longer optional for NetBSD 1.4 and on
                                 # Possible: defined, not defined
                                 # Default: not defined
 
-#UVM=		1		# Use the new UVM virtual memory subsystem
-                                # Possible: defined, not defined
-                                # Default: not defined
-
-#USETBL= yes			# Run raw manual pages through tbl(1) before
+#USETBL=			# Run raw manual pages through tbl(1) before
                                 # piping through troff(1) when formatting
                                 # manual pages.
-                                # Possible: set, not set
-                                # Default: not set
+                                # Possible: defined, not defined
+                                # Default: not defined
 
 
 #
@@ -87,7 +89,7 @@
                                 # Possible: any path you like
                                 # Default: /usr/pkgsrc/packages
 
-#PASSIVE_FETCH=	1		# Use ftp(1) in passive mode, for use behind
+#PASSIVE_FETCH=			# Use ftp(1) in passive mode, for use behind
                                 # filtering firewalls.
                                 # (Set by default in ftp(1) in NetBSD-current)
                                 # Possible: defined, not defined
@@ -102,11 +104,13 @@
                                 # 	fee-based-commercial-use 
                                 # Default: none
 
-#SPECIFIC_PKGS= yes		# Don't use the default of all packages (from the
-                                # top-level of the pkgsrc tree), and use the
+#SPECIFIC_PKGS=			# Don't use the default of all packages (from
+                                # the top-level of the pkgsrc tree), and use the
                                 # values of the definitions SITE_SPECIFIC_PKGS,
                                 # HOST_SPECIFIC_PKGS, GROUP_SPECIFIC_PKGS, and
                                 # USER_SPECIFIC_PKGS.
+                                # Possible: defined, not defined
+                                # Default: not defined
 
 #SITE_SPECIFIC_PKGS=		# List of packages that are wanted for each
                                 # host on the site. Each package in the list
@@ -132,17 +136,17 @@
                                 # Possible: any combination of packages
                                 # Default: not set
 
-#EXTRACT_USING_PAX= yes		# Use pax(1) to extract archives, rather than
+#EXTRACT_USING_PAX=		# Use pax(1) to extract archives, rather than
                                 # GNU tar.
                                 # Possible: defined, not defined
                                 # Default: not defined
 
-#FAILOVER_FETCH= yes            # Perform a checksum at "make fetch" time.
+#FAILOVER_FETCH=		# Perform a checksum at "make fetch" time.
                                 # If the checksum doesn't match the stored
                                 # value, try to retrieve the file from the
                                 # next site in the list
-                                # Possible: set, not set
-                                # Default: not set
+                                # Possible: defined, not defined
+                                # Default: not defined
 
 #MASTER_SORT=        .ac.at .at .de .ch .se .fi .no
                                 # Whitespace delimited list of preferred
@@ -197,11 +201,11 @@
                                 # its logs and status files. 
                                 # Default: /var/amanda
 
-#APACHE_PERF_TUNING=	yes	# Optimize for maximum Apache performance.
+#APACHE_PERF_TUNING=	YES	# Optimize for maximum Apache performance.
                                 # Possible: not defined, YES
                                 # Default: not defined
 
-#APACHE_SUEXEC=	yes		# Enable support Switch User For Exec.
+#APACHE_SUEXEC=	YES		# Enable support Switch User For Exec.
                                 # See http://www.apache.org/docs/suexec.html
                                 # for more informations.
                                 # Possible: not defined, YES
@@ -218,40 +222,29 @@
                                 # http://www.irchelp.org/irchelp/networks/servers/efnet.html
                                 # Default: not defined
 
-#KNEWS_DOMAIN_FILE=		# Used in the knews package to set the domain
-                                # name from the contents of this file.
-                                # Possible: any valid path
-                                # Default: none
-
-#KNEWS_DOMAIN_NAME=		# Used in the knews package to set the domain
-                                # name.
-                                # Possible: almost anything really, usually a
-                                #           FQDN.
-                                # Default: none
-
 #DT_LAYOUT=			# Used by dt package to specify the keyboard
                                 # layout.
                                 # Possible: US, FI, FR, GER, DV
                                 # Default: FI
 
+#GLX_CHIPSET=			# Used to select chipset to build "Mesa-glx"
+                                # package for. Either Matrox MGA 200/400
+                                # or Riva TNT/TNT 2 can be supported.
+                                # Possible: mga, tnt
+                                # Default: mga
+
 #IRRD_USE_PGP=			# Used by irrd package to specify the version
                                 # of PGP to use, if any.
                                 # Possible: 5, 2, not defined
                                 # Default: not defined
-				# [XXX: configure will locate pgpv or pgp]
+                                # [XXX: configure will locate pgpv or pgp]
 
 #ISPELL_EXTRA_DICT=		# Used by ispell package to specify an extra
                                 # national dictionary.
                                 # Possible: [agc - unknown]
                                 # Default: not defined
 
-#GLX_CHIPSET			# Used to select chipset to build "Mesa-glx"
-                                # package for. Either Matrox MGA 200/400
-                                # or Riva TNT/TNT 2 can be supported.
-                                # Possible: mga, tnt
-                                # Default: mga
-
-#INN_DATA_DIR			# Used by inn to specify the data directory.
+#INN_DATA_DIR=			# Used by inn to specify the data directory.
                                 # Possible: any path you like
                                 # Default: /var/news
 
@@ -303,6 +296,17 @@
                                 # Possible: 4, 5, not defined
                                 # Default: not defined
 
+#KNEWS_DOMAIN_FILE=		# Used in the knews package to set the domain
+                                # name from the contents of this file.
+                                # Possible: any valid path
+                                # Default: none
+
+#KNEWS_DOMAIN_NAME=		# Used in the knews package to set the domain
+                                # name.
+                                # Possible: almost anything really, usually a
+                                #           FQDN.
+                                # Default: none
+
 #KTERM_USE_WALLPAPER=		# Used in kterm package to support wallpaper
                                 # Possible: not defined, YES
                                 # Default: not defined
@@ -353,7 +357,7 @@
                                 # Possible: any directory.
                                 # Default: /var/tmp
 
-#MUTT_INTERNATIONAL=	yes	# Used to decide if international export
+#MUTT_INTERNATIONAL=	YES	# Used to decide if international export
                                 # restricted version of "mutt" is built.
                                 # Possible: not defined, YES
                                 # Default: not defined
@@ -362,7 +366,7 @@
                                 # Possible: any editor.
                                 # Default: vi
 
-NMH_MTA=	smtp		# default MTA for use in nmh.
+#NMH_MTA=	smtp		# default MTA for use in nmh.
                                 # Possible: smtp or sendmail.
                                 # Default: smtp
 
@@ -394,7 +398,7 @@ PAPERSIZE=	A4		# Default paper size for packages.
                                 # Possible: YES, NO
                                 # Default: YES
 
-#QPOPPER_SERVERMODE=yes		# Used in qpopper package to enable server
+#QPOPPER_SERVERMODE=		# Used in qpopper package to enable server
                                 # mode.
                                 # Possible: defined, not defined
                                 # Default: not defined
@@ -427,6 +431,8 @@ PAPERSIZE=	A4		# Default paper size for packages.
  				# (disabled per default due to licensing
  				# problems; future revisions might have no
  				# support at all)
+                                # Possible: defined, not defined
+                                # Default: not defined
 
 #USE_INET6=			# Enable IPv6 support on certain packages.
                                 # Use IPv6-ready kernel if you define this.
