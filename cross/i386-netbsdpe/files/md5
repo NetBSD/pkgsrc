@@ -1,5 +1,5 @@
-$NetBSD: md5,v 1.1.1.1 2000/11/06 03:15:14 minoura Exp $
+$NetBSD: md5,v 1.2 2001/01/30 03:08:58 minoura Exp $
 
+MD5 (gcc-2.95.2-x86-win32-patches.tar.gz) = d7a4cf0082a222bd4ee780fb6ef94b82
 MD5 (binutils-2.9.1.tar.gz) = 8f9ad1a6e96742fd3069479171a63c22
-MD5 (egcs-1.1.1.tar.gz) = 0b3f0e856dcbb2241c183081fc7271af
-MD5 (egcs-1.1.1-NetBSD-19980104.diff.gz) = 8c4d952d999ead62f6604948c65c2454
+MD5 (gcc-2.95.2.tar.gz) = 0e36957d734286e242e9697fd2806c4f

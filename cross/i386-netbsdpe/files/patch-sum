@@ -1,5 +1,8 @@
-$NetBSD: patch-sum,v 1.1.1.1 2000/11/06 03:15:14 minoura Exp $
+$NetBSD: patch-sum,v 1.2 2001/01/30 03:08:58 minoura Exp $
 
-MD5 (patch-ae) = 99d80e024658acdf2b0644bad1cb2fac
-MD5 (patch-af) = e9dd99401b0213988988da696c3b5825
-MD5 (patch-ag) = 13027c5cf5d30e8342396a1f70b803f8
+MD5 (patch-aa) = 714fd58bf57f5528bb7767847a2e3ed8
+MD5 (patch-co) = 1d4eea39503b20d1c5c94e3d95426bfe
+MD5 (patch-cp) = 3ba4994d246553ed6115e99c22693932
+MD5 (patch-cq) = 782b6f7159e7212a22094fea9e93ed80
+MD5 (patch-ma) = ff7dd6b557381fca5161bc87dd2a8751
+MD5 (patch-pe) = d4b784a815cf090540e8550c74925a58
