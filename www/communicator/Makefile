@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 1999/10/19 18:30:25 abs Exp $
+# $NetBSD: Makefile,v 1.24 1999/11/25 01:26:14 hubertf Exp $
 #
 # Every effort has been made to keep the communicator and navigator
 # Makefiles as similar as possible.
@@ -26,9 +26,7 @@ DIST_DIR_NAME=	supported/dec_unix40
 WRKNAME=	alpha-dec-osf4.0
 VENDOR_NAME=	Tru64 UNIX
 .elif (${MACHINE_ARCH} == "i386")
-.if !exists(/emul/linux/lib/ld-linux.so.2)
-IGNORE=	requires Linux glibc2 libraries - see compat_linux(8)
-.endif
+DEPENDS=        suse_linux-6.1p1:../../emulators/suse_linux
 DISTUNAME=	x86-unknown-linuxglibc2.0
 DIST_DIR_NAME=	supported/linux20_glibc2
 WRKNAME=	x86-unknown-linux2.0
