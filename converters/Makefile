@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/05/14 13:25:27 agc Exp $
+# $NetBSD: Makefile,v 1.29 2001/05/14 13:37:44 agc Exp $
 #
 
 COMMENT=	Character code converters
@@ -16,6 +16,7 @@ SUBDIR+=	p5-MIME-Base64
 SUBDIR+=	psiconv
 SUBDIR+=	recode
 SUBDIR+=	rpm2cpio
+SUBDIR+=	rtf2html
 SUBDIR+=	txt2html
 SUBDIR+=	unix2dos
 SUBDIR+=	uudeview
