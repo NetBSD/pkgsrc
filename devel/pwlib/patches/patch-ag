@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.2 2002/12/01 18:31:42 jdolecek Exp $
+$NetBSD: patch-ag,v 1.3 2003/01/06 20:41:53 jdolecek Exp $
 
 --- src/ptlib/unix/oss.cxx.orig	Sun Dec  1 17:31:20 2002
 +++ src/ptlib/unix/oss.cxx	Sun Dec  1 17:35:35 2002
@@ -21,7 +21,7 @@ $NetBSD: patch-ag,v 1.2 2002/12/01 18:31:42 jdolecek Exp $
 +        }
 +        // Look for audioN. Insert at position cardnum + 1
 +        if ((filename.GetLength() > 5) && (filename.Left(5) == "audio")) {
-+	  PString numbers = filename.Mid(3); // get everything after 'audio'
++	  PString numbers = filename.Mid(5); // get everything after 'audio'
 +	  if (IsNumericString(numbers)) {
 +            PINDEX cardnum = numbers.AsInteger();
 +            dsp.SetAt(cardnum+1, devname);
