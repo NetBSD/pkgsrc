@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2162 2003/05/06 21:04:26 jmmv Exp $
+$NetBSD: CHANGES,v 1.2163 2003/05/06 23:06:00 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1870,3 +1870,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated wmakerconf to 2.8.1nb3 [jmmv 2003-05-06]
 	Updated acroread5 to 5.06nb2 [jmmv 2003-05-06]
 	Updated wdm to 1.23 [jmmv 2003-05-06]
+	Updated pstoedit to 3.31nb1 [seb 2003-05-06]
