@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.775 2001/07/02 08:02:33 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.776 2001/07/02 21:06:51 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -99,13 +99,16 @@ SCRIPTS_ENV+=		CLASSPATH=${CLASSPATH} JAVA_HOME=${JAVA_HOME}
 X11PREFIX=		${LOCALBASE}
 XMKMF_CMD?=		${X11PREFIX}/bin/pkgxmkmf
 XMKMF_FLAGS?=		-a
-.if defined(USE_BUILDLINK_ONLY)
-XMKMF_FLAGS+=		-DBuildLink
-.endif
 .else
 X11PREFIX=		${X11BASE}
 XMKMF_CMD?=		${X11PREFIX}/bin/xmkmf
 XMKMF_FLAGS?=		-a
+.endif
+.if defined(USE_BUILDLINK_ONLY)
+XMKMF_FLAGS+=		-DBuildLink
+.if defined(USE_BUILDLINK_X11)
+XMKMF_FLAGS+=		-DBuildLinkX11
+.endif
 .endif
 XMKMF?=			${XMKMF_CMD} ${XMKMF_FLAGS}
 
@@ -132,10 +135,14 @@ MOTIFBASE?=		${X11PREFIX}
 .if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11BASE)
 .if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) || \
     exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
-BUILD_DEPENDS+=		xpkgwedge>=1.4:../../pkgtools/xpkgwedge
+BUILD_DEPENDS+=		xpkgwedge>=1.5:../../pkgtools/xpkgwedge
+.endif
+.if defined(USE_BUILDLINK_ONLY)
+BUILD_DEPENDS+=		buildlink-x11>=0.4:../../pkgtools/buildlink-x11
 MAKE_ENV+=		PKGSRC_CPPFLAGS="${CPPFLAGS}"
 MAKE_ENV+=		PKGSRC_CFLAGS="${CFLAGS}"
 MAKE_ENV+=		PKGSRC_CXXFLAGS="${CXXFLAGS}"
+MAKE_ENV+=		PKGSRC_LDFLAGS="${LDFLAGS}"
 .endif
 PREFIX=			${X11PREFIX}
 .elif defined(USE_CROSSBASE)
@@ -323,7 +330,10 @@ LDFLAGS+=		-Wl,-R${MOTIFBASE}/lib
 LDFLAGS+=		-L${MOTIFBASE}/lib
 .endif
 .endif
-LDFLAGS+=		-Wl,-R${X11BASE}/lib -L${X11BASE}/lib
+LDFLAGS+=		-Wl,-R${X11BASE}/lib
+.if !defined(USE_BUILDLINK_X11)
+LDFLAGS+=		-L${X11BASE}/lib
+.endif
 .endif
 LDFLAGS+=		-Wl,-R${LOCALBASE}/lib
 .if !defined(USE_BUILDLINK_ONLY)
@@ -668,11 +678,7 @@ PKG_DBDIR?=		${DESTDIR}/var/db/pkg
 
 # shared/dynamic motif libs
 .if defined(USE_MOTIF)
-.if defined(USE_BUILDLINK_ONLY) && (${MOTIFBASE} == ${LOCALBASE})
-MOTIFLIB?=	-L${X11BASE}/lib -Wl,-R${MOTIFBASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/lib -lXm -lXp
-.else
 MOTIFLIB?=	-L${MOTIFBASE}/lib -L${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-R${MOTIFBASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/lib -lXm -lXp
-.endif
 .endif
 
 # Define SMART_MESSAGES in /etc/mk.conf for messages giving the tree
