@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2004/01/26 11:48:04 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/01/26 11:50:21 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use gst-plugins.
 #
@@ -8,7 +8,7 @@ GST_PLUGINS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gst-plugins
 BUILDLINK_DEPENDS.gst-plugins?=		gst-plugins>=0.6.4
-BUILDLINK_PKGSRCDIR.gst-plugins?=		../../misc/gst-plugins
+BUILDLINK_PKGSRCDIR.gst-plugins?=	../../multimedia/gst-plugins
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gst-plugins=gst-plugins
 BUILDLINK_PREFIX.gst-plugins_DEFAULT=	${LOCALBASE}
