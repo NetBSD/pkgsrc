@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2168 2004/09/25 20:47:50 epg Exp $
+$NetBSD: TODO,v 1.2169 2004/09/26 16:53:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -193,12 +193,14 @@ Suggested package updates
 	o bind-9.3
 	o bioperl-1.4
 	o bitchx-1.1
+	o bitlbee-0.91
 	o blender-2.34
 	o boson-0.10
 	o ccache-2.4
 	o cdrtools-2.01
 	o celestia-1.3.2
 	o centericq-4.11.0
+	o check-0.9.1 [pkg/27038]
 	o checkbot-1.75 [pkg/26371]
 	o chemtool-1.6.3
 	o cint-5.15
@@ -231,7 +233,7 @@ Suggested package updates
 	o dvipng-1.2 [http://sourceforge.net/projects/dvipng/]
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
-	o efax-gtk-2.2.10
+	o efax-gtk-2.2.11
 	o eggdrop-1.6.17
 	o elk-3.99.6
 	o elm-me-2.4pl120
@@ -261,13 +263,14 @@ Suggested package updates
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
 	o gimageview-0.2.25
+	o gimp-2.0.5
 	o gimp-print-4.2.7
-	o global-4.8 [pkg/27017]
 	o glpk-4.6
 	o gnome-2.8
 	o gnomeicu-0.99.5
 	o gnucash-1.8.9
-	o gnunet-0.6.3a
+	o gnunet-0.6.4a
+	o gnustep-gui-0.9.4
 	o gogo-3.11p1
 	o gossip-0.7.7
 	o gpsdrive-2.09
@@ -301,8 +304,9 @@ Suggested package updates
 	o larswm-7.5.3
 	o latex2rtf-1.9.15
 	o lavaps-2.5
-	o lbreakout-2.5
+	o lbreakout-2.5.1
 	o leafnode-1.10.6
+	o lesstif-0.93.96
 	o libmpeg3-1.5.4
 	o libnet-1.1.2.1
 	o libnids-1.19
@@ -370,7 +374,8 @@ Suggested package updates
 	o pearpc-0.3.1
 	o perl-5.8.5
 	o pgplot-5.2 [grant]
-	o php-5.0.0
+	o php-4.3.9
+	o php-5.0.2
 	o phppgadmin-3.4.1 [pkg/26539|recht]
 	o pilot-link-0.11.8
 	o plib-1.7.0
