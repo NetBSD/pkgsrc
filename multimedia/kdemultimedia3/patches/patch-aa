@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.2 2004/02/05 07:43:30 markd Exp $
+$NetBSD: patch-aa,v 1.3 2004/03/09 11:59:24 markd Exp $
 
---- configure.orig	Thu May  8 00:05:31 2003
+--- configure.orig	2004-03-01 10:47:15.000000000 +1300
 +++ configure
-@@ -33020,7 +33054,7 @@ fi
+@@ -32634,7 +32634,7 @@ if test "${ac_cv_lib_FLAC_FLAC__seekable
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lFLAC  $LIBS"
++LIBS="-lFLAC -lm $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* #line $LINENO "configure" */
+ /* confdefs.h.  */
+@@ -33519,7 +33519,7 @@ fi
  echo "$as_me:$LINENO: result: $ac_cv_lib_ossaudio_main" >&5
  echo "${ECHO_T}$ac_cv_lib_ossaudio_main" >&6
  if test $ac_cv_lib_ossaudio_main = yes; then
@@ -11,7 +20,7 @@ $NetBSD: patch-aa,v 1.2 2004/02/05 07:43:30 markd Exp $
  fi
  
  
-@@ -34105,8 +34139,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -34785,8 +34785,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
  
@@ -37,7 +46,7 @@ $NetBSD: patch-aa,v 1.2 2004/02/05 07:43:30 markd Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -34160,7 +34209,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -34840,7 +34855,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
  
@@ -60,7 +69,7 @@ $NetBSD: patch-aa,v 1.2 2004/02/05 07:43:30 markd Exp $
  
  else
    echo "$as_me: failed program was:" >&5
-@@ -34215,7 +34279,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -34895,7 +34925,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
  
@@ -83,7 +92,7 @@ $NetBSD: patch-aa,v 1.2 2004/02/05 07:43:30 markd Exp $
  
  else
    echo "$as_me: failed program was:" >&5
-@@ -34807,10 +34886,10 @@ _ACEOF
+@@ -35487,10 +35532,10 @@ _ACEOF
      ;;
  
    NetBSD)
