@@ -1,12 +1,20 @@
-$NetBSD: patch-ad,v 1.1 1998/09/06 23:47:30 garbled Exp $
---- src/Makefile.in.orig	Sun Sep  6 11:37:38 1998
-+++ src/Makefile.in	Sun Sep  6 11:38:26 1998
-@@ -35,7 +35,7 @@
- DISTDIR =
+$NetBSD: patch-ad,v 1.2 1999/05/18 08:45:49 tv Exp $
+
+--- src/arch/unix/xaw/c64ui.c.orig	Tue May 18 04:31:52 1999
++++ src/arch/unix/xaw/c64ui.c	Tue May 18 04:33:17 1999
+@@ -342,8 +342,14 @@
+ /* ------------------------------------------------------------------------- */
  
- pkgdatadir = $(datadir)/@PACKAGE@
--pkglibdir = $(libdir)/@PACKAGE@
-+pkglibdir = $(datadir)/@PACKAGE@
- pkgincludedir = $(includedir)/@PACKAGE@
- 
- top_builddir = ..
+ static ui_menu_entry_t c64_romset_submenu[] = {
+-    { "default ROMs",
++    { "Default ROMs",
+       (ui_callback_t) ui_set_romset, (ui_callback_data_t)"default.vrs", NULL },
++    { "C64 Game System (GS)",
++      (ui_callback_t) ui_set_romset, (ui_callback_data_t)"64gs.vrs", NULL },
++    { "Educator 64 (4064)",
++      (ui_callback_t) ui_set_romset, (ui_callback_data_t)"4064.vrs", NULL },
++    { "SX-64",
++      (ui_callback_t) ui_set_romset, (ui_callback_data_t)"sx64.vrs", NULL },
+     { "--" },
+     { "Load new kernal ROM",
+       (ui_callback_t) ui_load_rom_file, (ui_callback_data_t)"KernalName", NULL },
