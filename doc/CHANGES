@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2565 2003/06/23 14:13:09 jschauma Exp $
+$NetBSD: CHANGES,v 1.2566 2003/06/23 15:12:12 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2545,3 +2545,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sun-jdk14 to 1.0.3 [jschauma 2003-06-23]
 	Added tcx-19940124 [agc 2003-06-23]
 	Updated 2vcard to 0.5 [jschauma 2003-06-23]
+	Updated dovecot to 0.99.10rc2 [salo 2003-06-23]
