@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/09/11 02:02:40 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2000/12/28 03:56:52 wiz Exp $
 #
 
 DISTNAME=		unproven-pthreads-0.17
@@ -8,8 +8,9 @@ MASTER_SITES=		ftp://ftp.flame.org/pub/netbsd/
 
 MAINTAINER=		explorer@netbsd.org
 
-#ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-sparc
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-arm32 NetBSD-*-m68k
+#ONLY_FOR_PLATFORM=	NetBSD-*-sparc
+ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
+			NetBSD-*-m68k
 CONFLICTS+=		mit-pthreads-*
 
 HAS_CONFIGURE=		yes
