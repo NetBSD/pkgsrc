@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/04/20 11:57:14 tv Exp $
+# $NetBSD: Makefile,v 1.4 1999/07/02 08:37:23 agc Exp $
 
 DISTNAME=	mailwrapper-19990412
 CATEGORIES=	mail
@@ -9,15 +9,12 @@ MAINTAINER=	tron@netbsd.org
 MIRROR_DISTFILE=	no
 NO_CONFIGURE=		yes
 NO_PATCH=		yes
+MANCOMPRESSED_IF_MANZ=	yes
 
 .if exists(/usr/sbin/mailwrapper)
 IGNORE=         "is part of your NetBSD distribution"
 .endif
 
-.include "../../mk/bsd.prefs.mk"
-.if defined(MANZ)
-MANCOMPRESSED=	1
-.endif
 WRKSRC=		${WRKDIR}/mailwrapper
 
 MAILER_CONF=	/etc/mailer.conf

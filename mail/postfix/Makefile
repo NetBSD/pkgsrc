@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/06/27 20:09:23 christos Exp $
+# $NetBSD: Makefile,v 1.11 1999/07/02 08:37:24 agc Exp $
 
 DISTNAME=	postfix-19990601
 CATEGORIES=	mail
@@ -8,6 +8,7 @@ MAINTAINER=	christos@netbsd.org
 HOMEPAGE=	http://www.postfix.org/
 
 MIRROR_DISTFILE= no
+MANCOMPRESSED_IF_MANZ=	yes
 
 pre-patch:
 	${CP} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.dist
@@ -38,11 +39,5 @@ pre-install:
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf.postfix ${PREFIX}/etc
-
-.include "../../mk/bsd.prefs.mk"
-
-.ifdef MANZ
-MANCOMPRESSED=  yes
-.endif
 
 .include "../../mk/bsd.pkg.mk"

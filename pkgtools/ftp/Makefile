@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/09/03 11:43:59 agc Exp $
+# $NetBSD: Makefile,v 1.2 1999/07/02 08:37:28 agc Exp $
 #
 
 DISTNAME=		ftp-19980903
@@ -13,11 +13,6 @@ WRKSRC=			${WRKDIR}/ftp
 MAKE_ENV+=		BINDIR=/usr/bin MANDIR=/usr/share/man
 NO_PKG_REGISTER=	yes
 NO_PACKAGE=		No package registration is done
-
-.include "../../mk/bsd.prefs.mk"
-
-.ifdef MANZ
-MANCOMPRESSED=		yes
-.endif
+MANCOMPRESSED_IF_MANZ=	yes
 
 .include "../../mk/bsd.pkg.mk"
