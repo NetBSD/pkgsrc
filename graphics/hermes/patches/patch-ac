@@ -1,8 +1,9 @@
-$NetBSD: patch-ac,v 1.1.1.1 1999/07/08 17:16:40 garbled Exp $
---- src/Makefile.in.orig	Thu Jul  8 09:25:45 1999
-+++ src/Makefile.in	Thu Jul  8 09:31:06 1999
-@@ -399,7 +399,7 @@
- 
+$NetBSD: patch-ac,v 1.2 1999/11/30 08:22:16 rh Exp $
+
+--- src/Makefile.in.orig	Mon Nov 29 16:22:58 1999
++++ src/Makefile.in	Mon Nov 29 16:22:58 1999
+@@ -438,7 +438,7 @@
+ 	cp $@ `echo $@ | sed -e 's/\.lo$$/.o/'`
  
  install-data-local:
 -	$(INSTALL) -m 0755 -d $(includedir)/Hermes
