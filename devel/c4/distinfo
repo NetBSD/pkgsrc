@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/09/01 05:58:49 schmonz Exp $
+
+SHA1 (c4.tar.gz) = 3fba3364520ed28db8d1507cecde1ec0923f04b2
+Size (c4.tar.gz) = 46038 bytes
+SHA1 (patch-aa) = 1401168ee1d37cfcd243c82400bf924d8b4747f9
