@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/01/29 04:32:11 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/01/30 23:08:53 jlam Exp $
 
 DISTNAME=		igmt_v1.2
 PKGNAME=		iGMT-1.2
@@ -10,7 +10,7 @@ HOMEPAGE=		http://op.gfz-potsdam.de/igmt/
 
 DEPENDS+=		GMT-3.3.6:../../graphics/GMT
 DEPENDS+=		tcl-[0-9]*:../../lang/tcl
-DEPENDS+=		tk-[0-9]*:../../lang/tk
+DEPENDS+=		tk-[0-9]*:../../x11/tk
 DEPENDS+=		ghostscript-[0-9]*:../../print/ghostscript
 DEPENDS+=		gv-[0-9]*:../../print/gv
 DEPENDS+=		ImageMagick-[0-9]*:../../graphics/ImageMagick
