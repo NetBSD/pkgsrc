@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2003/03/09 20:13:04 jschauma Exp $
+# $NetBSD: Makefile,v 1.42 2003/04/10 12:59:05 grant Exp $
 #
 
 DISTNAME=	xmms-1.2.7
@@ -34,19 +34,25 @@ PTHREAD_OPTS+=		require
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
-.if (${OPSYS} == NetBSD)
+.if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--with-dev-dsp=${DEVOSSSOUND}
 CPPFLAGS+=		-DHAVE_NANOSLEEP=1
 
-.  if (${MACHINE_ARCH} == i386)
+.  if ${MACHINE_ARCH} == "i386"
 post-patch:
-.    if (${OBJECT_FMT} == a.out)
+.    if ${OBJECT_FMT} == "a.out"
 	${CP} ${FILESDIR}/decode_i586_.s ${WRKSRC}/Input/mpg123/decode_i586.s
 .    endif
 	cd ${WRKSRC}/Input/mpg123 && \
 	${MV} decode_i586.s decode_i586.s.orig && \
 	${SED} -e 's@^/@#/@g' <decode_i586.s.orig >decode_i586.s
 .  endif
+.endif
+
+.if ${OPSYS} == "SunOS"
+PLIST_SUBST+=	LIBAUDIO=libSolaris
+.else
+PLIST_SUBST+=	LIBAUDIO=libOSS
 .endif
 
 .include "../../audio/esound/buildlink2.mk"
