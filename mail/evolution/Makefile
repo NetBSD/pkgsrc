@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/12/03 06:27:10 tron Exp $
+# $NetBSD: Makefile,v 1.13 2001/12/03 06:28:13 tron Exp $
 
 DISTNAME=		evolution-0.15
 CATEGORIES=		mail time gnome
@@ -17,7 +17,7 @@ BUILDLINK_DEPENDS.gdk-pixbuf=		gdk-pixbuf>=0.9.0
 BUILDLINK_DEPENDS.gdk-pixbuf-gnome=	gdk-pixbuf-gnome>=0.9.0
 # Using a wildcard here doesn't make sence because the version number of
 # "db3" is hardcoded in the "configure" script.
-BUILDLINK_DEPENDS.db3=			db3-2.11
+BUILDLINK_DEPENDS.db3=			db3-3.2.11
 
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
