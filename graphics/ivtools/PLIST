@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/11/18 21:09:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/05/29 13:06:29 markd Exp $
 bin/comdraw
 bin/comterp
 bin/comtest
@@ -108,7 +108,10 @@ include/DrawServ/drawcatalog.h
 include/DrawServ/drawclasses.h
 include/DrawServ/drawcomps.h
 include/DrawServ/drawcreator.h
+include/DrawServ/draweditor.h
+include/DrawServ/drawfunc.h
 include/DrawServ/drawkit.h
+include/DrawServ/drawserv.h
 include/DrawServ/drawviews.h
 include/FrameUnidraw/framecatalog.h
 include/FrameUnidraw/frameclasses.h
