@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2004/11/28 04:31:45 taca Exp $
+# $NetBSD: Makefile,v 1.5 2005/03/06 17:19:07 taca Exp $
 # FreeBSD: ports/textproc/ruby-html-parser/Makefile,v 1.6 2000/09/26 08:01:54 knu Exp
 
 DISTNAME=	html-parser-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-html-parser-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://www.jin.gr.jp/~nahi/Ruby/html-parser/
 

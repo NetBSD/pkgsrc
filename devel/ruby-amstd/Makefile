@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2004/11/27 15:59:31 taca Exp $
+# $NetBSD: Makefile,v 1.8 2005/03/06 17:19:05 taca Exp $
 # FreeBSD: ports/devel/ruby-amstd/Makefile,v 1.8 2000/12/06 15:38:58 knu Exp
 
 DISTNAME=	amstd-2.0.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel ruby
 MASTER_SITES=	http://www.loveruby.net/archive/amstd/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/11/28 06:05:41 taca Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/06 17:19:06 taca Exp $
 
 DISTNAME=	testunit-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel ruby
 MASTER_SITES=	http://testunit.talbott.ws/packages/
 

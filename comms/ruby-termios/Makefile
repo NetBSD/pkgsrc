@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2005/03/06 12:57:06 taca Exp $
+# $NetBSD: Makefile,v 1.13 2005/03/06 17:19:05 taca Exp $
 #
 
 DISTNAME=	ruby-termios-0.9.4
 PKGNAME=	${RUBY_PKGPREFIX}-termios-0.9.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	comms ruby
 MASTER_SITES=	http://arika.org/archive/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/11/28 05:51:59 taca Exp $
+# $NetBSD: Makefile,v 1.5 2005/03/06 17:19:08 taca Exp $
 
 DISTNAME=	webunit-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www textproc ruby
 MASTER_SITES=	http://www.xpenguin.biz/download/webunit/
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2005/01/28 14:19:35 taca Exp $
+# $NetBSD: Makefile,v 1.11 2005/03/06 17:19:06 taca Exp $
 # FreeBSD: ports/math/ruby-bigfloat/Makefile,v 1.8 2000/10/02 14:57:26 knu Exp
 
 DISTNAME=	bigfloat-1.2.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math ruby
 MASTER_SITES=	http://www.tinyforest.gr.jp/ruby/
 
