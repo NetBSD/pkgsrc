@@ -1,37 +1,23 @@
 #
-# $NetBSD: Makefile,v 1.2 1999/11/13 10:02:37 rh Exp $
+# $NetBSD: Makefile,v 1.3 1999/11/16 17:08:13 rh Exp $
 #
 # FreeBSD Id: Makefile,v 1.12 1999/06/28 21:25:07 billf Exp
 #
-# Adapted for NetBSD by Greg A. Woods <woods@planix.com>
-# July 28, 1999
-#
-# Upgraged to 8.2.2-P3 by Greg A. Woods <woods@planix.com>
-# November 11, 1999
-#
 
 DISTNAME=	bind
-PKGNAME=	bind-8.2.2p3
+PKGNAME=	bind-8.2.2p5
 WRKSRC=		${WRKDIR}/src
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.isc.org/isc/bind/src/8.2.2-P3/
-DISTFILES=	${DISTNAME}-src.tar.gz ${DISTNAME}-doc.tar.gz patch4
+MASTER_SITES=	ftp://ftp.isc.org/isc/bind/src/8.2.2-P5/
+DISTFILES=	${DISTNAME}-src.tar.gz ${DISTNAME}-doc.tar.gz
 
 MAINTAINER=	packages@NetBSD.org
 HOMEPAGE=	http://www.isc.org/products/BIND/
 
 Y2K=		http://www.isc.org/ISC/y2k.html
 
-DIST_SUBDIR=	bind/8.2.2-P3
+DIST_SUBDIR=	bind/8.2.2-P5
 EXTRACT_ONLY=	${DISTNAME}-src.tar.gz ${DISTNAME}-doc.tar.gz
-
-pre-patch:
-	@${ECHO_MSG} "===>  Applying distribution patches for ${PKGNAME}"
-	@(cd ${_DISTDIR}; \
-		if [ ${PATCH_DEBUG_TMP} = yes ]; then \
-			${ECHO_MSG} "===>   Applying distribution patch 'patch4'" ; \
-		fi; \
-		${PATCH} -s -d ${WRKDIR}/src/bin/named-xfer -p1 < 'patch4')
 
 post-build:
 	@(cd ${WRKDIR}/doc/man && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} clean all)
