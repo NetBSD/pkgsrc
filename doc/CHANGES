@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6576 2004/07/16 16:50:47 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6577 2004/07/16 23:01:41 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3415,4 +3415,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added gcube-0.2 [xtraeme 2004-07-16]
 	Added ply-1.5 [recht 2004-07-16]
 	Updated thy to 0.9.3 [xtraeme 2004-07-16]
-
+	Updated vice to 1.14nb1 [kristerw 2004-07-16]
