@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1999/04/14 21:39:04 tron Exp $
+# $NetBSD: Makefile,v 1.20 2000/03/26 14:16:42 itojun Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/05/22 07:53:29 tg Exp
 #
 
@@ -11,5 +11,17 @@ HOMEPAGE=	http://www.gnu.org/software/wget/wget.html
 
 GNU_CONFIGURE=	yes
 INFO_FILES=	wget.info
+
+BUILD_DEFS+=    USE_INET6
+
+# to get USE_INET6
+.include "../../mk/bsd.prefs.mk"
+
+# IPv6 support
+.if defined(USE_INET6) && ${USE_INET6} == YES
+CONFIGURE_ARGS+=        --enable-ipv6
+.else
+CONFIGURE_ARGS+=        --disable-ipv6
+.endif
 
 .include "../../mk/bsd.pkg.mk"

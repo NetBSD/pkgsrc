@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 2000/03/26 14:16:47 itojun Exp $
+--- src/init.c.orig	Fri Sep 11 02:20:23 1998
++++ src/init.c	Fri Sep 24 15:49:42 1999
+@@ -113,6 +113,8 @@
+   { "httpproxy",	&opt.http_proxy,	cmd_string },
+   { "httpuser",		&opt.http_user,		cmd_string },
+   { "ignorelength",	&opt.ignore_length,	cmd_boolean },
++  { "inet",		&opt.inet,		cmd_boolean },
++  { "inet6",		&opt.inet6,		cmd_boolean },
+   { "includedirectories", &opt.includes,	cmd_directory_vector },
+   { "input",		&opt.input_filename,	cmd_string },
+   { "killlonger",	&opt.kill_longer,	cmd_boolean },
