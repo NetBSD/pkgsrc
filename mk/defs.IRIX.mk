@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.53 2004/06/18 11:22:41 kristerw Exp $
+# $NetBSD: defs.IRIX.mk,v 1.54 2004/08/15 22:21:14 jschauma Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -149,7 +149,7 @@ _USE_RPATH=		yes		# add rpath to LDFLAGS
 # to be set to --{no-}whole-archive.  So, ugh, let's say we only do
 # IRIX tools for the time being.
 _OPSYS_WHOLE_ARCHIVE_FLAG=	-Wl,-all
-_OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,-notall
+_OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,-none
 
 # IRIX has /usr/include/iconv.h, but it's not GNU iconv, so mark it
 # incompatible.
