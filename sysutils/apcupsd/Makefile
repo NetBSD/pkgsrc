@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/10/11 22:14:51 reed Exp $
+# $NetBSD: Makefile,v 1.31 2004/12/05 17:26:47 bouyer Exp $
 
 DISTNAME=		apcupsd-3.8.6
 PKGREVISION=		2
@@ -46,6 +46,7 @@ CONF_FILES_PERMS+= ${EGDIR}/onbattery ${PKG_SYSCONFDIR}/onbattery ${ROOT_USER} $
 CONF_FILES_PERMS+= ${EGDIR}/mainsback ${PKG_SYSCONFDIR}/mainsback ${ROOT_USER} ${ROOT_GROUP} 755
 SUPPORT_FILES_PERMS=  ${EGDIR}/apccontrol ${PKG_SYSCONFDIR}/apccontrol ${ROOT_USER} ${ROOT_GROUP} 755
 RCD_SCRIPTS=	apcupsd
+RCD_SCRIPT_SRC.apcupsd=	${WRKSRC}/distributions/netbsd/apcupsd
 
 # we should probably allow the tty to be set in /etc/mk.conf too
 #
@@ -95,8 +96,6 @@ post-install:
 		${PREFIX}/share/examples/apcupsd
 	${INSTALL_DATA} ${WRKDIR}/apcupsd.slave.conf \
 		${PREFIX}/share/examples/apcupsd
-	${INSTALL_SCRIPT} ${WRKSRC}/distributions/netbsd/apcupsd \
-		${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/apcupsd
 .for file in ${DOCS}
 	${INSTALL_DATA} ${WRKSRC}/doc/${file} ${PREFIX}/share/doc/apcupsd
