@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/01 20:45:55 reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/11/27 07:41:06 reed Exp $
 bin/ripmime
+man/man1/ripmime.1
