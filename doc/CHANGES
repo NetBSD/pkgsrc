@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2683 2003/07/05 09:12:52 wulf Exp $
+$NetBSD: CHANGES,v 1.2684 2003/07/05 22:15:03 chris Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2678,3 +2678,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated nmap to 3.30 [salo 2003-07-04]
 	Updated nmapfe to 0.9.5nb7 [salo 2003-07-04]
 	Updated xplanet to 1.0.1 [wulf 2003-07-05]
+	Updated ccache to 2.2 [chris 2003-07-05]
