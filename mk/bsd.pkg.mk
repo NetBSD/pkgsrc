@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.453 2000/06/03 13:36:13 mycroft Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.454 2000/06/03 14:17:49 mycroft Exp $
 #
 # This file is in the public domain.
 #
@@ -2226,7 +2226,7 @@ PACKAGE_DEPENDS_WITH_PATTERNS?=true
 PACKAGE_DEPENDS_QUICK?=false
 .if !target(package-depends)
 package-depends:
-.for dep in ${DEPENDS}
+.for dep in ${DEPENDS} ${RUN_DEPENDS}
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	pkg="${dep:C/:.*//}";						\
 	dir="${dep:C/[^:]*://}";					\
@@ -2237,26 +2237,7 @@ package-depends:
 			(cd $$dir && ${MAKE} ${MAKEFLAGS} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
 		fi;							\
 		if ${PACKAGE_DEPENDS_QUICK} ; then 			\
-			${PKG_INFO} -qf "$$pkg" | ${GREP} '^@pkgdep' | ${AWK} '{print $$2}' ; \
-		else 							\
-			(cd $$dir && ${MAKE} ${MAKEFLAGS} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
-		fi ; 							\
-	else								\
-		${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
-	fi
-.endfor
-.for dep in ${RUN_DEPENDS}
-	@\
-	pkg="${dep:C/:.*//}";						\
-	dir="${dep:C/[^:]*://}";					\
-	if [ -d $$dir ]; then						\
-		if ${PACKAGE_DEPENDS_WITH_PATTERNS}; then		\
-			${ECHO} "$$pkg";				\
-		else							\
-			(cd $$dir && ${MAKE} ${MAKEFLAGS} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
-		fi;							\
-		if ${PACKAGE_DEPENDS_QUICK} ; then 			\
-			${PKG_INFO} -qf "$$pkg" | ${GREP} ^@pkgdep | ${AWK} '{print $$2}' ; \
+			${PKG_INFO} -qf "$$pkg" | ${AWK} '/^@pkgdep/ {print $$2}' ; \
 		else 							\
 			(cd $$dir && ${MAKE} ${MAKEFLAGS} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
 		fi ; 							\
@@ -2303,15 +2284,14 @@ DEPENDS_TMP+=	${RUN_DEPENDS}
 _DEPENDS_USE:
 .if defined(DEPENDS_TMP)
 .if !defined(NO_DEPENDS)
-.for i in ${DEPENDS_TMP}
+.for dep in ${DEPENDS_TMP}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	prog="${i:C/:.*//}";						\
-	dir="${i:C/[^:]*://}";						\
+	prog="${dep:C/:.*//}";						\
+	dir="${dep:C/^[^:]*://:C/:.*$//}";				\
 	if [ ${_DEPENDS_TARGET_OVERRIDE}X != X ]; then			\
 		target=${DEPENDS_TARGET};				\
-	elif expr "$$dir" : '.*:' > /dev/null; then			\
-		target="${i:C/.*://}";					\
-		dir="${i:C/^[^:]*://:C/:.*$//}";			\
+	elif [ "${dep:M*\:*\:*}X" != X ]; then				\
+		target="${dep:C/^[^:]*:[^:]*://}";			\
 	else								\
 		target=${DEPENDS_TARGET};				\
 	fi;								\
@@ -2360,32 +2340,32 @@ misc-depends: uptodate-pkgtools
 .if !defined(NO_DEPENDS)
 .for dep in ${DEPENDS}
 	${_PKG_SILENT}${_PKG_DEBUG}\
-	package="${dep:C/:.*//}";						\
-	dir="${dep:C/[^:]*://:C/:.*$//}";						\
-	found="`${PKG_INFO} -e \"$$package\" || ${TRUE}`";		\
+	pkg="${dep:C/:.*//}";						\
+	dir="${dep:C/[^:]*://:C/:.*$//}";				\
+	found="`${PKG_INFO} -e \"$$pkg\" || ${TRUE}`";			\
 	if [ "$$found" != "" ]; then					\
-		instobjfmt=`${PKG_INFO} -B "$$package" | ${AWK} '/^OBJECT_FMT/ { print $$2 }'`; \
+		instobjfmt=`${PKG_INFO} -B "$$pkg" | ${AWK} '/^OBJECT_FMT/ {print $$2}'`; \
 		if [ "$$instobjfmt" = "" ]; then			\
 			if [ "X${WARN_NO_OBJECT_FMT}" != "Xno" ]; then	\
-				${ECHO} "WARNING: Unknown object format for installed package $$package - continuing"; \
+				${ECHO} "WARNING: Unknown object format for installed package $$pkg - continuing"; \
 			fi;						\
 		elif [ "$$instobjfmt" != "${OBJECT_FMT}" ]; then	\
-			${ECHO} "Installed package $$package is an $$instobjfmt package."; \
+			${ECHO} "Installed package $$pkg is an $$instobjfmt package."; \
 			${ECHO} "You are building an ${OBJECT_FMT} package, which will not inter-operate."; \
-			${ECHO} "Please update the $$package package to ${OBJECT_FMT}"; \
+			${ECHO} "Please update the $$pkg package to ${OBJECT_FMT}"; \
 			if [ "X${FATAL_OBJECT_FMT_SKEW}" != "no" ]; then \
 				exit 1;					\
 			fi;						\
 		fi;							\
 		if [ `${ECHO} $$found | wc -w` -gt 1 ]; then		\
-			${ECHO} '***' "WARNING: Dependency on '$$package' expands to several installed packages " ; \
+			${ECHO} '***' "WARNING: Dependency on '$$pkg' expands to several installed packages " ; \
 			${ECHO} "    (" `${ECHO} $$found` ")." ; 	\
 			${ECHO} "    Please check if this is really intended!" ; \
 		else 							\
-			${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} depends on installed package: $$package - $${found} found"; \
+			${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} depends on installed package: $$pkg - $${found} found"; \
 		fi ; 							\
 	else								\
-		${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} depends on package: $$package"; \
+		${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} depends on package: $$pkg"; \
 		target=${DEPENDS_TARGET};				\
 		${ECHO_MSG} "${_PKGSRC_IN}> Verifying $$target for $$dir"; 	\
 		if [ ! -d $$dir ]; then					\
