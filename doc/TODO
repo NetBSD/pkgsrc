@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2876 2005/01/11 09:04:21 martti Exp $
+$NetBSD: TODO,v 1.2877 2005/01/11 11:10:48 adam Exp $
 
 Suggested new packages
 ======================
@@ -273,7 +273,6 @@ Suggested package updates
 	o Xbae-4.51.01
 	o YoSucker-65
 	o aap-0.144
-	o abiword-2.2.1
 	o abiword1-1.0.7
 	o acpi-iasl-20040715
 	o adzap-20041124
