@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/02/17 18:22:10 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2001/02/26 15:01:43 jlam Exp $
 #
 
 DISTNAME=		R-1.1.1
@@ -24,6 +24,9 @@ BUILD_DEPENDS+=		${LOCALBASE}/bin/autoreconf:../../devel/autoconf
 DEPENDS+=		readline>=4.0:../../devel/readline
 DEPENDS+=		jpeg-*:../../graphics/jpeg
 DEPENDS+=		png-*:../../graphics/png
+
+# Requires IEEE math
+NOT_FOR_PLATFORM=	*-*-alpha
 
 USE_FORTRAN=		# defined
 USE_X11=		# defined
