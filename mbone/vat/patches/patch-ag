@@ -1,0 +1,48 @@
+--- configure.in.freebsd	Thu Nov 20 13:27:04 1997
++++ configure.in	Tue Nov 25 17:24:32 1997
+@@ -35,10 +35,10 @@
+ else
+ 	echo "checking for libgsm.a"
+ 	V_LIB_GSM=FAIL
+-	places="$PWD/../gsm-1.0-pl7 \
++	places="$PWD/../gsm-1.0-pl10 \
+ 		$PWD/../gsm-1.0 \
+ 		$PWD/../gsm \
+-		/usr/src/local/gsm-1.0-pl7 \
++		/usr/src/local/gsm-1.0-pl10 \
+ 		/usr/src/local/gsm-1.0 \
+ 		/usr/src/local/gsm"
+ 	for dir in $places; do
+@@ -165,7 +165,7 @@
+ 	;;
+ *-*-netbsd*)
+ 	V_TARCMD="tar -h -c -f"
+-	V_LIB="$V_LIB -L/usr/local/lib"
++	V_LIB="$V_LIB -L/usr/pkg/lib"
+ 	;;
+ *-*-hpux*)
+ 	V_DEFINE="$V_DEFINE"
+--- configure.old	Thu Dec 11 18:01:29 1997
++++ configure	Thu Dec 11 18:08:11 1997
+@@ -2005,10 +2005,10 @@
+ else
+ 	echo "checking for libgsm.a"
+ 	V_LIB_GSM=FAIL
+-	places="$PWD/../gsm-1.0-pl7 \
++	places="$PWD/../gsm-1.0-pl10 \
+ 		$PWD/../gsm-1.0 \
+ 		$PWD/../gsm \
+-		/usr/src/local/gsm-1.0-pl7 \
++		/usr/src/local/gsm-1.0-pl10 \
+ 		/usr/src/local/gsm-1.0 \
+ 		/usr/src/local/gsm"
+ 	for dir in $places; do
+@@ -2178,7 +2178,7 @@
+ 	;;
+ *-*-netbsd*)
+ 	V_TARCMD="tar -h -c -f"
+-	V_LIB="$V_LIB -L/usr/local/lib"
++	V_LIB="$V_LIB -L/usr/pkg/lib"
+ 	;;
+ *-*-hpux*)
+ 	V_DEFINE="$V_DEFINE"
