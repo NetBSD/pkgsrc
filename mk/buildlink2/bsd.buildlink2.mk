@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.16 2002/09/06 14:25:24 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.17 2002/09/06 14:39:41 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -213,21 +213,23 @@ _BLNK_TRANSFORM+=	${BUILDLINK_TRANSFORM}
 _BLNK_TRANSFORM+=	II:${X11BASE}:${BUILDLINK_X11PKG_DIR},${BUILDLINK_X11_DIR}
 _BLNK_TRANSFORM+=	LL:${X11BASE}:${BUILDLINK_X11PKG_DIR},${BUILDLINK_X11_DIR}
 .endif
-.if ${LOCALBASE} != "/usr/pkg"
-_BLNK_TRANSFORM+=	r:-I/usr/pkg
-_BLNK_TRANSFORM+=	r:-L/usr/pkg
-.endif
-.if ${LOCALBASE} != "/usr/local"
-_BLNK_TRANSFORM+=	r:-I/usr/local
-_BLNK_TRANSFORM+=	r:-L/usr/local
-.endif
+.for _localbase_ in /usr/pkg /usr/local
+.  if ${LOCALBASE} != ${_localbase_}
+_BLNK_TRANSFORM+=	r:-I${_localbase_}
+_BLNK_TRANSFORM+=	r:-L${_localbase_}
+.  endif
+.endfor
 #
 # Create _BLNK_PROTECT_SED and _BLNK_UNPROTECT_SED variables to protect
-# ${_PKGSRCDIR} and ${BUILDLINK_DIR} from any filtering, as they may be
+# key directories from any argument filtering, as they may be
 # subdirectories of ${LOCALBASE}, /usr/pkg, or /usr/local.
 #
 _BLNK_PROTECT_SED=	-e "s|${_PKGSRCDIR}|_pKgSrCdIr_|g"
 _BLNK_PROTECT_SED+=	-e "s|${BUILDLINK_DIR}|_bUiLdLiNk_dIr_|g"
+.if defined(ZOULARISBASE) && (${ZOULARISBASE} != ${LOCALBASE})
+_BLNK_PROTECT_SED+=	-e "s|${ZOULARISBASE}|_zOuLaRiSbAsE_|g"
+_BLNK_UNPROTECT_SED+=	-e "s|_zOuLaRiSbAsE_|${ZOULARISBASE}|g"
+.endif
 _BLNK_UNPROTECT_SED=	-e "s|_bUiLdLiNk_dIr_|${BUILDLINK_DIR}|g"
 _BLNK_UNPROTECT_SED+=	-e "s|_pKgSrCdIr_|${_PKGSRCDIR}|g"
 #
@@ -609,12 +611,6 @@ ${_BLNK_WRAP_PRE_CACHE}: ${.CURDIR}/../../mk/buildlink2/pre-cache
 		-e "s|@BUILDLINK_X11_DIR@|${BUILDLINK_X11_DIR}|g"	\
 		-e "s|@BUILDLINK_X11PKG_DIR@|${BUILDLINK_X11PKG_DIR}|g"		\
 		${.ALLSRC} > ${.TARGET}.tmp
-.if defined(ZOULARISBASE) && (${ZOULARISBASE} != ${LOCALBASE})
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO}				\
-		"-[IL]${ZOULARISBASE}/*)" >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO}				\
-		"	;;" >> ${.TARGET}.tmp
-.endif
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 ${_BLNK_WRAP_POST_CACHE}: ${.CURDIR}/../../mk/buildlink2/post-cache
