@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.128 2003/09/24 12:22:04 grant Exp $
+# $NetBSD: bsd.prefs.mk,v 1.129 2003/10/08 10:07:20 agc Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -348,11 +348,17 @@ LINKFARM?=		${LINKFARM_CMD}
 # "${PKG_INFO} -e pkgpattern" if the latter would return more than one
 # package name.
 #
-PKG_BEST_EXISTS?=	${PKG_ADMIN} -b -d ${_PKG_DBDIR} -s "" lsbest
+PKG_BEST_EXISTS?=	${PKG_ADMIN} -b -d ${_PKG_DBDIR} ${_NULL_SUFFIX} lsbest
 
 .ifndef PKGTOOLS_VERSION
 PKGTOOLS_VERSION!=	${PKG_INFO_CMD} -V 2>/dev/null || echo 20010302
 MAKEFLAGS+=		PKGTOOLS_VERSION="${PKGTOOLS_VERSION}"
+.endif
+
+.if ${PKGTOOLS_VERSION} >= 20030918
+_NULL_SUFFIX=		-S
+.else
+_NULL_SUFFIX=		-s ""
 .endif
 
 .if (${OPSYS} == SunOS) && !defined(ZOULARIS_VERSION)
