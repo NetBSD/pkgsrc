@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/07/26 20:38:17 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/09/04 11:47:11 hubertf Exp $
 share/sgml/docbook/dsssl/modular/BUGS
 share/sgml/docbook/dsssl/modular/ChangeLog
 share/sgml/docbook/dsssl/modular/README
@@ -35,8 +35,8 @@ share/sgml/docbook/dsssl/modular/common/dbl1fr.dsl
 share/sgml/docbook/dsssl/modular/common/dbl1fr.ent
 share/sgml/docbook/dsssl/modular/common/dbl1hu.dsl
 share/sgml/docbook/dsssl/modular/common/dbl1hu.ent
-share/sgml/docbook/dsssl/modular/common/dbl1in.dsl
-share/sgml/docbook/dsssl/modular/common/dbl1in.ent
+share/sgml/docbook/dsssl/modular/common/dbl1id.dsl
+share/sgml/docbook/dsssl/modular/common/dbl1id.ent
 share/sgml/docbook/dsssl/modular/common/dbl1it.dsl
 share/sgml/docbook/dsssl/modular/common/dbl1it.ent
 share/sgml/docbook/dsssl/modular/common/dbl1ja.dsl
