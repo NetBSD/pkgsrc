@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.1 2000/09/15 23:58:48 tron Exp $
+$NetBSD: patch-al,v 1.2 2001/02/28 23:28:09 hubertf Exp $
 
 --- ../gcc-2.95.2/gcc/config/netbsd.h.orig	Wed Dec 16 21:59:58 1998
 +++ ../gcc-2.95.2/gcc/config/netbsd.h	Sat Sep 16 00:17:42 2000
@@ -47,7 +47,7 @@ $NetBSD: patch-al,v 1.1 2000/09/15 23:58:48 tron Exp $
  /* Write the extra assembler code needed to declare a function properly.
     Some svr4 assemblers need to also have something extra said about the
     function's return value.  We allow for that here.  */
-@@ -207,3 +224,54 @@
+@@ -207,3 +224,56 @@
  	putc ('\n', FILE);						\
        }									\
    } while (0)
@@ -59,10 +59,12 @@ $NetBSD: patch-al,v 1.1 2000/09/15 23:58:48 tron Exp $
 +#ifdef NETBSD_ELF
 +
 +/* Start with generic ELF definitions. */
++#if !defined(__sparc__)
 +#include "elfos.h"
 +
 +#undef DWARF_DEBUGGING_INFO	/* XXX */
 +#undef DWARF2_DEBUGGING_INFO	/* XXX */
++#endif
 +
 +/* Provide a STARTFILE_SPEC appropriate for NetBSD ELF targets.  Here we
 +   provide support for the special GCC option -static.  On ELF targets,
