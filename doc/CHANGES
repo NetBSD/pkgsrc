@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3719 2003/10/21 08:38:47 itojun Exp $
+$NetBSD: CHANGES,v 1.3720 2003/10/21 20:58:33 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4233,3 +4233,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added milter-regex-0.6 [manu 2003-10-20]
 	Updated pim6sd to 20031021a [itojun 2003-10-21]
 	Updated pim6dd to 20031021a [itojun 2003-10-21]
+	Updated latd to 1.18 [xtraeme 2003-10-21]
