@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.538 2004/10/02 10:14:03 jdolecek Exp $
+# $NetBSD: Makefile,v 1.539 2004/10/06 10:17:06 grant Exp $
 #
 
 COMMENT=	Development utilities
@@ -61,7 +61,6 @@ SUBDIR+=	ccache
 SUBDIR+=	cdecl
 SUBDIR+=	cdk
 SUBDIR+=	cervisia2
-SUBDIR+=	cfg+
 SUBDIR+=	cfitsio
 SUBDIR+=	cgdb
 SUBDIR+=	check
@@ -196,6 +195,7 @@ SUBDIR+=	libavl
 SUBDIR+=	libbegemot
 SUBDIR+=	libbonobo
 SUBDIR+=	libbonoboui
+SUBDIR+=	libcfg+
 SUBDIR+=	libctl
 SUBDIR+=	libdockapp
 SUBDIR+=	libebml
