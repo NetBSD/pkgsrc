@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1274 2004/01/04 17:27:27 xtraeme Exp $
+$NetBSD: TODO,v 1.1275 2004/01/04 18:01:33 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -209,7 +209,6 @@ Suggested package updates
 	o leafnode-1.9.46
 	o libcaca-0.6
 	o libcdaudio-0.99.9 [pkg/23930]
-	o libcroco-0.4.0 [pkg/23793]
 	o libmpeg3-1.5.3
 	o libole2-2.2.8
 	o libtool-1.5 [skrll]
