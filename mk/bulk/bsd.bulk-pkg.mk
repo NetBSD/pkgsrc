@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.42 2003/02/08 23:27:00 kei Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.42.2.1 2003/02/18 14:56:38 agc Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -324,10 +324,12 @@ bulk-package:
 					if [ -z "$$pkgname" ]; then pkgname=unknown ; fi ; \
 					${ECHO_MSG} "BULK> marking package that requires ${PKGNAME} as broken:  $$pkgname ($$pkgdir)";\
 					pkgerr="-1"; \
-					pkgignore=`(cd ${_PKGSRCDIR}/$$pkgdir && (${MAKE} show-var VARNAME=PKG_FAIL_REASON; ${MAKE} show-var VARNAME=PKG_SKIP_REASON))`; \
-					if [ ! -z "$$pkgignore" -a ! -f ${_PKGSRCDIR}/$$pkgdir/${BROKENFILE} ]; then \
+					pkgignore=`(cd ${_PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=PKG_FAIL_REASON)`; \
+					pkgskip=`(cd ${_PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=PKG_SKIP_REASON)`; \
+					if [ ! -z "$${pkgignore}$${pkgskip}" -a ! -f ${_PKGSRCDIR}/$$pkgdir/${BROKENFILE} ]; then \
 						 ${ECHO_MSG} "BULK> $$pkgname ($$pkgdir) may not be packaged because:" >> ${_PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
 						 ${ECHO_MSG} "BULK> $$pkgignore" >> ${_PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
+						 ${ECHO_MSG} "BULK> $$pkgskip" >> ${_PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
 						if [ -z "`(cd ${_PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=BROKEN)`" ]; then \
 							pkgerr="0"; \
 						else \
