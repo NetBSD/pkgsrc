@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2002/02/13 23:41:59 abs Exp $
+# $NetBSD: Makefile,v 1.3 2002/04/04 15:57:19 abs Exp $
 #
 
-DISTNAME=		htmlfix-1.01
+DISTNAME=		htmlfix-1.02
 CATEGORIES=		www
 MASTER_SITES=		http://www.mono.org/abs/tools/htmlfix/
 
