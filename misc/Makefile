@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2002/03/09 08:19:03 rh Exp $
+# $NetBSD: Makefile,v 1.120 2002/03/14 17:58:47 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -80,7 +80,6 @@ SUBDIR+=	php4-mbstring
 SUBDIR+=	pinfo
 SUBDIR+=	proj
 SUBDIR+=	pty-redir
-SUBDIR+=	py-readline
 SUBDIR+=	qterm
 SUBDIR+=	reed
 SUBDIR+=	root
