@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.31 1999/11/22 01:01:51 jwise Exp $
+# $NetBSD: Makefile,v 1.32 1999/11/22 08:57:24 tron Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
 DISTNAME=       pine4.21
 PKGNAME=        pine-4.21
 CATEGORIES=     mail news
-MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/
+MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/ \
+		ftp://ftp.fu-berlin.de/pub/unix/mail/pine/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.washington.edu/pine/
