@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.14 2003/09/12 13:03:40 grant Exp $
+# $NetBSD: buildlink2.mk,v 1.15 2003/09/12 15:54:43 grant Exp $
 
 # Do not directly include this file in package Makefiles. It is
 # automatically included when required based on USE_GCC2.
@@ -19,16 +19,10 @@ BUILDLINK_DEPMETHOD.gcc?=	build
 .endif
 
 BUILDLINK_PREFIX.gcc=	${LOCALBASE}
-
 _GCC_PREFIX=		${BUILDLINK_PREFIX.gcc}/${_GCC_SUBPREFIX}
-
-BUILDLINK_LDFLAGS.gcc=	-L${_GCC_ARCHDIR} -Wl,${RPATH_FLAG}${_GCC_ARCHDIR} -L${_GCC_PREFIX}lib -Wl,${RPATH_FLAG}${_GCC_PREFIX}lib
 
 BUILDLINK_PACKAGES+=	gcc
 
-.if defined(USE_GCC_SHLIB)
-LDFLAGS+=		${BUILDLINK_LDFLAGS.gcc}
-.endif
 BUILDLINK_WRAPPER_ENV+=	\
 	COMPILER_PATH="${BUILDLINK_DIR}/bin"; export COMPILER_PATH
 
