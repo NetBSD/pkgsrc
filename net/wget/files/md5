@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.10 2000/09/16 08:34:16 itojun Exp $
+$NetBSD: md5,v 1.11 2000/12/25 04:42:05 itojun Exp $
 
 MD5 (wget-1.5.3.tar.gz) = 47680b25bf893afdb0c43b24e3fc2fd6
-MD5 (wget-153-v6-20000915.diff.gz) = 35beb7c66e8608eeef2d558912a45ab8
+MD5 (wget-153-v6-20001225.diff.gz) = 3927595e6957130a10b62eee5b4ad5ec

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2000/11/29 15:12:54 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2000/12/25 04:42:04 itojun Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/05/22 07:53:29 tg Exp
 #
 
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=wget/}
 
 PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES=	wget-153-v6-20000915.diff.gz
+PATCHFILES=	wget-153-v6-20001225.diff.gz
 PATCH_DIST_STRIP=-p1
 
 MAINTAINER=	packages@netbsd.org
