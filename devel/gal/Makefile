@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/03/13 17:36:48 fredb Exp $
+# $NetBSD: Makefile,v 1.22 2002/04/10 15:56:12 jlam Exp $
 
 DISTNAME=		gal-0.19
 PKGREVISION=		1
@@ -10,6 +10,7 @@ MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Gnome Application Libraries
 
+USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_X11BASE=		YES
@@ -17,10 +18,12 @@ USE_X11BASE=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .include "../../converters/libiconv/buildlink.mk"
-.include "../../textproc/libunicode/buildlink.mk"
-.include "../../sysutils/gnome-vfs/buildlink.mk"
-.include "../../print/gnome-print/buildlink.mk"
+.include "../../devel/bonobo/buildlink.mk"
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/libglade/buildlink.mk"
-.include "../../devel/bonobo/buildlink.mk"
+.include "../../print/gnome-print/buildlink.mk"
+.include "../../sysutils/gnome-vfs/buildlink.mk"
+.include "../../textproc/libunicode/buildlink.mk"
+
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
