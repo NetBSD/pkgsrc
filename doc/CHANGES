@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1924 2003/04/13 10:26:06 cjep Exp $
+$NetBSD: CHANGES,v 1.1925 2003/04/13 11:45:36 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1580,3 +1580,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated flim to 1.14.5nb1 [uebayasi 2003-04-13]
 	Updated semi to 1.14.5nb1 [uebayasi 2003-04-13]
 	Added file-4.02 [cjep 2003-04-13]
+	Updated pen to 0.10.1 [cjep 2003-04-13]
