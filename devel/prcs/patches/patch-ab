@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1 1998/12/30 20:36:54 tv Exp $
+$NetBSD: patch-ab,v 1.2 2000/03/06 04:28:02 hubertf Exp $
 
---- src/hash.cc.orig	Wed Dec 30 15:35:10 1998
-+++ src/hash.cc	Wed Dec 30 15:37:29 1998
-@@ -95,7 +95,7 @@
-     return attrs_hash (x, M);
- }
+--- emacs/Makefile.in.orig	Mon Sep 14 00:00:40 1998
++++ emacs/Makefile.in	Mon Mar  6 04:20:09 2000
+@@ -169,7 +169,7 @@
+ install-data: install-lispLISP
+ 	@$(NORMAL_INSTALL)
  
--int hash(const char*& s, int M)
-+int hash(const char*const& s, int M)
-     /* a char* hash function from Aho, Sethi, and Ullman */
- {
-     const char *p;
+-install: install-exec install-data all
++install: install-exec all
+ 	@:
+ 
+ uninstall: uninstall-lispLISP

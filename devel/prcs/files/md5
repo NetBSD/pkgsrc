@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.6 1998/08/07 13:21:26 agc Exp $
+$NetBSD: md5,v 1.7 2000/03/06 04:28:01 hubertf Exp $
 
-MD5 (prcs-1.2.8.tar.gz) = 949815545672c355ee0b05cace20e50c
+MD5 (prcs-1.2.9.tar.gz) = eef0c4dd162dde67a2d0e250d8a8684b
