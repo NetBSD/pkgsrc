@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/03/30 20:01:38 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/04/06 15:48:55 dmcmahill Exp $
 bin/gdk-pixbuf-csource
 bin/gtk-demo
 bin/gtk-query-immodules-2.0
@@ -253,22 +253,22 @@ lib/libgdk-x11-2.0.a
 lib/libgdk-x11-2.0.la
 lib/libgdk-x11-2.0.so
 lib/libgdk-x11-2.0.so.0
-lib/libgdk-x11-2.0.so.0.1
+lib/libgdk-x11-2.0.so.0.2
 lib/libgdk_pixbuf-2.0.a
 lib/libgdk_pixbuf-2.0.la
 lib/libgdk_pixbuf-2.0.so
 lib/libgdk_pixbuf-2.0.so.0
-lib/libgdk_pixbuf-2.0.so.0.1
+lib/libgdk_pixbuf-2.0.so.0.2
 lib/libgdk_pixbuf_xlib-2.0.a
 lib/libgdk_pixbuf_xlib-2.0.la
 lib/libgdk_pixbuf_xlib-2.0.so
 lib/libgdk_pixbuf_xlib-2.0.so.0
-lib/libgdk_pixbuf_xlib-2.0.so.0.1
+lib/libgdk_pixbuf_xlib-2.0.so.0.2
 lib/libgtk-x11-2.0.a
 lib/libgtk-x11-2.0.la
 lib/libgtk-x11-2.0.so
 lib/libgtk-x11-2.0.so.0
-lib/libgtk-x11-2.0.so.0.1
+lib/libgtk-x11-2.0.so.0.2
 lib/pkgconfig/gdk-2.0.pc
 lib/pkgconfig/gdk-pixbuf-2.0.pc
 lib/pkgconfig/gdk-pixbuf-xlib-2.0.pc
