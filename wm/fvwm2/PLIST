@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/04/10 07:22:35 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/10/13 15:21:19 martti Exp $
 bin/FvwmCommand
 bin/fvwm
 bin/fvwm-config
@@ -381,7 +381,7 @@ man/man1/FvwmDebug.1
 man/man1/FvwmDragWell.1
 man/man1/FvwmEvent.1
 man/man1/FvwmForm.1
-man/man1/FvwmGtk.1
+${GTK}man/man1/FvwmGtk.1
 man/man1/FvwmIconBox.1
 man/man1/FvwmIconMan.1
 man/man1/FvwmIdent.1
