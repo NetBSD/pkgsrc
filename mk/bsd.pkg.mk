@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1540.2.18 2005/01/24 19:49:23 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1540.2.19 2005/02/11 15:27:57 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -132,7 +132,7 @@ BUILD_DEFS_FIXED+=	${OSVERSION_SPECIFIC:DOSVERSION_SPECIFIC}
 
 # Latest versions of tools required for correct pkgsrc operation.
 DIGEST_REQD=		20010302
-PKGTOOLS_REQD=		${_OPSYS_PKGTOOLS_REQD:U20030918}
+PKGTOOLS_REQD=		${_OPSYS_PKGTOOLS_REQD:U20050204}
 
 PKG_DB_TMPDIR=		${WRKDIR}/.pkgdb
 DDIR=			${WRKDIR}/.DDIR
@@ -1110,7 +1110,7 @@ CONFIG_SHELL?=		${SH}
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
 CONFIGURE_ENV+=		install_sh=${INSTALL:Q}
 CONFIGURE_ENV+=		LIBS=${LIBS:Q}
-CONFIGURE_ENV+=		${USE_LIBTOOL:Dlt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN}}
+CONFIGURE_ENV+=		${USE_LIBTOOL:Dlt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN_CMD:D${_OPSYS_MAX_CMDLEN_CMD:sh}}}
 #
 # GNU_CONFIGURE_PREFIX is the argument to the --prefix option passed to the
 # GNU configure script.
@@ -1181,6 +1181,10 @@ _REAL_TARGETS.test+=	test-message pre-test do-test post-test
 
 .  include "../../mk/plist.mk"
 
+##### Handle alternatives
+
+.  include "../../mk/alternatives.mk"
+
 ##### Make subtargets for non-su portion of "install".
 
 #===> "install-check-pkgname"
@@ -1198,13 +1202,6 @@ install-check-pkgname:
 		${ECHO_MSG} "*** Cleaning and rebuilding the newer version of the package..."; \
 		${MAKE} clean && ${MAKE} build ;;			\
 	esac
-
-#===> "install-make-pkgdbdir"
-
-_REAL_TARGETS.install+=		install-make-pkgdbdir
-.PHONY: install-make-pkgdbdir
-install-make-pkgdbdir:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${PKG_DB_TMPDIR}
 
 #===> "do-su-install"
 # su to root, then run real-su-install
@@ -1582,7 +1579,9 @@ ${def:C/=.*$//}=	${_${def:C/=.*$//}_CMD:sh}
 .if !defined(_PATH_ORIG)
 _PATH_ORIG:=		${PATH}
 MAKEFLAGS+=		_PATH_ORIG=${_PATH_ORIG:Q}
+.endif
 
+.if !empty(PREPEND_PATH)
 # This is very Special.  Because PREPEND_PATH is set with += in reverse order,
 # the awk expression reverses the order again (since bootstrap bmake doesn't
 # yet support the :[-1..1] construct).
@@ -2125,6 +2124,7 @@ ${WRKDIR}:
 .  endif
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${WRKDIR}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${PKG_DB_TMPDIR}
 .ifdef WRKOBJDIR
 .  if ${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once"
 .    if !exists(${LOCKFILE})
@@ -3364,10 +3364,7 @@ print-pkg-size-this:
 	| ${SORT} -u							\
 	| ${SED} -e "s/'/'\\\\''/g" -e "s/.*/'&'/"			\
 	| ${XARGS} -n 256 ${LS} -ld					\
-	| ${AWK} 'BEGIN { print("0 "); }				\
-		  { print($$5, " + "); }				\
-		  END { print("p"); }'					\
-	| ${DC}
+	| ${AWK} '{ s += $$5; } END { print s; }'			\
 
 # Sizes of required pkgs (only)
 #
@@ -3381,10 +3378,7 @@ print-pkg-size-depends:
 		| ${XARGS} -n 1 ${SETENV} ${PKG_BEST_EXISTS}		\
 		| ${SORT} -u						\
 		| ${XARGS} -n 256 ${SETENV} ${PKG_INFO} -qs		\
-		| ${AWK} -- 'BEGIN { print("0 "); }			\
-			/^[0-9]+$$/ { print($$1, " + "); }		\
-			END { print("p"); }'				\
-		| ${DC};						\
+		| ${AWK} '/^[0-9]+$$/ { s += $$1; } END { print s; }';	\
 	else								\
 		${ECHO} "0";						\
 	fi
@@ -3548,7 +3542,8 @@ post-install-fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 	size_this=`${MAKE} ${MAKEFLAGS} print-pkg-size-this`;		\
 	size_depends=`${MAKE} ${MAKEFLAGS} print-pkg-size-depends`;	\
 	${ECHO} $$size_this >${SIZE_PKG_FILE};				\
-	${ECHO} $$size_this $$size_depends + p | ${DC} >${SIZE_ALL_FILE}
+	${ECHO} $$size_this $$size_depends				\
+		| ${AWK} '{ print $$1 + $$2; }' >${SIZE_ALL_FILE}
 
 # Fake installation of package so that user can pkg_delete it later.
 # Also, make sure that an installed package is recognized correctly in

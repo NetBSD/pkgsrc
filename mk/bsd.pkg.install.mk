@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.65.2.2 2005/01/24 18:40:01 tv Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.65.2.3 2005/02/11 15:27:57 tv Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -33,6 +33,7 @@ HEADER_EXTRA_TMPL?=	# empty
 DEINSTALL_PRE_TMPL?=	${.CURDIR}/../../mk/install/deinstall-pre
 DEINSTALL_EXTRA_TMPL?=	# empty
 DEINSTALL_TMPL?=	${.CURDIR}/../../mk/install/deinstall
+INSTALL_UNPACK_TMPL?=	# empty
 INSTALL_TMPL?=		${.CURDIR}/../../mk/install/install
 INSTALL_EXTRA_TMPL?=	# empty
 INSTALL_POST_TMPL?=	${.CURDIR}/../../mk/install/install-post
@@ -49,6 +50,7 @@ DEINSTALL_TEMPLATES+=	${DEINSTALL_TMPL}
 DEINSTALL_TEMPLATES+=	${_FOOTER_TMPL}
 INSTALL_TEMPLATES=	${_HEADER_TMPL}
 INSTALL_TEMPLATES+=	${HEADER_EXTRA_TMPL}
+INSTALL_TEMPLATES+=	${INSTALL_UNPACK_TMPL}
 INSTALL_TEMPLATES+=	${INSTALL_TMPL}
 INSTALL_TEMPLATES+=	${INSTALL_EXTRA_TMPL}
 INSTALL_TEMPLATES+=	${INSTALL_POST_TMPL}
@@ -95,14 +97,12 @@ FILES_SUBST+=		PKG_INSTALLATION_TYPE=${PKG_INSTALLATION_TYPE}
 #
 #	Only the group is required; the groupid is optional.
 #
+PKG_GROUPS?=		# empty
 PKG_USERS?=		# empty
 _PKG_USER_HOME?=	/nonexistent
 _PKG_USER_SHELL?=	${NOLOGIN}
-PKG_GROUPS?=		# empty
-FILES_SUBST+=		PKG_USERS=${PKG_USERS:Q}
 FILES_SUBST+=		PKG_USER_HOME=${_PKG_USER_HOME}
 FILES_SUBST+=		PKG_USER_SHELL=${_PKG_USER_SHELL}
-FILES_SUBST+=		PKG_GROUPS=${PKG_GROUPS:Q}
 
 # Interix is very Special in that users are groups cannot have the
 # same name.  Interix.mk tries to work around this by overriding
@@ -111,9 +111,9 @@ FILES_SUBST+=		PKG_GROUPS=${PKG_GROUPS:Q}
 # compile without changing something.
 #
 .if !empty(OPSYS:MInterix)
-.  for user in ${PKG_USERS}
-.    if !defined(BROKEN) && !empty(PKG_GROUPS:M${user:C/:.*//})
-BROKEN:=		"User and group '${user:C/:.*//}' cannot have the same name on Interix"
+.  for user in ${PKG_USERS:C/\\\\//g:C/:.*//}
+.    if !empty(PKG_GROUPS:M${user})
+PKG_FAIL_REASON+=	"User and group '${user}' cannot have the same name on Interix"
 .    endif
 .  endfor
 .endif
@@ -121,6 +121,41 @@ BROKEN:=		"User and group '${user:C/:.*//}' cannot have the same name on Interix
 .if !empty(PKG_USERS) || !empty(PKG_GROUPS)
 DEPENDS+=		${_USER_DEPENDS}
 .endif
+
+INSTALL_USERGROUP_FILE=	${WRKDIR}/.install-usergroup
+INSTALL_UNPACK_TMPL+=	${INSTALL_USERGROUP_FILE}
+
+${INSTALL_USERGROUP_FILE}: ../../mk/install/usergroup
+	${_PKG_SILENT}${_PKG_DEBUG}{					\
+	${ECHO} "# start of install-usergroup";				\
+	${ECHO} "#";							\
+	${ECHO} "# Generate a +USERGROUP script that reference counts users"; \
+	${ECHO} "# and groups that are required for the proper functioning"; \
+	${ECHO} "# of the package.";					\
+	${ECHO} "#";							\
+	${ECHO} "case \$${STAGE} in";					\
+	${ECHO} "PRE-INSTALL|UNPACK)";					\
+	${ECHO} "	\$${CAT} > ./+USERGROUP << 'EOF_USERGROUP'";	\
+	${SED} ${FILES_SUBST_SED} ../../mk/install/usergroup;		\
+	${ECHO} "";							\
+	eval set -- ${PKG_GROUPS} ;					\
+	while ${TEST} $$# -gt 0; do					\
+		i="$$1"; shift;						\
+		${ECHO} "# GROUP: $$i";					\
+	done;								\
+	eval set -- ${PKG_USERS} ;					\
+	while ${TEST} $$# -gt 0; do					\
+		i="$$1"; shift;						\
+		${ECHO} "# USER: $$i";					\
+	done;								\
+	${ECHO} "EOF_USERGROUP";					\
+	${ECHO} "	\$${CHMOD} +x ./+USERGROUP";			\
+	${ECHO} "	;;";						\
+	${ECHO} "esac";							\
+	${ECHO} "";							\
+	${ECHO} "# end of install-usergroup";				\
+	} > ${.TARGET}.tmp;						\
+	${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 # SPECIAL_PERMS are lists that look like:
 #		file user group mode
@@ -138,7 +173,37 @@ DEPENDS+=		${_USER_DEPENDS}
 #
 SPECIAL_PERMS?=		# empty
 SETUID_ROOT_PERMS?=	${ROOT_USER} ${ROOT_GROUP} 4711
-FILES_SUBST+=		SPECIAL_PERMS=${SPECIAL_PERMS:Q}
+
+INSTALL_PERMS_FILE=	${WRKDIR}/.install-perms
+INSTALL_UNPACK_TMPL+=	${INSTALL_PERMS_FILE}
+
+${INSTALL_PERMS_FILE}: ../../mk/install/perms
+	${_PKG_SILENT}${_PKG_DEBUG}{					\
+	${ECHO} "# start of install-perms";				\
+	${ECHO} "#";							\
+	${ECHO} "# Generate a +PERMS script that sets the special";	\
+	${ECHO} "# permissions on files and directories used by the";	\
+	${ECHO} "# package.";						\
+	${ECHO} "#";							\
+	${ECHO} "case \$${STAGE} in";					\
+	${ECHO} "PRE-INSTALL|UNPACK)";					\
+	${ECHO} "	\$${CAT} > ./+PERMS << 'EOF_PERMS'";		\
+	${SED} ${FILES_SUBST_SED} ../../mk/install/perms;		\
+	${ECHO} "";							\
+	eval set -- ${SPECIAL_PERMS} ;					\
+	while ${TEST} $$# -gt 0; do					\
+		file="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
+		shift; shift; shift; shift;				\
+		${ECHO} "# PERMS: $$file $$mode $$owner $$group";	\
+	done;								\
+	${ECHO} "EOF_PERMS";						\
+	${ECHO} "	\$${CHMOD} +x ./+PERMS";			\
+	${ECHO} "	;;";						\
+	${ECHO} "esac";							\
+	${ECHO} "";							\
+	${ECHO} "# end of install-perms";				\
+	} > ${.TARGET}.tmp;						\
+	${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 # CONF_FILES are pairs of example and true config files, used much like
 #	MLINKS in the base system.  At post-install time, if the true config
@@ -176,19 +241,85 @@ PKG_FAIL_REASON+= \
 	"bsd.pkg.install.mk: RCD_SCRIPTS_EXAMPLEDIR can't be an absolute path."
 .endif
 RCD_SCRIPTS_SHELL?=	${SH}
-FILES_SUBST+=		CONF_FILES=${CONF_FILES:Q}
-FILES_SUBST+=		CONF_FILES_MODE=${CONF_FILES_MODE}
-FILES_SUBST+=		CONF_FILES_PERMS=${CONF_FILES_PERMS:Q}
-FILES_SUBST+=		SUPPORT_FILES=${SUPPORT_FILES:Q}
-FILES_SUBST+=		SUPPORT_FILES_MODE=${SUPPORT_FILES_MODE}
-FILES_SUBST+=		SUPPORT_FILES_PERMS=${SUPPORT_FILES_PERMS:Q}
-FILES_SUBST+=		RCD_SCRIPTS=${RCD_SCRIPTS:Q}
-FILES_SUBST+=		RCD_SCRIPTS_MODE=${RCD_SCRIPTS_MODE}
-FILES_SUBST+=		RCD_SCRIPTS_DIR=${RCD_SCRIPTS_DIR}
-FILES_SUBST+=		RCD_SCRIPTS_EXAMPLEDIR=${RCD_SCRIPTS_EXAMPLEDIR}
 FILES_SUBST+=		RCD_SCRIPTS_SHELL=${RCD_SCRIPTS_SHELL}
 MESSAGE_SUBST+=		RCD_SCRIPTS_DIR=${RCD_SCRIPTS_DIR}
 MESSAGE_SUBST+=		RCD_SCRIPTS_EXAMPLEDIR=${RCD_SCRIPTS_EXAMPLEDIR}
+
+INSTALL_FILES_FILE=	${WRKDIR}/.install-files
+INSTALL_UNPACK_TMPL+=	${INSTALL_FILES_FILE}
+
+${INSTALL_FILES_FILE}: ../../mk/install/files
+	${_PKG_SILENT}${_PKG_DEBUG}{					\
+	${ECHO} "# start of install-files";				\
+	${ECHO} "#";							\
+	${ECHO} "# Generate a +FILES script that reference counts config"; \
+	${ECHO} "# files that are required for the proper functioning"; \
+	${ECHO} "# of the package.";					\
+	${ECHO} "#";							\
+	${ECHO} "case \$${STAGE} in";					\
+	${ECHO} "PRE-INSTALL|UNPACK)";					\
+	${ECHO} "	\$${CAT} > ./+FILES << 'EOF_FILES'";		\
+	${SED} ${FILES_SUBST_SED} ../../mk/install/files;		\
+	${ECHO} "";							\
+	eval set -- ${CONF_FILES} ;					\
+	while ${TEST} $$# -gt 0; do					\
+		egfile="$$1"; file="$$2";				\
+		shift; shift;						\
+		${ECHO} "# FILE: $$file c $$egfile ${CONF_FILES_MODE}"; \
+	done;								\
+	eval set -- ${SUPPORT_FILES} ;					\
+	while ${TEST} $$# -gt 0; do					\
+		egfile="$$1"; file="$$2";				\
+		shift; shift;						\
+		${ECHO} "# FILE: $$file c $$egfile ${SUPPORT_FILES_MODE}"; \
+	done;								\
+	eval set -- ${CONF_FILES_PERMS} ${SUPPORT_FILES_PERMS} ;	\
+	while ${TEST} $$# -gt 0; do					\
+		egfile="$$1"; file="$$2";				\
+		owner="$$3"; group="$$4"; mode="$$5";			\
+		shift; shift; shift; shift; shift;			\
+		${ECHO} "# FILE: $$file c $$egfile $$mode $$owner $$group"; \
+	done;								\
+	${ECHO} "EOF_FILES";						\
+	${ECHO} "	\$${CHMOD} +x ./+FILES";			\
+	${ECHO} "	;;";						\
+	${ECHO} "esac";							\
+	${ECHO} "";							\
+	${ECHO} "# end of install-files";				\
+	} > ${.TARGET}.tmp;						\
+	${MV} -f ${.TARGET}.tmp ${.TARGET}
+
+INSTALL_RCD_SCRIPTS_FILE=	${WRKDIR}/.install-rcd-scripts
+INSTALL_UNPACK_TMPL+=		${INSTALL_RCD_SCRIPTS_FILE}
+
+${INSTALL_RCD_SCRIPTS_FILE}: ../../mk/install/files
+	${_PKG_SILENT}${_PKG_DEBUG}{					\
+	${ECHO} "# start of install-rcd-scripts";			\
+	${ECHO} "#";							\
+	${ECHO} "# Generate a +RCD_SCRIPTS script that reference counts config"; \
+	${ECHO} "# files that are required for the proper functioning"; \
+	${ECHO} "# of the package.";					\
+	${ECHO} "#";							\
+	${ECHO} "case \$${STAGE} in";					\
+	${ECHO} "PRE-INSTALL|UNPACK)";					\
+	${ECHO} "	\$${CAT} > ./+RCD_SCRIPTS << 'EOF_RCD_SCRIPTS'"; \
+	${SED} ${FILES_SUBST_SED} ../../mk/install/files;		\
+	${ECHO} "";							\
+	eval set -- ${RCD_SCRIPTS} ;					\
+	while ${TEST} $$# -gt 0; do					\
+		script="$$1"; shift;					\
+		file="${RCD_SCRIPTS_DIR}/$$script";			\
+		egfile="${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/$$script";	\
+		${ECHO} "# FILE: $$file c $$egfile ${RCD_SCRIPTS_MODE}"; \
+	done;								\
+	${ECHO} "EOF_RCD_SCRIPTS";					\
+	${ECHO} "	\$${CHMOD} +x ./+RCD_SCRIPTS";			\
+	${ECHO} "	;;";						\
+	${ECHO} "esac";							\
+	${ECHO} "";							\
+	${ECHO} "# end of install-rcd-scripts";				\
+	} > ${.TARGET}.tmp;						\
+	${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 # OWN_DIRS contains a list of directories for this package that should be
 #       created and should attempt to be destroyed by the INSTALL/DEINSTALL
@@ -206,10 +337,61 @@ MAKE_DIRS?=		# empty
 MAKE_DIRS_PERMS?=	# empty
 OWN_DIRS?=		# empty
 OWN_DIRS_PERMS?=	# empty
-FILES_SUBST+=		MAKE_DIRS=${MAKE_DIRS:Q}
-FILES_SUBST+=		MAKE_DIRS_PERMS=${MAKE_DIRS_PERMS:Q}
-FILES_SUBST+=		OWN_DIRS=${OWN_DIRS:Q}
-FILES_SUBST+=		OWN_DIRS_PERMS=${OWN_DIRS_PERMS:Q}
+
+INSTALL_DIRS_FILE=	${WRKDIR}/.install-dirs
+INSTALL_UNPACK_TMPL+=	${INSTALL_DIRS_FILE}
+
+${INSTALL_DIRS_FILE}: ../../mk/install/dirs
+	${_PKG_SILENT}${_PKG_DEBUG}{					\
+	${ECHO} "# start of install-dirs";				\
+	${ECHO} "#";							\
+	${ECHO} "# Generate a +DIRS script that reference counts directories"; \
+	${ECHO} "# that are required for the proper functioning of the"; \
+	${ECHO} "# package.";						\
+	${ECHO} "#";							\
+	${ECHO} "case \$${STAGE} in";					\
+	${ECHO} "PRE-INSTALL|UNPACK)";					\
+	${ECHO} "	\$${CAT} > ./+DIRS << 'EOF_DIRS'";		\
+	${SED} ${FILES_SUBST_SED} ../../mk/install/dirs;		\
+	${ECHO} "";							\
+	case "${PKG_SYSCONFSUBDIR}${CONF_FILES}${CONF_FILES_PERMS}${SUPPORT_FILES}${SUPPORT_FILES_PERMS}" in \
+	"")	;;							\
+	*)	${ECHO} "# DIR: ${PKG_SYSCONFDIR} m" ;;			\
+	esac;								\
+	case "${RCD_SCRIPTS}" in					\
+	"")	;;							\
+	*)	${ECHO} "# DIR: ${RCD_SCRIPTS_DIR} m" ;;		\
+	esac;								\
+	eval set -- ${MAKE_DIRS} ;					\
+	while ${TEST} $$# -gt 0; do					\
+		dir="$$1"; shift;					\
+		${ECHO} "# DIR: $$dir m";				\
+	done;								\
+	eval set -- ${OWN_DIRS} ;					\
+	while ${TEST} $$# -gt 0; do					\
+		dir="$$1"; shift;					\
+		${ECHO} "# DIR: $$dir mo";				\
+	done;								\
+	eval set -- ${MAKE_DIRS_PERMS} ;				\
+	while ${TEST} $$# -gt 0; do					\
+		dir="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
+		shift; shift; shift; shift;				\
+		${ECHO} "# DIR: $$dir m $$owner $$group $$mode";	\
+	done;								\
+	eval set -- ${OWN_DIRS_PERMS} ;					\
+	while ${TEST} $$# -gt 0; do					\
+		dir="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
+		shift; shift; shift; shift;				\
+		${ECHO} "# DIR: $$dir mo $$owner $$group $$mode";	\
+	done;								\
+	${ECHO} "EOF_DIRS";						\
+	${ECHO} "	\$${CHMOD} +x ./+DIRS";				\
+	${ECHO} "	;;";						\
+	${ECHO} "esac";							\
+	${ECHO} "";							\
+	${ECHO} "# end of install-dirs";				\
+	} > ${.TARGET}.tmp;						\
+	${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 # PKG_CREATE_USERGROUP indicates whether the INSTALL script should
 #	automatically add any needed users/groups to the system using
@@ -278,6 +460,7 @@ FILES_SUBST+=		MV=${MV:Q}
 FILES_SUBST+=		PERL5=${PERL5:Q}
 FILES_SUBST+=		PKG_ADMIN=${PKG_ADMIN_CMD:Q}
 FILES_SUBST+=		PKG_INFO=${PKG_INFO_CMD:Q}
+FILES_SUBST+=		PWD_CMD=${PWD_CMD:Q}
 FILES_SUBST+=		RM=${RM:Q}
 FILES_SUBST+=		RMDIR=${RMDIR:Q}
 FILES_SUBST+=		SED=${SED:Q}
@@ -294,7 +477,11 @@ FILES_SUBST+=		XARGS=${XARGS:Q}
 
 FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
+PKG_REFCOUNT_DBDIR?=	${PKG_DBDIR}.refcount
+
 INSTALL_SCRIPTS_ENV=	PKG_PREFIX=${PREFIX}
+INSTALL_SCRIPTS_ENV+=	PKG_METADATA_DIR=${_PKG_DBDIR}/${PKGNAME}
+INSTALL_SCRIPTS_ENV+=	PKG_REFCOUNT_DBDIR=${PKG_REFCOUNT_DBDIR}
 
 .PHONY: pre-install-script post-install-script
 
