@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/01/22 22:44:12 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/01/27 11:05:05 grant Exp $
 share/doc/docbook-xsl/ChangeLog
 share/doc/docbook-xsl/book.xsl
 share/doc/docbook-xsl/ch01s02.html
@@ -75,6 +75,8 @@ share/doc/docbook-xsl/fo/footer.content.properties.html
 share/doc/docbook-xsl/fo/footer.rule.html
 share/doc/docbook-xsl/fo/footers.on.blank.pages.html
 share/doc/docbook-xsl/fo/footnote.font.size.html
+share/doc/docbook-xsl/fo/footnote.number.format.html
+share/doc/docbook-xsl/fo/footnote.number.symbols.html
 share/doc/docbook-xsl/fo/fop.extensions.html
 share/doc/docbook-xsl/fo/formal.object.properties.html
 share/doc/docbook-xsl/fo/formal.procedures.html
@@ -101,6 +103,7 @@ share/doc/docbook-xsl/fo/generate.set.toc.html
 share/doc/docbook-xsl/fo/generate.toc.html
 share/doc/docbook-xsl/fo/glossary.as.blocks.html
 share/doc/docbook-xsl/fo/glossary.collection.html
+share/doc/docbook-xsl/fo/glossentry.show.acronym.html
 share/doc/docbook-xsl/fo/glosslist.as.blocks.html
 share/doc/docbook-xsl/fo/glossterm.auto.link.html
 share/doc/docbook-xsl/fo/glossterm.separation.html
@@ -132,6 +135,8 @@ share/doc/docbook-xsl/fo/ld-d0e2576.html
 share/doc/docbook-xsl/fo/ld-d0e2614.html
 share/doc/docbook-xsl/fo/ld-d0e2764.html
 share/doc/docbook-xsl/fo/ld-d0e2907.html
+share/doc/docbook-xsl/fo/ld-d0e3037.html
+share/doc/docbook-xsl/fo/ld-d0e3121.html
 share/doc/docbook-xsl/fo/line-height.html
 share/doc/docbook-xsl/fo/linenumbering.everyNth.html
 share/doc/docbook-xsl/fo/linenumbering.extension.html
@@ -243,6 +248,8 @@ share/doc/docbook-xsl/fo/table.cell.border.style.html
 share/doc/docbook-xsl/fo/table.cell.border.thickness.html
 share/doc/docbook-xsl/fo/table.cell.padding.html
 share/doc/docbook-xsl/fo/table.entry.padding.html
+share/doc/docbook-xsl/fo/table.footnote.number.format.html
+share/doc/docbook-xsl/fo/table.footnote.number.symbols.html
 share/doc/docbook-xsl/fo/table.frame.border.color.html
 share/doc/docbook-xsl/fo/table.frame.border.style.html
 share/doc/docbook-xsl/fo/table.frame.border.thickness.html
@@ -258,6 +265,7 @@ share/doc/docbook-xsl/fo/title.margin.left.html
 share/doc/docbook-xsl/fo/toc.indent.width.html
 share/doc/docbook-xsl/fo/toc.margin.properties.html
 share/doc/docbook-xsl/fo/toc.section.depth.html
+share/doc/docbook-xsl/fo/ulink.footnote.number.format.html
 share/doc/docbook-xsl/fo/ulink.footnotes.html
 share/doc/docbook-xsl/fo/ulink.hyphenate.html
 share/doc/docbook-xsl/fo/ulink.show.html
@@ -270,6 +278,7 @@ share/doc/docbook-xsl/fo/variablelist.as.blocks.html
 share/doc/docbook-xsl/fo/verbatim.properties.html
 share/doc/docbook-xsl/fo/xep.extensions.html
 share/doc/docbook-xsl/fo/xref.properties.html
+share/doc/docbook-xsl/fo/xref.with.number.and.title.html
 share/doc/docbook-xsl/html/ChangeLog
 share/doc/docbook-xsl/html/admon.graphics.extension.html
 share/doc/docbook-xsl/html/admon.graphics.html
@@ -323,8 +332,11 @@ share/doc/docbook-xsl/html/draft.watermark.image.html
 share/doc/docbook-xsl/html/ebnf.table.bgcolor.html
 share/doc/docbook-xsl/html/ebnf.table.border.html
 share/doc/docbook-xsl/html/emphasis.propagates.style.html
+share/doc/docbook-xsl/html/entry.propagates.style.html
 share/doc/docbook-xsl/html/firstterm.only.link.html
 share/doc/docbook-xsl/html/footer.rule.html
+share/doc/docbook-xsl/html/footnote.number.format.html
+share/doc/docbook-xsl/html/footnote.number.symbols.html
 share/doc/docbook-xsl/html/formal.procedures.html
 share/doc/docbook-xsl/html/formal.title.placement.html
 share/doc/docbook-xsl/html/funcsynopsis.decoration.html
@@ -352,6 +364,7 @@ share/doc/docbook-xsl/html/generate.section.toc.level.html
 share/doc/docbook-xsl/html/generate.set.toc.html
 share/doc/docbook-xsl/html/generate.toc.html
 share/doc/docbook-xsl/html/glossary.collection.html
+share/doc/docbook-xsl/html/glossentry.show.acronym.html
 share/doc/docbook-xsl/html/glossterm.auto.link.html
 share/doc/docbook-xsl/html/graphic.default.extension.html
 share/doc/docbook-xsl/html/graphicsize.extension.html
@@ -518,6 +531,8 @@ share/doc/docbook-xsl/html/table.borders.with.css.html
 share/doc/docbook-xsl/html/table.cell.border.color.html
 share/doc/docbook-xsl/html/table.cell.border.style.html
 share/doc/docbook-xsl/html/table.cell.border.thickness.html
+share/doc/docbook-xsl/html/table.footnote.number.format.html
+share/doc/docbook-xsl/html/table.footnote.number.symbols.html
 share/doc/docbook-xsl/html/table.frame.border.color.html
 share/doc/docbook-xsl/html/table.frame.border.style.html
 share/doc/docbook-xsl/html/table.frame.border.thickness.html
@@ -540,6 +555,7 @@ share/doc/docbook-xsl/html/use.role.for.mediaobject.html
 share/doc/docbook-xsl/html/use.svg.html
 share/doc/docbook-xsl/html/using.chunker.html
 share/doc/docbook-xsl/html/variablelist.as.table.html
+share/doc/docbook-xsl/html/xref.with.number.and.title.html
 share/doc/docbook-xsl/htmlhelp.html
 share/doc/docbook-xsl/htmlhelp.html.html
 share/doc/docbook-xsl/index.html
@@ -961,6 +977,7 @@ share/xsl/docbook/params/draft.watermark.image.xml
 share/xsl/docbook/params/ebnf.table.bgcolor.xml
 share/xsl/docbook/params/ebnf.table.border.xml
 share/xsl/docbook/params/emphasis.propagates.style.xml
+share/xsl/docbook/params/entry.propagates.style.xml
 share/xsl/docbook/params/equation.properties.xml
 share/xsl/docbook/params/example.properties.xml
 share/xsl/docbook/params/figure.properties.xml
@@ -969,6 +986,8 @@ share/xsl/docbook/params/footer.content.properties.xml
 share/xsl/docbook/params/footer.rule.xml
 share/xsl/docbook/params/footers.on.blank.pages.xml
 share/xsl/docbook/params/footnote.font.size.xml
+share/xsl/docbook/params/footnote.number.format.xml
+share/xsl/docbook/params/footnote.number.symbols.xml
 share/xsl/docbook/params/fop.extensions.xml
 share/xsl/docbook/params/formal.object.properties.xml
 share/xsl/docbook/params/formal.procedures.xml
@@ -987,6 +1006,7 @@ share/xsl/docbook/params/generate.section.toc.level.xml
 share/xsl/docbook/params/generate.toc.xml
 share/xsl/docbook/params/glossary.as.blocks.xml
 share/xsl/docbook/params/glossary.collection.xml
+share/xsl/docbook/params/glossentry.show.acronym.xml
 share/xsl/docbook/params/glosslist.as.blocks.xml
 share/xsl/docbook/params/glossterm.auto.link.xml
 share/xsl/docbook/params/glossterm.separation.xml
@@ -1172,6 +1192,8 @@ share/xsl/docbook/params/table.cell.border.style.xml
 share/xsl/docbook/params/table.cell.border.thickness.xml
 share/xsl/docbook/params/table.cell.padding.xml
 share/xsl/docbook/params/table.entry.padding.xml
+share/xsl/docbook/params/table.footnote.number.format.xml
+share/xsl/docbook/params/table.footnote.number.symbols.xml
 share/xsl/docbook/params/table.frame.border.color.xml
 share/xsl/docbook/params/table.frame.border.style.xml
 share/xsl/docbook/params/table.frame.border.thickness.xml
@@ -1190,6 +1212,7 @@ share/xsl/docbook/params/toc.indent.width.xml
 share/xsl/docbook/params/toc.list.type.xml
 share/xsl/docbook/params/toc.margin.properties.xml
 share/xsl/docbook/params/toc.section.depth.xml
+share/xsl/docbook/params/ulink.footnote.number.format.xml
 share/xsl/docbook/params/ulink.footnotes.xml
 share/xsl/docbook/params/ulink.hyphenate.xml
 share/xsl/docbook/params/ulink.show.xml
@@ -1207,6 +1230,7 @@ share/xsl/docbook/params/variablelist.as.table.xml
 share/xsl/docbook/params/verbatim.properties.xml
 share/xsl/docbook/params/xep.extensions.xml
 share/xsl/docbook/params/xref.properties.xml
+share/xsl/docbook/params/xref.with.number.and.title.xml
 share/xsl/docbook/profiling/ChangeLog
 share/xsl/docbook/profiling/profile-mode.xsl
 share/xsl/docbook/profiling/profile.xsl
