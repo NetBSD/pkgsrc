@@ -1,23 +1,21 @@
-$NetBSD: patch-aa,v 1.1 2004/05/02 07:24:52 mrg Exp $
+$NetBSD: patch-aa,v 1.2 2004/06/29 08:26:38 simonb Exp $
 
-diff -ru src/command.c mpc-0.10.3.orig/src/command.c
---- src/command.c	2004-03-20 10:40:02.000000000 +1100
-+++ src/command.c	2004-05-02 16:49:23.000000000 +1000
-@@ -228,6 +228,17 @@
+--- src/command.c.orig	2004-06-04 00:03:17.000000000 +1000
++++ src/command.c
+@@ -245,6 +245,16 @@ int cmd_play ( int argc, char ** argv, m
  	return 1;
  }
  
 +int cmd_playpause ( int argc, char ** argv, mpd_Connection * conn )
 +{
-+	mpd_Status * status = mpd_getStatus(conn);
++	mpd_Status * status = getStatus(conn);
 +
-+	if(status->state==MPD_STATUS_STATE_PLAY ||
-+	   status->state==MPD_STATUS_STATE_PAUSE)
++	if(status->state==MPD_STATUS_STATE_PLAY)
 +		return cmd_pause(argc,argv,conn);
 +	else
 +		return cmd_play(argc,argv,conn);
 +}
 +
- enum SeekMode { RelForward, RelBackward, Absolute };
- 
- 	static int calculate_seek(int current_time, int change, int mode) {
+ /* TODO: absolute seek times (normalperson) */
+ int cmd_seek ( int argc, char ** argv, mpd_Connection * conn )
+ {
