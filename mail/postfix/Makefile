@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/07/02 08:37:24 agc Exp $
+# $NetBSD: Makefile,v 1.12 1999/07/08 07:58:43 agc Exp $
 
 DISTNAME=	postfix-19990601
 CATEGORIES=	mail
@@ -23,7 +23,9 @@ pre-configure:
 	${SED} -e 's:__PREFIX:'${PREFIX}':g' \
 	    < ${WRKSRC}/util/sys_defs.h.dist \
 	    > ${WRKSRC}/util/sys_defs.h
-	${SED} -e 's:@OPSYS@:'${CAPITAL_OPSYS}${OS_MAJOR_VERSION}':g' \
+	capitalopsys=`${ECHO} ${OPSYS} | ${TR} a-z A-Z`; \
+	osmajorversion=`${ECHO} ${OS_VERSION} | ${SED} -e 's/\..*//g'`; \
+	${SED} -e 's:@OPSYS@:'$$capitalopsys$$osmajorversion':g' \
 	    < ${WRKSRC}/Makefile.inc.dist \
 	    > ${WRKSRC}/Makefile.inc
 
