@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2626 2004/12/02 09:26:48 wiz Exp $
+$NetBSD: TODO,v 1.2627 2004/12/02 10:10:20 hubertf Exp $
 
 Suggested new packages
 ======================
@@ -33,12 +33,6 @@ Suggested new packages
 	Fast JSP server. (I will import this when we have a native
 	  Java 2 -- it can't be built with our native jdk. [jwise])
 	http://www.caucho.com/products/resin/index.xtp
-
-	sformat [pkg/26549]
-	Format, partition, analyze, and repair SCSI disks.  (There is
-	  a working package in FreeBSD, in case extensive patches are
-	  needed).
-	http://freshmeat.net/projects/sformat/
 
 	squirm
 	Fast and configurable redirector for Squid.
