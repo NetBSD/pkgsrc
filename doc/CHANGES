@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3170 2003/08/31 10:10:40 seb Exp $
+$NetBSD: CHANGES,v 1.3171 2003/08/31 10:23:11 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3423,3 +3423,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xcircuit to 3.1.19 [jtb 2003-08-31]
 	Deleted bgrep, renamed to bsdgrep-devel [cjep 2003-08-31]
 	Updated libnet to 1.0.1bnb2 [seb 2003-08-31]
+	Updated bsdgrep to 20030831 [cjep 2003-08-31]
