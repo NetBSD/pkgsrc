@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2003/07/17 21:41:37 grant Exp $
+# $NetBSD: Makefile,v 1.25 2003/12/02 06:57:46 xtraeme Exp $
 #
 
 DISTNAME=	libungif-4.1.0b1
 PKGNAME=	libungif-4.1.0.1
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://prtr-13.ucsc.edu/pub/libungif/
+MASTER_SITES=	ftp://ftp.ayamura.org/pub/graphics/ \
+		ftp://prtr-13.ucsc.edu/pub/libungif/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://prtr-13.ucsc.edu/~badger/software/libungif/index.shtml
