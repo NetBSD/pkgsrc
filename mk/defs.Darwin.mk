@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.38 2002/12/03 21:13:37 agc Exp $
+# $NetBSD: defs.Darwin.mk,v 1.39 2002/12/16 05:07:21 schmonz Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -11,6 +11,7 @@ CHGRP?=		/usr/bin/chgrp
 CMP?=		/usr/bin/cmp
 CP?=		/bin/cp
 CUT?=		/usr/bin/cut
+DATE?=		/bin/date
 DC?=		/usr/bin/dc
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		echo				# Shell builtin
@@ -19,6 +20,7 @@ EXPR?=		/bin/expr
 FALSE?=		false				# Shell builtin
 FILE_CMD?=	/usr/bin/file
 FIND?=		/usr/bin/find
+FGREP?=		/usr/bin/fgrep
 GMAKE?=		/usr/bin/gnumake
 GREP?=		/usr/bin/grep
 GTAR?=		/usr/bin/gnutar	
@@ -34,6 +36,7 @@ LS?=		/bin/ls
 MKDIR?=		/bin/mkdir -p
 MTREE?=		/usr/sbin/mtree
 MV?=		/bin/mv
+NICE?=		/usr/bin/nice
 PATCH?=		/usr/bin/patch
 PAX?=		/bin/pax
 PERL5?=		${LOCALBASE}/bin/perl
