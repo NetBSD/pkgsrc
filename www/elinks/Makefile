@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/17 18:06:19 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2002/06/30 04:02:54 jlam Exp $
 #
 
 DISTNAME=	elinks-0.3.0
@@ -10,7 +10,7 @@ MAINTAINER=	dawszy@arhea.net
 HOMEPAGE=	http://elinks.pld.org.pl/
 COMMENT=	Extended/Enhanced Links (elinks)
 
-CONFLICTS=	links[0-9]*
+CONFLICTS=	links-[0-9]* links-gui-[0-9]*
 
 GNU_CONFIGURE=	YES
 USE_BUILDLINK_ONLY=	YES
