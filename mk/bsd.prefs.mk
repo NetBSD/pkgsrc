@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.181 2005/02/17 07:11:59 grant Exp $
+# $NetBSD: bsd.prefs.mk,v 1.182 2005/02/19 01:28:14 grant Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -72,6 +72,7 @@ GNU_ARCH.mipseb?=	mipseb
 GNU_ARCH.mipsel?=	mipsel
 GNU_ARCH.ns32k?=	ns32k
 GNU_ARCH.powerpc?=	powerpc
+GNU_ARCH.rs6000?=	rs6000
 GNU_ARCH.sh3eb?=	sh
 GNU_ARCH.sh3el?=	shle
 GNU_ARCH.sparc?=	sparc
@@ -246,10 +247,10 @@ OBJECT_FMT?=	ELF
 .  else
 OBJECT_FMT?=	a.out
 .  endif
-.endif
-
-.if ${OPSYS} == "DragonFly"
-OBJECT_FMT=		ELF
+.elif ${OPSYS} == "DragonFly"
+OBJECT_FMT=	ELF
+.elif ${OPSYS} == "AIX"
+OBJECT_FMT=	XCOFF
 .endif
 
 # Calculate depth
