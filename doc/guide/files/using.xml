@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.1.1.1 2004/10/21 14:27:37 grant Exp $ -->
+<!-- $NetBSD: using.xml,v 1.2 2004/12/01 09:52:59 wiz Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
   <title>Using pkgsrc</title>
@@ -197,7 +197,7 @@
 
       <para>If you want to install a binary package that you've either
         created yourself (see next section), that you put into pkgsrc/packages manually or
-        that is located on a remote FTP server, you can use the the "bin-install"
+        that is located on a remote FTP server, you can use the "bin-install"
         target. This target will install a binary package - if available - via
         &man.pkg.add.1;, else do a <command>make package</command>.
         The list of remote
