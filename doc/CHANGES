@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7358 2004/10/05 23:21:50 mjl Exp $
+$NetBSD: CHANGES,v 1.7359 2004/10/06 00:15:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4558,3 +4558,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ns-flash to 7.0.25 [jdolecek 2004-10-05]
 	Updated qt3 to 3.3.3nb1 [tron 2004-10-05]
 	Updated gnucash to 1.8.9 [mjl 2004-10-06]
+	Added MyPasswordSafe-20041001 [wiz 2004-10-06]
