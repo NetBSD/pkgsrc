@@ -1,13 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.4 2003/09/14 01:47:51 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2003/09/30 00:42:32 jlam Exp $
 
-.if !defined(FREETYPE2_BUILDLINK3_MK)
-FREETYPE2_BUILDLINK3_MK=	# defined
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 
-.include "../../mk/bsd.prefs.mk"
+.if !defined(FREETYPE2_BUILDLINK3_MK)
+FREETYPE2_BUILDLINK3_MK=	YES
+
+.  include "../../mk/bsd.prefs.mk"
 
 BUILDLINK_DEPENDS.freetype2?=	freetype2>=2.0.1
 BUILDLINK_PKGSRCDIR.freetype2?=	../../graphics/freetype2
+.endif	# FREETYPE2_BUILDLINK3_MK
 
 BUILDLINK_CHECK_BUILTIN.freetype2?=	NO
 
@@ -29,7 +31,9 @@ MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.freetype2=${BUILDLINK_IS_BUILTIN.freetype2}
 
 .if !empty(BUILDLINK_CHECK_BUILTIN.freetype2:M[yY][eE][sS])
 _NEED_FREETYPE2=	NO
-.else
+.endif
+
+.if !defined(_NEED_FREETYPE2)
 .  if !empty(BUILDLINK_IS_BUILTIN.freetype2:M[nN][oO])
 _NEED_FREETYPE2=	YES
 .  else
@@ -55,6 +59,7 @@ _NEED_FREETYPE2!=	\
 		${ECHO} "YES";						\
 	fi
 .  endif
+MAKEFLAGS+=	_NEED_FREETYPE2="${_NEED_FREETYPE2}"
 .endif
 
 .if ${_NEED_FREETYPE2} == "YES"
@@ -66,10 +71,14 @@ BUILDLINK_DEPENDS.freetype2=	freetype2>=2.1.3
 .  if !empty(BUILDLINK_DEPTH:M\+)
 BUILDLINK_DEPENDS+=		freetype2
 .  endif
-BUILDLINK_PACKAGES+=		freetype2
-.else
-BUILDLINK_PREFIX.freetype2=	${X11BASE}
 .endif
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}
+.if !defined(FREETYPE2_BUILDLINK3_MK)
+.  if ${_NEED_FREETYPE2} == "YES"
+BUILDLINK_PACKAGES+=		freetype2
+.  else
+BUILDLINK_PREFIX.freetype2=	${X11BASE}
+.  endif
 .endif	# FREETYPE2_BUILDLINK3_MK
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}

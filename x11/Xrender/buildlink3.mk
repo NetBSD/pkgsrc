@@ -1,11 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.5 2003/09/28 12:54:52 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2003/09/30 00:42:32 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 
-.include "../../mk/bsd.prefs.mk"
+.if !defined(XRENDER_BUILDLINK3_MK)
+XRENDER_BUILDLINK3_MK=	YES
+
+.  include "../../mk/bsd.prefs.mk"
 
 BUILDLINK_DEPENDS.Xrender?=	Xrender>=0.2
 BUILDLINK_PKGSRCDIR.Xrender?=	../../x11/Xrender
+.endif	# XRENDER_BUILDLINK3_MK
 
 BUILDLINK_CHECK_BUILTIN.Xrender?=	NO
 
@@ -23,6 +27,10 @@ BUILDLINK_IS_BUILTIN.Xrender!=						\
 	fi
 .  endif
 MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.Xrender=${BUILDLINK_IS_BUILTIN.Xrender}
+.endif
+
+.if !empty(BUILDLINK_CHECK_BUILTIN.Xrender:M[yY][eE][sS])
+_NEED_XRENDER=	NO
 .endif
 
 .if !defined(_NEED_XRENDER)
@@ -49,11 +57,8 @@ _NEED_XRENDER!=		\
 		${ECHO} "YES";						\
 	fi
 .  endif
+MAKEFLAGS+=	_NEED_XRENDER="${_NEED_XRENDER}"
 .endif	# _NEED_XRENDER
-
-.if !empty(BUILDLINK_CHECK_BUILTIN.Xrender:M[yY][eE][sS])
-_NEED_XRENDER=	NO
-.endif
 
 .if ${_NEED_XRENDER} == "YES"
 #
@@ -64,11 +69,14 @@ BUILDLINK_DEPENDS.Xrender=	Xrender>=0.7
 .  if !empty(BUILDLINK_DEPTH:M\+)
 BUILDLINK_DEPENDS+=		Xrender
 .  endif
-.  if !defined(BUILDLINK_PACKAGES) || empty(BUILDLINK_PACKAGES:MXrender)
-BUILDLINK_PACKAGES+=		Xrender
-.  endif
-.else
-BUILDLINK_PREFIX.Xrender=	${X11BASE}
 .endif
+
+.if !defined(XRENDER_BUILDLINK3_MK)
+.  if ${_NEED_XRENDER} == "YES"
+BUILDLINK_PACKAGES+=		Xrender
+.  else
+BUILDLINK_PREFIX.Xrender=	${X11BASE}
+.  endif
+.endif	# XRENDER_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}
