@@ -1,12 +1,12 @@
 #!@SH@
 #
-# $NetBSD: getpapersize,v 1.8 2003/09/08 17:38:34 jmmv Exp $
+# $NetBSD: getpapersize,v 1.9 2003/09/15 10:51:40 agc Exp $
 #
 # Small shell script to show the default papersize for packages
 #
 
 if [ $# -eq 0 ]; then
-	pkgs="a2ps ddd enscript ghostscript gv magicfilter psutils";
+	pkgs="a2ps ddd enscript ghostscript gv lout magicfilter psutils";
 else 
 	pkgs=$@
 fi
@@ -52,6 +52,13 @@ while [ $# -gt 0 ]; do
 		if [ -s "$f" ]; then
 			@ECHO@ -n "$1 has default papersize: "
 			@AWK@ '/^GV.fallbackPageMedia:/ { print $2; }' $f
+		fi
+		;;
+	lout)
+		f=@LOCALBASE@/share/lout/include/dsf
+		if [ -s "$f" ]; then
+			@ECHO@ -n "$1 has default papersize: "
+			@AWK@ '$1 == "named" && $2 == "@PageType" { print $4; }' $f
 		fi
 		;;
 	magicfilter)
