@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7809 2004/11/10 15:33:21 adam Exp $
+$NetBSD: CHANGES,v 1.7810 2004/11/10 15:47:06 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5211,3 +5211,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gtkglext to 1.0.6 [adam 2004-11-10]
 	Updated libcddb to 0.9.6 [adam 2004-11-10]
 	Updated dbench to 2.1 [adam 2004-11-10]
+	Added p5-Want-0.07 [seb 2004-11-10]
