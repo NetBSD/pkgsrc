@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2002/03/15 05:04:05 itohy Exp $
+$NetBSD: distinfo,v 1.10 2002/10/24 17:16:59 bouyer Exp $
 
 SHA1 (ghostscript/ghostscript-6.01.tar.bz2) = 405a8ab16453a8c3f846eae2aa4abbea6a093300
 Size (ghostscript/ghostscript-6.01.tar.bz2) = 2974476 bytes
@@ -55,4 +55,5 @@ SHA1 (patch-au) = 07c99b2988c34396901594ab635a209e08766303
 SHA1 (patch-av) = 87f3c9e01a4e2fa63c75c348b1a5ec2be07948a5
 SHA1 (patch-aw) = 9855cacc48db068f87aa37568b198e22e6c391a0
 SHA1 (patch-ay) = a39a1e27a2f8437103a93ac06e5f857ec5e32fa3
+SHA1 (patch-az) = 2bd5ddec9bf82aeca1fc2e928084cadc51bc88be
 SHA1 (patch-bug-workaround) = 99f4e197b35a8f33b8a1219a38f6d9fc2c307eb6
