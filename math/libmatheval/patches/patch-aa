@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/08/24 12:36:29 drochner Exp $
+
+--- lib/scanner.l.orig	2004-08-23 18:45:32.000000000 +0200
++++ lib/scanner.l
+@@ -151,3 +151,8 @@ void input_reset()
+   /* Forget contents of input buffer.  */
+   YY_FLUSH_BUFFER;
+ }
++
++int yywrap()
++{
++	return (1);
++}
