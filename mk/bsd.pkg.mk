@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.723 2001/04/19 19:11:59 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.724 2001/04/21 12:40:58 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -1864,7 +1864,7 @@ do-shlib-handling:
 						if (system("${TEST} -h ${PREFIX}/" lib) == 0) { \
 							rels[NR] = lib; \
 						}			\
- 					}				\
+					}				\
 				}					\
 				/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { \
 					libtool_release($$0);		\
@@ -2488,10 +2488,14 @@ fetch-list-one-pkg:
 makesum: fetch uptodate-digest
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	newfile=${DISTINFO_FILE}.$$$$;					\
-	${ECHO} -n "$$" > $$newfile;					\
+	if [ -f ${DISTINFO_FILE} ]; then				\
+		${AWK} -- '{print ; exit}' ${DISTINFO_FILE} > $$newfile; \
+	else								\
+		${ECHO} -n "$$" > $$newfile;				\
 		${ECHO} -n "NetBSD" >> $$newfile; 			\
 		${ECHO} "$$" >> $$newfile;				\
-		${ECHO} "" >> $$newfile;				\
+	fi;								\
+	${ECHO} "" >> $$newfile;					\
 	cd ${DISTDIR};							\
 	for sumfile in "" ${_CKSUMFILES}; do				\
 		if [ "X$$sumfile" = "X" ]; then continue; fi;		\
@@ -2505,7 +2509,12 @@ makesum: fetch uptodate-digest
 	if [ -f ${PATCH_SUM_FILE} ]; then				\
 		${AWK} '$$2 ~ /\(patch-[a-z0-9]+\)/ { print $$0 }' < ${PATCH_SUM_FILE} >> $$newfile; \
 	fi;								\
-	${MV} $$newfile ${DISTINFO_FILE}
+	if cmp -s $$newfile ${DISTINFO_FILE}; then			\
+		${RM} -f $$newfile;					\
+		${ECHO_MSG} "=> distinfo file unchanged.";		\
+	else								\
+		${MV} $$newfile ${DISTINFO_FILE};			\
+	fi
 .endif
 
 .if !target(makepatchsum)
@@ -2527,7 +2536,12 @@ makepatchsum mps: uptodate-digest
 			esac;						\
 		done);							\
 	fi;								\
-	${MV} $$newfile ${DISTINFO_FILE}
+	if cmp -s $$newfile ${DISTINFO_FILE}; then			\
+		${RM} -f $$newfile;					\
+		${ECHO_MSG} "=> distinfo file unchanged.";		\
+	else								\
+		${MV} $$newfile ${DISTINFO_FILE};			\
+	fi
 .endif
 
 # This target is done by invoking a sub-make so that DIGEST_FILE gets
