@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2000/08/11 20:20:38 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2000/11/03 00:16:36 jlam Exp $
 
 DISTNAME=		boost_all
-PKGNAME=		boost-1.17.0
+PKGNAME=		boost-1.18.1
+WRKSRC=			${WRKDIR}/boost_1_18_1
 CATEGORIES=		devel
 MASTER_SITES=		http://www.boost.org/
 EXTRACT_SUFX=		.zip
@@ -12,11 +13,10 @@ HOMEPAGE=		http://www.boost.org/
 # Need working <limits> and <memory> not present in NetBSD yet.
 DEPENDS+=		sgi-stl>=3.2:../../devel/sgi-stl
 
-USE_LIBTOOL=		# defined
-
 DIST_SUBDIR=		${PKGNAME}
-NO_WRKSUBDIR=		# defined
+EXTRACT_CMD=		unzip -aaoq ${DOWNLOADED_DISTFILE}
 
+USE_LIBTOOL=		# defined
 BOOST_VERS=		0:0
 MAKE_ENV+=		BOOST_VERS="${BOOST_VERS}"
 
@@ -29,18 +29,16 @@ HTMLDIR=		${PREFIX}/share/doc/html/boost
 # 1) Extract everything in text mode with CR/LF -> LF conversions.
 # 2) Extract binary files in binary mode.
 #
-# We remove the dir_it library since our GCC (egcs-1.1.2) doesn't
-# support namespaces and hence can't compile `struct iterator' needed
-# by dir_it.
+# Even though our current GCC (egcs-1.1.2) doesn't support namespaces and
+# hence can't compile some of the C++ constructs used by some of the Boost
+# libraries, we install all of it anyway, just in case there is an installed
+# compiler (like gcc-2.95.2) capable of compiling them.
 #
 post-extract:
-	cd ${WRKSRC} && unzip -aaLo \
-		${_DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
-	cd ${WRKSRC} && unzip -aCLo \
+	cd ${WRKDIR} && unzip -aCoq \
 		${_DISTDIR}/${DISTNAME}${EXTRACT_SUFX} "*.gif" "*.jpg" "*.zip"
-	cd ${WRKSRC} && unzip -aaCLu \
+	cd ${WRKSRC} && unzip -aaCqu \
 		libs/pri_queue/boost-heap-1.0.zip "boost/*"
-	${RM} -rf ${WRKSRC}/libs/dir_it
 
 do-configure:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}
