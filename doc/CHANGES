@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5849 2004/05/06 22:37:35 reed Exp $
+$NetBSD: CHANGES,v 1.5850 2004/05/07 04:24:38 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2388,3 +2388,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated scrollkeeper to 0.3.14nb3 [minskim 2004-05-06]
 	Updated lynx to 2.5.8.2 [wiz 2004-05-06]
 	Updated exim3 to 3.36nb1 [reed 2004-05-06]
+	Updated gmpc to 0.10.2nb1 [grant 2004-05-07]
