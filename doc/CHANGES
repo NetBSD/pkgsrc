@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3742 2003/10/27 16:55:32 hubertf Exp $
+$NetBSD: CHANGES,v 1.3743 2003/10/27 18:00:43 manu Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4256,3 +4256,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated silc-client to 0.9.14 [salo 2003-10-27]
 	Updated silc-client-icb to 0.14nb3 [salo 2003-10-27]
 	Updated vtun to 2.6nb1 [hubertf 2003-10-27]
+	Added libsnert-1.23 [manu 2003-10-27]
+	Added milter-sender-0.41 [manu 2003-10-27]
