@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/20 04:05:47 minskim Exp $
+$NetBSD: distinfo,v 1.2 2004/11/29 15:04:34 wiz Exp $
 
-SHA1 (Class-Accessor-0.18.tar.gz) = c397f35a444806e8d36a73df2fc077bcc4b62559
-Size (Class-Accessor-0.18.tar.gz) = 10083 bytes
+SHA1 (Class-Accessor-0.19.tar.gz) = 8738d12a6076cab8dca882d3e2a498653beab60e
+Size (Class-Accessor-0.19.tar.gz) = 10238 bytes

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/20 04:05:47 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/29 15:04:34 wiz Exp $
 #
 
-DISTNAME=	Class-Accessor-0.18
+DISTNAME=	Class-Accessor-0.19
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5cac
 CATEGORIES=	devel perl5
