@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.44 2005/01/19 20:58:01 tv Exp $
+# $NetBSD: pre-build,v 1.45 2005/03/29 00:55:50 hubertf Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -53,6 +53,18 @@ fi
 
 LOCALBASE=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=LOCALBASE )`;
 X11BASE=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=X11BASE )`;
+DISTDIR=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=DISTDIR )`;
+
+# Make sure the pkg-vulnerabilities file is up to date
+echo "Making sure vulnerability-list is upto date:"
+if [ -z "$UPDATE_VULNERABILITY_LIST" -o "$UPDATE_VULNERABILITY_LIST" = yes ]; then
+       ( cd ${USR_PKGSRC}/security/audit-packages                       \
+         && ${BMAKE} bulk-install                                       \
+         && env PKGVULNDIR=${DISTDIR} download-vulnerability-list )
+       echo 'done.'
+else
+       echo '(skipped)'
+fi
 
 # On non-NetBSD platforms we need to keep the bootstrap-files!
 if [ x"$BMAKE" = x"bmake" ]; then
@@ -173,7 +185,6 @@ fi
 #
 # Remove old/broken distfiles and binary packages
 #
-DISTDIR=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=DISTDIR )`;
 PACKAGES=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=PACKAGES )`;
 
 case "$LINTPKGSRC_CACHE$PRUNEDISTFILES$PRUNEPACKAGES" in
