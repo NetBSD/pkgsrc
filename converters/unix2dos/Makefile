@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2004/11/13 21:28:27 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2004/12/29 00:48:37 xtraeme Exp $
 # FreeBSD Id: ports/converters/unix2dos/Makefile,v 1.5 2000/07/04 10:31:42 sobomax Exp
 
 DISTNAME=	unix2dos-1.2
 CATEGORIES=	converters
-MASTER_SITES=	http://www.fisicc-ufm.edu/~obonilla/files/		\
+MASTER_SITES=	${MASTER_SITE_BACKUP} \
+		http://www.fisicc-ufm.edu/~obonilla/files/		\
 		ftp://ftp.guug.org/pub/
 
 MAINTAINER=	zuntum@NetBSD.org
