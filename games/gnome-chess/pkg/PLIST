@@ -1,0 +1,29 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/11/17 22:10:45 tron Exp $
+bin/gnome-chess
+share/gnome/apps/Games/gnome-chess.desktop
+share/locale/da/LC_MESSAGES/gnome-chess.mo
+share/locale/de/LC_MESSAGES/gnome-chess.mo
+share/locale/es/LC_MESSAGES/gnome-chess.mo
+share/locale/fr/LC_MESSAGES/gnome-chess.mo
+share/locale/nl/LC_MESSAGES/gnome-chess.mo
+share/locale/no/LC_MESSAGES/gnome-chess.mo
+share/locale/pl/LC_MESSAGES/gnome-chess.mo
+share/locale/pt_BR/LC_MESSAGES/gnome-chess.mo
+share/locale/ru/LC_MESSAGES/gnome-chess.mo
+share/locale/sv/LC_MESSAGES/gnome-chess.mo
+share/mime-info/gnome-chess.keys
+share/mime-info/gnome-chess.mime
+share/pixmaps/gnome-chess.png
+share/pixmaps/gnome-chess/B.png
+share/pixmaps/gnome-chess/K.png
+share/pixmaps/gnome-chess/N.png
+share/pixmaps/gnome-chess/P.png
+share/pixmaps/gnome-chess/Q.png
+share/pixmaps/gnome-chess/R.png
+share/pixmaps/gnome-chess/b.png
+share/pixmaps/gnome-chess/k.png
+share/pixmaps/gnome-chess/n.png
+share/pixmaps/gnome-chess/p.png
+share/pixmaps/gnome-chess/q.png
+share/pixmaps/gnome-chess/r.png
+@dirrm share/pixmaps/gnome-chess
