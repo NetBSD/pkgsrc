@@ -1,12 +1,0 @@
-$NetBSD: patch-ah,v 1.1 1999/11/01 10:23:45 sakamoto Exp $
-
---- ./uip/rcvtty.c.orig	Tue Feb  9 20:30:00 1999
-+++ ./uip/rcvtty.c	Mon Nov  1 19:13:30 1999
-@@ -30,4 +30,7 @@
- #include	<locale.h>
- #endif
-+#ifdef	UNISTD
-+#include <unistd.h>
-+#endif
- 
- /*  */
