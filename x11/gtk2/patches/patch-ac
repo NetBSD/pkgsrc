@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.10 2004/04/24 22:08:55 danw Exp $
+$NetBSD: patch-ac,v 1.11 2005/03/02 15:39:06 wiz Exp $
 
---- gdk/x11/gdkspawn-x11.c.orig	Mon Apr 12 23:01:39 2004
+--- gdk/x11/gdkspawn-x11.c.orig	2004-08-09 22:14:43.000000000 +0200
 +++ gdk/x11/gdkspawn-x11.c
-@@ -27,6 +27,11 @@
+@@ -28,6 +28,11 @@
  #include <glib.h>
  #include <gdk/gdk.h>
  
