@@ -1,9 +1,9 @@
-$NetBSD: patch-bo,v 1.4 2003/11/27 00:03:53 taya Exp $
+$NetBSD: patch-bo,v 1.5 2004/01/17 00:04:49 taya Exp $
 
 diff -ru ../Orig/mozilla/nsprpub/configure.in ./nsprpub/configure.in
---- ../Orig/mozilla/nsprpub/configure.in	2003-08-30 09:18:18.000000000 +0900
-+++ ./nsprpub/configure.in	2003-10-16 15:37:46.000000000 +0900
-@@ -932,6 +932,9 @@
+--- ../Orig/mozilla/nsprpub/configure.in	2003-12-16 04:58:56.000000000 +0900
++++ ./nsprpub/configure.in	2004-01-16 23:17:58.000000000 +0900
+@@ -930,6 +930,9 @@
      DSO_LDOPTS='-shared -Wl,-soname -Wl,$(notdir $@)'
      MDCPUCFG_H=_freebsd.cfg
      PR_MD_CSRCS=freebsd.c
@@ -13,7 +13,7 @@ diff -ru ../Orig/mozilla/nsprpub/configure.in ./nsprpub/configure.in
      ;;
  
  *-hpux*)
-@@ -2175,7 +2178,14 @@
+@@ -2182,7 +2185,14 @@
  	        _PTHREAD_LDFLAGS="-lc_r"
  	    fi
  	    ;;
