@@ -1,7 +1,10 @@
-$NetBSD: patch-ac,v 1.4 1999/02/10 15:20:06 frueauf Exp $
+$NetBSD: patch-ac,v 1.5 1999/03/17 10:47:42 agc Exp $
 
---- Makefile.X.orig	Wed Nov 20 03:19:24 1996
-+++ Makefile.X	Fri Feb 20 08:11:35 1998
+Add UVM definition for NetBSD
+Correct the install commands
+
+--- Makefile.X.orig	Wed Nov 20 02:19:24 1996
++++ Makefile.X	Wed Mar 17 10:21:02 1999
 @@ -55,6 +55,12 @@
  TERMCAP = %termcap%
  
