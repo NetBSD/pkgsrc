@@ -1,0 +1,55 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/07/15 06:50:36 rh Exp $
+
+--- Makefile.orig	Thu Jul  6 23:34:32 2000
++++ Makefile	Thu Jul  6 23:35:19 2000
+@@ -1,10 +1,7 @@
+ # Makefile for CM11, a program to control an X10 CM11A computer interface.
+-# Makefile $Revision: 1.1.1.1 $
+-BIN = /usr/local/bin
+-MAN = /usr/local/man/man1
+-MAN5 = /usr/local/man/man5
+-GROUP = sys
+-OWNER = bin
++BIN = ${PREFIX}/bin
++MAN = ${PREFIX}/man/man1
++MAN5 = ${PREFIX}/man/man5
+ 
+ 
+ #	set DFLAGS equal to:
+@@ -22,10 +19,10 @@
+ ##  For LINUX, use the following
+ #DFLAGS = -DSYSV -DPOSIX -DHAS_ITIMER -DLINUX 
+ CC = gcc
+-CFLAGS = -g -O $(DFLAGS) -Wall
+-DFLAGS = -DSYSV -DPOSIX -DHAS_ITIMER -DLINUX -DHASSELECT
++#CFLAGS = -g -O $(DFLAGS) -Wall
++#DFLAGS = -DSYSV -DPOSIX -DHAS_ITIMER -DLINUX -DHASSELECT
+ #LIBS = -lm -lc_s		# uncomment if using shared libraries
+-LIBS = -lm -lc			# uncoment if not using shared libraries
++#LIBS = -lm -lc			# uncoment if not using shared libraries
+ 
+ ##  For solaris, use the following defines in addition to what's above
+ # CC = gcc
+@@ -41,6 +38,12 @@
+ # LIBS = -lm -lc
+ # DFLAGS= -DHASSELECT
+ 
++## if you're using NetBSD:
++CC = gcc
++CFLAGS = -g -O $(DFLAGS) -Wall
++LIBS = -lm -lc
++DFLAGS= -DHASSELECT -DPOSIX -DNETBSD -DLOCKDIR=\"/var/spool/lock\"
++
+ ## for Alpha, OSF1 v4.0 , Use this
+ # GROUP = uucp
+ # CC = gcc
+@@ -96,9 +99,7 @@
+ 
+ $(BIN)/heyu:	heyu
+ 	cp heyu $(BIN)
+-	chgrp $(GROUP) $(BIN)/heyu
+ 	chmod 755 $(BIN)/heyu
+-	chown $(OWNER) $(BIN)/heyu
+ 
+ $(MAN)/heyu.1: heyu.1
+ 	cp heyu.1 $(MAN)

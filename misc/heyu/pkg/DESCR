@@ -1,0 +1,14 @@
+  Heyu is a program that allows your computer to control devices by
+transmitting information over your house's power lines.
+
+The program will work with: 
+	- The CM11A and CM12A made by the X10 corporation. The "Activehome" 
+	  package (CK11) includes the CM11A. 
+	- The Home Director package marketed by IBM. 
+	- The Home Control package marketed by Radio Shack (model 61-2417). 
+
+It will not work with: 
+	- CK17 Firecracker (computer controlled RF transmitter) 
+	- CP290 (older style computer - X10 interface) 
+	- CP10 - A power strip with X10 built in ??? 
+	- Extend 1.1 (look for newer than 1.2beta4) 
