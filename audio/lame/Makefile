@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2001/06/12 20:33:01 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2001/07/31 14:23:01 drochner Exp $
 #
 
-VERS=		3.87
+VERS=		3.89
 DISTNAME=	lame${VERS}beta
 PKGNAME=	lame-${VERS}
-WRKSRC=		${WRKDIR}/lame${VERS}
+WRKSRC=		${WRKDIR}/lame-${VERS}
 CATEGORIES=	audio
 MASTER_SITES=	ftp://lame.sourceforge.net/pub/lame/src/
 
@@ -14,20 +14,11 @@ COMMENT=	Fast, high quality MP3 encoder
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
+USE_LIBTOOL=	yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 LICENSE=	fee-based-commercial-use
 
 CONFIGURE_ARGS+=	--without-vorbis
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/lame ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/doc/man/lame.1 ${PREFIX}/man/man1/lame.1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/lame
-	for f in contributors.html examples.html history.html id3.html	\
-		index.html lame.css modes.html node5.html node6.html	\
-		node7.html switchs.html; do				\
-		${INSTALL_DATA} ${WRKSRC}/doc/html/$$f			\
-			${PREFIX}/share/doc/html/lame;  		\
-	done
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -43,8 +34,6 @@ DEPENDS+=	libffm-*:../../math/libffm
 CFLAGS+=	-O2 -Wall -fomit-frame-pointer -ffast-math -funroll-loops \
 		-mfp-regs -fschedule-insns -fschedule-insns2 		  \
 		-finline-functions -DFLOAT=double
-# optimized libffm (free fast math library)
-LIBS+=		-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -lffm -lm
 .endif
 
 .include "../../mk/bsd.pkg.mk"
