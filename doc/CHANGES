@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7237 2004/09/24 21:21:57 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.7238 2004/09/24 23:47:38 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4416,3 +4416,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated global to 4.8 [abs 2004-09-24]
 	Added tk-BWidget-1.7.0 [dmcmahill 2004-09-24]
 	Added tcl-itcl-current-20040920 [dmcmahill 2004-09-24]
+	Added grig-0.2.2 [wulf 2004-09-24]
