@@ -1,4 +1,4 @@
-/*	$NetBSD: futil.c,v 1.4 2003/09/23 07:13:46 grant Exp $	*/
+/*	$NetBSD: futil.c,v 1.5 2003/09/23 13:22:38 grant Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: futil.c,v 1.7 1997/10/08 07:45:39 charnier Exp";
 #else
-__RCSID("$NetBSD: futil.c,v 1.4 2003/09/23 07:13:46 grant Exp $");
+__RCSID("$NetBSD: futil.c,v 1.5 2003/09/23 13:22:38 grant Exp $");
 #endif
 #endif
 
@@ -81,6 +81,7 @@ void
 apply_perms(char *dir, char *arg)
 {
 	char   *cd_to;
+	char	owner_group[128];
 
 	if (!dir || *arg == '/')/* absolute path? */
 		cd_to = "/";
@@ -92,9 +93,14 @@ apply_perms(char *dir, char *arg)
 			warnx("couldn't change modes of '%s' to '%s'", arg,
 			    Mode);
 	if (Owner != NULL && Group != NULL) {
-		if (vsystem("cd %s && %s -R %s.%s %s", cd_to, CHOWN_CMD, Owner,
-		    Group, arg))
-			warnx("couldn't change owner/group of '%s' to '%s.%s'",
+		if (snprintf(owner_group, sizeof(owner_group),
+			     "%s:%s", Owner, Group) > sizeof(owner_group)) {
+			warnx("'%s:%s' is too long (%d max)",
+			      Owner, Group, sizeof(owner_group));
+			return;
+		}
+		if (fcexec(cd_to, CHOWN_CMD, "-R", owner_group, arg))
+			warnx("couldn't change owner/group of '%s' to '%s:%s'",
 			    arg, Owner, Group);
 		return;
 	}
