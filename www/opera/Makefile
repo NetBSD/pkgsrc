@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2001/05/11 09:20:55 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2001/05/15 12:01:16 tron Exp $
 
-DISTNAME=	opera-5.0b8
+DISTNAME=	opera-5.0.1
 CATEGORIES=	www
-MASTER_SITES=	http://opera.online.no/linux/tgz/ \
-		ftp://ftp.opera.com/pub/opera/linux/  \
-		ftp://gd.tuwien.ac.at/infosys/browsers/opera/linux/tgz/tgz/ \
-		ftp://sunsite.cnlab-switch.ch/mirror/opera/linux/tgz/
+MASTER_SITES=	http://opera.online.no/linux/RPM/500/ \
+		ftp://ftp.opera.com/pub/opera/linux/500/
 DISTFILES=	${RPMFILES}
 
 MAINTAINER=	tron@netbsd.org
@@ -37,7 +35,7 @@ DEPENDS+=	linuxppc_lib>=2000.4.2:../../emulators/linuxppc_lib
 OPERA_ARCH=	ppc
 .endif
 
-RPMFILES=	opera-static-5.0b8-20010426.023.1.${OPERA_ARCH}.rpm
+RPMFILES=	opera-static-5.0-1.${OPERA_ARCH}.rpm
 
 post-install:
 	${LN} -fs ../${EMULSUBDIR}/usr/bin/opera ${PREFIX}/bin
