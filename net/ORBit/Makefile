@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2003/07/21 17:10:18 martti Exp $
+# $NetBSD: Makefile,v 1.92 2003/08/03 09:02:24 seb Exp $
 #
 
 DISTNAME=		ORBit-0.${ORBIT_MAJOR}.${ORBIT_MINOR}
@@ -39,6 +39,7 @@ ORBIT_MAJOR=		5
 ORBIT_MINOR=		15
 PLIST_SUBST+=		ORBIT_MAJOR=${ORBIT_MAJOR} ORBIT_MINOR=${ORBIT_MINOR}
 
+USE_NEW_TEXINFO=	YES
 INFO_FILES=		libIDL.info
 
 .include "../../devel/gettext-lib/buildlink2.mk"
@@ -46,5 +47,4 @@ INFO_FILES=		libIDL.info
 .include "../../security/tcp_wrappers/buildlink2.mk"
 
 .include "../../mk/pthread.buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

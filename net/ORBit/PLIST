@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/01/04 23:46:49 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/08/03 09:02:25 seb Exp $
 bin/libIDL-config
 bin/name-client
 bin/old-name-server
@@ -64,9 +64,7 @@ include/orbit-1.0/orb/poa.h
 include/orbit-1.0/orb/sequences.h
 include/orbit-1.0/orb/typecode.h
 include/orbit-1.0/orbit-idl2.h
-@unexec ${INSTALL_INFO} --delete %D/info/libIDL.info %D/info/dir
 info/libIDL.info
-@exec ${INSTALL_INFO} %D/info/libIDL.info %D/info/dir
 lib/libIDL.a
 lib/libIDL.la
 lib/libIDL.so
