@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.3 2004/12/23 18:50:23 ben Exp $ -->
+<!-- $NetBSD: using.xml,v 1.4 2004/12/23 18:57:03 ben Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
   <title>Using pkgsrc</title>
@@ -101,7 +101,7 @@
 
       <para>You can overwrite some of the major distribution sites to fit to sites
         that are close to your own.  Have a look at
-        <filename>pkgsrc/mk/bsd.pkg.defaults.mk</filename> to find some examples
+        <filename>pkgsrc/mk/defaults/mk.conf</filename> to find some examples
         - in particular, look for the <varname>MASTER_SORT</varname>,
         <varname>MASTER_SORT_REGEX</varname> and
         <varname>INET_COUNTRY</varname> definitions.  This may save some of your
@@ -159,7 +159,7 @@
 
       <para>Some packages look in <filename>/etc/mk.conf</filename> to alter some
         configuration options at build time.  Have a look at
-        <filename>pkgsrc/mk/bsd.pkg.defaults.mk</filename> to
+        <filename>pkgsrc/mk/defaults/mk.conf</filename> to
         get an overview of what will be set there by default.  Environment
         variables such as <varname>LOCALBASE</varname>
         can be set in <filename>/etc/mk.conf</filename> to
@@ -205,7 +205,7 @@
         <varname>BINPKG_SITES</varname>, which defaults to
         ftp.NetBSD.org. Any flags that should be added to &man.pkg.add.1; can be put
         into <varname>BIN_INSTALL_FLAGS</varname>.
-        See <filename>pkgsrc/mk/bsd.pkg.defaults.mk</filename> for more details.</para>
+        See <filename>pkgsrc/mk/defaults/mk.conf</filename> for more details.</para>
 
       <para>A final word of warning: If you setup a system that has a non-standard
         setting for <varname>LOCALBASE</varname>, be sure to set that
