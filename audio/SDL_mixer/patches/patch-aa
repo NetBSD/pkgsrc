@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2003/05/11 02:23:19 salo Exp $
+$NetBSD: patch-aa,v 1.3 2005/01/05 12:20:37 adam Exp $
 
---- timidity/config.h.orig	Mon Mar 24 00:04:57 2003
-+++ timidity/config.h	Mon Mar 24 00:06:06 2003
-@@ -206,7 +206,7 @@
+--- timidity/config.h.orig	2004-12-16 05:20:14.000000000 +0000
++++ timidity/config.h
+@@ -223,7 +223,7 @@ typedef char int8;
  
  /* You could specify a complete path, e.g. "/etc/timidity.cfg", and
     then specify the library directory in the configuration file. */
