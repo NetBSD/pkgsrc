@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.26 2004/07/30 15:50:37 minskim Exp $
+# $NetBSD: Makefile,v 1.27 2004/11/10 14:13:21 adam Exp $
 
-DISTNAME=		iozone3_217
-PKGNAME=		iozone-3.217
-CATEGORIES=		benchmarks
-MASTER_SITES=		http://www.iozone.org/src/current/
-EXTRACT_SUFX=		.tar
+DISTNAME=	iozone3_226
+PKGNAME=	iozone-3.226
+CATEGORIES=	benchmarks
+MASTER_SITES=	http://www.iozone.org/src/current/
+EXTRACT_SUFX=	.tar
 
-MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://www.iozone.org/
-COMMENT=		Benchmark for file read and write speed
+MAINTAINER=	root@garbled.net
+HOMEPAGE=	http://www.iozone.org/
+COMMENT=	Benchmark for file read and write speed
 
-RESTRICTED=		"Publication of derivative works not allowed"
+RESTRICTED=	"Publication of derivative works not allowed"
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
