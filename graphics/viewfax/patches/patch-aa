@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/08/17 12:28:36 rh Exp $
+
+--- Imakefile.orig	Mon Oct 16 20:18:38 1995
++++ Imakefile	Tue Aug 17 13:48:55 1999
+@@ -5,9 +5,9 @@
+    complain about this.  Sheesh! :-) */
+ HELPDIR = ${USRLIBDIR}/X11
+ #else
+-BINDIR = /usr/local/bin		/* where you want the binary installed */
+-MANDIR = /usr/local/man/man1	/* where you want the man file installed */
+-HELPDIR = /usr/local/lib	/* where you want the help file installed */
++BINDIR = ${PREFIX}/bin		/* where you want the binary installed */
++MANDIR = ${PREFIX}/man/cat1	/* where you want the man file installed */
++HELPDIR = ${PREFIX}/libdata/viewfax	/* where you want the help file installed */
+ #endif
+ 
+ DEFINES = -DHELPFILE=\"$(HELPDIR)/viewfax.tif\"
