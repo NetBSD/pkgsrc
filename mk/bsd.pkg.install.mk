@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.35 2002/10/20 09:10:42 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.36 2002/10/20 18:01:47 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -111,7 +111,13 @@ USE_USERGROUP=		YES
 # directories listed in the PLIST.  This may be used to make certain files
 # set-uid or to change the ownership or a directory.
 #
+# SETUID_ROOT_PERMS is a convenience definition to note an executable is
+# meant to be setuid-root, and should be used as follows:
+#
+#	SPECIAL_PERMS+=	/path/to/suidroot ${SETUID_ROOT_PERMS}
+#
 SPECIAL_PERMS?=		# empty
+SETUID_ROOT_PERMS?=	${ROOT_USER} ${ROOT_GROUP} 4711
 FILES_SUBST+=		SPECIAL_PERMS=${SPECIAL_PERMS:Q}
 
 # CONF_FILES are pairs of example and true config files, used much like
