@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/07/24 02:32:17 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2002/07/24 20:07:51 hubertf Exp $
 
 DISTNAME=	intlfonts-1.2
 PKGREVISION=	1
@@ -36,7 +36,7 @@ EXTRA_FONTS=	Chinese.BIG	\
 
 MISC_FILES=	README.split
 
-DIST_SUBDIR=	${PKGNAME}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_ONLY=	${FONT_SETS:S/$/${EXTRACT_SUFX}/}
 USE_X11BASE=	yes
 
