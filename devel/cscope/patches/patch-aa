@@ -1,0 +1,177 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/04/20 07:03:55 itojun Exp $
+Index: common/constants.h
+===================================================================
+RCS file: /cvsroot/cscope/cscope/common/constants.h,v
+retrieving revision 1.1.1.1
+diff -u -r1.1.1.1 constants.h
+--- common/constants.h	2000/04/18 13:16:41	1.1.1.1
++++ common/constants.h	2000/04/20 06:59:58
+@@ -135,11 +135,13 @@
+ #define cbreak()	crmode()			/* name change */
+ #endif
+ 
++#ifndef __NetBSD__
+ #if UNIXPC
+ #define	erasechar()	(_tty.c_cc[VERASE])		/* equivalent */
+ #define	killchar()	(_tty.c_cc[VKILL])		/* equivalent */
+ #else
+ #define	erasechar()	(_tty.sg_erase)			/* equivalent */
+ #define	killchar()	(_tty.sg_kill)			/* equivalent */
++#endif
+ #endif
+ #endif
+Index: common/display.c
+===================================================================
+RCS file: /cvsroot/cscope/cscope/common/display.c,v
+retrieving revision 1.1.1.1
+diff -u -r1.1.1.1 display.c
+--- common/display.c	2000/04/18 13:16:42	1.1.1.1
++++ common/display.c	2000/04/20 06:59:58
+@@ -43,6 +43,9 @@
+ #endif
+ #include <curses.h>	/* LINES, COLS */
+ #include <setjmp.h>	/* jmp_buf */
++#ifdef __NetBSD__
++#include <errno.h>
++#endif
+ 
+ static char const rcsid[] = "$Id: patch-aa,v 1.1.1.1 2000/04/20 07:03:55 itojun Exp $";
+ 
+Index: common/exec.c
+===================================================================
+RCS file: /cvsroot/cscope/cscope/common/exec.c,v
+retrieving revision 1.1.1.1
+diff -u -r1.1.1.1 exec.c
+--- common/exec.c	2000/04/18 13:16:42	1.1.1.1
++++ common/exec.c	2000/04/20 06:59:59
+@@ -37,7 +37,11 @@
+ 
+ #include "global.h"
+ #include <stdarg.h>
++#ifdef __NetBSD__
++#include <sys/wait.h>
++#else
+ #include <wait.h>
++#endif
+ #include <curses.h>
+ 
+ static char const rcsid[] = "$Id: patch-aa,v 1.1.1.1 2000/04/20 07:03:55 itojun Exp $";
+@@ -46,7 +50,9 @@
+ static	SIGTYPE	(*oldsighup)();		/* old value of hangup signal */
+ static	SIGTYPE	(*oldsigstp)();
+ 
++#ifndef __NetBSD__
+ typedef int	pid_t;
++#endif
+ static	int	join(), myexecvp();
+ static	pid_t	myfork();
+ 
+Index: common/global.h
+===================================================================
+RCS file: /cvsroot/cscope/cscope/common/global.h,v
+retrieving revision 1.1.1.1
+diff -u -r1.1.1.1 global.h
+--- common/global.h	2000/04/18 13:16:43	1.1.1.1
++++ common/global.h	2000/04/20 06:59:59
+@@ -46,10 +46,14 @@
+ #include "invlib.h"	/* inverted index library */
+ #include "library.h"	/* library function return values */
+ 
++#ifdef __NetBSD__
++#define SIGTYPE void
++#else
+ #if SVR2 || BSD && !sun
+ #define SIGTYPE int
+ #else
+ #define SIGTYPE void
++#endif
+ #endif
+ 
+ typedef	enum	{		/* boolean data type */
+Index: common/help.c
+===================================================================
+RCS file: /cvsroot/cscope/cscope/common/help.c,v
+retrieving revision 1.1.1.1
+diff -u -r1.1.1.1 help.c
+--- common/help.c	2000/04/18 13:16:43	1.1.1.1
++++ common/help.c	2000/04/20 06:59:59
+@@ -132,6 +132,7 @@
+ 					++ln;
+ 				}
+ 			}
++			move(ln, 0);
+ 			(void) addstr(*tp++);
+ 		}
+ 		else {
+Index: common/input.c
+===================================================================
+RCS file: /cvsroot/cscope/cscope/common/input.c,v
+retrieving revision 1.1.1.1
+diff -u -r1.1.1.1 input.c
+--- common/input.c	2000/04/18 13:16:43	1.1.1.1
++++ common/input.c	2000/04/20 06:59:59
+@@ -38,6 +38,9 @@
+ #include "global.h"
+ #include <curses.h>
+ #include <setjmp.h>	/* jmp_buf */
++#ifdef __NetBSD__
++#include <termios.h>
++#endif
+ 
+ static char const rcsid[] = "$Id: patch-aa,v 1.1.1.1 2000/04/20 07:03:55 itojun Exp $";
+ 
+Index: common/library.h
+===================================================================
+RCS file: /cvsroot/cscope/cscope/common/library.h,v
+retrieving revision 1.1.1.1
+diff -u -r1.1.1.1 library.h
+--- common/library.h	2000/04/18 13:16:43	1.1.1.1
++++ common/library.h	2000/04/20 06:59:59
+@@ -53,7 +53,12 @@
+ char	*ctime(), *getcwd(), *getenv(), *mktemp();
+ char	*strcat(), *strcpy(), *strncpy(), *strpbrk(), *strchr(), *strrchr();
+ char	*strtok();
+-long	lseek(), time();
++#if BSD
++off_t	lseek();
++time_t	time();
++#else
++long	lseek();
++#endif
+ unsigned sleep();
+ void	exit(), free(), qsort();
+ #if BSD
+Index: common/vpaccess.c
+===================================================================
+RCS file: /cvsroot/cscope/cscope/common/vpaccess.c,v
+retrieving revision 1.1.1.1
+diff -u -r1.1.1.1 vpaccess.c
+--- common/vpaccess.c	2000/04/18 13:16:44	1.1.1.1
++++ common/vpaccess.c	2000/04/20 06:59:59
+@@ -37,7 +37,7 @@
+ #include <stdio.h>
+ #include <unistd.h>
+ #include "vp.h"
+-#ifdef CCS
++#if defined(CCS) || defined(__NetBSD__)
+ #include <sys/types.h>
+ #else
+ typedef int mode_t;
+Index: i386/Makefile
+===================================================================
+RCS file: /cvsroot/cscope/cscope/i386/Makefile,v
+retrieving revision 1.2
+diff -u -r1.2 Makefile
+--- i386/Makefile	2000/04/19 16:44:45	1.2
++++ i386/Makefile	2000/04/20 06:59:59
+@@ -37,8 +37,8 @@
+ 
+ COMCS= ../common
+ INCLIST= -I$(COMCS)
+-DEFLIST= -DLinux
+-LIBS= -lncurses -lfl
++DEFLIST= -DBSD
++LIBS= -lcurses -lfl
+ 
+ INS= install
+ INSDIR=/usr/local/bin
