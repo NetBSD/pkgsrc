@@ -1,4 +1,5 @@
-$NetBSD: patch-ae,v 1.1.1.1 1998/10/13 00:37:33 garbled Exp $
+$NetBSD: patch-ae,v 1.2 2001/12/19 10:26:47 tron Exp $
+
 --- setupedit.hc.orig	Thu Sep 24 10:09:51 1998
 +++ setupedit.hc	Thu Sep 24 10:10:11 1998
 @@ -36,11 +36,11 @@
