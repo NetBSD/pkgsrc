@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/04/20 06:58:19 rh Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/13 21:47:29 jmc Exp $
 #
 
 DISTNAME=		PanoTools
@@ -67,7 +67,7 @@ do-install:
 
 .include "../../emulators/suse_linux/Makefile.application"
 
-.if ${OPSYS} == NetBSD
+.if ${OPSYS} == NetBSD && ${SUSE_VERSION} != "6.4"
 DEPENDS+=		suse_base>=${SUSE_VERSION}:../../emulators/${SUSE_DIR_PREFIX}_base
 DEPENDS+=		suse_libjpeg>=${SUSE_VERSION}:../../emulators/${SUSE_DIR_PREFIX}_libjpeg
 DEPENDS+=		suse_libpng>=${SUSE_VERSION}:../../emulators/${SUSE_DIR_PREFIX}_libpng
