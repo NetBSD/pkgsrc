@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/04/21 12:53:29 frueauf Exp $
+# $NetBSD: Makefile,v 1.8 2001/04/21 13:52:25 wiz Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -18,7 +18,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CONFIGURE_ARGS+=	--with-included-gettext
 
 PATCHDIR=		${.CURDIR}/../../devel/gettext/patches
-PATCH_SUM_FILE=		${.CURDIR}/../../devel/gettext/files/patch-sum
+DISTINFO_FILE=		${.CURDIR}/../../devel/gettext/distinfo
 INSTALL_TARGET=		install-exec
 
 do-build:
