@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.1 2002/07/18 02:19:31 rh Exp $
+$NetBSD: patch-ah,v 1.2 2002/08/25 18:38:29 jlam Exp $
 
 --- gthread.pc.in.orig	Thu Nov 30 11:15:33 2000
 +++ gthread.pc.in

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.10 2002/05/31 06:24:53 grant Exp $
+# $NetBSD: buildlink.mk,v 1.11 2002/08/25 18:38:44 jlam Exp $
 #
 # This Makefile fragment is included by packages that use pth.
 #

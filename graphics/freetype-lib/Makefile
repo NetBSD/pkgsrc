@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2001/09/09 04:06:08 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/08/25 18:38:59 jlam Exp $
 
 PKGNAME=		freetype-lib-${FT_VERS}
 COMMENT=		TrueType font rendering engine and library API
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 CONFIGURE_ARGS+=	--without-x
 
 .include "Makefile.common"

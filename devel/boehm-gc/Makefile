@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/11/19 20:11:00 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2002/08/25 18:38:25 jlam Exp $
 # FreeBSD Id: Makefile,v 1.1 1996/11/16 01:51:25 jdp Exp
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.hpl.hp.com/personal/Hans_Boehm/gc/
 COMMENT=		Garbage collection and memory leak detection for C and C++
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 
 MAKE_ENV+=		COPTS="${CFLAGS}"

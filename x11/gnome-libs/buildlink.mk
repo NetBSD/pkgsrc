@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.17 2002/07/14 01:19:15 rh Exp $
+# $NetBSD: buildlink.mk,v 1.18 2002/08/25 18:40:31 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gnome-libs.
 #

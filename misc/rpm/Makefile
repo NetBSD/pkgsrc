@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2002/04/04 19:56:37 jdolecek Exp $
+# $NetBSD: Makefile,v 1.34 2002/08/25 18:39:29 jlam Exp $
 #
 
 DISTNAME=	rpm-2.5.4
@@ -16,7 +16,7 @@ CONFLICTS+=		rpm2cpio<1.0nb1
 
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
@@ -26,7 +26,7 @@ FILES_SUBST+=		MKDIR=${MKDIR:Q}
 FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
 post-configure:
-	cd ${WRKSRC}/po && ( mv cz.mo cs.mo; mv cz.po cs.po )
+	cd ${WRKSRC}/po && ( ${MV} cz.mo cs.mo; ${MV} cz.po cs.po )
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/rpm
@@ -36,6 +36,6 @@ pre-install:
 post-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../devel/zlib/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/zlib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-$NetBSD: patch-as,v 1.1 2002/06/22 04:38:32 jlam Exp $
+$NetBSD: patch-as,v 1.2 2002/08/25 18:40:41 jlam Exp $
 
 --- config/cf/Imake.cf.orig	Sat Jun 22 00:09:11 2002
 +++ config/cf/Imake.cf

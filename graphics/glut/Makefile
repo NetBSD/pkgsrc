@@ -1,41 +1,34 @@
-# $NetBSD: Makefile,v 1.11 2001/09/27 23:18:12 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.12 2002/08/25 18:39:08 jlam Exp $
 
-.include "../Mesa/Makefile.common"
-
-DISTNAME=		Mesa-${MESA_VERSION}
-PKGNAME=		${DISTNAME:S/Mesa/glut/}
-CATEGORIES=		graphics
-MASTER_SITES= 		${MASTER_SITE_SOURCEFORGE:=mesa3d/}
-EXTRACT_SUFX=		.tar.bz2
-DISTFILES+=		${DISTNAME:S/Mesa/MesaLib/}${EXTRACT_SUFX}
-DISTFILES+=		${DISTNAME:S/Mesa/MesaDemos/}${EXTRACT_SUFX}
-
+PKGNAME=		${DISTNAME:S/MesaLib/glut/}
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=		${DISTNAME:S/MesaLib/MesaDemos/}${EXTRACT_SUFX}
+WRKSRC=			${WRKDIR}/${DISTNAME:S/Lib//}
 MAINTAINER=		rh@netbsd.org
-HOMEPAGE=		http://www.mesa3d.org/
 COMMENT=		GLUT Graphics library similar to SGI's OpenGL
 
 CONFLICTS+=		Mesa-glx-[0-9]*
 CONFLICTS+=		Mesa<3.2.1
 
-USE_BUILDLINK_ONLY=	yes
+.include "../Mesa/Makefile.common"
+
+USE_BUILDLINK2=		yes
 USE_X11BASE=		yes
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-CONFIGURE_ARGS+=	--enable-static
 
 do-build:
-	cd ${WRKSRC}/src-glut && ${MAKE}
+	cd ${WRKSRC}/src-glut && ${SETENV} ${MAKE_ENV} \
+	${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
 
 do-install:
-	cd ${WRKSRC}/src-glut && ${MAKE} install
+	cd ${WRKSRC}/src-glut && ${SETENV} ${MAKE_ENV} \
+	${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/GL
-.for inc in glut.h glutf90.h
-	${INSTALL_DATA} ${WRKSRC}/include/GL/${inc} ${PREFIX}/include/GL
-.endfor
+	cd ${WRKSRC}/include/GL; for hdr in				\
+		glut.h glutf90.h;					\
+	do								\
+		${INSTALL_DATA} $${hdr} ${PREFIX}/include/GL;		\
+	done
 
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

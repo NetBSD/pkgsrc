@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2002/06/20 19:28:15 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2002/08/25 18:38:50 jlam Exp $
 
 --- rvm/Makefile.in.orig	Tue Jun 12 12:24:35 2001
 +++ rvm/Makefile.in

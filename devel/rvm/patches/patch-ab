@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2002/07/03 10:59:48 jdolecek Exp $
+$NetBSD: patch-ab,v 1.2 2002/08/25 18:38:51 jlam Exp $
 
 --- rvm/rvm_utils.c.orig	Wed Jul  3 12:39:26 2002
 +++ rvm/rvm_utils.c	Wed Jul  3 12:40:30 2002

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2002/07/30 22:30:05 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2002/08/25 18:39:18 jlam Exp $
 
 DISTNAME=	netpbm-9.25
 CATEGORIES=	graphics
@@ -9,14 +9,14 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://netpbm.sourceforge.net/
 COMMENT=	toolkit for conversion of images between different formats
 
-USE_BUILDLINK_ONLY=	yes
-USE_GMAKE=		yes
-USE_PERL5=		yes
+USE_BUILDLINK2=	yes
+USE_GMAKE=	yes
+USE_PERL5=	yes
 
-REPLACE_PERL=		pnm/pnmquant ppm/ppmfade ppm/ppmrainbow ppm/ppmshadow
+REPLACE_PERL=	pnm/pnmquant ppm/ppmfade ppm/ppmrainbow ppm/ppmshadow
 
 INSTALL_TARGET=	install-dev install
-MAKE_ENV+=	CC="${CC}" INSTALL="${INSTALL}" STRIPFLAG="${_STRIPFLAG_INSTALL}"
+MAKE_ENV+=	INSTALL="${INSTALL}" STRIPFLAG="${_STRIPFLAG_INSTALL}"
 MAKEFILE=	GNUmakefile
 
 .include "../../mk/bsd.prefs.mk"
@@ -38,6 +38,7 @@ post-patch:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/shhopt/shhopt.h ${PREFIX}/include
 
-.include "../../graphics/png/buildlink.mk"
-.include "../../graphics/tiff/buildlink.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/tiff/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
