@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/04/25 08:12:57 snj Exp $
+# $NetBSD: Makefile,v 1.20 2004/11/03 10:59:40 grant Exp $
 #
 
 DISTNAME=	arpwatch-2.1a11
@@ -11,6 +11,8 @@ COMMENT=	Monitor ARP activity on a network, maintaining a database
 
 USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
+
+LIBS+=		${BUILDLINK_LDADD.libpcap}
 
 pre-patch:
 	f=arpwatch.h;							\
