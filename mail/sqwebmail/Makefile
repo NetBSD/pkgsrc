@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2002/01/24 19:40:07 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/01/24 20:51:55 jlam Exp $
 
 DISTNAME=	sqwebmail-3.3.1
 CATEGORIES=	www
 COMMENT=	webmail CGI for access to local Maildir-style mailboxes
 HOMEPAGE=	http://www.inter7.com/sqwebmail/
 
-BUILD_DEPENDS+=	perl>=${PERL5_REQD}:../../lang/perl5
 DEPENDS+=	courier-auth>=0.37.1nb1:../../mail/courier-auth
 DEPENDS+=	courier-maildirmake>=0.37.1nb1:../../mail/courier-maildirmake
 
 USE_BUILDLINK_ONLY=	yes
+USE_PERL5=		yes
 REPLACE_PERL=		sysconftool
 
 .include "../../mail/courier-auth/Makefile.common"
@@ -53,11 +53,10 @@ SYSCONFTOOL=		${PREFIX}/sbin/sqwebmail.sysconftool
 GEN_FILES=		ldapaddressbook
 
 CONF_FILES=		${EGDIR}/authmodulelist ${PKG_SYSCONFDIR}/authmodulelist
-CONF_FILES_PERMS=	# empty
 .for FILE in ${GEN_FILES}
-CONF_FILES_PERMS+=	${EGDIR}/${FILE}.dist ${PKG_SYSCONFDIR}/${FILE}	\
-			${ROOT_USER} ${ROOT_GROUP} 0600
+CONF_FILES+=		${EGDIR}/${FILE}.dist ${PKG_SYSCONFDIR}/${FILE}
 .endfor
+CONF_FILES_PERMS=	# empty
 .for FILE in ldapsearch sendit.sh
 CONF_FILES_PERMS+=	${DATADIR}/sqwebmail/${FILE}			\
 			${PKG_SYSCONFDIR}/${FILE}			\
@@ -65,7 +64,7 @@ CONF_FILES_PERMS+=	${DATADIR}/sqwebmail/${FILE}			\
 .endfor
 
 DEINSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
-INSTALL_EXTRA_TMPL=	${.CURDIR}/../../mail/courier-auth/INSTALL
+INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
 FILES_SUBST+=		SYSCONFTOOL=${SYSCONFTOOL:Q}
 FILES_SUBST+=		GEN_FILES=${GEN_FILES:Q}
 MESSAGE_SUBST+=		IMAGEDIR=${IMAGEDIR}
