@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.20 2002/03/14 13:07:33 wiz Exp $
+$NetBSD: patch-aa,v 1.21 2002/04/02 11:20:12 seb Exp $
 
 --- configure.orig	Sun Dec  2 00:38:55 2001
 +++ configure
@@ -21,11 +21,21 @@ $NetBSD: patch-aa,v 1.20 2002/03/14 13:07:33 wiz Exp $
  # Allow user to specify flags
  
  # Check whether --with-cflags or --without-cflags was given.
-@@ -6252,6 +6253,8 @@
- #line 6252 "configure"
+@@ -6246,12 +6247,16 @@
+ 				fi
+ 			fi
+ 			LIBS="-lwrap $LIBS"
+-			echo "$as_me:6249: checking for libwrap" >&5
++			echo "$as_me:6250: checking for libwrap" >&5
+ echo $ECHO_N "checking for libwrap... $ECHO_C" >&6
+ 			cat >conftest.$ac_ext <<_ACEOF
+-#line 6252 "configure"
++#line 6253 "configure"
  #include "confdefs.h"
  
++#ifdef HAVE_SYS_CDEFS_H
 +#include <sys/cdefs.h>
++#endif
 +#include <stdio.h>
  #include <tcpd.h>
  					int deny_severity = 0, allow_severity = 0;
@@ -40,8 +50,9 @@ $NetBSD: patch-aa,v 1.20 2002/03/14 13:07:33 wiz Exp $
    echo "$as_me: failed program was:" >&5
  cat conftest.$ac_ext >&5
  
+-					{ { echo "$as_me:6297: error: *** libwrap missing" >&5
 +					TCPW_LIB=""
- 					{ { echo "$as_me:6297: error: *** libwrap missing" >&5
++					{ { echo "$as_me:6304: error: *** libwrap missing" >&5
  echo "$as_me: error: *** libwrap missing" >&2;}
     { (exit 1); exit 1; }; }
  
