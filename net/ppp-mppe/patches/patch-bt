@@ -1,8 +1,8 @@
-$NetBSD: patch-bt,v 1.1.1.1 1999/10/08 04:34:43 dbj Exp $
+$NetBSD: patch-bt,v 1.2 2003/12/01 15:07:03 cube Exp $
 
---- /dev/null	Mon Sep 27 01:09:07 1999
-+++ netbsd-1.4/ppp_mppe.c	Mon Sep 27 02:11:53 1999
-@@ -0,0 +1,785 @@
+--- netbsd-1.4/ppp_mppe.c.orig	2003-12-01 10:04:24.000000000 +0100
++++ netbsd-1.4/ppp_mppe.c
+@@ -0,0 +1,792 @@
 +/* NetBSD
 + * 
 + *  taken from: FILEVERSION 9906180
@@ -637,9 +637,16 @@ $NetBSD: patch-bt,v 1.1.1.1 1999/10/08 04:34:43 dbj Exp $
 +            mppe_update_count(state);
 +	}
 +
++	/*
++	 * Let the packet in anyway.  It allows the tunnel to stay alive
++	 * whereas returning DECOMP_ERROR would disable the MPPE
++	 * decompressor in the kernel for that connection.
++	 */
++#if 0
 +        mppe_update_count(state);
 +
 +	return DECOMP_ERROR;
++#endif
 +    }
 +
 +    if(!(MPPE_BITS(ibuf) & MPPE_BIT_ENCRYPTED)) {
