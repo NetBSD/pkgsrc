@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2002/01/21 16:00:52 zuntum Exp $
+# $NetBSD: Makefile,v 1.6 2002/01/21 18:45:03 zuntum Exp $
 #
 
 DISTNAME=	qmail-1.03
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=   http://cr.yp.to/software/			\
 		ftp://ftp.ntnu.no/pub/unix/mail/qmail/		\
@@ -27,22 +28,20 @@ ALL_TARGET= 	it man
 INSTALL_TARGET=	setup check
 
 IS_INTERACTIVE=	YES
-NO_PACKAGE=	"Has to be compiled on target system due to installation path issue"
-
-QMAILDIR?=	/var/qmail
-
-MESSAGE_SUBST+=	QMAILDIR=${QMAILDIR}
+NO_PACKAGE=	YES
 
 OWN_DIRS+=	${QMAILDIR}
+
+.include "../../mk/bsd.prefs.mk"
+
+NO_MTREE=	YES
+LOCALBASE=	/
 
 DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL
 
 pre-build:
 	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
 	${ECHO} ${QMAILDIR} > ${WRKSRC}/conf-qmail
-
-pre-install:
-	${LN} -sf ${QMAILDIR} ${PREFIX}/qmail
 
 post-install:
 	${MKDIR} ${QMAILDIR}/alias
