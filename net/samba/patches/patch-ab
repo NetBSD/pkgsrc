@@ -1,14 +1,154 @@
-$NetBSD: patch-ab,v 1.9 2001/05/10 09:00:23 abs Exp $
+$NetBSD: patch-ab,v 1.10 2001/05/14 18:56:17 jlam Exp $
 
---- acconfig.h.orig	Wed Apr 18 00:00:52 2001
-+++ acconfig.h
-@@ -79,7 +79,9 @@
- #undef SIZEOF_INO_T
- #undef SIZEOF_OFF_T
- #undef STAT_STATVFS64
-+#undef HAVE_READLINE
- #undef HAVE_LIBREADLINE
-+#undef HAVE_LIBEDIT
- #undef HAVE_KERNEL_OPLOCKS
- #undef HAVE_IRIX_SPECIFIC_CAPABILITIES
- #undef HAVE_INT16_FROM_RPC_RPC_H
+--- configure.orig	Tue Apr 17 01:44:24 2001
++++ configure
+@@ -40,6 +40,9 @@
+   --with-readline[=DIR]   Look for readline include/libs in DIR
+   --without-readline      Don't include readline support"
+ ac_help="$ac_help
++  --with-cups    Include CUPS support
++  --without-cups Don't include CUPS support (default)"
++ac_help="$ac_help
+   --with-smbwrapper     Include SMB wrapper support
+   --without-smbwrapper  Don't include SMB wrapper support (default)"
+ ac_help="$ac_help
+@@ -3870,58 +3873,9 @@
+ fi
+ 
+ 
+-# we need libcups for CUPS support...
+-echo $ac_n "checking for httpConnect in -lcups""... $ac_c" 1>&6
+-echo "configure:3876: checking for httpConnect in -lcups" >&5
+-ac_lib_var=`echo cups'_'httpConnect | sed 'y%./+-%__p_%'`
+-if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+-  echo $ac_n "(cached) $ac_c" 1>&6
+-else
+-  ac_save_LIBS="$LIBS"
+-LIBS="-lcups  $LIBS"
+-cat > conftest.$ac_ext <<EOF
+-#line 3884 "configure"
+-#include "confdefs.h"
+-/* Override any gcc2 internal prototype to avoid an error.  */
+-/* We use char because int might match the return type of a gcc2
+-    builtin and then its argument prototype would still apply.  */
+-char httpConnect();
+-
+-int main() {
+-httpConnect()
+-; return 0; }
+-EOF
+-if { (eval echo configure:3895: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+-  rm -rf conftest*
+-  eval "ac_cv_lib_$ac_lib_var=yes"
+-else
+-  echo "configure: failed program was:" >&5
+-  cat conftest.$ac_ext >&5
+-  rm -rf conftest*
+-  eval "ac_cv_lib_$ac_lib_var=no"
+-fi
+-rm -f conftest*
+-LIBS="$ac_save_LIBS"
+-
+-fi
+-if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+-  echo "$ac_t""yes" 1>&6
+-    ac_tr_lib=HAVE_LIB`echo cups | sed -e 's/[^a-zA-Z0-9_]/_/g' \
+-    -e 'y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/'`
+-  cat >> confdefs.h <<EOF
+-#define $ac_tr_lib 1
+-EOF
+-
+-  LIBS="-lcups $LIBS"
+-
+-else
+-  echo "$ac_t""no" 1>&6
+-fi
+-
+-
+ # we need libdl for PAM and the new VFS code
+ echo $ac_n "checking for dlopen in -ldl""... $ac_c" 1>&6
+-echo "configure:3925: checking for dlopen in -ldl" >&5
++echo "configure:3879: checking for dlopen in -ldl" >&5
+ ac_lib_var=`echo dl'_'dlopen | sed 'y%./+-%__p_%'`
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+@@ -11044,10 +10998,78 @@
+ fi
+ 
+ 
++################################################
++# check for CUPS support
++echo $ac_n "checking whether to use CUPS""... $ac_c" 1>&6
++echo "configure:11005: checking whether to use CUPS" >&5
++# Check whether --with-cups or --without-cups was given.
++if test "${with_cups+set}" = set; then
++  withval="$with_cups"
++   case "$withval" in
++  yes)
++    echo "$ac_t""yes" 1>&6
++    echo $ac_n "checking for httpConnect in -lcups""... $ac_c" 1>&6
++echo "configure:11013: checking for httpConnect in -lcups" >&5
++ac_lib_var=`echo cups'_'httpConnect | sed 'y%./+-%__p_%'`
++if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
++  echo $ac_n "(cached) $ac_c" 1>&6
++else
++  ac_save_LIBS="$LIBS"
++LIBS="-lcups  $LIBS"
++cat > conftest.$ac_ext <<EOF
++#line 11021 "configure"
++#include "confdefs.h"
++/* Override any gcc2 internal prototype to avoid an error.  */
++/* We use char because int might match the return type of a gcc2
++    builtin and then its argument prototype would still apply.  */
++char httpConnect();
++
++int main() {
++httpConnect()
++; return 0; }
++EOF
++if { (eval echo configure:11032: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
++  rm -rf conftest*
++  eval "ac_cv_lib_$ac_lib_var=yes"
++else
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
++  eval "ac_cv_lib_$ac_lib_var=no"
++fi
++rm -f conftest*
++LIBS="$ac_save_LIBS"
++
++fi
++if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
++  echo "$ac_t""yes" 1>&6
++    ac_tr_lib=HAVE_LIB`echo cups | sed -e 's/[^a-zA-Z0-9_]/_/g' \
++    -e 'y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/'`
++  cat >> confdefs.h <<EOF
++#define $ac_tr_lib 1
++EOF
++
++  LIBS="-lcups $LIBS"
++
++else
++  echo "$ac_t""no" 1>&6
++fi
++
++    ;;
++  *)
++    echo "$ac_t""no" 1>&6
++    ;;
++  esac 
++else
++  echo "$ac_t""no" 1>&6
++
++fi
++
++
+ #################################################
+ # check for smbwrapper support
+ echo $ac_n "checking whether to use smbwrapper""... $ac_c" 1>&6
+-echo "configure:11051: checking whether to use smbwrapper" >&5
++echo "configure:11073: checking whether to use smbwrapper" >&5
+ # Check whether --with-smbwrapper or --without-smbwrapper was given.
+ if test "${with_smbwrapper+set}" = set; then
+   withval="$with_smbwrapper"
