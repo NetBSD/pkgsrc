@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/03/13 17:37:07 fredb Exp $
-
-.include "../gdk-pixbuf/Makefile.common"
+# $NetBSD: Makefile,v 1.14 2002/04/10 01:32:22 jlam Exp $
 
 PKGNAME=	${DISTNAME:S/gdk-pixbuf-/gdk-pixbuf-gnome-/}
 PKGREVISION=	1
@@ -10,6 +8,8 @@ CONFLICTS+=	gdk-pixbuf<0.10.1
 
 USE_BUILDLINK_ONLY=		# defined
 BUILDLINK_DEPENDS.gdk-pixbuf=	gdk-pixbuf>=0.11.0nb1
+
+.include "../gdk-pixbuf/Makefile.common"
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/gdk-pixbuf/gnome-canvas-pixbuf.h \
@@ -25,4 +25,5 @@ do-install:
 
 .include "../../graphics/gdk-pixbuf/buildlink.mk"
 .include "../../x11/gnome-libs/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
