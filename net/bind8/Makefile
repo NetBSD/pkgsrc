@@ -1,5 +1,5 @@
 #
-# $NetBSD: Makefile,v 1.24 2004/01/20 12:22:18 agc Exp $
+# $NetBSD: Makefile,v 1.25 2004/01/28 12:18:47 grant Exp $
 #
 # FreeBSD Id: Makefile,v 1.12 1999/06/28 21:25:07 billf Exp
 #
@@ -21,6 +21,9 @@ BIND_VERSION=	8.4.1
 DIST_SUBDIR=	bind/${BIND_VERSION}
 EXTRACT_ONLY=	${DISTNAME}-src.tar.gz ${DISTNAME}-doc.tar.gz
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
 RCD_SCRIPTS=	named
 
