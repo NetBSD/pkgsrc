@@ -4,7 +4,7 @@
 # Date created:         15 May 1996
 # Whom:                 ache
 #
-# $NetBSD: Makefile,v 1.5 1997/12/19 09:11:28 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1998/01/19 00:39:20 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:27 fenner Exp 
 #
 
@@ -31,8 +31,8 @@ pre-extract:
 do-build:
 	cd ${WRKSRC} && \
 		for i in *.Txt *.Lst; do \
-			tr -d '\015' < $$i > $$i.tmp; \
-			mv $$i.tmp $$i; \
+			${TR} -d '\015' < $$i > $$i.tmp; \
+			${MV} $$i.tmp $$i; \
 		done
 
 do-install:
