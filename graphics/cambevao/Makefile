@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/03 00:14:49 tv Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/11 22:14:52 reed Exp $
 #
 
 DISTNAME=		cambevao-2.0
@@ -21,7 +21,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/cambevao
 	${INSTALL_DATA} ${WRKSRC}/cambevao.xml ${PREFIX}/share/examples/cambevao
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/cambevao.README
-	${INSTALL_SCRIPT} ${WRKSRC}/cambevao.rc.d ${RCD_SCRIPTS_EXAMPLEDIR}/cambevao
+	${INSTALL_SCRIPT} ${WRKSRC}/cambevao.rc.d ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/cambevao
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
