@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/09 00:30:49 xtraeme Exp $
+# $NetBSD: Makefile,v 1.16 2004/01/20 13:46:58 xtraeme Exp $
 
 DISTNAME=	gnome-2.4.1
 CATEGORIES=	meta-pkgs x11 gnome
@@ -15,7 +15,7 @@ DEPENDS+=	file-roller>=2.4.2:../../archivers/file-roller
 DEPENDS+=	gcalctool>=4.2.83:../../math/gcalctool
 DEPENDS+=	gconf-editor>=2.4.0:../../editors/gconf-editor
 DEPENDS+=	gedit>=2.4.1:../../editors/gedit
-DEPENDS+=	gdm>=2.2.0nb2:../../x11/gdm
+DEPENDS+=	gdm>=2.4.4.7:../../x11/gdm
 DEPENDS+=	ggv>=2.4.0.2:../../print/ggv2
 DEPENDS+=	glade2>=2.0.0:../../devel/glade2
 DEPENDS+=	gnome-applets>=2.4.1:../../x11/gnome2-applets
