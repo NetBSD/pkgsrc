@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/11/28 11:40:45 markd Exp $
+# $NetBSD: Makefile,v 1.21 2002/12/03 09:13:39 jlam Exp $
 # FreeBSD ID: Makefile,v 1.8 1997/01/06 12:04:12 jkh Exp
 #
 
@@ -37,10 +37,12 @@ pre-configure:
 	done
 
 PLIST_SRC=	${PKGDIR}/PLIST.clients
-.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "sparc"
+.if (${MACHINE_ARCH} == "i386") || \
+    (${MACHINE_ARCH} == "sparc")
 .  include "../../mk/ossaudio.buildlink2.mk"
+EGDIR=		${PREFIX}/share/examples/nas
 PLIST_SRC+=	${PKGDIR}/PLIST.voxware
-CONF_FILES=	${PREFIX}/share/examples/nas/nasd.conf.eg ${PKG_SYSCONFDIR}/nasd.conf
+CONF_FILES=	${EGDIR}/nasd.conf.eg ${PKG_SYSCONFDIR}/nasd.conf
 .endif
 
 .include "../../mk/bsd.pkg.install.mk"
