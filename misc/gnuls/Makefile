@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/10/03 00:12:59 tv Exp $
+# $NetBSD: Makefile,v 1.11 2004/11/05 16:20:12 jmmv Exp $
 #
 
 DISTNAME=	coreutils-5.2.1
@@ -16,7 +16,6 @@ CONFLICTS=	coreutils-[0-9]* linuxls-[0-9]*
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
-USE_PERL5=		build
 
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX="${GNU_PROGRAM_PREFIX}"
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
