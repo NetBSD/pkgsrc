@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2002/07/19 03:08:26 mycroft Exp $
+$NetBSD: distinfo,v 1.6 2002/09/01 13:41:46 tron Exp $
 
 SHA1 (emacs-20.7.tar.gz) = ef0168b927fb633bc9b14e2249431f26ff8b8452
 Size (emacs-20.7.tar.gz) = 15043428 bytes
@@ -13,6 +13,8 @@ SHA1 (patch-ah) = 2cfb03c57fad97db9eaaf9cda610f5d6c906aa4a
 SHA1 (patch-ai) = d1e5bb8fe797761f63fad42dbfb48834284f4533
 SHA1 (patch-aj) = 34490603ca6985fb6e02879c6fe50337d9ce31dd
 SHA1 (patch-ak) = 604f80fbf7d24ec7b732c7ac3cc99a07fb4a2eb6
+SHA1 (patch-al) = 0459e7a206bbb5f0e591111d2ed3cde97038a2ec
+SHA1 (patch-am) = 12667ef175d1108aa3d207d92eba0f20de9d6ae3
 SHA1 (patch-ax) = 572eed7ad29d0b2a2e82e53c1acdfab39c12b1b2
 SHA1 (patch-ay) = bc91b0759ce0b3f3c1be542c043748472cb8d8fc
 SHA1 (patch-az) = 643f927b726d825238b14cd6a4b70e3a0722104e
