@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2000/07/21 19:23:07 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2001/07/08 18:12:00 wiz Exp $
 
---- Makefile.orig	Sun Jul  9 22:49:23 2000
-+++ Makefile	Fri Jul 21 21:06:35 2000
+--- Makefile.orig	Wed Mar 28 02:51:41 2001
++++ Makefile
 @@ -11,16 +11,16 @@
  
  #C_ONLY=-DC_ONLY
@@ -20,9 +20,9 @@ $NetBSD: patch-aa,v 1.5 2000/07/21 19:23:07 wiz Exp $
 -BASE_CFLAGS=-Wall $(DEBUG) $(OPTFLAGS) $(C_ONLY) $(BYTE_ORDER) $(MACH_TYPES)
 +BASE_CFLAGS=-Wall $(DEBUG) $(OPTFLAGS) $(C_ONLY) $(MACH_TYPES)
  BASE_SFLAGS=-Wall $(DEBUG) $(OPTFLAGS)
+ BASE_LDFLAGS=
  
- #
-@@ -38,9 +38,9 @@
+@@ -43,9 +43,9 @@
  #
  ifeq ($(TARGET),Linux_X)
  CONFFLAGS=-DPCE_CD_SUPPORT -DSOUND
