@@ -1,10 +1,13 @@
-$NetBSD: patch-aa,v 1.7 2002/09/29 12:46:41 martti Exp $
+$NetBSD: patch-aa,v 1.8 2004/05/28 01:47:26 lukem Exp $
 
---- cvsweb.cgi.orig	Thu Sep 26 20:56:05 2002
-+++ cvsweb.cgi	Sun Sep 29 14:36:06 2002
-@@ -1,4 +1,4 @@
--#!/usr/bin/perl -wT
-+#!/usr/bin/perl -w
+--- cvsweb.conf.orig	2004-05-05 09:40:50.000000000 +1000
++++ cvsweb.conf
+@@ -19,7 +19,7 @@
+ #   cvsgraph (if you enable $allow_graph)
+ #   enscript (if you enable $allow_enscript)
  #
- # cvsweb - a CGI interface to CVS trees.
+-@command_path = qw(/bin /usr/bin /usr/local/bin);
++@command_path = qw(/bin /usr/bin /usr/pkg/bin /usr/local/bin);
+ 
+ # Search the above directories for each command (prefer gtar over tar).
  #
