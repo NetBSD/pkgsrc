@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/20 12:24:29 agc Exp $
+# $NetBSD: Makefile,v 1.18 2004/02/17 12:50:30 jlam Exp $
 #
 
 DISTNAME=	papersize-1.0.8
@@ -11,8 +11,10 @@ COMMENT=	Manipulate the default papersize in certain packages
 
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
+USE_LANGUAGES=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
+NO_BUILDLINK=	yes
 USE_PKGINSTALL=	yes
 
 do-build:
