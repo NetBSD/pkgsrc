@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/14 12:58:55 kei Exp $
+# $NetBSD: Makefile,v 1.2 2001/04/18 00:33:10 kei Exp $
 
 DISTNAME=	TeXfamily-1.2.1
 CATEGORIES=	japanese
@@ -109,7 +109,14 @@ pre-patch:
 
 post-configure:
 	(cd ${WRKSRC}/texk/web2c/ptex-src-2.1.10; \
-		./configure JIS ${LOCALBASE}/share/texmf.local)
+		./configure EUC ${LOCALBASE}/share/texmf.local)
+
+post-patch:
+	${MV} ${WRKSRC}/texk/kpathsea/texmf.in \
+		${WRKSRC}/texk/kpathsea/texmf.in.orig
+	${SED} -e 's,@TEXMFSITE@,${TEXMFSITE},' \
+		${WRKSRC}/texk/kpathsea/texmf.in.orig > \
+		${WRKSRC}/texk/kpathsea/texmf.in 
 
 do-build:
 	(cd ${WRKSRC}/texk/web2c; ${GMAKE})
@@ -119,7 +126,7 @@ do-build:
 	(cd ${WRKSRC}/texk/dvi2ps-3.2j; ${GMAKE} all newlib)
 	(cd ${WRKSRC}/texk/dvipsk; ${GMAKE})
 	(cd ${WRKSRC}/texk/mendexk2.4f; ${GMAKE})
-	(cd ${WRKSRC}/texk/jmakeindex/src; ${MAKE})
+	(cd ${WRKSRC}/texk/jmakeindex/src; ${MAKE} -f makefile.unx)
 
 do-install:
 	(cd ${WRKSRC}/texk/web2c-j; ${GMAKE} install)
@@ -134,9 +141,9 @@ do-install:
 	(cd ${WRKSRC}/texk/dvipsk; \
 		${SETENV} texmflcl=${LOCALBASE}/share/texmf.local \
 		${GMAKE} install)
-	${INSTALL_PROGRAM} ${WRKSRC}/texk/mendexk2.4f/mendex \
-		${PREFIX}/bin/mendex
-	(cd ${WRKSRC}/texk/jmakeindex/src; ${MAKE} install)
+	${INSTALL_PROGRAM} ${WRKSRC}/texk/mendexk2.4f/mendex ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/texk/jmakeindex/src/jmakeindex \
+		${PREFIX}/bin
 
 post-install:
 	mktexlsr ${LOCALBASE}/share/texmf.local
