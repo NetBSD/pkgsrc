@@ -1,0 +1,15 @@
+--- tcptrace.h.orig	Wed Jul 16 08:39:54 1997
++++ tcptrace.h	Wed Jul 16 15:00:27 1997
+@@ -38,6 +38,12 @@
+ #include <sys/time.h>
+ #include <sys/socket.h>
+ #include <net/if.h>
++#if __FreeBSD__ >= 2
++#include <osreldate.h>
++#if __FreeBSD_version >= 300000
++#include <net/if_var.h>
++#endif
++#endif          
+ #include <netinet/in.h>
+ #include <netinet/in_systm.h>
+ #include <arpa/inet.h>
