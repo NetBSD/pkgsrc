@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3000 2005/02/07 12:26:55 wiz Exp $
+$NetBSD: TODO,v 1.3001 2005/02/07 13:31:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1064,7 +1064,6 @@ Suggested package updates
 	o ted-2.17
 	o tela-2.01
 	o tex-musixtex-112
-	o texi2html-1.70
 	o tfmxplay-1.1.6
 	o thunderbird-bin-1.0
 	o tinc-1.0.3
