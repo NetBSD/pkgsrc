@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1999/05/23 19:18:16 tv Exp $
+# $NetBSD: Makefile,v 1.14 1999/05/23 20:34:34 tv Exp $
 # FreeBSD Id: Makefile,v 1.18 1997/05/16 01:42:31 asami Exp 
 #
 
@@ -6,7 +6,7 @@
     SUBDIR += bzip2
     SUBDIR += freeze
     SUBDIR += gcpio
-#    SUBDIR += gshar+gunshar
+    SUBDIR += gsharutils
     SUBDIR += gtar
     SUBDIR += ha
 #    SUBDIR += hpack.non-usa.only
