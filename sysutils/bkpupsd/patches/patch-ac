@@ -1,19 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2004/12/31 14:36:57 taca Exp $
+$NetBSD: patch-ac,v 1.2 2005/01/04 13:37:31 taca Exp $
 
 --- src/ups.c.orig	2003-01-21 20:49:06.000000000 +0900
 +++ src/ups.c
-@@ -90,11 +90,11 @@ ups_new(name, device, timeout, grace)
- 	int timeout;
- 	int grace;
- {
--	static char *file[] = { UPSTAB,
-+	static const char *file[] = { UPSTAB,
- #ifdef DEBUG
--				"upstab",
-+				      "upstab",
- #endif
--				NULL, };
-+				      NULL, };
- 	char *ups_cap;
+@@ -99,7 +99,7 @@ ups_new(name, device, timeout, grace)
  	UPS ups;
  	char *s, *how;
+ 
+-	if (cgetent(&ups_cap, file, name) != 0) {
++	if (cgetent(&ups_cap, (void *)file, name) != 0) {
+ 		perror("ups_new: can't read upstab");
+ 		return NULL;
+ 	}
