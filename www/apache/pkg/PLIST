@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.15 2000/09/06 06:17:57 jlam Exp $
+@comment $NetBSD: PLIST,v 1.16 2000/09/20 05:14:12 jlam Exp $
 bin/dbmmanage
 bin/htdigest
 bin/htpasswd
 etc/httpd/httpd.conf.default
 etc/httpd/magic.default
 etc/httpd/mime.types.default
-etc/rc.d/apache.sh
+etc/rc.d/apache
 include/httpd/alloc.h
 include/httpd/ap.h
 include/httpd/ap_compat.h
