@@ -1,0 +1,14 @@
+$NetBSD: patch-ah,v 1.1.1.1 2002/11/01 10:49:33 skrll Exp $
+
+--- wonka/src/vm/Jamfile.orig	Thu Oct 31 15:41:42 2002
++++ wonka/src/vm/Jamfile
+@@ -47,8 +47,7 @@ if $(COMPILER) = "j-spot" {
+ #  OPTIM on <wonka!src!vm>interpreter.o += -Os ;
+ #}
+ 
+-# Somehow this next line doesn't work... 
+-OPTIM on <build-$(CPU)-$(HOSTOS)!wonka!bin>unicode.o += -O0 ;
++OPTIM on <wonka!src!vm>unicode.o += -O0 ;
+ 
+ Library $(WONKA_LIB) : arrays.c chars.c checks.c core-classes.c ;
+ Library $(WONKA_LIB) : dates.c exception.c fields.c ieee754.c ;
