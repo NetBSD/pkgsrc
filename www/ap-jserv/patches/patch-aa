@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/01/14 20:59:02 jwise Exp $
+--- configure.orig	Thu Jan 13 13:47:13 2000
++++ configure	Thu Jan 13 13:53:01 2000
+@@ -2517,6 +2517,7 @@
+    
+        ifGNUmake='#' ; 
+        _cv_gnu_make_command='' ; 
++       MAKE=${LOCALBASE}/bin/gmake
+        if ${TEST} -x ${MAKE} ; then
+            if ( ${MAKE} --version 2> /dev/null | ${GREP} GNU ) ; then 
+                _cv_gnu_make_command=${MAKE} ; 

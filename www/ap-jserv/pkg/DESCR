@@ -1,0 +1,5 @@
+mod_jserv is a module for Apache Server which provides servlet support
+using the JSDK version 2.0.  It can also be used with the Jakarta
+project's Tomcat servlet environment, which is the next generation of
+servlet development from Sun and Apache -- see the jakarta-tomcat
+package for details.

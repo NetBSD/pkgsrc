@@ -1,0 +1,14 @@
+=============================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2000/01/14 20:59:02 jwise Exp $
+
+You will need to edit ${PREFIX}/etc/httpd/httpd.conf and add the following
+lines to the Dynamic Shared Object section in order to use this module
+(substitute ${PREFIX} with /usr/pkg or your prefix as appropriate):
+
+	Include ${PREFIX}/etc/httpd/jserv/jserv.conf
+
+Documentation for mod_jserv has been installed in:
+
+	${PREFIX}/share/httpd/htdocs/jserv-docs
+
+=============================================================================
