@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.159 2004/04/25 22:42:51 tv Exp $
+# $NetBSD: bsd.prefs.mk,v 1.160 2004/04/26 17:29:33 tv Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -235,7 +235,6 @@ APPEND_ELF=		elf
 .  endif
 .endif
 
-PKGDIRMODE?=		755
 SHAREOWN?=		${DOCOWN}
 SHAREGRP?=		${DOCGRP}
 SHAREMODE?=		${DOCMODE}
@@ -267,6 +266,7 @@ SHAREMODE?=		${DOCMODE}
 .  include "${.CURDIR}/mk/defs.NetBSD.mk"
 .endif
 
+PKGDIRMODE?=		755
 PKG_PHASE?=		none
 #
 # The PHASES_AFTER_<phase> variables list every phase "greater than or
