@@ -1,32 +1,33 @@
-# $NetBSD: Makefile,v 1.7 2001/03/05 12:47:12 skrll Exp $
+# $NetBSD: Makefile,v 1.8 2001/04/30 11:03:30 skrll Exp $
 
-DISTNAME=	qwtlib-0.2
+DISTNAME=	qwt-0.3.0
 CATEGORIES=	x11
-MASTER_SITES=	ftp://ftp.troll.no/contrib/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qwt/}
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.troll.no/qtprogs.html
+HOMEPAGE=	http://sourceforge.net/projects/qwt
 COMMENT=	Qt widget library for technical purposes
 
-DEPENDS+=	qt1-1.44:../../x11/qt1
+DEPENDS+=	qt2-libs-2.3.0:../../x11/qt2-libs
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
-WRKSRC=		${WRKDIR}/qwt
-ALL_TARGET=	src
 
-MAKE_ENV+=	CXX=${CXX}
+EVAL_PREFIX+=	QT2DIR=qt2-libs
+MAKE_ENV+=	CXX="${CXX}" \
+		QTDIR="${QT2DIR}/qt2"
 
-do-configure:
-	${CP} ${FILESDIR}/Makefile.* ${WRKSRC}
+CONFLICTS=	qwtlib-*
+
+post-patch:
+	${LN} -s ${WRKSRC}/makefiles/netbsd-g++ ${WRKSRC}/Makefile
 
 do-install:
-	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/src/libqwt.la \
+	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/libqwt.la \
 	  ${PREFIX}/lib
 	${INSTALL_DATA_DIR} ${PREFIX}/include/qwt
-	${INSTALL_DATA} ${WRKSRC}/include/* ${PREFIX}/include/qwt
-	${INSTALL_DATA} ${WRKSRC}/doc/man/* ${PREFIX}/man/man3
+	${INSTALL_DATA} ${WRKSRC}/include/*.h ${PREFIX}/include/qwt
+	${INSTALL_DATA} ${WRKSRC}/doc/man/man3/* ${PREFIX}/man/man3
 
 .include "../../mk/bsd.pkg.mk"
