@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8186 2004/11/30 16:14:48 adam Exp $
+$NetBSD: CHANGES,v 1.8187 2004/11/30 16:46:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5681,3 +5681,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gif2png to 2.5.1 [adam 2004-11-30]
 	Updated xdesktopwaves to 1.1 [xtraeme 2004-11-30]
 	Updated gliv to 1.8.4 [adam 2004-11-30]
+	Updated pwlib to 1.8.3 [adam 2004-11-30]
