@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7990 2004/11/25 18:10:49 magick Exp $
+$NetBSD: CHANGES,v 1.7991 2004/11/25 18:38:52 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5426,3 +5426,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gfract to 0.3 [ben 2004-11-25]
 	Updated spiralsynth to 2.0.0 [ben 2004-11-25]
 	Updated xemacs-current to 21.5.18 [magick 2004-11-25]
+	Updated py-libxml2 to 2.6.16 [minskim 2004-11-25]
