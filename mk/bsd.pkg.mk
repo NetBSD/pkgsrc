@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216 2003/07/13 13:27:18 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1217 2003/07/18 04:21:16 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -326,7 +326,9 @@ MAKE_ENV+=		CPP="${CPP}"
 #	USE_SUNPRO  - Sun Microsystems, Inc. WorkShop/Forte/Sun ONE Studio
 #	              Compiler Collection
 #
-.include "../../mk/gcc.buildlink2.mk"
+.if !defined(USE_MIPSPRO) && !defined(USE_SUNPRO)
+.  include "../../mk/gcc.buildlink2.mk"
+.endif
 
 # export the flags needed to compile and link pthreaded code
 MAKE_ENV+=		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}"
