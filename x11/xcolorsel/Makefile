@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2002/10/08 13:26:32 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/03 04:17:39 jschauma Exp $
 #
 
 DISTNAME=	xcolorsel-1.1a-src
 PKGNAME=	xcolorsel-1.1a
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=utilities/}
 
