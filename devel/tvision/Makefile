@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/10/03 10:05:08 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/25 17:35:02 wiz Exp $
 #
 
 DISTNAME=		tvision-0.7
@@ -8,10 +8,10 @@ MASTER_SITES=		${MASTER_SITE_SUNSITE:=devel/lang/c++/}
 MAINTAINER=		packages@NetBSD.org
 COMMENT=		Turbo Vision C++ CUI library for UNIX
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-.include "../../devel/ncurses/buildlink.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
