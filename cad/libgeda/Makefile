@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/12/13 05:19:51 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.12 2003/01/04 23:00:56 cjep Exp $
 #
 
 DISTNAME=		libgeda-${PKGVERSION}
@@ -27,6 +27,6 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 .include "../../devel/libstroke/buildlink2.mk"
 .include "../../graphics/libgdgeda/buildlink2.mk"
 .include "../../lang/guile/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"   
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
