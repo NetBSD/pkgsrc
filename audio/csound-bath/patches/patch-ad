@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/04/27 17:17:17 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2003/01/19 21:31:11 hubertf Exp $
 
---- midirecv.c.orig	Sun Mar 25 05:42:24 2001
-+++ midirecv.c	Thu Apr  5 13:39:35 2001
+--- midirecv.c.orig	Fri Dec 13 01:28:50 2002
++++ midirecv.c
 @@ -3,6 +3,8 @@
  #include "midiops.h"
  #include "oload.h"
  
 +#include <sys/ioctl_compat.h>
 +
- #ifdef SGI
- /************************************/
- /* obsolete SGI code                */
+ #define MBUFSIZ   1024
+ #define ON        1
+ #define OFF       0

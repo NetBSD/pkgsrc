@@ -1,8 +1,8 @@
-$NetBSD: patch-ap,v 1.2 2002/03/23 02:23:01 wiz Exp $
+$NetBSD: patch-ap,v 1.3 2003/01/19 21:31:12 hubertf Exp $
 
---- cs.h.orig	Sat Jan 26 05:29:36 2002
+--- cs.h.orig	Mon Dec 16 04:28:30 2002
 +++ cs.h
-@@ -18,6 +18,24 @@
+@@ -15,6 +15,24 @@
  
  #include "version.h"
  
@@ -26,4 +26,18 @@ $NetBSD: patch-ap,v 1.2 2002/03/23 02:23:01 wiz Exp $
 +
  #define VMSGS 1
  #if VMSGS
- #define VMSG(x) if (odebug) x
+ #define VMSG(x) if (O.odebug) x
+@@ -782,10 +800,10 @@
+ # define POLL_EVENTS() STasks()
+ # define __cdecl
+ #else
+-#ifdef LINUX
+-  extern int POLL_EVENTS(void);
+-#else
++#if !defined(LINUX) || defined(__NetBSD__)
+ # define POLL_EVENTS()     (1)
++#else
++  extern int POLL_EVENTS(void);
+ #endif
+ # if !defined(__BEOS__) || defined(__MWERKS__)
+ #  define __cdecl
