@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.5 2003/12/26 18:26:59 wiz Exp $
+
+--- configure.orig	2003-11-28 17:04:17.000000000 +0100
++++ configure	2003-11-28 17:04:36.000000000 +0100
+@@ -3571,7 +3571,7 @@
+ 		WARNING_CFLAGS=""
+ 		;;
+ 	*BSD)
+-		WARNING_CFLAGS="-Wall -pedantic -ansi -D_BSD_SOURCE -pipe"
++		WARNING_CFLAGS="-Wall -D_BSD_SOURCE -pipe"
+ 		;;
+ 	IRIX*)
+ 		case "$GCC" in
