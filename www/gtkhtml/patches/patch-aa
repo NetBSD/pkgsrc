@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/08/30 07:16:34 rh Exp $
+$NetBSD: patch-aa,v 1.2 2000/12/31 14:04:44 rh Exp $
 
---- configure.orig	Wed Aug 30 08:38:32 2000
+--- configure.orig	Thu Dec 14 19:54:55 2000
 +++ configure
 @@ -3522,7 +3522,7 @@
    cat conftest.$ac_ext >&5
@@ -11,3 +11,25 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/08/30 07:16:34 rh Exp $
  fi
  rm -f conftest*
  		INSTOBJEXT=.mo
+@@ -4297,8 +4297,8 @@
+ fi
+ 
+ 
+-EXTRA_GNOME_LIBS=`gnome-config --libs gnomeui gdk_pixbuf print unicode gal $bonobo libglade`
+-EXTRA_GNOME_CFLAGS=`gnome-config --cflags gnomeui gdk_pixbuf print unicode gal $bonobo libglade`
++EXTRA_GNOME_LIBS="`gnome-config --libs gnomeui gdk_pixbuf print gal $bonobo libglade` `unicode-config --libs`"
++EXTRA_GNOME_CFLAGS="`gnome-config --cflags gnomeui gdk_pixbuf print gal $bonobo libglade` `unicode-config --cflags`"
+ 
+ 
+ 
+@@ -4306,8 +4306,8 @@
+ 
+ GTKHTML_LIBDIR="-L${libdir}"
+ GTKHTML_INCLUDEDIR="-I${includedir}"
+-GTKHTML_INCLUDEDIR="$GTKHTML_INCLUDEDIR `$GNOME_CONFIG --cflags gdk_pixbuf print unicode gal` $GCONF_CFLAGS"
+-GTKHTML_LIBS="-lgtkhtml `$GNOME_CONFIG --libs gdk_pixbuf print unicode gal` $GCONF_LIBS"
++GTKHTML_INCLUDEDIR="$GTKHTML_INCLUDEDIR `$GNOME_CONFIG --cflags gdk_pixbuf print gal` `unicode-config --cflags` $GCONF_CFLAGS"
++GTKHTML_LIBS="-lgtkhtml `$GNOME_CONFIG --libs gdk_pixbuf print gal` `unicode-config --libs` $GCONF_LIBS"
+ 
+ 
+ 
