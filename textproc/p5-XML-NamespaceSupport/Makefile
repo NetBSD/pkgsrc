@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/01/30 22:03:34 mjl Exp $
+# $NetBSD: Makefile,v 1.2 2002/06/03 13:18:05 shell Exp $
 
-DISTNAME=	XML-NamespaceSupport-1.04
+DISTNAME=	XML-NamespaceSupport-1.07
 PKGNAME=	p5-${DISTNAME}
-#SVR4_PKGNAME=	
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
