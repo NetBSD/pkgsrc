@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2005/03/23 22:07:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.18 2005/03/24 05:08:41 markd Exp $
 bin/akregator
 bin/egroupwarewizard
 bin/exchangewizard
@@ -319,7 +319,7 @@ lib/kde3/kfile_vcf.la
 lib/kde3/kio_groupwise.la
 lib/kde3/kio_imap4.la
 lib/kde3/kio_mbox.la
-lib/kde3/kio_sieve.la
+${HAVE_SASL}lib/kde3/kio_sieve.la
 lib/kde3/knotes_kolab.la
 lib/kde3/knotes_local.la
 lib/kde3/knotes_xmlrpc.la
@@ -1448,7 +1448,7 @@ share/kde/services/memofile-conduit.desktop
 share/kde/services/notepad-conduit.desktop
 share/kde/services/overview.desktop
 share/kde/services/popmail-conduit.desktop
-share/kde/services/sieve.protocol
+${HAVE_SASL}share/kde/services/sieve.protocol
 share/kde/services/sysinfo_conduit.desktop
 share/kde/services/time_conduit.desktop
 share/kde/services/todo-conduit.desktop
