@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2003/07/21 16:30:42 martti Exp $
+# $NetBSD: Makefile,v 1.11 2003/09/23 23:28:16 recht Exp $
 #
 
 DISTNAME=	libsndfile-1.0.5
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://www.zipworld.com.au/~erikd/libsndfile/
 
@@ -13,6 +14,7 @@ USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+PKGCONFIG_OVERRIDE=	sndfile.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 
