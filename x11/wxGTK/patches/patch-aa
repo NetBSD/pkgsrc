@@ -1,8 +1,21 @@
-$NetBSD: patch-aa,v 1.4 2004/01/10 14:23:52 recht Exp $
+$NetBSD: patch-aa,v 1.5 2004/04/27 21:59:24 dmcmahill Exp $
 
---- configure.orig	2003-09-21 13:31:30.000000000 +0200
-+++ configure	2003-09-27 23:10:17.000000000 +0200
-@@ -16104,8 +16104,8 @@
+--- configure.orig	Sun Sep 21 11:31:30 2003
++++ configure
+@@ -11498,9 +11498,10 @@ SEARCH_INCLUDE="\
+     /usr/local/x11r5/include  \
+     /usr/lpp/Xamples/include  \
+                               \
+-    /usr/openwin/share/include"
++    /usr/openwin/share/include\
++    ${BUILDLINK_DIR}/include"
+ 
+-SEARCH_LIB="`echo "$SEARCH_INCLUDE" | sed s/include/lib/g` "
++SEARCH_LIB="`echo "$SEARCH_INCLUDE" | sed s/include/lib/g`"
+ 
+ 
+ cat > confcache <<\EOF
+@@ -16104,8 +16105,8 @@ esac
  WX_LIBRARY_NAME_STATIC="lib${WX_LIBRARY}.a"
  WX_LIBRARY_NAME_STATIC_GL="lib${WX_LIBRARY_GL}.a"
  
@@ -13,7 +26,7 @@ $NetBSD: patch-aa,v 1.4 2004/01/10 14:23:52 recht Exp $
  
  if test "$wxUSE_OPENGL" = "yes"; then
      WXCONFIG_LIBS_GL="-l${WX_LIBRARY_GL} ${OPENGL_LIBS}"
-@@ -22777,6 +22777,7 @@
+@@ -22777,6 +22778,7 @@ s%@WX_RELEASE_NUMBER@%$WX_RELEASE_NUMBER
  s%@WX_LIBRARY_NAME_STATIC@%$WX_LIBRARY_NAME_STATIC%g
  s%@WX_LIBRARY_NAME_SHARED@%$WX_LIBRARY_NAME_SHARED%g
  s%@WX_LIBRARY_BASENAME@%$WX_LIBRARY_BASENAME%g
