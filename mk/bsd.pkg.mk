@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1182 2003/05/18 13:06:56 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1183 2003/05/18 20:52:28 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1425,15 +1425,19 @@ check-vulnerable:
 .if !target(do-fetch)
 do-fetch:
 .  if !defined(ALLOW_VULNERABLE_PACKAGES)
-	@${ECHO_MSG} "${_PKGSRC_IN}> Checking for vulnerabilities in ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	vul=`${MAKE} ${MAKEFLAGS} check-vulnerable`;			\
-	case "$$vul" in							\
-	"")	;;							\
-	*)	${ECHO} "$$vul";					\
-		${ECHO} "or define ALLOW_VULNERABLE_PACKAGES if this package is absolutely essential"; \
-		${FALSE} ;;						\
-	esac
+	if [ -f ${PKGVULNDIR}/vulnerabilities ]; then			\
+		${ECHO_MSG} "${_PKGSRC_IN}> Checking for vulnerabilities in ${PKGNAME}"; \
+		vul=`${MAKE} ${MAKEFLAGS} check-vulnerable`;		\
+		case "$$vul" in						\
+		"")	;;						\
+		*)	${ECHO} "$$vul";				\
+			${ECHO} "or define ALLOW_VULNERABLE_PACKAGES if this package is absolutely essential"; \
+			${FALSE} ;;					\
+		esac;							\
+	else								\
+		${ECHO_MSG} "${_PKGSRC_IN}> *** No ${PKGVULNDIR}/vulnerabilities file found - skipping vulnerability checks ***"; \
+	fi
 .  endif
 .  if !empty(_ALLFILES)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
