@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 2000/01/14 15:37:49 fredb Exp $
+$NetBSD: md5,v 1.2 2000/12/14 11:55:04 wiz Exp $
 
-MD5 (fsh-1.0.tar.gz) = 295e5c8902d46f0abdc0f74feb43b57f
+MD5 (fsh-1.1.tar.gz) = 5c288b98e9f5901552dfd31feb9c1504
