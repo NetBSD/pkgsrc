@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2002/10/31 08:01:21 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/12/02 15:20:10 wiz Exp $
 
 DISTNAME=	libmng-1.0.4
 PKGNAME=	${DISTNAME:S/lib//}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.3-t.com/libmng/download/ \
 		${MASTER_SITE_SOURCEFORGE:=libmng/} \
@@ -19,6 +20,17 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 CONFIGURE_ARGS+=	--with-jpeg=${BUILDLINK_PREFIX.jpeg}
 CONFIGURE_ARGS+=	--with-lcms=${BUILDLINK_PREFIX.lcms}
 CPPFLAGS+=		${BUILDLINK_CPPFLAGS.lcms}
+
+DOCDIR=			${PREFIX}/share/doc/mng	
+
+post-install:
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	cd ${WRKSRC}/doc && \
+		${INSTALL_DATA} Plan1.png Plan2.png libmng.txt ${DOCDIR}
+	cd ${WRKSRC}/doc/man && \
+		${INSTALL_MAN} libmng.3 ${PREFIX}/man/man3
+	cd ${WRKSRC}/doc/man && \
+		${INSTALL_MAN} jng.5 mng.5 ${PREFIX}/man/man5
 
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
