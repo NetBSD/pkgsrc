@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/22 08:24:30 grant Exp $
+# $NetBSD: Makefile,v 1.15 2004/02/11 05:38:35 xtraeme Exp $
 #
 
 DISTNAME=	libwnck-2.4.0.1
@@ -14,7 +14,7 @@ COMMENT=	Library to write pagers and tasklists
 BUILD_USES_MSGFMT=	yes
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
@@ -22,8 +22,8 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	libwnck-1.0.pc.in
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../x11/startup-notification/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../x11/startup-notification/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

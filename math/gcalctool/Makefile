@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/02/09 18:47:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2004/02/11 05:05:39 xtraeme Exp $
 #
 
 DISTNAME=		gcalctool-4.3.38
@@ -15,18 +15,18 @@ BUILD_USES_MSGFMT=	YES
 DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_X11=		YES
 USE_PKGLOCALEDIR=	yes
 
 GCONF2_SCHEMAS=		gcalctool.schemas
 
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
-.include "../../devel/libgnome/buildlink2.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../textproc/intltool/buildlink2.mk"
+.include "../../devel/libgnome/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../mk/bsd.pkg.mk"
