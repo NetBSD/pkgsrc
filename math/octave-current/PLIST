@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:33:47 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/03 17:09:45 wiz Exp $
 bin/mkoctfile
 bin/mkoctfile-2.1.34
 bin/octave
@@ -219,6 +219,7 @@ include/${PKGNAME}/octave/pt-all.h
 include/${PKGNAME}/octave/pt-arg-list.h
 include/${PKGNAME}/octave/pt-assign.h
 include/${PKGNAME}/octave/pt-binop.h
+include/${PKGNAME}/octave/pt-bp.h
 include/${PKGNAME}/octave/pt-cell.h
 include/${PKGNAME}/octave/pt-check.h
 include/${PKGNAME}/octave/pt-cmd.h
@@ -297,16 +298,22 @@ info/octave.info-9
 @exec install-info %D/info/octave.info %D/info/dir
 lib/libcruft.a
 lib/libcruft.la
+lib/libcruft.so
+lib/libcruft.so.2
 lib/libcruft.so.2.34
 lib/liboctave.a
 lib/liboctave.la
+lib/liboctave.so
+lib/liboctave.so.2
 lib/liboctave.so.2.34
 lib/liboctinterp.a
 lib/liboctinterp.la
+lib/liboctinterp.so
+lib/liboctinterp.so.2
 lib/liboctinterp.so.2.34
 lib/octave
-libexec/octave/2.1.34/exec/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/info-emacs-info
-libexec/octave/2.1.34/exec/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/info-emacs-octave-help
+libexec/octave/2.1.34/exec/${MACHINE_GNU_PLATFORM}/info-emacs-info
+libexec/octave/2.1.34/exec/${MACHINE_GNU_PLATFORM}/info-emacs-octave-help
 libexec/octave/ls-R
 man/man1/octave-bug.1
 man/man1/octave.1
@@ -961,60 +968,60 @@ share/doc/html/octave/octave_fot.html
 share/doc/html/octave/octave_ovr.html
 share/octave/site/m/startup/octaverc
 share/octave/ls-R
-@dirrm include/${PKGNAME}/octave
-@dirrm include/${PKGNAME}
-@dirrm lib/${PKGNAME}
-@dirrm libexec/octave/2.1.34/exec/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
-@dirrm libexec/octave/2.1.34/exec
-@dirrm libexec/octave/2.1.34/oct/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
-@dirrm libexec/octave/2.1.34/oct
-@dirrm libexec/octave/2.1.34/site/oct/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
-@dirrm libexec/octave/2.1.34/site/oct
-@dirrm libexec/octave/2.1.34/site
-@dirrm libexec/octave/2.1.34
-@dirrm libexec/octave/site/exec/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
-@dirrm libexec/octave/site/exec
-@dirrm libexec/octave/site/oct/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
-@dirrm libexec/octave/site/oct
-@dirrm libexec/octave/site
-@dirrm libexec/octave
-@dirrm share/octave/2.1.34/imagelib
-@dirrm share/octave/2.1.34/m/audio
-@dirrm share/octave/2.1.34/m/control/base
-@dirrm share/octave/2.1.34/m/control/hinf
-@dirrm share/octave/2.1.34/m/control/obsolete
-@dirrm share/octave/2.1.34/m/control/system
-@dirrm share/octave/2.1.34/m/control/util
-@dirrm share/octave/2.1.34/m/control
-@dirrm share/octave/2.1.34/m/elfun
-@dirrm share/octave/2.1.34/m/finance
-@dirrm share/octave/2.1.34/m/general
-@dirrm share/octave/2.1.34/m/image
-@dirrm share/octave/2.1.34/m/io
-@dirrm share/octave/2.1.34/m/linear-algebra
-@dirrm share/octave/2.1.34/m/miscellaneous
-@dirrm share/octave/2.1.34/m/plot
-@dirrm share/octave/2.1.34/m/polynomial
-@dirrm share/octave/2.1.34/m/quaternion
-@dirrm share/octave/2.1.34/m/set
-@dirrm share/octave/2.1.34/m/signal
-@dirrm share/octave/2.1.34/m/startup
-@dirrm share/octave/2.1.34/m/specfun
-@dirrm share/octave/2.1.34/m/special-matrix
-@dirrm share/octave/2.1.34/m/statistics/base
-@dirrm share/octave/2.1.34/m/statistics/distributions
-@dirrm share/octave/2.1.34/m/statistics/models
-@dirrm share/octave/2.1.34/m/statistics/tests
-@dirrm share/octave/2.1.34/m/statistics
-@dirrm share/octave/2.1.34/m/strings
-@dirrm share/octave/2.1.34/m/time
-@dirrm share/octave/2.1.34/m
-@dirrm share/octave/2.1.34/site/m
-@dirrm share/octave/2.1.34/site
-@dirrm share/octave/2.1.34
 @dirrm share/octave/site/m/startup
 @dirrm share/octave/site/m
 @dirrm share/octave/site
+@dirrm share/octave/2.1.34/site/m
+@dirrm share/octave/2.1.34/site
+@dirrm share/octave/2.1.34/m/time
+@dirrm share/octave/2.1.34/m/strings
+@dirrm share/octave/2.1.34/m/statistics/tests
+@dirrm share/octave/2.1.34/m/statistics/models
+@dirrm share/octave/2.1.34/m/statistics/distributions
+@dirrm share/octave/2.1.34/m/statistics/base
+@dirrm share/octave/2.1.34/m/statistics
+@dirrm share/octave/2.1.34/m/startup
+@dirrm share/octave/2.1.34/m/special-matrix
+@dirrm share/octave/2.1.34/m/specfun
+@dirrm share/octave/2.1.34/m/signal
+@dirrm share/octave/2.1.34/m/set
+@dirrm share/octave/2.1.34/m/quaternion
+@dirrm share/octave/2.1.34/m/polynomial
+@dirrm share/octave/2.1.34/m/plot
+@dirrm share/octave/2.1.34/m/miscellaneous
+@dirrm share/octave/2.1.34/m/linear-algebra
+@dirrm share/octave/2.1.34/m/io
+@dirrm share/octave/2.1.34/m/image
+@dirrm share/octave/2.1.34/m/general
+@dirrm share/octave/2.1.34/m/finance
+@dirrm share/octave/2.1.34/m/elfun
+@dirrm share/octave/2.1.34/m/control/util
+@dirrm share/octave/2.1.34/m/control/system
+@dirrm share/octave/2.1.34/m/control/obsolete
+@dirrm share/octave/2.1.34/m/control/hinf
+@dirrm share/octave/2.1.34/m/control/base
+@dirrm share/octave/2.1.34/m/control
+@dirrm share/octave/2.1.34/m/audio
+@dirrm share/octave/2.1.34/m
+@dirrm share/octave/2.1.34/imagelib
+@dirrm share/octave/2.1.34
 @dirrm share/octave
-@dirrm share/doc/html/octave
 @dirrm share/doc/octave
+@dirrm share/doc/html/octave
+@dirrm libexec/octave/site/oct/${MACHINE_GNU_PLATFORM}
+@dirrm libexec/octave/site/oct
+@dirrm libexec/octave/site/exec/${MACHINE_GNU_PLATFORM}
+@dirrm libexec/octave/site/exec
+@dirrm libexec/octave/site
+@dirrm libexec/octave/2.1.34/site/oct/${MACHINE_GNU_PLATFORM}
+@dirrm libexec/octave/2.1.34/site/oct
+@dirrm libexec/octave/2.1.34/site
+@dirrm libexec/octave/2.1.34/oct/${MACHINE_GNU_PLATFORM}
+@dirrm libexec/octave/2.1.34/oct
+@dirrm libexec/octave/2.1.34/exec/${MACHINE_GNU_PLATFORM}
+@dirrm libexec/octave/2.1.34/exec
+@dirrm libexec/octave/2.1.34
+@dirrm libexec/octave
+@dirrm lib/${PKGNAME}
+@dirrm include/${PKGNAME}/octave
+@dirrm include/${PKGNAME}

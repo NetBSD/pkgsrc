@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2001/05/31 12:56:53 wennmach Exp $
+# $NetBSD: Makefile,v 1.11 2002/01/03 17:09:45 wiz Exp $
 
 DISTNAME=	octave-2.1.33
 PKGNAME=	octave-2.1.34
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.che.wisc.edu/pub/octave/bleeding-edge/ \
-		ftp://ftp.math.uni-hamburg.de/pub/soft/math/octave/bleeding-edge/ \
 		ftp://ftp.eos.hokudai.ac.jp/pub/GNU/misc/octave/bleeding-edge/ \
 		ftp://ftp.u-aizu.ac.jp/pub/SciEng/numanal/Octave/bleeding-edge/ \
 		ftp://ftp.task.gda.pl/pub/software/octave/bleeding-edge/
