@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 18:24:49 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/23 14:29:25 jlam Exp $
 
 DISTNAME=	imp-2.2.4
 CATEGORIES=	mail www
@@ -8,7 +8,7 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.horde.org/imp/
 COMMENT=	Internet Messaging Program
 
-DEPENDS+=	horde>=1.2.4:../../www/horde
+DEPENDS+=	horde-1.2.4:../../www/horde
 DEPENDS+=	php-imap>3.0.17:../../www/php4-imap
 
 NO_CONFIGURE=	# defined
