@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/24 15:06:57 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/25 23:18:15 minskim Exp $
 #
 
 DISTNAME=	FSViewer.app-0.2.3
@@ -22,11 +22,11 @@ CFLAGS+=	-I${BUILDLINK_PREFIX.windowmaker}/include/WINGs
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 USE_X11=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 post-install:
 	cd ${PREFIX}/GNUstep/Apps/FSViewer.app && \
 		${PAX} -O -zrf ${_DISTDIR}${DISTSUBDIR}/icons.tar.gz *.xpm *.tif
 
-.include "../../wm/windowmaker/buildlink2.mk"
+.include "../../wm/windowmaker/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
