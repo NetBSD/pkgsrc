@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/08/21 03:54:02 grant Exp $
+# $NetBSD: Makefile,v 1.14 2002/09/23 00:44:50 jschauma Exp $
 
 PKGNAME=		realplayer-8.0.1
 WRKSRC=			${WRKDIR}/RealPlayer8
@@ -46,7 +46,7 @@ EXTRACT_CMD=		HOME=${WRKDIR} XAUTHORITY=${XAUTHORITY} ${RP_INSTALLER}
 EXTRACT_CMD=		HOME=${WRKDIR} ${RP_INSTALLER}
 .endif
 
-DOWNLOAD=		http://proforma.real.com/real/player/unix/unix.html
+DOWNLOAD=		http://forms.real.com/real/player/unix/unix.html
 RP_INSTALLER=		${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
 REALPLAYER_HOME=	${PREFIX}/lib/RealPlayer8
 NS_PLUGINS_DIR=		${PREFIX}/lib/netscape/plugins
