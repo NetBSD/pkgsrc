@@ -1,16 +1,41 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/04/27 02:06:56 rh Exp $
+$NetBSD: patch-ab,v 1.2 2004/04/01 18:38:03 jmmv Exp $
 
---- libnautilus-private/nautilus-medusa-support.c.orig	2001-10-29 06:21:46.000000000 +1000
-+++ libnautilus-private/nautilus-medusa-support.c
-@@ -83,7 +83,11 @@ nautilus_medusa_check_cron_is_enabled (v
- 		 */
- 		status = NAUTILUS_CRON_STATUS_OFF;
+http://bugzilla.gnome.org/showattachment.cgi?attach_id=24286
+
+--- libnautilus-private/nautilus-medusa-support.c	28 Oct 2001 20:21:46 -0000	1.11
++++ libnautilus-private/nautilus-medusa-support.c	10 Feb 2004 19:11:58 -0000
+@@ -32,6 +32,7 @@
+ #include <eel/eel-string.h>
+ #include <dirent.h>
+ #include <stdio.h>
++#include <unistd.h>
+ #include <sys/types.h>
  
-+#ifdef __NetBSD__
-+		stat_file_name = g_strdup_printf ("/proc/%d/status", process_number);
+ #ifdef HAVE_MEDUSA
+@@ -52,6 +53,18 @@
+ NautilusCronStatus
+ nautilus_medusa_check_cron_is_enabled (void)
+ {
++#if defined(__NetBSD__)
++	/* In NetBSD, cron(8) is part of the base system and is configured
++	   to store a pid file in /var/run/cron.pid while running.  Instead
++	   of walking the process table (which has its implications, since
++	   proc is not mounted by default and has very strict permissions),
++	   we can simply check for its existence. */
++
++	if (access("/var/run/cron.pid", F_OK) == -1)
++		return NAUTILUS_CRON_STATUS_OFF;
++
++	return NAUTILUS_CRON_STATUS_ON;
 +#else
- 		stat_file_name = g_strdup_printf ("/proc/%d/stat", process_number);
+ 	DIR *proc_directory;
+ 	struct dirent *file;
+ 	char *stat_file_name;
+@@ -106,6 +119,7 @@
+ 
+ 	closedir (proc_directory);
+ 	return status;
 +#endif
- 		stat_file = fopen (stat_file_name, "r");
- 		g_free (stat_file_name);
- 		
+ }
+ 
+ #ifdef HAVE_MEDUSA
