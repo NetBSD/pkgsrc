@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.224 2003/01/28 14:06:16 martti Exp $
+$NetBSD: TODO,v 1.225 2003/01/28 14:22:06 martti Exp $
 
 Suggested new packages
 ======================
@@ -72,7 +72,6 @@ Suggested package updates
 	o Xbae-4.50.0
 	o adobe-cmaps-1.5 [pkg/19646]
 	o angband-3.0.3
-	o apache-2.0.44 [pkg/20086]
 	o aim-1.5.277
 	o amaya-7.0
 	o aumix-2.8

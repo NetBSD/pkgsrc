@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1263 2003/01/28 13:57:59 martti Exp $
+$NetBSD: CHANGES,v 1.1264 2003/01/28 14:22:04 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -459,3 +459,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated naim-0.11.5.3 [wiz 2003-01-28]
 	Updated dctc to 0.84.1 [wiz 2003-01-28]
 	Updated abiword-personal to 1.0.4 [martti 2003-01-28]
+	Updated apache2 to 2.0.44 [martti 2003-01-28]
