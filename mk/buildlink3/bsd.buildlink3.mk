@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.93 2004/02/18 14:23:43 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.94 2004/02/18 19:16:52 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -544,6 +544,13 @@ _BLNK_FILES_CMD.${_pkg_}+=	${LS} -1 ${_filepattern_} 2>/dev/null || ${TRUE};
 _BLNK_FILES_CMD.${_pkg_}+=	)
 
 ${_BLNK_COOKIE.${_pkg_}}:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	case ${BUILDLINK_PREFIX.${_pkg_}} in				\
+	*not_found)							\
+		${ECHO} "${_pkg_} is not installed; can't buildlink files."; \
+		${FALSE};						\
+		;;							\
+	esac
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	case ${BUILDLINK_PREFIX.${_pkg_}} in				\
 	${X11BASE})     buildlink_dir="${BUILDLINK_X11_DIR}" ;;		\
