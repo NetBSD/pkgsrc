@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.362 2003/03/31 15:55:50 jmmv Exp $
+# $NetBSD: Makefile,v 1.363 2003/03/31 20:59:19 jmmv Exp $
 #
 
 COMMENT=	Networking tools
@@ -121,6 +121,7 @@ SUBDIR+=	libnids
 SUBDIR+=	libpcap
 SUBDIR+=	libsscript
 SUBDIR+=	linc
+SUBDIR+=	lmule
 SUBDIR+=	lopster
 SUBDIR+=	lukemftp
 SUBDIR+=	md-whois
