@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/04/24 23:43:02 jtb Exp $
+# $NetBSD: Makefile,v 1.8 2001/04/28 23:59:21 jtb Exp $
 
 DISTNAME=	tela-1.32
 CATEGORIES=	math
@@ -25,8 +25,8 @@ USE_X11=	#defined
 
 INSTALL_TARGET= install installdocs
 
-CONFIGURE_ENV+=	"INSTALLATION_PREFIX=${PREFIX}/share/tela"
-CONFIGURE_ENV+=	"ARCHDEP_INSTALLATION_PREFIX=${PREFIX}/lib/tela"
+CONFIGURE_ENV+=	INSTALLATION_PREFIX="${PREFIX}/share/tela"
+CONFIGURE_ENV+=	ARCHDEP_INSTALLATION_PREFIX="${PREFIX}/lib/tela"
 
 pre-configure:
 	@for f in ${WRKSRC}/t/demo.t ${WRKSRC}/t/docview.t	\

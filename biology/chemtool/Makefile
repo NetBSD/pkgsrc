@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/04/14 21:43:59 jtb Exp $
+# $NetBSD: Makefile,v 1.8 2001/04/28 23:59:18 jtb Exp $
 
 DISTNAME=	chemtool-1.3
 CATEGORIES=	biology
@@ -14,14 +14,9 @@ MAKE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/chemtool
-	@for f in ${WRKSRC}/examples/*;	do				\
-	i="${INSTALL_DATA} $$f ${PREFIX}/share/examples/chemtool/";	\
-	${ECHO} $$i; $$i;						\
-	done
+	${INSTALL_DATA} ${WRKSRC}/examples/* ${PREFIX}/share/examples/chemtool
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/chemtool
-	@for f in README TODO; do					 \
-	i="${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/doc/chemtool/"; \
-	${ECHO} $$i; $$i;						 \
-	done
+	cd ${WRKSRC} && ${INSTALL_DATA} README TODO 			\
+		${PREFIX}/share/doc/chemtool/
 
 .include "../../mk/bsd.pkg.mk"
