@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/08/26 00:22:56 dmcmahill Exp $
+
+--- XScrabble.ad.orig	Sun Jul 11 23:26:50 1999
++++ XScrabble.ad	Sun Jul 11 23:27:12 1999
+@@ -4,5 +4,5 @@
+ XScrabble.dictfile:		/usr/local/lib/OSPD3
+ XScrabble.permfile:		/usr/local/lib/scrabble_permutations
+-XScrabble.scorefile:		/usr/local/lib/xscrabble.scores
++XScrabble.scorefile:		/var/games/xscrabble.scores
+ 
+ ! version string, to make sure correct resource file is loaded
