@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2527 2003/06/18 06:57:58 gehenna Exp $
+$NetBSD: CHANGES,v 1.2528 2003/06/18 08:17:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2482,3 +2482,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added tet3-3.3h [agc 2003-06-17]
 	Updated cvsync to 0.23.2 [gehenna 2003-06-18]
 	Updated cvsync to 0.23.3 [gehenna 2003-06-18]
+	Updated htmllint to 20030518 [wiz 2003-06-18]
