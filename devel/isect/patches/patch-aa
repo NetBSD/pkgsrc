@@ -1,0 +1,39 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/09/15 18:56:22 jlam Exp $
+
+--- configure.orig	Fri Aug 20 06:16:18 1999
++++ configure	Tue Sep 14 23:56:02 1999
+@@ -1623,6 +1623,8 @@
+ fi
+ 
+ 
++# Use NetBSD's pkglibtool.
++if false; then
+ # Check for any special flags to pass to ltconfig.
+ libtool_flags="--cache-file=$cache_file"
+ test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
+@@ -1780,6 +1782,7 @@
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+ exec 5>>./config.log
++fi
+ 
+ echo $ac_n "checking for AIX""... $ac_c" 1>&6
+ echo "configure:1786: checking for AIX" >&5
+@@ -2379,7 +2382,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lwww -static $LIBS"
++LIBS="-lwww -lz -static $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 2385 "configure"
+ #include "confdefs.h"
+@@ -2407,7 +2410,7 @@
+ fi
+ if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
+-  LIBWWW="-lwww"
++  LIBWWW="-lwww -lz"
+ else
+   echo "$ac_t""no" 1>&6
+ LIBWWW=
