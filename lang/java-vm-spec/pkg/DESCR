@@ -1,0 +1,9 @@
+In The Java(TM) Virtual Machine Specification, Sun's designers of the Java
+virtual machine provide comprehensive coverage of the Java virtual machine
+class file format and instruction set. In addition, the book contains
+directions for compiling the virtual machine with numerous practical
+examples to clarify how it operates in practice. The book also demonstrates
+the Java virtual machine's powerful verification techniques. In all, the
+book provides sufficient detail to enable you to implement your own
+fully-compatible Java virtual machine, or on the other hand, to just really
+understand what makes the Java technology work. 
