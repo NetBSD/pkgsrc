@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7629 2004/10/31 11:15:30 recht Exp $
+$NetBSD: CHANGES,v 1.7630 2004/10/31 13:24:52 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4993,3 +4993,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mysql4-client to 4.1.7nb1 [grant 2004-10-31]
 	Updated libxml2 to 2.6.15 [recht 2004-10-31]
 	Updated libxslt to 1.1.12 [recht 2004-10-31] 
+	Updated ethereal to 0.10.7 [adrianp 2004-10-31]
