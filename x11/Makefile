@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 1999/10/28 04:22:52 jlam Exp $
+# $NetBSD: Makefile,v 1.123 1999/11/10 23:28:47 tron Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -42,6 +42,7 @@
     SUBDIR += fvwm1
     SUBDIR += fvwm2
     SUBDIR += fvwm95
+    SUBDIR += gdm
 #    SUBDIR += getbdf
     SUBDIR += glclock
     SUBDIR += gnome-core
