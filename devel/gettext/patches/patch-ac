@@ -1,14 +1,18 @@
-$NetBSD: patch-ac,v 1.2 2000/11/29 05:05:29 itojun Exp $
+$NetBSD: patch-ac,v 1.3 2002/08/19 19:20:32 seb Exp $
 
---- intl/Makefile.in.orig	Mon Apr 27 14:53:18 1998
-+++ intl/Makefile.in	Tue Nov 28 21:02:03 2000
-@@ -121,3 +121,3 @@
+--- intl/Makefile.in.orig	Mon Apr 27 23:53:18 1998
++++ intl/Makefile.in
+@@ -119,11 +119,11 @@ install-exec: all
+ 	    $(top_srcdir)/mkinstalldirs $(libdir) $(includedir); \
+ 	  fi; \
  	  $(INSTALL_DATA) intlh.inst $(includedir)/libintl.h; \
 -	  $(INSTALL_DATA) libintl.a $(libdir)/libintl.a; \
-+	  $(LIBTOOL) install -c libintl.la $(libdir); \
++	  $(LIBTOOL) --mode=install ${INSTALL_DATA} libintl.la $(libdir); \
  	else \
-@@ -125,3 +125,3 @@
+ 	  : ; \
  	fi
 -install-data: all
 +install-data:
  	if test "$(PACKAGE)" = "gettext"; then \
+ 	  if test -r $(MKINSTALLDIRS); then \
+ 	    $(MKINSTALLDIRS) $(gettextsrcdir); \
