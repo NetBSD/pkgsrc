@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/06/01 22:18:34 tron Exp $
+# $NetBSD: Makefile,v 1.12 1998/06/22 13:04:38 agc Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -20,16 +20,6 @@ NO_CONFIGURE=	yes
 USE_GMAKE=	yes
 ALL_TARGET=	config clean texhash all
 INSTALL_TARGET=	install ini
-MAN1=		afm2tfm.1 allcm.1 alldc.1 allneeded.1 amslatex.1 \
-		amstex.1 append_db.1 bibtex.1 dvilj.1 dvips.1 \
-		dvired.1 dvitype.1 etex.1 fontexport.1 fontimport.1 \
-		gftodvi.1 gftopk.1 gftype.1 gsftopk.1 initex.1 \
-		lamstex.1 latex.1 mag.1 makeindex.1 mf.1 mft.1 \
-		mp.1 patgen.1 pfb2pfa.1 pk2bm.1 pktogf.1 pktype.1 \
-		pltotf.1 pooltype.1 ps2frag.1 ps2pk.1 slitex.1 \
-		tangle.1 tex.1 texconfig.1 texhash.1 tftopl.1 \
-		vftovp.1 virtex.1 vptovf.1 weave.1 xdvi.1
-MAN5=		ls-R.5
 INFO_FILES=	latex kpathsea.info dvips.info fontname.info
 
 TETEX_SRC=	teTeX-src-0.4pl7.tar.gz

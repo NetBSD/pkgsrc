@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/05/24 20:07:27 frueauf Exp $
+# $NetBSD: Makefile,v 1.5 1998/06/22 13:04:39 agc Exp $
 #
 
 DISTNAME=		transfig.3.2
@@ -14,7 +14,5 @@ DEPENDS+=		xpm-3.4j:../../graphics/xpm
 DEPENDS+=		jpeg-6a:../../graphics/jpeg
 
 USE_IMAKE=		yes
-
-CAT1=			fig2dev.0 fig2ps2tex.0 pic2tpic.0 transfig.0
 
 .include "../../mk/bsd.pkg.mk"

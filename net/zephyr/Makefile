@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/06/03 13:16:57 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/06/22 12:58:36 agc Exp $
 #
 
 DISTNAME=	zephyr-2.0.4
@@ -15,11 +15,6 @@ CONFIGURE_ENV+=CPPFLAGS=-I/usr/include/kerberosIV
 .endif
 
 GNU_CONFIGURE=	yes
-MAN1=		zephyr.1 xzwrite.1 zaway.1 zctl.1 zleave.1 zlocate.1 \
-		zmailnotify.1 znol.1 zwgc.1 zwrite.1
-MAN3=		com_err.3
-MAN8=		syslogd.8 zpopnotify.8 zshutdown_notify.8 zstat.8 \
-		zephyrd.8 zhm.8
 
 ZEPHYR_RCDIR=	${PREFIX}/etc/rc.d
 ZEPHYR_DOCDIR=	${PREFIX}/share/doc/zephyr

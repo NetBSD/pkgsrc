@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/06/11 16:03:55 agc Exp $
+# $NetBSD: Makefile,v 1.2 1998/06/22 12:58:35 agc Exp $
 #
 
 DISTNAME=	export.socks.cstc.4.2.2
@@ -16,10 +16,6 @@ RESTRICTED=	"no commercial use"
 WRKSRC=		${WRKDIR}/socks.cstc.4.2
 
 NO_CONFIGURE=	yes
-
-MAN1=		rfinger.1 rftp.1 rtelnet.1 rwhois.1 socks_clients.1
-MAN5=		sockd.conf.5 sockd.route.5 socks.conf.5
-MAN8=		sockd.8
 
 post-patch:
 	@${SED} -e 's|@PREFIX@|${PREFIX}|g' ${WRKSRC}/include/socks.h \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/06/10 08:02:09 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/06/22 13:12:14 agc Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/08/13 23:29:52 jmz Exp
 #
 
@@ -11,10 +11,6 @@ MAINTAINER=	packages@netbsd.org
 
 MAKE_FLAGS=	TMPDIR=${.CURDIR}
 SCRIPTS_ENV=	"LANG=${LANG}"
-
-MAN1=		buildhash.1 findaffix.1 ispell.1 munchlist.1 \
-		sq.1 tryaffix.1 unsq.1
-MAN4=		ispell.4 english.4
 
 .include "../../mk/bsd.prefs.mk"
 

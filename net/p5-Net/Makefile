@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/04/24 09:20:36 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/06/22 12:58:34 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/06/27 18:38:15 jfitz Exp
 #
 
@@ -13,11 +13,6 @@ MAINTAINER=		packages@netbsd.org
 BUILD_DEPENDS= 		${PREFIX}/lib/perl5/site_perl/Data/Dumper.pm:../../devel/p5-Data-Dumper
 
 USE_PERL5=		YES
-
-MAN3=			Net::Time.3 Net::DummyInetd.3 Net::NNTP.3 Net::SNPP.3 \
-			Net::POP3.3 Net::Cmd.3 Net::SMTP.3 Net::Domain.3 \
-			Net::FTP.3 Net::Netrc.3 Net::PH.3
-MANPREFIX=		${PREFIX}/lib/perl5
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL

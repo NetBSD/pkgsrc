@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:41 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/06/22 12:58:36 agc Exp $
 # $FreeBSD Id: Makefile,v 1.16 1997/12/24 17:45:28 ache Exp
 #
 # REMINDER: to use ftpaccess(5) you need to specify -a in command line,
@@ -12,10 +12,6 @@ MASTER_SITES=   ftp://ftp.academ.com/pub/wu-ftpd/private/
 EXTRACT_SUFX=   .tar.Z
 
 MAINTAINER=     rh@vip.at
-
-MAN1=		ftpcount.1 ftpwho.1
-MAN5=		ftpaccess.5 ftphosts.5 ftpconversions.5 xferlog.5
-MAN8=		ftpd.8 ftpshut.8
 
 do-build:
 	cd ${WRKSRC} && ./build nbs PREFIX=${PREFIX}

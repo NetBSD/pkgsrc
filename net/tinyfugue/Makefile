@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/04/26 09:50:24 frueauf Exp $
+# $NetBSD: Makefile,v 1.4 1998/06/22 12:58:35 agc Exp $
 # FreeBSD Id: Makefile,v 1.8 1998/04/11 04:21:19 jseger Exp
 #
 
@@ -10,7 +10,6 @@ MASTER_SITES=	ftp://tf.tcp.com/pub/tinyfugue/ \
 
 MAINTAINER=	packages@NetBSD.ORG
 
-MAN1=		tf.1
 MAKEFILE=	${WRKSRC}/unix/Makefile
 ALL_TARGET=	${MAKE_ARGS} all
 INSTALL_TARGET=	${MAKE_ARGS} install

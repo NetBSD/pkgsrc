@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/06/03 13:19:35 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/06/22 13:00:13 agc Exp $
 #
 
 DISTNAME=	knews-1.0b.0
@@ -14,8 +14,6 @@ DEPENDS+=	xpm-3.4j:../../graphics/xpm
 
 USE_IMAKE=	yes
 WRKSRC=		${WRKDIR}/knews
-
-CAT1=		knews.0
 
 .include "../../mk/bsd.prefs.mk"
 

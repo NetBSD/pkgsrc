@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/06/03 13:16:56 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/06/22 12:58:34 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/10/13 09:14:49 tg Exp
 #
 
@@ -7,8 +7,6 @@ CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.ibp.fr/pub/networking/
 
 MAINTAINER=	packages@netbsd.org
-
-MAN8= 		bing.8
 
 .include "../../mk/bsd.prefs.mk"
 

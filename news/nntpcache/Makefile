@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/06/06 15:28:35 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1998/06/22 13:00:14 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/07/31 06:36:03 asami Exp
 #
 
@@ -13,8 +13,6 @@ MAINTAINER=		packages@netbsd.org
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--localstatedir=/var/spool
-
-MAN8=			nntpcache.8
 
 post-configure:
 	@${SED} -e "s:%%PREFIX%%:${PREFIX}:g"  \
