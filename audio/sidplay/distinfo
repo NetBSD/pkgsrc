@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2001/06/26 18:16:43 jlam Exp $
+$NetBSD: distinfo,v 1.4 2001/12/25 00:09:58 mycroft Exp $
 
 SHA1 (sidplay-base-1.0.4.tgz) = 7d7940b0f1d65c8f2b0409241ea07abdf588ad68
 Size (sidplay-base-1.0.4.tgz) = 118157 bytes
 SHA1 (patch-aa) = 94c7d664615845d76f161e07f514b914949d73d4
 SHA1 (patch-ab) = 70669b794d225a3179ac7e78f7858579c6b3e7d8
+SHA1 (patch-ac) = 46616852bc2f5d8d1fe0326d25249608026fb53b
