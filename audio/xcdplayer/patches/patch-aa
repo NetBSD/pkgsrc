@@ -1,13 +1,16 @@
-$NetBSD: patch-aa,v 1.3 1998/08/23 06:49:29 garbled Exp $
---- main.c.orig	Wed Jul 22 21:41:14 1998
-+++ main.c	Wed Jul 22 21:41:47 1998
-@@ -25,2 +25,4 @@
+$NetBSD
+
+--- Imakefile.orig	Tue Jan 12 19:59:29 1993
++++ Imakefile	Mon Sep  6 18:22:06 1999
+@@ -15,6 +15,11 @@
  
-+extern AppData app_data;
+ LOCAL_LIBRARIES = XawClientLibs
+ LINTLIBS = -lXaw -lXt -lX11
++           SRCS = main.c top_setup.c logo_setup.c button_setup.c cdrom_callb.c\
++                  cdrom_freebsd.c internals.c shuffle.c program.c leds.c debug.c 
 +
- void
-@@ -68,3 +70,3 @@
- 		if (strcmp(argv[i], "-debug") == 0) {
--			debug = True;
-+			app_data.debug = True;
- 			break;
++           OBJS = main.o top_setup.o logo_setup.o button_setup.o cdrom_callb.o\
++                  cdrom_freebsd.o internals.o shuffle.o program.o leds.o debug.o
+ #ifdef SunArchitecture
+            SRCS = main.c top_setup.c logo_setup.c button_setup.c cdrom_callb.c\
+                   cdrom_sun.c internals.c shuffle.c program.c leds.c debug.c 
