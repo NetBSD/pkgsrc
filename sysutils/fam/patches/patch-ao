@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.3 2004/03/28 22:00:05 minskim Exp $
+$NetBSD: patch-ao,v 1.4 2004/11/19 12:35:22 sketch Exp $
 
 --- src/fam-mntent.h.orig	Sun May 12 19:15:01 2002
 +++ src/fam-mntent.h
-@@ -0,0 +1,56 @@
+@@ -0,0 +1,62 @@
 +/*
 + *  mntent
 + *  fam-mntent.h - compatability header for BSD
@@ -34,6 +34,12 @@ $NetBSD: patch-ao,v 1.3 2004/03/28 22:00:05 minskim Exp $
 +
 +#if defined(HAVE_MNTENT_H)
 +#include <mntent.h>
++#elif defined(HAVE_SYS_MNTTAB_H)
++#include <stdio.h>
++#include <unistd.h>
++#include <sys/mntent.h>
++#include <sys/mnttab.h>
++#define MOUNTED MNTTAB
 +#else
 +#ifndef _MNTENT_H
 +#define _MNTENT_H
