@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2001/04/12 18:14:16 manu Exp $
+# $NetBSD: Makefile,v 1.6 2001/05/20 05:21:23 jlam Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/18 06:16:44 markm Exp
 #
 
 DISTNAME=		perl-${PERL_VERSION}
-PKGNAME=		perl-base-${PERL_VERSION}nb1
+PKGNAME=		perl-base-${PERL_VERSION}nb2
 PERL_VERSION=		5.6.0
 CATEGORIES=		lang devel perl5
 MASTER_SITES=		ftp://ftp.digital.com/pub/plan/perl/CPAN/src/5.0/maint/ \
@@ -25,16 +25,25 @@ MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} == "NetBSD"
+.if exists(/usr/libexec/ld.so) || exists(/usr/libexec/ld.elf_so)
+MKPIC?=			yes
+.else
+MKPIC?=			no
+.endif
+.endif
+
 .if ${OPSYS} == "SunOS"
 MAKE_ENV+=		CFLAGS=
+.endif
+
+.if ${MKPIC} == "yes"
+CONFIGURE_ARGS+=	-Duseshrplib=true
 .endif
 
 PERL5_ARCHLIB=		${PREFIX}/lib/perl5/${PERL_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}
 PERL5_SITEARCH=		${PREFIX}/lib/perl5/site_perl/${PERL_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}
 PERL5_PACKLIST=		${PERL5_ARCHLIB}/.packlist
-
-test:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} test
 
 post-patch:
 	cd ${WRKSRC}/ext/DynaLoader/hints && ${CP} -f openbsd.pl netbsd.pl
@@ -47,9 +56,22 @@ pre-configure:
 	cd ${WRKSRC}/lib; ${RM} -rf CGI CGI.pm
 	cd ${WRKSRC}/utils; ${RM} -f dprofpp.PL
 
+.if defined(MKPIC) && (${MKPIC} == "yes")
+post-configure:
+	${CAT} Makefile.static >> ${WRKSRC}/${MAKEFILE}
+
+post-build:
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} libperl.a
+	${RM} -f ${WRKSRC}/perl
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} perl LLIBPERL=libperl.a
+.endif
+
 post-install:
 	@strip ${PREFIX}/bin/a2p
 	@strip ${PREFIX}/bin/perl
 	${RMDIR} -p ${PERL5_SITEARCH} 2>/dev/null || ${TRUE}
+
+test:
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} test
 
 .include "../../mk/bsd.pkg.mk"

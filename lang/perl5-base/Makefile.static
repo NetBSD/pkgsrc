@@ -1,0 +1,11 @@
+# $NetBSD: Makefile.static,v 1.1 2001/05/20 05:21:23 jlam Exp $
+#
+# Makefile fragment to build a static libperl.a to be appended to the perl
+# Makefile after the configure process.  This is copied from Makefile.SH.
+
+LIBPERL_STATIC=	libperl.a
+
+libperl.a: $& perl$(OBJ_EXT) $(obj) $(LIBPERLEXPORT)
+	rm -f $(LIBPERL_STATIC)
+	$(AR) rcu $(LIBPERL_STATIC) perl$(OBJ_EXT) $(obj)
+	@$(ranlib) $(LIBPERL_STATIC)
