@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3042 2003/08/14 12:09:18 abs Exp $
+$NetBSD: CHANGES,v 1.3043 2003/08/15 07:03:31 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3268,4 +3268,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added qmail-qfilter-1.5 [zuntum 2003-08-14]
 	Updated librsync to 0.9.6 [abs 2003-08-14]
 	Updated rdiff-backup to 0.12.3 [abs 2003-08-14]
-
+	Updated gnupg to 1.2.2nb2 [itojun 2003-08-15]
