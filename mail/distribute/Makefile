@@ -1,20 +1,19 @@
-# New ports collection makefile for:	distribute
-# Version required:	2.1pl24
-# Date created:		1 Oct 1997
-# Whom:			itojun@itojun.org
-#
-# $FreeBSD: ports/mail/distribute/Makefile,v 1.3 1999/08/31 06:47:17 mharo Exp $
+# $NetBSD: Makefile,v 1.2 1999/12/26 17:20:31 itojun Exp $
+# FreeBSD: ports/mail/distribute/Makefile,v 1.2 1999/08/25 06:50:06 obrien Exp
 #
 
 DISTNAME=	distribute-2.1-pl19
-PKGNAME=	distribute-2.1.24
+PKGNAME=	distribute-2.1.26
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.foretune.co.jp/pub/network/mail/distribute/
 
-PATCH_SITES=	${MASTER_SITES}BETA/
-PATCHFILES=	patch.20.gz patch.21e.gz patch.22e.gz patch.23e.gz patch.24e.gz
+PATCH_SITES=	ftp://ftp.foretune.co.jp/pub/network/mail/distribute/BETA/
+PATCHFILES=	patch.20.gz patch.21e.gz patch.22e.gz patch.23e.gz \
+		patch.24e.gz patch.25e.gz patch.26e.gz
 
-MAINTAINER=	kuriyama@FreeBSD.org
+MAINTAINER=	itojun@itojun.org
+# in japanese
+HOMEPAGE=	http://www.foretune.co.jp/distribute/
 
 WRKSRC=		${WRKDIR}/distribute-pl19
 MAN1=		distribute.1
@@ -23,11 +22,13 @@ DIST_SUBDIR=	distribute
 IS_INTERACTIVE=	YES
 
 # customize below if you would like to
-MAILINGLIST_DIR=	${PREFIX}/majordomo/lists
-MAJORDOMO_DIR=		${PREFIX}/majordomo	# mail/majordomo likes this
+# mail/majordomo likes this
+MAJORDOMO_DIR=		/home/majordom
 MAJORDOMO_LIST_DIR=	${MAJORDOMO_DIR}/lists
+# just as example, you may disagree with these
+MAILINGLIST_DIR=	/var/mail-list
 ARCHIVE_DIR=		/var/spool/mail-list
-DEF_DOMAINNAME=		your.domain.here
+DEF_DOMAINNAME?=	your.domain.here
 
 MAKE_ENV+=	DEFAULTCONFIG="-DDEF_SEQ_PATH=\\\"$(MAILINGLIST_DIR)\\\" \
 			-DDEF_RECIPIENT_PATH=\\\"$(MAILINGLIST_DIR)\\\" \
@@ -36,6 +37,9 @@ MAKE_ENV+=	DEFAULTCONFIG="-DDEF_SEQ_PATH=\\\"$(MAILINGLIST_DIR)\\\" \
 			-DDEF_ARCHIVE_PATH=\\\"$(ARCHIVE_DIR)\\\"" \
 		INSTALL="${INSTALL}" \
 		INSTALL_MAN="${INSTALL_MAN}"
+
+pre-build:
+	${TOUCH} ${WRKSRC}/logging.h ${WRKSRC}/strsep.c
 
 post-build: message
 post-install: message
@@ -47,4 +51,4 @@ message::
 	@${ECHO} "     if necessery, override them and perform compilation again."
 	@${ECHO} "     there's no way to override them at runtime."
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
