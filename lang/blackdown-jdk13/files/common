@@ -1,5 +1,4 @@
-# $NetBSD: common,v 1.1 2003/01/29 11:02:59 jlam Exp $
-
+# $NetBSD: common,v 1.2 2004/07/01 10:56:11 wiz Exp $
 CHANGES
 COPYRIGHT
 INSTALL
@@ -34,6 +33,11 @@ man/ja_JP.eucJP/man1/keytool.1.gz
 man/ja_JP.eucJP/man1/rmid.1.gz
 man/ja_JP.eucJP/man1/rmiregistry.1.gz
 man/ja_JP.eucJP/man1/tnameserv.1.gz
+man/ja/man1/java.1.gz
+man/ja/man1/keytool.1.gz
+man/ja/man1/rmid.1.gz
+man/ja/man1/rmiregistry.1.gz
+man/ja/man1/tnameserv.1.gz
 man/man1/java.1.gz
 man/man1/keytool.1.gz
 man/man1/rmid.1.gz
