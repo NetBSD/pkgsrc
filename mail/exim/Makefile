@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/07/26 12:30:06 ad Exp $
+# $NetBSD: Makefile,v 1.14 2000/08/04 14:55:09 ad Exp $
 
 DISTNAME=	exim-3.16
 CATEGORIES=	mail net
@@ -11,6 +11,7 @@ MAINTAINER=	ad@netbsd.org
 HOMEPAGE=	http://www.exim.org/
 
 USE_PERL5=	yes
+MESSAGE_FILE=	${WRKDIR}/MESSAGE
 
 pre-patch:
 	${MKDIR} ${WRKSRC}/Local
