@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/06/02 01:17:05 jschauma Exp $
+# $NetBSD: Makefile,v 1.14 2003/06/11 20:50:58 abs Exp $
 #
 
 DISTNAME=		rc5-mlg-004
@@ -26,7 +26,8 @@ DEPENDS+=		compat12-[0-9]*:../../emulators/compat12
 .endif
 .endif
 
-ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386
+ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm NetBSD-*-arm32	\
+			NetBSD-*-i386
 
 CRYPTO=			yes
 NO_CONFIGURE=		yes

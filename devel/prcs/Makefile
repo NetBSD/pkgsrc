@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/06/02 01:20:18 jschauma Exp $
+# $NetBSD: Makefile,v 1.24 2003/06/11 20:50:52 abs Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/10/13 05:11:40 jmacd Exp
 #
 
@@ -11,9 +11,9 @@ MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://prcs.sourceforge.net
 COMMENT=		Project Revision Control System
 
-ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 	\
-			NetBSD-*-mips* NetBSD-*-pc532 NetBSD-*-powerpc	\
-			NetBSD-*-sparc NetBSD-*-vax NetBSD-*-arm 	\
+ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm NetBSD-*-arm32	\
+			NetBSD-*-i386 NetBSD-*-mips* NetBSD-*-pc532	\
+			NetBSD-*-powerpc NetBSD-*-sparc NetBSD-*-vax 	\
 			SunOS-*-*
 
 GNU_CONFIGURE=		yes

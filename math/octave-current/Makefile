@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/06/02 01:18:29 jschauma Exp $
+# $NetBSD: Makefile,v 1.16 2003/06/11 20:50:56 abs Exp $
 
 DISTNAME=	octave-2.1.33
 PKGNAME=	octave-2.1.34
@@ -22,8 +22,9 @@ BUILD_DEPENDS+= teTeX>=1.0.7:../../print/teTeX
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 DEPENDS+=	readline>=4.0:../../devel/readline
 
-.if (${MACHINE_ARCH} == "arm32")
-BROKEN=		Internal compiler error occurs on arm32 (even with gcc-2.95.3)
+.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
+USE_GCC3=YES
+.  include "../../mk/gcc.buildlink2.mk"
 .endif
 
 USE_X11=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/06/02 14:05:03 abs Exp $
+# $NetBSD: Makefile,v 1.16 2003/06/11 20:50:53 abs Exp $
 #
 
 DISTNAME=		angband-283
@@ -22,8 +22,8 @@ ALL_TARGET=		angband
 
 SPOILERFILE=		angband-spoilers.tar.gz
 
-.if (${MACHINE_ARCH} == arm32)
-. include "../../mk/gcc.buildlink2.mk"
+.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
+.  include "../../mk/gcc.buildlink2.mk"
 .endif
 
 do-install:

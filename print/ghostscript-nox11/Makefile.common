@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.45 2003/06/02 14:05:07 abs Exp $
+# $NetBSD: Makefile.common,v 1.46 2003/06/11 20:50:58 abs Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -300,7 +300,7 @@ post-install:
 .include "../../print/ja-vflib-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
 
-# arm32 compiler has an optimizer problem
-.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "arm32"
-CFLAGS+=	-O0
+.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
+USE_GCC3=YES
+.  include "../../mk/gcc.buildlink2.mk"
 .endif

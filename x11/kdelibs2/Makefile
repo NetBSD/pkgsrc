@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2003/06/02 14:05:08 abs Exp $
+# $NetBSD: Makefile,v 1.52 2003/06/11 20:50:59 abs Exp $
 
 DISTNAME=	kdelibs-2.2.2
 PKGREVISION=	5
@@ -15,10 +15,6 @@ USE_OPENSSL_VERSION=	${OPENSSL_VERSION_096}
 
 CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
 CONFIGURE_ENV+=		PKG_CONFIG=${WRKDIR}/must-not-exist
-
-.if (${MACHINE_ARCH} == "arm32")
-BROKEN=		Compilation causes arm32 machines to hang
-.endif
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -100,7 +96,12 @@ post-install:
 	) > ${PLIST_SRC}
 
 # XXX See below for NetBSD/alpha issues.
-.if (${MACHINE_ARCH} == "alpha")
+.if ${MACHINE_ARCH} == "alpha"
+.  include "../../mk/gcc.buildlink2.mk"
+.endif
+
+.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
+USE_GCC3=YES
 .  include "../../mk/gcc.buildlink2.mk"
 .endif
 
