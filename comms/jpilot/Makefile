@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2004/02/14 17:21:35 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2004/02/14 18:43:43 minskim Exp $
 #
 
 DISTNAME=		jpilot-0.99.5
@@ -15,7 +15,7 @@ DEPENDS+=		gnome-dirs>=1.0:../../misc/gnome-dirs
 
 CONFLICTS+=		jpilot-libplugin-[0-9]*
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
@@ -53,8 +53,9 @@ post-install:
 	cd ${WRKSRC}/docs; ${INSTALL_MAN} *.1 ${MAN1DIR}
 	${TOUCH} ${PLUGINSDIR}/.directory
 
-.include "../../comms/pilot-link-libs/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../comms/pilot-link-libs/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
