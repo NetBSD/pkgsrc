@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/09/20 01:06:22 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/09/20 02:51:00 grant Exp $
 #
 
 DISTNAME=		DBD-Sybase-0.94
@@ -10,8 +10,6 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=DBD/}
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.mbay.net/~mpeppler/
 COMMENT=		perl DBI/DBD driver for Sybase/MS-SQL databases
-
-DEPENDS+=		p5-DBI>=1.13:../../databases/p5-DBI
 
 USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/DBD/Sybase/.packlist
