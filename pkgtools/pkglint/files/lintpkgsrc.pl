@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.37 2000/10/12 15:07:44 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.38 2000/10/20 11:00:13 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -28,11 +28,11 @@ my(	$pkgdistdir,		# Distfiles directory
 
 $ENV{PATH} .= ':/usr/sbin';
 
-if (! &getopts('VDK:LM:P:Rdhilmopru', \%opt) || $opt{'h'} ||
+if (! &getopts('SVDK:LM:P:Rdhilmopru', \%opt) || $opt{'h'} ||
 	! ( defined($opt{'d'}) || defined($opt{'i'}) || defined($opt{'l'}) ||
 	    defined($opt{'m'}) || defined($opt{'o'}) || defined($opt{'p'}) ||
 	    defined($opt{'r'}) || defined($opt{'u'}) || defined($opt{'D'}) ||
-	    defined($opt{'V'}) || defined($opt{'R'}) ))
+	    defined($opt{'S'}) || defined($opt{'V'}) || defined($opt{'R'}) ))
     { &usage_and_exit; }
 $| = 1;
 
@@ -118,6 +118,26 @@ if ($opt{'D'} && @ARGV)
 	    }
 	}
 
+    if ($opt{'S'})
+	{
+	my($pkgname, $ver, $tmpfile);
+
+	$tmpfile = "$pkgsrcdir/pkgsrcmap.tmp.$$";
+
+	if (!%pkg)
+	    { &scan_pkgsrc_makefiles($pkgsrcdir); }
+	if (!open(TABLE, ">$tmpfile"))
+	    { &fail("Unable to write '$tmpfile': $!"); }
+	foreach $pkgname (sort keys %pkg)
+	    {			# Print highest number first
+	    foreach $ver (reverse sort keys %{$pkg{$pkgname}})
+		{ print TABLE "$pkgname\t$pkg{$pkgname}{$ver}{'dir'}\t$ver\n"; }
+	    }
+	if (!close(TABLE))
+	    { &fail("Error while writing '$tmpfile': $!"); }
+	if (!rename($tmpfile, "$pkgsrcdir/pkgsrcmap"))
+	    { &fail("Error in rename('$tmpfile','$pkgsrcdir/pkgsrcmap'): $!"); }
+	}
     if ($opt{'d'})
 	{
 	if (!%pkg)
@@ -131,7 +151,8 @@ if ($opt{'D'} && @ARGV)
 	@pkgs = &list_installed_packages;
 	if (!%pkg)
 	    { &scan_pkgsrc_makefiles($pkgsrcdir); }
-	foreach $pkg ( @pkgs )
+
+	foreach $pkg ( sort @pkgs )
 	    {
 	    if ( $_ = &invalid_version($pkg) )
 		{
@@ -139,6 +160,7 @@ if ($opt{'D'} && @ARGV)
 		print $_;
 		}
 	    }
+
 	if ($opt{'u'})
 	    {
 	    foreach $pkg (@bad)
@@ -160,6 +182,7 @@ if ($opt{'D'} && @ARGV)
 	{ &pkglint_all_pkgsrc($pkgsrcdir, $pkglint_flags); }
     }
 exit;
+
 
 # Could speed up by building a cache of package names to paths, then processing
 # each package name once against the tests.
@@ -196,7 +219,8 @@ sub check_prebuilt_packages
 		    print "$File::Find::dir/$_\n";
 		    push(@matched_prebuiltpackages, "$File::Find::dir/$_");
 		    }
-		($chkver) = (sort keys %{$pkg{$pkgname}}); # Pick any version
+		# Pick probably the last version
+		($chkver) = (reverse sort keys %{$pkg{$pkgname}});
 		}
 	    if ($opt{'R'} && defined $pkg{$pkgname}{$chkver}->{'restricted'})
 		{
@@ -974,6 +998,7 @@ opts:
   -p	     : List old/obsolete prebuilt packages (#).
   -r	     : Remove 'bad' distfiles or packages (*).
   -u	     : For each installed package ensure distfiles are fetched.
+  -S	     : Rebuild PKGSRCDIR/pkgsrcmap
 
   -L         : List each Makefile when scanned
   -P path    : Set PKGSRCDIR
