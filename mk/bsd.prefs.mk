@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.140 2004/01/21 18:13:27 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.141 2004/01/23 16:49:47 agc Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -283,7 +283,8 @@ CROSSBASE?=		${LOCALBASE}/cross
 XMKMF?=			${XMKMF_CMD} ${XMKMF_FLAGS} -a
 XMKMF_FLAGS?=		# empty
 .if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) || \
-    exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
+    exists(${X11BASE}/lib/X11/config/xpkgwedge.def) || \
+    !empty(USE_XPKGWEDGE:M[Yy][Ee][Ss]) 
 HAVE_XPKGWEDGE=		yes
 X11PREFIX=		${LOCALBASE}
 XMKMF_CMD?=		${X11PREFIX}/bin/pkgxmkmf
