@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/03/07 10:03:13 uebayasi Exp $
+# $NetBSD: Makefile,v 1.39 2005/03/16 12:03:06 rillig Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -84,7 +84,7 @@ post-extract:
 do-build:
 	cd ${WRKSRC} && ${MAKE} all CC="${CC}" LD="${CC}" \
 		OBJS_EXT="${OBJS_EXT}" \
-		CFLAGS="${CFLAGS} ${RSAINC} ${ASMFLAG} -O2 -DUNIX -DIDEA32 \
+		CFLAGS=${CFLAGS:Q}" ${RSAINC} ${ASMFLAG} -O2 -DUNIX -DIDEA32 \
 		-DMAX_NAMELEN=255" RSALIBS="${RSALIBS}" RSAOBJS="${RSAOBJS}"
 
 do-install:
