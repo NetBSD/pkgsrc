@@ -1,0 +1,11 @@
+--- Makefile.prog.in.orig	Wed Aug 29 15:59:35 2001
++++ Makefile.prog.in	Wed Aug 29 16:01:13 2001
+@@ -13,7 +13,7 @@
+ 
+ all: $(PROG)
+ 
+-$(PROG): $(OBJS) $(COBJS) $(LT_LIBS)
++$(PROG): $(OBJS) $(COBJS)
+ 	$(LIBTOOL) --mode=link $(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $(OBJS) $(COBJS) $(LT_LIBS)
+ 
+ install: $(PROG)
