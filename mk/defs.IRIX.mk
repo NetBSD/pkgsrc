@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.8 2002/12/03 21:13:38 agc Exp $
+# $NetBSD: defs.IRIX.mk,v 1.9 2002/12/11 22:39:11 jschauma Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -52,7 +52,7 @@ MTREE?=		${ZOULARISBASE}/bin/mtree
 MV?=		/sbin/mv
 PATCH?=		/usr/sbin/patch -b
 PAX?=		/usr/sbin/pax
-PERL5?=		/usr/sbin/perl
+PERL5?=		${LOCALBASE}/bin/perl
 PKGLOCALEDIR?=	share
 PS?=		/sbin/ps
 RM?=		/sbin/rm
