@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.333 2002/10/22 11:17:30 wiz Exp $
+$NetBSD: CHANGES,v 1.334 2002/10/22 11:36:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3355,3 +3355,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated verilog-current to 20021019 [dmcmahill 2002-10-21]
 	Updated gcc-ssp to 2.95.3.13 [kent 2002-10-22]
 	Updated guspatches to 1.0nb1 [wiz 2002-10-22]
+	Updated findutils to 4.1nb1 [wiz 2002-10-22]
