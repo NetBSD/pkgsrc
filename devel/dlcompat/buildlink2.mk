@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/06/23 23:04:10 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/08/22 21:04:21 jlam Exp $
 
 .if !defined(DLCOMPAT_BUILDLINK2_MK)
 DLCOMPAT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		dlcompat
-BUILDLINK_DEPENDS.dlcompat?=	dlcompat>=20020508
+BUILDLINK_DEPENDS.dlcompat?=	dlcompat>=20020606
 BUILDLINK_PKGSRCDIR.dlcompat?=	../../devel/dlcompat
 
 EVAL_PREFIX+=				BUILDLINK_PREFIX.dlcompat=dlcompat
