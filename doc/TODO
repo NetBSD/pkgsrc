@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2455 2004/11/25 18:38:52 minskim Exp $
+$NetBSD: TODO,v 1.2456 2004/11/25 18:39:51 snj Exp $
 
 Suggested new packages
 ======================
@@ -257,7 +257,6 @@ Suggested package updates
 	o Chinput-3.0.1
 	o GMT-4.0
 	o GUIlib-1.1.1
-	o GeoIP-1.3.8
 	o GridSim-3.1
 	o GutenMark-20040320
 	o ImageMagick-6.1.5-5
