@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8367 2004/12/19 11:15:40 minskim Exp $
+$NetBSD: CHANGES,v 1.8368 2004/12/19 22:00:54 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5951,3 +5951,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ed2k-gtk-gui to 0.6.3nb1 [minskim 2004-12-18]
 	Updated ja-less to 358nb1 [grant 2004-12-19]
 	Updated overnet to 1.0.1 [minskim 2004-12-19]
+	Updated analog to 6.0 [tron 2004-12-19]
