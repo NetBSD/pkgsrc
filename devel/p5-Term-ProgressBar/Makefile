@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2005/02/19 20:34:38 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/27 20:49:51 wiz Exp $
 #
 
-DISTNAME=	Term-ProgressBar-2.06-r1
-PKGNAME=	p5-Term-ProgressBar-2.06.0.1
+DISTNAME=	Term-ProgressBar-2.09
+PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/F/FL/FLUFFY/}
 
 MAINTAINER=	imil@gcu.info
-HOMEPAGE=	http://search.cpan.org/~fluffy/${DISTNAME}/
+HOMEPAGE=	http://search.cpan.org/dist/Term-ProgressBar/
 COMMENT=	Provide a progress meter on a standard terminal
 
 DEPENDS+=	p5-Class-MethodMaker>=1.12:../../devel/p5-Class-MethodMaker
