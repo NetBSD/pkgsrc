@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.72 2005/01/21 13:11:46 tv Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.73 2005/01/21 13:24:13 tv Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -225,21 +225,21 @@ bulk-check-uptodate:
 	if [ "$$uptodate" = "1" ]; then \
 		${SHCOMMENT} "Check required binary packages"; \
 		(${DEPENDS:C/:.*$//:@d@${ECHO} ${d:Q};@} ${TRUE}) | \
-		while read dep; do \
-			${SHCOMMENT} "check against the binary pkg that pkg_add would pick, too:" ; \
-			${SHCOMMENT} "(Only one should be returned here, really...)" ; \
-			pkg=`${PKG_ADMIN} lsbest "${PACKAGES}/All/$$dep"` ; \
+		(while read dep; do \
+			${SHCOMMENT} "check against the binary pkg that pkg_add would pick, too:"; \
+			${SHCOMMENT} "(Only one should be returned here, really...)"; \
+			pkg=`${PKG_ADMIN} lsbest "${PACKAGES}/All/$$dep"`; \
 			if [ -z "$$pkg" ]; then \
-				${ECHO_MSG} >&2 "BULK> Required binary package $$dep does not exist, rebuilding... " ; \
-				uptodate=0; \
+				${ECHO_MSG} >&2 "BULK> Required binary package $$dep does not exist, rebuilding..."; \
+				exit 1; \
 			elif [ "${USE_BULK_TIMESTAMPS}" = "yes" ] && [ -n "`${FIND} $$pkg -prune -newer ${REF} -print`" ]; then \
-				${ECHO_MSG} >&2 "BULK> Required binary package $$dep (`basename $$pkg`) is newer, rebuilding... " ; \
-				uptodate=0; \
+				${ECHO_MSG} >&2 "BULK> Required binary package $$dep (`basename $$pkg`) is newer, rebuilding..."; \
+				exit 1; \
 			else \
-				${ECHO_MSG} >&2 "BULK> Required binary package $$dep (`basename $$pkg`) is usable. " ; \
-			fi ; \
-		done ; \
-	fi ; \
+				${ECHO_MSG} >&2 "BULK> Required binary package $$dep (`basename $$pkg`) is usable."; \
+			fi; \
+		done) || uptodate=0; \
+	fi; \
 	${ECHO_MSG} $$uptodate
 
 # rebuild binpkg if any of the pkg files is newer than the binary archive
