@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/10/09 14:44:39 itojun Exp $
+# $NetBSD: Makefile,v 1.6 2002/11/30 19:24:17 bouyer Exp $
 
 DISTNAME=	sendmail.8.8.8
 PKGNAME=	sendmail-8.8.8
@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.sendmail.org/
 COMMENT=	The well known Mail Transport Agent
 
 MANCOMPRESSED_IF_MANZ= YES
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/sendmail-8.8.8
 
 M4DIR=		${PREFIX}/share/sendmail
 M4FILES=	README domain/Berkeley.EDU.m4 \
