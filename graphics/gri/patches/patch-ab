@@ -1,0 +1,99 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/05/03 23:45:17 jtb Exp $
+
+--- Makefile.in.orig	Wed Apr  3 20:09:30 2002
++++ Makefile.in	Wed May  1 22:59:25 2002
+@@ -5,6 +5,7 @@
+ DESTDIR=
+ INSTALL = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
++INSTALL_SCRIPT = @INSTALL_SCRIPT@
+ INSTALL_DATA = @INSTALL_DATA@
+ LIBS = @LIBS@
+ # ************************************************************
+@@ -17,12 +18,15 @@
+ DEFS = -DVERSION=\"$(VERSION)\" -DDEFAULT_GRI_DIR=\"$(libdir)\" $(HAVE_LINUX) @DEFS@
+ CFLAGS = @CFLAGS@
+ CPPFLAGS = @CPPFLAGS@
+-CXXFLAGS = -g @CXXFLAGS@
++CXXFLAGS = @CXXFLAGS@
+ EXTRA_CFLAGS = @EXTRA_CFLAGS@ $(LINUX_EXTRA_CFLAGS)
+ EXTRA_CFLAGS_TEMPLATE = @EXTRA_CFLAGS_TEMPLATE@ $(LINUX_EXTRA_CFLAGS)
++LDFLAGS = @LDFLAGS@
++
+ prefix = @prefix@
+ bindir = $(prefix)/bin
+ libdir = $(prefix)/share/gri/$(VERSION)
++elispdir = $(prefix)/share/emacs/site-lisp
+ #### End of system configuration section. ####
+ 
+ OBJS = G_string.o GriColor.o GriPath.o GriState.o assert.o chopword.o \
+@@ -100,21 +104,22 @@
+ # links and creating new links as necessary.
+ install: all install-bin
+ 	@echo "Installing into '$(prefix)' directory"
+-	cd doc; prefix=$(prefix) make install INSTALL='$(INSTALL)' 
++	cd doc; prefix=$(prefix) $(MAKE) install INSTALL='$(INSTALL)' 
+ 
+ install-bin:
+ 	cat startup.msg | sed -e s,VSN,${VERSION}, -e s,PREFIX,$(prefix), > tmp
+-	$(INSTALL_PROGRAM) -d $(libdir)
+-	$(INSTALL_DATA) tmp $(libdir)/startup.msg
++	$(BSD_INSTALL_DATA_DIR) $(libdir)
++	$(BSD_INSTALL_DATA) tmp $(libdir)/startup.msg
+ 	rm -f tmp
+-	$(INSTALL_DATA)         gri.cmd         $(libdir)/gri.cmd
+-	$(INSTALL_DATA)         logo.dat        $(libdir)/logo.dat
+-	$(INSTALL_DATA)         license.txt     $(libdir)/license.txt
+-	$(INSTALL_PROGRAM) -d                   $(prefix)/bin
+-	$(INSTALL_PROGRAM)      gri             $(prefix)/bin/gri-$(VERSION)
++	$(BSD_INSTALL_DATA) gri.cmd $(libdir)/gri.cmd
++	$(BSD_INSTALL_DATA) logo.dat $(libdir)/logo.dat
++	$(BSD_INSTALL_DATA) license.txt $(libdir)/license.txt
++	$(BSD_INSTALL_PROGRAM) gri $(prefix)/bin/gri-$(VERSION)
+ 	(cd $(prefix)/bin/ ; rm -f gri ; ln -sf gri-$(VERSION) gri)
+-	$(INSTALL_PROGRAM)      gri_merge       $(prefix)/bin/gri_merge
+-	$(INSTALL_PROGRAM)      gri_unpage      $(prefix)/bin/gri_unpage
++	$(BSD_INSTALL_SCRIPT) gri_merge $(prefix)/bin/gri_merge
++	$(BSD_INSTALL_SCRIPT) gri_unpage $(prefix)/bin/gri_unpage
++	$(BSD_INSTALL_DATA_DIR) $(elispdir)
++	$(BSD_INSTALL_DATA) gri-mode.el $(elispdir)
+ 
+ debian-lib = $(debian)/usr/share/gri/$(VERSION)
+ install_linux_debian: gri
+@@ -173,13 +178,13 @@
+ 
+ 
+ all: force
+-	make gri
+-	make doc
++	$(MAKE) gri
++	$(MAKE) doc
+ 
+ force:
+ 
+ doc: force
+-	cd doc; make info html
++	cd doc; $(MAKE) info html
+ 
+ TAGS:
+ 	etags *.cc *.hh
+@@ -197,8 +202,8 @@
+ 
+ 
+ distclean:
+-	make clean
+-	cd doc ; make clean
++	$(MAKE) clean
++	cd doc ; $(MAKE) clean
+ 	rm -f Makefile
+ 
+ # Source distribution
+@@ -275,7 +280,7 @@
+ 	chmod a+r $(DEST_DIR)/$(SOURCE_NAME).tgz
+ 
+ source-arch-indep: source-copy
+-	cd $(SOURCE_NAME)/doc; make refcard.ps cmdrefcard.ps info html
++	cd $(SOURCE_NAME)/doc; $(MAKE) refcard.ps cmdrefcard.ps info html
+ 	tar -c -f $(SOURCE_NAME)-arch-indep.tar $(SOURCE_NAME)
+ 	rm -rf $(SOURCE_NAME)
+ 	gzip -f --best $(SOURCE_NAME)-arch-indep.tar
