@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/02 03:59:21 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2004/08/03 08:59:24 schmonz Exp $
 #
 
-DISTNAME=		qmail-run-20040801
+DISTNAME=		qmail-run-20040803
 CATEGORIES=		mail
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -26,6 +26,7 @@ NO_CHECKSUM=		# defined
 USE_PKGINSTALL=		yes
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 FILES_SUBST+=		QMAIL_QUEUE_EXTRA=${QMAIL_QUEUE_EXTRA}
+FILES_SUBST+=		PKGNAME=${PKGNAME}
 RCD_SCRIPTS=		qmail qmailqread qmailpop3d qmailsend qmailsmtpd
 
 INSTALLATION_DIRS=	bin share/doc/qmail-run share/examples/qmail-run
