@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2001/07/15 12:45:52 jtb Exp $
+$NetBSD: distinfo,v 1.5 2001/12/11 15:49:26 wiz Exp $
 
-SHA1 (vm-6.94.tar.gz) = ffedafe1f141da2c934d3ea388a04cf3c759209f
-Size (vm-6.94.tar.gz) = 343943 bytes
+SHA1 (vm-7.00.tar.gz) = 855e7020d9033ecc5a13c9a209b5d58cfa49ebbb
+Size (vm-7.00.tar.gz) = 361595 bytes
 SHA1 (patch-aa) = 91e0d6f87091138d0f0922653706dddfa44c5ba6
-SHA1 (patch-ab) = 9b1bff45f8e5aa23fb9b7e41d94b5a7ef447635d
