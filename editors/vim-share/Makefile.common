@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.37 2004/06/21 08:23:48 martti Exp $
+# $NetBSD: Makefile.common,v 1.37.4.1 2005/01/08 16:22:48 salo Exp $
 
 VIM_VERSION=		6.3
-VIM_PATCHLEVEL=		0
+VIM_PATCHLEVEL=		045
 DISTNAME=		vim-${VIM_VERSION}
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.vim.org/pub/editors/vim/unix/ \
@@ -10,12 +10,13 @@ MASTER_SITES=		ftp://ftp.vim.org/pub/editors/vim/unix/ \
 DIST_SUBDIR=		vim
 EXTRACT_SUFX=		.tar.bz2
 
-##PATCH_SITES+=		${MASTER_SITES:S/unix/patches/}
-##PATCHFILES!=		jot -s " " -w ${VIM_VERSION}.%03d ${VIM_PATCHLEVEL}
-##SKIP_PATCHES=		
-##.for p in ${SKIP_PATCHES}
-##PATCHFILES:=		${PATCHFILES:N${VIM_VERSION}.${p}}
-##.endif
+PATCH_SITES=		ftp://ftp.vim.org/pub/editors/vim/patches/${VIM_VERSION}/
+PATCHFILES+=		6.3.001 6.3.002 6.3.003 6.3.004 6.3.005 6.3.006 6.3.007\
+			6.3.008 6.3.009 6.3.010 6.3.011 6.3.012 6.3.013 6.3.014\
+			6.3.015 6.3.016 6.3.017 6.3.018 6.3.019 6.3.020 6.3.021\
+			6.3.023 6.3.024 6.3.026 6.3.027 6.3.028 6.3.029 6.3.030\
+			6.3.031 6.3.032 6.3.033 6.3.034 6.3.036 6.3.037 6.3.039\
+			6.3.040 6.3.042 6.3.043 6.3.045
 
 MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://www.vim.org/
@@ -29,6 +30,7 @@ GNU_CONFIGURE=		yes
 # See "configure --help" extra options. These might affect the installed
 # files (and PLIST might not include all files) so use at your own risk!
 CONFIGURE_ARGS+=	${VIM_EXTRA_OPTS}
+CONFIGURE_ARGS+=	--enable-multibyte
 
 PATCH_ARGS=		-d ${WRKDIR}/vim63 --forward --quiet \
 				-E ${PATCH_STRIP}
