@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.32 2000/09/04 11:11:03 itojun Exp $
-#
+# $NetBSD: Makefile,v 1.33 2001/01/28 13:44:16 tron Exp $
 
-DISTNAME=	rsync-2.4.5
+DISTNAME=	rsync-2.4.6
 CATEGORIES=	net
 MASTER_SITES=	ftp://rsync.samba.org/pub/rsync/ \
 		ftp://sunsite.auc.dk/pub/unix/rsync/  \
 		ftp://ftp0.sunet.se/pub/unix/admin/rsync/  \
 		ftp://ftp.fu-berlin.de/unix/network/rsync/
 
-MAINTAINER=     mycroft@netbsd.org
+MAINTAINER=     tron@netbsd.org
 HOMEPAGE=	http://rsync.samba.org/
 
 GNU_CONFIGURE=	yes
@@ -20,7 +19,7 @@ BUILD_DEFS+=	USE_INET6
 .if ${OPSYS} == "NetBSD"
 PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/ \
 		ftp://ftp.pasta.cs.uit.no/pub/IPv6/misc/
-PATCHFILES=	rsync-245-v6-20000901b.diff.gz
+PATCHFILES=	rsync-246-v6-20000907.diff.gz
 PATCH_DIST_STRIP=	-p1
 .endif
 
