@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/02/14 18:26:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2004/02/18 15:48:00 minskim Exp $
 #
 
 DISTNAME=	gtkglarea-1.99.0
@@ -12,8 +12,7 @@ MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	OpenGL widget for the GTK+2 GUI toolkit
 
-WRKSRC=		${WRKDIR}/gtkglarea-1.99.0
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_LIBTOOL=	YES
 PKGCONFIG_OVERRIDE+=	gtkgl-2.0.pc.in
 GNU_CONFIGURE=	YES
@@ -21,6 +20,7 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--with-lib-GL
 CONFIGURE_ARGS+=	--with-GL-prefix=${BUILDLINK_PREFIX.MesaLib}
 
-.include "../../graphics/Mesa/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../graphics/Mesa/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
