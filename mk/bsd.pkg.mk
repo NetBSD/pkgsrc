@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.348 1999/09/29 10:07:24 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.349 1999/09/29 15:13:26 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -809,6 +809,7 @@ depends check-depends:
 BUILD_DEFS+=	OPSYS OS_VERSION MACHINE_ARCH MACHINE_GNU_ARCH
 BUILD_DEFS+=	CPPFLAGS CFLAGS LDFLAGS LICENSE
 BUILD_DEFS+=	CONFIGURE_ENV CONFIGURE_ARGS
+BUILD_DEFS+=	OBJECT_FMT
 
 .if !target(all)
 all: build
