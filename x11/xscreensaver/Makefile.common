@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.62 2003/12/19 18:21:03 sketch Exp $
+# $NetBSD: Makefile.common,v 1.63 2003/12/27 18:43:13 fredb Exp $
 #
 
 DISTNAME=		xscreensaver-4.14
@@ -22,6 +22,7 @@ CONFIGURE_ARGS+=	--with-zippy=/usr/games/fortune
 
 CONFIGURE_ARGS+=	--without-motif
 CONFIGURE_ARGS+=	--without-shadow
+CONFIGURE_ARGS+=	--without-pam
 
 CONFIGURE_ENV+=		X_PRE_LIBS=-lXt
 CONFIGURE_ENV+=		ac_cv_x_app_defaults="${PREFIX}/lib/X11/app-defaults"
