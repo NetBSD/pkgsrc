@@ -3,7 +3,7 @@
 # Date created:		14 December 1997
 # Whom:			thorpej
 #
-# $NetBSD: Makefile,v 1.6 1998/02/28 19:07:15 tron Exp $
+# $NetBSD: Makefile,v 1.7 1998/03/05 15:18:23 tron Exp $
 #
 
 DISTNAME=	ttcp
@@ -15,7 +15,7 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	thorpej@NetBSD.ORG
 
 NO_CONFIGURE=	yes
-WRKSRC=		${WRKDIR}
+NO_WRKSUBDIR=	yes
 
 MAN1=		ttcp.1
 
