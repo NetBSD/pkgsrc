@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2003/08/05 15:12:47 adam Exp $
+$NetBSD: patch-ab,v 1.6 2003/11/19 12:48:47 adam Exp $
 
---- src/Makefile.orig	2003-08-05 01:58:16.000000000 +0200
+--- src/Makefile.orig	2003-11-09 23:35:32.000000000 +0100
 +++ src/Makefile
-@@ -16,8 +16,9 @@ endif
+@@ -21,8 +21,9 @@ endif
  ifdef X11_PATH			# path to X11 specified by top level Makefile
  XINC_PATH = $(X11_PATH)/include
  XLIB_PATH = $(X11_PATH)/lib
@@ -14,7 +14,7 @@ $NetBSD: patch-ab,v 1.5 2003/08/05 15:12:47 adam Exp $
  endif
  
  AR = ar
-@@ -119,8 +120,10 @@ ifdef BUILD_DIST				# distribution build
+@@ -128,8 +129,10 @@ ifdef BUILD_DIST				# distribution build
  OPTIONS = -O3 -Wall
  endif
  
