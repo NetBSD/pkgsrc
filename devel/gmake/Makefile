@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1997/10/09 09:20:43 agc Exp $
+# $NetBSD: Makefile,v 1.5 1997/11/13 14:37:45 hubertf Exp $
 # New ports collection makefile for:	GNU make
 # Version required:     3.75
 # Date created:		11 September 1994
@@ -18,7 +18,7 @@ MAN1=		gmake.1
 OPSYS!= 	uname -s
 
 .if (${OPSYS} == "NetBSD")
-BUILD_DEPENDS=	install-info:${PORTSDIR}/devel/gtexinfo
+BUILD_DEPENDS=	${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
 .endif
 
 # joerg@freebsd.org says FreeBSD getloadavg() no longer requires setgid kmem

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1997/10/09 09:30:40 agc Exp $
+# $NetBSD: Makefile,v 1.4 1997/11/13 14:37:37 hubertf Exp $
 # New ports collection makefile for:   indent
 # Version required:    1.9.1
 # Date created:        28 August 1997
@@ -22,7 +22,7 @@ MAKEFILE=	makefile
 OPSYS!= 	uname -s
 
 .if (${OPSYS} == "NetBSD")
-BUILD_DEPENDS=	install-info:${PORTSDIR}/devel/gtexinfo
+BUILD_DEPENDS=	${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
 .endif
 
 # agc - force makeinfo to create a new info file with the Dir info.
