@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.22 2005/02/26 17:26:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.23 2005/03/22 16:32:32 jmmv Exp $
 #
 
-DISTNAME=		gnopernicus-0.9.19
+DISTNAME=		gnopernicus-0.10.4
 CATEGORIES=		x11
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnopernicus/0.9/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnopernicus/0.10/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Collection of accessibility apps for GNOME 2
-
-BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK3=		yes
 USE_DIRS+=		gnome2-1.5
@@ -53,10 +51,13 @@ GCONF2_SCHEMAS+=	brlmonitor.schemas
 GCONF2_SCHEMAS+=	gnopernicus.schemas
 GCONF2_SCHEMAS+=	remote.schemas
 
+BUILDLINK_DEPENDS.glib2+=	glib2>=2.4.1
+
 .include "../../audio/gnome-speech/buildlink3.mk"
 .include "../../devel/at-spi/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
