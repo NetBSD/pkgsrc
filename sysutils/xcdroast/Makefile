@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/01/24 15:06:58 grant Exp $
+# $NetBSD: Makefile,v 1.25 2004/01/29 10:39:16 xtraeme Exp $
 
 DISTNAME=	xcdroast-0.98alpha15
 PKGNAME=	xcdroast-0.98a15
@@ -28,7 +28,9 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 .if ${_OPSYS_HAS_OSSAUDIO} == "yes"
 CFLAGS+=	-DHAVE_OSS
+.  if ${OPSYS} == "NetBSD"
 AUDIO_LIBS=	-lossaudio
+.  endif
 CONFIGURE_ENV+=	AUDIO_LIBS=${AUDIO_LIBS}
 .endif
 
