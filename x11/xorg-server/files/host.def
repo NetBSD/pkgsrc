@@ -1,4 +1,4 @@
-/* $NetBSD: host.def,v 1.7 2005/01/24 10:57:27 hira Exp $ */
+/* $NetBSD: host.def,v 1.8 2005/02/09 20:08:26 xtraeme Exp $ */
 
 #define ProjectRoot @PREFIX@
 #define BuildHtmlManPages NO
@@ -57,5 +57,10 @@
 
 #define HasFontconfig YES
 #define FontconfigDir @BLNK@
+
+#define DriverManSuffix @KERNMAN_SUFFIX@
+#define MiscManSuffix @MISCMAN_SUFFIX@
+#define MiscManDir @PREFIX@/@MISCMAN_DIR@
+#define DriverManDir @PREFIX@/@KERNMAN_DIR@
 
 #define	XF86CardDrivers	@CARDDRIVERS@
