@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.180 2001/08/24 00:54:48 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.181 2001/08/25 02:17:02 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -1604,6 +1604,7 @@ buildlink.mk files:
     USE_MOTIF	-->	.include "../../x11/lesstif/buildlink.mk"
     USE_MOTIF12	-->	.include "../../x11/lesstif12/buildlink.mk"
     USE_SSL	-->	.include "../../security/openssl/buildlink.mk"
+    USE_XAW	-->	.include "../../mk/xaw.buildlink.mk"
     USE_XPM	-->	.include "../../graphics/xpm/buildlink.mk"
 
 Packages that have an explicit dependency on ncurses should set USE_NCURSES
