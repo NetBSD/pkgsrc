@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/11/28 05:20:38 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2002/11/14 23:08:51 jlam Exp $
 
 DISTNAME=		lmbench-2alpha11
 PKGNAME=		lmbench-2.11a
@@ -10,17 +10,22 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.bitmover.com/lm/lmbench/
 COMMENT=		Complete benchmark that gives a large amount of information
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 ALL_TARGET=		build
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
 post-configure:
 	@cd ${WRKSRC};						\
+	for f in src/Makefile; do				\
+		${SED} -e "s|^\(CC.*\)|#\1|g" $$f > $$f.new;	\
+		${MV} -f $$f.new $$f;				\
+	done
+	@cd ${WRKSRC};						\
 	for f in scripts/os scripts/results scripts/config-run	\
 		 scripts/lmbench results/Makefile; do		\
-		${MV} $$f $$f.in;				\
-		${SED} -e 's|@PREFIX@|${PREFIX}|g' $$f.in > $$f; \
+		${SED} -e 's|@PREFIX@|${PREFIX}|g' $$f > $$f.new; \
+		${MV} -f $$f.new $$f;				\
 	done
 	@${CHMOD} 0755 ${WRKSRC}/scripts/config-run
 	@${CHMOD} 0755 ${WRKSRC}/scripts/os
@@ -53,5 +58,5 @@ results:
 	-@cd ${PREFIX}/share/lmbench ; \
 	tar -cf /tmp/benches/`domainname`/lmbench.`uname`-`uname -m`-`uname -r`.`hostname`.tar results
 
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
