@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.8 1999/05/05 21:01:49 tv Exp $
+
+--- docs/Makefile.in.orig	Wed May  5 16:11:26 1999
++++ docs/Makefile.in	Wed May  5 16:12:09 1999
+@@ -463,9 +463,8 @@
+ maintainer-clean-generic clean mostlyclean distclean maintainer-clean
+ 
+ 
+-pdb_dump.texi: $(srcdir)/pdb_self_doc.el $(srcdir)/pdb_dump
+-	cd $(srcdir) && \
+-	@EMACS@ --batch -l pdb_self_doc.el -f make-docs-noargs
++pdb_dump.texi: $(srcdir)/pdb_self_doc $(srcdir)/pdb_dump
++	$(srcdir)/pdb_self_doc <$(srcdir)/pdb_dump >pdb_dump.texi
+ 
+ $(srcdir)/pdb_dump: $(top_srcdir)/app/*.c
+ 	$(top_builddir)/app/gimp --no-interface --batch '(gimp-procedural-db-dump "pdb_dump.tmp")' '(gimp-quit 0)' 
