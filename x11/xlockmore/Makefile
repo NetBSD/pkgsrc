@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2002/08/27 16:33:22 hubertf Exp $
+# $NetBSD: Makefile,v 1.51 2002/10/20 13:42:10 wiz Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/10/10 09:24:38 tg Exp
 #
 
@@ -12,7 +12,7 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.tux.org/~bagleyd/xlockmore.html
 COMMENT=	Like the XLock session locker/screen saver, but with more
 
-CHECK_MESA=	YES
+USE_BUILDLINK2=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -21,8 +21,8 @@ CONFIGURE_ARGS+=--without-gltt --without-ttf --without-opengl --without-mesa \
 		--without-xpm # --without-cxx XXX doesn't work
 CONFIGURE_ENV+= CXX="${CC}"	# no dependency on libstdc++
 .else
-USE_XPM=	YES
-USE_MESA=	YES
+.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
 CONFIGURE_ARGS+= --with-mesagl
 .endif
 
@@ -74,4 +74,5 @@ post-install:
 			${WRKSRC}/sounds/complete.au	\
 				${PREFIX}/lib/X11/xlockmore
 
+.include "../../audio/esound/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
