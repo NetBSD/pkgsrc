@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.2 2004/01/11 16:59:34 kim Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/11 17:06:31 kim Exp $
 #
 
 DISTNAME=	icecast-1.3.12
@@ -41,6 +41,9 @@ CONF_FILES+=		${EGDIR}/${f}.dist ${PKG_SYSCONFDIR}/${f}
 
 ICECAST_SOURCE_BUFFSIZE?=	8192
 ICECAST_CHUNKLEN?=		64
+
+BUILD_DEFS+=			ICECAST_SOURCE_BUFFSIZE
+BUILD_DEFS+=			ICECAST_CHUNKLEN
 
 pre-configure:
 	@${MV} ${WRKSRC}/src/icetypes.h ${WRKSRC}/src/icetypes.h.bak
