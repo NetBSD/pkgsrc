@@ -1,44 +1,16 @@
-$NetBSD: patch-ac,v 1.3 2001/07/14 18:17:23 ad Exp $
+$NetBSD: patch-ac,v 1.4 2002/06/19 16:02:27 ad Exp $
 
---- OS/Makefile-NetBSD.orig	Sat Jul 14 19:09:00 2001
-+++ OS/Makefile-NetBSD	Sat Jul 14 19:14:34 2001
-@@ -3,15 +3,31 @@
+--- OS/Makefile-NetBSD-a.out.orig	Thu Apr 18 08:08:28 2002
++++ OS/Makefile-NetBSD-a.out	Thu Jun 13 12:37:38 2002
+@@ -1,9 +1,10 @@
+ # Exim: OS-specific make file for NetBSD (a.out binary format)
  
- # Include Makfile.NetBSD-a.out
+ CHOWN_COMMAND=/usr/sbin/chown
+-CFLAGS=-O
++CFLAGS=-O2 -pipe
  
--.if exists(OS/Makefile-NetBSD-a.out)
--.include "OS/Makefile-NetBSD-a.out"
--.elif exists(../OS/Makefile-NetBSD-a.out)
--.include "../OS/Makefile-NetBSD-a.out"
--.else
--.include "Makefile.NetBSD-a.out, submit a bug report."
--.endif
-+# Exim: OS-specific make file for NetBSD (a.out binary format)
-+
-+CHOWN_COMMAND=/usr/sbin/chown
-+CFLAGS=-O
-+
-+HAVE_SA_LEN=YES
-+LIBS=-lcrypt
-+
-+X11=/usr/X11R6
-+XINCLUDE=-I$(X11)/include
-+XLFLAGS=-L$(X11)/lib
-+X11_LD_LIB=$(X11)/lib
-+
-+EXIWHAT_PS_ARG=-ax
-+EXIWHAT_EGREP_ARG='/exim( |$$)'
-+EXIWHAT_KILL_ARG=-USR1
-+
-+# NetBSD always ships with Berkeley DB
-+
-+USE_DB=yes
-+
-+# End
-+
+ HAVE_SA_LEN=YES
++HAVE_IPV6=YES
+ LIBS=-lcrypt
  
- # NetBSD ELF linker needs a -R flag.
--XLFLAGS+=-Wl,-R$(X11)/lib/
-+#XLFLAGS+=-Wl,-R$(X11)/lib/
- 
- # End
+ X11=/usr/X11R6
