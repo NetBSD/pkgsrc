@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.44 2003/01/15 20:55:39 jlam Exp $
+# $NetBSD: defs.Linux.mk,v 1.45 2003/02/24 19:49:47 jschauma Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -84,6 +84,17 @@ ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 USERADD?=		/usr/sbin/useradd
 ZOULARISBASE?=		/usr/pkg
+
+# imake installs manpages in weird places
+# these values from /usr/X11R6/lib/X11/config/linux.cf
+IMAKE_MAN_SOURCE_PATH=	man/man
+IMAKE_MAN_SUFFIX=	1x
+IMAKE_LIBMAN_SUFFIX=	3x
+IMAKE_FILEMAN_SUFFIX=	5x
+IMAKE_MAN_DIR=		${IMAKE_MAN_SOURCE_PATH}1
+IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3
+IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
+IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
 
 _DO_SHLIB_CHECKS=	no	# on installation, fixup PLIST for shared libs
 _IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
