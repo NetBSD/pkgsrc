@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1320 2003/02/05 04:16:21 jlam Exp $
+$NetBSD: CHANGES,v 1.1321 2003/02/05 15:05:30 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -557,3 +557,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated qt3 to 3.0.7 [skrll 2003-02-04]
 	Updated expat to 1.95.6nb1 [jlam 2003-02-04]
 	Updated galway to 0.33nb1 [jlam 2003-02-04]
+	Updated cdpack to 1.5 [dmcmahill 2003-02-05]
