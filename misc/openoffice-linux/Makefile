@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/02/27 23:26:11 lukem Exp $
+# $NetBSD: Makefile,v 1.8 2003/03/26 04:05:42 jschauma Exp $
 
 DISTNAME=		OOo_1.0.2_LinuxIntel_install
 PKGNAME=		openoffice-linux-1.0.2
@@ -72,6 +72,6 @@ ARCH=	${MACHINE_ARCH:C/i[3-6]86/i386/g}
 
 .if exists(Makefile.${OPSYS}.${ARCH})
 .  include "Makefile.${OPSYS}.${ARCH}"
-.else
-.  include "../../mk/bsd.pkg.mk"
 .endif
+
+.include "../../mk/bsd.pkg.mk"

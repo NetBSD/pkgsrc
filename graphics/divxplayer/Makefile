@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/01/26 00:11:33 fredb Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/26 04:05:44 jschauma Exp $
 
 DISTNAME=	divx-player-installer
 PKGNAME=	divxplayer-0.2.0
@@ -37,3 +37,4 @@ do-install:
 		${PREFIX}/bin/${BINARY:S/.bin$//}
 
 .include "../../emulators/suse_linux/Makefile.application"
+.include "../../mk/bsd.pkg.mk"

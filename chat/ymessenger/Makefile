@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/07/17 20:53:23 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/26 04:05:51 jschauma Exp $
 
 DISTNAME=		ymessenger-0.93.0
 CATEGORIES=		chat
@@ -36,3 +36,4 @@ post-install:
 	${LN} -fs ../${EMULSUBDIR}/usr/local/bin/ymessenger ${PREFIX}/bin
 
 .include "../../emulators/suse_linux/Makefile.application"
+.include "../../mk/bsd.pkg.mk"

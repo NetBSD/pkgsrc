@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/04/04 12:29:50 tron Exp $
+# $NetBSD: Makefile,v 1.9 2003/03/26 04:05:40 jschauma Exp $
 
 DISTNAME=		${PKGNAME}-i386.linux
 PKGNAME=		asWedit-4.0.1
@@ -45,3 +45,4 @@ do-install:
 .endfor
 
 .include "../../emulators/suse_linux/Makefile.application"
+.include "../../mk/bsd.pkg.mk"

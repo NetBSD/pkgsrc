@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2002/04/04 12:29:48 tron Exp $
+# $NetBSD: Makefile,v 1.33 2003/03/26 04:05:43 jschauma Exp $
 
 DISTNAME=		mtv-1.2.5
 CATEGORIES=		graphics
@@ -36,3 +36,4 @@ post-install:
 	${CHMOD} +x ${PREFIX}/emul/linux/usr/doc/mtv
 
 .include "../../emulators/suse_linux/Makefile.application"
+.include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/08/04 01:53:35 grant Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/26 04:05:49 jschauma Exp $
 
 DISTNAME=		suse_x11-${SUSE_VERSION}
 PKGREVISION=		1
@@ -22,3 +22,4 @@ PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 RPMFILES=		xshared-3.3.6-43.i386.rpm xpm.rpm
 
 .include "../suse64_linux/Makefile.common"
+.include "../../mk/bsd.pkg.mk"
