@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/25 17:39:16 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/04/27 11:25:32 simonb Exp $
 #
 
 DISTNAME=	pilrc-2_7b
@@ -11,6 +11,9 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	dillo@giga.or.at
 HOMEPAGE=	http://www.ardiri.com/index.cfm?redir=palm&cat=pilrc
 COMMENT=	generate resources for PalmOS applications from textual description
+
+# LP64 problems - pilrc.c has: Assert(sizeof(char *) == sizeof(int));
+NOT_FOR_PLATFORM= *-*-alpha *-*-sparc64
 
 .include "../../mk/bsd.prefs.mk"
 
