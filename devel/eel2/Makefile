@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/01/03 18:49:37 reed Exp $
+# $NetBSD: Makefile,v 1.19 2004/01/22 08:24:29 grant Exp $
 #
 
 DISTNAME=		eel-2.4.1
@@ -18,7 +18,7 @@ DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/20 12:14:05 agc Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/22 08:30:30 grant Exp $
 
 DISTNAME=	leim-${VERSION}
 PKGREVISION=	2
@@ -14,7 +14,7 @@ DEPENDS+=	emacs-${VERSION}nb2:../emacs20
 
 WRKSRC=		${WRKDIR}/emacs-20.7/leim
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 
 VERSION=	20.7
 

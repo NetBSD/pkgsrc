@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/10/24 18:49:52 reed Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/22 08:24:29 grant Exp $
 #
 
 DISTNAME=       gdb-5.3
@@ -14,7 +14,7 @@ GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 LIBTOOL_OVERRIDE=	${WRKSRC}/bfd/libtool ${WRKSRC}/opcodes/libtool
 REPLACE_LOCALEDIR_PATTERNS+=	Make-in
 INSTALL_TARGET=	install install-info

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/22 12:27:07 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/22 08:30:30 grant Exp $
 #
 
 DISTNAME=	biew-550
@@ -14,7 +14,7 @@ COMMENT=	Binary viewer/editor
 ONLY_FOR_PLATFORM=	*-*-i386
 
 USE_BUILDLINK2=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 MAKEFILE=	makefile
 
 do-install:

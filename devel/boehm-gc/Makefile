@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/01/05 23:22:51 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2004/01/22 08:24:28 grant Exp $
 #
 
 DISTNAME=		gc6.2
@@ -15,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 INSTALLATION_DIRS=	man/man3

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/08 23:31:18 xtraeme Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/22 08:24:30 grant Exp $
 
 DISTNAME=		libgtop-2.0.7
 PKGNAME=		${DISTNAME:S/-/2-/}
@@ -33,7 +33,7 @@ USE_PERL5=		build
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/libgtop-2.0.pc.in

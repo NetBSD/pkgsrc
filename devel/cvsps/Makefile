@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 16:43:19 martti Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/22 08:24:28 grant Exp $
 #
 
 DISTNAME=	cvsps-1.3.3
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.cobite.com/cvsps/
 COMMENT=	Generates 'patchset' information from a CVS repository
 
 USE_BUILDLINK2=	# defined
-USE_GMAKE=	# defined
+USE_GNU_TOOLS+=	make
 
 ALL_TARGET=	cvsps
 

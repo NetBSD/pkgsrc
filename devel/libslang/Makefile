@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2004/01/06 19:12:33 jlam Exp $
+# $NetBSD: Makefile,v 1.48 2004/01/22 08:24:30 grant Exp $
 #
 
 DISTNAME=	slang-1.4.9
@@ -20,7 +20,7 @@ COMMENT=	Routines for rapid alpha-numeric terminal applications development
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 

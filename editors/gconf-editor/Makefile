@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/03 18:49:39 reed Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/22 08:30:30 grant Exp $
 #
 
 DISTNAME=		gconf-editor-2.4.0
@@ -16,7 +16,7 @@ BUILD_USES_MSGFMT=	YES
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_X11=		YES
 
 .include "../../devel/gettext-lib/buildlink2.mk"

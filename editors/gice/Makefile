@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/20 12:14:05 agc Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/22 08:30:30 grant Exp $
 #
 
 DISTNAME=		gice-0.6.1
@@ -13,7 +13,7 @@ COMMENT=		Powerful C text editor with advanced features
 
 WRKSRC=			${WRKDIR}/gice
 USE_X11=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 

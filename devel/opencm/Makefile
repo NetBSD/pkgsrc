@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/01/20 12:13:29 agc Exp $
+# $NetBSD: Makefile,v 1.24 2004/01/22 08:24:30 grant Exp $
 #
 
 DISTNAME=	${OPENCM_VERSION}-1-src
@@ -15,7 +15,7 @@ COMMENT=	Secure, high-integrity replacement for CVS
 WRKSRC=		${WRKDIR}/${OPENCM_VERSION}/base
 USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
 
