@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.63 2001/11/04 19:49:56 agc Exp $
+# $NetBSD: bsd.prefs.mk,v 1.64 2001/11/21 14:10:06 agc Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -249,82 +249,6 @@ NEED_NCURSES=   	YES
 # will start to require ncurses, which is not true (and raises some
 # recursive dependency problems!)
 .endif # USE_CURSES
-
-
-#
-# list of serial port devices commonly found on various machines and
-# which is the common default one.  This is used for semi-reasonable
-# defaults on different machines.  These can and should be overridden
-# on your machine in /etc/mk.conf.
-# Please help fill in the list.
-.if (${OPSYS} == "NetBSD")
-.if (${MACHINE_ARCH} == alpha)
-DEFAULT_SERIAL_DEVICE?=	/dev/ttyC0
-SERIAL_DEVICES?=	/dev/ttyC0 \
-			/dev/ttyC1
-.elif (${MACHINE_ARCH} == "i386")
-DEFAULT_SERIAL_DEVICE?=	/dev/tty00
-SERIAL_DEVICES?=	/dev/tty00 \
-			/dev/tty01
-.elif (${MACHINE_ARCH} == m68k)
-DEFAULT_SERIAL_DEVICE?=	/dev/tty00
-SERIAL_DEVICES?=	/dev/tty00 \
-			/dev/tty01
-.elif (${MACHINE_ARCH} == mipsel)
-DEFAULT_SERIAL_DEVICE?=	/dev/ttyC0
-SERIAL_DEVICES?=	/dev/ttyC0 \
-			/dev/ttyC1
-.elif (${MACHINE_ARCH} == "sparc")
-DEFAULT_SERIAL_DEVICE?=	/dev/ttya
-SERIAL_DEVICES?=	/dev/ttya \
-			/dev/ttyb
-.else
-DEFAULT_SERIAL_DEVICE?=	/dev/null
-SERIAL_DEVICES?=	/dev/null
-.endif  # ${MACHINE_ARCH}
-.else   # ${OPSYS} != "NetBSD"
-DEFAULT_SERIAL_DEVICE?=	/dev/null
-SERIAL_DEVICES?=	/dev/null
-.endif  # ${OPSYS} == "NetBSD"
-
-##### Some overrides of defaults below on a per-OS basis.
-.if (${OPSYS} == "NetBSD")
-PKG_TOOLS_BIN?=		/usr/sbin
-.elif (${OPSYS} == "SunOS")
-# Migration aid for old /usr/local LOCALBASE on Solaris
-.  if !defined(LOCALBASE) && exists(${DESTDIR}/usr/local/libexec/cgi-bin) && \
-	!exists(${DESTDIR}/usr/pkg/libexec/cgi-bin)
-.BEGIN:
-	@echo "On Solaris and /usr/local/libexec/cgi-bin found:"
-	@echo "- If you have an existing pkgsrc installation & wish to continue"
-	@echo "  using /usr/local, append LOCALBASE=/usr/local to /etc/mk.conf."
-	@echo "- Otherwise set LOCALBASE=/usr/pkg in your environment for the"
-	@echo "  first package install."
-	@false
-.  endif
-# end of migration aid
-LOCALBASE?=             ${DESTDIR}/usr/pkg
-.  if !defined(ZOULARISBASE)
-.    if exists(${LOCALBASE}/bsd)
-ZOULARISBASE:=		${LOCALBASE}/bsd
-.    else
-ZOULARISBASE:=		${LOCALBASE}
-.    endif
-.  endif
-PKG_TOOLS_BIN?=		${ZOULARISBASE}/bin
-
-.  if (${X11BASE} == "/usr/openwin")
-HAVE_OPENWINDOWS=	YES
-.  endif
-
-.elif (${OPSYS} == "Linux")
-ZOULARISBASE?=		${DESTDIR}/usr/local/bsd
-PKG_TOOLS_BIN?=		${ZOULARISBASE}/bin
-
-.elif (${OPSYS} == "Darwin")
-ZOULARISBASE?=		${DESTDIR}/usr/pkg
-PKG_TOOLS_BIN?=		${ZOULARISBASE}/sbin
-.endif
 
 LOCALBASE?=		${DESTDIR}/usr/pkg
 X11BASE?=		${DESTDIR}/usr/X11R6
