@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.15 2001/07/27 13:33:25 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.16 2001/07/27 14:31:44 jlam Exp $
 #
 # This Makefile fragment is included by packages that use readline().
 #
@@ -47,21 +47,25 @@ BUILDLINK_FILES.readline=	include/readline.h
 BUILDLINK_FILES.readline+=	lib/libedit.*
 BUILDLINK_TRANSFORM.readline=	-e "s|/readline.h|/readline/readline.h|g"
 BUILDLINK_TRANSFORM.readline+=	-e "s|libedit|libreadline|g"
+REPLACE_LIBNAMES_SED+=		-e "s|-lreadline|-ledit|g"
 
 BUILDLINK_PREFIX.history=	/usr
 BUILDLINK_FILES.history=	include/history.h
 BUILDLINK_FILES.history+=	lib/libedit.*
 BUILDLINK_TRANSFORM.history=	-e "s|/history.h|/readline/history.h|g"
 BUILDLINK_TRANSFORM.history+=	-e "s|libedit|libhistory|g"
+REPLACE_LIBNAMES_SED+=		-e "s|-lhistory|-ledit|g"
 .else # exists(/usr/include/readline/readline.h)
 BUILDLINK_PREFIX.readline=	/usr
 BUILDLINK_FILES.readline=	include/readline/*
 BUILDLINK_FILES.readline+=	lib/libedit.*
 BUILDLINK_TRANSFORM.readline=	-e "s|libedit|libreadline|g"
+REPLACE_LIBNAMES_SED+=		-e "s|-lreadline|-ledit|g"
 
 BUILDLINK_PREFIX.history=	/usr
 BUILDLINK_FILES.history+=	lib/libedit.*
 BUILDLINK_TRANSFORM.history=	-e "s|libedit|libhistory|g"
+REPLACE_LIBNAMES_SED+=		-e "s|-lhistory|-ledit|g"
 .endif
 .endif
 
