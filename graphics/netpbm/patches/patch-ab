@@ -1,27 +1,64 @@
-$NetBSD: patch-ab,v 1.4 1999/01/10 23:52:15 tron Exp $
+$NetBSD: patch-ab,v 1.5 2000/05/17 10:13:20 tron Exp $
 
---- pbmplus.h.orig	Tue Mar  1 10:46:36 1994
-+++ pbmplus.h	Mon Jan 11 00:33:32 1999
-@@ -119,10 +119,12 @@
- #ifndef VMS
- #include <unistd.h>
- #endif
-+#ifndef __NetBSD__
- extern int atoi();
- extern void exit();
- extern long time();
- extern int write();
-+#endif /* NetBSD */
- #endif
+--- Makefile.common.orig	Tue May 16 03:14:14 2000
++++ Makefile.common	Wed May 17 11:18:34 2000
+@@ -67,7 +67,7 @@
+ $(OBJECTS): %.o: %.c
+ 	$(CC) -c $(CFLAGS) $(INCLUDE) -o $@ $<
  
- /* CONFIGURE: On most BSD systems, malloc() gets declared in stdlib.h, on
-@@ -275,5 +277,9 @@
- int vfprintf ARGS(( FILE* stream, char* format, va_list args ));
- #endif /*NEED_VFPRINTF*/
+-LIBOPT = $(SRCDIR)/libopt
++LIBOPT = $(ECHO)
  
-+#ifdef __NetBSD__
-+#include <errno.h>
-+#define A_STRERROR
-+#endif
+ # Rules for conventional single-object file executables
+ $(PORTBINARIES): %: %.o $(NETPBMLIBS) $(LIBOPT)
+@@ -97,7 +97,7 @@
+ # BUILDING NETPBM LIBRARIES
  
- #endif /*_PBMPLUS_H_*/
+ $(LIBOBJECTS): %.o: %.c
+-	$(CC) -c $(CFLAGS) $(CFLAGS_SHLIB) $(INCLUDE) -o $@ $<
++	$(LIBTOOL) $(CC) -c $(CFLAGS) $(CFLAGS_SHLIB) $(INCLUDE) $<
+ 
+ SONAME = lib$(LIBROOT).so.$(MAJ)
+ 
+@@ -117,10 +117,8 @@
+           `$(LIBOPT) $(LIBLIBS)` -lc
+ 
+ # Static library.  Unused by default, but with a small change to make files...
+-lib$(LIBROOT).a: $(LIBOBJECTS) $(LIBOBJECTS_X)
+-	-rm -f $@
+-	ar rc $@ $(LIBOBJECTS) $(LIBOBJECTS_X)
+-	-ranlib $@
++lib$(LIBROOT).la: $(LIBOBJECTS) $(LIBOBJECTS_X)
++	$(LIBTOOL) --mode=link $(CC) -rpath $(PREFIX)/lib -version-info $(MAJ):$(MIN) -o $@ $(LIBOBJECTS:.o=.lo) $(LIBOBJECTS_X:.o=.lo)
+ 
+ # Before Netpbm 8.4, we did hard links instead of symbolic.  A user
+ # requested symbolic, and I couldn't see a reason for hard (original reason
+@@ -146,7 +144,7 @@
+ install.bin.common: $(BINARIES) install.script
+ # Note that on Cygwin, the executables are actually pbmmake.exe, etc.
+ # Make and Install know that pbmmake.exe counts as pbmmake.
+-	$(INSTALL) -s -m$(INSTALL_PERM_BIN) $(BINARIES) $(INSTALLBINARIES)
++	$(LIBTOOL) --mode=install $(INSTALL) -s -m$(INSTALL_PERM_BIN) $(BINARIES) $(INSTALLBINARIES)
+ 
+ .PHONY: install.script
+ install.script: $(SCRIPTS)
+@@ -191,8 +189,8 @@
+ # built.  If a previous make STATICLIB=N didn't build the static
+ # library, the dependency here will do that.
+ .PHONY: install.staticlib
+-install.staticlib: lib$(LIBROOT).a
+-	$(INSTALL) -m$(INSTALL_PERM_LIBS) $< $(INSTALLLIBS)/$<
++install.staticlib: lib$(LIBROOT).la
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) lib$(LIBROOT).la $(PREFIX)/lib
+ 
+ .PHONY: install.lib.common
+ ifeq ($(NETPBMLIBSUFFIX),so)
+@@ -206,7 +204,7 @@
+ 
+ .PHONY: clean.common
+ clean.common:
+-	-rm -f *.o *.o2 *.a *.so* *.cat *~ core *.core *.i *.s merge.h \
++	-rm -f *.o *.o2 *.la *.so* *.cat *~ core *.core *.i *.s merge.h \
+           $(BINARIES) $(MERGENAME)
+ 
+ .PHONY: dep
