@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/10/16 10:14:56 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/11/04 18:08:45 garbled Exp $
 
 DISTNAME=		pvm3.4.beta7
 PKGNAME=		pvm-3.4.7
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.netlib.org/
 
-DEPENDS+=		ssh-1.2.26:../../security/ssh
+#DEPENDS+=		ssh-1.2.26:../../security/ssh
 
 WRKSRC=			${WRKDIR}/pvm3
 MAKE_ENV+=		PVM_ROOT=${WRKSRC}
@@ -28,6 +28,8 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/lib/pvm ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/lib/pvmd ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/lib/NETBSD/libpvm3.a ${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/lib/NETBSD/libfpvm3.a ${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/lib/NETBSD/libgpvm3.a ${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/lib/NETBSD/libpvmtrc.a ${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/include/* ${PREFIX}/include
 	${INSTALL_MAN} ${WRKSRC}/man/man1/* ${PREFIX}/man/man1
