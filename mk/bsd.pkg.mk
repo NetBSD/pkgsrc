@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1222 2003/07/23 22:02:48 jmmv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1223 2003/07/24 22:27:16 dmcmahill Exp $
 #
 # This file is in the public domain.
 #
@@ -4122,10 +4122,10 @@ print-summary-data:
 	fi;
 	@${ECHO} "maintainer ${PKGPATH} ${MAINTAINER}"
 	@${ECHO} "categories ${PKGPATH} ${CATEGORIES}"
-	@if [ -f ${DESCR_SRC} ]; then					\
-		${ECHO}  "descr ${PKGPATH} ${DESCR_SRC}";		\
-	else								\
-		${ECHO}  "descr ${PKGPATH} /dev/null";			\
+	@if [ -f ${DESCR_SRC} ]; then						\
+		${ECHO}  "descr ${PKGPATH} ${DESCR_SRC:S;${_PKGSRCDIR}/;;g}";	\
+	else									\
+		${ECHO}  "descr ${PKGPATH} /dev/null";				\
 	fi
 	@${ECHO} "prefix ${PKGPATH} ${PREFIX}"
 .endif
