@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:35:16 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 16:28:02 agc Exp $
 
-MD5 (psiconv-0.6.1.tar.gz) = 67d1b22ce05ede7742271044771c7cbd
+SHA1 (psiconv-0.6.1.tar.gz) = 13e7031a397f93be89912255116990fd19fe67e2
+Size (psiconv-0.6.1.tar.gz) = 200916 bytes
 SHA1 (patch-aa) = 277a392eb43f3d2d3e3150c26de6516248bdc078
 SHA1 (patch-ab) = 72e40d43f709351c4717811a03c0aef3b0589127
 SHA1 (patch-ac) = 8f0b3a5a9f697500f32f9d25e216dddd1542a049
