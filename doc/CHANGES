@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3045 2003/08/15 11:21:52 wiz Exp $
+$NetBSD: CHANGES,v 1.3046 2003/08/15 13:32:33 reed Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3271,3 +3271,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnupg to 1.2.2nb2 [itojun 2003-08-15]
 	Added safecat-1.11 [zuntum 2003-08-15]
 	Added YoSucker-37 [wiz 2003-08-15]
+	Updated papersize to add support for gv. And fix a bug when
+		configuration file may be zero bytes. Increased
+		version to papersize-1.0.6. [reed 2003-08-15]
