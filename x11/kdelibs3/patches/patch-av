@@ -1,0 +1,183 @@
+$NetBSD: patch-av,v 1.1.1.1 2002/05/31 13:16:47 skrll Exp $
+
+--- kdeprint/management/Makefile.in.orig	Tue May 21 15:42:07 2002
++++ kdeprint/management/Makefile.in
+@@ -264,15 +264,19 @@
+ 
+ INCLUDES = -I$(top_srcdir)/kdefx -I$(top_srcdir)/kdeprint -I$(top_builddir)/kdeprint -I$(top_srcdir)/kio -I$(top_srcdir)/kfile -I$(top_srcdir) $(all_includes)
+ 
+-lib_LTLIBRARIES = libkdeprint_management.la kaddprinterwizard.la
++lib_LTLIBRARIES = libkdeprint_management.la libkaddprinterwizard_main.la kaddprinterwizard.la
+ bin_PROGRAMS = kaddprinterwizard
+ 
+-kaddprinterwizard_SOURCES = dummy.cpp
+-kaddprinterwizard_LDADD = kaddprinterwizard.la
++kaddprinterwizard_SOURCES = kaddprinterwizard_main.cpp
++kaddprinterwizard_LDADD = libkaddprinterwizard_main.la
+ kaddprinterwizard_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ 
+-kaddprinterwizard_la_SOURCES = kaddprinterwizard.cpp
+-kaddprinterwizard_la_LIBADD = libkdeprint_management.la
++libkaddprinterwizard_main_la_SOURCES = kaddprinterwizard.cpp
++libkaddprinterwizard_main_la_LIBADD = libkdeprint_management.la
++libkaddprinterwizard_main_la_LDFLAGS = -avoid-version $(all_libraries) $(KDE_RPATH)
++
++kaddprinterwizard_la_SOURCES = kaddprinterwizard_main.cpp
++kaddprinterwizard_la_LIBADD = libkaddprinterwizard_main.la libkdeprint_management.la
+ kaddprinterwizard_la_LDFLAGS = -module -avoid-version $(all_libraries) $(KDE_RPATH)
+ 
+ libkdeprint_management_la_SOURCES = \
+@@ -317,11 +321,18 @@
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+ 
+-kaddprinterwizard_la_DEPENDENCIES = libkdeprint_management.la
+-am_kaddprinterwizard_la_OBJECTS = kaddprinterwizard.lo
++kaddprinterwizard_la_DEPENDENCIES = libkaddprinterwizard_main.la \
++	libkdeprint_management.la
++am_kaddprinterwizard_la_OBJECTS = kaddprinterwizard_main.lo
+ #>- kaddprinterwizard_la_OBJECTS = $(am_kaddprinterwizard_la_OBJECTS)
+ #>+ 1
+-kaddprinterwizard_la_OBJECTS = kaddprinterwizard.lo
++kaddprinterwizard_la_OBJECTS = kaddprinterwizard_main.lo
++libkaddprinterwizard_main_la_DEPENDENCIES = libkdeprint_management.la
++am_libkaddprinterwizard_main_la_OBJECTS = kaddprinterwizard.lo
++#>- libkaddprinterwizard_main_la_OBJECTS = \
++#>- $(am_libkaddprinterwizard_main_la_OBJECTS)
++#>+ 1
++libkaddprinterwizard_main_la_OBJECTS = kaddprinterwizard.lo
+ libkdeprint_management_la_DEPENDENCIES = ../libkdeprint.la
+ am_libkdeprint_management_la_OBJECTS = kmdbcreator.lo kmdriverdb.lo \
+ 	kmdriverdbwidget.lo kmiconview.lo kminfopage.lo kmmainview.lo \
+@@ -365,11 +376,11 @@
+ bin_PROGRAMS = kaddprinterwizard$(EXEEXT)
+ PROGRAMS = $(bin_PROGRAMS)
+ 
+-am_kaddprinterwizard_OBJECTS = dummy.$(OBJEXT)
++am_kaddprinterwizard_OBJECTS = kaddprinterwizard_main.$(OBJEXT)
+ #>- kaddprinterwizard_OBJECTS = $(am_kaddprinterwizard_OBJECTS)
+ #>+ 1
+-kaddprinterwizard_OBJECTS = dummy.$(OBJEXT)
+-kaddprinterwizard_DEPENDENCIES = kaddprinterwizard.la
++kaddprinterwizard_OBJECTS = kaddprinterwizard_main.$(OBJEXT)
++kaddprinterwizard_DEPENDENCIES = libkaddprinterwizard_main.la
+ 
+ DEFS = @DEFS@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+@@ -377,9 +388,10 @@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+ depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
+-@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/cjanuswidget.Plo $(DEPDIR)/dummy.Po \
+-	@AMDEP_TRUE@	$(DEPDIR)/jobitem.Plo \
++@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/cjanuswidget.Plo $(DEPDIR)/jobitem.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/kaddprinterwizard.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/kaddprinterwizard_main.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/kaddprinterwizard_main.Po \
+ 	@AMDEP_TRUE@	$(DEPDIR)/kiconselectaction.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/kmconfigcommand.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/kmconfigdialog.Plo \
+@@ -437,6 +449,7 @@
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ CXXFLAGS = @CXXFLAGS@
+ DIST_SOURCES = $(kaddprinterwizard_la_SOURCES) \
++	$(libkaddprinterwizard_main_la_SOURCES) \
+ 	$(libkdeprint_management_la_SOURCES) \
+ 	$(kaddprinterwizard_SOURCES)
+ DATA = $(dataicon_DATA)
+@@ -445,7 +458,7 @@
+ 
+ DIST_COMMON = $(kdeprint_HEADERS) $(noinst_HEADERS) Makefile.am \
+ 	Makefile.in
+-SOURCES = $(kaddprinterwizard_la_SOURCES) $(libkdeprint_management_la_SOURCES) $(kaddprinterwizard_SOURCES)
++SOURCES = $(kaddprinterwizard_la_SOURCES) $(libkaddprinterwizard_main_la_SOURCES) $(libkdeprint_management_la_SOURCES) $(kaddprinterwizard_SOURCES)
+ 
+ #>- all: all-am
+ #>+ 1
+@@ -494,6 +507,8 @@
+ 	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
+ kaddprinterwizard.la: $(kaddprinterwizard_la_OBJECTS) $(kaddprinterwizard_la_DEPENDENCIES) 
+ 	$(CXXLINK) -rpath $(libdir) $(kaddprinterwizard_la_LDFLAGS) $(kaddprinterwizard_la_OBJECTS) $(kaddprinterwizard_la_LIBADD) $(LIBS)
++libkaddprinterwizard_main.la: $(libkaddprinterwizard_main_la_OBJECTS) $(libkaddprinterwizard_main_la_DEPENDENCIES) 
++	$(CXXLINK) -rpath $(libdir) $(libkaddprinterwizard_main_la_LDFLAGS) $(libkaddprinterwizard_main_la_OBJECTS) $(libkaddprinterwizard_main_la_LIBADD) $(LIBS)
+ #>- libkdeprint_management.la: $(libkdeprint_management_la_OBJECTS) $(libkdeprint_management_la_DEPENDENCIES) 
+ #>+ 2
+ @KDE_USE_CLOSURE_TRUE@libkdeprint_management.la: libkdeprint_management.la.closure $(libkdeprint_management_la_OBJECTS) $(libkdeprint_management_la_DEPENDENCIES) 
+@@ -534,9 +549,10 @@
+ 	-rm -f *.tab.c
+ 
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/cjanuswidget.Plo@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/jobitem.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kaddprinterwizard.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kaddprinterwizard_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kaddprinterwizard_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kiconselectaction.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmconfigcommand.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmconfigdialog.Plo@am__quote@
+@@ -797,9 +813,6 @@
+ 	uninstall-dataiconDATA uninstall-info-am \
+ 	uninstall-kdeprintHEADERS uninstall-libLTLIBRARIES
+ 
+-
+-dummy.cpp:
+-	echo > dummy.cpp
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
+@@ -981,11 +994,11 @@
+ 	-rm -f  libkdeprint_management_la_meta_unload.cpp
+ 
+ #>+ 11
+-kaddprinterwizard_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kaddprinterwizard.cpp  
++kaddprinterwizard_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kaddprinterwizard_main.cpp  
+ 	@echo 'creating kaddprinterwizard_la.all_cpp.cpp ...'; \
+ 	rm -f kaddprinterwizard_la.all_cpp.files kaddprinterwizard_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kaddprinterwizard_la.all_cpp.final; \
+-	for file in kaddprinterwizard.cpp ; do \
++	for file in kaddprinterwizard_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> kaddprinterwizard_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kaddprinterwizard_la.all_cpp.final; \
+ 	done; \
+@@ -993,6 +1006,18 @@
+ 	rm -f kaddprinterwizard_la.all_cpp.final kaddprinterwizard_la.all_cpp.files
+ 
+ #>+ 11
++libkaddprinterwizard_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kaddprinterwizard.cpp  
++	@echo 'creating libkaddprinterwizard_main_la.all_cpp.cpp ...'; \
++	rm -f libkaddprinterwizard_main_la.all_cpp.files libkaddprinterwizard_main_la.all_cpp.final; \
++	echo "#define KDE_USE_FINAL 1" >> libkaddprinterwizard_main_la.all_cpp.final; \
++	for file in kaddprinterwizard.cpp ; do \
++	  echo "#include \"$$file\"" >> libkaddprinterwizard_main_la.all_cpp.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkaddprinterwizard_main_la.all_cpp.final; \
++	done; \
++	cat libkaddprinterwizard_main_la.all_cpp.final libkaddprinterwizard_main_la.all_cpp.files  > libkaddprinterwizard_main_la.all_cpp.cpp; \
++	rm -f libkaddprinterwizard_main_la.all_cpp.final libkaddprinterwizard_main_la.all_cpp.files
++
++#>+ 11
+ libkdeprint_management_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kmdbcreator.cpp $(srcdir)/kmdriverdb.cpp $(srcdir)/kmdriverdbwidget.cpp $(srcdir)/kmiconview.cpp $(srcdir)/kminfopage.cpp $(srcdir)/kmmainview.cpp $(srcdir)/kmpages.cpp $(srcdir)/kmprinterview.cpp $(srcdir)/kmjobviewer.cpp $(srcdir)/jobitem.cpp $(srcdir)/kmpropwidget.cpp $(srcdir)/kmpropcontainer.cpp $(srcdir)/kmpropertypage.cpp $(srcdir)/kmpropgeneral.cpp $(srcdir)/cjanuswidget.cpp $(srcdir)/kmpropmembers.cpp $(srcdir)/kmpropbackend.cpp $(srcdir)/kmpropdriver.cpp $(srcdir)/kmlistview.cpp $(srcdir)/kminstancepage.cpp $(srcdir)/kmtimer.cpp $(srcdir)/kmwizard.cpp $(srcdir)/kmwizardpage.cpp $(srcdir)/kmwinfopage.cpp $(srcdir)/kmwpassword.cpp $(srcdir)/kmwsocketutil.cpp $(srcdir)/kmwbackend.cpp $(srcdir)/kmwsocket.cpp $(srcdir)/kmwdriver.cpp $(srcdir)/kmwdriverselect.cpp $(srcdir)/kmwdrivertest.cpp $(srcdir)/kmwinfobase.cpp $(srcdir)/kmwname.cpp $(srcdir)/kmwend.cpp $(srcdir)/kmwclass.cpp $(srcdir)/kmwlpd.cpp $(srcdir)/kmwfile.cpp $(srcdir)/kmdriverdialog.cpp $(srcdir)/kmwsmb.cpp $(srcdir)/smbview.cpp $(srcdir)/kmconfigdialog.cpp $(srcdir)/kmconfigpage.cpp $(srcdir)/kmconfiggeneral.cpp $(srcdir)/kmspecialprinterdlg.cpp $(srcdir)/kmwlocal.cpp $(srcdir)/kiconselectaction.cpp $(srcdir)/kmconfigpreview.cpp $(srcdir)/sidepixmap.cpp $(srcdir)/pluginaction.cpp $(srcdir)/kxmlcommanddlg.cpp $(srcdir)/kxmlcommandselector.cpp $(srcdir)/kmconfigcommand.cpp $(srcdir)/kmconfigfilter.cpp libkdeprint_management_la_meta_unload.cpp   kmmainview.moc kmdriverdbwidget.moc kmconfigpage.moc smbview.moc kmwsmb.moc cjanuswidget.moc kmlistview.moc pluginaction.moc kmconfiggeneral.moc kmwclass.moc kminstancepage.moc kmprinterview.moc kmiconview.moc kmpropcontainer.moc kmdbcreator.moc kmpropwidget.moc kmconfigdialog.moc kmwlocal.moc kmjobviewer.moc kmspecialprinterdlg.moc kiconselectaction.moc kmwsocketutil.moc kmconfigfilter.moc kxmlcommanddlg.moc kmpropertypage.moc kxmlcommandselector.moc kmwdrivertest.moc kmwsocket.moc kmwizard.moc kmdriverdb.moc kmtimer.moc kmwizardpage.moc kmdriverdialog.moc 
+ 	@echo 'creating libkdeprint_management_la.all_cpp.cpp ...'; \
+ 	rm -f libkdeprint_management_la.all_cpp.files libkdeprint_management_la.all_cpp.final; \
+@@ -1005,11 +1030,11 @@
+ 	rm -f libkdeprint_management_la.all_cpp.final libkdeprint_management_la.all_cpp.files
+ 
+ #>+ 11
+-kaddprinterwizard.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
++kaddprinterwizard.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kaddprinterwizard_main.cpp  
+ 	@echo 'creating kaddprinterwizard.all_cpp.cpp ...'; \
+ 	rm -f kaddprinterwizard.all_cpp.files kaddprinterwizard.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kaddprinterwizard.all_cpp.final; \
+-	for file in dummy.cpp ; do \
++	for file in kaddprinterwizard_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> kaddprinterwizard.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kaddprinterwizard.all_cpp.final; \
+ 	done; \
+@@ -1018,7 +1043,7 @@
+ 
+ #>+ 3
+ clean-final:
+-	-rm -f kaddprinterwizard_la.all_cpp.cpp libkdeprint_management_la.all_cpp.cpp kaddprinterwizard.all_cpp.cpp
++	-rm -f kaddprinterwizard_la.all_cpp.cpp libkaddprinterwizard_main_la.all_cpp.cpp libkdeprint_management_la.all_cpp.cpp kaddprinterwizard.all_cpp.cpp
+ 
+ #>+ 2
+ final:
