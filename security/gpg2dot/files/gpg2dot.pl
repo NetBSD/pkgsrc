@@ -1,15 +1,24 @@
 #!@PREFIX@/bin/perl
+#
+# $NetBSD: gpg2dot.pl,v 1.2 2004/01/21 04:14:45 lukem Exp $
 
 # ----------------------------------------------------------------------------
 # "THE BEER-WARE LICENSE" (Revision 42):
-# <atatat@NetBSD.ORG> wrote this file.  As long as you retain this notice you
-# can do whatever you want with this stuff. If we meet some day, and you think
-# this stuff is worth it, you can buy me a beer in return.
-#
-# Andrew Brown
+# Andrew Brown <atatat@NetBSD.org> and Luke Mewburn <lukem@NetBSD.org>
+# wrote this file.  As long as you retain this notice you can do whatever
+# you want with this stuff.  If we meet some day, and you think this stuff
+# is worth it, you can buy us a beer in return.
 # ----------------------------------------------------------------------------
 
+#
+# gpg2dot [mykey] --
+#	generate input for dot(1) from gpg(1) --list-sigs
+#		gpg	http://www.gnupg.org
+#		dot	http://www.graphviz.org/
+#
+
 $date = localtime();
+$mykeyid = shift;
 
 $sg = "";
 open(GPG, "gpg --list-keys --verbose 2>/dev/null |");
@@ -25,24 +34,42 @@ while (<GPG>) {
 	}
 	$kuid =~ s/\"/\\\"/g;
 	($keyid = $lkeyid) =~ s:.*/::;
-	next if ($kuid !~ /netbsd.org/i);
 	$kuid{$keyid} = $kuid;
+	next if ($label{$keyid} != "");
 	$label{$keyid} = "$lkeyid - $date\\n$kuid";
     }
     elsif (/^sig (.{7}) (\S+)\s+(\S+)\s+(.+\S)/) {
 	($skeyid, $date, $suid) = ($2, $3, $4);
-	next if ($kuid !~ /netbsd.org/i ||
-		 $suid =~ /id not found/ ||
+	next if ($suid =~ /id not found/ ||
 		 $skeyid eq $keyid);
 	push(@isigs, "$keyid $skeyid $date $suid");
+	$sigmap{"$keyid-$skeyid"} = 1;
     }
 }
 
 foreach (@isigs) {
     ($keyid, $skeyid, $date, $suid) = split(/ /, $_, 4);
     next if (!$kuid{$keyid} || !$kuid{$skeyid});
-    push(@sigs, sprintf("\"%s\" -> \"%s\";\t// %s -> %s\n",
-			$skeyid, $keyid, $kuid{$skeyid}, $kuid{$keyid}));
+    next if ($sigmap{"$skeyid-$keyid"} == -1);
+    $color = "black";
+    $attrs = "";
+    if ($sigmap{"$skeyid-$keyid"}) {
+	if ($keyid eq $mykeyid ||
+	    $skeyid eq $mykeyid) {	# two way trust, includes me
+	    $color = "green";
+	} else {			# two way trust, me unevolved
+	    $color = "blue";
+	}
+	$attrs = ",dir=\"both\"";
+	$sigmap{"$keyid-$skeyid"} = -1;
+    } elsif ($keyid eq $mykeyid) {	# you trust me (one way)
+	$color = "orange";
+    } elsif ($skeyid eq $mykeyid) {	# i trust you (one way)
+	$color = "red";
+    }
+    push(@sigs, sprintf("\"%s\" -> \"%s\" [color=\"%s\"%s];\t// %s -> %s\n",
+			$skeyid, $keyid, $color, $attrs,
+			$kuid{$skeyid}, $kuid{$keyid}));
     $signer{$skeyid} = "yes";
     $signed{$keyid} = "yes";
 }
