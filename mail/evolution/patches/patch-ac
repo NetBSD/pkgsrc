@@ -1,20 +1,18 @@
-$NetBSD: patch-ac,v 1.7 2004/01/04 21:37:09 rh Exp $
+$NetBSD: patch-ac,v 1.8 2004/05/06 10:03:54 recht Exp $
 
---- shell/main.c.orig	2003-07-29 01:19:13.000000000 +1000
+--- shell/main.c.orig	2003-05-19 21:41:05.000000000 +0200
 +++ shell/main.c
-@@ -91,6 +91,25 @@ static gboolean killev = FALSE;
+@@ -91,6 +91,22 @@ static gboolean killev = FALSE;
  
  extern char *evolution_debug_log;
  
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) && defined(_PTH_PTHREAD_H_)
 +#include <gtk/gtk.h>
-+#include <pthread.h>
 +
 +/*
 + * Pth is non-preemptive, so we yield the processor periodically
 + */
 +
-+#ifdef _PTH_PTHREAD_H_
 +static gint
 +pth_nbschedule (gpointer data)
 +{
@@ -22,13 +20,12 @@ $NetBSD: patch-ac,v 1.7 2004/01/04 21:37:09 rh Exp $
 +
 +	return TRUE;
 +}
-+#endif /* _PTH_PTHREAD_H_ */
-+#endif /* __NetBSD__ */
++#endif /* _PTH_PTHREAD_H_ && __NetBSD__ */
 +
  
  static GtkWidget *
  quit_box_new (void)
-@@ -374,6 +393,10 @@ idle_cb (void *data)
+@@ -374,6 +390,10 @@ idle_cb (void *data)
  	else
  		startup_line_mode = E_SHELL_STARTUP_LINE_MODE_OFFLINE;
  
@@ -39,7 +36,7 @@ $NetBSD: patch-ac,v 1.7 2004/01/04 21:37:09 rh Exp $
  	shell = e_shell_new (evolution_directory, ! no_splash, startup_line_mode, &result);
  	g_free (evolution_directory);
  
-@@ -634,6 +657,10 @@ main (int argc, char **argv)
+@@ -634,6 +654,10 @@ main (int argc, char **argv)
  
  	gtk_idle_add (idle_cb, uri_list);
  

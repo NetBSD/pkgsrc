@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2004/01/14 07:27:51 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.17 2004/05/06 10:03:54 recht Exp $
 bin/evolution
 bin/evolution-1.4
 bin/evolution-addressbook-export
@@ -1223,6 +1223,7 @@ ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/evolution-1.4.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/evolution-1.4.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/evolution-1.4.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/evolution-1.4.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/evolution-1.4.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/evolution-1.4.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/evolution-1.4.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/evolution-1.4.mo
@@ -1239,6 +1240,7 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/evolution-1.4.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/evolution-1.4.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/evolution-1.4.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/evolution-1.4.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/evolution-1.4.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/evolution-1.4.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/evolution-1.4.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/evolution-1.4.mo
@@ -1252,11 +1254,17 @@ share/mime-info/evolution-1.4.mime
 share/omf/evolution/evolution-1.4-C.omf
 share/pixmaps/evolution-1.4.png
 share/pixmaps/evolution.png
+@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/evolution
+@comment in scrollkeeper: @dirrm share/omf
+@comment in xdg-dirs: @dirrm share/mime-info
 @dirrm share/idl/evolution-1.4
+@comment in ORBit2: @dirrm share/idl
 @dirrm share/gnome/help/evolution-1.4/C/figures
 @dirrm share/gnome/help/evolution-1.4/C
 @dirrm share/gnome/help/evolution-1.4
+@comment in gnome-dirs: @dirrm share/gnome/help
+@comment in GConf2: @dirrm share/gconf/schemas
 @dirrm share/evolution/1.4/zoneinfo/Pacific
 @dirrm share/evolution/1.4/zoneinfo/Indian
 @dirrm share/evolution/1.4/zoneinfo/Europe
@@ -1304,6 +1312,7 @@ share/pixmaps/evolution.png
 @dirrm share/evolution/1.4/default_user
 @dirrm share/evolution/1.4
 @dirrm share/evolution
+@comment in xdg-dirs: @dirrm share/applications
 @dirrm libexec/evolution/1.4/camel
 @dirrm libexec/evolution/1.4
 @dirrm libexec/evolution
@@ -1313,6 +1322,7 @@ share/pixmaps/evolution.png
 @dirrm lib/evolution/1.4/camel-providers
 @dirrm lib/evolution/1.4
 @dirrm lib/evolution
+@comment in libbonobo: @dirrm lib/bonobo/servers
 @dirrm include/evolution-1.4/wombat
 @dirrm include/evolution-1.4/widgets
 @dirrm include/evolution-1.4/shell
