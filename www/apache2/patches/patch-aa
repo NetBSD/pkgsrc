@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.10 2003/05/29 01:02:29 itojun Exp $
+$NetBSD: patch-aa,v 1.11 2003/10/28 04:49:33 itojun Exp $
 
---- Makefile.in.orig	2003-05-18 02:11:37.000000000 +0900
-+++ Makefile.in	2003-05-29 09:48:23.000000000 +0900
+--- Makefile.in.orig	Mon Aug 25 09:12:06 2003
++++ Makefile.in	Tue Oct 28 13:39:36 2003
 @@ -14,7 +14,7 @@
  PROGRAMS        = $(PROGRAM_NAME)
  TARGETS         = $(PROGRAMS) $(shared_build) $(other_targets)
@@ -42,10 +42,10 @@ $NetBSD: patch-aa,v 1.10 2003/05/29 01:02:29 itojun Exp $
  	cp build/*.mk $(DESTDIR)$(installbuilddir); \
 -	sed 's#LIBTOOL = \(.*\)#LIBTOOL = $(SHELL) $(installbuilddir)/libtool $(LTFLAGS)#' \
 -	    build/config_vars.mk > $(DESTDIR)$(installbuilddir)/config_vars.mk; \
- 	cp $(top_srcdir)/build/instdso.sh $(DESTDIR)$(installbuilddir);
+ 	cp $(top_srcdir)/build/instdso.sh $(DESTDIR)$(installbuilddir); \
+ 	cp $(top_builddir)/config.nice $(DESTDIR)$(installbuilddir);
  
- htdocs-srcdir = $(top_srcdir)/docs/docroot
-@@ -107,7 +109,7 @@
+@@ -108,7 +110,7 @@
  	doxygen $(top_srcdir)/docs/doxygen.conf
  
  install-htdocs:
@@ -54,7 +54,7 @@ $NetBSD: patch-aa,v 1.10 2003/05/29 01:02:29 itojun Exp $
             echo "[PRESERVING EXISTING HTDOCS SUBDIR: $(DESTDIR)$(htdocsdir)]"; \
          else \
  	    echo Installing HTML documents ; \
-@@ -117,7 +119,7 @@
+@@ -118,7 +120,7 @@
  	fi
  
  install-error:
@@ -63,7 +63,7 @@ $NetBSD: patch-aa,v 1.10 2003/05/29 01:02:29 itojun Exp $
             echo "[PRESERVING EXISTING ERROR SUBDIR: $(DESTDIR)$(errordir)]"; \
          else \
  	    echo Installing error documents ; \
-@@ -127,7 +129,7 @@
+@@ -128,7 +130,7 @@
  	fi
  
  install-icons:
@@ -72,7 +72,7 @@ $NetBSD: patch-aa,v 1.10 2003/05/29 01:02:29 itojun Exp $
             echo "[PRESERVING EXISTING ICONS SUBDIR: $(DESTDIR)$(iconsdir)]"; \
          else \
  	    echo Installing icons ; \
-@@ -137,7 +139,7 @@
+@@ -138,7 +140,7 @@
  	fi
  
  install-cgi:
