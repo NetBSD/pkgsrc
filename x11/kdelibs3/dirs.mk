@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.1 2004/12/10 06:02:57 markd Exp $
+# $NetBSD: dirs.mk,v 1.2 2005/01/17 09:24:07 seb Exp $
 #
 
 .if !defined(DIRS_KDE3_MK)
@@ -130,7 +130,7 @@ KDE3_DIRS+=	share/kde/wallpapers
 
 .for dir in ${KDE3_DIRS}
 PRINT_PLIST_AWK+=       /^@dirrm ${dir:S|/|\\/|g}$$/ \
-                                { print "@comment in kde: " $$0; next; }
+				{ print "@comment in kde: " $$0; next; }
 .endfor
 
 .endif		# !defined(DIRS_KDE3_MK)
