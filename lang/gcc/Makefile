@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/01/11 06:53:10 tron Exp $
+# $NetBSD: Makefile,v 1.10 2001/01/13 00:21:11 tron Exp $
 
 DISTNAME=		gcc-2.95.2
 CATEGORIES=		lang
@@ -66,9 +66,10 @@ post-build:
 .endif
 
 post-install:
-	${RM} -f ${PREFIX}/${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/curses.h ${PREFIX}/${PKGNAME}/bin/cc
-.if (${OPSYS} != SunOS)
-	${LN} -s gcc ${PREFIX}/${PKGNAME}/bin/cc
+.if (${OPSYS} == SunOS)
+	${RM} -f ${GCC_PREFIX}/bin/cc
+.else
+	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/curses.h
 	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/etc/${PKGNAME}.mk
 .endif
 
