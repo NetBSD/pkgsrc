@@ -1,13 +1,20 @@
-# $NetBSD: Makefile,v 1.56 2002/12/07 02:39:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.57 2003/03/22 11:00:16 jmmv Exp $
 #
 
 DISTNAME=	racoon-20021120a
+PKGREVISION=	1
+WRKSRC=		${WRKDIR}/${DISTNAME}/racoon
 CATEGORIES=	security net
 MASTER_SITES=	ftp://ftp.kame.net/pub/kame/misc/
 
 MAINTAINER=	itojun@kame.net
 HOMEPAGE=	http://www.kame.net/
 COMMENT=	KAME racoon IKE daemon
+
+CONFLICTS+=	racoon-[0-9]*
+
+USE_BUILDLINK2=	yes
+USE_PKGINSTALL=	yes
 
 CRYPTO=		yes
 
@@ -19,13 +26,10 @@ PKG_FAIL_REASON+= "${PKGNAME} requires ipsec-ready ${OPSYS}"
 BUILD_DEFS+=	USE_INET6
 .include "../../mk/bsd.prefs.mk"
 
-USE_BUILDLINK2=	yes
-
-CONFLICTS+=	racoon-[0-9]*
-
-WRKSRC=		${WRKDIR}/${DISTNAME}/racoon
-
 PKG_SYSCONFSUBDIR?=	racoon
+RCD_SCRIPTS=	racoon
+CONF_FILES=	${PREFIX}/share/examples/racoon/racoon.conf.sample \
+		${PKG_SYSCONFDIR}/racoon.conf
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-debug
