@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/01/07 14:58:26 tron Exp $
+# $NetBSD: Makefile,v 1.17 2001/01/07 17:07:13 tron Exp $
 
 DISTNAME=	plex86-20010106
 PKGNAME=	${DISTNAME:S/-/-0./}
@@ -41,9 +41,6 @@ pre-extract:
 	@${ECHO_MSG} "(Or set BSDSRCDIR correctly in /etc/mk.conf.)"
 	@${FALSE}
 .endif
-
-pre-build:
-	cd ${WRKSRC} && ${GTAR} xzf docs/output.tar.gz
 
 post-build:
 	${TEST} -f ${WRKSRC}/misc/vga.pcf.gz || \
