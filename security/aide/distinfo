@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.3 2002/11/13 22:58:20 jschauma Exp $
+$NetBSD: distinfo,v 1.4 2004/12/01 16:42:53 wiz Exp $
 
-SHA1 (aide-0.9.tar.gz) = 15648f3131c8dd7a82e0437a5c28ade8f5742d7d
-Size (aide-0.9.tar.gz) = 216096 bytes
+SHA1 (aide-0.10.tar.gz) = e1a65a96ea66742290b3e445d98c543008057938
+Size (aide-0.10.tar.gz) = 234184 bytes
+SHA1 (patch-aa) = 22f4be852c82a9252b29150cf73ce3b938d2f982
