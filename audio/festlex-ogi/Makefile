@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/12/28 04:19:58 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2000/02/15 09:26:12 agc Exp $
 
 DISTNAME=	OGIlexicon-2.0
 PKGNAME=	festlex-ogi-2.0
@@ -9,8 +9,8 @@ MASTER_SITES=	ftp://cslu.cse.ogi.edu/pub/tts/
 MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://cslu.cse.ogi.edu/tts
 
-DEPENDS+=	festival-1.4.0:../festival \
-		festlex-poslex-1.4.0:../festlex-poslex
+DEPENDS+=	festival-1.4.0:../festival
+DEPENDS+=	festlex-poslex-1.4.0:../festlex-poslex
 
 LICENSE=	no-commercial-use
 

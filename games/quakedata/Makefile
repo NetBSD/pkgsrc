@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/02/02 06:50:34 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2000/02/15 09:26:20 agc Exp $
 # Based on FreeBSD ports/games/quakeserver
 # FreeBSD: ports/games/quakeserver/Makefile,v 1.20 1999/08/31 06:44:23 mharo Exp
 #
@@ -13,8 +13,8 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	itojun@kame.net
 HOMEPAGE=	http://www.idsoftware.com/
 
-BUILD_DEPENDS=	unzip:../../archivers/unzip \
-		lha:../../archivers/lha
+BUILD_DEPENDS=	unzip:../../archivers/unzip
+BUILD_DEPENDS+=	lha:../../archivers/lha
 
 NO_WRKSUBDIR=	YES
 NO_BUILD=	YES
