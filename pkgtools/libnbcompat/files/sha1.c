@@ -1,4 +1,4 @@
-/*	$NetBSD: sha1.c,v 1.3 2003/09/03 13:11:15 jlam Exp $	*/
+/*	$NetBSD: sha1.c,v 1.4 2003/09/05 18:36:04 jlam Exp $	*/
 /*	$OpenBSD: sha1.c,v 1.9 1997/07/23 21:12:32 kstailey Exp $	*/
 
 /*
@@ -33,7 +33,7 @@
 #include <string.h>
 #endif
 
-#include <sha1.h>
+#include "nbcompat/sha1.h"
 
 #ifndef _DIAGASSERT
 #define _DIAGASSERT(cond)	assert(cond)
