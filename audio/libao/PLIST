@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/10/03 18:31:18 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/12/08 14:33:47 wiz Exp $
 include/ao/ao.h
 include/ao/os_types.h
 include/ao/plugin.h
@@ -12,7 +12,8 @@ lib/libao.a
 lib/libao.la
 lib/libao.so
 lib/libao.so.3
-lib/libao.so.3.1
+lib/libao.so.3.2
+lib/pkgconfig/ao.pc
 man/man5/libao.conf.5
 share/aclocal/ao.m4
 share/doc/${PKGNAME}/ao_append_option.html
