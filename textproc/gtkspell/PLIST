@@ -1,6 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:55 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/12/03 12:39:05 adam Exp $
 include/gtkspell-2.0/gtkspell/gtkspell.h
 lib/libgtkspell.la
 lib/pkgconfig/gtkspell-2.0.pc
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gtkspell.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gtkspell.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/gtkspell.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gtkspell.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gtkspell.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gtkspell.mo
+${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/gtkspell.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gtkspell.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gtkspell.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gtkspell.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gtkspell.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gtkspell.mo
+${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gtkspell.mo
 @dirrm include/gtkspell-2.0/gtkspell
 @dirrm include/gtkspell-2.0
