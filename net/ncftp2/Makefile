@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/07/13 12:20:19 tron Exp $
+# $NetBSD: Makefile,v 1.17 1999/08/16 09:41:24 agc Exp $
 # FreeBSD Id: Makefile,v 1.39 1998/01/31 17:49:48 jseger Exp
 #
 
@@ -18,6 +18,7 @@ CONFIGURE_ARGS+=	--disable-extra-dirs
 DEPENDS+=		ncurses-4.2:../../devel/ncurses
 .endif
 
+# Check for readline.h as standard
 .if exists(/usr/include/readline.h)
 CPPFLAGS+=		-DHAVE_LIBREADLINE=1
 CPPFLAGS+=		-DHAVE_FILENAME_COMPLETION_FUNCTION=1
@@ -38,7 +39,12 @@ CONFIGURE_ARGS+= 	--enable-socks5
 DEPENDS+=		socks5-1.0.2:../../net/socks5
 .endif
 .endif
+
+.if ${OPSYS} == "SunOS"
+CPPFLAGS=		-I${LOCALBASE}/include
+.else
 CPPFLAGS+=		-I${LOCALBASE}/include
+.endif
 LDFLAGS+=		-L${LOCALBASE}/lib
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
