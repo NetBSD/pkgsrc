@@ -17,9 +17,9 @@ DDEESSCCRRIIPPTTIIOONN
 
      The ddoowwnnllooaadd--vvuullnneerraabbiilliittyy--lliisstt program downloads this file from
      _f_t_p_:_/_/_f_t_p_._N_e_t_B_S_D_._o_r_g_/_p_u_b_/_N_e_t_B_S_D_/_p_a_c_k_a_g_e_s_/_d_i_s_t_f_i_l_e_s_/_p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s
-     using ftp(1).  This vulnerabilities file documents all known security
-     issues in pkgsrc packages and is kept up-to-date by the NetBSD packages
-     team.
+     using @FETCH_CMD_SHORT@(1).  This vulnerabilities file documents all
+     known security issues in pkgsrc packages and is kept up-to-date by the
+     NetBSD packages team.
 
      Each line lists the package and vulnerable versions, the type of exploit,
      and an Internet address for further information.  The type of exploit can
@@ -59,14 +59,13 @@ DDEESSCCRRIIPPTTIIOONN
            ++oo   weak-encryption
            ++oo   weak-ssl-authentication
 
-     By default, the vulnerabilities file is stored in the
-     _/_u_s_r_/_p_k_g_s_r_c_/_d_i_s_t_f_i_l_e_s directory.  This can be changed by defining the
-     environment variable PKGVULNDIR to the directory containing the vulnera-
-     bilities file.
+     By default, the vulnerabilities file is stored in the _@_P_K_G_V_U_L_N_D_I_R_@ direc-
+     tory.  This can be changed by defining the environment variable
+     PKGVULNDIR to the directory containing the vulnerabilities file.
 
 EENNVVIIRROONNMMEENNTT
      These variables can also be defined in the
-     _/_u_s_r_/_p_k_g_/_e_t_c_/_a_u_d_i_t_-_p_a_c_k_a_g_e_s_._c_o_n_f file.
+     _@_P_K_G___S_Y_S_C_O_N_F_D_I_R_@_/_a_u_d_i_t_-_p_a_c_k_a_g_e_s_._c_o_n_f file.
 
      PKGVULNDIR  Specifies the directory containing the _p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s
                  file.
@@ -74,9 +73,9 @@ EENNVVIIRROONNMMEENNTT
      FETCH_ARGS  Specifies optional arguments for the ftp client.
 
 FFIILLEESS
-     _/_u_s_r_/_p_k_g_s_r_c_/_d_i_s_t_f_i_l_e_s_/_p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s
+     _@_P_K_G_V_U_L_N_D_I_R_@_/_p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s
 
-     _/_u_s_r_/_p_k_g_/_e_t_c_/_a_u_d_i_t_-_p_a_c_k_a_g_e_s_._c_o_n_f
+     _@_P_K_G___S_Y_S_C_O_N_F_D_I_R_@_/_a_u_d_i_t_-_p_a_c_k_a_g_e_s_._c_o_n_f
 
 EEXXAAMMPPLLEESS
      The ddoowwnnllooaadd--vvuullnneerraabbiilliittyy--lliisstt command can be run via cron(8) to update
@@ -84,15 +83,15 @@ EEXXAAMMPPLLEESS
      cron(8) (or with NetBSD's _/_e_t_c_/_s_e_c_u_r_i_t_y_._l_o_c_a_l daily security script).
 
      The ddoowwnnllooaadd--vvuullnneerraabbiilliittyy--lliisstt command can be forced to use IPv4 with
-     the following setting in _/_u_s_r_/_p_k_g_/_e_t_c_/_a_u_d_i_t_-_p_a_c_k_a_g_e_s_._c_o_n_f:
+     the following setting in _@_P_K_G___S_Y_S_C_O_N_F_D_I_R_@_/_a_u_d_i_t_-_p_a_c_k_a_g_e_s_._c_o_n_f:
 
      export FETCH_ARGS="-4"
 
 SSEEEE AALLSSOO
-     pkg_info(1), mk.conf(5), packages(7), _/_u_s_r_/_p_k_g_s_r_c_/_m_k_/_b_s_d_._p_k_g_._d_e_f_a_u_l_t_s_._m_k
+     pkg_info(1), mk.conf(5), packages(7), _@_P_K_G_S_R_C_D_I_R_@_/_m_k_/_b_s_d_._p_k_g_._d_e_f_a_u_l_t_s_._m_k
      and
 
-     _D_o_c_u_m_e_n_t_a_t_i_o_n _o_n _t_h_e _N_e_t_B_S_D _P_a_c_k_a_g_e _S_y_s_t_e_m.  _/_u_s_r_/_p_k_g_s_r_c_/_P_a_c_k_a_g_e_s_._t_x_t
+     _D_o_c_u_m_e_n_t_a_t_i_o_n _o_n _t_h_e _N_e_t_B_S_D _P_a_c_k_a_g_e _S_y_s_t_e_m.  _@_P_K_G_S_R_C_D_I_R_@_/_P_a_c_k_a_g_e_s_._t_x_t
 
 HHIISSTTOORRYY
      The aauuddiitt--ppaacckkaaggeess and ddoowwnnllooaadd--vvuullnneerraabbiilliittyy--lliisstt commands were origi-
