@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2004/04/11 17:33:47 snj Exp $
+# $NetBSD: Makefile,v 1.55 2004/05/22 18:58:29 jschauma Exp $
 
 DISTNAME=		inn-${INN_VERSION}
 PKGREVISION=		1
@@ -19,26 +19,28 @@ CONFLICTS+=		nntpclnt-[0-9]*
 
 INN_VERSION=		2.3.5
 .include "Makefile.common"
-BUILD_DEFS+=		INN_DATA_DIR
+BUILD_DEFS+=		INN_DATA_DIR INN_USER INN_GROUP
 FILES_SUBST+=		INN_DATA_DIR=${INN_DATA_DIR}
 
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 GNU_CONFIGURE_PREFIX=	${INN_PREFIX}
-CONFIGURE_ARGS+=	--enable-setgid-inews \
-			--enable-uucp-rnews \
-			--mandir=${PREFIX}/man \
-			--with-perl --with-tmp-path=${INN_DATA_DIR}/tmp \
-			--with-db-dir=${INN_DATA_DIR}/db \
-			--with-etc-dir=${INN_DATA_DIR}/etc \
-			--with-log-dir=${INN_DATA_DIR}/log \
-			--with-run-dir=${INN_DATA_DIR}/run \
-			--with-spool-dir=${INN_SPOOL}
+CONFIGURE_ARGS+=	--enable-setgid-inews 				\
+			--enable-uucp-rnews 				\
+			--mandir=${PREFIX}/man 				\
+			--with-perl --with-tmp-path=${INN_DATA_DIR}/tmp	\
+			--with-db-dir=${INN_DATA_DIR}/db 		\
+			--with-etc-dir=${INN_DATA_DIR}/etc 		\
+			--with-log-dir=${INN_DATA_DIR}/log 		\
+			--with-run-dir=${INN_DATA_DIR}/run 		\
+			--with-spool-dir=${INN_SPOOL}			\
+			--with-news-user=${INN_USER}			\
+			--with-news-group=${INN_GROUP}
 CONFIGURE_ENV+=		_PATH_PERL=${PERL5}
 
-PKG_USERS=		news:news::Internet\\ News:${INN_DATA_DIR}:${SH}
-PKG_GROUPS=		news
+PKG_USERS=		${INN_USER}:${INN_GROUP}::Internet\\ News:${INN_DATA_DIR}:${SH}
+PKG_GROUPS=		${INN_GROUP}
 
 PKG_SYSCONFDIR.inn=	${INN_DATA_DIR}/etc
 EXAMPLEDIR=		${PREFIX}/share/examples/inn
@@ -47,12 +49,12 @@ INN_SPOOLDIRS=		archive articles overview incoming incoming/bad	\
 			outgoing uniover innfeed
 
 OWN_DIRS=		${PREFIX}/etc/nntp
-OWN_DIRS_PERMS=		${INN_DATA_DIR}			news news 0775
+OWN_DIRS_PERMS=		${INN_DATA_DIR}			${INN_USER} ${INN_GROUP} 0775
 .for DIR in ${INN_DATADIRS}
-MAKE_DIRS_PERMS+=	${INN_DATA_DIR}/${DIR}		news news 0775
+MAKE_DIRS_PERMS+=	${INN_DATA_DIR}/${DIR}		${INN_USER} ${INN_GROUP} 0775
 .endfor
 .for DIR in ${INN_SPOOLDIRS}
-MAKE_DIRS_PERMS+=	${INN_DATA_DIR}/spool/${DIR}	news news 0775
+MAKE_DIRS_PERMS+=	${INN_DATA_DIR}/spool/${DIR}	${INN_USER} ${INN_GROUP} 0775
 .endfor
 
 CFILES=			actsync.cfg actsync.ign buffindexed.conf \
@@ -64,7 +66,7 @@ CFILES=			actsync.cfg actsync.ign buffindexed.conf \
 			radius.conf readers.conf sasl.conf storage.conf
 .for FILE in ${CFILES}
 CONF_FILES_PERMS+=	${EXAMPLEDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE} \
-			news news 0664
+			${INN_USER} ${INN_GROUP} 0664
 .endfor
 
 RCD_SCRIPTS=		innd

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.239 2004/05/15 09:44:00 grant Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.240 2004/05/22 18:58:29 jschauma Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1059,6 +1059,16 @@ INN_DATA_DIR?= /var/news
 # Used by inn to specify the data directory.
 # Possible: any path you like
 # Default: /var/news
+
+INN_USER?=	news
+# Used by inn to specify the username 
+# Possible: any valid username 
+# Default: news
+
+INN_GROUP?=	news
+# Used by inn to specify the groupname
+# Possible: any valid groupname
+# Default: news
 
 IRCD_HYBRID_SMALL_NET?=		YES
 # Used by ircd-hybrid to tune various ircd paramaters when running
