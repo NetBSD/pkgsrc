@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/17 17:22:17 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/03/06 10:17:43 jlam Exp $
 #
 
 DISTNAME=		plugger-3.2-linux-x86-glibc
@@ -15,11 +15,8 @@ BINNAME?=		common
 
 .if ${BINNAME} != common
 DEPENDS+=		${BINNAME}-*:../../www/${BINNAME}
-
-MOZILLA_HOME=		${PREFIX}/lib/netscape/${NSNAME}
-NS_VERS=		${NSNAME:C/.*-//}
-
-PLIST_SUBST+=		NS_VERS=${NS_VERS} BINNAME=${BINNAME}
+MOZILLA_HOME=		${PREFIX}/lib/netscape/${NSNAME:C/nb[0-9]+$//}
+PLIST_SUBST+=		MOZILLA_HOME=${MOZILLA_HOME:S/${PREFIX}\///}
 .else
 DEPENDS+=		suse_base>=6.3:../../emulators/suse_base
 .endif
@@ -35,25 +32,24 @@ PLUGGERFULL=		${DISTNAME:C/-linux-x86-glibc//}
 PLUGGERVERS=		${PLUGGERFULL:C/.*-//}
 PLUGGERNAME=		${PLUGGERFULL:C/-.*//}
 NS_PLUGINS_DIR=		${PREFIX}/lib/netscape/plugins
+DOCDIR=			${PREFIX}/share/doc/plugger
+
+PLIST_SUBST+=		NS_PLUGINS_DIR=${NS_PLUGINS_DIR:S/${PREFIX}\///}
 
 CHECK_SHLIBS=		no
 
 do-install:
 .if ${BINNAME} != common
-		cd ${WRKSRC} && \
-		${INSTALL_DATA} pluggerrc ${MOZILLA_HOME}
+	cd ${WRKSRC}; ${INSTALL_DATA} pluggerrc ${MOZILLA_HOME}/pluggerrc
 .else
-		cd ${WRKSRC} && \
-		${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR} && \
-		${INSTALL_PROGRAM} plugger.so ${NS_PLUGINS_DIR} && \
-		${INSTALL_DATA} plugger.7 ${PREFIX}/man/man7 && \
-		${INSTALL_DATA_DIR} ${PREFIX}/share/doc/plugger && \
-		${INSTALL_DATA} README ${PREFIX}/share/doc/plugger && \
-		${INSTALL_DATA} COPYING ${PREFIX}/share/doc/plugger
+	${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR} ${DOCDIR}
+	cd ${WRKSRC}; ${INSTALL_PROGRAM} plugger.so ${NS_PLUGINS_DIR}
+	cd ${WRKSRC}; ${INSTALL_DATA} plugger.7 ${PREFIX}/man/man7
+	cd ${WRKSRC}; ${INSTALL_DATA} README COPYING ${DOCDIR}
 .endif
 
 .include "../../mk/bsd.pkg.mk"
 
 .if ${BINNAME} != common
-NSNAME!=	( ${PKG_INFO} 2>/dev/null -e ${BINNAME} || ${ECHO} "" )
+NSNAME!=	${PKG_INFO} -e ${BINNAME} || ${ECHO}
 .endif
