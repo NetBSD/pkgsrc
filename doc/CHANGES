@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3714 2003/10/20 00:32:30 hubertf Exp $
+$NetBSD: CHANGES,v 1.3715 2003/10/20 09:39:37 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4227,3 +4227,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xbattbar to 1.4.2nb3 [agc 2003-10-19]
 	Updated squidGuard to 1.2.0nb2 [jmmv 2003-10-19]
 	Added dmesg2gif-1.0 [hubertf 2003-10-20]
+	Updated gsharutils to 4.2.1nb2 [agc 2003-10-20]
