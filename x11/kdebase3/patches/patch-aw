@@ -1,8 +1,8 @@
-$NetBSD: patch-aw,v 1.5 2003/05/22 02:42:48 markd Exp $
+$NetBSD: patch-aw,v 1.6 2003/07/30 13:34:59 markd Exp $
 
---- kdeprint/kjobviewer/Makefile.in.orig	Tue May 13 23:07:56 2003
+--- kdeprint/kjobviewer/Makefile.in.orig	2003-07-15 22:03:29.000000000 +1200
 +++ kdeprint/kjobviewer/Makefile.in
-@@ -423,15 +423,20 @@ x_libraries = @x_libraries@
+@@ -424,15 +424,20 @@ x_libraries = @x_libraries@
  INCLUDES = $(all_includes)
  
  bin_PROGRAMS = kjobviewer
@@ -128,7 +128,7 @@ $NetBSD: patch-aw,v 1.5 2003/05/22 02:42:48 markd Exp $
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=kjobviewerui.rc cr16-app-kjobviewer.png cr32-app-kjobviewer.png kjobviewer.desktop 
-+KDE_DIST=kjobviewerui.rc cr16-app-kjobviewer.png kjobviewer.desktop cr32-app-kjobviewer.png 
++KDE_DIST=cr32-app-kjobviewer.png Makefile.in.rej kjobviewerui.rc cr16-app-kjobviewer.png kjobviewer.desktop 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
@@ -142,13 +142,15 @@ $NetBSD: patch-aw,v 1.5 2003/05/22 02:42:48 markd Exp $
  messages: rc.cpp
  	$(XGETTEXT) *.cpp -o $(podir)/kjobviewer.pot
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
-@@ -885,8 +899,12 @@ kjobviewer.moc: $(srcdir)/kjobviewer.h
- 	$(MOC) $(srcdir)/kjobviewer.h -o kjobviewer.moc
- 
+@@ -887,8 +901,14 @@ kjobviewer.moc: $(srcdir)/kjobviewer.h
+ #>+ 1
+ mocs: kjobviewer.moc
  #>+ 3
 +kjobviewer.moc: $(srcdir)/kjobviewer.h
 +	$(MOC) $(srcdir)/kjobviewer.h -o kjobviewer.moc
 +
++#>+ 1
++mocs: kjobviewer.moc
 +#>+ 3
  clean-metasources:
 -	-rm -f  kjobviewer.moc
@@ -156,7 +158,7 @@ $NetBSD: patch-aw,v 1.5 2003/05/22 02:42:48 markd Exp $
  
  #>+ 2
  docs-am:
-@@ -910,33 +928,33 @@ force-reedit:
+@@ -912,33 +932,33 @@ force-reedit:
  
  
  #>+ 11
@@ -203,7 +205,7 @@ $NetBSD: patch-aw,v 1.5 2003/05/22 02:42:48 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -946,5 +964,5 @@ kde-rpo-clean:
+@@ -948,5 +968,5 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 3
