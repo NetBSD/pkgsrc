@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.9 2004/10/03 00:13:17 tv Exp $
+# $NetBSD: Makefile,v 1.10 2004/10/13 16:10:02 taca Exp $
 #
 
 DISTNAME=	iconv-0.5
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	converters ruby
-MASTER_SITES=	http://member.nifty.ne.jp/nokada/archive/
+MASTER_SITES=	http://nokada.jin.gr.jp/ruby/
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://member.nifty.ne.jp/nokada/ruby.html
+HOMEPAGE=	# not available
 COMMENT=	Iconv wrapper class for Ruby
 
 USE_BUILDLINK3= # defined
