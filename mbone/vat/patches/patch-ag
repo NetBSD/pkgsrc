@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.2 1998/08/07 11:10:04 agc Exp $
+$NetBSD: patch-ag,v 1.3 1999/06/04 15:11:27 mycroft Exp $
 
 --- configure.in.freebsd	Thu Nov 20 13:27:04 1997
 +++ configure.in	Tue Nov 25 17:24:32 1997
@@ -20,7 +20,7 @@ $NetBSD: patch-ag,v 1.2 1998/08/07 11:10:04 agc Exp $
  *-*-netbsd*)
  	V_TARCMD="tar -h -c -f"
 -	V_LIB="$V_LIB -L/usr/local/lib"
-+	V_LIB="$V_LIB -L/usr/pkg/lib"
++	V_LIB="$V_LIB -Wl,-R/usr/pkg/lib -L/usr/pkg/lib"
  	;;
  *-*-hpux*)
  	V_DEFINE="$V_DEFINE"
@@ -44,7 +44,7 @@ $NetBSD: patch-ag,v 1.2 1998/08/07 11:10:04 agc Exp $
  *-*-netbsd*)
  	V_TARCMD="tar -h -c -f"
 -	V_LIB="$V_LIB -L/usr/local/lib"
-+	V_LIB="$V_LIB -L/usr/pkg/lib"
++	V_LIB="$V_LIB -Wl,-R/usr/pkg/lib -L/usr/pkg/lib"
  	;;
  *-*-hpux*)
  	V_DEFINE="$V_DEFINE"
