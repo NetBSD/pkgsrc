@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2004/10/19 20:34:04 jmmv Exp $
+# $NetBSD: Makefile,v 1.43 2004/10/28 19:20:50 jmmv Exp $
 
-DISTNAME=	gnome-2.8.0
-PKGREVISION=	1
+DISTNAME=	gnome-2.8.1
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -24,42 +23,42 @@ DEPENDS+=	gnome-base>=2.8.0:../../meta-pkgs/gnome-base
 DEPENDS+=	at-spi>=1.6.0:../../devel/at-spi
 DEPENDS+=	libgail-gnome>=1.1.0:../../devel/libgail-gnome
 #DEPENDS+=	gtk-doc>=1.2:../../textproc/gtk-doc
-DEPENDS+=	gtksourceview>=1.1.0:../../x11/gtksourceview
+DEPENDS+=	gtksourceview>=1.1.1:../../x11/gtksourceview
 DEPENDS+=	gdm>=2.6.0.5:../../x11/gdm
-DEPENDS+=	epiphany>=1.4.0:../../www/epiphany
-DEPENDS+=	yelp>=2.6.3:../../misc/yelp
-DEPENDS+=	zenity>=2.8.0:../../x11/zenity
+DEPENDS+=	epiphany>=1.4.4:../../www/epiphany
+DEPENDS+=	yelp>=2.6.4:../../misc/yelp
+DEPENDS+=	zenity>=2.8.1:../../x11/zenity
 DEPENDS+=	bug-buddy>=2.8.0:../../net/bug-buddy
 DEPENDS+=	gnome-speech>=0.3.5:../../audio/gnome-speech
 DEPENDS+=	dasher>=3.2.11:../../editors/dasher
-DEPENDS+=	eog>=2.8.0:../../graphics/eog2
-DEPENDS+=	file-roller>=2.8.0:../../archivers/file-roller
-DEPENDS+=	gal2>=2.2.1:../../devel/gal2
-DEPENDS+=	gcalctool>=4.4.18:../../math/gcalctool
-DEPENDS+=	gconf-editor>=2.8.0:../../editors/gconf-editor
-DEPENDS+=	gedit>=2.8.0:../../editors/gedit
+DEPENDS+=	eog>=2.8.1:../../graphics/eog2
+DEPENDS+=	file-roller>=2.8.3:../../archivers/file-roller
+DEPENDS+=	gal2>=2.2.3:../../devel/gal2
+DEPENDS+=	gcalctool>=4.4.20:../../math/gcalctool
+DEPENDS+=	gconf-editor>=2.8.2:../../editors/gconf-editor
+DEPENDS+=	gedit>=2.8.1:../../editors/gedit
 DEPENDS+=	ggv>=2.8.0:../../print/ggv2
-DEPENDS+=	gok>=0.11.8:../../misc/gok
-DEPENDS+=	gnome-mag>=0.11.5:../../x11/gnome-mag
-DEPENDS+=	gnopernicus>=0.9.12:../../x11/gnopernicus
+DEPENDS+=	gok>=0.11.12:../../misc/gok
+DEPENDS+=	gnome-mag>=0.11.8:../../x11/gnome-mag
+DEPENDS+=	gnopernicus>=0.9.16:../../x11/gnopernicus
 DEPENDS+=	gpdf>=2.8.0:../../print/gpdf
-DEPENDS+=	gucharmap>=1.4.1:../../fonts/gucharmap
-DEPENDS+=	gnome-games>=2.8.0:../../games/gnome2-games
+DEPENDS+=	gucharmap>=1.4.2:../../fonts/gucharmap
+DEPENDS+=	gnome-games>=2.8.1:../../games/gnome2-games
 DEPENDS+=	gnome-media>=2.8.0:../../multimedia/gnome2-media
 DEPENDS+=	gnome-netstatus>=2.8.0:../../net/gnome-netstatus
-DEPENDS+=	gnome2-system-monitor>=2.7.0:../../sysutils/gnome2-system-monitor
-DEPENDS+=	gnome-utils>=2.8.0:../../misc/gnome2-utils
-DEPENDS+=	gnome2-user-docs>=2.8.0:../../misc/gnome2-user-docs
-DEPENDS+=	nautilus-cd-burner>=2.8.0:../../sysutils/nautilus-cd-burner
+DEPENDS+=	gnome2-system-monitor>=2.8.0:../../sysutils/gnome2-system-monitor
+DEPENDS+=	gnome-utils>=2.8.1:../../misc/gnome2-utils
+DEPENDS+=	gnome2-user-docs>=2.8.1:../../misc/gnome2-user-docs
+DEPENDS+=	nautilus-cd-burner>=2.8.3:../../sysutils/nautilus-cd-burner
 DEPENDS+=	nautilus-media>=0.8.1:../../multimedia/nautilus-media
-DEPENDS+=	evolution-webcal>=2.0.0:../../time/evolution-webcal
-DEPENDS+=	evolution>=2.0.0:../../mail/evolution
+DEPENDS+=	evolution-webcal>=2.0.1:../../time/evolution-webcal
+DEPENDS+=	evolution>=2.0.2:../../mail/evolution
 #DEPENDS+=	gnome-nettool>=0.99.3:../../net/gnome-nettool
 #DEPENDS+=	gnome-system-tools>=1.0.0:../../sysutils/gnome-system-tools
 #DEPENDS+=	gnome-volume-manager>=1.0.2:../../sysutils/gnome-volume-manager
 #DEPENDS+=	gnomemeeting>=1.0.2:../../net/gnomemeeting
-#DEPENDS+=	vino>=2.8.0:../../net/vino
-#DEPENDS+=	ximian-connector>=2.0.0:../../mail/ximian-connector
+#DEPENDS+=	vino>=2.8.1:../../net/vino
+#DEPENDS+=	ximian-connector>=2.0.2:../../mail/ximian-connector
 
 USE_X11=	yes
 EXTRACT_ONLY=	# empty
