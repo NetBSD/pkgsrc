@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.87 2003/07/17 22:56:03 grant Exp $
+# $NetBSD: Makefile,v 1.88 2003/07/21 06:20:16 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE3
 PKGNAME=	squid-2.5.3
-PKGREVISION=	1
+PKGREVISION=	2
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
@@ -12,11 +12,34 @@ EXTRACT_SUFX=	.tar.bz2
 
 PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
 PATCHFILES=	squid-2.5.STABLE3-Lithuanian.patch \
-		squid-2.5.STABLE3-deny_info.patch \
 		squid-2.5.STABLE3-HttpHeaderTools.patch \
+		squid-2.5.STABLE3-deny_info.patch \
+		squid-2.5.STABLE3-cache_dir_doc.patch \
+		squid-2.5.STABLE3-devnull.patch \
+		squid-2.5.STABLE3-log_quote.patch \
+		squid-2.5.STABLE3-rfc_reference.patch \
+		squid-2.5.STABLE3-icmpRecv.patch \
 		squid-2.5.STABLE3-external_acl_ident.patch \
 		squid-2.5.STABLE3-aufs-openingfds.patch \
-		squid-2.5.STABLE3-gcc-3_3.patch
+		squid-2.5.STABLE3-gcc-3_3.patch \
+		squid-2.5.STABLE3-carpfactor.patch \
+		squid-2.5.STABLE3-neighbor_type_domain.patch \
+		squid-2.5.STABLE3-header_access_peer.patch \
+		squid-2.5.STABLE3-memwarnsbrk.patch \
+		squid-2.5.STABLE3-hostscomments.patch \
+		squid-2.5.STABLE3-store_check_cachable_stats.patch \
+		squid-2.5.STABLE3-cachePeerPingsSentsnmp.patch \
+		squid-2.5.STABLE3-minimum_retry_timeout.patch \
+		squid-2.5.STABLE3-ERR_TOO_BIG_Spanish.patch \
+		squid-2.5.STABLE3-tcp_reset_leak.patch \
+		squid-2.5.STABLE3-hostheader.patch \
+		squid-2.5.STABLE3-reply_body_max_size.patch \
+		squid-2.5.STABLE3-ie_refresh.patch \
+		squid-2.5.STABLE3-http_reply_access-denied.patch \
+		squid-2.5.STABLE3-SENT_PASV.patch \
+		squid-2.5.STABLE3-peer_digest_not_found_assertion.patch \
+		squid-2.5.STABLE3-round_robin_max_size.patch
+
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@NetBSD.org
