@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1 2003/12/15 02:55:53 xtraeme Exp $
+
+--- vfs-methods/themus/Makefile.in.orig	2003-12-15 03:29:42.000000000 +0100
++++ vfs-methods/themus/Makefile.in	2003-12-15 03:30:13.000000000 +0100
+@@ -236,7 +236,7 @@
+ vfsdirectorydir = $(datadir)/gnome/vfolders
+ vfsdirectory_DATA = theme-method.directory
+ 
+-schemasdir = $(sysconfdir)/gconf/schemas
++schemasdir = $(datadir)/gconf/schemas
+ schemas_in_files = themus.schemas.in
+ schemas_DATA = $(schemas_in_files:.schemas.in=.schemas)
+ 
+@@ -255,7 +255,6 @@
+ EXTRA_DIST = \
+   apply-font.glade \
+   theme-method.directory.in \
+-  theme-method.conf \
+   themus.schemas.in \
+   Themus_Properties_View.server.in.in \
+   themus.applications \

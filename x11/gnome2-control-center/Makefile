@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/12/14 23:25:56 xtraeme Exp $
+# $NetBSD: Makefile,v 1.18 2003/12/15 02:55:53 xtraeme Exp $
 #
 
 DISTNAME=	control-center-2.4.0
@@ -16,9 +16,12 @@ DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GMAKE=		yes
 USE_X11=		yes
+
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
@@ -26,6 +29,23 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GCONF2_SCHEMAS= 	apps_gnome_settings_daemon_default_editor.schemas
 GCONF2_SCHEMAS+=	apps_gnome_settings_daemon_screensaver.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_font_rendering.schemas
+GCONF2_SCHEMAS+=	themus.schemas
+GCONF2_SCHEMAS+=	fontilus.schemas
+
+PKG_SYSCONFSUBDIR=	gnome-vfs-2.0/modules
+
+EGDIR=			${PREFIX}/share/examples/gnome2-control-center
+CONF_FILES=		${EGDIR}/theme-method.conf \
+			${PKG_SYSCONFDIR}/theme-method.conf
+CONF_FILES+=		${EGDIR}/font-method.conf \
+			${PKG_SYSCONFDIR}/font-method.conf
+
+post-install:
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/vfs-methods/themus/theme-method.conf \
+		${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/vfs-methods/fontilus/font-method.conf \
+		${EGDIR}
 
 .include "../../audio/esound/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
