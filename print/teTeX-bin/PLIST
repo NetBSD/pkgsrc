@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/12/24 12:51:31 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/03/09 19:59:09 seb Exp $
 @comment There are three files in this package that teTeX-share installs
 @comment and that teTeX-bin modifies. Take care of this:
 bin/MakeTeXPK
@@ -188,21 +188,6 @@ include/kpathsea/types.h
 include/kpathsea/variable.h
 include/kpathsea/xopendir.h
 include/kpathsea/xstat.h
-info/dvips.info
-info/dvips.info-1
-info/dvips.info-2
-info/dvips.info-3
-info/dvips.info-4
-info/kpathsea.info
-info/latex.info
-info/latex.info-1
-info/latex.info-2
-info/latex.info-3
-info/web2c.info
-info/web2c.info-1
-info/web2c.info-2
-info/web2c.info-3
-info/web2c.info-4
 lib/libkpathsea.a
 man/man1/MakeTeXPK.1
 man/man1/access.1
