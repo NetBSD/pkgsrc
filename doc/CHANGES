@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8940 2005/01/26 19:28:55 jmmv Exp $
+$NetBSD: CHANGES,v 1.8941 2005/01/26 23:52:12 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -620,3 +620,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added p5-DateTime-TimeZone-0.32 [cube 2005-01-26]
 	Updated compface to 1.5.1 [ben 2005-01-26]
 	Updated gnome-spell to 1.0.6 [jmmv 2005-01-26]
+	Updated drivel to 1.2.4 [jmmv 2005-01-26]
