@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/11/30 02:42:11 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/03/04 15:32:35 uebayasi Exp $
 bin/incm
 bin/mewcat
 bin/mewdecode
@@ -27,7 +27,6 @@ share/mew/mew-Unknown.xpm
 share/mew/mew-Video.xpm
 share/mew/mew-attach.xpm
 share/mew/mew-cite.xpm
-share/mew/mew-comp.xpm
 share/mew/mew-forward.xpm
 share/mew/mew-inc.xpm
 share/mew/mew-lock.xpm
@@ -50,15 +49,12 @@ man/man1/mewdecode.1
 man/man1/mewencode.1
 man/man1/mewl.1
 ${EMACS_LISPPREFIX}/mew/contrib/00readme
-${EMACS_LISPPREFIX}/mew/contrib/00readme-namazu.jis
 ${EMACS_LISPPREFIX}/mew/contrib/mew-browse.el
 ${EMACS_LISPPREFIX}/mew/contrib/mew-caesar.el
 ${EMACS_LISPPREFIX}/mew/contrib/mew-edebug.el
 ${EMACS_LISPPREFIX}/mew/contrib/mew-fancy-summary.el
 ${EMACS_LISPPREFIX}/mew/contrib/mew-nmz-fixer.el
-${EMACS_LISPPREFIX}/mew/contrib/mew-nmz.el
 ${EMACS_LISPPREFIX}/mew/contrib/mew-refile-view.el
-${EMACS_LISPPREFIX}/mew/contrib/mew-smime-ja.texi
 ${EMACS_LISPPREFIX}/mew/contrib/mew-toolbar-frame.el
 ${EMACS_LISPPREFIX}/mew/mew-addrbook.el
 ${EMACS_LISPPREFIX}/mew/mew-addrbook.elc
@@ -130,6 +126,8 @@ ${EMACS_LISPPREFIX}/mew/mew-mule0.el
 ${EMACS_LISPPREFIX}/mew/mew-mule3.el
 ${EMACS_LISPPREFIX}/mew/mew-net.el
 ${EMACS_LISPPREFIX}/mew/mew-net.elc
+${EMACS_LISPPREFIX}/mew/mew-nmz.el
+${EMACS_LISPPREFIX}/mew/mew-nmz.elc
 ${EMACS_LISPPREFIX}/mew/mew-nntp.el
 ${EMACS_LISPPREFIX}/mew/mew-nntp.elc
 ${EMACS_LISPPREFIX}/mew/mew-nntp2.el
