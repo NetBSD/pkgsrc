@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/12/08 14:14:13 rh Exp $
+# $NetBSD: Makefile,v 1.13 2000/02/05 07:18:22 wiz Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/04/27 00:11:48 asami Exp
 #
 
@@ -34,6 +34,6 @@ pre-patch:
 		${PATCH} ${PATCH_DIST_ARGS} -p1 < ${PATCH2})
 
 post-patch:
-	@(cd ${WRKSRC} && find . -name '*.orig' -print | xargs rm -f)
+	@(cd ${WRKSRC} && ${FIND} . -name '*.orig' -print | xargs ${RM} -f)
 
 .include "../../mk/bsd.pkg.mk"
