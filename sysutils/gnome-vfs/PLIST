@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2003/03/21 23:36:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2003/03/25 11:22:36 wiz Exp $
 bin/gnome-vfs-config
 etc/vfs/modules/default-modules.conf
 include/gnome-vfs-1.0/libgnomevfs/gnome-vfs-application-registry.h
@@ -143,7 +143,7 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-vfs.mo
 @dirrm share/gtk-doc/html/gnome-vfs
 @dirrm lib/vfs/modules
 @dirrm lib/vfs/extfs
-@dirrm lib/vfs
+@unexec ${RMDIR} %D/lib/vfs 2>/dev/null || ${TRUE}
 @dirrm lib/gnome-vfs-1.0/include
 @dirrm lib/gnome-vfs-1.0
 @dirrm include/gnome-vfs-1.0/libgnomevfs
