@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2000/04/06 22:36:56 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2000/04/07 17:44:42 tron Exp $
 
-DISTNAME=	libPropList-0.10.0
-PKGNAME=	libproplist-0.10.0
+DISTNAME=	libPropList-0.10.1
+PKGNAME=	libproplist-0.10.1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.windowmaker.org/pub/beta/srcs/
 
