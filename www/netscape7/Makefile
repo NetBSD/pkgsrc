@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/04/24 13:20:33 abs Exp $
+# $NetBSD: Makefile,v 1.16 2003/07/01 16:19:13 jschauma Exp $
 #
 
 DISTNAME=		netscape-i686-pc-linux-gnu-sea
@@ -24,9 +24,14 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386
 INTERACTIVE_STAGE=	build
 
-PKG_LANG?=		english
+# XXX:
+# At this point in time, 7.1 is only available in english.  Hopefully
+# soon there will be others.  For the time being, force PKG_LANG to
+# english. 
+#PKG_LANG?=		english
+PKG_LANG=		english
 VERS_MAJ=		7
-VERS_MIN=		02
+VERS_MIN=		1
 SUB=			${PKG_LANG}/${VERS_MAJ}.${VERS_MIN}/unix/${DIST_DIR_NAME}/sea
 DIST_SUBDIR=		netscape/${VERS_MAJ}.${VERS_MIN}/${PKG_LANG}
 
@@ -36,8 +41,12 @@ DISTINFO_FILE=		${PKGDIR}/distinfo.${PKG_LANG}
 
 PLIST_SRC=		${WRKDIR}/PLIST
 
-pre-fetch:
-	@${CAT} ${FILESDIR}/fetch-message
+# XXX:
+# At this point in time, 7.1 is only available in english.  Hopefully
+# soon there will be others.  For the time being, force PKG_LANG to
+# english (see above).
+#pre-fetch:
+#	@${CAT} ${FILESDIR}/fetch-message
 
 pre-build:
 	${SED} -e "s|@PREFIX@|${PREFIX}|g" ${FILESDIR}/netscape.sh > 	\

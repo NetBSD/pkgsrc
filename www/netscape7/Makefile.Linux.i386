@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.Linux.i386,v 1.8 2003/03/26 04:05:39 jschauma Exp $
+# $NetBSD: Makefile.Linux.i386,v 1.9 2003/07/01 16:19:13 jschauma Exp $
 #
 
 DIST_DIR_NAME=		linux22
@@ -10,7 +10,8 @@ FIND_ARG=		. -depth
 post-extract:
 	${MKDIR} ${WRKSRC}/dest
 	${SED} -e "s|@PREFIX@|${PREFIX}|g" -e "s|@X11BASE@|${X11BASE}|g" \
-		-e "s|@WRKSRC@|${WRKSRC}|g" ${FILESDIR}/linux_notes
+		-e "s|@WRKSRC@|${WRKSRC}|g" -e "s|@X11PREFIX@|${X11PREFIX}|g" \
+			${FILESDIR}/linux_notes
 	@${SH} -c "read"
 	${LN} -s ${PREFIX}/lib/libglib.so ${WRKSRC}/libglib-1.2.so.0
 	${LN} -s ${PREFIX}/lib/libgmodule.so ${WRKSRC}/libgmodule-1.2.so.0
