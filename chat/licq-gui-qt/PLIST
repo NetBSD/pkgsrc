@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/24 23:57:36 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/08/14 17:34:50 kristerw Exp $
+lib/licq/licq_qt-gui.a
 lib/licq/licq_qt-gui.la
 lib/licq/licq_qt-gui.so
 share/licq/qt-gui/dock.console/away.xpm

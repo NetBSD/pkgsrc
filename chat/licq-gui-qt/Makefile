@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2004/05/16 17:47:14 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2004/08/14 17:34:50 kristerw Exp $
 #
 
 DISTNAME=	licq-1.2.6
 PKGNAME=	${DISTNAME:C/-/-gui-qt-/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=licq/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,6 +22,7 @@ NOT_FOR_PLATFORM= NetBSD-*-*
 
 USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
+USE_LIBTOOL=	YES
 WRKSRC=		${WRKDIR:=/${DISTNAME}/plugins/qt-gui}
 
 INCOMPAT_CURSES=	NetBSD-1.4*-* NetBSD-1.5*-* NetBSD-1.6[-_.]*-* NetBSD-1.6[A-Q]-*
