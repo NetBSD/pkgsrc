@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5640 2004/04/18 19:03:46 kim Exp $
+$NetBSD: CHANGES,v 1.5641 2004/04/18 19:48:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2007,27 +2007,27 @@ Changes to the packages collection and infrastructure in 2004:
 	Added quake2forge-0.2.1 [xtraeme 2004-04-15]
 	Added gnu-crypto-2.0.1 [tv 2004-04-16]
 	Added jessie-0.9.7 [tv 2004-04-16]
-	Updated libxfce4gui to 4.0.5
-	Updated libxfce4mcs to 4.0.5
-	Updated libxfce4util to 4.0.5
-	Updated xfce4 to 4.0.5
-	Updated xfce4-desktop to 4.0.5
-	Updated xfce4-extras to 4.0.5
-	Updated xfce4-fm to 4.0.5
-	Updated xfce4-fm-icons to 4.0.5
-	Updated xfce4-iconbox to 4.0.5
-	Updated xfce4-mcs-manager to 4.0.5
-	Updated xfce4-mcs-plugins to 4.0.5
-	Updated xfce4-mixer to 4.0.5
-	Updated xfce4-panel to 4.0.5
-	Updated xfce4-print to 4.0.5
-	Updated xfce4-systray to 4.0.5
-	Updated xfce4-themes to 4.0.5
-	Updated xfce4-toys to 4.0.5
-	Updated xfce4-trigger-launcher to 4.0.5
-	Updated xfce4-utils to 4.0.5
-	Updated xfce4-wm to 4.0.5
-	Updated xfce4-wm-themes to 4.0.5
+	Updated libxfce4gui to 4.0.5 [martti 2004-04-16]
+	Updated libxfce4mcs to 4.0.5 [martti 2004-04-16]
+	Updated libxfce4util to 4.0.5 [martti 2004-04-16]
+	Updated xfce4 to 4.0.5 [martti 2004-04-16]
+	Updated xfce4-desktop to 4.0.5 [martti 2004-04-16]
+	Updated xfce4-extras to 4.0.5 [martti 2004-04-16]
+	Updated xfce4-fm to 4.0.5 [martti 2004-04-16]
+	Updated xfce4-fm-icons to 4.0.5 [martti 2004-04-16]
+	Updated xfce4-iconbox to 4.0.5 [martti 2004-04-16]
+	Updated xfce4-mcs-manager to 4.0.5 [martti 2004-04-16]
+	Updated xfce4-mcs-plugins to 4.0.5 [martti 2004-04-16]
+	Updated xfce4-mixer to 4.0.5 [martti 2004-04-16]
+	Updated xfce4-panel to 4.0.5 [martti 2004-04-16]
+	Updated xfce4-print to 4.0.5 [martti 2004-04-16]
+	Updated xfce4-systray to 4.0.5 [martti 2004-04-16]
+	Updated xfce4-themes to 4.0.5 [martti 2004-04-16]
+	Updated xfce4-toys to 4.0.5 [martti 2004-04-16]
+	Updated xfce4-trigger-launcher to 4.0.5 [martti 2004-04-16]
+	Updated xfce4-utils to 4.0.5 [martti 2004-04-16]
+	Updated xfce4-wm to 4.0.5 [martti 2004-04-16]
+	Updated xfce4-wm-themes to 4.0.5 [martti 2004-04-16]
 	Added urban-1.5.2 [xtraeme 2004-04-16]
 	Added powermanga-0.78 [xtraeme 2004-04-16]
 	Updated xmame to 0.81.1 [kristerw 2004-04-16]
@@ -2058,3 +2058,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed apla [snj 2004-04-18]
 	Removed avifile-devel [snj 2004-04-18]
 	Updated roller to 1.18 [kim 2004-04-18]
+	Updated bkedit to 6.23 [wiz 2004-04-18]
