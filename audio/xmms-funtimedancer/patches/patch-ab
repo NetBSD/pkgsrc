@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/02/14 23:56:39 hubertf Exp $
+
+--- FunTimeDancer.c.orig	2003-02-02 20:33:42.000000000 +0000
++++ FunTimeDancer.c	2003-02-02 20:35:10.000000000 +0000
+@@ -150,11 +150,20 @@
+ }
+ 
+ void get_base_dirname(void) {
++#if 1
++  /*
++  **
++  ** Search for bitmaps in the system dirs on all platforms
++  **
++  */
++  strcpy(base_dirname, PREFIX "/lib/xmms/Visualization/FunTimeDancer");
++#else
+   gchar *home_dirname; // glib allocates it, we just point to it
+ 
+   home_dirname = g_get_home_dir();
+   strcpy(base_dirname, home_dirname);
+   strcat(base_dirname, "/.xmms/FunTimeDancer/");
++#endif
+ }
+ 
+ void ftd_Cleanup(void) {

@@ -1,0 +1,16 @@
+Jittering plane in the rythm of the sound, using OpenGL.
+
+	There are also some keyboard keys you can press to modify options:
+	'f': toggle fullscreen mode
+	't': toggle between flat and smooth shading.
+	'g': toggle the drawing of the ground.
+	'p': pause and unpause display
+	',' and '.': adjust the tessellation.
+	'i' and 'k': adjust the camera height.
+	'o' and 'l': adjust the camera velocity.
+
+	It also accepts the following xmms shortcuts (sent to session 0):
+	'z': previous		'x': pause
+	'c': play		'v': stop
+	'b': next		's': shuffle
+        'r': repeat

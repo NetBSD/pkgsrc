@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/02/14 23:56:39 hubertf Exp $
+
+--- Makefile.orig	Mon Nov 27 08:21:21 2000
++++ Makefile
+@@ -3,7 +3,7 @@
+ all: $(LIB)
+ 
+ libfuntimedancer.so: FunTimeDancer.c FunTimeDancer.h
+-	gcc -shared -lpthread -lglib -lSDL -fPIC -D_REENTRANT -o $(LIB) `glib-config --cflags` FunTimeDancer.c 
++	${CC} -DPREFIX=\"${PREFIX}\" -shared `xmms-config --cflags --libs` -lSDL -fPIC -D_REENTRANT -o $(LIB) `glib-config --cflags` FunTimeDancer.c 
+ 
+ clean:
+ 	rm -f *.o $(LIB)
