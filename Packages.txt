@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.40 1998/07/31 15:24:13 tv Exp $
+# $NetBSD: Packages.txt,v 1.41 1998/08/12 02:52:35 tv Exp $
 ###########################################################################
 
 			==========================
@@ -784,10 +784,11 @@ and which variables influence this.
 
 The automatic variable PREFIX indicates where all files of the final
 program shall be installed.  It is usually set to $LOCALBASE (/usr/pkg),
-though its value becomes that of $X11BASE if USE_IMAKE, USE_MOTIF, or
-USE_X11 is set.  The value ${PREFIX} needs to be put into the various
-places in the program's source where paths to these files are encoded; see
-sections 4.3 and 6.2 for details on this.
+or $CROSSBASE for pkgs in the "cross" category, though its value becomes
+that of $X11BASE if USE_IMAKE, USE_MOTIF, or USE_X11 is set.  The value
+${PREFIX} needs to be put into the various places in the program's source
+where paths to these files are encoded; see sections 4.3 and 6.2 for
+details on this.
 
 When choosing which of these variables to use, follow the following rules:
 
