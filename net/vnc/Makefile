@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/06/10 07:47:57 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/06/11 11:44:08 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
@@ -8,9 +8,10 @@ CATEGORIES=		net x11
 MASTER_SITES=   	http://www.orl.co.uk/vnc/dist/
 DISTFILES=		vnc-3.3.1_unixsrc.tgz \
 			vnc-3.3.1_doc.tgz
-IGNOREFILES=		${DISTFILES}
 
 MAINTAINER=	 	packages@netbsd.org
+
+IGNOREFILES=		${DISTFILES}
 
 USE_PERL5=		yes
 
