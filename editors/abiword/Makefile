@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.81 2004/10/29 07:42:38 xtraeme Exp $
-#
+# $NetBSD: Makefile,v 1.82 2004/11/22 13:31:46 adam Exp $
+
 .include "Makefile.common"
 
 PKGNAME=	abiword-${ABIWORD_DIST_VERSION}
-PKGREVISION=	1
 COMMENT=	Open Source cross-platform word processor
 
 # GTK1 version and previous name of the GTK2 version
@@ -26,8 +25,8 @@ CONFIGURE_ARGS+=	--with-sys-wv
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 
 post-install:
-	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/abiword-docs/man/abiword.8 \
-		${PREFIX}/man/man8/abiword.8
+	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/abiword-docs/man/abiword.1 \
+		${PREFIX}/man/man1/abiword.1
 	cd ${WRKDIR}/${DISTNAME}/abiword-docs/ && ${MAKE}
 
 SUBST_CLASSES+=		docs

@@ -1,16 +1,14 @@
-# $NetBSD: Makefile.common,v 1.4 2004/10/29 07:42:38 xtraeme Exp $
-#
+# $NetBSD: Makefile.common,v 1.5 2004/11/22 13:31:46 adam Exp $
 
-ABIWORD_DIST_VERSION=	2.0.11
-DISTNAME=		abiword-${ABIWORD_DIST_VERSION}
+ABIWORD_DIST_VERSION=	2.0.14
+DISTNAME=	abiword-${ABIWORD_DIST_VERSION}
 
-CATEGORIES=		editors
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=abiword/}
-EXTRACT_SUFX=		.tar.bz2
+CATEGORIES=	editors
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=abiword/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
-
-HOMEPAGE=		http://www.abisource.com/
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.abisource.com/
 
 BUILD_USES_MSGFMT=	yes
 

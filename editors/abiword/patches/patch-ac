@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.12 2004/10/21 06:30:39 xtraeme Exp $
+$NetBSD: patch-ac,v 1.13 2004/11/22 13:31:46 adam Exp $
 
---- src/af/xap/unix/xap_UnixFrameImpl.cpp.orig	2004-02-15 22:48:32.000000000 +0100
-+++ src/af/xap/unix/xap_UnixFrameImpl.cpp	2004-09-09 00:09:08.000000000 +0200
-@@ -1656,6 +1656,11 @@
+--- src/af/xap/unix/xap_UnixFrameImpl.cpp.orig	2004-09-08 23:43:26.000000000 +0000
++++ src/af/xap/unix/xap_UnixFrameImpl.cpp
+@@ -1666,6 +1666,11 @@ bool XAP_UnixFrameImpl::_openURL(const c
  		        fmtstring = "phoenix '%s' &";
  			execstring = g_strdup_printf(fmtstring, szURL);
  		}
