@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1256 2003/09/03 14:08:09 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1257 2003/09/03 15:05:43 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -1653,13 +1653,13 @@ batch-check-distfiles:
 # Please do not modify the leading "@" here
 .PHONY: check-vulnerable
 check-vulnerable:
-	@if [ -f ${PKGVULNDIR}/vulnerabilities ]; then			\
+	@if [ -f ${PKGVULNDIR}/pkg-vulnerabilities ]; then			\
 		${SETENV} PKGNAME="${PKGNAME}"				\
 			  PKGBASE="${PKGBASE}"				\
 			${AWK} '/^$$/ { next }				\
 				/^#.*/ { next }				\
 				$$1 !~ ENVIRON["PKGBASE"] { next }	\
-				{ s = sprintf("${PKG_ADMIN} pmatch \"%s\" %s && ${ECHO} \"*** WARNING - %s vulnerability in %s - see %s for more information ***\"", $$1, ENVIRON["PKGNAME"], $$2, ENVIRON["PKGNAME"], $$3); system(s); }' < ${PKGVULNDIR}/vulnerabilities || ${FALSE}; \
+				{ s = sprintf("${PKG_ADMIN} pmatch \"%s\" %s && ${ECHO} \"*** WARNING - %s vulnerability in %s - see %s for more information ***\"", $$1, ENVIRON["PKGNAME"], $$2, ENVIRON["PKGNAME"], $$3); system(s); }' < ${PKGVULNDIR}/pkg-vulnerabilities || ${FALSE}; \
 	fi
 
 .PHONY: do-fetch
@@ -1667,7 +1667,7 @@ check-vulnerable:
 do-fetch:
 .  if !defined(ALLOW_VULNERABLE_PACKAGES)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -f ${PKGVULNDIR}/vulnerabilities ]; then			\
+	if [ -f ${PKGVULNDIR}/pkg-vulnerabilities ]; then			\
 		${ECHO_MSG} "${_PKGSRC_IN}> Checking for vulnerabilities in ${PKGNAME}"; \
 		vul=`${MAKE} ${MAKEFLAGS} check-vulnerable`;		\
 		case "$$vul" in						\
@@ -1677,7 +1677,7 @@ do-fetch:
 			${FALSE} ;;					\
 		esac;							\
 	else								\
-		${ECHO_MSG} "${_PKGSRC_IN}> *** No ${PKGVULNDIR}/vulnerabilities file found,"; \
+		${ECHO_MSG} "${_PKGSRC_IN}> *** No ${PKGVULNDIR}/pkg-vulnerabilities file found,"; \
 		${ECHO_MSG} "${_PKGSRC_IN}> *** skipping vulnerability checks. To fix, install"; \
 		${ECHO_MSG} "${_PKGSRC_IN}> *** the pkgsrc/security/audit-packages package and run"; \
 		${ECHO_MSG} "${_PKGSRC_IN}> *** '${LOCALBASE}/sbin/download-vulnerability-list'."; \
@@ -4147,11 +4147,11 @@ SED_HOMEPAGE_EXPR=       -e 's|%%HOMEPAGE%%||'
 .PHONY: show-vulnerabilities-html
 show-vulnerabilities-html:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -f ${PKGVULNDIR}/vulnerabilities ]; then			\
+	if [ -f ${PKGVULNDIR}/pkg-vulnerabilities ]; then			\
 		${AWK} '/^${PKGBASE}[-<>=]+[0-9]/ { gsub("\<", "\\&lt;", $$1);	\
 			 gsub("\>", "\\&gt;", $$1);			\
 			 printf("<LI><STRONG>%s has a %s exploit (see <a href=\"%s\">%s</a> for more details)</STRONG></LI>\n", $$1, $$2, $$3, $$3) }' \
-			${PKGVULNDIR}/vulnerabilities;			\
+			${PKGVULNDIR}/pkg-vulnerabilities;			\
 	fi
 
 
