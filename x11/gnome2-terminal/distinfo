@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2004/04/01 18:50:21 jmmv Exp $
+$NetBSD: distinfo,v 1.9 2004/04/18 14:00:28 jmmv Exp $
 
-SHA1 (gnome-terminal-2.6.0.tar.bz2) = 62b146d51ba43ee399e1f894e382f75780234b72
-Size (gnome-terminal-2.6.0.tar.bz2) = 1911916 bytes
+SHA1 (gnome-terminal-2.6.1.tar.bz2) = 9d7abd13691da63cedb8c05629df8b5adf7e14cf
+Size (gnome-terminal-2.6.1.tar.bz2) = 1999378 bytes
