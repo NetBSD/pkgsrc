@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.918 2003/10/02 08:44:22 recht Exp $
+$NetBSD: TODO,v 1.919 2003/10/03 14:02:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -86,7 +86,7 @@ Suggested package updates
 	o Lesstif-0.93.91
 	o Ngraph-6.3.20 [pkg/22800]
 	o R-1.7.1
-	o TeXmacs-1.0.2
+	o TeXmacs-1.0.2.1
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o abiword-2.0
@@ -100,6 +100,7 @@ Suggested package updates
 	o bins-1.1.23
 	o bomberclone-0.10.1
 	o bzflag-1.7g2
+	o centericq-4.9.7
 	o cervisia-2.0
 	o clisp-2.31
 	o courier-0.42.2 [pkg/22373]
@@ -142,6 +143,7 @@ Suggested package updates
 	o gcvs-1.0-1
 	o gdm-2.4.1.3
 	o generator-0.35
+	o gentoo-0.10.35
 	o getmail-3.2.0
 	o gettext-0.12.1
 	o gforth-0.6.2
@@ -214,20 +216,21 @@ Suggested package updates
 	o mtools-3.9.9
 	o multi-gnome-terminal-1.6.2
 	o multitail-2.9.3
-	o mysql-3.23.54
+	o mysql-3.23.58
 	o nano-1.2.2
 	o nap-1.5.2
 	o napshare-1.2
 	o nasm-0.98.38
 	o neXtaW-0.15.1
 	o neon-0.24.2
+	o nessus-2.0.8
 	o netatalk-1.6.3 [pkg/21930]
 	o newscache-0.99.22p1
 	o ngrep-1.41
 	o ns-flash-6.0.79
 	o nut-9.2
 	o openh323-1.11.2
-	o openoffice-1.0.3.1 [skrll]
+	o openoffice-1.1 [skrll]
 	o openssl-0.9.7c [jschauma]
 	o oss-3.9.8a
 	o p5-XML-LibXML-1.54
@@ -258,6 +261,7 @@ Suggested package updates
 	o sml-nj-110.43
 	o snd-6.12
 	o snes9x-1.41
+	o source-highlight-1.8
 	o spamassassin-2.60 [heinz]
 	o speex-1.0.2
 	o squeak-3.2 [fredb|pkg/17950]
@@ -266,7 +270,7 @@ Suggested package updates
 	o staroffice-7
 	o stella-1.3
 	o swig-1.3.17 [epg]
-	o sylpheed-claws-0.9.5
+	o sylpheed-claws-0.9.6
 	o t1lib-5.0.0
 	o tcl/tk-8.4.4
 	o tcl-expect-5.39.0
@@ -277,6 +281,7 @@ Suggested package updates
 	o tin-1.6.1
 	o tkman-2.2
 	o tla-1.1.0.5 [replacing arch; pkg/23022]
+	o tla-1.1.0.7
 	o top-3.5b12.7
 	o transcode-0.6.10
 	o ttf2pt1-3.4.3
