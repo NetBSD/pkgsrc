@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2004/02/14 18:26:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/04 18:54:42 minskim Exp $
 #
 
-DISTNAME=		gss-0.0.6
-PKGREVISION=		1
+DISTNAME=		gss-0.0.10
 CATEGORIES=		security
 MASTER_SITES=		http://josefsson.org/gss/releases/ \
 			${MASTER_SITE_GNU:=gss/}
@@ -10,6 +9,8 @@ MASTER_SITES=		http://josefsson.org/gss/releases/ \
 MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/gss/
 COMMENT=		GNU Generic Security Service Library
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
