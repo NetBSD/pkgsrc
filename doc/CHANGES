@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6691 2004/07/27 02:30:29 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6692 2004/07/27 04:30:24 salo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3586,3 +3586,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated asapm to 2.11nb3 [wiz 2004-07-26]
 	Added mess822-0.58 [schmonz 2004-07-26]
 	Updated clamsmtp to 0.4 [xtraeme 2004-07-27]
+	Updated libebml to 0.7.1 [salo 2004-07-27]
+	Updated libmatroska to 0.7.1 [salo 2004-07-27]
+	Updated mkvtoolnix to 0.9.4 [salo 2004-07-27]
+	Updated mmg to 0.9.4 [salo 2004-07-27]
