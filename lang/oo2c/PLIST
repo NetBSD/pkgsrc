@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/02 23:32:45 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/05/17 21:00:11 jtb Exp $
 bin/oo2c
 bin/oob
 bin/oobacktrace
@@ -53,6 +53,7 @@ lib/oo2c/obj/Log.oh
 lib/oo2c/obj/LongStrings.oh
 lib/oo2c/obj/Msg.oh
 lib/oo2c/obj/OS/Files.oh
+lib/oo2c/obj/OS/HostPath.oh
 lib/oo2c/obj/OS/Path.oh
 lib/oo2c/obj/OS/ProcessManagement.oh
 lib/oo2c/obj/OS/ProcessParameters.oh
@@ -165,6 +166,7 @@ lib/oo2c/oocdoc/html/Log.html
 lib/oo2c/oocdoc/html/LongStrings.html
 lib/oo2c/oocdoc/html/Msg.html
 lib/oo2c/oocdoc/html/OS/Files.html
+lib/oo2c/oocdoc/html/OS/HostPath.html
 lib/oo2c/oocdoc/html/OS/Path.html
 lib/oo2c/oocdoc/html/OS/ProcessManagement.html
 lib/oo2c/oocdoc/html/OS/ProcessParameters.html
@@ -276,6 +278,7 @@ lib/oo2c/oocdoc/xml/Log.xml
 lib/oo2c/oocdoc/xml/LongStrings.xml
 lib/oo2c/oocdoc/xml/Msg.xml
 lib/oo2c/oocdoc/xml/OS/Files.xml
+lib/oo2c/oocdoc/xml/OS/HostPath.xml
 lib/oo2c/oocdoc/xml/OS/Path.xml
 lib/oo2c/oocdoc/xml/OS/ProcessManagement.xml
 lib/oo2c/oocdoc/xml/OS/ProcessParameters.xml
@@ -402,6 +405,7 @@ lib/oo2c/sym/Log.Sym
 lib/oo2c/sym/LongStrings.Sym
 lib/oo2c/sym/Msg.Sym
 lib/oo2c/sym/OS/Files.Sym
+lib/oo2c/sym/OS/HostPath.Sym
 lib/oo2c/sym/OS/Path.Sym
 lib/oo2c/sym/OS/ProcessManagement.Sym
 lib/oo2c/sym/OS/ProcessParameters.Sym
@@ -557,6 +561,6 @@ share/emacs/site-lisp/oo2c
 @dirrm lib/oo2c/obj/ADT/Dictionary/AddressKey
 @dirrm lib/oo2c/obj/ADT/Dictionary
 @dirrm lib/oo2c/obj/ADT
-@dirrm lib/oo2c/obj
+@unexec ${RMDIR} %D/lib/oo2c/obj 2>/dev/null || ${TRUE}
 @dirrm lib/oo2c/emacs
-@dirrm lib/oo2c
+@unexec ${RMDIR} %D/lib/oo2c 2>/dev/null || ${TRUE}
