@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4 2002/08/02 12:37:32 dmcmahill Exp $
+$NetBSD: TODO,v 1.5 2002/09/20 11:48:12 dmcmahill Exp $
 
 To-Do List for cdpack
 ---------------------
@@ -28,3 +28,7 @@ To-Do List for cdpack
   a CD set where you include distfiles for the packages which
   couldn't be made into binary pkgs.
 
+- add an options that would search in multiple directories for
+  binary packages and only pick the most recent versions of any
+  given package.  If an older version is required by some other
+  pkg, also pick that one up too.
