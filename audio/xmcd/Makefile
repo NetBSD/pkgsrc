@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/07/24 16:00:01 nra Exp $
+# $NetBSD: Makefile,v 1.27 2001/08/22 17:38:56 jlam Exp $
 #
 
 DISTNAME=	xmcd-3.0.1
@@ -10,11 +10,10 @@ HOMEPAGE=	http://www.ibiblio.org/tkan/xmcd/
 COMMENT=	Motif CD player
 
 WRKSRC=		${WRKDIR}/xmcd-3.0
-USE_BUILDLINK_ONLY=	yes
-USE_NCURSES=		yes
-USE_IMAKE=		yes
-IS_INTERACTIVE=		yes	# asks a lot of questions
-MAKE_ENV+=		SHELL=${SH}
+USE_NCURSES=	yes
+USE_IMAKE=	yes
+IS_INTERACTIVE=	yes	# asks a lot of questions
+MAKE_ENV+=	SHELL=${SH}
 
 pre-install:
 	cd ${WRKSRC} && \

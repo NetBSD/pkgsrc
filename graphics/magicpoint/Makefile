@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2001/07/31 05:27:30 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2001/08/22 17:38:58 jlam Exp $
 
 DISTNAME=		magicpoint-1.08a
 CATEGORIES=		x11 graphics
@@ -10,7 +10,6 @@ COMMENT=		X11 based presentation tool
 
 CONFLICTS=		mgp-*
 
-USE_BUILDLINK_ONLY=	yes
 GNU_CONFIGURE=		yes
 USE_IMAKE=		yes
 CONFIGURE_ARGS+=	--enable-freetype-charset16
