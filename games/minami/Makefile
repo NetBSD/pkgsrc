@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/11/28 14:25:49 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/11/15 00:23:48 jlam Exp $
 #
 
 DISTNAME=	minami-1.0.2
@@ -10,11 +10,11 @@ MAINTAINER=	kei@netbsd.org
 HOMEPAGE=	http://www.guru.gr.jp/~issei/minami/
 COMMENT=	Text adventure
 
-USE_BUILDLINK_ONLY=	YES
-REPLACE_PERL=		gen_act gen_dun gen_itm gen_scn minflag
+USE_BUILDLINK2=	YES
+REPLACE_PERL=	gen_act gen_dun gen_itm gen_scn minflag
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/minami ${PREFIX}/bin
 
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
