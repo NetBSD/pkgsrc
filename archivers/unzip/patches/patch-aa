@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 10:35:51 agc Exp $
+$NetBSD: patch-aa,v 1.3 1998/12/30 04:06:35 tv Exp $
 
 --- unzip.h.orig	Sat Oct 18 18:58:07 1997
 +++ unzip.h	Sat Jun 20 18:33:18 1998
@@ -8,12 +8,12 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 10:35:51 agc Exp $
  /* used to remove arguments in function prototypes for non-ANSI C */
 +#ifdef USE_ZLIB
 +#include <zconf.h>
++#endif
 +#ifndef OF
  #ifdef PROTO
  #  define OF(a) a
  #else
  #  define OF(a) ()
-+#endif
 +#endif
  #endif
  
