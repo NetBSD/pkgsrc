@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/03/08 08:25:31 tron Exp $
+
+--- redglass/Imakefile.orig	2003-02-28 14:19:21.000000000 +0100
++++ redglass/Imakefile	2003-03-08 08:50:58.000000000 +0100
+@@ -26,7 +26,7 @@
+ all:: name								@@\
+ 									@@\
+ name: name.cfg source							@@\
+-	$(XCURSORGEN) name.cfg name					@@\
++	../xcursorgen name.cfg name					@@\
+ 									@@\
+ clean::									@@\
+ 	$(RM) name							@@\
