@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.7 2004/01/03 18:33:24 reed Exp $
+$NetBSD: patch-ae,v 1.8 2004/04/27 20:38:48 tv Exp $
 
---- man/Makefile.in.orig	Fri Nov 21 19:28:59 2003
+--- man/Makefile.in.orig	Mon Dec 22 03:22:15 2003
 +++ man/Makefile.in
-@@ -354,9 +354,7 @@ apps/Makefile:
+@@ -363,9 +363,7 @@ apps/Makefile:
  	 ${ECHO} 'install:';						\
  	 for i in *.1; do						\
  	    f=${MANAPPNAME};						\
@@ -13,7 +13,7 @@ $NetBSD: patch-ae,v 1.7 2004/01/03 18:33:24 reed Exp $
  	 done								\
  	)>apps/Makefile
  lib/Makefile:
-@@ -367,9 +365,7 @@ lib/Makefile:
+@@ -376,17 +374,15 @@ lib/Makefile:
  	 ${ECHO} 'install:';						\
  	 for i in *.3t; do						\
  	    f=${MANLIBNAME};						\
@@ -24,3 +24,14 @@ $NetBSD: patch-ae,v 1.7 2004/01/03 18:33:24 reed Exp $
  	 done								\
  	)>lib/Makefile
  
+ install: all
+-	${INSTALL} -m 755 -dir -idb tiff.man.tools ${DESTDIR}${MAN}
+-	${INSTALL} -m 755 -dir -idb tiff.man.tools ${DESTDIR}${MAN}/${MANAPPS}
++	${INSTALL} -m ${PKGDIRMODE} -dir -idb tiff.man.tools ${DESTDIR}${MAN}
++	${INSTALL} -m ${PKGDIRMODE} -dir -idb tiff.man.tools ${DESTDIR}${MAN}/${MANAPPS}
+ 	cd apps; ${MAKE} -${MAKEFLAGS} install
+-	${INSTALL} -m 755 -dir -idb tiff.man.dev ${DESTDIR}${MAN}/${MANLIB}
++	${INSTALL} -m ${PKGDIRMODE} -dir -idb tiff.man.dev ${DESTDIR}${MAN}/${MANLIB}
+ 	cd lib; ${MAKE} -${MAKEFLAGS} install
+ 
+ clean:
