@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/09/24 00:17:51 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2002/10/02 18:59:50 wiz Exp $
 #
 
 DISTNAME=		krb4-1.1.1
@@ -11,7 +11,9 @@ HOMEPAGE=		http://www.pdc.kth.se/kth-krb/
 COMMENT=		Kerberos IV distribution from KTH
 
 # enable this once our autoconf has been upgraded to autoconf>=2.52:
-#BUILD_DEPENDS+=	automake>1.4:../../devel/automake  
+# (don't forget to also add automake.mk (see bottom))
+#AUTOCONF_REQD=		2.52
+#AUTOMAKE_REQD=		1.7
 
 CONFLICTS+=		wu-ftpd-[0-9]*
 CONFLICTS+=		lukemftp-[0-9]*
@@ -45,11 +47,11 @@ post-patch:
 
 # enable this once our autoconf has been upgraded to autoconf>=2.52:
 #pre-configure:
-#	cd ${WRKSRC};                                                         \
-#	${LOCALBASE}/bin/aclocal;                                             \
-#	${LOCALBASE}/bin/autoheader;                                          \
-#	${LOCALBASE}/bin/automake -a --foreign -i;                            \
-#	${LOCALBASE}/bin/autoconf
+#	cd ${WRKSRC};							\
+#	${ACLOCAL};							\
+#	${AUTOHEADER};							\
+#	${AUTOMAKE} -a --foreign -i;					\
+#	${AUTOCONF}
 
 post-install:
 	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
@@ -59,5 +61,7 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/services-1.4.2.diff ${EXAMPLEDIR}
 	${INSTALL_DATA} ${FILESDIR}/services-1.5.diff ${EXAMPLEDIR}
 
+# Enable line below once it's needed
+#.include "../../mk/automake.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
