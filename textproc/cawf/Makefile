@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2005/01/20 18:23:55 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/20 19:01:12 tv Exp $
 #
 
 DISTNAME=		cawf
 PKGNAME=		cawf-4.10
 CATEGORIES=		textproc
-MASTER_SITES=		http://www.tux.org/pub/sites/vic.cc.purdue.edu/
+MASTER_SITES=		ftp://vic.cc.purdue.edu/pub/ \
+			http://www.tux.org/pub/sites/vic.cc.purdue.edu/
 DIST_SUBDIR=		${PKGNAME_NOREV}
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		tv@duh.org
-HOMEPAGE=		http://www.tux.org/pub/sites/vic.cc.purdue.edu/
+HOMEPAGE=		ftp://vic.cc.purdue.edu/pub/cawf.README
 COMMENT=		Simplistic nroff-like formatter in C, like "awf"
 
 WRKSRC=			${WRKDIR}
@@ -20,6 +21,9 @@ USE_BUILDLINK3=		yes
 .include "../../mk/bsd.prefs.mk"
 
 CPPFLAGS+=		-DUNIX -DUSG -DSTDLIB -DCAWFLIB='\"${PREFIX}/share/cawf\"'
+
+post-extract:
+	${RM} -f ${WRKSRC}/*.o
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bsfilt ${WRKSRC}/cawf ${PREFIX}/bin/
