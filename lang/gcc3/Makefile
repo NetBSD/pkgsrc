@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2003/07/04 16:11:57 seb Exp $
+# $NetBSD: Makefile,v 1.32 2003/07/04 16:27:27 seb Exp $
 #
 
 DISTNAME=		gcc-3.3
-PKGREVISION=		2
+PKGREVISION=		3
 PKGNAME=		${DISTNAME:C|gcc|gcc3|}
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-3.3/}
@@ -22,7 +22,7 @@ USE_GMAKE=		YES
 
 HAS_CONFIGURE=		YES
 
-CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
+CONFIGURE_ARGS+=	--infodir=${GCC_PREFIX}/info
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX}
 UNLIMIT_RESOURCES=	datasize
 
@@ -34,7 +34,9 @@ TEXINFO_REQD=		4.2
 
 .include "../../mk/bsd.prefs.mk"
 
-INFO_FILES=		cpp.info g77.info gcc.info
+USE_NEW_TEXINFO=	YES
+INFO_DIR=		${GCC_PREFIX:S|^${PREFIX}/||}/info
+INFO_FILES=		cpp.info g77.info gcc.info gccint.info cppinternals.info
 .if defined(PKG_GCC3_JAVA)
 INFO_FILES+=		fastjar.info gcj.info
 .endif
@@ -102,9 +104,6 @@ post-install:
 	${LN} -f ${GCC_PREFIX}/bin/gcc ${GCC_PREFIX}/bin/cc
 #	${LN} -f ${GCC_PREFIX}/bin/g77 ${GCC_PREFIX}/bin/f77
 	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
-.if defined(PKG_GCC3_JAVA)
-	${CAT} ${PKGDIR}/PLIST.java >> ${PLIST_SRC}
-.endif
 	${FIND} ${GCC_PREFIX} \( -type f -o -type l \) -print		\
 		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"			\
 		>> ${PLIST_SRC}
@@ -112,7 +111,6 @@ post-install:
 		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
 		>> ${PLIST_SRC}
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # Make bootstrap with compiler != gcc possible.
