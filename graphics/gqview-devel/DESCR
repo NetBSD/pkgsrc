@@ -1,0 +1,7 @@
+GQview is a graphics file viewer. Basic features:
+  - Single click image viewing / navigation.
+  - Zoom functions.
+  - Thumbnails, with optional caching and .xvpics support.
+  - Multiple file selection for move, copy, delete, rename, drag and drop.
+  - Drag and drop.
+  - Ability to open images in external editors (configurable).
