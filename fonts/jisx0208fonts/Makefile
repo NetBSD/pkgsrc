@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2000/06/26 22:12:35 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.5 2000/09/05 02:52:27 itojun Exp $
 #
 
-DISTNAME=	jisx0208fonts-20000614
+DISTNAME=	jisx0208fonts-20000904
 CATEGORIES=	fonts x11 japanese
 MASTER_SITES=   ftp://ftp.iij.ad.jp/pub/X/X11R6.4/xc/fonts/bdf/misc/ \
 		ftp://ftp.eu.net/X11/R6.4/xc/fonts/bdf/misc/
