@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.17 2004/04/25 20:04:54 snj Exp $
-#
+# $NetBSD: Makefile,v 1.18 2004/05/19 13:09:44 adam Exp $
 
-DISTNAME=		soup-0.7.10
-PKGREVISION=		8
-CATEGORIES=		net gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/soup/0.7/}
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	soup-0.7.11
+CATEGORIES=	net gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/soup/0.7/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.gnome.org/
-COMMENT=		Callback-based mechanism for sending and servicing SOAP requests
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.gnome.org/
+COMMENT=	Callback-based mechanism for sending and servicing SOAP requests
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
@@ -25,4 +23,5 @@ CONFIGURE_ARGS+=	--enable-gtk-doc=no
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
