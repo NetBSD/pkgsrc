@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2005/03/16 11:51:00 rillig Exp $
+$NetBSD: distinfo,v 1.7 2005/03/18 12:17:04 wiz Exp $
 
 SHA1 (libopendaap-0.3.0.tar.bz2) = 21817a7886ffc8c4d88c621231569562c61356db
 RMD160 (libopendaap-0.3.0.tar.bz2) = 2218783e40e7f48a7b89b2e27145e4964f7dd687
@@ -7,5 +7,5 @@ SHA1 (patch-ab) = 3bd01a3038505721149a8ea56f564442b035cee4
 SHA1 (patch-ac) = d723c22d11df6d511290d45ccb54861fbecc178d
 SHA1 (patch-ad) = 88b72f80e4a6ed68f7ae74ace3f3dbf07709c0b1
 SHA1 (patch-ae) = 606756fe07c6af4fc0361f5ae5f3f62b4a40d59e
-SHA1 (patch-af) = 1d068403ee6396bc4d49850afe7cefd4d07fb645
-SHA1 (patch-ag) = a1c020561e83e467062710fb454f639700fc3e3a
+SHA1 (patch-af) = a038d125bb809d2b74248a8e7996eec363d11283
+SHA1 (patch-ag) = c62cc8b8b1d8ac0cfb64bff69c05fab2c03f504f
