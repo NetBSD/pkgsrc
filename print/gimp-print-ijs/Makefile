@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/12/08 11:39:24 cjep Exp $
+# $NetBSD: Makefile,v 1.6 2002/12/10 18:39:49 drochner Exp $
 
 DISTNAME=	gimp-print-4.2.4
 PKGNAME=	gimp-print-ijs-4.2.4
@@ -32,7 +32,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/src/ghost/README ${DOCDIR}
 
-.include "../../converters/libiconv/buildlink2.mk"
 .include "../../print/gimp-print-lib/buildlink2.mk"
 .include "../../print/ijs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
