@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.250 2004/06/18 11:22:41 kristerw Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.251 2004/06/20 02:52:56 xtraeme Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1372,12 +1372,6 @@ KERBEROS_PREFIX_CMDS?=	no
 # Possible: any libdvdcss site
 # Default: not defined
 
-#LIBWRAP_FWD=
-# Used in ssh package to make libwrap also compare against forwarded
-# connection attempts
-# Possible: not defined, YES
-# Default: not defined
-
 #LATEX2HTML_ICONPATH=
 # Used in the latex2html package to set URL prefix for where to
 # find latex2html's icons.
@@ -2087,13 +2081,6 @@ USE_SJ3?= YES
 # Used to specify SOCKS firewall support
 # Set this to the version of socks necessary.
 # Possible: 4, 5, not defined
-# Default: not defined
-
-#USE_TETEX2=
-# Used to specify the use of teTeX2 instead of
-# teTeX (version 1) for packages which need to
-# make a decision.
-# Possible: defined, not defined
 # Default: not defined
 
 USE_WNN4?= YES
