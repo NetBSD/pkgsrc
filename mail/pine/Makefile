@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2003/09/27 17:07:37 grant Exp $
+# $NetBSD: Makefile,v 1.79 2003/09/28 09:13:57 jlam Exp $
 
 DISTNAME=       pine4.58
 PKGNAME=        pine-4.58
@@ -87,7 +87,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/contrib/utils/* ${PREFIX}/share/pine/contrib/utils
 	${CHMOD} +x ${PREFIX}/share/pine/contrib/utils/*.sh
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../editors/pico/buildlink2.mk"
 .include "../../mail/imap-uw/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/09/27 17:07:38 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/09/28 09:13:58 jlam Exp $
 #
 
 DISTNAME=	vifm-0.1
@@ -23,6 +23,6 @@ pre-configure:
 		${WRKSRC}/src/vifmrc0.1 > ${WRKSRC}/src/vifmrc0.1.new && \
 		${MV} ${WRKSRC}/src/vifmrc0.1.new ${WRKSRC}/src/vifmrc0.1
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

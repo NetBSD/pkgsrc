@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/09/27 17:07:34 grant Exp $
+# $NetBSD: Makefile,v 1.18 2003/09/28 09:13:55 jlam Exp $
 
 DISTNAME=	mp3info-0.8.4
 PKGNAME=	g${DISTNAME}
@@ -20,7 +20,7 @@ USE_X11=		YES
 # wgetnstr()
 INCOMPAT_CURSES=	NetBSD-1.5-* NetBSD-1.5.*-* NetBSD-1.5[A-U]-*
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"

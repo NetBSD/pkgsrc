@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2003/09/27 17:07:37 grant Exp $
+# $NetBSD: Makefile,v 1.32 2003/09/28 09:13:58 jlam Exp $
 #
 
 DISTNAME=	mtr-0.54
@@ -22,5 +22,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/mtr.8 ${PREFIX}/man/man8
 	${INSTALL_DATA} ${WRKSRC}/SECURITY ${PREFIX}/share/doc/mtr
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

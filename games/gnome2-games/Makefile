@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/09/27 17:07:36 grant Exp $
+# $NetBSD: Makefile,v 1.12 2003/09/28 09:13:57 jlam Exp $
 
 DISTNAME=		gnome-games-2.2.1
 PKGREVISION=		4
@@ -67,7 +67,7 @@ GCONF2_SCHEMAS+=	same-gnome.schemas
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/libgnome/buildlink2.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../lang/guile/buildlink2.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../mk/bsd.pkg.mk"

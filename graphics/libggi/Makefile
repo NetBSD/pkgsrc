@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/09/27 17:07:36 grant Exp $
+# $NetBSD: Makefile,v 1.24 2003/09/28 09:13:57 jlam Exp $
 #
 
 DISTNAME=	libggi-2.0.3.src
@@ -44,7 +44,7 @@ PLIST_SRC=              ${PKGDIR}/PLIST.dga
 PLIST_SRC+=             ${PKGDIR}/PLIST
 .endif
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../graphics/libgii/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"

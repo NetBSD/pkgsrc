@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2003/09/27 17:07:38 grant Exp $
+# $NetBSD: Makefile.common,v 1.5 2003/09/28 09:13:58 jlam Exp $
 
 TETEX_BIN_VERS=		2.0.2
 DIST_SUBDIR=		teTeX
@@ -59,4 +59,4 @@ OWN_DIRS_PERMS+=	${TEXFONTSDIR}/tfm ${ROOT_USER} ${ROOT_GROUP} 1777
 .include "../../graphics/png/buildlink2.mk"
 .include "../../fonts/t1lib/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"

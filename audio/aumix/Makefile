@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/09/27 17:07:34 grant Exp $
+# $NetBSD: Makefile,v 1.18 2003/09/28 09:13:55 jlam Exp $
 
 DISTNAME=	aumix-2.8
 PKGREVISION=	2
@@ -24,6 +24,6 @@ CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--without-gtk1
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

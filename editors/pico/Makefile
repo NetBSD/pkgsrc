@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2003/09/27 17:07:35 grant Exp $
+# $NetBSD: Makefile,v 1.47 2003/09/28 09:13:56 jlam Exp $
 
 DISTNAME=	pine4.58
 PKGNAME=	pico-4.6
@@ -47,5 +47,5 @@ do-install:
 	cd ${WRKSRC}/pico && \
 	${INSTALL_DATA} *.h ${PREFIX}/include/pico
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

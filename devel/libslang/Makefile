@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2003/09/27 17:07:35 grant Exp $
+# $NetBSD: Makefile,v 1.45 2003/09/28 09:13:56 jlam Exp $
 #
 
 DISTNAME=	slang-1.4.9
@@ -39,7 +39,7 @@ post-patch:
 		${WRKSRC}/src/Makefile.in.tmp &&		\
 		${MV} ${WRKSRC}/src/Makefile.in.tmp ${WRKSRC}/src/Makefile.in
 
-. include "../../mk/curses.buildlink2.mk"
+. include "../../devel/ncurses/buildlink2.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
