@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2002/09/23 17:22:54 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2002/09/27 12:01:15 drochner Exp $
 #
 
-DISTNAME=	grace-5.1.4
-PKGREVISION=	1
+DISTNAME=	grace-5.1.10
 CATEGORIES=	math graphics x11
 MASTER_SITES=	ftp://plasma-gate.weizmann.ac.il/pub/grace/src/ \
 		ftp://linux.mathematik.tu-darmstadt.de/pub/linux/mirrors/misc/grace/src/ \
@@ -12,7 +11,7 @@ MASTER_SITES=	ftp://plasma-gate.weizmann.ac.il/pub/grace/src/ \
 		ftp://ftp.u-aizu.ac.jp/pub/SciEng/math/grace/src/ \
 		ftp://ftp2.netmor.com/pub/mirrors/grace/src/
 
-MAINTAINER=	drochner@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://plasma-gate.weizmann.ac.il/Grace/
 COMMENT=	GRaphing, Advanced Computation and Exploration of data
 
@@ -24,7 +23,7 @@ USE_GMAKE=		YES
 USE_FORTRAN=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-grace-home=${PREFIX}/grace
-CONFIGURE_ARGS+=	--with-extra-incpath=${BUILDLINK_DIR}/include
+CONFIGURE_ARGS+=	--without-bundled-xbae
 MAKE_ENV+=		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
 post-install:
