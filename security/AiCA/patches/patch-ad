@@ -1,13 +1,29 @@
-$NetBSD: patch-ad,v 1.1 2004/11/29 17:24:49 taca Exp $
+$NetBSD: patch-ad,v 1.2 2004/11/30 05:58:04 taca Exp $
 
 --- aicrypto/configure.orig	2002-11-04 23:21:10.000000000 +0900
 +++ aicrypto/configure
-@@ -633,7 +633,7 @@ EOF
+@@ -642,6 +642,24 @@ EOF
  #define UC_LOCAL_JCODE 3
  EOF
   ;;
-- freebsd*)
-+ freebsd*|netbsd*|openbsd*)
++ netbsd*)
++	cat >> confdefs.h <<\EOF
++#define __BSD__ 1
++EOF
++
++	cat >> confdefs.h <<\EOF
++#define UC_LOCAL_JCODE 3
++EOF
++ ;;
++ openbsd*)
++	cat >> confdefs.h <<\EOF
++#define __BSD__ 1
++EOF
++
++	cat >> confdefs.h <<\EOF
++#define UC_LOCAL_JCODE 3
++EOF
++ ;;
+     bsdi*)
  	cat >> confdefs.h <<\EOF
  #define __BSD__ 1
- EOF
