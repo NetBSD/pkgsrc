@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/11 18:22:47 snj Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/11 18:03:58 minskim Exp $
 
 DISTNAME=		liferea-0.3.3
 CATEGORIES=		www
@@ -15,6 +15,7 @@ USE_X11=                yes
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/GConf2/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/libgtkhtml/buildlink3.mk"
