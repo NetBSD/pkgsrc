@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2003/07/21 16:51:47 martti Exp $
+# $NetBSD: Makefile,v 1.40 2003/09/09 16:23:49 jmmv Exp $
 #
 
 DISTNAME=		libwmf-0.2.8
@@ -12,8 +12,10 @@ COMMENT=		Library for reading and converting WMF (Windows Meta Files), version 2
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--disable-gd
 CONFIGURE_ARGS+=	--includedir=${INCLUDEDIR}
 CONFIGURE_ARGS+=	--with-docdir=${HTMLDIR}
+CONFIGURE_ARGS+=	--without-sys-gd
 USE_X11=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
