@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/06/06 17:03:59 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/07/13 18:20:08 tron Exp $
 bin/wwwoffle
 bin/wwwoffle-tools
 bin/wwwoffle-ls
@@ -13,3 +13,66 @@ etc/wwwoffle/wwwoffle.conf.default
 @exec cp %F %D/etc/wwwoffle/wwwoffle.conf
 @unexec rm -f %D/etc/wwwoffle/wwwoffle.conf
 @dirrm etc/wwwoffle
+@RELPATH@var/wwwoffle/outgoing/Owwwoffle-user
+@RELPATH@var/wwwoffle/outgoing/Uwwwoffle-user
+@RELPATH@var/wwwoffle/outgoing/Owwwoffle-browser
+@RELPATH@var/wwwoffle/outgoing/Uwwwoffle-browser
+@RELPATH@var/wwwoffle/html/FAQ.html
+@RELPATH@var/wwwoffle/html/Welcome.html
+@RELPATH@var/wwwoffle/html/messages/AddInfoRefresh.html
+@RELPATH@var/wwwoffle/html/messages/RefreshRedirect.html
+@RELPATH@var/wwwoffle/html/messages/README
+@RELPATH@var/wwwoffle/html/messages/WillGet.html
+@RELPATH@var/wwwoffle/html/messages/LocalDirRedirect.html
+@RELPATH@var/wwwoffle/html/messages/PageNotFound.html
+@RELPATH@var/wwwoffle/html/messages/RemoteHostError.html
+@RELPATH@var/wwwoffle/html/messages/HostNotGot.html
+@RELPATH@var/wwwoffle/html/messages/IllegalProtocol.html
+@RELPATH@var/wwwoffle/html/messages/CantRefreshPosted.html
+@RELPATH@var/wwwoffle/html/messages/RefreshWillGet.html
+@RELPATH@var/wwwoffle/html/messages/IndexIllegal.html
+@RELPATH@var/wwwoffle/html/messages/PasswordNotAllowed.html
+@RELPATH@var/wwwoffle/html/messages/MonitorIllegal.html
+@RELPATH@var/wwwoffle/html/messages/ControlPage.html
+@RELPATH@var/wwwoffle/html/messages/RefusedRequest.html
+@RELPATH@var/wwwoffle/html/messages/RefreshIllegal.html
+@RELPATH@var/wwwoffle/html/messages/RefreshPage.html
+@RELPATH@var/wwwoffle/html/messages/MonitorFormError.html
+@RELPATH@var/wwwoffle/html/messages/IndexRedirect.html
+@RELPATH@var/wwwoffle/html/messages/Index-Head.html
+@RELPATH@var/wwwoffle/html/messages/RefreshFormError.html
+@RELPATH@var/wwwoffle/html/messages/ControlIllegal.html
+@RELPATH@var/wwwoffle/html/messages/IndexURLRedirect.html
+@RELPATH@var/wwwoffle/html/messages/FTPDirRedirect.html
+@RELPATH@var/wwwoffle/html/messages/MonitorPage.html
+@RELPATH@var/wwwoffle/html/messages/ControlAuthFail.html
+@RELPATH@var/wwwoffle/html/messages/MonitorWillGet.html
+@RELPATH@var/wwwoffle/html/messages/ConfigEditPage-Head.html
+@RELPATH@var/wwwoffle/html/messages/Index-Tail.html
+@RELPATH@var/wwwoffle/html/messages/ConfigEditPage-Tail.html
+@RELPATH@var/wwwoffle/html/messages/ConfigUpdate.html
+@RELPATH@var/wwwoffle/html/messages/ControlWWWOFFLE-Head.html
+@RELPATH@var/wwwoffle/html/messages/ControlDelete.html
+@RELPATH@var/wwwoffle/html/messages/ConfigError.html
+@RELPATH@var/wwwoffle/html/messages/IndexRoot-Body.html
+@RELPATH@var/wwwoffle/html/messages/ControlWWWOFFLE-Tail.html
+@RELPATH@var/wwwoffle/html/messages/FTPDir-Tail.html
+@RELPATH@var/wwwoffle/html/messages/ConfigEditPage-Body.html
+@RELPATH@var/wwwoffle/html/messages/FTPDir-Head.html
+@RELPATH@var/wwwoffle/html/messages/ServerError.html
+@RELPATH@var/wwwoffle/html/robots.txt
+@RELPATH@var/wwwoffle/html/wwwoffle.pac
+@RELPATH@var/wwwoffle/html/index.html
+@dirrm @RELPATH@var/wwwoffle/outgoing
+@exec mkdir -p %D/@RELPATH@var/wwwoffle/monitor
+@dirrm @RELPATH@var/wwwoffle/monitor
+@exec mkdir -p %D/@RELPATH@var/wwwoffle/lasttime
+@dirrm @RELPATH@var/wwwoffle/lasttime
+@unexec rm -rf %D/@RELPATH@var/wwwoffle/http
+@unexec rm -rf %D/@RELPATH@var/wwwoffle/ftp
+@unexec rm -rf %D/@RELPATH@var/wwwoffle/finger
+@exec mkdir -p %D/@RELPATH@var/wwwoffle/html/local
+@dirrm @RELPATH@var/wwwoffle/html/local
+@dirrm @RELPATH@var/wwwoffle/html/messages
+@dirrm @RELPATH@var/wwwoffle/html
+@dirrm @RELPATH@var/wwwoffle

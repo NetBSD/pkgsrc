@@ -1,13 +1,14 @@
---- Makefile.orig	Sat Jun  6 18:02:38 1998
-+++ Makefile	Sat Jun  6 18:05:01 1998
+--- Makefile.orig	Mon Jun 15 20:58:24 1998
++++ Makefile	Sat Jul 11 23:42:20 1998
 @@ -14,17 +14,17 @@
  
  ########
  
 -INSTDIR=/usr/local
-+INSTDIR=${PREFIX}
- SPOOLDIR=/var/spool/wwwoffle
+-SPOOLDIR=/var/spool/wwwoffle
 -CONFDIR=/var/spool/wwwoffle
++INSTDIR=${PREFIX}
++SPOOLDIR=/var/wwwoffle
 +CONFDIR=${PREFIX}/etc/wwwoffle
  
  ########
@@ -19,6 +20,15 @@
  LD=gcc
 -LDFLAGS=-g
 +LDFLAGS=-s
+ # For HP/UX this is a good idea.
+ #LDFLAGS=
  
- LEX=flex -i -L
- 
+@@ -240,7 +240,7 @@
+ 	[ -e $(SPOOLDIR)/html -a ! -e $(SPOOLDIR)/html.old ] && mv $(SPOOLDIR)/html $(SPOOLDIR)/html.old ;\
+ 	[ ! -e $(SPOOLDIR)/html ] && mkdir $(SPOOLDIR)/html
+ 	@for f in html/* ; do \
+-	  cp -a $$f $(SPOOLDIR)/$$f && echo "Installing $(SPOOLDIR)/$$f";\
++	  cp -R $$f $(SPOOLDIR)/$$f && echo "Installing $(SPOOLDIR)/$$f";\
+ 	 done
+ 	@([ -d $(SPOOLDIR) -a ! -d $(SPOOLDIR)/prevtime1 ] && ./endian-cache > /dev/null 2>&1 ) || \
+ 	 (echo "WWWOFFLE: " ;\
