@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.19 2002/03/11 12:48:52 yyamano Exp $
+# $NetBSD: defs.Darwin.mk,v 1.20 2002/03/14 02:28:23 lukem Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -73,7 +73,7 @@ _IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
 _OPSYS_HAS_GMAKE=	yes	# GNU make is standard
 _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no	# libossaudio is available
-_PATCH_BACKUP_ARG=	-b -z	# switch to patch(1) for backup file
+_PATCH_BACKUP_ARG=	-V simple -b -z	# switch to patch(1) for backup suffix
 _PREFORMATTED_MAN_DIR=	cat	# directory where catman pages are
 _USE_RPATH=		no	# don't add rpath to LDFLAGS
 
