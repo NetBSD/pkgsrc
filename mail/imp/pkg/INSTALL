@@ -1,0 +1,56 @@
+#! /bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2001/02/12 15:27:41 jlam Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+CAT="@CAT@"
+CHMOD="@CHMOD@"
+CP="@CP@"
+
+CONFDIR=${PKG_PREFIX}/etc/httpd
+IMPDIR=${PKG_PREFIX}/@IMPDIR@
+
+CONFFILES="${CONFDIR}/imp.conf ${IMPDIR}/config/defaults.php3 ${IMPDIR}/config/ldap.php3 ${IMPDIR}/config/servers.php3"
+NONCONFFILES="${IMPDIR}/config/MOTD.html ${IMPDIR}/config/header.txt ${IMPDIR}/config/html.php3 ${IMPDIR}/config/imp_module_config.php3 ${IMPDIR}/config/lang.php3 ${IMPDIR}/config/mailbox.php3 ${IMPDIR}/config/menu.txt ${IMPDIR}/config/mime.php3 ${IMPDIR}/config/prefs.php3 ${IMPDIR}/config/trailer.txt"
+
+case ${STAGE} in
+PRE-INSTALL)
+	;;
+
+POST-INSTALL)
+	echo "Installing configuration files:"
+	for FILE in ${CONFFILES} ${NONCONFFILES}
+	do
+		SAMPLEFILE=${FILE}.dist
+		if [ -f ${FILE} ]
+		then
+			echo "    ${FILE} already exists"
+		else
+			echo "    ${FILE}"
+			${CP} ${SAMPLEFILE} ${FILE}
+			${CHMOD} 644 ${FILE}
+		fi
+	done
+	${CAT} << EOF
+
+===========================================================================
+Some files you might need to customize include the following:
+
+EOF
+	for FILE in ${CONFFILES}
+	do
+		echo "	${FILE}"
+	done
+	${CAT} << EOF
+===========================================================================
+EOF
+	;;
+
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0

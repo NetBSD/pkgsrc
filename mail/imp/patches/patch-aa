@@ -1,0 +1,41 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/02/12 15:27:43 jlam Exp $
+
+--- config/defaults.php3.dist.orig	Tue Aug 22 21:57:38 2000
++++ config/defaults.php3.dist
+@@ -8,7 +8,7 @@
+ // _not_ put a trailing slash on this value. If IMP is the top-level
+ // thing in the web tree, the correct value is '' (empty string), not
+ // '/'.
+-$default->root_url = '';
++$default->root_url = '/horde/imp';
+ 
+ // Where do the graphics live _in the web tree_?. So, if IMP is at
+ // /horde/imp, and the graphics are at /horde/imp/graphics, then this
+@@ -322,11 +322,11 @@
+ // Should we allow users to use the addressbook? For this to have any
+ // effect, you must be using a non-dummy database driver to store the
+ // addresses in.
+-$default->user_use_addressbook = false;
++$default->user_use_addressbook = true;
+ 
+ // Allow LDAP searching? If you enable this, you will need to
+ // configure at least one LDAP server in config/ldap.php3.
+-$default->use_ldap_search = true;
++$default->use_ldap_search = false;
+ 
+ // Hide deleted messages from the mailbox listing?
+ $default->hide_deleted = false;
+@@ -359,9 +359,12 @@
+  ** Database Configuration
+  **/
+ 
++// Use a database?  This needs to be true to have user preferences.
++$default->use_db = true;
++
+ // What database_driver should we use? Valid options are: dummy,
+ // pgsql, mysql, informix oracle, or sybase.
+-$default->database_driver = 'dummy';
++$default->database_driver = 'mysql';
+ 
+ // What username should we use to connect to the database server?
+ $default->db_user_name = 'hordemgr';
