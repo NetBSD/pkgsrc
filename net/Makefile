@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.257 2001/10/16 22:42:07 seb Exp $
+# $NetBSD: Makefile,v 1.258 2001/10/21 22:51:31 mjl Exp $
 #
 
 COMMENT=	Networking tools
@@ -64,6 +64,7 @@ SUBDIR+=	gtm
 SUBDIR+=	host
 SUBDIR+=	httptunnel
 SUBDIR+=	icsi-finger
+SUBDIR+=	ipa
 SUBDIR+=	ipcalc
 SUBDIR+=	ipv6calc
 SUBDIR+=	ipw
