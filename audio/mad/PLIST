@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/12/14 09:20:18 toshii Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/07/31 10:41:15 wiz Exp $
 bin/abxtest
 bin/madplay
 include/id3tag.h
@@ -15,8 +15,8 @@ lib/libmad.a
 lib/libmad.la
 man/man1/abxtest.1
 man/man1/madplay.1
-share/locale/en/LC_MESSAGES/mad.mo
-share/locale/es/LC_MESSAGES/mad.mo
-share/locale/fr/LC_MESSAGES/mad.mo
-share/locale/hr/LC_MESSAGES/mad.mo
-share/locale/no/LC_MESSAGES/mad.mo
+${PKGLOCALEDIR}/locale/en/LC_MESSAGES/mad.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/mad.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/mad.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/mad.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/mad.mo
