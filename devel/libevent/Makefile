@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/07/17 21:31:24 grant Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/21 16:43:28 martti Exp $
 #
 
 DISTNAME=	libevent-0.6
@@ -7,7 +7,7 @@ MASTER_SITES=	http://monkey.org/~provos/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://monkey.org/~provos/libevent/
-COMMENT=	asynchronous event notification library
+COMMENT=	Asynchronous event notification library
 
 GNU_CONFIGURE=	# defined
 

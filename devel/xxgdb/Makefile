@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/03/29 12:40:41 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/21 16:43:48 martti Exp $
 #
 
 DISTNAME=	xxgdb-1.12
@@ -7,7 +7,7 @@ CATEGORIES=	devel x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=utilities/}
 
 MAINTAINER=	rh@trapdoor.vip.at
-COMMENT=	graphical X11 interface for gdb
+COMMENT=	Graphical X11 interface for gdb
 
 USE_IMAKE=	yes
 

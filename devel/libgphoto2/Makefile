@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:31:30 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 16:43:29 martti Exp $
 #
 
 DISTNAME=	libgphoto2-2.1.1
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://gphoto.sourceforge.net/proj/libgphoto2/
-COMMENT=	digital camera access library
+COMMENT=	Digital camera access library
 
 CONFLICTS+=	gphoto<2.1.1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2003/07/17 21:29:14 grant Exp $
+# $NetBSD: Makefile,v 1.37 2003/07/21 16:43:13 martti Exp $
 #
 
 DISTNAME=		GConf-1.0.9
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://advogato.org/proj/GConf/
-COMMENT=		configuration database system used by GNOME
+COMMENT=		Configuration database system used by GNOME
 
 BUILD_USES_MSGFMT=	yes
 #DEPENDS+=		guile>=1.3.4:../../lang/guile

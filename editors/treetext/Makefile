@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:35:02 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 16:44:38 martti Exp $
 #
 
 DISTNAME=	TreeText-0.3.3-src
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	sakamoto@NetBSD.org
 HOMEPAGE=	http://www.ab.wakwak.com/~tino/fox/treetext/
-COMMENT=	multi documents editor
+COMMENT=	Multi documents editor
 
 USE_BUILDLINK2=	# defined
 USE_X11BASE=	# defined
