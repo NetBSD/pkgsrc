@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2004/05/05 02:26:41 snj Exp $
+# $NetBSD: Makefile.common,v 1.16.2.1 2004/07/26 16:45:26 agc Exp $
 
 DISTNAME=	espgs-${GS_VERS}-source
 BASEGS_VERS=	7.07
@@ -65,6 +65,7 @@ REPLACE_PERL=		lib/fixmswrd.pl
 
 CUPS_CONFDIR?=		${PKG_SYSCONFBASEDIR}/cups
 CUPS_EGDIR=		${PREFIX}/share/examples/cups
+CUPS_MODEL_DIR=		${PREFIX}/share/cups/model
 DOCDIR=			${PREFIX}/share/doc/ghostscript
 HTMLDIR=		${PREFIX}/share/doc/html/ghostscript
 
@@ -78,14 +79,15 @@ post-extract:
 	${RM} -f ${WRKSRC}/jpeg
 	${LN} -s ${JPEG_WRKSRC} ${WRKSRC}/jpeg
 
-pre-configure:
-	cd ${WRKSRC} && ${AUTOCONF}
-
 # Reinstall the gs binary so that it's properly stripped.
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/gs ${PREFIX}/bin/gs
+	${INSTALL_SCRIPT} ${WRKSRC}/pstoraster/pstopxl			\
+		${PREFIX}/libexec/cups/filter
 	${INSTALL_SCRIPT} ${WRKSRC}/pstoraster/pstoraster		\
 		${PREFIX}/libexec/cups/filter
+	${INSTALL_DATA} ${WRKSRC}/pstoraster/pxlcolor.ppd ${CUPS_MODEL_DIR}
+	${INSTALL_DATA} ${WRKSRC}/pstoraster/pxlmono.ppd ${CUPS_MODEL_DIR}
 	${INSTALL_DATA} ${WRKSRC}/pstoraster/pstoraster.convs ${CUPS_EGDIR}
 
 .include "../../security/openssl/buildlink3.mk"
@@ -94,5 +96,4 @@ post-install:
 .include "../../print/cups/buildlink3.mk"
 .include "../../print/gimp-print-lib/buildlink3.mk"
 
-.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"

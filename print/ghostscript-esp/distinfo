@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2003/12/19 12:07:43 recht Exp $
+$NetBSD: distinfo,v 1.5.4.1 2004/07/26 16:45:26 agc Exp $
 
 SHA1 (ghostscript/espgs-7.07.1-source.tar.bz2) = 9d5653d674a074ef6b803ceed4a2aeb40fed852f
 Size (ghostscript/espgs-7.07.1-source.tar.bz2) = 5400198 bytes
@@ -7,4 +7,3 @@ Size (ghostscript/jpegsrc.v6b.tar.gz) = 613261 bytes
 SHA1 (patch-aa) = bbc381631bfd7ec47254cf229ebef138ac593b66
 SHA1 (patch-ab) = df324d501a92cce882264900dabafe8be5f9d352
 SHA1 (patch-ac) = 67308cde89fcfb7ae40220bc9b8d7cc24c0cebe2
-SHA1 (patch-ae) = 96ea0de519c0e6fddfd31b87b39ce76b0afb2d7d
