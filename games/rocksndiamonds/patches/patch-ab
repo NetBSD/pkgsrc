@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/01/03 17:23:27 wiz Exp $
+
+--- src/Makefile.orig	Sun Oct 24 18:51:53 1999
++++ src/Makefile	Mon Jan  3 13:52:45 2000
+@@ -15,7 +15,7 @@
+ XINC_PATH = $(X11_PATH)/include
+ XLIB_PATH = $(X11_PATH)/lib
+ X11_INCL = -I$(XINC_PATH)
+-X11_LIBS = -L$(XLIB_PATH)
++X11_LIBS = -L$(XLIB_PATH) -Wl,-R$(XLIB_PATH)
+ endif
+ 
+ 
+@@ -35,7 +35,7 @@
+ endif
+ 
+ INCL = $(X11_INCL)
+-LIBS = $(X11_LIBS) -lX11 -lm $(EXTRA_LIBS)
++LIBS = $(X11_LIBS) ${LDFLAGS} -lX11 -lm $(EXTRA_LIBS)
+ 
+ endif
+ 
+@@ -65,7 +65,7 @@
+ 
+ # SYSTEM = -DSYSV -Ae		# may be needed for HP-UX
+ 
+-CFLAGS = $(OPTIONS) $(SYSTEM) $(INCL) $(CONFIG)
++CFLAGS += $(OPTIONS) $(SYSTEM) $(INCL) $(CONFIG)
+ 
+ SRCS =	main.c		\
+ 	init.c		\

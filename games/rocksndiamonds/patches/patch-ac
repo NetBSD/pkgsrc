@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/01/03 17:23:27 wiz Exp $
+
+--- src/files.c.orig	Sun Oct 10 14:53:01 1999
++++ src/files.c	Mon Jan  3 15:54:59 2000
+@@ -73,7 +73,7 @@
+ #define MODE_X_ALL		(S_IXUSR | S_IXGRP | S_IXOTH)
+ #define USERDATA_DIR_MODE	(MODE_R_ALL | MODE_X_ALL | S_IWUSR)
+ #define LEVEL_PERMS		(MODE_R_ALL | MODE_W_ALL)
+-#define SCORE_PERMS		LEVEL_PERMS
++#define SCORE_PERMS		(MODE_R_ALL | S_IWUSR | S_IWGRP)
+ #define TAPE_PERMS		LEVEL_PERMS
+ #define SETUP_PERMS		LEVEL_PERMS
+ 
