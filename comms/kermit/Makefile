@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2001/11/26 04:52:47 hubertf Exp $
+# $NetBSD: Makefile,v 1.34 2001/12/03 21:53:59 wiz Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/11/26 23:16:51 jseger Exp
 #
 
 DISTNAME=	cku200b04
-PKGNAME=        kermit-8.0.200.b4
+PKGNAME=        kermit-8.0.200.0.4
 CATEGORIES=	comms
 MASTER_SITES=	ftp://kermit.columbia.edu/kermit/test/tar/
 
