@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2525 2004/11/27 14:50:43 he Exp $
+$NetBSD: TODO,v 1.2526 2004/11/27 15:08:19 he Exp $
 
 Suggested new packages
 ======================
@@ -823,7 +823,6 @@ Suggested package updates
 	o osh-041028
 	o oss-3.99.1i
 	o p5-Apache-ASP-2.57
-	o p5-Apache-AuthCookie-3.06
 	o p5-Apache-DBILogConfig-0.02
 	o p5-Apache-Gallery-0.9.1
 	o p5-Apache-SSI-2.17
