@@ -1,20 +1,18 @@
-# $NetBSD: Makefile,v 1.2 2001/04/16 21:57:08 jtb Exp $
+# $NetBSD: Makefile,v 1.3 2001/04/17 01:01:35 jtb Exp $
 
-DISTNAME=	XML-RSS-0.97
+DISTNAME=	XML-XPath-1.08
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
 MAINTAINER=	packages@NetBSD.org
-HOMEPAGE=	http://www.pobox.com/~eisen/
-COMMENT=	XML-RSS helps to create and update RSS files
-
-DEPENDS+=	p5-XML-Parser>=2.29:../../textproc/p5-XML-Parser
+HOMEPAGE=	http://sergeant.org
+COMMENT=	XML XPath software
 
 USE_PERL5=	# defined
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/XML/RSS/.packlist
+PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/XML/XPath/.packlist
 
 do-configure:
-		@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 .include "../../mk/bsd.pkg.mk"
