@@ -1,6 +1,11 @@
-$NetBSD: patch-ad,v 1.7 1999/11/15 21:30:28 drochner Exp $
---- doc/Makefile.in.orig	Mon Nov 15 17:50:37 1999
-+++ doc/Makefile.in	Mon Nov 15 17:52:34 1999
+$NetBSD: patch-ad,v 1.8 1999/11/24 17:34:10 hubertf Exp $
+
+Place(s) where this was (most probably...) in before:
+     NetBSD: patch-ad,v 1.7 1999/11/15 21:30:28 drochner Exp 
+
+diff -x *.orig -urN ./doc/Makefile.in /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/doc/Makefile.in
+--- ./doc/Makefile.in	Fri Nov  5 21:14:58 1999
++++ /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/doc/Makefile.in	Wed Nov 24 17:30:51 1999
 @@ -122,7 +122,7 @@
  
  SUBDIRS = www.lesstif.org lessdox
