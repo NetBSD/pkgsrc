@@ -1,0 +1,4 @@
+GTL is a graph library based on STL.  For the design of GTL's API the
+API of LEDA has served as a basis.  GTL contains the classes needed to
+work with graphs, nodes and edges and some basic algorithms (DFS, BFS,
+topsort ...) as building blocks for more complex graph algorithms.
