@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2003/09/29 02:48:35 jdolecek Exp $
+# $NetBSD: Makefile,v 1.29 2003/10/05 17:55:13 martti Exp $
 
 PKGNAME=		${DISTNAME:S/-/-client-/}
-PKGREVISION=		1
 SVR4_PKGNAME=		mysqc
 COMMENT=		MySQL, a free SQL database (client)
 
@@ -10,6 +9,7 @@ COMMENT=		MySQL, a free SQL database (client)
 CONFIGURE_ARGS+=	--without-server
 USE_BUILDLINK2=		YES
 
+USE_NEW_TEXINFO=	YES
 INFO_FILES=		mysql.info
 
 post-install:
