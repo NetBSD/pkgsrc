@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/07/29 12:12:54 kristerw Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/30 08:31:23 xtraeme Exp $
 
 DISTNAME=	X11R6.7.0-src1
 PKGNAME=	xorg-fonts75dpi-${XORG_VER}
@@ -12,7 +12,6 @@ COMMENT=	X.org 75dpi bitmap fonts
 BUILD_DEPENDS=	xorg-clients>=6.7.0:../../x11/xorg-clients
 DEPENDS+=	xorg-fontsEncodings>=6.7.0:../../fonts/xorg-fontsEncodings
 
-CHECK_X11_TYPE=		# defined
 XBUILD_DIRS=		fonts/encodings fonts/bdf/75dpi
 XINSTALL_DIRS=		fonts/bdf/75dpi
 
