@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/02/10 08:58:17 minskim Exp $
+
+SHA1 (imhangul-0.9.9.tar.bz2) = acaa813dbf37b8584219a0ad19a577c48b19f63d
+Size (imhangul-0.9.9.tar.bz2) = 259108 bytes
+SHA1 (patch-aa) = bfb6a9a72abbee7eb03c4b597f2f971439265ad1
