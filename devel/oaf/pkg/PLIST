@@ -1,21 +1,32 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/16 19:44:18 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/08/29 16:26:21 rh Exp $
 bin/oafd
 bin/oaf-client
 bin/oaf-run-query
 bin/oaf-config
+bin/oaf-slay
+bin/oaf-sysconf
+etc/oaf/oaf-config.xml
+etc/oaf/oaf-config.xml.sample
 include/liboaf/oaf.h
 include/liboaf/liboaf.h
-include/liboaf/gnome-factory.h
 include/liboaf/liboaf-version.h
+include/liboaf/oaf-factory-suppress.h
+include/liboaf/oaf-factory.h
 lib/liboaf.so.0.0
 lib/liboaf.la
 lib/liboaf.a
 lib/oafConf.sh
 share/aclocal/oaf.m4
-share/idl/gnome-factory-oaf.idl
 share/idl/oaf.idl
+share/idl/oaf-factory.idl
+share/locale/da/LC_MESSAGES/oaf.mo
+share/locale/de/LC_MESSAGES/oaf.mo
+share/locale/fr/LC_MESSAGES/oaf.mo
+share/locale/no/LC_MESSAGES/oaf.mo
+share/locale/ru/LC_MESSAGES/oaf.mo
+share/locale/tr/LC_MESSAGES/oaf.mo
 share/oaf/oafd.oafinfo
 share/oaf/empty.oafinfo
-share/oaf/broken.oafinfo
+@dirrm etc/oaf
 @dirrm include/liboaf
 @dirrm share/oaf
