@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2003/01/09 13:59:25 rh Exp $
+# $NetBSD: Makefile,v 1.31.2.1 2003/03/15 12:07:12 grant Exp $
 
 DISTNAME=		evolution-1.2.1
 CATEGORIES=		mail time gnome
@@ -38,6 +38,7 @@ REPLACE_PERL+=		libical/scripts/mkrestrictiontable.pl
 REPLACE_PERL+=		tools/csv2vcard
 REPLACE_PERL+=		tools/evolution-addressbook-clean.in
 REPLACE_PERL+=		tools/killev
+CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--with-openldap --without-static-ldap
 CONFIGURE_ARGS+=	--enable-nntp=yes
 CONFIGURE_ARGS+=	--enable-openssl=yes
@@ -59,23 +60,6 @@ pre-configure:
 	done
 
 .include "../../mk/bsd.prefs.mk"
-
-DISPLAY?=	# empty if unset
-checkforx:
-.if ${DISPLAY}=="" || ${DISPLAY_OK:!${X11BASE}/bin/xdpyinfo >/dev/null 2>&1 && ${ECHO} YES || ${ECHO} NO!} == "NO"
-.if exists(${X11BASE}/bin/Xvfb)
-	-${SETENV} XAUTHORITY= ${X11BASE}/bin/Xvfb :2 &
-DISPLAY=	':2'
-.else
-	@${ECHO} "Error: Environment variable DISPLAY must be set"
-	@${ECHO} "       and point to a connectible X server."
-	@${FALSE}
-.endif	# Xvfb
-.endif	# DISPLAY
-
-MAKE_ENV+=	DISPLAY=${DISPLAY}
-
-pre-build: checkforx
 
 .include "../../textproc/libunicode/buildlink2.mk"
 .include "../../sysutils/gnome-vfs/buildlink2.mk"
