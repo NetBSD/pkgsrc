@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/02/03 05:07:06 fredb Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/04/21 20:36:04 tron Exp $
 bin/gmplayer
 man/man1/gmplayer.1
 share/mplayer/Skin/AlienMind/README
@@ -469,34 +469,6 @@ share/mplayer/Skin/slim/subt.png
 share/mplayer/Skin/slim/symbols.fnt
 share/mplayer/Skin/slim/symbols.png
 share/mplayer/Skin/slim/volume.png
-share/mplayer/Skin/trium/README
-share/mplayer/Skin/trium/VERSION
-share/mplayer/Skin/trium/about.png
-share/mplayer/Skin/trium/back.png
-share/mplayer/Skin/trium/eqb.png
-share/mplayer/Skin/trium/exit.png
-share/mplayer/Skin/trium/font.fnt
-share/mplayer/Skin/trium/font.png
-share/mplayer/Skin/trium/forward.png
-share/mplayer/Skin/trium/fsb.png
-share/mplayer/Skin/trium/iconify.png
-share/mplayer/Skin/trium/load.png
-share/mplayer/Skin/trium/main.png
-share/mplayer/Skin/trium/menu.png
-share/mplayer/Skin/trium/menus.png
-share/mplayer/Skin/trium/next.png
-share/mplayer/Skin/trium/pause.png
-share/mplayer/Skin/trium/play.png
-share/mplayer/Skin/trium/plb.png
-share/mplayer/Skin/trium/pos.png
-share/mplayer/Skin/trium/prev.png
-share/mplayer/Skin/trium/skin
-share/mplayer/Skin/trium/stop.png
-share/mplayer/Skin/trium/sub.png
-share/mplayer/Skin/trium/subt.png
-share/mplayer/Skin/trium/symbols.fnt
-share/mplayer/Skin/trium/symbols.png
-share/mplayer/Skin/trium/volume.png
 share/mplayer/Skin/xanim/README
 share/mplayer/Skin/xanim/VERSION
 share/mplayer/Skin/xanim/back.png
