@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pgsql.sh,v 1.8 2002/04/05 09:50:16 abs Exp $
+# $NetBSD: pgsql.sh,v 1.9 2002/04/05 16:23:23 jlam Exp $
 #
 # PostgreSQL database rc.d control script
 #
@@ -54,13 +54,19 @@ pgsql_precmd()
 
 pgsql_initdb()
 {
+	initdb="@PREFIX@/bin/initdb"
+
+	if [ ! -x ${initdb} ]
+	then
+		return
+	fi
 	if [ -f ${PGHOME}/data/base/1/PG_VERSION ]
 	then
 		@ECHO@ "The PostgreSQL template databases have already been initialized."
 		@ECHO@ "Skipping database initialization."
 	else
 		@ECHO@ "Initializing PostgreSQL databases."
-		@SU@ -m ${pgsql_user} -c "@PREFIX@/bin/initdb ${command_args} ${flags}"
+		@SU@ -m ${pgsql_user} -c "${initdb} ${command_args} ${flags}"
 	fi
 }
 
@@ -80,6 +86,11 @@ pgsql_doit()
 		command_args="${command_args} ${stop_command_args}"
 		;;
 	esac
+
+	if [ ! -x ${ctl_command} ]
+	then
+		return
+	fi
 
 	case ${action} in
 	start)		@ECHO@ "Starting ${name}." ;;
