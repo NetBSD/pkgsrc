@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2001/06/11 02:05:13 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2001/06/19 03:48:01 jlam Exp $
 #
 
 DISTNAME=		coda-5.3.13
@@ -20,6 +20,7 @@ INSTALL_TARGET=		client-install
 USE_PERL5=		yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
+USE_BUILDLINK_ONLY=	yes
 
 .include "../../devel/lwp/buildlink.mk"
 .include "../../devel/readline/buildlink.mk"
@@ -34,12 +35,11 @@ INSTALL_SUBST+=		LN=${LN:Q}
 INSTALL_SUBST+=		RM=${RM:Q}
 INSTALL_SUBST+=		RMDIR=${RMDIR:Q}
 INSTALL_SUBST+=		TRUE=${TRUE:Q}
+INSTALL_SUBST_SED=	${INSTALL_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
 pre-install:
-	${SED} ${INSTALL_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}		\
-		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED} ${INSTALL_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}		\
-		${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	${SED} ${INSTALL_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED} ${INSTALL_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
 post-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
