@@ -1,0 +1,15 @@
+--- compiler/Makefile.orig	Thu Jul 17 17:33:20 1997
++++ compiler/Makefile	Mon Feb 16 23:58:54 1998
+@@ -104,9 +104,9 @@
+ 	rm -f Makefile.bak
+ 
+ install:
+-	cp mosmlcmp $(LIBDIR)
+-	cp mosmllnk $(LIBDIR)
+-	cp mosmltop $(LIBDIR)
++	${BSD_INSTALL_DATA} mosmlcmp $(LIBDIR)
++	${BSD_INSTALL_DATA} mosmllnk $(LIBDIR)
++	${BSD_INSTALL_DATA} mosmltop $(LIBDIR)
+ 
+ depend: Filename.sml Config.sml Opcodes.sml Parser.sml Parser.sig Lexer.sml \
+     Predef.sml Prim_c.sml

@@ -1,0 +1,11 @@
+--- toolssrc/Makefile.orig	Wed Oct 23 10:35:44 1996
++++ toolssrc/Makefile	Tue Feb 17 00:08:55 1998
+@@ -34,7 +34,7 @@
+ 	rm -f cutdeps mosmldep
+ 
+ install:
+-	cp cutdeps mosmldep $(TOOLDIR)
++	${BSD_INSTALL_DATA} cutdeps mosmldep $(TOOLDIR)
+ 
+ depend: Deplex.sml Deppars.sml Mosmldep.sml
+ 	rm -f Makefile.bak
