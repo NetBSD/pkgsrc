@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-#	$NetBSD: bsd.pkg.mk,v 1.88 1998/05/29 22:48:17 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.89 1998/06/01 21:30:10 hubertf Exp $
 #
 #	This file is derived from bsd.port.mk - 940820 Jordan K. Hubbard.
 #	This file is in the public domain.
@@ -274,6 +274,9 @@ NetBSD_MAINTAINER=	agc@netbsd.org
 #
 # MANCOMPRESSED - Indicates that the port installs manpages in a compressed
 #                 form (default: port installs manpages uncompressed).
+# MANLANG		- List of language-subdirs for $PREFIX/man, into which the
+#				  pkg will install it's man-pages, resulting in
+#				  $PREFIX/man/lang1/catX, etc; (default: undefined)
 # MAN<sect>		- A list of manpages, categorized by section.  For
 #				  example, if your port has "man/man1/foo.1" and
 #				  "man/mann/bar.n", set "MAN1=foo.1" and "MANN=bar.n".
