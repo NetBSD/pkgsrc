@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.544 2002/11/18 13:37:38 cjep Exp $
+$NetBSD: CHANGES,v 1.545 2002/11/18 14:13:05 martti Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3651,3 +3651,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated isakmpd to 20021118 [martti 2002-11-18]
 	Added aap-0.104 [cjep 2002-11-18]
 	Added 9e-1.0 [cjep 2002-11-18]
+	Updated mrtg to 2.9.26.2 [martti 2002-11-18]
