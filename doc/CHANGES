@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9094 2005/02/09 20:50:31 adrianp Exp $
+$NetBSD: CHANGES,v 1.9095 2005/02/09 21:21:03 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -824,3 +824,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gnucash to 1.8.11 [wiz 2005-02-09]
 	Updated gnucash-docs to 1.8.5 [wiz 2005-02-09]
 	Updated LaBrea to 2.5 [adrianp 2005-02-09]
+	Updated glitz to 0.4.0 [xtraeme 2005-02-09]
