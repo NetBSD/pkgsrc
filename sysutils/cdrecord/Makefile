@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 1999/02/20 22:48:43 hubertf Exp $
+# $NetBSD: Makefile,v 1.25 1999/10/09 20:51:56 mycroft Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/05 23:55:31 asami Exp
 #
 
@@ -22,7 +22,7 @@ do-build:
 	@cd ${WRKSRC}/cdrecord && ../Gmake PREFIX=${PREFIX}
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/cdrecord/OBJ/${MACHINE}-netbsd-cc/cdrecord \
+	@${INSTALL_PROGRAM} ${WRKSRC}/cdrecord/OBJ/${MACHINE_ARCH}-netbsd-cc/cdrecord \
 	 ${PREFIX}/bin
 	@${INSTALL_MAN} ${WRKSRC}/cdrecord/cdrecord.1 ${PREFIX}/man/man1
 	@[ -e /dev/su0-6-0 ] || ${LN} -fs /dev/cd0d /dev/su0-6-0
