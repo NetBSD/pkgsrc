@@ -1,4 +1,4 @@
-# $NetBSD: OpenBSD.mk,v 1.4 2004/11/16 18:04:00 tv Exp $
+# $NetBSD: OpenBSD.mk,v 1.5 2004/11/18 04:22:39 xtraeme Exp $
 #
 # Variable definitions for the OpenBSD operating system.
 
@@ -46,7 +46,7 @@ MTREE?=		/usr/sbin/mtree
 MV?=		/bin/mv
 NICE?=		/usr/bin/nice
 PATCH?=		/usr/bin/patch
-PAX?=		/bin/pax
+PAX?=		${LOCALBASE}/bin/pax
 PERL5?=		${LOCALBASE}/bin/perl
 PKGLOCALEDIR?=	share
 PS?=		/bin/ps
