@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/01/13 12:55:32 drochner Exp $
+$NetBSD: distinfo,v 1.2 2005/02/04 17:24:16 drochner Exp $
 
-SHA1 (kenosis-0.92.tar.gz) = 14fc962807776b6e291af2bf79f3a1a13c9888c2
-Size (kenosis-0.92.tar.gz) = 107101 bytes
+SHA1 (kenosis-0.941.tar.gz) = ef2e344564fcc6270cf363773a21eef8919f7b7d
+Size (kenosis-0.941.tar.gz) = 111099 bytes
+SHA1 (patch-aa) = e3f5661c8fd13caff9aba6d801c63390e05511bd
