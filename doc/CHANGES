@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1899 2003/04/11 11:27:42 jmmv Exp $
+$NetBSD: CHANGES,v 1.1900 2003/04/11 11:36:49 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1546,3 +1546,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gxine to 0.3.3 [rh 2003-04-11]
 	Updated squid to 2.5.2nb1 [taca 2003-04-11]
 	Added startup-notification-0.5 [jmmv 2003-04-11]
+	Updated gnome-utils to 1.4.1.2nb2 [tron 2003-04-11]
