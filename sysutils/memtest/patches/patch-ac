@@ -1,0 +1,35 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/04/27 11:28:32 agc Exp $
+
+--- build.c.orig	Mon Apr  9 19:02:15 2001
++++ build.c	Mon Apr  9 19:02:43 2001
+@@ -23,7 +23,7 @@
+ #include <stdio.h>	/* fprintf */
+ #include <sys/stat.h>
+ #include <fcntl.h>
+-#include <linux/a.out.h>
++#include <a.out.h>
+ #include "defs.h"
+ 
+ #define MINIX_HEADER 32
+@@ -89,10 +89,6 @@
+ 		die("Unable to open 'boot'");
+ 	if (read(id,buf,MINIX_HEADER) != MINIX_HEADER)
+ 		die("Unable to read header of 'boot'");
+-	if (((long *) buf)[0]!=intel_long(0x04100301))
+-		die("Non-Minix header of 'boot'");
+-	if (((long *) buf)[1]!=intel_long(MINIX_HEADER))
+-		die("Non-Minix header of 'boot'");
+ 	if (((long *) buf)[3] != 0)
+ 		die("Illegal data segment in 'boot'");
+ 	if (((long *) buf)[4] != 0)
+@@ -114,10 +110,6 @@
+ 		die("Unable to open 'setup'");
+ 	if (read(id,buf,MINIX_HEADER) != MINIX_HEADER)
+ 		die("Unable to read header of 'setup'");
+-	if (((long *) buf)[0]!=intel_long(0x04100301))
+-		die("Non-Minix header of 'setup'");
+-	if (((long *) buf)[1]!=intel_long(MINIX_HEADER))
+-		die("Non-Minix header of 'setup'");
+ 	if (((long *) buf)[3] != 0)
+ 		die("Illegal data segment in 'setup'");
+ 	if (((long *) buf)[4] != 0)

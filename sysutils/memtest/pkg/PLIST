@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/04/27 11:28:32 agc Exp $
+mdec/memtest.bin
+share/doc/memtest/README
+@dirrm mdec
+@dirrm share/doc/memtest
