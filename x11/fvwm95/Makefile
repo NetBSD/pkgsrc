@@ -3,7 +3,7 @@
 # Date created:		Sa   1 Feb 1997 14:46:05 MET
 # Whom:			Andreas Klemm <andreas@klemm.gtn.com>
 #
-# $NetBSD: Makefile,v 1.5 1998/03/10 16:30:02 frueauf Exp $
+# $NetBSD: Makefile,v 1.6 1998/03/24 23:32:14 tron Exp $
 # FreeBSD: Makefile,v 1.17 1997/12/24 01:21:18 alex Exp
 #
 
@@ -17,6 +17,7 @@ MAINTAINER=	andreas@FreeBSD.ORG
 
 LIB_DEPENDS=	Xpm.4.:${PORTSDIR}/graphics/xpm
 BUILD_DEPENDS=	${LOCALBASE}/lib/librplay.a:${PORTSDIR}/audio/rplay
+RUN_DEPENDS=	xpmroot:${PORTSDIR}/x11/xpmroot
 
 USE_X11=	yes
 GNU_CONFIGURE=	yes

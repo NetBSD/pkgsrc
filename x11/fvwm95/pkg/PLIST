@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 1998/03/10 23:24:52 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/03/24 23:32:15 tron Exp $
 bin/fvwm95
-bin/xpmroot95
 icons/Mosaic.xpm
 icons/Xfm.xpm
 icons/arrdown2.xpm
