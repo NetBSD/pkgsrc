@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/17 23:32:11 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/18 00:41:50 wiz Exp $
 #
 
-DISTNAME=	remind-03.00.21
+DISTNAME=	remind-03.00.22
 PKGNAME=	${DISTNAME:C/0([0-9])/\1/g}
 CATEGORIES=	time
 MASTER_SITES=	http://www.roaringpenguin.com/
