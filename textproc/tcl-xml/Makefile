@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/08/30 19:46:37 jwise Exp $
+# $NetBSD: Makefile,v 1.2 2001/01/24 18:44:59 he Exp $
 #
 
 DISTNAME=	TclXML-1.2
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.zveno.com/in-tclxml/
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.zveno.com/zm.cgi/in-tclxml/
 
-DEPENDS+=       tcl-8.3.2:../../lang/tcl
+DEPENDS+=       tcl>=8.3.2:../../lang/tcl
 
 # old name for this package...
 CONFLICTS+=	TclXML-*
