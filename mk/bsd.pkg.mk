@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.170 1998/10/03 14:44:14 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.171 1998/10/03 16:24:35 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -375,9 +375,10 @@ REQ_FILE=		${PKGDIR}/REQ
 MESSAGE_FILE=		${PKGDIR}/MESSAGE
 .endif
 
+PKG_INFO?=		/usr/sbin/pkg_info
 PKG_CREATE?=		/usr/sbin/pkg_create
 .if !defined(PKG_ARGS)
-PKG_ARGS=		-v -c ${COMMENT} -d ${DESCR} -f ${PLIST} -p ${PREFIX} -P "`${MAKE} package-depends|sort -u`"
+PKG_ARGS=		-v -c ${COMMENT} -d ${DESCR} -f ${PLIST} -p ${PREFIX} -P "`${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=true|sort -u`"
 .if defined(CONFLICTS)
 # Only use -C if the pkg_create command supports it.
 __PKG_CREATE_C__!= ${PKG_CREATE} -C 2>&1 | /usr/bin/egrep 'illegal option' ; echo
@@ -1523,17 +1524,37 @@ package-path:
 .endif
 
 # Show (recursively) all the packages this package depends on.
-
+# if PACKAGE_DEPENDS_WITH_PATTERNS is set, print as pattern (if possible)
+PACKAGE_DEPENDS_WITH_PATTERNS?=false
 .if !target(package-depends)
 package-depends:
-	@for dir in `${ECHO} ${DEPENDS} ${RUN_DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u`; do \
+	@for dir in ${DEPENDS} ; do \
+		OFS=$$IFS ;  IFS=: ; \
+		set $$dir ; \
+		IFS=$$OFS ; pkg=$$1 ; dir=$$2 ; \
 		if [ -d $$dir ]; then \
-			(cd $$dir ; ${MAKE} package-name package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
+			if ${PACKAGE_DEPENDS_WITH_PATTERNS} ; then \
+				${ECHO} "$$pkg" ; \
+			else \
+				(cd $$dir ; ${MAKE} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
+			fi ; \
+			(cd $$dir ; ${MAKE} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
 		else \
 			${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
 		fi; \
 	done
-.endif
+	@for dir in ${RUN_DEPENDS}; do \
+		OFS=$$IFS ;  IFS=: ; \
+		set $$dir ; \
+		IFS=$$OFS ; pkg=$$1 ; dir=$$2 ; \
+		if [ -d $$dir ]; then \
+			(cd $$dir ; ${MAKE} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
+			(cd $$dir ; ${MAKE} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
+		else \
+			${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
+		fi; \
+	done
+.endif # target(package-depends)
 
 # Build a package but don't check the package cookie
 
@@ -1889,14 +1910,21 @@ fake-pkg: ${PLIST} ${DESCR}
 				${CP} ${MESSAGE_FILE} ${PKG_DBDIR}/${PKGNAME}/+DISPLAY; \
 			fi;						\
 		fi;							\
-		for dep in `${MAKE} package-depends ECHO_MSG=${TRUE} | sort -u`; do \
-			if [ -d ${PKG_DBDIR}/$$dep ]; then		\
-				if ! ${GREP} ^${PKGNAME}$$ ${PKG_DBDIR}/$$dep/+REQUIRED_BY \
-					>/dev/null 2>&1; then		\
-					${ECHO} ${PKGNAME} >> ${PKG_DBDIR}/$$dep/+REQUIRED_BY; \
-				fi;					\
-			fi;						\
-		done;							\
+		for dep in `${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=true ECHO_MSG=${TRUE} | sort -u`; do \
+			realdep=`${PKG_INFO} -e "$$dep" || true` ; \
+			echo "a sanity check should be put in here to prevent some dumb user having the pkg installed/registered twice somehow - HF" >/dev/null ; \
+			if [ -z "$$realdep" ]; then \
+				echo "$$dep not installed - NOT registered" ; \
+			else \
+				if [ -d ${PKG_DBDIR}/$$realdep ]; then \
+					if ! ${GREP} ^${PKGNAME}$$ ${PKG_DBDIR}/$$realdep/+REQUIRED_BY \
+						>/dev/null 2>&1; then \
+						${ECHO} ${PKGNAME} >> ${PKG_DBDIR}/$$realdep/+REQUIRED_BY; \
+						echo "${PKGNAME} registered in ${PKG_DBDIR}/$$realdep/+REQUIRED_BY" ; \
+					fi; \
+				fi; \
+			fi; \
+		done; \
 	fi
 .endif
 
@@ -1955,3 +1983,20 @@ ${DESCR}: ${DESCR_SRC}
 	@(${ECHO} ; ${ECHO} "Homepage:" ; \
 	${ECHO} '${HOMEPAGE}') >> ${DESCR}	
 .endif
+
+
+
+
+
+
+
+
+
+
+#
+##
+###
+#### .include "../../mk/bsd.hf-pkg.mk"
+###
+##
+#
