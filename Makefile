@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2004/10/07 02:01:37 jlam Exp $
+# $NetBSD: Makefile,v 1.67 2005/02/14 22:47:11 rillig Exp $
 #
 
 .include "mk/bsd.prefs.mk"
@@ -112,8 +112,8 @@ ${.CURDIR}/PKGDB:
 	for pkgdir in $$list ; do \
 		if [ ! -d $$pkgdir ]; then  \
 			echo " " ; \
-			echo "WARNING:  the package directory $pkgdir is listed in" > /dev/stderr ; \
-			echo $pkgdir | ${SED} 's;/.*;/Makefile;g' > /dev/stderr ; \
+			echo "WARNING:  the package directory $$pkgdir is listed in" > /dev/stderr ; \
+			echo $$pkgdir | ${SED} 's;/.*;/Makefile;g' > /dev/stderr ; \
 			echo "but the directory does not exist.  Please fix this!" > /dev/stderr ; \
 		else \
 			cd $$pkgdir ; \
