@@ -1,10 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/04 14:27:51 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/12/05 11:42:55 jmmv Exp $
 bin/leafpad
 share/applications/leafpad.desktop
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/leafpad.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/leafpad.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/leafpad.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/leafpad.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/leafpad.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/leafpad.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/leafpad.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/leafpad.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/leafpad.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/leafpad.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/leafpad.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/leafpad.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/leafpad.mo
 share/pixmaps/leafpad.png
