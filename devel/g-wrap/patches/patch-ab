@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/06/26 16:57:09 rh Exp $
+
+--- g-wrap-config.in.orig	Wed Apr 12 21:06:56 2000
++++ g-wrap-config.in	Mon Jun 26 17:45:02 2000
+@@ -52,7 +52,7 @@
+         (begin
+           (if static?
+               (stdout "@-libdir-@/lib" (cdr lib) ".a" #\newline)
+-              (stdout "-L@-libdir-@ -l" (cdr lib) #\newline))
++              (stdout "-Wl,-R@-libdir-@ -L@-libdir-@ -l" (cdr lib) #\newline))
+           #t)
+         (begin
+           (stderr *program-name* ": unknown LANGUAGE \"" language "\" given.")

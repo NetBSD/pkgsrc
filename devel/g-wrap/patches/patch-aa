@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/06/26 16:57:09 rh Exp $
+
+--- configure.orig	Wed Jun 21 22:47:58 2000
++++ configure	Mon Jun 26 17:41:03 2000
+@@ -1593,6 +1593,7 @@
+   echo "$ac_t""no" 1>&6
+ fi
+ 
++if false; then
+ # Extract the first word of "rs", so it can be a program name with args.
+ set dummy rs; ac_word=$2
+ echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
+@@ -1621,6 +1622,9 @@
+   test -z "$ac_cv_path_RSCHEME" && ac_cv_path_RSCHEME="nope"
+   ;;
+ esac
++fi
++else
++  ac_cv_path_RSCHEME="nope"
+ fi
+ RSCHEME="$ac_cv_path_RSCHEME"
+ if test -n "$RSCHEME"; then
