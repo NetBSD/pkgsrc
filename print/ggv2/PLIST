@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/04/25 06:34:01 rh Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/12/15 00:19:40 xtraeme Exp $
 bin/ggv
 lib/bonobo/servers/GNOME_GGV.server
 libexec/ggv-postscript-viewer
@@ -7,17 +7,49 @@ share/gconf/schemas/ggv.schemas
 share/gnome-2.0/ui/ggv-control-ui.xml
 share/gnome-2.0/ui/ggv-postscript-view-ui.xml
 share/gnome-2.0/ui/ggv-ui.xml
-share/gnome/help/ggv/C/figures/example_screenshot.png
+share/gnome/help/ggv/C/figures/ggv_window.png
 share/gnome/help/ggv/C/ggv.xml
 share/gnome/help/ggv/C/legal.xml
 share/gnome/help/ggv/C/topic.dat
+share/gnome/help/ggv/de/figures/ggv_window.png
+share/gnome/help/ggv/de/ggv.xml
+share/gnome/help/ggv/de/legal.xml
+share/gnome/help/ggv/de/topic.dat
+share/gnome/help/ggv/es/figures/ggv_window.png
+share/gnome/help/ggv/es/ggv.xml
+share/gnome/help/ggv/es/legal.xml
+share/gnome/help/ggv/fr/figures/ggv_window.png
+share/gnome/help/ggv/fr/ggv.xml
+share/gnome/help/ggv/fr/legal.xml
+share/gnome/help/ggv/it/figures/ggv_window.png
+share/gnome/help/ggv/it/ggv.xml
+share/gnome/help/ggv/it/legal.xml
+share/gnome/help/ggv/it/topic.dat
+share/gnome/help/ggv/ja/figures/ggv_window.png
+share/gnome/help/ggv/ja/ggv.xml
+share/gnome/help/ggv/ja/legal.xml
+share/gnome/help/ggv/ja/topic.dat
+share/gnome/help/ggv/ko/figures/example_screenshot.png
+share/gnome/help/ggv/ko/ggv.xml
+share/gnome/help/ggv/ko/legal.xml
+share/gnome/help/ggv/sv/figures/ggv_window.png
+share/gnome/help/ggv/sv/ggv.xml
+share/gnome/help/ggv/sv/legal.xml
+share/gnome/help/ggv/zh_CN/figures/ggv_window.png
+share/gnome/help/ggv/zh_CN/ggv.xml
+share/gnome/help/ggv/zh_CN/legal.xml
+share/gnome/help/ggv/zh_TW/figures/ggv_window.png
+share/gnome/help/ggv/zh_TW/ggv.xml
+share/gnome/help/ggv/zh_TW/legal.xml
 share/idl/Ggv.idl
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/ggv.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/ggv.mo
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/ggv.mo
@@ -29,9 +61,9 @@ ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/ggv.mo
-${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/ggv.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/ggv.mo
@@ -54,14 +86,27 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/ggv.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/ggv.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/ggv.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/ggv.mo
+${PKGLOCALEDIR}/locale/th/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/ggv.mo
 share/omf/ggv/ggv-C.omf
+share/omf/ggv/ggv-de.omf
+share/omf/ggv/ggv-es.omf
+share/omf/ggv/ggv-fr.omf
+share/omf/ggv/ggv-it.omf
+share/omf/ggv/ggv-ja.omf
+share/omf/ggv/ggv-ko.omf
+share/omf/ggv/ggv-sv.omf
+share/omf/ggv/ggv-zh_CN.omf
+share/omf/ggv/ggv-zh_TW.omf
 share/pixmaps/ggv/clearall.xpm
 share/pixmaps/ggv/fitwidth.png
 share/pixmaps/ggv/ggv-splash.png
@@ -72,7 +117,24 @@ share/pixmaps/ggv/zoom.xpm
 share/pixmaps/gnome-ghostview.png
 @dirrm share/pixmaps/ggv
 @dirrm share/omf/ggv
-@comment in scrollkeeper: @dirrm share/omf
+@dirrm share/gnome/help/ggv/zh_TW/figures
+@dirrm share/gnome/help/ggv/zh_TW
+@dirrm share/gnome/help/ggv/zh_CN/figures
+@dirrm share/gnome/help/ggv/zh_CN
+@dirrm share/gnome/help/ggv/sv/figures
+@dirrm share/gnome/help/ggv/sv
+@dirrm share/gnome/help/ggv/ko/figures
+@dirrm share/gnome/help/ggv/ko
+@dirrm share/gnome/help/ggv/ja/figures
+@dirrm share/gnome/help/ggv/ja
+@dirrm share/gnome/help/ggv/it/figures
+@dirrm share/gnome/help/ggv/it
+@dirrm share/gnome/help/ggv/fr/figures
+@dirrm share/gnome/help/ggv/fr
+@dirrm share/gnome/help/ggv/es/figures
+@dirrm share/gnome/help/ggv/es
+@dirrm share/gnome/help/ggv/de/figures
+@dirrm share/gnome/help/ggv/de
 @dirrm share/gnome/help/ggv/C/figures
 @dirrm share/gnome/help/ggv/C
 @dirrm share/gnome/help/ggv
