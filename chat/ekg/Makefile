@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2003/01/24 13:36:18 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/03/22 01:00:59 salo Exp $
 #
 
-DISTNAME=	ekg-20030114
-PKGNAME=	${DISTNAME:S/-/-0./}
+DISTNAME=	ekg-1.0rc1
 CATEGORIES=	chat
 MASTER_SITES=	http://dev.null.pl/ekg/ \
 		http://dev.null.pl/ekg/stare/
@@ -23,7 +22,9 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/man
 CONFIGURE_ARGS+=	--without-debug
 CONFIGURE_ARGS+=	--enable-ui-ncurses
+CONFIGURE_ARGS+=	--with-pthread
 
 .include "../../devel/ncurses/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
