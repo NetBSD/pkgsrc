@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/06/10 12:37:42 sakamoto Exp $
+# $NetBSD: Makefile,v 1.12 2002/10/25 12:24:36 wiz Exp $
 
 DISTNAME=	ng-1.4.3
 CATEGORIES=     editors japanese
@@ -8,6 +8,8 @@ MAINTAINER=     fk200329@fsinet.or.jp
 HOMEPAGE=	http://tt.sakura.ne.jp/~amura/ng/
 COMMENT=	Very light Emacs-clone with japanese support
 
+USE_BUILDLINK2=	YES
+
 .include "../../mk/bsd.prefs.mk"	# for USE_CANNA
 
 .if !defined(USE_CANNA)
@@ -15,7 +17,7 @@ USE_CANNA=	YES
 .endif
 
 .if ${USE_CANNA} == "YES"
-.include "../../inputmethod/canna-lib/buildlink.mk"
+.include "../../inputmethod/canna-lib/buildlink2.mk"
 .endif
 
 WRKSRC=         ${WRKDIR}/ng
