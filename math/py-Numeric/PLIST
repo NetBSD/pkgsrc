@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:34:01 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/10/30 10:35:32 markd Exp $
 ${PYINC}/Numeric/arrayobject.h
 ${PYINC}/Numeric/f2c.h
 ${PYINC}/Numeric/ranlib.h
 ${PYINC}/Numeric/ufuncobject.h
-${PYSITELIB}/FFT/FFT.py
-${PYSITELIB}/FFT/FFT.pyc
-${PYSITELIB}/FFT/__init__.py
-${PYSITELIB}/FFT/__init__.pyc
-${PYSITELIB}/FFT/fftpack.so
-${PYSITELIB}/MA/MA.py
-${PYSITELIB}/MA/MA.pyc
-${PYSITELIB}/MA/MA_version.py
-${PYSITELIB}/MA/MA_version.pyc
-${PYSITELIB}/MA/__init__.py
-${PYSITELIB}/MA/__init__.pyc
+${PYSITELIB}/Numeric/FFT/FFT.py
+${PYSITELIB}/Numeric/FFT/FFT.pyc
+${PYSITELIB}/Numeric/FFT/__init__.py
+${PYSITELIB}/Numeric/FFT/__init__.pyc
+${PYSITELIB}/Numeric/FFT/fftpack.so
+${PYSITELIB}/Numeric/MA/MA.py
+${PYSITELIB}/Numeric/MA/MA.pyc
+${PYSITELIB}/Numeric/MA/MA_version.py
+${PYSITELIB}/Numeric/MA/MA_version.pyc
+${PYSITELIB}/Numeric/MA/__init__.py
+${PYSITELIB}/Numeric/MA/__init__.pyc
 ${PYSITELIB}/Numeric/ArrayPrinter.py
 ${PYSITELIB}/Numeric/ArrayPrinter.pyc
 ${PYSITELIB}/Numeric/LinearAlgebra.py
@@ -38,29 +38,29 @@ ${PYSITELIB}/Numeric/numeric_version.py
 ${PYSITELIB}/Numeric/numeric_version.pyc
 ${PYSITELIB}/Numeric/ranlib.so
 ${PYSITELIB}/Numeric/umath.so
-${PYSITELIB}/PropertiedClasses/Properties.py
-${PYSITELIB}/PropertiedClasses/Properties.pyc
-${PYSITELIB}/PropertiedClasses/Properties_version.py
-${PYSITELIB}/PropertiedClasses/Properties_version.pyc
-${PYSITELIB}/PropertiedClasses/__init__.py
-${PYSITELIB}/PropertiedClasses/__init__.pyc
-${PYSITELIB}/RNG/RNG.so
-${PYSITELIB}/RNG/Statistics.py
-${PYSITELIB}/RNG/Statistics.pyc
-${PYSITELIB}/RNG/__init__.py
-${PYSITELIB}/RNG/__init__.pyc
+${PYSITELIB}/Numeric/PropertiedClasses/Properties.py
+${PYSITELIB}/Numeric/PropertiedClasses/Properties.pyc
+${PYSITELIB}/Numeric/PropertiedClasses/Properties_version.py
+${PYSITELIB}/Numeric/PropertiedClasses/Properties_version.pyc
+${PYSITELIB}/Numeric/PropertiedClasses/__init__.py
+${PYSITELIB}/Numeric/PropertiedClasses/__init__.pyc
+${PYSITELIB}/Numeric/RNG/RNG.so
+${PYSITELIB}/Numeric/RNG/Statistics.py
+${PYSITELIB}/Numeric/RNG/Statistics.pyc
+${PYSITELIB}/Numeric/RNG/__init__.py
+${PYSITELIB}/Numeric/RNG/__init__.pyc
 ${PYSITELIB}/Numeric.pth
-${PYSITELIB}/kinds/__init__.py
-${PYSITELIB}/kinds/__init__.pyc
-${PYSITELIB}/kinds/_kinds.so
-${PYSITELIB}/kinds/kinds.py
-${PYSITELIB}/kinds/kinds.pyc
-${PYSITELIB}/kinds/kinds_version.py
-${PYSITELIB}/kinds/kinds_version.pyc
+${PYSITELIB}/Numeric/kinds/__init__.py
+${PYSITELIB}/Numeric/kinds/__init__.pyc
+${PYSITELIB}/Numeric/kinds/_kinds.so
+${PYSITELIB}/Numeric/kinds/kinds.py
+${PYSITELIB}/Numeric/kinds/kinds.pyc
+${PYSITELIB}/Numeric/kinds/kinds_version.py
+${PYSITELIB}/Numeric/kinds/kinds_version.pyc
 @dirrm ${PYINC}/Numeric
-@dirrm ${PYSITELIB}/FFT
+@dirrm ${PYSITELIB}/Numeric/FFT
+@dirrm ${PYSITELIB}/Numeric/MA
+@dirrm ${PYSITELIB}/Numeric/PropertiedClasses
+@dirrm ${PYSITELIB}/Numeric/RNG
+@dirrm ${PYSITELIB}/Numeric/kinds
 @dirrm ${PYSITELIB}/Numeric
-@dirrm ${PYSITELIB}/MA
-@dirrm ${PYSITELIB}/PropertiedClasses
-@dirrm ${PYSITELIB}/RNG
-@dirrm ${PYSITELIB}/kinds
