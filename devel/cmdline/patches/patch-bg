@@ -1,8 +1,8 @@
-$NetBSD: patch-bg,v 1.1.1.1 2000/08/25 16:15:54 jlam Exp $
+$NetBSD: patch-bg,v 1.2 2001/05/17 20:28:19 jlam Exp $
 
 --- src/lib/private.c.orig	Thu Jan  2 13:33:34 1997
 +++ src/lib/private.c
-@@ -18,20 +18,29 @@
+@@ -18,14 +18,19 @@
  //
  //    03/03/93	Brad Appleton	<bradapp@enteract.com>
  //    - Added exit_handler() and quit() member-functions to CmdLine
@@ -28,18 +28,7 @@ $NetBSD: patch-bg,v 1.1.1.1 2000/08/25 16:15:54 jlam Exp $
  
  extern "C" {
    int  isatty(int fd);
- 
- #ifdef GNU_READLINE
--# include <readline.h>
-+# ifdef HAVE_READLINE_H
-+#  include <readline.h>
-+# elif HAVE_READLINE_READLINE_H
-+#  include <readline/readline.h>
-+# endif
- #endif
- 
- }
-@@ -48,8 +57,14 @@
+@@ -48,8 +53,14 @@
  
  #include "cmdline.h"
  #include "states.h"
@@ -55,7 +44,7 @@ $NetBSD: patch-bg,v 1.1.1.1 2000/08/25 16:15:54 jlam Exp $
  
  // Need a portable version of tolower
  //
-@@ -236,7 +251,7 @@
+@@ -236,7 +247,7 @@
  // ^FUNCTION: CmdLine::prompt_user - prompt the user for a missing argument
  //
  // ^SYNOPSIS:
@@ -64,7 +53,7 @@ $NetBSD: patch-bg,v 1.1.1.1 2000/08/25 16:15:54 jlam Exp $
  //
  // ^PARAMETERS:
  //    CmdArg * cmdarg;
-@@ -274,7 +289,7 @@
+@@ -274,7 +285,7 @@
  //    - if an invalid value was given return ARG_MISSING
  //    - else return 0
  //-^^----
@@ -73,7 +62,7 @@ $NetBSD: patch-bg,v 1.1.1.1 2000/08/25 16:15:54 jlam Exp $
  CmdLine::prompt_user(CmdArg * cmdarg)
  {
     // dont prompt if cin or cerr is not interactive
-@@ -316,7 +331,7 @@
+@@ -316,7 +327,7 @@
        // try to handle the value we read (remember - buf is temporary)
        if (! errs) {
           const char * arg = buf;
@@ -82,7 +71,7 @@ $NetBSD: patch-bg,v 1.1.1.1 2000/08/25 16:15:54 jlam Exp $
           cmd_flags |= TEMP;
           errs = handle_arg(cmdarg, arg);
           if (errs) {
-@@ -387,7 +402,7 @@
+@@ -387,7 +398,7 @@
  // ^FUNCTION: CmdLine::missing_args - check for missing required arguments
  //
  // ^SYNOPSIS:
@@ -91,7 +80,7 @@ $NetBSD: patch-bg,v 1.1.1.1 2000/08/25 16:15:54 jlam Exp $
  //
  // ^PARAMETERS:
  //
-@@ -424,7 +439,7 @@
+@@ -424,7 +435,7 @@
  //    endfor
  //    return the current cmd-status
  //-^^----
@@ -100,7 +89,7 @@ $NetBSD: patch-bg,v 1.1.1.1 2000/08/25 16:15:54 jlam Exp $
  CmdLine::missing_args(void)
  {
     char buf[256];
-@@ -649,3 +664,5 @@
+@@ -649,3 +660,5 @@
     } //for list_iter
     return  last_pos_list ;
  }
