@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.14 2001/06/23 19:38:55 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.15 2001/06/26 16:00:13 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -154,13 +154,40 @@ buildlink-fix-libtool-archives:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cookie=${BUILDLINK_DIR}/.buildlink_fix_libtool_archives_done;	\
 	if [ ! -f $${cookie} ]; then					\
-		${ECHO_MSG} "Fixing directory references in libtool archives:"; \
+		${ECHO_MSG} "Fixing directory references in libtool archives."; \
 		lai_files=`${FIND} ${WRKSRC} -name "*.lai"`;		\
 		for file in $${lai_files}; do				\
-			${ECHO_MSG} "	$${file}";			\
 			${MV} -f $${file} $${file}.fixme;		\
 			${SED} ${BUILDLINK_FIX_LIBTOOL_SED}		\
 				$${file}.fixme > $${file};		\
+			${RM} -f $${file}.fixme;			\
+		done;							\
+		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
+	fi
+.endif
+
+.if defined(REPLACE_BUILDLINK)
+post-build: buildlink-fix-config-scripts
+
+REPLACE_BUILDLINK_SED?=		# empty
+REPLACE_BUILDLINK_POST_SED+=	-e "s|-I${BUILDLINK_DIR}/|-I${LOCALBASE}/|g"
+REPLACE_BUILDLINK_POST_SED+=	-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"
+
+# Fix config scripts by removing buildlink directory references.
+buildlink-fix-config-scripts:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	cookie=${BUILDLINK_DIR}/.buildlink_fix_config_scripts_done;	\
+	if [ ! -f $${cookie} ]; then					\
+		${ECHO_MSG} "Fixing directory references in config scripts."; \
+		cd ${WRKSRC};						\
+		for file in ${REPLACE_BUILDLINK}; do			\
+			${MV} -f $${file} $${file}.fixme;		\
+			${SED}	${REPLACE_BUILDLINK_SED}		\
+				${REPLACE_BUILDLINK_POST_SED}		\
+				$${file}.fixme > $${file};		\
+			if [ -x $${file}.fixme ]; then			\
+				${CHMOD} +x $${file};			\
+			fi;						\
 			${RM} -f $${file}.fixme;			\
 		done;							\
 		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
