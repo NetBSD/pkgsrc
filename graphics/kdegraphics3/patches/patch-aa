@@ -1,0 +1,69 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/06/05 08:58:02 skrll Exp $
+
+--- kfile-plugins/ps/dscparse_adapter.h.orig	Thu Feb 14 20:56:51 2002
++++ kfile-plugins/ps/dscparse_adapter.h
+@@ -29,6 +29,50 @@
+ #include "dscparse.h"
+ #undef min
+ 
++#if defined(__GNUC__)
++#if __GNUC__ < 2 || (__GNUC__ == 2 && __GNUC_MINOR__ < 93)
++/*
++ * We add a quick 'n' dirty inline implementation of auto_ptr for older
++ * releases of GCC, which don't include an auto_ptr implementation in
++ * <memory>.
++ */
++
++template <class T> class auto_ptr {
++private:
++	T* _ptr;
++
++public:
++	typedef T element_type;
++	explicit auto_ptr(T* p = 0) : _ptr(p) {}
++	auto_ptr(auto_ptr& a) : _ptr(a.release()) {}
++	template <class T1> auto_ptr(auto_ptr<T1>& a) : _ptr(a.release()) {}
++	auto_ptr& operator=(auto_ptr& a) {
++		if (&a != this) {
++			delete _ptr;
++			_ptr = a.release();
++		}
++		return *this;
++	}
++	template <class T1>
++	auto_ptr& operator=(auto_ptr<T1>& a) {
++		if (a.get() != this->get()) {
++			delete _ptr;
++			_ptr = a.release();
++		}
++		return *this;
++	}
++	~auto_ptr() { delete _ptr; }
++
++	T& operator*() const { return *_ptr; }
++	T* operator->() const { return _ptr; }
++	T* get() const { return _ptr; }
++	T* release() { T* tmp = _ptr; _ptr = 0; return tmp; }
++	void reset(T* p = 0) { delete _ptr; _ptr = p; }
++};
++
++#endif
++#endif
++
+ 
+ class KDSCBBOX
+ {
+@@ -259,8 +303,13 @@
+     CDSCMEDIA** media()           const;
+     const CDSCMEDIA* page_media() const;
+ 
++#if defined(__GNUC__) && (__GNUC__ < 2 || (__GNUC__ == 2 && __GNUC_MINOR__ < 93))
++    auto_ptr<KDSCBBOX> bbox()      const;
++    auto_ptr<KDSCBBOX> page_bbox() const;
++#else
+     std::auto_ptr<KDSCBBOX> bbox()      const;
+     std::auto_ptr<KDSCBBOX> page_bbox() const;
++#endif
+ 
+     // CDSCDOSEPS *doseps;
+ 
