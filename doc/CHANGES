@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3513 2003/09/25 04:55:47 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3514 2003/09/25 11:00:29 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3924,3 +3924,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added pixieplus-0.5.4 [xtraeme 2003-09-25]
 	Added foobillard-2.8 [xtraeme 2003-09-25]
 	Added dgen-1.2.3 [xtraeme 2003-09-25]
+	Updated rconfig to 0.20 [abs 2003-09-25]
+
