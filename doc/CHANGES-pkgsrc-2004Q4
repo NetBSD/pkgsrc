@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.67 2005/02/13 15:35:40 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.68 2005/02/13 15:52:41 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -143,3 +143,5 @@ Pullup ticket 280 - requested by Takahiro Kambe
 update squid
 Pullup ticket 283 - requested by Grant Beattie
 clamav update
+Pullup ticket 284 - requested by Min Sik Kim
+distfile fix for awstats
