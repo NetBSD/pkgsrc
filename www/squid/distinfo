@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.68.2.4 2005/01/27 04:58:58 snj Exp $
+$NetBSD: distinfo,v 1.68.2.5 2005/01/29 06:59:25 snj Exp $
 
 SHA1 (squid-2.5.7-2005010100/squid-2.5.STABLE7.tar.bz2) = 24f29e28ec62d7ab5888cd594ac7a1975ee6aa36
 Size (squid-2.5.7-2005010100/squid-2.5.STABLE7.tar.bz2) = 1051830 bytes
@@ -46,6 +46,8 @@ SHA1 (squid-2.5.7-2005010100/squid-2.5.STABLE7-short_icons_urls.patch) = e7cf53c
 Size (squid-2.5.7-2005010100/squid-2.5.STABLE7-short_icons_urls.patch) = 704 bytes
 SHA1 (squid-2.5.7-2005010100/squid-2.5.STABLE7-response_splitting.patch) = 6e80f83f3cbc277b30bc9e9a6ffbc0918c0e1134
 Size (squid-2.5.7-2005010100/squid-2.5.STABLE7-response_splitting.patch) = 9782 bytes
+SHA1 (squid-2.5.7-2005010100/squid-2.5.STABLE7-wccp_buffer_overflow.patch) = 5cd9a71ea9ebaf35155c9f952152f848da4e5e79
+Size (squid-2.5.7-2005010100/squid-2.5.STABLE7-wccp_buffer_overflow.patch) = 505 bytes
 SHA1 (patch-aa) = 3e6fb677125eec276fdfa62336c134f26e1e1edd
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0
