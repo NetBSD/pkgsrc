@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/03/12 06:21:58 fredb Exp $
+# $NetBSD: Makefile,v 1.10 2001/03/12 09:08:40 agc Exp $
 #
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the VERSION definition.
@@ -12,7 +12,7 @@ MAINTAINER=	agc@netbsd.org
 HOMEPAGE=       http://www.netbsd.org/Documentation/software/packages.html
 COMMENT=	message digest wrapper utility
 
-VERSION=	20010302
+VERSION=	20010307
 
 EXTRACT_ONLY=   # empty
 WRKSRC=		${WRKDIR}
@@ -35,6 +35,7 @@ post-extract:
 		md5c.c md5.h md5hl.c					\
 		rmd160.c rmd160.h rmd160hl.c				\
 		sha1.c sha1.h sha1hl.c					\
+		sha2.c sha2.h sha2hl.c					\
 	; do								\
 		${CP} ${FILESDIR}/$$FILE ${WRKSRC};			\
 	done
@@ -42,17 +43,11 @@ post-extract:
 pre-install:
 	@${RM} -f ${PLIST_SRC}
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-.if (${OPSYS} != SunOS)
-	@for OPT in ${MANINSTALL} broken-solaris-needs-this; do \
-	  case $$OPT in \
-	    catinstall) \
-		${ECHO} man/cat1/digest.0${MCOMPRESSSUFFIX} >> ${PLIST_SRC}; \
-		;; \
-	    maninstall) \
-		${ECHO} man/man1/digest.1${MCOMPRESSSUFFIX} >> ${PLIST_SRC}; \
-		;; \
-	  esac; \
-	done
-.endif
+	@if [ -n "${MANINSTALL:Mcatinstall}" ]; then			\
+		${ECHO} man/cat1/digest.0 >> ${PLIST_SRC};		\
+	fi
+	@if [ -n "${MANINSTALL:Mmaninstall}" ]; then			\
+		${ECHO} man/man1/digest.1 >> ${PLIST_SRC};		\
+	fi
 
 .include "../../mk/bsd.pkg.mk"
