@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/04/14 21:43:39 jtb Exp $
+# $NetBSD: Makefile,v 1.9 2001/04/18 15:15:39 dmcmahill Exp $
 #
 # XXX This package needs to be installed with the same PREFIX as teTeX
 #
@@ -19,7 +19,7 @@ WRKSRC=			${WRKDIR}
 post-patch:
 	${MV} ${WRKSRC}/cweb.1 ${WRKSRC}/cweb.1.dist
 	${SED} -e 's:@PREFIX@:'${PREFIX}':g' ${WRKSRC}/cweb.1.dist 	\
-	> cweb.1
+	> ${WRKSRC}/cweb.1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cweave ${PREFIX}/bin
