@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8705 2005/01/11 16:49:46 tv Exp $
+$NetBSD: CHANGES,v 1.8706 2005/01/11 18:11:46 skrll Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -250,3 +250,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkg_notify to 0.4.1 [xtraeme 2005-01-11]
 	Added ap-auth-radius-1.5.7 [manu 2005-01-11]
 	Added p5-Digest-CRC-0.09 [tv 2005-01-11]
+	Added iwi-firmware-2.2 [skrll 2005-01-11]
