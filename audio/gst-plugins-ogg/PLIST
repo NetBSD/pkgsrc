@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/15 21:24:28 jmmv Exp $
-lib/gstreamer-0.8/libgstogg.a
-lib/gstreamer-0.8/libgstogg.la
-lib/gstreamer-0.8/libgstogg.so
-@comment in gstreamer: @dirrm lib/gstreamer-0.8
