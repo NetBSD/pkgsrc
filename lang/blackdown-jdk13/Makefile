@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/10/13 07:41:57 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2002/10/13 16:30:57 jschauma Exp $
 #
 
 BASENAME=	j2sdk
@@ -8,10 +8,6 @@ PKGREVISION=	1
 COMMENT=	Linux port of the Blackdown Java(tm) Runtime Environment
 
 DEPENDS=	blackdown-jre13>=1:../../lang/blackdown-jre13
-
-.if ${MACHINE_ARCH} == "powerpc"
-DISTNAME:=	${DISTNAME}.bin
-.endif
 
 # these are part of JRE
 post-extract:
