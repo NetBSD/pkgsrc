@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.346 2004/04/15 10:46:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.347 2004/04/19 17:29:40 xtraeme Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -158,6 +158,7 @@ SUBDIR+=	oneko
 SUBDIR+=	openmotif
 SUBDIR+=	p5-Tk
 SUBDIR+=	p5-gtk
+SUBDIR+=	p5-gtk2
 SUBDIR+=	paragui
 SUBDIR+=	py-Pmw
 SUBDIR+=	py-Tk
