@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.97 1998/06/05 23:27:48 frueauf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.98 1998/06/09 13:36:48 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -345,13 +345,7 @@ PKG_SUFX?=		.tgz
 PKG_DBDIR?=		/var/db/pkg
 
 # shared/dynamic motif libs
-.if defined(HAVE_MOTIF)
-.if defined(MOTIF_STATIC)
-MOTIFLIB?=	${X11BASE}/lib/libXm.a
-.else
 MOTIFLIB?=	-L${X11BASE}/lib -lXm
-.endif
-.endif
 
 AWK?=		/usr/bin/awk
 BASENAME?=	/usr/bin/basename
@@ -618,10 +612,6 @@ _CATPAGES+=	${CATN:S%^%${CATNPREFIX}/man/${lang}/catn/%}
 IGNORE=	"is an interactive port"
 .elif (!defined(IS_INTERACTIVE) && defined(INTERACTIVE))
 IGNORE=	"is not an interactive port"
-.elif (defined(REQUIRES_MOTIF) && !defined(HAVE_MOTIF))
-IGNORE=	"requires Motif"
-.elif (defined(MOTIF_ONLY) && !defined(REQUIRES_MOTIF))
-IGNORE=	"does not require Motif"
 .elif (defined(NO_CDROM) && defined(FOR_CDROM))
 IGNORE=	"may not be placed on a CDROM: ${NO_CDROM}"
 .elif (defined(RESTRICTED) && defined(NO_RESTRICTED))
