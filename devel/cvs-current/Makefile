@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 1999/09/19 22:06:42 kim Exp $
+# $NetBSD: Makefile,v 1.6 1999/09/19 23:00:39 mjl Exp $
 #
 
-DISTNAME=       cvs-1.10.6
+DISTNAME=       cvs-1.10.7
 CATEGORIES=	devel
 MASTER_SITES=   ftp://download.cyclic.com/pub/${DISTNAME}/
 
