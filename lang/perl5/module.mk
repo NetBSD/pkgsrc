@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.23 2003/11/25 15:37:35 jlam Exp $
+# $NetBSD: module.mk,v 1.24 2003/11/25 17:45:56 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -122,18 +122,21 @@ MAKE_FLAGS+=		PREFIX="${PREFIX}"
 DEFAULT_VIEW.${PKGBASE}=	${DEFAULT_VIEW.perl}
 .endif
 
-# OTHERLDFLAGS is the hook provided by the perl5 MakeMaker module to allow
-# customizing the LDFLAGS passed to the compiler/linker.
-#
 .if defined(PERL5_LDFLAGS) && !empty(PERL5_LDFLAGS)
 FIX_RPATH+=	PERL5_LDFLAGS
 LDFLAGS+=	${PERL5_LDFLAGS}
-.  include "../../mk/bsd.prefs.mk"
-.  if ${OBJECT_FMT} == "a.out"
+.endif
+
+.include "../../mk/bsd.prefs.mk"
+
+# MakeMaker provides two hooks, INC and OTHERLDFLAGS, to customize the
+# arguments passed to the preprocessor and linker, respectively.
+#
+MAKE_FLAGS+=	INC="${CPPFLAGS}"
+.if ${OBJECT_FMT} == "a.out"
 MAKE_FLAGS+=	OTHERLDFLAGS="${LDFLAGS:S/-Wl,//g}"
-.  else
+.else
 MAKE_FLAGS+=	OTHERLDFLAGS="${LDFLAGS}"
-.  endif
 .endif
 
 # Generate the PLIST from the files listed in PERL5_PACKLIST.
