@@ -1,9 +1,12 @@
 #!/bin/sh
 #
-#	$NetBSD: soffice,v 1.1.1.1 2005/02/24 13:50:20 mrauch Exp $
+#	$NetBSD: soffice,v 1.2 2005/02/26 01:22:16 dmcmahill Exp $
 #
 SOINST=@@PREFIX@@/OpenOffice.org@@OO_VER@@
-[ "$SOFFICE" = "" ] && SOFFICE=$HOME/OpenOffice.org@@OO_VER@@
+[ "X$SOFFICE" = "X" ] && SOFFICE=$HOME/OpenOffice.org@@OO_VER@@
+
+# make sure we can find `whoami` on solaris
+PATH=${PATH}:/usr/ucb
 
 if [ ! -d "$SOFFICE" ]; then
 	echo ""
@@ -27,7 +30,9 @@ if [ ! -d "$SOFFICE" ]; then
 
 	cd $SOINST
 	BASENAME=`basename $0`
-	TMPFILE=`mktemp -q /tmp/$BASENAME.XXXXXX`
+	TMPD=/tmp/${BASENAME}.$$
+	TMPFILE=${TMPD}/setup_tmp
+	mkdir -m 0700 $TMPD
 	if [ $? -ne 0 ]; then
 		echo "$0: Can't create temp file, exiting..."
 		exit 1
@@ -42,7 +47,7 @@ LOGFILE=
 
 EOF
 	./setup -nogui -r:${TMPFILE}
-	rm -f ${TMPFILE}
+	rm -fr ${TMPD}
 
 	echo ""
 	echo "Done.  Starting OpenOffice ..."
@@ -52,7 +57,7 @@ fi
 # We've got a large number of shared libraries and other single files which 
 # have to be open for normal operation
 ulimit -n `ulimit -n -H`
-if [ -z $PTHREAD_DIAGASSERT ]; then
+if [ -z "$PTHREAD_DIAGASSERT" ]; then
 PTHREAD_DIAGASSERT=AEL
 export PTHREAD_DIAGASSERT
 fi
