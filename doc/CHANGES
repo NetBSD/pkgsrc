@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4479 2004/01/17 00:15:23 recht Exp $
+$NetBSD: CHANGES,v 1.4480 2004/01/17 00:23:25 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -304,3 +304,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mserv to 0.35nb6 [abs 2004-01-16]
 	Updated mozilla to 1.6 [taya 2004-01-17]
 	Updated coreutils to 5.0nb4 [recht 2004-01-17]
+	Updated gnome2-utils to 2.4.1nb4 [xtraeme 2004-01-17]
