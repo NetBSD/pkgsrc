@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2003/01/28 22:03:36 jlam Exp $
+# $NetBSD: Makefile,v 1.79 2003/01/31 23:53:04 lukem Exp $
 
 DISTNAME=	postfix-2.0.3
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
 
@@ -14,6 +15,15 @@ POSTFIX_SPOOL=	/var/spool/postfix
 
 USE_BUILDLINK2=	yes
 USE_PKGINSTALL=	yes
+
+PKG_SYSCONFSUBDIR=	postfix
+
+CCARGS+=	-DDEF_CONFIG_DIR=\"${PKG_SYSCONFDIR}\"
+CCARGS+=	-DDEF_SENDMAIL_PATH=\"${PREFIX}/sbin/sendmail\"
+CCARGS+=	-DDEF_MAILQ_PATH=\"${PREFIX}/bin/mailq\"
+CCARGS+=	-DDEF_NEWALIAS_PATH=\"${PREFIX}/bin/newaliases\"
+CCARGS+=	-DDEF_COMMAND_DIR=\"${PREFIX}/sbin\"
+CCARGS+=	-DDEF_DAEMON_DIR=\"${LIBEXECDIR}\"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -97,28 +107,29 @@ ALL_TARGET=	#empty
 MAKE_ENV=	CC="${CC}" OPT="${CFLAGS}"
 MAKE_ENV+=	AUXLIBS="${AUXLIBS}" CCARGS="${CCARGS}"
 
+POSTFIX_CONF_FILES=	conf/main.cf src/util/sys_defs.h postfix-install
+POSTFIX_CONF_FILES+=	conf/sample-misc.cf src/global/mail_params.h
+
+PLIST_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+PLIST_SUBST+=	POSTFIX_SPOOL=${POSTFIX_SPOOL}
+
+PKG_GROUPS?=	postfix maildrop
+PKG_USERS?=	postfix:postfix::Postfix\\ User:${POSTFIX_SPOOL}
+
+LIBEXECDIR=	${PREFIX}/libexec/${PKGBASE}
+SHAREDIR=	${PREFIX}/share/${PKGBASE}
+
+CONF_FILES+=	${SHAREDIR}/main.cf ${PKG_SYSCONFDIR}/main.cf
+CONF_FILES+=	${SHAREDIR}/master.cf ${PKG_SYSCONFDIR}/master.cf
+
 pre-configure:
-	${CP} ${WRKSRC}/conf/main.cf ${WRKSRC}/conf/main.cf.dist
-	${SED} -e 's:__PREFIX:'${PREFIX}':g' \
-	    < ${WRKSRC}/conf/main.cf.dist \
-	    > ${WRKSRC}/conf/main.cf
-	${CP} ${WRKSRC}/src/util/sys_defs.h ${WRKSRC}/src/util/sys_defs.h.dist
-	${SED} -e 's:__PREFIX:'${PREFIX}':g' \
-	    < ${WRKSRC}/src/util/sys_defs.h.dist \
-	    > ${WRKSRC}/src/util/sys_defs.h
-	${CP} ${WRKSRC}/postfix-install ${WRKSRC}/postfix-install.dist
-	${SED} -e 's:__PREFIX:'${PREFIX}':g' \
-	    < ${WRKSRC}/postfix-install.dist \
-	    > ${WRKSRC}/postfix-install
-	${CP} ${WRKSRC}/conf/sample-misc.cf ${WRKSRC}/conf/sample-misc.cf.dist
-	${SED} -e 's:__PREFIX:'${PREFIX}':g' \
-	    < ${WRKSRC}/conf/sample-misc.cf.dist \
-	    > ${WRKSRC}/conf/sample-misc.cf
-	${CP} ${WRKSRC}/src/global/mail_params.h \
-		${WRKSRC}/src/global/mail_params.h.dist
-	${SED} -e 's:__PREFIX:'${PREFIX}':g' \
-	    < ${WRKSRC}/src/global/mail_params.h.dist \
-	    > ${WRKSRC}/src/global/mail_params.h
+	@for i in ${POSTFIX_CONF_FILES}; do				\
+		${CP} ${WRKSRC}/$${i} ${WRKSRC}/$${i}.dist;		\
+		${SED} -e 's|__PREFIX|'${PREFIX}'|g'			\
+			-e 's|__PKG_SYSCONFDIR|'${PKG_SYSCONFDIR}'|g'	\
+			< ${WRKSRC}/$${i}.dist				\
+			> ${WRKSRC}/$${i};				\
+	done
 
 do-configure:
 	(cd ${WRKSRC} && \
@@ -130,46 +141,37 @@ post-build:
 	    <${FILESDIR}/mailer.conf >${WRKDIR}/mailer.conf.postfix
 
 pre-install:
-	${INSTALL_DATA_DIR} /etc/postfix
-	${INSTALL_DATA_DIR} ${PREFIX}/share/postfix
+	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
+	${INSTALL_DATA_DIR} ${SHAREDIR}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/postfix
-	${INSTALL_DATA_DIR} ${PREFIX}/libexec/postfix
-	${CHOWN} ${ROOT_USER}:${ROOT_GROUP} ${PREFIX}/share/postfix \
-	    ${PREFIX}/libexec/postfix
-	${CHMOD} 755 ${PREFIX}/share/postfix ${PREFIX}/libexec/postfix
+	${INSTALL_DATA_DIR} ${LIBEXECDIR}
+	${CHOWN} ${ROOT_USER}:${ROOT_GROUP} ${SHAREDIR} ${LIBEXECDIR}
+	${CHMOD} 755 ${SHAREDIR} ${LIBEXECDIR}
 	-${RM} -f ${WRKSRC}/conf/*.orig
 .if defined(USE_SASL) && ${USE_SASL} == "YES"
 	${ECHO} "pwcheck_method: sasldb" > ${WRKDIR}/smtpd.conf
 	${INSTALL_DATA} ${WRKDIR}/smtpd.conf ${PREFIX}/lib/sasl
 	${ECHO} lib/sasl/smtpd.conf > ${WRKDIR}/PLIST.sasl
 .endif
-	${TEST} -f /etc/postfix/postfix-files || \
-		${INSTALL_DATA} ${WRKSRC}/conf/postfix-files /etc/postfix
-	${TEST} -f /etc/postfix/postfix-script || \
-		${INSTALL_DATA} ${WRKSRC}/conf/postfix-script /etc/postfix
-	${TEST} -f /etc/postfix/main.cf || \
-		${INSTALL_DATA} ${WRKSRC}/conf/main.cf /etc/postfix
-	${TEST} -f /etc/postfix/master.cf || \
-		${INSTALL_DATA} ${WRKSRC}/conf/master.cf /etc/postfix
+	for pf in postfix-files postfix-script main.cf master.cf; do \
+		${TEST} -f ${PKG_SYSCONFDIR}/$$pf || \
+		    ${INSTALL_DATA} ${WRKSRC}/conf/$$pf ${PKG_SYSCONFDIR}; \
+	done
 
 do-install:
 	(cd ${WRKSRC} && ${SH} postfix-install -non-interactive)
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/conf/main.cf ${PREFIX}/share/postfix
-	${INSTALL_DATA} ${WRKSRC}/conf/master.cf ${PREFIX}/share/postfix
-	${INSTALL_SCRIPT} ${WRKSRC}/conf/post-install ${PREFIX}/share/postfix
-	${INSTALL_SCRIPT} ${WRKSRC}/conf/postfix-files ${PREFIX}/share/postfix
-	${INSTALL_SCRIPT} ${WRKSRC}/conf/postfix-script ${PREFIX}/share/postfix
+	${INSTALL_DATA} ${WRKSRC}/conf/main.cf ${SHAREDIR}
+	${INSTALL_DATA} ${WRKSRC}/conf/master.cf ${SHAREDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/conf/post-install ${SHAREDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/conf/postfix-files ${SHAREDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/conf/postfix-script ${SHAREDIR}
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf.postfix ${PREFIX}/etc
-	${LN} -sf ${PREFIX}/share/postfix/post-install /etc/postfix
-	${LN} -sf ${PREFIX}/share/postfix/postfix-files /etc/postfix
-	${LN} -sf ${PREFIX}/share/postfix/postfix-script /etc/postfix
+	${LN} -sf ${SHAREDIR}/post-install ${PKG_SYSCONFDIR}
+	${LN} -sf ${SHAREDIR}/postfix-files ${PKG_SYSCONFDIR}
+	${LN} -sf ${SHAREDIR}/postfix-script ${PKG_SYSCONFDIR}
 	${INSTALL_DATA_DIR} ${POSTFIX_SPOOL}
 	${CHMOD} 755 ${POSTFIX_SPOOL}
-	${TEST} -f /etc/postfix/main.cf || \
-		${INSTALL_DATA} ${PREFIX}/share/postfix/main.cf /etc/postfix
-	${TEST} -f /etc/postfix/master.cf || \
-		${INSTALL_DATA} ${PREFIX}/share/postfix/master.cf /etc/postfix
 
 .include "../../mk/bsd.pkg.mk"

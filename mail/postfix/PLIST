@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/01/15 17:15:04 martti Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/01/31 23:53:05 lukem Exp $
 bin/mailq
 bin/newaliases
 etc/mailer.conf.postfix
@@ -131,16 +131,13 @@ share/postfix/sample-smtp.cf
 share/postfix/sample-smtpd.cf
 share/postfix/sample-transport.cf
 share/postfix/sample-virtual.cf
-@exec ${MKDIR} /etc/postfix
-@exec if [ ! -f /etc/postfix/main.cf ]; then cp %D/share/postfix/main.cf /etc/postfix ; fi
-@exec if [ ! -f /etc/postfix/master.cf ]; then cp %D/share/postfix/master.cf /etc/postfix ; fi
-@exec if [ ! -d /var/spool/postfix ]; then ${MKDIR} /var/spool/postfix; ${CHMOD} 755 /var/spool/postfix ; fi
-@exec ln -sf %D/share/postfix/post-install /etc/postfix
-@unexec ${RM} -f /etc/postfix/post-install
-@exec ln -sf %D/share/postfix/postfix-files /etc/postfix
-@unexec ${RM} -f /etc/postfix/postfix-files
-@exec ln -sf %D/share/postfix/postfix-script /etc/postfix
-@unexec ${RM} -f /etc/postfix/postfix-script
+@exec if [ ! -d ${POSTFIX_SPOOL} ]; then ${MKDIR} ${POSTFIX_SPOOL}; ${CHMOD} 755 ${POSTFIX_SPOOL} ; fi
+@exec ${LN} -sf %D/share/postfix/post-install ${PKG_SYSCONFDIR}
+@unexec ${RM} -f ${PKG_SYSCONFDIR}/post-install
+@exec ${LN} -sf %D/share/postfix/postfix-files ${PKG_SYSCONFDIR}
+@unexec ${RM} -f ${PKG_SYSCONFDIR}/postfix-files
+@exec ${LN} -sf %D/share/postfix/postfix-script ${PKG_SYSCONFDIR}
+@unexec ${RM} -f ${PKG_SYSCONFDIR}/postfix-script
 @dirrm libexec/postfix
 @dirrm share/doc/postfix
 @dirrm share/postfix

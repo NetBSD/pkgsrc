@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.14 2003/01/25 07:22:20 martti Exp $
+$NetBSD: patch-af,v 1.15 2003/01/31 23:53:06 lukem Exp $
 
 --- conf/main.cf.orig	Fri Jan 24 01:42:20 2003
 +++ conf/main.cf	Sat Jan 25 08:04:54 2003
@@ -17,7 +17,7 @@ $NetBSD: patch-af,v 1.14 2003/01/25 07:22:20 martti Exp $
 +daemon_directory = __PREFIX/libexec/postfix
 +
 +# Shared files and etc directory
-+etc_directory = /etc/postfix
++etc_directory = __PKG_SYSCONFDIR
 +share_directory = __PREFIX/share/postfix
 +man_directory = __PREFIX/man
  
