@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/10/03 00:17:51 tv Exp $
+# $NetBSD: Makefile,v 1.31 2004/10/22 14:10:44 ben Exp $
 
 DISTNAME=		ettercap-0.6.b
 PKGREVISION=		2
@@ -28,12 +28,6 @@ INSTALL_DIRS=		${WRKSRC} ${WRKSRC}/plugins
 .if ${MACHINE_ARCH} == "alpha"
 GCC_REQD+=		3.0
 .endif
-
-post-buildlink:
-	if [ ! -f /usr/include/des.h ]; then \
-		${LN} -s ${BUILDLINK_DIR}/include/openssl/des.h \
-			${BUILDLINK_DIR}/include; \
-	fi
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
