@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:43 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/03/14 13:54:04 uebayasi Exp $
 bin/ebappendix
 bin/ebfont
 bin/ebinfo
@@ -6,6 +6,7 @@ bin/ebrefile
 bin/ebunzip
 bin/ebzip
 bin/ebzipinfo
+etc/eb.conf
 include/eb/appendix.h
 include/eb/binary.h
 include/eb/defs.h
@@ -14,14 +15,14 @@ include/eb/error.h
 include/eb/font.h
 include/eb/text.h
 include/eb/zio.h
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebfont-ja.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebfont.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebinfo-ja.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebinfo.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebrefile-ja.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebrefile.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebzip-ja.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebzip.info
+@unexec install-info --delete --info-dir=%D/info %D/info/ebfont-ja.info
+@unexec install-info --delete --info-dir=%D/info %D/info/ebfont.info
+@unexec install-info --delete --info-dir=%D/info %D/info/ebinfo-ja.info
+@unexec install-info --delete --info-dir=%D/info %D/info/ebinfo.info
+@unexec install-info --delete --info-dir=%D/info %D/info/ebrefile-ja.info
+@unexec install-info --delete --info-dir=%D/info %D/info/ebrefile.info
+@unexec install-info --delete --info-dir=%D/info %D/info/ebzip-ja.info
+@unexec install-info --delete --info-dir=%D/info %D/info/ebzip.info
 info/ebfont-ja.info
 info/ebfont.info
 info/ebinfo-ja.info
@@ -30,19 +31,19 @@ info/ebrefile-ja.info
 info/ebrefile.info
 info/ebzip-ja.info
 info/ebzip.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebzip-ja.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebrefile.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebrefile-ja.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebinfo.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebinfo-ja.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebfont.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebfont-ja.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebzip.info
+@exec install-info --info-dir=%D/info %D/info/ebzip-ja.info
+@exec install-info --info-dir=%D/info %D/info/ebrefile.info
+@exec install-info --info-dir=%D/info %D/info/ebrefile-ja.info
+@exec install-info --info-dir=%D/info %D/info/ebinfo.info
+@exec install-info --info-dir=%D/info %D/info/ebinfo-ja.info
+@exec install-info --info-dir=%D/info %D/info/ebfont.info
+@exec install-info --info-dir=%D/info %D/info/ebfont-ja.info
+@exec install-info --info-dir=%D/info %D/info/ebzip.info
 lib/libeb.a
 lib/libeb.la
 lib/libeb.so
-lib/libeb.so.4
-lib/libeb.so.4.0
+lib/libeb.so.6
+lib/libeb.so.6.1
 share/eb/appendix/LIST
 share/eb/appendix/LIST-ja
 share/eb/appendix/cencro-1.0/catalog
@@ -73,6 +74,14 @@ share/eb/appendix/crownfj-2.0/crown_fj.app
 share/eb/appendix/crownfj-2.0/crown_fj/data/furoku
 share/eb/appendix/crownfj-2.0/daily_ei.app
 share/eb/appendix/crownfj-2.0/daily_ei/data/furoku
+share/eb/appendix/crownfj2-1.0/catalog
+share/eb/appendix/crownfj2-1.0/catalog.app
+share/eb/appendix/crownfj2-1.0/crfre.app
+share/eb/appendix/crownfj2-1.0/crfre/appendix
+share/eb/appendix/crowngj-1.0/catalog.app
+share/eb/appendix/crowngj-1.0/crger.app
+share/eb/appendix/crowngj-1.0/catalog
+share/eb/appendix/crowngj-1.0/crger/appendix
 share/eb/appendix/daihyakka-1.0/catalog
 share/eb/appendix/daihyakka-1.0/catalog.app
 share/eb/appendix/daihyakka-1.0/dhk01.app
@@ -201,9 +210,6 @@ share/eb/appendix/superdic98-1.0/kanjigen/data/furoku
 share/eb/appendix/superdic98-1.0/koujien.app
 share/eb/appendix/superdic98-1.0/koujien/data/furoku
 share/eb/eb3.m4
-share/eb/ssizet.m4
-share/locale/ja/LC_MESSAGES/eb.mo
-share/locale/ja/LC_MESSAGES/ebutils.mo
 @dirrm share/eb/appendix/superdic98-1.0/koujien/data
 @dirrm share/eb/appendix/superdic98-1.0/koujien
 @dirrm share/eb/appendix/superdic98-1.0/kanjigen/data
@@ -289,6 +295,10 @@ share/locale/ja/LC_MESSAGES/ebutils.mo
 @dirrm share/eb/appendix/daijirin-2.0
 @dirrm share/eb/appendix/daihyakka-1.0/dhk01
 @dirrm share/eb/appendix/daihyakka-1.0
+@dirrm share/eb/appendix/crowngj-1.0/crger
+@dirrm share/eb/appendix/crowngj-1.0
+@dirrm share/eb/appendix/crownfj2-1.0/crfre
+@dirrm share/eb/appendix/crownfj2-1.0
 @dirrm share/eb/appendix/crownfj-2.0/daily_ei/data
 @dirrm share/eb/appendix/crownfj-2.0/daily_ei
 @dirrm share/eb/appendix/crownfj-2.0/crown_fj/data

@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2001/06/20 06:27:19 jtb Exp $
+$NetBSD: distinfo,v 1.3 2002/03/14 13:54:05 uebayasi Exp $
 
-SHA1 (eb/eb-3.0.tar.gz) = e9899310fc4e111c568373b43ca88fc6c15ea4dd
-Size (eb/eb-3.0.tar.gz) = 869167 bytes
+SHA1 (eb/eb-3.2.1.tar.gz) = 1e34957cbb8e689e7e48f0d54c912acef7ddd455
+Size (eb/eb-3.2.1.tar.gz) = 998191 bytes
 SHA1 (eb/LIST) = 03cc7f7c41b415fd7ea9c119ee1cb9c445617cdd
 Size (eb/LIST) = 9136 bytes
 SHA1 (eb/LIST-ja) = f21e7765c637ad13beb8171edf70b0587f298e19
@@ -18,6 +18,10 @@ SHA1 (eb/colloc-2.0.tar.gz) = 48159f17792416d55b5055b7b02136e756357a3b
 Size (eb/colloc-2.0.tar.gz) = 1313 bytes
 SHA1 (eb/crownfj-2.0.tar.gz) = 19317cc4c0391ee0c6f95f552b1c47a56c4484f5
 Size (eb/crownfj-2.0.tar.gz) = 4463 bytes
+SHA1 (eb/crownfj2-1.0.tar.gz) = 04fb0ebd074a51091d8e45000ac429fafcbd6168
+Size (eb/crownfj2-1.0.tar.gz) = 2164 bytes
+SHA1 (eb/crowngj-1.0.tar.gz) = 2d3318c878cba97f8d2b31e42025f2d9e7651306
+Size (eb/crowngj-1.0.tar.gz) = 2155 bytes
 SHA1 (eb/daihyakka-1.0.tar.gz) = 99ad06bb7dcd68ea6713f5d9d71ecc567f9bb2cd
 Size (eb/daihyakka-1.0.tar.gz) = 3748 bytes
 SHA1 (eb/daijirin-2.0.tar.gz) = 0a4dd911fb196155fae32904873bd3a21060f4d5
