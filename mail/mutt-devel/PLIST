@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/11/01 16:10:41 tron Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/01/02 09:07:45 tron Exp $
 bin/flea
 bin/mutt
 bin/muttbug
@@ -31,6 +31,7 @@ share/doc/mutt/html/manual-6.html
 share/doc/mutt/html/manual-7.html
 share/doc/mutt/html/manual.html
 share/doc/mutt/manual.txt
+share/doc/mutt/patch-notes.txt
 share/doc/mutt/samples/Mush.rc
 share/doc/mutt/samples/Muttrc
 share/doc/mutt/samples/Pine.rc
@@ -61,6 +62,7 @@ share/doc/mutt/samples/pgp6.rc
 share/doc/mutt/samples/sample.mailcap
 share/doc/mutt/samples/sample.muttrc
 share/doc/mutt/samples/sample.muttrc-tlr
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/mutt.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/mutt.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/mutt.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/mutt.mo
