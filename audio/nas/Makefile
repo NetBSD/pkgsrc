@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/16 13:30:48 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2001/07/02 21:29:34 jlam Exp $
 # FreeBSD ID: Makefile,v 1.8 1997/01/06 12:04:12 jkh Exp
 #
 
@@ -11,8 +11,9 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://radscan.com/nas.html
 COMMENT=	Network Audio System
 
-USE_IMAKE=	# defined
-USE_X11BASE=	# defined
+USE_BUILDLINK_ONLY=	# defined
+USE_IMAKE=		# defined
+USE_X11BASE=		# defined
 
 WRKSRC=		${WRKDIR}/${PKGNAME}
 
