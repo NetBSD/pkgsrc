@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/11/28 14:42:07 taca Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 16:12:35 agc Exp $
 
 SHA1 (ruby/uconv-0.4.12.tar.gz) = ccedb7effdead0ebb4eda2fb512ae18f075da6d5
+RMD160 (ruby/uconv-0.4.12.tar.gz) = 581a97313021acf83a66ff69d025520bfc73a3f4
 Size (ruby/uconv-0.4.12.tar.gz) = 546671 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2004/03/30 18:23:46 ben Exp $
+$NetBSD: distinfo,v 1.4 2005/02/23 16:12:35 agc Exp $
 
 SHA1 (tex2rtf-2.01-source.tar.bz2) = 363d2b1944e6f6817c0af170b9fd10289d259fcb
+RMD160 (tex2rtf-2.01-source.tar.bz2) = 9b1895381374233daedd90b1f1a91e8b6d503f43
 Size (tex2rtf-2.01-source.tar.bz2) = 183262 bytes
 SHA1 (patch-aa) = 40fe1026d45242e5b8c35eacb232c8a0a571e7ed
 SHA1 (patch-ab) = 1ccdfe65311489b730d5ce660f85e2abae80939b
