@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/15 06:31:42 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/17 06:00:13 uebayasi Exp $
 #
 
-DISTNAME=	tc-2.2.1
+DISTNAME=	tc-2.3
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	http://openlab.ring.gr.jp/tcode/resources/soft/
 
