@@ -1,0 +1,93 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/23 16:59:54 jschauma Exp $
+
+--- configure.orig	Sun Jun 23 01:13:01 2002
++++ configure	Wed Jul 23 11:19:21 2003
+@@ -2,63 +2,6 @@
+ 
+ PROGNAME=fspanel
+ 
+-echo -n "checking for X11 path... "
+-if test "`uname`" = "SunOS"; then
+-	X11_PATH="/usr/X11"
+-	LDFLAGS="$LDFLAGS -L/usr/X/lib"
+-	CFLAGS="$CFLAGS I/usr/include/X11"
+-else
+-	X11_PATH="/usr/X11R6"
+-fi
+-if test -e "$X11_PATH"; then
+-	echo $X11_PATH
+-else
+-	echo failed.
+-	echo
+-	echo I can\'t find $X11_PATH :\(
+-	exit 1
+-fi
+-
+-CFLAGS="$CFLAGS -I$X11_PATH/include"
+-LDFLAGS="$LDFLAGS -L$X11_PATH/lib -lX11"
+-
+-if test "_$CC" = "_"; then
+-	CC="cc"
+-fi
+-
+-echo -n "checking for X11/Xlib.h... "
+-if test -e "$X11_PATH/include/X11/Xlib.h"; then
+-	echo yes
+-else
+-	echo no
+-	echo
+-	echo Cannot find Xlib header\, aborting.
+-	echo You might need to install XFree86-devel.
+-	exit 1
+-fi
+-
+-echo -n "checking for X11/xpm.h... "
+-xpm=no
+-if test -e "$X11_PATH/include/X11/xpm.h"; then
+-	echo yes
+-	LDFLAGS="$LDFLAGS -lXpm"
+-	CFLAGS="$CFLAGS -DHAVE_XPM"
+-	xpm=yes
+-else
+-	echo no
+-fi
+-
+-echo -n "checking for X11/Xft/Xft.h... "
+-xft=no
+-if test -e "$X11_PATH/include/X11/Xft/Xft.h"; then
+-	echo yes
+-	LDFLAGS="$LDFLAGS -lXft"
+-	CFLAGS="$CFLAGS -DXFT"
+-	xft=yes
+-else
+-	echo no
+-fi
+-
+ echo -n "checking for Linux... "
+ if test "`uname`" = "Linux"; then
+ 	CFLAGS="$CFLAGS -DNOSTDLIB -nostdlib"
+@@ -73,20 +16,12 @@
+ echo CFLAGS="$CFLAGS" >> Makefile
+ echo LDFLAGS="$LDFLAGS" >> Makefile
+ echo PROGNAME="$PROGNAME" >> Makefile
++echo LIBS="-lXpm -lXft" >> Makefile
++echo >> Makefile
++echo all: $\(PROGNAME\) >> Makefile
+ echo >> Makefile
+ echo $\(PROGNAME\): Makefile fspanel.c fspanel.h icon.xpm >> Makefile
+-echo \	$\(CC\) $\(CFLAGS\) $\(LDFLAGS\) fspanel.c -o $\(PROGNAME\) >> Makefile
+-echo \	@ls -l $\(PROGNAME\) >> Makefile
+-echo \	strip $\(PROGNAME\) >> Makefile
+-echo \	@ls -l $\(PROGNAME\) >> Makefile
++echo \	$\(CC\) $\(CFLAGS\) $\(LDFLAGS\) fspanel.c -o $\(PROGNAME\) $\(LIBS\) >> Makefile
+ echo >> Makefile
+-echo install: >> Makefile
+-echo \	install $\(PROGNAME\) /usr/local/bin >> Makefile
+ 
+ echo done
+-echo
+-echo AntiAliased XFT text .... : $xft
+-echo LibXpm default icon ..... : $xpm
+-echo
+-echo All done. Now type: make
+-echo
