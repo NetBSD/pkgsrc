@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/10/05 22:09:58 dillo Exp $
+$NetBSD: patch-aa,v 1.2 2004/10/08 23:14:38 mycroft Exp $
 
---- tads2/makefile.orig	Wed Sep 25 18:43:09 2002
-+++ tads2/makefile
+--- tads2/Makefile.orig	Wed Sep 25 18:43:09 2002
++++ tads2/Makefile
 @@ -50,7 +50,7 @@
  #
  
