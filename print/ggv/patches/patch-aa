@@ -1,14 +1,26 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/08/22 20:27:24 rh Exp $
+$NetBSD: patch-aa,v 1.2 2000/03/24 18:26:45 jlam Exp $
 
---- configure.orig	Sat Aug 21 02:38:42 1999
-+++ configure	Sun Aug 22 20:19:34 1999
-@@ -2634,7 +2634,9 @@
- LIBTOOL_DEPS="$ac_aux_dir/ltconfig $ac_aux_dir/ltmain.sh"
+--- aclocal.m4.orig	Fri Aug 20 17:38:40 1999
++++ aclocal.m4	Fri Mar 24 09:07:24 2000
+@@ -759,7 +759,11 @@
  
- # Always use our own libtool.
+ # serial 35 AC_PROG_LIBTOOL
+ AC_DEFUN(AC_PROG_LIBTOOL,
+-[AC_REQUIRE([AC_LIBTOOL_SETUP])dnl
++[
++# Always use NetBSD's libtool.
 +if false; then
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
-+fi
++
++AC_REQUIRE([AC_LIBTOOL_SETUP])dnl
  
+ # Save cache, so that ltconfig can load it
+ AC_CACHE_SAVE
+@@ -785,6 +789,8 @@
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
+ exec 5>>./config.log
++
++fi
+ ])
+ 
+ AC_DEFUN(AC_LIBTOOL_SETUP,
