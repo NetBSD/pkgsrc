@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.14 2003/05/24 12:31:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2004/04/23 22:08:00 reed Exp $
 bin/squidclient
-etc/rc.d/squid
 libexec/cachemgr.cgi
 man/man8/squid.8
 share/doc/squid/ChangeLog

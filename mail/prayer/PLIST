@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/02/28 23:50:59 heinz Exp $
-etc/rc.d/prayer
+@comment $NetBSD: PLIST,v 1.5 2004/04/23 22:07:55 reed Exp $
 sbin/prayer
 sbin/prayer-cyclog
 sbin/prayer-session

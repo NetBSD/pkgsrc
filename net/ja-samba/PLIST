@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/08/30 01:31:11 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/04/23 22:07:56 reed Exp $
 bin/findsmb
 bin/make_printerdef
 bin/make_smbcodepage
@@ -16,9 +16,6 @@ bin/smbtar
 bin/tdbbackup
 bin/testparm
 bin/testprns
-etc/rc.d/nmbd
-etc/rc.d/samba
-etc/rc.d/smbd
 man/ja_JP.EUC/man1/findsmb.1
 man/ja_JP.EUC/man1/make_smbcodepage.1
 man/ja_JP.EUC/man1/make_unicodemap.1
