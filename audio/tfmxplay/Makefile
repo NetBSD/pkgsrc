@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/10 01:14:02 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/08/01 13:55:31 wiz Exp $
 #
 
-DISTNAME=	tfmxplay-0.4
+DISTNAME=	tfmxplay-0.5
 CATEGORIES=	audio
 MASTER_SITES=	http://darkstar.tabu.uni-bonn.de/~neo/tfmx/
 EXTRACT_SUFX=	.tgz
