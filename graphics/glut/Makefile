@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/07/17 21:40:59 grant Exp $
+# $NetBSD: Makefile,v 1.19 2003/08/26 01:43:50 jschauma Exp $
 
 PKGNAME=		${DISTNAME:S/MesaLib/glut/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
@@ -27,19 +27,6 @@ post-install:
 
 .include "../../graphics/MesaLib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
-
-.if (${MESA_REQD} == 3.4.2)
-SO_SUFFIX=3
-SO_VERS=3.7
-.elif (${MESA_REQD} == 5.0.1)
-SO_SUFFIX=10
-SO_VERS=10.1
-.else
-.error Library version not known!
-.endif
-
-PLIST_SUBST+=SO_SUFFIX=${SO_SUFFIX}
-PLIST_SUBST+=SO_VERS=${SO_VERS}
 
 # must be below bsd.pkg.mk to overwrite values
 PREFIX=		${LOCALBASE}
