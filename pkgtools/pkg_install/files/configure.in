@@ -57,6 +57,7 @@ AC_CHECK_FUNCS(warnx)
 AC_CHECK_FUNCS(MD5File)
 
 dnl Checks for typedefs, structures, and compiler characteristics.
+AC_C___ATTRIBUTE__
 AC_C_CONST
 AC_TYPE_SIZE_T
 
