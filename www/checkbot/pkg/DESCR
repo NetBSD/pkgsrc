@@ -1,0 +1,4 @@
+Checkbot is a tool to verify links on a set of HTML pages. Checkbot
+can check a single document, or a set of documents on one or more
+servers. Checkbot creates a report which summarizes all links which
+caused some kind of warning or error.
