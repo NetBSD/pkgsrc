@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/20 12:22:20 agc Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/24 14:50:06 grant Exp $
 #
 
 DISTNAME=	mldonkey-${VER}.sources
@@ -15,7 +15,7 @@ COMMENT=	Free peer-to-peer client with eDonkey support and more
 WRKSRC=			${WRKDIR}/mldonkey-${VER}
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_PERL5=		build
 
 MLDONKEY_SUBST=		PREFIX="${PREFIX}"

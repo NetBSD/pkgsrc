@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/12/24 13:02:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/24 14:58:00 grant Exp $
 
 DISTNAME=	TeXfamily-1.2.1
 PKGREVISION=	4
@@ -37,7 +37,7 @@ EXTRACT_ONLY=	# none
 
 ALL_TARGET=	all
 INSTALL_TARGET=	install strip
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 USE_X11=	yes
 PLIST_SUBST+=	MV="${MV}"
 CFLAGS+=	-Dunix
