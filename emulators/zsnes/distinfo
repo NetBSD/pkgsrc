@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/10/06 20:00:42 wiz Exp $
+$NetBSD: distinfo,v 1.2 2002/01/29 10:53:42 wiz Exp $
 
 SHA1 (zsnes1337src.tar.gz) = 618bced128552be96c5125dfd9f23b77d2ebfbf4
 Size (zsnes1337src.tar.gz) = 911599 bytes
 SHA1 (patch-aa) = 17cc135e3265cfdcebf8a18df403c050919c4f12
-SHA1 (patch-ab) = 733133c55fe222bb1c01533466598579a6021ce0
+SHA1 (patch-ab) = 14ff74bab8cfc2ab1666bbcc6ebabfff62eb6be1
 SHA1 (patch-ac) = dd55e1870ed857bde60b36b3ac5cdd5f10be3d4a
+SHA1 (patch-ad) = eb9456f0332c5ad56789f4784b07bcf9a7335599
