@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2003/12/13 20:26:03 ben Exp $
+$NetBSD: patch-aa,v 1.2 2004/02/19 04:49:40 ben Exp $
 
 --- Makefile.defs.orig	2003-02-25 19:24:01.000000000 -0800
 +++ Makefile.defs
@@ -11,16 +11,21 @@ $NetBSD: patch-aa,v 1.1 2003/12/13 20:26:03 ben Exp $
  
  BINDIR	= $(INSTDIR)/bin
  LIBDIR	= $(INSTDIR)/lib
-@@ -70,9 +70,9 @@ RANLIB = ranlib
- # General defines. These set the type of system for which Csound is compiled,
- # and select various features to be enabled.
+@@ -62,7 +62,7 @@ CC = gcc
+ CXX = g++
+ LD = gcc
+ AR = ar rc
+-MAKEDLL_L = ld -E -s -shared -O1
++MAKEDLL_L = $(CXX) -Wl,-E -Wl,-shared
+ MAKEDLL_P = ld -E -s -shared -O1
+ RANLIB = ranlib
  
--DEFINES = -DWINDOWS -DSFIRCAM -DSYS5 -DLINUX -DHAVE_TERMIOS_H		\
--	  -DIV_VERSION -DPIPES -DMACROS -DHAVE_FLTK -D_REENTRANT	\
+@@ -72,7 +72,7 @@ RANLIB = ranlib
+ 
+ DEFINES = -DWINDOWS -DSFIRCAM -DSYS5 -DLINUX -DHAVE_TERMIOS_H		\
+ 	  -DIV_VERSION -DPIPES -DMACROS -DHAVE_FLTK -D_REENTRANT	\
 -	  -DHAVE_SSTREAM -DMYFLT=float
-+DEFINES = -DSFIRCAM -DSYS5 -DLINUX -DBSD -DHAVE_TERMIOS_H		\
-+	  -DIV_VERSION -DPIPES -DMACROS -D_REENTRANT			\
-+	  -DHAVE_SSTREAM -DMYFLT=float -DDEVOSSSOUND="\"$(DEVOSSSOUND)\""
++	  -DHAVE_SSTREAM -DMYFLT=float -DBSD -DDEVOSSSOUND="\"$(DEVOSSSOUND)\""
  # choose any of -
  #	-DSYS5		invoke System V headers, e.g. 'string.h' for 'strings.h'
  #	-DHAVE_SSTREAM	include <sstream> header from C++ sources, instead of
@@ -53,30 +58,18 @@ $NetBSD: patch-aa,v 1.1 2003/12/13 20:26:03 ben Exp $
  # `fltk-config --cxxflags`		try adding this if the compilation of
  #					FLTK widgets stops with error messages
  #					related to not finding include files
-@@ -159,14 +154,13 @@ CXXFLAGS = $(CFLAGS) $(C_FLAGS) -fno-exc
- # -----------------------------------------------------------------------------
- # uncomment these if HAVE_FLTK was enabled in DEFINES
- 
--FLTKSRC = buttonsched.c widgets.cpp
--FLTKOBJ = buttonsched.o widgets.o
-+FLTKSRC =
-+FLTKOBJ =
- # source and object files for FLTK widgets
+@@ -165,8 +160,7 @@ FLTKOBJ = buttonsched.o widgets.o
  
  # FLTKLIB = -lfltk -lpthread -lstdc++
  # FLTKLIB = `fltk-config --libs`
 -FLTKLIB = /usr/local/FLTK-1.1.0/Linux/lib/libfltk.a			\
 -	  /usr/local/gcc-3.2.2/lib/libstdc++.a
-+FLTKLIB =
++FLTKLIB = -lfltk -lstdc++
  # libraries required by widgets.cpp
  #	-lfltk -lpthread -lstdc++		use dynamic libraries
  #
-@@ -185,10 +179,10 @@ FLTKLIB = /usr/local/FLTK-1.1.0/Linux/li
- # -----------------------------------------------------------------------------
- # libraries
- 
--LIBS = -lpthread -lm
-+LIBS = -lm
+@@ -188,7 +182,7 @@ FLTKLIB = /usr/local/FLTK-1.1.0/Linux/li
+ LIBS = -lpthread -lm
  # used for linking all executables
  
 -MISC_LIB = -ldl
@@ -84,22 +77,12 @@ $NetBSD: patch-aa,v 1.1 2003/12/13 20:26:03 ben Exp $
  # these are used by the main Csound executable only
  
  #	-lefence                        for debugging only
-@@ -203,15 +197,15 @@ MISC_LIB = -ldl
- # select source and object files for window (X11, FLTK, etc.) displays
- # all files are in sysdep directory
- 
--WINSRC = sysdep/winX11.c
--WINOBJ = sysdep/winX11.o
-+WINSRC =
-+WINOBJ =
- # ;if WINDOWS enabled in DEFINES, choose one of -
- #	winX11.o	for X11 window graphics
- #	winSGI.o	for SGI window graphics
+@@ -211,7 +205,7 @@ WINOBJ = sysdep/winX11.o
  #	winFLTK.o and FL_graph.o for `improved' X graphics
  # otherwise leave empty
  
 -WINLIBS = -L/usr/X11R6/lib -lX11
-+WINLIBS =
++WINLIBS = -lX11
  # ;window system libraries
  #	-lX11				for X window calls
  #	-L/usr/lib/X11R4		for HP X11 library, v.4

@@ -1,7 +1,16 @@
-$NetBSD: patch-ad,v 1.1 2003/12/13 20:26:03 ben Exp $
+$NetBSD: patch-ad,v 1.2 2004/02/19 04:49:40 ben Exp $
 
 --- Makefile.orig	2003-02-25 19:24:01.000000000 -0800
 +++ Makefile
+@@ -133,7 +133,7 @@ else
+ $(LIBCSND_D): $(CSOBJS) $(OPOBJS)
+ 	rm -f $@
+ 	$(MAKEDLL_L) -o $@ $(CSOBJS) $(OPOBJS) $(FLTKLIB) $(WINLIBS)	\
+-			   $(AUDLIBS) $(MISC_LIB) $(LIBS)
++			   $(AUDLIBS) $(MISC_LIB) $(LIBS) $(LDFLAGS)
+ endif
+ 
+ # ---- main Csound executable ----
 @@ -170,7 +170,7 @@ $(INSTALL_DIRS):
  
  install_libs: $(INSTALL_DIRS)
@@ -43,17 +52,3 @@ $NetBSD: patch-ad,v 1.1 2003/12/13 20:26:03 ben Exp $
  ifneq ($(strip $(BUILD_UTILS)),)
  	cd utils ; make $@
  endif
-@@ -254,13 +254,11 @@ ifneq ($(strip $(BUILD_PLUGINS)),)
- endif
- 	$(CXX) -M $(CXXFLAGS) $(OPSRCS) > .depend
- 	$(CXX) -M $(CXXFLAGS) $(CSSRCS) >> .depend
--	$(CXX) -M $(CXXFLAGS) $(WINSRC) $(FLTKSRC) >> .depend
- 	$(CXX) -M $(CXXFLAGS) main.c >> .depend
- 
- .depend:
- 	$(CXX) -M $(CXXFLAGS) $(OPSRCS) > .depend
- 	$(CXX) -M $(CXXFLAGS) $(CSSRCS) >> .depend
--	$(CXX) -M $(CXXFLAGS) $(WINSRC) $(FLTKSRC) >> .depend
- 	$(CXX) -M $(CXXFLAGS) main.c >> .depend
- 
- include .depend
