@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2004/05/15 14:55:38 seb Exp $
+$NetBSD: distinfo,v 1.8 2004/05/16 12:22:40 seb Exp $
 
 SHA1 (source-highlight-1.9.tar.gz) = b7acc3e354a3043c517f7efa4ddb5e0924464a68
 Size (source-highlight-1.9.tar.gz) = 682343 bytes
@@ -6,5 +6,6 @@ SHA1 (patch-aa) = 3f124bcdc738222dedd0f961e26da3f374700680
 SHA1 (patch-ab) = ecb8ce16381bd68b55f309a0ae43912319138575
 SHA1 (patch-ac) = 62475d945664b84eb4a6e43e5cd4c75f9049eefe
 SHA1 (patch-ad) = 7be6c33e8dbcc61f09ede32b25f6c912bb41b4de
+SHA1 (patch-ae) = ea3b682e89556a8c32b990585c07c6cd48fb24d9
 SHA1 (patch-ag) = 77d3668ad1573fee7423aa3651c77ae64fd7cbb7
 SHA1 (patch-ah) = a0df2fb54d9093834d2a017efc3ff512bbd517bf
