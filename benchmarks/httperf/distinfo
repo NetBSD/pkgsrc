@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2003/09/19 18:06:35 wiz Exp $
+$NetBSD: distinfo,v 1.4 2005/02/22 21:16:36 agc Exp $
 
 SHA1 (httperf-0.6.tar.gz) = 6e0bcc21e2a94061b231c50182528a17ba22f14f
+RMD160 (httperf-0.6.tar.gz) = 9221dbede16dffa339b29da326ac0f293ed16ecd
 Size (httperf-0.6.tar.gz) = 85351 bytes
 SHA1 (patch-aa) = eb5e6431c62f1ec631a0d6b598de0e4029dc97fc

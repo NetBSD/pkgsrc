@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2004/11/10 15:32:33 adam Exp $
+$NetBSD: distinfo,v 1.4 2005/02/22 21:16:36 agc Exp $
 
 SHA1 (dbench-2.1.tar.gz) = 13331f549fb4c5f32069ec6b660e4b171ca64572
+RMD160 (dbench-2.1.tar.gz) = 436ed94b99e8098b7bc1f1aaa7fdcaba36cf6be4
 Size (dbench-2.1.tar.gz) = 701293 bytes
 SHA1 (patch-ab) = 136d72277d3698a0b7638c1ac4661aa22028cf05
