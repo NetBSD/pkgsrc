@@ -1,3 +1,7 @@
+/* $NetBSD */
+
+#include "nbcompat.h"
+
 int
 isblank(c)
 	int c;
