@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/08/20 00:59:17 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2001/09/08 19:55:47 jlam Exp $
 #
 
 DISTNAME=	plan-1.8.4
@@ -24,5 +24,5 @@ pre-install:
 		${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/$$f ${PREFIX}/share/plan; \
 	done
 
-.include "../../x11/lesstif/buildlink.mk"
+.include "../../mk/motif.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
