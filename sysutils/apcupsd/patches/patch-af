@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.2 2000/08/05 07:31:19 jlam Exp $
+$NetBSD: patch-af,v 1.3 2002/01/03 14:31:09 wiz Exp $
 
---- Makefile.in.orig	Thu Jul 29 03:46:32 1999
-+++ Makefile.in	Sat Aug  5 02:59:43 2000
+--- Makefile.in.orig	Thu Jul 29 09:46:32 1999
++++ Makefile.in
 @@ -13,7 +13,7 @@
  
  # Ultrix 2.2 make doesn't expand the value of VPATH.
@@ -20,6 +20,25 @@ $NetBSD: patch-af,v 1.2 2000/08/05 07:31:19 jlam Exp $
  # Program to install the man page.
  INSTALL_DATA = @INSTALL_DATA@
  # Generic install program.
+@@ -113,15 +115,15 @@
+ 	ar rcs $(apclib) $(libobjs)
+ 	$(RANLIB) $(apclib)
+ 
+-apcupsd: $(dobjs) $(apclib) @INTLLIBS@
++apcupsd: $(dobjs) $(apclib)
+ 	$(CC) $(LDEFLAGS) $(LDFLAGS) $(dobjs) $(apclib) $(LOADLIBS) \
+ 		-o apcupsd
+ 
+-apcaccess: $(aobjs) $(apclib) @INTLLIBS@
++apcaccess: $(aobjs) $(apclib)
+ 	$(CC) $(LDEFLAGS) $(LDFLAGS) $(aobjs) $(apclib) $(LOADLIBS) \
+ 		-o apcaccess
+ 
+-powerflute: $(fobjs) $(apclib) @INTLLIBS@
++powerflute: $(fobjs) $(apclib)
+ 	$(CC) $(LDEFLAGS) $(LDFLAGS) $(fobjs) $(apclib) $(LOADLIBS) \
+ 		-o powerflute
+ 
 @@ -134,11 +136,10 @@
  dummy:
  
