@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.29 2002/03/18 00:06:04 abs Exp $
+# $Id: pkgchk.sh,v 1.30 2002/03/27 09:39:02 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -36,9 +36,7 @@ check_packages_installed()
 	    if [ -n "$pkginstalled" ];then
 		echo_n "version mismatch - $pkginstalled"
 		MISMATCH_TODO="$MISMATCH_TODO $pkginstalled"
-		if [ -n "$opt_u" ]; then
-		    UPDATE_TODO="$UPDATE_TODO $PKGNAME $pkgdir"
-		fi
+		UPDATE_TODO="$UPDATE_TODO $PKGNAME $pkgdir"
 	    else
 		echo_n "missing"
 		MISSING_TODO="$MISSING_TODO $PKGNAME $pkgdir"
