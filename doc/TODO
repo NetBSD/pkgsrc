@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1783 2004/05/26 22:21:47 recht Exp $
+$NetBSD: TODO,v 1.1784 2004/05/26 23:44:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -178,7 +178,7 @@ Suggested package updates
 	o checkbot-1.74
 	o clanlib-0.7.8
 	o classpath-0.09
-	o cocoon-2.1.4
+	o cocoon-2.1.5
 	o conserver-8.1.5
 	o courier-imap-3.0.0
 	o courier-0.45
@@ -197,6 +197,8 @@ Suggested package updates
 	o dict-server-1.9.11
 	o dmalloc-5.3.0
 	o dnetc-2.9004-482 [pkg/22390]
+	o docbook-4.3
+	o docbook-simple-1.1b2
 	o dvd+rw-tools-5.19-1.4.9.7 [pkg/25433]
 	o dvdrip-0.50.18
 	o dylan-compiler-2.3.11
@@ -204,7 +206,7 @@ Suggested package updates
 	o eclipse-2.1.3
 	o efax-gtk-2.2.7
 	o elk-3.99.6
-	o elm-me-2.4pl115
+	o elm-me-2.4pl116
 	o evolution-1.5.2
 	o exim-4.34
 	o festival-1.4.3
@@ -217,6 +219,7 @@ Suggested package updates
 	o fox-1.2.1
 	o freetds-0.62.3
 	o fsviewer-0.2.5
+	o gauche-0.8
 	o gcc-3.4.0 [pkgsrc-wip]
 	o gcpio-2.5 [pkg/20799]
 	o gcvs-1.0-1
@@ -239,8 +242,10 @@ Suggested package updates
 	o grhino-0.12.0
 	o groff-1.19.1
 	o gsasl-0.1.0
+	o gss-0.0.11
 	o gtar-1.14
 	o gtetrinet-0.7.4
+	o gtkballs-3.1.3
 	o gtkglext-1.0.6
 	o gtksee-0.5.5.1
 	o gtranslator-1.0.1
@@ -261,19 +266,20 @@ Suggested package updates
 	o joe-3.0
 	o john-1.6.37
 	o jpilot-0.99.7 [pkg/24635]
+	o kdbg-1.2.10
 	o kile-1.6.3
 	o larswm-7.3.6
 	o latex2rtf-1.9.15
 	o lavaps-2.4
-	o leafnode-1.9.53
+	o leafnode-1.9.54
+	o lftp-3.0.4
 	o libcaca-0.9
 	o libesmtp-1.0.3
-	o libidn-0.4.4
 	o libmpeg3-1.5.4
 	o libnet-1.1.1
 	o libole2-2.2.8
 	o licq-1.2.7
-	o liferea-0.4.8
+	o liferea-0.4.9
 	o lilypond-2.2
 	o lmbench-2.0.4
 	o lout-3.29
@@ -294,7 +300,7 @@ Suggested package updates
 	o mozilla-stable-1.4.2
 	o mrproject-0.9.1
 	o multi-gnome-terminal-1.6.2
-	o multitail-3.2.0
+	o multitail-3.2.1
 	o namazu-2.0.13
 	o nano-1.2.3
 	o nap-1.5.2
@@ -305,7 +311,7 @@ Suggested package updates
 	o ns-flash-6.0.79
 	o nsd-2.1.0
 	o nslint-2.1a3
-	o nut-9.13
+	o nut-9.14
 	o nxtvepg-2.7.0
 	o ocaml-3.07pl2
 	o onyx-5.1.1
@@ -375,8 +381,9 @@ Suggested package updates
 	o trac-0.7 [epg]
 	o tripwire-2.3.1 [see also pkg/22362]
 	o txt2html-2.24 [wennmach]
+	o unzip-5.51
 	o uvscan-4.3.2 [jlam]
-	o vba-1.7.1
+	o vba-1.7.2
 	o vfu-4.03
 	o vnc-3.3.7 [http://www.realvnc.com/download.html]
 	o vttest-20030301
@@ -390,6 +397,7 @@ Suggested package updates
 	o xbeeb-0.4.1
 	o xboard-4.2.7
 	o xdaliclock-2.20
+	o xdx-1.2
 	o xerces-c-2.5.0 [heinz?|p5-XML-Xerces requires xerces-c-2.3.0]
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.6.2
@@ -402,6 +410,7 @@ Suggested package updates
 	o xmms-iris-0.12
 	o xorp-0.5
 	o xpad-1.13.1
+	o xplanet-1.0.8
 	o xps-4.2
 	o xpuyopuyo-0.9.5
 	o xsidplay-1.6.5pre20
