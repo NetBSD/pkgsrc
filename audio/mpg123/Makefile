@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2002/02/23 09:20:37 tron Exp $
+# $NetBSD: Makefile,v 1.32 2002/04/25 16:34:15 abs Exp $
 
 DISTNAME=	mpg123-0.59r
 PKGREVISION=	1
@@ -28,8 +28,8 @@ ALL_TARGET=	netbsd-i386-elf
 .else
 ALL_TARGET=	netbsd-i386
 .endif
-.elif (${MACHINE_ARCH} == "arm32")
-ALL_TARGET=	netbsd-arm32
+.elif (${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32")
+ALL_TARGET=	netbsd-arm
 .elif (${MACHINE_ARCH} == "m68k")
 ALL_TARGET=	netbsd-m68k
 .else
