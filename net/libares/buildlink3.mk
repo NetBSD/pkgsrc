@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/25 00:25:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/04/25 00:34:21 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBARES_BUILDLINK3_MK:=	${LIBARES_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_PACKAGES+=	libares
 .if !empty(LIBARES_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libares+=	libares>=1.1.1
 BUILDLINK_PKGSRCDIR.libares?=	../../net/libares
+BUILDLINK_DEPMETHOD.libares?=	build
 .endif	# LIBARES_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
