@@ -1,4 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2001/03/18 22:53:47 jwise Exp $
+# $NetBSD: Makefile,v 1.6 2001/03/18 22:57:08 jwise Exp $
+#
+# NOTE: if you are depending on ant from another package, please be aware that
+# the ant team has CHANGED the version numbering scheme.  The previous version
+# of ant was 3.1.  Do NOT use dependency patterns such as >=1.3 which could pick
+# up this version by mistake.
 
 DISTNAME=	${PKGNAME}-src
 PKGNAME=	jakarta-ant-1.3
