@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.5 2001/06/11 01:59:36 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.6 2001/06/23 19:26:57 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libpng.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define PNG_REQD to the version of libpng desired.
+# (1) Optionally define BUILDLINK_DEPENDS.png to the dependency pattern
+#     for the version of libpng desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,8 +15,8 @@
 .if !defined(PNG_BUILDLINK_MK)
 PNG_BUILDLINK_MK=	# defined
 
-PNG_REQD?=		1.0.11
-DEPENDS+=		png>=${PNG_REQD}:../../graphics/png
+BUILDLINK_DEPENDS.png?=	png>=1.0.11
+DEPENDS+=		${BUILDLINK_DEPENDS.png}:../../graphics/png
 
 BUILDLINK_PREFIX.png=	${LOCALBASE}
 BUILDLINK_FILES.png=	include/png.h

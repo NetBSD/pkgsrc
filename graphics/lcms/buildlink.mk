@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/22 16:39:00 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:26:56 jlam Exp $
 #
 # This Makefile fragment is included by packages that use lcms.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define LCMS_REQD to the version of lcms desired.
+# (1) Optionally define BUILDLINK_DEPENDS.lcms to the dependency pattern
+#     for the version of lcms desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,8 +15,8 @@
 .if !defined(LCMS_BUILDLINK_MK)
 LCMS_BUILDLINK_MK=	# defined
 
-LCMS_REQD?=		1.06
-DEPENDS+=		lcms>=${LCMS_REQD}:../../graphics/lcms
+BUILDLINK_DEPENDS.lcms?=	lcms>=1.06
+DEPENDS+=	${BUILDLINK_DEPENDS.lcms}:../../graphics/lcms
 
 BUILDLINK_PREFIX.lcms=	${LOCALBASE}
 BUILDLINK_FILES.lcms=	include/lcms/*
