@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2004/03/22 03:39:00 kristerw Exp $
+# $NetBSD: Makefile.common,v 1.18 2004/05/05 17:20:29 xtraeme Exp $
 
 CATEGORIES=	lang java
 EXTRACT_SUFX=	.bin
@@ -28,7 +28,7 @@ DEPENDS+=	suse_compat-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=	suse_x11-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_x11
 .endif
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 NO_MTREE=	yes	# since we change PREFIX
 LDD=		${TRUE}
 
