@@ -9,4 +9,3 @@ time  between updates can be changed with the -wait option
 the  -once  option  (see  below).   Xearth can also render
 directly into PPM and GIF files instead of drawing in  the
 root window; see the -ppm and -gif options (below)."
-
