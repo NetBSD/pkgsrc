@@ -1,0 +1,18 @@
+$NetBSD: patch-bn,v 1.1.1.1 2004/04/19 23:25:29 taya Exp $
+
+diff -ru ../Orig/mozilla/xpcom/io/nsNativeCharsetUtils.cpp ./xpcom/io/nsNativeCharsetUtils.cpp
+--- ../Orig/mozilla/xpcom/io/nsNativeCharsetUtils.cpp	2004-01-08 10:25:56.000000000 +0900
++++ ./xpcom/io/nsNativeCharsetUtils.cpp	2004-01-16 23:17:54.000000000 +0900
+@@ -294,7 +294,12 @@
+ {
+     const char  *blank_list[] = { "", NULL };
+     const char **native_charset_list = blank_list;
++#ifdef CODESET
+     const char  *native_charset = nl_langinfo(CODESET);
++#else
++    const char  *native_charset = nsnull;
++#endif
++
+     if (native_charset == nsnull) {
+         NS_ERROR("native charset is unknown");
+         // fallback to ISO-8859-1
