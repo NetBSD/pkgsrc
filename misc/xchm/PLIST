@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/10/04 09:22:22 minskim Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/10/30 07:13:47 minskim Exp $
 bin/xchm
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/xchm.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xchm.mo
@@ -6,6 +6,7 @@ ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xchm.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xchm.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xchm.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xchm.mo
+${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/xchm.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xchm.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/xchm.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/xchm.mo
