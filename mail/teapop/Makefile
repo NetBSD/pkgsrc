@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2001/06/30 21:21:51 zuntum Exp $
+# $NetBSD: Makefile,v 1.4 2001/08/31 21:27:49 zuntum Exp $
 
-DISTNAME=	teapop-0.3.1
+DISTNAME=	teapop-0.3.2
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.toontown.org/pub/teapop/			\
 		http://www.toontown.org/pub/teapop/
 
-MAINTAINER=	zuntum@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.toontown.org/teapop/
 COMMENT=	Yet another RFC1939 compliant POP3 server
 
