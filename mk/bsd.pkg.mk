@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1571 2005/01/24 19:32:33 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1572 2005/01/24 19:57:42 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -19,20 +19,12 @@
 
 ##### Include any preferences, if not already included, and common definitions
 .include "../../mk/bsd.prefs.mk"
-
-##### Prevent /etc/mk.conf from being included by a distribution's BSD-style
-##### Makefiles.  We really don't want to pick up settings that are used by
-##### builds in /usr/src, e.g. DESTDIR.
-.if defined(PKGMAKECONF)
-MAKE_ENV+=	MAKECONF=${PKGMAKECONF}
-.else
-MAKE_ENV+=	MAKECONF=/dev/null
-.endif
+.include "../../mk/bsd.hacks.mk"
 
 ##### Pass information about desired toolchain to package build.
-.if defined(USETOOLS)
-MAKE_ENV+=	USETOOLS="${USETOOLS}"
-.endif
+MAKE_ENV+=	MAKECONF=${PKGMAKECONF:U/dev/null}
+MAKE_ENV+=	OBJECT_FMT=${OBJECT_FMT:Q}
+MAKE_ENV+=	${USETOOLS:DUSETOOLS=${USETOOLS:Q}}
 
 # This has to come first to avoid showing all BUILD_DEFS added by this
 # Makefile, which are usually not customizable.
@@ -67,20 +59,77 @@ build-defs-message: ${WRKDIR}
 .  endif
 .endif
 
+# Transform package Makefile variables and set defaults
+
+CHECK_FILES?=		NO	# run check-files after install
+CHECK_FILES_STRICT?=	NO	# make check-files very strict on errors
+CHECK_SHLIBS?=		YES	# run check-shlibs after install
+CLEANDEPENDS?=		NO
+DEINSTALLDEPENDS?=	NO	# add -R to pkg_delete
+MKCRYPTO?=		YES	# build crypto packages by default
+NOCLEAN?=		NO	# don't clean up after update
+REINSTALL?=		NO	# reinstall upon update
+SHLIB_HANDLING?=	YES	# do automatic shared lib handling
+
+##### Variant spellings
+
+.if defined(LICENCE) && !defined(LICENSE)
+LICENSE=		${LICENCE}
+.endif
+.if defined(ACCEPTABLE_LICENCES) && !defined(ACCEPTABLE_LICENSES)
+ACCEPTABLE_LICENSES=	${ACCEPTABLE_LICENCES}
+.endif
+
+##### PKGBASE, PKGNAME[_NOREV], PKGVERSION
+
+PKGBASE?=		${PKGNAME:C/-[^-]*$//}
+PKGVERSION?=		${PKGNAME:C/^.*-//}
+.if defined(PKGREVISION) && !empty(PKGREVISION) && (${PKGREVISION} != "0")
+.  if defined(PKGNAME)
+PKGNAME_NOREV:=		${PKGNAME}
+PKGNAME:=		${PKGNAME}nb${PKGREVISION}
+.  else
+PKGNAME?=		${DISTNAME}nb${PKGREVISION}
+PKGNAME_NOREV=		${DISTNAME}
+.  endif
+.else
+PKGNAME?=		${DISTNAME}
+PKGNAME_NOREV=		${PKGNAME}
+.endif
+
+##### Others
+
+_DISTDIR?=		${DISTDIR}/${DIST_SUBDIR}
+BUILD_TARGET?=		all
+CONFIGURE_DIRS?=	${WRKSRC}
+CONFIGURE_SCRIPT?=	./configure
+DESCR_SRC?=		${PKGDIR}/DESCR
+DIGEST_ALGORITHM?=	SHA1
+DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
+DISTINFO_FILE?=		${PKGDIR}/distinfo
+EXTRACT_ONLY?=		${DISTFILES}
+EXTRACT_SUFX?=		.tar.gz
+INSTALL_DIRS?=		${BUILD_DIRS}
+INSTALL_MAKE_FLAGS?=	${MAKE_FLAGS}
+INSTALL_TARGET?=	install
+INTERACTIVE_STAGE?=	none
+MAINTAINER?=		tech-pkg@NetBSD.org
+MAKE_FLAGS?=		# empty
+MAKEFILE?=		Makefile
+PKG_SUFX?=		.tgz
+PKGFILE?=		${PKGREPOSITORY}/${PKGNAME}${PKG_SUFX}
+PKGREPOSITORY?=		${PACKAGES}/${PKGREPOSITORYSUBDIR}
+PKGREPOSITORYSUBDIR?=	All
+PKGWILDCARD?=		${PKGBASE}-[0-9]*
+SVR4_PKGNAME?=		${PKGNAME}
+USE_DIGEST?=		YES
+USE_GNU_TOOLS?=		# empty
+WRKSRC?=		${WRKDIR}/${DISTNAME}
+
 # Fail-safe in the case of circular dependencies
 .if defined(_PKGSRC_DEPS) && defined(PKGNAME) && !empty(_PKGSRC_DEPS:M${PKGNAME})
     PKG_FAIL_REASON+="Circular dependency detected"
 .endif
-
-##### Some NetBSD platforms permitted the user to set the binary format while
-##### they were in the process of transitioning to ELF. Packages with BSD-style
-##### make systems need this setting to be passed in.
-.if defined(OBJECT_FMT)
-MAKE_ENV+=	OBJECT_FMT="${OBJECT_FMT}"
-.endif
-
-# Include any hacks necessary for the package to build properly.
-.include "../../mk/bsd.hacks.mk"
 
 # Allow variables to be set on a per-OS basis
 OPSYSVARS+=	CFLAGS CXXFLAGS CPPFLAGS LDFLAGS LIBS
@@ -98,39 +147,6 @@ ${_var_}+=	${${_var_}.*}
 .if defined(PKG_SUPPORTED_OPTIONS) && defined(PKG_OPTIONS)
 BUILD_DEFS+=            PKG_OPTIONS
 .endif
-
-##### Build crypto packages by default.
-MKCRYPTO?=		yes
-
-CLEANDEPENDS?=		NO
-DEINSTALLDEPENDS?=	NO	# add -R to pkg_delete
-REINSTALL?=		NO	# reinstall upon update
-CHECK_FILES?=		NO	# run check-files after install
-CHECK_FILES_STRICT?=	NO	# make check-files very strict on errors
-CHECK_SHLIBS?=		YES	# run check-shlibs after install
-SHLIB_HANDLING?=	YES	# do automatic shared lib handling
-NOCLEAN?=		NO	# don't clean up after update
-
-PKGBASE?=		${PKGNAME:C/-[^-]*$//}
-PKGVERSION?=		${PKGNAME:C/^.*-//}
-PKGWILDCARD?=		${PKGBASE}-[0-9]*
-.if defined(PKGREVISION) && !empty(PKGREVISION) && (${PKGREVISION} != "0")
-.  if defined(PKGNAME)
-PKGNAME_NOREV:=		${PKGNAME}
-PKGNAME:=		${PKGNAME}nb${PKGREVISION}
-.  else
-PKGNAME?=		${DISTNAME}nb${PKGREVISION}
-PKGNAME_NOREV=		${DISTNAME}
-.  endif
-.else
-PKGNAME?=		${DISTNAME}
-PKGNAME_NOREV=		${PKGNAME}
-.endif
-SVR4_PKGNAME?=		${PKGNAME}
-
-_DISTDIR?=		${DISTDIR}/${DIST_SUBDIR}
-
-INTERACTIVE_STAGE?=	none
 
 # PKG_INSTALLATION_TYPE can only be one of two values: "pkgviews" or
 # "overwrite".
@@ -252,7 +268,7 @@ PKG_FAIL_REASON+= "${PKGNAME} uses imake, but the buildlink-x11 package was foun
 .  endif
 .endif	# USE_IMAKE
 
-.if defined(USE_GNU_TOOLS) && !empty(USE_GNU_TOOLS:Mmake)
+.if !empty(USE_GNU_TOOLS:Mmake)
 _USE_GMAKE=		yes
 .endif
 
@@ -408,13 +424,8 @@ PACKAGE_COOKIE=		${WRKDIR}/.package_done
 INTERACTIVE_COOKIE=	.interactive_stage
 NULL_COOKIE=		${WRKDIR}/.null
 
-# New message digest defs
-DIGEST_ALGORITHM?=	SHA1
-
 # Miscellaneous overridable commands:
 SHCOMMENT?=		${ECHO_MSG} >/dev/null '***'
-
-DISTINFO_FILE?=		${.CURDIR}/distinfo
 
 LIBABISUFFIX?=
 
@@ -440,8 +451,6 @@ CONFIGURE_ENV+=		LDFLAGS="${LDFLAGS:M*}" M4="${M4}" YACC="${YACC}"
 CONFIGURE_ENV+=		LINKER_RPATH_FLAG="${LINKER_RPATH_FLAG}"
 CONFIGURE_ENV+=		COMPILER_RPATH_FLAG="${COMPILER_RPATH_FLAG}"
 
-MAKE_FLAGS?=
-MAKEFILE?=		Makefile
 MAKE_ENV+=		PATH=${PATH}
 MAKE_ENV+=		PREFIX=${PREFIX} LOCALBASE=${LOCALBASE}
 MAKE_ENV+=		X11BASE=${X11BASE} CFLAGS="${CFLAGS}"
@@ -568,8 +577,6 @@ if [ -n "${PKG_OPTIONS}" ] || [ -n "${_LOCALPATCHFILES}" ]; then	\
 fi; exit 1
 .endif
 
-EXTRACT_SUFX?=		.tar.gz
-
 # We need bzip2 for PATCHFILES with .bz2 suffix.
 .if defined(PATCHFILES)
 .  if !empty(PATCHFILES:M*.bz2) && ${EXTRACT_SUFX} != ".tar.bz2"
@@ -608,8 +615,6 @@ _PKG_SILENT=		# empty
 _PKG_DEBUG=		set -x;
 _PKG_DEBUG_SCRIPT=	${SH} -x
 .endif
-
-WRKSRC?=		${WRKDIR}/${DISTNAME}
 
 .if defined(NO_WRKSUBDIR)
 PKG_FAIL_REASON+='NO_WRKSUBDIR has been deprecated - please replace it with an explicit'
@@ -671,9 +676,6 @@ COMMENT!=	(${CAT} ${PKGDIR}/COMMENT || ${ECHO_N} "(no description)") 2>/dev/null
 .endif
 
 DESCR=			${PKG_DB_TMPDIR}/+DESC
-.if !defined(DESCR_SRC)
-DESCR_SRC?=		${PKGDIR}/DESCR
-.endif
 PLIST=			${WRKDIR}/.PLIST
 
 .if ${PLIST_TYPE} == "static"
@@ -824,8 +826,6 @@ _PKGSRC_BUILD_TARGETS=	build
 # Latest version of digest(1) required for pkgsrc
 DIGEST_REQD=		20010302
 
-USE_DIGEST?=	yes
-
 .PHONY: uptodate-digest
 uptodate-digest:
 .if !empty(USE_DIGEST:M[yY][eE][sS])
@@ -911,8 +911,6 @@ PKG_ARGS_INSTALL+=	-U	# don't update the pkgdb.byfile.db
 PKG_ARGS_BINPKG+=	-E	# create an empty views file in the binpkg
 .endif
 
-PKG_SUFX?=		.tgz
-
 # Define SMART_MESSAGES in /etc/mk.conf for messages giving the tree
 # of dependencies for building, and the current target.
 .ifdef SMART_MESSAGES
@@ -932,9 +930,6 @@ DO_NADA?=		${TRUE}
 .if defined(ALL_TARGET)
 PKG_FAIL_REASON+='ALL_TARGET is deprecated and must be replaced with BUILD_TARGET.'
 .endif
-
-BUILD_TARGET?=		all
-INSTALL_TARGET?=	install
 
 .if defined(USE_IMAKE) && !defined(NO_INSTALL_MANPAGES)
 INSTALL_TARGET+=	install.man
@@ -974,11 +969,6 @@ _MASTER_SITE_OVERRIDE:= ${MASTER_SITE_OVERRIDE}
 MASTER_SITE_LOCAL?= \
 	${MASTER_SITE_BACKUP:=LOCAL_PORTS/} \
 
-# Derived names so that they're easily overridable.
-DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
-
-MAINTAINER?=		tech-pkg@NetBSD.org
-
 ALLFILES?=	${DISTFILES} ${PATCHFILES}
 CKSUMFILES?=	${ALLFILES}
 .for __tmp__ in ${IGNOREFILES}
@@ -1010,10 +1000,6 @@ _IGNOREFILES?=	${IGNOREFILES}
 _PATCHFILES?=	${PATCHFILES}
 .endif
 _ALLFILES?=	${_DISTFILES} ${_PATCHFILES}
-
-# This is what is actually going to be extracted, and is overridable
-# by user.
-EXTRACT_ONLY?=	${DISTFILES}
 
 .if !defined(CATEGORIES) || !defined(DISTNAME)
 PKG_FAIL_REASON+='CATEGORIES and DISTNAME are mandatory.'
@@ -1049,12 +1035,6 @@ PKG_FAIL_REASON+='Please "${MAKE} install" in ../../pkgtools/shlock.'
 . endif
 .endif
 
-PKGREPOSITORYSUBDIR?=	All
-PKGREPOSITORY?=		${PACKAGES}/${PKGREPOSITORYSUBDIR}
-PKGFILE?=		${PKGREPOSITORY}/${PKGNAME}${PKG_SUFX}
-
-CONFIGURE_DIRS?=	${WRKSRC}
-CONFIGURE_SCRIPT?=	./configure
 CONFIGURE_ENV+=		PATH=${PATH}
 
 .if defined(GNU_CONFIGURE)
@@ -1206,15 +1186,6 @@ PATH=			${_PATH_CMD:sh} # DOES NOT use :=, to defer evaluation
 BUILD_ENV+=	PATH=${PATH:Q}
 
 .MAIN: all
-
-# Use aliases, so that all versions of English are acceptable
-.if defined(LICENCE) && !defined(LICENSE)
-LICENSE=	${LICENCE}
-.endif
-
-.if defined(ACCEPTABLE_LICENCES) && !defined(ACCEPTABLE_LICENSES)
-ACCEPTABLE_LICENSES=	${ACCEPTABLE_LICENCES}
-.endif
 
 ################################################################
 # Many ways to disable a package.
@@ -2431,9 +2402,6 @@ do-test:
 .endif
 
 # Install
-
-INSTALL_DIRS?=		${BUILD_DIRS}
-INSTALL_MAKE_FLAGS?=	${MAKE_FLAGS}
 
 .PHONY: do-install
 .if !target(do-install)
