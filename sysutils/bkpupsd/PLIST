@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2001/12/19 15:38:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/07/31 11:07:30 jmmv Exp $
 etc/rc.d/bkpupsd
-etc/upstab
 libexec/bkpupsd/battery.shutdown
 libexec/bkpupsd/line.lost
 libexec/bkpupsd/line.recover
@@ -14,4 +13,6 @@ sbin/bkpupsd
 share/doc/bkpupsd/README
 share/doc/bkpupsd/README.ja
 share/doc/bkpupsd/rc.conf.d.sample
+share/examples/bkpupsd/upstab
+@dirrm share/examples/bkpupsd
 @dirrm share/doc/bkpupsd
