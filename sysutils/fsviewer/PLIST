@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:53:09 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/11/26 09:10:11 adam Exp $
 GNUstep/Apps/FSViewer.app/FSViewer
 GNUstep/Apps/FSViewer.app/MagicFiles
 GNUstep/Apps/FSViewer.app/tiff/FSViewer.tif
 GNUstep/Apps/FSViewer.app/tiff/exec-link.tif
-GNUstep/Apps/FSViewer.app/tiff/file-core.tif
 GNUstep/Apps/FSViewer.app/tiff/file-dot-a.tif
 GNUstep/Apps/FSViewer.app/tiff/file-dot-aiff.tif
 GNUstep/Apps/FSViewer.app/tiff/file-dot-au.tif
@@ -13,6 +12,7 @@ GNUstep/Apps/FSViewer.app/tiff/file-dot-c.tif
 GNUstep/Apps/FSViewer.app/tiff/file-dot-cc.tif
 GNUstep/Apps/FSViewer.app/tiff/file-dot-class.tif
 GNUstep/Apps/FSViewer.app/tiff/file-dot-conf.tif
+GNUstep/Apps/FSViewer.app/tiff/file-dot-core.tif
 GNUstep/Apps/FSViewer.app/tiff/file-dot-cpp.tif
 GNUstep/Apps/FSViewer.app/tiff/file-dot-dat.tif
 GNUstep/Apps/FSViewer.app/tiff/file-dot-deb.tif
@@ -81,7 +81,6 @@ GNUstep/Apps/FSViewer.app/xpm/arrow.xpm
 GNUstep/Apps/FSViewer.app/xpm/clk.xpm
 GNUstep/Apps/FSViewer.app/xpm/date.xpm
 GNUstep/Apps/FSViewer.app/xpm/exec-link.xpm
-GNUstep/Apps/FSViewer.app/xpm/file-core.xpm
 GNUstep/Apps/FSViewer.app/xpm/file-dot-a.xpm
 GNUstep/Apps/FSViewer.app/xpm/file-dot-aiff.xpm
 GNUstep/Apps/FSViewer.app/xpm/file-dot-au.xpm
@@ -91,6 +90,7 @@ GNUstep/Apps/FSViewer.app/xpm/file-dot-c.xpm
 GNUstep/Apps/FSViewer.app/xpm/file-dot-cc.xpm
 GNUstep/Apps/FSViewer.app/xpm/file-dot-class.xpm
 GNUstep/Apps/FSViewer.app/xpm/file-dot-conf.xpm
+GNUstep/Apps/FSViewer.app/xpm/file-dot-core.xpm
 GNUstep/Apps/FSViewer.app/xpm/file-dot-cpp.xpm
 GNUstep/Apps/FSViewer.app/xpm/file-dot-dat.xpm
 GNUstep/Apps/FSViewer.app/xpm/file-dot-deb.xpm
@@ -158,6 +158,8 @@ GNUstep/Apps/FSViewer.app/xpm/wmanalog.xpm
 GNUstep/Apps/FSViewer.app/xpm/wmdigital.xpm
 GNUstep/Apps/FSViewer.app/xpm/wmtime.xpm
 GNUstep/Apps/FSViewer.app/xpm/year.xpm
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/FSViewer.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/FSViewer.mo
 @dirrm GNUstep/Apps/FSViewer.app/xpm
 @dirrm GNUstep/Apps/FSViewer.app/tiff
 @dirrm GNUstep/Apps/FSViewer.app
