@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/03/30 22:23:07 jtb Exp $
+# $NetBSD: Makefile,v 1.6 2001/04/08 22:53:14 jtb Exp $
 
 DISTNAME=	ScientificPython-2.2
 PKGNAME=	py-Scientific-2.2
@@ -20,6 +20,10 @@ IGNORE="${PKGNAME} needs dynamic loading"
 .endif
 
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
+
+PYPREFIX_DEFAULT=${LOCALBASE}
+NETCDFPREFIX_DEFAULT=${LOCALBASE}
+MPICHPREFIX_DEFAULT=${LOCALBASE}
 EVAL_PREFIX+=	PYPREFIX=python NETCDFPREFIX=netcdf MPICHPREFIX=mpich
 
 do-configure:
