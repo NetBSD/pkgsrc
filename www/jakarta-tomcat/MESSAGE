@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2004/04/29 18:24:55 erh Exp $
+$NetBSD: MESSAGE,v 1.6 2004/05/26 15:16:26 xtraeme Exp $
 
 For detailed instructions on how to run Tomcat, either as a
 standalone server or in conjunction with Apache (using the
@@ -13,6 +13,6 @@ For more information on application development with Tomcat, see
 
 Note that tomcat may be started with the following command:
 
-	${PREFIX}/etc/rc.d/tomcat5 start
+	${RCD_SCRIPTS_DIR}/tomcat start
 
 ===========================================================================
