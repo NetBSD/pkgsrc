@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/10/13 19:08:28 jlam Exp $
+# $NetBSD: Makefile,v 1.2 1999/10/14 02:30:25 jlam Exp $
 #
 
 DISTNAME=	eiffel_gtk_0.3.3
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.netlabs.net/hp/richieb/downloads/
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.netlabs.net/hp/richieb/gtk_eiffel.html
 
-DEPENDS+=	gtk-1.2.*:../../x11/gtk
+DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	smalleiffel-*:../../lang/smalleiffel
 
 USE_X11=	yes
