@@ -1,0 +1,13 @@
+compose - functional composition adapters for the STL
+dir_it - a set of file system directory level iterators
+integer - headers for dealing with integral types
+min_rand - a random number generator class
+rational - a rational number class
+smart_ptr - four smart pointer classes
+timer - event timer, progress timer, and progress display classes
+utility - various utility classes and functions:
+    * call_traits - defines types for passing parameters
+    * compressed_pair - Empty member optimization
+    * operators - Templates for arithmetic classes and iterators
+    * type_traits - Template describe the fundamental properties of a type
+    * utility - Class noncopyable plus next() and prior() template functions
