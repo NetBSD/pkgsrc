@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2004/10/03 00:14:42 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/03/01 19:00:11 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-fontserver-${XORG_VER}
-PKGREVISION=	1
 CATEGORIES=	fonts x11
 MASTER_SITES=	${MASTER_SITE_XORG}
 DISTFILES=	X11R${XORG_VER}-src1.tar.gz X11R${XORG_VER}-src2.tar.gz \
