@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/26 14:14:48 adam Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 08:45:12 agc Exp $
 
 SHA1 (potrace-1.5.tar.gz) = 540a961f6862a9e78bb9a73172299c25baeae19c
+RMD160 (potrace-1.5.tar.gz) = 84bc2f4ac03196804d754ced5be7797865e205c5
 Size (potrace-1.5.tar.gz) = 221180 bytes

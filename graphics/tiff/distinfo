@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.24 2005/01/17 08:37:31 jlam Exp $
+$NetBSD: distinfo,v 1.25 2005/02/24 08:45:13 agc Exp $
 
 SHA1 (tiff-3.7.1.tar.gz) = 001b03350182869c7f5d46e6b27862b85cb06fc3
+RMD160 (tiff-3.7.1.tar.gz) = 96ac6ade88a799afbd31c851abce527cb69ac937
 Size (tiff-3.7.1.tar.gz) = 1253810 bytes
 SHA1 (patch-aa) = 995c418791f2c8ce3f634dac117949048955b625
 SHA1 (patch-ab) = 1e6a2dd379e388f11c5a7b1959240fd66d29b88a
