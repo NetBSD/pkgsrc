@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/07/24 02:32:17 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/08/16 16:33:15 wiz Exp $
 lib/X11/fonts/intlfonts/a18rk.pcf.gz
 lib/X11/fonts/intlfonts/a18rkb.pcf.gz
 lib/X11/fonts/intlfonts/a18rki.pcf.gz
@@ -41,6 +41,9 @@ lib/X11/fonts/intlfonts/bdf/grk14-etl.bdf
 lib/X11/fonts/intlfonts/bdf/grk16-etl.bdf
 lib/X11/fonts/intlfonts/bdf/grk24-etl.bdf
 lib/X11/fonts/intlfonts/bdf/guob16.bdf
+lib/X11/fonts/intlfonts/bdf/hanglg16.bdf
+lib/X11/fonts/intlfonts/bdf/hanglm16.bdf
+lib/X11/fonts/intlfonts/bdf/hanglm24.bdf
 lib/X11/fonts/intlfonts/bdf/heb14-etl.bdf
 lib/X11/fonts/intlfonts/bdf/heb16-etl.bdf
 lib/X11/fonts/intlfonts/bdf/heb24-etl.bdf
@@ -147,6 +150,9 @@ lib/X11/fonts/intlfonts/grk14-etl.pcf.gz
 lib/X11/fonts/intlfonts/grk16-etl.pcf.gz
 lib/X11/fonts/intlfonts/grk24-etl.pcf.gz
 lib/X11/fonts/intlfonts/guob16.pcf.gz
+lib/X11/fonts/intlfonts/hanglg16.pcf.gz
+lib/X11/fonts/intlfonts/hanglm16.pcf.gz
+lib/X11/fonts/intlfonts/hanglm24.pcf.gz
 lib/X11/fonts/intlfonts/heb14-etl.pcf.gz
 lib/X11/fonts/intlfonts/heb16-etl.pcf.gz
 lib/X11/fonts/intlfonts/heb24-etl.pcf.gz
@@ -229,9 +235,3 @@ lib/X11/fonts/intlfonts/xtis18.pcf.gz
 lib/X11/fonts/intlfonts/xtis24.pcf.gz
 @dirrm lib/X11/fonts/intlfonts/bdf
 @dirrm lib/X11/fonts/intlfonts
-lib/X11/fonts/intlfonts/bdf/hanglg16.bdf
-lib/X11/fonts/intlfonts/bdf/hanglm16.bdf
-lib/X11/fonts/intlfonts/bdf/hanglm24.bdf
-lib/X11/fonts/intlfonts/hanglg16.pcf.gz
-lib/X11/fonts/intlfonts/hanglm16.pcf.gz
-lib/X11/fonts/intlfonts/hanglm24.pcf.gz
