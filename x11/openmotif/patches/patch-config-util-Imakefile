@@ -1,0 +1,21 @@
+$NetBSD: patch-config-util-Imakefile,v 1.1.1.1 2000/10/29 16:17:13 mjl Exp $
+
+--- config/util/Imakefile.orig	Sun Oct 29 14:31:06 2000
++++ config/util/Imakefile	Sun Oct 29 14:31:30 2000
+@@ -1,4 +1,16 @@
+ XCOMM $XConsortium: Imakefile /main/16 1996/11/13 14:43:28 lehors $
++
++#ifdef NetBSDArchitecture
++#undef InstallProgram
++#define InstallProgram(file,dest) /* as nothing */
++#undef InstallNamedProg
++#define InstallNamedProg(srcname,dstname,dest) /* as nothing */
++#undef InstallManPage
++#define InstallManPage(file,dest) /* as nothing */
++#undef InstallManPageLong
++#define InstallManPageLong(srcname,dest,dstname) /* as nothing */
++#endif
++
+ #if UseCCMakeDepend
+ MDEP_PROG = makedepend
+ #endif

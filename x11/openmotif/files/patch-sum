@@ -1,0 +1,14 @@
+$NetBSD: patch-sum,v 1.1.1.1 2000/10/29 16:17:13 mjl Exp $
+
+MD5 (patch-Imakefile) = b0d7201103da27a6d8eb49fd9325a382
+MD5 (patch-bindings-Imakefile) = 8a311dcf028d78f1fef08a23e5f85d5f
+MD5 (patch-clients-uil-Imakefile) = cecaebadac1061a4c2a2b69acf6dbaab
+MD5 (patch-config-cf-Imakefile) = e2d172752d6e36a5efebe2b8955b5c7b
+MD5 (patch-config-cf-Motif.rules) = c0c691eacd3b3e1223967068ba12fe68
+MD5 (patch-config-imake-Imakefile) = 570d224b859ce767dc8df5fc88aa80ec
+MD5 (patch-config-imake-imake.c) = f5d718ba16e8b6c4a3a514ad971bcf25
+MD5 (patch-config-util-Imakefile) = a5e3445c5a4c5b8486d5ef8c420692f1
+MD5 (patch-lib-Mrm-Imakefile) = 7bb20ed98449504c5de9ee966c8213bf
+MD5 (patch-lib-Xm-Imakefile) = b3f2972b681e9e3e859e7edb66b2e154
+MD5 (patch-lib-Xm-TextF.c) = b1dbdd4921baf45791a93c47850795e2
+MD5 (patch-tests-Performance-Startup-editor.c) = f9060865bfbe3b680fba391f2739725d
