@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2002/08/01 14:28:10 jlam Exp $
+# $NetBSD: Makefile,v 1.96 2002/08/02 05:40:48 jlam Exp $
 
 MOZ_VER=	1.0
 DISTNAME=	mozilla-source-${MOZ_VER}
@@ -67,6 +67,8 @@ SCRIPTS_ENV+=	BINGRP=${BINGRP}
 SCRIPTS_ENV+=	BINMODE=${BINMODE}
 SCRIPTS_ENV+=	SETENV=${SETENV}
 
+PTHREAD_OPTS+=	native optional
+
 .if ${MACHINE_ARCH} == "m68k"
 DBG=
 .else
@@ -93,12 +95,7 @@ do-install:
 
 .include "../../mk/pthread.buildlink.mk"
 
-# This check isn't strictly correct.  devel/glib requires a pthread library
-# but www/mozilla optionally wants a native pthread library.  The following
-# will work, but we may want to consider expanding the capabilities of
-# pthread.buildlink.mk to cover this scenario.
-#
-.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} != "native")
+.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
 CONFIGURE_ARGS+= --without-pthreads
 .endif
 
