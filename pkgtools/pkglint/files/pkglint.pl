@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.33 2000/07/20 13:53:41 rh Exp $
+# $NetBSD: pkglint.pl,v 1.34 2000/09/04 00:29:52 hubertf Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -23,7 +23,8 @@ use Getopt::Std;
 
 
 $err = $warn = 0;
-$extrafile = $parenwarn = $committer = $verbose = $newport = 0;
+$extrafile = $parenwarn = $committer = 1;	# -abc
+$verbose = $newport = 0;			# -vN
 $contblank = 1;
 $portdir = '.';
 
@@ -43,19 +44,15 @@ getopts('habcNB:v');
 if ($opt_h) {
 		($prog) = ($0 =~ /([^\/]+)$/);
 		print STDERR <<EOF;
-usage: $prog [-abcvN] [-B#] [package_directory]
-	-a	additional check for scripts/* and pkg/*
-	-b	warn \$(VARIABLE)
-	-c	committer mode
+usage: $prog [-vN] [-B#] [package_directory]
 	-v	verbose mode
 	-N	writing a new package
 	-B#	allow # contiguous blank lines (default: $contblank line)
 EOF
 		exit 0;
 };
-$extrafile = 1	if $opt_a;
-$parenwarn = 1	if $opt_b;
-$committer = 1	if $opt_c;
+print "One or more if the given options are on now by default.\n"
+	if $opt_a or $opt_b or $opt_c;
 $verbose = 1	if $opt_v;
 $newport = 1	if $opt_N;
 $contblank = $opt_B	if $opt_B;
