@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.7 2004/06/06 11:45:06 salo Exp $
+
+--- irssi/src/perl/Makefile.in.orig	2004-01-14 14:29:06.000000000 +0100
++++ irssi/src/perl/Makefile.in	2004-06-05 14:50:35.000000000 +0200
+@@ -265,7 +265,7 @@
+ 	-I$(top_srcdir)/src/fe-common/core \
+ 	-I$(top_srcdir)/src/fe-common/silc \
+ 	$(GLIB_CFLAGS) \
+-	-DSCRIPTDIR=\""$(datadir)/silc/scripts"\" \
++	-DSCRIPTDIR=\""$(prefix)/libexec/silc-client/scripts"\" \
+ 	-DPERL_USE_LIB=\""$(PERL_USE_LIB)"\" \
+ 	-DPERL_STATIC_LIBS=$(PERL_STATIC_LIBS) \
+ 	$(PERL_CFLAGS)
