@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/09/24 09:33:00 chris Exp $
+
+SHA1 (tremor_snapshot_020923.tgz) = 868f74b1782b0d03a4dfe4d7cb1268fc55379b48
+Size (tremor_snapshot_020923.tgz) = 141357 bytes
+SHA1 (patch-ab) = 5bf2c77a1a27e73264efa758615dcb1ec54ee522
