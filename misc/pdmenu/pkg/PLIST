@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/18 01:50:46 hubertf Exp $
+bin/pdmenu
+etc/pdmenurc.sample
+lib/pdmenu/editdir.pl
+lib/pdmenu/showdir.pl
+man/man1/pdmenu.1
+man/man5/pdmenurc.5
+share/doc/pdmenu/${PKGNAME}.lsm
+share/doc/pdmenu/ANNOUNCE
+share/doc/pdmenu/BUGS
+share/doc/pdmenu/TODO
+share/examples/pdmenu/README
+share/examples/pdmenu/ba.lpd
+share/examples/pdmenu/newbie/modem-check
+share/examples/pdmenu/newbie/pdmenurc.newbie
+share/examples/pdmenu/newbie/rpm-info-on-command
+share/examples/pdmenu/pdmenurc
+share/examples/pdmenu/pdmenurc.complex
+share/examples/pdmenu/pdmenurc.monitor
+share/examples/pdmenu/showdir.pl
+@dirrm share/examples/pdmenu/newbie
+@dirrm share/examples/pdmenu
+@dirrm share/doc/pdmenu
+@dirrm lib/pdmenu
