@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/06/29 22:57:09 zuntum Exp $
-# FreeBSD Id: Makefile,v 1.10 1997/07/17 15:12:39 max Exp 
+# $NetBSD: Makefile,v 1.19 2002/08/31 14:39:56 wiz Exp $
 #
 
 DISTNAME=       gsm-1.0.10
@@ -11,7 +10,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://kbs.cs.tu-berlin.de/~jutta/toast.html
 COMMENT=	Audio converter and library for converting u-law to gsm encoding
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=	# defined
 USE_LIBTOOL=	# defined
 
 NO_CONFIGURE=	# defined
