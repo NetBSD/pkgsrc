@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/02/02 13:44:51 drochner Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/31 02:39:48 grant Exp $
 
 MOZILLA=	phoenix
 MOZILLA_BIN=	phoenix-bin
@@ -9,7 +9,7 @@ DISTNAME=       mozilla-phoenix-${MOZ_VER}
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 HOMEPAGE=	http://www.mozilla.org/projects/phoenix/
-COMMENT=	A redesign of the Mozilla browser component
+COMMENT=	Lightweight gecko-based web browser
 
 CONFIGURE_ENV+=	MOZ_PHOENIX=1
 MAKE_ENV+=	MOZ_PHOENIX=1
