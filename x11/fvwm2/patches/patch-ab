@@ -1,13 +1,31 @@
-$NetBSD: patch-ab,v 1.4 1998/08/07 11:18:02 agc Exp $
+$NetBSD: patch-ab,v 1.5 1999/03/01 01:38:45 hubertf Exp $
 
---- Imakefile.orig	Thu Jun 12 22:06:45 1997
-+++ Imakefile	Tue Mar 24 23:49:41 1998
-@@ -37,7 +37,7 @@
- 	  sample.fvwmrc
+--- configure.orig	Sun Dec 27 15:53:35 1998
++++ configure	Sun Jan 10 23:46:33 1999
+@@ -648,7 +648,7 @@
+ test -z "$INSTALL_DATA" && INSTALL_DATA='${INSTALL} -m 644'
  
- #if HasXpm
--XPMSUBDIRS = xpmroot modules/FvwmBanner 
-+XPMSUBDIRS = modules/FvwmBanner 
- #endif
  
- SUBDIRS = $(BUILDSUBDIRS) $(XPMSUBDIRS) $(SAMPLESUBDIRS)
+-test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL_PROGRAM}'
++test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL_PROGRAM:S/-s//g}'
+ 
+ echo $ac_n "checking whether build environment is sane""... $ac_c" 1>&6
+ echo "configure:655: checking whether build environment is sane" >&5
+@@ -735,7 +735,7 @@
+ fi
+ 
+ 
+-PACKAGE=fvwm
++PACKAGE=fvwm2
+ 
+ VERSION=2.1.7
+ 
+@@ -3341,7 +3341,7 @@
+ 
+ 
+ 
+-test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL_PROGRAM}'
++test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL_PROGRAM:S/-s//g}'
+ 
+ echo $ac_n "checking whether ln -s works""... $ac_c" 1>&6
+ echo "configure:3348: checking whether ln -s works" >&5
