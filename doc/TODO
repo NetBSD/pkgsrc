@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1368 2004/02/11 04:22:44 minskim Exp $
+$NetBSD: TODO,v 1.1369 2004/02/11 11:37:57 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -112,6 +112,9 @@ Suggested new packages
 	http://www.rainemu.com/
 	680x0 Arcade Emulator
 
+	wxmozilla
+	http://wxmozilla.sourceforge.net/
+	Mozilla using the wxWindows toolkit.
 
 Suggested package updates
 =========================
