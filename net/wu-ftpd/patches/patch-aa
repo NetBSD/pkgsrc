@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.4 1999/02/13 09:05:02 rh Exp $
+$NetBSD: patch-aa,v 1.5 1999/11/12 15:08:49 rh Exp $
 
---- makefiles/Makefile.nbs.orig	Fri Jul  3 19:03:20 1998
-+++ makefiles/Makefile.nbs	Sat Feb 13 08:31:28 1999
+--- makefiles/Makefile.nbs.orig	Fri Nov 12 16:02:51 1999
++++ makefiles/Makefile.nbs	Fri Nov 12 16:02:52 1999
 @@ -2,32 +2,42 @@
  # Makefile for NetBSD 1.2
- # $Id: patch-aa,v 1.4 1999/02/13 09:05:02 rh Exp $
+ # $Id: patch-aa,v 1.5 1999/11/12 15:08:49 rh Exp $
  #
 -BINDIR=		/usr/local/bin
 -ETCDIR=		/usr/local/libexec
