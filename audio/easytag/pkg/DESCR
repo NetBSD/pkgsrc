@@ -6,7 +6,7 @@ Currently EasyTAG supports the following:
   - Process all mp3 of the selected directory,
   - Can work recursively 
   - Easy directory selection with a tree browser
-  - Supports ID3v1, ID3v1.1 tags
+  - Supports ID3v1, ID3v1.1, ID3v2 tags
   - Scan file for automatic tagging (using masks)
   - Can apply a field (artist, title,...) to all other files,
   - Display MP3 header informations
