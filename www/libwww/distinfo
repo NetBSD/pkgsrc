@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2002/11/19 20:54:11 reinoud Exp $
+$NetBSD: distinfo,v 1.12 2002/11/20 02:25:13 reinoud Exp $
 
 SHA1 (w3c-libwww-5.4.0.tgz) = 2394cb4e0dc4e2313a9a0ddbf508e4b726e9af63
 Size (w3c-libwww-5.4.0.tgz) = 1129121 bytes
@@ -11,5 +11,5 @@ SHA1 (patch-af) = 9b982568c52f4685862be2192612ce3d795ac813
 SHA1 (patch-ai) = 95912fb5b836e4dce01b630f9e6e9c9f41d7bb72
 SHA1 (patch-aj) = 6148ae393aefcce54477b289835038b01a26a0ed
 SHA1 (patch-ak) = fb13a43105ee252a461d20b67d5841db6d247dde
-SHA1 (patch-al) = d1bd0ecfb0b83fdc7c5e3440c58962facd150ef2
+SHA1 (patch-al) = 47c0c2e775821b9bc57ca265cc8e037f063c72f0
 SHA1 (patch-am) = fdc5e1a22814d9fd87d96e7bca1aadaebebdb71f
