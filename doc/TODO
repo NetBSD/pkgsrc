@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.278 2003/02/19 16:12:38 skrll Exp $
+$NetBSD: TODO,v 1.279 2003/02/19 19:52:09 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -287,7 +287,6 @@ Suggested package updates
 	o wxGTK-2.4.0
 	o xalan-c-1.4
 	o xanim-2.92.0 [pkg/19934]
-	o xchat-2.0.0 [pkg/20298]
 	o xerces-c-2.1.0 [heinz]
 	o xfstt-1.4
 	o xmcd-3.2.0
