@@ -1,0 +1,12 @@
+The xgraph program draws a graph on an X display  given data read
+from either data files or from standard input if no files are
+specified. It can display up to 64  independent data sets using
+different colors and/or line styles for each set. It annotates the
+graph with a title, axis labels, grid lines or tick marks, grid
+labels, and a legend. There are options to control the appearance
+of most components of the graph.
+
+Originally written by David Harrison, the code is mostly/completely
+unchanged since December 1989, when xgraph-11 was released.
+The program relies only upon Xlib calls (and not any specific
+toolkit), so it should work on all X systems.
