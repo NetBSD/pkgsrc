@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/07/17 21:23:46 grant Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/21 16:30:49 martti Exp $
 #
 
 DISTNAME=	WSoundServer-0.4.0
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://shadowmere.student.utwente.nl/
-COMMENT=	sound server for windowmaker
+COMMENT=	Sound server for windowmaker
 
 USE_BUILDLINK2=		YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/03/29 12:40:09 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 16:30:48 martti Exp $
 #
 
 DISTNAME=	wmmixer-1.0-beta1
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pr@alles.prima.de
 HOMEPAGE=	http://www.geocities.com/SiliconValley/Vista/2471/
-COMMENT=	mixer designed for WindowMaker (dockapp)
+COMMENT=	Mixer designed for WindowMaker (dockapp)
 
 USE_BUILDLINK2=		YES
 USE_IMAKE=		YES
