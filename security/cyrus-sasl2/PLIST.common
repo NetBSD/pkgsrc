@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.10 2003/11/21 13:41:58 jlam Exp $
-etc/rc.d/saslauthd
+@comment $NetBSD: PLIST.common,v 1.11 2004/01/09 19:37:48 jlam Exp $
 include/sasl/hmac-md5.h
 include/sasl/md5.h
 include/sasl/md5global.h
@@ -12,7 +11,6 @@ lib/libsasl2.la
 lib/libsasl2.so
 lib/libsasl2.so.2
 lib/libsasl2.so.2.15
-man/cat8/saslauthd.0
 man/man3/sasl.3
 man/man3/sasl_authorize_t.3
 man/man3/sasl_auxprop.3
@@ -57,7 +55,6 @@ man/man3/sasl_user_exists.3
 man/man3/sasl_verifyfile_t.3
 man/man8/sasldblistusers2.8
 man/man8/saslpasswd2.8
-sbin/saslauthd
 sbin/sasldblistusers2
 sbin/saslpasswd2
 share/doc/html/cyrus-sasl/advanced.html

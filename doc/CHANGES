@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4405 2004/01/09 19:15:19 jschauma Exp $
+$NetBSD: CHANGES,v 1.4406 2004/01/09 19:38:02 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -130,3 +130,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed bonobo-activation [xtraeme 2004-01-09]
 	Added darkice-0.13.2 [xtraeme 2004-01-09]
 	Added jgrasp-1.6.4 [jschauma 2004-01-09]
+	Updated cyrus-sasl2 to 2.1.15nb2 [jlam 2004-01-09]

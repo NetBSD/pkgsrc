@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1 2004/01/09 19:37:48 jlam Exp $
+
+--- Makefile.in.orig	Tue Jul 15 11:42:28 2003
++++ Makefile.in
+@@ -199,7 +199,7 @@ plugindir = @plugindir@
+ @MACOSX_TRUE@INSTALLOSX = install-exec-local-osx
+ @MACOSX_FALSE@INSTALLOSX = 
+ 
+-SUBDIRS = include sasldb plugins lib utils doc man $(PWC) $(SAM) $(JAV) $(SAD)
++SUBDIRS = include sasldb plugins lib utils doc man $(PWC) $(SAM) $(JAV)
+ EXTRA_DIST = config cmulocal win32 mac dlcompat-20010505
+ 
+ framedir = /Library/Frameworks/SASL2.framework
