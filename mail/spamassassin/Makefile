@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/04/15 00:02:24 heinz Exp $
+# $NetBSD: Makefile,v 1.20 2003/04/15 00:35:25 heinz Exp $
 
 DISTNAME=	Mail-SpamAssassin-2.53
 PKGNAME=	spamassassin-2.53
@@ -66,12 +66,18 @@ SUPPORT_FILES_PERMS+=	${EGDIR}/netbsd_lists.cf			\
 			  ${SHAREGRP} ${SHAREMODE}
 
 .if ${OPSYS} == "NetBSD"
+DEPTHFIRST1=	-d
+DEPTHFIRST2=	# empty
 #  the 'spamd' RCD_SCRIPT behaves differently if we run NetBSD 1.6 or later
 .  if ${OS_VERSION:M1.[0-5]*}
      INTERPRETER_SUPPORT=NO
 .  else
      INTERPRETER_SUPPORT=YES
 .  endif
+.else
+# this needs to be more OS-specific
+DEPTHFIRST1=	# empty
+DEPTHFIRST2=	-depth
 .endif
 FILES_SUBST+=		INTERPRETER_SUPPORT="${INTERPRETER_SUPPORT}"
 FILES_SUBST+=		OPSYS="${OPSYS}"
@@ -144,7 +150,8 @@ pre-install:
 	      ${ECHO} "${DOCDIRNOPREFIX}/$$f" >> ${PLIST_ADD};		\
 	    fi;								\
 	  done &&							\
-	  for d in `${FIND} ${DIR} -type d -print`; do			\
+	  for d in `${FIND} ${DEPTHFIRST1} ${DIR} ${DEPTHFIRST2} -type d\
+	            -print`; do						\
 	    ${ECHO} "@dirrm ${DOCDIRNOPREFIX}/$$d" >> ${PLIST_ADD};	\
 	  done)
 .endfor
