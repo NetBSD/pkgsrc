@@ -1,0 +1,35 @@
+$NetBSD: patch-ap,v 1.1.1.1 2001/11/15 16:08:43 taca Exp $
+
+--- yatconfd/yc_user.c.orig	Mon Jun  4 15:43:51 2001
++++ yatconfd/yc_user.c
+@@ -84,8 +84,6 @@
+   return ENOMEM;
+ }
+ 
+-static CONST char *pszFmt;
+-
+ static int _FuncUser()
+ {
+   if (CheckArgc(2, 2))
+@@ -105,8 +103,6 @@
+     ErrSetData(ENOMEM, ERRFLG_FATAL | ERRFLG_SYSERR, NULL);
+     return FAILURE;
+   }
+-
+-  Msg2Cli(SUCCESS, pszFmt, SysData.szUser);
+   return SUCCESS;
+ }
+ 
+@@ -115,6 +111,10 @@
+  */
+ int FuncUser()
+ {
+-  pszFmt = "'%.256s' is welcome here.";
+-  return _FuncUser();
++  int status;
++
++  status = _FuncUser();
++  if (status == SUCCESS)
++    Msg2Cli(SUCCESS, "'%.256s' is welcome here.", SysData.szUser);
++  return status;
+ }

@@ -1,0 +1,13 @@
+$NetBSD: patch-be,v 1.1.1.1 2001/11/15 16:08:44 taca Exp $
+
+--- yatd/rset.c.orig	Mon Jun  4 15:43:51 2001
++++ yatd/rset.c
+@@ -121,7 +121,7 @@
+   pFldr->iMailLast = pFldr->iMailLast0;
+   FldrMarkUpdate(pFldr);
+ 
+-  Msg2Cli(SUCCESS, "You have %d message(s) (%d octets).",
++  Msg2Cli(SUCCESS, "You have %d message(s) (%ld octets).",
+ 	  pFldr->nMailAvail,
+ 	  pFldr->sizMailsAvail);
+   return SUCCESS;
