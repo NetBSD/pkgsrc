@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.18 2003/06/02 17:44:14 kim Exp $
+$NetBSD: patch-ac,v 1.19 2004/05/13 18:29:54 adam Exp $
 
---- pine/makefile.neb.orig	2002-09-10 17:39:23.000000000 -0400
-+++ pine/makefile.neb	2003-06-02 13:40:25.000000000 -0400
-@@ -47,9 +47,11 @@
+--- pine/makefile.neb.orig	2003-11-25 06:47:56.000000000 +0000
++++ pine/makefile.neb
+@@ -47,9 +47,11 @@ LN=          ln -s
  MAKE=        make
  OPTIMIZE=    # -O
  PROFILE=     # -pg
@@ -16,7 +16,7 @@ $NetBSD: patch-ac,v 1.18 2003/06/02 17:44:14 kim Exp $
  PICODIR=     ../pico
  
  # Only need to uncomment next two lines if you run make from this directory
-@@ -60,14 +62,13 @@
+@@ -60,14 +62,13 @@ PICODIR=     ../pico
  LDAPOFILES=   addrbook.o adrbkcmd.o args.o bldaddr.o init.o \
  	      mailview.o other.o pine.o strings.o takeaddr.o
  
@@ -30,12 +30,12 @@ $NetBSD: patch-ac,v 1.18 2003/06/02 17:44:14 kim Exp $
  
  STDCFLAGS=   -DNETBSD -DSYSTYPE=\"NEB\" -DMOUSE
  CFLAGS=      $(OPTIMIZE) $(PROFILE) $(DEBUG) $(EXTRACFLAGS) $(LDAPCFLAGS) \
--	     $(STDCFLAGS)
-+	     $(STDCFLAGS) -I${CCLIENTINC}
+-	     $(LOCALPINECFLAGS) $(STDCFLAGS)
++	     $(LOCALPINECFLAGS) $(STDCFLAGS) -I${CCLIENTINC}
  
  OFILES=	addrbook.o adrbkcmd.o adrbklib.o args.o bldaddr.o context.o filter.o \
  	folder.o help.o helptext.o imap.o init.o mailcap.o mailcmd.o \
-@@ -79,20 +80,20 @@
+@@ -79,20 +80,20 @@ HFILES=	headers.h os.h pine.h context.h 
  	$(PICODIR)/headers.h $(PICODIR)/estruct.h \
  	$(PICODIR)/edef.h $(PICODIR)/efunc.h \
  	$(PICODIR)/pico.h $(PICODIR)/os.h \
@@ -61,7 +61,7 @@ $NetBSD: patch-ac,v 1.18 2003/06/02 17:44:14 kim Exp $
  	$(CC) $(LDFLAGS) $(CFLAGS) -o rpdump rpdump.o $(LIBS)
  
  pine-use:	pine-use.c
-@@ -112,8 +113,8 @@
+@@ -112,8 +113,8 @@ os.c:	osdep/os-neb.c
  
  $(OFILES):						$(HFILES)
  addrbook.o adrbkcmd.o adrbklib.o bldaddr.o takeaddr.o:	adrbklib.h

@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.11 2003/09/04 11:09:12 martti Exp $
+$NetBSD: patch-ab,v 1.12 2004/05/13 18:29:54 adam Exp $
 
---- pine/makefile.lnx.orig	Tue Sep 10 23:34:39 2002
-+++ pine/makefile.lnx	Sat Dec 14 11:10:00 2002
-@@ -47,9 +47,11 @@
+--- pine/makefile.lnx.orig	2003-11-25 06:47:42.000000000 +0000
++++ pine/makefile.lnx
+@@ -47,9 +47,11 @@ LN=          ln -s
  MAKE=        make
  OPTIMIZE=    # -O2
  PROFILE=     # -pg
@@ -16,7 +16,7 @@ $NetBSD: patch-ab,v 1.11 2003/09/04 11:09:12 martti Exp $
  PICODIR=     ../pico
  
  # Only need to uncomment next two lines if you run make from this directory
-@@ -60,14 +62,13 @@
+@@ -60,14 +62,13 @@ PICODIR=     ../pico
  LDAPOFILES=   addrbook.o adrbkcmd.o args.o bldaddr.o init.o \
  	      mailview.o other.o pine.o strings.o takeaddr.o
  
@@ -30,12 +30,12 @@ $NetBSD: patch-ab,v 1.11 2003/09/04 11:09:12 martti Exp $
  
  STDCFLAGS=   -DLNX -DSYSTYPE=\"LNX\" -DMOUSE
  CFLAGS=      $(OPTIMIZE) $(PROFILE) $(DEBUG) $(EXTRACFLAGS) $(LDAPCFLAGS) \
--	     $(STDCFLAGS)
-+	     $(STDCFLAGS) -I${CCLIENTINC}
+-	     $(LOCALPINECFLAGS) $(STDCFLAGS)
++	     $(LOCALPINECFLAGS) $(STDCFLAGS) -I${CCLIENTINC}
  
  OFILES=	addrbook.o adrbkcmd.o adrbklib.o args.o bldaddr.o context.o filter.o \
  	folder.o help.o helptext.o imap.o init.o mailcap.o mailcmd.o \
-@@ -79,20 +80,20 @@
+@@ -79,20 +80,20 @@ HFILES=	headers.h os.h pine.h context.h 
  	$(PICODIR)/headers.h $(PICODIR)/estruct.h \
  	$(PICODIR)/edef.h $(PICODIR)/efunc.h \
  	$(PICODIR)/pico.h $(PICODIR)/os.h \
@@ -61,7 +61,7 @@ $NetBSD: patch-ab,v 1.11 2003/09/04 11:09:12 martti Exp $
  	$(CC) $(LDFLAGS) $(CFLAGS) -o rpdump rpdump.o $(LIBS)
  
  pine-use:	pine-use.c
-@@ -112,8 +113,8 @@
+@@ -112,8 +113,8 @@ os.c:	osdep/os-lnx.c
  
  $(OFILES):						$(HFILES)
  addrbook.o adrbkcmd.o adrbklib.o bldaddr.o takeaddr.o:	adrbklib.h
