@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5357 2004/03/29 14:05:10 recht Exp $
+$NetBSD: CHANGES,v 1.5358 2004/03/29 15:48:16 manu Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1242,6 +1242,9 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnuchess-book-small to 20000511nb1 [minskim 2004-03-08]
 	Removed gnuchess-book [minskim 2004-03-08]
 	Updated torrentutils to 0.3.0nb1 [wiz 2004-03-08]
+<<<<<<< CHANGES
+	Updated milter-greylist to 0.12 [manu 2004-03-08]
+=======
 	Updated mldonkey to 2.5.14 [wiz 2004-03-08]
 	Updated sylpheed-claws to 0.9.10 [adam 2004-03-08]
 	Updated gossip to 0.7.2 [jmmv 2004-03-08]
@@ -1517,6 +1520,9 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ghostscript-gnu to 7.07 [wiz 2004-03-24]
 	Updated ghostscript-gnu-x11 to 7.07 [wiz 2004-03-24]
 	Updated ghostscript-gnu-nox11 to 7.07 [wiz 2004-03-24]
+<<<<<<< CHANGES
+	Updated milter-greylist to 1.0 [manu 2004-03-25]
+=======
 	Updated emacs to emacs-21.3nb4 [kristerw 2004-03-25]
 	Updated emacs20 to emacs-20.7nb3 [kristerw 2004-03-25]
 	Updated openssl to 0.9.6m [wiz 2004-03-26]
@@ -1585,3 +1591,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated silc-client-icb to 0.14nb8 [wiz 2004-03-29]
 	Added sqsh-motif-2.1 [grant 2004-03-29]
 	Updated aspell-german to 0.50.2nb2 [recht 2004-03-29]
+	Updated milter-greylist to 1.0.2 [manu 2004-03-29]
