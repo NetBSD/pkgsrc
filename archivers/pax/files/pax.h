@@ -1,4 +1,4 @@
-/*	$NetBSD: pax.h,v 1.5 2004/03/11 20:10:29 tv Exp $	*/
+/*	$NetBSD: pax.h,v 1.6 2004/04/12 12:34:16 heinz Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -44,7 +44,7 @@
 #endif
 
 /* Tape support only available if one of the following is available. */
-#if HAVE_SYS_MTIO_H || HAVE_SYS_TAPE_H
+#if (HAVE_SYS_MTIO_H || HAVE_SYS_TAPE_H) && ! defined(UNIXWARE)
 #define SUPPORT_TAPE 1
 #endif
 
