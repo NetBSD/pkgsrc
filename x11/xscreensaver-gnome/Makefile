@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2003/12/04 19:48:27 xtraeme Exp $
+# $NetBSD: Makefile,v 1.23 2003/12/13 19:22:13 jmmv Exp $
 #
 
 PKGNAME=	${DISTNAME:S/-/-gnome-/}
-PKGREVISION=	2
-COMMENT=	Screen saver and locker for the X window system (with GNOME support)
+COMMENT=	Screen saver and locker for the X window system (GNOME applet)
 
-CONFLICTS+=	xscreensaver-[0-9]*
+CONFLICTS+=	xscreensaver<4.14 xscreensaver-demo-[0-9]*
 
 .include "../../x11/xscreensaver/Makefile.common"
 
@@ -18,7 +17,9 @@ CONFIGURE_ARGS+=	--with-xml=${BUILDLINK_PREFIX.libxml2}
 CONFIGURE_ARGS+=	--with-gnome=${BUILDLINK_PREFIX.gnome-libs}
 CONFIGURE_ARGS+=	--with-configdir=${PREFIX}/share/control-center/screensavers
 
-PLIST_SRC=	${.CURDIR}/PLIST
+BUILD_DIRS=		${WRKSRC}/utils ${WRKSRC}/driver
+INSTALL_DIRS=		${WRKSRC}/driver
+INSTALL_TARGET=		install-gnome xxxinstall-gnome
 
 # Very ugly hack so that GTK2 is not found, since the package does not support
 # choosing GTK1 over GTK2 (which is needed, since gnome-libs link against GTK1).
@@ -29,9 +30,12 @@ pre-configure:
 	${MV} configure.patched configure && ${CHMOD} 755 configure
 
 post-install:
-	cd ${WRKSRC}/driver && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} xxxinstall-gnome
+	${INSTALL_PROGRAM} ${WRKSRC}/driver/xscreensaver-demo ${PREFIX}/bin
+	${LN} -s ${BUILDLINK_PREFIX.xscreensaver}/libexec/xscreensaver/config \
+		${PREFIX}/share/control-center/screensavers
 
 .include "../../devel/libglade/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../x11/controlcenter/buildlink2.mk"
+.include "../../x11/xscreensaver/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
