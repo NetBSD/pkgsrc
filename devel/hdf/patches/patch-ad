@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/02/28 22:18:41 jtb Exp $
+$NetBSD: patch-ad,v 1.2 2001/03/09 22:47:44 jtb Exp $
 
---- /dev/null	Wed Feb 28 22:06:41 2001
+--- /dev/null	Fri Mar  9 22:24:17 2001
 +++ hdf/src/Makefile
-@@ -0,0 +1,50 @@
+@@ -0,0 +1,56 @@
 +LIB= df
 +
 +SHLIB_MAJOR= 0
@@ -18,11 +18,17 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/02/28 22:18:41 jtb Exp $
 +
 +CPPFLAGS+= -Dunix -DMEM_LIST ${JPEGINC} ${F2CINC}
 +
++.if (${MACHINE_ARCH} == "alpha")
++CPPFLAGS+= -DBIG_LONGS
++.endif
++
 +LDADD+= ${JPEGLIB} ${ZLIB} ${F2CLIB} -lm
 +
 +NOLINT= 1
 +MKPICINSTALL= no
 +MKPROFILE= no
++
++NOGCCERROR= 1
 +
 +SRCS= atom.c bitvect.c cdeflate.c cnbit.c cnone.c crle.c cskphuff.c	\
 +	df24.c df24f.c dfan.c dfanf.c dfcomp.c dfconv.c dff.c dfgr.c	\
