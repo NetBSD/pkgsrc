@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/11/14 15:46:36 drochner Exp $
+lib/zope/lib/python/Products/AbracadabraObject/AbracadabraObject.py
+lib/zope/lib/python/Products/AbracadabraObject/AbracadabraObject.pyc
+lib/zope/lib/python/Products/AbracadabraObject/CHANGES.txt
+lib/zope/lib/python/Products/AbracadabraObject/LICENSE.txt
+lib/zope/lib/python/Products/AbracadabraObject/README.txt
+lib/zope/lib/python/Products/AbracadabraObject/ZZZMonkeyPatch/__init__.py
+lib/zope/lib/python/Products/AbracadabraObject/ZZZMonkeyPatch/__init__.pyc
+lib/zope/lib/python/Products/AbracadabraObject/ZZZMonkeyPatch/main.dtml
+lib/zope/lib/python/Products/AbracadabraObject/ZZZMonkeyPatch/refresh.txt
+lib/zope/lib/python/Products/AbracadabraObject/ZZZMonkeyPatch/version.txt
+lib/zope/lib/python/Products/AbracadabraObject/__init__.py
+lib/zope/lib/python/Products/AbracadabraObject/__init__.pyc
+lib/zope/lib/python/Products/AbracadabraObject/demo.zexp
+lib/zope/lib/python/Products/AbracadabraObject/dtml/addAbracadabraObject.dtml
+lib/zope/lib/python/Products/AbracadabraObject/refresh.txt
+lib/zope/lib/python/Products/AbracadabraObject/version.txt
+@dirrm lib/zope/lib/python/Products/AbracadabraObject/dtml
+@dirrm lib/zope/lib/python/Products/AbracadabraObject/ZZZMonkeyPatch
+@dirrm lib/zope/lib/python/Products/AbracadabraObject
