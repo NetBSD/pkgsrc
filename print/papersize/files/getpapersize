@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: getpapersize,v 1.4 2002/07/05 23:24:20 wiz Exp $
+# $NetBSD: getpapersize,v 1.5 2002/07/30 00:57:24 ross Exp $
 #
 # Small shell script to show the default papersize for packages
 #
@@ -16,28 +16,28 @@ while [ $# -gt 0 ]; do
 	case $1 in
 	a2ps)
 		f=@localbase@/etc/a2ps-site.cfg
-		if [ -e $f ]; then
+		if [ -e "$f" ]; then
 			echo -n "$1 has default papersize: "
 			awk '/^Options: --medium=/ { gsub(".*=", "", $0); print $0; }' $f
 		fi
 		;;
 	ddd)
 		f=@x11prefix@/lib/X11/app-defaults/Ddd
-		if [ -e $f ]; then
+		if [ -e "$f" ]; then
 			echo -n "$1 has default papersize: "
 			awk '/^@Ddd\*paperSize: / { gsub(".*:", "", $0); print $0; }' $f
 		fi
 		;;
 	enscript)
 		f=@localbase@/etc/enscript.cfg
-		if [ -e $f ]; then
+		if [ -e "$f" ]; then
 			echo -n "$1 has default papersize: "
 			awk '/^DefaultMedia:.*/ { gsub(".*:", "", $0); print $0; }' $f
 		fi
 		;;
 	ghostscript)
 		f=`ls @localbase@/share/ghostscript/*/lib/gs_init.ps 2>/dev/null | tail -1`
-		if [ -e $f ]; then
+		if [ -e "$f" ]; then
 			echo -n "$1 has default papersize: "
 			gssize=`sed -n -e '/^% Optionally choose a default paper size other than U.S. letter.$/N' -e 's/^% Optionally.*\n[[:space:]]*(\(.*\)) \/PAPERSIZE where.*$/\1/p' $f`
 			if [ -z "$gssize" ] ; then
@@ -62,7 +62,7 @@ while [ $# -gt 0 ]; do
 		;;
 	psutils)
 		f=@localbase@/etc/psutils.cfg
-		if [ -e $f ]; then
+		if [ -e "$f" ]; then
 			echo -n "$1 has default papersize: "
 			awk '/^PAPERSIZE=/ { gsub(".*=", "", $0); print $0; }' $f
 		fi

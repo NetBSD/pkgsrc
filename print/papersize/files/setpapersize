@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: setpapersize,v 1.5 2002/07/05 23:24:20 wiz Exp $
+# $NetBSD: setpapersize,v 1.6 2002/07/30 00:57:24 ross Exp $
 #
 # Small shell script to set the default papersize for packages
 #
@@ -47,7 +47,7 @@ while [ $# -gt 0 ]; do
 	case $1 in
 	a2ps)
 		a2psfile=@localbase@/etc/a2ps-site.cfg
-		if [ -e $a2psfile ]; then
+		if [ -e "$a2psfile" ]; then
 			mv $a2psfile $a2psfile.old
 			sed -e 's|^Options: --medium=.*|Options: --medium='$papersize'|' $a2psfile.old > $a2psfile && rm $a2psfile.old
 			echo "Set $1 package default paper size to $papersize in $a2psfile"
@@ -55,7 +55,7 @@ while [ $# -gt 0 ]; do
 		;;
 	ddd)
 		dddfile=@x11prefix@/lib/X11/app-defaults/Ddd
-		if [ -e $dddfile ]; then
+		if [ -e "$dddfile" ]; then
 			mv $dddfile $dddfile.old
 			sed -e 's|@Ddd@\*paperSize:.*|@Ddd@*paperSize: '$dimensions'|' $dddfile.old > $dddfile && rm $dddfile.old
 			echo "Set $1 package default paper size to $papersize in $dddfile"
@@ -63,7 +63,7 @@ while [ $# -gt 0 ]; do
 		;;
 	enscript)
 		enscriptfile=@localbase@/etc/enscript.cfg
-		if [ -e $enscriptfile ]; then
+		if [ -e "$enscriptfile" ]; then
 			mv $enscriptfile $enscriptfile.old
 			sed -e 's|^DefaultMedia:.*|DefaultMedia: '$papersize'|' $enscriptfile.old > $enscriptfile && rm $enscriptfile.old
 			echo "Set $1 package default paper size to $papersize in $enscriptfile"
@@ -71,7 +71,7 @@ while [ $# -gt 0 ]; do
 		;;
 	ghostscript)
 		ghostscriptfile=`ls @localbase@/share/ghostscript/*/lib/gs_init.ps 2>/dev/null | tail -1`
-		if [ -e $ghostscriptfile ]; then
+		if [ -e "$ghostscriptfile" ]; then
 			mv $ghostscriptfile $ghostscriptfile.old
 			sed -e '/^% Optionally choose a default paper size other than U.S. letter.$/N' -e 's/^\(% Optionally.*\n\)[%[:space:]]*(.*\() \/PAPERSIZE where.*\)$/\1('$lowpaper'\2/' $ghostscriptfile.old > $ghostscriptfile && rm $ghostscriptfile.old
 			echo "Set $1 package default paper size to $papersize in $ghostscriptfile"
@@ -79,7 +79,7 @@ while [ $# -gt 0 ]; do
 		;;
 	magicfilter)
 		magicdir=@localbase@/libexec/magicfilter
-		if [ -e $magicdir ]; then
+		if [ -e "$magicdir" ]; then
 			for f in $magicdir/*-filter; do
 				mv $f $f.old
 				sed -e 's|-sPAPERSIZE=[a-zA-Z0-9_]*|-sPAPERSIZE='$lowpaper'|' $f.old > $f && rm $f.old
@@ -90,7 +90,7 @@ while [ $# -gt 0 ]; do
 		;;
 	psutils)
 		psutilsfile=@localbase@/etc/psutils.cfg
-		if [ -e $psutilsfile ]; then
+		if [ -e "$psutilsfile" ]; then
 			mv $psutilsfile $psutilsfile.old
 			sed -e 's|^PAPERSIZE.*|PAPERSIZE='$lowpaper'|' $psutilsfile.old > $psutilsfile && rm $psutilsfile.old
 			echo "Set $1 package default paper size to $papersize in $psutilsfile"
