@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8760 2005/01/14 23:37:56 adrianp Exp $
+$NetBSD: CHANGES,v 1.8761 2005/01/15 11:54:16 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -311,3 +311,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated honeyd to 1.0 [adrianp 2005-01-14]
 	Added kajaani-kombat-0.6 [wiz 2005-01-14]
 	Updated msf to 2.3 [adrianp 2005-01-14]
+	Removed gst-player [jmmv 2005-01-15]
