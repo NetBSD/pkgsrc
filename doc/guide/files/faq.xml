@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.2 2004/11/20 13:25:22 hubertf Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.3 2005/01/11 15:47:00 xtraeme Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
   <title>Frequently Asked Questions</title>
@@ -202,6 +202,30 @@
       message</ulink> for more details.  </para> 
 </sect1>
 
+<sect1>
+    <title>How to resume transferencies with pkgsrc?</title>
+
+    <para>By default resuming transferencies in pkgsrc is disabled, but you
+	can enable this feature adding the option 
+	<varname>PKG_RESUME_TRANSFERS=YES</varname> into 
+	<filename>mk.conf</filename>, if a previous transfer wasn't 
+	completed, it will try to resume it saving your bandwidth.</para>
+    <para>For example, if you want to use <filename>wget</filename> to
+	resume downloads, you'll have to use something like:</para>
+
+    <programlisting>
+	FETCH_CMD=wget
+	.if defined(FETCH_CMD) &amp;&amp; ${FETCH_CMD} == "wget"
+	FETCH_BEFORE_ARGS=--passive-ftp
+	FETCH_RESUME_ARGS=-c
+	FETCH_OUTPUT_ARGS=-O
+	.endif
+    </programlisting>
+
+    <para>Don't forget to set <varname>FETCH_RESUME_ARGS</varname> and
+	<varname>FETCH_OUTPUT_ARGS</varname> if you are not using default
+	values.</para>
+</sect1>
 
 <sect1>
     <title>How can I install/use XFree86 from pkgsrc?</title>
@@ -209,7 +233,7 @@
     <para> If you want to use XFree86 from pkgsrc instead of your
       system's own X11 (<filename>/usr/X11R6</filename>,
       <filename>/usr/openwin</filename>, ...), you will have to 
-      add the following lines into <filename>mk.conf</filename>:
+      add the following line into <filename>mk.conf</filename>:
       </para>
 
     <programlisting>
@@ -224,7 +248,7 @@
     <para> If you want to use X.org from pkgsrc instead of your system's
       own X11 (<filename>/usr/X11R6</filename>,
       <filename>/usr/openwin</filename>, ...) you will have to add the
-      following lines into <filename>mk.conf</filename>: </para>
+      following line into <filename>mk.conf</filename>: </para>
 
     <programlisting>
       X11_TYPE=xorg
@@ -524,7 +548,7 @@ CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc</programlisting>
 
     <screen>
 ===========================================================================
-$NetBSD: faq.xml,v 1.2 2004/11/20 13:25:22 hubertf Exp $
+$NetBSD: faq.xml,v 1.3 2005/01/11 15:47:00 xtraeme Exp $
 
 You may wish to have the vulnerabilities file downloaded daily so that
 it remains current.  This may be done by adding an appropriate entry
