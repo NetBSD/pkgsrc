@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.6 2002/03/13 17:36:52 fredb Exp $
+# $NetBSD: buildlink.mk,v 1.7 2002/07/14 01:11:42 rh Exp $
 #
 # This Makefile fragment is included by packages that use oaf.
 #
@@ -25,6 +25,7 @@ BUILDLINK_PREFIX.oaf_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.oaf=		include/liboaf/*
 BUILDLINK_FILES.oaf+=		lib/liboaf.*
 BUILDLINK_FILES.oaf+=		lib/oafConf.sh
+BUILDLINK_FILES.oaf+=		share/idl/oaf*.idl
 
 .include "../../textproc/libxml/buildlink.mk"
 .include "../../x11/gnome-libs/buildlink.mk"
