@@ -1,13 +1,11 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 11:14:23 agc Exp $
+$NetBSD: patch-aa,v 1.3 1999/10/08 04:43:07 deberg Exp $
 
---- Library/src/HTMIMImp.c.orig	Sat Apr  5 09:26:21 1997
-+++ Library/src/HTMIMImp.c	Tue May  6 01:15:02 1997
-@@ -213,7 +213,7 @@
-     int value = deflt;
+--- Library/src/HTMIMImp.c.orig	Thu May 27 16:26:50 1999
++++ Library/src/HTMIMImp.c	Thu May 27 16:26:58 1999
+@@ -227,5 +227,5 @@
      if (start != NULL) {
  	start += strlen(needle);
 -	while isspace(*start) start++;
 +	while (isspace(*start)) start++;
  	if (isdigit(*start)) {
  	    char * end = start + 1;
- 	    char save;
