@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/06/01 11:23:21 rh Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/14 17:31:01 wiz Exp $
 #
 
 DISTNAME=	isect-1.0
@@ -11,7 +11,8 @@ HOMEPAGE=	http://home.netcom.com/~tgagne/
 DEPENDS+=	libwww-5.*:../../www/libwww
 
 GNU_CONFIGURE=	yes
-USE_PKGLIBTOOL=	yes
+USE_LIBTOOL=	yes
+LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
 
 CPPFLAGS+=	-I${LOCALBASE}/include	# for w3c-libwww/WWWlib.h
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
