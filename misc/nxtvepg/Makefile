@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/12/13 12:08:15 magick Exp $
+# $NetBSD: Makefile,v 1.30 2004/01/24 14:11:10 grant Exp $
 
 DISTNAME=	nxtvepg-2.6.0
 
@@ -13,7 +13,7 @@ ONLY_FOR_PLATFORM=      NetBSD-1.4[Y-Z]-* NetBSD-1.4Z[A-Z]-* \
 			NetBSD-1.5_ALPHA-* NetBSD-1.[5-9]*-*
 
 USE_PERL5=	yes
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 USE_X11=	yes
 USE_BUILDLINK2= yes
 
