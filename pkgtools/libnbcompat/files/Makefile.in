@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.20 2003/09/14 14:41:23 grant Exp $
+# $NetBSD: Makefile.in,v 1.21 2003/12/08 15:28:54 grant Exp $
 #
 
 srcdir=		@srcdir@
@@ -52,7 +52,7 @@ nbcompat/nbconfig.h: nbcompat/config.h
 		/^\#[ 	]*define[ 	]+/ {				\
 			if (process == 1) {				\
 				guard = $$0;				\
-				sub("^\#[ 	]*define[ 	]+", "", guard); \
+				sub("^#[ 	]*define[ 	]+", "", guard); \
 				sub("[ 	]+.*", "", guard);		\
 				print "#ifndef " guard;			\
 				print $$0;				\
