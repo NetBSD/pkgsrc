@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2003/12/13 00:45:26 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2003/12/15 00:26:50 xtraeme Exp $
 #
 
-DISTNAME=		gnome-session-2.2.1
-PKGREVISION=		5
+DISTNAME=		gnome-session-2.4.1
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.2/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.4/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -27,6 +26,7 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GCONF2_SCHEMAS= 	gnome-session.schemas
 
+.if 0
 .include "../../audio/esound/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/GConf2/schemas.mk"
@@ -35,4 +35,5 @@ GCONF2_SCHEMAS= 	gnome-session.schemas
 .include "../../devel/libgnomeui/buildlink2.mk"
 .include "../../textproc/scrollkeeper/buildlink2.mk"
 .include "../../x11/gnome2-control-center/buildlink2.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
