@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.2 2000/01/12 22:05:33 rh Exp $
+$NetBSD: patch-ag,v 1.3 2000/04/19 15:30:07 jlam Exp $
 
---- src/scripts/Makefile.in.orig	Wed Jan 12 20:16:55 2000
-+++ src/scripts/Makefile.in	Wed Jan 12 20:17:56 2000
+--- src/scripts/Makefile.in.orig	Mon Feb 21 05:49:10 2000
++++ src/scripts/Makefile.in	Mon Apr 17 16:13:11 2000
 @@ -38,10 +38,10 @@
  	  > $(top_builddir)/bin/R
  	@chmod +x $(top_builddir)/bin/R
