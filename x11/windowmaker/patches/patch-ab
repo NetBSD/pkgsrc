@@ -9,14 +9,3 @@
  
  # Run SED to replace the correct version in the main file
  #
---- wrlib/Makefile.in	1998/01/09 08:57:28	1.1
-+++ wrlib/Makefile.in	1998/01/09 08:57:52
-@@ -29,7 +29,7 @@
- RANLIB	= @RANLIB@
- 
- OPTIONS = @XPM@ @PNG@ -DDEBUG
--CFLAGS  = @CFLAGS@ $(OPTIONS) -D_BSD_SOURCE @XFLAGS@ 
-+CFLAGS  = @CFLAGS@ $(OPTIONS) -D_BSD_SOURCE @XFLAGS@ -I${includedir}
- LIBS =  @LIBS@ @XLFLAGS@ -L. -lwraster @XPMLIB@ @PNGLIB@ @XLIBS@ -lm
- 
- OBJ = raster.o load.o gradient.o xpm.o png.o convert.o context.o misc.o \
