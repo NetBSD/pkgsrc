@@ -1,0 +1,5 @@
+Sample config files can be found here:
+
+	${PREFIX}/share/examples/chrony
+
+Copy them to ${PREFIX}/etc and edit to suit your needs.
