@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/08/08 11:14:37 shannonjr Exp $
+# $NetBSD: Makefile,v 1.8 2004/08/11 22:45:00 shannonjr Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -67,9 +67,12 @@ CONFIGURE_ARGS+=	--with-gnu-ld
 #ALT_GCC=	prefix/bin/gcc
 .if defined(ALT_GCC)
 .	if exists(${ALT_GCC})
-ALT_GCC_PREFIX:=	${ALT_GCC:H}/..
-ALT_GCC_RTS!=	${FIND} ${ALT_GCC_PREFIX} -name adalib
+ALT_GCC_RTS!=	${ALT_GCC} --print-file-name=adalib
+.        if !empty(ALT_GCC_RTS)
 RALT_GCC_RTS=	${ALT_GCC_RTS:S%${LOCALBASE}%%:S%/%%}
+.        else
+PKG_SKIP_REASON=	"${ALT_GCC} does not appear to be an Ada compiler"
+.        endif
 .	else
 PKG_SKIP_REASON=	"Missing bootstrap Ada compiler"
 .	endif
@@ -87,7 +90,7 @@ GCC34_PKGMODIF=		${GCC34_INSTALLTO_SUBPREFIX}
 
 GCC_SUBPREFIX=		${GCC34_INSTALLTO_SUBPREFIX}
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
-GCC_PLATFORM=		${LOWER_ARCH}--${LOWER_OPSYS}${APPEND_ELF}${LOWER_OS_VERSION:C/_.*//}
+GCC_PLATFORM=		${LOWER_ARCH}--${LOWER_OPSYS}${APPEND_ELF}${LOWER_OS_VERSION:C/[_a-z].*//}
 CONFIGURE_ARGS+=	--host=${GCC_PLATFORM}
 GCC_ARCHSUBDIR=		${GCC_SUBPREFIX}/lib/gcc/${GCC_PLATFORM}/${GCC_VERSION}
 GCC_ARCHDIR=		${PREFIX}/${GCC_ARCHSUBDIR}
