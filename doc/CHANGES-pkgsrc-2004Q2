@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.27 2004/07/15 19:38:29 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.28 2004/07/20 21:56:58 agc Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q2 branch:
@@ -50,3 +50,5 @@ Pullup ticket 59, requested by Grant Beattie [agc 2004-07-15]
 	libxml2 PLIST fix
 Pullup ticket 60, requested by Lubomir Sedlacik [agc 2004-07-15]
 	Solaris silc-server fix
+Pullup ticket 62, requested by Grant Beattie [agc 2004-07-20]
+	Security fix for apache and ap-ssl
