@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2003/03/09 20:03:30 jmmv Exp $
+$NetBSD: patch-aa,v 1.7 2003/04/10 09:44:46 wiz Exp $
 
---- libexslt/Makefile.in.orig	2003-03-09 21:00:22.000000000 +0000
+--- libexslt/Makefile.in.orig	Tue Apr  1 15:39:25 2003
 +++ libexslt/Makefile.in
-@@ -151,8 +151,8 @@ libexslt_la_SOURCES = \
+@@ -152,8 +152,8 @@ libexslt_la_SOURCES = \
  
  # The following DOES NOT WORK reliably. Sorry no prelinking to uninstalled
  # yet libraries.
