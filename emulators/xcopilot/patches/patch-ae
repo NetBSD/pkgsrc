@@ -1,0 +1,20 @@
+$NetBSD: patch-ae,v 1.1 1999/03/15 13:54:24 simonb Exp $
+
+--- main.c.orig	Tue Aug 25 15:06:36 1998
++++ main.c	Tue Mar 16 00:45:28 1999
+@@ -638,7 +638,6 @@
+   struct stat buf;
+ 
+   expand_tilde(&pilot->DataDir);
+-  add_slash(&pilot->DataDir);
+   if (stat(pilot->DataDir, &buf) == -1) {
+     if (errno == ENOENT) {
+       if (mkdir(pilot->DataDir, S_IRWXU)) {
+@@ -651,6 +650,7 @@
+         exit(1);
+     }
+   }
++  add_slash(&pilot->DataDir);
+ 
+   /* Set the memory version */
+   pdebug_memversion = pilot->MemVersion;
