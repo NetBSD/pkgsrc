@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2001/08/23 04:58:04 jlam Exp $
+
+--- Makefile.in.orig	Mon Aug  2 02:11:08 1999
++++ Makefile.in
+@@ -69,7 +69,7 @@
+ bin_PROGRAMS = xteddy
+ 
+ xteddy_SOURCES = xteddy.c
+-LIBS = `imlib-config --libs`
++LIBS = `${IMLIB_CONFIG} --libs`
+ man_MANS = xteddy.1
+ bin_SCRIPTS = xtoys xteddy_test
+ 
