@@ -1,10 +1,9 @@
-$NetBSD: patch-ad,v 1.1.1.1 2000/04/10 01:14:02 jtk Exp $
+$NetBSD: patch-ad,v 1.2 2000/04/10 01:24:39 jtk Exp $
 
 Index: pptp_gre.c
---- pptp_gre.c.orig	1998/09/02 14:40:54
-+++ pptp_gre.c	1999/02/12 14:23:29
-@@ -5,10 +5,10 @@
-  * $Id: patch-ad,v 1.1.1.1 2000/04/10 01:14:02 jtk Exp $
+--- pptp_gre.c.orig	Wed Feb 18 17:42:14 1998
++++ pptp_gre.c	Sun Apr  9 21:21:00 2000
+@@ -6,8 +6,8 @@
   */
  
 +#include <sys/types.h>
@@ -14,9 +13,7 @@ Index: pptp_gre.c
 -#include <sys/types.h>
  #include <sys/stat.h>
  #include <sys/time.h>
- #include <unistd.h>
-@@ -34,12 +34,12 @@
- 
+@@ -35,10 +35,10 @@
  #if 1
  #include <stdio.h>
 -void print_packet(int fd, void *pack, unsigned len) {
@@ -29,47 +26,36 @@ Index: pptp_gre.c
 +  fprintf(out,"-- begin %s packet (%u) --\n", msg, len);
    for (i=0; i<len; i+=16) {
      for (j=0; j<8; j++)
-       if (i+2*j+1<len)
-@@ -119,6 +119,8 @@
-   /*  this is the only blocking read we will allow */
+@@ -120,4 +120,6 @@
    if (start>=end) {
      if ((status=read(fd,buffer,sizeof(buffer)))<0) return status;
 +    if (status == 0)
 +	return -1;			/* FD is closed */
      end = status; start = 0;
    } 
-   
-@@ -198,6 +200,7 @@
-     ip_len = (buffer[0]&0xF)*4;
+@@ -199,4 +201,5 @@
    header = (struct pptp_gre_header *)(buffer+ip_len);
  
 +/*  print_packet(2, buffer, status, "in");*/
    /* verify packet (else discard) */
    if (((ntoh8(header->ver)&0x7F)!=PPTP_GRE_VER) || /* version should be 1   */
-       (ntoh16(header->protocol)!=PPTP_GRE_PROTO)|| /* GRE protocol for PPTP */
-@@ -258,7 +261,7 @@
-   u.header.call_id	= hton16(pptp_gre_call_id);
+@@ -259,5 +262,5 @@
    
    /* special case ACK with no payload */
 -  if (pack==NULL) 
 +  if (pack==NULL) {
      if (ack_sent != seq_recv) {
        u.header.ver |= hton8(PPTP_GRE_FLAG_A);
-       u.header.payload_len = hton16(0);
-@@ -266,6 +269,7 @@
-       ack_sent = seq_recv;
+@@ -267,4 +270,5 @@
        return write(fd, &u.header, sizeof(u.header)-sizeof(u.header.seq));
      } else return 0; /* we don't need to send ACK */
 +  }
    /* send packet with payload */
    u.header.flags |= hton8(PPTP_GRE_FLAG_S);
-   u.header.seq    = hton32(seq);
-@@ -283,7 +287,7 @@
-   /* record and increment sequence numbers */
+@@ -284,5 +288,5 @@
    seq_sent = seq; seq++;
    /* write this baby out to the net */
 -  /* print_packet(2, u.buffer, header_len+len); */
 +/*  print_packet(2, u.buffer, header_len+len, "out");*/
    return write(fd, u.buffer, header_len+len);
  }
- 
