@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/09/23 02:02:46 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/19 08:48:49 tron Exp $
 
 DISTNAME=	unicon-1.2
 PKGNAME=	unicon-im-1.2
@@ -14,5 +14,5 @@ USE_X11=	YES
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 
-.include "../../devel/pth/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
