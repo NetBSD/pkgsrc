@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.2 2004/07/27 10:25:09 grant Exp $	*/
+/*	$NetBSD: ftp.c,v 1.3 2005/01/04 23:44:24 lukem Exp $	*/
 
 /*-
  * Copyright (c) 1996-2004 The NetBSD Foundation, Inc.
@@ -48,11 +48,7 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *	This product includes software developed by the University of
- *	California, Berkeley and its contributors.
- * 4. Neither the name of the University nor the names of its contributors
+ * 3. Neither the name of the University nor the names of its contributors
  *    may be used to endorse or promote products derived from this software
  *    without specific prior written permission.
  *
@@ -106,7 +102,7 @@
 #if 0
 static char sccsid[] = "@(#)ftp.c	8.6 (Berkeley) 10/27/94";
 #else
-__RCSID("$NetBSD: ftp.c,v 1.2 2004/07/27 10:25:09 grant Exp $");
+__RCSID("$NetBSD: ftp.c,v 1.3 2005/01/04 23:44:24 lukem Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -215,10 +211,7 @@ hookup(char *host, char *port)
 			cause = "socket";
 			continue;
 		}
-		while ((error = xconnect(s, res->ai_addr, res->ai_addrlen)) < 0
-				&& errno == EINTR) {
-			;
-		}
+		error = xconnect(s, res->ai_addr, res->ai_addrlen);
 		if (error) {
 			/* this "if" clause is to prevent print warning twice */
 			if (res->ai_next) {
@@ -261,7 +254,8 @@ hookup(char *host, char *port)
 		int tos = IPTOS_LOWDELAY;
 		if (setsockopt(s, IPPROTO_IP, IP_TOS, (char *)&tos,
 			       sizeof(int)) < 0)
-			warn("setsockopt TOS (ignored)");
+			if (debug)
+				warn("setsockopt TOS (ignored)");
 	}
 #endif
 	cin = fdopen(s, "r");
@@ -559,13 +553,13 @@ empty(FILE *cin, FILE *din, int sec)
 	struct pollfd pfd[2];
 
 	if (cin) {
-	    pfd[nfd].fd = fileno(cin);
-	    pfd[nfd++].events = POLLIN;
+		pfd[nfd].fd = fileno(cin);
+		pfd[nfd++].events = POLLIN;
 	}
 
 	if (din) {
-	    pfd[nfd].fd = fileno(din);
-	    pfd[nfd++].events = POLLIN;
+		pfd[nfd].fd = fileno(din);
+		pfd[nfd++].events = POLLIN;
 	}
 
 	if ((nr = poll(pfd, nfd, sec * 1000)) <= 0)
@@ -1312,7 +1306,8 @@ initconn(void)
 		if ((options & SO_DEBUG) &&
 		    setsockopt(data, SOL_SOCKET, SO_DEBUG, (char *)&on,
 			       sizeof(on)) < 0)
-			warn("setsockopt (ignored)");
+			if (debug)
+				warn("setsockopt (ignored)");
 		result = COMPLETE + 1;
 		switch (data_addr.su_family) {
 		case AF_INET:
@@ -1531,8 +1526,6 @@ initconn(void)
 
 		while (xconnect(data, (struct sockaddr *)&data_addr.si_su,
 			    data_addr.su_len) < 0) {
-			if (errno == EINTR)
-				continue;
 			if (activefallback) {
 				(void)close(data);
 				data = -1;
@@ -1550,7 +1543,8 @@ initconn(void)
 			on = IPTOS_THROUGHPUT;
 			if (setsockopt(data, IPPROTO_IP, IP_TOS, (char *)&on,
 				       sizeof(int)) < 0)
-				warn("setsockopt TOS (ignored)");
+				if (debug)
+					warn("setsockopt TOS (ignored)");
 		}
 #endif
 		return (0);
@@ -1583,7 +1577,8 @@ initconn(void)
 	if (options & SO_DEBUG &&
 	    setsockopt(data, SOL_SOCKET, SO_DEBUG, (char *)&on,
 			sizeof(on)) < 0)
-		warn("setsockopt (ignored)");
+		if (debug)
+			warn("setsockopt (ignored)");
 	len = sizeof(data_addr.si_su);
 	memset((char *)&data_addr, 0, sizeof (data_addr));
 	if (getsockname(data, (struct sockaddr *)&data_addr.si_su, &len) < 0) {
@@ -1683,7 +1678,8 @@ initconn(void)
 		on = IPTOS_THROUGHPUT;
 		if (setsockopt(data, IPPROTO_IP, IP_TOS, (char *)&on,
 			       sizeof(int)) < 0)
-			warn("setsockopt TOS (ignored)");
+			if (debug)
+				warn("setsockopt TOS (ignored)");
 	}
 #endif
 	return (0);
@@ -1716,7 +1712,8 @@ dataconn(const char *lmode)
 		int tos = IPTOS_THROUGHPUT;
 		if (setsockopt(s, IPPROTO_IP, IP_TOS, (char *)&tos,
 				sizeof(int)) < 0) {
-			warn("setsockopt TOS (ignored)");
+			if (debug)
+				warn("setsockopt TOS (ignored)");
 		}
 	}
 #endif
