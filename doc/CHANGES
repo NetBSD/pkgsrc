@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5116 2004/03/07 01:35:31 minskim Exp $
+$NetBSD: CHANGES,v 1.5117 2004/03/07 01:53:22 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1197,4 +1197,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Added py-Gnosis-Utils-1.1.1 [recht 2004-03-06]
 	Updated bomberclone to 0.11.2 [snj 2004-03-07]
 	Updated cue to 20040301 [itojun 2004-03-07]
+	Added p5-Sys-Hostname-Long-1.0 [heinz 2004-03-07]
+	Updated p5-Net-DNS to 0.46 [heinz 2004-03-07]
+	Updated p5-Mail-SPF-Query to 1.996 [heinz 2004-03-07]
 	Updated nicotine to 1.0.7nb1 [minskim 2004-03-07]
