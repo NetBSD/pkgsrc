@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9081 2005/02/09 08:41:05 seb Exp $
+$NetBSD: CHANGES,v 1.9082 2005/02/09 09:05:38 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -803,3 +803,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added libinstaller-4.0 [xtraeme 2005-02-09]
 	Updated postfix to 2.1.5nb5 [martti 2005-02-09]
 	Updated vip to 19971113nb1 [seb 2005-02-09]
+	Updated p5-SNMP_Session to 1.07 [seb 2005-02-09]
