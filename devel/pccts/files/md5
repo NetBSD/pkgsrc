@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 2000/04/04 02:17:11 itohy Exp $
+$NetBSD: md5,v 1.4 2000/04/26 15:42:56 agc Exp $
 
-MD5 (pccts133mr.zip) = 0a2bc7aa6b34e23e879bf575c79737bd
+MD5 (pccts-1.33.22/pccts133mr.zip) = 0a2bc7aa6b34e23e879bf575c79737bd

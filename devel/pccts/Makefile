@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/04/04 02:17:10 itohy Exp $
+# $NetBSD: Makefile,v 1.4 2000/04/26 15:42:55 agc Exp $
 #
 
 DISTNAME=	pccts133mr
@@ -11,6 +11,8 @@ MAINTAINER=	David Maxwell <david@maxwell.net>
 HOMEPAGE=	http://www.polhode.com/pccts.html
 
 BUILD_DEPENDS=  unzip:../../archivers/unzip
+
+DIST_SUBDIR=	${PKGNAME}
 
 EXTRACT_CMD=    unzip -qo ${DOWNLOADED_DISTFILE}
 WRKSRC=		${WRKDIR}/pccts
