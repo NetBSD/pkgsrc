@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: README,v 1.1.1.1 2002/09/19 21:40:45 atatat Exp $
+$NetBSD: README,v 1.2 2004/02/04 22:19:10 abs Exp $
 
 You must now do post-installation configuration:
 
@@ -13,5 +13,23 @@ You must now do post-installation configuration:
 file.  This covers issues such as how to configure your web server
 for use with rt, how to set up aliases for the email gateway, and
 cron jobs for cleaning out stale data.
+
+If you are using Apache you will need to install www/ap-fastcgi, and
+the following may prove useful to avoid an issue with the POST from
+the initial Login screen being ignored:
+
+    LoadModule perl_module lib/httpd/mod_perl.so
+    LoadModule fastcgi_module lib/httpd/mod_fastcgi.so
+    AddHandler fastcgi-script fcgi
+    #
+    <VirtualHost YOUR_SERVER_NAME>
+	ServerName YOUR_SERVER_NAME
+	DocumentRoot @RT_PATH@/WebRT/html
+	PerlModule Apache::DBI
+	PerlRequire @RT_PATH@/bin/webmux.pl
+	FastCgiServer @RT_PATH@/bin/mason_handler.fcgi
+	Alias /NoAuth/images/ @RT_PATH@/WebRT/html/NoAuth/images/
+	ScriptAlias / @RT_PATH@/bin/mason_handler.fcgi/
+    </VirtualHost>
 
 ===========================================================================
