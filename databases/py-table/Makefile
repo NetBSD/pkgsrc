@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/21 11:01:10 darcy Exp $
+# $NetBSD: Makefile,v 1.2 2005/02/04 14:30:00 wiz Exp $
 #
 
 DISTNAME=	pytable-0.8.3a
@@ -10,7 +10,7 @@ MAINTAINER=	darcy@NetBSD.org
 HOMEPAGE=	http://pytable.sf.net/
 COMMENT=	Python RDBMS wrapper for various databases
 
-DEPENDS+=	${PYPKGPREFIX}-basicproperty*:../../lang/py-basicproperty
+DEPENDS+=	${PYPKGPREFIX}-basicproperty-[0-9]*:../../lang/py-basicproperty
 
 MAKE_ENV+=		MANDIR=${PREFIX}/man
 MAKE_ENV+=		BINDIR=${PREFIX}/bin
