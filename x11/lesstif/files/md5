@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.17 2000/01/31 20:45:44 drochner Exp $
+$NetBSD: md5,v 1.18 2000/04/27 13:14:48 tron Exp $
 
-MD5 (lesstif-0.89.9.tar.gz) = 23c659df334986eab295ce537dca4b9c
+MD5 (lesstif-0.90.0.tar.gz) = da29cd37696920825265ae9ee5ac8144
