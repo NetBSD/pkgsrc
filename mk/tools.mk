@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.21 2004/01/29 10:15:44 grant Exp $
+# $NetBSD: tools.mk,v 1.22 2004/01/29 10:19:10 grant Exp $
 #
 # This Makefile creates a ${TOOLS_DIR} directory and populates the bin
 # subdir with tools that hide the ones outside of ${TOOLS_DIR}.
@@ -115,7 +115,7 @@ ${TOOLS_DIR}/bin/makeinfo: ${_GNU_MISSING}
 # defining e.g. USE_GNU_TOOLS+="awk sed".  Version numbers are not
 # considered.
 
-_TOOLS=		awk grep m4 make sed
+_TOOLS=		awk grep m4 make patch sed
 
 .if defined(_IGNORE_USE_GNU_TOOLS)
 USE_GNU_TOOLS:=		# empty
@@ -132,6 +132,8 @@ _TOOLS_OPSYS_HAS_GNU.grep+=	Darwin-*-* FreeBSD-*-* Linux-*-*
 _TOOLS_OPSYS_HAS_GNU.grep+=	NetBSD-*-* OpenBSD-*-*
 _TOOLS_OPSYS_HAS_GNU.m4+=	# empty
 _TOOLS_OPSYS_HAS_GNU.make+=	Darwin-*-*
+_TOOLS_OPSYS_HAS_GNU.patch+=	Darwin-*-* FreeBSD-*-* Linux-*-* NetBSD-*-*
+_TOOLS_OPSYS_HAS_GNU.patch+=	OpenBSD-*-*
 _TOOLS_OPSYS_HAS_GNU.sed+=	Linux-*-* NetBSD-*-*
 
 # These platforms have GNUish versions of the tools available in the base
@@ -143,6 +145,7 @@ _TOOLS_REPLACE_OPSYS.awk+=	SunOS-*-*
 _TOOLS_REPLACE_OPSYS.grep+=	SunOS-*-*
 _TOOLS_REPLACE_OPSYS.m4+=	# empty
 _TOOLS_REPLACE_OPSYS.make+=	# empty
+_TOOLS_REPLACE_OPSYS.patch+=	SunOS-*-*
 _TOOLS_REPLACE_OPSYS.sed+=	SunOS-*-*
 
 # These platforms have completely unusable versions of these tools, and
@@ -257,6 +260,23 @@ GMAKE:=			${_TOOLS_PROGNAME.make}
 .endif
 .if !empty(PKGPATH:Mdevel/gmake)
 _TOOLS_OVERRIDE.make=	NO
+MAKEFLAGS+=		_IGNORE_USE_GNU_TOOLS=
+.endif
+
+.if ${_TOOLS_REPLACE.patch} == "YES"
+_TOOLS_OVERRIDE.patch=	YES
+_TOOLS_PROGNAME.patch=	${PATCH}
+.endif
+.if (${_TOOLS_NEED_GNU.patch} == "YES") && empty(PKGPATH:Mdevel/patch)
+BUILD_DEPENDS+=		patch>=2.2:../../devel/patch
+_TOOLS_OVERRIDE.patch=	YES
+_TOOLS_PROGNAME.patch=	${LOCALBASE}/bin/gpatch	# "gpatch" always exists
+.  if exists(${_TOOLS_PROGNAME.patch})
+PATCH:=			${_TOOLS_PROGNAME.patch}
+.  endif
+.endif
+.if !empty(PKGPATH:Mdevel/patch)
+_TOOLS_OVERRIDE.patch=	NO
 MAKEFLAGS+=		_IGNORE_USE_GNU_TOOLS=
 .endif
 
