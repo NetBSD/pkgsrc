@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 1999/09/11 18:27:49 jlam Exp $
+$NetBSD: patch-ac,v 1.2 1999/09/14 02:19:15 jlam Exp $
 
 --- src/config/abi_defs.mk.orig	Tue Jul 27 11:18:52 1999
 +++ src/config/abi_defs.mk	Sat Sep 11 13:47:32 1999
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.1.1.1 1999/09/11 18:27:49 jlam Exp $
  ##
  
 -ABI_BUILD_VERSION	= unnumbered
-+ABI_BUILD_VERSION	= 0.7.5
++ABI_BUILD_VERSION	?= unnumbered
  ABI_BUILD_ID		=
  
  DIST			= $(ABI_ROOT)/dist
