@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1991 2003/04/20 22:11:20 rh Exp $
+$NetBSD: CHANGES,v 1.1992 2003/04/20 23:20:31 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1673,3 +1673,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added perlsh-1.8 [cjep 2003-04-20]
 	Updated perlsh to 1.8nb1 [cjep 2003-04-20]
 	Updated ipa to 1.3.3 [cjep 2003-04-20]
+	Added gnome-applets-2.2.1 as gnome2-applets [rh 2003-04-21]
