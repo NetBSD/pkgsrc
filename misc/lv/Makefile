@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/04/17 15:22:52 xtraeme Exp $
-# FreeBSD Id: Makefile,v 1.3 1999/01/08 03:32:06 itojun Exp $
+# $NetBSD: Makefile,v 1.14 2005/03/24 21:12:57 wiz Exp $
 
 DISTNAME=	lv450
 PKGNAME=	lv-4.50

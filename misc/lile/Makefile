@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 21:49:26 grant Exp $
-# FreeBSD Id: Makefile,v 1.3 1997/08/15 16:47:08 jmz Exp
-#
+# $NetBSD: Makefile,v 1.10 2005/03/24 21:12:57 wiz Exp $
 
 DISTNAME=	lile-2.0
 PKGNAME=	ile-2.0

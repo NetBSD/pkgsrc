@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/09/18 13:34:28 uebayasi Exp $
-# FreeBSD Id: Makefile,v 1.19 1999/01/08 19:59:26 fenner Exp
+# $NetBSD: Makefile,v 1.14 2005/03/24 21:13:03 wiz Exp $
 
 DISTNAME=	w3c-httpd-3.0A
 CATEGORIES=	www

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/03/06 17:19:06 taca Exp $
-# FreeBSD: ports/graphics/ruby-opengl/Makefile,v 1.4 2000/09/26 08:01:58 knu Exp
+# $NetBSD: Makefile,v 1.19 2005/03/24 21:12:55 wiz Exp $
 
 DISTNAME=	rbogl-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-opengl-${VERSION}

@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/12/03 15:15:04 wiz Exp $
-# FreeBSD Id: Makefile,v 1.5 1997/04/02 08:39:12 obrien Exp
-#
+# $NetBSD: Makefile,v 1.14 2005/03/24 21:12:58 wiz Exp $
 
 DISTNAME=		splitvt-1.6.3
 CATEGORIES=		misc

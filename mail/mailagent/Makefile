@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/11/23 07:41:19 salo Exp $
-# FreeBSD: ports/mail/mailagent/Makefile,v 1.28 1999/08/31 06:47:24 mharo Exp
-#
+# $NetBSD: Makefile,v 1.11 2005/03/24 21:12:56 wiz Exp $
 
 DISTNAME=		mailagent-3.0.73
 CATEGORIES=		mail

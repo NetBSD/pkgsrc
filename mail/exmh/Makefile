@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/01/22 15:45:59 minskim Exp $
-# FreeBSD Id: Makefile,v 1.25 1998/02/15 05:36:54 peter Exp
-#
+# $NetBSD: Makefile,v 1.37 2005/03/24 21:12:55 wiz Exp $
 
 DISTNAME=	exmh-2.6.3
 CATEGORIES=	mail tk

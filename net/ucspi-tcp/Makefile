@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/03/23 00:57:20 schmonz Exp $
-# FreeBSD Id: ports/sysutils/ucspi-tcp/Makefile,v 1.12 2000/07/10 01:41:24 steve Exp
+# $NetBSD: Makefile,v 1.24 2005/03/24 21:12:59 wiz Exp $
 
 DISTNAME=		ucspi-tcp-0.88
 CATEGORIES=		sysutils net
