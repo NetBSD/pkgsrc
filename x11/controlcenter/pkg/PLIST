@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2000/09/11 20:46:38 fredb Exp $
+@comment $NetBSD: PLIST,v 1.10 2000/10/18 00:01:13 jlam Exp $
 bin/background-properties-capplet
 bin/gnome-edit-properties-capplet
 bin/gnomecc
@@ -75,7 +75,6 @@ share/gnome/help/control-center/C/figs/mouse-capplet.png
 share/gnome/help/control-center/C/figs/screensave-capplet.png
 share/gnome/help/control-center/C/figs/theme-select.png
 share/gnome/help/control-center/C/figs/wm-main.png
-share/gnome/help/control-center/C/index.html
 share/gnome/help/control-center/C/topic.dat
 share/gnome/wm-properties/Enlightenment.desktop
 share/gnome/wm-properties/IceWM.desktop
@@ -108,6 +107,7 @@ share/locale/pt/LC_MESSAGES/control-center.mo
 share/locale/pt_BR/LC_MESSAGES/control-center.mo
 share/locale/ro/LC_MESSAGES/control-center.mo
 share/locale/ru/LC_MESSAGES/control-center.mo
+share/locale/sl/LC_MESSAGES/control-center.mo
 share/locale/sv/LC_MESSAGES/control-center.mo
 share/locale/tr/LC_MESSAGES/control-center.mo
 share/locale/uk/LC_MESSAGES/control-center.mo
@@ -126,6 +126,7 @@ share/pixmaps/control-center.png
 @dirrm share/gnome/apps/Settings/Documents
 @dirrm share/gnome/apps/Settings/Desktop
 @dirrm share/gnome/apps/Settings
+@unexec rmdir -p %D/share/gnome/apps 2>/dev/null || true
 @dirrm share/control-center/UIOptions
 @dirrm share/control-center/Session
 @dirrm share/control-center/Peripherals

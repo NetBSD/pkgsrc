@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2000/09/11 20:46:38 fredb Exp $
+$NetBSD: patch-ac,v 1.2 2000/10/18 00:01:12 jlam Exp $
 
---- capplets/Makefile.in.orig	Tue May 23 18:09:46 2000
-+++ capplets/Makefile.in	Mon Sep 11 08:53:43 2000
-@@ -129,7 +129,7 @@
+--- capplets/Makefile.in.orig	Mon Sep 11 22:01:32 2000
++++ capplets/Makefile.in
+@@ -131,7 +131,7 @@
  cxxflags_set = @cxxflags_set@
  l = @l@
  
