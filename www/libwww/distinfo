@@ -1,14 +1,15 @@
-$NetBSD: distinfo,v 1.16 2004/02/12 20:31:35 minskim Exp $
+$NetBSD: distinfo,v 1.17 2004/02/12 21:15:07 minskim Exp $
 
 SHA1 (w3c-libwww-5.4.0.tgz) = 2394cb4e0dc4e2313a9a0ddbf508e4b726e9af63
 Size (w3c-libwww-5.4.0.tgz) = 1129121 bytes
+SHA1 (libwww-configure-5.4.0.gz) = fef99e7a600f650a631b848bde20add44ddfea6b
+Size (libwww-configure-5.4.0.gz) = 155697 bytes
 SHA1 (patch-aa) = fc0124c8995992536782e60ce67332c2dc505b10
 SHA1 (patch-ab) = 24db9ca337bd6768fa5b208186f7b55e555beb8f
 SHA1 (patch-ac) = d3b153c4360d5eb0439a9d328d259896937902df
 SHA1 (patch-ad) = a585498bace904928d18e7449a6defad82f59596
 SHA1 (patch-ae) = 4130a9a20d806553a79e04c79d652b76ec1dce34
 SHA1 (patch-af) = 6cb4967a94626154fd940bf4e2406aad45d59e93
-SHA1 (patch-ag) = d69fcbe4a98fdb22e3913419a17c84d64dfd0a05
 SHA1 (patch-ai) = 95912fb5b836e4dce01b630f9e6e9c9f41d7bb72
 SHA1 (patch-aj) = 6148ae393aefcce54477b289835038b01a26a0ed
 SHA1 (patch-ak) = fb13a43105ee252a461d20b67d5841db6d247dde

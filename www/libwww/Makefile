@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2004/02/12 20:31:35 minskim Exp $
+# $NetBSD: Makefile,v 1.49 2004/02/12 21:15:07 minskim Exp $
 
 DISTNAME=		w3c-libwww-5.4.0
 PKGNAME=		libwww-5.4.0
@@ -7,10 +7,14 @@ CATEGORIES=		www devel
 MASTER_SITES=		http://www.w3.org/Library/Distribution/ \
 			ftp://ftp.uni-hannover.de/pub/mirror/info-systems/WWW/libwww/
 EXTRACT_SUFX=		.tgz
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} libwww-configure-5.4.0.gz
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.w3.org/Library/
 COMMENT=		The W3C Reference Library
+
+EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
+SITES_libwww-configure-5.4.0.gz=	${MASTER_SITE_LOCAL}
 
 USE_BUILDLINK2=		YES
 USE_GNU_TOOLS+=		make
@@ -24,6 +28,8 @@ CONFIGURE_ARGS+=	--with-ssl="${SSLBASE}"
 DOCDIR=			${PREFIX}/share/doc/libwww
 
 pre-configure:
+	${GZCAT} ${DISTDIR}/libwww-configure-5.4.0.gz > ${WRKSRC}/configure
+	${CHMOD} a+x ${WRKSRC}/configure
 .for f in aclocal.m4 configure stamp-h.in
 	${TOUCH} ${WRKSRC}/$f
 .endfor
