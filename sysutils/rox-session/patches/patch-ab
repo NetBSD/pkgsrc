@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/05/26 20:22:07 cjep Exp $
+
+--- Makefile.in.orig	Sat Mar  2 01:42:12 2002
++++ Makefile.in
+@@ -7,7 +7,7 @@
+ 
+ CC = @CC@
+ CFLAGS = @CFLAGS@ `pkg-config --cflags gtk+-2.0 libxml-2.0` -I.
+-LDFLAGS = @LDFLAGS@ `pkg-config --libs gtk+-2.0 libxml-2.0` -I.
++LDFLAGS = @LDFLAGS@ `pkg-config --libs gtk+-2.0 libxml-2.0` -I. -Wl,-R${X11BASE}/lib
+ EXEC = ${PLATFORM_DIR}/${PROG}
+ 
+ ############ Things to change for different programs
+@@ -21,6 +21,9 @@
+ 	  wm.o xsettings-common.o xsettings-manager.o
+ 
+ ############ Things to keep the same
++
++all: ${OBJECTS}
++	${CC} -o ${PROG} ${OBJECTS} ${LDFLAGS}
+ 
+ ${EXEC}: ${PLATFORM_DIR} ${OBJECTS}
+ 	${CC} -o ${EXEC} ${OBJECTS} ${LDFLAGS}
