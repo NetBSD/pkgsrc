@@ -1,0 +1,18 @@
+$NetBSD: patch-ac,v 1.1 2000/12/19 07:03:22 jlam Exp $
+
+--- pty.c.orig	Wed Dec 13 17:32:14 2000
++++ pty.c
+@@ -35,8 +35,12 @@
+ #endif
+ 
+ #ifdef HAVE_UTIL_H
+-#include <util.h>
++#include <util.h>        /* openpty */
+ #endif /* HAVE_UTIL_H */
++
++#ifdef HAVE_SYS_IOCTL_H
++#include <sys/ioctl.h>   /* ioctl */
++#endif
+ 
+ /* Pty allocated with _getpty gets broken if we do I_PUSH:es to it. */
+ #if defined(HAVE__GETPTY) || defined(HAVE_OPENPTY)

@@ -1,33 +1,13 @@
-$NetBSD: patch-ab,v 1.2 2000/04/03 16:52:17 tron Exp $
+$NetBSD: patch-ab,v 1.3 2000/12/19 07:03:22 jlam Exp $
 
---- configure.in.orig	Tue Feb 22 14:19:04 2000
-+++ configure.in	Mon Apr  3 18:47:04 2000
-@@ -28,16 +28,14 @@
- )
+--- configure.in.orig	Wed Dec 13 05:48:29 2000
++++ configure.in
+@@ -137,12 +137,14 @@
  
- checkssldir() { :
--    if test -d "$1/certs"; then
--        if test -f "$1/include/openssl/ssl.h"; then
--            AC_DEFINE(HAVE_OPENSSL)
--            ssldir="$1"
--            return 0
--        fi
--        if test -f "$1/include/ssl.h"; then
--            ssldir="$1"
--            return 0
--        fi
-+    if test -f "$1/include/openssl/ssl.h"; then
-+        AC_DEFINE(HAVE_OPENSSL)
-+        ssldir="$1"
-+        return 0
-+    fi
-+    if test -f "$1/include/ssl.h"; then
-+        ssldir="$1"
-+        return 0
-     fi
-     return 1
- }
-@@ -88,8 +86,9 @@
+ dnl Check for libwrap library.
+ AC_MSG_CHECKING([for hosts_access in -lwrap])
++wrap_LIB=
+ saved_LIBS="$LIBS"
  LIBS="-lwrap $saved_LIBS"
  AC_TRY_LINK([int hosts_access(); int allow_severity, deny_severity;],
  [hosts_access()],
@@ -39,10 +19,19 @@ $NetBSD: patch-ab,v 1.2 2000/04/03 16:52:17 tron Exp $
  
  dnl Add SSL includes and libraries
  CFLAGS="$CFLAGS -I$ssldir/include"
-@@ -122,6 +121,8 @@
+@@ -164,7 +166,7 @@
+ # AC_HEADER_DIRENT
+ # AC_HEADER_STDC
+ # AC_HEADER_SYS_WAIT
+-AC_CHECK_HEADERS(getopt.h unistd.h sys/select.h tcpd.h pthread.h pty.h stropts.h)
++AC_CHECK_HEADERS(getopt.h unistd.h sys/select.h tcpd.h pthread.h util.h sys/ioctl.h pty.h stropts.h)
+ 
+ # dnl Checks for typedefs, structures, and compiler characteristics.
+ # AC_C_CONST
+@@ -175,6 +177,8 @@
  
  dnl Checks for library functions.
- AC_CHECK_FUNCS(getopt snprintf vsnprintf openpty _getpty)
+ AC_CHECK_FUNCS(getopt snprintf vsnprintf openpty _getpty daemon)
 +
 +LIBS="$LIBS $wrap_LIB"
  
