@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/27 21:52:46 reed Exp $
+bin/${GNU_PROGRAM_PREFIX}time
