@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.16 2002/02/27 23:22:49 simonb Exp $
+$NetBSD: patch-aa,v 1.17 2002/04/25 16:34:16 abs Exp $
 
 --- Makefile.orig	Thu Feb 28 10:17:44 2002
 +++ Makefile	Thu Feb 28 10:19:04 2002
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.16 2002/02/27 23:22:49 simonb Exp $
  	@echo "make aix-tk3play    IBM AIX"
  	@echo "make os2            IBM OS/2"
  	@echo "make netbsd         NetBSD"
-+	@echo "make netbsd-arm32   NetBSD for strongarm"
++	@echo "make netbsd-arm     NetBSD for strongarm"
 +	@echo "make netbsd-i386    NetBSD optimized for i386"
 +	@echo "make netbsd-i386-elf NetBSD optimized for i386, ELF format"
 +	@echo "make netbsd-m68k    NetBSD optimized for m68k"
@@ -35,7 +35,7 @@ $NetBSD: patch-aa,v 1.16 2002/02/27 23:22:49 simonb Exp $
 +			-DUSE_MMAP -DNETBSD -DM68K_ASSEM -DTERM_CONTROL' \
 +		mpg123-make
 +
-+netbsd-arm32:
++netbsd-arm:
 +	$(MAKE) CC=cc LDFLAGS= \
 +		OBJECTS='decode.o dct64.o audio_sun.o term.o' \
 +		CFLAGS='$(CFLAGS) -Wall -O6 -fomit-frame-pointer \
