@@ -136,7 +136,7 @@
 -			make $(TOAST_INSTALL_TARGETS);	\
 -		fi
 +		-for f in toast tcat untoast; do \
-+			${INSTALL} -c -m 0644 bin/$$f ${TOAST_INSTALL_BIN}; \
++			${INSTALL} -c -m 0755 bin/$$f ${TOAST_INSTALL_BIN}; \
 +		done
 +		${INSTALL} -c -m 0644 man/toast.1 ${TOAST_INSTALL_MAN}
  
