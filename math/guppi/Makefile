@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/01/21 12:01:02 martti Exp $
+# $NetBSD: Makefile,v 1.10 2002/01/23 19:45:22 tron Exp $
 
 DISTNAME=	Guppi-0.40.0
 PKGNAME=	${DISTNAME:S/G/g/}
@@ -12,7 +12,6 @@ COMMENT=	Plot program with integrated statistics capabilities
 
 DEPENDS+=	gnome-core>=1.4:../../x11/gnome-core
 DEPENDS+=	gnumeric>=0.75:../../math/gnumeric0
-DEPENDS+=	python>=2.0:../../lang/python
 
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
@@ -27,5 +26,6 @@ post-install:
 	${LN} -fs ${PREFIX}/share/aclocal/libguppi.m4 \
 	  ${LOCALBASE}/share/aclocal/libguppi.m4
 
+.include "../../lang/python/pyversion.mk"
 .include "../../devel/libglade/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
