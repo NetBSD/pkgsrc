@@ -1,4 +1,4 @@
-# $NetBSD: arg-pp-darwin-gcc,v 1.1 2005/01/18 17:25:13 jlam Exp $
+# $NetBSD: arg-pp-darwin-gcc,v 1.2 2005/02/14 21:33:36 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -35,6 +35,27 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 case $arg in
+######################################################################
+# Split direct paths to Darwin "dylib" shared libraries into the
+# "-Ldir -llib" equivalent.
+######################################################################
+/*/lib*.dylib)
+	dir="${arg%/lib*.dylib}"
+	lib="${arg#$dir/lib}"
+	case $lib in
+	*/*)		argok=yes; argmatch=yes ;;
+	*.dylib)	lib="${lib%.dylib}" ;;
+	esac
+	case $argmatch in
+	yes)	;;
+	*)	prepend_queue argbuf "-l$lib"
+		$debug_log $wrapperlog "    (arg-pp-darwin-gcc) pre:  -l$lib"
+		prepend_queue argbuf "-L$dir"
+		$debug_log $wrapperlog "    (arg-pp-darwin-gcc) pre:  -L$dir"
+		argmatch=yes
+		;;
+	esac
+	;;
 ######################################################################
 # Darwin's linker uses:
 #
