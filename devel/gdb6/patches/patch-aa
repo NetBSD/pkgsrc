@@ -1,0 +1,51 @@
+$NetBSD: patch-aa,v 1.1 2005/02/22 15:22:02 shannonjr Exp $
+
+--- gdb/i386bsd-nat.c.orig	2004-05-31 05:20:41.000000000 -0600
++++ gdb/i386bsd-nat.c
+@@ -33,6 +33,19 @@
+ 
+ #include "i386-tdep.h"
+ #include "i387-tdep.h"
++#ifdef HAVE_SYS_PROCFS_H
++#include <sys/procfs.h>
++#endif
++
++#ifndef HAVE_GREGSET_T
++typedef struct reg gregset_t;
++#endif
++
++#ifndef HAVE_FPREGSET_T
++typedef struct fpreg fpregset_t;
++#endif
++
++#include "gregset.h"
+ 
+ 
+ /* In older BSD versions we cannot get at some of the segment
+@@ -373,7 +386,7 @@ _initialize_i386bsd_nat (void)
+ 
+   /* Override the default value for the offset of the program counter
+      in the sigcontext structure.  */
+-  offset = offsetof (struct sigcontext, sc_pc);
++  offset = offsetof (ucontext_t, uc_mcontext.__gregs[_REG_EIP]);
+ 
+   if (SC_PC_OFFSET != offset)
+     {
+@@ -386,7 +399,7 @@ Please report this to <bug-gdb@gnu.org>.
+   SC_PC_OFFSET = offset;
+ 
+   /* Likewise for the stack pointer.  */
+-  offset = offsetof (struct sigcontext, sc_sp);
++  offset = offsetof (ucontext_t, uc_mcontext.__gregs[_REG_UESP]);
+ 
+   if (SC_SP_OFFSET != offset)
+     {
+@@ -399,7 +412,7 @@ Please report this to <bug-gdb@gnu.org>.
+   SC_SP_OFFSET = offset;
+ 
+   /* And the frame pointer.  */
+-  offset = offsetof (struct sigcontext, sc_fp);
++  offset = offsetof (ucontext_t, uc_stack);
+ 
+   if (SC_FP_OFFSET != offset)
+     {
