@@ -1,0 +1,85 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/08/24 19:53:33 jwise Exp $
+--- Makefile.in.orig	Tue Aug  8 15:17:11 2000
++++ Makefile.in	Thu Aug 24 12:01:11 2000
+@@ -161,8 +161,8 @@
+ # "install" around;  better to use the install-sh script that comes
+ # with the distribution, which is slower but guaranteed to work.
+ 
+-INSTALL			= @srcdir@/install-sh -c
+-INSTALL_PROGRAM		= ${INSTALL}
++INSTALL			:= ${LIBTOOL} --mode=install @srcdir@/install-sh -c
++INSTALL_PROGRAM		= ${INSTALL} -s
+ INSTALL_DATA		= ${INSTALL} -m 644
+ 
+ # The following specifies which Tcl executable to use for make targets
+@@ -178,8 +178,8 @@
+ # configure script.  You shouldn't normally need to modify any of
+ # these definitions by hand.
+ 
+-STLIB_LD		= @STLIB_LD@
+-SHLIB_LD		= @SHLIB_LD@
++STLIB_LD		= ${LIBTOOL} --mode=link @CC@
++SHLIB_LD		= ${LIBTOOL} --mode=link @CC@
+ SHLIB_CFLAGS		= @SHLIB_CFLAGS@
+ 
+ SHLIB_SUFFIX		= @SHLIB_SUFFIX@
+@@ -198,7 +198,7 @@
+ TCL_LIB_FILE		= @TCL_LIB_FILE@
+ #TCL_LIB_FILE		= libtcl.a
+ 
+-TCL_LIB_FLAG		= @TCL_LIB_FLAG@
++TCL_LIB_FLAG		= libtcl83.la
+ #TCL_LIB_FLAG		= -ltcl
+ 
+ TCL_EXP_FILE		= @TCL_EXP_FILE@
+@@ -226,7 +226,8 @@
+ TCL_BUILDTIME_LIBRARY	= @TCL_SRC_DIR@/library
+ 
+ #CC			= purify -best-effort @CC@
+-CC			= @CC@
++CC			= ${LIBTOOL} --mode=compile @CC@
++LD			= ${LIBTOOL} --mode=link @CC@
+ 
+ #----------------------------------------------------------------
+ # The information below should be usable as is.  The configure
+@@ -428,11 +429,11 @@
+ 
+ 
+ tclsh: ${TCLSH_OBJS} ${TCL_LIB_FILE}
+-	${CC} @LDFLAGS@ ${TCLSH_OBJS} @TCL_BUILD_LIB_SPEC@ ${LIBS} \
++	${LD} @LDFLAGS@ ${TCLSH_OBJS} libtcl83.la ${LIBS} \
+ 		@TCL_LD_SEARCH_FLAGS@ -o tclsh
+ 
+ tcltest: ${TCLTEST_OBJS} ${TCL_LIB_FILE} ${BUILD_DLTEST}
+-	${CC} @LDFLAGS@ ${TCLTEST_OBJS} @TCL_BUILD_LIB_SPEC@ ${LIBS} \
++	${LD} @LDFLAGS@ ${TCLTEST_OBJS} libtcl83.la ${LIBS} \
+ 		@TCL_LD_SEARCH_FLAGS@ -o tcltest
+ 
+ 
+@@ -522,7 +523,7 @@
+ 	    chmod +x $(SRC_DIR)/install-sh; \
+ 	    fi
+ 	@echo "Installing $(TCL_LIB_FILE) to $(LIB_INSTALL_DIR)/"
+-	@$(INSTALL_DATA) $(TCL_LIB_FILE) $(LIB_INSTALL_DIR)/$(TCL_LIB_FILE)
++	@$(INSTALL_DATA) $(TCL_LIB_FILE:.so=.la) $(LIB_INSTALL_DIR)/$(TCL_LIB_FILE)
+ 	@(cd $(LIB_INSTALL_DIR); $(RANLIB) $(TCL_LIB_FILE))
+ 	@chmod 555 $(LIB_INSTALL_DIR)/$(TCL_LIB_FILE)
+ 	@if test "$(TCL_BUILD_EXP_FILE)" != ""; then \
+@@ -646,7 +647,7 @@
+ 	makedepend -- $(DEPEND_SWITCHES) -- $(SRCS)
+ 
+ bp: $(UNIX_DIR)/bp.c
+-	$(CC) $(CC_SWITCHES) $(UNIX_DIR)/bp.c -o bp
++	$(LD) $(CC_SWITCHES) $(UNIX_DIR)/bp.c -o bp
+ 
+ # Test binaries.  The rules for tclTestInit.o and xtTestInit.o are
+ # complicated because they are compiled from tclAppInit.c.  Can't use
+@@ -956,7 +957,7 @@
+ 
+ xttest:  ${XTTEST_OBJS} ${GENERIC_OBJS} ${UNIX_OBJS} ${COMPAT_OBJS} \
+ 	@DL_OBJS@ ${BUILD_DLTEST}
+-	${CC} ${XTTEST_OBJS} ${GENERIC_OBJS} ${UNIX_OBJS} ${COMPAT_OBJS} \
++	${LD} ${XTTEST_OBJS} ${GENERIC_OBJS} ${UNIX_OBJS} ${COMPAT_OBJS} \
+ 		@DL_OBJS@ @TCL_BUILD_LIB_SPEC@ ${LIBS} \
+ 		@TCL_LD_SEARCH_FLAGS@ -L/usr/openwin/lib -lXt -o xttest
+ 
