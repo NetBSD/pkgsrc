@@ -1,6 +1,8 @@
-#	$NetBSD: cross.mk,v 1.23 2001/12/15 20:25:35 agc Exp $
+#	$NetBSD: cross.mk,v 1.24 2002/09/30 21:23:55 jlam Exp $
 
 # Shared definitions for building a cross-compile environment.
+
+.include "../../mk/bsd.prefs.mk"
 
 DISTNAME=		cross-${TARGET_ARCH}-${DISTVERSION}
 CATEGORIES+=		cross lang
@@ -28,10 +30,18 @@ pre-install-dirs:
 BINUTILS_DISTNAME=	binutils-2.9.1
 BINUTILS_WRKSRC=	${WRKDIR}/${BINUTILS_DISTNAME}
 
+# Don't use optimizations taken from /etc/mk.conf for the native compiler
+CFLAGS=			# empty
+CXXFLAGS=		# empty
+
 CROSS_DISTFILES+=	${BINUTILS_DISTNAME}.tar.gz
 MASTER_SITES+=		${MASTER_SITE_GNU:=binutils/}
 CONFIGURE_ARGS+=	--with-gnu-as --with-gnu-ld
+.if defined(USE_BUILDLINK2)
+.  include "../../cross/binutils/buildlink2.mk"
+.else
 DEPENDS+=		cross-binutils>=2.9.1.1:../../cross/binutils
+.endif
 PLIST_PRE+=		${COMMON_DIR}/PLIST-binutils
 
 AS_FOR_TARGET=		${BINUTILS_WRKSRC}/gas/as-new
