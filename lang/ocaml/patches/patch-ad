@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2003/06/23 20:15:18 jtb Exp $
+$NetBSD: patch-ad,v 1.2 2003/06/29 23:04:19 jtb Exp $
 
 --- configure.orig
 +++ configure
@@ -6,14 +6,23 @@ $NetBSD: patch-ad,v 1.1 2003/06/23 20:15:18 jtb Exp $
    rs6000-*-aix*)                arch=power; model=rs6000; system=aix;;
    powerpc-*-aix*)               arch=power; model=ppc; system=aix;;
    powerpc-*-linux*)             arch=power; model=ppc; system=elf;;
-+  powerpc-*-netbsd*)            arch=power; model=ppc; system=elf;;
++  powerpc-*-netbsd*)            arch=power; model=ppc; system=bsd;;
    powerpc-*-rhapsody*)          arch=power; model=ppc; system=rhapsody;;
    powerpc-*-darwin*)            arch=power; model=ppc; system=rhapsody;;
    arm*-*-linux*)                arch=arm; system=linux;;
-@@ -601,6 +602,8 @@
+@@ -591,6 +592,7 @@
+   power,rs6000,aix) asflags='-u -m pwr -w'; asppflags="$asflags";;
+   power,ppc,aix)    asflags='-u -m ppc -w'; asppflags="$asflags";;
+   power,*,elf)      aspp='gcc'; asppflags='-c';;
++  power,*,bsd)      aspp='gcc'; asppflags='-c -DSYS_$(SYSTEM)';;
+   power,*,rhapsody) ;;
+   arm,*,linux)      aspp='gcc'; asppflags='-c -DSYS_$(SYSTEM)';;
+   ia64,*,linux)     asflags=-xexplicit
+@@ -601,6 +603,9 @@
    alpha,*,digital) profiling='prof';;
    i386,*,linux_elf) profiling='prof';;
    i386,*,bsd_elf) profiling='prof';;
++  power,*,bsd) profiling='prof';;
 +  power,*,elf) profiling='prof';;
 +  sparc,*,bsd) profiling='prof';;
    *) profiling='noprof';;
