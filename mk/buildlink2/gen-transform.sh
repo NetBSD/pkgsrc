@@ -14,6 +14,8 @@ untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
 #       r:dir			removes "dir" and "dir/*"
 #       S:foo:bar		translates word "foo" into "bar"
 #       s:foo:bar		translates "foo" into "bar"
+#	static:src:dst		translates "src/libfoo.a" info "dst/libfoo.a"
+#	no-rpath		removes "-R*", "-Wl,-R", and "-Wl,-rpath,*"
 
 gen() {
 	action=$1; shift
