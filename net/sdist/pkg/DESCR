@@ -1,0 +1,6 @@
+Sdist invokes rdist in an intelligent manner.  Usually, the sdist
+command is invoked from the master distribution host.
+
+Invoking the command without any arguments will distribute the current 
+working directory to all hosts in the netgroup for the platform you are
+running sdist on.
