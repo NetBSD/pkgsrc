@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.9 2000/02/19 02:40:35 wiz Exp $
+$NetBSD: patch-ab,v 1.10 2000/12/08 15:35:24 wiz Exp $
 
 --- ./machine/m_netbsd13.c.orig	Sat Feb 19 03:24:47 2000
 +++ ./machine/m_netbsd13.c	Sat Feb 19 03:31:13 2000
@@ -31,7 +31,7 @@ $NetBSD: patch-ab,v 1.9 2000/02/19 02:40:35 wiz Exp $
 + *		matthew green <mrg@eterna.com.au>
 + *
 + *
-+ * $Id: patch-ab,v 1.9 2000/02/19 02:40:35 wiz Exp $
++ * $Id: patch-ab,v 1.10 2000/12/08 15:35:24 wiz Exp $
 + */
 +
 +#include <sys/types.h>
@@ -571,8 +571,8 @@ $NetBSD: patch-ab,v 1.9 2000/02/19 02:40:35 wiz Exp $
 +	    format_k(pagetok(VP(pp, vm_rssize))),
 +	    state_abbrev[(unsigned char) PP(pp, p_stat)],
 +	    format_time(cputime),
-+	    10000.0 * weighted_cpu(pct, pp) / hz,
-+	    10000.0 * pct / hz,
++	    100.0 * weighted_cpu(pct, pp),
++	    100.0 * pct,
 +	    printable(PP(pp, p_comm)));
 +
 +    /* return the result */
