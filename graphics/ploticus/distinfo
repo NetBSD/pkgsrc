@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:25:31 agc Exp $
+
+MD5 (ploticus-1.39/plsrc13.tar.gz) = fccae99644eb6771dd778ae1776236b0
+MD5 (ploticus-1.39/plman13.tar.gz) = 92597a1bbaa1e468c9805c5997217076
+SHA1 (patch-aa) = 4bb627cfedaf0d3692c9700533f7551ca0e133ea

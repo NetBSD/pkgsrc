@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:31:29 agc Exp $
+
+MD5 (librep-0.13.2.tar.gz) = b2a0590111be2bd339cc5c98806e4223
+SHA1 (patch-aa) = 5a82ee3d601dcdd59c00124b38d76376c5a115f8
+SHA1 (patch-ab) = 9f3652f48e899a02e4636bf9b9e14928e71b1626
+SHA1 (patch-ac) = 562f8a25b2da564fa4372101bfa1199b0c755ee3

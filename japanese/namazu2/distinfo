@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:26:47 agc Exp $
+
+MD5 (namazu-2.0.5.tar.gz) = 32b3b80718f038c410045875893b47ae
+SHA1 (patch-aa) = 336a7f68842d4a9ca29ce085ccded45fe0b1392f
+SHA1 (patch-ab) = 92e64af4b94f88ddea605d5b21064f33fff00798

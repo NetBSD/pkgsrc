@@ -1,0 +1,20 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:23:02 agc Exp $
+
+MD5 (fly-1.6.5.tar.gz) = b96a2a6c566f284923d37f16b64aafec
+SHA1 (patch-aa) = 9d0995e6eaafce25367bd1c5cc60138c5ffd0a74
+SHA1 (patch-ab) = 1076212f3e917c752ba6777e40df1399a7ff586c
+SHA1 (patch-ac) = cad03ab8edc67ded2ba51874af4ff436e2f526f9
+SHA1 (patch-ad) = 98f984019d3c2bf2614d4ab06bd42816e5a4fded
+SHA1 (patch-ae) = 3ec7003ba9bbb9bdbdfae7f2c47c068a5ea6b4c4
+SHA1 (patch-af) = 3677f95a112c49e6d7a533ffb5ac9931f6c5fd3e
+SHA1 (patch-ag) = b8513ef6906436f3496ee0f56e0a548e44195ccc
+SHA1 (patch-ah) = 05d70c8772a707111f4eae9f42508578e295698a
+SHA1 (patch-ai) = 8dcc18ede42d15621b59feedf577e1932e3420b5
+SHA1 (patch-aj) = 194d9489ad3fef13890d1ad354f2e1c05fb681cb
+SHA1 (patch-ak) = 83be459b1ddef75f8c829084ae8071a7c5b345de
+SHA1 (patch-al) = 3f720d2ab45169cd6e2aa3904e84bbd6210abb19
+SHA1 (patch-am) = 20606d23c07373fe643c7894a91a62a6128fdc18
+SHA1 (patch-an) = a2e84081e1e11a779cdd67f62cb88db689c7e317
+SHA1 (patch-ao) = c6d89458ad2b7b0aa3af9f5418af2a5aa50ce720
+SHA1 (patch-ap) = 3e0d8ecd4add141d4a37cd2a399596e249318d5c
+SHA1 (patch-aq) = 87ee541dfc67bbbc51a3a3b9b916ba9da35d2fc7

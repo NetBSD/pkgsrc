@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:25:59 agc Exp $
+
+SHA1 (crafty-18.9/crafty-18.9.tar.gz) = 0d1941df2aa8209378dd4edc7f5fe0154d9af7f6
+SHA1 (crafty-18.9/start.pgn) = 09de69c698feda46c1ebafa4fa8e908296c66701
+SHA1 (crafty-18.9/read.me) = 668f6942764d609aa42f119dd99cc28c71704534
+SHA1 (crafty-18.9/crafty.faq) = 7ba5cc19e190fdcf1697e3130c679ce5e50141db
+SHA1 (patch-aa) = 7e6306d7ba0cc1ac6159c717328bd172785326f1

@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:22:42 agc Exp $
+
+MD5 (Ngraph-6.3.06-src.tar.gz) = 6b51d983963f97d0563525cc1e6e07a5
+MD5 (Ngraph-6.3-doc.tar.gz) = ae4ec053ca69abe8fa65f7bf26256be1
+MD5 (ileaf-widgets.tar.Z) = c1519b8cd3718de5cfa266f34cd8674e
+SHA1 (patch-aa) = b821cfdfe264f234ac0a30a327494b9e42936b65
+SHA1 (patch-ab) = 194dbb122c85c6c0cad999496388f8cd9e22c238

@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:24:47 agc Exp $
+
+SHA1 (mpeg2vidcodec_v12.tar.gz) = 2ba56c46f3a70213e4f09417ad5340ef2b1e312e
+SHA1 (patch-aa) = 208e1aa22e94438a281fdca3ec711d93654b6e27

@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:23:40 agc Exp $
+
+SHA1 (MesaLib-3.4.1.tar.bz2) = d239335f11e5322d98a98aa699afb4fc5b995197
+SHA1 (patch-aa) = 36ad59ccff1f99f9352c0fc6c9d8754f4ee01a5f

@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:25:41 agc Exp $
+
+MD5 (a2ps.pl-1.44) = 7c08e3d260d4cb6cf2d0403486421cf4
+SHA1 (patch-aa) = fc75d3addf053afda6a67941e6d3ac6ad5b550c1

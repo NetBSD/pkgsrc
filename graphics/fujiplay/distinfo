@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:23:08 agc Exp $
+
+MD5 (fujiplay-1.33/fujiplay.tgz) = b5702d555813853ff63918ed285c4cdd
+SHA1 (patch-aa) = 2764f3752c620d66368c1adaba3a1ccbcb084c6f

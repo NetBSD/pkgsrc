@@ -1,0 +1,19 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:24:44 agc Exp $
+
+MD5 (mpeg_lib-1.2.1.tar.gz) = 28d9d7a80031393d1008e0dff76c4674
+SHA1 (patch-aa) = 18c3c7531d13a1a62126a16088510b8fcd7117ba
+SHA1 (patch-ab) = df10f9868d7a0e3a5b84d4fd87ebc714cde8bf03
+SHA1 (patch-ac) = 704fd74c0816c321b27b8c0dcefea81216e97e43
+SHA1 (patch-ad) = e02601d4e1669cc2b0746a7fe8a0643d2f4bb262
+SHA1 (patch-ae) = 09c2a8bb2104a0e125d7ee043eede9cf4554dc73
+SHA1 (patch-af) = 77fbadc4811ae6898a5d5d80b5fe67aae29d1c82
+SHA1 (patch-ag) = 34b55886d8889bd2ad0fb19959395fd8acf74352
+SHA1 (patch-ah) = 554d2efd513d9d6dece176370fcc88d191788be7
+SHA1 (patch-ai) = ffb93079e7f57646bcbfb581faea2a90e27eca0f
+SHA1 (patch-aj) = 3ca2e16482675933ee17dc01b6ae66c53633dc5d
+SHA1 (patch-ak) = 75e22576b48ac4f41a3deaccb9027fc99ed87680
+SHA1 (patch-al) = 2ed1237a6d02ea536d36f2dde8a29ce45c6cbc5a
+SHA1 (patch-am) = 772d476a8e7f41bc9f0986b1296b9303adeefa9f
+SHA1 (patch-an) = 567fd1b8439ce9d2d4125dcaafee6fd0f64b4811
+SHA1 (patch-ao) = 8b3d5a99876f22fa24158ab8b292c91d9a85204b
+SHA1 (patch-ap) = 30ea10449fc344bb2bcab3d4854e80ddaee7efff
