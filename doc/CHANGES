@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2419 2003/06/04 01:17:34 jschauma Exp $
+$NetBSD: CHANGES,v 1.2420 2003/06/04 06:13:00 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2306,3 +2306,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-Cz-Cstools to 3.42nb1 [salo 2003-06-03]
 	Updated ddd to 3.3.1 [jmmv 2003-06-03]
 	Added abook-0.4.17 [jschauma 2003-06-03]
+	Updated samba to 2.2.8anb2 [jlam 2003-06-04]

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.98 2003/06/02 01:17:45 jschauma Exp $
+# $NetBSD: Makefile,v 1.99 2003/06/04 06:12:21 jlam Exp $
 
 .include "Makefile.common"
-PKGREVISION=		1
+PKGREVISION=		2
 
 MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.samba.org/
@@ -16,6 +16,8 @@ CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-ssl
 CONFIGURE_ARGS+=	--with-sslinc=${SSLBASE}
 CFLAGS+=		-I${SSLBASE}/include/openssl	# ssl.h, err.h
+
+REPLACE_PERL+=		script/findsmb.in
 
 .if defined(USE_CUPS) && (${USE_CUPS} == "YES")
 .include "../../print/cups/buildlink2.mk"
@@ -49,7 +51,6 @@ MESSAGE_SUBST+=		ROOT_GROUP=${ROOT_GROUP}
 MESSAGE_SUBST+=		ROOT_USER=${ROOT_USER}
 
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
-HTMLDIR=		${PREFIX}/share/doc/html/${PKGBASE}
 EXAMPLESDIR=		${PREFIX}/share/examples/${PKGBASE}
 
 CONF_FILES=		${EXAMPLESDIR}/smb.conf.default ${SAMBA_ETCDIR}/smb.conf
@@ -73,11 +74,10 @@ post-extract:
 post-install:
 	# Install Samba documentation.
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${HTMLDIR}
 	cd ${WRKDIR}/${DISTNAME}/docs;					\
-		${INSTALL_DATA} announce textdocs/* ${DOCDIR};		\
-		${INSTALL_DATA} Registry/*.reg ${DOCDIR};		\
-		${INSTALL_DATA} faq/*.html ${HTMLDIR}
+	for file in announce textdocs/* Registry/*.reg; do		\
+		${INSTALL_DATA} $$file ${DOCDIR};			\
+	done
 
 	# Install Samba examples.
 	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
