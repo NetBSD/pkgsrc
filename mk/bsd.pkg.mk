@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.416 2000/03/13 14:19:15 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.417 2000/03/13 14:24:27 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -622,6 +622,8 @@ PKG_DBDIR?=		${DESTDIR}/var/db/pkg
 # shared/dynamic motif libs
 MOTIFLIB?=	-L${MOTIFBASE}/lib -L${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-R${MOTIFBASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/lib -lXm
 
+# Define SMART_MESSAGES in /etc/mk.conf for messages giving the tree
+# of depencies for building, and the current target.
 .ifdef SMART_MESSAGES
 _PKGSRC_IN?=		===> ${.TARGET} [${PKGNAME}${_PKGSRC_DEPS}] ===
 .else
