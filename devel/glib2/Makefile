@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2004/03/10 17:58:22 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2004/03/22 22:09:17 snj Exp $
 
 DISTNAME=		glib-2.2.3
 PKGNAME=		${DISTNAME:S/glib/glib2/}
@@ -35,6 +35,9 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${ICONV_TYPE}-iconv}
 
 CONFIGURE_ARGS.gnu-iconv=	--with-libiconv=gnu
+
+# Avoid an ICE in gcc2 on sparc64
+CONFIGURE_ENV+=		F77=${FALSE}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
