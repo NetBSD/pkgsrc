@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.28 2003/07/17 21:27:43 grant Exp $
+# $NetBSD: Makefile,v 1.29 2003/09/03 13:21:37 adam Exp $
 #
 
-DISTNAME=		wv-0.7.4
-PKGREVISION=		3
-CATEGORIES=		converters
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wvware/}
+DISTNAME=	wv-0.7.6
+CATEGORIES=	converters
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wvware/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.wvWare.com/
-COMMENT=		Microsoft Word 6, 7, 8, and 9 (95/97/2000) doc to HTML/LaTeX converter
+MAINTAINER=	adam@NetBSD.org
+HOMEPAGE=	http://wvware.sourceforge.net/
+COMMENT=	Microsoft Word doc to HTML/LaTeX converter
 
 # not detected by configure, causes conflicts with the one coming with wv
 #CONFLICTS+=		libgetopt-[0-9]*
@@ -16,15 +15,12 @@ COMMENT=		Microsoft Word 6, 7, 8, and 9 (95/97/2000) doc to HTML/LaTeX converter
 USE_BUILDLINK2=		YES
 USE_X11=		YES
 USE_GMAKE=		YES
+USE_LIBTOOL=		YES
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
 MAKE_ENV+=		RM="${RM} -f"
+MAKEFILE=		GNUmakefile
 CONFIGURE_ARGS+=	--with-libwmf=${BUILDLINK_PREFIX.libwmf}
-
-post-install:
-	${TOUCH} ${PREFIX}/share/wv/ttf/.directory
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/wv
-	cd ${WRKSRC} && ${INSTALL_DATA} COPYING CREDITS INSTALL KNOWN-BUGS \
-		README help/Docs/XML_Tags ${PREFIX}/share/doc/wv
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/glib/buildlink2.mk"
