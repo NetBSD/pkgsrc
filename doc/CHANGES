@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6714 2004/07/28 14:23:28 shannonjr Exp $
+$NetBSD: CHANGES,v 1.6715 2004/07/28 14:27:07 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3617,3 +3617,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added showimg-0.9.3 [markd 2004-07-28]
 	Updated gcc34 to 3.4.1nb2 [shannonjr 2004-07-28]
 	Updated gcc34-ada to 3.4.1nb2 [shannonjr 2004-07-28]
+	Added kphotobook-0.0.6 [markd 2004-07-28]
+	Added kphotools-0.2.1 [markd 2004-07-28]
