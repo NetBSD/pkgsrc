@@ -1,10 +1,10 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: gld.sh,v 1.1.1.1 2004/11/25 05:42:40 xtraeme Exp $
+# $NetBSD: gld.sh,v 1.2 2004/11/29 15:46:25 xtraeme Exp $
 #
 
 # PROVIDE: gld
-# BEFORE: postfix
+# BEFORE: mail
 # REQUIRE: DAEMON LOGIN
 
 . /etc/rc.subr
