@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.9.2.4 2002/06/29 18:25:47 jlam Exp $
+# $NetBSD: Makefile,v 1.9.2.5 2002/07/20 17:53:05 jlam Exp $
 
 .include "Makefile.common"
 
-PKGNAME=		perl-${PERL5_DIST_VERS}rc2
-WRKSRC=			${WRKDIR}/perl
 CATEGORIES+=		lang devel
 
 MAINTAINER=		jlam@netbsd.org

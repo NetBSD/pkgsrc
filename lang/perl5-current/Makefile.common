@@ -1,16 +1,12 @@
-# $NetBSD: Makefile.common,v 1.1.2.2 2002/07/01 17:42:53 jlam Exp $
+# $NetBSD: Makefile.common,v 1.1.2.3 2002/07/20 17:53:05 jlam Exp $
 
-DISTNAME=	perl@17384
+DISTNAME=	perl-${PERL5_DIST_VERS}
 CATEGORIES+=	perl5
 MASTER_SITES_DEVEL= \
 		http://www.iki.fi/jhi/ \
 		ftp://ftp.funet.fi/pub/languages/perl/snap/
-MASTER_SITES+=	${MASTER_SITES_DEVEL} \
-		ftp://gatekeeper.dec.com/pub/plan/perl/CPAN/src/5.0/maint/ \
-		ftp://ftp.cdrom.com/pub/perl/CPAN/src/5.0/maint/ \
-		ftp://ftp.funet.fi/pub/languages/perl/CPAN/src/5.0/maint/ \
-		ftp://ftp.ruhr-uni-bochum.de/mirrors/ftp.funet.fi/pub/languages/perl/CPAN/src/5.0/maint/
-EXTRACT_SUFX=	.tbz
+MASTER_SITES+=	ftp://ftp.funet.fi/pub/languages/perl/CPAN/src/ \
+		ftp://ftp.ruhr-uni-bochum.de/mirrors/ftp.funet.fi/pub/languages/perl/CPAN/src/
 
 # version number on the distfile
 PERL5_DIST_VERS=	5.8.0
