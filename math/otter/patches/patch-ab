@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/11/25 18:19:21 jtb Exp $
+
+--- ../examples/Run_all.orig	Tue Oct 10 12:00:04 2000
++++ ../examples/Run_all
+@@ -1,4 +1,4 @@
+-#
++#!/bin/csh
+ #
+ #  Run a set of otter jobs ($1/*.in) and compare the
+ #  results ($1/*.out) to $1/*.ppro180.
+@@ -18,7 +18,7 @@
+ if ($#argv >= 2) then
+    set OTTER=$2
+ else
+-   set OTTER=../../source/otter
++   set OTTER=otter
+ endif
+ 
+ if ($#argv >= 3) then
