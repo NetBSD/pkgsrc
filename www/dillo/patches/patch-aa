@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2003/03/21 18:15:29 jmmv Exp $
+$NetBSD: patch-aa,v 1.3 2003/04/11 20:26:31 jmmv Exp $
 
 --- src/IO/http.c.orig	2003-03-04 20:34:59.000000000 +0100
 +++ src/IO/http.c
@@ -17,19 +17,19 @@ $NetBSD: patch-aa,v 1.2 2003/03/21 18:15:29 jmmv Exp $
     SocketData_t *S;
     DilloHost *dh;
  
-@@ -269,30 +270,35 @@ static int Http_connect_socket(ChainLink
+@@ -268,31 +269,35 @@ static int Http_connect_socket(ChainLink
+    fcntl(S->SockFD, F_SETFD,
           FD_CLOEXEC | fcntl(S->SockFD, F_GETFD));
  
-    /* Some OSes require this...  */
+-   /* Some OSes require this...  */
 -   memset(&name, 0, sizeof(name));
-+   memset(&name4, 0, sizeof(name4));
-+   memset(&name6, 0, sizeof(name6));
     /* Set remaining parms. */
     switch (dh->af) {
     case AF_INET:
     {
 -      struct sockaddr_in *sin = (struct sockaddr_in *)&name;
 +      struct sockaddr_in *sin = (struct sockaddr_in *)&name4;
++      memset(&name4, 0, sizeof(name4));
        sin->sin_family = dh->af;
        sin->sin_port = S->port ? htons(S->port) : htons(DILLO_URL_HTTP_PORT);
        memcpy(&sin->sin_addr, dh->data, dh->alen);
@@ -45,6 +45,7 @@ $NetBSD: patch-aa,v 1.2 2003/03/21 18:15:29 jmmv Exp $
        char buf[128];
 -      struct sockaddr_in6 *sin6 = (struct sockaddr_in6 *)&name;
 +      struct sockaddr_in6 *sin6 = (struct sockaddr_in6 *)&name6;
++      memset(&name6, 0, sizeof(name6));
        sin6->sin6_family = dh->af;
        sin6->sin6_port = S->port ? htons(S->port) : htons(DILLO_URL_HTTP_PORT);
        memcpy(&sin6->sin6_addr, dh->data, dh->alen);
@@ -56,7 +57,7 @@ $NetBSD: patch-aa,v 1.2 2003/03/21 18:15:29 jmmv Exp $
        break;
     }
  #endif
-@@ -302,7 +308,7 @@ static int Http_connect_socket(ChainLink
+@@ -302,7 +307,7 @@ static int Http_connect_socket(ChainLink
        S->GioCh = g_io_channel_unix_new(S->SockFD);
     g_io_add_watch(S->GioCh, G_IO_ERR | G_IO_HUP | G_IO_OUT,
                    Http_use_socket, Info->LocalKey);
