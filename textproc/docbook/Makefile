@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/02/19 21:56:23 minskim Exp $
+# $NetBSD: Makefile,v 1.28 2004/02/25 11:48:15 grant Exp $
 # FreeBSD Id: Makefile,v 1.4 1998/06/27 05:19:35 asami Exp
 #
 
@@ -24,6 +24,7 @@ DEPENDS+=	iso8879>=1986:../../textproc/iso8879
 WRKSRC=		${WRKDIR}
 NO_MTREE=       yes
 USE_BUILDLINK3=	yes
+USE_LANGUAGES=	# empty
 EXTRACT_ONLY=	# empty
 
 INSTDIR=	${PREFIX}/share/sgml/docbook
