@@ -1,8 +1,21 @@
-$NetBSD: patch-aa,v 1.1 2003/09/19 21:32:13 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2004/05/07 23:18:50 hubertf Exp $
 
---- src/icqconf.cc.orig	2003-07-25 19:03:00.000000000 +0200
+--- src/icqconf.cc.orig	2003-10-26 11:46:52.000000000 +0100
 +++ src/icqconf.cc
-@@ -414,11 +414,11 @@ void icqconf::loadsounds() {
+@@ -27,7 +27,11 @@
+ #include <dirent.h>
+ #include <fstream>
+ 
+-#ifdef __sun__
++#ifdef __NetBSD__
++/* Find out about __NetBSD_Version__ */
++#  include <sys/param.h>
++#endif
++#if defined(__sun__) || (defined(__NetBSD__) && (__NetBSD_Version__ >= 200040000))
+ #include <sys/statvfs.h>
+ #endif
+ 
+@@ -427,11 +431,11 @@ void icqconf::loadsounds() {
  
  	    switch(rs) {
  		case rscard:
@@ -19,3 +32,12 @@ $NetBSD: patch-aa,v 1.1 2003/09/19 21:32:13 jmmv Exp $
  		    break;
  
  		case rsspeaker:
+@@ -1126,7 +1130,7 @@ unsigned int icqconf::gethttpproxyport()
+ void icqconf::checkdiskspace() {
+     fenoughdiskspace = true;
+ 
+-#ifndef __sun__
++#if !(defined(__sun__) || (defined(__NetBSD__) && (__NetBSD_Version__ >= 200040000)))
+     struct statfs st;
+     if(!statfs(conf.getdirname().c_str(), &st)) {
+ #else
