@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2005/02/21 15:25:36 taca Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/03/06 16:42:30 taca Exp $
 #
 # Ruby base distribution common definition
 
@@ -22,7 +22,7 @@ MASTER_SITE_RUBY?= \
 RUBY_SITE_SUBDIR?=	${RUBY_VER_DIR}
 
 # Ruby distribution
-RUBY_DISTINFO_FILE=	${.CURDIR}/../../lang/ruby${RUBY_VER}/distinfo
+RUBY_DISTINFO_FILE=	${RUBY_SRCDIR}/distinfo
 
 RUBY_HOMEPAGE=		http://www.ruby-lang.org/en/
 
@@ -32,33 +32,6 @@ RUBY_WRKSRC?=		${WRKDIR}/${RUBY_DISTNAME}
 DIST_SUBDIR?=		ruby
 STRIP?=			strip
 DIST_SUBDIR?=		${RUBY_DIST_SUBDIR}
-
-#
-# Ruby shared library version handling.
-#
-RUBY_SHLIBMAJOR?=	${_RUBY_VER_MAJOR}
-RUBY_SHLIBVER?=		${RUBY_VERSION}
-
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "Interix"
-RUBY_SHLIBMAJOR=	${RUBY_VER}
-RUBY_SHLIBVER=		${RUBY_VER}.${_RUBY_VERS_TEENY}
-.elif ${OPSYS} == "FreeBSD"
-RUBY_SHLIBMAJOR=	# unused
-RUBY_SHLIBVER=		${_RUBY_VERS_TEENY}
-.elif ${OPSYS} == "OpenBSD"
-RUBY_SHLIBMAJOR=	# unused
-RUBY_SHLIBVER=		${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}${_RUBY_VERS_TEENY}
-.elif ${OPSYS} == "IRIX"
-RUBY_SHLIBMAJOR=	# unused
-.elif ${OPSYS} == "Linux"
-RUBY_SHLIBMAJOR=	${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}
-.endif
-
-.if empty(RUBY_SHLIBMAJOR)
-RUBY_NOSHLIBMAJOR=	"@comment "
-.else
-RUBY_NOSHLIBMAJOR=
-.endif
 
 #
 # PLIST substitution
@@ -79,19 +52,6 @@ CONFIGURE_ARGS+=	--disable-pthread
 CONFIGURE_ARGS+=	--enable-pthread
 .endif
 .endif
-.endif
-
-.if ${OPSYS} == "IRIX"
-# X11BASE, *not* X11PREFIX:  X11PREFIX == PREFIX, but we need to point
-# to the ABI-specific libraries
-CONFIGURE_ENV+=	X11BASE="${X11BASE}"
-.endif
-
-# XXX:	Ruby extconf shuld select native ndbm(3) or Berkley DB's
-#	ndbm(3) compatible support.
-#
-.if ${OPSYS} != "SunOS"
-BDB_ACCEPTED?=		db1
 .endif
 
 .include "replace.mk"
