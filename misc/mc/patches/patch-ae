@@ -1,0 +1,13 @@
+*** mcfn_install.in.orig	Thu Jun 19 23:17:04 1997
+--- mcfn_install.in	Thu Jun 19 23:17:12 1997
+***************
+*** 1,4 ****
+! #/bin/sh
+  #
+  prefix=@prefix@
+  if test -n `echo $prefix | grep prefix`; then
+--- 1,4 ----
+! #!/bin/sh
+  #
+  prefix=@prefix@
+  if test -n `echo $prefix | grep prefix`; then

@@ -1,0 +1,30 @@
+--- Makefile.in.orig	Wed Jun 25 18:11:30 1997
++++ Makefile.in	Wed Jul  2 14:14:10 1997
+@@ -25,6 +25,7 @@
+ RPMBINDIR=$(subst usr/bin,bin,$(BINDIR))
+ MANDIR=$(prefix)/man/man8
+ LIBDIR=$(libdir)
++DATADIR=$(datadir)
+ INCDIR=$(prefix)/include/rpm
+ ETCDIR=$(ROOT)/etc
+ 
+@@ -49,7 +50,7 @@
+ all: $(TARGET)
+ 
+ rpm: lib/librpm.a build/libbuild.a misc/libmisc.a $(OBJS) 
+-	$(CC) -o rpm -static $(LDFLAGS) $(OBJS) $(LOADLIBES) $(LIBS) \
++	$(CC) -o rpm $(LDFLAGS) $(OBJS) $(LOADLIBES) $(LIBS) \
+ 		$(LIBEFENCE)
+ 
+ rpm.shared: lib/librpm.a build/libbuild.a $(OBJS)
+@@ -121,8 +122,8 @@
+ 	$(INSTALL) -s -m 755 rpm2cpio $(installprefix)/$(BINDIR)
+ 	$(INSTALL) -m 644 $(srcdir)/rpm.8 $(installprefix)/$(MANDIR)
+ 	$(INSTALL) -m 644 $(srcdir)/rpm2cpio.8 $(installprefix)/$(MANDIR)
+-	$(INSTALL) -m 644 $(srcdir)/lib-rpmrc $(installprefix)/$(LIBDIR)/rpmrc
+-	$(INSTALL) -m 644 $(srcdir)/rpmpopt $(installprefix)/$(LIBDIR)/rpmpopt
++	$(INSTALL) -m 644 $(srcdir)/lib-rpmrc $(installprefix)/$(DATADIR)/misc/rpmrc
++	$(INSTALL) -m 644 $(srcdir)/rpmpopt $(installprefix)/$(DATADIR)/misc/rpmpopt
+ 	(cd lib; $(MAKE) LIBDIR=$(installprefix)/$(LIBDIR) INCDIR=$(installprefix)/$(INCDIR) install)
+ 	for d in $(INSTSUBDIRS); do \
+ 		(cd $$d; $(MAKE) installprefix=$(installprefix) LIBDIR=$(installprefix)/$(LIBDIR) INCDIR=$(installprefix)/$(INCDIR) install) ;\

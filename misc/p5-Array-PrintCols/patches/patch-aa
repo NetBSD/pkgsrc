@@ -1,0 +1,13 @@
+--- Makefile.orig	Thu Oct 17 16:53:08 1996
++++ Makefile	Thu Oct 17 16:53:58 1996
+@@ -65,8 +65,8 @@
+       NETLIB = $(NETROOT)/lib
+       NETMAN = $(NETROOT)/man/man$(MANSEC)
+   
+-   LOCALROOT = /usr/local/perl5
+-    LOCALLIB = $(LOCALROOT)/lib
++   LOCALROOT = /usr/local/lib/perl5
++    LOCALLIB = $(LOCALROOT)/site_perl
+     LOCALMAN = $(LOCALROOT)/man/man$(MANSEC)
+   
+     HOMEROOT = $(HOME)
