@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2001/02/10 18:13:57 jtb Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/10 21:37:05 veego Exp $
 
 DISTNAME=	tochnog-20010210
 CATEGORIES=	math
-MASTER_SITES=	http://tochnog.sourceforge.net/
+MASTER_SITES=	ftp://tochnog.sourceforge.net/pub/tochnog/
 DISTFILES=	tn.tar.gz tnu.ps.gz tnp.ps.gz
 
 MAINTAINER=	jtb@netbsd.org
