@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7462 2004/10/18 09:30:18 tron Exp $
+$NetBSD: CHANGES,v 1.7463 2004/10/18 13:25:47 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4752,3 +4752,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-CDDB_get-2.23 [ben 2004-10-17]
 	Updated ap-ssl to 2.8.20 [tron 2004-10-18]
 	Updated apache to 1.3.31nb7 [tron 2004-10-18]
+	Updated sox to 12.17.6 [cube 2004-10-18]
