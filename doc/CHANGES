@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3681 2003/10/13 06:05:20 martti Exp $
+$NetBSD: CHANGES,v 1.3682 2003/10/13 11:10:29 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4008,7 +4008,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated moscow_ml to 2.00nb1 [kristerw 2003-09-27]
 	Updated subversion to 0.30.0 [recht 2003-09-27]
 	Updated subversion-base to 0.30.0 [recht 2003-09-27]
-	Updated py-subversion to 0.30.0 [recht 2003-09-27]
+	Updated subversion-python to 0.30.0 [recht 2003-09-27]
 	Updated ap2-subversion to 0.30.0 [recht 2003-09-27]
 	Added mummer-3.04 [jschauma 2003-09-27]
 	Updated ncftp3 to 3.1.6 [wiz 2003-09-27]
@@ -4174,8 +4174,8 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated expatobjc to 1.0nb1 [grant 2003-10-11]
 	Updated p5-XML-Parser to 2.31nb1 [grant 2003-10-11]
 	Updated php4-wddx to 4.3.3nb1 [grant 2003-10-11]
-	Updated py22-expat to 0nb1 [grant 2003-10-11]
-	Updated py22-xml to 0.3.8nb1 [grant 2003-10-11]
+	Updated py-expat to 0nb1 [grant 2003-10-11]
+	Updated py-xml to 0.3.8nb1 [grant 2003-10-11]
 	Updated sablotron to 1.0nb1 [grant 2003-10-11]
 	Updated ap-dav to 1.0.3nb1 [grant 2003-10-11]
 	Updated apache to 1.3.28nb1 [grant 2003-10-11]
