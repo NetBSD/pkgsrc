@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/02/04 03:58:37 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2000/02/08 23:46:14 hubertf Exp $
 
 DISTNAME=		mouse_pppoe
 PKGNAME=		${DISTNAME}-20000202
@@ -7,7 +7,7 @@ MASTER_SITES=		ftp://ftp.styx.org/pub/mouse_pppoe/
 
 MAINTAINER=		mouse@netbsd.org
 
-DIST_SUBDIR=		${PKGNAME}-20000202
+DIST_SUBDIR=		${PKGNAME}
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
 do-build:
