@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/23 20:55:29 tv Exp $
+bin/bunzip
