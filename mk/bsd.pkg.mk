@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.332 1999/09/02 22:08:48 christos Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.333 1999/09/03 02:43:51 sakamoto Exp $
 #
 # This file is in the public domain.
 #
@@ -339,8 +339,8 @@ PLIST=			${WRKDIR}/.PLIST
 DLIST=			${WRKDIR}/.DLIST
 DDIR=			${WRKDIR}/.DDIR
 
-# Set PLIST_SUB to substitute "${variable}" to "value" in PLIST
-PLIST_SUB+=	OPSYS=${OPSYS}					\
+# Set PLIST_SUBST to substitute "${variable}" to "value" in PLIST
+PLIST_SUBST+=	OPSYS=${OPSYS}					\
 		OS_VERSION=${OS_VERSION}			\
 		MACHINE_ARCH=${MACHINE_ARCH}			\
 		MACHINE_GNU_ARCH=${MACHINE_GNU_ARCH}		\
@@ -2388,7 +2388,7 @@ MANCOMPRESSED=	yes
 # - fixing list of man-pages according to MANCOMPRESSED/MANZ
 #   (we don't take any notice of MANCOMPRESSED as many packages have .gz
 #   pages in PLIST even when they install manpages without compressing them)
-# - substituting by ${PLIST_SUB}
+# - substituting by ${PLIST_SUBST}
 
 .if ${OPSYS} == "NetBSD"
 IMAKE_MAN_CMD=
@@ -2442,7 +2442,7 @@ ${PLIST}: ${PLIST_SRC}
 			${MANZ_NAWK_CMD} 				\
 			${IMAKE_MAN_CMD} 				\
 			${SED} 	${MANZ_EXPRESSION}			\
-				${PLIST_SUB:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/} \
+				${PLIST_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}\
 			> ${PLIST}; 					\
 	fi
 
