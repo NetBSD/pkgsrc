@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.407 2002/10/30 04:14:38 rh Exp $
+$NetBSD: CHANGES,v 1.408 2002/10/30 05:10:17 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3443,3 +3443,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added libgda-0.8.199 [rh 2002-10-30]
 	Updated url2pkg to 1.20 [rh 2002-10-30]
 	Updated libgnomecanvas to 2.0.4nb1 [rh 2002-10-30]
+	Added libgnomedb-0.8.199 [rh 2002-10-30]
