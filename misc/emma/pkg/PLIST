@@ -1,3 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 1999/12/11 01:30:55 mellon Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/02/28 06:34:11 wiz Exp $
 bin/emma
+share/emma/date.py
+share/emma/emma.py
+share/emma/standard.py
+@dirrm share/emma
+share/gnome/apps/Applications/emma.desktop
 share/locale/fr/LC_MESSAGES/emma.mo
+share/locale/pl/LC_MESSAGES/emma.mo
