@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/04/20 11:56:20 frueauf Exp $
+# $NetBSD: Makefile,v 1.6 1998/05/13 07:57:44 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.5 1996/11/18 13:56:53 asami Exp 
 #
 
@@ -14,6 +14,8 @@ MAINTAINER=		packages@netbsd.org
 
 USE_IMAKE=		yes
 WRKSRC=			${WRKDIR}/xmix
+
+CAT1=			xmix.0
 
 pre-configure:
 	${CP} ${WRKSRC}/xmix.1 ${WRKSRC}/xmix.man
