@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.45 2003/10/01 11:25:02 abs Exp $
+# $Id: pkgchk.sh,v 1.46 2003/10/01 11:30:10 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -106,7 +106,7 @@ list_packages()
 		continue
 	    fi
 	    for dep in `pkg_info -N $PACKAGES/All/$pkg.tgz | ${SED} '1,/Built using:/d' | ${GREP} ..` ; do
-		case "$PKGLIST" in
+		case "$PKGLIST$NEXTCHECK" in
 		    *\ $dep\ *)
 			if [ -n "$opt_v" ];then
 			    echo "Duplicate depend $dep"
