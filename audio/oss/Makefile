@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/04/10 01:28:13 grant Exp $
+# $NetBSD: Makefile,v 1.19 2003/06/26 23:04:24 jlam Exp $
 
 DISTNAME=	oss-${OSS_VERSION}	# Overridden below
 PKGNAME=	oss-${OSS_VERSION}
@@ -17,11 +17,11 @@ OSVERSION_SPECIFIC=	yes
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-1.5*-i386)
-DISTNAME=		oss397c-netbsd-v1.5
+DISTNAME=		oss${OSS_VERSION:S/.//g}-netbsd-v1.5
 OSS_VERSION=		3.9.7c
 .elif !empty(MACHINE_PLATFORM:MNetBSD-1.6*-i386)
-DISTNAME=		oss397g-netbsd-v1.6
-OSS_VERSION=		3.9.7g
+DISTNAME=		oss${OSS_VERSION:S/.//g}-netbsd-v1.6.1
+OSS_VERSION=		3.9.7j
 .endif
 
 RESTRICTED=		"No re-distribution."
