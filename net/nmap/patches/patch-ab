@@ -1,37 +1,12 @@
-$NetBSD: patch-ab,v 1.4 2001/08/24 11:05:36 abs Exp $
+$NetBSD: patch-ab,v 1.5 2001/08/24 11:23:16 abs Exp $
 
 --- configure.orig	Tue May  9 07:27:48 2000
 +++ configure
-@@ -525,8 +525,9 @@
- 
- 
- libpcapdir=libpcap-possiblymodified
--
--
-+if [ `uname -s` = NetBSD ] ;then
-+  libpcapdir=.
-+fi
- 
- 
- # Extract the first word of "gcc", so it can be a program name with args.
-@@ -1507,6 +1508,9 @@
+@@ -1507,6 +1507,7 @@
  extern char pcap_version[];
  int main() {
    int major, minor;
-+#ifdef __NetBSD__
 +  exit(0);	/*fool it*/
-+#endif
    sscanf(pcap_version,"%d.%d", &major, &minor);
    if (major > 0) 
      exit(0);
-@@ -2793,6 +2797,10 @@
-   done
- 
-   for ac_config_dir in $libpcapdir nmapfe ; do
-+
-+  if [ `uname -s` = NetBSD -a $ac_config_dir = $libpcapdir ] ;then
-+    continue
-+  fi
- 
-     # Do not complain, so a configure script can configure whichever
-     # parts of a large source tree are present.
