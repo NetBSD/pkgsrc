@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2000/01/15 09:58:16 tron Exp $
+# $NetBSD: Makefile,v 1.4 2000/03/14 20:22:48 tron Exp $
 #
 
-DISTNAME=	users-guide-1.0.71
-PKGNAME=	gnome-users-guide-1.0.71
+DISTNAME=	users-guide-1.0.72
+PKGNAME=	gnome-users-guide-1.0.72
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/users-guide/}
 
