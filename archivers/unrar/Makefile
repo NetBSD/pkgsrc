@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2002/08/29 11:13:56 abs Exp $
+# $NetBSD: Makefile,v 1.15 2002/10/17 16:28:31 wiz Exp $
 
 DISTNAME=	unrarsrc
-PKGNAME=	unrar-3.0
+PKGNAME=	unrar-3.01
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.rarlab.com/rar/
 
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.rarlab.com/
 COMMENT=	Extract, view & test RAR archives
 
 DIST_SUBDIR=	${PKGNAME}
-WRKSRC=		${WRKDIR}
+WRKSRC=		${WRKDIR}/unrar
 
 ALL_TARGET=	makeunrar
 MAKEFILE=	makefile.gcc
