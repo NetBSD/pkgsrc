@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/11/02 16:35:57 minskim Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/12/02 16:56:31 minskim Exp $
 bin/liferea
 bin/liferea-bin
 lib/liferea/liblihtmlg.la
@@ -11,6 +11,7 @@ share/liferea/opml/feedlist.opml
 share/liferea/opml/feedlist_de.opml
 share/liferea/opml/feedlist_es.opml
 share/liferea/opml/feedlist_fr.opml
+share/liferea/opml/feedlist_pl.opml
 share/liferea/opml/feedlist_sk.opml
 share/liferea/pixmaps/available.png
 share/liferea/pixmaps/directory.png
@@ -34,6 +35,7 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/liferea.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/liferea.mo
