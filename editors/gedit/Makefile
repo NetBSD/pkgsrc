@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/02/09 18:47:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.25 2004/02/11 05:15:40 xtraeme Exp $
 #
 
 DISTNAME=		gedit-2.4.1
@@ -15,7 +15,7 @@ BUILD_USES_MSGFMT=	YES
 DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 
 USE_PERL5=		build
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 USE_GNU_TOOLS+=		make
 USE_X11=		YES
@@ -28,12 +28,12 @@ GCONF2_SCHEMAS=		gedit.schemas
 CONFIGURE_ARGS+=	--enable-schemas-install
 
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../devel/eel2/buildlink2.mk"
-.include "../../devel/popt/buildlink2.mk"
-.include "../../print/libgnomeprintui/buildlink2.mk"
-.include "../../textproc/aspell/buildlink2.mk"
-.include "../../x11/gtksourceview/buildlink2.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/eel2/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
+.include "../../print/libgnomeprintui/buildlink3.mk"
+.include "../../textproc/aspell/buildlink3.mk"
+.include "../../x11/gtksourceview/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
