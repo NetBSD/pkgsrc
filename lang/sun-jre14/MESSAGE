@@ -1,15 +1,18 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2002/09/24 12:30:10 wiz Exp $
+$NetBSD: MESSAGE,v 1.5 2002/10/13 07:29:36 jlam Exp $
 
-In order to invoke the JVM, the data segment size set by your
-shell's 'ulimit' builtin must be at least 131204 -- please refer
-to your shell's manual page for details.
+In order to invoke the JVM, the data segment size set by your shell's
+'ulimit' builtin must be at least 131204 -- please refer to your shell's
+manual page for details.
 
-You may want to read ${JDK_HOME}/README for details about running
-this jdk. In a nutshell you may want to set the following in your
-shell environment:
+You may want to read
 
-	JAVA_HOME to ${JDK_HOME}
-	${PATH} to include ${JDK_HOME}/bin
+	${PREFIX}/README
+
+for details about running this jdk.  In a nutshell you may want to set the
+following in your shell environment:
+
+	JAVA_HOME to ${PREFIX}
+	PATH to include ${PREFIX}/bin
 
 ===========================================================================
