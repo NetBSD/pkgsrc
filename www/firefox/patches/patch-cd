@@ -1,0 +1,29 @@
+$NetBSD: patch-cd,v 1.1.2.2 2004/10/26 11:09:16 agc Exp $
+
+--- modules/plugin/base/public/nptypes.h.orig	2004-10-21 01:07:27.000000000 +0200
++++ modules/plugin/base/public/nptypes.h	2004-10-21 01:09:38.000000000 +0200
+@@ -78,8 +78,10 @@
+     typedef int bool;
+   #endif
+   #else /* OPENBSD is defined, so use its bool */
++  #if !defined(__cplusplus)
+     #include <stdbool.h>
+   #endif
++  #endif
+   #else
+   /*
+    * FreeBSD defines uint32_t and bool.
+@@ -97,6 +99,7 @@
+    */
+   #include <stdint.h>
+ 
++  #if !defined(__cplusplus)
+   #if !defined(__GNUC__) || (__GNUC__ > 2 || __GNUC_MINOR__ > 95)
+     #include <stdbool.h>
+   #else
+@@ -106,4 +109,5 @@
+      */
+     #define bool int
+   #endif
++  #endif
+ #endif
