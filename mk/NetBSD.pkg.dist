@@ -1,5 +1,5 @@
 #     Id: BSD.local.dist,v 1.30 1997/08/01 13:16:39 phk Exp 
-#	$NetBSD: NetBSD.pkg.dist,v 1.4 1998/09/06 23:08:31 kim Exp $
+#	$NetBSD: NetBSD.pkg.dist,v 1.5 1998/10/04 22:05:45 tron Exp $
 #
 
 /set type=dir uname=root gname=wheel mode=0755
@@ -124,6 +124,8 @@
         doc
         ..
         examples
+        ..
+	locale
         ..
         misc
         ..
