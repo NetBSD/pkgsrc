@@ -1,0 +1,30 @@
+--- sysdeps/freebsd/prockernel.c.old	Thu May 27 16:04:03 1999
++++ sysdeps/freebsd/prockernel.c	Wed Nov  3 01:50:50 1999
+@@ -163,14 +163,27 @@
+ 			buf->kstk_eip = (u_int64_t) pcb.pcb_pc;
+ #endif
+ #else
++#ifdef __i386__
+ 			buf->kstk_esp = (u_int64_t) pcb.pcb_tss.tss_esp0;
+ #ifdef __bsdi__
+ 			buf->kstk_eip = (u_int64_t) pcb.pcb_tss.tss_eip;
+ #else
+ 			buf->kstk_eip = (u_int64_t) pcb.pcb_tss.__tss_eip;
+ #endif
++#else
++#if defined(__m68k__) && defined(__NetBSD__)
++			buf->kstk_esp = (u_int64_t) pcb.pcb_usp;
++			buf->kstk_eip = (u_int64_t) 0;
++#else
++#ifdef __NetBSD__
++			/* provide some defaults for other platforms */
++			buf->kstk_esp = (u_int64_t) 0;
++			buf->kstk_eip = (u_int64_t) 0;
++#endif
++#endif
+ 
+ 			buf->flags |= _glibtop_sysdeps_proc_kernel_pcb;
++#endif
+ #endif
+ 		}
+ 
