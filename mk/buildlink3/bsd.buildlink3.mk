@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.77 2004/02/06 04:37:02 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.78 2004/02/06 18:45:03 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -713,7 +713,7 @@ _BLNK_WRKDIR!=	if [ -d ${WRKDIR} ]; then				\
 		else							\
 			${ECHO} ${WRKDIR};				\
 		fi
-MAKEFLAGS+=	_BLNK_WRKDIR="${_BLNK_WRKDIR}"
+MAKEFLAGS+=	_BLNK_WRKDIR=${_BLNK_WRKDIR:Q}
 .endif
 
 _BLNK_MANGLE_DIRS=	# empty

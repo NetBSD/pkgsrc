@@ -1,4 +1,4 @@
-# $NetBSD: krb5.buildlink3.mk,v 1.4 2004/02/02 11:34:17 jlam Exp $
+# $NetBSD: krb5.buildlink3.mk,v 1.5 2004/02/06 18:45:03 jlam Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a Kerberos 5 implementation.  krb5.buildlink3.mk will:
@@ -43,7 +43,7 @@ _KRB5_INSTALLED.${_krb5_}!=	\
 	else								\
 		${ECHO} "no";						\
 	fi
-MAKEFLAGS+=	_KRB5_INSTALLED.${_krb5_}="${_KRB5_INSTALLED.${_krb5_}}"
+MAKEFLAGS+=	_KRB5_INSTALLED.${_krb5_}=${_KRB5_INSTALLED.${_krb5_}}
 .    endif
 .  endfor
 
@@ -73,7 +73,7 @@ _KRB5_FIRSTACCEPTED?=	${_krb5_}
 _KRB5?=		${_KRB5_FIRSTACCEPTED}
 .    endif
 _KRB5?=		none
-MAKEFLAGS+=	_KRB5="${_KRB5}"
+MAKEFLAGS+=	_KRB5=${_KRB5}
 .  endif
 
 KRB5_TYPE=	${_KRB5}
