@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2480 2003/06/10 12:48:12 wiz Exp $
+$NetBSD: CHANGES,v 1.2481 2003/06/10 13:26:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2424,3 +2424,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gtk2 to 2.2.2 [jmmv 2003-06-10]
 	Updated mldonkey to 2.5.3 [wiz 2003-06-10]
 	Updated pkgdiff to 1.110 [wiz 2003-06-10]
+	Updated dctc to 0.85.3 [wiz 2003-06-10]
+	Removed dc_gui [wiz 2003-06-10]
+	Added dc_gui2-0.74 [wiz 2003-06-10]
