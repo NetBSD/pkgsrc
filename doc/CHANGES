@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3033 2003/08/13 03:06:47 simonb Exp $
+$NetBSD: CHANGES,v 1.3034 2003/08/13 03:33:03 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3257,3 +3257,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ast-ksh to 20030724 [kristerw 2003-08-12]
 	Updated static-ast-ksh to 20030724 [kristerw 2003-08-12]
 	Updated adzap to 20030811 [simonb 2003-08-13]
+	Updated sun-jre14 to 2.0 [jschauma 2003-08-13]
+	Updated sun-jdk14 to 2.0 [jschauma 2003-08-13]
