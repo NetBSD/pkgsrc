@@ -1,0 +1,32 @@
+--- Config.mk.orig	Sun Nov 30 00:19:08 1997
++++ Config.mk	Sat Mar  7 22:10:02 1998
+@@ -56,10 +56,10 @@
+ # to ${TCL_LIB_SPEC}.
+ # 
+ 
+-TCL_SRC=${srcbasedir}/../tcl8.0
+-TCL_BUILD=${bldbasedir}/../tcl8.0
+-TCL_CONFIG=${TCL_BUILD}/unix/tclConfig.sh
+-TCL_LIB=${TCL_BUILD_LIB_SPEC}
++TCL_SRC=${PREFIX}/include/tcl8.0
++TCL_BUILD=
++TCL_CONFIG=${PREFIX}/lib/tcl8.0/tclConfig.sh
++TCL_LIB=${TCL_LIB_SPEC}
+ 
+ #------------------------------------------------------------------------------
+ # Unless configure is going to be run with --with-tk=NO, these defines must be
+@@ -68,10 +68,10 @@
+ # neccessary to link with the Tk shared library (libtk8.0.so).  If you want to
+ # use the installed Tk library, set TK_LIB to ${TK_LIB_SPEC}.
+ 
+-TK_SRC=${srcbasedir}/../tk8.0
+-TK_BUILD=${bldbasedir}/../tk8.0
+-TK_CONFIG=${TK_BUILD}/unix/tkConfig.sh
+-TK_LIB=${TK_BUILD_LIB_SPEC}
++TK_SRC=${PREFIX}/include/tk8.0
++TK_BUILD=
++TK_CONFIG=${PREFIX}/lib/tk8.0/tkConfig.sh
++TK_LIB=${TK_LIB_SPEC}
+ 
+ #------------------------------------------------------------------------------
+ # C compiler and debug/optimization/profiling flag to use.  Set by configure,
