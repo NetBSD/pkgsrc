@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/04/12 14:43:39 seb Exp $
+# $NetBSD: Makefile,v 1.28 2004/04/12 18:02:52 seb Exp $
 
 DISTNAME=	ocaml-3.06
 PKGREVISION=	5
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	-prefix ${PREFIX}
 CONFIGURE_ARGS+=	-x11include ${X11BASE}/include
 CONFIGURE_ARGS+=	-x11lib ${X11BASE}/lib
 CONFIGURE_ARGS+=	-tkdefs "-I${BUILDLINK_PREFIX.tk}/include  -I${BUILDLINK_PREFIX.tcl}/include"
-CONFIGURE_ARGS+=	-tklibs "`${SH} -c '. ${TCLCONFIG_SH}; . ${TKCONFIG_SH}; ${ECHO_N} $$TK_LIBS; ${ECHO_N} \ $$TCL_LIBS'`"
+CONFIGURE_ARGS+=	-tklibs "`${SH} -c '. ${TCLCONFIG_SH}; . ${TKCONFIG_SH}; ${ECHO} $$TK_LIBS $$TCL_LIBS'`"
 CONFIGURE_ARGS+=	-libs "${LDFLAGS}"
 
 ALL_TARGET=	world
