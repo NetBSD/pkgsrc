@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/02/25 15:54:59 is Exp $
+$NetBSD: patch-aa,v 1.2 2005/03/01 11:18:43 is Exp $
 
 --- Configuration.orig	1999-08-14 01:42:02.000000000 +0200
 +++ Configuration
@@ -44,7 +44,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/02/25 15:54:59 is Exp $
  
  
 @@ -98,7 +98,7 @@ LIBM = -lm
- #   for NetBSD, set XINCL = /usr/X386/include
+-#   for NetBSD, set XINCL = /usr/X386/include
++#   for NetBSD, set XINCL = /usr/X11R6/include
  #   for Linux, set XINCL = /usr/X11/include
  
 -XINCL = /usr/include
