@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2005/01/25 15:23:46 drochner Exp $
+# $NetBSD: Makefile,v 1.74 2005/02/22 18:25:31 jmmv Exp $
 
-DISTNAME=		evolution-2.0.3
-PKGREVISION=		1
+DISTNAME=		evolution-2.0.4
 CATEGORIES=		mail time gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.0/}
 EXTRACT_SUFX=		.tar.bz2
@@ -13,7 +12,7 @@ COMMENT=		GNOME mailer, calendar, contact manager, and communications tool
 DEPENDS+=		psmisc-[0-9]*:../../sysutils/psmisc
 BUILD_USES_MSGFMT=	YES
 
-BUILDLINK_DEPENDS.gal2+=	gal2>=2.2.4
+BUILDLINK_DEPENDS.gal2+=	gal2>=2.2.5
 BUILDLINK_DEPENDS.glib2+=	glib2>=2.4.0nb2
 BUILDLINK_DEPENDS.gtkhtml3+=	gtkhtml3>=3.2.4
 BUILDLINK_DEPENDS.evolution-data-server+=	evolution-data-server>=1.0.3
