@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2001/06/11 19:44:30 zuntum Exp $
+# $NetBSD: Makefile,v 1.4 2001/08/06 14:27:39 wiz Exp $
 #
 
-DISTNAME=	gkrellm-1.0.8
+DISTNAME=	gkrellm-1.2.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://web.wt.net/~billw/gkrellm/
 
@@ -9,10 +9,8 @@ MAINTAINER=	anthony.mallet@ficus.yi.org
 HOMEPAGE=	http://gkrellm.net/
 COMMENT=	GTK based system monitor
 
-DEPENDS+=	gtk+-1.2.*:../../x11/gtk
-DEPENDS+=	imlib-*:../../graphics/imlib
-DEPENDS+=	pth-*:../../devel/pth
-
+USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK_X11=	yes
 USE_X11BASE=	yes
 USE_GMAKE=	yes
 
@@ -34,4 +32,7 @@ do-install:
 		gkrellm_public_proto.h gkrellm_private_proto.h 		\
 		${PREFIX}/include/gkrellm
 
+.include "../../devel/pth/buildlink.mk"
+.include "../../graphics/imlib/buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
