@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2965 2005/01/27 09:40:25 adam Exp $
+$NetBSD: TODO,v 1.2966 2005/01/27 14:18:16 ben Exp $
 
 Suggested new packages
 ======================
@@ -1242,6 +1242,10 @@ Suggested pkgsrc enhancements
 		- /etc/shells changes (PKG_REGISTER_SHELLS=YES)
 		- pkg-specific rc.d script instructions
 	  (Consider renaming PKGSRC_MESSAGE_RECIPIENTS as well.)
+
+	o Document process for installing manual pages in the pkgsrc guide.
+		- INSTALL_MAN
+		- MANCOMPRESSED
 
 Suggested other platform enhancements
 =====================================
