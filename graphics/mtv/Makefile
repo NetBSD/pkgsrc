@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 1999/09/20 00:52:34 tron Exp $
+# $NetBSD: Makefile,v 1.8 1999/10/04 17:01:15 tron Exp $
 
-DISTNAME=		mtv-1.0.9.10
+DISTNAME=		mtv-1.1.0.3
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.mpegtv.com/pub/mpeg/mpegtv/player/x86-unknown-linux-glibc/packages/RPMS/ \
 			ftp://ftp.mpeg.org/pub/mpeg/mpegtv/player/x86-unknown-linux-glibc/packages/RPMS/
