@@ -20,9 +20,9 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME}-elc${EXTRACT_SUFX} ${DISTNAME}
 MAINTAINER=	me@FreeBSD.org
 
 RUN_DEPENDS=    ${PREFIX}/lib/xemacs/xemacs-packages/etc/enriched.doc:${PORTSDIR}/editors/xemacs-packages
-LIB_DEPENDS=	Xpm.4:${PORTSDIR}/graphics/xpm \
-		jpeg.9:${PORTSDIR}/graphics/jpeg \
-		png.3:${PORTSDIR}/graphics/png
+#LIB_DEPENDS=	Xpm.4:${PORTSDIR}/graphics/xpm \
+#		jpeg.9:${PORTSDIR}/graphics/jpeg \
+#		png.3:${PORTSDIR}/graphics/png
 
 XEMACS_VER=	21.1-p2
 DIST_SUBDIR=	xemacs
@@ -91,4 +91,6 @@ post-install:
 	@if [ ! -d ${PREFIX}/etc/rc.d ]; then ${MKDIR} ${PREFIX}/etc/rc.d; fi
 	${INSTALL_SCRIPT} ${FILESDIR}/xemacs21.sh ${PREFIX}/etc/rc.d
 
-.include <bsd.port.mk>
+IGNORE=	package is not ready yet
+
+.include <../../mk/bsd.pkg.mk>
