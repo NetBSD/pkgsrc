@@ -1,0 +1,121 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/11/26 22:48:15 jtb Exp $
+
+--- src/Makefile.orig	Wed Oct 18 03:30:08 2000
++++ src/Makefile
+@@ -136,15 +136,15 @@
+ 
+ #-------------------------------------------------------------------------------
+ 
+-SHARED_LIB	= libpsl.a libgmt.a libpsl.$(SL) libgmt.$(SL)
+-STATIC_LIB	= libpsl.a libgmt.a
++SHARED_LIB	= libpsl libgmt
++STATIC_LIB	= 
+ 
+ #-------------------------------------------------------------------------------
+ 
+ all:		init libs $(PROGS)
+ 
+ init:		gmt_notposix.h gmt_nan.h
+-		
++
+ gmt_nan.h:	
+ 		$(CC) $(CFLAGS) gmt_nan_init.c $(CDF) $(LIBS) -o gmt_nan_init
+ 		$(COMPRESS) gmt_nan_init$(EXE)
+@@ -156,23 +156,19 @@
+ 		./configure
+ 
+ install:	all
+-		if [ ! -d $(bindir) ]; then \
+-			mkdir -p $(bindir); \
+-		fi
+-		for i in $(PROGS); do \
+-			$(INSTALL) $$i$(EXE) $(bindir); \
+-		done
+ 		if [ ! -d $(libdir) ]; then \
+ 			mkdir -p $(libdir); \
+ 		fi
+ 		if [ ! $(libdir) = $(srcdir) ]; then \
+-			$(INSTALL) -m 444 libpsl.a $(libdir); \
+-			$(INSTALL) -m 444 libgmt.a $(libdir); \
+-			if [ -f libpsl.$(SL) ]; then \
+-				$(INSTALL) -m 444 libpsl.$(SL) $(libdir); \
+-				$(INSTALL) -m 444 libgmt.$(SL) $(libdir); \
+-			fi; \
++			$(LIBTOOL) --mode=install $(INSTALL) libpsl.la $(libdir);\
++			$(LIBTOOL) --mode=install $(INSTALL) libgmt.la $(libdir);\
++		fi
++		if [ ! -d $(bindir) ]; then \
++			mkdir -p $(bindir); \
+ 		fi
++		for i in $(PROGS); do \
++			$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) $$i$(EXE) $(bindir); \
++		done
+ 		if [ ! -d $(includedir) ]; then \
+ 			mkdir -p $(includedir); \
+ 		fi
+@@ -187,11 +183,7 @@
+ 			\rm -f $(bindir)/$$i$(EXE); \
+ 		done
+ 		if [ ! $(libdir) = $(srcdir) ]; then \
+-			\rm -f $(libdir)/libgmt.a $(libdir)/libpsl.a; \
+-			if [ -f libpsl.$(SL) ]; then \
+-				\rm -f $(libdir)/libpsl.$(SL); \
+-				\rm -f $(libdir)/libgmt.$(SL); \
+-			fi; \
++			\rm -f $(libdir)/libgmt.* $(libdir)/libpsl.*; \
+ 		fi
+ 		if [ ! $(includedir) = $(srcdir) ]; then \
+ 			for i in $(GMT_H); do \
+@@ -200,7 +192,7 @@
+ 		fi
+ 
+ clean:
+-		rm -f *.o gmt_nan_init$(EXE)
++		rm -rf *.o *.lo .libs libgmt.la libpsl.la gmt_nan_init$(EXE)
+ 		for i in $(PROGS); do \
+ 			rm -f $$i$(EXE); \
+ 		done
+@@ -214,31 +206,27 @@
+ #	libraries
+ #-------------------------------------------------------------------------------
+ 
+-libs:		$(GMTLIB)
++libs:		libpsl libgmt
+ 
+-libpsl.a:	pslib.o
+-		$(AR) cvur libpsl.a $?
+-		$(RANLIB) libpsl.a
++libpsl:		pslib.o
++		@$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -O -o libpsl.la \
++		pslib.lo -rpath $(libdir)
+ 
+ pslib.o:	pslib.c $(PS_H)
+-		$(CC) $(CFLAGS) -c pslib.c
++		@$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c pslib.c
+ 
+-libgmt.a:	$(LIB_O) $(TRIANGLE_O) $(ALPHA_SINCOS_O)
+-		$(AR) cvur $@ $?
+-		$(RANLIB) $@
+-
+-libpsl.$(SL):	pslib.o
+-		$(LD) $(LD_OPT) $? -o $@
+-
+-libgmt.$(SL):	$(LIB_O) $(TRIANGLE_O) $(ALPHA_SINCOS_O)
+-		$(LD) $(LD_OPT) $(LIB_O) $(TRIANGLE_O) $(ALPHA_SINCOS_O) -o $@
++libgmt:		$(LIB_O) $(TRIANGLE_O) $(ALPHA_SINCOS_O)
++		@$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -O -o libgmt.la \
++		$(LIB_O:.o=.lo) $(TRIANGLE_O:.o=.lo) $(ALPHA_SINCOS_O.o=.lo) \
++		-rpath $(libdir)
+ 
+ #-------------------------------------------------------------------------------
+ #	program dependencies
+ #-------------------------------------------------------------------------------
+ 
+ $(PROGS):	$(GMTLIB) $(PROGS_O)
+-		$(CC) $(CFLAGS) $@.o -L. -lgmt -lpsl $(CDF) $(LIBS) $(LDFLAGS) -o $@
++		@$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $@.o libgmt.la libpsl.la $(CDF) $(LIBS) $(LDFLAGS) -o $@
+ 		$(COMPRESS) $@$(EXE)
++
+ .c.o:
+-		$(CC) -c $(CFLAGS) $<
++		@$(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) $<

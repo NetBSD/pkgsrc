@@ -1,0 +1,12 @@
+$NetBSD: patch-aj,v 1.1.1.1 2000/11/26 22:48:17 jtb Exp $
+
+--- src/gmt.h.orig	Tue Nov 14 02:03:49 2000
++++ src/gmt.h
+@@ -53,6 +53,7 @@
+  *			SYSTEM HEADER FILES
+  *--------------------------------------------------------------------*/
+ 
++#include <sys/types.h>
+ #include <ctype.h>
+ #include <float.h>
+ #include <math.h>
