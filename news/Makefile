@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2001/09/27 06:48:18 perry Exp $
+# $NetBSD: Makefile,v 1.23 2001/10/11 13:16:01 wiz Exp $
 #
 
 COMMENT=	Network news
 
-#SUBDIR+=	gnus
+#SUBDIR+=	gnus		# info files conflict, perry's working on it
 SUBDIR+=	inn
 SUBDIR+=	knews
 SUBDIR+=	newscache
