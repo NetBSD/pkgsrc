@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/11/24 12:39:20 chris Exp $
+# $NetBSD: Makefile,v 1.26 2002/11/24 13:31:56 chris Exp $
 
 DISTNAME=	sylpheed-0.8.6
 PKGREVISION=	1
@@ -23,6 +23,8 @@ CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-gpgme
 CONFIGURE_ARGS+=	--enable-compface
+
+PKG_SYSCONFSUBDIR=	sylpheed
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 BUILDLINK_DEPENDS.gpgme=	gpgme>=0.3.5
@@ -46,10 +48,13 @@ CONFIGURE_ARGS+=	--enable-ldap
 .include "../../databases/openldap/buildlink2.mk"
 .endif
 
+CONF_FILES=         ${FILESDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
+
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../graphics/gdk-pixbuf/buildlink2.mk"
 .include "../../security/gpgme/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
