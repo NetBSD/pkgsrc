@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/11/06 05:15:41 mycroft Exp $
+# $NetBSD: Makefile,v 1.11 1998/12/29 19:46:49 tron Exp $
 #
 
 DISTNAME=	kdegraphics-1.0
@@ -9,10 +9,6 @@ MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/1.0/distribution/tar/generic/sour
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.kde.org/
 
-DEPENDS+=	giflib-3.0:../../graphics/giflib
-DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	qt-1.41:../../x11/qt
-DEPENDS+=	kdelibs-1.0:../../x11/kdelibs
 DEPENDS+=	kdebase-1.0:../../x11/kdebase
 
 CONFLICTS=	kdegraphics-4.1b
