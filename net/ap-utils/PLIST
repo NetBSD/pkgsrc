@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/15 20:08:13 jschauma Exp $
+bin/ap-config
+bin/ap-mrtg
+man/man8/ap-config.8
+man/man8/ap-mrtg.8
+man/man8/ap-trapd.8
+sbin/ap-trapd
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/ap-utils.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/ap-utils.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/ap-utils.mo
