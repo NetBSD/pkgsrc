@@ -1,6 +1,6 @@
 # start of deinstall
 #
-# $NetBSD: deinstall,v 1.18 2003/09/02 07:00:06 jlam Exp $
+# $NetBSD: deinstall,v 1.19 2003/09/05 11:34:27 jlam Exp $
 
 eval set -- ${PKG_USERS}
 for userset; do
@@ -45,7 +45,7 @@ while [ $# -gt 0 ]; do
 	VIEW_FILES="${VIEW_FILES} \"${file}\""
 done
 
-eval set -- ${RCD_SCRIPTS_DIR} ${MAKE_DIRS}
+eval set -- ${PKG_SYSCONFDIR} ${RCD_SCRIPTS_DIR} ${MAKE_DIRS}
 for dir; do
 	ALL_MAKE_DIRS="${ALL_MAKE_DIRS} \"${dir}\""
 done
@@ -171,7 +171,7 @@ POST-DEINSTALL)
 			# Don't bother the admin about the following dirs
 			# if they still exist.
 			#
-			${PKG_SYSCONFBASE}|${RCD_SCRIPTS_DIR})
+			${PKG_SYSCONFBASEDIR}|${RCD_SCRIPTS_DIR})
 				;;
 			*)	
 				if [ -d "${dir}" ]; then
