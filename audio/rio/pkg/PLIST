@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/12/31 21:19:50 agc Exp $
+bin/rio
+share/rio/README
+@dirrm share/rio
