@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/12/28 05:35:29 taya Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 21:00:35 agc Exp $
 
 SHA1 (anthy-5900.tar.gz) = 2f7cc9d4077d733d88859fc643203b68d35b7308
+RMD160 (anthy-5900.tar.gz) = b4d0377885edef41358dcd34b1a753187ccfc379
 Size (anthy-5900.tar.gz) = 1566783 bytes
 SHA1 (2ch.t) = 2160d7b0079e2c1a14093da968f34e7f8dbc07c2
 Size (2ch.t) = 142157 bytes
