@@ -10,6 +10,7 @@ MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.jwz.org/xscreensaver/
 
 BUILD_USES_MSGFMT=	yes
+BUILDLINK_DEPENDS.Xrandr+=	Xrandr>=1.0.2
 
 USE_PKGLOCALEDIR=	yes
 USE_X11BASE=		yes
@@ -66,3 +67,4 @@ GCC_REQD+=		2.95.3
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/gle/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
+.include "../../x11/Xrandr/buildlink3.mk"
