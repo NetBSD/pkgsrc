@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2003/03/19 21:02:00 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2003/08/30 22:51:34 jlam Exp $
 
 .include "Makefile.common"
 
@@ -31,6 +31,9 @@ PLIST_SRC+=		${.CURDIR}/PLIST.krb5
 PLIST_SRC+=		${.CURDIR}/PLIST.plugins
 
 USE_PKGINSTALL=		YES
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
+
 PKG_GROUPS=		${CYRUS_GROUP}
 PKG_USERS=		${CYRUS_USER}:${CYRUS_GROUP}::::${SH}
 RCD_SCRIPTS=		sasl_pwcheck saslauthd
