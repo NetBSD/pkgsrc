@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.5 1999/03/03 22:23:31 hubertf Exp $
+
 --- syscfg.h.orig	Wed Mar  3 21:34:37 1999
 +++ syscfg.h	Wed Mar  3 21:40:43 1999
 @@ -190,6 +190,12 @@
