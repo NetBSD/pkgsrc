@@ -1,9 +1,9 @@
-$NetBSD: patch-ag,v 1.6 2000/06/21 00:47:45 jlam Exp $
+$NetBSD: patch-ag,v 1.7 2002/03/24 20:03:37 rh Exp $
 
---- help-browser/Makefile.in.orig	Tue May 23 05:25:07 2000
-+++ help-browser/Makefile.in	Tue Jun 20 20:07:41 2000
-@@ -558,7 +558,7 @@
- help-caller.o gnome-help-browser.o: help-browser.h
+--- help-browser/Makefile.in.orig	Sun Jan 27 09:24:00 2002
++++ help-browser/Makefile.in
+@@ -727,7 +727,7 @@
+ @XML_I18N_MERGE_DESKTOP_RULE@
  
  install-exec-local:
 -	$(INSTALL_PROGRAM) $(top_srcdir)/help-browser/gnome-download \
