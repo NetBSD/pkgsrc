@@ -1,16 +1,18 @@
---- Makefile.orig	Tue Dec  5 06:58:28 2000
-+++ Makefile	Wed Jun 13 10:02:47 2001
-@@ -10,7 +10,7 @@
+$NetBSD: patch-aa,v 1.4 2001/10/17 06:22:38 rh Exp $
+
+--- Makefile.orig	Sat Jul 21 21:58:03 2001
++++ Makefile
+@@ -8,7 +8,7 @@
+ # must be equal to DEBUG or NDEBUG
+ DB	= NDEBUG
+ # Optimization: -O<n> or debugging: -g
+-OPT	= -O2
++OPT	=
  
  LDLIBS	=
  
--CFLAGS	= -Wall -pedantic -O2 -D$(DB)
-+CFLAGS += -Wall -pedantic -D$(DB)
- LDFLAGS	=
- 
- OBJS	=\
-@@ -21,20 +21,26 @@
- 	tabstop.o unix.o word2text.o wordlib.o xmalloc.o
+@@ -24,20 +24,30 @@
+ 	wordlib.o xmalloc.o
  
  PROGS =\
 -	antiword\
@@ -34,6 +36,10 @@
 +		${BSD_INSTALL_DATA} Docs/${file} ${PREFIX}/share/doc/antiword
 +.endfor
 +		${BSD_INSTALL_MAN} Docs/antiword.1 ${PREFIX}/man/man1/antiword.1
++		${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/examples/antiword
++		for i in Resources/* ; do				\
++			${BSD_INSTALL_DATA} $$i ${PREFIX}/share/examples/antiword ; \
++		done
  
  clean:
  		rm -f $(OBJS)

@@ -1,0 +1,13 @@
+$NetBSD: MESSAGE,v 1.1 2001/10/17 06:22:38 rh Exp $
+==========================================================================
+
+  antiword has now been installed in ${PREFIX}.
+
+  Before using this package for the first time, each user has to install
+  configuration files in his ${HOME}/.antiword directory.  The easiest
+  way to do this is to use the provided example configuration files:
+
+	mkdir ~/.antiword
+	cp ${PREFIX}/share/examples/antiword/* ~/.antiword
+
+==========================================================================
