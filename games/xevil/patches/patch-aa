@@ -1,0 +1,55 @@
+--- Makefile.orig	Tue Oct  1 19:50:59 1996
++++ Makefile	Fri Jul 31 09:49:41 1998
+@@ -8,8 +8,8 @@
+ #### Defines that are applicable to makes on all architectures
+ SHELL		=	/bin/sh
+ TARGETS		=	xevil #xshow
+-DEBUG_OPT	=	-g#  #-DPRINT_ERRORS  
+-LINK_OPT	=	#-O
++DEBUG_OPT	=	-O#  #-DPRINT_ERRORS  
++LINK_OPT	=	$(RPATH)#-O
+ 
+ #SRC_DIR and WORK_DIR are only used for `make workdir`
+ SRC_DIR		= 	/mit/hardts/src/X/xevil1.4.9
+@@ -22,7 +22,7 @@
+ OBJS		=	physical.o actual.o game.o main.o intel.o locator.o world.o \
+ 			ui.o coord.o area.o utils.o 
+ ARCHITECTURES	=	athena-sun4 athena-sun5 alpha decmips ds decstation \
+-			freebsd hp700 iris4d \
++			freebsd hp700 iris4d netbsd \
+ 			jsc-sun4 i386-linux rsaix sun4 sun5 vision-sun4 
+ STRIP		=	strip
+ 
+@@ -33,6 +33,8 @@
+ 
+ #### Attempt to guesss the host architecture using the HOSTYPE and hostype
+ # variables.  Then call self with the architecture name.
++all: default
++
+ default:
+ 	@if [ $${HOSTTYPE-bob} != bob ] ; then \
+ 		archit=$$HOSTTYPE ; \
+@@ -50,7 +52,9 @@
+ 		echo "{$(ARCHITECTURES)}" ; \
+ 	fi ;
+ 
+-
++install: xevil
++	${INSTALL_PROGRAM} xevil ${PREFIX}/bin
++	${INSTALL_MAN} xevil.6 ${PREFIX}/man/man6
+ 
+ #### Specific architectures.  
+ ## Feel free to modify one of these to accomodate your machine's configuration.
+@@ -100,7 +104,11 @@
+ INCL_DIRS=-I/usr/X11R6/include LIBS_DIRS=-L/usr/X11R6/lib \
+ LIBS="-lX11 -lm" $(TARGETS)
+ 
+-
++netbsd:
++	@$(MAKE) CC="c++" \
++CFLAGS="-DUSE_RANDOM -DPROTECTED_IS_PUBLIC -DMSEC_PER_CLOCK=8" \
++INCL_DIRS=-I$(PREFIX)/include LIBS_DIRS=-L$(PREFIX)/lib \
++LIBS="-lX11 -lm" $(TARGETS)
+ 
+ hp700:
+ 	@$(MAKE) CC="g++" LIBS="-lX11 -lm" INCL_DIRS="" CFLAGS="-DUSE_RANDOM -DRANDOM_NEEDS_PROTOTYPES -DMATH_H_IS_CC -DPROTECTED_IS_PUBLIC" \
