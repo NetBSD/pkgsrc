@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2290 2004/11/02 00:13:30 adrianp Exp $
+$NetBSD: TODO,v 1.2291 2004/11/02 11:39:26 markd Exp $
 
 Suggested new packages
 ======================
@@ -453,8 +453,6 @@ Suggested package updates
 	o nap-1.5.2
 	o napshare-1.2
 	o ncmpc-0.11.0 [pkg/26237]
-	o netatalk-1.6.3 [pkg/21930|markd]
-	o netatalk-2.0.1 [markd]
 	o netcdf-3.5.1
 	o netio-123
 	o netpipe-3.6.2
