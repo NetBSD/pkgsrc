@@ -1,0 +1,13 @@
+$NetBSD: patch-ar,v 1.1 2003/04/15 11:49:38 martin Exp $
+
+--- srclib/apr/include/apr_atomic.h.orig	2003-04-15 13:21:18.000000000 +0200
++++ srclib/apr/include/apr_atomic.h	2003-04-15 13:22:01.000000000 +0200
+@@ -247,7 +247,7 @@
+ #define apr_atomic_read(mem)        (*(mem))
+ #define apr_atomic_init(pool)        APR_SUCCESS
+ 
+-#elif (defined(__sparc__) || defined(sparc)) && !APR_FORCE_ATOMIC_GENERIC
++#elif !defined(__NetBSD__) && ((defined(__sparc__) || defined(sparc))) && !APR_FORCE_ATOMIC_GENERIC
+ 
+ #define apr_atomic_t apr_uint32_t
+ #define apr_atomic_read(p)  *p
