@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-<!-- $NetBSD: README.pkg,v 1.14 2000/05/31 22:16:17 wiz Exp $ -->
+<!-- $NetBSD: README.pkg,v 1.15 2000/09/19 19:29:11 agc Exp $ -->
 <html>
 <head>
 <title>The NetBSD Packages Collection: %%PORT%%</title>
@@ -29,13 +29,27 @@ longer description, or browse the package's
 
 <p>The package is located in the 
 "<A HREF=".">%%PORT%%</A>"
-directory. It can be manipulated using the packaging tools,
-working on the
+directory.
+The current source version of the package is
 "%%PKG%%"
-package.
 For a summary on how to use the package collection, go to the
 <a href="../../README.html">top of the packages tree</a>.
 </p>
+
+<P>
+The following security vulnerabilities are known for %%PORT%%
+%%VULDATE%%
+:
+<UL>
+%%VULNERABILITIES%%
+</UL>
+If you have a vulnerable package installed on any machine, you are
+advised to remove the package
+immediately, using the standard package tools.
+The <a href="../../security/audit-packages/README.html">audit-packages</a>
+package locates any installed package which has been mentioned in security
+advisories as being vulnerable.
+</P>
 
 
 <p>
