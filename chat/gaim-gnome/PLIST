@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/01/27 14:19:16 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/01/27 14:31:43 jmmv Exp $
 bin/gaim_applet
 etc/CORBA/servers/gaim_applet.gnorba
 share/applets/Network/gaim_applet.desktop
@@ -8,4 +8,4 @@ share/pixmaps/gaim/msgpend.png
 share/pixmaps/gaim/offline.png
 share/pixmaps/gaim/online.png
 @dirrm share/pixmaps/gaim
-@comment in gnome1-dirs: @dirrm share/applets/Network
+@comment in gnome-core: @dirrm share/applets/Network
