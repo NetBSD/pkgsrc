@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/01/23 20:41:45 recht Exp $
+# $NetBSD: Makefile,v 1.18 2005/01/24 16:59:42 seb Exp $
 #
 
 DISTNAME=	psycopg-1.1.14
@@ -24,5 +24,5 @@ PY_PATCHPLIST=	yes
 .include "../../lang/python/extension.mk"
 .include "../../time/py-mxDateTime/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
-.include "../../mk/read.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
