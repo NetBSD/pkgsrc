@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.3 2001/02/20 13:00:37 wiz Exp $
+
+--- xuvmstat.c.orig	Mon Feb 19 15:23:55 2001
++++ xuvmstat.c
+@@ -31,6 +31,9 @@
+ #include <sys/param.h>
+ #include <sys/errno.h>
+ #include <sys/time.h>
++#if (__NetBSD_Version__ < 105000000)
++#include <vm/vm.h>
++#endif
+ #include <uvm/uvm_extern.h>
+ #include <X11/Xlib.h>
+ #include <X11/Xutil.h>
