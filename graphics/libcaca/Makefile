@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2004/08/12 19:36:00 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2004/08/15 12:40:07 wiz Exp $
 #
 
-DISTNAME=		libcaca-0.5
+DISTNAME=		libcaca-0.9
 CATEGORIES=		graphics
 MASTER_SITES=		http://sam.zoy.org/projects/libcaca/
 EXTRACT_SUFX=		.tar.bz2
@@ -15,7 +15,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--enable-slang --disable-ncurses
+CONFIGURE_ARGS+=	--disable-slang --enable-ncurses --disable-imlib2 --disable-doc
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -23,5 +23,5 @@ CONFIGURE_ARGS+=	--enable-slang --disable-ncurses
 LDFLAGS=	-ldl
 .endif
 
-.include "../../devel/libslang/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

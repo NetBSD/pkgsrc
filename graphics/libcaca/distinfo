@@ -1,4 +1,7 @@
-$NetBSD: distinfo,v 1.3 2003/12/26 09:38:52 jmmv Exp $
+$NetBSD: distinfo,v 1.4 2004/08/15 12:40:07 wiz Exp $
 
-SHA1 (libcaca-0.5.tar.bz2) = 672632842f78aad4b56bd8fbc18babb0b860c392
-Size (libcaca-0.5.tar.bz2) = 140661 bytes
+SHA1 (libcaca-0.9.tar.bz2) = 55428c11427e8a411062a2699149f912b251d7a6
+Size (libcaca-0.9.tar.bz2) = 171854 bytes
+SHA1 (patch-aa) = e289d72faafd370301256d870933c9af47839d93
+SHA1 (patch-ab) = 72b0ab0ac7783a339a700da2352e7d97c26b4ef9
+SHA1 (patch-ac) = cdf05ae24b1f35df39a5f446b13057fbc7e0ec68

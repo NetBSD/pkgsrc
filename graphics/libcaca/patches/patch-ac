@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2004/08/15 12:40:07 wiz Exp $
+
+--- src/graphics.c.orig	2004-02-02 04:00:19.000000000 +0100
++++ src/graphics.c
+@@ -1309,7 +1309,7 @@ static void caca_handle_resize(void)
+         {
+             _caca_width = size.ws_col;
+             _caca_height = size.ws_row;
+-            resize_term(_caca_height, _caca_width);
++            resizeterm(_caca_height, _caca_width);
+             wrefresh(curscr);
+         }
+     }
