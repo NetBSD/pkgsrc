@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 1999/05/16 15:02:22 tron Exp $
+# $NetBSD: Makefile,v 1.46 1999/05/23 21:12:33 tv Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -35,7 +35,7 @@ CONFIGURE_ARGS+=	--with-etcdir=${SSH_CONF_DIR} --with-libwrap
 #CONFIGURE_ARGS+=	--with-none
 
 .if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
-DEPENDS+=		rsaref-2.0:../../security/rsaref
+DEPENDS+=		rsaref-2.0p1:../../security/rsaref
 CONFIGURE_ARGS+=	--with-rsaref="${LOCALBASE}/lib"
 CONFIGURE_ENV+=		LDFLAGS="-Wl,-R${LOCALBASE}/lib"
 CFLAGS+=		-I${LOCALBASE}/include

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1999/04/05 17:14:13 mycroft Exp $
+# $NetBSD: Makefile,v 1.18 1999/05/23 21:12:33 tv Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -15,7 +15,7 @@ HOMEPAGE=	http://www.pgpi.com/
 
 .if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
 PKGNAME=	pgp-2.6.3a
-DEPENDS+=	rsaref-2.0:../../security/rsaref
+DEPENDS+=	rsaref-2.0p1:../../security/rsaref
 RSAINC=		-I${PREFIX}/include
 RSALIBS=	-Wl,-R${PREFIX}/lib -L${PREFIX}/lib -lrsaref
 RSAOBJS=	rsaglue2.o
