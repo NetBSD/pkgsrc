@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/12/10 17:15:04 jdolecek Exp $
+# $NetBSD: Makefile,v 1.16 2004/03/20 21:18:41 bouyer Exp $
 
 .include "Makefile.common"
 COMMENT=	API for access to scanners, digitals camera, frame grabbers etc.
@@ -8,6 +8,16 @@ PKGREVISION=	1
 
 SANE_MICRO=	12
 
-.include "../../devel/libusb/buildlink2.mk"
+BUILD_USES_MSGFMT=	YES
+
+.if (${OPSYS} == "SunOS")
+PLIST_SUBST+=   NOT_SUNOS="@comment "
+.else
+PLIST_SUBST+=   NOT_SUNOS=""
+.endif
+
+.if (${OPSYS} != "SunOS")
+. include "../../devel/libusb/buildlink2.mk"
+.endif
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
