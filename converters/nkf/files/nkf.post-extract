@@ -1,19 +1,0 @@
-*** nkf.c.bak	Sun May  9 17:20:37 1999
---- nkf.c	Sun May  9 17:21:32 1999
-***************
-*** 1483,1489 ****
-  
-  
-  #ifdef STRICT_MIME
-! /* This converts  ^\^\*/
-  
-  unsigned char *mime_pattern[] = {
-     (unsigned char *)"\075?ISO-8859-1?Q?",
---- 1483,1489 ----
-  
-  
-  #ifdef STRICT_MIME
-! /* This converts  */
-  
-  unsigned char *mime_pattern[] = {
-     (unsigned char *)"\075?ISO-8859-1?Q?",
