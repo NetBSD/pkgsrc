@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/12/03 19:51:39 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/03 23:13:10 jlam Exp $
 #
 
 DISTNAME=	openvpn-2.0_beta15
@@ -10,9 +10,10 @@ MAINTAINER=	ianzag@mail.ru
 HOMEPAGE=	http://openvpn.sourceforge.net/
 COMMENT=	Easy-to-use SSL VPN daemon
 
-USE_BUILDLINK3=	yes
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
+USE_BUILDLINK3=		yes
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_OLD_DES_API=	yes
 
 PKG_SYSCONFSUBDIR=	openvpn
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
@@ -23,8 +24,6 @@ CONFIGURE_ARGS+=	--enable-crypt
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-multi
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-
-LIBS+=		-ldes
 
 .include "../../archivers/liblzo/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
