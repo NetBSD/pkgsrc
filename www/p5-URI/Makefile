@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2002/08/20 14:48:54 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2002/09/27 09:43:53 shell Exp $
 #
 
-DISTNAME=	URI-1.21
+DISTNAME=	URI-1.22
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5uri
 CATEGORIES=	www net perl5
@@ -14,11 +14,8 @@ BUILD_DEPENDS=	p5-MIME-Base64>=2.12:../../converters/p5-MIME-Base64
 
 CONFLICTS+=	p5-libwww-5.36	# URI used to be part of that package
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/URI/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
