@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/11/13 16:12:49 toshii Exp $
+# $NetBSD: Makefile,v 1.16 2000/12/28 16:49:37 wiz Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
@@ -15,7 +15,8 @@ DEPENDS+=	unproven-pthreads>=0.17:../../devel/unproven-pthreads
 BUILD_DEFS+=	USE_INET6
 
 # Sync these with devel/unproven-pthreads:
-ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-arm32 NetBSD-*-m68k
+ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
+			NetBSD-*-m68k
 
 # No need to set USE_INET6, will auto-detect.
 BIND_VERSION=	9.0.1
