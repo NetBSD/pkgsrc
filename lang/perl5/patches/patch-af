@@ -1,0 +1,20 @@
+--- hints/netbsd.sh.orig	Tue Mar 24 12:24:25 1998
++++ hints/netbsd.sh	Tue Mar 24 12:28:19 1998
+@@ -49,13 +49,16 @@
+ # you can not change the real userid of a process under 4.4BSD.
+ # netbsd fixed this in 1.2A.
+ case "$osvers" in
+-0.9*|1.0*|1.1*|1.2_*|1.2|1.2.*)
++0.9*|1.0*|1.1*|1.2_*|1.2|1.2.*|1.3|1.3.1)
+ 	d_setregid="$undef"
+ 	d_setreuid="$undef"
+ 	d_setrgid="$undef"
+ 	d_setruid="$undef"
+ 	;;
+ esac
++
++# there's no problem with vfork:
++d_vfork=$define # HFHFHF
+ 
+ # Avoid telldir prototype conflict in pp_sys.c  (NetBSD uses const DIR *)
+ # Configure should test for this.  Volunteers?
