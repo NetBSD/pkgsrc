@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/01/22 07:14:59 grant Exp $
+# $NetBSD: Makefile,v 1.23 2004/03/07 22:34:20 snj Exp $
 
 DISTNAME=	audacity-src-1.0.0-2
 PKGNAME=	audacity-1.0.0.2
@@ -14,9 +14,9 @@ COMMENT=	Audio editor
 BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
 WRKSRC=		${WRKDIR}/audacity-src-1.0.0
-USE_BUILDLINK2=		# defined
-USE_X11=		# defined
+USE_BUILDLINK3=		# defined
 USE_GNU_TOOLS+=		make
+USE_X11=		# defined
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--without-xaudio
@@ -41,13 +41,13 @@ pre-configure:
 	done
 	cd ${WRKSRC} && ${AUTOCONF}
 
-.include "../../audio/id3lib/buildlink2.mk"
-.include "../../audio/lame/buildlink2.mk"
-.include "../../audio/libvorbis/buildlink2.mk"
-.include "../../audio/libmad/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../x11/wxGTK/buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../audio/id3lib/buildlink3.mk"
+.include "../../audio/lame/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../audio/libmad/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../x11/wxGTK/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 
 .include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
