@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2002/07/22 22:00:52 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2002/08/23 11:52:51 mjl Exp $
 
-DISTNAME=		gnucash-1.6.6
-PKGREVISION=		1
+DISTNAME=		gnucash-1.6.8
+# PKGREVISION=		2
 CATEGORIES=		finance
 MASTER_SITES=		http://www.linas.org/pub/gnucash/gnucash/sources/stable/ \
 			ftp://ftp.gnucash.org/pub/gnucash/sources/stable/ \
@@ -11,36 +11,27 @@ MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.gnucash.org/
 COMMENT=		Personal double-entry accounting program
 
-DEPENDS+=		eperl-2.2.14:../../textproc/eperl
-DEPENDS+=		g-wrap>=1.1.10:../../devel/g-wrap
-DEPENDS+=		guppi>=0.40.0nb1:../../math/guppi
-DEPENDS+=		{libperl>=${LIBPERL5_REQD},perl>=5.8.0}:../../lang/libperl
-DEPENDS+=		popt>=1.5:../../devel/popt
-DEPENDS+=		swig-1.1p5:../../devel/swig
-DEPENDS+=		glib>=0.99.7:../../devel/glib
-DEPENDS+=		gdk-pixbuf>=0.11.0nb1:../../graphics/gdk-pixbuf
-DEPENDS+=		gnome-print>=0.29nb1:../../print/gnome-print
-BUILD_DEPENDS+=		bison>=1.28:../../devel/bison
-
-
-LIBPERL5_REQD=		${PERL5_REQD}
+DEPENDS+=			swig-1.1p5:../../devel/swig
+BUILDLINK_DEPENDS.g-wrap=	g-wrap>=1.1.11:../../devel/g-wrap
+BUILDLINK_DEPENDS.g-wrap+=	g-wrap<1.3.0:../../devel/g-wrap
+BUILDLINK_DEPENDS.guppi=	guppi>=0.35.1:../../math/guppi
+BUILDLINK_DEPENDS.popt=		popt>=1.5:../../devel/popt
+BUILDLINK_DEPENDS.glib=		glib>=0.99.7:../../devel/glib
+BUILDLINK_DEPENDS.guile=	guile>=1.3.4:../../lang/guile
+BUILDLINK_DEPENDS.guile+=	guile<1.5.0:../../lang/guile
+BUILDLINK_DEPENDS.gdk-pixbuf=	gdk-pixbuf>=0.2.5:../../graphics/gdk-pixbuf
+BUILDLINK_DEPENDS.gnome-print=	gnome-print>=0.21:../../print/gnome-print
+BUILD_DEPENDS+=			bison>=1.28:../../devel/bison
 
 USE_GMAKE=		YES
-USE_PERL5=		YES
-USE_X11BASE=		YES
-USE_LIBINTL=		YES
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE+=	${WRKSRC}/ltconfig
+#LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+USE_BUILDLINK_ONLY=	YES
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-guile-config=${LOCALBASE}/bin/guile-config
 CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--with-perl-includes=${PERL5_ARCHLIB}
-CONFIGURE_ARGS+=	--with-perl=${PERL5}
-
-CONFIGURE_ENV+=		LOCALBASE="${LOCALBASE}"
-CPPFLAGS+=		-I${LOCALBASE}/include
-LIBS+=			-L${LOCALBASE}/lib/python${PYVERSSUFFIX}/config
+CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_DIR}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -55,6 +46,22 @@ post-extract:
 .endif
 .endif
 
-.include "../../lang/python/pyversion.mk"
+.include "../../converters/libiconv/buildlink.mk"
+.include "../../devel/gal/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../devel/glib/buildlink.mk"
+.include "../../devel/g-wrap/buildlink.mk"
+.include "../../devel/libglade/buildlink.mk"
+.include "../../devel/popt/buildlink.mk"
+.include "../../graphics/gdk-pixbuf/buildlink.mk"
+.include "../../lang/guile/buildlink.mk"
+.include "../../math/guppi/buildlink.mk"
+.include "../../net/ORBit/buildlink.mk"
+.include "../../textproc/libxml/buildlink.mk"
+.include "../../www/gtkhtml/buildlink.mk"
+.include "../../x11/gnome-libs/buildlink.mk"
+
+.include "../../mk/x11.buildlink.mk"
+
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
