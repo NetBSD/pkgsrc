@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 1999/08/18 00:22:35 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 1999/11/06 11:58:46 tron Exp $
 bin/mutt
 etc/Muttrc
 etc/mime.types
@@ -11,6 +11,7 @@ share/locale/fr/LC_MESSAGES/mutt.mo
 share/locale/it/LC_MESSAGES/mutt.mo
 share/locale/nl/LC_MESSAGES/mutt.mo
 share/locale/pl/LC_MESSAGES/mutt.mo
+share/locale/pt_BR/LC_MESSAGES/mutt.mo
 share/locale/ru/LC_MESSAGES/mutt.mo
 share/locale/uk/LC_MESSAGES/mutt.mo
 share/locale/ko/LC_MESSAGES/mutt.mo
