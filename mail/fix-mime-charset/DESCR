@@ -1,0 +1,12 @@
+In non-English mailing lists (particularly in Russian) there is a
+big problem with messages, where charset parameter of Content-Type
+header is set incorrectly. Sometimes software is buggy, sometimes
+people cannot set up their software properly, sometimes web-based
+email clients do not implement charsets.  While reading such a
+mail, one should manually switch encoding in MUA back and forth.
+Incorrectly encoded or plain 8-bit Subject field is another big
+problem.  Such fields often get corrupted while passing e-mail
+gateways.
+
+This program can be used to solve this problem while used as mail
+filter (in MTA, procmail, or a similar program).
