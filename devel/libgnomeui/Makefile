@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.39 2005/02/22 19:56:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.40 2005/03/22 15:59:30 jmmv Exp $
 #
 
-DISTNAME=	libgnomeui-2.8.1
+DISTNAME=	libgnomeui-2.10.0
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeui/2.8/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeui/2.10/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -41,13 +41,17 @@ post-configure:
 	${MV} ${PKGCONFIG_BASE}.tmp ${PKGCONFIG_BASE}
 
 .include "../../audio/esound/buildlink3.mk"
+.include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/GConf2/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
+.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
