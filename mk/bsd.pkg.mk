@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.469 2000/06/03 21:51:57 mycroft Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.470 2000/06/03 22:59:04 mycroft Exp $
 #
 # This file is in the public domain.
 #
@@ -2206,8 +2206,6 @@ checksum: fetch
 # You probably won't need to touch these
 ################################################################
 
-HTMLIFY=	${SED} -e 's/&/\&amp;/g' -e 's/>/\&gt;/g' -e 's/</\&lt;/g'
-
 # Set to "html" by the README.html target (and passed via depends-list
 # and package-depends)
 PACKAGE_NAME_TYPE?=	name
@@ -2217,7 +2215,7 @@ PACKAGE_NAME_TYPE?=	name
 .if !target(package-name)
 package-name:
 .if (${PACKAGE_NAME_TYPE} == "html")
-	@${ECHO} '<A HREF="../../'`${ECHO} ${PKGPATH} | ${HTMLIFY}`'/README.html">'`${ECHO} ${PKGNAME} | ${HTMLIFY}`'</A>'
+	@${ECHO} '<a href="../../${PKGPATH:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}/README.html">${PKGNAME:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}</A>'
 .else
 	@${ECHO} ${PKGNAME}
 .endif # PACKAGE_NAME_TYPE
@@ -2583,7 +2581,7 @@ README.html: .PRECIOUS
 	@[ -s $@.tmp1 ] || ${ECHO} "<I>(none)</I>" >> $@.tmp1
 	@${MAKE} ${MAKEFLAGS} package-depends PACKAGE_NAME_TYPE=html | sort -u >> $@.tmp2
 	@[ -s $@.tmp2 ] || ${ECHO} "<I>(none)</I>" >> $@.tmp2
-	@${ECHO} ${PKGNAME} | ${HTMLIFY} >> $@.tmp3
+	@${ECHO} '${PKGNAME:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}' >> $@.tmp3
 	@${MAKE} ${MAKEFLAGS} binpkg-list  >> $@.tmp4
 	@[ -s $@.tmp4 ] || ${ECHO} "<TR><TD><I>(no precompiled binaries available)</I>" >> $@.tmp4
 	@${SED} -e 's|%%PORT%%|${PKGPATH}|g' \
