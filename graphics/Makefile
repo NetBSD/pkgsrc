@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2001/08/12 22:09:36 zuntum Exp $
+# $NetBSD: Makefile,v 1.155 2001/08/16 10:50:21 rh Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -70,6 +70,7 @@ SUBDIR+=	hermes
 SUBDIR+=	hp2xx
 SUBDIR+=	iGMT
 SUBDIR+=	imlib
+SUBDIR+=	imlib2
 SUBDIR+=	impress
 SUBDIR+=	jasper
 SUBDIR+=	jpeg
