@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.388 2003/05/04 20:40:07 salo Exp $
+# $NetBSD: Makefile,v 1.389 2003/05/05 11:37:22 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -84,6 +84,7 @@ SUBDIR+=	eel
 SUBDIR+=	eel2
 SUBDIR+=	electricfence
 SUBDIR+=	elf
+SUBDIR+=	elfsh
 SUBDIR+=	elib
 SUBDIR+=	emacs-ilisp
 SUBDIR+=	exctags
