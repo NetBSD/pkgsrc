@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.4 2001/11/18 00:41:20 lukem Exp $
+
+--- man/Makefile.in.orig	Sat Oct 20 16:19:00 2001
++++ man/Makefile.in
+@@ -5,10 +5,10 @@
+ INSTALLCMD  = @INSTALL@
+ INSTALLMODE = 0644
+ 
+-MAN5_PAGES  = ups.conf.5
++MAN5_PAGES  = ups.conf.5 upssched.conf.5
+ MAN8_PAGES  = powercom.8 apcsmart.8 nutupsdrv.8 fentonups.8 bestups.8 \
+ 		belkin.8 upsc.8 upsct.8 upsct2.8 upscmd.8 upslog.8 \
+-		upssched.8
++		upssched.8 upsd.8 upsmon.8
+ 
+ all: $(MAN5_PAGES) $(MAN8_PAGES)
+ 
