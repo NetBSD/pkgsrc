@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.32 2001/09/09 20:36:17 agc Exp $
+# $NetBSD: Makefile,v 1.33 2001/11/26 04:52:47 hubertf Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/11/26 23:16:51 jseger Exp
 #
 
-DISTNAME=	cku196
-PKGNAME=        kermit-7.0.196
+DISTNAME=	cku200b04
+PKGNAME=        kermit-8.0.200.b4
 CATEGORIES=	comms
-MASTER_SITES=	ftp://kermit.columbia.edu/kermit/archives/
+MASTER_SITES=	ftp://kermit.columbia.edu/kermit/test/tar/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.columbia.edu/kermit/
@@ -25,6 +25,8 @@ PLIST_SRC=	${WRKDIR}/PLIST
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wermit ${PREFIX}/bin/kermit
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+
+no-manpage-in-beta-release:
 	for OPT in ${MANINSTALL} broken-solaris-needs-this; do \
 	  case $$OPT in \
 	    catinstall) \
