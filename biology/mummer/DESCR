@@ -1,0 +1,7 @@
+Mummer is a system for aligning whole genome sequences. Using an efficient
+data structure called a suffix tree, the system is able rapidly to align
+sequences containing millions of nucleotides whether in complete or draft
+form. MUMmer can also align incomplete genomes; it handles the 100s or 1000s
+of contigs from a shotgun sequencing project with ease, and will align them to
+another set of contigs or a genome using the NUCmer program included with the
+system. 
