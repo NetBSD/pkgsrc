@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2004/03/09 22:49:48 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/04/29 15:17:02 minskim Exp $
 bin/tkcvs
 bin/tkdiff
 man/man1/tkcvs.1
-share/doc/tkcvs/README.tkcvs
 share/tkcvs/bitmaps/add.gif
 share/tkcvs/bitmaps/adir.gif
 share/tkcvs/bitmaps/amod.gif
@@ -75,6 +74,7 @@ share/tkcvs/bitmaps/tick.xbm
 share/tkcvs/bitmaps/ticklefish_med.gif
 share/tkcvs/bitmaps/tkcvs-ghost.xbm
 share/tkcvs/bitmaps/tkcvs-help.xbm
+share/tkcvs/bitmaps/tkcvs16.xbm
 share/tkcvs/bitmaps/tkcvs48.xbm
 share/tkcvs/bitmaps/trace.xbm
 share/tkcvs/bitmaps/unedit.gif
@@ -92,6 +92,7 @@ share/tkcvs/filebrowse.tcl
 share/tkcvs/gen_log.tcl
 share/tkcvs/help.tcl
 share/tkcvs/import.tcl
+share/tkcvs/import2.tcl
 share/tkcvs/joincanvas.tcl
 share/tkcvs/logcanvas.tcl
 share/tkcvs/merge.tcl
@@ -109,4 +110,3 @@ share/tkcvs/tooltips.tcl
 share/tkcvs/workdir.tcl
 @dirrm share/tkcvs/bitmaps
 @dirrm share/tkcvs
-@dirrm share/doc/tkcvs
