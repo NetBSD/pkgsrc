@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7476 2004/10/19 20:18:43 jmmv Exp $
+$NetBSD: CHANGES,v 1.7477 2004/10/19 20:36:10 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4766,3 +4766,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added py-InlineEgg-1.07 [adrianp 2004-10-19]
 	Added msf-2.2 [adrianp 2004-10-19]
 	Updated evolution-data-server to 1.0.2nb1 [jmmv 2004-10-19]
+	Added evolution-webcal-2.0.0 [jmmv 2004-10-19]
+	Updated gnome to 2.8.0nb1 [jmmv 2004-10-19]
