@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.249 1999/04/08 12:46:08 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.250 1999/04/08 18:43:42 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -282,7 +282,7 @@ BZCAT=			/usr/bin/bzcat
 BZCAT=			${LOCALBASE}/bin/bzcat
 BUILD_DEPENDS+=		${BZCAT}:${PKGSRCDIR}/archivers/bzip2
 .endif # !exists bzcat
-DECOMPRESS_CMD?=	${BZCAT} <
+DECOMPRESS_CMD?=	${BZCAT}
 .else
 DECOMPRESS_CMD?=	${GZCAT}
 .endif
