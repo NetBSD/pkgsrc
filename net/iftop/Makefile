@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/03/20 16:37:38 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2004/03/20 19:36:58 xtraeme Exp $
 #
 
 DISTNAME=	iftop-0.16
@@ -9,11 +9,11 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.ex-parrot.com/~pdw/iftop/download/
 COMMENT=	Display bandwidth usage on an interface
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_NCURSES=		# mvchgat()
 GNU_CONFIGURE=		yes
 
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../net/libpcap/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
