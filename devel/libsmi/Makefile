@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/16 14:38:39 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/06/11 06:34:28 jlam Exp $
 #
 
 DISTNAME=	libsmi-0.1.6
@@ -23,7 +23,6 @@ CONFIGURE_ARGS+=--with-smipath="${MIBDIR}:${PREFIX}/share/snmp/mibs:${PREFIX}/li
 .include "../../mk/bsd.prefs.mk"
 .if ${OS_VERSION:M1.4} || ${OS_VERSION:M1.3} || ${OS_VERSION:M1.2}
 CPPFLAGS+=	-Dstrtoll=strtoq -Dstrtoull=strtouq
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 .endif
 
 .include "../../mk/bsd.pkg.mk"

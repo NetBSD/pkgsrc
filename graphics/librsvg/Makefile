@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/05/14 17:47:27 rh Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/11 06:34:37 jlam Exp $
 #
 
 DISTNAME=		librsvg-1.0.0
@@ -18,6 +18,6 @@ USE_LIBTOOL=		YES
 USE_X11BASE=		YES
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS} -I${LOCALBASE}/include"
+CPPFLAGS+=		-I${LOCALBASE}/include
 
 .include "../../mk/bsd.pkg.mk"

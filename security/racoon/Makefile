@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2001/04/18 03:14:55 itojun Exp $
+# $NetBSD: Makefile,v 1.34 2001/06/11 06:34:49 jlam Exp $
 #
 
 DISTNAME=	racoon-20010418a
@@ -23,8 +23,9 @@ BUILD_DEFS+=	USE_INET6
 # between 1.4 and 1.5, there were period where we had RSA-less
 # /usr/lib/libcrypto.  we do not support that configuration in the pkgsrc.
 USE_SSL=	yes
-CONFIGURE_ENV+=	CPPFLAGS=-I${LOCALBASE}/include CFLAGS=-I${LOCALBASE}/include \
-		LIBS="-L${LOCALBASE}/lib -L${WRKSRC}/../libipsec"
+CPPFLAGS+=	-I${LOCALBASE}/include
+CFLAGS+=	-I${LOCALBASE}/include
+CONFIGURE_ENV+=	LIBS="-L${LOCALBASE}/lib -L${WRKSRC}/../libipsec"
 
 CONFLICTS+=	racoon-*
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2001/05/02 08:22:28 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2001/06/11 06:34:24 jlam Exp $
 
 DISTNAME=		mysql-3.23.35
 CATEGORIES=		databases
@@ -16,7 +16,6 @@ EXTRACT_USING_PAX=	# defined
 MYSQL_DATADIR?=		/var/mysql
 
 GNU_CONFIGURE=		# defined
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CONFIGURE_ARGS+=	--localstatedir=${MYSQL_DATADIR}
 CONFIGURE_ARGS+=	--with-named-z-libs=z
 CONFIGURE_ARGS+=	--with-libwrap

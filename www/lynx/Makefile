@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2001/03/27 03:20:23 hubertf Exp $
+# $NetBSD: Makefile,v 1.39 2001/06/11 06:34:55 jlam Exp $
 #
 
 DISTNAME=		lynx2.8.3rel.1
@@ -159,8 +159,6 @@ DEPENDS+=		socks5-1.0.2:../../net/socks5
 .if defined(USE_INET6) && ${USE_INET6} == YES
 CPPFLAGS+=	-DINET6
 .endif
-# current needs below
-#CONFIGURE_ENV+=CPPFLAGS="${CPPFLAGS}"
 
 .include "../../mk/bsd.pkg.mk"
 

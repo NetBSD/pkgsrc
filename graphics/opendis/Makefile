@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 15:22:28 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/06/11 06:34:37 jlam Exp $
 
 DISTNAME=	opendis-0.0.3
 CATEGORIES=	graphics
@@ -11,6 +11,5 @@ COMMENT=	Download images from Flashpoint Digita-based cameras
 #USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CPPFLAGS+=		-I${LOCALBASE}/include
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 .include "../../mk/bsd.pkg.mk"

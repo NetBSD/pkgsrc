@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/05/20 20:52:24 rh Exp $
+# $NetBSD: Makefile,v 1.19 2001/06/11 06:34:19 jlam Exp $
 # FreeBSD: ports/audio/xmms/Makefile,v 1.9 2000/02/11 01:46:12 cpiazza Exp
 
 DISTNAME=	xmms-1.2.4
@@ -23,7 +23,6 @@ GNU_CONFIGURE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 CPPFLAGS+=	-D_POSIX_THREAD_SYSCALL_SOFT=1
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 CONFIGURE_ENV+=	XML_CONFIG="${LOCALBASE}/bin/xml-config"
 CONFIGURE_ARGS+=--without-gnome
 LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig

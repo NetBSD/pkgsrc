@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/06/11 02:05:12 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2001/06/11 06:34:39 jlam Exp $
 #
 
 DISTNAME=		librep-${REP_VERS}
@@ -20,7 +20,6 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-gmp
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 PLIST_SUBST+=		REP_VERS=${REP_VERS}
 

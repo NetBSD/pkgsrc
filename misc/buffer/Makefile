@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/17 18:08:52 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/06/11 06:34:44 jlam Exp $
 # FreeBSD Id: Makefile,v 1.6 1996/11/17 09:05:15 obrien Exp
 
 DISTNAME=       buffer-1.17
@@ -13,7 +13,7 @@ COMMENT=	buffer sporadic binary I/O for faster tape use
 
 .if ${OPSYS} == "SunOS"
 CPPFLAGS+=	-DSYS5
-MAKE_ENV+=	CC="${CC}" CPPFLAGS="${CPPFLAGS}"
+MAKE_ENV+=	CC="${CC}"
 .endif
 
 .include "../../mk/bsd.pkg.mk"

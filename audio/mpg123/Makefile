@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/02/16 13:30:47 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2001/06/11 06:34:18 jlam Exp $
 #
 
 DISTNAME=       mpg123-0.59r
@@ -39,7 +39,7 @@ ALL_TARGET=	solaris-gcc
 .endif
 
 .if defined(USE_INET6) && ${USE_INET6} == "YES"
-MAKE_ENV+=	CPPFLAGS="-DINET6"
+CPPFLAGS+=	-DINET6
 .endif
 
 MAKE_FLAGS+=	PREFIX="${PREFIX}"

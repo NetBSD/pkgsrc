@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/03/27 03:19:48 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2001/06/11 06:34:21 jlam Exp $
 
 DISTNAME=		kicq-1.0.0
 CATEGORIES=		chat kde
@@ -24,7 +24,6 @@ CONFIGURE_ARGS+=	--datadir=${KDEBASEDIR}/share/kde \
 			--with-icq-includes=${LOCALBASE}/include \
 			--with-icq-libs=${LOCALBASE}/lib
 CONFIGURE_ENV+=		KDEDIR=${KDEBASEDIR} \
-			CPPFLAGS="${CPPFLAGS}" \
 			CXXFLAGS="${CFLAGS}" \
 			all_libraries="-Wl,-R${QT1DIR}/qt1/lib -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -L${X11BASE}/lib -Wl,-R${X11BASE}/lib -ltiff -ljpeg -lpng -lz"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:50:01 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/06/11 06:34:48 jlam Exp $
 #
 
 DISTNAME=	pam_ldap
@@ -17,7 +17,7 @@ DEPENDS+=	openldap-*:../../databases/openldap
 DEPENDS+=	PAM-*:../../security/PAM
 
 GNU_CONFIGURE=	YES
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS} -I${WRKSRC}"
+CPPFLAGS+=	-I${WRKSRC}
 CONFIGURE_ARGS+=--with-ldap-lib=openldap
 CONFIGURE_ARGS+=--with-ldap-dir=${PREFIX}
 INSTALL_TARGET=	install install-data

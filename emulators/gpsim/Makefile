@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/27 14:43:55 agc Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/11 06:34:32 jlam Exp $
 #
 
 DISTNAME=	gpsim-0.20.7
@@ -18,7 +18,6 @@ DEPENDS+=	popt-*:../../devel/popt
 CPPFLAGS+=	-I${LOCALBASE}/include
 
 GNU_CONFIGURE=	YES
-CONFIGURE_ENV+= CPPFLAGS="${CPPFLAGS}" LDFLAGS+="${LDFLAGS}"
 CONFIGURE_ARGS+=	--with-exdbm=${PREFIX}
 
 USE_GMAKE=	YES
