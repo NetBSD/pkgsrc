@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.121 1998/07/21 11:09:11 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.122 1998/07/21 11:12:11 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -587,7 +587,7 @@ _ACCEPTABLE=	yes
 .endfor	# _lic
 .endif	# ACCEPTABLE_LICENSES
 .ifndef _ACCEPTABLE
-IGNORE=	"Unacceptable licence: ${LICENSE}"
+IGNORE=	"Unacceptable license: ${LICENSE}"
 .endif
 .endif
 
