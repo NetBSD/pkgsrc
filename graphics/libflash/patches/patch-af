@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.4 2003/01/30 12:22:48 jlam Exp $
+$NetBSD: patch-af,v 1.5 2003/09/28 20:08:14 tron Exp $
 
 --- Player/Makefile.orig	Wed Jun  7 11:19:50 2000
 +++ Player/Makefile
@@ -9,7 +9,7 @@ $NetBSD: patch-af,v 1.4 2003/01/30 12:22:48 jlam Exp $
 -LIBS = $(FLASH)/libflash.a ../Zlib/libz.a ../Jpeg/libjpeg.a -L/usr/X11R6/lib -lX11 -lXext -lm
 -CC=gcc
 -LDFLAGS=
-+LIBS = -lflash -ljpeg -lz ${LIBOSSAUDIO} -lX11 -lXext -lm
++LIBS = -lflash -ljpeg -lz ${LIBOSSAUDIO} -lX11 -lXext -lm $(LIBSTDCPP)
  
 -swfplayer: main.o $(FLASH)/libflash.a ../Zlib/libz.a ../Jpeg/libjpeg.a
 +all: swfplayer
