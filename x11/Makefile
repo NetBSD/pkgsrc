@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.324 2003/12/30 17:58:03 xtraeme Exp $
+# $NetBSD: Makefile,v 1.325 2004/01/09 23:10:43 cube Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -74,6 +74,7 @@ SUBDIR+=	gtoolkit
 SUBDIR+=	hanterm
 SUBDIR+=	hot-babe
 SUBDIR+=	imwheel
+SUBDIR+=	ion-dock
 SUBDIR+=	kde
 SUBDIR+=	kde2
 SUBDIR+=	kde3-i18n-af
