@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2004/12/04 12:03:42 wiz Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 14:48:48 agc Exp $
 
 SHA1 (qsubst-20010422.tar.gz) = 9602b274ff10266b94a96adc90ded003f8cdeda8
+RMD160 (qsubst-20010422.tar.gz) = 443d5d5d2a014a286f436685c9e188255b6acd0a
 Size (qsubst-20010422.tar.gz) = 5965 bytes
 SHA1 (patch-aa) = d7ff425da3ddfaca2385e5d849457e74c89acfff
 SHA1 (patch-ab) = c8d92c140ad737a9912101dfecf048984c979fb4

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/02/11 04:14:02 minskim Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 14:48:47 agc Exp $
 
 SHA1 (XML-Xerces-2.3.0-4.tar.gz) = d453f7ba6ef2ed9a1ad0e033bdeee18476277bb2
+RMD160 (XML-Xerces-2.3.0-4.tar.gz) = b853e3a5a56a89f619f0c2f153c3882db7ec8277
 Size (XML-Xerces-2.3.0-4.tar.gz) = 213770 bytes

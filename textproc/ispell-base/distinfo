@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2004/12/01 12:18:21 markd Exp $
+$NetBSD: distinfo,v 1.9 2005/02/24 14:48:43 agc Exp $
 
 SHA1 (ispell-3.2.06.tar.gz) = 35f496322cda172d56610417e4e1c7b962f734d7
+RMD160 (ispell-3.2.06.tar.gz) = 3f6a3840540ebc753146c427da8ce2d54317b46e
 Size (ispell-3.2.06.tar.gz) = 580742 bytes
 SHA1 (patch-aa) = cf8e0863e62103526d75ba5f0f25c760d4ee8e32
 SHA1 (patch-ab) = 8be9baccc9bc75027b2e2a1fb8be14e5d9cd5b05
