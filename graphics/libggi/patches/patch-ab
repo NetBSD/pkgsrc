@@ -1,46 +1,28 @@
-$NetBSD: patch-ab,v 1.1 2000/10/01 14:03:27 rh Exp $
+$NetBSD: patch-ab,v 1.2 2002/01/11 11:47:54 skrll Exp $
 
---- ltmain.sh.orig	Thu Apr  1 03:11:12 1999
-+++ ltmain.sh
-@@ -794,6 +794,7 @@
-     old_convenience=
-     deplibs=
-     linkopts=
-+    wllinkopts=
-     lib_search_path=`pwd`
+--- configure.orig	Fri Jan 11 11:21:05 2002
++++ configure
+@@ -5141,19 +5141,20 @@
+ fi
  
-     avoid_version=no
-@@ -1105,6 +1106,25 @@
- 	continue
- 	;;
- 
-+      -Wl,*)
-+	args=`$echo "X$arg" | $Xsed -e "$sed_quote_subst" -e 's/^-Wl,//'`
-+	arg=
-+	IFS="${IFS=     }"; save_ifs="$IFS"; IFS=','
-+	for flag in $args; do
-+	  IFS="$save_ifs"
-+	  case "$flag" in
-+	    *[\[\~\#\^\&\*\(\)\{\}\|\;\<\>\?\'\ \	]*|*]*|"")
-+	    flag="\"$flag\""
-+	    ;;
-+	  esac
-+	  arg="$arg $wl$flag"
-+	  linkopts="$linkopts $flag"
-+	  wllinkopts="$wllinkopts $wl$flag"
-+	done
-+	IFS="$save_ifs"
-+	arg=`$echo "X$arg" | $Xsed -e "s/^ //"`
-+	;;
-+
-       # Some other compiler flag.
-       -* | +*)
- 	# Unknown arguments in both finalize_command and compile_command need
-@@ -2244,6 +2264,7 @@
- 	if test "$thread_safe" = yes && test -n "$thread_safe_flag_spec"; then
- 	  eval flag=\"$thread_safe_flag_spec\"
- 	  linkopts="$linkopts $flag"
-+	  wllinkopts="$linkopts $wl$flag"
- 	fi
- 
- 	# Prepare the list of exported symbols
+ if test "x$build_dga_target" != "xno"; then
++  CPPFLAGS="$CPPFLAGS -I/usr/X11R6/include"
+   ac_safe=`echo "X11/extensions/xf86dga.h" | sed 'y%./+-%__p_%'`
+ echo $ac_n "checking for X11/extensions/xf86dga.h""... $ac_c" 1>&6
+-echo "configure:5147: checking for X11/extensions/xf86dga.h" >&5
++echo "configure:5148: checking for X11/extensions/xf86dga.h" >&5
+ if eval "test \"`echo '$''{'ac_cv_header_$ac_safe'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   cat > conftest.$ac_ext <<EOF
+-#line 5152 "configure"
++#line 5153 "configure"
+ #include "confdefs.h"
+ #include <X11/extensions/xf86dga.h>
+ EOF
+ ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
+-{ (eval echo configure:5157: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
++{ (eval echo configure:5158: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
+ ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
+ if test -z "$ac_err"; then
+   rm -rf conftest*
