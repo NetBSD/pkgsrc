@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2001/04/17 11:57:41 tron Exp $
+# $NetBSD: Makefile,v 1.2 2001/04/19 13:01:59 wiz Exp $
 
 DISTNAME=	ttcp
 PKGNAME=	${DISTNAME}-1.12
@@ -18,7 +18,7 @@ WRKSRC=			${WRKDIR}
 .if (${OPSYS} == SunOS)
 do-build:
 	cd ${WRKSRC} && \
-	${CC} ttcp.c ${CFLAGS} $(LDFLAGS) -lsocket -lnsl -o ttcp && \
+	${CC} ttcp.c ${CFLAGS} ${LDFLAGS} -lsocket -lnsl -o ttcp && \
 	nroff -man ttcp.1 >ttcp.cat1
 .endif
 
