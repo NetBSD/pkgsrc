@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/11/23 21:32:11 hubertf Exp $
+# $NetBSD: Makefile,v 1.26 2004/11/23 21:34:25 hubertf Exp $
 #
 
 DISTNAME=	ipv6calc-0.48
@@ -18,7 +18,5 @@ USE_GNU_TOOLS+=	make
 
 MAKE_ENV+=	root=${PREFIX}
 INSTALL_TARGET=	installonly
-
-.include "../../security/openssl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
