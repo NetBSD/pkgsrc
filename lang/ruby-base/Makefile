@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/30 08:07:10 taca Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/30 14:11:26 taca Exp $
 # FreeBSD Id: ports/lang/ruby/Makefile,v 1.39 2000/10/20 19:56:03 knu Exp
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -19,7 +19,6 @@ RUBY_BUILD_DEPENDS= no
 DIST_SUBDIR=	ruby
 
 GNU_CONFIGURE=	yes
-INSTALLS_SHLIB=	yes
 WRKSRC=		${RUBY_WRKSRC}
 CONFIGURE_ARGS=	--enable-shared
 MLINKS=		ruby${_RUBY_SUFFIX}.1 ruby.1
