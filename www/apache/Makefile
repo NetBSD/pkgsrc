@@ -1,90 +1,34 @@
-# $NetBSD: Makefile,v 1.9 1998/06/03 14:01:11 agc Exp $
-# FreeBSD Id: Makefile,v 1.45 1998/02/25 06:23:55 asami Exp
+# $NetBSD: Makefile,v 1.10 1998/06/04 19:38:36 tv Exp $
 #
 
-DISTNAME=       apache_1.3b5
-PKGNAME=        apache-1.3b5
-WRKSRC=         ${WRKROOT}/src
+DISTNAME=       apache_1.3b7
+PKGNAME=        apache-1.3b7
 CATEGORIES=	www
 MASTER_SITES=   http://www.apache.org/dist/
 
 MAINTAINER=	cjs@netbsd.org
 
-WRKROOT=	${WRKDIR}/apache_1.3b5
-
-CONFIGURE_SCRIPT=Configure
 HAS_CONFIGURE=	YES
+CONFIGURE_ARGS+=--compat --prefix=${PREFIX}/http --exec-prefix=${PREFIX} \
+		--mandir=${PREFIX}/man --libexecdir=${PREFIX}/lib/apache \
+		--sbindir=${PREFIX}/sbin --runtimedir=/var/run \
+		--enable-module=most --enable-module=auth_db \
+		--disable-module=auth_dbm --with-perl=${PREFIX}/bin/perl
 
-HTTP_ROOT=	${PREFIX}/http
+MAN1=	ab.1 apachectl.1 dbmmanage.1 htpasswd.1 htpasswd.1
+MAN8=	apxs.8 httpd.8 logresolve.8 rotatelogs.8
 
-CONF_DIR=   ${HTTP_ROOT}/conf
-MAN1=   apachectl.1 htpasswd.1
-MAN8=   httpd.8
-
-.include "../../mk/bsd.prefs.mk"
-
-# Set this for local-supplied patch, e.g.
-# VERS_ID = mods-1.0/me
-
-post-build:
-	(cd ${WRKSRC}/support && make)
-
-post-patch:
-	@cd ${WRKSRC} && \
-	    ${SED} -e 's#^EXTRA_CFLAGS=#& -DHTTPD_ROOT=\\"${HTTP_ROOT}\\"#' \
-		< Configuration > Configuration.new && \
-		${MV} Configuration.new Configuration
-	@cd ${WRKROOT}/conf && \
-	    for I in httpd.conf-dist access.conf-dist srm.conf-dist; do \
-		${SED} -e 's#@@ServerRoot@@#${HTTP_ROOT}#g' < $${I} > $${I}.new && \
-		${MV} $${I}.new $${I}; \
-	    done
-	@cd ${WRKROOT}/conf && \
-	    ${SED} -e "s#^PidFile .*/#PidFile /var/run/#" < httpd.conf-dist \
-		>httpd.conf-dist.new && \
-	    ${MV} httpd.conf-dist.new httpd.conf-dist
-	@cd ${WRKSRC}/support && \
-	    ${SED} -e 's#/usr/local/apache/logs/#/var/run/#' \
-		-e 's#/usr/local/apache/src/#${PREFIX}/sbin/#' \
-		< apachectl >apachectl.new && \
-	    ${MV} apachectl.new apachectl
-.if defined(VERS_ID)
-	@cd ${WRKSRC} && \
-	    ${MV} Configuration Configuration.old && \
-	    ${SED} 's;^#*OPTIM=.*;OPTIM= -DSERVER_SUBVERSION=\\"${VERS_ID}\\";' \
-	    < Configuration.old > Configuration
-.endif
-
-do-install:
-	${INSTALL} -d -m 755 -o bin -g bin ${CONF_DIR} ${HTTP_ROOT}/htdocs \
-		${HTTP_ROOT}/icons ${HTTP_ROOT}/cgi-bin ${HTTP_ROOT}/logs
-	${INSTALL_PROGRAM} ${WRKSRC}/httpd ${PREFIX}/sbin
-	cd ${WRKSRC}/support && \
-		${INSTALL_PROGRAM} htdigest htpasswd logresolve ${PREFIX}/bin
-	cd ${WRKSRC}/support && \
-		${INSTALL_SCRIPT} dbmmanage ${PREFIX}/bin
-	cd ${WRKSRC}/support && \
-		${INSTALL_SCRIPT} rotatelogs apachectl log_server_status \
-		${PREFIX}/sbin
-	${INSTALL_DATA} -o nobody ${WRKROOT}/icons/* ${HTTP_ROOT}/icons
-	${INSTALL_MAN} ${WRKSRC}/support/httpd.8 \
-		${PREFIX}/man/man8
-	${INSTALL_MAN} ${WRKSRC}/support/htpasswd.1 \
-		       ${WRKSRC}/support/apachectl.1 \
-		${PREFIX}/man/man1
-	cd ${WRKROOT}/conf && \
-	for file in httpd.conf srm.conf access.conf ; do \
-	    if [ ! -f ${CONF_DIR}/$$file ] ; then \
-		${INSTALL_DATA} $$file-dist ${CONF_DIR}/$$file ; \
-	    fi ; \
-	    ${INSTALL_DATA} $$file-dist ${CONF_DIR} ; \
-	done
-	cd ${WRKROOT}/conf && \
-	for file in mime.types magic ; do \
-	    if [ ! -f ${CONF_DIR}/$$file ] ; then \
-		${INSTALL_DATA} $$file ${CONF_DIR} ; \
-	    fi ; \
-	    ${INSTALL_DATA} $$file ${CONF_DIR}/$${file}-dist ; \
-	done
+# Note that there is NO static compile module hook here.  This is intentional.
+# Under Apache 1.3, modules can be compiled to link dynamically to the server
+# using the "apxs" program.  See apxs(8).
 
 .include "../../mk/bsd.pkg.mk"
+
+# Define some modules that are often replaced as shared modules that can be
+# changed at runtime.  This allows an apxs-compiled .so to be "dropped in"
+# without even changing httpd.conf.
+# Only those defined here should be in PLIST-mi.shared.
+
+.if !defined(NOPIC)
+CONFIGURE_ARGS+=--enable-module=so --enable-shared=include
+.endif

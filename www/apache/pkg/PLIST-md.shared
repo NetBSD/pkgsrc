@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST-md.shared,v 1.1 1998/06/04 19:38:36 tv Exp $
+lib/apache/mod_include.so
