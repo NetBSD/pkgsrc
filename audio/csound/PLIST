@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:15:33 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/03/23 02:36:45 wiz Exp $
 bin/csound
 bin/cvanal
 bin/dnoise
@@ -29,9 +29,9 @@ include/sfheader.h
 include/sysdep.h
 lib/libcscore.so
 lib/libcscore.so.4
-lib/libcscore.so.4.12.0.1b
+lib/libcscore.so.4.13.0.2a
 lib/libcsound.so
 lib/libcsound.so.4
-lib/libcsound.so.4.12.0.1b
+lib/libcsound.so.4.13.0.2a
 share/csound/csound.txt
 @dirrm share/csound
