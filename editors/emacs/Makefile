@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2004/04/19 15:39:34 markd Exp $
+# $NetBSD: Makefile,v 1.73 2004/07/31 21:01:54 kristerw Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 
 DISTNAME=	emacs-21.3
@@ -35,6 +35,8 @@ CONFIGURE_ARGS+=	--with-gif
 .include "../../graphics/png/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-png
 
+MAKEFLAGS+=	EMACSLOADPATH=${WRKSRC}/lisp
+
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(EMACS_USE_XAW3D) && !empty(EMACS_USE_XAW3D:M[Yy][Ee][Ss])
@@ -68,6 +70,9 @@ REPLACE_PERL=	lib-src/grep-changelog
 post-extract:
 	${CP} ${FILESDIR}/site-init.el ${WRKSRC}/lisp
 	${CP} ${FILESDIR}/amd64.h ${WRKSRC}/src/m
+	${CP} ${FILESDIR}/powermac.h ${WRKSRC}/src/m
+	${CP} ${FILESDIR}/darwin.h ${WRKSRC}/src/s
+	${CP} ${FILESDIR}/unexmacosx.c ${WRKSRC}/src
 
 pre-install:
 	@${FIND} ${WRKSRC} -type f -name "*.orig" -print | ${XARGS} ${RM} -f
