@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.103 2000/07/29 10:10:43 wiz Exp $
+# $NetBSD: Packages.txt,v 1.104 2000/07/30 08:57:54 tron Exp $
 ###########################################################################
 
 			==========================
@@ -1216,6 +1216,10 @@ perform the equivalent of:
       automatically on "make update", but may have been suppressed by the
       NOCLEAN variable (see above).
 
+ * info:
+   This target invokes "pkg_info" for the current package. You can use this
+   e.g. to check which version of a package is installed.
+
  * readme:
    This target generates a README.html file, which can be viewed using a
    browser such as netscape (pkgsrc/www/mozilla) or lynx (pkgsrc/www/lynx).
@@ -1284,7 +1288,6 @@ perform the equivalent of:
       was built
     - None of the package's required (binary) packages were modified since
       it was built
-
 
  8 Debugging
  ===========
