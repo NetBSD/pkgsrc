@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2004/11/30 15:33:53 xtraeme Exp $
+# $NetBSD: Makefile,v 1.78 2005/01/21 21:50:19 tv Exp $
 #
 
 DISTNAME=	lynx2.8.5
@@ -70,6 +70,7 @@ CONFIGURE_ARGS+=	--enable-read-eta
 
 post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/lynx
+	${FIND} ${PREFIX}/share/lynx -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
 	# gets created when applying 2.8.5.2 patch -- remove on
 	# patchless update
 	${RM} ${PREFIX}/share/lynx/lynx_doc/CHANGES.orig_dist
