@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: fake-la,v 1.8 2003/12/08 13:38:19 salo Exp $
+# $NetBSD: fake-la,v 1.9 2003/12/30 12:09:27 gavan Exp $
 
 AR="@AR@"
 AWK="@AWK@"
@@ -92,4 +92,17 @@ if ${TEST} ! -f $tmpdir/inst/$libbase.la; then
 	@RESET_LD_SO_CACHE@ >/dev/null 2>&1
 
 fi
-${SED} -e "s,$tmpdir/inst,$realdir,g" $tmpdir/inst/$libbase.la
+
+dlname=`${SED} -n -e"/^dlname='/{ s/^dlname='//; s/'$//; p; };" "$tmpdir/inst/$libbase.la"`
+library_names=`${SED} -n -e"/^library_names='/{ s/^library_names='//; s/'$//; p; };" "$tmpdir/inst/$libbase.la"`
+old_library=`${SED} -n -e"/^old_library='/{ s/^old_library='//; s/'$//; p; };" "$tmpdir/inst/$libbase.la"`
+
+for file in $dlname $library_names $old_library
+do
+	if ! [ -e $realdir/$file ]
+	then
+		removal_pattern="$removal_pattern -e s,$file\([^.0-9]\),\1,g"
+	fi
+done
+
+${SED} -e "s,$tmpdir/inst,$realdir,g" $removal_pattern $tmpdir/inst/$libbase.la
