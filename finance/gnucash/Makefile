@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2003/07/13 13:51:40 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2003/07/13 22:32:11 mjl Exp $
 
 DISTNAME=		gnucash-1.8.4
 PKGREVISION=		1
@@ -41,7 +41,7 @@ USE_GMAKE=		YES
 USE_X11=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-LIBTOOL_FLAGS+=		--preserve-dup-deps
+# LIBTOOL_FLAGS+=		--preserve-dup-deps
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 
