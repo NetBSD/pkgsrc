@@ -1,0 +1,113 @@
+# $NetBSD: arg-source,v 1.1 2004/09/21 15:01:41 jlam Exp $
+#
+# Copyright (c) 2004 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+# 3. All advertising materials mentioning features or use of this software
+#    must display the following acknowledgement:
+#        This product includes software developed by the NetBSD
+#        Foundation, Inc. and its contributors.
+# 4. Neither the name of The NetBSD Foundation nor the names of its
+#    contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+
+# This script manages a buffer through which arguments from the command
+# line are funneled.  Along the way, the arguments are potentially
+# merged and split an various ways to canonicalize their representation.
+# This script should be sourced within a loop and upon exiting returns
+# an argument in $arg.
+#
+# This is done by pushing the next command-line argument onto a queue,
+# then using a processing loop to pop an argument off of the top of
+# the queue, transform it, and possibly push more arguments back onto
+# the queue.
+
+# Push arguments from the command line into the argument buffer.
+skipargs=0
+while $test $# -gt 0; do
+	arg="$1"; shift
+	case $arg in
+	##############################################################
+	# Merge "-I /dir" into a single "-I/dir".  Same for -L, -R.
+	##############################################################
+	-[ILR])
+		nextarg="$1"; shift
+		shquote "$nextarg"; nextarg="$shquoted"
+		append_queue argbuf "$arg$nextarg"
+		$debug_log $wrapperlog "    (arg-source) push: $arg$nextarg"
+		;;
+	##############################################################
+	# Split "-Wl,-R/dir1:/dir2" into "-Wl,-R/dir1 -Wl,-R/dir2".
+	# Same for -Wl,-rpath and -Wl,-rpath-link.
+	##############################################################
+	-R*:*|-Wl,-R*:*|\
+	-Wl,-rpath,*:*|-Wl,-rpath-link,*:*|-Wl,--rpath,*:*)     
+		case $arg in  
+		-R*)			R="-R" ;;
+		-Wl,-R*)		R="-Wl,-R" ;;
+		-Wl,-rpath,*)		R="-Wl,-rpath," ;;      
+		-Wl,-rpath-link,*)	R="-Wl,-rpath-link," ;; 
+		-Wl,--rpath,*)		R="-Wl,--rpath," ;;
+		esac
+		list="${arg#$R}"
+		save_IFS="${IFS}"; IFS=":"
+		for dir in $list; do
+			shquote "$dir"; dir="$shquoted"
+			append_queue argbuf "$R$dir"
+			$debug_log $wrapperlog "    (arg-source) push: $R$dir"
+		done
+		IFS="${save_IFS}"
+		;;
+	##############################################################
+	# "-Xlinker arg" is the equivalent of "-Wl,arg" so convert it
+	# here before queueing it up.  We also need to keep converting
+	# as long as there are consecutive "-Xlinker ..." options
+	# because they are most likely part of the same long option
+	# list for the linker.
+	##############################################################
+	-Xlinker)
+		nextarg="$1"; shift
+		case $nextarg in
+		-Wl,*)
+			append_queue argbuf "$nextarg"
+			$debug_log $wrapperlog "    (arg-source) push: $nextarg"
+			;;
+		*)
+			shquote "$nextarg"; nextarg="$shquoted"
+			append_queue argbuf "-Wl,$nextarg"
+			$debug_log $wrapperlog "    (arg-source) push: -Wl,$nextarg"
+			;;
+		esac
+		;;
+	##############################################################
+	# For everything else, just queue it up.
+	##############################################################
+	*)
+		append_queue argbuf "$arg"
+		$debug_log $wrapperlog "    (arg-source) push: $arg"
+		;;
+	esac
+done
