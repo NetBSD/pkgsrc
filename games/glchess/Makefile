@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/11/30 22:58:41 jschauma Exp $
+# $NetBSD: Makefile,v 1.9 2004/03/08 02:36:37 snj Exp $
 #
 
 DISTNAME=	glchess-0.4.7
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://glchess.sourceforge.net/
 COMMENT=	3D chess interface
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_X11=	YES
 GNU_CONFIGURE=	YES
 INSTALL_DIRS=	${WRKSRC}/src ${WRKSRC}/man ${WRKSRC}/textures
@@ -32,9 +32,9 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/glchessrc			\
 			${PREFIX}/etc/glchessrc.default
 
-.include "../../graphics/MesaLib/buildlink2.mk"
-.include "../../graphics/glu/buildlink2.mk"
-.include "../../x11/gtkglarea/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../x11/gtkglarea/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
