@@ -1,9 +1,10 @@
-# $NetBSD: defs.FreeBSD.mk,v 1.34 2004/04/07 14:26:51 tv Exp $
+# $NetBSD: defs.FreeBSD.mk,v 1.35 2004/04/14 11:30:00 xtraeme Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
 AWK?=		/usr/bin/awk
 BASENAME?=	/usr/bin/basename
+BRANDELF?=	/usr/bin/brandelf		# used by linux compat layer
 CAT?=		/bin/cat
 CHMOD?=		/bin/chmod
 CHOWN?=		/usr/sbin/chown
