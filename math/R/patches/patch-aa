@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.12 2004/01/05 12:20:57 markd Exp $
+$NetBSD: patch-aa,v 1.13 2004/04/27 11:24:31 markd Exp $
 
---- configure.ac.orig	2003-09-17 11:01:04.000000000 +1200
+--- configure.ac.orig	2004-03-20 04:15:44.000000000 +1300
 +++ configure.ac
-@@ -134,7 +134,7 @@ AC_ARG_ENABLE([R-shlib],
- [want_R_shlib=no])
+@@ -171,7 +171,7 @@ AC_ARG_ENABLE([R-shlib],
+ [want_R_shlib="${want_R_framework}"])
  AM_CONDITIONAL(WANT_R_SHLIB, [test "x${want_R_shlib}" = xyes])
  if test "${want_R_shlib}" = yes; then
 -  LIBR="-L\$(R_HOME)/bin -lR"
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.12 2004/01/05 12:20:57 markd Exp $
  else
    LIBR=
  fi
-@@ -436,9 +436,9 @@ AC_SUBST(LIBM)
+@@ -477,9 +477,9 @@ AC_SUBST(LIBM)
  ## AC_CHECK_LIBM computes LIBM but does not add to LIBS, hence we do
  ## the following as well.
  AC_CHECK_LIB(m, sin)
@@ -24,7 +24,7 @@ $NetBSD: patch-aa,v 1.12 2004/01/05 12:20:57 markd Exp $
  case "${host_os}" in
    darwin*)
      AM_CONDITIONAL(BUILD_DLFCN_DARWIN, true)
-@@ -592,13 +592,6 @@ case "${host_cpu}" in
+@@ -634,13 +634,6 @@ case "${host_cpu}" in
        R_PROG_CC_FLAG([-ieee_with_inexact],
                       R_SH_VAR_ADD(R_XTRA_CFLAGS, [-ieee_with_inexact]))
      fi
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.12 2004/01/05 12:20:57 markd Exp $
      if test "${GXX}" = yes; then
        R_PROG_CXX_FLAG([-mieee],
                        R_SH_VAR_ADD(R_XTRA_CXXFLAGS, [-mieee]))
-@@ -891,6 +884,7 @@ case "${host_os}" in
+@@ -933,6 +926,7 @@ case "${host_os}" in
      fpicflags=
      ;;
    netbsd*)

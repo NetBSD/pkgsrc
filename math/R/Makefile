@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2004/03/11 21:04:47 markd Exp $
+# $NetBSD: Makefile,v 1.52 2004/04/27 11:24:31 markd Exp $
 
-DISTNAME=		R-1.8.1
-PKGREVISION=		2
+DISTNAME=		R-1.9.0
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/}
 EXTRACT_SUFX=		.tgz
@@ -15,7 +14,7 @@ NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
 			NetBSD-1.5.*-alpha NetBSD-1.5[A-U]-alpha
 
 TEST_TARGET=		check
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		# defined
 USE_X11=		# defined
 USE_PERL5=		# defined
 USE_GNU_TOOLS+=		make
@@ -31,6 +30,9 @@ CONFIGURE_ARGS+=	--with-tcltk
 CONFIGURE_ARGS+=	--with-tcl-config=${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
 CONFIGURE_ARGS+=	--with-tk-config=${BUILDLINK_PREFIX.tk}/lib/tkConfig.sh
 CONFIGURE_ARGS+=	--without-gnome		# not yet stable
+CONFIGURE_ARGS+=	--with-zlib
+CONFIGURE_ARGS+=	--with-bzlib
+CONFIGURE_ARGS+=	--with-pcre
 CONFIGURE_ENV+=		XMKMF="${XMKMF}"
 
 # Use BLAS (math/blas)
@@ -112,12 +114,14 @@ post-install:
 	${ECHO} "@exec R CMD ${PERL5} %D/lib/R/share/perl/build-help.pl --htmllists 2>/dev/null" >> ${PLIST_SRC}
 	${ECHO} "@exec ${CAT} %D/lib/R/library/*/CONTENTS > %D/lib/R/doc/html/search/index.txt 2>/dev/null" >> ${PLIST_SRC}
 
-.include "../../archivers/bzip2/buildlink2.mk"
-.include "../../devel/pcre/buildlink2.mk"
-.include "../../devel/readline/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../math/blas/buildlink2.mk"
-.include "../../x11/tk/buildlink2.mk"
+BUILDLINK_DEPENDS.zlib+= zlib>=1.2.1
+
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../math/blas/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

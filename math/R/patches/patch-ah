@@ -1,10 +1,10 @@
-$NetBSD: patch-ah,v 1.4 2003/12/03 12:05:19 markd Exp $
+$NetBSD: patch-ah,v 1.5 2004/04/27 11:24:31 markd Exp $
 
---- src/library/lqs/Makefile.in.orig	2003-09-21 20:13:05.000000000 +1200
+--- src/library/lqs/Makefile.in.orig	2004-02-19 08:06:11.000000000 +1300
 +++ src/library/lqs/Makefile.in
-@@ -29,14 +29,14 @@ all: Makefile DESCRIPTION
- 	  fi; \
- 	done
+@@ -23,14 +23,14 @@ all: Makefile DESCRIPTION
+ 	  $(SHELL) $(top_srcdir)/tools/move-if-change $${f} \
+ 	    $(top_builddir)/library/$(pkg)/R/$(pkg))
  	@if test -f DESCRIPTION; then \
 -	  $(INSTALL_DATA) DESCRIPTION $(top_builddir)/library/$(pkg); \
  	  (tmp="Built: R $(VERSION); "; \
@@ -17,5 +17,5 @@ $NetBSD: patch-ah,v 1.4 2003/12/03 12:05:19 markd Exp $
 +	    >> DESCRIPTION; \
 +	    $(INSTALL_DATA) DESCRIPTION $(top_builddir)/library/$(pkg); \
  	fi
- 	@if test -d $(srcdir)/data; then \
- 	  $(MKINSTALLDIRS) $(top_builddir)/library/$(pkg)/data; \
+ 
+ Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
