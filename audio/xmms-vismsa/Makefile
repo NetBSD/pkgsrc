@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2002/09/21 02:09:35 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/02 11:53:54 wiz Exp $
 #
 
 DISTNAME=	vismsa-xmms-plugin-0.2
+PKGREVISION=	1
 PKGNAME=	xmms-vismsa-0.2
 CATEGORIES=	audio
 MASTER_SITES=	http://a.godau.org/

@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/02/24 20:50:19 jschauma Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/05/02 11:54:24 wiz Exp $
 
 .if !defined(G_WRAP_BUILDLINK2_MK)
 G_WRAP_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		g-wrap
-BUILDLINK_DEPENDS.g-wrap?=	g-wrap>=1.3.4
+BUILDLINK_DEPENDS.g-wrap?=	g-wrap>=1.3.4nb1
 BUILDLINK_PKGSRCDIR.g-wrap?=	../../devel/g-wrap
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.g-wrap=g-wrap

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2003/04/12 04:26:41 rh Exp $
+# $NetBSD: Makefile,v 1.36 2003/05/02 11:55:38 wiz Exp $
 
 DISTNAME=		evolution-1.2.4
+PKGREVISION=	1
 CATEGORIES=		mail time gnome
 MASTER_SITES=		ftp://ftp.ximian.com/pub/ximian-evolution/source/ \
 			ftp://ximian.netnitco.net/pub/mirrors/ximian/ximian-evolution/source/ \
@@ -26,10 +27,7 @@ BUILD_USES_MSGFMT=	YES
 # Using a wildcard here doesn't make sense because the version number of
 # "db3" is hardcoded in the "configure" script and some source modules.
 BUILDLINK_DEPENDS.db3=		db3-3.11.2
-BUILDLINK_DEPENDS.gnome-vfs=	gnome-vfs>=1.0.5
 BUILDLINK_DEPENDS.libxml=	libxml>=1.8.17
-BUILDLINK_DEPENDS.gal=		gal>=0.22
-BUILDLINK_DEPENDS.gtkhtml=	gtkhtml>=1.1.7
 
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/04/23 08:15:40 rh Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/05/02 11:55:30 wiz Exp $
 #
 # This Makefile fragment is included by packages that use swfdec.
 #
@@ -9,7 +9,7 @@
 SWFDEC_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			swfdec
-BUILDLINK_DEPENDS.swfdec?=		swfdec>=0.2.1
+BUILDLINK_DEPENDS.swfdec?=		swfdec>=0.2.1nb2
 BUILDLINK_PKGSRCDIR.swfdec?=		../../graphics/swfdec
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.swfdec=swfdec

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2002/09/20 21:47:22 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/02 11:54:14 wiz Exp $
 
 MODNAME=		odbc
 CATEGORIES+=		databases
-PKGREVISION=		# empty
+PKGREVISION=		1
 COMMENT=		PHP4 extension for ODBC access
 
 USE_BUILDLINK2=		YES

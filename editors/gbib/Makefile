@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/11/02 00:34:12 rh Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/02 11:54:44 wiz Exp $
 #
 
 DISTNAME=	gbib-0.1.1b
+PKGREVISION=	1
 CATEGORIES=	editors gnome
 MASTER_SITES=	ftp://ftp.seul.org/pub/gbib/src/
 

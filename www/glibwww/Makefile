@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.9 2002/10/19 10:54:59 rh Exp $
+# $NetBSD: Makefile,v 1.10 2003/05/02 11:56:41 wiz Exp $
 #
 
 DISTNAME=		glibwww-0.2
-PKGREVISION=		2
+PKGREVISION=	3
 CATEGORIES=		www gnome devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/glibwww/0.2/}
 
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		event register functions that use the glib event loop
-
-BUILDLINK_DEPENDS.gnome-libs=	gnome-libs>=1.4.1.2nb1
 
 USE_BUILDLINK2=		YES
 USE_X11=		YES

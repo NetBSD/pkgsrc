@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.14 2003/02/18 19:51:12 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.15 2003/05/02 11:54:17 wiz Exp $
 #
 # This Makefile fragment is included by packages that use GConf2.
 #
@@ -9,7 +9,7 @@
 GCONF2_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			GConf2
-BUILDLINK_DEPENDS.GConf2?=		GConf2>=2.2.0
+BUILDLINK_DEPENDS.GConf2?=		GConf2>=2.2.0nb1
 BUILDLINK_PKGSRCDIR.GConf2?=		../../devel/GConf2
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.GConf2=GConf2

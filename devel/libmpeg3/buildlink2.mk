@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/08/31 02:42:42 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/05/02 11:54:37 wiz Exp $
 
 .if !defined(LIBMPEG3_BUILDLINK2_MK)
 LIBMPEG3_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		libmpeg3
-BUILDLINK_DEPENDS.libmpeg3?=		libmpeg3>=1.3nb2
+BUILDLINK_DEPENDS.libmpeg3?=		libmpeg3>=1.3nb4
 BUILDLINK_PKGSRCDIR.libmpeg3?=	../../devel/libmpeg3
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.libmpeg3=libmpeg3

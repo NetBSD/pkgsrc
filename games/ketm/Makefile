@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2002/10/15 23:23:05 kristerw Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/02 11:55:00 wiz Exp $
 #
 
 DISTNAME=	ketm-0.0.6
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://home.t-online.de/home/haslbeck/ketm/
 EXTRACT_SUFX=	.tar.bz2

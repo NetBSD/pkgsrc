@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2002/10/09 00:04:27 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2003/05/02 11:56:40 wiz Exp $
 
 DISTNAME=		fcgi-2.2.2
+PKGREVISION=	1
 CATEGORIES=		www devel
 MASTER_SITES=		http://fastcgi.com/dist/
 

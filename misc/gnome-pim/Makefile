@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2003/01/11 04:24:31 rh Exp $
+# $NetBSD: Makefile,v 1.37 2003/05/02 11:55:48 wiz Exp $
 
 DISTNAME=		gnome-pim-1.4.6
+PKGREVISION=	1
 CATEGORIES=		misc x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-pim/1.4/}
 

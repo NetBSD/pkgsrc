@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/29 03:41:15 rh Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/02 11:55:37 wiz Exp $
 #
 
 DISTNAME=	Pantomime-1.0.5
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/Pantomime
 CATEGORIES=	mail gnustep
 MASTER_SITES=	http://extrovert.screwdriver.net/~extra/cgi-bin/

@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/02/18 14:39:02 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/05/02 11:56:33 wiz Exp $
 
 .if !defined(SCROLLKEEPER_BUILDLINK2_MK)
 SCROLLKEEPER_BUILDLINK2_MK=		# defined
 
 BUILDLINK_PACKAGES+=			scrollkeeper
-BUILDLINK_DEPENDS.scrollkeeper?=	scrollkeeper>=0.3.12
+BUILDLINK_DEPENDS.scrollkeeper?=	scrollkeeper>=0.3.12nb1
 BUILDLINK_PKGSRCDIR.scrollkeeper?=	../../textproc/scrollkeeper
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.scrollkeeper=scrollkeeper

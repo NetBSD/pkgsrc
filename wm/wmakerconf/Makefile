@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2003/04/26 09:49:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2003/05/02 11:56:38 wiz Exp $
 #
 
 DISTNAME=	wmakerconf-2.8.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 wm windowmaker
 MASTER_SITES=	http://ulli.on.openave.net/wmakerconf/
 EXTRACT_SUFX=	.tar.bz2

@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/01/25 12:40:23 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/05/02 11:54:31 wiz Exp $
 
 .if !defined(GUILE_GTK_BUILDLINK2_MK)
 GUILE_GTK_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		guile-gtk
-BUILDLINK_DEPENDS.guile-gtk?=	guile-gtk>=0.19nb1
+BUILDLINK_DEPENDS.guile-gtk?=	guile-gtk>=0.19nb2
 BUILDLINK_PKGSRCDIR.guile-gtk?=	../../devel/guile-gtk
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.guile-gtk=guile-gtk

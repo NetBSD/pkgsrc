@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/02/05 05:06:35 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2003/05/02 11:55:17 wiz Exp $
 
 DISTNAME=	gimageview-0.2.13
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkmmviewer/}
 
@@ -17,7 +17,6 @@ USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
 USE_X11=		YES
-BUILDLINK_DEPENDS.libwmf= libwmf>=0.2.8
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 

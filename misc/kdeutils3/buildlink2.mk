@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/03/11 13:22:31 markd Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/05/02 11:55:55 wiz Exp $
 #
 # This Makefile fragment is included by packages that use kdeutils.
 #
@@ -9,7 +9,7 @@
 KDEUTILS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			kdeutils
-BUILDLINK_DEPENDS.kdeutils?=		kdeutils>=3.1
+BUILDLINK_DEPENDS.kdeutils?=		kdeutils>=3.1.1nb1
 BUILDLINK_PKGSRCDIR.kdeutils?=		../../misc/kdeutils3
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.kdeutils=kdeutils

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2003/03/29 12:42:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/05/02 11:56:28 wiz Exp $
 #
 
 DISTNAME=	ROX-Session-0.1.14
 PKGNAME=	rox-session-0.1.14
-PKGREVISION=	3
+PKGREVISION=	4
 WRKSRC=		${WRKDIR}/${DISTNAME}/ROX-Session/src
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/03/29 12:42:00 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/05/02 11:56:10 wiz Exp $
 
 DISTNAME=	nProbe-source-1.3.1
+PKGREVISION=	1
 PKGNAME=	nprobe-1.3.1
 WRKSRC=		${WRKDIR}/nProbe
 CATEGORIES=	net

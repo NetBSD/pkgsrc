@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/03/11 00:11:31 salo Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/05/02 11:56:17 wiz Exp $
 #
 
 .if !defined(GPGME_BUILDLINK2_MK)
 GPGME_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		gpgme
-BUILDLINK_DEPENDS.gpgme?=	gpgme>=0.3.15
+BUILDLINK_DEPENDS.gpgme?=	gpgme>=0.3.15nb1
 BUILDLINK_PKGSRCDIR.gpgme?=	../../security/gpgme
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.gpgme=gpgme

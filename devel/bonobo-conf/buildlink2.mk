@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.4 2002/12/24 06:09:50 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/05/02 11:54:22 wiz Exp $
 
 .if !defined(BONOBO_CONF_BUILDLINK2_MK)
 BONOBO_CONF_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			bonobo-conf
-BUILDLINK_DEPENDS.bonobo-conf?=		bonobo-conf>=0.14nb3
+BUILDLINK_DEPENDS.bonobo-conf?=		bonobo-conf>=0.14nb4
 BUILDLINK_PKGSRCDIR.bonobo-conf?=	../../devel/bonobo-conf
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.bonobo-conf=bonobo-conf

@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/09/22 21:49:48 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/05/02 11:55:17 wiz Exp $
 
 .if !defined(GIMP_BASE_BUILDLINK2_MK)
 GIMP_BASE_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		gimp-base
-BUILDLINK_DEPENDS.gimp-base?=	gimp-base>=1.2.3nb1
+BUILDLINK_DEPENDS.gimp-base?=	gimp-base>=1.2.3nb5
 BUILDLINK_PKGSRCDIR.gimp-base?=	../../graphics/gimp-base
 DEPENDS+=		${BUILDLINK_DEPENDS.gimp-base}:../../graphics/gimp-base
 

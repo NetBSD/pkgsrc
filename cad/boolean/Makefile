@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2003/03/29 12:40:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/05/02 11:53:55 wiz Exp $
 #
 
 DISTNAME=	boolean
 PKGNAME=	boolean-${REL}
-PKGREVISION=	1
+PKGREVISION=	2
 WRKSRC=		${WRKDIR}/boolean/${REL}/linux
 CATEGORIES=	cad graphics
 MASTER_SITES=	http://www.xs4all.nl/~kholwerd/download/boolzip/
@@ -13,7 +13,7 @@ MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://www.xs4all.nl/~kholwerd/bool.html
 COMMENT=	GDSII viewer/editor + (boolean) operations on sets of 2d polygons
 
-DEPENDS+=	wxGTK>=2.2.7nb1:../../x11/wxGTK
+DEPENDS+=	wxGTK>=2.4.0nb1:../../x11/wxGTK
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 REL=		6.2

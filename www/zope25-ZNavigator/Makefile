@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/01 18:01:37 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/02 11:56:54 wiz Exp $
 #
 
 DISTNAME=	ZNavigator-2.02
+PKGREVISION=	1
 PKGNAME=	zope25-ZNavigator-2.02
 CATEGORIES=	www
 MASTER_SITES=	http://www.zope.org/Members/jonas/ZNavigator/

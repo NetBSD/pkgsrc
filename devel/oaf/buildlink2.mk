@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.4 2002/09/23 19:57:29 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/05/02 11:54:40 wiz Exp $
 
 .if !defined(OAF_BUILDLINK2_MK)
 OAF_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		oaf
-BUILDLINK_DEPENDS.oaf?=		oaf>=0.6.7nb1
+BUILDLINK_DEPENDS.oaf?=		oaf>=0.6.10nb1
 BUILDLINK_PKGSRCDIR.oaf?=	../../devel/oaf
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.oaf=oaf

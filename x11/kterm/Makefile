@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2003/03/03 04:17:45 jschauma Exp $
+# $NetBSD: Makefile,v 1.22 2003/05/02 11:57:27 wiz Exp $
 
 DISTNAME=	kterm-6.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/}
 
@@ -28,7 +28,6 @@ BUILD_DEFS+=	KTERM_USE_WALLPAPER
 .  if ${KTERM_USE_WALLPAPER} == "imlib"
 SITES_KTerm-BGP-Imlib-1.0.patch.gz=	http://delegate.uec.ac.jp:8081/club/mma/%7Etakkun/fun/handling/
 PATCHFILES+=	KTerm-BGP-Imlib-1.0.patch.gz
-BUILDLINK_DEPENDS.imlib?=	imlib>=1.9.4
 .    include "../../graphics/imlib/buildlink2.mk"
 .  elif ${KTERM_USE_WALLPAPER} == "YES"
 SITES_KTerm-BGP-1.0.patch.gz=	http://delegate.uec.ac.jp:8081/club/mma/%7Etakkun/fun/handling/

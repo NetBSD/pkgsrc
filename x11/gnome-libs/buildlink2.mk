@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.4 2002/10/23 17:09:10 bouyer Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/05/02 11:57:01 wiz Exp $
 
 .if !defined(GNOME_LIBS_BUILDLINK2_MK)
 GNOME_LIBS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gnome-libs
-BUILDLINK_DEPENDS.gnome-libs?=		gnome-libs>=1.4.1.4
+BUILDLINK_DEPENDS.gnome-libs?=		gnome-libs>=1.4.1.4nb4
 BUILDLINK_PKGSRCDIR.gnome-libs?=	../../x11/gnome-libs
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gnome-libs=gnome-libs

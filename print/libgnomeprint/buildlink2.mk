@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.7 2003/03/12 13:03:30 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2003/05/02 11:56:15 wiz Exp $
 #
 # This Makefile fragment is included by packages that use libgnomeprint.
 #
@@ -9,7 +9,7 @@
 LIBGNOMEPRINT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libgnomeprint
-BUILDLINK_DEPENDS.libgnomeprint?=	libgnomeprint>=2.2.1.2
+BUILDLINK_DEPENDS.libgnomeprint?=	libgnomeprint>=2.2.1.2nb1
 BUILDLINK_PKGSRCDIR.libgnomeprint?=	../../print/libgnomeprint
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libgnomeprint=libgnomeprint

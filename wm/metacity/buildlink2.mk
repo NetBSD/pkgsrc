@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2003/02/14 20:59:44 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/05/02 11:56:36 wiz Exp $
 #
 # This Makefile fragment is included by packages that use metacity.
 #
@@ -9,7 +9,7 @@
 METACITY_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			metacity
-BUILDLINK_DEPENDS.metacity?=		metacity>=2.4.34
+BUILDLINK_DEPENDS.metacity?=		metacity>=2.4.34nb1
 BUILDLINK_PKGSRCDIR.metacity?=		../../wm/metacity
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.metacity=metacity

@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/10/09 14:17:59 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/05/02 11:56:22 wiz Exp $
 #
 
 .if !defined(GKRELLM_BUILDLINK2_MK)
 GKRELLM_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gkrellm
-BUILDLINK_DEPENDS.gkrellm?=		gkrellm>=1.2.11nb1
+BUILDLINK_DEPENDS.gkrellm?=		gkrellm>=1.2.13nb1
 BUILDLINK_PKGSRCDIR.gkrellm?=		../../sysutils/gkrellm
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gkrellm=gkrellm

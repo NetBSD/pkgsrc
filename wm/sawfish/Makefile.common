@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.common,v 1.13 2003/01/10 07:54:44 cjep Exp $
+# $NetBSD: Makefile.common,v 1.14 2003/05/02 11:56:37 wiz Exp $
 
 DISTNAME=		sawfish-${SF_VERS}-gtk1
+PKGREVISION=		1
 SF_VERS=		1.2
 CATEGORIES=		x11 gnome wm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sawmill/}

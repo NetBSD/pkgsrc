@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.2 2003/03/29 12:42:28 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.3 2003/05/02 11:56:25 wiz Exp $
 #
 
 DISTNAME=		gworkspace-0.4
+PKGREVISION=		1
 WRKSRC=			${WRKDIR}/gworkspace
 CATEGORIES?=		sysutils gnustep
 MASTER_SITES=		http://www.gnustep.it/enrico/gworkspace/	\

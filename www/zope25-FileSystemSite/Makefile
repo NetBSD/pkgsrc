@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/11/29 17:34:46 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/02 11:56:49 wiz Exp $
 
 DISTNAME=	FileSystemSite-1.1
+PKGREVISION=	1
 PKGNAME=	zope25-FileSystemSite-1.1
 CATEGORIES=	www
 MASTER_SITES=	http://www.zope.org/Members/k_vertigo/Products/FileSystemSite/

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2003/03/09 22:00:54 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.17 2003/05/02 11:53:56 wiz Exp $
 #
 
 DISTNAME=		geda-gnetlist-${PKGVERSION}
 PKGNAME=		gnetlist-${PKGVERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		cad
 MASTER_SITES=		ftp://ftp.geda.seul.org/pub/geda/devel/${PKGVERSION}/ \
 			ftp://ieee.ing.uniroma1.it/pub/geda/devel/${PKGVERSION}/ \
