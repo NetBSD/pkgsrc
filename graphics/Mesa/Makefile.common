@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.34 2004/10/29 01:34:39 minskim Exp $
+# $NetBSD: Makefile.common,v 1.35 2004/10/31 00:53:10 minskim Exp $
 
 DISTNAME=	MesaLib-${MESA_VERSION}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -12,6 +12,8 @@ MESA_VERSION=	6.2
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.mesa3d.org/
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
