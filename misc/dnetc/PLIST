@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/15 08:10:58 shell Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/09 16:16:06 jmmv Exp $
 bin/dnetc
+etc/rc.d/dnetc
 man/man1/dnetc.1
 share/doc/dnetc/CHANGES.txt
 share/doc/dnetc/dnetc.txt
