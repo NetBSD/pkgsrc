@@ -1,8 +1,8 @@
-$NetBSD: patch-ay,v 1.1 2001/09/24 23:47:37 danw Exp $
+$NetBSD: patch-ay,v 1.2 2002/03/24 19:53:49 rh Exp $
 
---- libgnome/gnome-url.c.orig	Fri Mar 16 14:44:42 2001
-+++ libgnome/gnome-url.c	Mon Sep 24 18:36:21 2001
-@@ -72,6 +72,8 @@
+--- libgnome/gnome-url.c.orig	Fri Jan 11 08:03:17 2002
++++ libgnome/gnome-url.c
+@@ -80,6 +80,8 @@
  	return default_handler;
  }
  
@@ -11,27 +11,32 @@ $NetBSD: patch-ay,v 1.1 2001/09/24 23:47:37 danw Exp $
  /**
   * gnome_url_show
   * @url: URL to show
-@@ -97,11 +99,9 @@
+@@ -105,11 +107,11 @@
  void
  gnome_url_show(const gchar *url)
  {
 -	gint i;
  	gchar *pos, *template;
  	gboolean free_template = FALSE;
--	int argc;
+ 	int argc;
 -       	char **argv;
++	char **argv;
 +	int status;
  	
  	g_return_if_fail (url != NULL);
  	pos = strchr (url, ':');
-@@ -127,12 +127,26 @@
- 	} else /* no : ? -- this shouldn't happen.  Use default handler */
- 		template = gnome_url_default_handler ();
+@@ -140,9 +142,23 @@
+ 	if(poptParseArgvString(template, &argc, &argv) != 0) {
+ 		/* can't parse */
+ 		g_warning("Parse error of '%s'", template);
+-		return;
++		status = gnome_url_show_with_handler (url, template);
++		if (status == -1 && free_template)
++			gnome_url_show_with_handler (url, gnome_url_default_handler (NULL));
++	} else {
++		gnome_url_show_with_handler (url, template);
+ 	}
  
-+	status = gnome_url_show_with_handler (url, template);
-+	if (status == -1 && free_template)
-+		gnome_url_show_with_handler (url, gnome_url_default_handler ());
-+
 +	if (free_template)
 +		g_free (template);
 +}
@@ -42,17 +47,10 @@ $NetBSD: patch-ay,v 1.1 2001/09/24 23:47:37 danw Exp $
 +	int argc, i, status;
 +	char **argv;
 +
- 	/* we use a popt function as it does exactly what we want to do and
- 	   gnome already uses popt */
- 	if(poptParseArgvString(template, &argc, &argv) != 0) {
- 		/* can't parse */
- 		g_warning("Parse error of '%s'", template);
--		return;
-+		return -1;
- 	}
- 
  	/* we can just replace the entry in the array since the
-@@ -146,13 +160,12 @@
+ 	 * array is all in one buffer, we won't leak */
+ 	for(i = 0; i < argc; i++) {
+@@ -154,13 +170,12 @@
  
  	/* use execute async, and not the shell, shell is evil and a
  	 * security hole */

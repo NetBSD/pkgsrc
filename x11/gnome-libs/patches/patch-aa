@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.15 2001/10/12 13:29:40 tron Exp $
+$NetBSD: patch-aa,v 1.16 2002/03/24 19:53:42 rh Exp $
 
---- configure.orig	Tue Aug 21 23:41:20 2001
-+++ configure	Fri Oct 12 15:12:57 2001
-@@ -3471,12 +3471,9 @@
+--- configure.orig	Tue Jan 22 14:35:12 2002
++++ configure
+@@ -3271,12 +3271,9 @@
  
  
  
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.15 2001/10/12 13:29:40 tron Exp $
  
  
  
-@@ -5314,6 +5311,11 @@
+@@ -5127,6 +5124,11 @@
     rm -f po/POTFILES
     sed -e "/^#/d" -e "/^\$/d" -e "s,.*,	$posrcprefix& \\\\," -e "\$s/\(.*\) \\\\/\1/" \
  	< $srcdir/po/POTFILES.in > po/POTFILES
@@ -30,25 +30,16 @@ $NetBSD: patch-aa,v 1.15 2001/10/12 13:29:40 tron Exp $
    
  # AM_GNOME_GETTEXT above substs $DATADIRNAME
  # this is the directory where the *.{mo,gmo} files are installed
-@@ -5415,7 +5417,7 @@
-   echo $ac_n "(cached) $ac_c" 1>&6
- else
-   
--  save_LDFLAGS="$LDFLAGBS"
-+  save_LDFLAGS="$LDFLAGS"
-   LDFLAGS="$LDFLAGS `glib-config --libs gmodule`"
-   if test "$cross_compiling" = yes; then
-   ac_cv_gmodule=yes
-@@ -10116,7 +10118,7 @@
+@@ -9942,7 +9944,7 @@
  GTKXMHTML_LIBS="-lgtkxmhtml $LIBGTKXMHTML_LIBS"
  ZVT_LIBS="-lzvt $UTIL_LIBS $GTK_LIBS"
  
 -GNOME_LIBDIR='-L${libdir}'
 +GNOME_LIBDIR='-L${libdir} -Wl,-R${libdir}'
- GNOME_INCLUDEDIR='-I${includedir} -DNEED_GNOMESUPPORT_H -I${pkglibdir}/include'
+ GNOME_INCLUDEDIR='-I${includedir}/gnome-1.0 -DNEED_GNOMESUPPORT_H -I${pkglibdir}/include'
  GNOME_IDLDIR='-I${datadir}/idl'
  
-@@ -10220,8 +10222,8 @@
+@@ -10046,8 +10048,8 @@
  fi
  	if test x$gnome_cv_orbit_found = xyes; then
  		
