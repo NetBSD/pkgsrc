@@ -1,0 +1,22 @@
+$NetBSD: patch-aq,v 1.1 1998/12/21 15:45:21 tv Exp $
+
+--- ifcico/zmsend.c.orig	Mon Dec 21 09:52:07 1998
++++ ifcico/zmsend.c	Mon Dec 21 09:53:20 1998
+@@ -49,7 +49,7 @@
+ static int Lzconv=0;
+ static int Beenhereb4;
+ static char Myattn[]={0};
+-static long startime,endtime;
++static time_t startime,endtime;
+ static long skipsize;
+ 
+ extern void get_frame_buffer(void);
+@@ -162,7 +162,7 @@
+ 
+ 	sprintf(txbuf,"%s %lu %lo %o 0 0 0",
+ 		rn, (unsigned long) st.st_size,
+-		st.st_mtime+(st.st_mtime%2),
++		(unsigned long)(st.st_mtime+(st.st_mtime%2)),
+ 		st.st_mode);
+ 	bufl=strlen(txbuf);
+ 	*(strchr(txbuf,' '))='\0'; /*hope no blanks in filename*/

@@ -1,0 +1,13 @@
+$NetBSD: patch-ar,v 1.1 1998/12/21 15:45:21 tv Exp $
+
+--- ifcico/zmrecv.c.orig	Mon Dec 21 09:56:18 1998
++++ ifcico/zmrecv.c	Mon Dec 21 09:57:09 1998
+@@ -461,7 +461,7 @@
+ 	Bytesleft = DEFBYTL; Filemode = 0; Modtime = 0L;
+ 
+ 	p = name + 1 + strlen(name);
+-	sscanf(p, "%ld%lo%o%lo%d%ld%d%d",
++	sscanf(p, "%ld%lo%o%lo%ld%ld%ld%ld",
+ 	  &Bytesleft, &Modtime, &Filemode,
+ 	  &dummy, &dummy, &dummy, &dummy, &dummy);
+ 	strcpy(ctt,date(Modtime));

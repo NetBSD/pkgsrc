@@ -1,0 +1,22 @@
+$NetBSD: patch-am,v 1.1 1998/12/21 15:45:21 tv Exp $
+
+--- iflib/callstat.c.orig	Mon Dec 21 09:36:24 1998
++++ iflib/callstat.c	Mon Dec 21 09:37:08 1998
+@@ -21,7 +21,7 @@
+ 
+ 	if ((fp=fopen(stsname(addr,'f'),"r")))
+ 	{
+-		fscanf(fp,"%lu %u %u",&st.trytime,&st.tryno,&st.trystat);
++		fscanf(fp,"%u %u %u",&st.trytime,&st.tryno,&st.trystat);
+ 		fclose(fp);
+ 	}
+ 
+@@ -44,7 +44,7 @@
+ 		else st.tryno+=incr;
+ 		st.trystat=sts;
+ 		(void)time(&st.trytime);
+-		fprintf(fp,"%lu %u %u\n",
++		fprintf(fp,"%u %u %u\n",
+ 			st.trytime,st.tryno,(unsigned)st.trystat);
+ 		fclose(fp);
+ 	}

@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/11/23 17:48:24 tv Exp $
-etc/ifcico/inouttabs/fidom2iso
-etc/ifcico/inouttabs/ibmpc-latin1
-etc/ifcico/inouttabs/iso2fidom
-etc/ifcico/inouttabs/latin1-ibmpc
-etc/ifcico/inouttabs/outaltkoi8
-etc/ifcico/inouttabs/outkoi8alt
-@dirrm etc/ifcico/inouttabs
-etc/ifcico/config.dist
-etc/ifcico/config-global
-@dirrm etc/ifcico
+@comment $NetBSD: PLIST,v 1.2 1998/12/21 15:45:21 tv Exp $
+etc/ifmail/inouttabs/fidom2iso
+etc/ifmail/inouttabs/ibmpc-latin1
+etc/ifmail/inouttabs/iso2fidom
+etc/ifmail/inouttabs/latin1-ibmpc
+etc/ifmail/inouttabs/outaltkoi8
+etc/ifmail/inouttabs/outkoi8alt
+@dirrm etc/ifmail/inouttabs
+etc/ifmail/config.dist
+etc/ifmail/config-global
+@dirrm etc/ifmail
 man/man8/ifcico.8
 man/man8/ifindex.8
 man/man8/ifinfo.8
