@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.i18n.30,v 1.2 2005/01/06 15:52:20 mrauch Exp $
+@comment $NetBSD: PLIST.i18n.10,v 1.1 2005/01/06 15:52:19 mrauch Exp $
 ${OPENOFFICE_VERSION}/share/autocorr/acor1033.dat
 ${OPENOFFICE_VERSION}/share/autocorr/acor2057.dat
 ${OPENOFFICE_VERSION}/share/autotext/${OPENOFFICE_LANG}/crdbus50.bau
