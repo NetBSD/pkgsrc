@@ -1,0 +1,15 @@
+This is a multiplayer space battle game for the X Window System written in
+C for Unix.  Each player has a number of windows presenting different
+information and controls, including a short range viewscreen showing your
+ship in the center and other objects near it, a long range "map" (aka
+"radar") showing all players, a damage report and repair window, a weapon
+selection window, a ship's-computer and player-to-player communications
+window, and a ship upgrade status window. 
+
+The game uses the X network protocol to display graphics and receive
+player input from mulitple servers.  Only one client is running and is in
+control of the entire game.  Temporary clients can also be ran which
+simply send a message to the main client telling it to add a server to the
+game.  If there is space in the game, and the main client can access your
+server, then a new player is "born" onto that server.  (Usage: "final -add
+...")
