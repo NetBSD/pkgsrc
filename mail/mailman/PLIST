@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/23 11:02:13 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/01/11 17:28:30 kim Exp $
 lib/mailman/Mailman/Archiver/Archiver.py
 lib/mailman/Mailman/Archiver/HyperArch.py
 lib/mailman/Mailman/Archiver/HyperDatabase.py
@@ -179,17 +179,17 @@ lib/mailman/bin/unshunt
 lib/mailman/bin/update
 lib/mailman/bin/version
 lib/mailman/bin/withlist
-lib/mailman/cgi-bin/admin.cgi
-lib/mailman/cgi-bin/admindb.cgi
-lib/mailman/cgi-bin/confirm.cgi
-lib/mailman/cgi-bin/create.cgi
-lib/mailman/cgi-bin/edithtml.cgi
-lib/mailman/cgi-bin/listinfo.cgi
-lib/mailman/cgi-bin/options.cgi
-lib/mailman/cgi-bin/private.cgi
-lib/mailman/cgi-bin/rmlist.cgi
-lib/mailman/cgi-bin/roster.cgi
-lib/mailman/cgi-bin/subscribe.cgi
+lib/mailman/cgi-bin/admin${MAILMAN_CGIEXT}
+lib/mailman/cgi-bin/admindb${MAILMAN_CGIEXT}
+lib/mailman/cgi-bin/confirm${MAILMAN_CGIEXT}
+lib/mailman/cgi-bin/create${MAILMAN_CGIEXT}
+lib/mailman/cgi-bin/edithtml${MAILMAN_CGIEXT}
+lib/mailman/cgi-bin/listinfo${MAILMAN_CGIEXT}
+lib/mailman/cgi-bin/options${MAILMAN_CGIEXT}
+lib/mailman/cgi-bin/private${MAILMAN_CGIEXT}
+lib/mailman/cgi-bin/rmlist${MAILMAN_CGIEXT}
+lib/mailman/cgi-bin/roster${MAILMAN_CGIEXT}
+lib/mailman/cgi-bin/subscribe${MAILMAN_CGIEXT}
 lib/mailman/cron/bumpdigests
 lib/mailman/cron/checkdbs
 lib/mailman/cron/crontab.in
