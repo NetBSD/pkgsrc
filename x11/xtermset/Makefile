@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/01/02 13:04:45 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1999/01/07 23:43:40 hubertf Exp $
 #
 
-DISTNAME=	xtermset-0.1
+DISTNAME=	xtermset-0.2
 CATEGORIES=	x11
 MASTER_SITES=	http://www.cs.vu.nl/~bernsti/xtermset/src/
 
