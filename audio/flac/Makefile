@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/11/10 23:55:13 lukem Exp $
+# $NetBSD: Makefile,v 1.6 2002/12/24 18:55:34 wiz Exp $
 #
 
 DISTNAME=		flac-1.0.4
@@ -6,7 +6,7 @@ WRKSRC=			${WRKDIR}/${PKGNAME}
 CATEGORIES=		audio archivers
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=flac/}
 
-MAINTAINER=		collver@linuxfreemail.com
+MAINTAINER=		collver1@attbi.com
 HOMEPAGE=		http://flac.sourceforge.net
 COMMENT=		free lossless audio codec
 

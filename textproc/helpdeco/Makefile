@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/11/29 01:12:49 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2002/12/24 18:55:42 wiz Exp $
 #
 
 DISTNAME=		helpdc21
@@ -8,7 +8,7 @@ CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SIMTEL:=win95/winhelp/}
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		collver@linuxfreemail.com
+MAINTAINER=		collver1@attbi.com
 HOMEPAGE=		http://www.simtel.net/pub/pd/23694.shtml
 COMMENT=		windows .hlp to .rtf converter
 
