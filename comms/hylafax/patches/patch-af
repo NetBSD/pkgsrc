@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.5 2001/07/08 13:32:15 bad Exp $
+$NetBSD: patch-af,v 1.6 2003/09/23 21:39:48 abs Exp $
 
---- defs.in.orig	Thu Mar  8 07:44:17 2001
-+++ defs.in	Sun Jul  8 00:48:02 2001
-@@ -44,6 +44,7 @@
+--- defs.in.orig	Tue Apr 29 04:32:19 2003
++++ defs.in
+@@ -44,6 +44,7 @@ SHELL		= @SCRIPT_SH@
  # to insufficient; you are better off rerunning the
  # configure script so that all uses are set correctly.
  #
@@ -10,7 +10,7 @@ $NetBSD: patch-af,v 1.5 2001/07/08 13:32:15 bad Exp $
  SPOOL		= @SPOOL@
  SBIN		= @SBIN@
  BIN		= @BIN@
-@@ -257,7 +258,7 @@
+@@ -260,7 +261,7 @@ LDFLAGS		= ${LDOPTS} ${LDLIBS}
  LDOPTS		= ${VLDOPTS} ${LLDOPTS} ${GLDOPTS}
  LDLIBS		= ${VLDLIBS} ${LLDLIBS} ${GLDLIBS}
  
