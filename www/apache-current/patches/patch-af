@@ -1,26 +1,17 @@
-$NetBSD: patch-af,v 1.2 2001/04/08 10:55:22 itojun Exp $
+$NetBSD: patch-af,v 1.3 2002/01/04 09:45:10 martti Exp $
 
---- Makefile.in.orig	Wed Apr  4 02:03:35 2001
-+++ Makefile.in	Sun Apr  8 12:05:30 2001
-@@ -25,6 +25,8 @@
- include $(top_srcdir)/build/rules.mk
- include $(top_srcdir)/build/program.mk
- 
-+LIBTOOL=$(SHELL) $(top_builddir)/libtool
-+
- install-conf:
- 	@echo Installing configuration files
- 	@test -d $(sysconfdir) || $(MKINSTALLDIRS) $(sysconfdir)
-@@ -33,7 +35,7 @@
- 		$(INSTALL_DATA) $$i $(sysconfdir); \
- 	done; \
- 	for i in *-std*; do \
--		sed -e 's#@@ServerRoot@@#$(prefix)#g' \
-+		sed -e 's#@@ServerRoot@@#$(datadir)#g' \
- 		    -e 's#@@Port@@#$(PORT)#g' \
- 			< $$i > $(sysconfdir)/$$i; \
- 		chmod 0644 $(sysconfdir)/$$i; \
-@@ -42,7 +44,7 @@
+--- Makefile.in.orig	Mon Oct 22 12:46:29 2001
++++ Makefile.in	Thu Jan  3 18:19:40 2002
+@@ -39,7 +39,7 @@
+ 		( \
+ 			n_lm=`awk 'BEGIN {n=0} /@@LoadModule@@/ {n+=1} END {print n}' < $$i`; \
+ 			if test $$n_lm -eq 0 -o "x$(DSO_MODULES)" = "x"; then \
+-				sed -e 's#@@ServerRoot@@#$(prefix)#g' \
++				sed -e 's#@@ServerRoot@@#$(datadir)#g' \
+ 					-e 's#@@Port@@#$(PORT)#g' \
+ 					-e '/@@LoadModule@@/d' \
+ 					< $$i; \
+@@ -67,7 +67,7 @@
  			file=`echo $$file|sed s/.*.conf/$(PROGRAM_NAME).conf/`; \
  		fi; \
  		if test "$$file" != "$$i" && test ! -f $(sysconfdir)/$$file; then \
@@ -29,18 +20,14 @@ $NetBSD: patch-af,v 1.2 2001/04/08 10:55:22 itojun Exp $
  		fi; \
  	done
  
-@@ -79,10 +81,10 @@
- 	@echo Installing Support Binaries
- 	@test -d $(bindir) || $(MKINSTALLDIRS) $(bindir)
- 	@cp -p $(srcdir)/support/httpd.exp $(bindir)
--	@cp -p $(builddir)/support/htpasswd $(bindir)
--	@cp -p $(builddir)/support/htdigest $(bindir)
--	@cp -p $(builddir)/support/rotatelogs $(bindir)
--	@cp -p $(builddir)/support/logresolve $(bindir)
-+	@${INSTALL_PROGRAM} $(builddir)/support/htpasswd $(bindir)
-+	@${INSTALL_PROGRAM} $(builddir)/support/htdigest $(bindir)
-+	@${INSTALL_PROGRAM} $(builddir)/support/rotatelogs $(bindir)
-+	@${INSTALL_PROGRAM} $(builddir)/support/logresolve $(bindir)
- 	@cp -p $(builddir)/support/ab $(bindir)
- 	@cp -p $(builddir)/support/apachectl $(bindir)
- 	chmod 755 $(bindir)/apachectl
+@@ -95,8 +95,8 @@
+ 	@echo Installing HTML documents
+ 	@test -d $(htdocsdir) || $(MKINSTALLDIRS) $(htdocsdir)
+ 	@test -d $(htdocs-srcdir) && (cd $(htdocs-srcdir) && cp -rp * $(htdocsdir))
+-	@test -d $(prefix)/manual || $(MKINSTALLDIRS) $(prefix)/manual
+-	@test -d $(top_srcdir)/docs/manual && (cd $(top_srcdir)/docs/manual && cp -rp * $(prefix)/manual)
++	@test -d $(manualdir) || $(MKINSTALLDIRS) $(manualdir)
++	@test -d $(top_srcdir)/docs/manual && (cd $(top_srcdir)/docs/manual && cp -rp * $(manualdir))
+ 	@(cd $(htdocsdir) && find . -name "CVS" -print | xargs rm -rf {} \;)
+ 
+ install-error:

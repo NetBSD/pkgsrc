@@ -1,15 +1,15 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/03/30 22:06:01 itojun Exp $
+$NetBSD: patch-ad,v 1.2 2002/01/04 09:45:10 martti Exp $
 
-make it compile with OpenSSL 0.9.5a
-
---- modules/tls/openssl_state_machine.c-	Fri Mar 30 21:00:13 2001
-+++ modules/tls/openssl_state_machine.c	Fri Mar 30 21:00:21 2001
-@@ -121,7 +121,7 @@
- 	{
- 	char buf[1024];
- 
--	ERR_error_string_n(l,buf,sizeof buf);
-+	ERR_error_string(l,buf);
- 	fprintf(stderr,"Error %lx: %s\n",l,buf);
- 	}
-     }
+--- srclib/apr-util/configure.orig	Thu Dec  6 17:51:26 2001
++++ srclib/apr-util/configure	Thu Dec  6 17:53:26 2001
+@@ -2909,6 +2909,10 @@
+         expat_include_dir="$abs_expatdir/include/xml"
+     expat_libs="-L$abs_expatdir/lib -lexpat"
+     expat_old=yes
++  elif test -r "$abs_expatdir/include/expat.h"; then
++   expat_include_dir="$abs_expatdir/include"
++   expat_libs="-Wl,-R${LOCALBASE}/lib -lexpat"
++   expat_old=yes
+   elif test -r "$abs_expatdir/include/xmltok/xmlparse.h"; then
+         expat_include_dir="$abs_expatdir/include/xmltok"
+     expat_libs="-L$abs_expatdir/lib -lxmlparse -lxmltok"

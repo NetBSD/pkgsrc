@@ -1,15 +1,26 @@
-$NetBSD: patch-ae,v 1.3 2001/09/14 15:38:09 wiz Exp $
+$NetBSD: patch-ae,v 1.4 2002/01/04 09:45:10 martti Exp $
 
---- docs/conf/httpd-std.conf.orig	Mon Mar 26 01:54:48 2001
-+++ docs/conf/httpd-std.conf	Sun Apr  8 12:05:13 2001
-@@ -58,13 +58,13 @@
- # DISK. The PID of the main server process is automatically appended to
- # the filename. 
+--- docs/conf/httpd-std.conf.orig	Thu Nov  8 23:31:28 2001
++++ docs/conf/httpd-std.conf	Thu Dec  6 15:02:14 2001
+@@ -53,7 +53,7 @@
+ # The accept serialization lock file MUST BE STORED ON A LOCAL DISK.
  #
+ <IfModule !mpm_winnt.c>
 -#LockFile logs/accept.lock
 +#LockFile /var/log/httpd/accept.lock
+ </IfModule>
  
  #
+@@ -64,7 +64,7 @@
+ #
+ <IfModule !mpm_winnt.c>
+ <IfModule !perchild.c>
+-ScoreBoardFile logs/apache_runtime_status
++ScoreBoardFile /var/log/httpd/apache_runtime_status
+ </IfModule>
+ </IfModule>
+ 
+@@ -73,7 +73,7 @@
  # PidFile: The file in which the server should record its process
  # identification number when it starts.
  #
@@ -17,27 +28,8 @@ $NetBSD: patch-ae,v 1.3 2001/09/14 15:38:09 wiz Exp $
 +PidFile /var/log/httpd/httpd.pid
  
  #
- # ScoreBoardFile: File used to store internal server process information.
-@@ -73,7 +73,7 @@
- # no two invocations of Apache share the same scoreboard file.
- #
- <IfModule !perchild.c>
--ScoreBoardFile logs/apache_runtime_status
-+ScoreBoardFile /var/log/httpd/apache_runtime_status
- </IfModule>
- 
- #
-@@ -158,6 +158,9 @@
- #Listen 3000
- #Listen 12.34.56.78:80
- 
-+Listen 0.0.0.0:80
-+Listen [::]:80
-+
- #
- # BindAddress: You can support virtual hosts with this option. This directive
- # is used to tell the server which IP address to listen to. It can either
-@@ -372,7 +375,7 @@
+ # Timeout: The number of seconds before receives and sends time out.
+@@ -377,7 +377,7 @@
  # TypesConfig describes where the mime.types file (or equivalent) is
  # to be found.
  #
@@ -46,8 +38,8 @@ $NetBSD: patch-ae,v 1.3 2001/09/14 15:38:09 wiz Exp $
  
  #
  # DefaultType is the default MIME type the server will use for a document
-@@ -397,7 +400,7 @@
- # module is part of the server.
+@@ -396,7 +396,7 @@
+ # directive tells the module where the hint definitions are located.
  #
  <IfModule mod_mime_magic.c>
 -    MIMEMagicFile conf/magic
@@ -55,7 +47,7 @@ $NetBSD: patch-ae,v 1.3 2001/09/14 15:38:09 wiz Exp $
  </IfModule>
  
  #
-@@ -417,7 +420,7 @@
+@@ -416,7 +416,7 @@
  # logged here.  If you *do* define an error logfile for a <VirtualHost>
  # container, that host's errors will be logged there and not here.
  #
@@ -64,7 +56,7 @@ $NetBSD: patch-ae,v 1.3 2001/09/14 15:38:09 wiz Exp $
  
  #
  # LogLevel: Control the number of messages logged to the error_log.
-@@ -442,20 +445,20 @@
+@@ -441,20 +441,20 @@
  # define per-<VirtualHost> access logfiles, transactions will be
  # logged therein and *not* in this file.
  #
@@ -89,7 +81,7 @@ $NetBSD: patch-ae,v 1.3 2001/09/14 15:38:09 wiz Exp $
  
  #
  # Optionally add a line containing the server version and virtual host
-@@ -944,6 +947,6 @@
+@@ -997,6 +997,6 @@
  #    ServerAdmin webmaster@dummy-host.example.com
  #    DocumentRoot /www/docs/dummy-host.example.com
  #    ServerName dummy-host.example.com
