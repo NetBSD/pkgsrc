@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/08/18 22:46:35 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/24 00:04:25 dmcmahill Exp $
 
 DISTNAME=	pstoedit_3_20
 PKGNAME=	pstoedit-3.20
@@ -10,7 +10,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.geocities.com/SiliconValley/Network/1958/pstoedit/
 
 # Requires C++ support of plotutils.
-DEPENDS+=	plotutils-2.3nb1:../../graphics/plotutils
+DEPENDS+=	plotutils-2.4.1:../../graphics/plotutils
 # Any ghostscript pkg will probably do, if not a font pkg.
 DEPENDS+=	ghostscript-[^f]*:../../print/ghostscript
 
