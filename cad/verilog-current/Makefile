@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/01/22 07:21:55 grant Exp $
+# $NetBSD: Makefile,v 1.37 2004/03/02 15:34:07 drochner Exp $
 #
 
 DISTNAME=	verilog-${SNAPDATE}
@@ -11,13 +11,13 @@ HOMEPAGE=	http://icarus.com/eda/verilog/index.html
 COMMENT=	Verilog simulation and synthesis tool (development snapshot version)
 
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
-BUILD_DEPENDS+=	gperf-2.7.2:../../devel/gperf
+BUILD_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 # turn this back on when ipal comes along a little further
 #DEPENDS+=	ipal-current>=20001210:../../cad/ipal-current
 
 CONFLICTS+=	verilog-[0-9]*
 
-SNAPDATE=	20030815
+SNAPDATE=	20040220
 USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
 USE_GNU_TOOLS+=	make
