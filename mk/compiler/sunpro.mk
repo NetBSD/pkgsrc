@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.12 2004/02/08 02:59:14 jlam Exp $
+# $NetBSD: sunpro.mk,v 1.13 2004/02/09 05:50:03 jlam Exp $
 
 .if !defined(COMPILER_SUNPRO_MK)
 COMPILER_SUNPRO_MK=	one
@@ -56,14 +56,17 @@ PATH:=		${_SUNPRO_DIR}/bin:${PATH}
 .      endif
 .    endif
 
-# Create symlinks for the compiler into ${WRKDIR}.
+# Create compiler driver scripts in ${WRKDIR}.
 .    for _target_ in ${_SUNPRO_LINKS}
 .      if !target(${${_target_}})
 override-tools: ${${_target_}}        
 ${${_target_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${LN} -fs ${SUNWSPROBASE}/bin/${${_target_}:T} ${.TARGET}
+	(${ECHO} '#!${TOOLS_SHELL}';					\
+	 ${ECHO} 'exec ${SUNWSPROBASE}/bin/${${_target_}:T} "$$@"';	\
+	) > ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
 .      endif
 .    endfor
 .  endif # COMPILER_SUNPRO_MK

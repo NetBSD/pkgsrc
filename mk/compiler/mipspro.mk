@@ -1,4 +1,4 @@
-# $NetBSD: mipspro.mk,v 1.15 2004/02/08 02:59:14 jlam Exp $
+# $NetBSD: mipspro.mk,v 1.16 2004/02/09 05:50:03 jlam Exp $
 
 .if !defined(COMPILER_MIPSPRO_MK)
 COMPILER_MIPSPRO_MK=	one
@@ -55,14 +55,17 @@ PATH:=		${_MIPSPRO_DIR}/bin:${PATH}
 .      endif
 .    endif
 
-# Create symlinks for the compiler into ${WRKDIR}.
+# Create compiler driver scripts in ${WRKDIR}.
 .    for _target_ in ${_MIPSPRO_LINKS}
 .      if !target(${${_target_}})
 override-tools: ${${_target_}}
 ${${_target_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${LN} -fs ${MIPSPROBASE}/bin/${${_target_}:T} ${.TARGET}
+	(${ECHO} '#!${TOOLS_SHELL}';					\
+	 ${ECHO} 'exec ${MIPSPROBASE}/bin/${${_target_}:T} "$$@"';	\
+	) > ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
 .      endif
 .    endfor
 .  endif # COMPILER_MIPSPRO_MK
