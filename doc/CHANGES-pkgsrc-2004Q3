@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.3 2004/09/30 14:05:22 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.4 2004/09/30 14:08:35 agc Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q3 branch:
@@ -9,3 +9,5 @@ Pullup ticket 114 - requested by Matthias Scheler
 security fix for apache
 Pullup ticket 115 - requested by Lubomir Sedlacik
 fix bug in lftp
+Pullup ticket 116 - requested by Eric Gillespie
+security fix for subversion
