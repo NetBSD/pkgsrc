@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.42 1998/08/21 16:37:57 tsarna Exp $
+# $NetBSD: Packages.txt,v 1.43 1998/08/24 10:31:00 agc Exp $
 ###########################################################################
 
 			==========================
@@ -516,14 +516,14 @@ of when dealing with the PLIST file (or files, see below!).
    usually only a problem when using ports from FreeBSD.
 
  * ldconfig:
-   Two issues here. First, if there's a @exec command calling ldconfig,
-   also add a @unexec command, so the ld.so cache doesn't grow into
-   eternity with libs no longer available (this also makes debugging the
-   package itself easier).
-
-   The second issue is that there's no ldconfig command on some of the
-   platforms NetBSD runs on, e.g. alpha. For this, change the ldconfig call
-   to "ldconfig || /usr/bin/true".
+   Don't put any ldconfig commands into your PLIST files, as they will
+   cause problems.  All shared object caching is done automatically in
+   NetBSD (this takes place when you see the "Automatic shared object
+   handling" message), and so you can leave this out.  If any shared
+   objects are found in the package, they will be dealt with
+   automatically, running ldconfig on platforms which need it, and not
+   otherwise.  This is usually only a problem when using ports from
+   FreeBSD.
 
  * ${MACHINE_ARCH}, ${MACHINE_GNU_ARCH}:
    Some packages like emacs and perl embed information about which
@@ -535,8 +535,8 @@ of when dealing with the PLIST file (or files, see below!).
    packages that use GNU autoconfigure.
 
    Legacy note: There used to be a symbol "<$ARCH>" that was replaced by
-   the output of "uname -m", but that's no longer supported and will be
-   removed soon.
+   the output of "uname -m", but that's no longer supported and has been
+   removed.
 
  * Manpage-compression:
    Manpages should be installed in compressed form if MANZ is set (in
@@ -666,10 +666,7 @@ resulting patches to your pkg's patches-directory.
 
 Here's how to use libtool in a pkg in seven simple steps:
 
-1. Define LIBTOOL=${PREFIX}/bin/libtool in MAKE_ENV, or define it in a
-   patch to the native Makefile.  Make the pkg depend on libtool with:
-
-	BUILD_DEPENDS= ${PREFIX}/bin/libtool:../../devel/libtool
+1. Add USE_LIBTOOL= yes to the package Makefile.
 
 2. For library objects, use "${LIBTOOL} --mode=compile ${CC}" in place of
    ${CC}.  You could even add it to the definition of CC, if only
@@ -720,9 +717,10 @@ Here's how to use libtool in a pkg in seven simple steps:
    include the ELF symlink files; those are automatic. 
 
 FOR GNU PKGS THAT ALREADY SUPPORT LIBTOOL: 
-Put LIBTOOL=${PREFIX}/bin/libtool in CONFIGURE_ENV, and possibly modify the
-"configure" script not to check for or configure its own libtool.  See the
-libwww pkg, patch-ab, for the quick way to bypass the pkg's own libtool.
+Add USE_LIBTOOL=yes to the package Makefile.  You may possibly have to
+modify the "configure" script not to check for or configure its own
+libtool.  See the libwww pkg, patch-ab, for the quick way to bypass
+the pkg's own libtool.
 
 
  6.3 Gotchas of FreeBSD ports
