@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.17 2005/02/09 16:09:43 drochner Exp $
+$NetBSD: distinfo,v 1.18 2005/02/23 17:15:10 agc Exp $
 
 SHA1 (emacs-21.3.tar.gz) = a8aae1b619e50ed6fed5b1351b54b38ed98c61b8
+RMD160 (emacs-21.3.tar.gz) = 07171ac4c7085904da70ceb097c39dc21983d9ca
 Size (emacs-21.3.tar.gz) = 20399831 bytes
 SHA1 (patch-aa) = fee6fe91fb9a2f75300903cc5c6e023bb8de6be5
 SHA1 (patch-ab) = 11aaeecc08619f3962b1a07c1db01dc9c7a2c5a7

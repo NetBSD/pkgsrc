@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.19 2005/02/15 18:13:41 tv Exp $
+$NetBSD: distinfo,v 1.20 2005/02/23 17:15:12 agc Exp $
 
 SHA1 (pine4.62.tar.bz2) = 7011a1030fcf3f78d8fb7d5b7bf2cd46037668f7
+RMD160 (pine4.62.tar.bz2) = f906b4db71aa72a1c4f638d0ea046e352a002c34
 Size (pine4.62.tar.bz2) = 3079348 bytes
 SHA1 (patch-aa) = fce5cd9394653f83efb39386141dabaf58a52079
 SHA1 (patch-ab) = 5bf382ae3eebaa47602e0ecd0e28161b5ee1e965

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2005/01/05 15:27:40 adam Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 17:15:10 agc Exp $
 
 SHA1 (cooledit-3.17.14.tar.gz) = fdab5a0625ca41be6228a07d378ceda3fa9846c7
+RMD160 (cooledit-3.17.14.tar.gz) = 4f511d996ce42bb9164dd43d4fef3200e48a0595
 Size (cooledit-3.17.14.tar.gz) = 1671619 bytes
 SHA1 (patch-ab) = d85ef6100fe3f9dcecdb88af57d585a8ea0881ae
 SHA1 (patch-ad) = 09de32bf6e88b11136acf13756dbdc9a77003673
