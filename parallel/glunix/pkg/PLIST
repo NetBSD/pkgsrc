@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/05/27 09:53:38 wiz Exp $
 now/include/glib/debug.h
 now/include/glib/idle.h
 now/include/glib/perf.h
@@ -15,6 +15,7 @@ now/lib/perl-lib/Time/Timezone.pm
 now/lib/perl-lib/set.pl
 now/lib/libglunix.a
 now/lib/libglunix.so.1.0
+now/lib/${MACHINE_ARCH}-${OPSYS}-tcp/.keepme
 now/bin/${MACHINE_ARCH}-${OPSYS}-tcp/master
 now/bin/${MACHINE_ARCH}-${OPSYS}-tcp/daemon
 now/bin/GLUnix-bin
@@ -123,4 +124,5 @@ now/man/html1/glunix.html
 @dirrm now/bin
 @dirrm now/include/glib
 @dirrm now/include
+@dirrm now
 @unexec /bin/rm -rf %D/now/data
