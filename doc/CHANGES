@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6188 2004/06/08 14:54:13 jschauma Exp $
+$NetBSD: CHANGES,v 1.6189 2004/06/09 08:26:11 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2850,3 +2850,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated fontconfig to 2.2.95 [dmcmahill 2004-06-07]
 	Updated sun-jre13 to 1.0.12 [jschauma 2004-06-08]
 	Updated sun-jdk13 to 1.0.12 [jschauma 2004-06-08]
+	Updated airportbasestationconfig to 1.5.2nb2 [tron 2004-06-09]
