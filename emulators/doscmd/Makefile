@@ -1,0 +1,24 @@
+# $NetBSD: Makefile,v 1.1 1998/07/18 04:46:11 tsarna Exp $
+#
+
+DISTNAME=	doscmd-19960502-2
+PKGNAME=	doscmd-19960502.2
+CATEGORIES=	emulators
+MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/arch/i386/doscmd/
+
+MAINTAINER=	tsarna@NetBSD.ORG
+
+ONLY_FOR_ARCHS=	i386
+
+WRKSRC=		${WRKDIR}/doscmd
+
+MAKE_ENV+=      X11BASE=${X11BASE}
+
+do-configure:
+	@cd ${WRKSRC} && \
+	${SED} "s=%PREFIX%=${PREFIX}=" < doscmd.1 >doscmd.1.new && \
+	${MV} doscmd.1.new doscmd.1 && \
+	${SED} "s=%PREFIX%=${PREFIX}=" < doscmd_loader.c >dl.new && \
+	${MV} dl.new doscmd_loader.c
+
+.include "../../mk/bsd.pkg.mk"
