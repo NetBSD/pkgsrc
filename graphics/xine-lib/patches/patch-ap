@@ -1,0 +1,23 @@
+$NetBSD: patch-ap,v 1.1 2003/10/05 09:27:13 mycroft Exp $
+
+--- src/dxr3/Makefile.am.orig	2003-07-13 19:29:04.000000000 +0000
++++ src/dxr3/Makefile.am	2003-10-05 09:04:21.000000000 +0000
+@@ -18,6 +18,9 @@
+ if HAVE_LIBRTE
+ link_rte = -lrte
+ endif
++if HAVE_XINERAMA
++link_xinerama = -lXinerama
++endif
+ 
+ lib_LTLIBRARIES = $(dxr3_modules) 
+ 
+@@ -42,7 +45,7 @@
+ 	dxr3_spu_encoder.c \
+ 	video_out_dxr3.c 
+ 
+-xineplug_vo_out_dxr3_la_LIBADD = $(link_fame) $(link_rte) $(link_x_libs) $(XINE_LIB)
++xineplug_vo_out_dxr3_la_LIBADD = $(link_fame) $(link_rte) $(link_xinerama) $(link_x_libs) $(XINE_LIB)
+ xineplug_vo_out_dxr3_la_LDFLAGS = -avoid-version -module
+ 
+ noinst_HEADERS = \

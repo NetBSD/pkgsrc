@@ -1,7 +1,7 @@
-$NetBSD: disabled-patch-aa,v 1.1 2003/10/02 14:20:35 mycroft Exp $
+$NetBSD: disabled-patch-aa,v 1.2 2003/10/05 09:27:13 mycroft Exp $
 
 --- configure.ac.orig	2003-08-02 11:45:26.000000000 +0000
-+++ configure.ac	2003-10-02 13:03:11.000000000 +0000
++++ configure.ac	2003-10-05 09:10:13.000000000 +0000
 @@ -301,6 +301,9 @@
  AC_CHECK_LIB(nsl, gethostbyname, NET_LIBS="-lnsl $NET_LIBS",)
  AC_SUBST(NET_LIBS)
@@ -30,7 +30,17 @@ $NetBSD: disabled-patch-aa,v 1.1 2003/10/02 14:20:35 mycroft Exp $
  AC_SUBST(OPENGL_LIBS)
  AC_SUBST(GLUT_LIBS)
  AC_SUBST(GLU_LIBS)
-@@ -761,9 +764,10 @@
+@@ -456,8 +459,7 @@
+ dnl ---------------------------------------------
+ 
+ AC_CHECK_LIB(Xinerama, XineramaQueryExtension, 
+-             [X_LIBS="$X_LIBS -lXinerama"
+-              AC_DEFINE(HAVE_XINERAMA,1,[Define this if you have libXinerama installed])
++             [AC_DEFINE(HAVE_XINERAMA,1,[Define this if you have libXinerama installed])
+               ac_have_xinerama="yes"],,
+              [$X_LIBS $X_PRE_LIBS -lXext $X_EXTRA_LIBS])
+ AM_CONDITIONAL(HAVE_XINERAMA, test x$ac_have_xinerama = "xyes")
+@@ -761,9 +763,10 @@
  dnl ---------------------------------------------
  dnl gnome-vfs support
  dnl ---------------------------------------------

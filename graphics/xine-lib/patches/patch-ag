@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.3 2003/10/02 14:20:35 mycroft Exp $
+$NetBSD: patch-ag,v 1.4 2003/10/05 09:27:13 mycroft Exp $
 
 --- configure.orig	2003-08-02 13:50:43.000000000 +0000
-+++ configure	2003-10-02 13:03:23.000000000 +0000
++++ configure	2003-10-05 09:10:21.000000000 +0000
 @@ -467,7 +467,7 @@
  # include <unistd.h>
  #endif"
@@ -126,7 +126,15 @@ $NetBSD: patch-ag,v 1.3 2003/10/02 14:20:35 mycroft Exp $
  	       echo "$as_me:$LINENO: checking for glutInit in -lglut" >&5
  echo $ECHO_N "checking for glutInit in -lglut... $ECHO_C" >&6
  if test "${ac_cv_lib_glut_glutInit+set}" = set; then
-@@ -20505,102 +20565,7 @@
+@@ -15265,7 +15325,6 @@
+ echo "$as_me:$LINENO: result: $ac_cv_lib_Xinerama_XineramaQueryExtension" >&5
+ echo "${ECHO_T}$ac_cv_lib_Xinerama_XineramaQueryExtension" >&6
+ if test $ac_cv_lib_Xinerama_XineramaQueryExtension = yes; then
+-  X_LIBS="$X_LIBS -lXinerama"
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define HAVE_XINERAMA 1
+@@ -20505,102 +20564,7 @@
  fi
  
  
@@ -230,7 +238,7 @@ $NetBSD: patch-ag,v 1.3 2003/10/02 14:20:35 mycroft Exp $
  
  
  if test x"$no_gnome_vfs" != "xyes"; then
-@@ -24379,6 +24344,7 @@
+@@ -24379,6 +24343,7 @@
  s,@HAVE_NVTV_TRUE@,$HAVE_NVTV_TRUE,;t t
  s,@HAVE_NVTV_FALSE@,$HAVE_NVTV_FALSE,;t t
  s,@NET_LIBS@,$NET_LIBS,;t t
