@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/05/22 05:48:14 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/05/22 05:50:51 jlam Exp $
 #
 
 DISTNAME=	cdecl-2.5
@@ -17,9 +17,11 @@ ALL_TARGET=	cdecl
 .include "../../devel/readline/Makefile.readline"
 
 CFLAGS+=	-I${WRKINCDIR}
-LDFLAGS+=	-L${WRKINCDIR}
+LDFLAGS+=	-L${WRKLIBDIR}
 
 EGDIR=		${PREFIX}/share/examples/cdecl
+
+pre-configure: link-readline-headers link-readline-libs
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
