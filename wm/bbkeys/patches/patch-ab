@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1 2002/03/18 09:23:03 wiz Exp $
+
+--- src/bbkeys.cc.orig	Tue Jan 15 04:21:25 2002
++++ src/bbkeys.cc
+@@ -676,10 +676,10 @@
+ 		    char *args = new char[strlen(begin) + strlen(bbkeys_rcfile) +1];
+ 				sprintf(args, "%s%s", begin, bbkeys_rcfile);
+ 			 	res = execlp("rxvt", "rxvt", "-bg", "black", "-fg", "red",
+-								"-e", args, NULL);
++								"-e", "bbkeysconf.pl", "-rcfile", bbkeys_rcfile, NULL);
+ 			 	if (res != 0) {
+ 						execlp("xterm", "xterm", "-bg", "black", "-fg",
+-								"red", "-e", args, NULL);
++						       "red", "-e", "bbkeysconf.pl", "-rcfile", bbkeys_rcfile, NULL);
+ 			 	}
+ 				delete args;
+ 			}

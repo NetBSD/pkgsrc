@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2002/03/18 09:23:03 wiz Exp $
+
+--- Makefile.in.orig	Fri Jan 18 14:34:58 2002
++++ Makefile.in
+@@ -78,7 +78,7 @@
+ 
+ SUBDIRS = src data doc redhat
+ 
+-docdir = $(prefix)/doc/bbkeys
++docdir = $(prefix)/share/doc/bbkeys
+ doc_DATA = README AUTHORS BUGS ChangeLog NEWS
+ EXTRA_DIST = $(doc_DATA) debian redhat
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
