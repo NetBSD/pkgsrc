@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/07/23 15:48:47 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2004/09/05 18:06:40 snj Exp $
 #
 
 DISTNAME=	speex-1.0.4
@@ -18,6 +18,9 @@ PKGCONFIG_OVERRIDE=	speex.pc.in
 CONFLICTS=	Speex-[0-9]*
 
 CONFIGURE_ARGS+=	--with-ogg-dir="${BUILDLINK_PREFIX.libogg}"
+
+# Avoid an ICE in gcc2 on sparc64
+CONFIGURE_ENV+=         F77=${FALSE}
 
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
