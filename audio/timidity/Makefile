@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/05/09 21:26:53 hubertf Exp $
+# $NetBSD: Makefile,v 1.14 1998/06/18 16:15:11 agc Exp $
 #
 
 DISTNAME=       timidity-0.2i
@@ -23,7 +23,6 @@ IS_INTERACTIVE= yes
 .endif
 EXTRACT_ONLY=   ${DISTNAME}.tar.gz
 INSTALL_TARGET= install.all
-MAN1=           timidity.1
 
 do-configure:
 	@cd ${WRKSRC} && \

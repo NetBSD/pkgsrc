@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:10 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/06/18 16:15:10 agc Exp $
 #
 
 DISTNAME=	nspmod-0.1
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.jeton.or.jp/users/toru/www/orgsoft/nspmod/	\
 MASTER_SITE_SUBDIR=	apps/sound/players
 
 MAINTAINER=	mycroft@NetBSD.ORG
-
-MAN1=		nspmod.1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nspmod ${PREFIX}/bin
