@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.kde3,v 1.4 2004/01/15 09:33:32 markd Exp $
+# $NetBSD: Makefile.kde3,v 1.5 2004/01/24 14:01:53 grant Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # KDE3-distributed packages (they all share common configure and build
@@ -17,7 +17,7 @@ EXTRACT_SUFX?=	.tar.bz2
 MAINTAINER?=	skrll@NetBSD.org
 HOMEPAGE?=	http://www.kde.org/
 
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool
