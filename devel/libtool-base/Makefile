@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/02/13 00:46:00 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2004/02/14 16:35:33 jlam Exp $
 #
 
 PKGNAME=	${DISTNAME:C/-/-base-/}
@@ -23,6 +23,8 @@ TEST_TARGET=	check
     !empty(MACHINE_PLATFORM:MNetBSD-1.4.[12]-sparc)
 DEPENDS+=	c++rt0>=1.0:../../sysutils/c++rt0
 .endif
+
+CONFIG_STATUS_OVERRIDE=	# libtool actually uses config.status during the build
 
 .if ${OPSYS} == "NetBSD"
 .  if !exists(/usr/libexec/ld.so) && !exists(/usr/libexec/ld.elf_so)
