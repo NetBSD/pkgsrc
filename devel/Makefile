@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 1999/08/24 13:24:50 hwr Exp $
+# $NetBSD: Makefile,v 1.71 1999/08/26 13:11:56 proff Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -107,6 +107,7 @@
     SUBDIR += p5-Time-HiRes
 #    SUBDIR += p5-TraceFuncs
 #    SUBDIR += pccts
+    SUBDIR += pcre
     SUBDIR += prcs
     SUBDIR += pth
     SUBDIR += pth-current
