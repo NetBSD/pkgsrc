@@ -1,0 +1,16 @@
+#!@SH@
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2003/06/16 03:02:04 kim Exp $
+
+EGDIR="@EGDIR@"
+
+case "${STAGE}" in
+POST-INSTALL)
+    cd ${PKG_SYSCONFDIR} &&
+    ${LN} -s ${EGDIR}/templates
+    ;;
+DEINSTALL)
+    cd ${PKG_SYSCONFDIR} &&
+    ${RM} -f templates
+    ;;
+esac
