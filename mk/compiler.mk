@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.11 2003/09/24 03:01:02 grant Exp $
+# $NetBSD: compiler.mk,v 1.12 2003/09/24 12:22:04 grant Exp $
 
 # This Makefile fragment implements handling for supported
 # C/C++/fortran compilers.
@@ -44,8 +44,6 @@
 
 .if !defined(COMPILER_MK)
 COMPILER_MK=	# defined
-
-.include "../../mk/bsd.prefs.mk"
 
 # Do a dance to determine which version of gcc is being used, if any,
 # and whether it satisfies GCC_REQD.
@@ -133,6 +131,7 @@ BUILD_DEPENDS+=		gcc>=${GCC_REQD}:../../lang/gcc
 .    endif
 .  endif	# buildlink2
 
+_CC_IS_GCC=		YES
 PATH:=			${_GCC_PREFIX}bin:${PATH}
 CC=			${_GCC_PREFIX}bin/gcc
 CPP=			${_GCC_PREFIX}bin/cpp
@@ -167,6 +166,7 @@ BUILD_DEPENDS+=		gcc3>=${GCC_REQD}:../../lang/gcc3
 .    endif
 .  endif	# buildlink2
 
+_CC_IS_GCC=		YES
 PATH:=			${_GCC_PREFIX}bin:${PATH}
 CC=			${_GCC_PREFIX}bin/gcc
 CPP=			${_GCC_PREFIX}bin/cpp
@@ -180,6 +180,21 @@ PKG_FC=			${F77}
 .if (defined(USE_GCC2) || defined(USE_GCC3)) && defined(USE_GCC_SHLIB)
 _GCC_LDFLAGS=		-L${_GCC_ARCHDIR} -Wl,${RPATH_FLAG}${_GCC_ARCHDIR} -L${_GCC_PREFIX}lib -Wl,${RPATH_FLAG}${_GCC_PREFIX}lib
 LDFLAGS+=		${_GCC_LDFLAGS}
+.endif
+
+# CC_VERSION can be tested by package Makefiles to tweak things based
+# on the compiler being used. This is only functional for gcc right now.
+#
+CC_VERSION?=		# empty
+.if defined(_CC_IS_GCC)
+.  if !defined(_CC_VERSION)
+_CC_VERSION!=		if ${CC} -dumpversion > /dev/null 2>&1; then \
+				${ECHO} `${CC} -dumpversion`; \
+			else \
+				${ECHO} ""; \
+			fi
+.  endif
+CC_VERSION=		gcc-${_CC_VERSION}
 .endif
 
 # The SunPro C++ compiler doesn't support passing linker flags with
