@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2000/09/11 20:46:38 fredb Exp $
+
+--- capplets/Makefile.in.orig	Tue May 23 18:09:46 2000
++++ capplets/Makefile.in	Mon Sep 11 08:53:43 2000
+@@ -129,7 +129,7 @@
+ cxxflags_set = @cxxflags_set@
+ l = @l@
+ 
+-always_built_SUBDIRS = desktop-links mouse-properties 	screensaver-properties background-properties         theme-switcher sound-properties 	ui-properties url-properties gnome-edit-properties 	session-properties wm-properties keyboard-properties 	mime-type
++always_built_SUBDIRS = desktop-links mouse-properties 	background-properties         theme-switcher sound-properties 	ui-properties url-properties gnome-edit-properties 	session-properties wm-properties keyboard-properties 	mime-type
+ 
+ 
+ SUBDIRS = $(always_built_SUBDIRS)
