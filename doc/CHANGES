@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9542 2005/03/22 08:18:04 abs Exp $
+$NetBSD: CHANGES,v 1.9543 2005/03/22 09:04:58 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1449,4 +1449,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated dsniff to 2.3nb4 [wiz 2005-03-22]
 	Updated amarok to 1.2.2 [seb 2005-03-22]
 	Updated cpuflags to 0.83 [abs 2005-03-22]
+	Updated nail to 11.22 [cjep 2005-03-22]
 
