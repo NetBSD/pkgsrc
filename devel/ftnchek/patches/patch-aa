@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1 2000/12/08 21:00:57 jtb Exp $
+
+--- Makefile.in.orig	Mon Oct  2 12:56:30 2000
++++ Makefile.in
+@@ -89,7 +89,7 @@
+ manext		= .1
+ sgimansubdir	= @sgimansubdir@
+ libdir		= @libdir@/ftnchek
+-lispdir		= @lispdir@
++lispdir		= $(prefix)/share/emacs/site-lisp
+ 
+ # Define suffix for executables, for non-unix systems which have one.
+ EXE		= @EXE@
+@@ -470,14 +470,9 @@
+ 
+ #  The emacs lisp file will be installed only if lispdir exists.
+ install-lisp:
+-	@if test -d "$(lispdir)" ; \
+-	then \
+-	  echo $(CP) ftnchek.el $(lispdir)/ftnchek.el ; \
+-	  if $(CP) ftnchek.el $(lispdir)/ftnchek.el ; \
+-	  then \
+-	     echo "If desired, use emacs to byte-compile $(lispdir)/ftnchek.el"; \
+-	  fi \
+-	fi
++	-mkdir -p $(lispdir)
++	-cp ftnchek.el $(lispdir)/ftnchek.el
++	-echo "If desired, use emacs to byte-compile $(lispdir)/ftnchek.el"
+ 
+ # Remove everything that the install target installed.
+ uninstall:
