@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:55:56 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/30 10:41:26 jmmv Exp $
 
 DISTNAME=		install_flash_player_6_${DISTUNAME}
 PKGNAME=		phoenix-bin-flash-${FLASH_VERS:S/r/./}
@@ -32,6 +32,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
 CHECK_SHLIBS=		no
@@ -48,6 +49,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/flashplayer.xpt ${NS_PLUGINS_DIR}
 	${INSTALL_DATA} ${WRKSRC}/libflashplayer.so ${NS_PLUGINS_DIR}
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"
