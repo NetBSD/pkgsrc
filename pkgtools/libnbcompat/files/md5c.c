@@ -1,4 +1,4 @@
-/*	$NetBSD: md5c.c,v 1.4 2003/09/05 18:36:01 jlam Exp $	*/
+/*	$NetBSD: md5c.c,v 1.5 2004/08/16 17:24:56 jlam Exp $	*/
 
 /*
  * This file is derived from the RSA Data Security, Inc. MD5 Message-Digest
@@ -29,10 +29,7 @@
  * documentation and/or software.
  */
 
-#if HAVE_CONFIG_H
 #include "nbcompat/nbconfig.h"
-#endif
-
 #include "nbcompat/nbtypes.h"
 
 #if defined(_KERNEL) || defined(_STANDALONE)

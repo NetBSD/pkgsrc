@@ -173,6 +173,9 @@
 /* Define to 1 if the `queue' macros are supplied by the library. */
 #undef HAVE_NBCOMPAT_QUEUE
 
+/* Define to 1 if the `regex' functions are built into the library. */
+#undef HAVE_NBCOMPAT_REGEX
+
 /* Define to 1 if the `RMD160*' functions are built into the library. */
 #undef HAVE_NBCOMPAT_RMD160
 
@@ -215,6 +218,9 @@
 
 /* Define to 1 if you have the <pwd.h> header file. */
 #undef HAVE_PWD_H
+
+/* Define to 1 if you have the <regex.h> header file. */
+#undef HAVE_REGEX_H
 
 /* Define to 1 if you have the <rmd160.h> header file. */
 #undef HAVE_RMD160_H

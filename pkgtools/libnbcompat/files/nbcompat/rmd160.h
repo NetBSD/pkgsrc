@@ -1,4 +1,4 @@
-/*	$NetBSD: rmd160.h,v 1.1 2003/09/05 18:36:08 jlam Exp $	*/
+/*	$NetBSD: rmd160.h,v 1.2 2004/08/16 17:24:57 jlam Exp $	*/
 
 /********************************************************************\
  *
@@ -21,8 +21,8 @@
  * from OpenBSD: rmd160.h,v 1.4 1999/08/16 09:59:04 millert Exp
  */
 
-#ifndef _RMD160_H_
-#define _RMD160_H_
+#ifndef _NBCOMPAT_RMD160_H_
+#define _NBCOMPAT_RMD160_H_
 
 typedef struct {
 	u_int32_t	state[5];	/* state (ABCDE) */
@@ -43,4 +43,4 @@ char	*RMD160Data(const u_char *, size_t, char *);
 #endif /* _KERNEL */
 __END_DECLS
 
-#endif  /* !_RMD160_H_ */
+#endif  /* !_NBCOMPAT_RMD160_H_ */

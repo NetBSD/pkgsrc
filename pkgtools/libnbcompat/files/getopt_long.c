@@ -1,4 +1,4 @@
-/*	$NetBSD: getopt_long.c,v 1.6 2004/03/12 15:21:13 grant Exp $	*/
+/*	$NetBSD: getopt_long.c,v 1.7 2004/08/16 17:24:56 jlam Exp $	*/
 
 /*-
  * Copyright (c) 2000 The NetBSD Foundation, Inc.
@@ -36,10 +36,6 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#if HAVE_CONFIG_H
-#include "nbcompat/nbconfig.h"
-#endif
-
 #include "nbcompat.h"
 
 #if HAVE_SYS_CDEFS_H
@@ -47,7 +43,7 @@
 #endif
 
 #if defined(LIBC_SCCS) && !defined(lint)
-__RCSID("$NetBSD: getopt_long.c,v 1.6 2004/03/12 15:21:13 grant Exp $");
+__RCSID("$NetBSD: getopt_long.c,v 1.7 2004/08/16 17:24:56 jlam Exp $");
 #endif /* LIBC_SCCS and not lint */
 
 /* #include "namespace.h" */
@@ -71,10 +67,10 @@ __RCSID("$NetBSD: getopt_long.c,v 1.6 2004/03/12 15:21:13 grant Exp $");
 #endif
 
 #ifdef REPLACE_GETOPT
+#if 0
 #ifndef __ELF__
 #define _getopt getopt
 #else
-#if 0
 #ifdef __weak_alias
 __weak_alias(getopt,_getopt)
 #endif
@@ -89,11 +85,13 @@ char    *optarg;		/* argument associated with option */
 static int optreset;
 #endif
 
+#if 0
 #ifndef __ELF__
 #define _getopt_long getopt_long
 #else
 #ifdef __weak_alias
 __weak_alias(getopt_long,_getopt_long)
+#endif
 #endif
 #endif
 

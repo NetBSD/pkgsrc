@@ -1,4 +1,4 @@
-/*	$NetBSD: vis.c,v 1.5 2004/03/21 00:31:54 bouyer Exp $	*/
+/*	$NetBSD: vis.c,v 1.6 2004/08/16 17:24:57 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1999 The NetBSD Foundation, Inc.
@@ -34,10 +34,7 @@
  * SUCH DAMAGE.
  */
 
-#if HAVE_CONFIG_H
 #include "nbcompat/nbconfig.h"
-#endif
-
 #include "nbcompat/nbtypes.h"
 
 #if HAVE_SYS_CDEFS_H
@@ -45,10 +42,10 @@
 #endif
 
 #if defined(LIBC_SCCS) && !defined(lint)
-__RCSID("$NetBSD: vis.c,v 1.5 2004/03/21 00:31:54 bouyer Exp $");
+__RCSID("$NetBSD: vis.c,v 1.6 2004/08/16 17:24:57 jlam Exp $");
 #endif /* LIBC_SCCS and not lint */
 
-#include "namespace.h"
+/* #include "namespace.h" */
 #include <sys/types.h>
 
 #if HAVE_ASSERT_H

@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.46 2004/08/13 04:38:02 jlam Exp $
+dnl $NetBSD: configure.ac,v 1.47 2004/08/16 17:24:56 jlam Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -63,6 +63,19 @@ AC_CHECK_HEADERS([sys/queue.h])
 AC_DEFINE(HAVE_NBCOMPAT_QUEUE)
 AH_TEMPLATE([HAVE_NBCOMPAT_QUEUE], [
 	Define to 1 if the `queue' macros are supplied by the library.
+])
+
+AC_CHECK_HEADERS([regex.h])
+AC_CHECK_FUNC(regexec, [:], [
+	AC_DEFINE(HAVE_NBCOMPAT_REGEX)
+	AH_TEMPLATE([HAVE_NBCOMPAT_REGEX], [
+		Define to 1 if the `regex' functions are built into the
+		library.
+        ])
+	AC_LIBOBJ(regcomp)
+	AC_LIBOBJ(regerror)
+	AC_LIBOBJ(regexec)
+	AC_LIBOBJ(regfree)
 ])
 
 AC_CHECK_HEADERS([md5.h], [

@@ -1,4 +1,4 @@
-/*	$NetBSD: fts.h,v 1.3 2003/12/19 22:23:00 grant Exp $	*/
+/*	$NetBSD: fts.h,v 1.4 2004/08/16 17:24:57 jlam Exp $	*/
 
 /*
  * Copyright (c) 1989, 1993
@@ -31,8 +31,8 @@
  *	@(#)fts.h	8.3 (Berkeley) 8/14/94
  */
 
-#ifndef	_FTS_H_
-#define	_FTS_H_
+#ifndef	_NBCOMPAT_FTS_H_
+#define	_NBCOMPAT_FTS_H_
 
 typedef struct {
 	struct _ftsent *fts_cur;	/* current node */
@@ -124,4 +124,4 @@ FTS	*fts_open (char * const *, int,
 FTSENT	*fts_read (FTS *);
 int	 fts_set (FTS *, FTSENT *, int);
 
-#endif /* !_FTS_H_ */
+#endif /* !_NBCOMPAT_FTS_H_ */
