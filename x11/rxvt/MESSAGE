@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2003/03/27 07:14:25 wiz Exp $
+$NetBSD: MESSAGE,v 1.5 2003/04/28 20:31:29 martin Exp $
 
-The multibyte character encoding support is compiled in, but
-by default disabled. To enable it, please edit the file 
-${PREFIX}/lib/X11/app-defaults/Rxvt.
+The multibyte character encoding support and greek input method are
+compiled in, but by default disabled. To enable this features, please
+edit the file  ${PREFIX}/lib/X11/app-defaults/Rxvt.
 ===========================================================================
