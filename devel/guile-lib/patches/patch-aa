@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/12/03 16:50:22 wiz Exp $
+
+--- src/guile-lib/doc/Makefile.in.orig	2004-08-04 10:38:19.000000000 -0400
++++ src/guile-lib/doc/Makefile.in
+@@ -4,7 +4,7 @@ texi-files	:= $(wildcard $(srcdir)/*.tex
+ endif
+ 
+ theinfo := guile-library.info
+-info-install-dir := $(destdir)$(prefix)/share/info
++info-install-dir := $(destdir)$(prefix)/info
+ 
+ all: $(theinfo)
+ 
+@@ -19,7 +19,7 @@ clean-doc-info:
+ 	rm -rf $(theinfo)
+ 
+ %.info: %.texi
+-	makeinfo --force -I $(srcdir) -o $@ $<
++	makeinfo --no-split --force -I $(srcdir) -o $@ $<
+ 
+ # arch-tag: 385d1967-44cf-41eb-b991-cea96c3f3971
+ 
