@@ -1,31 +1,31 @@
-$NetBSD: patch-aa,v 1.2 1998/08/27 22:08:38 frueauf Exp $
+$NetBSD: patch-aa,v 1.3 1998/09/28 10:35:56 frueauf Exp $
 
---- Makefile.orig	Wed Aug 26 14:32:18 1998
-+++ Makefile	Thu Aug 27 23:23:26 1998
-@@ -2,15 +2,15 @@
- VERSION = 0.9.5
+--- configure.orig	Thu Sep 10 17:32:03 1998
++++ configure	Tue Sep 15 14:06:07 1998
+@@ -782,14 +782,14 @@
+ test -z "$INSTALL_DATA" && INSTALL_DATA='${INSTALL} -m 644'
  
- # Define BASENAME if your libc doesn't have it
--#BASENAME=-DBASENAME
-+BASENAME=-DBASENAME
  
--DESTDIR = /usr/local
-+DESTDIR = ${PREFIX}
- 
- SHELL = /bin/sh
- CC = gcc
--CFLAGS = -O2 -Wall $(BASENAME)
--LIBS = -lcurses
--LFLAGS =
-+CFLAGS = -O2 -Wall $(BASENAME) -I${PREFIX}/include
-+LIBS = -lncurses
-+LFLAGS =-L${PREFIX}/lib
- 
- INCL = hexedit.h
- SRCS = hexedit.c display.c mark.c page.c file.c interact.c misc.c search.c
-@@ -63,4 +63,4 @@
- 	ci -l -mdefault *
- 
- TAGS:
--	etags *.[hc]
-+	etags *.[hc]
+-echo $ac_n "checking for initscr in -lcurses""... $ac_c" 1>&6
+-echo "configure:787: checking for initscr in -lcurses" >&5
++echo $ac_n "checking for initscr in -lncurses""... $ac_c" 1>&6
++echo "configure:787: checking for initscr in -lncurses" >&5
+ ac_lib_var=`echo curses'_'initscr | sed 'y%./+-%__p_%'`
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lcurses  $LIBS"
++LIBS="-L${libdir} -lncurses  $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 795 "configure"
+ #include "confdefs.h"
+@@ -817,7 +817,7 @@
+ fi
+ if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
+-  LIBS="$LIBS -lcurses"
++  LIBS="$LIBS -lncurses"
+ else
+   echo "$ac_t""no" 1>&6
+ echo $ac_n "checking for initscr in -lncurses""... $ac_c" 1>&6
