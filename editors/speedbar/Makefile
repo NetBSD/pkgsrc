@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/08 20:50:11 cjones Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/09 15:24:36 wiz Exp $
 #
 
 DISTNAME=	speedbar-0.13a
@@ -34,7 +34,6 @@ IMAGES=	sb-dir-plus.xpm sb-dir-minus.xpm sb-dir.xpm sb-pg-plus.xpm	\
 	sb-pg-minus.xpm sb-pg.xpm sb-mail.xpm sb-tag-plus.xpm		\
 	sb-tag-minus.xpm sb-tag.xpm sb-tag-gt.xpm sb-tag-v.xpm		\
 	sb-tag-type.xpm sb-image.el
-
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${LISPDIR}
