@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5306 2004/03/28 06:35:03 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5307 2004/03/28 10:31:51 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1528,3 +1528,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated naim to 0.11.6.7 [snj 2004-03-28]
 	Updated djbdns to 1.05nb4 [taca 2004-03-28]
 	Updated ntp4 to 4.2.0nb3 [xtraeme 2004-03-28]
+	Updated zsh to 4.2.0 [recht 2004-03-28]
