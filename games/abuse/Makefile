@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/24 13:30:55 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/07/11 00:11:53 wiz Exp $
 
 DISTNAME=		abuse_pd
 PKGNAME=		abuse-2.0
@@ -15,6 +15,7 @@ USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		LDFLAGS="${X11_LDFLAGS}"
 USE_GNU_TOOLS+=		make
+USE_LANGUAGES+=		c c++
 
 NOT_FOR_PLATFORM=	NetBSD-*-arm32
 
