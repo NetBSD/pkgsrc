@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/04/26 10:34:09 recht Exp $
+# $NetBSD: Makefile,v 1.16 2004/06/05 00:00:17 xtraeme Exp $
 # FreeBSD Id: Makefile,v 1.9 1999/02/11 16:01:16 jfieber Exp
 #
 
@@ -12,6 +12,8 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	rh@NetBSD.ORG
 HOMEPAGE=	http://www.iso.ch/cate/d16387.html
 COMMENT=	Character entity sets from ISO 8879:1986 (SGML)
+
+PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 WRKSRC=		${WRKDIR}
 NO_MTREE=       yes

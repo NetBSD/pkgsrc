@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/05/06 16:23:16 minskim Exp $
+# $NetBSD: Makefile,v 1.24 2004/06/04 23:58:12 xtraeme Exp $
 #
 
 DISTNAME=		scrollkeeper-0.3.14
@@ -10,6 +10,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scrollkeeper/}	\
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://scrollkeeper.sourceforge.net/
 COMMENT=		Open Document Cataloging Project
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_USES_MSGFMT=	yes
 DEPENDS=		docbook-xml>=4.2:../../textproc/docbook-xml

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2004/05/03 20:55:36 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.19 2004/06/05 00:09:50 xtraeme Exp $
 #
 
 DISTNAME=		GConf-2.6.1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/projects/gconf/
 COMMENT=		Configuration database system used by GNOME (v2)
+
+PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 BUILD_USES_MSGFMT=	yes
 
