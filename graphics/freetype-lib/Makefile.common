@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2001/05/03 04:28:25 jlam Exp $
+# $NetBSD: Makefile.common,v 1.11 2001/05/28 03:16:44 jlam Exp $
 
 DISTNAME=		freetype-${FT_VERS}
 FT_VERS=		1.3.1
@@ -11,19 +11,25 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.freetype.org/
 
 BUILD_USES_MSGFMT=	# defined
-USE_LIBINTL=		# defined
 
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-locale-dir=${PREFIX}/${PKGLOCALEDIR}/locale
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
-
-CFLAGS+=		-I${LOCALBASE}/include
-CPPFLAGS+=		-I${LOCALBASE}/include
 
 DISTINFO_FILE=		${.CURDIR}/../../graphics/freetype-lib/distinfo
 PATCHDIR=		${.CURDIR}/../../graphics/freetype-lib/patches
+
+.include "../../devel/gettext-lib/buildlink.mk"
+
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
+CONFIGURE_ENV+=		LIBS="${LIBS}"
+
+CPPFLAGS+=		-I${BUILDLINK_INCDIR}
+CFLAGS+=		-I${BUILDLINK_INCDIR}
+LDFLAGS+=		-L${BUILDLINK_LIBDIR}
+
+pre-configure: ${BUILDLINK_TARGETS}
 
 .include "../../mk/bsd.pkg.mk"
