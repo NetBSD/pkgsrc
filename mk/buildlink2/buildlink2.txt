@@ -1,4 +1,4 @@
-$NetBSD: buildlink2.txt,v 1.3 2002/08/25 18:51:31 jlam Exp $
+$NetBSD: buildlink2.txt,v 1.4 2002/08/25 22:16:44 jlam Exp $
 
 The buildlink2 framework is a departure from the original buildlink
 framework, which tries to do its work up-front before the configure
@@ -73,16 +73,7 @@ A: It should Just Work.  The wrapper scripts automatically handle this
 Q: So what's bad about the new buildlink2 framework?
 A: The full build now takes longer than it used to.  Since we are using
    wrapper scripts in place of the compilers, we bear the cost of the extra
-   shell processes invoked as a result.  The increased build times on the
-   platforms on which I was able to test are roughly:
-
-	NetBSD-1.5ZC/i386	~1% (non-USE_LIBTOOL)
-				~3% (USE_LIBTOOL)
-
-	NetBSD-1.5.1/mac68k	+?% (USE_LIBTOOL)
-
-   The i386 box is an Intel P3 850MHz + UDMA IDE HD + 512MB SDRAM.
-   The mac68k box is a Quadra 650 (68040) + SCSI2 HD + 48MB RAM.
+   shell processes invoked as a result.
 
 Q: What happened to x11.buildlink.mk?
 A: x11.buildlink.mk is now deprecated, as it's all handled directly by
