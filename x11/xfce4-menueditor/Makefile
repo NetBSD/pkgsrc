@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2004/04/02 10:07:26 martti Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/16 16:12:00 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 XFCE4_VERSION=	1.05
 
 DISTNAME=	xfce4-menueditor-${XFCE4_VERSION}
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://users.skynet.be/p0llux/files/
 COMMENT=	XFce4 menu editor

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/03/10 07:41:16 martti Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/04/16 16:12:00 martti Exp $
 bin/fgr
 bin/scramble
 bin/xfapps
@@ -63,7 +63,9 @@ lib/xfce4/mcs-plugins/libxffmsettings.a
 lib/xfce4/mcs-plugins/libxffmsettings.la
 lib/xfce4/mcs-plugins/libxffmsettings.so
 man/man1/fgr.1
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xffm.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xffm.mo
@@ -73,6 +75,7 @@ ${PKGLOCALEDIR}/locale/fa_IR/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xffm.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xffm.mo
