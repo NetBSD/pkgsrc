@@ -1,9 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/31 03:18:21 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/01/12 23:53:50 xtraeme Exp $
 awstats/bin/awstats_buildstaticpages.pl
-awstats/bin/logresolvemerge.pl
+awstats/bin/awstats_exportlib.pl
 awstats/bin/awstats_updateall.pl
+awstats/bin/logresolvemerge.pl
+awstats/bin/maillogconvert.pl
+awstats/bin/urlaliasbuilder.pl
+awstats/cgi-bin/awredir.pl
 awstats/cgi-bin/awstats.pl
+awstats/cgi-bin/lang/awstats-al.txt
 awstats/cgi-bin/lang/awstats-ba.txt
+awstats/cgi-bin/lang/awstats-bg.txt
 awstats/cgi-bin/lang/awstats-br.txt
 awstats/cgi-bin/lang/awstats-cn.txt
 awstats/cgi-bin/lang/awstats-cz.txt
@@ -12,11 +18,14 @@ awstats/cgi-bin/lang/awstats-dk.txt
 awstats/cgi-bin/lang/awstats-en.txt
 awstats/cgi-bin/lang/awstats-es.txt
 awstats/cgi-bin/lang/awstats-es_cat.txt
+awstats/cgi-bin/lang/awstats-es_eu.txt
+awstats/cgi-bin/lang/awstats-et.txt
 awstats/cgi-bin/lang/awstats-fi.txt
 awstats/cgi-bin/lang/awstats-fr.txt
 awstats/cgi-bin/lang/awstats-gr.txt
 awstats/cgi-bin/lang/awstats-hu.txt
 awstats/cgi-bin/lang/awstats-id.txt
+awstats/cgi-bin/lang/awstats-is.txt
 awstats/cgi-bin/lang/awstats-it.txt
 awstats/cgi-bin/lang/awstats-jp.txt
 awstats/cgi-bin/lang/awstats-kr.txt
@@ -30,17 +39,22 @@ awstats/cgi-bin/lang/awstats-ro.txt
 awstats/cgi-bin/lang/awstats-ru.txt
 awstats/cgi-bin/lang/awstats-se.txt
 awstats/cgi-bin/lang/awstats-sk.txt
+awstats/cgi-bin/lang/awstats-sr.txt
 awstats/cgi-bin/lang/awstats-tr.txt
+awstats/cgi-bin/lang/awstats-tt-al.txt
 awstats/cgi-bin/lang/awstats-tt-ba.txt
+awstats/cgi-bin/lang/awstats-tt-bg.txt
 awstats/cgi-bin/lang/awstats-tt-cn.txt
 awstats/cgi-bin/lang/awstats-tt-cz.txt
 awstats/cgi-bin/lang/awstats-tt-de.txt
+awstats/cgi-bin/lang/awstats-tt-dk.txt
 awstats/cgi-bin/lang/awstats-tt-en.txt
 awstats/cgi-bin/lang/awstats-tt-es.txt
 awstats/cgi-bin/lang/awstats-tt-es_cat.txt
 awstats/cgi-bin/lang/awstats-tt-fi.txt
 awstats/cgi-bin/lang/awstats-tt-fr.txt
 awstats/cgi-bin/lang/awstats-tt-hu.txt
+awstats/cgi-bin/lang/awstats-tt-is.txt
 awstats/cgi-bin/lang/awstats-tt-it.txt
 awstats/cgi-bin/lang/awstats-tt-jp.txt
 awstats/cgi-bin/lang/awstats-tt-kr.txt
@@ -52,23 +66,37 @@ awstats/cgi-bin/lang/awstats-tt-ro.txt
 awstats/cgi-bin/lang/awstats-tt-ru.txt
 awstats/cgi-bin/lang/awstats-tt-se.txt
 awstats/cgi-bin/lang/awstats-tt-sk.txt
+awstats/cgi-bin/lang/awstats-tt-sr.txt
 awstats/cgi-bin/lang/awstats-tt-tr.txt
 awstats/cgi-bin/lang/awstats-tt-tw.txt
 awstats/cgi-bin/lang/awstats-tt-ua.txt
 awstats/cgi-bin/lang/awstats-tw.txt
 awstats/cgi-bin/lang/awstats-ua.txt
+awstats/cgi-bin/lang/awstats-wlk.txt
 awstats/cgi-bin/lib/browsers.pm
 awstats/cgi-bin/lib/domains.pm
+awstats/cgi-bin/lib/mime.pm
 awstats/cgi-bin/lib/operating_systems.pm
+awstats/cgi-bin/lib/referer_spam.pm
 awstats/cgi-bin/lib/robots.pm
 awstats/cgi-bin/lib/search_engines.pm
 awstats/cgi-bin/lib/worms.pm
-awstats/cgi-bin/plugins/graph3d.pm
+awstats/cgi-bin/plugins/geoip.pm
+awstats/cgi-bin/plugins/geoipfree.pm
 awstats/cgi-bin/plugins/hashfiles.pm
+awstats/cgi-bin/plugins/hostinfo.pm
+awstats/cgi-bin/plugins/ipv6.pm
+awstats/cgi-bin/plugins/rawlog.pm
 awstats/cgi-bin/plugins/timehires.pm
 awstats/cgi-bin/plugins/timezone.pm
+awstats/cgi-bin/plugins/tooltips.pm
+awstats/cgi-bin/plugins/urlalias.pm
+awstats/cgi-bin/plugins/userinfo.pm
+awstats/css/awstats_bw.css
+awstats/css/awstats_default.css
 awstats/icon/browser/adobe.png
 awstats/icon/browser/amaya.png
+awstats/icon/browser/chimera.png
 awstats/icon/browser/da.png
 awstats/icon/browser/dreamcast.png
 awstats/icon/browser/galeon.png
@@ -76,11 +104,15 @@ awstats/icon/browser/getright.png
 awstats/icon/browser/gozilla.png
 awstats/icon/browser/ibrowse.png
 awstats/icon/browser/icab.png
+awstats/icon/browser/kmeleon.png
 awstats/icon/browser/konqueror.png
+awstats/icon/browser/lotusnotes.png
 awstats/icon/browser/lynx.png
 awstats/icon/browser/mediaplayer.png
+awstats/icon/browser/mozilla.png
 awstats/icon/browser/msie.png
 awstats/icon/browser/msie_large.png
+awstats/icon/browser/multizilla.png
 awstats/icon/browser/netpositive.png
 awstats/icon/browser/netscape.png
 awstats/icon/browser/netscape_large.png
@@ -88,6 +120,8 @@ awstats/icon/browser/notavailable.png
 awstats/icon/browser/omniweb.png
 awstats/icon/browser/opera.png
 awstats/icon/browser/pdaphone.png
+awstats/icon/browser/phoenix.png
+awstats/icon/browser/safari.png
 awstats/icon/browser/staroffice.png
 awstats/icon/browser/teleport.png
 awstats/icon/browser/unknown.png
@@ -115,6 +149,8 @@ awstats/icon/cpu/mips.png
 awstats/icon/cpu/motorola.png
 awstats/icon/cpu/sun.png
 awstats/icon/cpu/unknown.png
+awstats/icon/flags/a2.png
+awstats/icon/flags/ac.png
 awstats/icon/flags/ad.png
 awstats/icon/flags/ae.png
 awstats/icon/flags/aero.png
@@ -188,7 +224,10 @@ awstats/icon/flags/eh.png
 awstats/icon/flags/en.png
 awstats/icon/flags/er.png
 awstats/icon/flags/es.png
+awstats/icon/flags/es_cat.png
+awstats/icon/flags/es_eu.png
 awstats/icon/flags/et.png
+awstats/icon/flags/eu.png
 awstats/icon/flags/fi.png
 awstats/icon/flags/fj.png
 awstats/icon/flags/fk.png
@@ -221,9 +260,11 @@ awstats/icon/flags/hn.png
 awstats/icon/flags/hr.png
 awstats/icon/flags/ht.png
 awstats/icon/flags/hu.png
+awstats/icon/flags/i0.png
 awstats/icon/flags/id.png
 awstats/icon/flags/ie.png
 awstats/icon/flags/il.png
+awstats/icon/flags/im.png
 awstats/icon/flags/in.png
 awstats/icon/flags/info.png
 awstats/icon/flags/int.png
@@ -269,6 +310,7 @@ awstats/icon/flags/mn.png
 awstats/icon/flags/mo.png
 awstats/icon/flags/mq.png
 awstats/icon/flags/mr.png
+awstats/icon/flags/ms.png
 awstats/icon/flags/mt.png
 awstats/icon/flags/mu.png
 awstats/icon/flags/museum.png
@@ -301,7 +343,9 @@ awstats/icon/flags/pg.png
 awstats/icon/flags/ph.png
 awstats/icon/flags/pk.png
 awstats/icon/flags/pl.png
+awstats/icon/flags/pr.png
 awstats/icon/flags/pro.png
+awstats/icon/flags/ps.png
 awstats/icon/flags/pt.png
 awstats/icon/flags/py.png
 awstats/icon/flags/qa.png
@@ -311,12 +355,15 @@ awstats/icon/flags/rw.png
 awstats/icon/flags/sa.png
 awstats/icon/flags/sb.png
 awstats/icon/flags/sc.png
+awstats/icon/flags/sd.png
 awstats/icon/flags/se.png
 awstats/icon/flags/sg.png
 awstats/icon/flags/si.png
 awstats/icon/flags/sk.png
 awstats/icon/flags/sm.png
 awstats/icon/flags/sn.png
+awstats/icon/flags/sr.png
+awstats/icon/flags/st.png
 awstats/icon/flags/su.png
 awstats/icon/flags/sv.png
 awstats/icon/flags/sy.png
@@ -351,6 +398,7 @@ awstats/icon/flags/vi.png
 awstats/icon/flags/vn.png
 awstats/icon/flags/vu.png
 awstats/icon/flags/wf.png
+awstats/icon/flags/wlk.png
 awstats/icon/flags/ws.png
 awstats/icon/flags/ye.png
 awstats/icon/flags/yt.png
@@ -359,9 +407,22 @@ awstats/icon/flags/za.png
 awstats/icon/flags/ze.png
 awstats/icon/flags/zm.png
 awstats/icon/flags/zw.png
+awstats/icon/mime/archive.png
+awstats/icon/mime/audio.png
+awstats/icon/mime/doc.png
+awstats/icon/mime/html.png
+awstats/icon/mime/image.png
+awstats/icon/mime/notavailable.png
+awstats/icon/mime/other.png
+awstats/icon/mime/pdf.png
+awstats/icon/mime/script.png
+awstats/icon/mime/text.png
+awstats/icon/mime/unknown.png
+awstats/icon/mime/video.png
 awstats/icon/os/aix.png
 awstats/icon/os/amigaos.png
 awstats/icon/os/apple.png
+awstats/icon/os/atari.png
 awstats/icon/os/beos.png
 awstats/icon/os/bsdi.png
 awstats/icon/os/cpm.png
@@ -369,12 +430,16 @@ awstats/icon/os/digital.png
 awstats/icon/os/dos.png
 awstats/icon/os/dreamcast.png
 awstats/icon/os/freebsd.png
+awstats/icon/os/gnu.png
 awstats/icon/os/hpux.png
 awstats/icon/os/ibm.png
+awstats/icon/os/imode.png
 awstats/icon/os/irix.png
 awstats/icon/os/java.png
 awstats/icon/os/linux.png
+awstats/icon/os/mac.png
 awstats/icon/os/macintosh.png
+awstats/icon/os/macosx.png
 awstats/icon/os/${LOWER_OPSYS}.png
 awstats/icon/os/netware.png
 awstats/icon/os/next.png
@@ -389,27 +454,43 @@ awstats/icon/os/unix.png
 awstats/icon/os/unknown.png
 awstats/icon/os/vms.png
 awstats/icon/os/webtv.png
+awstats/icon/os/win.png
 awstats/icon/os/win16.png
 awstats/icon/os/win2000.png
+awstats/icon/os/win2003.png
 awstats/icon/os/win95.png
 awstats/icon/os/win98.png
 awstats/icon/os/wince.png
+awstats/icon/os/winlong.png
 awstats/icon/os/winme.png
 awstats/icon/os/winnt.png
 awstats/icon/os/winxp.png
 awstats/icon/other/awstats_logo1.png
-awstats/icon/other/awstats_logo2.png
-awstats/icon/other/barrehe.png
-awstats/icon/other/barrehh.png
-awstats/icon/other/barrehk.png
-awstats/icon/other/barrehp.png
-awstats/icon/other/barrehx.png
-awstats/icon/other/barrevh.png
-awstats/icon/other/barrevk.png
-awstats/icon/other/barrevp.png
-awstats/icon/other/barrevu.png
-awstats/icon/other/barrevv.png
+awstats/icon/other/awstats_logo5.png
+awstats/icon/other/awstats_logo6.png
+awstats/icon/other/backleft.png
+awstats/icon/other/button.gif
+awstats/icon/other/he.png
+awstats/icon/other/hh.png
+awstats/icon/other/hk.png
+awstats/icon/other/hp.png
+awstats/icon/other/ht.png
+awstats/icon/other/hx.png
+awstats/icon/other/menu1.png
+awstats/icon/other/menu2.png
+awstats/icon/other/menu3.png
+awstats/icon/other/menu4.png
+awstats/icon/other/menu5.png
+awstats/icon/other/menu6.png
+awstats/icon/other/menu7.png
+awstats/icon/other/menu8.png
 awstats/icon/other/page.png
+awstats/icon/other/vh.png
+awstats/icon/other/vk.png
+awstats/icon/other/vp.png
+awstats/icon/other/vu.png
+awstats/icon/other/vv.png
+awstats/js/awstats_misc_tracker.js
 share/doc/html/awstats/COPYING.TXT
 share/doc/html/awstats/LICENSE.TXT
 share/doc/html/awstats/awstats.htm
@@ -419,12 +500,15 @@ share/doc/html/awstats/awstats_benchmark.html
 share/doc/html/awstats/awstats_changelog.txt
 share/doc/html/awstats/awstats_compare.html
 share/doc/html/awstats/awstats_config.html
+share/doc/html/awstats/awstats_extra.html
 share/doc/html/awstats/awstats_faq.html
 share/doc/html/awstats/awstats_glossary.html
 share/doc/html/awstats/awstats_license.html
 share/doc/html/awstats/awstats_security.html
 share/doc/html/awstats/awstats_setup.html
 share/doc/html/awstats/awstats_tools.html
+share/doc/html/awstats/awstats_update.html
+share/doc/html/awstats/awstats_webmin.html
 share/doc/html/awstats/awstats_what.html
 share/doc/html/awstats/images/awstats.ico
 share/doc/html/awstats/images/awstats_logo1.gif
@@ -435,6 +519,9 @@ share/doc/html/awstats/images/awstats_logo3.gif
 share/doc/html/awstats/images/awstats_logo3.png
 share/doc/html/awstats/images/awstats_logo4.gif
 share/doc/html/awstats/images/awstats_logo4.png
+share/doc/html/awstats/images/awstats_logo5.gif
+share/doc/html/awstats/images/awstats_logo5.png
+share/doc/html/awstats/images/awstats_logo6.png
 share/doc/html/awstats/images/license_chart.png
 share/doc/html/awstats/images/screen_shot_1.jpg
 share/doc/html/awstats/images/screen_shot_1.png
@@ -445,18 +532,21 @@ share/doc/html/awstats/images/screen_shot_4.png
 share/doc/html/awstats/images/star.png
 share/doc/html/awstats/index.html
 share/doc/html/awstats/styles.css
-share/examples/awstats/example.pm
 share/examples/awstats/awstats.conf
+share/examples/awstats/example.pm
 @dirrm share/examples/awstats
 @dirrm share/doc/html/awstats/images
 @dirrm share/doc/html/awstats
+@dirrm awstats/js
 @dirrm awstats/icon/other
 @dirrm awstats/icon/os
+@dirrm awstats/icon/mime
 @dirrm awstats/icon/flags
 @dirrm awstats/icon/cpu
 @dirrm awstats/icon/clock
 @dirrm awstats/icon/browser
 @dirrm awstats/icon
+@dirrm awstats/css
 @dirrm awstats/cgi-bin/plugins
 @dirrm awstats/cgi-bin/lib
 @dirrm awstats/cgi-bin/lang
