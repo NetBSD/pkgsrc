@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.3 2000/09/03 13:51:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2000/10/26 16:26:34 tsarna Exp $
 #
 
-DISTNAME=	wxPython-2.2.0
-PKGNAME=	py-wxWindows-2.2.0
+DISTNAME=	wxPython-2.2.1
+PKGNAME=	py-wxWindows-2.2.1
 CATEGORIES=	x11
-MASTER_SITES=	http://alldunn.com/wxPython/dist/
+MASTER_SITES=	http://download.sourceforge.net/wxpython/
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://wxpython.org/
 
-DEPENDS+=       python-1.5.2:../../lang/python
+DEPENDS+=       python>=2.0:../../lang/python
 DEPENDS+=       wxGTK>=2.2.0:../../x11/wxGTK
 
 PLIST_SRC=      ${WRKDIR}/.PLIST_SRC
-SITE_PKG=	lib/python1.5/site-packages
+SITE_PKG=	lib/python2.0/site-packages
 PYTHON_LIBDIR=	${LOCALBASE}/${SITE_PKG}
 
 USE_GMAKE=	yes
@@ -26,8 +26,8 @@ do-install:
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
 	(cd ${WRKSRC}/src; ${GMAKE} install)
 	(cd ${PYTHON_LIBDIR}/wxPython; \
-	${PREFIX}/bin/python ${PREFIX}/lib/python1.5/compileall.py . \
-	${PREFIX}/bin/python -O ${PREFIX}/lib/python1.5/compileall.py . )
+	${PREFIX}/bin/python ${PREFIX}/lib/python2.0/compileall.py . \
+	${PREFIX}/bin/python -O ${PREFIX}/lib/python2.0/compileall.py . )
 	(cd ${PREFIX}; ${FIND} ${SITE_PKG}/wxPython \
 		-type f -print >>${PLIST_SRC})
 	(cd ${PREFIX}; ${FIND} -d ${SITE_PKG}/wxPython \
