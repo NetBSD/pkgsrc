@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2003/09/28 09:13:58 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2004/01/24 14:11:10 grant Exp $
 #
 
 DISTNAME=       siag-3.5.7
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=--with-guile
 CONFIGURE_ARGS+=--with-docdir=${PREFIX}/share/doc/siag
 USE_BUILDLINK2=	YES
 GNU_CONFIGURE=  YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 USE_X11=	YES
 
 .include "../../mk/bsd.prefs.mk"
