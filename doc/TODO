@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.702 2003/07/12 07:05:44 wiz Exp $
+$NetBSD: TODO,v 1.703 2003/07/12 09:21:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -87,7 +87,6 @@ Suggested package updates
 	o crafty-19.1
 	o crossfire-1.5.0
 	o csound-4.24.0
-	o cvs-1.11.6
 	o cxref-1.5e
 	o cyrus-sasl2-2.1.14
 	o cyrus-imapd21-2.1.14
