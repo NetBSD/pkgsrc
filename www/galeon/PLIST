@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.24 2004/11/27 00:52:49 abs Exp $
+@comment $NetBSD: PLIST,v 1.25 2005/04/04 10:25:03 abs Exp $
 bin/galeon
 bin/galeon-config-tool
 lib/bonobo/servers/GNOME_Galeon_Automation.server
 lib/bonobo/servers/GNOME_Galeon_NautilusView.server
-lib/galeon/components/libgaleon-xpcom.la
 man/man1/galeon.1
 share/applications/galeon.desktop
 share/examples/galeon/sound/events/galeon.soundlist
@@ -232,6 +231,4 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/galeon-2.0.mo
 @dirrm share/examples/galeon/sound
 @dirrm share/examples/galeon
 @comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/galeon/components
-@dirrm lib/galeon
 @comment in libbonobo: @dirrm lib/bonobo/servers
