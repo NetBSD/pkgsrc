@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2001/03/14 16:25:17 skrll Exp $
+# $NetBSD: Makefile,v 1.88 2001/03/15 20:58:11 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -62,10 +62,13 @@ SUBDIR+=	kdemultimedia2
 SUBDIR+=	krio
 SUBDIR+=	lame
 SUBDIR+=	libac3
+SUBDIR+=	libao
 SUBDIR+=	libaudiofile
 SUBDIR+=	libcdaudio
 SUBDIR+=	libmikmod
+SUBDIR+=	libogg
 SUBDIR+=	libsidplay
+SUBDIR+=	libvorbis
 SUBDIR+=	liveice
 SUBDIR+=	madplay
 SUBDIR+=	maplay
@@ -95,6 +98,7 @@ SUBDIR+=	timidity
 SUBDIR+=	tosha
 SUBDIR+=	tracker
 SUBDIR+=	vorbis
+SUBDIR+=	vorbis-tools
 SUBDIR+=	wmmixer
 SUBDIR+=	wsoundprefs
 SUBDIR+=	wsoundserver
