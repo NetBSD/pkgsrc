@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.61 2001/11/03 21:41:49 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.62 2001/11/11 05:04:28 hubertf Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -976,6 +976,10 @@ EOF
 				"before version number in PKGNAME. ".
 				"it has to be hyphen.");
 		}
+	}
+	if ($distname =~ /(nb\d*)/) {
+			&perror("WARN: is '$1' really ok on DISTNAME, ".
+				"or is it intended for PKGNAME?");
 	}
 
 	# if DISTFILES have only single item, it is better to avoid DISTFILES
