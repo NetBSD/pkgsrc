@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2003/01/23 17:12:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2003/01/27 12:54:54 jmmv Exp $
 
 DISTNAME=	gabber-0.8.7
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gabber/}
 
@@ -24,6 +24,7 @@ CONFIGURE_ARGS+=	--disable-xmms --disable-sigctest
 .include "../../devel/libsigc++/buildlink2.mk"
 .include "../../lang/gcc/buildlink2.mk"
 .include "../../graphics/freetype-lib/buildlink2.mk"
+.include "../../misc/gnome1-dirs/buildlink2.mk"
 .include "../../textproc/scrollkeeper/buildlink2.mk"
 .include "../../x11/gtk--/buildlink2.mk"
 .include "../../x11/gnome--/buildlink2.mk"

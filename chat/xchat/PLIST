@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/01/12 21:49:07 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/01/27 12:54:56 jmmv Exp $
 bin/xchat
 bin/xchat-text
 share/doc/xchat/xchat-1.html
@@ -45,4 +45,5 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/xchat.mo
 share/pixmaps/xchat.png
+@comment in gnome-dirs: @dirrm share/gnome/apps/Internet
 @dirrm share/doc/xchat
