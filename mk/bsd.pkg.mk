@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.471 2000/06/04 00:12:57 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.472 2000/06/04 00:50:48 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -2239,7 +2239,8 @@ package-depends:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	pkg="${dep:C/:.*//}";						\
 	dir="${dep:C/[^:]*://}";					\
-	if cd ${.CURDIR}/$$dir 2>/dev/null; then			\
+	cd ${.CURDIR};							\
+	if $$dir 2>/dev/null; then					\
 		if ${PACKAGE_DEPENDS_WITH_PATTERNS}; then		\
 			${ECHO} "$$pkg";				\
 		else							\
