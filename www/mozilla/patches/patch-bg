@@ -1,0 +1,23 @@
+$NetBSD: patch-bg,v 1.1 2002/02/09 03:54:48 taya Exp $
+
+diff -ru ../Orig/mozilla/xpcom/threads/TimerThread.cpp ./xpcom/threads/TimerThread.cpp
+--- ../Orig/mozilla/xpcom/threads/TimerThread.cpp	Tue Jan 15 10:20:45 2002
++++ ./xpcom/threads/TimerThread.cpp	Thu Feb  7 00:43:28 2002
+@@ -54,7 +54,7 @@
+ TimerThread::TimerThread() :
+   mCondVar(nsnull),
+   mLock(nsnull),
+-  mProcessing(PR_FALSE),
++  mProcessing(PR_TRUE),
+   mWaiting(PR_FALSE)
+ {
+   NS_INIT_REFCNT();
+@@ -127,8 +127,6 @@
+ /* void Run(); */
+ NS_IMETHODIMP TimerThread::Run()
+ {
+-  mProcessing = PR_TRUE;
+-
+   while (mProcessing) {
+     nsTimerImpl *theTimer = nsnull;
+ 
