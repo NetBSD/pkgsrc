@@ -1,0 +1,30 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/07/17 19:09:23 wennmach Exp $
+
+--- main.c.org	Tue Jul  8 10:15:01 2003
++++ main.c	Tue Jul  8 10:16:28 2003
+@@ -103,8 +103,8 @@
+  */
+ int getexitspecs(char *s, int *set, int *clr)
+ {
++  /*
+   char *cp;
+-
+   while ((cp = strtok(s, ","))) {
+     if (strcmp(cp, "reset") == 0) {
+       *clr |= par_getpinmask(pgm->pinno[PIN_AVR_RESET]);
+@@ -123,10 +123,11 @@
+     else {
+       return -1;
+     }
+-    s = 0; /* strtok() should be called with the actual string only once */
+-  }
++    s = 0; */ /* strtok() should be called with the actual string only once */
++  /*  }
+ 
+-  return 0;
++  return 0; */
++  return -1;
+ }
+ 
+
+ 
