@@ -1,7 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/09/18 18:36:26 wiz Exp $
-bin/pgpdecode
-bin/pgpencrypt
-bin/pgpsign
+@comment $NetBSD: PLIST,v 1.5 2004/05/07 20:00:53 reed Exp $
 bin/pine
 bin/rpdump
 bin/rpload
@@ -16,7 +13,6 @@ share/pine/contrib/utils/pwd2pine
 share/pine/contrib/utils/sendit.sh
 share/pine/contrib/utils/sendtoall
 share/pine/contrib/utils/txtcc.sh
-share/examples/pine/dot.pinerc.pgp
 share/examples/pine/pine.conf
 share/examples/pine/pine.conf.fixed
 @dirrm share/pine/contrib/utils
