@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.959 2003/10/21 20:58:33 xtraeme Exp $
+$NetBSD: TODO,v 1.960 2003/10/22 18:15:27 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -182,6 +182,7 @@ Suggested package updates
 	o gnats-4.0 [pkgsrc-wip]
 	o gnocatan-0.8.0
 	o gnome-core-2.4
+	o gnome-utils-2.4.1
 	o gnomeicu-0.99
 	o gnucash-1.8.7
 	o gnuchess-5.06
@@ -216,6 +217,7 @@ Suggested package updates
 	o lftp-2.6.8
 	o libao-0.8.4
 	o libgcrypt-1.1.42
+	o libgtop-2.0.6
 	o licq-1.2.7
 	o libmpeg3-1.5.3
 	o libole2-2.2.8
