@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.8 2002/12/07 17:39:48 jmmv Exp $
+$NetBSD: patch-ae,v 1.9 2004/04/26 08:01:20 jlam Exp $
 
 --- Makefile.in.orig	Thu Jan 24 16:15:24 2002
 +++ Makefile.in
@@ -17,7 +17,7 @@ $NetBSD: patch-ae,v 1.8 2002/12/07 17:39:48 jmmv Exp $
  .c.o:
  	${RM} $@
 -	$(CC) -c $(CCFLAGS) $<
-+	$(LIBTOOL) $(CC) -c $(CCFLAGS) $<
++	$(LIBTOOL) --mode=compile $(CC) -c $(CCFLAGS) $<
  
  # The name of the main library target.
  LIBRARY_NAME = libreadline.a
@@ -40,8 +40,8 @@ $NetBSD: patch-ae,v 1.8 2002/12/07 17:39:48 jmmv Exp $
  	-test -n "$(RANLIB)" && $(RANLIB) $@
  
 +libreadline.la: $(OBJECTS)
-+	${LIBTOOL} ${RM} $@
-+	${LIBTOOL} ${CC} -o $@ ${OBJECTS:.o=.lo}			\
++	${LIBTOOL} --mode=uninstall ${RM} $@
++	${LIBTOOL} --mode=link ${CC} -o $@ ${OBJECTS:.o=.lo}		\
 +		-rpath $(libdir)					\
 +		-version-info ${SHLIB_MAJOR}:${SHLIB_MINOR}
 +
@@ -53,13 +53,13 @@ $NetBSD: patch-ae,v 1.8 2002/12/07 17:39:48 jmmv Exp $
  tilde.o:	tilde.c
  	rm -f $@
 -	$(CC) $(CCFLAGS) -DREADLINE_LIBRARY -c $(srcdir)/tilde.c
-+	$(LIBTOOL) $(CC) $(CCFLAGS) -DREADLINE_LIBRARY -c $(srcdir)/tilde.c
++	$(LIBTOOL) --mode=compile $(CC) $(CCFLAGS) -DREADLINE_LIBRARY -c $(srcdir)/tilde.c
  
 -readline: $(OBJECTS) readline.h rldefs.h chardefs.h ./libreadline.a
 -	$(CC) $(CCFLAGS) -o $@ ./examples/rl.c ./libreadline.a ${TERMCAP_LIB}
 +libhistory.la: $(HISTOBJ) xmalloc.o
-+	${LIBTOOL} $(RM) $@
-+	${LIBTOOL} ${CC} -o $@ ${HISTOBJ:.o=.lo} xmalloc.lo		\
++	${LIBTOOL} --mode=uninstall $(RM) $@
++	${LIBTOOL} --mode=link ${CC} -o $@ ${HISTOBJ:.o=.lo} xmalloc.lo	\
 +		-rpath $(libdir)					\
 +		-version-info ${SHLIB_MAJOR}:${SHLIB_MINOR}
 +
@@ -70,8 +70,8 @@ $NetBSD: patch-ae,v 1.8 2002/12/07 17:39:48 jmmv Exp $
  	$(MAKE) $(MFLAGS) CCFLAGS='$(GCC_LINT_CFLAGS)' static
 +
 +install-la: installdirs $(LIBTOOL_LIBS) install-headers
-+	${LIBTOOL} ${INSTALL_DATA} libreadline.la $(libdir)
-+	${LIBTOOL} ${INSTALL_DATA} libhistory.la $(libdir)
++	${LIBTOOL} --mode=install ${INSTALL_DATA} libreadline.la $(libdir)
++	${LIBTOOL} --mode=install ${INSTALL_DATA} libhistory.la $(libdir)
 +	-( if test -d doc ; then \
 +		cd doc && \
 +		${MAKE} ${MFLAGS} infodir=$(infodir) install; \
