@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/14 19:10:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/29 09:29:18 dmcmahill Exp $
 #
 
 DISTNAME=	dega-1.07
@@ -14,6 +14,9 @@ BUILD_DEPENDS=	nasm>=0.98:../../devel/nasm
 USE_BUILDLINK2=	yes
 USE_GMAKE=	yes
 USE_X11=	yes
+
+# Uses i386 assembly code
+ONLY_FOR_PLATFORM=	*-*-i386
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dega ${PREFIX}/bin
