@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2001/01/02 08:21:51 tron Exp $
+@comment $NetBSD: PLIST,v 1.22 2001/01/02 09:49:33 veego Exp $
 bin/escputil
 bin/gimp
 bin/gimp-config
@@ -89,13 +89,13 @@ include/libgimp/gimpvector.h
 include/libgimp/gimpwidgets.h
 lib/gimp/1.2/modules/libcolorsel_gtk.a
 lib/gimp/1.2/modules/libcolorsel_gtk.la
-lib/gimp/1.2/modules/libcolorsel_gtk.so.0
+lib/gimp/1.2/modules/libcolorsel_gtk.so
 lib/gimp/1.2/modules/libcolorsel_triangle.a
 lib/gimp/1.2/modules/libcolorsel_triangle.la
-lib/gimp/1.2/modules/libcolorsel_triangle.so.0
+lib/gimp/1.2/modules/libcolorsel_triangle.so
 lib/gimp/1.2/modules/libcolorsel_water.a
 lib/gimp/1.2/modules/libcolorsel_water.la
-lib/gimp/1.2/modules/libcolorsel_water.so.0
+lib/gimp/1.2/modules/libcolorsel_water.so
 lib/gimp/1.2/plug-ins/AlienMap
 lib/gimp/1.2/plug-ins/AlienMap2
 lib/gimp/1.2/plug-ins/CEL
