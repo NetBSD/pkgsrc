@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2004/10/03 00:18:19 tv Exp $
+# $NetBSD: Makefile,v 1.22 2004/11/20 16:00:35 uebayasi Exp $
 # FreeBSD Id: ports/japanese/eb/Makefile,v 1.21 2000/08/21 03:39:42 kevlo Exp
 #
 
-DISTNAME=	eb-3.3.4
-PKGREVISION=	1
+DISTNAME=	eb-4.1.1
 CATEGORIES=	textproc japanese
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/misc/eb/appendix/ \
 		ftp://ftp.sra.co.jp/pub/misc/eb/
@@ -52,16 +51,13 @@ EB_APPENDICES=	\
 EXTRACT_ONLY=	${EB_DISTFILES}
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
-
-USE_MAKEINFO=	YES
-INFO_FILES=	eb-ja.info ebfont-ja.info ebfont.info ebinfo-ja.info
-INFO_FILES+=	ebinfo.info ebrefile-ja.info ebrefile.info ebzip-ja.info
-INFO_FILES+=	ebzip.info
 
 CONFIGURE_ARGS+=	--with-zlib
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -70,6 +66,14 @@ CONF_FILES=		${EGDIR}/eb.conf.default ${PKG_SYSCONFDIR}/eb.conf
 
 EB_APPENDIXDIR=	${PREFIX}/share/eb/appendix
 EGDIR=		${PREFIX}/share/examples/eb/
+
+# XXX Better than having unflexible/static patches.  IMO.
+# -    ZLIBLIBS="-L$z_libdir -lz"
+# +    ZLIBLIBS="-Wl,-R$z_libdir -L$z_libdir -lz"
+SUBST_CLASSES=		dynlink
+SUBST_STAGE.dynlink=	post-patch
+SUBST_FILES.dynlink=	configure configure.ac
+SUBST_SED.dynlink=	-e 's|^\(.*LIBS=.\)-L\(\$$[^[:blank:]][^[:blank:]]*\)\(.*\)$$|\1-Wl,-R\2 -L\2\3|'
 
 post-extract:
 	${RM} -rf ${WRKSRC}/zlib
