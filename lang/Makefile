@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2000/08/17 07:35:20 rh Exp $
+# $NetBSD: Makefile,v 1.56 2000/08/24 19:54:47 jwise Exp $
 # FreeBSD Id: Makefile,v 1.82 1997/09/30 07:49:24 asami Exp
 #
 
@@ -51,6 +51,7 @@
     SUBDIR += sml-nj
     SUBDIR += snobol
     SUBDIR += squeak
+#    SUBDIR += tcl		# tcl-8.3.2; will be enabled when tcl-based packages are updated
     SUBDIR += tcl80
     SUBDIR += tclX80
     SUBDIR += tclman80
