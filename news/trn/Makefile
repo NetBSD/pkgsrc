@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2000/12/29 13:19:28 dogcow Exp $
-#
+# $NetBSD: Makefile,v 1.10 2001/02/11 14:45:04 tron Exp $
 
 DISTNAME=		trn4-test74
 PKGNAME=		trn-4.74
 CATEGORIES=		news
-MASTER_SITES=		http://download.sourceforge.net/trn/ \
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=trn/} \
 			ftp://trn.sourceforge.net/pub/trn/
 
 MAINTAINER=     	packages@netbsd.org

@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/01/21 22:44:16 rh Exp $
-#
+# $NetBSD: Makefile,v 1.2 2001/02/11 14:46:28 tron Exp $
 
 DISTNAME=	${PKGNAME}-src
 PKGNAME=	${PRG}-1.10
 WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	textproc converters
-MASTER_SITES=	http://download.sourceforge.net/gutenpalm/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gutenpalm/}
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://gutenpalm.sourceforge.net/makeztxt.php
