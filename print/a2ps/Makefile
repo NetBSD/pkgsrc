@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2001/06/09 15:31:42 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2001/12/17 00:07:01 wiz Exp $
 #
 
 DISTNAME=		a2ps-4.13b
@@ -16,6 +16,7 @@ DEPENDS+=		psutils-1.17:../../print/psutils
 
 STRIP=			# empty
 USE_PERL5=		# defined
+USE_GMAKE=		# defined
 USE_GTEXINFO=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/auxdir/ltconfig
