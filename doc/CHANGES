@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6630 2004/07/21 23:00:51 schmonz Exp $
+$NetBSD: CHANGES,v 1.6631 2004/07/21 23:32:43 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3489,3 +3489,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated qmail to 1.03nb7 [schmonz 2004-07-21]
 	Added netqmail-1.05 [schmonz 2004-07-21]
 	Updated qmail-qfilter to 1.5nb1 [schmonz 2004-07-21]
+	Updated dot-forward to 0.71nb2 [schmonz 2004-07-21]
+	Updated fastforward to 0.51nb2 [schmonz 2004-07-21]
