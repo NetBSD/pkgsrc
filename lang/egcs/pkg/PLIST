@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1999/08/16 10:33:39 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/10/01 10:34:29 agc Exp $
 bin/c++
 bin/g++
 bin/gcc
@@ -236,7 +236,6 @@ lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/limits.h
 lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/float.h
 lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/README
 lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/fixed
-lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/objc
 lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/objc/hash.h
 lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/objc/objc-list.h
 lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/objc/sarray.h
@@ -278,8 +277,9 @@ ${MACHINE_GNU_PLATFORM}/include/assert.h
 ${MACHINE_GNU_PLATFORM}/lib/libiberty.a
 @dirrm include/g++/std
 @dirrm include/g++
-@dirrm lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66
+@dirrm lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/objc
 @dirrm lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include
+@dirrm lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66
 @dirrm lib/gcc-lib/${MACHINE_GNU_PLATFORM}
 @dirrm lib/gcc-lib
 @dirrm ${MACHINE_GNU_PLATFORM}/include
