@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.262 2002/10/15 13:51:39 agc Exp $
+$NetBSD: CHANGES,v 1.263 2002/10/15 15:17:45 agc Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3266,3 +3266,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Moved xmbdfed from graphics to fonts [kei 2002-10-15]
 	Added minivmac-0.1.7 [kei 2002-10-15]
 	Added librsync-0.9.5.1 [agc 2002-10-15]
+	Added rdiff-backup-0.10.1 [agc 2002-10-15]
