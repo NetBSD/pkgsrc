@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2953 2003/07/31 09:42:21 grant Exp $
+$NetBSD: CHANGES,v 1.2954 2003/07/31 10:06:40 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3154,3 +3154,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated fix4SA110rev2 to 1.0nb1 [abs 2003-07-31]
 	Updated mtree to 20030731 [grant 2003-07-31]
 	Updated pax to 20030731 [grant 2003-07-31]
+	Updated cfs to 1.4.1nb1 [jmmv 2003-07-31]
