@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/07/26 15:44:44 taca Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/09 03:37:02 jlam Exp $
 #
 
 DISTNAME=		qpopper${VERSION}
@@ -15,6 +15,7 @@ HOMEPAGE=		http://www.eudora.com/qpopper/
 COMMENT=		Qualcomm's password change server mainly for Eudora
 
 VERSION=		4.0.3
+USE_BUILDLINK_ONLY=	# defined
 CONFIGURE_ARGS+=	--enable-poppassd
 CONFIGURE_ENV+=	CDEFS='-DSMBPASSWD_BINARY=\"${LOCALBASE}/bin/smbpasswd\"'
 

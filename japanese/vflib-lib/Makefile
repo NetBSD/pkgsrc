@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2001/05/28 03:27:17 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/09/09 03:37:01 jlam Exp $
 
 PKGNAME=		ja-vflib-lib-${VFLIB_VERSION}
-
 COMMENT=		Japanese Vector font library
 
 CONFIGURE_ARGS+=	--without-x
 
+USE_BUILDLINK_ONLY=	# defined
 ALL_TARGET=		build-src
 INSTALL_TARGET=		install-src
 
@@ -27,4 +27,4 @@ post-install:
 	cd ${WRKSRC}; ${PAX} -rw jTeX ${PREFIX}/share/VFlib/${VFLIB_VERSION}
 	${CHMOD} -R a-w ${PREFIX}/share/VFlib/${VFLIB_VERSION}
 
-.include "../../japanese/vflib-lib/Makefile.common"
+.include "Makefile.common"

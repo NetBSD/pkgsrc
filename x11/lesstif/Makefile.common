@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2001/08/26 10:32:24 skrll Exp $
+# $NetBSD: Makefile.common,v 1.12 2001/09/09 03:37:03 jlam Exp $
 
 DISTNAME=		lesstif-${LESSTIF_VERSION}
 LESSTIF_VERSION=	0.92.32
@@ -18,7 +18,6 @@ CONFLICTS+=		openmotif-[0-9]*
 BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 
-USE_BUILDLINK_ONLY=	# defined
 USE_X11BASE=		# defined
 USE_GMAKE=		# defined
 USE_LIBTOOL=		# defined

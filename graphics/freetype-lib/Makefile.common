@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2001/06/25 20:03:54 jlam Exp $
+# $NetBSD: Makefile.common,v 1.18 2001/09/09 03:37:00 jlam Exp $
 
 DISTNAME=		freetype-${FT_VERS}
 FT_VERS=		1.3.1
@@ -12,7 +12,6 @@ HOMEPAGE=		http://www.freetype.org/
 
 CONFLICTS=		freetype-1.[12]*
 
-USE_BUILDLINK_ONLY=	# defined
 BUILD_USES_MSGFMT=	# defined
 
 USE_LIBTOOL=		# defined
