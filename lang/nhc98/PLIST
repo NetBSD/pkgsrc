@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/08/25 16:12:02 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/11/14 22:38:30 jlam Exp $
 bin/greencard-nhc98
 bin/harch
 bin/hi
@@ -64,6 +64,7 @@ include/nhc98/Prelude.T.hi
 include/nhc98/Prelude.hi
 include/nhc98/PreludeBuiltin.T.hi
 include/nhc98/PreludeBuiltin.hi
+include/nhc98/Q8defs.h
 include/nhc98/Random.T.hi
 include/nhc98/Random.hi
 include/nhc98/Ratio.T.hi
@@ -290,6 +291,7 @@ share/doc/nhc98/libs/Bit.html
 share/doc/nhc98/libs/FFI.html
 share/doc/nhc98/libs/IOExtras.html
 share/doc/nhc98/libs/OldBinary.html
+share/doc/nhc98/libs/PackedString.html
 share/doc/nhc98/libs/Time.html
 share/doc/nhc98/libs/index.html
 share/doc/nhc98/limits.html
