@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/10/26 16:38:09 wennmach Exp $
+# $NetBSD: Makefile,v 1.5 1999/11/03 14:44:30 wennmach Exp $
 
 DISTNAME=	jitterbug-1.6.2
 WRKSRC=		${WRKDIR}/${PKGNAME}/source
@@ -21,10 +21,11 @@ CGIBINDIR=	libexec/cgi-bin
 
 .include "../../mk/bsd.prefs.mk"
 
-.if exists(/usr/sbin/nslookup)
-NSLOOKUP=	/usr/sbin/nslookup
-.elif exists(/usr/bin/nslookup)
-NSLOOKUP=	/usr/bin/nslookup
+HOSTCMD=	/usr/bin/false
+.if exists(/usr/sbin/host)
+HOSTCMD=	/usr/sbin/host
+.elif exists(/usr/bin/host)
+HOSTCMD=	/usr/bin/host
 .endif
 
 JB_PACKAGE?=	test
@@ -41,8 +42,7 @@ JB_CONFIGDIR=	${JB_USER}/config
 JB_LOCALMAIL?=	${JB_PACKAGE}-bugs
 
 .if !defined(JB_FQHOSTNAME)
-JB_HOSTNAME!=	/bin/hostname
-JB_FQHOSTNAME!=	${NSLOOKUP} ${JB_HOSTNAME} | /usr/bin/grep Name: | /usr/bin/awk '{ print $$2 }'
+JB_FQHOSTNAME!=	(${HOSTCMD} `/bin/hostname` 2>/dev/null || echo totally.unknown.domain) | /usr/bin/awk '{ print $$1; exit }'
 .endif
 JB_EMAIL?=	${JB_LOCALMAIL}@${JB_FQHOSTNAME}
 
@@ -50,6 +50,13 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX}
 
 pre-extract:
+.if ${JB_FQHOSTNAME} == "totally.unknown.domain"
+	@${ECHO}
+	@${ECHO} "Warning: could not determine your fully qualified host"
+	@${ECHO} "         name. Please set the JB_FQHOSTNAME environment"
+	@${ECHO} "         variable accordingly and/or fix your name server."
+	@${ECHO} "         Building for domain 'totally.unknown.domain'"
+.endif
 .if ${JB_PACKAGE} == "test"
 	@${ECHO}
 	@${ECHO} "You should define the JB_PACKAGE environment variable:"
@@ -72,7 +79,7 @@ pre-extract:
 	@${ECHO} "as '\$$JB_LOCALMAIL'@${JB_FQHOSTNAME}"
 	@${ECHO}
 .endif
-.if (${JB_FQHOSTNAME} == ${JB_HOSTNAME})
+.if ${JB_FQHOSTNAME} == ${JB_HOSTNAME}
 	@${ECHO} "Warning: Could not determine your fully qualified hostname."
 	@${ECHO} "You must set the JB_FQHOSTNAME environment variable."
 	@${ECHO}
