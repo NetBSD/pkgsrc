@@ -1,14 +1,31 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/01/22 15:56:33 manu Exp $
---- check_perl_modules.pl.orig	Mon Jan 13 14:33:06 2003
-+++ check_perl_modules.pl	Mon Jan 13 14:34:01 2003
-@@ -159,9 +159,9 @@
-     }
+$NetBSD: patch-aa,v 1.2 2004/09/26 20:13:34 seb Exp $
+
+--- Makefile.in.orig	2004-07-16 17:26:51.000000000 +0000
++++ Makefile.in
+@@ -483,7 +483,7 @@ clean:
+ 	$(MAKE) PERL='${PERL}' clean) || exit 1; \
+ 	done;
  
-     printf "Description: %s\n", $opt_features{$module};
-     print "Install module $module ? [$default]";
--    my $answer = <STDIN>; chomp $answer;
-+    $answer = "";
-     $answer ||= $default;
-     next unless ($answer =~ /^y$/i);
-   CPAN::Shell->conf('inactivity_timeout', 4);
-     CPAN::Shell->install($module);
+-install: importantchanges installsrc installnls installwws installman installscript installsample installdir installconfig installdoc installsoap
++install: importantchanges installsrc installnls installwws installman installscript installsample installdir installdoc installsoap
+ 
+ importantchanges:
+ 	@( 	PERL=$(PERL); export PERL; \
+@@ -602,7 +602,7 @@ installdir:
+ 			chmod 755 $(DESTDIR)$$dir; \
+ 		fi \
+ 	done
+-	@if [ ! -f $(DESTDIR)$(CONFDIR)/sympa.conf ] ; then \
++	@if [ false ] ; then \
+ 	echo "First installation : installing conf directories..."; \
+ 	for dir in create_list_templates templates wws_templates scenari \
+ 	task_models general_task_models; do \
+@@ -614,7 +614,7 @@ installdir:
+ 		fi \
+ 	done \
+ 	fi
+-	@if [ ! -f $(DESTDIR)$(CONFDIR)/sympa.conf ] ; then \
++	@if [ false ] ; then \
+ 	echo "First installation : installing spool directories..."; \
+ 	for dir in $(SPOOLDIR) $(SPOOLDIR)/msg $(SPOOLDIR)/digest $(SPOOLDIR)/moderation \
+ 	$(SPOOLDIR)/expire $(SPOOLDIR)/auth $(SPOOLDIR)/outgoing $(SPOOLDIR)/tmp \
