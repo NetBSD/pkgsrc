@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/07/13 13:51:25 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/11/12 01:25:25 salo Exp $
 
 .if !defined(POPT_BUILDLINK2_MK)
 POPT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		popt
-BUILDLINK_DEPENDS.popt?=	popt>=1.7nb2
+BUILDLINK_DEPENDS.popt?=	popt>=1.7nb3
 BUILDLINK_PKGSRCDIR.popt?=	../../devel/popt
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.popt=popt
