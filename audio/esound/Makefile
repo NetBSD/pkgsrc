@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2002/10/03 12:21:29 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2002/10/30 03:09:25 rh Exp $
 
 DISTNAME=		esound-0.2.29
 CATEGORIES=		audio
@@ -11,6 +11,7 @@ COMMENT=		the Enlightened sound daemon
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+PKGCONFIG_OVERRIDE=	${WRKSRC}/esound.pc.in
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}

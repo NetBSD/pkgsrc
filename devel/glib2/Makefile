@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/10/19 10:54:48 rh Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/30 03:09:30 rh Exp $
 #
 
 DISTNAME=		glib-2.0.6
@@ -21,6 +21,10 @@ USE_PERL5=		yes
 
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+PKGCONFIG_OVERRIDE=	${WRKSRC}/glib-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/gmodule-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/gobject-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/gthread-2.0.pc.in
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/10/27 09:16:08 rh Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/30 03:09:35 rh Exp $
 #
 
 DISTNAME=		ORBit2-2.5.0
@@ -15,6 +15,8 @@ USE_LIBTOOL=		YES
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+PKGCONFIG_OVERRIDE=	${WRKSRC}/ORBit-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/ORBit-CosNaming-2.0.pc.in
 
 .include "../../net/linc/buildlink2.mk"
 .include "../../net/libIDL/buildlink2.mk"

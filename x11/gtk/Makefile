@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2002/10/19 10:55:02 rh Exp $
+# $NetBSD: Makefile,v 1.77 2002/10/30 03:09:39 rh Exp $
 
 DISTNAME=		gtk+-1.2.10
 PKGREVISION=		3
@@ -16,10 +16,12 @@ BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK2=		yes
 USE_PERL5=		build
-USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 USE_X11BASE=		yes
 USE_GMAKE=		yes
+USE_LIBTOOL=		yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+PKGCONFIG_OVERRIDE=	${WRKSRC}/gdk.pc.in
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/gtk+.pc.in
 
 GNU_CONFIGURE=		 yes
 CONFIGURE_ARGS+=	--with-xinput=xfree \

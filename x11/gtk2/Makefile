@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/10/19 10:55:03 rh Exp $
+# $NetBSD: Makefile,v 1.14 2002/10/30 03:09:39 rh Exp $
 #
 
 DISTNAME=		gtk+-2.0.6
@@ -25,6 +25,10 @@ MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+PKGCONFIG_OVERRIDE=	${WRKSRC}/gdk-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/gtk+-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/gdk-pixbuf-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/contrib/gdk-pixbuf-xlib/gdk-pixbuf-xlib-2.0.pc.in
 
 BUILD_DIRS=		${WRKSRC} ${WRKSRC}/demos/gtk-demo
 
