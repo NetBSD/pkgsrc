@@ -1,4 +1,4 @@
-/*	$NetBSD: err.c,v 1.3 2003/09/15 07:39:34 grant Exp $	*/
+/*	$NetBSD: err.c,v 1.4 2004/08/23 03:32:12 jlam Exp $	*/
 
 /*
  * Copyright 1997-2000 Luke Mewburn <lukem@netbsd.org>.
@@ -27,7 +27,35 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "nbcompat.h"
+#if HAVE_NBTOOL_CONFIG_H
+#include "nbtool_config.h"
+#endif
+
+#include <nbcompat.h>
+#include <nbcompat/cdefs.h>
+#if defined(LIBC_SCCS) && !defined(lint)
+#if 0
+static char sccsid[] = "@(#)err.c	8.1 (Berkeley) 6/4/93";
+#else
+__RCSID("$NetBSD: err.c,v 1.4 2004/08/23 03:32:12 jlam Exp $");
+#endif
+#endif /* LIBC_SCCS and not lint */
+
+#ifndef __NO_NAMESPACE_H	/* XXX */
+#if 0
+#include "namespace.h"
+#endif
+#endif
+#include <nbcompat/err.h>
+#if HAVE_STDARG_H
+#include <stdarg.h>
+#endif
+
+#if 0
+#ifdef __weak_alias
+__weak_alias(err, _err)
+#endif
+#endif
 
 void
 err(int eval, const char *fmt, ...)
@@ -90,61 +118,4 @@ verrx(eval, fmt, ap)
 		(void)vfprintf(stderr, fmt, ap);
 	(void)fprintf(stderr, "\n");
 	exit(eval);
-}
-
-void
-warn(const char *fmt, ...)
-{
-	va_list	ap;
-        int	sverrno;
-
-	sverrno = errno;
-        (void)fprintf(stderr, "%s: ", getprogname());
-	va_start(ap, fmt);
-        if (fmt != NULL) {
-                (void)vfprintf(stderr, fmt, ap);
-                (void)fprintf(stderr, ": ");
-        }
-	va_end(ap);
-        (void)fprintf(stderr, "%s\n", strerror(sverrno));
-}
-
-void
-warnx(const char *fmt, ...)
-{
-	va_list	ap;
-
-        (void)fprintf(stderr, "%s: ", getprogname());
-	va_start(ap, fmt);
-        if (fmt != NULL)
-                (void)vfprintf(stderr, fmt, ap);
-	va_end(ap);
-        (void)fprintf(stderr, "\n");
-}
-
-void
-vwarn(fmt, ap)
-	const char *fmt;
-	va_list ap;
-{
-	int sverrno;
-
-	sverrno = errno;
-	(void)fprintf(stderr, "%s: ", getprogname());
-	if (fmt != NULL) {
-		(void)vfprintf(stderr, fmt, ap);
-		(void)fprintf(stderr, ": ");
-	}
-	(void)fprintf(stderr, "%s\n", strerror(sverrno));
-}
-
-void
-vwarnx(fmt, ap)
-	const char *fmt;
-	va_list ap;
-{
-	(void)fprintf(stderr, "%s: ", getprogname());
-	if (fmt != NULL)
-		(void)vfprintf(stderr, fmt, ap);
-	(void)fprintf(stderr, "\n");
 }

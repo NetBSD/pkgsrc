@@ -1,6 +1,5 @@
-/* $Id: strlcat.c,v 1.3 2003/12/19 22:26:46 grant Exp $ */
-/*	from NetBSD: strlcat.c,v 1.16 2003/10/27 00:12:42 lukem Exp	*/
-/*	from OpenBSD: strlcat.c,v 1.10 2003/04/12 21:56:39 millert Exp 	*/
+/*	$NetBSD: strlcat.c,v 1.4 2004/08/23 03:32:12 jlam Exp $	*/
+/*	$OpenBSD: strlcat.c,v 1.10 2003/04/12 21:56:39 millert Exp $	*/
 
 /*
  * Copyright (c) 1998 Todd C. Miller <Todd.Miller@courtesan.com>
@@ -18,8 +17,34 @@
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-#include "nbcompat.h"
+#if HAVE_NBTOOL_CONFIG_H
+#include "nbtool_config.h"
+#endif
 
+#include <nbcompat.h>
+#include <nbcompat/cdefs.h>
+#if defined(LIBC_SCCS) && !defined(lint)
+__RCSID("$NetBSD: strlcat.c,v 1.4 2004/08/23 03:32:12 jlam Exp $");
+#endif /* LIBC_SCCS and not lint */
+
+#if 0
+#ifdef _LIBC
+#include "namespace.h"
+#endif
+#endif
+#include <nbcompat/types.h>
+#include <nbcompat/assert.h>
+#include <nbcompat/string.h>
+
+#if 0
+#ifdef _LIBC
+# ifdef __weak_alias
+__weak_alias(strlcat, _strlcat)
+# endif
+#endif
+#endif
+
+#if !HAVE_STRLCAT
 /*
  * Appends src to string dst of size siz (unlike strncat, siz is the
  * full size of dst, not space left).  At most siz-1 characters
@@ -28,12 +53,22 @@
  * If retval >= siz, truncation occurred.
  */
 size_t
-strlcat(char *dst, const char *src, size_t siz)
+#ifdef _LIBC && 0
+_strlcat(dst, src, siz)
+#else
+strlcat(dst, src, siz)
+#endif
+	char *dst;
+	const char *src;
+	size_t siz;
 {
 	char *d = dst;
 	const char *s = src;
 	size_t n = siz;
 	size_t dlen;
+
+	_DIAGASSERT(dst != NULL);
+	_DIAGASSERT(src != NULL);
 
 	/* Find the end of dst and adjust bytes left but don't go past end */
 	while (n-- != 0 && *d != '\0')
@@ -54,3 +89,4 @@ strlcat(char *dst, const char *src, size_t siz)
 
 	return(dlen + (s - src));	/* count does not include NUL */
 }
+#endif

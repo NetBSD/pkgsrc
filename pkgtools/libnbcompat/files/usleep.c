@@ -1,4 +1,4 @@
-/*	$NetBSD: usleep.c,v 1.2 2003/09/06 23:03:06 grant Exp $	*/
+/*	$NetBSD: usleep.c,v 1.3 2004/08/23 03:32:13 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1999-2000 The NetBSD Foundation, Inc.
@@ -36,7 +36,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "nbcompat.h"
+#include <nbcompat.h>
 
 int
 usleep(unsigned int usec)
@@ -47,9 +47,7 @@ usleep(unsigned int usec)
 	tv.tv_sec = 0;
 	tv.tv_usec = usec;
 	return (select(1, NULL, NULL, NULL, &tv));
-#elif HAVE_POLL
-	return (poll(NULL, 0, usec / 1000);
 #else
-# error no way to implement usleep
+	return (poll(NULL, 0, usec / 1000);
 #endif
 }

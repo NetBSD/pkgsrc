@@ -1,4 +1,4 @@
-/*	$NetBSD: nbcompat.h,v 1.37 2004/08/16 17:24:56 jlam Exp $	*/
+/*	$NetBSD: nbcompat.h,v 1.38 2004/08/23 03:32:12 jlam Exp $	*/
 
 /*-
  * Copyright (c) 2003 The NetBSD Foundation, Inc.
@@ -36,23 +36,30 @@
 #include <nbcompat/nbconfig.h>
 #include <nbcompat/nbtypes.h>
 
-#include <sys/types.h>
-#include <sys/param.h>
-#include <sys/socket.h>
-#include <sys/wait.h>
+#include <nbcompat/cdefs.h>
+#include <nbcompat/limits.h>
+#include <nbcompat/endian.h>
+#include <nbcompat/types.h>
+#include <nbcompat/param.h>
 
-#include <ctype.h>
+#if HAVE_ERRNO_H
 #include <errno.h>
-#include <fcntl.h>
-#include <setjmp.h>
-#include <signal.h>
-#include <stdarg.h>
-#include <stddef.h>
-#include <termios.h>
+#endif
 
+#if HAVE_STDARG_H
+#include <stdarg.h>
+#endif
+
+#if HAVE_STDDEF_H
+#include <stddef.h>
+#endif
+
+#include <nbcompat/assert.h>
+#include <nbcompat/ctype.h>
+#include <nbcompat/dirent.h>
+#include <nbcompat/err.h>
 #include <nbcompat/fnmatch.h>
 #include <nbcompat/grp.h>
-#include <nbcompat/limits.h>
 #include <nbcompat/paths.h>
 #include <nbcompat/pwd.h>
 #include <nbcompat/queue.h>
@@ -61,30 +68,20 @@
 #include <nbcompat/stdlib.h>
 #include <nbcompat/stdio.h>
 #include <nbcompat/string.h>
+#include <nbcompat/termcap.h>
 #include <nbcompat/time.h>
 #include <nbcompat/tzfile.h>
 #include <nbcompat/unistd.h>
 #include <nbcompat/util.h>
 
-#if !HAVE_POLL
-# undef HAVE_POLL_H
-# undef HAVE_SYS_POLL_H
+#if HAVE_NBCOMPAT_POLL
+# if HAVE_POLL_H
+#  undef HAVE_POLL_H
+# endif
+# if HAVE_SYS_POLL_H
+#  undef HAVE_SYS_POLL_H
+# endif
 # include <nbcompat/poll.h>
-#endif
-
-#if HAVE_DIRENT_H
-# include <dirent.h>
-#else
-# define dirent direct
-# if HAVE_SYS_NDIR_H
-#  include <sys/ndir.h>
-# endif
-# if HAVE_SYS_DIR_H
-#  include <sys/dir.h>
-# endif
-# if HAVE_NDIR_H
-#  include <ndir.h>
-# endif
 #endif
 
 #if HAVE_NBCOMPAT_FTS
@@ -92,16 +89,6 @@
 #  undef HAVE_FTS_H
 # endif
 # include <nbcompat/fts.h>
-#endif
-
-#if HAVE_ASSERT_H
-# include <assert.h>
-#endif
-
-#if HAVE_ERR_H
-# include <err.h>
-#else
-# include <nbcompat/err.h>
 #endif
 
 #if HAVE_NBCOMPAT_GLOB
@@ -116,24 +103,6 @@
 #  undef HAVE_REGEX_H
 # endif
 # include <nbcompat/regex.h>
-#endif
-
-#if HAVE_SYS_MKDEV_H
-# include <sys/mkdev.h>
-# if !defined(makedev) && defined(mkdev)
-#  define makedev mkdev
-# endif
-#endif
-
-#if HAVE_TERMCAP_H
-# include <termcap.h>
-#else
-int	 tgetent(char *, const char *);
-char	*tgetstr(const char *, char **);
-int	 tgetflag(const char *);
-int	 tgetnum(const char *);
-char	*tgoto(const char *, int, int);
-void	 tputs(const char *, int, int (*)(int));
 #endif
 
 #if HAVE_NBCOMPAT_MD5INIT
@@ -175,27 +144,4 @@ void	 tputs(const char *, int, int (*)(int));
 #  undef HAVE_GETOPT_H
 # endif
 # include <nbcompat/getopt.h>
-#endif
-
-#if !HAVE_D_NAMLEN
-# ifndef DIRENT_MISSING_D_NAMLEN
-#  define DIRENT_MISSING_D_NAMLEN
-# endif
-#endif
-
-#if !HAVE_ISBLANK
-int	isblank(int);
-#endif
-
-#if HAVE_GETPASSPHRASE
-# ifndef getpass
-#  define getpass getpassphrase
-# endif
-#endif
-
-#if !defined(MIN)
-# define MIN(a, b)	((a) < (b) ? (a) : (b))
-#endif
-#if !defined(MAX)
-# define MAX(a, b)	((a) < (b) ? (b) : (a))
 #endif

@@ -1,4 +1,4 @@
-/*	$NetBSD: fparseln.c,v 1.2 2003/09/06 23:03:02 grant Exp $	*/
+/*	$NetBSD: fparseln.c,v 1.3 2004/08/23 03:32:12 jlam Exp $	*/
 
 /*
  * Copyright (c) 1997 Christos Zoulas.  All rights reserved.
@@ -29,7 +29,49 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "nbcompat.h"
+#include <nbcompat.h>
+#include <nbcompat/cdefs.h>
+#if defined(LIBC_SCCS) && !defined(lint)
+__RCSID("$NetBSD: fparseln.c,v 1.3 2004/08/23 03:32:12 jlam Exp $");
+#endif /* LIBC_SCCS and not lint */
+
+#if 0
+#include "namespace.h"
+#endif
+
+#include <nbcompat/assert.h>
+#if HAVE_ERRNO_H
+#include <errno.h>
+#endif
+#include <nbcompat/stdio.h>
+#include <nbcompat/string.h>
+#include <nbcompat/stdlib.h>
+
+#if 0
+#ifdef __weak_alias
+__weak_alias(fparseln,_fparseln)
+#endif
+#endif
+
+#if ! HAVE_FPARSELN
+
+#if 0
+#ifndef HAVE_NBTOOL_CONFIG_H
+#include "reentrant.h"
+#include "local.h"
+#else
+#define FLOCKFILE(fp)
+#define FUNLOCKFILE(fp)
+#endif
+#endif
+
+#if 0
+#if defined(_REENTRANT) && !HAVE_NBTOOL_CONFIG_H
+#define __fgetln(f, l) __fgetstr(f, l, '\n')
+#else
+#define __fgetln(f, l) fgetln(f, l)
+#endif
+#endif
 
 static int isescaped(const char *, const char *, int);
 
@@ -204,3 +246,4 @@ line 6
 */
 
 #endif /* TEST */
+#endif	/* ! HAVE_FPARSELN */

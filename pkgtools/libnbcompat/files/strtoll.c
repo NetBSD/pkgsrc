@@ -1,5 +1,4 @@
-/*	$NetBSD: strtoll.c,v 1.4 2003/12/19 22:40:04 grant Exp $	*/
-/*	from NetBSD: strtoll.c,v 1.6 2003/10/27 00:12:42 lukem Exp 	*/
+/*	$NetBSD: strtoll.c,v 1.5 2004/08/23 03:32:12 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1992, 1993
@@ -30,8 +29,43 @@
  * SUCH DAMAGE.
  */
 
-#include "nbcompat.h"
+#if HAVE_NBTOOL_CONFIG_H
+#include "nbtool_config.h"
+#endif
 
+#include <nbcompat.h>
+#include <nbcompat/cdefs.h>
+#if defined(LIBC_SCCS) && !defined(lint)
+#if 0
+static char sccsid[] = "from: @(#)strtoq.c	8.1 (Berkeley) 6/4/93";
+#else
+__RCSID("$NetBSD: strtoll.c,v 1.5 2004/08/23 03:32:12 jlam Exp $");
+#endif
+#endif /* LIBC_SCCS and not lint */
+
+#if 0
+#ifdef _LIBC
+#include "namespace.h"
+#endif
+#endif
+
+#include <nbcompat/assert.h>
+#include <nbcompat/ctype.h>
+#if HAVE_ERRNO_H
+#include <errno.h>
+#endif
+#include <nbcompat/limits.h>
+#include <nbcompat/stdlib.h>
+
+#if 0
+#ifdef _LIBC
+#ifdef __weak_alias
+__weak_alias(strtoll, _strtoll)
+#endif
+#endif
+#endif
+
+#if !HAVE_STRTOLL
 /*
  * Convert a string to a long long integer.
  *
@@ -40,7 +74,14 @@
  */
 /* LONGLONG */
 long long int
-strtoll(const char *nptr, char **endptr, int base)
+#ifdef _LIBC && 0
+_strtoll(nptr, endptr, base)
+#else
+strtoll(nptr, endptr, base)
+#endif
+	const char *nptr;
+	char **endptr;
+	int base;
 {
 	const char *s;
 	/* LONGLONG */
@@ -48,6 +89,7 @@ strtoll(const char *nptr, char **endptr, int base)
 	int c;
 	int neg, any, cutlim;
 
+	_DIAGASSERT(nptr != NULL);
 	/* endptr may be NULL */
 
 #ifdef __GNUC__
@@ -147,3 +189,4 @@ strtoll(const char *nptr, char **endptr, int base)
 		*endptr = (char *)(any ? s - 1 : nptr);
 	return (acc);
 }
+#endif

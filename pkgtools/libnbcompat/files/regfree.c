@@ -1,4 +1,4 @@
-/*	$NetBSD: regfree.c,v 1.1 2004/08/16 17:24:56 jlam Exp $	*/
+/*	$NetBSD: regfree.c,v 1.2 2004/08/23 03:32:12 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1992, 1993, 1994
@@ -71,36 +71,25 @@
  *	@(#)regfree.c	8.3 (Berkeley) 3/20/94
  */
 
-#include "nbcompat.h"
-
-#if HAVE_SYS_CDEFS_H
-#include <sys/cdefs.h>
-#endif
+#include <nbcompat.h>
+#include <nbcompat/cdefs.h>
 #if defined(LIBC_SCCS) && !defined(lint)
 #if 0
 static char sccsid[] = "@(#)regfree.c	8.3 (Berkeley) 3/20/94";
 #else
-__RCSID("$NetBSD: regfree.c,v 1.1 2004/08/16 17:24:56 jlam Exp $");
+__RCSID("$NetBSD: regfree.c,v 1.2 2004/08/23 03:32:12 jlam Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
-/* #include "namespace.h" */
-#if HAVE_SYS_TYPES_H
-#include <sys/types.h>
+#if 0
+#include "namespace.h"
 #endif
+#include <nbcompat/types.h>
 
-#if HAVE_ASSERT_H
-#include <assert.h>
-#endif
-#if HAVE_REGEX_H
-#include <regex.h>
-#endif
-#if HAVE_STDIO_H
-#include <stdio.h>
-#endif
-#if HAVE_STDLIB_H
-#include <stdlib.h>
-#endif
+#include <nbcompat/assert.h>
+#include <nbcompat/regex.h>
+#include <nbcompat/stdio.h>
+#include <nbcompat/stdlib.h>
 
 #if 0
 #ifdef __weak_alias
@@ -108,12 +97,8 @@ __weak_alias(regfree,_regfree)
 #endif
 #endif
 
-#include "utils.h"
-#include "regex2.h"
-
-#ifndef _DIAGASSERT
-#define _DIAGASSERT(cond)	assert(cond)
-#endif
+#include "private/utils.h"
+#include "private/regex2.h"
 
 /*
  - regfree - free everything

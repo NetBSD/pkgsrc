@@ -1,4 +1,4 @@
-/*	$NetBSD: rmd160hl.c,v 1.5 2004/08/16 17:24:56 jlam Exp $	*/
+/*	$NetBSD: rmd160hl.c,v 1.6 2004/08/23 03:32:12 jlam Exp $	*/
 
 /* rmd160hl.c
  * ----------------------------------------------------------------------------
@@ -11,33 +11,35 @@
  * from OpenBSD: rmd160hl.c,v 1.2 1999/08/17 09:13:12 millert Exp $
  */  
 
-#include "nbcompat/nbconfig.h"
-#include "nbcompat/nbtypes.h"
+#if HAVE_NBTOOL_CONFIG_H
+#include "nbtool_config.h"
+#endif
 
+#include <nbcompat.h>
+#include <nbcompat/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: rmd160hl.c,v 1.5 2004/08/16 17:24:56 jlam Exp $");
+__RCSID("$NetBSD: rmd160hl.c,v 1.6 2004/08/23 03:32:12 jlam Exp $");
 #endif	/* not lint */
 
+#include <nbcompat/types.h>
 
-/* #include "namespace.h" */
+#if 0
+#include "namespace.h"
+#endif
 
-#include <assert.h>
+#include <nbcompat/assert.h>
 #if HAVE_ERRNO_H
 #include <errno.h>
 #endif
 #if HAVE_FCNTL_H
 #include <fcntl.h>
 #endif
-#include "nbcompat/rmd160.h"
-#include <stdio.h>
-#include <stdlib.h>
-#if HAVE_UNISTD_H
-#include <unistd.h>
-#endif
+#include <nbcompat/rmd160.h>
+#include <nbcompat/stdio.h>
+#include <nbcompat/stdlib.h>
+#include <nbcompat/unistd.h>
 
-#ifndef _DIAGASSERT
-#define _DIAGASSERT(cond)	assert(cond)
-#endif
+#if !HAVE_RMD160_H
 
 #if 0
 #if defined(__weak_alias)
@@ -106,3 +108,5 @@ RMD160Data(const u_char *data, size_t len, char *buf)
     RMD160Update(&ctx, data, len);
     return(RMD160End(&ctx, buf));
 }
+
+#endif /* HAVE_RMD160_H */

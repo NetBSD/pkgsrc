@@ -1,4 +1,4 @@
-/*	$NetBSD: unistd.h,v 1.1 2004/08/10 18:47:55 jlam Exp $	*/
+/*	$NetBSD: unistd.h,v 1.2 2004/08/23 03:32:13 jlam Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -57,6 +57,15 @@ extern int	optind;
 
 #if !HAVE_GETPASS_D
 char	*getpass(const char *);
+#endif
+
+/*
+ * If getpassphrase() exists, then use it in place of getpass().
+ */
+#if HAVE_GETPASSPHRASE
+# ifndef getpass
+#  define getpass	getpassphrase
+# endif
 #endif
 
 #if !HAVE_LCHOWN 

@@ -1,4 +1,4 @@
-/*	$NetBSD: strmode.c,v 1.4 2004/08/16 17:24:56 jlam Exp $	*/
+/*	$NetBSD: strmode.c,v 1.5 2004/08/23 03:32:12 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1990, 1993
@@ -29,33 +29,24 @@
  * SUCH DAMAGE.
  */
 
-#include "nbcompat.h"
-
-#if HAVE_SYS_CDEFS_H
-#include <sys/cdefs.h>
-#endif
-
+#include <nbcompat.h>
+#include <nbcompat/cdefs.h>
 #if defined(LIBC_SCCS) && !defined(lint)
 #if 0
 static char sccsid[] = "@(#)strmode.c	8.3 (Berkeley) 8/15/94";
 #else
-__RCSID("$NetBSD: strmode.c,v 1.4 2004/08/16 17:24:56 jlam Exp $");
+__RCSID("$NetBSD: strmode.c,v 1.5 2004/08/23 03:32:12 jlam Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
-/* #include "namespace.h" */
-#include <sys/types.h>
-#include <sys/stat.h>
-
-#if HAVE_ASSERT_H
-#include <assert.h>
+#if 0
+#include "namespace.h"
 #endif
+#include <nbcompat/types.h>
+#include <nbcompat/stat.h>
 
-#include <unistd.h>
-
-#ifndef _DIAGASSERT
-#define _DIAGASSERT(cond)	assert(cond)
-#endif
+#include <nbcompat/assert.h>
+#include <nbcompat/unistd.h>
 
 void
 strmode(mode, p)
@@ -92,9 +83,11 @@ strmode(mode, p)
 	case S_IFLNK:			/* symbolic link */
 		*p++ = 'l';
 		break;
+#ifdef S_IFSOCK
 	case S_IFSOCK:			/* socket */
 		*p++ = 's';
 		break;
+#endif
 #ifdef S_IFIFO
 	case S_IFIFO:			/* fifo */
 		*p++ = 'p';
@@ -103,6 +96,11 @@ strmode(mode, p)
 #ifdef S_IFWHT
 	case S_IFWHT:			/* whiteout */
 		*p++ = 'w';
+		break;
+#endif
+#ifdef S_IFDOOR
+	case S_IFDOOR:			/* door */
+		*p++ = 'D';
 		break;
 #endif
 	default:			/* unknown */
