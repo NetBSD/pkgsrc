@@ -1,0 +1,256 @@
+$NetBSD: patch-ao,v 1.1 2002/01/11 14:50:32 skrll Exp $
+
+--- configure.orig	Fri Jan 11 13:58:48 2002
++++ configure
+@@ -1211,7 +1211,7 @@
+   fi
+ fi
+ 
+-for ac_prog in gawk mawk nawk awk
++for ac_prog in mawk gawk nawk awk
+ do
+ # Extract the first word of "$ac_prog", so it can be a program name with args.
+ set dummy $ac_prog; ac_word=$2
+@@ -2483,12 +2483,13 @@
+ echo "configure:2484: enable the OSS-RTAUDIO driver..." >&5
+ 	RTAUDIO_DRIVER="LINUXaudio.c \${LINUX_DISTRIB_DIR}/OSSrtaudio.c"
+ 	DEFS="${DEFS} -DOSSRTAUDIO"
++	LIBS="-lossaudio ${LIBS}"
+ fi
+ 
+ if test "${enable_rtaudio}" = "alsa"
+ then
+ 	echo "enable the ALSA driver..." 1>&6
+-echo "configure:2492: enable the ALSA driver..." >&5
++echo "configure:2493: enable the ALSA driver..." >&5
+ 	RTAUDIO_DRIVER=\${LINUX_DISTRIB_DIR}/ALSArtaudio-block.c
+ 	LIBS="-lasound ${LIBS}"
+ fi
+@@ -2496,7 +2497,7 @@
+ if test "${enable_rtaudio}" = "esd"
+ then
+ 	echo "enable the esound server driver..." 1>&6
+-echo "configure:2500: enable the esound server driver..." >&5
++echo "configure:2501: enable the esound server driver..." >&5
+ 	RTAUDIO_DRIVER=\${LINUX_DISTRIB_DIR}/esd-rtaudio.c
+ 	LIBS="-lesd ${LIBS}"
+ 	DEFS="${DEFS} -DESDRTAUDIO"
+@@ -2517,7 +2518,7 @@
+ if test "${enable_OSC_opcodes}" = "yes"
+ then
+ 	echo "enable the OSC opcodes..." 1>&6
+-echo "configure:2521: enable the OSC opcodes..." >&5
++echo "configure:2522: enable the OSC opcodes..." >&5
+ 	OSC_OPCODES="\${LINUX_DISTRIB_DIR}/OSC-sock.c"
+ 	DEFS="${DEFS} -DENABLE_OSC"
+ 	LIBS="-lOSC -lOSCtools ${LIBS}"
+@@ -2540,18 +2541,18 @@
+ if test "${enable_profile}" = "yes"
+ then
+ 	echo "enable profile flags (csound will get linked statically)..." 1>&6
+-echo "configure:2544: enable profile flags (csound will get linked statically)..." >&5
++echo "configure:2545: enable profile flags (csound will get linked statically)..." >&5
+ 	want_static_link="yes"
+ 	if test "$GCC" = "yes" -a "$GXX" = "yes"
+ 	then
+ 		echo "we have gcc and g++" 1>&6
+-echo "configure:2549: we have gcc and g++" >&5
++echo "configure:2550: we have gcc and g++" >&5
+ 		CFLAGS="-pg ${CFLAGS}"
+ 		CXXFLAGS="-pg ${CXXFLAGS}"
+ 		LDFLAGS="-pg ${LDFLAGS}"
+ 	else
+ 		echo "we do not have gcc nor g++" 1>&6
+-echo "configure:2555: we do not have gcc nor g++" >&5
++echo "configure:2556: we do not have gcc nor g++" >&5
+ 		CFLAGS="-p ${CFLAGS}"
+ 		CXXFLAGS="-p ${CXXFLAGS}"
+ 		LDFLAGS="-p ${LDFLAGS}"
+@@ -2562,7 +2563,7 @@
+ if test "${enable_debug}" != "yes" && test "${enable_profile}" != "yes"
+ then
+ 	echo "will strip executables to make them smaller..." 1>&6
+-echo "configure:2566: will strip executables to make them smaller..." >&5
++echo "configure:2567: will strip executables to make them smaller..." >&5
+ 	LDFLAGS="-s ${LDFLAGS}" # we may strip the executables
+ fi
+ 
+@@ -2583,14 +2584,14 @@
+ if test "${enable_sliders}" = "tk" -o "${enable_sliders}" = "yes"
+ then
+ 		echo "enabling tk sliders..." 1>&6
+-echo "configure:2587: enabling tk sliders..." >&5
++echo "configure:2588: enabling tk sliders..." >&5
+ 		DEFS="${DEFS} -DTCLTK"
+ fi
+ 
+ if test "${enable_sliders}" = "ipc"
+ then
+ 		echo "enabling unix IPC sliders..." 1>&6
+-echo "configure:2594: enabling unix IPC sliders..." >&5
++echo "configure:2595: enabling unix IPC sliders..." >&5
+ 		DEFS="${DEFS} -DIPCSLIDERS"
+ fi
+ 
+@@ -2609,7 +2610,7 @@
+ if test "${enable_suid}" = "yes"
+ then
+ 	echo "csound will be installed with the suid flags set..." 1>&6
+-echo "configure:2613: csound will be installed with the suid flags set..." >&5
++echo "configure:2614: csound will be installed with the suid flags set..." >&5
+ 	CSOUND_INSTALLATION_MODE="6755"
+ else
+ 	CSOUND_INSTALLATION_MODE="755"
+@@ -2634,7 +2635,7 @@
+ if test "${enable_linebuf}" = "yes"
+ then
+ 	echo "csound will force line buffering for stdout and stderr (buffering: $linebuf_value...)" 1>&6
+-echo "configure:2638: csound will force line buffering for stdout and stderr (buffering: $linebuf_value...)" >&5
++echo "configure:2639: csound will force line buffering for stdout and stderr (buffering: $linebuf_value...)" >&5
+ 	cat >> confdefs.h <<EOF
+ #define FORCE_STDOUT_LBUF $linebuf_value
+ EOF
+@@ -2647,7 +2648,7 @@
+ # Uses ac_ vars as temps to allow command line to override cache and checks.
+ # --without-x overrides everything else, but does not touch the cache.
+ echo $ac_n "checking for X""... $ac_c" 1>&6
+-echo "configure:2651: checking for X" >&5
++echo "configure:2652: checking for X" >&5
+ 
+ # Check whether --with-x or --without-x was given.
+ if test "${with_x+set}" = set; then
+@@ -2709,12 +2710,12 @@
+ 
+   # First, try using that file with no special directory specified.
+ cat > conftest.$ac_ext <<EOF
+-#line 2713 "configure"
++#line 2714 "configure"
+ #include "confdefs.h"
+ #include <$x_direct_test_include>
+ EOF
+ ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
+-{ (eval echo configure:2718: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
++{ (eval echo configure:2719: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
+ ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
+ if test -z "$ac_err"; then
+   rm -rf conftest*
+@@ -2783,14 +2784,14 @@
+   ac_save_LIBS="$LIBS"
+   LIBS="-l$x_direct_test_library $LIBS"
+ cat > conftest.$ac_ext <<EOF
+-#line 2787 "configure"
++#line 2788 "configure"
+ #include "confdefs.h"
+ 
+ int main() {
+ ${x_direct_test_function}()
+ ; return 0; }
+ EOF
+-if { (eval echo configure:2794: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
++if { (eval echo configure:2795: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+   rm -rf conftest*
+   LIBS="$ac_save_LIBS"
+ # We can link X programs with no special library path.
+@@ -2881,14 +2882,14 @@
+ if test "$no_x" != "yes" && test "$have_x" = yes
+ then
+ 	echo "using X11 libraries..." 1>&6
+-echo "configure:2885: using X11 libraries..." >&5
++echo "configure:2886: using X11 libraries..." >&5
+ 	xlib_used=-lX11
+ 	winsrc_used=winX11.c
+ 	winobj_used=winX11.o
+ 	windows_define_used=-DWINDOWS
+ else
+ 	echo "not using X11 libraries..." 1>&6
+-echo "configure:2892: not using X11 libraries..." >&5
++echo "configure:2893: not using X11 libraries..." >&5
+ 	xlib_used=
+ 	winsrc_used=
+ 	winobj_used=
+@@ -2917,7 +2918,7 @@
+ if test "${enable_dyn}" = "yes" && test "${want_static_link}" = "no"
+ then
+ 	echo "csound will get linked dynamically..." 1>&6
+-echo "configure:2921: csound will get linked dynamically..." >&5
++echo "configure:2922: csound will get linked dynamically..." >&5
+ 	cslib='$(CSADYNSO)'
+ 	libcscore='$(LIBCSCORE_DYNSO)'
+ 	CFLAGS="-fPIC ${CFLAGS}"
+@@ -2925,7 +2926,7 @@
+ 	LIBS="-l${csound_app_prefix}csound ${LIBS}"
+ else
+ 	echo "csound will get linked statically${static_link_reason}..." 1>&6
+-echo "configure:2929: csound will get linked statically${static_link_reason}..." >&5
++echo "configure:2930: csound will get linked statically${static_link_reason}..." >&5
+ 	cslib='$(CSASTAT)'
+ 	libcscore='$(LIBCSCORE_STAT)'
+ 	bindistrib_version="-static${bindistrib_version}"
+@@ -2934,8 +2935,8 @@
+ 
+ 
+ case $host in
+-	*linux)
+-		local_defines="-DRTAUDIO -DLINUX ${DEFS}"
++	*linux|*bsd)
++		local_defines="-DRTAUDIO -DLINUX -DBSD ${DEFS}"
+ 		;;
+ 	*)
+ 		;;
+@@ -2944,12 +2945,12 @@
+ case $host in
+ 	alpha*linux)
+ 		echo "setting CC wrapper for alpha..." 1>&6
+-echo "configure:2948: setting CC wrapper for alpha..." >&5
++echo "configure:2949: setting CC wrapper for alpha..." >&5
+ 		CC='$(TOP)/new-src/alpha-gcc.sh'
+ 		;;
+ 	powerpc*linux)
+ 		echo "adjusting MINSHORT for LinuxPPC..." 1>&6
+-echo "configure:2953: adjusting MINSHORT for LinuxPPC..." >&5
++echo "configure:2954: adjusting MINSHORT for LinuxPPC..." >&5
+ 		local_defines="${local_defines} -DHAVE_SHRT_MIN"
+ 		;;
+ 	*)
+@@ -2959,7 +2960,7 @@
+ if test -n "${local_defines}"
+ then
+ 	echo "added ${local_defines} compile-time defines..." 1>&6
+-echo "configure:2963: added ${local_defines} compile-time defines..." >&5
++echo "configure:2964: added ${local_defines} compile-time defines..." >&5
+ fi
+ 
+ if test "${system_has_cut}" = "yes"
+@@ -2967,20 +2968,20 @@
+ 	
+ 	version_file="${ac_unique_file}"
+ 		csound_version_full=`(cat ${version_file}; echo VERSIONSTRING) | ${CPP} - | ${AWK} '/^" v"/ { gsub(/[" v]/,""); print $0; }'`
+-		csound_version_major=`echo ${csound_version_full} | cut -d '.' -f 1 -`
+-	csound_version_minor=`echo ${csound_version_full} | cut -d '.' -f 2 -`
+-	csound_patchlevel=`echo ${csound_version_full} | cut -d '.' -f 3 -`
+-	csound_betalevel=`echo ${csound_version_full} | cut -d '.' -f 4 -`
++		csound_version_major=`echo ${csound_version_full} | cut -d '.' -f 1`
++	csound_version_minor=`echo ${csound_version_full} | cut -d '.' -f 2`
++	csound_patchlevel=`echo ${csound_version_full} | cut -d '.' -f 3`
++	csound_betalevel=`echo ${csound_version_full} | cut -d '.' -f 4`
+ 
+ 	echo "almost done configuring for csound version ${csound_version_major}.${csound_version_minor}.${csound_patchlevel}.${csound_betalevel}..." 1>&6
+-echo "configure:2977: almost done configuring for csound version ${csound_version_major}.${csound_version_minor}.${csound_patchlevel}.${csound_betalevel}..." >&5
++echo "configure:2978: almost done configuring for csound version ${csound_version_major}.${csound_version_minor}.${csound_patchlevel}.${csound_betalevel}..." >&5
+ else
+ 	csound_version_major="unknown"
+ 	csound_version_minor="unknown"
+ 	csound_patchlevel="unknown"
+ 	csound_betalevel="unknown"
+ 	echo "almost done configuring for csound..." 1>&6
+-echo "configure:2984: almost done configuring for csound..." >&5
++echo "configure:2985: almost done configuring for csound..." >&5
+ fi
+ 
+ CXXFLAGS=${CFLAGS}
+@@ -3374,4 +3375,4 @@
+ test "$no_create" = yes || ${CONFIG_SHELL-/bin/sh} $CONFIG_STATUS || exit 1
+ 
+ echo "configure process terminated; you should now run 'make depend; make'" 1>&6
+-echo "configure:3378: configure process terminated; you should now run 'make depend; make'" >&5
++echo "configure:3379: configure process terminated; you should now run 'make depend; make'" >&5
