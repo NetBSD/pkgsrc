@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2003/08/25 11:21:50 drochner Exp $
+# $NetBSD: Makefile,v 1.36 2004/01/22 07:21:55 grant Exp $
 #
 
 DISTNAME=	verilog-${SNAPDATE}
@@ -20,7 +20,7 @@ CONFLICTS+=	verilog-[0-9]*
 SNAPDATE=	20030815
 USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=      yes
+USE_GNU_TOOLS+=	make
 #
 # for ipal.h
 #CPPFLAGS+=      -I${LOCALBASE}/include

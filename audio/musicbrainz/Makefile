@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/21 16:30:42 martti Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/22 07:15:00 grant Exp $
 
 DISTNAME=	libmusicbrainz-2.0.0
 PKGNAME=	${DISTNAME:S/lib//}
@@ -9,7 +9,7 @@ MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://www.musicbrainz.org/
 COMMENT=	Second generation incarnation of the CD Index
 
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
