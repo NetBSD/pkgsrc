@@ -1,11 +1,17 @@
-# $NetBSD: Makefile,v 1.2 1997/10/28 00:12:41 hubertf Exp $
-# FreeBSD comes with ncurses, we don't, so...
+# New ports collection makefile for:	ncurses
+# Version required:     		1.9.9e
+# Date created:				Tue Oct 28 00:12:41 CET 1997
+# Whom:					Hubert Feyrer (hubertf@netbsd.org)
+#
+# $NetBSD: Makefile,v 1.3 1997/10/28 11:35:46 agc Exp $
 
 DISTNAME=	ncurses-1.9.9e
 CATEGORIES=	devel
-# XXX this should be moved to ftp.netcom.com:/pub/zm/zmbenhal/ncurses
+# XXX this should be moved to ftp.netcom.com:/pub/zm/zmbenhal/ncurses/
 # XXX once upgraded to the latest version - hubertf
-MASTER_SITES=	ftp://ftp.fu-berlin.de/unix/gnu/ncurses
+MASTER_SITES=	ftp://ftp.fu-berlin.de/unix/gnu/ncurses/
+
+MAINTAINER=	hubertf@netbsd.org
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-normal --with-shared --enable-bsdpad
@@ -35,6 +41,8 @@ MAN3=		curs_addch.3 curs_addchstr.3 curs_addstr.3 curs_attr.3 \
 		menu_post.3 menu_userptr.3 menu_win.3 mitem_current.3 \
 		mitem_name.3 mitem_new.3 mitem_opts.3 mitem_userptr.3 \
 		mitem_value.3 mitem_visible.3 ncurses.3 panel.3 
+MAN5=		terminfo.5 term.5
+MAN7=		term.7
 
 post-extract:
 	( cd ${WRKSRC}/man ; rm -f tput.1 tset.1 clear.1 )
