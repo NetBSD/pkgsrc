@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2004/11/07 16:20:11 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2004/11/10 20:16:57 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -9,6 +9,7 @@ PERL5_RC_VERS=	# empty
 .if empty(PERL5_SNAPSHOT) && empty(PERL5_RC_VERS)
 DISTNAME=	perl-${PERL5_VERS}
 PKGNAME=	perl${PERL5_PKGSUFFIX}-${PERL5_VERS}
+PKGREVISION=	1
 SNAPSHOT_SITES=	# empty
 .else
 .  if !empty(PERL5_SNAPSHOT)
@@ -54,6 +55,7 @@ CONFIGURE_ARGS+=	-Dscriptdir="${PREFIX}/bin"
 CONFIGURE_ARGS+=	-Darchname="${MACHINE_ARCH}-${LOWER_OPSYS}"
 CONFIGURE_ARGS+=	-Doptimize="${CFLAGS}"
 CONFIGURE_ARGS+=	-Dinstallstyle="lib/perl5"
+CONFIGURE_ARGS+=	-Duseshrplib
 CONFIGURE_ARGS+=	-Ui_malloc
 CONFIGURE_ARGS+=	-Uusemymalloc
 CONFIGURE_ARGS+=	-Uinstallusrbinperl
@@ -97,29 +99,15 @@ CONFIGURE_ARGS+=	-Duseithreads
 .  include "../../mk/pthread.buildlink3.mk"
 .endif
 
-MKPIC?=		yes
-
 CONFIGURE_ARGS+=	-Dcc="${CC}"
 MAKE_ENV+=		LANG=""
 
-.if ${OPSYS} == "Interix"
-#
-# On Interix, the shared perl is actually faster, so default to that.
-#
-STATIC_PERL?=	no
-
-.elif ${OPSYS} == "Darwin"
+.if ${OPSYS} == "Darwin"
 #
 # The perl build attempts to work around case-insensitivity problems on
 # HFS filesystems by using GNUmakefiles, so we need to use GNU make.
 #
 USE_GNU_TOOLS+=	make
-#
-# Perl is _always_ built using shared libraries on Darwin; there's no
-# way to build a statically-linked perl binary.
-#
-MKPIC=		yes
-STATIC_PERL=	no
 #
 # "installarchlib" and "installsitearch" have different forms between
 # Darwin and NetBSD (and between older and newer versions of Darwin)
@@ -179,12 +167,6 @@ FIX_RPATH+=		LOCLIBRPATHFLAGS
 CONFIGURE_ARGS+=	-Dlibswanted="${LIBSWANTED.${OPSYS}}"
 .endif
 
-.if ${OPSYS} == "NetBSD"
-.  if !exists(/usr/libexec/ld.so) && !exists(/usr/libexec/ld.elf_so)
-MKPIC=		no
-.  endif
-.endif
-
 .include "../../mk/compiler.mk"
 
 .if ${OPSYS} == "IRIX" && ${ABI} == "64"
@@ -212,10 +194,6 @@ MAKEFLAGS+=	_GCC_IS_TOO_OLD=${_GCC_IS_TOO_OLD}
 CFLAGS+=	-g -msoft-quad-float -O2
 .    endif
 .  endif
-.endif
-
-.if ${MKPIC} == "yes"
-CONFIGURE_ARGS+=	-Duseshrplib
 .endif
 
 PERL5=			${PREFIX}/bin/perl${PERL5_VERS}
@@ -265,36 +243,7 @@ pre-configure:
 	done
 .endif
 
-# By default, on platforms that build shared libraries, rebuild the perl
-# binary as a statically-linked binary as a speed optimization.  Performance
-# increase is only by word-of-mouth -- no actual benchmarks have been
-# produced.  However, it has been remarked that the advantage of having a
-# statically-linked perl is pretty much non-existent on any platform with
-# any reasonable number of registers.  These platforms should be added to
-# the list below to bypass the build of the statically-linked perl.
-#
-.if ${MKPIC} == "yes"
-.  for _arch_ in mipsel mipseb powerpc
-.    if !empty(MACHINE_ARCH:M${_arch_})
-STATIC_PERL?=		no
-.    endif
-.  endfor
-.endif
-STATIC_PERL?=		yes
-
 WRKSRC_PERL5=		${WRKSRC}/perl
-
-.if defined(STATIC_PERL) && !empty(STATIC_PERL:M[yY][eE][sS])
-STATIC_WRKDIR=		${WRKDIR}/static
-STATIC_MAKEFLAGS=	MKPIC=no STATIC_PERL=no
-STATIC_MAKEFLAGS+=	WRKDIR=${STATIC_WRKDIR}
-STATIC_MAKEFLAGS+=	ALL_TARGET=perl
-WRKSRC_PERL5=		${STATIC_WRKDIR}/${WRKSRC:T}/perl
-UNLIMIT_RESOURCES=      datasize
-
-post-build:
-	cd ${.CURDIR} && ${MAKE} build ${STATIC_MAKEFLAGS}
-.endif
 
 post-install:
 	${RM} -f ${PREFIX}/bin/perl ${PREFIX}/bin/perl${PERL5_VERS}
