@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.98 2005/03/04 04:56:46 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.99 2005/03/05 18:43:31 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -207,3 +207,5 @@ Pullup ticket 326 - requested by Matthias Scheler
 security fix for gftp
 Pullup ticket 328 - requested by Lubomir Sedlacik
 security fix for cups
+Pullup ticket 330 - requested by Lubomir Sedlacik
+security fix for mailman
