@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/01/20 01:55:51 hubertf Exp $
+include/gtkgl/gdkgl.h
+include/gtkgl/gtkglarea.h
+@dirrm include/gtkgl
+lib/libgtkgl.so.3.0
+lib/libgtkgl.la
+lib/libgtkgl.a
+share/doc/gtkglarea/HOWTO.txt
+share/doc/gtkglarea/gdkgl.txt
+share/doc/gtkglarea/gtkglarea.txt
+@dirrm share/doc/gtkglarea
