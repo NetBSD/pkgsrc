@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2002/09/05 18:07:54 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.10 2002/10/20 03:20:34 grant Exp $
 #
 # common make file fragment shared by all amanda-* pkgs.
 #
@@ -29,3 +29,4 @@ CONFIGURE_ARGS+=	--with-amandahosts
 CONFIGURE_ARGS+=	--localstatedir=${AMANDA_VAR}
 CONFIGURE_ARGS+=	--with-gnutar-listdir=${AMANDA_VAR}/gnutar-lists
 CONFIGURE_ARGS+=	--with-dump-honor-nodump
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
