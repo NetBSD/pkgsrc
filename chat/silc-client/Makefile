@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/12/21 20:48:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/12/26 03:02:29 hubertf Exp $
 
 DISTNAME=		silc-client-0.7.1
 CATEGORIES=		chat
@@ -30,7 +30,7 @@ CONFIGURE_ARGS+=	--with-helpdir=${PREFIX}/share/silc/help \
 			--with-docdir=${PREFIX}/share/doc/silc \
 			--with-etcdir=${PKG_SYSCONFBASE}/${PKG_SYSCONFSUBDIR}
 
-CONFIGURE_ARGS+=	--with-ncurses=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-ncurses=${BUILDLINK_DIR}
 
 post-configure:
 	cd ${WRKSRC}; \
