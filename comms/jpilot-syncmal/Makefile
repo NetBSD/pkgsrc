@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2003/01/13 13:21:07 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2003/03/04 16:30:18 wiz Exp $
 
-DISTNAME=		jpilot-syncmal_0.71
-PKGNAME=		jpilot-syncmal-0.71
+DISTNAME=		jpilot-syncmal_0.71.2
+PKGNAME=		jpilot-syncmal-0.71.2
 CATEGORIES=		comms
 MASTER_SITES=		http://jasonday.home.att.net/code/syncmal/
 
@@ -19,7 +19,7 @@ USE_LIBTOOL=		# defined
 SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--with-gtk-prefix=${BUILDLINK_PREFIX.gtk}
+CONFIGURE_ARGS+=	--enable-gtk2
 CONFIGURE_ARGS+=	--with-plugin-prefix=${BUILDLINK_PREFIX.jpilot}/include/jpilot
 CONFIGURE_ARGS+=	--with-pilot-prefix=${BUILDLINK_PREFIX.pilot-link-libs}
 MAKE_ENV+=		PILOT_LINK_DIR=${BUILDLINK_PREFIX.pilot-link-libs}
