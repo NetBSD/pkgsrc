@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2003/04/10 01:28:31 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/04/17 19:06:13 drochner Exp $
 #
 
-DISTNAME=	Zope-2.5.1-src
-PKGNAME=	zope-2.5.1
+DISTNAME=	Zope-2.6.1-src
+PKGNAME=	zope-2.6.1
 CATEGORIES=	www
-MASTER_SITES=	http://www.zope.org/Products/Zope/2.5.1/
+MASTER_SITES=	http://www.zope.org/Products/Zope/2.6.1/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
@@ -12,10 +12,6 @@ HOMEPAGE=	http://www.zope.org/
 COMMENT=	Zope, the Z Object Publishing Environment
 
 DIST_SUBDIR=	zope
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
-HOTFIX=		Hotfix_2002-06-14.tgz
-SITES_${HOTFIX}= http://www.zope.org/Products/Zope/Hotfix_2002-06-14/
-DISTFILES+=	${HOTFIX}
 
 PYTHON_VERSIONS_ACCEPTED=	21pth
 USE_BUILDLINK2=	yes
@@ -43,8 +39,6 @@ do-install:
 		-or -name "sedscript" -or -name "Makefile*" \
 		-or -name "Setup*" -or -name ".cvsignore" \) \
 		-print | ${PAX} -rw ${ZOPEDIR}
-	#install hotfix
-	cd ${WRKDIR} && ${PAX} -rw lib ${ZOPEDIR}
 	cd ${ZOPEDIR} && ${PYTHONBIN} ${WRKSRC}/inst/compilezpy.py
 	cd ${WRKSRC} && ${PAX} -rw ${ZOPEDATA} ${ZOPEDIR}
 
