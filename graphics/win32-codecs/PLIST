@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/12/21 19:44:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/03/17 21:05:02 wiz Exp $
 lib/win32/CLRVIDDC.DLL
 lib/win32/CtWbJpg.DLL
 lib/win32/LCodcCMP.dll
@@ -64,6 +64,11 @@ lib/win32/vgpix32d.dll
 lib/win32/vivog723.acm
 lib/win32/voxmsdec.ax
 lib/win32/vp31vfw.dll
+lib/win32/wma9dmod.dll
+lib/win32/wmadmod.dll
+lib/win32/wmspdmod.dll
 lib/win32/wmv8ds32.ax
+lib/win32/wmv9dmod.dll
+lib/win32/wmvdmod.dll
 lib/win32/wmvds32.ax
 @dirrm lib/win32
