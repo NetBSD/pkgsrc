@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8401 2004/12/22 08:55:09 snj Exp $
+$NetBSD: CHANGES,v 1.8402 2004/12/22 12:53:43 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6464,3 +6464,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tiff to 3.6.1nb6 [reed 2004-12-22]
 	Updated openldap to 2.2.19 [jlam 2004-12-22]
 	Updated 3ddesktop to 0.2.5nb6 [snj 2004-12-22]
+	Updated xine-lib to 1-rc8 [drochner 2004-12-22]
+	Updated gibgsf to 1.11.1 [drochner 2004-12-22]
+	Added gnumeric-1.4.1 [drochner 2004-12-22]
