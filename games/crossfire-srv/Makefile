@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/08/01 16:26:56 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/10/26 10:43:54 agc Exp $
 #
 
 DISTNAME=	crossfire-1.0.0
@@ -24,9 +24,16 @@ USE_X11=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_PERL5=	yes
-SCRIPTS_ENV+=	${SCRIPTSDIR}
 CONFIGURE_ARGS+=	--prefix=${LOCALBASE}
 CONFIGURE_ARGS+=	--with-includes=-I${LOCALBASE}/include
+
+REPLACE_PERL=	lib/xpmtopix.pl lib/adm/check-xpm.pl lib/adm/make_xpm_file.pl
+REPLACE_PERL+=	lib/adm/map_expand.pl lib/adm/mapslitter.pl
+REPLACE_PERL+=	lib/adm/archsearch.pl lib/adm/collect_images.pl
+REPLACE_PERL+=	lib/collect.pl lib/util.pl lib/checkarch.pl
+REPLACE_PERL+=	utils/crossloop.pl utils/metaserver.pl
+REPLACE_PERL+=	doc/include_html.pl doc/playbook/make_index.pl
+REPLACE_PERL+=	doc/spoiler-html/makeps.pl
 
 post-install:
 	cd ${LOCALBASE}/share/crossfire && \
