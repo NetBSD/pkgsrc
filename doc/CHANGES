@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7177 2004/09/20 21:30:25 agc Exp $
+$NetBSD: CHANGES,v 1.7178 2004/09/20 22:00:27 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4278,4 +4278,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated thunderbird-gtk2 to 0.8 [taya 2004-09-20]
 	Updated firefox-gtk2-bin to 0.10 [erh 2004-09-20]
 	bsd.pkg.mk: freeze ended for pkgsrc-2004Q3 branch [agc 2004-09-20]
+	Updated gqview to 1.4.4 [snj 2004-09-20]
+	Updated devilspie to 0.5.1 [snj 2004-09-20]
 	Added news-0.1 [jschauma 2004-09-20]
+	Updated giblib to 1.2.4 [snj 2004-09-20]
