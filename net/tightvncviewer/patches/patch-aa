@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2001/09/23 00:55:16 mycroft Exp $
+$NetBSD: patch-aa,v 1.2 2001/09/23 00:58:14 mycroft Exp $
 
 --- vncviewer/Imakefile.orig	Mon Jun 18 13:17:15 2001
-+++ vncviewer/Imakefile	Sun Sep 23 00:09:50 2001
-@@ -6,12 +6,7 @@
++++ vncviewer/Imakefile	Sun Sep 23 00:57:07 2001
+@@ -6,19 +6,14 @@
  CDEBUGFLAGS = -O2
  #endif
  
@@ -15,3 +15,13 @@ $NetBSD: patch-aa,v 1.1 2001/09/23 00:55:16 mycroft Exp $
  
  INCLUDES = -I../include -I. -I/usr/include
  VNCAUTH_LIB = ../libvncauth/libvncauth.a
+-ZLIB_LIB = /usr/lib/libz.a
+-JPEG_LIB = /usr/lib/libjpeg.a
++ZLIB_LIB = -lz
++JPEG_LIB = ${BUILDLINK_LDFLAGS} -Wl,-rpath ${LOCALBASE}/lib -ljpeg
+ 
+-DEPLIBS = XawClientDepLibs $(VNCAUTH_LIB) $(ZLIB_LIB) $(JPEG_LIB)
++DEPLIBS = XawClientDepLibs $(VNCAUTH_LIB)
+ LOCAL_LIBRARIES = XawClientLibs $(VNCAUTH_LIB) $(ZLIB_LIB) $(JPEG_LIB)
+ 
+ SRCS = \
