@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: p4d.sh,v 1.1.1.1 2002/09/01 02:26:09 schmonz Exp $
+# $NetBSD: p4d.sh,v 1.2 2002/09/20 02:01:56 grant Exp $
 #
 # Perforce SCM server
 #

@@ -1,6 +1,6 @@
-#!@SH@
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: squid.sh,v 1.14 2002/09/15 14:39:51 grant Exp $
+# $NetBSD: squid.sh,v 1.15 2002/09/20 02:02:02 grant Exp $
 #
 
 # PROVIDE: squid

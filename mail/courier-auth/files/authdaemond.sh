@@ -1,6 +1,6 @@
-#! /bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: authdaemond.sh,v 1.5 2002/07/18 01:48:09 lukem Exp $
+# $NetBSD: authdaemond.sh,v 1.6 2002/09/20 02:01:56 grant Exp $
 #
 # Courier user authentication daemon
 #

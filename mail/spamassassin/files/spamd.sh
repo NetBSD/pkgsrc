@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-#	$NetBSD: spamd.sh,v 1.4 2002/09/20 01:38:38 grant Exp $
+#	$NetBSD: spamd.sh,v 1.5 2002/09/20 02:01:57 grant Exp $
 #
 # PROVIDE: spamd
 # REQUIRE: DAEMON

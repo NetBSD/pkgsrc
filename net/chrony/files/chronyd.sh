@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: chronyd.sh,v 1.2 2002/09/20 01:41:56 grant Exp $
+# $NetBSD: chronyd.sh,v 1.3 2002/09/20 02:01:57 grant Exp $
 #
 # PROVIDE: chronyd
 # REQUIRE: DAEMON

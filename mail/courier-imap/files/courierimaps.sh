@@ -1,6 +1,6 @@
-#! /bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: courierimaps.sh,v 1.5 2002/02/05 06:04:38 jlam Exp $
+# $NetBSD: courierimaps.sh,v 1.6 2002/09/20 02:01:56 grant Exp $
 #
 # Courier IMAP/SSL services daemon
 #
