@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/11/01 16:34:42 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2002/11/15 00:10:54 jlam Exp $
 
 DISTNAME=		ntop-2.1
 PKGNAME=		ntop2-2.1
@@ -24,7 +24,6 @@ USE_GNU_READLINE=	yes
 CONFIGURE_ARGS+=	--disable-mysql
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-USE_BUILDLINK_ONLY=	yes
 
 PTHREAD_OPTS+=		require
 
