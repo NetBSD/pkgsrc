@@ -1,0 +1,12 @@
+=============================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2000/02/19 00:57:05 tsutsui Exp $
+
+This pkg DOES NOT install headers or runtime link libraries.  Only the
+compilers are installed.
+
+In order to have a complete development setup, you need to install
+includes and libraries in ${CROSSBASE}/mipseb-netbsd/include and
+${CROSSBASE}/mipseb-netbsd/lib respectively, or symlink these paths to
+the appropriate places.
+
+=============================================================================
