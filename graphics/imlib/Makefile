@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2000/02/12 03:24:15 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2000/02/15 16:44:54 agc Exp $
 #
 
 DISTNAME=	imlib-1.9.8
@@ -25,7 +25,7 @@ PLIST_SUBST+=	LOCALBASE=${LOCALBASE}
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-CPPFLAGS+=	-DENABLE_NLS
+CPPFLAGS=	-DENABLE_NLS
 .endif
 
 CPPFLAGS+=	-I${LOCALBASE}/include
