@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/01/23 17:18:31 jmmv Exp $
+# $NetBSD: Makefile,v 1.22 2004/02/11 01:23:36 xtraeme Exp $
 #
 
 DISTNAME=		libglade-2.0.1
@@ -13,7 +13,7 @@ COMMENT=		Runtime interpreter for GLADE GUI files (v2)
 
 BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
@@ -30,7 +30,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/libglade/2.0
 
 .include "../../lang/python/application.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
