@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.6 1999/09/13 21:20:34 fredb Exp $
+$NetBSD: patch-ab,v 1.7 1999/09/24 00:39:13 jlam Exp $
 
---- configure.orig	Thu Feb 12 17:46:01 1998
-+++ configure	Mon Sep 13 15:33:07 1999
+--- configure.orig	Thu Feb 12 18:46:01 1998
++++ configure	Thu Sep 23 16:45:08 1999
 @@ -1628,6 +1628,7 @@
      test -z "$cf_dir" && cf_dir=/usr/man
      cf_rename=""
      cf_format=no
-+    if false ; then	# install unformatted man pages
++    if false; then	# install unformatted man pages
      for cf_name in $cf_dir/*/date.[01]* $cf_dir/*/date
      do
         cf_test=`echo $cf_name | sed -e 's/*//'`
@@ -24,87 +24,21 @@ $NetBSD: patch-ab,v 1.6 1999/09/13 21:20:34 fredb Exp $
  	
  	case $DFT_LWR_MODEL in
 -	normal)  DFT_DEP_SUFFIX='.a'   ;;
-+	normal)  DFT_DEP_SUFFIX='.la'  ;;
++	normal)  DFT_DEP_SUFFIX='.la'   ;;
  	debug)   DFT_DEP_SUFFIX='_g.a' ;;
  	profile) DFT_DEP_SUFFIX='_p.a' ;;
  	shared)
-@@ -4842,36 +4845,37 @@
- cross_compiling=$ac_cv_prog_cxx_cross
- 
- 	
--cf_cxx_library=unknown
--if test $ac_cv_prog_gxx = yes; then
--	echo $ac_n "checking for libg++""... $ac_c" 1>&6
--echo "configure:4849: checking for libg++" >&5
--	cf_save="$LIBS"
--	LIBS="$LIBS -lg++ -lm"
--	cat > conftest.$ac_ext <<EOF
--#line 4853 "configure"
--#include "confdefs.h"
--
--#include <builtin.h>
--	
--int main() {
--float foo=abs(1.0)
--; return 0; }
--EOF
--if { (eval echo configure:4862: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
--  rm -rf conftest*
--  cf_cxx_library=yes
--	 CXXLIBS="$CXXLIBS -lg++ -lm"
--else
--  echo "configure: failed program was:" >&5
--  cat conftest.$ac_ext >&5
--  rm -rf conftest*
--  cf_cxx_library=no
--fi
--rm -f conftest*
--	LIBS="$cf_save"
-+cf_cxx_library=no
-+#cf_cxx_library=unknown
-+#if test $ac_cv_prog_gxx = yes; then
-+#	echo $ac_n "checking for libg++""... $ac_c" 1>&6
-+#echo "configure:4849: checking for libg++" >&5
-+#	cf_save="$LIBS"
-+#	LIBS="$LIBS -lg++ -lm"
-+#	cat > conftest.$ac_ext <<EOF
-+##line 4853 "configure"
-+##include "confdefs.h"
-+#
-+##include <builtin.h>
-+#	
-+#int main() {
-+#float foo=abs(1.0)
-+#; return 0; }
-+#EOF
-+#if { (eval echo configure:4862: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
-+#  rm -rf conftest*
-+#  cf_cxx_library=yes
-+#	 CXXLIBS="$CXXLIBS -lg++ -lm"
-+#else
-+#  echo "configure: failed program was:" >&5
-+#  cat conftest.$ac_ext >&5
-+#  rm -rf conftest*
-+#  cf_cxx_library=no
-+#fi
-+#rm -f conftest*
-+#	LIBS="$cf_save"
- 	echo "$ac_t""$cf_cxx_library" 1>&6
--fi
-+#fi
- 
- 	echo $ac_n "checking how to run the C++ preprocessor""... $ac_c" 1>&6
- echo "configure:4878: checking how to run the C++ preprocessor" >&5
-@@ -5310,7 +5314,7 @@
+@@ -5310,7 +5313,8 @@
  
  # dependencies and linker-arguments for test-programs
  TEST_DEPS="${LIB_PREFIX}${LIB_NAME}${DFT_DEP_SUFFIX} $TEST_DEPS"
 -TEST_ARGS="-l${LIB_NAME}${DFT_ARG_SUFFIX} $TEST_ARGS"
 +TEST_ARGS="${LIB_PREFIX}${LIB_NAME}${DFT_DEP_SUFFIX} $TEST_ARGS"
++
  
  # dependencies and linker-arguments for utility-programs
  PROG_ARGS="$TEST_ARGS"
-@@ -5353,16 +5357,13 @@
+@@ -5353,16 +5357,16 @@
  EOF
  
  			TEST_DEPS="${LIB_PREFIX}${cf_dir}${DFT_DEP_SUFFIX} $TEST_DEPS"
@@ -117,31 +51,43 @@ $NetBSD: patch-ab,v 1.6 1999/09/13 21:20:34 fredb Exp $
 -TEST_ARGS="-L${LIB_DIR} -L\$(libdir) $TEST_ARGS"
 -
 -
-+TEST_ARGS="-L\$(libdir) $TEST_ARGS"
  
 -PROG_ARGS="-L${LIB_DIR} -L\$(libdir) $PROG_ARGS"
++# Put $(libdir) last so we ensure programs are linked against newly-built
++# versions of libraries.
++TEST_ARGS="$TEST_ARGS -L\$(libdir)"
++PROG_ARGS="$PROG_ARGS -L\$(libdir)"
  
  
  SRC_SUBDIRS="man include"
-@@ -5888,7 +5889,7 @@
+@@ -5371,7 +5375,7 @@
+ 	SRC_SUBDIRS="$SRC_SUBDIRS $cf_dir"
+ done
+ SRC_SUBDIRS="$SRC_SUBDIRS misc test"
+-test $cf_cxx_library != no && SRC_SUBDIRS="$SRC_SUBDIRS c++"
++test "X$cf_with_cxx" != Xno && SRC_SUBDIRS="$SRC_SUBDIRS c++"
+ 
+ ADA_SUBDIRS=
+ if test "$ac_cv_prog_gnat_correct" = yes && test -d $srcdir/Ada95; then
+@@ -5888,7 +5892,7 @@
  			
  	
  	case $cf_item in
 -	normal)  cf_suffix='.a'   ;;
-+	normal)  cf_suffix='.la'  ;;
++	normal)  cf_suffix='.la'   ;;
  	debug)   cf_suffix='_g.a' ;;
  	profile) cf_suffix='_p.a' ;;
  	shared)
-@@ -5931,7 +5932,7 @@
+@@ -5931,7 +5935,7 @@
  			
  	
  	case $cf_item in
 -	normal)  cf_suffix='.a'   ;;
-+	normal)  cf_suffix='.la'  ;;
++	normal)  cf_suffix='.la'   ;;
  	debug)   cf_suffix='_g.a' ;;
  	profile) cf_suffix='_p.a' ;;
  	shared)
-@@ -6120,7 +6121,7 @@
+@@ -6120,7 +6124,7 @@
  		for i in `cat $srcdir/$cf_dir/headers |fgrep -v "#"`
  		do
  			echo "	@ (cd \$(INSTALL_PREFIX)\$(includedir) && rm -f `basename $i`) ; ../headers.sh \$(INSTALL_DATA) \$(INSTALL_PREFIX)\$(includedir) \$(srcdir) $i" >>$cf_dir/Makefile
