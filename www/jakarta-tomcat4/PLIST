@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/29 15:08:11 erh Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/29 15:34:43 erh Exp $
 tomcat4/LICENSE
 tomcat4/README.txt
 tomcat4/RELEASE-NOTES-4.1.txt
@@ -1466,10 +1466,6 @@ tomcat4/webapps/webdav/tomcat.gif
 @unexec /rescue/rm -f %D/tomcat4/conf/mod_jk.conf-auto
 @unexec /rescue/rm -f %D/tomcat4/conf/obj.conf-auto
 @unexec /rescue/rm -f %D/tomcat4/conf/uriworkermap.properties-auto
-@comment WTF.  Why is this needed?!?
-@comment /rescue/rm -f %D/tomcat4/conf/.pkgsrc
-@comment /rescue/rm -f %D/tomcat4/logs/.pkgsrc
-@comment /rescue/rm -f %D/tomcat4/webapps/.pkgsrc
 @dirrm tomcat4/webapps
 @dirrm tomcat4/temp
 @dirrm tomcat4/shared/lib
