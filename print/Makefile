@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2000/03/24 18:31:02 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2000/04/23 05:55:52 kim Exp $
 # FreeBSD Id: Makefile,v 1.52 1997/12/14 00:58:08 asami Exp
 #
 
@@ -13,6 +13,7 @@
     SUBDIR += ghostscript5-x11
     SUBDIR += gnome-print
     SUBDIR += gv
+    SUBDIR += html2ps
     SUBDIR += lgrind
     SUBDIR += lyx
     SUBDIR += magicfilter
