@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 1998/10/02 14:40:13 tv Exp $
+
+--- src/os/unix/os.h.orig	Fri Oct  2 10:14:27 1998
++++ src/os/unix/os.h	Fri Oct  2 10:14:54 1998
+@@ -114,7 +114,8 @@
+ #define RTLD_GLOBAL 0
+ #endif
+ 
+-#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || \
++	(defined(__NetBSD__) && !defined(__ELF__))
+ #define DLSYM_NEEDS_UNDERSCORE
+ #endif
+ 
