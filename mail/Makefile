@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.240 2004/12/31 21:37:38 kim Exp $
+# $NetBSD: Makefile,v 1.241 2005/01/09 03:21:33 schmonz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -30,6 +30,7 @@ SUBDIR+=	cue
 SUBDIR+=	cyrus-imapd
 SUBDIR+=	cyrus-imapd21
 SUBDIR+=	cyrus-imapd22
+SUBDIR+=	dbmail
 SUBDIR+=	deliver
 SUBDIR+=	demime
 SUBDIR+=	distribute
