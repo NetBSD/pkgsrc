@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/06/20 23:27:49 tv Exp $
+# $NetBSD: Makefile,v 1.2 1998/06/22 22:55:47 hubertf Exp $
 #
 
 DISTNAME=	zip1-1.1
@@ -9,7 +9,7 @@ DISTFILES=	zip11.zip
 
 MAINTAINER=	tv@netbsd.org
 
-FETCH_DEPENDS=	unzip:../../archivers/unzip
+#FETCH_DEPENDS=	unzip:../../archivers/unzip
 
 EXTRACT_CMD=	unzip
 EXTRACT_BEFORE_ARGS=	-qo
