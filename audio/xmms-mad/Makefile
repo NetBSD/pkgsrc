@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.11 2003/07/17 21:24:12 grant Exp $
+# $NetBSD: Makefile,v 1.12 2003/12/17 03:27:17 simonb Exp $
 #
 
-DISTNAME=		xmms-mad-0.0.9
-PKGREVISION=		5
+DISTNAME=		xmms-mad-0.5.5
 CATEGORIES=		audio
-MASTER_SITES=		http://www.superduper.net/downloads/xmms-mad/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xmms-mad/}
 
 MAINTAINER=		jmcneill@NetBSD.org
-HOMEPAGE=		http://www.superduper.net/xmms-mad/
+HOMEPAGE=		http://sourceforge.net/projects/xmms-mad/
 COMMENT=		Input plugin for XMMS that uses libmad
 
 GNU_CONFIGURE=		YES
@@ -19,6 +18,7 @@ USE_BUILDLINK2=		YES
 CPPFLAGS+=              -DHAVE_NANOSLEEP=1
 .endif
 
+.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../audio/libid3tag/buildlink2.mk"
 .include "../../audio/libmad/buildlink2.mk"
 .include "../../audio/xmms/buildlink2.mk"
