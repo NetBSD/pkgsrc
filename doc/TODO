@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1201 2003/12/14 19:21:49 jmmv Exp $
+$NetBSD: TODO,v 1.1202 2003/12/14 20:01:26 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -106,10 +106,7 @@ Suggested new packages
 Suggested package updates
 =========================
 
-	o GConf2-2.4.0.1 [pkg/23697|jmmv]
-	o GConf2-ui-2.4.0.1 [pkg/23698|jmmv]
 	o ImageViewer-0.6.3
-	o ORBit2-2.8.2 [jmmv]
 	o SDL_gfx-2.0.10
 	o TeXmacs-1.0.2.10
 	o Xaw3d-1.5E
@@ -165,7 +162,6 @@ Suggested package updates
 	o foobillard-2.9
 	o foomatic-2.9.1 [jlam]
 	o fsviewer-0.2.5
-	o gail-1.4.1 [jmmv]
 	o gauche-0.7 [kei]
 	o gcc-3.3.2 [gcc3 package]
 	o gcpio-2.5 [pkg/20799]
@@ -185,7 +181,6 @@ Suggested package updates
 	o gnome-core-2.4
 	o gnome-mime-data-2.4.0 [pkg/23714]
 	o gnome-utils-2.4.1
-	o gnome-vfs2-2.4.1 [jmmv]
 	o gnomeicu-0.99
 	o gnuchess-5.06
 	o gnumeric-1.2.0
@@ -215,19 +210,10 @@ Suggested package updates
 	o lavaps-2.4
 	o lcms-1.0.9
 	o leafnode-1.9.46
-	o libbonobo-2.4.2 [jmmv]
-	o libbonoboui-2.4.1 [jmmv]
-	o libgnome-2.4.0 [jmmv]
-	o libgnomecanvas-2.4.0 [jmmv]
-	o libgnomeprint-2.4.0 [jmmv]
-	o libgnomeprintui-2.4.0 [jmmv]
-	o libgnomeui-2.4.0.1 [jmmv]
-	o libgtkhtml-2.4.1 [jmmv]
 	o libmpeg3-1.5.3
 	o libole2-2.2.8
 	o libtiff-3.6.0
 	o libtool-1.5 [skrll]
-	o libwnck-2.4.0.1 [jmmv]
 	o licq-1.2.7
 	o lilypond-2.0.0
 	o lmbench-2.0.4
