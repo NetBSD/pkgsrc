@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:31:15 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:00:51 agc Exp $
 
-MD5 (icon-9.3.2/unix.tgz) = 3147586808024239962390cfa78a00a8
+SHA1 (icon-9.3.2/unix.tgz) = 153c59210b6d2df17a6411ae6ba453210016f565
+Size (icon-9.3.2/unix.tgz) = 1000579 bytes
 SHA1 (patch-ab) = de7699107d9aac66308778d38263f335f4e556aa
 SHA1 (patch-ac) = 54aec7939f0edb47e94b2982dac8117d59a92067
 SHA1 (patch-ag) = 9ee6da657df994b10e8aa95cd2032e90e0d17455
