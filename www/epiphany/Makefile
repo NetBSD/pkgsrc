@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2004/06/20 20:15:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2004/08/31 16:04:48 jmmv Exp $
 #
 
-DISTNAME=	epiphany-1.2.6
+DISTNAME=	epiphany-1.2.8
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/1.2/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +19,7 @@ USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 GCONF2_SCHEMAS=		epiphany.schemas
 GCONF2_SCHEMAS+=	epiphany-lockdown.schemas
