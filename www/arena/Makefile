@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/01/10 19:11:10 hubertf Exp $
+# $NetBSD: Makefile,v 1.16 2000/02/05 14:02:07 wiz Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/05/04 20:22:31 jseger Exp
 #
 
@@ -40,7 +40,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/Arena/Source/arenarc ${PREFIX}/share/Arena/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/locale/en/LC_MESSAGES
 	msgfmt --output-file=${WRKDIR}/Arena.gmo ${WRKSRC}/Arena/LC_MESSAGES/en/Arena.po
-	$(INSTALL_DATA) ${WRKDIR}/Arena.gmo ${PREFIX}/share/locale/en/LC_MESSAGES/
+	${INSTALL_DATA} ${WRKDIR}/Arena.gmo ${PREFIX}/share/locale/en/LC_MESSAGES/
 	${INSTALL_DATA} ${WRKSRC}/Arena/doc/arena.man ${PREFIX}/man/man1/arena.1
 
 .include "../../mk/bsd.prefs.mk"
