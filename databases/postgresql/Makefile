@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 1999/02/19 09:02:25 frueauf Exp $
+# $NetBSD: Makefile,v 1.29 1999/03/28 21:50:17 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 #
 
@@ -20,9 +20,8 @@ DEPENDS+=	addnerd-1.6:../../sysutils/addnerd
 # Needs ELF clue, mips has no TAS implementation
 NOT_FOR_ARCHS=	alpha mips
 
-NO_PACKAGE=	"Requires pgsql uid"
-
 PLIST_SRC=	${WRKDIR}/PLIST.tmp
+REQ_FILE=	${WRKDIR}/REQ
 
 PGUSER?=	pgsql
 PGGROUP?=	ingres
@@ -69,11 +68,17 @@ post-build:
 	@ ${ECHO} "------------------------------------------------------------"
 
 pre-install:
-.if defined(PACKAGE_BUILDING)
 	${RM} -rf ${PREFIX}/${PGUSER}
-.endif
-	@${SETENV} ${MAKE_ENV} ${PREFIX}/sbin/addnerd -h ${PREFIX} -g ${PGGROUP} ${PGUSER}
-	@${SED} -e 's|@PGUSER@|${PGUSER}|g' ${PKGDIR}/PLIST > ${PLIST_SRC}
+	@${SED}  \
+		-e 's|@PGUSER@|${PGUSER}|g' \
+		-e 's|@PGGROUP@|${PGGROUP}|g' \
+		-e 's|@PREFIX@|${PREFIX}|g' \
+		-e 's|@LOCALBASE@|${LOCALBASE}|g' \
+		<${PKGDIR}/REQ > ${REQ_FILE}
+	@${SED}  \
+		-e 's|@PGUSER@|${PGUSER}|g' \
+		<${PKGDIR}/PLIST > ${PLIST_SRC}
+	${SH} ${REQ_FILE} ${PKGNAME} INSTALL
 
 post-install:
 	@ if [ ! -f ${PREFIX}/${PGUSER}/.profile ]; then \
