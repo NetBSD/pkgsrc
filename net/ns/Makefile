@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/08/27 08:07:06 seb Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/28 10:09:54 seb Exp $
 
 DISTNAME=	ns-src-2.1b9a
 PKGNAME=	${DISTNAME:S/b/rc/:S/-src//}
@@ -22,7 +22,7 @@ USE_PERL5=		build
 
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}
 CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}
-CONFIGURE_ARGS+=	--with-tclcl=${BUILDLINK_PREFIX.tclcl}
+CONFIGURE_ARGS+=	--with-tclcl=${BUILDLINK_PREFIX.tcl-tclcl}
 
 MESSAGE_SUBST+=		HOMEPAGE=${HOMEPAGE}
 
@@ -41,8 +41,8 @@ post-extract:
 	   webtrace-conv/ucb/ucb-tr-stat
 
 .include  "../../net/libpcap/buildlink2.mk"
-.include  "../../devel/tclcl/buildlink2.mk"
-.include  "../../lang/otcl/buildlink2.mk"
+.include  "../../devel/tcl-tclcl/buildlink2.mk"
+.include  "../../lang/tcl-otcl/buildlink2.mk"
 .include "../../x11/tk/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
