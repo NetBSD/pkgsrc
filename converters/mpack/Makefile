@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/11/14 23:43:48 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/12/05 16:45:21 is Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/04/26 23:55:23 asami Exp
 #
 
@@ -13,5 +13,11 @@ MAINTAINER=	packages@netbsd.org
 COMMENT=	External MIME packer/unpacker
 
 USE_BUILDLINK2=	# defined
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == SunOS
+LDFLAGS+=	-lsocket -lnsl
+.endif
 
 .include "../../mk/bsd.pkg.mk"
