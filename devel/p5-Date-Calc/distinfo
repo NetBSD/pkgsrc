@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.5 2004/11/03 21:35:57 adrianp Exp $
+$NetBSD: distinfo,v 1.6 2004/11/03 21:46:25 adrianp Exp $
 
 SHA1 (Date-Calc-5.4.tar.gz) = 630dfca054aaebd4535e2251c2c5c20d625f3f94
 Size (Date-Calc-5.4.tar.gz) = 206622 bytes
-SHA1 (patch-aa) = bb684dec0c51bf9414e91580496f903c7d206540
