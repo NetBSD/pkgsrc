@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2003/05/25 16:29:20 grant Exp $
+# $NetBSD: Makefile,v 1.16 2003/05/25 20:44:26 jdolecek Exp $
 #
 
 DISTNAME=		gcc-3.3
 PKGNAME=		${DISTNAME:C|gcc|gcc3|}
 CATEGORIES=		lang
-MASTER_SITES=		${MASTER_SITE_GNU:=gcc/}
+MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-3.3/}
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/gcc/gcc.html
@@ -24,6 +25,7 @@ HAS_CONFIGURE=		YES
 CONFIGURE_ARGS=		--host=${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX}
+UNLIMIT_RESOURCES=	datasize
 
 # as this is named gcc3, use DISTNAME instead.
 FILES_SUBST+=		PKGNAME_NOREV=${DISTNAME} GCC_PREFIX=${GCC_PREFIX}
