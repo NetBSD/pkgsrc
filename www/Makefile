@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2001/08/29 20:11:34 nra Exp $
+# $NetBSD: Makefile,v 1.154 2001/10/01 02:39:12 jlam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -78,17 +78,22 @@ SUBDIR+=	opera
 SUBDIR+=	p5-Apache-ASP
 SUBDIR+=	p5-Apache-DBILogConfig
 SUBDIR+=	p5-Apache-DBILogger
+SUBDIR+=	p5-Apache-Filter
 SUBDIR+=	p5-Apache-Session
+SUBDIR+=	p5-Apache-SSI
 SUBDIR+=	p5-Apache-ePerl
 SUBDIR+=	p5-CGI
 SUBDIR+=	p5-CGI-Application
 SUBDIR+=	p5-CGI-Minimal
 SUBDIR+=	p5-CGI_Lite
 SUBDIR+=	p5-FCGI
+SUBDIR+=	p5-HTML-Clean
+SUBDIR+=	p5-HTML-FillInForm
 SUBDIR+=	p5-HTML-Format
 SUBDIR+=	p5-HTML-Mason
 SUBDIR+=	p5-HTML-Parser
 SUBDIR+=	p5-HTML-PrettyPrinter
+SUBDIR+=	p5-HTML-SimpleParse
 SUBDIR+=	p5-HTML-Table
 SUBDIR+=	p5-HTML-Tagset
 SUBDIR+=	p5-HTML-Template
