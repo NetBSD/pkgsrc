@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2005/02/23 18:43:54 wiz Exp $
+$NetBSD: distinfo,v 1.8 2005/03/16 12:37:26 rillig Exp $
 
 SHA1 (matchbox-window-manager-0.8.4.tar.gz) = c9fd75cd01bd9800fcd1c962fa0294e5b4482a2f
 RMD160 (matchbox-window-manager-0.8.4.tar.gz) = 855938b4bfe4f7c3e808ffb25acf27b14e282ab0
 Size (matchbox-window-manager-0.8.4.tar.gz) = 217677 bytes
+SHA1 (patch-aa) = 41299f1704521b2dc205c3bd82912949570c5649
