@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4975 2004/02/23 17:54:44 minskim Exp $
+$NetBSD: CHANGES,v 1.4976 2004/02/23 18:20:48 epg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1000,3 +1000,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added py-pexpect-0.99 [minskim 2004-02-23]
 	Updated py-dns to 1.2.0 [minskim 2004-02-23]
 	Added tcpick-0.1.19 [minskim 2004-02-23]
+	Updated subversion to 1.0.0 [epg 2004-02-23]
