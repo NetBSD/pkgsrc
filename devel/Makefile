@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.303 2002/08/01 05:32:46 jlam Exp $
+# $NetBSD: Makefile,v 1.304 2002/08/03 01:30:57 hubertf Exp $
 #
 
 COMMENT=	Development utilities
@@ -12,6 +12,7 @@ SUBDIR+=	acme
 SUBDIR+=	ald
 SUBDIR+=	anjuta
 SUBDIR+=	apel
+SUBDIR+=	apr-devel
 SUBDIR+=	arch
 SUBDIR+=	argtable
 SUBDIR+=	as31
