@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2002/03/13 08:37:53 jmc Exp $
+
+--- config/auto-aux/config.sub.orig	Wed Mar 13 08:33:09 2002
++++ config/auto-aux/config.sub	Wed Mar 13 08:33:19 2002
+@@ -152,7 +152,7 @@
+               | pn-* | np1-* | xps100-* | clipper-* | orion-* | sparclite-* \
+               | pdp11-* | sh-* | powerpc-* | powerpcle-* | sparc64-* | mips64-* | mipsel-* \
+               | mips64el-* | mips64orion-* | mips64orionel-* \
+-              | ia64-*)
++              | ia64-* | macppc-*)
+                 ;;
+         # Recognize the various machine names and aliases which stand
+         # for a CPU type and a company and sometimes even an OS.
