@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8672 2005/01/09 11:29:20 seb Exp $
+$NetBSD: CHANGES,v 1.8673 2005/01/09 13:09:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -194,3 +194,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated digikam to 0.7.1 [seb 2005-01-09]
 	Added digikamimageplugins-0.7.1 [seb 2005-01-09]
 	Removed digikamplugins [seb 2005-01-09]
+	Updated stunnel to 4.07nb1 [schmonz 2005-01-09]
