@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/02/01 01:43:29 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2004/05/09 00:45:45 snj Exp $
 #
 
 DISTNAME=		aqsis-0.6.4
@@ -16,12 +16,12 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 USE_GNU_TOOLS+=		make
 USE_X11=		yes
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 GCC_REQD+=		2.95.3
 USE_GCC_SHLIB=		yes
 
-.include "../../devel/libargparse/buildlink2.mk"
-.include "../../graphics/Mesa/buildlink2.mk"
-.include "../../graphics/tiff/buildlink2.mk"
+.include "../../devel/libargparse/buildlink3.mk"
+.include "../../graphics/Mesa/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
