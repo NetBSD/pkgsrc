@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/05/22 03:07:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/07/30 15:13:24 markd Exp $
 share/doc/kde/HTML/de/KRegExpEditor/common
 share/doc/kde/HTML/de/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/de/KRegExpEditor/index.docbook
@@ -758,7 +758,6 @@ share/doc/kde/HTML/de/konq-plugins/index.docbook
 share/doc/kde/HTML/de/konqueror/basics.docbook
 share/doc/kde/HTML/de/konqueror/bookmarks.docbook
 share/doc/kde/HTML/de/konqueror/browser.docbook
-share/doc/kde/HTML/de/konqueror/cmdline.png
 share/doc/kde/HTML/de/konqueror/cmndline.png
 share/doc/kde/HTML/de/konqueror/commands.docbook
 share/doc/kde/HTML/de/konqueror/common
@@ -768,9 +767,6 @@ share/doc/kde/HTML/de/konqueror/dirtree.png
 share/doc/kde/HTML/de/konqueror/dragdrop.png
 share/doc/kde/HTML/de/konqueror/faq.docbook
 share/doc/kde/HTML/de/konqueror/filemanager.docbook
-share/doc/kde/HTML/de/konqueror/filetype1.png
-share/doc/kde/HTML/de/konqueror/filetype3.png
-share/doc/kde/HTML/de/konqueror/filetype4.png
 share/doc/kde/HTML/de/konqueror/index.cache.bz2
 share/doc/kde/HTML/de/konqueror/index.docbook
 share/doc/kde/HTML/de/konqueror/introduction.docbook
@@ -1056,6 +1052,17 @@ share/doc/kde/HTML/de/kworldclock/index.docbook
 share/doc/kde/HTML/de/kwrite/common
 share/doc/kde/HTML/de/kwrite/index.cache.bz2
 share/doc/kde/HTML/de/kwrite/index.docbook
+share/doc/kde/HTML/de/kwuftpd/common
+share/doc/kde/HTML/de/kwuftpd/directories.png
+share/doc/kde/HTML/de/kwuftpd/index.cache.bz2
+share/doc/kde/HTML/de/kwuftpd/index.docbook
+share/doc/kde/HTML/de/kwuftpd/logging.png
+share/doc/kde/HTML/de/kwuftpd/messages.png
+share/doc/kde/HTML/de/kwuftpd/ratios.png
+share/doc/kde/HTML/de/kwuftpd/security.png
+share/doc/kde/HTML/de/kwuftpd/uploads.png
+share/doc/kde/HTML/de/kwuftpd/user_classes.png
+share/doc/kde/HTML/de/kwuftpd/virtual.png
 share/doc/kde/HTML/de/kxconfig/common
 share/doc/kde/HTML/de/kxconfig/index.cache.bz2
 share/doc/kde/HTML/de/kxconfig/index.docbook
@@ -1343,6 +1350,7 @@ share/kde/locale/de/LC_MESSAGES/kinetd.mo
 share/kde/locale/de/LC_MESSAGES/kio_audiocd.mo
 share/kde/locale/de/LC_MESSAGES/kio_devices.mo
 share/kde/locale/de/LC_MESSAGES/kio_finger.mo
+share/kde/locale/de/LC_MESSAGES/kio_fish.mo
 share/kde/locale/de/LC_MESSAGES/kio_floppy.mo
 share/kde/locale/de/LC_MESSAGES/kio_imap4.mo
 share/kde/locale/de/LC_MESSAGES/kio_lan.mo

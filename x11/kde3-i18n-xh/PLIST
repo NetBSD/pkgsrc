@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2003/04/01 12:27:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/07/30 15:14:19 markd Exp $
 share/doc/kde/HTML/xh/amor/common
 share/doc/kde/HTML/xh/amor/index.cache.bz2
 share/doc/kde/HTML/xh/amor/index.docbook
+share/doc/kde/HTML/xh/artsbuilder/gui.docbook
 share/doc/kde/HTML/xh/kaddressbook/common
 share/doc/kde/HTML/xh/kaddressbook/index.cache.bz2
 share/doc/kde/HTML/xh/kaddressbook/index.docbook
@@ -512,6 +513,7 @@ share/kde/locale/xh/entry.desktop
 @dirrm share/doc/kde/HTML/xh/kdeprint
 @dirrm share/doc/kde/HTML/xh/kate-plugins
 @dirrm share/doc/kde/HTML/xh/kaddressbook
+@dirrm share/doc/kde/HTML/xh/artsbuilder
 @dirrm share/doc/kde/HTML/xh/amor
 @comment dirrm share/doc/kde/HTML/xh
 @comment dirrm share/doc/kde/HTML

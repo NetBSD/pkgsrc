@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/04/01 12:27:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/07/30 15:14:06 markd Exp $
 share/doc/kde/HTML/sk/amor/common
 share/doc/kde/HTML/sk/amor/index.cache.bz2
 share/doc/kde/HTML/sk/amor/index.docbook
@@ -290,6 +290,12 @@ share/doc/kde/HTML/sk/kcontrol/useragent/index.docbook
 share/doc/kde/HTML/sk/kcontrol/windowmanagement/common
 share/doc/kde/HTML/sk/kcontrol/windowmanagement/index.cache.bz2
 share/doc/kde/HTML/sk/kcontrol/windowmanagement/index.docbook
+share/doc/kde/HTML/sk/kcron/common
+share/doc/kde/HTML/sk/kcron/index.cache.bz2
+share/doc/kde/HTML/sk/kcron/index.docbook
+share/doc/kde/HTML/sk/kdat/common
+share/doc/kde/HTML/sk/kdat/index.cache.bz2
+share/doc/kde/HTML/sk/kdat/index.docbook
 share/doc/kde/HTML/sk/kdebugdialog/common
 share/doc/kde/HTML/sk/kdebugdialog/index.cache.bz2
 share/doc/kde/HTML/sk/kdebugdialog/index.docbook
@@ -634,6 +640,9 @@ share/doc/kde/HTML/sk/konsole/konsole.png
 share/doc/kde/HTML/sk/kooka/common
 share/doc/kde/HTML/sk/kooka/index.cache.bz2
 share/doc/kde/HTML/sk/kooka/index.docbook
+share/doc/kde/HTML/sk/kpackage/common
+share/doc/kde/HTML/sk/kpackage/index.cache.bz2
+share/doc/kde/HTML/sk/kpackage/index.docbook
 share/doc/kde/HTML/sk/kpager/common
 share/doc/kde/HTML/sk/kpager/index.cache.bz2
 share/doc/kde/HTML/sk/kpager/index.docbook
@@ -716,6 +725,9 @@ share/doc/kde/HTML/sk/kspell/index.docbook
 share/doc/kde/HTML/sk/ksysguard/common
 share/doc/kde/HTML/sk/ksysguard/index.cache.bz2
 share/doc/kde/HTML/sk/ksysguard/index.docbook
+share/doc/kde/HTML/sk/ksysv/common
+share/doc/kde/HTML/sk/ksysv/index.cache.bz2
+share/doc/kde/HTML/sk/ksysv/index.docbook
 share/doc/kde/HTML/sk/kteatime/common
 share/doc/kde/HTML/sk/kteatime/config.png
 share/doc/kde/HTML/sk/kteatime/index.cache.bz2
@@ -733,6 +745,9 @@ share/doc/kde/HTML/sk/ktuberling/technical-reference.docbook
 share/doc/kde/HTML/sk/kuickshow/common
 share/doc/kde/HTML/sk/kuickshow/index.cache.bz2
 share/doc/kde/HTML/sk/kuickshow/index.docbook
+share/doc/kde/HTML/sk/kuser/common
+share/doc/kde/HTML/sk/kuser/index.cache.bz2
+share/doc/kde/HTML/sk/kuser/index.docbook
 share/doc/kde/HTML/sk/kview/common
 share/doc/kde/HTML/sk/kview/index.cache.bz2
 share/doc/kde/HTML/sk/kview/index.docbook
@@ -745,6 +760,12 @@ share/doc/kde/HTML/sk/kwin4/index.docbook
 share/doc/kde/HTML/sk/kworldclock/common
 share/doc/kde/HTML/sk/kworldclock/index.cache.bz2
 share/doc/kde/HTML/sk/kworldclock/index.docbook
+share/doc/kde/HTML/sk/kwuftpd/common
+share/doc/kde/HTML/sk/kwuftpd/index.cache.bz2
+share/doc/kde/HTML/sk/kwuftpd/index.docbook
+share/doc/kde/HTML/sk/kxconfig/common
+share/doc/kde/HTML/sk/kxconfig/index.cache.bz2
+share/doc/kde/HTML/sk/kxconfig/index.docbook
 share/doc/kde/HTML/sk/lskat/common
 share/doc/kde/HTML/sk/lskat/index.cache.bz2
 share/doc/kde/HTML/sk/lskat/index.docbook
@@ -802,6 +823,7 @@ share/kde/locale/sk/LC_MESSAGES/desktop_kdesdk.mo
 share/kde/locale/sk/LC_MESSAGES/desktop_kdetoys.mo
 share/kde/locale/sk/LC_MESSAGES/desktop_kdeutils.mo
 share/kde/locale/sk/LC_MESSAGES/dirfilterplugin.mo
+share/kde/locale/sk/LC_MESSAGES/dockbarextension.mo
 share/kde/locale/sk/LC_MESSAGES/domtreeviewer.mo
 share/kde/locale/sk/LC_MESSAGES/drkonqi.mo
 share/kde/locale/sk/LC_MESSAGES/dub.mo
@@ -997,6 +1019,7 @@ share/kde/locale/sk/LC_MESSAGES/kinetd.mo
 share/kde/locale/sk/LC_MESSAGES/kio_audiocd.mo
 share/kde/locale/sk/LC_MESSAGES/kio_devices.mo
 share/kde/locale/sk/LC_MESSAGES/kio_finger.mo
+share/kde/locale/sk/LC_MESSAGES/kio_fish.mo
 share/kde/locale/sk/LC_MESSAGES/kio_floppy.mo
 share/kde/locale/sk/LC_MESSAGES/kio_imap4.mo
 share/kde/locale/sk/LC_MESSAGES/kio_lan.mo
@@ -1199,15 +1222,19 @@ share/kde/locale/sk/flag.png
 @dirrm share/doc/kde/HTML/sk/noatun
 @dirrm share/doc/kde/HTML/sk/megami
 @dirrm share/doc/kde/HTML/sk/lskat
+@dirrm share/doc/kde/HTML/sk/kxconfig
+@dirrm share/doc/kde/HTML/sk/kwuftpd
 @dirrm share/doc/kde/HTML/sk/kworldclock
 @dirrm share/doc/kde/HTML/sk/kwin4
 @dirrm share/doc/kde/HTML/sk/kweather
 @dirrm share/doc/kde/HTML/sk/kview
+@dirrm share/doc/kde/HTML/sk/kuser
 @dirrm share/doc/kde/HTML/sk/kuickshow
 @dirrm share/doc/kde/HTML/sk/ktuberling
 @dirrm share/doc/kde/HTML/sk/ktron
 @dirrm share/doc/kde/HTML/sk/ktimer
 @dirrm share/doc/kde/HTML/sk/kteatime
+@dirrm share/doc/kde/HTML/sk/ksysv
 @dirrm share/doc/kde/HTML/sk/ksysguard
 @dirrm share/doc/kde/HTML/sk/kspell
 @dirrm share/doc/kde/HTML/sk/kspaceduel
@@ -1228,6 +1255,7 @@ share/kde/locale/sk/flag.png
 @dirrm share/doc/kde/HTML/sk/kpat
 @dirrm share/doc/kde/HTML/sk/kpaint
 @dirrm share/doc/kde/HTML/sk/kpager
+@dirrm share/doc/kde/HTML/sk/kpackage
 @dirrm share/doc/kde/HTML/sk/kooka
 @dirrm share/doc/kde/HTML/sk/konsole
 @dirrm share/doc/kde/HTML/sk/konquest
@@ -1293,6 +1321,8 @@ share/kde/locale/sk/flag.png
 @dirrm share/doc/kde/HTML/sk/kdesu
 @dirrm share/doc/kde/HTML/sk/kdeprint
 @dirrm share/doc/kde/HTML/sk/kdebugdialog
+@dirrm share/doc/kde/HTML/sk/kdat
+@dirrm share/doc/kde/HTML/sk/kcron
 @dirrm share/doc/kde/HTML/sk/kcontrol/windowmanagement
 @dirrm share/doc/kde/HTML/sk/kcontrol/useragent
 @dirrm share/doc/kde/HTML/sk/kcontrol/spellchecking

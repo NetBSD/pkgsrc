@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/04/01 12:27:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/07/30 15:13:07 markd Exp $
 share/kde/locale/ar/LC_MESSAGES/aktion.mo
 share/kde/locale/ar/LC_MESSAGES/alarmdaemonctrl.mo
 share/kde/locale/ar/LC_MESSAGES/alsaplayerui.mo
@@ -7,6 +7,7 @@ share/kde/locale/ar/LC_MESSAGES/appletproxy.mo
 share/kde/locale/ar/LC_MESSAGES/ark.mo
 share/kde/locale/ar/LC_MESSAGES/artsbuilder.mo
 share/kde/locale/ar/LC_MESSAGES/artscontrol.mo
+share/kde/locale/ar/LC_MESSAGES/atlantik.mo
 share/kde/locale/ar/LC_MESSAGES/atlantikdesigner.mo
 share/kde/locale/ar/LC_MESSAGES/babelfish.mo
 share/kde/locale/ar/LC_MESSAGES/cervisia.mo
@@ -21,6 +22,7 @@ share/kde/locale/ar/LC_MESSAGES/desktop_kdeadmin.mo
 share/kde/locale/ar/LC_MESSAGES/desktop_kdeartwork.mo
 share/kde/locale/ar/LC_MESSAGES/desktop_kdebase.mo
 share/kde/locale/ar/LC_MESSAGES/desktop_kdeedu.mo
+share/kde/locale/ar/LC_MESSAGES/desktop_kdegames.mo
 share/kde/locale/ar/LC_MESSAGES/desktop_kdegraphics.mo
 share/kde/locale/ar/LC_MESSAGES/desktop_kdelibs.mo
 share/kde/locale/ar/LC_MESSAGES/desktop_kdemultimedia.mo
@@ -58,6 +60,7 @@ share/kde/locale/ar/LC_MESSAGES/kaphorism.mo
 share/kde/locale/ar/LC_MESSAGES/kappfinder.mo
 share/kde/locale/ar/LC_MESSAGES/karm.mo
 share/kde/locale/ar/LC_MESSAGES/kasbarextension.mo
+share/kde/locale/ar/LC_MESSAGES/kasteroids.mo
 share/kde/locale/ar/LC_MESSAGES/kate.mo
 share/kde/locale/ar/LC_MESSAGES/katefll_initplugin.mo
 share/kde/locale/ar/LC_MESSAGES/katefll_plugin.mo
@@ -73,8 +76,13 @@ share/kde/locale/ar/LC_MESSAGES/katespell.mo
 share/kde/locale/ar/LC_MESSAGES/katetextfilter.mo
 share/kde/locale/ar/LC_MESSAGES/katexmlcheck.mo
 share/kde/locale/ar/LC_MESSAGES/katexmltools.mo
+share/kde/locale/ar/LC_MESSAGES/katomic.mo
 share/kde/locale/ar/LC_MESSAGES/kaudiocreator.mo
 share/kde/locale/ar/LC_MESSAGES/kbabel.mo
+share/kde/locale/ar/LC_MESSAGES/kbackgammon.mo
+share/kde/locale/ar/LC_MESSAGES/kbattleship.mo
+share/kde/locale/ar/LC_MESSAGES/kblackbox.mo
+share/kde/locale/ar/LC_MESSAGES/kbounce.mo
 share/kde/locale/ar/LC_MESSAGES/kcalc.mo
 share/kde/locale/ar/LC_MESSAGES/kcardchooser.mo
 share/kde/locale/ar/LC_MESSAGES/kcharselect.mo
@@ -164,6 +172,7 @@ share/kde/locale/ar/LC_MESSAGES/kdmgreet.mo
 share/kde/locale/ar/LC_MESSAGES/kdvi.mo
 share/kde/locale/ar/LC_MESSAGES/kedit.mo
 share/kde/locale/ar/LC_MESSAGES/keduca.mo
+share/kde/locale/ar/LC_MESSAGES/kenolaba.mo
 share/kde/locale/ar/LC_MESSAGES/kfax.mo
 share/kde/locale/ar/LC_MESSAGES/kfifteenapplet.mo
 share/kde/locale/ar/LC_MESSAGES/kfile_au.mo
@@ -199,6 +208,7 @@ share/kde/locale/ar/LC_MESSAGES/kfloppy.mo
 share/kde/locale/ar/LC_MESSAGES/kfmclient.mo
 share/kde/locale/ar/LC_MESSAGES/kfmexec.mo
 share/kde/locale/ar/LC_MESSAGES/kfontviewpart.mo
+share/kde/locale/ar/LC_MESSAGES/kfouleggs.mo
 share/kde/locale/ar/LC_MESSAGES/kgantt.mo
 share/kde/locale/ar/LC_MESSAGES/kgeo.mo
 share/kde/locale/ar/LC_MESSAGES/kget.mo
@@ -232,11 +242,15 @@ share/kde/locale/ar/LC_MESSAGES/kit.mo
 share/kde/locale/ar/LC_MESSAGES/kiten.mo
 share/kde/locale/ar/LC_MESSAGES/kjobviewer.mo
 share/kde/locale/ar/LC_MESSAGES/kjots.mo
+share/kde/locale/ar/LC_MESSAGES/kjumpingcube.mo
 share/kde/locale/ar/LC_MESSAGES/klaptopdaemon.mo
 share/kde/locale/ar/LC_MESSAGES/klegacyimport.mo
 share/kde/locale/ar/LC_MESSAGES/klettres.mo
+share/kde/locale/ar/LC_MESSAGES/klickety.mo
+share/kde/locale/ar/LC_MESSAGES/klines.mo
 share/kde/locale/ar/LC_MESSAGES/klipper.mo
 share/kde/locale/ar/LC_MESSAGES/klock.mo
+share/kde/locale/ar/LC_MESSAGES/kmahjongg.mo
 share/kde/locale/ar/LC_MESSAGES/kmail.mo
 share/kde/locale/ar/LC_MESSAGES/kmailcvt.mo
 share/kde/locale/ar/LC_MESSAGES/kmathtool.mo
@@ -245,6 +259,7 @@ share/kde/locale/ar/LC_MESSAGES/kmenuedit.mo
 share/kde/locale/ar/LC_MESSAGES/kmessedwords.mo
 share/kde/locale/ar/LC_MESSAGES/kmid.mo
 share/kde/locale/ar/LC_MESSAGES/kmidi.mo
+share/kde/locale/ar/LC_MESSAGES/kmines.mo
 share/kde/locale/ar/LC_MESSAGES/kminipagerapplet.mo
 share/kde/locale/ar/LC_MESSAGES/kmix.mo
 share/kde/locale/ar/LC_MESSAGES/kmoon.mo
@@ -256,10 +271,12 @@ share/kde/locale/ar/LC_MESSAGES/knorskverbs.mo
 share/kde/locale/ar/LC_MESSAGES/knotes.mo
 share/kde/locale/ar/LC_MESSAGES/knotify.mo
 share/kde/locale/ar/LC_MESSAGES/kodo.mo
+share/kde/locale/ar/LC_MESSAGES/kolf.mo
 share/kde/locale/ar/LC_MESSAGES/kolourpicker.mo
 share/kde/locale/ar/LC_MESSAGES/kompare.mo
 share/kde/locale/ar/LC_MESSAGES/konqsidebar_mediaplayer.mo
 share/kde/locale/ar/LC_MESSAGES/konqueror.mo
+share/kde/locale/ar/LC_MESSAGES/konquest.mo
 share/kde/locale/ar/LC_MESSAGES/konsole.mo
 share/kde/locale/ar/LC_MESSAGES/konsolekalendar.mo
 share/kde/locale/ar/LC_MESSAGES/kooka.mo
@@ -270,10 +287,12 @@ share/kde/locale/ar/LC_MESSAGES/kpager.mo
 share/kde/locale/ar/LC_MESSAGES/kpaint.mo
 share/kde/locale/ar/LC_MESSAGES/kpartapp.mo
 share/kde/locale/ar/LC_MESSAGES/kpartsaver.mo
+share/kde/locale/ar/LC_MESSAGES/kpat.mo
 share/kde/locale/ar/LC_MESSAGES/kpercentage.mo
 share/kde/locale/ar/LC_MESSAGES/kpersonalizer.mo
 share/kde/locale/ar/LC_MESSAGES/kpf.mo
 share/kde/locale/ar/LC_MESSAGES/kpilot.mo
+share/kde/locale/ar/LC_MESSAGES/kpoker.mo
 share/kde/locale/ar/LC_MESSAGES/kppp.mo
 share/kde/locale/ar/LC_MESSAGES/kppplogview.mo
 share/kde/locale/ar/LC_MESSAGES/kprinter.mo
@@ -282,16 +301,24 @@ share/kde/locale/ar/LC_MESSAGES/krdc.mo
 share/kde/locale/ar/LC_MESSAGES/kreadconfig.mo
 share/kde/locale/ar/LC_MESSAGES/krec.mo
 share/kde/locale/ar/LC_MESSAGES/kregexpeditor.mo
+share/kde/locale/ar/LC_MESSAGES/kreversi.mo
 share/kde/locale/ar/LC_MESSAGES/krfb.mo
 share/kde/locale/ar/LC_MESSAGES/kruler.mo
 share/kde/locale/ar/LC_MESSAGES/krunapplet.mo
+share/kde/locale/ar/LC_MESSAGES/ksame.mo
 share/kde/locale/ar/LC_MESSAGES/kscd.mo
 share/kde/locale/ar/LC_MESSAGES/kscoreapplet.mo
 share/kde/locale/ar/LC_MESSAGES/kscreensaver.mo
+share/kde/locale/ar/LC_MESSAGES/kshisen.mo
 share/kde/locale/ar/LC_MESSAGES/ksim.mo
 share/kde/locale/ar/LC_MESSAGES/ksirc.mo
+share/kde/locale/ar/LC_MESSAGES/ksirtet.mo
+share/kde/locale/ar/LC_MESSAGES/ksmiletris.mo
 share/kde/locale/ar/LC_MESSAGES/ksmserver.mo
+share/kde/locale/ar/LC_MESSAGES/ksnake.mo
 share/kde/locale/ar/LC_MESSAGES/ksnapshot.mo
+share/kde/locale/ar/LC_MESSAGES/ksokoban.mo
+share/kde/locale/ar/LC_MESSAGES/kspaceduel.mo
 share/kde/locale/ar/LC_MESSAGES/ksplash.mo
 share/kde/locale/ar/LC_MESSAGES/kstars.mo
 share/kde/locale/ar/LC_MESSAGES/kstart.mo
@@ -311,6 +338,8 @@ share/kde/locale/ar/LC_MESSAGES/ktimemon.mo
 share/kde/locale/ar/LC_MESSAGES/ktimer.mo
 share/kde/locale/ar/LC_MESSAGES/ktip.mo
 share/kde/locale/ar/LC_MESSAGES/ktouch.mo
+share/kde/locale/ar/LC_MESSAGES/ktron.mo
+share/kde/locale/ar/LC_MESSAGES/ktuberling.mo
 share/kde/locale/ar/LC_MESSAGES/ktux.mo
 share/kde/locale/ar/LC_MESSAGES/kuick_plugin.mo
 share/kde/locale/ar/LC_MESSAGES/kuickshow.mo
@@ -325,6 +354,7 @@ share/kde/locale/ar/LC_MESSAGES/kviewtemplateplugin.mo
 share/kde/locale/ar/LC_MESSAGES/kvoctrain.mo
 share/kde/locale/ar/LC_MESSAGES/kweather.mo
 share/kde/locale/ar/LC_MESSAGES/kwin.mo
+share/kde/locale/ar/LC_MESSAGES/kwin4.mo
 share/kde/locale/ar/LC_MESSAGES/kwin_b2_config.mo
 share/kde/locale/ar/LC_MESSAGES/kwin_cde_config.mo
 share/kde/locale/ar/LC_MESSAGES/kwin_default_config.mo
@@ -341,6 +371,8 @@ share/kde/locale/ar/LC_MESSAGES/kxmlrpcd.mo
 share/kde/locale/ar/LC_MESSAGES/kxsconfig.mo
 share/kde/locale/ar/LC_MESSAGES/libkcal.mo
 share/kde/locale/ar/LC_MESSAGES/libkcalsystem.mo
+share/kde/locale/ar/LC_MESSAGES/libkdegames.mo
+share/kde/locale/ar/LC_MESSAGES/libkdehighscores.mo
 share/kde/locale/ar/LC_MESSAGES/libkdenetwork.mo
 share/kde/locale/ar/LC_MESSAGES/libkdepim.mo
 share/kde/locale/ar/LC_MESSAGES/libkicker.mo
@@ -352,12 +384,15 @@ share/kde/locale/ar/LC_MESSAGES/libkonq.mo
 share/kde/locale/ar/LC_MESSAGES/libkpimexchange.mo
 share/kde/locale/ar/LC_MESSAGES/libkscan.mo
 share/kde/locale/ar/LC_MESSAGES/libkscreensaver.mo
+share/kde/locale/ar/LC_MESSAGES/libksirtet.mo
 share/kde/locale/ar/LC_MESSAGES/libksync.mo
 share/kde/locale/ar/LC_MESSAGES/libtaskbar.mo
 share/kde/locale/ar/LC_MESSAGES/libtaskmanager.mo
 share/kde/locale/ar/LC_MESSAGES/lockout.mo
+share/kde/locale/ar/LC_MESSAGES/lskat.mo
 share/kde/locale/ar/LC_MESSAGES/lyrics.mo
 share/kde/locale/ar/LC_MESSAGES/mediacontrol.mo
+share/kde/locale/ar/LC_MESSAGES/megami.mo
 share/kde/locale/ar/LC_MESSAGES/naughtyapplet.mo
 share/kde/locale/ar/LC_MESSAGES/nexscope.mo
 share/kde/locale/ar/LC_MESSAGES/noatun.mo
