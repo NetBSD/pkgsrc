@@ -1,3 +1,5 @@
+$NetBSD: README,v 1.2 1998/01/13 13:13:59 agc Exp $
+
 Welcome to the NetBSD Packages System
 =====================================
 
@@ -15,7 +17,7 @@ system, enter
 after that. The precompiled package will be placed in the "packages" 
 subdirectory. A collection of precompiled binary packages can be found
 on ftp.netbsd.org in /pub/NetBSD/packages. To install a precompiled 
-binary package, hand it's filename or an ftp://-URL pointing to it to
+binary package, hand its filename or an ftp://-URL pointing to it to
 pkg_add(1).
 
 See http://www.netbsd.org/Documentation/netbsd/Packages.txt for more
