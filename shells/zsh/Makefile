@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2001/09/23 21:23:59 tron Exp $
+# $NetBSD: Makefile,v 1.28 2001/09/24 09:51:34 tron Exp $
 
 DISTNAME=       zsh-4.0.2
 CATEGORIES=	shells
@@ -15,7 +15,6 @@ COMMENT=	The Z shell
 
 GNU_CONFIGURE=	yes
 INFO_FILES=	zsh.info
-PLIST_SUBST+=	PKGVERSION="${PKGVERSION}"
 
 .include "../../mk/bsd.prefs.mk"
 
