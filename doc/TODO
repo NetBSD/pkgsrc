@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.686 2003/07/08 17:39:34 tron Exp $
+$NetBSD: TODO,v 1.687 2003/07/09 18:39:52 zuntum Exp $
 
 Suggested new packages
 ======================
@@ -209,7 +209,7 @@ Suggested package updates
 	o openoffice-1.0.3.1 [skrll]
 	o openssl-0.9.7b
 	o oss-3.9.7k
-	o p0f-1.8.3
+	o p0f-1.8.3 [zuntum]
 	o p5-Net-SNMP-4.1.0 [pkg/21782]
 	o p5-XML-LibXML-1.54
 	o pcre-4.3
@@ -219,7 +219,7 @@ Suggested package updates
 	o pine-4.56
 	o plib-1.6.0 [pkg/19015]
 	o pnm2ppa-1.12 [pkg/21667]
-	o polsms-1.9.2
+	o polsms-1.9.2 [zuntum]
 	o povray-3.5
 	o proftpd-1.2.9rc1
 	o pureftpd-1.0.15 [pkg/21941]
