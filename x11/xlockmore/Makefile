@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2001/07/26 03:35:25 lukem Exp $
+# $NetBSD: Makefile,v 1.46 2001/10/10 02:41:14 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/10/10 09:24:38 tg Exp
 #
 
-DISTNAME=       xlockmore-5.01.2
+DISTNAME=       xlockmore-5.02
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.tux.org/pub/tux/bagleyd/xlockmore/ \
 		${MASTER_SITE_XCONTRIB:=applications/}
@@ -31,6 +31,11 @@ XLOCK_NO_DPMS=	YES
 
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
+#USE_GMAKE=	yes
+DEFINES=	-DDEFAULT_SOUND_DIR='\"${PREFIX}/lib/X11/xlock/sounds/\"' \
+		-DDEF_MODULEPATH='\"lib/X11/xlock/modules\"'
+CC+=		${DEFINES}
+CXX+=		${DEFINES}
 
 CONFIGURE_ARGS+= --without-motif --without-sx \
 		--without-editres --without-dtsaver --without-rplay \
@@ -44,7 +49,7 @@ CONFIGURE_ARGS+= --without-dpms
 .endif
 
 post-patch:
-		for i in xlock/sound.c xlock/resource.c ; do \
+		for i in xlock/resource.c ; do \
 			f=${WRKSRC}/$$i ; \
 			[ -f $$f.BAK ] || ${MV} $$f $$f.BAK ; \
 			${SED} \
