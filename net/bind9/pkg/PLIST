@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2000/03/31 11:15:25 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/05/03 15:37:24 rh Exp $
 include/dns/a6.h
 include/dns/acl.h
 include/dns/aclconf.h
@@ -153,23 +153,15 @@ include/omapi/result.h
 include/omapi/types.h
 lib/libdns.a
 lib/libdns.la
-lib/libdns.so
-lib/libdns.so.0
 lib/libdns.so.0.0
 lib/libisc.a
 lib/libisc.la
-lib/libisc.so
-lib/libisc.so.0
 lib/libisc.so.0.0
 lib/liblwres.a
 lib/liblwres.la
-lib/liblwres.so
-lib/liblwres.so.0
 lib/liblwres.so.0.0
 lib/libomapi.a
 lib/libomapi.la
-lib/libomapi.so
-lib/libomapi.so.0
 lib/libomapi.so.0.0
 sbin/lwresd
 sbin/named
