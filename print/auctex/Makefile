@@ -1,33 +1,35 @@
-# $NetBSD: Makefile,v 1.5 2001/04/19 22:23:45 jtb Exp $
+# $NetBSD: Makefile,v 1.6 2001/05/03 22:16:52 jtb Exp $
 
-DISTNAME=	auctex-10.0g
-CATEGORIES=	print
-MASTER_SITES=	ftp://ftp.sunsite.auc.dk/pub/emacs/auctex/ftp/auctex/
+DISTNAME=		auctex-10.0g
+CATEGORIES=		print
+MASTER_SITES=		ftp://ftp.sunsite.auc.dk/pub/emacs/auctex/ftp/auctex/
 
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://sunsite.auc.dk/auctex/
-COMMENT=	Enhanced LaTeX mode for Emacs
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://sunsite.auc.dk/auctex/
+COMMENT=		Enhanced LaTeX mode for Emacs
 
-DEPENDS+=	teTeX-[0-9]*:../../print/teTeX
+DEPENDS+=		teTeX-[0-9]*:../../print/teTeX
 
-USE_GMAKE=	#defined
-EVAL_PREFIX+=	TEX_PREFIX=teTeX
+USE_GMAKE=		#defined
+
+TEX_PREFIX_DEFAULT=	${LOCALBASE}
+EVAL_PREFIX+=		TEX_PREFIX=teTeX
 
 .if defined(USE_XEMACS)
-DEPENDS+=	xemacs-[0-9]*:../../editors/xemacs
-MAKE_ENV+=	EMACS=xemacs
-LISPDIR=	lib/xemacs/xemacs-packages/lisp
-INFODIR=	lib/xemacs/xemacs-packages/info
+DEPENDS+=		xemacs-[0-9]*:../../editors/xemacs
+MAKE_ENV+=		EMACS=xemacs
+LISPDIR=		lib/xemacs/xemacs-packages/lisp
+INFODIR=		lib/xemacs/xemacs-packages/info
 .else
-DEPENDS+=	emacs-[0-9]*:../../editors/emacs
-MAKE_ENV+=	EMACS=emacs
-LISPDIR=	share/emacs/site-lisp
-INFODIR=	info
-INFO_FILES+=	auctex
+DEPENDS+=		emacs-[0-9]*:../../editors/emacs
+MAKE_ENV+=		EMACS=emacs
+LISPDIR=		share/emacs/site-lisp
+INFODIR=		info
+INFO_FILES+=		auctex
 .endif
 
-PLIST_SUBST+=	LISPDIR=${LISPDIR} INFODIR=${INFODIR}
-MESSAGE_SUBST+=	LISPDIR=${LISPDIR}
+PLIST_SUBST+=		LISPDIR=${LISPDIR} INFODIR=${INFODIR}
+MESSAGE_SUBST+=		LISPDIR=${LISPDIR}
 
 post-patch:
 	${MV} ${WRKSRC}/tex-site.el ${WRKSRC}/tex-site.el.orig
