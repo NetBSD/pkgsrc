@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.641 2003/06/13 03:19:26 itojun Exp $
+$NetBSD: TODO,v 1.642 2003/06/14 00:06:43 grant Exp $
 
 Suggested new packages
 ======================
@@ -140,7 +140,6 @@ Suggested package updates
 	o gpa-0.6.1
 	o gq-0.6.0 [pkg/21284]
 	o grace-5.1.12
-	o gsed-4.0.7
 	o gtetrinet-0.7.2
 	o gtkglext-1.0.0
 	o gtkmm-2.2.2
