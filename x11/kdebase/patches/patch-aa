@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.11 1999/10/09 20:23:55 jlam Exp $
+$NetBSD: patch-aa,v 1.12 1999/10/22 18:31:52 jlam Exp $
 
 --- configure.orig	Tue Sep  7 11:21:06 1999
-+++ configure	Sat Oct  9 13:37:53 1999
++++ configure	Fri Oct 22 14:25:03 1999
 @@ -517,9 +517,9 @@
  # Prefer explicitly selected file to automatically selected ones.
  if test -z "$CONFIG_SITE"; then
@@ -81,12 +81,12 @@ $NetBSD: patch-aa,v 1.11 1999/10/09 20:23:55 jlam Exp $
    cat >> confdefs.h <<EOF
  #define HAVE_PAM_LIB 1
  EOF
-@@ -5162,8 +5162,6 @@
- #define HAVE_LIBGIF 1
- EOF
- 
--else
--  { echo "configure: error: You need giflib30. Please install the kdesupport package" 1>&2; exit 1; }
- fi
- 
- echo $ac_n "checking for jpeglib""... $ac_c" 1>&6
+@@ -5124,7 +5124,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="$all_libraries -lgif -lX11 $LIBSOCKET"
++LIBS="$all_libraries -lungif -lX11 $LIBSOCKET"
+ cat > conftest.$ac_ext <<EOF
+ #line 5130 "configure"
+ #include "confdefs.h"
