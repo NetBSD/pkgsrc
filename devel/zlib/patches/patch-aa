@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2004/01/12 21:19:50 adam Exp $
+$NetBSD: patch-aa,v 1.5 2004/03/12 03:00:24 tv Exp $
 
 --- Makefile.in.orig	2003-11-09 02:29:23.000000000 +0000
 +++ Makefile.in
@@ -33,7 +33,7 @@ $NetBSD: patch-aa,v 1.4 2004/01/12 21:19:50 adam Exp $
 +	${LIBTOOL} --mode=link ${CC} -o libz.la ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:2
 +
 +.c.o:
-+	${LIBTOOL} --mode=compile ${CC} ${CFLAGS} -c $<
++	${LIBTOOL} --mode=compile ${CC} ${CPPFLAGS} ${CFLAGS} -c $<
  
  example$(EXE): example.o $(LIBS)
  	$(CC) $(CFLAGS) -o $@ example.o $(LDFLAGS)
