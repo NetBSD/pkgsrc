@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2004/03/13 19:38:26 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2004/03/13 21:00:19 jlam Exp $
 #
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the VERSION definition.
@@ -20,10 +20,10 @@ GNU_CONFIGURE=		# defined
 NO_PKGTOOLS_REQD_CHECK=	# defined
 NO_CHECKSUM=		# defined
 
-# XXX Remove the following line after digest-handling is changed to be
-# XXX done by BUILD_DEPENDS.
-# XXX
+# XXX Remove the following two lines after pkgsrc/bootstrap is up and
+# XXX running.
 USE_NATIVE_GCC=		yes
+USE_DIGEST=		no
 
 .include "../../mk/bsd.prefs.mk"
 
