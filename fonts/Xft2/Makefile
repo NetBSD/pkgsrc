@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/10/03 20:13:52 xtraeme Exp $
+# $NetBSD: Makefile,v 1.22 2003/10/04 08:12:02 xtraeme Exp $
 #
 
 DISTNAME=	xft-2.1.2
@@ -30,6 +30,10 @@ MAKE_ENV+=		EGREP="${EGREP}"
 BUILDLINK_DEPENDS.Xrender=	Xrender>=0.8.2
 
 .include "../../mk/bsd.prefs.mk"
+
+# XXX: Temporal fix for systems where libXft.so.$(MAJOR_VERSION).$(MINOR_VERSION)
+# is not built (we have to use libtool 1.5 to have the same library between all
+# systems)
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
 PLIST_SUBST+=		LIBXFT="@comment "
