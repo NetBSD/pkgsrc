@@ -1,12 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/04/28 17:18:22 drochner Exp $
-
---- configs/netbsd-g++-static.orig	Tue Jul 20 04:45:11 1999
-+++ configs/netbsd-g++-static	Thu Oct 21 14:15:45 1999
+--- ./configs/netbsd-g++-static.orig	Wed Apr 12 14:26:47 2000
++++ ./configs/netbsd-g++-static	Wed Jun 14 22:39:32 2000
 @@ -1,6 +1,7 @@
  # Compiling
  SYSCONF_CXX		= g++
  SYSCONF_CC		= gcc
-+SYSCONF_CXX_LIB		= $(LIBTOOL) --cplusplus --mode=compile g++
++SYSCONF_CXX_LIB		= $(LIBTOOL) --mode=compile g++
  
  # Compiling with support libraries
  SYSCONF_CXXFLAGS_X11	= -I/usr/X11R6/include
@@ -30,7 +28,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/04/28 17:18:22 drochner Exp $
  
  # Linking applications
 -SYSCONF_LINK		= g++
-+SYSCONF_LINK		= $(LIBTOOL) --cplusplus --mode=link g++
++SYSCONF_LINK		= $(LIBTOOL) --mode=link g++
  SYSCONF_LFLAGS		= 
  SYSCONF_LIBS		= 
  
@@ -60,7 +58,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/04/28 17:18:22 drochner Exp $
 -				 $(SYSCONF_AR) $(DESTDIR)$(SYSCONF_LINK_TARGET_STATIC) $(OBJECTS) $(OBJMOC) 
 +SYSCONF_LINK_TARGET	= lib$(TARGET).la
 +SYSCONF_LINK_LIB	= rm -f $(DESTDIR)$(SYSCONF_LINK_TARGET) ; \
-+	$(SYSCONF_LINK) -rpath $(PREFIX)/lib -version-info $(VER_MAJ):$(VER_MIN) \
++	$(SYSCONF_LINK) -rpath $(QTPREFIX)/lib -version-info $(VER_MAJ):$(VER_MIN) \
 +	-o $(SYSCONF_LINK_TARGET) $(OBJECTS:.o=.lo) $(OBJMOC:.o=.lo)
  # Compiling application source
  SYSCONF_CXXFLAGS	= -O2
