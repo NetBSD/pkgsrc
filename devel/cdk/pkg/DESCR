@@ -1,6 +1,5 @@
-Cdk stands for 'Curses Development Kit' and it currently contains 21 ready
-to use widgets which facilitate the speedy development of full screen
-curses programs. This little project of mine started as a test to see how
-compatible my Linux machine was to other UNIX breeds. While doing this I 
-discovered Ncurses, and played with it. These widgets are the result of
-over a years worth of playing. The current complement of widgets are:
+CDK is a widget set developed on top of the basic curses
+library. It contains 21 ready to use widgets. Some which
+are a text entry field, a scrolling list, a selection list,
+a alphalist, pull-down menu, radio list, viewer widget,
+dialog box, and many more.
