@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkgdiff,v 1.10 2003/04/09 15:01:18 seb Exp $
+# $NetBSD: pkgdiff,v 1.11 2003/06/10 12:47:32 wiz Exp $
 #
 # Usage: pkgdiff newfile
 #        pkgdiff oldfile newfile
@@ -38,7 +38,7 @@ dodiff() {
 }
 
 lines=3
-while [ `dodiff -u -p -$lines "$old" "$new" | egrep -c '\\$(NetBSD|Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State)'`  !=  0 ]
+while [ `dodiff -u -p -$lines "$old" "$new" | egrep -c '\\$(NetBSD|Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State)(:.*)?\\$'`  !=  0 ]
 do
 	lines=`expr $lines - 1`
 	if [ $lines = 0 ]; then
