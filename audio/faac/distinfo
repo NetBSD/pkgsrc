@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/05/16 01:51:21 xtraeme Exp $
+
+SHA1 (faac-1.24.tar.gz) = fd79715a800f8b39470d5b312f5d843a2629dd49
+Size (faac-1.24.tar.gz) = 282585 bytes
+SHA1 (patch-aa) = 6e0a696173aff0aa0b30941aea53cc4bb2906b45
