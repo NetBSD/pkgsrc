@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.60 2001/07/21 14:01:30 wiz Exp $
+$NetBSD: TODO,v 1.61 2001/07/30 08:43:58 abs Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
@@ -9,6 +9,10 @@ packages TODO (Suggested new packages)
 	cvsup.nogui
 	cvsup daemon and client
 	Split cvsup packages to cvsup and cvsup.nogui, per pkg/12531
+
+	driftnet
+	listens to network traffic and picks out images from TCP streams
+	http://www.ex-parrot.com/~chris/driftnet/
 
 	figfonts
 	More fonts for figlet
