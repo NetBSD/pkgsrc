@@ -1,45 +1,26 @@
-$NetBSD: patch-aa,v 1.2 2000/01/21 01:35:43 hubertf Exp $
-
---- config.h.orig	Mon Jan 10 21:35:01 2000
-+++ config.h	Fri Jan 21 01:36:24 2000
-@@ -16,7 +16,11 @@
-  * Ultrix   --> #define PLATFORM_CODE  3
-  * Solaris  --> #define PLATFORM_CODE  4
-  */
-+#ifdef __NetBSD__
-+#define PLATFORM_CODE		 1
-+#else
- #define PLATFORM_CODE		-1
-+#endif
+--- src/options.c	Sat Jun 16 14:15:04 2001
++++ src/options.c	Tue Jun 19 10:48:25 2001
+@@ -298,8 +298,11 @@
+     if(!(fp = fopen("/etc/"CONFIGFILE, "r"))) {
+       /* Failed, now try to open config file in /usr/local/etc */
+       if(!(fp = fopen("/usr/local/etc/"CONFIGFILE, "r"))) {
+-        printf("Error: couldn't open config file %s for reading in:\n- current directory\n- /etc\n- /usr/local/etc\n", CONFIGFILE);
+-        exit(-1);
++        /* Failed, now try to open config file in /usr/pkg/etc */
++        if (!(fp = fopen("/usr/pkg/etc/"CONFIGFILE, "r"))) {
++          printf("Error: couldn't open config file %s for reading in:\n- current directory\n- /etc\n- /usr/local/etc\n- /usr/pkg/etc\n", CONFIGFILE);
++          exit(-1);
++        }
+       }
+     }
+   }
+--- src/stats-bsd.c	Sat Jun 16 14:12:53 2001
++++ src/stats-bsd.c	Tue Jun 19 10:47:04 2001
+@@ -21,6 +21,7 @@
+ #include <sys/dkstat.h>
+ #include <sys/sysctl.h>
+ #include <sys/utsname.h>
++#include <sys/sched.h>
  
- #if   (PLATFORM_CODE == 0)
- #	define PLATFORM_LINUX
-@@ -49,8 +53,8 @@
-  * If you haven't registered yourself yet, go to
-  * http://www.uptimes.net/register.html
-  */
--#define LOGINNAME		"Enter your loginname here"
--#define PASSWORD		"Enter your password here"
-+#define LOGINNAME		"@UPCLIENT_LOGIN@"
-+#define PASSWORD		"@UPCLIENT_PASSWORD@"
- 
- 
- 
-@@ -61,7 +65,7 @@
-  * column on http://www.uptimes.net/hosts.html.
-  * If your host isn't in the list, click "add host"
-  */
--#define HOSTID			0
-+#define HOSTID			@UPCLIENT_HOSTID@
- 
- 
- 
-@@ -125,7 +129,7 @@
-  *
-  * Where should the client write it's pidfile?
-  */
--#define PIDFILE			"<path-to>/upclient.pid"
-+#define PIDFILE			"/var/run/upclient.pid"
- 
- 
- 
+ /**
+  * @desc	Get statistics
