@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2003/11/14 09:34:42 wiz Exp $
+
+--- server/Makefile.orig	Tue Aug 27 05:11:46 2002
++++ server/Makefile
+@@ -15,7 +15,7 @@ EXECS=maradns
+ #FLAGS = -g $(DEBUG) -DNOTHREAD -DDEBUG
+ #FLAGS = -g -DDEBUG_MEMORY $(DEBUG) 
+ #FLAGS = -g $(DEBUG) 
+-FLAGS = -O2 -Wall $(DEBUG)
++FLAGS = -O2 -Wall $(DEBUG) ${CFLAGS} ${LDFLAGS}
+ 
+ all: $(EXECS)
+ 
