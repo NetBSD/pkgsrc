@@ -1,6 +1,6 @@
-$NetBSD: patch-ak,v 1.1 2004/09/16 15:09:01 minskim Exp $
+$NetBSD: patch-ak,v 1.2 2005/03/10 15:23:10 wiz Exp $
 
---- lib/scan.c.orig	Thu Mar 19 13:51:00 1998
+--- lib/scan.c.orig	1998-03-19 20:51:00.000000000 +0100
 +++ lib/scan.c
 @@ -103,7 +103,8 @@ LFUNC(MSWGetImagePixels, int, (Display *
  LFUNC(ScanTransparentColor, int, (XpmColor *color, unsigned int cpp,
@@ -66,3 +66,13 @@ $NetBSD: patch-ak,v 1.1 2004/09/16 15:09:01 minskim Exp $
      xcolors = (XColor *) XpmMalloc(sizeof(XColor) * ncolors);
      if (!xcolors)
  	return (XpmNoMemory);
+@@ -615,6 +628,9 @@ GetImagePixels(image, width, height, pma
+     ibpp = image->bits_per_pixel;
+     offset = image->xoffset;
+ 
++    if (image->bitmap_unit < 0)
++	    return (XpmNoMemory);
++
+     if ((image->bits_per_pixel | image->depth) == 1) {
+ 	ibu = image->bitmap_unit;
+ 	for (y = 0; y < height; y++)
