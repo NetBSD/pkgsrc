@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2002/06/19 16:02:26 ad Exp $
+# $NetBSD: Makefile,v 1.29 2002/07/02 14:41:20 wiz Exp $
 
 DISTNAME=	exim-4.05
 CATEGORIES=	mail net
@@ -11,9 +11,9 @@ MAINTAINER=	ad@netbsd.org
 HOMEPAGE=	http://www.exim.org/
 COMMENT=	The Exim mail transfer agent, a replacement for sendmail
 
-USE_SSL=	yes
 USE_PERL5=	yes
-IS_INTERACTIVE=	yes
+INTERACTIVE_STAGE=	build # actually, needs "mail" user
+                              # before configure step, see below
 
 pre-patch:
 	${MKDIR} ${WRKSRC}/Local
@@ -25,13 +25,13 @@ pre-configure:
 	    > ${WRKSRC}/Local/Makefile
 
 pre-build:
-	@(if ! id mail 2>/dev/null >/dev/null; then\
-		echo "!! ";\
-		echo "!! Use vipw to add the following to master.passwd:";\
-		echo "!! ";\
-		echo "!!  mail:*:8:6::0:0:Electronic Mail:/var/mail:/sbin/nologin";\
-		echo "!! ";\
-		false;\
+	@(if ! ${ID} mail 2>/dev/null >/dev/null; then\
+		${ECHO} "!! ";\
+		${ECHO} "!! Use vipw to add the following to master.passwd:";\
+		${ECHO} "!! ";\
+		${ECHO} "!!  mail:*:8:6::0:0:Electronic Mail:/var/mail:/sbin/nologin";\
+		${ECHO} "!! ";\
+		${FALSE};\
 	fi)
 
 pre-install:
@@ -57,4 +57,5 @@ post-install:
 	    ${FILESDIR}/mailer.conf.exim \
 	    > ${PREFIX}/etc/exim/mailer.conf.exim
 
+.include "../../security/openssl/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
