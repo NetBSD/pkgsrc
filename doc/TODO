@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2662 2004/12/05 11:17:45 wiz Exp $
+$NetBSD: TODO,v 1.2663 2004/12/05 11:44:09 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -616,7 +616,6 @@ Suggested package updates
 	o lcab-1.011
 	o lcc-4.2
 	o leafnode-1.10.7
-	o leafpad-0.7.8
 	o libast-0.6
 	o libcdio-0.71
 	o libcomprex-0.3.3
