@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/02/22 02:18:31 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2004/05/12 23:38:34 wiz Exp $
 
 PKGNAME=	courier-auth-${BASE_VERS}
 CATEGORIES=	security
@@ -18,9 +18,6 @@ INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 WRKSRC_FILES+=		imap/system-auth.authpam
 
-.if defined(_STRIPFLAG_INSTALL) && !empty(_STRIPFLAG_INSTALL:M-s)
-INSTALL_TARGET=		install-strip
-.endif
 INSTALL_DIRS=		${WRKSRC}/makedat ${WRKSRC}/userdb ${WRKSRC}/authlib
 
 GEN_FILES=		authdaemonrc
