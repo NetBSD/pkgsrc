@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/03/27 03:20:14 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2001/06/19 09:20:11 jlam Exp $
 #
 
 DISTNAME=	Linux-${PKGNAME}
@@ -11,9 +11,11 @@ HOMEPAGE=	http://www.kernel.org/pub/linux/libs/pam/
 COMMENT=	Pluggable Authentication Modules
 
 BUILD_DEPENDS+=	bison-*:../../devel/bison
-DEPENDS+=	libcrack-*:../../security/libcrack
 
-USE_GMAKE=	YES
+USE_GMAKE=		YES
+USE_BUILDLINK_ONLY=	YES
+
+.include "../../security/libcrack/buildlink.mk"
 
 MAKE_ENV+=	LOWER_OPSYS="${LOWER_OPSYS}"
 MAKE_ENV+=	MACHINE_GNU_ARCH="${MACHINE_GNU_ARCH}"
