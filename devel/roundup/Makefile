@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2004/03/01 00:41:48 recht Exp $
+# $NetBSD: Makefile,v 1.14 2004/05/09 17:56:45 recht Exp $
 
-DISTNAME=	roundup-0.6.7
+DISTNAME=	roundup-0.7.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundup/}
 
@@ -11,26 +11,28 @@ COMMENT=	Issue tracking system with command-line, web and email clients
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
 USE_BUILDLINK3=	yes
+USE_LANGUAGES=
 
 PYTHON_VERSIONS_ACCEPTED=	23 23pth 22 22pth 21 21pth
 
 PYTHON_PATCH_SCRIPTS=	cgi-bin/roundup.cgi demo.py roundup/admin.py
 PYTHON_PATCH_SCRIPTS+=	roundup/backends/locking.py roundup/version_check.py
-PYTHON_PATCH_SCRIPTS+=	run_tests scripts/add-issue scripts/roundup-reminder
-PYTHON_PATCH_SCRIPTS+=	setup.py tools/migrate-queries.py tools/pygettext.py
+PYTHON_PATCH_SCRIPTS+=	scripts/add-issue scripts/copy-user.py
+PYTHON_PATCH_SCRIPTS+=	scripts/roundup-reminder tools/migrate-queries.py
+PYTHON_PATCH_SCRIPTS+=	scripts/schema_diagram.py tools/load_tracker.py
+PYTHON_PATCH_SCRIPTS+=	tools/pygettext.py
 
 ROUNDUPDOCDIR=	${PREFIX}/share/doc/roundup
 
 post-install:
-	cd ${WRKSRC}/doc && ${INSTALL_MAN} roundup-admin.1 roundup-server.1 \
-		roundup-mailgw.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/roundup-admin.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/roundup-mailgw.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/roundup-server.1 ${PREFIX}/man/man1
 	${INSTALL_DATA_DIR} ${ROUNDUPDOCDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} CHANGES.txt COPYING.txt README.txt \
-		${ROUNDUPDOCDIR}
-	cd ${WRKSRC}/doc && ${INSTALL_DATA} *.txt *.html *.css ${ROUNDUPDOCDIR}
-	${INSTALL_DATA_DIR} ${ROUNDUPDOCDIR}/images
-	cd ${WRKSRC}/doc/images && ${INSTALL_DATA} *.png \
-		${ROUNDUPDOCDIR}/images
+	${INSTALL_DATA} ${WRKSRC}/CHANGES.txt ${ROUNDUPDOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/COPYING.txt ${ROUNDUPDOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.txt ${ROUNDUPDOCDIR}
+	cd ${WRKSRC}/doc && ${PAX} -s '/.*\.1//g' -rw -pp -pm . ${ROUNDUPDOCDIR}
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
