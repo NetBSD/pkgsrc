@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2002/08/20 00:52:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/04/10 10:22:10 wiz Exp $
 lib/ogle/ogle_gui
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/ogle_gui.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/ogle_gui.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/ogle_gui.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/ogle_gui.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/ogle_gui.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/ogle_gui.mo
 share/ogle_gui/angle.xpm
 share/ogle_gui/enter.xpm
