@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2003/01/13 10:54:08 grant Exp $
+# $NetBSD: Makefile,v 1.45 2003/02/25 05:34:39 grant Exp $
 
 DISTNAME=	xv-3.10a
 PKGREVISION=	4
@@ -28,18 +28,17 @@ pre-patch:
 	@${PATCH} ${PATCH_ARGS} -p1 < ${WRKDIR}/Patch.magpic2.PhotoCD.XV310a
 
 post-patch:
-	${MV} ${WRKSRC}/config.h ${WRKSRC}/config.h.bak
-	${SED} -e 's|@LOCALBASE@|${LOCALBASE}|g' < ${WRKSRC}/config.h.bak \
-		> ${WRKSRC}/config.h
+	${MV} ${WRKSRC}/config.h ${WRKSRC}/config.h.orig &&		\
+		${SED} -e 's|@LOCALBASE@|${LOCALBASE}|g'		\
+		${WRKSRC}/config.h.orig > ${WRKSRC}/config.h
 
 .if ${OPSYS} == "SunOS"
 post-configure:
-	cd ${WRKSRC} && \
-	${MV} ${MAKEFILE} ${MAKEFILE}.old && \
-	${SED} -e 's# CC = .*# CC = ${CC}#' \
-	  -e 's# CCOPTIONS = .*# CCOPTIONS = ${CFLAGS}'# \
-	  -e 's# CDEBUGFLAGS = .*# CDEBUGFLAGS =#' \
-	  ${MAKEFILE}.old >${MAKEFILE}
+	${MV} ${WRKSRC}/${MAKEFILE} ${WRKSRC}/${MAKEFILE}.orig &&	\
+		${SED} -e 's| CC = .*| CC = ${CC}|'			\
+		-e 's| CCOPTIONS = .*| CCOPTIONS = ${CFLAGS}|'		\
+		-e 's| CDEBUGFLAGS = .*| CDEBUGFLAGS =|'		\
+		${WRKSRC}/${MAKEFILE}.orig > ${WRKSRC}/${MAKEFILE}
 .endif
 
 post-install:
