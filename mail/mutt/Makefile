@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2000/05/20 17:39:21 kim Exp $
+# $NetBSD: Makefile,v 1.46 2000/05/20 18:39:45 kim Exp $
 
 DISTNAME=	mutt-1.2i
 CATEGORIES=	mail
@@ -22,20 +22,22 @@ CONFIGURE_ARGS+= --with-curses=${LOCALBASE} --with-exec-shell=/bin/ksh \
 		 --with-docdir=${PREFIX}/share/doc/mutt \
 		 --enable-pop --enable-imap
 
-MUTT_USE_SSL?=	YES
-
-.if defined(MUTT_USE_SSL) && ${MUTT_USE_SSL} == "YES"
-USE_SSL=	yes
-CONFIGURE_ARGS+= --with-ssl=${SSLBASE}
-.endif
-
-BUILD_DEFS+=	MUTT_USE_SSL
-
 ALL_TARGET=	keymap_defs.h all
 LDFLAGS+=	-s
 WRKSRC=		${WRKDIR}/${DISTNAME:S/i//}
 
 .include "../../mk/bsd.prefs.mk"
+
+MUTT_USE_SSL?=	YES
+
+.if defined(MUTT_USE_SSL) && ${MUTT_USE_SSL} == "YES"
+USE_SSL=	yes
+CONFIGURE_ARGS+= --with-ssl=${SSLBASE}
+.else
+CONFIGURE_ARGS+= --without-ssl
+.endif
+
+BUILD_DEFS+=	MUTT_USE_SSL
 
 .if ${OPSYS} == "SunOS"
 PLIST_SUBST+=	LOCALEBASE=lib
