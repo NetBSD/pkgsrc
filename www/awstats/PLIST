@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2004/02/11 12:18:10 grant Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/03/12 21:50:54 recht Exp $
 awstats/bin/awstats_buildstaticpages.pl
 awstats/bin/awstats_exportlib.pl
 awstats/bin/awstats_updateall.pl
+awstats/bin/configure.pl
 awstats/bin/logresolvemerge.pl
 awstats/bin/maillogconvert.pl
 awstats/bin/urlaliasbuilder.pl
@@ -11,18 +12,20 @@ awstats/cgi-bin/lang/awstats-al.txt
 awstats/cgi-bin/lang/awstats-ba.txt
 awstats/cgi-bin/lang/awstats-bg.txt
 awstats/cgi-bin/lang/awstats-br.txt
+awstats/cgi-bin/lang/awstats-ca.txt
 awstats/cgi-bin/lang/awstats-cn.txt
 awstats/cgi-bin/lang/awstats-cz.txt
 awstats/cgi-bin/lang/awstats-de.txt
 awstats/cgi-bin/lang/awstats-dk.txt
 awstats/cgi-bin/lang/awstats-en.txt
 awstats/cgi-bin/lang/awstats-es.txt
-awstats/cgi-bin/lang/awstats-es_cat.txt
-awstats/cgi-bin/lang/awstats-es_eu.txt
 awstats/cgi-bin/lang/awstats-et.txt
+awstats/cgi-bin/lang/awstats-eu.txt
 awstats/cgi-bin/lang/awstats-fi.txt
 awstats/cgi-bin/lang/awstats-fr.txt
+awstats/cgi-bin/lang/awstats-gl.txt
 awstats/cgi-bin/lang/awstats-gr.txt
+awstats/cgi-bin/lang/awstats-he.txt
 awstats/cgi-bin/lang/awstats-hu.txt
 awstats/cgi-bin/lang/awstats-id.txt
 awstats/cgi-bin/lang/awstats-is.txt
@@ -44,15 +47,16 @@ awstats/cgi-bin/lang/awstats-tr.txt
 awstats/cgi-bin/lang/awstats-tt-al.txt
 awstats/cgi-bin/lang/awstats-tt-ba.txt
 awstats/cgi-bin/lang/awstats-tt-bg.txt
+awstats/cgi-bin/lang/awstats-tt-ca.txt
 awstats/cgi-bin/lang/awstats-tt-cn.txt
 awstats/cgi-bin/lang/awstats-tt-cz.txt
 awstats/cgi-bin/lang/awstats-tt-de.txt
 awstats/cgi-bin/lang/awstats-tt-dk.txt
 awstats/cgi-bin/lang/awstats-tt-en.txt
 awstats/cgi-bin/lang/awstats-tt-es.txt
-awstats/cgi-bin/lang/awstats-tt-es_cat.txt
 awstats/cgi-bin/lang/awstats-tt-fi.txt
 awstats/cgi-bin/lang/awstats-tt-fr.txt
+awstats/cgi-bin/lang/awstats-tt-gl.txt
 awstats/cgi-bin/lang/awstats-tt-hu.txt
 awstats/cgi-bin/lang/awstats-tt-is.txt
 awstats/cgi-bin/lang/awstats-tt-it.txt
@@ -80,9 +84,13 @@ awstats/cgi-bin/lib/operating_systems.pm
 awstats/cgi-bin/lib/referer_spam.pm
 awstats/cgi-bin/lib/robots.pm
 awstats/cgi-bin/lib/search_engines.pm
+awstats/cgi-bin/lib/status_http.pm
+awstats/cgi-bin/lib/status_smtp.pm
 awstats/cgi-bin/lib/worms.pm
+awstats/cgi-bin/plugins/decodeutfkeys.pm
 awstats/cgi-bin/plugins/geoip.pm
 awstats/cgi-bin/plugins/geoipfree.pm
+awstats/cgi-bin/plugins/graphapplet.pm
 awstats/cgi-bin/plugins/hashfiles.pm
 awstats/cgi-bin/plugins/hostinfo.pm
 awstats/cgi-bin/plugins/ipv6.pm
@@ -92,27 +100,44 @@ awstats/cgi-bin/plugins/timezone.pm
 awstats/cgi-bin/plugins/tooltips.pm
 awstats/cgi-bin/plugins/urlalias.pm
 awstats/cgi-bin/plugins/userinfo.pm
+awstats/classes/awgraphapplet.jar
+awstats/classes/src/AWGraphApplet.java
+awstats/classes/src/Makefile.pl
 awstats/css/awstats_bw.css
 awstats/css/awstats_default.css
 awstats/icon/browser/adobe.png
 awstats/icon/browser/amaya.png
+awstats/icon/browser/amigavoyager.png
+awstats/icon/browser/apt.png
+awstats/icon/browser/avant.png
+awstats/icon/browser/aweb.png
+awstats/icon/browser/bpftp.png
 awstats/icon/browser/chimera.png
+awstats/icon/browser/cyberdog.png
 awstats/icon/browser/da.png
+awstats/icon/browser/dillo.png
 awstats/icon/browser/dreamcast.png
+awstats/icon/browser/ecatch.png
+awstats/icon/browser/encompass.png
+awstats/icon/browser/fpexpress.png
+awstats/icon/browser/fresco.png
 awstats/icon/browser/galeon.png
 awstats/icon/browser/getright.png
 awstats/icon/browser/gozilla.png
+awstats/icon/browser/hotjava.png
 awstats/icon/browser/ibrowse.png
 awstats/icon/browser/icab.png
 awstats/icon/browser/kmeleon.png
 awstats/icon/browser/konqueror.png
 awstats/icon/browser/lotusnotes.png
 awstats/icon/browser/lynx.png
+awstats/icon/browser/macweb.png
 awstats/icon/browser/mediaplayer.png
 awstats/icon/browser/mozilla.png
 awstats/icon/browser/msie.png
 awstats/icon/browser/msie_large.png
 awstats/icon/browser/multizilla.png
+awstats/icon/browser/ncsa_mosaic.png
 awstats/icon/browser/netpositive.png
 awstats/icon/browser/netscape.png
 awstats/icon/browser/netscape_large.png
@@ -306,8 +331,10 @@ awstats/icon/flags/mg.png
 awstats/icon/flags/mil.png
 awstats/icon/flags/mk.png
 awstats/icon/flags/ml.png
+awstats/icon/flags/mm.png
 awstats/icon/flags/mn.png
 awstats/icon/flags/mo.png
+awstats/icon/flags/mp.png
 awstats/icon/flags/mq.png
 awstats/icon/flags/mr.png
 awstats/icon/flags/ms.png
@@ -426,6 +453,7 @@ awstats/icon/os/atari.png
 awstats/icon/os/beos.png
 awstats/icon/os/bsdi.png
 awstats/icon/os/cpm.png
+awstats/icon/os/debian.png
 awstats/icon/os/digital.png
 awstats/icon/os/dos.png
 awstats/icon/os/dreamcast.png
@@ -450,6 +478,7 @@ awstats/icon/os/qnx.png
 awstats/icon/os/riscos.png
 awstats/icon/os/sco.png
 awstats/icon/os/sunos.png
+awstats/icon/os/symbian.png
 awstats/icon/os/unix.png
 awstats/icon/os/unknown.png
 awstats/icon/os/vms.png
@@ -493,9 +522,7 @@ awstats/icon/other/vv.png
 awstats/js/awstats_misc_tracker.js
 share/doc/html/awstats/COPYING.TXT
 share/doc/html/awstats/LICENSE.TXT
-share/doc/html/awstats/awstats.htm
 share/doc/html/awstats/awstats.pdf
-share/doc/html/awstats/awstats.xml
 share/doc/html/awstats/awstats_benchmark.html
 share/doc/html/awstats/awstats_changelog.txt
 share/doc/html/awstats/awstats_compare.html
@@ -507,7 +534,7 @@ share/doc/html/awstats/awstats_license.html
 share/doc/html/awstats/awstats_security.html
 share/doc/html/awstats/awstats_setup.html
 share/doc/html/awstats/awstats_tools.html
-share/doc/html/awstats/awstats_update.html
+share/doc/html/awstats/awstats_upgrade.html
 share/doc/html/awstats/awstats_webmin.html
 share/doc/html/awstats/awstats_what.html
 share/doc/html/awstats/images/awstats.ico
@@ -531,6 +558,8 @@ share/doc/html/awstats/images/screen_shot_3.png
 share/doc/html/awstats/images/screen_shot_4.png
 share/doc/html/awstats/images/star.png
 share/doc/html/awstats/index.html
+share/doc/html/awstats/pad_awstats.htm
+share/doc/html/awstats/pad_awstats.xml
 share/doc/html/awstats/styles.css
 share/examples/awstats/awstats.conf
 share/examples/awstats/example.pm
@@ -547,6 +576,8 @@ share/examples/awstats/example.pm
 @dirrm awstats/icon/browser
 @dirrm awstats/icon
 @dirrm awstats/css
+@dirrm awstats/classes/src
+@dirrm awstats/classes
 @dirrm awstats/cgi-bin/plugins
 @dirrm awstats/cgi-bin/lib
 @dirrm awstats/cgi-bin/lang
