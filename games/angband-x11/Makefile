@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/01/26 10:30:51 agc Exp $
+# $NetBSD: Makefile,v 1.18 2003/04/10 19:43:19 grant Exp $
 #
 
 DISTNAME=	angband-3.0.1
@@ -24,8 +24,8 @@ SPOILERFILE=	angband-spoilers.tar.gz
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-setgid=games --prefix=${PREFIX}
 
-.if (${MACHINE_ARCH} == arm32)
-. include "../../lang/gcc/buildlink2.mk"
+.if ${MACHINE_ARCH} == "arm32"
+.  include "../../lang/gcc/buildlink2.mk"
 .endif
 
 # add spoiler files and clean up a bit
