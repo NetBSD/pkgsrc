@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/04/05 08:52:18 rh Exp $
+# $NetBSD: Makefile,v 1.3 1999/04/06 00:51:39 garbled Exp $
 #
 
 DISTNAME=	edesktop-1.0
@@ -9,13 +9,13 @@ DISTFILES=	# empty
 MAINTAINER=	root@garbled.net
 
 DEPENDS+=	enlightenment-0.15.4:../../x11/enlightenment
-DEPENDS+=	eterm-0.8:../../x11/eterm
+DEPENDS+=	eterm-0.8.8:../../x11/eterm
 DEPENDS+=	rxvt-2.20:../../x11/rxvt
 DEPENDS+=	mutt-0.95.4:../../mail/mutt
 DEPENDS+=	econf-0.15:../../x11/econf
 DEPENDS+=	xv-3.10a:../../graphics/xv
 DEPENDS+=	ee-0.3.8:../../graphics/ee
-DEPENDS+=	gimp-1.0.3:../../graphics/gimp
+DEPENDS+=	gimp-1.0.4:../../graphics/gimp
 DEPENDS+=	xpaint-2.5.6:../../graphics/xpaint
 DEPENDS+=	xfig-3.2.2:../../graphics/xfig
 DEPENDS+=	emacs-20.3:../../editors/emacs
