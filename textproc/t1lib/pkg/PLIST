@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/11/05 08:26:03 garbled Exp $
+bin/type1afm
+share/t1lib/t1lib.config
+share/doc/t1lib/t1lib_doc.dvi
+share/doc/t1lib/t1_data.eps
+share/examples/t1lib/Makefile
+share/examples/t1lib/t1example1.c
+share/examples/t1lib/t1lib.config
+share/examples/t1lib/README.t1example1
+share/examples/t1lib/FontDataBase
+include/t1lib.h
+lib/libt1.a
+lib/libt1.so.8.0
+@dirrm share/doc/t1lib
+@dirrm share/examples/t1lib
+@dirrm share/t1lib

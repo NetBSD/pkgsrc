@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 1998/11/05 08:26:03 garbled Exp $
+--- type1afm/Makefile.in.orig	Wed Nov  4 16:20:31 1998
++++ type1afm/Makefile.in	Wed Nov  4 16:21:22 1998
+@@ -15,7 +15,7 @@
+ #
+ # Modified by H.Kakugawa to use libtool
+ 
+-LIBTOOL   = ../libtool
++LIBTOOL   = @LIBTOOL@
+ SHELL     = /bin/sh
+ CC        = @CC@
+ CPP       = @CPP@

@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/11/05 08:26:03 garbled Exp $
+--- examples/Makefile.in.orig	Wed Nov  4 16:20:20 1998
++++ examples/Makefile.in	Wed Nov  4 16:20:54 1998
+@@ -15,7 +15,7 @@
+ #
+ 
+ 
+-LIBTOOL   = ../libtool
++LIBTOOL   = @LIBTOOL@
+ SHELL     = /bin/sh
+ CC        = @CC@
+ CPP       = @CPP@

@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/11/05 08:26:03 garbled Exp $
+--- configure.orig	Fri Oct 16 08:48:40 1998
++++ configure	Thu Nov  5 00:55:49 1998
+@@ -634,7 +634,7 @@
+ test -z "$CFLAGS"                 
+ test -z "$LDFLAGS"                
+ 
+-T1LIB_DATA_DIR="${datadir}/t1lib-${T1LIB_VERSION}.${T1LIB_REVISION}"
++T1LIB_DATA_DIR="${datadir}/t1lib"
+ 
+ 
+ 
+@@ -2205,7 +2205,7 @@
+ fi
+ 
+ # Always use our own libtool.
+-LIBTOOL='$(SHELL) $(top_builddir)/libtool'
++#LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+ # Check for any special flags to pass to ltconfig.
+ libtool_flags=
+@@ -2308,7 +2308,7 @@
+ # It thinks the first close brace ends the variable substitution.
+ test -z "$INSTALL_PROGRAM" && INSTALL_PROGRAM='${INSTALL}'
+ 
+-test -z "$INSTALL_DATA" && INSTALL_DATA='${INSTALL} -m 644'
++test -z "$INSTALL_DATA" && INSTALL_DATA='${INSTALL} -c -m 644'
+ 
+ 
+ 
