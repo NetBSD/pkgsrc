@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/04/08 17:45:47 drochner Exp $
+# $NetBSD: Makefile,v 1.17 2004/04/09 10:34:52 recht Exp $
 #
 
 DISTNAME=	vcdimager-0.7.20
@@ -9,14 +9,15 @@ MAINTAINER=	ben@NetBSD.org
 HOMEPAGE=	http://www.vcdimager.org/
 COMMENT=	Mastering suite for Video CDs
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	yes
-INFO_FILES=	vcdimager.info
+INFO_FILES=	vcd-info.info vcdimager.info vcdxrip.info
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/popt/buildlink2.mk"
-.include "../../misc/libcdio/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
+.include "../../misc/libcdio/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
