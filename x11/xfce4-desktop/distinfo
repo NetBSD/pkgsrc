@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2004/07/12 08:25:11 martti Exp $
+$NetBSD: distinfo,v 1.8 2005/01/17 12:56:13 martti Exp $
 
-SHA1 (xfdesktop-4.0.6.tar.gz) = 4ee72bb077eefa94bad604d58a0bbeb008e5522a
-Size (xfdesktop-4.0.6.tar.gz) = 2134301 bytes
+SHA1 (xfdesktop-4.2.0.tar.gz) = 25309305ec5e20db4f1537e5e36be7755b55ea1d
+Size (xfdesktop-4.2.0.tar.gz) = 2593021 bytes
