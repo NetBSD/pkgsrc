@@ -1,4 +1,4 @@
-# $NetBSD: HACKS,v 1.3 2003/01/23 10:39:21 dmcmahill Exp $
+# $NetBSD: HACKS,v 1.4 2003/01/25 00:20:59 salo Exp $
 #
 # This file is intended to document workarounds for currently unsolved
 # (mostly) compiler bugs.
@@ -315,3 +315,14 @@ descr
 	compilation of altairz80
 kcah
 
+hack	gcc-sparc64-memorysize
+mdate	8 Jan 2003
+who	salo
+port	sparc64
+file	chat/silc-client/patch-ab : 1.8
+file	chat/silc-server/patch-ac : 1.7
+descr
+	The SHA1Transform() function causes the sparc64 compiler to use
+	excessive amounts of memory attempting to optimise this function.
+	Using no optimisation allows the function to build.
+kcah
