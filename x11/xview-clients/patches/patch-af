@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1 2000/06/16 14:16:52 pooka Exp $
+$NetBSD: patch-af,v 1.2 2000/09/13 22:20:00 jlam Exp $
 
 --- olwm/openwin-menu-programs.orig	Tue Jun 29 07:12:07 1993
 +++ olwm/openwin-menu-programs	Fri Jun 16 15:32:37 2000
@@ -8,10 +8,10 @@ $NetBSD: patch-af,v 1.1 2000/06/16 14:16:52 pooka Exp $
  
 -"Command Tool..." 		exec $OPENWINHOME/bin/cmdtool
 -"Clock..."			exec $OPENWINHOME/bin/clock
-+"Command Tool..." 		exec XXX11BASEXXX/bin/cmdtool
-+"Xterm..."			exec XXX11BASEXXX/bin/xterm
++"Command Tool..." 		exec @PREFIX@/bin/cmdtool
++"Xterm..."			exec @X11BASE@/bin/xterm
 +
 +SEPARATOR
 +
-+"Clock..."			exec XXX11BASEXXX/bin/clock
++"Clock..."			exec @PREFIX@/bin/clock
 +
