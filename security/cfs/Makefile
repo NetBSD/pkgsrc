@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/07/25 04:45:41 grant Exp $
+# $NetBSD: Makefile,v 1.16 2004/07/25 04:46:10 grant Exp $
 
 DISTNAME=		cfs-1.4.1
 PKGREVISION=		1
@@ -84,22 +84,22 @@ post-extract:
 	${RM} -f ${WRKSRC}/esm.1
 
 post-patch:
-	cd ${WRKSRC}; for file in *; do					\
+	@cd ${WRKSRC}; for file in *; do				\
 		${MV} -f $${file} $${file}.presubst;			\
 		dest=`${ECHO} $${file} | ${SED} ${CFS_SUBST_SED}`;	\
 		${SED} ${CFS_SUBST_SED} $${file}.presubst > $${dest};	\
 		${RM} -f $${file}.presubst;				\
 	done
-	${CHMOD} +x ${CFS_BUILD_SCRIPT}
+	@${CHMOD} +x ${CFS_BUILD_SCRIPT}
 
 pre-build:
-	${SED}	-e "s|@AWK@|${AWK}|g"					\
+	@${SED}	-e "s|@AWK@|${AWK}|g"					\
 		-e "s|@MV@|${MV}|g"					\
 		${FILESDIR}/unansi.sh > ${WRKSRC}/unansi
-	${CHMOD} +x ${WRKSRC}/unansi
+	@${CHMOD} +x ${WRKSRC}/unansi
 
 do-build:
-	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV}				\
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV}				\
 		${SH} ${CFS_BUILD_SCRIPT} ${ALL_TARGET}
 
 post-install:
