@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2678 2003/07/04 14:41:32 salo Exp $
+$NetBSD: CHANGES,v 1.2679 2003/07/04 16:32:19 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2671,3 +2671,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated crimsonfields to 0.3.4 [wiz 2003-07-04]
 	Added conglomerate-0.5.4 [jmmv 2003-07-04]
 	Updated dovecot to 0.99.10 [salo 2003-07-04]
+	Updated gcc to 2.95.3nb3 [seb 2003-07-04]
+	Updated gcc3 to 3.3nb3 [seb 2003-07-04]
