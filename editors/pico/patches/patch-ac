@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2001/10/10 13:36:59 martti Exp $
+$NetBSD: patch-ac,v 1.7 2001/12/15 08:31:08 martti Exp $
 
---- build.orig	Thu Aug  2 03:35:02 2001
-+++ build	Mon Oct  8 09:52:25 2001
-@@ -345,30 +345,12 @@
+--- build.orig	Thu Nov  1 00:01:04 2001
++++ build	Fri Dec 14 19:09:32 2001
+@@ -332,31 +332,12 @@
  	  echo "Including SSL functionality"
  	fi
  
@@ -14,10 +14,11 @@ $NetBSD: patch-ac,v 1.6 2001/10/10 13:36:59 martti Exp $
 -        ln -s imap/imapd imapd
 -        if [ -s ipopd    ] ; then rm -f ipopd    ; fi
 -        ln -s imap/ipopd ipopd
--        echo "Making c-client library, mtest and imapd"
--        eval echo make "$makeargs" "$SSL" "$K1" "$K2" $ccltarg
+-        echo "Making c-client library, imapd, and ipopd"
+-	echo $S1 $S2 $S3 $S4 $K1 > imap/SPECIALS
 -        cd $PHOME/imap
--        eval make "$makeargs" "$SSL" "$K1" "$K2" $ccltarg
+-        eval echo eval make "$makeargs" "$SSL" "SPECIALS=`cat SPECIALS`" "$K2" $ccltarg
+-        eval make "$makeargs" "$SSL" "SPECIALS=`cat SPECIALS`" "$K2" $ccltarg
 -        echo ''
 -
          echo "Making Pico and Pilot"
@@ -26,14 +27,14 @@ $NetBSD: patch-ac,v 1.6 2001/10/10 13:36:59 martti Exp $
          eval make "$makeargs" -f makefile.$picotarg
          echo ''
  
--        echo "Making Pine".
+-        echo "Making Pine and rpload/rpdump".
 -        cd $PHOME/pine
 -        eval echo make "$makeargs" "$L1" "$L2" -f makefile.$pinetarg
 -        eval make "$makeargs" "$L1" "$L2" -f makefile.$pinetarg
          cd $PHOME
          if [ ! -d bin ] ;  then    mkdir bin;        fi
          cd $PHOME/bin
-@@ -384,8 +366,6 @@
+@@ -372,8 +353,6 @@
          if [ -s ../pine/rpdump ] ;    then ln ../pine/rpdump rpdump   ; fi
          cd $PHOME
          echo ''
