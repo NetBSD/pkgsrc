@@ -1,4 +1,4 @@
-#	$NetBSD: cross.mk,v 1.20 2001/02/05 09:00:54 tron Exp $
+#	$NetBSD: cross.mk,v 1.21 2001/03/10 21:15:26 wiz Exp $
 
 # Shared definitions for building a cross-compile environment.
 
@@ -163,11 +163,11 @@ EGCS_MAKE=		${SETENV} ${MAKE_ENV} \
 	                ${MAKE_PROGRAM} ${MAKE_FLAGS} ${EGCS_MAKE_FLAGS}
 
 .if defined(EGCS_FAKE_RUNTIME)
-SYS_INCLUDE=		${WRKDIR}/include
+CROSS_SYS_INCLUDE=		${WRKDIR}/include
 .endif
-.if defined(SYS_INCLUDE)
-CFLAGS_FOR_TARGET+=	-idirafter ${SYS_INCLUDE}
-EGCS_MAKE_FLAGS+=	SYSTEM_HEADER_DIR="${SYS_INCLUDE}"
+.if defined(CROSS_SYS_INCLUDE)
+CFLAGS_FOR_TARGET+=	-idirafter ${CROSS_SYS_INCLUDE}
+EGCS_MAKE_FLAGS+=	SYSTEM_HEADER_DIR="${CROSS_SYS_INCLUDE}"
 .endif
 .if defined(SYS_LIB)
 LDFLAGS_FOR_TARGET+=	-L${SYS_LIB}
@@ -194,8 +194,9 @@ egcs-configure:
 		--host=${MACHINE_GNU_ARCH}--netbsd  --target=${TARGET_ARCH} \
 		${CXX_CONFIGURE_ARGS}
 .if defined(EGCS_FAKE_RUNTIME)
-	@${MKDIR} ${SYS_INCLUDE} ${SYS_INCLUDE}/machine ${SYS_INCLUDE}/sys
-	@cd ${SYS_INCLUDE} && ${TOUCH} ${TOUCH_FLAGS} machine/ansi.h \
+	@${MKDIR} ${CROSS_SYS_INCLUDE} ${CROSS_SYS_INCLUDE}/machine \
+		${CROSS_SYS_INCLUDE}/sys
+	@cd ${CROSS_SYS_INCLUDE} && ${TOUCH} ${TOUCH_FLAGS} machine/ansi.h \
 		sys/time.h stdlib.h unistd.h
 .endif
 
@@ -252,10 +253,10 @@ EXTRACT_ONLY=		${DISTFILES:N*.diff.gz}
 .endif
 .endif
 
-.if defined(SYS_INCLUDE) && !defined(EGCS_FAKE_RUNTIME)
+.if defined(CROSS_SYS_INCLUDE) && !defined(EGCS_FAKE_RUNTIME)
 pre-install: pre-install-includes
 pre-install-includes:
-	cd ${SYS_INCLUDE} && ${PAX} -rw . ${TARGET_DIR}/include
+	cd ${CROSS_SYS_INCLUDE} && ${PAX} -rw . ${TARGET_DIR}/include
 .endif
 
 .if defined(SYS_LIB)

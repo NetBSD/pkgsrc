@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/16 14:04:56 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/03/10 21:15:27 wiz Exp $
 #
 
 DISTVERSION=		1.0.0.0
@@ -27,9 +27,9 @@ BINUTILS_EXTRAS=	dlltool windres
 ## Actually we have to install Cygwin headers and libraries with this package;
 ## the header files from NetBSD should be deleted at that time.
 post-configure:
-	${CP} ${FILESDIR}/i386_limits.h ${SYS_INCLUDE}/machine/limits.h
-	${CP} ${FILESDIR}/syslimits.h ${SYS_INCLUDE}/sys/
-	${CP} ${FILESDIR}/featuretest.h ${SYS_INCLUDE}/sys/
-	${CP} ${FILESDIR}/limits.h ${SYS_INCLUDE}/
+	${CP} ${FILESDIR}/i386_limits.h ${CROSS_SYS_INCLUDE}/machine/limits.h
+	${CP} ${FILESDIR}/syslimits.h ${CROSS_SYS_INCLUDE}/sys/
+	${CP} ${FILESDIR}/featuretest.h ${CROSS_SYS_INCLUDE}/sys/
+	${CP} ${FILESDIR}/limits.h ${CROSS_SYS_INCLUDE}/
 
 .include "../COMMON/cross.mk"

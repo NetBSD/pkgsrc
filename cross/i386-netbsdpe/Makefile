@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/03/08 10:17:11 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/03/10 21:15:27 wiz Exp $
 #
 
 DISTVERSION=		1.1.4
@@ -57,10 +57,10 @@ post-patch:
 
 CFLAGS_FOR_TARGET+=	-I${WRKDIR}
 post-configure:
-	${CP} ${FILESDIR}/i386_limits.h ${SYS_INCLUDE}/machine/limits.h
-	${CP} ${FILESDIR}/syslimits.h ${SYS_INCLUDE}/sys/
-	${CP} ${FILESDIR}/featuretest.h ${SYS_INCLUDE}/sys/
-	${CP} ${FILESDIR}/limits.h ${SYS_INCLUDE}/
+	${CP} ${FILESDIR}/i386_limits.h ${CROSS_SYS_INCLUDE}/machine/limits.h
+	${CP} ${FILESDIR}/syslimits.h ${CROSS_SYS_INCLUDE}/sys/
+	${CP} ${FILESDIR}/featuretest.h ${CROSS_SYS_INCLUDE}/sys/
+	${CP} ${FILESDIR}/limits.h ${CROSS_SYS_INCLUDE}/
 	${RM} ${WRKDIR}/${GCC_DISTNAME}/texinfo/makeinfo/Makefile
 	${SED} "s/extern FILE/__declspec(dllimport) FILE/" /usr/include/stdio.h > ${WRKDIR}/stdio.h
 

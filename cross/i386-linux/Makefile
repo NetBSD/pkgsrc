@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/16 14:04:56 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/03/10 21:15:27 wiz Exp $
 #
 
 DISTVERSION=		2.0.7.1
@@ -25,7 +25,7 @@ LINUXDEVEL_FILES=	glibc-2.0.7-13.i386.rpm \
 			kernel-headers-2.0.34-0.6.i386.rpm
 
 TARGET_ARCH=		i386-linux
-SYS_INCLUDE=		${WRKDIR}/usr/include
+CROSS_SYS_INCLUDE=	${WRKDIR}/usr/include
 SYS_LIB=		${WRKDIR}/usr/lib
 LDFLAGS_FOR_TARGET=	-Wl,-rpath-link=${SYS_LIB}
 
@@ -36,10 +36,10 @@ post-extract:
 			rpm2cpio ${_DISTDIR}/$$file | cpio -id; \
 		done
 	@cd ${WRKDIR}/lib && ${MV} -f * ${SYS_LIB}
-	@cd ${SYS_INCLUDE} && ${RM} -f asm linux scsi
+	@cd ${CROSS_SYS_INCLUDE} && ${RM} -f asm linux scsi
 	@cd ${WRKDIR}/usr/src/linux-2.0.34/include && \
-		${MV} -f asm-i386 ${SYS_INCLUDE}/asm && \
-		${MV} -f linux scsi ${SYS_INCLUDE}
+		${MV} -f asm-i386 ${CROSS_SYS_INCLUDE}/asm && \
+		${MV} -f linux scsi ${CROSS_SYS_INCLUDE}
 	@cd ${SYS_LIB}; \
 		for so in libBrokenLocale libcrypt libdb libdl libm libndbm \
 			  libnsl libnss_compat libnss_db libnss_dns \

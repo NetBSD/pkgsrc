@@ -1,4 +1,4 @@
-#	$NetBSD: cross.mk,v 1.5 2001/03/02 09:38:06 minoura Exp $
+#	$NetBSD: cross.mk,v 1.6 2001/03/10 21:15:27 wiz Exp $
 #	$PEACE: cross.mk,v 1.1 2001/01/16 15:20:26 kent Exp $
 #	based on pkgsrc/cross/COMMON/cross.mk
 #	NetBSD: cross.mk,v 1.16 2000/11/09 13:04:55 wiz Exp 
@@ -155,11 +155,11 @@ GCC_MAKE=		${SETENV} ${MAKE_ENV} \
 	                ${MAKE_PROGRAM} ${MAKE_FLAGS} ${GCC_MAKE_FLAGS}
 
 .if defined(GCC_FAKE_RUNTIME)
-SYS_INCLUDE=		${WRKDIR}/include
+CROSS_SYS_INCLUDE=		${WRKDIR}/include
 .endif
-.if defined(SYS_INCLUDE)
-CFLAGS_FOR_TARGET+=	-idirafter ${SYS_INCLUDE}
-GCC_MAKE_FLAGS+=	SYSTEM_HEADER_DIR="${SYS_INCLUDE}"
+.if defined(CROSS_SYS_INCLUDE)
+CFLAGS_FOR_TARGET+=	-idirafter ${CROSS_SYS_INCLUDE}
+GCC_MAKE_FLAGS+=	SYSTEM_HEADER_DIR="${CROSS_SYS_INCLUDE}"
 .endif
 .if defined(SYS_LIB)
 LDFLAGS_FOR_TARGET+=	-L${SYS_LIB}
@@ -186,8 +186,9 @@ gcc-configure:
 		--host=${MACHINE_GNU_ARCH}--netbsd  --target=${TARGET_ARCH} \
 		${GCC_CONFIGURE_ARGS} ${CXX_CONFIGURE_ARGS}
 .if defined(GCC_FAKE_RUNTIME)
-	@${MKDIR} ${SYS_INCLUDE} ${SYS_INCLUDE}/machine ${SYS_INCLUDE}/sys
-	@cd ${SYS_INCLUDE} && ${TOUCH} ${TOUCH_FLAGS} machine/ansi.h \
+	@${MKDIR} ${CROSS_SYS_INCLUDE} ${CROSS_SYS_INCLUDE}/machine \
+		${CROSS_SYS_INCLUDE}/sys
+	@cd ${CROSS_SYS_INCLUDE} && ${TOUCH} ${TOUCH_FLAGS} machine/ansi.h \
 		sys/time.h stdlib.h unistd.h
 .endif
 
@@ -250,10 +251,10 @@ EXTRACT_ONLY=		${DISTFILES:N*.diff.gz}
 .endif
 .endif
 
-.if defined(SYS_INCLUDE) && !defined(GCC_FAKE_RUNTIME)
+.if defined(CROSS_SYS_INCLUDE) && !defined(GCC_FAKE_RUNTIME)
 pre-install: pre-install-includes
 pre-install-includes:
-	cd ${SYS_INCLUDE} && ${PAX} -rw . ${TARGET_DIR}/include
+	cd ${CROSS_SYS_INCLUDE} && ${PAX} -rw . ${TARGET_DIR}/include
 .endif
 
 .if defined(SYS_LIB)
