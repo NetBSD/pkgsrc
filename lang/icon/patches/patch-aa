@@ -1,15 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2001/06/25 18:00:16 jtb Exp $
+$NetBSD: patch-aa,v 1.6 2003/03/24 12:12:10 jtb Exp $
 
---- ipl/cfuncs/mklib.sh.orig	Sat Jun 23 09:15:23 2001
-+++ ipl/cfuncs/mklib.sh
-@@ -21,8 +21,8 @@
-       ld -shared -o $LIBNAME "$@";;
-    OSF*)
-       ld -shared -expect_unresolved '*' -o $LIBNAME "$@" -lc;;
--   Linux*|BSD/OS*|OpenBSD*)
--      gcc -shared -o $LIBNAME -fPIC "$@";;
-+   Linux*|BSD/OS*|OpenBSD*|NetBSD*)
-+      $CC -shared -o $LIBNAME -fPIC "$@";;
-    FreeBSD*)
-       ld -Bshareable -o $LIBNAME "$@" -lc;;
-    *)
+--- config/unix/setup.sh.orig	Mon Mar  4 21:32:55 2002
++++ config/unix/setup.sh
+@@ -31,7 +31,7 @@ fi
+ # find and copy the context switch code.
+ # use pthreads version if specified, or as a last resort.
+ # by default, look for `uname -m`.[cs] and then rswitch.[cs].
+-ARCH=`uname -m`
++ARCH=`uname -p`
+ if [ "$CSW" = "pthreads" ]; then
+    RSW=pthreads.c
+    COCLEAN="#define CoClean"

@@ -1,8 +1,0 @@
-$NetBSD: patch-ay,v 1.4 2001/06/25 18:00:17 jtb Exp $
-
---- /dev/null	Mon Jun 25 14:20:42 2001
-+++ config/unix/netbsd/Makedefs.graphics
-@@ -0,0 +1,3 @@
-+CFLAGS += -I$(X11BASE)/include
-+XLIBS = -Wl,-R$(X11BASE)/lib -L$(X11BASE)/lib -lX11
-+XPMDEFS = -DZPIPE -I$(X11BASE)/include

@@ -1,24 +1,23 @@
-$NetBSD: patch-aw,v 1.3 2001/06/25 18:00:17 jtb Exp $
+$NetBSD: patch-aw,v 1.4 2003/03/24 12:12:10 jtb Exp $
 
---- src/common/Makefile.orig	Thu Jun  7 16:20:54 2001
+--- src/common/Makefile.orig	Wed Dec 12 18:28:10 2001
 +++ src/common/Makefile
-@@ -5,7 +5,7 @@
+@@ -5,7 +5,7 @@ OBJS =	long.o getopt.o time.o filepart.o
  	munix.o literals.o rswitch.o alloc.o long.o getopt.o time.o\
  	save.o redirerr.o xwindow.o dlrgint.o ipp.o
  
 -common:		doincl patchstr $(OBJS) xpmaybe
-+common:		doincl patchstr $(OBJS) headers xpmaybe
++common:		doincl patchstr $(OBJS) fixheaders xpmaybe
  
- doincl:		doincl.c
+ doincl:		doincl.c ../h/arch.h
  		$(CC) $(CFLAGS) -o doincl doincl.c
-@@ -15,12 +15,22 @@
+@@ -15,12 +15,20 @@ patchstr:	patchstr.c
  		$(CC) $(CFLAGS) -o patchstr patchstr.c
  		cp patchstr ../../bin
  
-+headers:
-+		cd ../h; for f in *.h; do		\
-+		sed -e 's:../h/::g;s:../xpm/::g' $$f >	\
-+		../../lib/icon/$$f;			\
++fixheaders:
++		cd ../h; for f in *.h; do							\
++		sed -e 's:../h/::g;s:../xpm/::g' $$f > ../../lib/icon/$$f;			\
 +		done
 +
  xpmaybe:
@@ -28,10 +27,9 @@ $NetBSD: patch-aw,v 1.3 2001/06/25 18:00:17 jtb Exp $
  		cd ../xpm; $(MAKE) libXpm.a
 -		cp ../xpm/libXpm.a ../../bin
 +		cp ../xpm/libXpm.a ../../lib/icon
-+		cd ../xpm; for f in *.h; do		\
-+		sed -e 's:../h/::g;s:../xpm/::g' $$f >	\
-+		../../lib/icon/$$f;			\
++		cd ../xpm; for f in *.h; do							\
++		sed -e 's:../h/::g;s:../xpm/::g' $$f >	../../lib/icon/$$f;			\
 +		done
  
- $(OBJS): ../h/define.h ../h/config.h ../h/cstructs.h ../h/mproto.h \
+ $(OBJS): ../h/define.h ../h/arch.h ../h/config.h ../h/cstructs.h ../h/mproto.h \
  	  ../h/typedefs.h ../h/proto.h ../h/cpuconf.h

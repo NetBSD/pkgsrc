@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2001/06/25 18:00:16 jtb Exp $
+$NetBSD: patch-ab,v 1.7 2003/03/24 12:12:10 jtb Exp $
 
---- /dev/null	Mon Jun 25 14:19:36 2001
-+++ config/unix/netbsd/define.h
-@@ -0,0 +1,17 @@
+--- /dev/null	Mon Mar 24 07:25:29 2003
++++ config/unix/netbsd/define.h.in
+@@ -0,0 +1,14 @@
 +/*
 + * Icon configuration file for NetBSD
 + */
@@ -13,10 +13,7 @@ $NetBSD: patch-ab,v 1.6 2001/06/25 18:00:16 jtb Exp $
 +#define NetBSD			/* This is for NetBSD stuff (save) */
 +
 +#define LoadFunc
-+#define SysOpt
-+#define ExecImages
-+
-+#define MaxStatSize 20480
 +
 +#define CComp "gcc"
-+#define COpts "-O2"
++#define COpts "-O2 -I@X11BASE@/include"
++#define ICONC_XLIB "-Wl,-R@X11BASE@/lib -L@X11BASE@/lib -lX11"
