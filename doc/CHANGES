@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3814 2003/11/11 12:00:16 wiz Exp $
+$NetBSD: CHANGES,v 1.3815 2003/11/11 16:30:46 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4342,3 +4342,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated links to 2.1.0.14 [wiz 2003-11-11]
 	Updated links-gui to 2.1.0.14 [wiz 2003-11-11]
 	Updated superlu to 3.0 [wiz 2003-11-11]
+	Updated dmesg2gif to 1.3 [hubertf 2003-11-11]

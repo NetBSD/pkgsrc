@@ -1,13 +1,8 @@
 #!/bin/sh
-# $NetBSD: dmesg2gif,v 1.3 2003/10/20 17:11:43 hubertf Exp $
+# $NetBSD: dmesg2gif,v 1.4 2003/11/11 16:30:46 hubertf Exp $
 #
 # Copyright (c) 2003 Hubert Feyrer <hubertf@netbsd.org>
 #
-
-tmp=/tmp/dmesg2gif.$$.dot
-
-# Clean up things on ^C
-trap "rm -r $tmp ; exit 1" INT
 
 if [ -t 0 -o -t 1 ]
 then
@@ -21,13 +16,9 @@ fi
 	cat \
 	| grep -v ^# \
 	| perl -ne 'if(/^(\S*) at (\S*) *.*/){
-			$from=$1; 
-			$to=$2; 
-			$to=~s/://; 
+			( $from = $1 ) =~ s/://g; 
+			( $to   = $2 ) =~ s/://g; 
 			print "\t$from -> $to\n"; 
 		}'
 	echo "}"
-) > $tmp
-dot -Tgif $tmp
-
-rm $tmp
+) | tee /tmp/x.debug | dot -Tgif
