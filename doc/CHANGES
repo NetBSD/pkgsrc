@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.757 2002/12/12 12:16:19 jmmv Exp $
+$NetBSD: CHANGES,v 1.758 2002/12/12 19:47:03 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3915,3 +3915,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated gawk to 3.1.1 [dmcmahill 2002-12-11]
 	Updated tmda to 0.65 [kim 2002-12-12]
 	Added gtetrinet-0.4.4 [jmmv 2002-12-12]
+	Updated ysm to 2.8.1 [jmmv 2002-12-12]
