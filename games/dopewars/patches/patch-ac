@@ -1,21 +1,21 @@
-$NetBSD: patch-ac,v 1.2 2001/06/04 16:14:06 wiz Exp $
+$NetBSD: patch-ac,v 1.3 2002/12/06 16:50:04 jmmv Exp $
 
---- src/curses_client.c.orig	Wed Apr 25 02:27:54 2001
-+++ src/curses_client.c
-@@ -43,7 +43,6 @@
+--- src/curses_client/curses_client.c.orig	Tue Oct 15 15:31:34 2002
++++ src/curses_client/curses_client.c
+@@ -48,7 +48,6 @@ static void PrepareHighScoreScreen(void)
  static void PrintHighScore(char *Data);
  
  static int ResizedFlag;
 -static SCREEN *cur_screen;
- static char ConnectMethod=CM_SERVER;
- static gboolean CanFire=FALSE,RunHere=FALSE;
- static gchar FightPoint;
-@@ -76,7 +75,7 @@
  
- static void start_curses() {
- /* Initialises the curses library for accessing the screen */
--   cur_screen=newterm(NULL,stdout,stdin);
-+   initscr();
-    if (WantColour) {
-       start_color();
-       init_pair(1,COLOR_MAGENTA,COLOR_WHITE);
+ #define PromptAttr   (COLOR_PAIR(1))
+ #define TextAttr     (COLOR_PAIR(2))
+@@ -107,7 +106,7 @@ static gboolean QuitRequest, WantColour 
+  */
+ static void start_curses(void)
+ {
+-  cur_screen = newterm(NULL, stdout, stdin);
++  initscr();
+   if (WantColour) {
+     start_color();
+     init_pair(1, COLOR_MAGENTA, COLOR_WHITE);
