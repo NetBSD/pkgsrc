@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2003/05/05 20:25:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/09 09:36:28 jmmv Exp $
 #
 
-DISTNAME=	lmule-1.2.0
+DISTNAME=	lmule-1.2.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lmule/}
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jrp@hispabsd.org
 HOMEPAGE=	http://lmule.sourceforge.net/
