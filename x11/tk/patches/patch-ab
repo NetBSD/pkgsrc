@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.13 2004/03/08 22:14:19 minskim Exp $
+$NetBSD: patch-ab,v 1.14 2004/03/11 01:27:05 minskim Exp $
 
 --- configure.orig	2004-03-01 18:04:48.000000000 -0600
 +++ configure
@@ -10,7 +10,47 @@ $NetBSD: patch-ab,v 1.13 2004/03/08 22:14:19 minskim Exp $
      EXTRA_CFLAGS=""
      TCL_EXPORT_FILE_SUFFIX=""
      UNSHARED_LIB_SUFFIX=""
-@@ -2739,7 +2740,6 @@ if eval "test \"`echo '$ac_cv_header_'$a
+@@ -2496,6 +2497,9 @@ fi
+ 	    LD_SEARCH_FLAGS='-rpath ${LIB_RUNTIME_DIR}'
+ 	    EXTRA_CFLAGS=""
+ 	    LDFLAGS=""
++	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
++	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so'
++	    TCL_LIB_VERSIONS_OK=nodots
+ 	    ;;
+ 	IRIX-6.*)
+ 	    SHLIB_CFLAGS=""
+@@ -2521,6 +2525,9 @@ fi
+ 		esac
+ 		LDFLAGS="-n32"
+ 	    fi
++	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
++	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so'
++	    TCL_LIB_VERSIONS_OK=nodots
+ 	    ;;
+ 	IRIX64-6.*)
+ 	    SHLIB_CFLAGS=""
+@@ -2545,6 +2552,9 @@ fi
+ 	            LDFLAGS="-64"
+ 	        fi
+ 	    fi
++	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
++	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so'
++	    TCL_LIB_VERSIONS_OK=nodots
+ 	    ;;
+ 	Linux*)
+ 	    SHLIB_CFLAGS="-fPIC"
+@@ -2626,6 +2636,9 @@ fi
+ EOF
+ 
+ 
++	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
++	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so'
++	    TCL_LIB_VERSIONS_OK=nodots
+ 	    ;;
+ 	GNU*)
+ 	    SHLIB_CFLAGS="-fPIC"
+@@ -2739,7 +2752,6 @@ if eval "test \"`echo '$ac_cv_header_'$a
    
  		# NetBSD/SPARC needs -fPIC, -fpic will not do.
  		SHLIB_CFLAGS="-fPIC"
@@ -18,7 +58,7 @@ $NetBSD: patch-ab,v 1.13 2004/03/08 22:14:19 minskim Exp $
  		SHLIB_LD_LIBS=""
  		SHLIB_SUFFIX=".so"
  		DL_OBJS="tclLoadDl.o"
-@@ -2761,13 +2761,23 @@ EOF
+@@ -2761,13 +2773,23 @@ EOF
  if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
    egrep "yes" >/dev/null 2>&1; then
    rm -rf conftest*
@@ -44,7 +84,7 @@ $NetBSD: patch-ab,v 1.13 2004/03/08 22:14:19 minskim Exp $
  fi
  rm -f conftest*
  
-@@ -3084,6 +3094,9 @@ EOF
+@@ -3084,6 +3106,9 @@ EOF
  		CC_SEARCH_FLAGS='-Wl,-R,${LIB_RUNTIME_DIR}'
  		LD_SEARCH_FLAGS='-R ${LIB_RUNTIME_DIR}'
  	    fi
@@ -54,7 +94,7 @@ $NetBSD: patch-ab,v 1.13 2004/03/08 22:14:19 minskim Exp $
  	    ;;
  	ULTRIX-4.*)
  	    SHLIB_CFLAGS="-G 0"
-@@ -3355,8 +3368,8 @@ fi
+@@ -3355,8 +3380,8 @@ fi
  
      if test "${SHARED_BUILD}" = "1" && test "${SHLIB_SUFFIX}" != "" ; then
          LIB_SUFFIX=${SHARED_LIB_SUFFIX}
@@ -65,7 +105,7 @@ $NetBSD: patch-ab,v 1.13 2004/03/08 22:14:19 minskim Exp $
      else
          LIB_SUFFIX=${UNSHARED_LIB_SUFFIX}
  
-@@ -4428,7 +4441,11 @@ echo "configure:4426: checking for X11 l
+@@ -4428,7 +4453,11 @@ echo "configure:4426: checking for X11 l
  	for i in $dirs ; do
  	    if test -r $i/libX11.a -o -r $i/libX11.so -o -r $i/libX11.sl; then
  		echo "$ac_t""$i" 1>&6
@@ -78,7 +118,7 @@ $NetBSD: patch-ab,v 1.13 2004/03/08 22:14:19 minskim Exp $
  		x_libraries="$i"
  		break
  	    fi
-@@ -4437,7 +4454,11 @@ echo "configure:4426: checking for X11 l
+@@ -4437,7 +4466,11 @@ echo "configure:4426: checking for X11 l
  	if test "$x_libraries" = ""; then
  	    XLIBSW=-lX11
  	else
@@ -91,7 +131,7 @@ $NetBSD: patch-ab,v 1.13 2004/03/08 22:14:19 minskim Exp $
  	fi
      fi
      if test "$XLIBSW" = nope ; then
-@@ -4507,6 +4528,10 @@ if test "x${x_libraries}" != "x"; then
+@@ -4507,6 +4540,10 @@ if test "x${x_libraries}" != "x"; then
  fi
  if test "${TCL_LD_SEARCH_FLAGS}" = '-L${LIB_RUNTIME_DIR}'; then
      LIB_RUNTIME_DIR=`echo ${LIB_RUNTIME_DIR} |sed -e 's/:/ -L/g'`
@@ -102,7 +142,7 @@ $NetBSD: patch-ab,v 1.13 2004/03/08 22:14:19 minskim Exp $
  fi
  
  # The statement below is very tricky!  It actually *evaluates* the
-@@ -5156,11 +5181,18 @@ eval "TK_LIB_FILE=${TK_LIB_FILE}"
+@@ -5156,11 +5193,18 @@ eval "TK_LIB_FILE=${TK_LIB_FILE}"
  if test "$SHARED_BUILD" = 0 -o $TCL_NEEDS_EXP_FILE = 0; then
      if test "${TCL_LIB_VERSIONS_OK}" = "ok"; then
  	eval TK_LIB_FLAG="-ltk${VERSION}\${TK_DBGX}"
