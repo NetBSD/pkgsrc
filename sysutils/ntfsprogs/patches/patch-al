@@ -1,0 +1,15 @@
+$NetBSD: patch-al,v 1.1 2005/03/15 20:24:30 rillig Exp $
+
+Needed for ENOTSUP on NetBSD-1.6.2.
+
+--- ntfsprogs/mkntfs.c.orig	Sat Sep  4 12:16:32 2004
++++ ntfsprogs/mkntfs.c	Sat Mar 12 10:17:19 2005
+@@ -116,6 +116,8 @@
+ #	define BLKSSZGET _IO(0x12,104) /* Get device sector size in bytse. */
+ #endif
+ 
++#include "compat.h"
++
+ #include "types.h"
+ #include "bootsect.h"
+ #include "device.h"
