@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.8 2004/07/08 20:27:56 heinz Exp $
+$NetBSD: patch-ae,v 1.9 2005/01/03 22:58:14 markd Exp $
 
---- configure.orig	Fri May 23 04:28:51 2003
+--- configure.orig	2003-05-23 15:28:51.000000000 +1200
 +++ configure
 @@ -37,23 +37,23 @@
  #
@@ -74,6 +74,15 @@ $NetBSD: patch-ae,v 1.8 2004/07/08 20:27:56 heinz Exp $
  PATH=$PATH:$OPATH
  
  POSIXLY_CORRECT=1; export POSIXLY_CORRECT		# disable GNU extensions
+@@ -2327,7 +2328,7 @@ EOF
+ 	if [ ${header_ver} -ge 19960307 ]; then
+ 	    if [ "${lib_ver}" = "3.4" ]; then
+ 		tiff_runlen_t="uint16"
+-	    elif [ "${lib_ver}" = "3.5" -o "${lib_ver}" = "3.6" ]; then
++	    elif [ "${lib_ver}" = "3.5" -o "${lib_ver}" = "3.6" -o "${lib_ver}" = "3.7" ]; then
+ 		tiff_runlen_t="uint32"
+ 	    fi
+ 	fi
 @@ -3042,13 +3043,7 @@ main()
          printf("old include files: version %u\n", ZLIB_VERSION);
          exit(-1);
