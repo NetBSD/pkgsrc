@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/07/15 09:23:33 dmcmahill Exp $
-bin/gesym-config
+@comment $NetBSD: PLIST,v 1.9 2003/09/10 23:43:34 dmcmahill Exp $
 share/doc/geda-doc/nc.pdf
 share/gEDA/sym/4000/4000-1.sym
 share/gEDA/sym/4000/4000-2.sym
@@ -269,6 +268,7 @@ share/gEDA/sym/74/74175-1.sym
 share/gEDA/sym/74/74181-1.sym
 share/gEDA/sym/74/74182-1.sym
 share/gEDA/sym/74/74189-1.sym
+share/gEDA/sym/74/74189-2.sym
 share/gEDA/sym/74/74190-1.sym
 share/gEDA/sym/74/74191-1.sym
 share/gEDA/sym/74/74191-2.sym
@@ -316,6 +316,7 @@ share/gEDA/sym/74/7448-1.sym
 share/gEDA/sym/74/7451-1.sym
 share/gEDA/sym/74/74520-1.sym
 share/gEDA/sym/74/74520-2.sym
+share/gEDA/sym/74/74520-3.sym
 share/gEDA/sym/74/7454-1.sym
 share/gEDA/sym/74/74541-1.sym
 share/gEDA/sym/74/7455-1.sym
@@ -325,8 +326,10 @@ share/gEDA/sym/74/74573-1.sym
 share/gEDA/sym/74/74574-1.sym
 share/gEDA/sym/74/74595-1.sym
 share/gEDA/sym/74/74673A-1.sym
+share/gEDA/sym/74/74673A-2.sym
 share/gEDA/sym/74/74684-1.sym
 share/gEDA/sym/74/74688-1.sym
+share/gEDA/sym/74/74688-2.sym
 share/gEDA/sym/74/7472-1.sym
 share/gEDA/sym/74/7473-1.sym
 share/gEDA/sym/74/7474-1.sym
@@ -545,6 +548,7 @@ share/gEDA/sym/analog/voltmeter-1.sym
 share/gEDA/sym/bus/pc104A-1.sym
 share/gEDA/sym/bus/pc104B-1.sym
 share/gEDA/sym/connector/BNC-1.sym
+share/gEDA/sym/connector/DB15-1.sym
 share/gEDA/sym/connector/DB25-1.sym
 share/gEDA/sym/connector/DB25-2.sym
 share/gEDA/sym/connector/DB31-1.sym
@@ -589,7 +593,9 @@ share/gEDA/sym/connector/header20-2.sym
 share/gEDA/sym/connector/header20-3.sym
 share/gEDA/sym/connector/header22-1.sym
 share/gEDA/sym/connector/header26-1.sym
+share/gEDA/sym/connector/header26-2.sym
 share/gEDA/sym/connector/header3-1.sym
+share/gEDA/sym/connector/header32-2.sym
 share/gEDA/sym/connector/header34-1.sym
 share/gEDA/sym/connector/header40-2.sym
 share/gEDA/sym/connector/header50-1.sym
@@ -763,6 +769,7 @@ share/gEDA/sym/linear/ad633JR-1.sym
 share/gEDA/sym/linear/l200-1.sym
 share/gEDA/sym/linear/lm135-1.sym
 share/gEDA/sym/linear/lm1877-1.sym
+share/gEDA/sym/linear/lm2576T-1.sym
 share/gEDA/sym/linear/lm2822-1.sym
 share/gEDA/sym/linear/lm2822m-1.sym
 share/gEDA/sym/linear/lm2902-1.sym
@@ -771,6 +778,7 @@ share/gEDA/sym/linear/lm311-1.sym
 share/gEDA/sym/linear/lm317-1.sym
 share/gEDA/sym/linear/lm324-1.sym
 share/gEDA/sym/linear/lm339-1.sym
+share/gEDA/sym/linear/lm339-2.sym
 share/gEDA/sym/linear/lm358-1.sym
 share/gEDA/sym/linear/lm386-1.sym
 share/gEDA/sym/linear/lm3909-1.sym
@@ -814,6 +822,7 @@ share/gEDA/sym/maxim/max1080-1.sym
 share/gEDA/sym/maxim/max1081-1.sym
 share/gEDA/sym/maxim/max1114-1.sym
 share/gEDA/sym/maxim/max1114-2.sym
+share/gEDA/sym/maxim/max1211-1.sym
 share/gEDA/sym/maxim/max135-1.sym
 share/gEDA/sym/maxim/max1407-1.sym
 share/gEDA/sym/maxim/max147-1.sym
@@ -862,6 +871,7 @@ share/gEDA/sym/maxim/max6018-1.sym
 share/gEDA/sym/maxim/max6314-1.sym
 share/gEDA/sym/maxim/max663-1.sym
 share/gEDA/sym/maxim/max664-1.sym
+share/gEDA/sym/maxim/max6674-1.sym
 share/gEDA/sym/maxim/max713-1.sym
 share/gEDA/sym/maxim/max7652-1.sym
 share/gEDA/sym/maxim/max807-1.sym
@@ -885,6 +895,7 @@ share/gEDA/sym/memory/ST39SF020A-1.sym
 share/gEDA/sym/memory/am27S13D-1.sym
 share/gEDA/sym/memory/am9128-1.sym
 share/gEDA/sym/micro/6821-1.sym
+share/gEDA/sym/micro/6821-2.sym
 share/gEDA/sym/micro/8031.sym
 share/gEDA/sym/micro/8052basic-1.sym
 share/gEDA/sym/micro/8086-1.sym
@@ -1013,6 +1024,7 @@ share/gEDA/sym/opto/4N29-1.sym
 share/gEDA/sym/opto/6N135-1.sym
 share/gEDA/sym/opto/6N136-1.sym
 share/gEDA/sym/opto/6n137-1.sym
+share/gEDA/sym/opto/810-1.sym
 share/gEDA/sym/opto/HCPL4502-1.sym
 share/gEDA/sym/opto/HCPL4701-1.sym
 share/gEDA/sym/opto/HCTL-2000-1.sym
