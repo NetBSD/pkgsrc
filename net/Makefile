@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.209 2001/03/28 07:46:20 zuntum Exp $
+# $NetBSD: Makefile,v 1.210 2001/04/03 11:32:52 zuntum Exp $
 #
 
 COMMENT=	Networking tools
@@ -108,6 +108,7 @@ SUBDIR+=	p5-Wais
 SUBDIR+=	pchar
 SUBDIR+=	pfnet
 SUBDIR+=	pload
+SUBDIR+=	poink
 SUBDIR+=	polsms
 SUBDIR+=	poptop
 SUBDIR+=	ppp
