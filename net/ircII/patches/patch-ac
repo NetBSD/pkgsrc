@@ -1,0 +1,19 @@
+*** Makefile.in.orig	Sun Jul 21 16:54:59 1996
+--- Makefile.in	Fri Nov 15 16:56:15 1996
+***************
+*** 215,221 ****
+  	)
+  	@echo installing ircII scripts...
+  	cd script; for i in *; do $(INSTALL_DATA) $$i $(INSTALL_SCRIPT); done
+! 	-@if test -f script/local.orig then; $(MV) script/local.orig script/local; fi
+  
+  installtranslation: installdirs
+  	-chmod -x translation/*
+--- 215,221 ----
+  	)
+  	@echo installing ircII scripts...
+  	cd script; for i in *; do $(INSTALL_DATA) $$i $(INSTALL_SCRIPT); done
+! 	-@if test -f script/local.orig; then $(MV) script/local.orig script/local; fi
+  
+  installtranslation: installdirs
+  	-chmod -x translation/*
