@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/02/21 03:02:33 jonb Exp $
+# $NetBSD: Makefile,v 1.6 2002/07/22 00:13:13 schmonz Exp $
 #
 
 DISTNAME=	arch-1.0pre9
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	ftp://regexps.com/pub/src/arch/ \
 		ftp://regexps.com/pub/src/arch/old/
 
-MAINTAINER=	schmonz+netbsd@schmonz.com
+MAINTAINER=	schmonz@netbsd.org
 HOMEPAGE=	http://www.regexps.com/
 COMMENT=	revision control system ideal for widely distributed development
 

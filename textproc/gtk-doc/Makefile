@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2002/02/05 11:11:03 martti Exp $
+# $NetBSD: Makefile,v 1.3 2002/07/22 00:13:14 schmonz Exp $
 #
 
 DISTNAME=	gtk-doc-0.9
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/v1.1/docs/rdp/
 
-MAINTAINER=	schmonz+netbsd@schmonz.com
+MAINTAINER=	schmonz@netbsd.org
 HOMEPAGE=	http://www.gtk.org/rdp/
 COMMENT=	tools for authors of the GTK+ reference documentation
 
