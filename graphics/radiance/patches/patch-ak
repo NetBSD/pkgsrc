@@ -1,0 +1,39 @@
+$NetBSD: patch-ak,v 1.1.1.1 2005/02/16 22:17:34 jschauma Exp $
+
+--- ./src/px/Rmakefile.orig	2005-02-15 14:42:54.000000000 -0500
++++ ./src/px/Rmakefile	2005-02-15 14:43:53.000000000 -0500
+@@ -7,13 +7,12 @@
+ OPT = -O
+ MACH = -DBSD
+ SPECIAL = aed
+-CFLAGS = -I../common -L../lib $(OPT) $(MACH)
+-CC = cc
++CFLAGS += -I../common -L../lib $(OPT) $(MACH) ${LDFLAGS}
+ MLIB = -lm
+ 
+-INSTDIR = /usr/local/bin
++INSTDIR = @WRKSRC@/radiance/bin
+ 
+-LIBDIR = /usr/local/lib/ray
++LIBDIR = @WRKSRC@/radiance/lib
+ 
+ PIXAR_INCLUDE=	-I/usr/pixar/include
+ PIXAR_LIB=	-L/usr/pixar/host/lib -lpirl -lpicio -lchad -lpixar $(MLIB)
+@@ -55,7 +54,7 @@
+ clean:
+ 	set nonomatch; rm -f x10image aedimage glimage \
+ $(PROGS) $(SPECIAL) *.o core
+-	-cd tiff; make distclean
++	-cd tiff; @MAKE@ distclean
+ 
+ pfilt:	pfilt.o pf2.o pf3.o
+ 	$(CC) $(CFLAGS) -o pfilt pfilt.o pf2.o pf3.o -lrt $(MLIB)
+@@ -199,7 +198,7 @@
+ ../lib/libtiff.a:	tiff/config.local
+ 	cd tiff ; sh configure -quiet -noninteractive -with-CC=$(CC) \
+ 		"-with-ENVOPTS=$(OPT)" ; \
+-	cd libtiff ; make install
++	cd libtiff ; @MAKE@ install
+ 
+ ra_pixar:	ra_pixar.o ra_pixar.c
+ 	$(CC) $(CFLAGS) $(PIXAR_INCLUDE) -o $@ ra_pixar.o -lrt \

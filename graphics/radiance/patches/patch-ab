@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/02/16 22:17:33 jschauma Exp $
+
+--- src/hd/rhdisp.c.orig	2005-02-15 10:05:02.000000000 -0500
++++ src/hd/rhdisp.c	2005-02-15 10:05:15.000000000 -0500
+@@ -22,7 +22,7 @@
+ #define FSIZDEF		0.125	/* default focus frame size */
+ #endif
+ 
+-#if defined(freebsd)
++#if defined(freebsd) || defined(netbsd)
+ #define fbufcnt(f)	((f)->_r)
+ #elif defined(__GNUC__)
+ #define fbufcnt(f)	((f)->_IO_read_end - (f)->_IO_read_ptr)
