@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/27 00:53:11 heinz Exp $
+# $NetBSD: Makefile,v 1.18 2004/04/11 18:49:49 snj Exp $
 #
 
 DISTNAME=		iso-pern_src-0_2_6
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.isoband.cjb.net/
 COMMENT=		Isometric (pseudo 3D) view for Angband
 
 WRKSRC=			${WRKDIR}/iso-pern_src/src
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_X11=		yes
 
@@ -47,5 +47,5 @@ do-install:
 		${WRKSRC}/testing \
 		${PREFIX}/bin/iso-pernangband
 
-.include "../../devel/SDL/buildlink2.mk"
+.include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
