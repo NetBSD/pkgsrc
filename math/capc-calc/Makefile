@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/06/21 02:26:15 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/25 18:38:41 wiz Exp $
 #
 
 DISTNAME=	calc-2.11.4t2
@@ -11,7 +11,7 @@ MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.isthe.com/chongo/tech/comp/calc/
 COMMENT=	C arbitrary precision calculator
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=	# defined
 
-.include "../../devel/readline/buildlink.mk"
+.include "../../devel/readline/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
