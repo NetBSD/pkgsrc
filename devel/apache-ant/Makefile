@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.19 2003/04/10 01:28:15 grant Exp $
+# $NetBSD: Makefile,v 1.1 2003/06/03 17:00:11 jschauma Exp $
 #
 # NOTE: if you are depending on ant from another package, please be aware that
 # the ant team has CHANGED the version numbering scheme.  A previous version
 # of ant was 3.1.  Do NOT use dependency patterns such as >=1.3 which could pick
 # up this version by mistake.
 
-DISTNAME=	${PKGNAME}-src
-PKGNAME=	jakarta-ant-1.4.1
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+DISTNAME=	${PKGNAME:C/.([0-9])$/-\1/}-src
+PKGNAME=	apache-ant-1.5.3.1
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV:C/.([0-9])$/-\1/}
 CATEGORIES=	devel
-MASTER_SITES=	http://ant.apache.org/old-releases/v1.4.1/src/
+MASTER_SITES=	${MASTER_SITE_APACHE:=ant/source/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jwise@netbsd.org
@@ -18,12 +18,12 @@ COMMENT=	Apache Project's Java-Based make(1) replacement
 
 DEPENDS+=	crimson>=1.1.3:../../textproc/crimson
 
+# Up to version 1.5.1 inclusive this was known as "jakarta-ant".
+CONFLICTS=	jakarta-ant*
+
 USE_BUILDLINK2=	# defined
 
 EXTRACT_CMD.zip=	${LOCALBASE}/bin/unzip -Caq $${extract_file}
-
-post-extract:
-	@${RM} ${WRKSRC}/lib/*.jar
 
 do-build:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD} cd ${WRKSRC} && ${SETENV} ${SCRIPTS_ENV} ${SH} bootstrap.sh
