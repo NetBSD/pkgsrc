@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2000/12/27 14:09:50 hubertf Exp $
+# $NetBSD: Makefile,v 1.24 2001/01/01 17:29:53 rh Exp $
 #
 
     SUBDIR += base64
@@ -7,6 +7,7 @@
     SUBDIR += ish
     SUBDIR += kdesupport
     SUBDIR += latex2rtf
+    SUBDIR += libiconv
     SUBDIR += mpack
     SUBDIR += p5-MIME-Base64
     SUBDIR += psiconv
