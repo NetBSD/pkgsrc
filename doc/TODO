@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.377 2003/03/15 16:18:21 wiz Exp $
+$NetBSD: TODO,v 1.378 2003/03/15 17:16:36 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -132,7 +132,6 @@ Suggested package updates
 	o gsed-4.0.5
 	o gtetrinet-0.6.2
 	o gtk2-pan-0.13.91
-	o gtkhtml-2.2.1
 	o hatari-0.30
 	o horde-2.1 [pkg/19497]
 	o horde-2.2
