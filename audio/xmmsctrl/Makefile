@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/09 04:42:46 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/14 00:58:44 grant Exp $
 #
 
 DISTNAME=		xmmsctrl-1.6
@@ -12,9 +12,8 @@ COMMENT=		Small utility to control xmms from the command line
 USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 
-.include "../../audio/xmms/buildlink3.mk"
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xmmsctrl ${PREFIX}/bin
 
+.include "../../audio/xmms/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
