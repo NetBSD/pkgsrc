@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.2 1999/07/25 21:17:33 tron Exp $
+$NetBSD: patch-aj,v 1.3 1999/10/08 21:18:34 jlam Exp $
 
---- pnm/Makefile.orig	Mon Jan 31 17:47:32 1994
-+++ pnm/Makefile	Mon Jan 11 00:18:48 1999
-@@ -10,27 +10,29 @@
+--- pnm/Makefile.orig	Mon Jan 31 11:47:32 1994
++++ pnm/Makefile	Fri Oct  8 13:33:59 1999
+@@ -10,27 +10,30 @@
  # implied warranty.
  
  # Default values, usually overridden by top-level Makefile.
@@ -17,13 +17,14 @@ $NetBSD: patch-aj,v 1.2 1999/07/25 21:17:33 tron Exp $
  TIFFDEF =	-DLIBTIFF
 -TIFFINC =       -I../libtiff
 -TIFFLIB =       ../libtiff/libtiff.a
-+TIFFINC =       -I$(PREFIX)/include
-+TIFFLIB =       -Wl,-R$(PREFIX)/lib -L$(PREFIX)/lib -ltiff -ljpeg
++TIFFINC =       -I$(LOCALBASE)/include
++TIFFLIB =       -Wl,-R$(LOCALBASE)/lib -L$(LOCALBASE)/lib -ltiff -ljpeg -lz
  TIFFBINARIES =  tifftopnm pnmtotiff
  TIFFOBJECTS =   tifftopnm.o pnmtotiff.o
 -#LDFLAGS =	-s
 -LDFLAGS =	
 -INSTALLBINARIES =	/usr/new/pbm
++PNGLIB =       -Wl,-R$(LOCALBASE)/lib -L$(LOCALBASE)/lib -lpng -lz
 +LDFLAGS =	-s
 +#LDFLAGS =	
 +INSTALLBINARIES =	$(PREFIX)/bin
@@ -44,7 +45,7 @@ $NetBSD: patch-aj,v 1.2 1999/07/25 21:17:33 tron Exp $
  
  PPMDIR =	../ppm
  INCLUDEPPM =	-I$(PPMDIR)
-@@ -54,48 +56,52 @@
+@@ -54,48 +57,52 @@
  INCLUDE =	-I.. $(INCLUDEPPM) $(INCLUDEPGM) $(INCLUDEPBM)
  ALLCFLAGS =	$(CFLAGS) $(INCLUDE) $(TIFFDEF) $(TIFFINC)
  LIBPNM =	libpnm.a
@@ -111,7 +112,7 @@ $NetBSD: patch-aj,v 1.2 1999/07/25 21:17:33 tron Exp $
  
  merge:		pnmmerge
  pnmmerge:	pnmmerge.c $(OBJECTS) $(LIBPNM) $(LIBPPM) $(LIBPGM) $(LIBPBM)
-@@ -128,16 +134,22 @@
+@@ -128,16 +135,22 @@
  
  
  # Rules for plain programs.
@@ -121,10 +122,10 @@ $NetBSD: patch-aj,v 1.2 1999/07/25 21:17:33 tron Exp $
 +	$(CC) $(ALLCFLAGS) $(LDFLAGS) -o $@ $@.c $(LIBPNM) $(LIBPPM) $(LIBPGM) $(LIBPBM)
 +
 +$(PNGBINARIES):	$(DEFPNM) $(DEFPPM) $(DEFPGM) $(DEFPBM) $(LIBPNM) $(LIBPPM) $(LIBPGM) $(LIBPBM)
-+	$(CC) $(ALLCFLAGS) $(LDFLAGS) -o $@ $@.c $(LIBPNM) $(LIBPPM) $(LIBPGM) $(LIBPBM) -Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -lpng -lz -lm
++	$(CC) $(ALLCFLAGS) $(LDFLAGS) -o $@ $@.c $(LIBPNM) $(LIBPPM) $(LIBPGM) $(LIBPBM) $(PNGLIB) -lm
 +
 +$(TIFFBINARIES):	$(DEFPNM) $(DEFPPM) $(DEFPGM) $(DEFPBM) $(LIBPNM) $(LIBPPM) $(LIBPGM) $(LIBPBM)
-+	$(CC) $(ALLCFLAGS) $(LDFLAGS) -o $@ $@.c $(LIBPNM) $(LIBPPM) $(LIBPGM) $(LIBPBM) $(TIFFLIB) -lm -lz
++	$(CC) $(ALLCFLAGS) $(LDFLAGS) -o $@ $@.c $(LIBPNM) $(LIBPPM) $(LIBPGM) $(LIBPBM) $(TIFFLIB) -lm
  
  # Rule for math-dependent programs.
 -$(MATHBINARIES):        pnm.h $(DEFPPM) $(DEFPGM) $(DEFPBM) $(LIBPNM) \
@@ -138,7 +139,7 @@ $NetBSD: patch-aj,v 1.2 1999/07/25 21:17:33 tron Exp $
  	$(CC) $(ALLCFLAGS) "-Dmain=$*_main" -c $*.c
  
  # And libraries.
-@@ -153,15 +165,15 @@
+@@ -153,15 +166,15 @@
  	ar rc $(LIBPNM) libpnm1.o libpnm2.o libpnm3.o libpnm4.o
  	-ranlib $(LIBPNM)
  
@@ -158,7 +159,7 @@ $NetBSD: patch-aj,v 1.2 1999/07/25 21:17:33 tron Exp $
  	$(CC) $(ALLCFLAGS) -c libpnm4.c
  
  # Other dependencies.
-@@ -202,6 +214,8 @@
+@@ -202,6 +215,8 @@
  tifftopnm tifftopnm.o:		tifftopnm.c
  xwdtopnm xwdtopnm.o:		xwdtopnm.c x10wd.h x11wd.h
  zeisstopnm zeisstopnm.o:	zeisstopnm.c
