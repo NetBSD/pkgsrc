@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2002/08/12 11:36:21 wiz Exp $
+# $NetBSD: Makefile.common,v 1.3 2002/08/19 08:44:24 agc Exp $
 
 DISTNAME=	# empty
 CATEGORIES=	fonts
@@ -16,6 +16,8 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=  ${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=  ${RESTRICTED}
+
+BROKEN=		MASTER_SITES is unstable, and we can't mirror DISTFILES.
 
 DOC_FILES=	License.wri Orders.wri ReadMe.htm Readme.wri
 
