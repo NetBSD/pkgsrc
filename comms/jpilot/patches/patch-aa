@@ -1,12 +1,25 @@
-$NetBSD: patch-aa,v 1.1 2000/06/15 21:14:07 rh Exp $
+$NetBSD: patch-aa,v 1.2 2001/03/01 20:38:15 jlam Exp $
 
---- configure.orig	Mon Feb 28 23:30:09 2000
-+++ configure	Thu Jun 15 18:05:22 2000
-@@ -3779,7 +3779,6 @@
-       echo $ac_n "checking for dlopen""... $ac_c" 1>&6
- echo "configure:3781: checking for dlopen" >&5
-    save_LIBS="$LIBS"
--   LIBS="$LIBS -ldl"
-    cat > conftest.$ac_ext <<EOF
- #line 3785 "configure"
- #include "confdefs.h"
+--- Makefile.in.orig	Tue Feb  6 14:31:05 2001
++++ Makefile.in
+@@ -43,7 +43,7 @@
+ INTLLIBS = @INTLLIBS@
+ 
+ # Targets
+-all: po_dir intl_dir jpilot jpilot-sync jpilot-dump
++all: po_dir intl_dir jpilot jpilot-sync jpilot-dump jpilot-upgrade-99
+ 
+ jpilot: jpilot.o datebook.o address.o todo.o memo.o \
+ 	utils.o sync.o prefs.o log.o plugins.o \
+@@ -240,9 +240,9 @@
+ 	  ./install-sh -s -c -m 555 jpilot-dump $(prefix)/jpilot-dump ; \
+ 	fi
+ 	if test -d "$(prefix)/bin" ; then \
+-	  ./install-sh -s -c -m 555 jpilot-dump $(prefix)/bin/jpilot-upgrade-99 ; \
++	  ./install-sh -s -c -m 555 jpilot-upgrade-99 $(prefix)/bin/jpilot-upgrade-99 ; \
+ 	else \
+-	  ./install-sh -s -c -m 555 jpilot-dump $(prefix)/jpilot-upgrade-99 ; \
++	  ./install-sh -s -c -m 555 jpilot-upgrade-99 $(prefix)/jpilot-upgrade-99 ; \
+ 	fi
+ 	./install-sh -d -m 755 $(prefix)/share/jpilot
+ 	./install-sh -c -m 755 jpilotrc.blue $(prefix)/share/jpilot
