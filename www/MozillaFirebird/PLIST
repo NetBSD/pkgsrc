@@ -1,11 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/16 14:19:36 taya Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/11/27 00:10:55 taya Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
 lib/${MOZILLA}/dirver
+lib/${MOZILLA}/mangle
+lib/${MOZILLA}/mozilla-xremote-client
+lib/${MOZILLA}/mozipcd
 lib/${MOZILLA}/nsinstall
 lib/${MOZILLA}/regchrome
 lib/${MOZILLA}/regxpcom
+lib/${MOZILLA}/shlibsign
+lib/${MOZILLA}/timebombgen
 lib/${MOZILLA}/xpcshell
 lib/${MOZILLA}/xpicleanup
 lib/${MOZILLA}/xpidl
@@ -44,6 +49,7 @@ lib/${MOZILLA}/components/libjsdom.${SO_SUFFIX}
 lib/${MOZILLA}/components/libmork.${SO_SUFFIX}
 lib/${MOZILLA}/components/libmozfind.${SO_SUFFIX}
 lib/${MOZILLA}/components/libmozldap.${SO_SUFFIX}
+lib/${MOZILLA}/components/libmyspell.${SO_SUFFIX}
 lib/${MOZILLA}/components/libnecko.${SO_SUFFIX}
 lib/${MOZILLA}/components/libnecko2.${SO_SUFFIX}
 lib/${MOZILLA}/components/libnsappshell.${SO_SUFFIX}
@@ -56,6 +62,7 @@ lib/${MOZILLA}/components/libpippki.${SO_SUFFIX}
 lib/${MOZILLA}/components/libpref.${SO_SUFFIX}
 lib/${MOZILLA}/components/libprofile.${SO_SUFFIX}
 lib/${MOZILLA}/components/librdf.${SO_SUFFIX}
+lib/${MOZILLA}/components/libspellchecker.${SO_SUFFIX}
 lib/${MOZILLA}/components/libtoolkitcomps.${SO_SUFFIX}
 lib/${MOZILLA}/components/libtransformiix.${SO_SUFFIX}
 lib/${MOZILLA}/components/libtxmgr.${SO_SUFFIX}
@@ -103,7 +110,6 @@ lib/${MOZILLA}/plugins/libnullplugin.${SO_SUFFIX}
 lib/${MOZILLA}/bloaturls.txt
 lib/${MOZILLA}/chrome/US.jar
 lib/${MOZILLA}/chrome/browser.jar
-lib/${MOZILLA}/chrome/chatzilla.jar
 lib/${MOZILLA}/chrome/chromelist.txt
 lib/${MOZILLA}/chrome/classic.jar
 lib/${MOZILLA}/chrome/comm.jar
@@ -128,7 +134,6 @@ lib/${MOZILLA}/components/autoconfig.xpt
 lib/${MOZILLA}/components/bookmarks.xpt
 lib/${MOZILLA}/components/caps.xpt
 lib/${MOZILLA}/components/chardet.xpt
-lib/${MOZILLA}/components/chatzilla-service.js
 lib/${MOZILLA}/components/chrome.xpt
 lib/${MOZILLA}/components/commandhandler.xpt
 lib/${MOZILLA}/components/composer.xpt
@@ -182,6 +187,8 @@ lib/${MOZILLA}/components/mimetype.xpt
 lib/${MOZILLA}/components/mozbrwsr.xpt
 lib/${MOZILLA}/components/mozfind.xpt
 lib/${MOZILLA}/components/mozldap.xpt
+lib/${MOZILLA}/components/myspell/en-US.aff
+lib/${MOZILLA}/components/myspell/en-US.dic
 lib/${MOZILLA}/components/necko.xpt
 lib/${MOZILLA}/components/necko_about.xpt
 lib/${MOZILLA}/components/necko_cache.xpt
@@ -211,6 +218,7 @@ lib/${MOZILLA}/components/nsUpdateNotifier.js
 lib/${MOZILLA}/components/nsXmlRpcClient.js
 lib/${MOZILLA}/components/oji.xpt
 lib/${MOZILLA}/components/p3p.xpt
+lib/${MOZILLA}/components/passwordmgr.xpt
 lib/${MOZILLA}/components/pipboot.xpt
 lib/${MOZILLA}/components/pipnss.xpt
 lib/${MOZILLA}/components/pippki.xpt
@@ -229,6 +237,7 @@ lib/${MOZILLA}/components/search.xpt
 lib/${MOZILLA}/components/shistory.xpt
 lib/${MOZILLA}/components/sidebar.xpt
 lib/${MOZILLA}/components/signonviewer.xpt
+lib/${MOZILLA}/components/spellchecker.xpt
 lib/${MOZILLA}/components/timebomb.xpt
 lib/${MOZILLA}/components/txmgr.xpt
 lib/${MOZILLA}/components/txtsvc.xpt
@@ -297,9 +306,6 @@ lib/${MOZILLA}/defaults/wallet/VcardSchema.tbl
 lib/${MOZILLA}/icons/mozicon16.xpm
 lib/${MOZILLA}/icons/mozicon50.xpm
 lib/${MOZILLA}/libsoftokn3.chk
-lib/${MOZILLA}/mangle
-lib/${MOZILLA}/mozilla-xremote-client
-lib/${MOZILLA}/mozipcd
 lib/${MOZILLA}/res/EditorOverride.css
 lib/${MOZILLA}/res/arrow.gif
 lib/${MOZILLA}/res/arrowd.gif
@@ -486,12 +492,8 @@ lib/${MOZILLA}/res/ua.css
 lib/${MOZILLA}/res/unixcharset.properties
 lib/${MOZILLA}/res/viewer.properties
 lib/${MOZILLA}/res/viewsource.css
-lib/${MOZILLA}/searchplugins/dmoz.gif
-lib/${MOZILLA}/searchplugins/dmoz.src
 lib/${MOZILLA}/searchplugins/google.gif
 lib/${MOZILLA}/searchplugins/google.src
-lib/${MOZILLA}/shlibsign
-lib/${MOZILLA}/timebombgen
 @comment end DATA
 @comment begin INCLUDE
 include/${MOZILLA}/accessibility/nsAccessNode.h
@@ -505,7 +507,6 @@ include/${MOZILLA}/accessibility/nsIAccessible.h
 include/${MOZILLA}/accessibility/nsIAccessibleCaret.h
 include/${MOZILLA}/accessibility/nsIAccessibleDocument.h
 include/${MOZILLA}/accessibility/nsIAccessibleEvent.h
-include/${MOZILLA}/accessibility/nsIAccessibleEventReceiver.h
 include/${MOZILLA}/accessibility/nsIAccessibleProvider.h
 include/${MOZILLA}/accessibility/nsIAccessibleRetrieval.h
 include/${MOZILLA}/accessibility/nsIAccessibleSelectable.h
@@ -731,7 +732,6 @@ include/${MOZILLA}/content/nsXBLAtoms.h
 include/${MOZILLA}/content/nsXULAtomList.h
 include/${MOZILLA}/content/nsXULAtoms.h
 include/${MOZILLA}/cookie/nsCCookieManager.h
-include/${MOZILLA}/cookie/nsCookieHTTPNotify.h
 include/${MOZILLA}/cookie/nsICookie.h
 include/${MOZILLA}/cookie/nsICookie2.h
 include/${MOZILLA}/cookie/nsICookieAcceptDialog.h
@@ -770,6 +770,7 @@ include/${MOZILLA}/dom/domstubs.h
 include/${MOZILLA}/dom/nsDOMCID.h
 include/${MOZILLA}/dom/nsDOMError.h
 include/${MOZILLA}/dom/nsIBaseDOMException.h
+include/${MOZILLA}/dom/nsIDOM3Document.h
 include/${MOZILLA}/dom/nsIDOM3DocumentEvent.h
 include/${MOZILLA}/dom/nsIDOM3EventTarget.h
 include/${MOZILLA}/dom/nsIDOM3Node.h
@@ -802,6 +803,7 @@ include/${MOZILLA}/dom/nsIDOMContextMenuListener.h
 include/${MOZILLA}/dom/nsIDOMCounter.h
 include/${MOZILLA}/dom/nsIDOMCrypto.h
 include/${MOZILLA}/dom/nsIDOMCustomEvent.h
+include/${MOZILLA}/dom/nsIDOMDOMConfiguration.h
 include/${MOZILLA}/dom/nsIDOMDOMException.h
 include/${MOZILLA}/dom/nsIDOMDOMImplementation.h
 include/${MOZILLA}/dom/nsIDOMDocument.h
@@ -908,6 +910,7 @@ include/${MOZILLA}/dom/nsIDOMNSHTMLElement.h
 include/${MOZILLA}/dom/nsIDOMNSHTMLFormControlList.h
 include/${MOZILLA}/dom/nsIDOMNSHTMLFormElement.h
 include/${MOZILLA}/dom/nsIDOMNSHTMLFrameElement.h
+include/${MOZILLA}/dom/nsIDOMNSHTMLHRElement.h
 include/${MOZILLA}/dom/nsIDOMNSHTMLImageElement.h
 include/${MOZILLA}/dom/nsIDOMNSHTMLInputElement.h
 include/${MOZILLA}/dom/nsIDOMNSHTMLOptionCollectn.h
@@ -1453,6 +1456,7 @@ include/${MOZILLA}/necko/nsNetCID.h
 include/${MOZILLA}/necko/nsNetError.h
 include/${MOZILLA}/necko/nsNetUtil.h
 include/${MOZILLA}/necko/nsReadLine.h
+include/${MOZILLA}/necko/nsURIHashKey.h
 include/${MOZILLA}/necko/nsUnixColorPrintf.h
 include/${MOZILLA}/necko2/nsIViewSourceChannel.h
 include/${MOZILLA}/nkcache/nsCacheService.h
@@ -1616,6 +1620,7 @@ include/${MOZILLA}/p3p/nsIPolicyListener.h
 include/${MOZILLA}/p3p/nsIPolicyReference.h
 include/${MOZILLA}/p3p/nsIPolicyTarget.h
 include/${MOZILLA}/p3p/nsP3PCIID.h
+include/${MOZILLA}/passwordmgr/nsIPassword.h
 include/${MOZILLA}/pipboot/nsIBufEntropyCollector.h
 include/${MOZILLA}/pipboot/nsISSLStatusProvider.h
 include/${MOZILLA}/pipboot/nsISecurityWarningDialogs.h
@@ -1747,6 +1752,10 @@ include/${MOZILLA}/shistory/nsISHistory.h
 include/${MOZILLA}/shistory/nsISHistoryInternal.h
 include/${MOZILLA}/shistory/nsISHistoryListener.h
 include/${MOZILLA}/sidebar/nsISidebar.h
+include/${MOZILLA}/spellchecker/mozIPersonalDictionary.h
+include/${MOZILLA}/spellchecker/mozISpellCheckingEngine.h
+include/${MOZILLA}/spellchecker/mozISpellI18NManager.h
+include/${MOZILLA}/spellchecker/mozISpellI18NUtil.h
 include/${MOZILLA}/string/nsAFlatString.h
 include/${MOZILLA}/string/nsASingleFragmentString.h
 include/${MOZILLA}/string/nsAString.h
@@ -2101,6 +2110,7 @@ include/${MOZILLA}/xpcom/nsITimelineService.h
 include/${MOZILLA}/xpcom/nsITimer.h
 include/${MOZILLA}/xpcom/nsITimerInternal.h
 include/${MOZILLA}/xpcom/nsITimerManager.h
+include/${MOZILLA}/xpcom/nsITraceRefcnt.h
 include/${MOZILLA}/xpcom/nsIUnicharBuffer.h
 include/${MOZILLA}/xpcom/nsIUnicharInputStream.h
 include/${MOZILLA}/xpcom/nsIVariant.h
@@ -2139,6 +2149,7 @@ include/${MOZILLA}/xpcom/nsTHashtable.h
 include/${MOZILLA}/xpcom/nsTextFormatter.h
 include/${MOZILLA}/xpcom/nsTime.h
 include/${MOZILLA}/xpcom/nsTraceRefcnt.h
+include/${MOZILLA}/xpcom/nsTraceRefcntImpl.h
 include/${MOZILLA}/xpcom/nsUnitConversion.h
 include/${MOZILLA}/xpcom/nsValueArray.h
 include/${MOZILLA}/xpcom/nsVariant.h
@@ -2218,7 +2229,6 @@ include/${MOZILLA}/zlib/zlib.h
 @unexec ${RM} %D/lib/${MOZILLA}/chrome/chrome.rdf
 @unexec ${RM} %D/lib/${MOZILLA}/chrome/overlayinfo/browser/content/overlays.rdf
 @unexec ${RM} %D/lib/${MOZILLA}/chrome/overlayinfo/communicator/content/overlays.rdf
-@unexec ${RM} %D/lib/${MOZILLA}/chrome/overlayinfo/editor/content/overlays.rdf
 @unexec ${RM} %D/lib/${MOZILLA}/chrome/overlayinfo/inspector/content/overlays.rdf
 @unexec ${RM} %D/lib/${MOZILLA}/chrome/overlayinfo/messenger/content/overlays.rdf
 @unexec ${RM} %D/lib/${MOZILLA}/chrome/overlayinfo/navigator/content/overlays.rdf
@@ -2230,8 +2240,6 @@ include/${MOZILLA}/zlib/zlib.h
 @dirrm lib/${MOZILLA}/chrome/overlayinfo/messenger
 @dirrm lib/${MOZILLA}/chrome/overlayinfo/inspector/content
 @dirrm lib/${MOZILLA}/chrome/overlayinfo/inspector
-@dirrm lib/${MOZILLA}/chrome/overlayinfo/editor/content
-@dirrm lib/${MOZILLA}/chrome/overlayinfo/editor
 @dirrm lib/${MOZILLA}/chrome/overlayinfo/communicator/content
 @dirrm lib/${MOZILLA}/chrome/overlayinfo/communicator
 @dirrm lib/${MOZILLA}/chrome/overlayinfo/browser/content
@@ -2262,6 +2270,7 @@ include/${MOZILLA}/zlib/zlib.h
 @dirrm lib/${MOZILLA}/defaults/pref
 @dirrm lib/${MOZILLA}/defaults/autoconfig
 @dirrm lib/${MOZILLA}/defaults
+@dirrm lib/${MOZILLA}/components/myspell
 @dirrm lib/${MOZILLA}/components
 @dirrm lib/${MOZILLA}/chrome
 @dirrm lib/${MOZILLA}
@@ -2306,6 +2315,7 @@ include/${MOZILLA}/zlib/zlib.h
 @dirrm include/${MOZILLA}/txmgr
 @dirrm include/${MOZILLA}/toolkitcomps
 @dirrm include/${MOZILLA}/string
+@dirrm include/${MOZILLA}/spellchecker
 @dirrm include/${MOZILLA}/sidebar
 @dirrm include/${MOZILLA}/shistory
 @dirrm include/${MOZILLA}/satchel
@@ -2322,6 +2332,7 @@ include/${MOZILLA}/zlib/zlib.h
 @dirrm include/${MOZILLA}/pippki
 @dirrm include/${MOZILLA}/pipnss
 @dirrm include/${MOZILLA}/pipboot
+@dirrm include/${MOZILLA}/passwordmgr
 @dirrm include/${MOZILLA}/p3p
 @dirrm include/${MOZILLA}/oji
 @dirrm include/${MOZILLA}/nspr/private
