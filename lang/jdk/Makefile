@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2002/07/28 12:38:50 schmonz Exp $
+# $NetBSD: Makefile,v 1.30 2002/10/13 07:48:52 jlam Exp $
 #
 
 VERSION=	1.1.8
 PKGNAME=	jdk-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/misc/java/i386/${VERSION}/ \
 		ftp://ftp.de.netbsd.org/pub/NetBSD/misc/java/i386/${VERSION}/
@@ -17,8 +17,7 @@ LICENSE=	jdk-license
 
 .include "../../mk/bsd.prefs.mk"
 
-JDK_HOME:=	${LOCALBASE}/java/${PKGNAME}
-MESSAGE_SUBST+=	JDK_HOME=${JDK_HOME}
+JVM_HOME=	${LOCALBASE}/java/jdk-${VERSION}
 
 .if ${OBJECT_FMT} == "ELF"
 DISTNAME=	jdk${VERSION}-rc1-elf
@@ -32,9 +31,10 @@ PLIST_SRC=	${PKGDIR}/PLIST-aout
 PLIST_SRC+=	${PKGDIR}/PLIST
 
 CHECK_SHLIBS=	no
-NO_BUILD=	yes
-# since we change PREFIX:
-NO_MTREE=	yes
+
+USE_BUILDLINK2=	# defined
+NO_BUILD=	# defined
+NO_MTREE=	# defined, since we change PREFIX below
 
 ONLY_FOR_PLATFORM= NetBSD-*-i386 Linux-*-i[3-6]86
 RESTRICTED=	"No redistribution of the Java(tm) Development Kit"
@@ -63,10 +63,10 @@ pre-install:
 
 do-install:
 	${RM} -f ${WRKSRC}/*.orig
-	${INSTALL_PROGRAM_DIR} ${JDK_HOME}
-	cd ${WRKSRC} && ${PAX} -rw . ${JDK_HOME}
+	${INSTALL_PROGRAM_DIR} ${PREFIX}
+	cd ${WRKSRC} && ${PAX} -rw . ${PREFIX}
 
 .include "../../mk/bsd.pkg.mk"
 
 # This needs to be after bsd.pkg.mk 
-PREFIX:=	${JDK_HOME}
+PREFIX=		${JVM_HOME}
