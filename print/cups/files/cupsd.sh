@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: cupsd.sh,v 1.15 2003/01/23 23:05:11 jlam Exp $
+# $NetBSD: cupsd.sh,v 1.16 2003/05/28 09:01:02 jlam Exp $
 #
 # Common UNIX Printing System daemon
 #
@@ -31,13 +31,10 @@ extra_commands="reload wait"
 wait_cmd="cupsd_waitcmd"
 start_postcmd="cupsd_poststart"
 
-[ -z "${cupsd_wait}" ] && cupsd_wait=NO
-[ -z "${cupsd_timeout}" ] && cupsd_timeout=60
-
 cupsd_poststart()
 {
 	if checkyesno cupsd_wait; then
-		$0 wait
+		run_rc_command wait
 	fi
 }
 
@@ -69,6 +66,8 @@ cupsd_waitcmd()
 if [ -f /etc/rc.subr ]
 then
 	load_rc_config $name
+	[ -z "${cupsd_wait}" ] && cupsd_wait=NO
+	[ -z "${cupsd_timeout}" ] && cupsd_timeout=60
 	run_rc_command "$1"
 else
 	@ECHO@ -n " ${name}"
