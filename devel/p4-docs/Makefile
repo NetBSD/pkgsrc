@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/01 02:34:38 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/23 07:14:09 salo Exp $
 #
 
 DISTNAME=	p4-docs
@@ -31,7 +31,7 @@ SITES_p4sag_html.zip=		${P4_DOCURL_PREFIX}/manuals/p4sag/
 EXTRACT_ONLY=		cmdref_html.zip p4ftp_html.zip
 EXTRACT_ONLY+=		p4guide_html.zip p4sag_html.zip
 EXTRACT_CMD.zip=	${LOCALBASE}/bin/unzip -Laq $${extract_file} \
-			-d `basename $${extract_file} _html.zip`
+			-d `${BASENAME} $${extract_file} _html.zip`
 
 DOCDIR=		share/doc/p4
 HTMLDIR=	share/doc/html/p4
