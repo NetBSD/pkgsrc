@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2004/05/05 00:46:45 danw Exp $
+$NetBSD: distinfo,v 1.6 2005/02/22 21:16:36 agc Exp $
 
 SHA1 (nttcp-1.47.tar.gz) = 28de7d65074e7546babdfa42b3b88fd8baa2be88
+RMD160 (nttcp-1.47.tar.gz) = 54b14062e84660b8d7982f702f94689cdce91d29
 Size (nttcp-1.47.tar.gz) = 25693 bytes
 SHA1 (patch-aa) = 98f93947b4d1e650ad371756463377a7c54704a3
 SHA1 (patch-ab) = a8e43a180e3042fba1d9aaf7a98c079519c7d7a5

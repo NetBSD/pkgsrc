@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/14 22:05:53 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/02/22 21:16:35 agc Exp $
 
 SHA1 (blogbench-1.0.tar.bz2) = 3e667bc9ebfee8751c28508a1840a10b9bdfc099
+RMD160 (blogbench-1.0.tar.bz2) = b688e83c06d45986d592a4fc6a6f5f59ade3da7a
 Size (blogbench-1.0.tar.bz2) = 103355 bytes

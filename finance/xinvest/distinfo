@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2004/11/23 17:21:54 wiz Exp $
+$NetBSD: distinfo,v 1.6 2005/02/22 21:11:48 agc Exp $
 
 SHA1 (xinvest-2.6.9.tar.gz) = 1f87a257d89e68525348098ecf8fb88feb2d95f4
+RMD160 (xinvest-2.6.9.tar.gz) = 2ece846070061ac25654b63bcd9a67f1e61bba42
 Size (xinvest-2.6.9.tar.gz) = 282748 bytes
 SHA1 (patch-aa) = ddab73c6eb20c2ae8883cf30b528187d40e09611
