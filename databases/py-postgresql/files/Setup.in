@@ -1,4 +1,0 @@
-# $NetBSD: Setup.in,v 1.5 2000/04/09 03:55:36 jlam Exp $
-#
-*shared*
-_pg pgmodule.c -I@LOCALBASE@/include/pgsql -R@LOCALBASE@/lib -L@LOCALBASE@/lib -lpq -lcrypt -DNO_DIRECT
