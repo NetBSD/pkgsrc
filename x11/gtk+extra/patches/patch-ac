@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2001/07/11 10:35:57 drochner Exp $
+
+--- gtkextra/gtkplotps.c.orig	Tue Jul 10 13:27:39 2001
++++ gtkextra/gtkplotps.c	Tue Jul 10 13:28:10 2001
+@@ -34,7 +34,6 @@
+ #include <ctype.h>
+ #include <time.h>
+ #include <gtk/gtk.h>
+-#include <wctype.h>
+ 
+ #include "gtkplot.h"
+ #include "gtkpsfont.h"
