@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
+$NetBSD: patch-al,v 1.2 2003/10/05 04:25:15 taca Exp $
 
---- yatconfd/yatconfd.c.orig	Tue Jun 26 20:22:07 2001
+--- yatconfd/yatconfd.c.orig	2001-06-26 20:25:22.000000000 +0900
 +++ yatconfd/yatconfd.c
-@@ -259,7 +259,7 @@
+@@ -259,7 +259,7 @@ int main (argc, argv)
    Msg2Cli(SUCCESS, "%.512s @%.256s",
  	  szGreeting , SysData.szMyHost);
  #else
@@ -11,7 +11,7 @@ $NetBSD: patch-al,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
  	  szGreeting,
  	  SysData.pid, SysData.timeStart, SysData.szMyHost);
  #endif
-@@ -360,32 +360,26 @@
+@@ -360,32 +360,26 @@ int main (argc, argv)
  static void SigHandler(iSig)
       int iSig;
  {
@@ -38,7 +38,7 @@ $NetBSD: patch-al,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
    case SIGALRM:
 -    pMsg = NULL;
      codeErr = ERRYS_TIMEOUT;
-+    WARNING(codeErr, 0, NULL, iSig);
++    WARNING(codeErr, 0, NULL);
      break;
 -  case SIGHUP:
 -  case SIGTERM:
@@ -52,7 +52,7 @@ $NetBSD: patch-al,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
  
    UnLockAll();
  
-@@ -396,7 +390,7 @@
+@@ -396,7 +390,7 @@ static void SigHandler(iSig)
    }
  #endif
  

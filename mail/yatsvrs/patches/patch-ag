@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
+$NetBSD: patch-ag,v 1.2 2003/10/05 04:25:15 taca Exp $
 
---- conf.h.orig	Mon Jul  9 12:36:15 2001
+--- conf.h.orig	2001-07-09 18:19:03.000000000 +0900
 +++ conf.h
 @@ -26,17 +26,20 @@
  
@@ -24,3 +24,12 @@ $NetBSD: patch-ag,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
  #else
  # error
  #endif /* SIZEOF_OFF_T == SIZEOF_LONG_LONG */
+@@ -522,7 +525,7 @@
+ 
+ #ifndef HAVE_MEMMOVE
+ #include "common/memmove.h"
+-#endif HAVE_MEMMOVE
++#endif /* HAVE_MEMMOVE */
+ 
+ #ifdef LOGWTMP
+ #include <utmp.h>
