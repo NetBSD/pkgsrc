@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.153 2004/02/14 03:33:39 grant Exp $
+# $NetBSD: bsd.prefs.mk,v 1.154 2004/02/14 11:28:28 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -400,8 +400,7 @@ MAKEFLAGS+=		PKGTOOLS_VERSION=${PKGTOOLS_VERSION}
 # The binary pkg_install tools all need to consistently to refer to the
 # correct package database directory.
 #
-#.if ${PKGTOOLS_VERSION} < 20030823
-.if ${OPSYS} == "NetBSD"
+.if ${PKGTOOLS_VERSION} < 20030823
 PKGTOOLS_ENV?=		PKG_DBDIR=${_PKG_DBDIR}
 PKGTOOLS_ARGS?=		# empty
 .else
