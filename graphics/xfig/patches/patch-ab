@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.9 2003/04/01 04:50:47 jschauma Exp $
+$NetBSD: patch-ab,v 1.10 2005/02/18 15:56:18 wiz Exp $
 
---- Imakefile.orig	Thu Dec 19 12:57:11 2002
-+++ Imakefile	Mon Mar 31 23:19:46 2003
-@@ -44,12 +44,13 @@
+--- Imakefile.orig	2005-02-18 16:32:46.000000000 +0100
++++ Imakefile
+@@ -44,12 +44,13 @@ XCOMM purpose of DESTDIR is to test an i
  XCOMM BINDIR = /usr/bin/X11
  XCOMM MKDIRHIER = /bin/sh /usr/bin/X11/mkdirhier
  XCOMM XAPPLOADDIR = /home/user/xfig
@@ -18,7 +18,7 @@ $NetBSD: patch-ab,v 1.9 2003/04/01 04:50:47 jschauma Exp $
  
  XCOMM If don't want JPEG support, comment out the #define USEJPEG line
  XCOMM Uncomment the #define for USEJPEG if you want to be able to import
-@@ -68,8 +69,8 @@
+@@ -68,8 +69,8 @@ XCOMM You must have version 5b or newer 
  
  #ifdef USEJPEG
  #ifdef USEINSTALLEDJPEG
@@ -29,7 +29,7 @@ $NetBSD: patch-ab,v 1.9 2003/04/01 04:50:47 jschauma Exp $
  #else
  JPEGLIBDIR = ../jpeg
  JPEGINC = -I$(JPEGLIBDIR)
-@@ -87,12 +88,12 @@
+@@ -87,12 +88,12 @@ XCOMM   in /contrib/libraries.
  XCOMM Change XPMLIBDIR if necessary to point to the xpm library (libXpm)
  XCOMM Change XPMINC if necessary to point to the include file for xpm (xpm.h)
  
@@ -46,20 +46,16 @@ $NetBSD: patch-ab,v 1.9 2003/04/01 04:50:47 jschauma Exp $
  #endif
  
  XCOMM Uncomment the following definiton if you want to use the small icons
-@@ -105,10 +106,10 @@
- XCOMM Then be sure to change the XAW3DINC to point to the directory where your
- XCOMM 3D Athena widget headers are located
- 
--XCOMM #define XAW3D
-+#define XAW3D
+@@ -108,7 +109,7 @@ XCOMM 3D Athena widget headers are locat
+ XCOMM #define XAW3D
  
  #ifdef XAW3D
 -XAW3DINC = -I/usr/include/X11/Xaw3d
 +XAW3DINC = -I$(LOCALBASE)/include/X11/Xaw3d
  DUSEXAW3D = -DXAW3D
  XAWLIB = -lXaw3d
- #endif
-@@ -154,7 +155,7 @@
+ #else
+@@ -157,7 +158,7 @@ XCOMM uncomment the following line if yo
  XCOMM inline functions. With the "INLINE" keyword, you should notice that
  XCOMM the display will be a bit faster in complex figures
  
@@ -68,7 +64,7 @@ $NetBSD: patch-ab,v 1.9 2003/04/01 04:50:47 jschauma Exp $
  
  XCOMM use (and change) the following if you want the multi-key data base file
  XCOMM somewhere other than the standard X11 library directory
-@@ -166,7 +167,7 @@
+@@ -169,7 +170,7 @@ XFIGLIBDIR = $(LIBDIR)/xfig
  
  XCOMM XFIGDOCDIR tells where the html and pdf documentation should go
  XCOMM XFIGDOCDIR = $(DOCDIR)/xfig
@@ -77,7 +73,7 @@ $NetBSD: patch-ab,v 1.9 2003/04/01 04:50:47 jschauma Exp $
  
  XCOMM MANDIR tells where the standard man pages should go (no need to change it
  XCOMM if you want the man pages installed in the standard place on your system
-@@ -224,7 +225,7 @@
+@@ -227,7 +228,7 @@ XCOMM **********************************
  #ifdef USEJPEG
  
  #ifdef USEINSTALLEDJPEG
@@ -86,7 +82,7 @@ $NetBSD: patch-ab,v 1.9 2003/04/01 04:50:47 jschauma Exp $
  #else
  JPEGCONF = configure
  JPEGLIB = $(JPEGLIBDIR)/libjpeg.a
-@@ -261,7 +262,7 @@
+@@ -264,7 +265,7 @@ InstallManPageLong(file,dest,file)
  DUSESMALLICONS = -DUSE_SMALL_ICONS
  #endif /* USESMALLICONS */
  
@@ -95,7 +91,7 @@ $NetBSD: patch-ab,v 1.9 2003/04/01 04:50:47 jschauma Exp $
  
  #ifdef USEJPEG
  DUSEJPEG = -DUSE_JPEG
-@@ -271,7 +272,7 @@
+@@ -274,7 +275,7 @@ READJPEGO = f_readjpg.o
  
  #ifdef USEXPM
  DUSEXPM = -DUSE_XPM
@@ -104,7 +100,7 @@ $NetBSD: patch-ab,v 1.9 2003/04/01 04:50:47 jschauma Exp $
  READXPMS = f_readxpm.c
  READXPMO = f_readxpm.o
  #ifdef USEXPM_ICON
-@@ -407,6 +408,8 @@
+@@ -410,6 +411,8 @@ install.html::
  install.rhtml::
  	@(cd Doc ; \
  	echo Copying pdf and html files to $(DESTDIR)$(XFIGDOCDIR) ; \
