@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2000/11/30 01:16:16 jwise Exp $
+# $NetBSD: Makefile,v 1.39 2000/12/15 22:32:17 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/10/10 09:24:38 tg Exp
 #
 
-DISTNAME=       xlockmore-4.17.2
+DISTNAME=       xlockmore-5.00
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.tux.org/pub/tux/bagleyd/xlockmore/ \
 		${MASTER_SITE_XCONTRIB:=applications/}
