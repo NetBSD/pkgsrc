@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/02/03 15:53:31 nathanw Exp $
+
+--- xdaliclock.h.orig	Wed Feb  3 10:34:59 1999
++++ xdaliclock.h	Wed Feb  3 10:35:12 1999
+@@ -13,9 +13,7 @@
+ 
+ #ifdef __STDC__
+ # include <stdlib.h>
+-# if defined(unix) || defined(__unix) || defined(UNIX)
+-#  include <unistd.h>
+-# endif
++# include <unistd.h>
+ #endif
+ 
+ #ifdef VMS
