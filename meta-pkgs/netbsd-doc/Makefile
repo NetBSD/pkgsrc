@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/02/22 20:48:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2004/07/13 11:25:58 darcy Exp $
 #
 
 DISTNAME=	netbsd-doc-1.2
@@ -16,6 +16,7 @@ DEPENDS+=	iso8879>=1986:../../textproc/iso8879
 DEPENDS+=	iso12083>=1993:../../textproc/iso12083
 DEPENDS+=	dsssl-docbook-modular>=1.54:../../textproc/dsssl-docbook-modular
 DEPENDS+=	html>=4.0:../../textproc/html
+DEPENDS+=	tidy>=20031002:../../www/tidy
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
