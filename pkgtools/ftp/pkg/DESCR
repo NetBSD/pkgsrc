@@ -1,0 +1,4 @@
+This is a copy of NetBSD-current's ftp(1) tool in a format which is
+able to be installed as a package.  It simply replaces the tool in
+/usr/bin, but doesn't register itself as a package, so that no
+de-installation can take place.
