@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/06/20 21:06:21 tron Exp $
+# $NetBSD: Makefile,v 1.4 2000/02/05 05:01:26 wiz Exp $
 #
 
 DISTNAME=		rc5-mlg-004
@@ -26,14 +26,14 @@ NO_CONFIGURE=		yes
 #	${SED} -e 's|your\.site|'$$fqdn'|g' ${WRKSRC}/master.ini.in > ${WRKSRC}/master.ini)
 
 do-build:
-	cd ${WRKSRC}; rm -f master.ini.orig rc5.sh.orig
+	cd ${WRKSRC}; ${RM} -f master.ini.orig rc5.sh.orig
 
 # agc - commented out until the above is tested.
 #do-build:
-#	cd ${WRKSRC}; rm -f master.ini.orig master.ini.in rc5.sh.orig
+#	cd ${WRKSRC}; ${RM} -f master.ini.orig master.ini.in rc5.sh.orig
 
 do-install:
 	${MKDIR} ${PREFIX}/RC5
-	cd ${WRKSRC}; /bin/pax -r -w . ${PREFIX}/RC5
+	cd ${WRKSRC}; ${PAX} -r -w . ${PREFIX}/RC5
 
 .include "../../mk/bsd.pkg.mk"
