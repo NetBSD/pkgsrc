@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2001/10/19 07:05:28 kei Exp $
+# $NetBSD: Makefile,v 1.4 2001/10/19 07:11:45 kei Exp $
 
 .include "../../www/php4/Makefile.module"
 
 MODNAME=		gd
 CATEGORIES+=		graphics
-PHP_PKG_VERS=		# empty
+PHP_PKG_VERS=		nb1
 COMMENT=		PHP4 extension for GD graphics library
 
 USE_BUILDLINK_ONLY=	YES
