@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/10 00:14:41 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/02/10 00:17:29 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GSS_BUILDLINK3_MK:=	${GSS_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	gss
 
 .if !empty(GSS_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		gss
-BUILDLINK_DEPENDS.gss+=		gss>=0.0.6
+BUILDLINK_DEPENDS.gss+=		gss>=0.0.6nb1
 BUILDLINK_PKGSRCDIR.gss?=	../../security/gss
 .endif # GSS_BUILDLINK3_MK
 
