@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.17 2002/08/10 05:27:30 itojun Exp $
+# $NetBSD: buildlink.mk,v 1.18 2002/08/15 01:14:32 fredb Exp $
 #
 # This Makefile fragment is included by packages that use OpenSSL.
 #
@@ -26,7 +26,6 @@ OPENSSL_VERSION_096D=		0x0090604fL
 OPENSSL_VERSION_096E=		0x0090605fL
 OPENSSL_VERSION_096F=		0x0090606fL
 OPENSSL_VERSION_096G=		0x0090607fL
-
 # Check for a usable installed version of OpenSSL. Version must be greater
 # than 0.9.6f, or else contain a fix for the 2002-07-30 security advisory.
 # If a usable version isn't present, then use the pkgsrc OpenSSL package.
@@ -56,46 +55,13 @@ USE_OPENSSL_VERSION?=		${OPENSSL_VERSION_096G}
 _OPENSSL_VERSION!=	${AWK} '/.*OPENSSL_VERSION_NUMBER.*/ { print $$3 }' \
 				${_OPENSSLV_H}
 
-_VALID_SSL_VERSIONS=	${OPENSSL_VERSION_095A}
-
-. if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_096}	# OpenSSL 0.9.6
-_VALID_SSL_VERSIONS=	${OPENSSL_VERSION_096}
-. else
-_VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_096}
-. endif
-
-. if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_096A}	# OpenSSL 0.9.6a
-_VALID_SSL_VERSIONS=	${OPENSSL_VERSION_096A}
-. else
-_VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_096A}
-. endif
-
-.  if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_096B}	# OpenSSL 0.9.6b
-_VALID_SSL_VERSIONS=	${OPENSSL_VERSION_096B}
-.  else
-_VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_096B}
-.  endif
-
-. if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_096D}	# OpenSSL 0.9.6d
-_VALID_SSL_VERSIONS=	${OPENSSL_VERSION_096D}
-. else
-_VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_096D}
-. endif
-
-. if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_096E}	# OpenSSL 0.9.6e
-_VALID_SSL_VERSIONS=	${OPENSSL_VERSION_096E}
-. else
-_VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_096E}
-. endif
-
-. if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_096F}	# OpenSSL 0.9.6f
-_VALID_SSL_VERSIONS=	${OPENSSL_VERSION_096F}
-. else
-_VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_096F}
-. endif
+_VALID_SSL_VERSIONS=	${OPENSSL_VERSION_096F}		# OpenSSL 0.9.6f
+# There never was a package for this; only the in-tree openssl had it.
+#BUILDLINK_DEPENDS.openssl=	openssl>=0.9.6f
 
 . if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_096G}	# OpenSSL 0.9.6g
 _VALID_SSL_VERSIONS=	${OPENSSL_VERSION_096G}
+BUILDLINK_DEPENDS.openssl=	openssl>=0.9.6g
 . else
 _VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_096G}
 . endif
@@ -106,12 +72,12 @@ _NEED_OPENSSL=		NO
 .  endif
 . endfor
 
-.endif  # exists(${_OPENSSLV_H}) && exists(${_SSL_H})
+.else
 
-# Here is where we associate the OpenSSL dependency with version number,
-# conditionally on ${USE_OPENSSL_VERSION}, but for now, there is only one
-# version permitted.
-BUILDLINK_DEPENDS.openssl=	openssl>=0.9.6e
+# Last case to consider.... there is no in-tree openssl!
+BUILDLINK_DEPENDS.openssl=	openssl>=0.9.6g
+
+.endif  # exists(${_OPENSSLV_H}) && exists(${_SSL_H})
 
 .if ${_NEED_OPENSSL} == "YES"
 DEPENDS+=	${BUILDLINK_DEPENDS.openssl}:../../security/openssl
