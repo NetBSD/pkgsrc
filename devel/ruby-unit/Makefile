@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/01 16:53:42 taca Exp $
+# $NetBSD: Makefile,v 1.2 2001/07/04 16:02:36 taca Exp $
 # FreeBSD: ports/devel/ruby-runit/Makefile,v 1.10 2001/01/19 09:41:15 knu Exp
 
 DISTNAME=	rubyunit-0.3.9.03a
@@ -11,7 +11,6 @@ HOMEPAGE=	http://homepage1.nifty.com/markey/ruby/rubyunit/rubyunit_e.html
 COMMENT=	Ruby implementation of eXtreme Programming
 
 DIST_SUBDIR=	ruby
-USE_RUBY=	yes
 USE_RUBY_RD=	yes
 
 REPLACE_RUBY=	bin/c2t.rb bin/runtest.rb

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/01 14:25:06 taca Exp $
+# $NetBSD: Makefile,v 1.2 2001/07/04 16:02:36 taca Exp $
 # FreeBSD: ports/net/ruby-drb/Makefile,v 1.8 2001/01/18 16:57:25 knu Exp
 
 DISTNAME=	drb-1.3.2
@@ -15,7 +15,6 @@ DEPENDS+=	${RUBY_PKGNAMEPREFIX}acl>=1.0.1:../../security/ruby-acl
 DEPENDS+=	${RUBY_PKGNAMEPREFIX}mutexm>=1.0.1:../../devel/ruby-mutexm
 
 DIST_SUBDIR=	ruby
-USE_RUBY=	yes
 USE_RUBY_RD=	yes
 
 DOCS_EN=	drb-ref.rd
