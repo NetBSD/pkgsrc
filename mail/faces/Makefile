@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2002/09/21 12:13:44 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2003/05/18 11:42:06 cjep Exp $
 
 DISTNAME=	faces-1.6.1
 PKGREVISION=	2
@@ -7,12 +7,12 @@ CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.cs.indiana.edu/pub/faces/faces/faces-1.6.1/
 EXTRACT_SUFX=	.tar.Z
 
-CONFLICTS=	compface-[0-9]*
-
 MAINTAINER=	packages@netbsd.org
 COMMENT=	visual mail, user and print face server
 
 DEPENDS+=	netpbm>=9.2:../../graphics/netpbm
+
+CONFLICTS=	compface-[0-9]*
 
 LICENSE=	limited-redistribution
 RESTRICTED=	"Distribution not allowed if money exchanged"
