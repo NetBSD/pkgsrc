@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2004/03/10 14:54:05 tv Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/03/13 12:09:36 recht Exp $
 
 DISTNAME=		mysql-4.0.18
 CATEGORIES=		databases
@@ -62,6 +62,7 @@ CFLAGS+=		-DHAVE_CURSES_H
 CXXFLAGS+=		-DHAVE_CURSES_H
 .endif
 
+USE_LANGUAGES=		c c++
 USE_GNU_TOOLS+=		make
 USE_PERL5=		# defined
 USE_LIBTOOL=		# defined
