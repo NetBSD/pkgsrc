@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2001/04/02 20:06:12 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2001/04/06 21:52:11 rh Exp $
 
-DISTNAME=		libgtop-1.0.9
+DISTNAME=		libgtop-1.0.12
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/libgtop/}
 
@@ -29,10 +29,10 @@ IGNORE+=		"(More information can be found in libgtop.info.)"
 .endif
 .endif
 
-USE_X11BASE=		# defined
-USE_GMAKE=		# defined
-USE_LIBTOOL=		# defined
-USE_LIBINTL=		# defined
+USE_X11BASE=		YES
+USE_GMAKE=		YES
+USE_LIBTOOL=		YES
+USE_LIBINTL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 CPPFLAGS+=		-I${LOCALBASE}/include	# libintl.h
@@ -43,12 +43,12 @@ CPPFLAGS+=		-I${LOCALBASE}/include	# libintl.h
 #CFLAGS+=		-g
 #LDFLAGS+=		-g
 
-GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--with-glib-prefix=${LOCALBASE} \
-			--with-libgtop-guile --with-catgets
-CONFIGURE_ENV+=		AWK="${AWK}" \
-			LN_S="${LN} -s" \
-			PERL="${PERL5}" \
-			CPPFLAGS="${CPPFLAGS}"  \
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--with-glib-prefix=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-libgtop-guile --with-catgets
+CONFIGURE_ENV+=		AWK="${AWK}"
+CONFIGURE_ENV+=		LN_S="${LN} -s"
+CONFIGURE_ENV+=		PERL="${PERL5}"
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 .include "../../mk/bsd.pkg.mk"
