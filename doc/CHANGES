@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9496 2005/03/17 13:56:14 wiz Exp $
+$NetBSD: CHANGES,v 1.9497 2005/03/17 14:26:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1376,3 +1376,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated bmp to 0.9.7nb1 [jmmv 2005-03-16]
 	Updated enscript to 1.6.3nb1 [salo 2005-03-17]
 	Updated realplayer-codecs to 8.20050115 [wiz 2005-03-17]
+	Updated bogofilter to 0.92.8nb2 [wiz 2005-03-17]
