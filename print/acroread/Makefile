@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2004/12/21 15:32:03 xtraeme Exp $
+# $NetBSD: Makefile,v 1.40 2005/02/21 21:24:06 veego Exp $
 
 DISTNAME=	acroread	# Overridden below
 PKGNAME=	acroread-4.05
@@ -59,10 +59,6 @@ post-patch:
 .endif
 
 PLIST_SUBST+=	PLATFORM=${PLATFORM}
-
-PLIST_SRC=	${PKGDIR}/PLIST.pre \
-		${PKGDIR}/PLIST.${MACHINE_ARCH} \
-		${PKGDIR}/PLIST.post
 
 NS_PLUGINS_DIR=	${PREFIX}/lib/netscape/plugins
 
