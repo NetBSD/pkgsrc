@@ -1,4 +1,4 @@
-# $NetBSD: transform-icc-cc,v 1.2.2.3 2005/02/25 14:46:51 tv Exp $
+# $NetBSD: cmd-sink-icc81-cc,v 1.2.2.2 2005/02/25 14:46:51 tv Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -34,35 +34,31 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-case $arg in
-######################################################################
-# ignore flags that icc doesn't understand.
-######################################################################
--fexceptions|-ffast-math|-fomit-frame-pointer|-pedantic|-pipe|-s|-MP|-OPT:*)
-	arg=
-	msg_log $wrapperlog "   (transform-icc-cc) to: $arg"
-	addtocache=yes
-	;;
--finline-functions)
-	arg=-Ob2
-	msg_log $wrapperlog "   (transform-icc-cc) to: $arg"
-	addtocache=yes
-	;;
--funroll-all-loops|-funroll-loops)
-	arg=-unroll
-	msg_log $wrapperlog "   (transform-icc-cc) to: $arg"
-	addtocache=yes
-	;;
--O[4-9]|-O[12][0-9])
-	arg=-O3
-	msg_log $wrapperlog "   (transform-icc-cc) to: $arg"
-	addtocache=yes
-	;;
--Wall|-Wl,*)
-	;;
--W*)
-	arg=
-	msg_log $wrapperlog "   (transform-icc-cc) to: $arg"
-	addtocache=yes
-	;;
-esac
+# all icc built dynamic libraries and executables need to be linked
+# with ${ICCBASE}/lib in the rpath, or statically linked against the
+# icc provided libraries. use the static linking method so binary
+# packages can be used on systems that do not have these libraries
+# available.
+arg=-i-static
+$debug_log $wrapperlog "    (cmd-sink-icc81-cc) pop:  $arg"
+. $buildcmd
+
+# Always link against the Intel provided C++ runtime library.
+arg=-cxxlib-icc
+$debug_log $wrapperlog "    (cmd-sink-icc81-cc) pop:  $arg"
+. $buildcmd
+
+while ! queue_is_empty cmdbuf; do
+	pop_queue cmdbuf arg
+	case "$arg" in
+	-MT)
+		pop_queue cmdbuf arg2
+		$debug_log $wrapperlog "    (cmd-sink-icc81-cc) pop:  $arg $arg2 [drop]"
+		;;
+
+	*)
+		$debug_log $wrapperlog "    (cmd-sink-icc81-cc) pop:  $arg"
+		. $buildcmd
+		;;
+	esac
+done

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.177.2.5 2005/02/11 15:27:57 tv Exp $
+# $NetBSD: bsd.prefs.mk,v 1.177.2.6 2005/02/25 14:46:51 tv Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -72,6 +72,7 @@ GNU_ARCH.mipseb?=	mipseb
 GNU_ARCH.mipsel?=	mipsel
 GNU_ARCH.ns32k?=	ns32k
 GNU_ARCH.powerpc?=	powerpc
+GNU_ARCH.rs6000?=	rs6000
 GNU_ARCH.sh3eb?=	sh
 GNU_ARCH.sh3el?=	shle
 GNU_ARCH.sparc?=	sparc
@@ -172,6 +173,25 @@ OS_VERSION!=		echo ${OS_VERSION} | sed -e 's/^V//'
 LOWER_OPSYS?=		osf${OS_VERSION}
 LOWER_VENDOR?=		dec
 
+.elif ${OPSYS} == "AIX"
+LOWER_ARCH!=		_cpuid=`/usr/sbin/lsdev -C -c processor -S available | sed 1q | awk '{ print $$1 }'`; \
+			if /usr/sbin/lsattr -El $$_cpuid | grep ' POWER' >/dev/null 2>&1; then \
+				echo rs6000; \
+			else \
+				echo powerpc; \
+			fi
+MACHINE_ARCH?=		${LOWER_ARCH}
+.  if exists(/usr/bin/oslevel)
+_OS_VERSION!=		/usr/bin/oslevel
+.  else
+_OS_VERSION!=		echo `${UNAME} -v`.`${UNAME} -r`
+.  endif
+OS_VERSION!=		echo ${_OS_VERSION} | sed -e 's,\([0-9]*\.[0-9]*\).*,\1,'
+LOWER_OS_VERSION=	${OS_VERSION}
+LOWER_OPSYS_VERSUFFIX=	${_OS_VERSION}
+LOWER_OPSYS?=		aix
+LOWER_VENDOR?=		ibm
+
 .elif !defined(LOWER_OPSYS)
 LOWER_OPSYS!=		echo ${OPSYS} | tr A-Z a-z
 .endif
@@ -227,10 +247,10 @@ OBJECT_FMT?=	ELF
 .  else
 OBJECT_FMT?=	a.out
 .  endif
-.endif
-
-.if ${OPSYS} == "DragonFly"
-OBJECT_FMT=		ELF
+.elif ${OPSYS} == "DragonFly"
+OBJECT_FMT=	ELF
+.elif ${OPSYS} == "AIX"
+OBJECT_FMT=	XCOFF
 .endif
 
 # Calculate depth
