@@ -1,11 +1,12 @@
 #
-# $NetBSD: Makefile,v 1.18 2003/01/28 22:03:48 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2003/03/06 11:43:28 is Exp $
 #
 # FreeBSD Id: Makefile,v 1.12 1999/06/28 21:25:07 billf Exp
 #
 
 DISTNAME=	bind
 PKGNAME=	bind-${BIND_VERSION}
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/src
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind/src/${BIND_VERSION}/
@@ -48,5 +49,8 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bind8
 	(cd ${WRKDIR}/doc/html/; tar Bpcf - .) | (cd ${PREFIX}/share/doc/bind8; tar Bpxf -)
 	${INSTALL_SCRIPT} ${WRKDIR}/named.sh ${PREFIX}/etc/rc.d/named
+.if ${OPSYS} == "SunOS"
+	${INSTALL} -d -o root -g other -m 700 ${PKG_SYSCONFDIR}/ndc.d
+.endif
 
 .include "../../mk/bsd.pkg.mk"
