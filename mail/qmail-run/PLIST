@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/02 03:59:21 schmonz Exp $
+bin/qmail-qread-client
+share/doc/qmail-run/README.pkgsrc
+share/examples/qmail-run/mailer.conf
+@dirrm share/examples/qmail-run
+@dirrm share/doc/qmail-run
