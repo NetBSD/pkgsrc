@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/07/21 22:58:10 schmonz Exp $
+# $NetBSD: Makefile,v 1.8 2004/07/24 22:45:15 recht Exp $
 #
 
 .include "../../mail/ezmlm/Makefile.common"
@@ -49,10 +49,10 @@ post-configure:
 .endif
 
 .if !empty(EZMLM_IDX_USE_PGSQL:M[yY][eE][sS])
-.include "../../databases/postgresql-lib/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 post-configure:
-	${ECHO} -I${BUILDLINK_PREFIX.postgresql-lib}/include > ${WRKSRC}/sub_pgsql/conf-sqlcc
-	${ECHO} -L${BUILDLINK_PREFIX.postgresql-lib}/lib -Wl,-R${BUILDLINK_PREFIX.postgresql-lib}/lib -lpq > ${WRKSRC}/sub_pgsql/conf-sqlld
+	${ECHO} -I${PGSQL_PREFIX}/include > ${WRKSRC}/sub_pgsql/conf-sqlcc
+	${ECHO} -L${PGSQL_PREFIX}/lib -Wl,-R${PGSQL_PREFIX}/lib -lpq > ${WRKSRC}/sub_pgsql/conf-sqlld
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} pgsql
 .endif
 

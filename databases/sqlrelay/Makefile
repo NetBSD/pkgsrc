@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/04/15 10:44:53 grant Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/24 22:45:15 recht Exp $
 
 DISTNAME=		sqlrelay-0.33.1
 CATEGORIES=		databases
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_DIR}
 .endif
 
 .if defined(SQLRELAY.postgresql) && ${SQLRELAY.postgresql} == "YES"
-.  include "../../databases/postgresql-lib/buildlink3.mk"
+.  include "../../mk/pgsql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-postgresql=${BUILDLINK_DIR}
 .endif
 
