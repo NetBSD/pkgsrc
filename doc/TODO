@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2039 2004/08/15 12:07:02 wiz Exp $
+$NetBSD: TODO,v 1.2040 2004/08/15 12:42:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -291,7 +291,6 @@ Suggested package updates
 	o lavaps-2.5
 	o lbreakout-2.5
 	o leafnode-1.10.3
-	o libcaca-0.9
 	o libcddb-0.9.5
 	o libevent-0.9
 	o libggi-2.0.5
@@ -323,7 +322,6 @@ Suggested package updates
 	o moz-bin-flash-7.0r25 [pkgsrc-wip]
 	o moz-bin-plugger-1.5.1
 	o moz-mplayer-2.65
-	o mozilla-bin-1.7.2
 	o mozilla-stable-1.4.2
 	o mpi-ch-1.2.6
 	o mrproject-0.9.1
@@ -352,7 +350,6 @@ Suggested package updates
 	o openoffice-1.1.2
 	o openssl-0.9.7d [http://www.cs.stevens-tech.edu/~jschauma/netbsd/openssl.diff]
 	o oss-3.99.1f
-	o oss-3.99.1e
 	o p5-CGI-3.05
 	o p5-CGI-Application-3.1
 	o p5-Exception-Class-1.17
@@ -407,7 +404,6 @@ Suggested package updates
 	o squid-2.5.6 [taca]
 	o srp_client-1.7.5 [jlam]
 	o staroffice-7p1
-	o stella-1.4
 	o streamtuner-0.12.5
 	o sweep-0.8.3
 	o tcl-8.4.7
