@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1284 2004/01/07 17:36:20 cjep Exp $
+$NetBSD: TODO,v 1.1285 2004/01/08 03:32:05 taca Exp $
 
 Suggested new packages
 ======================
@@ -205,7 +205,7 @@ Suggested package updates
 	o hp2xx-3.4.4
 	o hpijs-1.4.1
 	o icepref-2.3
-	o inn-2.4.0
+	o inn-2.4.1
 	o isync-0.9.1 [pkg/22189]
 	o jakarta-tomcat-3.3.1a
 	o joe-2.9.8 [pkg/18022, incomplete]
