@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/07/17 18:22:23 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2002/09/23 10:20:06 jlam Exp $
 #
 
 DISTNAME=		Wormz-1.0b5
@@ -11,15 +11,16 @@ HOMEPAGE=		http://lide.punknet.cz/miri/wormz.html
 COMMENT=		Networked game for X11
 
 WRKSRC=			${WRKDIR}/Wormz
+
+USE_BUILDLINK2=		yes
+USE_X11=		yes
 USE_GMAKE=		yes
-USE_BUILD_LINK_ONLY=	yes
 
 post-extract:
 	${MKDIR} ${WRKSRC}/NetBSD
 	${TOUCH} ${WRKSRC}/NetBSD/.depend
 
 do-configure:
-	(cd ${WRKSRC} && ${GMAKE} ${MAKE_ENV} depend)
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} depend
 
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
