@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/18 22:28:16 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/09/18 23:21:33 jlam Exp $
 bin/bdftops
 bin/dvipdf
 bin/eps2eps
@@ -122,6 +122,7 @@ share/doc/html/ghostscript/Use.htm
 share/doc/html/ghostscript/Xfonts.htm
 share/doc/html/ghostscript/gs.css
 share/doc/html/ghostscript/index.html
+share/examples/cups/pstoraster.convs
 share/examples/ghostscript/alphabet.ps
 share/examples/ghostscript/cjk/all_ac1.ps
 share/examples/ghostscript/cjk/all_ag1.ps
@@ -138,7 +139,6 @@ share/examples/ghostscript/doretree.ps
 share/examples/ghostscript/escher.ps
 share/examples/ghostscript/golfer.ps
 share/examples/ghostscript/grayalph.ps
-share/examples/ghostscript/pstoraster.convs
 share/examples/ghostscript/ridt91.eps
 share/examples/ghostscript/snowflak.ps
 share/examples/ghostscript/tiger.ps
