@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/12/15 17:51:43 agc Exp $
+$NetBSD: patch-aa,v 1.2 2004/05/29 18:07:38 minskim Exp $
 
---- doc/Makefile.in.orig	2003-12-13 14:20:59.000000000 -0800
+--- doc/Makefile.in.orig	2003-12-07 05:48:29.000000000 -0600
 +++ doc/Makefile.in
 @@ -17,7 +17,7 @@
  srcdir = @srcdir@
  top_srcdir = @top_srcdir@
  VPATH = @srcdir@
 -pkgdatadir = $(datadir)/@PACKAGE@
-+pkgdatadir = %%LOCALBASE%%/share/doc/dar
++pkgdatadir = $(datadir)/doc/@PACKAGE@
  pkglibdir = $(libdir)/@PACKAGE@
  pkgincludedir = $(includedir)/@PACKAGE@
  top_builddir = ..
