@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2000/02/07 16:44:15 tron Exp $
+$NetBSD: patch-aa,v 1.8 2000/03/17 23:31:48 tron Exp $
 
 --- configure.orig	Sun Feb  6 00:56:27 2000
 +++ configure	Mon Feb  7 17:38:11 2000
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.7 2000/02/07 16:44:15 tron Exp $
  
  
 -LDFLAGS="${LDFLAGS} -lgd"
-+LDFLAGS="${LDFLAGS} -lgd -lttf -lintl -lXpm -lX11"
++LDFLAGS="${LDFLAGS} -lgd -lttf -lintl -lXpm -lX11 -ljpeg"
  
  # Check whether --with-z or --without-z was given.
  if test "${with_z+set}" = set; then
