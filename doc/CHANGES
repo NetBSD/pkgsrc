@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9009 2005/02/02 20:50:54 jschauma Exp $
+$NetBSD: CHANGES,v 1.9010 2005/02/02 22:10:46 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -720,3 +720,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-Kwiki-UserPreferences to 0.13 [jlam 2005-02-02]
 	Added libarchive-102.002 [xtraeme 2005-02-02]
 	Added gaim-encryption [jschauma 2005-02-02]
+	Updated speedtouch to 1.3.1nb2 [tron 2005-02-02]
