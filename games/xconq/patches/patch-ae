@@ -1,22 +1,15 @@
-$NetBSD: patch-ae,v 1.1.1.1 1999/06/12 20:22:53 kleink Exp $
+$NetBSD: patch-ae,v 1.2 2000/08/31 07:26:24 kleink Exp $
 
---- x11/Makefile.in.orig	Tue Apr 21 05:21:21 1998
-+++ x11/Makefile.in	Wed Jun  9 00:38:37 1999
-@@ -11,7 +11,7 @@
- exec_prefix = $(prefix)
- bindir = $(exec_prefix)/bin
- libdir = $(exec_prefix)/lib
--datadir = $(prefix)/lib/xconqdir
-+datadir = $(prefix)/share/xconq
- mandir = $(prefix)/man
- man6dir = $(mandir)/man6
- infodir = $(prefix)/info
-@@ -35,7 +35,7 @@
- SHELL = /bin/sh
+--- doc/xconq.texi.orig	Thu Jun  8 14:28:31 2000
++++ doc/xconq.texi	Wed Aug 30 21:59:50 2000
+@@ -8,6 +8,10 @@
+ @setchapternewpage odd
  
- INSTALL = install -c
--INSTALL_PROGRAM = $(INSTALL)
-+INSTALL_PROGRAM = $(INSTALL) -s
- INSTALL_DATA = $(INSTALL)
+ @ifinfo
++@dircategory Games
++@direntry
++* Xconq: (xconq.info).		The Penultimate Strategy Game.
++@end direntry
+ This file documents how to play the strategy game @i{Xconq}.
  
- CC = cc
+ Copyright (C) 1987-1989, 1991-2000 Stanley T. Shebs

@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/06/12 20:22:53 kleink Exp $
-bin/cconq
+@comment $NetBSD: PLIST,v 1.2 2000/08/31 07:26:25 kleink Exp $
 bin/imf2x
 bin/x2imf
 bin/xconq
-bin/xshowimf
+bin/ximfapp
+@unexec install-info --delete %D/info/hacking.info %D/info/dir
 @unexec install-info --delete %D/info/xcdesign.info %D/info/dir
 @unexec install-info --delete %D/info/xconq.info %D/info/dir
+info/hacking.info
 info/xcdesign.info
 info/xcdesign.info-1
 info/xcdesign.info-10
@@ -26,27 +27,65 @@ info/xconq.info-2
 info/xconq.info-3
 info/xconq.info-4
 info/xconq.info-5
+info/xconq.info-6
+@exec install-info %D/info/hacking.info %D/info/dir
 @exec install-info %D/info/xcdesign.info %D/info/dir
 @exec install-info %D/info/xconq.info %D/info/dir
-lib/X11/app-defaults/Xconq
-lib/X11/app-defaults/Xconq-color
-lib/X11/app-defaults/XShowimf
-lib/X11/app-defaults/XShowimf-color
-man/man6/cconq.6
 man/man6/xconq.6
+share/xconq/imfapp.tcl
+share/xconq/tkconq.tcl
+share/xconq/images/advt24x26.gif
+share/xconq/images/advt32x32.gif
+share/xconq/images/advt44x48.gif
+share/xconq/images/animals32.gif
+share/xconq/images/beach44x48.gif
+share/xconq/images/civmisc.gif
+share/xconq/images/civt44x48.gif
+share/xconq/images/cliff44x48.gif
+share/xconq/images/dirt24x26.gif
+share/xconq/images/dirt44x48.gif
+share/xconq/images/dwellings32.gif
+share/xconq/images/eur44x48.gif
+share/xconq/images/river24x26.gif
+share/xconq/images/river44x48.gif
+share/xconq/images/river88x96.gif
+share/xconq/images/riverc24x26.gif
+share/xconq/images/riverc44x48.gif
+share/xconq/images/road24x26.gif
+share/xconq/images/road44x48.gif
+share/xconq/images/rr24x26.gif
+share/xconq/images/sea.gif
+share/xconq/images/rr44x48.gif
+share/xconq/images/settlers.gif
+share/xconq/images/splash.gif
+share/xconq/images/stdt24x26.gif
+share/xconq/images/stdt44x48.gif
+share/xconq/images/stdta88x96.gif
+share/xconq/images/stdtb88x96.gif
+share/xconq/images/tran24x26.gif
+share/xconq/images/tran44x48.gif
+share/xconq/images/tran88x96.gif
+share/xconq/images/trident.gif
+@dirrm share/xconq/images
 share/xconq/lib/1756.g
 share/xconq/lib/1757.g
 share/xconq/lib/1805.g
+share/xconq/lib/advances.g
+share/xconq/lib/advterr.g
 share/xconq/lib/africa-1850.g
 share/xconq/lib/africa.g
 share/xconq/lib/aircraft.imf
+share/xconq/lib/anc-near-east.g
+share/xconq/lib/ancient.g
 share/xconq/lib/ancient.imf
 share/xconq/lib/animals.imf
 share/xconq/lib/arms.imf
 share/xconq/lib/beirut.g
+share/xconq/lib/blasts.imf
 share/xconq/lib/cave.g
 share/xconq/lib/cherbourg.g
 share/xconq/lib/chess.g
+share/xconq/lib/civ2.g
 share/xconq/lib/classic.g
 share/xconq/lib/cobra.g
 share/xconq/lib/colors.imf
@@ -79,8 +118,10 @@ share/xconq/lib/imf.dir
 share/xconq/lib/insects.g
 share/xconq/lib/insects.imf
 share/xconq/lib/intro.g
+share/xconq/lib/lhs.g
+share/xconq/lib/lhsunit.g
 share/xconq/lib/magellan.g
-share/xconq/lib/magnusvew.g
+share/xconq/lib/magnuszew.g
 share/xconq/lib/mars.g
 share/xconq/lib/metz-1944.g
 share/xconq/lib/midway.g
@@ -95,19 +136,22 @@ share/xconq/lib/napoleon.g
 share/xconq/lib/nat-names.g
 share/xconq/lib/neurope.g
 share/xconq/lib/news.txt
+share/xconq/lib/ng-african.g
 share/xconq/lib/ng-american.g
+share/xconq/lib/ng-asian.g
 share/xconq/lib/ng-chinese.g
 share/xconq/lib/ng-english.g
+share/xconq/lib/ng-european.g
+share/xconq/lib/ng-features.g
 share/xconq/lib/ng-german.g
 share/xconq/lib/ng-italian.g
 share/xconq/lib/ng-japanese.g
+share/xconq/lib/ng-misc.g
 share/xconq/lib/ng-nickname.g
 share/xconq/lib/ng-ships.g
 share/xconq/lib/ng-weird.g
 share/xconq/lib/normandy.g
 share/xconq/lib/nw-europe.g
-share/xconq/lib/ob-nor-alld.g
-share/xconq/lib/ob-nor-axis.g
 share/xconq/lib/objects.imf
 share/xconq/lib/old-empire.g
 share/xconq/lib/omaha.g
@@ -130,7 +174,7 @@ share/xconq/lib/simple.g
 share/xconq/lib/space.g
 share/xconq/lib/standard.g
 share/xconq/lib/standard.imf
-share/xconq/lib/std-c.imf
+share/xconq/lib/std-s.imf
 share/xconq/lib/stdterr.g
 share/xconq/lib/stdunit.g
 share/xconq/lib/steppes.g
@@ -139,6 +183,7 @@ share/xconq/lib/t-cent-eur.g
 share/xconq/lib/t-e1-river.g
 share/xconq/lib/t-e50-river.g
 share/xconq/lib/t-eastmed.g
+share/xconq/lib/t-near-east.g
 share/xconq/lib/t-normandy.g
 share/xconq/lib/t-nw-eur.g
 share/xconq/lib/t-pacific.g
@@ -171,12 +216,8 @@ share/xconq/lib/ww2-div-pac.g
 share/xconq/lib/ww2-eur-42.g
 share/xconq/lib/ww2-pac-41.g
 share/xconq/lib/ww2-sides.g
-share/xconq/lib/ww2-stdunit.g
 share/xconq/lib/ww2s-42.g
 share/xconq/lib/ww2s-eur-42.g
 share/xconq/lib/ww2s-pac-41.g
 @dirrm share/xconq/lib
-share/xconq/lib-x11/README
-@dirrm share/xconq/lib-x11
-@dirrm share/xconq/scores
 @dirrm share/xconq
