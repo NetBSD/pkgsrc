@@ -1,8 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/06/10 15:15:06 taca Exp $
+$NetBSD: patch-aa,v 1.2 2004/01/29 15:45:00 taca Exp $
 
---- man/poppassd.8.orig	Wed Apr  4 09:23:13 2001
+--- man/poppassd.8.orig	2001-03-21 08:43:24.000000000 +0900
 +++ man/poppassd.8
-@@ -12,27 +12,28 @@
+@@ -6,33 +6,36 @@
+ .\" See License.txt file for terms and conditions for modification and
+ .\" redistribution.
+ .\"
+-.TH POPAUTH 8
++.TH POPPASSD 8
+ .SH NAME
+ poppassd \-\- password-changing daemon
  .SH SYNOPSIS
  .B poppassd
  [
@@ -11,6 +18,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/06/10 15:15:06 taca Exp $
  ] [
  .B \-d
  ] [
++.B \-o
++] [
  .BI \-l " tls-usage"
  ]
 +] [
@@ -36,7 +45,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/06/10 15:15:06 taca Exp $
  ] [
  .B \-v
  ]
-@@ -58,7 +59,7 @@
+@@ -58,7 +61,7 @@ programs.
  .PP
  .SH OPTIONS
  .TP
@@ -45,21 +54,36 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/06/10 15:15:06 taca Exp $
  Prints a summary of options and exits.
  .TP
  .B \-d
-@@ -83,26 +84,36 @@
+@@ -69,6 +72,14 @@ the default log facility is
+ but can be changed using the
+ .I \-y option.
+ .TP
++.B \-o
++Report authentication error after "PASS" command.  
++Without this option, authentication error would report 
++after "NEWPASS" command.
++This is compatible behavior as old
++.I  poppass
++daemon.
++.TP
+ .B \-l " tls-usage"
+ Sets TLS/SSL handling.  Must have compiled with OpenSSL or SSL Plus.
+ 
+@@ -83,27 +94,37 @@ client to attempt TLS/SSL negotiation af
  Causes Qpopper to attempt TLS negotiation when a client first connects.
  This is for alternate-port support.
  .TP
 -.B \-p " [ " passwd-path " ]"
 +.B \-P
++Instructs
++.I poppassd
++to change the system password (which is the default).
++.TP
++.B \-p passwd-path
  Instructs
  .I poppassd
 -to change the system password (which is the default) and optionally
 -specifies the path to the executable to use.  The default is /usr/bin/passwd.
-+to change the system password (which is the default).
-+.TP
-+.B \-p passwd-path
-+Instructs
-+.I poppassd
 +to change the system password (which is the default) and specifies 
 +the path to the executable to use.  The default is /usr/bin/passwd.
  .TP
@@ -80,12 +104,13 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/06/10 15:15:06 taca Exp $
 -.I \-p
 +.I \-P
  option.
-+.TP
+ .TP
 +.B \-s smbpasswd-path
 +Instructs
 +.I poppassd
 +to change the smb password and specifies the path to the executable 
 +to use.  The default is /usr/bin/smbpasswd.
- .TP
++.TP
  .BI \-t " tracefile"
  Turns on debug tracing, and causes all trace and log output to be
+ written to the file specified as
