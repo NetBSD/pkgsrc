@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2003/09/28 01:34:40 grant Exp $
+# $NetBSD: Makefile.common,v 1.23 2003/09/28 05:27:06 grant Exp $
 #
 DISTNAME=		qt-x11-free-${QTVERSION}
 CATEGORIES=		x11
@@ -27,7 +27,6 @@ CONFIGURE_ARGS+=	-shared -sm -thread -no-stl \
 			-system-zlib -system-libpng \
 			-system-libmng -system-libjpeg
 CONFIGURE_ARGS+=	-qt-gif	# qt3 does not write compressed GIFs
-CONFIGURE_ARGS+=	-no-g++-exceptions
 
 CONFIGURE_ARGS+=	< ${FILESDIR}/license-acceptance
 
@@ -41,6 +40,10 @@ MAKE_ENV+=              QTDIR="${WRKSRC}"
 SCRIPTS_ENV+=		HOME="${WRKDIR}"
 
 .include "../../mk/bsd.prefs.mk"
+
+.if !empty(CC_VERSION:Mgcc*)
+CONFIGURE_ARGS+=	-no-g++-exceptions
+.endif
 
 .if ${OPSYS} == "SunOS"
 CONFIGURE_SCRIPT=	${SH} ./configure
