@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2324 2003/05/25 16:32:45 grant Exp $
+$NetBSD: CHANGES,v 1.2325 2003/05/25 19:58:36 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2159,3 +2159,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated squid to 2.5.3 [taca 2003-05-25]
 	Updated suse_libpng to 7.3nb1 [taca 2003-05-25]
 	Updated gcc3 to 3.3 [grant 2003-05-25]
+	Updated scli to 0.2.12nb1 [seb 2003-05-25]
