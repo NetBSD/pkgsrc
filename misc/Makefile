@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.34 1999/03/02 06:15:40 kim Exp $
+#	$NetBSD: Makefile,v 1.35 1999/03/14 20:58:55 tron Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/10/13 04:41:07 max Exp
 
     SUBDIR += amanda-common
@@ -30,7 +30,6 @@
     SUBDIR += lile
     SUBDIR += linuxls
     SUBDIR += logsurfer
-    SUBDIR += mc
 #   SUBDIR += mmv
     SUBDIR += most
 #   SUBDIR += mshell		# displays nothing, needs debugging - HF
