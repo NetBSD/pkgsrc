@@ -10,15 +10,15 @@
  #endif
  
 --- audioIO.h.old	Sun Oct 26 10:57:10 1997
-+++ audioIO.h	Sun Oct 26 10:57:44 1997
-@@ -24,6 +24,6 @@
++++ audioIO.h	Fri Oct 31 06:43:07 1997
+@@ -27,3 +27,7 @@
+ #ifdef OS_SunOS
    #define AUSIZ 4096
  #endif
- 
--#ifdef OS_SunOS
-+#if defined(OS_SunOS) || defined(OS_NetBSD)
-   #define AUSIZ 4096
- #endif
++
++#ifdef OS_NetBSD
++  #define AUSIZ 32768
++#endif
 --- audioIO_SunOS.c.old	Sun Oct 26 10:58:36 1997
 +++ audioIO_SunOS.c	Sun Oct 26 11:13:51 1997
 @@ -8,7 +8,11 @@
