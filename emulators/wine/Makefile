@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/05/24 20:39:42 tv Exp $
+# $NetBSD: Makefile,v 1.19 1999/08/27 15:28:46 agc Exp $
 
 DISTNAME=		Wine-981211
 PKGNAME=		wine-981211
@@ -18,5 +18,11 @@ CONFIGURE_ARGS+=	--enable-dll
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/wine.ini ${PREFIX}/etc/wine.conf.example
+
+post-extract:
+	@case `${MAKE} show-shlib-type` in				\
+	ELF)	${ECHO} "Sorry, this package does not work with ELF object formats"; \
+		${FALSE} ;;						\
+	esac
 
 .include "../../mk/bsd.pkg.mk"
