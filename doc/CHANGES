@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6868 2004/08/13 16:15:36 dillo Exp $
+$NetBSD: CHANGES,v 1.6869 2004/08/13 18:17:37 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3818,3 +3818,9 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated automake to 1.9.1 [wiz 2004-08-13]
 	Updated stella to 1.4 [dillo 2004-08-13]
 	Removed stella-sdl [dillo 2004-08-13]
+	Added cy2-anonymous-2.1.19 [jlam 2004-08-13]
+	Added cy2-crammd5-2.1.19 [jlam 2004-08-13]
+	Added cy2-digestmd5-2.1.19 [jlam 2004-08-13]
+	Added cy2-gssapi-2.1.19 [jlam 2004-08-13]
+	Added cy2-otp-2.1.19 [jlam 2004-08-13]
+	Added cy2-plain-2.1.19 [jlam 2004-08-13]
