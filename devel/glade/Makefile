@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2004/03/08 19:40:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.47 2004/04/11 16:29:52 snj Exp $
 
 DISTNAME=	glade-0.6.4
 PKGREVISION=	6
@@ -14,7 +14,7 @@ DEPENDS+=	xdg-x11-dirs>=1.1:../../misc/xdg-x11-dirs
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 USE_X11BASE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 
@@ -32,8 +32,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/portability.txt ${PREFIX}/share/doc/glade
 	${INSTALL_DATA} ${WRKSRC}/doc/source_code.txt ${PREFIX}/share/doc/glade
 
-.include "../../devel/bonobo/buildlink2.mk"
-.include "../../devel/oaf/buildlink2.mk"
+.include "../../devel/bonobo/buildlink3.mk"
+.include "../../devel/oaf/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../x11/gnome-libs/buildlink2.mk"
+.include "../../x11/gnome-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
