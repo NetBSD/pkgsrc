@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/06/08 17:50:14 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2000/06/12 10:59:42 wiz Exp $
 # $FreeBSD: ports/net/mtr/Makefile,v 1.16 1999/10/28 08:06:00 mharo Exp $
 
 DISTNAME=	mtr-0.42
@@ -24,7 +24,15 @@ CURSES_GOOD?=	# defined
 .endif
 .endfor
 
-.if !defined(CURSES_GOOD)
+.if defined(CURSES_GOOD)
+# hack to use curses even if ncurses are also installed
+pre-configure:
+.for FILE in configure configure.in
+	cd ${WRKSRC}; ${SED} "s/ncurses/curses/" < ${FILE} \
+		> ${FILE}.patched; ${MV} ${FILE}.patched ${FILE}
+.endfor
+	${CHMOD} 755 ${WRKSRC}/configure
+.else
 DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 .endif
 
