@@ -1,63 +1,54 @@
 #!/bin/sh
 #
-# $NetBSD: pgsql.sh,v 1.6 2001/11/26 20:38:31 jlam Exp $
+# $NetBSD: pgsql.sh,v 1.7 2002/04/04 05:21:50 jlam Exp $
 #
 # PostgreSQL database rc.d control script
 #
 # PROVIDE: pgsql
 # REQUIRE: DAEMON
 # KEYWORD: shutdown
+#
+# You will need to set some variables in /etc/rc.conf to start PostgreSQL:
+#
+# pgsql=YES
+#	pgsql_flags="-i"	# allows TCP/IP connections
+#	pgsql_flags="-i -l"	# enables SSL connections (TCP/IP required)
+#
+# "pgsql_flags" contains options for the PostgreSQL postmaster.  See
+# postmaster(1) for possible options.
 
 PGHOME="@PGHOME@"
+
+if [ -f /etc/rc.subr ]
+then
+	. /etc/rc.subr
+fi
+
+rcd_dir=`@DIRNAME@ $0`
 
 name="pgsql"
 rcvar=$name
 pgsql_user="@PGUSER@"
-command="@PREFIX@/bin/pg_ctl"
-command_args="-s -D ${PGHOME}/data -l ${PGHOME}/errlog"
+command="@PREFIX@/bin/postmaster"
+ctl_command="@PREFIX@/bin/pg_ctl"
+pidfile="${PGHOME}/data/postmaster.pid"
+extra_commands="initdb"
 
-# pgsql_flags contains options for the PostgreSQL postmaster.
-# See postmaster(1) for possible options.
-#
-#pgsql_flags="-i"	# allows TCP/IP connections
-#pgsql_flags="-i -l"	# enables SSL connections (TCP/IP required)
+command_args="-D ${PGHOME}/data"
+start_command_args="-w -s -l ${PGHOME}/errlog"
+stop_command_args="-s -m fast"
 
-# set defaults
-if [ -r /etc/rc.conf ]
-then
-	. /etc/rc.conf
-else
-	eval ${rcvar}=YES
-fi
+initdb_cmd="pgsql_initdb"
+start_precmd="pgsql_precmd"
+start_cmd="pgsql_doit start"
+restart_cmd="pgsql_doit restart"
+stop_cmd="pgsql_doit stop"
 
-# $flags from environment overrides $pgsql_flags
-if [ -n "${flags}" ]
-then
-	eval ${rcvar}_flags="${flags}"
-fi
-
-pgsql_doit()
-{
-	action=$1
-	if [ -n "${pgsql_flags}" ]
-	then
-		command_args="${command_args} -o \"${pgsql_flags}\""
-	fi
-
-	case ${action} in
-	start)		pgsql_start_precmd; echo "Starting ${name}." ;;
-	stop)		echo "Stopping ${name}." ;;
-	restart)	echo "Restarting ${name}." ;;
-	esac
-
-	@SU@ -m ${pgsql_user} -c "${command} ${command_args} ${action}"
-}
-
-pgsql_start_precmd()
+pgsql_precmd()
 {
 	if [ ! -f ${PGHOME}/data/base/1/PG_VERSION ]
 	then
-		$0 forceinitdb
+		$rcd_dir/pgsql initdb
 	fi
 }
 
@@ -65,51 +56,58 @@ pgsql_initdb()
 {
 	if [ -f ${PGHOME}/data/base/1/PG_VERSION ]
 	then
-		echo "The PostgreSQL template databases have already been initialized."
-		echo "Skipping database initialization."
+		@ECHO@ "The PostgreSQL template databases have already been initialized."
+		@ECHO@ "Skipping database initialization."
 	else
-		echo "Initializing PostgreSQL databases."
-		@SU@ -m ${pgsql_user} -c "@PREFIX@/bin/initdb -D ${PGHOME}/data $flags"
+		@ECHO@ "Initializing PostgreSQL databases."
+		@SU@ -m ${pgsql_user} -c "@PREFIX@/bin/initdb ${command_args} ${flags}"
 	fi
 }
 
-checkyesno()
+pgsql_doit()
 {
-	eval _value=\$${1}
-	case $_value in
-	[Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)	return 0 ;;
-	[Nn][Oo]|[Ff][Aa][Ll][Ss][Ee]|[Oo][Ff][Ff]|0)	return 1 ;;
-	*)
-		echo "\$${1} is not set properly."
-		return 1
+	action=$1
+
+	case ${action} in
+	start|restart)
+		command_args="${command_args} ${start_command_args}"
+		if [ -n "${pgsql_flags}" ]
+		then
+			command_args="${command_args} -o \"${pgsql_flags}\""
+		fi
+		;;
+	stop)
+		command_args="${command_args} ${stop_command_args}"
 		;;
 	esac
+
+	case ${action} in
+	start)		@ECHO@ "Starting ${name}." ;;
+	stop)		@ECHO@ "Stopping ${name}." ;;
+	restart)	@ECHO@ "Restarting ${name}." ;;
+	esac
+
+	@SU@ -m ${pgsql_user} -c "${ctl_command} ${action} ${command_args}"
 }
 
-# force commands are always executed
-cmd=${1:-start}
-case ${cmd} in
-force*)
-	cmd=${cmd#force}
-	eval ${rcvar}=YES
-	;;
-esac
-
-if checkyesno ${rcvar}
+if [ -f /etc/rc.subr ]
 then
-	if [ -x ${command} ]
-	then
-		case ${cmd} in
-		initdb)
-			${rcvar}_${cmd}
-			;;
-		restart|start|stop|status)
-			${rcvar}_doit ${cmd}
-			;;
-		*)
-			echo 1>&2 "Usage: $0 [initdb|restart|start|stop|status]"
-			exit 1
-			;;
-		esac
-	fi
+	load_rc_config $name
+	run_rc_command "$1"
+else
+	case "$1" in
+	initdb)
+		eval ${initdb_cmd}
+		;;
+	restart)
+		eval ${restart_cmd}
+		;;
+	stop)
+		eval ${stop_cmd}
+		;;
+	*)
+		eval ${start_precmd}
+		eval ${start_cmd}
+		;;
+	esac
 fi
