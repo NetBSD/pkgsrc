@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2002/07/02 12:56:53 wiz Exp $
+$NetBSD: distinfo,v 1.3 2003/02/08 17:23:07 dmcmahill Exp $
 
 SHA1 (deliver-2.1.14.tar.gz) = 77d591f29b8829b3c347eb107a427ad826ffca99
 Size (deliver-2.1.14.tar.gz) = 80892 bytes
@@ -9,3 +9,4 @@ SHA1 (patch-ad) = 0404e117fda6f03ddc99c819353925c8714fced2
 SHA1 (patch-ae) = a4e478765a240a2099c101ddd2d6abf3ddcf0ba2
 SHA1 (patch-af) = 88f00520492a1906e81627e4e4cd9ba6c3858eef
 SHA1 (patch-ag) = 1ea8ca73ce2f930444cdcb3a09f49a11926bf3da
+SHA1 (patch-ah) = 380e17b0e1dc659013be50e75ea0141b94081681
