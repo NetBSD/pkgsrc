@@ -1,20 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2003/07/21 17:27:27 martti Exp $
+# $NetBSD: Makefile,v 1.25 2003/09/17 14:57:25 jmmv Exp $
 #
 
-DISTNAME=	catdoc-0.91.4
-WRKSRC=		${WRKDIR}/catdoc
-CATEGORIES=	textproc
-MASTER_SITES=	http://www.go.dlr.de/fresh/unix/src/misc/
+.include "Makefile.common"
 
-MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.fe.msk.ru/~vitus/catdoc/
-COMMENT=	Reads MS-Word file and puts out its content as plain text
+PKGREVISION=	1
 
-DEPENDS=	tk>=8.3.2:../../x11/tk
-
-USE_X11=	yes
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/share
-CPPFLAGS+=	-Dunix -D__unix
+CONFIGURE_ARGS+=	--disable-wordview
+CONFIGURE_ENV+=		enable_wordview=no
 
 .include "../../mk/bsd.pkg.mk"
