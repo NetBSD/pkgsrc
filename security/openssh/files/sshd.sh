@@ -1,12 +1,12 @@
 #!/bin/sh
 #
-# $NetBSD: sshd.sh,v 1.5 2000/09/20 04:49:19 jlam Exp $
+# $NetBSD: sshd.sh,v 1.6 2001/10/19 09:42:08 veego Exp $
 #
 # PROVIDE: sshd
 # REQUIRE: DAEMON LOGIN
 
 name="sshd"
-pidfile="/var/run/${name}.pid"
+pidfile="@SSH_PID_DIR@/${name}.pid"
 
 command=${1:-start}
 
@@ -14,11 +14,15 @@ case ${command} in
 start)
 	if [ ! -f @SSH_CONF_DIR@/ssh_host_key ]
 	then
-		@PREFIX@/bin/ssh-keygen -b 1024 -N "" -f /etc/ssh_host_key
+		@PREFIX@/bin/ssh-keygen -t rsa1 -N "" -f /etc/ssh_host_key
+	fi
+	if [ ! -f @SSH_CONF_DIR@/ssh_host_rsa_key ]
+	then
+		@PREFIX@/bin/ssh-keygen -t rsa -N "" -f /etc/ssh_host_rsa_key
 	fi
 	if [ ! -f @SSH_CONF_DIR@/ssh_host_dsa_key ]
 	then
-		@PREFIX@/bin/ssh-keygen -d -N "" -f /etc/ssh_host_dsa_key
+		@PREFIX@/bin/ssh-keygen -t dsa -N "" -f /etc/ssh_host_dsa_key
 	fi
 	if [ -x @PREFIX@/sbin/sshd -a -f @SSH_CONF_DIR@/sshd_config ]
 	then
