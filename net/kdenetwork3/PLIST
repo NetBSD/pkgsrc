@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/02/04 14:42:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/03/09 11:53:26 markd Exp $
 bin/dsirc
 bin/feedbrowser
 bin/kdict
@@ -482,6 +482,7 @@ share/kde/apps/kopete/icons/crystalsvg/64x64/apps/icq_protocol.png
 share/kde/apps/kopete/icons/crystalsvg/64x64/apps/msn_protocol.png
 share/kde/apps/kopete/icons/crystalsvg/64x64/apps/sms_protocol.png
 share/kde/apps/kopete/icons/crystalsvg/64x64/apps/yahoo_protocol.png
+share/kde/apps/kopete/ircchatui.rc
 share/kde/apps/kopete/kopetechatwindow.rc
 share/kde/apps/kopete/kopeteemailwindow.rc
 share/kde/apps/kopete/kopeteui.rc
@@ -1108,7 +1109,9 @@ share/kde/apps/kppp/Rules/Portugal/PT_Regional.rst
 share/kde/apps/kppp/Rules/Portugal/PT_Regional_Ilhas.rst
 share/kde/apps/kppp/Rules/Portugal/PT_YesNET.rst
 share/kde/apps/kppp/Rules/Portugal/PT_YesNET_Ilhas.rst
-share/kde/apps/kppp/Rules/Romania/RomTelecom.rst
+share/kde/apps/kppp/Rules/Romania/Romtelecom_Acces_Special_Internet.rst
+share/kde/apps/kppp/Rules/Romania/Romtelecom_Interurban.rst
+share/kde/apps/kppp/Rules/Romania/Romtelecom_Local.rst
 share/kde/apps/kppp/Rules/Romania/Zapp-Mobile.rst
 share/kde/apps/kppp/Rules/Russia/TEMPLATE.ru
 share/kde/apps/kppp/Rules/Russia/mtu-intel_standart.rst
@@ -1203,15 +1206,14 @@ share/kde/apps/kppp/pics/modemleft.png
 share/kde/apps/kppp/pics/modemnone.png
 share/kde/apps/kppp/pics/modemright.png
 share/kde/apps/kppp/pics/phone.png
-share/kde/apps/krdc/pics/pindown.png
 share/kde/apps/krdc/pics/close.png
 share/kde/apps/krdc/pics/iconify.png
+share/kde/apps/krdc/pics/pindown.png
 share/kde/apps/krdc/pics/pinup.png
 share/kde/apps/krdc/pics/pointcursor.png
 share/kde/apps/krdc/pics/pointcursormask.png
 share/kde/apps/krdc/rdp-keymaps/ar
 share/kde/apps/krdc/rdp-keymaps/common
-share/kde/apps/krdc/rdp-keymaps/convert-map
 share/kde/apps/krdc/rdp-keymaps/da
 share/kde/apps/krdc/rdp-keymaps/de
 share/kde/apps/krdc/rdp-keymaps/en-gb
@@ -1449,6 +1451,7 @@ share/kde/sounds/ktalkd.wav
 @dirrm share/kde/apps/kppp/Rules/Sweden
 @dirrm share/kde/apps/kppp/Rules/Spain
 @dirrm share/kde/apps/kppp/Rules/South_Afrika
+@dirrm share/kde/apps/kppp/Rules/South_Africa
 @dirrm share/kde/apps/kppp/Rules/Slovenia
 @dirrm share/kde/apps/kppp/Rules/Slovakia
 @dirrm share/kde/apps/kppp/Rules/Singapore
