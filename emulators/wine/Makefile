@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2003/07/02 09:14:06 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2003/07/12 14:33:28 zuntum Exp $
 
 DISTNAME=		Wine-20030618
 PKGNAME=		${DISTNAME:S/W/w/}
@@ -42,9 +42,10 @@ EGDIR=			${PREFIX}/share/examples/wine
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
-	cd ${WRKSRC}/documentation/samples;				\
-	${INSTALL_DATA} config ${EGDIR}/wine.conf;			\
-	${INSTALL_DATA} generic.ppd ${EGDIR}/generic.ppd;		\
+	${INSTALL_DATA} ${WRKSRC}/winedefault.reg ${EGDIR}/winedefault.reg
+	cd ${WRKSRC}/documentation/samples &&				\
+	${INSTALL_DATA} config ${EGDIR}/wine.conf &&			\
+	${INSTALL_DATA} generic.ppd ${EGDIR}/generic.ppd &&		\
 	${INSTALL_DATA} system.ini ${EGDIR}/system.ini
 	${RMDIR} ${PREFIX}/man/man3w
 
