@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3723 2003/10/23 16:25:35 junyoung Exp $
+$NetBSD: CHANGES,v 1.3724 2003/10/23 22:32:51 cube Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4237,3 +4237,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cyrus-imapd21 to 2.1.15nb1 [seb 2003-10-21]
 	Updated sylpheed-claws to 0.9.4nb2 [cube 2003-10-22]
 	Updated nabi to 0.8 [junyoung 2003-10-23]
+	Updated sylpheed-claws to 0.9.4nb3 [cube 2003-10-23]
