@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2004/06/10 10:13:06 recht Exp $
+# $NetBSD: Makefile,v 1.26 2004/06/15 14:26:34 grant Exp $
 #
 
 PKGNAME=	python23-pth-2.3.4
-PKGREVISION=	1
 
 #PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
