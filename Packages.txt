@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.8 1998/01/01 05:52:52 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.9 1998/01/03 06:18:00 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -12,7 +12,7 @@
 Table of contents:
 ==================
 
- grep -B1 '^.====' Packages-new.txt | egrep -v '^.[-=]'
+ grep -B1 '^.====' Packages.txt | egrep -v '^.[-=]'
 
 
  0 Intro
@@ -20,17 +20,18 @@ Table of contents:
 
 There is a lot of software freely available for Unix based systems, which
 usually runs on NetBSD, too, sometimes with some modifications. The NetBSD
-packages collection - which is derived from the FreeBSD ports collection -
-incorporates any such changes necessary to make that software run on
-NetBSD, and makes the installation (and reinstallation) of the software
-package easy by means of a single command.
+packages collection incorporates any such changes necessary to make that
+software run on NetBSD, and makes the installation (and reinstallation) of
+the software package easy by means of a single command.
 
-The NetBSD package system - which is derived from the FreeBSD ports system
-- is used to enable such freely available third-party software to be built
-easily on NetBSD hosts. Once the software has been built, it is manipulated
-with the pkg_* tools so that installation and de-installation, printing of
-an inventory of all installed packages and retrieval of one-line comments
-or more verbose descriptions are simple.
+The NetBSD package system is used to enable such freely available
+third-party software to be built easily on NetBSD hosts. Once the software
+has been built, it is manipulated with the pkg_* tools so that installation
+and de-installation, printing of an inventory of all installed packages and
+retrieval of one-line comments or more verbose descriptions are simple.
+
+Both the NetBSD packages collection and the NetBSD package system are
+derived from FreeBSD.
 
 
  0.1 Overview
@@ -69,6 +70,7 @@ is a description of all the terminology used within this document:
 
  * Port:
    This is the term used by FreeBSD people for what we call a package.
+   In NetBSD terminology, "port" refers to a different architecture.
 
  * Precompiled (binary) package:
    A set of binaries built by the NetBSD package system from a distfile
@@ -1192,7 +1194,6 @@ Appendix A: build logs
 Appendix B: Layout of the FTP server's package archive
 ======================================================
 
-Proposal:
 Layout for precompiled binary packges on ftp.netbsd.org:
 
 /pub/NetBSD/packages/
