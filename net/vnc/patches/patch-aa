@@ -1,17 +1,23 @@
-$NetBSD: patch-aa,v 1.5 1999/04/20 18:59:48 tron Exp $
+$NetBSD: patch-aa,v 1.6 2000/11/10 16:57:25 abs Exp $
 
-*** Xvnc/config/cf/NetBSD.cf.orig	Tue Jul 28 14:19:10 1998
---- Xvnc/config/cf/NetBSD.cf	Tue Jul 28 12:45:19 1998
-***************
-*** 373,377 ****
-   * Definition for compiling on Alpha machines
-   */
-  #ifdef AlphaArchitecture
-! #define	BuildServer	NO
-  #endif
---- 373,377 ----
-   * Definition for compiling on Alpha machines
-   */
-  #ifdef AlphaArchitecture
-! #define	BuildServer	YES
-  #endif
+--- Imakefile.orig	Mon May 18 14:18:46 1998
++++ Imakefile
+@@ -1,7 +1,7 @@
+ #define IHaveSubdirs
+ #define PassCDebugFlags
+ 
+-SUBDIRS = libvncauth vncviewer vncpasswd
++SUBDIRS = libvncauth vncpasswd
+ 
+ World:
+ 	make Makefiles
+@@ -9,8 +9,7 @@
+ 	make all
+ 	@echo ""
+ 	@echo Built $(SUBDIRS).
+-	@echo 'To build Xvnc, do "cd Xvnc", followed by "make World"'
+-	@echo ""
++	(cd Xvnc && make World)
+ 
+ MakeSubdirs($(SUBDIRS))
+ DependSubdirs($(SUBDIRS))
