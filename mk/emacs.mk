@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.5 2002/10/19 06:48:03 minoura Exp $
+# $NetBSD: emacs.mk,v 1.6 2002/11/14 03:56:53 wiz Exp $
 #
 # A Makefile fragment for Emacs Lisp packages.
 #
@@ -49,7 +49,7 @@ _EMACS_VERSION_${v}_OK=	yes
 
 # Look for Emacs 21/Emacs 20
 #
-_TMP!=	${PKG_TOOLS_BIN}/pkg_info -e emacs || ${ECHO}
+_TMP!=	${PKG_INFO} -e emacs || ${ECHO}
 .if ${_TMP} != ""
 _EMACS_VERSION_EMACS_FULL:=	${_TMP}
 _EMACS_VERSION_EMACS=	${_EMACS_VERSION_EMACS_FULL:C/^.*-//}
@@ -63,7 +63,7 @@ _EMACS_VERSION_emacs20_INSTALLED=	yes
 
 # Look for XEmacs 21.5/XEmacs 21.1
 #
-_TMP!=	${PKG_TOOLS_BIN}/pkg_info -e xemacs || ${ECHO}
+_TMP!=	${PKG_INFO} -e xemacs || ${ECHO}
 .if ${_TMP} != ""
 _EMACS_VERSION_XEMACS_FULL:=	${_TMP:C/^.*-//}
 _EMACS_VERSION_XEMACS=	${_EMACS_VERSION_XEMACS_FULL:C/^.*-//}
@@ -171,9 +171,9 @@ _REPLACE_EMACS_SED=	-e "1s;^\#!.*emacs;\#!${EMACS_BIN};"
 .if defined(REPLACE_EMACS)
 emacs-patch-scripts:
 .for s in ${REPLACE_EMACS}
-        ${CP} ${WRKSRC}/$s ${WRKSRC}/${s}.tmp
-        ${CHMOD} +w ${WRKSRC}/$s
-        ${SED} ${_REPLACE_EMACS_SED} <${WRKSRC}/${s}.tmp >${WRKSRC}/$s
+	${CP} ${WRKSRC}/$s ${WRKSRC}/${s}.tmp
+	${CHMOD} +w ${WRKSRC}/$s
+	${SED} ${_REPLACE_EMACS_SED} <${WRKSRC}/${s}.tmp >${WRKSRC}/$s
 .endfor
 
 post-patch: emacs-patch-scripts
