@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.2 1999/07/15 18:09:26 chopps Exp $
+$NetBSD: patch-ag,v 1.3 1999/08/15 14:58:59 tron Exp $
 
 --- applets/battery/read-battery.c.orig	Thu Jul 15 13:59:20 1999
 +++ applets/battery/read-battery.c	Thu Jul 15 14:41:09 1999
@@ -7,7 +7,7 @@ $NetBSD: patch-ag,v 1.2 1999/07/15 18:09:26 chopps Exp $
    return TRUE;
  
 -#else /* ! ( __linux__ || __FreeBSD__) */
-+#elif defined(__NetBSD__)
++#elif defined(__NetBSD_APM__)
 +
 +  struct apm_power_info aip;
 +  int fd;
@@ -44,7 +44,7 @@ $NetBSD: patch-ag,v 1.2 1999/07/15 18:09:26 chopps Exp $
 +  close(fd);
 +  return TRUE;
 +
-+#else /* ! ( __linux__ || __FreeBSD__ || __NetBSD__ ) */
++#else /* ! ( __linux__ || __FreeBSD__ || __NetBSD_APM__ ) */
  
    /* Assume always connected to power.  */
    *ac_online = 1;
