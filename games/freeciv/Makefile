@@ -1,31 +1,18 @@
-# $NetBSD: Makefile,v 1.7 1999/02/20 22:48:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 1999/07/22 23:35:40 garbled Exp $
 #
 
-DISTNAME=		freeciv-1.7.2
-CATEGORIES=		games x11
-MASTER_SITES=		ftp://www.freeciv.org/pub/freeciv/
+DISTNAME=	freeciv-1.8.1
+CATEGORIES=	games
+MASTER_SITES=	ftp://ftp.freeciv.org/freeciv/stable_version/
 
-MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://www.freeciv.org/index.html
+MAINTAINER=	tech-pkg@netbsd.org
+HOMEPAGE=	http://www.freeciv.org/
 
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
+DEPENDS+=	xpm-3.4k:../../graphics/xpm
+DEPENDS+=	gtk+-1.2.2:../../x11/gtk
+DEPENDS+=	imlib-1.9.4:../../graphics/imlib
 
-USE_IMAKE=		YES
-NO_INSTALL_MANPAGES=	YES
-
-pre-patch:
-	${TOUCH} ${WRKSRC}/civclient.man
-	${TOUCH} ${WRKSRC}/civserver.man
-
-post-patch:
-	${MV} ${WRKSRC}/client/climisc.c ${WRKSRC}/client/climisc.c.bak
-	${SED} -e 's|@X11BASE@|${X11BASE}|g' < ${WRKSRC}/client/climisc.c.bak \
-		> ${WRKSRC}/client/climisc.c
-
-post-install:
-	${MKDIR} ${X11BASE}/share/freeciv/data
-	${INSTALL_DATA} ${WRKSRC}/data/*.txt ${X11BASE}/share/freeciv/data
-	${INSTALL_DATA} ${WRKSRC}/data/*.xpm ${X11BASE}/share/freeciv/data
-	${INSTALL_DATA} ${WRKSRC}/data/Freeciv ${X11BASE}/lib/X11/app-defaults
+GNU_CONFIGURE=	YES
+USE_X11BASE=	YES
 
 .include "../../mk/bsd.pkg.mk"
