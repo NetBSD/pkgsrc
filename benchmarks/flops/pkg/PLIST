@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/10/22 05:26:33 garbled Exp $
+bin/flops
+share/doc/flops/flops.doc
+@dirrm share/doc/flops
