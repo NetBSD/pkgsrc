@@ -1,0 +1,25 @@
+$NetBSD: patch-ac,v 1.1 2004/09/15 16:45:44 agc Exp $
+
+--- platform/unix.c	2004/09/15 16:35:55	1.1
++++ platform/unix.c	2004/09/15 16:40:46
+@@ -77,11 +77,19 @@
+ 
+ #ifdef PHYSFS_HAVE_SYS_UCRED_H
+ 
++#if defined(__NetBSD__) && (__NetBSD_Version__ >= 200040000)
++#include <sys/statvfs.h>
++
++#define STATVFS_TYPE	statvfs
++#else
++#define STATVFS_TYPE	statfs
++#endif
++
+ char **__PHYSFS_platformDetectAvailableCDs(void)
+ {
+     char **retval = (char **) malloc(sizeof (char *));
+     int cd_count = 1;  /* We count the NULL entry. */
+-    struct statfs *mntbufp = NULL;
++    struct STATVFS_TYPE *mntbufp = NULL;
+     int mounts;
+     int i;
+ 
