@@ -1,15 +1,121 @@
-$NetBSD: patch-aa,v 1.8 2003/02/18 01:13:23 fredb Exp $
+$NetBSD: patch-aa,v 1.9 2003/02/18 04:40:04 fredb Exp $
 
---- configure.orig	Mon Feb 17 17:33:00 2003
+--- configure.orig	Mon Nov 25 21:08:45 2002
 +++ configure
-@@ -13620,6 +13620,11 @@ echo "${ECHO_T}no" >&6
+@@ -7792,59 +7792,6 @@ _ACEOF
+ fi
  
  
+-echo "$as_me:$LINENO: checking for main in -lcrypt" >&5
+-echo $ECHO_N "checking for main in -lcrypt... $ECHO_C" >&6
+-if test "${ac_cv_lib_crypt_main+set}" = set; then
+-  echo $ECHO_N "(cached) $ECHO_C" >&6
+-else
+-  ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lcrypt  $LIBS"
+-cat >conftest.$ac_ext <<_ACEOF
+-#line $LINENO "configure"
+-#include "confdefs.h"
+-
+-
+-int
+-main ()
+-{
+-main ();
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-rm -f conftest.$ac_objext conftest$ac_exeext
+-if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
+-  (eval $ac_link) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-         { ac_try='test -s conftest$ac_exeext'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
+-  ac_cv_lib_crypt_main=yes
+-else
+-  echo "$as_me: failed program was:" >&5
+-cat conftest.$ac_ext >&5
+-ac_cv_lib_crypt_main=no
+-fi
+-rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
+-LIBS=$ac_check_lib_save_LIBS
+-fi
+-echo "$as_me:$LINENO: result: $ac_cv_lib_crypt_main" >&5
+-echo "${ECHO_T}$ac_cv_lib_crypt_main" >&6
+-if test $ac_cv_lib_crypt_main = yes; then
+-  cat >>confdefs.h <<_ACEOF
+-#define HAVE_LIBCRYPT 1
+-_ACEOF
+-
+-  LIBS="-lcrypt $LIBS"
+-
+-fi
+-
+-
+ echo "$as_me:$LINENO: checking for main in -ld" >&5
+ echo $ECHO_N "checking for main in -ld... $ECHO_C" >&6
+ if test "${ac_cv_lib_d_main+set}" = set; then
+@@ -13619,7 +13566,57 @@ echo "${ECHO_T}no" >&6
+ 	fi
  
-+# On NetBSD, be sure to use crypt() in libcrypt, rather than libcrypto,
-+# to support non-DES passwords.
-+if test x"$this_os" = "xnetbsd"; then
+ 
++echo "$as_me:$LINENO: checking for main in -lcrypt" >&5
++echo $ECHO_N "checking for main in -lcrypt... $ECHO_C" >&6
++if test "${ac_cv_lib_crypt_main+set}" = set; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++  ac_check_lib_save_LIBS=$LIBS
++LIBS="-lcrypt  $LIBS"
++cat >conftest.$ac_ext <<_ACEOF
++#line $LINENO "configure"
++#include "confdefs.h"
++
+ 
++int
++main ()
++{
++main ();
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext conftest$ac_exeext
++if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
++  (eval $ac_link) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } &&
++         { ac_try='test -s conftest$ac_exeext'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; }; then
++  ac_cv_lib_crypt_main=yes
++else
++  echo "$as_me: failed program was:" >&5
++cat conftest.$ac_ext >&5
++ac_cv_lib_crypt_main=no
++fi
++rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
++LIBS=$ac_check_lib_save_LIBS
++fi
++echo "$as_me:$LINENO: result: $ac_cv_lib_crypt_main" >&5
++echo "${ECHO_T}$ac_cv_lib_crypt_main" >&6
++if test $ac_cv_lib_crypt_main = yes; then
++  cat >>confdefs.h <<_ACEOF
++#define HAVE_LIBCRYPT 1
++_ACEOF
++
 +  LIBS="-lcrypt $LIBS"
++
 +fi
  
  
