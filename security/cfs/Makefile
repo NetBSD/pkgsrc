@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/04/25 04:48:00 snj Exp $
+# $NetBSD: Makefile,v 1.15 2004/07/25 04:45:41 grant Exp $
 
 DISTNAME=		cfs-1.4.1
 PKGREVISION=		1
@@ -29,6 +29,7 @@ CFS_SUBST+=		cmkkey->cfs_mkkey	CMKKEY->CFS_MKKEY
 CFS_SUBST+=		cname->cfs_name		CNAME->CFS_NAME
 CFS_SUBST+=		cpasswd->cfs_passwd	CPASSWD->CFS_PASSWD
 
+.include "../../mk/compiler.mk"
 .include "../../mk/bsd.prefs.mk"
 
 MAKE_ENV+=		OPSYS="${OPSYS}"
@@ -50,7 +51,9 @@ CFS_SUBST+=		getpassword->getpass
 CFLAGS+=		-DHAVE_GETPASS
 CFS_BUILD_SCRIPT=	${WRKSRC}/netbsd_make_with_bad_rpcgen
 .elif ${OPSYS} == "SunOS"
+.  if !empty(CC_VERSION:Mgcc)
 CFLAGS+=		-traditional
+.  endif
 CFLAGS+=		-DPROTOTYPES=1
 CFLAGS+=		-DSOLARIS2X -DPORTMAP -DPTMX
 MAKE_ENV+=		MAKE=${MAKE_PROGRAM}
@@ -59,7 +62,9 @@ MAKE_ENV+=		COMPAT=
 MAKE_ENV+=		RPCOPTS=
 CFS_BUILD_SCRIPT=	${WRKSRC}/make_with_bad_rpcgen
 .elif ${OPSYS} == "Linux"
+.  if !empty(CC_VERSION:Mgcc)
 CFLAGS+=		-traditional
+.  endif
 CFLAGS+=		-DPROTOTYPES=1
 CFLAGS+=		-U__OPTIMIZE__ -U__STDC__ -Dd_fileno=d_ino
 MAKE_ENV+=		MAKE=${MAKE_PROGRAM}
