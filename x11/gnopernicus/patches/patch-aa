@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/30 17:56:40 xtraeme Exp $
+
+--- schemas/Makefile.in.orig	2003-12-30 18:35:38.000000000 +0100
++++ schemas/Makefile.in	2003-12-30 18:35:56.000000000 +0100
+@@ -165,7 +165,7 @@
+ X_LIBS = @X_LIBS@
+ gnopernicuslocaledir = @gnopernicuslocaledir@
+ 
+-schemasdir = $(sysconfdir)/gconf/schemas
++schemasdir = $(datadir)/gconf/schemas
+ schemas_DATA = brlmonitor.schemas	\
+ 		    gnopernicus.schemas  \
+ 		    remote.schemas

@@ -1,0 +1,142 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/30 17:56:40 xtraeme Exp $
+bin/brlmonitor
+bin/gnopernicus
+bin/srcore
+include/gnopernicus-1.0/libbrl/brlxmlapi.h
+include/gnopernicus-1.0/libke/libke.h
+include/gnopernicus-1.0/libmag/magxmlapi.h
+include/gnopernicus-1.0/libsrconf/libsrconf.h
+include/gnopernicus-1.0/libsrlow/SRLow.h
+include/gnopernicus-1.0/libsrlow/SRObject.h
+include/gnopernicus-1.0/libsrlow/screen-review.h
+include/gnopernicus-1.0/libsrs/srsxmlapi.h
+include/gnopernicus-1.0/libsrutil/SREvent.h
+include/gnopernicus-1.0/libsrutil/SRMessages.h
+include/gnopernicus-1.0/libsrutil/srintl.h
+include/gnopernicus-1.0/libsrutil/util.h
+lib/gnopernicus-1.0/libbrl.a
+lib/gnopernicus-1.0/libbrl.la
+lib/gnopernicus-1.0/libbrl.so
+lib/gnopernicus-1.0/libbrl.so.1
+lib/gnopernicus-1.0/libbrl.so.1.0
+lib/gnopernicus-1.0/libke.a
+lib/gnopernicus-1.0/libke.la
+lib/gnopernicus-1.0/libke.so
+lib/gnopernicus-1.0/libke.so.1
+lib/gnopernicus-1.0/libke.so.1.0
+lib/gnopernicus-1.0/libmag.a
+lib/gnopernicus-1.0/libmag.la
+lib/gnopernicus-1.0/libmag.so
+lib/gnopernicus-1.0/libmag.so.1
+lib/gnopernicus-1.0/libmag.so.1.0
+lib/gnopernicus-1.0/libsrconf.a
+lib/gnopernicus-1.0/libsrconf.la
+lib/gnopernicus-1.0/libsrconf.so
+lib/gnopernicus-1.0/libsrconf.so.1
+lib/gnopernicus-1.0/libsrconf.so.1.0
+lib/gnopernicus-1.0/libsrlow.a
+lib/gnopernicus-1.0/libsrlow.la
+lib/gnopernicus-1.0/libsrlow.so
+lib/gnopernicus-1.0/libsrlow.so.1
+lib/gnopernicus-1.0/libsrlow.so.1.0
+lib/gnopernicus-1.0/libsrs.a
+lib/gnopernicus-1.0/libsrs.la
+lib/gnopernicus-1.0/libsrs.so
+lib/gnopernicus-1.0/libsrs.so.1
+lib/gnopernicus-1.0/libsrs.so.1.0
+lib/gnopernicus-1.0/libsrutil.a
+lib/gnopernicus-1.0/libsrutil.la
+lib/gnopernicus-1.0/libsrutil.so
+lib/gnopernicus-1.0/libsrutil.so.1
+lib/gnopernicus-1.0/libsrutil.so.1.0
+lib/pkgconfig/gnopernicus-1.0.pc
+share/applications/gnopernicus.desktop
+share/gconf/schemas/brlmonitor.schemas
+share/gconf/schemas/gnopernicus.schemas
+share/gconf/schemas/remote.schemas
+share/gnome/help/brlmonitor/C/brlmonitor.xml
+share/gnome/help/brlmonitor/C/legal.xml
+share/gnome/help/gnopernicus/C/gnopernicus.xml
+share/gnome/help/gnopernicus/C/legal.xml
+share/gnopernicus/fonts/braillehc.afm
+share/gnopernicus/fonts/braillehc.pfb
+share/gnopernicus/fonts/braillehc.pfm
+share/gnopernicus/glade/gnopi_files/Braille_Monitor_Settings/braille_monitor_settings.glade2
+share/gnopernicus/glade/gnopi_files/Braille_Settings/attribute_settings.glade2
+share/gnopernicus/glade/gnopi_files/Braille_Settings/braille_device.glade2
+share/gnopernicus/glade/gnopi_files/Braille_Settings/braille_fill_char.glade2
+share/gnopernicus/glade/gnopi_files/Braille_Settings/braille_mapping.glade2
+share/gnopernicus/glade/gnopi_files/Braille_Settings/braille_settings.glade2
+share/gnopernicus/glade/gnopi_files/Braille_Settings/braille_style.glade2
+share/gnopernicus/glade/gnopi_files/Braille_Settings/cursor_settings.glade2
+share/gnopernicus/glade/gnopi_files/Braille_Settings/status_cell.glade2
+share/gnopernicus/glade/gnopi_files/Braille_Settings/translation_table.glade2
+share/gnopernicus/glade/gnopi_files/Find/find.glade2
+share/gnopernicus/glade/gnopi_files/Find/text_selected_24.png
+share/gnopernicus/glade/gnopi_files/General_Settings/general_settings.glade2
+share/gnopernicus/glade/gnopi_files/Keyboard_Mouse_Settings/keyboard_mouse_settings.glade2
+share/gnopernicus/glade/gnopi_files/Language/language.glade2
+share/gnopernicus/glade/gnopi_files/Load_Default/load_default.glade2
+share/gnopernicus/glade/gnopi_files/Magnifier_Settings/magnifier_settings.glade2
+share/gnopernicus/glade/gnopi_files/Presentation/presentation.glade2
+share/gnopernicus/glade/gnopi_files/Screen_Review/screen_review.glade2
+share/gnopernicus/glade/gnopi_files/Speech_Settings/speech_settings.glade2
+share/gnopernicus/glade/gnopi_files/User_Properties/user_properties.glade2
+share/gnopernicus/glade/gnopi_files/about.glade2
+share/gnopernicus/glade/gnopi_files/braille.xpm
+share/gnopernicus/glade/gnopi_files/gnopi.glade2
+share/gnopernicus/glade/gnopi_files/keyboard.xpm
+share/gnopernicus/glade/gnopi_files/monitor.png
+share/gnopernicus/glade/gnopi_files/start_up.png
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnopernicus.mo
+share/omf/gnopernicus/brlmonitor-C.omf
+share/omf/gnopernicus/gnopernicus-C.omf
+share/pixmaps/gnopernicus.png
+@dirrm share/omf/gnopernicus
+@dirrm share/gnopernicus/glade/gnopi_files/User_Properties
+@dirrm share/gnopernicus/glade/gnopi_files/Speech_Settings
+@dirrm share/gnopernicus/glade/gnopi_files/Screen_Review
+@dirrm share/gnopernicus/glade/gnopi_files/Presentation
+@dirrm share/gnopernicus/glade/gnopi_files/Magnifier_Settings
+@dirrm share/gnopernicus/glade/gnopi_files/Load_Default
+@dirrm share/gnopernicus/glade/gnopi_files/Language
+@dirrm share/gnopernicus/glade/gnopi_files/Keyboard_Mouse_Settings
+@dirrm share/gnopernicus/glade/gnopi_files/General_Settings
+@dirrm share/gnopernicus/glade/gnopi_files/Find
+@dirrm share/gnopernicus/glade/gnopi_files/Braille_Settings
+@dirrm share/gnopernicus/glade/gnopi_files/Braille_Monitor_Settings
+@dirrm share/gnopernicus/glade/gnopi_files
+@dirrm share/gnopernicus/fonts
+@dirrm lib/gnopernicus-1.0
+@dirrm include/gnopernicus-1.0/libsrutil
+@dirrm include/gnopernicus-1.0/libsrs
+@dirrm include/gnopernicus-1.0/libsrlow
+@dirrm include/gnopernicus-1.0/libsrconf
+@dirrm include/gnopernicus-1.0/libmag
+@dirrm include/gnopernicus-1.0/libke
+@dirrm include/gnopernicus-1.0/libbrl
