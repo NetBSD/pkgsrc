@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1041 2003/11/17 16:44:53 xtraeme Exp $
+$NetBSD: TODO,v 1.1042 2003/11/18 00:55:34 recht Exp $
 
 Suggested new packages
 ======================
@@ -129,12 +129,13 @@ Suggested package updates
 	o MozillaFirebird-bin-0.7 [grant]
 	o R-1.8.0 [markd]
 	o SDL_gfx-2.0.9
-	o TeXmacs-1.0.2.7
+	o TeXmacs-1.0.2.8
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o abiword-2.0.1
 	o abcde-2.1.9
 	o aegis-4.12 [pkg/23414]
+	o aegis-4.15
 	o amanda-2.4.4p1
 	o anjuta-1.0.2
 	o arch-1.1pre5 [pkg/23022]
@@ -279,7 +280,7 @@ Suggested package updates
 	o lwm-1.01
 	o lynx-current-2.8.5dev9
 	o maildrop-1.5.3 [pkg/22369]
-	o maildrop-1.6
+	o maildrop-1.6.3
 	o mailman-2.1.2 [pkgsrc-wip]
 	o mailsync-5.1.0
 	o marbles-1.0.6
