@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.extension,v 1.2 2002/09/23 13:41:15 markd Exp $
+# $NetBSD: Makefile.extension,v 1.3 2002/12/10 11:58:10 markd Exp $
 #
 # This Makefile fragment is included by packages for R library packages.
 #
@@ -21,7 +21,7 @@ WRKSRC=         	${WRKDIR}/${R_PKGNAME}
 NO_BUILD=		YES
 
 do-install:
-	R CMD INSTALL ${WRKDIR}/${R_PKGNAME}
+	R_LIBS= ${LOCALBASE}/bin/R CMD INSTALL ${WRKDIR}/${R_PKGNAME}
 
 # automatically generate the PLIST
 R_LIB=			lib/R/library
