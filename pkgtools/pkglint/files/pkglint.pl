@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.8 1999/05/23 20:32:00 tv Exp $
+# $NetBSD: pkglint.pl,v 1.9 1999/07/08 09:46:09 agc Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -158,7 +158,7 @@ if ($extrafile) {
 		}
 	}
 }
-foreach $i (<$portdir/patches/patch-??>) {
+foreach $i (<$portdir/patches/patch-*>) {
 	next if (! -T $i);
 	$i =~ s/^\Q$portdir\E\///;
 	next if (defined $checker{$i});
