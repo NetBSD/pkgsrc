@@ -1,0 +1,7 @@
+======================================================================
+$NetBSD: MESSAGE,v 1.1 2001/10/31 20:24:40 zuntum Exp $
+
+You must have COMPAT_12 as well as a.out support
+compiled into your kernel to use this program.
+
+======================================================================
