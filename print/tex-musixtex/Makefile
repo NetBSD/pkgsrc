@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/02/10 23:49:25 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2005/02/11 00:37:46 hubertf Exp $
 #
 
 DISTNAME=	musixtex-112
@@ -62,7 +62,11 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/system/c-source/musixflx.1 \
 		${PREFIX}/man/man1
 
-	cd ${PREFIX}/bin ; ${LN} -sf virtex musixtex
+.if exists(${LOCALBASE}/bin/virtex)
+	cd ${PREFIX}/bin ; ${LN} -sf virtex musixtex	# teTeX2
+.else
+	cd ${PREFIX}/bin ; ${LN} -sf tex musixtex	# teTeX3
+.endif
 
 	${LOCALBASE}/bin/texconfig rehash
 
