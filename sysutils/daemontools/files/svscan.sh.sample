@@ -8,7 +8,7 @@
 # Or, check login.conf(5) for a suitable
 # alternative
 #
-# I really do suggest you use /var/service as your
+# I really do suggest you use /service as your
 # service spool directory. Check hier(7) for
 # reasons.
 
@@ -31,4 +31,4 @@
 #ulimit -s ${MINSEGMENT}
 #ulimit -u ${MAXCHILD}
 
-exec /bin/csh -cf '/usr/local/bin/svscan /var/service &'
+exec /bin/csh -cf '/usr/local/bin/svscan /service &'
