@@ -1,0 +1,83 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/27 17:37:51 jlam Exp $
+
+--- src/gcc-libtool.mak.orig	Wed Dec 27 01:44:48 2000
++++ src/gcc-libtool.mak
+@@ -0,0 +1,78 @@
++#
++# Note : this makefile is for gcc-2.95 and later !
++#
++
++#
++# compiler
++#
++#LIBTOOL = libtool
++#CC = gcc
++#CXX = c++
++
++#
++# Basename for libraries
++#
++LIB_BASENAME = libstlport_gcc
++
++#
++# guts for common stuff
++#
++#
++LINK=${LIBTOOL} c++ -rpath ${PREFIX}/lib -version-info 0:0 -o
++
++OBJEXT=lo
++STEXT=la
++MV=mv -f
++RM=rm -rf
++PATH_SEP=/
++MKDIR=mkdir -p
++COMP=GCC$(ARCH)
++
++# libtool will handle also creating the shared library alongside the static one
++all: all_static
++
++include common_macros.mak
++
++WARNING_FLAGS= -Wall -W -Wno-sign-compare -Wno-unused -Wno-uninitialized -ftemplate-depth-32
++
++CXXFLAGS_COMMON = ${CXXFLAGS} ${CPPFLAGS} -I${STLPORT_DIR} ${WARNING_FLAGS}
++
++CXXFLAGS_RELEASE_static = $(CXXFLAGS_COMMON) -O2
++
++CXXFLAGS_DEBUG_static = $(CXXFLAGS_COMMON) -g
++
++CXXFLAGS_STLDEBUG_static = $(CXXFLAGS_DEBUG_static) -D__STL_DEBUG
++
++include common_rules.mak
++
++.SUFFIXES: .cpp .c .o .lo .so .a
++
++$(RELEASE_OBJDIR_static)/%.lo: %.cpp
++	$(LIBTOOL) $(CXX) $(CXXFLAGS_RELEASE_static) -c $< && \
++		$(MV) $(<:.cpp=.lo) $(<:.cpp=.o) $(RELEASE_OBJDIR_static)
++$(RELEASE_OBJDIR_static)/%.lo: %.c
++	$(LIBTOOL) $(CC) $(CXXFLAGS_RELEASE_static) -c $< && \
++		$(MV) $(<:.c=.lo) $(<:.c=.o) $(RELEASE_OBJDIR_static)
++$(RELEASE_OBJDIR_static)/%.i : %.cpp
++	$(LIBTOOL) $(CXX) $(CXXFLAGS_RELEASE_static) -E $< && \
++		$(MV) $@ $(RELEASE_OBJDIR_static)
++
++$(DEBUG_OBJDIR_static)/%.lo : %.cpp
++	$(LIBTOOL) $(CXX) $(CXXFLAGS_DEBUG_static) -c $< && \
++		$(MV) $(<:.cpp=.lo) $(<:.cpp=.o) $(DEBUG_OBJDIR_static)
++$(DEBUG_OBJDIR_static)/%.lo : %.c
++	$(LIBTOOL) $(CC) $(CXXFLAGS_DEBUG_static) -c $< && \
++		$(MV) $(<:.c=.lo) $(<:.c=.o) $(DEBUG_OBJDIR_static)
++$(DEBUG_OBJDIR_static)/%.i : %.cpp
++	$(LIBTOOL) $(CXX) $(CXXFLAGS_DEBUG_static) -E $< && \
++		$(MV) $@ $(DEBUG_OBJDIR_static)
++
++$(STLDEBUG_OBJDIR_static)/%.lo : %.cpp
++	$(LIBTOOL) $(CXX) $(CXXFLAGS_STLDEBUG_static) -c $< && \
++		$(MV) $(<:.cpp=.lo) $(<:.cpp=.o) $(STLDEBUG_OBJDIR_static)
++$(STLDEBUG_OBJDIR_static)/%.lo : %.c
++	$(LIBTOOL) $(CC) $(CXXFLAGS_STLDEBUG_static) -c $< && \
++		$(MV) $(<:.c=.lo) $(<:.c=.o) $(STLDEBUG_OBJDIR_static)
++$(STLDEBUG_OBJDIR_static)/%.i : %.cpp
++	$(LIBTOOL) $(CXX) $(CXXFLAGS_STLDEBUG_static) -E $< && \
++		$(MV) $@ $(STLDEBUG_OBJDIR_static)
