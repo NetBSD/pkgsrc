@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2001/12/02 21:29:21 wiz Exp $
+# $NetBSD: Makefile.common,v 1.23 2001/12/08 18:46:26 kristerw Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -101,7 +101,7 @@ ALL_TARGET=		std
 
 # arm32 compiler has an optimizer problem
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "arm32"
-CFLAGS=
+CFLAGS+=		-O0
 .endif
 
 .if defined(PAPERSIZE) && (${PAPERSIZE} == "A4" || ${PAPERSIZE} == "a4")
