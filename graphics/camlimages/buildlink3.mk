@@ -1,5 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/05/03 21:50:41 snj Exp $
-# XXX	BUILDLINK_DEPMETHOD.camlimages?=	build
+# $NetBSD: buildlink3.mk,v 1.2 2004/05/05 03:32:05 snj Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 CAMLIMAGES_BUILDLINK3_MK:=	${CAMLIMAGES_BUILDLINK3_MK}+
