@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2001/01/18 01:51:15 hubertf Exp $
+# $NetBSD: Makefile,v 1.79 2001/01/20 02:30:21 jtb Exp $
 #
 
     SUBDIR += 9menu
@@ -46,6 +46,7 @@
     SUBDIR += p5-Locale-Codes
     SUBDIR += p5-Search
     SUBDIR += pdmenu
+    SUBDIR += proj
     SUBDIR += pty-redir
     SUBDIR += py-readline
     SUBDIR += qterm
