@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/08/31 19:55:31 jdolecek Exp $
+# $NetBSD: Makefile,v 1.9 2003/09/19 10:10:52 wiz Exp $
 
 MODNAME=		ldap
 CATEGORIES+=		databases
@@ -6,7 +6,7 @@ PKGREVISION=		# empty
 COMMENT=		PHP4 extension for LDAP database access
 
 USE_BUILDLINK2=		YES
-DISTINFO_FILE=		${PKGDIR}/distinfo
+DISTINFO_FILE=		${.CURDIR}/distinfo
 
 .include "../../www/php4/Makefile.module"
 
