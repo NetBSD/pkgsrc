@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.5 2005/03/16 12:37:26 rillig Exp $
+
+The second semicolon belongs to an <expr> in C, and so there are
+declarations and statements intermixed. gcc-2.95.3 cannot handle this.
+
+--- src/wm.c.orig	Thu Sep 23 19:06:18 2004
++++ src/wm.c	Wed Mar 16 02:24:36 2005
+@@ -1541,7 +1541,7 @@ Client*
+ wm_make_new_client(Wm *w, Window win)
+ {
+    Window        trans_win;
+-   Atom          realType, *value = NULL;;
++   Atom          realType, *value = NULL;
+    unsigned long n, extra, val[1];
+    int           format, status;
+    Client       *c = NULL, *t = NULL, *old_main_client = NULL;
