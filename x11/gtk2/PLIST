@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2004/05/02 20:07:37 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.27 2004/06/04 17:55:01 jmmv Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-demo
@@ -289,22 +289,22 @@ lib/libgdk-x11-2.0.a
 lib/libgdk-x11-2.0.la
 lib/libgdk-x11-2.0.so
 lib/libgdk-x11-2.0.so.400
-lib/libgdk-x11-2.0.so.400.1
+lib/libgdk-x11-2.0.so.400.2
 lib/libgdk_pixbuf-2.0.a
 lib/libgdk_pixbuf-2.0.la
 lib/libgdk_pixbuf-2.0.so
 lib/libgdk_pixbuf-2.0.so.400
-lib/libgdk_pixbuf-2.0.so.400.1
+lib/libgdk_pixbuf-2.0.so.400.2
 lib/libgdk_pixbuf_xlib-2.0.a
 lib/libgdk_pixbuf_xlib-2.0.la
 lib/libgdk_pixbuf_xlib-2.0.so
 lib/libgdk_pixbuf_xlib-2.0.so.400
-lib/libgdk_pixbuf_xlib-2.0.so.400.1
+lib/libgdk_pixbuf_xlib-2.0.so.400.2
 lib/libgtk-x11-2.0.a
 lib/libgtk-x11-2.0.la
 lib/libgtk-x11-2.0.so
 lib/libgtk-x11-2.0.so.400
-lib/libgtk-x11-2.0.so.400.1
+lib/libgtk-x11-2.0.so.400.2
 lib/pkgconfig/gdk-2.0.pc
 lib/pkgconfig/gdk-pixbuf-2.0.pc
 lib/pkgconfig/gdk-pixbuf-xlib-2.0.pc
@@ -918,6 +918,8 @@ ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/gtk20.mo
+${PKGLOCALEDIR}/locale/tk/LC_MESSAGES/gtk20-properties.mo
+${PKGLOCALEDIR}/locale/tk/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gtk20-properties.mo
