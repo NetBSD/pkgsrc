@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/10/03 00:13:07 tv Exp $
+# $NetBSD: Makefile,v 1.33 2005/02/23 03:28:49 minskim Exp $
 
 DISTNAME=		libmikmod-3.1.11
 PKGNAME=		libmikmod-3.1.11.1
@@ -13,6 +13,8 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=		kuebart@mathematik.uni-ulm.de
 HOMEPAGE=		http://mikmod.raphnet.net/
 COMMENT=		MikMod Sound Library
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		# defined
