@@ -1,42 +1,30 @@
-# $NetBSD: Makefile,v 1.12 1998/12/03 17:40:46 tv Exp $
+# $NetBSD: Makefile,v 1.13 1999/04/25 19:10:16 tv Exp $
 #
 
-DISTNAME=		rsaref20
+DISTNAME=		rsaref
 PKGNAME=		rsaref-2.0
 WRKSRC=			${WRKDIR}/install
 CATEGORIES=		security
-MASTER_SITES=		${RSA_SITE}
+MASTER_SITES=		ftp://ftp.spinnaker.com/pub/crypt/rsaref/
 EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		tv@netbsd.org
-HOMEPAGE=		http://www.rsa.com/rsalabs/newfaq/q174.html
-
-USE_LIBTOOL=		yes
 
 RESTRICTED=		"Cryptographic source usable only within the USA"
 MIRROR_DISTFILE=	no
-IS_INTERACTIVE=		yes
+IS_INTERACTIVE=		yes # requires options to be set in order to use
 LICENSE=		no-commercial-use
 
+USE_LIBTOOL=		yes
 MAKEFILE=		unix/makefile
 ALL_TARGET=		librsaref.la
 
-RSA_SITE=		ftp://ftp.rsa.com/rsaref/
-
-# XXX time-dependent directory; can't give a sensible response
-fetch-list:
-	@${DO_NADA}
-
-do-fetch:
+fetch-depends:
 	@if [ "X${USA_RESIDENT}" != XYES ]; then	\
 		${ECHO} "This package is legal for use only within the United States."; \
 		${ECHO} "You must set the variable USA_RESIDENT to YES to enable"; \
 		${ECHO} "use of the rsaref package.";	\
-	elif [ ! -f ${DISTDIR}/${DISTFILES} ]; then \
-		${MKDIR} ${WRKDIR} || ${TRUE};  \
-		${RM} -f ${WRKDIR}/README; \
-		cd ${WRKDIR} && ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${RSA_SITE}README ${FETCH_AFTER_ARGS} && \
-		cd ${_DISTDIR} && ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${RSA_SITE}`egrep '^dist/U\.S\.-only-' ${WRKDIR}/README`/${DISTNAME}${EXTRACT_SUFX} ${FETCH_AFTER_ARGS}; \
+		${FALSE};				\
 	fi
 
 do-configure:
