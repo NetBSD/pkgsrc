@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/10/24 22:11:08 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/04/23 02:08:54 jlam Exp $
 #
 
 DISTNAME=	plan-1.8.4
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.in-berlin.de/User/bitrot/plan.html
 COMMENT=	Schedule planner based on X/Motif
 
 USE_BUILDLINK_ONLY=	YES
+USE_X11BASE=		YES
 ALL_TARGET=		netbsd
 
 pre-install:
