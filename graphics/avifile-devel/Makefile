@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2002/10/09 13:05:02 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2003/02/02 21:53:25 zuntum Exp $
 #
 
 DISTNAME=	avifile-0.6.20010814
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://divx.euro.ru/
+HOMEPAGE=	http://avifile.sourceforge.net/
 COMMENT=	MPEG-4 (DivX) video player library
 
 DEPENDS+=	win32-codecs>=010122:../../graphics/win32-codecs
