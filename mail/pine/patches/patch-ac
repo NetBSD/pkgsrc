@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.9 2000/11/09 03:37:26 hubertf Exp $
+$NetBSD: patch-ac,v 1.10 2000/12/18 18:09:11 jwise Exp $
 
 --- pine/makefile.neb.orig	Thu Aug 27 18:50:02 1998
 +++ pine/makefile.neb
@@ -30,7 +30,7 @@ $NetBSD: patch-ac,v 1.9 2000/11/09 03:37:26 hubertf Exp $
 -LOCLIBS=     $(PICODIR)/libpico.a $(CCLIENTDIR)/c-client.a
 -LIBS=        $(EXTRALIBES) $(LOCLIBS) $(LDAPLIBS) $(STDLIBS) \
 -             `cat $(CCLIENTDIR)/LDFLAGS`
-+STDLIBS=     -ltermlib -lcrypt
++STDLIBS=     -ltermlib -lssl -lcrypto -lcrypt
 +LOCLIBS=     -lpico $(CCLIENTLIB)/libimapuw.la
 +LIBS=        -L$(PREFIX)/lib -Wl,-R$(PREFIX)/lib/ $(EXTRALIBES) $(LOCLIBS) $(LDAPLIBS) $(STDLIBS)
  
