@@ -1,0 +1,4 @@
+Spamprobe is a fast, intelligent, automatic spam detector using Bayesian
+analysis of terms contained in emails. Works with procmail, maildrop or a
+similar tool to produce a complete server or client side spam filtering
+system.
