@@ -1,0 +1,164 @@
+--- /dev/null	Sat Mar  7 13:11:05 1998
++++ sgi_a.c	Sat Mar  7 13:30:25 1998
+@@ -0,0 +1,161 @@
++/* 
++
++    TiMidity -- Experimental MIDI to WAVE converter
++    Copyright (C) 1995 Tuukka Toivonen <toivonen@clinet.fi>
++
++    This program is free software; you can redistribute it and/or modify
++    it under the terms of the GNU General Public License as published by
++    the Free Software Foundation; either version 2 of the License, or
++    (at your option) any later version.
++
++    This program is distributed in the hope that it will be useful,
++    but WITHOUT ANY WARRANTY; without even the implied warranty of
++    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++    GNU General Public License for more details.
++
++    You should have received a copy of the GNU General Public License
++    along with this program; if not, write to the Free Software
++    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
++
++    sgi_audio.c
++
++    Functions to play sound on a SGI's audio device.
++
++    THESE ARE UNTESTED -- If you need to make modifications to get
++    them to work, please send me the diffs, preferrably with a brief 
++    explanation of what was wrong. Thanks!
++
++*/
++
++#include <unistd.h>
++#include <fcntl.h>
++#include <errno.h>
++
++#include <sys/ioctl.h> 
++
++#include <audio.h>
++
++#include "config.h"
++#include "output.h"
++#include "controls.h"
++
++static int open_output(void); /* 0=success, 1=warning, -1=fatal error */
++static void close_output(void);
++static void output_data(int32 *buf, int32 count);
++static void flush_output(void);
++static void purge_output(void);
++
++/* export the playback mode */
++
++#define dpm sgi_play_mode
++
++PlayMode dpm = {
++  DEFAULT_RATE, PE_16BIT|PE_SIGNED,
++  -1,
++  {0,0,0,0,0}, /* no extra parameters so far */
++  "SGI audio device", 'd',
++  NULL,
++  open_output,
++  close_output,
++  output_data,
++  flush_output,
++  purge_output  
++};
++
++static ALport port;
++static ALconfig config;
++
++/*************************************************************************/
++/*
++   Encoding will be 16-bit linear signed, unless PE_ULAW is set, in
++   which case it'll be 8-bit uLaw. I don't think it's worthwhile to
++   implement any 8-bit linear modes as the sound quality is
++   unrewarding. PE_MONO is honored.  */
++
++static int open_output(void)
++{
++  int warnings=0;
++  long params[2];
++  
++  /* Open the audio device */
++
++  config = ALnewconfig();
++
++  /* Does any device need byte-swapped data? Turn the bit off here. */
++  dpm.encoding &= ~PE_BYTESWAP;
++
++  ctl->cmsg(CMSG_INFO,VERB_DEBUG, 
++	    "1. (dpm.encoding=0x%02x  dpm.rate=%d)",
++	    dpm.encoding, dpm.rate);
++
++  /* Select 16-bit linear / 8-bit uLaw encoding */
++
++  dpm.encoding &= ~PE_ULAW;
++  dpm.encoding |= PE_16BIT|PE_SIGNED;
++  ALsetwidth(config, AL_SAMPLE_16);
++  ALsetsampfmt(config, AL_SAMPFMT_TWOSCOMP);
++
++  if (dpm.encoding & PE_MONO)
++    ALsetchannels(config, AL_MONO);
++  else
++    ALsetchannels(config, AL_STEREO);
++
++  ALsetqueuesize(config, 32768);
++
++  port = ALopenport("tiMIDIty audio", "w", config);
++
++  if (port == 0)
++    {
++      ctl->cmsg(CMSG_ERROR, VERB_NORMAL,
++		"Can't open audio port");
++      return -1;
++    }
++
++  params[0] = AL_OUTPUT_RATE;
++  params[1] = dpm.rate;
++  ALsetparams(AL_DEFAULT_DEVICE, params, 2);
++  ALgetparams(AL_DEFAULT_DEVICE, params, 2);
++
++  if (dpm.rate != params[1])
++    {
++      dpm.rate = params[1];
++      ctl->cmsg(CMSG_WARNING, VERB_VERBOSE,
++		"Output rate adjusted to %d Hz", dpm.rate);
++      warnings=1;
++    }
++
++  ctl->cmsg(CMSG_INFO,VERB_DEBUG, 
++	    "1. (dpm.encoding=0x%02x  dpm.rate=%d)",
++	    dpm.encoding, dpm.rate);
++
++  return warnings;
++}
++
++static void output_data(int32 *buf, int32 count)
++{
++  /* Convert data to signed 16-bit PCM */
++  if (dpm.encoding & PE_MONO)
++    {
++      s32tos16(buf, count);
++      ALwritesamps(port, buf, count);
++    }
++  else
++    {
++      s32tos16(buf, count * 2);
++      ALwritesamps(port, buf, count * 2);
++    }
++}
++
++static void close_output(void)
++{
++  ALcloseport(port);
++  ALfreeconfig(config);
++}
++
++static void flush_output(void)
++{
++}
++
++static void purge_output(void)
++{
++}

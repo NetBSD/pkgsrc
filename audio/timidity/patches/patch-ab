@@ -1,13 +1,13 @@
---- Makefile.orig	Sun May 26 10:26:46 1996
-+++ Makefile	Mon Jan 26 16:54:39 1998
+--- Makefile.orig	Sun May 26 05:26:46 1996
++++ Makefile	Sat Mar  7 13:17:50 1998
 @@ -24,22 +24,23 @@
  # But where to change without revealing my secret identity?
  
  ########### Compiler and flags.
 -CC = gcc
 -DEBUGFLAGS = -Wall -O2
-+#CC = gcc
-+DEBUGFLAGS = -Wall
++CC = cc
++DEBUGFLAGS = -Wall -O3 -fomit-frame-pointer -funroll-loops -ffast-math
  
  ########### Install.
 -INSTALL = /usr/bin/install
@@ -30,31 +30,63 @@
  
  # Where to install the Tcl code, if you use the Tcl code that is.
  TCL_DIR = $(TIMID_DIR)
-@@ -93,8 +94,8 @@
+@@ -54,8 +55,8 @@
+ # do some axe work.
+ 
+ # Select the Linux/FreeBSD audio driver
+-SYSTEM += -DAU_LINUX
+-SYSEXTRAS += linux_a.c
++#SYSTEM += -DAU_LINUX
++#SYSEXTRAS += linux_a.c
+ #EXTRAINCS +=
+ #EXTRALIBS += 
+ 
+@@ -77,6 +78,18 @@
+ #EXTRAINCS += -I/usr/demo/SOUND/include
+ #EXTRALIBS += -L/usr/demo/SOUND/lib -laudio -lsocket
+ 
++## Select the Sun audio driver (for NetBSD)
++SYSTEM += -DAU_SUN
++SYSEXTRAS += sun_a.c
++EXTRAINCS +=
++EXTRALIBS +=
++
++## Select the IRIX audio driver
++#SYSTEM += -DAU_SGI
++#SYSEXTRAS += sgi_a.c
++#EXTRAINCS +=
++#EXTRALIBS += -laudio
++
+ ## Select the DEC MMS audio server
+ #SYSTEM += -DDEC -DAU_DEC
+ #SYSEXTRAS += dec_a.c
+@@ -93,8 +106,8 @@
  # Select the ncurses full-screen interface
  SYSTEM += -DIA_NCURSES
  SYSEXTRAS += ncurs_c.c
 -EXTRAINCS += -I/usr/include/ncurses
 -EXTRALIBS += -lncurses
 +EXTRAINCS += -I${PREFIX}/include
-+EXTRALIBS += -L${PREFIX}/lib -lncurses -lossaudio
++EXTRALIBS += -L${PREFIX}/lib -lncurses
  
  ## Select the S-Lang full-screen interface
  #SYSTEM += -DIA_SLANG
-@@ -112,9 +113,9 @@
+@@ -112,11 +125,11 @@
  #EXTRALIBS += -lgen
  
  # Select the Tcl/Tk interface
 -SYSTEM += -DTCLTK -DWISH=\"wishx\" -DTKPROGPATH=\"$(TCL_DIR)/tkmidity.tcl\"
--SYSEXTRAS += tk_c.c
--INST_TK = install.tk
-+#SYSTEM += -DTCLTK -DWISH=\"wishx\" -DTKPROGPATH=\"$(TCL_DIR)/tkmidity.tcl\"
-+#SYSEXTRAS += tk_c.c
-+#INST_TK = install.tk
- #EXTRAINCS +=
- #EXTRALIBS +=
++SYSTEM += -DTCLTK -DWISH=\"wish8.0\" -DTKPROGPATH=\"$(TCL_DIR)/tkmidity.tcl\"
+ SYSEXTRAS += tk_c.c
+ INST_TK = install.tk
+-#EXTRAINCS +=
+-#EXTRALIBS +=
++EXTRAINCS +=
++EXTRALIBS +=
  
-@@ -136,7 +137,7 @@
+ ########### Now check out the options in config.h
+ 
+@@ -136,7 +149,7 @@
  SDIST = timidity-lib-$(SUPPVERSION).tar.gz
  SDISTZIP = tilib$(FNSUPPVERSION).zip
  
@@ -63,7 +95,7 @@
  	-DTIMID_VERSION=\"$(VERSION)\" $(SYSTEM) $(EXTRAINCS)
  
  ########### All relevant files.. Anybody know autoconf?
-@@ -228,10 +229,10 @@
+@@ -228,10 +241,10 @@
  wav2pat: wav2pat.c
  	$(CC) $(CFLAGS) -o wav2pat wav2pat.c
  
@@ -78,7 +110,7 @@
  
  ########### Installation targets
  
-@@ -262,9 +263,9 @@
+@@ -262,9 +275,9 @@
  	mkdir -p $(TIMID_DIR)
  	$(INSTALL) -m 644 $(CONFIGF) $(TIMID_DIR)
  
