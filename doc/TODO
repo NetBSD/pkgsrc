@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3259 2005/03/22 15:51:27 wiz Exp $
+$NetBSD: TODO,v 1.3260 2005/03/22 15:53:23 cube Exp $
 
 Suggested new packages
 ======================
@@ -481,7 +481,6 @@ Suggested package updates
 	o gifsicle-1.42
 	o gift-openft-0.2.1.4
 	o git-4.3.20
-	o gkrellm-leds-0.8.2
 	o gkrellm-multiping-2.0.9
 	o gkrellm-xmms-2.1.22
 	o gkrellm1-moon-0.6
