@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/03/29 12:40:55 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/04/01 00:28:25 salo Exp $
 #
 
-DISTNAME=	baekmuk-ttf-2.0
+DISTNAME=	baekmuk-ttf-2.1
 WRKSRC=		${WRKDIR}
-PKGREVISION=	1
 CATEGORIES=	fonts korean
 MASTER_SITES=	ftp://ftp.mizi.com/pub/baekmuk/
 
