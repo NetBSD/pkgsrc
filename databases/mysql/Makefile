@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/06/22 10:55:21 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1998/06/23 11:09:33 agc Exp $
 #
 
 DISTNAME=	mysql-3.21.31
@@ -22,8 +22,6 @@ USE_GMAKE=	yes
 USE_PERL5=	yes
 
 INFO_FILES=	mysql.info
-
-MAN1=		mysql.1
 
 pre-install:
 	${INSTALL_DATA} ${WRKSRC}/Docs/mysql.info ${PREFIX}/info
