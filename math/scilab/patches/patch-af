@@ -1,7 +1,8 @@
-$NetBSD: patch-af,v 1.4 2001/04/08 16:25:28 dmcmahill Exp $
+$NetBSD: patch-af,v 1.5 2001/12/22 00:03:26 dmcmahill Exp $
 
 libtool needs a tag for f77/f2c
 also be sure to link the fortran libs
+also allow FCTMEX to be empty.
 
 --- Makemex.in.orig	Tue May  9 06:46:04 2000
 +++ Makemex.in	Sun Apr  1 21:44:35 2001
@@ -21,3 +22,47 @@ also be sure to link the fortran libs
 +LINK = $(LIBTOOL) --mode=link $(QUIET)  $(CC) $(CFLAGS) $(LDFLAGS) $(FLIBS) -o $@
  
  OBJECTS = $(LIBRARY)_gateway.lo $(OTHEROBJECTS:.o=.lo)
+@@ -85,16 +86,16 @@
+ 	@echo "------------------------------------------";
+ 	@echo "To load the function(s): ";
+-	@for i in $(FCTMEX) ;\
++	@if test "X$(FCTMEX)" != "X"; then for i in $(FCTMEX) ;\
+ 	do (\
+ 	name=`dirname $$i`; \
+ 	echo "              $$name; " \
+ 	); \
+-	done
+-	@for i in $(FORTRANFCTMEX) ;\
++	done ; fi
++	@if test "X$(FORTRANFCTMEX)" != "X"; then for i in $(FORTRANFCTMEX) ;\
+ 	do (\
+ 	name=`dirname $$i`; \
+ 	echo "              $$name; " \
+ 	); \
+-	done
++	done ; fi
+ 	@echo " at Scilab prompt, enter:";
+ 	@echo "-->exec $(LIBRARY).sce";
+@@ -118,5 +119,5 @@
+ 
+ GATEWAYS:
+-	@for f in $(FCTMEX); \
++	@if test "X$(FCTMEX)" != "X"; then for f in $(FCTMEX); \
+ 	do \
+ 	obj=`basename $$f .c`; \
+@@ -124,6 +125,6 @@
+ 	make $$obj.o MEX=mex_$$mex ; \
+ 	make $$obj.lo MEX=mex_$$mex ; \
+-	done;
+-	@for f in $(FORTRANFCTMEX); \
++	done; fi
++	@if test "X$(FORTRANFCTMEX)" != "X"; then for f in $(FORTRANFCTMEX); \
+ 	do \
+ 	obj=`basename $$f .F`; \
+@@ -131,5 +132,5 @@
+ 	make $$obj.o MEX=mex$$mex ; \
+ 	make $$obj.lo MEX=mex$$mex ; \
+-	done;
++	done; fi
+ 
+ .c.o:
