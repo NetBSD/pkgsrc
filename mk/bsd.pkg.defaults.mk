@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.157 2003/06/29 21:25:49 jschauma Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.158 2003/06/30 07:34:37 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1861,12 +1861,6 @@ XCHAT_USE_SSL?=	YES
 #           sphere, spiral, spline, star, starfish, strange, swarm, swirl,
 #           t3d, tetris, thornbird, tik_tak, triangle, tube, turtle, vines,
 #           voters, wator, wire, world, worm, xcl, xjack, not defined
-# Default: not defined
-
-#XLOCK_LIGHT=
-# Used to build xlockmore without support for GL True Text, Motif, OpenGL,
-# Mesa 3D libraries and XPM pixmaps.
-# Possible: defined, not defined
 # Default: not defined
 
 #ZIP_ENCRYPTION=
