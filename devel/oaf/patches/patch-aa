@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/07/16 19:44:18 rh Exp $
+
+--- idl/Makefile.in.orig	Tue Jul  4 00:10:32 2000
++++ idl/Makefile.in	Sun Jul 16 20:35:37 2000
+@@ -90,7 +90,7 @@
+ YACC = @YACC@
+ 
+ idldir = $(datadir)/idl
+-idl_DATA = oaf.idl gnome-factory.idl
++idl_DATA = oaf.idl gnome-factory-oaf.idl
+ EXTRA_DIST = $(idl_DATA)
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../config.h
+@@ -177,6 +177,8 @@
+ installdirs:
+ 	$(mkinstalldirs)  $(DESTDIR)$(idldir)
+ 
++gnome-factory-oaf.idl: gnome-factory.idl
++	cp gnome-factory.idl gnome-factory-oaf.idl
+ 
+ mostlyclean-generic:
+ 

@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/07/16 19:44:18 rh Exp $
+
+--- liboaf/Makefile.in.orig	Tue Jul  4 00:10:32 2000
++++ liboaf/Makefile.in	Sun Jul 16 20:33:37 2000
+@@ -392,8 +392,8 @@
+ 	$(ORBIT_IDL) --noskels -I$(top_srcdir)/idl --define=OAF_COMPILATION $(top_srcdir)/idl/oaf.idl
+ 	touch stamp-idl
+ 
+-gnome-factory.h stamp-factory-idl: $(top_srcdir)/idl/gnome-factory.idl
+-	$(ORBIT_IDL) --noskels -I$(top_srcdir)/idl --define=GNOME_FACTORY_COMPILATION $(top_srcdir)/idl/gnome-factory.idl
++gnome-factory.h stamp-factory-idl: $(top_srcdir)/idl/gnome-factory-oaf.idl
++	$(ORBIT_IDL) --noskels -I$(top_srcdir)/idl --define=GNOME_FACTORY_COMPILATION $(top_srcdir)/idl/gnome-factory-oaf.idl
+ 	touch stamp-factory-idl
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.

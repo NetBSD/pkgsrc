@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/07/16 19:44:18 rh Exp $
+
+--- oafd/main.c.orig	Fri Jun  2 04:45:24 2000
++++ oafd/main.c	Sun Jul 16 20:33:37 2000
+@@ -1,7 +1,7 @@
+ /* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*- */
+ #include "config.h"
+ 
+-#include <popt.h>
++#include <popt-gnome.h>
+ #include <signal.h>
+ #include <stdlib.h>
+ 
