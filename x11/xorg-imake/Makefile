@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/07/30 08:31:23 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/07/30 22:47:47 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-imake-${XORG_VER}
@@ -14,7 +14,7 @@ COMMENT=	Imake and other utilities from X.org
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 USE_BUILDLINK3=		yes
-USE_DIRS+=		xorg-1.0
+USE_DIRS+=		xorg-1.1
 INSTALL_TARGET=		install install.man
 NO_XORG_TARGETS=	yes
 CHECK_X11_TYPE=		yes
@@ -46,8 +46,7 @@ pre-configure:
 		-e "s|@@PKGSRC_CPP@@|${CPP}|g" \
 		-e "s|@@PKGSRC_CXX@@|${CXX}|g" \
 		-e "s|@@PKGSRC_CFLAGS@@|${CFLAGS}|g" \
-		${WRKSRC}/config/cf/${F}.cf.in > \
-		${WRKSRC}/config/cf/${F}.cf
+		${WRKSRC}/config/cf/${F}.cf.in > ${WRKSRC}/config/cf/${F}.cf
 .endfor
 .undef F
 	@( \
@@ -67,8 +66,9 @@ do-build:
 	cd ${WRKSRC} && ${MAKE} Makefile.boot && \
 	${MAKE_PROGRAM} -f xmakefile VerifyOS version.def Makefiles includes
 
-# These files are handled by xorg-libs.
-post-install:
-	@${RM} -rf ${X11ROOT}/include
+pre-install:
+	@${CP} ${WRKSRC}/xmakefile ${WRKSRC}/xmakefile.bak
+	@${SED} 's/SUBDIRS = include/SUBDIRS =/' ${WRKSRC}/xmakefile.bak > \
+		${WRKSRC}/xmakefile
 
 .include "../../mk/bsd.pkg.mk"
