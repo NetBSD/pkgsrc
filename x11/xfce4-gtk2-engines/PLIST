@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/01/17 12:56:13 martti Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/03/18 07:59:09 martti Exp $
 lib/gtk-2.0/2.4.0/engines/libxfce.la
 share/themes/Xfce-4.0/ICON.png
 share/themes/Xfce-4.0/README.html
@@ -74,4 +74,4 @@ share/themes/Xfce/gtk-2.0/gtkrc
 @dirrm share/themes/Xfce-b5
 @dirrm share/themes/Xfce-4.0/gtk-2.0
 @dirrm share/themes/Xfce-4.0
-@unexec ${RMDIR} share/themes/Xfce 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/themes/Xfce 2>/dev/null || ${TRUE}
