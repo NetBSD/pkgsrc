@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/06/11 06:34:56 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2001/06/17 17:46:32 jlam Exp $
 #
 
 DISTNAME=	${PKGNAME}-source
@@ -19,7 +19,6 @@ HOMEPAGE=	http://www.fltk.org/
 COMMENT=	Fast Light Tool Kit for graphical user interfaces
 
 USE_X11BASE=	# defined
-USE_MESA=	# defined
 USE_GMAKE=	# defined
 USE_LIBTOOL=	# defined
 
