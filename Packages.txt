@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.123 2000/11/01 12:05:15 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.124 2000/11/02 03:03:39 wiz Exp $
 ###########################################################################
 
 			==========================
@@ -1771,14 +1771,14 @@ For example, in mail/mutt, the relevant lines are:
 USE_CURSES=		YES
 REPLACE_NCURSES=	configure configure.in
 [...]
-.include "../../mk/bsd.pkg.mk"
+.include "../../mk/bsd.prefs.mk"
 
 .if defined(NEED_NCURSES) && ${NEED_NCURSES} == "YES"
 CONFIGURE_ARGS+=	--with-curses=${LOCALBASE}
 .endif
 
 Please note that the check for NEED_NCURSES has to be below the
-inclusion of bsd.pkg.mk, since the variable is set there.
+inclusion of bsd.prefs.mk, since the variable is set there.
 
 
  10 Submitting & Committing
