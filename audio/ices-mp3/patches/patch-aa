@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/24 18:08:13 kim Exp $
+
+--- src/definitions.h.orig	2003-06-19 18:17:27.000000000 -0400
++++ src/definitions.h	2004-04-17 03:04:00.000000000 -0400
+@@ -53,9 +53,11 @@
+ # define __USE_POSIX
+ #endif
+ 
++#ifndef __NetBSD__
+ #ifndef _POSIX_C_SOURCE
+ #define _POSIX_C_SOURCE 199506L
+ #endif
++#endif
+ 
+ /* This for freebsd (needed on 3.2 at least) */
+ #ifdef SOMEBSD

@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/24 18:08:13 kim Exp $
+bin/${PKGBASE}
+man/man1/${PKGBASE}.1
+share/doc/${PKGBASE}/AUTHORS
+share/doc/${PKGBASE}/BUGS
+share/doc/${PKGBASE}/COPYING
+share/doc/${PKGBASE}/NEWS
+share/doc/${PKGBASE}/README
+share/doc/${PKGBASE}/README.playlist
+share/doc/${PKGBASE}/TODO
+share/doc/${PKGBASE}/icesmanual.html
+share/examples/${PKGBASE}/ices.conf.dist
+share/examples/${PKGBASE}/ices.pm.dist
+share/examples/${PKGBASE}/ices.py.dist
+@exec ${MKDIR} %D/share/${PKGBASE}
+@dirrm share/${PKGBASE}
+@dirrm share/doc/${PKGBASE}
+@dirrm share/examples/${PKGBASE}
