@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/11 17:45:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/12 08:15:35 jmmv Exp $
 #
 
 .include "Makefile.common"
+
+PKGREVISION=	1
 
 PKG_USERS=	messagebus:messagebus::System\\ message\\ bus:${VARBASE}/run/dbus:/sbin/nologin
 PKG_GROUPS=	messagebus
 
 MAKE_DIRS=	${PKG_SYSCONFDIR}/event.d
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/system.d
-OWN_DIRS_PERMS=	${VARBASE}/run/dbus messagebus messagebus 0755
 
 RCD_SCRIPTS=	dbus
 
