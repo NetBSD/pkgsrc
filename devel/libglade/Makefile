@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/08/27 20:50:50 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/08/29 12:48:23 rh Exp $
 #
 
 DISTNAME=	libglade-0.4
@@ -9,7 +9,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.daa.com.au/~james/gnome/
 
 DEPENDS+=	mawk-1.2.2:../../lang/mawk
-DEPENDS+=	gnome-libs-1.0.10:../../x11/gnome-libs
+DEPENDS+=	gnome-libs-1.0.14:../../x11/gnome-libs
 DEPENDS+=	libxml-1.4.0:../../textproc/libxml
 
 GNU_CONFIGURE=	YES
