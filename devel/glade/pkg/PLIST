@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2001/02/26 20:19:44 tron Exp $
+@comment $NetBSD: PLIST,v 1.10 2001/04/07 06:40:13 rh Exp $
 bin/glade
 share/doc/glade/README
 share/doc/glade/TODO
@@ -29,6 +29,9 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/glade.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/glade.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/glade.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/glade.mo
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/glade.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/glade.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/glade.mo
 share/gnome/apps/Development/glade.desktop
 share/gnome/help/glade/C/topic.dat
 share/gnome/help/glade/C/user-guide/user-guide-images/edit-menu.png
@@ -83,6 +86,7 @@ share/gnome/help/glade/C/user-guide/windows.html
 share/gnome/help/glade/C/user-guide/x225.html
 share/gnome/help/glade/C/user-guide/x324.html
 share/gnome/help/glade/C/user-guide/docbook.css
+share/gnome/help/glade/C/user-guide/user-guide.sgml
 share/gnome/help/glade/C/faq/stylesheet-images/caution.gif
 share/gnome/help/glade/C/faq/stylesheet-images/home.gif
 share/gnome/help/glade/C/faq/stylesheet-images/important.gif
@@ -98,6 +102,8 @@ share/gnome/help/glade/C/faq/stylesheet-images/warning.gif
 share/gnome/help/glade/C/faq/index.html
 share/gnome/help/glade/C/faq/ln7.html
 share/gnome/help/glade/C/faq/docbook.css
+share/gnome/help/glade/C/faq/faq.sgml
+share/gnome/help/glade/C/turbo-start/turbo-start.sgml
 share/gnome/help/glade/C/turbo-start/stylesheet-images/caution.gif
 share/gnome/help/glade/C/turbo-start/stylesheet-images/home.gif
 share/gnome/help/glade/C/turbo-start/stylesheet-images/important.gif
@@ -113,6 +119,23 @@ share/gnome/help/glade/C/turbo-start/stylesheet-images/warning.gif
 share/gnome/help/glade/C/turbo-start/index.html
 share/gnome/help/glade/C/turbo-start/ln7.html
 share/gnome/help/glade/C/turbo-start/docbook.css
+share/gnome/help/glade/it/faq/docbook.css
+share/gnome/help/glade/it/faq/index.html
+share/gnome/help/glade/it/faq/ln10.html
+share/gnome/help/glade/it/faq/stylesheet-images/caution.gif
+share/gnome/help/glade/it/faq/stylesheet-images/home.gif
+share/gnome/help/glade/it/faq/stylesheet-images/important.gif
+share/gnome/help/glade/it/faq/stylesheet-images/next.gif
+share/gnome/help/glade/it/faq/stylesheet-images/note.gif
+share/gnome/help/glade/it/faq/stylesheet-images/prev.gif
+share/gnome/help/glade/it/faq/stylesheet-images/tip.gif
+share/gnome/help/glade/it/faq/stylesheet-images/toc-blank.gif
+share/gnome/help/glade/it/faq/stylesheet-images/toc-minus.gif
+share/gnome/help/glade/it/faq/stylesheet-images/toc-plus.gif
+share/gnome/help/glade/it/faq/stylesheet-images/up.gif
+share/gnome/help/glade/it/faq/stylesheet-images/warning.gif
+share/gnome/help/glade/it/topic.dat
+share/glade/gnome/gnome-gettext.m4
 share/glade/gnome/gperf-check.m4
 share/pixmaps/glade.png
 share/pixmaps/glade/glade_logo.png
@@ -141,6 +164,12 @@ share/glade/gnome/gnome-xml-check.m4
 share/glade/gnome/gnome.m4
 share/glade/gnome/linger.m4
 share/glade/gnome/need-declaration.m4
+share/omf/glade/faq-C.omf
+share/omf/glade/turbo-start-C.omf
+share/omf/glade/user-guide-C.omf
+@dirrm share/gnome/help/glade/it/faq/stylesheet-images
+@dirrm share/gnome/help/glade/it/faq
+@dirrm share/gnome/help/glade/it
 @dirrm share/gnome/help/glade/C/faq/stylesheet-images
 @dirrm share/gnome/help/glade/C/faq
 @dirrm share/gnome/help/glade/C/turbo-start/stylesheet-images
@@ -152,6 +181,7 @@ share/glade/gnome/need-declaration.m4
 @dirrm share/gnome/help/glade
 @dirrm share/pixmaps/glade
 @dirrm share/doc/glade
+@dirrm share/omf/glade
 @dirrm share/glade/gnome
 @dirrm share/glade/gtk
 @dirrm share/glade
