@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8387 2004/12/21 07:01:07 martti Exp $
+$NetBSD: CHANGES,v 1.8388 2004/12/21 10:06:15 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6449,3 +6449,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated qmail to 1.03nb10 [schmonz 2004-12-21]
 	Updated lyx-qt to 1.3.5 [martti 2004-12-21]
 	Updated lyx-xforms to 1.3.5 [martti 2004-12-21]
+	Updated mozilla-bin to 1.7.5 [tron 2004-12-21]
