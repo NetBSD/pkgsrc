@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.515 2003/05/05 12:12:25 wiz Exp $
+$NetBSD: TODO,v 1.516 2003/05/05 12:23:29 cjep Exp $
 
 Suggested new packages
 ======================
@@ -161,7 +161,6 @@ Suggested package updates
 	o jove-4.16.0.61
 	o larswm-7.2.10
 	o lcms-1.0.9
-	o leafnode-1.9.39
 	o lesstif-0.93.41
 	o libaudiofile-1.0.5
 	o libole2-2.2.8
