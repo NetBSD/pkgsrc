@@ -1,53 +1,39 @@
-@comment $NetBSD: PLIST,v 1.2 2004/01/04 18:00:28 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/04/01 18:26:22 jmmv Exp $
 bin/croco-config
 bin/csslint
-include/libcroco/layeng/cr-box-view.h
-include/libcroco/layeng/cr-box.h
-include/libcroco/layeng/cr-lay-eng.h
-include/libcroco/libcroco.h
-include/libcroco/parser/cr-additional-sel.h
-include/libcroco/parser/cr-attr-sel.h
-include/libcroco/parser/cr-cascade.h
-include/libcroco/parser/cr-declaration.h
-include/libcroco/parser/cr-doc-handler.h
-include/libcroco/parser/cr-enc-handler.h
-include/libcroco/parser/cr-input.h
-include/libcroco/parser/cr-num.h
-include/libcroco/parser/cr-om-parser.h
-include/libcroco/parser/cr-parser.h
-include/libcroco/parser/cr-pseudo.h
-include/libcroco/parser/cr-rgb.h
-include/libcroco/parser/cr-selector.h
-include/libcroco/parser/cr-simple-sel.h
-include/libcroco/parser/cr-statement.h
-include/libcroco/parser/cr-stylesheet.h
-include/libcroco/parser/cr-term.h
-include/libcroco/parser/cr-tknzr.h
-include/libcroco/parser/cr-token.h
-include/libcroco/parser/cr-utils.h
-include/libcroco/parser/libcroco-config.h
-include/libcroco/seleng/cr-fonts.h
-include/libcroco/seleng/cr-sel-eng.h
-include/libcroco/seleng/cr-style.h
-lib/libcrlayeng.a
-lib/libcrlayeng.la
-lib/libcrlayeng.so
-lib/libcrlayeng.so.2
-lib/libcrlayeng.so.2.0
+include/libcroco/libcroco/cr-additional-sel.h
+include/libcroco/libcroco/cr-attr-sel.h
+include/libcroco/libcroco/cr-cascade.h
+include/libcroco/libcroco/cr-declaration.h
+include/libcroco/libcroco/cr-doc-handler.h
+include/libcroco/libcroco/cr-enc-handler.h
+include/libcroco/libcroco/cr-fonts.h
+include/libcroco/libcroco/cr-input.h
+include/libcroco/libcroco/cr-num.h
+include/libcroco/libcroco/cr-om-parser.h
+include/libcroco/libcroco/cr-parser.h
+include/libcroco/libcroco/cr-prop-list.h
+include/libcroco/libcroco/cr-pseudo.h
+include/libcroco/libcroco/cr-rgb.h
+include/libcroco/libcroco/cr-sel-eng.h
+include/libcroco/libcroco/cr-selector.h
+include/libcroco/libcroco/cr-simple-sel.h
+include/libcroco/libcroco/cr-statement.h
+include/libcroco/libcroco/cr-style.h
+include/libcroco/libcroco/cr-stylesheet.h
+include/libcroco/libcroco/cr-term.h
+include/libcroco/libcroco/cr-tknzr.h
+include/libcroco/libcroco/cr-token.h
+include/libcroco/libcroco/cr-utils.h
+include/libcroco/libcroco/libcroco-config.h
+include/libcroco/libcroco/libcroco.h
 lib/libcroco.a
 lib/libcroco.la
 lib/libcroco.so
-lib/libcroco.so.1
-lib/libcroco.so.1.1
-lib/libcrseleng.a
-lib/libcrseleng.la
-lib/libcrseleng.so
-lib/libcrseleng.so.2
-lib/libcrseleng.so.2.0
+lib/libcroco.so.2
+lib/libcroco.so.2.0
 lib/pkgconfig/libcroco.pc
 man/man1/croco-config.1
 man/man1/csslint.1
-@dirrm include/libcroco/seleng
-@dirrm include/libcroco/parser
-@dirrm include/libcroco/layeng
+@dirrm include/libcroco/libcroco
 @dirrm include/libcroco
