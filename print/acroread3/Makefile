@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/03/16 13:55:34 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2000/05/02 14:43:58 pooka Exp $
 
 PKGNAME=	acroread-3.01
 CATEGORIES=	print
@@ -35,7 +35,7 @@ PLATFORM=	sparcsun
 .else
 DISTNAME=	${PKGNAME}
 .endif
-ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc *-*-alpha
+ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc # *-*-alpha
 .elif ${OPSYS} == "SunOS"
 DISTNAME=	acroread_solaris_301
 PLATFORM=	sparcsolaris
