@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4959 2004/02/22 22:07:27 heinz Exp $
+$NetBSD: CHANGES,v 1.4960 2004/02/22 22:30:12 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -980,3 +980,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated coreutils to 5.2.0 [recht 2004-02-22]
 	Added libtlen-20040212 [minskim 2004-02-22]
 	Updated p5-Math-Pari to 2.010501 [heinz 2004-02-22]
+	Updated xnc to 5.0.4 [jschauma 2004-02-22]
