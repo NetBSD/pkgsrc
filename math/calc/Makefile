@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/02/18 15:14:29 seb Exp $
+# $NetBSD: Makefile,v 1.6 2002/02/20 18:10:29 seb Exp $
 
 DISTNAME=	calc-2.02f
 CATEGORIES=	math
@@ -21,6 +21,8 @@ SITE_LISP=	share/emacs/site-lisp
 .endif
 
 PLIST_SUBST+=	SITE_LISP=${SITE_LISP}
+
+INFO_FILES=	calc.info
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${SITE_LISP}
