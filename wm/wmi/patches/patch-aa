@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2004/05/17 09:27:23 salo Exp $
+$NetBSD: patch-aa,v 1.2 2004/06/22 08:50:22 salo Exp $
 
---- configure.orig	2004-05-07 16:47:05.000000000 +0200
-+++ configure	2004-05-16 22:51:18.000000000 +0200
-@@ -5158,7 +5158,7 @@
+--- configure.orig	2004-06-16 19:26:44.000000000 +0200
++++ configure	2004-06-22 10:37:39.000000000 +0200
+@@ -5924,7 +5924,7 @@
+ test x$x_libraries = "x" && x_libraries="/usr/lib"
  
- # Add extra flags if in debug mode
  CFLAGS=""
--CXXFLAGS="-Os"
-+#CXXFLAGS="-Os"
- # Check whether --enable-debug or --disable-debug was given.
- if test "${enable_debug+set}" = set; then
-   enableval="$enable_debug"
+-CXXFLAGS="$X_CFLAGS"
++CXXFLAGS="$CXXFLAGS $X_CFLAGS"
+ LIBS="$LIBS $X_LIBS $X_PRE_LIBS"
+ 
+ # Check for required functions in -lX11
