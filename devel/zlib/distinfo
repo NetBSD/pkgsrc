@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:08:42 agc Exp $
+
+MD5 (zlib-1.1.3.tar.gz) = ada18615d2a66dee4d6f5ff916ecd4c6
+SHA1 (patch-ab) = f154bd3cc566a35e4fcf28d0af849b715631f6dc

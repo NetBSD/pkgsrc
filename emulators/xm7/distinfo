@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:07:00 agc Exp $
+
+MD5 (xm71010s.lzh) = bb0dba4de2ecc79118d799ecf37849aa
+SHA1 (patch-aa) = 99c4a1714d5e8a6ea684d47a2163d6cf1d6e0968
+SHA1 (patch-ab) = 08fafb6ab554c2ff9ab1af5adbb4144247359c75
+SHA1 (patch-ac) = f35662d6c8b794b5a1c052cebd53a9b96ad32c37
+SHA1 (patch-ad) = dfeb6e5f824b99f5464c719e8a658a7c501ff8fc

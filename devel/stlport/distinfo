@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:08:36 agc Exp $
+
+MD5 (STLport-4.0.tar.gz) = 9f46fa470328f55c550b829abbf8611b
+SHA1 (patch-aa) = e47888b8ea58080f1f2be2137dadd20bf74ea33c
+SHA1 (patch-ab) = 03e790d6c4a666e2929b1fe127be11df9eb97092
+SHA1 (patch-ac) = 889b64fe621d4c1f9e1ab9e0744a9b2daa6cad27
+SHA1 (patch-ad) = fc016c373fcb839c7fe3a7812e7a8d17d290c40a
+SHA1 (patch-ae) = d5cad7ad64e5d9d3aca082a414d3c1d706cc43ae
+SHA1 (patch-af) = c4b069e0d0ac583518111ac40f80567212476e3c

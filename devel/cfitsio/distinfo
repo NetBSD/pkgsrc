@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:06:00 agc Exp $
+
+MD5 (cfitsio2037.tar.gz) = 1e5569f227feb0b54c1528cf53268f55
+SHA1 (patch-aa) = c7eed82f4d49a63b195cb573ee9099b37eb76845
+SHA1 (patch-ab) = 12ac770326f04a762de6276a2e9405bb6778100f

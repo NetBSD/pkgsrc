@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:07:08 agc Exp $
+
+MD5 (jlib-1.0.6.tar.gz) = d7f537a4e8950f1b0a70b49029163920
+SHA1 (patch-aa) = 41a81a4edc5817acd9f4567f50407b3774725062
+SHA1 (patch-ab) = cf37743298a993077255683f252b0ba4bd7abd3a

@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:07:49 agc Exp $
+
+MD5 (Data-Dumper-2.101.tar.gz) = 681e53c028e80f71bafbb7687cbe375d
+SHA1 (patch-aa) = 7eb2f493f5e32520207ca931dec883438a33902c

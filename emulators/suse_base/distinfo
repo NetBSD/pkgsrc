@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:06:36 agc Exp $
+
+MD5 (suse64/aaa_dir.rpm) = fd3a18bf4b7c9d15fe77f3de4a20cc7e
+MD5 (suse64/shlibs-2.1.3-155.i386.rpm) = bc03f1a6f32a66958128e9450e355698
+MD5 (suse64/libz.rpm) = d2f08151747e3747165468bdfc7ed077
+MD5 (suse64/bash.rpm) = 1f5d652686850fa7d6c5ad99b1ebf6a8
+MD5 (suse64/gppshare.rpm) = 88a7839aa2b48827dd2d1e483435d85e
+MD5 (suse64/ncurses.rpm) = 538fdd9f392d3a88ecaa2274189920d9

@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:07:33 agc Exp $
+
+MD5 (lwp-1.1.tar.gz) = 6098bebaba905397f17bc5f3fd282c8f
+SHA1 (patch-aa) = 98d2fffe12c67c184786589caaaea12e95885f33

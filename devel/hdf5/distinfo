@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:07:04 agc Exp $
+
+MD5 (hdf5-1.4.0.tar.gz) = acc74bbe3ca2d0c85d2ad88116681dc5
+SHA1 (patch-aa) = b46bb91c2865229381d69f4927feb1698f8df1a8

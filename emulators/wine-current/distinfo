@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:06:56 agc Exp $
+
+MD5 (Wine-990328.tar.gz) = c753471f829138d43ab7dde6f20875fd
+SHA1 (patch-aa) = 18f9e21e41dd7d00721104abd6c8f507289aea6e
+SHA1 (patch-ab) = ec7dfa4d086d4ce708a8ce295f5fc4c052a1c9e9
+SHA1 (patch-ac) = 8b9f8d7a847067cad4a779746508691c85c9b7a2
+SHA1 (patch-ad) = 67b2ff10754db1190b158ff8d255360b0bd8784b

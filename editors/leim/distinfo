@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:58:05 agc Exp $
+
+MD5 (emacs-20.7.tar.gz) = c732cf5e668d4ac67d9418ecb103ecf5
+MD5 (leim-20.7.tar.gz) = 74766f5336675ca8e951037339077c09
+SHA1 (patch-aa) = a29b97515f4fea8feded6952d4ccd56c05d9f94d

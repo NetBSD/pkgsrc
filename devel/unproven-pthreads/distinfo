@@ -1,0 +1,26 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:08:39 agc Exp $
+
+MD5 (unproven-pthreads-0.17.tar.gz) = caa913b1dc1991386b391c6964a60f5f
+SHA1 (patch-aa) = 21955c9af0fd80b6bd939631d79db7225a392ea1
+SHA1 (patch-ab) = 870977a372b34eecc44f8e32449e8a2e008b35a1
+SHA1 (patch-ac) = 0bace453902f1081d3d5b03af87d88a9717f1982
+SHA1 (patch-ad) = 7821707f34ca6c187ad3ed088b161ff8be249d62
+SHA1 (patch-ae) = 8bf343cd261c3cf25a30f44ffc0b0d0d09bba588
+SHA1 (patch-af) = cd5dea4351505f7183a3223c8849622e531608b7
+SHA1 (patch-ag) = fa046412dd222dc014768a448a5bd28c639d4aab
+SHA1 (patch-ah) = 123bce3c1730283a847cf0ee65039c73c40b7523
+SHA1 (patch-ai) = dd76c34072a56b2145077aad03f6de49cdf64a8c
+SHA1 (patch-aj) = df3ccf1075c95e60fda2bdf6cb89c434ed146a01
+SHA1 (patch-ak) = dc19aee047f29396725b3c5ceeb168a6e294ad96
+SHA1 (patch-al) = 10d9c8354e8d032d3494505ea75b2cdb583295c0
+SHA1 (patch-am) = 72d33545b9705292261159ed1de4c9068475aeeb
+SHA1 (patch-an) = 6ad9a2b076fdefb75cbfd27bf304aedcad65d2a9
+SHA1 (patch-ao) = bcb19cf571bfdf7b3c7e8eaa128bb0cf79254c04
+SHA1 (patch-ap) = 9a1292ec8301fc38384198b3dc626f8faf85fd41
+SHA1 (patch-aq) = 1f3b6745ca3ac6b13e3575c230f0f7e5f7b9ec2f
+SHA1 (patch-ar) = 52b983df27904a21fcac75646aeddebe446c7a8c
+SHA1 (patch-as) = e016c3028b44d4ee80b4696bb738b5c6c751cf5b
+SHA1 (patch-at) = 2a3bffff656bf916a3e399874e8f1fc41219ddc5
+SHA1 (patch-au) = b6f05cd5f1e212170fcdbf4a22f36666ba417929
+SHA1 (patch-av) = a8186fe8c13f76382566bbdc7232bf7052053e36
+SHA1 (patch-aw) = 8c79c79412210c99429fd4a5460cbb0c15b24e49

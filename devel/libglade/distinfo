@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:07:19 agc Exp $
+
+SHA1 (libglade-0.16.tar.gz) = adf05907866c81e436d5e5c57d62a61bd501efb3
+SHA1 (patch-aa) = 0144305b76987773b49234091a7da6708da27d3c
+SHA1 (patch-ab) = b7832173e36810c9e5e29aace918c8169de6f5ad

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:58:11 agc Exp $
+
+MD5 (nedit-5.1.1-src.tar.gz) = dba0970c60debada237ca852b5f57ec8
+SHA1 (patch-aa) = 7387fb085a9a4cf19f033ecc73d79d3c29899e36
+SHA1 (patch-ab) = 1d566822879aa6519bea91acb03cdba139edd250

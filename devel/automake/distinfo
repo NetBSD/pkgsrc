@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:05:46 agc Exp $
+
+MD5 (automake-1.4.tar.gz) = 1d483ffa4349bfc9ab8ae0de0c617c7b
+SHA1 (patch-aa) = 70ecb085bfe05f256bcaf4315e7a6e296b2749c0
+SHA1 (patch-ab) = 0c4936c28c39efff28b3d388d5b6849a3f9b2eab

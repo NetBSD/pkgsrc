@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:08:31 agc Exp $
+
+MD5 (sgi-stl-3.3/stl.tar.gz) = e0a19469085fb82912cd815a05390797
+SHA1 (patch-aa) = f9432931c74dbdd02f78e2b6f3831592d624c728
+SHA1 (patch-ab) = 8b281b1d68026caf0cb7ab128928f0bb433b4c64

@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:05:59 agc Exp $
+
+MD5 (bochs-2000_0325a.tar.gz) = 6a6fc6794b81c88d71037f17c918a880
+SHA1 (patch-aa) = 20076cf0122711d8abece4697c1fb0ef9d813581
+SHA1 (patch-ab) = 340261dc14c65626b44abd2f7665cf2a87b233b4
+SHA1 (patch-ac) = 78f8210b9178387da527fd619dc5dfb417d53ec8
+SHA1 (patch-ad) = a5d7ad9fcc4dc3f3f2fccf59bd8853ea94787686
+SHA1 (patch-ae) = 8ff913377fbc95cb1c2edc133e625d48a47f6900
+SHA1 (patch-af) = 15cea9387f33625b435d5b98dba82d01ec056649
+SHA1 (patch-ag) = 68fcc65439262ea89de8074cca3775d8d703edfb
+SHA1 (patch-ah) = e9e07f99fccce65feb648c54d6b9c0cc6400decf

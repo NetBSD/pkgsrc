@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:07:18 agc Exp $
+
+SHA1 (libg++-2.8.1.1a.tar.gz) = 9b205ff12d81ebb45845a36f264bd84c408d6dcc
+SHA1 (patch-aa) = 4750e57b84b740ce14f27053c635d042657f9b17
+SHA1 (patch-ab) = 6f8347d8a8a3904902ba55f1411b7a4df2cf51f2
+SHA1 (patch-ac) = 5bfa9cc6fcad64bf56971f751f625b92cf13b2cb

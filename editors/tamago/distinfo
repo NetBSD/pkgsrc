@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:58:19 agc Exp $
+
+MD5 (tamago-4.0.6.tar.gz) = e1ebac3ec05b2f9c274b831fd64ed7b1
+SHA1 (patch-aa) = 91cd60ac8097ab554b8ef2106562241d5eb1e9a1

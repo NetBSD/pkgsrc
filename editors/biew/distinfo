@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:57:58 agc Exp $
+
+MD5 (biew-520.tar.bz2) = fa1a992ce9abd7538e7fc4ac23023c4d
+SHA1 (patch-aa) = 78944dfaedfc6d7a7aaf7018acdf5a82a7647be1
+SHA1 (patch-ab) = 3620d7c14d4457db64aa463b852d6f51306b7ae0

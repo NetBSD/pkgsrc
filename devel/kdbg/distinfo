@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:07:09 agc Exp $
+
+MD5 (kdbg-1.2.0.tar.gz) = bc01765e0b0a02331144b558346467e1
+SHA1 (patch-aa) = 57aa30c6fcdcee87c8c1e0a535233c48e4c53c1c
+SHA1 (patch-ab) = b86d844c67467561e7b3a800b0bf119a06c899a4

@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:05:49 agc Exp $
+
+MD5 (bison-1.28.tar.gz) = 4afb3989f2270043c47c3daa1fa7ffab
+SHA1 (patch-aa) = aecc589ead50fef86dab2d16bae7fd3cf91b21c5
+SHA1 (patch-ab) = 069b0d0db61255b53cac1cdb8ca6dee7d883231c
+SHA1 (patch-ac) = bbf839cfae8b8bd6630437c48b465a5a4ce2214a
+SHA1 (patch-ae) = 3df6fff1b06e813d1b5e39152e301d253c837484
+SHA1 (patch-af) = 874d359014fe72aa922e840b20db6736a09fbe0e
+SHA1 (patch-ag) = 558dcc5e5b63a80b497a799f881003118c3691b1

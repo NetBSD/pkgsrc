@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:05:55 agc Exp $
+
+MD5 (latestCDK.tgz) = 51b00c111424a4431b2295df5a69a620
+SHA1 (patch-aa) = d8cf4f88269f9188ac3e366c74da36295a77df9f
+SHA1 (patch-ac) = 3abc1f7b646d69331f9cf5228e1095a2579d2891
+SHA1 (patch-ad) = c21828919b4a20c21f70fd28464e67ac8d8ad13b
+SHA1 (patch-ae) = 92fdce7886c7ace9e97ca47921a86a2c7ed6e810
+SHA1 (patch-af) = a21d7f7121d054c58830ad04264c2f74912ffab4
+SHA1 (patch-ag) = 4de8de13346740c5b1a55e5f95195981c1372434
+SHA1 (patch-aj) = cb1848e70504eb69f12daa1b6bca70fa60265d0f

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:07:38 agc Exp $
+
+MD5 (ncurses-5.2.tar.gz) = 464d6a49010cf2a6eb9ce59a264d4d47
+SHA1 (patch-aa) = 235774ae5a52a31b833ff3a8a48d4b3e8ead9d3b
+SHA1 (patch-ab) = c523e86cf4faf08930c95f0aee59be85c962a147
+SHA1 (patch-ac) = 9bc254dd43a959e1f96526c813cbcfd7341e67ed

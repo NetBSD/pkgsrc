@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:07:11 agc Exp $
+
+SHA1 (kdesdk-2.1.tar.bz2) = 47172b53962eafd26b74dcac60b06623d7fbfa39
+SHA1 (patch-aa) = 769ed077dedc4fef0c3fbcfaa34f2e8d9c282c00

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:07:06 agc Exp $
+
+MD5 (IPv6socket_scrub.tar) = 5e61107af752b3e97ace852c481e45b7
+SHA1 (patch-aa) = d3565972cccc3c8f85ca489cb1c88fb71fca476b
+SHA1 (patch-ab) = fcde9165c59a2d94ac7694471358d19405e87f63

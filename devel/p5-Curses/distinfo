@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:07:48 agc Exp $
+
+MD5 (Curses-1.05.tar.gz) = 966d3ef5ed5a30f00f3f66ab68b6bf35
+SHA1 (patch-aa) = 351002e494b6ce5001154158b036e3f8e08108de
+SHA1 (patch-ab) = 578e6b65a930fd561254d8b6f3da7014debd271c

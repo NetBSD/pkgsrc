@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:07:29 agc Exp $
+
+MD5 (libstroke-0.3.tar.gz) = f9c2f637cca0abfb4c45c8367364dc90
+SHA1 (patch-aa) = f24f9ba49e8b5e13bc53b49d5a918da0c8b4327d

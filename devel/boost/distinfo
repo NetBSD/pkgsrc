@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:05:52 agc Exp $
+
+MD5 (boost-1.18.1/boost_all.zip) = f78ec9016ecf2baf5cf9f44ec60465a0
+SHA1 (patch-aa) = a8321f84ea29295a57ea767ba1425e548a6a2461

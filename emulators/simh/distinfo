@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:06:26 agc Exp $
+
+MD5 (sim_2.3d.tar.gz) = b7e81ea3bd4f368be3989f8aad8a13be
+SHA1 (patch-aa) = ddee282f93ca959de4fb778856d6e64706e19c22

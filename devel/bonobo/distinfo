@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:05:51 agc Exp $
+
+SHA1 (bonobo-1.0.2.tar.gz) = 8b16282fc14014a92959d0bf8fc79850e63c1a68
+SHA1 (patch-aa) = abb08c79e9971e755f4fef72bce46a88e9299397
+SHA1 (patch-ab) = bf5a5aae979ce382d70e2b5e9ff98ccd6ff9d150

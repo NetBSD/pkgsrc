@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:57:56 agc Exp $
+
+MD5 (abisuite/abi-0.7.10.tar.gz) = 3caa34f2698d5b29240b59d4e80dbcbb
+MD5 (abisuite/abidistfiles-0.7.10.tar.gz) = 1d95aa15cb355d238c853f1f254f0f4f
+MD5 (abisuite/expat-0.7.10.tar.gz) = fa7137a2b8a9688b97e5a0359ee308ad
+MD5 (abisuite/libiconv-0.7.10.tar.gz) = e824e8862d1cff43c180249cf67a7ca0
+MD5 (abisuite/unixfonts-0.7.10.tar.gz) = 4bb4899dd0aec17ddee8787d3a5a7e36
+MD5 (abisuite/wv-0.7.10.tar.gz) = c3c984b79b3cc1554022552c1e4a3c4e
+SHA1 (patch-aa) = a40db24e3d228b4ce3e7f702566fc6d9801bdb3b
+SHA1 (patch-ab) = 9dbc317697b767bee137cb81d7cc8225a4a96e79
+SHA1 (patch-ac) = 67635e365940271c7c7163d9d3ecb705054130ab
+SHA1 (patch-ad) = f36237c325431173820435fb9180cce3234f7ad2
+SHA1 (patch-ae) = 1c2b65110e93eee782ff70ef5388eb2e1c50207e
+SHA1 (patch-ak) = 853ee1773c724c0fe1f89955a884d07b2c5df37a
+SHA1 (patch-al) = 717d3c3f0c64c36f335fdac7f6e41066be35eb2b

@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:08:35 agc Exp $
+
+MD5 (smpeg-0.4.1.tar.gz) = 051dd6661cb4367f88444956ffb8ec5f
+SHA1 (patch-aa) = 16f6ef7c165e55c1481296fa819cad90329d5af1

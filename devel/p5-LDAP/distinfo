@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:08:01 agc Exp $
+
+MD5 (perldap-1.2.2.tgz) = e5c0d9c7c8f168f894ec034259cd6748
+SHA1 (patch-aa) = 430f7e2e41087ca3a3eba19b012ba4f96c0a1de3

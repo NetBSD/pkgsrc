@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:05:59 agc Exp $
+
+MD5 (cervisia-1.0.tar.gz) = 8fb35ca79e858e23661e67a9926d4c16
+SHA1 (patch-aa) = eba4978886e8d9126b22bf54944fabc302eb78a4
+SHA1 (patch-ac) = 337dd8751c23d125e86efd583cb57baac858a3e7

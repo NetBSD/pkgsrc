@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:05:47 agc Exp $
+
+MD5 (avltree-1.1.tar.gz) = 45a5dafb8de20059b450ce3137860c53
+SHA1 (patch-aa) = 2e479b2e8956b6e2f626de5e9d6481d7286f685d
+SHA1 (patch-ab) = ec7010335ac0475b2df7fc9d232d7a49075440c9

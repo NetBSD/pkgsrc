@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:07:22 agc Exp $
+
+MD5 (hfsutils-3.2.6.tar.gz) = fa572afd6da969e25c1455f728750ec4
+SHA1 (patch-aa) = e6c3465d0d2ae0c7679be7cee08d220594832879
+SHA1 (patch-ab) = 2a849153a5d9eb6b11c33ef0c7266cccd9c072a6
+SHA1 (patch-ac) = ea8ae702d37536033e11eb404c6a1ecf25c255da
+SHA1 (patch-ad) = 23bb872978c37db5b9d1209b6b315f19de30c6fb

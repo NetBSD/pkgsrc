@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:06:01 agc Exp $
+
+MD5 (compat12-i386.tar.gz) = 25497f20330197262e513ebfb8fa9247
+MD5 (compat12-m68k.tar.gz) = 7711595a3916be92d518f5904ea55f92
+MD5 (compat12-ns32k.tar.gz) = 415f7a3d735036908c358814d28d82ba
+MD5 (compat12-sparc.tar.gz) = 2f28e7761826eb69ba03c0426e28fbc6
