@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7181 2004/09/20 22:55:43 wiz Exp $
+$NetBSD: CHANGES,v 1.7182 2004/09/20 23:01:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4287,3 +4287,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libgii to 0.8.6 [wiz 2004-09-20]
 	Updated libggi to 2.0.6 [wiz 2004-09-20]
 	Added latin-words-bin-1.97 [wiz 2004-09-20]
+	Added vpnc-0.2.1 [wiz 2004-09-20]
