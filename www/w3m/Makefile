@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/08/15 04:16:20 itojun Exp $
+# $NetBSD: Makefile,v 1.18 2000/08/15 10:49:44 itojun Exp $
 
 DISTNAME=	w3m-0.1.10
 CATEGORIES=	www
@@ -55,13 +55,7 @@ CONFIGURE_ENV+=	use_cookie=y
 CONFIGURE_ENV+=	use_cookie=n
 .endif
 .if defined(W3M_USE_SSL) && ${W3M_USE_SSL} == YES
-.if !defined(PATENTEDOPENSSLSRC) && !exists(/usr/include/openssl/rsa.h)
-# openssl is necessary for HTTPS support.
-# if PATENTEDOPENSSLSRC is defined, then we assume that
-# RSA already exists in the OpenSSL built as part of the
-# base distribution.
-DEPENDS+=	openssl-0.9.*:../../security/openssl
-.endif
+USE_SSL=	YES
 CONFIGURE_ENV+=	use_ssl=y use_ssl_verify=n
 .else
 CONFIGURE_ENV+=	use_ssl=n use_ssl_verify=n
