@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/21 00:12:29 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/13 03:25:43 schmonz Exp $
 #
 
 DISTNAME=		bglibs-1.019
@@ -12,8 +12,8 @@ COMMENT=		Collection of libraries by Bruce Guenter
 USE_BUILDLINK3=		yes
 
 do-configure:
-	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
-	${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
+	${ECHO} ${CC:Q} ${CFLAGS:Q} > ${WRKSRC}/conf-cc
+	${ECHO} ${CC:Q} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
 	${ECHO} ${PREFIX} > ${WRKSRC}/conf-home
 
 do-install:

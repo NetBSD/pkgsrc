@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/12/03 15:15:10 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2005/03/13 03:25:44 schmonz Exp $
 # FreeBSD Id: ports/sysutils/daemontools/Makefile,v 1.8 2000/12/03 05:16:41 steve Exp
 
 DISTNAME=	daemontools-0.76
@@ -33,9 +33,9 @@ DEINSTALL_FILE=	${WRKDIR}/.DEINSTALL
 INSTALLATION_DIRS=	bin man man/man8 share/examples/daemontools
 
 do-configure:
-	@${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/src/conf-cc
-	@${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/src/conf-ld
-	@${ECHO} ${PREFIX} > ${WRKSRC}/src/conf-home
+	${ECHO} ${CC:Q} ${CFLAGS:Q} > ${WRKSRC}/src/conf-cc
+	${ECHO} ${CC:Q} ${_STRIPFLAG_CC} > ${WRKSRC}/src/conf-ld
+	${ECHO} ${PREFIX} > ${WRKSRC}/src/conf-home
 
 do-build:
 	cd ${WRKSRC} && package/compile
