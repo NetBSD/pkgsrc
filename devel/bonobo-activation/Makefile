@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2003/01/04 20:43:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2003/01/04 22:07:22 jmmv Exp $
 #
 
 DISTNAME=		bonobo-activation-2.1.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/bonobo-activation/2.1/}
 EXTRACT_SUFX=		.tar.bz2
@@ -24,10 +24,17 @@ PKGCONFIG_OVERRIDE=	${WRKSRC}/bonobo-activation-2.0.pc.in
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
+CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFBASE}"
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+
+PKG_SYSCONFSUBDIR=	bonobo-activation
+EGDIR=			${PREFIX}/share/examples/bonobo-activation
+CONF_FILES=		${EGDIR}/bonobo-activation-config.xml \
+			${PKG_SYSCONFDIR}/bonobo-activation-config.xml
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../net/ORBit2/buildlink2.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
