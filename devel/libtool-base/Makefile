@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/02/09 01:04:45 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2004/02/09 06:08:02 jlam Exp $
 #
 
 PKGNAME=	${DISTNAME:C/-/-base-/}
@@ -33,10 +33,16 @@ BUILD_SHLIBTOOL=	NO
 CONFIGURE_ARGS=		--enable-ltdl-install
 .endif
 
-# libtool persists in trying to find the path to ld, which always ends
-# up in ${BUILDLINK_DIR}.  Prevent it from caring.
+# The configure script persists in trying to find the path to ld, which
+# always ends up in ${BUILDLINK_DIR}.  Prevent it from caring.
 #
 CONFIGURE_ENV+=		lt_cv_path_LD=${LD:Q}
+
+# The configure script persists in trying to find the path to sed or gsed,
+# which breaks when SED is nbsed.  Tell it explicitly to use the sed
+# named by ${SED}.
+#
+CONFIGURE_ENV+=		lt_cv_path_SED=${SED:Q}
 
 .if !empty(MACHINE_PLATFORM:MDarwin-*-*)
 .  include "../../devel/dlcompat/buildlink3.mk"
