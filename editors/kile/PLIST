@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/10/25 11:54:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/01/19 11:35:48 markd Exp $
 bin/kile
 share/applications/kde/kile.desktop
 share/doc/kde/HTML/en/kile/TODO
@@ -20,7 +20,6 @@ share/doc/kde/HTML/en/kile/snap_structview_label.png
 share/doc/kde/HTML/en/kile/snap_usertag.png
 share/doc/kde/HTML/en/kile/snap_wizardry.png
 share/kde/apps/katepart/syntax/bibtex.xml
-share/kde/apps/katepart/syntax/latex.xml
 share/kde/apps/kconf_update/kile.upd
 share/kde/apps/kconf_update/kile1.6_upd.pl
 share/kde/apps/kile/complete/abbreviation/example.cwl
