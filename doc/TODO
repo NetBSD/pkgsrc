@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1991 2004/08/01 14:28:13 wiz Exp $
+$NetBSD: TODO,v 1.1992 2004/08/01 14:54:04 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -372,8 +372,7 @@ Suggested package updates
 	o scm-5d9
 	o scribus-1.1.7
 	o sendfile-20010424
-	o sendmail-8.13.0 [pkgsrc-wip sendmail813]
-	o sendmail-8.13.1
+	o sendmail-8.13.1 [pkgsrc-wip sendmail813]
 	o siag-3.6.0
 	o skkinput-2.06.4
 	o slib-3a1
