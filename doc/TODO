@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1943 2004/07/18 06:13:05 markd Exp $
+$NetBSD: TODO,v 1.1944 2004/07/18 10:04:43 recht Exp $
 
 Suggested new packages
 ======================
@@ -375,7 +375,6 @@ Suggested package updates
 	o staroffice-7p1
 	o streamtuner-0.12.2
 	o sweep-0.8.3
-	o sylpheed-claws-0.9.12
 	o tcl-expect-5.39.0
 	o tcl-itcl-3.2.1
 	o tcpreplay-2.2.2
