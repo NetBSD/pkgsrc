@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/09/25 13:50:35 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/01/22 09:27:59 xtraeme Exp $
 
-SHA1 (3ddesktop-0.2.5.tar.gz) = 8d397387e832dde75d103a3448d357d1bf4516d9
-Size (3ddesktop-0.2.5.tar.gz) = 162089 bytes
-SHA1 (patch-aa) = 68ad58165a19eca38e7ed15558c2512124cb267f
+SHA1 (3ddesktop-0.2.8.tar.gz) = 36086002e6491ceef22b23305a1134988fa71bc7
+Size (3ddesktop-0.2.8.tar.gz) = 175233 bytes
+SHA1 (patch-aa) = e97615b41009ad2442f47326b3202cba754550dc
+SHA1 (patch-ab) = 30a04c83a31de31836038910082cfd13a2e3c2f0
+SHA1 (patch-ac) = a9c748cc6ec6d46c5fec62c164c9e006db659fad
