@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7596 2004/10/29 07:20:08 rh Exp $
+$NetBSD: CHANGES,v 1.7597 2004/10/29 07:42:38 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4959,3 +4959,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ap-fastcgi to 2.4.2 [cube 2004-10-28]
 	Added ap2-fastcgi-2.4.2 [cube 2004-10-28]
 	Updated cgoban-java to 2.6.6 [rh 2004-09-29]
+	Updated abiword to 2.0.11nb1 [xtraeme 2004-09-29]
