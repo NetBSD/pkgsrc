@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.14 2001/03/30 15:08:43 mycroft Exp $
+$NetBSD: patch-ab,v 1.15 2001/06/15 11:42:18 itojun Exp $
 
---- Makefile.in.orig	Thu Mar 29 03:10:31 2001
-+++ Makefile.in	Fri Mar 30 14:50:50 2001
+--- Makefile.in.orig	Tue Jun 12 21:12:15 2001
++++ Makefile.in	Fri Jun 15 20:38:12 2001
 @@ -166,12 +166,12 @@
  	$(SHELL) ${srcdir}/mkinstalldirs $(DESTDIR)$(bindir) $(DESTDIR)$(mandir)
  	@echo "Installing fetchmail binary..."
@@ -17,5 +17,5 @@ $NetBSD: patch-ab,v 1.14 2001/03/30 15:08:43 mycroft Exp $
 +#	rm -f $(DESTDIR)$(mandir)/fetchmailconf.$(manext)
 +#	cd $(DESTDIR)$(mandir) && ln -s fetchmail.$(manext) fetchmailconf.$(manext)
  	@echo "Installing language catalogs..."
- 	-$(MAKE) -C intl install
- 	$(MAKE) -C po install
+ 	-cd intl; $(MAKE) install
+ 	cd po; $(MAKE) install
