@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2002/09/16 09:31:37 martti Exp $
+$NetBSD: distinfo,v 1.14 2002/09/21 08:26:09 martti Exp $
 
-SHA1 (fvwm-2.4.10.tar.gz) = 032753947fb07cd8b75f1965d2c10451b7acb754
-Size (fvwm-2.4.10.tar.gz) = 1722410 bytes
+SHA1 (fvwm-2.4.11.tar.gz) = b50bb74d5e7ef5442c82f41b5ee8f993c4e802f5
+Size (fvwm-2.4.11.tar.gz) = 1779404 bytes
