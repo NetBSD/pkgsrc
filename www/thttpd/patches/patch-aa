@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2000/07/27 12:47:34 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2000/12/17 22:21:44 jlam Exp $
 
---- Makefile.in.BAK	Wed Feb  9 21:05:49 2000
-+++ Makefile.in	Wed Feb  9 21:06:50 2000
+--- Makefile.in.orig	Tue Jul  4 12:21:32 2000
++++ Makefile.in
 @@ -34,7 +34,7 @@
  # Pathname of directory to install the man page.
  MANDIR = @mandir@
@@ -20,6 +20,15 @@ $NetBSD: patch-aa,v 1.4 2000/07/27 12:47:34 jlam Exp $
  
  # You shouldn't need to edit anything below here.
  
+@@ -50,7 +50,7 @@
+ CCOPT =		@V_CCOPT@
+ DEFS =		@DEFS@
+ INCLS =		-I.
+-CFLAGS =	$(CCOPT) $(DEFS) $(INCLS)
++CFLAGS +=	$(CCOPT) $(DEFS) $(INCLS)
+ LDFLAGS =	@LDFLAGS@
+ LIBS =		@LIBS@
+ NETLIBS =	@V_NETLIBS@
 @@ -111,10 +111,10 @@
  install:	installthis install-man installsubdirs
  
