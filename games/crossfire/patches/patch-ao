@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1 2000/05/25 09:07:32 wiz Exp $
+
+--- crossedit/Imakefile.orig	Sat May 16 05:27:09 1998
++++ crossedit/Imakefile	Thu May 25 10:35:09 2000
+@@ -30,7 +30,7 @@
+ 
+ 
+ LOCAL_LIBRARIES =  $(DLSYM) -L../common -lcross -L./Cnv -lCnv $(XPM_LIBS) \
+-	XawClientLibs $(MALLOC_LIBS)
++	XawClientLibs $(MALLOC_LIBS) -Wl,-R${LOCALBASE}/lib
+ EXTRA_INCLUDES  = -I. -I../include -I./include -I./Cnv $(RPLAY_INCDIR)
+ DEPENDLIB = ../common/libcross.a ./Cnv/libCnv.a
+ 
