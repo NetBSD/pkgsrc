@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/01/12 13:57:51 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/01/12 14:03:00 xtraeme Exp $
 #
 # This Makefile fragment is included by packages that use ladspa.
 #
@@ -15,7 +15,7 @@ BUILDLINK_DEPENDS+=	ladspa
 .if !empty(LADSPA_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=			ladspa
 BUILDLINK_DEPENDS.ladspa+=		ladspa>=1.12
-BUILDLINK_PKGSRCDIR.ladspa?=		../../wip/ladspa
+BUILDLINK_PKGSRCDIR.ladspa?=		../../audio/ladspa
 
 .endif # LADSPA_BUILDLINK3_MK
 
