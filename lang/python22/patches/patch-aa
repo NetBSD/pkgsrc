@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2002/09/24 18:06:26 tsarna Exp $
+$NetBSD: patch-aa,v 1.7 2003/06/06 17:31:19 drochner Exp $
 
---- setup.py.orig	Tue Mar 26 08:43:04 2002
-+++ setup.py	Tue Sep 24 12:30:40 2002
-@@ -197,11 +197,15 @@
+--- setup.py.orig	2003-05-22 19:36:54.000000000 +0200
++++ setup.py	2003-06-02 18:58:56.000000000 +0200
+@@ -210,11 +210,15 @@
          return platform
  
      def detect_modules(self):
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.6 2002/09/24 18:06:26 tsarna Exp $
  
          try:
              have_unicode = unicode
-@@ -261,7 +265,7 @@
+@@ -274,7 +278,7 @@
          if have_unicode:
              exts.append( Extension('unicodedata', ['unicodedata.c']) )
          # access to ISO C locale support
@@ -32,7 +32,7 @@ $NetBSD: patch-aa,v 1.6 2002/09/24 18:06:26 tsarna Exp $
  
          # Modules with some UNIX dependencies -- on by default:
          # (If you have a really backward UNIX, select and socket may not be
-@@ -319,16 +323,16 @@
+@@ -330,16 +334,16 @@
          # These represent audio samples or images as strings:
  
          # Disabled on 64-bit platforms
@@ -54,7 +54,7 @@ $NetBSD: patch-aa,v 1.6 2002/09/24 18:06:26 tsarna Exp $
              readline_libs = ['readline']
              if self.compiler.find_library_file(lib_dirs,
                                                   'ncurses'):
-@@ -352,14 +356,10 @@
+@@ -363,14 +367,10 @@
          # socket(2)
          # Detect SSL support for the socket module
          ssl_incs = find_file('openssl/ssl.h', inc_dirs,
@@ -69,9 +69,9 @@ $NetBSD: patch-aa,v 1.6 2002/09/24 18:06:26 tsarna Exp $
 -                                     ] )
 +                                     [] )
  
-         if (ssl_incs is not None and
-             ssl_libs is not None):
-@@ -390,9 +390,9 @@
+         if ssl_incs is not None:
+             krb5_h = find_file('krb5.h', inc_dirs,
+@@ -413,9 +413,9 @@
                  exts.append( Extension('dbm', ['dbmmodule.c']) )
  
          # Anthony Baxter's gdbm module.  GNU dbm(3) will require -lgdbm:
@@ -84,7 +84,7 @@ $NetBSD: patch-aa,v 1.6 2002/09/24 18:06:26 tsarna Exp $
  
          # Berkeley DB interface.
          #
-@@ -446,9 +446,9 @@
+@@ -469,9 +469,9 @@
          # FTP archive sites. One URL for it is:
          # ftp://gatekeeper.dec.com/.b/usenet/comp.sources.misc/volume40/fgmp/part01.Z
  
@@ -97,7 +97,7 @@ $NetBSD: patch-aa,v 1.6 2002/09/24 18:06:26 tsarna Exp $
  
  
          # Unix-only modules
-@@ -475,8 +475,8 @@
+@@ -498,8 +498,8 @@
  
          if (self.compiler.find_library_file(lib_dirs, 'ncurses')):
              curses_libs = ['ncurses']
@@ -108,7 +108,7 @@ $NetBSD: patch-aa,v 1.6 2002/09/24 18:06:26 tsarna Exp $
          elif (self.compiler.find_library_file(lib_dirs, 'curses')
                and platform != 'darwin'):
                  # OSX has an old Berkeley curses, not good enough for
-@@ -486,8 +486,8 @@
+@@ -509,8 +509,8 @@
              else:
                  curses_libs = ['curses', 'termcap']
  
@@ -119,7 +119,7 @@ $NetBSD: patch-aa,v 1.6 2002/09/24 18:06:26 tsarna Exp $
  
          # If the curses module is enabled, check for the panel module
          if (module_enabled(exts, '_curses') and
-@@ -566,11 +566,11 @@
+@@ -581,11 +581,11 @@
          else:
              expat_incs = find_file('xmlparse.h', inc_dirs, [])
  
@@ -136,7 +136,7 @@ $NetBSD: patch-aa,v 1.6 2002/09/24 18:06:26 tsarna Exp $
  
          # Platform-specific libraries
          if platform == 'linux2':
-@@ -793,7 +793,7 @@
+@@ -808,7 +808,7 @@
            ext_modules=[Extension('struct', ['structmodule.c'])],
  
            # Scripts to install
