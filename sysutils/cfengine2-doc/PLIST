@@ -1,0 +1,28 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/22 13:08:59 seb Exp $
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/cfengine-Anomalies.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/cfengine-Reference.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/cfengine-Tutorial.info
+info/cfengine-Anomalies.info
+info/cfengine-Reference.info
+info/cfengine-Reference.info-1
+info/cfengine-Reference.info-2
+info/cfengine-Reference.info-3
+info/cfengine-Reference.info-4
+info/cfengine-Reference.info-5
+info/cfengine-Reference.info-6
+info/cfengine-Reference.info-7
+info/cfengine-Reference.info-8
+info/cfengine-Tutorial.info
+info/cfengine-Tutorial.info-1
+info/cfengine-Tutorial.info-2
+info/cfengine-Tutorial.info-3
+info/cfengine-Tutorial.info-4
+info/cfengine-Tutorial.info-5
+info/cfengine-Tutorial.info-6
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/cfengine-Anomalies.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/cfengine-Reference.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/cfengine-Tutorial.info
+man/man8/cfengine.8
+share/doc/html/cfengine/cfengine-Reference.html
+share/doc/html/cfengine/cfengine-Tutorial.html
+@dirrm share/doc/html/cfengine
