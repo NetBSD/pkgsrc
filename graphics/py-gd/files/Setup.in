@@ -1,4 +1,8 @@
-# $NetBSD: Setup.in,v 1.2 1999/09/21 02:36:31 hubertf Exp $
+# $NetBSD: Setup.in,v 1.3 1999/11/01 03:34:31 jlam Exp $
 
 *shared*
-gd gdmodule.c -I@PREFIX@/include -L@PREFIX@/lib -R@PREFIX@/lib -lgd
+gd gdmodule.c \
+	-I@LOCALBASE@/include -I@X11BASE@/include -I@X11BASE@/include/X11 \
+	-L@LOCALBASE@/lib -Wl,-R@LOCALBASE@/lib \
+	-L@X11BASE@/lib -Wl,-R@X11BASE@/lib \
+	-lgd -lpng -lz -lttf -lintl -lXpm -lX11
