@@ -79,4 +79,3 @@ CPP_OBJECTS = NetBSDPlatformUtils.$(TO)
 
 include ../../Makefile.util.submodule
 
-CPP_OBJECTS:	NetBSDPlatformUtils.cpp ${CPP_PUBHEADERS}
