@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.14 2001/08/14 04:51:46 fredb Exp $
+$NetBSD: patch-aa,v 1.15 2001/08/18 20:31:15 fredb Exp $
 
 --- Makefile.orig	Tue May 29 13:29:03 2001
 +++ Makefile
@@ -95,3 +95,12 @@ $NetBSD: patch-aa,v 1.14 2001/08/14 04:51:46 fredb Exp $
  
  ####
  
+@@ -396,7 +396,7 @@
+ 	@[ ! -f $(CONFDIR)/wwwoffle.conf ] || \
+ 	 (echo "WWWOFFLE: " ;\
+ 	  echo "WWWOFFLE: There is already a config file $(CONFDIR)/wwwoffle.conf." ;\
+-	  echo "WWWOFFLE: Run 'upgrade-config.pl $(CONFDIR)/wwwoffle.conf' to upgrade it." ;\
++	  echo "WWWOFFLE: Run 'wwwoffle-upgrade-config.pl $(CONFDIR)/wwwoffle.conf' to upgrade it." ;\
+ 	  echo "WWWOFFLE: " )
+ 	[  ! -f $(CONFDIR)/wwwoffle.conf ] || $(INSTALL) -c -m 640 wwwoffle.conf.install $(CONFDIR)/wwwoffle.conf.install
+ 	[    -f $(CONFDIR)/wwwoffle.conf ] || $(INSTALL) -c -m 640 wwwoffle.conf.install $(CONFDIR)/wwwoffle.conf
