@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2000/06/17 22:14:00 tsarna Exp $
+# $NetBSD: Makefile,v 1.31 2000/06/19 04:15:32 soren Exp $
 #
 
 DISTNAME=	mozilla-source-M16
-PKGNAME=	mozilla-M16
+PKGNAME=	mozilla-m16
 WRKSRC=		${WRKDIR}/mozilla
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/releases/m16/src/
@@ -15,6 +15,12 @@ BUILD_DEPENDS+=	${LOCALBASE}/bin/perl:../../lang/perl5
 BUILD_DEPENDS+=	autoconf:../../devel/autoconf
 DEPENDS+=	gtk+>=1.2.8:../../x11/gtk
 DEPENDS+=	ORBit>=0.5.1:../../net/ORBit
+#DEPENDS+=	jpeg-6b:../../graphics/jpeg
+#DEPENDS+=	png>=1.0.6:../../graphics/png
+
+#GNU_CONFIGURE=	yes
+#CONFIGURE_ARGS=--with-jpeg=${LOCALBASE} --with-png=${LOCALBASE} \
+#		--disable-pedantic --disable-debug
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
@@ -35,11 +41,8 @@ do-build:
 	(cd ${WRKSRC} && ${GMAKE} -f client.mk build)
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/dist/${MOZ_OBJDIR}/bin/moz-export \
+	${INSTALL_PROGRAM} ${WRKSRC}/dist/${MOZ_OBJDIR}/bin/mozilla \
 		${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/dist/${MOZ_OBJDIR}/bin/mozilla-export \
-		${PREFIX}/bin
-	${LN} -sf ${PREFIX}/bin/moz-export ${PREFIX}/bin/mozilla
 	${INSTALL_PROGRAM_DIR} ${MOZ_LIBDIR}
 	${INSTALL_DATA} ${WRKSRC}/dist/${MOZ_OBJDIR}/bin/*.so.?.? ${MOZ_LIBDIR}
 
