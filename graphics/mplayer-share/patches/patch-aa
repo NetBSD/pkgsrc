@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2003/12/08 19:20:49 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2003/12/12 22:09:02 wiz Exp $
 
---- configure.orig	Sun Oct  5 17:34:40 2003
+--- configure.orig	2003-12-08 22:33:31.000000000 +0100
 +++ configure
-@@ -352,8 +352,8 @@ for ac_option do
+@@ -367,8 +367,8 @@ for ac_option do
      _inc_extra=-I`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -I,g'`
      ;;
    --with-extralibdir=*)
@@ -13,8 +13,17 @@ $NetBSD: patch-aa,v 1.7 2003/12/08 19:20:49 wiz Exp $
      ;;
    --enable-runtime-cpudetection)
      _runtime_cpudetection=yes
-@@ -481,7 +481,7 @@ if test "$_skip_cc_check" != yes ; then
-  for _cc in "$_cc" gcc-3.1 gcc3 gcc-3.0 cc ; do
+@@ -431,7 +431,7 @@ if test -z "$_target" ; then
+       case "`( uname -m ) 2>&1`" in
+       i[3-9]86*|x86|x86pc|k5|k6|k6_2|k6_3|k6-2|k6-3|pentium*|athlon*|i586_i686|i586-i686) host_arch=i386 ;;
+       ia64) host_arch=ia64 ;;
+-      x86_64) host_arch=x86_64 ;;
++      x86_64|amd64) host_arch=x86_64 ;;
+       ppc) host_arch=ppc ;;
+       alpha) host_arch=alpha ;;
+       sparc*) host_arch=sparc ;;
+@@ -499,7 +499,7 @@ if test "$_skip_cc_check" != yes ; then
+  for _cc in "$_cc" gcc gcc-3.3 gcc-3.2 gcc-3.1 gcc3 gcc-3.0 cc ; do
    echocheck "$_cc version"
    cc_name=`( $_cc -v ) 2>&1 | tail -1 | cut -d ' ' -f 1`
 -  cc_version=`( $_cc -dumpversion ) 2>&1`
@@ -22,3 +31,12 @@ $NetBSD: patch-aa,v 1.7 2003/12/08 19:20:49 wiz Exp $
    if test "$?" -gt 0; then
      cc_version="not found"
    fi
+@@ -819,7 +819,7 @@ EOF
+     _optimizing=''
+     ;;
+ 
+-  x86_64)
++  x86_64|amd64)
+     _def_arch='#define ARCH_X86_64 1'
+     _target_arch='TARGET_ARCH_X86_64 = yes'
+     iproc='x86_64'
