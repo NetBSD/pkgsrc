@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/08/27 12:21:28 drochner Exp $
+
+SHA1 (xrmap-2.29.tar.bz2) = af2efc47b7ef76840a72a96e67174b0fd5dd8973
+Size (xrmap-2.29.tar.bz2) = 1072241 bytes
+SHA1 (patch-aa) = da3987b0624d609804c49a1270a55c740ff32dac
