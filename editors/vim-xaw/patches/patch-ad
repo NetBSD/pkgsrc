@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 1999/12/21 13:26:29 pooka Exp $
+$NetBSD: patch-ad,v 1.2 2000/06/25 11:50:41 pooka Exp $
 
---- Makefile.orig	Sun Sep 19 13:27:33 1999
-+++ Makefile	Thu Nov 25 21:03:25 1999
-@@ -902,23 +902,26 @@
+--- Makefile.orig	Sat Jun 24 12:28:59 2000
++++ Makefile	Sun Jun 25 14:31:51 2000
+@@ -936,23 +936,26 @@
  ### Athena Widget GUI interface.
  ### Use Xaw3d to make the menus look a little bit nicer
  #XAW_LIB = -lXaw3d

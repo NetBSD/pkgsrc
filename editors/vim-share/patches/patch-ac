@@ -1,17 +1,17 @@
-$NetBSD: patch-ac,v 1.3 2000/01/25 17:13:18 pooka Exp $
+$NetBSD: patch-ac,v 1.4 2000/06/25 11:50:37 pooka Exp $
 
---- Makefile.orig	Sun Jan 16 16:03:04 2000
-+++ Makefile	Tue Jan 25 18:56:02 2000
-@@ -737,7 +737,7 @@
+--- Makefile.orig	Sat Jun 24 12:28:59 2000
++++ Makefile	Sun Jun 25 13:42:51 2000
+@@ -752,7 +752,7 @@
  ### might not work when they are changed!)
  VIMDIR = /vim
- VIMRTDIR = /vim56
+ VIMRTDIR = /vim57
 -HELPSUBDIR = /doc
 +HELPSUBDIR = /../../doc/vim
  SYNSUBDIR = /syntax
  MACROSUBDIR = /macros
  TOOLSSUBDIR = /tools
-@@ -1349,6 +1349,7 @@
+@@ -1367,6 +1367,7 @@
  
  # install the help files; first adjust the contents for the location
  installvimhelp: $(HELPSOURCE)/vim.1 $(MANSUBDIR) $(VIMLOC) $(VIMRTLOC) $(HELPSUBLOC) $(SYNSUBLOC) $(TUTORSUBLOC)
@@ -19,7 +19,7 @@ $NetBSD: patch-ac,v 1.3 2000/01/25 17:13:18 pooka Exp $
  	@echo generating $(MANSUBDIR)/$(VIMNAME).1
  	@sed -e s+/usr/local/lib/vim+$(VIMLOC)+ \
  		-e s+$(VIMLOC)/doc+$(HELPENDLOC)+ \
-@@ -1469,13 +1470,7 @@
+@@ -1487,13 +1488,7 @@
  
  # create links for the manual pages with various names to vim.	This is only
  # done when the links (or manpages with the same name) don't exist yet.
