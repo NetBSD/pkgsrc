@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6528 2004/07/11 06:30:38 martti Exp $
+$NetBSD: CHANGES,v 1.6529 2004/07/11 13:40:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3339,3 +3339,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added gkrellm-est-20040710 [cube 2004-07-10]
 	Updated gtkasp2php to 0.76.17 [salo 2004-07-11]
 	Moved xfce to xfce3 [martti 2004-07-11]
+	Updated groff to 1.19.1 [wiz 2004-07-11]
