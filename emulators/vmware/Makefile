@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/03/26 04:05:45 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/05 17:58:54 grant Exp $
 
 DISTNAME=	VMware-2.0.4-1142
 PKGNAME=	vmware-2.0.4
@@ -51,21 +51,21 @@ do-install-dirs:
 	${INSTALL_DATA_DIR} ${VMWARE_CFG_DIR}
 
 do-install-binaries:
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/* ${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/* ${PREFIX}/bin
 	${CHMOD} u+s ${PREFIX}/bin/vmware
 
 do-install-docs:
-	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/vmware/doc/
+	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/vmware/doc
 
 do-install-share:
-	${INSTALL_DATA} ${WRKSRC}/lib/help/* ${PREFIX}/share/vmware/help/
-	${INSTALL_DATA} ${WRKSRC}/lib/xkeymap/* ${PREFIX}/share/vmware/xkeymap/
-	${INSTALL_DATA} ${WRKSRC}/lib/floppies/* ${PREFIX}/share/vmware/floppies/
-	${INSTALL_DATA} ${WRKSRC}/lib/smb/codepages/* ${PREFIX}/share/vmware/smb/codepages/
-	${INSTALL_DATA} ${WRKSRC}/lib/configurator/* ${PREFIX}/share/vmware/configurator/
-	${INSTALL_DATA} ${WRKSRC}/lib/config ${PREFIX}/share/vmware/
-	${INSTALL_DATA} ${WRKSRC}/lib/floppy.nvr ${PREFIX}/share/vmware/
-	${INSTALL_MAN} ${WRKDIR}/vmware.1 ${PREFIX}/man/man1/
+	${INSTALL_DATA} ${WRKSRC}/lib/help/* ${PREFIX}/share/vmware/help
+	${INSTALL_DATA} ${WRKSRC}/lib/xkeymap/* ${PREFIX}/share/vmware/xkeymap
+	${INSTALL_DATA} ${WRKSRC}/lib/floppies/* ${PREFIX}/share/vmware/floppies
+	${INSTALL_DATA} ${WRKSRC}/lib/smb/codepages/* ${PREFIX}/share/vmware/smb/codepages
+	${INSTALL_DATA} ${WRKSRC}/lib/configurator/* ${PREFIX}/share/vmware/configurator
+	${INSTALL_DATA} ${WRKSRC}/lib/config ${PREFIX}/share/vmware
+	${INSTALL_DATA} ${WRKSRC}/lib/floppy.nvr ${PREFIX}/share/vmware
+	${INSTALL_MAN} ${WRKDIR}/vmware.1 ${PREFIX}/man/man1
 
 post-install:
 	@${RM} -f ${VMWARE_CFG_DIR}/config

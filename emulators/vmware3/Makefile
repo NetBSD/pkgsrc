@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/05/01 19:36:32 jdolecek Exp $
+# $NetBSD: Makefile,v 1.4 2003/05/05 18:07:42 grant Exp $
 
 DISTNAME=	VMware-workstation-3.2.1-2237
 PKGNAME=	vmware-3.2.1
@@ -61,25 +61,25 @@ do-install-dirs:
 	${INSTALL_DATA_DIR} ${VMWARE_CFG_DIR}
 
 do-install-binaries:
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/* ${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/* ${PREFIX}/bin
 	${CHMOD} u+s ${PREFIX}/bin/vmware
 
 do-install-docs:
-	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/vmware/doc/
+	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/vmware/doc
 
 do-install-share:
-	${INSTALL_SCRIPT} ${WRKSRC}/lib/bin/* ${PREFIX}/share/vmware/bin/
-	${INSTALL_DATA} ${WRKSRC}/lib/help/* ${PREFIX}/share/vmware/help/
-	${INSTALL_DATA} ${WRKSRC}/lib/xkeymap/* ${PREFIX}/share/vmware/xkeymap/
-	${INSTALL_DATA} ${WRKSRC}/lib/isoimages/* ${PREFIX}/share/vmware/isoimages/
-	${INSTALL_DATA} ${WRKSRC}/lib/licenses/user/* ${PREFIX}/share/vmware/licenses/user/
-	${INSTALL_DATA} ${WRKSRC}/lib/messages/chef/* ${PREFIX}/share/vmware/messages/chef/
-	${INSTALL_DATA} ${WRKSRC}/lib/messages/ja/* ${PREFIX}/share/vmware/messages/ja/
-	${INSTALL_DATA} ${WRKSRC}/lib/messages/jive/* ${PREFIX}/share/vmware/messages/jive/
-	${INSTALL_DATA} ${WRKSRC}/lib/smb/codepages/* ${PREFIX}/share/vmware/smb/codepages/
-	${INSTALL_DATA} ${WRKSRC}/lib/configurator/* ${PREFIX}/share/vmware/configurator/
-	${INSTALL_DATA} ${WRKSRC}/lib/config ${PREFIX}/share/vmware/
-	${INSTALL_MAN} ${WRKDIR}/vmware.1 ${PREFIX}/man/man1/
+	${INSTALL_SCRIPT} ${WRKSRC}/lib/bin/* ${PREFIX}/share/vmware/bin
+	${INSTALL_DATA} ${WRKSRC}/lib/help/* ${PREFIX}/share/vmware/help
+	${INSTALL_DATA} ${WRKSRC}/lib/xkeymap/* ${PREFIX}/share/vmware/xkeymap
+	${INSTALL_DATA} ${WRKSRC}/lib/isoimages/* ${PREFIX}/share/vmware/isoimages
+	${INSTALL_DATA} ${WRKSRC}/lib/licenses/user/* ${PREFIX}/share/vmware/licenses/user
+	${INSTALL_DATA} ${WRKSRC}/lib/messages/chef/* ${PREFIX}/share/vmware/messages/chef
+	${INSTALL_DATA} ${WRKSRC}/lib/messages/ja/* ${PREFIX}/share/vmware/messages/ja
+	${INSTALL_DATA} ${WRKSRC}/lib/messages/jive/* ${PREFIX}/share/vmware/messages/jive
+	${INSTALL_DATA} ${WRKSRC}/lib/smb/codepages/* ${PREFIX}/share/vmware/smb/codepages
+	${INSTALL_DATA} ${WRKSRC}/lib/configurator/* ${PREFIX}/share/vmware/configurator
+	${INSTALL_DATA} ${WRKSRC}/lib/config ${PREFIX}/share/vmware
+	${INSTALL_MAN} ${WRKDIR}/vmware.1 ${PREFIX}/man/man1
 
 post-install:
 	@${RM} -f ${VMWARE_CFG_DIR}/config
