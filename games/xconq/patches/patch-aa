@@ -1,9 +1,18 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/06/12 20:22:53 kleink Exp $
+$NetBSD: patch-aa,v 1.2 2000/08/31 07:26:23 kleink Exp $
 
---- /dev/null	Tue Jun  8 21:38:55 1999
-+++ config/mh-netbsd	Tue Jun  8 21:41:47 1999
-@@ -0,0 +1,4 @@
-+X11_INCLUDE_FLAGS =	-I${X11BASE}/include
-+X11_LIB_FLAGS =		-L${X11BASE}/lib -Wl,-R${X11BASE}/lib
-+
-+appdefaultsdir = 	${X11BASE}/lib/X11/app-defaults	
+--- Makefile.in.orig	Tue Jun 13 15:04:45 2000
++++ Makefile.in	Thu Aug 31 07:55:46 2000
+@@ -28,10 +28,10 @@
+ VPATH = @srcdir@
+ 
+ GAMEUID = games
+-GAMEGRP = bin
++GAMEGRP = games
+ 
+-GAMEPERM = 04755
+-DIRPERM  = 0755
++GAMEPERM = 02755
++DIRPERM  = 0775
+ FILEPERM = 0644
+ 
+ SHELL = /bin/sh
