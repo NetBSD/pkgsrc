@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/03/04 09:06:10 tron Exp $
+# $NetBSD: Makefile,v 1.17 2001/03/19 04:30:22 bad Exp $
 #
 # According to AbiSource's explanation of their trademark rights,
 # compilations/distributions of AbiWord not provided by AbiSource must
@@ -18,7 +18,7 @@ HOMEPAGE=	http://www.abisource.com/
 COMMENT=	Open Source cross-platform word processor
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/unzip:../../archivers/unzip
-DEPENDS+=	ispell-*:../../textproc/ispell
+DEPENDS+=	ispell-*:../../textproc/ispell-base
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	png>1.0.9:../../graphics/png
 
