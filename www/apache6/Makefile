@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/01/15 11:43:59 itojun Exp $
+# $NetBSD: Makefile,v 1.21 2001/02/06 10:58:18 itojun Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -10,41 +10,42 @@
 # sanity fixes in apache module API (for example, avoid u_long for IPv4 addrs)
 #
 
-DISTNAME=		apache_1.3.14
-PKGNAME=		apache6-1.3.14
+DISTNAME=		apache_1.3.17
+PKGNAME=		apache-1.3.17
 CATEGORIES=		www
-MASTER_SITES=		http://www.apache.org/dist/ \
-			ftp://ftp.modssl.org/source/ \
+MASTER_SITES=		http://httpd.apache.org/dist/ \
 			http://www.netbsd.org/images/logos/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			sitedrivenby.gif
-#			${SSL_DISTNAME}${EXTRACT_SUFX}
 
 PATCH_SITES=		ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES=		apache-1.3.14-v6-20010115a.diff.gz
+PATCHFILES=		apache-1.3.17-v6-20010206a.diff.gz
 PATCH_DIST_STRIP=	-p1
 
-MAINTAINER=		itojun@itojun.org
-HOMEPAGE=		http://www.apache.org/
+MAINTAINER=		jlam@netbsd.org
+HOMEPAGE=		http://httpd.apache.org/
 
-CONFLICTS=		apache-*modssl-* apache-*
-
-#SSL_DISTNAME=		mod_ssl-2.6.3-1.3.12
+CONFLICTS=		apache-*modssl-* apache6-*
+CONFLICTS=		apache-*
 
 EXTRACT_ONLY=		${DISTFILES:N*.gif}
-HAS_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--prefix=${PREFIX} --libexecdir=${PREFIX}/lib/httpd \
-			--runtimedir=/var/run --datadir=${PREFIX}/share/httpd \
-			--logfiledir=/var/log/httpd --sysconfdir=${PREFIX}/etc/httpd \
-			--proxycachedir=/var/spool/httpd/proxy \
-			--includedir=${PREFIX}/include/httpd \
-			--sbindir=${PREFIX}/sbin \
-			--enable-module=most \
-			--enable-module=auth_db \
-			--disable-module=auth_dbm \
-			--with-perl=${PERL5}
-#			--enable-rule=EAPI --disable-module=ssl 
+HAS_CONFIGURE=		# defined
 CONFIGURE_SCRIPT=	${WRKSRC}/configure.v6
+CONFIGURE_ARGS+=	--prefix=${PREFIX}				\
+			--sbindir=${PREFIX}/sbin			\
+			--libexecdir=${PREFIX}/lib/httpd		\
+			--sysconfdir=${PREFIX}/etc/httpd		\
+			--datadir=${PREFIX}/share/httpd			\
+			--cgidir=${PREFIX}/libexec/cgi-bin		\
+			--includedir=${PREFIX}/include/httpd		\
+			--runtimedir=/var/run				\
+			--logfiledir=/var/log/httpd			\
+			--proxycachedir=/var/spool/httpd/proxy
+CONFIGURE_ARGS+=	--enable-module=most				\
+			--enable-module=auth_db				\
+			--disable-module=auth_dbm
+CONFIGURE_ARGS+=	--with-perl=${PERL5}
+CONFIGURE_ARGS+=	--with-port=80
 CONFIGURE_ENV+=		OPTIM="${OPTIM}"
 
 BUILD_DEFS+=		USE_INET6
@@ -56,73 +57,77 @@ IGNORE=			"IPv6 only build"
 .endif
 
 .if defined(APACHE_SUEXEC) && ${APACHE_SUEXEC} == YES
-CONFIGURE_ARGS+=	--enable-suexec --suexec-caller=www \
-			--suexec-safepath='/bin:/usr/bin:${PREFIX}/bin:/usr/local/bin'
+APACHE_USER?=		www
+SUEXEC_PATH=		/bin:/usr/bin:${PREFIX}/bin:/usr/local/bin
+CONFIGURE_ARGS+=	--enable-suexec 				\
+			--suexec-caller=${APACHE_USER}			\
+			--suexec-safepath='${SUEXEC_PATH}'
+PLIST_SRC=		${PKGDIR}/PLIST.suexec
+BUILD_DEFS+=		APACHE_USER
 .endif
 
+.if !defined(NOPIC)
+CONFIGURE_ARGS+=	--enable-module=so	# requires dlopen()
+CONFIGURE_ARGS+=	--enable-shared=proxy
+PLIST_SRC+=		${PKGDIR}/PLIST.shared
+.else
+CONFIGURE_ARGS+=	--disable-module=proxy
+.endif
+
+PLIST_SRC+=		${PKGDIR}/PLIST
+
 .if defined(APACHE_PERF_TUNING) && ${APACHE_PERF_TUNING} == YES
-CONFIGURE_ARGS+=	--disable-rule=STATUS
 OPTIM+=			-DBUFFERED_LOGS
 CFLAGS+=		-O6 -fomit-frame-pointer -fexpensive-optimizations
 .endif
 
 .if (${OPSYS} == "SunOS")
 DEPENDS+=		db-2.7.7:../../databases/db
-LDFLAGS+=		-Wl,-R/usr/ucblib -L/usr/ucblib -Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib
+LDFLAGS+=		-Wl,-R/usr/ucblib -L/usr/ucblib			\
+			-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib
 CONFIGURE_ENV+=		INCLUDES="-I${LOCALBASE}/include/db2"
 CONFIGURE_ENV+=		LIBS="-ldbm -ldb2"
 .endif
 
-PLIST_SRC=		${WRKDIR}/PLIST
+BUILD_DEFS+=		APACHE_PERF_TUNING APACHE_SUEXEC
 
-BUILD_DEFS+=		APACHE_PERF_TUNING APACHE_SUEXEC USE_INET6
+DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
+INSTALL_FILE=		${WRKDIR}/INSTALL
 
 # Note that there is NO static compile module hook here.  This is intentional.
 # Under Apache 1.3, modules can be compiled to link dynamically to the server
 # using the "apxs" program.  See apxs(8).
 
-#post-extract:
-#	@${CP} ${FILESDIR}/ap_include_extern.h ${WRKSRC}/src/include/
-#	@${CP} ${WRKDIR}/${SSL_DISTNAME}/pkg.eapi/*.c ${WRKSRC}/src/ap/
-#	@${CP} ${WRKDIR}/${SSL_DISTNAME}/pkg.eapi/*.h ${WRKSRC}/src/include/
-
-#pre-patch:
-#	@cd ${WRKSRC} && ${CAT} \
-#		../${SSL_DISTNAME}/pkg.eapi/eapi.patch \
-#		../${SSL_DISTNAME}/pkg.sslcfg/sslcfg.patch \
-#		../${SSL_DISTNAME}/pkg.sslmod/sslmod.patch \
-#		../${SSL_DISTNAME}/pkg.sslsup/sslsup.patch \
-#		| ${PATCH} ${PATCH_ARGS}
-#	@cd ${WRKSRC} && ${TAIL} +129 \
-#		../${SSL_DISTNAME}/pkg.ssldoc/ssldoc.patch \
-#		| ${PATCH} ${PATCH_ARGS}
+pre-patch:
+	${FIND} ${WRKSRC} -name '*.orig' -exec ${RM} -f {} \;
 
 post-patch:
-	@${FIND} ${WRKSRC}/htdocs -name '*.orig' | xargs ${RM} -f
-	@${CHMOD} +x ${CONFIGURE_SCRIPT}
+	${CHMOD} +x ${CONFIGURE_SCRIPT}
 
 post-build:
-	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/apache.sh \
-	  >${WRKDIR}/apache.sh
+	${SED}	-e "s,@PREFIX@,${PREFIX},g"				\
+		${FILESDIR}/apache.sh > ${WRKDIR}/apache.sh
+
+pre-install:
+	${FIND} ${WRKSRC}/htdocs -name '*.orig' -exec ${RM} -f {} \;
+	${SED}	-e "s|@CAT@|${CAT}|g"					\
+		-e "s|@RM@|${RM}|g"					\
+		-e "s|@RMDIR@|${RMDIR}|g"				\
+		-e "s|@TRUE@|${TRUE}|g"					\
+		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED}	-e "s|@CAT@|${CAT}|g"					\
+		-e "s|@CHMOD@|${CHMOD}|g"				\
+		-e "s|@CHOWN@|${CHOWN}|g"				\
+		-e "s|@CP@|${CP}|g"					\
+		-e "s|@MKDIR@|${MKDIR}|g"				\
+		${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
 post-install:
-	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif \
-	  ${PREFIX}/share/httpd/htdocs
+.if !defined(NOPIC)
+	cd ${PREFIX}/lib/httpd; ${MV} libproxy.so mod_proxy.so
+.endif
+	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/share/httpd/htdocs
 	${INSTALL_SCRIPT} ${WRKDIR}/apache.sh ${PREFIX}/etc/rc.d/apache
-	@${MV} ${PREFIX}/lib/httpd/libproxy.so \
-	  ${PREFIX}/lib/httpd/mod_proxy.so 2>/dev/null || \
-	  ${MKDIR} ${PREFIX}/lib/httpd
-	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-.for FILE in man/man8/suexec.8 sbin/suexec
-	@if ${TEST} -e ${PREFIX}/${FILE} ; then \
-	  ${ECHO} ${FILE} >>${PLIST_SRC}; \
-	fi
-.endfor
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
-
-.if !defined(NOPIC)
-CONFIGURE_ARGS+=	--enable-module=so --enable-shared=proxy
-.else
-CONFIGURE_ARGS+=	--disable-module=proxy
-.endif
