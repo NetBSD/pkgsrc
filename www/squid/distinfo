@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.53 2004/06/04 15:33:05 taca Exp $
+$NetBSD: distinfo,v 1.54 2004/06/05 11:28:11 tron Exp $
 
 SHA1 (squid-2.5.5/squid-2.5.STABLE5.tar.bz2) = fd632ebaad656566db11cf875868b19a9b4a71db
 Size (squid-2.5.5/squid-2.5.STABLE5.tar.bz2) = 1044932 bytes
@@ -56,8 +56,8 @@ SHA1 (squid-2.5.5/squid-2.5.STABLE5-dns_localhost.patch) = 73be7a23e0aec3304c159
 Size (squid-2.5.5/squid-2.5.STABLE5-dns_localhost.patch) = 1408 bytes
 SHA1 (squid-2.5.5/squid-2.5.STABLE5-msnt_auth_doc.patch) = 9177b064a207fa0582fe18b6a965746bf7b3fa33
 Size (squid-2.5.5/squid-2.5.STABLE5-msnt_auth_doc.patch) = 16644 bytes
-SHA1 (squid-2.5.5/squid-2.5.STABLE5-va_copy.patch) = 80a29fcfd318897f626b22022992a0917dc400f1
-Size (squid-2.5.5/squid-2.5.STABLE5-va_copy.patch) = 4524 bytes
+SHA1 (squid-2.5.5/squid-2.5.STABLE5-va_copy.patch) = 8cb8130b3475fed63aac7dd88cb1c318c66f985c
+Size (squid-2.5.5/squid-2.5.STABLE5-va_copy.patch) = 8582 bytes
 SHA1 (patch-aa) = 2e0d96f6ccb9d0c42db2da49e76846edad09624f
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0
