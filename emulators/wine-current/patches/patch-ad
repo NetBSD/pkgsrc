@@ -1,0 +1,11 @@
+--- Makefile.in.orig	Wed Apr 14 17:25:20 1999
++++ Makefile.in	Wed Apr 14 17:25:28 1999
+@@ -183,7 +183,7 @@
+ 	$(RANLIB) $@
+ 
+ libwine.so.1.0: $(LIBOBJS) $(X11OBJS)
+-	$(LDSHARED) -o$@ $(LIBOBJS) $(X11OBJS) $(LDOPTIONS)
++	$(LDSHARED) -o$@ $(LIBOBJS) $(X11OBJS)
+ 	ln -sf $@ libwine.so
+ 
+ install_emu: install_lib

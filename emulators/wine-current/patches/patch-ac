@@ -1,0 +1,10 @@
+--- server/Makefile.in.orig	Tue Apr 13 17:46:37 1999
++++ server/Makefile.in	Tue Apr 13 17:46:46 1999
+@@ -34,6 +34,6 @@
+ @MAKE_RULES@
+ 
+ wineserver: $(OBJS) $(MAIN_OBJS)
+-	$(CC) -o $(PROGRAMS) $(OBJS) $(MAIN_OBJS) $(LIBS)
++	$(CC) -o $(PROGRAMS) $(OBJS) $(MAIN_OBJS) $(LDOPTIONS) $(LIBS)
+ 
+ ### Dependencies:
