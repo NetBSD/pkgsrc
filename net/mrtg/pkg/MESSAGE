@@ -1,13 +1,12 @@
 =============================================================================
 
-$NetBSD: MESSAGE,v 1.5 2000/09/03 12:50:42 wiz Exp $
+$NetBSD: MESSAGE,v 1.6 2000/10/20 16:07:01 bouyer Exp $
 
 The Multi Router Traffic Grapher is now installed.  Do note that three
 programs have changed names to more readily reflect their MRTG-specific
 function; make sure to prefix them with "mrtg":
 
     cfgmaker -> mrtgcfgmaker
-    cfgmaker_ip -> mrtgcfgmaker_ip
     indexmaker -> mrtgindexmaker
 
 The documentation can be found at @PREFIX@/share/doc/mrtg/manual.html;
