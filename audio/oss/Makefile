@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2002/10/02 21:06:53 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/03 10:43:19 jlam Exp $
 
-DISTNAME=	oss397d-netbsd-v1.6
-PKGNAME=	oss-3.97d
+PKGNAME=	oss-${OSS_VERSION}
 CATEGORIES=	audio sysutils
 MASTER_SITES=	ftp://ftp.opensound.com/pub/oss/netbsd/
 
@@ -9,7 +8,18 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.opensound.com/oss.html
 COMMENT=	Open Sound System(TM) soundcard driver
 
-ONLY_FOR_PLATFORM=	NetBSD-1.6-i386 NetBSD-1.6.*-i386
+ONLY_FOR_PLATFORM=	NetBSD-1.[56]-i386 NetBSD-1.[56].*-i386
+OSVERSION_SPECIFIC=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-1.5*-i386)
+DISTNAME=		oss397c-netbsd-v1.5
+OSS_VERSION=		3.97c
+.elif !empty(MACHINE_PLATFORM:MNetBSD-1.6*-i386)
+DISTNAME=		oss397d-netbsd-v1.6
+OSS_VERSION=		3.97d
+.endif
 
 RESTRICTED=		"No re-distribution."
 NO_SRC_ON_CDROM=	${RESTRICTED}
