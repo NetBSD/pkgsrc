@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/11/27 18:10:03 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/11/30 08:56:20 mycroft Exp $
 bin/sawfish
 bin/sawfish-capplet
 bin/sawfish-client
@@ -378,6 +378,8 @@ share/sawfish/${SF_VERS}/lisp/sawfish/wm/util/prompt.jl
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/util/prompt.jlc
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/util/rects.jl
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/util/rects.jlc
+share/sawfish/${SF_VERS}/lisp/sawfish/wm/util/stacking.jl
+share/sawfish/${SF_VERS}/lisp/sawfish/wm/util/stacking.jlc
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/util/window-order.jl
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/util/window-order.jlc
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/util/window-outline.jl
