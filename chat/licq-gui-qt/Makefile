@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/05/06 23:07:42 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/06 12:32:15 wiz Exp $
 #
 
 DISTNAME=	licq-1.2.6
@@ -24,7 +24,10 @@ USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
 WRKSRC=		${WRKDIR:=/${DISTNAME}/plugins/qt-gui}
 
-USE_NCURSES=	yes	# really use ncurses!
+# window.cpp: In method `void CWindow::wprintf(char *, ...)':
+# window.cpp:150: invalid use of undefined type `struct __window'
+# /usr/include/curses.h:220: forward declaration of `struct __window'
+USE_NCURSES=	yes
 
 .include "../../x11/qt3-libs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
