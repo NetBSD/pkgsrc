@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.5 2002/01/16 03:11:56 rh Exp $
+
+--- oafd/qsort_ex.c.orig	Tue Sep  4 14:07:43 2001
++++ oafd/qsort_ex.c
+@@ -26,7 +26,7 @@
+ #include <string.h>
+ #include "qsort_ex.h"
+ 
+-#if HAVE_ALLOCA
++#ifdef HAVE_ALLOCA_H
+ #include <alloca.h>
+ #endif
+ 
