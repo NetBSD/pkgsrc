@@ -1,14 +1,33 @@
-$NetBSD: patch-ag,v 1.1 2000/12/19 04:36:56 itojun Exp $
+$NetBSD: patch-ag,v 1.2 2001/04/28 02:05:57 jtb Exp $
 
---- po/Makefile.in.in-	Tue Dec 19 13:30:14 2000
-+++ po/Makefile.in.in	Tue Dec 19 13:31:03 2000
-@@ -126,3 +126,3 @@
+--- po/Makefile.in.in.orig	Mon Dec  4 16:19:48 1995
++++ po/Makefile.in.in
+@@ -28,8 +28,8 @@
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ datadir = $(prefix)/@DATADIRNAME@
+-localedir = $(datadir)/locale
+-gnulocaledir = $(prefix)/share/locale
++localedir = $(prefix)/share/locale
++gnulocaledir = $(localedir)
+ gettextsrcdir = $(prefix)/share/gettext
+ subdir = po
+ 
+@@ -124,7 +124,7 @@
+ 	  else \
+ 	    destdir=$(localedir); \
  	  fi; \
 -	  lang=`echo $$cat | sed 's/$(CATOBJEXT)$$//'`; \
 +	  lang=`echo $$cat | sed 's/\.[a-z]*$$//'`; \
  	  dir=$$destdir/$$lang/LC_MESSAGES; \
-@@ -146,3 +146,3 @@
+ 	  $(top_srcdir)/mkinstalldirs $$dir; \
+ 	  if test -r $$cat; then \
+@@ -144,7 +144,7 @@
+ uninstall:
+ 	catalogs='$(CATALOGS)'; \
  	for cat in $$catalogs; do \
 -	  lang=`echo $$cat | sed 's/$(CATOBJEXT)$$//'`; \
 +	  lang=`echo $$cat | sed 's/\.[a-z]*$$//'`; \
  	  rm -f $(localedir)/$$lang/LC_MESSAGES/$(PACKAGE)$(INSTOBJEXT); \
+ 	  rm -f $(gnulocaledir)/$$lang/LC_MESSAGES/$(PACKAGE)$(INSTOBJEXT); \
+ 	done

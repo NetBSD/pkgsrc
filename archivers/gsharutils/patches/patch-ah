@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1 2001/04/28 02:05:57 jtb Exp $
+
+--- intl/Makefile.in.orig	Mon Dec  4 16:19:40 1995
++++ intl/Makefile.in
+@@ -30,8 +30,8 @@
+ libdir = $(prefix)/lib
+ includedir = $(prefix)/include
+ datadir = $(prefix)/@DATADIRNAME@
+-localedir = $(datadir)/locale
+-gnulocaledir = $(prefix)/share/locale
++localedir = $(prefix)/share/locale
++gnulocaledir = $(localedir)
+ gettextsrcdir = $(prefix)/share/gettext
+ aliaspath = $(localedir):.
+ subdir = intl

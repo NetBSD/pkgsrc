@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2001/04/28 02:05:57 jtb Exp $
+
+--- src/Makefile.in.orig	Sat Nov 25 21:37:27 1995
++++ src/Makefile.in
+@@ -31,7 +31,7 @@
+ transform = @program_transform_name@
+ bindir = $(exec_prefix)/bin
+ datadir = $(prefix)/@DATADIRNAME@
+-localedir = $(datadir)/locale
++localedir = $(prefix)/share/locale
+ subdir = src
+ 
+ AR = ar
