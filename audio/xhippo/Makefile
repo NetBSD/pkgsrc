@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/04/16 20:16:40 tron Exp $
+# $NetBSD: Makefile,v 1.5 1999/05/02 14:35:56 tron Exp $
 #
 
 DISTNAME=	xhippo-0.6
@@ -8,7 +8,7 @@ MASTER_SITES=	http://zenchaos.netpedia.net/software/
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://zenchaos.netpedia.net/
 
-DEPENDS=	gtk+-1.2.1:../../x11/gtk
+DEPENDS=	gtk+-1.2.2:../../x11/gtk
 
 USE_X11=	YES
 
