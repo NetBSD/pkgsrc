@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/09/23 04:33:21 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/09/30 15:07:46 tron Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 BIND_BUILDLINK3_MK:=	${BIND_BUILDLINK3_MK}+
@@ -16,7 +16,6 @@ BUILDLINK_RECOMMENDED.bind?=	bind>=9.2.3nb4
 BUILDLINK_PKGSRCDIR.bind?=	../../net/bind9
 
 BUILDLINK_INCDIRS.bind?=	include/bind
-BUILDLINK_LDADD.bind?=		-lbind
 BUILDLINK_LDFLAGS.bind?=	${BUILDLINK_LDADD.bind}
 .endif	# BIND_BUILDLINK3_MK
 
