@@ -1,6 +1,6 @@
 #!@PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.87 2004/01/10 22:31:51 wiz Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.88 2004/01/14 23:18:46 wiz Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -740,7 +740,7 @@ sub parse_makefile_pkgsrc
 	    and not $vars->{PKGREVISION} =~ /^\s*$/ )
 	    {
 	    if ($vars->{PKGREVISION} =~ /\D/)
-		{ print "\rBogus: PKGREVISION $vars->{PKGREVISION} (from $file)\n"; }
+		{ print "\nBogus: PKGREVISION $vars->{PKGREVISION} (from $file)\n"; }
 	    elsif ($vars->{PKGREVISION})
 		{
 		$pkgname .= "nb";
@@ -748,7 +748,7 @@ sub parse_makefile_pkgsrc
 		}
 	    }
 	if ( $pkgname =~ /\$/ )
-	    { print "\rBogus: $pkgname (from $file)\n"; }
+	    { print "\nBogus: $pkgname (from $file)\n"; }
 	elsif ($pkgname =~ /(.*)-(\d.*)/)
 	    {
 	    if ($pkglist)
