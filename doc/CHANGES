@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.444 2002/11/02 10:27:53 rh Exp $
+$NetBSD: CHANGES,v 1.445 2002/11/02 11:34:32 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3509,3 +3509,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added gal2-0.0.7 [rh 2002-11-02]
 	Updated cpuflags to 0.37 [abs 2002-11-02]
 	Added gcalctool-4.1.0 [rh 2002-11-02]
+	Added gconf-editor-0.3.1 [rh 2002-11-02]
