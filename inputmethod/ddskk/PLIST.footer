@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST.footer,v 1.3 2003/06/29 13:37:45 uebayasi Exp $
-${EMACS_LISPPREFIX}/skk/leim-list.el
-${EMACS_LISPPREFIX}/skk/skk-setup.el
-@dirrm ${EMACS_LISPPREFIX}/skk
-share/skk/NICOLA-SKK.tut
-share/skk/SKK.tut
-share/skk/SKK.tut.E
-share/skk/skk.xpm
-@dirrm share/skk
