@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/06/26 17:39:46 kristerw Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/10/03 00:13:04 tv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SDL_SOUND_BUILDLINK3_MK:=	${SDL_SOUND_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	SDL_sound
 
 .if !empty(SDL_SOUND_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.SDL_sound+=	SDL_sound>=1.0.1
+BUILDLINK_RECOMMENDED.SDL_sound+=	SDL_sound>=1.0.1nb1
 BUILDLINK_PKGSRCDIR.SDL_sound?=	../../audio/SDL_sound
 .endif	# SDL_SOUND_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/03/18 23:29:36 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:02 tv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBDVDPLAY_BUILDLINK3_MK:=	${LIBDVDPLAY_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	libdvdplay
 
 .if !empty(LIBDVDPLAY_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libdvdplay+=		libdvdplay>=1.0.1
+BUILDLINK_RECOMMENDED.libdvdplay+=	libdvdplay>=1.0.1nb2
 BUILDLINK_PKGSRCDIR.libdvdplay?=	../../multimedia/libdvdplay
 .endif	# LIBDVDPLAY_BUILDLINK3_MK
 

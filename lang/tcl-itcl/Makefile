@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2004/09/24 21:17:03 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.13 2004/10/03 00:15:03 tv Exp $
 
 DISTNAME=	itcl3.2
 PKGNAME=	tcl-itcl-3.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.scriptics.com/pub/tcl/itcl/
 

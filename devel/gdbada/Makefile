@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/03 11:16:42 shannonjr Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/03 00:13:27 tv Exp $
 
 DISTNAME=	gdbada-5.3
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=		http://www.johnrshannon.com/download/
 EXTRACT_SUFX=		.tgz

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2004/03/10 03:12:49 snj Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/03 00:14:46 tv Exp $
 #
 
 DISTNAME=		nagi_src_-_2002-11-14
 PKGNAME=		nagi-20021114
+PKGREVISION=	1
 CATEGORIES=		games
 MASTER_SITES=		http://www.agidev.com/dl_files/nagi/
 

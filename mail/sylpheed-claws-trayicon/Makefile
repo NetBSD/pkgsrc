@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2004/07/18 10:01:02 recht Exp $
+# $NetBSD: Makefile,v 1.6 2004/10/03 00:12:55 tv Exp $
 #
 
 PLUGIN_NAME=	trayicon
 .include "../../mail/sylpheed-claws/plugins.mk"
 
-PKGREVISION=	3
+PKGREVISION=	4
 
 MAINTAINER=	cube@NetBSD.org
 COMMENT=	Plugin to make Sylpheed-claws display an icon in the system tray

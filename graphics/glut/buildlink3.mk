@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2004/03/18 09:12:11 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2004/10/03 00:14:51 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GLUT_BUILDLINK3_MK:=	${GLUT_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	glut
 
 .if !empty(GLUT_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.glut+=	glut>=${_MESA_REQD}
+BUILDLINK_RECOMMENDED.glut+=	glut>=6.0.1nb1
 BUILDLINK_PKGSRCDIR.glut?=	../../graphics/glut
 .endif	# GLUT_BUILDLINK3_MK
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2004/04/12 11:19:12 xtraeme Exp $
+# $NetBSD: Makefile,v 1.14 2004/10/03 00:13:00 tv Exp $
 #
 
 DISTNAME=	libutf-2.10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://www.westley.demon.co.uk/src/
 

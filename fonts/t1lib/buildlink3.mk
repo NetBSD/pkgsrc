@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/05 19:25:12 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/10/03 00:14:42 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 T1LIB_BUILDLINK3_MK:=	${T1LIB_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	t1lib
 
 .if !empty(T1LIB_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.t1lib+=	t1lib>=5.0.1
+BUILDLINK_RECOMMENDED.t1lib+=	t1lib>=5.0.2nb3
 BUILDLINK_PKGSRCDIR.t1lib?=	../../fonts/t1lib
 .endif	# T1LIB_BUILDLINK3_MK
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2004/02/14 18:26:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2004/10/03 00:18:36 tv Exp $
 #
 
 DISTNAME=		libzvt-2.0.1
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libzvt/2.0/}
 EXTRACT_SUFX=		.tar.bz2

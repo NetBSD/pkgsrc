@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/09/24 01:58:53 rh Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/03 00:18:08 tv Exp $
 #
 
 DISTNAME=		gnustep-base-1.10.0
 PKGNAME=		${DISTNAME:S/base/ssl/}
+PKGREVISION=	1
 CATEGORIES=		security gnustep
 MASTER_SITES=		ftp://ftp.gnustep.org/pub/gnustep/core/
 

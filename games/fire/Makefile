@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2004/03/07 20:21:17 snj Exp $
+# $NetBSD: Makefile,v 1.14 2004/10/03 00:14:44 tv Exp $
 #
 
 DISTNAME=	fire-1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	http://www.libsdl.org/projects/fire/src/
 

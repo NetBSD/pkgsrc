@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2004/05/15 12:01:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2004/10/03 00:14:55 tv Exp $
 #
 
 .include "../../graphics/librsvg2/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/-/2-gtk2-/}
+PKGREVISION=	1
 COMMENT+=		(GTK2 modules)
 
 CONFIGURE_ARGS+=	--enable-pixbuf-loader

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/22 15:00:08 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:28 tv Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.4.
 # XXX After this file as been verified as correct, the comment lines
@@ -22,6 +22,7 @@ BUILDLINK_PACKAGES+=	hdf5
 
 .if !empty(HDF5_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.hdf5+=	hdf5>=1.6.2
+BUILDLINK_RECOMMENDED.hdf5+=	hdf5>=1.6.2nb1
 BUILDLINK_PKGSRCDIR.hdf5?=	../../devel/hdf5
 .endif	# HDF5_BUILDLINK3_MK
 
