@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2004/06/13 13:14:03 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/07/25 05:42:30 grant Exp $
 
-DISTNAME=		nbsed-20040613
+DISTNAME=		nbsed-20040725
 CATEGORIES=		textproc pkgtools
 MASTER_SITES=		# empty
 DISTFILES=		# empty
