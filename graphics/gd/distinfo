@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2004/05/25 14:55:34 adam Exp $
+$NetBSD: distinfo,v 1.15 2004/07/01 10:28:42 adam Exp $
 
-SHA1 (gd-2.0.25.tar.gz) = 58467c1a7a5db7c6510864398600a26fe5195546
-Size (gd-2.0.25.tar.gz) = 545183 bytes
+SHA1 (gd-2.0.26.tar.gz) = e7f282e04aad3cd9e1d6bba5933d485b96e93309
+Size (gd-2.0.26.tar.gz) = 557381 bytes
