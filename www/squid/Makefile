@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2005/02/01 01:31:10 taca Exp $
+# $NetBSD: Makefile,v 1.132 2005/02/01 10:22:20 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE7
 PKGNAME=	squid-2.5.7
@@ -20,7 +20,7 @@ PATCHFILES=	squid-2.5.STABLE7-half_closed_POST.patch \
 		squid-2.5.STABLE7-httpd_accel_vport.patch \
 		squid-2.5.STABLE7-cachemgr_vmobjects.patch \
 		squid-2.5.STABLE7-empty_acls.patch \
-		squid-2.5.STABEL7-close_other.patch \
+		squid-2.5.STABLE7-close_other.patch \
 		squid-2.5.STABLE7-fakeauth_auth.patch \
 		squid-2.5.STABLE7-gopher_html_parsing.patch \
 		squid-2.5.STABLE7-wccp_denial_of_service.patch \
