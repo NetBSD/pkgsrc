@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/04/26 19:30:27 garbled Exp $
+# $NetBSD: Makefile,v 1.9 1999/07/24 21:01:17 tron Exp $
 # $FreeBSD Id: Makefile,v 1.15 1998/03/17 07:55:17 tg Exp
 
 DISTNAME=	Tix4.1.0.006
@@ -11,9 +11,10 @@ MAINTAINER=	rh@vip.at
 DEPENDS+=	tk-8.0.5:../../x11/tk80
 
 USE_X11=	yes
+USE_LIBTOOL=	yes
 WRKSRC=		${WRKDIR}/Tix4.1.0/unix/tk8.0
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--enable-shared --enable-sam \
+CONFIGURE_ARGS=	--enable-sam \
 		--with-tcl="${PREFIX}/include/tcl8.0" \
 		--with-tk="${PREFIX}/include/tk8.0"
 
