@@ -1,12 +1,17 @@
-# $NetBSD: Makefile,v 1.17 2002/01/28 00:27:36 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2002/02/27 16:28:48 jlam Exp $
 #
 
 DISTNAME=       	CGI.pm-2.79
 PKGNAME=        	p5-CGI-2.79
 SVR4_PKGNAME=		p5cgi
 CATEGORIES=		www perl5
-MASTER_SITES=		http://stein.cshl.org/WWW/software/CGI/ \
-			${MASTER_SITE_PERL_CPAN:=CGI/}
+MASTER_SITES=		http://stein.cshl.org/WWW/software/CGI/
+
+# The distfile at Lincoln Stein's page appears to be larger than the
+# ones on the various CPAN sites.  Since he's the software author, we
+# assume his is the definitive file.
+#
+#MASTER_SITES+=		${MASTER_SITE_PERL_CPAN:=CGI/}
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://stein.cshl.org/WWW/software/CGI/
