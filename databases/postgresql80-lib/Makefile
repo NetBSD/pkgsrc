@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/02/06 13:21:45 taca Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/17 20:57:17 jschauma Exp $
 
 PKGNAME=		postgresql80-lib-${BASE_VERS}
-PKGREVISION=		# empty
+PKGREVISION=		1# empty
 COMMENT=		PostgreSQL database headers and libraries
 
 .include "../../databases/postgresql80/Makefile.common"
