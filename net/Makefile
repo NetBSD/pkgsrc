@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.434 2004/02/10 12:40:36 wulf Exp $
+# $NetBSD: Makefile,v 1.435 2004/02/12 05:46:37 ben Exp $
 #
 
 COMMENT=	Networking tools
@@ -132,6 +132,7 @@ SUBDIR+=	libpcap
 SUBDIR+=	libsoup
 SUBDIR+=	libsscript
 SUBDIR+=	linc
+SUBDIR+=	llnxdir
 SUBDIR+=	lopster
 SUBDIR+=	maradns
 SUBDIR+=	md-whois
