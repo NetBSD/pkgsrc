@@ -1,11 +1,12 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1.1.1 2001/05/16 07:57:24 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.2 2001/07/13 07:09:19 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
 
 CAT="@CAT@"
+CMP="@CMP@"
 RM="@RM@"
 RMDIR="@RMDIR@"
 TRUE="@TRUE@"
@@ -21,7 +22,7 @@ DEINSTALL)
 	#
 	FILE=${CONFDIR}/sqspell_config.php
 	SAMPLEFILE=${CONFDIR}/sqspell_config.dist
-	if diff -q ${FILE} ${SAMPLEFILE} >/dev/null
+	if ${CMP} -s ${FILE} ${SAMPLEFILE}
 	then
 		${RM} -f ${FILE}
 	fi

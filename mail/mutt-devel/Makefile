@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/06/30 14:49:57 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/07/13 07:09:18 jlam Exp $
 
 DISTNAME=		mutt-1.3.18i
 CATEGORIES=		mail
@@ -50,6 +50,7 @@ INSTALL_FILE=		${WRKDIR}/INSTALL
 
 FILES_SUBST=		CAT=${CAT:Q}
 FILES_SUBST+=		CHMOD=${CHMOD:Q}
+FILES_SUBST+=		CMP=${CMP:Q}
 FILES_SUBST+=		CP=${CP:Q}
 FILES_SUBST+=		RM=${RM:Q}
 FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
