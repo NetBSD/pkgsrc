@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/02/16 17:33:16 grant Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/02/28 23:29:34 grant Exp $
 
 .if !defined(ZLIB_BUILDLINK2_MK)
 ZLIB_BUILDLINK2_MK=	# defined
@@ -26,6 +26,9 @@ _INCOMPAT_ZLIB+=	IRIX-*-*
 
 # So does Darwin
 _INCOMPAT_ZLIB+=	Darwin-*-*
+
+# So does Linux
+_INCOMPAT_ZLIB+=	Linux-*-*
 
 #
 # Some NetBSD versions shipped with versions lower than 1.1.3.
