@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2004/09/30 12:43:57 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2004/10/15 14:41:11 tv Exp $
 
-DISTNAME=	createbuildlink-3.7
+DISTNAME=	createbuildlink-3.8
 CATEGORIES=	pkgtools sysutils
 MASTER_SITES=	# Nothing
 DISTFILES=	# Nothing
