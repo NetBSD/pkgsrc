@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2001/12/23 23:03:23 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2002/09/24 11:57:28 wiz Exp $
 
---- params.h.orig	Tue Oct 16 06:10:34 2001
+--- params.h.orig	Sun Sep  8 11:49:24 2002
 +++ params.h
-@@ -142,8 +142,8 @@
+@@ -143,8 +143,8 @@
   *
   * Note that there's no built-in password aging support.
   */
@@ -13,9 +13,9 @@ $NetBSD: patch-aa,v 1.6 2001/12/23 23:03:23 wiz Exp $
  #define AUTH_PAM			0
  #define AUTH_PAM_USERPASS		0
  
-@@ -195,8 +195,8 @@
+@@ -196,8 +196,8 @@
   *
-  * *BSD's use flock(2), others typically use fcntl(2).
+  * *BSDs use flock(2), others typically use fcntl(2).
   */
 -#define LOCK_FCNTL			1
 -#define LOCK_FLOCK			0
