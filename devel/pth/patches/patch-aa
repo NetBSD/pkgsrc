@@ -1,11 +1,29 @@
-$NetBSD: patch-aa,v 1.5 1999/07/19 06:14:30 sakamoto Exp $
+$NetBSD: patch-aa,v 1.6 1999/08/06 01:03:34 sakamoto Exp $
 
---- ./configure.orig	Fri Jul 16 23:24:43 1999
-+++ ./configure	Mon Jul 19 14:53:37 1999
-@@ -1053,5 +1053,5 @@
- $libtool_flags --no-verify ltmain.sh $PLATFORM ||\
- { echo "configure: error: libtool configuration failed" 1>&2; exit 1; }
--LIBTOOL="\$(TOP)/libtool"
-+LIBTOOL=$LIBTOOL
+--- ./Makefile.in.orig	Sun Aug  1 02:46:57 1999
++++ ./Makefile.in	Fri Aug  6 09:43:03 1999
+@@ -46,8 +46,8 @@
+ CC          = @CC@
+ CFLAGS      = @CFLAGS@ -I.
+-LDFLAGS     = @LDFLAGS@ -L.
++LDFLAGS     = @LDFLAGS@
+ LIBS        = @LIBS@
+ SHTOOL      = $(srcdir)/shtool
+-LIBTOOL     = $(srcdir)/libtool
++LIBTOOL     = @LIBTOOL@
+ RM          = rm -f
+ RMDIR       = rmdir
+@@ -200,5 +200,5 @@
+ 	$(SHTOOL) install -c -m 644 pth.3 $(mandir)/man3/pth.3
+ 	$(SHTOOL) install -c -m 644 pth.h $(includedir)/pth.h
+-	@$(LIBTOOL) --mode=install $(SHTOOL) install -c -m 644 libpth.la $(libdir)/libpth.la
++	@$(LIBTOOL) --mode=install install -c -m 644 libpth.la $(libdir)/libpth.la
+ install-pthread:
+ 	$(SHTOOL) install -c -m 755 pthread-config $(bindir)/pthread-config
+@@ -206,5 +206,5 @@
+ 	$(SHTOOL) install -c -m 644 pthread.h $(includedir)/pthread.h
+ 	$(SHTOOL) install -c -m 644 pthread.3 $(mandir)/man3/pthread.3
+-	@$(LIBTOOL) --mode=install $(SHTOOL) install -c -m 644 libpthread.la $(libdir)/libpthread.la
++	@$(LIBTOOL) --mode=install install -c -m 644 libpthread.la $(libdir)/libpthread.la
  
- 
+ #   uninstall the package
