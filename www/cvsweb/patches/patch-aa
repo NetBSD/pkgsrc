@@ -1,10 +1,18 @@
-$NetBSD: patch-aa,v 1.3 2001/10/15 17:25:10 martti Exp $
+$NetBSD: patch-aa,v 1.4 2002/06/27 03:22:25 lukem Exp $
 
---- cvsweb.cgi.orig	Mon Oct 15 13:45:06 2001
-+++ cvsweb.cgi	Mon Oct 15 13:48:30 2001
+--- cvsweb.cgi.orig	Wed May 22 18:10:18 2002
++++ cvsweb.cgi
 @@ -1,4 +1,4 @@
--#!/usr/bin/perl -wsT
-+#!/usr/bin/perl -s
+-#!/usr/bin/perl -wT
++#!/usr/bin/perl -w
  #
  # cvsweb - a CGI interface to CVS trees.
  #
+@@ -3606,6 +3606,7 @@
+ }
+ 
+ sub html_footer() {
++	return if ($address eq "");
+ 	print "<hr noshade>\n<address>$address</address>\n</body>\n</html>\n";
+ }
+ 
