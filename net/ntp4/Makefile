@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/05/08 07:37:40 snj Exp $
+# $NetBSD: Makefile,v 1.35 2004/06/10 20:03:11 jschauma Exp $
 #
 
 DISTNAME=	ntp-4.2.0
@@ -27,14 +27,17 @@ ALL_NTP_DOCS=	${DOCDIR}/ntp4 ${EXAMPLESDIR}/ntp4
 RCD_SCRIPTS=	ntpd ntpdate
 
 post-install:
-	(cd ${WRKSRC} &&							\
-	    ${PAX} -rw -pe -s "/html/ntp4/" html ${DOCDIR};			\
-	    ${PAX} -rw -pe -s "/conf/ntp4/" conf ${EXAMPLESDIR});		\
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${ALL_NTP_DOCS};			\
-	${FIND} ${ALL_NTP_DOCS} -type d -print0 | ${XARGS} -0 ${CHMOD} ${PKGDIRMODE}; \
-	${FIND} ${ALL_NTP_DOCS} -type f -print0 | ${XARGS} -0 ${CHMOD} ${SHAREMODE};
+	(cd ${WRKSRC} &&						\
+	    ${PAX} -rw -pe -s "/html/ntp4/" html ${DOCDIR};		\
+	    ${PAX} -rw -pe -s "/conf/ntp4/" conf ${EXAMPLESDIR});	\
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${ALL_NTP_DOCS};		\
+	${FIND} ${ALL_NTP_DOCS} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}; \
+	${FIND} ${ALL_NTP_DOCS} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE};
 
 .include "../../mk/bsd.prefs.mk"
+
+TIMETRIM=	""
+NO_TIMETRIM=	"@comment "
 
 .if ${OPSYS} == "NetBSD"
 #
@@ -51,7 +54,20 @@ LOWER_OPSYS_VERSUFFIX=	2
 # Don't pick up libwww's -lmd5, until buildlink can be fixed.
 #
 CONFIGURE_ENV+=	ac_cv_lib_md5_MD5Init=no
+.elif ${OPSYS} == "IRIX"
+TIMETRIM=	"@comment "
+NO_TIMETRIM=	""
 .endif
 
+PLIST_SUBST+=	TIMETRIM=${TIMETRIM} NO_TIMETRIM=${NO_TIMETRIM}
+
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/buildlink3/bsd.builtin.mk"
+
+.if !empty(USE_BUILTIN.openssl:M[nN][oO])
+CONFIGURE_ARGS+=	--with-openssl-incdir=${SSLBASE}/include
+CONFIGURE_ARGS+=	--with-openssl-libdir=${SSLBASE}/lib
+CONFIGURE_ARGS+=	--with-crypto=openssl
+.endif
+
 .include "../../mk/bsd.pkg.mk"
