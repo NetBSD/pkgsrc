@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.492 2002/11/09 05:24:50 rh Exp $
+$NetBSD: CHANGES,v 1.493 2002/11/09 13:40:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3568,3 +3568,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated choparp to 20021107 [itojun 2002-11-09]
 	Added gtoolkit-0.9.5 [rh 2002-11-09]
 	Added gtoolkit-examples-0.9.5 [rh 2002-11-09]
+	Updated reed to 5.4 [wiz 2002-11-09]
