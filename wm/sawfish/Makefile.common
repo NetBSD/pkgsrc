@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2001/04/03 08:43:49 toshii Exp $
 
 DISTNAME=		sawfish-${SF_VERS}
-SF_VERS=		0.33.1
+SF_VERS=		0.38
 CATEGORIES=		x11 gnome wm
 MASTER_SITES=		ftp://mirror.capital-internet.net/pub/sawmill/sawfish/ \
 			ftp://eprom.dhs.org/pub/mirrors/sawmill/ \
