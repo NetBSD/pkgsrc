@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/08/28 09:43:08 rh Exp $
+# $NetBSD: Makefile,v 1.11 1999/08/29 12:48:58 rh Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/11/18 17:35:16 vanilla Exp
 #
 
@@ -13,7 +13,7 @@ HOMEPAGE=	http://glade.pn.org/
 BUILD_DEPENDS+=	xgettext:../../devel/gettext
 BUILD_DEPENDS+=	msgfmt:../../devel/gettext
 DEPENDS+=	gtk+-1.2.4:../../x11/gtk
-DEPENDS+=	gnome-core-1.0.7:../../x11/gnome-core
+DEPENDS+=	gnome-core-1.0.9:../../x11/gnome-core
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	CFLAGS="${CFLAGS} -I${LOCALBASE}/include"
