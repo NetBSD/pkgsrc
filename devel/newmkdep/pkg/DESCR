@@ -1,0 +1,3 @@
+This is a replacement for *BSD's "mkdep" command. Because it is a C program
+and does all postprocessing and file handling without calling any external
+programs it is upto 10% faster than the original shell script.
