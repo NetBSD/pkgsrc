@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2004/09/21 17:15:35 jmmv Exp $
+$NetBSD: patch-ab,v 1.2 2005/03/22 16:33:55 jmmv Exp $
 
---- cd-drive.c.orig	2004-08-09 22:04:30.000000000 +0200
-+++ cd-drive.c
-@@ -688,8 +688,9 @@ lookup_scsi_unit (int bus, int id, int l
+--- nautilus-burn-drive.c.orig	2005-02-23 01:34:17.000000000 +0100
++++ nautilus-burn-drive.c
+@@ -1112,8 +1112,9 @@ lookup_scsi_unit (int               bus,
  	}
  	return NULL;
  }
@@ -13,7 +13,7 @@ $NetBSD: patch-ab,v 1.1 2004/09/21 17:15:35 jmmv Exp $
  static int
  get_device_max_read_speed (char *device)
  {
-@@ -710,7 +711,6 @@ get_device_max_read_speed (char *device)
+@@ -1134,7 +1135,6 @@ get_device_max_read_speed (char *device)
  
  	return max_speed;
  }
@@ -21,13 +21,13 @@ $NetBSD: patch-ab,v 1.1 2004/09/21 17:15:35 jmmv Exp $
  
  static int
  get_device_max_write_speed (char *device)
-@@ -732,6 +732,9 @@ get_device_max_write_speed (char *device
+@@ -1156,7 +1156,9 @@ get_device_max_write_speed (char *device
  
  	return max_speed;
  }
 +#endif
-+
-+#if defined(__linux__)
  
++#if defined(__linux__)
  static char *
- get_scsi_cd_name (int bus, int id, int lun, const char *dev,
+ get_scsi_cd_name (int               bus,
+ 		  int               id,

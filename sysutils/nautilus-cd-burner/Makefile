@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2005/02/26 17:26:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2005/03/22 16:33:55 jmmv Exp $
 #
 
-DISTNAME=	nautilus-cd-burner-2.8.7
+DISTNAME=	nautilus-cd-burner-2.10.0
 CATEGORIES=	sysutils gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/nautilus-cd-burner/2.8/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/nautilus-cd-burner/2.10/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
@@ -42,6 +42,7 @@ GCONF2_SCHEMAS=		ncb.schemas
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
