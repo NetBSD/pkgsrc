@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/09/06 08:08:17 sakamoto Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/18 15:57:47 wiz Exp $
 
 DISTNAME=		majordomo-1.94.4
 CATEGORIES=		mail
@@ -9,7 +9,14 @@ EXTRACT_SUFX=   	.tgz
 MAINTAINER=		packages@biology.nmsu.edu
 HOMEPAGE=		http://www.greatcircle.com/majordomo/
 
-DEPENDS+=		addnerd-1.6:../../sysutils/addnerd
+.if exists(/usr/sbin/user)
+ADDUSER=		/usr/sbin/useradd
+ADDGROUP=		/usr/sbin/groupadd
+.else
+DEPENDS+=		user>=20000313:../../sysutils/user
+ADDUSER=		${LOCALBASE}/sbin/useradd
+ADDGROUP=		${LOCALBASE}/sbin/groupadd
+.endif
 
 USE_PERL5=		yes
 
@@ -20,6 +27,7 @@ INSTALL_TARGET=		install install-wrapper
 
 MESSAGE_FILE=		${WRKDIR}/MESSAGE
 REQ_FILE=		${WRKDIR}/REQ
+DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 MAKEFILE=		Makefile.netbsd
 
 MAJORDOMO_TMPDIR?=	/var/tmp
@@ -81,8 +89,14 @@ do-configure:
 		-e 's|@MAJORDOMO_USER@|${MAJORDOMO_USER}|g' \
 		-e 's|@MAJORDOMO_GROUP@|${MAJORDOMO_GROUP}|g' \
 		-e 's|@HOME@|${MAJORDOMO_HOMEDIR}|g' \
-		-e 's|@LOCALBASE@|${LOCALBASE}|g' \
+		-e 's|@ADDUSER@|${ADDUSER}|g' \
+		-e 's|@ADDGROUP@|${ADDGROUP}|g' \
 		< ${PKGDIR}/REQ > ${REQ_FILE}
+	@${SED} \
+		-e 's|@MAJORDOMO_USER@|${MAJORDOMO_USER}|g' \
+		-e 's|@MAJORDOMO_GROUP@|${MAJORDOMO_GROUP}|g' \
+		-e 's|@HOME@|${MAJORDOMO_HOMEDIR}|g' \
+		< ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 	@${MAKE} ${.MAKEFLAGS} require-uid
 	@${SED} \
 		-e 's:@PREFIX@:${PREFIX}:g' \
