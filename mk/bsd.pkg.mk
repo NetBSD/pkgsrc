@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1473 2004/07/03 22:11:56 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1474 2004/07/06 11:28:55 abs Exp $
 #
 # This file is in the public domain.
 #
@@ -1843,6 +1843,7 @@ _EXTRACT_SUFFIXES+=	.zip
 _EXTRACT_SUFFIXES+=	.lha .lzh
 _EXTRACT_SUFFIXES+=	.Z .bz2 .gz
 _EXTRACT_SUFFIXES+=	.zoo
+_EXTRACT_SUFFIXES+=	.bin
 _EXTRACT_SUFFIXES+=	.rar
 
 # If the distfile has a tar.bz2 suffix, use bzcat in preference to gzcat,
@@ -1918,6 +1919,7 @@ EXTRACT_CMD.zoo?=	${LOCALBASE}/bin/unzoo ${EXTRACT_CMD_OPTS.zoo} $${extract_file
 EXTRACT_CMD_OPTS.zoo?=	-x
 EXTRACT_CMD.rar?=	${LOCALBASE}/bin/unrar ${EXTRACT_CMD_OPTS.rar} $${extract_file}
 EXTRACT_CMD_OPTS.rar?=	x -inul
+EXTRACT_CMD.bin?=	${ECHO} yes | $${extract_file} ${EXTRACT_CMD_OPTS.bin} >/dev/null
 
 .for __suffix__ in .gz .bz2 .Z
 EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} > `${BASENAME} $${extract_file} ${__suffix__}`
