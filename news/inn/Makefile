@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2002/09/29 10:39:36 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2002/09/29 10:41:36 jlam Exp $
 
 DISTNAME=		inn-2.3.3
 CATEGORIES=		news
@@ -40,7 +40,7 @@ PKG_GROUPS=		news
 PKG_SYSCONFDIR.inn=	${INN_DATA_DIR}/etc
 EXAMPLEDIR=		${PREFIX}/share/examples/inn
 INN_DATADIRS=		db etc log log/OLD run spool tmp
-INN_SPOOLDIRS=		articles overview incoming incoming/bad	\
+INN_SPOOLDIRS=		archive articles overview incoming incoming/bad	\
 			outgoing uniover innfeed
 
 OWN_DIRS=		${PREFIX}/etc/nntp
