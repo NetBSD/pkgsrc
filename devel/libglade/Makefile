@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2002/09/06 17:43:48 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2002/10/05 04:10:03 rh Exp $
 #
 
 DISTNAME=		libglade-0.17
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/libglade/}
 
@@ -26,8 +26,25 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.db}/include/db2
 .endif
 
+DISPLAY?=	# empty if unset
+checkforx:
+.if ${DISPLAY}=="" || ${DISPLAY_OK:!${X11BASE}/bin/xdpyinfo >/dev/null 2>&1 && echo YES || echo NO!} == "NO"
+.if exists(${X11BASE}/bin/Xvfb)
+	-${SETENV} XAUTHORITY= ${X11BASE}/bin/Xvfb :2 &
+DISPLAY=	':2'
+.else
+	@${ECHO} "Error: Environment variable DISPLAY must be set"
+	@${ECHO} "       and point to a connectible X server."
+	@${FALSE}
+.endif	# Xvfb
+.endif	# DISPLAY
+
+MAKE_ENV+=	DISPLAY=${DISPLAY}
+
 pre-configure:
 	${RM} ${WRKSRC}/libgladeConf.sh
+
+pre-build: checkforx
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../textproc/libxml/buildlink2.mk"
