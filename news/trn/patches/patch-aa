@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1999/02/22 21:38:56 tv Exp $
+
 --- nntpinit.c.orig	Mon Feb 22 10:22:45 1999
 +++ nntpinit.c	Mon Feb 22 10:33:48 1999
 @@ -25,6 +25,7 @@
