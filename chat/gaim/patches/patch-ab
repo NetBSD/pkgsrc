@@ -1,0 +1,94 @@
+$NetBSD: patch-ab,v 1.1 2002/07/19 05:13:35 mycroft Exp $
+
+--- src/perl.c.orig	Fri May 31 05:13:02 2002
++++ src/perl.c	Fri Jul 19 05:07:30 2002
+@@ -289,7 +289,7 @@
+ XS (XS_GAIM_register)
+ {
+ 	char *name, *ver, *callback, *unused; /* exactly like X-Chat, eh? :) */
+-	unsigned int junk;
++	STRLEN junk;
+ 	struct perlscript *scp;
+ 	dXSARGS;
+ 	items = 0;
+@@ -400,7 +400,7 @@
+ {
+ 	char *title;
+ 	char *message;
+-	unsigned int junk;
++	STRLEN junk;
+ 	dXSARGS;
+ 	items = 0;
+ 
+@@ -468,7 +468,7 @@
+ 
+ XS (XS_GAIM_command)
+ {
+-	unsigned int junk;
++	STRLEN junk;
+ 	char *command = NULL;
+ 	dXSARGS;
+ 	items = 0;
+@@ -520,7 +520,7 @@
+ XS (XS_GAIM_user_info)
+ {
+ 	struct gaim_connection *gc;
+-	unsigned int junk;
++	STRLEN junk;
+ 	struct buddy *buddy = NULL;
+ 	dXSARGS;
+ 	items = 0;
+@@ -546,7 +546,7 @@
+ {
+ 	char *nick, *who, *what;
+ 	struct conversation *c;
+-	int junk;
++	STRLEN junk;
+ 	int send, wflags;
+ 	dXSARGS;
+ 	items = 0;
+@@ -578,7 +578,7 @@
+ 	struct gaim_connection *gc;
+ 	char *nick, *what;
+ 	int isauto;
+-	int junk;
++	STRLEN junk;
+ 	dXSARGS;
+ 	items = 0;
+ 
+@@ -601,7 +601,7 @@
+ 	char *nick, *what;
+ 	int isauto;
+ 	struct conversation *c;
+-	unsigned int junk;
++	STRLEN junk;
+ 	dXSARGS;
+ 	items = 0;
+ 
+@@ -631,7 +631,7 @@
+ 	char *what;
+ 	struct conversation *b = NULL;
+ 	GSList *bcs;
+-	unsigned int junk;
++	STRLEN junk;
+ 	dXSARGS;
+ 	items = 0;
+ 
+@@ -797,7 +797,7 @@
+ 
+ XS (XS_GAIM_add_event_handler)
+ {
+-	unsigned int junk;
++	STRLEN junk;
+ 	struct _perl_event_handlers *handler;
+ 	dXSARGS;
+ 	items = 0;
+@@ -824,7 +824,7 @@
+ 
+ XS (XS_GAIM_add_timeout_handler)
+ {
+-	unsigned int junk;
++	STRLEN junk;
+ 	long timeout;
+ 	struct _perl_timeout_handlers *handler;
+ 	dXSARGS;
