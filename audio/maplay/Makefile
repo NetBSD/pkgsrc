@@ -3,7 +3,8 @@
 # Date created:         Feb 13 1995
 # Whom:                 jkh
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/28 23:18:31 augustss Exp $
+# $NetBSD: Makefile,v 1.2 1997/10/28 23:49:37 augustss Exp $
+# FreeBSD Id: Makefile,v 1.6 1997/01/07 14:58:04 torstenb Exp 
 #
 
 DISTNAME=       maplay1_2
