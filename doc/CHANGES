@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8190 2004/11/30 19:32:49 abs Exp $
+$NetBSD: CHANGES,v 1.8191 2004/11/30 21:21:32 perry Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5686,4 +5686,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ruby18 to 1.8.1nb1 [taca 2004-11-30]
 	Updated magicpoint to 1.10anb4 [taca 2004-11-30]
 	Updated pkg_chk to 1.52 [abs 2004-11-30]
-
+	Updated sunclock to 1.5 [perry 2004-11-30]
