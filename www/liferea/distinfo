@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2004/07/26 06:42:24 minskim Exp $
+$NetBSD: distinfo,v 1.6 2004/08/02 23:55:22 minskim Exp $
 
-SHA1 (liferea-0.5.2b.tar.gz) = 9f342498bc8d1c2803b45cd40d5b1efab5fcfd4b
-Size (liferea-0.5.2b.tar.gz) = 912965 bytes
+SHA1 (liferea-0.5.2c.tar.gz) = 956e084c2749e44e8db940970e2187938c1f5563
+Size (liferea-0.5.2c.tar.gz) = 920684 bytes
