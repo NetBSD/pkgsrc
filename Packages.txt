@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.22 1998/03/07 14:18:40 tron Exp $
+# $NetBSD: Packages.txt,v 1.23 1998/03/18 07:10:30 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -925,6 +925,15 @@ in .if statements:
 1. in the pkg Makefile, set all the pre-install etc targets.
 2. in the pkg Makefile, .include <bsd.port.mk>
 3. Then put all the .if defined(USE_SOCKS), .if defined(USE_IDEA) etc
+
+
+ 9.10 Is there a mailing list for pkg-related discussion?
+ ========================================================
+
+We've agreed on using tech-userlevel@netbsd.org for discussing 
+package related issues. To subscribe do:
+
+    echo subscribe tech-userlevel | mail majordomo@netbsd.org
 
 
  10 Submitting
