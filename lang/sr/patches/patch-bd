@@ -1,9 +1,13 @@
-$NetBSD: patch-bd,v 1.1 2005/03/09 20:38:26 is Exp $
+$NetBSD: patch-bd,v 1.2 2005/03/11 23:24:14 is Exp $
 
---- /dev/null	2005-03-09 09:35:26.000000000 +0100
+--- vsuite/quick/ptrstr/No_input.std.orig	2005-03-11 09:46:24.000000000 +0100
 +++ vsuite/quick/ptrstr/No_input.std
-@@ -0,0 +1,4 @@
+@@ -0,0 +1,8 @@
 +Testing pointer-string-pointer conversions:
 +Null pointer: ==null== ; string: ==null== ; int: 0 ; pt(==null==): ==null==
-+pointer identity: true
-+string  identity: true
++pointer  identity: true
++string   identity: true
++pointerX identity: true
++Expect invalid conversion:
++RTS abort: file pointer.sr, line 31:
++   illegal conversion: pointer("invalid")
