@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1764 2003/03/25 01:35:03 salo Exp $
+$NetBSD: CHANGES,v 1.1765 2003/03/25 09:16:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1293,3 +1293,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added smokeping-1.19 [bouyer 2003-03-24]
 	Updated cvsync to 0.15.1 [gehenna 2003-03-25]
 	Added tuxracer-0.61 [salo 2003-03-25]
+	Updated sox to 12.17.4 [wiz 2003-03-25]
