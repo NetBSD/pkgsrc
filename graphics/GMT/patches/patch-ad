@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1.1.1 2000/11/26 22:48:16 jtb Exp $
+$NetBSD: patch-ad,v 1.2 2001/04/19 20:51:31 jtb Exp $
 
---- src/gmt_init.c.orig	Tue Oct 24 17:24:38 2000
+--- src/gmt_init.c.orig	Thu Apr 19 18:02:09 2001
 +++ src/gmt_init.c
 @@ -1488,7 +1488,7 @@
  

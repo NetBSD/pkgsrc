@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.1.1.1 2000/11/26 22:48:17 jtb Exp $
+$NetBSD: patch-ah,v 1.2 2001/04/19 20:51:32 jtb Exp $
 
---- src/grdreformat.c.orig	Tue Oct 24 17:24:39 2000
+--- src/grdreformat.c.orig	Thu Apr 19 18:02:08 2001
 +++ src/grdreformat.c
 @@ -86,7 +86,7 @@
  		GMT_explain_option ('V');

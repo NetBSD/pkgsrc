@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.1.1.1 2000/11/26 22:48:17 jtb Exp $
+$NetBSD: patch-ag,v 1.2 2001/04/19 20:51:31 jtb Exp $
 
---- src/makecpt.c.orig	Tue Oct 24 17:24:39 2000
+--- src/makecpt.c.orig	Thu Apr 19 18:02:08 2001
 +++ src/makecpt.c
 @@ -48,7 +48,7 @@
  
