@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.61 2005/02/15 18:04:02 tv Exp $
+# $NetBSD: Makefile,v 1.62 2005/02/15 18:13:41 tv Exp $
 #
 # NOTE:
 # When updating, it is necessary to change the shlib version, located in
-# patch-aa.  If you do not KNOW that the new version is backwards ABI
-# compatible (usually not, in the case of libpico), bump the major version,
+# several files in patches/.  If you do not KNOW that the new version is
+# backwards ABI compatible (usually not), bump the major version,
 # and then bump the BUILDLINK_DEPENDS in buildlink3.mk.
 #
 
 DISTNAME=	pine4.62
 PKGNAME=	pico-4.9
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/ \
 		ftp://ftp.fu-berlin.de/unix/mail/pine/
@@ -53,9 +53,9 @@ pre-patch:
 		${WRKSRC}/pico/osdep/os-sol.h ${WRKSRC}/pico/osdep/os-sfu.h
 	${SED} -e 's,read.pol,read.sel,' \
 		${WRKSRC}/pico/osdep/os-sv4.ic >${WRKSRC}/pico/osdep/os-sfu.ic
+.endif
 	${SED} -e 's,-ltermlib,-lcurses,g;s,sv4,sfu,g' \
 		${WRKSRC}/pico/makefile.sv4 >${WRKSRC}/pico/makefile.sfu
-.endif
 
 do-build:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./build ${BUILDNAME} \

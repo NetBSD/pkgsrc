@@ -1,29 +1,25 @@
-$NetBSD: patch-ag,v 1.2 2005/02/15 18:13:41 tv Exp $
+$NetBSD: patch-ab,v 1.12 2005/02/15 18:13:41 tv Exp $
 
---- pico/makefile.lnx.orig	Tue Oct 23 15:19:06 2001
-+++ pico/makefile.lnx
-@@ -36,18 +36,14 @@
- RM=          rm -f
- LN=          ln -s
+--- pico/makefile.sfu.orig	2005-02-15 13:08:55.000000000 -0500
++++ pico/makefile.sfu
+@@ -34,15 +34,12 @@ LN=          ln -s
  MAKE=        make
--OPTIMIZE=    # -O
-+OPTIMIZE=    -O2
+ OPTIMIZE=    # -O
  PROFILE=     # -pg
 -DEBUG=       -g -DDEBUG
-+DEBUG=       -g
++DEBUG=       # -g -DDEBUG
  
- STDCFLAGS=	-Dlnx -DJOB_CONTROL -DPOSIX -DMOUSE
+ STDCFLAGS=	-Dsfu -DJOB_CONTROL -DPOSIX -DMOUSE
  CFLAGS=         $(OPTIMIZE) $(PROFILE) $(DEBUG) $(EXTRACFLAGS) $(STDCFLAGS)
  
  # switches for library building
 -LIBCMD=		ar
 -LIBARGS=	ru
--RANLIB=		ranlib
--
- LIBS=		$(EXTRALDFLAGS) -lncurses
+-RANLIB=		true
  
- OFILES=		attach.o basic.o bind.o browse.o buffer.o \
-@@ -61,17 +57,17 @@ HFILES=		headers.h estruct.h edef.h efun
+ LIBS=		$(EXTRALDFLAGS) -lcurses
+ 
+@@ -57,17 +54,17 @@ HFILES=		headers.h estruct.h edef.h efun
  # dependencies for the Unix versions of pico and libpico.a
  #
  all:		pico pilot
