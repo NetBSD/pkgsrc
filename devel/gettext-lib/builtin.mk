@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2004/03/16 17:40:54 jlam Exp $
+# $NetBSD: builtin.mk,v 1.3 2004/03/22 20:57:38 jlam Exp $
 
 .if !defined(_BLNK_LIBINTL_FOUND)
 _BLNK_LIBINTL_FOUND!=	\
@@ -22,9 +22,9 @@ IS_BUILTIN.gettext!=	\
 		${ECHO} "no";						\
 	fi
 .    if !empty(IS_BUILTIN.gettext:M[yY][eE][sS])
-#
-# XXX Consider the base system libintl to be gettext-lib-0.10.35nb1.
-#
+# XXX
+# XXX Consider the native libintl to be gettext-lib-0.10.35nb1.
+# XXX
 BUILTIN_PKG.gettext=	gettext-lib-0.10.35nb1
 MAKEFLAGS+=		BUILTIN_PKG.gettext=${BUILTIN_PKG.gettext}
 .    endif
@@ -57,12 +57,13 @@ USE_BUILTIN.gettext!=	\
 
 .  if ${PREFER.gettext} == "native"
 # XXX
-# XXX By default, assume that the native libintl is good enough.
+# XXX By default, assume that the native gettext implementation is good
+# XXX enough.
 # XXX
-.    if !empty(_BLNK_LIBINTL_FOUND:M[yY][eE][sS]) && exists(${_LIBINTL_H})
+.    if exists(${_LIBINTL_H})
 USE_BUILTIN.gettext=	yes
 #
-# The listed platforms have an implementation of libintl that isn't
+# The listed platforms have an implementation of gettext that isn't
 # GNUish enough.
 #
 _INCOMPAT_GETTEXT=	SunOS-*-*
