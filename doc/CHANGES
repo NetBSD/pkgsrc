@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9636 2005/03/26 10:06:18 wiz Exp $
+$NetBSD: CHANGES,v 1.9637 2005/03/26 11:11:16 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1758,3 +1758,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed xspeakfree [kristerw 2005-03-25]
 	Updated host to 20040812 [christos 2005-03-26]
 	Updated cgiirc to 0.5.6 [adrianp 2005-03-26]
+	Updated phpldapadmin to 0.9.5 [seb 2005-03-26]
