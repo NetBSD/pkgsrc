@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2967 2003/08/01 17:11:55 jmmv Exp $
+$NetBSD: CHANGES,v 1.2968 2003/08/01 21:04:18 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3168,3 +3168,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libnbcompat to 20030731 [jschauma 2003-07-31]
 	Updated bind8 to 8.4.1 [seb 2003-07-31]
 	Updated esound to 0.2.30 [jmmv 2003-08-01]
+	Updated p5-File-MMagic to 1.20 [jdolecek 2003-08-01]

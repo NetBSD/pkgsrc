@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2003/07/21 17:01:23 martti Exp $
+# $NetBSD: Makefile,v 1.8 2003/08/01 21:04:20 jdolecek Exp $
 
-DISTNAME=		File-MMagic-1.13
+DISTNAME=		File-MMagic-1.20
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5fim
 CATEGORIES=		misc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=File/}
 
 MAINTAINER=		kei@NetBSD.org
-HOMEPAGE=		http://www.daionet.gr.jp/~knok/
+HOMEPAGE=		http://search.cpan.org/author/KNOK/
 COMMENT=		Perl5 module to guess file types
 
 USE_BUILDLINK2=		YES
