@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2000/11/02 06:57:32 itojun Exp $
+# $NetBSD: Makefile,v 1.59 2000/11/09 14:53:00 itojun Exp $
 
 DISTNAME=	mutt-1.2.5i
 CATEGORIES=	mail
@@ -15,11 +15,14 @@ BUILD_DEPENDS+=	${LOCALBASE}/bin/automake:../../devel/automake
 BUILD_DEPENDS+=	msgfmt:../../devel/gettext
 
 USE_LIBINTL=	yes
+MAKE_ENV+=	LIBS=-lintl
+CONFIGURE_ENV+=	LIBS=-lintl
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 CONFIGURE_ARGS+= --with-exec-shell=/bin/ksh \
 		 --with-docdir=${PREFIX}/share/doc/mutt \
-		 --enable-pop --enable-imap
+		 --enable-pop --enable-imap \
+		 --without-included-gettext
 USE_CURSES=	yes
 REPLACE_NCURSES=	configure configure.in
 
