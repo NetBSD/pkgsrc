@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/12/03 12:15:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/03/04 21:05:04 adrianp Exp $
 bin/eggdrop
 ${NOPIC}lib/eggdrop/assoc.so
 ${NOPIC}lib/eggdrop/blowfish.so
@@ -22,9 +22,9 @@ share/doc/eggdrop/BOTNET
 share/doc/eggdrop/FIRST-SCRIPT
 share/doc/eggdrop/MODULES
 share/doc/eggdrop/PARTYLINE
-share/doc/eggdrop/USERS
 share/doc/eggdrop/TEXT-SUBSTITUTIONS
 share/doc/eggdrop/TRICKS
+share/doc/eggdrop/USERS
 share/doc/eggdrop/tcl-commands.doc
 share/doc/html/eggdrop/about.html
 share/doc/html/eggdrop/app-problems.html

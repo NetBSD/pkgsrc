@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/02/13 22:38:53 zuntum Exp $
+# $NetBSD: Makefile,v 1.18 2005/03/04 21:05:04 adrianp Exp $
 
 DISTNAME=	eggdrop1.6.17
 PKGNAME=	eggdrop-1.6.17
@@ -13,13 +13,13 @@ COMMENT=	IRC robot with TCL scripting and multi-channel ability
 USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
+BUILD_DEFS+=		USE_INET6
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ENV+=		TCLLIB="${PREFIX}/lib" TCLINC="${PREFIX}/include"
 
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
-BUILD_DEFS+=		USE_INET6
 CONFIGURE_ARGS+=	--enable-ipv6
 PLIST_SUBST+=		NOIPV6="@comment "
 .else
