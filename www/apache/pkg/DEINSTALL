@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.7 2001/04/29 20:42:29 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.8 2001/05/02 22:22:43 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -11,7 +11,6 @@ RMDIR="@RMDIR@"
 TRUE="@TRUE@"
 
 SERVERROOT="@APACHE_SYSCONFDIR@"
-CGIBINDIR=${PKG_PREFIX}/libexec/cgi-bin
 DATADIR=${PKG_PREFIX}/share/httpd
 LOGDIR=/var/log/httpd
 SPOOLDIR=/var/spool/httpd
@@ -52,7 +51,6 @@ POST-DEINSTALL)
 	${RMDIR} ${LOGDIR} 2>/dev/null || ${TRUE}
 	${RMDIR} ${DATADIR}/htdocs 2>/dev/null || ${TRUE}
 	${RMDIR} ${DATADIR} 2>/dev/null || ${TRUE}
-	${RMDIR} ${CGIBINDIR} 2>/dev/null || ${TRUE}
 	${RMDIR} ${SERVERROOT}/ssl.prm 2>/dev/null || ${TRUE}
 	${RMDIR} ${SERVERROOT}/ssl.key 2>/dev/null || ${TRUE}
 	${RMDIR} ${SERVERROOT}/ssl.csr 2>/dev/null || ${TRUE}
