@@ -1,0 +1,34 @@
+*** /dev/null	Thu Mar  5 20:41:40 1998
+--- netbsd/Makefile.netbsd	Thu Mar  5 18:23:50 1998
+***************
+*** 0 ****
+--- 1,15 ----
++ CC=cc
++ INCLUDES=-I${LOCALBASE}/include/tcl8.0 -I${LOCALBASE}/include/tk8.0 -I${X11BASE}/include -I${TK_SRC}/generic -I${TK_SRC}/unix
++ LIB_DIR=${LOCALBASE}/lib
++ LIBS=-L${LIB_DIR} -ltk80 -ltcl80 -lm -L${X11BASE}/lib -lX11
++ CFLAGS+=-ggdb $(INCLUDES) -DFREEBSD -DPROTOTYPES -DHAVE_NO_VALUES_H -DHAVE_LIMITS_H -DHAVE_UNISTD_H -DMAXINT=INT_MAX -DDEFINED_ERRLIST
++ # for search.h
++ CFLAGS+=-I../src
++ 
++ OBJS+=hsearch.o
++ 
++ install:	all
++ 	install -c -s -m 755 -o bin -g bin nt ${PREFIX}/bin
++ 
++ clean:
++ 	rm *.o *.tcl *.ehtml tcl2c
+*** /dev/null	Thu Mar  5 20:41:40 1998
+--- netbsd/configure	Thu Mar  5 20:48:10 1998
+***************
+*** 0 ****
+--- 1,2 ----
++ #!/bin/sh
++ cat ../src/Makefile.template Makefile.netbsd > Makefile
+*** /dev/null	Thu Mar  5 20:51:51 1998
+--- Makefile	Thu Mar  5 20:54:21 1998
+***************
+*** 0 ****
+--- 1,2 ----
++ all install clean:
++ 	cd netbsd && make $@
