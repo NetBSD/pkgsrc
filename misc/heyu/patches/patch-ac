@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2002/07/02 14:03:52 wiz Exp $
+$NetBSD: patch-ac,v 1.3 2003/11/11 10:17:39 wiz Exp $
 
---- tty.c.orig	Sat Feb 10 21:45:49 2001
+--- tty.c.orig	Sun Mar 30 22:57:59 2003
 +++ tty.c
-@@ -92,7 +92,12 @@
+@@ -93,7 +93,12 @@ struct sgttyb oldsb, newsb;
  #endif
  struct termio oldsb, newsb;
  #else
