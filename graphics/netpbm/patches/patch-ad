@@ -68,7 +68,7 @@
   */
 +/*
 + * Note: I changed this file and some Imakefiles to use the installed
-+ * libtiff in /usr/local instad FreeBSD. - Satoshi
++ * libtiff in /usr/pkg instad FreeBSD. - Satoshi
 + */
  #ifndef BuildLibTiff
  #define BuildLibTiff     YES
@@ -109,10 +109,10 @@
  #endif
  #ifndef TiffDir
 -#define TiffDir TOPDIR/libtiff
-+#define TiffDir /usr/local/lib
++#define TiffDir /usr/pkg/lib
 +#endif
 +#ifndef TiffIncDir
-+#define TiffIncDir /usr/local/include
++#define TiffIncDir /usr/pkg/include
  #endif
  
  /* Libraries: */
@@ -241,3 +241,16 @@
  #endif
  
  #if InstallLibraries
+--- pbm/libpbm1.c	1997/10/15 15:28:18	1.1
++++ pbm/libpbm1.c	1997/10/15 15:28:44
+@@ -20,6 +20,10 @@
+ #include <varargs.h>
+ #endif /*__STDC__*/
+ 
++#ifdef __NetBSD__
++#include <errno.h>
++#endif
++
+ 
+ /* Variable-sized arrays. */
+ 
