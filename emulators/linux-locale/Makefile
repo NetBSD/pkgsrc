@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/09/27 23:18:03 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.15 2002/04/05 09:36:44 tron Exp $
 
 DISTNAME=	locales-2.1-1mdk
 PKGNAME=	linux-locale-2.1.1
@@ -30,7 +29,7 @@ DISTFILES+=	locales-${locale}-2.1-1mdk${EXTRACT_SUFX}
 DIST_SUBDIR=	linux-locale
 
 ONLY_FOR_PLATFORM=NetBSD-*-i386
-DEPENDS=	suse_base>=6.3:../../emulators/suse_base
+DEPENDS=	suse_base>=6.3:../../emulators/${SUSE_DIR_PREFIX}_base
 
 EXTRACT_ONLY=	# empty
 NO_PATCH=	yes
@@ -62,4 +61,4 @@ post-install:
 	@${CAT} ${CPIOLIST}|${GREP} "^l"|${SED} -e "s|.* \(usr\/.*\) -> .*|@unexec rm -f %D/${EMULSUBDIR}/\1|"|sort >> ${PLIST_SRC}
 	@${CAT} ${CPIOLIST}|${GREP} "^d"|${SED} -e "s|.* \(usr\/.*\)|@dirrm ${EMULSUBDIR}/\1|"|sort -r >> ${PLIST_SRC}
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../emulators/suse_linux/Makefile.application"
