@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2001/08/02 15:25:15 itojun Exp $
+# $NetBSD: Makefile,v 1.39 2001/08/06 08:25:12 itojun Exp $
 #
 
-DISTNAME=	racoon-20010802a
+DISTNAME=	racoon-20010806a
 CATEGORIES=	security net
 MASTER_SITES=	ftp://ftp.kame.net/pub/kame/misc/
 
@@ -39,7 +39,7 @@ CONFIGURE_ARGS+=--enable-ipv6
 CONFIGURE_ARGS+=--disable-ipv6
 .endif
 CONFIGURE_ARGS+=--sysconfdir=/etc/racoon
-CONFIGURE_ARGS+=--with-pkgversion=netbsd-pkgsrc-20010802a
+CONFIGURE_ARGS+=--with-pkgversion=netbsd-pkgsrc-20010806a
 
 pre-configure:
 	(cd ${WRKSRC}/../libipsec; ${MAKE})
