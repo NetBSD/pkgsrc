@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/01/31 17:33:54 abs Exp $
+$NetBSD: distinfo,v 1.2 2002/02/01 16:18:58 abs Exp $
 
-SHA1 (HTML-FixEntities-1.00.tar.gz) = 27abd4f129782d9936e92fbd453e2952dd524f72
-Size (HTML-FixEntities-1.00.tar.gz) = 3161 bytes
+SHA1 (HTML-FixEntities-1.01.tar.gz) = 482000b3dae7c2ee3dbd31cf59573c995ac322ed
+Size (HTML-FixEntities-1.01.tar.gz) = 3163 bytes
