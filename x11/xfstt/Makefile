@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/25 04:18:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/28 10:42:03 wiz Exp $
 #
 
 DISTNAME=		xfstt-1.1
@@ -32,7 +32,7 @@ do-install:
 	${SED} -e "/%%PREFIX%%/s##${PREFIX}#g" ${FILESDIR}/xfstt.sh \
 		> ${PREFIX}/etc/rc.d/xfstt
 	${CHMOD} 755 ${PREFIX}/etc/rc.d/xfstt
-	$(INSTALL_DATA_DIR) $(PREFIX)/lib/X11/fonts/TrueType
-	${ECHO} belongs to xfstt pkg >$(PREFIX)/lib/X11/fonts/TrueType/.keepme
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/fonts/TrueType
+	${ECHO} belongs to xfstt pkg >${PREFIX}/lib/X11/fonts/TrueType/.keepme
 
 .include "../../mk/bsd.pkg.mk"
