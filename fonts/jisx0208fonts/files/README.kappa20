@@ -1,0 +1,3 @@
+$NetBSD: README.kappa20,v 1.1.1.1 2000/04/09 15:20:48 itojun Exp $
+NetBSD binary package "jisx0208fonts" includes Kappa20 font, converted
+into pcf format.
