@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2000/10/18 13:47:05 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2000/10/21 22:03:22 wiz Exp $
 #
 
-VERS=		1.3
 DISTNAME=	libgetopt-${VERS}
 CATEGORIES=	pkgtools sysutils
 MASTER_SITES=	${MASTER_SITE_LOCAL}
@@ -9,12 +8,13 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 #	 	ftp://ftp.de.netbsd.org/pub/NetBSD/NetBSD-current/src/lib/libc/stdlib/
 DISTFILES=	getopt_long.c-${VERS} getopt_long.3-${VERS}
 
+MAINTAINER=	hubertf@netbsd.org,mcr@netbsd.org
+
 .if exists(/usr/include/getopt.h)
 IGNORE=         "${PKGNAME} is part of your NetBSD distribution"
 .endif
 
-MAINTAINER=	hubertf@netbsd.org,mcr@netbsd.org
-
+VERS=		1.3
 WRKSRC=		${WRKDIR}/libgetopt
 # I have NFC why the mkdir in pre-extract doesn't work, so do it here:
 EXTRACT_CMD=	${MKDIR} ${WRKSRC} && ${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}
