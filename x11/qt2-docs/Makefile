@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/08/26 17:33:28 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2003/03/28 21:14:40 wiz Exp $
 #
 
 PKGNAME=	qt2-docs-${QTVERSION}
@@ -11,7 +11,6 @@ BUILDLINK_DEPENDS.qt2-libs=	qt2-libs>=${QTVERSION}nb2
 .include "../qt2-libs/Makefile.common"
 
 USE_BUILDLINK2=	yes
-NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/12/26 20:52:12 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/28 21:14:36 wiz Exp $
 #
 
 DISTNAME=	saxon
@@ -14,7 +14,6 @@ COMMENT=	Michael H. Kay's Java XSLT processor
 DIST_SUBDIR=	${PKGNAME}
 USE_JAVA=	run
 USE_BUILDLINK2=
-NO_PATCH=
 NO_CONFIGURE=
 NO_BUILD=
 

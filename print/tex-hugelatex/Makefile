@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/03/13 17:37:39 fredb Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/28 21:14:31 wiz Exp $
 #
 
 DISTNAME=	hugelatex-1.0
@@ -15,7 +15,6 @@ DEPENDS+=	teTeX-1.0*:../teTeX
 
 EXTRACT_ONLY=	# nothing
 NO_CHECKSUM=	yes
-NO_PATCH=	yes
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}
 

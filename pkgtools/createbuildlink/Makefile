@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/01/09 02:21:29 uebayasi Exp $
+# $NetBSD: Makefile,v 1.13 2003/03/28 21:14:26 wiz Exp $
 #
 
 DISTNAME=	createbuildlink-2.4
@@ -14,7 +14,6 @@ WRKSRC=		${WRKDIR}
 USE_BUILDLINK2=	yes
 NO_CHECKSUM=	yes
 NO_BUILD=	yes
-NO_PATCH=	yes
 EXTRACT_CMD=	${ECHO}
 
 SCRIPT=		${DISTNAME:C/-.*$//}

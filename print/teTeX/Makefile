@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2002/09/21 01:57:35 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2003/03/28 21:14:30 wiz Exp $
 #
 
 DISTNAME=	teTeX-1.0.7
@@ -19,7 +19,6 @@ USE_BUILDLINK2=	yes
 USE_X11=        yes
 EXTRACT_ONLY=   # empty
 NO_CHECKSUM=    yes
-NO_PATCH=       yes
 NO_CONFIGURE=   yes
 NO_BUILD=       yes
 

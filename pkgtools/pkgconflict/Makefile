@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/04/08 16:26:15 wennmach Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/28 21:14:27 wiz Exp $
 #
 
 DISTNAME=	pkgconflict-0.3nb1
@@ -13,7 +13,6 @@ DEPENDS+=	postgresql>=7.0:../../databases/postgresql
 
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
-NO_PATCH=	yes
 NO_CONFIGURE=	yes
 
 post-extract:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 17:42:11 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/28 21:14:34 wiz Exp $
 #
 
 DISTNAME=	c++rt0-1.0
@@ -13,7 +13,6 @@ DIST_SUBDIR=	c++rt0
 ONLY_FOR_PLATFORM=	NetBSD-1.4-sparc NetBSD-1.4.[12]-sparc
 
 EXTRACT_ONLY=	# empty
-NO_PATCH=	yes
 
 do-build:
 	@${ECHO} Nothing to do.

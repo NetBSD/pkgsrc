@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/08/25 21:49:52 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2003/03/28 21:14:22 wiz Exp $
 
 DISTNAME=		freetype-${FT_VERS}
 FT_VERS=		1.3.1
@@ -18,7 +18,6 @@ USE_X11=		# defined	# freetype-utils uses X11
 
 EXTRACT_ONLY=		# empty
 NO_CHECKSUM=		# defined
-NO_PATCH=		# defined
 NO_CONFIGURE=		# defined
 NO_BUILD=		# defined
 

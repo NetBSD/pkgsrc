@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/10/07 21:56:52 seb Exp $
+# $NetBSD: Makefile,v 1.12 2003/03/28 21:14:16 wiz Exp $
 
 DISTNAME=		p5-perl-headers
 PKGNAME=		${DISTNAME}-${OS_VERSION}
@@ -17,7 +17,6 @@ PERL5_PACKLIST=		${PERL5_SITEARCH}/.packlist.h2ph
 EXTRACT_ONLY=		# empty
 WRKSRC=			${WRKDIR}
 NO_CHECKSUM=		# defined
-NO_PATCH=		# defined
 
 # Since this package will be named, for instance, p5-perl-headers-1.5.1,
 # binary packages on a FTP server (where only "1.5" is used as the directory

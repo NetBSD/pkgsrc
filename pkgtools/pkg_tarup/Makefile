@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/11/23 22:47:02 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/03/28 21:14:27 wiz Exp $
 
 DISTNAME=	pkg_tarup-1.2
 CATEGORIES=	pkgtools
@@ -11,7 +11,6 @@ COMMENT=	Generates binary package from installed pkg
 EXTRACT_ONLY=	# empty
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=    yes
-NO_PATCH=       yes
 NO_BUILD=	yes
 NO_MTREE=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/09/19 22:15:25 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/28 21:14:25 wiz Exp $
 #
 
 DISTNAME=		6to4-1.3
@@ -16,7 +16,6 @@ USE_PERL5=		YES
 EXTRACT_ONLY=	# empty
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
-NO_PATCH=	yes
 NO_CONFIGURE=	yes
 
 do-build:

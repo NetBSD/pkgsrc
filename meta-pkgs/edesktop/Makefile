@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/03/13 17:37:25 fredb Exp $
+# $NetBSD: Makefile,v 1.19 2003/03/28 21:14:23 wiz Exp $
 #
 
 DISTNAME=	edesktop-1.0
@@ -27,7 +27,6 @@ DEPENDS+=	jed-[0-9]*:../../editors/jed
 USE_X11=	yes
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
-NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/11/29 02:34:03 uebayasi Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/28 21:14:32 wiz Exp $
 
 DISTNAME=	TeXfamily-share-1.2.1
 PKGREVISION=	4
@@ -25,7 +25,6 @@ DIST_SUBDIR=	TeXfamily
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	jis${EXTRACT_SUFX} nmin-ngoth${EXTRACT_SUFX} \
 		standard${EXTRACT_SUFX} morisawa${EXTRACT_SUFX}
-NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 NO_MTREE=	yes
