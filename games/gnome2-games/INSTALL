@@ -1,8 +1,7 @@
-# $NetBSD: INSTALL,v 1.4 2003/09/06 15:57:56 cjep Exp $
+# $NetBSD: INSTALL,v 1.5 2004/01/23 16:09:37 jmmv Exp $
 
 case ${STAGE} in
 POST-INSTALL)
-	cd /var/games
 	cat <<. |
 	glines.scores
 	gnibbles.1.0.scores
@@ -49,7 +48,7 @@ POST-INSTALL)
 	 do
 		if [ ! -f $FILE ]
 		then
-			@INSTALL@ -c -o games -g games -m 664 /dev/null $FILE
+			@INSTALL@ -c -o games -g games -m 664 /dev/null /var/games/$FILE
 		fi
 	 done)
 	;;
