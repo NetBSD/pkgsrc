@@ -1,9 +1,3 @@
-  Gem Drop X is an interesting one-player puzzle game for X-Window.
-  It's been written in C under Unix and requires you to compile the
-  source code to produce the executable program itself.  You'll also
-  of course need an X display terminal or software to actually see
-  the game.  (Although a curses version may be released at one point!)
-
   Gem Drop X is a direct port of Gem Drop, an Atari 8-bit game
   written in Action! (a very fast C- and Pascal-like compiled language
   for the Atari).  The concept of the game Gem Drop is based directly
