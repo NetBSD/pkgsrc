@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.116 2004/03/14 12:15:19 jmmv Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.117 2004/03/14 18:57:04 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -102,14 +102,20 @@ PREFER.${_pkg_}=	pkgsrc
 .  if ${PREFER.${_pkg_}} == "pkgsrc"
 USE_BUILTIN.${_pkg_}?=	no
 .  endif
+#
+# builtin.mk files default to using the built-in software if it's
+# available (${PREFER.<pkg>} == "native") unless USE_BUILTIN.<pkg> has
+# been previously set.
+#
 .  if defined(BUILDLINK_PKGSRCDIR.${_pkg_})
 .    if exists(${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk)
 .       include "${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk"
 .    endif
 .  endif
-.  if !defined(IS_BUILTIN.${_pkg_})
+#
+# Default fall-through for packages that don't provide a builtin.mk.
+#
 USE_BUILTIN.${_pkg_}?=	no
-.  endif
 .endfor
 
 # Set IGNORE_PKG.<pkg> if <pkg> is the current package we're building.
@@ -141,7 +147,7 @@ _BLNK_PACKAGES+=	${_pkg_}
 _BLNK_RECURSIVE_DEPENDS=	# empty
 .for _pkg_ in ${_BLNK_PACKAGES}   
 .  if empty(_BLNK_RECURSIVE_DEPENDS:M${_pkg_}) && \
-      (defined(USE_BUILTIN.${_pkg_}) && !empty(USE_BUILTIN.${_pkg_}:M[nN][oO]))
+      !empty(USE_BUILTIN.${_pkg_}:M[nN][oO]))
 _BLNK_RECURSIVE_DEPENDS+=	${_pkg_}
 .  endif
 .endfor
