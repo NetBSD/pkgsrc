@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1647 2003/03/15 16:16:37 hubertf Exp $
+$NetBSD: CHANGES,v 1.1648 2003/03/15 17:16:36 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1135,3 +1135,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated esound to 0.2.29nb1 [jmmv 2003-03-15]
 	Updated nasm-devel to 0.98.36 [wiz 2003-03-15]
 	Updated screen to 3.9.15 [hubertf 2003-03-15]
+	Updated libgtkhtml to 2.2.1 [jmmv 2003-03-15]
