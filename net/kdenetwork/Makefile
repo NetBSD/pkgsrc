@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 1999/03/23 23:34:33 tron Exp $
+# $NetBSD: Makefile,v 1.30 1999/04/24 06:53:42 tron Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:54 asami Exp
 #
 
@@ -31,7 +31,7 @@ CFLAGS+=        -I${LOCALBASE}/include
 CONFIGURE_ENV=  KDEDIR=${PREFIX} \
 		CPPFLAGS="${CPPFLAGS}" \
 		CXXFLAGS="${CFLAGS}" \
-		all_libraries="-L${LOCALBASE}/lib" \
+		all_libraries="-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib" \
 		INSTALL_DATA="${INSTALL_DATA}" \
 		INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
