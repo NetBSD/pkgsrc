@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/24 22:26:44 recht Exp $
+${PYSITELIB}/_pgmodule.so
+${PYSITELIB}/pg.py
+${PYSITELIB}/pg.pyc
+${PYSITELIB}/pg.pyo
+${PYSITELIB}/pgdb.py
+${PYSITELIB}/pgdb.pyc
+${PYSITELIB}/pgdb.pyo
+share/doc/${PYPKGPREFIX}-postgresql/README
+share/doc/${PYPKGPREFIX}-postgresql/tutorial/advanced.py
+share/doc/${PYPKGPREFIX}-postgresql/tutorial/basics.py
+share/doc/${PYPKGPREFIX}-postgresql/tutorial/func.py
+share/doc/${PYPKGPREFIX}-postgresql/tutorial/syscat.py
+@dirrm share/doc/${PYPKGPREFIX}-postgresql/tutorial
+@dirrm share/doc/${PYPKGPREFIX}-postgresql
