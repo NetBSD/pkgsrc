@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2004/01/10 06:56:15 grant Exp $
-bin/tcsh
-usr/share/man/man1/tcsh.1
