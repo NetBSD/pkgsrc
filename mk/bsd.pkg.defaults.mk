@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.59 2002/05/07 17:52:18 agc Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.60 2002/05/08 11:05:39 markd Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -832,6 +832,12 @@ JSDK_HOME?= ${JAVA_HOME}/jsdk
 # connection attempts
 # Possible: not defined, YES
 # Default: not defined
+
+#LATEX2HTML_ICONPATH=
+# Used in the latex2html package to set URL prefix for where to
+# find latex2html's icons.
+# Possible:  a URL prefix
+# Default: none
 
 LINUX_LOCALES?=								\
 	 af ar bg br ca cs cy da de el en eo es et eu fi fo fr ga gl \
