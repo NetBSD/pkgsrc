@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/02/05 06:29:54 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/13 00:27:48 salo Exp $
 #
 
-DISTNAME=	SnortSnarf-020516.1
-PKGNAME=	snortsnarf-20020516.1
+DISTNAME=	SnortSnarf-021111.1
+PKGNAME=	${DISTNAME:S/SnortSnarf-/snortsnarf-20/}
 CATEGORIES=	security net
 MASTER_SITES=	http://www.silicondefense.com/software/snortsnarf/
 
@@ -10,35 +10,28 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.silicondefense.com/software/snortsnarf/
 COMMENT=	Generate HTML report summaries from snort incident alerts
 
-DEPENDS+=	p5-Time>=101.062101:../../time/p5-Time
+DEPENDS=	p5-Time>=101.062101:../../time/p5-Time
 
-USE_PERL5=	YES
-REPLACE_PERL=	snortsnarf.pl
-NO_BUILD=	# defined
+USE_BUILDLINK2=	YES
+NO_BUILD=	YES
+USE_PERL5=	run
+
+REPLACE_PERL=	snortsnarf.pl include/ann_xml.pl include/web_utils.pl	\
+		include/xml_help.pl
 
 post-configure:
 	@cd ${WRKSRC} && \
-		${SED} -e "s|@PREFIX@|${PREFIX}|g" snortsnarf.pl \
-			> ${WRKDIR}/snortsnarf.pl
+		${SED} -e "s|@PREFIX@|${PREFIX}|g" snortsnarf.pl >	\
+			${WRKDIR}/snortsnarf.pl
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/snortsnarf.pl ${PREFIX}/bin/snortsnarf.pl
-	${INSTALL_DATA_DIR} ${PREFIX}/share/snortsnarf/SnortSnarf
-.for f in IPAddrContact.pm ann_xml.pl web_utils.pl xml_help.pl
-		${INSTALL_DATA} ${WRKSRC}/include/${f} \
-			${PREFIX}/share/snortsnarf
-.endfor
-.for f in AlertBase.pm HTMLOutput.pm MemTimeBase.pm MultiStore.pm	\
-	MemPacket.pm HTMLMemStorage.pm Filtering.pm PacketBase.pm	\
-	AllMods.pm BasicFilters.pm KnownEquiv.pm SnortFileInput.pm	\
-	HTMLAnomMemStorage.pm Input.pm SorterBase.pm Sort.pm		\
-	StorageBase.pm MemAlert.pm BasicSorters.pm Filter.pm		\
-	SnortRules.pm MemStorage.pm SnortDBInput.pm TimeFilters.pm
-	${INSTALL_DATA} ${WRKSRC}/include/SnortSnarf/${f} \
-		${PREFIX}/share/snortsnarf/SnortSnarf
-.endfor
+	${INSTALL_DATA_DIR} ${PREFIX}/share/snortsnarf
+	cd ${WRKSRC}/include && ${PAX} -rw -pm * ${PREFIX}/share/snortsnarf
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/snortsnarf
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/snortsnarf
 	${INSTALL_DATA} ${WRKSRC}/Usage ${PREFIX}/share/doc/snortsnarf
+
+.include "../../lang/perl5/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"

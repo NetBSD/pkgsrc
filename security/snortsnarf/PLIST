@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/12 16:38:53 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/05/13 00:27:48 salo Exp $
 bin/snortsnarf.pl
 share/doc/snortsnarf/README
 share/doc/snortsnarf/Usage
@@ -11,7 +11,9 @@ share/snortsnarf/SnortSnarf/Filter.pm
 share/snortsnarf/SnortSnarf/Filtering.pm
 share/snortsnarf/SnortSnarf/HTMLAnomMemStorage.pm
 share/snortsnarf/SnortSnarf/HTMLMemStorage.pm
+share/snortsnarf/SnortSnarf/HTMLOutput+other.pm
 share/snortsnarf/SnortSnarf/HTMLOutput.pm
+share/snortsnarf/SnortSnarf/IPObfuscater.pm
 share/snortsnarf/SnortSnarf/Input.pm
 share/snortsnarf/SnortSnarf/KnownEquiv.pm
 share/snortsnarf/SnortSnarf/MemAlert.pm
