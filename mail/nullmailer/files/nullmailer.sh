@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-#	$NetBSD: nullmailer,v 1.3 2003/02/17 05:20:21 salo Exp $
+#	$NetBSD: nullmailer.sh,v 1.1 2004/08/30 14:34:11 schmonz Exp $
 #
 # PROVIDE: mail
 # REQUIRE: LOGIN
