@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/02/17 17:50:01 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2001/02/22 07:43:08 tron Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -8,7 +8,7 @@ CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.ifi.uio.no/pub/pgp/2.x/src/ \
 		ftp://ftp.kiarchive.ru/pub/unix/crypto/pgp/
 
-MAINTAINER=	packages@NetBSD.ORG
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.pgpi.com/
 COMMENT=	Public-Key encryption and digital signature utility
 
@@ -38,10 +38,10 @@ CFLAGS=
 PGPLIB=		${PREFIX}/share/pgp
 CFLAGS+=	-DPGP_SYSTEM_DIR=\\\"${PGPLIB}/\\\"
 
-.if ${MACHINE_ARCH} == "i386"
+.if (${MACHINE_ARCH} == "i386")
 OBJS_EXT=	_80386.o _zmatch.o
 ASMFLAG=	-DASM
-.elif ${MACHINE_ARCH} == "m68k"
+.elif (${MACHINE_ARCH} == "m68k")
 .ifdef M68060
 OBJS_EXT=
 ASMFLAG=	-m68060 -DPORTABLE -DMPORTABLE
@@ -49,7 +49,7 @@ ASMFLAG=	-m68060 -DPORTABLE -DMPORTABLE
 OBJS_EXT=	mc68020.o
 ASMFLAG=
 .endif
-.elif ${MACHINE_ARCH} == "sparc"
+.elif (${MACHINE_ARCH} == "sparc") && (${OPSYS} != SunOS)
 OBJS_EXT=	sparc.o
 ASMFLAG=
 .else
