@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2002/09/21 07:43:51 jlam Exp $
+
+--- Makefile.PL.orig	Tue Nov 20 13:04:06 2001
++++ Makefile.PL
+@@ -39,9 +39,6 @@ WriteMakefile('NAME'         => 'DBD::Sy
+ 	      'LDDLFLAGS'    => $lddlflags,
+ 	      'LDFLAGS'      => $ldflags,
+ 	      LINKTYPE       => $LINKTYPE,
+-	      ($^O eq 'VMS' ? 
+-               (MAN3PODS    => { 'Sybase.pm' => 'blib/man3/DBD_Sybase.3' }) :
+-               (MAN3PODS    => { 'Sybase.pm' => 'blib/man3/DBD::Sybase.3' })),
+ 	      ($] >= 5.005 ?
+ 	       (ABSTRACT   => 'DBI driver for Sybase datasources',
+ 		AUTHOR     => 'Michael Peppler (mpeppler@peppler.org)') : ()),
