@@ -1,12 +1,13 @@
+@comment $NetBSD: PLIST,v 1.2 1997/11/20 13:10:44 agc Exp $
 bin/xv
 bin/bggen
 bin/vdcomp
 bin/xcmap
 bin/xvpictoppm
-man/man1/xv.1.gz
-man/man1/bggen.1.gz
-man/man1/vdcomp.1.gz
-man/man1/xcmap.1.gz
-man/man1/xvpictoppm.1.gz
+man/cat1/xv.0.gz
+man/cat1/bggen.0.gz
+man/cat1/vdcomp.0.gz
+man/cat1/xcmap.0.gz
+man/cat1/xvpictoppm.0.gz
 share/doc/xv/README
 share/doc/xv/xvdocs.ps
