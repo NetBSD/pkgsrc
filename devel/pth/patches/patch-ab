@@ -1,11 +1,12 @@
-$NetBSD: patch-ab,v 1.9 1999/12/28 05:22:21 wiz Exp $
---- configure.orig	Sun Oct 31 10:01:05 1999
-+++ configure	Tue Nov  2 13:17:37 1999
-@@ -5250,6 +5250,7 @@
- s%@PTH_SYSCALL_HARD@%$PTH_SYSCALL_HARD%g
- s%@BATCH@%$BATCH%g
- s%@TARGET_ALL@%$TARGET_ALL%g
-+s%@LIBTOOL@%$LIBTOOL%g
+$NetBSD: patch-ab,v 1.10 2000/02/20 15:22:04 wiz Exp $
+
+--- ./configure.orig	Sat Feb 19 17:21:31 2000
++++ ./configure	Sun Feb 20 15:56:06 2000
+@@ -5607,6 +5607,7 @@
+ s%@PTHREAD_O@%$PTHREAD_O%g
+ s%@LIBPTHREAD_A@%$LIBPTHREAD_A%g
  s%@LIBPTHREAD_LA@%$LIBPTHREAD_LA%g
++s%@LIBTOOL@%$LIBTOOL%g
  s%@PTHREAD_CONFIG_1@%$PTHREAD_CONFIG_1%g
  s%@PTHREAD_3@%$PTHREAD_3%g
+ s%@INSTALL_PTHREAD@%$INSTALL_PTHREAD%g

@@ -1,7 +1,8 @@
-$NetBSD: patch-aa,v 1.9 1999/12/28 05:22:21 wiz Exp $
---- Makefile.in.orig	Sun Oct 31 10:02:27 1999
-+++ Makefile.in	Tue Nov  2 13:16:07 1999
-@@ -49,10 +49,10 @@
+$NetBSD: patch-aa,v 1.10 2000/02/20 15:22:04 wiz Exp $
+
+--- Makefile.in.orig	Thu Dec 30 22:57:25 1999
++++ Makefile.in	Thu Jan  6 04:53:19 2000
+@@ -53,10 +53,10 @@
  CC          = @CC@
  CPPFLAGS    = @CPPFLAGS@ -I.
  CFLAGS      = @CFLAGS@
@@ -14,9 +15,9 @@ $NetBSD: patch-aa,v 1.9 1999/12/28 05:22:21 wiz Exp $
  RM          = rm -f
  RMDIR       = rmdir
  TRUE        = true
-@@ -219,13 +219,13 @@
- 	$(SHTOOL) install -c -m 644 $(S)pth-config.1 $(mandir)/man1/pth-config.1
+@@ -226,13 +226,13 @@
  	$(SHTOOL) install -c -m 644 $(S)pth.3 $(mandir)/man3/pth.3
+ 	$(SHTOOL) install -c -m 644 pth.m4 $(datadir)/aclocal/pth.m4
  	$(SHTOOL) install -c -m 644 pth.h $(includedir)/pth.h
 -	@$(LIBTOOL) --mode=install $(SHTOOL) install -c -m 644 libpth.la $(libdir)/libpth.la
 +	@$(LIBTOOL) --mode=install install -c -m 644 libpth.la $(libdir)/libpth.la

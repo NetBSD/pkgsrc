@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2000/02/05 14:51:36 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2000/02/20 15:21:59 wiz Exp $
 #
 
-DISTNAME=	pth-1.2.3
+DISTNAME=	pth-1.3.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=pth/}
 
@@ -16,7 +16,8 @@ CONFIGURE_ARGS+=	--enable-pthread
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pth/
-	${INSTALL_DATA} ${WRKSRC}/pthread.ps ${PREFIX}/share/doc/pth/
-	${INSTALL_DATA} ${WRKSRC}/rse-pmt.ps ${PREFIX}/share/doc/pth/
+	cd ${WRKSRC} && ${INSTALL_DATA} ANNOUNCE AUTHORS COPYING HACKING \
+		NEWS README SUPPORT TESTS THANKS pthread.ps rse-pmt.ps \
+			${PREFIX}/share/doc/pth/
 
 .include "../../mk/bsd.pkg.mk"
