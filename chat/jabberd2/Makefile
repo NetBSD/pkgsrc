@@ -1,22 +1,13 @@
-# $NetBSD: Makefile,v 1.17 2004/12/28 02:47:41 reed Exp $
+# $NetBSD: Makefile,v 1.18 2005/01/20 15:08:54 xtraeme Exp $
 #
 
-DISTNAME=		jabberd-2.0s4
-PKGREVISION=		2
+DISTNAME=		jabberd-2.0s6
 CATEGORIES=		chat
 MASTER_SITES=		http://www.jabberstudio.org/files/jabberd2/
 
 MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://jabberd.jabberstudio.org/2/
 COMMENT=		Instant messaging server (version 2)
-
-PATCH_SITES=	http://www.marquard.net/jabber/patches/
-PATCHFILES=	patch-jedi8-sm-object_c patch-jedi-mysql-storage patch-base64 \
-		patch-sm-storage_db patch-nad-escape patch-jedi-pgsql-storage \
-		patch-memleaks patch-ns-fix patch-sm-nad-triplet \
-		patch-mod_disco_publish patch-sm-filter patch-c2s-buffers
-DIST_SUBDIR=    	${PKGNAME_NOREV}
-
 
 CONFLICTS=		jabberd-[0-9]*:../../chat/jabberd
 
@@ -39,6 +30,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--disable-mysql
 CONFIGURE_ARGS+=	--enable-pipe
 CONFIGURE_ARGS+=	--enable-anon
+CONFIGURE_ARGS+=	--enable-ssl
+CONFIGURE_ARGS+=	--enable-fs
 
 REPLACE_PERL=		tools/*.pl
 
