@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/03/03 12:01:30 garbled Exp $
+# $NetBSD: Makefile,v 1.34 2005/03/07 02:08:37 jschauma Exp $
 
 DISTNAME=		mpich-1.2.6
 CATEGORIES=		parallel
@@ -30,13 +30,20 @@ CONFIGURE_ARGS+=	-docdir=${PREFIX}/share/doc/mpi-ch
 CONFIGURE_ARGS+=	-htmldir=${PREFIX}/share/doc/html/mpi-ch
 CONFIGURE_ARGS+=	-opt=-O
 CONFIGURE_ARGS+=	-rsh=${MPI_RSH}
-CONFIGURE_ARGS+=	--with-arch=netbsd
 CONFIGURE_ARGS+=	--with-comm=ch_p4
 CONFIGURE_ARGS+=	--with-mpe
 CONFIGURE_ARGS+=	--disable-devdebug
 CONFIGURE_ARGS+=	--disable-f90
 CONFIGURE_ARGS+=	--disable-f90modules
 CONFIGURE_ENV+=		sysconfdir=${PKG_SYSCONFDIR}
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--with-arch=netbsd
+PLIST_SUBST+=		MPICH_OPSYS="${LOWER_OPSYS}"
+.elif ${OPSYS} == "IRIX"
+CONFIGURE_ARGS+=	--with-arch=IRIX${ABI:S/32/N32/}
+PLIST_SUBST+=		MPICH_OPSYS="${OPSYS}${ABI:S/32/N32/}"
+.endif
 
 .include "../../mk/compiler.mk"
 .if !empty(CC_VERSION:Mgcc-3*)
@@ -46,8 +53,6 @@ CONFIGURE_ARGS+=	--disable-weak-symbols
 MAKE_ENV+=		RSHCOMMAND="${MPI_RSH}"
 
 BUILD_DEFS+=		MPI_RSH
-
-.include "../../mk/bsd.prefs.mk"
 
 PLIST_SRC+=		${PKGDIR}/PLIST
 
