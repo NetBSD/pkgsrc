@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.44 2003/09/17 21:03:07 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2003/09/18 16:25:14 jmmv Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 PKGREVISION=		5
 SVR4_PKGNAME=		mysqs
 COMMENT=		MySQL, a free SQL database (server)
 
-.include "../mysql-client/Makefile.common"
+.include "../databases/mysql-client/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-libwrap
 CONFIGURE_ARGS+=	--without-berkeley-db

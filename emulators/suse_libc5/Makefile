@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/07/17 21:36:10 grant Exp $
+# $NetBSD: Makefile,v 1.22 2003/09/18 16:25:24 jmmv Exp $
 
 DISTNAME=		shlibs5
 PKGNAME=		suse_libc5-${SUSE_VERSION}
@@ -10,7 +10,7 @@ MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package for libc5 binaries
 
-DEPENDS+=		suse_compat>=${SUSE_VERSION}:../suse_compat
+DEPENDS+=		suse_compat>=${SUSE_VERSION}:../../emulators/suse_compat
 
 CONFLICTS+=		mozilla-bin-[0-9]*
 CONFLICTS+=		phoenix-bin-[0-9]*
@@ -23,5 +23,5 @@ PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 RPMFILES=		${DISTNAME}${EXTRACT_SUFX}
 
-.include "../suse_linux/Makefile.common"
+.include "../../emulators/suse_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
