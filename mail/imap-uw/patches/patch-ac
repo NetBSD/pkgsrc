@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 1998/08/07 11:09:37 agc Exp $
+$NetBSD: patch-ac,v 1.3 2000/11/09 03:35:34 hubertf Exp $
 
---- src/ipopd/Makefile.orig	Sun Jul 19 10:53:35 1998
-+++ src/ipopd/Makefile	Sun Jul 19 10:53:43 1998
-@@ -32,7 +32,7 @@
+--- src/ipopd/Makefile.orig	Wed Oct 25 01:55:07 2000
++++ src/ipopd/Makefile
+@@ -19,7 +19,7 @@
  
  
  C = ../c-client

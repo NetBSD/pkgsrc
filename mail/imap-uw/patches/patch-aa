@@ -1,22 +1,22 @@
-$NetBSD: patch-aa,v 1.6 2000/09/19 13:13:30 hubertf Exp $
+$NetBSD: patch-aa,v 1.7 2000/11/09 03:35:34 hubertf Exp $
 
---- Makefile.orig	Wed Aug  9 02:11:08 2000
+--- Makefile.orig	Wed Oct 25 01:52:21 2000
 +++ Makefile
-@@ -284,7 +284,7 @@
- 
- #EXTRASPECIALS=
+@@ -276,7 +276,7 @@
+ #SPECIALS=
+ EXTRASPECIALS=
  # *** TEMPORARY FOR PINE BUILD ***
 -GSSDIR=/usr/local
 +GSSDIR=${PREFIX}
- EXTRASPECIALS="GSSDIR=$(GSSDIR)"
+ SPECIALS=GSSDIR=$(GSSDIR)
  # *** TEMPORARY FOR PINE BUILD ***
  
-@@ -430,7 +430,7 @@
- OSTYPE:
+@@ -423,7 +423,7 @@
  	@echo Building c-client for $(OS)...
- 	echo $(EXTRASPECIALS) > c-client/EXTRASPECIALS
--	$(CD) c-client;$(MAKE) $(OS) BUILDOPTIONS="$(BUILDOPTIONS)" $(EXTRASPECIALS)
-+	$(CD) c-client;$(MAKE) $(OS) BUILDOPTIONS="$(BUILDOPTIONS)" $(EXTRASPECIALS) PREFIX=$(PREFIX) CC="$(CC)"
+ 	echo $(SPECIALS) $(EXTRASPECIALS) > c-client/SPECIALS
+ 	$(CD) c-client;$(MAKE) $(OS) BUILDOPTIONS="$(BUILDOPTIONS)" \
+-	 $(SPECIALS) $(EXTRASPECIALS)
++	 $(SPECIALS) $(EXTRASPECIALS) PREFIX=$(PREFIX) CC="$(CC)"
  	echo $(OS) > OSTYPE
  	$(TOUCH) rebuild
  
