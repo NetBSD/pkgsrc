@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/03/26 02:27:56 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2004/05/08 19:48:27 snj Exp $
 
 DISTNAME=	auth_ldap-1.6.0
 PKGREVISION=	2
@@ -11,7 +11,7 @@ MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	http://www.rudedog.org/auth_ldap/
 COMMENT=	Module to allow apache authentication against an LDAP directory
 
-USE_BUILDLINK2=	# defined
+USE_BUILDLINK3=	yes
 
 APACHE_MODULE_NAME=	auth_ldap.so
 CPPFLAGS+=		-DWITH_OPENLDAP
@@ -26,9 +26,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/future-directions.html		\
 		${PREFIX}/share/doc/mod_auth_ldap
 
-BUILDLINK_DEPMETHOD.apache=	full
-
-.include "../../databases/openldap/buildlink2.mk"
 .include "../../www/apache/module.mk"
+
+.include "../../databases/openldap/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

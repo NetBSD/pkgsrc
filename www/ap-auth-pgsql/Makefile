@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/03/26 02:27:56 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/08 19:48:27 snj Exp $
 
 DISTNAME=	mod_auth_pgsql-0.9.12
 PKGNAME=	ap-auth-pgsql-0.9.12
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.giuseppetanzilli.it/mod_auth_pgsql/
 COMMENT=	Apache module for user authentication/logging against a PostgreSQL DB
 
 CONFLICTS=	ap-auth-postgresql-[0-9]*
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
 APACHE_MODULE_NAME=	mod_auth_pgsql.so
 
@@ -24,6 +24,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/mod_auth_pgsql
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/mod_auth_pgsql
 
-.include "../../databases/postgresql-lib/buildlink2.mk"
 .include "../../www/apache/module.mk"
+
+.include "../../databases/postgresql-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
