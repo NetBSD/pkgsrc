@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2001/07/16 22:04:54 garbled Exp $
+# $NetBSD: Makefile,v 1.16 2003/03/10 11:06:49 wiz Exp $
 
-DISTNAME=		iozone3_56
-PKGNAME=		iozone-3.56
+DISTNAME=		iozone3_161
+PKGNAME=		iozone-3.161
 CATEGORIES=		benchmarks
 MASTER_SITES=		http://www.iozone.org/src/current/
 EXTRACT_SUFX=		.tar
@@ -27,7 +27,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/iozone ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKDIR}/docs/iozone.1 ${PREFIX}/man/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/IOzone
-	${INSTALL_DATA} ${WRKDIR}/docs/IOzone_ps.gz ${PREFIX}/share/doc/IOzone
+	${INSTALL_DATA} ${WRKDIR}/docs/Iozone_ps.gz ${PREFIX}/share/doc/IOzone
 
 benchmark:
 	@(cd ${WRKSRC}; ./iozone -Ea | tee iozone.out)
