@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.247 2004/07/06 14:54:53 xtraeme Exp $
+# $NetBSD: Makefile,v 1.248 2004/08/10 06:50:29 minskim Exp $
 #
 
 COMMENT=	Audio tools
@@ -135,6 +135,7 @@ SUBDIR+=	mbrolavox-us2
 SUBDIR+=	mbrolavox-us3
 SUBDIR+=	mikmod
 SUBDIR+=	mixer.app
+SUBDIR+=	moss
 SUBDIR+=	mp32ogg
 SUBDIR+=	mp3_check
 SUBDIR+=	mp3asm
