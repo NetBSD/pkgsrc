@@ -1,0 +1,17 @@
+PyGTK
+=====
+Author: James Henstridge <james@daa.com.au>
+
+This archive contains modules that allow you to use gtk in Python
+programs.  At present, it is a fairly complete set of bindings.
+Despite the low version number, this piece of software is quite
+useful, and is usable to write moderately complex programs.  (see the
+examples directory for some examples of the simpler programs you could
+write).
+
+If you have any enhancements or bug reports, please send them to me at
+james@daa.com.au.  If you are going to send me diffs, my prefered
+format is unified diff (ie. diff -u), followed by context diffs.
+Please don't send me diffs which don't have any context, as these are
+almost useless if I try to apply them manually, or have a different
+version of the source tree.
