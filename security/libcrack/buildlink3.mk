@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 11:05:47 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/01/24 03:26:48 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBCRACK_BUILDLINK3_MK:=	${LIBCRACK_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	libcrack
 
 .if !empty(LIBCRACK_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		libcrack
-BUILDLINK_DEPENDS.libcrack?=	libcrack>=2.7
+BUILDLINK_DEPENDS.libcrack+=	libcrack>=2.7
 BUILDLINK_PKGSRCDIR.libcrack?=	../../security/libcrack
 .endif	# LIBCRACK_BUILDLINK3_MK
 

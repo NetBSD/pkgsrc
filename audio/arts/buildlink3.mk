@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/01/15 09:11:02 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/01/24 03:26:46 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ARTS_BUILDLINK3_MK:=	${ARTS_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	arts
 
 .if !empty(ARTS_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		arts
-BUILDLINK_DEPENDS.arts?=	arts>=1.1.4nb1
+BUILDLINK_DEPENDS.arts+=	arts>=1.1.4nb1
 BUILDLINK_PKGSRCDIR.arts?=	../../audio/arts
 
 .  include "../../audio/libaudiofile/buildlink3.mk"

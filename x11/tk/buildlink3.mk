@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 11:05:47 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/01/24 03:26:48 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 TK_BUILDLINK3_MK:=	${TK_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	tk
 
 .if !empty(TK_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		tk
-BUILDLINK_DEPENDS.tk?=		tk>=8.3.4
+BUILDLINK_DEPENDS.tk+=		tk>=8.3.4
 BUILDLINK_PKGSRCDIR.tk?=	../../x11/tk
 
 BUILDLINK_FILES.tk=	bin/wish*

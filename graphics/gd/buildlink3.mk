@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/01/23 11:48:03 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/01/24 03:26:47 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GD_BUILDLINK3_MK:=	${GD_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	gd
 
 .if !empty(GD_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		gd
-BUILDLINK_DEPENDS.gd?=		gd>=2.0.15
+BUILDLINK_DEPENDS.gd+=		gd>=2.0.15
 BUILDLINK_PKGSRCDIR.gd?=	../../graphics/gd
 
 USE_X11=	yes

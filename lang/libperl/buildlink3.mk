@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 11:05:46 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/01/24 03:26:47 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBPERL_BUILDLINK3_MK:=	${LIBPERL_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	libperl
 
 .if !empty(LIBPERL_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		libperl
-BUILDLINK_DEPENDS.libperl?=	{libperl>=${LIBPERL5_REQD},perl>=5.8.0}
+BUILDLINK_DEPENDS.libperl+=	{libperl>=${LIBPERL5_REQD},perl>=5.8.0}
 BUILDLINK_PKGSRCDIR.libperl?=	../../lang/libperl
 
 LIBPERL5_REQD?=		${PERL5_REQD}

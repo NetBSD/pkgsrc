@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 11:05:47 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/01/24 03:26:48 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XCURSOR_BUILDLINK3_MK:=	${XCURSOR_BUILDLINK3_MK}+
@@ -10,7 +10,7 @@ BUILDLINK_DEPENDS+=	xcursor
 BUILDLINK_IS_BUILTIN.xcursor?=	no
 
 .if !empty(XCURSOR_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.xcursor?=	xcursor>=1.1.1
+BUILDLINK_DEPENDS.xcursor+=	xcursor>=1.1.1
 BUILDLINK_PKGSRCDIR.xcursor?=	../../x11/xcursor
 BUILDLINK_PACKAGES+=		xcursor
 .endif	# XCURSOR_BUILDLINK3_MK
