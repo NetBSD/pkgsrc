@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/08/09 10:35:48 seb Exp $
+# $NetBSD: Makefile,v 1.9 2003/09/22 09:06:35 wiz Exp $
 #
 
 DISTNAME=	latex2rtf-1.8aa
@@ -14,8 +14,8 @@ USE_BUILDLINK2=	# defined
 MAKE_FLAGS+=	XCFLAGS="${CFLAGS}"
 
 INFO_FILES=	latex2rtf.info
-
-INSTALL_TARGET=	simple_install simple_cfg_install
+SUPPORT_FILES=	direct.cfg fonts.cfg ignore.cfg english.cfg german.cfg \
+		spanish.cfg
 
 post-extract:
 	${CP} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.in
@@ -25,10 +25,16 @@ do-configure:
 	${SED} < ${WRKSRC}/${MAKEFILE}.in > ${WRKSRC}/${MAKEFILE} \
 		-e 's:@PREFIX@:${PREFIX}:'
 
-post-install:
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/latex2rtf ${PREFIX}/bin/latex2rtf
+	${INSTALL_MAN} ${WRKSRC}/latex2rtf.1 ${PREFIX}/man/man1/latex2rtf.1
 	${INSTALL_DATA} ${WRKSRC}/doc/latex2rtf.info ${PREFIX}/info/latex2rtf.info
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/latex2rtf
 	${INSTALL_DATA} ${WRKSRC}/doc/l2r.html ${PREFIX}/share/doc/latex2rtf/latex2rtf.html
 	${INSTALL_DATA} ${WRKSRC}/doc/l2r.pdf ${PREFIX}/share/doc/latex2rtf/latex2rtf.pdf
+	${INSTALL_DATA_DIR} ${PREFIX}/share/latex2rtf
+.for FILE in ${SUPPORT_FILES}
+	${INSTALL_DATA} ${WRKSRC}/cfg/${FILE} ${PREFIX}/share/latex2rtf/${FILE}
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
