@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/06 14:37:38 wiz Exp $
+bin/chktex
+bin/chkweb
+bin/deweb
+man/man1/deweb.1
+share/chktex/chktexrc
+@dirrm share/chktex
