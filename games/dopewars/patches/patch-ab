@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2002/12/06 16:50:03 jmmv Exp $
+$NetBSD: patch-ab,v 1.5 2003/07/12 10:07:35 wiz Exp $
 
---- src/dopewars.c.orig	Sat Oct 19 22:44:27 2002
+--- src/dopewars.c.orig	Mon Jun  2 20:39:01 2003
 +++ src/dopewars.c
-@@ -2789,7 +2789,7 @@ struct CMDLINE *GeneralStartup(int argc,
+@@ -2797,7 +2797,7 @@ struct CMDLINE *GeneralStartup(int argc,
  {
    /* First, open the hard-coded high score file with possibly
     * elevated privileges */
@@ -11,17 +11,3 @@ $NetBSD: patch-ab,v 1.4 2002/12/06 16:50:03 jmmv Exp $
    HiScoreFile = g_strdup(priv_hiscore);
    OpenHighScoreFile();
    DropPrivileges();
-@@ -2976,11 +2976,11 @@ int main(int argc, char *argv[])
-     } else
-       switch (cmdline->client) {
-       case CLIENT_AUTO:
--        if (!GtkLoop(&argc, &argv, cmdline, TRUE))
-+        if (!GtkLoop(&argc, &argv, TRUE))
-           CursesLoop(cmdline);
-         break;
-       case CLIENT_WINDOW:
--        GtkLoop(&argc, &argv, cmdline, FALSE);
-+        GtkLoop(&argc, &argv, FALSE);
-         break;
-       case CLIENT_CURSES:
-         CursesLoop(cmdline);

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2003/05/05 16:27:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/12 10:07:35 wiz Exp $
 
-DISTNAME=		dopewars-1.5.8
-PKGREVISION=		2
+DISTNAME=		dopewars-1.5.9
 CATEGORIES=		games
 MASTER_SITES=		http://bellatrix.pcl.ox.ac.uk/~ben/dopewars/ \
 			${MASTER_SITE_SOURCEFORGE:=dopewars/} \
@@ -14,6 +13,8 @@ COMMENT=		Make a fortune dealing drugs on the streets of New York
 DEPENDS+=		gnome1-dirs>=1.0:../../misc/gnome1-dirs
 
 USE_BUILDLINK2=		YES
+USE_LIBTOOL=		YES
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_PKGLOCALEDIR=	YES
 USE_GMAKE=		YES
 
@@ -25,6 +26,8 @@ CONFIGURE_ARGS+=	--disable-glib2
 CONFIGURE_ARGS+=	--without-esd
 CONFIGURE_ARGS+=	--without-sdl
 CONFIGURE_ARGS+=	--localstatedir=/var/games
+
+USE_NCURSES=		# KEY_RESIZE
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/glib/buildlink2.mk"
