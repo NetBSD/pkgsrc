@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/05/02 11:56:30 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/03 20:57:32 wiz Exp $
 #
 
 DISTNAME=	toshutils-991217
@@ -10,9 +10,9 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.buzzard.org.uk/toshiba/
 COMMENT=	NetBSD port of the Toshiba(tm) Linux Utilities
 
-DEPENDS+=	gtk+>=1.2.10nb4:../../x11/gtk
-
 ONLY_FOR_PLATFORM= *-*-i386
+
+USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
 
 post-install:
@@ -21,4 +21,5 @@ post-install:
 	${INSTALL_MAN}	${WRKSRC}/doc/${f}	${PREFIX}/share/doc/toshutils
 .endfor
 
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
