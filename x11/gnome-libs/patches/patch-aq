@@ -1,15 +1,21 @@
-$NetBSD: patch-aq,v 1.1 2000/11/11 02:07:57 mycroft Exp $
+$NetBSD: patch-aq,v 1.2 2000/11/27 10:59:20 rh Exp $
 
---- zvt/gnome-pty-helper.c.orig	Sat Mar 18 07:57:13 2000
-+++ zvt/gnome-pty-helper.c	Sat Nov 11 01:59:16 2000
-@@ -115,14 +115,14 @@
+--- zvt/gnome-pty-helper.c.orig	Sat Mar 18 08:57:13 2000
++++ zvt/gnome-pty-helper.c
+@@ -115,14 +115,20 @@
  #endif
  #endif /* CMSG_DATA */
  
 -#define CONTROLLEN (sizeof (struct cmsghdr)  + sizeof (int))
-+#define	FD_LEN	(sizeof(int) * 1)
++#ifndef CMSG_SPACE
++#include <machine/param.h>
++#define CMSG_SPACE(l)   (ALIGN(sizeof(struct cmsghdr)) + ALIGN(l))
++#define CMSG_LEN(l)     (ALIGN(sizeof(struct cmsghdr)) + (l))
++#endif
  
 -static struct cmsghdr *cmptr;
++#define	FD_LEN	(sizeof(int) * 1)
++
 +static void *cmptr;
  
  static int
@@ -20,7 +26,7 @@ $NetBSD: patch-aq,v 1.1 2000/11/11 02:07:57 mycroft Exp $
  
  	if (cmptr)
  		return 0;
-@@ -135,22 +135,26 @@
+@@ -135,22 +141,26 @@
  {
          struct iovec  iov[1];
          struct msghdr msg;
