@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/04/04 22:03:18 proff Exp $
+# $NetBSD: Makefile,v 1.3 1999/04/14 04:50:26 proff Exp $
 
 DISTNAME=	mbrola-linux-301g1
 WRKSRC=		${WRKDIR}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://tcts.fpms.ac.be/synthesis/
 
 BUILD_DEPENDS=	unzip:../../archivers/unzip
 
-LICENSE=	no-commercial-use
+LICENSE=	non-commercial-use
 
 EXTRACT_CMD=	unzip
 EXTRACT_BEFORE_ARGS=
