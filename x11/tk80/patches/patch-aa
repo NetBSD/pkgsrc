@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 1999/04/01 13:38:46 agc Exp $
+$NetBSD: patch-aa,v 1.6 1999/04/03 13:44:24 tron Exp $
 
---- configure.orig	Tue Mar  9 06:53:50 1999
-+++ configure	Thu Apr  1 13:19:46 1999
+--- configure.orig	Tue Mar  9 07:53:50 1999
++++ configure	Sat Apr  3 15:35:29 1999
 @@ -874,15 +874,12 @@
    withval="$with_tcl"
    TCL_BIN_DIR=$withval
@@ -28,8 +28,12 @@ $NetBSD: patch-aa,v 1.5 1999/04/01 13:38:46 agc Exp $
  LIB_RUNTIME_DIR='${LIB_RUNTIME_DIR}'
  
  # If Tcl and Tk are installed in different places, adjust the library
-@@ -2400,6 +2399,9 @@
- DBGX='${TK_DBGX}'
+@@ -2397,18 +2396,21 @@
+     MAKE_LIB="ar cr \${TK_LIB_FILE} \${OBJS}"
+ fi
+ 
+-DBGX='${TK_DBGX}'
++DBGX=${TK_DBGX}
  eval "TK_LIB_FILE=${TK_LIB_FILE}"
  
 +# Force the issue
@@ -38,6 +42,17 @@ $NetBSD: patch-aa,v 1.5 1999/04/01 13:38:46 agc Exp $
  # Note:  in the following variable, it's important to use the absolute
  # path name of the Tcl directory rather than "..":  this is because
  # AIX remembers this path and will attempt to use it at run-time to look
+ # up the Tcl library.
+ 
+ if test "${TCL_LIB_VERSIONS_OK}" = "ok"; then
+-    TK_LIB_FLAG="-ltk${VERSION}\${TK_DBGX}"
++    TK_LIB_FLAG="-ltk${VERSION}${TK_DBGX}"
+ else
+-    TK_LIB_FLAG="-ltk`echo ${VERSION} | tr -d .`\${TK_DBGX}"
++    TK_LIB_FLAG="-ltk`echo ${VERSION} | tr -d .`${TK_DBGX}"
+ fi
+ TK_BUILD_LIB_SPEC="-L`pwd` ${TK_LIB_FLAG}"
+ TK_LIB_SPEC="-L${exec_prefix}/lib ${TK_LIB_FLAG}"
 @@ -2598,6 +2600,7 @@
  s%@SHLIB_VERSION@%$SHLIB_VERSION%g
  s%@TCL_BIN_DIR@%$TCL_BIN_DIR%g
