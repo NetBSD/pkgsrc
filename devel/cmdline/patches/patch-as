@@ -1,6 +1,6 @@
-$NetBSD: patch-as,v 1.1.1.1 2000/08/25 16:15:53 jlam Exp $
+$NetBSD: patch-as,v 1.2 2001/04/23 09:15:10 skrll Exp $
 
---- src/lib/Makefile.orig	Thu Jan  2 13:33:31 1997
+--- src/lib/Makefile.orig	Thu Jan  2 18:33:31 1997
 +++ src/lib/Makefile
 @@ -70,20 +70,25 @@
  test: cmdtest$(EXECEXT)
@@ -15,7 +15,7 @@ $NetBSD: patch-as,v 1.1.1.1 2000/08/25 16:15:53 jlam Exp $
  	$(RANLIB) $@
  
 +lib$(LIBNAME).la: $(OBJS)
-+	$(LIBTOOL) g++ -o lib$(LIBNAME).la $(OBJS:.o=.lo) \
++	$(LIBTOOL) $(CXX) -o lib$(LIBNAME).la $(OBJS:.o=.lo) \
 +		-rpath $(PREFIX)/lib -version-info 0:0
 +
  ###
