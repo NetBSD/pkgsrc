@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.197 2001/04/16 18:47:21 jtb Exp $
+# $NetBSD: Makefile,v 1.198 2001/04/16 21:31:48 jtb Exp $
 #
 
 COMMENT=	Development utilities
@@ -115,6 +115,7 @@ SUBDIR+=	oaf
 SUBDIR+=	p5-AppConfig
 SUBDIR+=	p5-AtExit
 SUBDIR+=	p5-Bit-Vector
+SUBDIR+=	p5-BSD-Resource
 SUBDIR+=	p5-Compress-Zlib
 SUBDIR+=	p5-Curses
 SUBDIR+=	p5-Data-Dumper
