@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/12/04 00:10:57 tv Exp $
+
+--- lib/Apache/src.pm.orig	Thu Oct  1 13:55:29 1998
++++ lib/Apache/src.pm	Thu Dec  3 15:32:42 1998
+@@ -184,7 +184,7 @@
+     my $src  = $self->dir;
+     my $main = $self->main;
+     my $os = $Is_Win32 ? "win32" : "unix";
+-    my @inc = ("-I$src", "-I$src/modules/perl", "-I$main");
++    my @inc = ("-I../include", "-I../src/modules/perl -DMOD_PERL");
+     for ("src/regex", "$src/os/$os") {
+ 	push @inc, "-I$_" if -d $_;
+     }
