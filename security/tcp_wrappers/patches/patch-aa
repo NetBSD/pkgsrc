@@ -1,7 +1,5 @@
-$NetBSD: patch-aa,v 1.2 2001/03/10 23:28:08 tron Exp $
-
---- Makefile~	Mon Aug 21 19:59:52 2000
-+++ Makefile	Sat Mar 10 23:58:57 2001
+--- Makefile.orig	Mon Aug 21 13:59:52 2000
++++ Makefile	Mon Oct  7 17:50:50 2002
 @@ -44,7 +44,7 @@
  #REAL_DAEMON_DIR=/usr/etc
  #
@@ -11,6 +9,15 @@ $NetBSD: patch-aa,v 1.2 2001/03/10 23:28:08 tron Exp $
  #
  # BSD 4.4
  #REAL_DAEMON_DIR=/usr/libexec
+@@ -144,7 +144,7 @@
+ linux:
+ 	@make REAL_DAEMON_DIR=$(REAL_DAEMON_DIR) STYLE=$(STYLE) \
+ 	LIBS= RANLIB=ranlib ARFLAGS=rv AUX_OBJ=setenv.o \
+-	NETGROUP= TLI= EXTRA_CFLAGS="-DBROKEN_SO_LINGER" all
++	NETGROUP= TLI= EXTRA_CFLAGS="-DBROKEN_SO_LINGER -DSYS_ERRLIST_DEFINED" all
+ 
+ # This is good for many SYSV+BSD hybrids with NIS, probably also for HP-UX 7.x.
+ hpux hpux8 hpux9 hpux10:
 @@ -669,7 +669,7 @@
  # Protection against weird shells or weird make programs.
  
