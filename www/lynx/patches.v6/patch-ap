@@ -1,0 +1,31 @@
+$NetBSD: patch-ap,v 1.1 2000/01/15 17:44:24 hubertf Exp $
+
+Place(s) where this was (most probably...) in before:
+
+diff -x *.orig -urN ./WWW/Library/Implementation/HTTCP.h /usr/pkgsrc/www/lynx/work.unpatched/lynx2-8-2/WWW/Library/Implementation/HTTCP.h
+--- ./WWW/Library/Implementation/HTTCP.h	Thu May 13 04:06:05 1999
++++ /usr/pkgsrc/www/lynx/work.unpatched/lynx2-8-2/WWW/Library/Implementation/HTTCP.h	Sat Jan 15 07:57:18 2000
+@@ -19,7 +19,7 @@
+ **                it is to be kept.
+ */
+ #ifndef _WINDOWS
+-extern CONST char * HTInetString PARAMS((struct sockaddr_in* mysin));
++extern CONST char * HTInetString PARAMS((SockA* mysin));
+ #endif
+ 
+ 
+@@ -101,11 +101,11 @@
+ **               sin points to the binary internet or decnet address field.
+ **
+ ** On exit:
+-**               *sin is filled in.  If no port is specified in str, that
+-**               field is left unchanged in *sin.
++**               *sin is filled in.  If no port is specified in str,
++**               default_port is used
+ */
+ #ifdef __STDC__
+-        extern int HTParseInet(struct sockaddr_in * mysin, CONST char * str);
++        extern int HTParseInet(SockA * mysin, CONST char * str, int default_port);
+         /*!! had to change this to get it to compile. CTB */
+ #else
+         extern int HTParseInet();
