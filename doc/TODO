@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2443 2004/11/25 14:19:56 adam Exp $
+$NetBSD: TODO,v 1.2444 2004/11/25 14:26:05 adam Exp $
 
 Suggested new packages
 ======================
@@ -646,7 +646,6 @@ Suggested package updates
 	o libole2-2.2.8
 	o libopendaap-0.2.3
 	o libpqxx-2.4.1
-	o librsync-0.9.7
 	o libsieve-2.1.16/2.2.8
 	o libsmi-0.4.3
 	o libtcl-nothread-8.4.7
