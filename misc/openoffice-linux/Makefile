@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/01/03 10:51:14 martti Exp $
+# $NetBSD: Makefile,v 1.28 2005/01/03 20:04:07 wiz Exp $
 
 DISTNAME=		OOo_${OO_VER}_LinuxIntel_install
 PKGNAME=		openoffice-linux-${OO_VER}
@@ -15,6 +15,7 @@ COMMENT=		Integrated office productivity suite (binary pkg)
 
 OO_VER=			1.1.4
 PLIST_SUBST+=		VER=${OO_VER}
+MESSAGE_SUBST+=		VER=${OO_VER}
 
 NO_CONFIGURE=           yes
 
