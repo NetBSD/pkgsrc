@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2004/12/24 04:32:55 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.48 2005/01/20 10:27:51 adam Exp $
 
-DISTNAME=	bluefish-0.13
-PKGREVISION=	2
+DISTNAME=	bluefish-1.0
 CATEGORIES=	www
 MASTER_SITES=	http://pkedu.fbt.eitn.wau.nl/~olivier/downloads/	\
 		ftp://bluefish.advancecreations.com/bluefish/downloads/ \
@@ -20,17 +18,17 @@ BUILD_USES_MSGFMT=	YES
 
 USE_BUILDLINK3=		yes
 USE_DIRS+=		gnome2-1.5
-USE_PKGLOCALEDIR=	# defined
-USE_X11=		# defined
 USE_GNU_TOOLS+=		make
-GNU_CONFIGURE=		# defined
-
-CONFIGURE_ARGS+=	--with-autocomplet
+USE_PKGLOCALEDIR=	yes
+USE_X11=		yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-icon-path=${PREFIX}/share/pixmaps
-CONFIGURE_ARGS+=	--with-gnome2-menu=${PREFIX}/share/applications
 
-.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
