@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2758 2004/12/25 21:26:27 wiz Exp $
+$NetBSD: TODO,v 1.2759 2004/12/26 00:30:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -552,7 +552,6 @@ Suggested package updates
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
 	o gtranslator-1.0.2
-	o guile-1.6.7
 	o guile-oops-1.0.2
 	o guile-www-1.1.1
 	o gwenview-1.1.7
