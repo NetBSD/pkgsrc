@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.72 2002/09/26 17:29:48 drochner Exp $
+$NetBSD: CHANGES,v 1.73 2002/09/26 19:39:56 abs Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2981,3 +2981,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated nawk to 20020628 [jschauma 2002-09-26]
 	Update pedisassem to 0.23 [jschauma 2002-09-26]
 	Updated gimp-print to 4.2.2 [drochner 2002-09-26]
+	Updated mserv-irman to 0.15 [abs 2002-09-26]

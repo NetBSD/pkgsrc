@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/09/18 16:33:47 abs Exp $
+$NetBSD: distinfo,v 1.2 2002/09/26 19:39:13 abs Exp $
 
-SHA1 (mserv_irman-0.14.tar.gz) = f46bd7fe41042311a983730124006c7340f5f6af
-Size (mserv_irman-0.14.tar.gz) = 8961 bytes
+SHA1 (mserv_irman-0.15.tar.gz) = 37d6ccfc84e844bfd3ffa9f15f44c7ffc01dfe9c
+Size (mserv_irman-0.15.tar.gz) = 8958 bytes
