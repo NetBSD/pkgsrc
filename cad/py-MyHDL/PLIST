@@ -1,28 +1,41 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/05 18:50:54 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/14 16:43:46 recht Exp $
 ${PYSITELIB}/myhdl/Cosimulation.py
 ${PYSITELIB}/myhdl/Cosimulation.pyc
+${PYSITELIB}/myhdl/Cosimulation.pyo
 ${PYSITELIB}/myhdl/Signal.py
 ${PYSITELIB}/myhdl/Signal.pyc
+${PYSITELIB}/myhdl/Signal.pyo
 ${PYSITELIB}/myhdl/Simulation.py
 ${PYSITELIB}/myhdl/Simulation.pyc
+${PYSITELIB}/myhdl/Simulation.pyo
 ${PYSITELIB}/myhdl/__init__.py
 ${PYSITELIB}/myhdl/__init__.pyc
+${PYSITELIB}/myhdl/__init__.pyo
 ${PYSITELIB}/myhdl/_simulator.py
 ${PYSITELIB}/myhdl/_simulator.pyc
+${PYSITELIB}/myhdl/_simulator.pyo
 ${PYSITELIB}/myhdl/delay.py
 ${PYSITELIB}/myhdl/delay.pyc
+${PYSITELIB}/myhdl/delay.pyo
 ${PYSITELIB}/myhdl/intbv.py
 ${PYSITELIB}/myhdl/intbv.pyc
+${PYSITELIB}/myhdl/intbv.pyo
 ${PYSITELIB}/myhdl/test_Cosimulation.py
 ${PYSITELIB}/myhdl/test_Cosimulation.pyc
+${PYSITELIB}/myhdl/test_Cosimulation.pyo
 ${PYSITELIB}/myhdl/test_Signal.py
 ${PYSITELIB}/myhdl/test_Signal.pyc
+${PYSITELIB}/myhdl/test_Signal.pyo
 ${PYSITELIB}/myhdl/test_Simulation.py
 ${PYSITELIB}/myhdl/test_Simulation.pyc
+${PYSITELIB}/myhdl/test_Simulation.pyo
 ${PYSITELIB}/myhdl/test_all.py
 ${PYSITELIB}/myhdl/test_all.pyc
+${PYSITELIB}/myhdl/test_all.pyo
 ${PYSITELIB}/myhdl/test_intbv.py
 ${PYSITELIB}/myhdl/test_intbv.pyc
+${PYSITELIB}/myhdl/test_intbv.pyo
 ${PYSITELIB}/myhdl/util.py
 ${PYSITELIB}/myhdl/util.pyc
+${PYSITELIB}/myhdl/util.pyo
 @dirrm ${PYSITELIB}/myhdl

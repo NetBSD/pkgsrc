@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/08/24 10:20:34 recht Exp $
+# $NetBSD: Makefile,v 1.7 2003/09/14 16:43:54 recht Exp $
 #
 
 DISTNAME=	SOAPpy-0.10.2
@@ -6,7 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pywebsvcs/}
 
-MAINTAINER=	marc@informatik.uni-bremen.de
+MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://pywebsvcs.sourceforge.net/
 COMMENT=	SOAP implementation
 
@@ -17,10 +17,6 @@ PY_PATCHPLIST=	YES
 
 PYTHON_VERSIONS_ACCEPTED=	23pth 22pth 21pth
 
-post-install:
-	${PYTHONBIN} -O ${PREFIX}/${PYLIB}/compileall.py \
-		${PREFIX}/${PYSITELIB}/SOAPpy
-
-.include "../../textproc/pyxml/buildlink2.mk"
 .include "../../lang/python/extension.mk"
+.include "../../textproc/pyxml/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: extension.mk,v 1.4 2003/09/11 13:13:47 recht Exp $
+# $NetBSD: extension.mk,v 1.5 2003/09/14 16:43:45 recht Exp $
 
 # derive a python version from the package name if possible
 .if defined(PKGNAME_REQD)
@@ -17,6 +17,8 @@ PKG_FAIL_REASON= "${PKGNAME} needs dynamic loading"
 PYSETUP?=		setup.py
 PYSETUPBUILDARGS?=	#empty
 PYSETUPINSTALLARGS?=	#empty
+PYSETUPOPTARGS?=	-c -O1
+_PYSETUPINSTALLARGS=	${PYSETUPINSTALLARGS} ${PYSETUPOPTARGS}
 PY_PATCHPLIST?=		yes
 PYSETUPSUBDIR?=		#empty
 
@@ -26,7 +28,7 @@ do-build:
 
 do-install:
 	(cd ${WRKSRC}/${PYSETUPSUBDIR} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} \
-	 ${PYSETUP} install ${PYSETUPINSTALLARGS})
+	 ${PYSETUP} install ${_PYSETUPINSTALLARGS})
 .endif
 
 .if defined(PY_PATCHPLIST)
