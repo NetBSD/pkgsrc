@@ -3,7 +3,7 @@
 # Date created:         Sat Nov 5 11:43:03 PST 1994
 # Whom:                 piero
 #
-# $NetBSD: Makefile,v 1.6 1998/02/14 16:55:10 frueauf Exp $
+# $NetBSD: Makefile,v 1.7 1998/02/15 21:47:47 tron Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/06/09 22:27:11 max Exp
 #
 
@@ -40,8 +40,8 @@ CAT1=		xanim.0
 
 post-extract:
 	@for file in ${EXTRA_FILES}; do \
-	  cp ${DISTDIR}/$$file ${WRKSRC}; \
-	  uncompress ${WRKSRC}/$$file; \
+	  ${CP} ${DISTDIR}/$$file ${WRKSRC}; \
+	  ${GUNZIP_CMD} ${WRKSRC}/$$file; \
 	done
 
 .include <bsd.port.mk>
