@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2001/03/13 20:46:04 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2001/03/13 21:14:19 jlam Exp $
 
 DISTNAME=       imap-2000c
 PKGNAME=        imap-uw-2000.0.3nb1
@@ -99,7 +99,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/c-client/.libs/${CCLIENT_PICLIB} ${LIB_DIR}
 	${RANLIB} ${LIB_DIR}/${CCLIENT_PICLIB}
 	cd ${LIB_DIR}; for file in libc-client.*; do			\
-	cd ${LIB_DIR}; for file in ${CCLIENT_LIBS}; do			\
 		f=`echo $${file} | ${SED} "s|libc-client|libimapuw|g"`;	\
 		${TEST} -f $${file} && ${LN} -sf $${file} $${f};	\
 	done
