@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2415 2003/06/03 19:28:22 jmmv Exp $
+$NetBSD: CHANGES,v 1.2416 2003/06/03 20:44:44 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2284,6 +2284,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated Canna-server-bin to 3.6pl3 [uebayasi 2003-06-03]
 	Removed lmule [jmmv 2003-06-03]
 	Added xmule-1.4.0 [jmmv 2003-06-03]
+	Updated cpuflags to 0.43 [salo 2003-06-03]
 	Updated hatari to 0.30 [salo 2003-06-03]
 	Updated wdm to 1.24 [jmmv 2003-06-03]
 	Updated asm2html to 1.4 [wiz 2003-06-03]
@@ -2300,3 +2301,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libgnomeui to 2.2.1 [jmmv 2003-06-03]
 	Updated libgnomecanvas to 2.2.1 [jmmv 2003-06-03]
 	Updated intltool to 0.26 [jmmv 2003-06-03]
+	Updated cpuflags to 0.44 [salo 2003-06-03]
