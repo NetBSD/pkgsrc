@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2000/12/15 07:47:02 garbled Exp $
+# $NetBSD: Makefile,v 1.110 2001/01/26 18:25:28 abs Exp $
 #
 
     SUBDIR += abuse
@@ -88,6 +88,7 @@
     SUBDIR += spellcast
     SUBDIR += svb
     SUBDIR += tanked
+    SUBDIR += tscp
     SUBDIR += wormz
     SUBDIR += xarchon
     SUBDIR += xbat
