@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2003/11/12 03:39:43 jschauma Exp $
+# $NetBSD: Makefile,v 1.121 2004/02/07 23:58:49 jlam Exp $
 
 DISTNAME=		openssh-3.7.1p2
 PKGNAME=		openssh-3.7.1.2
@@ -73,7 +73,7 @@ CONFIGURE_ARGS+=	--with-privsep-user=${OPENSSH_USER}
 # defaults to ${CC} if not. we override LD here, since running the
 # linker directly results in undefined symbols for obvious reasons.
 #
-LD=			${CC}
+CONFIGURE_ENV+=		LD=${CC:Q}
 
 # s/key support, enabled on Darwin and Solaris. NetBSD s/key has 4 args
 # (4: sslen) to skeychallenge instead of 3, so disable s/key support.
