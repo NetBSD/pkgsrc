@@ -1,0 +1,12 @@
+Sympa is a mailing-list manager. As such, its goal is to automate all 
+mailing-list operation such as subscription with automatic authentication, 
+unsubscription, but also archiving message, sending digests on a regular 
+basis, expiration of addresses, and so on.
+
+Sympa is developped by the CRU (French Universities Network Committee) ; 
+it is distributed under the terms of the GNU General Public License 
+Version 2.
+
+Sympa is designed to be highly customizable, easy to manage and efficient. 
+Sympa is therefore a nice solution for managing small intranet mailing 
+lists as well as very large ISP mailing list services. 
