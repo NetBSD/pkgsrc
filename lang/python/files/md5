@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.5 1998/09/02 22:32:24 tron Exp $
+$NetBSD: md5,v 1.6 1998/09/20 20:28:11 tsarna Exp $
 
 MD5 (python/pyth151.tgz) = eb8ef6e37e543058a2d47996ecf62427
 MD5 (python/freeze.1.txt) = 7cb9266ba6db670cd019cf27c77468ef
@@ -25,3 +25,8 @@ MD5 (python/import.1.txt) = 15ab480458410b0450b07f3eedb15cda
 MD5 (python/imaplib.3.txt) = 3a8180096777c690c5ffd8c4fbd6c38b
 MD5 (python/stringobject.1.txt) = d1ccf56c0db0ba1df715ce55a5788ed3
 MD5 (python/sgmllib.2.txt) = 0ad52d457fbc84fbffe5b7b984e3d8d4
+MD5 (python/classobject.1.txt) = f65618df540a8819299b65eafe775e6a
+MD5 (python/SocketServer.1.txt) = 7ad43e38616efa28b28710e686462494
+MD5 (python/bltinmodule.3.txt) = 7ebef8ec99284c743ae4804638780bd7
+MD5 (python/longobject.1.txt) = 069fe0a8fdeaa60a8cf5ff68877a66a3
+MD5 (python/stropmodule.1.txt) = 0f7729796b64cfdf7ad63d74e95fac9d
