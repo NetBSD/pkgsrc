@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2003/12/16 22:45:33 jmmv Exp $
+$NetBSD: distinfo,v 1.7 2003/12/23 11:45:05 jmmv Exp $
 
-SHA1 (xmlcatmgr-1.2.tar.gz) = 2d59d667163ef8488825e89c954e97eb6c2a6bb0
-Size (xmlcatmgr-1.2.tar.gz) = 8448 bytes
+SHA1 (xmlcatmgr-2.0alpha1.tar.gz) = ad6f449cdfbb217abed6f0bdf63f1e02e3a09262
+Size (xmlcatmgr-2.0alpha1.tar.gz) = 21392 bytes
