@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8096 2004/11/28 08:07:55 taca Exp $
+$NetBSD: CHANGES,v 1.8097 2004/11/28 09:56:50 martti Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5571,3 +5571,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed ruby-mutexm [taca 2004-11-28]
 	Removed ruby-acl [taca 2004-11-28]
 	Removed ruby-ri [taca 2004-11-28]
+	Updated xfce4-minicmd-plugin to 0.3.0 [martti 2004-11-28]
+	Updated xfce4-showdesktop-plugin to 0.4.0 [martti 2004-11-28]
+	Updated xfce4-taskbar-plugin 0.2.2 [martti 2004-11-28]
