@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2004/05/07 22:47:26 markd Exp $
+# $NetBSD: Makefile,v 1.54 2004/05/18 11:27:29 uebayasi Exp $
 
 DISTNAME=		R-1.9.0
 CATEGORIES=		math
@@ -12,6 +12,8 @@ COMMENT=		Statistical language for data analysis and graphics
 #needs FPC code not found in older versions of NetBSD
 NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
 			NetBSD-1.5.*-alpha NetBSD-1.5[A-U]-alpha
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 TEST_TARGET=		check
 USE_BUILDLINK3=		# defined
