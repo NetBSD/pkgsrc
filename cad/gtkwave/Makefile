@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/02/14 17:21:34 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2004/04/11 05:31:34 snj Exp $
 #
 
 #DISTNAME=		gtkwave-2.0.0pre3
@@ -14,13 +14,13 @@ HOMEPAGE=		http://www.cs.man.ac.uk/apt/tools/gtkwave/index.html
 COMMENT=		Electronic waveform viewer
 
 USE_X11=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-.include "../../devel/glib/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../archivers/bzip2/buildlink2.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/glib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
