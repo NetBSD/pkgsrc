@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2004/02/17 11:51:54 jlam Exp $
+@comment $NetBSD: PLIST,v 1.17 2004/02/18 14:02:08 jlam Exp $
 bin/findsmb
 bin/net
 bin/nmblookup
@@ -64,6 +64,7 @@ man/man1/smbcacls.1
 man/man1/smbclient.1
 man/man1/smbcontrol.1
 man/man1/smbcquotas.1
+man/man1/smbget.1
 man/man1/smbsh.1
 man/man1/smbstatus.1
 man/man1/smbtar.1
@@ -88,6 +89,7 @@ man/man8/smbspool.8
 man/man8/smbumount.8
 man/man8/swat.8
 man/man8/tdbbackup.8
+man/man8/tdbdump.8
 man/man8/winbindd.8
 sbin/nmbd
 sbin/smbd
