@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/06/29 11:47:12 rh Exp $
+$NetBSD: patch-aa,v 1.2 2001/08/24 16:59:03 wiz Exp $
 
---- configure.orig	Tue Jun 26 18:10:46 2001
-+++ configure	Fri Jun 29 09:58:07 2001
-@@ -2636,7 +2636,7 @@
+--- configure.orig	Wed Aug 15 14:26:09 2001
++++ configure
+@@ -6152,7 +6152,7 @@
  
  
  if test "x$with_html_dir" = "x" ; then
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/06/29 11:47:12 rh Exp $
  else
    HTML_DIR=$with_html_dir
  fi
-@@ -3582,7 +3582,7 @@
+@@ -7086,7 +7086,7 @@
  fi
  
  
@@ -20,43 +20,3 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/06/29 11:47:12 rh Exp $
  XML_INCLUDEDIR='-I${includedir}/libxml -I${includedir}'
  
  XML_CFLAGS=""
-@@ -4071,7 +4071,7 @@
- /* Override any gcc2 internal prototype to avoid an error.  */
- /* We use char because int might match the return type of a gcc2
-     builtin and then its argument prototype would still apply.  */
--char iconv();
-+char libiconv();
- 
- int main() {
- 
-@@ -4081,7 +4081,7 @@
- #if defined (__stub_iconv) || defined (__stub___iconv)
- choke me
- #else
--iconv();
-+libiconv();
- #endif
- 
- ; return 0; }
-@@ -4103,7 +4103,7 @@
-   :
- else
-   echo "$ac_t""no" 1>&6
--echo $ac_n "checking for iconv in -liconv""... $ac_c" 1>&6
-+echo $ac_n "checking for libiconv in -liconv""... $ac_c" 1>&6
- echo "configure:4108: checking for iconv in -liconv" >&5
- ac_lib_var=`echo iconv'_'iconv | sed 'y%./+-%__p_%'`
- if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
-@@ -4117,10 +4117,10 @@
- /* Override any gcc2 internal prototype to avoid an error.  */
- /* We use char because int might match the return type of a gcc2
-     builtin and then its argument prototype would still apply.  */
--char iconv();
-+char libiconv();
- 
- int main() {
--iconv()
-+libiconv()
- ; return 0; }
- EOF
- if { (eval echo configure:4127: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then

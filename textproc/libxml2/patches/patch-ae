@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1.1.1 2001/06/29 11:47:12 rh Exp $
+$NetBSD: patch-ae,v 1.2 2001/08/24 16:59:03 wiz Exp $
 
---- include/libxml/Makefile.in.orig	Tue Jun 26 18:11:28 2001
-+++ include/libxml/Makefile.in	Fri Jun 29 07:54:49 2001
-@@ -117,7 +117,7 @@
+--- include/libxml/Makefile.in.orig	Wed Aug 15 14:26:40 2001
++++ include/libxml/Makefile.in
+@@ -120,7 +120,7 @@
  Z_CFLAGS = @Z_CFLAGS@
  Z_LIBS = @Z_LIBS@
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2001/06/29 11:47:12 rh Exp $
  
  xmlinc_HEADERS =  		SAX.h 		entities.h 		encoding.h 		parser.h 		parserInternals.h 		xmlerror.h 		HTMLparser.h 		HTMLtree.h 		debugXML.h 		tree.h 		list.h 		hash.h 		xpath.h 		xpathInternals.h 		xpointer.h 		xinclude.h 		xmlIO.h 		xmlmemory.h 		nanohttp.h 		nanoftp.h 		uri.h 		valid.h 		xlink.h 		xmlversion.h 		xmlwin32version.h 		DOCBparser.h 		catalog.h
  
-@@ -276,7 +276,7 @@
+@@ -279,7 +279,7 @@
  
  
  install-exec-hook:
