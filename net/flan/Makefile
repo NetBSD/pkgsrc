@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 22:51:09 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/08/23 15:19:53 jschauma Exp $
 #
 
 DISTNAME=	Flan
 PKGNAME=	flan-1.1rc1
 WRKSRC=		${WRKDIR}/src
-CATEGORIES=	net
+CATEGORIES=	net java
 MASTER_SITES=	http://picolibre.enst-bretagne.fr/projects/flan/
 
 MAINTAINER=	tech-pkg@NetBSD.org
