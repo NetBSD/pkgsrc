@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2003/12/30 17:21:55 cjep Exp $
+# $NetBSD: Makefile,v 1.21 2004/01/01 12:30:56 recht Exp $
 
-DISTNAME=	TeXmacs-1.0.1-src
+DISTNAME=	TeXmacs-1.0.2.11-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	4
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.texmacs.org/pub/TeXmacs/targz/
 
@@ -27,7 +26,6 @@ CONFIGURE_ENV+=	PKG_CXXFLAGS="${PKG_CXXFLAGS}"
 CONFIGURE_ENV+=	PKG_LDFLAGS="${LDFLAGS}"
 
 post-extract:
-	${RM} ${WRKSRC}/misc/scripts/tm_axiom
 	${MV} ${WRKSRC}/misc/scripts/texmacs.in \
 	      ${WRKSRC}/misc/scripts/texmacs.in.in
 
@@ -38,7 +36,8 @@ pre-configure:
 
 post-install:
 	${LN} -s ${PREFIX}/share/doc/TeXmacs \
-	         ${PREFIX}/share/${PKGNAME_NOREV}/doc
+	         ${PREFIX}/share/TeXmacs/doc
 
-.include "../../lang/guile14/buildlink2.mk"
+.include "../../graphics/freetype2/buildlink2.mk"
+.include "../../lang/guile/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
