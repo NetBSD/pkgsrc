@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1124 2003/12/04 06:50:12 junyoung Exp $
+$NetBSD: TODO,v 1.1125 2003/12/04 15:36:56 grant Exp $
 
 Suggested new packages
 ======================
@@ -80,10 +80,6 @@ Suggested new packages
 
 	p5-CGI-AppToolkit-0.051
 	Perl CGI application toolkit
-	${MASTER_SITE_PERL_CPAN:=CGI/}
-
-	p5-CGI-FormBuilder-2.12
-	Perl CGI Form builder
 	${MASTER_SITE_PERL_CPAN:=CGI/}
 
 	p5-Digest-Hashcash-0.02
