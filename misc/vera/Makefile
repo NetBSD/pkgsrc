@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2003/08/09 11:14:09 seb Exp $
+# $NetBSD: Makefile,v 1.11 2003/09/17 15:51:11 hubertf Exp $
 # FreeBSD Id: ports/misc/vera/Makefile,v 1.7 2000/11/13 12:44:18 demon Exp
 
-DISTNAME=	vera-1.6
+DISTNAME=	vera-1.11
 CATEGORIES=	misc
-MASTER_SITES=	${MASTER_SITE_GNU:=vera/}
+MASTER_SITES=	http://home.snafu.de/ohei/FTP/ \
+		${MASTER_SITE_GNU:=vera/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://userpage.fu-berlin.de/~oheiabbd/vera-e.html
