@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.2 2002/01/09 23:04:54 seb Exp $
+$NetBSD: distinfo,v 1.3 2002/09/23 08:45:42 jlam Exp $
 
 SHA1 (elk-3.0.tar.gz) = d62ae8a88e3206a578195611ace50168e6078661
 Size (elk-3.0.tar.gz) = 762484 bytes
 SHA1 (patch-aa) = 109e70fb6ba64b116c3b472b8586bf9c89c29348
 SHA1 (patch-ab) = 62cac0487bf259aa481fbc23fd34b168475062fe
-SHA1 (patch-ac) = 05c35684e7e2c8c97768bf6f3f07760ba6181a15
+SHA1 (patch-ac) = 34c00b8d706834bc5ffd4dca21049b56d2ae35bd
 SHA1 (patch-ad) = 421d3a738fa78db6c139331ca0d57987f94266bd
 SHA1 (patch-ae) = d1514bc0391f59adbd2591b361348a2baee118f4
 SHA1 (patch-af) = e3b2da075f099e7f3abff82afc255018c21639dd

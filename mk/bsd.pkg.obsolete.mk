@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.obsolete.mk,v 1.10 2002/08/29 10:16:44 wiz Exp $
+# $NetBSD: bsd.pkg.obsolete.mk,v 1.11 2002/09/23 08:45:41 jlam Exp $
 #
 # This file holds make(1) logic to allow obsolete or deprecated variables
 # still to be used.  These may eventually disappear over time as the contents
@@ -46,3 +46,6 @@ USE_CUPS=				YES
 PKG_SYSCONFDIR.squid?=			${SQUID_SYSCONFDIR}
 .endif
 
+.if defined(ELK_USE_X11)
+ELK_GUI=	xaw
+.endif
