@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2000/06/07 14:58:57 jwise Exp $
+# $NetBSD: Makefile,v 1.4 2000/07/14 17:25:54 jwise Exp $
 #
 
-DISTNAME=		postgresql-7.0
+DISTNAME=		postgresql-7.0.2
 PKGNAME=		jdbc-${DISTNAME}
 WRKSRC=			${WRKDIR}/${DISTNAME}/src/interfaces/jdbc
 CATEGORIES=		databases
