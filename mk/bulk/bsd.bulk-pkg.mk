@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.33 2001/12/16 14:27:07 dmcmahill Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.34 2001/12/17 02:32:23 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -104,6 +104,35 @@ ORDERFILE?=		${_PKGSRCDIR}/.order
 # a list of pkgs which we should _never_ delete during a build.  The primary use is for digest
 # and also for xpkgwedge.  Add pkgtools/xpkgwedge in /etc/mk.conf to do an xpkgwedged bulk build.
 BULK_PREREQ+=		pkgtools/digest
+
+
+# build the cache files used as part of a full bulk build
+# Note:  we have to install the BULK_PREREQ packages _before_
+# extracting the depends tree because some packages like
+# xpkgwedge only become DEPENDS if it is installed
+bulk-cache:
+	${ECHO_MSG} "Installing BULK_PREREQ packages"
+.for __prereq in ${BULK_PREREQ}
+	cd ${_PKGSRCDIR}/${__prereq} && ${MAKE} bulk-install
+.endfor
+	@${ECHO_MSG} "BULK> Building complete pkgsrc dependency tree (this may take a while)."
+	cd ${_PKGSRCDIR} && ${SH} mk/bulk/printdepends ${BROKENFILE} > ${DEPENDSTREEFILE}
+	@${ECHO_MSG} "BULK> Sorting build order."
+	tsort ${DEPENDSTREEFILE} > ${ORDERFILE}
+	@${ECHO_MSG} "BULK> Generating up and down dependency files."
+	${_PKGSRCDIR}/mk/bulk/tflat -u ${DEPENDSTREEFILE} > ${SUPPORTSFILE}
+	${_PKGSRCDIR}/mk/bulk/tflat -d ${DEPENDSTREEFILE} > ${DEPENDSFILE}
+	@${ECHO_MSG} "BULK> Generating package name <=> package directory cross reference file"
+	@${ECHO_MSG} "      (this may take a while)."
+	cd ${_PKGSRCDIR} && ${SH} mk/bulk/printindex ${BROKENFILE} > ${INDEXFILE}
+
+# remove the bulk cache files
+clean-bulk-cache:
+	${RM} -f ${DEPENDSTREEFILE} \
+		${DEPENDSFILE} \
+		${SUPPORTSFILE} \
+		${INDEXFILE} \
+		${ORDERFILE}
 
 # check if the $REF file is uptodate, i.e. is newer than any of
 # the pkg files; prints "1" if upto date, "0" if not.
@@ -338,3 +367,4 @@ bulk-install:
 		${ECHO_MSG} ${MAKE} bulk-package PRECLEAN=no; \
 		${DO}       ${MAKE} bulk-package PRECLEAN=no; \
 	fi
+
