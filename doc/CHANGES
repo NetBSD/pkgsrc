@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.233 2002/10/12 15:33:09 tron Exp $
+$NetBSD: CHANGES,v 1.234 2002/10/12 18:05:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3185,3 +3185,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated freetds to 0.53nb2 [wiz 2002-10-12]
 	Updated bidwatcher to 1.3.5nb1 [tron 2002-10-12]
 	Updated bidwatcher to 1.3.5nb2 [tron 2002-10-12]
+	Updated qt3 to 3.0.5nb1 [wiz 2002-10-12]
