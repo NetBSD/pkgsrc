@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:29:06 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/11/05 16:53:49 agc Exp $
 
 DISTNAME=		fbsql.c
 PKGNAME=		tcl-fbsql-1.05
@@ -13,6 +13,7 @@ COMMENT=		Tcl interface to MySQL
 
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
+DIST_SUBDIR=		${PKGNAME_NOREV}
 
 do-extract:
 	${MKDIR} ${WRKSRC}
