@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2002/01/24 18:37:57 wiz Exp $
+
+--- support.c.orig	Thu Jan 24 19:33:56 2002
++++ support.c
+@@ -1,3 +1,4 @@
++#include <stdarg.h>
+ #include "support.h"
+ 
+ SDL_Surface *screen;
+@@ -165,8 +166,11 @@
+ void error(int errorlevel, char *msg, ...)
+ {
+ 	char msgbuf[512];
++	va_list ap;
+ 
+-	vsprintf(msgbuf,msg, &msg+1);
++	va_start(ap, msg);
++	vsprintf(msgbuf,msg, ap);
++	va_end(ap);
+ 
+ 	switch(errorlevel) {
+ 		case ERR_DEBUG: if(debug) { fprintf(stdout,"DEBUG: %s\n",msgbuf); } break;
