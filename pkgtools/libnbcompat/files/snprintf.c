@@ -1,4 +1,4 @@
-/*	$NetBSD: snprintf.c,v 1.2 2003/09/06 23:03:04 grant Exp $	*/
+/*	$NetBSD: snprintf.c,v 1.3 2004/08/23 03:32:12 jlam Exp $	*/
 
 /*
  * Copyright Patrick Powell 1995
@@ -57,8 +57,10 @@
  *
  **************************************************************/
 
-#include "nbcompat.h"
-
+#include <nbcompat.h>
+#if HAVE_STDARG_H
+#include <stdarg.h>
+#endif
 
 #if HAVE_LONG_DOUBLE
 #define LDOUBLE long double

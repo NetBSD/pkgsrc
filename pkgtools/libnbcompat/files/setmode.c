@@ -1,4 +1,4 @@
-/*	$NetBSD: setmode.c,v 1.8 2004/08/16 17:24:56 jlam Exp $	*/
+/*	$NetBSD: setmode.c,v 1.9 2004/08/23 03:32:12 jlam Exp $	*/
 
 /*
  * Copyright (c) 1989, 1993, 1994
@@ -32,52 +32,41 @@
  * SUCH DAMAGE.
  */
 
-#include "nbcompat/nbconfig.h"
-
-#if HAVE_SYS_CDEFS_H
-#include <sys/cdefs.h>
-#endif
-
+#include <nbcompat.h>
+#include <nbcompat/cdefs.h>
 #if defined(LIBC_SCCS) && !defined(lint)
 #if 0
 static char sccsid[] = "@(#)setmode.c	8.2 (Berkeley) 3/25/94";
 #else
-__RCSID("$NetBSD: setmode.c,v 1.8 2004/08/16 17:24:56 jlam Exp $");
+__RCSID("$NetBSD: setmode.c,v 1.9 2004/08/23 03:32:12 jlam Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
-/* #include "namespace.h" */
-#include <sys/types.h>
-#include <sys/stat.h>
+#if 0
+#include "namespace.h"
+#endif
+#include <nbcompat/types.h>
+#include <nbcompat/stat.h>
 
-#include <assert.h>
-#include <ctype.h>
+#include <nbcompat/assert.h>
+#include <nbcompat/ctype.h>
+#if HAVE_ERRNO_H
 #include <errno.h>
+#endif
+#if HAVE_SIGNAL_H
 #include <signal.h>
-#include <stdlib.h>
-#include <unistd.h>
+#endif
+#include <nbcompat/stdlib.h>
+#include <nbcompat/unistd.h>
 
 #ifdef SETMODE_DEBUG
-#include <stdio.h>
-#endif
-
-#ifndef S_ISTXT
-#define S_ISTXT S_ISVTX
-#endif
-
-#ifndef _DIAGASSERT
-#define _DIAGASSERT(cond)       assert(cond)
+#include <nbcompat/stdio.h>
 #endif
 
 #if 0
-#ifndef __ELF__
-#define _getmode	getmode
-#define _setmode	setmode
-#else
 #ifdef __weak_alias
 __weak_alias(getmode,_getmode)
 __weak_alias(setmode,_setmode)
-#endif
 #endif
 #endif
 
@@ -96,13 +85,13 @@ typedef struct bitcmd {
 #define	CMD2_OBITS	0x08
 #define	CMD2_UBITS	0x10
 
-static BITCMD	*addcmd (BITCMD *, int, int, int, u_int);
-static void	 compress_mode (BITCMD *);
+static BITCMD	*addcmd __P((BITCMD *, int, int, int, u_int));
+static void	 compress_mode __P((BITCMD *));
 #ifdef SETMODE_DEBUG
-static void	 dumpmode (BITCMD *);
+static void	 dumpmode __P((BITCMD *));
 #endif
 
-#ifndef HAVE_GETMODE
+#if !HAVE_GETMODE
 /*
  * Given the old mode and an array of bitcmd structures, apply the operations
  * described in the bitcmd structures to the old mode, and return the new mode.
@@ -180,9 +169,8 @@ common:			if (set->cmd2 & CMD2_CLR) {
 			return (newmode);
 		}
 }
-#endif /* HAVE_GETMODE */
+#endif /* !HAVE_GETMODE */
 
-#ifndef HAVE_SETMODE
 #define	ADDCMD(a, b, c, d) do {						\
 	if (set >= endset) {						\
 		BITCMD *newset;						\
@@ -201,6 +189,7 @@ common:			if (set->cmd2 & CMD2_CLR) {
 
 #define	STANDARD_BITS	(S_ISUID|S_ISGID|S_IRWXU|S_IRWXG|S_IRWXO)
 
+#if !HAVE_SETMODE
 void *
 setmode(p)
 	const char *p;
@@ -208,7 +197,7 @@ setmode(p)
 	int perm, who;
 	char op, *ep;
 	BITCMD *set, *saveset, *endset;
-	sigset_t sigset, sigoset;
+	sigset_t signset, sigoset;
 	mode_t mask;
 	int equalopdone = 0;	/* pacify gcc */
 	int permXbits, setlen;
@@ -222,8 +211,8 @@ setmode(p)
 	 * the caller is opening files inside a signal handler, protect them
 	 * as best we can.
 	 */
-	sigfillset(&sigset);
-	(void)sigprocmask(SIG_BLOCK, &sigset, &sigoset);
+	sigfillset(&signset);
+	(void)sigprocmask(SIG_BLOCK, &signset, &sigoset);
 	(void)umask(mask = umask(0));
 	mask = ~mask;
 	(void)sigprocmask(SIG_SETMASK, &sigoset, NULL);
@@ -373,6 +362,7 @@ apply:		if (!*p)
 #endif
 	return (saveset);
 }
+#endif /* !HAVE_SETMODE */
 
 static BITCMD *
 addcmd(set, op, who, oparg, mask)
@@ -500,4 +490,3 @@ compress_mode(set)
 		}
 	}
 }
-#endif /* !HAVE_SETMODE */

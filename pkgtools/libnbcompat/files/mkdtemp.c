@@ -1,4 +1,4 @@
-/*	$NetBSD: mkdtemp.c,v 1.2 2003/09/04 01:51:16 jlam Exp $	*/
+/*	$NetBSD: mkdtemp.c,v 1.3 2004/08/23 03:32:12 jlam Exp $	*/
 
 /*
  * Copyright (c) 1987, 1993
@@ -29,93 +29,49 @@
  * SUCH DAMAGE.
  */
 
-#include "nbcompat.h"
+#if HAVE_NBTOOL_CONFIG_H
+#include "nbtool_config.h"
+#endif
+
+#if !HAVE_NBTOOL_CONFIG_H || !HAVE_MKDTEMP
+
+#include <nbcompat.h>
+#include <nbcompat/cdefs.h>
+#if defined(LIBC_SCCS) && !defined(lint)
+#if 0
+static char sccsid[] = "@(#)mktemp.c	8.1 (Berkeley) 6/4/93";
+#else
+__RCSID("$NetBSD: mkdtemp.c,v 1.3 2004/08/23 03:32:12 jlam Exp $");
+#endif
+#endif /* LIBC_SCCS and not lint */
+
+#if HAVE_NBTOOL_CONFIG_H
+#define	GETTEMP		gettemp
+#else
+#include <nbcompat/assert.h>
+#if HAVE_ERRNO_H
+#include <errno.h>
+#endif
+#include <nbcompat/stdio.h>
+#include <nbcompat/stdlib.h>
+#include <nbcompat/unistd.h>
+#if 0
+#include "reentrant.h"
+#include "local.h"
+#define	GETTEMP		__gettemp
+#else
+#define	GETTEMP		gettemp
+extern int	gettemp __P((char *, int *, int));
+#endif
+#endif
 
 char *
-mkdtemp(char *path)
+mkdtemp(path)
+	char *path;
 {
-	char *start, *trv;
-	struct stat sbuf;
-	u_int pid;
+	_DIAGASSERT(path != NULL);
 
-	/* To guarantee multiple calls generate unique names even if
-	   the file is not created. 676 different possibilities with 7
-	   or more X's, 26 with 6 or less. */
-	static char xtra[2] = "aa";
-	int xcnt = 0;
-
-	pid = getpid();
-
-	/* Move to end of path and count trailing X's. */
-	for (trv = path; *trv; ++trv)
-		if (*trv == 'X')
-			xcnt++;
-		else
-			xcnt = 0;	
-
-	/* Use at least one from xtra.  Use 2 if more than 6 X's. */
-	if (*(trv-1) == 'X')
-		*--trv = xtra[0];
-	if (xcnt > 6 && *(trv-1) == 'X')
-		*--trv = xtra[1];
-
-	/* Set remaining X's to pid digits with 0's to the left. */
-	while (*--trv == 'X') {
-		*trv = (pid % 10) + '0';
-		pid /= 10;
-	}
-
-	/* update xtra for next call. */
-	if (xtra[0] != 'z')
-		xtra[0]++;
-	else {
-		xtra[0] = 'a';
-		if (xtra[1] != 'z')
-			xtra[1]++;
-		else
-			xtra[1] = 'a';
-	}
-
-	/*
-	 * check the target directory; if you have six X's and it
-	 * doesn't exist this runs for a *very* long time.
-	 */
-	for (start = trv + 1;; --trv) {
-		if (trv <= path)
-			break;
-		if (*trv == '/') {
-			*trv = '\0';
-			if (stat(path, &sbuf))
-				return (char *)NULL;
-			if (!S_ISDIR(sbuf.st_mode)) {
-				errno = ENOTDIR;
-				return (char *)NULL;
-			}
-			*trv = '/';
-			break;
-		}
-	}
-
-	for (;;) {
-		if (mkdir(path, 0700) >= 0)
-			return path;
-		if (errno != EEXIST)
-			return (char *)NULL;
-
-		/* tricky little algorithm for backward compatibility */
-		for (trv = start;;) {
-			if (!*trv)
-				return (char *)NULL;
-			if (*trv == 'z')
-				*trv++ = 'a';
-			else {
-				if (isdigit((unsigned char)*trv))
-					*trv = 'a';
-				else
-					++*trv;
-				break;
-			}
-		}
-	}
-	/*NOTREACHED*/
+	return (GETTEMP(path, (int *)NULL, 1) ? path : (char *)NULL);
 }
+
+#endif /* !HAVE_NBTOOL_CONFIG_H || !HAVE_MKDTEMP */
