@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2002/08/21 12:59:17 kent Exp $
+# $NetBSD: Makefile,v 1.12 2003/04/10 15:25:45 kent Exp $
 # $PEACE: Makefile,v 1.21 2002/08/21 02:02:27 kent Exp $
 
 DISTNAME=	w32api-1.5-src
 PKGNAME=	w32api-1.5
-PKGREVISION=	1
+PKGREVISION=	2
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mingw/}
