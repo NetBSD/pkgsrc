@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.19 2004/11/11 21:01:15 recht Exp $
+$NetBSD: patch-aa,v 1.20 2005/01/16 22:28:34 recht Exp $
 
---- Makefile.in.orig	Wed Nov 10 15:36:58 2004
+--- Makefile.in.orig	Sun Jan 16 21:02:31 2005
 +++ Makefile.in
-@@ -538,7 +538,7 @@ pkgconfig_DATA = libxml-2.0.pc
+@@ -535,7 +535,7 @@ pkgconfig_DATA = libxml-2.0.pc
  #
  BASE_DIR = $(datadir)/doc
  DOC_MODULE = libxml2-$(VERSION)
