@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 1999/07/27 17:45:15 fredb Exp $
+# $NetBSD: Makefile,v 1.5 1999/07/28 08:55:12 fredb Exp $
 #
 
-DISTNAME=	ntp-4.0.94b
+DISTNAME=	ntp-4.0.95
 CATEGORIES=	net
 MASTER_SITES=	http://www.eecis.udel.edu/~ntp/ntp_spool/testing/ \
 		http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ \
