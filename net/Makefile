@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.260 2001/10/24 09:43:41 agc Exp $
+# $NetBSD: Makefile,v 1.261 2001/10/31 00:31:22 damon Exp $
 #
 
 COMMENT=	Networking tools
@@ -53,6 +53,9 @@ SUBDIR+=	fping
 SUBDIR+=	freewais-sf
 SUBDIR+=	gated
 SUBDIR+=	gftp
+SUBDIR+=	gkrellm-ping
+SUBDIR+=	gkrellm-snmp
+SUBDIR+=	gkrellm-wireless
 SUBDIR+=	gnapfetch
 SUBDIR+=	gnapster
 SUBDIR+=	gnubile
