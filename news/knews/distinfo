@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2002/03/15 03:25:56 fredb Exp $
+$NetBSD: distinfo,v 1.8 2005/02/24 12:19:55 agc Exp $
 
 SHA1 (knews-1.0b.1.tar.gz) = b56046036d4c6688439e6730b8ae2a2eade922db
+RMD160 (knews-1.0b.1.tar.gz) = c29cd8401bd802852f875d3c531f2f0f8805cc43
 Size (knews-1.0b.1.tar.gz) = 392225 bytes
 SHA1 (patch-aa) = 1f68aed0378d11b959a940185963f9081c596e15
 SHA1 (patch-ab) = c91ef1a71a9bd63a64d87e59a0a441386dc3d3c0
