@@ -1,5 +1,15 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 08:45:40 agc Exp $
+$NetBSD: distinfo,v 1.3 2002/04/02 02:01:23 dmcmahill Exp $
 
 SHA1 (grpn-1.1.0.tar.gz) = c4f49494114946f7690c6a14f097f0a64e2e84e2
 Size (grpn-1.1.0.tar.gz) = 44336 bytes
 SHA1 (patch-aa) = 40cd39e5f77cbe38cc59f4f44ec5ee9efcefcbbf
+SHA1 (patch-ab) = b8c0aef12f797e5fbb39a902e211e9b1a1f7dc81
+SHA1 (patch-ac) = 34894e81d32575d31fdbaeadee1673675df641e9
+SHA1 (patch-ad) = 88603c905c38ae14d66cdf1a347626412e895ae6
+SHA1 (patch-ae) = 5287f6c5a7b661a3333e1768b64333b79422e0c9
+SHA1 (patch-af) = c77b8522a12759327abe69856bcfcbfe9b3ba396
+SHA1 (patch-ag) = c7e24d2786203b9eff6d1921bd82885ad412db09
+SHA1 (patch-ah) = eaa503abd7ae9ee08efe63462eb9aae6591aad3a
+SHA1 (patch-ai) = 01ae0b6476d5280f2420aec9f0bc878bfdb87c12
+SHA1 (patch-aj) = cfc11e0ec11e188351fbaa64783bedca02b927e9
+SHA1 (patch-ak) = e77349f7f81253064dfd60cdb2f0f148b765e70b
