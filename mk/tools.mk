@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.4.2.4 2003/08/19 20:11:09 jlam Exp $
+# $NetBSD: tools.mk,v 1.4.2.5 2003/08/26 21:58:07 jlam Exp $
 #
 # This Makefile creates a ${TOOLS_DIR} directory and populates the bin
 # subdir with tools that hide the ones outside of ${TOOLS_DIR}.
@@ -113,7 +113,7 @@ ${TOOLS_DIR}/bin/makeinfo: ${_GNU_MISSING}
 # defining e.g. USE_GNU_TOOLS+="awk sed".  Version numbers are not
 # considered.
 
-_TOOLS=		awk grep sed
+_TOOLS=		awk grep make sed
 
 .if defined(_IGNORE_USE_GNU_TOOLS)
 USE_GNU_TOOLS:=		# empty
@@ -128,6 +128,7 @@ USE_GNU_TOOLS?=		# empty
 _TOOLS_OPSYS_HAS_GNU.awk+=	FreeBSD-*-* Linux-*-* NetBSD-*-* OpenBSD-*-*
 _TOOLS_OPSYS_HAS_GNU.grep+=	Darwin-*-* FreeBSD-*-* Linux-*-*
 _TOOLS_OPSYS_HAS_GNU.grep+=	NetBSD-*-* OpenBSD-*-*
+_TOOLS_OPSYS_HAS_GNU.make+=	Darwin-*-*
 _TOOLS_OPSYS_HAS_GNU.sed+=	Linux-*-*
 
 # These platforms have GNUish versions of the tools available in the base
@@ -137,6 +138,7 @@ _TOOLS_OPSYS_HAS_GNU.sed+=	Linux-*-*
 #
 _TOOLS_REPLACE_OPSYS.awk+=	SunOS-*-*
 _TOOLS_REPLACE_OPSYS.grep+=	SunOS-*-*
+_TOOLS_REPLACE_OPSYS.make+=	# empty
 _TOOLS_REPLACE_OPSYS.sed+=	SunOS-*-*
 
 # These platforms have completely unusable versions of these tools, and
@@ -144,6 +146,7 @@ _TOOLS_REPLACE_OPSYS.sed+=	SunOS-*-*
 #
 _TOOLS_OPSYS_INCOMPAT.awk+=	# empty
 _TOOLS_OPSYS_INCOMPAT.grep+=	# empty
+_TOOLS_OPSYS_INCOMPAT.make+=	# empty
 _TOOLS_OPSYS_INCOMPAT.sed+=	# empty
 
 # Default to not requiring GNU tools.
@@ -214,6 +217,21 @@ _TOOLS_OVERRIDE.grep=	NO
 MAKEFLAGS+=		_IGNORE_USE_GNU_TOOLS=
 .endif
 
+.if ${_TOOLS_REPLACE.make} == "YES"
+_TOOLS_OVERRIDE.make=	YES
+_TOOLS_PROGNAME.make=	${GMAKE}
+.endif
+.if (${_TOOLS_NEED_GNU.make} == "YES") && empty(PKGPATH:Mdevel/gmake)
+BUILD_DEPENDS+=		gmake>=3.78:../../devel/gmake
+_TOOLS_OVERRIDE.make=	YES
+_TOOLS_PROGNAME.make=	${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}make
+GREP:=			${_TOOLS_PROGNAME.make}
+.endif
+.if !empty(PKGPATH:Mdevel/gmake)
+_TOOLS_OVERRIDE.make=	NO
+MAKEFLAGS+=		_IGNORE_USE_GNU_TOOLS=
+.endif
+
 .if ${_TOOLS_REPLACE.sed} == "YES"
 _TOOLS_OVERRIDE.sed=	YES
 _TOOLS_PROGNAME.sed=	${SED}
@@ -245,5 +263,24 @@ ${TOOLS_DIR}/bin/${_tool_}:
 	fi
 .  endif
 .endfor
+
+# Always provide a symlink from ${TOOLS_DIR}/bin/make to the "make"
+# used to build the package.  The following only creates the symlink
+# if GNU make isn't required (and already symlinked from above).
+#
+override-tools: ${TOOLS_DIR}/bin/make
+
+.if !target(${TOOLS_DIR}/bin/make)
+${TOOLS_DIR}/bin/make:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	case ${MAKE_PROGRAM} in						\
+	/*)	src="${MAKE_PROGRAM}" ;;				\
+	*)	src=`${TYPE} ${MAKE_PROGRAM} | ${AWK} '{ print $$NF }'` ;; \
+	esac;								\
+	if [ -x $$src -a ! -f ${.TARGET} ]; then			\
+		${MKDIR} ${.TARGET:H};					\
+		${LN} -sf $$src ${.TARGET};				\
+	fi
+.endif
 
 .endif	# TOOLS_MK
