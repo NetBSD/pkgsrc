@@ -1,0 +1,20 @@
+--- sun_a.c.orig	Mon May 20 09:09:47 1996
++++ sun_a.c	Sat Mar  7 13:28:46 1998
+@@ -33,7 +33,7 @@
+ 
+ #include <sys/ioctl.h> 
+ 
+-#ifdef SOLARIS
++#if defined(SOLARIS) || defined(__NetBSD__)
+  #include <sys/audioio.h>
+ #else
+  #include <sun/audioio.h>
+@@ -81,7 +81,7 @@
+   
+   /* Open the audio device */
+ 
+-#ifdef SOLARIS
++#if defined(SOLARIS) || defined(__NetBSD__)
+   fd=open(dpm.name, O_RDWR );
+ #else
+   fd=open(dpm.name, O_RDWR | O_NDELAY);

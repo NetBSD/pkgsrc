@@ -1,0 +1,149 @@
+--- motif_c.c.orig	Mon May 20 09:14:09 1996
++++ motif_c.c	Sat Mar  7 13:19:57 1998
+@@ -370,15 +370,10 @@
+  */
+ static int ctl_read(int32 *valp)
+ {
+-  int num;
+-
+-  /* We don't wan't to lock on reading  */
+-  num=pipe_read_ready(); 
+-
+-  if (num==0)
+-      return RC_NONE;
+-  
+-  return(ctl_blocking_read(valp));
++    if (pipe_read_ready())
++	return(ctl_blocking_read(valp));
++    else
++	return RC_NONE;
+ }
+ 
+ static void ctl_pass_playing_list(int number_of_files, char *list_of_files[])
+--- motif_p.c.orig	Mon May 20 09:09:46 1996
++++ motif_p.c	Sat Mar  7 13:22:05 1998
+@@ -29,7 +29,11 @@
+ #include <stdarg.h>
+ #include <sys/ioctl.h>
+ #ifdef SOLARIS
+-#include <sys/filio.h>
++#include <sys/stropts.h>
++#endif
++#ifdef sgi
++#include <sys/time.h>
++#include <bstring.h>
+ #endif
+ 
+ #include "config.h"
+@@ -39,6 +43,9 @@
+ int pipeAppli[2],pipeMotif[2]; /* Pipe for communication with MOTIF process   */
+ int fpip_in, fpip_out;	/* in and out depends in which process we are */
+ int pid;	               /* Pid for child process */
++#ifdef sgi
++static fd_set selector;
++#endif
+ 
+ /* DATA VALIDITY CHECK */
+ #define INT_CODE 214
+@@ -146,7 +153,20 @@
+ {
+     int num;
+     
++#ifdef sgi
++    static struct timeval zero = {0, 0};
++    FD_SET(fpip_in, &selector);
++    num = select(fpip_in + 1, &selector, (fd_set *)0, (fd_set *)0, &zero);
++    if (num < 0)
++	pipe_error("pipe_read_ready");
++    num = FD_ISSET(fpip_in, &selector);
++#else
++#ifdef SOLARIS
++    ioctl(fpip_in,I_NREAD,&num); /* see how many chars in buffer. */
++#else
+     ioctl(fpip_in,FIONREAD,&num); /* see how many chars in buffer. */
++#endif
++#endif
+     return num;
+ }
+ 
+--- output.c.orig	Mon May 20 10:04:54 1996
++++ output.c	Sat Mar  7 13:31:24 1998
+@@ -48,6 +48,11 @@
+ #define DEFAULT_PLAY_MODE &sun_play_mode
+ #endif
+ 
++#ifdef AU_SGI
++extern PlayMode sgi_play_mode;
++#define DEFAULT_PLAY_MODE &sgi_play_mode
++#endif
++
+ #ifdef AU_WIN32
+ extern PlayMode win32_play_mode;
+ #define DEFAULT_PLAY_MODE &win32_play_mode
+--- tk_c.c.orig	Mon May 20 09:14:24 1996
++++ tk_c.c	Sat Mar  7 13:27:08 1998
+@@ -17,6 +17,13 @@
+ #include <stdarg.h>
+ #include <string.h>
+ #include <sys/ioctl.h>
++#ifdef SOLARIS
++#include <sys/stropts.h>
++#endif
++#ifdef sgi
++#include <sys/time.h>
++#include <bstring.h>
++#endif
+ 
+ #include "config.h"
+ #include "common.h"
+@@ -362,15 +369,10 @@
+  */
+ static int ctl_read(int32 *valp)
+ {
+-	int num;
+-
+-	/* We don't wan't to lock on reading  */
+-	num=pipe_read_ready(); 
+-
+-	if (num==0)
+-		return RC_NONE;
+-  
++    if (pipe_read_ready())
+ 	return(ctl_blocking_read(valp));
++    else
++	return RC_NONE;
+ }
+ 
+ static void ctl_pass_playing_list(int number_of_files, char *list_of_files[])
+@@ -439,6 +441,9 @@
+ static int pipeAppli[2],pipePanel[2]; /* Pipe for communication with Tcl/Tk process   */
+ static int fpip_in, fpip_out;	/* in and out depends in which process we are */
+ static int pid;	               /* Pid for child process */
++#ifdef sgi
++static fd_set selector;
++#endif
+ 
+ static void pipe_open()
+ {
+@@ -477,7 +482,21 @@
+ static int pipe_read_ready()
+ {
+     int num;
++    
++#ifdef sgi
++    static struct timeval zero = {0, 0};
++    FD_SET(fpip_in, &selector);
++    num = select(fpip_in + 1, &selector, (fd_set *)0, (fd_set *)0, &zero);
++    if (num < 0)
++	pipe_error("pipe_read_ready");
++    num = FD_ISSET(fpip_in, &selector);
++#else
++#ifdef SOLARIS
++    ioctl(fpip_in,I_NREAD,&num); /* see how many chars in buffer. */
++#else
+     ioctl(fpip_in,FIONREAD,&num); /* see how many chars in buffer. */
++#endif
++#endif
+     return num;
+ }
+ 
