@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.10 2001/05/14 18:56:17 jlam Exp $
+$NetBSD: patch-ab,v 1.11 2001/05/22 21:49:29 jlam Exp $
 
 --- configure.orig	Tue Apr 17 01:44:24 2001
-+++ configure
++++ configure	Tue May 22 16:07:36 2001
 @@ -40,6 +40,9 @@
    --with-readline[=DIR]   Look for readline include/libs in DIR
    --without-readline      Don't include readline support"
@@ -152,3 +152,25 @@ $NetBSD: patch-ab,v 1.10 2001/05/14 18:56:17 jlam Exp $
  # Check whether --with-smbwrapper or --without-smbwrapper was given.
  if test "${with_smbwrapper+set}" = set; then
    withval="$with_smbwrapper"
+@@ -11427,6 +11449,9 @@
+ 	  LIBS="-lssl -lcrypto $LIBS"
+ 	  LDFLAGS="=L/usr/local/ssl/lib $LDFLAGS"
+ 	;;
++	/usr)
++	  LIBS="-lssl -lcrypto $LIBS"
++	;;
+         * )
+           CFLAGS="-I${withval}/include $CFLAGS"
+ 	  LIBS="-lssl -lcrypto $LIBS"
+@@ -11441,11 +11466,6 @@
+ 	LDFLAGS="-L/usr/local/ssl/lib $LDFLAGS"
+ 
+     fi
+-
+-    if test ! -d ${withval}; then
+-      echo "configure: error: called with --with-ssl, but ssl base directory ${withval} does not exist or is not a directory. Aborting config" 1>&2
+-      exit 1
+-    fi 
+ 
+     CFLAGS="-DHAVE_CRYPT_DECL $CFLAGS"  # Damn, SSLeay defines its own
+ 
