@@ -1,0 +1,16 @@
+$NetBSD: patch-ai,v 1.1 1999/11/12 22:32:22 tron Exp $
+
+--- src/main.c.orig	Mon May 10 18:30:37 1999
++++ src/main.c	Fri Nov 12 22:22:20 1999
+@@ -351,10 +351,10 @@
+ {
+     icmpClose();
+     _db_rotate_log();		/* cache.log */
+-    storeDirWriteCleanLogs(1);
+     storeLogRotate();		/* store.log */
+     accessLogRotate();		/* access.log */
+     useragentRotateLog();	/* useragent.log */
++    storeDirWriteCleanLogs(1);
+     icmpOpen();
+ }
+ 
