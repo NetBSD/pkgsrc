@@ -8,7 +8,7 @@ project makefiles and aids you in the process of editing, project
 compilation, package building and debugging. In the future, built-in CVS
 support will be available, too.
 
-  ProjectCenter is already a useable application, but still evolving.
+  ProjectCenter is already a usable application, but still evolving.
 Support is there for project creation and inspection as well as basic
 Makefile generation.  Using the GormApplication project type, you can
 already create graphical applications using ProjectCenter and Gorm in
