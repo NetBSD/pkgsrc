@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2001/01/10 15:10:59 tron Exp $
+# $NetBSD: Makefile,v 1.34 2001/01/10 16:05:52 tron Exp $
 
 DISTNAME=		openssh-2.3.0p1
 CATEGORIES=		security
@@ -74,6 +74,11 @@ MAKE_ENV+=		ASKPASS_LOCATION=${X11BASE}/bin
 MAKE_ENV+=		ASKPASS_LOCATION=${X11PREFIX}/bin
 .endif
 
+.if (${OPSYS} == SunOS)
+INSTALL_FILE=		${WRKDIR}/INSTALL.SunOS
+PLIST_SRC=		${PKGDIR}/PLIST.SunOS
+.endif
+
 pre-configure:
 	cd ${WRKSRC} && autoreconf
 
@@ -81,12 +86,13 @@ post-build:
 	for FILE in \
 		${PKGDIR}/DEINSTALL	\
 		${PKGDIR}/INSTALL	\
+		${PKGDIR}/INSTALL.SunOS	\
 		${PKGDIR}/MESSAGE	\
 		${FILESDIR}/sshd.sh;	\
 	do \
 		${SED}	-e 's#@SSH_CONF_DIR@#${SSH_CONF_DIR}#g' \
 			-e 's#@PREFIX@#${PREFIX}#g' \
-			-e 's#@OPSYS@#${OPSYS}#g' \
+			-e 's#@INSTALL_DATA@#${INSTALL_DATA}#g' \
 			< $${FILE} > ${WRKDIR}/`basename $${FILE}`; \
 	done
 

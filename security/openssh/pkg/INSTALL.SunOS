@@ -1,26 +1,12 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.4 2001/01/10 16:05:53 tron Exp $
+# $NetBSD: INSTALL.SunOS,v 1.1 2001/01/10 16:05:53 tron Exp $
 
 PKGNAME=$1
 STAGE=$2
 
 case ${STAGE} in
 PRE-INSTALL)
-	if ! dd if=/dev/urandom of=/dev/null bs=1 count=1 2>/dev/null >/dev/null
-	then
-		cat << EOF
-===========================================================================
-You need a working /dev/urandom for ${PKGNAME} to work.
-
-Please make sure you have a kernel compiled from a config file
-containing the line:
-
-	pseudo-device	rnd
-===========================================================================
-EOF
-		exit 1
-	fi
 	;;
 POST-INSTALL)
 	SSH_CONF_DIR=@SSH_CONF_DIR@
@@ -32,7 +18,7 @@ POST-INSTALL)
 		echo "Creating directory ${SSH_CONF_DIR} for ssh config files.."
 		mkdir -p ${SSH_CONF_DIR}
 	fi
-	for file in ssh_config sshd_config
+	for file in ssh_config ssh_prng_cmds sshd_config
 	do
 		if [ ! -f ${SSH_CONF_DIR}/${file} ]
 		then
