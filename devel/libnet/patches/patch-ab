@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2003/09/16 23:46:56 xtraeme Exp $
+
+--- include/libnet.h.orig	2000-04-07 10:45:29.000000000 -0700
++++ include/libnet.h	2003-09-16 09:32:48.000000000 -0700
+@@ -84,8 +84,8 @@
+ #define LIBNET_VERSION  "1.0.1b"
+ 
+ #if (!LIBNET_LIL_ENDIAN && !LIBNET_BIG_ENDIAN)
+-#error "byte order has not been specified, you'll
+-need to #define either LIBNET_LIL_ENDIAN or LIBNET_BIG_ENDIAN.  See the
++#error "byte order has not been specified, you'll \
++need to #define either LIBNET_LIL_ENDIAN or LIBNET_BIG_ENDIAN.  See the \
+ documentation regarding the libnet-config script."
+ #endif
