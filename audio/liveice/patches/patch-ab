@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/11/21 06:01:49 hubertf Exp $
+
+--- streams.c.orig	Tue Nov 21 03:30:12 2000
++++ streams.c
+@@ -36,7 +36,11 @@
+ #ifdef HAVE_SYS_SOUNDCARD_H
+ #include <sys/soundcard.h>
+ #else
++#ifdef __NetBSD__
++#include <soundcard.h>
++#else
+ #include <machine/soundcard.h>
++#endif /* __NetBSD__ */
+ #endif
+ #endif
+ #include <sys/ioctl.h>

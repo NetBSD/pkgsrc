@@ -1,0 +1,25 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/11/21 06:01:49 hubertf Exp $
+
+--- setup.c.orig	Wed May 24 15:50:02 2000
++++ setup.c
+@@ -38,7 +38,11 @@
+ char default_mountpoint[]       = "liveice";
+ char default_description[]      = "LiveIce";
+ char default_pipe_directory[]   = ".liveice_temp_files";
++#ifdef __NetBSD__
++char default_sound_input_file[] = "/dev/sound";
++#else
+ char default_sound_input_file[] = "/dev/dsp";
++#endif
+ 
+ /* default encoder commands */
+ char AJ_encoder_command[]       = "encoder";
+@@ -46,7 +50,7 @@
+ char MP3ENC_encoder_command[]   = "mp3enc";
+ char SCREAMER_encoder_command[] = "lamer";
+ char XING_encoder_command[]     = "xingmp3enc";
+-char LAME3_encoder_command[]    = "lame3";
++char LAME3_encoder_command[]    = "lame";
+ char GOGO_encoder_command[]    = "gogo";
+ 
+ static int in_stream_set;

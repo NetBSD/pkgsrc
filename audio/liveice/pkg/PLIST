@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/21 06:01:49 hubertf Exp $
+bin/liveice
+bin/liveiceconfigure.tk
+share/doc/liveice/README.frontend
+share/doc/liveice/README.liveice
+share/doc/liveice/README.quickstart
+share/doc/liveice/README.xingmp3enc
+share/doc/liveice/README_new_mixer.txt
