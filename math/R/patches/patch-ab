@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2000/04/19 15:30:06 jlam Exp $
+$NetBSD: patch-ab,v 1.7 2000/06/20 15:40:15 dmcmahill Exp $
 
 --- configure.orig	Fri Apr 14 04:44:15 2000
 +++ configure	Mon Apr 17 16:32:22 2000
@@ -19,3 +19,11 @@ $NetBSD: patch-ab,v 1.6 2000/04/19 15:30:06 jlam Exp $
  else
    echo "$ac_t""no" 1>&6
  echo $ac_n "checking for main in -ltermcap""... $ac_c" 1>&6
+@@ -5730,5 +5731,5 @@
+       shlibldflags="-shared"
+     else
+-      shlibldflags="-Bshareable"
++      shlibldflags="-shared"
+     fi
+     ;;
+
