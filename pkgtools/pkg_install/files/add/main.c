@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.7 2004/12/09 20:10:34 erh Exp $	*/
+/*	$NetBSD: main.c,v 1.8 2004/12/29 12:16:56 agc Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.16 1997/10/08 07:45:43 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.7 2004/12/09 20:10:34 erh Exp $");
+__RCSID("$NetBSD: main.c,v 1.8 2004/12/29 12:16:56 agc Exp $");
 #endif
 #endif
 
@@ -63,7 +63,7 @@ char   *Owner = NULL;
 char   *Group = NULL;
 char   *PkgName = NULL;
 char   *Directory = NULL;
-char    FirstPen[FILENAME_MAX];
+char    FirstPen[MaxPathSize];
 add_mode_t AddMode = NORMAL;
 int     Replace = 0;
 
