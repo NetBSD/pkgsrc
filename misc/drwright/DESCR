@@ -1,7 +1,0 @@
-DrWright is a program that reminds you to take regular breaks from your
-computer.  Its main focus is being usable and to simply work.
-
-DrWright monitors keyboard and mouse activity and displays a small meter
-in the notification area on your panel.  When it starts blinking, you know
-it's time to take a break.  If you don't, it will lock your screen to
-force a break.
