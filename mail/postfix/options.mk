@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2005/02/09 06:55:10 martti Exp $
+# $NetBSD: options.mk,v 1.16 2005/03/22 10:43:50 cjs Exp $
 
 # Global and legacy options
 
@@ -19,42 +19,11 @@ AUXLIBS+=	${BUILDLINK_LDFLAGS.${BDB_TYPE}} ${BDB_LIBS}
 .endif
 
 ###
-### IPv6 and STARTTLS support (http://www.ipnet6.org/postfix/)
-###
-.if !empty(PKG_OPTIONS:Minet6)
-.  if empty(PKG_OPTIONS:Mtls)
-PKG_OPTIONS+=		tls
-.  endif
-IPV6TLS_PATCH=		tls+ipv6-1.26-pf-2.1.5.patch.gz
-PATCHFILES+=		${IPV6TLS_PATCH}
-SITES_${IPV6TLS_PATCH}=	ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.26/
-PATCH_DIST_STRIP.${IPV6TLS_PATCH}=	-p1
-PLIST_SRC+=		${PKGDIR}/PLIST.inet6
-
-post-patch: darwin-inet6-fix inet6-ni_withscopeid-fix
-darwin-inet6-fix:
-	@cd ${WRKSRC} && ${PATCH} ${PATCH_ARGS} \
-		< ${FILESDIR}/patch-darwin-inet6
-inet6-ni_withscopeid-fix:
-	@cd ${WRKSRC} && ${PATCH} ${PATCH_ARGS} \
-		< ${FILESDIR}/patch-inet6-ni_withscopeid
-.endif
-
-###
 ### STARTTLS support (http://mirrors.loonybin.net/postfix_tls/)
 ###
 .if !empty(PKG_OPTIONS:Mtls)
 .  include "../../security/openssl/buildlink3.mk"
-.  if empty(PKG_OPTIONS:Minet6)
-TLS_PATCH=		pfixtls-0.8.18-2.1.3-0.9.7d.tar.gz
-PATCHFILES+=		${TLS_PATCH}
-SITES_${TLS_PATCH}=	http://mirrors.loonybin.net/postfix_tls/	\
-			ftp://mirrors.loonybin.net/pub/postfix_tls/	\
-			ftp://ftp.aet.tu-cottbus.de/pub/postfix_tls/
-PATCH_DIST_CAT.${TLS_PATCH}=	${TAR} -zxOf ${TLS_PATCH} "*/pfixtls.diff"
-PATCH_DIST_STRIP.${TLS_PATCH}=	-p1
-.  endif
-CCARGS+=	-DHAS_SSL
+CCARGS+=	-DUSE_TLS
 AUXLIBS+=	-L${BUILDLINK_PREFIX.openssl}/lib			\
 		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib	\
 		-lssl -lcrypto
