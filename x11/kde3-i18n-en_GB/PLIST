@@ -1,4 +1,55 @@
-@comment $NetBSD: PLIST,v 1.5 2004/03/09 13:36:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/04/20 14:38:38 markd Exp $
+share/doc/kde/HTML/en_GB/common/1.png
+share/doc/kde/HTML/en_GB/common/10.png
+share/doc/kde/HTML/en_GB/common/2.png
+share/doc/kde/HTML/en_GB/common/3.png
+share/doc/kde/HTML/en_GB/common/4.png
+share/doc/kde/HTML/en_GB/common/5.png
+share/doc/kde/HTML/en_GB/common/6.png
+share/doc/kde/HTML/en_GB/common/7.png
+share/doc/kde/HTML/en_GB/common/8.png
+share/doc/kde/HTML/en_GB/common/9.png
+share/doc/kde/HTML/en_GB/common/appheader.html
+share/doc/kde/HTML/en_GB/common/artistic-license.html
+share/doc/kde/HTML/en_GB/common/bottom1.png
+share/doc/kde/HTML/en_GB/common/bottom2.png
+share/doc/kde/HTML/en_GB/common/bsd-license.html
+share/doc/kde/HTML/en_GB/common/docheadergears.png
+share/doc/kde/HTML/en_GB/common/doctop1.png
+share/doc/kde/HTML/en_GB/common/doctop1a.png
+share/doc/kde/HTML/en_GB/common/doctop1b.png
+share/doc/kde/HTML/en_GB/common/doctop2.png
+share/doc/kde/HTML/en_GB/common/doxygen.css
+share/doc/kde/HTML/en_GB/common/fdl-license
+share/doc/kde/HTML/en_GB/common/fdl-license.html
+share/doc/kde/HTML/en_GB/common/fdl-translated.html
+share/doc/kde/HTML/en_GB/common/footer.html
+share/doc/kde/HTML/en_GB/common/gpl-license
+share/doc/kde/HTML/en_GB/common/gpl-license.html
+share/doc/kde/HTML/en_GB/common/gpl-translated.html
+share/doc/kde/HTML/en_GB/common/grad.png
+share/doc/kde/HTML/en_GB/common/header.html
+share/doc/kde/HTML/en_GB/common/headerbg.png
+share/doc/kde/HTML/en_GB/common/kde-common.css
+share/doc/kde/HTML/en_GB/common/kde-default.css
+share/doc/kde/HTML/en_GB/common/kde-localised.css
+share/doc/kde/HTML/en_GB/common/kde-localised.css.template
+share/doc/kde/HTML/en_GB/common/kde-web.css
+share/doc/kde/HTML/en_GB/common/kde_logo.png
+share/doc/kde/HTML/en_GB/common/kde_logo_bg.png
+share/doc/kde/HTML/en_GB/common/kmenu.png
+share/doc/kde/HTML/en_GB/common/lgpl-license
+share/doc/kde/HTML/en_GB/common/lgpl-license.html
+share/doc/kde/HTML/en_GB/common/lgpl-translated.html
+share/doc/kde/HTML/en_GB/common/logotp3.png
+share/doc/kde/HTML/en_GB/common/mainfooter.html
+share/doc/kde/HTML/en_GB/common/mainheader.html
+share/doc/kde/HTML/en_GB/common/qpl-license.html
+share/doc/kde/HTML/en_GB/common/shadow.png
+share/doc/kde/HTML/en_GB/common/web-docbottom.png
+share/doc/kde/HTML/en_GB/common/web-doctop.png
+share/doc/kde/HTML/en_GB/common/x11-license.html
+share/doc/kde/HTML/en_GB/common/xml.dcl
 share/doc/kde/HTML/en_GB/kaddressbook/common
 share/doc/kde/HTML/en_GB/kaddressbook/index.cache.bz2
 share/doc/kde/HTML/en_GB/kaddressbook/index.docbook
@@ -443,24 +494,6 @@ share/kde/locale/en_GB/LC_MESSAGES/crashesplugin.mo
 share/kde/locale/en_GB/LC_MESSAGES/cupsdconf.mo
 share/kde/locale/en_GB/LC_MESSAGES/cvsservice.mo
 share/kde/locale/en_GB/LC_MESSAGES/dcopservice.mo
-share/kde/locale/en_GB/LC_MESSAGES/desktop_kde-i18n.mo
-share/kde/locale/en_GB/LC_MESSAGES/desktop_kdeaccessibility.mo
-share/kde/locale/en_GB/LC_MESSAGES/desktop_kdeaddons.mo
-share/kde/locale/en_GB/LC_MESSAGES/desktop_kdeadmin.mo
-share/kde/locale/en_GB/LC_MESSAGES/desktop_kdeartwork.mo
-share/kde/locale/en_GB/LC_MESSAGES/desktop_kdebase.mo
-share/kde/locale/en_GB/LC_MESSAGES/desktop_kdeedu.mo
-share/kde/locale/en_GB/LC_MESSAGES/desktop_kdegames.mo
-share/kde/locale/en_GB/LC_MESSAGES/desktop_kdegraphics.mo
-share/kde/locale/en_GB/LC_MESSAGES/desktop_kdelibs.mo
-share/kde/locale/en_GB/LC_MESSAGES/desktop_kdemultimedia.mo
-share/kde/locale/en_GB/LC_MESSAGES/desktop_kdenetwork.mo
-share/kde/locale/en_GB/LC_MESSAGES/desktop_kdepim.mo
-share/kde/locale/en_GB/LC_MESSAGES/desktop_kdesdk.mo
-share/kde/locale/en_GB/LC_MESSAGES/desktop_kdetoys.mo
-share/kde/locale/en_GB/LC_MESSAGES/desktop_kdeutils.mo
-share/kde/locale/en_GB/LC_MESSAGES/desktop_kdevelop.mo
-share/kde/locale/en_GB/LC_MESSAGES/desktop_quanta.mo
 share/kde/locale/en_GB/LC_MESSAGES/devicesapplet.mo
 share/kde/locale/en_GB/LC_MESSAGES/dirfilterplugin.mo
 share/kde/locale/en_GB/LC_MESSAGES/display.mo
@@ -623,6 +656,7 @@ share/kde/locale/en_GB/LC_MESSAGES/kdesktop.mo
 share/kde/locale/en_GB/LC_MESSAGES/kdessh.mo
 share/kde/locale/en_GB/LC_MESSAGES/kdesu.mo
 share/kde/locale/en_GB/LC_MESSAGES/kdesud.mo
+share/kde/locale/en_GB/LC_MESSAGES/kdevelop.mo
 share/kde/locale/en_GB/LC_MESSAGES/kdevtipofday.mo
 share/kde/locale/en_GB/LC_MESSAGES/kdf.mo
 share/kde/locale/en_GB/LC_MESSAGES/kdgantt.mo
@@ -685,6 +719,7 @@ share/kde/locale/en_GB/LC_MESSAGES/kghostview.mo
 share/kde/locale/en_GB/LC_MESSAGES/kgoldrunner.mo
 share/kde/locale/en_GB/LC_MESSAGES/kgpg.mo
 share/kde/locale/en_GB/LC_MESSAGES/kgpgcertmanager.mo
+share/kde/locale/en_GB/LC_MESSAGES/kgreet_classic.mo
 share/kde/locale/en_GB/LC_MESSAGES/khangman.mo
 share/kde/locale/en_GB/LC_MESSAGES/khelpcenter.mo
 share/kde/locale/en_GB/LC_MESSAGES/khexedit.mo
@@ -740,6 +775,10 @@ share/kde/locale/en_GB/LC_MESSAGES/kmenuedit.mo
 share/kde/locale/en_GB/LC_MESSAGES/kmessedwords.mo
 share/kde/locale/en_GB/LC_MESSAGES/kmid.mo
 share/kde/locale/en_GB/LC_MESSAGES/kmidi.mo
+share/kde/locale/en_GB/LC_MESSAGES/kmilo_generic.mo
+share/kde/locale/en_GB/LC_MESSAGES/kmilo_kvaio.mo
+share/kde/locale/en_GB/LC_MESSAGES/kmilo_powerbook.mo
+share/kde/locale/en_GB/LC_MESSAGES/kmilod.mo
 share/kde/locale/en_GB/LC_MESSAGES/kmines.mo
 share/kde/locale/en_GB/LC_MESSAGES/kminipagerapplet.mo
 share/kde/locale/en_GB/LC_MESSAGES/kmix.mo
@@ -757,6 +796,7 @@ share/kde/locale/en_GB/LC_MESSAGES/knotify.mo
 share/kde/locale/en_GB/LC_MESSAGES/kodo.mo
 share/kde/locale/en_GB/LC_MESSAGES/kolf.mo
 share/kde/locale/en_GB/LC_MESSAGES/kolourpicker.mo
+share/kde/locale/en_GB/LC_MESSAGES/kommander.mo
 share/kde/locale/en_GB/LC_MESSAGES/kompare.mo
 share/kde/locale/en_GB/LC_MESSAGES/konq_smbmounterplugin.mo
 share/kde/locale/en_GB/LC_MESSAGES/konqsidebar_mediaplayer.mo
@@ -1029,4 +1069,5 @@ share/kde/locale/en_GB/flag.png
 @dirrm share/doc/kde/HTML/en_GB/kbabel
 @dirrm share/doc/kde/HTML/en_GB/kate
 @dirrm share/doc/kde/HTML/en_GB/kaddressbook
+@comment dirrm share/doc/kde/HTML/en_GB/common
 @comment dirrm share/doc/kde/HTML/en_GB

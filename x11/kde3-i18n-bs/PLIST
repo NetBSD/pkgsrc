@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/02/05 22:33:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/04/20 14:38:38 markd Exp $
 share/kde/locale/bs/LC_MESSAGES/amor.mo
 share/kde/locale/bs/LC_MESSAGES/appletproxy.mo
 share/kde/locale/bs/LC_MESSAGES/ark.mo
@@ -6,21 +6,6 @@ share/kde/locale/bs/LC_MESSAGES/babelfish.mo
 share/kde/locale/bs/LC_MESSAGES/childpanelextension.mo
 share/kde/locale/bs/LC_MESSAGES/clockapplet.mo
 share/kde/locale/bs/LC_MESSAGES/cupsdconf.mo
-share/kde/locale/bs/LC_MESSAGES/desktop_kde-i18n.mo
-share/kde/locale/bs/LC_MESSAGES/desktop_kdeaddons.mo
-share/kde/locale/bs/LC_MESSAGES/desktop_kdeadmin.mo
-share/kde/locale/bs/LC_MESSAGES/desktop_kdeartwork.mo
-share/kde/locale/bs/LC_MESSAGES/desktop_kdebase.mo
-share/kde/locale/bs/LC_MESSAGES/desktop_kdeedu.mo
-share/kde/locale/bs/LC_MESSAGES/desktop_kdegames.mo
-share/kde/locale/bs/LC_MESSAGES/desktop_kdegraphics.mo
-share/kde/locale/bs/LC_MESSAGES/desktop_kdelibs.mo
-share/kde/locale/bs/LC_MESSAGES/desktop_kdemultimedia.mo
-share/kde/locale/bs/LC_MESSAGES/desktop_kdenetwork.mo
-share/kde/locale/bs/LC_MESSAGES/desktop_kdepim.mo
-share/kde/locale/bs/LC_MESSAGES/desktop_kdesdk.mo
-share/kde/locale/bs/LC_MESSAGES/desktop_kdetoys.mo
-share/kde/locale/bs/LC_MESSAGES/desktop_kdeutils.mo
 share/kde/locale/bs/LC_MESSAGES/devicesapplet.mo
 share/kde/locale/bs/LC_MESSAGES/dirfilterplugin.mo
 share/kde/locale/bs/LC_MESSAGES/display.mo

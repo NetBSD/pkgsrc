@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/03/09 13:36:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/04/20 14:38:38 markd Exp $
 share/doc/kde/HTML/cs/common/1.png
 share/doc/kde/HTML/cs/common/10.png
 share/doc/kde/HTML/cs/common/2.png
@@ -180,23 +180,6 @@ share/kde/locale/cs/LC_MESSAGES/crashesplugin.mo
 share/kde/locale/cs/LC_MESSAGES/cupsdconf.mo
 share/kde/locale/cs/LC_MESSAGES/cvsservice.mo
 share/kde/locale/cs/LC_MESSAGES/dcopservice.mo
-share/kde/locale/cs/LC_MESSAGES/desktop_kde-i18n.mo
-share/kde/locale/cs/LC_MESSAGES/desktop_kdeaccessibility.mo
-share/kde/locale/cs/LC_MESSAGES/desktop_kdeaddons.mo
-share/kde/locale/cs/LC_MESSAGES/desktop_kdeadmin.mo
-share/kde/locale/cs/LC_MESSAGES/desktop_kdeartwork.mo
-share/kde/locale/cs/LC_MESSAGES/desktop_kdebase.mo
-share/kde/locale/cs/LC_MESSAGES/desktop_kdeedu.mo
-share/kde/locale/cs/LC_MESSAGES/desktop_kdegames.mo
-share/kde/locale/cs/LC_MESSAGES/desktop_kdegraphics.mo
-share/kde/locale/cs/LC_MESSAGES/desktop_kdelibs.mo
-share/kde/locale/cs/LC_MESSAGES/desktop_kdemultimedia.mo
-share/kde/locale/cs/LC_MESSAGES/desktop_kdenetwork.mo
-share/kde/locale/cs/LC_MESSAGES/desktop_kdepim.mo
-share/kde/locale/cs/LC_MESSAGES/desktop_kdesdk.mo
-share/kde/locale/cs/LC_MESSAGES/desktop_kdetoys.mo
-share/kde/locale/cs/LC_MESSAGES/desktop_kdeutils.mo
-share/kde/locale/cs/LC_MESSAGES/desktop_quanta.mo
 share/kde/locale/cs/LC_MESSAGES/devicesapplet.mo
 share/kde/locale/cs/LC_MESSAGES/dirfilterplugin.mo
 share/kde/locale/cs/LC_MESSAGES/display.mo
@@ -658,37 +641,37 @@ share/kde/locale/cs/entry.desktop
 share/kde/locale/cs/flag.png
 @comment dirrm share/kde/locale/cs/LC_MESSAGES
 @comment dirrm share/kde/locale/cs
-@comment dirrm share/doc/kde/HTML/cs/konsole
-@comment dirrm share/doc/kde/HTML/cs/kinfocenter/xserver
-@comment dirrm share/doc/kde/HTML/cs/kinfocenter/sound
-@comment dirrm share/doc/kde/HTML/cs/kinfocenter/scsi
-@comment dirrm share/doc/kde/HTML/cs/kinfocenter/processor
-@comment dirrm share/doc/kde/HTML/cs/kinfocenter/pcmcia
-@comment dirrm share/doc/kde/HTML/cs/kinfocenter/pci
-@comment dirrm share/doc/kde/HTML/cs/kinfocenter/partitions
-@comment dirrm share/doc/kde/HTML/cs/kinfocenter/memory
-@comment dirrm share/doc/kde/HTML/cs/kinfocenter/ioports
-@comment dirrm share/doc/kde/HTML/cs/kinfocenter/interrupts
-@comment dirrm share/doc/kde/HTML/cs/kinfocenter/dma
-@comment dirrm share/doc/kde/HTML/cs/kinfocenter/devices
-@comment dirrm share/doc/kde/HTML/cs/khelpcenter
-@comment dirrm share/doc/kde/HTML/cs/kgamma
-@comment dirrm share/doc/kde/HTML/cs/kdm
-@comment dirrm share/doc/kde/HTML/cs/kdeprint
-@comment dirrm share/doc/kde/HTML/cs/kcontrol/passwords
-@comment dirrm share/doc/kde/HTML/cs/kcontrol/laptop
-@comment dirrm share/doc/kde/HTML/cs/kcontrol/kmixcfg
-@comment dirrm share/doc/kde/HTML/cs/kcontrol/khtml
-@comment dirrm share/doc/kde/HTML/cs/kcontrol/kdm
-@comment dirrm share/doc/kde/HTML/cs/kcontrol/kcmstyle
-@comment dirrm share/doc/kde/HTML/cs/kcontrol/kcmsmserver
-@comment dirrm share/doc/kde/HTML/cs/kcontrol/kcmlowbatcrit
-@comment dirrm share/doc/kde/HTML/cs/kcontrol/kcmaccess
-@comment dirrm share/doc/kde/HTML/cs/kcontrol/email
-@comment dirrm share/doc/kde/HTML/cs/kcontrol/crypto
-@comment dirrm share/doc/kde/HTML/cs/kcontrol/clock
-@comment dirrm share/doc/kde/HTML/cs/kcontrol/bell
-@comment dirrm share/doc/kde/HTML/cs/kcontrol/arts
-@comment dirrm share/doc/kde/HTML/cs/kcontrol
+@dirrm share/doc/kde/HTML/cs/konsole
+@dirrm share/doc/kde/HTML/cs/kinfocenter/xserver
+@dirrm share/doc/kde/HTML/cs/kinfocenter/sound
+@dirrm share/doc/kde/HTML/cs/kinfocenter/scsi
+@dirrm share/doc/kde/HTML/cs/kinfocenter/processor
+@dirrm share/doc/kde/HTML/cs/kinfocenter/pcmcia
+@dirrm share/doc/kde/HTML/cs/kinfocenter/pci
+@dirrm share/doc/kde/HTML/cs/kinfocenter/partitions
+@dirrm share/doc/kde/HTML/cs/kinfocenter/memory
+@dirrm share/doc/kde/HTML/cs/kinfocenter/ioports
+@dirrm share/doc/kde/HTML/cs/kinfocenter/interrupts
+@dirrm share/doc/kde/HTML/cs/kinfocenter/dma
+@dirrm share/doc/kde/HTML/cs/kinfocenter/devices
+@dirrm share/doc/kde/HTML/cs/khelpcenter
+@dirrm share/doc/kde/HTML/cs/kgamma
+@dirrm share/doc/kde/HTML/cs/kdm
+@dirrm share/doc/kde/HTML/cs/kdeprint
+@dirrm share/doc/kde/HTML/cs/kcontrol/passwords
+@dirrm share/doc/kde/HTML/cs/kcontrol/laptop
+@dirrm share/doc/kde/HTML/cs/kcontrol/kmixcfg
+@dirrm share/doc/kde/HTML/cs/kcontrol/khtml
+@dirrm share/doc/kde/HTML/cs/kcontrol/kdm
+@dirrm share/doc/kde/HTML/cs/kcontrol/kcmstyle
+@dirrm share/doc/kde/HTML/cs/kcontrol/kcmsmserver
+@dirrm share/doc/kde/HTML/cs/kcontrol/kcmlowbatcrit
+@dirrm share/doc/kde/HTML/cs/kcontrol/kcmaccess
+@dirrm share/doc/kde/HTML/cs/kcontrol/email
+@dirrm share/doc/kde/HTML/cs/kcontrol/crypto
+@dirrm share/doc/kde/HTML/cs/kcontrol/clock
+@dirrm share/doc/kde/HTML/cs/kcontrol/bell
+@dirrm share/doc/kde/HTML/cs/kcontrol/arts
+@dirrm share/doc/kde/HTML/cs/kcontrol
 @comment dirrm share/doc/kde/HTML/cs/common
 @comment dirrm share/doc/kde/HTML/cs

@@ -1,16 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/03/09 13:36:50 markd Exp $
-share/doc/kde/HTML/lt/khelpcenter/common
-share/doc/kde/HTML/lt/khelpcenter/contact.docbook
-share/doc/kde/HTML/lt/khelpcenter/help.docbook
-share/doc/kde/HTML/lt/khelpcenter/index.cache.bz2
-share/doc/kde/HTML/lt/khelpcenter/index.docbook
-share/doc/kde/HTML/lt/khelpcenter/links.docbook
-share/doc/kde/HTML/lt/khelpcenter/support.docbook
-share/doc/kde/HTML/lt/khelpcenter/visualdict/common
-share/doc/kde/HTML/lt/khelpcenter/visualdict/index.cache.bz2
-share/doc/kde/HTML/lt/khelpcenter/visualdict/index.docbook
-share/doc/kde/HTML/lt/khelpcenter/welcome.docbook
-share/doc/kde/HTML/lt/khelpcenter/whatiskde.docbook
+@comment $NetBSD: PLIST,v 1.8 2004/04/20 14:38:39 markd Exp $
 share/kde/locale/lt/LC_MESSAGES/aktion.mo
 share/kde/locale/lt/LC_MESSAGES/appletproxy.mo
 share/kde/locale/lt/LC_MESSAGES/ark.mo
@@ -21,18 +9,6 @@ share/kde/locale/lt/LC_MESSAGES/childpanelextension.mo
 share/kde/locale/lt/LC_MESSAGES/clockapplet.mo
 share/kde/locale/lt/LC_MESSAGES/crashesplugin.mo
 share/kde/locale/lt/LC_MESSAGES/cupsdconf.mo
-share/kde/locale/lt/LC_MESSAGES/desktop_kde-i18n.mo
-share/kde/locale/lt/LC_MESSAGES/desktop_kdeaddons.mo
-share/kde/locale/lt/LC_MESSAGES/desktop_kdeadmin.mo
-share/kde/locale/lt/LC_MESSAGES/desktop_kdebase.mo
-share/kde/locale/lt/LC_MESSAGES/desktop_kdeedu.mo
-share/kde/locale/lt/LC_MESSAGES/desktop_kdegraphics.mo
-share/kde/locale/lt/LC_MESSAGES/desktop_kdelibs.mo
-share/kde/locale/lt/LC_MESSAGES/desktop_kdemultimedia.mo
-share/kde/locale/lt/LC_MESSAGES/desktop_kdenetwork.mo
-share/kde/locale/lt/LC_MESSAGES/desktop_kdepim.mo
-share/kde/locale/lt/LC_MESSAGES/desktop_kdesdk.mo
-share/kde/locale/lt/LC_MESSAGES/desktop_kdeutils.mo
 share/kde/locale/lt/LC_MESSAGES/devicesapplet.mo
 share/kde/locale/lt/LC_MESSAGES/dirfilterplugin.mo
 share/kde/locale/lt/LC_MESSAGES/display.mo
@@ -318,6 +294,3 @@ share/kde/locale/lt/entry.desktop
 share/kde/locale/lt/flag.png
 @comment dirrm share/kde/locale/lt/LC_MESSAGES
 @comment dirrm share/kde/locale/lt
-@dirrm share/doc/kde/HTML/lt/khelpcenter/visualdict
-@dirrm share/doc/kde/HTML/lt/khelpcenter
-@comment dirrm share/doc/kde/HTML/lt

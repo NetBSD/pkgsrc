@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/03/09 13:36:50 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/04/20 14:38:40 markd Exp $
 share/doc/kde/HTML/sl/common/1.png
 share/doc/kde/HTML/sl/common/10.png
 share/doc/kde/HTML/sl/common/2.png
@@ -365,24 +365,6 @@ share/kde/locale/sl/LC_MESSAGES/crashesplugin.mo
 share/kde/locale/sl/LC_MESSAGES/cupsdconf.mo
 share/kde/locale/sl/LC_MESSAGES/cvsservice.mo
 share/kde/locale/sl/LC_MESSAGES/dcopservice.mo
-share/kde/locale/sl/LC_MESSAGES/desktop_kde-i18n.mo
-share/kde/locale/sl/LC_MESSAGES/desktop_kdeaccessibility.mo
-share/kde/locale/sl/LC_MESSAGES/desktop_kdeaddons.mo
-share/kde/locale/sl/LC_MESSAGES/desktop_kdeadmin.mo
-share/kde/locale/sl/LC_MESSAGES/desktop_kdeartwork.mo
-share/kde/locale/sl/LC_MESSAGES/desktop_kdebase.mo
-share/kde/locale/sl/LC_MESSAGES/desktop_kdeedu.mo
-share/kde/locale/sl/LC_MESSAGES/desktop_kdegames.mo
-share/kde/locale/sl/LC_MESSAGES/desktop_kdegraphics.mo
-share/kde/locale/sl/LC_MESSAGES/desktop_kdelibs.mo
-share/kde/locale/sl/LC_MESSAGES/desktop_kdemultimedia.mo
-share/kde/locale/sl/LC_MESSAGES/desktop_kdenetwork.mo
-share/kde/locale/sl/LC_MESSAGES/desktop_kdepim.mo
-share/kde/locale/sl/LC_MESSAGES/desktop_kdesdk.mo
-share/kde/locale/sl/LC_MESSAGES/desktop_kdetoys.mo
-share/kde/locale/sl/LC_MESSAGES/desktop_kdeutils.mo
-share/kde/locale/sl/LC_MESSAGES/desktop_kdevelop.mo
-share/kde/locale/sl/LC_MESSAGES/desktop_quanta.mo
 share/kde/locale/sl/LC_MESSAGES/devicesapplet.mo
 share/kde/locale/sl/LC_MESSAGES/dirfilterplugin.mo
 share/kde/locale/sl/LC_MESSAGES/display.mo
@@ -546,6 +528,7 @@ share/kde/locale/sl/LC_MESSAGES/kdesktop.mo
 share/kde/locale/sl/LC_MESSAGES/kdessh.mo
 share/kde/locale/sl/LC_MESSAGES/kdesu.mo
 share/kde/locale/sl/LC_MESSAGES/kdesud.mo
+share/kde/locale/sl/LC_MESSAGES/kdevelop.mo
 share/kde/locale/sl/LC_MESSAGES/kdevtipofday.mo
 share/kde/locale/sl/LC_MESSAGES/kdf.mo
 share/kde/locale/sl/LC_MESSAGES/kdgantt.mo
@@ -608,6 +591,7 @@ share/kde/locale/sl/LC_MESSAGES/kghostview.mo
 share/kde/locale/sl/LC_MESSAGES/kgoldrunner.mo
 share/kde/locale/sl/LC_MESSAGES/kgpg.mo
 share/kde/locale/sl/LC_MESSAGES/kgpgcertmanager.mo
+share/kde/locale/sl/LC_MESSAGES/kgreet_classic.mo
 share/kde/locale/sl/LC_MESSAGES/khangman.mo
 share/kde/locale/sl/LC_MESSAGES/khelpcenter.mo
 share/kde/locale/sl/LC_MESSAGES/khexedit.mo
