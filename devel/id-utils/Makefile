@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/11/03 09:59:35 seb Exp $
+# $NetBSD: Makefile,v 1.20 2001/11/22 17:50:22 wiz Exp $
 # FreeBSD Id: Makefile,v 1.4 1996/11/18 10:22:47 asami Exp
 #
 
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.gnu.org/software/idutils/idutils.html
 COMMENT=	Classic Berkeley gid/lid tools for looking up variables in code
 
 BUILD_USES_MSGFMT=	yes
-BUILD_USES_GETTEXT_M4=	yes
 USE_BUILDLINK_ONLY=	yes
 
 INFO_FILES=	id-utils.info
