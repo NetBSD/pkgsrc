@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2002/09/02 20:35:09 tron Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/01/21 11:05:17 wiz Exp $
 #
 # Optionally define:
 #
@@ -58,6 +58,7 @@ BUILDLINK_FILES.ncurses+=	include/etip.h
 BUILDLINK_FILES.ncurses+=	include/form.h
 BUILDLINK_FILES.ncurses+=	include/menu.h
 BUILDLINK_FILES.ncurses+=	include/ncurses.h
+BUILDLINK_FILES.ncurses+=	include/ncurses_dll.h
 BUILDLINK_FILES.ncurses+=	include/panel.h
 BUILDLINK_FILES.ncurses+=	include/term.h
 BUILDLINK_FILES.ncurses+=	include/termcap.h
