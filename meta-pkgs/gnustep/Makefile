@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:48:33 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/21 16:58:16 martti Exp $
 #
 
 DISTNAME=	gnustep-1.6.0
@@ -9,7 +9,7 @@ DISTFILES=	# empty
 
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnustep.org/
-COMMENT=	meta-package for GNUstep
+COMMENT=	Meta-package for GNUstep
 
 DEPENDS+=	gnustep-examples>0.9.7:../../devel/gnustep-examples
 DEPENDS+=	gnustep-preferences>=1.2.0nb2:../../x11/gnustep-preferences
