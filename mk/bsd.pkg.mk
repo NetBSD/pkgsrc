@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1479 2004/07/27 10:34:53 xtraeme Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1480 2004/07/27 15:56:19 xtraeme Exp $
 #
 # This file is in the public domain.
 #
@@ -1414,7 +1414,7 @@ package:
 
 # Resume a previous transfer not finished totally.
 _RESUME_TRANSFER=							\
-	dsize=`${WC} -c ${DISTDIR}/${DIST_SUBDIR}/$$bfile | ${AWK} '{print $$1}'`;	\
+	dsize=`${WC} -c < ${DISTDIR}/${DIST_SUBDIR}/$$bfile`;		\
 	tsize=`${AWK} '/^Size/ && $$2 == '"\"($$file)\""' { print $$4 }' ${DISTINFO_FILE}` || ${TRUE}; \
 	case "$$tsize" in						\
 	"")	${ECHO_MSG} "No size in distinfo file (${DISTINFO_FILE})"; \
@@ -1625,8 +1625,11 @@ do-fetch:
 	unsorted_sites="${SITES_${fetchfile:T:S/=/--/}} ${_MASTER_SITE_BACKUP}"; \
 	sites="${ORDERED_SITES}";					\
 	${_CHECK_DIST_PATH};						\
-	${_FETCH_FILE};							\
-	${_RESUME_TRANSFER}
+	 if ${TEST} "${PKG_RESUME_TRANSFERS:M[Yy][Ee][Ss]}" ; then	\
+	 	${_FETCH_FILE}; ${_RESUME_TRANSFER};			\
+	 else								\
+	 	${_FETCH_FILE};						\
+	 fi
 .        endif # defined(_FETCH_MESSAGE)
 .      endfor
 .    endif # INTERACTIVE_STAGE == fetch
