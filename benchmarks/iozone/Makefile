@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/01/21 22:31:56 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2004/05/05 00:43:10 danw Exp $
 
 DISTNAME=		iozone3_217
 PKGNAME=		iozone-3.217
@@ -21,6 +21,8 @@ MAKEFILE=		makefile
   ALL_TARGET=		netbsd
 .elif (${OPSYS} == "SunOS")
   ALL_TARGET=		Solaris
+.elif (${OPSYS} == "Darwin")
+  ALL_TARGET=		macosx
 .endif
 
 do-install:
