@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2001/06/11 06:34:19 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2001/06/30 09:32:48 zuntum Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/06/13 16:17:01 ache Exp
 #
 
@@ -13,19 +13,10 @@ COMMENT=	Network audio player
 
 BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
 
-DEPENDS+=	gsm-1.0.10:../../audio/gsm
-DEPENDS+=	rx-1.5:../../devel/rx
-
+USE_BUILDLINK_ONLY=	YES
 USE_LIBTOOL=	# defined
 GNU_CONFIGURE=	# defined
 CONFIGURE_ENV+=	RPLAY_TARGET=generic	# XXX generic, or oss, or sun?
-
-CPPFLAGS+=	-I${LOCALBASE}/include	# for gsm.h and rxposix.h
-
-.if !exists(/usr/include/readline.h) && \
-    !exists(/usr/include/readline/readline.h)
-DEPENDS+=	readline>=4.0:../../devel/readline
-.endif
 
 INFO_FILES=	RPLAY.info RPTP.info librplay.info rplay.info
 
@@ -42,4 +33,7 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/rplayd.sh ${PREFIX}/etc/rc.d/rplayd
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
+.include "../../audio/gsm/buildlink.mk"
+.include "../../devel/readline/buildlink.mk"
+.include "../../devel/rx/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
