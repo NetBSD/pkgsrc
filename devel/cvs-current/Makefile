@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2000/03/22 12:12:28 fredb Exp $
+# $NetBSD: Makefile,v 1.8 2000/05/21 15:27:30 kim Exp $
 #
 
 DISTNAME=       cvs-1.10.8
 CATEGORIES=	devel
-MASTER_SITES=   http://download.cyclic.com/pub/${DISTNAME}/
+MASTER_SITES=   ftp://ftp.cvshome.org/pub/${DISTNAME}/
 
 MAINTAINER=	cjs@netbsd.org
-HOMEPAGE=	http://www.cyclic.com/cvs/info.html
+HOMEPAGE=	http://www.cvshome.org/
 
 GNU_CONFIGURE=	yes
 USE_GTEXINFO=	yes
