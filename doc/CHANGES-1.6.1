@@ -1,4 +1,4 @@
-#	$NetBSD: CHANGES-1.6.1,v 1.1.2.12 2003/04/06 21:02:27 grant Exp $
+#	$NetBSD: CHANGES-1.6.1,v 1.1.2.13 2003/04/16 14:55:40 grant Exp $
 
 Changes to the pkgsrc-1-6-1 branch:
 
@@ -339,7 +339,6 @@ x11/lablgtk/PLIST.noopt				1.1 (new)
 	Make this go on non-i386 systems.  Currently ocamlopt is only available
 	on i386 so avoid using that on non-i386 systems.  Compiles and 
 	seems to work on alpha.
-
 	[dmcmahill, ticket #1219]
 
 net/samba/Makefile				1.95
@@ -372,7 +371,6 @@ net/samba/patches/patch-ar			1.2
 	attacks, even without specific security holes.  The TCP ports 139 and
 	the new port 445 (used by Win2k and the Samba 3.0 alpha code in
 	particular) should never be exposed to untrusted networks.
-
 	[bouyer, ticket #1220]
 
 chat/bitchx/Makefile				1.16-1.17
@@ -390,5 +388,15 @@ chat/bitchx/patches/patch-al			1.1 (new)
 	 http://securityfocus.com/archive/1/315057
 
 	Patch from bugtraq by <caf at guarana dor org>.
-
 	[salo, ticket #1239]
+
+www/php4/Makefile				1.32
+www/php4/distinfo				1.19
+www/php4/patches/patch-ak			1.1 (new)
+
+	Fix for wordwrap() buffer overflow, per
+		http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-1396
+	(Patch obtained from RedHat's php-4.2.2-8.0.7.src.rpm.)
+
+	Bump PKGREVISION.
+	[aymeric, ticket #1253]
