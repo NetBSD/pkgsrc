@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1613 2004/04/15 12:52:57 martti Exp $
+$NetBSD: TODO,v 1.1614 2004/04/15 14:15:44 minskim Exp $
 
 Suggested new packages
 ======================
@@ -225,6 +225,7 @@ Suggested package updates
 	o jam-2.5
 	o joe-2.9.8 [pkg/18022, incomplete]
 	o jpilot-0.99.7 [pkg/24635]
+	o kermit-8.0.211
 	o larswm-7.3
 	o lavaps-2.4
 	o leafnode-1.9.52
@@ -245,6 +246,7 @@ Suggested package updates
 	o maildrop-1.5.3 [pkg/22369]
 	o maildrop-1.6.3
 	o mailsync-5.1.0
+	o maradns-1.0.21
 	o marbles-1.0.6
 	o matchbox-0.8
 	o mathomatic-11.0
