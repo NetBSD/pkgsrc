@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/01/22 07:15:00 grant Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/25 16:14:15 jlam Exp $
 #
 
 DISTNAME=		flac-1.1.0
@@ -17,7 +17,7 @@ BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 .endif
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		ac_cv_path_XMMS_CONFIG="no"
@@ -25,5 +25,12 @@ CONFIGURE_ENV+=		ac_cv_path_XMMS_CONFIG="no"
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-.include "../../audio/libogg/buildlink2.mk"
+# This version of flac doesn't seem to build correctly with -O3 using
+# the MIPSpro compiler.
+#
+.if defined(USE_MIPSPRO)
+BUILDLINK_TRANSFORM+=	S:-O3:
+.endif
+
+.include "../../audio/libogg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
