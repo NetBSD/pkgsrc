@@ -1,5 +1,5 @@
 ===============================================================================
-$NetBSD: MESSAGE,v 1.4 2001/01/29 11:34:35 wiz Exp $
+$NetBSD: MESSAGE,v 1.5 2001/07/02 15:53:49 joda Exp $
 
 Arla now has been installed on your system.
 
@@ -18,7 +18,8 @@ ${PREFIX}/etc/{CellServDB,SuidCells,ThisCell,arla.conf} and customize them.
 Start arlad from rc.local, using the script provided in
 ${PREFIX}/etc/rc.d/arlad and include an entry for xfs in your /etc/fstab
 (see ${PREFIX}/share/examples/arla/fstab).
-Also, append ${PREFIX}/share/examples/arla/services to /etc/services and
-append ${PREFIX}/share/examples/arla/lkm.conf to /etc/lkm.conf.
+Also, append ${PREFIX}/share/examples/arla/services to /etc/services
+and append ${PREFIX}/share/examples/arla/lkm.conf to /etc/lkm.conf.
+You also have to enable loading of lkms in /etc/rc.conf (set lkm to YES).
 
 ===============================================================================
