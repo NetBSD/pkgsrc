@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2647 2004/12/04 03:52:23 taya Exp $
+$NetBSD: TODO,v 1.2648 2004/12/04 14:19:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -546,6 +546,7 @@ Suggested package updates
 	o gtksee-0.5.6 [pkg/26372]
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
+	o gtranslater-1.0.2
 	o gtranslator-1.0.1
 	o guile-oops-1.0.2
 	o guile-www-1.1.1
@@ -921,6 +922,7 @@ Suggested package updates
 	o p5-perl-ldap-0.3202
 	o p5-razor-agents-2.61
 	o p5-sybperl-2.17
+	o p5-xmltv-0.5.37
 	o pari-2.2.7
 	o pdmenu-1.2.85
 	o pen-0.15.0
@@ -948,6 +950,7 @@ Suggested package updates
 	o pptp-1.5.0 [http://pptpclient.sourceforge.net/]
 	o prc-tools-2.3
 	o proj-4.4.9
+	o proxsmtp-1.0
 	o psgml-mode-1.3.1
 	o psmisc-21.5
 	o pstree-2.26
@@ -974,7 +977,7 @@ Suggested package updates
 	o py-amkCrypto-2.0
 	o py-gnuplot-1.7
 	o py-gtk2-2.4.1
-	o py-ldap-2.0.5
+	o py-ldap-2.0.6
 	o py-logging-0.4.9.5
 	o py-m2crypto-0.13
 	o py-mad-0.5.2
