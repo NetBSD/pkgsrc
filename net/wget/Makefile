@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2001/07/26 14:29:12 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2001/10/26 21:53:01 jlam Exp $
 
 DISTNAME=	wget-1.7
 CATEGORIES=	net
@@ -16,6 +16,7 @@ BUILD_DEPENDS+=	perl>=${PERL5_REQD}:../../lang/perl5
 
 BUILD_USES_MSGFMT=	YES
 USE_BUILDLINK_ONLY=	YES
+AUTOMAKE_OVERRIDE=	YES
 
 USE_GMAKE=	YES
 GNU_CONFIGURE=	YES
@@ -34,11 +35,6 @@ CONFIGURE_ARGS+=        --enable-ipv6
 .else
 CONFIGURE_ARGS+=        --disable-ipv6
 .endif
-
-# Prevent us from running autoconf (needed due to order of
-# files patched in the IPv6 patch):
-post-patch:
-	${TOUCH} ${WRKSRC}/configure
 
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
