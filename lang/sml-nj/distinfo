@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.4 2002/07/04 20:24:40 wiz Exp $
+$NetBSD: distinfo,v 1.5 2002/07/12 15:41:09 jonb Exp $
 
 SHA1 (sml-nj-110.38/MLRISC.tgz) = 1ea46480ad86ab0b598863bd7f5b805a52e7a001
 Size (sml-nj-110.38/MLRISC.tgz) = 1146874 bytes
 SHA1 (sml-nj-110.38/boot.x86-unix.tgz) = ac52a183ffbd3b00e267ba0382c4fcc863d53012
 Size (sml-nj-110.38/boot.x86-unix.tgz) = 4775589 bytes
+SHA1 (sml-nj-110.38/boot.sparc-unix.tgz) = 16899e94b1c8da6bb98fc4ac1770f9928f8fcd2a
+Size (sml-nj-110.38/boot.sparc-unix.tgz) = 4951605 bytes
 SHA1 (sml-nj-110.38/cm.tgz) = a52f2ba040305f2963ff85d2397d1c1b07c4310d
 Size (sml-nj-110.38/cm.tgz) = 198979 bytes
 SHA1 (sml-nj-110.38/cml.tgz) = 009641d9b4f580ff60db9e006133cc15fac3c204
