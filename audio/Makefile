@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2001/08/04 00:10:56 christos Exp $
+# $NetBSD: Makefile,v 1.107 2001/08/12 22:28:05 zuntum Exp $
 #
 
 COMMENT=	Audio tools
@@ -106,6 +106,7 @@ SUBDIR+=	shorten
 SUBDIR+=	sidplay
 SUBDIR+=	snd
 SUBDIR+=	sox
+SUBDIR+=	spiralloops
 SUBDIR+=	splay
 SUBDIR+=	tfmxplay
 SUBDIR+=	timidity
