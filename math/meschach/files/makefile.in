@@ -3,7 +3,6 @@ CC = @CC@
 DEFS = @DEFS@
 LIBS = @LIBS@
 LIBDIR = ${PREFIX}/lib
-CFLAGS = -O2 -ansi -pedantic
 
 OBJ =   copy.o err.o matrixio.o memory.o vecop.o matop.o pxop.o		   \
 	submat.o init.o otherio.o machine.o matlab.o ivecop.o version.o	   \
@@ -16,17 +15,17 @@ OBJ =   copy.o err.o matrixio.o memory.o vecop.o matop.o pxop.o		   \
 	zqrfctr.o zgivens.o zhessen.o zschur.o conjgrad.o lanczos.o	   \
 	arnoldi.o
 
-all: libmeschach.la
+all:	libmeschach.la
 
 libmeschach.la: $(OBJ)
-	@$(LIBTOOL) $(CC) -O -o $@ $(OBJ:.o=.lo) \
+	$(LIBTOOL) $(CC) $(CFLAGS) -o $@ $(OBJ:.o=.lo) -lm \
 	-rpath $(LIBDIR) --version-info 0:0
 
-install:
-	@$(LIBTOOL) --mode=install install -c libmeschach.la $(LIBDIR)
+install: libmeschach.la
+	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $? $(LIBDIR)
 
 .c.o:
-	@$(LIBTOOL) $(CC) -c $(CFLAGS) $(DEFS) $<
+	$(LIBTOOL) $(CC) -c $(CFLAGS) $(DEFS) $<
 
 clean:
 	rm -fr *.o *.lo *.core asx5213a.mat iotort.dat *.la
