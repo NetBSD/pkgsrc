@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/05/08 00:41:24 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2004/08/23 10:34:14 darcy Exp $
 #
 
 DISTNAME=	hugelatex-2.0
@@ -10,7 +10,7 @@ DISTFILES=	# nada
 MAINTAINER=	hubertf@NetBSD.org
 COMMENT=	LaTeX format files with large limits
 
-DEPENDS+=	teTeX-2.*:../../print/teTeX1
+DEPENDS+=	teTeX-2.*:../../print/teTeX
 
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# nothing
