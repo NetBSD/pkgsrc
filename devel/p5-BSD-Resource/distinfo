@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2004/01/08 06:13:05 grant Exp $
+$NetBSD: distinfo,v 1.6 2004/11/29 14:04:47 he Exp $
 
-SHA1 (BSD-Resource-1.23.tar.gz) = 5447c9f5a2da6832efcc12b689fe4028b28afdfe
-Size (BSD-Resource-1.23.tar.gz) = 18268 bytes
+SHA1 (BSD-Resource-1.24.tar.gz) = f0e9c8da142eb8cbba9caa99d7ccaf84dba7f755
+Size (BSD-Resource-1.24.tar.gz) = 18495 bytes
