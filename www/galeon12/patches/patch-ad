@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1 2005/01/16 05:23:59 taya Exp $
+
+diff -ru ../Orig/galeon-1.2.14/src/mozilla/ContentHandler.cpp ./src/mozilla/ContentHandler.cpp
+--- ../Orig/galeon-1.2.14/src/mozilla/ContentHandler.cpp	2004-02-28 13:55:53.000000000 +0900
++++ ./src/mozilla/ContentHandler.cpp	2005-01-16 13:32:32.000000000 +0900
+@@ -378,9 +378,9 @@
+ //	NS_NAMED_LITERAL_STRING (title, _("Select the destination filename"));
+ 	NS_NAMED_LITERAL_CSTRING(title, _("Select the destination filename"));
+ 
+-	aFilePicker->Init (aWindowInternal, PromiseFlatString(NS_ConvertUTF8toUCS2(title)).get(),
++	aFilePicker->Init (aWindowInternal, NS_ConvertUTF8toUCS2(title),
+ 			   nsIFilePicker::modeSave);
+-	aFilePicker->SetDefaultString (aDefaultFile);
++	aFilePicker->SetDefaultString (nsAutoString(aDefaultFile));
+ 	aFilePicker->SetDisplayDirectory (saveDir);
+ 
+ 	nsCOMPtr <nsILocalFile> aFile (do_CreateInstance(NS_LOCAL_FILE_CONTRACTID));
