@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/20 12:19:16 agc Exp $
+# $NetBSD: Makefile,v 1.16 2004/01/24 13:51:14 grant Exp $
 
 DISTNAME=		gpc-2.1
 PKGREVISION=		3
@@ -20,7 +20,7 @@ BUILD_DEPENDS+=		gsed-[0-9]*:../../textproc/gsed
 
 WRKSRC=			${WRKDIR}/gcc-2.95.3
 USE_BUILDLINK2=		# defined
-USE_GMAKE=		# defined
+USE_GNU_TOOLS+=		make
 USE_NCURSES=		# defined
 PLIST_SRC=		PLIST
 

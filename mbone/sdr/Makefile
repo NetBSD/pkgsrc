@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/01/20 12:20:24 agc Exp $
+# $NetBSD: Makefile,v 1.39 2004/01/24 14:00:13 grant Exp $
 #
 
 DISTNAME=	sdr-3.0
@@ -14,7 +14,7 @@ DEPENDS+=	common-mml>=1.2.0:../common-mml
 
 WRKSRC=		${WRKDIR}/sdr/${SYSDIR}
 CRYPTO=		yes
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -32,8 +32,6 @@ SYSDIR= solaris
 .else
 SYSDIR= freebsd
 .endif
-
-USE_GMAKE=	yes
 
 post-patch:
 	${MV} ${WRKSRC}/../src/sdr.tcl ${WRKSRC}/../src/sdr.tcl.in &&	\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/01/13 23:02:28 xtraeme Exp $
+# $NetBSD: Makefile,v 1.20 2004/01/24 13:51:14 grant Exp $
 #
 
 DISTNAME=	jikes-1.18
@@ -17,6 +17,6 @@ GNU_CONFIGURE=		yes
 USE_GCC_SHLIB=		yes
 UNLIMIT_RESOURCES=      datasize
 
-USE_GMAKE=	# uses multi-line comments with \ (naughty hack!)
+USE_GNU_TOOLS+=	make	# uses multi-line comments with \ (naughty hack!)
 
 .include "../../mk/bsd.pkg.mk"

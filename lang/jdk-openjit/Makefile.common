@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2003/08/23 15:13:59 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.4 2004/01/24 13:51:14 grant Exp $
 
 OPENJIT_VERSION=1.1.16
 
@@ -12,7 +12,7 @@ COMMENT=	Reflective JIT compiler for Java
 
 GNU_CONFIGURE=	# defined
 USE_BUILDLINK2=	# defined
-USE_GMAKE=	# defined
+USE_GNU_TOOLS+=	make
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/java-vm.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2003/07/17 21:45:46 grant Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/01/24 13:55:30 grant Exp $
 
 DISTNAME?=	courier-${DIST_VERS}
 CATEGORIES+=	mail
@@ -15,7 +15,7 @@ HOMEPAGE?=	http://www.courier-mta.org/
 DIST_VERS=	0.37.1
 BASE_VERS=	${DIST_VERS}
 
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 
 PKG_SYSCONFSUBDIR?=	courier
 DATADIR=		${PREFIX}/share/courier

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/08/09 11:11:38 seb Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/24 13:58:23 grant Exp $
 # FreeBSD Id: ports/math/eukleides/Makefile,v 1.1 2002/06/04 18:40:20 ijliao Exp
 
 DISTNAME=	eukleides.0.9.0
@@ -14,7 +14,7 @@ BUILD_DEPENDS+= bison>=1.35:../../devel/bison
 DEPENDS+=	pstoedit>=3.31:../../graphics/pstoedit
 
 ALL_TARGET=	eukleides
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 USE_MAKEINFO=	YES
 INFO_FILES=	eukleides.info
 

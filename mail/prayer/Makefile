@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/11/12 03:39:41 jschauma Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/24 13:55:30 grant Exp $
 #
 
 DISTNAME=	prayer-1.0.8
@@ -14,7 +14,7 @@ PKG_GROUPS=	prayer
 
 USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 USE_PERL5=	build
 
 MAKE_ENV+=	EGDIR="${EGDIR}"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/01/02 19:22:14 cjep Exp $
+# $NetBSD: Makefile,v 1.31 2004/01/24 13:51:14 grant Exp $
 
 DISTNAME=		gcc-2.95.3
 PKGNAME=		gcc-ssp-2.95.3.13
@@ -30,7 +30,7 @@ GCC_FILESDIR=		${.CURDIR}/../gcc/files
 
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 
 HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	${WRKSRC}/configure

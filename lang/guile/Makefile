@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2003/12/14 17:14:40 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2004/01/24 13:51:14 grant Exp $
 
 DISTNAME=		guile-1.6.4
 CATEGORIES=		lang
@@ -12,7 +12,7 @@ CONFLICTS=		guile14<1.4.1nb1
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

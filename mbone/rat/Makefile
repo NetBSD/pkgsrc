@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/07/17 21:48:26 grant Exp $
+# $NetBSD: Makefile,v 1.20 2004/01/24 14:00:13 grant Exp $
 #
 
 DISTNAME=	rat-3.0.28
@@ -12,7 +12,7 @@ COMMENT=	Robust Audio Tool - multicast audioconferencing
 DEPENDS+=	tk>=8.3.2:../../x11/tk
 
 CRYPTO=		yes
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 USE_X11BASE=	yes
 
 USER=		build

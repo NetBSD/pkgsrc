@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/13 22:02:20 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/24 13:51:14 grant Exp $
 
 DISTNAME=	ezm3-1.1
 CATEGORIES=	lang
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.polstra.com/projects/freeware/ezm3/
 COMMENT=	Easier, more portable Modula-3 distribution for building CVSup
 
 DIST_SUBDIR=		ezm3
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 NO_BUILD=		yes
 INSTALL_TARGET=		all
 MAKE_ARGS+=		M3OPTIONS="-DBUILD_ALL -DSHIP_ALL"

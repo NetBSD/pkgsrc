@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2003/12/03 11:28:55 drochner Exp $
+# $NetBSD: Makefile.common,v 1.8 2004/01/24 13:51:14 grant Exp $
 #
 
 GCC_VERSION=	3.3.2
@@ -14,7 +14,7 @@ NOT_FOR_PLATFORM=	Darwin-*-*
 
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 HAS_CONFIGURE=		YES
 
 .include "../../mk/bsd.prefs.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/01/20 12:20:24 agc Exp $
+# $NetBSD: Makefile,v 1.31 2004/01/24 14:00:13 grant Exp $
 #
 
 DISTNAME=		nt.1.5a23
@@ -14,9 +14,9 @@ DEPENDS+=		tk>=8.3.2:../../x11/tk
 
 WRKSRC=			${WRKDIR}
 CRYPTO=			yes
-USE_GMAKE=		yes
-# Pass this on to our child
+USE_GNU_TOOLS+=		make
 
+# Pass this on to our child
 do-configure:
 	cd ${WRKSRC}/netbsd && ${SH} configure
 
