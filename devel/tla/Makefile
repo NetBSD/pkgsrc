@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2004/02/28 22:09:24 recht Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/30 10:48:29 recht Exp $
 #
 
 DISTNAME=	tla-1.2
 PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	http://regexps.srparish.net/src/tla/
+MASTER_SITES=	${MASTER_SITE_GNU:=gnu-arch/}		\
+		http://regexps.srparish.net/src/tla/	\
+		http://arch.quackerhead.com/~lord/releases/tla/
 
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://regexps.srparish.net/www/
