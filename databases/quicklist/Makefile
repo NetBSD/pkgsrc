@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/03/27 03:19:50 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2001/04/02 20:06:11 wiz Exp $
 #
 
 DISTNAME=	quicklist-0.8.6
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.quicklist.org/
 COMMENT=	Simple database like AppleWorks & MS Works
 
 BUILD_USES_MSGFMT=	yes
-
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 
 GNU_CONFIGURE=	yes

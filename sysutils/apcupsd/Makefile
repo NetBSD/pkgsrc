@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/03/27 03:20:16 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2001/04/02 20:06:16 wiz Exp $
 #
 
 DISTNAME=		apcupsd-3.6.2
@@ -10,7 +10,6 @@ HOMEPAGE=		http://www.sibbald.com/apcupsd/
 COMMENT=		UPS power management for APCC Products
 
 BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
-
 BUILD_USES_MSGFMT=	yes
 
 USE_GMAKE=		# defined

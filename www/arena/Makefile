@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2001/03/27 03:20:22 hubertf Exp $
+# $NetBSD: Makefile,v 1.34 2001/04/02 20:06:14 wiz Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/05/04 20:22:31 jseger Exp
 #
 
@@ -13,7 +13,6 @@ COMMENT=		Experimental HTML 3 browser, supports math and style sheets
 
 BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 BUILD_USES_MSGFMT=	yes
-
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		libwww>=5.2.8:../../www/libwww
 DEPENDS+=		png>1.0.9:../../graphics/png

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2001/03/27 03:20:27 hubertf Exp $
+# $NetBSD: Makefile,v 1.80 2001/04/02 20:06:15 wiz Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 
 DISTNAME=	kdebase-1.1.2
@@ -14,7 +14,6 @@ HOMEPAGE=       http://www.kde.org/
 COMMENT=	Base modules for the KDE integrated X11 desktop
 
 BUILD_USES_MSGFMT=	yes
-
 DEPENDS+=	kdelibs-1.1.2:../../x11/kdelibs
 # kdebase doesn't manipulate GIFs, but KDE packages depending on kdebase
 # often do, so put the dependency here.
