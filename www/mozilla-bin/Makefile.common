@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2004/05/23 01:44:58 grant Exp $
+# $NetBSD: Makefile.common,v 1.18 2004/06/04 07:30:30 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -89,7 +89,7 @@ DEPENDS+=	gtk2+>=2.4:../../x11/gtk2
 .    else
 DEPENDS+=	gtk2+>=2.2:../../x11/gtk2
 .    endif
-.  else
+.  elif (!(${OPSYS} == "NetBSD" && ${MOZ_PLATFORM} == "linux"))
 # default to at least gtk-1.2.
 DEPENDS+=	gtk+>=1.2:../../x11/gtk
 .  endif
