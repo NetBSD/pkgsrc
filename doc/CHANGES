@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2182 2003/05/08 12:28:08 wiz Exp $
+$NetBSD: CHANGES,v 1.2183 2003/05/08 14:56:52 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1892,3 +1892,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated unrar to 3.2.1 [wiz 2003-05-08]
 	Updated cgoban-java to 2.4.60 [rh 2003-05-08]
 	Updated easytag to 0.27.1 [wiz 2003-05-08]
+	Updated wmthemes to 0.80.0 [jmmv 2003-05-08]
