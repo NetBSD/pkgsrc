@@ -1,12 +1,12 @@
-# NetBSD: Makefile,v 1.11 2000/05/19 07:34:33 itohy Exp $
+# $NetBSD: Makefile,v 1.2 2000/09/03 13:19:56 wiz Exp $
 
 DISTNAME=		pks-0.9.4
 CATEGORIES=		security www
-MASTER_SITES+=		http://www.mit.edu/people/marc/pks/
-MASTER_SITES+=		ftp://ftp.neonramp.com/pub/pksd/
+MASTER_SITES+=		http://www.mit.edu/people/marc/pks/ \
+			ftp://ftp.neonramp.com/pub/pksd/
 
-PATCH_SITES+=		http://www.mit.edu/people/marc/pks/
-PATCH_SITES+=		ftp://ftp.neonramp.com/pub/pksd/
+PATCH_SITES=		http://www.mit.edu/people/marc/pks/ \
+			ftp://ftp.neonramp.com/pub/pksd/
 PATCHFILES=		pks094-patch2 \
 			pks094-patch3
 PATCH_DIST_STRIP=	-p1
