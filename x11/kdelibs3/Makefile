@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/08/15 08:22:09 skrll Exp $
+# $NetBSD: Makefile,v 1.4.4.1 2002/11/29 09:37:34 agc Exp $
 
 DISTNAME=	kdelibs-3.0.2
 PKGREVISION=	1
@@ -111,15 +111,20 @@ post-install:
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
 
-# XXX On NetBSD, the egcs for:
+# XXX On NetBSD, the egcs and gcc-2.95.3 for:
 # XXX
-# XXX     alpha
+# XXX     alpha and sparc
 # XXX
 # XXX has an optimization bug when compiling with -O2 that is tickled by
+# XXX ${WRKSRC}/kio/kio/global.cpp.
 # XXX ${WRKSRC}/kdeprint/management/kmiconview.cpp.
+# XXX and others
 #
 .if ${OPSYS} == "NetBSD"
-.  if (${MACHINE_ARCH} == "alpha")
-CFLAGS+=	-O
+.  if (${MACHINE_ARCH} == "alpha" || ${MACHINE_ARCH} == "sparc")
+CXXFLAGS:=      ${CXXFLAGS:C/-O[0-9]*/-O/g} 
+CFLAGS:=        ${CFLAGS:C/-O[0-9]*/-O/g}
+CONFIGURE_ENV+= CXXFLAGS="${CXXFLAGS}"
+CONFIGURE_ENV+= CFLAGS="${CFLAGS}"
 .  endif
 .endif
