@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.3 2002/01/16 18:45:09 drochner Exp $
+# $NetBSD: pyversion.mk,v 1.4 2002/01/16 20:09:08 drochner Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -7,6 +7,10 @@ PYTHON_PYVERSION_MK=	defined
 
 PYTHON_VERSION_DEFAULT?=	21
 PYTHON_VERSIONS_ACCEPTED?=	22 21 20
+
+BUILDLINK_DEPENDS.python20?=	python20>=2.0
+BUILDLINK_DEPENDS.python21?=	python21>=2.1
+BUILDLINK_DEPENDS.python22?=	python22>=2.2
 
 # transform the list into individual variables
 .for pv in ${PYTHON_VERSIONS_ACCEPTED}
@@ -66,15 +70,15 @@ _PYTHON_VERSION=	${_PYTHON_VERSION_FIRSTACCEPTED}
 # set variables for the version we decided to use
 #
 .if ${_PYTHON_VERSION} == "22"
-DEPENDS+=	python22>=2.2:../../lang/python22
+DEPENDS+=	${BUILDLINK_DEPENDS.python22}:../../lang/python22
 PYTHONBIN=	${LOCALBASE}/bin/python2.2
 PYPKGPREFIX=	py22
 .elif ${_PYTHON_VERSION} == "21"
-DEPENDS+=	python21>=2.1:../../lang/python21
+DEPENDS+=	${BUILDLINK_DEPENDS.python21}:../../lang/python21
 PYTHONBIN=	${LOCALBASE}/bin/python2.1
 PYPKGPREFIX=	py21
 .elif ${_PYTHON_VERSION} == "20"
-DEPENDS+=	python20>=2.0:../../lang/python20
+DEPENDS+=	${BUILDLINK_DEPENDS.python20}:../../lang/python20
 PYTHONBIN=	${LOCALBASE}/bin/python2.0
 PYPKGPREFIX=	py20
 .endif
