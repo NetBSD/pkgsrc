@@ -1,21 +1,19 @@
-# $NetBSD: Makefile,v 1.38 2004/10/15 12:22:14 tv Exp $
-#
+# $NetBSD: Makefile,v 1.39 2005/01/11 14:02:05 adam Exp $
 
-DISTNAME=		Eterm-0.9.2
-PKGNAME=		${DISTNAME:S/^E/e/}
-PKGREVISION=		10
-CATEGORIES=		x11
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=eterm/} \
-			ftp://ftp.dti.ad.jp/pub/X/Eterm/
-DISTFILES=		${ETERM_SRCS} ${PIXMAP_FILES}
+DISTNAME=	Eterm-0.9.3
+PKGNAME=	${DISTNAME:S/^E/e/}
+CATEGORIES=	x11
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=eterm/} \
+		ftp://ftp.dti.ad.jp/pub/X/Eterm/
+DISTFILES=	${ETERM_SRCS} ${PIXMAP_FILES}
 
 SITES_Eterm-bg-scale-1.tar.gz= ${MASTER_SITE_BACKUP}
 SITES_Eterm-bg-scale-2.tar.gz= ${MASTER_SITE_BACKUP}
 SITES_Eterm-bg-tile.tar.gz=    ${MASTER_SITE_BACKUP}
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.eterm.org/
-COMMENT=		Enlightened terminal emulator for the X Window System
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.eterm.org/
+COMMENT=	Enlightened terminal emulator for the X Window System
 
 EXTRACT_ONLY=		${ETERM_SRCS}
 ETERM_SRCS=		${DISTNAME}${EXTRACT_SUFX}
@@ -23,9 +21,9 @@ PIXMAP_FILES=		Eterm-bg-scale-1.tar.gz Eterm-bg-scale-2.tar.gz \
 			Eterm-bg-tile.tar.gz
 
 USE_BUILDLINK3=		YES
+USE_LIBTOOL=		YES
 USE_PKGINSTALL=		YES
 USE_X11=		YES
-USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 

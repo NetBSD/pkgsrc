@@ -1,7 +1,8 @@
-$NetBSD: patch-ai,v 1.1 2002/12/26 04:58:45 wiz Exp $
---- doc/Makefile.in.orig	Sun Dec 15 00:50:46 2002
-+++ doc/Makefile.in	Sun Dec 15 00:51:30 2002
-@@ -267,7 +267,7 @@
+$NetBSD: patch-ai,v 1.2 2005/01/11 14:02:06 adam Exp $
+
+--- doc/Makefile.in.orig	2004-12-14 18:46:51.000000000 +0000
++++ doc/Makefile.in
+@@ -282,7 +282,7 @@ installdirs mostlyclean-generic distclea
  maintainer-clean-generic clean mostlyclean distclean maintainer-clean
  
  
