@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/24 13:55:30 grant Exp $
+# $NetBSD: Makefile,v 1.11 2004/02/11 02:54:41 xtraeme Exp $
 
 DISTNAME=	libesmtp-1.0.1
 PKGREVISION=	1
@@ -12,7 +12,7 @@ MAINTAINER=	dolemite@wuli.nu
 HOMEPAGE=	http://www.stafford.uklinux.net/libesmtp/
 COMMENT=	Library to manage posting of electronic mail
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
@@ -38,6 +38,6 @@ post-buildlink:
 			${BUILDLINK_DIR}/include; \
 	fi
 
-.include "../../mk/pthread.buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
