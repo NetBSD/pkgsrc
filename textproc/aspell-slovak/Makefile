@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:54:08 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/02/11 04:35:21 xtraeme Exp $
 #
 
 DISTNAME=	aspell-sk-0.50.3-1.1
@@ -12,7 +12,7 @@ MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://ispell.hq.sk/homepage/
 COMMENT=	Slovak language support for aspell
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 HAS_CONFIGURE=	YES
 
 CONFIGURE_ENV+=	ASPELL=${PREFIX}/bin/aspell
@@ -20,5 +20,5 @@ CONFIGURE_ENV+=	WORD_LIST_COMPRESS=${PREFIX}/bin/word-list-compress
 
 MAKE_ENV+=	SORT="${SORT}"
 
-.include "../../textproc/aspell/buildlink2.mk"
+.include "../../textproc/aspell/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
