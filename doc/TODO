@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.217 2003/01/26 21:53:51 salo Exp $
+$NetBSD: TODO,v 1.218 2003/01/27 10:34:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -72,6 +72,7 @@ Suggested package updates
 	o Xbae-4.50.0
 	o abiword-1.0.4 [pkg/20016]
 	o adobe-cmaps-1.5 [pkg/19646]
+	o angband-3.0.3
 	o apache-2.0.44
 	o aim-1.5.277
 	o amaya-7.0
@@ -96,20 +97,20 @@ Suggested package updates
 	o curl-7.10.3
 	o dante-1.1.13
 	o db4-4.1.25
-	o dctc-0.84.0
+	o dctc-0.84.1
+	o docbook-xsl-1.60.1
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
 	o elm-me-2.4pl100
-	o ethereal-0.9.9
 	o exim-4.12 [pkg/19850]
 	o fetchmail-6.2.1
 	o file-roller-2.2.0
+	o flac-1.1.0
 	o fltk-1.1.1
 	o foomatic-2.9.1 [jlam]
 	o fox-1.0.30
 	o freeciv-1.14.0
 	o fsviewer-0.2.5
-	o fvwm-2.4.15
 	o g-wrap-1.3.4
 	o gcvs-1.0b4
 	o gd-2.0.4
@@ -167,17 +168,18 @@ Suggested package updates
 	o libmcrypt-2.5.5
 	o librep-0.16.1
 	o libslang-1.4.7
-	o libxml-2.5.1 [problems with kde2(?)]
+	o libxml-2.5.1 [problems with kde2(?)|pkg/20060]
 	o libxslt-1.0.24 [problems with kde2(?)]
 	o lilypond-1.6.6
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
 	o lynx-current-2.8.5dev9
-	o maildrop-1.5.1
+	o maildrop-1.5.2
 	o mcrypt-2.6.3
 	o memtest86-3.0
 	o metacity-2.4.13
 	o mhonarc-2.5.13 [pkg/19366]
+	o micq-0.4.10.1
 	o mixer.app-1.8.0
 	o mkfontscale-20020618
 	o mng-1.0.5rc2
@@ -210,6 +212,7 @@ Suggested package updates
 	o pv-0.4.5 [pkg/19884]
 	o py-wxWindows-2.4.0.1
 	o pygtk-0.6.11
+	o pyxml-0.8.2
 	o qt3-3.1.1
 	o rep-gtk-0.16
 	o rocksndiamonds-2.2.0rc2
@@ -234,6 +237,7 @@ Suggested package updates
 	o speex-1.0rc1
 	o squeak-3.2 [fredb|pkg/17950]
 	o sqlite-2.7.5 [pkg/19719]
+	o sqlite-2.7.6
 	o srp_client-1.7.5 [jlam]
 	o subversion-0.17.1
 	o suck-4.3.1
