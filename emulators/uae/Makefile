@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2000/02/23 19:51:57 soren Exp $
+# $NetBSD: Makefile,v 1.6 2000/07/13 17:34:38 kristerw Exp $
 
-DISTNAME=	uae-0.8.8
+DISTNAME=	uae-0.8.12
 CATEGORIES=	emulators
 MASTER_SITES=	ftp://ftp.freiburg.linux.de/pub/uae/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	kristerw@netbsd.org
 HOMEPAGE=	http://www.freiburg.linux.de/~uae/
 
 NOT_FOR_PLATFORM=	*-*-arm32
@@ -13,16 +13,11 @@ USE_GMAKE=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 
-CPPFLAGS=		-I${WRKSRC}/src/include
 # Because using the gtk+ user interface requires a thread library
 # we use a brute force method to avoid detection of gtk+.
 CONFIGURE_ARGS+=	--enable-dga --enable-vidmode \
 			--with-gtk-prefix=${WRKDIR}
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
-
-post-extract:
-	@${MKDIR} ${WRKSRC}/src/include/machine
-	@${LN} -sf /usr/include/soundcard.h ${WRKSRC}/src/include/machine
 
 post-configure:
 	(cd ${WRKSRC}/src; ${MAKE} .SECONDARY)
