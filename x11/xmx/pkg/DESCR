@@ -1,0 +1,24 @@
+XMX is a standalone utility for sharing an X Window System session on
+multiple X displays.  It allows users to see and interact with the
+same applications at the same time from different locations.  XMX
+takes advantage of the networked nature of the X Window System by
+acting as an intermediary between X clients and X servers.  In this
+way, XMX works with any X clients and any X servers, without the need
+to modify either. 
+
+XMX provides a WYSIWIS (What You See Is What I See) environment; it
+paints the same graphics on all participating displays.  The shared
+client applications appear to each participant in a virtual root
+window which is subject to local window management.  In this way, the
+shared X session coexists with each user's private X session. 
+
+The X client applications which are shared via XMX are unaware that
+they are being viewed or controlled by more than one user.  Existing,
+single-user X client applications may be shared using XMX without
+recompilation, relinking or access to source code. 
+
+XMX is designed as an application sharing server.  It provides both
+the mechanism of application sharing and a way to control the shared
+session from other programs.  Like X, it leaves policy decisions to
+application programs.  In this way, XMX may be used as a component in
+any of a variety of systems that require application sharing. 
