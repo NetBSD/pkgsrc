@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5998 2004/05/21 10:46:46 adam Exp $
+$NetBSD: CHANGES,v 1.5999 2004/05/21 13:39:56 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2609,3 +2609,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mathomatic to 11.1c [minskim 2004-05-20]
 	Updated fltk to 1.1.5rc1nb1 [ben 2004-05-20]
 	Updated xplanet to 1.0.7 [adam 2004-05-21]
+	Updated rconfig to 0.30 [abs 2004-05-21]
+
