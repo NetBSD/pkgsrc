@@ -1,14 +1,35 @@
-@comment $NetBSD: PLIST,v 1.1 1998/06/06 15:28:36 frueauf Exp $
-etc/nntpcache/access
-etc/nntpcache/access.default
-etc/nntpcache/config
-etc/nntpcache/config.default
-etc/nntpcache/servers
-etc/nntpcache/servers.default
+@comment $NetBSD: PLIST,v 1.2 1999/02/23 00:38:05 tv Exp $
+etc/nntpcache/VERSION
+etc/nntpcache/innreport.conf-dist
+etc/nntpcache/innreport.pl
+etc/nntpcache/innreport.pm
+etc/nntpcache/newshound.conf-dist
+etc/nntpcache/nntpcache.access-dist
+etc/nntpcache/nntpcache.config-dist
+etc/nntpcache/nntpcache.servers-dist
+etc/nntpcache/pubring.asc-dist
+etc/nntpcache/pubring.pgp-dist
 etc/nntpcache/spam.filter
-etc/nntpcache/spam.filter.default
+etc/nntpcache/http/index.html
+etc/nntpcache/http/moose.gif
+etc/nntpcache/http/nntpcache.jpg
+@exec mkdir -p %D/etc/nntpcache/http/innreport/pics
+@exec chown -R news:news %D/etc/nntpcache
+@exec chmod 700 %D/etc/nntpcache
+@unexec rmdir -p %D/etc/nntpcache/http/innreport/pics 2>/dev/null || true
 etc/rc.d/nntpcached.sh
+sbin/innreport.sh
+sbin/newshound
 sbin/nntpcached
-man/man8/nntpcache.8.gz
-@dirrm etc/nntpcache
+man/man8/newshound.8
+man/man8/nntpcached.8
+@unexec rmdir etc/nntpcache 2>/dev/null || true
+@exec mkdir -p /var/spool/nntpcache
+@exec cp %D/etc/nntpcache/VERSION /var/spool/nntpcache/VERSION
+@exec chown -R news:news /var/spool/nntpcache
+@exec chmod 700 /var/spool/nntpcache
 @unexec rm -rf /var/spool/nntpcache
+share/doc/nntpcache/FAQ
+share/doc/nntpcache/FAQ.html
+share/doc/nntpcache/LICENSING
+@dirrm share/doc/nntpcache
