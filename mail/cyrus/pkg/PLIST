@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 2000/01/09 01:28:07 wiz Exp $
 bin/cyradm
 bin/imtest
 cyrus/bin/arbitron
