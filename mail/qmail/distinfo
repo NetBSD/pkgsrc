@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/08/13 09:10:10 zuntum Exp $
+
+SHA1 (qmail-1.03.tar.gz) = 18fb960481291a0503e93a94df3f6094edb7f27a
+Size (qmail-1.03.tar.gz) = 220668 bytes
+SHA1 (qmail-103.patch) = dfb9cdabe91449dad2117115177b0a6a356baa9f
+Size (qmail-103.patch) = 2104 bytes
