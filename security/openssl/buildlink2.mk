@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.12 2003/11/25 06:56:08 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.13 2003/11/27 05:19:58 jlam Exp $
 
 .if !defined(OPENSSL_BUILDLINK2_MK)
 OPENSSL_BUILDLINK2_MK=	# defined
@@ -37,24 +37,38 @@ _NEED_OPENSSL=	YES
 # version or if the built-in one is sufficient.
 #
 _OPENSSL_MAJOR!=							\
-	${AWK} '/\#define[ 	]*OPENSSL_VERSION_NUMBER/ {		\
-			print int(substr($$3, 3, 1)); exit 0;		\
+	${AWK} 'BEGIN { hex="0123456789abcdef" }			\
+		/\#define[ 	]*OPENSSL_VERSION_NUMBER/ {		\
+			i = index(hex, substr($$3, 3, 1)) - 1;		\
+			print i;					\
+			exit 0;						\
 		}							\
 	' ${_OPENSSL_OPENSSLV_H}
 _OPENSSL_MINOR!=							\
-	${AWK} '/\#define[ 	]*OPENSSL_VERSION_NUMBER/ {		\
-			print "." int(substr($$3, 4, 2)); exit 0;	\
+	${AWK} 'BEGIN { hex="0123456789abcdef" }			\
+		/\#define[ 	]*OPENSSL_VERSION_NUMBER/ {		\
+			i = 16 * (index(hex, substr($$3, 4, 1)) - 1);	\
+			i += index(hex, substr($$3, 5, 1)) - 1;		\
+			print i;					\
+			exit 0;						\
 		}							\
 	' ${_OPENSSL_OPENSSLV_H}
 _OPENSSL_TEENY!=							\
-	${AWK} '/\#define[ 	]*OPENSSL_VERSION_NUMBER/ {		\
-			print "." int(substr($$3, 6, 2)); exit 0;	\
+	${AWK} 'BEGIN { hex="0123456789abcdef" }			\
+		/\#define[ 	]*OPENSSL_VERSION_NUMBER/ {		\
+			i = 16 * (index(hex, substr($$3, 6, 1)) - 1);	\
+			i += index(hex, substr($$3, 7, 1)) - 1;		\
+			print i;					\
+			exit 0;						\
 		}							\
 	' ${_OPENSSL_OPENSSLV_H}
 _OPENSSL_PATCHLEVEL!=							\
-	${AWK} 'BEGIN { split("abcdefghijklmnopqrstuvwxyz", alpha, "") } \
+	${AWK} 'BEGIN { hex="0123456789abcdef";				\
+			split("abcdefghijklmnopqrstuvwxyz", alpha, "");	\
+		}							\
 		/\#define[ 	]*OPENSSL_VERSION_NUMBER/ {		\
-			i = int(substr($$3, 8, 2));			\
+			i = 16 * (index(hex, substr($$3, 8, 1)) - 1);	\
+			i += index(hex, substr($$3, 9, 1)) - 1;		\
 			if (i == 0) {					\
 				print "";				\
 			} else if (i > 26) {				\
@@ -65,7 +79,7 @@ _OPENSSL_PATCHLEVEL!=							\
 			exit 0;						\
 		}							\
 	' ${_OPENSSL_OPENSSLV_H}
-_OPENSSL_VERSION=	${_OPENSSL_MAJOR}${_OPENSSL_MINOR}${_OPENSSL_TEENY}${_OPENSSL_PATCHLEVEL}
+_OPENSSL_VERSION=	${_OPENSSL_MAJOR}.${_OPENSSL_MINOR}.${_OPENSSL_TEENY}${_OPENSSL_PATCHLEVEL}
 _OPENSSL_PKG=	openssl-${_OPENSSL_VERSION}
 #
 # If the built-in OpenSSL software is 0.9.6g, then check whether it
