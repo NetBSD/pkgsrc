@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.123 2002/09/30 12:48:36 wiz Exp $
+$NetBSD: CHANGES,v 1.124 2002/09/30 13:54:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3047,3 +3047,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated netatalk to 1.5.5 [abs 2002-09-30]
 	Updated ethereal to 0.9.7 [martti 2002-09-30]
 	Updated tuxpaint-stamps to 2002.09.29 [wiz 2002-09-30]
+	Updated rats to 2.1 [taca 2002-09-30]
