@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2002/12/25 15:58:20 jmmv Exp $
+$NetBSD: distinfo,v 1.4 2003/02/13 18:19:29 jmmv Exp $
 
-SHA1 (libgda-0.8.199.tar.bz2) = a1a41659d117ca5f1686a0deeee097b92441b756
-Size (libgda-0.8.199.tar.bz2) = 674693 bytes
-SHA1 (patch-aa) = 15f5be86f2fb44aaf6266551a50d7d43fd84af1b
-SHA1 (patch-ab) = 06f205d56743720583fa5e950e71e12ab6a1f914
-SHA1 (patch-ac) = 6a6373363167e33a24772d6b03753b9fb785c56b
+SHA1 (libgda-0.10.0.tar.bz2) = bedc5c947558d1a87637b6c3e476a2cf7adaeb3d
+Size (libgda-0.10.0.tar.bz2) = 795000 bytes
+SHA1 (patch-aa) = 3395318d51f0e268107778be43af47b59b2a60e8
+SHA1 (patch-ab) = 9fbc5f413426ed88753ec7523957d5e3122ec43e
+SHA1 (patch-ac) = 855820bd48c7a1ea172deaf1b8c3164e955b626f
