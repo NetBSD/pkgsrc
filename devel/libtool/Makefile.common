@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.54 2004/10/14 16:15:26 tv Exp $
+# $NetBSD: Makefile.common,v 1.55 2004/10/14 19:04:56 tv Exp $
 #
 
 DISTNAME=	libtool-1.5.10
@@ -22,3 +22,25 @@ PATCHDIR=	${.CURDIR}/../libtool/patches
 AUTOMAKE_OVERRIDE=	NO
 
 CONFIGURE_ARGS+=	-C # autoconf cache speedup
+
+.include "../../mk/bsd.prefs.mk"
+
+# The configure script persists in trying to find the path to ld, which
+# always ends up in ${BUILDLINK_DIR}.  Prevent it from caring.
+#
+CONFIGURE_ENV+=		lt_cv_path_LD=${LD:Q}
+
+# The configure script persists in trying to find the path to sed or gsed,
+# which breaks when SED is nbsed.  Tell it explicitly to use the sed
+# named by ${SED}.
+#
+CONFIGURE_ENV+=		SED=${SED:Q}
+CONFIGURE_ENV+=		lt_cv_path_SED=${SED:Q}
+
+# The configure script doesn't seem to be working out the need for -p
+# or -B, so tell it
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=		lt_cv_path_NM="nm -p"
+.elif ${OPSYS} == "IRIX"
+CONFIGURE_ENV+=		lt_cv_path_NM="nm -B"
+.endif
