@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.1.1.1 2003/06/09 22:16:10 seb Exp $
+# $NetBSD: Makefile.in,v 1.2 2003/06/10 07:02:12 seb Exp $
 
 .if defined(PREFIX)
 BINDIR?=	${PREFIX}/bin
@@ -7,7 +7,7 @@ BINDIR?=	/usr/bin
 .endif
 
 PROG=	pkg_install-info
-SRCS=	install-info.c xexit.c xstrdup.c
+SRCS=	getopt.c getopt1.c install-info.c xexit.c xstrdup.c
 
 CPPFLAGS+=	-I.
 CPPFLAGS+=	-DENABLE_NLS=0
