@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/02/16 05:58:49 salo Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/03/04 14:41:17 salo Exp $
 #
 # This Makefile fragment is included by packages that use streamtuner.
 #
@@ -9,11 +9,11 @@
 STREAMTUNER_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			streamtuner
-BUILDLINK_DEPENDS.streamtuner?=		streamtuner>=0.9.0
-BUILDLINK_PKGSRCDIR.streamtuner?=		../../audio/streamtuner
+BUILDLINK_DEPENDS.streamtuner?=		streamtuner>=0.9.1
+BUILDLINK_PKGSRCDIR.streamtuner?=	../../audio/streamtuner
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.streamtuner=streamtuner
-BUILDLINK_PREFIX.streamtuner_DEFAULT=	${X11PREFIX}
+BUILDLINK_PREFIX.streamtuner_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.streamtuner+=	include/streamtuner/st_category.h
 BUILDLINK_FILES.streamtuner+=	include/streamtuner/st_dialog.h
 BUILDLINK_FILES.streamtuner+=	include/streamtuner/st_handler.h
@@ -21,6 +21,7 @@ BUILDLINK_FILES.streamtuner+=	include/streamtuner/st_handler_field.h
 BUILDLINK_FILES.streamtuner+=	include/streamtuner/st_handlers.h
 BUILDLINK_FILES.streamtuner+=	include/streamtuner/st_programs.h
 BUILDLINK_FILES.streamtuner+=	include/streamtuner/st_re.h
+BUILDLINK_FILES.streamtuner+=	include/streamtuner/st_settings.h
 BUILDLINK_FILES.streamtuner+=	include/streamtuner/st_state.h
 BUILDLINK_FILES.streamtuner+=	include/streamtuner/st_stream.h
 BUILDLINK_FILES.streamtuner+=	include/streamtuner/st_transfer.h

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/16 05:58:49 salo Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/04 14:41:17 salo Exp $
 bin/streamtuner
 include/streamtuner/st_category.h
 include/streamtuner/st_dialog.h
@@ -7,6 +7,7 @@ include/streamtuner/st_handler_field.h
 include/streamtuner/st_handlers.h
 include/streamtuner/st_programs.h
 include/streamtuner/st_re.h
+include/streamtuner/st_settings.h
 include/streamtuner/st_state.h
 include/streamtuner/st_stream.h
 include/streamtuner/st_transfer.h
