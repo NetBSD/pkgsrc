@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.8 2002/09/01 18:38:15 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.9 2002/09/02 21:53:23 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -39,6 +39,7 @@ CONFIGURE_ENV+=		BUILDLINK_X11PKG_DIR="${BUILDLINK_X11PKG_DIR}"
 MAKE_ENV+=		BUILDLINK_X11PKG_DIR="${BUILDLINK_X11PKG_DIR}"
 _BLNK_CPPFLAGS=		-I${LOCALBASE}/include
 _BLNK_LDFLAGS=		-L${LOCALBASE}/lib
+_BLNK_OPSYS=		${OPSYS}
 
 # The configure process usually tests for outlandish or missing things
 # that we don't want polluting the argument cache.
@@ -193,7 +194,7 @@ _BUILDLINK_USE: .USE
 		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
 	fi
 
-do-buildlink: buildlink-wrappers
+do-buildlink: buildlink-wrappers buildlink-${_BLNK_OPSYS}-wrappers
 
 # _BLNK_TRANSFORM mini language for translating wrapper arguments into
 #	their buildlink equivalents:
@@ -357,13 +358,13 @@ _BLNK_WRAPPEES+=	IMAKE
 .endif
 _ALIASES.AS=		as
 _ALIASES.CC=		cc gcc
-_ALIASES.CXX=		c++ g++
+_ALIASES.CXX=		c++ g++ CC
 _ALIASES.CPP=		cpp
 _ALIASES.FC=		f77 g77
 _ALIASES.LD=		ld
 
 # On Darwin, protect against using /bin/sh if it's zsh.
-.if ${OPSYS} == "Darwin"
+.if ${_BLNK_OPSYS} == "Darwin"
 .  if exists(/bin/bash)
 BUILDLINK_SHELL?=	/bin/bash
 .  else
@@ -475,6 +476,21 @@ MAKE_ENV+=	${_BLNK_WRAP_ENV.${_wrappee_}}
 BUILDLINK_${_wrappee_}=	\
 	${BUILDLINK_DIR}/bin/${${_wrappee_}:T:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
 
+_BLNK_WRAPPER_TRANSFORM_SED=						\
+	-e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g"			\
+	-e "s|@BUILDLINK_SHELL@|${BUILDLINK_SHELL}|g"			\
+	-e "s|@CAT@|${CAT:Q}|g"						\
+	-e "s|@ECHO@|${ECHO:Q}|g"					\
+	-e "s|@SED@|${SED:Q}|g"						\
+	-e "s|@TOUCH@|${TOUCH:Q}|g"					\
+	-e "s|@_BLNK_LIBTOOL_FIX_LA@|${_BLNK_LIBTOOL_FIX_LA:Q}|g"	\
+	-e "s|@_BLNK_WRAP_LOG@|${_BLNK_WRAP_LOG:Q}|g"			\
+	-e "s|@_BLNK_WRAP_PRE_CACHE@|${_BLNK_WRAP_PRE_CACHE.${_wrappee_}:Q}|g" \
+	-e "s|@_BLNK_WRAP_POST_CACHE@|${_BLNK_WRAP_POST_CACHE.${_wrappee_}:Q}|g" \
+	-e "s|@_BLNK_WRAP_CACHE@|${_BLNK_WRAP_CACHE.${_wrappee_}:Q}|g"	\
+	-e "s|@_BLNK_WRAP_LOGIC@|${_BLNK_WRAP_LOGIC.${_wrappee_}:Q}|g"	\
+	-e "s|@_BLNK_WRAP_SANITIZE_PATH@|${_BLNK_WRAP_SANITIZE_PATH.${_wrappee_}:Q}|g"
+
 buildlink-wrappers: ${BUILDLINK_${_wrappee_}}
 .if !target(${BUILDLINK_${_wrappee_}})
 ${BUILDLINK_${_wrappee_}}:						\
@@ -511,20 +527,8 @@ ${BUILDLINK_${_wrappee_}}:						\
 	esac;								\
 	${MKDIR} ${.TARGET:H};						\
 	${CAT} ${_BLNK_WRAPPER_SH.${_wrappee_}}	|			\
-		${SED}	-e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g"	\
-			-e "s|@BUILDLINK_SHELL@|${BUILDLINK_SHELL}|g"	\
-			-e "s|@CAT@|${CAT:Q}|g"				\
-			-e "s|@ECHO@|${ECHO:Q}|g"			\
-			-e "s|@SED@|${SED:Q}|g"				\
-			-e "s|@TOUCH@|${TOUCH:Q}|g"			\
-			-e "s|@WRAPPEE@|$${absdir}${${_wrappee_}:Q}|g"	\
-			-e "s|@_BLNK_LIBTOOL_FIX_LA@|${_BLNK_LIBTOOL_FIX_LA:Q}|g" \
-			-e "s|@_BLNK_WRAP_LOG@|${_BLNK_WRAP_LOG:Q}|g"	\
-			-e "s|@_BLNK_WRAP_PRE_CACHE@|${_BLNK_WRAP_PRE_CACHE.${_wrappee_}:Q}|g" \
-			-e "s|@_BLNK_WRAP_POST_CACHE@|${_BLNK_WRAP_POST_CACHE.${_wrappee_}:Q}|g" \
-			-e "s|@_BLNK_WRAP_CACHE@|${_BLNK_WRAP_CACHE.${_wrappee_}:Q}|g" \
-			-e "s|@_BLNK_WRAP_LOGIC@|${_BLNK_WRAP_LOGIC.${_wrappee_}:Q}|g" \
-			-e "s|@_BLNK_WRAP_SANITIZE_PATH@|${_BLNK_WRAP_SANITIZE_PATH.${_wrappee_}:Q}|g" \
+	${SED}	${_BLNK_WRAPPER_TRANSFORM_SED}				\
+		-e "s|@WRAPPEE@|$${absdir}${${_wrappee_}:Q}|g"		\
 		> ${.TARGET};						\
 	${CHMOD} +x ${.TARGET}
 .endif
@@ -540,6 +544,34 @@ ${_alias_}: ${BUILDLINK_${_wrappee_}}
 .    endif
 .  endfor # _alias_
 .endfor   # _wrappee_
+
+# OS-specific overrides for buildlink2 wrappers
+#
+_BLNK_WRAPPEES.SunOS?=	CC CXX
+SUNWSPROBASE?=		/opt/SUNWspro
+CC.SunOS?=		${SUNWSPROBASE}/bin/cc
+CXX.SunOS?=		${SUNWSPROBASE}/bin/CC
+
+buildlink-${_BLNK_OPSYS}-wrappers: buildlink-wrappers
+.for _wrappee_ in ${_BLNK_WRAPPEES.${_BLNK_OPSYS}}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ ! -x "${${_wrappee_}.${_BLNK_OPSYS}}" ]; then		\
+		wrapper="${BUILDLINK_DIR}/bin/${${_wrappee_}.${_BLNK_OPSYS}:T}"; \
+		${ECHO_BUILDLINK_MSG}					\
+			"Creating ${_BLNK_OPSYS} wrapper: $${wrapper}";	\
+		${RM} -f $${wrapper};					\
+		${CAT} ${_BLNK_WRAPPER_SH.${_wrappee_}} |		\
+		${SED}	${_BLNK_WRAPPER_TRANSFORM_SED}			\
+			-e "s|@WRAPPEE@|${${_wrappee_}.${_BLNK_OPSYS}}|g" \
+		> $${wrapper};						\
+		${CHMOD} +x $${wrapper};				\
+		for file in ${_ALIASES.${_wrappee_}:S/^/${BUILDLINK_DIR}\/bin\//}; do \
+			if [ "$${file}" != "$${wrappee}" ]; then	\
+				${TOUCH} $${file};			\
+			fi;						\
+		done;							\
+	fi
+.endfor
 
 ${_BLNK_WRAP_PRE_CACHE}: ${.CURDIR}/../../mk/buildlink2/pre-cache
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
