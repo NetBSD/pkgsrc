@@ -1,31 +1,52 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/03/05 23:24:07 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2002/03/05 23:56:22 jlam Exp $
 
---- config.layout.orig	Fri Oct 26 02:59:26 2001
-+++ config.layout	Thu Jan  3 17:18:55 2002
-@@ -285,3 +285,26 @@
-     logfiledir:    $prefix/logs
-     proxycachedir: $prefix/proxy
- </Layout>
-+
-+#   NetBSD Layout
-+<Layout NetBSD>
-+    prefix:        PKG_PREFIX
-+    exec_prefix:   $prefix
-+    bindir:        $prefix/bin
-+    sbindir:       $prefix/bin
-+    libexecdir:    $prefix/lib/httpd
-+    mandir:        $prefix/man
-+    sysconfdir:    $prefix/etc/httpd
-+    datadir:       $prefix/share/httpd
-+    installbuilddir: $prefix/share/httpd/build
-+    errordir:      $prefix/share/httpd/error
-+    iconsdir:      $prefix/share/httpd/icons
-+    htdocsdir:     $prefix/share/httpd/htdocs
-+    manualdir:     $prefix/share/httpd/manual
-+    cgidir:        $prefix/libexec/cgi-bin
-+    includedir:    $prefix/include/httpd
-+    localstatedir: /var
-+    runtimedir:    /var/run
-+    logfiledir:    /var/log/httpd
-+    proxycachedir: /var/spool/httpd/proxy
-+</Layout>
+--- Makefile.in.orig	Wed Jan 23 02:10:16 2002
++++ Makefile.in
+@@ -16,7 +16,7 @@
+ PROGRAMS        = $(PROGRAM_NAME)
+ TARGETS         = $(PROGRAMS) $(shared_build) $(other_targets)
+ PHONY_TARGETS   = $(srcdir)/buildmark.c
+-INSTALL_TARGETS = install-conf install-htdocs install-error install-icons \
++INSTALL_TARGETS = install-htdocs install-error install-icons \
+ 	install-other install-cgi install-include install-suexec install-man \
+ 	install-build
+ 
+@@ -66,8 +66,22 @@
+ 					-e 's#@@Port@@#$(PORT)#g' \
+ 					< $$i; \
+ 			fi \
+-		) > $(sysconfdir)/$$i; \
++		) | \
++		sed -e 's#\([ 	]\)conf/#\1$(sysconfdir)/#g' \
++			-e 's#\([: 	]\)logs/#\1$(logfiledir)/#g' \
++			-e 's#\([: 	]\)modules/#\1$(libexecdir)/#g' \
++			-e 's#$(prefix)/cgi-bin#$(cgidir)#g' \
++			-e 's#$(prefix)/conf#$(sysconfdir)#g' \
++			-e 's#$(prefix)/error#$(errordir)#g' \
++			-e 's#$(prefix)/htdocs#$(htdocsdir)#g' \
++			-e 's#$(prefix)/icons#$(iconsdir)#g' \
++			-e 's#$(prefix)/manual#$(manualdir)#g' \
++			-e 's#$(logfiledir)\(/accept.lock\)#$(runtimedir)\1#g' \
++			-e 's#$(logfiledir)\(/apache_runtime_status\)#$(runtimedir)\1#g' \
++			-e 's#$(logfiledir)\(/httpd\.pid\)#$(runtimedir)\1#g' \
++			> $(sysconfdir)/$$i; \
+ 		chmod 0644 $(sysconfdir)/$$i; \
++		if false; then \
+ 		file=`echo $$i|sed s/-std//`; \
+ 		if [ "$$file" = "httpd.conf" ]; then \
+ 			file=`echo $$file|sed s/.*.conf/$(PROGRAM_NAME).conf/`; \
+@@ -75,11 +89,14 @@
+ 		if test "$$file" != "$$i" && test ! -f $(sysconfdir)/$$file; then \
+ 			$(INSTALL_DATA) $(sysconfdir)/$$i $(sysconfdir)/$$file; \
+ 		fi; \
++		fi; \
+ 	done
+ 	@if test -f "$(builddir)/envvars-std"; then \
+ 	    cp -p envvars-std $(sbindir); \
++	    if false; then \
+ 	    if test ! -f $(sbindir)/envvars; then \
+ 	        cp -p envvars-std $(sbindir)/envvars ; \
++	    fi ; \
+ 	    fi ; \
+ 	fi
+ 

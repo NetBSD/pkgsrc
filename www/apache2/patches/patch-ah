@@ -1,22 +1,23 @@
-$NetBSD: patch-ah,v 1.1.1.1 2002/03/05 23:24:07 jlam Exp $
+$NetBSD: patch-ah,v 1.2 2002/03/05 23:56:24 jlam Exp $
 
---- configure.orig	Mon Nov 12 19:07:39 2001
-+++ configure	Thu Jan  3 19:24:24 2002
-@@ -2608,7 +2608,7 @@
-   for var in prefix exec_prefix bindir sbindir libexecdir mandir \
-              sysconfdir datadir errordir iconsdir htdocsdir cgidir \
-              includedir localstatedir runtimedir logfiledir \
--             proxycachedir installbuilddir; do
-+             proxycachedir installbuilddir manualdir; do
-     eval "val=\"\$$var\""
-     case $val in
-       *+)
-@@ -10508,7 +10508,7 @@
- EOF
- 
- cat >> confdefs.h <<EOF
--#define SERVER_CONFIG_FILE "conf/$progname.conf"
-+#define SERVER_CONFIG_FILE "etc/httpd/$progname.conf"
- EOF
- 
- cat >> confdefs.h <<EOF
+--- support/apachectl.sh.in.orig	Sat Dec 15 08:56:36 2001
++++ support/apachectl.sh.in
+@@ -26,14 +26,14 @@
+ # --------------------                              --------------------
+ # 
+ # the path to your PID file
+-PIDFILE=@prefix@/logs/@progname@.pid
++PIDFILE=%runtimedir%/@progname@.pid
+ #
+ # the path to your httpd binary, including options if necessary
+-HTTPD='@prefix@/bin/@progname@'
++HTTPD='%sbindir%/@progname@'
+ #
+ # pick up any necessary environment variables
+-if test -f @prefix@/bin/envvars; then
+-  . @prefix@/bin/envvars
++if test -f %sbindir%/envvars; then
++  . %sbindir%/envvars
+ fi
+ #
+ # a command that outputs a formatted text version of the HTML at the
