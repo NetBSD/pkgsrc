@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.434 2000/05/11 08:14:35 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.435 2000/05/11 11:23:22 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1141,10 +1141,25 @@ show-downlevel:
 .else
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	base=`${ECHO} ${PKGNAME} | ${SED} -e 's/-\([^-]*\)$$/<\1/'`;	\
-	found=`${PKG_INFO} -e "$$base" || ${TRUE}`;		\
+	found=`${PKG_INFO} -e "$$base" || ${TRUE}`;			\
 	if [ "X$$found" != "X" -a "X$$found" != "X${PKGNAME}" ]; then	\
 		base=`${ECHO} $$base | ${SED} -e 's/<[^<]*$$//'`;	\
 		${ECHO} "$$base package: $$found installed, pkgsrc version ${PKGNAME}"; \
+	fi
+.endif
+.endif
+
+.if !target(show-pkgsrc-dir)
+show-pkgsrc-dir:
+.if defined(IGNORE)
+	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
+.else
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	base=`${ECHO} ${PKGNAME} | ${SED} -e 's|\(.*\)-.*|\1|'`;	\
+	found=`${PKG_INFO} -e "$$base" || ${TRUE}`;			\
+	if [ "X$$found" != "X" ]; then					\
+		pkgsrcdir=`(cd ../.. && /bin/pwd)`;			\
+		${ECHO} "`pwd | ${SED} -e 's|^'$$pkgsrcdir'/||'`";	\
 	fi
 .endif
 .endif
