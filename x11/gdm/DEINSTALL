@@ -1,19 +1,15 @@
-#!/bin/sh
-#
-# $NetBSD: DEINSTALL,v 1.1 2001/10/31 22:10:43 zuntum Exp $
+# $NetBSD: DEINSTALL,v 1.2 2003/01/10 17:26:55 jmmv Exp $
 
 if [ "$2" != POST-DEINSTALL ]
 then
-	cd @@GDMCFGDIR@@
-	@@RM@@ -f Sessions/Default
-	for SOURCE in @@GDMCFGFILES@@
+	cd @GDMCFGDIR@
+	@RM@ -f Sessions/Default
+	for SOURCE in @GDMCFGFILES@
 	do
 		TARGET=${SOURCE%.default*}${SOURCE##*.default}
 		if cmp -s $SOURCE $TARGET
 		then
-			@@RM@@ -f $TARGET
+			@RM@ -f $TARGET
 		fi
 	done
 fi
-
-exit 0

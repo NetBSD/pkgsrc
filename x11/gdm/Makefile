@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2003/01/10 07:57:49 cjep Exp $
+# $NetBSD: Makefile,v 1.35 2003/01/10 17:26:55 jmmv Exp $
 
 DISTNAME=	gdm-2.2.0
 PKGREVISION=	2
@@ -25,8 +25,6 @@ CONFIGURE_ARGS+= --localstatedir=${LOCALSTATEDIR}
 CONFIGURE_ENV+=	LOCALBASE=${LOCALBASE} X11BASE=${X11BASE} \
 		GDMOWN=${GDMOWN} GDMGRP=${GDMGRP}
 
-DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
-INSTALL_FILE=	${WRKDIR}/INSTALL
 MAKE_ENV+=	GDMOWN=${GDMOWN} GDMGRP=${GDMGRP}
 MAKE_ENV+=	CHMOD=${CHMOD} CHOWN=${CHOWN}
 PLIST_SUBST+=	GDMOWN=${GDMOWN} GDMGRP=${GDMGRP} \
@@ -42,6 +40,9 @@ GDMCFGFILES=	Default:Init.default/Default \
 		gdm.conf:gdm.conf.default \
 		locale.alias:locale.alias.default \
 		gnomerc:../gnomerc.default
+
+FILES_SUBST+=	GDMCFGDIR=${GDMCFGDIR:Q}
+FILES_SUBST+=	GDMCFGFILES=${GDMCFGFILES:C/.*://g:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -66,15 +67,6 @@ post-patch:
 .endif
 
 post-build:
-	for f in DEINSTALL INSTALL; do					\
-		${SED} -e 's#@@CP@@#${CP}#'				\
-		  -e 's#@@LN@@#${LN}#'					\
-		  -e 's#@@MKDIR@@#${MKDIR}#'				\
-		  -e 's#@@RM@@#${RM}#'					\
-		  -e 's#@@GDMCFGDIR@@#${GDMCFGDIR}#g'			\
-		  -e 's#@@GDMCFGFILES@@#${GDMCFGFILES:C/.*://g}#g'	\
-		  ${PKGDIR}/$$f >${WRKDIR}/$$f;				\
-	done
 	cd ${WRKSRC}/config;						\
 	for f in Default PostSession PreSession; do			\
 		${SED} -e 's#/usr/bin/X11#${X11BASE}/bin#g' $$f >$$f.new; \
@@ -123,4 +115,5 @@ post-install:
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/libglade/buildlink2.mk"
 .include "../../x11/gnome-libs/buildlink2.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
