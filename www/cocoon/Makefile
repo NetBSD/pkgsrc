@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/09/27 23:18:52 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/10/22 15:15:23 jwise Exp $
 
 DISTNAME=	Cocoon-1.8.2
 PKGNAME=	cocoon-1.8.2
@@ -45,7 +45,7 @@ post-extract:
 # features of JDK 1.2
 
 do-build:
-	cd ${WRKSRC} && ${SH} build.sh
+	@${MAKE_ENV} cd ${WRKSRC} && ${SH} build.sh
 
 # For now, we install the turbine-pool.jar which ships with cocoon.  When there is an actual
 # release of Turbine, we will have a package for it, which cocoon will depend on.
@@ -64,4 +64,5 @@ do-install:
 
 .include "../../mk/bsd.pkg.mk"
 
-CLASSPATH:=${CLASSPATH}:${LOCALBASE}/lib/java/fop.jar:${LOCALBASE}/lib/java/xalan.jar:${LOCALBASE}/lib/java/bsf.jar:${LOCALBASE}/lib/java/xerces.jar:${LOCALBASE}/lib/java/servlet.jar
+CLASSPATH:=${CLASSPATH}:${LOCALBASE}/lib/java/fop.jar:${LOCALBASE}/lib/java/xalan.jar:${LOCALBASE}/lib/java/bsf.jar:${LOCALBASE}/lib/java/xerces.jar:${LOCALBASE}/lib/java/servlet.jar:${JAVA_HOME}/lib/classes.zip:${JAVA_HOME}/lib/tools.jar
+MAKE_ENV+=	CLASSPATH=${CLASSPATH}
