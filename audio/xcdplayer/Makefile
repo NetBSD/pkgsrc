@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/07/02 21:37:41 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/08/22 17:38:56 jlam Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/04/01 23:08:24 swallace Exp
 #
 
@@ -11,7 +11,6 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	packages@netbsd.org
 COMMENT=	CD player for X
 
-USE_BUILDLINK_ONLY=	yes
-USE_IMAKE=		yes
+USE_IMAKE=	yes
 
 .include "../../mk/bsd.pkg.mk"

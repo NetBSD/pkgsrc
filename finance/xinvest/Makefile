@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/07/02 22:07:04 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/08/22 17:38:57 jlam Exp $
 
 DISTNAME=		xinvest-2.6
 CATEGORIES=		finance x11
@@ -9,7 +9,6 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://sunsite.dk/xinvest/xinvest.html
 COMMENT=		Personal finance tracking and performance tool
 
-USE_BUILDLINK_ONLY=	YES
 USE_IMAKE=		YES
 NO_INSTALL_MANPAGES=	YES
 

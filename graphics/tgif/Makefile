@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2001/07/18 20:26:21 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.33 2001/08/22 17:38:58 jlam Exp $
 #
 
 DISTNAME=		tgif-4.1.40
@@ -11,7 +11,6 @@ MAINTAINER=		dmcmahill@netbsd.org
 HOMEPAGE=		http://bourbon.cs.umd.edu:8001/tgif/tgif.html
 COMMENT=		Fully-featured X11 drawing program
 
-USE_BUILDLINK_ONLY=	yes
 USE_IMAKE=		yes
 USE_X11=		yes
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2001/08/22 14:53:48 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2001/08/22 17:38:58 jlam Exp $
 #
 
 DISTNAME=       xart19980415
 PKGNAME=	xart-19980415nb1
+WRKSRC=		${WRKDIR}/19980415
 CATEGORIES=	graphics x11
 MASTER_SITES=	http://linux01.gwdg.de/~rhohen/linux/
 EXTRACT_SUFX=	.tgz
@@ -11,10 +12,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://linux01.gwdg.de/~rhohen/linux.html
 COMMENT=	Paint program (enhanced xpaint)
 
-USE_BUILDLINK_ONLY=YES
 USE_IMAKE=      YES
-
-WRKSRC=		${WRKDIR}/19980415
 
 post-extract:
 	${FIND} ${WRKSRC} -type d -print | ${XARGS} ${CHMOD} 755

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/07/02 21:42:30 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/08/22 17:38:57 jlam Exp $
 # FreeBSD Id: Makefile,v 1.5 1996/11/18 13:56:53 asami Exp 
 #
 
@@ -12,7 +12,6 @@ PATCHFILES=		xmix-2.1.mixers.patch
 MAINTAINER=		packages@netbsd.org
 COMMENT=		Mixer for X Window System
 
-USE_BUILDLINK_ONLY=	yes
 USE_IMAKE=		yes
 WRKSRC=			${WRKDIR}/xmix
 
