@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 1997/12/02 23:25:15 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/01/16 17:07:19 agc Exp $
 bin/mwm
 bin/mxmkmf
 bin/uil
 bin/xmbind
+include/Mrm/MrmAppl.h
 include/Mrm/MrmDecls.h
 include/Mrm/MrmPrivate.h
 include/Mrm/MrmPublic.h
