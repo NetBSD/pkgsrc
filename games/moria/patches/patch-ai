@@ -1,0 +1,39 @@
+$NetBSD: patch-ai,v 1.1 1999/08/30 02:35:10 simonb Exp $
+--- source/save.c.orig	Fri Jul 22 11:47:40 1994
++++ source/save.c	Sun Aug 29 09:26:58 1999
+@@ -105,7 +105,7 @@
+ #ifdef MAC
+ #include <time.h>
+ #else
+-long time();
++time_t time();
+ #endif
+ #else
+ char *malloc();
+@@ -334,7 +334,7 @@
+ #ifdef MAC
+   l = time((time_t *)0);
+ #else
+-  l = time((long *)0);
++  l = time((time_t *)0);
+ #endif
+   if (l < start_time)
+     {
+@@ -1032,7 +1032,7 @@
+ #ifdef MAC
+ 	    birth_date = time((time_t *)0);
+ #else
+-	    birth_date = time((long *)0);
++	    birth_date = time((time_t *)0);
+ #endif
+ 	}
+       if ((c = getc(fileptr)) == EOF || (l & 0x80000000L))
+@@ -1256,7 +1256,7 @@
+ #ifdef MAC
+ 	      start_time = time((time_t *)0);
+ #else
+-	      start_time = time((long *)0);
++	      start_time = time((time_t *)0);
+ #endif
+ 	      /* check for reasonable values of time here ... */
+ 	      if (start_time < time_saved)
