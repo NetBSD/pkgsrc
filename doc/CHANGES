@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8029 2004/11/26 23:05:00 darcy Exp $
+$NetBSD: CHANGES,v 1.8030 2004/11/26 23:13:36 he Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5466,3 +5466,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated qiv to 2.0 [snj 2004-11-26]
 	Updated vpnc to 0.3.2 [hubertf 2004-11-27]
 	Updated epydoc to 2.1 [darcy 2004-11-26]
+	Updated p5-IO-Interface to 0.98 [he 2004-11-26]
