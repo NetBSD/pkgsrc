@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/03/26 02:27:54 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/04 02:07:06 snj Exp $
 #
 
 .include "../../sysutils/cfengine2/Makefile.common"
@@ -6,7 +6,7 @@ PKGREVISION=	1
 
 COMMENT=	Automate configuration and administration of large systems
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 PTHREAD_OPTS+=		require
 
@@ -20,7 +20,7 @@ pre-configure:
 	${SED} -e "s|@ECHO@|${ECHO}|" \
 		${WRKSRC}/contrib/vicf.in.orig > ${WRKSRC}/contrib/vicf.in
 
-.include "../../mk/pthread.buildlink2.mk"
-.include "../../databases/db4/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../databases/db4/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

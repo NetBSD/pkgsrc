@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/24 15:06:57 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/05/04 02:07:06 snj Exp $
 
 DISTNAME=	cdrtools-2.01a21
 PKGNAME=	cdrecord-xcdroast-0.98a15.2.01a21
@@ -16,7 +16,7 @@ CONFLICTS+=	cdrecord-xcdroast098a13-*
 .include "../../mk/bsd.prefs.mk"
 
 WRKSRC=			${WRKDIR}/${DISTNAME:C/a.*//}
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 
 .if ${LOCALBASE} != "/opt/schily"
@@ -49,5 +49,5 @@ do-install:
 	cd ${WRKSRC}/readcd;						\
 		${INSTALL_PROGRAM} OBJ/*/readcd ${XCDRTOOLDIR}
 
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
