@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2004/07/22 09:16:00 recht Exp $
+# $NetBSD: Makefile,v 1.14 2004/07/22 18:00:37 drochner Exp $
 #
 
-DISTNAME=	psycopg-1.1.11
-PKGNAME=	${PYPKGPREFIX}-psycopg-1.1.11
+DISTNAME=	psycopg-1.1.14
+PKGNAME=	${PYPKGPREFIX}-psycopg-1.1.14
 CATEGORIES=	databases python
 MASTER_SITES=	http://initd.org/pub/software/psycopg/
 
@@ -15,13 +15,10 @@ CONFIGURE_ARGS+= --with-python=${PYTHONBIN}
 CONFIGURE_ARGS+= \
  --with-postgres-includes=${BUILDLINK_PREFIX.postgresql-lib}/include/postgresql\
  --with-postgres-libraries=${BUILDLINK_PREFIX.postgresql-lib}/lib
-# XXX: following comment still true for buildlink3?
-# XXX ${PYSITELIB}/... doesn't get transformed by buildlink2
-CONFIGURE_ARGS+= --with-mxdatetime-includes=${BUILDLINK_DIR}/include
 ALL_TARGET=	default
 USE_BUILDLINK3=	yes
 
-PYTHON_VERSIONS_ACCEPTED= 21pth 22pth
+PYTHON_VERSIONS_ACCEPTED= 23pth 22pth 21pth
 PY_PATCHPLIST=	yes
 
 .include "../../databases/postgresql-lib/buildlink3.mk"
