@@ -1,0 +1,11 @@
+]2;feyrer@miyu:/usr/pkgsrc/mail/elm/work.i386/elm2.4.ME+.32 ]1;miyu--- src/pgp.c	Thu Apr 16 21:24:52 1998
++++ src/pgp.c.orig	Thu Apr 16 21:24:11 1998
+@@ -117,7 +117,7 @@
+       dup (fd[1]);
+       close (fd[1]);
+ 
+-      execlp(PGP_PATH, 
++      execl(PGP_PATH, 
+ 	    PGP_PATH,"+verbose=0", "+language=en", "-kv", c, (char *)0);
+ 
+       tmp = errno;
