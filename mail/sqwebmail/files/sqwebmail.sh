@@ -1,53 +1,67 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: sqwebmail.sh,v 1.1 2004/02/24 01:20:21 jlam Exp $
+# $NetBSD: sqwebmail.sh,v 1.2 2004/07/14 20:07:22 jlam Exp $
 #
-# KEYWORD: nostart
+# Courier SqWebMail services daemon
+#
+# PROVIDE: sqwebmail
+# REQUIRE: authdaemond
 
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
 fi
 
-rcd_dir=`@DIRNAME@ $0`
+name="sqwebmail"
+rcvar=${name}
+command="@PREFIX@/sbin/courierlogger"
+ctl_command="@PREFIX@/libexec/courier/sqwebmaild.rc"
+pidfile="/var/run/sqwebmaild.pid"
+required_files="@PKG_SYSCONFDIR@/calendarmode @PKG_SYSCONFDIR@/sqwebmaild"
+required_vars="authdaemond"
 
-# NOTE: run_rc_command sets $rc_arg
-#
-forward_commands()
+start_cmd="courier_doit start"
+stop_cmd="courier_doit stop"
+
+courier_doit()
 {
-	# Backward compat with NetBSD <1.6:
-	[ -z "$rc_arg" ] && rc_arg=$_arg
+	action=$1
+	case ${action} in
+	start)
+		for _f in $required_vars; do
+			eval _value=\$${_f}
+			case $_value in
+			[Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
+				;;
+			*)
+				@ECHO@ 1>&2 "$0: WARNING: \$${_f} is not set"
+				if [ -z $rc_force ]; then
+					return 1
+				fi
+				;;
+			esac
+		done
+		for f in $required_files; do
+			if [ ! -r "$f" ]; then
+				@ECHO@ 1>&2 "$0: WARNING: $f is not readable"
+				if [ -z $rc_force ]; then
+					return 1
+				fi
+			fi
+		done
+		@ECHO@ "Starting ${name}."
+		;;
+	stop)
+		@ECHO@ "Stopping ${name}."
+		;;
+	esac
 
-	for file in $COMMAND_LIST; do
-		$rcd_dir/$file $rc_arg
-	done
+	${ctl_command} ${action}
 }
-
-reverse_commands()
-{
-	# Backward compat with NetBSD <1.6:
-	[ -z "$rc_arg" ] && rc_arg=$_arg
-
-	REVCOMMAND_LIST=
-	for file in $COMMAND_LIST; do
-		REVCOMMAND_LIST="$file $REVCOMMAND_LIST"
-	done
-	for file in $REVCOMMAND_LIST; do
-		$rcd_dir/$file $rc_arg
-	done
-}
-
-COMMAND_LIST="pcpd sqwebmaild"
-
-name="samba"
-start_cmd="forward_commands"
-stop_cmd="reverse_commands"
-status_cmd="forward_commands"
-extra_commands="reload status"
 
 if [ -f /etc/rc.subr ]; then
+	load_rc_config $name
 	run_rc_command "$1"
 else
 	@ECHO@ -n " ${name}"
-	_arg="$1"
 	${start_cmd}
 fi
