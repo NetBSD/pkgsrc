@@ -1,0 +1,26 @@
+$NetBSD: patch-ai,v 1.1.1.1 2001/02/28 22:18:41 jtb Exp $
+
+--- /dev/null	Wed Feb 28 02:22:10 2001
++++ mfhdf/ncdump/Makefile
+@@ -0,0 +1,21 @@
++PROG= ncdump
++PROGNAME= hdfncdump
++
++MAN= hdfncdump.1
++
++SRCS= ncdump.c vardata.c dumplib.c
++
++BINDIR= ${PREFIX}/bin
++LIBDIR= ${PREFIX}/lib
++MANDIR= ${PREFIX}/man
++
++JPEGLIB= -Wl,-R${JPEGBASE} -L${JPEGBASE} -ljpeg
++HDFLIB= -L${.CURDIR}/../../hdf/src -ldf
++MFHDFLIB= -L${.CURDIR}/../libsrc -lmfhdf
++MFHDFINC= -I${.CURDIR}/../libsrc
++
++LDFLAGS+= -Wl,-R${LIBDIR} ${MFHDFLIB} ${HDFLIB} ${JPEGLIB}
++
++CPPFLAGS+= ${MFHDFINC} @SWAP@
++
++.include <bsd.prog.mk>

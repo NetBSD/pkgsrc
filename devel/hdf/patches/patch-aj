@@ -1,0 +1,37 @@
+$NetBSD: patch-aj,v 1.1.1.1 2001/02/28 22:18:41 jtb Exp $
+
+--- /dev/null	Wed Feb 28 02:22:03 2001
++++ mfhdf/ncgen/Makefile
+@@ -0,0 +1,32 @@
++PROG= ncgen
++PROGNAME= hdfncgen
++
++MAN= hdfncgen.1
++
++SRCS= main.c generate.c load.c ncgentab.c escapes.c getfill.c init.c	\
++	close.c genlib.c
++
++BINDIR= ${PREFIX}/bin
++LIBDIR= ${PREFIX}/lib
++MANDIR= ${PREFIX}/man
++
++MFHDFLIB= -L${.CURDIR}/../libsrc -lmfhdf
++MFHDFINC= -I${.CURDIR}/../libsrc
++HDFLIB= -L${.CURDIR}/../../hdf/src -ldf
++HDFINC= -I${.CURDIR}/../../hdf/src
++JPEGLIB= -R${JPEGBASE}/lib -L${JPEGBASE}/lib -ljpeg
++
++LDFLAGS+= -Wl,-R{LIBDIR} ${MFHDFLIB} ${HDFLIB} ${JPEGLIB}
++
++CPPFLAGS+= -Dunix -DNDEBUG @SWAP@ ${MFHDFINC} ${HDFINC}
++
++ncgenyy.c: ncgen.l
++	${LEX} ${LFLAGS} ncgen.l
++	mv lex.yy.c ncgenyy.c
++
++ncgentab.c: ncgenyy.c ncgen.y
++	${YACC} ${YFLAGS} ncgen.y
++	mv y.tab.c ncgentab.c
++	touch ncgentab.h
++
++.include <bsd.prog.mk>
