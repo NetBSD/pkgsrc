@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/09/11 11:13:02 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2002/09/11 11:14:48 jlam Exp $
 
 DISTNAME=	xboard-4.2.6
 CATEGORIES=	games
@@ -11,6 +11,7 @@ COMMENT=	graphical frontend for chess engines and servers
 INFO_FILES=	xboard.info
 
 USE_BUILDLINK2=		# defined
+USE_X11=		# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--enable-xpm
 CONFIGURE_ARGS+=	--enable-zippy	# interface to ICS
