@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2000/04/23 05:55:52 kim Exp $
+# $NetBSD: Makefile,v 1.35 2000/05/07 02:09:13 jlam Exp $
 # FreeBSD Id: Makefile,v 1.52 1997/12/14 00:58:08 asami Exp
 #
 
@@ -9,8 +9,12 @@
     SUBDIR += cups
     SUBDIR += enscript
     SUBDIR += ggv
-    SUBDIR += ghostscript5
-    SUBDIR += ghostscript5-x11
+    SUBDIR += ghostscript
+    SUBDIR += ghostscript-fonts
+    SUBDIR += ghostscript-nox11
+    SUBDIR += ghostscript-x11
+#    SUBDIR += ghostscript5
+#    SUBDIR += ghostscript5-x11
     SUBDIR += gnome-print
     SUBDIR += gv
     SUBDIR += html2ps
