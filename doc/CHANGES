@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8545 2004/12/31 14:39:21 taca Exp $
+$NetBSD: CHANGES,v 1.8546 2004/12/31 15:15:50 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6727,3 +6727,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mysql-client to 4.0.22nb4 [minskim 2004-12-31]
 	Updated squid to 2.5.7nb4 [taca 2004-12-31]
 	Updated bkpupsd to 2.1.2nb3 [taca 2004-12-31]
+	Updated openvpn-current to 2.0rc1 [jlam 2004-12-31]
