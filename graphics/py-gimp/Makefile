@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/03/29 22:31:13 snj Exp $
+# $NetBSD: Makefile,v 1.11 2004/05/05 02:26:41 snj Exp $
 #
 
 DISTNAME=	pygimp-1.2
@@ -14,7 +14,7 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 USE_LIBTOOL=	yes
 LTCONFIG_OVERRIDE= ${WRKSRC}/ltconfig
-USE_BUILDLINK2= yes
+USE_BUILDLINK3= yes
 
 PYTHON_PATCH_SCRIPTS= plug-ins/clothify.py plug-ins/foggify.py
 PYTHON_PATCH_SCRIPTS+= plug-ins/gimpcons.py plug-ins/gtkcons.py
@@ -30,6 +30,6 @@ post-install:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
-.include "../../graphics/gimp1-base/buildlink2.mk"
-.include "../../x11/pygtk/buildlink2.mk"
+.include "../../graphics/gimp1-base/buildlink3.mk"
+.include "../../x11/pygtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

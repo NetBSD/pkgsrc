@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/03/02 14:56:07 drochner Exp $
+# $NetBSD: Makefile,v 1.16 2004/05/05 02:26:42 snj Exp $
 
 DISTNAME=	gimp-print-4.2.6
 PKGNAME=	gimp-print-escputil-4.2.6
@@ -20,10 +20,10 @@ CONFIGURE_ARGS+= --without-cups --without-translated-ppds
 CONFIGURE_ARGS+= --enable-libgimpprint=no
 USE_LIBTOOL=	yes
 USE_GNU_TOOLS+=	make
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
-.include "../../print/gimp-print-lib/buildlink2.mk"
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../devel/readline/buildlink2.mk"
+.include "../../print/gimp-print-lib/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
