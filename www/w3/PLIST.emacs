@@ -1,10 +1,4 @@
-@comment $NetBSD: PLIST.emacs,v 1.4 2003/08/07 11:36:33 seb Exp $
-info/w3-faq.info
-info/w3.info
-info/w3.info-1
-info/w3.info-2
-info/w3.info-3
-info/w3.info-4
+@comment $NetBSD: PLIST.emacs,v 1.5 2004/03/11 15:39:39 seb Exp $
 share/default.css
 share/emacs/site-lisp/w3/auto-autoloads.el
 share/emacs/site-lisp/w3/auto-autoloads.elc
