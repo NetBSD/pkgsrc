@@ -1,46 +1,39 @@
-$NetBSD: patch-ad,v 1.1 1998/09/13 17:06:09 garbled Exp $
-*** Build~	Tue May 13 04:38:56 1997
---- Build	Thu Mar  5 16:35:38 1998
-***************
-*** 55,59 ****
-    Linux                  ) OSMVER=`echo $OSVERS | awk -F. '{printf("%d_%d", $1, $2)}'`
-                             ;;
-!   SunOS | IRIX | FreeBSD ) OSMVER=`echo $OSVERS | awk -F. '{print $1}'`
-                             ;;
-    HP-UX                  ) OSTYPE=HPUX
---- 55,59 ----
-    Linux                  ) OSMVER=`echo $OSVERS | awk -F. '{printf("%d_%d", $1, $2)}'`
-                             ;;
-!   SunOS | IRIX | FreeBSD | NetBSD ) OSMVER=`echo $OSVERS | awk -F. '{print $1}'`
-                             ;;
-    HP-UX                  ) OSTYPE=HPUX
-***************
-*** 69,74 ****
-  echo "OSMVER=$OSMVER"
-  
-  # Create a directory for the .o files, if it doesn't exist...
-! if [ ! -d objs/${USER:=`whoami`}/${OSTYPE}_${OSVERS} ]; then
-    echo "Creating object directory objs/${USER}/${OSTYPE}_${OSVERS}..."
-    mkdir bin/${USER}
---- 69,76 ----
-  echo "OSMVER=$OSMVER"
-  
-+ USER=${USER:=`whoami`}
-+ 
-  # Create a directory for the .o files, if it doesn't exist...
-! if [ ! -d objs/${USER}/${OSTYPE}_${OSVERS} ]; then
-    echo "Creating object directory objs/${USER}/${OSTYPE}_${OSVERS}..."
-    mkdir bin/${USER}
-***************
-*** 80,84 ****
-  fi
-  
-! cmd="${MAKE:=make} OSTYPE=$OSTYPE OSMVER=$OSMVER OSVERS=$OSVERS USER=`whoami`"
-  case $1 in
-    rat   ) echo "Running: $cmd bin/${USER}/rat-${OSTYPE}-${OSVERS}"
---- 82,86 ----
-  fi
-  
-! cmd="${MAKE:=make} OSTYPE=$OSTYPE OSMVER=$OSMVER OSVERS=$OSVERS USER=$USER"
-  case $1 in
-    rat   ) echo "Running: $cmd bin/${USER}/rat-${OSTYPE}-${OSVERS}"
+$NetBSD: patch-ad,v 1.2 1998/11/05 02:46:09 mycroft Exp $
+
+--- Build.orig	Sat Aug 15 15:16:43 1998
++++ Build	Wed Nov  4 21:34:06 1998
+@@ -54,7 +54,7 @@
+ case $OSTYPE in
+   Linux                  ) OSMVER=`echo $OSVERS | awk -F. '{printf("%d_%d", $1, $2)}'`
+                            ;;
+-  SunOS | IRIX | FreeBSD ) OSMVER=`echo $OSVERS | awk -F. '{print $1}'`
++  SunOS | IRIX | FreeBSD | NetBSD ) OSMVER=`echo $OSVERS | awk -F. '{print $1}'`
+                            ;;
+   HP-UX                  ) OSTYPE=HPUX
+                            OSMVER=`echo $OSVERS | awk -F. '{print $2}'`
+@@ -68,18 +68,20 @@
+ echo "OSVERS=$OSVERS"
+ echo "OSMVER=$OSMVER"
+ 
++USER=${USER:=`whoami`}
++
+ # Create a directory for the .o files, if it doesn't exist...
+-if [ ! -d objs/${USER:=`whoami`}/${OSTYPE}_${OSVERS} ]; then
++if [ ! -d objs/${USER}/${OSTYPE}_${OSVERS} ]; then
+   echo "Creating object directory objs/${USER}/${OSTYPE}_${OSVERS}..."
+-  mkdir bin/${USER}
+-  mkdir objs/${USER}
+-  mkdir objs/${USER}/${OSTYPE}_${OSVERS}
++  mkdir -p bin/${USER}
++  mkdir -p objs/${USER}
++  mkdir -p objs/${USER}/${OSTYPE}_${OSVERS}
+   chmod 775 bin/${USER}
+   chmod 775 objs/${USER}
+   chmod 775 objs/${USER}/${OSTYPE}_${OSVERS}
+ fi
+ 
+-cmd="${MAKE:=make} OSTYPE=$OSTYPE OSMVER=$OSMVER OSVERS=$OSVERS USER=`whoami`"
++cmd="${MAKE:=make} OSTYPE=$OSTYPE OSMVER=$OSMVER OSVERS=$OSVERS USER=$USER"
+ case $1 in
+   rat   ) echo "Running: $cmd bin/${USER}/rat-${OSTYPE}-${OSVERS}"
+           eval $cmd bin/${USER}/rat-${OSTYPE}-${OSVERS}
