@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/08/25 21:49:50 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2002/10/14 14:35:23 jschauma Exp $
 
 DISTNAME=		suse_x11-${SUSE_VERSION}
 PKGREVISION=		2
@@ -32,5 +32,17 @@ RPMIGNOREPATH=		usr/X11R6/bin usr/X11R6/include \
 			usr/X11R6/lib/X11/doc usr/X11R6/lib/X11/fonts \
 			usr/X11R6/lib/X11/x11perfcomp
 .endif
+
+post-install:
+	@${GREP} "^@exec.*.so" ${PLIST_SRC} | 				\
+		${SED} -e 's,.*/\(.*\.so\)\.\([0-9]\),@exec ${LN} -sf 	\
+			\1.\2 %D/${EMULSUBDIR}/usr/X11R6/lib/\1,' 	\
+			>> ${PLIST_SRC}
+	@${GREP} "^@unexec rm -f" ${PLIST_SRC} |                         \
+		${SED} -e 's,\(.*\)\.[0-9],\1,' >> ${PLIST_SRC}
+	@for link in `${GREP} "^@exec ln.*.so" ${PLIST_SRC} |		\
+		${SED} -e 's,.*/\(.*\.so\.[0-9]\),\1,'`; do		\
+		cd ${EMULDIR}/usr/X11R6/lib && ${LN} -sf $$link $${link%.[0-9]};					\
+	done
 
 .include "../suse_linux/Makefile.common"
