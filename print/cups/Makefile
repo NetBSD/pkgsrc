@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2001/05/26 16:32:37 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2001/06/10 00:08:47 jlam Exp $
 
 DISTNAME=		cups-${VERS}-source
 PKGNAME=		cups-${VERS}
@@ -80,8 +80,6 @@ EGDIR=			${PREFIX}/share/examples/cups
 
 post-extract:
 	cd ${WRKSRC}/conf; ${MV} -f cupsd.conf cupsd.conf.in
-
-pre-configure: ${BUILDLINK_TARGETS}
 
 post-build:
 	${SED}	-e "s|@CUPS_USER@|${CUPS_USER}|g"			\

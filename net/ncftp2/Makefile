@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2001/05/24 08:53:57 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2001/06/10 00:08:47 jlam Exp $
 # FreeBSD Id: Makefile,v 1.39 1998/01/31 17:49:48 jseger Exp
 #
 
@@ -34,8 +34,6 @@ DEPENDS+=		socks5-1.0.2:../../net/socks5
 
 CPPFLAGS+=		-I${BUILDLINK_INCDIR}
 LDFLAGS+=		-L${BUILDLINK_LIBDIR}
-
-pre-configure: ${BUILDLINK_TARGETS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ncftp ${PREFIX}/bin/ncftp2

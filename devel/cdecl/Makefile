@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/05/24 08:53:55 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/06/10 00:08:43 jlam Exp $
 #
 
 DISTNAME=	cdecl-2.5
@@ -20,8 +20,6 @@ CFLAGS+=	-I${BUILDLINK_INCDIR}
 LDFLAGS+=	-L${BUILDLINK_LIBDIR}
 
 EGDIR=		${PREFIX}/share/examples/cdecl
-
-pre-configure: ${BUILDLINK_TARGETS}
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}

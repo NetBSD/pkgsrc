@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/05/24 08:53:55 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/06/10 00:08:43 jlam Exp $
 
 DISTNAME=	CmdLine
 PKGNAME=	cmdline-${PKG_VERS}
@@ -14,7 +14,6 @@ COMMENT=	C++ library for parsing command arguments
 DIST_SUBDIR=	cmdline-${DIST_VERS}
 
 USE_LIBTOOL=	# defined
-NO_CONFIGURE=	# defined
 
 .include "../../devel/readline/buildlink.mk"
 
@@ -24,7 +23,5 @@ MOREUSRLIBS=	-L${BUILDLINK_LIBDIR} -lreadline -ltermcap
 MAKE_ENV+=	OPT="${CXXFLAGS}"
 MAKE_ENV+=	MOREUSRDEFS="${MOREUSRDEFS}"
 MAKE_ENV+=	MOREUSRLIBS="${MOREUSRLIBS}"
-
-pre-build: ${BUILDLINK_TARGETS}
 
 .include "../../mk/bsd.pkg.mk"
