@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.705 2001/04/02 20:58:01 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.706 2001/04/03 12:06:31 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -366,7 +366,7 @@ EXTRACT_ELEMENTS?=
 # and append 2 tar blocks of zero bytes on the end, in case the archive
 # was written with a buggy version of GNU tar.
 .if defined(EXTRACT_USING_PAX)
-EXTRACT_CMD?=		(${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} ; dd if=/dev/zero bs=10k count=2) | ${PAX} -r ${EXTRACT_ELEMENTS}
+EXTRACT_CMD?=		{ ${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} ; dd if=/dev/zero bs=10k count=2 } | ${PAX} -r ${EXTRACT_ELEMENTS}
 .else
 EXTRACT_CMD?=		${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} | ${GTAR} -xf - ${EXTRACT_ELEMENTS}
 .endif
@@ -679,13 +679,13 @@ uptodate-digest:
 		digest-*)						\
 			;;						\
 		*)							\
-			(cd ${PKGSRCDIR}/pkgtools/digest;		\
+			{ cd ${PKGSRCDIR}/pkgtools/digest;		\
 			${MAKE} clean;					\
 			if [ -f ${DIGEST} ]; then			\
 				${MAKE} ${MAKEFLAGS} deinstall;		\
 			fi;						\
 			${MAKE} ${MAKEFLAGS} ${DEPENDS_TARGET};		\
-			${MAKE} ${MAKEFLAGS} clean ) 			\
+			${MAKE} ${MAKEFLAGS} clean; } 			\
 			;;						\
 		esac							\
 	fi
@@ -1436,7 +1436,7 @@ do-extract:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for file in "" ${EXTRACT_ONLY}; do				\
 		if [ "X$$file" = X"" ]; then continue; fi;		\
-		(cd ${WRKDIR} && ${EXTRACT_CMD});			\
+		{ cd ${WRKDIR} && ${EXTRACT_CMD}; };			\
 	done
 .endif
 
@@ -1454,15 +1454,15 @@ do-patch: uptodate-digest
 		case $$i in \
 			*.Z|*.gz) \
 				${GZCAT} $$i | ${PATCH} ${PATCH_DIST_ARGS} \
-				|| ( ${ECHO} Patch $$i failed ; exit 1 ) ; \
+				|| { ${ECHO} Patch $$i failed ; exit 1; } ; \
 				;; \
 			*.bz2) \
 				${BZCAT} $$i | ${PATCH} ${PATCH_DIST_ARGS} \
-				|| ( ${ECHO} Patch $$i failed ; exit 1 ) ; \
+				|| { ${ECHO} Patch $$i failed ; exit 1; } ; \
 				;; \
 			*) \
 				${PATCH} ${PATCH_DIST_ARGS} < $$i \
-				|| ( ${ECHO} Patch $$i failed ; exit 1 ) ; \
+				|| { ${ECHO} Patch $$i failed ; exit 1; } ; \
 				;; \
 		esac; \
 	  done
@@ -1518,7 +1518,7 @@ do-patch: uptodate-digest
 				fuzz="";				\
 				${PATCH} -v > /dev/null 2>&1 && fuzz="${PATCH_FUZZ_FACTOR}"; \
 				${PATCH} $$fuzz ${PATCH_ARGS} < $$i ||	\
-					( ${ECHO} Patch $$i failed ; exit 1 ) ; \
+					{ ${ECHO} Patch $$i failed ; exit 1; } ; \
 			done;						\
 			if [ "X$$fail" != "X" ]; then			\
 				${ECHO_MSG} "Patching failed due to modified patch file(s): $$fail"; \
@@ -1928,9 +1928,9 @@ do-shlib-handling:
 check-shlibs:
 .if !defined(NO_PKG_REGISTER)
 	${_PKG_SILENT}${_PKG_DEBUG}\
-	bins=`${PKG_INFO} -qL ${PKGNAME} | ( ${EGREP} -h '/(bin|sbin|libexec)/' || ${TRUE} )`; \
+	bins=`${PKG_INFO} -qL ${PKGNAME} | { ${EGREP} -h '/(bin|sbin|libexec)/' || ${TRUE}; }`; \
 	if [ "${OBJECT_FMT}" = "ELF" ]; then \
-		shlibs=`${PKG_INFO} -qL ${PKGNAME} | ( ${EGREP} -h '/lib/lib.*.so' || ${TRUE} )`; \
+		shlibs=`${PKG_INFO} -qL ${PKGNAME} | { ${EGREP} -h '/lib/lib.*.so' || ${TRUE}; }`; \
 	else \
 		shlibs=""; \
 	fi ; \
@@ -1940,7 +1940,7 @@ check-shlibs:
 		ldd="${LDD}" ; \
 	fi ; \
 	for i in $${bins} $${shlibs} ; do \
-		err=`( $$ldd $$i 2>&1 || ${TRUE} ) | ( ${GREP} "not found" || ${TRUE} )`; \
+		err=`{ $$ldd $$i 2>&1 || ${TRUE}; } | { ${GREP} "not found" || ${TRUE}; }`; \
 		if [ "${PKG_VERBOSE}" != "" ]; then \
 			echo "$$ldd $$i" ; \
 		fi ; \
@@ -2270,7 +2270,7 @@ ${DDIR}: ${DLIST}
 ${DLIST}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} -p ${WRKDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	(${PKG_INFO} -R "${PKGWILDCARD}" || ${TRUE}) |	\
+	{ ${PKG_INFO} -R "${PKGWILDCARD}" || ${TRUE}; } |		\
 		${TAIL} -n +4 >${DLIST}
 
 # The 'info' target can be used to display information about a package.
@@ -2745,7 +2745,7 @@ check-depends:
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	${ECHO_MSG} "${_PKGSRC_IN}> Validating dependencies for ${PKGNAME}" ; \
 	${MAKE} ${MAKEFLAGS} DEPENDS_TARGET=check-depends ECHO_MSG=${TRUE:Q} IGNORE_FAIL=1 _DEPENDS_TARGET_OVERRIDE=1 install-depends || \
-		(${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} cannot build necessary dependencies."; ${FALSE})
+		{ ${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} cannot build necessary dependencies."; ${FALSE}; }
 .endif
 .endif
 
@@ -2943,8 +2943,8 @@ README.html: .PRECIOUS
 		-e '/%%BIN_PKGS%%/d'					\
 		${README_NAME} >> $@.tmp
 	@cmp -s $@.tmp $@ || 						\
-		(${ECHO_MSG} "${_PKGSRC_IN}> Creating README.html for ${_THISDIR_}${PKGNAME}"; \
-		${MV} -f $@.tmp $@)
+		{ ${ECHO_MSG} "${_PKGSRC_IN}> Creating README.html for ${_THISDIR_}${PKGNAME}"; \
+		${MV} -f $@.tmp $@; }
 	@${RM} -f $@.tmp $@.tmp1 $@.tmp2 $@.tmp4 $@.tmp5 $@.tmp6
 
 .if !target(show-pkgtools-version)
@@ -3381,8 +3381,8 @@ ${MESSAGE}: ${MESSAGE_SRC}
 plist: ${PLIST}
 ${PLIST}: ${PLIST_SRC}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	( ${CAT} ${PLIST_SRC};						\
-	  ${PERL5_GENERATE_PLIST} ) | 					\
+	{ ${CAT} ${PLIST_SRC};						\
+	  ${PERL5_GENERATE_PLIST}; } | 					\
 		${MANZ_NAWK_CMD} 					\
 		${IMAKE_MAN_CMD} 					\
 		${SED} 	${MANZ_EXPRESSION}				\
