@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.357 2004/09/10 10:53:13 sketch Exp $
+# $NetBSD: Packages.txt,v 1.358 2004/09/15 20:18:26 minskim Exp $
 ###########################################################################
 
 			==========================
@@ -3335,7 +3335,7 @@ instead of real @dirrm lines.  You can also do this for specific directories
 and files, so that the results of that command are very close to reality.
 This helps _a lot_ during the update of packages.
 
-The PRINT_PLIST_AWK variable takes a set of AWK patters and actions that
+The PRINT_PLIST_AWK variable takes a set of AWK patterns and actions that
 are used to filter the output of print-PLIST.  You can _append_ any chunk
 of AWK scripting you like to it, but be careful with quoting.
 
