@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/03/26 04:05:38 jschauma Exp $
+# $NetBSD: Makefile,v 1.20 2003/03/27 00:00:42 jdolecek Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION}
 CATEGORIES=	www
@@ -30,7 +30,7 @@ USE_BUILDLINK2=	# defined
 .include "../../mk/bsd.prefs.mk"
 
 # A default so lintpkgsrc is happy
-OPERA_PKG_VERSION=	6.11
+OPERA_PKG_VERSION=	6.12
 
 .if (${MACHINE_ARCH} == i386)
 DEPENDS+=	suse_compat>=6.3:../../emulators/${SUSE_DIR_PREFIX}_compat
@@ -39,9 +39,9 @@ DEPENDS+=	suse_libpng>=6.4:../../emulators/${SUSE_DIR_PREFIX}_libpng
 DEPENDS+=	suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 
 OPERA_ARCH=		i386
-OPERA_PKG_VERSION=	6.11
+OPERA_PKG_VERSION=	6.12
 OPERA_DIR=		${OPERA_PKG_VERSION:S/.//}/final/en/i386/static
-OPERA_DIST_VERSION=	${OPERA_PKG_VERSION}-20021129.1-static-qt
+OPERA_DIST_VERSION=	${OPERA_PKG_VERSION}-20030305.1-static-qt
 .endif
 
 RPMFILES=	${DISTFILES}
