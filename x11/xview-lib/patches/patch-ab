@@ -6,7 +6,7 @@
   #include <xview_private/nint.h>
   #include <xview_private/ndis.h>	/* For ndis_dispatch */
   #ifndef SVR4
-+ #ifndef __FreeBSD__
++ #if !defined(__FreeBSD__) && !defined(__NetBSD__)
   #include <syscall.h>
 + #else
 + #include <sys/syscall.h>
@@ -22,7 +22,7 @@
    */
   
   #ifndef SVR4
-+ #ifndef __FreeBSD__
++ #if !defined(__FreeBSD__) && !defined(__NetBSD__)
   #include <syscall.h>
 + #else
 + #include <sys/syscall.h>
@@ -38,7 +38,7 @@
    */
   
   #ifndef SVR4
-+ #ifndef __FreeBSD__
++ #if !defined(__FreeBSD__) && !defined(__NetBSD__)
   #include <syscall.h>
 + #else
 + #include <sys/syscall.h>
@@ -54,7 +54,7 @@
    */
   
   #ifndef SVR4
-+ #ifndef __FreeBSD__
++ #if !defined(__FreeBSD__) && !defined(__NetBSD__)
   #include <syscall.h>
 + #else
 + #include <sys/syscall.h>
