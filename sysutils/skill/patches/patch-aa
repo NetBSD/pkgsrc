@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 1999/09/27 13:28:57 agc Exp $
+$NetBSD: patch-aa,v 1.5 2000/02/19 02:03:13 wiz Exp $
 
---- Makefile.orig	Wed Oct 28 16:20:26 1998
-+++ Makefile	Mon Sep 27 14:18:52 1999
-@@ -51,22 +51,29 @@
+--- ./Makefile.orig	Wed Oct 28 17:20:26 1998
++++ ./Makefile	Sat Feb 19 02:39:40 2000
+@@ -51,22 +51,22 @@
  SHELL=	/bin/sh
  
  # CONFIGURE: Set location of executable, it's group and mode.
@@ -23,22 +23,16 @@ $NetBSD: patch-aa,v 1.4 1999/09/27 13:28:57 agc Exp $
 +#OSTYPE=	bsd-44
  
  # CONFIGURE(Config): Add any OS-specific options here.
- COPTS=	
+-COPTS=	
++COPTS=	-DUVM
  
-+.ifndef UVM
-+UVM=
-+.endif
-+.if ${UVM} != ""
-+COPTS+= -DUVM
-+.endif
-+
  # CONFIGURE(Config): Add any special libraries your system needs.
 -LIBS=	
 +LIBS=	-lkvm
  
  SRCS=	main.c argparse.c getproc.c
  OBJS=	main.o argparse.o getproc.o
-@@ -87,20 +94,20 @@
+@@ -87,20 +87,20 @@
  
  install: skill
  #(SysV)	filepriv -d ${DESTDIR}/${BINDIR}/skill

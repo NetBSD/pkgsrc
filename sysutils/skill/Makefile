@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 1999/10/05 00:57:31 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2000/02/19 02:03:11 wiz Exp $
 #
 # The version number for skill does not match the @P number.
 # This is normal.
 
-DISTNAME=	skill-3.7@P6
-PKGNAME=	skill-3.7.7
+DISTNAME=	skill-3.7@P7
+PKGNAME=	skill-3.7.8
 WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://fast.cs.utah.edu/pub/skill/
@@ -15,8 +15,6 @@ MAINTAINER=	kim@tac.nyc.ny.us
 BINMODE=	02555
 
 .include "../../mk/bsd.prefs.mk"
-
-MAKE_ENV+=	UVM=${UVM}
 
 .if ${OPSYS} == "NetBSD"
 MAKE_ENV+=	OSTYPE=bsd-44 BINGRP=kmem
