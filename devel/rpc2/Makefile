@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/04/27 19:02:59 phil Exp $
+# $NetBSD: Makefile,v 1.6 2001/05/31 22:52:17 jlam Exp $
 #
 
 DISTNAME=	rpc2-1.10
@@ -10,14 +10,23 @@ MAINTAINER=	phil@cs.wwu.edu
 HOMEPAGE=	http://www.coda.cs.cmu.edu/
 COMMENT=	CMU (Coda) remote procedure call package
 
-DEPENDS+=	lwp>=1.6:../../devel/lwp
-DEPENDS+=	readline>=4.0:../../devel/readline
+BUILD_DEPENDS+=	perl>=${PERL5_REQD}:../../lang/perl5
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 USE_GMAKE=	YES
-USE_PERL5=	YES
 
 LTCONFIG_OVERRIDE= ${WRKSRC}/ltconfig
+
+.include "../../devel/lwp/buildlink.mk"
+.include "../../devel/readline/buildlink.mk"
+
+CONFIGURE_ENV+=	ac_cv_search_tgetent="-ltermcap"
+CONFIGURE_ENV+=	PERL=${PERL5}
+CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
+CPPFLAGS+=	-I${BUILDLINK_INCDIR}
+LDFLAGS+=	-L${BUILDLINK_LIBDIR}
+
+pre-configure: ${BUILDLINK_TARGETS}
 
 .include "../../mk/bsd.pkg.mk"
