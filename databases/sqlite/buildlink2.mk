@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:22:11 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/02/17 14:55:30 agc Exp $
 
 .if !defined(SQLITE_BUILDLINK2_MK)
 SQLITE_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		sqlite
-BUILDLINK_DEPENDS.sqlite?=	sqlite>=2.0.5
+BUILDLINK_DEPENDS.sqlite?=	sqlite>=2.8.0
 BUILDLINK_PKGSRCDIR.sqlite?=	../../databases/sqlite
 
 EVAL_PREFIX+=				BUILDLINK_PREFIX.sqlite=sqlite
