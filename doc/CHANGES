@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6932 2004/08/17 19:19:52 tv Exp $
+$NetBSD: CHANGES,v 1.6933 2004/08/17 19:32:09 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3892,3 +3892,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Jcode to 0.87 [taca 2004-08-17]
 	Updated ja-samba to 2.2.10.1.0 [taca 2004-08-17]
 	Updated demime to 1.1d [tv 2004-08-17]
+	Updated win32-codecs to 040809.1 [recht 2004-08-17]
