@@ -1,4 +1,4 @@
-# $NetBSD: texinfo.mk,v 1.8 2003/01/28 20:03:02 seb Exp $
+# $NetBSD: texinfo.mk,v 1.8.2.1 2003/02/14 21:52:49 agc Exp $
 #
 # This Makefile fragment is included by packages that provide info files.
 #
@@ -16,9 +16,9 @@ _INSTALL_INFO=	${_i_}
 .if !empty(_INSTALL_INFO)
 .  if !defined(INSTALL_INFO_VERSION)
 _INSTALL_INFO_VERSION_OUTPUT!=  ${_INSTALL_INFO} --version 2>/dev/null
-# if install-info departs from the [0-9].[0-9] numbering scheme, the following
-# would have to be changed as well as the comparison below
-INSTALL_INFO_VERSION=	${_INSTALL_INFO_VERSION_OUTPUT:M[0-9]*.[0-9]*}
+# If the install-info version contains useful information outside [0-9].[0-9],
+# the following would have to be changed as well as the comparison below
+INSTALL_INFO_VERSION=${_INSTALL_INFO_VERSION_OUTPUT:M[0-9]*.[0-9]*:C/[^0-9.]//}
 MAKEFLAGS+=		INSTALL_INFO_VERSION=${INSTALL_INFO_VERSION}
 .  endif
 .endif
