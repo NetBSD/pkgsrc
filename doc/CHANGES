@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3295 2003/09/09 13:49:17 recht Exp $
+$NetBSD: CHANGES,v 1.3296 2003/09/09 14:20:56 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3591,3 +3591,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkg_install to 20030907 [jlam 2003-09-09]
 	Updated SDL_image to 1.2.3 [adam 2003-09-09]
 	Added py-PgSQL 2.4 [recht 2003-09-09]
+	Updated postgresql_autodoc to 1.12 [recht 2003-09-09]
