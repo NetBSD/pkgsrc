@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/12 08:57:37 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2001/03/12 22:33:47 zuntum Exp $
 #
 
 DISTNAME=	kulki-1.01
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.cs.put.poznan.pl/adanilecki/
 COMMENT=	Simple logic game - "balls"
 
 DEPENDS+=	qt2>=2.2.3:../../x11/qt2
-DEPENDS+=	png-*:../../graphics/png
 
 WRKSRC=		${WRKDIR}/kulki
 
@@ -21,14 +20,10 @@ MAKE_ENV=	"MOC=${X11BASE}/qt2/bin/moc"			\
 		"CXX=${CXX}"					\
 		"CP=${CP}"					\
 		"QTDIR=${X11BASE}/qt2"				\
-		"CXXFLAGS=${CXXFLAGS}"
-
-post-patch:
-	${SED}	-e "s,@X11BASE@,${X11BASE},g"			\
-		-e "s,@PREFIX@,${PREFIX},g"			\
-		-e "s,@LOCALBASE@,${LOCALBASE},g"		\
-		${WRKSRC}/Makefile > ${WRKSRC}/Makefile.done
-	${MV} ${WRKSRC}/Makefile.done ${WRKSRC}/Makefile
+		"CXXFLAGS=${CXXFLAGS}"				\
+		"X11BASE=${X11BASE}"				\
+		"PREFIX=${PREFIX}"				\
+		"LOCALBASE=${LOCALBASE}"
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/kulki
