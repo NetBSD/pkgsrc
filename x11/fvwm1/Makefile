@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 1999/03/01 23:05:47 tron Exp $
+# $NetBSD: Makefile,v 1.17 1999/03/01 23:09:12 tron Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
 DISTNAME=	fvwm-1.24r
-PKGNAME=	${DISTNAME:S/fvwm/fvmw1/}
+PKGNAME=	${DISTNAME:S/fvwm/fvwm1/}
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/
 
