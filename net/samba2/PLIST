@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/23 22:07:57 reed Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/06/27 19:44:23 abs Exp $
 bin/findsmb
 bin/make_printerdef
 bin/make_smbcodepage
@@ -48,131 +48,131 @@ sbin/mksmbpasswd
 sbin/nmbd
 sbin/smbd
 sbin/swat
-share/doc/samba/Application_Serving.txt
-share/doc/samba/BROWSING-Config.txt
-share/doc/samba/BROWSING.txt
-share/doc/samba/BUGS.txt
-share/doc/samba/CUPS-PrintingInfo.txt
-share/doc/samba/DHCP-Server-Configuration.txt
-share/doc/samba/DIAGNOSIS.txt
-share/doc/samba/DNIX.txt
-share/doc/samba/Faxing.txt
-share/doc/samba/GOTCHAS.txt
-share/doc/samba/HINTS.txt
-share/doc/samba/INSTALL.sambatar
-share/doc/samba/Imprints.txt
-share/doc/samba/Macintosh_Clients.txt
-share/doc/samba/NT4-Locking.reg
-share/doc/samba/NT4_PlainPassword.reg
-share/doc/samba/NetBIOS.txt
-share/doc/samba/PROFILES.txt
-share/doc/samba/Passwords.txt
-share/doc/samba/Printing.txt
-share/doc/samba/README.DCEDFS
-share/doc/samba/README.NOW
-share/doc/samba/README.jis
-share/doc/samba/README.sambatar
-share/doc/samba/Recent-FAQs.txt
-share/doc/samba/RoutedNetworks.txt
-share/doc/samba/SCO.txt
-share/doc/samba/SMBTAR.notes
-share/doc/samba/Samba-OpenSSL.txt
-share/doc/samba/Speed.txt
-share/doc/samba/Speed2.txt
-share/doc/samba/Tracing.txt
-share/doc/samba/UNIX-SMB.txt
-share/doc/samba/UNIX_SECURITY.txt
-share/doc/samba/Win2000_PlainPassword.reg
-share/doc/samba/Win95.txt
-share/doc/samba/Win95_PlainPassword.reg
-share/doc/samba/Win98_PlainPassword.reg
-share/doc/samba/Win9X-CacheHandling.reg
-share/doc/samba/WinME_PlainPassword.reg
-share/doc/samba/WinNT.txt
-share/doc/samba/WinXP_SignOrSeal.reg
-share/doc/samba/WindowsTerminalServer.reg
-share/doc/samba/announce
-share/doc/samba/cifsntdomain.txt
-share/doc/samba/security_level.txt
-share/examples/samba/LDAP/README
-share/examples/samba/LDAP/export_smbpasswd.pl
-share/examples/samba/LDAP/import_smbpasswd.pl
-share/examples/samba/LDAP/ldapchpasswd
-share/examples/samba/LDAP/ldapsync.pl
-share/examples/samba/LDAP/samba-nds.schema
-share/examples/samba/LDAP/samba-schema-netscapeds4.x
-share/examples/samba/LDAP/samba-schema-netscapeds5.x
-share/examples/samba/LDAP/samba-schema.IBMSecureWay
-share/examples/samba/LDAP/samba.schema
-share/examples/samba/LDAP/smbldap-tools/AUTHORS
-share/examples/samba/LDAP/smbldap-tools/CONTRIBUTORS
-share/examples/samba/LDAP/smbldap-tools/COPYING
-share/examples/samba/LDAP/smbldap-tools/ChangeLog
-share/examples/samba/LDAP/smbldap-tools/FILES
-share/examples/samba/LDAP/smbldap-tools/INFRASTRUCTURE
-share/examples/samba/LDAP/smbldap-tools/INSTALL
-share/examples/samba/LDAP/smbldap-tools/Makefile
-share/examples/samba/LDAP/smbldap-tools/NEWS
-share/examples/samba/LDAP/smbldap-tools/README
-share/examples/samba/LDAP/smbldap-tools/TODO
-share/examples/samba/LDAP/smbldap-tools/cgi/README
-share/examples/samba/LDAP/smbldap-tools/cgi/ldappass.cgi
-share/examples/samba/LDAP/smbldap-tools/mkntpwd/Makefile
-share/examples/samba/LDAP/smbldap-tools/mkntpwd/getopt.c
-share/examples/samba/LDAP/smbldap-tools/mkntpwd/getopt.h
-share/examples/samba/LDAP/smbldap-tools/mkntpwd/md4.c
-share/examples/samba/LDAP/smbldap-tools/mkntpwd/mkntpwd.c
-share/examples/samba/LDAP/smbldap-tools/mkntpwd/mkntpwd.h
-share/examples/samba/LDAP/smbldap-tools/mkntpwd/smbdes.c
-share/examples/samba/LDAP/smbldap-tools/smbldap-groupadd.pl
-share/examples/samba/LDAP/smbldap-tools/smbldap-groupdel.pl
-share/examples/samba/LDAP/smbldap-tools/smbldap-groupmod.pl
-share/examples/samba/LDAP/smbldap-tools/smbldap-groupshow.pl
-share/examples/samba/LDAP/smbldap-tools/smbldap-migrate-accounts.pl
-share/examples/samba/LDAP/smbldap-tools/smbldap-migrate-groups.pl
-share/examples/samba/LDAP/smbldap-tools/smbldap-passwd.pl
-share/examples/samba/LDAP/smbldap-tools/smbldap-populate.pl
-share/examples/samba/LDAP/smbldap-tools/smbldap-tools.spec
-share/examples/samba/LDAP/smbldap-tools/smbldap-useradd.pl
-share/examples/samba/LDAP/smbldap-tools/smbldap-userdel.pl
-share/examples/samba/LDAP/smbldap-tools/smbldap-usermod.pl
-share/examples/samba/LDAP/smbldap-tools/smbldap-usershow.pl
-share/examples/samba/LDAP/smbldap-tools/smbldap_conf.pm
-share/examples/samba/LDAP/smbldap-tools/smbldap_tools.pm
-share/examples/samba/README
-share/examples/samba/adduser.sh
-share/examples/samba/deluser.sh
-share/examples/samba/misc/convert_smbpasswd
-share/examples/samba/misc/extra_smbstatus
-share/examples/samba/misc/modify_samba_config.pl
-share/examples/samba/misc/swat.pl
-share/examples/samba/misc/wall.perl
-share/examples/samba/printer-accounting/README
-share/examples/samba/printer-accounting/acct-all
-share/examples/samba/printer-accounting/acct-sum
-share/examples/samba/printer-accounting/hp5-redir
-share/examples/samba/printer-accounting/lp-acct
-share/examples/samba/printer-accounting/printcap
-share/examples/samba/printing/smbprint
-share/examples/samba/printing/smbprint.newer
-share/examples/samba/printing/smbprint.old
-share/examples/samba/printing/smbprint.safer
-share/examples/samba/printing/smbprint.sysv
-share/examples/samba/simple/README
-share/examples/samba/simple/smb.conf
-share/examples/samba/smb.conf.default
-share/examples/samba/thoralf/smb.conf
-share/examples/samba/tridge/README
-share/examples/samba/tridge/smb.conf
-share/examples/samba/tridge/smb.conf.WinNT
-share/examples/samba/tridge/smb.conf.fjall
-share/examples/samba/tridge/smb.conf.lapland
-share/examples/samba/tridge/smb.conf.vittjokk
-share/examples/samba/validchars/msdos70.out
-share/examples/samba/validchars/nwdos70.out
-share/examples/samba/validchars/readme
-share/examples/samba/validchars/validchr.c
-share/examples/samba/validchars/validchr.com
+share/doc/samba2/Application_Serving.txt
+share/doc/samba2/BROWSING-Config.txt
+share/doc/samba2/BROWSING.txt
+share/doc/samba2/BUGS.txt
+share/doc/samba2/CUPS-PrintingInfo.txt
+share/doc/samba2/DHCP-Server-Configuration.txt
+share/doc/samba2/DIAGNOSIS.txt
+share/doc/samba2/DNIX.txt
+share/doc/samba2/Faxing.txt
+share/doc/samba2/GOTCHAS.txt
+share/doc/samba2/HINTS.txt
+share/doc/samba2/INSTALL.sambatar
+share/doc/samba2/Imprints.txt
+share/doc/samba2/Macintosh_Clients.txt
+share/doc/samba2/NT4-Locking.reg
+share/doc/samba2/NT4_PlainPassword.reg
+share/doc/samba2/NetBIOS.txt
+share/doc/samba2/PROFILES.txt
+share/doc/samba2/Passwords.txt
+share/doc/samba2/Printing.txt
+share/doc/samba2/README.DCEDFS
+share/doc/samba2/README.NOW
+share/doc/samba2/README.jis
+share/doc/samba2/README.sambatar
+share/doc/samba2/Recent-FAQs.txt
+share/doc/samba2/RoutedNetworks.txt
+share/doc/samba2/SCO.txt
+share/doc/samba2/SMBTAR.notes
+share/doc/samba2/Samba-OpenSSL.txt
+share/doc/samba2/Speed.txt
+share/doc/samba2/Speed2.txt
+share/doc/samba2/Tracing.txt
+share/doc/samba2/UNIX-SMB.txt
+share/doc/samba2/UNIX_SECURITY.txt
+share/doc/samba2/Win2000_PlainPassword.reg
+share/doc/samba2/Win95.txt
+share/doc/samba2/Win95_PlainPassword.reg
+share/doc/samba2/Win98_PlainPassword.reg
+share/doc/samba2/Win9X-CacheHandling.reg
+share/doc/samba2/WinME_PlainPassword.reg
+share/doc/samba2/WinNT.txt
+share/doc/samba2/WinXP_SignOrSeal.reg
+share/doc/samba2/WindowsTerminalServer.reg
+share/doc/samba2/announce
+share/doc/samba2/cifsntdomain.txt
+share/doc/samba2/security_level.txt
+share/examples/samba2/LDAP/README
+share/examples/samba2/LDAP/export_smbpasswd.pl
+share/examples/samba2/LDAP/import_smbpasswd.pl
+share/examples/samba2/LDAP/ldapchpasswd
+share/examples/samba2/LDAP/ldapsync.pl
+share/examples/samba2/LDAP/samba-nds.schema
+share/examples/samba2/LDAP/samba-schema-netscapeds4.x
+share/examples/samba2/LDAP/samba-schema-netscapeds5.x
+share/examples/samba2/LDAP/samba-schema.IBMSecureWay
+share/examples/samba2/LDAP/samba.schema
+share/examples/samba2/LDAP/smbldap-tools/AUTHORS
+share/examples/samba2/LDAP/smbldap-tools/CONTRIBUTORS
+share/examples/samba2/LDAP/smbldap-tools/COPYING
+share/examples/samba2/LDAP/smbldap-tools/ChangeLog
+share/examples/samba2/LDAP/smbldap-tools/FILES
+share/examples/samba2/LDAP/smbldap-tools/INFRASTRUCTURE
+share/examples/samba2/LDAP/smbldap-tools/INSTALL
+share/examples/samba2/LDAP/smbldap-tools/Makefile
+share/examples/samba2/LDAP/smbldap-tools/NEWS
+share/examples/samba2/LDAP/smbldap-tools/README
+share/examples/samba2/LDAP/smbldap-tools/TODO
+share/examples/samba2/LDAP/smbldap-tools/cgi/README
+share/examples/samba2/LDAP/smbldap-tools/cgi/ldappass.cgi
+share/examples/samba2/LDAP/smbldap-tools/mkntpwd/Makefile
+share/examples/samba2/LDAP/smbldap-tools/mkntpwd/getopt.c
+share/examples/samba2/LDAP/smbldap-tools/mkntpwd/getopt.h
+share/examples/samba2/LDAP/smbldap-tools/mkntpwd/md4.c
+share/examples/samba2/LDAP/smbldap-tools/mkntpwd/mkntpwd.c
+share/examples/samba2/LDAP/smbldap-tools/mkntpwd/mkntpwd.h
+share/examples/samba2/LDAP/smbldap-tools/mkntpwd/smbdes.c
+share/examples/samba2/LDAP/smbldap-tools/smbldap-groupadd.pl
+share/examples/samba2/LDAP/smbldap-tools/smbldap-groupdel.pl
+share/examples/samba2/LDAP/smbldap-tools/smbldap-groupmod.pl
+share/examples/samba2/LDAP/smbldap-tools/smbldap-groupshow.pl
+share/examples/samba2/LDAP/smbldap-tools/smbldap-migrate-accounts.pl
+share/examples/samba2/LDAP/smbldap-tools/smbldap-migrate-groups.pl
+share/examples/samba2/LDAP/smbldap-tools/smbldap-passwd.pl
+share/examples/samba2/LDAP/smbldap-tools/smbldap-populate.pl
+share/examples/samba2/LDAP/smbldap-tools/smbldap-tools.spec
+share/examples/samba2/LDAP/smbldap-tools/smbldap-useradd.pl
+share/examples/samba2/LDAP/smbldap-tools/smbldap-userdel.pl
+share/examples/samba2/LDAP/smbldap-tools/smbldap-usermod.pl
+share/examples/samba2/LDAP/smbldap-tools/smbldap-usershow.pl
+share/examples/samba2/LDAP/smbldap-tools/smbldap_conf.pm
+share/examples/samba2/LDAP/smbldap-tools/smbldap_tools.pm
+share/examples/samba2/README
+share/examples/samba2/adduser.sh
+share/examples/samba2/deluser.sh
+share/examples/samba2/misc/convert_smbpasswd
+share/examples/samba2/misc/extra_smbstatus
+share/examples/samba2/misc/modify_samba_config.pl
+share/examples/samba2/misc/swat.pl
+share/examples/samba2/misc/wall.perl
+share/examples/samba2/printer-accounting/README
+share/examples/samba2/printer-accounting/acct-all
+share/examples/samba2/printer-accounting/acct-sum
+share/examples/samba2/printer-accounting/hp5-redir
+share/examples/samba2/printer-accounting/lp-acct
+share/examples/samba2/printer-accounting/printcap
+share/examples/samba2/printing/smbprint
+share/examples/samba2/printing/smbprint.newer
+share/examples/samba2/printing/smbprint.old
+share/examples/samba2/printing/smbprint.safer
+share/examples/samba2/printing/smbprint.sysv
+share/examples/samba2/simple/README
+share/examples/samba2/simple/smb.conf
+share/examples/samba2/smb.conf.default
+share/examples/samba2/thoralf/smb.conf
+share/examples/samba2/tridge/README
+share/examples/samba2/tridge/smb.conf
+share/examples/samba2/tridge/smb.conf.WinNT
+share/examples/samba2/tridge/smb.conf.fjall
+share/examples/samba2/tridge/smb.conf.lapland
+share/examples/samba2/tridge/smb.conf.vittjokk
+share/examples/samba2/validchars/msdos70.out
+share/examples/samba2/validchars/nwdos70.out
+share/examples/samba2/validchars/readme
+share/examples/samba2/validchars/validchr.c
+share/examples/samba2/validchars/validchr.com
 share/samba/codepages/codepage.1125
 share/samba/codepages/codepage.1251
 share/samba/codepages/codepage.437
@@ -425,25 +425,25 @@ share/samba/swat/using_samba/index.html
 share/samba/swat/using_samba/inx.html
 share/samba/swat/using_samba/licenseinfo.html
 share/samba/swat/using_samba/this_edition.html
-@dirrm share/doc/samba
-@dirrm share/examples/samba/LDAP/smbldap-tools/mkntpwd
-@dirrm share/examples/samba/LDAP/smbldap-tools/cgi
-@dirrm share/examples/samba/LDAP/smbldap-tools
-@dirrm share/examples/samba/LDAP
-@dirrm share/examples/samba/misc
-@dirrm share/examples/samba/printer-accounting
-@dirrm share/examples/samba/printing
-@dirrm share/examples/samba/simple
-@dirrm share/examples/samba/thoralf
-@dirrm share/examples/samba/tridge
-@dirrm share/examples/samba/validchars
-@dirrm share/examples/samba
-@dirrm share/samba/codepages
-@dirrm share/samba/swat/help
-@dirrm share/samba/swat/images
-@dirrm share/samba/swat/include
-@dirrm share/samba/swat/using_samba/figs
 @dirrm share/samba/swat/using_samba/gifs
+@dirrm share/samba/swat/using_samba/figs
 @dirrm share/samba/swat/using_samba
+@dirrm share/samba/swat/include
+@dirrm share/samba/swat/images
+@dirrm share/samba/swat/help
 @dirrm share/samba/swat
+@dirrm share/samba/codepages
 @dirrm share/samba
+@dirrm share/examples/samba2/validchars
+@dirrm share/examples/samba2/tridge
+@dirrm share/examples/samba2/thoralf
+@dirrm share/examples/samba2/simple
+@dirrm share/examples/samba2/printing
+@dirrm share/examples/samba2/printer-accounting
+@dirrm share/examples/samba2/misc
+@dirrm share/examples/samba2/LDAP/smbldap-tools/mkntpwd
+@dirrm share/examples/samba2/LDAP/smbldap-tools/cgi
+@dirrm share/examples/samba2/LDAP/smbldap-tools
+@dirrm share/examples/samba2/LDAP
+@dirrm share/examples/samba2
+@dirrm share/doc/samba2
