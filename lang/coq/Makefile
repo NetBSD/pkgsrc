@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/24 13:51:14 grant Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/28 05:06:28 snj Exp $
 #
 
 DISTNAME=	coq-7.4
@@ -11,7 +11,7 @@ HOMEPAGE=	http://coq.inria.fr/
 COMMENT=	Theorem prover which extracts programs from proofs
 
 USE_GNU_TOOLS+=	make
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 HAS_CONFIGURE=	YES
 CONFIGURE_ARGS+=	-prefix ${PREFIX}
 CONFIGURE_ARGS+=	-emacslib ${PREFIX}/share/emacs/site-lisp
@@ -24,5 +24,5 @@ ALL_TARGET=	world
 PLIST_SRC=	${PKGDIR}/PLIST.opt ${PKGDIR}/PLIST
 .endif
 
-.include "../../lang/ocaml/buildlink2.mk"
+.include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

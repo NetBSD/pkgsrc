@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/07/17 21:45:25 grant Exp $
+# $NetBSD: Makefile,v 1.19 2004/04/28 05:06:28 snj Exp $
 
 DISTNAME=		stalin-0.9
 PKGREVISION=		2
@@ -13,7 +13,8 @@ COMMENT=		Aggressively optimizing Scheme compiler
 # Only ported to these 4 archs
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc *-*-alpha *-*-mips
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
+USE_X11=		yes
 UNLIMIT_RESOURCES=	stacksize datasize
 
 .include "../../mk/bsd.prefs.mk"
@@ -39,6 +40,6 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} ANNOUNCEMENT COPYING README	\
 		stalin.el ${PREFIX}/share/doc/stalin/
 
-.include "../../devel/boehm-gc/buildlink2.mk"
-.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../devel/boehm-gc/buildlink3.mk"
+.include "../../graphics/Mesa/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
