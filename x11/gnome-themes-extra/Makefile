@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/14 17:21:55 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/20 13:27:44 jmmv Exp $
 #
 
 DISTNAME=	gnome-themes-extras-0.5
@@ -14,13 +14,17 @@ COMMENT=	Extra themes for GNOME 2
 DEPENDS=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 USE_X11=		yes
 
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../x11/gtk2-engines/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk2-engines/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
