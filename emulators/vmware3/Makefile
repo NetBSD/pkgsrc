@@ -1,16 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 21:36:24 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/10/05 07:12:21 jdolecek Exp $
 
-DISTNAME=	VMware-workstation-3.2.1-2237
-PKGNAME=	vmware-3.2.1
+DISTNAME=	VMware-workstation-3.2.1-2242
+PKGNAME=	vmware-3.2.1pl1
 WRKSRC=		${WRKDIR}/vmware-distrib
 CATEGORIES=	emulators
-MASTER_SITES=	http://www4.vmware.com/software/ \
-		http://www.vmware.com/download1/software/ \
-		ftp://download1.vmware.com/pub/software/ \
+MASTER_SITES=	http://download3.vmware.com/software/wkst/ \
 		http://vmware-svca.www.conxion.com/software/ \
 		http://vmware-chil.www.conxion.com/software/ \
 		http://vmware-heva.www.conxion.com/software/ \
-		ftp://vmware.wespe.de/pub/software/ \
 		ftp://mirror.aarnet.edu.au/pub/vmware/software/
 
 MAINTAINER=	jdolecek@NetBSD.org
