@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2004/07/05 09:10:19 jmmv Exp $
+$NetBSD: patch-aa,v 1.11 2004/09/01 14:42:59 jmmv Exp $
 
---- configure.orig	2004-06-11 17:49:13.000000000 +0200
+--- configure.orig	2004-08-18 22:09:11.000000000 +0200
 +++ configure
-@@ -21237,7 +21237,8 @@ _ACEOF
+@@ -21231,7 +21231,8 @@ _ACEOF
  cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.10 2004/07/05 09:10:19 jmmv Exp $
  int
  main ()
  {
-@@ -21606,13 +21607,13 @@ echo "${ECHO_T}yes" >&6
+@@ -21594,13 +21595,13 @@ echo "${ECHO_T}yes" >&6
  
              echo "$as_me:$LINENO: checking DAEMON_CFLAGS" >&5
  echo $ECHO_N "checking DAEMON_CFLAGS... $ECHO_C" >&6
@@ -28,9 +28,9 @@ $NetBSD: patch-aa,v 1.10 2004/07/05 09:10:19 jmmv Exp $
              echo "$as_me:$LINENO: result: $DAEMON_LIBS" >&5
  echo "${ECHO_T}$DAEMON_LIBS" >&6
          else
-@@ -28015,6 +28018,10 @@ else
-    X_SERVER="/usr/X11R6/bin/X"
+@@ -28163,6 +28164,10 @@ else
     X_CONF_PATH="/usr/bin/X11:/usr/X11R6/bin:/usr/local/bin:/opt/X11R6/bin"
+    X_CONFIG_OPTIONS="-audit 0"
  fi
 +X_PATH="${X11BASE}/bin"
 +X_SERVER_PATH="${X11BASE}/bin"
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.10 2004/07/05 09:10:19 jmmv Exp $
  
  
  
-@@ -28064,6 +28071,8 @@ prefix=$old_prefix
+@@ -28218,6 +28223,8 @@ prefix=$old_prefix
  exec_prefix=$old_exec_prefix
  
                                                                                                                                                                                                                                                                                                                                                                                                                                      ac_config_files="$ac_config_files Makefile daemon/Makefile gui/Makefile gui/greeter/Makefile gui/greeter/themes/Makefile gui/greeter/themes/circles/Makefile gui/greeter/themes/happygnome/Makefile gui/greeter/themes/happygnome-list/Makefile gui/modules/Makefile gui/modules/AccessKeyMouseEvents gui/modules/AccessDwellMouseEvents utils/Makefile pixmaps/Makefile pixmaps/16x16/Makefile pixmaps/32x32/Makefile pixmaps/48x48/Makefile config/Makefile po/Makefile.in vicious-extensions/Makefile docs/Makefile docs/C/Makefile docs/de/Makefile docs/es/Makefile docs/fr/Makefile docs/it/Makefile docs/sv/Makefile docs/ja/Makefile docs/ko/Makefile docs/zh_CN/Makefile docs/zh_HK/Makefile docs/zh_TW/Makefile config/gdm.conf config/Xsession config/Default config/PreSession config/PostSession daemon/gdm gdm-stop gdm-restart gdm-safe-restart gdmsetup-security gdm.spec"
