@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.1 1998/12/23 22:42:50 frueauf Exp $
+
+--- kpse-2.6/web2c/lib/texmf.h-orig	Sun Jul 28 23:44:18 1996
++++ kpse-2.6/web2c/lib/texmf.h	Wed Dec 23 23:30:10 1998
+@@ -66,6 +66,9 @@
+ /* This routine has to return four values.  */
+ #define	dateandtime(i, j, k, l)	get_date_and_time (&(i), &(j), &(k), &(l))
+ 
++#if (defined(BSD) && BSD >= 199306)
++#define unix
++#endif
+ 
+ 
+ /* If we're running under Unix, use system calls instead of standard I/O
