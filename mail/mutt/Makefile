@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1999/02/20 22:48:34 hubertf Exp $
+# $NetBSD: Makefile,v 1.20 1999/02/27 01:13:55 kim Exp $
 
 DISTNAME=	mutt-${MUTT_VERSION}
 CATEGORIES=	mail
@@ -15,7 +15,8 @@ DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-curses=${PREFIX} --with-exec-shell=/bin/ksh \
-		 --with-docdir=${PREFIX}/share/doc/mutt
+		 --with-docdir=${PREFIX}/share/doc/mutt \
+		 --enable-pop --enable-imap
 CONFIGURE_ENV+=	LDFLAGS=-s
 
 .include "../../mk/bsd.pkg.mk"
