@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2004/12/29 10:22:27 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2005/01/18 13:37:26 minskim Exp $
 #
 
-DISTNAME=	awstats-6.2
+DISTNAME=	awstats-6.3
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=awstats/}
+MASTER_SITES=	http://awstats.sourceforge.net/files/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
@@ -21,7 +21,7 @@ REPLACE_PERL=	tools/*.pl		\
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/awstats
-	${INSTALL_DATA_DIR} ${PREFIX}/awstats/bin
+	${INSTALL_SCRIPT_DIR} ${PREFIX}/awstats/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/awstats
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/awstats
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/*.pl ${PREFIX}/awstats/bin
