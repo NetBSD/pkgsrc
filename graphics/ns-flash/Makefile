@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/10/04 17:31:24 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2000/02/04 04:43:29 dmcmahill Exp $
 #
 
 PKGNAME=		ns-flash-4.0r12
@@ -10,7 +10,7 @@ ONLY_FOR_PLATFORM=      *-*-i386 *-*-sparc
 
 .if (${MACHINE_ARCH} == "i386")
 .if !exists(/emul/linux/lib/ld-linux.so.2)
-IGNORE=		requires Linux glibc2 libraries - see compat_linux(8)
+IGNORE=		"requires Linux glibc2 libraries - see compat_linux(8)"
 .endif
 DISTUNAME=		linux
 WRKNAME=		Linux
