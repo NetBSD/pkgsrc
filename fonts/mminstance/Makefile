@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/07/23 20:24:11 jonb Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/01 12:41:12 salo Exp $
 #
 
-DISTNAME=	mminstance-1.8
+DISTNAME=	mminstance-1.20
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.lcdf.org/~eddietwo/type/
 
