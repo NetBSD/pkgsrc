@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2000/01/19 11:15:07 tron Exp $
+# $NetBSD: Makefile,v 1.39 2000/01/28 10:16:54 agc Exp $
 
 DISTNAME=	mutt-${MUTT_VERSION}
 CATEGORIES=	mail
@@ -13,7 +13,6 @@ HOMEPAGE=	http://www.mutt.org/
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
 BUILD_DEPENDS+=	${LOCALBASE}/bin/automake:../../devel/automake
-DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
@@ -28,6 +27,10 @@ LDFLAGS+=	-s
 PLIST_SUBST+=	LOCALEBASE=lib
 .else
 PLIST_SUBST+=	LOCALEBASE=share
+.endif
+
+.if ${OPSYS} == "NetBSD"
+DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 .endif
 
 MUTT_BASE_VERSION=	1.0.1
