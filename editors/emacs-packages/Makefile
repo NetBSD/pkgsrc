@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2003/03/15 21:48:55 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/16 05:45:29 uebayasi Exp $
 
-DISTNAME=	emacs-packages-0.1
+DISTNAME=	emacs-packages-0.2
 CATEGORIES=	meta-pkgs editors
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -11,6 +11,9 @@ COMMENT=	meta-package for the GNU Emacs lisp packages
 
 .include "../../mk/emacs.mk"
 
+# XXX
+# Please update the version of this package (emacs-package) when you #
+# add a new emacs lisp package below!				     #
 DEPENDS+=	apel-[0-9]*:../../devel/apel
 DEPENDS+=	artist-[0-9]*:../../graphics/artist
 DEPENDS+=	auctex-[0-9]*:../../print/auctex
