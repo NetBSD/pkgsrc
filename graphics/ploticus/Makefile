@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/03/04 09:06:13 tron Exp $
+# $NetBSD: Makefile,v 1.9 2001/05/22 09:32:22 wiz Exp $
 #
 
 DISTNAME=	plsrc13
@@ -12,7 +12,7 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.sgpr.net/
 COMMENT=	Versatile data visualization engine
 
-DEPENDS+=	png>1.0.9:../../graphics/png
+DEPENDS+=	png>=1.0.11:../../graphics/png
 
 NO_CONFIGURE=	YES
 USE_X11=	YES

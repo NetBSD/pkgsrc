@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2001/03/04 09:06:21 tron Exp $
+# $NetBSD: Makefile,v 1.58 2001/05/22 09:32:28 wiz Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
@@ -13,7 +13,7 @@ HOMEPAGE=       http://www.kde.org/
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png>1.0.9:../../graphics/png
+DEPENDS+=	png>=1.0.11:../../graphics/png
 DEPENDS+=	qt1-1.44:../../x11/qt1
 DEPENDS+=	tiff-*:../../graphics/tiff
 
