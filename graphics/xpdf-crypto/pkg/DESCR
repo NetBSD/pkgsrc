@@ -1,0 +1,8 @@
+Xpdf is a viewer for Portable Document Format (PDF) files. 
+
+Xpdf is designed to be small and efficient. It runs under X, 
+but does not use the Motif or Xt libraries. Use of the T1 library 
+provides superior rendering of type 1 fonts, and also permits 
+run-time configuration of the exact fonts to be used. 
+
+This is the crypto-enabled version.
