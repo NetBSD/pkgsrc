@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/03/08 08:25:31 tron Exp $
+
+--- whiteglass/Imakefile.orig	2003-02-28 14:19:25.000000000 +0100
++++ whiteglass/Imakefile	2003-03-08 08:51:26.000000000 +0100
+@@ -10,7 +10,7 @@
+ all:: name								@@\
+ 									@@\
+ name: name.cfg CursorSources(name)					@@\
+-	$(XCURSORGEN) name.cfg name					@@\
++	../xcursorgen name.cfg name					@@\
+ 									@@\
+ clean::									@@\
+ 	$(RM) name							@@\
