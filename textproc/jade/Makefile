@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/03/31 20:40:22 skrll Exp $
+# $NetBSD: Makefile,v 1.10 2001/04/23 15:37:38 skrll Exp $
 # FreeBSD Id: Makefile,v 1.15 1999/01/31 11:15:57 dirk Exp
 #
 
@@ -17,6 +17,10 @@ COMMENT=	Object-oriented SGML/XML parser toolkit and DSSSL engine
 CONFLICTS+=	sp-*
 
 GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+LTCONFIG_OVERRIDE= \
+		${WRKSRC}/config/ltconfig
+
 CONFIGURE_ENV+=	CXXFLAGS="${CFLAGS}"
 CONFIGURE_ARGS=	--disable-shared
 CONFIGURE_ARGS+= --enable-default-catalog=${PREFIX}/share/sgml/jade/catalog
