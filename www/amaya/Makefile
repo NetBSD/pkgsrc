@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2001/03/04 09:06:19 tron Exp $
+# $NetBSD: Makefile,v 1.7 2001/04/09 16:44:58 drochner Exp $
 
-DISTNAME=	amaya-src-4.2.1
-PKGNAME=	amaya-4.2.1
+DISTNAME=	amaya-src-4.3.2
+PKGNAME=	amaya-4.3.2
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.w3.org/pub/amaya/
 EXTRACT_SUFX=	.tgz
@@ -13,13 +13,12 @@ COMMENT=	Web Browser/Editor from the World Wide Web Consortium
 WRKSRC=		${WRKDIR}/Amaya/work
 GNU_CONFIGURE=	yes
 CONFIGURE_SCRIPT=	../configure
-CONFIGURE_ARGS+=	--with-motif
+CONFIGURE_ARGS+=	--with-motif --without-graphic-libs
 CONFIGURE_ENV+=	MOTIFBASE=${MOTIFBASE}
 CFLAGS+=	-Dunix
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-# our libpng is too new (png_read_init() removal)
-#DEPENDS+=	png>1.0.9:../../graphics/png
+DEPENDS+=	png>1.0.9:../../graphics/png
 
 USE_MOTIF=	yes
 USE_GMAKE=	yes
@@ -28,6 +27,6 @@ post-extract:
 	${MKDIR} ${WRKSRC}
 	${RM} -rf ${WRKDIR}/Amaya/libjpeg
 	${RM} -rf ${WRKDIR}/Amaya/libpng/zlib
-#	${RM} -rf ${WRKDIR}/Amaya/libpng
+	${RM} -rf ${WRKDIR}/Amaya/libpng
 
 .include "../../mk/bsd.pkg.mk"
