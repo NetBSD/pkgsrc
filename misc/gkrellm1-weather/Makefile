@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/24 23:10:42 cube Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/24 23:24:06 cube Exp $
 
 DISTNAME=	gkrellweather-0.2.7
 PKGNAME=	gkrellm-weather-0.2.7
@@ -17,5 +17,5 @@ USE_BUILDLINK2=	YES
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gkrellm/plugins
 
-.include "../../sysutils/gkrellm/buildlink2.mk"
+.include "../../sysutils/gkrellm1/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

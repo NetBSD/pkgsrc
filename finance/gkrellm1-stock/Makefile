@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/24 23:03:52 cube Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/24 23:24:06 cube Exp $
 
 DISTNAME=	gkrellstock-0.2
 PKGNAME=	gkrellm-stock-0.2
@@ -26,5 +26,5 @@ do-configure:
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gkrellm/plugins
 
-.include "../../sysutils/gkrellm/buildlink2.mk"
+.include "../../sysutils/gkrellm1/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
