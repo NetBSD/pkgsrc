@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/08/17 21:39:45 tron Exp $
+# $NetBSD: Makefile,v 1.4 2000/03/06 22:17:00 tron Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/1.0/distrib/sources/}
 
 MAINTAINER=	hubertf@netbsd.org
 
-DEPENDS+=	teTeX-share-1.0:../teTeX-share
+DEPENDS+=	teTeX-share-1.0.*:../teTeX-share
 
 DIST_SUBDIR=	teTeX
 WRKSRC=		${WRKDIR}
