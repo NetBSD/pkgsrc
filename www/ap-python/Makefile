@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:55:26 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/12/03 09:44:10 darcy Exp $
 #
 
-DISTNAME=		mod_python-2.7.6
-PKGNAME=		ap-python-2.7.6
+DISTNAME=		mod_python-2.7.8
+PKGNAME=		ap-python-2.7.8
 CATEGORIES=		www
-MASTER_SITES=		http://www.modpython.org/dist/
-EXTRACT_SUFX=           .tgz
+MASTER_SITES=	http://www.modpython.org/dist/
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.modpython.org/
@@ -17,7 +17,7 @@ USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PYTHON_BIN=${PYTHONBIN}
 MAKE_ENV+=		PYTHONBIN=${PYTHONBIN}
-PYTHON_VERSIONS_ACCEPTED=	20
+PYTHON_VERSIONS_ACCEPTED=	20 21 22 23
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/ap-mod_python
