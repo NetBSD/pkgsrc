@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2004/07/04 15:24:46 jmmv Exp $
+java/kaffe/jre/lib/${MACHINE_ARCH}/libtritonusesd-${PKGVERSION}.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libtritonusesd.a
+java/kaffe/jre/lib/${MACHINE_ARCH}/libtritonusesd.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libtritonusesd.so
+@comment in kaffe: @dirrm java/kaffe/jre/lib/${MACHINE_ARCH}
