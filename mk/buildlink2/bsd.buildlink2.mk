@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.3 2002/08/22 20:20:33 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.4 2002/08/23 00:27:59 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -84,6 +84,15 @@ ${_BUILDLINK_DEPMETHOD.${_pkg_}}+= \
 	${BUILDLINK_DEPENDS.${_pkg_}}:${BUILDLINK_PKGSRCDIR.${_pkg_}}
 .  endif
 .endfor
+
+# Create the buildlink include and lib directories so that the Darwin
+# compiler/linker won't complain verbosely (on stdout, even!) when
+# those directories are passed as sub-arguments of -I and -L.
+#
+do-buildlink: buildlink-directories
+buildlink-directories:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}/include
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}/lib
 
 # Add each of the *-buildlink targets as a prerequisite for the
 # buildlink target.  This ensures that the symlinks are created
