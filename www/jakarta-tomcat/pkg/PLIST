@@ -1,0 +1,361 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/12 22:21:35 jwise Exp $
+jakarta/tomcat/lib/ant.jar
+jakarta/tomcat/lib/xml.jar
+jakarta/tomcat/lib/servlet.jar
+jakarta/tomcat/lib/jasper.jar
+jakarta/tomcat/etc/server.xml
+jakarta/tomcat/etc/server.dtd
+jakarta/tomcat/etc/web.xml
+jakarta/tomcat/etc/web.dtd
+jakarta/tomcat/etc/tomcat.conf
+jakarta/tomcat/etc/SimpleStartup.java
+jakarta/tomcat/src/javax/servlet/ServletException.java
+jakarta/tomcat/src/javax/servlet/http/HttpServletResponse.java
+jakarta/tomcat/src/javax/servlet/http/LocalStrings.properties
+jakarta/tomcat/src/javax/servlet/http/HttpSession.java
+jakarta/tomcat/src/javax/servlet/http/HttpServlet.java
+jakarta/tomcat/src/javax/servlet/http/HttpSessionBindingListener.java
+jakarta/tomcat/src/javax/servlet/http/HttpSessionBindingEvent.java
+jakarta/tomcat/src/javax/servlet/http/HttpSessionContext.java
+jakarta/tomcat/src/javax/servlet/http/HttpServletRequest.java
+jakarta/tomcat/src/javax/servlet/http/Cookie.java
+jakarta/tomcat/src/javax/servlet/http/HttpUtils.java
+jakarta/tomcat/src/javax/servlet/GenericServlet.java
+jakarta/tomcat/src/javax/servlet/SingleThreadModel.java
+jakarta/tomcat/src/javax/servlet/jsp/tagext/TagSupport.java
+jakarta/tomcat/src/javax/servlet/jsp/tagext/BodyTagSupport.java
+jakarta/tomcat/src/javax/servlet/jsp/tagext/TagLibraryInfo.java
+jakarta/tomcat/src/javax/servlet/jsp/tagext/VariableInfo.java
+jakarta/tomcat/src/javax/servlet/jsp/tagext/TagExtraInfo.java
+jakarta/tomcat/src/javax/servlet/jsp/tagext/BodyContent.java
+jakarta/tomcat/src/javax/servlet/jsp/tagext/TagAttributeInfo.java
+jakarta/tomcat/src/javax/servlet/jsp/tagext/TagData.java
+jakarta/tomcat/src/javax/servlet/jsp/tagext/TagInfo.java
+jakarta/tomcat/src/javax/servlet/jsp/tagext/Tag.java
+jakarta/tomcat/src/javax/servlet/jsp/tagext/BodyTag.java
+jakarta/tomcat/src/javax/servlet/jsp/JspTagException.java
+jakarta/tomcat/src/javax/servlet/jsp/JspException.java
+jakarta/tomcat/src/javax/servlet/jsp/JspPage.java
+jakarta/tomcat/src/javax/servlet/jsp/JspWriter.java
+jakarta/tomcat/src/javax/servlet/jsp/JspEngineInfo.java
+jakarta/tomcat/src/javax/servlet/jsp/PageContext.java
+jakarta/tomcat/src/javax/servlet/jsp/HttpJspPage.java
+jakarta/tomcat/src/javax/servlet/jsp/JspFactory.java
+jakarta/tomcat/src/javax/servlet/ServletConfig.java
+jakarta/tomcat/src/javax/servlet/ServletResponse.java
+jakarta/tomcat/src/javax/servlet/LocalStrings.properties
+jakarta/tomcat/src/javax/servlet/ServletRequest.java
+jakarta/tomcat/src/javax/servlet/ServletInputStream.java
+jakarta/tomcat/src/javax/servlet/ServletContext.java
+jakarta/tomcat/src/javax/servlet/UnavailableException.java
+jakarta/tomcat/src/javax/servlet/RequestDispatcher.java
+jakarta/tomcat/src/javax/servlet/ServletOutputStream.java
+jakarta/tomcat/src/javax/servlet/Servlet.java
+jakarta/tomcat/examples/jsp/dates/date.txt
+jakarta/tomcat/examples/jsp/dates/date.jsp
+jakarta/tomcat/examples/jsp/dates/date.html
+jakarta/tomcat/examples/jsp/jsptoserv/jsptoservlet.jsp
+jakarta/tomcat/examples/jsp/jsptoserv/stj.txt
+jakarta/tomcat/examples/jsp/jsptoserv/jts.txt
+jakarta/tomcat/examples/jsp/jsptoserv/jts.html
+jakarta/tomcat/examples/jsp/jsptoserv/hello.jsp
+jakarta/tomcat/examples/jsp/sessions/DummyCart.html
+jakarta/tomcat/examples/jsp/sessions/carts.txt
+jakarta/tomcat/examples/jsp/sessions/carts.jsp
+jakarta/tomcat/examples/jsp/sessions/carts.html
+jakarta/tomcat/examples/jsp/sessions/crt.html
+jakarta/tomcat/examples/jsp/checkbox/checkresult.txt
+jakarta/tomcat/examples/jsp/checkbox/checkresult.jsp
+jakarta/tomcat/examples/jsp/checkbox/cresult.html
+jakarta/tomcat/examples/jsp/checkbox/CheckTest.html
+jakarta/tomcat/examples/jsp/checkbox/check.html
+jakarta/tomcat/examples/jsp/plugin/plugin.txt
+jakarta/tomcat/examples/jsp/plugin/plugin.html
+jakarta/tomcat/examples/jsp/plugin/plugin.jsp
+jakarta/tomcat/examples/jsp/plugin/applet/Clock2.java
+jakarta/tomcat/examples/jsp/plugin/applet/Clock2.class
+jakarta/tomcat/examples/jsp/include/foo.html
+jakarta/tomcat/examples/jsp/include/inc.html
+jakarta/tomcat/examples/jsp/include/foo.jsp
+jakarta/tomcat/examples/jsp/include/include.jsp
+jakarta/tomcat/examples/jsp/include/include.txt
+jakarta/tomcat/examples/jsp/error/er.html
+jakarta/tomcat/examples/jsp/error/err.jsp
+jakarta/tomcat/examples/jsp/error/err.txt
+jakarta/tomcat/examples/jsp/error/error.html
+jakarta/tomcat/examples/jsp/error/errorpge.jsp
+jakarta/tomcat/examples/jsp/snp/snoop.txt
+jakarta/tomcat/examples/jsp/snp/snoop.jsp
+jakarta/tomcat/examples/jsp/snp/snoop.html
+jakarta/tomcat/examples/jsp/cal/Entry.txt
+jakarta/tomcat/examples/jsp/cal/cal2.jsp
+jakarta/tomcat/examples/jsp/cal/cal2.txt
+jakarta/tomcat/examples/jsp/cal/cal1.jsp
+jakarta/tomcat/examples/jsp/cal/cal1.txt
+jakarta/tomcat/examples/jsp/cal/Entries.txt
+jakarta/tomcat/examples/jsp/cal/login.html
+jakarta/tomcat/examples/jsp/cal/calendar.html
+jakarta/tomcat/examples/jsp/cal/JspCalendar.txt
+jakarta/tomcat/examples/jsp/cal/TableBean.txt
+jakarta/tomcat/examples/jsp/num/numguess.txt
+jakarta/tomcat/examples/jsp/num/numguess.jsp
+jakarta/tomcat/examples/jsp/num/numguess.html
+jakarta/tomcat/examples/jsp/source.jsp
+jakarta/tomcat/examples/jsp/colors/ColorGameBean.html
+jakarta/tomcat/examples/jsp/colors/clr.html
+jakarta/tomcat/examples/jsp/colors/colrs.jsp
+jakarta/tomcat/examples/jsp/colors/colors.txt
+jakarta/tomcat/examples/jsp/colors/colors.html
+jakarta/tomcat/examples/jsp/forward/fwd.html
+jakarta/tomcat/examples/jsp/forward/two.html
+jakarta/tomcat/examples/jsp/forward/one.jsp
+jakarta/tomcat/examples/jsp/forward/forward.jsp
+jakarta/tomcat/examples/jsp/forward/forward.txt
+jakarta/tomcat/examples/jsp/index.html
+jakarta/tomcat/examples/jsp/simpletag/foo.txt
+jakarta/tomcat/examples/jsp/simpletag/foo.html
+jakarta/tomcat/examples/jsp/simpletag/foo.jsp
+jakarta/tomcat/examples/servlets/reqparams.html
+jakarta/tomcat/examples/servlets/reqheaders.html
+jakarta/tomcat/examples/servlets/index.html
+jakarta/tomcat/examples/servlets/helloworld.html
+jakarta/tomcat/examples/servlets/reqinfo.html
+jakarta/tomcat/examples/servlets/cookies.html
+jakarta/tomcat/examples/servlets/sessions.html
+jakarta/tomcat/examples/WEB-INF/classes/colors/ColorGameBean.class
+jakarta/tomcat/examples/WEB-INF/classes/colors/ColorGameBean.java
+jakarta/tomcat/examples/WEB-INF/classes/error/Smart.class
+jakarta/tomcat/examples/WEB-INF/classes/error/Smart.java
+jakarta/tomcat/examples/WEB-INF/classes/num/NumberGuessBean.java
+jakarta/tomcat/examples/WEB-INF/classes/num/NumberGuessBean.class
+jakarta/tomcat/examples/WEB-INF/classes/SnoopServlet.java
+jakarta/tomcat/examples/WEB-INF/classes/servletToJsp.java
+jakarta/tomcat/examples/WEB-INF/classes/dates/JspCalendar.class
+jakarta/tomcat/examples/WEB-INF/classes/dates/JspCalendar.java
+jakarta/tomcat/examples/WEB-INF/classes/servletToJsp.class
+jakarta/tomcat/examples/WEB-INF/classes/LocalStrings.properties
+jakarta/tomcat/examples/WEB-INF/classes/cal/Entries.class
+jakarta/tomcat/examples/WEB-INF/classes/cal/Entries.java
+jakarta/tomcat/examples/WEB-INF/classes/cal/Entry.class
+jakarta/tomcat/examples/WEB-INF/classes/cal/Entry.java
+jakarta/tomcat/examples/WEB-INF/classes/cal/JspCalendar.class
+jakarta/tomcat/examples/WEB-INF/classes/cal/TableBean.class
+jakarta/tomcat/examples/WEB-INF/classes/cal/JspCalendar.java
+jakarta/tomcat/examples/WEB-INF/classes/cal/TableBean.java
+jakarta/tomcat/examples/WEB-INF/classes/examples/ExampleTagBase.class
+jakarta/tomcat/examples/WEB-INF/classes/examples/ExampleTagBase.java
+jakarta/tomcat/examples/WEB-INF/classes/examples/LogTag.class
+jakarta/tomcat/examples/WEB-INF/classes/examples/FooTag.class
+jakarta/tomcat/examples/WEB-INF/classes/examples/ShowSource.java
+jakarta/tomcat/examples/WEB-INF/classes/examples/LogTag.java
+jakarta/tomcat/examples/WEB-INF/classes/examples/FooTag.java
+jakarta/tomcat/examples/WEB-INF/classes/examples/ShowSource.class
+jakarta/tomcat/examples/WEB-INF/classes/examples/FooTagExtraInfo.java
+jakarta/tomcat/examples/WEB-INF/classes/examples/FooTagExtraInfo.class
+jakarta/tomcat/examples/WEB-INF/classes/checkbox/CheckTest.class
+jakarta/tomcat/examples/WEB-INF/classes/checkbox/CheckTest.java
+jakarta/tomcat/examples/WEB-INF/classes/SnoopServlet.class
+jakarta/tomcat/examples/WEB-INF/classes/RequestHeaderExample.class
+jakarta/tomcat/examples/WEB-INF/classes/RequestParamExample.class
+jakarta/tomcat/examples/WEB-INF/classes/RequestParamExample.java
+jakarta/tomcat/examples/WEB-INF/classes/RequestHeaderExample.java
+jakarta/tomcat/examples/WEB-INF/classes/RequestInfoExample.class
+jakarta/tomcat/examples/WEB-INF/classes/RequestInfoExample.java
+jakarta/tomcat/examples/WEB-INF/classes/sessions/DummyCart.class
+jakarta/tomcat/examples/WEB-INF/classes/sessions/DummyCart.java
+jakarta/tomcat/examples/WEB-INF/classes/SessionExample.java
+jakarta/tomcat/examples/WEB-INF/classes/CookieExample.class
+jakarta/tomcat/examples/WEB-INF/classes/SessionExample.class
+jakarta/tomcat/examples/WEB-INF/classes/CookieExample.java
+jakarta/tomcat/examples/WEB-INF/classes/HelloWorldExample.class
+jakarta/tomcat/examples/WEB-INF/classes/HelloWorldExample.java
+jakarta/tomcat/examples/WEB-INF/web.xml
+jakarta/tomcat/examples/WEB-INF/jsp/applet/Clock2.java
+jakarta/tomcat/examples/WEB-INF/jsp/example-taglib.tld
+jakarta/tomcat/examples/images/execute.gif
+jakarta/tomcat/examples/images/code.gif
+jakarta/tomcat/examples/images/return.gif
+jakarta/tomcat/webpages/docs/api/javax/servlet/package-summary.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/class-use/HttpJspPage.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/class-use/PageContext.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/class-use/JspPage.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/class-use/JspException.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/class-use/JspFactory.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/class-use/JspEngineInfo.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/class-use/JspWriter.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/class-use/JspError.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use/TagData.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use/Tag.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use/TagInfo.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use/BodyTag.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use/BodyJspWriter.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use/TagAttributeInfo.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use/BodyContent.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use/BodyTagSupport.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use/TagLibraryInfo.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use/TagSupport.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use/VariableInfo.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use/TagExtraInfo.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/TagSupport.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/BodyJspWriter.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/Tag.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/BodyContent.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/BodyTagSupport.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/package-frame.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/VariableInfo.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/package-tree.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/package-use.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/TagInfo.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/TagData.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/BodyTag.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/package-summary.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/TagAttributeInfo.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/TagExtraInfo.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/TagLibraryInfo.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/package-summary.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/package-tree.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/JspWriter.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/package-use.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/package-frame.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/PageContext.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/JspError.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/JspException.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/JspFactory.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/JspPage.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/JspEngineInfo.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/HttpJspPage.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/http/class-use/Cookie.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/http/class-use/HttpSessionBindingEvent.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/http/class-use/HttpSessionBindingListener.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/http/class-use/HttpServletRequest.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/http/class-use/HttpSessionContext.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/http/class-use/HttpUtils.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/http/class-use/HttpServletResponse.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/http/class-use/HttpServlet.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/http/class-use/HttpSession.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/http/HttpServletResponse.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/http/HttpServletRequest.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/http/Cookie.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/http/HttpServlet.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/http/HttpSession.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/http/package-use.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/http/package-summary.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/http/HttpUtils.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/http/package-tree.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/http/HttpSessionBindingListener.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/http/package-frame.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/http/HttpSessionBindingEvent.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/http/HttpSessionContext.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/class-use/ServletOutputStream.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/class-use/UnavailableException.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/class-use/Servlet.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/class-use/GenericServlet.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/class-use/ServletContext.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/class-use/ServletRequest.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/class-use/RequestDispatcher.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/class-use/ServletConfig.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/class-use/ServletResponse.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/class-use/ServletInputStream.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/class-use/SingleThreadModel.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/class-use/ServletException.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/ServletInputStream.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/RequestDispatcher.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/Servlet.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/package-tree.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/package-use.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/GenericServlet.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/ServletException.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/ServletResponse.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/ServletOutputStream.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/ServletRequest.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/ServletContext.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/SingleThreadModel.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/ServletConfig.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/package-frame.html
+jakarta/tomcat/webpages/docs/api/javax/servlet/UnavailableException.html
+jakarta/tomcat/webpages/docs/api/index.html
+jakarta/tomcat/webpages/docs/api/index-all.html
+jakarta/tomcat/webpages/docs/api/package-list
+jakarta/tomcat/webpages/docs/api/stylesheet.css
+jakarta/tomcat/webpages/docs/api/overview-frame.html
+jakarta/tomcat/webpages/docs/api/overview-tree.html
+jakarta/tomcat/webpages/docs/api/serialized-form.html
+jakarta/tomcat/webpages/docs/api/help-doc.html
+jakarta/tomcat/webpages/docs/api/packages.html
+jakarta/tomcat/webpages/docs/api/allclasses-frame.html
+jakarta/tomcat/webpages/docs/api/deprecated-list.html
+jakarta/tomcat/webpages/docs/api/overview-summary.html
+jakarta/tomcat/webpages/index.html
+jakarta/tomcat/webpages/tomcat.gif
+jakarta/tomcat/webpages/WEB-INF/web.xml
+jakarta/tomcat/webpages/WEB-INF/classes/SnoopServlet.java
+jakarta/tomcat/webpages/WEB-INF/classes/SnoopServlet.class
+jakarta/tomcat/tomcatEnv.bat
+jakarta/tomcat/tomcat.sh
+jakarta/tomcat/tomcat.bat
+jakarta/tomcat/shutdown.sh
+jakarta/tomcat/shutdown.bat
+jakarta/tomcat/startup.sh
+jakarta/tomcat/startup.bat
+jakarta/tomcat/env.tomcat
+jakarta/tomcat/ant
+jakarta/tomcat/server.xml
+jakarta/tomcat/README
+jakarta/tomcat/FAQ
+jakarta/tomcat/webserver.jar
+jakarta/tomcat/Tomcat+Apache-HOWTO
+@unexec rm -rf %D/jakarta/tomcat/work
+@unexec rm -rf %D/jakarta/tomcat/work
+@dirrm jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use
+@dirrm jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/tagext
+@dirrm jakarta/tomcat/webpages/docs/api/javax/servlet/jsp/class-use
+@dirrm jakarta/tomcat/webpages/docs/api/javax/servlet/jsp
+@dirrm jakarta/tomcat/webpages/docs/api/javax/servlet/http/class-use
+@dirrm jakarta/tomcat/webpages/docs/api/javax/servlet/http
+@dirrm jakarta/tomcat/webpages/docs/api/javax/servlet/class-use
+@dirrm jakarta/tomcat/webpages/docs/api/javax/servlet
+@dirrm jakarta/tomcat/webpages/docs/api/javax
+@dirrm jakarta/tomcat/webpages/docs/api
+@dirrm jakarta/tomcat/webpages/docs
+@dirrm jakarta/tomcat/webpages/WEB-INF/classes
+@dirrm jakarta/tomcat/webpages/WEB-INF
+@dirrm jakarta/tomcat/webpages
+@dirrm jakarta/tomcat/src/javax/servlet/jsp/tagext
+@dirrm jakarta/tomcat/src/javax/servlet/jsp
+@dirrm jakarta/tomcat/src/javax/servlet/http
+@dirrm jakarta/tomcat/src/javax/servlet
+@dirrm jakarta/tomcat/src/javax
+@dirrm jakarta/tomcat/src
+@dirrm jakarta/tomcat/lib
+@dirrm jakarta/tomcat/examples/servlets
+@dirrm jakarta/tomcat/examples/jsp/snp
+@dirrm jakarta/tomcat/examples/jsp/simpletag
+@dirrm jakarta/tomcat/examples/jsp/sessions
+@dirrm jakarta/tomcat/examples/jsp/plugin/applet
+@dirrm jakarta/tomcat/examples/jsp/plugin
+@dirrm jakarta/tomcat/examples/jsp/num
+@dirrm jakarta/tomcat/examples/jsp/jsptoserv
+@dirrm jakarta/tomcat/examples/jsp/include
+@dirrm jakarta/tomcat/examples/jsp/forward
+@dirrm jakarta/tomcat/examples/jsp/error
+@dirrm jakarta/tomcat/examples/jsp/dates
+@dirrm jakarta/tomcat/examples/jsp/colors
+@dirrm jakarta/tomcat/examples/jsp/checkbox
+@dirrm jakarta/tomcat/examples/jsp/cal
+@dirrm jakarta/tomcat/examples/jsp
+@dirrm jakarta/tomcat/examples/images
+@dirrm jakarta/tomcat/examples/WEB-INF/jsp/applet
+@dirrm jakarta/tomcat/examples/WEB-INF/jsp
+@dirrm jakarta/tomcat/examples/WEB-INF/classes/sessions
+@dirrm jakarta/tomcat/examples/WEB-INF/classes/num
+@dirrm jakarta/tomcat/examples/WEB-INF/classes/examples
+@dirrm jakarta/tomcat/examples/WEB-INF/classes/error
+@dirrm jakarta/tomcat/examples/WEB-INF/classes/dates
+@dirrm jakarta/tomcat/examples/WEB-INF/classes/colors
+@dirrm jakarta/tomcat/examples/WEB-INF/classes/checkbox
+@dirrm jakarta/tomcat/examples/WEB-INF/classes/cal
+@dirrm jakarta/tomcat/examples/WEB-INF/classes
+@dirrm jakarta/tomcat/examples/WEB-INF
+@dirrm jakarta/tomcat/examples
+@dirrm jakarta/tomcat/etc
+@dirrm jakarta/tomcat
