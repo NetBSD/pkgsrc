@@ -1,14 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2002/08/07 12:53:06 veego Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/09/29 16:18:50 wiz Exp $
 man/man1/mplayer.1
-share/mplayer/DOCS/French/bugreports.html
-share/mplayer/DOCS/French/cd-dvd.html
-share/mplayer/DOCS/French/codecs.html
-share/mplayer/DOCS/French/documentation.html
-share/mplayer/DOCS/French/exemple.conf
-share/mplayer/DOCS/French/faq.html
-share/mplayer/DOCS/French/skin-fr.html
-share/mplayer/DOCS/French/sound.html
-share/mplayer/DOCS/French/video.html
 share/mplayer/DOCS/German/bugreports.html
 share/mplayer/DOCS/German/cd-dvd.html
 share/mplayer/DOCS/German/codecs.html
@@ -72,6 +63,7 @@ share/mplayer/DOCS/formats.html
 share/mplayer/DOCS/mplayer.1
 share/mplayer/DOCS/skin-en.html
 share/mplayer/DOCS/sound.html
+share/mplayer/DOCS/tech/MAINTAINERS
 share/mplayer/DOCS/tech/TODO
 share/mplayer/DOCS/tech/codec-devel.txt
 share/mplayer/DOCS/tech/codecs.conf.txt
@@ -84,8 +76,10 @@ share/mplayer/DOCS/tech/general.txt
 share/mplayer/DOCS/tech/hwac3.txt
 share/mplayer/DOCS/tech/libao2.txt
 share/mplayer/DOCS/tech/libavc-options.txt
+share/mplayer/DOCS/tech/libmpcodecs.txt
 share/mplayer/DOCS/tech/libvo.txt
 share/mplayer/DOCS/tech/libvo2.txt
+share/mplayer/DOCS/tech/manpage.txt
 share/mplayer/DOCS/tech/mpsub.sub
 share/mplayer/DOCS/tech/osd.txt
 share/mplayer/DOCS/tech/patches.txt
@@ -105,3 +99,4 @@ share/mplayer/DOCS/users_against_developers.html
 share/mplayer/DOCS/video.html
 share/mplayer/codecs.conf
 share/mplayer/input.conf
+@comment dirrm's are created automatically from the Makefile
