@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2000/09/03 13:07:40 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2000/09/12 16:45:47 jlam Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
 DISTNAME=	teTeX-src-1.0.7
-PKGNAME=	teTeX-bin-1.0.7
+PKGNAME=	teTeX-bin-1.0.7nb1
 WRKSRC=		${WRKDIR}/teTeX-1.0
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/1.0/distrib/sources/}
@@ -16,6 +16,7 @@ DEPENDS+=	teTeX-share-1.0.*:../teTeX-share
 DEPENDS+=	dialog>=0.6z:../../misc/dialog
 DEPENDS+=	libwww>=5.2.8:../../www/libwww
 DEPENDS+=	png>=1.0.6:../../graphics/png
+DEPENDS+=	texi2html>=1.52:../../textproc/texi2html
 
 CONFLICTS+=	omega-*
 
