@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/04/06 20:10:00 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/01/21 01:35:45 hubertf Exp $
 bin/upclient
 etc/rc.d/upclient.sh
-share/doc/upclient/CHANGES
+share/doc/upclient/AUTHORS
 share/doc/upclient/COPYING
+share/doc/upclient/HISTORY
 share/doc/upclient/README
-etc/upclient.conf.example
