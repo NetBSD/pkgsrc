@@ -1,19 +1,25 @@
-# $NetBSD: Makefile,v 1.23 2001/03/31 09:21:16 itojun Exp $
+# $NetBSD: Makefile,v 1.24 2001/05/01 00:31:24 kei Exp $
+#
 
 DISTNAME=	w3m-0.2.1
+PKGNAME=	w3m-0.2.1.0.19
 CATEGORIES=	www
 MASTER_SITES=	ftp://ei5nazha.yz.yamagata-u.ac.jp/w3m/
 
-MAINTAINER=	tech-pkg-ja@jp.netbsd.org
-HOMEPAGE=	http://ei5nazha.yz.yamagata-u.ac.jp/~aito/w3m/
-COMMENT=	Terminal-based WWW browser with HTML tables and frames support
+PATCH_SITES=	http://www2u.biglobe.ne.jp/~hsaka/w3m/patch/
+PATCHFILES=	w3m-0.2.1-m17n-0.19.patch.gz
+PATCH_DIST_STRIP= -p1
 
-DEPENDS=	boehm-gc-5.*:../../devel/boehm-gc
+MAINTAINER=	kei@netbsd.org
+HOMEPAGE=	http://www2u.biglobe.ne.jp/~hsaka/w3m/
+COMMENT=	multilingualized version of a pager/text-based browser w3m
 
-HELPDIR=	share/doc/w3m
-HELPERDIR=	lib/w3m
+DEPENDS=	boehm-gc>=5.3:../../devel/boehm-gc
 
-HAS_CONFIGURE=	yes
+CONFLICTS+=	w3m-m17n-*
+
+HELPDIR=        share/doc/w3m
+HELPERDIR=      lib/w3m
 
 # configure will check IPv6 readiness automatically
 BUILD_DEFS+=	USE_INET6
@@ -25,75 +31,82 @@ EXTRACT_ELEMENTS=	-c ${DISTNAME}/gc/\*
 EXTRACT_ELEMENTS=	--exclude ${DISTNAME}/gc/\*
 .endif
 
-# Set this to NO for ISO-8859-1 support (exclusive to Japanese).
-W3M_USE_JAPANESE?=	YES
-# Set this to YES if you want to use Japanese symbol/messages.
-W3M_USE_JAPANESE_SYMBOL?=NO
+# Always enable multiligualization.
+W3M_USE_M17N=			YES
+# Set this to YES if you want unicode support.
+W3M_USE_UNICODE?=		YES
+# set this to YES to use Japanese messages.
+W3M_USE_JAPANESE_MESSAGES?=	NO
 # Set this to YES to use lynx like key binding.
-W3M_USE_LYNX_KEY?=	NO
+W3M_USE_LYNX_KEY?=		NO
 # set this to YES if you want HTTPS support.
-W3M_USE_SSL?=		YES
+W3M_USE_SSL?=			YES
 # set this to YES if you want HTTP cookie support.
-W3M_USE_COOKIE?=	YES
+W3M_USE_COOKIE?=        	YES
 # set this to YES if you want mouse support.
-W3M_USE_MOUSE?=		NO
+W3M_USE_MOUSE?=			YES
 # set this to YES if you want color support.
-W3M_USE_COLOR?=		NO
+W3M_USE_COLOR?=			YES
 
-.if defined(W3M_USE_COLOR) && ${W3M_USE_COLOR} == YES
+CONFIGURE_ENV+=	use_m17n=y
+.if ${W3M_USE_UNICODE} == YES
+CONFIGURE_ENV+=	use_unicode=y
+.else
+CONFIGURE_ENV+=	use_unicode=n
+.endif
+CONFIGURE_ENV+=	charset=ISO-2022-JP-2
+.if ${W3M_USE_JAPANESE_MESSAGES} == YES
+CONFIGURE_ENV+=	lang=ja
+HELP_LANG=			_ja
+.else
+CONFIGURE_ENV+=	lang=en
+HELP_LANG=			_en
+.endif
+.if ${W3M_USE_COLOR} == YES
 CONFIGURE_ENV+=	use_color=y
 .else
 CONFIGURE_ENV+=	use_color=n
 .endif
-.if defined(W3M_USE_MOUSE) && ${W3M_USE_MOUSE} == YES
+.if ${W3M_USE_MOUSE} == YES
 CONFIGURE_ENV+=	use_mouse=y
 .else
 CONFIGURE_ENV+=	use_mouse=n
 .endif
-.if defined(W3M_USE_COOKIE) && ${W3M_USE_COOKIE} == YES
+.if ${W3M_USE_COOKIE} == YES
 CONFIGURE_ENV+=	use_cookie=y
 .else
 CONFIGURE_ENV+=	use_cookie=n
 .endif
-.if defined(W3M_USE_SSL) && ${W3M_USE_SSL} == YES
-USE_SSL=	YES
+.if ${W3M_USE_SSL} == YES
+USE_SSL=			YES
 CONFIGURE_ENV+=	use_ssl=y use_ssl_verify=n
 .else
 CONFIGURE_ENV+=	use_ssl=n use_ssl_verify=n
 .endif
-.if defined(W3M_USE_JAPANESE) && ${W3M_USE_JAPANESE} == YES
-CONFIGURE_ENV+=	def_lg=1
-CONFIGURE_ENV+=	def_dcode=n
-.else
-CONFIGURE_ENV+=	def_lg=2
-.endif
-.if defined(W3M_USE_JAPANESE_SYMBOL) && ${W3M_USE_JAPANESE_SYMBOL} == YES
-CONFIGURE_ENV+=	kanji_symbols=y
-HELP_LANG=	_ja
-.else
-CONFIGURE_ENV+=	kanji_symbols=n
-HELP_LANG=	_en
-.endif
-.if defined(W3M_USE_LYNX_KEY) && ${W3M_USE_LYNX_KEY} == YES
+.if ${W3M_USE_LYNX_KEY} == YES
 CONFIGURE_ENV+=	lynx_key=y
-HELP_W3M=	-lynx
+HELP_W3M=			-lynx
 .else
 CONFIGURE_ENV+=	lynx_key=n
-HELP_W3M=	-w3m
+HELP_W3M=			-w3m
 .endif
-CONFIGURE_ENV+=	def_bindir=${LOCALBASE}/bin
-CONFIGURE_ENV+=	def_libdir=${LOCALBASE}/${HELPERDIR}
-CONFIGURE_ENV+=	def_helpdir=${LOCALBASE}/${HELPDIR}
-CONFIGURE_ENV+=	use_menu=y use_matrix=n
-CONFIGURE_ENV+=	ded=vi dmail=Mail dbrowser=
-CONFIGURE_ENV+=	dcc="${CC}" dtermlib="-ltermcap"
-CONFIGURE_ENV+=	dldflags="-Wl,-rpath,${LOCALBASE}/lib -L${LOCALBASE}/lib"
-CONFIGURE_ENV+=	dmodel=6
-CONFIGURE_ENV+=	LOCALBASE="${LOCALBASE}"
+CONFIGURE_ENV+= def_bindir=${LOCALBASE}/bin
+CONFIGURE_ENV+= def_libdir=${LOCALBASE}/${HELPERDIR}
+CONFIGURE_ENV+= def_helpdir=${LOCALBASE}/${HELPDIR}
+CONFIGURE_ENV+= use_menu=y use_matrix=n ansi_color=y
+CONFIGURE_ENV+= ded=vi dmail=Mail dbrowser=
+CONFIGURE_ENV+= dcc="${CC}" dtermlib="-ltermcap"
+CONFIGURE_ENV+= dldflags="-Wl,-rpath,${LOCALBASE}/lib -L${LOCALBASE}/lib"
+CONFIGURE_ENV+= dmodel=6
+CONFIGURE_ENV+= LOCALBASE="${LOCALBASE}"
+CONFIGURE_ARGS+= -suffix=
 
 post-extract:
 	@(cd ${WRKSRC}/doc; ${RM} -fr CVS)
 	@(cd ${WRKSRC}/doc-jp; ${RM} -fr CVS)
+
+post-patch:
+	${FIND} ${WRKSRC} -type f -name '*.orig'|xargs ${RM}
 
 # do not look at previous configuration
 do-configure:
