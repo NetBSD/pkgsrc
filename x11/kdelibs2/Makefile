@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/07/05 05:53:53 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/07/05 17:31:27 jlam Exp $
 #
 
 DISTNAME=	kdelibs-2.1
@@ -19,7 +19,7 @@ LTCONFIG_OVERRIDE+=	${WRKSRC}/ksgmltools/ltconfig
 .include "../../devel/pcre/buildlink.mk"
 .endif
 
-CONFIGURE_ENV+=		USER_LDFLAGS="${LDFLAGS}"
+CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_DIR}"
 LIBS+=			-Wl,--export-dynamic
 
 MKDIRS=	share/kde/icons/locolor/32x32/actions/kde \
@@ -28,6 +28,25 @@ MKDIRS=	share/kde/icons/locolor/32x32/actions/kde \
 	share/kde/icons/locolor/22x22/actions/kde \
 	share/kde/icons/hicolor/22x22/mimetypes \
 	share/kde/icons/hicolor/22x22/filesystems
+
+KDE_RPATH_MAKEFILES=	dcop/Makefile.in
+
+# Add a missing $(KDE_RPATH) to the LDFLAGS setting in several Makefiles.
+fix:
+	@cd ${WRKSRC};							\
+	for file in ${KDE_RPATH_MAKEFILES:S/.in$//}; do			\
+		${SED}	-e "s,\(^LDFLAGS.*\),\1 \$$(KDE_RPATH),"	\
+			$${file} > $${file}.add-kde-rpath;		\
+		${MV} -f $${file}.add-kde-rpath $${file};		\
+	done
+
+post-patch:
+	@cd ${WRKSRC};							\
+	for file in ${KDE_RPATH_MAKEFILES}; do				\
+		${SED}	-e "s,\(^LDFLAGS.*\),\1 \$$(KDE_RPATH),"	\
+			$${file} > $${file}.add-kde-rpath;		\
+		${MV} -f $${file}.add-kde-rpath $${file};		\
+	done
 
 post-install:
 	for d in ${MKDIRS}; do \
