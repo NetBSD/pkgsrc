@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/11 13:53:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:01:13 zuntum Exp $
 bin/xfinans
 share/examples/Xfinans/hyperhelp
 share/examples/Xfinans/hyperhelp.index
