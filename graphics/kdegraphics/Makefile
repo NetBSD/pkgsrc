@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.13 1999/02/15 21:41:32 tron Exp $
+# $NetBSD: Makefile,v 1.14 1999/02/18 23:38:45 tron Exp $
 #
 
-DISTNAME=	kdegraphics-1.0
+DISTNAME=	kdegraphics-1.1
 CATEGORIES=	graphics kde
-MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/1.0/distribution/tar/generic/source/ \
-		ftp://ftp.de.kde.org/pub/kde/stable/1.0/distribution/tar/generic/source/
+MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/1.1/distribution/tar/generic/source/bz2/ \
+		ftp://ftp.de.kde.org/pub/kde/stable/1.1/distribution/tar/generic/source/bz2/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.kde.org/
 
-DEPENDS+=	kdebase-1.0:../../x11/kdebase
+DEPENDS+=	giflib-3.0:../../graphics/giflib
+DEPENDS+=	kdebase-1.1:../../x11/kdebase
 
-CONFLICTS=	kdegraphics-4.1b
-
-IGNORE=		"needs to be updated"
+CONFLICTS=	kdegraphics-*
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
