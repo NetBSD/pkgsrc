@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2002/10/01 13:25:35 markd Exp $
+# $NetBSD: Makefile.common,v 1.10 2002/10/09 20:59:42 jlam Exp $
 #
 DISTNAME=		qt-x11-free-${QTVERSION}
 CATEGORIES=		x11
@@ -63,15 +63,15 @@ post-patch:
 		-e 's:@LOCALBASE@:${LOCALBASE}:g' \
 		-e 's:@X11BASE@:${X11BASE}:g' \
 		-e 's:@X11PREFIX@:${X11PREFIX}:g' \
-		-e 's:@CC@:${CC}:g' \
-		-e 's:@CXX@:${CXX}:g' \
+		-e 's:@LIBTOOL@:${BUILDLINK_LIBTOOL:T}:g' \
+		-e 's:@CC@:${BUILDLINK_CC:T}:g' \
+		-e 's:@CXX@:${BUILDLINK_CXX:T}:g' \
 		-e 's:@LDFLAGS@:${LDFLAGS}:g' \
 		-e 's:@CFLAGS@:${CFLAGS}:g' \
 		-e 's:@CXXFLAGS@:${CXXFLAGS}:g' \
 		-e 's:@SYS_LIBS@:${SYS_LIBS}:g' \
 		-e 's:@LEX@:${LEX}:g' \
 		-e 's:@YACC@:${YACC}:g' \
-		-e 's:@LIBTOOL@:${PKGLIBTOOL}:g' \
 		${FILESDIR}/qmake.conf > ${WRKSRC}/qmake.conf
 	for dir in ${WRKSRC}/mkspecs/*; do \
 		${CP} ${WRKSRC}/qmake.conf $${dir}; \
