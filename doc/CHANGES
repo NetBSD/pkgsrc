@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3593 2003/09/30 14:34:35 adam Exp $
+$NetBSD: CHANGES,v 1.3594 2003/09/30 16:10:29 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4028,3 +4028,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added ispell-polski-20021127 [adam 2003-09-30]
 	Updated rocksndiamonds to 3.0.5 [adam 2003-09-30]
 	Updated rocksndiamonds-sdl to 3.0.5 [adam 2003-09-30]
+	Updated pkglint to 3.62 [abs 2003-09-30]
+
