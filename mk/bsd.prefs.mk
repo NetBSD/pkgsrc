@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.166 2004/09/21 15:01:39 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.167 2004/09/27 12:00:56 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -212,13 +212,18 @@ OBJECT_FMT?=	a.out
 .  endif
 .endif
 
+# Calculate depth
+.if exists(${.CURDIR}/../../mk/bsd.pkg.mk)
+PKGSRC_TOPDIR=	${.CURDIR}/../..
+.elif exists(${.CURDIR}/../mk/bsd.pkg.mk)
+PKGSRC_TOPDIR=	${.CURDIR}/..
+.elif exists(${.CURDIR}/mk/bsd.pkg.mk)
+PKGSRC_TOPDIR=	${.CURDIR}
+.endif
+
 # include the defaults file
-.if exists(${.CURDIR}/../../mk/bsd.pkg.defaults.mk)
-.  include "${.CURDIR}/../../mk/bsd.pkg.defaults.mk"
-.elif exists(${.CURDIR}/../mk/bsd.pkg.defaults.mk)
-.  include "${.CURDIR}/../mk/bsd.pkg.defaults.mk"
-.elif exists(${.CURDIR}/mk/bsd.pkg.defaults.mk)
-.  include "${.CURDIR}/mk/bsd.pkg.defaults.mk"
+.if exists(${PKGSRC_TOPDIR}/mk/bsd.pkg.defaults.mk)
+.  include "${PKGSRC_TOPDIR}/mk/bsd.pkg.defaults.mk"
 .endif
 
 .if ${OPSYS} == "NetBSD"
@@ -252,18 +257,10 @@ SHAREMODE?=		${DOCMODE}
 
 # Load the OS-specific definitions for program variables.  Default to loading
 # the NetBSD ones if an OS-specific file doesn't exist.
-.if exists(${.CURDIR}/../../mk/defs.${OPSYS}.mk)
-.  include "${.CURDIR}/../../mk/defs.${OPSYS}.mk"
-.elif exists(${.CURDIR}/../mk/defs.${OPSYS}.mk)
-.  include "${.CURDIR}/../mk/defs.${OPSYS}.mk"
-.elif exists(${.CURDIR}/mk/defs.${OPSYS}.mk)
-.  include "${.CURDIR}/mk/defs.${OPSYS}.mk"
-.elif exists(${.CURDIR}/../../mk/defs.NetBSD.mk)
-.  include "${.CURDIR}/../../mk/defs.NetBSD.mk"
-.elif exists(${.CURDIR}/../mk/defs.NetBSD.mk)
-.  include "${.CURDIR}/../mk/defs.NetBSD.mk"
-.elif exists(${.CURDIR}/mk/defs.NetBSD.mk)
-.  include "${.CURDIR}/mk/defs.NetBSD.mk"
+.if exists(${PKGSRC_TOPDIR}/mk/defs.${OPSYS}.mk)
+.  include "${PKGSRC_TOPDIR}/mk/defs.${OPSYS}.mk"
+.elif exists(${PKGSRC_TOPDIR}/mk/defs.NetBSD.mk)
+.  include "${PKGSRC_TOPDIR}/mk/defs.NetBSD.mk"
 .endif
 
 PKGDIRMODE?=		755
