@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/07/29 04:50:58 xtraeme Exp $
+$NetBSD: patch-ac,v 1.2 2004/11/15 11:15:48 hira Exp $
 
---- config/cf/NetBSD.cf.in.orig	2004-03-03 07:53:38.000000000 +0000
-+++ config/cf/NetBSD.cf.in	2004-03-03 07:54:59.000000000 +0000
-@@ -143,7 +143,7 @@
+--- config/cf/NetBSD.cf.in.orig	2004-08-15 09:03:36.000000000 +0900
++++ config/cf/NetBSD.cf.in	2004-11-03 16:54:50.000000000 +0900
+@@ -146,7 +146,7 @@
  #define MkdirHierCmd		mkdir -p
  
  #undef CcCmd
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/07/29 04:50:58 xtraeme Exp $
  #ifndef DefaultCCOptions
  #if defined(UseInstalled)
  #define DefaultCCOptions 	/**/
-@@ -159,7 +159,7 @@
+@@ -162,7 +162,7 @@
  #endif
  #endif
  
@@ -20,7 +20,16 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/07/29 04:50:58 xtraeme Exp $
  #define StandardCppOptions	-traditional
  #define StandardCppDefines	/**/
  #define PreProcessCmd   	CcCmd -E
-@@ -208,13 +208,7 @@
+@@ -191,7 +191,7 @@
+  * Disabled for NetBSD/vax until I figure out the scheme. --CS 
+  */
+ #if ((OSMajorVersion > 0) && defined(i386Architecture)) || \
+-    defined(PpcArchitecture)
++    defined(PpcArchitecture) || defined(AMD64Architecture)
+ #  ifndef DoLoadableServer
+ #  define DoLoadableServer	YES
+ #  endif
+@@ -211,13 +211,7 @@
  #define HasWeakSymbols		UseElfFormat 
  
  #ifdef i386Architecture
@@ -35,7 +44,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/07/29 04:50:58 xtraeme Exp $
  # if OSMajorVersion < 1
  #  define ServerOSDefines	XFree86ServerOSDefines -DXNO_SYSCONF
  # else
-@@ -224,7 +218,7 @@
+@@ -227,7 +221,7 @@
  #  define ServerExtraSysLibs	-li386
  # endif
  #else
@@ -44,3 +53,53 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/07/29 04:50:58 xtraeme Exp $
  # if defined(SparcArchitecture)
  #  define ServerOSDefines 	-DDDXOSINIT
  # elif defined(AlphaArchitecture)
+@@ -236,11 +230,17 @@
+ #   define ServerOSDefines	XFree86ServerOSDefines -DDDXTIME
+ # elif defined(PpcArchitecture)
+ #  define ServerOSDefines	XFree86ServerOSDefines -DDDXTIME -DDDXOSINIT
++# elif defined(AMD64Architecture)
++#  undef OptimizedCDebugFlags
++#  define OptimizedCDebugFlags -O2
++#  define ServerOSDefines 	XFree86ServerOSDefines
+ # else
+ #  define ServerOSDefines 	/**/
+ # endif
+ # if defined(AlphaArchitecture)
+ #  define ServerExtraSysLibs	-lalpha
++# elif defined(AMD64Architecture)
++#  define ServerExtraSysLibs   -lx86_64
+ # else
+ #  define ServerExtraSysLibs	/**/
+ # endif
+@@ -280,6 +280,11 @@
+ #  ifndef XFree86ConsoleDefines
+ #    define XFree86ConsoleDefines	-DWSCONS_SUPPORT
+ #  endif
++#elif defined(AMD64Architecture)
++# define ServerExtraDefines    GccGasOption XFree86ServerDefines -D_XSERVER64
++#  ifndef XFree86ConsoleDefines
++#    define XFree86ConsoleDefines -DWSCONS_SUPPORT -DPCVT_SUPPORT
++#  endif
+ #else
+ #  define ServerExtraDefines GccGasOption
+ #endif
+@@ -400,6 +405,10 @@
+ # endif /* MTRRBuiltin */
+ #endif /* i386Architecture */
+ 
++#if defined(AMD64Architecture)
++# define HasMTRRBuiltin		YES
++#endif
++
+ /*
+  * agpgart support (NetBSD 1.5Y and up)
+  */
+@@ -588,7 +597,7 @@
+ # define BuildXInputLib          YES
+ #endif
+ 
+-#if defined(i386Architecture) || defined(Arm32Architecture) || defined(AlphaArchitecture) || defined(PpcArchitecture)
++#if defined(i386Architecture) || defined(Arm32Architecture) || defined(AlphaArchitecture) || defined(PpcArchitecture) || defined(AMD64Architecture)
+ # include <xorg.cf>
+ #endif
+ 

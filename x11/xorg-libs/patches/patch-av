@@ -1,0 +1,12 @@
+$NetBSD: patch-av,v 1.1 2004/11/15 11:15:49 hira Exp $
+
+--- config/cf/xorg.cf.orig	2004-11-14 02:17:40.000000000 +0900
++++ config/cf/xorg.cf	2004-11-14 02:17:44.000000000 +0900
+@@ -1287,6 +1287,7 @@
+ #ifndef BuildScanpci
+ # if SystemV || SystemV4 || \
+     (defined(LinuxArchitecture) && !defined(Mc68020Architecture)) || \
++    (defined(NetBSDArchitecture) && defined(AMD64Architecture)) || \
+     defined(i386BsdArchitecture) || defined(LynxOSArchitecture) || \
+     defined(OS2Architecture) || defined(GNUMachArchitecture)
+ #   define BuildScanpci		YES
