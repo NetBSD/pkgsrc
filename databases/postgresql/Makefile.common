@@ -1,32 +1,36 @@
-# $NetBSD: Makefile.common,v 1.3 2000/05/24 09:11:24 rh Exp $
+# $NetBSD: Makefile.common,v 1.4 2000/07/14 04:44:11 jlam Exp $
 
 DISTNAME=		postgresql-${PG_VERS}
-PG_VERS=		7.0
+PG_VERS=		7.0.2
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 CATEGORIES=		databases
-MASTER_SITES=		ftp://ftp.PostgreSQL.org/pub/v7.0/ \
-			ftp://ftp.de.postgresql.org/v7.0/ \
-			ftp://ch.postgresql.org/mirror/postgresql/pub/v7.0/ \
-			ftp://gd.tuwien.ac.at/db/www.postgresql.org/pub/v7.0/ \
-			ftp://looking-glass.usask.ca/pub/postgresql/v7.0/ \
-			ftp://ftp.sunsite.auc.dk/mirrors/www.postgresql.org/pub/v7.0/ \
-			ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/v7.0/
+MASTER_SITES=		ftp://ftp.PostgreSQL.org/pub/v${PG_VERS}/ \
+			ftp://ftp.de.postgresql.org/v${PG_VERS}/ \
+			ftp://ch.postgresql.org/mirror/postgresql/pub/v${PG_VERS}/ \
+			ftp://gd.tuwien.ac.at/db/www.postgresql.org/pub/v${PG_VERS}/ \
+			ftp://looking-glass.usask.ca/pub/postgresql/v${PG_VERS}/ \
+			ftp://ftp.sunsite.auc.dk/mirrors/www.postgresql.org/pub/v${PG_VERS}/ \
+			ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/v${PG_VERS}/
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.PostgreSQL.ORG/
 
-BUILD_DEPENDS+=		${LOCALBASE}/bin/autoreconf:../../devel/autoconf
+BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
 
 USE_GMAKE=		# defined
 GNU_CONFIGURE=		# defined
+#
+# We don't USE_LIBTOOL for the shared libs since libtool doesn't seem to
+# support inter-library dependencies across all platforms yet.
 
 FILESDIR=		${.CURDIR}/../../databases/postgresql/files
 PATCHDIR=		${.CURDIR}/../../databases/postgresql/patches
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=	--with-template="${LOWER_OPSYS}" \
-			--enable-locale
+CONFIGURE_ARGS+=	--with-template="${LOWER_OPSYS}"
+CONFIGURE_ARGS+=	--with-setproctitle
+CONFIGURE_ARGS+=	--enable-locale
 
 # PG_MB_ENCODING may be set to any of:
 #
@@ -45,6 +49,6 @@ post-extract:
 	${CP} ${FILESDIR}/Makefile.custom ${WRKSRC}
 
 pre-configure:
-	cd ${WRKSRC}; ${LOCALBASE}/bin/autoreconf
+	cd ${WRKSRC} && autoreconf
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2000/05/29 15:29:11 fredb Exp $
+# $NetBSD: Makefile,v 1.51 2000/07/14 04:44:11 jlam Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 #
 
@@ -33,9 +33,8 @@ BUILD_DEFS=		PGUSER PGROUP
 PLIST_SUBST=		PGUSER=${PGUSER}
 
 CONFIGURE_ARGS+=	--without-perl --without-odbc --without-tcl
+CONFIGURE_ARGS+=	--with-includes="${LOCALBASE}/include"
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
-
-CPPFLAGS+=		-I${LOCALBASE}/include	# readline.h
 
 pre-install:
 	@case "X${PGUSER}" in						\
@@ -50,7 +49,8 @@ pre-install:
 		;;							\
 	esac
 
-	${SED}	-e 's|@PGHOME@|${PGHOME}|g' \
+	${SED}	-e 's|@PGUSER@|${PGUSER}|g' \
+		-e 's|@PGHOME@|${PGHOME}|g' \
 		< ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 	${SED}	-e 's|@PGUSER@|${PGUSER}|g' \
 		-e 's|@PGGROUP@|${PGGROUP}|g' \
@@ -90,9 +90,8 @@ post-install:
 		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} all
 	cd ${WRKDIR}/${DISTNAME}/doc; ${INSTALL_DATA} \
 		FAQ FAQ_DEV README.Charsets README.fsync README.inet \
-		README.locale README.mb README.mb.jp TODO admin.ps.gz \
-		bug.template internals.ps programmer.ps.gz tutorial.ps.gz \
-		user.ps.gz \
+		README.locale README.mb README.mb.jp TODO \
+		bug.template internals.ps \
 		${PREFIX}/share/doc/postgresql
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/postgresql
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/html/postgresql
