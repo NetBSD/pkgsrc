@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1.1.1 2001/12/17 14:34:17 tron Exp $
+# $NetBSD: INSTALL,v 1.2 2001/12/17 14:47:02 tron Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -20,6 +20,10 @@ PRE-INSTALL)
 	;;
 
 POST-INSTALL)
+	cd @PREFIX@/lib/X11/etc
+	TERMINFO=@LOCALBASE@/share/lib/terminfo
+	export TERMINFO
+	/usr/5bin/tic xterm.terminfo
 	;;
 
 DEINSTALL)
