@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: gld.sh,v 1.2 2004/11/29 15:46:25 xtraeme Exp $
+# $NetBSD: gld.sh,v 1.3 2004/11/29 16:17:22 xtraeme Exp $
 #
 
 # PROVIDE: gld
@@ -15,7 +15,7 @@ command="@PREFIX@/bin/${name}"
 required_files="@PKG_SYSCONFDIR@/$name.conf"
 pidfile="@VARBASE@/run/${name}.pid"
 
-if [ "$1" != "stop" ]; then
+if [ "$1" != "stop" -o "$1" != "status" ]; then
 	echo $(check_process $command) > $pidfile
 fi
 
