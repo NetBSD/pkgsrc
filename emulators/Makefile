@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 1999/05/17 22:14:26 tron Exp $
+# $NetBSD: Makefile,v 1.23 1999/05/17 23:07:24 tron Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/31 07:23:58 max Exp
 #
 
@@ -14,7 +14,6 @@
 #    SUBDIR += hfs
 #    SUBDIR += ines
    SUBDIR += linux_lib
-   SUBDIR += linux_SuSE
 #    SUBDIR += macutils
 #    SUBDIR += mastergear
 #    SUBDIR += mtools
