@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1417 2004/02/24 19:40:38 snj Exp $
+NetBSD: TODO,v 1.1417 2004/02/24 19:40:38 snj Exp $
 
 Suggested new packages
 ======================
@@ -124,6 +124,7 @@ Suggested package updates
 	o TeXmacs-1.0.3.3
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
+	o afio-2.5
 	o amanda-2.4.4p1
 	o anjuta-1.2.0 [cube]
 	o ap-python-2.7.10
