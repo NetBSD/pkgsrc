@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.module,v 1.14 2001/12/03 08:31:05 jlam Exp $
+# $NetBSD: Makefile.module,v 1.15 2002/03/01 22:51:42 jlam Exp $
 #
 # This Makefile is provided to ease creating PHP4 packages for the extension
 # modules distributed in the PHP4 sources.
@@ -9,18 +9,18 @@
 
 .include "../../www/php4/Makefile.common"
 
-PKGNAME=		php-${MODNAME}-${PHP_BASE_VERS}
+PKGNAME?=		php-${MODNAME}-${PHP_BASE_VERS}
 PKGREVISION?=		# empty
 
 BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 DEPENDS+=		php>=${PHP_BASE_VERS}:../../www/php4
 
-PKGMODNAME=		${MODNAME:S/-/_/}
-MODULESDIR=		${WRKSRC}/modules
+PKGMODNAME?=		${MODNAME:S/-/_/}
+MODULESDIR?=		${WRKSRC}/modules
 PLIST_SUBST+=		MODNAME=${PKGMODNAME}
 
-EXTRACT_ELEMENTS=	${DISTNAME}/ext/${PKGMODNAME}
-WRKSRC=			${WRKDIR}/${EXTRACT_ELEMENTS}
+EXTRACT_ELEMENTS?=	${DISTNAME}/ext/${PKGMODNAME}
+WRKSRC?=		${WRKDIR}/${EXTRACT_ELEMENTS}
 
 PHPIZE?=		${BUILDLINK_PREFIX.php4}/bin/phpize
 
