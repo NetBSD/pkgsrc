@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/11/15 01:18:39 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/11/24 22:23:12 seb Exp $
 #
 
 DISTNAME=	tct-1.09
@@ -11,6 +11,7 @@ COMMENT=	programs to aid post-mortem after a break-in
 
 DEPENDS+=	p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 
+USE_BUILDLINK2=	yes
 REPLACE_PERL=	bin/grave-robber bin/mactime bin/strip_tct_home
 REPLACE_PERL+=	extras/bdf extras/ils2mac extras/realpath
 REPLACE_PERL+=	lazarus/lazarus
@@ -41,5 +42,5 @@ do-install:
 	${INSTALL_PROGRAM_DIR} ${LOCALBASE}/tct/conf
 	cd ${WRKSRC}/conf && ${INSTALL_DATA} paths.pl *.cf ${LOCALBASE}/tct/conf
 
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
