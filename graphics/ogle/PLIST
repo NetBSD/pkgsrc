@@ -1,0 +1,32 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/12/10 20:48:17 veego Exp $
+bin/ifo_dump
+bin/ogle
+include/ogle/dvd.h
+include/ogle/dvdcontrol.h
+include/ogle/msgevents.h
+include/ogle/dvdevents.h
+lib/ogle/libmsgevents.so.4.0
+lib/ogle/libmsgevents.so.4
+lib/ogle/libmsgevents.so
+lib/ogle/libmsgevents.la
+lib/ogle/libmsgevents.a
+lib/ogle/libdvdcontrol.so.5.0
+lib/ogle/libdvdcontrol.so.5
+lib/ogle/libdvdcontrol.so
+lib/ogle/libdvdcontrol.la
+lib/ogle/libdvdcontrol.a
+lib/ogle/ogle_ctrl
+lib/ogle/ogle_mpeg_vs
+lib/ogle/ogle_vout
+lib/ogle/ogle_mpeg_ps
+lib/ogle/ogle_ac3_p
+lib/ogle/ogle_a52
+lib/ogle/ogle_nav
+lib/ogle/ogle_cli
+man/man1/ogle.1
+man/man5/oglerc.5
+share/ogle/oglerc
+share/ogle/ogle_conf.dtd
+@dirrm share/ogle
+@dirrm include/ogle
+@dirrm lib/ogle
