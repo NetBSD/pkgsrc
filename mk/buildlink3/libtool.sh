@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: libtool.sh,v 1.2 2003/09/02 06:59:59 jlam Exp $
+# $NetBSD: libtool.sh,v 1.3 2003/09/09 09:11:42 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
@@ -69,17 +69,63 @@ case "$1" in
 		*)
 			cachehit=no
 			skipcache=no
+			#
+			# Marshall any group of consecutive arguments into
+			# a single $arg to be checked in the cache and
+			# logic files.
+			#
 			. $marshall
+			#
+			# Check the private cache, and possibly set
+			# skipcache=yes.
+			#
 			. $private_cache
+			#
+			# Check the common cache shared by all of the other
+			# wrappers.
+			#
 			case $skipcache,$cachehit in
 			no,no)	. $cache ;;
 			esac
+			#
+			# If the cache doesn't cover the arg we're
+			# examining, then run it through the
+			# transformations and cache the result.
+			#
 			case $cachehit in
 			no)	. $logic ;;
 			esac
 			;;
 		esac
-		cmd="$cmd $arg"
+		#
+		# Reduce command length by not appending options that we've
+		# already seen to the command.
+		#
+		case $arg in
+		-[DILR]*|-Wl,-R*|-Wl,-*,/*)
+			#
+			# These options are only ever useful the first time
+			# they're given.  All other instances are redundant.
+			#
+			case "$cmd" in
+			*" "$arg|*" "$arg" "*)  ;;
+			*)      cmd="$cmd $arg" ;;
+			esac
+			;;
+		-l*)
+			#
+			# Extra libraries are suppressed only if they're
+			# repeated, e.g. "-lm -lm -lm -lm" -> "-lm".
+			#
+			case "$cmd" in
+			*" "$arg)       ;;
+			*)      cmd="$cmd $arg" ;;
+			esac
+			;;
+		*)
+			cmd="$cmd $arg"
+			;;
+		esac
 	done
 	;;
 esac
