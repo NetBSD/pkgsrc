@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/12/08 14:41:38 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2004/04/12 23:15:01 salo Exp $
 #
 # This Makefile fragment is included by packages that use speex.
 #
@@ -19,7 +19,7 @@ BUILDLINK_FILES.speex+=	include/speex_header.h
 BUILDLINK_FILES.speex+=	include/speex_stereo.h
 BUILDLINK_FILES.speex+=	lib/libspeex.*
 
-.include "../../audio/libogg/buildlink2.mk"
+.include "../../multimedia/libogg/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	speex-buildlink
 
