@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2002/06/13 08:18:36 martti Exp $
+# $NetBSD: Makefile,v 1.7 2002/07/13 03:05:38 rh Exp $
 #
 
-DISTNAME=	ekg-20020610
-PKGNAME=	ekg-0.20020610
+DISTNAME=	ekg-20020709
+PKGNAME=	ekg-0.20020709
 CATEGORIES=	chat
 MASTER_SITES=	http://people.arhea.net/dawszy/NetBSD/ekg/
 

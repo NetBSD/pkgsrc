@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2002/06/13 08:18:37 martti Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/07/13 03:05:38 rh Exp $
 bin/ekg
+lib/libgadu.a
 man/man1/ekg.1
 share/ekg/themes/2k2.theme
 share/ekg/themes/arim.theme
@@ -11,3 +12,4 @@ share/ekg/themes/lcamtuf.theme
 share/ekg/themes/sic.theme
 share/ekg/themes/zdzichu.theme
 @dirrm share/ekg/themes
+@dirrm share/ekg
