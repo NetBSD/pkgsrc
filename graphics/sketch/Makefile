@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/01/22 18:16:17 drochner Exp $
+# $NetBSD: Makefile,v 1.20 2002/01/28 17:37:54 drochner Exp $
 #
 
 DISTNAME=	sketch-0.6.12
@@ -8,8 +8,6 @@ MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=sketch/}
 MAINTAINER=	uebayasi@soum.co.jp
 HOMEPAGE=	http://sketch.sourceforge.net/
 COMMENT=	Interactive drawing program
-
-DEPENDS+=	py-Tk>=1.5.2:../../x11/py-Tk
 
 USE_X11=	YES
 
@@ -49,5 +47,6 @@ do-install:
 	${CHMOD} +x ${PREFIX}/bin/sk2ps
 
 .include "../../lang/python/application.buildlink.mk"
+.include "../../x11/py-Tk/buildlink.mk"
 .include "../../graphics/py-imaging/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
