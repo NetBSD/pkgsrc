@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/03/08 17:34:51 bad Exp $
+# $NetBSD: Makefile,v 1.12 1999/03/13 03:47:49 hubertf Exp $
 #
 
 # Note to package maintainers:
@@ -30,5 +30,9 @@ NO_PACKAGE=		No package registration is done
 .ifdef MANZ
 MANCOMPRESSED=		yes
 .endif
+
+post-install:
+	[ -f $${PKG_DBDIR:-/var/db/pkg}/pkgdb.byfile.db ] || \
+		pkg_admin rebuild
 
 .include "../../mk/bsd.pkg.mk"
