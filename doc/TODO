@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2714 2004/12/15 12:18:43 wiz Exp $
+$NetBSD: TODO,v 1.2715 2004/12/15 17:02:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -867,7 +867,7 @@ Suggested package updates
 	o p5-URI-1.35
 	o p5-User-Identity-0.90
 	o p5-WWW-Amazon-Wishlist-1.4
-	o p5-WWW-Mechanize-1.05_04 [pkg/28554]
+	o p5-WWW-Mechanize-1.06
 	o p5-XML-LibXML-1.58
 	o p5-XML-LibXSLT-1.57
 	o p5-XML-NamespaceSupport-1.08
