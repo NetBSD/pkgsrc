@@ -1,9 +1,14 @@
-# $NetBSD: Makefile,v 1.13 2001/02/17 17:21:58 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2001/02/22 14:57:41 wiz Exp $
 #
 
 DISTNAME=	bluefish-0.6
 CATEGORIES=	www
-MASTER_SITES=	http://bluefish.openoffice.nl/download/
+MASTER_SITES=	http://pkedu.fbt.eitn.wau.nl/~olivier/downloads/	\
+		http://student.wau.nl/~olivier/bluefish/download/	\
+		ftp://bluefish.advancecreations.com/pub/bluefish/downloads/ \
+		http://bluefish.mrball.net/downloads/			\
+		ftp://ftp.ratisbona.com/pub/bluefish/downloads/		\
+		http://bluefish.shellhung.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	wulf@ping.net.au
@@ -29,8 +34,8 @@ pre-configure:
 
 post-install:
 	${INSTALL_DATA_DIR} ${HTMLDIR}
-	cd ${WRKSRC}/manual; ${CP} -r * ${HTMLDIR}
-	@echo Setting permissions on HTML documentation...
+	${CP} -R ${WRKSRC}/manual/* ${HTMLDIR}
+	@${ECHO} Setting permissions on HTML documentation...
 	${CHOWN} -R root.wheel ${HTMLDIR}
 	${FIND} ${HTMLDIR} -type d -exec ${CHMOD} 555 {} \;
 	${FIND} ${HTMLDIR} -type f -exec ${CHMOD} 444 {} \;
