@@ -1,4 +1,4 @@
-# $NetBSD: apache.mk,v 1.1 2003/09/04 03:00:19 erh Exp $
+# $NetBSD: apache.mk,v 1.2 2003/10/19 07:46:50 grant Exp $
 #
 # This Makefile fragment handles Apache dependencies and make variables,
 # and is meant to be included by packages that require Apache either at
@@ -39,11 +39,11 @@ PKG_APACHE_DEFAULT?=	# empty
 _PKG_APACHES?=	apache13 apache2 apache6
 
 .if defined(PKG_APACHE_ACCEPTED)
-.    for _ap_ in ${PKG_APACHE_ACCEPTED}
-.        if !empty(_PKG_APACHES:M${_ap_})
-           _PKG_APACHE_ACCEPTED+=${PKG_APACHE_ACCEPTED:M${_ap_}}
-.        endif
-.    endfor
+.  for _ap_ in ${PKG_APACHE_ACCEPTED}
+.    if !empty(_PKG_APACHES:M${_ap_})
+_PKG_APACHE_ACCEPTED+=	${PKG_APACHE_ACCEPTED:M${_ap_}}
+.    endif
+.  endfor
 .endif
 
 _PKG_APACHE_ACCEPTED?=	${_PKG_APACHES}
@@ -57,9 +57,9 @@ _PKG_APACHE_DEFAULT=	${PKG_APACHE_DEFAULT}
 _PKG_APACHE_DEFAULT?=	apache13
 .endif
 
-_APACHE_PKGBASE.apache13 = apache-1\*
-_APACHE_PKGBASE.apache2 = apache-2\*
-_APACHE_PKGBASE.apache6 = apache6
+_APACHE_PKGBASE.apache13=	apache-1\*
+_APACHE_PKGBASE.apache2=	apache-2\*
+_APACHE_PKGBASE.apache6=	apache6
 
 # Mark the acceptable apaches and check which apache packages are installed.
 .for _ap_ in ${_PKG_APACHE_ACCEPTED}
@@ -77,9 +77,9 @@ _PKG_APACHE_INSTALLED.${_ap_}!= \
 .if !defined(_PKG_APACHE)
 .  for _ap_ in ${_PKG_APACHE_ACCEPTED}
 .    if !empty(_PKG_APACHE_INSTALLED.${_ap_}:M[yY][eE][sS])
-_PKG_APACHE?=	${_ap_}
+_PKG_APACHE?=			${_ap_}
 .    else
-_PKG_APACHE_FIRSTACCEPTED?= ${_ap_}
+_PKG_APACHE_FIRSTACCEPTED?=	${_ap_}
 .    endif
 .  endfor
 .endif
@@ -110,15 +110,15 @@ _PKG_APACHE=		"none"
 .endif
 
 BUILDLINK_DEPENDS.apache13?=	apache-1.3*
-BUILDLINK_DEPENDS.apache2?=		apache-2*
-BUILDLINK_DEPENDS.apache6?=		apache6*
+BUILDLINK_DEPENDS.apache2?=	apache-2*
+BUILDLINK_DEPENDS.apache6?=	apache6*
 
 .if ${_PKG_APACHE} == "apache13"
-_APACHE_PKGSRCDIR=  ../../www/apache
+_APACHE_PKGSRCDIR=	../../www/apache
 .elif ${_PKG_APACHE} == "apache2"
-_APACHE_PKGSRCDIR=  ../../www/apache2
+_APACHE_PKGSRCDIR=	../../www/apache2
 .elif ${_PKG_APACHE} == "apache6"
-_APACHE_PKGSRCDIR=  ../../www/apache6
+_APACHE_PKGSRCDIR=	../../www/apache6
 .endif
 
 _APACHE_DEPENDENCY?=	${BUILDLINK_DEPENDS.${_PKG_APACHE}:${_APACHE_PKGSRCDIR}
@@ -127,29 +127,29 @@ _APACHE_DEPENDENCY?=	${BUILDLINK_DEPENDS.${_PKG_APACHE}:${_APACHE_PKGSRCDIR}
 # This may or may not create an actual dependency depending on
 # what the apache buildlink2.mk file does.
 .if defined(_APACHE_PKGSRCDIR)
-.if defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
-.  include "${_APACHE_PKGSRCDIR}/buildlink2.mk"
-.else
+.  if defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
+.    include "${_APACHE_PKGSRCDIR}/buildlink2.mk"
+.  else
 DEPENDS+=		${_APACHE_DEPENDENCY}
-.endif
+.  endif
 .endif
 
 # If we are building apache modules, then we might need a build-time
 # dependency on apr, and the apache sources?
 .if defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
-.    if defined(_APACHE_PKGSRCDIR)
-.      include "${_APACHE_PKGSRCDIR}/buildlink2.mk"
-.    endif
+.  if defined(_APACHE_PKGSRCDIR)
+.    include "${_APACHE_PKGSRCDIR}/buildlink2.mk"
+.  endif
 .else
 BUILD_DEPENDS+=		${_APACHE_DEPENDENCY}
 .endif
 
 .if defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
-.    if ${_PKG_APACHE} == "apache2"
-.        if defined(USE_APR) && !empty(USE_APR:M[yY][eE][sS])
-.          include "../../devel/apr/buildlink2.mk"
-.        endif
+.  if ${_PKG_APACHE} == "apache2"
+.    if defined(USE_APR) && !empty(USE_APR:M[yY][eE][sS])
+.      include "../../devel/apr/buildlink2.mk"
 .    endif
+.  endif
 .endif
 
 # PKG_APACHE is a publicly readable variable containing the name of the server
