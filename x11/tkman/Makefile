@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1999/04/01 13:38:46 agc Exp $
+# $NetBSD: Makefile,v 1.20 1999/04/26 19:30:28 garbled Exp $
 # FreeBSD Id: Makefile,v 1.28 1997/12/08 15:51:20 tg Exp
 #
 
@@ -13,6 +13,7 @@ DEPENDS+=		tk-8.0.5:../../x11/tk80
 DEPENDS+=		rman-3.0.6:../../textproc/rman
 DEPENDS+=		glimpse-4.1:../../textproc/glimpse
 
+USE_X11=		yes
 NO_CDROM=		"Don't sell for profit"
 MIRROR_DISTFILE=	no
 

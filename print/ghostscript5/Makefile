@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 1999/03/22 09:38:27 agc Exp $
+# $NetBSD: Makefile,v 1.36 1999/04/26 19:25:05 garbled Exp $
 #
 
 DISTNAME=	ghostscript-5.50
@@ -19,6 +19,7 @@ DEPENDS=	png-1.0.3:../../graphics/png
 
 .include "../../mk/bsd.prefs.mk"
 
+USE_X11=	yes
 EXTRACT_ONLY=	${GS_SOURCES}
 WRKSRC=		${WRKDIR}/gs5.50
 MAKEFILE=	unix-gcc.mak
