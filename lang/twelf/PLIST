@@ -1,6 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/01/22 22:41:23 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/07/07 23:33:49 seb Exp $
 bin/twelf-server
 bin/twelf-sml
+info/twelf.info
+info/twelf.info-1
+info/twelf.info-2
+info/twelf.info-3
+info/twelf.info-4
+info/twelf.info-5
 lib/twelf/bin/.dbase/README
 lib/twelf/bin/.heap/README
 lib/twelf/bin/.heap/twelf-server.${BOX}-${OS}
@@ -15,36 +21,28 @@ lib/twelf/bin/twelf-sml
 lib/twelf/doc
 lib/twelf/emacs
 lib/twelf/examples
-share/doc/twelf/dvi/twelf.dvi
-share/doc/twelf/html/index.html
-share/doc/twelf/html/twelf_1.html
-share/doc/twelf/html/twelf_10.html
-share/doc/twelf/html/twelf_11.html
-share/doc/twelf/html/twelf_12.html
-share/doc/twelf/html/twelf_13.html
-share/doc/twelf/html/twelf_14.html
-share/doc/twelf/html/twelf_15.html
-share/doc/twelf/html/twelf_16.html
-share/doc/twelf/html/twelf_17.html
-share/doc/twelf/html/twelf_2.html
-share/doc/twelf/html/twelf_3.html
-share/doc/twelf/html/twelf_4.html
-share/doc/twelf/html/twelf_5.html
-share/doc/twelf/html/twelf_6.html
-share/doc/twelf/html/twelf_7.html
-share/doc/twelf/html/twelf_8.html
-share/doc/twelf/html/twelf_9.html
-share/doc/twelf/html/twelf_toc.html
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/share/doc/twelf/info/twelf.info
-share/doc/twelf/info/twelf.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/share/doc/twelf/info/twelf.info
-share/doc/twelf/info/twelf.info-1
-share/doc/twelf/info/twelf.info-2
-share/doc/twelf/info/twelf.info-3
-share/doc/twelf/info/twelf.info-4
-share/doc/twelf/info/twelf.info-5
-share/doc/twelf/pdf/twelf.pdf
-share/doc/twelf/ps/twelf.ps
+share/doc/html/twelf/index.html
+share/doc/html/twelf/twelf_1.html
+share/doc/html/twelf/twelf_10.html
+share/doc/html/twelf/twelf_11.html
+share/doc/html/twelf/twelf_12.html
+share/doc/html/twelf/twelf_13.html
+share/doc/html/twelf/twelf_14.html
+share/doc/html/twelf/twelf_15.html
+share/doc/html/twelf/twelf_16.html
+share/doc/html/twelf/twelf_17.html
+share/doc/html/twelf/twelf_2.html
+share/doc/html/twelf/twelf_3.html
+share/doc/html/twelf/twelf_4.html
+share/doc/html/twelf/twelf_5.html
+share/doc/html/twelf/twelf_6.html
+share/doc/html/twelf/twelf_7.html
+share/doc/html/twelf/twelf_8.html
+share/doc/html/twelf/twelf_9.html
+share/doc/html/twelf/twelf_toc.html
+share/doc/twelf/twelf.dvi
+share/doc/twelf/twelf.pdf
+share/doc/twelf/twelf.ps
 share/emacs/site-lisp/twelf/README
 share/emacs/site-lisp/twelf/auc-menu.el
 share/emacs/site-lisp/twelf/twelf-font.el
@@ -402,12 +400,8 @@ share/examples/twelf/tabled/tests/test7.elf
 @dirrm share/examples/twelf/arith
 @dirrm share/examples/twelf
 @dirrm share/emacs/site-lisp/twelf
-@dirrm share/doc/twelf/ps
-@dirrm share/doc/twelf/pdf
-@dirrm share/doc/twelf/info
-@dirrm share/doc/twelf/html
-@dirrm share/doc/twelf/dvi
 @dirrm share/doc/twelf
+@dirrm share/doc/html/twelf
 @dirrm lib/twelf/bin/.heap
 @dirrm lib/twelf/bin/.dbase
 @dirrm lib/twelf/bin
