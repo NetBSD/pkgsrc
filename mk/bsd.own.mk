@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.own.mk,v 1.10 1999/02/09 15:44:52 hubertf Exp $
+#	$NetBSD: bsd.own.mk,v 1.11 1999/02/10 21:35:36 hubertf Exp $
 # From:  NetBSD: bsd.own.mk,v 1.113 1999/02/07 17:21:09 hubertf Exp 
 
 .if !defined(_BSD_OWN_MK_)
@@ -79,9 +79,10 @@ STRIPFLAG?=	-s
 # The NETBSD_CURRENT checks are to make sure that UVM is defined only
 # if the user is running a NetBSD-current, as well as the right platform
 # I'm told that 1.3C was the first version with UVM	XXX - agc
-.if !defined(UVM)
+# It's also used to find out about SHLIB_TYPE.
 NETBSD_CURRENT!= /usr/bin/uname -r | /usr/bin/sed -e 's|^1\.3[C-Z]$$|yes|'
 
+.if !defined(UVM)
 .if (${NETBSD_CURRENT} == "yes")
 # Systems on which UVM is the standard VM system.
 .if	(${MACHINE} != "pica")
