@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/01/17 00:18:39 pooka Exp $
+
+--- Makefile.in.orig	Sun May 28 07:11:14 2000
++++ Makefile.in	Wed Jan 17 02:00:35 2001
+@@ -44,12 +44,12 @@
+ 	$(INSTALL_DATA) doc/man/ncftpls.1 "$(mandir)/man1/ncftpls.1"
+ 	-@/bin/ls -l "$(mandir)/man1/ncftp.1" "$(mandir)/man1/ncftpget.1" "$(mandir)/man1/ncftpput.1" "$(mandir)/man1/ncftpbatch.1" "$(mandir)/man1/ncftpls.1"
+ 	-@echo '..... Installing the programs .....'
+-	$(INSTALL_PROGRAM) bin/ncftp@EXEEXT@ "$(BINDIR)/ncftp@EXEEXT@"
++	$(INSTALL_PROGRAM) bin/ncftp@EXEEXT@ "$(BINDIR)/ncftp3@EXEEXT@"
+ 	$(INSTALL_PROGRAM) bin/ncftpget@EXEEXT@ "$(BINDIR)/ncftpget@EXEEXT@"
+ 	$(INSTALL_PROGRAM) bin/ncftpput@EXEEXT@ "$(BINDIR)/ncftpput@EXEEXT@"
+ 	$(INSTALL_PROGRAM) bin/ncftpls@EXEEXT@ "$(BINDIR)/ncftpls@EXEEXT@"
+ 	$(INSTALL_PROGRAM) bin/ncftpbatch@EXEEXT@ "$(BINDIR)/ncftpbatch@EXEEXT@"
+-	-@/bin/ls -l "$(BINDIR)/ncftp@EXEEXT@" "$(BINDIR)/ncftpget@EXEEXT@" "$(BINDIR)/ncftpput@EXEEXT@" "$(BINDIR)/ncftpls@EXEEXT@" "$(BINDIR)/ncftpbatch@EXEEXT@"
++	-@/bin/ls -l "$(BINDIR)/ncftp3@EXEEXT@" "$(BINDIR)/ncftpget@EXEEXT@" "$(BINDIR)/ncftpput@EXEEXT@" "$(BINDIR)/ncftpls@EXEEXT@" "$(BINDIR)/ncftpbatch@EXEEXT@"
+ 	-@echo "(The following will fail if you didn't build the curses-based programs.)"
+ 	$(INSTALL_PROGRAM) bin/ncftpbookmarks "$(BINDIR)/ncftpbookmarks"
+ 	-@/bin/ls -l "$(BINDIR)/ncftpbookmarks"
