@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/12 18:16:15 kim Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/13 02:19:16 minskim Exp $
 
 DISTNAME=	ExtUtils-XSBuilder-0.25
 PKGNAME=	p5-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	Perl5 module for automatic XS glue code generation
 
 DEPENDS+=	p5-Parse-RecDescent-[0-9]*:../../devel/p5-Parse-RecDescent
 DEPENDS+=	p5-Tie-IxHash-[0-9]*:../../devel/p5-Tie-IxHash
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	yes
 USE_LANGUAGES=	# empty
