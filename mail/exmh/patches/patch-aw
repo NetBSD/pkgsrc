@@ -1,0 +1,23 @@
+--- lib/thread.tcl	1998/08/17 13:43:05	1.1
++++ lib/thread.tcl	1998/08/17 13:43:15
+@@ -141,17 +141,17 @@
+     return 0
+ }
+ 
+-proc Thread_Display { {breakoff 20} {mark "+->"} } {
++proc Thread_Display { {breakoff 30} {mark "+->"} } {
+ 
+     busy Thread_Ftoc 1 $breakoff $mark
+ }
+ 
+-proc Thread_DisplayAll { {breakoff 20} {mark "+->"} } {
++proc Thread_DisplayAll { {breakoff 30} {mark "+->"} } {
+ 
+     busy Thread_Ftoc 0 $breakoff $mark
+ }
+ 
+-proc Thread_Ftoc { {selected 0} {breakoff 20} {mark "+->"} } {
++proc Thread_Ftoc { {selected 0} {breakoff 30} {mark "+->"} } {
+     global exwin exmh ftoc msg
+ 
+ #
