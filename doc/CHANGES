@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6176 2004/06/07 02:59:09 snj Exp $
+$NetBSD: CHANGES,v 1.6177 2004/06/07 05:54:01 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2824,6 +2824,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated anomy-sanitizer to 1.68 [mjl 2004-06-06]
 	Updated squid to 2.5.5nb4 [taca 2004-06-06]
 	Updated pkglint to 3.77 [schmonz 2004-06-06]
+	Updated gcpio to 2.5 [minskim 2004-06-06]
 	Updated roundup to 0.7.3 [recht 2004-06-06]
 	Updated exim to 4.34 [abs 2004-06-06]
 	Updated exim-exiscan to 4.34_22 [abs 2004-06-06]
