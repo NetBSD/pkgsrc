@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2004/11/02 00:10:15 erh Exp $
+# $NetBSD: Makefile,v 1.106 2004/12/09 21:29:06 erh Exp $
 
 # Notes to package maintainers:
 #
@@ -70,6 +70,14 @@ post-install:
 		fi;							\
 		${PKG_ADMIN} rebuild;					\
 	fi
+
+# XXX Reverse the order that update does things since
+# XXX we need pkg_delete built before we can deinstall.
+# XXX This should probably be the default order for all packages.
+update:
+	${MAKE}
+	${MAKE} deinstall UPDATE_RUNNING=YES
+	${MAKE} install
 
 .include "../../pkgtools/libnbcompat/inplace.mk"
 .include "../../mk/bsd.pkg.mk"
