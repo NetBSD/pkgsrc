@@ -1,13 +1,13 @@
-$NetBSD: patch-aj,v 1.4 2001/04/23 15:06:16 abs Exp $
+$NetBSD: patch-aj,v 1.5 2003/09/23 21:39:48 abs Exp $
 
---- faxd/Getty.c++.orig	Sat Sep 16 12:13:48 2000
-+++ faxd/Getty.c++
-@@ -219,7 +219,7 @@
-     // NB: this is executed in the parent
-     fxStr device = fxStr::format("%s/" | line, _PATH_DEV);
-     Sys::chown(device, UUCPLock::getUUCPUid(), UUCPLock::getUUCPGid());
--    Sys::chmod(device, 0600);			// reset protection
-+    Sys::chmod(device, 0660);			// reset protection
+--- faxd/FaxModem.c++.orig	Sun Feb  9 02:22:49 2003
++++ faxd/FaxModem.c++
+@@ -823,7 +823,7 @@ u_char* MemoryDecoder::cutExtraRTC()
  }
  
- extern void vlogError(const char* fmt, va_list ap);
+ void
+-FaxModem::correctPhaseCData(u_char* buf, u_long* pBufSize,
++FaxModem::correctPhaseCData(u_char* buf, uint32* pBufSize,
+                             u_int fillorder, const Class2Params& params)
+ {
+     MemoryDecoder dec1(buf, params.pageWidth(), *pBufSize, fillorder, params.is2D());
