@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4882 2004/02/17 15:21:10 snj Exp $
+$NetBSD: CHANGES,v 1.4883 2004/02/17 15:36:07 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -893,3 +893,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated samba to 3.0.2a [jlam 2004-02-17]
 	Updated elfsh to 0.51b3 [cube 2004-02-17]
 	Updated qiv to qiv [snj 2004-02-17]
+	Added chkrootkit-0.43 [minskim 2004-02-17]
