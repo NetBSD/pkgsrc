@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6275 2004/06/22 13:46:02 grant Exp $
+$NetBSD: CHANGES,v 1.6276 2004/06/22 13:50:21 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3019,3 +3019,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated screws to 0.54 [xtraeme 2004-06-22]
 	Updated p5-Device-Modem to 1.36 [grant 2004-06-22]
 	Updated file to 4.09 [grant 2004-06-22]
+	Updated p5-Device-Gsm to 1.33 [grant 2004-06-22]
