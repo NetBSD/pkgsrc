@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2780 2004/12/27 13:38:52 darcy Exp $
+$NetBSD: TODO,v 1.2781 2004/12/27 14:14:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -330,7 +330,7 @@ Suggested package updates
 	o blender-2.36
 	o blitz++-0.8
 	o boaconstructor-0.3.1
-	o bomberclone-0.11.4
+	o bomberclone-0.11.5
 	o bonobo-1.0.22
 	o bonobo-conf-0.16
 	o boost-1.32.0
@@ -1184,6 +1184,7 @@ Suggested package updates
 	o xnap-2.5r3
 	o xpad-2.1
 	o xpuyopuyo-0.9.5
+	o xquote-2.6.10
 	o xscreensaver-4.19
 	o xskat-4.0
 	o xtide-2.7.1
