@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2001/09/27 23:18:29 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/10/05 09:25:47 wiz Exp $
 #
 
-DISTNAME=	Net-Daemon-0.34
-PKGNAME=	p5-Net-Daemon-0.34
+DISTNAME=	Net-Daemon-0.35
+PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
