@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2004/06/17 16:07:25 xtraeme Exp $
+# $NetBSD: Makefile,v 1.47 2004/06/25 17:41:47 abs Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -9,7 +9,7 @@ PERL5_RC_VERS=	# empty
 .if empty(PERL5_SNAPSHOT) && empty(PERL5_RC_VERS)
 DISTNAME=	perl-${PERL5_VERS}
 PKGNAME=	perl${PERL5_PKGSUFFIX}-${PERL5_VERS}
-PKGREVISION=	# empty
+PKGREVISION=	1
 SNAPSHOT_SITES=	# empty
 .else
 .  if !empty(PERL5_SNAPSHOT)
@@ -144,6 +144,10 @@ LIBSWANTED.FreeBSD=	m crypt
 LIBSWANTED.IRIX=	m crypt
 LIBSWANTED.NetBSD=	m crypt
 LIBSWANTED.SunOS=	m crypt dl socket nsl
+. if !empty(PERL5_USE_THREADS:M[nN][oO]) && \
+	!empty(MACHINE_PLATFORM:MNetBSD-[2-9]*-i386)
+LIBSWANTED.NetBSD+=	pthread
+. endif
 
 # Nail down the directories in which the system libraries may be found.
 # If this isn't defined, then use the perl defaults for the particular
