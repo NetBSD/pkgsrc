@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/12/03 15:30:26 epg Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/13 10:09:18 jklos Exp $
 
 PKGNAME=	apr-${APR_VERSION}.${APACHE_VERSION}
 PKGREVISION=	1
@@ -35,7 +35,7 @@ do-configure:
 	@cd ${WRKSRC}/apr-util && ${SETENV} ${CONFIGURE_ENV} ./configure \
 		--prefix=${PREFIX} \
 		--with-apr=${WRKSRC}/apr \
-		--with-berkeley-db=${BUILDLINK_PREFIX.db4}/include:${LOCALBASE} \
+		--with-dbm=sdbm \
 		--with-expat=${BUILDLINK_PREFIX.expat}
 
 post-install:
@@ -44,6 +44,5 @@ post-install:
 
 .include "../../www/apache2/Makefile.common"
 
-.include "../../databases/db4/buildlink2.mk"
 .include "../../textproc/expat/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
