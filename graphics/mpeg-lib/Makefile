@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/07/10 17:56:30 tv Exp $
+# $NetBSD: Makefile,v 1.8 1998/07/14 19:29:27 tv Exp $
 
 DISTNAME=	mpeg_lib-1.2.1
 PKGNAME=	mpeg-1.2.1
@@ -9,16 +9,17 @@ MASTER_SITES=	ftp://ftp.mni.mcgill.ca/pub/mpeg/ \
 
 MAINTAINER=	tron@netbsd.org
 
+BUILD_DEPENDS=	${PREFIX}/bin/libtool:../../devel/libtool
+
 GNU_CONFIGURE=	yes
+MAKE_ENV=	LIBTOOL=${PREFIX}/bin/libtool
 
 WRKSRC=		${WRKDIR}/mpeg_lib
 
-post-configure:
-	ln -fs ${FILESDIR}/Makefile ${WRKSRC}
-	ln -s ${FILESDIR}/shlib_version ${WRKSRC}
-
-post-install:
-	(cd ${WRKSRC};make PREFIX=${PREFIX} includes)
-	${LDCONFIG} || ${TRUE}
+do-install:
+	cd ${WRKSRC} && \
+		${PREFIX}/bin/libtool --mode=install ${INSTALL_DATA} \
+			libmpeg.la ${PREFIX}/lib/
+	${INSTALL_DATA} ${WRKSRC}/mpeg.h ${PREFIX}/include/
 
 .include "../../mk/bsd.pkg.mk"

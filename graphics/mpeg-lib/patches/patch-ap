@@ -1,0 +1,27 @@
+--- Makefile.in.orig	Tue Jul 14 15:08:58 1998
++++ Makefile.in	Tue Jul 14 15:12:56 1998
+@@ -6,7 +6,7 @@
+ 
+ # Various programs and their options
+ 
+-CC            = @CC@
++CC            = ${LIBTOOL} --mode=compile @CC@
+ OPT           = @OPT@
+ DEFS          = @DEFS@
+ INCLUDES      = -I.
+@@ -36,11 +36,12 @@
+ 
+ # Targets for all platforms
+ 
+-all:		$(LIBRARY) @extras@
++all:		$(LIBRARY)
+ 
+ $(LIBRARY):	$(LIBOBJ)
+-		$(AR) $(ARFLAGS) $(LIBRARY) $(LIBOBJ)
+-		$(RANLIB) $(LIBRARY)
++		${LIBTOOL} --mode=link ${CC} -o ${LIBRARY:.a=.la} \
++			${LIBOBJ:.o=.lo} -rpath ${PREFIX}/lib \
++			-version-info 1:2
+ 
+ $(LIBOBJ):	Makefile
+ 
