@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2001/12/11 14:59:18 wiz Exp $
+
+--- Cable.h.orig	Thu Jan 23 17:22:49 1997
++++ Cable.h
+@@ -13,7 +13,7 @@
+ 	void setup();
+ 	void draw();
+ 	void update();
+-	onspark (int locx, int locy);
++	int onspark (int locx, int locy);
+ 
+ };
+ 
