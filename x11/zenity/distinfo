@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2004/05/15 14:08:47 jmmv Exp $
+$NetBSD: distinfo,v 1.6 2004/09/21 17:08:46 jmmv Exp $
 
-SHA1 (zenity-2.6.2.tar.bz2) = 8ac47c09bfb539d49da05c26d053399749c86d22
-Size (zenity-2.6.2.tar.bz2) = 623690 bytes
+SHA1 (zenity-2.8.0.tar.bz2) = 4fa195e8d9d97331841f1c402dfbef1fcb0ba57b
+Size (zenity-2.8.0.tar.bz2) = 727741 bytes
