@@ -1,0 +1,24 @@
+--- Makefile.in.orig	Mon Apr 27 18:13:13 1998
++++ Makefile.in	Mon Apr 27 19:40:23 1998
+@@ -30,8 +30,10 @@
+ BINDEST = @sbindir@
+ # Pathname of directory to install the man page
+ MANDEST = @mandir@
++# Pathname of directory to install ethernet vendor codes
++ETCDEST = $(prefix)/etc
+ # Pathname of directory to install database file
+-ARPDIR = $(prefix)/arpwatch
++ARPDIR = /var/db/arpwatch
+ 
+ # VPATH
+ srcdir = @srcdir@
+@@ -44,7 +46,8 @@
+ CC = @CC@
+ CCOPT = @V_CCOPT@
+ INCLS = -I. @V_INCLS@
+-DEFS = -DDEBUG @DEFS@ -DARPDIR=\"$(ARPDIR)\"
++DEFS = -DDEBUG @DEFS@ -DARPDIR=\"$(ARPDIR)\" \
++    -DETHERCODES=\"$(ETCDEST)/ethercodes.dat\"
+ 
+ # Standard CFLAGS
+ CFLAGS = $(CCOPT) $(DEFS) $(INCLS)
