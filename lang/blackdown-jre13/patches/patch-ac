@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 2002/11/25 14:07:43 schmonz Exp $
+
+--- bin/j2sdk-config.orig	Mon Nov 25 07:10:07 2002
++++ bin/j2sdk-config
+@@ -25,6 +25,9 @@
+     sparc*)
+         proc=sparc
+         ;;
++    bebox | prep | sandpoint | walnut | *ppc)
++        proc=ppc
++        ;;
+     *)
+         proc="`uname -m`"
+         ;;
