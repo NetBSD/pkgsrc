@@ -1,0 +1,20 @@
+--- src/unix/Makefile.orig	Thu Jan  1 18:31:14 1998
++++ src/unix/Makefile	Fri Feb 13 08:12:11 1998
+@@ -1,2 +1,2 @@
+-OBJDIR = ../../obj.$(ARCH)/unix
++OBJDIR = ../../obj.$(OPSYS)/unix
+ 
+@@ -8,3 +8,3 @@
+ UOBJS = $(OBJDIR)/main.o $(OBJDIR)/sound.o $(OBJDIR)/xdep.o \
+-	$(OBJDIR)/update_dsp.o $(OBJDIR)/$(ARCH).o $(OBJDIR)/lin2ulaw.o \
++	$(OBJDIR)/update_dsp.o $(OBJDIR)/$(OPSYS).o $(OBJDIR)/lin2ulaw.o \
+ 	$(OBJDIR)/keyboard.o $(OBJDIR)/devices.o
+@@ -24,2 +24,3 @@
+ 	ar -rcv $@ $(UOBJS)
++	ranlib $@
+ 
+@@ -41,3 +42,3 @@
+ $(OBJDIR)/aix.o: aix.c xmame.h sound.h
+-$(OBJDIR)/netbsd_i386.o: netbsd_i386.c xmame.h sound.h
++$(OBJDIR)/$(OPSYS).o: $(OPSYS).c xmame.h sound.h
+ $(OBJDIR)/sndserver.o: sndserver.c xmame.h
