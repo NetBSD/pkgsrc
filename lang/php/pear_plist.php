@@ -1,5 +1,5 @@
 <?php
-# $NetBSD: pear_plist.php,v 1.1 2004/11/01 19:55:57 jdolecek Exp $
+# $NetBSD: pear_plist.php,v 1.2 2004/11/01 20:17:20 jdolecek Exp $
 # Parses package XML file and outputs appropriate PLIST
 
 $PEAR_LIB = getenv('PEAR_LIB');
@@ -34,6 +34,9 @@ foreach($info['filelist'] as $f => $v) {
 		break;
 	}
 
+	# replace backslashes with forward slashes in the path name, for
+	# pear packages written by non-UNIX oriented authors.
+	$f = str_replace('\\', '/', $f);
 
 	echo "{$PEAR_LIB}/{$prefix}{$f}\n";
 
