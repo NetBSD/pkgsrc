@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2003/06/10 09:56:18 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2003/06/10 13:20:24 wiz Exp $
 #
 
-DISTNAME=	dctc-0.84.1
-PKGREVISION=	2
+DISTNAME=	dctc-0.85.3
 CATEGORIES=	net
 MASTER_SITES=	http://www.ac2i.tzo.com/dctc/ \
 		http://brainz.servebeer.com/dctc/
@@ -31,5 +30,5 @@ post-configure:
 	@${ECHO} '#endif' >> ${WRKSRC}/config.h
 
 .include "../../databases/db4/buildlink2.mk"
-.include "../../devel/glib/buildlink2.mk"
+.include "../../devel/glib2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
