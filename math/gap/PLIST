@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/01/05 12:43:01 cjep Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/03/20 22:39:33 jschauma Exp $
 bin/gap
 lib/gap4.3/bin/${GAP_PLATFORM}/gac
 lib/gap4.3/bin/${GAP_PLATFORM}/gap
@@ -4310,6 +4310,6 @@ lib/gap4.3/tst/zmodnz.tst
 @dirrm lib/gap4.3/doc/ext
 @dirrm lib/gap4.3/doc
 @dirrm lib/gap4.3/cnf
-@dirrm lib/gap4.3/bin/${GAP_PLATFORM}-cc
+@dirrm lib/gap4.3/bin/${GAP_PLATFORM}
 @dirrm lib/gap4.3/bin
 @dirrm lib/gap4.3
