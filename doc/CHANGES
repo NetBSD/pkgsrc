@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8810 2005/01/19 02:11:54 itojun Exp $
+$NetBSD: CHANGES,v 1.8811 2005/01/19 09:06:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -414,3 +414,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added tcllib-1.7 [peter 2005-01-18]
 	Updated getmail to 4.3.1 [schmonz 2005-01-18]
 	Updated nsd to 2.2.0 [itojun 2005-01-19]
+	Updated gdchart to 0.11.5 [adam 2005-01-18]
