@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.320 2004/06/26 18:27:23 grant Exp $
+# $NetBSD: Makefile,v 1.321 2004/06/27 21:40:36 abs Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -34,6 +34,7 @@ SUBDIR+=	blender
 SUBDIR+=	blender-doc
 SUBDIR+=	blinkenthemes
 SUBDIR+=	blinkentools
+SUBDIR+=	cambevao
 SUBDIR+=	cairo
 SUBDIR+=	cal3d
 SUBDIR+=	cal3d-examples
