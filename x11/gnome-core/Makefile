@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2001/04/22 09:57:31 rh Exp $
+# $NetBSD: Makefile,v 1.63 2001/04/24 18:07:14 rh Exp $
 
-DISTNAME=		gnome-core-1.4.0.1
+DISTNAME=		gnome-core-1.4.0.2
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=stable/releases/gnome-1.4/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-core/}
 
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
