@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/09/27 23:17:57 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/02/10 11:05:11 skrll Exp $
 #
 
 PKGNAME=	prc-tools-gcc-${PRC_TOOLS_VERS}
@@ -9,13 +9,18 @@ BASE_VERS=	2.95.2
 
 .include "../../devel/prc-tools/Makefile.common"
 
-BUILD_DEPENDS+=	autoconf-[0-9]*:../../devel/autoconf
 DEPENDS+=	prc-tools-binutils>=2.0:../../devel/prc-tools-binutils
 
 ALL_TARGET=	all-gcc
 INSTALL_TARGET=	install-gcc
 
 USE_BUILDLINK_ONLY=	YES
+
+#
+# Prevent totally unnecessary invocation of autoheader
+#
+post-patch:
+	cd ${WRKDIR}/${BASE_DIST}-${BASE_VERS}/gcc && ${TOUCH} cstamp-h.in
 
 post-install:
 	@${RMDIR} ${PREFIX}/m68k-palmos/include
