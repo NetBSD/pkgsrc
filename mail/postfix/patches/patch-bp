@@ -1,0 +1,31 @@
+$NetBSD: patch-bp,v 1.1 1999/08/18 23:30:26 thorpej Exp $
+
+--- master/trigger_server.c.orig	Tue Aug 17 17:38:48 1999
++++ master/trigger_server.c	Tue Aug 17 17:39:14 1999
+@@ -240,7 +240,7 @@
+ static void trigger_server_accept_fifo(int unused_event, char *context)
+ {
+     char   *myname = "trigger_server_accept_fifo";
+-    int     listen_fd = (int) context;
++    int     listen_fd = (int) (long) context;
+ 
+     if (trigger_server_lock != 0
+ 	&& myflock(vstream_fileno(trigger_server_lock), MYFLOCK_NONE) < 0)
+@@ -269,7 +269,7 @@
+ static void trigger_server_accept_local(int unused_event, char *context)
+ {
+     char   *myname = "trigger_server_accept_local";
+-    int     listen_fd = (int) context;
++    int     listen_fd = (int) (long) context;
+     int     time_left = 0;
+     int     fd;
+ 
+@@ -561,7 +561,7 @@
+     if (var_idle_limit > 0)
+ 	event_request_timer(trigger_server_timeout, (char *) 0, var_idle_limit);
+     for (fd = MASTER_LISTEN_FD; fd < MASTER_LISTEN_FD + socket_count; fd++) {
+-	event_enable_read(fd, trigger_server_accept, (char *) fd);
++	event_enable_read(fd, trigger_server_accept, (char *) (long) fd);
+ 	close_on_exec(fd, CLOSE_ON_EXEC);
+     }
+     event_enable_read(MASTER_STATUS_FD, trigger_server_abort, (char *) 0);
