@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/03/02 09:09:38 mrauch Exp $
+# $NetBSD: Makefile,v 1.8 2002/03/05 20:16:53 mrauch Exp $
 
 DISTNAME=		openoffice-0.0.0.641
 PKGREVISION=		1
@@ -79,14 +79,13 @@ pre-install: checkforx
 		>oo_setup.resp"
 
 do-install:
-	${SH} -c "cd ${WRKSRC}/../instsetoo/*.pro/01/normal;		\
+	-${SH} -c "cd ${WRKSRC}/../instsetoo/*.pro/01/normal;		\
 		  TEMP=${WRKDIR}; export TEMP;				\
 		  DISPLAY=${DISPLAY}; export DISPLAY;			\
-		  ./setup -r:oo_setup.resp;				\
-		  if ${TEST} -e ${PREFIX}/OpenOffice.org641/setup;	\
-		    then ${TRUE};					\
-		    else ${FALSE};					\
-		  fi"
+		  ./setup -r:oo_setup.resp"
+	@${SH} -c "if ! [ -x ${PREFIX}/OpenOffice.org641/setup ] ;	\
+	           then ${ECHO} 'Installation was not successful.';	\
+		   ${FALSE}; fi"
 	${SED} -e 's#@@PREFIX@@#${PREFIX}#g'				\
 	    <${FILESDIR}/soffice >${PREFIX}/bin/soffice
 	${CHMOD} +x ${PREFIX}/bin/soffice
