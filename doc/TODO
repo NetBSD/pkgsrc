@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2832 2005/01/05 00:55:51 epg Exp $
+$NetBSD: TODO,v 1.2833 2005/01/05 00:59:08 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -432,7 +432,6 @@ Suggested package updates
 	o dpkg-1.10.25
 	o dropbear-0.44
 	o drscheme-208
-	o dspam-3.2.4
 	o dsssl-docbook-modular-1.79
 	o dvdrip-0.51.4
 	o dvipng-1.4 [http://sourceforge.net/projects/dvipng/]
