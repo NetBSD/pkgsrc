@@ -1,26 +1,21 @@
-# New ports collection makefile for:	libnids
-# Date created:		08 Jan 2000
-# Whom:			kris@FreeBSD.org
-#
+# $NetBSD: Makefile,v 1.2 2000/08/11 08:07:02 itojun Exp $
 # $FreeBSD: ports/net/libnids/Makefile,v 1.5 2000/04/24 07:42:58 kris Exp $
 #
 
-PORTNAME=	libnids
-PORTVERSION=	1.13
+DISTNAME=	libnids-1.14
 CATEGORIES=	net security
-MASTER_SITES=	http://www.packetfactory.net/Projects/libnids/dist/
+MASTER_SITES=	http://www.packetfactory.net/Projects/Libnids/dist/
 
-MAINTAINER=	kris@FreeBSD.org
+MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.packetfactory.net/Projects/Libnids/
 
-BUILD_DEPENDS=	${LOCALBASE}/lib/libnet.a:${PORTSDIR}/net/libnet
+BUILD_DEPENDS=	libnet-*:../../net/libnet
 
 GNU_CONFIGURE=	yes
-
-MAN3=		libnids.3
 
 do-install:
 		${INSTALL_DATA} ${WRKSRC}/src/nids.h ${PREFIX}/include
 		${INSTALL_DATA} ${WRKSRC}/src/libnids.a ${PREFIX}/lib
 		${INSTALL_DATA} ${WRKSRC}/src/libnids.3 ${PREFIX}/man/man3
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
