@@ -1,3 +1,6 @@
+@comment $NetBSD: PLIST,v 1.2 1998/02/10 00:30:19 tron Exp $
 bin/kermit
-man/man1/kermit.1.gz
+man/cat1/kermit.0
+man/man1/kermit.1
 share/examples/kermit/dot.kermrc
+@dirrm share/examples/kermit

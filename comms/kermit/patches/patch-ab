@@ -1,0 +1,10 @@
+--- ckuusx.c.orig	Mon Nov 25 01:20:52 1996
++++ ckuusx.c	Tue Feb 10 00:55:12 1998
+@@ -29,6 +29,7 @@
+ #ifdef OS2
+ #include <string.h>
+ #endif /* OS2 */
++#include <errno.h>
+ 
+ extern xx_strp xxstring;
+ extern struct ck_p ptab[];
