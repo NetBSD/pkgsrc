@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 1999/03/16 22:29:11 tron Exp $
+@comment $NetBSD: PLIST,v 1.7 1999/04/04 22:35:39 tron Exp $
 bin/gmenu
 bin/jbc_applet
 bin/gnome-edit
 bin/gnome-session
+bin/gnome-wm
 bin/save-session
 bin/gnome-smproxy
 bin/gnome-man2html
@@ -23,9 +24,10 @@ bin/modemlights_applet
 bin/gnome-help-caller
 bin/gnomepager_applet
 bin/mini_commander_applet
-bin/cpumemusage_applet
-bin/diskusage_applet
-bin/multiload_applet
+bin/life_applet
+bin/another_clock_applet
+etc/CORBA/servers/life_applet.gnorba
+etc/CORBA/servers/another_clock_applet.gnorba
 etc/CORBA/servers/help-browser.gnorba
 etc/CORBA/servers/panel.gnorba
 etc/CORBA/servers/gen_util.gnorba
@@ -39,9 +41,6 @@ etc/CORBA/servers/battery_applet.gnorba
 etc/CORBA/servers/charpick_applet.gnorba
 etc/CORBA/servers/gnomepager_applet.gnorba
 etc/CORBA/servers/mini-commander_applet.gnorba
-etc/CORBA/servers/cpumemusage_applet.gnorba
-etc/CORBA/servers/diskusage_applet.gnorba
-etc/CORBA/servers/multiload_applet.gnorba
 etc/CORBA/servers/modemlights_applet.gnorba
 etc/CORBA/servers/webcontrol_applet.gnorba
 etc/CORBA/servers/gkb_applet.gnorba
@@ -57,16 +56,12 @@ lib/libgkb_applet.so.0.0
 lib/libpanel_applet.a
 lib/libpanel_applet.so.0.0
 lib/appletsConf.sh
-share/default.wm
-share/applets/Monitors/cpumemusage_applet.desktop
-share/applets/Monitors/diskusage_applet.desktop
-share/applets/Monitors/cpuload_applet.desktop
-share/applets/Monitors/memload_applet.desktop
-share/applets/Monitors/swapload_applet.desktop
 share/applets/Utility/gnomepager_applet.desktop
 share/applets/Utility/mini-commander_applet.desktop
 share/applets/Utility/gkb_applet.desktop
 share/applets/Utility/jbc_applet.desktop
+share/applets/Utility/another_clock_applet.desktop
+share/applets/Amusements/life_applet.desktop
 share/applets/Amusements/.directory
 share/applets/Amusements/fish_applet.desktop
 share/applets/Amusements/fifteen_applet.desktop
@@ -85,6 +80,76 @@ share/applets/Utility/asclock_applet.desktop
 share/applets/Utility/drivemount_applet.desktop
 share/applets/Utility/clockmail_applet.desktop
 share/applets/Utility/charpick_applet.desktop
+share/asclock/Orb/config
+share/asclock/Orb/clock.xpm
+share/asclock/Orb/led.xpm
+share/asclock/Orb/date.xpm
+share/asclock/Orb/month.xpm
+share/asclock/Orb/hour.xpm
+share/asclock/Orb/minute.xpm
+share/asclock/Orb/second.xpm
+share/asclock/Orb/beats.xpm
+share/asclock/Orb/weekday.xpm
+share/asclock/classic/config
+share/asclock/classic/clock.xpm
+share/asclock/classic/led.xpm
+share/asclock/classic/date.xpm
+share/asclock/classic/month.xpm
+share/asclock/classic/hour.xpm
+share/asclock/classic/minute.xpm
+share/asclock/classic/second.xpm
+share/asclock/classic/beats.xpm
+share/asclock/classic/weekday.xpm
+share/asclock/shaped/config
+share/asclock/shaped/clock.xpm
+share/asclock/shaped/led.xpm
+share/asclock/shaped/date.xpm
+share/asclock/shaped/month.xpm
+share/asclock/shaped/hour.xpm
+share/asclock/shaped/minute.xpm
+share/asclock/shaped/second.xpm
+share/asclock/shaped/beats.xpm
+share/asclock/shaped/weekday.xpm
+share/asclock/beats/config
+share/asclock/beats/clock.xpm
+share/asclock/beats/led.xpm
+share/asclock/beats/date.xpm
+share/asclock/beats/month.xpm
+share/asclock/beats/hour.xpm
+share/asclock/beats/minute.xpm
+share/asclock/beats/second.xpm
+share/asclock/beats/beats.xpm
+share/asclock/beats/weekday.xpm
+share/asclock/Stone/config
+share/asclock/Stone/clock.xpm
+share/asclock/Stone/led.xpm
+share/asclock/Stone/date.xpm
+share/asclock/Stone/month.xpm
+share/asclock/Stone/hour.xpm
+share/asclock/Stone/minute.xpm
+share/asclock/Stone/second.xpm
+share/asclock/Stone/beats.xpm
+share/asclock/Stone/weekday.xpm
+share/asclock/Newstone/config
+share/asclock/Newstone/clock.xpm
+share/asclock/Newstone/led.xpm
+share/asclock/Newstone/date.xpm
+share/asclock/Newstone/month.xpm
+share/asclock/Newstone/hour.xpm
+share/asclock/Newstone/minute.xpm
+share/asclock/Newstone/second.xpm
+share/asclock/Newstone/beats.xpm
+share/asclock/Newstone/weekday.xpm
+share/asclock/Freeamp/config
+share/asclock/Freeamp/clock.xpm
+share/asclock/Freeamp/led.xpm
+share/asclock/Freeamp/date.xpm
+share/asclock/Freeamp/month.xpm
+share/asclock/Freeamp/hour.xpm
+share/asclock/Freeamp/minute.xpm
+share/asclock/Freeamp/second.xpm
+share/asclock/Freeamp/beats.xpm
+share/asclock/Freeamp/weekday.xpm
 share/gnome/apps/Internet/Balsa.desktop
 share/gnome/apps/Internet/Tkrat.desktop
 share/gnome/apps/Internet/.directory
@@ -110,7 +175,6 @@ share/gnome/apps/Utilities/.directory
 share/gnome/apps/Utilities/gnome-terminal.desktop
 share/gnome/apps/.order
 share/gnome/apps/gnome-help.desktop
-share/default.session
 share/gnome/help/gnome-terminal/C/docbook.css
 share/gnome/help/gnome-terminal/C/topic.dat
 share/gnome/help/gnome-terminal/C/index.html
@@ -151,6 +215,10 @@ share/gnome/help/help-browser/no/index.html
 share/gnome/help/help-browser/no/default-page.html
 share/gnome/help/help-browser/no/help-browser.html
 share/gnome/help/help-browser/no/topic.dat
+share/gnome/help/help-browser/ko/help-browser.html
+share/gnome/help/help-browser/ko/topic.dat
+share/gnome/help/help-browser/ko/default-page.html
+share/gnome/help/help-browser/ko/index.html
 share/gnome/help/mini-commander_applet/C/change-log.html
 share/gnome/help/mini-commander_applet/C/clock.html
 share/gnome/help/mini-commander_applet/C/command-completion.html
@@ -230,6 +298,8 @@ share/gnome/help/gnome-intro/C/c93127.html
 share/gnome/help/gnome-intro/C/c93412.html
 share/gnome/help/gnome-intro/C/c93175.html
 share/gnome/help/gnome-intro/C/docbook.css
+share/gnome/default.session
+share/gnome/default.wm
 share/locale/it/LC_MESSAGES/gnome-core.mo
 share/locale/ko/LC_MESSAGES/gnome-core.mo
 share/locale/fr/LC_MESSAGES/gnome-core.mo
@@ -368,6 +438,7 @@ share/pixmaps/tiles/tile-drc-1-down.png
 share/pixmaps/tiles/tile-drc-2-up.png
 share/pixmaps/tiles/tile-drc-2-down.png
 share/pixmaps/fish/oldwanda.png
+share/pixmaps/another_clock.xpm
 share/idl/gnome-panel.idl
 share/idl/help-browser.idl
 share/xmodmap/xmodmap.be
@@ -380,6 +451,7 @@ share/xmodmap/xmodmap.dvorak
 share/xmodmap/xmodmap.es
 share/xmodmap/xmodmap.fi
 share/xmodmap/xmodmap.fr
+share/xmodmap/xmodmap.fr-2
 share/xmodmap/xmodmap.gr
 share/xmodmap/xmodmap.hu
 share/xmodmap/xmodmap.hu.old
@@ -421,6 +493,7 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/gnome-terminal/C
 @dirrm share/gnome/help/gnome-terminal/no
 @dirrm share/gnome/help/gnome-terminal
+@dirrm share/gnome/help/help-browser/ko
 @dirrm share/gnome/help/help-browser/fr
 @dirrm share/gnome/help/help-browser/es
 @dirrm share/gnome/help/help-browser/C
@@ -441,6 +514,14 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/apps/Utilities
 @dirrm share/gnome/apps
 @dirrm share/gnome
+@dirrm share/asclock/shaped
+@dirrm share/asclock/classic
+@dirrm share/asclock/beats
+@dirrm share/asclock/Stone
+@dirrm share/asclock/Orb
+@dirrm share/asclock/Newstone
+@dirrm share/asclock/Freeamp
+@dirrm share/asclock
 @dirrm share/applets/Amusements
 @dirrm share/applets/Monitors
 @dirrm share/applets/Multimedia
