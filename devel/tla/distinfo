@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2005/02/23 22:24:34 agc Exp $
+$NetBSD: distinfo,v 1.9 2005/03/21 23:49:48 recht Exp $
 
-SHA1 (tla-1.3.tar.gz) = 1bceae9bc1ce9bc2ef6b2dbcaf02e212f3275632
-RMD160 (tla-1.3.tar.gz) = 0fe0cbe44cd8bb037bbad99626b17eadc5f66aee
-Size (tla-1.3.tar.gz) = 3437184 bytes
+SHA1 (tla-1.3.1.tar.gz) = bebd3012880be1fc91b06590aed670fab0bf3035
+RMD160 (tla-1.3.1.tar.gz) = 1da9937e614b045b594ec95118cab4ef1804d8c5
+Size (tla-1.3.1.tar.gz) = 4175745 bytes
