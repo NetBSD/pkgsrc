@@ -1,4 +1,4 @@
-# $NetBSD: defs.FreeBSD.mk,v 1.40 2004/05/31 16:47:00 jschauma Exp $
+# $NetBSD: defs.FreeBSD.mk,v 1.41 2004/06/03 22:07:35 xtraeme Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -64,8 +64,6 @@ PS?=		/bin/ps
 PWD_CMD?=	/bin/pwd	# needs to print physical path
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
-# XXX: default from bsd.pkg.defaults.mk.  Verify/corerct for this platform
-# and remove this comment.
 RSH?=		/usr/bin/rsh
 SED?=		/usr/bin/sed
 SETENV?=	/usr/bin/env
@@ -181,9 +179,8 @@ CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN}
 # (it defaults to 'no' as per bsd.pkg.defaults.mk).
 # Set the group and mode to meaningful values in that case (defaults to
 # BINOWN, BINGRP and BINMODE as per bsd.pkg.defaults.mk).
-# FIXME: Adjust to work on this system and enable the lines below.
-#.if !(empty(SETGIDGAME:M[yY][eE][sS]))
-#GAMEOWN=		games
-#GAMEGRP=		games
-#GAMEMODE=		2555
-#.endif
+.if !(empty(SETGIDGAME:M[yY][eE][sS]))
+GAMEOWN=		games
+GAMEGRP=		games
+GAMEMODE=		2555
+.endif
