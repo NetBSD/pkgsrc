@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2001/10/24 22:10:47 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/03/13 17:36:40 fredb Exp $
 
 DISTNAME=		qcad-1.4.7-src
 PKGNAME=		qcad-1.4.7
+PKGREVISION=		1
 CATEGORIES=		cad
 MASTER_SITES=		http://www.qcad.org/archives/
 

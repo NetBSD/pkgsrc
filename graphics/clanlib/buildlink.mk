@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.8 2001/10/03 20:56:48 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.9 2002/03/13 17:37:04 fredb Exp $
 #
 # This Makefile fragment is included by packages that use ClanLib.
 #
@@ -17,7 +17,7 @@ CLANLIB_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.ClanLib?=	ClanLib>=0.4.4
+BUILDLINK_DEPENDS.ClanLib?=	ClanLib>=0.4.4nb1
 DEPENDS+=	${BUILDLINK_DEPENDS.ClanLib}:../../graphics/clanlib
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.ClanLib=ClanLib

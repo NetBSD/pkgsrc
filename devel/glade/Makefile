@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2001/10/06 17:30:59 rh Exp $
+# $NetBSD: Makefile,v 1.25 2002/03/13 17:36:49 fredb Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/11/18 17:35:16 vanilla Exp
 #
 
 DISTNAME=	glade-0.6.2
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=   http://glade.pn.org/ \
 		${MASTER_SITE_GNOME:=stable/sources/glade/}

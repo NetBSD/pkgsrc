@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2001/11/06 11:57:19 tron Exp $
+# $NetBSD: Makefile,v 1.9 2002/03/13 17:36:41 fredb Exp $
 
 DISTNAME=		kicq-1.0.0
+PKGREVISION=		1
 CATEGORIES=		chat kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kicq/}
 
@@ -10,7 +11,7 @@ COMMENT=		KDE ICQ client
 
 BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 DEPENDS+=		icqlib>=1.0.0:../../chat/icqlib
-DEPENDS+=		kdebase-1.1.2:../../x11/kdebase
+DEPENDS+=		kdebase-1.1.2nb1:../../x11/kdebase
 
 USE_X11BASE=		yes
 USE_GMAKE=		yes

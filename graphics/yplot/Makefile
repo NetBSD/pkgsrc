@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2002/01/19 13:40:54 drochner Exp $
+# $NetBSD: Makefile,v 1.10 2002/03/13 17:37:20 fredb Exp $
 
 DISTNAME=		yplot-1.1.0
+PKGREVISION=		1
 CATEGORIES=		graphics math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=yplot/}
 

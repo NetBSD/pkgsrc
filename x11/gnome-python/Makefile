@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2002/02/12 21:49:56 jwise Exp $
+# $NetBSD: Makefile,v 1.23 2002/03/13 17:37:56 fredb Exp $
 
 DISTNAME=		gnome-python-1.4.0
 PKGNAME=		${PYPKGPREFIX}-gnome-1.4.0
+PKGREVISION=		1
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-python/}
 
@@ -9,9 +10,9 @@ MAINTAINER=		drochner@netbsd.org
 HOMEPAGE=		http://www.daa.com.au/~james/gnome/
 COMMENT=		Python Bindings for the GNU Network Object Model Environment
 
-DEPENDS+=		gnome-core>1.4.0:../gnome-core
+DEPENDS+=		gnome-core>=1.4.0.4nb1:../../x11/gnome-core
 DEPENDS+=		gtkglarea-[0-9]*:../../x11/gtkglarea
-DEPENDS+=		libglade-[0-9]*:../../devel/libglade
+DEPENDS+=		libglade-0.17nb1:../../devel/libglade
 
 CONFLICTS+=		py-gtk-[0-9]*
 CONFLICTS+=		gnome-python-*

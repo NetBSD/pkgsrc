@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2001/07/17 02:55:03 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.16 2002/03/13 17:36:39 fredb Exp $
 #
 
 DISTNAME=	gEDA-${PKGVERSION}
 CATEGORIES=	cad
+PKGREVISION=	1
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
@@ -13,7 +14,7 @@ COMMENT=	Toolset for automating electronic design
 DEPENDS+=	gschem-${PKGVERSION}:../../cad/gschem
 DEPENDS+=	gnetlist-${PKGVERSION}:../../cad/gnetlist
 DEPENDS+=	gsymcheck-${PKGVERSION}:../../cad/gsymcheck
-DEPENDS+=	geda-utils-${PKGVERSION}:../../cad/geda-utils
+DEPENDS+=	geda-utils-${PKGVERSION}nb1:../../cad/geda-utils
 DEPENDS+=	geda-docs-20010304:../../cad/geda-docs
 
 USE_X11BASE=	yes

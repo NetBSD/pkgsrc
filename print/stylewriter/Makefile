@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2002/01/28 02:30:08 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2002/03/13 17:37:38 fredb Exp $
 #
 
 DISTNAME=	stylewriter
 PKGNAME=	stylewriter-0.9.9
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/
 

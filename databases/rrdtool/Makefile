@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2001/09/24 13:12:18 wulf Exp $
+# $NetBSD: Makefile,v 1.13 2002/03/13 17:36:45 fredb Exp $
 #
 
 DISTNAME=	rrdtool-1.0.33
+PKGREVISION=	1
 CATEGORIES=	databases graphics net
 MASTER_SITES=	http://ee-staff.ethz.ch/~oetiker/webtools/rrdtool/pub/
 
@@ -10,7 +11,7 @@ HOMEPAGE=	http://ee-staff.ethz.ch/~oetiker/webtools/rrdtool
 COMMENT=	Data analysis tool generating graphical representations
 
 DEPENDS+=	cgilib-0.5:../../www/cgilib
-DEPENDS+=	gd>=1.7.3:../../graphics/gd
+DEPENDS+=	gd>=1.8.4nb1:../../graphics/gd
 DEPENDS+=	jpeg-6*:../../graphics/jpeg
 
 # IEEE math not good enough on alpha

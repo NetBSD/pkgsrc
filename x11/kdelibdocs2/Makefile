@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2001/12/10 13:57:16 skrll Exp $
+# $NetBSD: Makefile,v 1.6 2002/03/13 17:37:58 fredb Exp $
 
 DISTNAME=	kdelibs-2.2.2
 PKGNAME=	${DISTNAME:S/kdelib/kdelibdoc/}
+PKGREVISION=	1
 CATEGORIES=	x11 devel
 COMMENT=	KDE library documentation
 
 .include "../../x11/kde2/Makefile.kde2"
 
 BUILD_DEPENDS+=		kdoc>=2.2.2:../../textproc/kdoc
-DEPENDS+=		qt2-docs>=2.3.1:../../x11/qt2-docs
+DEPENDS+=		qt2-docs>=2.3.1nb2:../../x11/qt2-docs
 
 USE_X11BASE=		yes
 NO_CONFIGURE=		yes

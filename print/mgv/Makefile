@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2001/10/24 22:11:06 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/03/13 17:37:37 fredb Exp $
 
 DISTNAME=		mgv-3.1.5
+PKGREVISION=		1
 CATEGORIES=		print
 MASTER_SITES=		http://www.trends.net/~mu/srcs/
 
