@@ -1,12 +1,7 @@
-@comment $NetBSD: PLIST,v 1.15 2004/01/04 21:37:09 rh Exp $
+@comment $NetBSD: PLIST,v 1.16 2004/01/14 07:27:51 xtraeme Exp $
 bin/evolution
 bin/evolution-1.4
 bin/evolution-addressbook-export
-etc/gconf/schemas/apps_evolution_addressbook.schemas
-etc/gconf/schemas/apps_evolution_calendar.schemas
-etc/gconf/schemas/apps_evolution_shell.schemas
-etc/gconf/schemas/apps_evolution_summary.schemas
-etc/gconf/schemas/evolution-mail.schemas
 include/evolution-1.4/cal-client/cal-client-multi.h
 include/evolution-1.4/cal-client/cal-client-types.h
 include/evolution-1.4/cal-client/cal-client.h
@@ -1133,6 +1128,11 @@ share/evolution/1.4/zoneinfo/Pacific/Wake.ics
 share/evolution/1.4/zoneinfo/Pacific/Wallis.ics
 share/evolution/1.4/zoneinfo/Pacific/Yap.ics
 share/evolution/1.4/zoneinfo/zones.tab
+share/gconf/schemas/apps_evolution_addressbook.schemas
+share/gconf/schemas/apps_evolution_calendar.schemas
+share/gconf/schemas/apps_evolution_shell.schemas
+share/gconf/schemas/apps_evolution_summary.schemas
+share/gconf/schemas/evolution-mail.schemas
 share/gnome/help/evolution-1.4/C/apx-authors.xml
 share/gnome/help/evolution-1.4/C/apx-bugs.xml
 share/gnome/help/evolution-1.4/C/apx-fdl.xml

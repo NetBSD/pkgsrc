@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2004/01/12 09:46:04 cjep Exp $
+# $NetBSD: Makefile,v 1.47 2004/01/14 07:27:51 xtraeme Exp $
 
 DISTNAME=		evolution-1.4.5
+PKGREVISION=		1
 CATEGORIES=		mail time gnome
 MASTER_SITES=		ftp://ftp.ximian.com/pub/source/evolution/ \
 			${MASTER_SITE_GNOME:=sources/evolution/1.4/}
@@ -11,7 +12,7 @@ HOMEPAGE=		http://ximian.com/products/evolution/
 COMMENT=		GNOME mailer, calendar, contact manager, and communications tool
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
-DEPENDS+=		gnome1-dirs>=1.2:../../misc/gnome1-dirs
+DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 DEPENDS+=		psmisc-[0-9]*:../../sysutils/psmisc
 BUILD_USES_MSGFMT=	YES
 
@@ -20,16 +21,25 @@ BUILD_USES_MSGFMT=	YES
 # to make sure locally stored mails remain in the same format!
 BUILDLINK_DEPENDS.db3=		db3-3.11.2{,nb*}
 
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=		USE_INET6
+
+.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--enable-ipv6=yes
+.else
+CONFIGURE_ARGS+=	--enable-ipv6=no
+.endif
+
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
-USE_X11BASE=		YES
+USE_X11=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/libical/libtool
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 YACC=			${PREFIX}/bin/bison -y
 
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 REPLACE_PERL+=		libical/scripts/mkderivedvalues.pl
 REPLACE_PERL+=		libical/scripts/mkparameterrestrictions.pl
 REPLACE_PERL+=		libical/scripts/mkrestrictionrecords.pl
@@ -46,7 +56,16 @@ CONFIGURE_ARGS+=	--with-db3-includes=${LOCALBASE}/include/db3
 CONFIGURE_ARGS+=	--with-db3-libs=${LOCALBASE}/lib
 CONFIGURE_ENV+=		PKG_CONFIG_PATH="${LOCALBASE}/lib/pkgconfig:${X11BASE}/lib/pkgconfig"
 
-.include "../../mk/bsd.prefs.mk"
+PKGCONFIG_OVERRIDE=	camel.pc.in
+PKGCONFIG_OVERRIDE+=	evolution-shell.pc.in
+PKGCONFIG_OVERRIDE+=	evolution-calendar.pc.in
+PKGCONFIG_OVERRIDE+=	evolution-addressbook.pc.in
+
+GCONF2_SCHEMAS=		apps_evolution_shell.schemas
+GCONF2_SCHEMAS+=	apps_evolution_addressbook.schemas
+GCONF2_SCHEMAS+=	apps_evolution_calendar.schemas
+GCONF2_SCHEMAS+=	apps_evolution_summary.schemas
+GCONF2_SCHEMAS+=	evolution-mail.schemas
 
 pre-configure:
 	for i in ${WRKSRC}/camel/providers/*/Makefile.in ; do		\
@@ -57,7 +76,7 @@ pre-configure:
 
 .include "../../databases/db3/buildlink2.mk"
 .include "../../databases/openldap/buildlink2.mk"
-.include "../../devel/GConf2/buildlink2.mk"
+.include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/gal2/buildlink2.mk"
 .include "../../devel/libbonoboui/buildlink2.mk"
@@ -65,7 +84,6 @@ pre-configure:
 .include "../../devel/libgnomeui/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../graphics/libgnomecanvas/buildlink2.mk"
-.include "../../net/soup/buildlink2.mk"
 .include "../../print/libgnomeprint/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 .include "../../sysutils/gnome-vfs2/buildlink2.mk"
@@ -73,4 +91,5 @@ pre-configure:
 .include "../../textproc/libunicode/buildlink2.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../www/gtkhtml3/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
