@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/05/12 10:16:49 abs Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/09 21:14:40 jlam Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
@@ -15,8 +15,9 @@ COMMENT=		Viewer for remote X and Win32 VNC servers
 CONFLICTS=		vncviewer-[0-9]*
 
 CRYPTO=			yes
-NO_INSTALL_MANPAGES=	yes
+USE_BUILDLINK2=		yes
 USE_IMAKE=		yes
+NO_INSTALL_MANPAGES=	yes
 
 WRKSRC=			${WRKDIR}/vnc_unixsrc
 
@@ -28,5 +29,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/vncviewer
 	${INSTALL_DATA} ${WRKSRC}/vncviewer/README ${PREFIX}/share/doc/vncviewer/README
 
-.include "../../graphics/jpeg/buildlink.mk"
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

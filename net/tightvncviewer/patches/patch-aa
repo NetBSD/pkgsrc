@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2001/09/23 00:58:14 mycroft Exp $
+$NetBSD: patch-aa,v 1.3 2002/10/09 21:14:41 jlam Exp $
 
---- vncviewer/Imakefile.orig	Mon Jun 18 13:17:15 2001
-+++ vncviewer/Imakefile	Sun Sep 23 00:57:07 2001
-@@ -6,19 +6,14 @@
+--- vncviewer/Imakefile.orig	Tue Nov 13 03:31:34 2001
++++ vncviewer/Imakefile
+@@ -6,19 +6,14 @@ CCOPTIONS =
  CDEBUGFLAGS = -O2
  #endif
  
@@ -13,12 +13,13 @@ $NetBSD: patch-aa,v 1.2 2001/09/23 00:58:14 mycroft Exp $
  DEFINES = -DMITSHM
 -#endif
  
- INCLUDES = -I../include -I. -I/usr/include
+-INCLUDES = -I../include -I. -I/usr/include
++INCLUDES = -I../include -I. ${BUILDLINK_CPPFLAGS}
  VNCAUTH_LIB = ../libvncauth/libvncauth.a
 -ZLIB_LIB = /usr/lib/libz.a
 -JPEG_LIB = /usr/lib/libjpeg.a
 +ZLIB_LIB = -lz
-+JPEG_LIB = ${BUILDLINK_LDFLAGS} -Wl,-rpath ${LOCALBASE}/lib -ljpeg
++JPEG_LIB = ${BUILDLINK_LDFLAGS} -ljpeg
  
 -DEPLIBS = XawClientDepLibs $(VNCAUTH_LIB) $(ZLIB_LIB) $(JPEG_LIB)
 +DEPLIBS = XawClientDepLibs $(VNCAUTH_LIB)

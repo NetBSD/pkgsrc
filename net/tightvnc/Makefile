@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/05/12 10:16:49 abs Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/09 21:18:40 jlam Exp $
 #
 
 DISTNAME=		tightvnc-1.2.2
@@ -16,13 +16,17 @@ COMMENT=		Display X and Win32 desktops on remote X/Win32/Java displays
 CONFLICTS=		vnc-[0-9]*
 
 CRYPTO=			yes
-NO_INSTALL_MANPAGES=	yes
+USE_BUILDLINK2=		yes
 USE_IMAKE=		yes
+NO_INSTALL_MANPAGES=	yes
 USE_PERL5=		yes
 
 WRKSRC=			${WRKDIR}/vnc_unixsrc
 
 ALL_TARGET=		World
+
+post-extract:
+	${RM} -rf ${WRKSRC}/Xvnc/lib/zlib
 
 # We have to frob a few things, and we want our own permissions, so it's easier
 # to do the install ourselves.
@@ -40,5 +44,6 @@ post-install:
 	${INSTALL_DATA} *.GIF *.css *.gif *.jpg *.htm *.html *.pdf \
 	  ${PREFIX}/share/doc/vnc
 
-.include "../../graphics/jpeg/buildlink.mk"
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
