@@ -1,0 +1,40 @@
+$NetBSD: patch-ae,v 1.1 2001/12/07 18:35:51 martin Exp $
+
+--- pppoe-server.c.orig	Fri Sep 14 21:18:53 2001
++++ pppoe-server.c	Fri Dec  7 19:24:14 2001
+@@ -25,7 +25,7 @@
+ #define _BSD_SOURCE 1 /* for gethostname */
+ 
+ #include "pppoe-server.h"
+-#include "md5.h"
++#include <md5.h>
+ 
+ #ifdef HAVE_SYSLOG_H
+ #include <syslog.h>
+@@ -1249,7 +1249,7 @@
+     if (addressPoolFname) {
+ 	NumSessionSlots = parseAddressPool(addressPoolFname, 0);
+ 	if (CheckPoolSyntax) {
+-	    printf("%d\n", NumSessionSlots);
++	    printf("%d\n", (int)NumSessionSlots);
+ 	    exit(0);
+ 	}
+     }
+@@ -1674,7 +1674,7 @@
+     }
+     if (PassUnitOptionToPPPD) {
+ 	argv[c++] = "unit";
+-	sprintf(buffer, "%d", ntohs(session->sess) - 1 - SessOffset);
++	sprintf(buffer, "%d", ntohs(session->sess) - 1 - (int)SessOffset);
+ 	argv[c++] = buffer;
+     }
+     argv[c++] = NULL;
+@@ -1747,7 +1747,7 @@
+     argv[c++] = "default-asyncmap";
+     if (PassUnitOptionToPPPD) {
+ 	argv[c++] = "unit";
+-	sprintf(buffer, "%d", ntohs(session->sess) - 1 - SessOffset);
++	sprintf(buffer, "%d", ntohs(session->sess) - 1 - (int)SessOffset);
+ 	argv[c++] = buffer;
+     }
+     argv[c++] = NULL;

@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.6 2001/10/07 13:26:38 tron Exp $
+$NetBSD: patch-aa,v 1.7 2001/12/07 18:35:51 martin Exp $
 
 --- Makefile.in.orig	Fri Sep 14 21:18:53 2001
-+++ Makefile.in	Sun Oct  7 14:14:39 2001
++++ Makefile.in	Fri Dec  7 19:26:39 2001
 @@ -20,7 +20,7 @@
  prefix=@prefix@
  exec_prefix=@exec_prefix@
@@ -11,7 +11,28 @@ $NetBSD: patch-aa,v 1.6 2001/10/07 13:26:38 tron Exp $
  install=@INSTALL@
  install_dir=@INSTALL@ -d
  sbindir=@sbindir@
-@@ -139,7 +139,7 @@
+@@ -64,8 +64,8 @@
+ pppoe-sniff: pppoe-sniff.o if.o common.o debug.o
+ 	@CC@ -o pppoe-sniff pppoe-sniff.o if.o common.o debug.o
+ 
+-pppoe-server: pppoe-server.o if.o debug.o common.o md5.o @PPPOE_SERVER_DEPS@
+-	@CC@ -o pppoe-server pppoe-server.o if.o debug.o common.o md5.o $(PPPOE_SERVER_LIBS)
++pppoe-server: pppoe-server.o if.o debug.o common.o @PPPOE_SERVER_DEPS@
++	@CC@ -o pppoe-server pppoe-server.o if.o debug.o common.o $(PPPOE_SERVER_LIBS)
+ 
+ pppoe: pppoe.o if.o debug.o common.o ppp.o discovery.o
+ 	@CC@ -o pppoe pppoe.o if.o debug.o common.o ppp.o discovery.o
+@@ -82,9 +82,6 @@
+ ppp.o: ppp.c pppoe.h
+ 	@CC@ $(CFLAGS) '-DVERSION="$(VERSION)"' -c -o ppp.o ppp.c
+ 
+-md5.o: md5.c md5.h
+-	@CC@ $(CFLAGS) '-DVERSION="$(VERSION)"' -c -o md5.o md5.c
+-
+ pppoe-server.o: pppoe-server.c pppoe.h
+ 	@CC@ $(CFLAGS) '-DVERSION="$(VERSION)"' -c -o pppoe-server.o pppoe-server.c
+ 
+@@ -139,7 +136,7 @@
  	$(install) -m 755 ../scripts/adsl-setup $(RPM_INSTALL_ROOT)$(sbindir)
  	-mkdir -p $(RPM_INSTALL_ROOT)$(docdir)
  	$(install) -m 644 ../doc/CHANGES $(RPM_INSTALL_ROOT)$(docdir)
@@ -20,7 +41,7 @@ $NetBSD: patch-aa,v 1.6 2001/10/07 13:26:38 tron Exp $
  	$(install) -m 644 ../doc/HOW-TO-CONNECT $(RPM_INSTALL_ROOT)$(docdir)
  	$(install) -m 644 ../doc/LICENSE $(RPM_INSTALL_ROOT)$(docdir)
  	$(install) -m 644 ../README $(RPM_INSTALL_ROOT)$(docdir)
-@@ -158,39 +158,39 @@
+@@ -158,39 +155,39 @@
  	$(install) -m 644 ../man/adsl-setup.8 $(RPM_INSTALL_ROOT)$(mandir)/man8
  	-mkdir -p $(RPM_INSTALL_ROOT)$(mandir)/man5
  	$(install) -m 644 ../man/pppoe.conf.5 $(RPM_INSTALL_ROOT)$(mandir)/man5
