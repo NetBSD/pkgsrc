@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5990 2004/05/19 16:56:51 jmmv Exp $
+$NetBSD: CHANGES,v 1.5991 2004/05/19 17:43:34 kim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2599,3 +2599,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nessus to 2.0.10a [adam 2004-05-19]
 	Updated subversion to 1.0.3 [epg 2004-05-19]
 	Updated gnuls to 5.2.1 [jmmv 2004-05-19]
+	Updated tcsh to 6.13.00 [kim 2004-05-19]
