@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/12/05 12:33:18 frueauf Exp $
+
+--- Makefile.orig	Thu Dec  3 22:46:08 1998
++++ Makefile	Sat Dec  5 11:01:36 1998
+@@ -1,10 +1,11 @@
+ CURRENT_DIR = 	.
+ 
+-SUBDIRS =	Xpm TextField-1.0
++SUBDIRS =	TextField-1.0
+ 
+ MAKE =	make
+ 
+-LIBS = -L /lib/X11 -L /usr/X11R6/lib -lXaw -lX11 -lm -lXt -lXmu -lXext 
++CFLAGS+= -I ${X11BASE}/include -I ${LOCALBASE}/include
++LIBS = -L ${LOCALBASE}/lib -L ${X11BASE}/lib -lXaw -lX11 -lm -lXt -lXmu -lXext -lXpm
+ 
+ #DEFINE = -O 
+ 
+@@ -107,7 +108,7 @@
+ 	$(MAKE) all); \
+ 	fi \
+ 	done
+-	cc -o abs ./TextField-1.0/*.o $(OBJS) ./Xpm/libxpm.a $(LIBS) $(DEFINE)
++	cc -o abs ./TextField-1.0/*.o $(OBJS) $(LIBS) $(DEFINE)
+ 
+ clean::
+ 	rm -f *.o */*.o */*.a
