@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/21 20:30:22 xtraeme Exp $
+bin/mips64emul
