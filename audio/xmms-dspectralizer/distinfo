@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/08/16 02:26:52 hubertf Exp $
+
+SHA1 (dspectral-1.2.tar.gz) = da32adcdcfef1cc2e32e4d5013623be64922c430
+Size (dspectral-1.2.tar.gz) = 41866 bytes
+SHA1 (patch-aa) = 06f081f6f1cfac8dad2912fe1dc9fba0428c90c0
