@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2001/02/02 19:39:18 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/11 03:41:23 jlam Exp $
 
-DISTNAME=	squirrelmail-1.0.1
+DISTNAME=	squirrelmail-1.0.2
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/} \
 		http://nerf-herder.net/squirrel/ \
