@@ -1,11 +1,21 @@
-$NetBSD: patch-aa,v 1.4.2.2 2003/03/02 10:13:07 agc Exp $
+$NetBSD: patch-aa,v 1.4.2.3 2003/03/02 10:38:09 agc Exp $
 
---- configure.orig	Tue Feb  4 11:45:51 2003
+--- configure.orig	Tue Dec 17 05:49:48 2002
 +++ configure
-@@ -23148,57 +23148,6 @@ cat >>confdefs.h <<EOF
+@@ -22535,7 +22535,7 @@ main ()
+ 
+  char buf[20];
+   buf[0]='\0';
+-  strlat(buf, "KDE function test", sizeof(buf));
++  strlcat(buf, "KDE function test", sizeof(buf));
+ 
+   ;
+   return 0;
+@@ -23147,57 +23147,6 @@ echo "${ECHO_T}$ac_cv_sizeof_unsigned_in
+ cat >>confdefs.h <<EOF
  #define SIZEOF_UNSIGNED_INT $ac_cv_sizeof_unsigned_int
  EOF
- 
+-
 -  echo "$as_me:23151: checking sizeof(size_t) == sizeof(unsigned int)" >&5
 -echo $ECHO_N "checking sizeof(size_t) == sizeof(unsigned int)... $ECHO_C" >&6
 -  cat >conftest.$ac_ext <<_ACEOF
@@ -56,7 +66,6 @@ $NetBSD: patch-aa,v 1.4.2.2 2003/03/02 10:13:07 agc Exp $
 -
 -fi
 -rm -f conftest.$ac_objext conftest.$ac_ext
--
+ 
  if test -z "$LIBPTHREAD" && test -z "$USE_THREADS"; then
    DO_NOT_COMPILE="$DO_NOT_COMPILE knode kdict"
- fi
