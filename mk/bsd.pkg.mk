@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.640 2001/01/11 10:53:10 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.641 2001/01/13 00:18:51 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -3161,7 +3161,9 @@ fake-pkg: ${PLIST} ${DESCR}
 .for def in ${BUILD_DEFS}
 	@${ECHO} ${def}=	${${def}:Q} | ${SED} -e 's|^PATH=[^ 	]*|PATH=...|' >> ${BUILD_INFO_FILE}
 .endfor
-	@${ECHO} "CC=	${CC}-`${CC} --version`" >> ${BUILD_INFO_FILE}
+	@if ${CC} --version >/dev/null 2>&1; then \
+	  ${ECHO} "CC=	${CC}-`${CC} --version`" >> ${BUILD_INFO_FILE}; \
+	fi
 .ifdef USE_PERL5
 	@${ECHO} "PERL=	`${PERL5} --version 2>/dev/null | ${GREP} 'This is perl'`" >> ${BUILD_INFO_FILE}
 .endif
