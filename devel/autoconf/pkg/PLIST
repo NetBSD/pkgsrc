@@ -1,30 +1,29 @@
-@comment $NetBSD: PLIST,v 1.4 1998/03/11 22:40:40 agc Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/03/11 23:18:46 agc Exp $
 bin/autoconf
 bin/autoheader
 bin/autoreconf
-@autoscan@
+@HaveAutoscan@bin/autoscan
 bin/autoupdate
 bin/ifnames
 @unexec %D/bin/install-info --delete %D/info/autoconf.info %D/info/dir
 @unexec %D/bin/install-info --delete %D/info/standards.info %D/info/dir
 info/autoconf.info
 info/standards.info
-@exec [ -f %D/info/dir ] || sed -ne '1,/Menu:/p' /usr/share/info/dir > %D/info/dir
 @exec %D/bin/install-info %D/info/autoconf.info %D/info/dir
 @exec %D/bin/install-info %D/info/standards.info %D/info/dir
 share/autoconf/acconfig.h
-share/autoconf/acfunctions
+@HaveAutoscan@share/autoconf/acfunctions
 share/autoconf/acgeneral.m4
-share/autoconf/acheaders
-share/autoconf/acidentifiers
-share/autoconf/acmakevars
+@HaveAutoscan@share/autoconf/acheaders
+@HaveAutoscan@share/autoconf/acidentifiers
+@HaveAutoscan@share/autoconf/acmakevars
 share/autoconf/acoldnames.m4
-share/autoconf/acprograms
+@HaveAutoscan@share/autoconf/acprograms
 share/autoconf/acspecific.m4
 share/autoconf/autoconf.m4
 share/autoconf/autoconf.m4f
 share/autoconf/autoheader.m4
 share/autoconf/autoheader.m4f
-share/autoconf/config.guess
-share/autoconf/config.sub
+@HaveAutoscan@share/autoconf/config.guess
+@HaveAutoscan@share/autoconf/config.sub
 @dirrm share/autoconf
