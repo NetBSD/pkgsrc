@@ -1,0 +1,17 @@
+$NetBSD: patch-at,v 1.1 2003/12/01 16:04:40 heinz Exp $
+
+--- rules/20_dnsbl_tests.cf.orig	Thu Aug 28 03:05:24 2003
++++ rules/20_dnsbl_tests.cf
+@@ -182,12 +182,6 @@ tflags RCVD_IN_BSP_OTHER	net nice
+ #header __SENDERBASE eval:check_rbl_txt('senderbase', 'sa.senderbase.org.')
+ #tflags __SENDERBASE net
+ 
+-# DynaBlocker: block SMTP connections from dynamic dial-up IP ranges.
+-# URL: http://basic.wirehub.nl/dynablocker.html
+-header RCVD_IN_DYNABLOCK	eval:check_rbl_txt('dynablock-notfirsthop', 'dynablock.easynet.nl.')
+-describe RCVD_IN_DYNABLOCK	Sent directly from dynamic IP address
+-tflags RCVD_IN_DYNABLOCK	net
+-
+ # ---------------------------------------------------------------------------
+ # NOTE: donation tests, see README file for details
+ 

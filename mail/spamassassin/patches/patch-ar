@@ -1,0 +1,12 @@
+$NetBSD: patch-ar,v 1.1 2003/12/01 16:04:40 heinz Exp $
+
+--- rules/30_text_de.cf.orig	Thu Aug 28 03:05:24 2003
++++ rules/30_text_de.cf
+@@ -168,7 +168,6 @@ lang de describe DNS_FROM_RFCI_DSN Absen
+ lang de describe HABEAS_VIOLATOR Sender verletzt das Warenzeichen der Firma Habeas
+ lang de describe RCVD_IN_BSP_TRUSTED Senderechner in Liste von http://www.bondedsender.org/
+ lang de describe RCVD_IN_BSP_OTHER Senderechner in Liste von http://www.bondedsender.org/
+-lang de describe RCVD_IN_DYNABLOCK Senderechner nur temporär mit Internet verbunden
+ lang de describe RCVD_IN_BL_SPAMCOP_NET Transportiert via Rechner in Liste von www.spamcop.net
+ lang de describe RCVD_IN_MAPS_RBL Transportiert via Rechner in Liste von http://www.mail-abuse.org/rbl/
+ lang de describe RCVD_IN_MAPS_DUL Transportiert via Rechner in Liste von http://www.mail-abuse.org/dul/
