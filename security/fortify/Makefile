@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/04/10 01:28:23 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/02 01:17:18 jschauma Exp $
 #
 
 DISTNAME=	Fortify-1.4.6-unix-src
@@ -12,7 +12,7 @@ MASTER_SITES=	ftp://ftp.fortify.net/pub/Fortify/ \
 		ftp://ftp.win.or.jp/pub/network/security/fortify/ \
 		http://www.hensa.ac.uk/mirrors/ftp.fortify.net/pub/Fortify/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.fortify.net/
 COMMENT=	patches Netscape binary to provide 128-bit cryptography
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/05/05 17:29:47 grant Exp $
+# $NetBSD: Makefile,v 1.30 2003/06/02 01:20:02 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:55:09 gj Exp
 
 DISTNAME=		vile-9.3
@@ -7,7 +7,7 @@ MASTER_SITES=		ftp://dickey.his.com/vile/ \
 			ftp://invisible-island.net/vile/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://dickey.his.com/vile/vile.html
 COMMENT=		VI Like Emacs.  a vi "workalike", with many additional features
 

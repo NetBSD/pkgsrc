@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/01/09 15:52:04 mycroft Exp $
+# $NetBSD: Makefile,v 1.16 2003/06/02 01:17:08 jschauma Exp $
 #
 
 DISTNAME=	Digest-MD5-2.22
@@ -7,7 +7,7 @@ SVR4_PKGNAME=	p5md5
 CATEGORIES=	security perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Digest/}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 COMMENT=	Perl5 extension interface for MD5 algorithm
 
 CONFLICTS+=	p5-MD5-[0-9]*

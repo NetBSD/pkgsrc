@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2002/02/18 15:14:23 seb Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/02 01:19:05 jschauma Exp $
 #
 
 DISTNAME=		egcs-1.1.2
 CATEGORIES=		lang
 MASTER_SITES=		ftp://egcs.cygnus.com/pub/egcs/releases/egcs-1.1.2/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://egcs.cygnus.com/index.html
 COMMENT=		the experimental GNU compiler suite
 

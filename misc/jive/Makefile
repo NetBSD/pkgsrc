@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/03/29 12:41:50 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2003/06/02 01:18:14 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/04/02 07:58:25 obrien Exp
 #
 
@@ -7,7 +7,7 @@ WRKSRC=			${WRKDIR}/jive
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=games/amusements/}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 COMMENT=		filter that converts English text to Jive
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/05/22 21:49:18 jmc Exp $
+# $NetBSD: Makefile,v 1.17 2003/06/02 01:18:01 jschauma Exp $
 #
 
 DISTNAME=	dc_gui-0.66
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://www.ac2i.tzo.com/dctc/ \
 		http://brainz.servebeer.com/dctc/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.ac2i.tzo.com/dctc/
 COMMENT=	graphical user interface for DCTC
 

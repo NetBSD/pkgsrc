@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2001/04/28 23:59:20 jtb Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/02 01:18:36 jschauma Exp $
 
 DISTNAME=		admesh-0.95
 CATEGORIES=		math
 MASTER_SITES=		http://www.varlog.com/products/admesh/files/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.varlog.com/products/admesh/
 COMMENT=		Program for processing triangulated solid meshes
 

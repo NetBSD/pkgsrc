@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/08/29 09:39:44 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/02 01:19:27 jschauma Exp $
 #
 
 DISTNAME=		gle-3.0.3
@@ -7,7 +7,7 @@ MASTER_SITES=		http://www.linas.org/gle/pub/			\
 			http://metalab.unc.edu/pub/Linux/libs/X/	\
 			ftp://tsx-11.mit.edu/pub/linux/sources/libs/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.linas.org/gle/
 COMMENT=		GL subroutines for drawing tubing and extrusions
 

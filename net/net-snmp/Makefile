@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2003/05/06 21:11:24 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/02 01:17:53 jschauma Exp $
 
 DISTNAME=	net-snmp-5.0.6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=net-snmp/} \
 		ftp://ftp.net-smnp.org/pub/sourceforge/net-snmp/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.net-snmp.org/
 COMMENT=	Extensible SNMP implementation
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/05/02 11:55:46 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2003/06/02 01:18:19 jschauma Exp $
 
 DISTNAME=	gnome-1.4.2.1
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	meta-package for the GNU Network Object Model Environment
 
@@ -24,7 +24,7 @@ DEPENDS+=	gnome-media>=1.2.3nb3:../../audio/gnome-media
 DEPENDS+=	gnome-pim>=1.4.6:../../misc/gnome-pim
 DEPENDS+=	gnome-users-guide>=1.2:../../x11/gnome-users-guide
 DEPENDS+=	gnome-utils>=1.4.1.2:../../misc/gnome-utils
-DEPENDS+=	evolution>=1.2.1:../../mail/evolution
+#DEPENDS+=	evolution>=1.2.1:../../mail/evolution
 .if exists(/usr/include/wctype.h)
 DEPENDS+=	gnumeric>=0.75nb5:../../math/gnumeric
 .else
@@ -33,7 +33,7 @@ DEPENDS+=	gnumeric>=0.75nb5:../../math/gnumeric0
 DEPENDS+=	gtk-->=1.2.10:../../x11/gtk--
 DEPENDS+=	gtk-engines>=0.12:../../x11/gtk-engines
 DEPENDS+=	gtop>=1.0.13nb2:../../sysutils/gtop
-DEPENDS+=	pan>=0.11.4nb2:../../news/pan
+#DEPENDS+=	pan>=0.11.4nb2:../../news/pan
 DEPENDS+=	xchat-gnome>=1.8.10nb3:../../chat/xchat-gnome
 
 USE_X11=	yes

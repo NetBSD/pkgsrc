@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/01/09 23:59:09 mycroft Exp $
+# $NetBSD: Makefile,v 1.18 2003/06/02 01:16:42 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/07/17 19:29:07 andreas Exp
 #
 
@@ -6,7 +6,7 @@ DISTNAME=	glimpse-4.17.2
 CATEGORIES=	textproc databases
 MASTER_SITES=   http://webglimpse.net/trial/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://webglimpse.net/
 COMMENT=	Text search engine
 

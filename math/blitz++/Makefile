@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/30 00:03:34 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 01:18:34 jschauma Exp $
 
 DISTNAME=		blitz-0.6
 PKGNAME=		blitz++-0.6
 CATEGORIES=		math devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=blitz/}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.oonumerics.org/blitz/
 COMMENT=		C++ template class library providing array objects
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/05/02 11:54:48 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/02 01:20:01 jschauma Exp $
 #
 
 DISTNAME=	BasiliskII_src_31052001
@@ -8,7 +8,7 @@ WRKSRC=		${WRKDIR}/BasiliskII-0.9/src/Unix
 CATEGORIES=	emulators
 MASTER_SITES=	http://iphcip1.physik.uni-mainz.de/~cbauer/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.uni-mainz.de/~bauec002/B2Main.html
 COMMENT=	Open Source 68k Macintosh emulator
 

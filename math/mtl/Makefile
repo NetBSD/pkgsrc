@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/29 23:52:25 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 01:18:29 jschauma Exp $
 
 DISTNAME=		mtl-2.1.2-21
 CATEGORIES=		math devel
 MASTER_SITES=		http://www.osl.iu.edu/download/research/mtl/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.osl.iu.edu/research/mtl/
 COMMENT=		Matrix Template Library
 
