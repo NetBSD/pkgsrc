@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1 2002/07/07 13:21:53 simonb Exp $
+
+--- bins_edit.orig	Mon Jun 10 05:54:13 2002
++++ bins_edit
+@@ -42,12 +42,14 @@
+ my $verbose = 1;
+ my $html=0;
+ 
+-my $localEncoding = `locale charmap`;
+-if (! $localEncoding or ($localEncoding eq "ANSI_X3.4-1968")) {
+-  # ANSI is unspeakably primitive, promote it.
++# XXX no "locale" command in NetBSD
++# my $localEncoding = `locale charmap`;
++# if (! $localEncoding or ($localEncoding eq "ANSI_X3.4-1968")) {
++#   # ANSI is unspeakably primitive, promote it.
++my
+   $localEncoding = "LATIN1";
+-  print "Forcing encoding to $localEncoding\n" if ($verbose >=2);
+-}
++#   print "Forcing encoding to $localEncoding\n" if ($verbose >=2);
++# }
+ my $converter = Text::Iconv->new($localEncoding, "UTF-8");
+ 
+ # decode HTML entites which doesn't exist in XML
