@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.110 2003/09/16 23:05:33 grant Exp $
+# $NetBSD: Makefile,v 1.111 2003/09/16 23:06:22 grant Exp $
 
 DISTNAME=		openssh-3.7.1p1
 PKGNAME=		openssh-3.7.1.1
 SVR4_PKGNAME=		ossh
 CATEGORIES=		security
-MASTER_SITES=		ftp://ftp7.usa.openbsd.org/pub/os/OpenBSD/OpenSSH/portable/ \
+MASTER_SITES=		ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
+			ftp://ftp7.usa.openbsd.org/pub/os/OpenBSD/OpenSSH/portable/ \
 			ftp://ftp.stealth.net/pub/mirrors/ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
 			http://public.planetmirror.com.au/pub/OpenBSD/OpenSSH/portable/ \
-			ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
 			ftp://gd.tuwien.ac.at/opsys/OpenBSD/OpenSSH/portable/ \
 			ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/old/
 # Don't delete the last entry -- it's there if the pkgsrc version is not
