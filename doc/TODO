@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2059 2004/08/17 19:45:28 adrianp Exp $
+$NetBSD: TODO,v 1.2060 2004/08/18 11:26:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -164,7 +164,7 @@ Suggested package updates
 	o ImageViewer-0.6.3
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
-	o abiword-2.0.10
+	o abiword-2.0.10 [pkg/26695]
 	o ald-0.1.6 [pkg/26431]
 	o allegro-4.1.15
 	o amavisd-new-20040815
@@ -331,6 +331,7 @@ Suggested package updates
 	o ncmpc-0.11.0 [pkg/26237]
 	o netatalk-1.6.3 [pkg/21930|markd]
 	o netcdf-3.5.1
+	o netscape-7.2
 	o nosefart-2.1
 	o ns-flash-6.0.79
 	o nslint-2.1a3
