@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2002/11/10 15:01:19 darcy Exp $
+# $NetBSD: Makefile,v 1.9 2003/01/24 12:44:29 jlam Exp $
 #
 
 DISTNAME=	gdchart-py-0.6
 PKGNAME=	${PYPKGPREFIX}-gdchart-0.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics python
 MASTER_SITES=	http://www.nullcube.com/software/pygdchart.html
 
@@ -11,8 +11,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://athani.pair.com/msteed/software/gdchart/
 COMMENT=	Python interface to GDChart
 
-BUILD_DEPENDS=	gdchart-0.10.1*:../../graphics/gdchart
-
+USE_BUILDLINK2=	yes
 USE_GMAKE=	yes
 MAKE_ENV=	GD_INCLUDE=${LOCALBASE}/include \
 		GDCHART_INCLUDE=${LOCALBASE}/include \
@@ -34,5 +33,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${EXAMPLE_DIR}
 .endfor
 
+.include "../../graphics/gdchart/buildlink2.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
