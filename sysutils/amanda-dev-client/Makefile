@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/02 13:28:15 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2002/06/25 15:42:21 taca Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -30,7 +30,7 @@ CONFIGURE_ENV+=         ac_cv_lib_readline_readline=no
 
 .if defined(AMANDA_SMB)
 CONFIGURE_ARGS+=	--with-smbclient
-DEPENDS+=		samba>=2.0.0:../../net/samba
+DEPENDS+=		{samba>=2.0,ja-samba>=2.0}:../../net/samba
 .endif
 
 .include "../../mk/bsd.pkg.mk"
