@@ -1,6 +1,30 @@
-$NetBSD: patch-ah,v 1.8 2000/09/03 13:41:08 wiz Exp $
---- configure.in	Mon Apr  3 20:24:29 2000
-+++ configure.in	Fri May 26 15:35:01 2000
+$NetBSD: patch-ah,v 1.9 2002/01/10 13:17:12 jlam Exp $
+
+--- configure.in.orig	Wed Jun 14 04:58:08 2000
++++ configure.in
+@@ -75,7 +75,7 @@
+ AC_MSG_RESULT($php_cv_cc_dashr)
+ if test $php_cv_cc_dashr = "yes"; then
+ 	ld_runpath_switch="-R"
+-	apxs_runpath_switch="-Wl,-R'"
++	apxs_runpath_switch="-Wl,-R"
+ else
+ 	AC_MSG_CHECKING([if compiler supports -Wl,-rpath,])
+ 	AC_CACHE_VAL(php_cv_cc_rpath,[
+@@ -86,11 +86,11 @@
+ 	AC_MSG_RESULT($php_cv_cc_rpath)
+ 	if test $php_cv_cc_rpath = "yes"; then
+ 		ld_runpath_switch="-Wl,-rpath,"
+-		apxs_runpath_switch="-Wl,'-rpath "
++		apxs_runpath_switch="-Wl,-rpath "
+ 	else
+ 		dnl something innocuous
+ 		ld_runpath_switch="-L"
+-		apxs_runpath_switch="-L'"
++		apxs_runpath_switch="-L"
+ 	fi
+ fi
+ 
 @@ -106,7 +106,7 @@
  AC_CHECK_SIZEOF(int, 4)
  
@@ -10,69 +34,27 @@ $NetBSD: patch-ah,v 1.8 2000/09/03 13:41:08 wiz Exp $
  if test -n "$PROG_SENDMAIL"; then
    AC_DEFINE(HAVE_SENDMAIL)
  fi
-@@ -115,9 +115,9 @@
+@@ -115,10 +115,10 @@
  dnl Check for /usr/pkg/{lib,include} which is where NetBSD puts binary
  dnl and source packages.  This should be harmless on other OSs.
  dnl
 -if test -d /usr/pkg/include -a -d /usr/pkg/lib ; then
 -       CFLAGS="$CFLAGS -I/usr/pkg/include"
 -       LDFLAGS="$LDFLAGS -L/usr/pkg/lib"
-+if test -d ${PREFIX}/include -a -d ${PREFIX}/lib ; then
-+       CFLAGS="$CFLAGS -I${PREFIX}/include"
-+       LDFLAGS="$LDFLAGS -L${PREFIX}/lib"
- fi
+-fi
++dnl if test -d /usr/pkg/include -a -d /usr/pkg/lib ; then
++dnl        CFLAGS="$CFLAGS -I/usr/pkg/include"
++dnl        LDFLAGS="$LDFLAGS -L/usr/pkg/lib"
++dnl fi
  
  AC_CHECK_FUNC(gethostent, [], [
-@@ -285,6 +285,8 @@
- 
- AC_CRYPT_CAP
- 
-+LDFLAGS_SHLIB_EXPORT=`perl -V:ccdlflags | cut -d\' -f2`
-+
- AC_MSG_CHECKING(for Apache module support via DSO through APXS)
- AC_ARG_WITH(apxs,
- [  --with-apxs[=FILE]      Build shared Apache module.  FILE is the optional
-@@ -305,7 +307,7 @@
+   AC_CHECK_LIB(nsl, gethostent, [
+@@ -305,7 +305,7 @@
  	if test "a`$APXS -q LD_SHLIB`" = "a" || test "`$APXS -q LIBEXECDIR`" = "modules"; then
  		PHP_APXS_BROKEN=yes
  	fi
 -    PHP_LIBS=-L/usr/local/lib
-+    PHP_LIBS="-R${PREFIX}/lib -L${PREFIX}/lib"
++    PHP_LIBS=
      STRONGHOLD=
      AC_DEFINE(APACHE)
      AC_SUBST(APXS)
-@@ -539,9 +541,9 @@
- 		AC_CHECK_HEADER(/usr/local/include/gdbm.h, [ GDBM_INCLUDE="-I/usr/local/include" ],[
- 			AC_MSG_RESULT("Try /opt/local/include/gdbm.h");
- 			AC_CHECK_HEADER(/opt/local/include/gdbm.h, [ GDBM_INCLUDE="-I/opt/local/include" ],[
--				dnl if in /usr/pkg/include, don't add anything.  See above.
--				AC_MSG_RESULT("Try /usr/pkg/include/gdbm.h");
--				AC_CHECK_HEADER(/usr/pkg/include/gdbm.h, [ GDBM_INCLUDE="" ],[
-+				dnl if in ${PREFIX}/include, don't add anything.  See above.
-+				AC_MSG_RESULT("Try ${PREFIX}/include/gdbm.h");
-+				AC_CHECK_HEADER(${PREFIX}/include/gdbm.h, [ GDBM_INCLUDE="" ],[
- 					AC_MSG_RESULT("Giving up - You need to install gdbm.h somewhere");
- 					exit
- 				])
-@@ -810,8 +812,8 @@
-       AC_CHECK_LIB(gd,gdImageString16,[ ], [AC_DEFINE(HAVE_GD_ANCIENT)])
-       
-       dnl Say hi to the NetBSD package system!
--      if test -f /usr/pkg/include/gd/gd.h -a -z "$GD_INCLUDE" ; then
--         AC_ADD_INCLUDE(/usr/pkg/include/gd)
-+      if test -f ${PREFIX}/include/gd/gd.h -a -z "$GD_INCLUDE" ; then
-+         AC_ADD_INCLUDE(${PREFIX}/include/gd)
-       fi
- 
-       AC_MSG_CHECKING(whether to include GD support)
-@@ -921,8 +923,8 @@
-     AC_CHECK_LIB(gd,gdImageString16,[ ], [AC_DEFINE(HAVE_GD_ANCIENT)])
-     
-     dnl Say hi to the NetBSD package system!
--    if test -f /usr/pkg/include/gd/gd.h -a -z "$GD_INCLUDE" ; then
--       AC_ADD_INCLUDE(/usr/pkg/include/gd)
-+    if test -f ${PREFIX}/include/gd/gd.h -a -z "$GD_INCLUDE" ; then
-+       AC_ADD_INCLUDE(${PREFIX}/include/gd)
-     fi
- 
-     AC_MSG_CHECKING(whether to include GD support)
