@@ -1,0 +1,67 @@
+$NetBSD: patch-af,v 1.1.1.1 1999/09/11 18:27:49 jlam Exp $
+
+--- src/pkg/common/unix/scripts/install.sh.orig	Wed Jun  2 16:19:32 1999
++++ src/pkg/common/unix/scripts/install.sh	Sat Sep 11 13:16:29 1999
+@@ -52,6 +52,17 @@
+     exit 1
+ fi
+ 
++# Make sure the libexec dir exists
++mkdir -p $LIBEXECDIR
++
++if [ ! -d $LIBEXECDIR ]
++then
++    echo ""
++    echo "Error creating directory [$LIBEXECDIR]."
++    echo ""
++    exit 1
++fi
++
+ # start with breathing room
+ echo ""
+ 
+@@ -63,9 +74,9 @@
+ # Copy the files from $SRCDIR to $TARGET
+ (cd $SRCDIR/AbiSuite; tar cf - *) | (cd $TARGET; tar xf -)
+ 
+-echo "Installing program binaries to [$TARGET/bin]..."
++echo "Installing program binaries to [$LIBEXECDIR]..."
+ # Setup bins 
+-(cd $SRCDIR; tar cf - bin/Abi*) | (cd $TARGET; tar xf -)
++(cd $SRCDIR/bin; tar cf - Abi*) | (cd $LIBEXECDIR; tar xf -)
+ 
+ ########################################################################
+ # If we're on Solaris, run makepsres on the font path
+@@ -90,11 +101,11 @@
+ 
+ cd $SCRIPTDIR
+ 
+-echo "Making wrapper script at [$TARGET/bin/AbiWord]..."
+-./makewrapper.sh AbiWord $TARGET
++echo "Making wrapper script at [$LIBEXECDIR/AbiWord]..."
++./makewrapper.sh AbiWord $TARGET $LIBEXECDIR $X11BASE
+ # TODO : make use of these
+-# ./makewrapper.sh AbiCalc $TARGET
+-# ./makewrapper.sh AbiFile $TARGET
++# ./makewrapper.sh AbiCalc $TARGET $LIBEXECDIR $X11BASE
++# ./makewrapper.sh AbiFile $TARGET $LIBEXECDIR $X11BASE
+ 
+ 
+ ########################################################################
+@@ -107,12 +118,12 @@
+ 
+ # NOTE : Solaris ln doesn't seem to honor the -f (force flag), so
+ # NOTE : we have to remove them first.
+-rm -f $BINDIR/AbiWord ; ln -s $TARGET/bin/AbiWord $BINDIR/AbiWord
+-rm -f $BINDIR/abiword ; ln -s $TARGET/bin/AbiWord $BINDIR/abiword
++rm -f $BINDIR/AbiWord ; ln -s $LIBEXECDIR/AbiWord $BINDIR/AbiWord
++rm -f $BINDIR/abiword ; ln -s $LIBEXECDIR/AbiWord $BINDIR/abiword
+ 
+ # TODO : make use of these, etc.
+-# rm -f $BINDIR/AbiCalc ; ln -s $TARGET/bin/AbiCalc $LINK_DIR/AbiCalc
+-# rm -f $BINDIR/abicalc ; ln -s $TARGET/bin/AbiCalc $LINK_DIR/abicalc
++# rm -f $BINDIR/AbiCalc ; ln -s $LIBEXECDIR/AbiCalc $LINK_DIR/AbiCalc
++# rm -f $BINDIR/abicalc ; ln -s $LIBEXECDIR/AbiCalc $LINK_DIR/abicalc
+ 
+ ########################################################################
+ # Done

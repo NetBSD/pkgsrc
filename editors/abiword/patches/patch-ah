@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1.1.1 1999/09/11 18:27:49 jlam Exp $
+
+--- src/hello/main/unix/Makefile.orig	Sun May 23 15:13:57 1999
++++ src/hello/main/unix/Makefile	Sat Sep 11 11:00:30 1999
+@@ -24,7 +24,7 @@
+ 
+ CPPSRCS=		UnixMain.cpp
+ 
+-INCLUDES=		`gtk-config --cflags`
++INCLUDES=		$(GTK_CFLAGS)
+ 
+ PROGRAM=		AbiHello
+ 
