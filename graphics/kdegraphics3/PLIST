@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/02/05 01:32:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/02/09 14:01:22 seb Exp $
 bin/kcolorchooser
 bin/kcoloredit
 bin/kdvi
@@ -15,9 +15,161 @@ bin/kuickshow
 bin/kview
 bin/kviewshell
 bin/mrmlsearch
+bin/printnodetest
+bin/svgdisplay
 bin/xf86gammacfg
 include/devselector.h
 include/dispgamma.h
+include/dom/SVGAElement.h
+include/dom/SVGAltGlyphDefElement.h
+include/dom/SVGAltGlyphElement.h
+include/dom/SVGAngle.h
+include/dom/SVGAnimateColorElement.h
+include/dom/SVGAnimateElement.h
+include/dom/SVGAnimateMotionElement.h
+include/dom/SVGAnimateTransformElement.h
+include/dom/SVGAnimatedAngle.h
+include/dom/SVGAnimatedBoolean.h
+include/dom/SVGAnimatedEnumeration.h
+include/dom/SVGAnimatedInteger.h
+include/dom/SVGAnimatedLength.h
+include/dom/SVGAnimatedLengthList.h
+include/dom/SVGAnimatedNumber.h
+include/dom/SVGAnimatedNumberList.h
+include/dom/SVGAnimatedPathData.h
+include/dom/SVGAnimatedPoints.h
+include/dom/SVGAnimatedPreserveAspectRatio.h
+include/dom/SVGAnimatedRect.h
+include/dom/SVGAnimatedString.h
+include/dom/SVGAnimatedTransformList.h
+include/dom/SVGAnimationElement.h
+include/dom/SVGCSSRule.h
+include/dom/SVGCircleElement.h
+include/dom/SVGClipPathElement.h
+include/dom/SVGColor.h
+include/dom/SVGColorProfileElement.h
+include/dom/SVGColorProfileRule.h
+include/dom/SVGComponentTransferFunctionElement.h
+include/dom/SVGCursorElement.h
+include/dom/SVGDefinitionSrcElement.h
+include/dom/SVGDefsElement.h
+include/dom/SVGDescElement.h
+include/dom/SVGDocument.h
+include/dom/SVGElement.h
+include/dom/SVGElementInstance.h
+include/dom/SVGElementInstanceList.h
+include/dom/SVGEllipseElement.h
+include/dom/SVGEvent.h
+include/dom/SVGException.h
+include/dom/SVGExternalResourcesRequired.h
+include/dom/SVGFEBlendElement.h
+include/dom/SVGFEColorMatrixElement.h
+include/dom/SVGFEComponentTransferElement.h
+include/dom/SVGFECompositeElement.h
+include/dom/SVGFEConvolveMatrixElement.h
+include/dom/SVGFEDiffuseLightingElement.h
+include/dom/SVGFEDisplacementMapElement.h
+include/dom/SVGFEDistantLightElement.h
+include/dom/SVGFEFloodElement.h
+include/dom/SVGFEFuncAElement.h
+include/dom/SVGFEFuncBElement.h
+include/dom/SVGFEFuncGElement.h
+include/dom/SVGFEFuncRElement.h
+include/dom/SVGFEGaussianBlurElement.h
+include/dom/SVGFEImageElement.h
+include/dom/SVGFEMergeElement.h
+include/dom/SVGFEMergeNodeElement.h
+include/dom/SVGFEMorphologyElement.h
+include/dom/SVGFEOffsetElement.h
+include/dom/SVGFEPointLightElement.h
+include/dom/SVGFESpecularLightingElement.h
+include/dom/SVGFESpotLightElement.h
+include/dom/SVGFETileElement.h
+include/dom/SVGFETurbulenceElement.h
+include/dom/SVGFilterElement.h
+include/dom/SVGFilterPrimitiveStandardAttributes.h
+include/dom/SVGFitToViewBox.h
+include/dom/SVGFontElement.h
+include/dom/SVGFontFaceElement.h
+include/dom/SVGFontFaceFormatElement.h
+include/dom/SVGFontFaceNameElement.h
+include/dom/SVGFontFaceSrcElement.h
+include/dom/SVGFontFaceUriElement.h
+include/dom/SVGForeignObjectElement.h
+include/dom/SVGGElement.h
+include/dom/SVGGlyphElement.h
+include/dom/SVGGlyphRefElement.h
+include/dom/SVGGradientElement.h
+include/dom/SVGHKernElement.h
+include/dom/SVGICCColor.h
+include/dom/SVGImageElement.h
+include/dom/SVGLangSpace.h
+include/dom/SVGLength.h
+include/dom/SVGLengthList.h
+include/dom/SVGLineElement.h
+include/dom/SVGLinearGradientElement.h
+include/dom/SVGLocatable.h
+include/dom/SVGMPathElement.h
+include/dom/SVGMarkerElement.h
+include/dom/SVGMaskElement.h
+include/dom/SVGMatrix.h
+include/dom/SVGMetadataElement.h
+include/dom/SVGMissingGlyphElement.h
+include/dom/SVGNumber.h
+include/dom/SVGNumberList.h
+include/dom/SVGPaint.h
+include/dom/SVGPathElement.h
+include/dom/SVGPathSeg.h
+include/dom/SVGPathSegArc.h
+include/dom/SVGPathSegClosePath.h
+include/dom/SVGPathSegCurvetoCubic.h
+include/dom/SVGPathSegCurvetoCubicSmooth.h
+include/dom/SVGPathSegCurvetoQuadratic.h
+include/dom/SVGPathSegCurvetoQuadraticSmooth.h
+include/dom/SVGPathSegLineto.h
+include/dom/SVGPathSegLinetoHorizontal.h
+include/dom/SVGPathSegLinetoVertical.h
+include/dom/SVGPathSegList.h
+include/dom/SVGPathSegMoveto.h
+include/dom/SVGPatternElement.h
+include/dom/SVGPoint.h
+include/dom/SVGPointList.h
+include/dom/SVGPolygonElement.h
+include/dom/SVGPolylineElement.h
+include/dom/SVGPreserveAspectRatio.h
+include/dom/SVGRadialGradientElement.h
+include/dom/SVGRect.h
+include/dom/SVGRectElement.h
+include/dom/SVGRenderingIntent.h
+include/dom/SVGSVGElement.h
+include/dom/SVGScriptElement.h
+include/dom/SVGSetElement.h
+include/dom/SVGStopElement.h
+include/dom/SVGStringList.h
+include/dom/SVGStylable.h
+include/dom/SVGStyleElement.h
+include/dom/SVGSwitchElement.h
+include/dom/SVGSymbolElement.h
+include/dom/SVGTRefElement.h
+include/dom/SVGTSpanElement.h
+include/dom/SVGTests.h
+include/dom/SVGTextContentElement.h
+include/dom/SVGTextElement.h
+include/dom/SVGTextPathElement.h
+include/dom/SVGTextPositioningElement.h
+include/dom/SVGTitleElement.h
+include/dom/SVGTransform.h
+include/dom/SVGTransformList.h
+include/dom/SVGTransformable.h
+include/dom/SVGURIReference.h
+include/dom/SVGUnitTypes.h
+include/dom/SVGUseElement.h
+include/dom/SVGVKernElement.h
+include/dom/SVGViewElement.h
+include/dom/SVGViewSpec.h
+include/dom/SVGWindow.h
+include/dom/SVGZoomAndPan.h
+include/dom/SVGZoomEvent.h
 include/gammadialog.h
 include/img_canvas.h
 include/imgscaledialog.h
@@ -27,6 +179,15 @@ include/kscandevice.h
 include/kscanoption.h
 include/kscanoptset.h
 include/kscanslider.h
+include/ksvg/CanvasFactory.h
+include/ksvg/CanvasItem.h
+include/ksvg/CanvasItems.h
+include/ksvg/DocumentFactory.h
+include/ksvg/KSVGCanvas.h
+include/ksvg/ksvg_plugin.h
+include/libtext2path-0.1/BezierPath.h
+include/libtext2path-0.1/Glyph.h
+include/libtext2path-0.1/GlyphTracer.h
 include/massscandialog.h
 include/previewer.h
 include/scanparams.h
@@ -100,12 +261,18 @@ lib/kde3/libkpdfpart.la
 lib/kde3/libkpdfpart.so
 lib/kde3/libkpovmodelerpart.la
 lib/kde3/libkpovmodelerpart.so
+lib/kde3/libksvgplugin.la
+lib/kde3/libksvgplugin.so
+lib/kde3/libksvgrendererlibart.la
+lib/kde3/libksvgrendererlibart.so
 lib/kde3/libkviewcanvas.la
 lib/kde3/libkviewcanvas.so
 lib/kde3/libkviewviewer.la
 lib/kde3/libkviewviewer.so
 lib/kde3/mrmlsearch.la
 lib/kde3/mrmlsearch.so
+lib/kde3/svgthumbnail.la
+lib/kde3/svgthumbnail.so
 lib/libkdeinit_kuickshow.la
 lib/libkdeinit_kuickshow.so
 lib/libkdeinit_kview.la
@@ -128,6 +295,14 @@ lib/libkscan.la
 lib/libkscan.so
 lib/libkscan.so.1
 lib/libkscan.so.1.0
+lib/libksvg.la
+lib/libksvg.so
+lib/libksvg.so.0
+lib/libksvg.so.0.1
+lib/libtext2path.la
+lib/libtext2path.so
+lib/libtext2path.so.0
+lib/libtext2path.so.0.0
 share/applications/kde/kcmkmrml.desktop
 share/applications/kde/kcolorchooser.desktop
 share/applications/kde/kcoloredit.desktop
@@ -702,6 +877,7 @@ share/kde/apps/kruler/pics/kruler-north.png
 share/kde/apps/kruler/pics/kruler-south.png
 share/kde/apps/kruler/pics/kruler-west.png
 share/kde/apps/kruler/sounds/move.wav
+share/kde/apps/ksvg/ksvgplugin.rc
 share/kde/apps/kuickshow/im_palette.pal
 share/kde/apps/kuickshow/pics/about.png
 share/kde/apps/kuickshow/pics/calibrate.png
@@ -803,25 +979,34 @@ share/kde/services/kfile_tga.desktop
 share/kde/services/kfile_tiff.desktop
 share/kde/services/kfile_xbm.desktop
 share/kde/services/kpdf_part.desktop
+share/kde/services/ksvglibartcanvas.desktop
+share/kde/services/ksvgplugin.desktop
 share/kde/services/kviewcanvas.desktop
 share/kde/services/kviewviewer.desktop
 share/kde/services/mrml.protocol
 share/kde/services/mrml_part.desktop
 share/kde/services/scanservice.desktop
+share/kde/services/svgthumbnail.desktop
 share/kde/servicetypes/kimageviewer.desktop
 share/kde/servicetypes/kimageviewercanvas.desktop
+share/kde/servicetypes/ksvgrenderer.desktop
 @comment dirrm share/kde/servicetypes
 @comment dirrm share/kde/services/kded
 @comment dirrm share/kde/services
 @comment dirrm share/kde/mimelnk/text
 @comment dirrm share/kde/icons/locolor/32x32/apps
 @comment dirrm share/kde/icons/locolor/16x16/apps
+@comment dirrm share/kde/icons/hicolor/48x48/apps
+@comment dirrm share/kde/icons/hicolor/32x32/apps
+@comment dirrm share/kde/icons/hicolor/16x16/apps
 @comment dirrm share/kde/icons/crystalsvg/64x64/apps
 @comment dirrm share/kde/icons/crystalsvg/48x48/apps
 @comment dirrm share/kde/icons/crystalsvg/32x32/mimetypes
 @comment dirrm share/kde/icons/crystalsvg/32x32/apps
+@comment dirrm share/kde/icons/crystalsvg/22x22/apps
 @comment dirrm share/kde/icons/crystalsvg/16x16/mimetypes
 @comment dirrm share/kde/icons/crystalsvg/16x16/apps
+@comment dirrm share/kde/icons/crystalsvg/16x16/actions
 @comment dirrm share/kde/icons/crystalsvg/128x128/apps
 @dirrm share/kde/apps/kviewviewer/kpartplugins
 @dirrm share/kde/apps/kviewviewer
@@ -831,6 +1016,7 @@ share/kde/servicetypes/kimageviewercanvas.desktop
 @dirrm share/kde/apps/kview
 @dirrm share/kde/apps/kuickshow/pics
 @dirrm share/kde/apps/kuickshow
+@dirrm share/kde/apps/ksvg
 @dirrm share/kde/apps/kruler/sounds
 @dirrm share/kde/apps/kruler/pics
 @dirrm share/kde/apps/kruler
@@ -874,8 +1060,8 @@ share/kde/servicetypes/kimageviewercanvas.desktop
 @dirrm share/kde/apps/kcoloredit
 @comment dirrm share/kde/apps
 @comment dirrm share/kde/applnk/Settings/System
-@comment dirrm share/kde/applnk/Graphics/More
-@comment dirrm share/kde/applnk/Graphics
+@dirrm share/kde/applnk/Graphics/More
+@dirrm share/kde/applnk/Graphics
 @dirrm share/doc/kde/HTML/en/kview
 @dirrm share/doc/kde/HTML/en/kuickshow
 @dirrm share/doc/kde/HTML/en/ksnapshot
@@ -891,3 +1077,5 @@ share/kde/servicetypes/kimageviewercanvas.desktop
 @dirrm share/doc/kde/HTML/en/kcoloredit
 @dirrm share/doc/kde/HTML/en/kamera
 @comment dirrm share/doc/kde/HTML/en
+@dirrm include/libtext2path-0.1
+@dirrm include/ksvg
