@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/04/26 10:34:09 recht Exp $
+# $NetBSD: Makefile,v 1.5 2004/11/25 19:11:58 minskim Exp $
 #
 
 DISTNAME=	dtdparse-2.0beta6
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dtdparse/}
 
-MAINTAINER=	minskim@bawi.org
+MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://dtdparse.sourceforge.net/
 COMMENT=	Reads an SGML or XML DTD and constructs an XML database
 
