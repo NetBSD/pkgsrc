@@ -1,5 +1,5 @@
 .\"     $Emsi: adjustkernel.1,v 1.1 2002/03/01 01:25:37 mjl Exp $
-.\"	$NetBSD: adjustkernel.1,v 1.4 2004/11/03 10:49:58 hubertf Exp $
+.\"	$NetBSD: adjustkernel.1,v 1.5 2005/02/28 00:48:52 hubertf Exp $
 .\"
 .\" Copyright (c) 2004 Hubert Feyrer <hubertf@NetBSD.org>,
 .\"		     Martin Laubach <mjl@NetBSD.org>
@@ -34,41 +34,45 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd November 3, 2004
+.Dd February 27, 2005
 .Dt ADJUSTKERNEL 1
 .Sh NAME
 .Nm adjustkernel
 .Nd generate kernel config from dmesg
 .Sh SYNOPSIS
 .Nm adjustkernel
-.Op Fl debug
-.Op Fl mesg Ar dmesg-file
-.Op Fl outfile Ar new-config
-.Op Fl remove
-.Fl file Ar source-config
+.Op Fl dmor
+.Op Fl -debug
+.Op Fl -mesg Ar dmesg-file
+.Op Fl -outfile Ar new-config
+.Op Fl -remove
+.Ar kernel-config
 .Sh DESCRIPTION
 .Nm
 generates a new kernel configuration file from the
-current dmesg output and the current kernel config file.
+current dmesg output and the current kernel config file,
+.Ar kernel-config .
 .Pp
 The generation can be customized by using the following options:
 .Bl -tag -width 22n -compact
-.It Fl debug
+.It Fl d , Fl -debug
 be verbose and generate noise (mainly useful for debugging).
-.It Fl file Ar source-config
-read the currently booted kernel from source-config.
-This option is mandatory.
-.It Fl outfile Ar new-config
+.It Fl o Ar new-config , Fl -outfile Ar new-config
 saves the newly generated config file to
 .Ar new-config ;
 otherwise the new config will be written to stdout.
-.It Fl mesg Ar dmesg-file
+.It Fl m Ar dmesg-file , Fl -mesg Ar dmesg-file
 read the dmesg data from
 .Ar dmesg-file ,
 defaults to calling
 .Pa /sbin/dmesg
 and using its output.
-.It Fl remove
+See
+.Pa /var/run/dmesg.boot
+for an alternative snapshot from
+right after the system booted, but which may not include
+any removable components added later.
+.It Fl r , Fl -remove
 causes the tool to remove entries in the config file instead
 of commenting them out.
 .El
@@ -76,15 +80,35 @@ of commenting them out.
 Note that options can be shortened, as long as they can be
 unambigously distinguished.
 .Sh EXAMPLES
-To generate a new kernel config after having booted a
-GENERIC kernel,
+To generate a new kernel config
+.Pa MYCONFIG
+after having booted a
+GENERIC kernel, run:
 .Bd -literal
-adjustkernel -f GENERIC -o MYKERNEL
+$ cd /usr/src/sys/arch/`uname -m`/conf
+$ adjustkernel GENERIC >MYCONFIG
+.Ed
+.Pp
+To see what could be stripped off the currently-running kernel,
+assuming it was built with the
+.Dq INCLUDE_CONFIG_FILE
+option, use something like:
+.Bd -literal
+$ config -x >MYKERNEL
+$ adjustkernel -r MYKERNEL | diff -u MYKERNEL - | more
 .Ed
 .Sh SEE ALSO
-.Xr options 4
+.Xr options 4 ,
+.Xr dmesg 8
 .Sh AUTHORS
 Originally created by Hubert Feyrer <hubert@feyrer.de>,
 later hacked in shape and packetized by Martin J. Laubach <mjl@netbsd.org>.
 .Sh BUGS
-On thursdays.
+Essential lines
+.Dq atabus* at ata? ,
+.Dq atabus* at atapi?
+and
+.Dq scsibus* at scsi?
+are removed as they aren't listed in
+.Xr dmesg 8
+output.
