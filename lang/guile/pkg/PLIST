@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/07/02 15:30:16 perry Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/07/17 19:39:42 tv Exp $
 bin/guile
 bin/guile-snarf
 include/guile/gh.h
@@ -82,7 +82,6 @@ include/libguile/threads.h
 include/libguile/coop-defs.h
 include/libguile.h
 lib/libguile.a
-lib/libguile.la
 lib/libguile.so.2.0
 share/aclocal/guile.m4
 share/aclocal/threads.m4
@@ -104,3 +103,4 @@ share/guile/1.2/ice-9/version.scm
 @dirrm share/guile/1.2/ice-9
 @dirrm share/guile/1.2
 @dirrm share/guile
+@unexec rmdir %D/share/aclocal 2>/dev/null || true
