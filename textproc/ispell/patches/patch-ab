@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.3 1998/12/21 00:36:00 frueauf Exp $
+$NetBSD: patch-ab,v 1.4 1999/03/06 02:30:21 kim Exp $
 
---- Makefile.orig	Thu Oct 12 20:04:06 1995
-+++ Makefile	Mon Dec 21 01:09:49 1998
+--- Makefile.orig	Thu Oct 12 15:04:06 1995
++++ Makefile	Fri Mar  5 21:28:05 1999
 @@ -240,9 +240,9 @@
  	  set $(SHELLDEBUG); \
  	  if [ -d $$TEXINFODIR -a -r ispell.info ]; then \
@@ -29,7 +29,7 @@ $NetBSD: patch-ab,v 1.3 1998/12/21 00:36:00 frueauf Exp $
  	  if [ -d $$TEXINFODIR ]; then \
  	    if sh iwhich makeinfo >/dev/null \
 -	      &&  makeinfo ispell.texinfo 2>/dev/null; then \
-+	      &&  $$BINDIR/makeinfo --no-split --force ispell.texinfo 2>/dev/null; then \
++	      && makeinfo --no-split --force ispell.texinfo 2>/dev/null; then \
  		:; \
  	    elif sh iwhich $$EMACS >/dev/null; then \
  		set -e; \
