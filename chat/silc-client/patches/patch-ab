@@ -1,15 +1,12 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/11/29 16:17:43 hubertf Exp $
+$NetBSD: patch-ab,v 1.2 2001/12/21 20:48:30 hubertf Exp $
 
---- lib/silcmath/mpi/mpi-priv.h.orig    Sat Nov 24 20:06:50 2001
-+++ lib/silcmath/mpi/mpi-priv.h Sat Nov 24 20:07:51 2001
-@@ -242,3 +242,10 @@
- /* }}} */
- #endif
- 
-+#if ! (2 < __GNUC__ || (2 == __GNUC__ && 95 <= __GNUC_MINOR__))
-+# if defined restrict || 199901L <= __STDC_VERSION__           
-+#  define __restrict restrict                       
-+# else
-+#  define __restrict      
-+# endif
-+#endif
+--- irssi/config.orig	Fri Nov 30 02:18:01 2001
++++ irssi/config	Fri Nov 30 02:18:19 2001
+@@ -57,7 +57,6 @@
+     use_msgs_window = "no";
+     autocreate_windows = "no";
+     autocreate_query_level = "none";
+-    use_auto_addr = "no";
+   };
+   "fe-text" = { topicbar = "no"; mail_counter = "yes"; indent = "8"; };
+ };
