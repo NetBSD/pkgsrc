@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/04/05 22:38:09 martin Exp $
+# $NetBSD: Makefile,v 1.29 2004/04/11 02:00:00 snj Exp $
 
 DISTNAME=		nut-2.0.0
 PKGNAME=		ups-nut-cgi-2.0.0
@@ -14,7 +14,7 @@ DEPENDS+=		ups-nut-2.*:../../sysutils/ups-nut
 ALL_TARGET=		cgi
 INSTALL_TARGET=		install-cgi
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
@@ -40,6 +40,6 @@ CONF_FILES+=		${NUT_EGDIR}/upsstats-single.html.sample \
 CONF_FILES+=		${NUT_EGDIR}/upsstats.html.sample \
 			${NUT_CONFDIR}/upsstats.html
 
-.include "../../graphics/freetype2/buildlink2.mk"
-.include "../../graphics/gd/buildlink2.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/gd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
