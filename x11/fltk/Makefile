@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/06/17 17:46:32 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2001/06/20 21:17:36 jlam Exp $
 #
 
 DISTNAME=	${PKGNAME}-source
@@ -18,17 +18,17 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.fltk.org/
 COMMENT=	Fast Light Tool Kit for graphical user interfaces
 
-USE_X11BASE=	# defined
-USE_GMAKE=	# defined
-USE_LIBTOOL=	# defined
+USE_X11BASE=		# defined
+USE_GMAKE=		# defined
+USE_LIBTOOL=		# defined
+USE_BUILDLINK_ONLY=	# defined
 
-GNU_CONFIGURE=	# defined
-CONFIGURE_ARGS=	--enable-libtool=${LIBTOOL}
-
-.include "../../graphics/Mesa/buildlink.mk"
+GNU_CONFIGURE=		# defined
+CONFIGURE_ARGS+=	--enable-libtool=${LIBTOOL}
 
 test:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}				\
 		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} test
 
+.include "../../graphics/Mesa/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
