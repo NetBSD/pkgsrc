@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/02/29 01:13:35 kim Exp $
+# $NetBSD: Makefile,v 1.16 2001/01/29 11:34:38 wiz Exp $
 #
 # Tempted to install another radius package?
 #
@@ -37,7 +37,6 @@ MAKE_ENV+=	RADLIBS="${RADLIBS} -lskey" LIBS=-lcrypt \
 		INSTALL="${INSTALL} -c"
 
 INSTALL_TARGET=	man-install install util-install config-install
-MESSAGE_FILE=   ${WRKDIR}/MESSAGE
 WRKSRC=		${WRKDIR}
 
 pre-patch:
@@ -46,9 +45,5 @@ pre-patch:
 	${SED} -e 's#^--- ${DISTNAME}.patched/#--- #' ${FILE}.diff | \
 	${PATCH} -s
 .endfor
-
-post-build:
-	@${SED} -e 's#@PREFIX@#${PREFIX}#g' <${PKGDIR}/MESSAGE \
-	  >${MESSAGE_FILE}
 
 .include "../../mk/bsd.pkg.mk"

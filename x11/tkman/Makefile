@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2000/09/11 21:08:49 fredb Exp $
+# $NetBSD: Makefile,v 1.25 2001/01/29 11:34:49 wiz Exp $
 # FreeBSD Id: Makefile,v 1.28 1997/12/08 15:51:20 tg Exp
 #
 
@@ -17,7 +17,6 @@ DEPENDS+=		tk-8.3.2:../../x11/tk
 
 USE_X11=		yes
 
-MESSAGE_FILE=		${WRKDIR}/MESSAGE
 WRKSRC=			${WRKDIR}/${PKGNAME}
 
 post-install:
@@ -25,8 +24,6 @@ post-install:
 		-e 's|@@PREFIX@@|${PREFIX}|' \
 		-e 's|@@X11BASE@@|${X11BASE}|' \
 		< ${FILESDIR}/mkindex > ${WRKDIR}/mkindex
-	${SED} -e 's|@@PREFIX@@|${PREFIX}|' \
-		< ${PKGDIR}/MESSAGE > ${WRKDIR}/MESSAGE
 	${INSTALL_SCRIPT} ${WRKDIR}/mkindex ${PREFIX}/libexec
 
 .include "../../mk/bsd.pkg.mk"

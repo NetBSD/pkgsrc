@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2000/12/06 16:27:39 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2001/01/29 11:34:42 wiz Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/11/12 03:24:41 obrien Exp
 #
 
@@ -43,17 +43,12 @@ CONFIGURE_ARGS+=	--with-nbsdops --disable-path-info
 
 PLIST_SRC=		${PKGDIR}/PLIST.common
 PLIST_SRC+=		${PKGDIR}/PLIST.${LOWER_OPSYS}
-MESSAGE_FILE=		${WRKDIR}/MESSAGE
 
 DOCDIR=			${PREFIX}/share/doc/sudo
 EGDIR=			${PREFIX}/share/examples/sudo
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
-
-post-build:
-	${SED} -e "s,@PREFIX@,${PREFIX},g" \
-		< ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}

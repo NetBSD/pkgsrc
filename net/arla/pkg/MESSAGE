@@ -1,21 +1,24 @@
 ===============================================================================
+$NetBSD: MESSAGE,v 1.4 2001/01/29 11:34:35 wiz Exp $
+
 Arla now has been installed on your system.
 
-The cache directory used by arla is @ARLA_CACHE@.
+The cache directory used by arla is ${ARLA_CACHE}.
 This directory should be on a local disk. You can change the location
 of the cache directory by setting the ARLA_CACHE environment variable
 (or by setting ARLA_CACHE in /etc/mk.conf) to the desired location prior
 to building arla.
 
 To complete the installation you'll have to configure arla.
-Default configuration files are installed in @PREFIX@/etc.
+Default configuration files are installed in ${PREFIX}/etc.
 
 At a minimum, to configure an arla client, copy
-@PREFIX@/etc/{CellServDB,SuidCells,ThisCell,arla.conf}.default to
-@PREFIX@/etc/{CellServDB,SuidCells,ThisCell,arla.conf} and customize them.
+${PREFIX}/etc/{CellServDB,SuidCells,ThisCell,arla.conf}.default to
+${PREFIX}/etc/{CellServDB,SuidCells,ThisCell,arla.conf} and customize them.
 Start arlad from rc.local, using the script provided in
-@PREFIX@/etc/rc.d/arlad.sh and include an entry for xfs in your /etc/fstab
-(see @PREFIX@/share/examples/arla/fstab).
-Also, append @PREFIX@/share/examples/arla/services to /etc/services and
-append @PREFIX@/share/examples/arla/lkm.conf to /etc/lkm.conf.
+${PREFIX}/etc/rc.d/arlad and include an entry for xfs in your /etc/fstab
+(see ${PREFIX}/share/examples/arla/fstab).
+Also, append ${PREFIX}/share/examples/arla/services to /etc/services and
+append ${PREFIX}/share/examples/arla/lkm.conf to /etc/lkm.conf.
+
 ===============================================================================

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2000/11/18 00:40:50 tv Exp $
+# $NetBSD: Makefile,v 1.20 2001/01/29 11:34:30 wiz Exp $
 #
 .include "../../mk/bsd.prefs.mk"
 
@@ -15,9 +15,11 @@ HOMEPAGE=       http://www.quick.com.au/java/
 CONFLICTS=	blackdown-j* sun-j*
 
 .include "../../mk/bsd.prefs.mk"
+
 .if !defined(JDK_HOME)
 JDK_HOME:=	${LOCALBASE}/java
 .endif
+MESSAGE_SUBST+=	JDK_HOME=${JDK_HOME}
 
 .if ${OBJECT_FMT} == "ELF"
 DISTNAME=	jdk${VERSION}-rc1-elf
@@ -34,7 +36,6 @@ CHECK_SHLIBS=	no
 NO_BUILD=	yes
 # since we change PREFIX:
 NO_MTREE=	yes
-MESSAGE_FILE=	${WRKDIR}/.MESSAGE
 
 ONLY_FOR_PLATFORM= NetBSD-*-i386
 RESTRICTED=	"No redistribution of the Java(tm) Development Kit"
@@ -60,9 +61,6 @@ do-install:
 	${RM} -f ${WRKSRC}/*.orig
 	${MKDIR} ${JDK_HOME}
 	cd ${WRKSRC} ; ${GTAR} pcf - . | ( cd ${JDK_HOME} ; ${GTAR} pvxf - )
-	${SED} \
-		-e 's|@JDK_HOME@|${JDK_HOME}|g' \
-		<${PKGDIR}/MESSAGE >${MESSAGE_FILE}
 
 .include "../../mk/bsd.pkg.mk"
 

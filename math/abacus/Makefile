@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/01/24 18:44:59 he Exp $
+# $NetBSD: Makefile,v 1.9 2001/01/29 11:34:33 wiz Exp $
 # FreeBSD Id: Makefile,v 1.3 1998/09/25 10:07:44 asami Exp
 #
 
@@ -18,8 +18,6 @@ BROKEN=		This package has been updated to compile with tcl-8.3.2, but dumps core
 USE_GMAKE=	yes
 USE_X11BASE=	yes
 
-MESSAGE_FILE=	${WRKDIR}/MESSAGE
-
 pre-patch:
 	@for d in `${FIND} ${WRKSRC} -name RCS -type d -print`; do	\
 		${MV} $$d $$d-dist;					\
@@ -29,9 +27,6 @@ pre-patch:
 #pre-build:
 #	@ ${RM} -f ${WRKSRC}/canvas
 #	@ ${LN} -fs ${WRKSRC}/canvas-tcl8.0.0 ${WRKSRC}/canvas
-
-pre-install:
-	${SED} -e "s_@PREFIX@_${PREFIX}_" < ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
 
 do-install:
 	@ ${SED} s!@PREFIX@!${PREFIX}!g ${WRKSRC}/abacus >${WRKSRC}/abacus.sh
