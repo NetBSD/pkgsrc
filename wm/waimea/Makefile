@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/01/06 06:49:54 xtraeme Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/24 15:18:32 grant Exp $
 #
 
 DISTNAME=	waimea-0.4.0
@@ -12,7 +12,7 @@ COMMENT=	Fast and highly customizable virtual window manager
 
 GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 USE_PERL5=	run
 USE_X11=	YES
 

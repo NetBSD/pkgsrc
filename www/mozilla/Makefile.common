@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2004/01/22 00:21:26 wiz Exp $
+# $NetBSD: Makefile.common,v 1.29 2004/01/24 15:23:47 grant Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}/mozilla
 USE_BUILDLINK2=	yes
 USE_GCC_SHLIB=	yes
 USE_PERL5=	build
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/build/unix/mozilla-gtkmozembed.pc.in

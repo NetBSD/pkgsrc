@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2003/12/28 16:10:04 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.31 2004/01/24 15:18:32 grant Exp $
 
 DISTNAME=		icewm-1.2.13
 CATEGORIES=		x11 wm
@@ -10,7 +10,7 @@ HOMEPAGE=		http://icewm.sourceforge.net/
 GNU_CONFIGURE=		# defined
 USE_BUILDLINK2=		yes
 USE_X11=		# defined
-USE_GMAKE=		# defined
+USE_GNU_TOOLS+=		make
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	# defined
 BUILD_USES_MSGFMT=	# defined

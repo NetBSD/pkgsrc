@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 22:55:17 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/24 15:18:32 grant Exp $
 #
 
 DISTNAME=	whiteBOX-0.5
@@ -11,7 +11,7 @@ HOMEPAGE=	http://whitebox.sourceforge.net/
 COMMENT=	Multi-purpose configuration tool for Blackbox
 
 USE_BUILDLINK2=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 

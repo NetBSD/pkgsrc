@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/02 07:23:59 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/24 15:18:32 grant Exp $
 #
 
 DISTNAME=	windowlab-1.12
@@ -12,7 +12,7 @@ COMMENT=	Small and simple window manager
 
 USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 USE_X11=	YES
 
 PKG_SYSCONFSUBDIR=	windowlab
