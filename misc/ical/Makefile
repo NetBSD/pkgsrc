@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/04/26 18:56:14 garbled Exp $
+# $NetBSD: Makefile,v 1.10 2000/08/30 22:15:44 tron Exp $
 # $FreeBSD Id: Makefile,v 1.15 1998/02/07 22:59:16 hoek Exp
 #
 
@@ -9,16 +9,14 @@ MASTER_SITES=	http://www.research.digital.com/SRC/personal/Sanjay_Ghemawat/ical/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.research.digital.com/SRC/personal/Sanjay_Ghemawat/ical/
 
-DEPENDS+=	tk-8.0.5:../../x11/tk80
+DEPENDS+=	tk>=8.3.2:../../x11/tk
 
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} \
-		--with-tclconfig=${PREFIX}/lib/tcl8.0 \
-		--with-tclhdir=${PREFIX}/include/tcl8.0 \
-		--with-tclsh=${PREFIX}/bin/tclsh8.0 \
-		--with-tkconfig=${PREFIX}/lib/tk8.0 \
-		--with-tkhdir=${PREFIX}/include/tk8.0
+		--with-tclconfig=${PREFIX}/lib \
+		--with-tclsh=${PREFIX}/bin/tclsh \
+		--with-tkconfig=${PREFIX}/lib
 
 post-install:
 	@strip ${PREFIX}/bin/${DISTNAME}
