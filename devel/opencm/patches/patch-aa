@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/08/28 14:53:15 agc Exp $
+$NetBSD: patch-aa,v 1.2 2003/01/04 20:39:57 wiz Exp $
 
---- doc/Makefile.in.orig	Sun Aug 25 20:05:32 2002
-+++ doc/Makefile.in	Sun Aug 25 20:05:51 2002
-@@ -112,8 +112,8 @@
+--- doc/Makefile.in.orig	Fri Oct 11 07:48:37 2002
++++ doc/Makefile.in
+@@ -113,12 +113,12 @@ uninstall-info:
  opencm.html: opencm.texi version.texi manual/cmd-ref.texi
  opencm.info: opencm.texi version.texi manual/cmd-ref.texi
  
@@ -13,3 +13,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/08/28 14:53:15 agc Exp $
  
  %.info.gz: %.info
  	rm -f $@
+-	gzip -9 $<
++	${GZIP_CMD} -9 $<
+ 
+ .dvi.ps:
+ 	${DVIPS} -t letter $< -o tmp.ps
