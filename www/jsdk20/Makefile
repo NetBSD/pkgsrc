@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/01/20 12:27:59 agc Exp $
+# $NetBSD: Makefile,v 1.24 2004/03/08 15:35:17 kristerw Exp $
 # STOP!  Don't update this to a later version of this software.
 # The JSDK and Apache Jakarta projects have merged, making the
 # jakarta-tomcat package the current version of this software.
@@ -15,7 +15,7 @@ MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://java.sun.com/products/servlet/index.html
 COMMENT=	Sun's Java Servlet Development Kit, version 2.0
 
-BUILD_DEPENDS+=        urlget>=1.3:../../www/urlget
+ARCHIVE=	http://java.sun.com/products/servlet/archive.html
 
 LICENSE=	sun-jsdk20-license
 USE_JAVA=	run
@@ -31,33 +31,19 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
+_FETCH_MESSAGE= 							\
+	${ECHO} "======================================================================"; \
+	${ECHO} ; 							\
+	${ECHO} " The file ${DISTNAME}${EXTRACT_SUFX} containing"; 	\
+	${ECHO} " ${COMMENT} must be fetched"; 				\
+	${ECHO} " into:"; 						\
+	${ECHO} "	${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}"; 	\
+	${ECHO} " from:"; 						\
+	${ECHO} "	${ARCHIVE}";                                    \
+	${ECHO} ; 							\
+	${ECHO} "======================================================================"
+
 .include "../../mk/bsd.prefs.mk"
-
-TEMPDIR?=	/tmp
-TEMPFILE!=	echo ${TEMPDIR}/jsdk20.location.$$$$
-URLGET?=	${LOCALBASE}/bin/urlget
-
-pre-fetch:
-	@if [ ! -f ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then	\
-		if [ ! -x ${URLGET} ]; then				\
-			${MAKE} install-depends DEPENDS=;		\
-		fi;							\
-	fi
-
-do-fetch:
-	-@if [ ! -f ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then	\
-		${URLGET} -p http://java.sun.com/cgi-bin/download2.cgi	\
-			referer=					\
-			protocol="FTP Download"				\
-			download-name=${DISTNAME}${EXTRACT_SUFX}	\
-			config-file=jsdk20.config			\
-			platform=solaris2-sparc				\
-			domain-checked=					\
-			> ${TEMPFILE};					\
-		${FETCH_CMD} -o ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}	\
-			`${GREP} ftp:// ${TEMPFILE} |			\
-			${SED} -e 's|.*\(ftp://.*.tar.Z\).*|\1|'`;	\
-	fi
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
