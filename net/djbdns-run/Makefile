@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2004/12/28 02:47:46 reed Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/29 16:35:41 schmonz Exp $
 #
 
-DISTNAME=		djbdns-run-20040902
-PKGREVISION=		1
+DISTNAME=		djbdns-run-20041229
 CATEGORIES=		net
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -54,14 +53,8 @@ PKG_SYSCONFDIR.djbdns-run!= \
 do-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/README.pkgsrc		\
 		> ${WRKDIR}/README.pkgsrc
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/dnscache-showctl.sh	\
-		> ${WRKDIR}/dnscache-showctl
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/tinydns-showctl.sh	\
-		> ${WRKDIR}/tinydns-showctl
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/dnscache-showctl ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKDIR}/tinydns-showctl ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKDIR}/README.pkgsrc ${PREFIX}/share/doc/djbdns-run
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: axfrdns.sh,v 1.2 2004/09/02 08:23:02 schmonz Exp $
+# $NetBSD: axfrdns.sh,v 1.3 2004/12/29 16:35:41 schmonz Exp $
 #
 # @PKGNAME@ script to control axfrdns (DNS zone-transfer and TCP service)
 #
@@ -9,11 +9,17 @@
 # REQUIRE: SERVERS tinydns
 # BEFORE:  DAEMON
 
+name="axfrdns"
+
+# User-settable rc.conf variables and their default values:
+axfrdns_tcpflags=${axfrdns_tcpflags-"-vDRHl0"}
+axfrdns_datalimit=${axfrdns_datalimit-"300000"}
+axfrdns_logcmd=${axfrdns_logcmd-"@LOCALBASE@/bin/setuidgid dnslog logger -t nb${name} -p daemon.info"}
+
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
 fi
 
-name="axfrdns"
 rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/axfrdns/tcp.cdb"
 command="@LOCALBASE@/bin/tcpserver"
@@ -21,11 +27,6 @@ procname=${name}
 start_precmd="axfrdns_precmd"
 extra_commands="cdb"
 cdb_cmd="axfrdns_cdb"
-
-# User-settable rc.conf variables and their default values:
-axfrdns_tcpflags=${axfrdns_tcpflags-"-vDRHl0"}
-axfrdns_datalimit=${axfrdns_datalimit-"300000"}
-axfrdns_logcmd=${axfrdns_logcmd-"@LOCALBASE@/bin/setuidgid dnslog logger -t nb${name} -p daemon.info"}
 
 axfrdns_precmd()
 {
