@@ -1,2 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 1999/03/02 20:20:04 jwise Exp $
-MD5 (mswordview-0.5.2.tar.gz) = 8a1f63c1eee523c191d20b163c5741c3
+$NetBSD: md5,v 1.1.1.2 1999/05/23 21:06:57 hwr Exp $
+
+MD5 (mswordview-0.5.9.tar.gz) = 5826f00eb63b58ca0819b0e978264472
