@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/11/13 19:29:59 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2002/12/18 20:58:21 wiz Exp $
 
 DISTNAME=		ImageMagick-5.5.1-6
 PKGNAME=		p5-PerlMagick-5.5.1.6
@@ -23,6 +23,7 @@ PATCHDIR=		${.CURDIR}/../../graphics/ImageMagick/patches
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
+USE_PERL5=		run
 PERL5_CONFIGURE=	NO
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Image/Magick/.packlist
 
