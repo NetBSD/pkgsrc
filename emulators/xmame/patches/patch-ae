@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.13 2001/03/24 19:52:34 kristerw Exp $
---- doc/xmamerc.dist.orig	Fri Mar  2 06:38:54 2001
-+++ doc/xmamerc.dist	Sat Mar 24 18:56:50 2001
-@@ -70,13 +70,13 @@
+$NetBSD: patch-ae,v 1.14 2001/09/02 22:07:40 kristerw Exp $
+--- doc/xmamerc.dist.orig	Sat Aug 25 21:53:26 2001
++++ doc/xmamerc.dist	Sun Sep  2 23:29:09 2001
+@@ -70,20 +70,19 @@
  mouse                   1
  
  ### Fileio Related ###
@@ -21,3 +21,10 @@ $NetBSD: patch-ae,v 1.13 2001/03/24 19:52:34 kristerw Exp $
  
  ### Mame Related ###
  defaultgame             pacman
+ language                english
+ fuzzycmp                1
+ cheat                   0
+-debug                   0
+ 
+ ### Frontend Related ###
+ clones                  1
