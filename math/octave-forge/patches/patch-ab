@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/08/14 13:29:56 dmcmahill Exp $
+
+--- main/miscellaneous/configure.add.orig	Sun Dec 14 04:00:04 2003
++++ main/miscellaneous/configure.add
+@@ -45,14 +45,14 @@ else
+ 	    AC_CHECK_HEADER(termcap.h, have_termcap=yes, have_termcap=no)
+ 	;;
+     esac
+-    if test $have_term = yes; then
+-       MISCDEFS="$MISCDEFS -DUSE_TERM -DHAVE_TERM_H"
+-       STATUS=yes
+-       AC_CHECK_LIB(termcap, tgetnum, HAVE_LIB_TERMCAP=yes)
+-    elif test $have_termcap = yes; then
++    if test $have_termcap = yes; then
+        MISCDEFS="$MISCDEFS -DUSE_TERM -DHAVE_TERMCAP_H"
+        AC_CHECK_LIB(termcap, tgetnum, HAVE_LIB_TERMCAP=yes)
+        STATUS=yes 
++    elif test $have_term = yes; then
++       MISCDEFS="$MISCDEFS -DUSE_TERM -DHAVE_TERM_H"
++       STATUS=yes
++       AC_CHECK_LIB(termcap, tgetnum, HAVE_LIB_TERMCAP=yes)
+     else
+        STATUS=no
+     fi
