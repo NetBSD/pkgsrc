@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/09/09 20:36:50 agc Exp $
+# $NetBSD: Makefile,v 1.4 2002/07/29 22:23:28 jlam Exp $
 #
 
 DISTNAME=	saxon
@@ -12,7 +12,7 @@ HOMEPAGE=	http://users.iclway.co.uk/mhkay/saxon/
 COMMENT=	Michael H. Kay's Java XSLT processor
 
 DIST_SUBDIR=	${PKGNAME}
-USE_JAVA=	yes
+USE_JAVA=	run
 NO_PATCH=
 NO_CONFIGURE=
 NO_BUILD=
