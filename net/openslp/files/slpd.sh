@@ -19,6 +19,7 @@ required_files="/etc/slp.conf"
 if [ -f /etc/rc.subr ]
 then
 	load_rc_config $name
+	eval [ -z "\$${rcvar}" ] && eval ${rcvar}=NO
 	run_rc_command "$1"
 else
 	@ECHO@ -n " ${name}"
