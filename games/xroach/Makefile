@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/02/21 20:26:11 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2005/03/27 17:13:40 kristerw Exp $
 #
 
 DISTNAME=	xroach
@@ -13,5 +13,6 @@ COMMENT=	Cockroaches hide under your windows
 DIST_SUBDIR=	xroach-4.4
 DECOMPRESS_CMD=	${CAT}
 MANCOMPRESSED_IF_MANZ=	yes
+USE_X11=	YES
 
 .include "../../mk/bsd.pkg.mk"
