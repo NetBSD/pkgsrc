@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/06/25 17:20:47 wiz Exp $
+
+SHA1 (ctorrent-1.3.2.tar.gz) = 8757bafd304d9c8c0b241a1a91ce8389613f1e69
+Size (ctorrent-1.3.2.tar.gz) = 87195 bytes
+SHA1 (patch-aa) = 338158f13fce9f9b9f29eb49fc7bc7b6ef0d9862
+SHA1 (patch-ab) = 579da81c93609fea7f2a6a9ef6ecdab344e7ad9e
