@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/02/25 04:18:13 hubertf Exp $
+# $NetBSD: Makefile,v 1.23 2001/03/24 02:35:56 fredb Exp $
 #
 
 DISTNAME=		rsaref
@@ -12,20 +12,11 @@ MAINTAINER=		tv@netbsd.org
 COMMENT=		Encryption/authentication library, RSA/MDX/DES
 
 CRYPTO=			yes
-IS_INTERACTIVE=		yes # requires options to be set in order to use
 LICENSE=		no-commercial-use
 
 USE_LIBTOOL=		yes
 MAKEFILE=		unix/makefile
 ALL_TARGET=		librsaref.la
-
-fetch-depends:
-	@if [ "X${USA_RESIDENT}" != XYES ]; then	\
-		${ECHO} "This package is legal for use only within the United States."; \
-		${ECHO} "You must set the variable USA_RESIDENT to YES to enable"; \
-		${ECHO} "use of the rsaref package.";	\
-		${FALSE};				\
-	fi
 
 do-configure:
 	@${RM} -f ${WRKDIR}/source/rsaref && ${LN} -sf . ${WRKDIR}/source/rsaref
