@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.49 2004/07/30 16:00:39 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.50 2004/07/30 16:03:44 agc Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q2 branch:
@@ -94,4 +94,6 @@ Pullup ticket 84, requested by Grant Beattie [agc 2004-07-30]
 	build fix for xmlcatmgr
 Pullup ticket 85, requested by Grant Beattie [agc 2004-07-30]
 	Solaris fix for gtkmagnetic
+Pullup ticket 86, requested by Grant Beattie [agc 2004-07-30]
+	Build fix for gopher
 
