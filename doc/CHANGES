@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8893 2005/01/24 10:52:42 agc Exp $
+$NetBSD: CHANGES,v 1.8894 2005/01/24 11:12:39 hira Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -531,3 +531,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated imap-uw to 2004c1 [abs 2005-01-23]
 	Updated gimp to 2.2.3 [adam 2005-01-23]
 	Added estd-0.3 [agc 2005-01-24]
+	Updated gnome2-games to 2.8.2nb1 [hira 2005-01-24]
