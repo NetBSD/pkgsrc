@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/07/04 09:18:55 mycroft Exp $
+# $NetBSD: Makefile,v 1.5 1998/11/13 22:35:58 hubertf Exp $
 #
 
 DISTNAME=		xwave-0.6
@@ -9,12 +9,9 @@ MASTER_SITE_SUBDIR=	apps/sound/editors
 
 MAINTAINER=		hubertf@netbsd.org
 
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
+DEPENDS+=		xpm-*:../../graphics/xpm
 
 USE_IMAKE=		yes
-
-# XXX This line can be removed if NetBSD >1.3.1 is out - HF
-XMKMF=	${SETENV} ${MAKE_ENV} xmkmf -a
 
 post-patch:
 	cd ${WRKSRC} ; ${MV} src/XWave src/XWave.ad
