@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/06/10 05:41:25 explorer Exp $
+$NetBSD: distinfo,v 1.2 2002/07/21 15:42:07 wiz Exp $
 
-Size (WeakRef-0.01.tar.gz) 3069 bytes
-MD5 (WeakRef-0.01.tar.gz) = 3162df7a6eda0dfb44676dd9ebfa3c4c
+SHA1 (WeakRef-0.01.tar.gz) = a24a81c884df5ef0897de0a11a9533f4e5af65e0
+Size (WeakRef-0.01.tar.gz) = 3069 bytes
