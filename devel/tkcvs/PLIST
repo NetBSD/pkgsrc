@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2002/12/22 14:59:25 agc Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/03/09 22:49:48 minskim Exp $
 bin/tkcvs
-bin/tkdiffb
+bin/tkdiff
 man/man1/tkcvs.1
 share/doc/tkcvs/README.tkcvs
 share/tkcvs/bitmaps/add.gif
 share/tkcvs/bitmaps/adir.gif
 share/tkcvs/bitmaps/amod.gif
+share/tkcvs/bitmaps/annotate.gif
+share/tkcvs/bitmaps/annotate.xbm
 share/tkcvs/bitmaps/arrow.gif
 share/tkcvs/bitmaps/arrow_dn.gif
 share/tkcvs/bitmaps/arrow_hl_dn.gif
@@ -51,6 +53,7 @@ share/tkcvs/bitmaps/paper.gif
 share/tkcvs/bitmaps/patches.gif
 share/tkcvs/bitmaps/patchfile.gif
 share/tkcvs/bitmaps/rcsdir.gif
+share/tkcvs/bitmaps/rdiff.gif
 share/tkcvs/bitmaps/refresh.gif
 share/tkcvs/bitmaps/remove.gif
 share/tkcvs/bitmaps/stat_conf.gif
