@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/05/17 00:36:44 tron Exp $
+# $NetBSD: Makefile,v 1.3 1999/05/17 01:54:01 tron Exp $
 
 DISTNAME=	suse_base-6.1
 CATEGORIES=	emulators
@@ -21,7 +21,6 @@ NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_WRKSUBDIR=	yes
 MANCOMPRESSED=	yes
-MANZ=		yes
 INSTALL_FILE=	${WRKDIR}/INSTALL
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
