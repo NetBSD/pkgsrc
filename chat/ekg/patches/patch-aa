@@ -1,13 +1,22 @@
-$NetBSD: patch-aa,v 1.4 2002/07/13 03:05:38 rh Exp $
+$NetBSD: patch-aa,v 1.5 2002/09/25 18:05:18 wiz Exp $
 
---- src/Makefile.in.orig	Fri Jun 28 11:57:01 2002
+--- src/Makefile.in.orig	Sun Sep  1 17:39:21 2002
 +++ src/Makefile.in
-@@ -19,7 +19,7 @@ OBJS = stuff.o commands.o events.o theme
+@@ -8,7 +8,7 @@ bindir = @bindir@
+ libexecdir = @libexecdir@
+ 
+ CC = @CC@ 
+-CFLAGS = -I.. -I../lib @CFLAGS@ -Wall -DTHEMES_DIR=\"${datadir}/ekg/themes\"
++CFLAGS = -I.. -I../lib @CFLAGS@ -Wall -DTHEMES_DIR=\"${PREFIX}/share/ekg/themes\"
+ LIBS = @LIBS@
+ 
+ MAKE = @MAKE@
+@@ -23,7 +23,7 @@ OBJS = stuff.o commands.o events.o theme
  all:	ekg @ioctld@
  
  ekg:	$(OBJS)
--	$(CC) $(CFLAGS) -o ekg $(OBJS) $(LIBS)
-+	$(CC) $(CFLAGS) -o ekg $(OBJS) $(LIBS) -Wl -R${LOCALBASE}/lib
+-	$(CC) $(CFLAGS) -o ekg $(OBJS) -L../lib $(LIBS) @lgadu@
++	$(CC) $(CFLAGS) -o ekg $(OBJS) -Wl -R${LOCALBASE}/lib -L../lib $(LIBS) @lgadu@
  
  ioctld:	ioctld.c
  	$(CC) $(CFLAGS) ioctld.c -o ioctld
