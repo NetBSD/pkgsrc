@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.862 2002/12/22 05:15:07 jlam Exp $
+$NetBSD: CHANGES,v 1.863 2002/12/22 12:23:44 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4045,3 +4045,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added sweep-0.5.13 [jmmv 2002-12-21]
 	Updated gimp-base to 1.2.3nb3 [jmmv 2002-12-21]
 	Updated gettext to 0.11.5nb1 [jlam 2002-12-21]
+	Updated tracker to 5.3nb1 [jmmv 2002-12-22]
