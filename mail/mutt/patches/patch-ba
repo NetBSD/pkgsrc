@@ -1,0 +1,30 @@
+$NetBSD: patch-ba,v 1.1 2004/01/28 10:58:00 lukem Exp $
+
+--- pgp.c.orig	2002-01-10 02:39:28.000000000 +1100
++++ pgp.c
+@@ -55,7 +55,7 @@
+ 
+ 
+ char PgpPass[STRING];
+-static time_t PgpExptime = 0; /* when does the cached passphrase expire? */
++time_t PgpExptime = 0; /* when does the cached passphrase expire? */
+ 
+ void pgp_void_passphrase (void)
+ {
+
+--- send.c.orig	2002-01-31 09:50:59.000000000 +1100
++++ send.c
+@@ -1611,6 +1611,13 @@ full_fcc:
+     }
+   }
+ 
++#ifdef HAVE_PGP
++  {
++    /* Extend the expiry time while messages keep getting sent.  */
++    extern time_t PgpExptime;
++    PgpExptime = time (NULL) + PgpTimeout;
++  }
++#endif /* HAVE_PGP */
+ 
+   rv = 0;
+   

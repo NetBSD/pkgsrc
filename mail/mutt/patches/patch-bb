@@ -1,0 +1,73 @@
+$NetBSD: patch-bb,v 1.1 2004/01/28 10:58:00 lukem Exp $
+
+--- curs_main.c.orig	Thu Jan 17 07:44:25 2002
++++ curs_main.c
+@@ -989,6 +989,11 @@
+           cp = _("Open mailbox");
+ 
+ 	buf[0] = '\0';
++	if (option (OPTCHANGEFOLDERNEXT) && Context && Context->path)
++	{
++	  strfcpy (buf, Context->path, sizeof (buf));
++	  mutt_pretty_mailbox (buf);
++	}
+ 	mutt_buffy (buf, sizeof (buf));
+ 
+ 	if (mutt_enter_fname (cp, buf, sizeof (buf), &menu->redraw, 1) == -1)
+--- init.h.orig	Thu Apr 25 23:26:37 2002
++++ init.h
+@@ -278,6 +278,13 @@
+   ** .pp
+   ** Character set your terminal uses to display and enter textual data.
+   */
++  { "change_folder_next", DT_BOOL, R_NONE, OPTCHANGEFOLDERNEXT, 0 },
++  /*
++  ** .pp
++  ** When this variable is set, the change-folder command will start at the
++  ** next folder after the current folder in your mailbox list instead of
++  ** starting at the first folder.
++  */
+   { "check_new",	DT_BOOL, R_NONE, OPTCHECKNEW, 1 },
+   /*
+   ** .pp
+--- mutt.h.orig	Thu Feb 28 19:24:13 2002
++++ mutt.h
+@@ -315,6 +315,7 @@
+   OPTBEEP,
+   OPTBEEPNEW,
+   OPTBOUNCEDELIVERED,
++  OPTCHANGEFOLDERNEXT,
+   OPTCHECKNEW,
+   OPTCOLLAPSEUNREAD,
+   OPTCONFIRMAPPEND,
+
+
+--- buffy.c.orig	2002-03-25 22:30:23.000000000 +1100
++++ buffy.c
+@@ -440,7 +440,7 @@ void mutt_buffy (char *s, size_t slen)
+   {
+   case 0:
+ 
+-    s = '\0';
++    *s = '\0';
+     break;
+ 
+   case 1:
+@@ -449,7 +449,7 @@ void mutt_buffy (char *s, size_t slen)
+       tmp = tmp->next;
+     if (!tmp)
+     {
+-      s = '\0';
++      *s = '\0';
+       mutt_buffy_check (1); /* buffy was wrong - resync things */
+       break;
+     }
+@@ -475,7 +475,7 @@ void mutt_buffy (char *s, size_t slen)
+     }
+     if (count >= 3)
+     {
+-      s = '\0';
++      *s = '\0';
+       mutt_buffy_check (1); /* buffy was wrong - resync things */
+       break;
+     }
