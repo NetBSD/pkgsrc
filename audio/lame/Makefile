@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/02/14 17:21:33 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2004/02/20 11:25:25 jmmv Exp $
 #
 
 DISTNAME=	lame-${VERS}
@@ -40,5 +40,5 @@ CFLAGS+=	-O2 -Wall -fomit-frame-pointer -ffast-math -funroll-loops \
 		-finline-functions -DFLOAT=double
 .endif
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
