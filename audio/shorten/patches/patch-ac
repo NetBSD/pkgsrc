@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/04/16 22:23:34 zuntum Exp $
+
+--- dupfinfo.c.orig	Sun Apr  8 21:58:00 2001
++++ dupfinfo.c	Sun Apr  8 21:58:26 2001
+@@ -35,7 +35,7 @@
+     ftime.actime  = buf.st_atime;
+     ftime.modtime = buf.st_mtime;
+     (void) utime(path1, &ftime);
+-#ifdef unix
++#ifdef eunuchs
+     (void) chown(path1, buf.st_uid, -1);
+     (void) chown(path1, -1, buf.st_gid);
+ #endif
