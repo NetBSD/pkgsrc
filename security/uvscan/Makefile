@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2001/02/17 17:50:14 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/03/20 08:51:12 rh Exp $
 #
 
-DISTNAME=		vlnx407e
-PKGNAME=		uvscan-4.07e
+DISTNAME=		vlnx414e
+PKGNAME=		uvscan-4.14.0
 NO_WRKSUBDIR=		YES
 CATEGORIES=		security
-MASTER_SITES=		http://download.mcafee.com/products/evaluation/virusscan/english/unix/linux/
+MASTER_SITES=		http://download.nai.com/products/evaluation/virusscan/english/unix/linux/v4.14.0/
 EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		packages@netbsd.org
@@ -13,7 +13,7 @@ HOMEPAGE=		http://www.nai.com/asp_set/buy_try/try/products_evals.asp
 COMMENT=		evaluation version of a DOS/Windows file virus scanner
 
 DEPENDS+=		suse_libc5>=6.1:../../emulators/suse_libc5
-DEPENDS+=		uvscan-dat>=4080:../../security/uvscan-dat
+DEPENDS+=		uvscan-dat>=4129:../../security/uvscan-dat
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 NO_BUILD=		YES
@@ -32,12 +32,17 @@ do-configure:
 		-e 's:@@PREFIX@@:${PREFIX}:g'
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/uvscan ${PREFIX}/libexec/uvscan
 	${INSTALL_SCRIPT} ${WRKSRC}/uvscan.sh ${PREFIX}/bin/uvscan
+.for file in uvscan liblnxfv.so
+	${INSTALL_SCRIPT} ${WRKSRC}/${file} ${PREFIX}/libexec/uvscan
+.endfor
+	${LN} -s ${PREFIX}/libexec/uvscan/liblnxfv.so \
+		${PREFIX}/emul/linux/usr/local/lib
+	${INSTALL_MAN} ${WRKSRC}/uvscan.1 ${PREFIX}/man/man1
 .for file in license.dat messages.dat
 	${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/libexec/uvscan
 .endfor
-.for file in unx47uag.pdf license.txt
+.for file in unxadmin.pdf license.txt
 	${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/share/doc/uvscan
 .endfor
 
