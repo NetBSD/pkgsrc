@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/09/15 17:05:04 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/11/13 01:05:08 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/05/26 04:04:11 mph Exp
 #
 
@@ -34,15 +34,15 @@ pre-configure:
 		${FILESDIR}/config.ans > ${WRKDIR}/config.ans
 
 do-install:
-	$(INSTALL_PROGRAM) $(WRKSRC)/rayshade/rayshade $(PREFIX)/bin
-	$(INSTALL_DATA) $(WRKSRC)/libray/libray.a $(PREFIX)/lib
+	${INSTALL_PROGRAM} ${WRKSRC}/rayshade/rayshade ${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/libray/libray.a ${PREFIX}/lib
 	${RANLIB} ${PREFIX}/lib/libray.a
-	$(INSTALL_DATA) $(WRKSRC)/libshade/libshade.a $(PREFIX)/lib
+	${INSTALL_DATA} ${WRKSRC}/libshade/libshade.a ${PREFIX}/lib
 	${RANLIB} ${PREFIX}/lib/libshade.a
-	$(MKDIR) $(PREFIX)/share/doc/rayshade
-	$(INSTALL_DATA) $(WRKSRC)/Doc/Guide/* $(PREFIX)/share/doc/rayshade
-	$(INSTALL_DATA) $(WRKSRC)/Doc/quickref.txt $(PREFIX)/share/doc/rayshade
-	$(MKDIR) $(PREFIX)/share/examples/rayshade
-	$(INSTALL_DATA) $(WRKSRC)/Examples/* $(PREFIX)/share/examples/rayshade
+	${MKDIR} ${PREFIX}/share/doc/rayshade
+	${INSTALL_DATA} ${WRKSRC}/Doc/Guide/* ${PREFIX}/share/doc/rayshade
+	${INSTALL_DATA} ${WRKSRC}/Doc/quickref.txt ${PREFIX}/share/doc/rayshade
+	${MKDIR} ${PREFIX}/share/examples/rayshade
+	${INSTALL_DATA} ${WRKSRC}/Examples/* ${PREFIX}/share/examples/rayshade
 
 .include "../../mk/bsd.pkg.mk"
