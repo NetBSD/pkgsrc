@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/10/08 21:12:52 jlam Exp $
+# $NetBSD: Makefile,v 1.8 1999/10/24 16:42:51 tron Exp $
 #
 
 DISTNAME=	xsane-0.33
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.wolfsburg.de/~rauch/sane/sane-xsane.html
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png-1.0.3:../../graphics/png
 DEPENDS+=	tiff-*:../../graphics/tiff
-DEPENDS+=	gtk+-1.2.4:../../x11/gtk
+DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	sane-1.0.1:../../graphics/sane
 
 GNU_CONFIGURE=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/08/29 21:50:20 jlam Exp $
+# $NetBSD: Makefile,v 1.11 1999/10/24 16:43:08 tron Exp $
 #
 
 DISTNAME=	gEDA-19990516
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.geda.seul.org/pub/geda/dist/ \
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.geda.seul.org/
 
-DEPENDS+=	gtk+-1.2.4:../../x11/gtk
+DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	guile-1.3.2:../../lang/guile
 
 GNU_CONFIGURE=	yes
