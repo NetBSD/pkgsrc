@@ -1,5 +1,7 @@
---- /var/obj/pkgsrc/multimedia/mjpegtools/work.what-time-is-love/mjpegtools-1.6.2/utils/altivec/sub_mean_reduction_ppc.S.orig	2004-04-04 20:47:16.000000000 +1000
-+++ /var/obj/pkgsrc/multimedia/mjpegtools/work.what-time-is-love/mjpegtools-1.6.2/utils/altivec/sub_mean_reduction_ppc.S	2004-04-04 20:46:30.000000000 +1000
+$NetBSD: patch-ae,v 1.2 2004/04/11 08:31:55 taca Exp $
+
+--- utils/altivec/sub_mean_reduction_ppc.S.orig	2002-11-17 12:43:59.000000000 +0900
++++ utils/altivec/sub_mean_reduction_ppc.S
 @@ -18,7 +18,7 @@
   */
  
