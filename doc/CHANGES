@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1293 2003/01/31 11:03:21 abs Exp $
+$NetBSD: CHANGES,v 1.1294 2003/01/31 11:20:15 shell Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -514,4 +514,14 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xaric to 0.12.1 [salo 2003-01-31]
 	Updated roxirc to 1.8 [salo 2003-01-31]
 	Updated dvdrecord to 0.1.3nb1 [abs 2003-01-31]
-
+	Updated libexif to 0.5.9 [shell 2003-01-31]
+	Updated libexif-gtk to 0.3.3 [shell 2003-01-31]
+	Updated p5-Image-Size to 2.991 [shell 2003-01-31]
+	Updated p5-URI to 1.23 [shell 2003-01-31]
+	Updated p5-libwww to 5.69 [shell 2003-01-31]
+	Updated p5-Digest-SHA1 to 2.02 [shell 2003-01-31]
+	Updated p5-Digest-MD2 to 2.01 [shell 2003-01-31]
+	Updated p5-IO-String to 1.02 [shell 2003-01-31]
+	Updated p5-MailTools to 1.58 [shell 2003-01-31]
+	Updated p5-XML-Simple to 2.03 [shell 2003-01-31]
+	Updated p5-perl-ldap to 0.2701 [shell 2003-01-31]
