@@ -1,4 +1,4 @@
-# $NetBSD: motif.buildlink.mk,v 1.8 2001/09/13 22:42:59 jlam Exp $
+# $NetBSD: motif.buildlink.mk,v 1.9 2001/09/14 01:35:02 jlam Exp $
 #
 # This Makefile fragment is included by packages that use Motif.
 #
@@ -170,7 +170,7 @@ MOTIFBASE=		${_MOTIFBASE}
 .  endif
 .endif
 
-USE_X11=		# defined
+USE_X11BASE=		# defined
 MAKE_ENV+=		MOTIFLIB="${MOTIFLIB}"
 LDFLAGS+=		-Wl,-R${_MOTIFBASE}/lib
 MOTIFLIB?=		-Wl,-R${_MOTIFBASE}/lib -Wl,-R${X11BASE}/lib -L${BUILDLINK_DIR}/lib -lXm -lXp
