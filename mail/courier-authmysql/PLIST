@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/07/14 21:43:48 jlam Exp $
-libexec/courier/authlib/authdaemond.mysql
-share/doc/courier/README.authmysql.html
-share/examples/courier/authmysqlrc.dist
-@unexec ${RMDIR} -p %D/share/doc/html/courier 2>/dev/null || ${TRUE}
