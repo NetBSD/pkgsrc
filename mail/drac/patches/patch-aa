@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/04/11 23:39:29 groo Exp $
+$NetBSD: patch-aa,v 1.2 2002/09/25 19:40:38 wiz Exp $
 
---- Makefile.orig	Tue Dec 28 21:46:19 1999
-+++ Makefile	Tue Apr 11 19:01:56 2000
+--- Makefile.orig	Mon Nov 20 16:35:16 2000
++++ Makefile
 @@ -5,9 +5,11 @@
  
  # Paths
@@ -17,30 +17,34 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/04/11 23:39:29 groo Exp $
  
  # OS-Dependant settings
  
-@@ -33,22 +35,24 @@
+@@ -33,24 +35,28 @@ MAN = /usr/local/man/man
  # -DCIDR_KEY	# keys in CIDR format
  # -DTERM_KD	# keys and data nul-terminated
  
 -DEFS = -DTI_RPC -DFCNTL_LOCK -DSYSINFO
-+# DEFS = -DTI_RPC -DFCNTL_LOCK -DSYSINFO
 +DEFS = -DSOCK_RPC -DFCNTL_LOCK -DGETHOST -DDASH_C
  
  # Compiler flags 
  CC = cc
 -RANLIB = :
--CFLAGS = $(DEFS) -g -I/usr/local/src/db/db-2.4.14/Unix
+-CFLAGS = $(DEFS) -g -I/usr/local/src/db/db-3.1.17/build_unix
 +RANLIB = ranlib
-+#CFLAGS = $(DEFS) -g -I/usr/local/src/db/db-2.4.14/Unix
-+CFLAGS = $(DEFS) 
++#CFLAGS = $(DEFS) -g -I/usr/local/src/db/db-3.1.17/build_unix
+ #CFLAGS = $(DEFS) -g -I/usr/local/src/db/db-2.4.14/Unix
  #CFLAGS = $(DEFS) -g -I/usr/local/src/db/db.1.85/PORT/sunos.5.2/include
--LDLIBS = -L/usr/local/src/db/db-2.4.14/Unix -lnsl -ldb
-+LDLIBS = 
+-LDLIBS = -L/usr/local/src/db/db-3.1.17/build_unix -lnsl -ldb
++CFLAGS= $(DEFS)
++#LDLIBS = -L/usr/local/src/db/db-3.1.17/build_unix -lnsl -ldb
+ #LDLIBS = -L/usr/local/src/db/db-2.4.14/Unix -lnsl -ldb
  #LDLIBS = -L/usr/local/src/db/db.1.85/PORT/sunos.5.2 -lnsl -ldb
 -TSTLIBS = -L. -ldrac -lnsl
 -RPCGENFLAGS = 
++LDLIBS =
++#TSTLIBS = -L. -ldrac -lnsl
 +TSTLIBS = -L. -ldrac
-+RPCGENFLAGS = -I -C
++#RPCGENFLAGS = 
  #RPCGENFLAGS = -C
++RPCGENFLAGS = -I -C
  
  # Man sections
  MANLIB = 3
@@ -49,7 +53,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/04/11 23:39:29 groo Exp $
  
  ## Nothing to change after this point
  
-@@ -117,8 +121,13 @@
+@@ -119,8 +125,13 @@ tar: $(PACKAGE)
  
  install: $(SERVER)
  	$(INSTALL) -c -o bin -g bin -m 0755 $(SERVER) $(EBIN)
