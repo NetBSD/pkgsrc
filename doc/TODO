@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.141 2003/01/05 11:36:55 wiz Exp $
+$NetBSD: TODO,v 1.142 2003/01/05 20:17:07 jlam Exp $
 
 Suggested new packages
 ======================
@@ -201,7 +201,6 @@ Suggested package updates
 	o pilot-link-0.11.4 [dillo]
 	o plib-1.6.0
 	o postfix-2.0
-	o postgresql-7.3.1 [jlam]
 	o povray-3.5
 	o pureftpd-0.13a [pkg/19233]
 	o pygtk-0.6.11
