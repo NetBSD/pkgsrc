@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/03/27 17:45:38 wiz Exp $
+
+SHA1 (socket++-1.12.10.tar.gz) = a59a6d30803a686b65f17f3dae1a67ec601fa5e9
+Size (socket++-1.12.10.tar.gz) = 62741 bytes
+SHA1 (patch-aa) = e8f2e2d4b77edeb82402df1ca6a4492ce7c4be92
+SHA1 (patch-ab) = 2fa03c7ee83dca495db14887e3c179388f71c71a
+SHA1 (patch-ac) = a7e48aa5795fd4d78bc2d133e72c51417172b6f9
+SHA1 (patch-ad) = 7f0ffbf79592b340a45f2c7868b7a6904a63c9f3

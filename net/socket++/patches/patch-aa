@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/03/27 17:45:38 wiz Exp $
+
+--- socket++/local.h.orig	2003-03-14 19:02:40.000000000 +0100
++++ socket++/local.h
+@@ -90,7 +90,9 @@ extern "C" unsigned long inet_addr (cons
+ extern "C" char* inet_ntoa (in_addr ina);
+ 
+ #if !defined (__linux__)
++#if !defined (__NetBSD__)
+   extern "C" int gethostname (char* hostname, int len);
++#endif
+ #if !(defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__bsdi__) || defined(__APPLE__))
+   extern char* SYS_SIGLIST [];
+ #endif
