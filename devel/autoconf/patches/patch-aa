@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.7 2003/03/05 12:01:43 grant Exp $
+
+--- doc/autoconf.info.orig	Tue Dec  3 18:43:16 2002
++++ doc/autoconf.info
+@@ -27,7 +27,7 @@ START-INFO-DIR-ENTRY
+ * Autoconf: (autoconf).         Create source code configuration scripts
+ END-INFO-DIR-ENTRY
+ 
+-INFO-DIR-SECTION Individual utilities
++INFO-DIR-SECTION GNU Autoconf
+ START-INFO-DIR-ENTRY
+ * autoscan: (autoconf)autoscan Invocation.
+                                 Semi-automatic `configure.ac' writing
