@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9753 2005/04/04 17:11:29 tron Exp $
+$NetBSD: CHANGES,v 1.9754 2005/04/04 18:14:22 martti Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1904,3 +1904,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated squid to 2.5.9nb4 [tron 2005-04-04]
 	Updated abiword to 2.2.6 [adam 2005-04-04]
 	Updated abiword-plugins to 2.2.6 [adam 2005-04-04]
+	Updated postfix to 2.2.2 [martti 2005-04-04]
