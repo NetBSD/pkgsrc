@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/10/24 22:11:02 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2002/04/17 02:54:00 jlam Exp $
 
 DISTNAME=		tcm-2.01.src
 PKGNAME=		tcm-2.01
@@ -12,6 +12,7 @@ COMMENT=		TCM - Toolkit for Conceptual Modeling
 WRKSRC=			${WRKDIR}/tcm-2.01/src
 
 USE_BUILDLINK_ONLY=	YES
+USE_X11BASE=		YES
 
 # These two variables denote where the installed location of the libraries
 # are located.
