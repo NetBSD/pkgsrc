@@ -1,0 +1,46 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/12/12 20:09:42 kei Exp $
+
+--- postinstall.generic.sh.orig	Wed Dec 13 03:48:10 2000
++++ postinstall.generic.sh	Wed Dec 13 03:48:31 2000
+@@ -7,7 +7,7 @@
+ #  It needs to be massaged with the information for
+ #  various paths.
+ # If you are building a package,  then you do NOT want
+-#  to have this executed - it will put the sample files
++#  to have this executed - it will put the example files
+ #  in place.  You need to do this during the postinstall
+ #  step in the package installation.
+ #
+@@ -19,23 +19,23 @@
+ 		echo "$v is a filter '$p'" 
+ 		exit 0
+ 	fi
+-	echo "Checking for $v.sample in $d"
++	echo "Checking for $v.example in $d"
+ 	if [ ! -d "$d" ] ; then
+ 		echo "Directory $d does not exist!"
+ 		sh mkinstalldirs $d
+ 	fi
+-	if [ -f $v.sample ] ; then
+-		if [ $v.sample != $p.sample ] ; then cp $v.sample $p.sample; fi
++	if [ -f $v.example ] ; then
++		if [ $v.example != $p.example ] ; then cp $v.example $p.example; fi
+ 	elif [ -f $v ] ; then
+-		if [ $v != $p.sample ] ; then cp $v $p.sample; fi
++		if [ $v != $p.example ] ; then cp $v $p.example; fi
+ 	else
+-		echo "Do not have $v.sample or $v"
++		echo "Do not have $v.example or $v"
+ 	fi
+-	if [ ! -f $p.sample ] ; then
+-		echo "Do not have $p.sample"
++	if [ ! -f $p.example ] ; then
++		echo "Do not have $p.example"
+ 	elif [ ! -f $p ] ; then
+-		chmod 644 $p.sample
+-		cp $p.sample $p;
++		chmod 644 $p.example
++		cp $p.example $p;
+ 		chmod 644 $p;
+ 	fi;
+ }

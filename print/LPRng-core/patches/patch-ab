@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/12 20:09:42 kei Exp $
+
+--- src/Makefile.in.orig	Sat Oct 14 00:08:21 2000
++++ src/Makefile.in	Mon Dec 11 16:38:18 2000
+@@ -95,7 +95,10 @@
+ FORCE_LOCALHOST=@FORCE_LOCALHOST@
+ PERMS=@PERMS@
+ 
+-CFLAGS:= @CPPFLAGS@ @CFLAGS@ @DEFS@ -DLOCALEDIR=\"$(localedir)\" $(CFLAGS)
++CFLAGS:= @CPPFLAGS@ @CFLAGS@ @DEFS@ -DLOCALEDIR=\"$(localedir)\" $(CFLAGS) \
++	 -DFILTER_LD_PATH=\"${FILTER_LD_PATH}\" \
++	 -DFILTER_PATH=\"${FILTER_PATH}\" \
++	 -DLPD_PRINTCAP_PATH=\"${LPD_PRINTCAP_PATH}\"
+ LDFLAGS:= @LDFLAGS@
+ 
+ STRIP=@STRIP@

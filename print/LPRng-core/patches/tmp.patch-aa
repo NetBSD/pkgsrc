@@ -1,0 +1,43 @@
+$NetBSD: tmp.patch-aa,v 1.1.1.1 2000/12/12 20:09:42 kei Exp $
+
+--- Makefile.in.orig	Fri Aug 27 21:37:47 1999
++++ Makefile.in	Mon Sep 13 13:24:16 1999
+@@ -31,6 +31,8 @@
+ libexecdir=@libexecdir@
+ # for the configuration stuff
+ sysconfdir=@sysconfdir@
++# for the sample configuraton files
++egdir=${prefix}/share/examples/LPRng
+ 
+ LPD_PERMS_PATH=@LPD_PERMS_PATH@
+ LPD_CONF_PATH=@LPD_CONF_PATH@
+@@ -73,20 +75,20 @@
+ install::
+ 	#install default versions of the lpd.conf and lpd.perm files
+ 
++	${BSD_INSTALL_DATA_DIR} ${egdir};
++
+ 	f=$(LPD_CONF_PATH) ; g=lpd.conf; \
+-	if [ -z "$$f" ] ; then f=${admindir}/$$g; fi; \
+-	$(INSTALL) -m 644 $(SRC)/$$g $$f.sample; \
++	${BSD_INSTALL_DATA} ${SRC}/$$g ${egdir}/$$g.sample; \
+ 	if [ ! -f "$$f" ] ; then \
+-		echo $(INSTALL) -m 644 $(SRC)/$$g $$f; \
+-		$(INSTALL) -m 644 $(SRC)/$$g $$f; \
++		echo ${BSD_INSTALL_DATA} ${SRC}/$$g $$f; \
++		${BSD_INSTALL_DATA} ${SRC}/$$g $$f; \
+ 	fi;
+ 
+-	f=$(LPD_PERMS_PATH); g=lpd.perms; \
+-	if [ -z "$$f" ] ; then f=${admindir}/$$g; fi; \
+-	$(INSTALL) -m 644 $(SRC)/$$g $$f.sample; \
++	f=$(LPD_PERMS_PATH) ; g=lpd.perms; \
++	${BSD_INSTALL_DATA} ${SRC}/$$g ${egdir}/$$g.sample; \
+ 	if [ ! -f "$$f" ] ; then \
+-		echo $(INSTALL) -m 644 $(SRC)/$$g $$f; \
+-		$(INSTALL) -m 644 $(SRC)/$$g $$f; \
++		echo ${BSD_INSTALL_DATA} ${SRC}/$$g $$f; \
++		${BSD_INSTALL_DATA} ${SRC}/$$g $$f; \
+ 	fi;
+ 
+ info dvi check:
