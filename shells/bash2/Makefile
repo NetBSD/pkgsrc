@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 1999/02/20 22:48:43 hubertf Exp $
+# $NetBSD: Makefile,v 1.16 1999/02/21 02:58:30 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/06/27 23:03:27 ache Exp 
 #
 
-V=		2.02.1
-DV=		2.02
+V=		2.03
+DV=		2.03
 DISTNAME=       bash-${V}
 CATEGORIES=	shells
 MASTER_SITES=	ftp://slc2.ins.cwru.edu/pub/dist/  \
@@ -31,16 +31,15 @@ post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${PREFIX}/share/doc/bash
 	${INSTALL_MAN}  \
-		${WRKDIR}/bash-doc-${DV}/doc/article.ps  \
-		${WRKDIR}/bash-doc-${DV}/doc/bashref.ps  \
+		${WRKDIR}/doc/article.ps  \
+		${WRKDIR}/doc/bashref.ps  \
 		${PREFIX}/share/doc/bash
 	${INSTALL_MAN}  \
-		${WRKDIR}/bash-doc-${DV}/doc/bash.html  \
-		${WRKDIR}/bash-doc-${DV}/doc/bashref.html  \
-		${WRKDIR}/bash-doc-${DV}/doc/bashref_toc.html  \
+		${WRKDIR}/doc/bash.html  \
+		${WRKDIR}/doc/bashref.html  \
 		${PREFIX}/share/doc/bash
 	${INSTALL_MAN}  \
-		${WRKDIR}/bash-doc-${DV}/doc/article.txt  \
+		${WRKDIR}/doc/article.txt  \
 		${PREFIX}/share/doc/bash
 	${GZIP_CMD} ${PREFIX}/share/doc/bash/*.ps
 .endif
