@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.167 2003/08/02 17:00:06 jmmv Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.168 2003/08/04 11:14:07 jmmv Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -741,7 +741,7 @@ EXIM_GROUP?=	mail
 # Possible: any group name
 # Default: mail
 
-EXIM_USER?=	exim
+EXIM_USER?=	mail
 # Used in the exim package to specify the server user.
 # Possible: any user name
 # Default: exim
