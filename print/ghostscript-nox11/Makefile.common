@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2000/05/07 02:04:34 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2000/05/24 10:30:24 agc Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -12,6 +12,7 @@ HOMEPAGE=		http://www.cs.wisc.edu/~ghost/index.html
 
 DEPENDS+=		ghostscript-fonts-6.0:../../print/ghostscript-fonts
 DEPENDS+=		ja-vflib-lib-2.*:../../japanese/vflib-lib
+DEPENDS+=		watanabe-vfont-19930318:../../fonts/watanabe_vfont
 DEPENDS+=		png>=1.0.6:../../graphics/png
 
 # Adobe's JPEG implementation in their PDF/PS documents is non-standard,
