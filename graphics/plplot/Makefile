@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/08 09:54:30 jtb Exp $
+# $NetBSD: Makefile,v 1.3 2000/12/08 22:29:47 jtb Exp $
 
 DISTNAME=	plplot-5.0.0
 CATEGORIES=	graphics
@@ -6,6 +6,8 @@ MASTER_SITES=	ftp://plplot.sourceforge.net/pub/plplot/
 
 MAINTAINER=	jtb@netbsd.org
 HOMEPAGE=	http://www.plplot.org/
+
+BUILD_DEPENDS+=	${LOCALBASE}/bin/autoreconf:../../devel/autoconf
 
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
@@ -17,6 +19,10 @@ post-patch:
 	@for f in ${WRKSRC}/src/plctrl.c ; do  \
 	${SED} -e 's:%%PREFIX%%:'${PREFIX}':g' \
 	< $$f > $$f.tmp && ${MV} $$f.tmp $$f ; done
+
+pre-configure:
+	@(cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf)
+	@${MV} ${WRKSRC}/cf/configure ${WRKSRC}/configure
 
 PLPLOT_USE_X11= YES
 PLPLOT_USE_TCL= YES
