@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2002/01/15 20:10:51 agc Exp $
+# $NetBSD: Makefile,v 1.109 2002/01/15 20:17:09 agc Exp $
 #
 
 COMMENT=	Programming languages
@@ -18,6 +18,7 @@ SUBDIR+=	cint
 SUBDIR+=	clisp
 SUBDIR+=	cu-prolog
 SUBDIR+=	drscheme
+#SUBDIR+=	dylan-compiler # takes too long to build
 SUBDIR+=	dylan-interpreter
 SUBDIR+=	egcs
 SUBDIR+=	eieio
