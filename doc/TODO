@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2905 2005/01/14 21:45:44 adrianp Exp $
+$NetBSD: TODO,v 1.2906 2005/01/15 21:17:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -417,6 +417,7 @@ Suggested package updates
 	o dnstracer-1.8
 	o docbook-4.3
 	o docbook-website-2.5.0
+	o doclifter-2.1
 	o docsis-0.9.1
 	o dpkg-1.10.25
 	o dropbear-0.44
@@ -654,7 +655,7 @@ Suggested package updates
 	o libtecla-1.6.1
 	o libtheora-1.0alpha4
 	o licq-core-1.3.0
-	o liferea-0.6.4b
+	o liferea-0.9.0
 	o linuxsms-0.77
 	o lmbench-2.0.4
 	o lmclock-1.2
@@ -679,7 +680,6 @@ Suggested package updates
 	o mantis-0.19.2
 	o mapserver-4.2.5
 	o maradns-1.0.23
-	o mc-4.6.0 [pkgsrc-wip]
 	o memtest86-3.2
 	o mergeant-0.52
 	o mgetty+sendfax-1.1.31
@@ -896,6 +896,7 @@ Suggested package updates
 	o p5-razor-agents-2.67
 	o p5-sybperl-2.17
 	o p5-xmltv-0.5.37
+	o p7zip-4.14
 	o pari-2.2.7
 	o pcal-4.8
 	o pdmenu-1.2.85
@@ -1073,6 +1074,7 @@ Suggested package updates
 	o strace-4.5.8
 	o streamtuner-0.99.99
 	o subtitleripper-0.3.4
+	o subversion-1.1.3
 	o sun-jdk15-5.0.1
 	o sun-jre15-5.0.1
 	o svk-0.27
@@ -1104,6 +1106,7 @@ Suggested package updates
 	o tex-musixtex-112
 	o texi2html-1.70
 	o tfmxplay-1.1.6
+	o tgif-4.1.44
 	o thunderbird-bin-1.0
 	o tinc-1.0.3
 	o tinyproxy-1.7.0
@@ -1232,6 +1235,7 @@ Suggested package updates
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zircon-1.18.256
 	o zopeedit-0.8
+	o zsh-4.2.3
 	o zsnes-1.40
 	o zziplib-0.13.37
 
