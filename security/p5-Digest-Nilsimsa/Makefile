@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/06 03:07:03 heinz Exp $
+# $NetBSD: Makefile,v 1.2 2003/02/17 15:28:02 dillo Exp $
 #
 
 DISTNAME=	Digest-Nilsimsa-0.06
@@ -15,12 +15,10 @@ COMMENT=	perl5 extension module for Nilsimsa signatures
 # with 5.6.1 :-/
 BUILDLINK_DEPENDS.perl=	perl>=5.6.1
 USE_BUILDLINK2=		YES
+TEST_TARGET=		test
 
 PERL5_CONFIGURE=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Digest/Nilsimsa/.packlist
-
-test: build
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} test
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
