@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 12:41:54 agc Exp $
+$NetBSD: distinfo,v 1.3 2001/08/06 15:41:14 wiz Exp $
 
-SHA1 (transfig.3.2.3.tar.gz) = 3b8c59c2dec59565c73e10404d10db5733cd8f53
-Size (transfig.3.2.3.tar.gz) = 239280 bytes
-SHA1 (patch-aa) = 33cf460111e37068662aaf3ccc791282ca1e8b8d
-SHA1 (patch-ab) = 5aa077b2e3a2e424130fa03f03e7f410718517eb
-SHA1 (patch-ac) = ee7b0ef77fd60daa756c9730b7fcdfc5ced6d089
+SHA1 (transfig.3.2.3d.tar.gz) = b3e1e27b3115b18ba5dbd8db5d68415c3b7aa7a6
+Size (transfig.3.2.3d.tar.gz) = 256075 bytes
+SHA1 (patch-aa) = be3fcd0cf7e8ef6e4be11141ca98c711a6905060
+SHA1 (patch-ab) = 348f734c3213abf73fbdd5f7d73b76484aae2b7a

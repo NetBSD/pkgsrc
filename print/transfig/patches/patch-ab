@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2000/06/22 08:13:14 itohy Exp $
+$NetBSD: patch-ab,v 1.2 2001/08/06 15:41:14 wiz Exp $
 
---- fig2dev/dev/Imakefile.orig	Thu Jan  6 03:30:09 2000
-+++ fig2dev/dev/Imakefile	Thu Jun 22 00:03:53 2000
-@@ -22,7 +22,7 @@
- XCOMM the party supplying this software to the X Consortium.
+--- transfig/Imakefile.orig	Wed Mar 21 12:32:22 2001
++++ transfig/Imakefile
+@@ -26,7 +26,7 @@
+ XCOMM \\usepackage{} command for LaTeX2e. 
+ XCOMM The default is to use \\documentstyle{} for LaTeX209.
  
- INCLUDES = -I.. -I../..
--#ifdef JPEGINCDIR
-+#ifdef USE_JPEG
- JPEGINC = -I$(JPEGINCDIR)
- #endif
+-XCOMM USELATEX2E = -DLATEX2E
++USELATEX2E = -DLATEX2E
+ 
+ XCOMM ******* DON'T CHANGE ANYTHIN BELOW THIS POINT *******
  
