@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 1997/11/06 09:58:46 agc Exp $
+@comment $NetBSD: PLIST,v 1.4 1997/11/27 11:09:24 augustss Exp $
 bin/xmcd
 bin/cda
 bin/wm2xmcd
 lib/X11/app-defaults/XMcd
+lib/X11/xmcd/README
 lib/X11/xmcd/help/Ab.btn
 lib/X11/xmcd/help/DbProg.btn
 lib/X11/xmcd/help/DdCancel.btn
@@ -127,6 +128,8 @@ lib/X11/xmcd/config/.tbl/Teac
 lib/X11/xmcd/config/.tbl/Toshiba
 lib/X11/xmcd/config/.tbl/Yamaha
 lib/X11/xmcd/config/config.sh
+@comment remove the CD drive configuration file(s). Its name is unknown.
+@unexec rm -f %D/lib/X11/xmcd/config/*
 man/cat1/xmcd.0
 man/cat1/cda.0
 man/cat1/wm2xmcd.0
