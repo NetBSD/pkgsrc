@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/12/17 15:11:03 sketch Exp $
+# $NetBSD: Makefile,v 1.22 2004/04/25 07:15:51 snj Exp $
 #
 
 DISTNAME=	gawk-3.1.3
@@ -12,7 +12,7 @@ COMMENT=	GNU awk
 
 CONFLICTS=	ja-gawk-[0-9]*
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
 USE_PKGLOCALEDIR=	# defined
 TEST_DIRS=		${WRKSRC}
@@ -29,5 +29,5 @@ BUILD_DEFS+=		GAWK_ENABLE_PORTALS
 CONFIGURE_ARGS+=	--enable-portals
 .endif
 
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

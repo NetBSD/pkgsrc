@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/10/16 12:54:14 cube Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/25 07:34:28 snj Exp $
 #
 
 DISTNAME=	slurm-0.3.1
@@ -9,7 +9,7 @@ MAINTAINER=	mail@eckigesauge.de
 HOMEPAGE=	http://www.raisdorf.net/projects/slurm/
 COMMENT=	Realtime traffic statistics
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
 post-patch:
@@ -24,5 +24,5 @@ do-install:
 		${INSTALL_DATA} ${WRKSRC}/themes/$${theme}.theme ${PREFIX}/share/slurm ;	\
 	done
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
