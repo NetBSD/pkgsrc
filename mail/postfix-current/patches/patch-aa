@@ -1,22 +1,195 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/08/14 04:33:24 itojun Exp $
-
---- Makefile.orig	Tue May 18 23:37:51 1999
-+++ Makefile	Sun May 30 18:49:12 1999
-@@ -1,3 +1,17 @@
-+#	$NetBSD: patch-aa,v 1.1.1.1 2000/08/14 04:33:24 itojun Exp $
-+
-+# NOTE THAT THE BELOW DOES NOT CONTAIN `etc'!
-+SUBDIR= util global dns master masterlib postfix sendmail error \
-+	pickup cleanup smtpd local trivial-rewrite qmgr smtp bounce pipe \
-+	showq postalias postcat postconf postdrop postkick postlock postlog \
-+	postmap postsuper postfix-script conf
-+
-+SUBDIR+=man
-+
-+# not yet included: html
-+# not needed: smtpstone fsstone
-+
-+.include <bsd.subdir.mk>
- # Usage: 
- #	make makefiles [CC=compiler] [OPT=compiler-flags] [DEBUG=debug-flags]
- #
+$NetBSD: patch-aa,v 1.2 2000/08/14 04:39:59 itojun Exp $
+--- INSTALL.sh.orig	Tue Apr 18 07:05:36 2000
++++ INSTALL.sh	Mon Aug 14 13:20:45 2000
+@@ -8,35 +8,35 @@
+ 
+-cat <<EOF
+-
+-Warning: this script replaces existing sendmail or Postfix programs.
+-Make backups if you want to be able to recover.
+-
+-In addition to doing a fresh install, this script can change an
+-existing installation from using a world-writable maildrop to a
+-group-writable one. It cannot be used to change Postfix queue
+-file/directory ownership.
+-
+-Before installing files, this script prompts you for some definitions.
+-Most definitions will be remembered, so you have to specify them
+-only once. All definitions have a reasonable default value.
+-
+-    install_root - prefix for installed file names (for package building)
+-
+-    tempdir - where to write scratch files
+-
+-    config_directory - directory with Postfix configuration files.
+-    daemon_directory - directory with Postfix daemon programs.
+-    command_directory - directory with Postfix administrative commands.
+-    queue_directory - directory with Postfix queues.
+-
+-    sendmail_path - full pathname of the Postfix sendmail command.
+-    newaliases_path - full pathname of the Postfix newaliases command.
+-    mailq_path - full pathname of the Postfix mailq command.
+-
+-    mail_owner - owner of Postfix queue files.
+-
+-    setgid - groupname, e.g., postdrop (default: no). See INSTALL section 12.
+-    manpages - "no" or path to man tree. Example: /usr/local/man.
+-
+-EOF
++#cat <<EOF
++#
++#Warning: this script replaces existing sendmail or Postfix programs.
++#Make backups if you want to be able to recover.
++#
++#In addition to doing a fresh install, this script can change an
++#existing installation from using a world-writable maildrop to a
++#group-writable one. It cannot be used to change Postfix queue
++#file/directory ownership.
++#
++#Before installing files, this script prompts you for some definitions.
++#Most definitions will be remembered, so you have to specify them
++#only once. All definitions have a reasonable default value.
++#
++#    install_root - prefix for installed file names (for package building)
++#
++#    tempdir - where to write scratch files
++#
++#    config_directory - directory with Postfix configuration files.
++#    daemon_directory - directory with Postfix daemon programs.
++#    command_directory - directory with Postfix administrative commands.
++#    queue_directory - directory with Postfix queues.
++#
++#    sendmail_path - full pathname of the Postfix sendmail command.
++#    newaliases_path - full pathname of the Postfix newaliases command.
++#    mailq_path - full pathname of the Postfix mailq command.
++#
++#    mail_owner - owner of Postfix queue files.
++#
++#    setgid - groupname, e.g., postdrop (default: no). See INSTALL section 12.
++#    manpages - "no" or path to man tree. Example: /usr/local/man.
++#
++#EOF
+ 
+@@ -104,17 +104,14 @@
+ 
+-install_root=/
++install_root=__PREFIX
+ tempdir=`pwd`
+-config_directory=/etc/postfix
+-daemon_directory=/usr/libexec/postfix
+-command_directory=/usr/sbin
++config_directory=/share/postfix
++daemon_directory=/libexec/postfix
++command_directory=/sbin
+ queue_directory=/var/spool/postfix
+-if [ -f /usr/lib/sendmail ]
+-    then sendmail_path=/usr/lib/sendmail 
+-    else sendmail_path=/usr/sbin/sendmail
+-fi
+-newaliases_path=/usr/bin/newaliases
+-mailq_path=/usr/bin/mailq
++sendmail_path=/sbin/sendmail
++#newaliases_path=/usr/bin/newaliases
++#mailq_path=/usr/bin/mailq
+ mail_owner=postfix
+ setgid=no
+-manpages=/usr/local/man
++manpages=/man
+ 
+@@ -122,14 +119,14 @@
+ 
+-for name in install_root tempdir config_directory
+-do
+-    while :
+-    do
+-	eval echo \$n "$name: [\$$name]\  \$c"
+-	read ans
+-	case $ans in
+-	"") break;;
+-	 *) eval $name=\$ans; break;;
+-	esac
+-    done
+-done
++#for name in install_root tempdir config_directory
++#do
++#    while :
++#    do
++#	eval echo \$n "$name: [\$$name]\  \$c"
++#	read ans
++#	case $ans in
++#	"") break;;
++#	 *) eval $name=\$ans; break;;
++#	esac
++#    done
++#done
+ 
+@@ -166,16 +163,16 @@
+ 
+-for name in daemon_directory command_directory \
+-    queue_directory sendmail_path newaliases_path mailq_path mail_owner\
+-    setgid manpages
+-do
+-    while :
+-    do
+-	eval echo \$n "$name: [\$$name]\  \$c"
+-	read ans
+-	case $ans in
+-	"") break;;
+-	 *) eval $name=\$ans; break;;
+-	esac
+-    done
+-done
++#for name in daemon_directory command_directory \
++#    queue_directory sendmail_path newaliases_path mailq_path mail_owner\
++#    setgid manpages
++#do
++#    while :
++#    do
++#	eval echo \$n "$name: [\$$name]\  \$c"
++#	read ans
++#	case $ans in
++#	"") break;;
++#	 *) eval $name=\$ans; break;;
++#	esac
++#    done
++#done
+ 
+@@ -227,6 +224,6 @@
+ COMMAND_DIRECTORY=$install_root$command_directory
+-QUEUE_DIRECTORY=$install_root$queue_directory
++QUEUE_DIRECTORY=$queue_directory
+ SENDMAIL_PATH=$install_root$sendmail_path
+-NEWALIASES_PATH=$install_root$newaliases_path
+-MAILQ_PATH=$install_root$mailq_path
++#NEWALIASES_PATH=$install_root$newaliases_path
++#MAILQ_PATH=$install_root$mailq_path
+ MANPAGES=$install_root$manpages
+@@ -239,3 +236,3 @@
+ test -d $QUEUE_DIRECTORY || mkdir -p $QUEUE_DIRECTORY || exit 1
+-for path in $SENDMAIL_PATH $NEWALIASES_PATH $MAILQ_PATH
++for path in $SENDMAIL_PATH
+ do
+@@ -259,4 +256,4 @@
+     compare_or_replace a+x,go-w bin/sendmail $SENDMAIL_PATH || exit 1
+-    compare_or_symlink $SENDMAIL_PATH $NEWALIASES_PATH
+-    compare_or_symlink $SENDMAIL_PATH $MAILQ_PATH
++#    compare_or_symlink $SENDMAIL_PATH $NEWALIASES_PATH
++#    compare_or_symlink $SENDMAIL_PATH $MAILQ_PATH
+ }
+@@ -292,9 +289,9 @@
+ 
+-(echo "# This file was generated by $0"
+-for name in sendmail_path newaliases_path mailq_path setgid manpages
+-do
+-    eval echo $name=\$$name
+-done) >$tempdir/junk || exit 1
+-compare_or_move a+x,go-w $tempdir/junk $CONFIG_DIRECTORY/install.cf || exit 1
+-rm -f $tempdir/junk
++#(echo "# This file was generated by $0"
++#for name in sendmail_path newaliases_path mailq_path setgid manpages
++#do
++#    eval echo $name=\$$name
++#done) >$tempdir/junk || exit 1
++#compare_or_move a+x,go-w $tempdir/junk $CONFIG_DIRECTORY/install.cf || exit 1
++#rm -f $tempdir/junk
+ 
