@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1209 2003/12/15 23:38:43 chris Exp $
+$NetBSD: TODO,v 1.1210 2003/12/16 00:14:49 dillo Exp $
 
 Suggested new packages
 ======================
@@ -301,7 +301,6 @@ Suggested package updates
 	o tcpreplay-1.4.6
 	o tct-1.12
 	o teapop-0.3.8
-	o tin-1.6.1 [dillo]
 	o tkman-2.2
 	o top-3.5b12.8
 	o transcode-0.6.11
