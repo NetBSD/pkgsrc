@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2001/10/28 08:53:01 jmc Exp $
+# $NetBSD: Makefile,v 1.54 2001/11/29 18:09:47 wiz Exp $
 #
 
 COMMENT=	Editors
@@ -51,7 +51,6 @@ SUBDIR+=	vim-gtk
 SUBDIR+=	vim-share
 SUBDIR+=	vim-xaw
 SUBDIR+=	wily
-SUBDIR+=	wordperfect
 SUBDIR+=	xcoral
 SUBDIR+=	xemacs
 SUBDIR+=	xemacs-packages
