@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1787 2003/03/27 20:03:14 bouyer Exp $
+$NetBSD: CHANGES,v 1.1788 2003/03/27 21:09:05 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1329,3 +1329,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated rxvt to 2.7.10nb1 [salo 2003-03-27]
 	Updated pen to 0.10.0 [wiz 2003-03-27]
 	Updated apcupsd to 3.8.6 [bouyer 2003-03-27]
+	Updated mpich to 1.2.5.1.1 [jschauma 2003-03-27]
