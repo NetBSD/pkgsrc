@@ -1,3 +1,5 @@
+#	$NetBSD: Makefile,v 1.2 1997/11/13 07:35:37 thorpej Exp $
+#
 # New ports collection makefile for:    cdrecord
 # Version required:     1.5
 # Date created:         2 November 1997
