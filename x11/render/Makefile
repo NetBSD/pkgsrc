@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/03/01 17:58:19 reed Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/19 16:36:03 minskim Exp $
 
 DISTNAME=		render-0.8
 CATEGORIES=		x11
@@ -9,6 +9,8 @@ HOMEPAGE=		http://pdx.freedesktop.org/software/fontconfig/releases/
 COMMENT=		Headers for X11 render extension
 
 CONFLICTS=		Xrender<0.8
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 USE_LANGUAGES=		# empty
