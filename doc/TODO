@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1593 2004/04/09 14:29:09 minskim Exp $
+$NetBSD: TODO,v 1.1594 2004/04/09 23:20:49 snj Exp $
 
 Suggested new packages
 ======================
@@ -315,7 +315,6 @@ Suggested package updates
 	o skill-4.1.1
 	o skkinput-2.06.4
 	o smarteiffel-1.1 [replacing smalleiffel]
-	o smlnj-110.45 [pkg/24586]
 	o snd-7.4
 	o snes9x-1.42
 	o snort-2.1.2 [pkg/25029]
