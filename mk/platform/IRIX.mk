@@ -1,4 +1,4 @@
-# $NetBSD: IRIX.mk,v 1.7 2004/12/27 06:41:50 jlam Exp $
+# $NetBSD: IRIX.mk,v 1.8 2005/01/25 18:15:58 tv Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -167,9 +167,7 @@ LIBABISUFFIX=		${ABI}
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
-.if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
-_OPSYS_MAX_CMDLEN!=	/usr/sbin/sysconf ARG_MAX
-.endif
+_OPSYS_MAX_CMDLEN_CMD=	/usr/sbin/sysconf ARG_MAX
 
 # If games are to be installed setgid, then SETGIDGAME is set to 'yes'
 # (it defaults to 'no' as per bsd.pkg.defaults.mk).
