@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2004/02/08 03:00:29 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2004/02/18 05:07:34 ben Exp $
 #
 
-DISTNAME=	fltk-1.0.11-source
+DISTNAME=	fltk-1.1.4-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	3
 VERS=		${DISTNAME:S/fltk-//:S/-source//}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fltk/} \
