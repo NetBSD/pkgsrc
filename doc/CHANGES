@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.966 2003/01/01 21:17:48 jmmv Exp $
+$NetBSD: CHANGES,v 1.967 2003/01/01 22:02:52 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -8,3 +8,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ups-nut to 1.2.1nb1 [lukem 2003-01-01]
 	Updated tuxpaint to 2002.10.26nb2 [jmmv 2003-01-01]
 	Updated sysbuild to 1.8 [jmmv 2003-01-01]
+	Updated tcm to 2.01nb1 [jmmv 2003-01-01]
