@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2004/04/24 01:06:20 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2005/03/15 16:17:44 rillig Exp $
 
 --- Makefile.orig	Mon May  8 06:59:03 2000
 +++ Makefile
@@ -8,7 +8,7 @@ $NetBSD: patch-aa,v 1.2 2004/04/24 01:06:20 wiz Exp $
  CFLAGS	= -O
 -CPPFLAGS = -I/usr/local/include
 -LIBS	= -L/usr/local/lib -lpnm
-+LIBS	= -lnetpbm
++LIBS	= -lnetpbm -lm
  
  default:	vid
  
