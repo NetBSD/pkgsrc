@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.1.1.1 1999/10/17 04:28:19 fredb Exp $
+$NetBSD: patch-ac,v 1.2 1999/11/15 18:56:42 rh Exp $
 
---- libhfs/libhfs.h.orig	Mon Nov  2 16:09:02 1998
-+++ libhfs/libhfs.h	Fri Oct 15 12:53:29 1999
+--- libhfs/libhfs.h.orig	Mon Nov 15 19:52:30 1999
++++ libhfs/libhfs.h	Mon Nov 15 19:52:30 1999
 @@ -19,8 +19,8 @@
-  * $Id: patch-ac,v 1.1.1.1 1999/10/17 04:28:19 fredb Exp $
+  * $Id: patch-ac,v 1.2 1999/11/15 18:56:42 rh Exp $
   */
  
 -# include "hfs.h"

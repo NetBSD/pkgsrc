@@ -1,9 +1,9 @@
-$NetBSD: patch-ad,v 1.1.1.1 1999/10/17 04:28:19 fredb Exp $
+$NetBSD: patch-ad,v 1.2 1999/11/15 18:56:42 rh Exp $
 
---- librsrc/librsrc.h.orig	Sat Apr 11 03:27:19 1998
-+++ librsrc/librsrc.h	Fri Oct 15 12:55:15 1999
+--- librsrc/librsrc.h.orig	Mon Nov 15 19:52:30 1999
++++ librsrc/librsrc.h	Mon Nov 15 19:52:30 1999
 @@ -19,7 +19,7 @@
-  * $Id: patch-ad,v 1.1.1.1 1999/10/17 04:28:19 fredb Exp $
+  * $Id: patch-ad,v 1.2 1999/11/15 18:56:42 rh Exp $
   */
  
 -# include "rsrc.h"
