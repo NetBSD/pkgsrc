@@ -1,11 +1,6 @@
-$NetBSD: distinfo,v 1.8 2002/04/11 15:26:19 abs Exp $
+$NetBSD: distinfo,v 1.9 2002/07/24 17:51:32 kim Exp $
 
-SHA1 (tcsh-6.11.tar.gz) = bfc2ccd2d9e04975308cdf0a50b7383e580594b6
-Size (tcsh-6.11.tar.gz) = 716863 bytes
+SHA1 (tcsh-6.12.00.tar.gz) = c54fd7a6823a4d30a4195f0fb9f31c6e2ddbd8e5
+Size (tcsh-6.12.00.tar.gz) = 824297 bytes
 SHA1 (patch-aa) = 51b96fff19fcfb55e6c841460c7a771c4678978f
-SHA1 (patch-ab) = beb167a266e96ac84325615d437ef8474763756d
-SHA1 (patch-ac) = 3d2ed4818c3dce640fd754ee54af1e4c51be694d
 SHA1 (patch-ad) = aa39de839e228bb1da8c38f67aa6f7019f040040
-SHA1 (patch-ae) = e7a00876ac67d836833f6c1145f2b03086f91a6f
-SHA1 (patch-af) = 7c367f927f0207baa174a7eaa76db329e19a0e6c
-SHA1 (patch-ag) = 2a2cc3052a2459b599df5b7511fa54f3a2838a92
