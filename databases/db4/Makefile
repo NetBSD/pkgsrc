@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/12/07 00:51:07 epg Exp $
+# $NetBSD: Makefile,v 1.9 2003/12/08 23:15:05 seb Exp $
 
 DISTNAME=		db-4.2.52
 PKGNAME=		${DISTNAME:S/db/db4/}
@@ -22,6 +22,11 @@ CONFIGURE_ARGS+=	--enable-rpc
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/db4
 CONFIGURE_ARGS+=	--program-transform-name=s,db_,db4_,
+
+# NetBSD-sparc64-1.6*'s f77 makes configure failing and as f77 is not
+# needed for this package the following does no harm on other platform.
+FC=     ${FALSE}
+F77=    ${FALSE}
 
 .if defined(WITH_JAVA) && (${WITH_JAVA} == "YES")
 CONFIGURE_ARGS+=	--enable-java
