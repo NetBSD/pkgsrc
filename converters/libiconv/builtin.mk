@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2004/03/29 05:43:28 jlam Exp $
+# $NetBSD: builtin.mk,v 1.3 2004/04/26 00:28:39 snj Exp $
 
 .if !defined(_LIBICONV_FOUND)
 _LIBICONV_FOUND!=							\
@@ -30,9 +30,22 @@ USE_BUILTIN.iconv=	no
 .    endif
 .  endfor
 
+.if !defined(ICONV_TYPE)
+ICONV_TYPE?=	gnu
+.  if !empty(USE_BUILTIN.iconv:M[yY][eE][sS]) && exists(${_ICONV_H})
+ICONV_TYPE!=	\
+	if ${GREP} -q "GNU LIBICONV Library" ${_ICONV_H}; then		\
+		${ECHO} "gnu";						\
+	else								\
+		${ECHO} "native";					\
+	fi
+.  endif
+BUILDLINK_VARS+=	ICONV_TYPE
+.endif
+
 .  if defined(USE_GNU_ICONV)
 .    if !empty(IS_BUILTIN.iconv:M[nN][oO]) || \
-        (${PREFER.iconv} == "pkgsrc")
+        (${PREFER.iconv} == "pkgsrc") || ${ICONV_TYPE} == "native"
 USE_BUILTIN.iconv=	no
 .    endif
 .  endif
@@ -53,19 +66,6 @@ BUILDLINK_TRANSFORM+=	l:iconv:
 .endif
 
 BUILDLINK_LDADD.iconv?=	${_LIBICONV}
-
-.if !defined(ICONV_TYPE)
-ICONV_TYPE?=	gnu
-.  if !empty(USE_BUILTIN.iconv:M[yY][eE][sS]) && exists(${_ICONV_H})
-ICONV_TYPE!=	\
-	if ${GREP} -q "GNU LIBICONV Library" ${_ICONV_H}; then		\
-		${ECHO} "gnu";						\
-	else								\
-		${ECHO} "native";					\
-	fi
-.  endif
-BUILDLINK_VARS+=	ICONV_TYPE
-.endif
 
 .if defined(GNU_CONFIGURE)
 .  if !empty(USE_BUILTIN.iconv:M[nN][oO])
