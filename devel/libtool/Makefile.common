@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2002/11/17 11:55:01 grant Exp $
+# $NetBSD: Makefile.common,v 1.25 2002/12/23 14:49:54 jlam Exp $
 #
 
 DISTNAME=	libtool-ml-20010614
@@ -12,7 +12,9 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/libtool/libtool.html
 
 CONFLICTS=	glibtool-[0-9]*
-GNU_CONFIGURE=	yes
+
+GNU_CONFIGURE=	# defined
+USE_BUILDLINK2=	# defined
 
 DISTINFO_FILE=	${.CURDIR}/../libtool/distinfo
 FILESDIR=	${.CURDIR}/../libtool/files
