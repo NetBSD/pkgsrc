@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2004/01/22 15:46:43 adam Exp $
+# $NetBSD: Makefile,v 1.67 2004/02/11 01:45:01 abs Exp $
 #
 
 DISTNAME=	Wine-20040121
@@ -28,6 +28,7 @@ USE_BUILDLINK2=		YES
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
+UNLIMIT_RESOURCES=	datasize
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-curses #--disable-debug --disable-trace
