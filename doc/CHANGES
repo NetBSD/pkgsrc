@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6798 2004/08/04 20:48:37 jlam Exp $
+$NetBSD: CHANGES,v 1.6799 2004/08/04 21:20:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3728,3 +3728,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated sqlite to 2.8.15 [jlam 2004-08-04]
 	Updated cyrus-saslauthd to 2.1.19 [jlam 2004-08-04]
 	Added cy2-sql-2.1.19 [jlam 2004-08-04]
+	Updated cdrtools-ossdvd to 2.01a27 [wiz 2004-08-04]
