@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.9 2003/09/23 06:36:20 grant Exp $
+# $NetBSD: Makefile.in,v 1.10 2003/09/23 07:44:51 grant Exp $
 
 srcdir=		@srcdir@
 
@@ -10,11 +10,13 @@ mandir=		@mandir@
 man1dir=	$(mandir)/man1
 cat1dir=	$(mandir)/cat1
 
+tar=		@tar@
+
 CC=		@CC@
 CCLD=		$(CC)
 LIBS=		-linstall @LIBS@
 CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib
-DEFS=		@DEFS@
+DEFS=		@DEFS@ -DTAR_CMD=\"$(tar)\"
 CFLAGS=		@CFLAGS@
 LDFLAGS=	@LDFLAGS@ -L../lib
 

@@ -25,7 +25,6 @@ AC_PATH_PROG(FIND, find)
 AC_PATH_PROG(GREP, grep)
 AC_PATH_PROG(LN, ln)
 AC_PATH_PROG(MKDIR, mkdir)
-AC_PATH_PROG(PAX, pax)
 AC_PATH_PROG(RMDIR, rmdir)
 AC_PATH_PROG(RM, rm)
 AC_PATH_PROG(SED, sed)
@@ -39,10 +38,34 @@ AC_SUBST(AUTOHEADER)
 
 dnl Set the default pkg dbdir
 AC_ARG_WITH(pkgdbdir,
-[  --with-pkgdbdir=DIR   Where to put the pkg database (/var/db/pkg)],
+[  --with-pkgdbdir=DIR     Where to put the pkg database (/var/db/pkg)],
 [ pkgdbdir="$with_pkgdbdir" ],
 [ pkgdbdir="/var/db/pkg" ])
 AC_SUBST(pkgdbdir)
+
+AC_ARG_WITH(ftp,
+[  --with-ftp=path         Path to tnftp (PREFIX/bin/ftp)],
+[ ftp="$with_ftp" ],
+[ ftp='$(prefix)/bin/ftp' ])
+AC_SUBST(ftp)
+
+AC_ARG_WITH(tar,
+[  --with-tar=path         Path to pax-as-tar (PREFIX/bin/tar)],
+[ tar="$with_tar" ],
+[ tar='$(prefix)/bin/tar' ])
+AC_SUBST(tar)
+
+AC_ARG_WITH(pax,
+[  --with-pax=path         Path to pax (PREFIX/bin/pax)],
+[ pax="$with_pax" ],
+[ pax='$(prefix)/bin/pax' ])
+AC_SUBST(pax)
+
+AC_ARG_WITH(mtree,
+[  --with-mtree=path       Path to mtree (PREFIX/sbin/mtree)],
+[ mtree="$with_mtree" ],
+[ mtree='$(sbindir)/mtree' ])
+AC_SUBST(mtree)
 
 dnl Checks for libraries.
 AC_CHECK_LIB(db1, dbopen)
