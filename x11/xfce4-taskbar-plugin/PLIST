@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1.2.2 2004/07/14 11:17:20 agc Exp $
+lib/xfce4/panel-plugins/libtaskbar.a
+lib/xfce4/panel-plugins/libtaskbar.la
+lib/xfce4/panel-plugins/libtaskbar.so

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/04/16 16:12:00 martti Exp $
+# $NetBSD: buildlink3.mk,v 1.3.2.1 2004/07/14 11:17:19 agc Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XFCE4_SYSTRAY_BUILDLINK3_MK:=	${XFCE4_SYSTRAY_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxfce4-systray}
 BUILDLINK_PACKAGES+=	xfce4-systray
 
 .if !empty(XFCE4_SYSTRAY_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.xfce4-systray+=	xfce4-systray>=4.0.5
+BUILDLINK_DEPENDS.xfce4-systray+=	xfce4-systray>=4.0.6
 BUILDLINK_PKGSRCDIR.xfce4-systray?=	../../sysutils/xfce4-systray
 .endif	# XFCE4_SYSTRAY_BUILDLINK3_MK
 
