@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/11/26 00:51:10 tron Exp $
+# $NetBSD: Makefile,v 1.6 1998/11/29 23:38:30 tron Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/09/27 20:10:45 steve Exp
 
 DISTNAME=	octave-2.0.13
@@ -15,23 +15,16 @@ HOMEPAGE=	http://www.che.wisc.edu/octave/
 BUILD_DEPENDS+=	tex:../../print/teTeX
 BUILD_DEPENDS+=	dvips:../../print/teTeX
 DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
-DEPENDS+=	f2c-19980516p1:../../lang/f2c
 DEPENDS+=	gnuplot-3.5:../../graphics/gnuplot
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_GMAKE=		yes
-CONFIGURE_ARGS+=	--with-f2c
 CONFIGURE_ENV+=		CPPFLAGS=-I${WRKDIR}/include
 LDFLAGS+=		-L${PREFIX}/lib
 
 INFO_FILES=	liboctave.info octave.info
 LIBOCTAVE_INFO=	liboctave.info liboctave.info-1 liboctave.info-2 liboctave.info-3
-
-GCC_VERSION!=	gcc --version
-.if (${GCC_VERSION:C/-.*$$//} == egcs) && !target(clean)
-IGNORE=		"cannot be built with egcs yet"
-.endif
 
 post-extract:
 	${MKDIR} ${WRKDIR}/include
@@ -48,5 +41,23 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/refcard/refcard-legal.ps ${PREFIX}/share/octave/2.0.13/doc
 	${INSTALL_DATA} ${WRKSRC}/doc/refcard/refcard-a4.ps ${PREFIX}/share/octave/2.0.13/doc
 	${INSTALL_DATA} ${WRKSRC}/doc/faq/Octave-FAQ.ps ${PREFIX}/share/octave/2.0.13/doc
+
+GCC_VERSION!=	${CC} --version
+
+.if (${GCC_VERSION:C/-.*$$//} == egcs)
+CONFIGURE_ARGS+=	--with-g77
+FLIBS=			-Lg2c
+.else
+DEPENDS+=		f2c-19980516p1:../../lang/f2c
+CONFIGURE_ARGS+=	--with-f2c
+.endif
+
+post-patch:
+.if (${GCC_VERSION:C/-.*$$//} == egcs)
+	@cd ${WRKSRC};
+	for FILE in ${PATCHDIR}/egcs-patch-*; do \
+	  ${PATCH} ${PATCH_ARGS} <$$FILE; \
+	done
+.endif
 
 .include <../../mk/bsd.pkg.mk>
