@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkg_chk.sh,v 1.1.1.1 2004/03/27 00:02:37 wiz Exp $
+# $Id: pkg_chk.sh,v 1.2 2004/03/27 07:54:34 grant Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -166,7 +166,7 @@ extract_variables()
     # as well as AWK, GREP, SED, PKGCHK_TAGS and PKGCHK_NOTAGS
     #
 
-    cd $PKGSRCDIR/pkgtools/pkgchk
+    cd $PKGSRCDIR/pkgtools/pkg_chk
     extract_make_vars AWK GREP SED PACKAGES PKG_INFO PKG_ADD PKG_DELETE \
 		      PKGCHK_CONF PKGCHK_TAGS PKGCHK_NOTAGS
 
