@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/01/05 23:13:36 tron Exp $
+# $NetBSD: Makefile,v 1.22 2000/01/06 16:31:06 fredb Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/11/26 23:16:51 jseger Exp
 #
 
@@ -18,26 +18,10 @@ ALL_TARGET=	netbsd
 BUILD_DEFS+=	KFLAGS LIBS KERMIT_SUID_UUCP
 MAKE_ENV+=	KFLAGS="${KFLAGS}" LIBS="${LIBS}"
 MAKEFILE=	makefile
-NO_WRKSUBDIR=	yes
+NO_WRKSUBDIR=	YES
+PLIST_SRC=	${WRKDIR}/PLIST
 
 #KFLAGS+=	-DNODEBUG -DNOOLDMODEMS
-
-# XXX This needs to be tested. XXX
-#
-# Include SOCKS firewall support
-.if defined(USE_SOCKS)
-.if ${USE_SOCKS} == 4
-DEPENDS+=	socks4-2.2:../../net/socks4
-KFLAGS+=	-DSOCKS
-LIBS+=		-lsocks
-.elif ${USE_SOCKS} == 5
-DEPENDS+=	socks5-1.0.2:../../net/socks5
-KFLAGS+=	-DSOCKS -DCK_SOCKS5
-LIBS+=		-lsocks
-.endif
-.endif
-
-PLIST_SRC=		${WRKDIR}/PLIST
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wermit ${PREFIX}/bin/kermit
@@ -60,7 +44,28 @@ do-install:
 
 .if defined(KERMIT_SUID_UUCP)
 .if ${KERMIT_SUID_UUCP} == "yes" || ${KERMIT_SUID_UUCP} == "YES"
-BINOWN=			uucp
-BINMODE=		4555
+BINOWN=		uucp
+BINMODE=	4555
+.endif
+.endif
+
+.for __tmp__ in NetBSD-1.3*
+.if ${MACHINE_PLATFORM:M${__tmp__}} != ""
+LIBS+=          -ltermcap
+.endif
+.endfor
+
+# XXX This needs to be tested. XXX
+#
+# Include SOCKS firewall support
+.if defined(USE_SOCKS)
+.if ${USE_SOCKS} == 4
+DEPENDS+=	socks4-2.2:../../net/socks4
+KFLAGS+=	-DSOCKS
+LIBS+=		-lsocks
+.elif ${USE_SOCKS} == 5
+DEPENDS+=	socks5-1.0.2:../../net/socks5
+KFLAGS+=	-DSOCKS -DCK_SOCKS5
+LIBS+=		-lsocks
 .endif
 .endif
