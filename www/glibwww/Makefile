@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/03/13 17:37:51 fredb Exp $
+# $NetBSD: Makefile,v 1.5 2002/04/10 16:17:37 jlam Exp $
 #
 
 DISTNAME=		glibwww-0.2
@@ -20,6 +20,16 @@ USE_LIBTOOL=		YES
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
+post-patch:
+	cd ${WRKSRC};							\
+	for file in src/Makefile.in; do					\
+		${SED}	-e "s|[	 ]*-I\$$(includedir)||g"		\
+			$${file} > $${file}.fixed;			\
+		${MV} -f $${file}.fixed $${file};			\
+	done
+
 .include "../../www/libwww/buildlink.mk"
 .include "../../x11/gnome-libs/buildlink.mk"
+
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
