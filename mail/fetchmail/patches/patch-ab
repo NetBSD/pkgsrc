@@ -1,12 +1,12 @@
---- Makefile.in.orig	Tue Jun 30 22:04:42 1998
-+++ Makefile.in	Sat Jul  4 00:38:31 1998
+--- Makefile.in.orig	Mon Jul 20 06:10:42 1998
++++ Makefile.in	Wed Jul 22 13:08:14 1998
 @@ -80,7 +80,7 @@
  
  protobjs = rcfile_y.o rcfile_l.o socket.o getpass.o pop2.o pop3.o imap.o \
         etrn.o fetchmail.o env.o options.o daemon.o driver.o rfc822.o smtp.o \
 -       xmalloc.o uid.o mxget.o md5c.o md5ify.o rpa.o interface.o netrc.o \
 +       xmalloc.o uid.o mxget.o md5ify.o rpa.o interface.o netrc.o \
-        base64.o error.o unmime.o conf.o is_ip_alias.o
+        base64.o error.o unmime.o conf.o checkalias.o
  
  objs = $(protobjs) $(extras) $(EXTRAOBJ)
 @@ -91,7 +91,7 @@
@@ -17,7 +17,7 @@
 +       $(srcdir)/md5ify.c $(srcdir)/rpa.c              \
         $(srcdir)/interface.c $(srcdir)/netrc.c $(srcdir)/base64.c	\
         $(srcdir)/error.c $(srcdir)/unmime.c $(srcdir)/conf.c		\
-        $(srcdir)/is_ip_alias.c
+        $(srcdir)/checkalias.c
 @@ -135,7 +135,7 @@
  	@echo "Installing fetchmail binary..."
  	$(INSTALL_PROGRAM) ./fetchmail $(bindir)/fetchmail
