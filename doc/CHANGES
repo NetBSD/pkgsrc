@@ -1,6 +1,7 @@
-$NetBSD: CHANGES,v 1.962 2003/01/01 07:12:03 jlam Exp $
+$NetBSD: CHANGES,v 1.963 2003/01/01 13:16:37 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
 	Added iasp-2.1.1 [jlam 2003-01-01]
 	Added ap-iasp-2.1.1 [jlam 2003-01-01]
+	Updated bison to 1.875 [cjep 2003-01-01]

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.12 2002/12/15 19:41:26 cjep Exp $
+$NetBSD: distinfo,v 1.13 2003/01/01 13:15:47 cjep Exp $
 
-SHA1 (bison-1.75.tar.bz2) = c3aaf4a59b69399e62d0e5c024cc0929dcdd07f6
-Size (bison-1.75.tar.bz2) = 773106 bytes
+SHA1 (bison-1.875.tar.bz2) = 0cacfa8b557135021814bcd7e43de0bb0cc9d68e
+Size (bison-1.875.tar.bz2) = 814922 bytes
+SHA1 (patch-aa) = 48ae980971419ede0a45dc5aac7d302586d3826e
