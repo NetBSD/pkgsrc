@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/06/05 10:29:38 agc Exp $
+
+SHA1 (cfs-1.4.1.tar.gz) = be3f73b233149477b739456498c71b120d5f2fb5
+Size (cfs-1.4.1.tar.gz) = 98943 bytes
+SHA1 (patch-aa) = eb142e7e335e724d8dd254bf2b86e27ac7785846
