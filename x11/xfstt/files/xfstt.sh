@@ -1,4 +1,7 @@
 #!/bin/sh
+#
+# $NetBSD: xfstt.sh,v 1.2 2002/09/20 04:05:45 grant Exp $
+#
 
 PREFIX=%%PREFIX%%
 
