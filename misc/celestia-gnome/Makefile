@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/11/10 16:42:40 adam Exp $
+# $NetBSD: Makefile,v 1.8 2004/11/12 23:42:52 kristerw Exp $
 
 PKGNAME=	${DISTNAME:S/-/-gnome-/}
 
@@ -25,3 +25,5 @@ do-install:
 .include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../misc/celestia/Makefile.common"
+
+.include "../../mk/bsd.pkg.mk"
