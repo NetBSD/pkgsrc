@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.8 2001/05/14 14:52:38 jlam Exp $
+$NetBSD: patch-ah,v 1.9 2001/12/06 03:46:22 jlam Exp $
 
---- src/interfaces/python/GNUmakefile.orig	Sun Apr  1 15:17:33 2001
+--- src/interfaces/python/GNUmakefile.orig	Sun Mar 25 14:44:03 2001
 +++ src/interfaces/python/GNUmakefile
 @@ -12,9 +12,22 @@
  top_builddir = ../../..
@@ -30,8 +30,9 @@ $NetBSD: patch-ah,v 1.8 2001/05/14 14:52:38 jlam Exp $
  Setup.in: Setup.in.raw
  	sed -e 's,@libpq_srcdir@,$(libpq_srcdir),g' \
  	    -e 's,@libpq_builddir@,$(libpq_builddir),g' \
+-	    -e 's%@EXTRA_LIBS@%$(filter -L%, $(LDFLAGS)) $(LIBS)%g' \
 +	    -e 's,@libpq@,$(libpq),g' \
- 	    -e 's%@EXTRA_LIBS@%$(filter -L%, $(LDFLAGS)) $(LIBS)%g' \
++	    -e 's%@EXTRA_LIBS@%$(filter -L%, $(LDFLAGS)) $(filter -Wl%, $(LDFLAGS)) $(LIBS)%g' \
  	    -e 's%@INCLUDES@%$(filter -I%, $(CPPFLAGS))%g' \
  	    $< > $@
  
