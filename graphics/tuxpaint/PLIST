@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/10/05 12:34:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/03/07 02:01:00 snj Exp $
 bin/tuxpaint
 bin/tuxpaint-import
 man/man1/tuxpaint-import.1
@@ -19,12 +19,12 @@ share/doc/tuxpaint/ca/FAQ.txt
 share/doc/tuxpaint/ca/INSTALL.txt
 share/doc/tuxpaint/ca/PNG.txt
 share/doc/tuxpaint/ca/README.txt
-share/doc/tuxpaint/cz/AUTHORS.txt
-share/doc/tuxpaint/cz/COPYING.txt
-share/doc/tuxpaint/cz/FAQ.txt
-share/doc/tuxpaint/cz/INSTALL.txt
-share/doc/tuxpaint/cz/PNG.txt
-share/doc/tuxpaint/cz/README.txt
+share/doc/tuxpaint/cs/AUTHORS.txt
+share/doc/tuxpaint/cs/COPYING.txt
+share/doc/tuxpaint/cs/FAQ.txt
+share/doc/tuxpaint/cs/INSTALL.txt
+share/doc/tuxpaint/cs/PNG.txt
+share/doc/tuxpaint/cs/README.txt
 share/doc/tuxpaint/da/AUTHORS.txt
 share/doc/tuxpaint/da/COPYING.txt
 share/doc/tuxpaint/da/FAQ.txt
@@ -37,6 +37,7 @@ share/doc/tuxpaint/de/FAQ.txt
 share/doc/tuxpaint/de/GELESEN_MIR.txt
 share/doc/tuxpaint/de/KOPIE.txt
 share/doc/tuxpaint/de/PNG.txt
+share/doc/tuxpaint/el/COPYING.txt
 share/doc/tuxpaint/es/AUTORES.txt
 share/doc/tuxpaint/es/CONTRIBUYENTES.txt
 share/doc/tuxpaint/es/COPIADO.txt
@@ -45,6 +46,12 @@ share/doc/tuxpaint/es/INSTALACION.txt
 share/doc/tuxpaint/es/LEEME.txt
 share/doc/tuxpaint/es/PNG.txt
 share/doc/tuxpaint/es/html/LEEME.html
+share/doc/tuxpaint/eu/AUTHORS.txt
+share/doc/tuxpaint/eu/COPYING.txt
+share/doc/tuxpaint/eu/FAQ.txt
+share/doc/tuxpaint/eu/INSTALL.txt
+share/doc/tuxpaint/eu/PNG.txt
+share/doc/tuxpaint/eu/README.txt
 share/doc/tuxpaint/fi/AUTHORS.txt
 share/doc/tuxpaint/fi/COPYING.txt
 share/doc/tuxpaint/fi/FAQ.txt
@@ -57,6 +64,7 @@ share/doc/tuxpaint/fr/FAQ.txt
 share/doc/tuxpaint/fr/INSTALL.txt
 share/doc/tuxpaint/fr/PNG.txt
 share/doc/tuxpaint/fr/README.txt
+share/doc/tuxpaint/he/COPYING.html
 share/doc/tuxpaint/html/README.html
 share/doc/tuxpaint/html/images/brush_edit.png
 share/doc/tuxpaint/html/images/canvas.jpg
@@ -101,6 +109,7 @@ share/doc/tuxpaint/hu/FAQ.txt
 share/doc/tuxpaint/hu/INSTALL.txt
 share/doc/tuxpaint/hu/PNG.txt
 share/doc/tuxpaint/hu/README.txt
+share/doc/tuxpaint/id/COPYING.txt
 share/doc/tuxpaint/is/AUTHORS.txt
 share/doc/tuxpaint/is/COPYING.txt
 share/doc/tuxpaint/is/FAQ.txt
@@ -113,12 +122,21 @@ share/doc/tuxpaint/it/FAQ.txt
 share/doc/tuxpaint/it/INSTALL.txt
 share/doc/tuxpaint/it/PNG.txt
 share/doc/tuxpaint/it/README.txt
+share/doc/tuxpaint/ja/COPYING.html
 share/doc/tuxpaint/ko/AUTHORS.txt
-share/doc/tuxpaint/ko/COPYING.txt
+share/doc/tuxpaint/ko/COPYING.html
 share/doc/tuxpaint/ko/FAQ.txt
 share/doc/tuxpaint/ko/INSTALL.txt
 share/doc/tuxpaint/ko/PNG.txt
 share/doc/tuxpaint/ko/README.txt
+share/doc/tuxpaint/lt/COPYING.txt
+share/doc/tuxpaint/ms/COPYING.txt
+share/doc/tuxpaint/nb/AUTHORS.txt
+share/doc/tuxpaint/nb/COPYING.txt
+share/doc/tuxpaint/nb/FAQ.txt
+share/doc/tuxpaint/nb/INSTALL.txt
+share/doc/tuxpaint/nb/PNG.txt
+share/doc/tuxpaint/nb/README.txt
 share/doc/tuxpaint/nl/AUTHORS.txt
 share/doc/tuxpaint/nl/COPYING_nl.txt
 share/doc/tuxpaint/nl/FAQ.txt
@@ -132,24 +150,32 @@ share/doc/tuxpaint/nn/FAQ.txt
 share/doc/tuxpaint/nn/INSTALLERING.txt
 share/doc/tuxpaint/nn/PNG.txt
 share/doc/tuxpaint/nn/README.txt
+share/doc/tuxpaint/pl/LICENCJA-GNU.txt
+share/doc/tuxpaint/pt/COPYING.txt
 share/doc/tuxpaint/pt_br/AUTORES.txt
 share/doc/tuxpaint/pt_br/COPYING_pt_BR.txt
 share/doc/tuxpaint/pt_br/FAQ.txt
 share/doc/tuxpaint/pt_br/INSTALL.txt
 share/doc/tuxpaint/pt_br/PNG.txt
 share/doc/tuxpaint/pt_br/README.txt
+share/doc/tuxpaint/ro/COPYING.txt
+share/doc/tuxpaint/ru/COPYING.txt
+share/doc/tuxpaint/sk/COPYING.txt
 share/doc/tuxpaint/sv/AUTHORS.txt
 share/doc/tuxpaint/sv/COPYING.txt
 share/doc/tuxpaint/sv/FAQ.txt
 share/doc/tuxpaint/sv/INSTALL.txt
 share/doc/tuxpaint/sv/PNG.txt
 share/doc/tuxpaint/sv/README.txt
+share/doc/tuxpaint/ta/COPYING.txt
 share/doc/tuxpaint/tr/AUTHORS.txt
 share/doc/tuxpaint/tr/COPYING_tr.txt
 share/doc/tuxpaint/tr/FAQ.txt
 share/doc/tuxpaint/tr/INSTALL.txt
 share/doc/tuxpaint/tr/PNG.txt
 share/doc/tuxpaint/tr/README.txt
+share/doc/tuxpaint/wa/COPYING.txt
+share/doc/tuxpaint/zh/COPYING.html
 share/examples/tuxpaint/tuxpaint.conf
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/tuxpaint.mo
@@ -158,6 +184,7 @@ ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/tuxpaint.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/tuxpaint.mo
@@ -169,6 +196,7 @@ ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/tuxpaint.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/tuxpaint.mo
@@ -178,6 +206,7 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/tuxpaint.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/tuxpaint.mo
@@ -194,12 +223,12 @@ share/tuxpaint/brushes/slash_16_rt.png
 share/tuxpaint/brushes/slash_20_lt.png
 share/tuxpaint/brushes/slash_20_rt.png
 share/tuxpaint/brushes/spray.png
-share/tuxpaint/brushes/square_seethru.png
-share/tuxpaint/brushes/square_24.png
 share/tuxpaint/brushes/square_06.png
-share/tuxpaint/brushes/square_36.png
 share/tuxpaint/brushes/square_12.png
+share/tuxpaint/brushes/square_24.png
+share/tuxpaint/brushes/square_36.png
 share/tuxpaint/brushes/square_fuzz.png
+share/tuxpaint/brushes/square_seethru.png
 share/tuxpaint/brushes/x.png
 share/tuxpaint/fonts/FreeMono.ttf
 share/tuxpaint/fonts/FreeMonoBold.ttf
@@ -279,6 +308,7 @@ share/tuxpaint/images/ui/cursor_down_large.png
 share/tuxpaint/images/ui/cursor_up.png
 share/tuxpaint/images/ui/cursor_up_large.png
 share/tuxpaint/images/ui/erase.png
+share/tuxpaint/images/ui/grow.png
 share/tuxpaint/images/ui/no.png
 share/tuxpaint/images/ui/no_title.png
 share/tuxpaint/images/ui/no_title_large.png
@@ -289,6 +319,7 @@ share/tuxpaint/images/ui/scroll_down.png
 share/tuxpaint/images/ui/scroll_down_off.png
 share/tuxpaint/images/ui/scroll_up.png
 share/tuxpaint/images/ui/scroll_up_off.png
+share/tuxpaint/images/ui/shrink.png
 share/tuxpaint/images/ui/sparkles-old.png
 share/tuxpaint/images/ui/sparkles.png
 share/tuxpaint/images/ui/title.png
@@ -306,6 +337,7 @@ share/tuxpaint/sounds/eraser2.wav
 share/tuxpaint/sounds/fade.wav
 share/tuxpaint/sounds/flip.wav
 share/tuxpaint/sounds/giggle.wav
+share/tuxpaint/sounds/grow.wav
 share/tuxpaint/sounds/harp.wav
 share/tuxpaint/sounds/keyclick.wav
 share/tuxpaint/sounds/line_end.wav
@@ -321,11 +353,27 @@ share/tuxpaint/sounds/rainbow.wav
 share/tuxpaint/sounds/return.wav
 share/tuxpaint/sounds/save.wav
 share/tuxpaint/sounds/scroll.wav
+share/tuxpaint/sounds/shrink.wav
 share/tuxpaint/sounds/sparkles1.wav
 share/tuxpaint/sounds/sparkles2.wav
 share/tuxpaint/sounds/stamp.wav
 share/tuxpaint/sounds/thick.wav
 share/tuxpaint/sounds/thin.wav
+share/tuxpaint/stamps/cartoon/tux/tux-drat.dat
+share/tuxpaint/stamps/cartoon/tux/tux-drat.png
+share/tuxpaint/stamps/cartoon/tux/tux-kiss1.dat
+share/tuxpaint/stamps/cartoon/tux/tux-kiss1.png
+share/tuxpaint/stamps/cartoon/tux/tux-kiss2.dat
+share/tuxpaint/stamps/cartoon/tux/tux-kiss2.png
+share/tuxpaint/stamps/cartoon/tux/tux-yay2.dat
+share/tuxpaint/stamps/cartoon/tux/tux-yay2.png
+share/tuxpaint/stamps/cartoon/tux/tux-yes1.dat
+share/tuxpaint/stamps/cartoon/tux/tux-yes1.png
+share/tuxpaint/stamps/cartoon/tux/tux-yes2.dat
+share/tuxpaint/stamps/cartoon/tux/tux-yes2.png
+@dirrm share/tuxpaint/stamps/cartoon/tux
+@dirrm share/tuxpaint/stamps/cartoon
+@dirrm share/tuxpaint/stamps
 @dirrm share/tuxpaint/sounds
 @dirrm share/tuxpaint/images/ui
 @dirrm share/tuxpaint/images/tux
@@ -337,24 +385,40 @@ share/tuxpaint/sounds/thin.wav
 @dirrm share/tuxpaint/brushes
 @dirrm share/tuxpaint
 @dirrm share/examples/tuxpaint
+@dirrm share/doc/tuxpaint/zh
+@dirrm share/doc/tuxpaint/wa
 @dirrm share/doc/tuxpaint/tr
+@dirrm share/doc/tuxpaint/ta
 @dirrm share/doc/tuxpaint/sv
+@dirrm share/doc/tuxpaint/sk
+@dirrm share/doc/tuxpaint/ru
+@dirrm share/doc/tuxpaint/ro
 @dirrm share/doc/tuxpaint/pt_br
+@dirrm share/doc/tuxpaint/pt
+@dirrm share/doc/tuxpaint/pl
 @dirrm share/doc/tuxpaint/nn
 @dirrm share/doc/tuxpaint/nl/html
 @dirrm share/doc/tuxpaint/nl
+@dirrm share/doc/tuxpaint/nb
+@dirrm share/doc/tuxpaint/ms
+@dirrm share/doc/tuxpaint/lt
 @dirrm share/doc/tuxpaint/ko
+@dirrm share/doc/tuxpaint/ja
 @dirrm share/doc/tuxpaint/it
 @dirrm share/doc/tuxpaint/is
+@dirrm share/doc/tuxpaint/id
 @dirrm share/doc/tuxpaint/hu
 @dirrm share/doc/tuxpaint/html/images
 @dirrm share/doc/tuxpaint/html
+@dirrm share/doc/tuxpaint/he
 @dirrm share/doc/tuxpaint/fr
 @dirrm share/doc/tuxpaint/fi
+@dirrm share/doc/tuxpaint/eu
 @dirrm share/doc/tuxpaint/es/html
 @dirrm share/doc/tuxpaint/es
+@dirrm share/doc/tuxpaint/el
 @dirrm share/doc/tuxpaint/de
 @dirrm share/doc/tuxpaint/da
-@dirrm share/doc/tuxpaint/cz
+@dirrm share/doc/tuxpaint/cs
 @dirrm share/doc/tuxpaint/ca
 @dirrm share/doc/tuxpaint
