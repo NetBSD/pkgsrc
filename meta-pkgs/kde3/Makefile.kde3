@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.kde3,v 1.18 2004/08/21 19:04:10 tron Exp $
+# $NetBSD: Makefile.kde3,v 1.19 2004/08/21 19:54:54 tron Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # KDE3-distributed packages (they all share common configure and build
@@ -6,21 +6,22 @@
 
 CATEGORIES+=	kde
 _KDE_VERSION=	3.3.0
-MASTER_SITES_KDE=	ftp://ftp.kde.org/pub/kde/stable/${_KDE_VERSION}/src/ \
-		ftp://ftp.uk.kde.org/pub/kde/stable/${_KDE_VERSION}/src/ \
-		ftp://download.au.kde.org/pub/kde/stable/${_KDE_VERSION}/src/ \
-		ftp://mirrors.midco.net/pub/kde/stable/${_KDE_VERSION}/src/ \
-		ftp://ftp.eu.uu.net/pub/kde/stable/${_KDE_VERSION}/src/ \
-		ftp://ftp.tiscali.nl/pub/mirrors/kde/stable/${_KDE_VERSION}/src/ \
-		ftp://ftp.roedu.net/pub/mirrors/ftp.kde.org/stable/${_KDE_VERSION}/src/ \
-		ftp://ftp.rediris.es/mirror/kde/stable/${_KDE_VERSION}/src/ \
-		ftp://ftp.du.se/pub/mirrors/kde/stable/${_KDE_VERSION}/src/ \
-		ftp://download.tw.kde.org/pub/kde/stable/${_KDE_VERSION}/src/ \
-		ftp://www.t.ring.gr.jp/pub/X/kde/stable/${_KDE_VERSION}/src/ \
-		http://www.t.ring.gr.jp/archives/X/kde/stable/${_KDE_VERSION}/src/ \
-		ftp://ftp.de.kde.org/pub/kde/stable/${_KDE_VERSION}/src/ \
-		ftp://public.planetmirror.com.au/pub/kde/stable/${_KDE_VERSION}/src/ \
-		http://public.planetmirror.com.au/pub/kde/stable/${_KDE_VERSION}/src/
+_KDE_DISTVER=	3.3
+MASTER_SITES_KDE=	ftp://ftp.kde.org/pub/kde/stable/${_KDE_DISTVER}/src/ \
+		ftp://ftp.uk.kde.org/pub/kde/stable/${_KDE_DISTVER}/src/ \
+		ftp://download.au.kde.org/pub/kde/stable/${_KDE_DISTVER}/src/ \
+		ftp://mirrors.midco.net/pub/kde/stable/${_KDE_DISTVER}/src/ \
+		ftp://ftp.eu.uu.net/pub/kde/stable/${_KDE_DISTVER}/src/ \
+		ftp://ftp.tiscali.nl/pub/mirrors/kde/stable/${_KDE_DISTVER}/src/ \
+		ftp://ftp.roedu.net/pub/mirrors/ftp.kde.org/stable/${_KDE_DISTVER}/src/ \
+		ftp://ftp.rediris.es/mirror/kde/stable/${_KDE_DISTVER}/src/ \
+		ftp://ftp.du.se/pub/mirrors/kde/stable/${_KDE_DISTVER}/src/ \
+		ftp://download.tw.kde.org/pub/kde/stable/${_KDE_DISTVER}/src/ \
+		ftp://www.t.ring.gr.jp/pub/X/kde/stable/${_KDE_DISTVER}/src/ \
+		http://www.t.ring.gr.jp/archives/X/kde/stable/${_KDE_DISTVER}/src/ \
+		ftp://ftp.de.kde.org/pub/kde/stable/${_KDE_DISTVER}/src/ \
+		ftp://public.planetmirror.com.au/pub/kde/stable/${_KDE_DISTVER}/src/ \
+		http://public.planetmirror.com.au/pub/kde/stable/${_KDE_DISTVER}/src/
 MASTER_SITES?=	${MASTER_SITES_KDE}
 EXTRACT_SUFX?=	.tar.bz2
 
