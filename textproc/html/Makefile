@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/06/07 21:51:33 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 17:37:24 wiz Exp $
 #
 
 DISTNAME=	html-4.0b
@@ -7,6 +7,7 @@ MASTER_SITES=	http://fallout.campusview.indiana.edu/ports/distfiles/
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.w3.org/TR/REC-html40/
+COMMENT=	SGML DTDs for the Hypertext Markup Language
 
 DEPENDS+=	iso8879-1986:../../textproc/iso8879
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/01/13 16:38:06 skrll Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 17:37:57 wiz Exp $
 #
 
 DISTNAME=	xerces-c-src1_3_0
@@ -8,6 +8,7 @@ MASTER_SITES=	http://xml.apache.org/dist/xerces-c/stable/
 
 MAINTAINER=	skrll@netbsd.org
 HOMEPAGE=	http://xml.apache.org/xerces-c/
+COMMENT=	The Apache Project's validating XML parser with DOM and SAX support
 
 DEPENDS=	icu>=1.7:../../textproc/icu
 

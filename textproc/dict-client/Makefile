@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/07/28 16:26:12 tron Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:37:19 wiz Exp $
 
 DISTNAME=       dictd-1.4.9
 PKGNAME=        dict-client-1.4.9
@@ -8,6 +8,7 @@ MASTER_SITES=   ftp://ftp.cs.unc.edu/pub/users/faith/dict/ \
 
 MAINTAINER=	mike@ethmoid.org
 HOMEPAGE=	http://www.dict.org/
+COMMENT=	Dictionary Service Protocol client
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes

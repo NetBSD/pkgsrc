@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/11/03 01:05:06 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:37:31 wiz Exp $
 
 DISTNAME=	latex2html-99.2beta8
 CATEGORIES=	textproc converters
@@ -6,6 +6,7 @@ MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=support/latex2html/}
 
 MAINTAINER=	wennmach@netbsd.org
 HOMEPAGE=	http://www-dsed.llnl.gov/files/programs/unix/latex2html/manual/
+COMMENT=	LaTeX to HTML converter
 
 DEPENDS+=       teTeX-bin>=1.0.6:../../print/teTeX-bin
 DEPENDS+=	ghostscript{,-nox11}-[6-9]*:../../print/ghostscript

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/10/15 02:28:38 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/17 17:37:53 wiz Exp $
 #
 
 DISTNAME=		texi2html-1.64
@@ -7,6 +7,7 @@ MASTER_SITES=		http://www.mathematik.uni-kl.de/~obachman/Texi2html/Distrib/
 
 MAINTAINER=		tv@netbsd.org
 HOMEPAGE=		http://www.mathematik.uni-kl.de/~obachman/Texi2html/
+COMMENT=		Texinfo-to-HTML direct translator
 
 CONFLICTS=		teTeX-bin-1.0 teTeX-bin-1.0.[1234567]
 

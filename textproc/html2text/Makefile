@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/04/19 05:44:56 rh Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:37:25 wiz Exp $
 #
 
 DISTNAME=	html2text-1.2.2
@@ -7,6 +7,7 @@ MASTER_SITES=	http://www.gmrs.de/
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.gmrs.de/html2text.html
+COMMENT=	Advanced HTML-to-text converter
 
 HAS_CONFIGURE=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/06 22:09:27 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 17:37:26 wiz Exp $
 
 DISTNAME=		Isearch-1.47d
 PKGNAME=		isearch-1.47d
@@ -7,6 +7,7 @@ MASTER_SITES=		http://www.etymon.com/pub/Isearch/
 
 MAINTAINER=		jtb@netbsd.org
 HOMEPAGE=		http://www.etymon.com/Isearch/
+COMMENT=		Advanced text indexing and searching system
 
 GNU_CONFIGURE=		yes
 

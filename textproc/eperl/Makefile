@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/06 03:17:01 fredb Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/17 17:37:23 wiz Exp $
 #
 
 DISTNAME=	eperl-2.2.14
@@ -7,6 +7,7 @@ MASTER_SITES=	http://www.engelschall.com/sw/eperl/distrib/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.engelschall.com/sw/eperl/
+COMMENT=	Interpreter/preprocessor for Perl embedded in text documents
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/autoreconf:../../devel/autoconf
 DEPENDS=	libperl-5.*:../../lang/libperl

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/01/08 16:33:39 tron Exp $
+# $NetBSD: Makefile,v 1.16 2001/02/17 17:40:21 wiz Exp $
 #
 
 DISTNAME=       zsh-3.0.7
@@ -13,6 +13,7 @@ MASTER_SITES=   ftp://uiarchive.uiuc.edu/pub/packages/shells/zsh/ \
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://sunsite.auc.dk/zsh/
+COMMENT=	The Z shell
 
 GNU_CONFIGURE=	yes
 INFO_FILES=	zsh.info

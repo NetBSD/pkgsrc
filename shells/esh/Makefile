@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/08 21:22:14 jtb Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:40:19 wiz Exp $
 #
 
 DISTNAME=		esh-0.8
@@ -7,6 +7,7 @@ MASTER_SITES=		http://esh.netpedia.net/
 
 MAINTAINER=		jtb@netbsd.org
 HOMEPAGE=		http://esh.netpedia.net
+COMMENT=		Unix shell with Lisp-like syntax
 
 WRKSRC=			${WRKDIR}/esh
 INFO_FILES=		esh.info

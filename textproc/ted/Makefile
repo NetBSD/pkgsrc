@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/08/23 23:14:31 tron Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/17 17:37:45 wiz Exp $
 
 DISTNAME=	ted-2.8.src
 PKGNAME=	ted-2.8
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://ftp.nluug.nl/pub/editors/ted/	\
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.nllgg.nl/Ted/
+COMMENT=	X11 based WordPad-like word processor
 
 DEPENDS+=	libungif-*:../../graphics/libungif
 DEPENDS+=       jpeg-6b:../../graphics/jpeg

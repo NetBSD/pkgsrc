@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/03/02 16:40:36 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/17 17:37:50 wiz Exp $
 
 DISTNAME=	Ted_I
 PKGNAME=	ted-it-2.6
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://ftp.nluug.nl/pub/editors/ted/ \
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.nllgg.nl/Ted/
+COMMENT=	Italian spelling dictionary for the Ted word processor
 
 DEPENDS+=       ted>=2.6:../../textproc/ted
 

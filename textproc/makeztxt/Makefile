@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/11 14:46:28 tron Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:37:34 wiz Exp $
 
 DISTNAME=	${PKGNAME}-src
 PKGNAME=	${PRG}-1.10
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gutenpalm/}
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://gutenpalm.sourceforge.net/makeztxt.php
+COMMENT=	ASCII text to Palm zTXT database converter
 
 PRG=		makeztxt
 

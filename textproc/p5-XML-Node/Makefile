@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/01/04 16:13:18 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:37:39 wiz Exp $
 #
 
 DISTNAME=	XML-Node-0.10
@@ -9,6 +9,7 @@ MASTER_SITES=	http://belmont-shores.ics.uci.edu/pub/ \
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://belmont-shores.ics.uci.edu/XML::Node/
+COMMENT=	Node-based XML parsing: an simplified interface to XML::Parser
 
 DEPENDS+=	p5-XML-Parser-2.*:../p5-XML-Parser
 

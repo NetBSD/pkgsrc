@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/07/28 16:17:19 tron Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 17:37:20 wiz Exp $
 
 DISTNAME=       dictd-1.4.9
 PKGNAME=	dict-server-1.4.9
@@ -15,6 +15,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 
 MAINTAINER=	mike@ethmoid.org
 HOMEPAGE=	http://www.dict.org/
+COMMENT=	Dictionary Service Protocol server
 
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes

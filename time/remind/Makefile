@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/18 00:41:50 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:32:09 wiz Exp $
 #
 
 DISTNAME=	remind-03.00.22
@@ -8,6 +8,7 @@ MASTER_SITES=	http://www.roaringpenguin.com/
 
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.roaringpenguin.com/remind.html
+COMMENT=	Calendar/alarm program with interpreted input language
 
 GNU_CONFIGURE=	yes
 
