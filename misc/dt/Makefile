@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 1999/04/13 15:31:06 agc Exp $
+# $NetBSD: Makefile,v 1.3 1999/04/26 18:28:21 ender Exp $
 #
 
 DISTNAME=	dt-1.1.6
 WRKSRC=		${WRKDIR}/dt
 CATEGORIES=	misc
-MASTER_SITES=   ${MASTER_SITES_LOCAL}
+MASTER_SITES=   ${MASTER_SITE_LOCAL}
 
 MAINTAINER=	fb@enteract.com
 
