@@ -1,11 +1,12 @@
-# $NetBSD: buildlink2.mk,v 1.5 2004/02/19 17:54:05 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2004/04/12 23:15:01 salo Exp $
+#
 
 .if !defined(LIBOGG_BUILDLINK2_MK)
 LIBOGG_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		libogg
 BUILDLINK_DEPENDS.libogg?=	libogg>=1.1
-BUILDLINK_PKGSRCDIR.libogg?=	../../audio/libogg
+BUILDLINK_PKGSRCDIR.libogg?=	../../multimedia/libogg
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libogg=libogg
 BUILDLINK_PREFIX.libogg_DEFAULT=	${LOCALBASE}
