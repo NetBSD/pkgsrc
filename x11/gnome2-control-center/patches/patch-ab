@@ -1,20 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2003/12/15 02:55:53 xtraeme Exp $
+$NetBSD: patch-ab,v 1.2 2004/04/01 18:40:09 jmmv Exp $
 
---- vfs-methods/fontilus/Makefile.in.orig	2003-12-15 03:25:37.000000000 +0100
-+++ vfs-methods/fontilus/Makefile.in	2003-12-15 03:28:58.000000000 +0100
-@@ -215,14 +215,13 @@
- appregdir = $(datadir)/application-registry
- appreg_DATA = fontilus.applications
+--- vfs-methods/fontilus/Makefile.in.orig	2004-03-11 06:35:26.000000000 +0100
++++ vfs-methods/fontilus/Makefile.in
+@@ -214,7 +214,7 @@ libexec_PROGRAMS = fontilus-context-menu
+ fontilus_context_menu_LDADD = $(FONT_CONTEXT_MENU_LIBS)
+ fontilus_context_menu_SOURCES = fontilus-context-menu.c
  
--schemasdir = $(sysconfdir)/gconf/schemas
-+schemasdir = $(datadir)/gconf/schemas
- schemas_DATA = fontilus.schemas
+-vfsmoduleconfdir = $(sysconfdir)/gnome-vfs-2.0/modules
++vfsmoduleconfdir = $(datadir)/examples/gnome2-control-center
+ vfsmoduleconf_DATA = font-method.conf
  
- serverdir = $(libdir)/bonobo/servers
- server_DATA = fontilus.server
- 
- EXTRA_DIST = \
--  font-method.conf \
-   font-method.directory.in \
-   fontilus.keys \
-   fontilus.mime \
+ vfsdirectorydir = $(datadir)/gnome/vfolders
