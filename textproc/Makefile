@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.193 2003/03/04 17:42:43 seb Exp $
+# $NetBSD: Makefile,v 1.194 2003/03/15 08:53:51 rh Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -168,6 +168,7 @@ SUBDIR+=	py-xmltools
 SUBDIR+=	pyDict
 SUBDIR+=	pyxml
 SUBDIR+=	qsubst
+SUBDIR+=	regexx
 SUBDIR+=	rfcutil
 SUBDIR+=	rman
 SUBDIR+=	robodoc
