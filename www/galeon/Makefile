@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2002/02/20 22:50:52 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2002/03/13 16:14:56 taya Exp $
 
-DISTNAME=	galeon-1.0.3
+DISTNAME=	galeon-1.2.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=galeon/}
 
@@ -21,6 +21,7 @@ CONFIGURE_ARGS+= --with-mozilla-includes=${PREFIX}/include/mozilla \
 		 --with-mozilla-libs=${PREFIX}/lib/mozilla \
 		--with-libiconv=${LOCALBASE} \
 		--disable-applet \
+		--disable-werror \
 		--sysconfdir=${PREFIX}/etc
 
 .include	"../../x11/gnome-libs/buildlink.mk"
@@ -40,12 +41,6 @@ LDFLAGS+=	-export-dynamic
 .else
 LIBS+=		-lstdc++
 .endif
-
-#.if (${OPSYS} == NetBSD)
-#post-configure:
-#	@${LN} -fs /usr/include/g++/string ${WRKSRC}/src
-#	@${LN} -fs /usr/include/g++ ${WRKSRC}/src/g++-3
-#.endif
 
 pre-install:
 	${X11PREFIX}/bin/gconftool --shutdown
