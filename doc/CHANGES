@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7365 2004/10/06 11:42:12 jmmv Exp $
+$NetBSD: CHANGES,v 1.7366 2004/10/06 15:16:03 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4565,3 +4565,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated freetype to 1.3.1nb2 [tron 2004-10-06]
 	Moved cfg+ to libcfg+ [grant 2004-10-06]
 	Updated gal2 to 2.2.2 [jmmv 2004-10-06]
+	Updated moss to 0.1.9 [minskim 2004-10-06]
