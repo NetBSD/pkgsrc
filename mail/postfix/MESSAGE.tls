@@ -1,10 +1,13 @@
 ===========================================================================
-$NetBSD: MESSAGE.tls,v 1.5 2004/07/19 02:48:42 jlam Exp $
+$NetBSD: MESSAGE.tls,v 1.6 2005/03/08 18:33:39 bad Exp $
 
 To enable TLS, you might need to reconfigure the following files:
 
 	${PKG_SYSCONFDIR}/main.cf
 	${PKG_SYSCONFDIR}/master.cf
+
+The following lines are appropriate for accepting TLS connections by
+the SMTP server.
 
 master.cf:
 ----------
