@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.3 2005/01/13 19:51:19 jmmv Exp $
+
+--- engines/crux/src/crux-pixmaps.c.orig	2004-12-01 13:55:55.000000000 +0100
++++ engines/crux/src/crux-pixmaps.c
+@@ -329,8 +329,8 @@ recolor_pixbuf (GdkPixbuf *pixbuf, eazel
+ static GdkPixbuf *
+ load_image (const char *file)
+ {
+-	printf("%s\n", file);	
+     GdkPixbuf *pixbuf = gdk_pixbuf_new_from_file (file, NULL);
++	printf("%s\n", file);	
+     if (pixbuf != 0)
+       return pixbuf;
+       
