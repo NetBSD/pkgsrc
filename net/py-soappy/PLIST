@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/08/11 22:07:17 recht Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/08/16 16:54:26 recht Exp $
 ${PYSITELIB}/SOAPpy/Client.py
 ${PYSITELIB}/SOAPpy/Client.pyc
 ${PYSITELIB}/SOAPpy/Client.pyo
@@ -26,6 +26,9 @@ ${PYSITELIB}/SOAPpy/Server.pyo
 ${PYSITELIB}/SOAPpy/Types.py
 ${PYSITELIB}/SOAPpy/Types.pyc
 ${PYSITELIB}/SOAPpy/Types.pyo
+${PYSITELIB}/SOAPpy/URLopener.py
+${PYSITELIB}/SOAPpy/URLopener.pyc
+${PYSITELIB}/SOAPpy/URLopener.pyo
 ${PYSITELIB}/SOAPpy/Utilities.py
 ${PYSITELIB}/SOAPpy/Utilities.pyc
 ${PYSITELIB}/SOAPpy/Utilities.pyo
@@ -41,6 +44,9 @@ ${PYSITELIB}/SOAPpy/version.pyo
 ${PYSITELIB}/SOAPpy/wstools/TimeoutSocket.py
 ${PYSITELIB}/SOAPpy/wstools/TimeoutSocket.pyc
 ${PYSITELIB}/SOAPpy/wstools/TimeoutSocket.pyo
+${PYSITELIB}/SOAPpy/wstools/UserTuple.py
+${PYSITELIB}/SOAPpy/wstools/UserTuple.pyc
+${PYSITELIB}/SOAPpy/wstools/UserTuple.pyo
 ${PYSITELIB}/SOAPpy/wstools/Utility.py
 ${PYSITELIB}/SOAPpy/wstools/Utility.pyc
 ${PYSITELIB}/SOAPpy/wstools/Utility.pyo
