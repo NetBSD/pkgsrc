@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.149 2001/04/14 19:20:47 dmcmahill Exp $
+# $NetBSD: Packages.txt,v 1.150 2001/04/17 08:18:30 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -601,10 +601,14 @@ can set PATCH_FUZZ_FACTOR=-F2).  Furthermore, do not put changes
 for more than one file into a single patch-file, as this will make
 future modifications more difficult.
 
+Similar, a file should be patches at most once, not several times by
+several different patches. If a file needs several patches, they should
+be combined into one file.
+
 One important thing to mention is to pay attention that no RCS IDs get
 stored in the patch files, as these will cause problems when later checked
-into the NetBSD CVS tree. To avoid this, use the "-U 2" or "-U 1" option to
-diff.
+into the NetBSD CVS tree. To avoid this, use either the "-U 2" or "-U 1"
+option to diff, or let the 'pkgdiff' command from pkgsrc/pkgdiff help you.
 
 If you don't want to worry about the problems in the last two paragraphs
 yourself, use pkgdiff from the pkgtools/pkgdiff package, which takes care
@@ -1752,7 +1756,10 @@ crept in.
 When compiling the pkgsrc/pkgtools/pkg_install package, you get the error
 from make that it doesn't know how to make /usr/share/tmac/tmac.andoc? This
 indicates that you don't have installed the "text" set on your machine
-(nroff, ...). Please do that.
+(nroff, ...). It is recommended to do that.
+
+In the case of the pkg_install package, you can get away with setting
+NOMAN=YES either in the environment or in /etc/mk.conf.
 
 
  9.17 How to handle incrementing versions when fixing an existing package
