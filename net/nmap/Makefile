@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2004/11/13 22:04:53 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.40 2004/11/26 09:24:20 adam Exp $
 
-DISTNAME=	nmap-3.75
+DISTNAME=	nmap-3.77
 CATEGORIES=	net security
 MASTER_SITES=	http://www.insecure.org/nmap/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,10 +11,9 @@ COMMENT=	Network/port scanner with OS detection
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	YES
-GNU_CONFIGURE=	YES
-USE_LANGUAGES=	c c++
-
+USE_BUILDLINK3=		YES
+USE_LANGUAGES=		c c++
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-libpcap=${BUILDLINK_PREFIX.libpcap}
 CONFIGURE_ARGS+=	--with-libpcre=${BUILDLINK_PREFIX.libpcre}
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
