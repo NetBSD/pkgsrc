@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.5 1999/11/19 09:38:19 agc Exp $
+$NetBSD: patch-ac,v 1.6 2000/04/10 00:04:29 jlam Exp $
 
 --- config.h.orig	Fri Nov 19 09:32:02 1999
 +++ config.h	Fri Nov 19 09:32:57 1999
@@ -18,7 +18,7 @@ $NetBSD: patch-ac,v 1.5 1999/11/19 09:38:19 agc Exp $
 -/* #define GS_PATH "/usr/local/bin/gs" */
 -/* #define GS_LIB  "."                 */
 -/* #define GS_DEV  "ppmraw"            */
-+#define GS_PATH "@LOCALBASE@/bin/gs"
++#define GS_PATH "@LOCALBASE@/bin/gstty"
 +#define GS_LIB  "@LOCALBASE@/share/ghostscript"
 +#define GS_DEV  "ppmraw"
  
