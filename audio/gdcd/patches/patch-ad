@@ -1,15 +1,17 @@
-$NetBSD: patch-ad,v 1.1 1999/10/09 16:51:11 jlam Exp $
+$NetBSD: patch-ad,v 1.2 2001/05/14 17:09:14 rh Exp $
 
---- source/Makefile.in.orig	Thu Sep  2 21:56:08 1999
-+++ source/Makefile.in	Sat Oct  9 03:24:15 1999
-@@ -68,8 +68,8 @@
- bin_PROGRAMS = gdcd
- gdcd_SOURCES = gdcd.c thread.c cddb.c coverart.c
+--- source/coverart.c.orig	Sun May  6 18:18:16 2001
++++ source/coverart.c
+@@ -197,7 +197,12 @@
+          return -1;
+       }
  
--CFLAGS = @CFLAGS@ `gtk-config --cflags` -DIMAGE_PATH=\"@IMAGE_PATH@\"
--LDFLAGS = @LDFLAGS@ `gtk-config --libs` -lcdaudio -lgdk_imlib -lpthread
-+CFLAGS = @CFLAGS@ `gtk-config --cflags` `imlib-config --cflags` -DIMAGE_PATH=\"@IMAGE_PATH@\"
-+LDFLAGS = @LDFLAGS@ `gtk-config --libs` `imlib-config --libs` -lcdaudio -lgdk_imlib -lpthread
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
- CONFIG_HEADER = ../config.h
- CONFIG_CLEAN_FILES = 
++#ifdef HAVE_STRERROR_R
+       strerror_r(rc, message, 64);
++#else
++      strncpy (message, strerror (rc), 64);
++      message[63]='\0';
++#endif
+       fputs("Error invoking pthread_create: ", stderr);
+       fputs(message, stderr);
+       fputc('\n', stderr);

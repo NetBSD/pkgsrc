@@ -1,0 +1,35 @@
+$NetBSD: patch-ae,v 1.1 2001/05/14 17:09:14 rh Exp $
+
+--- source/gdcd.c.orig	Sun May  6 18:28:44 2001
++++ source/gdcd.c
+@@ -17,6 +17,19 @@
+ #include "coverart.h"
+ #include "conf.h"
+ 
++/*
++ * NetBSD uses non-preemptive pth, so we yield the processor periodically
++ */
++#ifdef __NetBSD__
++gint
++pth_nbschedule (gpointer data)
++{
++	pthread_yield_np();
++	return TRUE;
++}
++#endif
++
++
+ GtkWidget *window;
+ GdkPixmap *window_bg, *splash_pm;
+ GdkPixmap *play_ico, *pause_ico, *stop_ico, *error_ico, *null_ico;
+@@ -1121,6 +1134,10 @@
+    
+    free(confitem);
+    
++#ifdef __NetBSD__
++   gtk_timeout_add (200, pth_nbschedule, NULL);
++#endif
++
+    gtk_main();
+    
+    return 0;
