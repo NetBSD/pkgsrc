@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2004/04/16 13:47:17 jmmv Exp $
+$NetBSD: distinfo,v 1.5 2004/06/28 13:34:47 jmmv Exp $
 
-SHA1 (gconf-editor-2.6.1.tar.bz2) = aadd796bba74a70c00e3d0dcdf35ef8d29f68355
-Size (gconf-editor-2.6.1.tar.bz2) = 376272 bytes
+SHA1 (gconf-editor-2.6.2.tar.bz2) = d4f72ed21a5582a5be5160dbd6e5f515a610a50e
+Size (gconf-editor-2.6.2.tar.bz2) = 387614 bytes
