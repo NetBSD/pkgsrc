@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4614 2004/01/27 08:12:12 grant Exp $
+$NetBSD: CHANGES,v 1.4615 2004/01/27 10:59:23 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -499,3 +499,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated subversion to 0.37.0 [epg 2004-01-26]
 	Updated gaim to 0.75nb1 [recht 2004-01-27]
 	Updated apache2 to 2.0.48nb3 [grant 2004-01-27]
+	Added unison 2.9.20 as net/unison-devel [jlam 2004-01-27]
