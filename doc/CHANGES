@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8533 2004/12/30 19:56:28 kristerw Exp $
+$NetBSD: CHANGES,v 1.8534 2004/12/30 21:05:04 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6712,3 +6712,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated avr-libc to 1.0.4 [kristerw 2004-12-30]
 	Updated xmame to 0.89nb1 [kristerw 2004-12-30]
 	Added simulavr-0.1.2.1 [kristerw 2004-12-30]
+	Updated gv to 3.6.1 [snj 2004-12-30]
