@@ -1,0 +1,4 @@
+The GNU Gatekeeper is an open-source project that implement
+an H.323 gatekeeper. A gatekeeper provides call control services
+to the H.323 endpoints. It is an integral part of most usefull
+internet telephony installations that are based on the H.323 standard.
