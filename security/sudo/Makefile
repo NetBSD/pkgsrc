@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/09/13 13:17:40 kim Exp $
+# $NetBSD: Makefile,v 1.16 1999/09/13 13:24:48 kim Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/11/12 03:24:41 obrien Exp
 #
 
@@ -15,6 +15,8 @@ BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
 
 .include "../../mk/bsd.prefs.mk"
 
+BUILD_DEFS+=	USE_KERBEROS4 USE_KERBEROS5
+
 GNU_CONFIGURE=	yes
 
 .if ${OPSYS} == "NetBSD"
@@ -25,6 +27,10 @@ CONFIGURE_ARGS+=--without-skey
 
 .ifdef ${USE_KERBEROS4}
 CONFIGURE_ARGS+=--with-kerb4
+.endif
+
+.ifdef ${USE_KERBEROS5}
+CONFIGURE_ARGS+=--with-kerb5
 .endif
 
 CONFIGURE_ARGS+=--with-C2 --with-nbsdops --disable-path-info
