@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2004/02/14 17:21:55 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2004/03/08 19:40:43 jmmv Exp $
 #
 
 DISTNAME=		gnome-themes-2.4.1
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-themes/2.4/}
 EXTRACT_SUFX=		.tar.bz2
@@ -11,7 +11,7 @@ MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Collection of themes and icons for GNOME 2
 
-DEPENDS=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
+DEPENDS=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK3=		yes

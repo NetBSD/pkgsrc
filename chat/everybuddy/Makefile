@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2003/08/15 22:48:04 jmc Exp $
+# $NetBSD: Makefile,v 1.9 2004/03/08 19:40:36 jmmv Exp $
 
 .include "Makefile.common"
-PKGREVISION=	4
+PKGREVISION=	5
 
 CONFLICTS+=	everybuddy-gnome-[0-9]*
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/01/18 01:11:40 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/03/08 19:40:44 jmmv Exp $
 bin/gtk-config
 share/gtk/gtkrc.az
 share/gtk/gtkrc.be
@@ -235,7 +235,6 @@ share/themes/Default/gtk/gtkrc
 @unexec ${RMDIR} %D/share/aclocal 2>/dev/null || ${TRUE}
 @dirrm share/themes/Default/gtk
 @unexec ${RMDIR} %D/share/themes/Default 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/themes 2>/dev/null || ${TRUE}
 @dirrm include/gtk-1.2/gtk
 @dirrm include/gtk-1.2/gdk
 @dirrm include/gtk-1.2

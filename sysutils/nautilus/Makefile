@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2004/02/14 18:26:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.28 2004/03/08 19:40:42 jmmv Exp $
 #
 
 DISTNAME=		nautilus-2.4.2
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/nautilus/2.4/}
 EXTRACT_SUFX=		.tar.bz2
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/projects/nautilus/
 COMMENT=		Nautilus file manager for GNOME2
+
+DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
 
 USE_PKGLOCALEDIR=	yes
 USE_BUILDLINK3=		yes

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2004/03/07 12:09:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.24 2004/03/08 19:40:44 jmmv Exp $
 #
 
 DISTNAME=		gnome-applets-2.4.2
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-applets/2.4/}
 EXTRACT_SUFX=		.tar.bz2
@@ -11,7 +11,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME2 panel applets
 
-DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
+DEPENDS=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		yes

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2004/01/24 15:46:43 grant Exp $
+# $NetBSD: Makefile,v 1.36 2004/03/08 19:40:39 jmmv Exp $
 
 DISTNAME=		ee-0.3.12
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/ee/0.3/}
 
@@ -9,7 +9,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Image viewer based on imlib by the Rasterman.  Gtk clone of xv
 
-DEPENDS+=		gnome1-dirs>=1.2:../../misc/gnome1-dirs
+DEPENDS+=		gnome1-dirs>=1.5:../../misc/gnome1-dirs
 
 USE_BUILDLINK2=		# defined
 USE_PKGLOCALEDIR=	# defined

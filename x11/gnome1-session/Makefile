@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2004/03/07 12:09:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2004/03/08 19:40:44 jmmv Exp $
 #
 
 .include "../../x11/gnome-core/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/-core/-session/}
-PKGREVISION=		6
+PKGREVISION=		7
 
 COMMENT=		Gnome-session component split out from gnome-core
 
-DEPENDS+=		gnome1-dirs>=1.0:../../misc/gnome1-dirs
+DEPENDS+=		gnome1-dirs>=1.5:../../misc/gnome1-dirs
 DEPENDS+=		xscreensaver-gnome>=4.14:../xscreensaver-gnome
 BUILD_DEPENDS+=		gtk-doc>=0.9:../../textproc/gtk-doc
 

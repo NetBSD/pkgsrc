@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2004/03/01 15:19:41 jmmv Exp $
+# $NetBSD: Makefile,v 1.56 2004/03/08 19:40:36 jmmv Exp $
 #
 
 DISTNAME=	gaim-0.75
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	chat x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gaim/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,7 +12,7 @@ HOMEPAGE=	http://gaim.sourceforge.net/
 COMMENT=	GTK2 based client for the AOL Instant Messenger chat system
 
 BUILD_USES_MSGFMT=	YES
-DEPENDS+=	gnome2-dirs>=1.1:../../misc/gnome2-dirs
+DEPENDS+=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 
 CONFLICTS+=	gaim-gnome-[0-9]*
 

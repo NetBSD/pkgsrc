@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/01/03 18:49:51 reed Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/08 19:40:42 jmmv Exp $
 #
 
 DISTNAME=	pan-0.11.4
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	news gnome
 MASTER_SITES=	http://pan.rebelbase.com/download/releases/${DISTNAME:C/pan-//}/SOURCE/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,6 +12,7 @@ HOMEPAGE=	http://pan.rebelbase.com/
 COMMENT=	Newsreader for Gnome
 
 BUILD_USES_MSGFMT=	YES
+DEPENDS+=		xdg-x11-dirs>=1.1:../../misc/xdg-x11-dirs
 
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES

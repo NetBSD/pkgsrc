@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2004/03/07 12:09:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.34 2004/03/08 19:40:43 jmmv Exp $
 #
 
 DISTNAME=		gnome-panel-2.4.2
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-panel/2.4/}
 EXTRACT_SUFX=		.tar.bz2
@@ -11,7 +11,7 @@ MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME2 panel application
 
-DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
+DEPENDS=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 DEPENDS+=		gnome-icon-theme>=1.0.9:../../graphics/gnome-icon-theme
 
 GNU_CONFIGURE=		YES

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2004/03/07 12:09:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.26 2004/03/08 19:40:44 jmmv Exp $
 #
 
 DISTNAME=		gnome-terminal-2.4.2
 PKGNAME=		${DISTNAME:S/-/2-/}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-terminal/2.4/}
 EXTRACT_SUFX=		.tar.bz2
@@ -13,7 +13,7 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Xterm like terminal program for GNOME 2
 
 BUILD_USES_MSGFMT=	YES
-DEPENDS=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
+DEPENDS=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 
 CONFLICTS=		gnome-core-[0-9]*
 

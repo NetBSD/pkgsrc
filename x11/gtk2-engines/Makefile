@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2004/02/14 18:26:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2004/03/08 19:40:45 jmmv Exp $
 #
 
 DISTNAME=		gtk-engines-2.2.0
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gtk-engines/2.2/}
 EXTRACT_SUFX=		.tar.bz2
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Theme engines for GTK+ version 2
+
+DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes

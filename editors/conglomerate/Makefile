@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2004/03/07 12:09:20 jmmv Exp $
+# $NetBSD: Makefile,v 1.22 2004/03/08 19:40:37 jmmv Exp $
 #
 
 DISTNAME=	conglomerate-0.7.12
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=conglomerate/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.conglomerate.org/
 COMMENT=	XML editor for GNOME2
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
+DEPENDS+=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 DEPENDS+=		docbook-xsl>=1.64.1:../../textproc/docbook-xsl
 DEPENDS+=		docbook-xml>=4.2nb6:../../textproc/docbook-xml
 

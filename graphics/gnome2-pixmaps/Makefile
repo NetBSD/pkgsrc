@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2004/02/11 04:40:49 xtraeme Exp $
+# $NetBSD: Makefile,v 1.14 2004/03/08 19:40:39 jmmv Exp $
 #
 
 DISTNAME=		gnome-desktop-2.4.1.1
 PKGNAME=		${DISTNAME:S/-desktop/2-pixmaps/}
+PKGREVISION=		1
 CATEGORIES=		graphics gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-desktop/2.4/}
 EXTRACT_SUFX=		.tar.bz2
@@ -19,6 +20,8 @@ CONFLICTS+=		gnome-pixmaps-[0-9]*
 .else
 CONFLICTS+=		gnome-pixmaps-2.0.8
 .endif
+
+DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
 
 USE_BUILDLINK3=		YES
 USE_X11=		YES

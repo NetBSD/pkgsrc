@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2004/01/20 12:28:26 agc Exp $
+# $NetBSD: Makefile,v 1.18 2004/03/08 19:40:43 jmmv Exp $
 #
 
 DISTNAME=		Xaw-XPM-1.1
 PKGNAME=		Xaw-Xpm-1.1
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=libs/X/}
 
@@ -11,6 +12,8 @@ HOMEPAGE=		http://www.zip.com.au/~bb/XawXpm/
 COMMENT=		Enhanced 3-D widgets based on the Athena Widget set and Xaw3d
 
 CONFLICTS=		Xaw3d-[0-9]*
+
+DEPENDS+=		xdg-x11-dirs>=1.1:../../misc/xdg-x11-dirs
 
 WRKSRC=			${WRKDIR}/XawXpm
 USE_BUILDLINK2=		YES

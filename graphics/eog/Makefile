@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.14 2004/01/24 15:46:43 grant Exp $
+# $NetBSD: Makefile,v 1.15 2004/03/08 19:40:39 jmmv Exp $
 
 DISTNAME=		eog-0.6
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		gnome graphics x11
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/eog/0.6/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Eye of GNOME: an image viewing and cataloging program
+
+DEPENDS+=		xdg-x11-dirs>=1.1:../../misc/xdg-x11-dirs
 
 GNU_CONFIGURE=		YES
 USE_X11BASE=		YES

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2004/02/14 17:21:36 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/08 19:40:37 jmmv Exp $
 
 DISTNAME=		devhelp-0.7
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		devel x11
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/devhelp/0.7/}
 EXTRACT_SUFX=		.tar.bz2
@@ -10,7 +10,7 @@ MAINTAINER=		benedikt.meurer@unix-ag.uni-siegen.de
 HOMEPAGE=		http://www.imendio.com/projects/devhelp/
 COMMENT=		Documentation viewer based on GNOME2
 
-DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
+DEPENDS+=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make

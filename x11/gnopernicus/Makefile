@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2004/03/07 12:09:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/08 19:40:44 jmmv Exp $
 #
 
 DISTNAME=		gnopernicus-0.7.1
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnopernicus/0.7/}
 EXTRACT_SUFX=		.tar.bz2
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Collection of accessibility apps for GNOME 2
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
+DEPENDS=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make

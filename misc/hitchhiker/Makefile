@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.13 2004/01/03 18:49:46 reed Exp $
+# $NetBSD: Makefile,v 1.14 2004/03/08 19:40:40 jmmv Exp $
 #
 
 DISTNAME=	hh2000-0.6
 PKGNAME=	hitchhiker-0.6
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hitchhiker/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://hirame.hiram.edu/~worleyam
 COMMENT=	Astronomical simulation and visualization program
+
+DEPENDS+=		gnome1-dirs>=1.5:../../misc/gnome1-dirs
 
 GNU_CONFIGURE=		yes
 USE_X11BASE=		yes

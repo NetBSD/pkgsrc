@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2004/01/22 07:49:20 grant Exp $
+# $NetBSD: Makefile.common,v 1.13 2004/03/08 19:40:36 jmmv Exp $
 
 DISTNAME=	everybuddy-0.2.0
 CATEGORIES=	chat
@@ -8,7 +8,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.everybuddy.com/
 COMMENT=	Universal Instant Messaging Client
 
-DEPENDS+=	gnome1-dirs>=1.0:../../misc/gnome1-dirs
+DEPENDS+=	gnome1-dirs>=1.5:../../misc/gnome1-dirs
 
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	YES
