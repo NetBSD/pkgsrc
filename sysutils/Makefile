@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.196 2003/06/26 03:49:54 salo Exp $
+# $NetBSD: Makefile,v 1.197 2003/06/27 12:02:23 agc Exp $
 
 COMMENT=	System utilities
 
@@ -138,6 +138,7 @@ SUBDIR+=	tits
 SUBDIR+=	tkcron
 SUBDIR+=	tkdesk
 SUBDIR+=	tload
+SUBDIR+=	tob
 SUBDIR+=	top
 SUBDIR+=	toshutils
 SUBDIR+=	ups-nut
