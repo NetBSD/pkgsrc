@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7421 2004/10/13 15:37:22 taca Exp $
+$NetBSD: CHANGES,v 1.7422 2004/10/13 20:09:55 ben Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4704,3 +4704,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kdevelop to 3.1.1 [markd 2004-10-13]
 	Updated timidity to 2.13.2 [adam 2004-10-13]
 	Updated squid to 2.5.7 [taca 2004-10-13]
+	Updated fprot-workstation-bin to 4.4.7 [ben 2004-10-13]
