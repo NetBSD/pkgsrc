@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2086 2004/08/30 13:41:23 recht Exp $
+$NetBSD: TODO,v 1.2087 2004/08/30 14:39:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -333,6 +333,7 @@ Suggested package updates
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.2.2
 	o mummer-3.15
+	o nail-11.4
 	o namazu-2.0.13
 	o nano-1.2.4
 	o nap-1.5.2
@@ -429,6 +430,7 @@ Suggested package updates
 	o uvscan-4.3.2 [jlam]
 	o vba-1.7.2
 	o vfu-4.03
+	o vice-1.15
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vttest-20030301
 	o wavesurfer-1.5.3
