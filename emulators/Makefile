@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2003/08/11 18:18:00 drochner Exp $
+# $NetBSD: Makefile,v 1.84 2003/09/14 19:10:31 jmmv Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -12,6 +12,7 @@ SUBDIR+=	compat13
 SUBDIR+=	compat14
 SUBDIR+=	compat14-crypto
 SUBDIR+=	darcnes
+SUBDIR+=	dega
 SUBDIR+=	dosbox
 SUBDIR+=	doscmd
 SUBDIR+=	fmsx
