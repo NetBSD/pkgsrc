@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/12/03 19:01:46 xtraeme Exp $
+
+SHA1 (ogre-v0-12-1.tar.bz2) = ffabeeb66305182ca3c7f2d9ee5a700599afd0db
+Size (ogre-v0-12-1.tar.bz2) = 13718569 bytes
+SHA1 (patch-aa) = f091507e8f84385a1ce2e78bd811189006fdb449
+SHA1 (patch-ab) = d2d6e3482391d6b5562a9cfdb302adc2911686b2
