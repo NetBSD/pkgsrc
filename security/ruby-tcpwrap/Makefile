@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/03/29 12:42:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2003/06/06 03:16:23 jschauma Exp $
 # FreeBSD: ports/security/ruby-tcpwrap/Makefile,v 1.6 2000/09/26 08:02:10 knu Exp
 
 DISTNAME=	ruby-tcpwrap-0.3
@@ -15,7 +15,7 @@ COMMENT=	TCP wrappers library for Ruby
 
 DEPENDS+=	libident>=0.22:../../security/libident
 .if ${OPSYS} != "NetBSD"
-DEPENDS+=	tcp_wrappers>=7.6:../../security/tcp_wrapper
+DEPENDS+=	tcp_wrappers>=7.6:../../security/tcp_wrappers
 .endif
 
 DIST_SUBDIR=	ruby
