@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/25 08:40:38 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 15:10:47 wiz Exp $
 
 DISTNAME=		medium
 PKGNAME=		${CHESS_ENGINE}-book-${DISTNAME}-20000511
@@ -7,6 +7,7 @@ MASTER_SITES=		ftp://ftp.cis.uab.edu/pub/hyatt/common/${DISTNAME}/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		jlam@netbsd.org
+COMMENT=		chess opening book for EXchess (medium)
 
 DEPENDS+=		exchess-[0-9]*:../../games/exchess
 

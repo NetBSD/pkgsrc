@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/01/02 03:20:10 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/16 15:10:45 wiz Exp $
 
 DISTNAME=	craftcc35
 PKGNAME=	craft-3.5
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://set.gmd.de/~hua/
+COMMENT=	Warcraft-like game for X11
 
 USE_GMAKE=	yes
 USE_X11BASE=	yes

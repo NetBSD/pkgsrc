@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/11/11 17:49:25 tron Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 15:10:44 wiz Exp $
 #
 
 DISTNAME=	corewars-0.9.11
@@ -7,6 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=corewars/}
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://corewars.sourceforge.net/
+COMMENT=	programs on a virtual machine, fighting each other
 
 DEPENDS+=	gtk+>=1.2.0:../../x11/gtk
 

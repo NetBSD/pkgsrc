@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/07 06:11:23 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/16 15:11:00 wiz Exp $
 
 DISTNAME=		xboard-4.2.2
 CATEGORIES=		games
@@ -7,6 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GNU:=xboard/} \
 
 MAINTAINER=		simonb@NetBSD.ORG
 HOMEPAGE=		http://www.research.compaq.com/SRC/personal/mann/xboard.html
+COMMENT=		graphical frontend for GNU Chess, Crafty, ICS or e-mail chess
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/autoreconf:../../devel/autoconf
 

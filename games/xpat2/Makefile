@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/11/30 17:48:05 agc Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/16 15:11:03 wiz Exp $
 # FreeBSD: ports/games/xpat2/Makefile,v 1.11 2000/04/14 12:27:59 asami Exp
 
 DISTNAME=	xpat2-1.06
@@ -6,6 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=games/solitaires/}
 
 MAINTAINER=	kuebart@mathematik.uni-ulm.de
+COMMENT=	X11 solitaire game with 14 variations
 
 USE_X11BASE=	YES
 USE_XPM=	YES

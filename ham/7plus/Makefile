@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/08/14 15:52:59 wulf Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 15:13:50 wiz Exp $
 #
 
 DISTNAME=	7pl225sr
@@ -11,6 +11,7 @@ DISTFILES=	7pl225sr.tgz \
 
 MAINTAINER=	wulf@netbsd.org
 HOMEPAGE=	http://home.t-online.de/home/dg1bbq/
+COMMENT=	uuencode-like file coder for AMPR BBS S&F of binary files
 
 LICENSE=        no-commercial-use
 
