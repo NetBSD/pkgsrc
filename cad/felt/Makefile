@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/04/14 21:43:38 jtb Exp $
+# $NetBSD: Makefile,v 1.6 2001/04/30 20:56:51 jtb Exp $
 
 DISTNAME=	felt-3.05.src
 PKGNAME=	felt-3.05
@@ -14,10 +14,10 @@ DEPENDS+=	readline-[0-9]*:../../devel/readline
 
 EXTRACT_ONLY=	felt-3.05.src.tar.gz
 WRKSRC=		${WRKDIR}/FElt-3.05
-NO_CONFIGURE=	YES
+NO_CONFIGURE=	# defined
 EVAL_PREFIX+=	RL_PREFIX=readline
-USE_X11=	YES
-USE_XAW=	YES
+USE_X11BASE=	yes
+USE_XAW=	yes
 XAW_TYPE=	3d
 
 post-extract:
@@ -27,9 +27,8 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/felt
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/felt
 	${INSTALL_DATA} ${WRKSRC}/felt.ps ${PREFIX}/share/doc/felt
-	@for i in FAQ FAQ.html README README.old COPYING CHANGELOG TODO; do \
-	${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/doc/felt;		    \
-	done
+	cd ${WRKSRC} && ${INSTALL_DATA} FAQ FAQ.html README README.old	\
+		COPYING CHANGELOG TODO ${PREFIX}/share/doc/felt
 	${INSTALL_DATA} ${WRKSRC}/examples/* ${PREFIX}/share/examples/felt
 
 .include "../../mk/bsd.pkg.mk"
