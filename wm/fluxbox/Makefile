@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/03/24 15:00:40 jmcneill Exp $
+# $NetBSD: Makefile,v 1.21 2005/03/30 11:57:57 jmcneill Exp $
 #
 
 DISTNAME=	fluxbox-0.9.12
@@ -19,10 +19,17 @@ GNU_CONFIGURE=	YES
 USE_GNU_TOOLS=	make
 USE_LIBTOOL=	YES
 
+.include "../../mk/bsd.prefs.mk"
+
+# Workaround for pkg/29825 -- older compilers apparently
+# have problems building this package.
+.if (${MACHINE_PLATFORM:MNetBSD-2.0*-*} != "")
+BUILDLINK_TRANSFORM+=	rename:-O2:-O1
+.endif
+
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--enable-xinerama
 
-.include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
 .include "../../mk/bsd.pkg.mk"
