@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2002/01/06 11:21:19 skrll Exp $
+# $NetBSD: Makefile,v 1.34 2002/01/06 19:33:34 jlam Exp $
 
 DISTNAME=	openldap-2.0.19
 SVR4_PKGNAME=	oldap
@@ -30,10 +30,9 @@ CONFIGURE_ARGS+=	--without-readline
 USE_PTHREAD=		native pth
 CONFIGURE_ARGS+=	--with-threads
 
-PKG_SYSCONFSUBDIR?=	openldap
+PKG_SYSCONFSUBDIR=	openldap
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--localstatedir=/var/openldap
-MAKE_FLAGS+=		sysconfdir=${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
