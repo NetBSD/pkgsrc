@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7737 2004/11/06 13:28:32 jdolecek Exp $
+$NetBSD: CHANGES,v 1.7738 2004/11/06 16:19:39 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5126,3 +5126,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mserv_irman to 0.20 [abs 2004-11-06]
 	Updated samba to 3.0.7nb2 [jmmv 2004-11-06]
 	Updated phpmyadmin to 2.6.0-pl2 [jdolecek 2004-11-06]
+	Added bacula 1.36.0 [mjl 2004-11-06]
