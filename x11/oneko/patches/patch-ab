@@ -1,14 +1,14 @@
-$NetBSD: patch-ab,v 1.1 1999/09/13 01:23:24 itohy Exp $
+$NetBSD: patch-ab,v 1.2 2000/05/18 22:51:42 itohy Exp $
 
---- oneko.h.orig	Thu Oct 31 21:38:52 1991
-+++ oneko.h	Sat Sep 11 19:34:29 1999
-@@ -17,6 +17,9 @@
- #include <signal.h>
- #include <math.h>
- #include <sys/time.h>
-+#ifndef X_NOT_STDC_ENV
-+#include <stdlib.h>
-+#endif
- 
- 
- /*
+--- oneko.man.orig	Wed May 17 19:06:06 2000
++++ oneko.man	Wed May 17 19:40:26 2000
+@@ -99,6 +99,9 @@
+ .SH AUTHOR
+ Original xneko is written by Masayuki Koba and modified by Tatsuya Kato
+ (kato@ntts.co.jp).  Send bug fixes and enhancements to kato@ntts.co.jp
++.PP
++BSD Daemon Copyright 1988 by Marshall Kirk McKusick.
++All Rights Reserved.
+ .SH MAINTAINER
+ Send questions or problems to ea08@andrew.cmu.edu
+ .ad b
