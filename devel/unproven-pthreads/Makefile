@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/12/28 05:29:12 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2000/01/02 03:14:04 wiz Exp $
 #
 
 DISTNAME=		unproven-pthreads-0.9
@@ -20,9 +20,9 @@ pre-install:
 
 post-install:
 	@${RM} -f ${PREFIX}/pthreads/lib/libpthread_pic.a
-	@find ${PREFIX}/pthreads/include -name '*.orig'|xargs ${RM}
-	@find ${PREFIX}/pthreads/include -type f -print|xargs ${CHMOD} 644
-	@find ${PREFIX}/pthreads/include -type d -print|xargs ${CHMOD} 755
+	@${FIND} ${PREFIX}/pthreads/include -name '*.orig'|xargs ${RM}
+	@${FIND} ${PREFIX}/pthreads/include -type f -print|xargs ${CHMOD} 644
+	@${FIND} ${PREFIX}/pthreads/include -type d -print|xargs ${CHMOD} 755
 	@${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/pthreads/include
 
 .include "../../mk/bsd.pkg.mk"

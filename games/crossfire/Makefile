@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/04/05 17:23:02 mycroft Exp $
+# $NetBSD: Makefile,v 1.5 2000/01/02 03:20:11 wiz Exp $
 #
 
 DISTNAME=	crossfire-0.94.2
@@ -45,18 +45,18 @@ post-install:
 	    ${GZCAT} ${DISTDIR}/${CF_MAPS} | ${GTAR} xmf -
 	cd ${X11BASE}/lib/crossfire && \
 	    ${GZCAT} ${DISTDIR}/${CF_SOUND} | ${GTAR} xmf -
-	@/usr/bin/find ${X11BASE}/lib/crossfire/sounds -name \*.au -type f \
+	@${FIND} ${X11BASE}/lib/crossfire/sounds -name \*.au -type f \
 		> ${WRKDIR}/.RPLAY
 	@${CAT} ${WRKDIR}/.RPLAY >> ${LOCALBASE}/etc/rplay.conf
 	@${CAT} ${WRKDIR}/.RPLAY >> ${DEINSTALL_FILE}
 	@${CAT} ${WRKDIR}/.RPLAY >> ${INSTALL_FILE}
 	@${ECHO} "EOF" >> ${INSTALL_FILE}
-	@chown root:games ${X11BASE}/bin/crossfire
-	@chmod 2755 ${X11BASE}/bin/crossfire
-	@chown -R root:games ${X11BASE}/lib/crossfire
-	@chmod 775 ${X11BASE}/lib/crossfire/players
-	@chmod 775 ${X11BASE}/lib/crossfire
-	@chmod 664 ${X11BASE}/lib/crossfire/highscore
+	@${CHOWN} root:games ${X11BASE}/bin/crossfire
+	@${CHMOD} 2755 ${X11BASE}/bin/crossfire
+	@${CHOWN} -R root:games ${X11BASE}/lib/crossfire
+	@${CHMOD} 775 ${X11BASE}/lib/crossfire/players
+	@${CHMOD} 775 ${X11BASE}/lib/crossfire
+	@${CHMOD} 664 ${X11BASE}/lib/crossfire/highscore
 
 pre-clean:
 	@${RM} -f ${DEINSTALL_FILE} ${INSTALL_FILE} ${WRKDIR}/.RPLAY

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/04/01 14:07:53 agc Exp $
+# $NetBSD: Makefile,v 1.3 2000/01/02 03:20:13 wiz Exp $
 
 DISTNAME=		svb
 PKGNAME=		svb-1.0
@@ -15,10 +15,10 @@ NO_INSTALL_MANPAGES=	yes
 
 post-install:
 	${TOUCH} /var/games/svb.scorefile
-	chown games:games /var/games/svb.scorefile
-	chmod 664 /var/games/svb.scorefile
-	chown bin:games ${PREFIX}/bin/svb
-	chmod 2755 ${PREFIX}/bin/svb
+	${CHOWN} games:games /var/games/svb.scorefile
+	${CHMOD} 664 /var/games/svb.scorefile
+	${CHOWN} bin:games ${PREFIX}/bin/svb
+	${CHMOD} 2755 ${PREFIX}/bin/svb
 	${INSTALL_MAN} ${WRKSRC}/svb.man ${PREFIX}/man/man6/svb.6
 
 .include "../../mk/bsd.pkg.mk"

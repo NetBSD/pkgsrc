@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/11/12 01:08:24 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.3 2000/01/02 03:20:14 wiz Exp $
 #
 
 DISTNAME=	xscrabble
@@ -27,8 +27,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/OSPD3.gz ${PREFIX}/share/games/xscrabble
 	${INSTALL_DATA} ${WRKSRC}/scrabble_permutations ${PREFIX}/share/games/xscrabble
 	${INSTALL_DATA} ${WRKSRC}/xscrabble.scores ${PREFIX}/share/games/xscrabble/xscrabble.scores.dist
-	chown ${BINOWN}:games ${PREFIX}/share/games/xscrabble/xscrabble.scores.dist
-	chmod 0664 ${PREFIX}/share/games/xscrabble/xscrabble.scores.dist
+	${CHOWN} ${BINOWN}:games ${PREFIX}/share/games/xscrabble/xscrabble.scores.dist
+	${CHMOD} 0664 ${PREFIX}/share/games/xscrabble/xscrabble.scores.dist
 	${INSTALL_DATA} ${WRKSRC}/XScrabble ${PREFIX}/lib/X11/app-defaults
 	@if [ ! -f /var/games/xscrabble.scores ]; then \
 		${CP} -p ${PREFIX}/share/games/xscrabble/xscrabble.scores.dist \
