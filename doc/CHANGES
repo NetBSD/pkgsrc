@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1634 2003/03/13 14:12:36 taca Exp $
+$NetBSD: CHANGES,v 1.1635 2003/03/13 23:25:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1118,3 +1118,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added tex-textpos-1.2b [mjl 2003-03-13]
 	Updated bozohttpd to 20030313 [mrg 2003-03-13]
 	Updated poppassd to 4.0.5 [taca 2003-03-13]
+	Updated sodipodi to 0.31nb1 [wiz 2003-03-13]
