@@ -1,0 +1,19 @@
+#!/bin/sh
+#	$NetSBD$
+
+#
+# Script to start a sandbox build
+#
+
+#
+# Important files in sandbox (after extracting sets):
+#  * kernel (/netbsd)
+#  * /etc/resolv.conf
+#  * /dev/*
+#  * working(!) mail config (hostname, sendmail.cf)
+#  * /etc/localtime (security/snmpd)
+#  * /etc/resolv.conf (security/snmpd)
+#  * /usr/src (sysutils/aperture, net/ppp-mppe)
+#
+
+chroot /usr/sandbox sh -c 'cd /usr/cvs.local/pkgsrc/ ; sh mk/bulk/build'
