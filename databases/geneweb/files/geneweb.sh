@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: geneweb.sh,v 1.2 2001/07/15 15:33:22 wulf Exp $
+# $NetBSD: geneweb.sh,v 1.3 2003/01/19 12:34:46 grant Exp $
 #
 if [ -x @PREFIX@/libexec/gwd ]
 then
