@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1.2.2 2005/03/29 06:36:06 snj Exp $
+
+--- ish.c.orig	1990-08-05 06:04:08.000000000 -0500
++++ ish.c
+@@ -48,7 +48,7 @@ int  path = 0, size;
+ long lsize;
+ char *filename = "file.ish";
+ 
+-FILE *opath = stdout;
++FILE *opath;
+ FILE *ipath;
+ char name[NAMLEN];
+ 
+@@ -69,6 +69,7 @@ char **argv;
+     char *p;
+     FILE *fopen();
+ 
++    opath = stdout;
+     if (argc < 2)
+ 	help();
+     while(--argc > 0) {
