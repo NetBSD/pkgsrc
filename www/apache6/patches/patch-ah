@@ -1,14 +1,14 @@
-$NetBSD: patch-ah,v 1.2 2000/04/26 03:30:27 hubertf Exp $
+$NetBSD: patch-ah,v 1.3 2001/02/06 10:58:19 itojun Exp $
 
---- src/modules/standard/mod_so.c.orig	Tue Apr 25 21:22:13 2000
-+++ src/modules/standard/mod_so.c	Tue Apr 25 21:22:34 2000
-@@ -294,6 +294,9 @@
-     ap_os_dso_handle_t handle;
-     char *file;
- 
-+/* XXX Hack: ask dlopen() without translating for ServerRoot. */
-+    if (filename[0] == '!') file = filename + 1;
-+    else
-     file = ap_server_root_relative(cmd->pool, filename);
-     
-     if (!(handle = ap_os_dso_load(file))) {
+--- src/support/apachectl.orig	Thu Sep  7 01:19:50 2000
++++ src/support/apachectl
+@@ -27,6 +27,9 @@
+ # the path to your httpd binary, including options if necessary
+ HTTPD='/usr/local/apache/src/httpd'
+ #
++# shared object search path
++LD_LIBRARY_PATH=
++export LD_LIBRARY_PATH
+ # a command that outputs a formatted text version of the HTML at the
+ # url given on the command line.  Designed for lynx, however other
+ # programs may work.  
