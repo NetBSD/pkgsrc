@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST-md.static,v 1.1 1998/05/24 12:33:47 hubertf Exp $
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/SNMP/SNMP.a
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/SNMP/extralibs.ld
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/SNMP
