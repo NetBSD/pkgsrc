@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/04/14 21:43:45 jtb Exp $
+# $NetBSD: Makefile,v 1.5 2001/04/28 23:59:19 jtb Exp $
 
 DISTNAME=	Plotmtv1.4.1
 PKGNAME=	plotmtv-1.4.1
@@ -21,6 +21,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/plotmtv
 	${INSTALL_DATA} ${WRKSRC}/Tests/*.mtv ${PREFIX}/share/examples/plotmtv
 	${INSTALL_SCRIPT} ${WRKSRC}/Tests/run.sh ${WRKSRC}/Tests/run.csh \
-	${PREFIX}/share/examples/plotmtv
+		${PREFIX}/share/examples/plotmtv
 
 .include "../../mk/bsd.pkg.mk"
