@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.1.1.1 2004/10/21 14:27:40 grant Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.2 2004/10/22 00:24:48 hubertf Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -203,7 +203,7 @@
 	in 3.0/3.1 is lack of pthreads.)</para>
 
       <sect3 id="platform.interix-sfu-install">
-	<title>When Installing Interix/SFU</title>
+	<title>When installing Interix/SFU</title>
 
 	<para>At an absolute minimum, the following packages must be installed from
 	  the Windows Services for Unix 3.5 distribution in order to use pkgsrc:</para>

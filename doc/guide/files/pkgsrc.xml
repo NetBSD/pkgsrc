@@ -1,4 +1,4 @@
-<!-- $NetBSD: pkgsrc.xml,v 1.2 2004/10/21 15:07:47 grant Exp $ -->
+<!-- $NetBSD: pkgsrc.xml,v 1.3 2004/10/22 00:24:48 hubertf Exp $ -->
 <!-- From: -->
 <!-- NetBSD: Packages.txt,v 1.362 2004/10/16 00:41:40 dan Exp $ -->
 
@@ -16,7 +16,7 @@
 <book>
   <bookinfo>
     <title>The pkgsrc guide</title>
-    <subtitle>Documentation on the NetBSD package system</subtitle>
+    <subtitle>Documentation on the NetBSD packages system</subtitle>
 
     <authorgroup>
       <author>
@@ -36,6 +36,9 @@
 	  <address><email>hubertf@NetBSD.org</email></address>
 	</affiliation>
       </author>
+      <corpauthor>
+        The pkgsrc Developers
+      </corpauthor>
     </authorgroup>
 
     <copyright>
@@ -44,7 +47,7 @@
       <holder role="mailto:www@NetBSD.org">The NetBSD Foundation, Inc</holder>
     </copyright>
 
-    <pubdate>$NetBSD: pkgsrc.xml,v 1.2 2004/10/21 15:07:47 grant Exp $</pubdate>
+    <pubdate>$NetBSD: pkgsrc.xml,v 1.3 2004/10/22 00:24:48 hubertf Exp $</pubdate>
 
     <abstract>
       <para>Information about using the NetBSD package system (pkgsrc)
@@ -56,7 +59,7 @@
   &chap.intro;
 
   <part id="users-guide"> <?dbhtml filename="users-guide.html"?>
-    <title id="users-guide.title">pkgsrc user's guide</title>
+    <title id="users-guide.title">The pkgsrc user's guide</title>
 
     &chap.getting;
     &chap.platform;
@@ -67,7 +70,7 @@
 
   <!-- "part II" (we need to rid the documentation of this reference) -->
   <part id="developers-guide"> <?dbhtml filename="developers-guide.html"?>
-    <title id="developers-guide.title">pkgsrc developer's guide</title>
+    <title id="developers-guide.title">The pkgsrc developer's guide</title>
 
     &chap.components;
     &chap.plist;
@@ -83,4 +86,5 @@
   &chap.examples;
   &chap.logs;
   &chap.ftp-layout;
+  &chap.editing;
 </book>
