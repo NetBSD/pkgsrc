@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/12/30 17:39:21 cjep Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/12 09:46:04 cjep Exp $
 
 DISTNAME=		cross-${TARGET_ARCH}-1.2
 PKGREVISION=		3
@@ -73,7 +73,6 @@ gcc-configure:
 		${CONFIGURE_ENV} ../../../libiberty/configure \
 		--prefix=${PREFIX} --target=${TARGET_ARCH} --disable-nls
 	${CP} ${FILESDIR}/config.h ${GCC_WRKSRC}/${TARGET_ARCH}/${TARGET_ARCH}/libiberty
-
 
 do-build: bu-build gcc-build w32-build mingw-build
 bu-build:
