@@ -1,4 +1,4 @@
-# $NetBSD: IRIX.mk,v 1.2 2004/10/13 15:31:31 tv Exp $
+# $NetBSD: IRIX.mk,v 1.3 2004/11/12 20:25:41 sketch Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -164,6 +164,8 @@ PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 
 CONFIGURE_ENV+=		ABI=${ABI}
 MAKE_ENV+=		ABI=${ABI}
+
+LIBABISUFFIX=		${ABI}
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
