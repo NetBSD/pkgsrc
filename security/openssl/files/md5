@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.5 2000/04/21 02:15:40 explorer Exp $
+$NetBSD: md5,v 1.6 2001/04/09 04:29:23 fredb Exp $
 
-MD5 (openssl-0.9.5a.tar.gz) = 8fcb6a8ba511ec8b54b95f267ef52cf0
+SHA1 (openssl-0.9.6.tar.gz) = d69c964d58535343787a3b8ac38a48772704304c
