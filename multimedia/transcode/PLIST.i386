@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.i386,v 1.1 2005/02/27 12:03:09 veego Exp $
+lib/transcode/libxvidcore.so.4
