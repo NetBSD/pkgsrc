@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1639 2004/04/19 13:10:00 jschauma Exp $
+$NetBSD: TODO,v 1.1640 2004/04/19 14:13:28 minskim Exp $
 
 Suggested new packages
 ======================
@@ -180,6 +180,7 @@ Suggested package updates
 	o efax-gtk-2.2.6
 	o elk-3.99.6
 	o elm-me-2.4pl115
+	o epiphany-1.2.3
 	o evolution-1.5.2
 	o exim-4.32
 	o festival-1.4.3
@@ -220,6 +221,7 @@ Suggested package updates
 	o gtetrinet-0.7.4
 	o gtkglext-1.0.6
 	o gtksee-0.5.5.1
+	o gtksourceview-1.0.1
 	o gtranslator-1.0.1
 	o guile-pg-0.16 [pkg/24039]
 	o host-20031203 [cjep, in wip, awaiting greg woods response on 1 issue]
