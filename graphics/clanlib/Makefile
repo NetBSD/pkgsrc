@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 1999/09/29 22:58:44 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/11/30 13:24:45 rh Exp $
 
-DISTNAME=		ClanLib-0.1.15
-CATEGORIES=		games x11
+DISTNAME=		ClanLib-0.2.2
+CATEGORIES=		graphics games devel x11
 MASTER_SITES=		http://dark.x.dtu.dk/clansoft/clanlib/download/
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.clanlib.org/
 
-DEPENDS+=		Hermes-1.2.5:../../graphics/hermes
+DEPENDS+=		Hermes-1.2.6*:../../graphics/hermes
 DEPENDS+=		Mesa-*:../../graphics/Mesa
 DEPENDS+=		png-1.0.3:../../graphics/png
 
@@ -18,14 +18,22 @@ USE_PERL5=		yes
 
 LDFLAGS+=		-L${LOCALBASE}/lib
 CFLAGS+=		-I${LOCALBASE}/include/Hermes
-CONFIGURE_ARGS+=	--disable-asm386 \
-			--enable-libpng \
-			--enable-clansound \
-			--enable-dyn \
-			--enable-network --enable-mesa
+.if ${MACHINE_ARCH} == "i386"
+CONFIGURE_ARGS+=	--enable-asm386
+.else
+CONFIGURE_ARGS+=	--disable-asm386
+.endif
+CONFIGURE_ARGS+=	--enable-libpng
+CONFIGURE_ARGS+=	--enable-clansound
+CONFIGURE_ARGS+=	--enable-dyn
+CONFIGURE_ARGS+=	--enable-network
+CONFIGURE_ARGS+=	--enable-mesa
 
 CONFIGURE_ENV+=		LOCALBASE="${LOCALBASE}"# CC='cc ${CFLAGS} ${LDFLAGS}'
 MAKE_ENV+=		LDFLAGS="${LDFLAGS}"
+
+post-patch:
+	${CHMOD} +x ${WRKSRC}/configure
 
 .include "../../mk/bsd.prefs.mk"
 
