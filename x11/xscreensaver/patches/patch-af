@@ -1,0 +1,18 @@
+--- driver/Makefile.in.orig	Mon Apr 24 08:24:39 2000
++++ driver/Makefile.in	Mon Apr 24 08:48:07 2000
+@@ -317,11 +317,11 @@
+ 
+ install-kde:
+ 	@src="$(srcdir)/xscreensaver.kss" ;				      \
+-	if [ "$$KDEDIR" != "" ]; then					      \
+-	  dir="$(install_prefix)$$KDEDIR/bin" ;				      \
++	if true; then					      \
++	  dir="$(bindir)" ;				      \
+ 	  dest="$$dir/xscreensaver.kss" ;				      \
+-	  echo $(INSTALL_PROGRAM) $$src $$dest ;			      \
+-	  if $(INSTALL_PROGRAM) $$src $$dest ; then			      \
++	  echo $(BSD_INSTALL_SCRIPT) $$src $$dest ;			      \
++	  if $(BSD_INSTALL_SCRIPT) $$src $$dest ; then			      \
+ 	    true ;							      \
+ 	  else								      \
+ 	    e=echo ;							      \

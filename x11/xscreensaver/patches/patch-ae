@@ -1,0 +1,55 @@
+$NetBSD: patch-ae,v 1.1 2000/04/24 14:57:49 hubertf Exp $
+
+--- driver/xscreensaver.kss.orig	Mon Apr 24 08:10:02 2000
++++ driver/xscreensaver.kss	Mon Apr 24 08:10:41 2000
+@@ -1,4 +1,4 @@
+-#!/bin/bash -
++#!/bin/sh -
+ 
+ # script - "xscreensaver.kss"
+ #
+@@ -40,15 +40,15 @@
+       # 2) Hack xscreensaver to accept alternate setup files, and create one on
+       #    the fly here.
+       shift
+-      /usr/X11R6/lib/xscreensaver/xroger -delay 1 -window-id $1 &    # Start new preview 
++      @PREFIX@/lib/xscreensaver/xroger -delay 1 -window-id $1 &    # Start new preview 
+       echo "$!" > $HOME/.kss-preview$1.pid.`hostname`                # Write PID 
+       wait $!						             # Wait for it to get killed
+       exit
+       ;;
+ 
+     -setup)
+-      /usr/X11R6/bin/xscreensaver -no-splash &     # daemon must be started
+-      /usr/X11R6/bin/xscreensaver-demo             # or the setup will produce
++      @PREFIX@/bin/xscreensaver -no-splash &     # daemon must be started
++      @PREFIX@/bin/xscreensaver-demo             # or the setup will produce
+       kill $!                                      # a warning.
+       exit
+       ;;
+@@ -57,8 +57,8 @@
+       # I was unable to grep stdout because xscreensaver nabs it. But I was able
+       # to output it to a file, and grep the file.
+       TEMP_FILE=/tmp/xsc.$RANDOM
+-      /usr/X11R6/bin/xscreensaver -no-splash -verbose -no-capture-stderr 2> $TEMP_FILE &
+-      /usr/X11R6/bin/xscreensaver-command -activate
++      @PREFIX@/bin/xscreensaver -no-splash -verbose -no-capture-stderr 2> $TEMP_FILE &
++      @PREFIX@/bin/xscreensaver-command -activate
+       while true; do
+         ExitNow=$(grep -E -c unblanking\|already $TEMP_FILE)
+         if [ $ExitNow != 0 ]; then
+@@ -108,12 +108,12 @@
+   PID_FILE=$HOME/.kss-install.pid.`hostname`
+   kill `cat $PID_FILE`                                  # Kill old screensaver 
+   echo "$$" > $PID_FILE                                 # Write PID of this script
+-  /usr/X11R6/bin/xscreensaver -no-splash $timeout $lockmode $Nice &    # Start XScreenSaver daemon
++  @PREFIX@/bin/xscreensaver -no-splash $timeout $lockmode $Nice &    # Start XScreenSaver daemon
+   trap "kill $!" SIGTERM                                # Set these to kill the daemon
+   trap "kill $!" SIGKILL
+ 
+ # KDE sends SIGUSER1 to indicate the user has hit the "lock" button.
+-  trap "/usr/X11R6/bin/xscreensaver-command -lock" SIGUSR1
++  trap "@PREFIX@/bin/xscreensaver-command -lock" SIGUSR1
+ 
+   wait $!                                               # Do not exit, just wait for signals.
+ 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2000/02/01 17:45:29 frueauf Exp $
+# $NetBSD: Makefile,v 1.41 2000/04/24 14:57:48 hubertf Exp $
 #
 
 DISTNAME=	xscreensaver-3.23
@@ -32,5 +32,13 @@ CFLAGS+=	-I/usr/include/kerberosIV
 CONFIGURE_ARGS+=--with-kerberos=yes
 .endif
 .endif
+
+post-patch:
+	cd ${WRKSRC}/driver ; \
+	f=xscreensaver.kss ; \
+	[ -f $$f.BAK ] || ${MV} $$f $$f.BAK ; \
+	${SED} \
+		-e 's|@PREFIX@|${PREFIX}|g' \
+		<xscreensaver.kss.BAK >xscreensaver.kss
 
 .include "../../mk/bsd.pkg.mk"
