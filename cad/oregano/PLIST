@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/11/30 12:22:02 salo Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/01/27 12:37:20 jmmv Exp $
 bin/oregano
 bin/pspice2oregano
 share/gnome/apps/Applications/oregano.desktop
@@ -40,6 +40,9 @@ share/oregano/samples/zener.oregano
 share/pixmaps/gnome-oregano.png
 @dirrm share/gnome/help/oregano/C
 @dirrm share/gnome/help/oregano
+@comment in gnome-dirs: @dirrm share/gnome/help
+@comment in gnome-dirs: @dirrm share/gnome/apps/Applications
+@comment in gnome-dirs: @dirrm share/gnome/apps
 @dirrm share/oregano/samples
 @dirrm share/oregano/models
 @dirrm share/oregano/libraries

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2002/12/24 06:09:45 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/01/27 12:37:20 jmmv Exp $
 #
 
 DISTNAME=		oregano-0.20
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		cad gnome
 MASTER_SITES=		http://www.dtek.chalmers.se/~d4hult/oregano/download/
 
@@ -18,6 +18,7 @@ USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .include "../../devel/libglade/buildlink2.mk"
+.include "../../misc/gnome1-dirs/buildlink2.mk"
 .include "../../print/gnome-print/buildlink2.mk"
 .include "../../x11/gnome-core/buildlink2.mk"
 
