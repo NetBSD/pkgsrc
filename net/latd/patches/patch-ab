@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2003/10/21 20:55:42 xtraeme Exp $
+
+--- interfaces-bpf.cc.orig	2003-10-20 19:13:38.000000000 +0200
++++ interfaces-bpf.cc	2003-10-20 19:13:52.000000000 +0200
+@@ -15,6 +15,7 @@
+     GNU General Public License for more details.
+ ******************************************************************************/
+ 
++#include <assert.h>
+ #include <unistd.h>
+ #include <stdio.h>
+ #include <fcntl.h>
