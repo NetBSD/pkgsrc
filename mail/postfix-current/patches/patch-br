@@ -1,0 +1,17 @@
+$NetBSD: patch-br,v 1.1.1.1 2000/08/14 04:33:26 itojun Exp $
+
+--- error/Makefile.orig	Wed Apr 26 20:25:57 2000
++++ error/Makefile	Wed Apr 26 20:38:25 2000
+@@ -0,0 +1,12 @@
++#	$NetBSD: patch-br,v 1.1.1.1 2000/08/14 04:33:26 itojun Exp $
++.include "../conf/main.cf"
++PROG=	error
++BINDIR=${daemon_directory}
++
++DPADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
++LDADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL} ${AUXLIBS}
++
++# XXX
++NOMAN=1
++
++.include <bsd.prog.mk>

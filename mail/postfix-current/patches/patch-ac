@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/08/14 04:33:24 itojun Exp $
+
+--- bounce/Makefile.orig	Wed Apr 26 20:25:53 2000
++++ bounce/Makefile	Wed Apr 26 20:38:14 2000
+@@ -0,0 +1,15 @@
++#	$NetBSD: patch-ac,v 1.1.1.1 2000/08/14 04:33:24 itojun Exp $
++.include "../conf/main.cf"
++PROG=	bounce
++BINDIR=${daemon_directory}
++
++SRCS	= bounce.c bounce_append_service.c bounce_notify_service.c \
++	bounce_cleanup.c
++
++DPADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
++LDADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL} ${AUXLIBS}
++
++# XXX
++NOMAN=1
++
++.include <bsd.prog.mk>

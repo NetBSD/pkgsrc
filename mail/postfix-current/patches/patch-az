@@ -1,0 +1,17 @@
+$NetBSD: patch-az,v 1.1.1.1 2000/08/14 04:33:24 itojun Exp $
+
+--- postlock/Makefile.orig	Wed Apr 26 20:25:55 2000
++++ postlock/Makefile	Wed Apr 26 20:39:25 2000
+@@ -0,0 +1,12 @@
++#	$NetBSD: patch-az,v 1.1.1.1 2000/08/14 04:33:24 itojun Exp $
++.include "../conf/main.cf"
++PROG=	postlock
++BINDIR=${command_directory}
++
++DPADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++LDADD+= ${LIBPGLOBAL} ${LIBPUTIL} ${AUXLIBS}
++
++# XXX
++NOMAN=1
++
++.include <bsd.prog.mk>
