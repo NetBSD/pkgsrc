@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2004/03/02 10:31:48 adam Exp $
+# $NetBSD: Makefile,v 1.114 2004/03/02 21:01:17 heinz Exp $
 
 .include "Makefile.common"
 
@@ -8,7 +8,8 @@ MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://www.simplesystems.org/ImageMagick/
 COMMENT=	Package for display and interactive manipulation of images
 
-DEPENDS+=	mpeg2codec-1.2:../../graphics/mpeg2codec
+BUILDLINK_DEPENDS.jasper+=	jasper>=1.701.0
+DEPENDS+=			mpeg2codec-1.2:../../graphics/mpeg2codec
 
 CONFLICTS=	geomview<1.8.1nb2  # used to have a program named 'animate'
 
