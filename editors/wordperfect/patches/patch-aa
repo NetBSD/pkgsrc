@@ -1,0 +1,34 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/08/25 01:07:30 jlam Exp $
+
+--- Runme.orig	Wed Dec  9 13:38:19 1998
++++ Runme	Sun Aug  6 07:02:28 2000
+@@ -2,14 +2,6 @@
+ # Script to un-tar and install WordPerfect
+ if [ "`echo -n`" = "" ]; then N="-n"; else C="\c"; fi; Work=0;
+ echo
+-echo $N "  Did you unzip and untar the files you downloaded? (y/n) $C";
+-read resp;
+-if [ "$resp" != "y" -a "$resp" != "Y" ]; then sleep 1;
+-	echo;
+-	echo "  Please refer to the Readme file if you have questions.";
+-	echo;
+-	exit;
+-fi;
+ 
+ # See if the file need to be renamed
+ if [ -f Moves ]; then
+@@ -94,14 +86,6 @@
+ }
+ 
+ if [ "$1" = menu ]; then do_menu; fi;
+-
+-for TarFile in `ls -1 *_* 2>/dev/null | sed '/\.bk/d'`; do
+-	TarFiles="$TarFiles $TarFile"; done
+-if [ "$TarFiles" = "" ]; then
+-	echo; echo "Error: Nothing new to install."; echo; exit; fi;
+-
+-echo; echo "  Extracting Files..."; SWD=`pwd`;
+-for File in $TarFiles; do tar xf $File; done;
+ 
+ Platform=`ls -1d */ins 2>/dev/null \
+ | sed -n '1p' | sed 's|\./||' | sed 's|/.*$||'`;
