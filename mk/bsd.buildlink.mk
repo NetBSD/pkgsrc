@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.29 2001/07/27 16:51:30 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.30 2001/08/22 04:29:55 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -97,6 +97,7 @@ LDFLAGS:=		${BUILDLINK_LDFLAGS} ${LDFLAGS}
 CONFIGURE_ENV+=		BUILDLINK_DIR="${BUILDLINK_DIR}"
 CONFIGURE_ENV+=		BUILDLINK_CPPFLAGS="${BUILDLINK_CPPFLAGS}"
 CONFIGURE_ENV+=		BUILDLINK_LDFLAGS="${BUILDLINK_LDFLAGS}"
+
 MAKE_ENV+=		BUILDLINK_DIR="${BUILDLINK_DIR}"
 MAKE_ENV+=		BUILDLINK_CPPFLAGS="${BUILDLINK_CPPFLAGS}"
 MAKE_ENV+=		BUILDLINK_LDFLAGS="${BUILDLINK_LDFLAGS}"
@@ -145,9 +146,9 @@ USE_CONFIG_WRAPPER=	# defined
 .endif
 
 BUILDLINK_CONFIG_WRAPPER_SED?=		# empty
-BUILDLINK_CONFIG_WRAPPER_POST_SED=					\
-		-e "s|-I${LOCALBASE}/|-I${BUILDLINK_DIR}/|g"		\
-		-e "s|-L${LOCALBASE}/|-L${BUILDLINK_DIR}/|g"
+BUILDLINK_CONFIG_WRAPPER_POST_SED+=					\
+	-e "s|-I${LOCALBASE}/|-I${BUILDLINK_DIR}/|g"			\
+	-e "s|-L${LOCALBASE}/|-L${BUILDLINK_DIR}/|g"
 
 _BUILDLINK_CONFIG_WRAPPER_USE: .USE
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -244,8 +245,9 @@ REPLACE_BUILDLINK+=	\
 post-build: replace-buildlink
 
 REPLACE_BUILDLINK_SED?=		# empty
-REPLACE_BUILDLINK_POST_SED+=	-e "s|-I${BUILDLINK_DIR}/|-I${LOCALBASE}/|g"
-REPLACE_BUILDLINK_POST_SED+=	-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"
+REPLACE_BUILDLINK_POST_SED+=						\
+	-e "s|-I${BUILDLINK_DIR}/|-I${LOCALBASE}/|g"			\
+	-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"
 
 # Fix files by removing buildlink directory references.
 replace-buildlink:
