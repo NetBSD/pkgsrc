@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/05/30 14:30:48 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/08/16 14:52:28 wiz Exp $
 bin/qvwm
+man/man1/qvwm.1
 share/qvwm/clouds.qvwm-theme
 share/qvwm/default.qvwm-theme
 share/qvwm/french.qvwmrc
