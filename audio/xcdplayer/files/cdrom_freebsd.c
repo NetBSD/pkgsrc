@@ -1,4 +1,4 @@
-$NetBSD: cdrom_freebsd.c,v 1.4 1998/08/23 06:47:02 garbled Exp $
+/* $NetBSD: cdrom_freebsd.c,v 1.5 1998/09/07 18:56:54 garbled Exp $ */
 /*
  * Copyright (C) 1990 Regents of the University of California.
  *
