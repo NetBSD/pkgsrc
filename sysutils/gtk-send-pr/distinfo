@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2004/04/20 20:46:39 minskim Exp $
+$NetBSD: distinfo,v 1.4 2004/10/26 05:56:57 xtraeme Exp $
 
-SHA1 (gtk-send-pr-0.3.3.tar.bz2) = 5ff6b1cec6e4049ca1b29b2104f190104f9a970e
-Size (gtk-send-pr-0.3.3.tar.bz2) = 25244 bytes
+SHA1 (gtk-send-pr-0.3.4.tar.bz2) = 6bb3150900bd9af4954dae4f36c852c5b7af8712
+Size (gtk-send-pr-0.3.4.tar.bz2) = 25366 bytes
