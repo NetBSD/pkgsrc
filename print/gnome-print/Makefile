@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2002/03/27 18:51:51 perry Exp $
+# $NetBSD: Makefile,v 1.47 2002/04/10 01:59:14 jlam Exp $
 #
 
 DISTNAME=		gnome-print-0.35
@@ -13,15 +13,13 @@ DEPENDS+=		ghostscript{,-nox11}-[6-9]*:../../print/ghostscript
 
 USE_BUILDLINK_ONLY=	YES
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ENV+=		GHOSTSCRIPT=${LOCALBASE}/bin/gs
+CONFIGURE_ARGS+=	--without-admin		# currently unstable
+
 # override HOME to avoid trying to install ${HOME}/.gnome
 MAKE_ENV+=		HOME=${WRKSRC}
-
-CPPFLAGS+=		-I${LOCALBASE}/include
-LDFLAGS+=		-L${LOCALBASE}/lib
 
 .include "../../graphics/freetype2/buildlink.mk"
 .include "../../graphics/gdk-pixbuf-gnome/buildlink.mk"
