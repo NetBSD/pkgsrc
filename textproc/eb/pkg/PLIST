@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/05/09 15:52:39 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/06/20 06:27:20 jtb Exp $
 bin/ebappendix
 bin/ebfont
 bin/ebinfo
@@ -7,25 +7,21 @@ bin/ebunzip
 bin/ebzip
 bin/ebzipinfo
 include/eb/appendix.h
+include/eb/binary.h
 include/eb/defs.h
 include/eb/eb.h
 include/eb/error.h
 include/eb/font.h
-include/eb/language.h
 include/eb/text.h
-@dirrm include/eb
-@unexec install-info --delete %D/info/eb-ja.info %D/info/dir
-@unexec install-info --delete %D/info/eb.info %D/info/dir
-@unexec install-info --delete %D/info/ebfont-ja.info %D/info/dir
-@unexec install-info --delete %D/info/ebfont.info %D/info/dir
-@unexec install-info --delete %D/info/ebinfo-ja.info %D/info/dir
-@unexec install-info --delete %D/info/ebinfo.info %D/info/dir
-@unexec install-info --delete %D/info/ebrefile-ja.info %D/info/dir
-@unexec install-info --delete %D/info/ebrefile.info %D/info/dir
-@unexec install-info --delete %D/info/ebzip-ja.info %D/info/dir
-@unexec install-info --delete %D/info/ebzip.info %D/info/dir
-info/eb-ja.info
-info/eb.info
+include/eb/zio.h
+@unexec install-info --delete --info-dir=%D/info %D/info/ebfont-ja.info
+@unexec install-info --delete --info-dir=%D/info %D/info/ebfont.info
+@unexec install-info --delete --info-dir=%D/info %D/info/ebinfo-ja.info
+@unexec install-info --delete --info-dir=%D/info %D/info/ebinfo.info
+@unexec install-info --delete --info-dir=%D/info %D/info/ebrefile-ja.info
+@unexec install-info --delete --info-dir=%D/info %D/info/ebrefile.info
+@unexec install-info --delete --info-dir=%D/info %D/info/ebzip-ja.info
+@unexec install-info --delete --info-dir=%D/info %D/info/ebzip.info
 info/ebfont-ja.info
 info/ebfont.info
 info/ebinfo-ja.info
@@ -34,21 +30,19 @@ info/ebrefile-ja.info
 info/ebrefile.info
 info/ebzip-ja.info
 info/ebzip.info
-@exec install-info %D/info/eb-ja.info %D/info/dir
-@exec install-info %D/info/eb.info %D/info/dir
-@exec install-info %D/info/ebfont-ja.info %D/info/dir
-@exec install-info %D/info/ebfont.info %D/info/dir
-@exec install-info %D/info/ebinfo-ja.info %D/info/dir
-@exec install-info %D/info/ebinfo.info %D/info/dir
-@exec install-info %D/info/ebrefile-ja.info %D/info/dir
-@exec install-info %D/info/ebrefile.info %D/info/dir
-@exec install-info %D/info/ebzip-ja.info %D/info/dir
-@exec install-info %D/info/ebzip.info %D/info/dir
+@exec install-info --info-dir=%D/info %D/info/ebzip-ja.info
+@exec install-info --info-dir=%D/info %D/info/ebrefile.info
+@exec install-info --info-dir=%D/info %D/info/ebrefile-ja.info
+@exec install-info --info-dir=%D/info %D/info/ebinfo.info
+@exec install-info --info-dir=%D/info %D/info/ebinfo-ja.info
+@exec install-info --info-dir=%D/info %D/info/ebfont.info
+@exec install-info --info-dir=%D/info %D/info/ebfont-ja.info
+@exec install-info --info-dir=%D/info %D/info/ebzip.info
 lib/libeb.a
 lib/libeb.la
 lib/libeb.so
-lib/libeb.so.3
-lib/libeb.so.3.5
+lib/libeb.so.4
+lib/libeb.so.4.0
 share/eb/appendix/LIST
 share/eb/appendix/LIST-ja
 share/eb/appendix/cencro-1.0/catalog
@@ -206,94 +200,10 @@ share/eb/appendix/superdic98-1.0/kanjigen.app
 share/eb/appendix/superdic98-1.0/kanjigen/data/furoku
 share/eb/appendix/superdic98-1.0/koujien.app
 share/eb/appendix/superdic98-1.0/koujien/data/furoku
-@dirrm share/eb/appendix/cencro-1.0/cencro
-@dirrm share/eb/appendix/cencro-1.0
-@dirrm share/eb/appendix/genius-1.0/genius
-@dirrm share/eb/appendix/genius-1.0
-@dirrm share/eb/appendix/chujiten-2.3/eiwa
-@dirrm share/eb/appendix/chujiten-2.3/waei
-@dirrm share/eb/appendix/chujiten-2.3
-@dirrm share/eb/appendix/chujiten2-2.0/chujiten/data
-@dirrm share/eb/appendix/chujiten2-2.0/chujiten
-@dirrm share/eb/appendix/chujiten2-2.0
-@dirrm share/eb/appendix/chujiten6-2.3/chujiten
-@dirrm share/eb/appendix/chujiten6-2.3
-@dirrm share/eb/appendix/colloc-2.0/colloc/data
-@dirrm share/eb/appendix/colloc-2.0/colloc
-@dirrm share/eb/appendix/colloc-2.0
-@dirrm share/eb/appendix/crownfj-2.0/crown_fj/data
-@dirrm share/eb/appendix/crownfj-2.0/crown_fj
-@dirrm share/eb/appendix/crownfj-2.0/daily_ei/data
-@dirrm share/eb/appendix/crownfj-2.0/daily_ei
-@dirrm share/eb/appendix/crownfj-2.0
-@dirrm share/eb/appendix/daihyakka-1.0/dhk01
-@dirrm share/eb/appendix/daihyakka-1.0
-@dirrm share/eb/appendix/daijirin-2.0/dgx01/data
-@dirrm share/eb/appendix/daijirin-2.0/dgx01
-@dirrm share/eb/appendix/daijirin-2.0
-@dirrm share/eb/appendix/dd75-2.0/chujiten
-@dirrm share/eb/appendix/dd75-2.0/koujien
-@dirrm share/eb/appendix/dd75-2.0
-@dirrm share/eb/appendix/global-2.0/gejcje/data
-@dirrm share/eb/appendix/global-2.0/gejcje
-@dirrm share/eb/appendix/global-2.0
-@dirrm share/eb/appendix/heritage-2.2/roget
-@dirrm share/eb/appendix/heritage-2.2/dict
-@dirrm share/eb/appendix/heritage-2.2/abbrev
-@dirrm share/eb/appendix/heritage-2.2/bioentry
-@dirrm share/eb/appendix/heritage-2.2/geoentry
-@dirrm share/eb/appendix/heritage-2.2/colleges
-@dirrm share/eb/appendix/heritage-2.2/root
-@dirrm share/eb/appendix/heritage-2.2/info
-@dirrm share/eb/appendix/heritage-2.2
-@dirrm share/eb/appendix/izumi-2.0/file1
-@dirrm share/eb/appendix/izumi-2.0
-@dirrm share/eb/appendix/jitenban-2.4/mypaedia/data
-@dirrm share/eb/appendix/jitenban-2.4/mypaedia
-@dirrm share/eb/appendix/jitenban-2.4/iwakoku/data
-@dirrm share/eb/appendix/jitenban-2.4/iwakoku
-@dirrm share/eb/appendix/jitenban-2.4/chujiten/data
-@dirrm share/eb/appendix/jitenban-2.4/chujiten
-@dirrm share/eb/appendix/jitenban-2.4/chiezo/data
-@dirrm share/eb/appendix/jitenban-2.4/chiezo
-@dirrm share/eb/appendix/jitenban-2.4
-@dirrm share/eb/appendix/jitenban97-2.1/iwakoku/data
-@dirrm share/eb/appendix/jitenban97-2.1/iwakoku
-@dirrm share/eb/appendix/jitenban97-2.1/chujiten/data
-@dirrm share/eb/appendix/jitenban97-2.1/chujiten
-@dirrm share/eb/appendix/jitenban97-2.1/chiezo/data
-@dirrm share/eb/appendix/jitenban97-2.1/chiezo
-@dirrm share/eb/appendix/jitenban97-2.1/mypaedia/data
-@dirrm share/eb/appendix/jitenban97-2.1/mypaedia
-@dirrm share/eb/appendix/jitenban97-2.1
-@dirrm share/eb/appendix/kanjigen-2.0/gdd01
-@dirrm share/eb/appendix/kanjigen-2.0
-@dirrm share/eb/appendix/kanjigen2-2.0/kanjigen/data
-@dirrm share/eb/appendix/kanjigen2-2.0/kanjigen
-@dirrm share/eb/appendix/kanjigen2-2.0
-@dirrm share/eb/appendix/kojien-2.3/kojien
-@dirrm share/eb/appendix/kojien-2.3
-@dirrm share/eb/appendix/kojien2-2.0/koujien/data
-@dirrm share/eb/appendix/kojien2-2.0/koujien
-@dirrm share/eb/appendix/kojien2-2.0/furoku/data
-@dirrm share/eb/appendix/kojien2-2.0/furoku
-@dirrm share/eb/appendix/kojien2-2.0
-@dirrm share/eb/appendix/kojien4-2.2/koujien
-@dirrm share/eb/appendix/kojien4-2.2/furoku
-@dirrm share/eb/appendix/kojien4-2.2
-@dirrm share/eb/appendix/oxford-2.0/oxford
-@dirrm share/eb/appendix/oxford-2.0/quick
-@dirrm share/eb/appendix/oxford-2.0/user
-@dirrm share/eb/appendix/oxford-2.0/about
-@dirrm share/eb/appendix/oxford-2.0
-@dirrm share/eb/appendix/plus-2.0/plus/data
-@dirrm share/eb/appendix/plus-2.0/plus
-@dirrm share/eb/appendix/plus-2.0
-@dirrm share/eb/appendix/readers-2.2/readers
-@dirrm share/eb/appendix/readers-2.2
-@dirrm share/eb/appendix/readers2-2.0/readers/data
-@dirrm share/eb/appendix/readers2-2.0/readers
-@dirrm share/eb/appendix/readers2-2.0
+share/eb/eb3.m4
+share/eb/ssizet.m4
+share/locale/ja/LC_MESSAGES/eb.mo
+share/locale/ja/LC_MESSAGES/ebutils.mo
 @dirrm share/eb/appendix/superdic98-1.0/koujien/data
 @dirrm share/eb/appendix/superdic98-1.0/koujien
 @dirrm share/eb/appendix/superdic98-1.0/kanjigen/data
@@ -309,5 +219,94 @@ share/eb/appendix/superdic98-1.0/koujien/data/furoku
 @dirrm share/eb/appendix/superdic98-1.0/chujiten/data
 @dirrm share/eb/appendix/superdic98-1.0/chujiten
 @dirrm share/eb/appendix/superdic98-1.0
+@dirrm share/eb/appendix/readers2-2.0/readers/data
+@dirrm share/eb/appendix/readers2-2.0/readers
+@dirrm share/eb/appendix/readers2-2.0
+@dirrm share/eb/appendix/readers-2.2/readers
+@dirrm share/eb/appendix/readers-2.2
+@dirrm share/eb/appendix/plus-2.0/plus/data
+@dirrm share/eb/appendix/plus-2.0/plus
+@dirrm share/eb/appendix/plus-2.0
+@dirrm share/eb/appendix/oxford-2.0/user
+@dirrm share/eb/appendix/oxford-2.0/quick
+@dirrm share/eb/appendix/oxford-2.0/oxford
+@dirrm share/eb/appendix/oxford-2.0/about
+@dirrm share/eb/appendix/oxford-2.0
+@dirrm share/eb/appendix/kojien4-2.2/koujien
+@dirrm share/eb/appendix/kojien4-2.2/furoku
+@dirrm share/eb/appendix/kojien4-2.2
+@dirrm share/eb/appendix/kojien2-2.0/koujien/data
+@dirrm share/eb/appendix/kojien2-2.0/koujien
+@dirrm share/eb/appendix/kojien2-2.0/furoku/data
+@dirrm share/eb/appendix/kojien2-2.0/furoku
+@dirrm share/eb/appendix/kojien2-2.0
+@dirrm share/eb/appendix/kojien-2.3/kojien
+@dirrm share/eb/appendix/kojien-2.3
+@dirrm share/eb/appendix/kanjigen2-2.0/kanjigen/data
+@dirrm share/eb/appendix/kanjigen2-2.0/kanjigen
+@dirrm share/eb/appendix/kanjigen2-2.0
+@dirrm share/eb/appendix/kanjigen-2.0/gdd01
+@dirrm share/eb/appendix/kanjigen-2.0
+@dirrm share/eb/appendix/jitenban97-2.1/mypaedia/data
+@dirrm share/eb/appendix/jitenban97-2.1/mypaedia
+@dirrm share/eb/appendix/jitenban97-2.1/iwakoku/data
+@dirrm share/eb/appendix/jitenban97-2.1/iwakoku
+@dirrm share/eb/appendix/jitenban97-2.1/chujiten/data
+@dirrm share/eb/appendix/jitenban97-2.1/chujiten
+@dirrm share/eb/appendix/jitenban97-2.1/chiezo/data
+@dirrm share/eb/appendix/jitenban97-2.1/chiezo
+@dirrm share/eb/appendix/jitenban97-2.1
+@dirrm share/eb/appendix/jitenban-2.4/mypaedia/data
+@dirrm share/eb/appendix/jitenban-2.4/mypaedia
+@dirrm share/eb/appendix/jitenban-2.4/iwakoku/data
+@dirrm share/eb/appendix/jitenban-2.4/iwakoku
+@dirrm share/eb/appendix/jitenban-2.4/chujiten/data
+@dirrm share/eb/appendix/jitenban-2.4/chujiten
+@dirrm share/eb/appendix/jitenban-2.4/chiezo/data
+@dirrm share/eb/appendix/jitenban-2.4/chiezo
+@dirrm share/eb/appendix/jitenban-2.4
+@dirrm share/eb/appendix/izumi-2.0/file1
+@dirrm share/eb/appendix/izumi-2.0
+@dirrm share/eb/appendix/heritage-2.2/root
+@dirrm share/eb/appendix/heritage-2.2/roget
+@dirrm share/eb/appendix/heritage-2.2/info
+@dirrm share/eb/appendix/heritage-2.2/geoentry
+@dirrm share/eb/appendix/heritage-2.2/dict
+@dirrm share/eb/appendix/heritage-2.2/colleges
+@dirrm share/eb/appendix/heritage-2.2/bioentry
+@dirrm share/eb/appendix/heritage-2.2/abbrev
+@dirrm share/eb/appendix/heritage-2.2
+@dirrm share/eb/appendix/global-2.0/gejcje/data
+@dirrm share/eb/appendix/global-2.0/gejcje
+@dirrm share/eb/appendix/global-2.0
+@dirrm share/eb/appendix/genius-1.0/genius
+@dirrm share/eb/appendix/genius-1.0
+@dirrm share/eb/appendix/dd75-2.0/koujien
+@dirrm share/eb/appendix/dd75-2.0/chujiten
+@dirrm share/eb/appendix/dd75-2.0
+@dirrm share/eb/appendix/daijirin-2.0/dgx01/data
+@dirrm share/eb/appendix/daijirin-2.0/dgx01
+@dirrm share/eb/appendix/daijirin-2.0
+@dirrm share/eb/appendix/daihyakka-1.0/dhk01
+@dirrm share/eb/appendix/daihyakka-1.0
+@dirrm share/eb/appendix/crownfj-2.0/daily_ei/data
+@dirrm share/eb/appendix/crownfj-2.0/daily_ei
+@dirrm share/eb/appendix/crownfj-2.0/crown_fj/data
+@dirrm share/eb/appendix/crownfj-2.0/crown_fj
+@dirrm share/eb/appendix/crownfj-2.0
+@dirrm share/eb/appendix/colloc-2.0/colloc/data
+@dirrm share/eb/appendix/colloc-2.0/colloc
+@dirrm share/eb/appendix/colloc-2.0
+@dirrm share/eb/appendix/chujiten6-2.3/chujiten
+@dirrm share/eb/appendix/chujiten6-2.3
+@dirrm share/eb/appendix/chujiten2-2.0/chujiten/data
+@dirrm share/eb/appendix/chujiten2-2.0/chujiten
+@dirrm share/eb/appendix/chujiten2-2.0
+@dirrm share/eb/appendix/chujiten-2.3/waei
+@dirrm share/eb/appendix/chujiten-2.3/eiwa
+@dirrm share/eb/appendix/chujiten-2.3
+@dirrm share/eb/appendix/cencro-1.0/cencro
+@dirrm share/eb/appendix/cencro-1.0
 @dirrm share/eb/appendix
 @dirrm share/eb
+@dirrm include/eb
