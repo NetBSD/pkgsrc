@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.297 2002/10/18 09:37:42 rh Exp $
+$NetBSD: CHANGES,v 1.298 2002/10/18 11:50:43 martti Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -1544,7 +1544,7 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated rats to 1.4 [taca 2002-05-03]
 	Added epic4-doc-1.0 [zuntum 2002-05-03]
 	Updated uvscan-dat to 4201 [zuntum 2002-05-03]
-        Updated hdf5 to 1.4.3 [jtb 2002-05-03]
+	Updated hdf5 to 1.4.3 [jtb 2002-05-03]
 	Updated etach to 1.2.6 [jtb 2002-05-03]
 	Updated swi-prolog to 5.0.5 [jtb 2002-05-03]
 	Updated gsl to 1.1.1 [jtb 2002-05-03]
@@ -3309,3 +3309,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated gnustep-gui to 0.8.2 [rh 2002-10-18]
 	Updated gnustep-back to 0.8.2 [rh 2002-10-18]
 	Added Gorm-0.1.9 [rh 2002-10-18]
+	Updated samba to 2.2.6 [martti 2002-10-18]
