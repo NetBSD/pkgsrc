@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.87 2002/10/21 21:46:00 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.88 2002/11/01 06:19:47 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -287,7 +287,7 @@ FILESDIR?=		${.CURDIR}/files
 PKGDIR?=		${.CURDIR}
 
 # If WRKOBJDIR is set, use that tree to build
-.ifdef WRKOBJDIR        
+.if defined(WRKOBJDIR)
 BUILD_DIR?=		${WRKOBJDIR}/${PKGPATH}
 .else
 BUILD_DIR?=		${.CURDIR}
