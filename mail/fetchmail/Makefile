@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2000/03/04 02:16:05 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2000/03/09 23:16:45 itojun Exp $
 #
 
-DISTNAME=       fetchmail-5.3.0
+DISTNAME=       fetchmail-5.3.2
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.ccil.org/pub/esr/fetchmail/ \
 		http://www.tuxedo.org/~esr/fetchmail/ \
@@ -19,6 +19,7 @@ BUILD_DEFS+=	USE_INET6
 
 .include "../../mk/bsd.prefs.mk"
 
+CONFIGURE_ARGS+=--without-hesiod
 .if defined(KERBEROS) && ${KERBEROS} == 4
 USE_KERBEROS=	yes
 CONFIGURE_ARGS+=--with-kerberos=yes
