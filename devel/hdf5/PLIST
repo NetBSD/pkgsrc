@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/05/03 20:51:33 jtb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/10/28 16:32:01 drochner Exp $
 bin/gif2h5
 bin/h52gif
 bin/h5cc
@@ -6,6 +6,8 @@ bin/h5debug
 bin/h5dump
 bin/h5import
 bin/h5ls
+bin/h5perf
+bin/h5redeploy
 bin/h5repart
 include/H5ACpublic.h
 include/H5Apublic.h
@@ -74,7 +76,6 @@ share/doc/html/hdf5/Copyright.html
 share/doc/html/hdf5/Datasets.html
 share/doc/html/hdf5/Dataspaces.html
 share/doc/html/hdf5/Datatypes.html
-share/doc/html/hdf5/DatatypesEnum.html
 share/doc/html/hdf5/Debugging.html
 share/doc/html/hdf5/Dependencies
 share/doc/html/hdf5/EnumMap.gif
@@ -174,166 +175,6 @@ share/doc/html/hdf5/TechNotes/pipe4.gif
 share/doc/html/hdf5/TechNotes/pipe5.gif
 share/doc/html/hdf5/TechNotes/version.gif
 share/doc/html/hdf5/Tools.html
-share/doc/html/hdf5/Tutor/Contents.html
-share/doc/html/hdf5/Tutor/ContentsAdd.html
-share/doc/html/hdf5/Tutor/ContentsAdv.html
-share/doc/html/hdf5/Tutor/ContentsFull.html
-share/doc/html/hdf5/Tutor/ContentsIntro.html
-share/doc/html/hdf5/Tutor/Copyright.html
-share/doc/html/hdf5/Tutor/Dependencies
-share/doc/html/hdf5/Tutor/Graphics/AddInfo.gif
-share/doc/html/hdf5/Tutor/Graphics/AdvTopics.gif
-share/doc/html/hdf5/Tutor/Graphics/BLANK.gif
-share/doc/html/hdf5/Tutor/Graphics/ChunkExt.gif
-share/doc/html/hdf5/Tutor/Graphics/CompDTypes.gif
-share/doc/html/hdf5/Tutor/Graphics/Copy.gif
-share/doc/html/hdf5/Tutor/Graphics/CreateAttr.gif
-share/doc/html/hdf5/Tutor/Graphics/CreateDset1.gif
-share/doc/html/hdf5/Tutor/Graphics/CreateDset2.gif
-share/doc/html/hdf5/Tutor/Graphics/CreateFile.gif
-share/doc/html/hdf5/Tutor/Graphics/CreateGrp1.gif
-share/doc/html/hdf5/Tutor/Graphics/CreateGrp2.gif
-share/doc/html/hdf5/Tutor/Graphics/Dependencies
-share/doc/html/hdf5/Tutor/Graphics/Examples.gif
-share/doc/html/hdf5/Tutor/Graphics/FileOrg.gif
-share/doc/html/hdf5/Tutor/Graphics/FullTOC1.gif
-share/doc/html/hdf5/Tutor/Graphics/FullTOC2.gif
-share/doc/html/hdf5/Tutor/Graphics/Glossary.gif
-share/doc/html/hdf5/Tutor/Graphics/H5API.gif
-share/doc/html/hdf5/Tutor/Graphics/Intro.gif
-share/doc/html/hdf5/Tutor/Graphics/IntroTopics.gif
-share/doc/html/hdf5/Tutor/Graphics/Iterate.gif
-share/doc/html/hdf5/Tutor/Graphics/Makefile
-share/doc/html/hdf5/Tutor/Graphics/Makefile.in
-share/doc/html/hdf5/Tutor/Graphics/MountFile.gif
-share/doc/html/hdf5/Tutor/Graphics/Quiz.gif
-share/doc/html/hdf5/Tutor/Graphics/QuizAns.gif
-share/doc/html/hdf5/Tutor/Graphics/RdWrDataset.gif
-share/doc/html/hdf5/Tutor/Graphics/RefObject.gif
-share/doc/html/hdf5/Tutor/Graphics/RefRegion.gif
-share/doc/html/hdf5/Tutor/Graphics/References.gif
-share/doc/html/hdf5/Tutor/Graphics/SelectElemCp.gif
-share/doc/html/hdf5/Tutor/Graphics/SelectHyp.gif
-share/doc/html/hdf5/Tutor/Graphics/TOC.gif
-share/doc/html/hdf5/Tutor/Graphics/TOCFull.gif
-share/doc/html/hdf5/Tutor/Graphics/TOCShort.gif
-share/doc/html/hdf5/Tutor/Graphics/TitlePg.gif
-share/doc/html/hdf5/Tutor/Graphics/Utilities.gif
-share/doc/html/hdf5/Tutor/Makefile
-share/doc/html/hdf5/Tutor/Makefile.in
-share/doc/html/hdf5/Tutor/answers.html
-share/doc/html/hdf5/Tutor/api.html
-share/doc/html/hdf5/Tutor/bighdf2sp.JPG
-share/doc/html/hdf5/Tutor/compound.html
-share/doc/html/hdf5/Tutor/crtatt.html
-share/doc/html/hdf5/Tutor/crtdat.html
-share/doc/html/hdf5/Tutor/crtfile.html
-share/doc/html/hdf5/Tutor/crtgrp.html
-share/doc/html/hdf5/Tutor/crtgrpar.html
-share/doc/html/hdf5/Tutor/crtgrpd.html
-share/doc/html/hdf5/Tutor/examples/Dependencies
-share/doc/html/hdf5/Tutor/examples/Makefile
-share/doc/html/hdf5/Tutor/examples/Makefile.in
-share/doc/html/hdf5/Tutor/examples/attrexample.f90
-share/doc/html/hdf5/Tutor/examples/chunk.f90
-share/doc/html/hdf5/Tutor/examples/compound.f90
-share/doc/html/hdf5/Tutor/examples/dsetexample.f90
-share/doc/html/hdf5/Tutor/examples/fileexample.f90
-share/doc/html/hdf5/Tutor/examples/groupexample.f90
-share/doc/html/hdf5/Tutor/examples/grpdsetexample.f90
-share/doc/html/hdf5/Tutor/examples/grpit.f90
-share/doc/html/hdf5/Tutor/examples/grpsexample.f90
-share/doc/html/hdf5/Tutor/examples/h5_compound.c
-share/doc/html/hdf5/Tutor/examples/h5_copy.c
-share/doc/html/hdf5/Tutor/examples/h5_crtatt.c
-share/doc/html/hdf5/Tutor/examples/h5_crtdat.c
-share/doc/html/hdf5/Tutor/examples/h5_crtfile.c
-share/doc/html/hdf5/Tutor/examples/h5_crtgrp.c
-share/doc/html/hdf5/Tutor/examples/h5_crtgrpar.c
-share/doc/html/hdf5/Tutor/examples/h5_crtgrpd.c
-share/doc/html/hdf5/Tutor/examples/h5_extend.c
-share/doc/html/hdf5/Tutor/examples/h5_hyperslab.c
-share/doc/html/hdf5/Tutor/examples/h5_iterate.c
-share/doc/html/hdf5/Tutor/examples/h5_mount.c
-share/doc/html/hdf5/Tutor/examples/h5_rdwt.c
-share/doc/html/hdf5/Tutor/examples/h5_read.c
-share/doc/html/hdf5/Tutor/examples/h5_ref2obj.c
-share/doc/html/hdf5/Tutor/examples/h5_ref2objr.c
-share/doc/html/hdf5/Tutor/examples/h5_ref2objw.c
-share/doc/html/hdf5/Tutor/examples/h5_ref2reg.c
-share/doc/html/hdf5/Tutor/examples/h5_ref2regr.c
-share/doc/html/hdf5/Tutor/examples/h5_ref2regw.c
-share/doc/html/hdf5/Tutor/examples/h5_reference.c
-share/doc/html/hdf5/Tutor/examples/hyperslab.f90
-share/doc/html/hdf5/Tutor/examples/java/Compound.java
-share/doc/html/hdf5/Tutor/examples/java/Copy.java
-share/doc/html/hdf5/Tutor/examples/java/CreateAttribute.java
-share/doc/html/hdf5/Tutor/examples/java/CreateDataset.java
-share/doc/html/hdf5/Tutor/examples/java/CreateFile.java
-share/doc/html/hdf5/Tutor/examples/java/CreateFileInput.java
-share/doc/html/hdf5/Tutor/examples/java/CreateGroup.java
-share/doc/html/hdf5/Tutor/examples/java/CreateGroupAR.java
-share/doc/html/hdf5/Tutor/examples/java/CreateGroupDataset.java
-share/doc/html/hdf5/Tutor/examples/java/DatasetRdWt.java
-share/doc/html/hdf5/Tutor/examples/java/Dependencies
-share/doc/html/hdf5/Tutor/examples/java/HyperSlab.java
-share/doc/html/hdf5/Tutor/examples/java/Makefile
-share/doc/html/hdf5/Tutor/examples/java/Makefile.in
-share/doc/html/hdf5/Tutor/examples/java/Makefile.in.txt
-share/doc/html/hdf5/Tutor/examples/java/Makefile.txt
-share/doc/html/hdf5/Tutor/examples/java/README
-share/doc/html/hdf5/Tutor/examples/java/readme.html
-share/doc/html/hdf5/Tutor/examples/java/runCompound.sh
-share/doc/html/hdf5/Tutor/examples/java/runCompound.sh.in
-share/doc/html/hdf5/Tutor/examples/java/runCopy.sh
-share/doc/html/hdf5/Tutor/examples/java/runCopy.sh.in
-share/doc/html/hdf5/Tutor/examples/java/runCreateAttribute.sh
-share/doc/html/hdf5/Tutor/examples/java/runCreateAttribute.sh.in
-share/doc/html/hdf5/Tutor/examples/java/runCreateDataset.sh
-share/doc/html/hdf5/Tutor/examples/java/runCreateDataset.sh.in
-share/doc/html/hdf5/Tutor/examples/java/runCreateFile.sh
-share/doc/html/hdf5/Tutor/examples/java/runCreateFile.sh.in
-share/doc/html/hdf5/Tutor/examples/java/runCreateFileInput.sh
-share/doc/html/hdf5/Tutor/examples/java/runCreateFileInput.sh.in
-share/doc/html/hdf5/Tutor/examples/java/runCreateGroup.sh
-share/doc/html/hdf5/Tutor/examples/java/runCreateGroup.sh.in
-share/doc/html/hdf5/Tutor/examples/java/runCreateGroupAR.sh
-share/doc/html/hdf5/Tutor/examples/java/runCreateGroupAR.sh.in
-share/doc/html/hdf5/Tutor/examples/java/runCreateGroupDataset.sh
-share/doc/html/hdf5/Tutor/examples/java/runCreateGroupDataset.sh.in
-share/doc/html/hdf5/Tutor/examples/java/runDatasetRdWt.sh
-share/doc/html/hdf5/Tutor/examples/java/runDatasetRdWt.sh.in
-share/doc/html/hdf5/Tutor/examples/java/runHyperSlab.sh
-share/doc/html/hdf5/Tutor/examples/java/runHyperSlab.sh.in
-share/doc/html/hdf5/Tutor/examples/mountexample.f90
-share/doc/html/hdf5/Tutor/examples/refobjexample.f90
-share/doc/html/hdf5/Tutor/examples/refregexample.f90
-share/doc/html/hdf5/Tutor/examples/rwdsetexample.f90
-share/doc/html/hdf5/Tutor/examples/selectele.f90
-share/doc/html/hdf5/Tutor/extend.html
-share/doc/html/hdf5/Tutor/fileorg.html
-share/doc/html/hdf5/Tutor/footer-ncsalogo.gif
-share/doc/html/hdf5/Tutor/glossary.html
-share/doc/html/hdf5/Tutor/img001.gif
-share/doc/html/hdf5/Tutor/img002.gif
-share/doc/html/hdf5/Tutor/img003.gif
-share/doc/html/hdf5/Tutor/img004.gif
-share/doc/html/hdf5/Tutor/img005.gif
-share/doc/html/hdf5/Tutor/index.html
-share/doc/html/hdf5/Tutor/intro.html
-share/doc/html/hdf5/Tutor/iterate.html
-share/doc/html/hdf5/Tutor/mount.html
-share/doc/html/hdf5/Tutor/property.html
-share/doc/html/hdf5/Tutor/questions.html
-share/doc/html/hdf5/Tutor/rdwt.html
-share/doc/html/hdf5/Tutor/references.html
-share/doc/html/hdf5/Tutor/reftoobj.html
-share/doc/html/hdf5/Tutor/reftoreg.html
-share/doc/html/hdf5/Tutor/select.html
-share/doc/html/hdf5/Tutor/selectc.html
-share/doc/html/hdf5/Tutor/software.html
-share/doc/html/hdf5/Tutor/title.html
-share/doc/html/hdf5/Tutor/util.html
 share/doc/html/hdf5/Version.html
 share/doc/html/hdf5/chunk1.gif
 share/doc/html/hdf5/compat.html
@@ -380,13 +221,10 @@ share/doc/html/hdf5/pipe5.gif
 share/doc/html/hdf5/version.gif
 @dirrm share/doc/html/hdf5/fortran
 @dirrm share/doc/html/hdf5/cpplus
-@dirrm share/doc/html/hdf5/Tutor/examples/java
-@dirrm share/doc/html/hdf5/Tutor/examples
-@dirrm share/doc/html/hdf5/Tutor/Graphics
-@dirrm share/doc/html/hdf5/Tutor
 @dirrm share/doc/html/hdf5/TechNotes
 @dirrm share/doc/html/hdf5/PSandPDF
 @dirrm share/doc/html/hdf5/Intro
 @dirrm share/doc/html/hdf5/Graphics
 @dirrm share/doc/html/hdf5/ADGuide
 @dirrm share/doc/html/hdf5
+@dirrm share/doc/hdf5
