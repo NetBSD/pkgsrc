@@ -1,14 +1,12 @@
-$NetBSD: patch-ab,v 1.6 2000/06/21 08:22:12 itohy Exp $
+$NetBSD: patch-ab,v 1.7 2001/03/31 09:21:17 itojun Exp $
 
-Suspend the job w3m belongs to, not w3m only.
-
---- main.c.orig	Tue Jun  6 14:56:48 2000
-+++ main.c	Tue Jun 20 21:21:19 2000
-@@ -1529,7 +1529,17 @@
+--- main.c.orig	Fri Mar 23 11:14:58 2001
++++ main.c	Fri Mar 30 21:02:12 2001
+@@ -1645,7 +1645,17 @@
  	shell = "/bin/sh";
      system(shell);
  #else				/* SIGSTOP */
-+#ifdef SIGTSTP	/* BSD */
++#ifdef SIGTSTP
 +    signal(SIGTSTP, SIG_DFL);	/* just in case */
 +    /*
 +     * Note: If susp() was called from SIGTSTP handler,
@@ -17,7 +15,7 @@ Suspend the job w3m belongs to, not w3m only.
 +     */
 +    kill(0, SIGTSTP);	/* stop whole job, not a single process */
 +#else
-     kill(getpid(), SIGSTOP);
+     kill((pid_t)0, SIGSTOP);
 +#endif
  #endif				/* SIGSTOP */
      fmInit();
