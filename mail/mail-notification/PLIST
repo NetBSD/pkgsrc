@@ -1,23 +1,30 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/02 14:04:42 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/12/05 08:44:09 jmmv Exp $
 bin/mail-notification
 lib/bonobo/servers/GNOME_MailNotification_Automation.server
 share/applications/mail-notification.desktop
 share/control-center-2.0/capplets/mail-notification-properties.desktop
 share/examples/mail-notification/sound/events/mail-notification.soundlist
 share/gconf/schemas/mail-notification.schemas
-share/help/mail-notification/C/documentation-license.xml
-share/help/mail-notification/C/figures/mail.png
-share/help/mail-notification/C/mail-notification.xml
-share/help/mail-notification/C/software-license.xml
+share/gnome/help/mail-notification/C/documentation-license.xml
+share/gnome/help/mail-notification/C/figures/mail.png
+share/gnome/help/mail-notification/C/mail-notification.xml
+share/gnome/help/mail-notification/C/software-license.xml
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/mail-notification.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/mail-notification.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/mail-notification.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/mail-notification.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/mail-notification.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/mail-notification.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/mail-notification.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/mail-notification.mo
+share/mail-notification/ui/authentication.glade
 share/mail-notification/ui/gmail.png
 share/mail-notification/ui/logo.png
 share/mail-notification/ui/mail-notification.png
 share/mail-notification/ui/mailbox-properties.glade
 share/mail-notification/ui/properties.glade
+share/mail-notification/ui/summary-dialog.glade
+share/mail-notification/ui/summary-popup.glade
 share/mail-notification/ui/unsupported.png
 share/mail-notification/ui/welcome.glade
 share/omf/mail-notification/mail-notification-C.omf
@@ -27,10 +34,10 @@ share/pixmaps/mail-notification.png
 @comment in scrollkeeper: @dirrm share/omf
 @dirrm share/mail-notification/ui
 @dirrm share/mail-notification
-@dirrm share/help/mail-notification/C/figures
-@dirrm share/help/mail-notification/C
-@dirrm share/help/mail-notification
-@dirrm share/help
+@dirrm share/gnome/help/mail-notification/C/figures
+@dirrm share/gnome/help/mail-notification/C
+@dirrm share/gnome/help/mail-notification
+@comment in gnome2-dirs: @dirrm share/gnome/help
 @comment in GConf2: @dirrm share/gconf/schemas
 @dirrm share/examples/mail-notification/sound/events
 @dirrm share/examples/mail-notification/sound
