@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.680 2002/12/04 14:41:39 wiz Exp $
+$NetBSD: CHANGES,v 1.681 2002/12/04 15:24:04 taya Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3807,3 +3807,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added pv-0.4.0 [agc 2002-12-04]
 	Added py-xmltools-1.3.7 [drochner 2002-12-04]
 	Updated autoconf to 2.57 [wiz 2002-12-04]
+	Updated mozilla to 1.2.1 [taya 2002-12-04]
