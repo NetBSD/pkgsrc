@@ -1,30 +1,6 @@
-xli is a version of xloadimage.
-
 This utility will view several types of images under X11, or load
-images onto the X11 root window. xli can also be used on some (32 bit)
-MSDOS systems.  The current version (1.16) supports:
-
-	CMU Window Manager raster files
-	Faces Project images
-	Fuzzy Bitmap (.fbm) images
-	GEM bit images
-	GIF images (Including GIF89a compatibility)
-	G3 FAX images
-	JFIF style jpeg images
-	McIDAS areafiles
-	MacPaint images
-->	Windows, OS/2 BMP Image
-	Monochrome PC Paintbrush (.pcx) images
-->	Photograph on CD Image
-	Portable Bitmap (.pbm, .pgm, .ppm) images
-	Sun monochrome rasterfiles
-	Sun color RGB rasterfiles
-	Targa (.tga) files
-	Utah Raster Toolkit (.rle) files
-	X pixmap (.xpm) files (Version 1, 2C and 3)
-	X10 bitmap files
-	X11 bitmap files
-	X Window Dump (except TrueColor and DirectColor)
+images onto the X11 root window. Supported image formats include
+GIF, JPEG, JFIF, Faces, PNG, PPM and friends, XPM, and XWUD.
 
 A variety of options are available to modify images prior to viewing.
 These options include clipping, dithering, depth reduction, zoom
