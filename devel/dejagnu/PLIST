@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2002/09/27 23:43:42 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/01/31 00:27:36 kristerw Exp $
 bin/runtest
 include/dejagnu.h
 man/man1/runtest.1
 share/dejagnu/baseboards/README
 share/dejagnu/baseboards/a29k-udi.exp
+share/dejagnu/baseboards/am33_2.0-libremote.exp
 share/dejagnu/baseboards/arc-sim.exp
 share/dejagnu/baseboards/arm-ice.exp
 share/dejagnu/baseboards/arm-sid.exp
@@ -28,8 +29,8 @@ share/dejagnu/baseboards/frv-tomcat.exp
 share/dejagnu/baseboards/gdbserver-sample.exp
 share/dejagnu/baseboards/h8300-sim.exp
 share/dejagnu/baseboards/h8300.exp
-share/dejagnu/baseboards/i386-bozo.exp
-share/dejagnu/baseboards/i386-sid.exp
+share/dejagnu/baseboards/${MACHINE_ARCH}-bozo.exp
+share/dejagnu/baseboards/${MACHINE_ARCH}-sid.exp
 share/dejagnu/baseboards/i960-cyclone.exp
 share/dejagnu/baseboards/i960-sim.exp
 share/dejagnu/baseboards/jmr3904-sim.exp
@@ -65,9 +66,10 @@ share/dejagnu/baseboards/powerpc-bug1.exp
 share/dejagnu/baseboards/powerpc-sim.exp
 share/dejagnu/baseboards/powerpcle-sim.exp
 share/dejagnu/baseboards/rom68k-idp.exp
-share/dejagnu/baseboards/sh-hms-sim.exp
 share/dejagnu/baseboards/sh-hms.exp
 share/dejagnu/baseboards/sh-sid.exp
+share/dejagnu/baseboards/sh-sim.exp
+share/dejagnu/baseboards/sparc-sim.exp
 share/dejagnu/baseboards/sparc64-sim.exp
 share/dejagnu/baseboards/sparclet-aout.exp
 share/dejagnu/baseboards/sparclite-coff.exp
@@ -112,7 +114,7 @@ share/dejagnu/config/dve.exp
 share/dejagnu/config/gdb-comm.exp
 share/dejagnu/config/gdb_stub.exp
 share/dejagnu/config/h8300.exp
-share/dejagnu/config/i386-bozo.exp
+share/dejagnu/config/${MACHINE_ARCH}-bozo.exp
 share/dejagnu/config/i960.exp
 share/dejagnu/config/m32r-stub.exp
 share/dejagnu/config/m32r.exp
@@ -143,7 +145,6 @@ share/dejagnu/dejagnu.exp
 share/dejagnu/dg.exp
 share/dejagnu/framework.exp
 share/dejagnu/ftp.exp
-share/dejagnu/i960glue.c
 share/dejagnu/kermit.exp
 share/dejagnu/libexec/config.guess
 share/dejagnu/libgloss.exp
@@ -163,6 +164,6 @@ share/dejagnu/util-defs.exp
 share/dejagnu/utils.exp
 share/dejagnu/xsh.exp
 @dirrm share/dejagnu/libexec
-@dirrm share/dejagnu/baseboards
 @dirrm share/dejagnu/config
+@dirrm share/dejagnu/baseboards
 @dirrm share/dejagnu
