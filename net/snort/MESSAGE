@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.2.2 2003/03/04 01:02:26 salo Exp $
+
+To use snort, you will need to perform the following steps:
+
+1. In case you don't have PKG_RCD_SCRIPTS set in your /etc/mk.conf, copy
+   ${PREFIX}/etc/rc.d/snort to /etc/rc.d/snort and add
+
+	snort=YES
+
+2. Now start snort by issuing the command
+
+	/etc/rc.d/snort start
+===========================================================================
