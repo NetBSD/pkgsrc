@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/17 17:21:56 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.8 2002/04/04 12:29:50 tron Exp $
 
 DISTNAME=		${PKGNAME}-i386.linux
 PKGNAME=		asWedit-4.0.1
@@ -15,7 +14,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.advasoft.com/asWedit.html
 COMMENT=		Motif HTML and text editor
 
-DEPENDS+=		suse_libc5>=6.1:../../emulators/suse_libc5
+DEPENDS+=		suse_libc5>=6.1:../../emulators/${SUSE_DIR_PREFIX}_libc5
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
@@ -45,4 +44,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${docs} ${PREFIX}/share/doc/asWedit
 .endfor
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../emulators/suse_linux/Makefile.application"

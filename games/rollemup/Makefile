@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/12/05 15:00:46 agc Exp $
-#
+# $NetBSD: Makefile,v 1.19 2002/04/04 12:29:48 tron Exp $
 
 DISTNAME=	Rollemup
 PKGNAME=	rollemup-1.0
@@ -36,8 +35,8 @@ ONLY_FOR_PLATFORM=	*-*-i386
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-DEPENDS=	suse_compat>=6.1:../../emulators/suse_compat
-DEPENDS=	suse_x11>=6.1:../../emulators/suse_x11
+DEPENDS=	suse_compat>=6.1:../../emulators/${SUSE_DIR_PREFIX}_compat
+DEPENDS=	suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
 CHECK_SHLIBS=	no
 .endif
 
@@ -68,4 +67,4 @@ do-install:
 	@${CHMOD} 775 ${PREFIX}/${GAMES_DIR}/Rollemup/Upload
 	@${CHMOD} 664 ${PREFIX}/${GAMES_DIR}/Rollemup/Rollemup.ini
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../emulators/suse_linux/Makefile.application"
