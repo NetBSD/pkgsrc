@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1599 2004/04/11 03:40:10 rh Exp $
+$NetBSD: TODO,v 1.1600 2004/04/11 16:21:01 recht Exp $
 
 Suggested new packages
 ======================
@@ -186,7 +186,7 @@ Suggested package updates
 	o fsviewer-0.2.5
 	o gcpio-2.5 [pkg/20799]
 	o gcvs-1.0-1
-	o gdb-6.0
+	o gdb-6.1
 	o generator-0.35
 	o gettext-0.14.1
 	o ghostscript-8.00 (apfl)
@@ -229,7 +229,7 @@ Suggested package updates
 	o libmpeg3-1.5.4
 	o libnet-1.1.1
 	o libole2-2.2.8
-	o libtool-1.5.4
+	o libtool-1.5.6
 	o licq-1.2.7
 	o lilypond-2.2
 	o lmbench-2.0.4
@@ -289,12 +289,12 @@ Suggested package updates
 	o py-psycopg-1.1.10
 	o pygtk-0.6.11
 	o pysol-4.82
-	o qt-3.3 [recht|needs KDE > 3.2]
+	o qt-3.3 [recht|KDE 3.2 needs qt 3.2]
 	o rep-gtk-0.17
 	o rox-1.2.2
 	o rox-session-0.1.20
 	o rrdtool-1.0.45
-	o rt-3.0.9
+	o rt-3.0.10 [pkgsrc-wip]
 	o ruby-1.8.1 [taca]
 	o sablecc-2.18.1
 	o sane-1.0.13
@@ -321,6 +321,7 @@ Suggested package updates
 	o tct-1.14
 	o teapop-0.3.8
 	o ted-2.15 [do not update per tech-pkg mail from Jonathan on 20040404]
+	o texinfo-4.7
 	o timidity-2.13.0
 	o tkman-2.2
 	o tmda-1.0.2
