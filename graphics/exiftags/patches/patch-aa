@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/12/26 11:11:23 shell Exp $
+
+--- Makefile.orig	Thu Dec 26 19:03:22 2002
++++ Makefile
+@@ -13,10 +13,12 @@ NOMKRS=makers_stub.o
+ #
+ # A few parameters...
+ #
+-CC=cc
+-DEBUG=
+-CFLAGS=$(DEBUG)
+-PREFIX=/usr/local
++# Use pkgsrc defaults
++#
++#CC=cc
++#DEBUG=
++#CFLAGS=$(DEBUG)
++#PREFIX=/usr/local
+ 
+ OBJS=exif.o tagdefs.o exifutil.o jpeg.o
+ HDRS=exif.h exifint.h jpeg.h makers.h
