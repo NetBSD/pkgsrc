@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2002/08/27 19:00:20 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/11 10:16:19 wiz Exp $
 #
 
-DISTNAME=	lbreakout2-2.2.2
+DISTNAME=	lbreakout2-2.3.3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lgames/}
 
@@ -13,7 +13,7 @@ USE_BUILDLINK2=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-highscore-path=${LOCALBASE}/share/games/ \
-			--with-doc-path=${LOCALBASE}/doc/
+			--with-doc-path=${LOCALBASE}/share/doc/html/
 
 .include "../../graphics/png/buildlink2.mk"
 .include "../../audio/SDL-mixer/buildlink2.mk"
