@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1001 2003/11/06 20:56:50 salo Exp $
+$NetBSD: TODO,v 1.1002 2003/11/07 09:55:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -126,7 +126,7 @@ Suggested package updates
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o abiword-2.0.1
-	o abcde 2.1.8
+	o abcde-2.1.9
 	o amanda-2.4.4p1
 	o anjuta-1.0.2
 	o arch-1.1pre5 [pkg/23022]
@@ -235,8 +235,8 @@ Suggested package updates
 	o kile-1.6 [markd]
 	o lavaps-2.4
 	o lcms-1.0.9
-	o leafnode-1.9.45
-	o lftp-2.6.8
+	o leafnode-1.9.46
+	o lftp-2.6.8 [pkg/23383]
 	o libao-0.8.4
 	o libgcrypt-1.1.43 [pkg/23322]
 	o libgtop-2.0.6
@@ -281,12 +281,14 @@ Suggested package updates
 	o nasm-0.98.38
 	o neon-0.24.2
 	o nessus-2.0.8a [pkg/23159]
+	o nessus-2.0.9
 	o netatalk-1.6.3 [pkg/21930]
 	o newscache-0.99.22p1
 	o ngrep-1.41
 	o ns-flash-6.0.79
 	o nut-9.3
 	o nxtvepg-2.6.0
+	o ogle-0.9.2
 	o ogmtools-1.1
 	o opencdk-0.5.1 [pkg/23322]
 	o openh323-1.11.2
@@ -325,7 +327,7 @@ Suggested package updates
 	o siag-3.6.0
 	o skill-4.1.1
 	o smarteiffel-1.1 [replacing smalleiffel]
-	o sml-nj-110.43
+	o sml-nj-110.44
 	o snd-6.12
 	o snes9x-1.41
 	o snort-2.0.4
@@ -350,7 +352,7 @@ Suggested package updates
 	o tla-1.1.0.5 [replacing arch; pkg/23022]
 	o tla-1.1.0.7
 	o top-3.5b12.8
-	o transcode-0.6.10
+	o transcode-0.6.11
 	o ttf2pt1-3.4.3
 	o vfu-4.03
 	o vnc-3.3.7 [http://www.realvnc.com/download.html]
@@ -359,7 +361,7 @@ Suggested package updates
 	o wavesurfer-1.5.3 [requires tk-8.4.2]
 	o wdm-1.26
 	o wmbiff-0.4.17
-	o wmweather-2.4.2
+	o wmweather-2.4.2 [pkg/23384]
 	o wv2-0.2
 	o wwwoffle-2.7h
 	o xalan-c-1.4
@@ -390,6 +392,7 @@ Suggested package updates
 	o yelp-2.4.1
 	o ysm-2.9.0
 	o zenicb 1.31 (needs merge with lots of local changes)
+	o zope-2.6.2
 
 Infrastructure problems which need addressing
 =============================================
