@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/03/22 23:01:52 tron Exp $
+$NetBSD: patch-ac,v 1.2 2004/11/30 11:26:59 hannken Exp $
 
---- chronyd.8.orig	Sun Feb 17 23:23:14 2002
+--- chronyd.8.orig	2002-11-04 00:32:10.000000000 +0100
 +++ chronyd.8
-@@ -24,10 +24,10 @@
+@@ -24,10 +24,10 @@ gains or loses time, and compensates for
  priviliges.
  
  If \fBchronyd\fR has been installed to its default location
@@ -15,7 +15,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2002/03/22 23:01:52 tron Exp $
  
  Information messages and warnings will be logged to syslog.
  
-@@ -43,7 +43,7 @@
+@@ -43,7 +43,7 @@ to syslog.
  .TP
  \fB\-f\fR \fIconf-file\fR
  This option can be used to specify an alternate location for the
@@ -24,7 +24,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2002/03/22 23:01:52 tron Exp $
  .TP
  .B \-r
  This option will reload sample histories for each of the servers being used.
-@@ -83,7 +83,7 @@
+@@ -83,7 +83,7 @@ computer was on.
  This option displays \fBchronyd\fR's version number to the terminal and exits
  
  .SH FILES
