@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1131 2003/12/05 23:07:01 xtraeme Exp $
+$NetBSD: TODO,v 1.1132 2003/12/05 23:17:27 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -239,7 +239,6 @@ Suggested package updates
 	o libmpeg3-1.5.3
 	o libogg-1.1
 	o libole2-2.2.8
-	o libtasn1-0.2.6 [pkg/23269]
 	o libtiff-3.6.0
 	o libtool-1.5 [skrll]
 	o libvorbis-1.0.1
