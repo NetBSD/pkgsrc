@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.100 2000/07/21 06:56:35 rh Exp $
+# $NetBSD: Packages.txt,v 1.101 2000/07/28 01:19:43 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -246,9 +246,12 @@ install a binary package - if available - via pkg_add, and do a "make
 package" else.
 
 
- 3 Making a precompiled package
- ==============================
+ 3 Making precompiled packages
+ =============================
 
+ 3.1 Packaging a single package
+ ==============================
+ 
 Once you have built and installed the package as mentioned above, you can
 build it into a "binary package" - you might want to do this so that you
 can use the binaries you have just built on another NetBSD system, or to
@@ -267,6 +270,83 @@ example.
 
 Please see the "submitting" section later in this document on how to submit
 such a binary package.
+
+
+ 3.2 Doing a bulk build of all packages
+ ======================================
+
+If you want to get a full set of precompiled binary packages, this section
+describes how to get them. Beware that the bulk build will remove all
+currently installed packages from your your system! Having a FTP server
+configured either on the machine doing the bulk builds or on a nearby NFS
+server can help to make the packages available to everyone. See ftpd(8) for
+more information. If you use a remote NFS server's storage, be sure to not
+actually compile on NFS storage, as this slows things down a lot.
+
+
+ 3.2.1 /etc/mk.conf and other configuration
+ ==========================================
+
+You may want to set things in /etc/mk.conf:
+
+    PACKAGES?=       ${PKGSRCDIR}/packages/${MACHINE_ARCH}
+    OBJMACHINE?=    1                    # use work.${MACHINE_ARCH}
+    WRKOBJDIR?=     /usr/tmp/pkgsrc      # build here instead of in pkgsrc
+    BATCH=                  yes          # required for bulk builds 
+    FAILOVER_FETCH=         yes          # insist on the correct checksum
+
+    
+ 3.2.2 Other environmental considerations
+ ========================================
+
+Drop your favourite login shell in /usr/local, or pkg_add it from
+/etc/rc.local. Also, be sure to pkg_add ssh before starting it from
+rc.local:
+
+    /usr/sbin/pkg_add /usr/pkgsrc/packages/i386/All/ssh-1.2.27.tgz
+    if [ -f /usr/pkg/etc/rc.d/sshd.sh ]; then
+            /usr/pkg/etc/rc.d/sshd.sh
+    fi
+
+Not doing so will result in you being not able to log in via ssh
+after the bulk build is finished. You have been warned! :)
+
+
+ 3.2.3 Operation
+ ===============
+
+Update your pkgsrc, make sure you don't need any of the packages still
+installed. Be sure to remove all other things (from /usr/local, ...).
+Become root and type:
+
+	$ su
+        # cd /usr/pkgsrc
+	# rm */*/.broken*
+        # make bulk-package
+
+During the build, a list of broken packages will be compiled in
+.usr/pkgsrc/.broken  (or .../.broken.${MACHINE} if OBJMACHINE is set),
+individual build logs of broken builds can be found in the package's
+directory. These files are used by the bulk-targets to mark broken builds
+to not waste time trying to rebuild them, and they can be used to debug
+these borken package builds later. 
+
+	
+ 3.2.4 Disk space requirements
+ =============================
+
+Currently, roughly the following requirements are valid for
+1.4.2/i386:
+
+ * Distfiles:                         1500MB (NFS ok)
+ * Full set of all binaries:           800MB (NFS ok)
+ * Temp space for compiling:          1500MB (local disk recommended)
+
+Note that all pkgs will be deinstalled as soon as they are turned into a
+binary package, and that work-sources are removed, so there is no huge
+demand to disk space. Afterwards, if the package is needed again, it will
+be installed via pkg_add instead of building again, so there are no cycles
+wasted. 
 
 
 ====================================
@@ -1183,6 +1263,26 @@ perform the equivalent of:
    After a package is installed, check all it's binaries and (on ELF 
    platforms) shared libraries if they find the shared libs they need.
    Run by default if PKG_DEVELOPER is set in /etc/mk.conf.
+
+ * bulk-package:
+   Used to do bulk builds. If an appropriate binary package already exists,
+   no action is taken. If not, this target will compile, install and
+   package it (and it's depends, if PKG_DEPENDS is set properly, see
+   section 3.2.1). After creating the binary package, the sources, the
+   just-installed package and it's required packages are removed,
+   preserving free disk space. 
+
+ * bulk-install:
+   Used during bulk-installs to install required packages. If an
+   appropriate binary package is available, it will be installed via
+   pkg_add. If not, "make bulk-package" will be executed, but the installed
+   binary not be removed. A binary package is "appropriate" to be installed
+   via pkg_add if:
+
+    - None of the package's files (Makefile, ...) were modified since it
+      was built
+    - None of the package's required (binary) packages were modified since
+      it was built
 
 
  8 Debugging
