@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1545 2004/12/03 15:15:04 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1546 2004/12/10 04:25:09 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -315,16 +315,12 @@ ${_PERL5_DEPMETHOD}+=	${_PERL5_DEPENDS}:${PERL5_PKGSRCDIR}
 .if defined(USE_PERL5) && (${USE_PERL5} == "run")
 .  if !defined(PERL5_SITELIB) || !defined(PERL5_SITEARCH) || !defined(PERL5_ARCHLIB)
 .    if exists(${PERL5})
-.      if exists(${LOCALBASE}/share/mk/bsd.perl.mk)
-.        include "${LOCALBASE}/share/mk/bsd.perl.mk"
-.      else
 PERL5_SITELIB!=		eval `${PERL5} -V:installsitelib 2>/dev/null`; \
 			${ECHO} $${installsitelib}
 PERL5_SITEARCH!=	eval `${PERL5} -V:installsitearch 2>/dev/null`; \
 			${ECHO} $${installsitearch}
 PERL5_ARCHLIB!=		eval `${PERL5} -V:installarchlib 2>/dev/null`; \
 			${ECHO} $${installarchlib}
-.      endif # !exists(bsd.perl.mk)
 .      if ${PKG_INSTALLATION_TYPE} == "overwrite"
 _PERL5_PREFIX!=		eval `${PERL5} -V:prefix 2>/dev/null`; \
 			${ECHO} $${prefix}
