@@ -4,7 +4,7 @@
 # Date created:         15 Dec 1994
 # Whom:                 ache
 #
-# $NetBSD: Makefile,v 1.4 1998/01/24 23:50:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/01/30 13:58:05 agc Exp $
 # FreeBSD Id: Makefile,v 1.71 1997/11/24 19:35:30 ache Exp
 #
 
@@ -16,7 +16,7 @@ MASTER_SITES=   http://sol.slcc.edu/lynx/current/
 
 MAINTAINER=	ache@FreeBSD.ORG
 
-LIB_DEPENDS=	ncurses\\.3\\.4:${PORTSDIR}/devel/ncurses
+LIB_DEPENDS=	ncurses.3.4:${PORTSDIR}/devel/ncurses
 
 CONFIGURE_ARGS= --with-screen=ncurses --with-zlib --libdir="${PREFIX}/etc"
 GNU_CONFIGURE=  YES

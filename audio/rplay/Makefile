@@ -3,7 +3,7 @@
 # Date created:		16 March 1995  
 # Whom:			rmallory@csusb.edu
 #
-# $NetBSD: Makefile,v 1.4 1998/01/24 03:13:01 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/01/30 13:56:55 agc Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/06/13 16:17:01 ache Exp
 #
 
@@ -13,7 +13,7 @@ MASTER_SITES=	ftp://ftp.sdsu.edu/pub/rplay/
 
 MAINTAINER=	rmallory@csusb.edu
 
-LIB_DEPENDS=    gsm\\.1\\.0:${PORTSDIR}/audio/gsm
+LIB_DEPENDS=    gsm.1.0:${PORTSDIR}/audio/gsm
 BUILD_DEPENDS=  ${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
 RUN_DEPENDS=    ${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
 
