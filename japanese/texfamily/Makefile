@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/10/24 00:29:30 kei Exp $
+# $NetBSD: Makefile,v 1.6 2001/12/08 01:02:48 kei Exp $
 
 DISTNAME=	TeXfamily-1.2.1nb1
 CATEGORIES=	japanese
@@ -40,8 +40,10 @@ USE_GMAKE=	yes
 USE_X11=	yes
 PLIST_SUBST+=	MV="${MV}"
 CFLAGS+=	-Dunix
+MAKEFLAGS+=	PREFIX=${PREFIX}
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--enable-local-texmf=texmf.local \
+CONFIGURE_ARGS+=--prefix=${PREFIX} \
+		--enable-local-texmf=texmf.local \
 		--without-texinfo \
 		--without-dialog \
 		--disable-multiplatform \
@@ -129,7 +131,7 @@ do-build:
 	(cd ${WRKSRC}/texk/web2c-j; ${GMAKE})
 	(cd ${WRKSRC}/texk/web2c-m; ${GMAKE})
 	(cd ${WRKSRC}/texk/web2c/ptex-src-2.1.10; ${GMAKE})
-	(cd ${WRKSRC}/texk/dvi2ps-3.2j; ${GMAKE} all newlib)
+	(cd ${WRKSRC}/texk/dvi2ps-3.2j; ${GMAKE} ${MAKEFLAGS} all newlib)
 	(cd ${WRKSRC}/texk/dvipsk; ${GMAKE})
 	(cd ${WRKSRC}/texk/mendexk2.4f; ${GMAKE})
 	(cd ${WRKSRC}/texk/jmakeindex/src; ${MAKE} -f makefile.unx)

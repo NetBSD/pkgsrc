@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1.1.1 2001/04/14 12:58:56 kei Exp $
+$NetBSD: patch-ae,v 1.2 2001/12/08 01:02:48 kei Exp $
 
 --- texk/dvi2ps-3.2j/Makefile.orig	Mon Sep 11 18:16:11 2000
-+++ texk/dvi2ps-3.2j/Makefile	Fri Mar 30 15:15:24 2001
++++ texk/dvi2ps-3.2j/Makefile
 @@ -2,16 +2,17 @@
  # your site:
  #
@@ -23,16 +23,20 @@ $NetBSD: patch-ae,v 1.1.1.1 2001/04/14 12:58:56 kei Exp $
  DOCAREA=${PREFIX}/doc/dvi2ps
  #
  # name of default fontdesc file in your site
-@@ -47,7 +48,7 @@
+@@ -45,19 +46,19 @@
+ FONTF = -DFREETYPE -DVFLIB
+ # FREETYPE -- FTLIB, FTINC
  # VFLIB    -- FTLIB, FTINC, VFLIB, VFLIBINC
- FTLIB = -L${PREFIX}/lib -lttf
+-FTLIB = -L${PREFIX}/lib -lttf
++FTLIB = -R${PREFIX} -L${PREFIX}/lib -lttf
  FTINC = -I${PREFIX}/include/freetype
 -VFLIB = -L${PREFIX}/lib -lVFlib2
-+VFLIB = -L${LDFLAGS} -lVFlib2 -lttf -lintl
++VFLIB = -R${PREFIX} -L${PREFIX} -lVFlib2 -lttf -lintl
  VFLIBINC = -I${PREFIX}/include
  
  # kpathsea
-@@ -55,9 +56,9 @@
+-KPSELIB = -L${PREFIX}/lib -lkpathsea
++KPSELIB = -R${PREFIX} -L${PREFIX}/lib -lkpathsea
  KPSEINC = -I${PREFIX}/include -DKPATHSEA
  
  #
