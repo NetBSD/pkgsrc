@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.93 2001/04/21 13:32:07 frueauf Exp $
+# $NetBSD: Makefile,v 1.94 2001/05/14 12:12:47 tron Exp $
 #
 
-DISTNAME=       fetchmail-5.8.1
+DISTNAME=       fetchmail-5.8.3
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.ccil.org/pub/esr/fetchmail/ \
 		http://www.tuxedo.org/~esr/fetchmail/ \
 		http://sunsite.unc.edu/pub/Linux/system/mail/pop/
 
-MAINTAINER=	mycroft@netbsd.org
+MAINTAINER=	frueauf@netbsd.org
 HOMEPAGE=	http://www.tuxedo.org/~esr/fetchmail/
 COMMENT=	batch mail retrieval/forwarding utility for pop2, pop3, apop, imap
 
