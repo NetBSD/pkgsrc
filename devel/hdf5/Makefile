@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2001/03/01 19:10:22 jtb Exp $
+# $NetBSD: Makefile,v 1.7 2001/03/04 18:05:23 jtb Exp $
 
 DISTNAME=		hdf5-1.4.0
 CATEGORIES=		devel
-MASTER_SITES=		ftp://hdf.ncsa.uiuc.edu/HDF5/hdf5-1.2.2/src/ \
-			ftp://sunsite.doc.ic.ac.uk/packages/HDF5/hdf5-1.2.2/src/
+MASTER_SITES=		ftp://hdf.ncsa.uiuc.edu/HDF5/hdf5-1.4.0/src/ \
+			ftp://sunsite.doc.ic.ac.uk/packages/HDF/HDF5/hdf5-1.4.0/src/
 
 MAINTAINER=		jtb@netbsd.org
 HOMEPAGE=		http://hdf.ncsa.uiuc.edu/HDF5/
