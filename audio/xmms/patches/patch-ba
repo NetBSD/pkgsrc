@@ -1,0 +1,215 @@
+--- configure.orig	Mon Jan 31 10:43:50 2000
++++ configure	Wed Feb  9 17:24:39 2000
+@@ -38,6 +38,8 @@
+ ac_help="$ac_help
+   --disable-gtktest       Do not try to compile and run a test GTK program"
+ ac_help="$ac_help
++  --with-libxml-prefix=PFX   Prefix where libxml is installed (optional)"
++ac_help="$ac_help
+   --with-esd-prefix=PFX   Prefix where ESD is installed (optional)"
+ ac_help="$ac_help
+   --with-esd-exec-prefix=PFX Exec prefix where ESD is installed (optional)"
+@@ -1473,8 +1475,8 @@
+ LD="$LD" LDFLAGS="$LDFLAGS" LIBS="$LIBS" \
+ LN_S="$LN_S" NM="$NM" RANLIB="$RANLIB" \
+ DLLTOOL="$DLLTOOL" AS="$AS" OBJDUMP="$OBJDUMP" \
+-${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
+-$libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
++${CONFIG_SHELL-/bin/sh} /usr/local/share/libtool/ltconfig --no-reexec \
++$libtool_flags --no-verify --disable-ltlibs /usr/local/share/libtool/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
+ 
+ # Reload cache, that may have been modified by ltconfig
+@@ -1488,7 +1490,7 @@
+ 
+ 
+ # This can be used to rebuild libtool when needed
+-LIBTOOL_DEPS="$ac_aux_dir/ltconfig $ac_aux_dir/ltmain.sh"
++LIBTOOL_DEPS="/usr/local/share/libtool/ltconfig --disable-ltlibs /usr/local/share/libtool/ltmain.sh"
+ 
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+@@ -3010,48 +3012,69 @@
+   echo "$ac_t""no" 1>&6
+ fi
+ 
+-echo $ac_n "checking for xmlParseMemory in -lxml""... $ac_c" 1>&6
+-echo "configure:3015: checking for xmlParseMemory in -lxml" >&5
+-ac_lib_var=`echo xml'_'xmlParseMemory | sed 'y%./+-%__p_%'`
+-if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+-  echo $ac_n "(cached) $ac_c" 1>&6
+-else
+-  ac_save_LIBS="$LIBS"
+-LIBS="-lxml -lz $LIBS"
+-cat > conftest.$ac_ext <<EOF
+-#line 3023 "configure"
+-#include "confdefs.h"
+-/* Override any gcc2 internal prototype to avoid an error.  */
+-/* We use char because int might match the return type of a gcc2
+-    builtin and then its argument prototype would still apply.  */
+-char xmlParseMemory();
++LIBS=$LIBS_save
+ 
+-int main() {
+-xmlParseMemory()
+-; return 0; }
+-EOF
+-if { (eval echo configure:3034: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+-  rm -rf conftest*
+-  eval "ac_cv_lib_$ac_lib_var=yes"
+-else
+-  echo "configure: failed program was:" >&5
+-  cat conftest.$ac_ext >&5
+-  rm -rf conftest*
+-  eval "ac_cv_lib_$ac_lib_var=no"
++# Check whether --with-libxml-prefix or --without-libxml-prefix was given.
++if test "${with_libxml_prefix+set}" = set; then
++  withval="$with_libxml_prefix"
++  libxml_prefix="$withval"
++else
++  libxml_prefix=""
+ fi
+-rm -f conftest*
+-LIBS="$ac_save_LIBS"
+ 
++if test x$libxml_prefix != x ; then
++   libxml_args="$libxml_args --prefix=$libxml_prefix"
++   if test x${XML_CONFIG+set} != xset ; then
++      XML_CONFIG=$libxml_prefix/bin/xml-config
++   fi
+ fi
+-if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+-  echo "$ac_t""yes" 1>&6
+-  XML_LIBS="-lxml -lz"
++# Extract the first word of "xml-config", so it can be a program name with args.
++set dummy xml-config; ac_word=$2
++echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
++echo "configure:3035: checking for $ac_word" >&5
++if eval "test \"`echo '$''{'ac_cv_path_XML_CONFIG'+set}'`\" = set"; then
++  echo $ac_n "(cached) $ac_c" 1>&6
++else
++  case "$XML_CONFIG" in
++  /*)
++  ac_cv_path_XML_CONFIG="$XML_CONFIG" # Let the user override the test with a path.
++  ;;
++  ?:/*)			 
++  ac_cv_path_XML_CONFIG="$XML_CONFIG" # Let the user override the test with a dos path.
++  ;;
++  *)
++  IFS="${IFS= 	}"; ac_save_ifs="$IFS"; IFS=":"
++  ac_dummy="$PATH"
++  for ac_dir in $ac_dummy; do 
++    test -z "$ac_dir" && ac_dir=.
++    if test -f $ac_dir/$ac_word; then
++      ac_cv_path_XML_CONFIG="$ac_dir/$ac_word"
++      break
++    fi
++  done
++  IFS="$ac_save_ifs"
++  test -z "$ac_cv_path_XML_CONFIG" && ac_cv_path_XML_CONFIG="no"
++  ;;
++esac
++fi
++XML_CONFIG="$ac_cv_path_XML_CONFIG"
++if test -n "$XML_CONFIG"; then
++  echo "$ac_t""$XML_CONFIG" 1>&6
+ else
+   echo "$ac_t""no" 1>&6
+ fi
+ 
++if test "$XML_CONFIG" = "no" ; then
++   echo "configure: warning: *** libxml not installed, disabling CDindex support ***" 1>&2
++else
++   XML_CFLAGS=`$XML_CONFIG $xmlconf_args --cflags`
++   XML_LIBS=`$XML_CONFIG $xmlconf_args --libs`
++   cat >> confdefs.h <<\EOF
++#define WITH_CDINDEX 1
++EOF
++
++fi
+ 
+-LIBS=$LIBS_save
+ 
+ # Check whether --with-esd-prefix or --without-esd-prefix was given.
+ if test "${with_esd_prefix+set}" = set; then
+@@ -4506,46 +4529,6 @@
+ fi
+ done
+ 
+-for ac_hdr in gnome-xml/parser.h
+-do
+-ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
+-echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6
+-echo "configure:4514: checking for $ac_hdr" >&5
+-if eval "test \"`echo '$''{'ac_cv_header_$ac_safe'+set}'`\" = set"; then
+-  echo $ac_n "(cached) $ac_c" 1>&6
+-else
+-  cat > conftest.$ac_ext <<EOF
+-#line 4519 "configure"
+-#include "confdefs.h"
+-#include <$ac_hdr>
+-EOF
+-ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
+-{ (eval echo configure:4524: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
+-ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
+-if test -z "$ac_err"; then
+-  rm -rf conftest*
+-  eval "ac_cv_header_$ac_safe=yes"
+-else
+-  echo "$ac_err" >&5
+-  echo "configure: failed program was:" >&5
+-  cat conftest.$ac_ext >&5
+-  rm -rf conftest*
+-  eval "ac_cv_header_$ac_safe=no"
+-fi
+-rm -f conftest*
+-fi
+-if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
+-  echo "$ac_t""yes" 1>&6
+-    ac_tr_hdr=HAVE_`echo $ac_hdr | sed 'y%abcdefghijklmnopqrstuvwxyz./-%ABCDEFGHIJKLMNOPQRSTUVWXYZ___%'`
+-  cat >> confdefs.h <<EOF
+-#define $ac_tr_hdr 1
+-EOF
+- 
+-else
+-  echo "$ac_t""no" 1>&6
+-fi
+-done
+-
+ 
+ echo $ac_n "checking for sched_setscheduler""... $ac_c" 1>&6
+ echo "configure:4552: checking for sched_setscheduler" >&5
+@@ -4818,16 +4801,6 @@
+   HAVE_LINUX_JOYSTICK_FALSE=
+ fi
+ 
+-if test "x$ac_cv_header_gnome_xml_parser_h" = "xyes" && test "x$ac_cv_lib_xml_xmlParseMemory" = "xyes"
+-then
+-      cat >> confdefs.h <<\EOF
+-#define WITH_CDINDEX 1
+-EOF
+-
+-else
+-      echo "configure: warning: *** libxml not installed, disabling CDindex support ***" 1>&2
+-fi
+-
+ 
+ echo $ac_n "checking machine architecture""... $ac_c" 1>&6
+ echo "configure:4834: checking machine architecture" >&5
+@@ -4898,7 +4871,7 @@
+ if test "$ARCH_TYPE" = "i386" || test "$ARCH_TYPE" = "i486" || test "$ARCH_TYPE" = "i586" ||
+    test "$ARCH_TYPE" = "i686" || test "$ARCH_TYPE" = "i86pc"
+ then
+-	CFLAGS="$CFLAGS -m486"
++	CFLAGS="$CFLAGS"
+ 	ARCH_DEFINES="-DI386_ASSEM"
+ else
+ 	ARCH_DEFINES=""
+@@ -5145,6 +5118,7 @@
+ s%@OPENGL_LIBS@%$OPENGL_LIBS%g
+ s%@HAVE_OPENGL_TRUE@%$HAVE_OPENGL_TRUE%g
+ s%@HAVE_OPENGL_FALSE@%$HAVE_OPENGL_FALSE%g
++s%@XML_CONFIG@%$XML_CONFIG%g
+ s%@XML_LIBS@%$XML_LIBS%g
+ s%@ESD_CONFIG@%$ESD_CONFIG%g
+ s%@ESD_CFLAGS@%$ESD_CFLAGS%g
