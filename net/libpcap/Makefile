@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2002/02/13 15:25:16 seb Exp $
+# $NetBSD: Makefile,v 1.12 2003/03/25 10:51:13 wiz Exp $
 
-DISTNAME=		libpcap-0.7.1
+DISTNAME=		libpcap-0.7.2
 SVR4_PKGNAME=		lpcap
 CATEGORIES=		net
 MASTER_SITES= 		http://www.tcpdump.org/release/
@@ -8,8 +8,6 @@ MASTER_SITES= 		http://www.tcpdump.org/release/
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.tcpdump.org/
 COMMENT=		System-independent interface for user-level packet capture
-
-ONLY_FOR_PLATFORM=	SunOS-*-* Linux-*-*	# in NetBSD base system
 
 GNU_CONFIGURE=		yes
 
