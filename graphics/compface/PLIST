@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/19 01:13:52 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/11/28 11:31:30 adam Exp $
 bin/compface
 bin/uncompface
 lib/libcompface.a
 include/compface.h
 man/man1/compface.1
+man/man1/uncompface.1
 man/man3/compface.3
+man/man3/uncompface.3
