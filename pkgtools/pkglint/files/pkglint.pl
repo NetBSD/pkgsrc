@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.123 2004/11/04 21:17:40 he Exp $
+# $NetBSD: pkglint.pl,v 1.124 2004/11/09 17:14:43 seb Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -1778,6 +1778,9 @@ EOF
 				my @m = split(/:/, $k);
 				if ($#m >= 1) {
 					$m[1] =~ s/\${PKGSRCDIR}/$ENV{'PKGSRCDIR'}/;
+					if ($m[1] =~ /\/$/) {
+						log_error(NO_FILE, NO_LINE_NUMBER, "trailing '/' (slash) for directory $m[1] listed in $j.");
+					}
 					if (! -d "$opt_packagedir/$m[1]") {
 						log_warning(NO_FILE, NO_LINE_NUMBER, "no package directory $m[1] found, even though it is listed in $j.");
 					} else {
