@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 1998/07/24 00:18:04 cjs Exp $
-lib/apache/libphp3.so
+@comment $NetBSD: PLIST,v 1.2 1998/12/04 17:34:54 tv Exp $
+lib/httpd/libphp3.so
