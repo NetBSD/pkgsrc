@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/06/30 06:55:46 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 1998/06/30 18:11:28 tron Exp $
 #
 
 DISTNAME=	qpopper2.5
@@ -8,6 +8,8 @@ MASTER_SITES=   ftp://ftp.qualcomm.com/eudora/servers/unix/popper/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=     mellon@fugue.com
+
+CONFLICTS=	qpopper2.41beta1
 
 MIRROR_DISTFILE=	no
 
