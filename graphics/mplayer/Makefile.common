@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.8 2002/05/03 18:00:50 fredb Exp $
+# $NetBSD: Makefile.common,v 1.9 2002/05/06 11:13:45 wiz Exp $
 
-MPLAYER_DIST_VERSION=	0.90pre2
+MPLAYER_DIST_VERSION=	0.90pre3
 MPLAYER_PKG_VERSION=	${MPLAYER_DIST_VERSION:S/pre/rc/}
 
 DISTNAME=		MPlayer-${MPLAYER_DIST_VERSION}
