@@ -1,0 +1,44 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/07/23 19:01:40 wiz Exp $
+
+--- Makefiles/Makefile.unix.orig	2002-03-26 17:50:55.000000000 +0100
++++ Makefiles/Makefile.unix
+@@ -1,5 +1,4 @@
+-CC = gcc
+-LD = gcc 
++LD = g++
+ NASM = nasm
+ 
+ ### Include and lib stuff ####
+@@ -8,17 +7,13 @@ STDLIB     = /usr/lib 
+ SDLINCLUDE = /usr/local/include/SDL
+ SDLLIB	   = /usr/local/lib
+ 
+-CFLAGS = -O1 -DUNIX -DTARGET_UNIX -DGCC -DUSES_16BIT_ONLY -D__SDL__ -fomit-frame-pointer -march=pentium \
+-         -mpentium -finline-functions -fexpensive-optimizations -funroll-loops -funroll-all-loops -pipe \
+-         -fschedule-insns2 -fstrength-reduce -malign-double -mfancy-math-387 -ffast-math -fforce-addr \
+-         -fforce-mem `sdl-config --cflags` \
+-         -L$(STDLIB) -L$(SDLLIB) -I$(STDINCLUDE) -I$(SDLINCLUDE)
++CFLAGS = -DUNIX -DTARGET_UNIX -DGCC -DUSES_16BIT_ONLY -D__SDL__ `sdl-config --cflags`
+ 
+-LDFLAGS = $(CFLAGS)
++LDFLAGS = $(CFLAGS) `sdl-config --libs`
+ 
+ TARGET = cygne
+ 
+-OBJ = ddrawsdl.o filessdl.o gfx.o nec.o tcache.o memory.o mainsdl.o zlib/unzip.o
++OBJ = ddrawsdl.o filessdl.o gfx.o nec.o tcache.o memory.o mainsdl.o unzip.o
+ 
+ LIBS = `sdl-config --libs` -lz
+ 
+@@ -37,7 +32,10 @@ THECC = $(CC) $(CFLAGS) $(INCS)
+ %.o: %.cpp
+ 	$(THECC) -c $< -o $@
+ 
+-cygne: $(OBJ) Makefile
++unzip.o:
++	$(THECC) -c zlib/unzip.c -o $@
++
++cygne: $(OBJ)
+ 	$(LD) $(LDFLAGS) -o $@ $(OBJ) $(LIBS)
+ 	 
+ clean:
