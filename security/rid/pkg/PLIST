@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/21 13:35:49 hubertf Exp $
+sbin/rid
+etc/rid.conf
+share/doc/rid/BUGS
+share/doc/rid/CHANGES
+share/doc/rid/COPYRIGHT
+share/doc/rid/CREDITS
+share/doc/rid/README
+@dirrm share/doc/rid
