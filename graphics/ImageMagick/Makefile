@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 1998/07/15 11:45:50 tv Exp $
+# $NetBSD: Makefile,v 1.25 1998/07/15 22:03:49 tron Exp $
 #
 
-DISTNAME=	ImageMagick-4.0.6
+DISTNAME=	ImageMagick-4.0.7
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -11,6 +11,9 @@ DEPENDS+=	tiff-3.4:../../graphics/tiff
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png-1.0.2:../../graphics/png
 DEPENDS+=	mpeg-1.2.1:../../graphics/mpeg-lib
+
+CONFLICTS=	ImageMagick-4.0 ImageMagick-4.0.1 ImageMagick-4.0.3 \
+		ImageMagick-4.0.5 ImageMagick-4.0.6
 
 MIRROR_DISTFILE= no
 USE_IMAKE=	yes
