@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.144 2002/04/13 20:59:34 jwise Exp $
+# $NetBSD: Makefile,v 1.145 2002/05/05 21:56:58 rh Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -14,6 +14,7 @@ SUBDIR+=	crimson
 SUBDIR+=	detex
 SUBDIR+=	dict-client
 SUBDIR+=	dict-server
+SUBDIR+=	diction
 SUBDIR+=	docbook
 SUBDIR+=	docbook-xml
 SUBDIR+=	dsssl-docbook-modular
