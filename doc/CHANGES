@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5631 2004/04/17 20:25:34 snj Exp $
+$NetBSD: CHANGES,v 1.5632 2004/04/17 21:07:51 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2049,3 +2049,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pkglint to 3.72 [2004-04-17]
 	Updated gnome-devel to 2.6.0nb1 [jmmv 2004-04-17]
 	Removed kulki [snj 2004-04-17]
+	Updated xscorch to 0.2.0 [snj 2004-04-17]
