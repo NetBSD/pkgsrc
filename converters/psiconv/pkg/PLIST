@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/12/06 01:58:06 sakamoto Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/07/08 23:17:42 wiz Exp $
 bin/psiconv
 include/psiconv/data.h
 include/psiconv/list.h
 include/psiconv/parse.h
 include/psiconv/parse_routines.h
 lib/libpsiconv.a
+lib/libpsiconv.la
 lib/libpsiconv.so.3.0
 share/doc/psiconv/ascii
 share/doc/psiconv/html
