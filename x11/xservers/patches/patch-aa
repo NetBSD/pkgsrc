@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2002/02/11 13:39:42 tron Exp $
+
+--- programs/Imakefile  1998/12/01 10:26:15     1.2
++++ programs/Imakefile  2002/02/11 09:16:14
+@@ -48,7 +48,7 @@
+ #endif
+ 
+ #if BuildServersOnly
+-SUBDIRS = $(XSSRCDIR)
++SUBDIRS = $(XSSRCDIR) xkbcomp
+ #else
+ SUBDIRS = \
+ 	appres bdftopcf bitmap $(SCREENSAVESRCDIR) editres fsinfo \

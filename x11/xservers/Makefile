@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2001/12/26 10:01:08 tron Exp $#
+# $NetBSD: Makefile,v 1.5 2002/02/11 13:39:41 tron Exp $#
 
-DISTNAME=	xservers-3.3.6.0
+DISTNAME=	xservers-3.3.6.1
 CATEGORIES=	x11
-MASTER_SITES=	#empty
+MASTER_SITES=	# empty
+DISTFILES=	# empty
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.xfree86.org/
@@ -23,10 +24,9 @@ IGNORE=		"The X11 servers are included in your X11 distribution."
 .endif
 .endif
 
-X11_LINKS=	bin/xkbcomp lib/X11/xkb
-X11_SUBDIR=	R6.3
+X11_SUBDIR=	X11R6.3
 X11_SRCS=	Imakefile Makefile config include lib nls \
-		programs/Imakefile programs/Xserver
+		programs/Imakefile programs/Xserver programs/xkbcomp
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -53,9 +53,6 @@ do-configure:
 
 post-install:
 	cd ${PREFIX} && \
-	for LINK in ${X11_LINKS}; do \
-	  ${LN} -fs ${X11BASE}/$$LINK ${PREFIX}/${X11_SUBDIR}/$$LINK; \
-	done && \
 	${FIND} ${X11_SUBDIR} \! -type d | sort >${PLIST_SRC} && \
 	${FIND} ${X11_SUBDIR} -type d | sort -r | \
 	${AWK} '{print("@dirrm "$$1)}' >>${PLIST_SRC}

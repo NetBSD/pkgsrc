@@ -12,3 +12,6 @@
 
 #undef	XVirtualFramebufferServer
 #define	XVirtualFramebufferServer	NO
+
+#undef	ForceNormalLib
+#define	ForceNormalLib			NO
