@@ -1,0 +1,12 @@
+$NetBSD: patch-i386nbsd_tdep_c,v 1.1.1.1 2004/06/01 19:29:30 shannonjr Exp $
+
+--- gdb/i386nbsd-tdep.c.orig	2004-02-22 09:20:22.000000000 -0700
++++ gdb/i386nbsd-tdep.c
+@@ -137,7 +137,6 @@ i386nbsd_sigtramp_offset (CORE_ADDR pc)
+ {
+   unsigned char ret[sizeof(sigtramp_retcode)], insn;
+   LONGEST off;
+-  int i;
+ 
+   if (read_memory_nobpt (pc, &insn, 1) != 0)
+     return -1;

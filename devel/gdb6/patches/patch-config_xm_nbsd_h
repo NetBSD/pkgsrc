@@ -1,0 +1,10 @@
+$NetBSD: patch-config_xm_nbsd_h,v 1.1.1.1 2004/06/01 19:29:30 shannonjr Exp $
+
+--- gdb/config/xm-nbsd.h.orig	2001-12-01 19:57:13.000000000 -0700
++++ gdb/config/xm-nbsd.h
+@@ -24,3 +24,5 @@
+ 
+ /* NetBSD has termios facilities. */
+ #define HAVE_TERMIOS
++
++#define PT_IO 1
