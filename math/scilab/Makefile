@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2001/12/22 00:03:25 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.30 2002/03/05 21:05:52 dmcmahill Exp $
 #
 
 DISTNAME=	${SCIBASE}.src
 PKGNAME=	${SCIBASE}
-PKGREVISION=	2
+PKGREVISION=	3
 SCIBASE=	scilab-2.6
 WRKSRC=		${WRKDIR}/${DISTNAME:.src=}
 CATEGORIES=	math
@@ -16,10 +16,9 @@ COMMENT=	High-level scientific math programming environment with graphics
 DEPENDS+=	xless-[0-9]*:../../x11/xless
 DEPENDS+=	pvm-3.4.3:../../parallel/pvm3
 
-# needs full floating point math.  Once the FPC code for alpha is integrated
-# this line can be changed to only exclude older versions of the operating
-# system.  Additionally, -mieee will need to be added.
-NOT_FOR_PLATFORM=	*-*-alpha
+#needs FPC code not found in older versions of NetBSD
+NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
+			NetBSD-1.5.*-alpha NetBSD-1.5[A-U]-alpha
 
 USE_FORTRAN=		yes
 USE_LIBTOOL=		yes
@@ -36,6 +35,22 @@ PVM_ROOT?=	${LOCALBASE}/pvm3
 CONFIGURE_ENV+=	PVM_ROOT=${PVM_ROOT}
 CONFIGURE_ENV+=	X11BASE=${X11BASE}
 PLIST_SUBST+=	SCIBASE=${SCIBASE}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if (${MACHINE_ARCH} == "alpha")
+pre-fetch:
+	@${ECHO} "===> Checking if you have working FPC"
+	@${MKDIR} ${WRKDIR}
+	${CC} ${CFLAGS} -o ${WRKDIR}/chk_ieee ${FILESDIR}/chk_ieee.c
+	@cd ${WRKDIR} && if ./chk_ieee ; then ${ECHO} "yes" ; else \
+		${ECHO} "no" ; \
+		${ECHO} "${PKGNAME} requires floating point completion on this system" ;\
+		${ECHO} "Possible causes for this check failing are:" ;\
+		${ECHO} "   - you have an old /usr/lib/* which was not compiled with -mieee" ;\
+		${ECHO} "   - you have overridden CFLAGS for pkgsrc removing the -mieee flag" ;\
+		${ECHO} "Without fixing this problem ${PKGNAME} will not work." ; ${FALSE} ; fi
+.endif
 
 # remove some stuff which is broken in the distfile.  The config's
 # are links to ../config (ie circular).
@@ -58,7 +73,7 @@ post-build:
 pre-install:
 	cd ${WRKSRC}/tests && ${MAKE_PROGRAM} distclean
 	cd ${WRKSRC}/examples && ${MAKE_PROGRAM} distclean
-	find ${WRKSRC}/ -name \*.orig -print -exec rm {} \;
+	${FIND} ${WRKSRC}/ -name \*.orig -print -exec ${RM} {} \;
 
 post-install:
 	${LN} -sf ${X11PREFIX}/bin/xless ${PREFIX}/${SCIBASE}/bin/xless
