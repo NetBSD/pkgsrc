@@ -1,116 +1,129 @@
 # New ports collection makefile for:   qt
-# Version required:	1.32
+# Version required:	1.33
 # Date created:		30 Jul 1996
 # Whom:			searle@longacre.demon.co.uk
 #
-# $NetBSD: Makefile,v 1.7 1998/03/17 22:57:53 tron Exp $
+# $NetBSD: Makefile,v 1.8 1998/04/14 20:17:03 tron Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/10/30 05:15:19 jkh Exp
 #
 
-DISTNAME=	qt-1.32
+DISTNAME=	qt-1.33
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.troll.no/qt/source/
 
-MAINTAINER=	searle@longacre.demon.co.uk
+MAINTAINER=	tron@netbsd.org
 
 USE_X11=	yes
 
 QTDIR=	${PREFIX}
 
 MAN1=		moc.1
-MAN3=		qaccel.3qt qapplication.3qt qarray.3qt qbitarray.3qt \
-		qbitmap.3qt qbitval.3qt qboxlayout.3qt qbrush.3qt qbuffer.3qt \
-		qbutton.3qt qbuttongroup.3qt qbytearray.3qt \
-		qcheckbox.3qt qclipboard.3qt qcloseevent.3qt \
-		qcollection.3qt qcolor.3qt qcolorgroup.3qt \
-		qcombobox.3qt qconnection.3qt qcursor.3qt \
-		qcustomevent.3qt qdatastream.3qt qdate.3qt \
-		qdatetime.3qt qdialog.3qt qdict.3qt qdictiterator.3qt \
-		qdir.3qt qdoublevalidator.3qt qevent.3qt qfile.3qt \
-		qfiledialog.3qt qfileinfo.3qt qfocusevent.3qt qfont.3qt \
-		qfontinfo.3qt qfontmetrics.3qt qframe.3qt qgarray.3qt \
-		qgcache.3qt qgcacheiterator.3qt qgdict.3qt qgdictiterator.3qt \
-		qglist.3qt qglistiterator.3qt qgmanager.3qt qgridlayout.3qt \
-		qgroupbox.3qt qhboxlayout.3qt qimage.3qt \
-		qimageio.3qt qintdict.3qt qintdictiterator.3qt \
-		qintvalidator.3qt \
-		qiodevice.3qt qkeyevent.3qt qlabel.3qt qlayout.3qt \
-		qlcdnumber.3qt \
-		qlineedit.3qt qlist.3qt qlistbox.3qt qlistboxitem.3qt \
-		qlistboxpixmap.3qt qlistboxtext.3qt qlistiterator.3qt \
-		qlnode.3qt qmenubar.3qt qmenudata.3qt qmessagebox.3qt \
-		qmouseevent.3qt qmoveevent.3qt qmultilineedit.3qt qobject.3qt \
-		qmovie.3qt \
-		qpaintdevice.3qt qpaintdevicemetrics.3qt qpainter.3qt \
-		qpaintevent.3qt qpalette.3qt qpen.3qt qpicture.3qt \
-		qpixmap.3qt qpixmapcache.3qt qpoint.3qt \
-		qpointarray.3qt qpointval.3qt qpopupmenu.3qt qprinter.3qt \
-		qprogressbar.3qt qprogressdialog.3qt qptrdict.3qt \
-		qptrdictiterator.3qt \
-		qpushbutton.3qt qqueue.3qt qradiobutton.3qt \
-		qrangecontrol.3qt qrect.3qt qregexp.3qt qregion.3qt \
-		qresizeevent.3qt qscrollbar.3qt qsenderobject.3qt \
-		qsemimodal.3qt \
-		qshared.3qt qsignal.3qt qsize.3qt qslider.3qt \
-		qsocketnotifier.3qt qstack.3qt qstrilist.3qt qstring.3qt \
-		qstrlist.3qt qtabbar.3qt qtabdialog.3qt qtableview.3qt \
-		qtextstream.3qt qtime.3qt \
-		qtimer.3qt qtimerevent.3qt qtooltip.3qt qtooltipgroup.3qt \
-		qtsmanip.3qt qvalidator.3qt qvboxlayout.3qt qwidget.3qt \
-		qwindow.3qt qwmatrix.3qt QAccel.3qt QApplication.3qt \
-		QArray.3qt QBitArray.3qt QBitmap.3qt QBitVal.3qt \
-		QBoxLayout.3qt QBrush.3qt \
-		QBuffer.3qt QButton.3qt QButtonGroup.3qt \
-		QByteArray.3qt QCheckBox.3qt QClipboard.3qt \
-		QCloseEvent.3qt QCollection.3qt QColor.3qt \
-		QColorGroup.3qt QComboBox.3qt QConnection.3qt \
-		QCursor.3qt QCustomEvent.3qt QDataStream.3qt QDate.3qt \
-		QDateTime.3qt QDialog.3qt QDict.3qt QDictIterator.3qt \
-		QDir.3qt QDoubleValidator.3qt QEvent.3qt QFile.3qt \
-		QFileDialog.3qt QFileInfo.3qt QFocusEvent.3qt QFont.3qt \
-		QFontInfo.3qt QFontMetrics.3qt QFrame.3qt QGArray.3qt \
-		QGCache.3qt QGCacheIterator.3qt QGDict.3qt QGDictIterator.3qt \
-		QGList.3qt QGListIterator.3qt QGManager.3qt \
-		QGridLayout.3qt QGroupBox.3qt QHBoxLayout.3qt QImage.3qt \
-		QImageIO.3qt QIntDict.3qt QIntDictIterator.3qt \
-		QIntValidator.3qt \
-		QIODevice.3qt QKeyEvent.3qt QLCDNumber.3qt QLabel.3qt \
-		QLayout.3qt \
-		QLineEdit.3qt QList.3qt QListBox.3qt QListBoxItem.3qt \
-		QListBoxPixmap.3qt QListBoxText.3qt QListIterator.3qt \
-		QLNode.3qt QMenuBar.3qt QMenuData.3qt QMessageBox.3qt \
-		QMovie.3qt \
-		QMouseEvent.3qt QMoveEvent.3qt QMultiLineEdit.3qt QObject.3qt \
-		QPaintDevice.3qt QPaintDeviceMetrics.3qt QPainter.3qt \
-		QPaintEvent.3qt QPalette.3qt QPen.3qt QPicture.3qt \
-		QPixmap.3qt QPixmapCache.3qt QPoint.3qt QPointVal.3qt\
-		QPointArray.3qt QPopupMenu.3qt QPrinter.3qt \
-		QProgressBar.3qt QProgressDialog.3qt \
-		QPtrDict.3qt QPtrDictIterator.3qt \
-		QPushButton.3qt QQueue.3qt QRadioButton.3qt \
-		QRangeControl.3qt QRect.3qt QRegExp.3qt QRegion.3qt \
-		QResizeEvent.3qt QScrollBar.3qt QSenderObject.3qt \
-		QSemiModal.3qt QVBoxLayout.3qt QValidator.3qt \
-		QShared.3qt QSignal.3qt QSize.3qt QSlider.3qt \
-		QSocketNotifier.3qt QStack.3qt QStrIList.3qt QString.3qt \
-		QStrList.3qt QTabBar.3qt QTabDialog.3qt QTableView.3qt \
-		QTextStream.3qt QTime.3qt \
-		QTimer.3qt QTimerEvent.3qt QToolTip.3qt QToolTipGroup.3qt \
-		QTSManip.3qt QWidget.3qt QWindow.3qt QWMatrix.3qt
+MAN3=		qaccel.3 qapplication.3 qarray.3 qbitarray.3 \
+		qbitmap.3 qbitval.3 qboxlayout.3 qbrush.3 qbuffer.3 \
+		qbutton.3 qbuttongroup.3 qbytearray.3 \
+		qcheckbox.3 qclipboard.3 qcloseevent.3 \
+		qcollection.3 qcolor.3 qcolorgroup.3 \
+		qcombobox.3 qconnection.3 qcursor.3 \
+		qcustomevent.3 qdatastream.3 qdate.3 \
+		qdatetime.3 qdialog.3 qdict.3 qdictiterator.3 \
+		qdir.3 qdoublevalidator.3 qevent.3 qfile.3 \
+		qfiledialog.3 qfileinfo.3 qfocusevent.3 qfont.3 \
+		qfontinfo.3 qfontmetrics.3 qframe.3 qgarray.3 \
+		qgcache.3 qgcacheiterator.3 qgdict.3 qgdictiterator.3 \
+		qglist.3 qglistiterator.3 qgmanager.3 qgridlayout.3 \
+		qgroupbox.3 qhboxlayout.3 qimage.3 \
+		qimageio.3 qintdict.3 qintdictiterator.3 \
+		qintvalidator.3 \
+		qiodevice.3 qkeyevent.3 qlabel.3 qlayout.3 \
+		qlcdnumber.3 \
+		qlineedit.3 qlist.3 qlistbox.3 qlistboxitem.3 \
+		qlistboxpixmap.3 qlistboxtext.3 qlistiterator.3 \
+		qlnode.3 qmenubar.3 qmenudata.3 qmessagebox.3 \
+		qmouseevent.3 qmoveevent.3 qmultilineedit.3 qobject.3 \
+		qmovie.3 \
+		qpaintdevice.3 qpaintdevicemetrics.3 qpainter.3 \
+		qpaintevent.3 qpalette.3 qpen.3 qpicture.3 \
+		qpixmap.3 qpixmapcache.3 qpoint.3 \
+		qpointarray.3 qpointval.3 qpopupmenu.3 qprinter.3 \
+		qprogressbar.3 qprogressdialog.3 qptrdict.3 \
+		qptrdictiterator.3 \
+		qpushbutton.3 qqueue.3 qradiobutton.3 \
+		qrangecontrol.3 qrect.3 qregexp.3 qregion.3 \
+		qresizeevent.3 qscrollbar.3 qsenderobject.3 \
+		qsemimodal.3 \
+		qshared.3 qsignal.3 qsize.3 qslider.3 \
+		qsocketnotifier.3 qstack.3 qstrilist.3 qstring.3 \
+		qstrlist.3 qtabbar.3 qtabdialog.3 qtableview.3 \
+		qtextstream.3 qtime.3 \
+		qtimer.3 qtimerevent.3 qtooltip.3 qtooltipgroup.3 \
+		qtsmanip.3 qvalidator.3 qvboxlayout.3 qwidget.3 \
+		qwindow.3 qwmatrix.3 QAccel.3 QApplication.3 \
+		QArray.3 QBitArray.3 QBitmap.3 QBitVal.3 \
+		QBoxLayout.3 QBrush.3 \
+		QBuffer.3 QButton.3 QButtonGroup.3 \
+		QByteArray.3 QCheckBox.3 QClipboard.3 \
+		QCloseEvent.3 QCollection.3 QColor.3 \
+		QColorGroup.3 QComboBox.3 QConnection.3 \
+		QCursor.3 QCustomEvent.3 QDataStream.3 QDate.3 \
+		QDateTime.3 QDialog.3 QDict.3 QDictIterator.3 \
+		QDir.3 QDoubleValidator.3 QEvent.3 QFile.3 \
+		QFileDialog.3 QFileInfo.3 QFocusEvent.3 QFont.3 \
+		QFontInfo.3 QFontMetrics.3 QFrame.3 QGArray.3 \
+		QGCache.3 QGCacheIterator.3 QGDict.3 QGDictIterator.3 \
+		QGList.3 QGListIterator.3 QGManager.3 \
+		QGridLayout.3 QGroupBox.3 QHBoxLayout.3 QImage.3 \
+		QImageIO.3 QIntDict.3 QIntDictIterator.3 \
+		QIntValidator.3 \
+		QIODevice.3 QKeyEvent.3 QLCDNumber.3 QLabel.3 \
+		QLayout.3 \
+		QLineEdit.3 QList.3 QListBox.3 QListBoxItem.3 \
+		QListBoxPixmap.3 QListBoxText.3 QListIterator.3 \
+		QLNode.3 QMenuBar.3 QMenuData.3 QMessageBox.3 \
+		QMovie.3 \
+		QMouseEvent.3 QMoveEvent.3 QMultiLineEdit.3 QObject.3 \
+		QPaintDevice.3 QPaintDeviceMetrics.3 QPainter.3 \
+		QPaintEvent.3 QPalette.3 QPen.3 QPicture.3 \
+		QPixmap.3 QPixmapCache.3 QPoint.3 QPointVal.3\
+		QPointArray.3 QPopupMenu.3 QPrinter.3 \
+		QProgressBar.3 QProgressDialog.3 \
+		QPtrDict.3 QPtrDictIterator.3 \
+		QPushButton.3 QQueue.3 QRadioButton.3 \
+		QRangeControl.3 QRect.3 QRegExp.3 QRegion.3 \
+		QResizeEvent.3 QScrollBar.3 QSenderObject.3 \
+		QSemiModal.3 QVBoxLayout.3 QValidator.3 \
+		QShared.3 QSignal.3 QSize.3 QSlider.3 \
+		QSocketNotifier.3 QStack.3 QStrIList.3 QString.3 \
+		QStrList.3 QTabBar.3 QTabDialog.3 QTableView.3 \
+		QTextStream.3 QTime.3 \
+		QTimer.3 QTimerEvent.3 QToolTip.3 QToolTipGroup.3 \
+		QTSManip.3 QWidget.3 QWindow.3 QWMatrix.3
 
 do-configure:
 	cd ${WRKSRC} && make netbsd-gcc-shared
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/qt-1.32/bin/moc ${QTDIR}/bin
-	${INSTALL_DATA} ${WRKDIR}/qt-1.32/lib/libqt.so.1.32 ${QTDIR}/lib
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/moc ${QTDIR}/bin
+	${INSTALL_DATA} ${WRKSRC}/lib/libqt.so.1.33 ${QTDIR}/lib
 	${LDCONFIG} || ${TRUE}
 	${MKDIR} ${QTDIR}/include/qt
-	${INSTALL_DATA} ${WRKDIR}/qt-1.32/include/* ${QTDIR}/include/qt
-	${INSTALL_MAN} ${WRKDIR}/qt-1.32/man/man1/* ${QTDIR}/man/man1
-	${INSTALL_MAN} ${WRKDIR}/qt-1.32/man/man3/* ${QTDIR}/man/man3
+	${INSTALL_DATA} ${WRKSRC}/include/* ${QTDIR}/include/qt
+	${INSTALL_MAN} ${WRKSRC}/man/man1/* ${QTDIR}/man/man1
+	@(for PAGE in ${MAN3}; do \
+	    set - X `head -1 ${WRKSRC}/man/man3/$${PAGE}qt`; \
+	    if [ $$# -eq 3 ] && [ "$$2" = .so ]; then \
+		${ECHO} ${LN} -s `basename $$3 | ${SED} s/qt$$//` \
+		${QTDIR}/man/man3/$${PAGE}; \
+		${LN} -s `basename $$3 | ${SED} s/qt$$//` \
+		${QTDIR}/man/man3/$${PAGE}; \
+	    else \
+		${ECHO} ${INSTALL_MAN} ${WRKSRC}/man/man3/$${PAGE}qt \
+		${QTDIR}/man/man3/$${PAGE}; \
+		${INSTALL_MAN} ${WRKSRC}/man/man3/$${PAGE}qt \
+		${QTDIR}/man/man3/$${PAGE}; \
+	    fi; \
+	 done)
 	${MKDIR} ${QTDIR}/share/doc/qt
-	${INSTALL_DATA} ${WRKDIR}/qt-1.32/README ${QTDIR}/share/doc/qt
-	${INSTALL_DATA} ${WRKDIR}/qt-1.32/README.QT ${QTDIR}/share/doc/qt
+	${INSTALL_DATA} ${WRKSRC}/README ${QTDIR}/share/doc/qt
+	${INSTALL_DATA} ${WRKSRC}/README.QT ${QTDIR}/share/doc/qt
 
 .include <bsd.port.mk>
