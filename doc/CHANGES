@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8621 2005/01/05 12:50:20 wiz Exp $
+$NetBSD: CHANGES,v 1.8622 2005/01/05 14:13:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -114,3 +114,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated SDL_ttf to 2.0.7 [adam 2005-01-05]
 	Added kgeography-0.3 [wiz 2005-01-05]
 	Updated mftrace to 1.1.1nb1 [wiz 2005-01-05]
+	Updated libevent to 1.0a [wiz 2005-01-05]
