@@ -1,4 +1,4 @@
-# $NetBSD: dlopen.buildlink3.mk,v 1.4 2004/11/26 01:40:42 jlam Exp $
+# $NetBSD: dlopen.buildlink3.mk,v 1.5 2004/11/26 01:56:17 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles and
 # buildlink3.mk files for the packages that use dlopen().
@@ -9,6 +9,8 @@
 #	pthreads exist.
 #
 # Including pthread.buildlink3.mk is deferred until bsd.pkg.mk.
+#
+DLOPEN_BUILDLINK3_MK:=	${DLOPEN_BUILDLINK3_MK}+
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,3 +37,25 @@ _DLOPEN_REQUIRE_PTHREADS:=	${DLOPEN_REQUIRE_PTHREADS}
 .else
 DLOPEN_REQUIRE_PTHREADS=	${_DLOPEN_REQUIRE_PTHREADS}
 .endif
+
+.if !empty(DLOPEN_BUILDLINK3_MK:M+)
+#
+# Define user-visible DL_{CFLAGS,LDFLAGS,LIBS} as compiler options used
+# to compile/link code that uses dl*() functions.
+#
+.  if !empty(_DLOPEN_REQUIRE_PTHREADS:M[yY][eE][sS])
+DL_CFLAGS=	${PTHREAD_CFLAGS}
+DL_LDFLAGS=	${PTHREAD_LDFLAGS}
+DL_LIBS=	${PTHREAD_LIBS}
+.  else
+DL_CFLAGS=	# empty
+DL_LDFLAGS=	# empty
+DL_LIBS=	# empty
+.  endif
+CONFIGURE_ENV+=	DL_CFLAGS="${DL_CFLAGS}"
+CONFIGURE_ENV+=	DL_LDFLAGS="${DL_LDFLAGS}"
+CONFIGURE_ENV+=	DL_LIBS="${DL_LIBS}"
+MAKE_ENV+=	DL_CFLAGS="${DL_CFLAGS}"
+MAKE_ENV+=	DL_LDFLAGS="${DL_LDFLAGS}"
+MAKE_ENV+=	DL_LIBS="${DL_LIBS}"
+.endif	# DLOPEN_BUILDLINK3_MK
