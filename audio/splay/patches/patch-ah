@@ -1,0 +1,11 @@
+--- mpegsound/mpeglayer3.cc-orig	Sat May 24 11:34:12 1997
++++ mpegsound/mpeglayer3.cc	Tue May 12 13:10:28 1998
+@@ -40,7 +40,7 @@
+     a=(((unsigned char)buffer[offset])<<8) | ((unsigned char)buffer[offset+1]);
+   }
+ #else
+-  a=((unsigned short *)(buffer+((bixindex>>3)&(WINDOWSIZE-1))));
++  a=((unsigned short *)(buffer+((bitindex>>3)&(WINDOWSIZE-1))));
+ #endif
+ 
+   a<<=(bitindex&7);
