@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/08/20 15:17:35 tsarna Exp $
+# $NetBSD: Makefile,v 1.4 1998/09/06 22:01:09 frueauf Exp $
 #
 
 DISTNAME=	pyth151
@@ -6,6 +6,7 @@ PKGNAME=	py-Tk-1.5.1
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.python.org/pub/python/src/
 EXTRACT_SUFX=	.tgz
+DIST_SUBDIR=	python
 
 MAINTAINER=	dolecek@ics.muni.cz
 HOMEPAGE=	http://www.python.org/topics/tkinter/
