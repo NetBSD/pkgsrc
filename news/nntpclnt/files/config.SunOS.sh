@@ -1,6 +1,10 @@
 #!/bin/sh
+#
+# $NetBSD: config.SunOS.sh,v 1.2 1999/09/20 19:23:16 kim Exp $
+#
 # config.sh
 # This file was produced by running the Configure script.
+# (and manually bashed on by kim@netbsd.org)
 
 n=''
 c='\c'
