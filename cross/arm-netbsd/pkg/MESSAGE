@@ -1,5 +1,5 @@
 =============================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 1999/12/06 09:38:35 sakamoto Exp $
+$NetBSD: MESSAGE,v 1.2 1999/12/09 00:18:01 sakamoto Exp $
 
 This pkg DOES NOT install headers or runtime link libraries.  Only the
 compilers are installed.
@@ -8,5 +8,8 @@ In order to have a complete development setup, you need to install
 includes and libraries in ${CROSSBASE}/arm-netbsd/include and
 ${CROSSBASE}/arm-netbsd/lib respectively, or symlink these paths to
 the appropriate places.
+
+LIMITATIONS:
+	THIS PACKAGE WILL ONLY SUPPORT STATIC BINARIES.
 
 =============================================================================

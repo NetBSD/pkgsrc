@@ -1,1 +1,4 @@
 This cross-compile environment is for NetBSD/arm32.
+
+LIMITATIONS:
+	THIS PACKAGE WILL ONLY SUPPORT STATIC BINARIES.

@@ -1,1 +1,4 @@
 This cross-compile environment is for a.out NetBSD/i386.
+
+LIMITATIONS:
+	THIS PACKAGE WILL ONLY SUPPORT STATIC BINARIES.
