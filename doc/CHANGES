@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.914 2002/12/25 14:26:52 wiz Exp $
+$NetBSD: CHANGES,v 1.915 2002/12/25 15:12:19 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4262,3 +4262,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated efax-gtk to 1.0.1bnb2 [jmmv 2002-12-25]
 	Updated ifcico-cm to 3.0a4.1nb1 [jmmv 2002-12-25]
 	Updated tiff to 3.5.7nb1 [wiz 2002-12-25]
+	Updated gnome-mime-data to 2.0.1nb1 [jmmv 2002-12-15]
