@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/10 14:16:07 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/09/11 23:39:28 wiz Exp $
 bin/gabber
 etc/sound/events/gabber.soundlist
 man/man1/gabber.1
@@ -166,9 +166,14 @@ share/sounds/gabber/gabber_ooochat_recv.wav
 share/sounds/gabber/gabber_startup.wav
 share/sounds/gabber/gabber_subrequest.wav
 @dirrm share/sounds/gabber
+@unexec ${RMDIR} %D/share/sounds 2> /dev/null || ${TRUE}
 @dirrm share/pixmaps/gabber
 @dirrm share/omf/gabber
+@unexec ${RMDIR} %D/share/omf 2> /dev/null || ${TRUE}
 @dirrm share/gnome/help/gabber/C/stylesheet-images
 @dirrm share/gnome/help/gabber/C
 @dirrm share/gnome/help/gabber
+@unexec ${RMDIR} %D/share/gnome/help 2> /dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome/apps/Internet 2> /dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome/apps 2> /dev/null || ${TRUE}
 @dirrm share/gabber
