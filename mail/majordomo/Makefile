@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/06/08 18:04:10 bad Exp $
+# $NetBSD: Makefile,v 1.4 1999/06/08 18:26:02 bad Exp $
 
 DISTNAME=		majordomo-1.94.4
 CATEGORIES=		mail
@@ -23,8 +23,8 @@ MESSAGE_FILE=		${WRKDIR}/MESSAGE
 REQ_FILE=		${WRKDIR}/REQ
 MAKEFILE=		Makefile.netbsd
 
-TMPDIR?=		/var/tmp
-HOMEDIR?=		/home
+MAJORDOMO_TMPDIR?=	/var/tmp
+MAJORDOMO_HOMEDIR?=	/home
 MAJORDOMO_USER?=	majordom
 MAJORDOMO_GROUP?=	majordom
 
@@ -76,39 +76,39 @@ do-configure:
 	@${SED} \
 		-e 's|@MAJORDOMO_USER@|${MAJORDOMO_USER}|g' \
 		-e 's|@MAJORDOMO_GROUP@|${MAJORDOMO_GROUP}|g' \
-		-e 's|@HOME@|${HOMEDIR}|g' \
+		-e 's|@HOME@|${MAJORDOMO_HOMEDIR}|g' \
 		-e 's|@LOCALBASE@|${LOCALBASE}|g' \
 		< ${PKGDIR}/REQ > ${REQ_FILE}
 	@${MAKE} ${.MAKEFLAGS} require-uid
 	@${SED} \
 		-e 's:@PREFIX@:${PREFIX}:g' \
 		-e 's:@LOCALBASE@:${LOCALBASE}:g' \
-		-e 's|@HOME@|${HOMEDIR}|g' \
+		-e 's|@HOME@|${MAJORDOMO_HOMEDIR}|g' \
 		-e 's:@MAJORDOMO_USER@:${MAJORDOMO_USER}:g' \
 		-e "s:@UID@:`${ID} -ru ${MAJORDOMO_USER}`:g" \
 		-e "s:@GID@:`${ID} -rg ${MAJORDOMO_USER}`:g" \
-		-e 's:@TMPDIR@:${TMPDIR}:g' \
+		-e 's:@TMPDIR@:${MAJORDOMO_TMPDIR}:g' \
 		< ${WRKSRC}/Makefile > ${WRKSRC}/Makefile.netbsd
 	@${SED} \
 		-e 's:@PREFIX@:${PREFIX}:g' \
-		-e 's:@HOME@:${HOMEDIR}:g' \
+		-e 's:@HOME@:${MAJORDOMO_HOMEDIR}:g' \
 		-e 's:@MAJORDOMO_USER@:${MAJORDOMO_USER}:g' \
-		-e 's:@TMPDIR@:${TMPDIR}:g' \
+		-e 's:@TMPDIR@:${MAJORDOMO_TMPDIR}:g' \
 		< ${WRKSRC}/sample.cf > ${WRKSRC}/majordomo.cf
 	@${SED} \
 		-e 's:@PREFIX@:${PREFIX}:g' \
-		-e 's:@HOME@:${HOMEDIR}:g' \
+		-e 's:@HOME@:${MAJORDOMO_HOMEDIR}:g' \
 		-e 's:@MAJORDOMO_USER@:${MAJORDOMO_USER}:g' \
 		< ${FILESDIR}/aliases.majordomo > ${WRKSRC}/aliases.majordomo
 
 pre-install:
 	@${SED}  \
-		-e 's|@HOME@|${HOMEDIR}|g' \
+		-e 's|@HOME@|${MAJORDOMO_HOMEDIR}|g' \
 		-e 's|@MAJORDOMO_USER@|${MAJORDOMO_USER}|g' \
 		< ${PKGDIR}/PLIST > ${PLIST_SRC}
 	@${SED} \
 		-e 's:@PREFIX@:${PREFIX}:g' \
-		-e 's:@HOME@:${HOMEDIR}:g' \
+		-e 's:@HOME@:${MAJORDOMO_HOMEDIR}:g' \
 		-e 's:@MAJORDOMO_USER@:${MAJORDOMO_USER}:g' \
 		-e 's:@MAJORDOMO_GROUP@:${MAJORDOMO_GROUP}:g' \
 		< ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
