@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.848 2002/12/19 22:26:12 jlam Exp $
+$NetBSD: CHANGES,v 1.849 2002/12/20 07:00:45 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4023,3 +4023,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated openslp to 1.0.10 [jlam 2002-12-19]
 	Updated png to 1.2.5nb1 [fredb 2002-12-19]
 	Updated cups to 1.1.17 [jlam 2002-12-19]
+	Updated cups to 1.1.18 [jlam 2002-12-20]
