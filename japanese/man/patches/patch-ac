@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/06/08 10:01:21 sakamoto Exp $
+--- ./man/Makefile.inc.orig	Tue Jul 28 01:25:43 1998
++++ ./man/Makefile.inc	Mon May 31 16:18:47 1999
+@@ -1,9 +1,9 @@
+-NROFF=		nroff -Tnippon
+-MANDIR=		${DESTDIR}/usr/local/jman
+-TMACDIR=	${DESTDIR}/usr/local/share/groff/tmac
+-CATDEPS=	${TMACDIR}/tmac.andoc \
+-		${TMACDIR}/tmac.doc \
+-		${TMACDIR}/mdoc/doc-ditroff \
+-		${TMACDIR}/mdoc/doc-common \
+-		${TMACDIR}/mdoc/doc-nroff \
+-		${TMACDIR}/mdoc/doc-syms
++NROFF=		jgnroff -Tnippon
++MANDIR=		${PREFIX}/man/ja_JP.EUC
++TMACDIR=	${PREFIX}/share/groff/tmac
++CATDEPS=	${TMACDIR}/tmac.andocj \
++		${TMACDIR}/tmac.docj \
++		${TMACDIR}/mdoc/doc-ditroffj \
++		${TMACDIR}/mdoc/doc-commonj \
++		${TMACDIR}/mdoc/doc-nroffj \
++		${TMACDIR}/mdoc/doc-symsj

@@ -1,0 +1,56 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/06/08 10:01:21 sakamoto Exp $
+--- ./jman/jman.conf.orig	Thu Jan 28 07:16:18 1999
++++ ./jman/jman.conf	Mon May 31 16:18:47 1999
+@@ -19,12 +19,12 @@
+ _build		.0.Z		/usr/bin/zcat %s
+ _build		.0.gz		/usr/bin/gunzip -c %s
+-_build		.[1-9ln]	/usr/local/bin/nroff -Tnippon -man %s
+-_build		.[1-9ln].Z	/usr/bin/zcat %s | /usr/local/bin/nroff -Tnippon -man
+-_build		.[1-9ln].gz	/usr/bin/gunzip -c %s | /usr/local/bin/nroff -Tnippon -man
+-_build		.tbl		/usr/local/bin/tbl %s | /usr/local/bin/nroff -Tnippon -man
+-_build		.tbl.Z		/usr/bin/zcat %s | /usr/local/bin/tbl | /usr/local/bin/nroff -Tnippon -man
+-_build		.tbl.gz		/usr/bin/gunzip -c %s | /usr/local/bin/tbl | /usr/local/bin/nroff -Tnippon -man
+-_build		.n		/usr/local/bin/nroff -Tnippon -me %s 2>/dev/null | cat -s
+-_build		.me		/usr/local/bin/nroff -Tnippon -me %s 2>/dev/null | cat -s
++_build		.[1-9ln]	${PREFIX}/bin/jgnroff -Tnippon -mandocj %s
++_build		.[1-9ln].Z	/usr/bin/zcat %s | ${PREFIX}/bin/jgnroff -Tnippon -mandocj
++_build		.[1-9ln].gz	/usr/bin/gunzip -c %s | ${PREFIX}/bin/jgnroff -Tnippon -mandocj
++_build		.tbl		${PREFIX}/bin/jgtbl %s | ${PREFIX}/bin/jgnroff -Tnippon -mandocj
++_build		.tbl.Z		/usr/bin/zcat %s | ${PREFIX}/bin/jgtbl | ${PREFIX}/bin/jgnroff -Tnippon -mandocj
++_build		.tbl.gz		/usr/bin/gunzip -c %s | ${PREFIX}/bin/jgtbl | ${PREFIX}/bin/jgnroff -Tnippon -mandocj
++_build		.n		${PREFIX}/bin/jgnroff -Tnippon -me %s 2>/dev/null | cat -s
++_build		.me		${PREFIX}/bin/jgnroff -Tnippon -me %s 2>/dev/null | cat -s
+ 
+ # Sections and their directories.
+@@ -33,5 +33,5 @@
+ 
+ # default
+-_default	/usr/local/jman/ /usr/{share,X11R6,X11,pkg,local}/man/
++_default	${PREFIX}/man/ja_JP.EUC/ /usr/{share,X11R6,X11,pkg,local}/man/
+ 
+ # Other sections that represent complete man subdirectories.
+@@ -44,15 +44,15 @@
+ 
+ # Specific section/directory combinations.
+-1		/usr/{local,share,X11R6,X11,pkg}/{jman/,man/}{cat,man}1
+-2		/usr/{local,share,X11R6,X11,pkg}/{jman/,man/}{cat,man}2
+-3		/usr/{local,share,X11R6,X11,pkg}/{jman/,man/}{cat,man}3
++1		/usr/{local,share,X11R6,X11,pkg}/{man/ja_JP.EUC/,man/}{cat,man}1
++2		/usr/{local,share,X11R6,X11,pkg}/{man/ja_JP.EUC/,man/}{cat,man}2
++3		/usr/{local,share,X11R6,X11,pkg}/{man/ja_JP.EUC/,man/}{cat,man}3
+ 3F		/usr/local/man/cat3f
+ 3f		/usr/local/man/cat3f
+-4		/usr/{local,share,X11R6,X11,pkg}/{jman/,man/}{cat,man}4
+-5		/usr/{local,share,X11R6,X11,pkg}/{jman/,man/}{cat,man}5
+-6		/usr/{local,share,X11R6,X11,pkg}/{jman/,man/}{cat,man}6
+-7		/usr/{local,share,X11R6,X11,pkg}/{jman/,man/}{cat,man}7
+-8		/usr/{local,share,X11R6,X11,pkg}/{jman/,man/}{cat,man}8
+-9		/usr/{local,share}/{jman/,man/}{cat,man}9
++4		/usr/{local,share,X11R6,X11,pkg}/{man/ja_JP.EUC/,man/}{cat,man}4
++5		/usr/{local,share,X11R6,X11,pkg}/{man/ja_JP.EUC/,man/}{cat,man}5
++6		/usr/{local,share,X11R6,X11,pkg}/{man/ja_JP.EUC/,man/}{cat,man}6
++7		/usr/{local,share,X11R6,X11,pkg}/{man/ja_JP.EUC/,man/}{cat,man}7
++8		/usr/{local,share,X11R6,X11,pkg}/{man/ja_JP.EUC/,man/}{cat,man}8
++9		/usr/{local,share}/{man/ja_JP.EUC/,man/}{cat,man}9
+ l		/usr/{X11R6,X11,pkg,local}/man/{cat,man}l
+ n		/usr/{X11R6,X11,pkg,local}/man/{cat,man}n
