@@ -1,8 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/03/10 17:03:13 jwise Exp $
---- Makefile.orig	Tue Aug  4 05:02:14 1998
-+++ Makefile	Mon Mar  8 16:42:46 1999
+$NetBSD: patch-aa,v 1.2 1999/11/27 23:23:19 rh Exp $
+
+--- Makefile.orig	Sun Nov 28 00:21:43 1999
++++ Makefile	Sun Nov 28 00:21:44 1999
 @@ -3,13 +3,13 @@
- # $Id: patch-aa,v 1.1.1.1 1999/03/10 17:03:13 jwise Exp $
+ # $Id: patch-aa,v 1.2 1999/11/27 23:23:19 rh Exp $
  
  # You will almost certainly want to change these
 -BASEDIR=/usr/TeX
