@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.33 2000/07/10 10:52:18 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2000/07/10 21:33:32 tron Exp $
 #
 
 DISTNAME=		ORBit-0.5.2
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/ORBit/}
 
-MAINTAINER=		tron@netbsd.org
+MAINTAINER=		wiz@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 
 DEPENDS+=		glib>=1.2.7:../../devel/glib
