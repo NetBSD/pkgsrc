@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/06/05 10:29:38 agc Exp $
+$NetBSD: patch-aa,v 1.2 2001/06/05 11:15:42 agc Exp $
 
 --- Makefile	2001/06/05 09:15:05	1.1
 +++ Makefile	2001/06/05 10:08:08
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/06/05 10:29:38 agc Exp $
 -RSALIB=/usr/mab/rsaref/install/rsaref.a
 -RINCLUDES=/usr/mab/rsaref/source
 +#RSALIB=/usr/mab/rsaref/install/rsaref.a
-+#RINCLUDES=/usr/mab/rsaref/source
++RINCLUDES=${PREFIX}/include
  
  # if you're a paranoid fascist, you might want to configure
  # default timeouts on the attach command.  If you do,
