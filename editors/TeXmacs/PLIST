@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2004/07/03 21:25:53 recht Exp $
+@comment $NetBSD: PLIST,v 1.18 2004/07/28 09:31:17 recht Exp $
 bin/fig2ps
 bin/texmacs
 include/TeXmacs.h
@@ -209,44 +209,57 @@ share/TeXmacs/doc/about/welcome/welcome.en.tm
 share/TeXmacs/doc/about/welcome/welcome.es.tm
 share/TeXmacs/doc/about/welcome/welcome.fr.tm
 share/TeXmacs/doc/about/welcome/welcome.it.tm
+share/TeXmacs/doc/devel/format/basics/basics.en.tm
+share/TeXmacs/doc/devel/format/basics/lengths.en.tm
+share/TeXmacs/doc/devel/format/basics/tm-docs.en.tm
+share/TeXmacs/doc/devel/format/basics/tm-drd.en.tm
+share/TeXmacs/doc/devel/format/basics/tm-scm.en.tm
+share/TeXmacs/doc/devel/format/basics/tm-tm.en.tm
+share/TeXmacs/doc/devel/format/basics/tm-tmml.en.tm
+share/TeXmacs/doc/devel/format/basics/tm-tree.en.tm
+share/TeXmacs/doc/devel/format/basics/typesetting.en.tm
 share/TeXmacs/doc/devel/format/env-vars.de.tm
 share/TeXmacs/doc/devel/format/env-vars.fr.tm
+share/TeXmacs/doc/devel/format/environment/env-font.en.tm
+share/TeXmacs/doc/devel/format/environment/env-general.en.tm
+share/TeXmacs/doc/devel/format/environment/env-math.en.tm
+share/TeXmacs/doc/devel/format/environment/env-misc.en.tm
+share/TeXmacs/doc/devel/format/environment/env-page.en.tm
+share/TeXmacs/doc/devel/format/environment/env-par.en.tm
+share/TeXmacs/doc/devel/format/environment/env-src.en.tm
+share/TeXmacs/doc/devel/format/environment/env-table.en.tm
 share/TeXmacs/doc/devel/format/environment/environment.en.tm
 share/TeXmacs/doc/devel/format/format.de.tm
-share/TeXmacs/doc/devel/format/format.en.tm
 share/TeXmacs/doc/devel/format/format.fr.tm
-share/TeXmacs/doc/devel/format/language/auxiliaries.en.tm
-share/TeXmacs/doc/devel/format/language/environment.en.tm
-share/TeXmacs/doc/devel/format/language/language.en.tm
-share/TeXmacs/doc/devel/format/language/lengths.en.tm
-share/TeXmacs/doc/devel/format/language/process.en.tm
-share/TeXmacs/doc/devel/format/language/strings.en.tm
-share/TeXmacs/doc/devel/format/language/syntax.en.tm
 share/TeXmacs/doc/devel/format/leaves.fr.tm
 share/TeXmacs/doc/devel/format/planned-changes.fr.tm
 share/TeXmacs/doc/devel/format/primitives.fr.tm
-share/TeXmacs/doc/devel/format/primitives/prim-box.en.tm
-share/TeXmacs/doc/devel/format/primitives/prim-control.en.tm
-share/TeXmacs/doc/devel/format/primitives/prim-env.en.tm
-share/TeXmacs/doc/devel/format/primitives/prim-functional.en.tm
-share/TeXmacs/doc/devel/format/primitives/prim-fundamental.en.tm
-share/TeXmacs/doc/devel/format/primitives/prim-graphic.en.tm
-share/TeXmacs/doc/devel/format/primitives/prim-howtoread.en.tm
-share/TeXmacs/doc/devel/format/primitives/prim-indent.en.tm
-share/TeXmacs/doc/devel/format/primitives/prim-line-break.en.tm
-share/TeXmacs/doc/devel/format/primitives/prim-link.en.tm
-share/TeXmacs/doc/devel/format/primitives/prim-macro.en.tm
-share/TeXmacs/doc/devel/format/primitives/prim-math.en.tm
-share/TeXmacs/doc/devel/format/primitives/prim-obscure.en.tm
-share/TeXmacs/doc/devel/format/primitives/prim-page-break.en.tm
-share/TeXmacs/doc/devel/format/primitives/prim-physical-misc.en.tm
-share/TeXmacs/doc/devel/format/primitives/prim-physical.en.tm
-share/TeXmacs/doc/devel/format/primitives/prim-space.en.tm
-share/TeXmacs/doc/devel/format/primitives/prim-style-misc.en.tm
-share/TeXmacs/doc/devel/format/primitives/prim-style.en.tm
-share/TeXmacs/doc/devel/format/primitives/prim-table.en.tm
-share/TeXmacs/doc/devel/format/primitives/prim-transient.en.tm
-share/TeXmacs/doc/devel/format/primitives/primitives.en.tm
+share/TeXmacs/doc/devel/format/regular/prim-box.en.tm
+share/TeXmacs/doc/devel/format/regular/prim-formatting.en.tm
+share/TeXmacs/doc/devel/format/regular/prim-fundamental.en.tm
+share/TeXmacs/doc/devel/format/regular/prim-graphics.en.tm
+share/TeXmacs/doc/devel/format/regular/prim-indent.en.tm
+share/TeXmacs/doc/devel/format/regular/prim-line-break.en.tm
+share/TeXmacs/doc/devel/format/regular/prim-link.en.tm
+share/TeXmacs/doc/devel/format/regular/prim-math.en.tm
+share/TeXmacs/doc/devel/format/regular/prim-page-break.en.tm
+share/TeXmacs/doc/devel/format/regular/prim-physical-misc.en.tm
+share/TeXmacs/doc/devel/format/regular/prim-space.en.tm
+share/TeXmacs/doc/devel/format/regular/prim-table.en.tm
+share/TeXmacs/doc/devel/format/regular/regular.en.tm
+share/TeXmacs/doc/devel/format/stylesheet/prim-arith.en.tm
+share/TeXmacs/doc/devel/format/stylesheet/prim-boolean.en.tm
+share/TeXmacs/doc/devel/format/stylesheet/prim-control.en.tm
+share/TeXmacs/doc/devel/format/stylesheet/prim-env.en.tm
+share/TeXmacs/doc/devel/format/stylesheet/prim-evaluation.en.tm
+share/TeXmacs/doc/devel/format/stylesheet/prim-functional.en.tm
+share/TeXmacs/doc/devel/format/stylesheet/prim-internal.en.tm
+share/TeXmacs/doc/devel/format/stylesheet/prim-macro.en.tm
+share/TeXmacs/doc/devel/format/stylesheet/prim-strings.en.tm
+share/TeXmacs/doc/devel/format/stylesheet/prim-style-misc.en.tm
+share/TeXmacs/doc/devel/format/stylesheet/prim-transient.en.tm
+share/TeXmacs/doc/devel/format/stylesheet/prim-tuples.en.tm
+share/TeXmacs/doc/devel/format/stylesheet/stylesheet.en.tm
 share/TeXmacs/doc/devel/format/trees.de.tm
 share/TeXmacs/doc/devel/format/trees.fr.tm
 share/TeXmacs/doc/devel/interface/interface-background.en.tm
@@ -602,6 +615,7 @@ share/TeXmacs/doc/main/man-manual.es.tm
 share/TeXmacs/doc/main/man-manual.fr.tm
 share/TeXmacs/doc/main/man-manual.it.tm
 share/TeXmacs/doc/main/man-manual.pt.tm
+share/TeXmacs/doc/main/man-reference.en.tm
 share/TeXmacs/doc/main/man-user-manual.en.tm
 share/TeXmacs/doc/main/man-user-manual.fr.tm
 share/TeXmacs/doc/main/man-user-manual.it.tm
@@ -1251,6 +1265,7 @@ share/TeXmacs/misc/pixmaps/tm_decorate_right.xpm
 share/TeXmacs/misc/pixmaps/tm_decorate_up.xpm
 share/TeXmacs/misc/pixmaps/tm_description.xpm
 share/TeXmacs/misc/pixmaps/tm_dot.xpm
+share/TeXmacs/misc/pixmaps/tm_edit_props.xpm
 share/TeXmacs/misc/pixmaps/tm_emphasize.xpm
 share/TeXmacs/misc/pixmaps/tm_empty.xpm
 share/TeXmacs/misc/pixmaps/tm_enumerate.xpm
@@ -1347,6 +1362,8 @@ share/TeXmacs/misc/pixmaps/tm_table_vbase.xpm
 share/TeXmacs/misc/pixmaps/tm_table_vcenter.xpm
 share/TeXmacs/misc/pixmaps/tm_table_vfrac.xpm
 share/TeXmacs/misc/pixmaps/tm_test.xpm
+share/TeXmacs/misc/pixmaps/tm_text_align.xpm
+share/TeXmacs/misc/pixmaps/tm_textat_mode.xpm
 share/TeXmacs/misc/pixmaps/tm_textual.xpm
 share/TeXmacs/misc/pixmaps/tm_theorem.xpm
 share/TeXmacs/misc/pixmaps/tm_three.xpm
@@ -1553,6 +1570,7 @@ share/TeXmacs/progs/convert/latex/tmtex-test.scm
 share/TeXmacs/progs/convert/latex/tmtex.scm
 share/TeXmacs/progs/convert/mathml/mathtm-test.scm
 share/TeXmacs/progs/convert/mathml/mathtm.scm
+share/TeXmacs/progs/convert/mathml/tmmath.scm
 share/TeXmacs/progs/convert/rewrite/init-rewrite.scm
 share/TeXmacs/progs/convert/rewrite/tmtm-brackets.scm
 share/TeXmacs/progs/convert/rewrite/tmtm-eqns.scm
@@ -1966,9 +1984,14 @@ share/TeXmacs/texts/test/overview.tm
 @dirrm share/TeXmacs/doc/devel/source
 @dirrm share/TeXmacs/doc/devel/plugin
 @dirrm share/TeXmacs/doc/devel/interface
+@dirrm share/TeXmacs/doc/devel/format/stylesheet
+@dirrm share/TeXmacs/doc/devel/format/regular
+@exec ${MKDIR} %D/share/TeXmacs/doc/devel/format/primitives
 @dirrm share/TeXmacs/doc/devel/format/primitives
+@exec ${MKDIR} %D/share/TeXmacs/doc/devel/format/language
 @dirrm share/TeXmacs/doc/devel/format/language
 @dirrm share/TeXmacs/doc/devel/format/environment
+@dirrm share/TeXmacs/doc/devel/format/basics
 @dirrm share/TeXmacs/doc/devel/format
 @dirrm share/TeXmacs/doc/devel
 @dirrm share/TeXmacs/doc/about/welcome
