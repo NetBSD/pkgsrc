@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2000/04/14 17:31:27 pooka Exp $
+
+--- win/Qt/qt_win.cpp.orig	Sat Dec 11 07:21:09 1999
++++ win/Qt/qt_win.cpp	Fri Apr 14 17:16:15 2000
+@@ -3410,7 +3410,7 @@
+ 
+ NetHackQtGlyphs::NetHackQtGlyphs()
+ {
+-    const char* tile_file = "x11tiles";
++    const char* tile_file = "tiles.xpm";
+ 
+     int tw = TILEWBASE;
+     int th = TILEHBASE;
