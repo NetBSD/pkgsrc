@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 1999/02/18 23:37:56 tron Exp $
+@comment $NetBSD: PLIST,v 1.9 1999/02/19 23:07:20 tron Exp $
 bin/kdecode
 bin/kmail
 bin/knu
@@ -690,7 +690,6 @@ share/kde/toolbar/mini-connect.xpm
 share/kde/toolbar/mini-clock.xpm
 @dirrm share/doc/kde/HTML/it/ktalkd
 @dirrm share/doc/kde/HTML/fr/ktalkd
-@dirrm share/doc/kde/HTML/fr
 @dirrm share/doc/kde/HTML/en/pws
 @dirrm share/doc/kde/HTML/en/ktalkd
 @dirrm share/doc/kde/HTML/en/ksirc
@@ -703,7 +702,6 @@ share/kde/toolbar/mini-clock.xpm
 @dirrm share/doc/kde/HTML/en/knu
 @dirrm share/doc/kde/HTML/en/korn
 @dirrm share/doc/kde/HTML/el/ktalkd
-@dirrm share/doc/kde/HTML/el
 @dirrm share/kde/apps/ksirc/pics
 @dirrm share/kde/apps/ksirc/icons
 @dirrm share/kde/apps/ksirc

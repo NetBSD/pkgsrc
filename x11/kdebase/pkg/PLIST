@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 1999/02/18 23:37:55 tron Exp $
+@comment $NetBSD: PLIST,v 1.14 1999/02/19 23:07:20 tron Exp $
 bin/kappfinder
 bin/kappfinder_restart
 bin/kcmkpanel
@@ -530,7 +530,6 @@ share/doc/kde/HTML/en/kpager/index-3.html
 share/doc/kde/HTML/en/kpager/index-4.html
 share/doc/kde/HTML/en/kpager/index-5.html
 share/doc/kde/HTML/en/kpager/logotp3.gif
-@exec mkdir -p %D/share/doc/kde/HTML/it
 share/doc/kde/HTML/ru/kikbd/kikbd-1.html
 share/doc/kde/HTML/ru/kikbd/kikbd-2.html
 share/doc/kde/HTML/ru/kikbd/kikbd-3.html
@@ -1344,7 +1343,6 @@ share/kde/locale/et/LC_MESSAGES/kstart.mo
 share/kde/locale/et/LC_MESSAGES/kvt.mo
 share/kde/locale/et/LC_MESSAGES/kwm.mo
 share/kde/locale/et/LC_MESSAGES/kcmkwm.mo
-@exec mkdir -p %D/share/kde/sounds
 share/kde/wallpapers/bluegrnt.jpg
 share/kde/wallpapers/berries.jpg
 share/kde/wallpapers/chess.jpg
@@ -1486,8 +1484,6 @@ share/kde/wallpapers/whiplash_vines.jpg
 share/kde/wallpapers/whirling_spirit.jpg
 share/kde/wallpapers/wind_chill.jpg
 @dirrm share/kde/wallpapers
-@dirrm share/kde/sounds
-@dirrm share/doc/kde/HTML/it
 @dirrm share/doc/kde/HTML/en/kwm
 @dirrm share/doc/kde/HTML/en/kvt
 @dirrm share/doc/kde/HTML/en/kpanel
