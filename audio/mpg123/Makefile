@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/09/07 03:14:22 hubertf Exp $
+# $NetBSD: Makefile,v 1.17 1999/09/27 08:27:47 agc Exp $
 #
 
 DISTNAME=       mpg123-0.59r
@@ -21,7 +21,11 @@ ALL_TARGET=	netbsd-i386
 .elif (${MACHINE_ARCH} == "m68k")
 ALL_TARGET=	netbsd-m68k
 .else
-ALL_TARGET=	netbsd
+ALL_TARGET=	${LOWER_OPSYS}
+.endif
+
+.if ${OPSYS} == "SunOS"
+MAKE_ENV+=	CPPFLAGS=""
 .endif
 
 MAKE_FLAGS+=	PREFIX="${PREFIX}"
