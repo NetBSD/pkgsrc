@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/06/05 16:33:52 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/07/02 12:51:57 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KAFFE_BUILDLINK3_MK:=	${KAFFE_BUILDLINK3_MK}+
@@ -14,6 +14,12 @@ BUILDLINK_PACKAGES+=	kaffe
 BUILDLINK_DEPENDS.kaffe+=	kaffe-[0-9]*
 BUILDLINK_PKGSRCDIR.kaffe?=	../../lang/kaffe
 BUILDLINK_JAVA_PREFIX.kaffe=	${PREFIX}/java/kaffe
+
+BUILDLINK_PASSTHRU_DIRS+=	${BUILDLINK_JAVA_PREFIX.kaffe}
+
+BUILDLINK_CPPFLAGS.kaffe= \
+	-I${BUILDLINK_JAVA_PREFIX.kaffe}/include			\
+	-I${BUILDLINK_JAVA_PREFIX.kaffe}/include/kaffe
 .endif  # KAFFE_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
