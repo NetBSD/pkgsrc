@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/02 22:41:23 rh Exp $
+bin/gnetlist
+bin/mk_verilog_syms
+man/man1/gnetlist.1
+share/gEDA/system-gnetlistrc
+share/gEDA/scheme/gnet-PCB.scm
+share/gEDA/scheme/gnet-allegro.scm
+share/gEDA/scheme/gnet-bom.scm
+share/gEDA/scheme/gnet-geda.scm
+share/gEDA/scheme/gnet-spice.scm
+share/gEDA/scheme/gnet-tango.scm
+share/gEDA/scheme/gnet-verilog.scm
+share/gEDA/scheme/gnet-vhdl.scm
+share/gEDA/scheme/gnet-vipec.scm
+share/gEDA/scheme/gnetlist.scm
+@unexec rmdir %D/share/gEDA/scheme 2>/dev/null || true
