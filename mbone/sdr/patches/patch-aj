@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 1999/01/15 23:56:47 hubertf Exp $
+
+--- src/sdr.h.BAK	Sat Jan 16 00:29:54 1999
++++ src/sdr.h	Sat Jan 16 00:28:52 1999
+@@ -190,7 +190,7 @@
+ void srand48(long seedval);
+ double drand48();
+ 
+-#if !defined(WIN32)&&!defined(SGI)&&!defined(AIX41)&&!defined(_HPUX_SOURCE) && !defined(SOLARIS) && !defined(FREEBSD)
++#if !defined(WIN32)&&!defined(SGI)&&!defined(AIX41)&&!defined(_HPUX_SOURCE) && !defined(SOLARIS) && !defined(FREEBSD) && !defined(__NetBSD__)
+ int gethostname(char * name, size_t namelen);
+ #endif
+ 
