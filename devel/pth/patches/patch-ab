@@ -1,193 +1,170 @@
-$NetBSD: patch-ab,v 1.14 2002/10/14 11:49:55 skrll Exp $
+$NetBSD: patch-ab,v 1.15 2003/05/02 11:49:48 wiz Exp $
 
---- configure.orig	Sun Jan 27 12:29:59 2002
+--- configure.orig	Mon Feb 17 10:53:15 2003
 +++ configure
-@@ -139,6 +139,8 @@ ac_help="$ac_help
- ac_help="$ac_help
-   --enable-shared         build shared libraries (default=yes)"
- ac_help="$ac_help
-+  --with-fdsetsize=NUM    set FD_SETSIZE"
-+ac_help="$ac_help
-   --with-mctx-mth=ID      force mctx method      (mcsc,sjlj)"
- ac_help="$ac_help
-   --with-mctx-dsp=ID      force mctx dispatching (sc,ssjlj,sjlj,usjlj,sjlje,...)"
-@@ -177,7 +179,6 @@ program_suffix=NONE
- program_transform_name=s,x,x,
- silent=
- site=
--sitefile=
- srcdir=
- target=NONE
- verbose=
-@@ -292,7 +293,6 @@ Configuration:
-   --help                  print this message
-   --no-create             do not create output files
-   --quiet, --silent       do not print \`checking...' messages
--  --site-file=FILE        use FILE as the site file
-   --version               print the version of autoconf that created configure
- Directory and file names:
-   --prefix=PREFIX         install architecture-independent files in PREFIX
-@@ -463,11 +463,6 @@ EOF
-   -site=* | --site=* | --sit=*)
-     site="$ac_optarg" ;;
+@@ -543,7 +543,7 @@ ac_includes_default="\
+ # include <unistd.h>
+ #endif"
  
--  -site-file | --site-file | --site-fil | --site-fi | --site-f)
--    ac_prev=sitefile ;;
--  -site-file=* | --site-file=* | --site-fil=* | --site-fi=* | --site-f=*)
--    sitefile="$ac_optarg" ;;
+-ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS srcdir_prefix PTH_VERSION_STR PTH_VERSION_HEX PLATFORM CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT CPP SET_MAKE build build_cpu build_vendor build_os host host_cpu host_vendor host_os LN_S ECHO RANLIB ac_ct_RANLIB STRIP ac_ct_STRIP EGREP LIBTOOL AR PTH_FDSETSIZE PTH_FAKE_POLL PTH_FAKE_RWV EXTRA_INCLUDE_SYS_SELECT_H FALLBACK_SIG_ATOMIC_T FALLBACK_PID_T FALLBACK_SIZE_T FALLBACK_SSIZE_T FALLBACK_OFF_T FALLBACK_SOCKLEN_T FALLBACK_NFDS_T PTH_STACK_GROWTH pth_skaddr_makecontext pth_sksize_makecontext pth_skaddr_sigaltstack pth_sksize_sigaltstack pth_skaddr_sigstack pth_sksize_sigstack pth_sigjmpbuf pth_sigsetjmp pth_siglongjmp PTH_MCTX_ID PTH_SYSCALL_SOFT PTH_SYSCALL_HARD BATCH TARGET_ALL PTHREAD_O LIBPTHREAD_A LIBPTHREAD_LA PTHREAD_CONFIG_1 PTHREAD_3 INSTALL_PTHREAD UNINSTALL_PTHREAD TEST_PTHREAD PTH_EXT_SFIO LIBOBJS LTLIBOBJS'
++ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS srcdir_prefix PTH_VERSION_STR PTH_VERSION_HEX PLATFORM CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT CPP SET_MAKE build build_cpu build_vendor build_os host host_cpu host_vendor host_os LN_S ECHO RANLIB ac_ct_RANLIB STRIP ac_ct_STRIP EGREP LIBTOOL AR PTH_FDSETSIZE PTH_FAKE_POLL PTH_FAKE_RWV EXTRA_INCLUDE_SYS_SELECT_H EXTRA_INCLUDE_SYS_RESOURCE_H FALLBACK_SIG_ATOMIC_T FALLBACK_PID_T FALLBACK_SIZE_T FALLBACK_SSIZE_T FALLBACK_OFF_T FALLBACK_SOCKLEN_T FALLBACK_NFDS_T PTH_STACK_GROWTH pth_skaddr_makecontext pth_sksize_makecontext pth_skaddr_sigaltstack pth_sksize_sigaltstack pth_skaddr_sigstack pth_sksize_sigstack pth_sigjmpbuf pth_sigsetjmp pth_siglongjmp PTH_MCTX_ID PTH_SYSCALL_SOFT PTH_SYSCALL_HARD BATCH TARGET_ALL PTHREAD_O LIBPTHREAD_A LIBPTHREAD_LA PTHREAD_CONFIG_1 PTHREAD_3 INSTALL_PTHREAD UNINSTALL_PTHREAD TEST_PTHREAD PTH_EXT_SFIO LIBOBJS LTLIBOBJS'
+ ac_subst_files=''
+ 
+ # Initialize some variables set by options.
+@@ -9334,8 +9334,7 @@ done
+ 
+ 
+ 
 -
-   -srcdir | --srcdir | --srcdi | --srcd | --src | --sr)
-     ac_prev=srcdir ;;
-   -srcdir=* | --srcdir=* | --srcdi=* | --srcd=* | --src=* | --sr=*)
-@@ -633,16 +628,12 @@ fi
- srcdir=`echo "${srcdir}" | sed 's%\([^/]\)/*$%\1%'`
- 
- # Prefer explicitly selected file to automatically selected ones.
--if test -z "$sitefile"; then
--  if test -z "$CONFIG_SITE"; then
--    if test "x$prefix" != xNONE; then
--      CONFIG_SITE="$prefix/share/config.site $prefix/etc/config.site"
--    else
--      CONFIG_SITE="$ac_default_prefix/share/config.site $ac_default_prefix/etc/config.site"
--    fi
-+if test -z "$CONFIG_SITE"; then
-+  if test "x$prefix" != xNONE; then
-+    CONFIG_SITE="$prefix/share/config.site $prefix/etc/config.site"
-+  else
-+    CONFIG_SITE="$ac_default_prefix/share/config.site $ac_default_prefix/etc/config.site"
-   fi
--else
--  CONFIG_SITE="$sitefile"
- fi
- for ac_site_file in $CONFIG_SITE; do
-   if test -r "$ac_site_file"; then
-@@ -1888,9 +1879,74 @@ EOF
- 
- 
- 
-+echo $ac_n "checking for value of FD_SETSIZE""... $ac_c" 1>&6
-+echo "configure:1884: checking for value of FD_SETSIZE" >&5
-+cross_compile=no
-+if test "$cross_compiling" = yes; then
-+  ac_fdsetsize=1024
-+
-+else
-+  cat > conftest.$ac_ext <<EOF
-+#line 1891 "configure"
-+#include "confdefs.h"
-+
-+#include <stdio.h>
-+#include <sys/types.h>
-+
-+int main(int argc, char *argv[])
-+{
-+    FILE *fp;
-+    int ac_fdsetsize;
-+
-+#if defined(FD_SETSIZE)
-+    ac_fdsetsize = FD_SETSIZE;
-+#else
-+    ac_fdsetsize = (sizeof(fd_set)*8);
-+#endif
-+    if ((fp = fopen("conftestval", "w")) == NULL)
-+        exit(1);
-+    fprintf(fp, "%d\n", ac_fdsetsize);
-+    fclose(fp);
-+    exit(0);
-+}
-+
-+
-+EOF
-+if { (eval echo configure:1916: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext} && (./conftest; exit) 2>/dev/null
-+then
-+  ac_fdsetsize=`cat conftestval`
-+else
-+  echo "configure: failed program was:" >&5
-+  cat conftest.$ac_ext >&5
-+  rm -fr conftest*
-+  ac_fdsetsize=1024
-+fi
-+rm -fr conftest*
-+fi
-+echo "$ac_t""$ac_fdsetsize" 1>&6
-+PTH_FDSETSIZE="$ac_fdsetsize"
-+
-+
-+
-+# Check whether --with-fdsetsize or --without-fdsetsize was given.
-+if test "${with_fdsetsize+set}" = set; then
-+  withval="$with_fdsetsize"
-+  
-+case $withval in
-+    [1-9][0-9]) PTH_FDSETSIZE=$withval ;;
-+    [0-9][0-9][0-9]) PTH_FDSETSIZE=$withval ;;
-+    [0-9][0-9][0-9][0-9]) PTH_FDSETSIZE=$withval ;;
-+    * ) { echo "configure: error: invalid FD_SETSIZE specified -- allowed: 10-9999" 1>&2; exit 1; } ;;
-+esac
-+CPPFLAGS="$CPPFLAGS -DFD_SETSIZE=$PTH_FDSETSIZE";
-+echo "$ac_t""Overriding FD_SETSIZE with $PTH_FDSETSIZE" 1>&6;
-+
-+fi
-+
-+
- for ac_func in poll; do
-     echo $ac_n "checking for function $ac_func""... $ac_c" 1>&6
--echo "configure:1894: checking for function $ac_func" >&5
-+echo "configure:1950: checking for function $ac_func" >&5
- if eval "test \"`echo '$''{'ac_cv_func_$ac_func'+set}'`\" = set"; then
-   echo $ac_n "(cached) $ac_c" 1>&6
- else
-@@ -2223,7 +2279,7 @@ fi
- done
- 
- 
--for ac_hdr in sys/resource.h net/errno.h paths.h
-+for ac_hdr in net/errno.h paths.h
+-for ac_header in sys/resource.h net/errno.h paths.h
++for ac_header in net/errno.h paths.h
  do
- ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
- echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6
-@@ -2454,8 +2510,54 @@ if test ".$ac_cv_header_sys_select_h" !=
+ as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ if eval "test \"\${$as_ac_Header+set}\" = set"; then
+@@ -9820,6 +9819,154 @@ if test ".$ac_cv_header_sys_select_h" !=
  fi
  
  
-+for ac_hdr in sys/resource.h
++
++for ac_header in sys/resource.h
 +do
-+ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
-+echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6
-+echo "configure:2518: checking for $ac_hdr" >&5
-+if eval "test \"`echo '$''{'ac_cv_header_$ac_safe'+set}'`\" = set"; then
-+  echo $ac_n "(cached) $ac_c" 1>&6
-+else
-+  cat > conftest.$ac_ext <<EOF
-+#line 2523 "configure"
-+#include "confdefs.h"
-+#include <$ac_hdr>
-+EOF
-+ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
-+{ (eval echo configure:2528: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
-+ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
-+if test -z "$ac_err"; then
-+  rm -rf conftest*
-+  eval "ac_cv_header_$ac_safe=yes"
-+else
-+  echo "$ac_err" >&5
-+  echo "configure: failed program was:" >&5
-+  cat conftest.$ac_ext >&5
-+  rm -rf conftest*
-+  eval "ac_cv_header_$ac_safe=no"
++as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
++if eval "test \"\${$as_ac_Header+set}\" = set"; then
++  echo "$as_me:$LINENO: checking for $ac_header" >&5
++echo $ECHO_N "checking for $ac_header... $ECHO_C" >&6
++if eval "test \"\${$as_ac_Header+set}\" = set"; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
 +fi
-+rm -f conftest*
-+fi
-+if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
-+  echo "$ac_t""yes" 1>&6
-+    ac_tr_hdr=HAVE_`echo $ac_hdr | sed 'y%abcdefghijklmnopqrstuvwxyz./-%ABCDEFGHIJKLMNOPQRSTUVWXYZ___%'`
-+  cat >> confdefs.h <<EOF
-+#define $ac_tr_hdr 1
-+EOF
-+ 
++echo "$as_me:$LINENO: result: `eval echo '${'$as_ac_Header'}'`" >&5
++echo "${ECHO_T}`eval echo '${'$as_ac_Header'}'`" >&6
 +else
-+  echo "$ac_t""no" 1>&6
++  # Is the header compilable?
++echo "$as_me:$LINENO: checking $ac_header usability" >&5
++echo $ECHO_N "checking $ac_header usability... $ECHO_C" >&6
++cat >conftest.$ac_ext <<_ACEOF
++#line $LINENO "configure"
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++$ac_includes_default
++#include <$ac_header>
++_ACEOF
++rm -f conftest.$ac_objext
++if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
++  (eval $ac_compile) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } &&
++         { ac_try='test -s conftest.$ac_objext'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; }; then
++  ac_header_compiler=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++ac_header_compiler=no
 +fi
++rm -f conftest.$ac_objext conftest.$ac_ext
++echo "$as_me:$LINENO: result: $ac_header_compiler" >&5
++echo "${ECHO_T}$ac_header_compiler" >&6
++
++# Is the header present?
++echo "$as_me:$LINENO: checking $ac_header presence" >&5
++echo $ECHO_N "checking $ac_header presence... $ECHO_C" >&6
++cat >conftest.$ac_ext <<_ACEOF
++#line $LINENO "configure"
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++#include <$ac_header>
++_ACEOF
++if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
++  (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } >/dev/null; then
++  if test -s conftest.err; then
++    ac_cpp_err=$ac_c_preproc_warn_flag
++  else
++    ac_cpp_err=
++  fi
++else
++  ac_cpp_err=yes
++fi
++if test -z "$ac_cpp_err"; then
++  ac_header_preproc=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++  ac_header_preproc=no
++fi
++rm -f conftest.err conftest.$ac_ext
++echo "$as_me:$LINENO: result: $ac_header_preproc" >&5
++echo "${ECHO_T}$ac_header_preproc" >&6
++
++# So?  What about this header?
++case $ac_header_compiler:$ac_header_preproc in
++  yes:no )
++    { echo "$as_me:$LINENO: WARNING: $ac_header: accepted by the compiler, rejected by the preprocessor!" >&5
++echo "$as_me: WARNING: $ac_header: accepted by the compiler, rejected by the preprocessor!" >&2;}
++    { echo "$as_me:$LINENO: WARNING: $ac_header: proceeding with the preprocessor's result" >&5
++echo "$as_me: WARNING: $ac_header: proceeding with the preprocessor's result" >&2;}
++    (
++      cat <<\_ASBOX
++## ------------------------------------ ##
++## Report this to bug-autoconf@gnu.org. ##
++## ------------------------------------ ##
++_ASBOX
++    ) |
++      sed "s/^/$as_me: WARNING:     /" >&2
++    ;;
++  no:yes )
++    { echo "$as_me:$LINENO: WARNING: $ac_header: present but cannot be compiled" >&5
++echo "$as_me: WARNING: $ac_header: present but cannot be compiled" >&2;}
++    { echo "$as_me:$LINENO: WARNING: $ac_header: check for missing prerequisite headers?" >&5
++echo "$as_me: WARNING: $ac_header: check for missing prerequisite headers?" >&2;}
++    { echo "$as_me:$LINENO: WARNING: $ac_header: proceeding with the preprocessor's result" >&5
++echo "$as_me: WARNING: $ac_header: proceeding with the preprocessor's result" >&2;}
++    (
++      cat <<\_ASBOX
++## ------------------------------------ ##
++## Report this to bug-autoconf@gnu.org. ##
++## ------------------------------------ ##
++_ASBOX
++    ) |
++      sed "s/^/$as_me: WARNING:     /" >&2
++    ;;
++esac
++echo "$as_me:$LINENO: checking for $ac_header" >&5
++echo $ECHO_N "checking for $ac_header... $ECHO_C" >&6
++if eval "test \"\${$as_ac_Header+set}\" = set"; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++  eval "$as_ac_Header=$ac_header_preproc"
++fi
++echo "$as_me:$LINENO: result: `eval echo '${'$as_ac_Header'}'`" >&5
++echo "${ECHO_T}`eval echo '${'$as_ac_Header'}'`" >&6
++
++fi
++if test `eval echo '${'$as_ac_Header'}'` = yes; then
++  cat >>confdefs.h <<_ACEOF
++#define `echo "HAVE_$ac_header" | $as_tr_cpp` 1
++_ACEOF
++
++fi
++
 +done
 +
 +EXTRA_INCLUDE_SYS_RESOURCE_H="#include <sys/resource.h>"
@@ -196,37 +173,22 @@ $NetBSD: patch-ab,v 1.14 2002/10/14 11:49:55 skrll Exp $
 +fi
 +
 +
- echo $ac_n "checking for typedef sig_atomic_t""... $ac_c" 1>&6
--echo "configure:2459: checking for typedef sig_atomic_t" >&5
-+echo "configure:2561: checking for typedef sig_atomic_t" >&5
- if eval "test \"`echo '$''{'ac_cv_typedef_sig_atomic_t'+set}'`\" = set"; then
-   echo $ac_n "(cached) $ac_c" 1>&6
- else
-@@ -5153,6 +5255,7 @@ fi
+ echo "$as_me:$LINENO: checking for typedef sig_atomic_t" >&5
+ echo $ECHO_N "checking for typedef sig_atomic_t... $ECHO_C" >&6
+ if test "${ac_cv_typedef_sig_atomic_t+set}" = set; then
+@@ -13682,6 +13829,7 @@ fi
  
  
  
 +
- PTH_EXT_SFIO=0
- # Check whether --with-sfio or --without-sfio was given.
- if test "${with_sfio+set}" = set; then
-@@ -5708,9 +5811,11 @@ s%@CPP@%$CPP%g
- s%@SET_MAKE@%$SET_MAKE%g
- s%@AR@%$AR%g
- s%@RANLIB@%$RANLIB%g
-+s%@PTH_FDSETSIZE@%$PTH_FDSETSIZE%g
- s%@PTH_FAKE_POLL@%$PTH_FAKE_POLL%g
- s%@PTH_FAKE_RWV@%$PTH_FAKE_RWV%g
- s%@EXTRA_INCLUDE_SYS_SELECT_H@%$EXTRA_INCLUDE_SYS_SELECT_H%g
-+s%@EXTRA_INCLUDE_SYS_RESOURCE_H@%$EXTRA_INCLUDE_SYS_RESOURCE_H%g
- s%@FALLBACK_SIG_ATOMIC_T@%$FALLBACK_SIG_ATOMIC_T%g
- s%@FALLBACK_PID_T@%$FALLBACK_PID_T%g
- s%@FALLBACK_SIZE_T@%$FALLBACK_SIZE_T%g
-@@ -5736,6 +5841,7 @@ s%@TARGET_ALL@%$TARGET_ALL%g
- s%@PTHREAD_O@%$PTHREAD_O%g
- s%@LIBPTHREAD_A@%$LIBPTHREAD_A%g
- s%@LIBPTHREAD_LA@%$LIBPTHREAD_LA%g
-+s%@LIBTOOL@%$LIBTOOL%g
- s%@PTHREAD_CONFIG_1@%$PTHREAD_CONFIG_1%g
- s%@PTHREAD_3@%$PTHREAD_3%g
- s%@INSTALL_PTHREAD@%$INSTALL_PTHREAD%g
+ # Check whether --with-ex or --without-ex was given.
+ if test "${with_ex+set}" = set; then
+   withval="$with_ex"
+@@ -15264,6 +15412,7 @@ s,@PTH_FDSETSIZE@,$PTH_FDSETSIZE,;t t
+ s,@PTH_FAKE_POLL@,$PTH_FAKE_POLL,;t t
+ s,@PTH_FAKE_RWV@,$PTH_FAKE_RWV,;t t
+ s,@EXTRA_INCLUDE_SYS_SELECT_H@,$EXTRA_INCLUDE_SYS_SELECT_H,;t t
++s,@EXTRA_INCLUDE_SYS_RESOURCE_H@,$EXTRA_INCLUDE_SYS_RESOURCE_H,;t t
+ s,@FALLBACK_SIG_ATOMIC_T@,$FALLBACK_SIG_ATOMIC_T,;t t
+ s,@FALLBACK_PID_T@,$FALLBACK_PID_T,;t t
+ s,@FALLBACK_SIZE_T@,$FALLBACK_SIZE_T,;t t

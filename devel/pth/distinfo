@@ -1,15 +1,11 @@
-$NetBSD: distinfo,v 1.11 2003/02/04 17:31:17 drochner Exp $
+$NetBSD: distinfo,v 1.12 2003/05/02 11:49:47 wiz Exp $
 
-SHA1 (pth-1.4.1.tar.gz) = bc5b0847d57d2b78945a6c8d4ebab57e46213972
-Size (pth-1.4.1.tar.gz) = 446287 bytes
-SHA1 (patch-aa) = c2fafc8eba5f084468fe0d07b1763d801b9ead89
-SHA1 (patch-ab) = 41dfb1d339d71ed344ab320d4f430ea8e1a04722
-SHA1 (patch-ac) = 0c9409f90cfe3d8794af03236055b1bb27e9f88a
-SHA1 (patch-ad) = 8daac8cd014d18803fc53038dbfa8da4336752a9
-SHA1 (patch-ae) = 11ab7aa4e84eb01bb3956fdb58ff8d5f7e04a434
-SHA1 (patch-af) = e6d065052b935a6a689603675b7d8a473b995a5b
-SHA1 (patch-ag) = 1f4cdebe81b10e0cb9e38e6f3cb5aeb521038755
-SHA1 (patch-ah) = e9080d4b1e81fd0058233cf776ac49d56d01b79a
-SHA1 (patch-ai) = 0e9ef6a500470df351d616933fa086ad21e8b90c
-SHA1 (patch-aj) = 7d45920f6d8aba1de8dd6a69f1ce4591c81247d2
-SHA1 (patch-ak) = 7a84b9e71466a7bb9c1eea0c0815b19d5dee5ad1
+SHA1 (pth-2.0.0.tar.gz) = 91b7593e5435604090c3974a8584478877194533
+Size (pth-2.0.0.tar.gz) = 536605 bytes
+SHA1 (patch-ab) = d320382a2b9e77ea7b370b3f2078df26c960ff65
+SHA1 (patch-ac) = 44ce534ede37844cf783982df7d1248f19d2c48f
+SHA1 (patch-ad) = 0e9e94d8801e61153a4676c796d81092fb3372b2
+SHA1 (patch-ae) = 018d915157250da6b10ac7a5d51a82d5564744fe
+SHA1 (patch-af) = 52389585d900f39e83b3535ada2d32081552a918
+SHA1 (patch-ag) = 44108eddea2a672572646534a53dd0828b704108
+SHA1 (patch-aj) = f155cac115446efce191b859d92900d1ea3bc44b
