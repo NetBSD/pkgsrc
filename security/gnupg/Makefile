@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2004/01/24 15:00:22 grant Exp $
+# $NetBSD: Makefile,v 1.58 2004/02/02 23:41:32 xtraeme Exp $
 
 DISTNAME=	gnupg-1.2.4
 CATEGORIES=	security
@@ -57,6 +57,18 @@ PLIST_SUBST+=	OPENLDAP=""
 .else
 CONFIGURE_ARGS+=--disable-ldap
 PLIST_SUBST+=	OPENLDAP="@comment "
+.endif
+
+.if ${OPSYS} == "FreeBSD"
+
+SUBST_CLASSES=	    fixme
+SUBST_STAGE.fixme=  post-configure
+SUBST_FILES.fixme=  mpi/i386/mpih-add1.S mpi/i386/mpih-lshift.S \
+		    mpi/i386/mpih-mul1.S mpi/i386/mpih-mul2.S \
+		    mpi/i386/mpih-mul3.S mpi/i386/mpih-rshift.S \
+		    mpi/i386/mpih-sub1.S
+SUBST_SED.fixme=    -e "s,ALIGN(3),ALIGN(4),g"
+
 .endif
 
 .include "../../converters/libiconv/buildlink2.mk"
