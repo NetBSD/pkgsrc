@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2003/04/01 12:27:07 markd Exp $
+# $NetBSD: Makefile,v 1.17 2003/04/03 14:39:31 markd Exp $
 
 DISTNAME=	kdegraphics-3.1.1
+PKGREVISION=	1
 CATEGORIES=	graphics
 COMMENT=	Graphics programs for the KDE integrated X11 desktop
 
@@ -26,6 +27,7 @@ FOO_MAIN_FILES= \
 .include "../../graphics/tiff/buildlink2.mk"
 .include "../../graphics/glut/buildlink2.mk"
 .include "../../graphics/imlib/buildlink2.mk"
+.include "../../graphics/sane-backends/buildlink2.mk"
 .include "../../x11/kde3/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"
 .include "../../mk/ghostscript.mk"
