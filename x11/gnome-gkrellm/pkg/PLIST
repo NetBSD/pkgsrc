@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/10/30 13:25:49 damon Exp $
+lib/gkrellm/plugins/gkrellm-gnome.so
