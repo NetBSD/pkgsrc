@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:43:43 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/05 21:23:00 minskim Exp $
 #
 
 DISTNAME=	sj3-2.0.1.20
@@ -16,6 +16,10 @@ BUILD_DEPENDS+=	sj3-server-bin>=2.0.1.20nb1:../sj3-server-bin
 FILESDIR=	${.CURDIR}/../sj3-lib/files
 DISTINFO_FILE=	${.CURDIR}/../sj3-lib/distinfo
 PATCHDIR=	${.CURDIR}/../sj3-lib/patches
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -53,7 +57,7 @@ post-build:
 do-install:
 	@(cd ${WRKSRC}/dict/dict; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install)
 
-.include "../../devel/nbitools/nbitools.mk"
+.include "../../devel/nbitools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # Need to set this here _after_ bsd.pkg.mk
