@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/15 20:35:39 kei Exp $
+lib/X11/fonts/local/elisat10.pcf.gz
+lib/X11/fonts/local/jpnhn4-iso.pcf.gz
+lib/X11/fonts/local/jpnhn4-jis.pcf.gz
+share/doc/elisat/elisa100.doc
+share/doc/elisat/elisat10.doc
+share/doc/elisat/elisat10.html
+@dirrm share/doc/elisat
+@exec mkfontdir %D/lib/X11/fonts/local
+@unexec mkfontdir %D/lib/X11/fonts/local
