@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/10/13 00:37:33 garbled Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/08/11 22:01:47 tron Exp $
 share/doc/craft/pic/gtow.gif
 share/doc/craft/pic/allbuilt.gif
 share/doc/craft/pic/archer.gif
@@ -75,10 +75,8 @@ share/doc/craft/pic/merch.gif
 share/doc/craft/pic/shcopa.gif
 share/doc/craft/pic/tradeor.gif
 share/doc/craft/pic/markall.gif
-share/doc/craft/pic/xx~
 share/doc/craft/pic/wtog.gif
 share/doc/craft/pic/admp.gif
-share/doc/craft/craftcc.html~
 share/doc/craft/craftcc.html
 share/doc/craft/craft.html
 share/doc/craft/ccc.gif
@@ -87,7 +85,6 @@ share/craft/hcraft/edit/.windefaults.params
 share/craft/hcraft/edit/pic.190.cmap.xbm
 share/craft/hcraft/edit/pic.192.cmap.xbm
 share/craft/hcraft/edit/pic.191.cmap.xbm
-share/craft/hcraft/edit/.windefaults.params~
 share/craft/hcraft/edit/filesel.temp
 share/craft/hcraft/edit/.winfix
 share/craft/hcraft/edit/get_name.hist
@@ -95,7 +92,6 @@ share/craft/hcraft/edit/get_pattern.hist
 share/craft/hcraft/edit/pic.190.cmap
 share/craft/hcraft/edit/pic.192.cmap
 share/craft/hcraft/edit/cmedit
-share/craft/hcraft/.windefaults.params~
 share/craft/hcraft/pic.100.cmap
 share/craft/hcraft/pic.111.cmap.xbm
 share/craft/hcraft/pic.11192.cmap
@@ -2182,7 +2178,6 @@ share/craft/hcraft/pic.182.cmap
 share/craft/hcraft/pic.183.cmap
 share/craft/hcraft/pic.183.cmap.xbm
 share/craft/hcraft/pic.190.cmap
-share/craft/hcraft/pic_cata_new~
 share/craft/hcraft/pic.191.cmap
 share/craft/hcraft/pic.192.cmap
 share/craft/hcraft/pic.190.cmap.xbm
