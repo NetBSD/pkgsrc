@@ -1,15 +1,19 @@
-$NetBSD: distinfo,v 1.68.2.9 2005/02/17 15:37:00 salo Exp $
+$NetBSD: distinfo,v 1.68.2.10 2005/02/21 00:29:40 salo Exp $
 
-SHA1 (squid-2.5.8-2005021100/squid-2.5.STABLE8.tar.bz2) = de126ef85612fcd1a44bdd67d4a410c4d47cd02d
-Size (squid-2.5.8-2005021100/squid-2.5.STABLE8.tar.bz2) = 1057299 bytes
-SHA1 (squid-2.5.8-2005021100/squid-2.5.STABLE8-dns_assert.patch) = 41af4ec15e007d5bc2dbbdecaeb426a5f391c40f
-Size (squid-2.5.8-2005021100/squid-2.5.STABLE8-dns_assert.patch) = 2524 bytes
-SHA1 (squid-2.5.8-2005021100/squid-2.5.STABLE8-format_fixes.patch) = c853e84a671a8c8a6e304a1947be11d776685f34
-Size (squid-2.5.8-2005021100/squid-2.5.STABLE8-format_fixes.patch) = 9538 bytes
-SHA1 (squid-2.5.8-2005021100/squid-2.5.STABLE8-html_high_chars.patch) = 88da65e60bc75b448385696ac2059f690a1b24c1
-Size (squid-2.5.8-2005021100/squid-2.5.STABLE8-html_high_chars.patch) = 766 bytes
-SHA1 (squid-2.5.8-2005021100/squid-2.5.STABLE8-ftp_cleanup.patch) = a710fbb1ae4d24927ce88c46d394fc585ae2a325
-Size (squid-2.5.8-2005021100/squid-2.5.STABLE8-ftp_cleanup.patch) = 4532 bytes
+SHA1 (squid-2.5.8-2005022000/squid-2.5.STABLE8.tar.bz2) = de126ef85612fcd1a44bdd67d4a410c4d47cd02d
+Size (squid-2.5.8-2005022000/squid-2.5.STABLE8.tar.bz2) = 1057299 bytes
+SHA1 (squid-2.5.8-2005022000/squid-2.5.STABLE8-dns_assert.patch) = 41af4ec15e007d5bc2dbbdecaeb426a5f391c40f
+Size (squid-2.5.8-2005022000/squid-2.5.STABLE8-dns_assert.patch) = 2524 bytes
+SHA1 (squid-2.5.8-2005022000/squid-2.5.STABLE8-format_fixes.patch) = 6319ab7ddb769576c1b27f2b6bf33e74af7b0e7f
+Size (squid-2.5.8-2005022000/squid-2.5.STABLE8-format_fixes.patch) = 10056 bytes
+SHA1 (squid-2.5.8-2005022000/squid-2.5.STABLE8-html_high_chars.patch) = 88da65e60bc75b448385696ac2059f690a1b24c1
+Size (squid-2.5.8-2005022000/squid-2.5.STABLE8-html_high_chars.patch) = 766 bytes
+SHA1 (squid-2.5.8-2005022000/squid-2.5.STABLE8-ftp_cleanup.patch) = a710fbb1ae4d24927ce88c46d394fc585ae2a325
+Size (squid-2.5.8-2005022000/squid-2.5.STABLE8-ftp_cleanup.patch) = 4532 bytes
+SHA1 (squid-2.5.8-2005022000/squid-2.5.STABLE8-relaxed_header_parser.patch) = db757dc98f295631a50119b39d873c0d8d9d1c71
+Size (squid-2.5.8-2005022000/squid-2.5.STABLE8-relaxed_header_parser.patch) = 3217 bytes
+SHA1 (squid-2.5.8-2005022000/squid-2.5.STABLE8-gcc4.patch) = d200cc77e44f4c0295add906140b29d604ffdf83
+Size (squid-2.5.8-2005022000/squid-2.5.STABLE8-gcc4.patch) = 12128 bytes
 SHA1 (patch-aa) = 3e6fb677125eec276fdfa62336c134f26e1e1edd
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0
