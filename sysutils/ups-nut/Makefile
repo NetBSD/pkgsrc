@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2002/05/22 18:02:32 fredb Exp $
+# $NetBSD: Makefile,v 1.21 2002/07/03 11:57:12 lukem Exp $
 #
 
-DISTNAME=		nut-0.45.5
-PKGNAME=		ups-nut-0.45.5
-PKGREVISION=		1
+DISTNAME=		nut-0.50.0
+PKGNAME=		ups-nut-0.50.0
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.exploits.org/nut/release/
 
@@ -74,12 +73,14 @@ post-install:
 		${INSTALL_SCRIPT} ${WRKDIR}/$${script}			\
 			${PREFIX}/etc/rc.d/$${script};			\
 	done
-	${INSTALL_DATA_DIR} ${NUT_DOCDIR} ${NUT_DOCDIR}/cables
-	${INSTALL_DATA} ${WRKSRC}/docs/cables/*.txt ${NUT_DOCDIR}/cables
-	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${NUT_DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/FAQ ${NUT_DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/Changes.trust ${NUT_DOCDIR}
+	${INSTALL_DATA_DIR} ${NUT_DOCDIR}
+	${INSTALL_DATA_DIR} ${NUT_DOCDIR}/cables ${NUT_DOCDIR}/drivers
 	${INSTALL_DATA} ${WRKSRC}/README ${NUT_DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/FAQ ${NUT_DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/driver.list ${NUT_DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${NUT_DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/cables/*.txt ${NUT_DOCDIR}/cables
+	${INSTALL_DATA} ${WRKSRC}/docs/drivers/*.txt ${NUT_DOCDIR}/drivers
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
