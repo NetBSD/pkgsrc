@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4197 2003/12/20 04:55:44 grant Exp $
+$NetBSD: CHANGES,v 1.4198 2003/12/20 05:20:42 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5255,3 +5255,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkg_install to 20031220 [grant 2003-12-20]
 	Updated pax to 20031220 [grant 2003-12-20]
 	Updated mtree to 20031220 [grant 2003-12-20]
+	Updated nabi to 0.12 [xtraeme 2003-12-20]
