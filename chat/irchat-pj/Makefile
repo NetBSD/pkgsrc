@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/03/14 08:19:18 uebayasi Exp $
+# $NetBSD: Makefile,v 1.6 2004/06/12 02:11:42 grant Exp $
 
 DISTNAME=	irchat-pj-2.4.24.22
 CATEGORIES=	chat
@@ -20,5 +20,8 @@ INSTALL_TARGET=	install-package
 .else
 PKG_FAIL_REASON+= "Unknown Emacs flavor"
 .endif
+
+LIBS.SunOS+=	-lnsl -lsocket
+MAKE_ENV+=	LIBS="${LIBS}"
 
 .include "../../mk/bsd.pkg.mk"
