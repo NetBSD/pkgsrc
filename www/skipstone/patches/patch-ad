@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/08/09 07:56:24 simonb Exp $
+$NetBSD: patch-ad,v 1.2 2002/01/24 13:47:03 wiz Exp $
 
---- src/mozilla.cpp.orig	Thu Jul 19 15:01:42 2001
-+++ src/mozilla.cpp	Thu Aug  9 17:09:07 2001
+--- src/mozilla.cpp.orig	Fri Dec 28 23:27:52 2001
++++ src/mozilla.cpp
 @@ -3,6 +3,7 @@
   *							*
   *  released under the GPL				*/
@@ -10,27 +10,3 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/08/09 07:56:24 simonb Exp $
  #include <gtk/gtk.h>
  #include <sys/types.h>
  
-@@ -121,7 +122,11 @@
-      if (NS_FAILED(rv) || !ds) return NS_ERROR_FAILURE;
-      nsCOMPtr<nsIDocShellHistory> dsHistory = do_QueryInterface (ds);
-      if (!dsHistory) return NS_ERROR_FAILURE;
-+#ifdef NS_WITH_SERVICE
-      NS_WITH_SERVICE(nsIGlobalHistory, history, NS_GLOBALHISTORY_CONTRACTID, &rv);
-+#else
-+     nsCOMPtr < nsIGlobalHistory > history = do_GetService(NS_GLOBALHISTORY_CONTRACTID, &rv);
-+#endif
-      if (history) dsHistory->SetGlobalHistory(history);
-      return rv;
- }
-@@ -176,7 +181,11 @@
- {
- 
-      	nsresult result = FALSE;
-+#ifdef NS_WITH_SERVICE
- 	NS_WITH_SERVICE(nsIPrintOptions, options, kPrintOptionsCID, &result);
-+#else
-+	nsCOMPtr < nsIPrintOptions > options = do_GetService(kPrintOptionsCID, &result);
-+#endif
- 	if (NS_FAILED(result)) return NS_ERROR_FAILURE;
- 
- 	if (info->Pages)
