@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $Id: pkg_tarup_all,v 1.2 2003/09/16 23:19:47 erh Exp $
+# $Id: pkg_tarup_all,v 1.3 2004/04/20 16:26:07 wiz Exp $
 #
 # Tar up installed package plus dependencies
 #
@@ -21,7 +21,7 @@ PKG_INFO=${PKG_INFO:-@PKG_INFO@}
 
 if [ `${ID} -u` != 0 ]; then
 	${ECHO} "Becoming root@`/bin/hostname` to create binary packages"
-	${ECHO} -n "`${ECHO} ${SU} | ${AWK} '{ print $$1 }'` ";\
+	${ECHO} -n "`${ECHO} ${SU} | ${AWK} '{ print $1 }'` ";\
 	exec ${SU} root -c "$0 $@"
 fi
 
