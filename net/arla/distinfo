@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2002/09/25 00:06:34 jlam Exp $
+$NetBSD: distinfo,v 1.9 2002/10/07 19:01:24 wennmach Exp $
 
 SHA1 (arla-0.35.9.tar.gz) = e61f73dced5ec2951d7f0641bfdd6e1acb2cacaa
 Size (arla-0.35.9.tar.gz) = 1341786 bytes
@@ -7,7 +7,7 @@ SHA1 (patch-ad) = c5c33c0daf8174b2f8f76119f97725cd61015bb6
 SHA1 (patch-ae) = f9255bc814f38cb8309380a44c1942d3d2cb233e
 SHA1 (patch-af) = 90b230d2f462a01528c157352e257e3c3e58c7b5
 SHA1 (patch-ah) = 8386d4062aedbfe24c66cad84cfdcf3a2617848e
-SHA1 (patch-ak) = 2ff053009ac94ea23b24494462e79e7507c0c1cb
+SHA1 (patch-ak) = f48e7885a87cb4eda21ff11e933165806a598302
 SHA1 (patch-as) = 28d61906be25fc803882d4ccbe584f57e51dec63
 SHA1 (patch-at) = 190da9b9d9da90166845383856508187d9d1ca8f
 SHA1 (patch-bd) = b57dceb3e40b82c199c599152b5273cd2555dbe8
