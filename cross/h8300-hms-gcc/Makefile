@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/09/17 19:40:06 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/12/26 13:16:31 seb Exp $
 
 DISTNAME=		gcc-core-3.1
 PKGNAME=		cross-h8300-hms-gcc-3.1
@@ -31,6 +31,8 @@ CONFIGURE_ARGS+=	--with-newlib
 CONFIGURE_SCRIPT=	${SRCDIR}/configure
 SRCDIR=			${WRKDIR}/gcc-3.1
 ALL_TARGET=		CFLAGS="-O2 -fomit-frame-pointer" all
+INFO_DIR=		${H8300_PREFIX:S|${PREFIX}/||}/gcc
+INFO_FILES=             cpp.info cppinternals.info gcc.info gccint.info
 
 USE_PKGSRC_GCC=		# defined
 
