@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2003/01/30 12:14:32 drochner Exp $
+# $NetBSD: Makefile,v 1.16 2003/02/14 16:59:53 wiz Exp $
 
-DISTNAME=		cadaver-0.20.5
+DISTNAME=		cadaver-0.21.0
 CATEGORIES=		www
 MASTER_SITES=		http://www.webdav.org/cadaver/
 
@@ -14,7 +14,7 @@ USE_BUILDLINK2=		YES
 ALL_TARGET=		cadaver
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-netrc
-CONFIGURE_ARGS+=	--with-libxml1
+CONFIGURE_ARGS+=	--with-libxml2
 CONFIGURE_ARGS+=	--with-ssl=yes
 
 # We don't need curses, just termcap.
@@ -23,7 +23,7 @@ LIBS+=			-ltermcap
 
 .include "../../devel/readline/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
-.include "../../textproc/libxml/buildlink2.mk"
+.include "../../textproc/libxml2/buildlink2.mk"
 .include "../../www/neon/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
