@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2004/02/08 03:00:29 jlam Exp $
+# $NetBSD: Makefile,v 1.74 2004/02/15 21:33:15 sketch Exp $
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
 # upgrade this package you *must* test it on a system *without* Kerberos
@@ -157,7 +157,8 @@ do-install:
 	${INSTALL_DATA_DIR} ${DOC_DIR}
 	${CP} -R ${WRKSRC}/docs/* ${DOC_DIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DOC_DIR}
-	${CHMOD} -R a=rX ${DOC_DIR}
+	${FIND} ${DOC_DIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${FIND} ${DOC_DIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
 
 .if !defined(IMAP_UW_NO_SSL) || ${IMAP_UW_NO_SSL} != "YES"
 .include "../../security/openssl/buildlink2.mk"
