@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.20 2002/12/08 23:19:17 cjep Exp $
+# $NetBSD: Makefile,v 1.21 2002/12/14 02:51:00 schmonz Exp $
 # FreeBSD Id: ports/net/djbdns/Makefile,v 1.4 2000/09/28 18:18:41 nbm Exp
 
 DISTNAME=	djbdns-1.05
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://cr.yp.to/djbdns/					\
 		ftp://cr.yp.to/djbdns/					\
-		ftp://ftp.innominate.org/pub/pape/djb/			\
+		http://smarden.org/pape/djb/manpages/			\
 		http://www.hungry.com/~fn/				\
 		http://tinydns.org/
 DISTFILES=	${DISTNAME}.tar.gz					\
@@ -28,10 +29,12 @@ NO_BIN_ON_FTP=	${RESTRICTED}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}				\
 		${DISTNAME}-man-${MANVERSION}.tar.gz
 
+REPLACE_PERL=	*.pl
+
 ALL_TARGET=	it
 INSTALL_TARGET=	setup check
 
-MANVERSION=	20010212
+MANVERSION=	20021211
 
 .if (${MACHINE_ARCH} == "arm32" || ${MACHINE_ARCH} == "arm")
 .if (${CFLAGS:M-O2} == "-O2")
@@ -40,10 +43,8 @@ CFLAGS:=        ${CFLAGS:S/-O2/-O0/}
 .endif
 
 post-extract:
-	${SED} "s|/usr/bin/perl|${LOCALBASE}/bin/perl|"			\
-		${DISTDIR}/tinydns-log.pl.txt > ${WRKDIR}/tinydns-log.pl
-	${SED} "s|/usr/bin/perl|${LOCALBASE}/bin/perl|"			\
-		${DISTDIR}/dnscache-log.pl.txt > ${WRKDIR}/dnscache-log.pl
+	@${CP} ${DISTDIR}/tinydns-log.pl.txt ${WRKSRC}/tinydns-log.pl
+	@${CP} ${DISTDIR}/dnscache-log.pl.txt ${WRKSRC}/dnscache-log.pl
 
 post-patch:
 	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
@@ -51,18 +52,11 @@ post-patch:
 	${ECHO} ${PREFIX} > ${WRKSRC}/conf-home
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/tinydns-log.pl ${PREFIX}/bin/tinydns-log
-	${INSTALL_SCRIPT} ${WRKDIR}/dnscache-log.pl ${PREFIX}/bin/dnscache-log
+	${INSTALL_SCRIPT} ${WRKSRC}/tinydns-log.pl ${PREFIX}/bin/tinydns-log
+	${INSTALL_SCRIPT} ${WRKSRC}/dnscache-log.pl ${PREFIX}/bin/dnscache-log
 	${INSTALL_DATA} ${WRKSRC}/dnsroots.global ${PREFIX}/etc/dnsroots.global
-	cd ${WRKDIR}/djbdns-man && ${INSTALL_MAN} dnsfilter.1 dnsip.1	\
-	dnsipq.1 dnsmx.1 dnsname.1 dnsq.1 dnsqr.1 dnstrace.1 dnstxt.1	\
-		${PREFIX}/man/man1
-	cd ${WRKDIR}/djbdns-man && ${INSTALL_MAN} qualification.5	\
-		${PREFIX}/man/man5
-	cd ${WRKDIR}/djbdns-man && ${INSTALL_MAN} axfr-get.8 axfrdns.8	\
-	dnscache-conf.8 dnscache.8 pickdns-conf.8 pickdns-data.8	\
-	pickdns.8 rbldns-conf.8 rbldns-data.8 rbldns.8 tinydns-conf.8	\
-	tinydns-data.8 tinydns.8 walldns-conf.8 walldns.8		\
-		${PREFIX}/man/man8
+	cd ${WRKDIR}/djbdns-man; for i in 1 5 8; do			 \
+	for j in *.$$i; do ${INSTALL_MAN} $$j ${PREFIX}/man/man$$i; done \
+	done
 
 .include "../../mk/bsd.pkg.mk"
