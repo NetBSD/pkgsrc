@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 1998/08/27 14:06:09 garbled Exp $
+$NetBSD: patch-aa,v 1.5 1998/11/24 00:31:07 hubertf Exp $
 
 --- Makeflags.orig	Mon Jul 14 20:32:13 1997
 +++ Makeflags	Mon Aug  3 00:50:27 1998
@@ -31,7 +31,7 @@ $NetBSD: patch-aa,v 1.4 1998/08/27 14:06:09 garbled Exp $
 +SOUNDOBJS = Maelstrom_sound.o Mac_Resource.o soundres.o mixer.o shared.o myerror.o
 +
 +#CXX = c++
-+OPTIMIZE =
++OPTIMIZE = -O6
 +X11INCLUDE = -I$(X11BASE)/include
 +INCLUDES = -I$(LOGIC) $(X11INCLUDE) $(XPMINCLUDE)
 +CFLAGS = $(OPTIMIZE) $(INCLUDES) $(FEATURES) \
