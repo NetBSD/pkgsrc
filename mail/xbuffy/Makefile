@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/05 02:04:49 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/06 16:04:18 agc Exp $
 #
 
 DISTNAME=	xbuffy-3.4
@@ -11,7 +11,7 @@ GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 
-CPPFLAGS+=	-I${PREFIX}/include
+CPPFLAGS+=	-I${X11BASE}/include
 CPPFLAGS+=	-Wall
 
 post-install:
