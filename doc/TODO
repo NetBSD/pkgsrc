@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1529 2004/03/26 04:20:20 taca Exp $
+$NetBSD: TODO,v 1.1530 2004/03/27 22:07:32 tron Exp $
 
 Suggested new packages
 ======================
@@ -321,7 +321,6 @@ Suggested package updates
 	o scribus-1.1.5
 	o scummvm-0.6.0
 	o sendfile-20010424
-	o sendmail-8.12.11
 	o siag-3.6.0
 	o skill-4.1.1
 	o skkinput-2.06.4
