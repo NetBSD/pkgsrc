@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.8 2004/03/21 01:06:37 grant Exp $
+# $NetBSD: bootstrap,v 1.9 2004/03/28 01:55:17 grant Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -45,16 +45,18 @@ pkgsrcdir=/usr/pkgsrc
 ignorecasecheck=no
 ignoreusercheck=no
 
+# where the building takes place
+wrkdir=work # default: relative to pkgsrc/bootstrap
+bootstrapdir=`pwd`
+
 usage="Usage: $0 "'
+    [ --workdir=<workdir> ]
     [ --prefix=<prefix> ]
     [ --pkgdbdir=<pkgdbdir> ]
     [ --pkgsrcdir=<pkgsrcdir> ]
     [ --ignore-case-check ]
     [ --ignore-user-check ]
     [ --help ]'
-
-# where the building takes place, relative to pkgsrc/bootstrap.
-wrkdir=work
 
 # this replicates some of the logic in bsd.prefs.mk. until
 # bootstrap-pkgsrc is merged into pkgsrc, we need to determine the
@@ -130,7 +132,7 @@ opsys_finish()
 			ln -sf /usr /usr/X11R6
 		fi
 		if [ ! -z $imakeopts ]; then
-			echo "IMAKEOPTS+=$imakeopts" >> mk.conf.example
+			echo "IMAKEOPTS+=$imakeopts" >> ${MKCONF_EXAMPLE}
 		fi
 		patch -d / --forward --quiet -E -p0 \
 			< files/irix.patch 2>/dev/null || true
@@ -336,6 +338,7 @@ check_prog whoamiprog whoami
 
 while [ $# -gt 0 ]; do
 	case $1 in
+	--workdir=*)	wrkdir=`echo $1 | $sedprog -e 's|--workdir=||'` ;;
 	--prefix=*)	prefix=`echo $1 | $sedprog -e 's|--prefix=||'` ;;
 	--pkgdbdir=*)	pkgdbdir=`echo $1 | $sedprog -e 's|--pkgdbdir=||'` ;;
 	--pkgsrcdir=*)	pkgsrcdir=`echo $1 | $sedprog -e 's|--pkgsrcdir=||'` ;;
@@ -347,6 +350,22 @@ while [ $# -gt 0 ]; do
 	esac
 	shift
 done
+
+if [ ! -d ${wrkdir} ]; then
+	if mkdir ${wrkdir}; then
+		:
+	else
+		echo "Could not create the working directory \"${wrkdir}\". Try $0 -h.";
+		exit 1
+	fi
+fi
+if touch ${wrkdir}/.writeable; then
+	:
+else
+	echo "\"${wrkdir}\" is not writeable. Try $0 -h.";
+	exit 1
+fi
+echo "Working directory is: ${wrkdir}"
 
 is_root
 if [ $? = 1 ]; then
@@ -367,7 +386,7 @@ BINGRP=$group
 LIBOWN=$user
 LIBGRP=$group
 MANOWN=$user
-MANGRP=$group" > Makefile.inc
+MANGRP=$group" > ${wrkdir}/Makefile.inc
 fi
 
 # make sure we're using a case-sensitive file system on Darwin
@@ -398,25 +417,27 @@ PKG_DBDIR=$pkgdbdir; export PKG_DBDIR
 LOCALBASE=$prefix; export LOCALBASE
 
 # set up an example mk.conf file
-echo_msg "Creating sample mk.conf"
-echo "# Example /etc/mk.conf file produced by bootstrap-pkgsrc" > mk.conf.example
-echo "# `date`" >> mk.conf.example
-echo "" >> mk.conf.example
-echo ".ifdef BSD_PKG_MK	# begin pkgsrc settings" >> mk.conf.example
-echo "" >> mk.conf.example
+MKCONF_EXAMPLE=${wrkdir}/mk.conf.example
+export MKCONF_EXAMPLE
+echo_msg "Creating mk.conf.example in ${wrkdir}"
+echo "# Example /etc/mk.conf file produced by bootstrap-pkgsrc" > ${MKCONF_EXAMPLE}
+echo "# `date`" >> ${MKCONF_EXAMPLE}
+echo "" >> ${MKCONF_EXAMPLE}
+echo ".ifdef BSD_PKG_MK	# begin pkgsrc settings" >> ${MKCONF_EXAMPLE}
+echo "" >> ${MKCONF_EXAMPLE}
 
 # IRIX64 needs to be set to IRIX, for example
 if [ "$set_opsys" = "yes" ]; then
-	echo "OPSYS=$opsys" >> mk.conf.example
+	echo "OPSYS=$opsys" >> ${MKCONF_EXAMPLE}
 fi
 
 if [ ! -z "$abi" ]; then
-	echo "ABI=$abi" >> mk.conf.example
+	echo "ABI=$abi" >> ${MKCONF_EXAMPLE}
 fi
 
 # save environment in example mk.conf
-echo "PKG_DBDIR=$pkgdbdir" >> mk.conf.example
-echo "LOCALBASE=$prefix" >> mk.conf.example
+echo "PKG_DBDIR=$pkgdbdir" >> ${MKCONF_EXAMPLE}
+echo "LOCALBASE=$prefix" >> ${MKCONF_EXAMPLE}
 
 # create directories
 mkdir_p $prefix $pkgdbdir $prefix/sbin
@@ -425,22 +446,24 @@ mkdir_p $prefix/man/man8 $prefix/man/cat8
 
 # bootstrap make and *.mk files
 mkdir_p $prefix/share/mk $prefix/lib
-(cd bmake/mk;
-	if [ -f ../../mods/mk/$opsys.sys.mk ]; then
-		run_cmd "$cpprog ../../mods/mk/$opsys.sys.mk $prefix/share/mk/sys.mk"
+copy_src bmake bmake
+
+(cd ${wrkdir}/bmake/mk;
+	if [ -f ${bootstrapdir}/mods/mk/$opsys.sys.mk ]; then
+		run_cmd "$cpprog ${bootstrapdir}/mods/mk/$opsys.sys.mk $prefix/share/mk/sys.mk"
 	else
-		run_cmd "$cpprog ../../mods/mk/generic.sys.mk $prefix/share/mk/sys.mk"
+		run_cmd "$cpprog ${bootstrapdir}/mods/mk/generic.sys.mk $prefix/share/mk/sys.mk"
 	fi
 	run_cmd "$cpprog bsd.*.mk $prefix/share/mk")
 
 if [ -f mods/mk/$opsys.bsd.lib.mk ] ;  then
-	run_cmd "$cpprog bmake/mk/bsd.lib.mk bmake/mk/bsd.lib.mk.orig"
-	run_cmd "$cpprog mods/mk/$opsys.bsd.lib.mk bmake/mk/bsd.lib.mk"
+	run_cmd "$cpprog ${wrkdir}/bmake/mk/bsd.lib.mk ${wrkdir}/bmake/mk/bsd.lib.mk.orig"
+	run_cmd "$cpprog mods/mk/$opsys.bsd.lib.mk ${wrkdir}/bmake/mk/bsd.lib.mk"
 fi
 
-run_cmd "$cpprog bmake/mk/bsd.man.mk bmake/mk/bsd.man.mk.orig"
+run_cmd "$cpprog ${wrkdir}/bmake/mk/bsd.man.mk ${wrkdir}/bsd.man.mk.orig"
 if [ -f mods/mk/$opsys.bsd.man.mk ] ;  then
-	run_cmd "$cpprog mods/mk/$opsys.bsd.man.mk bmake/mk/bsd.man.mk"
+	run_cmd "$cpprog mods/mk/$opsys.bsd.man.mk ${wrkdir}/bsd.man.mk"
 	run_cmd "$cpprog mods/mk/$opsys.bsd.man.mk $prefix/share/mk/bsd.man.mk"
 fi
 
@@ -459,7 +482,7 @@ if [ -f mods/mk/$opsys.bsd.sys.mk ]; then
 fi	
 	
 case "$opsys" in
-NetBSD)	run_cmd "$cpprog mods/bmake/Makefile.in bmake/Makefile.in"
+NetBSD)	run_cmd "$cpprog mods/bmake/Makefile.in ${wrkdir}/bmake/Makefile.in"
 	;;
 esac
 
@@ -475,7 +498,6 @@ if [ "$need_fixed_strip" = "yes" ] ; then
 fi
 
 echo_msg "Installing bmake"
-copy_src bmake bmake
 run_cmd "(cd $wrkdir/bmake; $shprog ./configure --prefix=$prefix --with-default-sys-path=$prefix/share/mk $configargs && make -f makefile.boot bootstrap && env BINDIR=$prefix/bin MANDIR=$prefix/man $BSTRAP_ENV ./bmake -f Makefile install)"
 
 # build libnbcompat
@@ -496,7 +518,7 @@ pkg_install_args="$pkg_install_args --with-ftp=$prefix/bin/ftp"
 
 FETCH_CMD=$prefix/bin/ftp
 export FETCH_CMD
-echo "FETCH_CMD=$prefix/bin/ftp" >> mk.conf.example
+echo "FETCH_CMD=$prefix/bin/ftp" >> ${MKCONF_EXAMPLE}
 
 # bootstrap digest
 echo_msg "Installing digest"
@@ -516,7 +538,7 @@ case "$need_pax" in
 yes)	echo_msg "Installing pax"
 	copy_src ../archivers/pax/files pax
 	run_cmd "(cd $wrkdir/pax; env $BSTRAP_ENV CPPFLAGS='-I../libnbcompat' LDFLAGS='-L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix && $prefix/bin/bmake && $prefix/bin/bmake install)"
-	echo "PAX=$prefix/bin/pax" >> mk.conf.example
+	echo "PAX=$prefix/bin/pax" >> ${MKCONF_EXAMPLE}
 	pkg_install_args="$pkg_install_args --with-pax=$prefix/bin/pax --with-tar=$prefix/bin/tar"
 	;;
 *)
@@ -540,7 +562,7 @@ case "$need_sed" in
 yes)	echo_msg "Installing sed"
 	copy_src ../textproc/nbsed/files sed
 	run_cmd "(cd $wrkdir/sed; env $BSTRAP_ENV $shprog ./configure -C --prefix=$prefix && make && make install)"
-	echo "SED=$prefix/bin/nbsed" >> mk.conf.example
+	echo "SED=$prefix/bin/nbsed" >> ${MKCONF_EXAMPLE}
 	;;
 esac
 
@@ -560,15 +582,16 @@ echo_msg "Installing packages(7) man page"
 # opsys specific fiddling
 opsys_finish
 
-echo "" >> mk.conf.example
-echo ".endif			# end pkgsrc settings" >> mk.conf.example
+echo "" >> ${MKCONF_EXAMPLE}
+echo ".endif			# end pkgsrc settings" >> ${MKCONF_EXAMPLE}
 
-echo "Please remember to add $prefix/bin to your PATH environment variable."
-echo "If necessary, please remember to add $prefix/man to your MANPATH environment variable."
-echo "Please remember to set FETCH_CMD in /etc/mk.conf to $prefix/bin/ftp"
 echo ""
-echo "An example mk.conf file has been created for you in mk.conf.example"
-echo "with the settings you provided to bootstrap pkgsrc."
+echo "Please remember to add $prefix/bin to your PATH environment variable"
+echo "and $prefix/man to your MANPATH environment variable, if necessary."
+echo ""
+echo "An example mk.conf file \"${MKCONF_EXAMPLE}\" with the settings you"
+echo "provided to \"bootstrap\" has been created for you."
+echo "Please copy ${MKCONF_EXAMPLE} to /etc/mk.conf."
 echo ""
 echo "You can find extensive documentation of the NetBSD Packages Collection"
 echo "in $pkgsrcdir/Packages.txt and packages(7)."
