@@ -3,6 +3,7 @@
 # Date created:         6 November 1994
 # Whom:                 jmz
 #
+# $NetBSD: Makefile,v 1.2 1998/01/12 11:47:43 agc Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/08/13 23:29:52 jmz Exp
 #
 
