@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2000/11/03 08:40:24 skrll Exp $
+$NetBSD: patch-ab,v 1.3 2000/12/05 18:32:04 drochner Exp $
 
---- configs/netbsd-g++-static.orig	Wed Oct  4 10:55:23 2000
-+++ configs/netbsd-g++-static
-@@ -1,20 +1,21 @@
+--- configs/netbsd-g++-static.orig	Wed Nov  8 18:06:36 2000
++++ configs/netbsd-g++-static	Thu Nov 30 13:01:14 2000
+@@ -1,21 +1,22 @@
  # Compiling
  INTERFACE_DECL_PATH 	= .
 -SYSCONF_CXX		= g++
@@ -10,6 +10,7 @@ $NetBSD: patch-ab,v 1.2 2000/11/03 08:40:24 skrll Exp $
 +SYSCONF_CXX		= c++
 +SYSCONF_CC		= cc
 +SYSCONF_CXX_LIB		= ${LIBTOOL} --mode=compile c++
+ DASHCROSS		= 
  
  # Compiling with support libraries
  SYSCONF_CXXFLAGS_X11	= -I/usr/X11R6/include
@@ -30,7 +31,7 @@ $NetBSD: patch-ab,v 1.2 2000/11/03 08:40:24 skrll Exp $
  
  # Linking with support libraries
  # X11
-@@ -25,19 +26,16 @@
+@@ -26,19 +27,16 @@
  SYSCONF_LIBS_QT		= -lqt$(QT_THREAD_SUFFIX)
  SYSCONF_LIBS_QT_OPENGL	= 
  # OpenGL
@@ -52,12 +53,12 @@ $NetBSD: patch-ab,v 1.2 2000/11/03 08:40:24 skrll Exp $
  # Flags for threading
  SYSCONF_CFLAGS_THREAD	= 
  SYSCONF_CXXFLAGS_THREAD	= 
-@@ -50,34 +48,23 @@
+@@ -51,34 +49,23 @@
  # UI compiler
  SYSCONF_UIC		= $(QTDIR)/bin/uic
  
 -# Linking shared libraries
--#   - Build the $(TARGET) library, eg. lib$(TARGET).so.2.0.1
+-#   - Build the $(TARGET) library, eg. lib$(TARGET).so.2.2.2
 +# Linking libtool libraries
 +#   - Build the $(TARGET) library, eg. lib$(TARGET).la
  #   - Place target in $(DESTDIR) - which has a trailing /

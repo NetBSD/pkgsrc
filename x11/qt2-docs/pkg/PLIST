@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/19 07:42:40 skrll Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/12/05 18:32:04 drochner Exp $
 
 qt2/doc/README
 qt2/doc/README.QT
-qt2/doc/man/man3/PCOPChannel.3
 qt2/doc/man/man3/QAccel.3
 qt2/doc/man/man3/QAction.3
 qt2/doc/man/man3/QActionGroup.3
@@ -53,6 +52,7 @@ qt2/doc/man/man3/QColorGroup.3
 qt2/doc/man/man3/QComboBox.3
 qt2/doc/man/man3/QCommonStyle.3
 qt2/doc/man/man3/QConstString.3
+qt2/doc/man/man3/QCopChannel.3
 qt2/doc/man/man3/QCursor.3
 qt2/doc/man/man3/QCustomEvent.3
 qt2/doc/man/man3/QCustomMenuItem.3
@@ -332,7 +332,6 @@ qt2/doc/man/man3/QXmlSimpleReader.3
 qt2/doc/man/man3/QXtApplication.3
 qt2/doc/man/man3/QXtWidget.3
 qt2/doc/man/man3/Qt.3
-qt2/doc/man/man3/pcopchannel.3
 qt2/doc/man/man3/qaccel.3
 qt2/doc/man/man3/qaction.3
 qt2/doc/man/man3/qactiongroup.3
@@ -382,6 +381,7 @@ qt2/doc/man/man3/qcolorgroup.3
 qt2/doc/man/man3/qcombobox.3
 qt2/doc/man/man3/qcommonstyle.3
 qt2/doc/man/man3/qconststring.3
+qt2/doc/man/man3/qcopchannel.3
 qt2/doc/man/man3/qcstring.3
 qt2/doc/man/man3/qcursor.3
 qt2/doc/man/man3/qcustomevent.3
