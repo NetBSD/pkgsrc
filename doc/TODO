@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.369 2003/03/13 07:29:35 wiz Exp $
+$NetBSD: TODO,v 1.370 2003/03/13 23:24:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -148,10 +148,10 @@ Suggested package updates
 	o jove-4.16.0.58 [pkg/19924]
 	o jove-4.16.0.61
 	o koth-0.8.0 [http://www.nongnu.org/koth/]
-	o lbreakout2-2.4.1
+	o lbreakout2-2.4.1 [pkg/20684]
 	o lcms-1.0.9
 	o lesstif-0.93.40
-	o libdvdcss-1.2.6
+	o libdvdcss-1.2.6 [pkg/20692]
 	o libgii-0.8.2
 	o libggi-2.0.2
 	o libole2-2.2.8
@@ -168,7 +168,7 @@ Suggested package updates
 	o midnight-commander-4.6.0
 	o mixer.app-1.8.0
 	o mkfontscale-20020618
-	o mono-0.22
+	o mono-0.23 [pkg/20677]
 	o mpgtx-1.3 [pkg/19082]
 	o mrproject-0.9.1
 	o mrtg-2.9.27
@@ -208,7 +208,7 @@ Suggested package updates
 	o rox-1.2.2
 	o rox-session-0.1.17
 	o rt-2.1.15
-	o ruby-1.6.8
+	o ruby-1.6.8 [pkg/20683, pkg/20686]
 	o rxvt-2.7.9
 	o sablotron-0.97
 	o sane-backends-1.0.11
@@ -233,7 +233,7 @@ Suggested package updates
 	o sun-jre14-1.4.1_02 [pkg/20535]
 	o sweep-0.8.1
 	o swig-1.3.17
-	o sylpheed-claws-0.8.11
+	o sylpheed-claws-0.8.11 [pkg/20679]
 	o t1lib-5.0.0
 	o tcl/tk-8.4.2 [bjoern]
 	o tcpdump-3.7.2
