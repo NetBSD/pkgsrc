@@ -1,16 +1,12 @@
-$NetBSD: patch-ab,v 1.3 2004/09/21 16:58:42 jmmv Exp $
+$NetBSD: patch-ab,v 1.4 2005/01/11 12:36:24 jmmv Exp $
 
---- gnome-session/main.c.orig	2004-08-16 15:36:51.000000000 +0200
-+++ gnome-session/main.c
-@@ -395,6 +395,11 @@ main (int argc, char *argv[])
-   ep = g_strconcat ("DISPLAY=", gdk_get_display (), NULL);
-   putenv (ep);
- 
-+  ep = "XDG_DATA_DIRS=" PREFIX "/share/";
-+  putenv (ep);
-+  ep = "XDG_CONFIG_DIRS=" PKG_SYSCONFDIR "/xdg/";
-+  putenv (ep);
-+
-   ignore (SIGPIPE);
- 
-   /* Need DISPLAY set */
+--- configure.orig	2004-10-12 17:57:32.000000000 +0200
++++ configure
+@@ -24686,6 +24686,7 @@ case "$GNOME_SESSION_LIBS" in
+ 		GNOME_HAVE_SM=no
+ 		;;
+ esac
++GNOME_HAVE_SM=yes
+ echo "$as_me:$LINENO: result: $GNOME_HAVE_SM" >&5
+ echo "${ECHO_T}$GNOME_HAVE_SM" >&6
+ if test "$GNOME_HAVE_SM" = no ; then
