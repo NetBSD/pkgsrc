@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2001/06/04 23:10:35 jtb Exp $
+# $NetBSD: Makefile,v 1.15 2001/07/16 22:04:54 garbled Exp $
 
-DISTNAME=		iozone3_9
-PKGNAME=		iozone-3.09
+DISTNAME=		iozone3_56
+PKGNAME=		iozone-3.56
 CATEGORIES=		benchmarks
-MASTER_SITES=		http://www.iozone.org/src/stable/
+MASTER_SITES=		http://www.iozone.org/src/current/
 EXTRACT_SUFX=		.tar
 
 MAINTAINER=		root@garbled.net
@@ -12,25 +12,25 @@ COMMENT=		Benchmark for file read and write speed
 
 RESTRICTED=		"Publication of derivative works not allowed"
 
-WRKSRC=			${WRKDIR}/src
+WRKSRC=			${WRKDIR}/src/current
 MAKEFILE=		makefile
 
 .include "../../mk/bsd.prefs.mk"
 
 .if (${OPSYS} == "NetBSD")
-  ALL_TARGET=		NetBSD
+  ALL_TARGET=		netbsd
 .elif (${OPSYS} == "SunOS")
   ALL_TARGET=		Solaris
 .endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/iozone ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/iozone.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKDIR}/docs/iozone.1 ${PREFIX}/man/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/IOzone
 	${INSTALL_DATA} ${WRKDIR}/docs/IOzone_ps.gz ${PREFIX}/share/doc/IOzone
 
 benchmark:
-	@(cd ${WRKSRC}; ./iozone 100 | tee iozone.out)
+	@(cd ${WRKSRC}; ./iozone -Ea | tee iozone.out)
 
 results:
 	@${MKDIR} /tmp/benches/`domainname`
