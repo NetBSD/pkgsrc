@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.66 2004/06/21 16:13:23 martti Exp $
+$NetBSD: distinfo,v 1.67 2004/06/22 05:12:44 martti Exp $
 
 SHA1 (postfix/postfix-2.1.3.tar.gz) = 1c08947afa33a1cf1477954d906aa8d95922ea6f
 Size (postfix/postfix-2.1.3.tar.gz) = 1971632 bytes
 SHA1 (postfix/postfix-2.1.1-canonical_classes.diff) = f97f8879a7a047db062ba8f53f71c71b7d811667
 Size (postfix/postfix-2.1.1-canonical_classes.diff) = 9645 bytes
-SHA1 (postfix/tls+ipv6-1.24-pf-2.1.1.patch.gz) = cfb133eb1b67554fc228d6afb4c4659efd3d2c73
-Size (postfix/tls+ipv6-1.24-pf-2.1.1.patch.gz) = 256320 bytes
+SHA1 (postfix/tls+ipv6-1.25-pf-2.1.3.patch.gz) = f3d41d0c1d135379df80e727fa2b658a6a6d4c5a
+Size (postfix/tls+ipv6-1.25-pf-2.1.3.patch.gz) = 256591 bytes
 SHA1 (patch-aa) = ca3d2739c35c89056b2f0c19a2cbcb9e018013c6
 SHA1 (patch-ab) = ac4c75fb7a36491edf03b54915c7a47461748b4d
 SHA1 (patch-ac) = b0d26742fe8496b2fd4729a41fecadc275e71cf2
