@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/12/03 15:15:10 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/01/17 03:28:06 minskim Exp $
 #
 
 DISTNAME=	vobcopy-0.5.13
@@ -10,8 +10,12 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://lpn.rnbhq.org/projects/c/c.shtml
 COMMENT=	Copies DVD .vob files to harddisk
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 BUILD_TARGET=	vobcopy
 USE_BUILDLINK3=	yes
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vobcopy ${PREFIX}/bin
