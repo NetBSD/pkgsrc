@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2000/02/18 11:04:10 itojun Exp $
+# $NetBSD: Makefile,v 1.20 2000/07/13 07:30:02 itojun Exp $
 #
 
 DISTNAME=       mpg123-0.59r
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.mpg123.de/mpg123/ \
 		http://www-ti.informatik.uni-tuebingen.de/~hippm/mpg123/
 
 PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES=	mpg123-059r-v6-20000111.diff.gz
+PATCHFILES=	mpg123-059r-v6-20000713a.diff.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	packages@netbsd.org
