@@ -1,4 +1,4 @@
-$NetBSD: STATUS,v 1.31 2004/07/09 15:43:15 xtraeme Exp $
+$NetBSD: STATUS,v 1.32 2004/07/09 15:55:59 xtraeme Exp $
 
 Below is a list of packages known to build on various non-NetBSD
 platforms.  Currently, there are three categories.  If all packages in a given
@@ -115,10 +115,14 @@ handling).
 ---------------------------------------------------------------------------
 Package                 Darwin   FreeBSD   IRIX   Linux   OpenBSD   Solaris
 ---------------------------------------------------------------------------
-meta-pkgs/gnome
+meta-pkgs/gnome			    Y[*]
 misc/koffice3
 x11/kde3
 ---------------------------------------------------------------------------
 'yowza'
 ---------------------------------------------------------------------------
 notes:
+
+[*] meta-pkgs/gnome FreeBSD: it builds cleanly, but there is a problem with
+    gnome-session or any dependent library, which we'll fix soon. [xtraeme]
+
