@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 1999/07/13 17:42:57 bad Exp $
+# $NetBSD: Makefile,v 1.36 1999/08/18 09:00:23 agc Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 #
 
@@ -37,7 +37,9 @@ CONFIGURE_ARGS= 	--prefix=${PREFIX}/${PGUSER} \
 			--with-libs=${PREFIX}/lib \
 			--with-template=`${ECHO} ${OPSYS} | ${TR} '[A-Z]' '[a-z]'`
 
-INSTALL_TARGET=	install install-man
+INSTALL_TARGET=		install install-man
+
+BUILD_DEFS+=		PGGROUP PGUSER
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/07/09 15:58:34 itojun Exp $
+# $NetBSD: Makefile,v 1.17 1999/08/18 09:01:49 agc Exp $
 #
 
 DISTNAME=		qpopper2.53
@@ -16,6 +16,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec \
 			--sysconfdir=${PREFIX}/etc --enable-apop \
 			--with-apop=/etc/apop.auth --with-apopuid=root
+
+BUILD_DEFS+=		QPOPPER_SERVERMODE USE_INET6
 
 .include "../../mk/bsd.prefs.mk"
 
