@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/08/16 10:46:58 rh Exp $
+$NetBSD: distinfo,v 1.2 2002/11/08 23:23:10 rh Exp $
 
-SHA1 (edb-1.0.2.tar.gz) = 3b57c2bf3e4b5a89c9c91c87051c52064b810591
-Size (edb-1.0.2.tar.gz) = 444152 bytes
+SHA1 (edb-1.0.3.tar.gz) = 434c2af89bb2e8c77a18cd4d6019b0237db583aa
+Size (edb-1.0.3.tar.gz) = 464253 bytes
