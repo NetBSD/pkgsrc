@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5467 2004/04/06 15:50:50 jmmv Exp $
+$NetBSD: CHANGES,v 1.5468 2004/04/06 17:04:51 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1822,3 +1822,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added gst-player-0.8.0 [jmmv 2004-04-06]
 	Updated bind9 to 9.2.3nb3 [manu 2004-04-06]
 	Updated gnome2-games to 2.6.0nb1 [jmmv 2004-04-06]
+	Updated kaffe to 1.1.4 [xtraeme 2004-04-06]
+	Added kaffe-nox11-1.1.4 [xtraeme 2004-04-06]
