@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 1999/02/19 04:29:46 tv Exp $
+$NetBSD: md5,v 1.3 1999/10/10 14:33:08 dmcmahill Exp $
 
-MD5 (plotutils-2.1.6.tar.gz) = ce96338fc26359f8389a0f76eff31337
+MD5 (plotutils-2.3.tar.gz) = 12a2708a92ae668a54cc4c00ea4804dd
