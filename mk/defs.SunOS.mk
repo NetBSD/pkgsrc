@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.26 2002/07/15 16:24:01 schmonz Exp $
+# $NetBSD: defs.SunOS.mk,v 1.27 2002/08/28 11:06:19 seb Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -78,6 +78,9 @@ ROOT_CMD?=		${SU} - root -c
 ROOT_GROUP?=		root
 ROOT_USER?=		root
 SERIAL_DEVICES?=	/dev/null
+ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
+ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
+ULIMIT_CMD_memorysize?=	ulimit -v `ulimit -H -v`
 USERADD?=		/usr/sbin/useradd
 
 _DO_LIBINTL_CHECKS=	yes		# perform checks for valid libintl
