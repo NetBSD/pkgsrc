@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.1 2002/11/14 22:21:15 seb Exp $
+$NetBSD: patch-aj,v 1.2 2002/12/11 23:48:59 chris Exp $
 
---- lib/Makefile.in.orig	Wed Nov 13 12:56:52 2002
-+++ lib/Makefile.in
+--- lib/Makefile.in.orig	Wed Dec 11 23:31:59 2002
++++ lib/Makefile.in	Wed Dec 11 23:32:12 2002
 @@ -1,6 +1,6 @@
 -# Makefile.in generated automatically by automake 1.4 from Makefile.am
 +# Makefile.in generated automatically by automake 1.4-p6 from Makefile.am
@@ -11,7 +11,7 @@ $NetBSD: patch-aj,v 1.1 2002/11/14 22:21:15 seb Exp $
  # This Makefile.in is free software; the Free Software Foundation
  # gives unlimited permission to copy and/or distribute it,
  # with or without modifications, as long as this notice is preserved.
-@@ -122,6 +122,7 @@ JAVADOC = @JAVADOC@
+@@ -122,6 +122,7 @@
  JAVAH = @JAVAH@
  JAVAROOT = @JAVAROOT@
  JAVA_INCLUDES = @JAVA_INCLUDES@
@@ -19,7 +19,7 @@ $NetBSD: patch-aj,v 1.1 2002/11/14 22:21:15 seb Exp $
  LIBTOOL = @LIBTOOL@
  LIB_CRYPT = @LIB_CRYPT@
  LIB_DES = @LIB_DES@
-@@ -133,6 +134,7 @@ LIB_SOCKET = @LIB_SOCKET@
+@@ -133,6 +134,7 @@
  LN_S = @LN_S@
  LTGETADDRINFOOBJS = @LTGETADDRINFOOBJS@
  LTGETNAMEINFOOBJS = @LTGETNAMEINFOOBJS@
@@ -27,7 +27,7 @@ $NetBSD: patch-aj,v 1.1 2002/11/14 22:21:15 seb Exp $
  LTSNPRINTFOBJS = @LTSNPRINTFOBJS@
  MAKEINFO = @MAKEINFO@
  NM = @NM@
-@@ -177,10 +179,7 @@ noinst_LIBRARIES = @SASL_STATIC_LIBS@
+@@ -177,10 +179,7 @@
  libsasl2_a_SOURCES = 
  
  common_headers = saslint.h
@@ -39,7 +39,7 @@ $NetBSD: patch-aj,v 1.1 2002/11/14 22:21:15 seb Exp $
  
  lib_LTLIBRARIES = libsasl2.la
  
-@@ -207,7 +206,7 @@ LTLIBRARIES =  $(lib_LTLIBRARIES)
+@@ -207,7 +206,7 @@
  
  libsasl2_la_OBJECTS =  auxprop.lo canonusr.lo checkpw.lo client.lo \
  common.lo config.lo external.lo md5.lo saslutil.lo server.lo \
@@ -48,7 +48,7 @@ $NetBSD: patch-aj,v 1.1 2002/11/14 22:21:15 seb Exp $
  CFLAGS = @CFLAGS@
  COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
  LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
-@@ -219,7 +218,7 @@ getsubopt.c snprintf.c
+@@ -219,7 +218,7 @@
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
  
@@ -57,16 +57,19 @@ $NetBSD: patch-aj,v 1.1 2002/11/14 22:21:15 seb Exp $
  GZIP_ENV = --best
  SOURCES = $(libsasl2_a_SOURCES) $(libsasl2_la_SOURCES)
  OBJECTS = $(libsasl2_a_OBJECTS) $(libsasl2_la_OBJECTS)
-@@ -436,11 +435,8 @@ distclean-generic clean-generic maintain
+@@ -436,13 +435,9 @@
  mostlyclean distclean maintainer-clean
  
  
 -plugin_common.lo: plugin_common.o
+-	rm -f plugin_common.lo
 -	ln -s $(top_builddir)/plugins/plugin_common.lo plugin_common.lo
 -
 -plugin_common.o:
+-	rm -f plugin_common.o
 -	ln -s $(top_builddir)/plugins/plugin_common.o plugin_common.o
 +plugin_common.c:
++	rm -f plugin_common.c
 +	ln -s $(top_builddir)/plugins/plugin_common.c plugin_common.c
  @MACOSX_TRUE@install-exec-hook:
  @MACOSX_TRUE@	$(mkinstalldirs) $(framedir)/Versions/A

@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.1.1.1 2002/10/27 15:09:00 chris Exp $
+$NetBSD: patch-ah,v 1.2 2002/12/11 23:48:59 chris Exp $
 
---- lib/Makefile.am.orig	Fri Oct 11 22:19:04 2002
-+++ lib/Makefile.am	Sun Oct 27 14:32:57 2002
+--- lib/Makefile.am.orig	Wed Dec 11 23:29:42 2002
++++ lib/Makefile.am	Wed Dec 11 23:30:35 2002
 @@ -51,10 +51,7 @@
  libsasl2_a_SOURCES=
  
@@ -14,16 +14,19 @@ $NetBSD: patch-ah,v 1.1.1.1 2002/10/27 15:09:00 chris Exp $
  
  lib_LTLIBRARIES = libsasl2.la
  
-@@ -63,11 +60,8 @@
+@@ -63,13 +60,9 @@
  libsasl2_la_DEPENDENCIES = $(LTLIBOBJS)
  libsasl2_la_LIBADD = $(LTLIBOBJS) $(SASL_DL_LIB) $(LIB_SOCKET)
  
 -plugin_common.lo: plugin_common.o
+-	rm -f plugin_common.lo
 -	ln -s $(top_builddir)/plugins/plugin_common.lo plugin_common.lo
 -
 -plugin_common.o:
+-	rm -f plugin_common.o
 -	ln -s $(top_builddir)/plugins/plugin_common.o plugin_common.o
 +plugin_common.c:
++	rm -f plugin_common.c
 +	ln -s $(top_builddir)/plugins/plugin_common.c plugin_common.c
  
  if MACOSX
