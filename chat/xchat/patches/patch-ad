@@ -1,13 +1,14 @@
-$NetBSD: patch-ad,v 1.1 2001/08/07 14:57:58 tron Exp $
+$NetBSD: patch-ad,v 1.2 2001/08/12 11:08:12 martin Exp $
 
---- src/common/Makefile.in.orig	Wed Jul 25 06:22:38 2001
-+++ src/common/Makefile.in	Tue Aug  7 16:55:04 2001
-@@ -127,7 +127,7 @@
+--- src/fe-text/Makefile.in.orig	Sun Aug 12 12:44:53 2001
++++ src/fe-text/Makefile.in	Sun Aug 12 12:52:14 2001
+@@ -119,7 +119,7 @@
  DEFS = @DEFS@ -I. -I$(srcdir) -I../..
  CPPFLAGS = @CPPFLAGS@
  LDFLAGS = @LDFLAGS@
 -LIBS = @LIBS@
-+LIBS = @LIBS@ -lintl
- libxchatmain_a_LIBADD = 
- @DO_ICONV_FALSE@@DO_PYTHON_TRUE@@USE_OPENSSL_FALSE@@DO_PERL_FALSE@libxchatmain_a_OBJECTS =  \
- @DO_ICONV_FALSE@@DO_PYTHON_TRUE@@USE_OPENSSL_FALSE@@DO_PERL_FALSE@cfgfiles.o \
++LIBS = @LIBS@ ${INTLLIBS}
+ @USE_MYGLIB_FALSE@xchat_text_OBJECTS =  fe-text.o
+ @USE_MYGLIB_TRUE@xchat_text_OBJECTS =  fe-text.o glib.o
+ xchat_text_DEPENDENCIES =  ../common/libxchatmain.a
+
