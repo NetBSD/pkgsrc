@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.733 2002/12/09 11:14:34 ad Exp $
+$NetBSD: CHANGES,v 1.734 2002/12/09 11:44:41 ad Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3872,3 +3872,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Added imapproxy-1.0 [rh 2002-12-09]
 	Added nail-10.3 [cjep 2002-12-09]
 	Added dptutil-3.31 [ad 2002-12-09]
+	Updated exim to 4.10 [ad 2002-12-09]
+	Updated exim-html to 4.10 [ad 2002-12-09]
