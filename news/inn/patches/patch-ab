@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.3 1999/02/11 07:52:43 frueauf Exp $
+
+--- samples/news.daily.in-orig	Fri Jul 24 15:13:00 1998
++++ samples/news.daily.in	Thu Feb 11 08:47:18 1999
+@@ -224,6 +224,9 @@
+ 
+ cd ${PATHETC}
+ 
++## Unlimit
++ulimit -d `ulimit -H -d`
++
+ ##  Show the status of the news system.
+ ${DOSTAT} && {
+     ${INNSTAT}
