@@ -1,14 +1,22 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/30 21:15:44 jmmv Exp $
-bin/java-sablevm
-bin/sablevm
-include/jni.h
-include/jni_system_specific.h
-lib/lib${PKGNAME}.so
-lib/libsablevm.a
-lib/libsablevm.la
-lib/libsablevm.so
-man/man1/java-sablevm.1
-man/man1/sablevm.1
-share/sablevm/AUTHORS
-share/sablevm/LGPL-2.1
-share/sablevm/LICENSE
+@comment $NetBSD: PLIST,v 1.3 2004/05/23 10:25:30 jmmv Exp $
+bin/sablevm-java
+java/sablevm/bin/java-sablevm
+java/sablevm/bin/sablevm
+java/sablevm/include/jni.h
+java/sablevm/include/jni_system_specific.h
+java/sablevm/lib/lib${PKGNAME}.so
+java/sablevm/lib/libsablevm.a
+java/sablevm/lib/libsablevm.la
+java/sablevm/lib/libsablevm.so
+java/sablevm/man/man1/java-sablevm.1
+java/sablevm/man/man1/sablevm.1
+java/sablevm/share/sablevm/AUTHORS
+java/sablevm/share/sablevm/LGPL-2.1
+java/sablevm/share/sablevm/LICENSE
+@dirrm java/sablevm/share/sablevm
+@dirrm java/sablevm/man/man1
+@dirrm java/sablevm/man
+@dirrm java/sablevm/lib
+@dirrm java/sablevm/include
+@dirrm java/sablevm/bin
+@comment in sablevm-classpath: @dirrm java/sablevm
