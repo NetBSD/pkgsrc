@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/11/12 03:39:43 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/24 15:00:22 grant Exp $
 #
 
 DISTNAME=		zebedee-2.3.1
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.winton.org.uk/zebedee/
 COMMENT=		Simple tunneling program for TCP or UDP with encryption
 
 USE_PERL5=		build
-USE_GMAKE=		# defined
+USE_GNU_TOOLS+=		make
 USE_BUILDLINK2=		# defined
 
 MAKE_ENV+=		PERL5=${PERL5}
