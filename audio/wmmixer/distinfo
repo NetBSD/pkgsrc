@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:23:37 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/08 15:48:48 agc Exp $
 
-MD5 (wmmixer-1.0-beta1.tgz) = 40e876f9de228919a9cef252f7c171a5
+SHA1 (wmmixer-1.0-beta1.tgz) = dcef049f9a817b09644930cee99e0989448452a5
+Size (wmmixer-1.0-beta1.tgz) = 18891 bytes
