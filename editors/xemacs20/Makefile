@@ -3,7 +3,7 @@
 # Date created:				26 August 1997
 # Whom:					Michael Elbel (me)
 #
-# $NetBSD: Makefile,v 1.9 1998/01/30 13:57:03 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/02/09 00:27:11 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 #
 
@@ -33,8 +33,6 @@ LIB_DEPENDS=	Xaw3d.6.:${PORTSDIR}/x11/Xaw3d \
 		jpeg.7.:${PORTSDIR}/graphics/jpeg \
 		png.0.:${PORTSDIR}/graphics/png
 
-#USE_GMAKE=	yes
-STRIP=
 HAS_CONFIGURE=	yes
 
 WITH_DIALOGS=	--with-dialogs=athena3d
