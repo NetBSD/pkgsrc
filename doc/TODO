@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.156 2003/01/08 23:25:38 wiz Exp $
+$NetBSD: TODO,v 1.157 2003/01/09 12:42:13 rh Exp $
 
 Suggested new packages
 ======================
@@ -131,7 +131,6 @@ Suggested package updates
 	o gnome2-terminal-2.0.2 [pkg/19415]
 	o gnomeicu-0.99beta
 	o gnuboy-1.0.3 [pkg/19580]
-	o gnumeric-1.0.12
 	o gnuplot-3.7.3 [pkg/19663]
 	o gpa-0.6.0
 	o gpgme-0.4.0
