@@ -8080,6 +8080,73 @@ _ACEOF
 	LIBOBJS="$LIBOBJS statfs.$ac_objext"
 fi
 
+pkg_use_nbcompat_glob=yes
+
+	echo "$as_me:$LINENO: checking if GLOB_NOMATCH and GLOB_ABORTED are defined in glob.h" >&5
+echo $ECHO_N "checking if GLOB_NOMATCH and GLOB_ABORTED are defined in glob.h... $ECHO_C" >&6
+if test "${pkg_cv_GLOB_NOMATCH_ABORTED+set}" = set; then
+  echo $ECHO_N "(cached) $ECHO_C" >&6
+else
+
+		cat >conftest.$ac_ext <<_ACEOF
+#line $LINENO "configure"
+/* confdefs.h.  */
+_ACEOF
+cat confdefs.h >>conftest.$ac_ext
+cat >>conftest.$ac_ext <<_ACEOF
+/* end confdefs.h.  */
+  #include <glob.h>
+int
+main ()
+{
+  int f = GLOB_NOMATCH + GLOB_ABORTED ;
+  ;
+  return 0;
+}
+_ACEOF
+rm -f conftest.$ac_objext
+if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+  (eval $ac_compile) 2>&5
+  ac_status=$?
+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+  (exit $ac_status); } &&
+         { ac_try='test -s conftest.$ac_objext'
+  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+  (eval $ac_try) 2>&5
+  ac_status=$?
+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+  (exit $ac_status); }; }; then
+   pkg_cv_GLOB_NOMATCH_ABORTED=yes
+else
+  echo "$as_me: failed program was:" >&5
+sed 's/^/| /' conftest.$ac_ext >&5
+
+ pkg_cv_GLOB_NOMATCH_ABORTED=no
+fi
+rm -f conftest.$ac_objext conftest.$ac_ext
+
+fi
+echo "$as_me:$LINENO: result: $pkg_cv_GLOB_NOMATCH_ABORTED" >&5
+echo "${ECHO_T}$pkg_cv_GLOB_NOMATCH_ABORTED" >&6
+	if test "x$pkg_cv_GLOB_NOMATCH_ABORTED" = "xyes"; then
+		 pkg_use_nbcompat_glob=no
+	else
+
+		:
+	fi
+
+
+if test $pkg_use_nbcompat_glob = yes; then
+	cat >>confdefs.h <<\_ACEOF
+#define HAVE_NBCOMPAT_GLOB 1
+_ACEOF
+
+
+
+	LIBOBJS="$LIBOBJS glob.$ac_objext"
+fi
+
+
 if test $ac_cv_type_long_long = yes -a $ac_cv_sizeof_off_t -ge 8; then
 
 
