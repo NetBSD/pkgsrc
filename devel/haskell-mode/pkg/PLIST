@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/30 02:29:27 jtb Exp $
-share/emacs/site-lisp/haskell-mode/haskell-decl-scan.el
-share/emacs/site-lisp/haskell-mode/haskell-decl-scan.elc
-share/emacs/site-lisp/haskell-mode/haskell-doc.el
-share/emacs/site-lisp/haskell-mode/haskell-doc.elc
-share/emacs/site-lisp/haskell-mode/haskell-font-lock.el
-share/emacs/site-lisp/haskell-mode/haskell-font-lock.elc
-share/emacs/site-lisp/haskell-mode/haskell-hugs.el
-share/emacs/site-lisp/haskell-mode/haskell-hugs.elc
-share/emacs/site-lisp/haskell-mode/haskell-indent.el
-share/emacs/site-lisp/haskell-mode/haskell-indent.elc
-share/emacs/site-lisp/haskell-mode/haskell-mode.el
-share/emacs/site-lisp/haskell-mode/haskell-mode.elc
-share/emacs/site-lisp/haskell-mode/haskell-simple-indent.el
-share/emacs/site-lisp/haskell-mode/haskell-simple-indent.elc
-@dirrm share/emacs/site-lisp/haskell-mode
+@comment $NetBSD: PLIST,v 1.2 2001/01/28 03:28:00 jtb Exp $
+${LISPDIR}/haskell-decl-scan.el
+${LISPDIR}/haskell-decl-scan.elc
+${LISPDIR}/haskell-doc.el
+${LISPDIR}/haskell-doc.elc
+${LISPDIR}/haskell-font-lock.el
+${LISPDIR}/haskell-font-lock.elc
+${LISPDIR}/haskell-hugs.el
+${LISPDIR}/haskell-hugs.elc
+${LISPDIR}/haskell-indent.el
+${LISPDIR}/haskell-indent.elc
+${LISPDIR}/haskell-mode.el
+${LISPDIR}/haskell-mode.elc
+${LISPDIR}/haskell-simple-indent.el
+${LISPDIR}/haskell-simple-indent.elc
+@unexec rmdir %D/${LISPDIR} 2>/dev/null || true
