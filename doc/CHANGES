@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7313 2004/10/02 01:28:39 wiz Exp $
+$NetBSD: CHANGES,v 1.7314 2004/10/02 04:04:10 simonb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4513,3 +4513,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added firefox-gtk2-bin-java-1.1nb1 [wiz 2004-10-01]
 	Moved tnt-1.2.2 to tnt-mmtl-1.2.2 [dmcmahill 2004-10-01]
 	Updated suse91_base to 9.1nb3 [wiz 2004-10-02]
+	Added metacam-1.2 [simonb 2004-10-02]
