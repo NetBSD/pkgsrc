@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.244 2002/05/22 12:59:50 zuntum Exp $
+# $NetBSD: Makefile,v 1.245 2002/05/31 14:34:50 skrll Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -46,11 +46,14 @@ SUBDIR+=	hanterm
 SUBDIR+=	imwheel
 SUBDIR+=	kde
 SUBDIR+=	kde2
+SUBDIR+=	kde3
 SUBDIR+=	kdebase
 SUBDIR+=	kdebase2
+SUBDIR+=	kdebase3
 SUBDIR+=	kdelibdocs2
 SUBDIR+=	kdelibs
 SUBDIR+=	kdelibs2
+SUBDIR+=	kdelibs3
 SUBDIR+=	keylaunch
 SUBDIR+=	khostchooser
 SUBDIR+=	kterm
