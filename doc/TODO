@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.623 2003/06/06 18:32:18 drochner Exp $
+$NetBSD: TODO,v 1.624 2003/06/07 21:51:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -167,7 +167,7 @@ Suggested package updates
 	o libiconv-1.9.1
 	o libmpeg3-1.5.1
 	o libole2-2.2.8
-	o librsvg2-2.2.2.1
+	o librsvg2-2.3.0 [pkg/21817]
 	o libsigc++-1.2.5
 	o libtool-1.5 [skrll]
 	o lilypond-1.6.10

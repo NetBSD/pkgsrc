@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2451 2003/06/07 17:42:55 jschauma Exp $
+$NetBSD: CHANGES,v 1.2452 2003/06/07 21:51:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2350,7 +2350,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated fftw2 to 2.1.5 [wiz 2003-06-05]
 	Updated fftw to 3.0nb1 [wiz 2003-06-05]
 	Updated gnome2-control-center to 2.2.1nb2 [epg 2003-06-05]
-	Updated gnome-panel to 2.2.1nb2 [epg 2003-06-5]
+	Updated gnome-panel to 2.2.1nb2 [epg 2003-06-05]
 	Updated gpc to 2.1nb2 [jtb 2003-06-06]
 	Updated sylpheed to 0.9.2 [chris 2003-06-06]
 	Updated pim6sd to 20030606a [itojun 2003-06-06]
@@ -2374,5 +2374,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated clamav to 0.54nb2 [jmmv 2003-06-07]
 	Updated plotutils to 2.4.1nb2 [jschauma 2003-06-07]
 	Added plotutils-nox11-2.4.1 [jschauma 2003-06-07]
-	Updated gnuplot to 3.7.3nb1 [jschauma 2003-06-7]
-	Added gnuplot-nox11-3.7.3 [jschauma 2003-06-7]
+	Updated gnuplot to 3.7.3nb1 [jschauma 2003-06-07]
+	Added gnuplot-nox11-3.7.3 [jschauma 2003-06-07]
