@@ -1,8 +1,29 @@
-$NetBSD: patch-ab,v 1.1 2004/12/04 12:03:42 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2005/03/24 16:27:40 christos Exp $
 
---- qsubst.c.orig	2001-04-22 07:35:35.000000000 +0200
-+++ qsubst.c
-@@ -181,7 +181,7 @@ static void limit_above_below(void)
+--- qsubst.c.orig	2001-04-22 01:35:35.000000000 -0400
++++ qsubst.c	2005-03-24 11:23:34.000000000 -0500
+@@ -105,7 +105,7 @@
+ #include <signal.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+-#include <strings.h>
++#include <string.h>
+ #include <termcap.h>
+ #include <termios.h>
+ #include <unistd.h>
+@@ -166,9 +166,9 @@
+   { tstp_self();
+     return;
+   }
+- tcsetattr(0,TCSAFLUSH|TCSASOFT,&orig_tio);
++ tcsetattr(0,TCSAFLUSH,&orig_tio);
+  tstp_self();
+- tcsetattr(0,TCSADRAIN|TCSASOFT,&tio);
++ tcsetattr(0,TCSADRAIN,&tio);
+ }
+ 
+ static void limit_above_below(void)
+@@ -181,7 +181,7 @@
    }
  }
  
@@ -11,3 +32,21 @@ $NetBSD: patch-ab,v 1.1 2004/12/04 12:03:42 wiz Exp $
  {
   return( isascii(c) &&
  	 ( isalnum(c) ||
+@@ -231,7 +231,7 @@
+  tio.c_lflag &= ~(ICANON|ECHOKE|ECHOE|ECHO|ECHONL);
+  tio.c_cc[VMIN] = 1;
+  tio.c_cc[VTIME] = 0;
+- tcsetattr(0,TCSANOW|TCSASOFT,&tio);
++ tcsetattr(0,TCSANOW,&tio);
+  switch (read(0,&c,1))
+   { case -1:
+        break;
+@@ -240,7 +240,7 @@
+     case 1:
+        break;
+   }
+- tcsetattr(0,TCSANOW|TCSASOFT,&otio);
++ tcsetattr(0,TCSANOW,&otio);
+  return(c);
+ }
+ 
