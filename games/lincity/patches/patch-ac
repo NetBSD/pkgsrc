@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.1 2001/12/11 14:45:39 wiz Exp $
+
+--- lcx11.cxx.orig	Fri Feb 26 02:17:54 1999
++++ lcx11.cxx
+@@ -715,7 +715,7 @@
+ #ifdef USE_IMAGES
+   Fgl_putbox_low (display.win, 0, 0,
+ 		  x1, y1, x2 - x1, y2 - y1,
+-		  pixmap, (640 + BORDERX),
++		  (unsigned char *)pixmap, (640 + BORDERX),
+ 		  x1, y1);
+ #else
+   int x, y;
+@@ -1115,7 +1115,9 @@
+ init_icon_pixmap (int type)
+ {
+   unsigned char *g;
++#ifndef USE_IMAGES
+   int x, y;
++#endif
+ #ifdef ALLOW_PIX_DOUBLING
+   if (pix_double)
+     icon_pixmap[type] = XCreatePixmap (display.dpy, display.win
