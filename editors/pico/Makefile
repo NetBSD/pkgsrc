@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2002/10/08 23:31:01 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2002/12/14 04:34:49 hubertf Exp $
 #
 
 DISTNAME=	pine4.44
@@ -7,7 +7,7 @@ CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/ \
 		ftp://ftp.fu-berlin.de/pub/unix/mail/pine/
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.washington.edu/pine/
 COMMENT=	Text editor (ships with Pine), and Pine's text editing lib
 
