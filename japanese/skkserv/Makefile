@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/11/09 05:14:27 itohy Exp $
+# $NetBSD: Makefile,v 1.4 2001/01/26 05:21:45 hubertf Exp $
 
 DISTNAME=	skk9.6
 PKGNAME=	skkserv-3.9.4nb1
@@ -52,7 +52,7 @@ post-build:
 	    ${WRKSRC}/jisyo-tools/skkdic-sort >${WRKDIR}/SKK-JISYO.L
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/skkserv.sh ${PREFIX}/etc/rc.d
+	${INSTALL_SCRIPT} ${WRKDIR}/skkserv.sh ${PREFIX}/etc/rc.d/skkserv
 	${MKDIR} ${PREFIX}/share/skk
 	${INSTALL_DATA} ${WRKDIR}/SKK-JISYO.L ${PREFIX}/share/skk/SKK-JISYO.L
 	${INSTALL_DATA} ${WRKSRC}/skkserv/README ${PREFIX}/share/skk/README.skkserv

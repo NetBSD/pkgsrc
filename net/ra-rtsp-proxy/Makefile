@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/08/18 22:46:45 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2001/01/26 05:21:46 hubertf Exp $
 
 DISTNAME=	rtspd-src-1.0.0.0
 PKGNAME=	ra-rtsp-proxy-1.0.0.0
@@ -38,7 +38,7 @@ post-build:
 	  >${MESSAGE_FILE}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/rtspd.sh ${PREFIX}/etc/rc.d
+	${INSTALL_SCRIPT} ${WRKDIR}/rtspd.sh ${PREFIX}/etc/rc.d/rtspd
 	${INSTALL_MAN} ${WRKSRC}/rtspd.8 ${PREFIX}/man/man8
 	${INSTALL_PROGRAM} ${WRKSRC}/rtspd ${PREFIX}/sbin
 	${MKDIR} ${PREFIX}/share/doc/ra-rtsp-proxy

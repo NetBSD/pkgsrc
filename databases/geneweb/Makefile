@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/08/19 11:25:34 wulf Exp $
+# $NetBSD: Makefile,v 1.3 2001/01/26 05:21:43 hubertf Exp $
 #
 
 DISTNAME=	geneweb-3.07
@@ -53,6 +53,6 @@ do-install:
 		${CP} -Rp setup ${PREFIX}/share/geneweb && \
 		${INSTALL_DATA} a.gwf ${PREFIX}/share/examples/geneweb && \
 		${INSTALL_DATA} only.txt ${PREFIX}/share/examples/geneweb
-		${INSTALL_SCRIPT} ${WRKDIR}/geneweb.sh ${PREFIX}/etc/rc.d
+		${INSTALL_SCRIPT} ${WRKDIR}/geneweb.sh ${PREFIX}/etc/rc.d/geneweb
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/02 11:29:21 sakamoto Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/26 05:21:45 hubertf Exp $
 @cwd ${DICT_DIR}
 @cwd ${DICT_DIR}
 sj3/sj3main.dic
@@ -8,7 +8,7 @@ bin/sj3dic
 bin/sj3mkdic
 bin/sj3serv
 bin/sj3stat
-etc/rc.d/sj3.sh
+etc/rc.d/sj3
 man/ja_JP.EUC/man1/sj3.1
 man/ja_JP.EUC/man1/sj3dic.1
 man/ja_JP.EUC/man1/sj3mkdic.1
