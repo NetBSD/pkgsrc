@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2004/08/10 05:59:01 schmonz Exp $
+# $NetBSD: options.mk,v 1.2 2004/08/22 19:32:51 jlam Exp $
 
 # Legacy options
 #
@@ -7,13 +7,11 @@
 # XXX
 # XXX	EZMLM_IDX_USE_MYSQL	EZMLM_IDX_USE_PGSQL
 #
-.if !defined(PKG_OPTIONS.ezmlm-idx)
-.  if defined(EZMLM_IDX_USE_MYSQL) && !empty(EZMLM_IDX_USE_MYSQL:M[yY][eE][sS])
-PKG_OPTIONS.ezmlm-idx+=	mysql
-.  endif
-.  if defined(EZMLM_IDX_USE_PGSQL) && !empty(EZMLM_IDX_USE_PGSQL:M[yY][eE][sS])
-PKG_OPTIONS.ezmlm-idx+=	pgsql
-.  endif
+.if defined(EZMLM_IDX_USE_MYSQL) && !empty(EZMLM_IDX_USE_MYSQL:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	mysql
+.endif
+.if defined(EZMLM_IDX_USE_PGSQL) && !empty(EZMLM_IDX_USE_PGSQL:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	pgsql
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ezmlm-idx
