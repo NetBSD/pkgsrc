@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7315 2004/10/02 05:27:19 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.7316 2004/10/02 09:04:04 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4515,3 +4515,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated suse91_base to 9.1nb3 [wiz 2004-10-02]
 	Added metacam-1.2 [simonb 2004-10-02]
 	Added gsmc-1.1 [dmcmahill 2004-10-02]
+	Updated oraedit to 0.1.4 [jdolecek 2004-10-02]
