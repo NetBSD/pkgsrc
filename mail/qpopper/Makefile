@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.36 2003/01/28 22:03:38 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2003/03/13 07:23:25 itojun Exp $
 #
 
 DISTNAME=		qpopper${VERSION}
 PKGNAME=		qpopper-${VERSION}
-PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.qualcomm.com/eudora/servers/unix/popper/
 
-PATCH_SITES=		http://www.imasy.or.jp/~ume/ipv6/
-PATCHFILES=		qpopper4.0.4-ipv6-20020502.diff.gz
+PATCH_SITES=		ftp://ftp.kame.net/pub/kame/misc/
+PATCHFILES=		qpopper-4.0.5-ipv6-20030313.diff.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		mellon@fugue.com
