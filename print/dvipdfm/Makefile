@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/10/09 13:27:23 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/09 13:31:20 wiz Exp $
 
 DISTNAME=	dvipdfm-0.13.2c
 CATEGORIES=	print converters
@@ -7,6 +7,8 @@ MASTER_SITES=	ftp://ftp.kettering.edu/pub/outgoing/mwicks/dvipdfm/
 MAINTAINER=	markd@netbsd.org
 HOMEPAGE=	http://gaspra.kettering.edu/dvipdfm
 COMMENT=	DVI to PDF translator
+
+CONFLICTS=	ja-dvipdfm-[0-9]*
 
 WRKSRC=			${WRKDIR}/dvipdfm
 USE_BUILDLINK2=		# defined
