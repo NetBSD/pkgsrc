@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 1999/01/30 14:19:01 tron Exp $
+$NetBSD: patch-ac,v 1.2 1999/01/30 23:59:33 tron Exp $
 
---- configure.orig	Sat Jan 30 15:00:13 1999
-+++ configure	Sat Jan 30 15:06:55 1999
-@@ -2459,7 +2459,7 @@
+--- configure.orig	Sat Jan 16 06:30:00 1999
++++ configure	Sat Jan 30 23:28:08 1999
+@@ -2459,12 +2459,12 @@
   s/@@/%@/; s/@@/@%/; s/@g\$/%g/' > conftest.subs <<\\CEOF
  $ac_vpsub
  $extrasub
@@ -11,3 +11,9 @@ $NetBSD: patch-ac,v 1.1 1999/01/30 14:19:01 tron Exp $
  s%@CPPFLAGS@%$CPPFLAGS%g
  s%@CXXFLAGS@%$CXXFLAGS%g
  s%@DEFS@%$DEFS%g
+ s%@LDFLAGS@%$LDFLAGS%g
+-s%@LIBS@%$LIBS%g
++s%@LIBS@%$LIBS -lSM -lICE%g
+ s%@exec_prefix@%$exec_prefix%g
+ s%@prefix@%$prefix%g
+ s%@program_transform_name@%$program_transform_name%g
