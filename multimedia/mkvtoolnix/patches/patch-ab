@@ -1,0 +1,36 @@
+$NetBSD: patch-ab,v 1.1 2004/07/21 00:04:30 salo Exp $
+
+--- src/mkvinfo.cpp.orig	2004-07-18 18:08:45.000000000 +0200
++++ src/mkvinfo.cpp	2004-07-21 01:08:15.000000000 +0200
+@@ -786,6 +786,10 @@
+             vector<string> &summary) {
+   EbmlMaster *m3;
+   int i3;
++#if MATROSKA_VERSION >= 2
++  string strc;
++#endif
++  
+ 
+   show_element(l3, 3, "Audio track");
+ 
+@@ -1393,6 +1397,10 @@
+ def_handle(cues) {
+   EbmlMaster *m1, *m2, *m3;
+   int i1, i2, i3;
++#if MATROSKA_VERSION >= 2
++  EbmlMaster *m4;
++  int i4;
++#endif
+ 
+   if (verbose < 2) {
+     show_element(l1, 1, "Cues (subentries will be skipped)");
+@@ -1571,6 +1579,9 @@
+   bool fref_found, bref_found;
+   uint32_t lf_tnum;
+   uint64_t lf_timecode;
++#if MATROSKA_VERSION >= 2
++  string strc;
++#endif
+ 
+   show_element(l2, 2, "Block group");
+ 
