@@ -1,77 +1,52 @@
-# New ports collection makefile for:	kinput2-wnn4
-# Version required:	3.0
-# Date created:		19 Dec 1997
-# Whom:			Satoshi TAOKA <taoka@FreeBSD.org>
-#
-# $Id: Makefile,v 1.1.1.1 1999/08/02 11:38:48 sakamoto Exp $
-#
+# $NetBSD: Makefile,v 1.2 1999/08/02 11:41:13 sakamoto Exp $
+# FreeBSD Id: Makefile,v 1.4 1999/06/06 13:19:49 taoka Exp $
 
 DISTNAME=	kinput2-v3
-PKGNAME=	ja-kinput2${INPUT_METHOD}-3.0
-CATEGORIES=	japanese x11
-MASTER_SITES=	ftp://ftp.sra.co.jp/pub/x11/kinput2/ 
+CATEGORIES=	japanese
+MASTER_SITES=	ftp://ftp.sra.co.jp/pub/x11/kinput2/
 
-MAINTAINER=	taoka@FreeBSD.org
+MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 
-LIB_DEPENDS=	${LIB_INPUT_METHOD}
-BUILD_DEPENDS=	${BUILD_INPUT_METHOD}
+USE_IMAKE=	YES
 
-PATCHDIR=	${.CURDIR}/../kinput2-wnn4/patches
-FILESDIR=	${.CURDIR}/../kinput2-wnn4/files
-USE_IMAKE=	yes
+.include "../../mk/bsd.prefs.mk"
+.if defined(USE_CANNA) && ${USE_CANNA} != YES &&	\
+    defined(USE_WNN4) && ${USE_WNN4} != YES &&		\
+    defined(USE_WNN6) && ${USE_WNN6} != YES &&		\
+    defined(USE_SJ3) && ${USE_SJ3} != YES
+IGNORE=	"is ignored. because USE_CANNA,USE_WNN4,USE_WNN6,USE_SJ3 are \"NO\""
+.endif
 
-.if !defined(CANNA) && !defined(SJ3) && !defined(WNN4) && !defined(WNN6)
-# For this port
-WNN4=			yes
+.if !defined(USE_CANNA) || ${USE_CANNA} == YES
+DEPENDS+=	Canna-lib-3.5b2:../../japanese/canna-lib
+KINPUT2_DEF+=	-DUseCanna -Dport_CANNASRC=${LOCALBASE}/include/canna \
+		-Dport_CANNALIB="-L${LOCALBASE}/lib -lcanna16"
 .endif
-#
-# Specifying a velue INPUT_METHOD, and seting values BUILD_DEPENDS,
-# LIB_DEPENDS, etc.
-.if defined(CANNA)
-INPUT_METHOD+=		canna
-LIB_INPUT_METHOD+=	canna16.1:${PORTSDIR}/japanese/Canna
-KINPUT2_DEF+=		-DUseCanna -Dport_CANNASRC=${LOCALBASE}/include \
-			-Dport_CANNALIB="-L${LOCALBASE}/lib -lcanna16"
+
+#.if defined(USE_WNN6) && ${USE_WNN6} == YES
+#DEPENDS+=
+#KINPUT2_DEF+=	-DUseWnn -DUseWnn6 -Dport_WNNINCDIR=$(LOCALBASE)/include/wnn \
+#		-Dport_WNNLIB="-L$(LOCALBASE)/lib -lwnn6 -lcrypt"
+#.elif (!defined(USE_WNN4) || ${USE_WNN4} == YES)
+.if !defined(USE_WNN4) || ${USE_WNN4} == YES
+DEPENDS+=	ja-FreeWnn-lib-1.10:../../japanese/freewnn-lib
+KINPUT2_DEF+=	-DUseWnn -Dport_WNNINCDIR=${LOCALBASE}/include/wnn \
+		-Dport_WNNLIB="-L${LOCALBASE}/lib -lwnn -lcrypt"
 .endif
-.if defined(SJ3)
-INPUT_METHOD+=		sj3
-BUILD_INPUT_METHOD+=	sj3serv:${PORTSDIR}/japanese/sj3
-KINPUT2_DEF+=		-DUseSj3 -Dport_SJ3SRC=${LOCALBASE}/include \
-			-Dport_SJ3LIB="-L${LOCALBASE}/lib -lsj3lib"
+
+.if !defined(USE_SJ3) || ${USE_SJ3} == YES
+DEPENDS+=	sj3-lib-2.0.1.20:../../japanese/sj3-lib
+KINPUT2_DEF+=	-DUseSj3 -Dport_SJ3SRC=${LOCALBASE}/include \
+		-Dport_SJ3LIB="-L${LOCALBASE}/lib -lsj3lib"
 .endif
-.if defined(WNN4)
-INPUT_METHOD+=		wnn4
-BUILD_INPUT_METHOD+=	${X11BASE}/lib/libwnn.a:${PORTSDIR}/japanese/Wnn
-KINPUT2_DEF+=		-DUseWnn -Dport_WNNINCDIR=$(X11BASE)/include/wnn \
-			-Dport_WNNLIB="-L$(X11BASE)/lib -lwnn -lcrypt"
-.elif defined(WNN6)
-INPUT_METHOD+=		wnn6
-LIB_INPUT_METHOD+=	wnn6.1:${PORTSDIR}/japanese/Wnn6-lib
-KINPUT2_DEF+=		-DUseWnn -DUseWnn6 -Dport_WNNINCDIR=$(LOCALBASE)/include/wnn \
-			-Dport_WNNLIB="-L$(LOCALBASE)/lib -lwnn6 -lcrypt"
-.endif
-#
-# Make a value of INPUT_METHOD
-.if defined(INPUT_METHOD)
-INPUT_METHOD!=	echo ${INPUT_METHOD} | sed -e 's/^/-/' -e 's/ /+/g'
-.endif
-#
-# Redefine $(IMAKE_CMD) with $(PORT_IMAKE_DEFINES) in ${WRKSRC}/Kinput2.conf
-MAKE_ENV+=	 PORT_IMAKE_DEFINES='${KINPUT2_DEF}'
+
+MAKE_ENV+=	PORT_IMAKE_DEFINES='${KINPUT2_DEF}'
 
 pre-configure:
-	if [ -f ${WRKSRC}/Kinput2.conf ]; then \
-		${MV} -f ${WRKSRC}/Kinput2.conf ${WRKSRC}/Kinput2.conf.org; \
-	fi
+	${MV} -f ${WRKSRC}/Kinput2.conf ${WRKSRC}/Kinput2.conf.org
 	${CP} ${FILESDIR}/Kinput2.conf ${WRKSRC}/Kinput2.conf
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${XMKMF}
 
-post-install:
-# For Wnn4 or Wnn6
-	@if [ -e ${PKGDIR}/MESSAGE ]; then \
-		${CAT} ${PKGDIR}/MESSAGE; \
-	fi
-
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -10,7 +10,3 @@ The port supports Wnn4.  Egg key binding is avairable,
 if you run
 
 kinput2 -ccdef ccdef.kinput2.egg
-
--- S. Taoka
-<taoka@FreeBSD.org>
-
