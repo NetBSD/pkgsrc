@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.12 2003/04/10 20:10:15 grant Exp $
-# $PEACE: Makefile,v 1.21 2002/08/21 02:48:23 kent Exp $
+# $NetBSD: Makefile,v 1.13 2003/04/27 13:50:09 kent Exp $
 
-DISTVERSION=		1.3.4
+DISTVERSION=		1.4.0
 CROSS_DISTFILES=		# none
 
 MAINTAINER=		peace-sacrifice@hauN.org
 HOMEPAGE=		http://chiharu.hauN.org/peace/
 COMMENT=		Cross-compile environment for PEACE/i386
 # Need NetBSD headers in /usr/include
-ONLY_FOR_PLATFORM=	NetBSD-*-*
+ONLY_FOR_PLATFORM=	NetBSD-1.6[Q-Z]*-* NetBSD-[2-9]*-*
 
-WRKSRC=			${WRKDIR}/toolchain
+WRKSRC=			${WRKDIR}/${GCC_DISTNAME}
+BU_WRKSRC=		${WRKDIR}/${BINUTILS_DISTNAME}
 
 USE_CROSS_BINUTILS=	yes
 BINUTILS_GNUTARGET=	pe-i386
@@ -36,29 +36,18 @@ MASTER_SITES+=		http://www.trl.ibm.com/projects/security/ssp/gcc2_95_2/
 SSP_PATCH=		protector-2.95.2-2.tar.gz
 DISTFILES+=		${SSP_PATCH}
 
-# pthread
-PTHREAD_DISTNAME=	unproven-pthreads-0.17
-PTHREAD_DISTFILE=	${PTHREAD_DISTNAME}.tar.gz
-MASTER_SITES+=		ftp://ftp.flame.org/pub/netbsd/
-DISTFILES+=		${PTHREAD_DISTFILE}
-
-EXTRACT_ONLY=		${GCC_WIN32_PATCHBUNDLE} ${SSP_PATCH} ${PTHREAD_DISTFILE}
-
 post-extract:
-	cd ${WRKDIR} && ${PAX} -O -rz -s /${GCC_DISTNAME}/toolchain/ \
-		-f ${_DISTDIR}/${GCC_DISTNAME}.tar.gz
+#	cd ${WRKDIR} && ${PAX} -O -rz -s /${GCC_DISTNAME}/toolchain/ \
+#		-f ${_DISTDIR}/${GCC_DISTNAME}.tar.gz
 	${PATCH} -d ${WRKSRC} -p1 --forward --quiet -E < ${GCC_WIN32_PATCH}
-	cd ${WRKDIR} && ${PAX} -O -rz -s /${BINUTILS_DISTNAME}/toolchain/ \
-		-f ${_DISTDIR}/${BINUTILS_DISTNAME}.tar.bz2
+#	cd ${WRKDIR} && ${PAX} -O -rz -s /${BINUTILS_DISTNAME}/toolchain/ \
+#		-f ${_DISTDIR}/${BINUTILS_DISTNAME}.tar.bz2
 
 post-patch:
 	for i in patches/binutils-*; do \
-		${PATCH} -d ${WRKSRC} --forward --quiet -E < $$i; \
+		${PATCH} -d ${BU_WRKSRC} --forward --quiet -E < $$i; \
 	done
 	cd ${WRKSRC}/gcc && ${AUTOCONF}
-	cd ${WRKSRC}/gcc && \
-		${LN} -s ../../${PTHREAD_DISTNAME}/include/pthread.h . && \
-		${LN} -s ../../${PTHREAD_DISTNAME}/include/pthread .
 	${CP} ${WRKDIR}/protector.c ${WRKDIR}/protector.h ${WRKSRC}/gcc/
 	${PATCH} -d ${WRKSRC} --forward --quiet -E < ${WRKDIR}/protector.dif
 #	${PATCH} -d ${WRKSRC} --forward --quiet -E < ${WRKDIR}/protectonly.dif
@@ -71,5 +60,4 @@ post-configure:
 	${CP} ${FILESDIR}/limits.h ${CROSS_SYS_INCLUDE}/
 	${SED} "s/^extern FILE/__declspec(dllimport) FILE/" /usr/include/stdio.h > ${WRKDIR}/stdio.h
 
-#.include "../COMMON/cross.mk"
 .include "files/cross.mk"

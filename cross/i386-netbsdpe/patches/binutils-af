@@ -1,11 +1,13 @@
---- binutils/dlltool.c.orig	Tue May 21 03:23:05 2002
-+++ binutils/dlltool.c	Mon Jul 15 18:55:11 2002
-@@ -1355,6 +1355,8 @@
+$NetBSD: binutils-af,v 1.2 2003/04/27 13:50:10 kent Exp $
+
+--- binutils/dlltool.c.orig	Fri Dec 13 06:10:09 2002
++++ binutils/dlltool.c
+@@ -1403,6 +1403,8 @@
    for (excl_item = excludes; excl_item; excl_item = excl_item->next)
      if (strcmp (string, excl_item->string) == 0)
-       return true;
+       return TRUE;
 +  if (string[0] != '_')
-+      return true;
-   return false;
++      return TRUE;
+   return FALSE;
  }
  
