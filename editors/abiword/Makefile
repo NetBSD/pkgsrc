@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2003/03/29 12:40:41 jmmv Exp $
+# $NetBSD: Makefile,v 1.54 2003/04/17 06:22:23 martti Exp $
 #
 # According to AbiSource's explanation of their trademark rights,
 # compilations/distributions of AbiWord not provided by AbiSource must
@@ -19,7 +19,7 @@ COMMENT=	Open Source cross-platform word processor
 DEPENDS+=	ispell-base-[0-9]*:../../textproc/ispell-base
 
 DIST_SUBDIR=	abisuite
-ABIWORD_VERS=	1.0.4
+ABIWORD_VERS=	1.0.5
 
 USE_BUILDLINK2=	# defined
 USE_X11=	# defined
