@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/09/21 23:46:55 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/10/09 23:32:07 wiz Exp $
 #
 
 DISTNAME=	lilypond-1.4.13
@@ -12,6 +12,7 @@ COMMENT=	GNU Music Typesetter
 BUILD_DEPENDS+=	bison>=1.32:../../devel/bison
 
 GNU_CONFIGURE=	YES
+USE_BUILDLINK2=	YES
 USE_GMAKE=	YES
 MAKEFILE=	GNUmakefile
 
@@ -22,8 +23,8 @@ CONFIGURE_ARGS+=--disable-optimising
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 PYTHON_VERSIONS_ACCEPTED= 20 21 # 22 has some regular expression problem
 
-.include "../../lang/guile/buildlink.mk"
+.include "../../lang/guile/buildlink2.mk"
 .include "../../lang/python/application.mk"
-.include "../../print/teTeX-bin/kpathsea.buildlink.mk"
+.include "../../print/teTeX-bin/kpathsea.buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
