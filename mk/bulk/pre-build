@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.43 2005/01/18 15:04:34 tv Exp $
+# $NetBSD: pre-build,v 1.44 2005/01/19 20:58:01 tv Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -38,6 +38,11 @@ fi
 BLDLOG=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=BUILDLOG )`;
 if [ "$BLDLOG" = "" ]; then
 	echo "Had problems determining the name of the .make files"
+	exit 1
+fi
+LINTPKGSRC_DB=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=LINTPKGSRC_DB )`;
+if [ "$LINTPKGSRC_DB" = "" ]; then
+	echo "Had problems determining the name of the .lintpkgsrc.db file"
 	exit 1
 fi
 STARTFILE=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=STARTFILE )`;
@@ -171,11 +176,29 @@ fi
 DISTDIR=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=DISTDIR )`;
 PACKAGES=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=PACKAGES )`;
 
+case "$LINTPKGSRC_CACHE$PRUNEDISTFILES$PRUNEPACKAGES" in
+*yes*|*YES*)
+	# install pkglint to support any of these options
+	( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} PRECLEAN=yes bulk-install )
+	;;
+esac
+
+case "$LINTPKGSRC_CACHE" in
+yes|YES)
+	echo "Creating lintpkgsrc cache database."
+	lintpkgsrc -K $PACKAGES -P $USR_PKGSRC -M $DISTDIR -E $LINTPKGSRC_DB
+	lintpkgsrc_cache="-I $LINTPKGSRC_DB"
+	echo done.
+	;;
+*)
+	lintpkgsrc_cache=''
+	;;
+esac
+
 case "$PRUNEDISTFILES" in
 yes|YES)
 	echo "Removing old/broken distfiles"
-	( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} PRECLEAN=yes bulk-install )
-	lintpkgsrc -K $PACKAGES -P $USR_PKGSRC -M $DISTDIR -o -m -r
+	lintpkgsrc $lintpkgsrc_cache -K $PACKAGES -P $USR_PKGSRC -M $DISTDIR -o -m -r
 	echo done.
 	;;
 *)
@@ -186,8 +209,7 @@ esac
 case "$PRUNEPACKAGES" in
 yes|YES)
 	echo "Removing old (out of date) binary packages"
-	( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} PRECLEAN=yes bulk-install )
-	lintpkgsrc -K $PACKAGES -P $USR_PKGSRC -M $DISTDIR -p -r
+	lintpkgsrc $lintpkgsrc_cache -K $PACKAGES -P $USR_PKGSRC -M $DISTDIR -p -r
 	echo done.
 	;;
 *)
