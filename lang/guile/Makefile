@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2004/10/03 00:15:01 tv Exp $
+# $NetBSD: Makefile,v 1.55 2004/10/03 00:49:11 wiz Exp $
 
 DISTNAME=		guile-1.6.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=guile/}
 
@@ -23,6 +23,10 @@ INFO_FILES=		guile.info guile-tut.info goops.info r5rs.info
 TEST_DIRS=		${WRKSRC}
 TEST_TARGET=		check
 
+# Link the native thread so that Guile processes won't die when
+# libpthread.so is dl_open(3)'ed.
+CFLAGS+=		${PTHREAD_CFLAGS}                                                                                         
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
@@ -36,4 +40,5 @@ post-patch:
 .include "../../devel/libtool/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
