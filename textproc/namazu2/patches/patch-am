@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.1.1.1 2002/05/31 13:01:42 seb Exp $
+$NetBSD: patch-am,v 1.1.1.1.4.1 2002/09/05 09:56:14 agc Exp $
 
 --- filter/excel.pl.orig	Fri Dec 15 14:37:41 2000
 +++ filter/excel.pl

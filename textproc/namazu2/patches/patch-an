@@ -1,4 +1,4 @@
-$NetBSD: patch-an,v 1.1.1.1 2002/05/31 13:01:42 seb Exp $
+$NetBSD: patch-an,v 1.1.1.1.4.1 2002/09/05 09:56:15 agc Exp $
 
 --- filter/msword.pl.orig	Fri Jul 13 10:14:26 2001
 +++ filter/msword.pl
