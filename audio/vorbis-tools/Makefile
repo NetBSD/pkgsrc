@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/08/25 21:49:29 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2002/09/05 21:03:49 jlam Exp $
 
 DISTNAME=	vorbis-tools-1.0
 PKGNAME=	vorbis-tools-1.0.0.8
@@ -11,8 +11,6 @@ COMMENT=	Ogg Vorbis encoder and player
 
 # list it into IPv6-ready packages
 BUILD_DEFS+=	USE_INET6
-
-DEPENDS=	curl>=7.9.1:../../www/curl
 
 CONFLICTS=	vorbis-[0-9]*
 
@@ -31,6 +29,7 @@ PTHREAD_OPTS+=	require
 .include "../../audio/libao/buildlink2.mk"
 .include "../../audio/libogg/buildlink2.mk"
 .include "../../audio/libvorbis/buildlink2.mk"
+.include "../../www/curl/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
