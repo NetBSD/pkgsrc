@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.17 2002/12/20 07:11:42 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.18 2003/01/05 22:16:53 jlam Exp $
 
 .if !defined(GETTEXT_BUILDLINK2_MK)
 GETTEXT_BUILDLINK2_MK=	# defined
@@ -99,16 +99,28 @@ _BLNK_LIBINTL+=		-lintl
 .  endif
 .endif
 
-.if defined(GNU_CONFIGURE)
-LIBS+=			${_BLNK_LIBINTL}
-CONFIGURE_ENV+=		INTLLIBS="${_BLNK_LIBINTL}"
-CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
-.  if ${_NEED_GNU_GETTEXT} == "NO"
-.    if ${_BLNK_LIBINTL_FOUND} == "YES"
-CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libintl="yes"
-.    endif
+# The following section is written to avoid using a conditional based on
+# ${GNU_CONFIGURE}.
+#
+_BLNK_LIBINTL.no=			# empty
+_BLNK_LIBINTL.yes=			${_BLNK_LIBINTL}
+
+_BLNK_LIBINTL_CONFIGURE_ENV.no=		# empty
+_BLNK_LIBINTL_CONFIGURE_ENV.yes=	INTLLIBS="${_BLNK_LIBINTL}"
+.if ${_NEED_GNU_GETTEXT} == "NO"
+.  if ${_BLNK_LIBINTL_FOUND} == "YES"
+_BLNK_LIBINTL_CONFIGURE_ENV.yes+=	gt_cv_func_gnugettext1_libintl="yes"
 .  endif
 .endif
+
+_BLNK_LIBINTL_CONFIGURE_ARGS.no=	# empty
+_BLNK_LIBINTL_CONFIGURE_ARGS.yes=	\
+	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
+
+_GNU_CONFIGURE=		${GNU_CONFIGURE:S/Y/y/:S/E/e/:S/S/s/}
+LIBS+=			${_BLNK_LIBINTL.${_GNU_CONFIGURE}}
+CONFIGURE_ENV+=		${_BLNK_LIBINTL_CONFIGURE_ENV.${_GNU_CONFIGURE}}
+CONFIGURE_ARGS+=	${_BLNK_LIBINTL_CONFIGURE_ARGS.${_GNU_CONFIGURE}}
 
 .if ${_NEED_GNU_GETTEXT} == "NO"
 .  if ${_BLNK_LIBINTL_FOUND} == "YES"
