@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/11/28 11:53:13 bouyer Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/22 08:36:04 grant Exp $
 #
 
 DISTNAME=	gpsim-0.20.7
@@ -14,7 +14,7 @@ USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--with-exdbm=${BUILDLINK_PREFIX.eXdbm}
 
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 

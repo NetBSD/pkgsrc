@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/25 04:53:23 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/22 08:36:04 grant Exp $
 #
 
 DISTNAME=	dgen-sdl-1.23
@@ -13,7 +13,7 @@ COMMENT=	Genesis/Megadrive emulator for Unix platforms
 DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 .endif
 
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	yes
 USE_X11=	yes
 USE_BUILDLINK2=	yes

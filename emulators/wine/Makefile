@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2004/01/20 12:43:03 abs Exp $
+# $NetBSD: Makefile,v 1.65 2004/01/22 08:36:04 grant Exp $
 #
 
 DISTNAME=	Wine-20031212
@@ -27,7 +27,7 @@ BUILDLINK_DEPENDS.freetype2=	freetype>=2.1.4
 WRKSRC= 		${WRKDIR}/${DISTNAME:S/W/w/}
 USE_BUILDLINK2=		YES
 USE_X11=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 
 GNU_CONFIGURE=		YES
