@@ -1,0 +1,15 @@
+$NetBSD: patch-ay,v 1.1 2004/02/04 11:09:13 grant Exp $
+
+--- nsprpub/config/SunOS5.mk.orig	2000-12-22 17:02:50.000000000 +1100
++++ nsprpub/config/SunOS5.mk
+@@ -162,6 +162,10 @@ MKSHLIB			= $(LD) $(DSO_LDOPTS)
+ # -z defs: no unresolved symbols allowed
+ DSO_LDOPTS		= -G -h $(notdir $@)
+ 
++ifdef LIBRUNPATH
++DSO_LDOPTS		+=-R$(LIBRUNPATH)
++endif
++
+ # -KPIC generates position independent code for use in shared libraries.
+ # (Similarly for -fPIC in case of gcc.)
+ ifdef NS_USE_GCC
