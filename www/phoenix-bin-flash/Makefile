@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/29 13:37:09 kei Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/24 10:36:04 jmmv Exp $
 
 DISTNAME=		install_flash_player_6_${DISTUNAME}
 PKGNAME=		phoenix-bin-flash-${FLASH_VERS:S/r/./}
+PKGREVISION=		1
 CATEGORIES=		www graphics
 MASTER_SITES=		http://download.macromedia.com/pub/shockwave/flash/${SUB}/
 
@@ -20,7 +21,7 @@ SUB=			english/${DISTUNAME}/${FLASH_VERS}
 FLASH_VERS=		6.0r79
 DEPENDS+=		suse_compat>=6.3:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=		suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
-DEPENDS+=		phoenix-bin>=0.5:../../www/phoenix-bin
+DEPENDS+=		phoenix-bin>=0.6:../../www/phoenix-bin
 DISTUNAME=		linux
 WRKNAME=		install_flash_player_6_${DISTUNAME}
 
@@ -36,7 +37,7 @@ NO_BUILD=		yes
 CHECK_SHLIBS=		no
 CRYPTO=			yes
 
-MOZ_NAME=		phoenix-linux
+MOZ_NAME=		MozillaFirebird-linux
 WRKSRC=			${WRKDIR}/${WRKNAME}
 NS_PLUGINS_DIR=		${PREFIX}/lib/${MOZ_NAME}/plugins
 
