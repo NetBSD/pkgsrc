@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2002/02/18 15:14:15 seb Exp $
+# $NetBSD: Makefile,v 1.6 2003/01/11 08:56:33 uebayasi Exp $
 #
 
-DISTNAME=	semantic-1.4beta5
+DISTNAME=	semantic-1.4.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cedet/}
 
@@ -9,23 +9,18 @@ MAINTAINER=	cjones@netbsd.org
 HOMEPAGE=	http://cedet.sourceforge.net/semantic.shtml
 COMMENT=	Lexer, parser-generator, and parser written for Emacs
 
-DEPENDS+=	speedbar-0.13a:../../editors/speedbar
-DEPENDS+=	eieio-0.16:../../lang/eieio
+DEPENDS+=	speedbar>=0.13:../../editors/speedbar
+DEPENDS+=	eieio>=0.17rc3:../../lang/eieio
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/emacs.mk"
 
-.if defined(USE_XEMACS)
-DEPENDS+=	 	xemacs-[0-9]*:../../editors/xemacs
-EMACS=			xemacs
-LISPDIR=		lib/xemacs/xemacs-packages/lisp/semantic
-.else
-DEPENDS+=	 	emacs-[0-9]*:../../editors/emacs
+.if ${EMACS_FLAVOR} == "emacs"
 EMACS=			emacs
-LISPDIR=		share/emacs/site-lisp/semantic
+.else
+EMACS=			xemacs
 .endif
 
 BUILD_ENV+=	EMACS=${EMACS}
-PLIST_SUBST+=	LISPDIR=${LISPDIR}
 
 NO_CONFIGURE=	# set
 USE_GMAKE=	# set
@@ -33,18 +28,28 @@ USE_GMAKE=	# set
 INFO_FILES=	semantic.info
 OTHER_INFO=	semantic.info-1 semantic.info-2
 
-SRCS=	semantic.el semantic-util.el semantic-bnf.el semantic-ctxt.el \
-	semantic-c.el semantic-el.el semantic-java.el semantic-make.el \
-	semantic-scm.el semantic-texi.el semantic-imenu.el \
-	semantic-sb.el working.el semanticdb.el document.el \
-	document-vars.el sformat.el senator.el
-AUXFILES=	c.bnf make.bnf java.bnf scheme.bnf semantic-load.el
+# XXX cd ${WRKSRC}; ${MAKE} -V semantic_LISP
+SRCS=	semantic.el semantic-util.el semantic-bnf.el semantic-ctxt.el
+# XXX cd ${WRKSRC}; ${MAKE} -V Languages_LISP
+SRCS+=	semantic-c.el semantic-el.el semantic-java.el semantic-make.el \
+	semantic-scm.el semantic-texi.el
+# XXX cd ${WRKSRC}; ${MAKE} -V tools_LISP
+SRCS+=	semantic-imenu.el semantic-sb.el working.el semanticdb.el document.el \
+	document-vars.el sformat.el semantic-chart.el semantic-util-modes.el \
+	semantic-analyze.el semantic-ia.el semantic-cb.el semantic-ia-sb.el
+# XXX cd ${WRKSRC}; ${MAKE} -V senator_LISP
+SRCS+=	senator.el
+
+# XXX cd ${WRKSRC}; ${MAKE} -V init_LISP
+AUXFILES=	semantic-load.el
+# XXX cd ${WRKSRC}; ${MAKE} -V aux_AUX
+AUXFILES+=	c.bnf make.bnf java.bnf scheme.bnf
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/${LISPDIR}
+	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/semantic
 	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} 	\
-			${PREFIX}/${LISPDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${AUXFILES} ${PREFIX}/${LISPDIR}
+			${EMACS_LISPPREFIX}/semantic
+	cd ${WRKSRC} && ${INSTALL_DATA} ${AUXFILES} ${EMACS_LISPPREFIX}/semantic
 	cd ${WRKSRC} && ${INSTALL_DATA} ${INFO_FILES} ${OTHER_INFO}	\
 			${PREFIX}/info
 
