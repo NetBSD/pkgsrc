@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/04/30 21:07:22 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/05/02 09:25:56 zuntum Exp $
 #
 
 DISTNAME=	pilrc-2_7b
@@ -28,7 +28,7 @@ PLIST_SUBST+=	PILRCUI='@comment '
 
 EXTRACT_CMD=	unzip -aq ${DOWNLOADED_DISTFILE}
 
-WRKSRC=		${WRKDIR}/pilrc-2.7b
+WRKSRC=		${WRKDIR}/${PKGNAME}
 GNU_CONFIGURE=	YES
 
 DOCDIR=		${PREFIX}/share/doc/html/pilrc
@@ -38,13 +38,10 @@ post-extract:
 	${CHMOD} +x ${WRKSRC}/missing
 
 post-install:
-	${MKDIR} ${DOCDIR}
-	${MKDIR} ${DOCDIR}/images
-	for f in archive.html download.html index.html contrib.html \
-		history.html manual.html ; \
-	do \
-		${INSTALL_DATA} ${WRKSRC}/doc/$$f ${DOCDIR} ; \
-	done
-	${INSTALL_DATA}  ${WRKSRC}/doc/images/download.gif ${DOCDIR}/images
+	${INSTALL_DATA_DIR} ${DOCDIR} ${DOCDIR}/images
+	cd ${WRKSRC}/doc &&						\
+		${INSTALL_DATA} archive.html download.html index.html	\
+		contrib.html history.html manual.html ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/images/download.gif ${DOCDIR}/images
 
 .include "../../mk/bsd.pkg.mk"
