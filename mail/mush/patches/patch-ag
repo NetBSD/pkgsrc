@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.1 1998/09/04 18:33:48 christos Exp $
+$NetBSD: patch-ag,v 1.2 1998/09/04 19:29:06 christos Exp $
 
 *** /dev/null	Fri Sep  4 13:38:54 1998
 --- makefile.netbsd	Fri Sep  4 13:36:36 1998
@@ -26,7 +26,7 @@ $NetBSD: patch-ag,v 1.1 1998/09/04 18:33:48 christos Exp $
 + 
 + MAKES= makefile.bsdi makefile.bsd makefile.xenix makefile.sys.v makefile.hpux makefile.sun makefile.solaris makefile.freebsd
 + 
-+ CFLAGS= -O2 -DPOSIX -DCURSES -DBSD -DBSD44 -DSIGRET=void -DBASENAME -DENV_MAIL
++ CFLAGS= -O2 -DPOSIX -DCURSES -DBSD -DBSD44 -DSIGRET=void -DBASENAME -DENV_MAIL -DMSGS_DYNAMIC
 + LDFLAGS= 
 + LINTFLAGS= -bxah -Dlint -DCURSES -DBSD
 + LIBS= -lcurses -ltermlib
