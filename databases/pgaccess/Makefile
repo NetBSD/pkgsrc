@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 1999/12/02 01:47:05 darcy Exp $
+# $NetBSD: Makefile,v 1.3 2000/04/27 08:24:17 rh Exp $
 #
 
-DISTNAME=	pgaccess-0.98
+DISTNAME=	pgaccess-0.98.5
 WRKSRC=		${WRKDIR}/pgaccess
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.flex.ro/pub/pgaccess/
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.flex.ro/pub/pgaccess/
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.flex.ro/pgaccess/
 
-DEPENDS+=	postgresql-6.5.3:../../databases/postgresql
+DEPENDS+=	tk-postgresql-6.5.3:../../databases/postgresql
 
 NO_BUILD=	yes
 
@@ -17,7 +17,7 @@ NO_BUILD=	yes
 
 PGUSER?=	pgsql
 
-PGTKSH=		${PREFIX}/${PGUSER}/bin/pgtksh
+PGTKSH=		${PREFIX}/bin/pgtksh
 PGACCESS_HOME=	${PREFIX}/share/pgaccess
 DOCDIR=		${PREFIX}/share/doc/pgaccess
 EGDIR=		${PREFIX}/share/examples/pgaccess
