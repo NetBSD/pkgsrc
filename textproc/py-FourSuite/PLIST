@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/08/22 09:21:32 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/11/27 17:25:25 drochner Exp $
 ${PYSITELIB}/Ft/Lib/CommandLine/Arguments.py
 ${PYSITELIB}/Ft/Lib/CommandLine/Arguments.pyc
 ${PYSITELIB}/Ft/Lib/CommandLine/Command.py
@@ -92,14 +92,24 @@ ${PYSITELIB}/Ft/Lib/MessageSource.py
 ${PYSITELIB}/Ft/Lib/MessageSource.pyc
 ${PYSITELIB}/Ft/Lib/ObjectPrint.py
 ${PYSITELIB}/Ft/Lib/ObjectPrint.pyc
-${PYSITELIB}/Ft/Lib/PgDatabase.py
-${PYSITELIB}/Ft/Lib/PgDatabase.pyc
 ${PYSITELIB}/Ft/Lib/Set.py
 ${PYSITELIB}/Ft/Lib/Set.pyc
+${PYSITELIB}/Ft/Lib/TestSuite/Errors.py
+${PYSITELIB}/Ft/Lib/TestSuite/Errors.pyc
+${PYSITELIB}/Ft/Lib/TestSuite/TestCoverage.py
+${PYSITELIB}/Ft/Lib/TestSuite/TestCoverage.pyc
+${PYSITELIB}/Ft/Lib/TestSuite/TestFunction.py
+${PYSITELIB}/Ft/Lib/TestSuite/TestFunction.pyc
+${PYSITELIB}/Ft/Lib/TestSuite/TestMode.py
+${PYSITELIB}/Ft/Lib/TestSuite/TestMode.pyc
+${PYSITELIB}/Ft/Lib/TestSuite/TestModule.py
+${PYSITELIB}/Ft/Lib/TestSuite/TestModule.pyc
+${PYSITELIB}/Ft/Lib/TestSuite/TestObject.py
+${PYSITELIB}/Ft/Lib/TestSuite/TestObject.pyc
 ${PYSITELIB}/Ft/Lib/TestSuite/TestSuite.py
 ${PYSITELIB}/Ft/Lib/TestSuite/TestSuite.pyc
-${PYSITELIB}/Ft/Lib/TestSuite/TestWalker.py
-${PYSITELIB}/Ft/Lib/TestSuite/TestWalker.pyc
+${PYSITELIB}/Ft/Lib/TestSuite/Tester.py
+${PYSITELIB}/Ft/Lib/TestSuite/Tester.pyc
 ${PYSITELIB}/Ft/Lib/TestSuite/__init__.py
 ${PYSITELIB}/Ft/Lib/TestSuite/__init__.pyc
 ${PYSITELIB}/Ft/Lib/Time.py
@@ -286,24 +296,13 @@ ${PYSITELIB}/Ft/Ods/Parsers/Odl/Templates.py
 ${PYSITELIB}/Ft/Ods/Parsers/Odl/Templates.pyc
 ${PYSITELIB}/Ft/Ods/Parsers/Odl/__init__.py
 ${PYSITELIB}/Ft/Ods/Parsers/Odl/__init__.pyc
-${PYSITELIB}/Ft/Ods/Parsers/Oif/Oif.py
-${PYSITELIB}/Ft/Ods/Parsers/Oif/Oif.pyc
-${PYSITELIB}/Ft/Ods/Parsers/Oif/OifParseTreeMapping.py
-${PYSITELIB}/Ft/Ods/Parsers/Oif/OifParseTreeMapping.pyc
 ${PYSITELIB}/Ft/Ods/Parsers/Oif/OifParser.py
 ${PYSITELIB}/Ft/Ods/Parsers/Oif/OifParser.pyc
-${PYSITELIB}/Ft/Ods/Parsers/Oif/OifParserBase.py
-${PYSITELIB}/Ft/Ods/Parsers/Oif/OifParserBase.pyc
-${PYSITELIB}/Ft/Ods/Parsers/Oif/Oifc.so
 ${PYSITELIB}/Ft/Ods/Parsers/Oif/__init__.py
 ${PYSITELIB}/Ft/Ods/Parsers/Oif/__init__.pyc
-${PYSITELIB}/Ft/Ods/Parsers/Oql/Oql.py
-${PYSITELIB}/Ft/Ods/Parsers/Oql/Oql.pyc
-${PYSITELIB}/Ft/Ods/Parsers/Oql/OqlParseTreeTuple.py
-${PYSITELIB}/Ft/Ods/Parsers/Oql/OqlParseTreeTuple.pyc
-${PYSITELIB}/Ft/Ods/Parsers/Oql/OqlParserBase.py
-${PYSITELIB}/Ft/Ods/Parsers/Oql/OqlParserBase.pyc
-${PYSITELIB}/Ft/Ods/Parsers/Oql/Oqlc.so
+${PYSITELIB}/Ft/Ods/Parsers/Oql/OqlParser.py
+${PYSITELIB}/Ft/Ods/Parsers/Oql/OqlParser.pyc
+${PYSITELIB}/Ft/Ods/Parsers/Oql/OqlParserc.so
 ${PYSITELIB}/Ft/Ods/Parsers/Oql/__init__.py
 ${PYSITELIB}/Ft/Ods/Parsers/Oql/__init__.pyc
 ${PYSITELIB}/Ft/Ods/Parsers/__init__.py
@@ -454,28 +453,26 @@ ${PYSITELIB}/Ft/Rdf/Model.py
 ${PYSITELIB}/Ft/Rdf/Model.pyc
 ${PYSITELIB}/Ft/Rdf/Parsers/Versa/BooleanExpressions.py
 ${PYSITELIB}/Ft/Rdf/Parsers/Versa/BooleanExpressions.pyc
-${PYSITELIB}/Ft/Rdf/Parsers/Versa/BooleanFunctions.py
-${PYSITELIB}/Ft/Rdf/Parsers/Versa/BooleanFunctions.pyc
-${PYSITELIB}/Ft/Rdf/Parsers/Versa/Coerce.py
-${PYSITELIB}/Ft/Rdf/Parsers/Versa/Coerce.pyc
 ${PYSITELIB}/Ft/Rdf/Parsers/Versa/Context.py
 ${PYSITELIB}/Ft/Rdf/Parsers/Versa/Context.pyc
+${PYSITELIB}/Ft/Rdf/Parsers/Versa/CoreFunctions.py
+${PYSITELIB}/Ft/Rdf/Parsers/Versa/CoreFunctions.pyc
 ${PYSITELIB}/Ft/Rdf/Parsers/Versa/DataTypes.py
 ${PYSITELIB}/Ft/Rdf/Parsers/Versa/DataTypes.pyc
 ${PYSITELIB}/Ft/Rdf/Parsers/Versa/Literals.py
 ${PYSITELIB}/Ft/Rdf/Parsers/Versa/Literals.pyc
-${PYSITELIB}/Ft/Rdf/Parsers/Versa/RelationalFunctions.py
-${PYSITELIB}/Ft/Rdf/Parsers/Versa/RelationalFunctions.pyc
+${PYSITELIB}/Ft/Rdf/Parsers/Versa/NamedExpressions.py
+${PYSITELIB}/Ft/Rdf/Parsers/Versa/NamedExpressions.pyc
+${PYSITELIB}/Ft/Rdf/Parsers/Versa/Optimizer.py
+${PYSITELIB}/Ft/Rdf/Parsers/Versa/Optimizer.pyc
 ${PYSITELIB}/Ft/Rdf/Parsers/Versa/ResourceExpressions.py
 ${PYSITELIB}/Ft/Rdf/Parsers/Versa/ResourceExpressions.pyc
-${PYSITELIB}/Ft/Rdf/Parsers/Versa/ResourceFunctions.py
-${PYSITELIB}/Ft/Rdf/Parsers/Versa/ResourceFunctions.pyc
-${PYSITELIB}/Ft/Rdf/Parsers/Versa/SetFunctions.py
-${PYSITELIB}/Ft/Rdf/Parsers/Versa/SetFunctions.pyc
 ${PYSITELIB}/Ft/Rdf/Parsers/Versa/Traversal.py
 ${PYSITELIB}/Ft/Rdf/Parsers/Versa/Traversal.pyc
 ${PYSITELIB}/Ft/Rdf/Parsers/Versa/Util.py
 ${PYSITELIB}/Ft/Rdf/Parsers/Versa/Util.pyc
+${PYSITELIB}/Ft/Rdf/Parsers/Versa/Variables.py
+${PYSITELIB}/Ft/Rdf/Parsers/Versa/Variables.pyc
 ${PYSITELIB}/Ft/Rdf/Parsers/Versa/VersaParser.py
 ${PYSITELIB}/Ft/Rdf/Parsers/Versa/VersaParser.pyc
 ${PYSITELIB}/Ft/Rdf/Parsers/Versa/VersaParserc.so
@@ -589,12 +586,16 @@ ${PYSITELIB}/Ft/Server/Client/Commands/Render.py
 ${PYSITELIB}/Ft/Server/Client/Commands/Render.pyc
 ${PYSITELIB}/Ft/Server/Client/Commands/Set/Acl.py
 ${PYSITELIB}/Ft/Server/Client/Commands/Set/Acl.pyc
+${PYSITELIB}/Ft/Server/Client/Commands/Set/Owner.py
+${PYSITELIB}/Ft/Server/Client/Commands/Set/Owner.pyc
 ${PYSITELIB}/Ft/Server/Client/Commands/Set/UserData.py
 ${PYSITELIB}/Ft/Server/Client/Commands/Set/UserData.pyc
 ${PYSITELIB}/Ft/Server/Client/Commands/Set/__init__.py
 ${PYSITELIB}/Ft/Server/Client/Commands/Set/__init__.pyc
 ${PYSITELIB}/Ft/Server/Client/Commands/Update/Document.py
 ${PYSITELIB}/Ft/Server/Client/Commands/Update/Document.pyc
+${PYSITELIB}/Ft/Server/Client/Commands/Update/Extension.py
+${PYSITELIB}/Ft/Server/Client/Commands/Update/Extension.pyc
 ${PYSITELIB}/Ft/Server/Client/Commands/Update/RawFile.py
 ${PYSITELIB}/Ft/Server/Client/Commands/Update/RawFile.pyc
 ${PYSITELIB}/Ft/Server/Client/Commands/Update/__init__.py
@@ -633,6 +634,8 @@ ${PYSITELIB}/Ft/Server/Client/Core/UriReferenceFileClient.py
 ${PYSITELIB}/Ft/Server/Client/Core/UriReferenceFileClient.pyc
 ${PYSITELIB}/Ft/Server/Client/Core/UserClient.py
 ${PYSITELIB}/Ft/Server/Client/Core/UserClient.pyc
+${PYSITELIB}/Ft/Server/Client/Core/Util.py
+${PYSITELIB}/Ft/Server/Client/Core/Util.pyc
 ${PYSITELIB}/Ft/Server/Client/Core/XPathDocumentDefinitionClient.py
 ${PYSITELIB}/Ft/Server/Client/Core/XPathDocumentDefinitionClient.pyc
 ${PYSITELIB}/Ft/Server/Client/Core/XmlDocumentClient.py
@@ -687,6 +690,8 @@ ${PYSITELIB}/Ft/Server/FtRpc/Responses.py
 ${PYSITELIB}/Ft/Server/FtRpc/Responses.pyc
 ${PYSITELIB}/Ft/Server/FtRpc/__init__.py
 ${PYSITELIB}/Ft/Server/FtRpc/__init__.pyc
+${PYSITELIB}/Ft/Server/Server/Commands/Backup.py
+${PYSITELIB}/Ft/Server/Server/Commands/Backup.pyc
 ${PYSITELIB}/Ft/Server/Server/Commands/CommandUtil.py
 ${PYSITELIB}/Ft/Server/Server/Commands/CommandUtil.pyc
 ${PYSITELIB}/Ft/Server/Server/Commands/Init.py
@@ -697,6 +702,8 @@ ${PYSITELIB}/Ft/Server/Server/Commands/Log/View.py
 ${PYSITELIB}/Ft/Server/Server/Commands/Log/View.pyc
 ${PYSITELIB}/Ft/Server/Server/Commands/Log/__init__.py
 ${PYSITELIB}/Ft/Server/Server/Commands/Log/__init__.pyc
+${PYSITELIB}/Ft/Server/Server/Commands/Recompile.py
+${PYSITELIB}/Ft/Server/Server/Commands/Recompile.pyc
 ${PYSITELIB}/Ft/Server/Server/Commands/Restart.py
 ${PYSITELIB}/Ft/Server/Server/Commands/Restart.pyc
 ${PYSITELIB}/Ft/Server/Server/Commands/Start.py
@@ -725,6 +732,12 @@ ${PYSITELIB}/Ft/Server/Server/Dashboard/addForms.xslt
 ${PYSITELIB}/Ft/Server/Server/Dashboard/alias.xslt
 ${PYSITELIB}/Ft/Server/Server/Dashboard/command.xslt
 ${PYSITELIB}/Ft/Server/Server/Dashboard/container.xslt
+${PYSITELIB}/Ft/Server/Server/Dashboard/docs-commandline.xslt
+${PYSITELIB}/Ft/Server/Server/Dashboard/docs-extensions.xslt
+${PYSITELIB}/Ft/Server/Server/Dashboard/docs-general.xslt
+${PYSITELIB}/Ft/Server/Server/Dashboard/docs-index.xslt
+${PYSITELIB}/Ft/Server/Server/Dashboard/docs-modules.xslt
+${PYSITELIB}/Ft/Server/Server/Dashboard/docs-sgeneral.xslt
 ${PYSITELIB}/Ft/Server/Server/Dashboard/group.xslt
 ${PYSITELIB}/Ft/Server/Server/Dashboard/help.xslt
 ${PYSITELIB}/Ft/Server/Server/Dashboard/images/4suite-org2.gif
@@ -732,6 +745,7 @@ ${PYSITELIB}/Ft/Server/Server/Dashboard/images/poweredby_4ss.png
 ${PYSITELIB}/Ft/Server/Server/Dashboard/manager.xslt
 ${PYSITELIB}/Ft/Server/Server/Dashboard/managerRequestProcessor.xslt
 ${PYSITELIB}/Ft/Server/Server/Dashboard/menu-includes.xslt
+${PYSITELIB}/Ft/Server/Server/Dashboard/no-docs.xslt
 ${PYSITELIB}/Ft/Server/Server/Dashboard/rawfile.xslt
 ${PYSITELIB}/Ft/Server/Server/Dashboard/repository.xslt
 ${PYSITELIB}/Ft/Server/Server/Dashboard/server.xml
@@ -754,7 +768,7 @@ ${PYSITELIB}/Ft/Server/Server/Drivers/Oracle/__init__.py
 ${PYSITELIB}/Ft/Server/Server/Drivers/Oracle/__init__.pyc
 ${PYSITELIB}/Ft/Server/Server/Drivers/PathImp.py
 ${PYSITELIB}/Ft/Server/Server/Drivers/PathImp.pyc
-${PYSITELIB}/Ft/Server/Server/Drivers/Postgres/EscapeAndSplitc.so
+${PYSITELIB}/Ft/Server/Server/Drivers/Postgres/Escapec.so
 ${PYSITELIB}/Ft/Server/Server/Drivers/Postgres/__init__.py
 ${PYSITELIB}/Ft/Server/Server/Drivers/Postgres/__init__.pyc
 ${PYSITELIB}/Ft/Server/Server/Drivers/Psyco/__init__.py
@@ -893,6 +907,8 @@ ${PYSITELIB}/Ft/Server/Server/Xslt/XPathDocumentDefinition.py
 ${PYSITELIB}/Ft/Server/Server/Xslt/XPathDocumentDefinition.pyc
 ${PYSITELIB}/Ft/Server/Server/Xslt/XmlDocument.py
 ${PYSITELIB}/Ft/Server/Server/Xslt/XmlDocument.pyc
+${PYSITELIB}/Ft/Server/Server/Xslt/XmlRpcClient.py
+${PYSITELIB}/Ft/Server/Server/Xslt/XmlRpcClient.pyc
 ${PYSITELIB}/Ft/Server/Server/Xslt/XsltDocument.py
 ${PYSITELIB}/Ft/Server/Server/Xslt/XsltDocument.pyc
 ${PYSITELIB}/Ft/Server/Server/Xslt/XsltDocumentDefinition.py
@@ -973,6 +989,8 @@ ${PYSITELIB}/Ft/Share/Bin/4rdf
 ${PYSITELIB}/Ft/Share/Bin/4ss
 ${PYSITELIB}/Ft/Share/Bin/4ss_manager
 ${PYSITELIB}/Ft/Share/Bin/4versa
+${PYSITELIB}/Ft/Share/Bin/4xml
+${PYSITELIB}/Ft/Share/Bin/4xpath
 ${PYSITELIB}/Ft/Share/Bin/4xslt
 ${PYSITELIB}/Ft/Share/Bin/4xupdate
 ${PYSITELIB}/Ft/Share/Bin/__init__.py
@@ -1083,10 +1101,12 @@ ${PYSITELIB}/Ft/Share/Data/Stylesheets/commandline.css
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/commandline_html.xslt
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/contact.report.xslt
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/container.xslt
+${PYSITELIB}/Ft/Share/Data/Stylesheets/decorated-xml.xslt
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/docbook1.docdef
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/docbook_html-css.xslt
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/docbook_html1.xslt
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/docbook_text1.xslt
+${PYSITELIB}/Ft/Share/Data/Stylesheets/draft.gif
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/dublin_core.docdef
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/examples/article.doc
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/examples/book.doc
@@ -1099,21 +1119,22 @@ ${PYSITELIB}/Ft/Share/Data/Stylesheets/examples/uogbuji.resume
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/extensions.css
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/extensions_html.xslt
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/foaf.rdfs
+${PYSITELIB}/Ft/Share/Data/Stylesheets/generated-docs.docdef
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/icons_html.py
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/identity.xslt
-${PYSITELIB}/Ft/Share/Data/Stylesheets/ie-view.xslt
+${PYSITELIB}/Ft/Share/Data/Stylesheets/justify.xslt
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/modules.css
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/modules_html.xslt
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/null
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/phrases.xml
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/presentation-fo.xslt
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/presentation1.xslt
-${PYSITELIB}/Ft/Share/Data/Stylesheets/presmain.css
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/presmaterial/back.png
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/presmaterial/blue_btn.gif
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/presmaterial/blue_btn.png
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/presmaterial/forward.png
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/presmaterial/lquot.png
+${PYSITELIB}/Ft/Share/Data/Stylesheets/presmaterial/presmain.css
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/presmaterial/rquot.png
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/presmaterial/up.png
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/pretty.xslt
@@ -1123,6 +1144,8 @@ ${PYSITELIB}/Ft/Share/Data/Stylesheets/resume.xslt
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/rfp-template.xml
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/rfp-template.xslt
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/schema.xslt
+${PYSITELIB}/Ft/Share/Data/Stylesheets/sdocbook_html.css
+${PYSITELIB}/Ft/Share/Data/Stylesheets/sdocbook_html.xslt
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/sow.xslt
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/us-states.xml
 ${PYSITELIB}/Ft/Share/Data/Stylesheets/usecase.xslt
@@ -1139,6 +1162,12 @@ ${PYSITELIB}/Ft/Share/Demos/4RDF/spamdata.rdf
 ${PYSITELIB}/Ft/Share/Demos/4RDF/spamschema.rdfs
 ${PYSITELIB}/Ft/Share/Demos/4RDF/w3c1.rdf
 ${PYSITELIB}/Ft/Share/Demos/4RDF/w3c2.rdf
+${PYSITELIB}/Ft/Share/Demos/BookerT/bookmarks.rdf
+${PYSITELIB}/Ft/Share/Demos/BookerT/index.xslt
+${PYSITELIB}/Ft/Share/Demos/BookerT/jgraaumans.xbel
+${PYSITELIB}/Ft/Share/Demos/BookerT/main.css
+${PYSITELIB}/Ft/Share/Demos/BookerT/setup.xml
+${PYSITELIB}/Ft/Share/Demos/BookerT/xbel2bookert.xslt
 ${PYSITELIB}/Ft/Share/Demos/BuyerBase/bb-ie.css
 ${PYSITELIB}/Ft/Share/Demos/BuyerBase/bb-netscape.css
 ${PYSITELIB}/Ft/Share/Demos/BuyerBase/customer-report.xslt
@@ -1169,17 +1198,32 @@ ${PYSITELIB}/Ft/Share/Demos/BuyerBase/submit-purchase.xslt
 ${PYSITELIB}/Ft/Share/Demos/Common/cards.xslt
 ${PYSITELIB}/Ft/Share/Demos/Common/common-ie.css
 ${PYSITELIB}/Ft/Share/Demos/Common/common-netscape.css
-${PYSITELIB}/Ft/Share/Demos/Cribbage/XsltExtensions.py
+${PYSITELIB}/Ft/Share/Demos/Cribbage/CribbageXsltExtensions.py
 ${PYSITELIB}/Ft/Share/Demos/Cribbage/__init__.py
+${PYSITELIB}/Ft/Share/Demos/Cribbage/changes.xsl
 ${PYSITELIB}/Ft/Share/Demos/Cribbage/common.xsl
+${PYSITELIB}/Ft/Share/Demos/Cribbage/count-hand.xsl
 ${PYSITELIB}/Ft/Share/Demos/Cribbage/count-util.xslt
 ${PYSITELIB}/Ft/Share/Demos/Cribbage/cribbage-xslt.docdef
 ${PYSITELIB}/Ft/Share/Demos/Cribbage/discard.xslt
+${PYSITELIB}/Ft/Share/Demos/Cribbage/draw-screen.xsl
 ${PYSITELIB}/Ft/Share/Demos/Cribbage/draw.xsl
+${PYSITELIB}/Ft/Share/Demos/Cribbage/end-game.xsl
 ${PYSITELIB}/Ft/Share/Demos/Cribbage/error.xslt
+${PYSITELIB}/Ft/Share/Demos/Cribbage/globals.xsl
 ${PYSITELIB}/Ft/Share/Demos/Cribbage/index.html
+${PYSITELIB}/Ft/Share/Demos/Cribbage/later-draw.xsl
+${PYSITELIB}/Ft/Share/Demos/Cribbage/move-computer.xsl
+${PYSITELIB}/Ft/Share/Demos/Cribbage/move-human.xsl
 ${PYSITELIB}/Ft/Share/Demos/Cribbage/new-game.xslt
-${PYSITELIB}/Ft/Share/Demos/Cribbage/start.html
+${PYSITELIB}/Ft/Share/Demos/Cribbage/new-hand.xsl
+${PYSITELIB}/Ft/Share/Demos/Cribbage/play-human.xsl
+${PYSITELIB}/Ft/Share/Demos/Cribbage/redirect-new-game.xsl
+${PYSITELIB}/Ft/Share/Demos/Cribbage/redirect-new-hand.xsl
+${PYSITELIB}/Ft/Share/Demos/Cribbage/redirect.xsl
+${PYSITELIB}/Ft/Share/Demos/Cribbage/reset-stack.xsl
+${PYSITELIB}/Ft/Share/Demos/Cribbage/setup.xml
+${PYSITELIB}/Ft/Share/Demos/Cribbage/show-score.xsl
 ${PYSITELIB}/Ft/Share/Demos/FileSystemMirror/FileSystemMirror.py
 ${PYSITELIB}/Ft/Share/Demos/FileSystemMirror/README
 ${PYSITELIB}/Ft/Share/Demos/Genitive/common.xslt
@@ -1308,6 +1352,8 @@ ${PYSITELIB}/Ft/Share/Demos/images/Cards/X.png
 ${PYSITELIB}/Ft/Share/Demos/index.html
 ${PYSITELIB}/Ft/Share/Demos/server.xml
 ${PYSITELIB}/Ft/Share/Demos/setup.xml
+${PYSITELIB}/Ft/Share/ExtensionModules/__init__.py
+${PYSITELIB}/Ft/Share/ExtensionModules/__init__.pyc
 ${PYSITELIB}/Ft/Share/Profile/Rdf/large_add.py
 ${PYSITELIB}/Ft/Share/Profile/Rdf/large_complete_all.py
 ${PYSITELIB}/Ft/Share/Profile/Rdf/large_complete_empty.py
@@ -1325,6 +1371,7 @@ ${PYSITELIB}/Ft/Share/Profile/Server/SCore/delete_document.py
 ${PYSITELIB}/Ft/Share/Profile/Server/SCore/fetch_container.py
 ${PYSITELIB}/Ft/Share/Profile/Server/SCore/fetch_document.py
 ${PYSITELIB}/Ft/Share/Profile/Server/SCore/update_document.py
+${PYSITELIB}/Ft/Share/Profile/Xml/XUpdate/append.py
 ${PYSITELIB}/Ft/Share/Profile/profile_all.py
 ${PYSITELIB}/Ft/Share/Profile/profile_util.py
 ${PYSITELIB}/Ft/Share/Temp/__init__.py
@@ -1333,6 +1380,8 @@ ${PYSITELIB}/Ft/Share/Tests/Lib/__init__.py
 ${PYSITELIB}/Ft/Share/Tests/Lib/__init__.pyc
 ${PYSITELIB}/Ft/Share/Tests/Lib/test_escape_quotes.py
 ${PYSITELIB}/Ft/Share/Tests/Lib/test_escape_quotes.pyc
+${PYSITELIB}/Ft/Share/Tests/Lib/test_set.py
+${PYSITELIB}/Ft/Share/Tests/Lib/test_set.pyc
 ${PYSITELIB}/Ft/Share/Tests/Lib/test_time.py
 ${PYSITELIB}/Ft/Share/Tests/Lib/test_time.pyc
 ${PYSITELIB}/Ft/Share/Tests/Lib/test_uri.py
@@ -1529,6 +1578,7 @@ ${PYSITELIB}/Ft/Share/Tests/README
 ${PYSITELIB}/Ft/Share/Tests/Rdf/Borrowed/__init__.py
 ${PYSITELIB}/Ft/Share/Tests/Rdf/Borrowed/__init__.pyc
 ${PYSITELIB}/Ft/Share/Tests/Rdf/Borrowed/bm_20010116.rdf
+${PYSITELIB}/Ft/Share/Tests/Rdf/Borrowed/ga_20020201.rdf
 ${PYSITELIB}/Ft/Share/Tests/Rdf/Borrowed/jc_20010313.py
 ${PYSITELIB}/Ft/Share/Tests/Rdf/Borrowed/jc_20010313.pyc
 ${PYSITELIB}/Ft/Share/Tests/Rdf/Borrowed/ji_20021211.py
@@ -1543,6 +1593,8 @@ ${PYSITELIB}/Ft/Share/Tests/Rdf/Borrowed/rl_20001109.py
 ${PYSITELIB}/Ft/Share/Tests/Rdf/Borrowed/rl_20001109.pyc
 ${PYSITELIB}/Ft/Share/Tests/Rdf/Borrowed/rl_20010105.py
 ${PYSITELIB}/Ft/Share/Tests/Rdf/Borrowed/rl_20010105.pyc
+${PYSITELIB}/Ft/Share/Tests/Rdf/Borrowed/rl_20020327-1.rdf
+${PYSITELIB}/Ft/Share/Tests/Rdf/Borrowed/rl_20020327-2.rdf
 ${PYSITELIB}/Ft/Share/Tests/Rdf/Borrowed/rss1.example.xml
 ${PYSITELIB}/Ft/Share/Tests/Rdf/Borrowed/uo_20001111.py
 ${PYSITELIB}/Ft/Share/Tests/Rdf/Borrowed/uo_20001111.pyc
@@ -1558,6 +1610,8 @@ ${PYSITELIB}/Ft/Share/Tests/Rdf/Query/__init__.py
 ${PYSITELIB}/Ft/Share/Tests/Rdf/Query/__init__.pyc
 ${PYSITELIB}/Ft/Share/Tests/Rdf/Query/test_boolean_functions.py
 ${PYSITELIB}/Ft/Share/Tests/Rdf/Query/test_boolean_functions.pyc
+${PYSITELIB}/Ft/Share/Tests/Rdf/Query/test_functions.py
+${PYSITELIB}/Ft/Share/Tests/Rdf/Query/test_functions.pyc
 ${PYSITELIB}/Ft/Share/Tests/Rdf/Query/test_helper.py
 ${PYSITELIB}/Ft/Share/Tests/Rdf/Query/test_helper.pyc
 ${PYSITELIB}/Ft/Share/Tests/Rdf/Query/test_relational_functions.py
@@ -1581,6 +1635,32 @@ ${PYSITELIB}/Ft/Share/Tests/Rdf/test_serializer.pyc
 ${PYSITELIB}/Ft/Share/Tests/Rdf/use_case/REC-rdf-syntax-7.4-1.rdf
 ${PYSITELIB}/Ft/Share/Tests/Rdf/use_case/containers.rdf
 ${PYSITELIB}/Ft/Share/Tests/Rdf/use_case/no-containers.rdf
+${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands/__init__.py
+${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands/__init__.pyc
+${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands/test_create_container.py
+${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands/test_create_container.pyc
+${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands/test_create_document.py
+${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands/test_create_document.pyc
+${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands/test_create_raw_file.py
+${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands/test_create_raw_file.pyc
+${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands/test_delete.py
+${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands/test_delete.pyc
+${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands/test_export.py
+${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands/test_export.pyc
+${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands/test_fetch_container.py
+${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands/test_fetch_container.pyc
+${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands/test_fetch_document.py
+${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands/test_fetch_document.pyc
+${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands/test_fetch_raw_file.py
+${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands/test_fetch_raw_file.pyc
+${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands/test_install.py
+${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands/test_install.pyc
+${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands/test_prime.py
+${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands/test_prime.pyc
+${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands/test_update_document.py
+${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands/test_update_document.pyc
+${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands/test_update_raw_file.py
+${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands/test_update_raw_file.pyc
 ${PYSITELIB}/Ft/Share/Tests/Server/Client/Core/__init__.py
 ${PYSITELIB}/Ft/Share/Tests/Server/Client/Core/__init__.pyc
 ${PYSITELIB}/Ft/Share/Tests/Server/Client/Core/test_basic_rawfile.py
@@ -1589,10 +1669,6 @@ ${PYSITELIB}/Ft/Share/Tests/Server/Client/Core/test_basic_resource_metadata.py
 ${PYSITELIB}/Ft/Share/Tests/Server/Client/Core/test_basic_resource_metadata.pyc
 ${PYSITELIB}/Ft/Share/Tests/Server/Client/Core/test_container.py
 ${PYSITELIB}/Ft/Share/Tests/Server/Client/Core/test_container.pyc
-${PYSITELIB}/Ft/Share/Tests/Server/Client/Core/test_coverage_end.py
-${PYSITELIB}/Ft/Share/Tests/Server/Client/Core/test_coverage_end.pyc
-${PYSITELIB}/Ft/Share/Tests/Server/Client/Core/test_coverage_start.py
-${PYSITELIB}/Ft/Share/Tests/Server/Client/Core/test_coverage_start.pyc
 ${PYSITELIB}/Ft/Share/Tests/Server/Client/Core/test_documentdefinition.py
 ${PYSITELIB}/Ft/Share/Tests/Server/Client/Core/test_documentdefinition.pyc
 ${PYSITELIB}/Ft/Share/Tests/Server/Client/Core/test_get_repository.py
@@ -1666,8 +1742,6 @@ ${PYSITELIB}/Ft/Share/Tests/Server/Server/Lib/__init__.py
 ${PYSITELIB}/Ft/Share/Tests/Server/Server/Lib/__init__.pyc
 ${PYSITELIB}/Ft/Share/Tests/Server/Server/SCore/DatabaseModes.py
 ${PYSITELIB}/Ft/Share/Tests/Server/Server/SCore/DatabaseModes.pyc
-${PYSITELIB}/Ft/Share/Tests/Server/Server/SCore/GetScoreFunctionList.py
-${PYSITELIB}/Ft/Share/Tests/Server/Server/SCore/GetScoreFunctionList.pyc
 ${PYSITELIB}/Ft/Share/Tests/Server/Server/SCore/__init__.py
 ${PYSITELIB}/Ft/Share/Tests/Server/Server/SCore/__init__.pyc
 ${PYSITELIB}/Ft/Share/Tests/Server/Server/SCore/test_acl_interfaces.py
@@ -1684,10 +1758,6 @@ ${PYSITELIB}/Ft/Share/Tests/Server/Server/SCore/test_commands.py
 ${PYSITELIB}/Ft/Share/Tests/Server/Server/SCore/test_commands.pyc
 ${PYSITELIB}/Ft/Share/Tests/Server/Server/SCore/test_container.py
 ${PYSITELIB}/Ft/Share/Tests/Server/Server/SCore/test_container.pyc
-${PYSITELIB}/Ft/Share/Tests/Server/Server/SCore/test_coverage_end.py
-${PYSITELIB}/Ft/Share/Tests/Server/Server/SCore/test_coverage_end.pyc
-${PYSITELIB}/Ft/Share/Tests/Server/Server/SCore/test_coverage_start.py
-${PYSITELIB}/Ft/Share/Tests/Server/Server/SCore/test_coverage_start.pyc
 ${PYSITELIB}/Ft/Share/Tests/Server/Server/SCore/test_document_inferring.py
 ${PYSITELIB}/Ft/Share/Tests/Server/Server/SCore/test_document_inferring.pyc
 ${PYSITELIB}/Ft/Share/Tests/Server/Server/SCore/test_documentdefinition.py
@@ -1746,10 +1816,6 @@ ${PYSITELIB}/Ft/Share/Tests/Server/Server/Xslt/ext_module_test.py
 ${PYSITELIB}/Ft/Share/Tests/Server/Server/Xslt/ext_module_test.pyc
 ${PYSITELIB}/Ft/Share/Tests/Server/Server/Xslt/test_container.py
 ${PYSITELIB}/Ft/Share/Tests/Server/Server/Xslt/test_container.pyc
-${PYSITELIB}/Ft/Share/Tests/Server/Server/Xslt/test_coverage_end.py
-${PYSITELIB}/Ft/Share/Tests/Server/Server/Xslt/test_coverage_end.pyc
-${PYSITELIB}/Ft/Share/Tests/Server/Server/Xslt/test_coverage_start.py
-${PYSITELIB}/Ft/Share/Tests/Server/Server/Xslt/test_coverage_start.pyc
 ${PYSITELIB}/Ft/Share/Tests/Server/Server/Xslt/test_helper.py
 ${PYSITELIB}/Ft/Share/Tests/Server/Server/Xslt/test_helper.pyc
 ${PYSITELIB}/Ft/Share/Tests/Server/Server/Xslt/test_model.py
@@ -1762,6 +1828,7 @@ ${PYSITELIB}/Ft/Share/Tests/Server/Server/__init__.py
 ${PYSITELIB}/Ft/Share/Tests/Server/Server/__init__.pyc
 ${PYSITELIB}/Ft/Share/Tests/Server/__init__.py
 ${PYSITELIB}/Ft/Share/Tests/Server/__init__.pyc
+${PYSITELIB}/Ft/Share/Tests/Xml/Core/4suite.xsa
 ${PYSITELIB}/Ft/Share/Tests/Xml/Core/__init__.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Core/__init__.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Core/addr_book.dtd
@@ -1775,6 +1842,12 @@ ${PYSITELIB}/Ft/Share/Tests/Xml/Core/goodXml_16LE_LEBOM_16Decl.xml
 ${PYSITELIB}/Ft/Share/Tests/Xml/Core/goodXml_16LE_LEBOM_noDecl.xml
 ${PYSITELIB}/Ft/Share/Tests/Xml/Core/include1.xml
 ${PYSITELIB}/Ft/Share/Tests/Xml/Core/include2.xml
+${PYSITELIB}/Ft/Share/Tests/Xml/Core/include3.xml
+${PYSITELIB}/Ft/Share/Tests/Xml/Core/include4.xml
+${PYSITELIB}/Ft/Share/Tests/Xml/Core/include5.xml
+${PYSITELIB}/Ft/Share/Tests/Xml/Core/include6.xml
+${PYSITELIB}/Ft/Share/Tests/Xml/Core/test_catalog.py
+${PYSITELIB}/Ft/Share/Tests/Xml/Core/test_catalog.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Core/test_domlette.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Core/test_domlette.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Core/test_domlette_interfaces.py
@@ -1785,12 +1858,20 @@ ${PYSITELIB}/Ft/Share/Tests/Xml/Core/test_domlette_readers.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Core/test_domlette_readers.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Core/test_format_number.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Core/test_format_number.pyc
+${PYSITELIB}/Ft/Share/Tests/Xml/Core/test_get_all_ns.py
+${PYSITELIB}/Ft/Share/Tests/Xml/Core/test_get_all_ns.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Core/test_ranges.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Core/test_ranges.pyc
+${PYSITELIB}/Ft/Share/Tests/Xml/Core/test_split_qname.py
+${PYSITELIB}/Ft/Share/Tests/Xml/Core/test_split_qname.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Core/test_xinclude.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Core/test_xinclude.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Core/test_xupdate.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Core/test_xupdate.pyc
+${PYSITELIB}/Ft/Share/Tests/Xml/Core/various_strings_1.dtd
+${PYSITELIB}/Ft/Share/Tests/Xml/Core/xcatalog.xml
+${PYSITELIB}/Ft/Share/Tests/Xml/Core/xcatalog_eg2.xml
+${PYSITELIB}/Ft/Share/Tests/Xml/Core/xsa.dtd
 ${PYSITELIB}/Ft/Share/Tests/Xml/XLink/__init__.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/XLink/__init__.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/XLink/addr_book1.xml
@@ -1801,6 +1882,10 @@ ${PYSITELIB}/Ft/Share/Tests/Xml/XLink/test_simple.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/XLink/test_simple.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/XPath/Borrowed/__init__.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/XPath/Borrowed/__init__.pyc
+${PYSITELIB}/Ft/Share/Tests/Xml/XPath/Borrowed/kd_20010423.py
+${PYSITELIB}/Ft/Share/Tests/Xml/XPath/Borrowed/kd_20010423.pyc
+${PYSITELIB}/Ft/Share/Tests/Xml/XPath/Borrowed/mb_20020709.py
+${PYSITELIB}/Ft/Share/Tests/Xml/XPath/Borrowed/mb_20020709.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/XPath/Borrowed/ml_20000128.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/XPath/Borrowed/ml_20000128.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/XPath/Borrowed/od_20000608.py
@@ -1816,6 +1901,8 @@ ${PYSITELIB}/Ft/Share/Tests/Xml/XPath/Core/test_boolean_expr.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/XPath/Core/test_boolean_expr.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/XPath/Core/test_core_functions.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/XPath/Core/test_core_functions.pyc
+${PYSITELIB}/Ft/Share/Tests/Xml/XPath/Core/test_external_interfaces.py
+${PYSITELIB}/Ft/Share/Tests/Xml/XPath/Core/test_external_interfaces.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/XPath/Core/test_location_path.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/XPath/Core/test_location_path.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/XPath/Core/test_node_test.py
@@ -1853,6 +1940,8 @@ ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/ar_20001110.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/ar_20001110.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/at_20000618.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/at_20000618.pyc
+${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/be_20020802.py
+${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/be_20020802.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/bh_20010501-inner1.xslt
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/bh_20010501-inner2.xslt
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/bh_20010501.py
@@ -1901,6 +1990,8 @@ ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/dm_20010506.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/dm_20010506.xslt
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/dm_20010714.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/dm_20010714.pyc
+${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/dm_20010815.py
+${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/dm_20010815.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/dn_20010504.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/dn_20010504.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/dp_20000306.py
@@ -1918,6 +2009,9 @@ ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/em_20001125.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/em_20010101.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/em_20010101.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/erastothenes.xslt
+${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/etc/mb_20020527-1.xsl
+${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/etc/mb_20020527-2.xsl
+${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/etc/mb_20020907.xsl
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/ev_20000324.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/ev_20000324.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/fc_20001125.py
@@ -1956,6 +2050,8 @@ ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/km_xmascracker.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/km_xmascracker.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/lmg_20001031.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/lmg_20001031.pyc
+${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/mb_20010106.py
+${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/mb_20010106.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/mb_20010718.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/mb_20010718.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/mb_20010913.py
@@ -1968,6 +2064,14 @@ ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/mb_20011019.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/mb_20011019.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/mb_20011105.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/mb_20011105.pyc
+${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/mb_20020527.py
+${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/mb_20020527.pyc
+${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/mb_20020709.py
+${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/mb_20020709.pyc
+${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/mb_20020715.py
+${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/mb_20020715.pyc
+${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/mb_20020907.py
+${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/mb_20020907.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/mg_20010530.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/mg_20010530.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/mn_19991221.py
@@ -2059,6 +2163,8 @@ ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/uo_20010717.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/uo_20010717.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/uo_20010814.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/uo_20010814.pyc
+${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/uo_20020909.py
+${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/uo_20020909.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/urlpattern.xslt
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/w3c-xmlspec.xslt
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/w3c_xslt_spec.py
@@ -2082,6 +2188,7 @@ ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/addr_book_keyed.xsl
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/apply-imports-test.xslt
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/basic_test.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/basic_test.pyc
+${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/etc/null.xslt
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/svgeg.svg
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/test_apply_imports.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/test_apply_imports.pyc
@@ -2095,8 +2202,8 @@ ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/test_choose.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/test_choose.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/test_command_line.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/test_command_line.pyc
-${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/test_compilied_stylesheet.py
-${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/test_compilied_stylesheet.pyc
+${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/test_compiled_stylesheet.py
+${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/test_compiled_stylesheet.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/test_copy.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/test_copy.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/test_copy_of.py
@@ -2145,6 +2252,10 @@ ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/test_pi.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/test_pi.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/test_profile.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/test_profile.pyc
+${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/test_runnode.py
+${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/test_runnode.pyc
+${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/test_sty_inc_paths.py
+${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/test_sty_inc_paths.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/test_variable.py
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/test_variable.pyc
 ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/test_ws_handling.py
@@ -2161,6 +2272,40 @@ ${PYSITELIB}/Ft/Share/Tests/test.py
 ${PYSITELIB}/Ft/Share/Tests/test.pyc
 ${PYSITELIB}/Ft/Share/__init__.py
 ${PYSITELIB}/Ft/Share/__init__.pyc
+${PYSITELIB}/Ft/ThirdParty/Xvif/FragmentFilter.py
+${PYSITELIB}/Ft/ThirdParty/Xvif/FragmentFilter.pyc
+${PYSITELIB}/Ft/ThirdParty/Xvif/Smart_len.py
+${PYSITELIB}/Ft/ThirdParty/Xvif/Smart_len.pyc
+${PYSITELIB}/Ft/ThirdParty/Xvif/__init__.py
+${PYSITELIB}/Ft/ThirdParty/Xvif/__init__.pyc
+${PYSITELIB}/Ft/ThirdParty/Xvif/characters.py
+${PYSITELIB}/Ft/ThirdParty/Xvif/characters.pyc
+${PYSITELIB}/Ft/ThirdParty/Xvif/iFrameRNG.py
+${PYSITELIB}/Ft/ThirdParty/Xvif/iFrameRNG.pyc
+${PYSITELIB}/Ft/ThirdParty/Xvif/iFrameRegFrag.py
+${PYSITELIB}/Ft/ThirdParty/Xvif/iFrameRegFrag.pyc
+${PYSITELIB}/Ft/ThirdParty/Xvif/iFrameTypes.py
+${PYSITELIB}/Ft/ThirdParty/Xvif/iFrameTypes.pyc
+${PYSITELIB}/Ft/ThirdParty/Xvif/iFrameXSLT.py
+${PYSITELIB}/Ft/ThirdParty/Xvif/iFrameXSLT.pyc
+${PYSITELIB}/Ft/ThirdParty/Xvif/iframe.py
+${PYSITELIB}/Ft/ThirdParty/Xvif/iframe.pyc
+${PYSITELIB}/Ft/ThirdParty/Xvif/rng.py
+${PYSITELIB}/Ft/ThirdParty/Xvif/rng.pyc
+${PYSITELIB}/Ft/ThirdParty/Xvif/rngCoreTypeLib.py
+${PYSITELIB}/Ft/ThirdParty/Xvif/rngCoreTypeLib.pyc
+${PYSITELIB}/Ft/ThirdParty/Xvif/wxsTypeLib.py
+${PYSITELIB}/Ft/ThirdParty/Xvif/wxsTypeLib.pyc
+${PYSITELIB}/Ft/ThirdParty/Xvif/xmlchargen.py
+${PYSITELIB}/Ft/ThirdParty/Xvif/xmlchargen.pyc
+${PYSITELIB}/Ft/ThirdParty/Xvif/xmlcomp.py
+${PYSITELIB}/Ft/ThirdParty/Xvif/xmlcomp.pyc
+${PYSITELIB}/Ft/ThirdParty/__init__.py
+${PYSITELIB}/Ft/ThirdParty/__init__.pyc
+${PYSITELIB}/Ft/ThirdParty/__packageInfo__.py
+${PYSITELIB}/Ft/ThirdParty/__packageInfo__.pyc
+${PYSITELIB}/Ft/Xml/Catalog.py
+${PYSITELIB}/Ft/Xml/Catalog.pyc
 ${PYSITELIB}/Ft/Xml/Domlette.py
 ${PYSITELIB}/Ft/Xml/Domlette.pyc
 ${PYSITELIB}/Ft/Xml/FtMiniDom/Handler.py
@@ -2183,23 +2328,35 @@ ${PYSITELIB}/Ft/Xml/InputSource.py
 ${PYSITELIB}/Ft/Xml/InputSource.pyc
 ${PYSITELIB}/Ft/Xml/Lib/HtmlDefs.py
 ${PYSITELIB}/Ft/Xml/Lib/HtmlDefs.pyc
+${PYSITELIB}/Ft/Xml/Lib/HtmlPrettyPrinter.py
+${PYSITELIB}/Ft/Xml/Lib/HtmlPrettyPrinter.pyc
+${PYSITELIB}/Ft/Xml/Lib/HtmlPrinter.py
+${PYSITELIB}/Ft/Xml/Lib/HtmlPrinter.pyc
 ${PYSITELIB}/Ft/Xml/Lib/Nss.py
 ${PYSITELIB}/Ft/Xml/Lib/Nss.pyc
 ${PYSITELIB}/Ft/Xml/Lib/Print.py
 ${PYSITELIB}/Ft/Xml/Lib/Print.pyc
+${PYSITELIB}/Ft/Xml/Lib/StreamWriter.py
+${PYSITELIB}/Ft/Xml/Lib/StreamWriter.pyc
 ${PYSITELIB}/Ft/Xml/Lib/String.py
 ${PYSITELIB}/Ft/Xml/Lib/String.pyc
 ${PYSITELIB}/Ft/Xml/Lib/StripElements.py
 ${PYSITELIB}/Ft/Xml/Lib/StripElements.pyc
 ${PYSITELIB}/Ft/Xml/Lib/TreeCompare.py
 ${PYSITELIB}/Ft/Xml/Lib/TreeCompare.pyc
+${PYSITELIB}/Ft/Xml/Lib/XmlPrettyPrinter.py
+${PYSITELIB}/Ft/Xml/Lib/XmlPrettyPrinter.pyc
+${PYSITELIB}/Ft/Xml/Lib/XmlPrinter.py
+${PYSITELIB}/Ft/Xml/Lib/XmlPrinter.pyc
 ${PYSITELIB}/Ft/Xml/Lib/_4xupdate.py
 ${PYSITELIB}/Ft/Xml/Lib/_4xupdate.pyc
 ${PYSITELIB}/Ft/Xml/Lib/__init__.py
 ${PYSITELIB}/Ft/Xml/Lib/__init__.pyc
+${PYSITELIB}/Ft/Xml/Lib/cStreamWriter.so
 ${PYSITELIB}/Ft/Xml/Lib/routines.so
 ${PYSITELIB}/Ft/Xml/MessageSource.py
 ${PYSITELIB}/Ft/Xml/MessageSource.pyc
+${PYSITELIB}/Ft/Xml/SplitQNamec.so
 ${PYSITELIB}/Ft/Xml/XInclude.py
 ${PYSITELIB}/Ft/Xml/XInclude.pyc
 ${PYSITELIB}/Ft/Xml/XLink/Processor.py
@@ -2216,6 +2373,8 @@ ${PYSITELIB}/Ft/Xml/XPath/Conversions.py
 ${PYSITELIB}/Ft/Xml/XPath/Conversions.pyc
 ${PYSITELIB}/Ft/Xml/XPath/CoreFunctions.py
 ${PYSITELIB}/Ft/Xml/XPath/CoreFunctions.pyc
+${PYSITELIB}/Ft/Xml/XPath/MathFunctions.py
+${PYSITELIB}/Ft/Xml/XPath/MathFunctions.pyc
 ${PYSITELIB}/Ft/Xml/XPath/MessageSource.py
 ${PYSITELIB}/Ft/Xml/XPath/MessageSource.pyc
 ${PYSITELIB}/Ft/Xml/XPath/NamespaceNode.py
@@ -2238,15 +2397,18 @@ ${PYSITELIB}/Ft/Xml/XPath/ParsedRelativeLocationPath.py
 ${PYSITELIB}/Ft/Xml/XPath/ParsedRelativeLocationPath.pyc
 ${PYSITELIB}/Ft/Xml/XPath/ParsedStep.py
 ${PYSITELIB}/Ft/Xml/XPath/ParsedStep.pyc
+${PYSITELIB}/Ft/Xml/XPath/Types.py
+${PYSITELIB}/Ft/Xml/XPath/Types.pyc
 ${PYSITELIB}/Ft/Xml/XPath/Util.py
 ${PYSITELIB}/Ft/Xml/XPath/Util.pyc
 ${PYSITELIB}/Ft/Xml/XPath/XPathParser.py
 ${PYSITELIB}/Ft/Xml/XPath/XPathParser.pyc
-${PYSITELIB}/Ft/Xml/XPath/XPathParserBase.py
-${PYSITELIB}/Ft/Xml/XPath/XPathParserBase.pyc
 ${PYSITELIB}/Ft/Xml/XPath/XPathParserc.so
+${PYSITELIB}/Ft/Xml/XPath/_4xpath.py
+${PYSITELIB}/Ft/Xml/XPath/_4xpath.pyc
 ${PYSITELIB}/Ft/Xml/XPath/__init__.py
 ${PYSITELIB}/Ft/Xml/XPath/__init__.pyc
+${PYSITELIB}/Ft/Xml/XPath/_conversions.so
 ${PYSITELIB}/Ft/Xml/XPointer/MessageSource.py
 ${PYSITELIB}/Ft/Xml/XPointer/MessageSource.pyc
 ${PYSITELIB}/Ft/Xml/XPointer/ParsedNodeTest.py
@@ -2257,8 +2419,6 @@ ${PYSITELIB}/Ft/Xml/XPointer/XPointer.py
 ${PYSITELIB}/Ft/Xml/XPointer/XPointer.pyc
 ${PYSITELIB}/Ft/Xml/XPointer/XPointerParser.py
 ${PYSITELIB}/Ft/Xml/XPointer/XPointerParser.pyc
-${PYSITELIB}/Ft/Xml/XPointer/XPointerParserBase.py
-${PYSITELIB}/Ft/Xml/XPointer/XPointerParserBase.pyc
 ${PYSITELIB}/Ft/Xml/XPointer/XPointerParserc.so
 ${PYSITELIB}/Ft/Xml/XPointer/XPtrContext.py
 ${PYSITELIB}/Ft/Xml/XPointer/XPtrContext.pyc
@@ -2327,6 +2487,8 @@ ${PYSITELIB}/Ft/Xml/Xslt/Exslt/Functions.py
 ${PYSITELIB}/Ft/Xml/Xslt/Exslt/Functions.pyc
 ${PYSITELIB}/Ft/Xml/Xslt/Exslt/Math.py
 ${PYSITELIB}/Ft/Xml/Xslt/Exslt/Math.pyc
+${PYSITELIB}/Ft/Xml/Xslt/Exslt/MessageSource.py
+${PYSITELIB}/Ft/Xml/Xslt/Exslt/MessageSource.pyc
 ${PYSITELIB}/Ft/Xml/Xslt/Exslt/RegularExpressions.py
 ${PYSITELIB}/Ft/Xml/Xslt/Exslt/RegularExpressions.pyc
 ${PYSITELIB}/Ft/Xml/Xslt/Exslt/Sets.py
@@ -2407,8 +2569,6 @@ ${PYSITELIB}/Ft/Xml/Xslt/XPathExtensions.py
 ${PYSITELIB}/Ft/Xml/Xslt/XPathExtensions.pyc
 ${PYSITELIB}/Ft/Xml/Xslt/XPatternParser.py
 ${PYSITELIB}/Ft/Xml/Xslt/XPatternParser.pyc
-${PYSITELIB}/Ft/Xml/Xslt/XPatternParserBase.py
-${PYSITELIB}/Ft/Xml/Xslt/XPatternParserBase.pyc
 ${PYSITELIB}/Ft/Xml/Xslt/XPatternParserc.so
 ${PYSITELIB}/Ft/Xml/Xslt/XPatterns.py
 ${PYSITELIB}/Ft/Xml/Xslt/XPatterns.pyc
@@ -2422,6 +2582,10 @@ ${PYSITELIB}/Ft/Xml/Xslt/_4xslt.py
 ${PYSITELIB}/Ft/Xml/Xslt/_4xslt.pyc
 ${PYSITELIB}/Ft/Xml/Xslt/__init__.py
 ${PYSITELIB}/Ft/Xml/Xslt/__init__.pyc
+${PYSITELIB}/Ft/Xml/Xvif.py
+${PYSITELIB}/Ft/Xml/Xvif.pyc
+${PYSITELIB}/Ft/Xml/_4xml.py
+${PYSITELIB}/Ft/Xml/_4xml.pyc
 ${PYSITELIB}/Ft/Xml/__init__.py
 ${PYSITELIB}/Ft/Xml/__init__.pyc
 ${PYSITELIB}/Ft/Xml/__packageInfo__.py
@@ -2440,7 +2604,11 @@ ${PYSITELIB}/Ft/__init__.pyc
 @dirrm ${PYSITELIB}/Ft/Xml/Lib
 @dirrm ${PYSITELIB}/Ft/Xml/FtMiniDom
 @dirrm ${PYSITELIB}/Ft/Xml
+@dirrm ${PYSITELIB}/Ft/ThirdParty/Xvif
+@dirrm ${PYSITELIB}/Ft/ThirdParty
+@dirrm ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core/etc
 @dirrm ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Core
+@dirrm ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed/etc
 @dirrm ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt/Borrowed
 @dirrm ${PYSITELIB}/Ft/Share/Tests/Xml/Xslt
 @dirrm ${PYSITELIB}/Ft/Share/Tests/Xml/XPointer
@@ -2460,6 +2628,7 @@ ${PYSITELIB}/Ft/__init__.pyc
 @dirrm ${PYSITELIB}/Ft/Share/Tests/Server/Common/Install
 @dirrm ${PYSITELIB}/Ft/Share/Tests/Server/Common
 @dirrm ${PYSITELIB}/Ft/Share/Tests/Server/Client/Core
+@dirrm ${PYSITELIB}/Ft/Share/Tests/Server/Client/Commands
 @dirrm ${PYSITELIB}/Ft/Share/Tests/Server/Client
 @dirrm ${PYSITELIB}/Ft/Share/Tests/Server
 @dirrm ${PYSITELIB}/Ft/Share/Tests/Rdf/use_case
@@ -2478,6 +2647,8 @@ ${PYSITELIB}/Ft/__init__.pyc
 @dirrm ${PYSITELIB}/Ft/Share/Tests/Lib
 @dirrm ${PYSITELIB}/Ft/Share/Tests
 @dirrm ${PYSITELIB}/Ft/Share/Temp
+@dirrm ${PYSITELIB}/Ft/Share/Profile/Xml/XUpdate
+@dirrm ${PYSITELIB}/Ft/Share/Profile/Xml
 @dirrm ${PYSITELIB}/Ft/Share/Profile/Server/SCore
 @dirrm ${PYSITELIB}/Ft/Share/Profile/Server/Http
 @dirrm ${PYSITELIB}/Ft/Share/Profile/Server
@@ -2487,7 +2658,11 @@ ${PYSITELIB}/Ft/__init__.pyc
 @dirrm ${PYSITELIB}/Ft/Share/LoadTest/Server/SCore
 @dirrm ${PYSITELIB}/Ft/Share/LoadTest/Server
 @dirrm ${PYSITELIB}/Ft/Share/LoadTest
-@exec ${MKDIR} %D/${PYSITELIB}/Ft/Share/Docs
+@dirrm ${PYSITELIB}/Ft/Share/ExtensionModules
+@exec ${MKDIR} %D/${PYSITELIB}/Ft/Share/Docs/html/HowTos/images
+@dirrm ${PYSITELIB}/Ft/Share/Docs/html/HowTos/images
+@dirrm ${PYSITELIB}/Ft/Share/Docs/html/HowTos
+@dirrm ${PYSITELIB}/Ft/Share/Docs/html
 @dirrm ${PYSITELIB}/Ft/Share/Docs
 @dirrm ${PYSITELIB}/Ft/Share/Demos/images/Cards/Cribbage
 @dirrm ${PYSITELIB}/Ft/Share/Demos/images/Cards
@@ -2501,6 +2676,7 @@ ${PYSITELIB}/Ft/__init__.pyc
 @dirrm ${PYSITELIB}/Ft/Share/Demos/Common
 @dirrm ${PYSITELIB}/Ft/Share/Demos/BuyerBase/data
 @dirrm ${PYSITELIB}/Ft/Share/Demos/BuyerBase
+@dirrm ${PYSITELIB}/Ft/Share/Demos/BookerT
 @dirrm ${PYSITELIB}/Ft/Share/Demos/4RDF
 @dirrm ${PYSITELIB}/Ft/Share/Demos
 @dirrm ${PYSITELIB}/Ft/Share/Data/Stylesheets/presmaterial
