@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2004/04/20 16:40:55 jmmv Exp $
+# $NetBSD: Makefile,v 1.31 2004/08/31 18:11:03 jmmv Exp $
 #
 
 DISTNAME=		glade-2.6.0
 PKGNAME=		${DISTNAME:S/-/2-/}
+PKGREVISION=		1
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/glade/2.6/}
 EXTRACT_SUFX=		.tar.bz2
@@ -26,6 +27,7 @@ USE_LIBTOOL=		YES
 .include "../../devel/gail/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
+.include "../../devel/libgail-gnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
