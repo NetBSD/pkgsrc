@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.21 2000/03/21 22:40:55 tron Exp $
+# $NetBSD: Makefile,v 1.22 2000/05/15 02:32:51 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/29 12:17:50 tg Exp
 #
 
 DISTNAME=       xpaint-2.5.6
 WRKSRC=		${WRKDIR}/xpaint
 CATEGORIES=	graphics x11
-MASTER_SITES=	http://www.danbbs.dk/~torsten/xpaint/
+MASTER_SITES=	http://home.worldonline.dk/~torsten/xpaint/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.danbbs.dk/~torsten/xpaint/
+HOMEPAGE=	http://home.worldonline.dk/~torsten/xpaint/
 
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 DEPENDS+=	tiff-*:../../graphics/tiff
