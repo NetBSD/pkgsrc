@@ -5,7 +5,7 @@
 # (c) Copyright 2000-2002 Hubert Feyrer <hubert@feyrer.de>
 #
 
-$etcdir="@PREFIX@/etc";
+$etcdir="@PKG_SYSCONFDIR@";
 #$etcdir="/usr/pkg/etc";		# debug
 
 require "$etcdir/6to4.conf";
