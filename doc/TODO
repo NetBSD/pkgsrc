@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.12 2002/11/28 11:47:07 markd Exp $
+$NetBSD: TODO,v 1.13 2002/11/28 12:58:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -63,7 +63,6 @@ Suggested package updates
 =========================
 
 	o Mesa-5.0 [jschauma]
-	o ORBit2-2.5.0 [pkg/18707]
 	o acroread-5.1
 	o anjuta-1.0.0
 	o aspell-0.50.3
