@@ -1,0 +1,38 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2000/05/01 21:58:42 jlam Exp $
+# FreeBSD Id: Makefile,v 1.20 1999/05/03 01:58:33 steve Exp $
+
+DISTNAME=		VFlib2-${VFLIB_VERSION}
+CATEGORIES+=		japanese print
+MASTER_SITES+=		ftp://gull.se.hiroshima-u.ac.jp/pub/TypeHack/
+DISTFILES+=		${VFLIB_SRC}
+
+VFLIB_SRC=		${DISTNAME}${EXTRACT_SUFX}
+
+MAINTAINER=		tech-pkg-ja@jp.netbsd.org
+HOMEPAGE=		http://TypeHack.aial.hiroshima-u.ac.jp/VFlib/
+
+BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
+DEPENDS+=		freetype-lib-1.2:../../graphics/freetype-lib
+
+VFLIB_VERSION=		2.24.2
+PLIST_SUBST+=		VFLIB_VERSION=${VFLIB_VERSION} \
+			VFLIB_SO_VERSION=${VFLIB_VERSION:C/^2.//}
+
+USE_LIBTOOL=		# defined
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+
+GNU_CONFIGURE=		# defined
+CONFIGURE_ARGS+=	--with-freetype="ttf -lintl" \
+			--with-freetype-includedir=${LOCALBASE}/include \
+			--with-freetype-libdir=${LOCALBASE}/lib
+MAKE_ENV+=		LOCAL_LDFLAGS="${LDFLAGS}"
+
+FILESDIR=		${.CURDIR}/../../japanese/vflib-lib/files
+PATCHDIR=		${.CURDIR}/../../japanese/vflib-lib/patches
+
+EXTRACT_ONLY=		${VFLIB_SRC}
+
+pre-configure:
+	cd ${WRKSRC}; ${LOCALBASE}/bin/autoconf
+
+.include "../../mk/bsd.pkg.mk"

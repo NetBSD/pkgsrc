@@ -1,0 +1,47 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/05/01 21:58:42 jlam Exp $
+
+--- Makefile.in.orig	Mon Sep 14 01:25:04 1998
++++ Makefile.in	Mon May  1 04:37:47 2000
+@@ -10,17 +10,22 @@
+ 
+ LIBTOOL=./libtool
+ 
+-all:
+-	(cd src; $(MAKE) $@)
++all: build-src build-tools
++install: install-src install-tools
++
++build-src:
++	(cd src; $(MAKE) all)
++
++build-tools:
+ 	if test -d /usr/openwin ; then \
+ 		(cd tools; \
+ 		 OPENWINHOME=/usr/openwin; export OPENWINHOME; \
+-	     	 xmkmf; $(MAKE) $@) \
++	     	 xmkmf; $(MAKE) all) \
+ 	else \
+-		(cd tools; xmkmf -a; $(MAKE) $@) \
++		(cd tools; xmkmf -a; $(MAKE) all) \
+ 	fi
+ 
+-install: 
++install-src: 
+ 	@if [ ! -d $(bindir) ] ; then \
+ 	    ./recmkdir $(bindir); fi
+ 	@if [ ! -d $(libdir) ] ; then \
+@@ -29,10 +34,12 @@
+ 	    ./recmkdir $(includedir); fi
+ 	@if [ ! -d $(runtimedir) ] ; then \
+ 	    ./recmkdir $(runtimedir); fi
+-	(cd src;   $(MAKE) $@)
+-	(cd tools; $(MAKE) $@)
++	(cd src;   $(MAKE) install)
+ 	$(CP) vfontcap* $(runtimedir)
+ 	$(CP) doc/*.dvi doc/*.ps doc/QA* $(runtimedir)
++
++install-tools:
++	(cd tools; $(MAKE) install)
+ 
+ uninstall:
+ 	-(cd src;   $(MAKE) $@)
