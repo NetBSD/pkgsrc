@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2004/01/20 12:20:05 agc Exp $
+# $NetBSD: Makefile,v 1.46 2004/01/25 15:21:35 kristerw Exp $
 #
 
 DISTNAME=	${SCIBASE}.src
@@ -79,7 +79,7 @@ post-install:
 	${LN} -s ${LIBTOOL} ${PREFIX}/lib/${SCIBASE}/libtool
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-USE_PKGSRC_GCC=		# defined
+GCC_REQD=		2.95.3
 .endif
 
 # the "SCI=0 && unset SCI" is done because some of the tests really will
