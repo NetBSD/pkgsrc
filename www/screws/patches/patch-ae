@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1 2005/03/20 17:27:31 jmmv Exp $
+
+--- src/Hsml/Makefile.orig	2004-05-22 23:16:38.000000000 +0200
++++ src/Hsml/Makefile
+@@ -7,7 +7,7 @@ DEBUG=-g
+ DEFS+=  -DINCORE_LUA=${INCORE_LUA}
+ DEFS+=	-DPATH_JAVA=\"${JAVA}\"
+ DEFS+=	-DPATH_
+-CFLAGS= -I/usr/pkg/include -I/usr/local/include ${DEBUG} ${DEFS}
++CFLAGS+= ${DEBUG} ${DEFS}
+ 
+ %.o: %.c
+ 	@echo "[hsml] $<"
+@@ -15,7 +15,7 @@ CFLAGS= -I/usr/pkg/include -I/usr/local/
+ 
+ all: opts ${OBJ}
+ 	@echo "[hsml] LINKING..."
+-	@${CC} ${CFLAGS} ${OBJ} -o ${BIN} `cat .opts`
++	@${CC} ${CFLAGS} ${LDFLAGS} ${OBJ} -o ${BIN} `cat .opts`
+ 	@echo "-----------------"
+ 
+ clean:
