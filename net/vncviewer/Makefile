@@ -1,12 +1,17 @@
-# $NetBSD: Makefile,v 1.4 2001/02/25 04:18:10 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2002/04/25 04:33:47 itojun Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
 DISTNAME=       	vnc-3.3.3r2_unixsrc
 PKGNAME=		vncviewer-3.3.3.2
+PKGREVISION=		1
 CATEGORIES=		net x11
 MASTER_SITES=   	http://www.uk.research.att.com/vnc/dist/
 EXTRACT_SUFX=		.tgz
+
+PATCH_SITES=		ftp://ftp.kame.net/pub/kame/misc/
+PATCHFILES=		vnc-3.3.3r2-v6-20010421.diff.gz
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	 	abs@netbsd.org
 HOMEPAGE=		http://www.uk.research.att.com/vnc/
@@ -21,6 +26,6 @@ WRKSRC=			${WRKDIR}/vnc_unixsrc
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vncviewer/vncviewer ${PREFIX}/bin/vncviewer
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/vncviewer
-	${INSTALL_DATA} ${WRKSRC}/vncviewer/README ${PREFIX}/share/doc/vncviewer/README
+	${INSTALL_DATA} ${WRKSRC}/vncviewer/README ${PREFIX}/share/doc/vncviewer
 
 .include "../../mk/bsd.pkg.mk"
