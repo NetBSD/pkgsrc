@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2003/03/09 19:17:57 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/29 12:41:21 jmmv Exp $
 # FreeBSD: ports/graphics/ruby-opengl/Makefile,v 1.4 2000/09/26 08:01:58 knu Exp
 
 DISTNAME=	rbogl-${VERSION}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}opengl-${VERSION:S/b$/.2/}
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}/opengl
 CATEGORIES=	graphics
 MASTER_SITES=	http://www2.giganet.net/~yoshi/
 EXTRACT_SUFX=	.tgz
@@ -17,8 +18,6 @@ DIST_SUBDIR=	ruby
 USE_BUILDLINK2=	yes
 USE_X11=	yes
 USE_RUBY_EXTCONF= yes
-
-WRKSRC=		${WRKDIR}/opengl
 
 CONFIGURE_ARGS+= --with-ruby-dir="${LOCALBASE}" \
 		 --with-x11-dir="${X11BASE}"

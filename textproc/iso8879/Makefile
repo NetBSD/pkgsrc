@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2003/01/29 21:15:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2003/03/29 12:42:37 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.9 1999/02/11 16:01:16 jfieber Exp
 #
 
 DISTNAME=	isoENTS
 PKGNAME=	iso8879-1986
 PKGREVISION=	2
+WRKSRC=		${WRKDIR}
 CATEGORIES=	textproc
 MASTER_SITES=	http://fallout.campusview.indiana.edu/ports/distfiles/
 EXTRACT_SUFX=	.zip
@@ -17,7 +18,6 @@ NO_MTREE=       yes
 USE_BUILDLINK2=	yes
 EXTRACT_ONLY=	# empty
 NO_BUILD=       yes
-WRKSRC=		${WRKDIR}
 
 INSTDIR=	${PREFIX}/share/sgml/iso8879
 

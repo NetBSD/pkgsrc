@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2001/02/17 17:51:26 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/29 12:42:10 jmmv Exp $
 #
 
 DISTNAME=		pax-19980903
 PKGNAME=		pax-19990423
+WRKSRC=			${WRKDIR}/pax
 CATEGORIES=		pkgtools
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
@@ -11,7 +12,6 @@ HOMEPAGE=		http://www.netbsd.org/
 COMMENT=		NetBSD-current's pax tool
 
 PREFIX=			/
-WRKSRC=			${WRKDIR}/pax
 MAKE_ENV+=		BINDIR=/bin MANDIR=/usr/share/man
 NO_PKG_REGISTER=	yes
 NO_PACKAGE=		No package registration is done

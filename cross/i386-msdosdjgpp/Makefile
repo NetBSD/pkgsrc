@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2002/10/03 16:13:16 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/03/29 12:40:24 jmmv Exp $
 #
 
+WRKSRC=			${WRKDIR}/djgpp
 DISTVERSION=		2.02.0
 DISTFILES=		${DJGPP_FILES}
 EXTRACT_ONLY=		# none of the djgpp files
@@ -12,8 +13,6 @@ HOMEPAGE=		http://www.delorie.com/djgpp/
 COMMENT=		Cross-compile environment for MS-DOS on 386 and higher
 
 BUILD_DEPENDS=		unzip-[0-9]*:../../archivers/unzip
-
-WRKSRC=			${WRKDIR}/djgpp
 
 USE_CROSS_BINUTILS=	yes
 BINUTILS_GNUTARGET=	coff-go32

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2002/09/25 06:32:38 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 12:40:09 jmmv Exp $
 #
 
 DISTNAME=	wmmixer-1.0-beta1
 PKGNAME=	wmmixer-1.0
+WRKSRC=		${WRKDIR}/wmmixer
 CATEGORIES=	audio
 MASTER_SITES=	http://www.geocities.com/SiliconValley/Vista/2471/files/
 EXTRACT_SUFX=	.tgz
@@ -10,8 +11,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pr@alles.prima.de
 HOMEPAGE=	http://www.geocities.com/SiliconValley/Vista/2471/
 COMMENT=	mixer designed for WindowMaker (dockapp)
-
-WRKSRC=		${WRKDIR}/wmmixer
 
 USE_BUILDLINK2=		YES
 USE_IMAKE=		YES

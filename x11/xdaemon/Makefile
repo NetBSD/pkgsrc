@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2003/03/28 21:14:41 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/29 12:43:12 jmmv Exp $
 
 DISTNAME=	xdaemon-1.0
+WRKSRC=		${WRKDIR}
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 DISTFILES=	${PIX} Daemon.README
@@ -18,7 +19,6 @@ PIX=	xdaemon_bw.xbm		xdaemon2_bw.xbm \
 	xdaemon_color.xpm	xdaemon2_color.xpm \
 	xdaemon_icon.xbm	xdaemon2_icon.xbm \
 	xdaemon_mask.xbm	xdaemon2_mask.xbm
-WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 NO_MTREE=	yes

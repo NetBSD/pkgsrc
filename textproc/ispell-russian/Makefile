@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/11/19 15:53:25 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/29 12:42:39 jmmv Exp $
 
 DISTNAME=	rus-ispell-0.99f3
 PKGNAME=	ispell-russian-0.99.3
+WRKSRC=		${WRKDIR}
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://scon155.phys.msu.su/pub/russian/ispell/
 
@@ -9,8 +10,6 @@ MAINTAINER=	mishka@terabyte.com.ua
 COMMENT=	Russian (KOI8-R) ispell dictonary from Alexander Lebedev
 
 DEPENDS+=	ispell-base>=3.1.20:../../textproc/ispell-base
-
-WRKSRC=		${WRKDIR}
 
 MAKE_ENV+=	CAT=${CAT} RM=${RM} SED=${SED} TR=${TR} UNIQ="uniq"
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2002/10/02 22:00:09 dillo Exp $
+# $NetBSD: Makefile,v 1.22 2003/03/29 12:41:32 jmmv Exp $
 #
 
 DISTNAME=	Squeak-3.0
 PKGNAME=	squeak-3.0
+WRKSRC=		${WRKDIR}/Squeak-3.0/build
 CATEGORIES=	lang
 MASTER_SITES=	ftp://st.cs.uiuc.edu/Smalltalk/Squeak/3.0/platform-independent/
 MASTER_SITES+=	ftp://st.cs.uiuc.edu/Smalltalk/Squeak/3.0/unix-linux/src/
@@ -23,7 +24,6 @@ USE_X11=	yes
 CPPFLAGS+=	-DNETBSD_OSS_HACK
 DIST_SUBDIR=	squeak
 EXTRACT_ONLY=	${DISTNAME}-src${EXTRACT_SUFX}
-WRKSRC=		${WRKDIR}/Squeak-3.0/build
 
 CONFIGURE_SCRIPT= ${WRKSRC}/../src/unix/configure
 LTCONFIG_OVERRIDE= ${WRKSRC}/../src/unix/ltconfig

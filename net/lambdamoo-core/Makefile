@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/26 00:19:42 rh Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/29 12:41:58 jmmv Exp $
 
 DISTNAME=	LambdaCore-12Apr99.db
 PKGNAME=	lambdamoo-core-990412
+WRKSRC=		${WRKDIR}
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.lambda.moo.mud.org/pub/MOO/ \
 		ftp://ftp.kanga.nu/pub/mirrors/ftp.lambda.moo.mud.org/pub/MOO/
@@ -11,7 +12,6 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.ccs.neu.edu/home/eostrom/muds/lambdamoo.html
 COMMENT=	generic core classes for lambdamoo
 
-WRKSRC=		${WRKDIR}
 EXTRACT_CMD=	:
 
 post-extract:

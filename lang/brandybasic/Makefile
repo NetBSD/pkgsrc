@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2001/06/04 09:59:04 abs Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 12:41:24 jmmv Exp $
 #
 
 DISTNAME=       b110
 PKGNAME=        brandybasic-1.0.10
+WRKSRC=		${WRKDIR}/brandy-1.0.10
 CATEGORIES=     lang
 MASTER_SITES=   http://www.argonet.co.uk/users/dave_daniels/
 EXTRACT_SUFX=   .tgz
@@ -10,8 +11,6 @@ EXTRACT_SUFX=   .tgz
 MAINTAINER=     abs
 HOMEPAGE=       http://www.argonet.co.uk/users/dave_daniels/
 COMMENT=	Brandy Basic V interpreter - Acorn ARM Computers BASIC dialect
-
-WRKSRC=		${WRKDIR}/brandy-1.0.10
 
 DOCDIR=		${PREFIX}/share/doc/brandy
 EXAMPLEDIR=	${PREFIX}/share/examples/brandy

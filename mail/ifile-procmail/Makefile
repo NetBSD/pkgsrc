@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/13 09:46:55 salo Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/29 12:41:35 jmmv Exp $
 #
 
 DISTNAME=	ifile.procmail-0.3
 PKGNAME=	${DISTNAME:S/./-/}
+WRKSRC=		${WRKDIR}/${DISTNAME}
 CATEGORIES=	mail
 MASTER_SITES=	http://Xtrmntr.org/ORBman/download/
 EXTRACT_SUFX=	.tgz
@@ -21,8 +22,6 @@ DEPENDS+=	mktemp>=1.4:../../sysutils/mktemp
 .endif
 
 NO_BUILD=	YES
-
-WRKSRC=		${WRKDIR}/${DISTNAME}
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ifile

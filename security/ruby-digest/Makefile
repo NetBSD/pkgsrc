@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2002/01/15 16:43:50 taca Exp $
+# $NetBSD: Makefile,v 1.3 2003/03/29 12:42:24 jmmv Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}digest-${RUBY_VERSION}
+WRKSRC=		${RUBY_WRKSRC}/ext/digest
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -13,7 +14,6 @@ COMMENT=	Ruby extension to message digest library
 CONFLICTS=	${RUBY_PKGNAMEPREFIX}md5-[0-9]*
 
 DISTINFO_FILE=	${RUBY_DISTINFO}
-WRKSRC=		${RUBY_WRKSRC}/ext/digest
 
 DIST_SUBDIR=	ruby
 RUBY_REQD=	1.6.6

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/03/12 10:56:34 markd Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/29 12:43:00 jmmv Exp $
 
 DISTNAME=	kde-i18n-el-${_KDE_VERSION}
+WRKSRC=		${WRKDIR}/kde-i18n-el
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITES_KDE:=kde-i18n/}
 
@@ -9,8 +10,6 @@ COMMENT=	Language bindings for the KDE desktop
 .include "../../x11/kde3/Makefile.kde3"
 
 USE_BUILDLINK2=		YES
-
-WRKSRC=		${WRKDIR}/kde-i18n-el
 
 .include "../../x11/kde3/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"

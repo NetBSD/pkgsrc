@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2002/10/20 14:33:53 lukem Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/29 12:42:05 jmmv Exp $
 #
 
 DISTNAME=		tightvnc-1.2.6
+WRKSRC=			${WRKDIR}/vnc_unixsrc
 CATEGORIES=		net x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vnc-tight/} \
 			ftp://ftp.uk.research.att.com/pub/vnc/dist/
@@ -19,8 +20,6 @@ USE_BUILDLINK2=		yes
 USE_IMAKE=		yes
 NO_INSTALL_MANPAGES=	yes
 USE_PERL5=		yes
-
-WRKSRC=			${WRKDIR}/vnc_unixsrc
 
 ALL_TARGET=		World
 

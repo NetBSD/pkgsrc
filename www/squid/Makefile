@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.79 2003/03/25 17:44:22 taca Exp $
+# $NetBSD: Makefile,v 1.80 2003/03/29 12:42:55 jmmv Exp $
 
 DISTNAME=	squid-2.5.STABLE2
 PKGNAME=	squid-2.5.2
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -41,7 +42,6 @@ BUILD_DEFS+=		SQUID_CONFIGURE_ARGS
 MAKE_ENV+=		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 MAKE_ENV+=		PKG_PREFIX="${PREFIX}"
 PLIST_SRC=		${WRKDIR}/PLIST
-WRKSRC=			${WRKDIR}/${DISTNAME:S/-src//}
 RCD_SCRIPTS=		squid
 
 CONF_FILES+=		${EXAMPLESDIR}/mime.conf ${PKG_SYSCONFDIR}/mime.conf

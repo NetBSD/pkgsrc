@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/05/16 21:18:28 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/29 12:41:45 jmmv Exp $
 
 DISTNAME=	tvcp012401
 PKGNAME=	tasp-vsipl-20010516
+WRKSRC=		${WRKDIR}/TASP_VSIPL_Core_Plus/build.${MACHINE_ARCH}
 CATEGORIES=	math
 MASTER_SITES=	http://www.vsipl.org/
 
@@ -12,7 +13,6 @@ COMMENT=	Vector Signal Image Processing Library
 DIST_SUBDIR=	tasp-vsipl
 
 USE_X11=	yes
-WRKSRC=		${WRKDIR}/TASP_VSIPL_Core_Plus/build.${MACHINE_ARCH}
 
 post-extract:
 	${MKDIR} ${WRKSRC}

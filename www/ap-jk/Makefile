@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2003/02/17 23:05:48 grant Exp $
+# $NetBSD: Makefile,v 1.17 2003/03/29 12:42:48 jmmv Exp $
 
 DISTNAME=	jakarta-tomcat-${TOMCAT_VERSION}-src
 PKGNAME=	ap-jk-${TOMCAT_VERSION}
 TOMCAT_VERSION=	3.2.4
+WRKSRC=		${WRKDIR}/${DISTNAME}/src/native/apache1.3
 CATEGORIES=	www
 MASTER_SITES=	http://jakarta.apache.org/builds/tomcat/release/v${TOMCAT_VERSION}/src/
 
@@ -19,7 +20,6 @@ GTAR=		${LOCALBASE}/bin/gtar
 USE_BUILDLINK2=		# defined
 
 EXTRACT_ELEMENTS=	${DISTNAME}/src/native
-WRKSRC=			${WRKDIR}/${DISTNAME}/src/native/apache1.3
 
 APACHE_MODULE_NAME=	mod_jk.so
 APACHE_MODULE_SRC=	*.c ../jk/*.c

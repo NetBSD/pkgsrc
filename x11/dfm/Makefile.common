@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.4 2002/08/25 21:52:32 jlam Exp $
+# $NetBSD: Makefile.common,v 1.5 2003/03/29 12:42:58 jmmv Exp $
 #
 
 DISTNAME=	dfm-0.99.9
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}/dfm
 MASTER_SITES=	http://www.kaisersite.de/dfm/
 
-WRKSRC=		${WRKDIR}/dfm
 USE_BUILDLINK2=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes

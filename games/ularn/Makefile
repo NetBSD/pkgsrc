@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2002/12/24 18:55:39 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 12:41:09 jmmv Exp $
 
 DISTNAME=		ularn
 PKGNAME=		ularn-6.12.92
+WRKSRC=			${WRKDIR}
 CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.win.tue.nl/pub/games/larn/
 
@@ -9,7 +10,6 @@ MAINTAINER=		collver1@attbi.com
 HOMEPAGE=		http://www.win.tue.nl/games/roguelike/larn/
 COMMENT=		fantasy roguelike game based on vintage larn
 
-WRKSRC=			${WRKDIR}
 HAS_CONFIGURE=          # defined
 CONFIGURE_ENV+=         PREFIX=${LOCALBASE}
 CONFIGURE_SCRIPT=       ./Configure

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/11/25 14:27:05 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/29 12:40:29 jmmv Exp $
 
 DISTNAME=	exec-0.107
 PKGNAME=	aap-0.107
+WRKSRC=		${WRKDIR}
 CATEGORIES=	devel
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=a-a-p/}
 EXTRACT_SUFX=	.zip
@@ -9,8 +10,6 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.a-a-p.org/
 COMMENT=	make(1) replacement
-
-WRKSRC=		${WRKDIR}
 
 AAP_DIR=	${PREFIX}/lib/aap
 AAP_DOC=	${PREFIX}/share/doc/aap

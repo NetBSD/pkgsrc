@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2003/03/08 03:05:39 jmc Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/29 12:40:50 jmmv Exp $
 #
 
 DISTNAME=	emulator_src_${POSE_VERSION}
 PKGNAME=	palmosemulator-${POSE_VERSION}
 PKGREVISION=	1
+WRKSRC=         ${WRKDIR}/Emulator_Src_${POSE_VERSION}
 CATEGORIES=	emulators x11
 MASTER_SITES=	http://www.palmos.com/dev/tools/emulator/sources/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
@@ -22,7 +23,6 @@ SITES_emulator-skins-19.tar.gz=	http://www.palmos.com/dev/tools/emulator/
 
 #LICENSE=       GPL
 
-WRKSRC=         ${WRKDIR}/Emulator_Src_${POSE_VERSION}
 POSE_BUILD_DIR=	${WRKSRC}/BuildUnix
 POSE_SHARE_DIR=	${PREFIX}/share/palmosemulator
 POSE_SKINS_DIR=	${POSE_SHARE_DIR}/skins

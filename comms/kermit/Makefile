@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.42 2003/03/12 01:10:29 seb Exp $
+# $NetBSD: Makefile,v 1.43 2003/03/29 12:40:20 jmmv Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/11/26 23:16:51 jseger Exp
 #
 
 DISTNAME=	cku208
 PKGNAME=        kermit-8.0.208
+WRKSRC=		${WRKDIR}
 CATEGORIES=	comms
 MASTER_SITES=	ftp://kermit.columbia.edu/kermit/archives/
 
@@ -24,7 +25,6 @@ ALL_TARGET=	netbsd
 BUILD_DEFS+=	KFLAGS LIBS KERMIT_SUID_UUCP
 MAKE_ENV+=	KFLAGS="${KFLAGS}" LIBS="${LIBS}"
 MAKEFILE=	makefile
-WRKSRC=		${WRKDIR}
 PLIST_SRC=	${WRKDIR}/PLIST
 
 #KFLAGS+=	-DNODEBUG -DNOOLDMODEMS

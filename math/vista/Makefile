@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 18:22:47 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/29 12:41:45 jmmv Exp $
 #
 
 DISTNAME=	vista
 PKGNAME=	vista-5.05
+WRKSRC=		${WRKDIR}/vista-5.0.5
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -12,7 +13,6 @@ COMMENT=	Visual statistics system
 
 DEPENDS+=	xlispstat>=3.52.9:../../math/xlispstat
 
-WRKSRC=		${WRKDIR}/vista-5.0.5
 USE_X11BASE=	yes
 USE_GMAKE=	yes
 

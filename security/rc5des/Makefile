@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2002/04/12 15:17:22 mrauch Exp $
+# $NetBSD: Makefile,v 1.11 2003/03/29 12:42:24 jmmv Exp $
 #
 
 DISTNAME=		rc5-mlg-004
 PKGNAME=		rc5des-0.4
 PKGREVISION=		1
+WRKSRC=			${WRKDIR}/RC5
 CATEGORIES=		security
 MASTER_SITES=		http://www.flame.org/netbsd-rc5/
 
@@ -29,8 +30,6 @@ ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386
 
 CRYPTO=			yes
 NO_CONFIGURE=		yes
-
-WRKSRC=			${WRKDIR}/RC5
 
 # agc - this is commented out until I can test that it works.
 #post-patch:
