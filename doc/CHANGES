@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7495 2004/10/20 19:11:58 jmmv Exp $
+$NetBSD: CHANGES,v 1.7496 2004/10/20 19:25:46 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4786,3 +4786,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pkgfind to 20041020 [jmmv 2004-10-20]
 	Added p5-xmltv-0.5.35 [adrianp 2004-10-20]
 	Updated gpgme to 1.0.0 [jmmv 2004-10-20]
+	Added intel2gas-1.3.3 [xtraeme 2004-10-20]
