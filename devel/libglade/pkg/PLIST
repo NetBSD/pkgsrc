@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/31 19:06:08 rh Exp $
+bin/libglade-config
+bin/libglade-xgettext
+include/glade/glade.h
+include/glade/glade-xml.h
+include/glade/glade-build.h
+lib/libglade.so.0.0
+lib/libglade.a
+lib/libglade-gnome.so.0.0
+lib/libglade-gnome.a
+lib/libgladeConf.sh
+share/aclocal/libglade.m4
+share/gnome/html/libglade/gladexml.html
+share/gnome/html/libglade/libglade-embedding.html
+share/gnome/html/libglade/libglade-extending.html
+share/gnome/html/libglade/libglade-gnome.html
+share/gnome/html/libglade/libglade-i18n.html
+share/gnome/html/libglade/libglade-lib.html
+share/gnome/html/libglade/libglade-libglade-build.html
+share/gnome/html/libglade/libglade-libglade-initialisation.html
+share/gnome/html/libglade/libglade-notes.html
+share/gnome/html/libglade/libglade.html
