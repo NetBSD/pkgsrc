@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2004/01/13 17:48:37 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/03/02 13:20:39 wiz Exp $
 bin/avrdude
 etc/avrdude.conf
 man/man1/avrdude.1
 share/doc/avrdude/avrdude.pdf
 share/doc/avrdude/avrdude-html/avrdude.html
 share/doc/avrdude/avrdude-html/avrdude_abt.html
-share/doc/avrdude/avrdude-html/avrdude_ovr.html
 share/doc/avrdude/avrdude-html/avrdude_1.html
 share/doc/avrdude/avrdude-html/avrdude_10.html
 share/doc/avrdude/avrdude-html/avrdude_11.html

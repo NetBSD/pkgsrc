@@ -1,0 +1,18 @@
+$NetBSD: patch-ag,v 1.1 2005/03/02 13:20:40 wiz Exp $
+
+--- doc/avrdude.texi.orig	2003-04-18 06:41:45.000000000 +0200
++++ doc/avrdude.texi
+@@ -58,9 +58,11 @@ by the Free Software Foundation.
+ @author by Brian S. Dean
+ 
+ @page
+-@hfill (Send bugs and comments on AVRDUDE to @w{@email{avrdude-dev@@nongnu.org}}.)
++@flushright
++(Send bugs and comments on AVRDUDE to @w{@email{avrdude-dev@@nongnu.org}}.)
++@end flushright
+ 
+-@vfill
++@vskip 0pt plus 1filll
+ 
+ Copyright @copyright{} 2003 Brian S. Dean
+ @sp 2
