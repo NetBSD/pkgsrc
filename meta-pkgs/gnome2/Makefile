@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2003/04/27 12:52:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2003/04/29 08:28:48 rh Exp $
 
-DISTNAME=	gnome-2.2.2
+DISTNAME=	gnome-2.2.3
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -17,6 +17,7 @@ DEPENDS+=	glade2>=2.0.0:../../devel/glade2
 DEPENDS+=	gnome-applets>=2.2.1:../../x11/gnome2-applets
 DEPENDS+=	gnome-audio>=1.4.0:../../audio/gnome-audio
 DEPENDS+=	gnome-games>=2.2.1:../../games/gnome2-games
+DEPENDS+=	gnome-icon-theme>=1.0.2:../../graphics/gnome-icon-theme
 DEPENDS+=	gnome-media>=2.2.1:../../audio/gnome2-media
 DEPENDS+=	gnome-panel>=2.2.1:../../x11/gnome-panel
 DEPENDS+=	gnome-session>=2.2.1:../../x11/gnome-session
