@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.880 2003/09/18 13:49:09 wiz Exp $
+$NetBSD: TODO,v 1.881 2003/09/18 18:19:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -261,7 +261,6 @@ Suggested package updates
 	o vnc-3.3.7 [http://www.realvnc.com/download.html]
 	o vttest-20030301
 	o wavesurfer-1.5.3 [requires tk-8.4.2]
-	o wdg-validate-1.1.3 [pkg/22631]
 	o wmbiff-0.4.17
 	o wmweather-2.4.1
 	o wv2-0.1.8
