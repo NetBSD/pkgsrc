@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2001/09/24 06:52:08 tron Exp $
+# $NetBSD: Makefile,v 1.4 2001/10/06 23:06:15 tron Exp $
 
 DISTNAME=	bidwatcher-1.1.6
 CATEGORIES=	misc
 MASTER_SITES=	http://www.midwestcs.com/bidwatcher/download/
 
 MAINTAINER=	knotwell@ix.netcom.com
-HOMEPAGE=       http://www.midwestcs.com/bidwatcher/
+HOMEPAGE=       http://sourceforge.net/projects/bidwatcher/
 COMMENT=        eBay snipe tool
 
 USE_GMAKE=	YES
