@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.166 1998/09/21 12:22:47 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.167 1998/09/23 13:09:32 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -375,13 +375,13 @@ REQ_FILE=		${PKGDIR}/REQ
 MESSAGE_FILE=		${PKGDIR}/MESSAGE
 .endif
 
-PKG_CMD?=		/usr/sbin/pkg_create
+PKG_CREATE?=		/usr/sbin/pkg_create
 .if !defined(PKG_ARGS)
 PKG_ARGS=		-v -c ${COMMENT} -d ${DESCR} -f ${PLIST} -p ${PREFIX} -P "`${MAKE} package-depends|sort -u`"
 .if defined(CONFLICTS)
 # Only use -C if the pkg_create command supports it.
-__PKG_CMD_C__!= ${PKG_CMD} -C 2>&1 | /usr/bin/egrep 'illegal option' ; echo
-.if (${__PKG_CMD_C__} == "")
+__PKG_CREATE_C__!= ${PKG_CREATE} -C 2>&1 | /usr/bin/egrep 'illegal option' ; echo
+.if (${__PKG_CREATE_C__} == "")
 PKG_ARGS+=		-C "${CONFLICTS}"
 .endif
 .endif
@@ -424,6 +424,8 @@ LDCONFIG?=	/sbin/ldconfig
 LN?=		/bin/ln
 MKDIR?=		/bin/mkdir -p
 MV?=		/bin/mv
+PKG_DELETE?=	/usr/sbin/pkg_delete
+PKG_INFO?=	/usr/sbin/pkg_info
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
 SED?=		/usr/bin/sed
@@ -529,9 +531,9 @@ CKSUMFILES!=	\
 			fi; \
 		done; \
 		if [ "$$ignore" = 0 ]; then \
-			echo "$$file"; \
+			${ECHO} "$$file"; \
 		else \
-			echo ""; \
+			${ECHO} ""; \
 		fi; \
 	done
 .else
@@ -690,12 +692,12 @@ package:
 
 fetch fetch-list extract patch configure build install reinstall package checkpatch checksum makesum all:
 .if defined(ONLY_FOR_ARCHS)
-	@echo "This pkg is only for ${ONLY_FOR_ARCHS},"
+	@${ECHO} "This pkg is only for ${ONLY_FOR_ARCHS},"
 .endif
 .if defined(NOT_FOR_ARCHS)
-	@echo "This pkg does not run on ${NOT_FOR_ARCHS},"
+	@${ECHO} "This pkg does not run on ${NOT_FOR_ARCHS},"
 .endif
-	@echo "and you are running ${MACHINE_ARCH}."
+	@${ECHO} "and you are running ${MACHINE_ARCH}."
 .else
 
 .if defined(ALL_HOOK)
@@ -894,7 +896,7 @@ do-patch:
 	  done)
 .endif
 	@if [ -d ${PATCHDIR} ]; then \
-		if [ "`echo ${PATCHDIR}/patch-*`" = "${PATCHDIR}/patch-*" ]; then \
+		if [ "`${ECHO} ${PATCHDIR}/patch-*`" = "${PATCHDIR}/patch-*" ]; then \
 			${ECHO_MSG} "===>   Ignoring empty patch directory"; \
 			if [ -d ${PATCHDIR}/CVS ]; then \
 				${ECHO_MSG} "===>   Perhaps you forgot the -P flag to cvs co or update?"; \
@@ -969,7 +971,7 @@ do-package: ${PLIST} ${DESCR}
 				fi; \
 			fi; \
 		fi; \
-		if ${PKG_CMD} ${PKG_ARGS} ${PKGFILE}; then \
+		if ${PKG_CREATE} ${PKG_ARGS} ${PKGFILE}; then \
 			if [ -d ${PACKAGES} ]; then \
 				${MAKE} ${.MAKEFLAGS} package-links; \
 			fi; \
@@ -1316,9 +1318,9 @@ reinstall:
 deinstall:
 	@${ECHO_MSG} "===> Deinstalling for ${PKGNAME}"
 .ifdef PKG_VERBOSE
-	@pkg_delete -v -f ${PKGNAME}
+	@${PKG_DELETE} -v -f ${PKGNAME}
 .else
-	@pkg_delete -f ${PKGNAME}
+	@${PKG_DELETE} -f ${PKGNAME}
 .endif
 	@${RM} -f ${INSTALL_COOKIE} ${PACKAGE_COOKIE}
 .endif
@@ -1414,7 +1416,7 @@ fetch-list-one-pkg:
 			for site in ${MASTER_SITES} ; do \
 				${ECHO} -n ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${file} "${FETCH_AFTER_ARGS}" '|| ' ; \
 			done; \
-			${ECHO} "echo $${file} not fetched" ; \
+			${ECHO} "${ECHO} $${file} not fetched" ; \
 		fi \
 	done)
 .if defined(PATCHFILES)
@@ -1425,7 +1427,7 @@ fetch-list-one-pkg:
 			for site in ${PATCH_SITES}; do \
 				${ECHO} -n ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${file} "${FETCH_AFTER_ARGS}" '|| ' ; \
 			done; \
-			${ECHO} "echo $${file} not fetched" ; \
+			${ECHO} "${ECHO} $${file} not fetched" ; \
 		fi \
 	done)
 .endif # defined(PATCHFILES)
@@ -1593,7 +1595,7 @@ _DEPENDS_USE:	.USE
 				${ECHO_MSG} "===>  ${PKGNAME} depends on file: $$prog - not found"; \
 			fi; \
 		else \
-			for d in `echo $$PATH | tr ':' ' '`; do \
+			for d in `${ECHO} $$PATH | tr ':' ' '`; do \
 				if [ -x $$d/$$prog ]; then \
 					found="$$d/$$prog"; \
 					break; \
@@ -1666,34 +1668,49 @@ depends-list:
 	done
 .endif
 
-# The following assumes that PACKAGES is set like the following:
-# PACKAGES= /usr/pkgsrc/packages/`uname -r`/${MACHINE_ARCH}
-# i.e. contain OS version and arch name as subdirs
+# If PACKAGES is set to the default (../../pkgsrc/packages), the current
+# ${MACHINE_ARCH} and "release" (uname -r) will be used. Otherwise a directory
+# structure of ...pkgsrc/packages/`uname -r`/${MACHINE_ARCH} is assumed.
+# The PKG_URL is set from FTP_PKG_URL_* or CDROM_PKG_URL_*, depending on
+# the target used to generate the README.html file.
 .if !target(binpkg-list)
+
+.ifndef OS_VERSION
+OS_VERSION!=	/usr/bin/uname -r
+.endif
+
 binpkg-list:
-	@cd ${PACKAGES}/../..;						\
-	for i in */*; do						\
-		if [ -f $$i/${PKGREPOSITORYSUBDIR}/${PKGNAME}${PKG_SUFX} ]; then \
-			echo $$i;					\
-		fi ;							\
-	done | awk -F/ ' 						\
-		{							\
-			rel=$$1; 					\
-			arch=$$2; 					\
-			if (arch != "m68k"){				\
-				if (arch in f) 				\
-					f[arch] = "%%BIN_PREREL%%" rel "/" arch "%%BIN_MEDREL%%" rel "%%BIN_POSTREL%%, " f[arch]; \
-				else 					\
-					f[arch] = "%%BIN_PREREL%%" rel "/" arch "%%BIN_MEDREL%%" rel "%%BIN_POSTREL%%"; \
-			}						\
-		} 							\
-		END 							\
-		{ 							\
-			for (rel in f) {				\
-				print "%%BIN_PREARCH%%" rel "%%BIN_POSTARCH%% (NetBSD " f[rel] ")"; \
-			}						\
-		} 							\
-	'
+	@cd ${PACKAGES};						\
+	case `/bin/pwd` in						\
+	*/pkgsrc/packages)						\
+		if [ -f ${PKGREPOSITORYSUBDIR}/${PKGNAME}${PKG_SUFX} ]; then \
+			${ECHO} "<li> ${MACHINE_ARCH} (${OPSYS} <a href=\"${PKG_URL}/${PKGREPOSITORYSUBDIR}/${PKGNAME}${PKG_SUFX}\"> ${OS_VERSION} </a>)"; \
+		fi							\
+		;;							\
+	*)								\
+		cd ${PACKAGES}/../..;					\
+		for i in */*; do					\
+			if [ -f $$i/${PKGREPOSITORYSUBDIR}/${PKGNAME}${PKG_SUFX} ]; then \
+				${ECHO} $$i;				\
+			fi ;						\
+		done | ${AWK} -F/ '					\
+			{						\
+				release = $$1;				\
+				arch = $$2; 				\
+				if (arch != "m68k") {			\
+					if (arch in urls)		\
+						urls[arch] = "<a href=\"${PKG_URL}/" release "/" arch "/${PKGREPOSITORYSUBDIR}/${PKGNAME}${PKG_SUFX}\">" release "</a>, " urls[arch]; \
+					else				\
+						urls[arch] = "<a href=\"${PKG_URL}/" release "/" arch "/${PKGREPOSITORYSUBDIR}/${PKGNAME}${PKG_SUFX}\">" release "</a> "; \
+				}					\
+			} 						\
+			END { 						\
+				for (arch in urls) {			\
+					print "<li> " arch " (NetBSD " urls[arch] ")"; \
+				}					\
+			} '						\
+		;;							\
+	esac
 .endif
 
 ################################################################
@@ -1744,10 +1761,25 @@ describe:
 readmes:	readme
 .endif
 
+# This target is used to generate README.html files
 .if !target(readme)
+FTP_PKG_URL_HOST?=	ftp://ftp.netbsd.org
+FTP_PKG_URL_DIR?=	/pub/NetBSD/packages
+
 readme:
-	@if [ -f README.html ]; then  mv -f README.html README.html.BAK ; fi
-	@cd ${.CURDIR} && ${MAKE} README.html
+	@if [ -f README.html ]; then ${MV} -f README.html README.html.BAK ; fi
+	@cd ${.CURDIR} && ${MAKE} README.html PKG_URL=${FTP_PKG_URL_HOST}${FTP_PKG_URL_DIR}
+.endif
+
+# This target is used to generate README.html files, very like "readme"
+# However, a different target was used for ease of use.
+.if !target(cdrom-readme)
+CDROM_PKG_URL_HOST?=	file://localhost
+CDROM_PKG_URL_DIR?=	/usr/pkgsrc/packages
+
+cdrom-readme:
+	@if [ -f README.html ]; then ${MV} -f README.html README.html.BAK ; fi
+	@cd ${.CURDIR} && ${MAKE} README.html PKG_URL=${CDROM_PKG_URL_HOST}${CDROM_PKG_URL_DIR}
 .endif
 
 .if (${OPSYS} == "NetBSD")
@@ -1772,42 +1804,35 @@ SED_HOMEPAGE_EXPR=       -e 's|%%HOMEPAGE%%||'
 
 README.html:
 	@${MAKE} depends-list PACKAGE_NAME_TYPE=html | sort -u >> $@.tmp1
-	@[ -s $@.tmp1 ] || echo "<I>(none)</I>" >> $@.tmp1
+	@[ -s $@.tmp1 ] || ${ECHO} "<I>(none)</I>" >> $@.tmp1
 	@${MAKE} package-depends PACKAGE_NAME_TYPE=html | sort -u >> $@.tmp2
-	@[ -s $@.tmp2 ] || echo "<I>(none)</I>" >> $@.tmp2
+	@[ -s $@.tmp2 ] || ${ECHO} "<I>(none)</I>" >> $@.tmp2
 	@${ECHO} ${PKGNAME} | ${HTMLIFY} >> $@.tmp3
 	@${MAKE} binpkg-list  >> $@.tmp4
-	@[ -s $@.tmp4 ] || echo "<I>(no precompiled binaries available)</I>" >> $@.tmp4
-	@${CAT} ${README_NAME} | \
-		${SED} -e 's|%%PORT%%|'"`${MAKE} package-path | ${HTMLIFY}`"'|g' \
-			-e '/%%PKG%%/r$@.tmp3' \
-			-e '/%%PKG%%/d' \
-			${SED_LICENSE_EXPR} \
-			${SED_HOMEPAGE_EXPR} \
-			-e '/%%COMMENT%%/r${PKGDIR}/COMMENT' \
-			-e '/%%COMMENT%%/d' \
-			-e '/%%BUILD_DEPENDS%%/r$@.tmp1' \
-			-e '/%%BUILD_DEPENDS%%/d' \
-			-e '/%%RUN_DEPENDS%%/r$@.tmp2' \
-			-e '/%%RUN_DEPENDS%%/d' \
-			-e '/%%BIN_PKGS%%/r$@.tmp4' \
-			-e '/%%BIN_PKGS%%/d' \
-		| ${SED} \
-			-e 's@%%BIN_PREREL%%@<A HREF="ftp://ftp.netbsd.org/pub/NetBSD/packages/@g' \
-			-e 's@%%BIN_MEDREL%%@/${PKGREPOSITORYSUBDIR}/${PKGNAME}${PKG_SUFX}">@g' \
-			-e 's@%%BIN_POSTREL%%@</A>@g' \
-			-e 's@%%BIN_PREARCH%%@<LI> @g' \
-			-e 's@%%BIN_POSTARCH%%@@g' \
-		>> $@.tmp
+	@[ -s $@.tmp4 ] || ${ECHO} "<I>(no precompiled binaries available)</I>" >> $@.tmp4
+	@${SED} -e 's|%%PORT%%|'"`${MAKE} package-path | ${HTMLIFY}`"'|g' \
+		-e '/%%PKG%%/r$@.tmp3'					\
+		-e '/%%PKG%%/d'						\
+		${SED_LICENSE_EXPR}					\
+		${SED_HOMEPAGE_EXPR}					\
+		-e '/%%COMMENT%%/r${PKGDIR}/COMMENT'			\
+		-e '/%%COMMENT%%/d'					\
+		-e '/%%BUILD_DEPENDS%%/r$@.tmp1'			\
+		-e '/%%BUILD_DEPENDS%%/d'				\
+		-e '/%%RUN_DEPENDS%%/r$@.tmp2'				\
+		-e '/%%RUN_DEPENDS%%/d'					\
+		-e '/%%BIN_PKGS%%/r$@.tmp4'				\
+		-e '/%%BIN_PKGS%%/d'					\
+		${README_NAME} >> $@.tmp
 	@if cmp -s $@.tmp $@.BAK ; then \
-		mv $@.BAK $@ ; \
-		rm $@.tmp ; \
+		${MV} $@.BAK $@ ; \
+		${RM} $@.tmp ; \
 	else \
 		${ECHO_MSG} "===>  Creating README.html for ${_THISDIR_}${PKGNAME}" ; \
-		mv $@.tmp $@ ; \
-		rm -f $@.BAK ; \
+		${MV} $@.tmp $@ ; \
+		${RM} -f $@.BAK ; \
 	fi
-	@rm -f $@.tmp1 $@.tmp2 $@.tmp3 $@.tmp4 $@.tmp5
+	@${RM} -f $@.tmp1 $@.tmp2 $@.tmp3 $@.tmp4 $@.tmp5
 
 .if !target(print-depends-list)
 print-depends-list:
@@ -1841,7 +1866,7 @@ fake-pkg: ${PLIST} ${DESCR}
 	@if [ ! -d ${PKG_DBDIR}/${PKGNAME} ]; then			\
 		${ECHO_MSG} "===>  Registering installation for ${PKGNAME}"; \
 		${MKDIR} ${PKG_DBDIR}/${PKGNAME};			\
-		${PKG_CMD} ${PKG_ARGS} -O ${PKGFILE} > ${PKG_DBDIR}/${PKGNAME}/+CONTENTS; \
+		${PKG_CREATE} ${PKG_ARGS} -O ${PKGFILE} > ${PKG_DBDIR}/${PKGNAME}/+CONTENTS; \
 		${CP} ${DESCR} ${PKG_DBDIR}/${PKGNAME}/+DESC;		\
 		${CP} ${COMMENT} ${PKG_DBDIR}/${PKGNAME}/+COMMENT;	\
 		if [ -n "${INSTALL_FILE}" ]; then			\
