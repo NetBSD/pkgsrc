@@ -1,8 +1,17 @@
-$NetBSD: patch-ac,v 1.8 2002/11/29 02:58:47 kim Exp $
+$NetBSD: patch-ac,v 1.9 2002/12/16 05:14:30 lukem Exp $
 
---- abcde.orig	Mon Jan 28 00:44:02 2002
-+++ abcde	Thu Nov 28 21:55:10 2002
-@@ -206,6 +206,11 @@
+--- abcde.orig	Mon Jan 28 16:44:02 2002
++++ abcde
+@@ -27,7 +27,7 @@ echo "-j    Number of encoder processes 
+ echo "-l    Use low disk space algorithm"
+ echo "-n    No lookup. Don't query CDDB, just create and use template"
+ echo "-N    Noninteractive. Never prompt for anything"
+-echo "-o    Output file type - either \"ogg\" or \"mp3\""
++echo "-o    Output file type - either \"ogg\", \"mp3\"" or \"flac\"
+ echo "-r    [host1,host2...] Also encode on these remote hosts"
+ echo "-x    Eject CD after all tracks are read"
+ echo "Tracks is a space-delimited list of tracks to grab."
+@@ -206,6 +206,11 @@ splitvarious ()
  			TRACKARTIST="$(echo $DTITLEARTIST | cut -f1 -d~)"
  			TRACKNAME="$(echo $DTITLEARTIST | cut -f2 -d~)"
  			;;
@@ -14,7 +23,52 @@ $NetBSD: patch-ac,v 1.8 2002/11/29 02:58:47 kim Exp $
  		esac
  	else
  		TRACKARTIST=$DARTIST
-@@ -574,7 +579,7 @@
+@@ -221,7 +226,8 @@ do_tag ()
+ {
+ 	COMMENTOUTPUT="$(eval echo ${COMMENT})"
+ 	run_command '' echo "Tagging track $1 of $TRACKS: $TRACKNAME..."
+-	if [ "$OUTPUTTYPE" = "mp3" ]; then
++	case "$OUTPUTTYPE" in
++	mp3)
+ 		# Amazingly, id3 and id3v2 have identical -a, -A, -c, -t, and -T switches
+ 		# ...except id3v2's -c is completely broken (there's a bug in id3lib
+ 		# v3.7.x keeping -c from being properly implemented)
+@@ -232,7 +238,8 @@ do_tag ()
+ 			run_command tagtrack-$1 $TAGGER $TAGGEROPTS -c "$COMMENTOUTPUT" \
+ 				-A "$DALBUM" -a "$TRACKARTIST" -t "$TRACKNAME" -T "$1" "$ABCDETEMPDIR/track$1.$OUTPUTTYPE"
+ 		fi
+-	else
++		;;
++	ogg)
+ 		# vorbiscomment can't do in-place modification, mv the file first
+ 		if [ -f "$ABCDETEMPDIR/track$1.$OUTPUTTYPE" -a ! -f "$ABCDETEMPDIR/track$1.uncommented.$OUTPUTTYPE" ]; then
+ 			mv "$ABCDETEMPDIR/track$1.$OUTPUTTYPE" "$ABCDETEMPDIR/track$1.uncommented.$OUTPUTTYPE"
+@@ -254,7 +261,11 @@ do_tag ()
+ 		else
+ 			mv "$ABCDETEMPDIR/track$1.uncommented.$OUTPUTTYPE" "$ABCDETEMPDIR/track$1.$OUTPUTTYPE"
+ 		fi
+-	fi
++		;;
++	flac)
++		run_command tagtrack-$1 true
++		;;
++	esac
+ }
+ 
+ # do_encode [tracknumber] [hostname]
+@@ -295,6 +306,11 @@ do_encode ()
+ 			;;
+ 		esac
+ 		;;
++	flac)
++		case "$ENCODERSYNTAX" in
++		flac) run_command encodetrack-$1 nice $ENCNICE $ENCODER -TARTIST="$TRACKARTIST" -TALBUM="$DALBUM" -TTITLE="$TRACKNAME" -TTRACKNUMBER="$1" $ENCODEROPTS -o "$OUT" "$IN" ;;
++		esac
++		;;
+ 	esac
+ 	# Only remove .wav if the encoding succeeded
+ 	if checkerrors encodetrack-$1; then :; else
+@@ -574,7 +590,7 @@ do_cddbread ()
  			fi
  			# List out disc title/author and contents
  			echo ---- "$(cut '-d ' -f4- "$ABCDETEMPDIR/cddbquery")" ---- >> "$ABCDETEMPDIR/cddbchoices"
@@ -23,7 +77,7 @@ $NetBSD: patch-ac,v 1.8 2002/11/29 02:58:47 kim Exp $
  			do
  				echo $TRACK: "$(grep ^TTITLE$(expr $TRACK - 1)= "$ABCDETEMPDIR/cddbread.1" | cut -f2- -d= | tr -d \\r\\n)" >> "$ABCDETEMPDIR/cddbchoices"
  			done
-@@ -590,7 +595,7 @@
+@@ -590,7 +606,7 @@ do_cddbread ()
  			$CDDBTOOL template $(cat "$ABCDETEMPDIR/discid") > "$ABCDETEMPDIR/cddbread.1"
  			# List out disc title/author and contents of template
  			echo ---- Unknown Artist / Unknown Album ---- >> "$ABCDETEMPDIR/cddbchoices"
@@ -32,7 +86,7 @@ $NetBSD: patch-ac,v 1.8 2002/11/29 02:58:47 kim Exp $
  			do
  				echo $TRACK: "$(grep ^TTITLE$(expr $TRACK - 1)= "$ABCDETEMPDIR/cddbread.1" | cut -f2- -d= | tr -d \\r\\n)" >> "$ABCDETEMPDIR/cddbchoices"
  			done
-@@ -620,7 +625,7 @@
+@@ -620,7 +636,7 @@ do_cddbread ()
  				fi
  				# List out disc title/author and contents
  				echo \#$X: ---- "$DISCINFO" ---- >> "$ABCDETEMPDIR/cddbchoices"
@@ -41,7 +95,7 @@ $NetBSD: patch-ac,v 1.8 2002/11/29 02:58:47 kim Exp $
  				do
  					echo $TRACK: "$(grep ^TTITLE$(expr $TRACK - 1)= "$ABCDETEMPDIR/cddbread.$X" | cut -f2- -d= | tr -d \\r\\n)" >> "$ABCDETEMPDIR/cddbchoices"
  				done
-@@ -766,6 +771,9 @@
+@@ -766,6 +782,9 @@ do_cddbedit ()
  		elif [ "$(grep -c "^TTITLE.*\-" "$CDDBDATA")" -gt "$(expr $NUMTRACKS / 2 )" ]; then
  			# More than 1/2 contain a "-", so guess forward-dash
  			DEFAULTSTYLE=2
@@ -51,7 +105,7 @@ $NetBSD: patch-ac,v 1.8 2002/11/29 02:58:47 kim Exp $
  		fi
  
  		echo "1) Artist / Title" >&2
-@@ -773,21 +781,22 @@
+@@ -773,21 +792,22 @@ do_cddbedit ()
  		echo "3) Title / Artist" >&2
  		echo "4) Title - Artist" >&2
  		echo "5) Artist: Title" >&2
@@ -81,7 +135,7 @@ $NetBSD: patch-ac,v 1.8 2002/11/29 02:58:47 kim Exp $
  		done
  		if [ "$VARIOUSARTISTSTYLE" = "0" ]; then
  			VARIOUSARTISTSTYLE=$DEFAULTSTYLE
-@@ -809,7 +818,10 @@
+@@ -809,7 +829,10 @@ do_cddbedit ()
  		5) # Artist: Title
  			VARIOUSARTISTSTYLE=colon
  			;;
@@ -93,15 +147,26 @@ $NetBSD: patch-ac,v 1.8 2002/11/29 02:58:47 kim Exp $
  			VARIOUSARTISTS=n
  			;;
  		esac
-@@ -931,7 +943,6 @@
+@@ -909,6 +932,7 @@ XINGMP3ENC=xingmp3enc
+ MP3ENC=mp3enc
+ VORBIZE=vorbize
+ OGGENC=oggenc
++FLAC=flac
+ ID3=id3
+ ID3V2=id3v2
+ CDPARANOIA=cdparanoia
+@@ -929,9 +953,9 @@ XINGMP3ENCOPTS=
+ MP3ENCOPTS=
+ VORBIZEOPTS=
  OGGENCOPTS=
++FLACOPTS=
  ID3OPTS=
  ID3V2OPTS=
 -CDPARANOIAOPTS=
  CDDA2WAVOPTS=
  WGETOPTS=
  CDDBTOOLOPTS=
-@@ -948,7 +959,7 @@
+@@ -948,7 +972,7 @@ ACTIONS=cddb,read,encode,tag,move,clean
  # Custom filename munging:
  mungefilename ()
  {
@@ -110,7 +175,7 @@ $NetBSD: patch-ac,v 1.8 2002/11/29 02:58:47 kim Exp $
  }
  
  # If CDDBAVAIL is set to n, no CDDB read is done
-@@ -964,17 +975,13 @@
+@@ -964,17 +988,13 @@ if [ -z "$WAVOUTPUTDIR" ]; then
  	WAVOUTPUTDIR="$OUTPUTDIR"
  fi
  
@@ -133,7 +198,7 @@ $NetBSD: patch-ac,v 1.8 2002/11/29 02:58:47 kim Exp $
  fi
  # Load user preference defaults
  if [ -r $HOME/.abcde.conf ]; then
-@@ -1010,7 +1017,7 @@
+@@ -1010,7 +1030,7 @@ while [ $# -gt 0 ]; do
  	if [ "$RSTART" = "$REND" ]; then 
  		NEWTRACKS="$RSTART"
  	else
@@ -142,8 +207,45 @@ $NetBSD: patch-ac,v 1.8 2002/11/29 02:58:47 kim Exp $
  	fi
  	TRACKQUEUE=$(echo "$TRACKQUEUE" "$NEWTRACKS")
  
-@@ -1101,7 +1108,7 @@
+@@ -1029,13 +1049,18 @@ case "$CDROMREADERSYNTAX" in
+ 		;;
+ esac
  
+-# If nothing has been specified, use oggenc for oggs and lame for mp3s
++# If nothing has been specified, use oggenc for oggs and lame for mp3s and flac
++# for flacs
+ if [ "$ENCODERSYNTAX" = "default" ]; then
+ 	if [ "$OUTPUTTYPE" = "ogg" ]; then
+ 		ENCODERSYNTAX=oggenc
+-	else
++	elif [ "$OUTPUTTYPE" = "mp3" ]; then
+ 		ENCODERSYNTAX=lame
+-	fi
++	elif [ "$OUTPUTTYPE" = "flac" ]; then
++                ENCODERSYNTAX=flac
++        else 
++      		echo "abcde error: Invalid OUTPUTTYPE defined" >&2
++        fi
+ fi
+ 
+ # decide which encoder
+@@ -1072,6 +1097,11 @@ case "$ENCODERSYNTAX" in
+ 		ENCODEROPTS="$OGGENCOPTS"
+ 		ENCODER="$OGGENC"
+ 		;;
++	flac)
++		ENCODEROPTS="$FLACOPTS"
++		ENCODER="$FLAC"
++		;;
++
+ esac
+ 
+ # and which tagger
+@@ -1099,9 +1129,10 @@ if [ "$REMOTEHOSTS" ]; then NEEDDISTMP3=
+ if [ "$OUTPUTTYPE" = "mp3" ]; then NEEDTAGGER=y; fi
+ if [ "$OUTPUTTYPE" = "ogg" ]; then NEEDCOMMENTER=y; fi
+ 
++
  # Make sure a buncha things exist
  for X in $CDROMREADER $CDDISCID ${NEEDTAGGER+$TAGGER} $ENCODER $WGET \
 -	${NEEDDISTMP3+$DISTMP3} ${NEEDCOMMENTER+$VORBISCOMMENT} seq
@@ -151,7 +253,7 @@ $NetBSD: patch-ac,v 1.8 2002/11/29 02:58:47 kim Exp $
  do
  	# Cut off the command-line options we just added in
  	X=$(echo $X | cut -d' ' -f2)
-@@ -1191,7 +1198,7 @@
+@@ -1191,7 +1222,7 @@ fi
  # Figure out where each track is going to be encoded
  ENCODELOCATIONS="$(echo $REMOTEHOSTS | tr , ' ')"
  if [ "$MAXPROCS" != "0" ]; then
