@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/29 16:25:56 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/29 16:57:46 jmmv Exp $
 #
 
 DISTNAME=	i2cbd-2.0_BETA0
@@ -29,14 +29,13 @@ CONF_FILES_PERMS+=	${EGDIR}/$f ${PKG_SYSCONFDIR}/$f \
 .endfor
 .undef f
 
-SUPPORT_FILES_PERMS=	${EGDIR}/empty.log /var/log/icbd.log \
+SUPPORT_FILES_PERMS=	/dev/null /var/log/icbd.log \
 			${ICBD_OWNER} ${ROOT_GROUP} 644
 
 post-extract:
 	-${RM} -f ${WRKSRC}/*/.depend
 
 post-build:
-	${TOUCH} ${WRKDIR}/empty.log
 	${SED} -e 's,@PREFIX@,${PREFIX},' \
 		< ${WRKSRC}/etc/icbd.sh > ${WRKDIR}/icbd.sh
 
@@ -46,7 +45,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/$f ${EGDIR}
 .endfor
 .undef f
-	${INSTALL_DATA} ${WRKDIR}/empty.log ${EGDIR}
 	${INSTALL_SCRIPT} ${WRKDIR}/icbd.sh ${PREFIX}/etc/rc.d/icbd
 
 .include "../../mk/bsd.pkg.mk"
