@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2003/07/30 15:27:10 markd Exp $
+# $NetBSD: Makefile,v 1.9 2003/08/05 13:37:08 drochner Exp $
 
 DISTNAME=		kile-1.5.2
+PKGREVISION=		1
 CATEGORIES=		editors kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kile/}
 
