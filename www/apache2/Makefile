@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2004/11/22 19:56:23 jlam Exp $
+# $NetBSD: Makefile,v 1.54 2004/11/22 20:25:26 jlam Exp $
 
 PKGNAME=		apache-${APACHE_VERSION}
 PKGREVISION=		2
@@ -51,26 +51,8 @@ APACHE_MODULES?=	${DFLT_APACHE_MODULES}
 CONFIGURE_ARGS+=	--enable-modules="${APACHE_MODULES}"
 BUILD_DEFS+=		APACHE_MODULES
 
-APACHE_USER?=	www
-APACHE_GROUP?=	www
-
-.if defined(APACHE_SUEXEC) && !empty(APACHE_SUEXEC:M[yY][eE][sS])
-APACHE_SUEXEC_DOCROOT?= ${PREFIX}/share/httpd/htdocs
-APACHE_SUEXEC_PATH=     /bin:/usr/bin:${PREFIX}/bin:/usr/local/bin
-APACHE_SUEXEC_CONFIGURE_ARGS+=						\
-			--with-suexec-bin=${PREFIX}/sbin/suexec		\
-			--with-suexec-caller=${APACHE_USER}		\
-			--with-suexec-safepath='${APACHE_SUEXEC_PATH}'	\
-			--with-suexec-docroot=${APACHE_SUEXEC_DOCROOT}	\
-			--with-suexec-logfile=${VARBASE}/log/httpd/suexec.log
-APACHE_MODULES+=	suexec
-CONFIGURE_ARGS+=	${APACHE_SUEXEC_CONFIGURE_ARGS:M--with-suexec-*}
-BUILD_DEFS+=		APACHE_SUEXEC APACHE_SUEXEC_CONFIGURE_ARGS
-PLIST_SUBST+=		SUEXEC_COMMENT=
-.else
-PLIST_SUBST+=		SUEXEC_COMMENT="@comment "
-.endif
-
+APACHE_USER?=		www
+APACHE_GROUP?=		www
 PKG_GROUPS=		${APACHE_GROUP}
 PKG_USERS=		${APACHE_USER}:${APACHE_GROUP}::Apache\\ user
 
@@ -111,6 +93,8 @@ SUBST_SED.confs=	-e "s|${EGDIR}|${PKG_SYSCONFDIR}|g" \
 			-e "s|^\(User[	 ]\).*|\1${APACHE_USER}|g" \
 			-e "s|^\(Group[	 ]\).*|\1${APACHE_GROUP}|g"
 SUBST_MESSAGE.confs=	"Fixing configuration files."
+
+.include "options.mk"
 
 # Add dependencies for the modules that will be built.  For each module
 # ap_mod listed in ${APACHE_MODULES}, _AP_DEPENDS.ap_mod is a whitespace
