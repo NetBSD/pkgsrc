@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.3 2002/02/08 16:28:02 seb Exp $
+
+--- stepmake/stepmake/c++-rules.make.orig	Thu Sep  2 02:17:49 1999
++++ stepmake/stepmake/c++-rules.make
+@@ -13,12 +13,12 @@
+ 
+ $(outdir)/%.cc: %.yy
+ 	$(BISON) $<
+-	mv $<.tab.c $@
++	mv $(basename $<).tab.cc $@
+ 
+ $(outdir)/%.hh: %.yy
+ 	$(BISON) -d $<
+-	mv $<.tab.h $@
+-	rm $<.tab.c		# if this happens in the wrong order it triggers recompile of the .cc file 
++	mv $(basename $<).tab.hh $@
++	rm $(basename $<).tab.cc	# if this happens in the wrong order it triggers recompile of the .cc file 
+ 
+ $(outdir)/%.cc: %.ll
+ 	$(FLEX) -Cfe -p -p -t $< > $@
