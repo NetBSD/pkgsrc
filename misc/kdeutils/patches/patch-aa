@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 1999/10/25 04:17:03 jlam Exp $
+$NetBSD: patch-aa,v 1.9 2000/02/29 19:43:57 jlam Exp $
 
 --- configure.orig	Tue Sep  7 11:25:21 1999
 +++ configure	Sun Oct 24 14:59:13 1999
@@ -63,12 +63,3 @@ $NetBSD: patch-aa,v 1.8 1999/10/25 04:17:03 jlam Exp $
    fi
    if test -z "$kde_bindir"; then
      kde_bindir='\$(exec_prefix)/bin'
-@@ -4385,7 +4385,7 @@
-   echo $ac_n "(cached) $ac_c" 1>&6
- else
-   ac_save_LIBS="$LIBS"
--LIBS="$all_libraries -lgif -lX11 $LIBSOCKET"
-+LIBS="$all_libraries -lungif -lX11 $LIBSOCKET"
- cat > conftest.$ac_ext <<EOF
- #line 4391 "configure"
- #include "confdefs.h"
