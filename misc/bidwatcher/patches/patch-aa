@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.14 2002/12/30 02:09:26 dmcmahill Exp $
+
+--- bidwatcher.cpp.orig	Mon Dec 23 02:49:08 2002
++++ bidwatcher.cpp
+@@ -4093,7 +4093,7 @@ void TimeSync()
+       
+       if (strlen(HtmlBuff) < 1000) {
+ #ifdef DEBUG_NETWORK
+-	fprintf(stderr, "Short web page (%d bytes) from ebay's time web page, retrying... (%d)\n", strlen(HtmlBuff), i);
++	fprintf(stderr, "Short web page (%ld bytes) from ebay's time web page, retrying... (%d)\n", (long int)strlen(HtmlBuff), i);
+ #endif
+ 	continue;
+       }
