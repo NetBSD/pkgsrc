@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.41 2004/11/30 15:07:26 jlam Exp $
+# $NetBSD: compiler.mk,v 1.42 2005/01/10 09:05:01 jlam Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -10,15 +10,15 @@
 #	pkgsrc to build packages.
 #
 #	Valid values are:
-#		distcc		distributed C/C++ (chainable)
+#		ccc		Compaq C Compilers (Tru64)
 #		ccache		compiler cache (chainable)
+#		distcc		distributed C/C++ (chainable)
 #		gcc		GNU
 #		mipspro		Silicon Graphics, Inc. MIPSpro (n32/n64)
 #		mipspro-ucode	Silicon Graphics, Inc. MIPSpro (o32)
 #		sunpro		Sun Microsystems, Inc. WorkShip/Forte/Sun
 #				ONE Studio
 #		xlc		IBM's XL C/C++ compiler suite
-#		ccc		Compaq C Compilers (Tru64)
 #
 #	The default is "gcc".  You can use ccache and/or distcc with an
 #	appropriate PKGSRC_COMPILER setting, e.g. "ccache distcc gcc".
