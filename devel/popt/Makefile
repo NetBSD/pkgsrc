@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2003/11/12 01:25:25 salo Exp $
+# $NetBSD: Makefile,v 1.23 2003/11/24 19:13:19 gson Exp $
 #
 
 DISTNAME=	popt-1.7
-PKGREVISION=	3
+PKGREVISION=	4
 WRKSRC=		${WRKDIR}/${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.rpm.org/pub/rpm/dist/rpm-4.1.x/		\
