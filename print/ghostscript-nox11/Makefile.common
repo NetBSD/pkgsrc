@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2001/12/20 22:31:09 jlam Exp $
+# $NetBSD: Makefile.common,v 1.26 2001/12/21 04:29:10 jlam Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -302,6 +302,8 @@ post-install:
 	strip ${PREFIX}/bin/gs
 	${INSTALL_PROGRAM} ${HPIJS_WRKSRC}/hpijs ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA} ${GIMPPRINT_WRKSRC}/src/ghost/README		\
+		${DOCDIR}/README.stp
 	${INSTALL_DATA} ${WRKDIR}/${LIPS_DRV}/Gdevlips.htm ${HTMLDIR}
 	${INSTALL_DATA} ${WRKDIR}/${BJ10V_DRV}/gdev10v.jis ${DOCDIR}
 	${INSTALL_DATA} ${WRKDIR}/gdevdmpr.sj ${DOCDIR}
