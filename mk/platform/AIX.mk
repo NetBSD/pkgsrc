@@ -1,4 +1,4 @@
-# $NetBSD: AIX.mk,v 1.10 2005/03/12 11:08:04 garbled Exp $
+# $NetBSD: AIX.mk,v 1.11 2005/03/12 20:03:38 garbled Exp $
 #
 # Variable definitions for the AIX operating system.
 
@@ -16,31 +16,35 @@ DATE?=		/bin/date
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		echo				# Shell builtin
 ECHO_N?=	${ECHO} -n
-.if exists(${LOCALBASE}/bin/egrep)
-EGREP?=		${LOCALBASE}/bin/egrep
+.if exists(${LOCALBASE}/bin/gegrep)
+EGREP?=		${LOCALBASE}/bin/gegrep
 .else
 EGREP?=		/usr/bin/grep -E
 .endif
 EXPR?=		/bin/expr
 FALSE?=		false				# Shell builtin
 FETCH_CMD?= ${LOCALBASE}/bin/ftp
-.if exists(${LOCALBASE}/bin/fgrep)
-FGREP?=		${LOCALBASE}/bin/fgrep
+.if exists(${LOCALBASE}/bin/gfgrep)
+FGREP?=		${LOCALBASE}/bin/gfgrep
 .else
 FGREP?=		/usr/bin/grep -F
 .endif
 FILE_CMD?=	/usr/bin/file
 FIND?=		/usr/bin/find
 GMAKE?=		${LOCALBASE}/bin/gmake
-.if exists(${LOCALBASE}/bin/grep)
-GREP?=		${LOCALBASE}/bin/grep
+.if exists(${LOCALBASE}/bin/ggrep)
+GREP?=		${LOCALBASE}/bin/ggrep
 .else
 GREP?=		/usr/bin/grep
 .endif
 .if exists(/bin/tar)
 GTAR?=		/bin/tar
 .else
+.if exists(${LOCALBASE}/bin/tar)
+GTAR?=		${LOCALBASE}/bin/tar
+.else
 GTAR?=		/usr/bin/tar
+.endif
 .endif
 GUNZIP_CMD?=	${LOCALBASE}/bin/gunzip -f
 GZCAT?=		${LOCALBASE}/bin/zcat
