@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2004/08/31 03:10:16 danw Exp $
+$NetBSD: distinfo,v 1.14 2004/12/18 00:39:31 tron Exp $
 
 SHA1 (openmotif/openmotif2.1.30.tar.gz) = 34fc82fdf0e200525864665e179246ef64082dcc
 Size (openmotif/openmotif2.1.30.tar.gz) = 17711487 bytes
@@ -38,3 +38,12 @@ SHA1 (patch-aw) = 604a2b3d99dd62a34ca624a315d85d2e56450e4e
 SHA1 (patch-ax) = de1ee2594e39bec4cab599aa45d4b9d5af80fc7e
 SHA1 (patch-ay) = 38187926dcc27c510880e17ff2d6c35cd5e8393e
 SHA1 (patch-az) = 15f8d029940fc04be246ad7a479f14af6e38af03
+SHA1 (patch-ba) = c8a13cc06db7413ddb0abcc2b6e9781d4b9550ef
+SHA1 (patch-bb) = 1d38da709ee1231323feb0e348be6dafd54d755d
+SHA1 (patch-bc) = 87915f61d20e4defd6ac3a68667528515b6b88a0
+SHA1 (patch-bd) = 8f46473bb0380ce69b2eadc1c65322094d538bf8
+SHA1 (patch-be) = 35a24957def48a2f2771f34ebc53ecf83c827a66
+SHA1 (patch-bf) = 211d84bccf91ed474634658a75af5d8977b052d4
+SHA1 (patch-bg) = 582f455b066bd4f12160d719c885e9d8423632e5
+SHA1 (patch-bh) = 4025190b6200398b54cfa075da8976e96bf7c3ee
+SHA1 (patch-bi) = b11a6493500c3d7dec379a2e73f42d7752f471ba
