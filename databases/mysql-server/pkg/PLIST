@@ -1,20 +1,54 @@
-@comment $NetBSD: PLIST,v 1.3 2000/02/15 04:46:31 bad Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/03/26 13:46:22 bad Exp $
 bin/comp_err
 bin/isamchk
 bin/isamlog
+bin/my_print_defaults
+bin/myisamchk
+bin/myisamlog
+bin/myisampack
 bin/mysql_install_db
+bin/mysqlbinlog
+bin/pack_isam
 bin/perror
-bin/print_defaults
 bin/replace
+bin/resolve_stack_dump
 bin/resolveip
 bin/safe_mysqld
-lib/mysql/libmystrings.a
 lib/mysql/libdbug.a
-lib/mysql/libmysys.a
-lib/mysql/libnisam.a
 lib/mysql/libheap.a
 lib/mysql/libmerge.a
+lib/mysql/libmyisam.a
+lib/mysql/libmystrings.a
+lib/mysql/libmysys.a
+lib/mysql/libnisam.a
+lib/mysql/libmyisammrg.a
 libexec/mysqld
+share/mysql/charsets/Index
+share/mysql/charsets/README
+share/mysql/charsets/cp1251.conf
+share/mysql/charsets/cp1257.conf
+share/mysql/charsets/croat.conf
+share/mysql/charsets/danish.conf
+share/mysql/charsets/dec8.conf
+share/mysql/charsets/dos.conf
+share/mysql/charsets/estonia.conf
+share/mysql/charsets/german1.conf
+share/mysql/charsets/greek.conf
+share/mysql/charsets/hebrew.conf
+share/mysql/charsets/hp8.conf
+share/mysql/charsets/hungarian.conf
+share/mysql/charsets/koi8_ru.conf
+share/mysql/charsets/koi8_ukr.conf
+share/mysql/charsets/latin1.conf
+share/mysql/charsets/latin2.conf
+share/mysql/charsets/latin5.conf
+share/mysql/charsets/swe7.conf
+share/mysql/charsets/usa7.conf
+share/mysql/charsets/win1250.conf
+share/mysql/charsets/win1251.conf
+share/mysql/charsets/win1251ukr.conf
+share/mysql/mi_test_all
+share/mysql/mi_test_all.res
 share/mysql/czech/errmsg.sys
 share/mysql/czech/errmsg.txt
 share/mysql/danish/errmsg.sys
@@ -23,8 +57,8 @@ share/mysql/dutch/errmsg.sys
 share/mysql/dutch/errmsg.txt
 share/mysql/english/errmsg.sys
 share/mysql/english/errmsg.txt
-share/mysql/estonia/errmsg.sys
-share/mysql/estonia/errmsg.txt
+share/mysql/estonian/errmsg.sys
+share/mysql/estonian/errmsg.txt
 share/mysql/french/errmsg.sys
 share/mysql/french/errmsg.txt
 share/mysql/german/errmsg.sys
@@ -47,20 +81,23 @@ share/mysql/polish/errmsg.sys
 share/mysql/polish/errmsg.txt
 share/mysql/portuguese/errmsg.sys
 share/mysql/portuguese/errmsg.txt
+share/mysql/romanian/errmsg.sys
+share/mysql/romanian/errmsg.txt
 share/mysql/russian/errmsg.sys
 share/mysql/russian/errmsg.txt
-share/mysql/spanish/errmsg.sys
-share/mysql/spanish/errmsg.txt
 share/mysql/slovak/errmsg.sys
 share/mysql/slovak/errmsg.txt
+share/mysql/spanish/errmsg.sys
+share/mysql/spanish/errmsg.txt
 share/mysql/swedish/errmsg.sys
 share/mysql/swedish/errmsg.txt
 @exec %D/bin/mysql_install_db --force
+@dirrm share/mysql/charsets
 @dirrm share/mysql/czech
 @dirrm share/mysql/danish
 @dirrm share/mysql/dutch
 @dirrm share/mysql/english
-@dirrm share/mysql/estonia
+@dirrm share/mysql/estonian
 @dirrm share/mysql/french
 @dirrm share/mysql/german
 @dirrm share/mysql/greek
@@ -72,7 +109,8 @@ share/mysql/swedish/errmsg.txt
 @dirrm share/mysql/norwegian-ny
 @dirrm share/mysql/polish
 @dirrm share/mysql/portuguese
+@dirrm share/mysql/romanian
 @dirrm share/mysql/russian
-@dirrm share/mysql/spanish
 @dirrm share/mysql/slovak
+@dirrm share/mysql/spanish
 @dirrm share/mysql/swedish

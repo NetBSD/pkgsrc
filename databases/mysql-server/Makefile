@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.17 2001/02/16 14:17:29 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2001/03/26 13:46:19 bad Exp $
 #
 
-DISTNAME=		mysql-3.22.32
+DISTNAME=		mysql-3.23.35
 PKGNAME=		${DISTNAME:S/-/-server-/}
 CATEGORIES=		databases
-MASTER_SITES=		ftp://ftp.mysql.com/MySQL-3.22/ \
-			ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/MySQL-3.22/
+MASTER_SITES=		ftp://ftp.mysql.com/MySQL-3.23/ \
+			http://www.mysql.com/Downloads/MySQL-3.23/ \
+			ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/MySQL-3.23/
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.mysql.com/
@@ -13,10 +14,6 @@ COMMENT=		MySQL, a free SQL database (server)
 
 BUILD_DEPENDS=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
 DEPENDS=		${DISTNAME:S/-/-client-/}:../../databases/mysql-client
-
-RESTRICTED=		"Restrictive license."
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_CDROM=	${RESTRICTED}
 
 EXTRACT_USING_PAX=	yes
 
@@ -27,6 +24,7 @@ MYSQL_DATADIR?=		/var/mysql
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${MYSQL_DATADIR} \
 			--with-named-z-libs=z \
+			--with-libwrap \
 			--with-named-curses-libs="-lcurses -ltermcap" \
 			--without-perl --without-debug --without-bench \
 			--without-docs --with-low-memory
@@ -38,7 +36,9 @@ ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
 			NetBSD-*-sparc NetBSD-*-m68k SunOS-*-sparc \
 			NetBSD-*-powerpc
 
-USE_PERL5=
+USE_PERL5=		yes
+USE_LIBTOOL=		yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 post-extract:
 	@cd ${WRKSRC} && for dir in dbug heap isam merge mysys strings; do \
