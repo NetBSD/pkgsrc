@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2003/06/16 21:40:21 jmc Exp $
+# $NetBSD: Makefile,v 1.35 2003/06/23 16:12:48 jmc Exp $
 
 DISTNAME=	exim-4.10
+PKGREVISION=	1
 CATEGORIES=	mail net
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
 		ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim4/ \
@@ -13,13 +14,10 @@ COMMENT=	The Exim mail transfer agent, a replacement for sendmail
 
 USE_PERL5=	yes
 USE_BUILDLINK2=	yes
-USE_PKGINSTALL=	yes
-PKG_USERS=	mail:6:8:Electronic Mail:/var/mail:/sbin/nologin
-
-# To pickup USERADD
-.include "../../mk/bsd.prefs.mk"
 
 MAKE_ENV+=	SSLBASE=${SSLBASE:Q}
+
+DEPENDS+=       exim-user>=4.10:../../mail/exim-user
 
 pre-patch:
 	${MKDIR} ${WRKSRC}/Local
@@ -30,12 +28,6 @@ pre-configure:
 	    < ${WRKSRC}/Local/Makefile.netbsd \
 	    > ${WRKSRC}/Local/Makefile
 
-pre-build:
-	@(if ! ${ID} mail 2>/dev/null >/dev/null; then\
-		${ECHO} "Creating user: ${user}"; \
-		${USERADD} -c "Electronic Mail" -u 8 -g 6 -d /var/mail -s /sbin/nologin mail; \
-	fi)
- 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/etc/exim
 	${INSTALL_DATA_DIR} /var/log/exim
