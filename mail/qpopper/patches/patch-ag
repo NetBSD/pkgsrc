@@ -1,0 +1,12 @@
+--- configure.in.orig	Fri Jul 10 01:52:28 1998
++++ configure.in	Fri Jul 10 02:01:46 1998
+@@ -161,6 +161,9 @@
+ syslog.h \
+ net/errno.h \
+ unistd.h \
++stdlib.h \
++string.h \
++time.h \
+ netinet/in.h \
+ maillock.h \
+ ndbm.h \
