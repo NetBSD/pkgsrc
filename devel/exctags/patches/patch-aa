@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2002/03/06 16:45:02 seb Exp $
+$NetBSD: patch-aa,v 1.4 2004/06/03 15:20:59 uebayasi Exp $
 
---- Makefile.in.orig	Sun Feb 17 22:42:06 2002
-+++ Makefile.in
+--- Makefile.in.orig	2004-06-03 23:33:10.000000000 +0900
++++ Makefile.in	2004-06-03 23:37:34.000000000 +0900
 @@ -6,8 +6,8 @@
  # These are the names of the installed programs, in case you wish to change
  # them.
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.3 2002/03/06 16:45:02 seb Exp $
  CC	= @CC@
  DEFS	= @DEFS@
  CFLAGS	= @CFLAGS@
-+CPPFLAGS = @CPPFLAGS@
++CPPFLAGS	= @CPPFLAGS@
  LDFLAGS	= @LDFLAGS@
  LIBS	= @LIBS@
  EXEEXT	= @EXEEXT@
@@ -28,9 +28,9 @@ $NetBSD: patch-aa,v 1.3 2002/03/06 16:45:02 seb Exp $
 -INSTALL		= cp
 -INSTALL_PROG	= $(INSTALL)
 -INSTALL_DATA	= $(INSTALL)
-+INSTALL_PROGRAM = $(BSD_INSTALL_PROGRAM)
-+INSTALL_MAN     = $(BSD_INSTALL_MAN)
-+INSTALL_DATA    = $(BSD_INSTALL_DATA)
++INSTALL_PROGRAM	= $(BSD_INSTALL_PROGRAM)
++INSTALL_MAN	= $(BSD_INSTALL_MAN)
++INSTALL_DATA	= $(BSD_INSTALL_DATA)
  
  READ_LIB = readtags.$(OBJEXT)
  READ_INC = readtags.h
@@ -51,39 +51,38 @@ $NetBSD: patch-aa,v 1.3 2002/03/06 16:45:02 seb Exp $
  
  $(OBJECTS): $(HEADERS) config.h
  
-@@ -138,8 +139,7 @@
+@@ -138,7 +139,7 @@
  install-lib: $(DEST_READ_LIB) $(DEST_READ_INC)
  
  $(DEST_CTAGS): $(CTAGS_EXEC) $(bindir) FORCE
 -	$(INSTALL_PROG) $(CTAGS_EXEC) $@  &&  chmod 755 $@
--	$(STRIP) $(DEST_CTAGS)
-+	$(INSTALL_PROGRAM) $(CTAGS_EXEC) $@
++	$(INSTALL_PROGRAM) $(CTAGS_EXEC) $@  &&  chmod 755 $@
  
  $(DEST_ETAGS):
  	- if [ -x $(DEST_CTAGS) ]; then \
-@@ -154,7 +154,7 @@
+@@ -153,7 +154,7 @@
  install-eman: $(DEST_EMAN)
  
  $(DEST_CMAN): $(man1dir) $(MANPAGE) FORCE
 -	- $(INSTALL_DATA) $(srcdir)/$(MANPAGE) $@  &&  chmod 644 $@
-+	- $(INSTALL_MAN) $(srcdir)/$(MANPAGE) $@
++	- $(INSTALL_MAN) $(srcdir)/$(MANPAGE) $@  &&  chmod 644 $@
  
  $(DEST_EMAN):
  	- if [ -f $(DEST_CMAN) ]; then \
-@@ -165,10 +165,10 @@
+@@ -164,10 +165,10 @@
  # install the library
  #
  $(DEST_READ_LIB): $(READ_LIB) $(libdir) FORCE
 -	$(INSTALL_PROG) $(READ_LIB) $@  &&  chmod 644 $@
-+	 $(INSTALL_DATA) $(READ_LIB) $@
++	$(INSTALL_DATA) $(READ_LIB) $@  &&  chmod 644 $@
  
  $(DEST_READ_INC): $(READ_INC) $(incdir) FORCE
 -	$(INSTALL_PROG) $(READ_INC) $@  &&  chmod 644 $@
-+	$(INSTALL_DATA) $(READ_INC) $@
++	$(INSTALL_DATA) $(READ_INC) $@  &&  chmod 644 $@
  
  
  #
-@@ -217,6 +217,6 @@
+@@ -216,6 +217,6 @@
  # implicit rules
  #
  .c.$(OBJEXT):
