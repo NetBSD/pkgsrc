@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2002/12/13 04:16:45 gson Exp $
+# $NetBSD: Makefile,v 1.23 2003/04/10 01:28:03 grant Exp $
 
 DISTNAME=	festival-1.4.1
 PKGREVISION=	1
@@ -63,7 +63,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${FHOME}
 	${CHMOD} -R u+w,a+r,og-w ${FESTIVAL}/lib
 	${FIND} ${FESTIVAL}/lib -type d -print | ${XARGS} ${CHMOD} 755
-	cd ${FESTIVAL} && ${PAX} -r -w lib examples ${FHOME}
+	cd ${FESTIVAL} && ${PAX} -rw lib examples ${FHOME}
 	${RM} -f ${FHOME}/lib/etc/NetBSD/audsp
 	${INSTALL_PROGRAM} ${FESTIVAL}/lib/etc/NetBSD/audsp ${PREFIX}/libexec
 	${INSTALL_PROGRAM} ${FESTIVAL}/src/main/festival ${PREFIX}/libexec/festival.naked

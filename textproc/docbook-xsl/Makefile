@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/03/28 21:14:36 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/04/10 01:28:25 grant Exp $
 #
 
 DISTNAME=	docbook-xsl-1.60.1
@@ -26,15 +26,15 @@ XML_CATALOGS=	${XSLDIR}/catalog
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	cd ${WRKSRC}/doc && ${PAX} -rwpppm . ${DOCDIR}
+	cd ${WRKSRC}/doc && ${PAX} -rw -pp -pm . ${DOCDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
-	cd ${WRKSRC}/template && ${PAX} -rwpppm . ${EGDIR}
+	cd ${WRKSRC}/template && ${PAX} -rw -pp -pm . ${EGDIR}
 	${INSTALL_DATA_DIR} ${XSLDIR}
 	${INSTALL_DATA} ${WRKSRC}/VERSION ${XSLDIR}
 	@for d in ${XSLMODS}; do \
 	    ${ECHO} "${INSTALL_DATA_DIR} ${XSLDIR}/$$d"; \
-	    ${ECHO} "cd ${WRKSRC} && ${PAX} -rwpppm $$d ${XSLDIR}/"; \
-	    cd ${WRKSRC} && ${PAX} -rwpppm $$d ${XSLDIR}/; \
+	    ${ECHO} "cd ${WRKSRC} && ${PAX} -rw -pp -pm $$d ${XSLDIR}/"; \
+	    cd ${WRKSRC} && ${PAX} -rw -pp -pm $$d ${XSLDIR}/; \
 	done
 	${INSTALL_DATA} ${FILESDIR}/catalog ${XSLDIR}/catalog
 

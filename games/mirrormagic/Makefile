@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/09/12 00:21:35 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2003/04/10 01:28:17 grant Exp $
 #
 
 DISTNAME=		mirrormagic-2.0.1
@@ -21,7 +21,7 @@ do-install:
 	${INSTALL_PROGRAM} -o bin -g games -m 2755 \
 		${WRKSRC}/mirrormagic ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mirrormagic
-	cd ${WRKSRC} && ${PAX} -r -w graphics levels music sounds \
+	cd ${WRKSRC} && ${PAX} -rw graphics levels music sounds \
 		${PREFIX}/share/mirrormagic/
 	${CHOWN} -R games:games ${PREFIX}/share/mirrormagic
 	${INSTALL_DATA_DIR} ${SCORE_PATH}/scores
