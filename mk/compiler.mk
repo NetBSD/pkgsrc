@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.20 2003/10/12 03:05:37 grant Exp $
+# $NetBSD: compiler.mk,v 1.21 2003/10/18 09:14:47 grant Exp $
 
 # This Makefile fragment implements handling for supported
 # C/C++/fortran compilers.
@@ -216,19 +216,6 @@ _GCC_LDFLAGS=		-L${_GCC_ARCHDIR} -Wl,${RPATH_FLAG}${_GCC_ARCHDIR} -L${_GCC_PREFI
 LDFLAGS+=		${_GCC_LDFLAGS}
 .endif
 
-# create a fake libstdc++.la if one exists in /usr/lib.
-.if empty(USE_BUILDLINK2:M[nN][oO])
-.  if defined(_CC_IS_GCC) && exists(/usr/lib/libstdc++.la)
-BUILDLINK_TARGETS+=		libstdc++-buildlink-la
-
-libstdc++-buildlink-la:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	lafile="${BUILDLINK_DIR}/lib/libstdc++.la";			\
-	libpattern="/usr/lib/libstdc++.*";				\
-	${BUILDLINK_FAKE_LA}
-.  endif
-.endif
-
 # CC_VERSION can be tested by package Makefiles to tweak things based
 # on the compiler being used.
 #
@@ -263,3 +250,22 @@ IMAKEOPTS+=	-DHasGcc2=YES -DHasGcc2ForCplusplus=YES
 .endif
 
 .endif	# COMPILER_MK
+
+# XXX this test is outside if !defined(COMPILER_MK) because some
+# XXX packages include bsd.prefs.mk before defining USE_BUILDLINK2.
+#
+# create a fake libstdc++.la if one exists in /usr/lib.
+.if empty(USE_BUILDLINK2:M[nN][oO])
+.  if defined(_CC_IS_GCC) && exists(/usr/lib/libstdc++.la)
+.    if (!defined(BUILDLINK_TARGETS) || \
+     defined(BUILDLINK_TARGETS) && empty(BUILDLINK_TARGETS:Mlibstdc++-buildlink-la))
+BUILDLINK_TARGETS+=		libstdc++-buildlink-la
+
+libstdc++-buildlink-la:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	lafile="${BUILDLINK_DIR}/lib/libstdc++.la";			\
+	libpattern="/usr/lib/libstdc++.*";				\
+	${BUILDLINK_FAKE_LA}
+.    endif
+.  endif
+.endif
