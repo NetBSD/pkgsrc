@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/04/26 18:56:14 garbled Exp $
+# $NetBSD: Makefile,v 1.12 2000/01/10 00:57:13 wiz Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/04/20 13:19:32 wosch Exp
 #
 
@@ -13,8 +13,10 @@ DEPENDS=	tk-8.0.5:../../x11/tk80
 USE_X11=	yes
 
 pre-configure:
-	for f in `find ${WRKDIR}/. -type f -print|xargs ${GREP} -l '/usr/local'`; do \
-		${SED} -e 's:/usr/local:'${PREFIX}':g' < $$f > $$f.pdone && ${MV} $$f.pdone $$f; \
+	for f in `${FIND} ${WRKDIR}/. -type f -print \
+		| xargs ${GREP} -l '/usr/local'`; do \
+		${SED} -e 's:/usr/local:'${PREFIX}':g' < $$f \
+			> $$f.pdone && ${MV} $$f.pdone $$f; \
 	done
 
 .include "../../mk/bsd.pkg.mk"

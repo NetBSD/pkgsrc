@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/04/15 20:39:45 tron Exp $
+# $NetBSD: Makefile,v 1.7 2000/01/10 00:57:14 wiz Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/06/24 18:43:06 jfitz Exp
 #
 
@@ -18,6 +18,6 @@ do-install:
 		@ ${CP} ${WRKSRC}/CreditCard.pm ${WRKSRC}/CreditCard-0.1.pm
 		@ ${MKDIR} ${PREFIX}/lib/perl5/site_perl/Business/
 		@ ${INSTALL_DATA} ${WRKSRC}/CreditCard-0.1.pm ${PREFIX}/lib/perl5/site_perl/Business/
-		@ ln -sf ${PREFIX}/lib/perl5/site_perl/Business/CreditCard-0.1.pm ${PREFIX}/lib/perl5/site_perl/Business/CreditCard.pm
+		@ ${LN} -sf ${PREFIX}/lib/perl5/site_perl/Business/CreditCard-0.1.pm ${PREFIX}/lib/perl5/site_perl/Business/CreditCard.pm
 
 .include "../../mk/bsd.pkg.mk"
