@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2004/03/09 20:56:35 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2004/07/05 11:15:38 drochner Exp $
 #
 
-DISTNAME=	gconfmm-2.0.1
-PKGREVISION=	6
+DISTNAME=	gconfmm-2.0.2
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkmm/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gconfmm/2.0/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gtkmm.org/
@@ -20,7 +19,7 @@ PKGCONFIG_OVERRIDE=	gconf/gconfmm-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gconf/gconfmm-2.0-uninstalled.pc.in
 
 .include "../../devel/GConf2/buildlink3.mk"
-.include "../../devel/libsigc++/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+# gtkmm must be 2.0/2.2
 .include "../../x11/gtkmm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
