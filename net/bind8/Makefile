@@ -1,11 +1,12 @@
 #
-# $NetBSD: Makefile,v 1.11 2002/03/23 05:34:54 itojun Exp $
+# $NetBSD: Makefile,v 1.12 2002/05/08 16:20:56 taca Exp $
 #
 # FreeBSD Id: Makefile,v 1.12 1999/06/28 21:25:07 billf Exp
 #
 
 DISTNAME=	bind
 PKGNAME=	bind-8.3.1
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/src
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind/src/8.3.1/
