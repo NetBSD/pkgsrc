@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/07/06 12:31:57 grant Exp $
+# $NetBSD: Makefile,v 1.26 2003/07/06 12:37:25 grant Exp $
 
 DISTNAME=		gcc-2.95.3
 GCC_VERSION=		2.95.3
@@ -48,14 +48,13 @@ SRCDIR=			${WRKDIR}/${DISTNAME}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} != SunOS)
+.if ${OPSYS} != "SunOS"
 CONFIGURE_ARGS+=	--with-gnu-as --with-gnu-ld
-
 GCC_PREFIX=		${LOCALBASE}/${PKGBASENAME}
 .else
-.if (${CC} != gcc)
+.  if ${CC:M*gcc*} == ""
 ALL_TARGET=		bootstrap
-.endif
+.  endif
 GCC_PREFIX=		${LOCALBASE}
 PLIST_SRC=		${PKGDIR}/PLIST.SunOS
 PLIST_SUBST+=		GCC_VERSION=${GCC_VERSION}
@@ -86,7 +85,7 @@ post-patch:
 	${PATCH} -p0 -d ${WRKDIR}/${DISTNAME} --forward --quiet -E < ${WRKDIR}/protector.dif
 	${PATCH} -p0 -d ${WRKDIR}/${DISTNAME} --forward --quiet -E < ${WRKDIR}/protectonly.dif
 
-.if (${OPSYS} != SunOS)
+.if ${OPSYS} != "SunOS"
 post-build:
 	for FILE in ${FILESDIR}/gcc.mk; do \
 	  ${SED} -e 's#@@MAKE@@#${MAKE}#g' \
@@ -110,7 +109,7 @@ pre-install:
 #	${SETENV} PKG_PREFIX="${PREFIX}" ${SH} ${INSTALL_FILE} any PRE-INSTALL
 #	This is not needed because of no info.
 
-.if (${OPSYS} != SunOS)
+.if ${OPSYS} != "SunOS"
 post-install:
 	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/curses.h ${PREFIX}/${PKGBASENAME}/bin/cc
 	${LN} -s gcc ${PREFIX}/${PKGBASENAME}/bin/cc
