@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/06/03 12:57:12 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/06/04 11:57:51 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:58:03 gj Exp
 #
 
@@ -21,8 +21,8 @@ MAN1=		xvile.1
 .include "../../mk/bsd.prefs.mk"
 
 pre-configure:
-	@echo "To use xvile with menus, set the variable USE_MENUS"
-	@echo "in the environment or in /etc/mk.conf"
+	@${ECHO} "To use xvile with menus, set the variable USE_MENUS"
+	@${ECHO} "in the environment or in /etc/mk.conf"
 
 .if defined(USE_MENUS)
 SCREEN_TYPE=	Xaw
@@ -31,10 +31,10 @@ SCREEN_TYPE=	x11
 .endif
 
 post-install:
-	@echo "You might want to copy the *.rc files from the source tree before"
-	@echo "doing \`make clean'."
+	@${ECHO} "You might want to copy the *.rc files from the source tree before"
+	@${ECHO} "doing \`make clean'."
 .if defined(USE_MENUS)
-	@echo "And also take a look at README.MENU !"
+	@${ECHO} "And also take a look at README.MENU !"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
