@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5749 2004/04/27 08:46:24 adam Exp $
+$NetBSD: CHANGES,v 1.5750 2004/04/27 11:27:51 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2257,3 +2257,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed eXdbm [bouyer 2004-04-26]
 	Updated pfaedit to 20040310 [adam 2004-04-27]
 	Updated t1utils to 1.32 [adam 2004-04-27]
+	Updated R to 1.9.0 [markd 2004-04-27]
