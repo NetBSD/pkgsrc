@@ -1,20 +1,25 @@
-# $NetBSD: builtin.mk,v 1.13 2004/11/21 02:40:15 jlam Exp $
+# $NetBSD: builtin.mk,v 1.14 2004/11/26 23:16:35 jlam Exp $
 
-.if !defined(_BLNK_LIBINTL_FOUND)
-_BLNK_LIBINTL_FOUND!=	\
-	if [ "`${ECHO} /usr/lib/libintl.*`" = "/usr/lib/libintl.*" ]; then \
+.for _lib_ in intl
+.  if !defined(_BLNK_LIB_FOUND.${_lib_})
+_BLNK_LIB_FOUND.${_lib_}!=	\
+	if ${TEST} "`${ECHO} /usr/lib/lib${_lib_}.*`" = "/usr/lib/lib${_lib_}.*"; then \
+		${ECHO} "no";						\
+	elif ${TEST} "`${ECHO} /lib/lib${_lib_}.*`" = "/lib/lib${_lib_}.*"; then \
 		${ECHO} "no";						\
 	else								\
 		${ECHO} "yes";						\
 	fi
-BUILDLINK_VARS+=	_BLNK_LIBINTL_FOUND
-.endif
+BUILDLINK_VARS+=	_BLNK_LIB_FOUND.${_lib_}
+.  endif
+.endfor
+.undef _lib_
 
 _LIBINTL_H=	/usr/include/libintl.h
 
 .if !defined(IS_BUILTIN.gettext)
 IS_BUILTIN.gettext=	no
-.  if exists(${_LIBINTL_H}) && !empty(_BLNK_LIBINTL_FOUND:M[yY][eE][sS])
+.  if exists(${_LIBINTL_H}) && !empty(_BLNK_LIB_FOUND.intl:M[yY][eE][sS])
 IS_BUILTIN.gettext!=	\
  	if ${GREP} -q "\#define[ 	]*__USE_GNU_GETTEXT" ${_LIBINTL_H}; then \
  		${ECHO} "yes";						\
@@ -112,7 +117,7 @@ CHECK_BUILTIN.gettext?=	no
 # If we are using the builtin gettext implementation...
 ######################################################################
 .if !empty(USE_BUILTIN.gettext:M[yY][eE][sS])
-.  if ${_BLNK_LIBINTL_FOUND} == "yes"
+.  if ${_BLNK_LIB_FOUND.intl} == "yes"
 _BLNK_LIBINTL=		-lintl
 .  else
 _BLNK_LIBINTL=		# empty
@@ -186,7 +191,7 @@ CONFIGURE_ENV+=			INTLLIBS="${BUILDLINK_LDADD.gettext}"
 # so that it will detect "GNU gettext" in the existing libintl.
 #
 .if !empty(USE_BUILTIN.gettext:M[yY][eE][sS])
-.  if !empty(_BLNK_LIBINTL_FOUND:M[yY][eE][sS])
+.  if !empty(_BLNK_LIB_FOUND.intl:M[yY][eE][sS])
 CONFIGURE_ENV+=		gt_cv_func_gnugettext_libintl="yes"
 CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libintl="yes"
 .    if defined(_GETTEXT_NGETTEXT) && !empty(_GETTEXT_NGETTEXT:M[yY][eE][sS])

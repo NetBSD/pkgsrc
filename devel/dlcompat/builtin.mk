@@ -1,20 +1,25 @@
-# $NetBSD: builtin.mk,v 1.1 2004/07/18 09:35:08 schmonz Exp $
+# $NetBSD: builtin.mk,v 1.2 2004/11/26 23:16:35 jlam Exp $
 
-.if !defined(_BLNK_LIBDL_FOUND)
-_BLNK_LIBDL_FOUND!=	\
-	if [ "`${ECHO} /usr/lib/libdl.*`" = "/usr/lib/libdl.*" ]; then \
+.for _lib_ in dl
+.  if !defined(_BLNK_LIB_FOUND.${_lib_})
+_BLNK_LIB_FOUND.${_lib_}!=	\
+	if ${TEST} "`${ECHO} /usr/lib/lib${_lib_}.*`" = "/usr/lib/lib${_lib_}.*"; then \
+		${ECHO} "no";						\
+	elif ${TEST} "`${ECHO} /lib/lib${_lib_}.*`" = "/lib/lib${_lib_}.*"; then \
 		${ECHO} "no";						\
 	else								\
 		${ECHO} "yes";						\
 	fi
-BUILDLINK_VARS+=	_BLNK_LIBDL_FOUND
-.endif
+BUILDLINK_VARS+=	_BLNK_LIB_FOUND.${_lib_}
+.  endif
+.endfor
+.undef _lib_
 
 _DL_H=	/usr/include/dlfcn.h
 
 .if !defined(IS_BUILTIN.dlcompat)
 IS_BUILTIN.dlcompat=	no
-.  if !empty(_BLNK_LIBDL_FOUND:M[yY][eE][sS])
+.  if !empty(_BLNK_LIB_FOUND.dl:M[yY][eE][sS])
 IS_BUILTIN.dlcompat=	yes
 .  elif exists(${_DL_H})
 IS_BUILTIN.dlcompat=	yes
