@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.289 2002/10/17 09:59:54 martti Exp $
+$NetBSD: CHANGES,v 1.290 2002/10/17 11:37:17 abs Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3302,3 +3302,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added lablgtk-1.2.5 [dillo 2002-10-16]
 	Added py-expat [tsarna 2002-10-16]
 	Added ap2-php-4.2.3 [martti 2002-10-17]
+	Updated cpuflags to 0.35 [abs 2002-10-17]
