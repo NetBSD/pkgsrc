@@ -1,12 +1,11 @@
-$NetBSD: patch-aa,v 1.6 2003/07/12 22:35:30 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2003/07/13 21:04:21 wiz Exp $
 
 --- ogg123/buffer.c.orig	2002-07-14 07:38:00.000000000 +0200
 +++ ogg123/buffer.c
-@@ -35,9 +35,10 @@
+@@ -35,9 +35,9 @@
  #define MIN4(w,x,y,z)  MIN( MIN(w,x), MIN(y,z) )
  
  /* Special debugging code.  THIS IS NOT PORTABLE! */
-+#define DEBUG_BUFFER
  #ifdef DEBUG_BUFFER
  FILE *debugfile;
 -#define DEBUG(x, y...) { fprintf (debugfile, "%d: " x "\n", getpid(),  ## y); }
