@@ -1,5 +1,5 @@
 # build.conf
-# $NetBSD: build.conf-example,v 1.21 2004/07/22 14:26:42 agc Exp $
+# $NetBSD: build.conf-example,v 1.22 2004/08/12 22:18:07 sketch Exp $
 #
 # config file in /bin/sh syntax for {,pre,post}-build
 #
@@ -55,7 +55,7 @@ RSYNC_DST=$CVS_USER@ftp.NetBSD.org:/pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b
 RSYNC_OPTS='-e ssh'
 
 # Nice level for builds
-NICE_LEVEL=nice -n 20
+NICE_LEVEL="nice -n 20"
 
 ###########################################################################
 ### No changes should be needed below this line !!!
