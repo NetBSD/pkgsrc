@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 1998/08/07 11:09:22 agc Exp $
+$NetBSD: patch-aa,v 1.6 1998/08/07 11:39:04 agc Exp $
 
---- Configure.orig	Fri Oct  3 19:57:39 1997
-+++ Configure	Thu Feb 19 20:19:03 1998
+--- Configure.orig	Fri Oct  3 18:57:39 1997
++++ Configure	Fri Aug  7 12:31:44 1998
 @@ -65,7 +65,7 @@
  fi
  
@@ -11,6 +11,21 @@ $NetBSD: patch-aa,v 1.5 1998/08/07 11:09:22 agc Exp $
  paths="$paths /opt/bin /opt/local/bin /opt/local /opt/lbin"
  paths="$paths /usr/5bin /etc /usr/gnu/bin /usr/new /usr/new/bin /usr/nbin"
  paths="$paths /opt/gnu/bin /opt/new /opt/new/bin /opt/nbin"
+@@ -92,10 +92,10 @@
+ esac
+ 
+ : Sanity checks
+-if test ! -t 0; then
+-	echo "Say 'sh $me', not 'sh <$me'"
+-	exit 1
+-fi
++: if test ! -t 0; then
++: 	echo "Say 'sh $me', not 'sh <$me'"
++: 	exit 1
++: fi
+ 
+ : Test and see if we are running under ksh, either blatantly or in disguise.
+ if (PATH=.; alias -x) >/dev/null 2>&1; then
 @@ -725,7 +725,7 @@
  archobjs=''
  : Possible local include directories to search.
