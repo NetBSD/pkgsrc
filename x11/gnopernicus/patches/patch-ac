@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2004/02/17 22:40:30 jmmv Exp $
+$NetBSD: patch-ac,v 1.2 2004/04/01 19:04:28 jmmv Exp $
 
---- srcore/Makefile.in.orig	2003-10-07 16:31:26.000000000 +0200
+--- srcore/Makefile.in.orig	2004-02-11 14:57:59.000000000 +0100
 +++ srcore/Makefile.in
-@@ -174,7 +174,7 @@ INCLUDES = -I$(srcdir)                  
+@@ -175,7 +175,7 @@ INCLUDES = -I$(srcdir)                  
  	   -I$(top_srcdir)/magnifier/libmag   	\
  	   -I$(top_srcdir)/srutil             	\
  	   -DGNOPERNICUSLOCALEDIR=\""$(gnopernicuslocaledir)"\" \
 -	   -DBRAILLE_TRANS_TABLES_DIR=\"$(sysconfdir)/gnopernicus-1.0/translation_tables/\" \
 +	   -DBRAILLE_TRANS_TABLES_DIR=\"$(sysconfdir)/translation_tables/\" \
+ 	   -DPRESENTATION_DIR=\"$(datadir)/gnopernicus/presentation/\" \
  	   $(SRCORE_CFLAGS)  			\
  	   -DG_LOG_DOMAIN=\"gnopernicus\"
- 

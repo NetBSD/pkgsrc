@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/02/17 22:40:30 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/04/01 19:04:27 jmmv Exp $
 bin/brlmonitor
 bin/gnopernicus
 bin/srcore
@@ -60,8 +60,12 @@ share/gconf/schemas/gnopernicus.schemas
 share/gconf/schemas/remote.schemas
 share/gnome/help/brlmonitor/C/brlmonitor.xml
 share/gnome/help/brlmonitor/C/legal.xml
+share/gnome/help/brlmonitor/es/brlmonitor.xml
+share/gnome/help/brlmonitor/es/legal.xml
 share/gnome/help/gnopernicus/C/gnopernicus.xml
 share/gnome/help/gnopernicus/C/legal.xml
+share/gnome/help/gnopernicus/es/gnopernicus.xml
+share/gnome/help/gnopernicus/es/legal.xml
 share/gnopernicus/fonts/braillehc.afm
 share/gnopernicus/fonts/braillehc.pfb
 share/gnopernicus/fonts/braillehc.pfm
@@ -92,20 +96,31 @@ share/gnopernicus/glade/gnopi_files/gnopi.glade2
 share/gnopernicus/glade/gnopi_files/keyboard.xpm
 share/gnopernicus/glade/gnopi_files/monitor.png
 share/gnopernicus/glade/gnopi_files/start_up.png
+share/gnopernicus/presentation/default.xml
+share/gnopernicus/presentation/verbose.xml
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnopernicus.mo
@@ -117,12 +132,17 @@ ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnopernicus.mo
 share/omf/gnopernicus/brlmonitor-C.omf
+share/omf/gnopernicus/brlmonitor-es.omf
 share/omf/gnopernicus/gnopernicus-C.omf
+share/omf/gnopernicus/gnopernicus-es.omf
 share/pixmaps/gnopernicus.png
+@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/gnopernicus
 @comment in scrollkeeper: @dirrm share/omf
+@dirrm share/gnopernicus/presentation
 @dirrm share/gnopernicus/glade/gnopi_files/User_Properties
 @dirrm share/gnopernicus/glade/gnopi_files/Speech_Settings
 @dirrm share/gnopernicus/glade/gnopi_files/Screen_Review
@@ -139,15 +159,17 @@ share/pixmaps/gnopernicus.png
 @dirrm share/gnopernicus/glade
 @dirrm share/gnopernicus/fonts
 @dirrm share/gnopernicus
+@dirrm share/gnome/help/gnopernicus/es
 @dirrm share/gnome/help/gnopernicus/C
 @dirrm share/gnome/help/gnopernicus
+@dirrm share/gnome/help/brlmonitor/es
 @dirrm share/gnome/help/brlmonitor/C
 @dirrm share/gnome/help/brlmonitor
 @comment in gnome2-dirs: @dirrm share/gnome/help
 @comment in GConf2: @dirrm share/gconf/schemas
 @dirrm share/examples/gnopernicus/translation_tables
 @dirrm share/examples/gnopernicus
-@comment in gnome2-dirs: @dirrm share/applications
+@comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/gnopernicus-1.0
 @dirrm include/gnopernicus-1.0/libsrutil
 @dirrm include/gnopernicus-1.0/libsrs
