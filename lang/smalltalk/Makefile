@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/10/21 14:58:09 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/03/10 07:43:57 jmc Exp $
 #
 
 DISTNAME=	smalltalk-1.95.10
@@ -19,6 +19,7 @@ CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
 CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}/lib
 CONFIGURE_ARGS+=	--without-libiconv
 CONFIGURE_ARGS+=	--without-glib --without-gtk
+CONFIGURE_ENV+=		CFLAGS="-O2 -fsigned-char"
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 

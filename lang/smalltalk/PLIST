@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/12/13 16:06:40 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/03/10 07:43:57 jmc Exp $
 bin/gst
 bin/gst-config
 bin/gst-package
@@ -29,6 +29,10 @@ info/gst.info-9
 @exec ${INSTALL_INFO} --info-dir=%D/info %D/info/gst.info
 lib/libgst.a
 lib/libgst.la
+lib/smalltalk/blox-tk-${PKGVERSION}.so
+lib/smalltalk/blox-tk.so
+lib/smalltalk/blox-tk.la
+lib/smalltalk/blox-tk.a
 lib/smalltalk/md5-${PKGVERSION}.so
 lib/smalltalk/md5.a
 lib/smalltalk/md5.la
