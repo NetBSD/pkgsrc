@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/03/23 12:25:03 dmcmahill Exp $
+
+--- src/transcalc.c.orig	Mon Jul 15 07:20:38 2002
++++ src/transcalc.c
+@@ -170,10 +170,10 @@ read_config_file (void)
+       /* make sure it terminates with '\0' */
+       *end = '\0';
+       
+-      sscanf(ip,"%s %d\n",tmp_str1,&freq_unit);
+-      fscanf(fp,"%s %d\n",tmp_str1,&length_unit);
+-      fscanf(fp, "%s %d\n",tmp_str1,&res_unit);
+-      fscanf(fp, "%s %d\n",tmp_str1,&ang_unit);      
++      sscanf(ip,"%s %hd\n",tmp_str1,&freq_unit);
++      fscanf(fp,"%s %hd\n",tmp_str1,&length_unit);
++      fscanf(fp, "%s %hd\n",tmp_str1,&res_unit);
++      fscanf(fp, "%s %hd\n",tmp_str1,&ang_unit);      
+     }
+   }
+ }

@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/03/23 12:25:03 dmcmahill Exp $
+
+SHA1 (transcalc-0.13.tar.gz) = c0fe6ebca5efa44a03e6f5790cac83fd78acf6b0
+Size (transcalc-0.13.tar.gz) = 125666 bytes
+SHA1 (patch-aa) = 620596687c96f4e5ab453ca77949643d9c9960ad
+SHA1 (patch-ab) = 8be1a7ecaf9ed5083720a192f416c09abb6982d0
+SHA1 (patch-ac) = 9d00660ab3dd801644bb103181375814e3b4095d
+SHA1 (patch-ad) = 7904ec6e250da56bad3703a77c8a606f42511da2

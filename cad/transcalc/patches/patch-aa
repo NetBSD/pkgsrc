@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/03/23 12:25:03 dmcmahill Exp $
+
+fixes minor bug in the computation.  Correct constant (0.7913) found in original reference 
+for this model.
+
+--- src/c_microstrip.c.orig	Tue May 28 15:59:49 2002
++++ src/c_microstrip.c	Wed Jan 15 05:32:42 2003
+@@ -217,5 +235,5 @@
+   er_eff = c_ms->er_eff_o_0;
+   P_8 = 0.7168 * (1.0 + 1.076 / (1.0 + 0.0576 * (er - 1.0)));
+-  P_9 = P_8 - 0.7193 * (1.0 - exp(-pow(f_n / 20.0, 1.424))) * atan(2.481 * pow(er / 8.0, 0.946));
++  P_9 = P_8 - 0.7913 * (1.0 - exp(-pow(f_n / 20.0, 1.424))) * atan(2.481 * pow(er / 8.0, 0.946));
+   P_10 = 0.242 * pow(er - 1.0, 0.55);
+   P_11 = 0.6366 * (exp(-0.3401 * f_n) - 1.0) * atan(1.263 * pow(u / 3.0, 1.629));
