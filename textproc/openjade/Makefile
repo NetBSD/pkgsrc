@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2002/07/24 19:45:28 jlam Exp $
-# FreeBSD Id: ports/textproc/openjade/Makefile,v 1.30 2001/03/04 21:39:19 lioux Exp
+# $NetBSD: Makefile,v 1.4 2003/09/23 08:35:52 wiz Exp $
+#
 
-DISTNAME=	openjade-1.3
+DISTNAME=	openjade-1.3.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openjade/}
 
@@ -9,12 +9,9 @@ MAINTAINER=	kogule@mars.dti.ne.jp
 HOMEPAGE=	http://openjade.sourceforge.net/
 COMMENT=	SGML/XML parser toolkit and DSSSL engine, successor to "jade"
 
-PERL5_REQD=	5.6.0
-BUILD_DEPENDS+=	perl>=5.6.0:../../lang/perl5:build
-
-CONFLICTS+=	opensp-[0-9]*
-
+USE_BUILDLINK2=	YES
 USE_GMAKE=	YES
+USE_PERL5=	build
 GNU_CONFIGURE=	YES
 
 CONFIGURE_ENV+=	CXXFLAGS="${CFLAGS}"
@@ -23,13 +20,6 @@ CONFIGURE_ARGS+=	--enable-default-catalog=${OPENJADE_DATA_DIR}/catalog \
 
 OPENJADE_DATA_DIR=	${PREFIX}/share/sgml/openjade
 OPENJADE_DOC_DIR=	${PREFIX}/share/doc/openjade
-
-# People say this software is not optimization safe.
-CFLAGS=	-O0
-
-# Building with Shared Libraries cannot handle MessageReporterMessages'
-# static member variables under NetBSD 1.5.
-CONFIGURE_ARGS+=	--disable-shared
 
 post-install:
 	${INSTALL_DATA_DIR} ${OPENJADE_DATA_DIR}/pubtext
@@ -43,4 +33,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/jadedoc/*.htm ${OPENJADE_DOC_DIR}/jadedoc
 	${INSTALL_DATA} ${WRKSRC}/jadedoc/images/* ${OPENJADE_DOC_DIR}/jadedoc/images
 
+.include "../../textproc/opensp/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
