@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.15 2004/12/21 13:50:25 grant Exp $
+$NetBSD: patch-ac,v 1.16 2005/01/18 18:51:15 tv Exp $
 
---- ltmain.sh.orig	2004-09-19 22:34:44.000000000 +1000
+--- ltmain.sh.orig	2004-09-19 08:34:44.000000000 -0400
 +++ ltmain.sh
 @@ -184,6 +184,31 @@ func_win32_libid () {
  # command doesn't match the default compiler.
@@ -103,28 +103,7 @@ $NetBSD: patch-ac,v 1.15 2004/12/21 13:50:25 grant Exp $
  	   # Do not include libc_r directly, use -pthread flag.
  	   continue
  	   ;;
-@@ -3063,7 +3116,7 @@ EOF
- 	    age="$number_minor"
- 	    revision="$number_revision"
- 	    ;;
--	  freebsd-aout|freebsd-elf|sunos)
-+	  freebsd-aout|freebsd-elf|dragonfly|sunos)
- 	    current="$number_major"
- 	    revision="$number_minor"
- 	    age="0"
-@@ -3143,6 +3196,11 @@ EOF
- 	  versuffix=".$current";
- 	  ;;
- 
-+	dragonfly)
-+	  major=".$current"
-+	  versuffix=".$current"
-+	  ;;
-+
- 	irix | nonstopux)
- 	  major=`expr $current - $age + 1`
- 
-@@ -3168,6 +3226,7 @@ EOF
+@@ -3168,6 +3221,7 @@ EOF
  	linux)
  	  major=.`expr $current - $age`
  	  versuffix="$major.$age.$revision"
@@ -132,7 +111,7 @@ $NetBSD: patch-ac,v 1.15 2004/12/21 13:50:25 grant Exp $
  	  ;;
  
  	osf)
-@@ -3336,7 +3395,7 @@ EOF
+@@ -3336,7 +3390,7 @@ EOF
  	  *-*-netbsd*)
  	    # Don't link with libc until the a.out ld.so is fixed.
  	    ;;
@@ -141,7 +120,7 @@ $NetBSD: patch-ac,v 1.15 2004/12/21 13:50:25 grant Exp $
  	    # Do not include libc due to us having libc/libc_r.
  	    test "X$arg" = "X-lc" && continue
  	    ;;
-@@ -5364,8 +5423,16 @@ relink_command=\"$relink_command\""
+@@ -5364,8 +5418,16 @@ relink_command=\"$relink_command\""
        exit $EXIT_FAILURE
      fi
  
