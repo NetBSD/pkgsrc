@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/12/06 03:01:57 epg Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/13 21:17:04 epg Exp $
 
 PKGNAME=	p5-subversion-${SVNVER}
 COMMENT=	Perl bindings for Subversion
@@ -9,7 +9,7 @@ CONFIGURE_ENV+=		PERL=${PERL5}
 
 BUILDLINK_PKGSRCDIR.perl=      ../../lang/perl58
 
-PERL5_REQD=		5.8.0
+PERL5_REQD=		5.8
 PERL_DIR=		${WRKSRC}/subversion/bindings/swig/perl
 ALL_TARGET=		swig-pl-lib
 INSTALL_TARGET=		install-swig-pl-lib
