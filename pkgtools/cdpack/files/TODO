@@ -1,0 +1,20 @@
+$NetBSD: TODO,v 1.1 2001/04/28 13:49:43 dmcmahill Exp $
+
+To-Do List for cdpack
+---------------------
+
+
+- extract COMMENT and DESCR to generate a browseable index of all the 
+  packages on the CD set.  This would be similar to the README.html's
+  in pkgsrc, but with some modifications.   The changes would be to
+  list which CD certain pkgs are on.  Also, if a DEPENDS is not on the
+  CD set (due to redistribution restrictions for example), perhaps
+  list that so the user knows s/he must install the restricted DEPENDS
+  by hand first.
+
+- come up with some sort of install tool around pkg_add.  Perhaps this 
+  could be done using SUSHI.  The idea would be to let the user browse
+  the selection of packages, select some subset of them and then do
+  a batch install.
+
+
