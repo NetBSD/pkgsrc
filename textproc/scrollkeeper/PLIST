@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:58:49 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/02 04:49:35 fredb Exp $
 bin/scrollkeeper-config
 bin/scrollkeeper-get-cl
 bin/scrollkeeper-get-content-list
@@ -174,12 +174,227 @@ share/scrollkeeper/doc/scrollkeeper_manual/C/toc-file.html
 share/scrollkeeper/doc/scrollkeeper_manual/C/uninstallbyhand.html
 share/scrollkeeper/doc/scrollkeeper_manual/C/uninstalling.html
 share/scrollkeeper/doc/scrollkeeper_manual/C/writingomffiles.html
-@exec mkdir -p -m 0755 %D/share/scrollkeeper/doc/scrollkeeper_manual/C/figures
-@dirrm share/scrollkeeper/doc/scrollkeeper_manual/C/stylesheet-images
-@dirrm share/scrollkeeper/doc/scrollkeeper_manual/C/figures
-@dirrm share/scrollkeeper/doc/scrollkeeper_manual/C
-@dirrm share/scrollkeeper/doc/scrollkeeper_manual
-@dirrm share/scrollkeeper/doc
+var/lib/scrollkeeper/C/scrollkeeper_cl.xml
+var/lib/scrollkeeper/C/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/TOC/0
+var/lib/scrollkeeper/af/scrollkeeper_cl.xml
+var/lib/scrollkeeper/af/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/ar/scrollkeeper_cl.xml
+var/lib/scrollkeeper/ar/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/az/scrollkeeper_cl.xml
+var/lib/scrollkeeper/az/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/bg/scrollkeeper_cl.xml
+var/lib/scrollkeeper/bg/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/bo/scrollkeeper_cl.xml
+var/lib/scrollkeeper/bo/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/br/scrollkeeper_cl.xml
+var/lib/scrollkeeper/br/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/bs/scrollkeeper_cl.xml
+var/lib/scrollkeeper/bs/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/ca/scrollkeeper_cl.xml
+var/lib/scrollkeeper/ca/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/cs/scrollkeeper_cl.xml
+var/lib/scrollkeeper/cs/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/cy/scrollkeeper_cl.xml
+var/lib/scrollkeeper/cy/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/da/scrollkeeper_cl.xml
+var/lib/scrollkeeper/da/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/de/scrollkeeper_cl.xml
+var/lib/scrollkeeper/de/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/el/scrollkeeper_cl.xml
+var/lib/scrollkeeper/el/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/eo/scrollkeeper_cl.xml
+var/lib/scrollkeeper/eo/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/es/scrollkeeper_cl.xml
+var/lib/scrollkeeper/es/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/et/scrollkeeper_cl.xml
+var/lib/scrollkeeper/et/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/eu/scrollkeeper_cl.xml
+var/lib/scrollkeeper/eu/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/fi/scrollkeeper_cl.xml
+var/lib/scrollkeeper/fi/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/fr/scrollkeeper_cl.xml
+var/lib/scrollkeeper/fr/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/ga/scrollkeeper_cl.xml
+var/lib/scrollkeeper/ga/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/gd/scrollkeeper_cl.xml
+var/lib/scrollkeeper/gd/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/gl/scrollkeeper_cl.xml
+var/lib/scrollkeeper/gl/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/gu/scrollkeeper_cl.xml
+var/lib/scrollkeeper/gu/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/gv/scrollkeeper_cl.xml
+var/lib/scrollkeeper/gv/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/he/scrollkeeper_cl.xml
+var/lib/scrollkeeper/he/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/hi/scrollkeeper_cl.xml
+var/lib/scrollkeeper/hi/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/hr/scrollkeeper_cl.xml
+var/lib/scrollkeeper/hr/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/hs/scrollkeeper_cl.xml
+var/lib/scrollkeeper/hs/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/hu/scrollkeeper_cl.xml
+var/lib/scrollkeeper/hu/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/id/scrollkeeper_cl.xml
+var/lib/scrollkeeper/id/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/is/scrollkeeper_cl.xml
+var/lib/scrollkeeper/is/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/it/scrollkeeper_cl.xml
+var/lib/scrollkeeper/it/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/ja/scrollkeeper_cl.xml
+var/lib/scrollkeeper/ja/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/km/scrollkeeper_cl.xml
+var/lib/scrollkeeper/km/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/ko/scrollkeeper_cl.xml
+var/lib/scrollkeeper/ko/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/kw/scrollkeeper_cl.xml
+var/lib/scrollkeeper/kw/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/li/scrollkeeper_cl.xml
+var/lib/scrollkeeper/li/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/lt/scrollkeeper_cl.xml
+var/lib/scrollkeeper/lt/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/mi/scrollkeeper_cl.xml
+var/lib/scrollkeeper/mi/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/mk/scrollkeeper_cl.xml
+var/lib/scrollkeeper/mk/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/mr/scrollkeeper_cl.xml
+var/lib/scrollkeeper/mr/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/nb/scrollkeeper_cl.xml
+var/lib/scrollkeeper/nb/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/nl/scrollkeeper_cl.xml
+var/lib/scrollkeeper/nl/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/nn/scrollkeeper_cl.xml
+var/lib/scrollkeeper/nn/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/oc/scrollkeeper_cl.xml
+var/lib/scrollkeeper/oc/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/pl/scrollkeeper_cl.xml
+var/lib/scrollkeeper/pl/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/pt/scrollkeeper_cl.xml
+var/lib/scrollkeeper/pt/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/pt_BR/scrollkeeper_cl.xml
+var/lib/scrollkeeper/pt_BR/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/ro/scrollkeeper_cl.xml
+var/lib/scrollkeeper/ro/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/ru/scrollkeeper_cl.xml
+var/lib/scrollkeeper/ru/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/scrollkeeper_docs
+var/lib/scrollkeeper/se/scrollkeeper_cl.xml
+var/lib/scrollkeeper/se/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/sk/scrollkeeper_cl.xml
+var/lib/scrollkeeper/sk/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/sl/scrollkeeper_cl.xml
+var/lib/scrollkeeper/sl/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/sp/scrollkeeper_cl.xml
+var/lib/scrollkeeper/sp/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/sr/scrollkeeper_cl.xml
+var/lib/scrollkeeper/sr/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/sv/scrollkeeper_cl.xml
+var/lib/scrollkeeper/sv/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/ta/scrollkeeper_cl.xml
+var/lib/scrollkeeper/ta/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/th/scrollkeeper_cl.xml
+var/lib/scrollkeeper/th/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/tr/scrollkeeper_cl.xml
+var/lib/scrollkeeper/tr/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/uk/scrollkeeper_cl.xml
+var/lib/scrollkeeper/uk/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/wa/scrollkeeper_cl.xml
+var/lib/scrollkeeper/wa/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/zh/scrollkeeper_cl.xml
+var/lib/scrollkeeper/zh/scrollkeeper_extended_cl.xml
+var/lib/scrollkeeper/zh_TW.Big5
+var/lib/scrollkeeper/zh_TW
+var/lib/scrollkeeper/zh_CN.GB2312
+var/lib/scrollkeeper/zh_CN
+var/lib/scrollkeeper/sv_SE
+var/lib/scrollkeeper/sr_YU
+var/lib/scrollkeeper/pt_PT
+var/lib/scrollkeeper/no_NY
+var/lib/scrollkeeper/no
+var/lib/scrollkeeper/ja_JP.eucJP
+var/lib/scrollkeeper/es_SV
+var/lib/scrollkeeper/es_PE
+var/lib/scrollkeeper/es_PA
+var/lib/scrollkeeper/es_MX
+var/lib/scrollkeeper/es_HN
+var/lib/scrollkeeper/es_GT
+var/lib/scrollkeeper/es_ES
+var/lib/scrollkeeper/es_DO
+var/lib/scrollkeeper/en_US
+var/lib/scrollkeeper/en_UK
+var/lib/scrollkeeper/en_SE
+var/lib/scrollkeeper/en_GB
+var/lib/scrollkeeper/en_AU
+var/lib/scrollkeeper/en
+var/lib/scrollkeeper/de_AT
+var/lib/scrollkeeper/bg_BG.cp1251
+var/lib/scrollkeeper/bg_BG
+@dirrm var/lib/scrollkeeper/zh
+@dirrm var/lib/scrollkeeper/wa
+@dirrm var/lib/scrollkeeper/uk
+@dirrm var/lib/scrollkeeper/tr
+@dirrm var/lib/scrollkeeper/th
+@dirrm var/lib/scrollkeeper/ta
+@dirrm var/lib/scrollkeeper/sv
+@dirrm var/lib/scrollkeeper/sr
+@dirrm var/lib/scrollkeeper/sp
+@dirrm var/lib/scrollkeeper/sl
+@dirrm var/lib/scrollkeeper/sk
+@dirrm var/lib/scrollkeeper/se
+@dirrm var/lib/scrollkeeper/ru
+@dirrm var/lib/scrollkeeper/ro
+@dirrm var/lib/scrollkeeper/pt_BR
+@dirrm var/lib/scrollkeeper/pt
+@dirrm var/lib/scrollkeeper/pl
+@dirrm var/lib/scrollkeeper/oc
+@dirrm var/lib/scrollkeeper/nn
+@dirrm var/lib/scrollkeeper/nl
+@dirrm var/lib/scrollkeeper/nb
+@dirrm var/lib/scrollkeeper/mr
+@dirrm var/lib/scrollkeeper/mk
+@dirrm var/lib/scrollkeeper/mi
+@dirrm var/lib/scrollkeeper/lt
+@dirrm var/lib/scrollkeeper/li
+@dirrm var/lib/scrollkeeper/kw
+@dirrm var/lib/scrollkeeper/ko
+@dirrm var/lib/scrollkeeper/km
+@dirrm var/lib/scrollkeeper/ja
+@dirrm var/lib/scrollkeeper/it
+@dirrm var/lib/scrollkeeper/is
+@dirrm var/lib/scrollkeeper/id
+@dirrm var/lib/scrollkeeper/hu
+@dirrm var/lib/scrollkeeper/hs
+@dirrm var/lib/scrollkeeper/hr
+@dirrm var/lib/scrollkeeper/hi
+@dirrm var/lib/scrollkeeper/he
+@dirrm var/lib/scrollkeeper/gv
+@dirrm var/lib/scrollkeeper/gu
+@dirrm var/lib/scrollkeeper/gl
+@dirrm var/lib/scrollkeeper/gd
+@dirrm var/lib/scrollkeeper/ga
+@dirrm var/lib/scrollkeeper/fr
+@dirrm var/lib/scrollkeeper/fi
+@dirrm var/lib/scrollkeeper/eu
+@dirrm var/lib/scrollkeeper/et
+@dirrm var/lib/scrollkeeper/es
+@dirrm var/lib/scrollkeeper/eo
+@dirrm var/lib/scrollkeeper/el
+@dirrm var/lib/scrollkeeper/de
+@dirrm var/lib/scrollkeeper/da
+@dirrm var/lib/scrollkeeper/cy
+@dirrm var/lib/scrollkeeper/cs
+@dirrm var/lib/scrollkeeper/ca
+@dirrm var/lib/scrollkeeper/bs
+@dirrm var/lib/scrollkeeper/br
+@dirrm var/lib/scrollkeeper/bo
+@dirrm var/lib/scrollkeeper/bg
+@dirrm var/lib/scrollkeeper/az
+@dirrm var/lib/scrollkeeper/ar
+@dirrm var/lib/scrollkeeper/af
+@dirrm var/lib/scrollkeeper/TOC
+@dirrm var/lib/scrollkeeper/C
+@dirrm var/lib/scrollkeeper
+@dirrm var/lib
 @dirrm share/scrollkeeper/Templates/zh
 @dirrm share/scrollkeeper/Templates/wa
 @dirrm share/scrollkeeper/Templates/uk
@@ -244,7 +459,14 @@ share/scrollkeeper/doc/scrollkeeper_manual/C/writingomffiles.html
 @dirrm share/scrollkeeper/Templates/af
 @dirrm share/scrollkeeper/Templates/C
 @dirrm share/scrollkeeper/Templates
+@dirrm share/scrollkeeper/doc/scrollkeeper_manual/C/stylesheet-images
+@dirrm share/scrollkeeper/doc/scrollkeeper_manual/C/figures
+@dirrm share/scrollkeeper/doc/scrollkeeper_manual/C
+@dirrm share/scrollkeeper/doc/scrollkeeper_manual
+@dirrm share/scrollkeeper/doc
 @dirrm share/scrollkeeper
-@dirrm share/omf/scrollkeeper
-@dirrm share/omf
+@unexec rmdir %D/share/omf/scrollkeeper || true
+@unexec rmdir %D/share/omf || true
 @dirrm share/doc/scrollkeeper-0.2
+@unexec rm -rf %D/var/scrollkeeper || true
+@unexec rmdir %D/var || true
