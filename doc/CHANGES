@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.563 2002/11/20 18:24:29 jschauma Exp $
+$NetBSD: CHANGES,v 1.564 2002/11/20 21:42:16 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3672,3 +3672,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated gtar, gtar-base and gtar-info to 1.13.25 [bouyer 2002-11-20]
 	Added bsetroot-0.1 [jschauma 2002-11-20]
 	Added openbox-2.2.0 [jschauma 2002-11-20]
+	Added whiteBOX-0.4.2 [jschauma 2002-11-20]
