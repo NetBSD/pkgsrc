@@ -1,0 +1,17 @@
+$NetBSD: patch-ak,v 1.5 2004/05/31 12:21:06 markd Exp $
+
+--- kcontrol/kdm/main.cpp.orig	2003-11-30 22:42:26.000000000 +1300
++++ kcontrol/kdm/main.cpp
+@@ -89,7 +89,11 @@ KDModule::KDModule(QWidget *parent, cons
+     usermap.insert( QString::fromLocal8Bit( ps->pw_name ), ps->pw_uid );
+   endpwent();
+ 
+-  config = new KSimpleConfig( QString::fromLatin1( KDE_CONFDIR "/kdm/kdmrc" ));
++  QFile confFile (QString::fromLatin1( "@PKG_SYSCONFDIR@" "/kdm/kdmrc" ));
++  if ( !confFile.exists() )
++	confFile.setName (QString::fromLatin1( KDE_CONFDIR "/kdm/kdmrc" ));
++
++  config = new KSimpleConfig( confFile.name());
+ 
+   QVBoxLayout *top = new QVBoxLayout(this);
+   tab = new QTabWidget(this);
