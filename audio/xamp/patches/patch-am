@@ -1,24 +1,20 @@
-diff -c ../configure:1.1.1.1 xamp/configure:1.2
-*** ../configure:1.1.1.1	Wed Jun 14 22:24:22 2000
---- ../configure	Wed Jun 14 22:24:22 2000
-***************
-*** 1413,1418 ****
---- 1413,1430 ----
-      DEFINES="-DNO_BYTE_SWAPPING -DOS_$OS_TYPE -DARCH_$ARCH_TYPE" 
-      ;;
-  
-+   NetBSD)
-+     if test "$ARCH_TYPE" = "i486" ; then
-+       CFLAGS_ARCH="-m486"
-+     fi
-+     if test "$ARCH_TYPE" = "i586" ; then
-+       CFLAGS_ARCH="-i586 -pipe"
-+     fi
-+     CFLAGS="-O6 -ffast-math -fomit-frame-pointer"
-+     DEFINES="-DNO_BYTE_SWAPPING -DOS_$OS_TYPE -DARCH_$ARCH_TYPE"
-+     LDFLAGS="-lossaudio"
-+     ;;
-+ 
-    SunOS)
-      if test "$CC" = "gcc"; then
-      	CFLAGS="-O6 -Dinline= "
+$NetBSD: patch-am,v 1.2 2000/10/18 11:22:44 rh Exp $
+
+--- ../configure.orig	Sat Aug 23 17:11:24 1997
++++ ../configure	Mon Oct 16 21:13:14 2000
+@@ -1413,6 +1413,15 @@
+     DEFINES="-DNO_BYTE_SWAPPING -DOS_$OS_TYPE -DARCH_$ARCH_TYPE" 
+     ;;
+ 
++  NetBSD)
++    CC="gcc"
++    if test "$ARCH_TYPE" = "i386" ; then
++      CFLAGS_ARCH="-i586 -pipe"
++    fi
++    CFLAGS="-O6 -ffast-math -fomit-frame-pointer ${CFLAGS_ARCH}"
++    DEFINES="-DNO_BYTE_SWAPPING -DOS_$OS_TYPE -DARCH_$ARCH_TYPE"
++    ;;
++
+   SunOS)
+     if test "$CC" = "gcc"; then
+     	CFLAGS="-O6 -Dinline= "
