@@ -3,7 +3,7 @@
 # Date created:				19971214
 # Whom:					hubertf@netbsd.org
 #
-# $NetBSD: Makefile,v 1.3 1997/12/22 07:45:52 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/01/15 08:36:34 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 # Maximal ssh package requires YES values for
@@ -119,7 +119,7 @@ post-install:
 # Following stuff must be after <bsd.port.mk> to expand exists() properly
 
 .if defined(USE_PERL) && ${USE_PERL} == YES || \
-    exists(${PREFIX}/bin/perl5.00401) && \
+    exists(${PREFIX}/bin/perl5.00404) && \
     (!defined(USE_PERL) || ${USE_PERL} != NO)
 BUILD_DEPENDS+= perl5.00404:${PORTSDIR}/lang/perl5
 CONFIGURE_ENV+= PERL=${PREFIX}/bin/perl5.00404
