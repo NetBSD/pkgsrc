@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/10/13 12:32:05 fredb Exp $
+# $NetBSD: Makefile,v 1.4 1999/10/23 00:05:15 tron Exp $
 #
 
 DISTNAME=	maketool-0.4
@@ -10,7 +10,7 @@ MAINTAINER=	fb@enteract.com
 HOMEPAGE=	http://www.alphalink.com.au/~gnb/maketool/
 
 DEPENDS+=	gettext-0.10.35:../../devel/gettext
-DEPENDS+=	gtk+-1.2.4:../../x11/gtk
+DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 
 USE_GMAKE=	yes
 USE_X11BASE=	yes
