@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2004/01/24 01:52:14 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2004/01/24 03:12:32 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XRENDER_BUILDLINK3_MK:=	${XRENDER_BUILDLINK3_MK}+
@@ -7,7 +7,7 @@ XRENDER_BUILDLINK3_MK:=	${XRENDER_BUILDLINK3_MK}+
 
 .if !empty(XRENDER_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		Xrender
-BUILDLINK_DEPENDS.Xrender?=	Xrender>=0.2
+BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.2
 BUILDLINK_PKGSRCDIR.Xrender?=	../../x11/Xrender
 .endif	# XRENDER_BUILDLINK3_MK
 
@@ -49,13 +49,17 @@ _XRENDER_MINOR!=	\
 	${AWK} '/\#define[ 	]*RENDER_MINOR/ { print "."$$3 }' ${_X11_EXTENSIONS_RENDER_H}
 _XRENDER_VERSION=	${_XRENDER_MAJOR}${_XRENDER_MINOR}
 _XRENDER_PKG=		Xrender-${_XRENDER_VERSION}
-_XRENDER_DEPENDS=	${BUILDLINK_DEPENDS.Xrender}
+BUILDLINK_USE_BUILTIN.Xrender?=	YES
+.    for _depend_ in ${BUILDLINK_DEPENDS.Xrender}
+.      if !empty(BUILDLINK_USE_BUILTIN.Xrender:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.Xrender!=		\
-	if ${PKG_ADMIN} pmatch '${_XRENDER_DEPENDS}' ${_XRENDER_PKG}; then \
+	if ${PKG_ADMIN} pmatch '${_depend_}' ${_XRENDER_PKG}; then	\
 		${ECHO} "YES";						\
 	else								\
 		${ECHO} "NO";						\
 	fi
+.      endif
+.    endfor
 .  endif
 MAKEFLAGS+=	\
 	BUILDLINK_USE_BUILTIN.Xrender="${BUILDLINK_USE_BUILTIN.Xrender}"
@@ -66,7 +70,7 @@ MAKEFLAGS+=	\
 # If we depend on the package, depend on the latest version with a library
 # minor number bump.
 #
-BUILDLINK_DEPENDS.Xrender=	Xrender>=0.8.2
+BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8.2
 .  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=		Xrender
 .  endif

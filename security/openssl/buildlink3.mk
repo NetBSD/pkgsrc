@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/01/21 10:03:41 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/01/24 03:12:32 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OPENSSL_BUILDLINK3_MK:=	${OPENSSL_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ OPENSSL_BUILDLINK3_MK:=	${OPENSSL_BUILDLINK3_MK}+
 _OPENSSL_PKGSRC_PKGNAME=	openssl-0.9.6l
 
 BUILDLINK_PACKAGES+=		openssl
-BUILDLINK_DEPENDS.openssl?=	openssl>=0.9.6l
+BUILDLINK_DEPENDS.openssl+=	openssl>=0.9.6l
 BUILDLINK_PKGSRCDIR.openssl?=	../../security/openssl
 .endif	# OPENSSL_BUILDLINK3_MK
 
@@ -104,25 +104,34 @@ _OPENSSL_HAS_FIX!=							\
 _OPENSSL_PKG=		openssl-0.9.6l
 .    endif
 
-_OPENSSL_DEPENDS=	${BUILDLINK_DEPENDS.openssl}
+BUILDLINK_USE_BUILTIN.openssl?=	YES
+.    for _depend_ in ${BUILDLINK_DEPENDS.openssl}
+.      if !empty(BUILDLINK_USE_BUILTIN.openssl:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.openssl!=		\
-	if ${PKG_ADMIN} pmatch '${_OPENSSL_DEPENDS}' ${_OPENSSL_PKG}; then \
+	if ${PKG_ADMIN} pmatch '${_depend_}' ${_OPENSSL_PKG}; then	\
 		${ECHO} "YES";						\
 	else								\
 		${ECHO} "NO";						\
 	fi
+.      endif
+.    endfor
 .  endif
 MAKEFLAGS+=	\
 	BUILDLINK_USE_BUILTIN.openssl="${BUILDLINK_USE_BUILTIN.openssl}"
 .endif
 
 .if !defined(_NEED_NEWER_OPENSSL)
+_NEED_NEWER_OPENSSL?=	NO
+.  for _depend_ in ${BUILDLINK_DEPENDS.openssl}
+.    if !empty(_NEED_NEWER_OPENSSL:M[nN][oO])
 _NEED_NEWER_OPENSSL!=	\
-	if ${PKG_ADMIN} pmatch '${BUILDLINK_DEPENDS.openssl}' ${_OPENSSL_PKGSRC_PKGNAME}; then \
+	if ${PKG_ADMIN} pmatch '${_depend_}' ${_OPENSSL_PKGSRC_PKGNAME}; then \
 		${ECHO} "NO";						\
 	else								\
 		${ECHO} "YES";						\
 	fi
+.    endif
+.  endfor
 MAKEFLAGS+=	_NEED_NEWER_OPENSSL="${_NEED_NEWER_OPENSSL}"
 .endif
 

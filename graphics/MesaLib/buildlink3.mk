@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2004/01/24 01:53:00 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2004/01/24 03:12:32 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MESALIB_BUILDLINK3_MK:=	${MESALIB_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ MESALIB_BUILDLINK3_MK:=	${MESALIB_BUILDLINK3_MK}+
 MESA_REQD?=		3.4.2
 
 BUILDLINK_PACKAGES+=		MesaLib
-BUILDLINK_DEPENDS.MesaLib?=	MesaLib>=${MESA_REQD}
+BUILDLINK_DEPENDS.MesaLib+=	MesaLib>=${MESA_REQD}
 BUILDLINK_PKGSRCDIR.MesaLib?=	../../graphics/MesaLib
 .endif	# MESALIB_BUILDLINK3_MK
 
@@ -47,13 +47,17 @@ BUILDLINK_USE_BUILTIN.MesaLib=	NO
 #
 .    include "../../graphics/Mesa/version.mk"
 _MESALIB_PKG=		MesaLib-${_MESA_VERSION}
-_MESALIB_DEPENDS=	${BUILDLINK_DEPENDS.MesaLib}
+BUILDLINK_USE_BUILTIN.MesaLib?=	YES
+.    for _depend_ in ${BUILDLINK_DEPENDS.MesaLib}
+.      if !empty(BUILDLINK_USE_BUILTIN.MesaLib:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.MesaLib!=	\
-	if ${PKG_ADMIN} pmatch '${_MESALIB_DEPENDS}' ${_MESALIB_PKG}; then \
+	if ${PKG_ADMIN} pmatch '${_depend_}' ${_MESALIB_PKG}; then	\
 		${ECHO} "YES";						\
 	else								\
 		${ECHO} "NO";						\
 	fi
+.      endif
+.    endfor
 .  endif
 MAKEFLAGS+=	\
 	BUILDLINK_USE_BUILTIN.MesaLib="${BUILDLINK_USE_BUILTIN.MesaLib}"
@@ -64,7 +68,7 @@ MAKEFLAGS+=	\
 # If we depend on the package, depend on the latest version with a library
 # major number bump.
 #
-BUILDLINK_DEPENDS.MesaLib=	MesaLib>=5.0
+BUILDLINK_DEPENDS.MesaLib+=	MesaLib>=5.0
 .  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=		MesaLib
 .  endif
