@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.25 2003/10/07 10:59:41 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.26 2003/10/08 09:11:33 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -463,26 +463,21 @@ ${_BLNK_COOKIE.${_pkg_}}:
 # ${BUILDLINK_DIR}.
 #
 _BLNK_LT_ARCHIVE_FILTER.${_pkg_}=	\
-	${AWK} '${_BLNK_LT_ARCHIVE_FILTER_AWK_SCRIPT.${_pkg_}}'
+	${SED} ${_BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}}
 
-_BLNK_LT_ARCHIVE_FILTER_AWK_SCRIPT.${_pkg_}=	# empty
+_BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}=	# empty
 #
 #     -	Modify the dependency_libs line by changing all full paths to
 #	other *.la files into the canonical ${BUILDLINK_DIR} path.
 #
-_BLNK_LT_ARCHIVE_FILTER_AWK_SCRIPT.${_pkg_}+=				\
-	/^dependency_libs=/ {						\
-		line = $$0;						\
-		line = gensub("/usr(/lib/lib[^/ 	]*\.la)", "${BUILDLINK_DIR}\\1", "g", line); \
-		line = gensub("${DEPOTBASE}/[^/ 	]*(/[^ 	]*/lib[^/ 	]*\.la)", "${BUILDLINK_DIR}\\1", "g", line); \
-		line = gensub("${X11BASE}(/[^ 	]*/lib[^/ 	]*\.la)", "${BUILDLINK_X11_DIR}\\1", "g", line); \
-		line = gensub("${LOCALBASE}(/[^ 	]*/lib[^/ 	]*\.la)", "${BUILDLINK_DIR}\\1", "g", line); \
-		line = gensub("-L/usr/lib[^/ 	]*[ 	]*", "", "g", line); \
-		line = gensub("-L${X11BASE}/[^ 	]*[ 	]*", "", "g", line); \
-		line = gensub("-L${LOCALBASE}/[^ 	]*[ 	]*", "", "g", line); \
-		print line;						\
-		next;							\
-	}
+_BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
+	-e "/^dependency_libs=/s,/usr\(/lib/lib[^/ 	]*\.la\),${BUILDLINK_DIR}\\1,g" \
+	-e "/^dependency_libs=/s,${DEPOTBASE}/[^ 	]*\(/[^ 	]*/lib[^/ 	]*\.la\),${BUILDLINK_DIR}\\1,g" \
+	-e "/^dependency_libs=/s,${X11BASE}\(/[^ 	]*/lib[^/ 	]*\.la\),${BUILDLINK_X11_DIR}\\1,g" \
+	-e "/^dependency_libs=/s,${LOCALBASE}\(/[^ 	]*/lib[^/ 	]*\.la\),${BUILDLINK_DIR}\\1,g" \
+	-e "/^dependency_libs=/s,-L/usr/lib[^/ 	]*[ 	]*,,g"		\
+	-e "/^dependency_libs=/s,-L${X11BASE}/[^/ 	]*[ 	]*,,g"	\
+	-e "/^dependency_libs=/s,-L${LOCALBASE}/[^/ 	]*[ 	]*,,g"
 .  if (${PKG_INSTALLATION_TYPE} == "overwrite") ||			\
       empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[yY][eE][sS])
 #
@@ -490,21 +485,12 @@ _BLNK_LT_ARCHIVE_FILTER_AWK_SCRIPT.${_pkg_}+=				\
 #	This prevents libtool from looking into the original directory
 #	for other *.la files.
 #
-_BLNK_LT_ARCHIVE_FILTER_AWK_SCRIPT.${_pkg_}+=				\
-	/^libdir=/ {							\
-		line = $$0;						\
-		line = gensub("/usr(/lib/[^ 	]*)", "${BUILDLINK_DIR}\\1", "g", line); \
-		line = gensub("${DEPOTBASE}/[^/ 	]*(/[^ 	]*)", "${BUILDLINK_DIR}\\1", "g", line); \
-		line = gensub("${X11BASE}(/[^ 	]*)", "${BUILDLINK_X11_DIR}\\1", "g", line); \
-		line = gensub("${LOCALBASE}(/[^ 	]*)", "${BUILDLINK_DIR}\\1", "g", line); \
-		print line;						\
-		next;							\
-	}
+_BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
+	-e "/^libdir=/s,/usr\(/lib/[^ 	]*\),${BUILDLINK_DIR}\\1,g"	\
+	-e "/^libdir=/s,${DEPOTBASE}/[^/ 	]*\(/[^ 	]*\),${BUILDLINK_DIR}\\1,g" \
+	-e "/^libdir=/s,${X11BASE}\(/[^ 	]*\),${BUILDLINK_X11_DIR}\\1,g" \
+	-e "/^libdir=/s,${LOCALBASE}\(/[^ 	]*\),${BUILDLINK_DIR}\\1,g"
 .  endif
-#
-#     -	Leave all other lines alone.
-#
-_BLNK_LT_ARCHIVE_FILTER_AWK_SCRIPT.${_pkg_}+=	{ print }
 .endfor
 
 # Include any BUILDLINK_TARGETS provided in buildlink3.mk files in
