@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2157 2003/05/06 06:51:03 rh Exp $
+$NetBSD: CHANGES,v 1.2158 2003/05/06 08:22:23 sjg Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1803,6 +1803,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sweep to 0.8.2 [jmmv 2003-04-30]
 	Updated wsoundserver 0.4.0nb2 [jmmv 2003-04-30]
 	Updated eggdrop to 1.6.13nb1 [jmmv 2003-04-30]
+	Updated bmake to 3.1.18 [sjg 2003-04-30]
 	Updated ldapsdk to 12311998nb1 [jmmv 2003-05-01]
 	Updated gnome2-games to 2.2.1nb1 [jmmv 2003-05-01]
 	Updated mailserv to 3.29 [jmmv 2003-05-01]
@@ -1865,3 +1866,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-SDL to 1.19.2nb3 [salo 2003-05-06]
 	Updated gnustep-preferences to 1.2.0nb4 [rh 2003-05-06]
 	Added ProjectCenter-0.3.2 [rh 2003-05-06]
+	
