@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2004/05/02 04:46:58 snj Exp $
+# $NetBSD: Makefile,v 1.19 2004/07/22 09:15:59 recht Exp $
 #
 
 DISTNAME=	pysol-4.81
-CATEGORIES=	games
+CATEGORIES=	games python
 MASTER_SITES=	http://www.oberhumer.com/opensource/pysol/download/
 EXTRACT_SUFX=	.tar.bz2
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${CARDSETS}${EXTRACT_SUFX}

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2004/04/27 05:44:22 snj Exp $
+# $NetBSD: Makefile,v 1.15 2004/07/22 09:16:04 recht Exp $
 #
 
 DISTNAME=	pycrypto-1.9a6
 PKGNAME=	${PYPKGPREFIX}-amkCrypto-1.9a6
 PKGREVISION=	2
-CATEGORIES=	security
+CATEGORIES=	security python
 MASTER_SITES=	http://www.amk.ca/files/python/crypto/
 
 MAINTAINER=	tech-pkg@NetBSD.org

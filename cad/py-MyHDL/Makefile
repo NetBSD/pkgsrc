@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2004/04/12 00:37:20 snj Exp $
+# $NetBSD: Makefile,v 1.6 2004/07/22 09:16:00 recht Exp $
 #
 
 DISTNAME=	myhdl-0.2
 PKGNAME=	${PYPKGPREFIX}-MyHDL-0.2
-CATEGORIES=	cad
+CATEGORIES=	cad python
 MASTER_SITES=	http://jandecaluwe.com/Tools/MyHDL/
 
 MAINTAINER=	tech-pkg@NetBSD.org

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2004/05/18 12:44:05 recht Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/22 09:16:01 recht Exp $
 #
 
 DISTNAME=		Lupy-0.2.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=		textproc
+CATEGORIES=		textproc python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=lupy/}
 
 MAINTAINER=		dotz@irc.pl

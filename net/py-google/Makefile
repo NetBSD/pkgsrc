@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2004/05/05 09:21:02 recht Exp $
+# $NetBSD: Makefile,v 1.17 2004/07/22 09:16:03 recht Exp $
 #
 
 DISTNAME=	pygoogle-0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 PKGREVISION=	1
-CATEGORIES=	net
+CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pygoogle/}
 
 MAINTAINER=	drochner@NetBSD.org

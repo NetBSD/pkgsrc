@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/03/04 14:33:55 recht Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/22 09:16:02 recht Exp $
 
 DISTNAME=       psyco-1.2-src
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-src//}
-CATEGORIES=     lang
+CATEGORIES=     lang python
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=psyco/}
 
 MAINTAINER=     dotz@irc.pl
