@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 1998/08/21 19:06:51 tv Exp $
+$NetBSD: md5,v 1.4 2000/10/18 03:31:15 hubertf Exp $
 
-MD5 (cvs-1.10.tar.gz) = b70e965731be44d39453c0914c0f4b27
+MD5 (cvs-1.11.tar.gz) = fd67a990423a0e9fa2fa1c3cf10f4356

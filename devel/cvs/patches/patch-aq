@@ -1,8 +1,8 @@
-$NetBSD: patch-aq,v 1.1 1999/04/20 15:01:11 mycroft Exp $
+$NetBSD: patch-aq,v 1.2 2000/10/18 03:31:16 hubertf Exp $
 
---- src/recurse.c.orig	Sun Jul 26 22:54:14 1998
-+++ src/recurse.c	Tue Apr 20 10:15:04 1999
-@@ -364,7 +364,7 @@
+--- src/recurse.c.orig	Thu Jun 22 00:28:37 2000
++++ src/recurse.c
+@@ -508,7 +508,7 @@
      if (frame->flags == R_SKIP_ALL)
  	return (0);
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aq,v 1.1 1999/04/20 15:01:11 mycroft Exp $
  
      /* The fact that locks are not active here is what makes us fail to have
         the
-@@ -406,7 +406,7 @@
+@@ -550,7 +550,7 @@
       */
      if (server_active
  	/* If there are writelocks around, we cannot pause here.  */

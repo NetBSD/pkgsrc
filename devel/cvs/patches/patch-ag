@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.3 2000/10/18 03:31:16 hubertf Exp $
+
+--- doc/cvsclient.texi.orig	Wed Aug 30 03:16:32 2000
++++ doc/cvsclient.texi
+@@ -8,6 +8,11 @@
+ * cvsclient: (cvsclient).      The CVS client/server protocol.
+ @end direntry
+ 
++@dircategory Programming & development tools
++@direntry
++* CVS-CLIENT: (cvsclient).	CVS client/server Reference Manual.
++@end direntry
++
+ @node Top
+ @top CVS Client/Server
+ 

@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.4 1998/08/21 19:06:52 tv Exp $
+$NetBSD: patch-ad,v 1.5 2000/10/18 03:31:16 hubertf Exp $
 
---- contrib/Makefile.in.orig	Sat Feb 21 22:02:32 1998
-+++ contrib/Makefile.in	Fri Aug 21 14:53:04 1998
+--- contrib/Makefile.in.orig	Fri Sep  8 20:28:02 2000
++++ contrib/Makefile.in
 @@ -37,7 +37,7 @@
  # Use cp if you don't have install.
  INSTALL = @INSTALL@
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.4 1998/08/21 19:06:52 tv Exp $
  
  DISTFILES = \
  	ChangeLog README .cvsignore intro.doc \
-@@ -81,10 +81,10 @@
+@@ -80,10 +80,10 @@
  
  install: all installdirs
  	for f in $(CONTRIB_FILES) ; do\
@@ -24,7 +24,7 @@ $NetBSD: patch-ad,v 1.4 1998/08/21 19:06:52 tv Exp $
  	done
  	for f in $(PROGS) ; do\
  		$(INSTALL_PROGRAM) $$f $(bindir)/$$f; \
-@@ -92,7 +92,7 @@
+@@ -91,7 +91,7 @@
  .PHONY: install
  
  installdirs:

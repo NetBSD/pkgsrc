@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.1 1999/04/20 15:01:11 mycroft Exp $
+$NetBSD: patch-ao,v 1.2 2000/10/18 03:31:16 hubertf Exp $
 
---- src/lock.c.orig	Wed Mar  4 00:41:50 1998
-+++ src/lock.c	Tue Apr 20 10:15:04 1999
-@@ -243,7 +243,7 @@
+--- src/lock.c.orig	Thu Jul 27 18:49:27 2000
++++ src/lock.c
+@@ -395,7 +395,7 @@
      FILE *fp;
      char *tmp;
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ao,v 1.1 1999/04/20 15:01:11 mycroft Exp $
  	return (0);
  
      /* we only do one directory at a time for read locks! */
-@@ -316,7 +316,7 @@
+@@ -467,7 +467,7 @@
  {
      char *wait_repos;
  

@@ -1,8 +1,8 @@
-$NetBSD: patch-as,v 1.1 1999/04/20 15:01:12 mycroft Exp $
+$NetBSD: patch-as,v 1.2 2000/10/18 03:31:16 hubertf Exp $
 
---- src/tag.c.orig	Tue Jul 14 21:59:02 1998
-+++ src/tag.c	Tue Apr 20 10:15:05 1999
-@@ -851,7 +851,7 @@
+--- src/tag.c.orig	Wed Jun 14 21:32:51 2000
++++ src/tag.c
+@@ -868,7 +868,7 @@
  	/* The tags is valid but not mentioned in val-tags.  Add it.  */
  	datum value;
  
