@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.8 2002/04/05 11:45:24 hubertf Exp $
+
+--- library/port.c.orig	Mon Jan  7 22:00:28 2002
++++ library/port.c
+@@ -38,6 +38,10 @@
+ # include <stdint.h>
+ #endif
+ 
++#ifdef __NetBSD__
++#include <sys/inttypes.h>
++#endif
++
+ /***********************************************************************
+  *		usleep
+  */
