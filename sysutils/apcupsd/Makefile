@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/08/01 16:55:38 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.12 2001/08/27 14:35:14 tron Exp $
 
 DISTNAME=		apcupsd-3.6.2
 CATEGORIES=		sysutils
@@ -9,7 +8,7 @@ MAINTAINER=		bouyer@netbsd.org
 HOMEPAGE=		http://www.sibbald.com/apcupsd/
 COMMENT=		UPS power management for APCC Products
 
-BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 BUILD_USES_MSGFMT=	yes
 
 USE_GMAKE=		# defined
