@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/04/24 23:20:11 tron Exp $
+# $NetBSD: Makefile,v 1.7 1999/04/24 23:24:25 tron Exp $
 #
 # Tempted to install another radius package?
 #
@@ -39,11 +39,8 @@ MAKE_ENV+=	RADLIBS="${RADLIBS} -lskey" LIBS=-lcrypt \
 .include "../../mk/bsd.prefs.mk"
 
 pre-patch:
-	@cd ${WRKSRC} ; \
-	${PATCH} -sp < prediff.diff ; \
-	for i in ftp simult skey ; \
-	do \
-	    ${PATCH} -sp < rad.$${i}.diff ; \
-	done
+.for FILE in prediff rad.ftp rad.simult rad.skey
+	@cd ${WRKSRC}; ${PATCH} -sp <${FILE}.diff
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
