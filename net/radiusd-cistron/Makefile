@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 22:51:45 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/12/16 19:19:41 martti Exp $
 
-DISTNAME=	radiusd-cistron-1.6.6
-PKGREVISION=	1
+DISTNAME=	radiusd-cistron-1.6.7
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.cistron.nl/pub/people/miquels/radius/ \
 		ftp://ftp.freeradius.org/pub/radius/
@@ -10,7 +9,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.radius.cistron.nl/
 COMMENT=	RADIUS-compliant remote authentication and accouting server
 
-CONFLICTS+=	freeradius*
+CONFLICTS+=	freeradius-[0-9]*
 
 USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES
@@ -38,28 +37,20 @@ CONF_FILES+=	${EGDIR}/${cfile} ${PKG_SYSCONFDIR}/${cfile:S/.sample//}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/radiusd-cistron
-	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT ${PREFIX}/share/doc/radiusd-cistron
-	${INSTALL_DATA} ${WRKSRC}/doc/ChangeLog ${PREFIX}/share/doc/radiusd-cistron
-	${INSTALL_DATA} ${WRKSRC}/doc/README ${PREFIX}/share/doc/radiusd-cistron
-	${INSTALL_DATA} ${WRKSRC}/doc/README.CVX ${PREFIX}/share/doc/radiusd-cistron
-	${INSTALL_DATA} ${WRKSRC}/doc/README.Y2K ${PREFIX}/share/doc/radiusd-cistron
-	${INSTALL_DATA} ${WRKSRC}/doc/README.cisco ${PREFIX}/share/doc/radiusd-cistron
-	${INSTALL_DATA} ${WRKSRC}/doc/README.pam ${PREFIX}/share/doc/radiusd-cistron
-	${INSTALL_DATA} ${WRKSRC}/doc/README.proxy ${PREFIX}/share/doc/radiusd-cistron
-	${INSTALL_DATA} ${WRKSRC}/doc/README.radrelay ${PREFIX}/share/doc/radiusd-cistron
-	${INSTALL_DATA} ${WRKSRC}/doc/README.simul ${PREFIX}/share/doc/radiusd-cistron
-	${INSTALL_DATA} ${WRKSRC}/doc/README.tunnel ${PREFIX}/share/doc/radiusd-cistron
-	${INSTALL_DATA} ${WRKSRC}/doc/README.usersfile ${PREFIX}/share/doc/radiusd-cistron
-	${INSTALL_MAN} ${WRKSRC}/doc/radclient.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/radlast.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/radtest.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/raduse.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/radwho.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/radzap.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/clients.5rad ${PREFIX}/man/man5
-	${INSTALL_MAN} ${WRKSRC}/doc/naslist.5rad ${PREFIX}/man/man5
-	${INSTALL_MAN} ${WRKSRC}/doc/radiusd.8 ${PREFIX}/man/man8
-	${INSTALL_MAN} ${WRKSRC}/doc/radrelay.8 ${PREFIX}/man/man8
-	${INSTALL_MAN} ${WRKSRC}/doc/radwatch.8 ${PREFIX}/man/man8
+	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT ${PREFIX}/share/doc/radiusd-cistron/
+.for i in	ChangeLog README README.CVX README.Y2K README.cisco	\
+		README.pam README.proxy README.radrelay README.simul	\
+		README.tunnel README.usersfile
+	${INSTALL_DATA} ${WRKSRC}/doc/${i} ${PREFIX}/share/doc/radiusd-cistron/
+.endfor
+.for i in	radclient.1 radlast.1 radtest.1 radwho.1 radzap.1
+	${INSTALL_MAN} ${WRKSRC}/doc/${i} ${PREFIX}/man/man1/
+.endfor
+.for i in	clients.5rad naslist.5rad
+	${INSTALL_MAN} ${WRKSRC}/doc/${i} ${PREFIX}/man/man5/
+.endfor
+.for i in	radiusd.8 radrelay.8 radwatch.8
+	${INSTALL_MAN} ${WRKSRC}/doc/${i} ${PREFIX}/man/man8/
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
