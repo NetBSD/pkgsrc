@@ -1,16 +1,17 @@
-$NetBSD: patch-ad,v 1.1 2000/03/24 14:46:47 ad Exp $
+$NetBSD: patch-ad,v 1.2 2001/05/22 11:37:16 wiz Exp $
 
---- termcap.c.orig	Fri Mar 24 14:36:38 2000
-+++ termcap.c	Fri Mar 24 14:37:22 2000
-@@ -191,7 +191,11 @@
-    namebuf=0;
-   namebuf=vsncpy(sv(namebuf),sc(".termcap "));
-   namebuf=vsncpy(sv(namebuf),sc(JOERC));
-+#ifdef __NetBSD__
-+  namebuf=vsncpy(sv(namebuf),sc("termcap /usr/share/misc/termcap"));
-+#else
-   namebuf=vsncpy(sv(namebuf),sc("termcap /etc/termcap"));
-+#endif
-   }
-  }
+--- scrn.h.orig	Thu Oct  6 08:09:04 1994
++++ scrn.h
+@@ -254,10 +254,10 @@
  
+ #define xlat(a,c) \
+   ( \
+-  (dspasis && ((unsigned)(c)>=128)) ? \
++  (dspasis && ((unsigned char)(c)>=128)) ? \
+       ((a)=0) \
+     : \
+-      (((a)=xlata[(unsigned)(c)]), ((c)=xlatc[(unsigned)(c)])) \
++      (((a)=xlata[(unsigned char)(c)]), ((c)=xlatc[(unsigned char)(c)])) \
+   )
+ 
+ /* int eraeol(SCRN *t,int x,int y);

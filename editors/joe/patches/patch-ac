@@ -1,34 +1,36 @@
-$NetBSD: patch-ac,v 1.2 1999/12/28 05:35:55 wiz Exp $
---- ../../work/joe/b.c	Fri Jan 20 09:38:25 1995
-+++ b.c	Thu Nov 25 18:17:59 1999
-@@ -1928,7 +1928,7 @@
-  if(s[0]=='!') pclose(f);
-  else
- #endif
-- if(zcmp(s,"-")) fclose(f);
-+ if(zcmp(s,"-")) { if (fclose(f)) return error = -5; }
-  else fflush(f);
+$NetBSD: patch-ac,v 1.3 2001/05/22 11:37:16 wiz Exp $
+
+--- main.c.orig	Sun Jan 22 01:21:08 1995
++++ main.c
+@@ -18,6 +18,10 @@
  
-  opnerr:;
---- ../../work/joe/ufile.c	Fri Jan 13 18:13:16 1995
-+++ ufile.c	Thu Nov 25 17:25:47 1999
-@@ -135,7 +135,7 @@
- int cp(from,to)
- char *from, *to;
-  {
-- int f, g, amnt;
-+ int f, g, amnt, rc;
-  struct stat sbuf;
+ #include <stdio.h>
+ #include <fcntl.h>
++#if defined(__FreeBSD__) || defined(__NetBSD__)
++#include <locale.h>
++#include <ctype.h>
++#endif
+ #include "config.h"
+ #include "w.h"
+ #include "tty.h"
+@@ -186,6 +190,20 @@
+ #else
+  run=namprt(argv[0]);
+ #endif 
++
++#if defined(__FreeBSD__) || defined(__NetBSD__)
++ setlocale(LC_ALL, "");
++ for(c=0;c<256;c++)
++  { int a=0;
++    if(iscntrl(c))
++     a|=UNDERLINE;
++    if((c&0x80)&&!isprint(c))
++     a|=INVERSE;
++    xlata[c]=a;
++    if(isprint(c))
++     xlatc[c]=c;
++  }
++#endif
  
- #ifdef HAVEUTIME
-@@ -157,8 +157,8 @@
-   }
-  while((amnt=read(f,stdbuf,stdsiz))>0)
-   if(amnt!=write(g,stdbuf,amnt)) break;
-- close(f); close(g);
-- if(amnt) return -1;
-+ close(f); rc = close(g);
-+ if(amnt || rc) return -1;
- 
- #ifdef HAVEUTIME
- #ifdef NeXT
+  if(s=getenv("LINES")) sscanf(s,"%d",&lines);
+  if(s=getenv("COLUMNS")) sscanf(s,"%d",&columns);
