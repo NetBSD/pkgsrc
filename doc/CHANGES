@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6308 2004/06/25 08:54:32 jmmv Exp $
+$NetBSD: CHANGES,v 1.6309 2004/06/25 12:50:00 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3058,3 +3058,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added dvdauthor-0.6.10 [sekiya 2004-06-25]
 	Updated rhythmbox to 0.8.5 [jmmv 2004-06-25]
 	Updated gossip to 0.7.6 [jmmv 2004-06-25]
+	Updated xmms-musepack to 1.00 [jmmv 2004-06-25]
