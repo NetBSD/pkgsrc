@@ -1,0 +1,61 @@
+$NetBSD: patch-bd,v 1.1 2002/08/05 21:42:34 jschauma Exp $
+
+--- resource.cc.orig	Mon Aug  5 17:02:17 2002
++++ resource.cc	Mon Aug  5 17:04:39 2002
+@@ -61,6 +61,8 @@
+   int i;
+   char rclass[40];
+   char rname[40];
++  int position_x, position_y;
++  int width, height;
+   
+   if ((XrmGetResource(resource_db, "bbappconf.numberOf.configs",
+                        "Bbappconf.NumberOf.Configs",
+@@ -164,6 +166,47 @@
+       app_conf[i].setMaxHoriz(false);
+     }
+ 
++    sprintf(rclass, "Bbappconf.%d.Width",i+1);
++    sprintf(rname,  "bbappconf.%d.width",i+1);
++    if ((XrmGetResource(resource_db, rname,rclass,&value_type, &value))) {
++	    if (sscanf(value.addr, "%u", &width) != 1) {
++		    width = -1;
++	    }
++    } else
++	    width=-1;
++    app_conf[i].setWidth(width);
++
++    sprintf(rclass, "Bbappconf.%d.Height",i+1);
++    sprintf(rname,  "bbappconf.%d.height",i+1);
++    if ((XrmGetResource(resource_db, rname,rclass,&value_type, &value))) {
++	    if (sscanf(value.addr, "%u", &height) != 1) {
++		    height = -1;
++	    }
++    } else
++	    height=-1;
++    app_conf[i].setHeight(height);
++
++    sprintf(rclass, "Bbappconf.%d.PositionX",i+1);
++    sprintf(rname,  "bbappconf.%d.positionX",i+1);
++    if ((XrmGetResource(resource_db, rname,rclass,
++				    &value_type, &value))) {
++	    if (sscanf(value.addr, "%u", &position_x) != 1) {
++		    position_x = -1111;
++	    }
++    } else
++	    position_x=-1111;
++    app_conf[i].setPositionX(position_x);
++
++    sprintf(rclass, "Bbappconf.%d.PositionY",i+1);
++    sprintf(rname,  "bbappconf.%d.positionY",i+1);
++    if ((XrmGetResource(resource_db, rname,rclass,
++				    &value_type, &value))) {
++	    if (sscanf(value.addr, "%u", &position_y) != 1) {
++		    position_y = -1111;
++	    }
++    } else
++	    position_y=-1111;
++    app_conf[i].setPositionY(position_y);
+     
+   }
+ }
