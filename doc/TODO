@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.231 2003/01/30 23:12:00 jmmv Exp $
+$NetBSD: TODO,v 1.232 2003/01/31 00:20:17 salo Exp $
 
 Suggested new packages
 ======================
@@ -81,7 +81,6 @@ Suggested package updates
 	o aumix-2.8
 	o balsa-1.4.2
 	o binutils-2.13.2.1
-	o bitchx-1.0c19 [pkg/19296]
 	o bluefish-0.8
 	o bnc-2.8.6 [pkg/20101]
 	o bochs-2.0.2
