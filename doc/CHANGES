@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.885 2002/12/23 14:00:25 abs Exp $
+$NetBSD: CHANGES,v 1.886 2002/12/23 14:04:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4072,3 +4072,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated calc to 2.02fnb1 [seb 2002-12-23]
 	Updated monafonts to 2.22 [toshii 2002-12-23]
 	Updated cpuflags to 0.38 [abs 2002-12-23]
+	Updated createbuildlink to 2.3 [wiz 2002-12-23]
