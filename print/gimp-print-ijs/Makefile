@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/04/24 22:46:11 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2004/05/05 02:26:42 snj Exp $
 
 DISTNAME=	gimp-print-4.2.6
 PKGNAME=	gimp-print-ijs-4.2.6
@@ -9,7 +9,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://gimp-print.sourceforge.net/
 COMMENT=	GIMP print IJS server
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		# defined
 USE_GNU_TOOLS+=		make
 
@@ -30,6 +30,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/src/ghost/README ${DOCDIR}
 
-.include "../../print/gimp-print-lib/buildlink2.mk"
-.include "../../print/ijs/buildlink2.mk"
+.include "../../print/gimp-print-lib/buildlink3.mk"
+.include "../../print/ijs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
