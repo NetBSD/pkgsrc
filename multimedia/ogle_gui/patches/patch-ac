@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2003/12/08 22:51:55 wiz Exp $
+$NetBSD: patch-ac,v 1.1 2004/02/03 04:34:06 grant Exp $
 
 --- src/debug_print.h.orig	2003-11-05 20:06:50.000000000 +0100
 +++ src/debug_print.h
