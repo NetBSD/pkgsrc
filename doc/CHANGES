@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.420 2002/10/30 15:29:08 wiz Exp $
+$NetBSD: CHANGES,v 1.421 2002/10/30 21:15:09 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3462,3 +3462,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added py-piddle-1.0.15 [markd 2002-10-30]
 	Updated phoenix to 0.4 [taya 2002-10-30]
 	Updated php4-xslt to 4.2.3 [wiz 2002-10-30]
+	Added dnstop-20021030 [itojun 2002-10-30]
