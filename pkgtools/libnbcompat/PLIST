@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2003/09/05 18:35:58 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2003/09/06 01:35:07 jlam Exp $
 include/nbcompat.h
 include/nbcompat/err.h
 include/nbcompat/fts.h
@@ -10,7 +10,6 @@ include/nbcompat/nbtypes.h
 include/nbcompat/poll.h
 include/nbcompat/rmd160.h
 include/nbcompat/sha1.h
-include/nbcompat/sha2.h
 include/nbcompat/statfs.h
 include/nbcompat/vis.h
 lib/libnbcompat.a
