@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2004/11/25 21:34:59 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/01/31 00:10:12 minskim Exp $
 
 DISTNAME=	xemacs-21.4.15
 CATEGORIES=	editors
@@ -7,6 +7,8 @@ DISTFILES=	${EXTRACT_ONLY} ${EXTRA_FILES}
 
 HOMEPAGE=	http://www.xemacs.org/
 COMMENT=	XEmacs text editor version 21
+
+CONFLICTS+=	gnuclient-[0-9]*
 
 NOT_FOR_PLATFORM=	*-*-mips*	# fails purespace dumping
 
