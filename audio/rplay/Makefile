@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/03/27 03:19:46 hubertf Exp $
+# $NetBSD: Makefile,v 1.25 2001/05/01 07:16:14 jlam Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/06/13 16:17:01 ache Exp
 #
 
@@ -23,7 +23,8 @@ CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 
 CPPFLAGS+=	-I${LOCALBASE}/include	# for gsm.h and rxposix.h
 
-.if !exists(/usr/include/readline.h)
+.if !exists(/usr/include/readline.h) && \
+    !exists(/usr/include/readline/readline.h)
 DEPENDS+=	readline>=4.0:../../devel/readline
 .endif
 
@@ -31,14 +32,14 @@ INFO_FILES=	RPLAY.info RPLAY.info librplay.info rplay.info
 
 pre-configure:
 	cd ${WRKSRC}; ${LOCALBASE}/bin/autoreconf
-	cd ${WRKSRC}/doc; for f in *.[0-9]; do \
-		${SED} -e "s,/usr/local,${PREFIX},g" < $$f > $$f.pdone; \
-		${MV} -f $$f.pdone $$f; \
+	cd ${WRKSRC}/doc; for f in *.[0-9]; do				\
+		${SED} -e "s|/usr/local|${PREFIX}|g" $$f > $$f.pdone;	\
+		${MV} -f $$f.pdone $$f;					\
 	done
 
 post-install:
-	${SED} -e "s,@PREFIX@,${PREFIX},g" \
-		< ${FILESDIR}/rplayd.sh > ${WRKDIR}/rplayd.sh
+	${SED} -e "s|@PREFIX@|${PREFIX}|g"				\
+		${FILESDIR}/rplayd.sh > ${WRKDIR}/rplayd.sh
 	${INSTALL_SCRIPT} ${WRKDIR}/rplayd.sh ${PREFIX}/etc/rc.d/rplayd
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
