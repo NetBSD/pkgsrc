@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.680 2003/07/04 11:56:55 jmmv Exp $
+$NetBSD: TODO,v 1.681 2003/07/04 14:41:32 salo Exp $
 
 Suggested new packages
 ======================
@@ -95,7 +95,6 @@ Suggested package updates
 	o disc-cover-1.5.2
 	o dmalloc-5.2.0 [pkg/21951]
 	o dopewars-1.5.9
-	o dovecot-0.99.10 [pkg/22028]
 	o dvdrip-0.50.14
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
