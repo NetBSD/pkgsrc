@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/12/05 14:54:50 jschauma Exp $
+
+--- xdvipresent.orig	Thu Dec  5 09:43:47 2002
++++ xdvipresent	Thu Dec  5 09:45:35 2002
+@@ -49,6 +49,11 @@
+ 	-sidemargin 0cm -topmargin 0cm -paper 10.5x6.23 \
+         -hush $dvifile $*
+ #       -display balboa:0.0 
++# IBM T30 laptop with 1024x768 resolution
++elif [ $displaystyle = t30 ] ; then
++	xdvi -s 6 -bw 1 -expert -p 600 -geometry 1024x764-0-0 \
++	-sidemargin 0cm -topmargin 0cm -paper 25.8x19.3 \
++	-hush $dvifile $*
+ else 
+ echo "Usage: $2 <vga|svga|xga|a4paper|letterpaper> <filename>.dvi <xdvi_opts>"
+ fi
