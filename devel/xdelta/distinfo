@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:08:41 agc Exp $
+
+MD5 (xdelta-0.22.tar.gz) = e6e6495b1b134a3932ea6ab7e40c11eb
+SHA1 (patch-aa) = 4061cc3dfe4afcf487c6ed0f0d1396d0d17de5e4

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:58:27 agc Exp $
+
+MD5 (xcoral-3.2.tar.gz) = 668fe3d0ef52f3677cd6cc8b52feaa2e
+SHA1 (patch-aa) = 5ee143709bb60de8be543fae08f9534894a1aa42
+SHA1 (patch-ab) = cd23f32a4b242e640db44f29c0f5aad7b90080dd

@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:06:54 agc Exp $
+
+MD5 (texinfo-3.12.tar.gz) = 731f0955cdaa5260d0f81053576a6482
+SHA1 (patch-aa) = 904f238dfc9aea94ed023c4cb3f72c8cdda814ec
+SHA1 (patch-ab) = 55aae466b7bae2cdeeb5ff544e7084906d1fb719
+SHA1 (patch-ac) = 8956b859a443c17893ea113a6a365b1f202685ee
+SHA1 (patch-ad) = b39433e8cfef85fcb71011bae1bc64c0f825cd67
+SHA1 (patch-ae) = 3b24bf945215ab0f67cf7a55130a14677f18e331
+SHA1 (patch-af) = aaf33281da19658906eee6a922397968a200f186
+SHA1 (patch-ag) = 5168b3ec749474bf250707bb0340943021ba9bcd

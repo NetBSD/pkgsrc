@@ -1,0 +1,8 @@
+# $NetBSD: distinfo,v 1.1 2001/04/17 11:06:24 agc Exp $
+MD5 (pcemu1.01alpha.tar.gz) = 1fed124b199839e439bec0f45abf006b
+SHA1 (patch-aa) = f53e918695b8929688b375c1af6f003b02ffa4ca
+SHA1 (patch-ab) = adb327b827d80d275509c8057a1d877d19b8fbc7
+SHA1 (patch-ac) = 1e1f9ca92dc6c1c09ddcb8c77f4536a02c752f6e
+SHA1 (patch-ad) = 7adb1245e8bb9369b50cc1339337908660b8ebfb
+SHA1 (patch-ae) = 953a1aed49026acab609b8944424bdb9ba387de0
+SHA1 (patch-af) = 84f85b5d74a4c27203e0a3183d89af42504ed89f

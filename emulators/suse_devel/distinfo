@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:06:39 agc Exp $
+
+MD5 (suse64/bin86.rpm) = b585742bd72fd886eeaabb70f2a89364
+MD5 (suse64/binutils.rpm) = fac958ab296d528845b98259202a6363
+MD5 (suse64/g77.rpm) = 7173af2df58fa4534df915ba4199c699
+MD5 (suse64/gcc.rpm) = 015f08f07841fd49cc729b6a4aaaa59d
+MD5 (suse64/gpp.rpm) = a02ff710df1f85f0d940833244a1999f
+MD5 (suse64/libc.rpm) = d8ea17a27571b72c7cbc6aaf31b5f5c1
+MD5 (suse64/linclude.rpm) = 0418715f52380fd89baae6b52ec76c27
+MD5 (suse64/make.rpm) = 6d768e4613680e1d9e77110204e90c46

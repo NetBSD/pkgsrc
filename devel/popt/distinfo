@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:08:15 agc Exp $
+
+MD5 (popt-1.2.tar.gz) = 53ab7f622fd6adf493e172ade16701ee
+SHA1 (patch-aa) = 97906976871d32c9ce0c54f952b18efe2655c89d

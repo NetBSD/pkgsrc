@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:58:15 agc Exp $
+
+MD5 (pine4.33.tar.gz) = fb45dcfa1d3379031700da49236b2b9c
+SHA1 (patch-aa) = 20b23e6b24e9e8956504d83b62e3fec7937e921f
+SHA1 (patch-ab) = 9c62b04a377d0fb952ad5b380b35e69f7b426a02
+SHA1 (patch-ac) = 66e9f159445d6d77b9097a5d40b78f70bf05f06d
+SHA1 (patch-ad) = 1180abc4909f4120ec91ba14854da9445be3ac6a
+SHA1 (patch-ae) = 73e86b258329250f6a667dbec420c95a4db8c1d0
