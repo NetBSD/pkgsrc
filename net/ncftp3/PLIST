@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:27 zuntum Exp $
-man/man1/ncftp.1
-man/man1/ncftpget.1
-man/man1/ncftpput.1
-man/man1/ncftpbatch.1
-man/man1/ncftpls.1
+@comment $NetBSD: PLIST,v 1.2 2003/09/27 22:57:32 wiz Exp $
 bin/ncftp3
-bin/ncftpget
-bin/ncftpput
 bin/ncftpbatch
-bin/ncftpls
 bin/ncftpbookmarks
+bin/ncftpget
+bin/ncftpls
+bin/ncftpput
+bin/ncftpspooler
+man/man1/ncftp.1
+man/man1/ncftpbatch.1
+man/man1/ncftpget.1
+man/man1/ncftpls.1
+man/man1/ncftpput.1
+man/man1/ncftpspooler.1
