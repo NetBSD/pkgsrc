@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2002/11/27 19:05:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.88 2002/11/30 14:59:39 grant Exp $
 
 DISTNAME=		mutt-1.4i
 PKGNAME=		${DISTNAME:C/i$//}
@@ -13,12 +13,13 @@ MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.mutt.org/
 COMMENT=		text-based MIME mail client with PGP support
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK2=		# defined
 
-BUILD_USES_MSGFMT=	YES
+BUILD_USES_MSGFMT=	# defined
 
-USE_GMAKE=		YES
-GNU_CONFIGURE=		YES
+USE_GMAKE=		# defined
+GNU_CONFIGURE=		# defined
+USE_PKGLOCALEDIR=	# defined
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
 			--with-docdir=${PREFIX}/share/doc/mutt \
 			--without-included-gettext \
@@ -34,7 +35,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME:C/i$$//}
 CONFIGURE_ARGS+=	--with-slang=${BUILDLINK_PREFIX.libslang}
 .else
 . if ${MUTT_USE_NCURSES} == YES
-USE_NCURSES=		YES
+USE_NCURSES=		# defined
 . endif
 . include "../../devel/ncurses/buildlink2.mk"
 CONFIGURE_ARGS+=	--with-curses=${BUILDLINK_PREFIX.ncurses}
@@ -58,7 +59,6 @@ CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
 .endif
 
 BUILD_DEFS+=		MUTT_USE_NCURSES MUTT_USE_SLANG MUTT_USE_SSL USE_SASL
-MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 EGDIR=			${PREFIX}/share/examples/mutt
 CONF_FILES=		${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
