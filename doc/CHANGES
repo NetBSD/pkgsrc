@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.269 2002/10/16 00:22:12 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.270 2002/10/16 01:36:53 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3278,3 +3278,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated ketm to 0.0.6 [kristerw 2002-10-16]
 	Updated pilrc to 2.9.10 [dillo 2002-10-15]
 	Updated gmake to 3.80 [dmcmahill 2002-10-15]
+	Updated gerbv to 0.0.10 [dmcmahill 2002-10-15]
