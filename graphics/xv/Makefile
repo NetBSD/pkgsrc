@@ -3,7 +3,7 @@
 # Date created:		30 October 1994
 # Whom:			smace
 #
-# $NetBSD: Makefile,v 1.2 1997/11/20 13:21:02 agc Exp $
+# $NetBSD: Makefile,v 1.3 1997/12/01 00:04:15 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/03 07:37:08 asami Exp
 #
 
@@ -16,10 +16,10 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 		xv310a-magpic2-PhotoCD-patch.tar.gz # only from Japan
 
 PATCH_SITES=    ftp://ftp.cis.upenn.edu/pub/xv/
-PATCHFILES=     xv-3.10a.JPEG-patch # xv-3.10a.TIFF-patch (for tiff3.4)
+PATCHFILES=     xv-3.10a.JPEG-patch xv-3.10a.TIFF-patch # (for tiff3.4)
 
 LIB_DEPENDS=    jpeg\\.7\\.:${PORTSDIR}/graphics/jpeg \
-		tiff\\.3\\.3:${PORTSDIR}/graphics/tiff
+		tiff\\.3\\.4:${PORTSDIR}/graphics/tiff
 
 USE_IMAKE=	yes
 
