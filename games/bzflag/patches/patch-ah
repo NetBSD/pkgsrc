@@ -1,0 +1,42 @@
+$NetBSD: patch-ah,v 1.3 2005/03/16 12:41:51 rillig Exp $
+
+tolower is a macro on NetBSD-1.6.2.
+
+--- src/bzfs/VotingArbiter.cxx.orig	Tue Mar 23 07:36:31 2004
++++ src/bzfs/VotingArbiter.cxx	Wed Mar 16 00:08:15 2005
+@@ -173,7 +173,7 @@ bool VotingArbiter::hasSuffrage(std::str
+   }
+ 
+   // has this player already voted?
+-  if (_votingBooth->hasVoted(string_util::tolower(player))) {
++  if (_votingBooth->hasVoted(string_util::bz_tolower(player))) {
+     return false;
+   }
+ 
+@@ -196,7 +196,7 @@ bool VotingArbiter::voteYes(std::string 
+     return false;
+   }
+ 
+-  return (_votingBooth->vote(string_util::tolower(player), "yes"));
++  return (_votingBooth->vote(string_util::bz_tolower(player), "yes"));
+ }
+ 
+ bool VotingArbiter::voteNo(std::string player)
+@@ -210,7 +210,7 @@ bool VotingArbiter::voteNo(std::string p
+     return false;
+   }
+ 
+-  return (_votingBooth->vote(string_util::tolower(player), "no"));
++  return (_votingBooth->vote(string_util::bz_tolower(player), "no"));
+ }
+ 
+ unsigned long int VotingArbiter::getYesCount(void) const
+@@ -314,7 +314,7 @@ bool VotingArbiter::retractVote(std::str
+   if (_votingBooth == NULL) {
+     return false;
+   }
+-  return _votingBooth->retractVote(string_util::tolower(player));
++  return _votingBooth->retractVote(string_util::bz_tolower(player));
+ }
+ 
+ 
