@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.230 2001/09/27 10:44:55 wiz Exp $
+# $NetBSD: Makefile,v 1.231 2001/10/23 11:40:25 agc Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -122,7 +122,6 @@ SUBDIR+=	xlockmore
 SUBDIR+=	xlogout
 SUBDIR+=	xlupe
 SUBDIR+=	xmascot
-SUBDIR+=	xmeter
 SUBDIR+=	xmindpath
 SUBDIR+=	xmon
 SUBDIR+=	xmountains
