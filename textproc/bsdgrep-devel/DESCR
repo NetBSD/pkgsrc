@@ -1,2 +1,2 @@
 This is a BSD-licensed grep(1) replacement. It is currently being
-developed in NetBSD's othersrc module.
+developed in NetBSD's src module (src/usr.bin/grep).
