@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6643 2004/07/23 03:39:25 atatat Exp $
+$NetBSD: CHANGES,v 1.6644 2004/07/23 03:47:10 atatat Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3513,3 +3513,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added alee-ttf-0.3 [minskim 2004-07-23]
 	Added cdl3-1.2.4 [minskim 2004-07-23]
 	Added binpatch-1.0 [atatat 2004-07-23]
+	Updated communicator to 4.75nb1(bsdi)/4.80(linux) [atatat 2004-07-23]
