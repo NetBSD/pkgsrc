@@ -1,69 +1,86 @@
-# $NetBSD: Makefile,v 1.6 2001/05/20 05:21:23 jlam Exp $
-# FreeBSD Id: Makefile,v 1.20 1997/07/18 06:16:44 markm Exp
-#
+# $NetBSD: Makefile,v 1.7 2001/06/07 04:25:34 jlam Exp $
 
-DISTNAME=		perl-${PERL_VERSION}
-PKGNAME=		perl-base-${PERL_VERSION}nb2
-PERL_VERSION=		5.6.0
-CATEGORIES=		lang devel perl5
-MASTER_SITES=		ftp://ftp.digital.com/pub/plan/perl/CPAN/src/5.0/maint/ \
-			ftp://ftp.cdrom.com/pub/perl/CPAN/src/5.0/maint/
+.include "../../lang/perl5/Makefile.common"
 
-MAINTAINER=		packages@netbsd.org
+PKGNAME=		perl-base-${PERL5_VERS}
+PERL5_PKG_VERS=		# empty
+CATEGORIES+=		lang devel
+
+MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://language.perl.com/index.html
 COMMENT=		base installation of Perl
 
-CONFLICTS=		perl-5.00*
+CONFLICTS=		perl-5.00* p5-CGI-2.6* p5-CGI-2.7[0-5]
 
 HAS_CONFIGURE=		# defined
-CONFIGURE_ENV+=		PREFIX=${PREFIX}
 CONFIGURE_SCRIPT=	./Configure
-CONFIGURE_ARGS+=	-sde -Dprefix=${PREFIX} -Doptimize="${CFLAGS}" \
-			-Darchname=${MACHINE_ARCH}-${LOWER_OPSYS} \
-			-Dcc=gcc -Dusemymalloc=false
-MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}
+CONFIGURE_ARGS+=	-sde
+CONFIGURE_ARGS+=	-Dprefix="${PREFIX}"
+CONFIGURE_ARGS+=	-Darchname="${MACHINE_ARCH}-${LOWER_OPSYS}"
+CONFIGURE_ARGS+=	-Doptimize="${CFLAGS}"
+CONFIGURE_ARGS+=	-Dcc="${CC}"
+CONFIGURE_ARGS+=	-Uusemymalloc
+CONFIGURE_ARGS+=	-Uinstallusrbinperl
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
-.if exists(/usr/libexec/ld.so) || exists(/usr/libexec/ld.elf_so)
 MKPIC?=			yes
-.else
-MKPIC?=			no
-.endif
+
+# Nail down the needed libraries for each platform here to avoid hidden
+# dependencies.
+#
+LIBSWANTED.NetBSD=	m crypt
+
+.if defined(LIBSWANTED.${OPSYS})
+CONFIGURE_ARGS+=	-Dlibswanted="${LIBSWANTED.${OPSYS}}"
 .endif
 
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=		CFLAGS=
+.if ${OPSYS} == "NetBSD"
+.if !exists(/usr/libexec/ld.so) && !exists(/usr/libexec/ld.elf_so)
+MKPIC=			no
+.endif
+.if ${MACHINE_ARCH} == "sparc64"
+# The toolchain on sparc64 is not really production-quality right now, but
+# gcc-2.96 is supposed to fix most problems.  Passing -g to the configure
+# process triggers -DDEBUGGING, which plays the real trick and circumvents
+# code-generation bugs, so we add -g to CFLAGS to at least have a really
+# debuggable build.
+#
+CFLAGS+=		-g -msoft-quad-float -O2
+.endif
+.elif ${OPSYS} == "SunOS"
+CFLAGS=
 .endif
 
 .if ${MKPIC} == "yes"
-CONFIGURE_ARGS+=	-Duseshrplib=true
+CONFIGURE_ARGS+=	-Duseshrplib
 .endif
 
-PERL5_ARCHLIB=		${PREFIX}/lib/perl5/${PERL_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}
-PERL5_SITEARCH=		${PREFIX}/lib/perl5/site_perl/${PERL_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}
+PERL5_ARCHLIB=		${PREFIX}/lib/perl5/${PERL5_DIST_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
+PERL5_SITEARCH=		${PREFIX}/lib/perl5/site_perl/${PERL5_DIST_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
 PERL5_PACKLIST=		${PERL5_ARCHLIB}/.packlist
 
-post-patch:
-	cd ${WRKSRC}/ext/DynaLoader/hints && ${CP} -f openbsd.pl netbsd.pl
-
-# Remove several modules which are externally available in pkgsrc and don't
-# need to be part of the base perl distribution.
+# Remove modules that are externally available in pkgsrc and that also install
+# manpages.
 #
 pre-configure:
-	cd ${WRKSRC}/ext; ${RM} -rf Data Devel GDBM_File
-	cd ${WRKSRC}/lib; ${RM} -rf CGI CGI.pm
-	cd ${WRKSRC}/utils; ${RM} -f dprofpp.PL
+	cd ${WRKSRC}; ${RM} -rf eg/cgi lib/CGI lib/CGI.pm
 
-.if defined(MKPIC) && (${MKPIC} == "yes")
+.if ${MKPIC} == "yes"
+#
+# Build a static libperl.a and relink perl against it as a runtime
+# optimization.
+#
 post-configure:
 	${CAT} Makefile.static >> ${WRKSRC}/${MAKEFILE}
 
 post-build:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} libperl.a
-	${RM} -f ${WRKSRC}/perl
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} perl LLIBPERL=libperl.a
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}				\
+		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} libperl.a
+	@${RM} -f ${WRKSRC}/perl
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}				\
+		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} perl	\
+		LLIBPERL=libperl.a
 .endif
 
 post-install:
@@ -72,6 +89,7 @@ post-install:
 	${RMDIR} -p ${PERL5_SITEARCH} 2>/dev/null || ${TRUE}
 
 test:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} test
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV}				\
+		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} test
 
 .include "../../mk/bsd.pkg.mk"
