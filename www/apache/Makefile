@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2001/02/02 16:39:56 jlam Exp $
+# $NetBSD: Makefile,v 1.58 2001/02/06 12:38:59 itojun Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -8,7 +8,7 @@
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
 
 DISTNAME=		apache_1.3.17
-PKGNAME=		apache-1.3.17
+PKGNAME=		apache-1.3.17.1
 CATEGORIES=		www
 MASTER_SITES=		http://httpd.apache.org/dist/ \
 			http://www.modssl.org/source/ \
@@ -16,6 +16,9 @@ MASTER_SITES=		http://httpd.apache.org/dist/ \
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			${SSL_DISTNAME}${EXTRACT_SUFX} \
 			sitedrivenby.gif
+
+PATCH_SITES=		http://httpd.apache.org/dist/
+PATCHFILES=		apache_1.3.17-fix.diff
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://httpd.apache.org/
