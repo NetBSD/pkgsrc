@@ -1,287 +1,166 @@
-Index: Makefile.in
-*** Makefile.in.orig	Tue Jan 20 05:24:13 1998
---- Makefile.in	Mon Jan 26 19:49:03 1998
-***************
-*** 266,273 ****
-  GMPDEP 		= $(GMPDIR)/gmp.h $(GMPDIR)/libgmp.a
-  
-  ZLIBDIR		= zlib-1.0.4
-! ZLIBDEP		= $(ZLIBDIR)/libz.a
-! ZLIBLIBS	= -L$(ZLIBDIR) -lz
-  
-  RSAREFDIR	= rsaref2
-  RSAREFSRCDIR 	= $(RSAREFDIR)/source
---- 266,275 ----
-  GMPDEP 		= $(GMPDIR)/gmp.h $(GMPDIR)/libgmp.a
-  
-  ZLIBDIR		= zlib-1.0.4
-! ZLIBINCDIR	= /usr/include
-! ZLIBLIBDIR	= /usr/lib
-! ZLIBDEP		= $(ZLIBINCDIR)/libz.a
-! ZLIBLIBS	= -L$(ZLIBLIBDIR) -lz
-  
-  RSAREFDIR	= rsaref2
-  RSAREFSRCDIR 	= $(RSAREFDIR)/source
-***************
-*** 371,377 ****
-  	$(CC) -o rfc-pg rfc-pg.o
-  
-  .c.o:
-! 	$(CC) -c -I. $(KERBEROS_INCS) -I$(srcdir)/$(GMPDIR) -I$(srcdir)/$(ZLIBDIR) $(DEFS) -DHOST_KEY_FILE=\"$(HOST_KEY_FILE)\" -DHOST_CONFIG_FILE=\"$(HOST_CONFIG_FILE)\" -DSERVER_CONFIG_FILE=\"$(SERVER_CONFIG_FILE)\" -DSSH_PROGRAM=\"$(SSH_PROGRAM)\" -DETCDIR=\"$(etcdir)\" -DPIDDIR=\"$(piddir)\" -DSSH_BINDIR=\"$(bindir)\" -DTIS_MAP_FILE=\"$(TIS_MAP_FILE)\" $(CFLAGS) $(X_CFLAGS) $<
-  
-  sshd: $(SSHD_OBJS) $(GMPDEP) $(RSAREFDEP) $(ZLIBDEP)
-  	-rm -f sshd
---- 373,379 ----
-  	$(CC) -o rfc-pg rfc-pg.o
-  
-  .c.o:
-! 	$(CC) -c -I. $(KERBEROS_INCS) -I$(srcdir)/$(GMPDIR) -I$(srcdir)/$(ZLIBINCDIR) $(DEFS) -DHOST_KEY_FILE=\"$(HOST_KEY_FILE)\" -DHOST_CONFIG_FILE=\"$(HOST_CONFIG_FILE)\" -DSERVER_CONFIG_FILE=\"$(SERVER_CONFIG_FILE)\" -DSSH_PROGRAM=\"$(SSH_PROGRAM)\" -DETCDIR=\"$(etcdir)\" -DPIDDIR=\"$(piddir)\" -DSSH_BINDIR=\"$(bindir)\" -DTIS_MAP_FILE=\"$(TIS_MAP_FILE)\" $(CFLAGS) $(X_CFLAGS) $<
-  
-  sshd: $(SSHD_OBJS) $(GMPDEP) $(RSAREFDEP) $(ZLIBDEP)
-  	-rm -f sshd
-***************
-*** 419,432 ****
-  $(GMPDIR)/libgmp.a:
-  	cd $(GMPDIR); $(MAKE)
-  
-! $(ZLIBDEP):
-! 	-if test '!' -d $(ZLIBDIR); then \
-! 	  mkdir $(ZLIBDIR); \
-! 	  cp $(srcdir)/$(ZLIBDIR)/Makefile $(ZLIBDIR); \
-! 	fi
-! 	cd $(ZLIBDIR); $(MAKE) VPATH=$(srcdir)/$(ZLIBDIR):../$(srcdir)/$(ZLIBDIR) \
-! 	  CC="$(CC)" CFLAGS="$(CFLAGS) -I. -I$(srcdir)/$(ZLIBDIR) \
-! 	    -I../$(srcdir)/$(GMPDIR)" RANLIB="$(RANLIB)" libz.a
-  
-  $(RSAREFSRCDIR)/librsaref.a:
-  	-if test '!' -d $(RSAREFDIR); then \
---- 421,434 ----
-  $(GMPDIR)/libgmp.a:
-  	cd $(GMPDIR); $(MAKE)
-  
-! #$(ZLIBDEP):
-! #	-if test '!' -d $(ZLIBDIR); then \
-! #	  mkdir $(ZLIBDIR); \
-! #	  cp $(srcdir)/$(ZLIBDIR)/Makefile $(ZLIBDIR); \
-! #	fi
-! #	cd $(ZLIBDIR); $(MAKE) VPATH=$(srcdir)/$(ZLIBDIR):../$(srcdir)/$(ZLIBDIR) \
-! #	  CC="$(CC)" CFLAGS="$(CFLAGS) -I. -I$(srcdir)/$(ZLIBDIR) \
-! #	    -I../$(srcdir)/$(GMPDIR)" RANLIB="$(RANLIB)" libz.a
-  
-  $(RSAREFSRCDIR)/librsaref.a:
-  	-if test '!' -d $(RSAREFDIR); then \
-***************
-*** 483,492 ****
-  # (otherwise it can only log in as the user it runs as, and must be
-  # bound to a non-privileged port).  Also, password authentication may
-  # not be available if non-root and using shadow passwords.
-! install: $(PROGRAMS) make-dirs generate-host-key install-configs
-  	-rm -f $(install_prefix)$(bindir)/ssh.old
-  	-mv $(install_prefix)$(bindir)/ssh $(install_prefix)$(bindir)/ssh.old
-! 	-chmod 755 $(install_prefix)$(bindir)/ssh.old
-  	$(INSTALL_PROGRAM) -o root -m $(SSH_INSTALL_MODE) ssh $(install_prefix)$(bindir)/ssh
-  	-if test "`echo ssh | sed '$(transform)'`" '!=' ssh; then \
-  	  rm -f $(install_prefix)$(bindir)/`echo ssh | sed '$(transform)'`; \
---- 485,494 ----
-  # (otherwise it can only log in as the user it runs as, and must be
-  # bound to a non-privileged port).  Also, password authentication may
-  # not be available if non-root and using shadow passwords.
-! install: $(PROGRAMS) make-dirs install-configs
-  	-rm -f $(install_prefix)$(bindir)/ssh.old
-  	-mv $(install_prefix)$(bindir)/ssh $(install_prefix)$(bindir)/ssh.old
-! 	-chmod 555 $(install_prefix)$(bindir)/ssh.old
-  	$(INSTALL_PROGRAM) -o root -m $(SSH_INSTALL_MODE) ssh $(install_prefix)$(bindir)/ssh
-  	-if test "`echo ssh | sed '$(transform)'`" '!=' ssh; then \
-  	  rm -f $(install_prefix)$(bindir)/`echo ssh | sed '$(transform)'`; \
-***************
-*** 501,507 ****
-  	-for p in $(NORMAL_PROGRAMS) $(X_PROGRAMS) $(OTHER_PROGRAMS); do \
-  	  rm -f $(install_prefix)$(bindir)/$$p.old ; \
-  	  mv $(install_prefix)$(bindir)/$$p $(install_prefix)$(bindir)/$$p.old; \
-! 	  $(INSTALL_PROGRAM) -m 0755 $$p $(install_prefix)$(bindir)/$$p; \
-  	  if test "`echo $$p | sed '$(transform)'`" '!=' $$p; then \
-  	    rm -f $(install_prefix)$(bindir)/`echo $$p | sed '$(transform)'`; \
-  	    $(LN_S) $$p \
---- 503,509 ----
-  	-for p in $(NORMAL_PROGRAMS) $(X_PROGRAMS) $(OTHER_PROGRAMS); do \
-  	  rm -f $(install_prefix)$(bindir)/$$p.old ; \
-  	  mv $(install_prefix)$(bindir)/$$p $(install_prefix)$(bindir)/$$p.old; \
-! 	  $(INSTALL_PROGRAM) $$p $(install_prefix)$(bindir)/$$p; \
-  	  if test "`echo $$p | sed '$(transform)'`" '!=' $$p; then \
-  	    rm -f $(install_prefix)$(bindir)/`echo $$p | sed '$(transform)'`; \
-  	    $(LN_S) $$p \
-***************
-*** 511,517 ****
-  	  rm -f $(install_prefix)$(bindir)/$$p.old ; \
-  	  mv $(install_prefix)$(bindir)/$$p $(install_prefix)$(bindir)/$$p.old; \
-  	  $(INSTALL_DATA) $$p $(install_prefix)$(bindir)/$$p; \
-! 	  chmod 755 $(install_prefix)$(bindir)/$$p; \
-  	  if test "`echo $$p | sed '$(transform)'`" '!=' $$p; then \
-  	    rm -f $(install_prefix)$(bindir)/`echo $$p | sed '$(transform)'`; \
-  	    $(LN_S) $$p \
---- 513,519 ----
-  	  rm -f $(install_prefix)$(bindir)/$$p.old ; \
-  	  mv $(install_prefix)$(bindir)/$$p $(install_prefix)$(bindir)/$$p.old; \
-  	  $(INSTALL_DATA) $$p $(install_prefix)$(bindir)/$$p; \
-! 	  chmod 555 $(install_prefix)$(bindir)/$$p; \
-  	  if test "`echo $$p | sed '$(transform)'`" '!=' $$p; then \
-  	    rm -f $(install_prefix)$(bindir)/`echo $$p | sed '$(transform)'`; \
-  	    $(LN_S) $$p \
-***************
-*** 520,533 ****
-  	-for p in $(SBIN_PROGRAMS); do \
-  	  rm -f $(install_prefix)$(sbindir)/$$p.old ; \
-  	  mv $(install_prefix)$(sbindir)/$$p $(install_prefix)$(sbindir)/$$p.old; \
-! 	  $(INSTALL_PROGRAM) -m 0755 $$p $(install_prefix)$(sbindir)/$$p; \
-  	  if test "`echo $$p | sed '$(transform)'`" '!=' $$p; then \
-  	    rm -f $(install_prefix)$(sbindir)/`echo $$p | sed '$(transform)'`;\
-  	    $(LN_S) $$p \
-  	      $(install_prefix)$(sbindir)/`echo $$p | sed '$(transform)'`; fi;\
-  	done
-  	-for p in $(MAN1PAGES); do \
-! 	  $(INSTALL_DATA) -m 0644 $(srcdir)/$$p $(install_prefix)$(man1dir)/$$p ; \
-  	  if test "`echo $$p | sed '$(transform)'`" '!=' $$p; then \
-  	    rm -f $(install_prefix)$(man1dir)/`echo $$p | sed '$(transform)'`;\
-  	    $(LN_S) $$p \
---- 522,535 ----
-  	-for p in $(SBIN_PROGRAMS); do \
-  	  rm -f $(install_prefix)$(sbindir)/$$p.old ; \
-  	  mv $(install_prefix)$(sbindir)/$$p $(install_prefix)$(sbindir)/$$p.old; \
-! 	  $(INSTALL_PROGRAM) $$p $(install_prefix)$(sbindir)/$$p; \
-  	  if test "`echo $$p | sed '$(transform)'`" '!=' $$p; then \
-  	    rm -f $(install_prefix)$(sbindir)/`echo $$p | sed '$(transform)'`;\
-  	    $(LN_S) $$p \
-  	      $(install_prefix)$(sbindir)/`echo $$p | sed '$(transform)'`; fi;\
-  	done
-  	-for p in $(MAN1PAGES); do \
-! 	  $(INSTALL_DATA) $(srcdir)/$$p $(install_prefix)$(man1dir)/$$p ; \
-  	  if test "`echo $$p | sed '$(transform)'`" '!=' $$p; then \
-  	    rm -f $(install_prefix)$(man1dir)/`echo $$p | sed '$(transform)'`;\
-  	    $(LN_S) $$p \
-***************
-*** 542,548 ****
-  	    $(install_prefix)$(man1dir)/`echo slogin.1 | sed '$(transform)'`; \
-  	fi
-  	-for p in $(MAN1GENERATED); do \
-! 	  $(INSTALL_DATA) -m 0644 $$p $(install_prefix)$(man1dir)/$$p ; \
-  	  if test "`echo $$p | sed '$(transform)'`" '!=' $$p; then \
-  	    rm -f $(install_prefix)$(man1dir)/`echo $$p | sed '$(transform)'`;\
-  	    $(LN_S) $$p \
---- 544,550 ----
-  	    $(install_prefix)$(man1dir)/`echo slogin.1 | sed '$(transform)'`; \
-  	fi
-  	-for p in $(MAN1GENERATED); do \
-! 	  $(INSTALL_DATA) $$p $(install_prefix)$(man1dir)/$$p ; \
-  	  if test "`echo $$p | sed '$(transform)'`" '!=' $$p; then \
-  	    rm -f $(install_prefix)$(man1dir)/`echo $$p | sed '$(transform)'`;\
-  	    $(LN_S) $$p \
-***************
-*** 550,556 ****
-  	  fi; \
-  	done
-  	-for p in $(MAN8GENERATED); do \
-! 	  $(INSTALL_DATA) -m 0644 $$p $(install_prefix)$(man8dir)/$$p; \
-  	  if test "`echo $$p | sed '$(transform)'`" '!=' $$p; then \
-  	    rm -f $(install_prefix)$(man8dir)/`echo $$p | sed '$(transform)'`;\
-  	    $(LN_S) $$p \
---- 552,558 ----
-  	  fi; \
-  	done
-  	-for p in $(MAN8GENERATED); do \
-! 	  $(INSTALL_DATA) $$p $(install_prefix)$(man8dir)/$$p; \
-  	  if test "`echo $$p | sed '$(transform)'`" '!=' $$p; then \
-  	    rm -f $(install_prefix)$(man8dir)/`echo $$p | sed '$(transform)'`;\
-  	    $(LN_S) $$p \
-***************
-*** 559,570 ****
-  
-  install-configs:
-  	-if test '!' -f $(install_prefix)$(HOST_CONFIG_FILE); then \
-! 	  $(INSTALL_DATA) -m 0644 $(srcdir)/host_config.sample \
-  	    $(install_prefix)$(HOST_CONFIG_FILE); fi
-  	-if test '!' -f $(install_prefix)$(SERVER_CONFIG_FILE); then \
-  	  cat $(srcdir)/server_config.sample | \
-  	  sed "s#_ETCDIR_#$(etcdir)#g" >/tmp/ssh_inst.$$$$; \
-! 	  $(INSTALL_DATA) -m 0644 /tmp/ssh_inst.$$$$ \
-  	    $(install_prefix)$(SERVER_CONFIG_FILE); \
-  	  rm -f /tmp/ssh_inst.$$$$; fi
-  
---- 561,573 ----
-  
-  install-configs:
-  	-if test '!' -f $(install_prefix)$(HOST_CONFIG_FILE); then \
-! 	  /usr/bin/install -c -o root -g wheel -m 0644 \
-! 	    $(srcdir)/host_config.sample \
-  	    $(install_prefix)$(HOST_CONFIG_FILE); fi
-  	-if test '!' -f $(install_prefix)$(SERVER_CONFIG_FILE); then \
-  	  cat $(srcdir)/server_config.sample | \
-  	  sed "s#_ETCDIR_#$(etcdir)#g" >/tmp/ssh_inst.$$$$; \
-! 	  /usr/bin/install -c -o root -g wheel -m 0644 /tmp/ssh_inst.$$$$ \
-  	    $(install_prefix)$(SERVER_CONFIG_FILE); \
-  	  rm -f /tmp/ssh_inst.$$$$; fi
-  
-***************
-*** 594,606 ****
-  	-rm -f *.o gmon.out *core $(PROGRAMS) rfc-pg
-  	cd $(GMPDIR); $(MAKE) clean
-  #	cd $(RSAREFSRCDIR); rm -f *.o *.a
-! 	cd $(ZLIBDIR); $(MAKE) clean
-  
-  distclean: clean
-  	-rm -f Makefile config.status config.cache config.log config.h
-  	-rm -f ssh.1 sshd.8 make-ssh-known-hosts.1
-  	cd $(GMPDIR); $(MAKE) distclean
-! 	cd $(ZLIBDIR); $(MAKE) distclean
-  
-  dist: dist-free
-  
---- 597,609 ----
-  	-rm -f *.o gmon.out *core $(PROGRAMS) rfc-pg
-  	cd $(GMPDIR); $(MAKE) clean
-  #	cd $(RSAREFSRCDIR); rm -f *.o *.a
-! #	cd $(ZLIBDIR); $(MAKE) clean
-  
-  distclean: clean
-  	-rm -f Makefile config.status config.cache config.log config.h
-  	-rm -f ssh.1 sshd.8 make-ssh-known-hosts.1
-  	cd $(GMPDIR); $(MAKE) distclean
-! #	cd $(ZLIBDIR); $(MAKE) distclean
-  
-  dist: dist-free
-  
-***************
-*** 633,640 ****
-  	gzip -cd $(GMPDIR)/$(GMPDIR).tar.gz | (cd $(DISTNAME); tar pxf - )
-  #	tar cf - $(RSAREFDIR) | (cd $(DISTNAME); tar xf -)
-  #	cd $(DISTNAME)/$(RSAREFSRCDIR); rm -f *.o *.a
-! 	(cd  $(srcdir); tar pcf - $(ZLIBDIR) )| (cd $(DISTNAME); tar pxf -)
-! 	cd $(DISTNAME)/$(ZLIBDIR); rm -f *.o *.a; rm -rf CVS
-  
-  #ifdef F_SECURE_COMMERCIAL
-  #
---- 636,643 ----
-  	gzip -cd $(GMPDIR)/$(GMPDIR).tar.gz | (cd $(DISTNAME); tar pxf - )
-  #	tar cf - $(RSAREFDIR) | (cd $(DISTNAME); tar xf -)
-  #	cd $(DISTNAME)/$(RSAREFSRCDIR); rm -f *.o *.a
-! #	(cd  $(srcdir); tar pcf - $(ZLIBDIR) )| (cd $(DISTNAME); tar pxf -)
-! #	cd $(DISTNAME)/$(ZLIBDIR); rm -f *.o *.a; rm -rf CVS
-  
-  #ifdef F_SECURE_COMMERCIAL
-  #
-***************
-*** 662,668 ****
-  	 (echo "s/\.$$old_version\"/.$$new_version\"/g"; echo w; echo q) | ed $(srcdir)/version.h >/dev/null
-  
-  depend:
-! 	$(MAKEDEP) -I$(srcdir) -I. -I$(GMPDIR) -I$(ZLIBDIR) $(DEFS) $(SRCS)
-  
-  tags:
-  	-rm -f TAGS
---- 665,671 ----
-  	 (echo "s/\.$$old_version\"/.$$new_version\"/g"; echo w; echo q) | ed $(srcdir)/version.h >/dev/null
-  
-  depend:
-! 	$(MAKEDEP) -I$(srcdir) -I. $(DEFS) $(SRCS)
-  
-  tags:
-  	-rm -f TAGS
+--- Makefile.in.orig	Tue May 12 00:37:58 1998
++++ Makefile.in	Sun May 24 14:06:29 1998
+@@ -280,8 +280,10 @@
+ GMPDEP 		= $(GMPDIR)/gmp.h $(GMPDIR)/libgmp.a
+ 
+ ZLIBDIR		= zlib-1.0.4
+-ZLIBDEP		= $(ZLIBDIR)/libz.a
+-ZLIBLIBS	= -L$(ZLIBDIR) -lz
++ZLIBINCDIR	= /usr/include
++ZLIBLIBDIR	= /usr/lib
++ZLIBDEP		= $(ZLIBINCDIR)/libz.a
++ZLIBLIBS	= -L$(ZLIBLIBDIR) -lz
+ 
+ RSAREFDIR	= rsaref2
+ RSAREFSRCDIR 	= $(RSAREFDIR)/source
+@@ -385,7 +387,7 @@
+ 	$(CC) -o rfc-pg rfc-pg.o
+ 
+ .c.o:
+-	$(CC) -c -I. $(KERBEROS_INCS) -I$(srcdir)/$(GMPDIR) -I$(srcdir)/$(ZLIBDIR) $(DEFS) -DHOST_KEY_FILE=\"$(HOST_KEY_FILE)\" -DHOST_CONFIG_FILE=\"$(HOST_CONFIG_FILE)\" -DSERVER_CONFIG_FILE=\"$(SERVER_CONFIG_FILE)\" -DSSH_PROGRAM=\"$(SSH_PROGRAM)\" -DETCDIR=\"$(etcdir)\" -DPIDDIR=\"$(piddir)\" -DSSH_BINDIR=\"$(bindir)\" -DTIS_MAP_FILE=\"$(TIS_MAP_FILE)\" $(CFLAGS) $(X_CFLAGS) $<
++	$(CC) -c -I. $(KERBEROS_INCS) -I$(srcdir)/$(GMPDIR) -I$(srcdir)/$(ZLIBINCDIR) $(DEFS) -DHOST_KEY_FILE=\"$(HOST_KEY_FILE)\" -DHOST_CONFIG_FILE=\"$(HOST_CONFIG_FILE)\" -DSERVER_CONFIG_FILE=\"$(SERVER_CONFIG_FILE)\" -DSSH_PROGRAM=\"$(SSH_PROGRAM)\" -DETCDIR=\"$(etcdir)\" -DPIDDIR=\"$(piddir)\" -DSSH_BINDIR=\"$(bindir)\" -DTIS_MAP_FILE=\"$(TIS_MAP_FILE)\" $(CFLAGS) $(X_CFLAGS) $<
+ 
+ sshd: $(SSHD_OBJS) $(GMPDEP) $(RSAREFDEP) $(ZLIBDEP)
+ 	-rm -f sshd
+@@ -433,14 +435,14 @@
+ $(GMPDIR)/libgmp.a:
+ 	cd $(GMPDIR); $(MAKE)
+ 
+-$(ZLIBDEP):
+-	-if test '!' -d $(ZLIBDIR); then \
+-	  mkdir $(ZLIBDIR); \
+-	  cp $(srcdir)/$(ZLIBDIR)/Makefile $(ZLIBDIR); \
+-	fi
+-	cd $(ZLIBDIR); $(MAKE) VPATH=$(srcdir)/$(ZLIBDIR):../$(srcdir)/$(ZLIBDIR) \
+-	  CC="$(CC)" CFLAGS="$(CFLAGS) -I. -I$(srcdir)/$(ZLIBDIR) \
+-	    -I../$(srcdir)/$(GMPDIR)" RANLIB="$(RANLIB)" libz.a
++#$(ZLIBDEP):
++#	-if test '!' -d $(ZLIBDIR); then \
++#	  mkdir $(ZLIBDIR); \
++#	  cp $(srcdir)/$(ZLIBDIR)/Makefile $(ZLIBDIR); \
++#	fi
++#	cd $(ZLIBDIR); $(MAKE) VPATH=$(srcdir)/$(ZLIBDIR):../$(srcdir)/$(ZLIBDIR) \
++#	  CC="$(CC)" CFLAGS="$(CFLAGS) -I. -I$(srcdir)/$(ZLIBDIR) \
++#	    -I../$(srcdir)/$(GMPDIR)" RANLIB="$(RANLIB)" libz.a
+ 
+ $(RSAREFSRCDIR)/librsaref.a:
+ 	-if test '!' -d $(RSAREFDIR); then \
+@@ -497,10 +499,10 @@
+ # (otherwise it can only log in as the user it runs as, and must be
+ # bound to a non-privileged port).  Also, password authentication may
+ # not be available if non-root and using shadow passwords.
+-install: $(PROGRAMS) make-dirs generate-host-key install-configs
++install: $(PROGRAMS) make-dirs install-configs
+ 	-rm -f $(install_prefix)$(bindir)/ssh1.old
+ 	-mv $(install_prefix)$(bindir)/ssh1 $(install_prefix)$(bindir)/ssh1.old
+-	-chmod 755 $(install_prefix)$(bindir)/ssh1.old
++	-chmod 555 $(install_prefix)$(bindir)/ssh1.old
+ 	$(INSTALL_PROGRAM) -o root -m $(SSH_INSTALL_MODE) ssh $(install_prefix)$(bindir)/ssh1
+ 	-if test -f $(install_prefix)$(bindir)/ssh2; then \
+ 	  echo "Ssh version 2 program found, installation doesn't touch ssh link"; \
+@@ -523,7 +525,7 @@
+ 	-for p in $(NORMAL_PROGRAMS) $(X_PROGRAMS) $(OTHER_PROGRAMS); do \
+ 	  rm -f $(install_prefix)$(bindir)/$${p}1.old ; \
+ 	  mv $(install_prefix)$(bindir)/$${p}1 $(install_prefix)$(bindir)/$${p}1.old; \
+-	  $(INSTALL_PROGRAM) -m 0755 $$p $(install_prefix)$(bindir)/$${p}1; \
++	  $(INSTALL_PROGRAM) $$p $(install_prefix)$(bindir)/$${p}1; \
+ 	  if test -f $(install_prefix)$(bindir)/$${p}2; then \
+ 	    echo "Ssh version 2 $$p utility found, installation doesn't touch $$p link"; \
+ 	  else \
+@@ -540,7 +542,7 @@
+ 	  rm -f $(install_prefix)$(bindir)/$${p}1.old ; \
+ 	  mv $(install_prefix)$(bindir)/$${p}1 $(install_prefix)$(bindir)/$${p}1.old; \
+ 	  $(INSTALL_DATA) $$p $(install_prefix)$(bindir)/$${p}1; \
+-	  chmod 755 $(install_prefix)$(bindir)/$${p}1; \
++	  chmod 555 $(install_prefix)$(bindir)/$${p}1; \
+ 	  if test -f $(install_prefix)$(bindir)/$${p}2; then \
+ 	    echo "Ssh version 2 $$p utility found, installation doesn't touch $$p link"; \
+ 	  else \
+@@ -556,7 +558,7 @@
+ 	-for p in $(SBIN_PROGRAMS); do \
+ 	  rm -f $(install_prefix)$(sbindir)/$${p}1.old ; \
+ 	  mv $(install_prefix)$(sbindir)/$${p}1 $(install_prefix)$(sbindir)/$${p}1.old; \
+-	  $(INSTALL_PROGRAM) -m 0755 $$p $(install_prefix)$(sbindir)/$${p}1; \
++	  $(INSTALL_PROGRAM) $$p $(install_prefix)$(sbindir)/$${p}1; \
+ 	  if test -f $(install_prefix)$(sbindir)/$${p}2; then \
+ 	    echo "Ssh version 2 $$p utility found, installation doesn't touch $$p link"; \
+ 	  else \
+@@ -570,7 +572,7 @@
+ 	      $(install_prefix)$(sbindir)/`echo $$p | sed '$(transform)'`; fi;\
+ 	done
+ 	-for p in $(MAN1PAGES); do \
+-	  $(INSTALL_DATA) -m 0644 $(srcdir)/$$p.1 $(install_prefix)$(man1dir)/$${p}1.1 ; \
++	  $(INSTALL_DATA) $(srcdir)/$$p.1 $(install_prefix)$(man1dir)/$${p}1.1 ; \
+ 	  rm -f $(install_prefix)$(man1dir)/$$p.1 ;\
+ 	  $(LN_S) $${p}1.1 $(install_prefix)$(man1dir)/$$p.1 ;\
+ 	  if test "`echo $$p | sed '$(transform)'`" '!=' $$p; then \
+@@ -589,7 +591,7 @@
+ 	    $(install_prefix)$(man1dir)/`echo slogin.1 | sed '$(transform)'`; \
+ 	fi
+ 	-for p in $(MAN1GENERATED); do \
+-	  $(INSTALL_DATA) -m 0644 $$p.1 $(install_prefix)$(man1dir)/$${p}1.1 ; \
++	  $(INSTALL_DATA) $$p.1 $(install_prefix)$(man1dir)/$${p}1.1 ; \
+ 	  rm -f $(install_prefix)$(man1dir)/$$p.1 ; \
+ 	  $(LN_S) $${p}1.1 $(install_prefix)$(man1dir)/$$p.1 ; \
+ 	  if test "`echo $$p | sed '$(transform)'`" '!=' $$p; then \
+@@ -599,7 +601,7 @@
+ 	  fi; \
+ 	done
+ 	-for p in $(MAN8GENERATED); do \
+-	  $(INSTALL_DATA) -m 0644 $$p.8 $(install_prefix)$(man8dir)/$${p}1.8; \
++	  $(INSTALL_DATA) $$p.8 $(install_prefix)$(man8dir)/$${p}1.8; \
+ 	  rm -f $(install_prefix)$(man8dir)/$$p.8 ; \
+ 	  $(LN_S) $${p}1.8 $(install_prefix)$(man8dir)/$$p.8 ; \
+ 	  if test "`echo $$p | sed '$(transform)'`" '!=' $$p; then \
+@@ -610,12 +612,13 @@
+ 
+ install-configs:
+ 	-if test '!' -f $(install_prefix)$(HOST_CONFIG_FILE); then \
+-	  $(INSTALL_DATA) -m 0644 $(srcdir)/host_config.sample \
++	  /usr/bin/install -c -o root -g wheel -m 0644 \
++	    $(srcdir)/host_config.sample \
+ 	    $(install_prefix)$(HOST_CONFIG_FILE); fi
+ 	-if test '!' -f $(install_prefix)$(SERVER_CONFIG_FILE); then \
+ 	  cat $(srcdir)/server_config.sample | \
+ 	  sed "s#_ETCDIR_#$(etcdir)#g" >/tmp/ssh_inst.$$$$; \
+-	  $(INSTALL_DATA) -m 0644 /tmp/ssh_inst.$$$$ \
++	  /usr/bin/install -c -o root -g wheel -m 0644 /tmp/ssh_inst.$$$$ \
+ 	    $(install_prefix)$(SERVER_CONFIG_FILE); \
+ 	  rm -f /tmp/ssh_inst.$$$$; fi
+ 
+@@ -655,13 +658,13 @@
+ 	-rm -f *.o gmon.out *core $(PROGRAMS) rfc-pg
+ 	cd $(GMPDIR); $(MAKE) clean
+ #	cd $(RSAREFSRCDIR); rm -f *.o *.a
+-	cd $(ZLIBDIR); $(MAKE) clean
++#	cd $(ZLIBDIR); $(MAKE) clean
+ 
+ distclean: clean
+ 	-rm -f Makefile config.status config.cache config.log config.h
+ 	-rm -f ssh.1 sshd.8 make-ssh-known-hosts.1
+ 	cd $(GMPDIR); $(MAKE) distclean
+-	cd $(ZLIBDIR); $(MAKE) distclean
++#	cd $(ZLIBDIR); $(MAKE) distclean
+ 
+ dist: dist-free
+ 
+@@ -694,8 +697,8 @@
+ 	gzip -cd $(GMPDIR)/$(GMPDIR).tar.gz | (cd $(DISTNAME); tar pxf - )
+ #	tar cf - $(RSAREFDIR) | (cd $(DISTNAME); tar xf -)
+ #	cd $(DISTNAME)/$(RSAREFSRCDIR); rm -f *.o *.a
+-	(cd  $(srcdir); tar pcf - $(ZLIBDIR) )| (cd $(DISTNAME); tar pxf -)
+-	cd $(DISTNAME)/$(ZLIBDIR); rm -f *.o *.a; rm -rf CVS
++#	(cd  $(srcdir); tar pcf - $(ZLIBDIR) )| (cd $(DISTNAME); tar pxf -)
++#	cd $(DISTNAME)/$(ZLIBDIR); rm -f *.o *.a; rm -rf CVS
+ 
+ #ifdef F_SECURE_COMMERCIAL
+ #
+@@ -723,7 +726,7 @@
+ 	 (echo "s/\.$$old_version\"/.$$new_version\"/g"; echo w; echo q) | ed $(srcdir)/version.h >/dev/null
+ 
+ depend:
+-	$(MAKEDEP) -I$(srcdir) -I. -I$(GMPDIR) -I$(ZLIBDIR) $(DEFS) $(SRCS)
++	$(MAKEDEP) -I$(srcdir) -I. $(DEFS) $(SRCS)
+ 
+ tags:
+ 	-rm -f TAGS
