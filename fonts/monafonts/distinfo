@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/03/24 03:10:58 uebayasi Exp $
+
+SHA1 (monafonts-2.1.tar.bz2.bin) = c45949865460f8995729d8568576bab2905396cb
+Size (monafonts-2.1.tar.bz2.bin) = 636935 bytes
+SHA1 (patch-aa) = bbb16e23d175c77ac6e7917b30c0f5c5a6b6f432
