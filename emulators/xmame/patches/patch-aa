@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.26 2001/03/24 19:52:34 kristerw Exp $
+$NetBSD: patch-aa,v 1.27 2001/05/21 07:12:50 mrg Exp $
 --- makefile.unix.orig	Sat Mar 17 03:11:28 2001
 +++ makefile.unix	Fri Mar 23 19:25:28 2001
 @@ -168,7 +168,7 @@
@@ -66,8 +66,8 @@ $NetBSD: patch-aa,v 1.26 2001/03/24 19:52:34 kristerw Exp $
  # standard location for XFree86
 -X11INC		= -I/usr/X11R6/include
 -X11LIB		= -L/usr/X11R6/lib
-+X11INC		= -I${PREFIX}/include
-+X11LIB		= -L${PREFIX}/lib -Wl,-R${PREFIX}/lib
++X11INC		= -I${PREFIX}/include -I${X11BASE}/include
++X11LIB		= -L${PREFIX}/lib -Wl,-R${PREFIX}/lib -L${X11BASE}/lib -Wl,-R${X11BASE}/lib
  # for Sun systems
  # X11INC		= -I/usr/openwin/include
  # X11LIB		= -L/usr/openwin/lib
