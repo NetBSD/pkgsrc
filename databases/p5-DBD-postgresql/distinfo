@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:07:10 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 16:11:01 agc Exp $
 
-MD5 (DBD-Pg-0.95.tar.gz) = b7b7a2183481b6c948f4ebd75a8ef8f7
+SHA1 (DBD-Pg-0.95.tar.gz) = 83ab678798be48b95c0b7536e02e6d03ad517249
+Size (DBD-Pg-0.95.tar.gz) = 41303 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:07:03 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 16:10:59 agc Exp $
 
-MD5 (kpsql-1.0.tgz) = 6f88e353c7147d54ebadae1cd4578b85
+SHA1 (kpsql-1.0.tgz) = 3e8bb8d8569e53b627f4dacc0092b3d1669311c4
+Size (kpsql-1.0.tgz) = 574070 bytes
 SHA1 (patch-aa) = ae7630b452cf7af2c7faf844064d565077256503
