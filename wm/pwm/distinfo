@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2001/07/11 07:58:48 abs Exp $
+$NetBSD: distinfo,v 1.5 2001/07/28 21:44:36 jlam Exp $
 
 SHA1 (pwm-1.0.tar.gz) = 79c708a2a6260a06bc8dc586110578bf23aa01e7
 Size (pwm-1.0.tar.gz) = 93239 bytes
 SHA1 (patch-aa) = de9c7048a60bf232e60bfa6d8557f22a5afca5f4
 SHA1 (patch-ab) = ab1c23cab95bd60876b7905f0d9634f11bf2964e
 SHA1 (patch-ac) = 8dc9752805bf1bb45340ba5d5eeb3cb7c995d9dc
-SHA1 (patch-ad) = f2b28252a584d8f2dfbe100741b6bd1b45613034
+SHA1 (patch-ad) = d4dcb5e21f195ab99ec22dfc93d5347825a6653e
