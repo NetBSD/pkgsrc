@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2004/10/03 00:13:15 tv Exp $
+# $NetBSD: Makefile,v 1.36 2004/10/30 18:02:45 minskim Exp $
 #
 
 DISTNAME=	xchat-2.4.0
@@ -54,6 +54,7 @@ CONFIGURE_ARGS+=        --enable-openssl=${SSLBASE}
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/xchat/plugins
 
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
