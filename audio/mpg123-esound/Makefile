@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/10/03 00:13:08 tv Exp $
+# $NetBSD: Makefile,v 1.9 2004/11/07 08:55:04 tron Exp $
 
 PKGNAME=	mpg123-esound-${MPG123_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	Command-line player for mpeg layer 1, 2 and 3 audio with EsounD
 
 TARGET_SUFFIX=	-esd
