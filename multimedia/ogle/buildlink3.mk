@@ -1,0 +1,20 @@
+# $NetBSD: buildlink3.mk,v 1.1 2004/03/29 02:49:46 snj Exp $
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+OGLE_BUILDLINK3_MK:=	${OGLE_BUILDLINK3_MK}+
+
+.if !empty(BUILDLINK_DEPTH:M+)
+BUILDLINK_DEPENDS+=	ogle
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nogle}
+BUILDLINK_PACKAGES+=	ogle
+
+.if !empty(OGLE_BUILDLINK3_MK:M+)
+BUILDLINK_DEPENDS.ogle+=	ogle>=0.9.2
+BUILDLINK_PKGSRCDIR.ogle?=	../../multimedia/ogle
+.endif	# OGLE_BUILDLINK3_MK
+
+.include "../../textproc/libxml2/buildlink3.mk"
+
+BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
