@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2002/06/27 10:49:40 itojun Exp $
+# $NetBSD: Makefile,v 1.81 2002/06/28 09:05:16 seb Exp $
 
 DISTNAME=		openssh-3.4p1
 PKGNAME=		openssh-3.4.0.1
@@ -27,7 +27,6 @@ CRYPTO=			yes
 # retain the following line, for IPv6-ready pkgsrc webpage 
 BUILD_DEFS+=		USE_INET6
 #BUILD_DEFS+=		KERBEROS
-BUILD_DEFS+=		PKG_SYSCONFDIR
 
 .include "../../mk/bsd.prefs.mk"
 
