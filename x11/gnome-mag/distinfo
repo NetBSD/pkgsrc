@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/12/30 17:55:33 xtraeme Exp $
+
+SHA1 (gnome-mag-0.10.4.tar.bz2) = ab4e555669804c4b73b1e083336c48dd9e5d87fd
+Size (gnome-mag-0.10.4.tar.bz2) = 275635 bytes
+SHA1 (patch-aa) = 20ad89bfabb3f0804a5d18ad0d2004d27202e277
