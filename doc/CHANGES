@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6234 2004/06/20 18:48:44 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6235 2004/06/20 18:57:48 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2967,3 +2967,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated vlc to 0.7.2 [xtraeme 2004-06-20]
 	Updated mysql4-server to 4.0.20 [xtraeme 2004-06-20]
 	Updated mysql4-client to 4.0.20 [xtraeme 2004-06-20]
+	Updated sylpheed-gtk2 to 0.9.11 [xtraeme 2004-06-20]
