@@ -1,11 +1,9 @@
-diff -u ../mpg123-0.59k/Makefile ./Makefile
---- ../mpg123-0.59k/Makefile	Sun Jul 13 08:44:41 1997
-+++ ./Makefile	Sat Oct 25 22:20:55 1997
-@@ -73,6 +79,22 @@
- #CFLAGS='-pg -DI386_ASSEM -DREAL_IS_FLOAT -DLINUX -Wall -O2 -m486 -funroll-all-loops -finline-functions -ffast-math' mpg123
+--- Makefile.orig	Sun Jul 13 02:44:41 1997
++++ Makefile	Fri Oct 31 06:55:33 1997
+@@ -74,6 +74,22 @@
  #CFLAGS='-DI386_ASSEM -O2 -DREAL_IS_FLOAT -DLINUX -Wall -g'
  #CFLAGS='-DI386_ASSEM -DREAL_IS_FLOAT -DLINUX -Wall -O2 -m486 -fomit-frame-pointer -funroll-all-loops -finline-functions -ffast-math -malign-loops=2 -malign-jumps=2 -malign-functions=2'
-+
+ 
 +netbsd-i386:
 +	$(MAKE) CC=cc LDFLAGS= \
 +		OBJECTS='decode_i386.o dct64_i386.o getbits_.o' \
@@ -21,12 +19,12 @@ diff -u ../mpg123-0.59k/Makefile ./Makefile
 +			-funroll-all-loops -ffast-math \
 +			-DREAL_IS_FLOAT -DUSE_MMAP -DNETBSD' \
 +		mpg123
- 
++
  freebsd:
  	$(MAKE) CC=cc LDFLAGS= \
-diff -u ../mpg123-0.59k/audio.c ./audio.c
---- ../mpg123-0.59k/audio.c	Sun Jul 13 00:12:01 1997
-+++ ./audio.c	Sat Oct 25 22:22:16 1997
+ 		OBJECTS='decode_i386.o dct64_i386.o getbits_.o' \
+--- audio.c.orig	Sat Jul 12 18:12:01 1997
++++ audio.c	Fri Oct 31 06:58:54 1997
 @@ -214,7 +214,11 @@
    return 0;
  }
@@ -81,9 +79,22 @@ diff -u ../mpg123-0.59k/audio.c ./audio.c
  
    switch(ai->format) {
      case -1:
-diff -u ../mpg123-0.59k/audio.h ./audio.h
---- ../mpg123-0.59k/audio.h	Sun Jul 13 08:11:14 1997
-+++ ./audio.h	Sat Oct 25 22:18:01 1997
+@@ -386,6 +385,13 @@
+ void audio_queueflush (struct audio_info_struct *ai)
+ {
+ 	ioctl (ai->fn, I_FLUSH, FLUSHRW);
++}
++#endif
++
++#ifdef NETBSD
++void audio_queueflush (struct audio_info_struct *ai)
++{
++	ioctl (ai->fn, AUDIO_FLUSH, 0);
+ }
+ #endif
+ 
+--- audio.h.orig	Sun Jul 13 02:11:14 1997
++++ audio.h	Fri Oct 31 06:59:11 1997
 @@ -11,7 +11,7 @@
  #define AUDIO_FORMAT_ULAW_8       0x8
  #define AUDIO_FORMAT_ALAW_8       0x10
@@ -93,5 +104,22 @@ diff -u ../mpg123-0.59k/audio.h ./audio.h
  #define AUDIO_USES_FD
  #endif
  
-Common subdirectories: ../mpg123-0.59k/jukebox and ./jukebox
-Only in .: ut
+@@ -43,6 +43,6 @@
+ extern int audio_write_sample(struct audio_info_struct *,short *,int);
+ extern int audio_close(struct audio_info_struct *);
+ extern void audio_info_struct_init(struct audio_info_struct *);
+-#ifdef SOLARIS
++#if defined(SOLARIS) || defined(NETBSD)
+ extern void audio_queueflush(struct audio_info_struct *ai);
+ #endif
+--- buffer.c.orig	Fri Oct 31 06:59:55 1997
++++ buffer.c	Fri Oct 31 06:59:21 1997
+@@ -45,7 +45,7 @@
+ 	for (;;) {
+ 		if (intflag) {
+ 			intflag = FALSE;
+-#ifdef SOLARIS
++#if defined(SOLARIS) || defined(NETBSD)
+ 			if (outmode == DECODE_AUDIO)
+ 				audio_queueflush (ai);
+ #endif
