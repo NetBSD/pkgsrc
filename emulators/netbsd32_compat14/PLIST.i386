@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.i386,v 1.1 2005/01/11 05:12:56 hamajima Exp $
+${COMPAT_LIBDIR}/libi386.so.0.2
+${COMPAT_LIBDIR}/libkeycap.so.0.0
