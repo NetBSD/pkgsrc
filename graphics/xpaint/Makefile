@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.32 2002/03/13 17:37:19 fredb Exp $
-# FreeBSD Id: Makefile,v 1.14 1997/08/29 12:17:50 tg Exp
+# $NetBSD: Makefile,v 1.33 2002/10/21 12:26:29 wiz Exp $
+#
 
 DISTNAME=       xpaint-2.6.2
 PKGREVISION=	1
@@ -11,22 +11,17 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://home.worldonline.dk/~torsten/xpaint/
 COMMENT=	Simple paint program
 
-DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
-DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png>=1.2.1:../../graphics/png
-
+USE_BUILDLINK2=	YES
 USE_IMAKE=      YES
-USE_XPM=	YES
 USE_RMAN=	YES
 
-EVAL_PREFIX=	XPMDIR=xpm
 PLIST_SRC=	${WRKDIR}/PLIST
 
 pre-configure:
 	${MV} -f ${WRKSRC}/Local.config ${WRKSRC}/Local.config.save
 	@${SED} -e 's|\$${LOCALBASE}|${LOCALBASE}|g' \
 		-e 's|\$${X11BASE}|${X11BASE}|g' \
-		-e 's|\$${XPMDIR}|${XPMDIR}|g' \
+		-e 's|\$${XPMDIR}|${BUILDLINK_PREFIX.xpm}|g' \
 		${WRKSRC}/Local.config.save > ${WRKSRC}/Local.config
 
 post-install:
@@ -35,4 +30,8 @@ post-install:
 	  ${ECHO} lib/X11/doc/html/xpaint.1.html >>${PLIST_SRC}; \
 	fi
 
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/tiff/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
