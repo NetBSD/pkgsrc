@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.614 2000/11/21 00:16:43 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.615 2000/11/22 10:40:21 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -3125,15 +3125,15 @@ fake-pkg: ${PLIST} ${DESCR}
 .ifdef USE_GMAKE
 	@${ECHO} "GMAKE=	`${GMAKE} --version | ${GREP} version`" >> ${BUILD_INFO_FILE}
 .endif
-	${_PKG_SILENT}${_PKG_DEBUG}\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO} "_PKGTOOLS_VER=${PKGTOOLS_VERSION}" >> ${BUILD_INFO_FILE}
-	${_PKG_SILENT}${_PKG_DEBUG}\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
 	size_this=`${MAKE} ${MAKEFLAGS} print-pkg-size-this`;		\
 	size_depends=`${MAKE} ${MAKEFLAGS} print-pkg-size-depends`;	\
 	${ECHO} $$size_this >${SIZE_PKG_FILE};				\
 	${ECHO} $$size_this $$size_depends + p | ${DC} >${SIZE_ALL_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-		if [ ! -d ${PKG_DBDIR}/${PKGNAME} ]; then		\
+	if [ ! -d ${PKG_DBDIR}/${PKGNAME} ]; then			\
 		${ECHO_MSG} "${_PKGSRC_IN}> Registering installation for ${PKGNAME}"; \
 		${MKDIR} ${PKG_DBDIR}/${PKGNAME};			\
 		${PKG_CREATE} ${PKG_ARGS} -O ${PKGFILE} > ${PKG_DBDIR}/${PKGNAME}/+CONTENTS; \
@@ -3167,7 +3167,8 @@ fake-pkg: ${PLIST} ${DESCR}
 				${CP} ${MESSAGE_FILE} ${PKG_DBDIR}/${PKGNAME}/+DISPLAY; \
 			fi;						\
 		fi;							\
-		for dep in `${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true ECHO_MSG=${TRUE} | sort -u`; do \
+		list="`${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true ECHO_MSG=${TRUE} | sort -u`" ; \
+		for dep in $$list; do \
 			realdep="`${PKG_INFO} -e \"$$dep\" || ${TRUE}`" ; \
 			if [ `${ECHO} $$realdep | wc -w` -gt 1 ]; then 				\
 				${ECHO} '***' "WARNING: '$$dep' expands to several installed packages " ; \
@@ -3175,6 +3176,8 @@ fake-pkg: ${PLIST} ${DESCR}
 				${ECHO} "    Please check if this is really intended!" ; \
 				continue ; 				\
 			fi ; 						\
+		done ; 						\
+		for realdep in `echo $$list | xargs -n 1 ${SETENV} ${PKG_INFO} -e | sort -u`; do \
 			if ${TEST} -z "$$realdep"; then			\
 				${ECHO} "$$dep not installed - dependency NOT registered" ; \
 			elif [ -d ${PKG_DBDIR}/$$realdep ]; then	\
