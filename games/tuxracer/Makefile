@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/03/25 01:32:55 salo Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/03 08:25:37 wiz Exp $
 #
 
 DISTNAME=	tuxracer-0.61
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tuxracer/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
@@ -26,7 +27,7 @@ post-install:
 	cd ${PREFIX}/share/tuxracer && \
 		${FIND} . -type f -exec ${CHMOD} 444 {} \;
 
-.include "../../audio/SDL-mixer/buildlink2.mk"
+.include "../../audio/SDL_mixer/buildlink2.mk"
 .include "../../lang/tcl/buildlink2.mk"
 
 .include "../../mk/pthread.buildlink2.mk"
