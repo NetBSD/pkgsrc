@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.76 2003/03/27 05:16:12 atatat Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.77 2003/04/30 03:16:07 atatat Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1278,7 +1278,8 @@ sub scan_pkgsrc_distfiles_vs_distinfo
 sub load_pkgsrc_makefiles
     {
     open(STORE, "<$_[0]") || die("Cannot read pkgsrc store from $_[0]: $!\n");
-    my ($pkgver, $pkgcnt, $pkgnum);
+    my ($pkgver);
+    our ($pkgcnt, $pkgnum, $subpkgcnt, $subpkgnum);
     $pkglist = new PkgList;
     while (<STORE>)
 	{ eval $_; }
@@ -1289,6 +1290,10 @@ sub store_pkgsrc_makefiles
     {
     open(STORE, ">$_[0]") || die("Cannot save pkgsrc store to $_[0]: $!\n");
     my $was = select(STORE);
+    print('sub __pkgcount { $subpkgnum += $_[0]; ',
+	  'verbose("\rReading pkgsrc database: ',
+	  '$pkgnum / $pkgcnt ($subpkgnum / $subpkgcnt) pkgs"); }',
+	  "\n");
     $pkglist->store;
     print("verbose(\"...done\\n\");\n");
     select($was);
@@ -1401,8 +1406,19 @@ sub store
     {
     my $self = shift;
     my @pkgs = keys %{$self->{_pkgs}};
-    print("\$pkgcnt = ", scalar(@pkgs), ";\n");
+    my ($cnt, $subcnt) = $self->count;
+    print("\$pkgcnt = $cnt;\n");
+    print("\$subpkgcnt = $subcnt;\n");
     map($self->{_pkgs}{$_}->store, keys %{$self->{_pkgs}});
+    }
+
+sub count
+    {
+    my $self = shift;
+    my ($pkgcnt, $pkgsubcnt);
+    map({ $pkgcnt++; $pkgsubcnt += $self->{_pkgs}{$_}->count; }
+	keys %{$self->{_pkgs}});
+    wantarray ? ($pkgcnt, $pkgsubcnt) : $pkgcnt;
     }
 
 # Pkgs is all versions of a given package (eg: apache-1.x and apache-2.x)
@@ -1458,9 +1474,13 @@ sub store
     {
     my $self = shift;
     print("\$pkgnum++;\n");
-    print("verbose(\"\\rReading pkgsrc database: ",
-	  "\$pkgnum / \$pkgcnt pkgs\");\n");
     map($self->{_pkgver}{$_}->store, keys %{$self->{_pkgver}});
+    }
+
+sub count
+    {
+    my $self = shift;
+    scalar(keys %{$self->{_pkgver}});
     }
 
 # PkgVer is a unique package+version
@@ -1513,7 +1533,8 @@ sub store
     {
     my $self = shift;
     my $data;
-    print("\$pkgver = \$pkglist->add(\"$self->{_pkg}\", \"$self->{_ver}\");\n");
+    print("\$pkgver = \$pkglist->add(\"$self->{_pkg}\", \"$self->{_ver}\"); ");
+    print("__pkgcount(1);\n");
     foreach ($self->vars)
 	{
 	($data = $self->{$_}) =~ s/([\\\$\@\%\"])/\\$1/g;
