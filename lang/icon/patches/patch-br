@@ -1,0 +1,32 @@
+--- /dev/null	Fri Jun 19 03:24:28 1998
++++ config/unix/alpha_netbsd/define.h	Fri Jun 19 05:00:47 1998
+@@ -0,0 +1,28 @@
++#define Standard
++#define IconGcvt
++#define index strchr
++#define rindex strrchr
++#define GetHost
++#define MaxHdr 13400
++#define MaxStatSize 20480
++
++#define GenericBSD
++#define BSD_4_4_LITE    1	/* This is new, for 4.4Lite specific stuff */
++#define UNIX 1
++#define LoadFunc
++#define ExecImages
++
++#define KeyboardFncs
++#define HaveTioc
++#define USE_OLD_TTY
++#define AllowConst
++#define SysOpt
++#define CComp "gcc"
++#define COpts "-O2"
++
++/* CPU architecture */
++#define IntBits 32
++#define WordBits 64
++#define Double
++#define StackAlign 8
++#define Hz 1024
+

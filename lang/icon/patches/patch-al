@@ -1,0 +1,4 @@
+--- /dev/null	Wed Oct  1 17:23:30 1997
++++ config/unix/intel_netbsd/icont.hdr	Wed Oct  1 17:32:26 1997
+@@ -0,0 +1 @@
++SHELL=/bin/sh
