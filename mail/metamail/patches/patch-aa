@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2003/03/23 13:39:26 jmmv Exp $
+$NetBSD: patch-aa,v 1.5 2003/10/03 18:20:53 xtraeme Exp $
 
 --- Makefile.orig	1994-01-26 18:32:33.000000000 +0100
 +++ Makefile
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.4 2003/03/23 13:39:26 jmmv Exp $
  # On BSD 4.4 systems, you will need the following
 -# LDLIBS = -lcompat
 +OPSYS!= uname -s
-+.if ${OPSYS} == "NetBSD"
++.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
 +LDLIBS = -s -lcompat
 +.endif
  # On SGI machines, we need -lsun for getpw...(), and -lc_s saves some space.
