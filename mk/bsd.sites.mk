@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.5 2004/06/27 16:16:11 grant Exp $
+# $NetBSD: bsd.sites.mk,v 1.6 2004/07/03 12:35:04 gavan Exp $
 #
 # Default MASTER_SITES
 
@@ -297,7 +297,7 @@ MASTER_SITE_OPENOFFICE+=	\
  
 # The primary backup site. 
 MASTER_SITE_BACKUP?=	\
-	ftp://ftp.fi.NetBSD.org/pub/NetBSD/packages/distfiles/ \
+	http://ftp.fi.NetBSD.org/pub/NetBSD/packages/distfiles/ \
 	ftp://ftp.cz.NetBSD.org/pub/NetBSD/packages/distfiles/ \
 	ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/ \
 	ftp://ftp.FreeBSD.org/pub/FreeBSD/distfiles/
