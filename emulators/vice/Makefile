@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2004/01/31 00:51:39 kristerw Exp $
+# $NetBSD: Makefile,v 1.42 2004/04/24 23:34:28 snj Exp $
 #
 
 DISTNAME=		vice-1.14
@@ -20,7 +20,7 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
@@ -44,10 +44,10 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/vice
 	${MV} ${PREFIX}/share/doc/vice/*.html ${PREFIX}/share/doc/html/vice
 
-.include "../../audio/esound/buildlink2.mk"
-.include "../../devel/readline/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
+.include "../../audio/esound/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
