@@ -1,22 +1,35 @@
-*** ../rumba.0.4.s/./my_include/asm/types.h	Thu Jan  2 17:25:14 1997
---- ./my_include/asm/types.h	Sun Jun 15 02:46:57 1997
-***************
-*** 8,15 ****
-  
-  extern int	printk(const char *format, ...);
-  
-! 
-! typedef unsigned short mode_t;
-  
-  typedef signed char s8;
-  typedef signed char __s8;
---- 8,16 ----
-  
-  extern int	printk(const char *format, ...);
-  
-! #if BYTE_ORDER==LITTLE_ENDIAN
-! #define __LITTLE_ENDIAN__
-! #endif
-  
-  typedef signed char s8;
-  typedef signed char __s8;
+--- Makefile.orig	Mon Mar 23 00:09:38 1998
++++ Makefile	Sun Apr 26 15:27:48 1998
+@@ -13,12 +13,12 @@
+ ##############################################################################
+ 
+ # For NEXTSTEP/OPENSTEP:
+-CFLAGS = -Wall -O2 -traditional-cpp -g
+-INCLUDES = $(MYINCL) $(INCL)
++#CFLAGS = -Wall -O2 -traditional-cpp -g
++#INCLUDES = $(MYINCL) $(INCL)
+ # put your architecture here:
+-ARCH = -arch i386
+-THE_CC = cc
+-RPC_WARNFLAGS = -Wno-unused -Wno-switch -Wno-uninitialized
++#ARCH = -arch i386
++#THE_CC = cc
++#RPC_WARNFLAGS = -Wno-unused -Wno-switch -Wno-uninitialized
+ 
+ # For Linux:
+ #CFLAGS = -Wall -O2 -g
+@@ -32,10 +32,10 @@
+ #RPC_WARNFLAGS = -Wno-unused -Wno-switch -Wno-uninitialized
+ 
+ # For NetBsd
+-#CFLAGS = -Wall -O2 -DNETBSD
+-#INCLUDES = $(MYINCL) $(INCL)
+-#THE_CC = cc
+-#RPC_WARNFLAGS = -Wno-unused -Wno-switch -Wno-uninitialized
++CFLAGS = -Wall -O2 -DNETBSD
++INCLUDES = $(MYINCL) $(INCL)
++THE_CC = cc
++RPC_WARNFLAGS = -Wno-unused -Wno-switch -Wno-uninitialized
+ 
+ # For HP-UX:
+ # this "CFLAGS" line is for HP's cc, obviously. For gcc try "-Wall -O2"
