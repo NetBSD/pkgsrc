@@ -1,15 +1,15 @@
-$NetBSD: patch-ag,v 1.1 2000/01/17 05:34:35 christos Exp $
+$NetBSD: patch-ag,v 1.2 2000/01/27 17:12:05 hubertf Exp $
 
---- uidswap.c.orig	Wed Nov 24 19:55:00 1999
-+++ uidswap.c	Sun Jan 16 23:48:54 2000
-@@ -27,8 +27,10 @@
+--- uidswap.c.orig	Thu Jan 20 14:18:16 2000
++++ uidswap.c	Thu Jan 27 17:04:38 2000
+@@ -26,8 +26,10 @@
+    is not part of the posix specification. */
  #define SAVED_IDS_WORK_WITH_SETEUID
- #endif /* _POSIX_SAVED_IDS */
  
 +#ifdef SAVED_IDS_WORK_WITH_SETEUID
  /* Saved effective uid. */
  static uid_t saved_euid = 0;
 +#endif
  
- /*
-  * Temporarily changes to the given uid.  If the effective user
+ #endif /* _POSIX_SAVED_IDS */
+ 
