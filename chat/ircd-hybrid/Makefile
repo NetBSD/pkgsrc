@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/09/01 10:13:09 cjep Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/22 08:47:32 grant Exp $
 #
 
 DISTNAME=	ircd-hybrid-6.2
@@ -42,15 +42,15 @@ IRCD_HYBRID_SDIR=		${IRCD_HYBRID_SPATH:C|/[^/]*$||}
 	IRCD_HYBRID_USERS_PREALLOCATE IRCD_HYBRID_NICKNAMEHISTORYLENGTH \
 	IRCD_HYBRID_MAXSENDQLENGTH IRCD_HYBRID_INITIAL_DBUFS \
 	IRCD_HYBRID_HARD_FDLIMIT_ IRCD_HYBRID_INIT_MAXCLIENTS
-. ifdef ${def}
+.  ifdef ${def}
 _DEFS+=		-D${def:S|^IRCD_HYBRID_||}=${${def}}
-. endif
+.  endif
 .endfor
 .for def in \
 	IRCD_HYBRID_NETWORK_NAME IRCD_HYBRID_NETWORK_DESC
-. ifdef ${def}
+.  ifdef ${def}
 _DEFS+=		-D${def:S|^IRCD_HYBRID_||}=\"${${def}:Q}\"
-. endif
+.  endif
 .endfor
 .for def in \
 	IRCD_HYBRID_DPATH IRCD_HYBRID_SPATH \
@@ -84,9 +84,9 @@ MAKE_FLAGS+=	PREFIX=${PREFIX} DESTDIR=${DESTDIR}
 	IRCD_HYBRID_NETWORK_NAME IRCD_HYBRID_NETWORK_DESC \
 	IRCD_HYBRID_FNAME_OPERLOG IRCD_HYBRID_PPATH \
 	IRCD_HYBRID_IRC_USER IRCD_HYBRID_IRC_GROUP
-. ifdef ${def}
+.  ifdef ${def}
 BUILD_DEFS+=	${def}
-. endif
+.  endif
 .endfor
 .ifdef ${IRCD_HYBRID_USE_SYSLOG} == "YES"
 BUILD_DEFS+=	IRCD_HYBRID_USE_SYSLOG
