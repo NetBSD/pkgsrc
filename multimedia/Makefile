@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/26 13:37:17 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2004/01/26 14:52:12 jmmv Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -17,10 +17,13 @@ SUBDIR+=	kmplayer
 SUBDIR+=	libflash
 SUBDIR+=	mencoder
 SUBDIR+=	mjpegtools
+SUBDIR+=	moz-bin-flash
+SUBDIR+=	moz-flash
 SUBDIR+=	moz-mplayer
 SUBDIR+=	mplayer
 SUBDIR+=	mplayer-share
 SUBDIR+=	mplex
+SUBDIR+=	ns-player
 SUBDIR+=	realplayer
 SUBDIR+=	realplayer-codecs
 SUBDIR+=	trplayer
