@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6254 2004/06/21 01:34:16 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6255 2004/06/21 02:09:58 lukem Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2989,3 +2989,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-XML-RSS-Parser-2.15 [schmonz 2004-06-20]
 	Added p5-XML-RAI-0.51 [schmonz 2004-06-20]
 	Updated websvn to 1.40 [xtraeme 2004-06-21]
+	Updated bozohttpd to 20040218nb6 [lukem 2004-06-21]
