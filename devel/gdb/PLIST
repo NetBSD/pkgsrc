@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.4 2002/11/30 14:18:41 grant Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/03/10 23:50:48 seb Exp $
 bin/gdb
 include/ansidecl.h
 include/bfd.h
 include/bfdlink.h
 include/dis-asm.h
 include/symcat.h
-@unexec ${INSTALL_INFO} --delete %D/info/mmalloc.info %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/bfd.info %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/gdb.info %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/gdbint.info %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/stabs.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/bfd.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gdb.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gdbint.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/mmalloc.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/stabs.info
 info/bfd.info
 info/bfd.info-1
 info/bfd.info-2
@@ -20,10 +20,6 @@ info/bfd.info-6
 info/bfd.info-7
 info/bfd.info-8
 info/bfd.info-9
-info/configure.info
-info/configure.info-1
-info/configure.info-2
-info/configure.info-3
 info/gdb.info
 info/gdb.info-1
 info/gdb.info-10
@@ -32,7 +28,6 @@ info/gdb.info-12
 info/gdb.info-13
 info/gdb.info-14
 info/gdb.info-15
-info/gdb.info-16
 info/gdb.info-2
 info/gdb.info-3
 info/gdb.info-4
@@ -48,35 +43,39 @@ info/gdbint.info-3
 info/gdbint.info-4
 info/gdbint.info-5
 info/gdbint.info-6
+info/gdbint.info-7
 info/mmalloc.info
 info/stabs.info
 info/stabs.info-1
 info/stabs.info-2
 info/stabs.info-3
 info/stabs.info-4
-info/standards.info
-@exec ${INSTALL_INFO} %D/info/standards.info %D/info/dir
-@exec ${INSTALL_INFO} %D/info/configure.info %D/info/dir
-@exec ${INSTALL_INFO} %D/info/mmalloc.info %D/info/dir
-@exec ${INSTALL_INFO} %D/info/bfd.info %D/info/dir
-@exec ${INSTALL_INFO} %D/info/gdb.info %D/info/dir
-@exec ${INSTALL_INFO} %D/info/gdbint.info %D/info/dir
-@exec ${INSTALL_INFO} %D/info/stabs.info %D/info/dir
-lib/libbfd.la
-lib/libiberty.a
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/bfd.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/gdb.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/gdbint.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/mmalloc.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/stabs.info
+lib/libbfd-2.13.90.so
 lib/libbfd.a
+lib/libbfd.la
+lib/libbfd.so
+lib/libiberty.a
+lib/libmmalloc.a
+lib/libopcodes-2.13.90.so
 lib/libopcodes.a
 lib/libopcodes.la
-lib/libmmalloc.a
-man/man1/gdb.1
+lib/libopcodes.so
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/opcodes.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/opcodes.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/bfd.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/opcodes.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/bfd.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/opcodes.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/opcodes.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/bfd.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/opcodes.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/bfd.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/opcodes.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/bfd.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/opcodes.mo
+man/man1/gdb.1
