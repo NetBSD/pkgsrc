@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2003/09/23 13:39:41 wiz Exp $
+
+--- Makefile.orig	Tue Sep 23 10:30:17 2003
++++ Makefile	Tue Sep 23 10:31:00 2003
+@@ -7,8 +7,8 @@
+ all: $(CMD)
+ 
+ install: $(CMD)
+-	install -c $(CMD) ${PREFIX}/bin/$(CMD)
+-	install -m 664 $(CMD).1 ${PREFIX}/man/man1
++	${BSD_INSTALL_SCRIPT} $(CMD) ${PREFIX}/bin/$(CMD)
++	${BSD_INSTALL_MAN} $(CMD).1 ${PREFIX}/man/man1/$(CMD).1
+ 
+ clean:
+ 	rm -f $(CMD)
