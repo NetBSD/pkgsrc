@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 1999/07/13 00:56:14 jlam Exp $
+
+--- doc/Makefile.in.orig	Thu Feb 18 12:24:36 1999
++++ doc/Makefile.in	Tue Jul  6 13:36:33 1999
+@@ -53,7 +53,7 @@
+ 	$(RM) $@
+ 	-${NROFF} -man $< > $@
+ 
+-all: info dvi html ps text
++all: info # dvi html ps text
+ nodvi: info html text
+ 
+ readline.dvi: $(RLSRC)
