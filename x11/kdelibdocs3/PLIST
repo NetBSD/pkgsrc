@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/02/15 11:03:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/03/09 11:37:39 markd Exp $
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/arts.tag
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/html/annotated.html
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/html/artsmessage_8cc-source.html
@@ -3522,6 +3522,7 @@ share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint/html/jobitem_8h-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint/html/kaddprinterwizard_8cpp-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint/html/kcupsprinterimpl_8cpp-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint/html/kcupsprinterimpl_8h-source.html
+share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint/html/kdeprint__management__module_8cpp-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint/html/kdeprintcheck_8cpp-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint/html/kdeprintcheck_8h-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint/html/kdeprintd_8cpp-source.html
@@ -6494,6 +6495,8 @@ share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/css__extensions_8cpp-source.htm
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/css__extensions_8h-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/css__extensionsimpl_8cpp-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/css__extensionsimpl_8h-source.html
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/css__renderstyledeclarationimpl_8cpp-source.html
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/css__renderstyledeclarationimpl_8h-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/css__rule_8cpp-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/css__rule_8h-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/css__ruleimpl_8cpp-source.html
@@ -6842,6 +6845,8 @@ share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/structkhtml_1_1EditorContext-me
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/structkhtml_1_1EditorContext.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/testecma_8cpp-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/tokenizer_8cpp-source.html
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/xmlhttprequest_8cpp-source.html
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/xmlhttprequest_8h-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/khtml.tag
 share/doc/kde/HTML/en/kdelibs-apidocs/kio/html/annotated.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kio/html/authinfo_8cpp-source.html
