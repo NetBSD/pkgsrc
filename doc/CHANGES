@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1791 2003/03/28 09:43:13 wiz Exp $
+$NetBSD: CHANGES,v 1.1792 2003/03/28 11:11:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1333,3 +1333,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ap-php4 to 4.2.3nb1 [salo 2003-03-28]
 	Updated rxvt to 2.7.10nb2 [salo 2003-03-28]
 	Updated delegate to 8.5.2 [wiz 2003-03-28]
+	Updated ipa to 1.3.2 [wiz 2003-03-28]
