@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:53:56 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/04/25 09:19:19 snj Exp $
 #
 
 DISTNAME=	toshutils-991217
@@ -12,7 +12,7 @@ COMMENT=	NetBSD port of the Toshiba(tm) Linux Utilities
 
 ONLY_FOR_PLATFORM= *-*-i386
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
 post-install:
@@ -21,5 +21,5 @@ post-install:
 	${INSTALL_MAN}	${WRKSRC}/doc/${f}	${PREFIX}/share/doc/toshutils
 .endfor
 
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
