@@ -1,0 +1,20 @@
+--- config/Makefile.netbsd.in.orig	Sat Nov 29 21:58:24 1997
++++ config/Makefile.netbsd.in	Wed Feb 11 00:31:43 1998
+@@ -9,6 +9,17 @@
+ 
+ CXXFLAGS += -I@top_srcdir@
+ 
++.include <bsd.port.subdir.mk>
++.if (${ARCH} == "hp300")
++CXXFLAGS += -D_HP300_CPU_H_
++.endif
++.if (${ARCH} == "mac68k")
++CXXFLAGS += -D_CPU_MACHINE_
++.endif
++.if (${ARCH} == "x68k")
++CXXFLAGS += -D_X68K_CPU_H_
++.endif
++
+ OBJS = \
+ MeterMaker.o \
+ cpumeter.o \
