@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.983 2003/11/01 16:54:25 salo Exp $
+$NetBSD: TODO,v 1.984 2003/11/01 18:28:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -210,7 +210,6 @@ Suggested package updates
 	o gstreamer-0.6.4
 	o gtetrinet-0.7.4
 	o gtkglext-1.0.3
-	o gtkmm-2.2.8
 	o gtksee-0.5.3
 	o guile-1.6.4
 	o hatari-0.45
