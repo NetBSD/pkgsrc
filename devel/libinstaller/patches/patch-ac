@@ -1,0 +1,27 @@
+$NetBSD: patch-ac,v 1.1 2005/02/20 00:57:39 xtraeme Exp $
+
+--- functions.c.orig	2005-02-20 01:36:07.000000000 +0100
++++ functions.c	2005-02-20 01:37:42.000000000 +0100
+@@ -202,10 +202,10 @@
+ 		return(0);
+ 
+ 	for (i = 2; hex[i] != '\0'; i++) {
+-		d = toupper(hex[i]);
+-		if (isspace(d))
++		d = toupper((int)hex[i]);
++		if (isspace((int)d))
+ 			continue;
+-		if (isdigit(d))
++		if (isdigit((int)d))
+ 			a = a * 16 + (d - '0');
+ 		else if (d >= 'A' && d <= 'F')
+ 			a = a * 16 + (d + 10 - 'A');
+@@ -223,7 +223,7 @@
+ 	int i;
+ 
+ 	for (i = 0; line[i] != '\0'; i++) {
+-		if (isspace(line[i]))
++		if (isspace((int)line[i]))
+ 			continue;
+ 		if (line[i] == x)
+ 			return(1);
