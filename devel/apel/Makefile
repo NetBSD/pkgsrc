@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/09/12 02:49:44 minoura Exp $
+# $NetBSD: Makefile,v 1.9 2004/03/25 03:16:25 uebayasi Exp $
 
 DISTNAME=	apel-10.6
 CATEGORIES=	devel
@@ -11,6 +11,8 @@ COMMENT=	Portable Emacs Library
 #CONFLICTS+=	apel-*
 #CONFLICTS+=	xemacs-apel-*
 
+PLIST_SRC=	${PKGDIR}/PLIST.${EMACS_FLAVOR}
+
 MAKE_FLAGS+=	EMACS=${EMACS_FLAVOR}
 MAKE_FLAGS+=	LISPDIR=${EMACS_LISPPREFIX}
 MAKE_FLAGS+=	VERSION_SPECIFIC_LISPDIR=${EMACS_LISPPREFIX}
@@ -22,13 +24,10 @@ EMACS_VERSIONS_ACCEPTED=	emacs21 emacs20 xemacs214 xemacs215
 .if ${EMACS_FLAVOR} == "emacs"
 ALL_TARGET=	elc
 INSTALL_TARGET=	install
-PLIST_SRC=	${PKGDIR}/PLIST.emacs
 .else	# ${EMACS_FLAVOR} == "xemacs"
-ALL_TARGET=
+ALL_TARGET=	package
 INSTALL_TARGET=	install-package
-PLIST_SRC=	${PKGDIR}/PLIST.xemacs
 MAKE_FLAGS+=	PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
-DEPENDS+=	xemacs-packages-*:../../editors/xemacs-packages
 .endif
 
 DOCDIR=		${PREFIX}/share/doc/apel
