@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.74 2005/01/28 07:37:55 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.75 2005/01/28 07:39:13 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -299,6 +299,8 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	${ECHO} "	\$${CHMOD} +x ./+DIRS";				\
 	${ECHO} "	;;";						\
 	${ECHO} "esac";							\
+	${ECHO} "";							\
+	${ECHO} "# end of install-dirs";				\
 	} > ${.TARGET}.tmp;						\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
 
