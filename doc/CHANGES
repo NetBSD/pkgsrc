@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6077 2004/05/31 11:48:28 tron Exp $
+$NetBSD: CHANGES,v 1.6078 2004/05/31 12:25:43 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2706,3 +2706,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated rapidsvn to 0.6.0 [epg 2004-05-31]
 	Added trac-0.7 [epg 2004-05-31]
 	Updated net-snmp to 5.1.1nb1 [tron 2004-05-31]
+	Updated kdebase3 to 3.2.2nb3 [markd 2004-05-31]
