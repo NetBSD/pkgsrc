@@ -1,5 +1,4 @@
-This program adjusts an audio mixer from X, the console, a terminal,
-the command line or a script.  Interactive use is with GTK+ and
-ncurses.
+Aumix lets you adjust all the values from your audio mixer from an easy to
+use interface.
 
-Trevor Johnson <trevor@jpj.net>
+This package is built with ncurses support only.
