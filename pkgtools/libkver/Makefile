@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/09/30 19:13:30 seb Exp $
+# $NetBSD: Makefile,v 1.7 2003/10/27 20:31:42 seb Exp $
 
 DISTNAME=		libkver-${VERSION}
 CATEGORIES=		pkgtools
@@ -17,7 +17,7 @@ NO_MTREE=		# defined
 NO_PKG_REGISTER=	# defined
 NO_PACKAGE=		Deinstallation is not permitted
 
-VERSION=		0.2
+VERSION=		0.3
 
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 
