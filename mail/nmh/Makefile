@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 1999/08/18 08:53:33 agc Exp $
+# $NetBSD: Makefile,v 1.28 1999/08/20 14:05:15 enami Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/04 06:51:28 markm Exp
 #
 
@@ -42,7 +42,7 @@ RESTRICTED=	uses Kerberos encryption code
 
 DOCDIR=		share/doc/nmh
 
-BUILD_DEFS+=	USE_KERBEROS4 NMH_MTA NMH_EDITOR NMH_PAGER
+BUILD_DEFS+=	USE_KERBEROS4 NMH_MTA NMH_EDITOR NMH_PAGER NMH_HASH_BACKUP
 
 # Since we patch the autoconf files as well as their outputs, avoid attempt
 # to regenerate header input files with 'autoheader' by Makefile.
