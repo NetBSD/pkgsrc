@@ -1,8 +1,26 @@
-$NetBSD: patch-ad,v 1.7 2004/05/19 17:42:35 kim Exp $
+$NetBSD: patch-ad,v 1.8 2005/03/29 04:38:10 kim Exp $
 
---- config_f.h.orig	Fri Mar  8 12:36:45 2002
-+++ config_f.h	Sun Aug 11 00:19:17 2002
-@@ -61,7 +61,11 @@
+--- config_f.h.orig	2005-03-04 08:46:04.000000000 -0500
++++ config_f.h	2005-03-28 22:41:48.000000000 -0500
+@@ -44,7 +44,16 @@
+  *	         of nls...
+  *
+  */
+-#define SHORT_STRINGS
++#if defined(__NetBSD__)
++# include <sys/param.h>
++# if defined(__NetBSD_Version__) && (__NetBSD_Version__ >= 200000000)
++#  define SHORT_STRINGS
++# else
++#  undef SHORT_STRINGS
++# endif
++#else
++# define SHORT_STRINGS
++#endif
+ 
+ /*
+  * WIDE_STRINGS	Represent strings using wide characters
+@@ -69,7 +78,11 @@
   *		if you don't have <nl_types.h>, you don't want
   *		to define this.
   */
