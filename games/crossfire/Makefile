@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/01/02 03:20:11 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2000/05/25 09:07:31 wiz Exp $
 #
 
 DISTNAME=	crossfire-0.94.2
@@ -9,7 +9,7 @@ DISTFILES=	${CF_SRC} ${CF_MAPS} ${CF_SOUND}
 MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://www.fak14.uni-muenchen.de/~h729ihqu/games/crossfire.html
 
-DEPENDS+=	rplay-3.2.0b6:../../audio/rplay
+DEPENDS+=	rplay>=3.2.0:../../audio/rplay
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
 EXTRACT_ONLY=	${CF_SRC}
@@ -25,6 +25,9 @@ SCRIPTS_ENV+=	${SCRIPTSDIR}
 INSTALL_FILE=	${WRKDIR}/.INSTALL
 DEINSTALL_FILE=	${WRKDIR}/.DEINSTALL
 
+# for rplay
+MAKE_ENV+=	LOCALBASE=${LOCALBASE}
+
 post-patch:
 	@${MV} ${WRKSRC}/config/crosssite.def \
 		${WRKSRC}/config/crosssite.def-orig
@@ -39,6 +42,14 @@ post-patch:
 	@${SED} -e 's|XXXLOCALBASEXXX|${LOCALBASE}|' \
 		-e 's|XXXX11BASEXXX|${X11BASE}|' \
 		${PKGDIR}/install > ${INSTALL_FILE}
+	@cd ${WRKSRC}/utils && \
+		${MV} mktable.script mktable.script.orig && \
+		${SED} "s@/usr/local@${LOCALBASE}@" mktable.script.orig > \
+			mktable.script
+	@cd ${WRKSRC}/utils && \
+		${MV} mapconv.script mapconv.script.orig && \
+		${SED} "s@/usr/local@${LOCALBASE}@" mapconv.script.orig > \
+			mapconv.script
 
 post-install:
 	cd ${X11BASE}/lib/crossfire && \
@@ -55,6 +66,7 @@ post-install:
 	@${CHMOD} 2755 ${X11BASE}/bin/crossfire
 	@${CHOWN} -R root:games ${X11BASE}/lib/crossfire
 	@${CHMOD} 775 ${X11BASE}/lib/crossfire/players
+	@${CHMOD} 775 ${X11BASE}/lib/crossfire/unique-items
 	@${CHMOD} 775 ${X11BASE}/lib/crossfire
 	@${CHMOD} 664 ${X11BASE}/lib/crossfire/highscore
 
