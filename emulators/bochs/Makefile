@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2001/05/15 20:20:07 fredb Exp $
+# $NetBSD: Makefile,v 1.14 2001/05/15 22:43:25 wiz Exp $
 
-DISTNAME=		bochs-2000_0325a
-PKGNAME=		bochs-2000.03.25a
+DISTNAME=		bochs-bugfix-20010409-beta
+PKGNAME=		bochs-2001.04.09
+WRKSRC=			${WRKDIR}/bochs
 CATEGORIES=		emulators
-MASTER_SITES=		ftp://bochs.com/bochs/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bochs/}
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://bochs.sourceforge.net/
