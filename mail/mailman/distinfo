@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/08/23 15:28:17 bouyer Exp $
+$NetBSD: distinfo,v 1.2 2003/12/23 11:02:13 xtraeme Exp $
 
-SHA1 (mailman-2.0.12.tgz) = e1268a347168e4c61aaffbcd8cd8d92483a92766
-Size (mailman-2.0.12.tgz) = 415993 bytes
-SHA1 (patch-aa) = f427d7e6acb3953ead0a37f63c41acf6ed17909d
-SHA1 (patch-ab) = d353cac87f319863c8cd43a79937ff99f26be001
-SHA1 (patch-ac) = dc9967b5336541ddaf72322e2b5d5a6b2323c60d
-SHA1 (patch-ad) = 03d6bafcfee7863bd9b04f44da3dd2861d9b6da6
-SHA1 (patch-ae) = 6445fa3401949bf8b479ca28eddc5d13c5a287de
-SHA1 (patch-af) = 847ed7d6aa5f32949911808a7b4685df210be424
+SHA1 (mailman-2.1.3.tgz) = 20caca3fdb9051153063146b1253e359f16e1c0f
+Size (mailman-2.1.3.tgz) = 6365000 bytes
+SHA1 (patch-aa) = 032d6cba8daa69ddddd78478e3cd84bc69ad1b18
+SHA1 (patch-ab) = 39f6294e53110bd1fd09b1e90ab46820f4d48e3f
+SHA1 (patch-ac) = da26a9a02d0fc90e7a58edebdb3601a30c865821
+SHA1 (patch-ad) = 665884b9dd1789e4abd430c762bdbfd707d48d30
+SHA1 (patch-ae) = a63c55b5a95f5d4b90645146595b7a06f71d87ac
+SHA1 (patch-af) = 985a619a055151d998cefd0c1b7280a0d55f889e
+SHA1 (patch-ag) = f94f190e69ce892841b88574ec8e9f100b182ed9
