@@ -78,7 +78,7 @@
 #    SUBDIR += xgrab
 #    SUBDIR += xkeycaps
 #    SUBDIR += xloadimage
-#    SUBDIR += xlockmore
+    SUBDIR += xlockmore
     SUBDIR += xmascot
 #    SUBDIR += xmbdfed
 #    SUBDIR += xmold
