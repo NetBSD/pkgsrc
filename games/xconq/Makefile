@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/10/23 13:18:03 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/10/23 13:25:30 jlam Exp $
 
 DISTNAME=		xconq-7.4.1
 CATEGORIES=		games x11
@@ -26,5 +26,6 @@ post-build:
 post-install:
 	cd ${WRKSRC}/doc && ${MAKE_PROGRAM} install-info
 
+.include "../../mk/x11.buildlink.mk"
 .include "../../x11/tk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
