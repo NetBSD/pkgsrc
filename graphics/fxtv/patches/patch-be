@@ -1,0 +1,13 @@
+$NetBSD: patch-be,v 1.1 2003/09/28 15:58:34 jmmv Exp $
+
+--- xutil.h.orig	2003-09-28 17:18:28.000000000 +0200
++++ xutil.h	2003-09-28 17:18:28.000000000 +0200
+@@ -137,6 +137,8 @@
+                                       int           screen,
+                                       XVisualInfo **fb_visual );
+ 
++void XUTILSetAlwaysOnTop( TV_BOOL status );
++
+ #ifdef __cplusplus
+ }  /* Close 'extern "C"' */
+ #endif
