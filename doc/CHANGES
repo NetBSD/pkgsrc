@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6487 2004/07/07 18:05:04 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6488 2004/07/07 18:45:04 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3299,3 +3299,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added argus-3.3 [xtraeme 2004-07-07]
 	Added arping-2.01 [xtraeme 2004-07-07]
 	Added cmatrix-1.2a [xtraeme 2004-07-07]
+	Updated rss2email to 2.511 [schmonz 2004-07-07]
