@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/22 05:14:44 martti Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/30 06:01:58 wiz Exp $
 #
 
 DISTNAME=		twin-src-3.1.14
@@ -8,7 +8,7 @@ WRKSRC=			${WRKDIR}/twin
 CATEGORIES=		emulators
 MASTER_SITES=		ftp://ftp.willows.com/pub/twin/
 
-MAINTAINER=		collver1@comcast.net
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.willows.com/
 COMMENT=		Cross-platform implementation of the win32 api
 
