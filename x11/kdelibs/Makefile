@@ -1,15 +1,12 @@
-# $NetBSD: Makefile,v 1.31 1999/03/23 17:47:59 tron Exp $
+# $NetBSD: Makefile,v 1.32 1999/06/03 22:44:04 tron Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
-DISTNAME=	kdelibs-1.1
+DISTNAME=	kdelibs-1.1.1
 CATEGORIES=	x11 kde
 MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/1.1/distribution/tar/generic/source/bz2/ \
 		ftp://ftp.de.kde.org/pub/kde/stable/1.1/distribution/tar/generic/source/bz2/
 EXTRACT_SUFX=	.tar.bz2
-PATCH_SITES=	ftp://ftp.kde.org/pub/kde/security_patches/ \
-		ftp://ftp.de.kde.org/pub/kde/security_patches/
-PATCHFILES=	kdelibs-1.1-connect.patch
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=       http://www.kde.org/
@@ -30,8 +27,5 @@ CONFIGURE_ARGS=	"--datadir=${PREFIX}/share/kde" \
 CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	CXXFLAGS="${CFLAGS}" \
 		all_libraries="-L${LOCALBASE}/lib"
-
-pre-patch:
-		@${LN} -s . ${WRKSRC}/${DISTNAME}
 
 .include "../../mk/bsd.pkg.mk"
