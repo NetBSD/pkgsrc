@@ -1,20 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/06/06 06:54:35 jlam Exp $
-#
-# This Makefile fragment is included by packages that use openldap.
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally define BUILDLINK_DEPENDS.openldap to the dependency pattern
-#     for the version of openldap desired.
-# (2) Include this Makefile fragment in the package Makefile.
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/21 23:00:27 jlam Exp $
 
 .if !defined(OPENLDAP_BUILDLINK2_MK)
 OPENLDAP_BUILDLINK2_MK=	# defined
 
-.include "../../mk/bsd.buildlink2.mk"
-
+BUILDLINK_PACKAGES+=		openldap
 BUILDLINK_DEPENDS.openldap?=	openldap-2.0.*
-DEPENDS+=	${BUILDLINK_DEPENDS.openldap}:../../databases/openldap
+BUILDLINK_PKGSRCDIR.openldap?=	../../databases/openldap
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.openldap=openldap
 BUILDLINK_PREFIX.openldap_DEFAULT=	${LOCALBASE}

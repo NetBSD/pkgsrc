@@ -1,16 +1,15 @@
-# $NetBSD: motif.buildlink2.mk,v 1.1.2.1 2002/05/08 16:07:30 jlam Exp $
+# $NetBSD: motif.buildlink2.mk,v 1.1.2.2 2002/06/21 23:00:35 jlam Exp $
 #
-# This Makefile fragment is included by packages that use Motif.
+# USE_MOTIF12
+#	use a Motif-1.2-compatible installation, otherwise, assume
+#	we want a Motif-2.0-compatible installation
 #
-# To use this Makefile fragment, simply:
+# MOTIFBASE, MOTIF12BASE
+#	choose the Motif-2.0 or Motif-1.2-compatible installation at the
+#	named location
 #
-# (1) Optionally set USE_MOTIF12 to use a Motif-1.2-compatible installation.
-#     Otherwise, assume we want a Motif-2.0-compatible installation.
-# (2) Optionally set MOTIFBASE or MOTIF12BASE to choose the Motif-2.0 or
-#     Motif-1.2-compatible installation at the named location,
-# (3) Or optionally set MOTIF_TYPE or MOTIF12_TYPE to choose a specific
-#     Motif-2.0 or Motif-1.2-compatible package to be used,
-# (4) And include this Makefile fragment in the package Makefile.
+# MOTIF_TYPE, MOTIF12_TYPE
+#	choose a specific Motif-2.0 or Motif-1.2-compatible package.
 
 .if !defined(MOTIF_BUILDLINK2_MK)
 MOTIF_BUILDLINK2_MK=	# defined
@@ -123,7 +122,6 @@ _MOTIFBASE=		${BUILDLINK_PREFIX.lesstif12}
 # Link the pre-existing Motif libraries and headers in ${_MOTIFBASE} into
 # ${BUILDLINK_DIR}.
 #
-.  include "../../mk/bsd.buildlink2.mk"
 BUILDLINK_PREFIX.motif=		${_MOTIFBASE}
 BUILDLINK_FILES.motif=		include/Mrm/*
 BUILDLINK_FILES.motif+=		include/Xm/*

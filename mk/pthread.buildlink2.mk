@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink2.mk,v 1.1.2.1 2002/05/08 16:07:28 jlam Exp $
+# $NetBSD: pthread.buildlink2.mk,v 1.1.2.2 2002/06/21 23:00:35 jlam Exp $
 #
 # This Makefile fragment is included by packages that use pthreads.
 # This Makefile fragment is also included directly by bsd.prefs.mk.
@@ -72,7 +72,6 @@ PTHREAD_BUILDLINK2_MK=	# defined
 #
 # Link the native pthread libraries and headers into ${BUILDLINK_DIR}.
 #
-.  include "../../mk/bsd.buildlink2.mk"
 BUILDLINK_PREFIX.pthread=	/usr
 BUILDLINK_FILES.pthread=	include/pthread.h
 BUILDLINK_FILES.pthread+=	lib/libpthread.*

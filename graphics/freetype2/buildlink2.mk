@@ -1,20 +1,12 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/05/11 02:09:10 jlam Exp $
-#
-# This Makefile fragment is included by packages that use freetype2.
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally define BUILDLINK_DEPENDS.freetype2 to the dependency pattern
-#     for the version of freetype2 desired.
-# (2) Include this Makefile fragment in the package Makefile.
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/21 23:00:30 jlam Exp $
 
 .if !defined(FREETYPE2_BUILDLINK2_MK)
 FREETYPE2_BUILDLINK2_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../mk/bsd.buildlink2.mk"
 
 BUILDLINK_DEPENDS.freetype2?=	freetype2>=2.0.1
+BUILDLINK_PKGSRCDIR.freetype2?=	../../graphics/freetype2
 
 # Check if we got FreeType2 distributed with XFree86 4.x or if we need to
 # depend on the freetype2 package.
@@ -31,7 +23,7 @@ _NEED_FREETYPE2=	NO
 .endif
 
 .if ${_NEED_FREETYPE2} == "YES"
-DEPENDS+=	${BUILDLINK_DEPENDS.freetype2}:../../graphics/freetype2
+BUILDLINK_PACKAGES+=			freetype2
 EVAL_PREFIX+=	BUILDLINK_PREFIX.freetype2=freetype2
 BUILDLINK_PREFIX.freetype2_DEFAULT=	${LOCALBASE}
 .else

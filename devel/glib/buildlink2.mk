@@ -1,20 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:36 jlam Exp $
-#
-# This Makefile fragment is included by packages that use glib.
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally define BUILDLINK_DEPENDS.glib to the dependency pattern
-#     for the version of glib desired.
-# (2) Include this Makefile fragment in the package Makefile.
+# $NetBSD: buildlink2.mk,v 1.1.2.3 2002/06/21 23:00:27 jlam Exp $
 
 .if !defined(GLIB_BUILDLINK2_MK)
 GLIB_BUILDLINK2_MK=	# defined
 
-.include "../../mk/bsd.buildlink2.mk"
-
+BUILDLINK_PACKAGES+=		glib
 BUILDLINK_DEPENDS.glib?=	glib>=1.2.8
-DEPENDS+=	${BUILDLINK_DEPENDS.glib}:../../devel/glib
+BUILDLINK_PKGSRCDIR.glib?=	../../devel/glib
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.glib=glib
 BUILDLINK_PREFIX.glib_DEFAULT=	${LOCALBASE}

@@ -1,20 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:32 jlam Exp $
-#
-# This Makefile fragment is included by packages that use libaudiofile.
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally define BUILDLINK_DEPENDS.audiofile to the dependency pattern
-#     for the version of libaudiofile desired.
-# (2) Include this Makefile fragment in the package Makefile.
+# $NetBSD: buildlink2.mk,v 1.1.2.3 2002/06/21 23:00:25 jlam Exp $
 
 .if !defined(AUDIOFILE_BUILDLINK2_MK)
 AUDIOFILE_BUILDLINK2_MK=	# defined
 
-.include "../../mk/bsd.buildlink2.mk"
-
+BUILDLINK_PACKAGES+=		audiofile
 BUILDLINK_DEPENDS.audiofile?=	libaudiofile>=0.2.1
-DEPENDS+=	${BUILDLINK_DEPENDS.audiofile}:../../audio/libaudiofile
+BUILDLINK_PKGSRCDIR.audiofile?=	../../audio/libaudiofile
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.audiofile=audiofile
 BUILDLINK_PREFIX.audiofile_DEFAULT=	${LOCALBASE}

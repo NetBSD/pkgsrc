@@ -1,20 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:48 jlam Exp $
-#
-# This Makefile fragment is included by packages that use libcrack.
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally define BUILDLINK_DEPENDS.libcrack to the dependency pattern
-#     for the version of libcrack desired.
-# (2) Include this Makefile fragment in the package Makefile.
+# $NetBSD: buildlink2.mk,v 1.1.2.3 2002/06/21 23:00:38 jlam Exp $
 
 .if !defined(LIBCRACK_BUILDLINK2_MK)
 LIBCRACK_BUILDLINK2_MK=	# defined
 
-.include "../../mk/bsd.buildlink2.mk"
-
+BUILDLINK_PACKAGES+=		libcrack
 BUILDLINK_DEPENDS.libcrack?=	libcrack>=2.7
-DEPENDS+=	${BUILDLINK_DEPENDS.libcrack}:../../security/libcrack
+BUILDLINK_PKGSRCDIR.libcrack?=	../../security/libcrack
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libcrack=libcrack
 BUILDLINK_PREFIX.libcrack_DEFAULT=	${LOCALBASE}

@@ -1,20 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/06/06 06:54:48 jlam Exp $
-#
-# This Makefile fragment is included by packages that use cyrus-sasl.
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally define BUILDLINK_DEPENDS.cyrus-sasl to the dependency pattern
-#     for the version of cyrus-sasl desired.
-# (2) Include this Makefile fragment in the package Makefile.
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/21 23:00:38 jlam Exp $
 
 .if !defined(CYRUS_SASL_BUILDLINK2_MK)
 CYRUS_SASL_BUILDLINK2_MK=	# defined
 
-.include "../../mk/bsd.buildlink2.mk"
-
-BUILDLINK_DEPENDS.cyrus-sasl?=	cyrus-sasl>=1.5.24nb2
-DEPENDS+=	${BUILDLINK_DEPENDS.cyrus-sasl}:../../security/cyrus-sasl
+BUILDLINK_PACKAGES+=			cyrus-sasl
+BUILDLINK_DEPENDS.cyrus-sasl?=		cyrus-sasl>=1.5.24nb2
+BUILDLINK_PKGSRCDIR.cyrus-sasl?=	../../security/cyrus-sasl
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.cyrus-sasl=cyrus-sasl
 BUILDLINK_PREFIX.cyrus-sasl_DEFAULT=	${LOCALBASE}

@@ -1,27 +1,26 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:43 jlam Exp $
-#
-# This Makefile fragment is included by packages that use perl.
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally define BUILDLINK_DEPENDS.perl to the dependency pattern
-#     for the version of perl desired.
-# (2) Include this Makefile fragment in the package Makefile.
+# $NetBSD: buildlink2.mk,v 1.1.2.3 2002/06/21 23:00:34 jlam Exp $
 
 .if !defined(PERL5_BUILDLINK2_MK)
 PERL5_BUILDLINK2_MK=  # defined
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../mk/bsd.buildlink2.mk"
 
 PERL5_REQD?=			5.0
+BUILDLINK_PACKAGES+=		perl
 BUILDLINK_DEPENDS.perl?=	perl>=${PERL5_REQD}
+BUILDLINK_PKGSRCDIR.perl?=	../../lang/perl5
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.perl=perl
 BUILDLINK_PREFIX.perl_DEFAULT=	${LOCALBASE}
 PERL5?=			${BUILDLINK_PREFIX.perl}/bin/perl
 
-DEPENDS+=		${BUILDLINK_DEPENDS.perl}:../../lang/perl5
+BUILDLINK_FILES.perl=	${PERL5_ARCHLIB:S/^${BUILDLINK_PREFIX.perl}\///}/CORE/*
+
+BUILDLINK_TARGETS+=	perl-buildlink
+
+perl-buildlink: _BUILDLINK_USE
+
+.endif  # PERL5_BUILDLINK2_MK
 
 .if exists(${PERL5})
 .  if exists(${BUILDLINK_PREFIX.perl}/share/mk/bsd.perl.mk)
@@ -38,11 +37,3 @@ MAKEFLAGS+=		PERL5_SITEARCH=${PERL5_SITEARCH}
 MAKEFLAGS+=		PERL5_ARCHLIB=${PERL5_ARCHLIB}
 .  endif # !exists(bsd.perl.mk) && !defined(PERL5_*)
 .endif # exists($PERL5)
-
-BUILDLINK_FILES.perl=	${PERL5_ARCHLIB:S/^${BUILDLINK_PREFIX.perl}\///}/CORE/*
-
-BUILDLINK_TARGETS+=	perl-buildlink
-
-perl-buildlink: _BUILDLINK_USE
-
-.endif  # PERL5_BUILDLINK2_MK

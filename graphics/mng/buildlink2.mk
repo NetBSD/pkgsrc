@@ -1,20 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:41 jlam Exp $
-#
-# This Makefile fragment is included by packages that use mng.
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally define BUILDLINK_DEPENDS.mng to the dependency pattern
-#     for the version of mng desired.
-# (2) Include this Makefile fragment in the package Makefile.
+# $NetBSD: buildlink2.mk,v 1.1.2.3 2002/06/21 23:00:32 jlam Exp $
 
 .if !defined(MNG_BUILDLINK2_MK)
 MNG_BUILDLINK2_MK=	# defined
 
-.include "../../mk/bsd.buildlink2.mk"
-
-BUILDLINK_DEPENDS.mng?=	mng>=1.0.0
-DEPENDS+=		${BUILDLINK_DEPENDS.mng}:../../graphics/mng
+BUILDLINK_PACKAGES+=		mng
+BUILDLINK_DEPENDS.mng?=		mng>=1.0.0
+BUILDLINK_PKGSRCDIR.mng?=	../../graphics/mng
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.mng=mng
 BUILDLINK_PREFIX.mng_DEFAULT=	${LOCALBASE}

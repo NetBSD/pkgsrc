@@ -1,23 +1,14 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:37 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.3 2002/06/21 23:00:29 jlam Exp $
 #
-# This Makefile fragment is included by packages that use readline().
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally define USE_GNU_READLINE to force use of GNU readline.
-# (2) Optionally define BUILDLINK_DEPENDS.readline to the dependency pattern
-#     for the version of GNU readline desired.
-#
-# NOTE:	You may need to do some more work to get libedit recognized over
-#	libreadline, especially by GNU configure scripts.
+# Optionally define USE_GNU_READLINE to force use of GNU readline.
 
 .if !defined(READLINE_BUILDLINK2_MK)
 READLINE_BUILDLINK2_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../mk/bsd.buildlink2.mk"
 
 BUILDLINK_DEPENDS.readline?=	readline>=2.2
+BUILDLINK_PKGSRCDIR.readline?=	../../devel/readline
 
 .if defined(USE_GNU_READLINE)
 _NEED_GNU_READLINE=	YES
@@ -29,7 +20,7 @@ _NEED_GNU_READLINE=	YES
 .endif
 
 .if ${_NEED_GNU_READLINE} == "YES"
-DEPENDS+=	${BUILDLINK_DEPENDS.readline}:../../devel/readline
+BUILDLINK_PACKAGES+=		readline
 EVAL_PREFIX+=	BUILDLINK_PREFIX.readline=readline
 BUILDLINK_PREFIX.readline_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.readline=	include/readline/*

@@ -1,23 +1,18 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:36 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.3 2002/06/21 23:00:28 jlam Exp $
 #
-# This Makefile fragment is included by packages that use ncurses.
+# Optionally define:
 #
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally define USE_NCURSES to force use of ncurses,
-#     or define INCOMPAT_CURSES to specify NetBSD versions that are
-#     missing some needed functions.
-# (2) Optionally define BUILDLINK_DEPENDS.ncurses to the dependency pattern
-#     for the version of ncurses desired.
-# (3) Include this Makefile fragment in the package Makefile.
+# USE_NCURSES		force use of ncurses
+# INCOMPAT_CURSES	specify NetBSD versions that are missing some
+#			needed functions.
 
 .if !defined(NCURSES_BUILDLINK2_MK)
 NCURSES_BUILDLINK2_MK=     # defined
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../mk/bsd.buildlink2.mk"
 
 BUILDLINK_DEPENDS.ncurses?=	ncurses>=5.0
+BUILDLINK_PKGSRCDIR.ncurses?=	../../devel/ncurses
 
 .if defined(USE_NCURSES)
 _NEED_NCURSES=		YES
@@ -36,6 +31,7 @@ _NEED_NCURSES=		YES
 .endif
 
 .if ${_NEED_NCURSES} == "YES"
+BUILDLINK_PACKAGES+=		ncurses
 EVAL_PREFIX+=	BUILDLINK_PREFIX.ncurses=ncurses
 BUILDLINK_PREFIX.ncurses_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.ncurses=	include/cursesapp.h
@@ -58,7 +54,6 @@ BUILDLINK_FILES.ncurses+=	lib/libmenu.*
 BUILDLINK_FILES.ncurses+=	lib/libncurses++.*
 BUILDLINK_FILES.ncurses+=	lib/libncurses.*
 BUILDLINK_FILES.ncurses+=	lib/libpanel.*
-DEPENDS+=			${BUILDLINK_DEPENDS.ncurses}:../../devel/ncurses
 .else
 BUILDLINK_PREFIX.ncurses=	/usr
 BUILDLINK_FILES.ncurses=	include/curses.h
@@ -74,16 +69,13 @@ BUILDLINK_TRANSFORM.ncurses+=	-e "s|/curses.h|/ncurses.h|g"
 BUILDLINK_TRANSFORM+=		l:ncurses:curses
 .endif
 
-BUILDLINK_TARGETS.ncurses+=	ncurses-buildlink
-.if defined(USE_BUILDLINK2_ONLY)
-BUILDLINK_TARGETS.ncurses+=	ncurses-curses-h
-.endif
-.if ${_NEED_NCURSES} == "NO"
-BUILDLINK_TARGETS.ncurses+=	ncurses-extra-includes-buildlink
-.endif
-BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.ncurses}
+BUILDLINK_TARGETS+=	ncurses-buildlink
+BUILDLINK_TARGETS+=	ncurses-curses-h
 
-pre-configure: ${BUILDLINK_TARGETS.ncurses}
+.if ${_NEED_NCURSES} == "NO"
+BUILDLINK_TARGETS+=	ncurses-extra-includes-buildlink
+.endif
+
 ncurses-buildlink: _BUILDLINK_USE
 
 ncurses-extra-includes-buildlink:

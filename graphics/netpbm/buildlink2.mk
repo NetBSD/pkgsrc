@@ -1,20 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/06/06 06:54:41 jlam Exp $
-#
-# This Makefile fragment is included by packages that use netpbm.
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally define BUILDLINK_DEPENDS.netpbm to the dependency pattern
-#     for the version of netpbm desired.
-# (2) Include this Makefile fragment in the package Makefile.
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/21 23:00:33 jlam Exp $
 
 .if !defined(NETPBM_BUILDLINK2_MK)
 NETPBM_BUILDLINK2_MK=	# defined
 
-.include "../../mk/bsd.buildlink2.mk"
-
+BUILDLINK_PACKAGES+=		netpbm
 BUILDLINK_DEPENDS.netpbm?=	netpbm>=9.24
-DEPENDS+=	${BUILDLINK_DEPENDS.netpbm}:../../graphics/netpbm
+BUILDLINK_PKGSRCDIR.netpbm?=	../../graphics/netpbm
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.netpbm=netpbm
 BUILDLINK_PREFIX.netpbm_DEFAULT=	${LOCALBASE}

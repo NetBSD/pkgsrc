@@ -1,17 +1,12 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/05/11 02:09:11 jlam Exp $
-#
-# This Makefile fragment is included by packages that use glu.
-#
-# To use this Makefile fragment, simply include this Makefile fragment in the
-# package Makefile.
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/21 23:00:31 jlam Exp $
 
 .if !defined(GLU_BUILDLINK2_MK)
 GLU_BUILDLINK2_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../mk/bsd.buildlink2.mk"
 
-BUILDLINK_DEPENDS.glu?=	glu>=3.4.2
+BUILDLINK_DEPENDS.glu?=		glu>=3.4.2
+BUILDLINK_PKGSRCDIR.glu?=	../../graphics/glu
 
 # Check if we got libGLU distributed with XFree86 4.x or if we need to
 # depend on the glu package.
@@ -28,7 +23,7 @@ _NEED_GLU=		NO
 .endif
 
 .if ${_NEED_GLU} == "YES"
-DEPENDS+=	${BUILDLINK_DEPENDS.glu}:../../graphics/glu
+BUILDLINK_PACKAGES+=		glu
 EVAL_PREFIX+=	BUILDLINK_PREFIX.glu=glu
 BUILDLINK_PREFIX.glu_DEFAULT=	${X11PREFIX}
 .else
