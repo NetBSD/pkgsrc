@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/05/26 08:10:43 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/10 00:09:29 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libiconv.
 #
@@ -7,10 +7,9 @@
 # (1) Optionally define ICONV_REQD to the version of libiconv desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Optionally define BUILDLINK_INCDIR and BUILDLINK_LIBDIR,
-# (4) Add ${BUILDLINK_TARGETS} to the prerequisite targets for pre-configure,
-# (5) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
+# (4) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
 #     search path, and
-# (6) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
+# (5) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
 #     path.
 
 .if !defined(ICONV_BUILDLINK_MK)
@@ -27,8 +26,15 @@ ICONV_LIBS+=		${LOCALBASE}/lib/libiconv.*
 BUILDLINK_INCDIR?=	${WRKDIR}/include
 BUILDLINK_LIBDIR?=	${WRKDIR}/lib
 
-BUILDLINK_TARGETS+=	link-iconv-headers
-BUILDLINK_TARGETS+=	link-iconv-libs
+ICONV_BUILDLINK_COOKIE=		${WRKDIR}/.iconv_buildlink_done
+ICONV_BUILDLINK_TARGETS=	link-iconv-headers
+ICONV_BUILDLINK_TARGETS+=	link-iconv-libs
+BUILDLINK_TARGETS+=		${ICONV_BUILDLINK_COOKIE}
+
+pre-configure: ${ICONV_BUILDLINK_COOKIE}
+
+${ICONV_BUILDLINK_COOKIE}: ${ICONV_BUILDLINK_TARGETS}
+	@${TOUCH} ${TOUCH_FLAGS} ${ICONV_BUILDLINK_COOKIE}
 
 # This target links the headers into ${BUILDLINK_INCDIR}, which should
 # be searched first by the C preprocessor.
