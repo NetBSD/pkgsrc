@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2002/06/08 18:55:12 mjl Exp $
+@comment $NetBSD: PLIST,v 1.15 2002/07/17 23:56:06 rh Exp $
 bin/gnumeric
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/applix/applix.a
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/applix/applix.la
@@ -1001,3 +1001,5 @@ share/pixmaps/gnumeric/top_border
 @dirrm share/gnumeric
 @dirrm share/omf/gnumeric
 @dirrm share/pixmaps/gnumeric
+@unexec scrollkeeper-rebuilddb
+@exec scrollkeeper-rebuilddb
