@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/06/19 03:22:40 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/10/17 02:44:41 phil Exp $
 #
 
 DISTNAME=	lwp-1.6
@@ -12,7 +12,8 @@ COMMENT=	Light Weight Process style threads
 
 # ${WRKSRC}/src/process.ss needs pmap handling assembly for
 # each arch. Mips has it, but it evidently needs more work.
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-m68k NetBSD-*-sparc*
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-m68k NetBSD-*-sparc* \
+			NetBSD-*-arm32
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
