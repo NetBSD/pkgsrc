@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.3 1998/08/07 11:18:35 agc Exp $
+$NetBSD: patch-ad,v 1.4 1999/03/31 14:23:30 hubertf Exp $
 
 diff -rc ../old/xview3.2p1-X11R6/lib/libxview/attr/attr_copy.c ./lib/libxview/attr/attr_copy.c
 *** ../old/xview3.2p1-X11R6/lib/libxview/attr/attr_copy.c	Tue Jun 29 01:14:35 1993
@@ -1729,25 +1729,6 @@ diff -rc ../old/xview3.2p1-X11R6/lib/libxview/textsw/es_attr.c ./lib/libxview/te
   #else
   es_set(esh, va_alist)
       register Es_handle esh;
-diff -rc ../old/xview3.2p1-X11R6/lib/libxview/textsw/es_file.c ./lib/libxview/textsw/es_file.c
-*** ../old/xview3.2p1-X11R6/lib/libxview/textsw/es_file.c	Tue Jun 29 01:17:34 1993
---- ./lib/libxview/textsw/es_file.c	Sun Nov 20 13:39:11 1994
-***************
-*** 110,117 ****
---- 110,122 ----
-  
-  
-  extern int      errno, sys_nerr;
-+ #if (defined(BSD) && (BSD >= 199306))
-+ extern const char *const sys_err_list[];
-+ extern off_t	lseek();
-+ #else
-  extern char    *sys_errlist[];
-  extern long     lseek();
-+ #endif
-  
-  static void update_read_buf();  /* update the read buf if overlaps write buf */
-  static Es_status es_file_commit();
 diff -rc ../old/xview3.2p1-X11R6/lib/libxview/textsw/ev_op_bdry.c ./lib/libxview/textsw/ev_op_bdry.c
 *** ../old/xview3.2p1-X11R6/lib/libxview/textsw/ev_op_bdry.c	Tue Jun 29 01:17:30 1993
 --- ./lib/libxview/textsw/ev_op_bdry.c	Sun Nov 20 13:39:11 1994
