@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/12/03 21:21:57 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/09/16 15:12:53 agc Exp $
 bin/flea
 bin/mutt
 bin/muttbug
@@ -62,6 +62,7 @@ share/examples/mutt/pgp6.rc
 share/examples/mutt/sample.mailcap
 share/examples/mutt/sample.muttrc
 share/examples/mutt/sample.muttrc-tlr
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/mutt.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/mutt.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/mutt.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/mutt.mo
