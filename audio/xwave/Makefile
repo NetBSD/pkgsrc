@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2001/02/16 13:30:54 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/12/02 21:24:35 wiz Exp $
 #
 
 DISTNAME=		xwave2
 PKGNAME=		xwave-2.0
 CATEGORIES=		audio x11
-MASTER_SITES=		http://www.funet.fi/~kouhia/
+MASTER_SITES=		# empty
 
 MAINTAINER=		hubertf@netbsd.org
 COMMENT=		Audio player/recorder/editor for the X Window System
