@@ -1,0 +1,78 @@
+$NetBSD: patch-ch,v 1.1.1.1 2004/01/26 15:42:41 jmmv Exp $
+
+--- noatun/modules/voiceprint/Makefile.in.orig	2003-12-29 11:29:40.000000000 +1300
++++ noatun/modules/voiceprint/Makefile.in
+@@ -383,7 +383,7 @@ kde_module_LTLIBRARIES = noatun_voicepri
+ noatun_voiceprint_la_SOURCES = voiceprint.cpp prefs.cpp
+ 
+ noatun_voiceprint_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
+-noatun_voiceprint_la_LIBADD = $(LIB_KFILE) $(top_builddir)/noatun/library/libnoatun.la -lm
++noatun_voiceprint_la_LIBADD = $(LIB_KFILE) $(top_builddir)/noatun/library/libnoatun_core.la -lm
+ 
+ #>- noatun_voiceprint_la_METASOURCES = AUTO
+ 
+@@ -398,7 +398,7 @@ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(kde_module_LTLIBRARIES)
+ 
+ noatun_voiceprint_la_DEPENDENCIES = \
+-	$(top_builddir)/noatun/library/libnoatun.la
++	$(top_builddir)/noatun/library/libnoatun_core.la
+ am_noatun_voiceprint_la_OBJECTS = voiceprint.lo prefs.lo
+ #>- noatun_voiceprint_la_OBJECTS = $(am_noatun_voiceprint_la_OBJECTS)
+ #>+ 4
+@@ -618,7 +618,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=voiceprint.plugin 
++KDE_DIST=voiceprint.plugin Makefile.in.rej 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -767,20 +767,20 @@ noatun_voiceprint.la.closure: $(noatun_v
+ 
+ 
+ #>+ 3
+-prefs.moc: $(srcdir)/prefs.h
+-	$(MOC) $(srcdir)/prefs.h -o prefs.moc
+-
+-#>+ 1
+-mocs: prefs.moc
+-#>+ 3
+ voiceprint.moc: $(srcdir)/voiceprint.h
+ 	$(MOC) $(srcdir)/voiceprint.h -o voiceprint.moc
+ 
+ #>+ 1
+ mocs: voiceprint.moc
+ #>+ 3
++prefs.moc: $(srcdir)/prefs.h
++	$(MOC) $(srcdir)/prefs.h -o prefs.moc
++
++#>+ 1
++mocs: prefs.moc
++#>+ 3
+ clean-metasources:
+-	-rm -f  prefs.moc voiceprint.moc
++	-rm -f  voiceprint.moc prefs.moc
+ 
+ #>+ 3
+ clean-closures:
+@@ -797,7 +797,7 @@ force-reedit:
+ 
+ 
+ #>+ 11
+-noatun_voiceprint_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/voiceprint.cpp $(srcdir)/prefs.cpp  prefs.moc voiceprint.moc
++noatun_voiceprint_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/voiceprint.cpp $(srcdir)/prefs.cpp  voiceprint.moc prefs.moc
+ 	@echo 'creating noatun_voiceprint_la.all_cpp.cpp ...'; \
+ 	rm -f noatun_voiceprint_la.all_cpp.files noatun_voiceprint_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> noatun_voiceprint_la.all_cpp.final; \
+@@ -833,7 +833,7 @@ kde-rpo-clean:
+ 	-rm -f *.rpo
+ 
+ #>+ 5
+-prefs.o: prefs.moc 
+-voiceprint.o: voiceprint.moc 
+ prefs.lo: prefs.moc 
++voiceprint.o: voiceprint.moc 
+ voiceprint.lo: voiceprint.moc 
++prefs.o: prefs.moc 

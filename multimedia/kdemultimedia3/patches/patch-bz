@@ -1,0 +1,32 @@
+$NetBSD: patch-bz,v 1.1.1.1 2004/01/26 15:42:40 jmmv Exp $
+
+--- noatun/modules/net/Makefile.in.orig	2003-12-29 11:29:40.000000000 +1300
++++ noatun/modules/net/Makefile.in
+@@ -383,7 +383,7 @@ kde_module_LTLIBRARIES = noatun_net.la
+ noatun_net_la_SOURCES = net.cpp
+ 
+ noatun_net_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
+-noatun_net_la_LIBADD = $(LIB_KFILE) $(top_builddir)/noatun/library/libnoatun.la
++noatun_net_la_LIBADD = $(LIB_KFILE) $(top_builddir)/noatun/library/libnoatun_core.la
+ 
+ #>- noatun_net_la_METASOURCES = AUTO
+ 
+@@ -397,7 +397,8 @@ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(kde_module_LTLIBRARIES)
+ 
+-noatun_net_la_DEPENDENCIES = $(top_builddir)/noatun/library/libnoatun.la
++noatun_net_la_DEPENDENCIES = \
++	$(top_builddir)/noatun/library/libnoatun_core.la
+ am_noatun_net_la_OBJECTS = net.lo
+ #>- noatun_net_la_OBJECTS = $(am_noatun_net_la_OBJECTS)
+ #>+ 1
+@@ -612,7 +613,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=net.plugin 
++KDE_DIST=Makefile.in.rej net.plugin 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
