@@ -1,34 +1,29 @@
-$NetBSD: patch-aa,v 1.10 2002/06/20 19:28:35 jlam Exp $
+$NetBSD: patch-aa,v 1.11 2003/08/22 13:17:52 drochner Exp $
 
---- coda-src/auth2/Makefile.in.orig	Fri May 25 07:48:01 2001
-+++ coda-src/auth2/Makefile.in
-@@ -63,12 +63,13 @@
- ifeq ($(SHORTSYS),djgpp)
- EXECUTABLES = $(CLOG)
- else
--EXECUTABLES = $(CLOG) $(AUTH2) initpw $(AU) cpasswd ctokens cunlog tokentool
-+EXECUTABLES = $(CLOG) $(AUTH2) initpw cpasswd ctokens cunlog tokentool
-+EXECUTABLES += venus-$(AU) vice-$(AU)
- CBINS       = $(CLOG) cpasswd ctokens cunlog
+--- coda-src/auth2/Makefile.in.orig	2002-03-14 23:02:17.000000000 +0100
++++ coda-src/auth2/Makefile.in	2003-08-22 14:00:57.000000000 +0200
+@@ -49,9 +49,9 @@
+ LIBAUSEROBJS=auth2.client.o auser.o avenus.o $(AUTHCOMMON)
  
--CSBINS      = $(AU)
-+CSBINS      = venus-$(AU)
+ CBINS       = clog cpasswd ctokens cunlog
+-CSBINS      = au
++CSBINS      = venus-au
  SBINS       = 
--SSBINS      = $(AU) $(AUTH2) initpw
-+SSBINS      = vice-$(AU) $(AUTH2) initpw
- endif
+-SSBINS      = au auth2 initpw
++SSBINS      = vice-au auth2 initpw
+ EXECUTABLES = $(CBINS) $(CSBINS) $(SBINS) $(SSBINS) tokentool
  
- CFLAGS := -Wall $(CFLAGS)
-@@ -96,6 +97,12 @@
+ #
+@@ -84,6 +84,12 @@
+ au: au.o libauser.a $(DEPLIBS)
+ 	${CC} $(LDFLAGS) $^ ${LIBKRBS} ${LIBS} -o $@
  
- $(AU): au.o libauser.a $(DEPLIBS)
- 	$(CC) $(LDFLAGS) au.o libauser.a $(LIBKRBS) $(LIBS) -o $(AU)
++venus-au: au.o libauser.a $(DEPLIBS)
++	${CC} $(LDFLAGS) $^ ${LIBKRBS} ${LIBS} -o venus-au
 +
-+venus-$(AU): au.o libauser.a $(DEPLIBS)
-+	$(CC) $(LDFLAGS) au.o libauser.a $(LIBKRBS) $(LIBS) -o venus-$(AU)
++vice-au: au.o libauser.a $(DEPLIBS)
++	${CC} $(LDFLAGS) $^ ${LIBKRBS} ${LIBS} -o vice-au
 +
-+vice-$(AU): au.o libauser.a $(DEPLIBS)
-+	$(CC) $(LDFLAGS) au.o libauser.a $(LIBKRBS) $(LIBS) -o vice-$(AU)
+ clog: clog.o tokenfile.o libauser.a ${DEPLIBS}
+ 	${CC} $(LDFLAGS) $^ ${LIBKRBS} ${LIBS} -o $@
  
- $(CLOG): clog.o tokenfile.o libauser.a ${DEPLIBS}
- 	${CC} $(LDFLAGS) clog.o tokenfile.o libauser.a $(LIBKRBS) ${LIBS} -o $(CLOG)
