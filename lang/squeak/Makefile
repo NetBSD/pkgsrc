@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.15 2001/06/11 06:34:40 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2001/08/23 21:18:30 fredb Exp $
 #
 
-DISTNAME=	Squeak-3.0pre2
-PKGNAME=	squeak-3.0pre2
+DISTNAME=	Squeak-3.0
+PKGNAME=	squeak-3.0
 CATEGORIES=	lang
 MASTER_SITES=	ftp://st.cs.uiuc.edu/Smalltalk/Squeak/3.0/platform-independent/
+MASTER_SITES+=	ftp://st.cs.uiuc.edu/Smalltalk/Squeak/3.0/unix-linux/src/
 MASTER_SITES+=	ftp://ftp.inria.fr/INRIA/Projects/SOR/users/piumarta/squeak/
-DISTFILES=	ReadMe.txt.gz Squeak3.0-3545.zip SqueakV3.sources.gz
-DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
+DISTFILES=	ReadMe.txt.gz Squeak3.0-3552.zip SqueakV3.sources.gz
+DISTFILES+=	${DISTNAME}-src${EXTRACT_SUFX}
 
 MAINTAINER=	fredb@netbsd.org
 HOMEPAGE=	http://www.squeak.org/
@@ -23,7 +24,7 @@ USE_X11=	yes
 
 CPPFLAGS+=	-DNETBSD_OSS_HACK
 DIST_SUBDIR=	squeak
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+EXTRACT_ONLY=	${DISTNAME}-src${EXTRACT_SUFX}
 WRKSRC=		${WRKDIR}/Squeak-3.0/build
 
 CONFIGURE_SCRIPT= ${WRKSRC}/../src/unix/configure
@@ -34,7 +35,7 @@ post-extract:
 	${GZCAT} ${DISTDIR}/${DIST_SUBDIR}/${f} > ${WRKDIR}/${f:C/.gz//}
 .endfor
 	cd ${WRKDIR} && \
-	    ${LOCALBASE}/bin/unzip ${DISTDIR}/${DIST_SUBDIR}/Squeak3.0-3545.zip
+	    ${LOCALBASE}/bin/unzip ${DISTDIR}/${DIST_SUBDIR}/Squeak3.0-3552.zip
 	${MKDIR} ${WRKSRC}
 
 pre-configure:
@@ -46,9 +47,9 @@ post-install:
 .for f in ReadMe.txt SqueakV3.sources
 	${INSTALL_DATA} ${WRKDIR}/${f} ${PREFIX}/share/squeak/
 .endfor
-.for f in Squeak3.0final.changes Squeak3.0final.image
+.for f in Squeak3.0.changes Squeak3.0.image
 	${INSTALL_DATA} ${WRKDIR}/${f} \
-		${PREFIX}/share/squeak/3.0/${f:C/final//}
+		${PREFIX}/share/squeak/3.0/${f}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
