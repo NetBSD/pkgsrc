@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.473 2003/04/16 08:57:24 wiz Exp $
+$NetBSD: TODO,v 1.474 2003/04/16 22:06:26 salo Exp $
 
 Suggested new packages
 ======================
@@ -117,7 +117,6 @@ Suggested package updates
 	o fltk-1.1.3
 	o foomatic-2.9.1 [jlam]
 	o fox-1.0.34
-	o frozen-bubble-1.0.0
 	o fsviewer-0.2.5
 	o gauche-0.6.7 [kei]
 	o gawk-3.1.2
