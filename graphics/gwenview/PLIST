@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/09/22 08:09:34 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/10/25 11:31:44 markd Exp $
 bin/gwenview
 lib/kde3/libgvdirpart.la
 lib/kde3/libgvimagepart.la
@@ -69,8 +69,10 @@ share/kde/icons/crystalsvg/48x48/apps/gwenview.png
 share/kde/icons/crystalsvg/64x64/apps/gwenview.png
 share/kde/locale/ar/LC_MESSAGES/gwenview.mo
 share/kde/locale/az/LC_MESSAGES/gwenview.mo
+share/kde/locale/br/LC_MESSAGES/gwenview.mo
 share/kde/locale/ca/LC_MESSAGES/gwenview.mo
 share/kde/locale/cs/LC_MESSAGES/gwenview.mo
+share/kde/locale/cy/LC_MESSAGES/gwenview.mo
 share/kde/locale/da/LC_MESSAGES/gwenview.mo
 share/kde/locale/de/LC_MESSAGES/gwenview.mo
 share/kde/locale/el/LC_MESSAGES/gwenview.mo
@@ -79,6 +81,7 @@ share/kde/locale/es/LC_MESSAGES/gwenview.mo
 share/kde/locale/et/LC_MESSAGES/gwenview.mo
 share/kde/locale/fo/LC_MESSAGES/gwenview.mo
 share/kde/locale/fr/LC_MESSAGES/gwenview.mo
+share/kde/locale/ga/LC_MESSAGES/gwenview.mo
 share/kde/locale/gl/LC_MESSAGES/gwenview.mo
 share/kde/locale/he/LC_MESSAGES/gwenview.mo
 share/kde/locale/hu/LC_MESSAGES/gwenview.mo
@@ -121,3 +124,5 @@ share/kde/services/gvimagepart.desktop
 @dirrm share/kde/apps/gwenview/icons
 @dirrm share/kde/apps/gwenview/cursors
 @dirrm share/kde/apps/gwenview
+@dirrm share/kde/apps/gvimagepart
+@dirrm share/kde/apps/gvdirpart
