@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.825 2003/09/03 18:26:01 xtraeme Exp $
+$NetBSD: TODO,v 1.826 2003/09/03 21:33:43 seb Exp $
 
 Suggested new packages
 ======================
@@ -201,7 +201,6 @@ Suggested package updates
 	o multi-gnome-terminal-1.6.2
 	o multitail-2.8.3
 	o mysql-3.23.54
-	o nam-1.9 [pkg/22664]
 	o nano-1.2.2
 	o nap-1.5.2
 	o napshare-1.2
