@@ -1,31 +1,30 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 21:28:51 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/20 05:16:58 cube Exp $
 
-DISTNAME=	python-ldap-1.10alpha3-src
-PKGNAME=	${PYPKGPREFIX}-ldap-1.10a3
-WRKSRC=		${WRKDIR}/python-ldap-1.10alpha3
+DISTNAME=	python-ldap-2.0.0pre15
+PKGNAME=	${PYPKGPREFIX}-ldap-2.0.0pre15
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=python-ldap/}
 
-MAINTAINER=	tsarna@NetBSD.org
+MAINTAINER=	david@netbsd-fr.org
 HOMEPAGE=	http://sourceforge.net/projects/python-ldap/
 COMMENT=	LDAP client API for Python
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--with-ldap=${LOCALBASE}
-CONFIGURE_ARGS+=--with-python=${PYTHONBIN}
-USE_BUILDLINK2=	yes
+PYTHON_VERSIONS_ACCEPTED=	21pth 22pth 23pth
+PYDISTUTILSPKG=			yes
+USE_BUILDLINK2=			yes
 
-PLIST_SRC=      ${WRKDIR}/.PLIST_SRC
+SUBST_CLASSES+=			setup
+SUBST_STAGE.setup=		pre-configure
+SUBST_FILES.setup=		${WRKSRC}/setup.cfg
+SUBST_SED.setup=		-e "s|/usr/local/openldap-REL_ENG_2_1|${BUILDLINK_PREFIX.cyrus-sasl}/lib ${BUILDLINK_PREFIX.openldap}|" 	\
+				-e "s|/usr/include/sasl|${BUILDLINK_PREFIX.cyrus-sasl}/include/sasl|"
 
-PY_PATCHPLIST=	yes
-
-post-install:
-	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	(cd ${PREFIX}; ${FIND} ${PYSITELIB}/python-ldap \
-	 -type f -print >>${PLIST_SRC})
-	(cd ${PREFIX}; ${FIND} -d ${PYSITELIB}/python-ldap \
-	 -type d -print | ${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
-
-.include "../../databases/openldap1/buildlink2.mk"
+.include "../../databases/openldap/buildlink2.mk"
+.include "../../security/cyrus-sasl2/buildlink2.mk"
 .include "../../lang/python/extension.mk"
+
+.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "pth"
+SUBST_SED.setup+=		-e "s|crypto|& pthread|"
+.endif
+
 .include "../../mk/bsd.pkg.mk"
