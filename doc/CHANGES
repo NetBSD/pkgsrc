@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1949 2003/04/16 08:55:11 wiz Exp $
+$NetBSD: CHANGES,v 1.1950 2003/04/16 12:23:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1620,3 +1620,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated snort-mysql to 2.0.0 [salo 2003-04-16]
 	Updated snort-pgsql to 2.0.0 [salo 2003-04-16]
 	Updated freetype2 to 2.1.4 [wiz 2003-04-16]
+	Removed skipstone [wiz 2003-04-16]
