@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 1998/09/28 10:57:39 frueauf Exp $
+$NetBSD: patch-aa,v 1.5 1999/02/17 05:34:33 erh Exp $
 
 --- Configure.orig	Tue Sep 15 02:56:33 1998
 +++ Configure	Thu Sep 17 15:47:27 1998
-@@ -1400,7 +1400,7 @@
+@@ -1463,7 +1463,7 @@
      then
        if test -r /etc/mk.conf	# {
        then
