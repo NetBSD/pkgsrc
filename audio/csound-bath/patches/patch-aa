@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/04/27 17:17:17 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2002/03/23 02:23:00 wiz Exp $
 
---- Makefile.orig	Sun Mar 25 18:53:17 2001
+--- Makefile.orig	Thu Jan 31 00:58:43 2002
 +++ Makefile
 @@ -1,11 +1,11 @@
  #								Csound Makefile
@@ -24,7 +24,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/04/27 17:17:17 wiz Exp $
  #		$(CC) $(CFLAGS) -c $*.c -o $@
  
 -DEFINES = -DWINDOWS -DRTAUDIO -DSFIRCAM -DSYS5 -DLINUX -DPIPES -DMACROS -DTCLTK
-+DEFINES = -DRTAUDIO -DSFIRCAM -DSYS5 -DLINUX -DPIPES -DMACROS -DBSD -DPREFIX=\"$(PREFIX)\"
++DEFINES = -DNETBSDRTAUDIO -DRTAUDIO -DSFIRCAM -DSYS5 -DLINUX -DPIPES -DMACROS -DBSD -DPREFIX=\"$(PREFIX)\"
  # choose any of -
  #	-DSYS5	    invoke System 5 headers (e.g. 'string.h' for 'strings.h')
  #	-DWINDOWS   include window system calls (X11, SGI, or FG graphics)
@@ -32,21 +32,21 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/04/27 17:17:17 wiz Exp $
  # Be sure to include 'LINUXaudio.o' under 'AUDOBJ' below as well.
  #                                  --  Jonathan Mohr  1995 Oct 17
  
--CFLAGS = -O2 $(RPM_OPT_FLAGS) $(DEFINES)
+-CFLAGS = -O2 -march=i686 -malign-loops=4 -malign-jumps=4 -DWITHx87 $(RPM_OPT_FLAGS) $(DEFINES)
 +CFLAGS = $(RPM_OPT_FLAGS) $(DEFINES)
  #	-O		Simple optimisation
  #	-O2		to be more specific about the optimization level
  #	-f		compile single-precision floats (4.3,VAX,DEC-RISC)
-@@ -73,7 +73,7 @@
+@@ -76,7 +76,7 @@
  #	-I/usr/openwin/include		Solaris openwin interface
  #	-I/usr/demo/SOUND/include	Solaris sound interface
  
--LIBS =	-L /usr/X11R6/lib -lX11 -lbsd -ltcl -ltk -lm 
-+LIBS =	$(LDFLAGS) -lossaudio -lm 
+-LIBS =	-L /usr/X11R6/lib -lX11 -ltcl -ltk -lm 
++LIBS =	$(LDFLAGS) -lm
  #	-lefence
  #	-lm		    		required
  #	-lX11				for X window calls
-@@ -90,8 +90,8 @@
+@@ -93,16 +93,16 @@
  #	-L/usr/demo/SOUND/lib		on Solaris 2.4
  #	-L/usr/X11R6/li			on LINUX
  
@@ -57,7 +57,17 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/04/27 17:17:17 wiz Exp $
  # ;if WINDOWS enabled in DEFINES, choose one of -
  #	winX11.o	for X11 window graphics
  #	winSGI.o	for SGI window graphics
-@@ -335,15 +335,15 @@
+ #	winfg.o 	for PC  Flash Graphics
+ 
+ 
+-AUDSRC = rtlinux.c LINUXaudio.c
+-AUDOBJ = rtlinux.o LINUXaudio.o
++AUDSRC = rtNetBSD.c
++AUDOBJ = rtNetBSD.o
+ # ;if RTAUDIO enabled in DEFINES, include one of
+ #	rtaudio.o		general interface to audio handlers & libraries
+ #	rtDEC.c		rtSGI.c		rtHP.c		rtSUN.c
+@@ -342,13 +342,13 @@
  		cd midifils; rm -f *.bak *~
  		cd cscofils; rm -f *.bak *~
  
@@ -66,18 +76,15 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/04/27 17:17:17 wiz Exp $
 -	/usr/local/bin/scsort /usr/local/bin/extract /usr/local/bin/sndinfo \
 -	/usr/local/bin/scale /usr/local/bin/mixer /usr/local/bin/extractor \
 -	/usr/local/bin/envext /usr/local/bin/pvlook /usr/local/bin/sdif2ad \
--	/usr/local/bin/dnoise /usr/local/bin/srconv /usr/local/lib/csound.txt
+-	/usr/local/bin/dnoise /usr/local/bin/srconv
 -	(cd /usr/local/bin; tar cvzf ~/csound/CSLinux.bin.tgz csound \
 +CSNetBSD.bin.tgz: $(PREFIX)/bin/csound $(PREFIX)/bin/hetro \
 +	$(PREFIX)/bin/lpanal $(PREFIX)/bin/pvanal $(PREFIX)/bin/scot \
 +	$(PREFIX)/bin/scsort $(PREFIX)/bin/extract $(PREFIX)/bin/sndinfo \
 +	$(PREFIX)/bin/scale $(PREFIX)/bin/mixer $(PREFIX)/bin/extractor \
 +	$(PREFIX)/bin/envext $(PREFIX)/bin/pvlook $(PREFIX)/bin/sdif2ad \
-+	$(PREFIX)/bin/dnoise $(PREFIX)/bin/srconv $(PREFIX)/lib/csound.txt
++	$(PREFIX)/bin/dnoise $(PREFIX)/bin/srconv
 +	(cd $(PREFIX)/bin; tar cvzf ~/csound/CSLinux.bin.tgz csound \
  	hetro lpanal pvanal scot scsort extract sndinfo scale mixer \
--	extractor envext pvlook sdif2ad dnoise srconv -C /usr/local/lib csound.txt)
-+	extractor envext pvlook sdif2ad dnoise srconv -C $(PREFIX)/lib csound.txt)
+ 	extractor envext pvlook sdif2ad dnoise srconv)
  
- Csound.tar.gz:  all_files \
- 	$(CSRCS) $(HDRS) \
