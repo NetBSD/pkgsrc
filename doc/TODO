@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2854 2005/01/06 22:16:21 schmonz Exp $
+$NetBSD: TODO,v 1.2855 2005/01/07 09:02:51 peter Exp $
 
 Suggested new packages
 ======================
@@ -776,7 +776,6 @@ Suggested package updates
 	o open2300-1.8
 	o opencobol-0.30
 	o openmotif-2.2.4
-	o openntpd-3.6.1p1
 	o openvpn-1.6.0
 	o opera7-7.54u1
 	o oregano-0.40.1
