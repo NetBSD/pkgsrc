@@ -1,4 +1,5 @@
 
-SHA1 (nidentd-0.3.tgz) = 0cc1e450e148aef5cdcebb19c959528c60967135
-Size (nidentd-0.3.tgz) = 1151 bytes
-SHA1 (patch-aa) = f6660e147074ef955fe369f5e554bb48ade3d5e2
+
+SHA1 (nidentd-0.4.tgz) = cff429794e4caa83227239173982f6727c51232e
+Size (nidentd-0.4.tgz) = 1193 bytes
+SHA1 (patch-aa) = 2f443cf45fae21a6aac97c82c3ae8d1a4684110a
