@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7351 2004/10/05 12:41:23 agc Exp $
+$NetBSD: CHANGES,v 1.7352 2004/10/05 15:38:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4552,4 +4552,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ImageMagick to 6.1.0-2 [adam 2004-10-05]
 	Updated glib to 1.2.10nb8 [minskim 2004-10-05]
 	Added ntfsprogs-1.9.4 [agc 2004-10-05]
-
+	Updated sylpheed-claws to 0.9.12b [adam 2004-10-05]
