@@ -1,31 +1,31 @@
-$NetBSD: patch-aa,v 1.2 2001/02/02 19:39:19 jlam Exp $
+$NetBSD: patch-aa,v 1.3 2002/01/07 11:49:46 jlam Exp $
 
---- config/config_default.php.orig	Fri Feb  2 10:43:27 2001
+--- config/config_default.php.orig	Fri Dec 28 15:16:18 2001
 +++ config/config_default.php
-@@ -125,7 +125,7 @@
- //  anything if it's true, but some servers will respond weird if it's
- //  false. (Cyrus works fine whether it's true OR false).
+@@ -195,7 +195,7 @@
+  * false. (Cyrus works fine whether it's true OR false).
+  */
+ global $show_contain_subfolders_option;
+-$show_contain_subfolders_option = false;
++$show_contain_subfolders_option = true;
  
--    $show_contain_subfolders_option = false;
-+    $show_contain_subfolders_option = true;
+ /**
+  * This option controls what character set is used when sending mail
+@@ -222,7 +222,7 @@
+  *   $data_dir = '../data/';
+  */
+ global $data_dir;
+-$data_dir = '../data/';
++$data_dir = '@USER_PREFS_DIR@/';
  
- //  This option controls what character set is used when sending mail
- //  and when sending HTMl to the browser. Do not set this to US-ASCII,
-@@ -147,7 +147,7 @@
- //  Relative (to the config directory):
- //    $data_dir = "../data/";
+ /**
+  * Path to directory used for storing attachments while a mail is
+@@ -238,7 +238,7 @@
+  *    + It should probably be another directory than data_dir.
+  */
+ global $attachment_dir;
+-$attachment_dir = "$data_dir";
++$attachment_dir = "@ATTACHMENTS_DIR@/";
  
--    $data_dir = "../data/";
-+    $data_dir = "/var/spool/squirrelmail/data/";
- 
- //  Path to directory used for storing attachments while a mail is
- //  being sent. There are a few security considerations regarding this
-@@ -161,7 +161,7 @@
- //      there for too long.
- //    - It should probably be another directory than data_dir.
- 
--    $attachment_dir = $data_dir;
-+    $attachment_dir = "/var/spool/squirrelmail/attachments/";
- 
- //  This is the default size of the folder list.  Default is 150,
- //  but you can set it to whatever you wish.
+ /* Hash level used for data directory. */
+ global $dir_hash_level;
