@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2000/12/27 23:30:04 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/12/28 14:37:20 hubertf Exp $
 bin/axfr-get
 bin/axfrdns
 bin/axfrdns-conf
@@ -6,6 +6,7 @@ bin/dnscache
 bin/dnscache-conf
 bin/dnsfilter
 bin/dnsip
+bin/dnsip6
 bin/dnsipq
 bin/dnsmx
 bin/dnsname
@@ -27,6 +28,8 @@ bin/tinydns-edit
 bin/tinydns-get
 bin/walldns
 bin/walldns-conf
+bin/tinydns-log.pl
+bin/dnscache-log.pl
 etc/dnsroots.global
 man/man1/dnsfilter.1
 man/man1/dnsip.1
