@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.2 1999/04/19 07:32:10 abs Exp $
+.\"	$NetBSD: pkglint.1,v 1.3 2000/09/04 00:29:52 hubertf Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -11,7 +11,7 @@
 .Nd a verifier for pkgsrc directories
 .Sh SYNOPSIS
 .Nm pkglint
-.Op Fl abchvN
+.Op Fl hvN
 .Op Fl B Ar n
 .Op Ar dir
 .Sh DESCRIPTION
@@ -35,24 +35,6 @@ especially when checking complex
 .Pp
 .Sy Options
 .Bl -tag -width Fl
-.It Fl a
-Perform additional checks for extra files, such as
-.Pa scripts/*
-and
-.Pa pkg/* .
-.It Fl b
-Warn the use of
-.Pa $(VARIABLE) .
-Some of the committers prefer
-.Pa ${VARIABLE}
-instead of 
-.Pa $(VARIABLE) ,
-even though they are semantically same.
-.It Fl c
-Committer flag.
-It will add several checks useful only for committers.
-If you are a committer and performing check just before commiting a port,
-use this option.
 .It Fl h
 Show the summary of command line options, then exit.
 .It Fl v
