@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.244 2002/10/14 01:28:49 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.245 2002/10/14 02:29:37 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3200,3 +3200,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated tnef to 1.1.2 [wiz 2002-10-13]
 	Updated verilog-current to 20020921 [dmcmahill 2002-10-13]
 	Updated dinotrace to 9.1h [dmcmahill 2002-10-13]
+	Added verilog-mode-3.60 [dmcmahill 2002-10-13]
