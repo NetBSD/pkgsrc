@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2004/03/12 04:59:20 taca Exp $
+# $NetBSD: Makefile.common,v 1.19 2004/03/15 09:25:34 taca Exp $
 # FreeBSD: ports/Mk/bsd.ruby.mk,v 1.11 2000/11/16 17:59:40 knu Exp
 # Makefile.common: ruby common makefile, based on FreeBSD's bsd.ruby.mk.
 
@@ -288,13 +288,17 @@ BUILD_DEPENDS+=		${RUBY_PKGNAMEPREFIX}base>=${RUBY_REQD}:../../lang/ruby${RUBY_S
 
 MASTER_SITE_RUBY?= \
 	ftp://ftp.ruby-lang.org/pub/ruby/${RUBY_VER}/ \
-	ftp://ftp.zetabits.com/pub/lang/ruby/${RUBY_VER}/ \
+	ftp://www.ibiblio.org/pub/languages/ruby/${RUBY_VER}/ \
+	ftp://xyz.lcs.mit.edu/pub/ruby/${RUBY_VER}/ \
+	ftp://gd.tuwien.ac.at/languages/ruby/${RUBY_VER}/ \
 	ftp://ftp.fu-berlin.de/unix/languages/ruby/${RUBY_VER}/ \
+	ftp://ftp.easynet.be/ruby/ruby/${RUBY_VER}/ \
+	ftp://ftp.ntua.gr/pub/lang/ruby/${RUBY_VER}/ \
+	ftp://sunsite.dk/mirrors/ruby/${RUBY_VER}/ \
+	ftp://ruby.cdpa.nsysu.edu.tw/ruby/${RUBY_VER}/ \
 	ftp://ftp.chg.ru/pub/lang/ruby/${RUBY_VER}/ \
-	ftp://ftp.TokyoNet.AD.JP/pub/misc/ruby/${RUBY_VER}/ \
+	ftp://ftp.ring.gr.jp/pub/lang/ruby/${RUBY_VER}/ \
 	ftp://ftp.iij.ad.jp/pub/lang/ruby/${RUBY_VER}/ \
-	ftp://ftp.krnet.ne.jp/pub/ruby/${RUBY_VER}/ \
-	ftp://ftp.nctu.edu.tw/computer-languages/ruby/${RUBY_VER}/ \
-	ftp://mirror.nucba.ac.jp/mirror/ruby/${RUBY_VER}/
+	ftp://ftp.idaemons.org/pub/mirror/ftp.ruby-lang.org/ruby/${RUBY_VER}/
 
 .endif
