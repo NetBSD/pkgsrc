@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/12/03 06:44:45 martti Exp $
+# $NetBSD: Makefile,v 1.28 2004/01/05 12:48:30 jlam Exp $
 
 DISTNAME=	etcupdate-20031112
 WRKSRC=		${WRKDIR}
@@ -12,10 +12,15 @@ COMMENT=	Script to update the configuration and startup files in /etc
 
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 EXTRACT_ONLY=	# defined
 NO_CHECKSUM=	# defined
+NO_BUILDLINK=	# defined
 NO_CONFIGURE=	# defined
 NO_BUILD=	# defined
+
+INSTALLATION_DIRS=	bin man/man8
 
 do-install:
 	${INSTALL_SCRIPT} ${FILESDIR}/etcupdate ${PREFIX}/bin/etcupdate

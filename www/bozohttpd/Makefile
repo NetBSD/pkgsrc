@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2003/10/06 01:16:47 mrg Exp $
+# $NetBSD: Makefile,v 1.36 2004/01/05 12:50:34 jlam Exp $
 #
 
 DISTNAME=	bozohttpd-20031005
@@ -12,7 +12,9 @@ COMMENT=	Bozotic HTTP server; small and secure
 
 BUILD_DEFS+=	USE_INET6
 
-USE_BUILDLINK2=	YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=	YES
 
 MAKE_ENV+=	BINDIR=${PREFIX}/libexec MANDIR=${PREFIX}/man
 
@@ -23,6 +25,8 @@ CPPFLAGS+=	-DINET6
 .endif
 
 CPPFLAGS+=	-Wno-error
+
+INSTALLATION_DIRS=	libexec man/cat8 man/man8
 
 pre-build:
 	cd ${WRKSRC}; for file in bozohttpd.8; do			\

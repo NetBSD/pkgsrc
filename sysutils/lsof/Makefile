@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2003/11/22 23:19:47 christos Exp $
+# $NetBSD: Makefile,v 1.69 2004/01/05 12:48:30 jlam Exp $
 #
 
 DISTNAME=		lsof_4.69
@@ -27,6 +27,9 @@ OSVERSION_SPECIFIC=	yes
 TMPWRK=			${WRKDIR}/${DISTNAME}
 SRCBALL_NAME=		${DISTNAME}_src
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+USE_BUILDLINK3=		yes
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
@@ -34,6 +37,7 @@ REAL_GROUP=		-g kmem
 .elif ${OPSYS} == "SunOS"
 MAKE_ENV+=		CPPFLAGS=
 .endif
+INSTALLATION_DIRS=	man/man8 sbin
 
 LSOF_MORE_SECURE?= 0
 
