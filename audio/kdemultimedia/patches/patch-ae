@@ -1,5 +1,7 @@
-$NetBSD: patch-ae,v 1.1 1999/11/11 01:08:23 hubertf Exp $
+Slighly modified fix pulled up to KDE tree, together with similar fix
+to kscd-script. (jdolecek 1999/11/15)
 
+$NetBSD: patch-ae,v 1.2 1999/11/15 23:01:52 jdolecek Exp $
 --- kscd/config.h.std.orig	Wed Nov 10 22:16:15 1999
 +++ kscd/config.h.std	Wed Nov 10 22:18:53 1999
 @@ -123,13 +123,13 @@

@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/10/01 11:10:29 drochner Exp $
+Patch pulled up into KDE tree. (jdolecek 1999/11/15)
+
+$NetBSD: patch-aa,v 1.2 1999/11/15 23:01:52 jdolecek Exp $
 --- kmidi/config.h.orig	Sun Sep 26 02:01:00 1999
 +++ kmidi/config.h	Sun Sep 26 02:02:14 1999
 @@ -263,7 +263,7 @@
