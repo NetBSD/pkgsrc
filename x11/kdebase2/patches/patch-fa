@@ -1,13 +1,15 @@
-$NetBSD: patch-fa,v 1.1 2001/10/18 15:43:11 skrll Exp $
+$NetBSD: patch-fa,v 1.2 2001/12/03 15:37:20 skrll Exp $
 
 --- kicker/core/main.cpp.orig	Fri Aug  3 21:14:29 2001
 +++ kicker/core/main.cpp
-@@ -122,7 +122,7 @@
+@@ -122,7 +122,9 @@
      QApplication::exit();
  }
  
 -int main( int argc, char ** argv )
-+int kicker_main( int argc, char ** argv )
++extern "C" int kdemain(int, char **);
++
++int kdemain( int argc, char ** argv )
  {
      {
          QCString multiHead = getenv("KDE_MULTIHEAD");

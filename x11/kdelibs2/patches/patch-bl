@@ -1,64 +1,83 @@
-Cannot strip away RCS IDs, please handle manually!
-$NetBSD: patch-bl,v 1.1 2001/10/15 22:46:26 skrll Exp $
+$NetBSD: patch-bl,v 1.2 2001/12/03 15:37:21 skrll Exp $
 
---- kio/klauncher/Makefile.in.orig	Wed Sep 12 06:10:14 2001
+--- kio/klauncher/Makefile.in.orig	Tue Nov 13 20:57:18 2001
 +++ kio/klauncher/Makefile.in
-@@ -2 +2 @@
--# Makefile.in generated automatically by automake 1.4 from Makefile.am
-+# Makefile.in generated automatically by automake 1.4-p5 from Makefile.am
-@@ -4 +4 @@
--# Copyright (C) 1994, 1995-8, 1999 Free Software Foundation, Inc.
-+# Copyright (C) 1994, 1995-8, 1999, 2001 Free Software Foundation, Inc.
-@@ -291 +291 @@
+@@ -284,11 +284,10 @@
+ 
+ klauncher_la_LDFLAGS = $(all_libraries) -module -avoid-version
+ klauncher_la_LIBADD = $(LIB_KSYCOCA)
 -klauncher_la_SOURCES = klauncher.cpp main.cpp autostart.cpp
 +klauncher_la_SOURCES = klauncher.cpp autostart.cpp main.cpp
-@@ -294,2 +294 @@
+ 
+ klauncher_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 -klauncher_LDADD = klauncher.la
 -klauncher_SOURCES = dummy.cpp
 +klauncher_SOURCES = klauncher_main.cpp
-@@ -311 +310 @@
+ 
+ #>- METASOURCES = AUTO
+ 
+@@ -304,20 +303,21 @@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+ klauncher_la_DEPENDENCIES = 
 -#>- klauncher_la_OBJECTS =  klauncher.lo main.lo autostart.lo
 +#>- klauncher_la_OBJECTS =  klauncher.lo autostart.lo main.lo
-@@ -314 +313 @@
+ #>+ 5
+ klauncher_la_final_OBJECTS = klauncher_la.all_cpp.lo 
 -klauncher_la_nofinal_OBJECTS = klauncher.lo main.lo autostart.lo \
 +klauncher_la_nofinal_OBJECTS = klauncher.lo autostart.lo main.lo \
-@@ -321 +320 @@
+ 	klauncher_la_meta_unload.lo 
+ @KDE_USE_FINAL_FALSE@klauncher_la_OBJECTS = $(klauncher_la_nofinal_OBJECTS)
+ @KDE_USE_FINAL_TRUE@klauncher_la_OBJECTS = $(klauncher_la_final_OBJECTS)
+ bin_PROGRAMS =  klauncher$(EXEEXT)
+ PROGRAMS =  $(bin_PROGRAMS)
+ 
 -#>- klauncher_OBJECTS =  dummy.$(OBJEXT)
 +#>- klauncher_OBJECTS =  klauncher_main.$(OBJEXT)
-@@ -323,2 +322,3 @@
+ #>+ 1
 -klauncher_OBJECTS = dummy.$(OBJEXT)
 -klauncher_DEPENDENCIES =  klauncher.la
 +klauncher_OBJECTS = klauncher_main.$(OBJEXT)
 +klauncher_LDADD = $(LDADD)
 +klauncher_DEPENDENCIES = 
-@@ -512 +512 @@
--	  test "$$subdir" = "." && dot_seen=yes; \
-+	  test "$$subdir" != "." || dot_seen=yes; \
-@@ -570,11 +569,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
-@@ -693,3 +681,0 @@
+ CXXFLAGS = @CXXFLAGS@
+ #>- CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ #>+ 1
+@@ -675,9 +675,6 @@
+ 	maintainer-clean-generic clean mostlyclean distclean maintainer-clean
+ 
+ 
 -dummy.cpp:
 -	echo > dummy.cpp
 -
-@@ -733 +719 @@
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
+@@ -717,11 +714,11 @@
+ 	-rm -f  klauncher_la_meta_unload.cpp
+ 
+ #>+ 11
 -klauncher_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/klauncher.cpp $(srcdir)/main.cpp $(srcdir)/autostart.cpp klauncher_la_meta_unload.cpp   klauncher.moc 
 +klauncher_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/klauncher.cpp $(srcdir)/autostart.cpp $(srcdir)/main.cpp klauncher_la_meta_unload.cpp   klauncher.moc 
-@@ -737 +723 @@
+ 	@echo 'creating klauncher_la.all_cpp.cpp ...'; \
+ 	rm -f klauncher_la.all_cpp.files klauncher_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> klauncher_la.all_cpp.final; \
 -	for file in klauncher.cpp main.cpp autostart.cpp klauncher_la_meta_unload.cpp ; do \
 +	for file in klauncher.cpp autostart.cpp main.cpp klauncher_la_meta_unload.cpp ; do \
-@@ -745 +731 @@
+ 	  echo "#include \"$$file\"" >> klauncher_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> klauncher_la.all_cpp.final; \
+ 	done; \
+@@ -729,11 +726,11 @@
+ 	rm -f klauncher_la.all_cpp.final klauncher_la.all_cpp.files
+ 
+ #>+ 11
 -klauncher.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
 +klauncher.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/klauncher_main.cpp  
-@@ -749 +735 @@
+ 	@echo 'creating klauncher.all_cpp.cpp ...'; \
+ 	rm -f klauncher.all_cpp.files klauncher.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> klauncher.all_cpp.final; \
 -	for file in dummy.cpp ; do \
 +	for file in klauncher_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> klauncher.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> klauncher.all_cpp.final; \
+ 	done; \

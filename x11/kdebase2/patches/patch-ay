@@ -1,25 +1,22 @@
-$NetBSD: patch-ay,v 1.2 2001/10/15 22:46:01 skrll Exp $
+$NetBSD: patch-ay,v 1.3 2001/12/03 15:37:19 skrll Exp $
 
---- kcontrol/kio/Makefile.in.orig	Sat Sep  8 01:36:26 2001
+--- kcontrol/kio/Makefile.in.orig	Sat Nov 10 07:58:20 2001
 +++ kcontrol/kio/Makefile.in
-@@ -292 +292 @@
+@@ -291,7 +291,7 @@
+ 
+ 
+ libkcm_kio_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
 -libkcm_kio_la_LIBADD = $(LIB_KSYCOCA) $(LIB_KFILE)
 +libkcm_kio_la_LIBADD = $(LIB_KSYCOCA) $(LIB_KFILE) ${KDE_RPATH}
-@@ -361 +361 @@
+ 
+ check_PROGRAMS = test
+ test_SOURCES = $(libkcm_kio_la_SOURCES) test.cpp
+@@ -360,7 +360,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
 -KDE_DIST=UA-DESKTOP-FILE-HOWTO cookies.desktop useragent.desktop useragentdlg.h uagentproviderdlg.h proxy.desktop policydlg.h ksmboptdlg.h kcookiesmanagement.h fakeuaprovider.h netpref.desktop kproxydlg.h kcookiesmain.h kproxydlgui.ui kcookiespolicies.h uninstall.desktop smb.desktop uasprovider.desktop netpref.h smbrodlg.h 
 +KDE_DIST=policydlg.h ksmboptdlg.h kcookiesmanagement.h UA-DESKTOP-FILE-HOWTO kproxydlgui.ui fakeuaprovider.h useragentdlg.h uagentproviderdlg.h cookies.desktop kcookiespolicies.h netpref.desktop uninstall.desktop smb.desktop proxy.desktop useragent.desktop uasprovider.desktop kproxydlg.h netpref.h kcookiesmain.h smbrodlg.h 
-@@ -574 +574 @@
--	  test "$$subdir" = "." && dot_seen=yes; \
-+	  test "$$subdir" != "." || dot_seen=yes; \
-@@ -632,11 +631,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
+ 
+ DISTFILES= $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 

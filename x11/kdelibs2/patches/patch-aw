@@ -1,23 +1,25 @@
-Cannot strip away RCS IDs, please handle manually!
-$NetBSD: patch-aw,v 1.1 2001/10/15 22:46:23 skrll Exp $
+$NetBSD: patch-aw,v 1.2 2001/12/03 15:37:21 skrll Exp $
 
---- kio/http/Makefile.in.orig	Wed Sep 12 06:10:13 2001
+--- kio/http/Makefile.in.orig	Tue Nov 13 20:57:18 2001
 +++ kio/http/Makefile.in
-@@ -2 +2 @@
--# Makefile.in generated automatically by automake 1.4 from Makefile.am
-+# Makefile.in generated automatically by automake 1.4-p5 from Makefile.am
-@@ -4 +4 @@
--# Copyright (C) 1994, 1995-8, 1999 Free Software Foundation, Inc.
-+# Copyright (C) 1994, 1995-8, 1999, 2001 Free Software Foundation, Inc.
-@@ -275 +275 @@
+@@ -268,19 +268,22 @@
+ ####### Files
+ 
+ bin_PROGRAMS = kio_http_cache_cleaner
 -lib_LTLIBRARIES = kio_http_cache_cleaner.la
 +lib_LTLIBRARIES = libkio_http_cache_cleaner_main.la kio_http_cache_cleaner.la
-@@ -282,2 +282,2 @@
+ kde_module_LTLIBRARIES = kio_http.la
+ 
+ kio_http_la_SOURCES = http.cc
+ kio_http_la_LIBADD = ../libkio.la $(LIBZ)
+ kio_http_la_LDFLAGS = $(all_libraries) -module $(KDE_PLUGIN)
+ 
 -kio_http_cache_cleaner_SOURCES = dummy.cpp
 -kio_http_cache_cleaner_LDADD = kio_http_cache_cleaner.la
 +kio_http_cache_cleaner_SOURCES = http_cache_cleaner_main.cpp
 +kio_http_cache_cleaner_LDADD = libkio_http_cache_cleaner_main.la
-@@ -286,2 +286,5 @@
+ kio_http_cache_cleaner_LDFLAGS = $(KDE_RPATH)
+ 
 -kio_http_cache_cleaner_la_SOURCES = http_cache_cleaner.cpp
 -kio_http_cache_cleaner_la_LIBADD = $(LIB_KIO)
 +libkio_http_cache_cleaner_main_la_SOURCES = http_cache_cleaner.cpp
@@ -25,7 +27,13 @@ $NetBSD: patch-aw,v 1.1 2001/10/15 22:46:23 skrll Exp $
 +
 +kio_http_cache_cleaner_la_SOURCES = http_cache_cleaner_main.cpp
 +kio_http_cache_cleaner_la_LIBADD = libkio_http_cache_cleaner_main.la
-@@ -307,2 +310,8 @@
+ kio_http_cache_cleaner_la_LDFLAGS = -module -avoid-version
+ 
+ noinst_HEADERS = http.h
+@@ -300,17 +303,23 @@
+ #>- kio_http_la_OBJECTS =  http.lo
+ #>+ 1
+ kio_http_la_OBJECTS = http.lo
 -kio_http_cache_cleaner_la_DEPENDENCIES = 
 -#>- kio_http_cache_cleaner_la_OBJECTS =  http_cache_cleaner.lo
 +libkio_http_cache_cleaner_main_la_LDFLAGS = 
@@ -34,47 +42,109 @@ $NetBSD: patch-aw,v 1.1 2001/10/15 22:46:23 skrll Exp $
 +#>+ 1
 +libkio_http_cache_cleaner_main_la_OBJECTS = http_cache_cleaner.lo
 +kio_http_cache_cleaner_la_DEPENDENCIES =  \
-+libkio_http_cache_cleaner_main.la
++	libkio_http_cache_cleaner_main.la
 +#>- kio_http_cache_cleaner_la_OBJECTS =  http_cache_cleaner_main.lo
-@@ -310 +319 @@
+ #>+ 1
 -kio_http_cache_cleaner_la_OBJECTS = http_cache_cleaner.lo
 +kio_http_cache_cleaner_la_OBJECTS = http_cache_cleaner_main.lo
-@@ -314 +323 @@
+ bin_PROGRAMS =  kio_http_cache_cleaner$(EXEEXT)
+ PROGRAMS =  $(bin_PROGRAMS)
+ 
 -#>- kio_http_cache_cleaner_OBJECTS =  dummy.$(OBJEXT)
 +#>- kio_http_cache_cleaner_OBJECTS =  http_cache_cleaner_main.$(OBJEXT)
-@@ -316,2 +325,2 @@
+ #>+ 1
 -kio_http_cache_cleaner_OBJECTS = dummy.$(OBJEXT)
 -kio_http_cache_cleaner_DEPENDENCIES =  kio_http_cache_cleaner.la
 +kio_http_cache_cleaner_OBJECTS = http_cache_cleaner_main.$(OBJEXT)
 +kio_http_cache_cleaner_DEPENDENCIES =  libkio_http_cache_cleaner_main.la
-@@ -338 +347 @@
--KDE_DIST=README.http_cache_cleaner THOUGHTS https.protocol rfc2616.txt rfc2617.txt http.protocol http_cache_cleaner.desktop 
-+KDE_DIST=README.http_cache_cleaner http_cache_cleaner.desktop rfc2617.txt http.protocol https.protocol THOUGHTS rfc2616.txt 
-@@ -345,2 +354,2 @@
+ CXXFLAGS = @CXXFLAGS@
+ #>- CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ #>+ 1
+@@ -331,15 +340,15 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=README.http_cache_cleaner https.protocol rfc2616.txt rfc2617.txt http.protocol http_cache_cleaner.desktop 
++KDE_DIST=README.http_cache_cleaner http_cache_cleaner.desktop rfc2617.txt http.protocol https.protocol rfc2616.txt 
+ 
+ DISTFILES= $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+ 
+ TAR = tar
+ GZIP_ENV = --best
 -SOURCES = $(kio_http_la_SOURCES) $(kio_http_cache_cleaner_la_SOURCES) $(kio_http_cache_cleaner_SOURCES)
 -OBJECTS = $(kio_http_la_OBJECTS) $(kio_http_cache_cleaner_la_OBJECTS) $(kio_http_cache_cleaner_OBJECTS)
 +SOURCES = $(kio_http_la_SOURCES) $(libkio_http_cache_cleaner_main_la_SOURCES) $(kio_http_cache_cleaner_la_SOURCES) $(kio_http_cache_cleaner_SOURCES)
 +OBJECTS = $(kio_http_la_OBJECTS) $(libkio_http_cache_cleaner_main_la_OBJECTS) $(kio_http_cache_cleaner_la_OBJECTS) $(kio_http_cache_cleaner_OBJECTS)
-@@ -463,0 +473,3 @@
+ 
+ #>- all: all-redirect
+ #>+ 1
+@@ -457,6 +466,9 @@
+ @KDE_USE_CLOSURE_FALSE@kio_http.la: $(kio_http_la_OBJECTS) $(kio_http_la_DEPENDENCIES)
+ 	$(CXXLINK) -rpath $(kde_moduledir) $(kio_http_la_LDFLAGS) $(kio_http_la_OBJECTS) $(kio_http_la_LIBADD) $(LIBS)
+ 
 +libkio_http_cache_cleaner_main.la: $(libkio_http_cache_cleaner_main_la_OBJECTS) $(libkio_http_cache_cleaner_main_la_DEPENDENCIES)
 +	$(CXXLINK) -rpath $(libdir) $(libkio_http_cache_cleaner_main_la_LDFLAGS) $(libkio_http_cache_cleaner_main_la_OBJECTS) $(libkio_http_cache_cleaner_main_la_LIBADD) $(LIBS)
 +
-@@ -563 +575 @@
--	  test "$$subdir" = "." && dot_seen=yes; \
-+	  test "$$subdir" != "." || dot_seen=yes; \
-@@ -621,11 +632,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
-@@ -756,3 +756,0 @@
--
+ kio_http_cache_cleaner.la: $(kio_http_cache_cleaner_la_OBJECTS) $(kio_http_cache_cleaner_la_DEPENDENCIES)
+ 	$(CXXLINK) -rpath $(libdir) $(kio_http_cache_cleaner_la_LDFLAGS) $(kio_http_cache_cleaner_la_OBJECTS) $(kio_http_cache_cleaner_la_LIBADD) $(LIBS)
+ 
+@@ -739,9 +751,6 @@
+ 	maintainer-clean-generic clean mostlyclean distclean maintainer-clean
+ 
+ 
 -dummy.cpp:
 -	echo > dummy.cpp
+-
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
+@@ -781,11 +790,23 @@
+ 	rm -f kio_http_la.all_cc.final kio_http_la.all_cc.files
+ 
+ #>+ 11
+-kio_http_cache_cleaner_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/http_cache_cleaner.cpp  
++libkio_http_cache_cleaner_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/http_cache_cleaner.cpp  
++	@echo 'creating libkio_http_cache_cleaner_main_la.all_cpp.cpp ...'; \
++	rm -f libkio_http_cache_cleaner_main_la.all_cpp.files libkio_http_cache_cleaner_main_la.all_cpp.final; \
++	echo "#define KDE_USE_FINAL 1" >> libkio_http_cache_cleaner_main_la.all_cpp.final; \
++	for file in http_cache_cleaner.cpp ; do \
++	  echo "#include \"$$file\"" >> libkio_http_cache_cleaner_main_la.all_cpp.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkio_http_cache_cleaner_main_la.all_cpp.final; \
++	done; \
++	cat libkio_http_cache_cleaner_main_la.all_cpp.final libkio_http_cache_cleaner_main_la.all_cpp.files  > libkio_http_cache_cleaner_main_la.all_cpp.cpp; \
++	rm -f libkio_http_cache_cleaner_main_la.all_cpp.final libkio_http_cache_cleaner_main_la.all_cpp.files
++
++#>+ 11
++kio_http_cache_cleaner_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/http_cache_cleaner_main.cpp  
+ 	@echo 'creating kio_http_cache_cleaner_la.all_cpp.cpp ...'; \
+ 	rm -f kio_http_cache_cleaner_la.all_cpp.files kio_http_cache_cleaner_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kio_http_cache_cleaner_la.all_cpp.final; \
+-	for file in http_cache_cleaner.cpp ; do \
++	for file in http_cache_cleaner_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> kio_http_cache_cleaner_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kio_http_cache_cleaner_la.all_cpp.final; \
+ 	done; \
+@@ -793,11 +814,11 @@
+ 	rm -f kio_http_cache_cleaner_la.all_cpp.final kio_http_cache_cleaner_la.all_cpp.files
+ 
+ #>+ 11
+-kio_http_cache_cleaner.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
++kio_http_cache_cleaner.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/http_cache_cleaner_main.cpp  
+ 	@echo 'creating kio_http_cache_cleaner.all_cpp.cpp ...'; \
+ 	rm -f kio_http_cache_cleaner.all_cpp.files kio_http_cache_cleaner.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kio_http_cache_cleaner.all_cpp.final; \
+-	for file in dummy.cpp ; do \
++	for file in http_cache_cleaner_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> kio_http_cache_cleaner.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kio_http_cache_cleaner.all_cpp.final; \
+ 	done; \
+@@ -806,7 +827,7 @@
+ 
+ #>+ 3
+ clean-final:
+-	-rm -f kio_http_la.all_cc.cc kio_http_cache_cleaner_la.all_cpp.cpp kio_http_cache_cleaner.all_cpp.cpp
++	-rm -f kio_http_la.all_cc.cc libkio_http_cache_cleaner_main_la.all_cpp.cpp kio_http_cache_cleaner_la.all_cpp.cpp kio_http_cache_cleaner.all_cpp.cpp
+ 
+ #>+ 2
+ final:
