@@ -1,19 +1,13 @@
-# $NetBSD: Makefile,v 1.15 2001/02/16 13:15:25 wiz Exp $
-# FreeBSD Id: Makefile,v 1.1.1.1 1997/11/20 08:18:40 tg Exp
+# $NetBSD: Makefile,v 1.16 2001/06/10 01:14:58 wiz Exp $
 #
 
-DISTNAME=	bzip2-0.9.0b
+DISTNAME=	bzip2-1.0.1
 CATEGORIES=	archivers
-MASTER_SITES=	http://www.muraroa.demon.co.uk/ \
-		http://www.digistar.com/bzip2/
+MASTER_SITES=	ftp://sourceware.cygnus.com/pub/bzip2/v100/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://sourceware.cygnus.com/bzip2/index.html
+HOMEPAGE=	http://sourceware.cygnus.com/bzip2/
 COMMENT=	Block-sorting file compressor
-
-.if exists(/usr/bin/bzip2)
-IGNORE=		"${PKGNAME} is part of your ${OPSYS} distribution"
-.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bzip2 ${PREFIX}/bin
