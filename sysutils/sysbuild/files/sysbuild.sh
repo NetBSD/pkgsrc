@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: sysbuild.sh,v 1.3 2002/12/01 19:39:51 jmmv Exp $
+# $NetBSD: sysbuild.sh,v 1.4 2002/12/08 11:37:18 jmmv Exp $
 #
 # sysbuild - Automatic NetBSD system builds
 # Copyright (c) 2002, Julio Merino <jmmv@netbsd.org>
@@ -39,13 +39,13 @@ conffile=@SYSBUILD_HOMEDIR@/default.conf
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:@PREFIX@/bin:@PREFIX@/sbin
 
 usage() {
-    echo "usage: sysbuild [-ms] [-c conf] target [target_arguments]"
+    echo "usage: sysbuild [-fms] [-c conf] target [target_arguments]"
     echo
     echo "Flags:"
     echo "    -c conf    Base name of configuration file"
     echo "    -f         Fast mode"
     echo "    -m         Send all output by mail instead of console"
-    echo "    -s         Run 'su' to change privileges if needed"
+    echo "    -s         Run \`su' to change privileges if needed"
     echo
     echo "Available targets:"
     echo "    build-kernels     Build kernels"
@@ -75,7 +75,7 @@ err() {
 check_noroot() {
     if [ "`id -un`" != "$USER" ]; then
         if [ "$autosu" = "yes" ]; then
-            echo "$progname: downgrading privileges to '$USER'"
+            echo "$progname: downgrading privileges to \`$USER'"
             su -l $USER -c "@PREFIX@/bin/sysbuild $allargs"
             if [ $? -ne 0 ]; then
                 err "cannot switch privileges; aborting"
@@ -83,7 +83,7 @@ check_noroot() {
             # XXX: After su, terminate inmediately.
             exit 0
         else
-            err "this target must be run as '$USER' user (use the '-s' flag)"
+            err "this target must be run as \`$USER' user (use the \`-s' flag)"
         fi
     fi
 }
@@ -99,7 +99,7 @@ check_root() {
             # XXX: After su, terminate inmediately.
             exit 0
         else
-            err "this target must be run as root (use the '-s' flag)"
+            err "this target must be run as root (use the \`-s' flag)"
         fi
     fi
 }
@@ -113,7 +113,7 @@ check_init() {
     if [ ! -d $BUILDDIR/root ]; then _ok=0; fi
     if [ ! -d $BUILDDIR/tools ]; then _ok=0; fi
     if [ $_ok -eq 0 ]; then
-        err "trees not initialized; use the 'init' target first"
+        err "trees not initialized; use the \`init' target first"
     fi
 }
 
@@ -130,6 +130,8 @@ sysbuild_build_kernels() {
         _confs="$KERNCONF"
     fi
 
+    sysbuild_build_tools
+
     _log=`mktemp /tmp/sysbuild.XXXX`
     if [ "$MAIL_CMDLOG" = "yes" ]; then
         echo "Logging to $_log (will be removed later)"
@@ -143,7 +145,7 @@ sysbuild_build_kernels() {
         elif [ "$fast" = "yes" -a -d $BUILDDIR/kernel/$_k ]; then
             cd $BUILDDIR/kernel/$_k
             printf "Buildling kernel $_k (fast mode):"
-            make >> $_log 2>&1
+            $BUILDDIR/tools/bin/nbmake-`uname -m` >> $_log 2>&1
             if [ $? -ne 0 ]; then
                 echo " failed."
             else
@@ -153,7 +155,7 @@ sysbuild_build_kernels() {
         else
             printf "Configuring kernel $_k:"
             mkdir -p $BUILDDIR/kernel/$_k
-            config -s $SRCDIR/sys -b $BUILDDIR/kernel/$_k $KERNCONFDIR/$_k >> $_log 2>&1
+            $BUILDDIR/tools/bin/nbconfig -s $SRCDIR/sys -b $BUILDDIR/kernel/$_k $KERNCONFDIR/$_k >> $_log 2>&1
             if [ $? -ne 0 ]; then
                 echo " failed."
             else
@@ -161,18 +163,18 @@ sysbuild_build_kernels() {
                 cd $BUILDDIR/kernel/$_k
 
                 printf "Cleaning kernel $_k:"
-                make cleandir >> $_log 2>&1
+                $BUILDDIR/tools/bin/nbmake-`uname -m` cleandir >> $_log 2>&1
                 echo " done."
 
                 printf "Depending kernel $_k:"
-                make depend >> $_log 2>&1
+                $BUILDDIR/tools/bin/nbmake-`uname -m` depend >> $_log 2>&1
                 if [ $? -ne 0 ]; then
                     echo " failed."
                 else
                     echo " done."
 
                     printf "Buildling kernel $_k:"
-                    make >> $_log 2>&1
+                    $BUILDDIR/tools/bin/nbmake-`uname -m` >> $_log 2>&1
                     if [ $? -ne 0 ]; then
                         echo " failed."
                     else
@@ -208,7 +210,7 @@ sysbuild_install_kernel() {
         cd $BUILDDIR/kernel/$_conf
         echo "Kernel MD5: `md5 netbsd`"
         echo "Installing $_conf kernel:"
-        make install
+        $BUILDDIR/tools/bin/nbmake-`uname -m` install
     fi
 }
 
@@ -222,7 +224,10 @@ sysbuild_build_release() {
 
     _log=`mktemp /tmp/sysbuild.XXXX`
 
-    sysbuild_clean
+    if [ "$fast" = "no" ]; then
+        sysbuild_clean
+    fi
+    sysbuild_build_tools
     if [ "$MAIL_CMDLOG" = "yes" ]; then
         echo "Logging to $_log (will be removed later)"
     else
@@ -242,7 +247,7 @@ sysbuild_build_release() {
         echo " done."
     fi
 
-    if [ "$MAIL_CMDLOG" != "yes" ]; then
+    if [ "$MAIL_CMDLOG" = "yes" ]; then
         echo "Command log follows:"
         cat $_log
         rm -f $_log
@@ -255,7 +260,10 @@ sysbuild_build_sets() {
 
     _log=`mktemp /tmp/sysbuild.XXXX`
 
-    sysbuild_clean
+    if [ "$fast" = "no" ]; then
+        sysbuild_clean
+    fi
+    sysbuild_build_tools
     if [ "$MAIL_CMDLOG" = "yes" ]; then
         echo "Logging to $_log (will be removed later)"
     else
@@ -276,7 +284,7 @@ sysbuild_build_sets() {
         printf "Making sets:"
         mkdir -p $RELEASEDIR/binary/sets
         cd $SRCDIR/distrib/sets
-        make sets TOOLDIR=$BUILDDIR/tools DESTDIR=$BUILDDIR/root RELEASEDIR=$RELEASEDIR UNPRIVED=yes >> $_log 2>&1
+        $BUILDDIR/tools/bin/nbmake-`uname -m` sets TOOLDIR=$BUILDDIR/tools DESTDIR=$BUILDDIR/root RELEASEDIR=$RELEASEDIR UNPRIVED=yes >> $_log 2>&1
         if [ $? -ne 0 ]; then
             echo " failed."
         else
@@ -284,7 +292,7 @@ sysbuild_build_sets() {
         fi
     fi
 
-    if [ "$MAIL_CMDLOG" != "yes" ]; then
+    if [ "$MAIL_CMDLOG" = "yes" ]; then
         echo "Command log follows:"
         cat $_log
         rm -f $_log
@@ -309,7 +317,40 @@ sysbuild_install_sets() {
         fi
     done
     echo
-    echo "You MUST now run 'sysbuild etcupdate' by hand to update /etc."
+    echo "You MUST now run \`sysbuild etcupdate' by hand to update /etc."
+}
+
+sysbuild_build_tools() {
+    check_noroot
+    check_init
+
+    _log=`mktemp /tmp/sysbuild.XXXX`
+
+    if [ -x "$BUILDDIR/tools/bin/nbmake-`uname -m`" ]; then
+        echo "$progname: tools seem to be up to date"
+        return 0
+    fi
+
+    if [ "$MAIL_CMDLOG" = "yes" ]; then
+        echo "Logging to $_log (will be removed later)"
+    else
+        echo "Logging to $_log (will NOT be removed later)"
+    fi
+    printf "Building tools (toolchain):"
+    cd $SRCDIR
+    rm -rf $BUILDDIR/tools/*
+    BSDOBJDIR=$BUILDDIR/obj ./build.sh -T $BUILDDIR/tools -t >> $_log 2>&1
+    if [ $? -ne 0 ]; then
+        echo " failed."
+    else
+        echo " done."
+    fi
+
+    if [ "$MAIL_CMDLOG" = "yes" ]; then
+        echo "Command log follows:"
+        cat $_log
+        rm -f $_log
+    fi
 }
 
 # --------------------------------------------------------------------
@@ -329,8 +370,12 @@ sysbuild_clean() {
     echo " done."
 
     printf "Cleaning $BUILDDIR/tools contents:"
-    rm -rf $BUILDDIR/tools/*
-    echo " done."
+    if [ "$KEEP_TOOLS" = "yes" ]; then
+        echo " kept."
+    else
+        rm -rf $BUILDDIR/tools/*
+        echo " done."
+    fi
 }
 
 sysbuild_destroy() {
@@ -613,7 +658,7 @@ case $target in
         fi
         ;;
     *)
-        err "unknown target '$target'"
+        err "unknown target \`$target'"
         ;;
 esac
 
