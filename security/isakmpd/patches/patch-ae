@@ -1,0 +1,23 @@
+$NetBSD: patch-ae,v 1.1 2001/04/05 23:29:43 itojun Exp $
+
+--- sysdep/netbsd/Makefile.sysdep-	Fri Apr  6 08:26:44 2001
++++ sysdep/netbsd/Makefile.sysdep	Fri Apr  6 08:26:53 2001
+@@ -36,8 +36,8 @@
+ LIBCRYPTO=	/usr/lib/libcrypto.a
+ LIBSYSDEPDIR=	${.CURDIR}/sysdep/common/libsysdep
+ 
+-LDADD+=		${LIBGMP} ${LIBSYSDEPDIR}/libsysdep.a -lipsec
+-DPADD+=		${LIBGMP} ${LIBSYSDEPDIR}/libsysdep.a ${LIBIPSEC}
++LDADD+=		${LIBSYSDEPDIR}/libsysdep.a -lipsec
++DPADD+=		${LIBSYSDEPDIR}/libsysdep.a ${LIBIPSEC}
+ 
+ CFLAGS+=	-DNO_RSA -DNO_IDEA -DNO_RC5 \
+ 		-I${.CURDIR}/sysdep/common
+@@ -54,7 +54,6 @@
+ IPSEC_CFLAGS=	-DUSE_PF_KEY_V2
+ 
+ USE_LIBCRYPTO=	defined
+-USE_GMP=	defined
+ 
+ # This is a hack in order to make sure libsysdep is built before the
+ # linkstage of isakmpd.  As a side effect the link is always done even if
