@@ -1,8 +1,16 @@
-$NetBSD: patch-ai,v 1.1 2000/07/30 08:08:14 jlam Exp $
+$NetBSD: patch-ai,v 1.2 2000/07/30 09:33:52 jlam Exp $
 
 --- configure.in.orig	Wed May 31 00:02:31 2000
-+++ configure.in	Sun Jul 30 02:33:10 2000
-@@ -97,14 +97,24 @@
++++ configure.in	Sun Jul 30 04:22:11 2000
+@@ -87,6 +87,7 @@
+ case "$host" in
+ *irix*) CDROM_HOST=iric; CDROM_LIBS="-lcdaudio -lmediad -lds";;
+ *linux*) CDROM_HOST=linux;;
++*netbsd*) CDROM_HOST=netbsd;;
+ *solaris*) CDROM_HOST=solaris;;
+ esac
+ AM_CONDITIONAL(APPLET_CDPLAYER, test -n "$CDROM_HOST")
+@@ -97,14 +98,24 @@
    AC_MSG_WARN([*** \`cdplayer' applet will not be built ***])
  fi
  
