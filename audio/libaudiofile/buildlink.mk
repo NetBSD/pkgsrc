@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/06/23 19:26:49 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/07/01 22:59:09 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libaudiofile.
 #
@@ -14,6 +14,8 @@
 
 .if !defined(AUDIOFILE_BUILDLINK_MK)
 AUDIOFILE_BUILDLINK_MK=	# defined
+
+.include "../../mk/bsd.buildlink.mk"
 
 BUILDLINK_DEPENDS.audiofile?=	libaudiofile>=0.2.1
 DEPENDS+=	${BUILDLINK_DEPENDS.audiofile}:../../audio/libaudiofile
@@ -39,7 +41,5 @@ CONFIGURE_ENV+=		AUDIOFILE_CONFIG="${BUILDLINK_CONFIG_WRAPPER.audiofile}"
 pre-configure: ${BUILDLINK_TARGETS.audiofile}
 audiofile-buildlink: _BUILDLINK_USE
 audiofile-buildlink-config-wrapper: _BUILDLINK_CONFIG_WRAPPER_USE
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# AUDIOFILE_BUILDLINK_MK

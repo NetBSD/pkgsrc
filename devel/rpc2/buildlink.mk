@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.5 2001/06/23 19:26:54 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.6 2001/07/01 22:59:19 jlam Exp $
 #
 # This Makefile fragment is included by packages that use rpc2.
 #
@@ -14,6 +14,8 @@
 
 .if !defined(RPC2_BUILDLINK_MK)
 RPC2_BUILDLINK_MK=	# defined
+
+.include "../../mk/bsd.buildlink.mk"
 
 BUILDLINK_DEPENDS.rpc2?=	rpc2>=1.10
 DEPENDS+=			${BUILDLINK_DEPENDS.rpc2}:../../devel/rpc2
@@ -31,7 +33,5 @@ BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.rpc2}
 
 pre-configure: ${BUILDLINK_TARGETS.rpc2}
 rpc2-buildlink: _BUILDLINK_USE
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# RPC2_BUILDLINK_MK

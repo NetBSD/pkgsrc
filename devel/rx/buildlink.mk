@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/30 09:28:15 zuntum Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/07/01 22:59:19 jlam Exp $
 #
 # This Makefile fragment is included by packages that use rx.
 #
@@ -15,6 +15,8 @@
 .if !defined(RX_BUILDLINK_MK)
 RX_BUILDLINK_MK=	# defined
 
+.include "../../mk/bsd.buildlink.mk"
+
 BUILDLINK_DEPENDS.rx?=	rx>=1.5
 DEPENDS+=	${BUILDLINK_DEPENDS.rx}:../../devel/rx
 
@@ -27,7 +29,5 @@ BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.rx}
 
 pre-configure: ${BUILDLINK_TARGETS.rx}
 rx-buildlink: _BUILDLINK_USE
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# RX_BUILDLINK_MK

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/26 18:09:19 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/07/01 22:59:10 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libsidplay.
 #
@@ -15,6 +15,8 @@
 .if !defined(LIBSIDPLAY_BUILDLINK_MK)
 LIBSIDPLAY_BUILDLINK_MK=	# defined
 
+.include "../../mk/bsd.buildlink.mk"
+
 BUILDLINK_DEPENDS.libsidplay?=	libsidplay>=1.36.38
 DEPENDS+=	${BUILDLINK_DEPENDS.libsidplay}:../../audio/libsidplay
 
@@ -27,7 +29,5 @@ BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.libsidplay}
 
 pre-configure: ${BUILDLINK_TARGETS.libsidplay}
 libsidplay-buildlink: _BUILDLINK_USE
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# LIBSIDPLAY_BUILDLINK_MK
