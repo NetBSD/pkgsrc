@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/08/04 03:57:33 jlam Exp $
+
+--- makeinclude.in.orig	Sat Jan  9 14:48:33 1999
++++ makeinclude.in	Thu Aug  3 23:43:07 2000
+@@ -15,10 +15,11 @@
+ MAKEDEPEND =@MAKEDEPEND@
+ 
+ # flags for C++ compiler:
+-CFLAGS		=@CFLAGS@
+-CFLAGS_D	=@CFLAGS_D@
+-CXXFLAGS	=@CXXFLAGS@
+-CXXFLAGS_D	=@CXXFLAGS_D@
++CPPFLAGS	=@CPPFLAGS@
++CFLAGS		=@CFLAGS@ $(CPPFLAGS)
++CFLAGS_D	=@CFLAGS_D@ $(CPPFLAGS)
++CXXFLAGS	=@CXXFLAGS@ $(CPPFLAGS)
++CXXFLAGS_D	=@CXXFLAGS_D@ $(CPPFLAGS)
+ 
+ # libraries to link with:
+ LDLIBS	=@LIBS@ -lX11 -lXext @X_EXTRA_LIBS@ -lm
