@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/09/22 08:09:28 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/11/08 15:08:10 wiz Exp $
 include/libwnck-1.0/libwnck/application.h
 include/libwnck-1.0/libwnck/class-group.h
 include/libwnck-1.0/libwnck/libwnck.h
@@ -73,6 +73,7 @@ ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/libwnck.mo
+${PKGLOCALEDIR}/locale/ka/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/kn/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/li/LC_MESSAGES/libwnck.mo
