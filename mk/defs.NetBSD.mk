@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.65 2004/05/12 01:04:00 jschauma Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.66 2004/05/12 14:10:18 jschauma Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -208,8 +208,10 @@ _OPSYS_MAX_CMDLEN!=	/sbin/sysctl -n kern.argmax
 CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN}
 .endif
 
-# if games are to be installed setgid, set the group and mode to meaningful
-# values
+# If games are to be installed setgid, then SETGIDGAME is set to 'yes'
+# (it defaults to 'no' as per bsd.pkg.defaults.mk).
+# Set the group and mode to meaningful values in that case (defaults to
+# BINOWN, BINGRP and BINMODE as per bsd.pkg.defaults.mk).
 .if !(empty(SETGIDGAME:M[yY][eE][sS]))
 GAMEOWN=		games
 GAMEGRP=		games
