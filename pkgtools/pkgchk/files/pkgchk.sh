@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.31 2002/04/01 20:20:05 abs Exp $
+# $Id: pkgchk.sh,v 1.32 2002/06/09 14:43:39 tron Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -28,7 +28,7 @@ check_packages_installed()
 	    echo "Unable to extract PKGNAME for $pkgdir"
 	    exit 1
 	fi
-	if [ ! -d /var/db/pkg/$PKGNAME ];then
+	if [ ! -d $PKG_DBDIR/$PKGNAME ];then
 	    echo_n "$PKGNAME: "
 	    pkg=`echo $PKGNAME | sed 's/-[0-9].*//'`
 	    pkginstalled=`sh -c "${PKG_INFO} -e $pkg" || true`
@@ -48,7 +48,7 @@ check_packages_installed()
 	else
 	    if [ -n "$opt_B" ];then
 		current_build_ver=`get_build_ver`
-		installed_build_ver=`sed "s|^[^:]*/[^:]*:||" /var/db/pkg/$PKGNAME/+BUILD_VERSION`
+		installed_build_ver=`sed "s|^[^:]*/[^:]*:||" $PKG_DBDIR/$PKGNAME/+BUILD_VERSION`
 		if [ x"$current_build_ver" != x"$installed_build_ver" ];then
 		    echo "$PKGNAME: build version information mismatch"
 		    MISMATCH_TODO="$MISMATCH_TODO $PKGNAME"
@@ -84,7 +84,9 @@ extract_variables()
     #
 
     if [ -z "$PKGSRCDIR" ];then
-	if [ -f /etc/mk.conf ] ;then
+	if [ -f $MAKECONF ];then
+	    eval `printf 'BSD_PKG_MK=1\nx:\n\t@echo PKGSRCDIR=${PKGSRCDIR}\n' | ${MAKE} -f - -f $MAKECONF x`
+	elif [ -f /etc/mk.conf ];then
 	    eval `printf 'BSD_PKG_MK=1\nx:\n\t@echo PKGSRCDIR=${PKGSRCDIR}\n' | ${MAKE} -f - -f /etc/mk.conf x` 
 	fi
 	if [ -z "$PKGSRCDIR" ];then
@@ -93,6 +95,24 @@ extract_variables()
     fi
     if [ ! -d $PKGSRCDIR ];then
 	echo "Unable to locate PKGSRCDIR '$PKGSRCDIR'"
+	exit 1;
+    fi
+
+    # Establish PKG_DBDIR
+    #
+
+    if [ -z "$PKG_DBDIR" ];then
+	if [ -f $MAKECONF ];then
+	    eval `printf 'BSD_PKG_MK=1\nx:\n\t@echo PKG_DBDIR=${PKG_DBDIR}\n' | ${MAKE} -f - -f $MAKECONF x`
+	elif [ -f /etc/mk.conf ];then
+	    eval `printf 'BSD_PKG_MK=1\nx:\n\t@echo PKG_DBDIR=${PKG_DBDIR}\n' | ${MAKE} -f - -f /etc/mk.conf x`
+	fi
+	if [ -z "$PKG_DBDIR" ];then
+	    PKG_DBDIR=/var/db/pkg
+	fi
+    fi
+    if [ ! -d $PKG_DBDIR ];then
+	echo "Unable to locate PKG_DBDIR '$PKG_DBDIR'"
 	exit 1;
     fi
 
@@ -159,7 +179,7 @@ pkg_install()
     PKGDIR=$2
     INSTALL=$3
 
-    if [ -d /var/db/pkg/$PKGNAME ];then
+    if [ -d $PKG_DBDIR/$PKGNAME ];then
 	echo "$PKGNAME installed in previous stage"
     elif [ -n "$opt_b" -a -f $PACKAGES/All/$PKGNAME.tgz ] ; then
 	if [ $INSTALL = Update ];then
@@ -175,7 +195,7 @@ pkg_install()
 	run_cmd "cd $PKGSRCDIR/$PKGDIR && ${MAKE} update"
     fi
 
-    if [ -z "$opt_n" -a ! -d /var/db/pkg/$PKGNAME ];then
+    if [ -z "$opt_n" -a ! -d $PKG_DBDIR/$PKGNAME ];then
 	FAIL=1
     fi
 
@@ -294,6 +314,7 @@ on hostname and type, see pkg_chk(8).
 fi
 
 test -n "$MAKE" || MAKE="@MAKE@"
+test -n "$MAKECONF" || MAKECONF="@MAKECONF@"
 
 # grabbed from GNU configure
 if (echo "testing\c"; echo 1,2,3) | grep c >/dev/null; then
@@ -423,8 +444,8 @@ if [ -n "$UPDATE_TODO" ];then
     set -- $UPDATE_TODO
     while [ $# != 0 ]; do
 	PKGNAME=`echo $1 | sed 's/-[0-9].*//'`
-	if [ -f /var/db/pkg/$PKGNAME-[0-9]*/+REQUIRED_BY ];then
-	    LIST="$LIST$1|$2|`cat /var/db/pkg/$PKGNAME-[0-9]*/+REQUIRED_BY | xargs echo`\n"
+	if [ -f $PKG_DBDIR/$PKGNAME-[0-9]*/+REQUIRED_BY ];then
+	    LIST="$LIST$1|$2|`cat $PKG_DBDIR/$PKGNAME-[0-9]*/+REQUIRED_BY | xargs echo`\n"
 	else
 	    LIST="$LIST$1|$2\n"
 	fi
