@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/05/26 16:30:19 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/05/28 02:50:24 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libtiff.
 #
@@ -15,6 +15,9 @@
 
 .if !defined(TIFF_BUILDLINK_MK)
 TIFF_BUILDLINK_MK=	# defined
+
+.include "../../devel/zlib/buildlink.mk"
+.include "../../graphics/jpeg/buildlink.mk"
 
 TIFF_REQD?=		3.5.4
 DEPENDS+=		tiff>=${TIFF_REQD}:../../graphics/tiff
