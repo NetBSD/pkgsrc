@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2001/03/12 17:32:53 drochner Exp $
+# $NetBSD: Makefile,v 1.12 2001/05/14 13:40:39 zuntum Exp $
 #
 
-DISTNAME=		HTML-Parser-3.19
+DISTNAME=		HTML-Parser-3.24
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=HTML/}
