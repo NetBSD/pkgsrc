@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/01/24 07:23:44 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/23 23:41:43 jlam Exp $
 libexec/cgi-bin/sqwebmail
-libexec/courier/sqwebmail/mimegpg
+libexec/courier/sqwebmail/makemime
 libexec/courier/sqwebmail/pcpd
+libexec/courier/sqwebmail/reformime
+libexec/courier/sqwebmail/sqwebmaild
 sbin/sqwebmail.sysconftool
 share/courier/sqwebmail/cleancache.pl
 share/courier/sqwebmail/html/en
@@ -50,54 +52,68 @@ share/courier/sqwebmail/html/en-us/printredirect.html
 share/courier/sqwebmail/html/en-us/quickadd.html
 share/courier/sqwebmail/html/en-us/readmsg.html
 share/courier/sqwebmail/html/en-us/redirect.html
+share/courier/sqwebmail/html/en-us/smileys.txt
 share/courier/sqwebmail/html/en-us/spellchk.html
-share/courier/sqwebmail/images/bg.gif
-share/courier/sqwebmail/images/bluebottomleft.gif
-share/courier/sqwebmail/images/bluebottomright.gif
-share/courier/sqwebmail/images/bluetopleft.gif
-share/courier/sqwebmail/images/bluetopright.gif
-share/courier/sqwebmail/images/calendar.gif
-share/courier/sqwebmail/images/cancel.gif
-share/courier/sqwebmail/images/folder.gif
-share/courier/sqwebmail/images/folder2.gif
-share/courier/sqwebmail/images/folders.gif
-share/courier/sqwebmail/images/forward.gif
-share/courier/sqwebmail/images/forwardatt.gif
-share/courier/sqwebmail/images/fullheaders.gif
-share/courier/sqwebmail/images/graybottomleft.gif
-share/courier/sqwebmail/images/graybottomright.gif
-share/courier/sqwebmail/images/graytopleft.gif
-share/courier/sqwebmail/images/graytopright.gif
-share/courier/sqwebmail/images/left.gif
-share/courier/sqwebmail/images/left2.gif
-share/courier/sqwebmail/images/logo.gif
-share/courier/sqwebmail/images/print.gif
-share/courier/sqwebmail/images/reply.gif
-share/courier/sqwebmail/images/replyall.gif
-share/courier/sqwebmail/images/replylist.gif
-share/courier/sqwebmail/images/right.gif
-share/courier/sqwebmail/images/right2.gif
-share/courier/sqwebmail/images/save.gif
-share/courier/sqwebmail/images/sep.gif
-share/courier/sqwebmail/images/signin.gif
+share/courier/sqwebmail/images/bg.png
+share/courier/sqwebmail/images/bluebottomleft.png
+share/courier/sqwebmail/images/bluebottomright.png
+share/courier/sqwebmail/images/bluetopleft.png
+share/courier/sqwebmail/images/bluetopright.png
+share/courier/sqwebmail/images/calendar.png
+share/courier/sqwebmail/images/cancel.png
+share/courier/sqwebmail/images/eventadd.png
+share/courier/sqwebmail/images/eventedit.png
+share/courier/sqwebmail/images/first.png
+share/courier/sqwebmail/images/folder.png
+share/courier/sqwebmail/images/folder2.png
+share/courier/sqwebmail/images/folders.png
+share/courier/sqwebmail/images/forward.png
+share/courier/sqwebmail/images/forwardatt.png
+share/courier/sqwebmail/images/fullheaders.png
+share/courier/sqwebmail/images/graybottomleft.png
+share/courier/sqwebmail/images/graybottomright.png
+share/courier/sqwebmail/images/graytopleft.png
+share/courier/sqwebmail/images/graytopright.png
+share/courier/sqwebmail/images/last.png
+share/courier/sqwebmail/images/left.png
+share/courier/sqwebmail/images/left2.png
+share/courier/sqwebmail/images/logo.png
+share/courier/sqwebmail/images/print.png
+share/courier/sqwebmail/images/reply.png
+share/courier/sqwebmail/images/replyall.png
+share/courier/sqwebmail/images/replylist.png
+share/courier/sqwebmail/images/right.png
+share/courier/sqwebmail/images/right2.png
+share/courier/sqwebmail/images/save.png
+share/courier/sqwebmail/images/sep.png
+share/courier/sqwebmail/images/signin.png
+share/courier/sqwebmail/images/sm-frowney.png
+share/courier/sqwebmail/images/sm-frowney2.png
+share/courier/sqwebmail/images/sm-notsmiley.png
+share/courier/sqwebmail/images/sm-notsmiley2.png
+share/courier/sqwebmail/images/sm-ohno.png
+share/courier/sqwebmail/images/sm-smiley.png
+share/courier/sqwebmail/images/sm-smiley2.png
+share/courier/sqwebmail/images/sm-wink.png
+share/courier/sqwebmail/images/sm-wink2.png
 share/courier/sqwebmail/images/sqwebmail.css
-share/courier/sqwebmail/images/trash2.gif
-share/courier/sqwebmail/images/uncancel.gif
+share/courier/sqwebmail/images/trash2.png
+share/courier/sqwebmail/images/uncancel.png
 share/courier/sqwebmail/ldapsearch
 share/courier/sqwebmail/sendit.sh
 share/courier/sqwebmail/webgpg
-share/doc/html/sqwebmail/COPYING
-share/doc/html/sqwebmail/INSTALL.html
-share/doc/html/sqwebmail/pcp/README.html
-share/doc/html/sqwebmail/sqwebmail/BUGS.html
-share/doc/html/sqwebmail/sqwebmail/SECURITY.html
+share/doc/html/courier/sqwebmail/BUGS.html
+share/doc/html/courier/sqwebmail/COPYING
+share/doc/html/courier/sqwebmail/INSTALL.html
+share/doc/html/courier/sqwebmail/README.gpg.html
+share/doc/html/courier/sqwebmail/README.pcp.html
+share/doc/html/courier/sqwebmail/SECURITY.html
 share/examples/courier/authmodulelist
 share/examples/courier/ldapaddressbook.dist
-share/examples/courier/webmail.pam
+share/examples/courier/webmail.authpam
 @unexec ${RMDIR} -p %D/share/examples/courier 2>/dev/null || ${TRUE}
-@dirrm share/doc/html/sqwebmail/sqwebmail
-@dirrm share/doc/html/sqwebmail/pcp
-@dirrm share/doc/html/sqwebmail
+@dirrm share/doc/html/courier/sqwebmail
+@unexec ${RMDIR} -p %D/share/doc/html/courier 2>/dev/null || ${TRUE}
 @dirrm share/courier/sqwebmail/images
 @dirrm share/courier/sqwebmail/html/en-us
 @dirrm share/courier/sqwebmail/html
