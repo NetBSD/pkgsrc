@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 1998/12/01 23:27:36 garbled Exp $
+--- entry.c.orig	Tue Dec  1 14:09:46 1998
++++ entry.c	Tue Dec  1 14:10:02 1998
+@@ -371,7 +371,7 @@
+                  }
+                  break;
+       
+-            case DELETE : case '' : case KEY_BACKSPACE : case KEY_DC :
++            case DELETE : case '' : case KEY_BACKSPACE : /* case KEY_DC : */
+                  if (entry->dispType == vVIEWONLY)
+                  {
+                     Beep();

@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/12/01 23:27:36 garbled Exp $
+--- /dev/null	Tue Dec  1 15:41:34 1998
++++ makefiles/Makefile.NetBSD	Tue Dec  1 16:06:16 1998
+@@ -0,0 +1,22 @@
++#
++# BSD style makefile for Cdk.
++#
++
++#
++# Define all needed variables.
++#
++COMPILE_OS	= "NetBSD"
++LIB		= cdk
++SHLIB_MAJOR	= 4
++SHLIB_MINOR	= 8
++SRCS		= $(CDKSRC)
++MAN3		= $(CDKSRC:%=man/%)
++
++#
++# Include the global FreeBSD makefile def's
++#
++NOLINT = 1
++MANZ = 0
++LIBDIR = ${PREFIX}/lib
++.include <bsd.lib.mk>
++CFLAGS += -I. -DNCURSES -I${PREFIX}/include
