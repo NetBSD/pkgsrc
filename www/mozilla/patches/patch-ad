@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.12 2000/10/26 07:50:00 mycroft Exp $
+$NetBSD: patch-ad,v 1.13 2000/10/27 04:38:27 mycroft Exp $
 
 --- nsprpub/pr/include/md/_netbsd.h.orig	Thu Jul  6 20:46:02 2000
 +++ nsprpub/pr/include/md/_netbsd.h	Thu Oct 26 07:32:35 2000
-@@ -70,39 +70,86 @@
+@@ -70,39 +70,87 @@
  
  #define CONTEXT(_th) ((_th)->md.context)
  
@@ -83,13 +83,14 @@ $NetBSD: patch-ad,v 1.12 2000/10/26 07:50:00 mycroft Exp $
 +}
 +#define	_MD_GET_SP(_thread)	CONTEXT(_thread)[23]
 +#endif
-+#ifdef __alpha__	/* XXX UNTESTED */
++#ifdef __alpha__
 +#define _MD_INIT_CONTEXT(_thread, _sp, _main, status)			\
 +{									\
 +    sigsetjmp(CONTEXT(_thread), 1);					\
 +    CONTEXT(_thread)[34] = (unsigned char*) ((_sp) - 128);		\
 +    CONTEXT(_thread)[2] = (long) _main;					\
 +    CONTEXT(_thread)[30] = (long) _main;				\
++    CONTEXT(_thread)[31] = (long) _main;				\
 +    *status = PR_TRUE;							\
 +}
 +#define	_MD_GET_SP(_thread)	CONTEXT(_thread)[34]
