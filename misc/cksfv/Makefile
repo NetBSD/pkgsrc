@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/09/22 09:11:31 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/25 11:48:31 dillo Exp $
 #
 
 DISTNAME=	cksfv-1.3
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.fodder.org/cksfv/
 
-MAINTAINER=	dillo@giga.or.at
+MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://www.fodder.org/cksfv/
 COMMENT=	Check and create simple file verification (SFV) listings
 
