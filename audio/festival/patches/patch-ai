@@ -1,9 +1,9 @@
-$NetBSD: patch-ai,v 1.1 2000/05/30 17:18:36 dmcmahill Exp $
+$NetBSD: patch-ai,v 1.2 2000/05/31 14:51:16 dmcmahill Exp $
 
 work around pmax compiler bug
 
---- /usr/build/pkgsrc/audio/festival/work.mipsel/speech_tools/grammar/ngram/Makefile.orig	Sun May 30 06:59:41 1999
-+++ /usr/build/pkgsrc/audio/festival/work.mipsel/speech_tools/grammar/ngram/Makefile	Tue May 30 12:41:32 2000
+--- speech_tools/grammar/ngram/Makefile.orig	Sun May 30 06:59:41 1999
++++ speech_tools/grammar/ngram/Makefile	Tue May 30 12:41:32 2000
 @@ -49,3 +49,10 @@
  include $(TOP)/config/common_make_rules
  
