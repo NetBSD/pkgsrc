@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2004/04/27 19:08:34 tv Exp $
+
+--- glib-1.2.8/gmain.c.orig	Tue Apr 27 14:56:29 2004
++++ glib-1.2.8/gmain.c
+@@ -49,6 +49,10 @@
+ #  undef events	 /* AIX 4.1.5 & 4.3.2 define this for SVR3,4 compatibility */
+ #  undef revents /* AIX 4.1.5 & 4.3.2 define this for SVR3,4 compatibility */
+ #endif /* GLIB_HAVE_SYS_POLL_H */
++#ifdef __INTERIX
++/* SUS standard location is NOT <sys/poll.h> */
++#include <poll.h>
++#endif
+ #ifdef HAVE_UNISTD_H
+ #include <unistd.h>
+ #endif /* HAVE_UNISTD_H */
