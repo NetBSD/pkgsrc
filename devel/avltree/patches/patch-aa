@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2000/09/25 18:52:03 skrll Exp $
+$NetBSD: patch-aa,v 1.4 2000/09/25 19:11:44 skrll Exp $
 
 --- Makefile.orig	Thu Jan 13 21:04:47 2000
 +++ Makefile
-@@ -1,46 +1,15 @@
+@@ -1,46 +1,14 @@
 -# makefile for:		avltree
 -# version:		1.1
 -# Date created:		13 January 2000
@@ -15,7 +15,6 @@ $NetBSD: patch-aa,v 1.3 2000/09/25 18:52:03 skrll Exp $
 -all:		libavltree.a
 +SHLIB_MAJOR=	1
 +SHLIB_MINOR=	1
-+SHLIB_FULLVERSION=${SHLIB_MAJOR}.${SHLIB_MINOR}
  
 -libavltree.a:	avltree.o
 -		$(AR) r  libavltree.a avltree.o
