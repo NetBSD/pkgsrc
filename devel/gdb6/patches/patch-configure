@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1.1.1 2004/06/01 19:29:30 shannonjr Exp $
+
+--- configure.orig	2004-06-01 08:25:47.000000000 -0600
++++ configure
+@@ -920,7 +920,7 @@ target_configdirs=`echo ${target_librari
+ # This should be done more generally, but at the moment it doesn't matter.
+ if test ${host_alias} != ${build_alias} ; then
+   # This is the only build module.
+-  build_modules=libiberty
++  build_modules=
+ else
+   build_modules=
+ fi

@@ -1,0 +1,27 @@
+$NetBSD: patch-gdb_configure_in,v 1.1.1.1 2004/06/01 19:29:30 shannonjr Exp $
+
+--- gdb/configure.in.orig	2004-02-25 17:41:46.000000000 -0700
++++ gdb/configure.in
+@@ -941,6 +941,22 @@ if test ${build} = ${host} -a ${host} = 
+          CONFIG_LDFLAGS="${CONFIG_LDFLAGS} -lpthdebug"
+       fi
+       ;;
++   netbsd*)
++      AC_MSG_CHECKING(for NetBSD thread debugging library)
++      AC_CACHE_VAL(gdb_cv_have_netbsd_thread_debug,
++                   [AC_TRY_COMPILE([#include <pthread_dbg.h>],
++                                   [#ifndef TD_STATE_RUNNING
++                                    #error
++                                    #endif],
++                                   gdb_cv_have_netbsd_thread_debug=yes,
++                                   gdb_cv_have_netbsd_thread_debug=no)])
++      AC_MSG_RESULT($gdb_cv_have_netbsd_thread_debug)
++      if test $gdb_cv_have_netbsd_thread_debug = yes; then
++         CONFIG_SRCS="${CONFIG_SRCS} nbsd-thread.c"
++         CONFIG_OBS="${CONFIG_OBS} nbsd-thread.o"
++         CONFIG_LDFLAGS="${CONFIG_LDFLAGS} -lpthread_dbg"
++      fi
++      ;;
+    esac
+    AC_SUBST(CONFIG_LDFLAGS)
+ fi
