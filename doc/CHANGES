@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7067 2004/09/01 13:37:53 jmmv Exp $
+$NetBSD: CHANGES,v 1.7068 2004/09/01 14:31:28 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4141,3 +4141,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated icewm-imlib to 1.2.16 [jmmv 2004-09-01]
 	Updated sylpheed-gtk2 to 0.9.12.0.1 [recht 2004-09-01]
 	Updated intltool to 0.31.2 [jmmv 2004-09-01]
+	Updated gstreamer to 0.8.5 [jmmv 2004-09-01]
