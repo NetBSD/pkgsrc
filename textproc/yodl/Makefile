@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2002/10/21 15:35:42 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/02/18 23:43:54 jtb Exp $
 
 DISTNAME=	yodl-1.31.18
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.lilypond.org/pub/yodl/development/
 
@@ -18,5 +19,6 @@ MAKEFILE=	GNUmakefile
 do-build:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} LDFLAGS="${LDFLAGS}"
 
+.include "../../lang/python/application.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
