@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/02 22:59:16 xtraeme Exp $
+bin/muse
+doc/MuSE/AUTHORS
+doc/MuSE/COPYING
+doc/MuSE/ChangeLog
+doc/MuSE/KNOWN-BUGS
+doc/MuSE/NEWS
+doc/MuSE/README
+doc/MuSE/TODO
+doc/MuSE/USAGE
+man/man1/muse.1
+@dirrm doc/MuSE
+@dirrm doc
