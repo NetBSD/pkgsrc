@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2000/03/14 11:42:47 soren Exp $
+# $NetBSD: Makefile,v 1.36 2000/04/20 22:45:50 tron Exp $
 #
 
 DISTNAME=		xmame-0.36b16.1
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		soren@netbsd.org
 HOMEPAGE=		http://x.mame.net/
 
-DEPENDS=		unzip-5.40:../../archivers/unzip
+DEPENDS=		unzip>=5.40:../../archivers/unzip
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
 USE_X11BASE=		yes
