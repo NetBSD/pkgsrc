@@ -1,39 +1,16 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 10:36:21 agc Exp $
+$NetBSD: patch-aa,v 1.3 1999/01/17 20:07:28 hubertf Exp $
 
-diff -rc ../../xmix.orig/Imakefile ./Imakefile
-*** ../../xmix.orig/Imakefile	Fri Jun 30 18:49:35 1995
---- ./Imakefile	Fri Jun 30 20:11:30 1995
-***************
-*** 14,17 ****
-  
-  LOCAL_LIBRARIES = $(XAWLIB) $(XMULIB) $(XTOOLLIB) $(XLIB)
-  
-! NormalProgramTarget(xmix,$(OBJS1),,$(LOCAL_LIBRARIES),)
---- 14,19 ----
-  
-  LOCAL_LIBRARIES = $(XAWLIB) $(XMULIB) $(XTOOLLIB) $(XLIB)
-  
-! PROGRAM = $(PROGRAMS)
-! 
-! ComplexProgramTarget_1($(PROGRAM),$(LOCAL_LIBRARIES),)
-Only in ./: Imakefile.orig
-diff -rc ../../xmix.orig/xmix.c ./xmix.c
-*** ../../xmix.orig/xmix.c	Fri Jun 30 20:09:41 1995
---- ./xmix.c	Fri Jun 30 20:11:49 1995
-***************
-*** 77,83 ****
-  #include "square_empty.bit"
-  #include "square_with_x.bit"
-  
-! #include <linux/soundcard.h>
-  
-  #define SOUND_FULL_SCALE 100.0
-  #define MAX_SOUND_VOL 95
---- 77,83 ----
-  #include "square_empty.bit"
-  #include "square_with_x.bit"
-  
-! #include <machine/soundcard.h>
-  
-  #define SOUND_FULL_SCALE 100.0
-  #define MAX_SOUND_VOL 95
+diff -r -u ../../src/xmix-2.1/Imakefile ./Imakefile
+--- ../../src/xmix-2.1/Imakefile	Tue Feb  1 22:54:35 1994
++++ ./Imakefile	Sun Jan 17 13:16:12 1999
+@@ -12,6 +12,8 @@
+ 
+ all::  $(PROGRAMS)
+ 
+-LOCAL_LIBRARIES = $(XAWLIB) $(XMULIB) $(XTOOLLIB) $(XLIB)
++LOCAL_LIBRARIES = $(XAWLIB) $(XMULIB) $(XTOOLLIB) $(XLIB) -lossaudio
+ 
+-NormalProgramTarget(xmix,$(OBJS1),,$(LOCAL_LIBRARIES),)
++PROGRAM = $(PROGRAMS)
++
++ComplexProgramTarget_1($(PROGRAM),$(LOCAL_LIBRARIES),)
