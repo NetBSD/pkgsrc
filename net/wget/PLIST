@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.3 2002/03/30 08:56:36 pooka Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/03/30 13:57:02 pooka Exp $
 bin/wget
 etc/wgetrc
 man/man1/wget.1
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/wget.info
+@unexec ${INSTALL_INFO} --delete %D/info/wget.info %D/info/dir
 info/wget.info
 info/wget.info-1
 info/wget.info-2
 info/wget.info-3
 info/wget.info-4
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/wget.info
+@exec ${INSTALL_INFO} %D/info/wget.info %D/info/dir
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/wget.mo
@@ -17,9 +17,7 @@ ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/wget.mo
-${PKGLOCALEDIR}/locale/he/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/wget.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/wget.mo
@@ -31,5 +29,5 @@ ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/wget.mo
-${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/wget.mo
+${PKGLOCALEDIR}/locale/zh/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/wget.mo

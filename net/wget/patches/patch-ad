@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.5 2002/03/30 13:57:03 pooka Exp $
+
+--- src/host.c.orig	Sun Jul 22 17:33:22 2001
++++ src/host.c	Sun Jul 22 17:34:47 2001
+@@ -206,7 +206,9 @@
+   memset(sa, 0, *len);
+   *len = sizeof(struct sockaddr_in);
+   sa->sa_family = AF_INET;
++#ifndef __sun__
+   sa->sa_len = *len;	/*XXX*/
++#endif
+ 
+   where = (char *)&((struct sockaddr_in *)sa)->sin_addr;
+ 
