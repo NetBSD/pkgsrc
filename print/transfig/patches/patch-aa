@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2001/08/17 07:29:18 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2002/10/08 13:14:02 jlam Exp $
 
 --- fig2dev/Imakefile.orig	Thu Apr 19 19:19:38 2001
 +++ fig2dev/Imakefile
@@ -32,7 +32,7 @@ $NetBSD: patch-aa,v 1.7 2001/08/17 07:29:18 wiz Exp $
  #ifdef USEPNG
  PNGLIBDIR = $(USRLIBDIR)
 -PNGINC = -I/usr/include/X11
-+PNGINC = -I$(BUILDLINK_DIR)/include
++PNGINC = -I$(LOCALBASE)/include
  #endif
  
  XCOMM ****************
@@ -46,7 +46,7 @@ $NetBSD: patch-aa,v 1.7 2001/08/17 07:29:18 wiz Exp $
  #ifdef USEXPM
  XPMLIBDIR = $(USRLIBDIR)
 -XPMINC = -I/usr/include/X11
-+XPMINC = -I$(BUILDLINK_DIR)/include/X11
++XPMINC = -I$(LOCALBASE)/include/X11
  #endif
  
  XCOMM ****************
@@ -56,8 +56,8 @@ $NetBSD: patch-aa,v 1.7 2001/08/17 07:29:18 wiz Exp $
  #ifdef USEINSTALLEDJPEG
 -JPEGLIBDIR = /usr/local/lib
 -JPEGINCDIR = /usr/include/X11
-+JPEGLIBDIR = $(BUILDLINK_DIR)/lib
-+JPEGINCDIR = $(BUILDLINK_DIR)/include
++JPEGLIBDIR = $(LOCALBASE)/lib
++JPEGINCDIR = $(LOCALBASE)/include
  #else
  JPEGLIBDIR = ../jpeg
  JPEGINCDIR = $(JPEGLIBDIR)
