@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2001/11/17 06:26:45 itohy Exp $
+
+--- include/id3/writer.h.orig	Mon Oct 23 17:20:54 2000
++++ include/id3/writer.h	Thu Nov 15 23:10:05 2001
+@@ -33,7 +33,7 @@
+ class ID3_Writer
+ {
+  public:
+-  typedef uint32 size_type;
++  typedef size_t size_type;
+   typedef uint8  char_type;
+   typedef uint32 pos_type;
+   typedef  int32 off_type;
