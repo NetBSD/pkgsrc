@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.70 2002/09/22 15:58:33 atatat Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.71 2002/09/30 16:08:18 atatat Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -396,6 +396,8 @@ sub fail
 
 sub get_default_makefile_vars
     {
+    chomp($pkg_installver = `pkg_info -V 2>/dev/null || echo 20010302`);
+
     chomp($_ = `uname -srm`);
     ( $default_vars->{OPSYS},
 	$default_vars->{OS_VERSION},
@@ -533,9 +535,7 @@ sub list_installed_packages
     close(PKG_INFO);
 
     # pkg_install is not in the pkg_info -a output, add it manually
-    $pkg_installver = $pkgver = `pkg_info -V 2>/dev/null || echo 20010302`;
-    chomp($pkgver);
-    push(@pkgs, "pkg_install-$pkgver");
+    push(@pkgs, "pkg_install-$pkg_installver");
     @pkgs;
     }
 
