@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/27 22:32:16 salo Exp $
-lib/silc/modules/libfe_icb.la
-lib/silc/modules/libfe_icb.so
-lib/silc/modules/libicb_core.la
-lib/silc/modules/libicb_core.so
-share/doc/silc/README.icb
+@comment $NetBSD: PLIST,v 1.2 2004/06/10 22:38:16 salo Exp $
+lib/silc-client/modules/libfe_icb.la
+lib/silc-client/modules/libfe_icb.so
+lib/silc-client/modules/libicb_core.la
+lib/silc-client/modules/libicb_core.so
+share/doc/silc-client/README.icb
