@@ -1,0 +1,16 @@
+$NetBSD: patch-bm,v 1.1 2004/07/18 18:05:13 dmcmahill Exp $
+
+--- conf/DARWIN.def.orig	Thu Sep 27 19:56:33 2001
++++ conf/DARWIN.def
+@@ -1,9 +1,7 @@
+ ARCHCFLAGS	=	-DSOCKADHASLEN -DNOREXEC \
+-	-DRSHCOMMAND=\"/usr/bin/rsh\" \
++	-DRSHCOMMAND=\"${SSH}\" \
+ 	-DHASSTDLIB -DNEEDMENDIAN -DHASERRORVARS \
+-	-DFAKEXDRFLOAT -DSYSERRISCONST \
+-	-I/System/Library/Frameworks/System.framework/Headers/bsd/sys
+-	# this last -I flag needed for tracer build...
++	-DSYSERRISCONST 
+ ARCHDLIB	=
+ ARCHDOBJ	=
+ ARCHLIB		=	
