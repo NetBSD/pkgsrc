@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2003/09/05 09:09:25 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2003/09/23 10:42:09 wiz Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/12/24 17:45:28 ache Exp
 #
 
 DISTNAME=	wu-ftpd-2.6.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=   ftp://ftp.wu-ftpd.org/pub/wu-ftpd/ \
 		ftp://ftp.landfield.com/wu-ftpd/wu-ftpd.org/wu-ftpd/ \
