@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.345 2004/07/30 20:52:44 jlam Exp $
+# $NetBSD: Packages.txt,v 1.346 2004/08/04 16:10:40 jschauma Exp $
 ###########################################################################
 
 			==========================
@@ -3225,6 +3225,24 @@ And to get all the @dirrm lines referring to a specific (shared) directory
 converted to @comment's:
 
     PRINT_PLIST_AWK+= /^@dirrm share\/special/ { print "@comment " $$0; next; }
+
+
+ 10.48 Packages that install score files
+ =======================================
+
+Certain packages, most of them in the games category, install a score file
+that allows all users on the system to record their highscores.  In order for
+this to work, the binaries need to be installed setgid and the score files
+owned by the appropriate group and/or owner (traditionally the "games"
+user/group).  The following variables, documented in more detail in
+mk/bsd.pkg.defaults.mk, control this behaviour:  SETGIDGAME, GAMEDATAMODE,
+GAMEGRP, GAMEMODE, GAMEOWN.
+
+Note that per default, setgid installation of games is disabled;  setting
+SETGIDGAME=YES will set all the other variables accordingly.
+
+A package should therefor never hard code file ownership or access permissions
+but rely on INSTALL_GAME and INSTALL_GAME_DATA to set these correctly.
 
 
  11 Submitting & Committing
