@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/07 12:13:04 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/05/15 10:07:18 dillo Exp $
 include/expat.h
 lib/libexpat.a
 lib/libexpat.la
 lib/libexpat.so
 lib/libexpat.so.0
 lib/libexpat.so.0.1
+share/doc/html/expat/reference.html
+share/doc/html/expat/style.css
+@dirrm share/doc/html/expat
