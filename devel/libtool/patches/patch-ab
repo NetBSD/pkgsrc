@@ -1,5 +1,5 @@
---- ltmain.sh.orig	Thu Jul 16 09:15:18 1998
-+++ ltmain.sh	Thu Jul 16 09:15:44 1998
+--- ltmain.sh.orig	Fri Mar 20 03:00:29 1998
++++ ltmain.sh	Fri Jul 17 10:41:15 1998
 @@ -1841,11 +1841,6 @@
            IFS="$save_ifs"
          fi
@@ -12,3 +12,31 @@
          # Maybe install the static library, too.
          test -n "$old_library" && staticlibs="$staticlibs $dir/$old_library"
          ;;
+@@ -1912,26 +1907,7 @@
+             exit 1
+           fi
+ 
+-          finalize=yes
+-          for lib in $link_against_libtool_libs; do
+-            # Check to see that each library is installed.
+-            libdir=
+-            if test -f "$lib"; then
+-              # If there is no directory component, then add one.
+-              case "$lib" in
+-              */* | *\\*) . $lib ;;
+-              *) . ./$lib ;;
+-              esac
+-            fi
+-            libfile="$libdir/`$echo "X$lib" | $Xsed -e 's%^.*/%%g'`"
+-            if test -z "$libdir"; then
+-              $echo "$modename: warning: \`$lib' contains no -rpath information" 1>&2
+-            elif test -f "$libfile"; then :
+-            else
+-              $echo "$modename: warning: \`$lib' has not been installed in \`$libdir'" 1>&2
+-              finalize=no
+-            fi
+-          done
++          finalize=no
+ 
+           if test "$hardcode_action" = relink; then
+             if test "$finalize" = yes; then
