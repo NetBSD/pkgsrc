@@ -116,6 +116,10 @@ Suggested new packages
 	http://wxmozilla.sourceforge.net/
 	Mozilla using the wxWindows toolkit.
 
+	wxWindows -> wxWidgets rename
+	http://www.wxwidgets.org/name.htm
+	Update all wxwindows packages and dependencies to wxwidgets.
+
 Suggested package updates
 =========================
 
