@@ -37,6 +37,10 @@ if [ -z "$RSYNC_DST_SPECIFIC" -o -z "$RSYNC_DST_OTHER" ]; then
 	echo "the major.minor release string is used.  For example, on a 1.5.1"
 	echo "alpha system you would use:"
 	echo "  user@ftp.netbsd.org:/pub/NetBSD/packages/1.5/alpha"
+	echo "If you are building from pkgsrc current, set the destination"
+	echo "to major.minor-latest. For example, on a 1.6.1 m68k system where"
+	echo "building pkgsrc current (assuming pkgsrc-1-6 is already built):
+	echo "  user@ftp.netbsd.org:/pub/NetBSD/packages/1.6-latest/m68k"
 	echo " "
 	exit 1
 fi
@@ -125,4 +129,3 @@ fi
 if [ "$failed" = "no" ]; then
 	rm -fr $TMP
 fi
-
