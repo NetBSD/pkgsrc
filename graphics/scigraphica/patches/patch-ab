@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/01/15 12:37:57 drochner Exp $
+
+--- src/Makefile.in.orig	Tue Dec  5 17:06:49 2000
++++ src/Makefile.in	Wed Dec 13 15:36:26 2000
+@@ -139,7 +139,7 @@
+ 
+ DEFS = @DEFS@ -I. -I$(srcdir) -I..
+ CPPFLAGS = @CPPFLAGS@
+-LDFLAGS = @LDFLAGS@
++LDFLAGS = @LDFLAGS@ -export-dynamic
+ sga_OBJECTS =  sg.o sg_arrange_dialog.o sg_axis_dialog.o sg_clipboard.o \
+ sg_column_dialog.o sg_dataset.o sg_dataset_dialog.o sg_dialogs.o \
+ sg_edit_function_dialog.o sg_ellipse_dialog.o sg_entry.o sg_file.o \
