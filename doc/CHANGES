@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7733 2004/11/06 01:31:58 he Exp $
+$NetBSD: CHANGES,v 1.7734 2004/11/06 01:38:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5120,3 +5120,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Class-WhiteHole-0.03 [he 2004-11-06]
 	Added p5-DBIx-ContextualFetch-1.01 [he 2004-11-06]
 	Added p5-Ima-DBI-0.33 [he 2004-11-06]
+	Updated suse_libjpeg to 9.1nb1 [wiz 2004-11-06]
+	Updated suse_expat to 9.1nb1 [wiz 2004-11-06]
+	Updated suse_gtk2 to 9.1nb1 [wiz 2004-11-06]
