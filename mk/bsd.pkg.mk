@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1136 2003/01/29 19:34:14 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1137 2003/02/09 14:38:51 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -3638,7 +3638,7 @@ show-vulnerabilities-html:
 # the target used to generate the README.html file.
 .PHONY: README.html
 README.html: .PRECIOUS
-	@${ENV} AWK=${AWK} BMAKE=${MAKE} ../../mk/scripts/mkdatabase -f $@.tmp1
+	@${SETENV} AWK=${AWK} BMAKE=${MAKE} ../../mk/scripts/mkdatabase -f $@.tmp1
 	@if [ -e ${PACKAGES} ]; then					\
 		cd ${PACKAGES};						\
 		case `${PWD_CMD}` in					\
