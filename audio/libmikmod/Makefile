@@ -1,9 +1,13 @@
-# $NetBSD: Makefile,v 1.30 2004/03/30 18:32:32 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2004/09/21 08:41:15 wiz Exp $
 
-DISTNAME=		libmikmod_3.1.10
-PKGNAME=		libmikmod-3.1.10
+DISTNAME=		libmikmod-3.1.11
+PKGNAME=		libmikmod-3.1.11.1
 CATEGORIES=		audio
 MASTER_SITES=		http://mikmod.raphnet.net/files/
+
+PATCHFILES=		libmikmod-3.1.11-a.diff
+PATCH_SITES=		${MASTER_SITES}
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		kuebart@mathematik.uni-ulm.de
 HOMEPAGE=		http://mikmod.raphnet.net/
@@ -16,7 +20,6 @@ USE_BUILDLINK3=		yes
 USE_MAKEINFO=		yes
 INFO_FILES=		mikmod.info
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 CONFIGURE_ARGS+=	--disable-threads
 
 .include "../../mk/bsd.prefs.mk"
