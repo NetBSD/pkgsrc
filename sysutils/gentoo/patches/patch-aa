@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2004/05/10 09:17:59 adam Exp $
+$NetBSD: patch-aa,v 1.6 2004/11/03 15:31:42 adam Exp $
 
---- Makefile.in.orig	2004-05-03 22:13:18.000000000 +0000
+--- Makefile.in.orig	2004-05-16 13:17:06.000000000 +0000
 +++ Makefile.in
-@@ -194,7 +194,7 @@ prefix = @prefix@
+@@ -186,7 +186,7 @@ prefix = @prefix@
  program_transform_name = @program_transform_name@
  sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
