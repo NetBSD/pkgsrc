@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.83 2003/01/10 07:58:27 cjep Exp $
+# $NetBSD: Makefile,v 1.84 2003/01/30 11:14:43 jmmv Exp $
 #
 
 DISTNAME=		gnome-core-1.4.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-core/1.4/}
 EXTRACT_SUFX=		.tar.bz2
@@ -48,6 +48,7 @@ post-install:
 .include "../../graphics/gdk-pixbuf-gnome/buildlink2.mk"
 .include "../../graphics/gnome-pixmaps/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
+.include "../../misc/gnome1-dirs/buildlink2.mk"
 .include "../../textproc/libxml/buildlink2.mk"
 .include "../../www/gtkhtml/buildlink2.mk"
 .include "../../www/libghttp/buildlink2.mk"
