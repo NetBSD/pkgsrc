@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2000/08/05 07:33:37 tron Exp $
+# $NetBSD: Makefile,v 1.33 2000/08/28 09:14:50 jlam Exp $
 #
 
 DISTNAME=		ethereal-${ETHEREAL_VERSION}
@@ -10,7 +10,7 @@ MAINTAINER=		frueauf@netbsd.org
 HOMEPAGE=		http://ethereal.zing.org/
 
 DEPENDS=		gtk+-1.2.*:../../x11/gtk
-BUILD_DEPENDS+=		${LOCALBASE}/bin/perl:../../lang/perl5
+BUILD_DEPENDS+=		${PERL5}:../../lang/perl5
 
 USE_X11=		yes
 GNU_CONFIGURE=		yes

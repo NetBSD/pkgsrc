@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/07/11 10:33:50 agc Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/28 09:14:52 jlam Exp $
 #
 
 DISTNAME=		type1inst-0.6.1
@@ -13,7 +13,7 @@ USE_X11BASE=		yes
 post-patch:
 	@for patchee in ${WRKSRC}/type1inst ${WRKSRC}/t1embed; do \
 		${MV} -f $$patchee ${WRKSRC}/foo ; \
-		${SED} -e 's@XXXPERLXXX@${LOCALBASE}/bin/perl@g' \
+		${SED} -e 's@XXXPERLXXX@${PERL5}@g' \
 			<${WRKSRC}/foo > $$patchee ; \
 	done
 	@${RM} -f ${WRKSRC}/foo

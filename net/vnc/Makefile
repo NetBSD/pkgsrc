@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/07/11 10:00:39 agc Exp $
+# $NetBSD: Makefile,v 1.12 2000/08/28 09:14:50 jlam Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
@@ -12,7 +12,7 @@ DISTFILES=		vnc-3.3.3r1_unixsrc.tgz \
 MAINTAINER=	 	packages@netbsd.org
 HOMEPAGE=		http://www.uk.research.att.com/vnc/
 
-USE_PERL5=		yes
+USE_PERL5=		# defined
 
 # Is this for real? The code was developed in the UK,
 # but the DES parts came from the USA in the first place.
@@ -20,8 +20,8 @@ RESTRICTED=		Contains cryptographic software
 
 WRKSRC=			${WRKDIR}/vnc_unixsrc
 
-USE_IMAKE=		yes
-NO_INSTALL_MANPAGES=	yes
+USE_IMAKE=		# defined
+NO_INSTALL_MANPAGES=	# defined
 
 ALL_TARGET=    		World
 
@@ -32,7 +32,7 @@ post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vncviewer/vncviewer ${PREFIX}/bin/vncviewer
 	${INSTALL_PROGRAM} ${WRKSRC}/vncpasswd/vncpasswd ${PREFIX}/bin/vncpasswd
 	${SED} -e 's|/usr/local/vnc/classes|${X11PREFIX}/share/vnc/classes|g' \
-		-e 's|/usr/bin/perl|${LOCALBASE}/bin/perl|g' \
+		-e 's|/usr/bin/perl|${PERL5}|g' \
 		< ${WRKSRC}/vncserver \
 		> ${WRKSRC}/vncserver.local
 	${INSTALL_SCRIPT} ${WRKSRC}/vncserver.local ${PREFIX}/bin/vncserver

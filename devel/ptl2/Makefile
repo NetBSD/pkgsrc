@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2000/07/17 12:40:02 msaitoh Exp $
+# $NetBSD: Makefile,v 1.24 2000/08/28 09:14:50 jlam Exp $
 
 DISTNAME=		PTL-2.1.4
 PKGNAME=		ptl-2.1.4
@@ -10,7 +10,7 @@ PATCH_SITES=		${MASTER_SITES}
 MAINTAINER=		msaitoh@netbsd.org
 HOMEPAGE=		http://www.media.osaka-cu.ac.jp/~k-abe/PTL/
 
-BUILD_DEPENDS=		${LOCALBASE}/bin/perl:../../lang/perl5
+BUILD_DEPENDS=		${PERL5}:../../lang/perl5
 
 MAKE_ENV=		INSTALL_PROGRAM="${INSTALL_SCRIPT}"
 PLIST_SRC=		${WRKDIR}/PLIST

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/08/15 10:31:24 itojun Exp $
+# $NetBSD: Makefile,v 1.16 2000/08/28 09:14:52 jlam Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -42,7 +42,7 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX} --libexecdir=${PREFIX}/lib/httpd \
 			--enable-module=most \
 			--enable-module=auth_db \
 			--disable-module=auth_dbm \
-			--with-perl=${PREFIX}/bin/perl
+			--with-perl=${PERL5}
 #			--enable-rule=EAPI --disable-module=ssl 
 CONFIGURE_SCRIPT=	${WRKSRC}/configure.v6
 CONFIGURE_ENV+=		OPTIM="${OPTIM}"
