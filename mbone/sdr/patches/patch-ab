@@ -1,44 +1,46 @@
-$NetBSD: patch-ab,v 1.6 1999/01/01 07:58:29 garbled Exp $
---- src/sip_common.c.orig	Thu Oct  1 15:53:01 1998
-+++ src/sip_common.c	Thu Dec 31 23:04:38 1998
+--- sdr/src/sip_common.c.orig	Thu Jul 15 18:00:03 1999
++++ sdr/src/sip_common.c	Sat Oct  2 20:42:19 1999
 @@ -41,6 +41,9 @@
- #include <arpa/nameser.h>
- #include <resolv.h>
+ #include <sys/uio.h>
  #endif
+ 
 +#ifdef HAVE_SYS_INTTYPES_H
 +#include <inttypes.h>
 +#endif
  #include "dns.h"
  #include "prototypes.h"
- #include <sys/uio.h>
-@@ -256,7 +259,7 @@
- 	  len=res_mkquery(QUERY, hostname, C_IN, T_MX, NULL, NULL, 
- 			  NULL, buf, 200);
+ #include <tcl.h>
+@@ -252,7 +255,7 @@
+ 	  addr.s_addr=0;
+ 	  len=res_mkquery(QUERY, hostname, C_IN, T_MX, NULL, NULL, NULL, buf, 200);
  	  if (len==-1) perror("res_mkquery");
 -	  len=res_send(buf, len, ans, 2000);
 +	  len=res_send(buf, len, (u_char *)ans, 2000);
  	  if (len==-1) perror("res_send");
  	  ans[0]=htonl(ans[0]);
  	  ans[1]=htonl(ans[1]);
-@@ -328,7 +331,8 @@
+@@ -318,8 +321,8 @@
  		    } else {
- 		      /*it's compressed*/
+ 			/*it's compressed*/
  		        if(*tstr==0) tstr+=2;
--			resstr+=dn_expand(ans, ans+len, tstr-1, resstr, 200-strlen(resstr));
-+			resstr+=dn_expand((u_char *)ans, (u_char *)(ans+len),
-+			    tstr-1, resstr, 200-strlen(resstr));
+-			resstr += dn_expand(ans, ans+len, tstr-1, resstr, 
+-					    200-strlen(resstr));
++			resstr += dn_expand((u_char *)ans, (u_char *)(ans+len),
++					    tstr-1, resstr, 200-strlen(resstr));
  			tstr+=1;
  			ctr=0;
  		    }
-@@ -1238,7 +1242,11 @@
-   }
-   printf("clen=%d\n", clen);
-   ptr=find_end_of_header(data, len);
+@@ -1251,8 +1254,13 @@
+     }
+     fprintf (stderr,"clen=%d\n", clen);
+     ptr=find_end_of_header(data, len);
 +#ifdef HAVE_SYS_INTTYPES_H
-+  printf("eoh at %x, start at %x, len: %d\n", (intptr_t)ptr, (intptr_t)data, len);
++    fprintf (stderr,"eoh at %x, start at %x, len: %d\n", (intptr_t)ptr,
++	   (intptr_t)data, len);
 +#else
-   printf("eoh at %x, start at %x, len: %d\n", (unsigned int)ptr, (unsigned int)data, len);
+     fprintf (stderr,"eoh at %x, start at %x, len: %d\n", (unsigned int)ptr, 
+ 	   (unsigned int)data, len);
 +#endif
-   if (ptr==NULL) return 0;
-   if (clen==0) return 1;
-   if ((ptr-data)+clen<=len) return 1;
+ 
+     if (ptr==NULL) return 0;
+ 
