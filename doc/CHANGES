@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1885 2003/04/10 09:45:15 wiz Exp $
+$NetBSD: CHANGES,v 1.1886 2003/04/10 10:25:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1523,3 +1523,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated curl to 7.10.4 [wiz 2003-04-10]
 	Updated libxml2 to 2.5.6 [wiz 2003-04-10]
 	Updated libxslt to 1.0.29 [wiz 2003-04-10]
+	Updated micq to 0.4.10.2 [wiz 2003-04-10]
+	Updated ogle to 0.9.1 [wiz 2003-04-10]
+	Updated ogle_gui to 0.9.1 [wiz 2003-04-10]
