@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7375 2004/10/08 05:39:22 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7376 2004/10/08 06:25:07 martti Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4577,3 +4577,9 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated exim-html to 4.40 [abs 2004-10-07]
 	Updated adzap to 20040914 [simonb 2004-10-08]
 	Updated clamsmtp to 0.9.5 [xtraeme 2004-10-08]
+	Updated xfce4-wavelan-plugin to 0.4.0 [martti 2004-10-08]
+	Updated xfce4-diskperf-plugin to 1.5 [martti 2004-10-08]
+	Updated xfce4-netload-plugin to 0.2.3 [martti 2004-10-08]
+	Updated xfce4-showdesktop-plugin to 0.3.0 [martti 2004-10-08]
+	Updated xfce4-datetime-plugin to 0.3.1 [martti 2004-10-08]
+	Updated xfce4-clipman-plugin to 0.4.1 [martti 2004-10-08]
