@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.78 2004/08/01 18:24:20 schmonz Exp $
+# $NetBSD: defs.Darwin.mk,v 1.79 2004/08/14 19:35:39 schmonz Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -91,7 +91,7 @@ EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 NOLOGIN?=		${FALSE}
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
-ROOT_CMD?=		sudo sh -c
+ROOT_CMD?=		/usr/bin/sudo ${SH} -c
 ROOT_GROUP?=		wheel
 ROOT_USER?=		root
 SERIAL_DEVICES?=	/dev/null
