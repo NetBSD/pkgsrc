@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:50:31 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/05/30 16:19:59 jmmv Exp $
 bin/ee
 share/gnome/apps/Graphics/ee.desktop
 share/gnome/help/ee/C/index.html
@@ -32,5 +32,6 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/ee.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/ee.mo
 share/mime-info/ee.keys
 share/pixmaps/gnome-ee.png
+@comment in gnome-dirs: @dirrm share/mime-info
 @dirrm share/gnome/help/ee/C
 @dirrm share/gnome/help/ee

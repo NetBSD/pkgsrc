@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/12/09 16:01:33 tron Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/05/30 16:20:02 jmmv Exp $
 bin/gnumeric
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/applix/applix.a
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/applix/applix.la
@@ -757,6 +757,7 @@ share/pixmaps/gnumeric/right_border
 share/pixmaps/gnumeric/stf-druid.png
 share/pixmaps/gnumeric/top_border
 @dirrm share/pixmaps/gnumeric
+@comment in gnome-dirs: @dirrm share/mime-info
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/templates
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/idl
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/gnome/ui

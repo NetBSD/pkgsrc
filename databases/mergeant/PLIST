@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/21 11:58:59 salo Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/05/30 16:19:54 jmmv Exp $
 bin/mergeant
 share/application-registry/mergeant.applications
 share/applications/mergeant.desktop
@@ -56,6 +56,7 @@ share/pixmaps/mergeant/query-view-table_16x16.png
 share/pixmaps/mergeant/query-view-view_16x16.png
 @dirrm share/pixmaps/mergeant
 @dirrm share/omf/mergeant
+@comment in gnome-dirs: @dirrm share/mime-info
 @dirrm share/mergeant/plugins
 @dirrm share/mergeant/dtd
 @dirrm share/mergeant
