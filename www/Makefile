@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 1999/07/07 15:30:40 bouyer Exp $
+# $NetBSD: Makefile,v 1.42 1999/07/21 23:09:56 garbled Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -36,8 +36,8 @@
 #    SUBDIR += mmm
 #    SUBDIR += momspider
     SUBDIR += mozilla
-#    SUBDIR += netscape3
     SUBDIR += navigator
+    SUBDIR += navigator3
     SUBDIR += p5-Apache-ASP
     SUBDIR += p5-Apache-ePerl
 #    SUBDIR += p5-CGI
