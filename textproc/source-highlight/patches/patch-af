@@ -1,0 +1,48 @@
+$NetBSD: patch-af,v 1.1 2002/12/23 22:27:50 seb Exp $
+
+--- src/Makefile.in.orig	Wed Oct 30 18:21:55 2002
++++ src/Makefile.in
+@@ -103,6 +103,7 @@ am__quote = @am__quote@
+ install_sh = @install_sh@
+ source_highlightdatadir = @source_highlightdatadir@
+ source_highlightdocdir = @source_highlightdocdir@
++source_highlightdochtmldir = @source_highlightdochtmldir@
+ 
+ bin_PROGRAMS = source-highlight source-highlight-cgi
+ bin_SCRIPTS = java2html cpp2html
+@@ -599,26 +600,26 @@ uninstall-info: uninstall-info-recursive
+ 
+ 
+ startapp-cgi.o: $(srcdir)/startapp.cc
+-	$(CXXCOMPILE) -DBUILD_AS_CGI -o $@ -c $<
++	$(CXXCOMPILE) -DBUILD_AS_CGI -o $@ -c $(srcdir)/startapp.cc
+ 
+ # explicitly tell automake how to build scanners, because it really messes them
+ # up otherwise.
+ cpp_scanner.cc: $(srcdir)/cpp_scanner.ll
+-	$(LEX) $(LFLAGS) -o $@ $<
++	$(LEX) $(LFLAGS) -o $@ $(srcdir)/cpp_scanner.ll
+ java_scanner.cc: $(srcdir)/java_scanner.ll
+-	$(LEX) $(LFLAGS) -o $@ $<
++	$(LEX) $(LFLAGS) -o $@ $(srcdir)/java_scanner.ll
+ prolog_scanner.cc: $(srcdir)/prolog_scanner.ll
+-	$(LEX) $(LFLAGS) -o $@ $<
++	$(LEX) $(LFLAGS) -o $@ $(srcdir)/java_scanner.ll
+ perl_scanner.cc: $(srcdir)/perl_scanner.ll
+-	$(LEX) $(LFLAGS) -o $@ $<
++	$(LEX) $(LFLAGS) -o $@ $(srcdir)/java_scanner.ll
+ php3_scanner.cc: $(srcdir)/php3_scanner.ll
+-	$(LEX) $(LFLAGS) -o $@ $<
++	$(LEX) $(LFLAGS) -o $@ $(srcdir)/java_scanner.ll
+ python_scanner.cc: $(srcdir)/python_scanner.ll
+-	$(LEX) $(LFLAGS) -o $@ $<
++	$(LEX) $(LFLAGS) -o $@ $(srcdir)/java_scanner.ll
+ flex_scanner.cc: $(srcdir)/flex_scanner.ll
+-	$(LEX) $(LFLAGS) -o $@ $<
++	$(LEX) $(LFLAGS) -o $@ $(srcdir)/java_scanner.ll
+ changelog_scanner.cc: $(srcdir)/changelog_scanner.ll
+-	$(LEX) $(LFLAGS) -o $@ $<
++	$(LEX) $(LFLAGS) -o $@ $(srcdir)/java_scanner.ll
+ 
+ tags:
+ 	ctags --c-types='defgmstuv' --recurse=yes $(srcdir)/*

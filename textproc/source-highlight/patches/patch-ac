@@ -1,0 +1,38 @@
+$NetBSD: patch-ac,v 1.1 2002/12/23 22:27:50 seb Exp $
+
+--- doc/Makefile.am.orig	Sun Oct 13 20:29:36 2002
++++ doc/Makefile.am
+@@ -34,7 +34,7 @@ EXTRA_DIST = colors.html @PACKAGE@.html 
+              header.html footer.html \
+              startapp.cc.html cmdline.c.html cmdline.h.html
+ 
+-source_highlightdoc_DATA = colors.html @PACKAGE@.html \
++source_highlightdochtml_DATA = colors.html @PACKAGE@.html \
+     Hello.java Hello1.html Hello2.html Hello3.html Hello4.html Hello5.html \
+     Hello.java.html Hello_h_f.html Hello_lines.html Hello_xhtml.html \
+     Hello_xhtml2.html \
+@@ -48,19 +48,19 @@ man_MANS = @PACKAGE@.1
+ # note that $(srcdir) actually points to doc dir
+ 
+ startapp.cc.html: $(top_srcdir)/src/startapp.cc
+-	$(CPP2HTML) --doc $(OUTPUT_HERE) $<
++	$(CPP2HTML) --doc $(OUTPUT_HERE) $(top_srcdir)/src/startapp.cc
+ 
+ ChangeLog.html: $(top_srcdir)/ChangeLog
+-	$(CHANGELOG2HTML) --doc $(OUTPUT_HERE) $<
++	$(CHANGELOG2HTML) --doc $(OUTPUT_HERE) $(top_srcdir)/ChangeLog
+ 
+ flex_scanner.ll.html: $(top_srcdir)/src/flex_scanner.ll
+-	$(FLEX2HTML) --doc $(OUTPUT_HERE) $<
++	$(FLEX2HTML) --doc $(OUTPUT_HERE) $(top_srcdir)/src/flex_scanner.ll
+ 
+ cmdline.c.html: $(top_srcdir)/src/lib/cmdline.c
+-	$(CPP2HTML) --doc $(OUTPUT_HERE) --css="$(srcdir)/cpp2html.css" --header="$(srcdir)/header.html" --footer="$(srcdir)/footer.html" $<
++	$(CPP2HTML) --doc $(OUTPUT_HERE) --css="$(srcdir)/cpp2html.css" --header="$(srcdir)/header.html" --footer="$(srcdir)/footer.html" $(top_srcdir)/src/lib/cmdline.c
+ 
+ cmdline.h.html: $(top_srcdir)/src/lib/cmdline.h
+-	$(CPP2HTML) --doc $(OUTPUT_HERE) --css="$(srcdir)/mono.css" $<
++	$(CPP2HTML) --doc $(OUTPUT_HERE) --css="$(srcdir)/mono.css" $(top_srcdir)/src/lib/cmdline.h
+ 
+ BUILD_HELLO1 = $(PROGNAME) -i $(srcdir)/Hello.java -o Hello1.html
+ BUILD_HELLO2 = $(PROGNAME) --input $(srcdir)/Hello.java --output Hello2.html --doc
