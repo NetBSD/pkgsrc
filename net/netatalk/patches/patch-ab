@@ -1,13 +1,19 @@
-$NetBSD: patch-ab,v 1.3 2002/05/25 12:55:25 markd Exp $
+$NetBSD: patch-ab,v 1.4 2002/09/02 11:43:38 abs Exp $
 
---- configure.orig	Thu Mar 28 10:20:55 2002
-+++ configure	Wed May 22 00:04:08 2002
-@@ -8267,7 +8267,7 @@
- fi
- 
- 
--	NLSDIR="${PKGCONFDIR}/nls"
-+	NLSDIR="${prefix}/share/netatalk/nls"
- 
- 	# Check whether --with-nls-dir or --without-nls-dir was given.
- if test "${with_nls_dir+set}" = set; then
+--- distrib/initscripts/Makefile.in.orig	Wed Mar 27 22:20:46 2002
++++ distrib/initscripts/Makefile.in
+@@ -149,12 +149,12 @@ EXTRA_DIST = $(TEMPLATES) rc.atalk.cobal
+ # checking for NetBSD init scripts
+ #
+ @USE_COBALT_TRUE@sysvdir = /etc/rc.d/init.d
+-@USE_NETBSD_TRUE@sysvdir = /etc/rc.d
++@USE_NETBSD_TRUE@sysvdir = ${prefix}/etc/rc.d
+ @USE_REDHAT_TRUE@sysvdir = /etc/rc.d/init.d
+ @USE_SUSE_TRUE@sysvdir = /etc/rc.d
+ @USE_TRU64_TRUE@sysvdir = /sbin/init.d
+ @USE_COBALT_TRUE@sysv_SCRIPTS = atalk
+-@USE_NETBSD_TRUE@sysv_SCRIPTS = afp atalk pap timelord
++@USE_NETBSD_TRUE@sysv_SCRIPTS = afpd atalkd papd timelord
+ @USE_REDHAT_TRUE@sysv_SCRIPTS = atalk
+ @USE_SUSE_TRUE@sysv_SCRIPTS = atalk
+ @USE_TRU64_TRUE@sysv_SCRIPTS = atalk
