@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4517 2004/01/20 13:50:09 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4518 2004/01/20 14:33:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -356,3 +356,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-libwww to 5.76 [abs 2004-01-20]
 	Moved gdm to gdm1 [xtraeme 2004-01-20]
 	Updated gdm to 2.4.4.7 [xtraeme 2004-01-20]
+	Updated gd to 2.0.21 [adam 2004-01-20]
