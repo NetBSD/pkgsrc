@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.2 2002/04/30 12:09:56 wiz Exp $
+$NetBSD: distinfo,v 1.3 2003/01/24 23:49:54 jmmv Exp $
 
-SHA1 (grub-0.92.tar.gz) = 15bd5aaa816728583235ab0d5477c1ac32855583
-Size (grub-0.92.tar.gz) = 877112 bytes
+SHA1 (grub-0.93.tar.gz) = 51cc79b0088f8e0e3260e33dc5b2ea5055bfc8f8
+Size (grub-0.93.tar.gz) = 891032 bytes
+SHA1 (patch-aa) = f2b6a1c0ec11c1c01f39bf6241291fc0c3879e34
+SHA1 (patch-ab) = 274f05f518de51b708102ec853641e237fd40990
