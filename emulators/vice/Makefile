@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2001/02/17 18:38:33 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2001/02/25 19:35:52 kristerw Exp $
 
-DISTNAME=		vice-1.5
+DISTNAME=		vice-1.6
 CATEGORIES=		emulators
 MASTER_SITES=		ftp://ftp.funet.fi/pub/cbm/firmware/computers/c64/ \
 			ftp://ftp.funet.fi/pub/cbm/crossplatform/emulators/VICE/
@@ -9,7 +9,7 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			kernal.4064.901246-01.bin \
 			kernal.sx.251104-04.bin
 
-MAINTAINER=		root@garbled.net
+MAINTAINER=		kristerw@netbsd.org
 HOMEPAGE=		http://www.cs.cmu.edu/~dsladic/vice/vice.html
 COMMENT=		Emulator for C64, C128, CBM-II, PET, and VIC20
 

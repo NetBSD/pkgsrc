@@ -1,6 +1,6 @@
-$NetBSD: md5,v 1.5 2000/08/27 14:08:32 wiz Exp $
+$NetBSD: md5,v 1.6 2001/02/25 19:35:52 kristerw Exp $
 
-MD5 (vice-1.5.tar.gz) = cbb32e2773383eb5fed588870729a3a3
+MD5 (vice-1.6.tar.gz) = b948d3bf066c0d5f4e851305b661cb65
 MD5 (64gs.390852-01.bin) = 049e657afafbdd802e8c6a4f88f3d730
 MD5 (kernal.4064.901246-01.bin) = da92801e3a03b005b746a4dd0b639c7c
 MD5 (kernal.sx.251104-04.bin) = 187b8c713b51931e070872bd390b472a
