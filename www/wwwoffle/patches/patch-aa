@@ -1,106 +1,13 @@
-$NetBSD: patch-aa,v 1.15 2001/08/18 20:31:15 fredb Exp $
+$NetBSD: patch-aa,v 1.16 2002/03/10 22:14:30 fredb Exp $
 
---- Makefile.orig	Tue May 29 13:29:03 2001
-+++ Makefile
-@@ -18,11 +18,11 @@
- LOCALHOST=localhost:8080
+--- doc/Makefile.in.orig	Sun Mar 10 14:14:34 2002
++++ doc/Makefile.in
+@@ -22,7 +22,7 @@
  
- # For UNIX.
--INSTDIR=/usr/local
--SPOOLDIR=/var/spool/wwwoffle
--CONFDIR=/var/spool/wwwoffle
-+INSTDIR=${PREFIX}
-+SPOOLDIR=/var/wwwoffle
-+CONFDIR=${PREFIX}/etc/wwwoffle
- MANDIR=$(INSTDIR)/man
--DOCDIR=$(INSTDIR)/doc/wwwoffle
-+DOCDIR=$(INSTDIR)/share/doc/wwwoffle
+ prefix=@prefix@
+ mandir=@mandir@
+-docdir=${prefix}/doc/wwwoffle
++docdir=${prefix}/share/doc/wwwoffle
  
- # For Cygwin (win32).
- #INSTDIR=/wwwoffle
-@@ -54,13 +54,13 @@
- ########
- 
- CC=gcc
--CFLAGS=-O2 -Wall -g
-+CFLAGS=-O2 -Wall
- 
- # This is used in the FreeBSD port (http://www.freebsd.org/ports/).
- #CFLAGS=-O2 -Wall
- 
- LD=gcc
--LDFLAGS=-g
-+LDFLAGS=-s
- 
- # For HP/UX this is a good idea.
- #LDFLAGS=
-@@ -89,12 +89,12 @@
- #USE_IPV6=1
- 
- # The option to use IPv6 sockets if required.
--USE_IPV6=0
-+#USE_IPV6=0
- 
- ########
- 
--INCLUDE=
--LIBRARY=-lz
-+#INCLUDE=
-+#LIBRARY=-lz
- 
- # To compile without zlib
- #LIBRARY=
-@@ -167,7 +167,7 @@
- 	     configfile.o config.o errors.o io.o misc.o proto.o sockets.o md5.o
- 
- wwwoffle : $(WWWOFFLE_OBJ)
--	$(LINK) $(WWWOFFLE_OBJ) -o $@ $(LIBRARY)
-+	$(LINK) $(WWWOFFLE_OBJ) -o $@ $(LIBRARY) -lz
- 
- ####
- 
-@@ -179,7 +179,7 @@
- 	      configfile.o config.o errors.o io.o misc.o proto.o sockets.o md5.o
- 
- wwwoffled : $(WWWOFFLED_OBJ)
--	$(LINK) $(WWWOFFLED_OBJ) -o $@ $(LIBRARY)
-+	$(LINK) $(WWWOFFLED_OBJ) -o $@ $(LIBRARY) -lz
- 
- ####
- 
-@@ -190,7 +190,7 @@
- 	           configfile.o config.o errors.o io.o misc.o proto.o sockets.o md5.o
- 
- wwwoffle-tools : $(WWWOFFLE_TOOLS_OBJ)
--	$(LINK) $(WWWOFFLE_TOOLS_OBJ) -o $@ $(LIBRARY)
-+	$(LINK) $(WWWOFFLE_TOOLS_OBJ) -o $@ $(LIBRARY) -lz
- 
- ####
- 
-@@ -200,7 +200,7 @@
- 	    configfile.o config.o errors.o io.o misc.o proto.o sockets.o spool.o md5.o
- 
- convert-cache : $(CONVERT_OBJ)
--	$(LINK) $(CONVERT_OBJ) -o $@ $(LIBRARY)
-+	$(LINK) $(CONVERT_OBJ) -o $@ $(LIBRARY) -lz
- 
- ####
- 
-@@ -210,7 +210,7 @@
- 	       configfile.o config.o errors.o io.o misc.o proto.o sockets.o spool.o md5.o
- 
- uncompress-cache : $(UNCOMPRESS_OBJ)
--	$(LINK) $(UNCOMPRESS_OBJ) -o $@ $(LIBRARY)
-+	$(LINK) $(UNCOMPRESS_OBJ) -o $@ $(LIBRARY) -lz
- 
- ####
- 
-@@ -396,7 +396,7 @@
- 	@[ ! -f $(CONFDIR)/wwwoffle.conf ] || \
- 	 (echo "WWWOFFLE: " ;\
- 	  echo "WWWOFFLE: There is already a config file $(CONFDIR)/wwwoffle.conf." ;\
--	  echo "WWWOFFLE: Run 'upgrade-config.pl $(CONFDIR)/wwwoffle.conf' to upgrade it." ;\
-+	  echo "WWWOFFLE: Run 'wwwoffle-upgrade-config.pl $(CONFDIR)/wwwoffle.conf' to upgrade it." ;\
- 	  echo "WWWOFFLE: " )
- 	[  ! -f $(CONFDIR)/wwwoffle.conf ] || $(INSTALL) -c -m 640 wwwoffle.conf.install $(CONFDIR)/wwwoffle.conf.install
- 	[    -f $(CONFDIR)/wwwoffle.conf ] || $(INSTALL) -c -m 640 wwwoffle.conf.install $(CONFDIR)/wwwoffle.conf
+ SPOOLDIR=@SPOOLDIR@
+ CONFDIR=@CONFDIR@
