@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2004/02/22 03:44:01 kristerw Exp $
+# $NetBSD: Makefile,v 1.12 2004/05/07 01:14:49 xtraeme Exp $
 
 DISTNAME=	wol-0.7.0
 PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ahh/}
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://ahh.sourceforge.net/wol/
 COMMENT=	Small Wake On Lan client
 

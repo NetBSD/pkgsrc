@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/11 22:56:23 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/07 01:14:50 xtraeme Exp $
 #
 
 DISTNAME=		3ddesktop-0.2.5
@@ -6,7 +6,7 @@ PKGREVISION=		3
 CATEGORIES=		wm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=desk3d/}
 
-MAINTAINER=		xtraeme@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://desk3d.sourceforge.net/
 COMMENT=		3D Virtual Desktop Switcher
 
