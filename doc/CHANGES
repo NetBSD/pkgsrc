@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1406 2003/02/16 20:57:23 seb Exp $
+$NetBSD: CHANGES,v 1.1407 2003/02/16 21:43:19 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -711,3 +711,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added vmware-module-3.2.0 [bad 2003-02-16]
 	Added vmware-3.2 [bad 2003-02-16]
 	Updated source-highlight to 1.6.3 [seb 2003-02-16]
+	Updated gnuboy to 1.0.3nb1 [salo 2003-02-16]
