@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.16 1998/08/20 15:16:40 tsarna Exp $
+# $NetBSD: Makefile,v 1.17 1998/11/07 20:04:48 mycroft Exp $
 #
 
 DISTNAME=       timidity-0.2i
 CATEGORIES=     audio
-MASTER_SITES=   ftp://ftp.cdrom.com/pub/demos/music/samples/ \
-		http://www.cgs.fi/~tt/timidity/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 TIINS=          dgguspat.zip
 DISTFILES=      ${TIINS} ${DISTNAME}.tar.gz
 
