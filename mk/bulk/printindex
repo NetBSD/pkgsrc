@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printindex,v 1.12 2003/10/11 02:39:24 grant Exp $
+# $NetBSD: printindex,v 1.13 2003/12/10 13:59:06 sketch Exp $
 #
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
@@ -45,7 +45,7 @@
 #              foo/bar  bar-2.0
 #              foo/baz  baz-1.0.1
 #
-# Start in /usr/pkgsrc.
+# Start in $USR_PKGSRC.
 #
 
 if [ ! -z "$1" ]; then
@@ -54,7 +54,7 @@ else
 	brokenfile=/dev/null
 fi
 
-# /usr/pkgsrc
+# $USR_PKGSRC
 cwd=$PWD
 
 # get some initial variables
