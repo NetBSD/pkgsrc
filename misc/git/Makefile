@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/05/23 15:42:59 tv Exp $
+# $NetBSD: Makefile,v 1.12 1998/06/22 12:52:32 agc Exp $
 # FreeBSD Id: Makefile,v 1.8 1996/11/21 11:54:39 asami Exp
 #
 
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_GNU}
 MAINTAINER=	packages@netbsd.org
 
 GNU_CONFIGURE=	YES
-MAN1=		git.1 gitaction.1 gitkeys.1 gitmount.1 gitps.1 gitrgrep.1 \
-		gitunpack.1 gitview.1
 INFO_FILES=	git.info
 
 pre-install:

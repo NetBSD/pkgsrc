@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:29 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/06/22 12:44:31 agc Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/08 09:37:16 obrien Exp
 #
 
@@ -18,7 +18,6 @@ MIRROR_DISTFILE=	no
 ONLY_FOR_ARCHS=		i386
 
 GNU_CONFIGURE=	yes
-MAN1=		kaffe.1
 
 post-install:
 	${MKDIR} ${PREFIX}/share/kaffe
