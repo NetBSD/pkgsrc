@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/09/05 17:21:13 jwise Exp $
+# $NetBSD: Makefile,v 1.3 2000/09/05 18:21:13 jwise Exp $
 #
 
 DISTNAME=	expect
@@ -9,7 +9,7 @@ MASTER_SITES=	http://expect.nist.gov/
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://expect.nist.gov/
 
-DEPENDS+=	tcl-8.3.2:../../lang/tcl
+DEPENDS+=	tk-8.3.2:../../lang/tcl
 DEPENDS+=	tcl-expect-5.32.1:../../lang/tcl-expect
 
 WRKSRC=		${WRKDIR}/expect-5.32
@@ -29,7 +29,7 @@ CONFIGURE_ARGS= --enable-shared \
 .include "../../mk/bsd.prefs.mk"
 
 do-install:
-	${INSTALL_BIN} ${WRKSRC}/expectk ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/expectk ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/expectk.man ${PREFIX}/man/man1/expectk.1
 
 test:
