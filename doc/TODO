@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1282 2004/01/07 01:51:12 reed Exp $
+$NetBSD: TODO,v 1.1283 2004/01/07 16:57:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -129,6 +129,8 @@ Suggested package updates
 	o blinkensim-2.5
 	o blinkentools-2.5
 	o boehm-gc-6.3alpha2
+	o bogofilter-0.15.13.1
+	o bomberclone-0.11.0
 	o cervisia-2.0
 	o clisp-2.32
 	o clusterit-2.2
@@ -172,6 +174,7 @@ Suggested package updates
 	o freetype-2.1.7 [breaks compatibility with other packages]
 	o fsviewer-0.2.5
 	o gauche-0.7.3 [kei]
+	o gcalctool-4.3.35 [pkg/24011]
 	o gcc-3.3.2 [gcc3 package]
 	o gcpio-2.5 [pkg/20799]
 	o gcvs-1.0-1
@@ -213,8 +216,10 @@ Suggested package updates
 	o koffice-1.2.94 [pkg/23412|kleink]
 	o lavaps-2.4
 	o lcms-1.0.9
-	o leafnode-1.9.46
+	o leafnode-1.9.47
 	o libcaca-0.6
+	o libesmtp-1.0.2
+	o libidn-0.3.6
 	o libmpeg3-1.5.3
 	o libole2-2.2.8
 	o libtool-1.5 [skrll]
@@ -250,7 +255,7 @@ Suggested package updates
 	o ngrep-1.41
 	o ns-flash-6.0.79
 	o nsd-1.2.3
-	o nut-9.6
+	o nut-9.7
 	o openh323-1.11.2
 	o openldap-2.1.25
 	o openoffice-1.1 [skrll]
