@@ -1,5 +1,0 @@
-Guppi is a GNOME-based framework for graphing and interactive data analysis. 
-
-Guppi is a library that can be used to extend other programs. Programs can 
-either link directly to Guppi's shared libraries, or can embed Guppi plots 
-via Bonobo, GNOME's component architecture.
