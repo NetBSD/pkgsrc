@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:13:05 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/03/10 22:14:30 fredb Exp $
 bin/wwwoffle
+bin/wwwoffle-hash
 bin/wwwoffle-ls
 bin/wwwoffle-mv
 bin/wwwoffle-read
@@ -9,12 +10,13 @@ bin/wwwoffle-write
 etc/rc.d/wwwoffle
 etc/rc.d/wwwoffled
 etc/wwwoffle/wwwoffle.conf.install
-@exec if [ ! -f %D/etc/wwwoffle/wwwoffle.conf ]; then cp -p %D/etc/wwwoffle/wwwoffle.conf.install %D/etc/wwwoffle/wwwoffle.conf; fi
+@exec if [ ! -f ${PKG_SYSCONFDIR}/wwwoffle/wwwoffle.conf ]; then cp -p ${PKG_SYSCONFDIR}/wwwoffle/wwwoffle.conf.install ${PKG_SYSCONFDIR}/wwwoffle/wwwoffle.conf; fi
 libdata/wwwoffle-spool.tar.gz
 man/man1/wwwoffle.1
 man/man5/wwwoffle.conf.5
 man/man8/wwwoffled.8
 sbin/wwwoffle-convert-cache
+sbin/wwwoffle-uncompress-cache
 sbin/wwwoffle-upgrade-config.pl
 sbin/wwwoffle-upgrade-config-2.x-2.5.pl
 sbin/wwwoffled
@@ -32,16 +34,47 @@ share/doc/wwwoffle/README.URL
 share/doc/wwwoffle/README.compress
 share/doc/wwwoffle/README.htdig
 share/doc/wwwoffle/README.lang
-share/doc/wwwoffle/README.udmsearch
+share/doc/wwwoffle/README.mnogosearch
+share/doc/wwwoffle/README.namazu
 share/doc/wwwoffle/README.win32
+share/doc/wwwoffle/de/CHANGES.CONF
+share/doc/wwwoffle/de/INSTALL
+share/doc/wwwoffle/de/LSM
+share/doc/wwwoffle/de/NEWS
+share/doc/wwwoffle/de/README.1st
+share/doc/wwwoffle/de/README.CONF.html
+share/doc/wwwoffle/de/README.html
+share/doc/wwwoffle/es/CONVERT
+share/doc/wwwoffle/es/INSTALL
+share/doc/wwwoffle/es/LSM
+share/doc/wwwoffle/es/README
+share/doc/wwwoffle/es/README.1st
+share/doc/wwwoffle/es/README.CONF
+share/doc/wwwoffle/es/README.PWD
+share/doc/wwwoffle/es/README.URL
+share/doc/wwwoffle/es/README.htdig
+share/doc/wwwoffle/es/README.udmsearch
+share/doc/wwwoffle/es/README.win32
+share/doc/wwwoffle/es/wwwoffle.conf
+share/doc/wwwoffle/fr/README.CONF
+share/doc/wwwoffle/fr/wwwoffle.conf.man
+share/doc/wwwoffle/pl/INSTALL
+share/doc/wwwoffle/pl/LSM
+share/doc/wwwoffle/pl/README.1st
+share/doc/wwwoffle/pl/README.lang
+@unexec rmdir %D/share/doc/wwwoffle/ru 2>/dev/null || true
+@dirrm share/doc/wwwoffle/pl
+@unexec rmdir %D/share/doc/wwwoffle/nl 2>/dev/null || true
+@unexec rmdir %D/share/doc/wwwoffle/it 2>/dev/null || true
+@dirrm share/doc/wwwoffle/fr
+@dirrm share/doc/wwwoffle/es
+@dirrm share/doc/wwwoffle/de
 @dirrm share/doc/wwwoffle
 @exec ${GTAR} xzCf / %D/libdata/wwwoffle-spool.tar.gz
-@exec cd /var/wwwoffle/html && mv wwwoffle.pac wwwoffle.pac.dist && sed /PROXY/s/localhost/`hostname`/ <wwwoffle.pac.dist >wwwoffle.pac
-@exec ${MKDIR} /var/wwwoffle/outgoing
-@exec ${MKDIR} /var/wwwoffle/monitor
-@exec ${MKDIR} /var/wwwoffle/lastime
-@exec ${MKDIR} /var/wwwoffle/prevtime1
-@exec ${PREFIX}/sbin/wwwoffle-convert-cache /var/wwwoffle
-@unexec cd /var/wwwoffle && ${RM} -rf html*
+@comment exec ${MKDIR} /var/wwwoffle/outgoing
+@comment exec ${MKDIR} /var/wwwoffle/monitor
+@comment exec ${MKDIR} /var/wwwoffle/lastime
+@comment exec ${MKDIR} /var/wwwoffle/prevtime1
+@unexec cd /var/wwwoffle && ${RM} -rf html* search*
 @unexec ${RMDIR} /var/wwwoffle/* 2>/dev/null && ${RMDIR} /var/wwwoffle 2>/dev/null || true
 @unexec if [ -d /var/wwwoffle ]; then echo "If you won't use the WWWOFFLE package anymore, remove the cache manually by"; echo '	rm -rf /var/wwwoffle'; fi
