@@ -1,21 +1,30 @@
-# $NetBSD: Makefile,v 1.5 2000/01/26 16:41:51 pooka Exp $
+# $NetBSD: Makefile,v 1.6 2000/09/11 00:22:23 wiz Exp $
 #
 
 DISTNAME=		angband-283
 PKGNAME=		angband-tty-2.8.3
 CATEGORIES=		games
-MASTER_SITES=		ftp://export.andrew.cmu.edu/angband/Source/
+MASTER_SITES=		ftp://export.andrew.cmu.edu/angband/Source/ \
+			ftp://ftp.greyhelm.com/pub/Games/Angband/Angband-2.7.x/Source/
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${SPOILERFILE}
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.phial.com/angband/
 
+CONFLICTS=		angband-x11-*
+
+EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 MAKEFILE=		Makefile.std
 ALL_TARGET=		angband
 
+SPOILERFILE=		angband-spoilers.tar.gz
+
 do-install:
 	${INSTALL} -d -o bin -g games -m 0775 ${PREFIX}/share/angband
 	${CP} -R ${WRKDIR}/${DISTNAME}/lib/* ${PREFIX}/share/angband
+	cd ${PREFIX}/share/angband/help && \
+		${PAX} -rzf ${DISTDIR}/${SPOILERFILE}
 	${CHOWN} -R bin:games ${PREFIX}/share/angband
 	${CHMOD} -R 0664 ${PREFIX}/share/angband/*
 	(cd ${PREFIX}/share/angband && ${CHMOD} 0775 apex bone data edit file help info save user xtra)
