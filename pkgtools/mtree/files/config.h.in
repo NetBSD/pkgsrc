@@ -22,6 +22,14 @@
    */
 #undef HAVE_DECL_GETENV
 
+/* Define to 1 if you have the declaration of `SF_SETTABLE', and to 0 if you
+   don't. */
+#undef HAVE_DECL_SF_SETTABLE
+
+/* Define to 1 if you have the declaration of `UF_SETTABLE', and to 0 if you
+   don't. */
+#undef HAVE_DECL_UF_SETTABLE
+
 /* Define to 1 if you have the `endgrent' function. */
 #undef HAVE_ENDGRENT
 
@@ -136,9 +144,9 @@
 /* If using the C implementation of alloca, define if you know the
    direction of stack growth for your system; otherwise it will be
    automatically deduced at run-time.
-        STACK_DIRECTION > 0 => grows toward higher addresses
-        STACK_DIRECTION < 0 => grows toward lower addresses
-        STACK_DIRECTION = 0 => direction of growth unknown */
+	STACK_DIRECTION > 0 => grows toward higher addresses
+	STACK_DIRECTION < 0 => grows toward lower addresses
+	STACK_DIRECTION = 0 => direction of growth unknown */
 #undef STACK_DIRECTION
 
 /* Define to 1 if you have the ANSI C header files. */
@@ -170,3 +178,12 @@
 
 /* Define to `int' if <sys/types.h> doesn't define. */
 #undef uid_t
+
+/* define HAVE_FILE_FLAGS if the user- and root-changeable masks
+were detected */
+#if defined(HAVE_STRUCT_STAT_ST_FLAGS) && (HAVE_DECL_UF_SETTABLE == 1) && (HAVE_DECL_SF_SETTABLE == 1)
+#define HAVE_FILE_FLAGS 1
+#else
+#define HAVE_FILE_FLAGS 0
+#endif
+

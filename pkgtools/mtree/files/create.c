@@ -1,4 +1,4 @@
-/*	$NetBSD: create.c,v 1.2 2003/09/05 04:38:47 grant Exp $	*/
+/*	$NetBSD: create.c,v 1.3 2004/04/16 23:43:36 heinz Exp $	*/
 
 /*-
  * Copyright (c) 1989, 1993
@@ -40,7 +40,7 @@
 #if 0
 static char sccsid[] = "@(#)create.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: create.c,v 1.2 2003/09/05 04:38:47 grant Exp $");
+__RCSID("$NetBSD: create.c,v 1.3 2004/04/16 23:43:36 heinz Exp $");
 #endif
 #endif /* not lint */
 
@@ -258,7 +258,7 @@ statf(FTSENT *p)
 	if (keys & F_SLINK &&
 	    (p->fts_info == FTS_SL || p->fts_info == FTS_SLNONE))
 		output(&indent, "link=%s", rlink(p->fts_accpath));
-#if HAVE_STRUCT_STAT_ST_FLAGS
+#if HAVE_FILE_FLAGS
 	if (keys & F_FLAGS && p->fts_statp->st_flags != flags)
 		output(&indent, "flags=%s",
 		    flags_to_string(p->fts_statp->st_flags, "none"));
@@ -275,7 +275,7 @@ statf(FTSENT *p)
 #define	MTREE_MAXGID	5000
 #define	MTREE_MAXUID	5000
 #define	MTREE_MAXMODE	(MBITS + 1)
-#if HAVE_STRUCT_STAT_ST_FLAGS
+#if HAVE_FILE_FLAGS
 #define	MTREE_MAXFLAGS  (FLAGS2INDEX(CH_MASK) + 1)   /* 1808 */
 #else
 #define MTREE_MAXFLAGS	1
@@ -334,7 +334,7 @@ statd(FTS *t, FTSENT *parent, uid_t *puid, gid_t *pgid, mode_t *pmode,
 			maxuid = u[suid];
 		}
 
-#if HAVE_STRUCT_STAT_ST_FLAGS
+#if HAVE_FILE_FLAGS
 		sflags = FLAGS2INDEX(p->fts_statp->st_flags);
 		if (sflags < MTREE_MAXFLAGS && ++f[sflags] > maxflags) {
 			saveflags = p->fts_statp->st_flags;
@@ -412,3 +412,4 @@ output(int *offset, const char *fmt, ...)
 	}
 	*offset += printf(" %s", buf) + 1;
 }
+

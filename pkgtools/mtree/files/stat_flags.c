@@ -1,4 +1,4 @@
-/*	$NetBSD: stat_flags.c,v 1.1 2003/09/05 18:39:00 jlam Exp $	*/
+/*	$NetBSD: stat_flags.c,v 1.2 2004/04/16 23:43:36 heinz Exp $	*/
 
 /*-
  * Copyright (c) 1993
@@ -40,14 +40,14 @@
 #if 0
 static char sccsid[] = "@(#)stat_flags.c	8.2 (Berkeley) 7/28/94";
 #else
-__RCSID("$NetBSD: stat_flags.c,v 1.1 2003/09/05 18:39:00 jlam Exp $");
+__RCSID("$NetBSD: stat_flags.c,v 1.2 2004/04/16 23:43:36 heinz Exp $");
 #endif
 #endif /* not lint */
 
 #if HAVE_CONFIG_H
 #include "config.h"
 #else
-#define HAVE_STRUCT_STAT_ST_FLAGS 1
+#define HAVE_FILE_FLAGS 1
 #endif
 
 #if HAVE_SYS_TYPES_H
@@ -88,7 +88,7 @@ flags_to_string(u_long flags, const char *def)
 
 	string[0] = '\0';
 	prefix = NULL;
-#if HAVE_STRUCT_STAT_ST_FLAGS
+#if HAVE_FILE_FLAGS
 	if (flags & UF_APPEND)
 		SAPPEND("uappnd");
 	if (flags & UF_IMMUTABLE)
@@ -143,7 +143,7 @@ string_to_flags(char **stringp, u_long *setp, u_long *clrp)
 	if (clrp)
 		*clrp = 0;
 
-#if HAVE_STRUCT_STAT_ST_FLAGS
+#if HAVE_FILE_FLAGS
 	string = *stringp;
 	while ((p = strsep(&string, "\t ,")) != NULL) {
 		clear = 0;
