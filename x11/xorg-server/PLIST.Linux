@@ -1,4 +1,17 @@
-@comment $NetBSD: PLIST.Linux,v 1.5 2005/01/24 11:32:28 hira Exp $
+@comment $NetBSD: PLIST.Linux,v 1.6 2005/02/09 17:58:14 xtraeme Exp $
+${X11ROOT_PREFIX}/bin/Xdmx
+${X11ROOT_PREFIX}/etc/X11/xinit/xinitrc.d/92xprint-xpserverlist.sh
+${X11ROOT_PREFIX}/etc/X11/Xsession.d/92xprint-xpserverlist.sh
+${X11ROOT_PREFIX}/etc/rc.d/rc2.d/K21xprint
+${X11ROOT_PREFIX}/etc/rc.d/rc2.d/S21xprint
+${X11ROOT_PREFIX}/etc/rc.d/rc3.d/K21xprint
+${X11ROOT_PREFIX}/etc/rc.d/rc3.d/S21xprint
+${X11ROOT_PREFIX}/etc/rc.d/rc5.d/K21xprint
+${X11ROOT_PREFIX}/etc/rc.d/rc5.d/S21xprint
+${X11ROOT_PREFIX}/etc/profile.d/xprint.csh
+${X11ROOT_PREFIX}/etc/profile.d/xprint.sh
+${X11ROOT_PREFIX}/${MAN_DIR}/Xdmx.${MAN_SUFFIX}
+${X11ROOT_PREFIX}/${KERNMAN_DIR}/fbdev.${KERNMAN_SUFFIX}
 ${X11ROOT_PREFIX}/etc/init.d/xprint
 ${X11ROOT_PREFIX}/lib/X11/xserver/C/print/models/CANONBJ10E-GS/fonts
 ${X11ROOT_PREFIX}/lib/X11/xserver/C/print/models/CANONBJ10E-GS/model-config
