@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/04/29 23:05:22 jtb Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/08/06 04:20:36 jmc Exp $
 bin/gif2h5
 bin/h52gif
 bin/h5cc
@@ -6,7 +6,6 @@ bin/h5debug
 bin/h5dump
 bin/h5import
 bin/h5ls
-bin/h5perf
 bin/h5redeploy
 bin/h5repart
 include/H5ACpublic.h
