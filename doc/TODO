@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1125 2003/12/04 15:36:56 grant Exp $
+$NetBSD: TODO,v 1.1126 2003/12/04 17:29:03 recht Exp $
 
 Suggested new packages
 ======================
@@ -278,7 +278,6 @@ Suggested package updates
 	o nap-1.5.2
 	o napshare-1.2
 	o nasm-0.98.38
-	o neon-0.24.4 [epg]
 	o netatalk-1.6.3 [pkg/21930]
 	o newscache-0.99.22p1
 	o ngrep-1.41
