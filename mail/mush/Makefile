@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 21:46:33 grant Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/21 16:56:46 martti Exp $
 
 DISTNAME=	mush-7.2.5
 PKGNAME=	mush-7.2.6.b4.pl1
@@ -18,7 +18,7 @@ PATCHFILES=	patch-7.2.6-alpha-1 \
 		patch-7.2.6-beta-4
 
 MAINTAINER=	christos@NetBSD.org
-COMMENT=	text-based mail client
+COMMENT=	Text-based mail client
 
 LICENSE=	mush-license
 RESTRICTED=		"Can't sell the code as part of anything"
