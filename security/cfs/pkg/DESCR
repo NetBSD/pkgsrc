@@ -1,0 +1,10 @@
+CFS is an encrypting file system for Unix-like OSs.  It uses NFS as
+its interface, and so is reasonably portable.  The FS code dates back
+to 1989, and the crypto to 1992, so it is showing signs of age.  This
+code should be regarded as completely unsupported; a complete rewrite
+will follow eventually. 
+
+Please don't download this code if you're in a place that's forbidden
+(under US or local law) to export cryptographic software from the US
+to, or if you're on the State Department's "Denied Persons List." If
+you aren't sure, ask a good lawyer. 
