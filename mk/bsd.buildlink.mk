@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.27 2001/07/27 14:30:16 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.28 2001/07/27 16:41:16 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -167,24 +167,55 @@ _BUILDLINK_CONFIG_WRAPPER_USE: .USE
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OBJECT_FMT} == "a.out")
+#.if (${OBJECT_FMT} == "a.out")
 REPLACE_LIBNAMES+=	\
 	`${FIND} . -name "Makefile" -or -name "Makeconf" -or -name "*.mk" | ${SED} -e 's|\^\./||' | ${SORT}`
-.endif
+#.endif
 
 .if defined(REPLACE_LIBNAMES)
-post-configure: replace-libnames
+.if defined(HAS_CONFIGURE) || defined(GNU_CONFIGURE)
+pre-configure: replace-libnames-1
+
+# Fix linking on a.out platforms in configure scripts by changing library
+# references to the true library names.
+#
+replace-libnames-1:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	cookie=${BUILDLINK_DIR}/.replace_libnames_1_done;		\
+	if [ ! -f $${cookie} ]; then					\
+		${MKDIR} ${BUILDLINK_DIR};				\
+		replace_libnames="${CONFIGURE_SCRIPT}";			\
+		if [ -n "$${replace_libnames}" -a -n "${REPLACE_LIBNAMES_SED:Q}" ]; then \
+			${ECHO_MSG} "Fixing library name references (part 1):"; \
+			cd ${WRKSRC};					\
+			for file in $${replace_libnames}; do		\
+				${ECHO_MSG} "	$${file}";		\
+				${MV} -f $${file} $${file}.fixme;	\
+				${SED}	${REPLACE_LIBNAMES_SED}		\
+					$${file}.fixme > $${file};	\
+				if [ -x $${file}.fixme ]; then		\
+					${CHMOD} +x $${file};		\
+				fi;					\
+				${RM} -f $${file}.fixme;		\
+				${ECHO} $${file} >> $${cookie};		\
+			done;						\
+		fi;							\
+	fi
+.endif	# HAS_CONFIGURE
+
+post-configure: replace-libnames-2
 
 # Fix linking on a.out platforms by changing library references in Makefiles
 # to the true library names.
 #
-replace-libnames:
+replace-libnames-2:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	cookie=${BUILDLINK_DIR}/.replace_libnames_done;			\
+	cookie=${BUILDLINK_DIR}/.replace_libnames_2_done;		\
 	if [ ! -f $${cookie} ]; then					\
+		${MKDIR} ${BUILDLINK_DIR};				\
 		replace_libnames="${REPLACE_LIBNAMES}";			\
 		if [ -n "$${replace_libnames}" -a -n "${REPLACE_LIBNAMES_SED:Q}" ]; then \
-			${ECHO_MSG} "Fixing library name references:";	\
+			${ECHO_MSG} "Fixing library name references (part 2):"; \
 			cd ${WRKSRC};					\
 			for file in ${REPLACE_LIBNAMES}; do		\
 				${ECHO_MSG} "	$${file}";		\
@@ -221,6 +252,7 @@ replace-buildlink:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cookie=${BUILDLINK_DIR}/.replace_buildlink_done;		\
 	if [ ! -f $${cookie} ]; then					\
+		${MKDIR} ${BUILDLINK_DIR};				\
 		replace_buildlink="${REPLACE_BUILDLINK}";		\
 		if [ -n "$${replace_buildlink}" ]; then			\
 			${ECHO_MSG} "Fixing directory references:";	\
