@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4624 2004/01/28 12:23:18 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4625 2004/01/28 12:34:47 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -510,3 +510,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tla to 1.1 [recht 2004-01-28]
 	Updated nedit to 5.4nb1 [xtraeme 2004-01-28]
 	Updated dinotrace to 9.1knb1 [xtraeme 2004-01-28]
+	Updated electric to 6.05nb1 [xtraeme 2004-01-28]
