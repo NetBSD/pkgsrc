@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2004/08/22 19:32:52 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2004/09/14 14:41:34 jlam Exp $
 
-DISTNAME=	heimdal-0.6.1
-PKGREVISION=	1
+DISTNAME=	heimdal-0.6.3
 CATEGORIES=	security
-MASTER_SITES=	ftp://ftp.pdc.kth.se/pub/heimdal/src/		\
+MASTER_SITES=	ftp://ftp.pdc.kth.se/pub/heimdal/src/	\
 		ftp://ftp.sunet.se/pub/unix/admin/mirror-pdc/pub/heimdal/src/
 
 MAINTAINER=	tech-pkg@NetBSD.org
@@ -16,6 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
+LIBTOOLIZE_PLIST=	yes
 
 HEIMDAL_STATEDIR?=	${VARBASE}/heimdal
 
