@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2002/10/12 09:40:00 wiz Exp $
+$NetBSD: distinfo,v 1.7 2002/10/26 18:45:29 grant Exp $
 
-SHA1 (freetds-0.53.tgz) = 7ae8e843ad91c357e9fa91e28176775737584af3
-Size (freetds-0.53.tgz) = 312692 bytes
-SHA1 (patch-aa) = 4eb859650620c4d9edadc2c684154745143ad003
-SHA1 (patch-ab) = 3a38adc60fe73fe6070b59ddafc75b5199879b28
-SHA1 (patch-ac) = ff176b465e5d6b41e2ad7c90547d0229c151a0c8
+SHA1 (freetds-0.60.tgz) = f03aa17139ef58648331fe538845a9ee2c162172
+Size (freetds-0.60.tgz) = 594441 bytes
+SHA1 (patch-aa) = 628505d50bc90bb832619cc553222314956415d4
+SHA1 (patch-ab) = e973eb81fd88e1638a8ed23840a89dad2926a745
+SHA1 (patch-ac) = 41eadee6f5f29ca1840c9d0dd84437de1db46c7c
