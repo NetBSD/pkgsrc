@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/01/11 11:47:54 skrll Exp $
+# $NetBSD: Makefile,v 1.15 2002/02/13 22:38:42 skrll Exp $
 #
 
 DISTNAME=	libggi-2.0b2.1
@@ -9,7 +9,6 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.ggi-project.org/
 COMMENT=	General Graphics Interface library is a flexible drawing library
 
-BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
 DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 DEPENDS+=	libgii-0.6:../libgii
 
