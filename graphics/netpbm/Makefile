@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2004/01/25 15:47:18 tron Exp $
+# $NetBSD: Makefile,v 1.88 2004/01/26 07:03:15 tron Exp $
 
 DISTNAME=	netpbm-10.11.8
 PKGREVISION=	1
@@ -49,20 +49,20 @@ pre-install:
 	${RM} -fr ${STAGEDIR}
 
 post-install:
-	cd ${STAGEDIR} && 				\
-	${MV} link/* lib && 				\
-	${RM} -rf link man/web && 			\
-	${MKDIR} share/doc/netpbm &&			\
-	${CP} ${WRKSRC}/doc/* share/doc/netpbm &&	\
-	${MV} share/doc/netpbm/*.1	man/man1 &&	\
-	${MV} misc share/netpbm && 			\
-	${CHOWN} -R ${BINOWN}:${BINGRP} . &&		\
-	${FIND} * \! -type d | ${SORT} >${PLIST_SRC} &&	\
-	${FIND} * -type d | 				\
-	while read DIR; do				\
-	  ${TEST} -d "${PREFIX}/$${DIR}" ||		\
-	    ${ECHO} "@dirrm $${DIR}";			\
-	done >>${PLIST_SRC} &&				\
+	cd ${STAGEDIR} && 					\
+	${MV} link/* lib && 					\
+	${RM} -rf link man/web && 				\
+	${MKDIR} share/doc/netpbm &&				\
+	${CP} ${WRKSRC}/doc/* share/doc/netpbm &&		\
+	${MV} share/doc/netpbm/*.1	man/man1 &&		\
+	${MV} misc share/netpbm && 				\
+	${CHOWN} -R ${BINOWN}:${BINGRP} . &&			\
+	${FIND} * \! -type d -print | ${SORT} >${PLIST_SRC} &&	\
+	${FIND} * -type d -print | 				\
+	while read DIR; do					\
+	  ${TEST} -d "${PREFIX}/$${DIR}" ||			\
+	    ${ECHO} "@dirrm $${DIR}";				\
+	done >>${PLIST_SRC} &&					\
 	${PAX} -rwpppm . ${PREFIX}
 	${RM} -fr ${STAGEDIR}
 
