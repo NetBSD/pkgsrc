@@ -1,17 +1,21 @@
-# $NetBSD: Makefile,v 1.2 1998/08/23 20:40:23 frueauf Exp $
+# $NetBSD: Makefile,v 1.3 1999/01/04 22:37:32 tv Exp $
 #
 
-DISTVERSION=		2.0.7.0
+DISTVERSION=		2.0.7.1
 DISTFILES=		${LINUXDEVEL_FILES}
 EXTRACT_ONLY=		# none of the RPM files
-MASTER_SITES=		ftp://ftp.redhat.com/pub/redhat/redhat-5.1/i386/RedHat/RPMS/ \
-			ftp://ftp.digital.com/pub/linux/redhat/redhat-5.1/i386/RedHat/RPMS/
+MASTER_SITES=		ftp://ftp.cdrom.com/pub/linux/redhat/redhat-5.1/i386/RedHat/RPMS/
 
 MAINTAINER=		packages@netbsd.org
 
 BUILD_DEPENDS=		rpm2cpio:../../misc/rpm
 
-USE_CROSS_GNU=		yes
+WRKSRC=			${WRKDIR}
+
+USE_CROSS_BINUTILS=	yes
+BINUTILS_GNUTARGET=	elf32-i386
+BINUTILS_LDEMULATION=	elf-i386
+USE_CROSS_EGCS=		yes
 
 LINUXDEVEL_FILES=	glibc-2.0.7-13.i386.rpm \
 			glibc-devel-2.0.7-13.i386.rpm \
@@ -40,7 +44,7 @@ post-extract:
 			  libutil; do \
 			${LN} -sf $$so.so.* $$so.so; \
 		done
-	@${LN} -f ${SYS_LIB}/crt* ${WRKSRC}/gcc/
+	@${LN} -f ${SYS_LIB}/crt* ${EGCS_WRKSRC}/gcc/
 
 post-patch:
 	@${RM} -f ${SYS_LIB}/*.orig

@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1 1999/01/04 22:37:30 tv Exp $
+
+--- gas/Makefile.in.orig	Mon Jan  4 00:34:23 1999
++++ gas/Makefile.in	Mon Jan  4 00:37:14 1999
+@@ -452,14 +452,14 @@
+ # How to link with both our special library facilities
+ # and the system's installed libraries.
+ 
+-GASLIBS = @OPCODES_LIB@ @BFDLIB@ ../libiberty/libiberty.a
++GASLIBS = ../libiberty/libiberty.a
+ 
+ # Files to be copied away after each stage in building.
+ STAGESTUFF = *.o $(noinst_PROGRAMS)
+ 
+ as_new_SOURCES = $(GAS_CFILES)
+ as_new_LDADD = $(TARG_CPU_O) $(OBJ_FORMAT_O) $(ATOF_TARG_O) \
+-	$(extra_objects) $(GASLIBS)
++	$(extra_objects) -Wl,-R${PREFIX}/lib -L${PREFIX}/lib -lopcodes-2.9.1 -lbfd-2.9.1 $(GASLIBS)
+ as_new_DEPENDENCIES = $(TARG_CPU_O) $(OBJ_FORMAT_O) $(ATOF_TARG_O) \
+ 	$(extra_objects) $(GASLIBS)
+ 

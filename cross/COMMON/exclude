@@ -1,0 +1,11 @@
+egcs-*/*/tests/*
+egcs-*/*/testsuite/*
+egcs-*/gcc/*/tests/*
+egcs-*/gcc/*/testsuite/*
+egcs-*/texinfo/*
+binutils-*/*/tests/*
+binutils-*/*/testsuite/*
+binutils-*/binutils/*
+binutils-*/etc/*
+binutils-*/gprof/*
+binutils-*/ld/*
