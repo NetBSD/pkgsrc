@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2001/01/25 12:29:52 taca Exp $
+$NetBSD: patch-ab,v 1.5 2001/09/18 16:17:56 taca Exp $
 
---- lib/libkakasi.h.orig	Fri Jan 19 12:48:44 2001
+--- lib/libkakasi.h.orig	Mon Aug 27 11:11:56 2001
 +++ lib/libkakasi.h
 @@ -31,7 +31,7 @@
  #endif
@@ -9,5 +9,5 @@ $NetBSD: patch-ab,v 1.4 2001/01/25 12:29:52 taca Exp $
 -char *kakasi_do PARAMS((char *str));
 +char *kakasi_do PARAMS((unsigned char *str));
  int kakasi_close_kanwadict PARAMS((void));
+ int kakasi_free PARAMS((char *p));
  
- /*
