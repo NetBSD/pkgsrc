@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.170 2003/01/10 17:34:52 jmmv Exp $
+$NetBSD: TODO,v 1.171 2003/01/10 17:56:01 salo Exp $
 
 Suggested new packages
 ======================
@@ -137,7 +137,6 @@ Suggested package updates
 	o hpijs-1.3 [pkg/19213]
 	o icewm-1.2.5
 	o icu-2.2 [heinz]
-	o id3ed-1.10.4
 	o imlib2-1.0.6 [pkg/19144]
 	o imp-3.1 [pkg/19497]
 	o inform-6.21.3 [pkg/19298]
