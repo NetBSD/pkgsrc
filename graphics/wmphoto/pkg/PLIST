@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/04/27 13:35:09 agc Exp $
+bin/wmphoto
+share/doc/wmphoto/README
+share/doc/wmphoto/HINTS
+@dirrm share/doc/wmphoto
