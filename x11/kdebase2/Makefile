@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/03/14 22:49:26 zuntum Exp $
+# $NetBSD: Makefile,v 1.5 2001/03/15 08:57:14 skrll Exp $
 
 DISTNAME=	kdebase-2.1
 CATEGORIES=	x11 kde
@@ -7,15 +7,9 @@ COMMENT=	Base modules for the KDE 2 integrated X11 desktop
 
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.png Daemon.README
 
-BUILD_DEPENDS+=	automake:../../devel/automake
+BUILD_DEPENDS+=	${LOCALBASE}/bin/automake:../../devel/automake
 BUILD_DEPENDS+=	${QT2DIR}/qt2/bin/uic:../../x11/qt2-designer
-BUILD_DEPENDS+=	${LOCALBASE}/bin/msgfmt:../../devel/gettext
 DEPENDS+=	kdelibs-2.1:../../x11/kdelibs2
-
-# kdebase doesn't manipulate GIFs, but KDE packages depending on kdebase
-# often do, so put the dependency here.
-#
-DEPENDS+=	libungif-*:../../graphics/libungif
 
 USE_XPM=	yes
 USE_MOTIF=	yes
