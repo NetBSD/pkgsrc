@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2000/10/21 20:10:18 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2000/10/21 20:51:22 wiz Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/04/27 16:06:15 ache Exp 
 #
 
@@ -8,13 +8,13 @@ CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/ \
 		ftp://ftp.icce.rug.nl/infozip/src/
 DISTFILES=	zip23.tar.gz zcrypt29.zip
-EXTRACT_ONLY=	zip23.tar.gz
 
 MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.info-zip.org/pub/infozip/Zip.html
 
 BUILD_DEPENDS=	unzip:../../archivers/unzip
 
+EXTRACT_ONLY=	zip23.tar.gz
 MAKEFILE=	unix/Makefile
 MAKE_FLAGS=	LOCAL_ZIP="${CFLAGS}"
 ALL_TARGET=	generic
