@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/07/12 15:59:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/07/12 19:34:55 wiz Exp $
 bin/activation-client
 bin/bonobo-activation-empty-server
 bin/bonobo-activation-run-query
@@ -74,7 +74,7 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/bonobo-activation.mo
 @dirrm share/idl/bonobo-activation-2.0
 @dirrm share/gtk-doc/html/bonobo-activation
 @dirrm lib/bonobo/servers
-@unexec ${RMDIR} %D/lib/bonobo >/dev/null 2>&1 || ${TRUE}
+@unexec ${RMDIR} %D/lib/bonobo 2>/dev/null || ${TRUE}
 @dirrm include/bonobo-activation-2.0/bonobo-activation
 @dirrm include/bonobo-activation-2.0
 @dirrm etc/bonobo-activation
