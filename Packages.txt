@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.351 2004/08/12 10:07:28 jlam Exp $
+# $NetBSD: Packages.txt,v 1.352 2004/08/22 19:42:10 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -2138,20 +2138,21 @@ package Makefile.
 
 -------------8<-------------8<-------------8<-------------8<-------------
 # Global and legacy options
-.if defined(USE_OPENLDAP) || defined(USE_SASL2)
-.  if !defined(PKG_OPTIONS.wibble)
-.    if defined(USE_OPENLDAP) && !empty(USE_OPENLDAP:M[yY][eE][sS])
-PKG_OPTIONS.wibble+=	ldap
-.    endif
-.    if defined(USE_SASL2) && !empty(USE_SASL2:M[yY][eE][sS])
-PKG_OPTIONS.wibble+=	sasl
-.    endif
-.  endif
+.if defined(WIBBLE_USE_OPENLDAP) && !empty(WIBBLE_USE_OPENLDAP:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	ldap
+.endif
+.if defined(USE_SASL2) && !empty(USE_SASL2:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	sasl
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wibble
-PKG_OPTIONS.wibble?=	sasl			# package-specific default
 PKG_SUPPORTED_OPTIONS=	ldap sasl
+#
+# Default options for "wibble" package.
+#
+.if !defined(PKG_OPTIONS.wibble)
+PKG_DEFAULT_OPTIONS+=	sasl
+endif
 .include "../../mk/bsd.options.mk"
 
 # Package-specific option-handling
