@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1041 2002/09/01 16:15:32 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1042 2002/09/02 02:42:26 abs Exp $
 #
 # This file is in the public domain.
 #
@@ -2035,7 +2035,7 @@ automake-post-override:
 do-configure: ${_CONFIGURE_PREREQ}
 .  if defined(HAS_CONFIGURE)
 .    for DIR in ${CONFIGURE_DIRS}
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${DIR} && ${SETENV} \
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} \
 	    CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" \
 	    CXX="${CXX}" CXXFLAGS="${CXXFLAGS}" FC="${FC}" F77="${FC}" FFLAGS="${FFLAGS}" \
 	    INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}" \
