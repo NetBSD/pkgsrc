@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3695 2003/10/15 23:41:31 chris Exp $
+$NetBSD: CHANGES,v 1.3696 2003/10/16 12:08:37 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4204,3 +4204,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ipv6calc to 0.46 [hubertf 2003-10-15]
 	Updated createbuildlink to 2.8 [salo 2003-10-15]
 	Updated sylpheed to 0.9.7 [chris 2003-10-16]
+	Updated nbsed to 20031016 [grant 2003-10-16]
