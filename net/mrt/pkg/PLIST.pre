@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST.pre,v 1.1.1.1 2000/10/15 17:36:43 itojun Exp $
+sbin/bgpsim
+sbin/mrtd
+sbin/route_atob
+sbin/route_btoa
+sbin/sbgp
+sbin/ricd
+man/man8/mrtd.8
+man/man8/ricd.8
