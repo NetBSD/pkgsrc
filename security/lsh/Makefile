@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/12 15:55:11 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/14 15:10:27 uebayasi Exp $
 #
 
 DISTNAME=		lsh-1.4.3
@@ -11,7 +11,7 @@ COMMENT=		ssh2 client/server
 
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS=		make
 
 .include "../../devel/gmp/buildlink2.mk"
 .include "../../devel/liboop/buildlink2.mk"
