@@ -1,26 +1,13 @@
-$NetBSD: patch-ae,v 1.3 2002/07/18 05:24:49 grant Exp $
---- xfstt.1x.orig	Tue Jul 13 05:07:15 1999
-+++ xfstt.1x	Sat Nov 18 16:08:20 2000
-@@ -3,7 +3,7 @@
- xfstt \- X11 font server for *ttf fonts
- .SH SYNOPSIS
- .B xfstt
--[--port n] [--dir dirname] [--unstrap]
-+[--port n] [--notcp] [--dir dirname] [--unstrap]
- [--multi] [--once] [--user username]
- [[--gslist] --sync]
- [--res resolution] [--encoding list]
-@@ -43,9 +43,12 @@
- Change the port number for xfstt's font services.
- This version of Xfstt defaults to --port 7101.
- .TP
-+.I "\-\-notcp"
-+Don't open TCP socket, use unix domain only.
-+.TP
+$NetBSD: patch-ae,v 1.4 2002/08/22 02:21:07 grant Exp $
+
+--- xfstt.1x.orig	Fri Aug  2 12:03:15 2002
++++ xfstt.1x
+@@ -55,7 +55,7 @@ Don't open TCP socket, use unix domain o
  .I "\-\-dir name"
  Change xfstt's font directory.
--The default is --dir /usr/share/fonts/truetype.
-+The default is --dir @X11BASE@/lib/X11/fonts/TrueType.
+ The default directory is
+-.IR /usr/share/fonts/truetype .
++.IR @X11BASE@/lib/X11/fonts/TrueType .
  .TP
  .I "\-\-res value"
  Force the resolution for underspecified fonts to value (typically 96 or 120).
