@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1540.2.25 2005/03/02 19:38:26 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1540.2.26 2005/03/21 15:43:00 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -135,6 +135,10 @@ BUILD_DEFS_FIXED+=	OBJECT_FMT LICENSE RESTRICTED
 BUILD_DEFS_FIXED+=	NO_SRC_ON_FTP NO_SRC_ON_CDROM
 BUILD_DEFS_FIXED+=	NO_BIN_ON_FTP NO_BIN_ON_CDROM
 BUILD_DEFS_FIXED+=	${OSVERSION_SPECIFIC:DOSVERSION_SPECIFIC}
+
+.if (defined(INSTALL_UNSTRIPPED) && !empty(INSTALL_UNSTRIPPED:M[yY][eE][sS])) || defined(DEBUG_FLAGS)
+_INSTALL_UNSTRIPPED=	# set (flag used by platform/*.mk)
+.endif
 
 ##### Non-overridable constants
 
@@ -369,9 +373,16 @@ ALL_ENV+=	CPPFLAGS=${CPPFLAGS:Q}
 ALL_ENV+=	CXX=${CXX:Q}
 ALL_ENV+=	CXXFLAGS=${CXXFLAGS:Q}
 ALL_ENV+=	COMPILER_RPATH_FLAG=${COMPILER_RPATH_FLAG:Q}
-ALL_ENV+=	F77=${F77:Q}
+ALL_ENV+=	F77=${FC:Q}
 ALL_ENV+=	FC=${FC:Q}
 ALL_ENV+=	FFLAGS=${FFLAGS:Q}
+ALL_ENV+=	LANG=C
+ALL_ENV+=	LC_COLLATE=C
+ALL_ENV+=	LC_CTYPE=C
+ALL_ENV+=	LC_MESSAGES=C
+ALL_ENV+=	LC_MONETARY=C
+ALL_ENV+=	LC_NUMERIC=C
+ALL_ENV+=	LC_TIME=C
 ALL_ENV+=	LDFLAGS=${LDFLAGS:Q}
 ALL_ENV+=	LINKER_RPATH_FLAG=${LINKER_RPATH_FLAG:Q}
 ALL_ENV+=	PATH=${PATH:Q}:${LOCALBASE}/bin:${X11BASE}/bin
@@ -735,6 +746,7 @@ _CHECK_VULNERABLE=							\
 		  PKGBASE="${PKGBASE}"					\
 		${AWK} '/^$$/ { next }					\
 			/^\#.*/ { next }				\
+			$$1 !~ ENVIRON["PKGBASE"] && $$1 !~ /\{/ { next } \
 			{ s = sprintf("${PKG_ADMIN} pmatch \"%s\" %s && ${ECHO} \"*** WARNING - %s vulnerability in %s - see %s for more information ***\"", $$1, ENVIRON["PKGNAME"], $$2, ENVIRON["PKGNAME"], $$3); system(s); } \
 		' < ${PKGVULNDIR}/pkg-vulnerabilities || ${ECHO} 'could not check pkg-vulnerabilities file'
 

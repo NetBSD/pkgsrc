@@ -1,4 +1,4 @@
-# $NetBSD: IRIX.mk,v 1.6.2.2 2005/02/11 15:27:57 tv Exp $
+# $NetBSD: IRIX.mk,v 1.6.2.3 2005/03/21 15:43:00 tv Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -151,10 +151,8 @@ _OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,-none
 # incompatible.
 _INCOMPAT_ICONV=	IRIX-*-*
 
-.if (!defined(INSTALL_UNSTRIPPED) || empty(INSTALL_UNSTRIPPED:M[yY][eE][sS])) && !defined(DEBUG_FLAGS)
-_STRIPFLAG_CC?=		-s	# cc(1) option to strip
-_STRIPFLAG_INSTALL?=	-s	# install(1) option to strip
-.endif
+_STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U-s}	# cc(1) option to strip
+_STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
 
 LOCALBASE?=		${DESTDIR}/usr/pkg
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
