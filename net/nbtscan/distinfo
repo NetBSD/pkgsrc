@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2003/04/03 11:51:16 wiz Exp $
+$NetBSD: distinfo,v 1.5 2004/08/07 09:10:01 cube Exp $
 
-SHA1 (nbtscan-1.5.tar.gz) = 2f2f76d8c8181fd4952aea3bcc3d30c25dfbf7cc
-Size (nbtscan-1.5.tar.gz) = 76791 bytes
+SHA1 (nbtscan-1.5.1.tar.gz) = 4041d8f6b592fa310b8d3c79c56a2d3263dba82f
+Size (nbtscan-1.5.1.tar.gz) = 82107 bytes
