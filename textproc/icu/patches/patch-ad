@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.2 2000/12/21 18:14:18 skrll Exp $
+$NetBSD: patch-ad,v 1.3 2000/12/23 09:39:21 skrll Exp $
 
---- test/intltest/intltest.cpp.orig	Thu Dec 21 15:38:00 2000
+--- test/intltest/intltest.cpp.orig	Tue Dec 12 19:40:58 2000
 +++ test/intltest/intltest.cpp
 @@ -411,7 +411,7 @@
              mainDirBuffer[0]='\0';
