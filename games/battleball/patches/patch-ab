@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 1999/08/07 10:36:17 fredb Exp $
+
+--- bb/player.C.orig	Wed Aug  5 21:00:47 1998
++++ bb/player.C	Sat Aug  7 03:18:21 1999
+@@ -12,7 +12,9 @@
+ 
+ 
+ #ifdef __GNUC__
++#  if (__GNUC__ < 3) && (__GNUC_MINOR__ < 91)
+ char __stl_temp_buffer[__stl_buffer_size];
++#  endif
+ #else
+ #include "tempbuf.cpp"    // quasi-hack necessary to use STL's stable_sort()
+ #endif

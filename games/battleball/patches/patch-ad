@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 1999/08/07 10:36:18 fredb Exp $
+
+--- lib3d/general.C.orig	Wed Aug  5 20:55:48 1998
++++ lib3d/general.C	Sat Aug  7 03:30:27 1999
+@@ -6,6 +6,7 @@
+ #include <math.h>
+ #include <sys/time.h>      // to get select()
+ //#include <sys/select.h>  // to get select() on some other systems
++#include <unistd.h>        // to get select() on NetBSD
+ #include "general.h"
+ #include "ang2d.h"
+ 
