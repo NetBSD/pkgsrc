@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2002/02/18 15:14:36 seb Exp $
+# $NetBSD: Makefile,v 1.8 2002/09/17 15:33:04 dillo Exp $
 #
 
-DISTNAME=	cftp-0.11
-PKGREVISION=	1
+DISTNAME=	cftp-0.12
 CATEGORIES=	net
 MASTER_SITES=	ftp://sunsite.csd.smc.univie.ac.at/pub/nih/cftp/ \
 		ftp://ftp.giga.or.at/pub/nih/cftp/
