@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.446 2003/04/06 14:52:20 wiz Exp $
+$NetBSD: TODO,v 1.447 2003/04/06 18:54:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -196,7 +196,6 @@ Suggested package updates
 	o newscache-0.99.22p1
 	o ns-flash-6.0.79
 	o nut-7.22
-	o nxtvepg-2.5.0
 	o ogle-0.9.1
 	o openh323-1.11.2
 	o openldap-2.1.12
