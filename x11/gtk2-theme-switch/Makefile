@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/24 15:30:33 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/17 12:46:20 jmmv Exp $
 #
 
 DISTNAME=		gtk-theme-switch-2.0.0rc2
@@ -11,8 +11,10 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://www.muhri.net/
 COMMENT=		Allows quick & easy switching of GTK+ 2.x themes
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
+
+BUILDLINK_TRANSFORM+=	S:-DGTK_DISABLE_DEPRECATED:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/switch2 \
@@ -20,5 +22,6 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/switch.1 \
 		${PREFIX}/man/man1/gtk2-theme-switch.1
 
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
