@@ -1,0 +1,40 @@
+$NetBSD: patch-ab,v 1.3 2005/03/26 16:40:33 dmcmahill Exp $
+
+--- configure.orig	2004-03-28 16:06:09.000000000 -0500
++++ configure
+@@ -6836,7 +6836,7 @@ fi
+ done
+ 
+ if test $needsnprintf = yes; then
+-	LIBOBJS="$LIBOBJS snprintf.o.$ac_objext"
++	LIBOBJS="$LIBOBJS snprintf.$ac_objext"
+ fi
+ 
+ 
+@@ -8509,7 +8509,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+ echo "$as_me:$LINENO: result: no" >&5
+ echo "${ECHO_T}no" >&6
+-	LIBOBJS="$LIBOBJS inet_ntop.o.$ac_objext"
++	LIBOBJS="$LIBOBJS inet_ntop.$ac_objext"
+ fi
+ rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
+ echo "$as_me:$LINENO: checking for inet_pton" >&5
+@@ -8554,7 +8554,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+ echo "$as_me:$LINENO: result: no" >&5
+ echo "${ECHO_T}no" >&6
+-	LIBOBJS="$LIBOBJS inet_pton.o.$ac_objext"
++	LIBOBJS="$LIBOBJS inet_pton.$ac_objext"
+ fi
+ rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
+ echo "$as_me:$LINENO: checking for inet_aton" >&5
+@@ -8599,7 +8599,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+ echo "$as_me:$LINENO: result: no" >&5
+ echo "${ECHO_T}no" >&6
+-	LIBOBJS="$LIBOBJS inet_aton.o.$ac_objext"
++	LIBOBJS="$LIBOBJS inet_aton.$ac_objext"
+ fi
+ rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
+ 
