@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.2.2 2004/07/15 19:26:46 agc Exp $
+
+--- Makefile.orig	Sat Jul 10 15:43:55 2004
++++ Makefile	Sat Jul 10 15:44:27 2004
+@@ -2,10 +2,10 @@
+ 
+ PROG	= psify
+ OBJS	= psify.o lex.yy.o
+-CC	= gcc
+-LEX	= flex
+-CFLAGS	= -O
+-LDFLAGS = 
++#CC	= gcc
++#LEX	= flex
++#CFLAGS	= -O
++#LDFLAGS = 
+ #GREP	= grep
+ #LIBS	= `$(GREP) -q FLEX_SCANNER lex.yy.c || echo -ll`
+ 
