@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1531 2004/03/28 01:14:56 snj Exp $
+$NetBSD: TODO,v 1.1532 2004/03/28 10:33:36 recht Exp $
 
 Suggested new packages
 ======================
@@ -386,7 +386,6 @@ Suggested package updates
 	o yaz-2.0.12
 	o ysm-2.9.2
 	o zenicb 1.31 (needs merge with lots of local changes)
-	o zsh-4.2.0
 
 Infrastructure problems which need addressing
 =============================================
