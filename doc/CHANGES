@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1361 2003/02/14 22:50:01 hubertf Exp $
+$NetBSD: CHANGES,v 1.1362 2003/02/14 23:57:40 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -642,3 +642,15 @@ Changes to the packages collection and infrastructure in 2003:
 	Added autogen-5.4.7 [kristerw 2003-02-14]
 	Updated xmess to 0.65.1 [kristerw 2003-02-14]
 	Updated opencm to 0.1.2alpha4 [hubertf 2003-02-14]
+	Added xmms-bezier-0.0.3 [hubertf 2003-02-15]
+	Added xmms-bump-scope-0.0.3 [hubertf 2003-02-15]
+	Added xmms-funtimedancer-0.1 [hubertf 2003-02-15]
+	Added xmms-infinity-0.2 [hubertf 2003-02-15]
+	Added xmms-iris-0.11 [hubertf 2003-02-15]
+	Added xmms-jakdaw-0.0.4 [hubertf 2003-02-15]
+	Added xmms-jess-2.9.1 [hubertf 2003-02-15]
+	Added xmms-madspin-0.03 [hubertf 2003-02-15]
+	Added xmms-nebulus-0.3.0 [hubertf 2003-02-15]
+	Added xmms-paranormal-0.2.0 [hubertf 2003-02-15]
+	Added xmms-synaesthesia-0.0.3rc3 [hubertf 2003-02-15]
+	Added xmms-tv-scope-0.0.2 [hubertf 2003-02-15]
