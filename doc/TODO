@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2826 2005/01/04 12:59:19 markd Exp $
+$NetBSD: TODO,v 1.2827 2005/01/04 13:43:25 adam Exp $
 
 Suggested new packages
 ======================
@@ -1080,7 +1080,6 @@ Suggested package updates
 	o screws-0.56 [pkg/28646]
 	o scribus-1.2
 	o scrollz-1.9.4
-	o scummvm-0.7.0
 	o sdig-0.40
 	o semantic-1.4.4
 	o sendfile-20010424
