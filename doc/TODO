@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1993 2004/08/02 02:08:28 minskim Exp $
+$NetBSD: TODO,v 1.1994 2004/08/02 13:06:03 cjep Exp $
 
 Suggested new packages
 ======================
@@ -313,7 +313,6 @@ Suggested package updates
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.2.2
 	o musicpd-0.11.4
-	o nail-11.0
 	o namazu-2.0.13
 	o nano-1.2.4
 	o nap-1.5.2
