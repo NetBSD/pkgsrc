@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/11/27 23:28:25 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2000/12/14 02:07:44 jtb Exp $
 
 --- etc/Makefile.conf.orig	Sun Mar  5 01:37:06 2000
 +++ etc/Makefile.conf
-@@ -1,14 +1,11 @@
+@@ -1,26 +1,22 @@
 -AR		= ar
 -CC		= gcc
 -CCOPTS		= -O3 -g
@@ -13,21 +13,25 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/11/27 23:28:25 jtb Exp $
 -DESTBIN		= /usr/local/bin
 -DESTLIB		= /usr/local/lib/felt
 -DESTMAN		= /usr/local/man
+-INSTALL		= sh $(TOPDIR)/etc/install.sh -c
+-LDOPTS		= -g
 +DESTBIN		= ${PREFIX}/bin
 +DESTLIB		= ${PREFIX}/share/felt
 +DESTMAN		= ${PREFIX}/man
- INSTALL		= sh $(TOPDIR)/etc/install.sh -c
--LDOPTS		= -g
++INSTALL		= /bin/sh $(TOPDIR)/etc/install.sh -c
 +LDOPTS		= -s
  LIBELT		= $(TOPDIR)/lib/Elements/libelt.a
  LIBFELT		= $(TOPDIR)/lib/Felt/libfelt.a
  LIBGEN		= $(TOPDIR)/lib/Generate/libgen.a
-@@ -18,9 +15,9 @@
- MKDIR		= sh $(TOPDIR)/etc/mkdirhier.sh
- RANLIB		= ranlib
+ LIBGEOMPACK	= $(TOPDIR)/lib/Geompack/libgeompack.a
+ LIBMTX		= $(TOPDIR)/lib/Matrix/libmtx.a
+ LIBWIDGETS	= $(TOPDIR)/lib/Widgets/libwidgets.a
+-MKDIR		= sh $(TOPDIR)/etc/mkdirhier.sh
+-RANLIB		= ranlib
++MKDIR		= /bin/sh $(TOPDIR)/etc/mkdirhier.sh
  READLINE	= -DREADLINE
 -READLIBS	= -L/usr/lib -lreadline -ltermcap
-+READLIBS	= -L${RL_PREFIX}/lib -lreadline -ltermcap
++READLIBS	= -L${RL_PREFIX}/lib -Wl,-R${RL_PREFIX}/lib -lreadline -ltermcap
  RM		= rm -f
  SYSLIBS		=
 -X11DEF		= /usr/X11R6/lib/X11/app-defaults
