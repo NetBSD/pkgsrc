@@ -1,13 +1,15 @@
-$NetBSD: patch-ac,v 1.2 1998/08/07 11:14:11 agc Exp $
+$NetBSD: patch-ac,v 1.3 1999/10/25 23:14:58 agc Exp $
 
---- catdoc.c.orig	Fri Jun  5 12:43:35 1998
-+++ catdoc.c	Sat Jun 20 01:03:13 1998
-@@ -46,7 +46,7 @@
- #define BUFFER_SIZE 16384
- #endif
- /* enable this define, if you don't want cyrillic code page translations */
--/* #define LATIN1*/
-+#define LATIN1
+Add CPPFLAGS to CFLAGS, passed down through the environment.
+
+--- src/Makefile.in	1999/10/25 23:01:49	1.1
++++ src/Makefile.in	1999/10/25 23:02:01
+@@ -61,7 +61,7 @@
+  -DREPL_EXT=\"$(REPL_EXT)\" -DUNKNOWN_CHAR=\'$(UNKNOWN_CHAR)\'\
+  -DSOURCE_CHARSET=\"$(SOURCE_CHARSET)\" -DTARGET_CHARSET=\"$(TARGET_CHARSET)\"
  
+-CFLAGS=$(FLAGS) $(DEFINES)
++CFLAGS=$(FLAGS) $(DEFINES) ${CPPFLAGS}
+ OBJ=catdoc.o charsets.o substmap.o reader.o writer.o fileutil.o\
+ 	confutil.o analyze.o rtfreader.o
  
- /* ......................................................... charsets ... */
