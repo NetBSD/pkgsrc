@@ -1,8 +1,8 @@
-$NetBSD: patch-bc,v 1.1 2003/10/05 14:26:00 grant Exp $
+$NetBSD: patch-bc,v 1.2 2004/04/26 04:42:12 jlam Exp $
 
---- hints/solaris_2.sh.orig	2003-09-18 19:21:49.000000000 +1000
-+++ hints/solaris_2.sh
-@@ -241,6 +241,10 @@ END
+--- hints/solaris_2.sh.orig	Wed Mar 24 17:59:58 2004
++++ hints/solaris_2.sh	Sun Apr 25 03:07:00 2004
+@@ -246,6 +246,10 @@
  	    # All Solaris versions of ld I've seen contain the magic
  	    # string used in the grep.
  	    :
