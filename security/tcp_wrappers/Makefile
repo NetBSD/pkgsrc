@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/12/03 15:15:09 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2004/12/07 15:12:54 wiz Exp $
 
 DISTNAME= 	tcp_wrappers_7.6-ipv6.1
 PKGNAME=	tcp_wrappers-7.6.1
@@ -28,7 +28,7 @@ BUILD_TARGET.${OPSYS}=	netbsd
 .endif
 BUILD_TARGET.SunOS=	sunos5
 BUILD_TARGET.IRIX=	${LOWER_OPSYS:C|\..*||}
-BUILD_TARGET=		${ALL_TARGET.${OPSYS}}
+BUILD_TARGET=		${BUILD_TARGET.${OPSYS}}
 
 .if defined(USE_INET6) && !empty(USE_INET6:M[yY][eE][sS])
 .  if !empty(OPSYS:M*BSD)
@@ -56,11 +56,14 @@ post-build:
 	done
 
 do-install:
-	cd ${WRKSRC}; ${LIBTOOL} ${INSTALL_LIB} libwrap.la ${PREFIX}/lib
-	cd ${WRKSRC}; ${LIBTOOL} ${INSTALL_PROGRAM} \
+	cd ${WRKSRC}; ${LIBTOOL} --mode=install \
+		${INSTALL_LIB} libwrap.la ${PREFIX}/lib
+	cd ${WRKSRC}; ${LIBTOOL} --mode=install \
+		${INSTALL_PROGRAM} \
 		tcpdmatch try-from safe_finger tcpdchk ${PREFIX}/bin
 	cd ${WRKSRC}; ${INSTALL_DATA} tcpd.h ${PREFIX}/include
-	cd ${WRKSRC}; ${LIBTOOL} ${INSTALL_PROGRAM} tcpd ${PREFIX}/libexec
+	cd ${WRKSRC}; ${LIBTOOL} --mode=install \
+		${INSTALL_PROGRAM} tcpd ${PREFIX}/libexec
 	cd ${WRKSRC}; ${INSTALL_DATA} *.3 ${PREFIX}/man/man3
 	cd ${WRKSRC}; ${INSTALL_DATA} *.5 ${PREFIX}/man/man5
 	cd ${WRKSRC}; ${INSTALL_DATA} *.8 ${PREFIX}/man/man8
