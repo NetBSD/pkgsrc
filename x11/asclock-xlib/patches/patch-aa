@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/10/07 17:26:15 jlam Exp $
+$NetBSD: patch-aa,v 1.2 1999/11/01 06:07:38 jlam Exp $
 
 --- ./Imakefile.orig	Sun Mar 14 01:04:31 1999
 +++ ./Imakefile	Thu Oct  7 03:38:21 1999
@@ -19,4 +19,4 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/10/07 17:26:15 jlam Exp $
 -ComplexProgramTarget(asclock)
 +CPPFLAGS += -DPREFIX=\"${PREFIX}\"
 +
-+ComplexProgramTargetNoMan(asclock)
++ComplexProgramTargetNoMan(asclock-xlib)
