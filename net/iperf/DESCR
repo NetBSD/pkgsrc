@@ -1,0 +1,3 @@
+Iperf is a tool for measuring TCP and UDP bandwidth performance.
+It reports bandwidth, delay jitter, datagram loss. It also supports
+IPv6 and IP Multicast.
