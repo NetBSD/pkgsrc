@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 1998/09/04 02:28:55 tron Exp $
+@comment $NetBSD: PLIST,v 1.15 1998/10/03 02:44:42 tv Exp $
 bin/emacs
 bin/emacs-20.3
 bin/emacs-etags
@@ -1374,7 +1374,7 @@ share/emacs/site-lisp/subdirs.el
 @dirrm share/emacs/20.3/lisp/emulation
 @dirrm share/emacs/20.3/lisp/emacs-lisp
 @exec mkdir -p %D/share/emacs/20.3/site-lisp
-@unexec rm -rf %D/share/emacs/20.3/site-lisp
+@unexec rmdir %D/share/emacs/20.3/site-lisp 2>/dev/null || true
 @exec mkdir -p %D/share/emacs/20.3/leim
 @dirrm share/emacs/20.3/leim
 @dirrm share/emacs/20.3/lisp
@@ -1382,7 +1382,7 @@ share/emacs/site-lisp/subdirs.el
 @dirrm share/emacs/20.3/etc
 @dirrm share/emacs/20.3
 @exec mkdir -p %D/share/emacs/site-lisp
-@unexec rm -rf %D/share/emacs/site-lisp
+@unexec rmdir %D/share/emacs/site-lisp 2>/dev/null || true
 @dirrm share/emacs
 @dirrm libexec/emacs/20.3/${MACHINE_GNU_ARCH}--netbsd
 @dirrm libexec/emacs/20.3
