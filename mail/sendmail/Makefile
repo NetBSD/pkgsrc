@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2002/06/17 20:21:46 tron Exp $
+# $NetBSD: Makefile,v 1.47 2002/06/17 20:56:53 tron Exp $
 
 DISTNAME=	sendmail.8.11.6
 PKGNAME=	sendmail-8.11.6
@@ -31,28 +31,35 @@ MAKE_ENV+=	BSD_BINOWN="${BINOWN}" BSD_BINGRP="${BINGRP}" \
 WRKSRC=		${WRKDIR}/${PKGNAME:C/nb[0-9]+$//}
 SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
 
-BUILD_DEFS+=    USE_WIDEPATCH USE_INET6 USE_LDAP USE_DB2 USE_STARTTLS
+BUILD_DEFS+=    USE_WIDEPATCH USE_INET6 USE_TCPWRAPPERS USE_LDAP USE_DB2 \
+		USE_STARTTLS
 
 .include "../../mk/bsd.prefs.mk"
+
+MESSAGE_SRC=	${WRKDIR}/.MESSAGE_SRC
+PLIST_SRC=	${WRKDIR}/.PLIST_SRC
+DESCR_SRC=	${WRKDIR}/.DESCR_SRC
 
 .if ${OPSYS} == "SunOS"
 USE_DB2?=	YES
 .else
 USE_DB2?=	NO
 .endif
-
-MESSAGE_SRC=	${WRKDIR}/.MESSAGE_SRC
-PLIST_SRC=	${WRKDIR}/.PLIST_SRC
-DESCR_SRC=	${WRKDIR}/.DESCR_SRC
+.if ${USE_DB2} == YES
+DEPENDS+=	db-2.7.7:../../databases/db
+.endif
 
 .if defined(USE_LDAP) && ${USE_LDAP} == YES
 DEPENDS+=	openldap-1.2.*:../../databases/openldap
 .endif
-.if ${USE_DB2} == YES
-DEPENDS+=	db-2.7.7:../../databases/db
-.endif
+
 .if defined(USE_STARTTLS) && ${USE_STARTTLS} == YES
 .include "../../security/openssl/buildlink.mk"
+.endif
+
+USE_TCPWRAPPERS?=	YES
+.if ${USE_TCPWRAPPERS} == YES
+.include "../../security/tcp_wrappers/buildlink.mk"
 .endif
 
 post-patch:
@@ -68,7 +75,7 @@ post-patch:
 	${CAT} ${FILESDIR}/site.config.m4-v6 >> ${SITECONFIG}
 	${ECHO} -n ' INET6' >> ${DESCR_SRC}
 .endif
-.if ${OPSYS} == "NetBSD"
+.if ${USE_TCPWRAPPERS} == YES
 	${CAT} ${FILESDIR}/site.config.m4-tcpwrappers >> ${SITECONFIG}
 	${ECHO} -n ' TCPWRAPPERS' >> ${DESCR_SRC}
 .endif

@@ -1,3 +1,4 @@
-# enable tcpwrapeprs
-APPENDDEF(`confENVDEF', `-DTCPWRAPPERS')
+# enable tcpwrappers
+APPENDDEF(`confENVDEF', `-I${BUILDLINK_DIR}/include -DTCPWRAPPERS')
+APPENDDEF(`confLIBS', `-L${BUILDLINK_DIR}/lib')
 APPENDDEF(`conf_sendmail_LIBS', `-lwrap')
