@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2000/07/07 13:30:11 tron Exp $
+# $NetBSD: Makefile,v 1.132 2000/07/11 20:43:28 tron Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -77,6 +77,7 @@
     SUBDIR += pfnet
     SUBDIR += pload
     SUBDIR += poptop
+    SUBDIR += ppp
     SUBDIR += ppp-mppe
     SUBDIR += pptp
     SUBDIR += ra-pna-proxy
