@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.10 2000/05/20 19:34:17 jlam Exp $
+
+--- bin/pgtclsh/Makefile.orig	Tue Mar  7 20:58:21 2000
++++ bin/pgtclsh/Makefile	Sat May 20 00:14:18 2000
+@@ -22,7 +22,7 @@
+ include Makefile.tkdefs
+ endif
+ 
+-CFLAGS+= $(X_CFLAGS) -I$(LIBPGTCLDIR)
++CFLAGS+= $(X_CFLAGS) -I$(LIBPQDIR) -I$(LIBPGTCLDIR)
+ 
+ ifdef KRBVERS
+ LDFLAGS+= $(KRBLIBS)
