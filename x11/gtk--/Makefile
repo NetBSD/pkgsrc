@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2002/10/19 10:55:02 rh Exp $
+# $NetBSD: Makefile,v 1.27 2002/10/29 20:30:46 wiz Exp $
 #
 
 DISTNAME=		gtkmm-1.2.10
@@ -20,7 +20,7 @@ GNU_CONFIGURE=		YES
 USE_PERL5=		build
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/scripts/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 CONFIGURE_ARGS=		--enable-static
 
 M4=			${LOCALBASE}/bin/gm4
