@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 17:22:06 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/28 10:33:53 wiz Exp $
 
 DISTNAME=	horde-1.2.4
 CATEGORIES=	www
@@ -35,7 +35,6 @@ post-extract:
 	do								\
 		${MV} $${file} $${file}.dist;				\
 	done
-	
 
 post-patch:
 	cd ${WRKSRC}/scripts;						\
