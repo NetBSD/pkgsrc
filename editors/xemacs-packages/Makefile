@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2002/03/21 13:19:57 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2002/04/26 07:24:14 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1999/06/22 22:16:53 gj Exp
 
 DISTNAME=	xemacs-packages
@@ -38,6 +38,16 @@ NO_BUILD=	yes
 WRKSRC=		${WRKDIR}
 
 .include "../../mk/bsd.prefs.mk"
+
+.if !defined(XEMACS_PREFIX)
+XEMACS_PREFIX!=	${MAKE} XEMACS_PREFIX= EVAL_PREFIX=_XEMACS_PREFIX=xemacs \
+		VARNAME=_XEMACS_PREFIX show-var
+MAKEFLAGS+=	XEMACS_PREFIX=${XEMACS_PREFIX}
+.endif
+
+.if (${XEMACS_PREFIX} == ${X11BASE})
+USE_X11BASE=	YES
+.endif
 
 .if defined(MANZ)
 PLIST_SUBST+=	ELSUFX=.gz
