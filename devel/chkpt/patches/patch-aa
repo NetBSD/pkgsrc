@@ -1,0 +1,47 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/11/11 12:47:23 agc Exp $
+
+Enable the NetBSD settings.
+
+--- Makefile.orig	Sun Nov  8 19:53:07 1998
++++ Makefile	Sun Nov  8 19:54:24 1998
+@@ -1,19 +1,19 @@
+ # Site specific stuff:
+-BINDIR = /usr/local/bin
+-LIBDIR = /usr/local/lib
+-MANDIR = /usr/local/man/man3
+-INCDIR = /usr/local/include
++BINDIR = ${PREFIX}/bin
++LIBDIR = ${PREFIX}/lib
++MANDIR = ${PREFIX}/man/man3
++INCDIR = ${PREFIX}/include
+ 
+ # NetBSD:
+-#CCC = utils/ccc-NetBSD
+-#CF77 = utils/cf77-NetBSD
+-#CFLAGS = -O -Wall -DEBUG -DIAGNOSTIC -I../include
+-#INSTALL = /usr/bin/install -c
+-#FFLAGS = -O
+-#LDFLAGS = -nostdlib -static /usr/lib/crt0.o
+-#LINKCLIBS = -lgcc ../build/libcc.a -lgcc
+-#LINKFLIBS = -lgcc -lf2c ../build/libcc.a -lgcc
+-#RANLIB = /usr/bin/ranlib
++CCC = utils/ccc-NetBSD
++CF77 = utils/cf77-NetBSD
++CFLAGS = -O -Wall -DIAGNOSTIC -I../include
++INSTALL = /usr/bin/install -c
++FFLAGS = -O
++LDFLAGS = -nostdlib -static /usr/lib/crt0.o
++LINKCLIBS = -lgcc ../build/libcc.a -lgcc
++LINKFLIBS = -lgcc -lf2c ../build/libcc.a -lgcc
++RANLIB = /usr/bin/ranlib
+ # End of NetBSD section
+ 
+ # Digital Unix:
+@@ -52,6 +52,7 @@
+ 	$(INSTALL) -m 755 -g bin -o bin $(CF77) $(BINDIR)/cf77
+ 	-$(MKDIR) $(LIBDIR)
+ 	$(INSTALL) -m 444 -g bin -o bin build/libcc.a $(LIBDIR)
++	${RANLIB} ${LIBDIR}/libcc.a
+ 	-$(MKDIR) $(MANDIR)
+ 	$(INSTALL) -m 444 -g bin -o bin man/chkpt.3 $(MANDIR)
+ 	$(LN) $(MANDIR)/chkpt.3 $(MANDIR)/chkpt_init.3

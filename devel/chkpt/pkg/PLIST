@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/11/11 12:47:23 agc Exp $
+bin/ccc
+bin/cf77
+lib/libcc.a
+man/man3/chkpt.3
+man/man3/chkpt_init.3
+man/man3/chkpt_timer.3
+man/man3/chkpt_exit.3
+include/chkpt.h
