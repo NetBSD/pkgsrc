@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.9 1999/12/25 05:28:35 kim Exp $
+$NetBSD: patch-ab,v 1.10 1999/12/28 03:54:21 kim Exp $
 
 --- configure.in.orig	Wed May 12 07:20:02 1999
-+++ configure.in	Fri Dec 24 23:29:48 1999
++++ configure.in	Mon Dec 27 22:39:58 1999
 @@ -30,8 +30,132 @@
  fi
  
@@ -450,7 +450,32 @@ $NetBSD: patch-ab,v 1.9 1999/12/25 05:28:35 kim Exp $
  
  AC_MSG_CHECKING(whether to use libwrap)
  AC_ARG_WITH(libwrap,
-@@ -1227,14 +1523,14 @@
+@@ -970,11 +1266,19 @@
+     AC_MSG_RESULT(no)
+     ;;
+   yes)
+-    AC_MSG_RESULT(yes)
+-    AC_CHECK_LIB(wrap, request_init, [
+-	AC_DEFINE(LIBWRAP)
+-        WRAPLIBS="-lwrap"
+-        AC_DEFINE(HAVE_LIBWRAP) ])
++    WRAPLIBS="-lwrap"
++    OLDLIBS="$LIBS"
++    LIBS="$WRAPLIBS $LIBS"
++    AC_TRY_LINK([ int allow_severity; int deny_severity; ],
++                [ request_init(); ], [
++		    AC_MSG_RESULT(yes)
++		    AC_DEFINE(LIBWRAP)
++		    AC_DEFINE(HAVE_LIBWRAP)
++		], [
++		    AC_MSG_RESULT(no)
++		    WRAPLIBS=""
++		])
++    LIBS="$OLDLIBS"
+     ;;
+   *)
+     AC_MSG_RESULT(yes)
+@@ -1227,14 +1531,14 @@
  [ case "$enableval" in
    no)
         AC_MSG_RESULT(no)
@@ -468,7 +493,7 @@ $NetBSD: patch-ab,v 1.9 1999/12/25 05:28:35 kim Exp $
  )
  
  AC_MSG_CHECKING(whether to enable TCP_NODELAY)
-@@ -1252,6 +1548,38 @@
+@@ -1252,6 +1556,38 @@
    AC_DEFINE(ENABLE_TCP_NODELAY)
  )
  
@@ -507,7 +532,7 @@ $NetBSD: patch-ab,v 1.9 1999/12/25 05:28:35 kim Exp $
  AC_MSG_CHECKING(whether to enable SO_LINGER)
  AC_ARG_ENABLE(so-linger,
  [  --enable-so-linger      Enable setting SO_LINGER socket option],
-@@ -1311,6 +1639,8 @@
+@@ -1311,6 +1647,8 @@
    AC_DEFINE(SCP_ALL_STATISTICS_ENABLED)
  )
  
@@ -516,7 +541,7 @@ $NetBSD: patch-ab,v 1.9 1999/12/25 05:28:35 kim Exp $
  # We include this here only to make it visible in --help; this is only used
  # in the gmp subdirectory.
  AC_ARG_ENABLE(asm,
-@@ -1336,4 +1666,4 @@
+@@ -1336,4 +1674,4 @@
  AC_SUBST(SSHDCONFOBJS)
  AC_SUBST(SSHINSTALLMODE)
  
