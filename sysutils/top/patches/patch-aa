@@ -1,9 +1,3 @@
---- Configure	Fri Dec 20 16:52:30 1996
-+++ Configure	Sat Oct  4 03:25:02 1997
-@@ -348,3 +348,2 @@
-    set t_mode = 4711
--   set mode = 4711
- else if (-e /dev/kmem) then
 diff -1 -uBbNr commands.c commands.c
 --- commands.c	Tue Aug 27 16:13:57 1996
 +++ commands.c	Sat Oct  4 03:25:02 1997
@@ -635,7 +629,7 @@ diff -1 -uBbNr machine/m_netbsd13.c machine/m_netbsd13.c
 + *		Matthew Green <mrg@eterna.com.au>
 + *
 + *
-+ * $Id: patch-aa,v 1.2 1997/10/06 09:37:47 agc Exp $
++ * $Id: patch-aa,v 1.3 1997/10/22 10:11:06 agc Exp $
 + */
 +
 +#include <sys/types.h>
@@ -1465,3 +1459,15 @@ diff -1 -uBbNr utils.c utils.c
 +#include <errno.h>
 +
  int atoiwi(str)
+*** Configure	1997/10/22 10:00:59	1.1
+--- Configure	1997/10/22 10:01:15
+***************
+*** 352,358 ****
+         set group = sys
+     else
+         set t_mode = 4711
+-        set mode = 4711
+      endif
+  else if (-e /dev/kmem) then
+     $ls /dev/kmem >/tmp/$$.b
+--- 352,357 ----
