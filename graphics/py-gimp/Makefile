@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/03 18:49:44 reed Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/29 22:31:13 snj Exp $
 #
 
 DISTNAME=	pygimp-1.2
@@ -30,6 +30,6 @@ post-install:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
-.include "../../graphics/gimp-base/buildlink2.mk"
+.include "../../graphics/gimp1-base/buildlink2.mk"
 .include "../../x11/pygtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
