@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2004/04/15 10:42:42 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2004/05/15 12:18:36 jmmv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GTK2_BUILDLINK3_MK:=	${GTK2_BUILDLINK3_MK}+
@@ -16,10 +16,10 @@ BUILDLINK_DEPENDS.gtk2+=	gtk2+>=2.4.0
 BUILDLINK_PKGSRCDIR.gtk2?=	../../x11/gtk2
 
 PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0$$/ { next; }
-PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0\/(engines|filesystems|immodules|loaders)$$/ \
+PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0\/(engines|filesystems|immodules|loaders|modules)$$/ \
 				{ print "@comment in gtk2: " $$0; next; }
 PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0\/2.4.0$$/ { next; }
-PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0\/2.4.0\/(engines|filesystems|immodules|loaders)$$/ \
+PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0\/2.4.0\/(engines|filesystems|immodules|loaders|modules)$$/ \
 				{ print "@comment in gtk2: " $$0; next; }
 .endif	# GTK2_BUILDLINK3_MK
 
