@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/11/04 20:10:13 recht Exp $
+# $NetBSD: Makefile,v 1.12 2004/11/09 21:09:13 seb Exp $
 
 PKGNAME=		postgresql74-lib-${BASE_VERS}
 PKGREVISION=		# empty
@@ -16,9 +16,7 @@ BUILD_DIRS+=		${WRKSRC}/src/interfaces
 
 # without this the Darwin build fails
 # (-bundle_loader related)
-.if ${OPSYS} == "Darwin"
 BUILD_DIRS+=		${WRKSRC}/src/backend
-.endif
 
 BUILD_DIRS+=		${WRKSRC}/src/pl
 
