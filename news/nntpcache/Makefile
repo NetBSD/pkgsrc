@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2000/02/20 06:53:59 proff Exp $
+# $NetBSD: Makefile,v 1.8 2000/06/21 12:50:28 mjl Exp $
 # FreeBSD Id: Makefile,v 1.11 1998/02/01 03:04:11 itojun Exp
 #
 
-DISTNAME=		nntpcache-2.4.0b3
+DISTNAME=		nntpcache-2.4.0b5
 CATEGORIES=		news
 MASTER_SITES=		ftp://ftp.nntpcache.org/pub/nntpcache/ \
 			ftp://ftp.fu-berlin.de/unix/news/nntpcache/ \
@@ -19,17 +19,9 @@ HOMEPAGE=		http://www.nntpcache.org/
 LICENSE=		fee-based-commercial-use
 
 # enable ldap support?
-NNTP_USE_LDAP=		no
+NNTP_USE_LDAP?=		no
 # enable pgp signed nocem support?
-NNTP_USE_PGP=		no
-
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--localstatedir=/var/spool
-CONFIGURE_ENV+=		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
-USE_GMAKE=		yes
-
-INSTALL_TARGET=		SUBDIRS="cf src filters http doc pgp contrib/newshound innreport scripts unixauth" \
-			install
+NNTP_USE_PGP?=		no
 
 .if ${NNTP_USE_LDAP} == yes
 DEPENDS+=		openldap-*:../../databases/openldap
@@ -38,6 +30,16 @@ DEPENDS+=		openldap-*:../../databases/openldap
 .if ${NNTP_USE_PGP} ==	yes
 DEPENDS+=		pgp-2.*:../../security/pgp2
 .endif
+
+BUILD_DEFS+=	NNTP_USE_LDAP NNTP_USE_PGP
+
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--localstatedir=/var/spool
+CONFIGURE_ENV+=		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
+USE_GMAKE=		yes
+
+INSTALL_TARGET=		SUBDIRS="cf src filters http doc pgp contrib/newshound innreport scripts unixauth" \
+			install
 
 post-configure:
 	@${SED} -e "s:%%PREFIX%%:${PREFIX}:g"  \
