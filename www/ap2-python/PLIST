@@ -1,0 +1,30 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/17 01:11:36 darcy Exp $
+lib/httpd/mod_python.so
+@exec %D/sbin/apxs -e -a -n python %f
+@unexec %D/sbin/apxs -e -A -n python %f
+${PYSITELIB}/mod_python/Cookie.py
+${PYSITELIB}/mod_python/Cookie.pyc
+${PYSITELIB}/mod_python/Cookie.pyo
+${PYSITELIB}/mod_python/Session.py
+${PYSITELIB}/mod_python/Session.pyc
+${PYSITELIB}/mod_python/Session.pyo
+${PYSITELIB}/mod_python/__init__.py
+${PYSITELIB}/mod_python/__init__.pyc
+${PYSITELIB}/mod_python/__init__.pyo
+${PYSITELIB}/mod_python/_psp.so
+${PYSITELIB}/mod_python/apache.py
+${PYSITELIB}/mod_python/apache.pyc
+${PYSITELIB}/mod_python/apache.pyo
+${PYSITELIB}/mod_python/cgihandler.py
+${PYSITELIB}/mod_python/cgihandler.pyc
+${PYSITELIB}/mod_python/cgihandler.pyo
+${PYSITELIB}/mod_python/psp.py
+${PYSITELIB}/mod_python/psp.pyc
+${PYSITELIB}/mod_python/psp.pyo
+${PYSITELIB}/mod_python/publisher.py
+${PYSITELIB}/mod_python/publisher.pyc
+${PYSITELIB}/mod_python/publisher.pyo
+${PYSITELIB}/mod_python/util.py
+${PYSITELIB}/mod_python/util.pyc
+${PYSITELIB}/mod_python/util.pyo
+@dirrm ${PYSITELIB}/mod_python
