@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2005/02/03 13:37:03 jmmv Exp $
+# $NetBSD: Makefile,v 1.75 2005/03/22 16:25:42 jmmv Exp $
 #
 
-DISTNAME=	gdm-2.6.0.7
+DISTNAME=	gdm-2.6.0.8
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.6/}
 EXTRACT_SUFX=	.tar.bz2
@@ -33,6 +33,7 @@ PKG_SUPPORTED_OPTIONS=	inet6 PAM
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ENV+=		PREFIX=${PREFIX}
 CONFIGURE_ENV+=		X11BASE=${X11BASE}
 MAKE_ENV+=		CHMOD=${CHMOD} CHOWN=${CHOWN}
 
@@ -90,6 +91,8 @@ GDMGRP=		daemon
 
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 .if ${OPSYS} == "NetBSD"
