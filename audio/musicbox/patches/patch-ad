@@ -1,8 +1,26 @@
-$NetBSD: patch-ad,v 1.1.1.1 1999/06/08 23:07:11 tron Exp $
+$NetBSD: patch-ad,v 1.2 2004/01/02 11:30:03 jmmv Exp $
 
---- ListView.cpp.orig	Wed Feb 17 09:17:11 1999
-+++ ListView.cpp	Wed Feb 17 09:21:00 1999
-@@ -383,11 +383,11 @@
+--- ListView.cpp.orig	1997-11-16 14:58:42.000000000 +0100
++++ ListView.cpp
+@@ -67,7 +67,7 @@ AlbumItem& AlbumItem::operator=(const Al
+         return *this;
+ }
+ 
+-AlbumListBox::AlbumListBox(QWidget* parent=0, const char* name=0)
++AlbumListBox::AlbumListBox(QWidget* parent, const char* name)
+ 		:MultiListBox(parent,(char *)name)
+ {
+ 	ptr.setAutoDelete(TRUE);
+@@ -365,7 +365,7 @@ int Mixer::Set(int l)
+ 	return(1);
+ }
+ 
+-AlbumInfoView::AlbumInfoView(AlbumItem *item,int i,QWidget *parent=0)
++AlbumInfoView::AlbumInfoView(AlbumItem *item,int i,QWidget *parent)
+ 		:QDialog(parent,"Info",TRUE)
+ {
+ 	QLabel *lbl;
+@@ -383,11 +383,11 @@ AlbumInfoView::AlbumInfoView(AlbumItem *
  	if (item != NULL)
  		temp = item;
  
@@ -17,7 +35,7 @@ $NetBSD: patch-ad,v 1.1.1.1 1999/06/08 23:07:11 tron Exp $
  	topLayout->addWidget(lbl,2,0);
  
  	Title = new QLabel(this);
-@@ -412,7 +412,7 @@
+@@ -412,7 +412,7 @@ AlbumInfoView::AlbumInfoView(AlbumItem *
  	connect(btn,SIGNAL(clicked()),this,SLOT(RemoveSong()));
  	topLayout->addWidget(btn,4,1);
  
