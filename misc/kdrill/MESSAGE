@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2002/02/07 13:49:06 wiz Exp $
+
+To learn kana, start kdrill with:
+	 kdrill -kdictfile none -edictfile hira.edic
+or any of the other edic files from ${PREFIX}/share/kdrill.
+
+To learn kanji, download edict.gz and kanjidic.gz from
+	ftp://ftp.monash.edu.au/pub/nihongo
+and install them in ${PREFIX}/share/kdrill.
+
+===========================================================================
