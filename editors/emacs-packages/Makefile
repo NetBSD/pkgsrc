@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/03/01 09:21:50 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/04 09:19:46 uebayasi Exp $
 
-DISTNAME=	emacs-packages-0.0
+DISTNAME=	emacs-packages-0.1
 CATEGORIES=	meta-pkgs editors
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -25,11 +25,13 @@ DEPENDS+=	emacs-ilisp-[0-9]*:../../devel/emacs-ilisp
 DEPENDS+=	emacs-w3m-[0-9]*:../../www/emacs-w3m
 DEPENDS+=	etach-[0-9]*:../../mail/etach
 DEPENDS+=	flim-[0-9]*:../../devel/flim
+DEPENDS+=	flyspell-[0-9]*:../../textproc/flyspell
 DEPENDS+=	haskell-mode-[0-9]*:../../devel/haskell-mode
 DEPENDS+=	iiimecf-[0-9]*:../../inputmethod/iiimecf
 DEPENDS+=	irchat-pj-[0-9]*:../../chat/irchat-pj
+DEPENDS+=	ispell_el-[0-9]*:../../textproc/ispell_el
 .if defined(_EMACS_VERSION_EMACS_MAJOR) && ${_EMACS_VERSION_EMACS_MAJOR} == "21"
-#DEPENDS+=	jde-[0-9]*:../../editors/jde
+DEPENDS+=	jde-[0-9]*:../../editors/jde
 .endif
 DEPENDS+=	liece-[0-9]*:../../chat/liece
 DEPENDS+=	lookup-[0-9]*:../../misc/lookup
