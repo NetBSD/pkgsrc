@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.191 2003/01/16 09:01:53 salo Exp $
+$NetBSD: TODO,v 1.192 2003/01/16 15:30:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -118,6 +118,7 @@ Suggested package updates
 	o gcvs-1.0b4
 	o gd-2.0.4
 	o gdb-5.3
+	o gdm-2.4.1.1
 	o getmail-2.3.10 [pkg/19707]
 	o gftp-2.0.14
 	o ghostscript-8.00 (apfl)
@@ -184,11 +185,13 @@ Suggested package updates
 	o mng-1.0.5rc2
 	o mrproject-0.7
 	o mysql-3.23.54
-	o naim-0.11.5
+	o naim-0.11.5.2
 	o napshare-1.2
 	o ncurses-5.3
+	o net-snmp-5.0.7
 	o netpbm-10.8
 	o netscape-7.01
+	o neXtaw-0.13.0
 	o ns-flash-6.0.69
 	o opencm-0.1.2alpha3
 	o openh323-1.11.2
@@ -246,6 +249,7 @@ Suggested package updates
 	o vfu-4.00
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
 	o wine-20021219 [pkg/19747]
+	o wine-20030115
 	o wwwoffle-2.7h
 	o wxGTK-2.4.0
 	o xalan-c-1.4
