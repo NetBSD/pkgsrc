@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2000/07/09 13:19:36 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2000/07/15 03:53:46 itojun Exp $
 #
 
-DISTNAME=		openssh-2.1.1p2
+DISTNAME=		openssh-2.1.1p3
 CATEGORIES=		security
 MASTER_SITES=		http://the.wiretapped.net/security/cryptography/ssh/OpenSSH/files/ \
 			http://www.firedrake.org/openssh/files/ \
@@ -16,9 +16,10 @@ HOMEPAGE=		http://www.openssh.com/
 BUILD_DEPENDS+=		${LOCALBASE}/bin/perl:../../lang/perl5
 BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
 
-.if !exists(/usr/include/openssl/rsa.h)
-DEPENDS+=		openssl-[0-9]*:../../security/openssl
-.endif
+# src/crypto is still 0.9.4 at this moment.  see NetBSD PR 10593.
+#.if !exists(/usr/include/openssl/rsa.h)
+DEPENDS+=		openssl>=0.9.5:../../security/openssl
+#.endif
 
 CONFLICTS=		ssh-[0-9]* ssh6-[0-9]*
 
