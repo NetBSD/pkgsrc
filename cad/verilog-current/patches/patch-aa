@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2000/04/30 18:15:18 dmcmahill Exp $
+
+--- iverilog.c.orig	Fri Apr 28 21:20:14 2000
++++ iverilog.c	Sat Apr 29 08:38:20 2000
+@@ -125,6 +125,6 @@
+       }
+ 
+-      sprintf(tmp, "g++ -O -rdynamic -fno-exceptions -o %s -I%s "
+-	      "-L%s %s.cc -lvvm -ldl", opath, base, base, opath);
++      sprintf(tmp, "%s -O -Wl,--export-dynamic -fno-exceptions -o %s -I%s "
++	      "-L%s %s.cc -lvvm %s", CXX, opath, IVL_INC, IVL_LIB, opath, DLLIB);
+ 
+       if (verbose_flag)
