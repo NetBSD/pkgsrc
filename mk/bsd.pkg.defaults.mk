@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.87 2002/09/18 19:51:53 tron Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.88 2002/09/23 08:45:40 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -526,10 +526,10 @@ DT_LAYOUT?= US
 # Possible: US, FI, FR, GER, DV
 # Default: FI
 
-#ELK_USE_X11=
-# Used by elk to determine if X11 module is enabled or not.
-# Possible: defined, not defined
-# Default: not defined
+ELK_GUI?=	none
+# Used by elk to determine which GUI API modules are enabled.
+# Possible: none, or some combination of xaw and/or motif
+# Default: none
 
 EMACS_USE_POP?= yes
 # Used by emacs package to determine whether pop support is enabled or not.
