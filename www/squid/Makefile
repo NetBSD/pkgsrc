@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/03/08 10:53:57 agc Exp $
+# $NetBSD: Makefile,v 1.8 1999/04/09 17:54:26 bad Exp $
 #
 
 DISTNAME=	squid-2.0.PATCH2
@@ -15,6 +15,8 @@ EXTRACT_SUFX=	-src.tar.gz
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://squid.nlanr.net/Squid/
 
+BUILD_DEPENDS=    ${LOCALBASE}/bin/perl:${PKGSRCDIR}/lang/perl5
+
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--sysconfdir=/etc \
 		--localstatedir=/var/squid
@@ -23,6 +25,7 @@ CONFIGURE_ARGS=	--sysconfdir=/etc \
 CONFIGURE_ARGS+=	--enable-cachemgr-hostname=localhost
 CONFIGURE_ARGS+=	--enable-icmp
 #CONFIGURE_ARGS+=	--enable-snmp
+CONFIGURE_ENV+= PERL=${LOCALBASE}/bin/perl
 
 MAKEFILE=	makefile
 MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}" PKG_PREFIX="${PREFIX}"
