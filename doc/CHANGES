@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5311 2004/03/28 19:52:19 jmmv Exp $
+$NetBSD: CHANGES,v 1.5312 2004/03/28 20:01:28 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1533,3 +1533,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tcl-fbsql to 1.06 [minskim 2004-03-28]
 	Added jabberd2-2.0s2 [xtraeme 2004-03-28]
 	Updated xmlcatmgr to 2.0 [jmmv 2004-03-28]
+	Added gliv-1.8.2 [xtraeme 2004-03-28]
