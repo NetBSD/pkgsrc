@@ -1,4 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:18:03 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/09/26 23:59:00 jlam Exp $
 bin/xdm-krb4
-man/cat1/xdm-krb4.0
 etc/rc.d/xdm_krb4
+man/cat1/xdm-krb4.0
+share/examples/xdm-krb4/GiveConsole
+share/examples/xdm-krb4/TakeConsole
+share/examples/xdm-krb4/Xaccess
+share/examples/xdm-krb4/Xresources
+share/examples/xdm-krb4/Xservers
+share/examples/xdm-krb4/Xsession
+share/examples/xdm-krb4/Xsetup_0
+share/examples/xdm-krb4/xdm-config
+@dirrm share/examples/xdm-krb4

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/04/05 11:49:37 wennmach Exp $
+# $NetBSD: Makefile,v 1.12 2002/09/26 23:59:00 jlam Exp $
 #
 
 DISTNAME=		xdm-krb4-3.3.6.3
@@ -8,36 +8,38 @@ MASTER_SITES=		ftp://gutemine.geo.Uni-Koeln.DE/pub/xdm-krb4/
 MAINTAINER=		wennmach@netbsd.org
 COMMENT=		Kerberos IV and AFS aware xdm
 
+USE_BUILDLINK2=		# defined
+USE_IMAKE=		# defined
+
 .if exists(/usr/lib/libroken.a)
-KRB4_INCLUDE=		-I/usr/include/kerberosIV
-KRB4_LIBS=		-L/usr/lib -lkafs -lkrb -ldes -lkrb5 -lroken -lasn1 -lcom_err
+KRB4_INCLUDE=	-I/usr/include/kerberosIV
+KRB4_LIBS=	-L/usr/lib -lkafs -lkrb -ldes -lkrb5 -lroken -lasn1 -lcom_err
 .else
-.include "../../security/kth-krb4/buildlink.mk"
-USE_BUILDLINK_ONLY=	# defined
-KRB4_INCLUDE=		-I${BUILDLINK_DIR}/include/kerberosIV
-KRB4_LIBS=		-L${BUILDLINK_DIR}/lib -lkafs -lkrb -ldes
+.  include "../../security/kth-krb4/buildlink2.mk"
+KRB4_INCLUDE=	-I${BUILDLINK_PREFIX.kth-krb4}/include/kerberosIV
+KRB4_LIBS=	-L${BUILDLINK_PREFIX.kth-krb4}/lib -lkafs -lkrb -ldes
 .endif
 
-USE_X11BASE=		yes
-USE_IMAKE=		yes
+MAKE_ENV+=	XDM_EXAMPLEDIR="${EXAMPLEDIR}"
 
-.include "../../mk/bsd.prefs.mk"
+XDM_CONFDIR=	${PREFIX}/lib/X11/xdm
+EXAMPLEDIR=	${PREFIX}/share/examples/${PKGBASE}
+CFILES=		GiveConsole TakeConsole
+CFILES+=	Xaccess Xresources Xservers Xsession Xsetup_0
+CFILES+=	xdm-config
+.for FILE in ${CFILES}
+CONF_FILES+=	${EXAMPLEDIR}/${FILE} ${XDM_CONFDIR}/${FILE}
+.endfor
+
+RCD_SCRIPTS=	xdm_krb4
 
 post-patch:
-	@${SED} -e 's|@KRB4_INCLUDE@|${KRB4_INCLUDE}|g'                       \
-	        -e 's|@KRB4_LIBS@|${KRB4_LIBS}|g'                             \
-		< ${WRKSRC}/Imakefile.in                                      \
-		> ${WRKSRC}/Imakefile
+	@${SED} -e 's|@KRB4_INCLUDE@|${KRB4_INCLUDE}|g'			\
+	        -e 's|@KRB4_LIBS@|${KRB4_LIBS}|g'			\
+		${WRKSRC}/Imakefile.in > ${WRKSRC}/Imakefile
 
 pre-install:
-	@${SED} -e 's|@PREFIX@|${PREFIX}|g'                                   \
-		${FILESDIR}/xdm_krb4                                          \
-		>${WRKDIR}/xdm_krb4   
+	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
 
-post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/etc/rc.d
-	${INSTALL_DATA}                                                       \
-		${WRKDIR}/xdm_krb4                                            \
-		${PREFIX}/etc/rc.d/xdm_krb4
-
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
