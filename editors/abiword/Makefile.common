@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2004/10/21 06:30:39 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/10/27 01:05:53 xtraeme Exp $
 #
 
 ABIWORD_DIST_VERSION=	2.0.11
@@ -29,9 +29,6 @@ CONFIGURE_ARGS+=        --enable-threads
 CONFIGURE_ARGS+=        --with-libxml2
 CONFIGURE_ARGS+=        --with-libjpeg-prefix=${BUILDLINK_PREFIX.jpeg}
 CONFIGURE_ARGS+=        --with-libpng=${BUILDLINK_PREFIX.png}
-
-PATCHDIR=		${.CURDIR}/../../editors/abiword/patches
-DISTINFO_FILE=		${.CURDIR}/../../editors/abiword/distinfo
 
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
