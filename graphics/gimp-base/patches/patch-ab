@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/02/15 20:52:36 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2003/05/23 18:04:32 salo Exp $
 
---- plug-ins/Makefile.in.orig	Fri Feb 15 14:01:45 2002
-+++ plug-ins/Makefile.in	Fri Feb 15 14:03:20 2002
-@@ -187,7 +187,7 @@
+--- plug-ins/Makefile.in.orig	2003-05-20 01:07:31.000000000 +0200
++++ plug-ins/Makefile.in	2003-05-23 17:14:38.000000000 +0200
+@@ -186,7 +186,7 @@
  @OS_WIN32_TRUE@TWAIN = twain
  @OS_WIN32_TRUE@WINSNAP = winsnap
  
--SUBDIRS =  	libgck				dbbrowser			script-fu			$(GIMP_PERL)			FractalExplorer			Lighting			MapObject			bmp				faxg3				fits				flame				fp				gap				gdyntext			gfig			        gflare				gfli				gimpressionist			$(HELPBROWSER)			ifscompose			imagemap			maze				mosaic				pagecurl			print				rcm				sgi				sel2path			$(TWAIN)			$(WEBBROWSER)			$(WINSNAP)			xjt				common
-+SUBDIRS =  	libgck				dbbrowser			script-fu			$(GIMP_PERL)			FractalExplorer			Lighting			MapObject			bmp				faxg3				fits				flame				fp				gap				gdyntext			gfig			        gflare				gfli				gimpressionist			$(HELPBROWSER)			ifscompose			imagemap			maze				mosaic				pagecurl					rcm				sgi				sel2path			$(TWAIN)			$(WEBBROWSER)			$(WINSNAP)			xjt				common
+-SUBDIRS =  	libgck				dbbrowser			script-fu			$(GIMP_PERL)			FractalExplorer			Lighting			MapObject			bmp				faxg3				fits				flame				fp				gap				gdyntext			gfig			        gflare				gfli				gimpressionist			$(HELPBROWSER)			ifscompose			imagemap			maze				mosaic				pagecurl			$(PRINT)			rcm				sgi				sel2path			$(TWAIN)			$(WEBBROWSER)			$(WINSNAP)			$(XJT)				common
++SUBDIRS =  	libgck				dbbrowser			script-fu			$(GIMP_PERL)			FractalExplorer			Lighting			MapObject			bmp				faxg3				fits				flame				fp				gap				gdyntext			gfig			        gflare				gfli				gimpressionist			$(HELPBROWSER)			ifscompose			imagemap			maze				mosaic				pagecurl			rcm				sgi				sel2path			$(TWAIN)			$(WEBBROWSER)			$(WINSNAP)			$(XJT)				common
  
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  CONFIG_HEADER = ../config.h

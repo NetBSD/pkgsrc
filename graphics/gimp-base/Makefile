@@ -1,34 +1,34 @@
-# $NetBSD: Makefile,v 1.14 2003/05/05 16:32:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2003/05/23 18:04:32 salo Exp $
+#
 
-DISTNAME=		gimp-1.2.3
-PKGNAME=		gimp-base-1.2.3
-PKGREVISION=		5
+DISTNAME=		gimp-1.2.4
+PKGNAME=		gimp-base-1.2.4
 CATEGORIES=		graphics
-MASTER_SITES=		ftp://ftp.gimp.org/pub/gimp/v1.2/v1.2.3/ \
-			ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/v1.2/v1.2.3/ \
-			ftp://ftp.cs.umn.edu/pub/gimp/gimp/v1.2/v1.2.3/
+MASTER_SITES=		ftp://ftp.gimp.org/pub/gimp/v1.2/v1.2.4/ \
+			ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/v1.2/v1.2.4/ \
+			ftp://ftp.cs.umn.edu/pub/gimp/gimp/v1.2/v1.2.4/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		hubertf@netbsd.org
 HOMEPAGE=		http://www.gimp.org/
-COMMENT=		Image manipulation program similar to Photoshop[tm]
+COMMENT=		GNU Image Manipulation Program (base)
+
+BUILD_USES_MSGFMT=	YES
 
 CONFLICTS+=		gimp<=1.2.3
 
-BUILD_USES_MSGFMT=	yes
+USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
+USE_PKGLOCALEDIR=	YES
+USE_X11=		YES
+USE_GMAKE=		YES
 
-USE_BUILDLINK2=		yes
-USE_PKGINSTALL=		yes
-USE_PKGLOCALEDIR=	yes
-USE_X11=		yes
-USE_GMAKE=		yes
-
-USE_LIBTOOL=		yes
+USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../mk/bsd.prefs.mk"
 
-GNU_CONFIGURE=		yes
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--disable-python
@@ -70,6 +70,7 @@ post-install:
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../graphics/mpeg-lib/buildlink2.mk"
+.include "../../print/gimp-print-lib/buildlink2.mk"
 .if defined(GIMP_WITH_HELPBROWSER) && ${GIMP_WITH_HELPBROWSER} != "no"
 PLIST_SUBST+=	HELPBROWSER=""
 .include "../../x11/gnome-libs/buildlink2.mk"
