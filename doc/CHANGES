@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2137 2003/05/03 22:45:31 wiz Exp $
+$NetBSD: CHANGES,v 1.2138 2003/05/04 01:12:24 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1844,3 +1844,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added p5-HTTP-DAV [cyber 2003-05-03]
 	Updated gtkstep to 1.10nb2 [wiz 2003-05-03]
 	Updated denemo to 0.5.4nb3 [wiz 2003-05-03]
+	Updated nautilus to 2.2.3.1nb3 [rh 2003-05-04]
