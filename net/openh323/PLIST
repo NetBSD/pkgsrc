@@ -1,9 +1,22 @@
-@comment $NetBSD: PLIST,v 1.4 2004/10/09 01:15:56 mjl Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/10/09 16:01:23 mjl Exp $
 lib/libh323.la
 bin/simph323
-include/openh323/dllcodec.h
+lib/pwlib/codecs/audio/gsm0610_audio_pwplugin.so
+lib/pwlib/codecs/audio/speex_audio_pwplugin.so
+lib/pwlib/codecs/audio/ilbc_audio_pwplugin.so
+lib/pwlib/codecs/audio/lpc10_audio_pwplugin.so
+lib/pwlib/codecs/audio/g726_audio_pwplugin.so
+lib/pwlib/codecs/audio/ima_adpcm_audio_pwplugin.so
+include/openh323/cu30codec.h
 include/openh323/dynacodec.h
 include/openh323/ffh263codec.h
+include/openh323/h261codec.h
+include/openh323/h263codec.h
+include/openh323/h323pluginmgr.h
+include/openh323/h4503.h
+include/openh323/h460.h
+include/openh323/opalplugin.h
+include/openh323/rfc2190avcodec.h
 include/openh323/h248.h
 include/openh323/h323annexg.h
 include/openh323/h323trans.h
@@ -13,29 +26,21 @@ include/openh323/h4508.h
 include/openh323/h4509.h
 include/openh323/h501.h
 include/openh323/h501pdu.h
-include/openh323/ilbccodec.h
 include/openh323/openh323buildopts.h
 include/openh323/peclient.h
 include/openh323/svcctrl.h
 include/openh323/QTIoctl.h
 include/openh323/channels.h
 include/openh323/codecs.h
-include/openh323/cu30codec.h
-include/openh323/g7231codec.h
-include/openh323/g726codec.h
-include/openh323/g729codec.h
 include/openh323/gccpdu.h
 include/openh323/gkclient.h
 include/openh323/gkserver.h
-include/openh323/gsmcodec.h
 include/openh323/guid.h
 include/openh323/h225.h
 include/openh323/h225ras.h
 include/openh323/h235.h
 include/openh323/h235auth.h
 include/openh323/h245.h
-include/openh323/h261codec.h
-include/openh323/h263codec.h
 include/openh323/h323.h
 include/openh323/h323caps.h
 include/openh323/h323con.h
@@ -57,25 +62,26 @@ include/openh323/ixjidb.h
 include/openh323/ixjlid.h
 include/openh323/jitter.h
 include/openh323/lid.h
-include/openh323/lpc10codec.h
 include/openh323/mcspdu.h
 include/openh323/mediafmt.h
-include/openh323/mscodecs.h
 include/openh323/opalvxml.h
 include/openh323/opalwavfile.h
 include/openh323/q931.h
 include/openh323/rfc2833.h
 include/openh323/rtp.h
 include/openh323/rtp2wav.h
-include/openh323/speexcodec.h
 include/openh323/t120proto.h
 include/openh323/t38.h
 include/openh323/t38proto.h
 include/openh323/transports.h
 include/openh323/vblasterlid.h
+include/openh323/version.h
 include/openh323/vpblid.h
 include/openh323/x224.h
 include/openh323/x880.h
 share/openh323/openh323u.mak
 @dirrm share/openh323
 @dirrm include/openh323
+@dirrm lib/pwlib/codecs/audio
+@dirrm lib/pwlib/codecs
+@dirrm lib/pwlib
