@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2004/10/03 00:14:55 tv Exp $
+# $NetBSD: Makefile,v 1.30 2005/03/22 15:58:20 jmmv Exp $
 #
 
-DISTNAME=		libgnomecanvas-2.8.0
-PKGREVISION=		1
+DISTNAME=		libgnomecanvas-2.10.0
 CATEGORIES=		graphics gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomecanvas/2.8/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomecanvas/2.10/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -27,6 +26,7 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
