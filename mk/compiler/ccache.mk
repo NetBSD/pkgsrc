@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.20 2004/11/17 17:18:33 tv Exp $
+# $NetBSD: ccache.mk,v 1.21 2004/11/30 14:50:37 jlam Exp $
 
 .if !defined(COMPILER_CCACHE_MK)
 COMPILER_CCACHE_MK=	defined
@@ -37,18 +37,20 @@ _CCACHEBASE_DEFAULT=	${LOCALBASE}
 _CCACHEBASE?=		${LOCALBASE}
 
 _CCACHE_DIR=	${WRKDIR}/.ccache
-_CCACHE_LINKS=	# empty
+_CCACHE_VARS=	# empty
 .  if !empty(_LANGUAGES.ccache:Mc)
+PKG_CC?=	${CC}
+_CCACHE_VARS+=	CC
 _CCACHE_CC:=	${_CCACHE_DIR}/bin/${PKG_CC:T}
-_CCACHE_LINKS+=	_CCACHE_CC
+_ALIASES.CC?=	cc
 PKG_CC:=	${_CCACHE_CC}
-CC=		${PKG_CC:T}
 .  endif
 .  if !empty(_LANGUAGES.ccache:Mc++)
+PKG_CXX?=	${CXX}
+_CCACHE_VARS+=	CXX
 _CCACHE_CXX:=	${_CCACHE_DIR}/bin/${PKG_CXX:T}
-_CCACHE_LINKS+=	_CCACHE_CXX
+_ALIASES.CXX?=	c++
 PKG_CXX:=	${_CCACHE_CXX}
-CXX=		${PKG_CXX:T}
 .  endif
 
 # Prepend the path the to the compiler to the PATH
@@ -69,13 +71,19 @@ BUILD_ENV+=	CCACHE_DIR=${CCACHE_DIR:Q}
 .endif
 
 # Create symlinks for the compiler into ${WRKDIR}.
-.  for _target_ in ${_CCACHE_LINKS}
-.    if !target(${${_target_}})
-override-tools: ${${_target_}}
-${${_target_}}:
+.  for _var_ in ${_CCACHE_VARS}
+.    if !target(${_CCACHE_${_var_}})
+override-tools: ${_CCACHE_${_var_}}
+${_CCACHE_${_var_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${LN} -fs ${_CCACHEBASE}/bin/ccache ${.TARGET}
+.      for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ ! -x "${_alias_}" ]; then					\
+		${LN} -fs ${_CCACHEBASE}/bin/ccache ${_alias_};		\
+	fi
+.      endfor
 .    endif
 .  endfor
 .endif	# _USE_CCACHE == "yes"

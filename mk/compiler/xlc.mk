@@ -1,4 +1,4 @@
-# $NetBSD: xlc.mk,v 1.6 2004/11/27 15:28:34 grant Exp $
+# $NetBSD: xlc.mk,v 1.7 2004/11/30 14:50:37 jlam Exp $
 
 .if !defined(COMPILER_XLC_MK)
 COMPILER_XLC_MK=	defined
@@ -18,21 +18,28 @@ _LANGUAGES.xlc+=	${LANGUAGES.xlc:M${_lang_}}
 .endfor
 
 _XLC_DIR=	${WRKDIR}/.xlc
-_XLC_LINKS=	# empty
+_XLC_VARS=	# empty
 .if exists(${XLCBASE}/bin/xlc)
+_XLC_VARS+=	CC
 _XLC_CC=	${_XLC_DIR}/bin/xlc
-_XLC_LINKS+=	_XLC_CC
-PKG_CC=		${_XLC_CC}
-CC=		${PKG_CC:T}
+_ALIASES.CC=	cc xlc
 CCPATH=		${XLCBASE}/bin/xlc
+PKG_CC:=	${_XLC_CC}
+.  if !empty(CC:M*gcc)
+CC:=		${PKG_CC:T}	# ${CC} should be named "xlc".
+.  endif
 .endif
 .if exists(${XLCBASE}/bin/xlc++)
+_XLC_VARS+=	CXX
 _XLC_CXX=	${_XLC_DIR}/bin/xlc++
-_XLC_LINKS+=	_XLC_CXX
-PKG_CXX=	${_XLC_CXX}
-CXX=		${PKG_CXX:T}
+_ALIASES.CXX=	c++ xlc++
 CXXPATH=	${XLCBASE}/bin/xlc++
+PKG_CXX:=	${_XLC_CXX}
+.  if !empty(CXX:M*g++)
+CXX:=		${PKG_CXX:T}	# ${CXX} should be named "xlc++".
+.  endif
 .endif
+_COMPILER_STRIP_VARS+=	${_XLC_VARS}
 
 .if exists(${CCPATH})
 CC_VERSION_STRING!=	${CCPATH} -V 2>&1 | ${GREP} 'IBM XL C.*for' | ${SED} -e 's/^ *//' || ${TRUE}
@@ -52,16 +59,22 @@ PREPEND_PATH+=	${_XLC_DIR}/bin
 CFLAGS+=-ma
 
 # Create compiler driver scripts in ${WRKDIR}.
-.for _target_ in ${_XLC_LINKS}
-.  if !target(${${_target_}})
-override-tools: ${${_target_}}        
-${${_target_}}:
+.for _var_ in ${_XLC_VARS}
+.  if !target(${_XLC_${_var_}})
+override-tools: ${_XLC_${_var_}}        
+${_XLC_${_var_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	(${ECHO} '#!${TOOLS_SHELL}';					\
-	 ${ECHO} 'exec ${XLCBASE}/bin/${${_target_}:T} "$$@"';	\
+	 ${ECHO} 'exec ${XLCBASE}/bin/${.TARGET:T} "$$@"';		\
 	) > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
+.    for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ ! -x "${_alias_}" ]; then					\
+		${LN} -f ${.TARGET} ${_alias_};				\
+	fi
+.    endfor
 .  endif
 .endfor
 
