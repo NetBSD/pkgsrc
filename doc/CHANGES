@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.780 2002/12/14 02:20:31 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.781 2002/12/14 02:53:01 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3948,3 +3948,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added p5-IO-Null-0.02 [cjep 2002-12-14]
 	Updated bbpager to 0.3.1 [jschauma 2002-12-13]
 	Added gdsreader-0.3 [dmcmahill 2002-12-13]
+	Updated djbdns to 1.05nb1 [schmonz 2002-12-14]
