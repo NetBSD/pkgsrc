@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/04/22 11:45:52 rh Exp $
+# $NetBSD: Makefile,v 1.22 2002/04/30 12:45:29 wiz Exp $
 
 .include "Makefile.common"
 
@@ -17,7 +17,9 @@ do-install:
 
 .include "../../audio/lame/buildlink.mk"
 .include "../../devel/SDL/buildlink.mk"
+.include "../../devel/binutils/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
+.include "../../lang/gcc/Makefile.gcc"
 .include "../../misc/libdvdread/buildlink.mk"
 .include "../../mk/ossaudio.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
