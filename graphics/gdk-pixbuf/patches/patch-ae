@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2001/08/12 18:15:38 jlam Exp $
+
+--- configure.orig	Wed Jul 18 11:04:43 2001
++++ configure
+@@ -3573,8 +3573,8 @@
+ #define USE_GMODULE 1
+ EOF
+ 
+-   GMODULE_LIBS="`glib-config --libs gmodule`"
+-   GMODULE_FLAGS="`glib-config --cflags gmodule`"
++   GMODULE_LIBS="`$GLIB_CONFIG --libs gmodule`"
++   GMODULE_FLAGS="`$GLIB_CONFIG --cflags gmodule`"
+    
+    
+    echo "$ac_t""yes" 1>&6
