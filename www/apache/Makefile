@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2003/09/17 19:41:17 grant Exp $
+# $NetBSD: Makefile,v 1.134 2003/10/11 13:40:19 grant Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -6,6 +6,7 @@
 DISTNAME=		apache_${APACHE_VERSION}
 PKGNAME=		apache-${APACHE_VERSION}
 APACHE_VERSION=		1.3.28
+PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_APACHE:=httpd/} \
 			${MASTER_SITE_APACHE:=httpd/old/}
