@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:00:59 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/13 20:43:42 hubertf Exp $
 bin/pgpdecode
 bin/pgpencrypt
 bin/pgpsign
 bin/pine
+bin/rpdump
+bin/rpload
 man/man1/pine.1
 share/pine/tech-notes.txt
 share/pine/contrib/krb5-setup
