@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2000/02/18 20:28:37 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2000/04/04 02:17:10 itohy Exp $
 #
 
 DISTNAME=	pccts133mr
-PKGNAME=	pccts-1.33.21.1
+PKGNAME=	pccts-1.33.22
 CATEGORIES=	devel
 MASTER_SITES=	http://www.polhode.com/
 EXTRACT_SUFX=	.zip
