@@ -1,0 +1,38 @@
+$NetBSD: patch-ah,v 1.3 2003/09/16 20:15:37 jmmv Exp $
+
+--- config/m68k/trampolines.c.orig	2003-08-11 13:03:10.712387000 +0100
++++ config/m68k/trampolines.c	2003-08-11 13:14:50.602283000 +0100
+@@ -40,11 +40,11 @@
+ 
+ asm (
+         START_ASM_FUNC() C_FUNC_NAME(m68k_do_fixup_trampoline) "\n"
+-C_FUNC_NAME(m68k_do_fixup_trampoline) ":
+-        jbsr    " C_FUNC_NAME(soft_fixup_trampoline) "
+-	addqw	#4,%sp
+-	movel	%d0,%a0
+-        jmp     %a0@"
++C_FUNC_NAME(m68k_do_fixup_trampoline) ":\n"
++"	jbsr    " C_FUNC_NAME(soft_fixup_trampoline) "\n"
++"	addqw	#4,%sp\n"
++"	movel	%d0,%a0\n"
++"	jmp     %a0@\n"
+         END_ASM_FUNC()
+ );
+ 
+@@ -52,11 +52,11 @@
+ 
+ asm (
+         START_ASM_FUNC() C_FUNC_NAME(m68k_do_fixup_trampoline) "\n"
+-C_FUNC_NAME(m68k_do_fixup_trampoline) ":
+-        jbsr    " C_FUNC_NAME(soft_fixup_trampoline) "
+-        addqw   #4,sp
+-        movel   d0,a0
+-        jmp     a0@"
++C_FUNC_NAME(m68k_do_fixup_trampoline) ":\n"
++"	jbsr    " C_FUNC_NAME(soft_fixup_trampoline) "\n"
++"	addqw   #4,sp\n"
++"	movel   d0,a0\n"
++"	jmp     a0@\n"
+         END_ASM_FUNC()
+ );
+ 
