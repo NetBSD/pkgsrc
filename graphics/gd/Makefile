@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2000/06/01 11:23:27 rh Exp $
+# $NetBSD: Makefile,v 1.17 2000/06/14 16:33:46 he Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/02/14 07:55:45 asami Exp
 #
 
-DISTNAME=       gd-1.8.1
+DISTNAME=       gd-1.8.3
 CATEGORIES=	graphics
 MASTER_SITES=   http://www.boutell.com/gd/http/
 
@@ -31,7 +31,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include				# zlib.h
 # bump the MINOR when a new version comes out.
 #
 GD_MAJOR=	1
-GD_MINOR=	8
+GD_MINOR=	9
 MAKE_ENV+=	GD_MAJOR="${GD_MAJOR}" GD_MINOR="${GD_MINOR}"
 
 MAKE_ENV+=	CPPFLAGS="${CPPFLAGS}"

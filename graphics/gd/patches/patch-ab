@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.3 2000/03/21 11:10:39 he Exp $
+$NetBSD: patch-ab,v 1.4 2000/06/14 16:33:49 he Exp $
 
---- gd.h.dist	Mon Mar 13 19:25:57 2000
-+++ gd.h	Tue Mar 21 11:32:30 2000
+--- gd.h.orig	Wed Jun 14 17:45:03 2000
++++ gd.h	Wed Jun 14 17:45:01 2000
 @@ -114,6 +114,7 @@
  gdImagePtr gdImageCreateFromGd2PartCtx(gdIOCtxPtr in, int srcx, int srcy, int w, int h);
  
