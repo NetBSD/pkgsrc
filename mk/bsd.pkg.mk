@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.909 2002/01/21 17:31:03 zuntum Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.910 2002/01/21 21:09:41 zuntum Exp $
 #
 # This file is in the public domain.
 #
@@ -1566,7 +1566,7 @@ do-patch: uptodate-digest
 		if [ "`${ECHO} ${PATCHDIR}/patch-*`" = "${PATCHDIR}/patch-*" ]; then \
 			${ECHO_MSG} "${_PKGSRC_IN}> Ignoring empty patch directory"; \
 			if [ -d ${PATCHDIR}/CVS ]; then			\
-				${ECHO_MSG} "${_PKGSRC_IN}> Perhaps you forgot the -P flag to cvs co or update?"; \
+				${ECHO_MSG} "${_PKGSRC_IN}> Perhaps you forgot the -P flag to 'cvs checkout' or 'cvs update'?"; \
 			fi;						\
 		else							\
 			${ECHO_MSG} "${_PKGSRC_IN}> Applying ${OPSYS} patches for ${PKGNAME}" ; \
