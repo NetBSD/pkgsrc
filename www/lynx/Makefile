@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2000/11/15 03:29:24 hubertf Exp $
+# $NetBSD: Makefile,v 1.33 2000/11/17 14:26:00 wiz Exp $
 #
 
 DISTNAME=		lynx2.8.3rel.1
@@ -28,6 +28,7 @@ MAINTAINER=		fb@enteract.com
 HOMEPAGE=		http://lynx.browser.org/
 
 BUILD_DEPENDS+=		msgfmt:../../devel/gettext
+
 USE_LIBINTL=		yes
 
 DIST_SUBDIR=		lynx
