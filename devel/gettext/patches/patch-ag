@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.4 2002/12/11 22:27:26 jlam Exp $
+$NetBSD: patch-ag,v 1.5 2003/12/05 18:15:49 erh Exp $
 
---- lib/Makefile.in.orig	Tue Aug  6 06:58:14 2002
-+++ lib/Makefile.in
-@@ -227,7 +227,7 @@ libgettextlib_la_LIBADD = @LTALLOCA@ @LT
+--- lib/Makefile.in.orig	2002-08-06 08:58:14.000000000 -0500
++++ lib/Makefile.in	2003-12-04 17:16:55.000000000 -0600
+@@ -227,7 +227,7 @@
  # Need @LTLIBICONV@ because linebreak.c uses iconv().
  libgettextlib_la_LDFLAGS = \
    -release @VERSION@ \
@@ -11,3 +11,16 @@ $NetBSD: patch-ag,v 1.4 2002/12/11 22:27:26 jlam Exp $
  
  
  
+@@ -517,9 +517,12 @@
+ 
+ 
+ # No need to install libgettextlib.a.
++# Unless we're on AIX, where .a's are shared libraries.
+ install-exec-am: install-exec-clean
+ install-exec-clean:
++.if ${OPSYS} != "AIX"
+ 	$(RM) $(DESTDIR)$(libdir)/libgettextlib.a
++.endif
+ 
+ all-local c-ctype.lo execute.lo javacomp.lo javaexec.lo pipe-bidi.lo pipe-in.lo pipe-out.lo progname.lo tmpdir.lo wait-process.lo xerror.lo: @STDBOOL_H@
+ stdbool.h: stdbool.h.in
