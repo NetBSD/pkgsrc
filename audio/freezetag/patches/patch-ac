@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 1999/06/16 15:00:40 kleink Exp $
+$NetBSD: patch-ac,v 1.2 1999/06/30 16:39:50 kleink Exp $
 
 --- src/freezetag.c.orig	Sat Apr 10 03:46:02 1999
 +++ src/freezetag.c	Wed Jun 16 02:17:13 1999
@@ -16,7 +16,7 @@ $NetBSD: patch-ac,v 1.1.1.1 1999/06/16 15:00:40 kleink Exp $
  	gtk_widget_show(topbox);
  
 -	directorylist = create_dir_browser((gchar *) get_current_dir_name(), window);
-+	directorylist = create_dir_browser((gchar *) getcwd(NULL, 0), window);
++	directorylist = create_dir_browser((gchar *) g_get_current_dir(), window);
  	gtk_widget_set_usize( GTK_WIDGET (directorylist), 400, 100);
  	gtk_box_pack_start (GTK_BOX (topbox), directorylist, FALSE, TRUE, 0);
  	gtk_widget_show (directorylist);
