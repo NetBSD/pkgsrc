@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/03/13 17:37:01 fredb Exp $
+# $NetBSD: Makefile,v 1.12 2002/09/20 21:19:26 jlam Exp $
 #
 
 DISTNAME=	kulki-1.01
@@ -13,7 +13,8 @@ COMMENT=	Simple logic game - "balls"
 
 WRKSRC=		${WRKDIR}/kulki
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
+USE_X11=		YES
 USE_GMAKE=		YES
 
 MAKE_ENV+=	CXX="${CXX}"
@@ -30,6 +31,5 @@ do-install:
 	cd ${PREFIX}/share/kulki &&				\
 		( ${GUNZIP_CMD} -c ${WRKSRC}/images.tgz | ${GTAR} xf - )
 
-.include "../../x11/qt2-libs/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../x11/qt2-libs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
