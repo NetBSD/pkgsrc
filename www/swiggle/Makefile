@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2004/10/03 00:18:27 tv Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/30 01:12:38 minskim Exp $
 
-DISTNAME=	swiggle-0.3.2
-PKGREVISION=	1
+DISTNAME=	swiggle-0.3.3
 CATEGORIES=	www graphics
 MASTER_SITES=	http://mailbox.univie.ac.at/~le/swiggle/files/
 
