@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4766 2004/02/10 11:38:34 grant Exp $
+$NetBSD: CHANGES,v 1.4767 2004/02/10 11:52:48 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -747,3 +747,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mpg123-nas to 0.59.18nb3 [tron 2004-02-10]
 	Updated clusterit to 2.2 [garbled 2004-02-10]
 	Updated thunderbird-bin to 0.5 [grant 2004-02-10]
+	Updated file-roller to 2.4.4nb2 [jmmv 2004-02-10]
