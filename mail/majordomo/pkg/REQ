@@ -15,17 +15,6 @@ then
 fi
 
 
-# use finger to be able to use NIS, ...
-if finger ${MAJORDOMO_USER} 2>&1 | grep >/dev/null "no such user"
-then
-	echo "Creating '$MAJORDOMO_USER' user ..."
-	${ADDNERD} -h ${HOME} -g ${MAJORDOMO_GROUP} ${MAJORDOMO_USER}
-	echo Done.
-else
-	echo "User '$MAJORDOMO_USER' already exists, proceeding."
-fi
-
-
 # Group... the default's shipped with NetBSD
 #
 if grep "^${MAJORDOMO_GROUP}:" /etc/group 2>&1 >/dev/null
@@ -34,6 +23,17 @@ then
 else
 	echo "Please add group '$MAJORDOMO_GROUP' to /etc/group, then restart."
 	exit 1
+fi
+
+
+# use finger to be able to use NIS, ...
+if finger ${MAJORDOMO_USER} 2>&1 | grep >/dev/null "no such user"
+then
+	echo "Creating '$MAJORDOMO_USER' user ..."
+	${ADDNERD} -h ${HOME} -g ${MAJORDOMO_GROUP} ${MAJORDOMO_USER}
+	echo Done.
+else
+	echo "User '$MAJORDOMO_USER' already exists, proceeding."
 fi
 
 # Home... in case the login exists but not the home directory
