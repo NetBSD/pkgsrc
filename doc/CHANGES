@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1510 2003/03/01 09:24:56 uebayasi Exp $
+$NetBSD: CHANGES,v 1.1511 2003/03/01 11:56:23 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -867,3 +867,9 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ircu to 2.10.11.04 [grant 2003-03-01]
 	Updated emacs to 20.7nb2 [grant 2003-03-01]
 	Added emacs-packages-0.0 [uebayasi 2003-03-01]
+	Added libsigc++10-1.0.4 [jmmv 2003-03-01]
+	Updated gabber to 0.8.7nb7 [jmmv 2003-03-01]
+	Updated efax-gtk to 1.0.1bnb3 [jmmv 2003-03-01]
+	Updated gnome-- to 1.2.2nb1 [jmmv 2003-03-01]
+	Updated gtk-- to 1.2.10nb1 [jmmv 2003-03-01]
+	Updated libsigc++ to 1.2.3 [jmmv 2003-03-01]
