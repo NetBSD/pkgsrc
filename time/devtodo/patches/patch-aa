@@ -1,18 +1,14 @@
-$NetBSD: patch-aa,v 1.1 2001/04/22 11:44:47 zuntum Exp $
+$NetBSD: patch-aa,v 1.2 2001/05/15 06:54:24 zuntum Exp $
 
---- doc/Makefile.in.orig	Sat Apr 21 23:40:51 2001
+--- doc/Makefile.in.orig	Mon May 14 21:44:17 2001
 +++ doc/Makefile.in
-@@ -224,9 +224,10 @@
+@@ -225,7 +225,8 @@
  
  install-data-local:
- 	cd $(mandir)/man1; for i in tda tdr tdd tde todo; do $(LN_S) -f devtodo.1 $$i.1; done
--	test -f $(SYSCONFDIR)/todorc || mkdir -p $(SYSCONFDIR) && $(INSTALL_DATA) todorc.example $(SYSCONFDIR)/todorc
--	test -w /etc/profile.d && $(INSTALL) -c -m 755 scripts.sh /etc/profile.d/scripts.sh
--	test -w /etc/profile.d && $(INSTALL) -c -m 755 scripts.tcsh /etc/profile.d/scripts.tcsh
+ 	cd $(DESTDIR)$(mandir)/man1; for i in $(manlinks); do $(LN_S) -f devtodo.1 $$i.1; done
+-	test -f $(DESTDIR)$(sysconfdir)/todorc || mkdir -p $(DESTDIR)$(sysconfdir) && $(INSTALL_DATA) todorc.example $(DESTDIR)$(sysconfdir)/todorc
 +	$(BSD_INSTALL_DATA_DIR) $(prefix)/share/examples/devtodo
 +	$(BSD_INSTALL_DATA) todorc.example $(prefix)/share/examples/devtodo/todorc
-+	$(BSD_INSTALL_SCRIPT) scripts.sh $(prefix)/share/examples/devtodo/scripts.sh
-+	$(BSD_INSTALL_SCRIPT) scripts.tcsh $(prefix)/share/examples/devtodo/scripts.tcsh
  
  uninstall:
- 	rm $(mandir)/man1/tda.1 $(mandir)/man1/tdr.1 $(mandir)/man1/tdd.1 $(mandir)/man1/tde.1 $(mandir)/man1/todo.1
+ 	rm $(addprefix $(DESTDIR)$(mandir)/man1/, $(addsuffix .1, $(manlinks)))
