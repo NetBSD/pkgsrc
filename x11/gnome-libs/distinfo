@@ -1,23 +1,24 @@
-$NetBSD: distinfo,v 1.8 2001/10/12 13:29:39 tron Exp $
+$NetBSD: distinfo,v 1.9 2002/03/24 19:53:41 rh Exp $
 
-SHA1 (gnome-libs-1.4.1.2.tar.gz) = 90798f5d8ba6091ddd26236f12ecdb6797233d44
-Size (gnome-libs-1.4.1.2.tar.gz) = 3748372 bytes
-SHA1 (patch-aa) = 2b71cc3127922ad28ee49c5acc648f15737d37d3
-SHA1 (patch-ac) = ab679a82e30e97d08bfbedae1487c271ac13a407
-SHA1 (patch-ad) = fff2bbe36ba7f0ed588cbaf2efc646909511ad03
-SHA1 (patch-ae) = 98fe6bb0850778702bbe0b3d0a3810d551b7d695
-SHA1 (patch-af) = c66a96dac08232fcfc0ee7f73701e877c60483a3
+SHA1 (gnome-libs-1.4.1.4.tar.gz) = 3315752f9d4e8392c5e7b902d45cc7b795cdd63a
+Size (gnome-libs-1.4.1.4.tar.gz) = 3631342 bytes
+SHA1 (patch-aa) = ed906dfe8164bacabbe4f2922eecd10125a76b26
+SHA1 (patch-ab) = 13a6c8c58a1acfb61150d13408fa260a82f49484
+SHA1 (patch-ac) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-ad) = 10e46c8965137c8c0a3acf177898ca07fb4c90fa
+SHA1 (patch-ae) = 85e0395394602628b4bec63ac0e96a31bacc9f10
+SHA1 (patch-af) = a5aea708fe8b46c421f818cab8dc033a2c224831
 SHA1 (patch-aj) = 292c4efccc9650c8244348bdcf22c3c1cbd3ebe6
-SHA1 (patch-ak) = 50db1502e90f9574b0d889cbc975b2f041c1e4f2
+SHA1 (patch-ak) = fa6f2db6faff3ca6427784b84acf5856be24af82
 SHA1 (patch-an) = 94189a17d893cc7290354ddb200bea41dffb7953
 SHA1 (patch-ao) = 31724d3e4eb9d44b6a701f4317fc5ae35c4f2f66
 SHA1 (patch-ap) = 31e535a78dfb1fe38d7a1bb0e651b9189e88bdff
 SHA1 (patch-aq) = 58ea5945277d08678988eb6598eb82c724376842
-SHA1 (patch-ar) = acfd15b6e3e1962d6dc288472328730c7d18605d
-SHA1 (patch-as) = 9d37cbf46669af688d20841d90c23e43052f22cf
-SHA1 (patch-at) = ce82e3f8090f3b00c8a8c8ac0809180d2febed70
-SHA1 (patch-au) = d694b7105570fbe8ad8ce5a5079678db2cd2fc8e
-SHA1 (patch-av) = 7dfccc25c7f764106b61f62f11f92bed0161b4b8
-SHA1 (patch-aw) = 03cf4cbeeaeb0f852c072dfb97bbd47c3d627a7c
-SHA1 (patch-ax) = 62ed2e13f8bbd6853d73b3b94bd20dc5690eeba5
-SHA1 (patch-ay) = be04dce8fdd2f553555cca428f386379c53773ad
+SHA1 (patch-ar) = 6a22a31ff7a6d3e9ab73eac6ce228885f175de0c
+SHA1 (patch-as) = 46aa8ddba11ada33f4f6b1227895a23d6cd85862
+SHA1 (patch-at) = 32fd8634ca40c9f2dc19c648404172c6e3a98be3
+SHA1 (patch-au) = 509f82d338a7d8322cf91b9dee957cd8ff21586c
+SHA1 (patch-av) = 4210f8d36ebe09d92313a8fb48a643a4c24c6550
+SHA1 (patch-aw) = 21ff2eb27a91eecc5e51a2cfe3cdcb8f97b32522
+SHA1 (patch-ax) = 522cc70136f50b3c11119ff2d147b09ba3230b60
+SHA1 (patch-ay) = 123c01aec56d688c028d93f6b2a6b8f19549c4d1
