@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.107 2004/03/11 00:26:29 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.108 2004/03/11 00:54:51 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -64,21 +64,11 @@ PREPEND_PATH+=	${BUILDLINK_DIR}/bin
 #
 BUILDLINK_DEPENDS?=	# empty
 
-X11_LINKS_SUBDIR=		share/x11-links
 .if defined(USE_X11)
 USE_X11_LINKS?=			YES
 .  if !empty(USE_X11_LINKS:M[yY][eE][sS])
-BUILDLINK_DEPENDS+=		x11-links
-_BLNK_X11_LINKS_PACKAGE=	x11-links
-.  else
-_BLNK_X11_LINKS_PACKAGE=	# empty
+.    include "../../pkgtools/x11-links/buildlink3.mk"
 .  endif
-BUILDLINK_DEPENDS.x11-links=	x11-links>=0.23
-BUILDLINK_DEPMETHOD.x11-links=	build
-BUILDLINK_PKGSRCDIR.x11-links=	../../pkgtools/x11-links
-_BLNK_X11_LINKS_DIR=	${BUILDLINK_PREFIX.x11-links}/${X11_LINKS_SUBDIR}
-.else
-_BLNK_X11_LINKS_PACKAGE=	# empty
 .endif
 
 # For each package we use, check whether we are using the built-in
@@ -145,7 +135,7 @@ _BLNK_DEPENDS+=	${_pkg_}
 # We skip the dependency calculation for some phases since they never
 # use the dependency information.
 #
-.for _pkg_ in ${_BLNK_PACKAGES} ${_BLNK_X11_LINKS_PACKAGE}
+.for _pkg_ in ${_BLNK_PACKAGES}
 BUILDLINK_DEPMETHOD.${_pkg_}?=	full
 .endfor
 _BLNK_PHASES_SKIP_DEPENDS=	fetch patch tools buildlink configure build
@@ -271,7 +261,7 @@ ${_depmethod_}+=	${_BLNK_ADD_TO.${_depmethod_}}
 #				exist before they're added to the search
 #				paths.
 #
-.for _pkg_ in ${_BLNK_PACKAGES} ${_BLNK_X11_LINKS_PACKAGE}
+.for _pkg_ in ${_BLNK_PACKAGES}
 #
 # If we're using the built-in package, then provide sensible defaults.
 #
@@ -481,14 +471,6 @@ buildlink-directories:
 .if defined(USE_X11)
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${BUILDLINK_X11_DIR}
 	${_PKG_SILENT}${_PKG_DEBUG}${LN} -sf ${BUILDLINK_DIR} ${BUILDLINK_X11_DIR}
-.  if !empty(USE_X11_LINKS:M[yY][eE][sS])
-.    if exists(${_BLNK_X11_LINKS_DIR})
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${_BLNK_X11_LINKS_DIR} && ${PAX} -rw . ${BUILDLINK_X11_DIR}
-.    else
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "x11-links doesn't seem to be installed."
-	${_PKG_SILENT}${_PKG_DEBUG}${FALSE}
-.    endif
-.  endif
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}/include
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}/lib
