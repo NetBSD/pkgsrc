@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3629 2003/10/03 14:44:20 seb Exp $
+$NetBSD: CHANGES,v 1.3630 2003/10/03 14:51:28 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4064,3 +4064,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added p5-Template-Extract-0.25 [wiz 2003-10-03]
 	Added p5-Template-Generate-0.04 [wiz 2003-10-03]
 	Updated source-highlight to 1.8 [seb 2003-10-03]
+	Updated jpeg to 6bnb1 [salo 2003-10-03]
