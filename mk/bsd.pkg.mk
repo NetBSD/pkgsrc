@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1446 2004/04/22 17:46:05 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1447 2004/04/23 01:21:12 danw Exp $
 #
 # This file is in the public domain.
 #
@@ -572,8 +572,13 @@ PKG_FAIL_REASON+='assignment of WRKSRC= $${WRKDIR}'
 
 # A few aliases for *-install targets
 PKGDIRMODE?=	755
+.if !defined(INSTALL_UNSTRIPPED) || empty(INSTALL_UNSTRIPPED:M[yY][eE][sS])
 INSTALL_PROGRAM?= \
 	${INSTALL} ${COPY} ${_STRIPFLAG_INSTALL} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
+.else
+INSTALL_PROGRAM?= \
+	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
+.endif
 INSTALL_SCRIPT?= \
 	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
 INSTALL_DATA?= \
