@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1544 2003/03/04 18:07:42 wiz Exp $
+$NetBSD: CHANGES,v 1.1545 2003/03/04 19:55:17 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -932,3 +932,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added p5-Text-Format-0.52 [seb 2003-03-04]
 	Updated naim to 0.11.5.5 [wiz 2003-03-04]
 	Updated aumix to 2.8 [wiz 2003-03-04]
+	Updated glib to 1.2.10nb4 [salo 2003-03-04]
