@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.903 2002/12/24 20:23:03 wiz Exp $
+$NetBSD: CHANGES,v 1.904 2002/12/24 21:41:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4246,3 +4246,6 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated kde3 to 3.0.4nb2 [wiz 2002-12-24]
 	bsd.buildlink.mk: removed (buildlink1 to buildlink2
 		conversion complete) [wiz 2002-12-24]
+	Updated gtk2 to 2.2.0nb1 [wiz 2002-12-24]
+	Added libexif-gtk-0.3.2 [wiz 2002-12-24]
+	Updated gtkam to 0.1.10 [wiz 2002-12-24]
