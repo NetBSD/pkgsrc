@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2004/05/14 09:20:31 xtraeme Exp $
+$NetBSD: distinfo,v 1.27.2.1 2004/07/08 10:42:12 agc Exp $
 
-SHA1 (ethereal-0.10.4.tar.bz2) = d493c8df935f6db3c5f93a17b03e0b99d25bbe6e
-Size (ethereal-0.10.4.tar.bz2) = 4889371 bytes
+SHA1 (ethereal-0.10.5.tar.bz2) = 2d0e1c9de8f8e7dba8303a4f703d55dfa148b096
+Size (ethereal-0.10.5.tar.bz2) = 4984584 bytes
