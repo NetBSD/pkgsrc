@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.5 2004/03/03 16:26:40 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.6 2004/03/03 16:56:45 xtraeme Exp $
 #
 # Copyright (c) 2004 Juan RP <xtraeme@NetBSD.org>
 # All rights reserved.
@@ -336,7 +336,7 @@ do_cdlive()
 		cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.5 2004/03/03 16:26:40 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.6 2004/03/03 16:56:45 xtraeme Exp $
 # 
 
 # PROVIDE: root
@@ -604,7 +604,6 @@ while [ $# -gt 0 ]; do
 		;;
 	    -v)
 		verbose_mode=on
-		shift
 		;;
 	    --)
 		shift; break
