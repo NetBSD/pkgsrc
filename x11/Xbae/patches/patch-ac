@@ -1,16 +1,24 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/02/03 19:41:04 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2000/05/25 16:38:07 drochner Exp $
 
---- Makefile.in.orig	Mon Sep  6 23:18:51 1999
-+++ Makefile.in	Thu Feb  3 17:16:15 2000
-@@ -98,9 +98,9 @@
+--- Makefile.in.orig	Wed May 17 22:02:42 2000
++++ Makefile.in	Thu May 25 18:14:06 2000
+@@ -92,15 +92,15 @@
+ x_libraries = @x_libraries@
  
- EXTRA_DIST = configure ac_find_xbae.m4 FAQ Imakefile Xbae.tmpl Xbae.rules
+ MAINTAINERCLEANFILES = Makefile.in configure libtool config.guess config.sub ltconfig ltmain.sh aclocal.m4 config.h.in install-sh missing mkinstalldirs
+-SUBDIRS = include src examples
++SUBDIRS = include src
+ 
+ EXTRA_DIST = configure ac_find_xbae.m4 Imakefile Xbae.tmpl Xbae.rules FAQ.html
  
 -aclocaldir = @ACLOCALDIR@
 +aclocaldir = ${prefix}/share/aclocal
  
 -@Aclocal_TRUE@aclocal_DATA = ac_find_xbae.m4
 +aclocal_DATA = ac_find_xbae.m4
+ 
+-docdir = $(exec_prefix)/Xbae
++docdir = $(prefix)/share/doc/Xbae
+ doc_DATA = FAQ.html NEWS README INSTALL
  ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
- CONFIG_HEADER = ./include/XbaeConfig.h
