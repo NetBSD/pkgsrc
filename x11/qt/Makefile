@@ -3,7 +3,7 @@
 # Date created:		30 Jul 1996
 # Whom:			searle@longacre.demon.co.uk
 #
-# $NetBSD: Makefile,v 1.4 1998/02/02 08:11:07 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/02/02 08:59:38 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/10/30 05:15:19 jkh Exp
 #
 
@@ -102,7 +102,7 @@ post-configure:
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/qt-1.31/bin/moc ${QTDIR}/bin
 	${INSTALL_DATA} ${WRKDIR}/qt-1.31/lib/libqt.so.1.31 ${QTDIR}/lib
-	${LDCONFIG} -m ${QTDIR}/lib || ${TRUE}
+	${LDCONFIG} || ${TRUE}
 	${MKDIR} ${QTDIR}/include/qt
 	${INSTALL_DATA} ${WRKDIR}/qt-1.31/include/* ${QTDIR}/include/qt
 	${INSTALL_MAN} ${WRKDIR}/qt-1.31/man/man1/* ${QTDIR}/man/man1

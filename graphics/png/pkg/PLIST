@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 1998/01/24 05:27:36 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/02/02 09:00:06 hubertf Exp $
 include/png.h
 include/pngconf.h
 lib/libpng.a
 lib/libpng.so.0.96
-@exec /sbin/ldconfig -m %B || /usr/bin/true
-@unexec /sbin/ldconfig -m %B || /usr/bin/true
+@exec /sbin/ldconfig || /usr/bin/true
+@unexec /sbin/ldconfig || /usr/bin/true

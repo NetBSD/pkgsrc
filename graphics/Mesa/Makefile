@@ -3,7 +3,7 @@
 # Date created:         Tue Feb  7 12:02:49  1995
 # Whom:                 hsu
 #
-# $NetBSD: Makefile,v 1.7 1998/02/02 08:10:51 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 1998/02/02 08:59:14 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.19 1997/09/30 19:21:40 max Exp
 #
 
@@ -40,6 +40,6 @@ do-install:
 	${CP} -Rp ${WRKSRC}/demos ${PREFIX}/share/examples/Mesa
 	${CP} -Rp ${WRKSRC}/book ${PREFIX}/share/examples/Mesa
 	${CP} -Rp ${WRKSRC}/widgets-sgi ${PREFIX}/share/examples/Mesa
-	${LDCONFIG} -m ${PREFIX}/lib || ${TRUE}
+	${LDCONFIG} || ${TRUE}
 
 .include <bsd.port.mk>
