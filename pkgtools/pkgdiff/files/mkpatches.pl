@@ -1,6 +1,6 @@
 #!@PERL5@
 #
-# $NetBSD: mkpatches.pl,v 1.10 2004/08/15 16:49:49 dillo Exp $
+# $NetBSD: mkpatches.pl,v 1.11 2004/10/10 09:56:37 dillo Exp $
 #
 # mkpatches: creates a set of patches patch-aa, patch-ab, ...
 #   in work/.newpatches by looking for *.orig files in and below
@@ -10,7 +10,11 @@
 #   It should be called from the packages directory,
 #   e.g. /usr/pkgsrc/example/test
 #
+#   It retains the naming and header (RCS Id and comment) from the
+#   patches directory.
+#
 # Copyright (c) 2000 by Thomas Klausner <wiz@netbsd.org>
+#               2004 by Dieter Baron <dillo@netbsd.org>
 # All Rights Reserved.  Absolutely no warranty.
 #
 
@@ -21,7 +25,8 @@ use File::Spec;
 my $patchdir;
 my $old_patchdir;
 my $wrkdir;
-my $l=0;
+my %old_filename;
+my %old_header;
 
 # create patchdir, or empty it if already existing
 
@@ -34,6 +39,10 @@ sub create_patchdir {
 }
 
 # read command line arguments
+
+undef($opt_d);
+undef($opt_h);
+undef($opt_v);
 
 getopts('d:hv');
 
@@ -72,17 +81,19 @@ $wrksrc=`@MAKE@ show-var VARNAME=WRKSRC` or
     die ("can't find WRKSRC -- wrong dir?");
 chomp($wrksrc);
 
+analyze_old_patches();
+
 chdir $wrksrc or die ("can't cd to WRKSRC ($wrksrc)");
 
 # find files
 
-open(handle, "find ${wrkdir} -type f -name \\\*.orig |");
+open(HANDLE, "find ${wrkdir} -type f -name \\\*.orig |");
 
 # create patches
 
-foreach (sort <handle>) {
-    my $path, $complete;
-    my $new, $old;
+foreach (sort <HANDLE>) {
+    my ($path, $complete);
+    my ($new, $old);
     chomp();
     $path = $_;
     $complete = $path;
@@ -96,28 +107,54 @@ foreach (sort <handle>) {
 	}
 	$diff=`pkgdiff $old $new`;
 	if ( $? ) {
-		print "$old: $diff";
+	    print "$old: $diff";
 	}
 	if ( "$diff" eq "" ) {
-		print ("$new and $old don't differ\n");
+	    print ("$new and $old don't differ\n");
 	} else {
-		system("pkgdiff $old $new > $patchdir/$patchfile");
+	    make_patch($old, $new, $patchfile, $diff);
 	}
     } else {
 	print ("$new doesn't exist, though $old does\n");
     }
 }
 
+sub analyze_old_patches 
+{
+    my $filename;
+    my $patch;
+    my $name;
+
+    %old_header = ();
+    %old_filename = ();
+
+    open(HANDLE, "ls $old_patchdir/patch-* 2>/dev/null |");
+
+    while ($filename = <HANDLE>) {
+	chomp $filename;
+	$patch = `sed '/^\+\+\+/ q' $filename`;
+	if (!($patch =~ m/^\+\+\+ ([^\t\n]*)(\n$|\t)/m)) {
+	    warn "cannot extract filename from patch $filename";
+	    next;
+	}
+	$name = $1;
+	$patch =~ s/\n--- .*/\n/s;
+	$old_header{$name} = $patch;
+	$filename =~ s!.*/!!;
+	$old_filename{$name} = $filename;
+    }
+
+    close(HANDLE);
+}
+
+
 sub patch_name # filename
 {
     my $name = shift;
-    my $pname, $l;
+    my ($pname, $l);
 
-    $pname = `grep -l -- '^\+\+\+ $name\$' $old_patchdir/patch-*`;
-    chomp($pname);
-    if ($pname) {
-	$pname =~ s!.*/!!;
-	return $pname;
+    if (defined($old_filename{$name})) {
+	return $old_filename{$name};
     }
 
     for ($l=0; ; $l++) {
@@ -126,4 +163,19 @@ sub patch_name # filename
 	    return $pname;
 	}
     }
+}
+
+
+sub make_patch # new old patchfile diff
+{
+    my ($old, $new, $patchfile, $diff) = @_;
+
+    if (defined($old_header{$new})) {
+	$diff =~ s/^.*\n(--- )/$1/s;
+	$diff = $old_header{$new} . $diff;
+    }
+
+    open(HANDLE, "> $patchdir/$patchfile");
+    print HANDLE $diff;
+    close(HANDLE);
 }
