@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2004/07/24 02:53:53 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/08/10 15:10:50 adrianp Exp $
 #
 
-DISTNAME=	cvsgraph-1.2.0
-PKGREVISION=	3
+DISTNAME=	cvsgraph-1.4.1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.akhphd.au.dk/~bertho/cvsgraph/release/
 
-MAINTAINER=	schmonz@NetBSD.org
+MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.akhphd.au.dk/~bertho/cvsgraph/
 COMMENT=	Graphically represents CVS/RCS branches and file revisions
 
@@ -20,16 +19,18 @@ DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=	${EGDIR}/cvsgraph.conf ${PKG_SYSCONFDIR}/cvsgraph.conf
 PLIST_SUBST+=	PKGBASE=${PKGBASE}
-FILES_SUBST=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 ALL_TARGET=	cvsgraph
 
-pre-install:
-	cd ${WRKSRC}; ${SED} ${FILES_SUBST_SED} cvsgraph.1 > cvsgraph.1.nb
+SUBST_CLASSES=		man
+SUBST_STAGE.man=	pre-install
+SUBST_FILES.man= 	cvsgraph.1
+SUBST_SED.man=		-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
+SUBST_MESSAGE.man=	"Fixing man page paths."
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cvsgraph ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/cvsgraph.1.nb ${PREFIX}/man/man1/cvsgraph.1
+	${INSTALL_MAN} ${WRKSRC}/cvsgraph.1 ${PREFIX}/man/man1/
 	${INSTALL_MAN} ${WRKSRC}/cvsgraph.conf.5 ${PREFIX}/man/man5
 
 	${INSTALL_DATA_DIR} ${DOCDIR}
