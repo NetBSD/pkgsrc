@@ -1,4 +1,4 @@
-VERSION=	2.1.25
+VERSION=	2.1.26
 
 # Path options
 PREFIX?=	/usr/local
@@ -115,10 +115,11 @@ SYS_LIBS+=	-lnsl
 GKRELLM_CFLAGS=	-DSOLARIS_8
       endif
      else
+SYS_LIBS+=	-lsocket
       ifeq ($(MODULE),src)
-SYS_LIBS+=	-lresolv
+SYS_LIBS+=	-lresolv -lX11
       else
-SYS_LIBS+=	-lsocket -lnsl
+SYS_LIBS+=	-lnsl
       endif
      endif
     endif
