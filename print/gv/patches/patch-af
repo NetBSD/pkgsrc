@@ -1,0 +1,20 @@
+--- Imakefile.orig	Sat Jun  7 00:00:00 1997
++++ Imakefile	Sun Dec 28 09:14:47 1997
+@@ -42,7 +42,7 @@
+ DEPSUBDIRS 		= doc doc/source source	/* make depend */
+ INSTALLSUBDIRS		= source		/* make install */
+ INCLUDESSUBDIRS 	= source		/* make includes */
+-INSTALLMANSUBDIRS 	= doc			/* make install.man */
++INSTALLMANSUBDIRS 	= doc source		/* make install.man */
+ INSTALLDOCSUBDIRS 	= doc			/* make install.doc */
+ 
+ MakeSubdirs($(SUBDIRS))
+@@ -53,7 +53,7 @@
+ IncludesSubdirs($(INCLUDESSUBDIRS))
+ InstallSubdirs($(INSTALLSUBDIRS))
+ InstallManSubdirs($(INSTALLMANSUBDIRS))
+-InstallDocSubdirs($(INSTALLMANSUBDIRS))
++InstallDocSubdirs($(INSTALLDOCSUBDIRS))
+ 
+ 
+ 
