@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/08/19 04:35:05 jmc Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2004/03/29 05:05:52 jlam Exp $
 
 .if !defined(PY_QT3_SIP_BUILDLINK2_MK)
 PY_QT3_SIP_BUILDLINK2_MK=	# defined
@@ -6,6 +6,7 @@ PY_QT3_SIP_BUILDLINK2_MK=	# defined
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_PACKAGES+=		pyqt3sip
+BUILDLINK_PKGBASE.pyqt3sip?=	${PYPKGPREFIX}-qt3-sip
 BUILDLINK_DEPENDS.pyqt3sip?=	${PYPKGPREFIX}-qt3-sip>=3.7nb1
 BUILDLINK_PKGSRCDIR.pyqt3sip?=	../../x11/py-qt3-sip
 
