@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2003/06/07 14:47:17 cjep Exp $
+# $NetBSD: Makefile,v 1.16 2004/01/20 12:07:42 agc Exp $
 
 DISTNAME=	festvox_kedlpc16k
 PKGNAME=	festvox-ked16-1.4.0
-WRKSRC=		${WRKDIR}/festival
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.1/ \
 		http://www.speech.cs.cmu.edu/festival/cstr/festival/1.4.1/
@@ -17,6 +16,7 @@ DEPENDS+=	festlex-cmu>=1.4.0:../festlex-cmu
 
 CONFLICTS=	festvox-ked8-[0-9]*
 
+WRKSRC=		${WRKDIR}/festival
 NO_BUILD=	yes
 
 FHOME=		${PREFIX}/share/festival

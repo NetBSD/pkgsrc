@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/06/07 14:47:18 cjep Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/20 12:15:41 agc Exp $
 
 DISTNAME=		Maelstrom-1.4.3-L2.0.6-src.tar.gz
 PKGNAME=		maelstrom-x11-2.0.6
-WRKSRC=			${WRKDIR}/Maelstrom
 CATEGORIES=		games x11
 MASTER_SITES+=		ftp://ftp.devolution.com/pub/maelstrom/
 MASTER_SITES+=		ftp://ftp.devolution.com/pub/maelstrom/Maelstrom-binaries/
@@ -21,6 +20,7 @@ CONFLICTS=		maelstrom-[0-9]* maelstrom-sdl-[0-9]*
 
 EXTRACT_ONLY=		${DISTNAME}
 
+WRKSRC=			${WRKDIR}/Maelstrom
 USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
 MAKE_ENV+=		BINOWN=${BINOWN} BINGRP=${BINGRP} XPMDIR=${BUILDLINK_PREFIX.xpm}

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:25:32 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/20 12:09:35 agc Exp $
 
 DISTNAME=	aim-1.5.277
-WRKSRC=		${WRKDIR}
 CATEGORIES=	chat
 MASTER_SITES=	ftp://ftp.newaol.com/aimgen/73010/
 EXTRACT_SUFX=	-1.i386.rpm
@@ -18,6 +17,7 @@ DEPENDS+=	suse_gtk>=${SUSE_VERSION}:../../emulators/${SUSE_DIR_PREFIX}_gtk
 
 ONLY_FOR_PLATFORM= NetBSD-*-i386
 
+WRKSRC=		${WRKDIR}
 CHECK_SHLIBS=	NO
 NO_BUILD=	YES
 

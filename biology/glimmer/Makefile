@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2003/10/07 18:20:15 jschauma Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/20 12:08:40 agc Exp $
 #
 
 DISTNAME=		glimmer212
 PKGNAME=		glimmer-2.12
-WRKSRC=                 ${WRKDIR}/glimmer2.12
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.tigr.org/pub/software/Glimmer/
 
@@ -12,6 +11,7 @@ HOMEPAGE=		ftp://ftp.tigr.org/pub/software/Glimmer/
 COMMENT=		System for finding genes in microbial DNA
 
 USE_BUILDLINK2=		yes
+WRKSRC=                 ${WRKDIR}/glimmer2.12
 
 do-install:
 .for PROGRAM in adjust anomaly build-icm check codon-usage compare-lists \

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:36:41 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/20 12:15:16 agc Exp $
 #
 
 DISTNAME=	chsfont
-WRKSRC=		${WRKDIR}/CHSKIT
 CATEGORIES=	fonts
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
@@ -10,6 +9,7 @@ COMMENT=	Asian Font Packs for Acrobat Reader 4.0 (Chinese Simplified)
 
 DEPENDS+=	acroread-font-share-4.0:../../fonts/acroread-font-share
 
+WRKSRC=		${WRKDIR}/CHSKIT
 TAR_FILE=	${WRKSRC}/LANGCHS.TAR
 
 .include "../acroread-font-share/Makefile.common"
