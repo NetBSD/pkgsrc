@@ -1,5 +1,5 @@
 #
-# $NetBSD: Makefile,v 1.26 2004/02/06 19:04:25 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2004/04/18 13:53:40 seb Exp $
 #
 # FreeBSD Id: Makefile,v 1.12 1999/06/28 21:25:07 billf Exp
 #
@@ -17,7 +17,7 @@ COMMENT=	The Berkeley Internet Name Daemon, an implementation of DNS
 Y2K=		http://www.isc.org/ISC/y2k.html
 
 WRKSRC=		${WRKDIR}/src
-BIND_VERSION=	8.4.1
+BIND_VERSION=	8.4.4
 DIST_SUBDIR=	bind/${BIND_VERSION}
 EXTRACT_ONLY=	${DISTNAME}-src.tar.gz ${DISTNAME}-doc.tar.gz
 
