@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 1998/12/31 12:05:53 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/02/04 21:21:23 frueauf Exp $
 bin/geda
 bin/gschem
 bin/gnetlist
 bin/gsymbol
-lib/libgeda.so.2.1
+lib/libgeda.so.2.2
 lib/libgeda.a
 share/gEDA/scheme/gschem.scm
 share/gEDA/scheme/gnetlist.scm
@@ -77,8 +77,8 @@ share/gEDA/sym/font/K.sym
 share/gEDA/sym/font/L.sym
 share/gEDA/sym/font/M.sym
 share/gEDA/sym/font/N.sym
-share/gEDA/sym/font/O.sym
 share/gEDA/sym/font/O-diaeresis.sym
+share/gEDA/sym/font/O.sym
 share/gEDA/sym/font/P.sym
 share/gEDA/sym/font/Q.sym
 share/gEDA/sym/font/R.sym
