@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_comp.8,v 1.18 2004/01/18 20:45:42 zuntum Exp $
+.\" $NetBSD: pkg_comp.8,v 1.19 2004/01/23 09:48:53 jmmv Exp $
 .\"
 .\" pkg_comp - Build packages inside a clean chroot environment
 .\" Copyright (c) 2002, 2003, 2004 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -27,12 +27,12 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd January 8, 2004
+.Dd January 23, 2004
 .Dt PKG_COMP 8
 .Os
 .Sh NAME
 .Nm pkg_comp
-.Nd build packages inside a chroot
+.Nd build packages inside a sandbox
 .Sh SYNOPSIS
 .Nm
 .Oo Fl Po
@@ -44,9 +44,12 @@
 .Ar target
 .Op Ar pkg_name ...
 .Sh DESCRIPTION
-.Nm
+.Nm ,
+or
+.Em Package Compiler
+in its full name,
 is a tool that makes easy the compilation of packages inside a clean
-chroot environment.
+sandbox.
 This allows an easy tracking of exact dependencies
 and the correct behavior of a package in a fresh system installation.
 .Pp
@@ -73,7 +76,7 @@ as configuration file (only base name expected).
 Avoid installation of
 .Va INSTALL_PACKAGES
 and
-.Va MAKE_PACKAGES
+.Va BUILD_PACKAGES
 during the creation of the chroot.
 .El
 .Ss What to use it for?
@@ -100,6 +103,8 @@ properly.
 .It
 Avoid autoconf's side effects by keeping a separate chroot for each
 project, like one for GNOME2 and another one for KDE3.
+.It
+Schedule builds of package sets for several different machines.
 .El
 .Sh CONTROL DIRECTORY
 .Nm
@@ -107,8 +112,11 @@ needs to store several information when it is running.
 Instead of using normal system trees, it uses a special directory inside the
 chroot to avoid polluting the system.
 It stores there scripts, object files, built packages, etc.
-This directory is located by default in
-.Pa $DESTDIR/pkg_comp .
+This directory is
+.Pa $DESTDIR/pkg_comp ;
+the symbolic link
+.Pa $DESTDIR/p
+is automatically created to ease pathnames when working inside the chroot.
 .Sh CONFIGURATION
 With
 .Nm
@@ -133,6 +141,12 @@ variables.
 The default values shown here are those written in the template when
 issuing a maketemplate.
 .Bl -tag -width indent
+.It AUTO_PACKAGES
+A list of packages to automatically build during the
+.Sy auto
+target.
+A package is in the form section/name, like misc/colorls.
+Defaults to nothing.
 .It AUTO_TARGET
 The pkgsrc target to use when building packages in an automated fashion
 (using the
@@ -145,6 +159,12 @@ or
 as other values are useless.
 Defaults to
 .Ql package .
+.It BUILD_PACKAGES
+A list of packages to automatically build after the
+.Sy makeroot
+target.
+A package is in the form section/name, like misc/colorls.
+Defaults to nothing.
 .It BUILD_TARGET
 The pkgsrc target to use when building packages.
 It can contain any target supported by the pkgsrc system, but
@@ -186,7 +206,7 @@ Defaults to nothing.
 A list of packages to automatically install after the
 .Sy makeroot
 and after installing
-.Sy MAKE_PACKAGES .
+.Sy BUILD_PACKAGES .
 Each name must be the full package name, including the tgz suffix.
 Packages are searched inside
 .Pa $REAL_PACKAGES/All .
@@ -195,12 +215,6 @@ Defaults to nothing.
 Where binary packages get installed.
 Defaults to
 .Pa /usr/pkg .
-.It MAKE_PACKAGES
-A list of packages to automatically build after the
-.Sy makeroot
-target.
-A package is in the form section/name, like misc/colorls.
-Defaults to nothing.
 .It MKCONF_VARS
 A list of variable names that will be appended to the generated
 .Pa /etc/mk.conf
@@ -269,9 +283,7 @@ Defaults to
 .It USE_AUDIT_PACKAGES
 If set to
 .Ql yes ,
-install the
-.Pa security/audit-packages
-package inside the chroot and let
+let
 .Nm
 handle the
 .Pa vulnerabilities
@@ -369,20 +381,22 @@ Defaults to
 Mount options.
 Defaults to
 .Sy -t null -o ro .
-.It MOUNT_SCRIPT
-Pathname to a script to run after the file systems are mounted.
-Two arguments are given to it:
+.It MOUNT_HOOKS
+A whitespace separated list of functions or external scripts to be executed
+after file systems are mounted.
+Two arguments are given to each of them:
 .Ar $DESTDIR ,
 and the word
 .Ar mount .
-Defaults to the empty value i.e. no script is to be run.
-.It UMOUNT_SCRIPT
-Pathname to a script to run before the file systems are unmounted.
-Two arguments are given to it:
+Defaults to nothing.
+.It UMOUNT_HOOKS
+A whitespace separated list of functions or external scripts to be executed
+before file systems are unmounted.
+Two arguments are given to each of them:
 .Ar $DESTDIR ,
 and the word
 .Ar umount .
-Defaults to the empty value i.e. no script is to be run.
+Defaults to nothing.
 .El
 .Sh TARGETS
 A target specifies what
@@ -428,8 +442,14 @@ dependencies automatically.
 For this to be useful, you need to set
 .Sy REAL_PACKAGES
 and use
-.Sy MAKE_PACKAGES
+.Sy AUTO_PACKAGES
 or pass package names through the command line.
+.Pp
+If the magic work
+.Ql resume
+is passed as the unique argument to this target,
+.Nm
+will attempt to resume a previous automatic build for the given configuration.
 .El
 .Sh NOTES
 This program uses nullfs to create virtual copies of real trees inside the
@@ -437,7 +457,8 @@ chroot environment.
 .Pp
 You need to install the
 .Pa security/audit-packages
-package in the host system if you want security checks to work inside the
+package in the host system (and have an up to date vulnerabilities database)
+if you want security checks to work inside the
 chroot environment.
 .Sh SEE ALSO
 .Xr pkg_delete 1 ,
