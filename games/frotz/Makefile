@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/09/28 09:13:57 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.16 2004/03/10 03:08:58 snj Exp $
 
 DISTNAME=	frotz-2.43
 PKGREVISION=	1
@@ -15,7 +14,7 @@ MAINTAINER=	seebs@plethora.net
 HOMEPAGE=	http://www.cs.csubak.edu/~dgriffi/proj/frotz/
 COMMENT=	Curses-based interpreter for Infocom-compatible games
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 # setscrreg()
 INCOMPAT_CURSES=	NetBSD-1.5-* NetBSD-1.5.*-* NetBSD-1.5[A-V]-*
@@ -31,6 +30,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} README INSTALL HOW_TO_PLAY ${DOCDIR}
 
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
