@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.10 2000/12/08 15:35:24 wiz Exp $
+$NetBSD: patch-ab,v 1.11 2003/01/19 09:39:06 salo Exp $
 
 --- ./machine/m_netbsd13.c.orig	Sat Feb 19 03:24:47 2000
 +++ ./machine/m_netbsd13.c	Sat Feb 19 03:31:13 2000
@@ -31,7 +31,7 @@ $NetBSD: patch-ab,v 1.10 2000/12/08 15:35:24 wiz Exp $
 + *		matthew green <mrg@eterna.com.au>
 + *
 + *
-+ * $Id: patch-ab,v 1.10 2000/12/08 15:35:24 wiz Exp $
++ * Id: machine.c,v 1.5 1995/01/06 02:04:39 swallace Exp
 + */
 +
 +#include <sys/types.h>
