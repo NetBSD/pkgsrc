@@ -1,3 +1,7 @@
+$NetBSD: distinfo,v 1.4 2001/04/20 12:43:38 fredb Exp $
+
+SHA1 (w3c-libwww-5.3.2.tar.gz) = c50f3624889b3a0ebc720264a1b9b64990457516
+Size (w3c-libwww-5.3.2.tar.gz) = 1956340 bytes
 SHA1 (patch-aa) = fc0124c8995992536782e60ce67332c2dc505b10
 SHA1 (patch-ab) = 24db9ca337bd6768fa5b208186f7b55e555beb8f
 SHA1 (patch-ac) = d3b153c4360d5eb0439a9d328d259896937902df
