@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.24 2005/02/04 09:19:41 jlam Exp $
+# $NetBSD: Interix.mk,v 1.25 2005/03/18 18:16:35 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -179,10 +179,8 @@ BUILD_DEPENDS+=		${USE_X11BASE:D${_XPKGWEDGE_DEPENDS}}
 _OPSYS_WHOLE_ARCHIVE_FLAG=	-Wl,--whole-archive
 _OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,--no-whole-archive
 
-.if (!defined(INSTALL_UNSTRIPPED) || empty(INSTALL_UNSTRIPPED:M[yY][eE][sS])) && !defined(DEBUG_FLAGS)
-_STRIPFLAG_CC?=		-s	# cc(1) option to strip
-_STRIPFLAG_INSTALL?=	-s	# install(1) option to strip
-.endif
+_STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U-s}	# cc(1) option to strip
+_STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
 
 DEFAULT_SERIAL_DEVICE?=	/dev/tty00
 SERIAL_DEVICES?=	/dev/tty00 /dev/tty01 /dev/tty02 /dev/tty03

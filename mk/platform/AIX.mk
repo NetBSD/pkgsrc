@@ -1,4 +1,4 @@
-# $NetBSD: AIX.mk,v 1.11 2005/03/12 20:03:38 garbled Exp $
+# $NetBSD: AIX.mk,v 1.12 2005/03/18 18:16:35 tv Exp $
 #
 # Variable definitions for the AIX operating system.
 
@@ -169,10 +169,8 @@ _OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,--no-whole-archive
 LINK_ALL_LIBGCC_HACK=	-Wl,--whole-archive -lgcc -Wl,--no-whole-archive
 .endif
 
-.if (!defined(INSTALL_UNSTRIPPED) || empty(INSTALL_UNSTRIPPED:M[yY][eE][sS])) && !defined(DEBUG_FLAGS)
-_STRIPFLAG_CC?=		-s	# cc(1) option to strip
-_STRIPFLAG_INSTALL?=	-s	# install(1) option to strip
-.endif
+_STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U-s}	# cc(1) option to strip
+_STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
 
 DEFAULT_SERIAL_DEVICE?=	/dev/tty0
 SERIAL_DEVICES?=	/dev/tty0 \
