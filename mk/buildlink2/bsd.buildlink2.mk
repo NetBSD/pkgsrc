@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.65 2002/12/23 17:31:15 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.66 2002/12/23 22:33:16 jschauma Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -58,7 +58,7 @@ CONFIGURE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
 MAKE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
 _BLNK_CPPFLAGS=		-I${LOCALBASE}/include
 .if ${OPSYS} == "IRIX"
-_BLNK_LDFLAGS=		-L${LOCALBASE}/lib -Wl,-rpath -Wl,${LOCALBASE}/lib
+_BLNK_LDFLAGS=		-L${LOCALBASE}/lib -Wl,-rpath,${LOCALBASE}/lib
 .else
 _BLNK_LDFLAGS=		-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
 .endif
@@ -96,7 +96,7 @@ _BLNK_X11_DIR=		${LOCALBASE}/share/x11-links
 .  endif
 _BLNK_CPPFLAGS+=	-I${X11BASE}/include
 .if ${OPSYS} == "IRIX"
-_BLNK_LDFLAGS+=		-L${X11BASE}/lib -Wl,-rpath -Wl,${X11BASE}/lib
+_BLNK_LDFLAGS+=		-L${X11BASE}/lib -Wl,-rpath,${X11BASE}/lib
 .else
 _BLNK_LDFLAGS+=		-L${X11BASE}/lib -Wl,-R${X11BASE}/lib
 .endif
