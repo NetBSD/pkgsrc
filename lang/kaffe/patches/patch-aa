@@ -1,17 +1,18 @@
-$NetBSD: patch-aa,v 1.11 2002/07/27 21:26:22 jschauma Exp $
+$NetBSD: patch-aa,v 1.12 2003/09/22 03:04:17 jschauma Exp $
 
---- configure.orig	Tue Jul 23 17:01:03 2002
-+++ configure	Tue Jul 23 17:02:51 2002
-@@ -7197,10 +7197,10 @@
- /* Override any gcc2 internal prototype to avoid an error.  */
+--- configure.orig	2003-08-03 19:15:52.000000000 -0400
++++ configure	2003-09-21 18:22:14.000000000 -0400
+@@ -22916,11 +22916,11 @@
+ #endif
  /* We use char because int might match the return type of a gcc2
-     builtin and then its argument prototype would still apply.  */
--char mpz_get_d();
-+char __gmpz_get_d();
- 
- int main() {
--mpz_get_d()
-+__gmpz_get_d()
- ; return 0; }
- EOF
- if { (eval echo configure:7207: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+    builtin and then its argument prototype would still apply.  */
+-char mpz_get_d ();
++char __mpz_get_d ();
+ int
+ main ()
+ {
+-mpz_get_d ();
++__mpz_get_d ();
+   ;
+   return 0;
+ }
