@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.229 2005/02/01 20:52:38 augustss Exp $
+# $NetBSD: Makefile,v 1.230 2005/02/19 19:55:06 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -157,6 +157,7 @@ SUBDIR+=	p5-File-MMagic
 SUBDIR+=	p5-File-Tail
 SUBDIR+=	p5-Geography-Countries
 SUBDIR+=	p5-I18N-LangTags
+SUBDIR+=	p5-Lingua-EN-Numbers-Ordinate
 SUBDIR+=	p5-Locale-Codes
 SUBDIR+=	p5-Locale-Maketext
 SUBDIR+=	p5-Locale-Maketext-Fuzzy
