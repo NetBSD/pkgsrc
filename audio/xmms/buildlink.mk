@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.6 2001/10/03 20:56:43 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.7 2002/08/08 14:45:50 jlam Exp $
 #
 # This Makefile fragment is included by packages that use xmms.
 #
@@ -25,7 +25,10 @@ BUILDLINK_PREFIX.xmms_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.xmms=	include/xmms/*
 BUILDLINK_FILES.xmms+=	lib/libxmms.*
 
+PTHREAD_OPTS+=		require
+
 .include "../../x11/gtk/buildlink.mk"
+.include "../../mk/pthread.buildlink.mk"
 
 BUILDLINK_TARGETS.xmms=	xmms-buildlink
 BUILDLINK_TARGETS.xmms+=xmms-buildlink-config-wrapper
