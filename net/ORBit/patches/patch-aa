@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 1998/08/20 22:07:25 agc Exp $
+
+--- src/orb/orbit_poa.c.orig	Thu Aug 13 21:11:35 1998
++++ src/orb/orbit_poa.c	Mon Aug 17 00:18:29 1998
+@@ -29,7 +29,6 @@
+  *
+  */
+ 
+-#include <alloca.h>
+ #include <string.h>
+ #include "orbit.h"
+ #include "orbit_poa_type.h"
