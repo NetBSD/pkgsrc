@@ -1,30 +1,80 @@
-$NetBSD: patch-aa,v 1.5 2001/10/30 13:31:48 damon Exp $
+$NetBSD: patch-aa,v 1.6 2002/05/02 20:45:35 fredb Exp $
 
---- Makefile.top.orig	Sat Oct 20 11:51:29 2001
-+++ Makefile.top
-@@ -74,11 +74,11 @@
- GTOP_LIBS = -L$(GTOP_PREFIX)/lib -lgtop -lgtop_common -lgtop_sysdeps -lXau
+--- Makefile.top_enable_nls.orig	Wed Dec  5 01:41:15 2001
++++ Makefile.top_enable_nls
+@@ -31,8 +31,11 @@
+ # Default
+ #--------
+ GTK_CONFIG = gtk-config
++IMLIB_CONFIG = imlib-config
+ EXTRAOBJS = md5c.o
+ BINMODE = 755
++BINGRP = wheel
++PREFIX ?= /usr/local
+ 
+ # FreeBSD 2.X
+ #------------
+@@ -53,12 +56,17 @@
+ 
+ # NetBSD or OpenBSD
+ #------------------
+-#GTK_CONFIG= gtk-config
+-#GTOP_LIBS=
+-#PTHREAD_INC=-I/usr/local/include
+-#SYS_LIBS=-lkvm
+-#EXTRAOBJS =
+-#BINMODE=2755
++GTK_CONFIG ?= gtk-config
++IMLIB_CONFIG ?= imlib-config
++GTOP_INCLUDE =
++GTOP_LIBS =
++PTHREAD_INC ?= -I/usr/pkg/include
++EXTRAOBJS =
++LOCALEDIR = ${PREFIX}/share/locale
++MANDIR = ${PREFIX}/man/man1
++LINK_FLAGS = 
++BINMODE = 2755
++BINGRP = kmem
+ 
+ # Solaris 2.x
+ #------------
+@@ -75,21 +83,23 @@
+ # used if you "make gnome-gtop" or "make gtop".
+ #-----------------------------------
+ GTOP_PREFIX = /usr
+-GTOP_INCLUDE = -I$(GTOP_PREFIX)/include
+-GTOP_LIBS = -L$(GTOP_PREFIX)/lib -lgtop -lgtop_common -lgtop_sysdeps -lXau
++GTOP_INCLUDE ?= -I$(GTOP_PREFIX)/include
++GTOP_LIBS ?= -L$(GTOP_PREFIX)/lib -lgtop -lgtop_common -lgtop_sysdeps -lXau
  
  
 -INSTALLDIR=/usr/local/bin
 -MANDIR=/usr/local/share/man/man1
-+INSTALLDIR=${PREFIX}/bin
-+MANDIR=${PREFIX}/man/man1
++PREFIX ?= /usr/local
++INSTALLDIR ?= ${PREFIX}/bin
++MANDIR ?= ${PREFIX}/share/man/man1
  MANMODE = 644
  MANDIRMODE = 755
 -INCLUDEDIR=/usr/local/include
-+INCLUDEDIR=${PREFIX}/include
++INCLUDEDIR ?= ${PREFIX}/include
  INCLUDEMODE = 644
  INCLUDEDIRMODE = 755
  
-@@ -127,8 +127,8 @@
+ LOCALEDIR ?= /usr/share/locale
+ 
+ export GTK_CONFIG GTOP_INCLUDE GTOP_LIBS SYS_LIBS EXTRAOBJS BINMODE
++export BINGRP IMLIB_CONFIG LINK_FLAGS PREFIX
+ export INSTALLDIR INCLUDEDIR INCLUDEMODE INCLUDEDIRMODE LOCALEDIR
+ export MANDIR MANDIRMODE MANMODE
+ 
+@@ -132,9 +142,7 @@
  
  netbsd:
  	(cd po && ${MAKE} all)
 -	(cd src && ${MAKE} GTK_CONFIG=gtk-config GTOP_LIBS= GTOP_INCLUDE= \
--		PTHREAD_INC=-I/usr/local/include SYS_LIBS="-lkvm" gkrellm )
-+	(cd src && ${MAKE} GTK_CONFIG=${GTK_CONFIG} GTOP_LIBS= GTOP_INCLUDE= \
-+		PTHREAD_INC=-I$(BUILDLINK_DIR)/include SYS_LIBS="-lkvm" gkrellm )
+-		PTHREAD_INC=-I/usr/local/include EXTRAOBJS= \
+-		SYS_LIBS="-lkvm" gkrellm )
++	(cd src && ${MAKE} SYS_LIBS="-lkvm" gkrellm )
  
  openbsd:
  	(cd po && ${MAKE} all)

@@ -1,12 +1,16 @@
-$NetBSD: patch-ab,v 1.6 2001/11/01 14:08:02 hubertf Exp $
+$NetBSD: patch-ab,v 1.7 2002/05/02 20:45:35 fredb Exp $
 
---- src/Makefile.src.orig	Fri Oct 12 15:01:04 2001
+--- src/Makefile.src.orig	Thu Dec 20 13:09:48 2001
 +++ src/Makefile.src
-@@ -1,10 +1,10 @@
+@@ -1,11 +1,14 @@
  GTK_CONFIG ?= gtk-config
++IMLIB_CONFIG ?= imlib-config
++PREFIX ?= /usr/local
+ EXTRAOBJS ?= md5c.o
  BINMODE ?= 755
 -INSTALLDIR ?= /usr/local/bin
 -INCLUDEDIR ?= /usr/local/include
++BINGRP ?= wheel
 +INSTALLDIR ?= ${PREFIX}/bin
 +INCLUDEDIR ?= ${PREFIX}/include
  INCLUDEMODE ?= 644
@@ -16,7 +20,7 @@ $NetBSD: patch-ab,v 1.6 2001/11/01 14:08:02 hubertf Exp $
  MANMODE ?= 644
  MANDIRMODE ?= 755
  INSTALL ?= install
-@@ -13,15 +13,18 @@
+@@ -14,15 +17,18 @@
  GKRELLM_INCLUDES = gkrellm.h gkrellm_public_proto.h
  
  GTK_INCLUDE = `$(GTK_CONFIG) --cflags gthread`
@@ -35,27 +39,46 @@ $NetBSD: patch-ab,v 1.6 2001/11/01 14:08:02 hubertf Exp $
 +FLAGS+= -DSYSTEM_PLUGINS_DIR=\"${PREFIX}/lib/gkrellm/plugins\"
 +FLAGS+= -DSYSTEM_THEMES_DIR=\"${PREFIX}/share/gkrellm/themes\"
 +
-+LIBS = $(GTK_LIB) $(IMLIB_LIB) $(GTOP_LIBS) $(SYS_LIBS) -Wl,-E
++LIBS = $(GTK_LIB) $(IMLIB_LIB) $(GTOP_LIBS) $(SYS_LIBS) $(LINK_FLAGS)
  
  ifeq ($(debug),1)
      FLAGS += -g
-@@ -36,7 +39,7 @@
+@@ -36,8 +42,9 @@
+     FLAGS += -DHAVE_GETADDRINFO
  endif
  
- 
+-
 -CC = gcc -Wall $(FLAGS) $(CFLAGS)
++CC ?= gcc
++CFLAGS ?= -O2
 +CC += -Wall $(FLAGS) $(CFLAGS)
  
- OBJS =	main.o alerts.o apm.o clock.o cpu.o disk.o fs.o hostname.o \
+ OBJS =	main.o alerts.o apm.o base64.o clock.o cpu.o disk.o fs.o hostname.o \
  	inet.o mail.o meminfo.o net.o proc.o sensors.o uptime.o \
-@@ -59,8 +62,8 @@
- 		 SYS_LIBS="-lkvm -ldevstat" gkrellm
+@@ -61,15 +68,14 @@
+ 		EXTRAOBJS= SYS_LIBS="-lkvm -ldevstat -lmd" gkrellm
  
  netbsd:
 -	$(MAKE) PTHREAD_INC=-I/usr/local/include \
--	GTK_CONFIG=gtk-config GTOP_LIBS= SYS_LIBS="-lkvm" gkrellm
-+	$(MAKE) PTHREAD_INC=-I$(BUILDLINK_DIR)/include \
-+	GTK_CONFIG=$(GTK_CONFIG) GTOP_LIBS= SYS_LIBS="-lkvm" gkrellm
+-	GTK_CONFIG=gtk-config GTOP_LIBS= EXTRAOBJS= SYS_LIBS="-lkvm" gkrellm
++	$(MAKE) GTOP_LIBS= EXTRAOBJS= SYS_LIBS="-lkvm" gkrellm
  
  solaris:
  	$(MAKE) CFLAGS="-Wno-implicit-int" \
+ 		SYS_LIBS="-lkstat -lkvm -ldevinfo" gkrellm
+ 
+ install:
+-	$(INSTALL) -c -s -m $(BINMODE) gkrellm $(INSTALLDIR)/gkrellm
++	$(INSTALL) -c -s -m $(BINMODE) -g $(BINGRP) gkrellm $(INSTALLDIR)/gkrellm
+ 	$(INSTALL) -d -m $(INCLUDEDIRMODE) $(INCLUDEDIR)/gkrellm
+ 	$(INSTALL) -c -m $(INCLUDEMODE) $(GKRELLM_INCLUDES) $(INCLUDEDIR)/gkrellm
+ 	$(INSTALL) -d -m $(MANDIRMODE) $(MANDIR)
+@@ -77,8 +83,6 @@
+ 
+ install_netbsd:
+ 	$(MAKE) install
+-	chgrp kmem $(INSTALLDIR)/gkrellm
+-	chmod g+s $(INSTALLDIR)/gkrellm
+ 
+ install_openbsd:
+ 	$(MAKE) install
