@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.13 2004/08/23 09:01:57 jlam Exp $
+# $NetBSD: subst.mk,v 1.14 2004/08/23 16:35:11 jlam Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a paricular
@@ -30,7 +30,7 @@
 #
 # SUBST_POSTCMD.<class>
 #	command to clean up after sed(1). Defaults to ${RM} -f
-#	$$file.subst.sav. For debugging, set it to ${DO_NADA}.
+#	$$file${_SUBST_BACKUP_SUFFIX}. For debugging, set it to ${DO_NADA}.
 
 ECHO_SUBST_MSG?=	${ECHO}
 
@@ -38,12 +38,14 @@ ECHO_SUBST_MSG?=	${ECHO}
 _SUBST_IS_TEXT_FILE?= \
 	${FILE_CMD} $${file} | ${EGREP} "(executable .* script|shell script|text)" >/dev/null 2>&1
 
+_SUBST_BACKUP_SUFFIX=	.subst.sav
+
 .for _class_ in ${SUBST_CLASSES}
 _SUBST_COOKIE.${_class_}=	${WRKDIR}/.subst_${_class_}_done
 
 .  if defined(SUBST_SED.${_class_}) && !empty(SUBST_SED.${_class_})
 SUBST_FILTER_CMD.${_class_}?=	${SED} ${SUBST_SED.${_class_}}
-SUBST_POSTCMD.${_class_}?=	${RM} -f $$file.subst.sav
+SUBST_POSTCMD.${_class_}?=	${RM} -f $$file${_SUBST_BACKUP_SUFFIX}
 .  else
 SUBST_FILTER_CMD.${_class_}?=	${CAT}
 .  endif
@@ -83,15 +85,15 @@ ${_SUBST_COOKIE.${_class_}}:
 	"")	;;							\
 	*)	for file in $${files}; do				\
 			if ${_SUBST_IS_TEXT_FILE}; then			\
-				${MV} -f $$file $$file.subst.sav || exit 1; \
-				${CAT} $$file.subst.sav 		\
+				${MV} -f $$file $$file${_SUBST_BACKUP_SUFFIX} || exit 1; \
+				${CAT} $$file${_SUBST_BACKUP_SUFFIX}	\
 					| ${SUBST_FILTER_CMD.${_class_}} \
 					> $$file;			\
-				if [ -x $$file.subst.sav ]; then	\
+				if [ -x $$file${_SUBST_BACKUP_SUFFIX} ]; then \
 					${CHMOD} +x $$file;		\
 				fi;					\
-				if ${CMP} -s $$file.subst.sav $$file; then \
-					${MV} -f $$file.subst.sav $$file; \
+				if ${CMP} -s $$file${_SUBST_BACKUP_SUFFIX} $$file; then \
+					${MV} -f $$file${_SUBST_BACKUP_SUFFIX} $$file; \
 				else					\
 					${SUBST_POSTCMD.${_class_}};	\
 					${ECHO} $$file >> ${.TARGET};	\
