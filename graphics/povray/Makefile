@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/03/04 14:59:23 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/04/26 18:47:53 garbled Exp $
 # FreeBSD Id: Makefile,v 1.9 1998/08/20 18:56:00 jseger Exp
 #
 
@@ -14,5 +14,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.povray.org/
 
 DEPENDS+=	png-1.0.3:../../graphics/png
+
+USE_X11=	yes
 
 .include "../../mk/bsd.pkg.mk"

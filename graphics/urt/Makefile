@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/04/05 17:23:02 mycroft Exp $
+# $NetBSD: Makefile,v 1.6 1999/04/26 18:47:56 garbled Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/02/11 08:48:26 tg Exp
 #
 
@@ -19,6 +19,7 @@ BUILD_DEPENDS+=	${BUILD_ROOT}/graphics/netpbm/${WRKDIR:T}/netpbm:../../graphics/
 
 EXTRACT_ONLY=	urt-3.1b.tar.Z
 
+USE_X11=	yes
 NO_WRKSUBDIR=   yes
 CONFIGURE_SCRIPT=Configure
 CONFIGURE_ARGS=	config/urt
