@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/12/03 08:27:29 rh Exp $
+lib/perl5/site_perl/IO/Stringy.pm
+lib/perl5/site_perl/IO/Wrap.pm
+lib/perl5/site_perl/IO/Lines.pm
+lib/perl5/site_perl/IO/WrapTie.pm
+lib/perl5/site_perl/IO/ScalarArray.pm
+lib/perl5/site_perl/IO/AtomicFile.pm
+lib/perl5/site_perl/IO/Scalar.pm
+lib/perl5/man/man3/IO::Stringy.3
+lib/perl5/man/man3/IO::Wrap.3
+lib/perl5/man/man3/IO::Lines.3
+lib/perl5/man/man3/IO::WrapTie.3
+lib/perl5/man/man3/IO::AtomicFile.3
+lib/perl5/man/man3/IO::ScalarArray.3
+lib/perl5/man/man3/IO::Scalar.3
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/IO-stringy/.packlist
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/IO-stringy
+@dirrm lib/perl5/site_perl/IO
