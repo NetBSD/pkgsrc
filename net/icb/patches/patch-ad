@@ -1,0 +1,76 @@
+*** icb/serverlist.c.orig	Fri Feb 24 16:20:29 1995
+--- icb/serverlist.c	Thu Sep  3 10:37:50 1998
+***************
+*** 1,4 ****
+--- 1,5 ----
+  #include <stdio.h>
++ #include <pwd.h>
+  #include <sys/types.h>
+  #include <sys/stat.h>
+  #include "icb.h"
+***************
+*** 14,28 ****
+  FILE *openserverfile()
+  {
+  	struct stat statbuf;
+! 	char *personalsl;
+! 	char command[256];
+! 	char pwd[256];
+  	FILE *ret;
+  
+  #ifdef sgi
+  #undef SYSV
+  #endif
+! #ifndef SYSV
+  	getwd(pwd);
+  #else /* SYSV */
+  	getcwd(pwd, MAXPATHLEN+1);
+--- 15,28 ----
+  FILE *openserverfile()
+  {
+  	struct stat statbuf;
+! 	char *personalsl, *home;
+! 	char pwd[MAXPATHLEN+1];
+  	FILE *ret;
+  
+  #ifdef sgi
+  #undef SYSV
+  #endif
+! #if !defined(SYSV) && !(defined(BSD) && BSD >= 199306)
+  	getwd(pwd);
+  #else /* SYSV */
+  	getcwd(pwd, MAXPATHLEN+1);
+***************
+*** 30,40 ****
+  #ifdef sgi
+  #define SYSV
+  #endif
+! 	chdir(getenv("HOME"));
+  	if (!stat(PERSONALSL,&statbuf))
+  	{
+! 		sprintf(command,"/bin/cat %s %s\n", PERSONALSL, SERVERLIST);
+  		ret= popen(command,"r");
+  	}
+  	else
+  		ret= fopen(SERVERLIST,"r");
+--- 30,49 ----
+  #ifdef sgi
+  #define SYSV
+  #endif
+! 	if ((home = getenv("HOME")) == NULL) {
+! 		struct passwd *pw;
+! 		if ((pw = getpwuid(getuid())) == NULL)
+! 			home = ".";
+! 		home = pw->pw_dir;
+! 	}
+! 	chdir(home);
+  	if (!stat(PERSONALSL,&statbuf))
+  	{
+! 		char *command = malloc(strlen("/bin/cat  \n") +
+! 			strlen(PERSONALSL) + strlen(SERVERLIST) + 1);
+! 		sprintf(command, "/bin/cat %s %s\n", PERSONALSL, SERVERLIST);
+  		ret= popen(command,"r");
++ 		free(command);
+  	}
+  	else
+  		ret= fopen(SERVERLIST,"r");
