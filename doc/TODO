@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3236 2005/03/19 15:27:59 wiz Exp $
+$NetBSD: TODO,v 1.3237 2005/03/19 16:49:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -377,7 +377,6 @@ Suggested package updates
 	o crafty-19.5
 	o crossfire-cli-1.7.0
 	o crossfire-srv-1.7.0
-	o crypto++-5.2.1 [pkg/28740]
 	o cscope-15.5
 	o cssc-1.0.1
 	o cstream-2.5
