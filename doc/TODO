@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2082 2004/08/28 00:32:22 epg Exp $
+$NetBSD: TODO,v 1.2083 2004/08/29 01:06:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -178,6 +178,7 @@ Suggested package updates
 	o aqsis-0.9.1
 	o aranym-0.8.10
 	o asc-1.15.0
+	o aspell-0.60
 	o atari800-1.3.3
 	o auctex-11.52
 	o audacity-1.2.2
@@ -202,6 +203,7 @@ Suggested package updates
 	o conserver-8.1.8
 	o cooledit-3.17.8
 	o crafty-19.5
+	o crimsonfields-0.4.4
 	o crossfire-1.5.0
 	o cscope-15.5
 	o cvs2cl-2.55
@@ -222,6 +224,7 @@ Suggested package updates
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
 	o efax-gtk-2.2.9a
+	o eggdrop-1.6.17
 	o elk-3.99.6
 	o elm-me-2.4pl119
 	o ettercap-0.7.0
@@ -364,6 +367,7 @@ Suggested package updates
 	o phppgadmin-3.4.1 [pkg/26539|recht]
 	o physfs-1.0.0
 	o plib-1.7.0
+	o posh-0.3.9 [pkg/26777]
 	o povray-3.6.1
 	o prc-tools-2.3
 	o psi-0.9.2
@@ -386,6 +390,7 @@ Suggested package updates
 	o sablecc-2.18.1
 	o sawfish-1.3
 	o scm-5d9
+	o scribus-1.2
 	o sendfile-20010424
 	o sendmail-8.13.1 [pkgsrc-wip sendmail813]
 	o siag-3.6.0
@@ -419,7 +424,7 @@ Suggested package updates
 	o tkdesk-2.0
 	o tkman-2.2
 	o tripwire-2.3.1 [see also pkg/22362]
-	o txt2html-2.24 [wennmach]
+	o txt2html-2.30 [wennmach]
 	o uptimec-0.2p3 [pkg/26082]
 	o uvscan-4.3.2 [jlam]
 	o vba-1.7.2
@@ -428,12 +433,12 @@ Suggested package updates
 	o vttest-20030301
 	o wavesurfer-1.5.3
 	o wdm-1.27
-	o wesnoth-0.8.2
+	o wesnoth-0.8.3
 	o wine-20040813
 	o wistumbler-2.00pre9 [pkg/26245]
 	o wmakerconf-2.9.2
 	o wmweather-2.4.3
-	o wwwoffle-2.8c
+	o wwwoffle-2.8c [pkg/26792]
 	o xalan-c-1.7 [requires xerces-c-2.4.0]
 	o xanalyser-1.23
 	o xanim-2.92.0 [pkg/19934]
@@ -453,6 +458,7 @@ Suggested package updates
 	o xmms-iris-0.12
 	o xmmsctrl-0.8
 	o xpad-1.13.1
+	o xpaint-2.7.1
 	o xps-4.2
 	o xpuyopuyo-0.9.5
 	o xscreensaver-4.17
