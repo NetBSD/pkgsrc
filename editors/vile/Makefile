@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/05/08 11:44:50 kleink Exp $
+# $NetBSD: Makefile,v 1.26 2002/10/25 17:51:44 wiz Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:55:09 gj Exp
 
 DISTNAME=		vile-9.0
@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		packages@netbsd.org
 COMMENT=		VI Like Emacs.  a vi "workalike", with many additional features
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-perl
 CONFIGURE_ARGS+=	--datadir=${DATADIR}
@@ -36,6 +36,6 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/$$f ${EGDIR};		\
 	done
 
-.include "../../devel/ncurses/buildlink.mk"
-.include "../../lang/perl5/buildlink.mk"
+.include "../../devel/ncurses/buildlink2.mk"
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
