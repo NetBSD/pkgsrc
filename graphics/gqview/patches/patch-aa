@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.7 2001/03/04 09:12:07 jlam Exp $
+
+--- configure.orig	Mon Feb 26 15:35:33 2001
++++ configure
+@@ -2168,7 +2168,6 @@
+   FALSE_FALSE=
+ fi
+ 
+-localedir='${prefix}/share/locale'
+ 
+ 
+ ALL_LINGUAS="de es fr hu it ja pl pt_BR ru sk sl tr zh_CN.GB2312 zh_TW.Big5"
+@@ -3999,6 +3998,9 @@
+ 	< $srcdir/po/POTFILES.in > po/POTFILES
+   
+ 
++# Use ${PKGLOCALEDIR} for the location of installed locale files.
++DATADIRNAME="${PKGLOCALEDIR}"
++localedir='${prefix}/share/locale'
+ 
+ 
+ 
