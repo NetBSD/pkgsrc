@@ -1,21 +1,31 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/10/01 20:45:55 reed Exp $
+$NetBSD: patch-aa,v 1.2 2004/11/27 07:41:06 reed Exp $
 
---- Makefile.orig	Sat Jun 14 18:35:38 2003
+--- Makefile.orig	Fri Nov 26 17:14:55 2004
 +++ Makefile
-@@ -1,13 +1,13 @@
+@@ -3,7 +3,7 @@
+ #
+ # 0.1.13: Added -I.
+ 
 -LOCATION=/usr/local
 +LOCATION=$(PREFIX)
- VERSION=0.1.11
--CC=gcc
-+CC?=gcc
- #CC=tcc
- #CC= ccmalloc gcc
+ VERSION=0.1.14
+ # VERSION changes
+ #---------------------
+@@ -15,7 +15,7 @@ VERSION=0.1.14
+ #	use our recommended settings.
+ #CFLAGS ?= -Wall -g -O2 -Werror $(CPU_OPTS)
+ #CFLAGS=-Wall -g -O2 -Wundef -Wshadow -Wsign-compare -I.
+-CFLAGS=-Wall -g -O2 -I.
++CFLAGS?=-Wall -g -O2 -I.
  
- # PERFORMANCE RELATED FLAG SETS
- #CFLAGS=-Wall -O3 -march=i686
- #CFLAGS= -Wall -O3 -march=k6
--CFLAGS= -Wall -O2
-+CFLAGS?= -Wall -O2
+ # OLE decoding is still considered to be 'beta' mode - so it 
+ #	disabled in the stable release of ripMIME for now
+@@ -74,7 +74,7 @@ riptest: ${OFILES}
+ install: ${OBJ}
+ 	strip ripmime
+ 	cp ripmime ${LOCATION}/bin/
+-	cp ripmime.1  ${LOCATION}/man/man1
++	cp ripmime.1  ${LOCATION}/$(PKGMANDIR)/man1
  
- #  DEBUGGING Related Flags
- #CFLAGS= -Wall -ggdb 
+ clean:
+ 	rm -f *.o *core ${OBJ} buildcodes.h
