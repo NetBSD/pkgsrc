@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/07 18:13:51 cjep Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/12/31 13:13:32 kristerw Exp $
 bin/xeukleides
-man/man1/xeukleides.1
+man/man1/xeukleides.1x
