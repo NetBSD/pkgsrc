@@ -1,26 +1,34 @@
-$NetBSD: patch-ac,v 1.1 1998/08/23 06:49:29 garbled Exp $
---- cdrom_globs.h.orig	Tue Jan 12 11:59:31 1993
-+++ cdrom_globs.h	Wed Jul 22 21:48:44 1998
-@@ -101,9 +101,6 @@
- 
--
--extern Boolean		display_timer;
--
- extern XtAppContext	appc;
- 
--extern char		*file;
--extern char		*device;
-+#include "app.h"
+$NetBSD
+
+--- app.h.orig	Mon Sep  6 18:22:07 1999
++++ app.h	Mon Sep  6 18:22:07 1999
+@@ -0,0 +1,29 @@
++/*
++ * Copyright (C) 1990 Regents of the University of California.
++ *
++ * Permission to use, copy, modify, distribute, and sell this software and
++ * its documentation for any purpose is hereby granted without fee,
++ * provided that the above copyright notice appear in all copies and that
++ * both that copyright notice and this permission notice appear in
++ * supporting documentation, and that the name of the University of
++ * California not be used in advertising or publicity pertaining to
++ * distribution of the software without specific, written prior
++ * permission.  the University of California makes no representations
++ * about the suitability of this software for any purpose.  It is provided
++ * "as is" without express or implied warranty.
++ */
 +
- extern char             info_filename[];
-@@ -111,10 +108 @@
- extern unsigned int     timer_fsecs;
--
--
--extern float		volbase;
--extern float		volpcent;
--extern int		replayThreshold;
--extern float    	scanPauseInterval;
--extern int      	scanSkipInterval;
--extern float      	pausePauseInterval;
--extern int      	pauseSkipInterval;
++typedef struct {
++  char            *file;
++  char            *device;
++  Boolean         debug;
++  Boolean         display_timer;
++  float           volbase;
++  float           volpcent;
++  int             replayThreshold;
++  int             pauseSkipInterval;
++  int             scanSkipInterval;
++  float           scanPauseInterval;
++  float           pausePauseInterval;
++  char            *cdInfoDir;
++} AppData;
