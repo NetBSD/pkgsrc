@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/12/05 00:26:38 uebayasi Exp $
+# $NetBSD: Makefile,v 1.17 2004/05/02 04:59:23 snj Exp $
 
 DISTNAME=		gforth-0.6.2
 CATEGORIES=		lang
@@ -11,7 +11,7 @@ COMMENT=		Fast interpreter for the Forth language
 
 ONLY_FOR_PLATFORM=	*-*-alpha *-*-i386 *-*-m68k *-*-powerpc *-*-sparc
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 
 # Make sure elisp will be installed even if no emacs installed.
@@ -28,7 +28,7 @@ KERNEL_FI=	`cd ${WRKSRC} && (${ECHO} 'prkern:'; ${ECHO} '	@${ECHO} $$(kernel_fi)
 
 # XXX Need test.
 #.if ${OPSYS} == "Darwin"
-#.  include "../../devel/dlcompat/buildlink2.mk"
+#.  include "../../devel/dlcompat/buildlink3.mk"
 #.endif
 
 post-build:
@@ -39,6 +39,6 @@ post-build:
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp
 
-.include "../../devel/ffcall/buildlink2.mk"
+.include "../../devel/ffcall/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
