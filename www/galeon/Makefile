@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2003/03/18 03:25:29 taya Exp $
+# $NetBSD: Makefile,v 1.47 2003/04/24 13:03:17 taya Exp $
 
-DISTNAME=	galeon-1.2.9
+DISTNAME=	galeon-1.2.10
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=galeon/}
 
@@ -11,6 +11,10 @@ COMMENT=	GNOME web browser based on gecko (mozilla rendering engine)
 CONFLICTS=	galeon-current-[0-9]*
 
 BUILD_DEPENDS+=	xml-i18n-tools>=0.8.1:../../textproc/xml-i18n-tools
+
+EVAL_PREFIX+=	MOZILLA_PREFIX=mozilla
+EVAL_PREFIX+=	ICONV_PREFIX=libiconv
+EVAL_PREFIX+=	GCONF_PREFIX=GConf
 
 USE_X11BASE=		yes
 USE_BUILDLINK2=		yes
@@ -40,17 +44,17 @@ CONFIGURE_ARGS+= --with-mozilla-snapshot=1.3
 .include	"../../www/mozilla/buildlink2.mk"
 .include	"../../x11/gnome-libs/buildlink2.mk"
 
-MOZ_LIBDIR=     ${PREFIX}/lib/mozilla
+MOZ_LIBDIR=     ${MOZILLA_PREFIX}/lib/mozilla
 LDFLAGS+=       -Wl,${RPATH_FLAG}${MOZ_LIBDIR}
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
 pre-install:
-	${X11PREFIX}/bin/gconftool --shutdown
+	${GCONF_PREFIX}/bin/gconftool --shutdown
 
 post-install:
-	${SED} -e "s,@PREFIX@,${PREFIX},g" ${FILESDIR}/galeon.in > ${PREFIX}/bin/galeon
+	${SED} -e "s,@PREFIX@,${PREFIX},g" -e "s,@MOZILLA_PREFIX@,${MOZILLA_PREFIX},g" ${FILESDIR}/galeon.in > ${PREFIX}/bin/galeon
 	${CHOWN} ${BINOWN} ${PREFIX}/bin/galeon
 	${CHGRP} ${BINGRP} ${PREFIX}/bin/galeon
 	${CHMOD} ${BINMODE} ${PREFIX}/bin/galeon
