@@ -1,8 +1,8 @@
-$NetBSD: patch-aq,v 1.14 2003/07/18 10:50:08 adam Exp $
+$NetBSD: patch-aq,v 1.15 2003/12/12 10:11:39 adam Exp $
 
---- doc/www.lesstif.org/Makefile.in.orig	2003-07-18 01:04:25.000000000 +0200
-+++ doc/www.lesstif.org/Makefile.in	2003-07-18 12:07:33.000000000 +0200
-@@ -159,7 +159,7 @@
+--- doc/www.lesstif.org/Makefile.in.orig	2003-11-27 19:29:49.000000000 +0000
++++ doc/www.lesstif.org/Makefile.in
+@@ -232,7 +232,7 @@ SUBDIRS = images
  # Lets put the informational stuff in a sub directory to avoid 
  # polluting /usr/local for default installs.
  #

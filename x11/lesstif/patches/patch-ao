@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.12 2003/07/18 10:50:07 adam Exp $
+$NetBSD: patch-ao,v 1.13 2003/12/12 10:11:39 adam Exp $
 
---- doc/lessdox/functions/Makefile.in.orig	2003-07-18 01:04:24.000000000 +0200
-+++ doc/lessdox/functions/Makefile.in	2003-07-18 12:17:38.000000000 +0200
-@@ -160,7 +160,7 @@
+--- doc/lessdox/functions/Makefile.in.orig	2003-11-27 19:29:48.000000000 +0000
++++ doc/lessdox/functions/Makefile.in
+@@ -233,7 +233,7 @@ manone_DATA = 
  manthree_DATA = 
  manfive_DATA = 
  

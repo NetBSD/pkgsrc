@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/08/20 10:37:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/12/12 10:11:39 adam Exp $
 bin/mwm
 bin/mxmkmf
 bin/uil
@@ -432,8 +432,6 @@ share/doc/lesstif/ReleaseNotes.txt
 @dirrm share/doc/html/lesstif/images
 @dirrm share/doc/html/lesstif
 @dirrm lib/X11/mwm
-@dirrm lib/LessTif/config
-@dirrm lib/LessTif
 @dirrm include/uil
 @dirrm include/Xm
 @dirrm include/Mrm

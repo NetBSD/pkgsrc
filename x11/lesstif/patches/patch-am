@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.12 2003/07/18 10:50:07 adam Exp $
+$NetBSD: patch-am,v 1.13 2003/12/12 10:11:39 adam Exp $
 
---- doc/Makefile.in.orig	2003-07-18 01:04:24.000000000 +0200
-+++ doc/Makefile.in	2003-07-18 12:06:55.000000000 +0200
-@@ -154,7 +154,7 @@
+--- doc/Makefile.in.orig	2003-11-27 19:29:48.000000000 +0000
++++ doc/Makefile.in
+@@ -227,7 +227,7 @@ EXTRA_DIST = $(DATA)
  # it has a stand-alone Makefile w/o auto* stuff
  SUBDIRS = www.lesstif.org lessdox
  
