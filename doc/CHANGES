@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8771 2005/01/16 15:12:57 jmmv Exp $
+$NetBSD: CHANGES,v 1.8772 2005/01/16 15:47:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -335,3 +335,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated teTeX-bin to 2.0.2nb3 [kei 2005-01-16]
 	Updated Gauche to 0.8.3 [kei 2005-01-16]
 	Updated chicken to 1.89 [jmmv 2005-01-16]
+	Updated squid to 2.5.7nb6 [taca 2005-01-16]
