@@ -1,17 +1,18 @@
-$NetBSD: patch-ai,v 1.5 2002/07/08 02:21:19 kim Exp $
+$NetBSD: patch-ai,v 1.6 2004/05/03 12:56:10 kim Exp $
 
---- config.h-dist.orig	Thu Feb  7 22:39:03 2002
-+++ config.h-dist	Sun Jul  7 21:44:08 2002
-@@ -11,6 +11,8 @@
+--- config.h-dist.orig	2002-02-07 22:39:03.000000000 -0500
++++ config.h-dist	2004-05-03 08:51:32.000000000 -0400
+@@ -11,6 +11,9 @@
   *	(c) Copyright 1990, Kim F. Storm.  All rights reserved.
   */
  
 +#define PREFIX		"@PREFIX@"
++#define PKG_SYSCONFDIR	"@PKG_SYSCONFDIR@"
 +
  #include <stdio.h>
  #include <ctype.h>
  
-@@ -66,7 +68,7 @@
+@@ -66,7 +69,7 @@
   *	ascii files.  (Thank you Geoff!)
   */
  
@@ -20,16 +21,16 @@ $NetBSD: patch-ai,v 1.5 2002/07/08 02:21:19 kim Exp $
  
  
  /********************************** NNTP *********************************
-@@ -100,7 +102,7 @@
+@@ -100,7 +103,7 @@
   *	LIB_DIRECTORY defined below.
   */
  
 -#define NNTP_SERVER	"/usr/local/lib/nntp_server"
-+#define NNTP_SERVER	PREFIX "/etc/nntp/server"
++#define NNTP_SERVER	PKG_SYSCONFDIR "/server"
  
  /*
   *	Define NNTP_PATH_HOSTNAME to force a specific hostname into the
-@@ -138,7 +140,7 @@
+@@ -138,7 +141,7 @@
   *	conf/s-template.h as a starting point for writing you own.
   */
  
@@ -38,7 +39,7 @@ $NetBSD: patch-ai,v 1.5 2002/07/08 02:21:19 kim Exp $
  
  
  /********************** MACHINE DEPENDENT DEFINITIONS **********************
-@@ -149,7 +151,7 @@
+@@ -149,7 +152,7 @@
   *	conf/m-template.h as a starting point for writing you own.
   */
  
@@ -47,7 +48,7 @@ $NetBSD: patch-ai,v 1.5 2002/07/08 02:21:19 kim Exp $
  
  
  /**************************** LOCALIZATION ****************************
-@@ -182,8 +184,12 @@
+@@ -182,8 +185,12 @@
   *			   (= LIB_DIRECTORY/Log if undefined).
   */
  
@@ -62,7 +63,7 @@ $NetBSD: patch-ai,v 1.5 2002/07/08 02:21:19 kim Exp $
  
  
  /*************************** NEWS TRANSPORT **************************
-@@ -258,7 +264,10 @@
+@@ -258,7 +265,10 @@
   */
  
  /* #define REC_MAIL	"/usr/lib/news/recmail"	*/	/* non-sendmail */
@@ -74,7 +75,7 @@ $NetBSD: patch-ai,v 1.5 2002/07/08 02:21:19 kim Exp $
  
  
  /*
-@@ -307,13 +316,13 @@
+@@ -307,13 +317,13 @@
   *	DAEMON_MAN	- nnmaster
   */
  
@@ -92,7 +93,7 @@ $NetBSD: patch-ai,v 1.5 2002/07/08 02:21:19 kim Exp $
  #define DAEMON_MAN_SECTION	"8"
  
  
-@@ -383,8 +392,8 @@
+@@ -383,8 +393,8 @@
   *	Common choices are:  (news, news)  and   (your uid, your gid)
   */
  
