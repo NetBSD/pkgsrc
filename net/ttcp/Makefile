@@ -3,7 +3,7 @@
 # Date created:		14 December 1997
 # Whom:			thorpej
 #
-# $NetBSD: Makefile,v 1.7 1998/03/05 15:18:23 tron Exp $
+# $NetBSD: Makefile,v 1.8 1998/03/07 13:57:00 tron Exp $
 #
 
 DISTNAME=	ttcp
@@ -17,11 +17,9 @@ MAINTAINER=	thorpej@NetBSD.ORG
 NO_CONFIGURE=	yes
 NO_WRKSUBDIR=	yes
 
+CAT1=		ttcp.0
 MAN1=		ttcp.1
 
-# MANZ is handled automatically
-.if defined(MANZ)
 MANCOMPRESSED=	1
-.endif
 
 .include <bsd.port.mk>
