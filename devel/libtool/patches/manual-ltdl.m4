@@ -1,8 +1,8 @@
-$NetBSD: manual-ltdl.m4,v 1.1 2004/04/20 18:29:34 tv Exp $
+$NetBSD: manual-ltdl.m4,v 1.2 2005/03/22 15:12:08 tv Exp $
 
---- ltdl.m4.orig	Sun Sep 21 08:51:38 2003
+--- ltdl.m4.orig	2005-02-12 07:18:34.000000000 -0500
 +++ ltdl.m4
-@@ -149,6 +149,9 @@ AC_CACHE_CHECK([whether deplibs are load
+@@ -134,6 +134,9 @@ AC_CACHE_CHECK([whether deplibs are load
    hpux10*|hpux11*)
      libltdl_cv_sys_dlopen_deplibs=yes
      ;;
