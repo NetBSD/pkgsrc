@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.4 2003/06/01 16:17:02 salo Exp $
+$NetBSD: patch-ag,v 1.5 2003/07/10 19:41:20 salo Exp $
 
---- system.mk.orig	2000-12-28 15:08:05.000000000 +0100
-+++ system.mk	2003-06-01 17:34:51.000000000 +0200
+--- system.mk.orig	Thu Dec 28 15:08:05 2000
++++ system.mk	Thu Jul 10 21:30:50 2003
 @@ -7,13 +7,13 @@
  ## Installation paths
  ##
@@ -37,13 +37,35 @@ $NetBSD: patch-ag,v 1.4 2003/06/01 16:17:02 salo Exp $
  
  # The POSIX_SOURCE, XOPEN_SOURCE and WARN options should not be necessary,
  # they're mainly for development use. So, if they cause trouble (not
-@@ -67,8 +67,8 @@
+@@ -49,7 +49,7 @@
+ 
+ # libtu/ uses POSIX_SOURCE
+ 
+-POSIX_SOURCE=-ansi -D_POSIX_SOURCE
++POSIX_SOURCE=-D_POSIX_SOURCE
+ 
+ # and . (ion) XOPEN_SOURCE.
+ # There is variation among systems what should be used and how they interpret
+@@ -56,19 +56,19 @@
+ # it so it is perhaps better not using anything at all.
+ 
+ # Most systems
+-#XOPEN_SOURCE=-ansi -D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED
++XOPEN_SOURCE=-D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED -D__EXTENSIONS__
+ # sunos, (irix)
+ #XOPEN_SOURCE=-ansi -D__EXTENSIONS__
+ 
+ # Same as '-Wall -pedantic-errors' without '-Wunused' as callbacks often
+ # have unused variables.
+-WARN=	-W -Wimplicit -Wreturn-type -Wswitch -Wcomment \
++#WARN=	-W -Wimplicit -Wreturn-type -Wswitch -Wcomment \
+ 	-Wtrigraphs -Wformat -Wchar-subscripts \
  	-Wparentheses -pedantic-errors -Wuninitialized
  
  
 -CFLAGS=-g -O2 $(WARN) $(DEFINES) $(INCLUDES) $(EXTRA_INCLUDES)
 -LDFLAGS=-g $(LIBS) $(EXTRA_LIBS)
-+CFLAGS+=-g -O2 $(WARN) $(DEFINES) $(INCLUDES) $(EXTRA_INCLUDES)
++CFLAGS+=-g $(WARN) $(DEFINES) $(INCLUDES) $(EXTRA_INCLUDES)
 +LDFLAGS+=-g $(LIBS) $(EXTRA_LIBS)
  
  
