@@ -1,18 +1,7 @@
-$NetBSD: patch-ah,v 1.4 2001/08/11 20:48:46 fredb Exp $
+$NetBSD: patch-ah,v 1.5 2002/10/25 08:59:05 skrll Exp $
 
 --- libxmms/util.c.orig	Fri Jun  1 08:07:49 2001
 +++ libxmms/util.c
-@@ -32,6 +32,10 @@
- # endif
- #endif
- 
-+#ifdef __NetBSD__
-+#include <pthread.h>
-+#endif
-+
- 
- GtkWidget *xmms_show_message(gchar * title, gchar * text, gchar * button_text, gboolean modal, GtkSignalFunc button_action, gpointer action_data)
- {
 @@ -72,7 +76,7 @@
  
  gboolean xmms_check_realtime_priority(void)
@@ -22,26 +11,3 @@ $NetBSD: patch-ah,v 1.4 2001/08/11 20:48:46 fredb Exp $
  #ifdef __FreeBSD__
  	/*
  	 * Check if priority scheduling is enabled in the kernel
-@@ -98,11 +102,22 @@
- #ifdef HAVE_NANOSLEEP
- 	struct timespec req;
- 
-+#ifdef __NetBSD__
-+	unsigned long n = usec / 50000;
-+	usec %= 50000;
-+	do {
-+#endif
-+
- 	req.tv_sec = usec / 1000000;
- 	usec -= req.tv_sec * 1000000;
- 	req.tv_nsec = usec * 1000;
- 
- 	nanosleep(&req, NULL);
-+
-+#ifdef __NetBSD__
-+	pthread_yield_np();
-+	} while (n--);
-+#endif
- #else
- 	struct timeval tv;
- 	
