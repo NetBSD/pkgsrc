@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/01 03:53:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/07/25 12:27:46 wiz Exp $
 bin/NeoPop-SDL
+man/man5/neopoprc.5
 man/man6/NeoPop-SDL.6
 share/doc/NeoPop-SDL/TODO
 share/doc/NeoPop-SDL/bugs-core.html
