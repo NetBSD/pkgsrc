@@ -1,6 +1,6 @@
 # start of install
 #
-# $NetBSD: install,v 1.3 2001/11/21 15:43:01 jlam Exp $
+# $NetBSD: install,v 1.4 2001/11/26 14:48:53 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -21,7 +21,7 @@ PRE-INSTALL)
 				groupid_option="-g ${PKG_GROUPID}"
 			fi
 			${ECHO} "Creating '${PKG_GROUP}' group..."
-			${GROUPADD} ${groupid_option} ${PKG_GROUP}
+			${GROUPADD} ${groupid_option} "${PKG_GROUP}"
 			${ECHO} "Done."
 		fi
 		${RM} -f /tmp/grouptest.$$
@@ -43,10 +43,10 @@ PRE-INSTALL)
 			${ECHO} "Creating '${PKG_USER}' user..."
 			${USERADD} -c "@PKG_USER_DESCR@"		\
 				${userid_option}			\
-				-g ${PKG_GROUP}				\
-				-d @PKG_USER_HOME@			\
-				-s @PKG_USER_SHELL@			\
-				${PKG_USER}
+				-g "${PKG_GROUP}"			\
+				-d "@PKG_USER_HOME@"			\
+				-s "@PKG_USER_SHELL@"			\
+				"${PKG_USER}"
 			${ECHO} "Done."
 		fi
 	fi
@@ -54,20 +54,20 @@ PRE-INSTALL)
 
 POST-INSTALL)
 	# Create package directories.
-	set -- ${MAKE_DIRS} ${OWN_DIRS}
+	eval set -- ${MAKE_DIRS} ${OWN_DIRS}
 	for dir
 	do
-		${MKDIR} ${dir}
+		${MKDIR} "${dir}"
 	done
-	set -- ${MAKE_DIRS_PERMS} ${OWN_DIRS_PERMS}
+	eval set -- ${MAKE_DIRS_PERMS} ${OWN_DIRS_PERMS}
 	while [ $# -gt 0 ]
 	do
 		dir="$1"; owner="$2"; group="$3"; mode="$4"
 		shift; shift; shift; shift
-		${MKDIR} ${dir}
-		${CHOWN} ${owner} ${dir}
-		${CHGRP} ${group} ${dir}
-		${CHMOD} ${mode} ${dir}
+		${MKDIR} "${dir}"
+		${CHOWN} "${owner}" "${dir}"
+		${CHGRP} "${group}" "${dir}"
+		${CHMOD} "${mode}" "${dir}"
 	done
 
 	if [ -n "${CONF_FILES}" -o -n "${CONF_FILES_PERMS}" -o	\
@@ -75,37 +75,37 @@ POST-INSTALL)
 	then
 		${ECHO} "Installing configuration files:"
 	fi
-	set -- ${CONF_FILES}
+	eval set -- ${CONF_FILES}
 	while [ $# -gt 0 ]
 	do
 		samplefile="$1"; file="$2"
 		shift; shift
 
-		if [ -e ${file} ]
+		if [ -e "${file}" ]
 		then
 			${ECHO} "    ${file} already exists"
 		else
 			${ECHO} "    ${file}"
-			${CP} ${samplefile} ${file}
-			${CHMOD} @CONF_FILES_MODE@ ${file}
+			${CP} "${samplefile}" "${file}"
+			${CHMOD} @CONF_FILES_MODE@ "${file}"
 		fi
 	done
-	set -- ${SUPPORT_FILES}
+	eval set -- ${SUPPORT_FILES}
 	while [ $# -gt 0 ]
 	do
 		samplefile="$1"; file="$2"
 		shift; shift
 
-		if [ -e ${file} ]
+		if [ -e "${file}" ]
 		then
 			${ECHO} "    ${file} already exists"
 		else
 			${ECHO} "    ${file}"
-			${CP} ${samplefile} ${file}
-			${CHMOD} @SUPPORT_FILES_MODE@ ${file}
+			${CP} "${samplefile}" "${file}"
+			${CHMOD} @SUPPORT_FILES_MODE@ "${file}"
 		fi
 	done
-	set -- ${CONF_FILES_PERMS} ${SUPPORT_FILES_PERMS}
+	eval set -- ${CONF_FILES_PERMS} ${SUPPORT_FILES_PERMS}
 	while [ $# -gt 0 ]
 	do
 		samplefile="$1"; file="$2"; owner="$3"; group="$4"; mode="$5"
@@ -116,26 +116,25 @@ POST-INSTALL)
 			${ECHO} "    ${file} already exists"
 		else
 			${ECHO} "    ${file}"
-			${CP} ${samplefile} ${file}
-			${CHOWN} ${owner} ${file}
-			${CHGRP} ${group} ${file}
-			${CHMOD} ${mode} ${file}
+			${CP} "${samplefile}" "${file}"
+			${CHOWN} "${owner}" "${file}"
+			${CHGRP} "${group}" "${file}"
+			${CHMOD} ${mode} "${file}"
 		fi
 	done
-	set -- ${RCD_SCRIPTS}
-	while [ $# -gt 0 ]
+	eval set -- ${RCD_SCRIPTS}
+	for script
 	do
-		samplefile="${PKG_PREFIX}/etc/rc.d/$1"
-		file="${RCD_SCRIPTS_DIR}/$1"
-		shift
+		samplefile="${PKG_PREFIX}/etc/rc.d/${script}"
+		file="${RCD_SCRIPTS_DIR}/${script}"
 
-		if [ -e ${file} ]
+		if [ -e "${file}" ]
 		then
 			${ECHO} "    ${file} already exists"
 		else
 			${ECHO} "    ${file}"
-			${CP} ${samplefile} ${file}
-			${CHMOD} @RCD_SCRIPTS_MODE@ ${file}
+			${CP} "${samplefile}" "${file}"
+			${CHMOD} @RCD_SCRIPTS_MODE@ "${file}"
 		fi
 	done
 
@@ -147,7 +146,7 @@ POST-INSTALL)
 You may wish to customize the following files:
 
 EOF
-	set -- ${CONF_FILES}
+	eval set -- ${CONF_FILES}
 	while [ $# -gt 0 ]
 	do
 		samplefile="$1"; file="$2"
@@ -155,7 +154,7 @@ EOF
 
 		${ECHO} "	${file}"
        	done
-	set -- ${CONF_FILES_PERMS}
+	eval set -- ${CONF_FILES_PERMS}
 	while [ $# -gt 0 ]
 	do
 		samplefile="$1"; file="$2"; owner="$3"; group="$4"; mode="$5"
