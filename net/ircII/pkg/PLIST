@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 1999/08/23 16:32:12 tron Exp $
+@comment $NetBSD: PLIST,v 1.16 1999/08/23 16:33:38 tron Exp $
 bin/irc-4.4L
 bin/ircbug
 bin/irc
@@ -69,7 +69,6 @@ share/irc/script/fnet
 share/irc/script/functions
 share/irc/script/global
 share/irc/script/help
-share/irc/script/icb
 share/irc/script/history
 share/irc/script/history-match
 share/irc/script/icb
