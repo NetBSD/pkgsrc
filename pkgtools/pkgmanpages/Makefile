@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/20 12:23:58 agc Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/05 15:31:33 reed Exp $
 #
 
 DISTNAME=	pkgmanpages-19991222
@@ -11,6 +11,7 @@ COMMENT=	Manual page(s) for the packages collection
 
 WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
+INSTALLATION_DIRS=	man/man7
 
 .include "../../mk/bsd.prefs.mk"
 
