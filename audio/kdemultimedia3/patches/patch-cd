@@ -1,8 +1,8 @@
-$NetBSD: patch-cd,v 1.2 2003/01/02 09:12:23 skrll Exp $
+$NetBSD: patch-cd,v 1.3 2003/03/11 13:33:55 markd Exp $
 
---- noatun/modules/splitplaylist/Makefile.in.orig	Sat Dec 28 14:04:00 2002
+--- noatun/modules/splitplaylist/Makefile.in.orig	Fri Jan 17 08:49:42 2003
 +++ noatun/modules/splitplaylist/Makefile.in
-@@ -294,7 +294,7 @@ kde_module_LTLIBRARIES = noatun_splitpla
+@@ -330,7 +330,7 @@ kde_module_LTLIBRARIES = noatun_splitpla
  noatun_splitplaylist_la_SOURCES = splitplaylist.cpp playlist.cpp view.cpp find.cpp
  
  noatun_splitplaylist_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
@@ -11,7 +11,7 @@ $NetBSD: patch-cd,v 1.2 2003/01/02 09:12:23 skrll Exp $
  
  #>- noatun_splitplaylist_la_METASOURCES = AUTO
  
-@@ -308,7 +308,7 @@ CONFIG_CLEAN_FILES =
+@@ -347,7 +347,7 @@ CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES)
  
  noatun_splitplaylist_la_DEPENDENCIES = \
@@ -20,16 +20,16 @@ $NetBSD: patch-cd,v 1.2 2003/01/02 09:12:23 skrll Exp $
  am_noatun_splitplaylist_la_OBJECTS = splitplaylist.lo playlist.lo \
  	view.lo find.lo
  #>- noatun_splitplaylist_la_OBJECTS = $(am_noatun_splitplaylist_la_OBJECTS)
-@@ -496,7 +496,7 @@ distclean-tags:
- 
+@@ -564,7 +564,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=LICENSE splitplaylist.plugin 
-+KDE_DIST=splitplaylist.plugin LICENSE 
+-KDE_DIST=splui.rc LICENSE splitplaylist.plugin 
++KDE_DIST=splitplaylist.plugin LICENSE splui.rc 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -626,20 +626,20 @@ noatun_splitplaylist.la.closure: $(noatu
+@@ -703,20 +703,20 @@ noatun_splitplaylist.la.closure: $(noatu
  
  
  #>+ 3
@@ -55,7 +55,7 @@ $NetBSD: patch-cd,v 1.2 2003/01/02 09:12:23 skrll Exp $
  
  #>+ 3
  clean-closures:
-@@ -656,7 +656,7 @@ force-reedit:
+@@ -733,7 +733,7 @@ force-reedit:
  
  
  #>+ 11
@@ -64,7 +64,7 @@ $NetBSD: patch-cd,v 1.2 2003/01/02 09:12:23 skrll Exp $
  	@echo 'creating noatun_splitplaylist_la.all_cpp.cpp ...'; \
  	rm -f noatun_splitplaylist_la.all_cpp.files noatun_splitplaylist_la.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> noatun_splitplaylist_la.all_cpp.final; \
-@@ -692,9 +692,9 @@ kde-rpo-clean:
+@@ -769,9 +769,9 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 7

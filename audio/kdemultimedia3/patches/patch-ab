@@ -1,33 +1,32 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/05/31 14:46:47 skrll Exp $
+$NetBSD: patch-ab,v 1.2 2003/03/11 13:33:47 markd Exp $
 
---- kaboodle/Makefile.am.orig	Fri Jul 27 01:53:45 2001
+--- kaboodle/Makefile.am.orig	Mon Sep 16 09:14:51 2002
 +++ kaboodle/Makefile.am
-@@ -2,7 +2,7 @@
+@@ -2,7 +2,7 @@ INCLUDES = -I$(kde_includes)/kio -I$(kde
  
  SUBDIRS = pics actions
  
--lib_LTLIBRARIES = libkaboodlepart.la kaboodle.la
-+lib_LTLIBRARIES = libkaboodlepart.la libkaboodle_main.la kaboodle.la
+-lib_LTLIBRARIES = kaboodle.la
++lib_LTLIBRARIES = libkaboodle_main.la kaboodle.la
  
- libkaboodlepart_la_SOURCES = conf.cpp \
- 	controls.cpp \
-@@ -15,25 +15,24 @@
- libkaboodlepart_la_LDFLAGS = $(KDE_RPATH) $(KDE_PLUGIN) $(all_libraries) 
- libkaboodlepart_la_LIBADD = $(LIB_KFILE) $(LIB_KPARTS) -lqtmcop -lkmedia2_idl -lsoundserver_idl -lartskde
+ kde_module_LTLIBRARIES = libkaboodlepart.la
+ 
+@@ -16,25 +16,24 @@ libkaboodlepart_la_SOURCES = conf.cpp \
+ libkaboodlepart_la_LDFLAGS = $(all_libraries) -module $(KDE_PLUGIN)
+ libkaboodlepart_la_LIBADD = $(LIB_KFILE) $(LIB_KPARTS) -lqtmcop -lkmedia2_idl -lsoundserver_idl -lartskde -lkmediaplayer
  
 -kaboodle_la_SOURCES = main.cpp \
-+kaboodle_la_SOURCES = kaboodle_main.cpp
-+kaboodle_la_LIBADD = libkaboodle_main.la
-+kaboodle_la_LDFLAGS = $(all_libraries) $(KDE_RPATH) -module -avoid-version
-+
 +libkaboodle_main_la_SOURCES = main.cpp \
- 		      kaboodleapp.cpp \
- 		      userinterface.cpp
+ 	kaboodleapp.cpp \
+ 	userinterface.cpp
  
 -kaboodle_la_LIBADD = libkaboodlepart.la
--kaboodle_la_LDFLAGS = $(all_libraries) $(KDE_RPATH) -module -avoid-version
 +libkaboodle_main_la_LIBADD = libkaboodlepart.la
 +libkaboodle_main_la_LDFLAGS = $(all_libraries) $(KDE_RPATH)
++
++kaboodle_la_SOURCES = kaboodle_main.cpp
++kaboodle_la_LIBADD = libkaboodle_main.la
+ kaboodle_la_LDFLAGS = $(all_libraries) $(KDE_RPATH) -module -avoid-version
  
  bin_PROGRAMS = kaboodle
  

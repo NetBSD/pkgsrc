@@ -1,17 +1,17 @@
-$NetBSD: patch-cn,v 1.2 2003/01/02 09:12:23 skrll Exp $
+$NetBSD: patch-cn,v 1.3 2003/03/11 13:33:56 markd Exp $
 
---- noatun/modules/artseffects/Makefile.in.orig	Sat Dec 28 14:04:00 2002
+--- noatun/modules/artseffects/Makefile.in.orig	Fri Jan 17 08:49:41 2003
 +++ noatun/modules/artseffects/Makefile.in
-@@ -296,7 +296,7 @@ libartseffects_la_SOURCES = artseffects.
+@@ -332,7 +332,7 @@ libartseffects_la_SOURCES = artseffects.
  libartseffects_la_LDFLAGS = -L$(top_builddir)/arts/gui/common $(all_libraries) \
                              -module -avoid-version -no-undefined
  
 -libartseffects_la_LIBADD = -lartsgui_idl -lkmedia2_idl -lsoundserver_idl -lartsflow
 +libartseffects_la_LIBADD = $(top_builddir)/arts/gui/common/libartsgui_idl.la -lkmedia2_idl -lsoundserver_idl -lartsflow
  
- 
- #libartseffectsui_la_SOURCES = artseffects.cc
-@@ -315,7 +315,8 @@ CONFIG_HEADER = $(top_builddir)/config.h
+ mcoptypedir = $(libdir)/mcop
+ mcoptype_DATA = artseffects.mcoptype artseffects.mcopclass
+@@ -345,7 +345,8 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -21,8 +21,8 @@ $NetBSD: patch-cn,v 1.2 2003/01/02 09:12:23 skrll Exp $
  am_libartseffects_la_OBJECTS = artseffects.lo extrastereo_impl.lo
  #>- libartseffects_la_OBJECTS = $(am_libartseffects_la_OBJECTS)
  #>+ 4
-@@ -516,7 +517,7 @@ distclean-tags:
- 
+@@ -556,7 +557,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=artseffects.mcoptype effect.cpp artseffects.idl artseffects.h VoiceRemoval.mcopclass RawWriter.mcopclass artseffects.mcopclass ExtraStereo.mcopclass ExtraStereoGuiFactory.mcopclass extrastereogui_impl.cc extrastereogui_impl.h 
