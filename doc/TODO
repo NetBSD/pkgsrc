@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1821 2004/06/07 02:48:05 snj Exp $
+$NetBSD: TODO,v 1.1822 2004/06/07 02:53:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -207,6 +207,7 @@ Suggested package updates
 	o docsis-0.9.1
 	o dvd+rw-tools-5.19-1.4.9.7 [pkg/25433]
 	o dvdrip-0.50.18
+	o dvipng-1.1 [http://sourceforge.net/projects/dvipng/]
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
 	o easytag-0.31
@@ -268,7 +269,7 @@ Suggested package updates
 	o jam-2.5
 	o john-1.6.37
 	o jpilot-0.99.7 [pkg/24635]
-	o larswm-7.3.9
+	o larswm-7.4.8
 	o latex2rtf-1.9.15
 	o lavaps-2.4
 	o leafnode-1.9.54
@@ -475,7 +476,7 @@ Suggested cleanups in pkgsrc
 	o Make packages install honour PKGLOCALEDIR by setting
 	  USE_PKGLOCALEDIR=YES where appropriate (for eg. Solaris).
 
-	o Deprecate LTCONFIG_OVERRIDE -- replace with appropriate 
+	o Deprecate LTCONFIG_OVERRIDE -- replace with appropriate
 	  LIBTOOL_OVERRIDE
 
 	o Fix remaining packages to install documentation into share/doc
