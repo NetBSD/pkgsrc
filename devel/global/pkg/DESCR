@@ -1,0 +1,15 @@
+GLOBAL is a source code tag system that works the same way across
+diverse environments. Currently, it supports the following:
+
+    Shell command line
+    nvi editor
+    Web browser
+    emacs editor
+    elvis editor
+
+Supported languages are C, Yacc and Java.  You can locate a specified
+function in the source files and move there easily.  It is useful for
+hacking a large project containing many subdirectories, many '#ifdef'
+and many main() functions, like MH, X or BSD kernel.  GLOBAL consists
+of global(1), gtags(1), btreeop(1), gctags(1), htags(1), extended
+vi(1), gtags.el and gozilla(1).
