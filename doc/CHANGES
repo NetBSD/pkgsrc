@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5942 2004/05/15 11:27:14 jmmv Exp $
+$NetBSD: CHANGES,v 1.5943 2004/05/15 11:34:12 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2535,3 +2535,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated esound to 0.2.34 [jmmv 2004-05-15]
 	Updated ploticus to 2.21 [grant 2004-05-15]
 	Updated libbonoboui to 2.6.1 [jmmv 2004-05-15]
+	Updated gnome-keyring to 0.2.1 [jmmv 2004-05-15]
