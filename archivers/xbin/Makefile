@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/03/23 04:40:59 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2004/06/18 17:41:10 minskim Exp $
 #
 
 DISTNAME=	${PRGNAME}unix
@@ -20,6 +20,12 @@ USE_BUILDLINK3=	yes
 PRGNAME=	xbin
 EXTRACT_ONLY=	# empty
 
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "Linux"
+CFLAGS+=	-DBSD
+LDFLAGS+=	-lcompat
+.endif
+
 post-extract:
 .for dfile in ${DISTFILES}
 	${CP} ${DISTDIR}/${dfile} ${WRKSRC}
@@ -27,7 +33,7 @@ post-extract:
 
 do-build:
 	cd ${WRKSRC} && \
-	${CC} ${CFLAGS} -DBSD -o ${PRGNAME} ${DISTNAME}.c -lcompat
+	${CC} ${CFLAGS} -o ${PRGNAME} ${DISTNAME}.c ${LDFLAGS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PRGNAME} ${PREFIX}/bin
