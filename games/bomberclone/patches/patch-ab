@@ -1,19 +1,13 @@
-$NetBSD: patch-ab,v 1.2 2003/07/31 21:27:24 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2003/10/05 09:28:57 wiz Exp $
 
---- data/Makefile.in.orig	2003-07-31 21:49:46.000000000 +0200
-+++ data/Makefile.in
-@@ -196,10 +196,10 @@ install:
- 	@if test ! -d ${prefix}/@NO_PREFIX_PACKAGE_DATA_DIR@; then \
- 		mkdir ${prefix}/@NO_PREFIX_PACKAGE_DATA_DIR@; \
- 	fi;
--	cp player ${prefix}/@NO_PREFIX_PACKAGE_DATA_DIR@ -rf
--	cp maps ${prefix}/@NO_PREFIX_PACKAGE_DATA_DIR@ -rf
--	cp gfx ${prefix}/@NO_PREFIX_PACKAGE_DATA_DIR@ -rf
--	cp tileset ${prefix}/@NO_PREFIX_PACKAGE_DATA_DIR@ -rf
-+	cp -rf player ${prefix}/@NO_PREFIX_PACKAGE_DATA_DIR@
-+	cp -rf maps ${prefix}/@NO_PREFIX_PACKAGE_DATA_DIR@
-+	cp -rf gfx ${prefix}/@NO_PREFIX_PACKAGE_DATA_DIR@
-+	cp -rf tileset ${prefix}/@NO_PREFIX_PACKAGE_DATA_DIR@
+--- configure.orig	2003-10-05 11:12:39.000000000 +0200
++++ configure
+@@ -4197,7 +4197,7 @@ else
+   packageprefix=${prefix}
+ fi
  
- uninstall:
- 	rm -rf ${prefix}/@NO_PREFIX_PACKAGE_DATA_DIR@
+-packagedatadir=share/games/${PACKAGE}
++packagedatadir=share/${PACKAGE}
+ packagedocdir=share/doc/${PACKAGE}
+ 
+ packagepixmapsdir=${packagedatadir}/pixmaps

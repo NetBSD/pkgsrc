@@ -1,5 +1,17 @@
-@comment $NetBSD: PLIST,v 1.2 2003/07/31 21:27:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/10/05 09:28:57 wiz Exp $
 bin/bomberclone
+share/bomberclone/tileset/default/spliquid.bmp
+share/bomberclone/tileset/default/spmoved.bmp
+share/bomberclone/tileset/default/tunnel.bmp
+share/bomberclone/tileset/sisso_cesso/background.bmp
+share/bomberclone/tileset/sisso_cesso/block.bmp
+share/bomberclone/tileset/sisso_cesso/dead.wav
+share/bomberclone/tileset/sisso_cesso/drop.wav
+share/bomberclone/tileset/sisso_cesso/stone.bmp
+share/bomberclone/tileset/uccia_garbage/background.bmp
+share/bomberclone/tileset/uccia_garbage/block.bmp
+share/bomberclone/tileset/uccia_garbage/dead.wav
+share/bomberclone/tileset/uccia_garbage/stone.bmp
 share/bomberclone/gfx/font0.bmp
 share/bomberclone/gfx/font1.bmp
 share/bomberclone/gfx/font2.bmp
@@ -25,7 +37,6 @@ share/bomberclone/player/player5.bmp
 share/bomberclone/player/player6.bmp
 share/bomberclone/player/player7.bmp
 share/bomberclone/player/playersick.bmp
-share/bomberclone/tileset/cemetery/.xvpics/background.bmp
 share/bomberclone/tileset/cemetery/background.bmp
 share/bomberclone/tileset/cemetery/block96.bmp
 share/bomberclone/tileset/cemetery/map.nfo
@@ -64,8 +75,6 @@ share/bomberclone/tileset/farm/background.bmp
 share/bomberclone/tileset/farm/block96.bmp
 share/bomberclone/tileset/farm/map.nfo
 share/bomberclone/tileset/farm/stone.bmp
-share/bomberclone/tileset/hell/.xvpics/background.bmp
-share/bomberclone/tileset/hell/.xvpics/block.bmp
 share/bomberclone/tileset/hell/background.bmp
 share/bomberclone/tileset/hell/block.bmp
 share/bomberclone/tileset/hell/map.nfo
@@ -92,17 +101,17 @@ share/doc/bomberclone/NEWS
 share/doc/bomberclone/README
 share/doc/bomberclone/TODO
 @dirrm share/doc/bomberclone
+@dirrm share/bomberclone/tileset/uccia_garbage
 @dirrm share/bomberclone/tileset/supermario
+@dirrm share/bomberclone/tileset/sisso_cesso
 @dirrm share/bomberclone/tileset/sheep
 @dirrm share/bomberclone/tileset/radioactive
 @dirrm share/bomberclone/tileset/jungle
-@dirrm share/bomberclone/tileset/hell/.xvpics
 @dirrm share/bomberclone/tileset/hell
 @dirrm share/bomberclone/tileset/farm
 @dirrm share/bomberclone/tileset/default
 @dirrm share/bomberclone/tileset/cucumber
 @dirrm share/bomberclone/tileset/classic
-@dirrm share/bomberclone/tileset/cemetery/.xvpics
 @dirrm share/bomberclone/tileset/cemetery
 @dirrm share/bomberclone/tileset
 @dirrm share/bomberclone/player
