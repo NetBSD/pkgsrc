@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/20 21:45:55 mjl Exp $
+bin/todo
+bin/tda
+bin/tdr
+bin/tdd
+bin/tde
+man/man1/todo.1
