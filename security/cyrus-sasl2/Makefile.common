@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2004/09/12 05:08:49 jlam Exp $
+# $NetBSD: Makefile.common,v 1.26 2004/11/15 21:58:17 jlam Exp $
 #
 # This file is currently included by:
 #
@@ -16,7 +16,7 @@
 # This Makefile fragment should be included _below_ any SASL_PLUGIN
 # definition and _above_ any CONFIGURE_ARGS definitions.
 
-DISTNAME=	cyrus-sasl-2.1.19
+DISTNAME=	cyrus-sasl-2.1.20
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/sasl/
@@ -34,6 +34,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .if defined(SASL_PLUGIN) && !empty(SASL_PLUGIN:M[yY][eE][sS])
 .  include "../../security/cyrus-sasl2/buildlink3.mk"
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.cyrus-sasl}/include/sasl
 .  if defined(DEFAULT_VIEW.cyrus-sasl)
 DEFAULT_VIEW.${PKGBASE}=	${DEFAULT_VIEW.cyrus-sasl}
 .  endif
@@ -47,7 +48,7 @@ USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 MAKE_ENV+=		SHLIBTOOL=${SHLIBTOOL:Q}
 
-HTMLDIR=		${PREFIX}/share/doc/html/cyrus-sasl
+DOCDIR=			${PREFIX}/share/doc/cyrus-sasl
 PLUGINDIR=		${PREFIX}/lib/sasl2
 _PLUGINDIR=		${VIEWBASE}/lib/sasl2
 

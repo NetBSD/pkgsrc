@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2004/10/03 00:18:08 tv Exp $
+# $NetBSD: Makefile,v 1.39 2004/11/15 21:58:16 jlam Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=	3
+PKGREVISION=	# empty
 SVR4_PKGNAME=	csasl
 COMMENT=	Simple Authentication and Security Layer
 
@@ -67,9 +67,9 @@ OWN_DIRS=		${PLUGINDIR}
 MESSAGE_SUBST+=		_PLUGINDIR=${_PLUGINDIR}
 
 post-install:
-	${INSTALL_DATA_DIR} ${HTMLDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKSRC}/doc; for file in *.fig *.html *.txt; do		\
-		${INSTALL_DATA} $$file ${HTMLDIR};			\
+		${INSTALL_DATA} $$file ${DOCDIR};			\
 	done
 
 .include "../../mk/bsd.pkg.mk"
