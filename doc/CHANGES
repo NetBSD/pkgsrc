@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8493 2004/12/28 14:48:03 wiz Exp $
+$NetBSD: CHANGES,v 1.8494 2004/12/28 15:53:54 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6622,3 +6622,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated un-core-ttf to 1.0nb1 [wiz 2004-12-28]
 	Updated un-extra-ttf to 1.0.1nb1 [wiz 2004-12-28]
 	Updated vera-ttf to 1.10nb3 [wiz 2004-12-28]
+	Added pfqueue-0.1.4 [xtraeme 2004-12-28]
