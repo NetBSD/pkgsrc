@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.50 2004/05/12 14:10:18 jschauma Exp $
+# $NetBSD: defs.IRIX.mk,v 1.51 2004/05/31 16:34:46 jschauma Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -77,6 +77,7 @@ SETENV?=	/sbin/env
 SH?=		/bin/ksh
 SHLOCK=		${LOCALBASE}/bin/shlock
 SORT?=		/usr/bin/sort
+SSH_RSHPATH=	/usr/bsd/rsh		# override bsd.pkg.defaults.mk
 SU?=		/sbin/su
 TAIL?=		/usr/bin/tail
 TAR?=		${LOCALBASE}/bin/tar
