@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/01/31 21:55:21 bad Exp $
+
+--- Makefile.orig	Thu Jan 28 18:12:14 1999
++++ Makefile	Thu Jan 28 19:42:21 1999
+@@ -21,7 +21,12 @@
+ 
+ CFLAGS = -g -O2 $(GCCWARNINGS)
+ 
+-liberty : patterns.h $(OBJ) mkpat 
++all: freedom
++
++install: freedom
++	${BSD_INSTALL_PROGRAM} $(NAME) ${PREFIX}/bin
++
++freedom : patterns.h $(OBJ) mkpat 
+ 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+ 
+ matchpat.o : patterns.h
