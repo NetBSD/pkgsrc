@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.840 2001/10/31 18:05:48 zuntum Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.841 2001/11/01 20:37:17 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -535,7 +535,10 @@ PLIST_SUBST+=	OPSYS=${OPSYS}						\
 		PKGNAME=${PKGNAME}					\
 		PKGLOCALEDIR=${PKGLOCALEDIR}				\
 		PKGVERSION=${PKGVERSION:C/nb[0-9]*$//}			\
-		SVR4_PKGNAME=${SVR4_PKGNAME}
+		SVR4_PKGNAME=${SVR4_PKGNAME}				\
+		MKDIR=${MKDIR:Q}					\
+		RMDIR=${RMDIR:Q}					\
+		TRUE=${TRUE:Q}
 .if defined(PERL5_SITELIB)
 PLIST_SUBST+=	PERL5_SITELIB=${PERL5_SITELIB:S/^${LOCALBASE}\///}
 .endif
