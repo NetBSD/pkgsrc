@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2428 2004/11/23 15:00:40 wiz Exp $
+$NetBSD: TODO,v 1.2429 2004/11/23 16:59:02 jschauma Exp $
 
 Suggested new packages
 ======================
@@ -1023,8 +1023,6 @@ Suggested package updates
 	o stlport-4.6.2
 	o subtitleripper-0.3-4
 	o sudo-1.6.8p4
-	o sun-jdk13-1.0.13
-	o sun-jre13-1.0.13
 	o sunclock-1.5
 	o sweep-0.8.3
 	o swfdec-0.3.1
