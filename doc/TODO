@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2246 2004/10/21 10:24:28 wiz Exp $
+$NetBSD: TODO,v 1.2247 2004/10/21 11:13:23 salo Exp $
 
 Suggested new packages
 ======================
@@ -299,7 +299,6 @@ Suggested package updates
 	o lavaps-2.5
 	o lbreakout-2.5.1
 	o leafnode-1.10.6
-	o lftp-3.0.10
 	o libcddb-0.9.6
 	o libidn-0.5.8
 	o libmpeg3-1.5.4
