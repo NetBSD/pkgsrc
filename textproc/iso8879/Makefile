@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/03/14 15:34:36 rh Exp $
+# $NetBSD: Makefile,v 1.3 1999/03/14 19:19:38 rh Exp $
 # FreeBSD Id: Makefile,v 1.9 1999/02/11 16:01:16 jfieber Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=	http://fallout.campusview.indiana.edu/ports/distfiles/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	rh@NetBSD.ORG
+HOMEPAGE=	http://www.iso.ch/cate/d16387.html
 
 BUILD_DEPENDS=	unzip:../../archivers/unzip
 
