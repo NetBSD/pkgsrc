@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.12 2004/04/18 05:37:27 snj Exp $
+# $NetBSD: Makefile,v 1.13 2004/08/17 19:19:27 tv Exp $
 #
 
-DISTNAME=	demime-0.99d.1
-PKGNAME=	demime-0.99.4.1
-PKGREVISION=	1
+DISTNAME=	demime-1.1d
 CATEGORIES=	mail textproc
-MASTER_SITES=	${MASTER_SITE_LOCAL:=${PKGNAME_NOREV}/}			\
+MASTER_SITES=	${MASTER_SITE_LOCAL:=${PKGNAME_NOREV}/} \
+		http://majordomo.squawk.com/njs/demime/ \
 		http://scifi.squawk.com/
-DISTFILES=	demime.stable demime_junkmail.cf
+DISTFILES=	${DISTNAME:S/-/./} \
+		demime_junkmail.cf
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://scifi.squawk.com/demime.html
@@ -30,7 +30,7 @@ CONF_FILES=	${EGDIR}/demime_junkmail.cf ${PKG_SYSCONFDIR}/demime_junkmail.cf
 
 do-extract:
 	@${MKDIR} ${WRKSRC}
-	@${CP} ${DISTDIR}/${DIST_SUBDIR}/demime.stable ${WRKSRC}/demime.stable
+	@${CP} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME:S/-/./} ${WRKSRC}/demime.stable
 
 post-patch:
 	${SED} -e 's|/usr/lib/majordomo/demime_junkmail.cf|${PKG_SYSCONFDIR}/demime_junkmail.cf|g' \
