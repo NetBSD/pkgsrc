@@ -126,9 +126,9 @@ lib/X11/xmcd/config/.tbl/Teac
 lib/X11/xmcd/config/.tbl/Toshiba
 lib/X11/xmcd/config/.tbl/Yamaha
 lib/X11/xmcd/config/config.sh
-man/man1/xmcd.1.gz
-man/man1/cda.1.gz
-man/man1/wm2xmcd.1.gz
+man/cat1/xmcd.0
+man/cat1/cda.0
+man/cat1/wm2xmcd.0
 @dirrm lib/X11/xmcd/pixmaps
 @dirrm lib/X11/xmcd/help
 @dirrm lib/X11/xmcd/config/.tbl
