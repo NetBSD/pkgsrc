@@ -1,9 +1,0 @@
-# $NetBSD: Makefile.custom,v 1.1 2003/01/05 19:26:19 jlam Exp $
-#
-# This file is included by Makefile.global, which is included by every
-# sub-Makefile in the build tree.  Makefiles for shared libraries include
-# Makefile.global then Makefile.shlib.
-
-ifdef INSTALLED_LIBPQ
-libpq = -lpq
-endif
