@@ -1,11 +1,11 @@
-$NetBSD: patch-ac,v 1.4 2001/08/26 20:44:24 hubertf Exp $
+$NetBSD: patch-ac,v 1.5 2001/08/28 14:58:16 skrll Exp $
 
---- doc/standards.texi.orig	Tue Jul 17 18:34:55 2001
-+++ doc/standards.texi
+--- standards.texi-orig	Tue Jan  5 14:29:22 1999
++++ standards.texi	Wed Jan  6 16:39:21 1999
 @@ -4,6 +4,7 @@
  @settitle GNU Coding Standards
  @c This date is automagically updated when you save this file:
- @set lastupdate March 23, 2001
+ @set lastupdate August 26, 1998
 +@dircategory Programming & development tools
  @c %**end of header
  
