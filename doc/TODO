@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.144 2003/01/06 10:52:56 uebayasi Exp $
+$NetBSD: TODO,v 1.145 2003/01/06 13:59:28 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -135,6 +135,7 @@ Suggested package updates
 	o grepmail-4.91
 	o grub-0.93
 	o gsed-4.0.5
+	o gtetrinet-0.5.0
 	o gtk---2.1.0
 	o htmldoc-1.8.23
 	o horde-2.1 [pkg/19497]
