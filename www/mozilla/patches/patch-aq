@@ -1,0 +1,23 @@
+$NetBSD: patch-aq,v 1.1 2001/01/16 16:01:24 taya Exp $
+
+diff -ru ../Orig/mozilla/security/nss/lib/freebl/Makefile ./security/nss/lib/freebl/Makefile
+--- ../Orig/mozilla/security/nss/lib/freebl/Makefile	Tue Oct  3 07:52:43 2000
++++ ./security/nss/lib/freebl/Makefile	Mon Jan 15 15:37:55 2001
+@@ -200,6 +200,17 @@
+ MPI_OBJS = $(addprefix $(OBJDIR)/$(PROG_PREFIX), $(MPI_SRCS:.c=$(OBJ_SUFFIX)))
+ MPI_OBJS += $(addprefix $(OBJDIR)/$(PROG_PREFIX), $(MPI_USERS:.c=$(OBJ_SUFFIX)))
+ 
++#
++# for NetBSD pkgsrc system
++#	NetBSD pkgsrc set env. variable 'CFLAGS'.
++#	This cause CFLAG inherit from config/autoconfig.mk 
++#	CFLAG contains -pedantic and fail to compile dh.c
++#	SO filter-out -pedantic from CFLAGS
++#
++ifeq ($(OS_TARGET),NetBSD)
++	CFLAGS := $(filter-out -pedantic,$(CFLAGS))
++endif
++
+ $(MPI_OBJS): $(MPI_HDRS) primes.c
+ 
+ ifeq ($(SYSV_SPARC),1)

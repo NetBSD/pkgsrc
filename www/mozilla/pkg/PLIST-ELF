@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST-ELF,v 1.7 2000/12/15 07:16:23 martin Exp $
+@comment $NetBSD: PLIST-ELF,v 1.8 2001/01/16 16:01:24 taya Exp $
 bin/mozilla
 @comment begin PROGRAMS
 lib/mozilla/mozilla-bin
 lib/mozilla/nsTestSample
 lib/mozilla/nsinstall
+lib/mozilla/psm
 lib/mozilla/regExport
 lib/mozilla/regchrome
 lib/mozilla/regxpcom
@@ -12,9 +13,11 @@ lib/mozilla/vreg
 lib/mozilla/xpidl
 lib/mozilla/xpt_dump
 lib/mozilla/xpt_link
+lib/mozilla/xpcshell
 @comment end PROGRAMS
 @comment begin SCRIPTS
 lib/mozilla/mozilla-config
+lib/mozilla/start-psm
 @comment end SCRIPTS
 @comment begin DSO
 lib/mozilla/components/libabsyncsvc.so
@@ -93,6 +96,7 @@ lib/mozilla/components/libwidget_gtk.so
 lib/mozilla/components/libxmlextras.so
 lib/mozilla/components/libxpconnect.so
 lib/mozilla/components/libxpinstall.so
+lib/mozilla/components/libxremote_client.so
 lib/mozilla/libcmt.so
 lib/mozilla/libgkgfx.so
 lib/mozilla/libgtkembedmoz.so
@@ -103,6 +107,7 @@ lib/mozilla/libjsj.so
 lib/mozilla/libmozjs.so
 lib/mozilla/libmsgbaseutil.so
 lib/mozilla/libnspr4.so
+lib/mozilla/libnssckbi.so
 lib/mozilla/libnullplugin.so
 lib/mozilla/libplc4.so
 lib/mozilla/libplds4.so
@@ -129,6 +134,7 @@ lib/mozilla/components/appshell.xpt
 lib/mozilla/components/autocomplete.xpt
 lib/mozilla/components/bookmarks.xpt
 lib/mozilla/components/caps.xpt
+lib/mozilla/components/chardet.xpt
 lib/mozilla/components/chatzilla-service.js
 lib/mozilla/components/chrome.xpt
 lib/mozilla/components/cookieviewer.xpt
@@ -240,14 +246,35 @@ lib/mozilla/defaults/profile/panels.rdf
 lib/mozilla/defaults/profile/search.rdf
 lib/mozilla/defaults/wallet/DistinguishedSchema.tbl
 lib/mozilla/defaults/wallet/FieldSchema.tbl
+lib/mozilla/defaults/wallet/PositionalSchema.tbl
 lib/mozilla/defaults/wallet/SchemaConcat.tbl
-lib/mozilla/defaults/wallet/URLFieldSchema.tbl
+lib/mozilla/defaults/wallet/SchemaStrings.tbl
+lib/mozilla/defaults/wallet/StateSchema.tbl
 lib/mozilla/dtd/mathml.dtd
 lib/mozilla/gtkEmbed
 lib/mozilla/icons/mozicon16.xpm
 lib/mozilla/icons/mozicon50.xpm
+lib/mozilla/psmdata/doc/04digsgn.gif
+lib/mozilla/psmdata/doc/06pcrypt.gif
+lib/mozilla/psmdata/doc/bannerrn.gif
+lib/mozilla/psmdata/doc/cartbanner.gif
+lib/mozilla/psmdata/doc/cmcjavascriptapi.html
+lib/mozilla/psmdata/doc/contents.htm
+lib/mozilla/psmdata/doc/glossary.htm
+lib/mozilla/psmdata/doc/help.htm
+lib/mozilla/psmdata/doc/next.gif
+lib/mozilla/psmdata/doc/prev.gif
+lib/mozilla/psmdata/doc/psmtest.html
+lib/mozilla/psmdata/doc/release_notes.html
+lib/mozilla/psmdata/ui/psm_bin.properties
+lib/mozilla/psmdata/ui/psm_doc.properties
+lib/mozilla/psmdata/ui/psm_text.properties
+lib/mozilla/psmdata/ui/psm_ui.properties
 lib/mozilla/res/acceptlanguage.properties
 lib/mozilla/res/arrow.gif
+lib/mozilla/res/builtin/htmlBindings.xml
+lib/mozilla/res/builtin/platformHTMLBindings.xml
+lib/mozilla/res/builtin/xbl-forms.css
 lib/mozilla/res/charsetData.properties
 lib/mozilla/res/charsetalias.properties
 lib/mozilla/res/entityTables/html40Latin1.properties
@@ -255,6 +282,9 @@ lib/mozilla/res/entityTables/html40Special.properties
 lib/mozilla/res/entityTables/html40Symbols.properties
 lib/mozilla/res/entityTables/htmlEntityVersions.properties
 lib/mozilla/res/entityTables/transliterate.properties
+lib/mozilla/res/forms.css
+lib/mozilla/res/gfx/icon_0.gif
+lib/mozilla/res/gfx/icon_1.gif
 lib/mozilla/res/html.css
 lib/mozilla/res/html/broken-image.gif
 lib/mozilla/res/html/gopher-audio.gif
@@ -303,28 +333,19 @@ lib/mozilla/res/samples/xpconnect-sample.html
 lib/mozilla/res/samples/xpmenu.xul
 lib/mozilla/res/ua.css
 lib/mozilla/res/unixcharset.properties
-lib/mozilla/searchplugins/AOLSearch.gif
-lib/mozilla/searchplugins/AOLSearch.src
-lib/mozilla/searchplugins/ClassifiedPlus.gif
-lib/mozilla/searchplugins/ClassifiedPlus.src
-lib/mozilla/searchplugins/CompuServe.jpg
-lib/mozilla/searchplugins/CompuServe.src
-lib/mozilla/searchplugins/ICQ.gif
-lib/mozilla/searchplugins/ICQ.src
-lib/mozilla/searchplugins/Music_Artist.gif
-lib/mozilla/searchplugins/Music_Artist.src
 lib/mozilla/searchplugins/NetscapeSearch.gif
 lib/mozilla/searchplugins/NetscapeSearch.src
-lib/mozilla/searchplugins/Shareware.gif
-lib/mozilla/searchplugins/Shareware.src
-lib/mozilla/searchplugins/ShopNetscape.gif
-lib/mozilla/searchplugins/ShopNetscape.src
-lib/mozilla/searchplugins/Tech_News.gif
-lib/mozilla/searchplugins/Tech_News.src
+lib/mozilla/searchplugins/bugzilla.gif
+lib/mozilla/searchplugins/bugzilla.src
+lib/mozilla/searchplugins/dmoz.gif
+lib/mozilla/searchplugins/dmoz.src
 lib/mozilla/searchplugins/google.gif
 lib/mozilla/searchplugins/google.src
+lib/mozilla/searchplugins/lxrmozilla.gif
+lib/mozilla/searchplugins/lxrmozilla.src
+lib/mozilla/searchplugins/mozilla.gif
+lib/mozilla/searchplugins/mozilla.src
 lib/mozilla/splash.xpm
-lib/mozilla/xpcshell
 @comment end DATA
 @exec env MOZILLA_FIVE_HOME=%D/lib/mozilla %D/lib/mozilla/regxpcom
 @exec env MOZILLA_FIVE_HOME=%D/lib/mozilla %D/lib/mozilla/regchrome
@@ -355,8 +376,13 @@ lib/mozilla/xpcshell
 @dirrm lib/mozilla/res/samples
 @dirrm lib/mozilla/res/rdf
 @dirrm lib/mozilla/res/html
+@dirrm lib/mozilla/res/gfx
 @dirrm lib/mozilla/res/entityTables
+@dirrm lib/mozilla/res/builtin
 @dirrm lib/mozilla/res
+@dirrm lib/mozilla/psmdata/ui
+@dirrm lib/mozilla/psmdata/doc
+@dirrm lib/mozilla/psmdata
 @dirrm lib/mozilla/plugins
 @dirrm lib/mozilla/icons
 @dirrm lib/mozilla/dtd
