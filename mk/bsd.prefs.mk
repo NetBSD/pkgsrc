@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.124 2003/09/12 16:07:09 grant Exp $
+# $NetBSD: bsd.prefs.mk,v 1.125 2003/09/13 05:55:15 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -334,6 +334,13 @@ PKG_DELETE?=		${PKG_DELETE_CMD} ${PKGTOOLS_ARGS}
 PKG_INFO?=		${PKG_INFO_CMD} ${PKGTOOLS_ARGS}
 PKG_VIEW?=		${PKG_VIEW_CMD} ${PKG_VIEW_ARGS}
 LINKFARM?=		${LINKFARM_CMD}
+
+# "${PKG_BEST_EXISTS} pkgpattern" prints out the name of the installed
+# package that best matches pkgpattern.  Use this instead of
+# "${PKG_INFO} -e pkgpattern" if the latter would return more than one
+# package name.
+#
+PKG_BEST_EXISTS?=	${PKG_ADMIN} -b -d ${_PKG_DBDIR} -s "" lsbest
 
 .ifndef PKGTOOLS_VERSION
 PKGTOOLS_VERSION!=	${PKG_INFO_CMD} -V 2>/dev/null || echo 20010302
