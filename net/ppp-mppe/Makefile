@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/11/12 03:39:42 jschauma Exp $
+# $NetBSD: Makefile,v 1.22 2003/11/12 05:19:40 cube Exp $
 
 DISTNAME=	ppp-2.3.9
 PKGNAME=	ppp-mppe-2.3.9
@@ -14,7 +14,7 @@ CONFLICTS+=	ppp-2.*
 
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 
-OPENSSL_VERS=	0.9.6k
+OPENSSL_VERS=	0.9.6l
 OPENSSL_SRC=	${_PKGSRCDIR}/security/openssl/${WRKDIR:T}/openssl-${OPENSSL_VERS}
 
 HAS_CONFIGURE=  yes
