@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8787 2005/01/17 12:58:07 martti Exp $
+$NetBSD: CHANGES,v 1.8788 2005/01/17 13:22:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -386,3 +386,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated xfce4-iconbox to 4.2.0 [martti 2005-01-17]
 	Updated xfce4-icon-theme to 4.2.0 [martti 2005-01-17]
 	Updated xfce4-mixer to 4.2.0 [martti 2005-01-17]
+	Added openexr-1.2.1 [adam 2005-01-17]
