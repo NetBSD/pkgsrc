@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.1 2002/10/21 07:31:23 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2005/02/19 18:43:31 wiz Exp $
 
---- Makefile.PL.orig	Mon Aug 26 06:53:00 2002
+--- Makefile.PL.orig	2004-12-04 21:06:31.000000000 +0100
 +++ Makefile.PL
-@@ -35,9 +35,7 @@ WriteMakefile(
+@@ -50,9 +50,7 @@ WriteMakefile(
+     VERSION_FROM    => "lib/$PACKAGE_FILE.pm", # finds $VERSION
      PREREQ_PM       => { 
                          Test::Harness   => 2.03,
-                         File::Spec      => 0.6,
 -                       },
 -    # Added to the core somewhere around 5.7.2.
 -    INSTALLDIRS     => $] >= 5.00702 ? 'perl' : 'site'
