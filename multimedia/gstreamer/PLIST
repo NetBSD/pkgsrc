@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/10/28 14:21:52 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/11/02 21:20:59 jmmv Exp $
 bin/gst-complete
 bin/gst-complete-0.8
 bin/gst-compprep
@@ -174,12 +174,8 @@ share/doc/gstreamer-0.8/gstreamer-gstconfig.html
 share/doc/gstreamer-0.8/gstreamer-hierarchy.html
 share/doc/gstreamer-0.8/gstreamer-support.html
 share/doc/gstreamer-0.8/gstreamer.html
-share/doc/gstreamer-0.8/home.png
 share/doc/gstreamer-0.8/index.html
 share/doc/gstreamer-0.8/index.sgml
-share/doc/gstreamer-0.8/left.png
-share/doc/gstreamer-0.8/right.png
-share/doc/gstreamer-0.8/up.png
 share/doc/gstreamer-libs-0.8/api-index.html
 share/doc/gstreamer-libs-0.8/gstreamer-libs-0.8.devhelp
 share/doc/gstreamer-libs-0.8/gstreamer-libs-gstbytestream.html
@@ -188,12 +184,8 @@ share/doc/gstreamer-libs-0.8/gstreamer-libs-gstdataprotocol.html
 share/doc/gstreamer-libs-0.8/gstreamer-libs-gstgetbits.html
 share/doc/gstreamer-libs-0.8/gstreamer-libs-hierarchy.html
 share/doc/gstreamer-libs-0.8/gstreamer-libs.html
-share/doc/gstreamer-libs-0.8/home.png
 share/doc/gstreamer-libs-0.8/index.html
 share/doc/gstreamer-libs-0.8/index.sgml
-share/doc/gstreamer-libs-0.8/left.png
-share/doc/gstreamer-libs-0.8/right.png
-share/doc/gstreamer-libs-0.8/up.png
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/gstreamer-0.8.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gstreamer-0.8.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gstreamer-0.8.mo
