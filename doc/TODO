@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.38 2002/12/07 11:05:20 jmmv Exp $
+$NetBSD: TODO,v 1.39 2002/12/07 15:09:15 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -66,7 +66,6 @@ Suggested package updates
 	o amaya-7.0
 	o anjuta-1.0.0
 	o aspell-0.50.3
-	o atari800-1.2.5
 	o auctex-11.13
 	o aumix-2.8
 	o autotrace-0.31.1
