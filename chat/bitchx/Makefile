@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/11/26 11:38:14 adam Exp $
+# $NetBSD: Makefile,v 1.33 2004/11/27 06:44:00 adrianp Exp $
 
 DISTNAME=	ircii-pana-1.1-final
 PKGNAME=	bitchx-1.1
@@ -14,11 +14,16 @@ COMMENT=	IRC client based on ircII
 # This package is not even remotely 64-bit clean
 NOT_FOR_PLATFORM=	*-*-alpha *-*-sparc64 *-*-x86_64
 
-WRKSRC=		${WRKDIR}/BitchX
+WRKSRC=			${WRKDIR}/BitchX
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS=		--with-ssl
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Darwin"
+CFLAGS+=	-DBIND_8_COMPAT
+.endif
 
 .if defined(BITCHX_WITH_GTK) && !empty(BITCHX_WITH_GTK:M[Yy][Ee][Ss])
 .include "../../graphics/imlib/buildlink3.mk"
