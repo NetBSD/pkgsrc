@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7246 2004/09/25 04:52:29 rh Exp $
+$NetBSD: CHANGES,v 1.7247 2004/09/25 13:45:29 tv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4425,3 +4425,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added mailscanner-4.30.3.2 [grant 2004-09-25]
 	Updated mathomatic to 11.3f [minskim 2004-09-25]
 	Updated gnustep to 1.10.0 [rh 2004-09-25]
+	Updated entropy to 0.8.2.418 [tv 2004-09-25]
