@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:37 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/04/29 21:41:41 rh Exp $
 include/mpeg3/libmpeg3.h
+bin/mpeg3dump
+bin/mpeg3cat
+bin/mpeg3toc
+bin/mpeg3split
 include/mpeg3/bitstream.h
 include/mpeg3/mpeg3atrack.h
 include/mpeg3/mpeg3css.h
