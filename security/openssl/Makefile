@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2002/08/10 11:08:18 fredb Exp $
+# $NetBSD: Makefile,v 1.57 2002/08/15 19:22:10 fredb Exp $
 
 DISTNAME=		openssl-0.9.6g
 SVR4_PKGNAME=		ossl
@@ -8,9 +8,6 @@ MASTER_SITES=		ftp://ftp.openssl.org/source/
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.openssl.org/
 COMMENT=		Secure Socket Layer and cryptographic library
-
-PATCH_SITES=		${MASTER_SITE_LOCAL}
-PATCHFILES=		openssl-0.9.6g-20020810-netbsd.patch.gz
 
 USE_PERL5=		build
 
@@ -50,17 +47,27 @@ test: all
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
+PATCH_SITES=		${MASTER_SITE_LOCAL}
+PATCHFILES=		openssl-0.9.6g-20020810-netbsd.patch.gz
+
 PKG_SYSCONFDIR.${PKGBASE}?=	/etc/openssl
-.endif
+
+. if !exists(/usr/libexec/ld.elf_so) && !exists(/usr/libexec/ld.so)
+IGNORE=			${PKGNAME} requires shared object support
+. endif
+
+# This hack goes away, once we formally de-support NetBSD-1.4.2.
+. if ${OS_VERSION:M1.4.[12]} != ""
+post-patch:
+	${PATCH} ${PATCH_ARGS} < ${FILESDIR}/patch-netbsd-1.4.2
+. endif	# ${OS_VERSION} matches 1.4.[12]
+
+.endif	# ${OPSYS} == "NetBSD"
 
 .if ${OPSYS} == "Darwin"
 LD_PATH_VARNAME=	DYLD_LIBRARY_PATH
 .else
 LD_PATH_VARNAME=	LD_LIBRARY_PATH
-.endif
-
-.if ${OPSYS} == "NetBSD" && !exists(/usr/libexec/ld.elf_so) && !exists(/usr/libexec/ld.so)
-IGNORE=			${PKGNAME} requires shared object support
 .endif
 
 .if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
