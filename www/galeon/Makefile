@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2002/08/29 20:00:20 drochner Exp $
+# $NetBSD: Makefile,v 1.35 2002/09/04 14:47:41 agc Exp $
 
 DISTNAME=	galeon-1.2.5
 CATEGORIES=	www
@@ -38,11 +38,9 @@ CONFIGURE_ARGS+= --with-mozilla-snapshot=trunk
 
 MOZ_LIBDIR=     ${PREFIX}/lib/mozilla
 LDFLAGS+=       -Wl,-R${MOZ_LIBDIR}
-.if(${OBJECT_FMT} == ELF)
-LDFLAGS+=	-export-dynamic
-.else
-LIBS+=		-lstdc++
-.endif
+
+# Ensure we export symbols in the linked shared object.
+LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
 pre-install:
 	${X11PREFIX}/bin/gconftool --shutdown
