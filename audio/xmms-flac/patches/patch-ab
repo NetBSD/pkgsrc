@@ -1,0 +1,151 @@
+--- src/plugin_common/Makefile.in.orig	2003-01-26 05:42:38.000000000 +1100
++++ src/plugin_common/Makefile.in	2003-10-31 14:41:00.000000000 +1100
+@@ -90,6 +90,7 @@
+ LN_S = @LN_S@
+ LTLIB = @LTLIB@
+ LTLIBICONV = @LTLIBICONV@
++LTLIBOBJS = @LTLIBOBJS@
+ MAINT = @MAINT@
+ NASM = @NASM@
+ OBJDUMP = @OBJDUMP@
+@@ -121,7 +122,7 @@
+ 
+ INCLUDES = -I$(top_srcdir)/include @ID3LIB_CFLAGS@
+ 
+-noinst_LIBRARIES = libplugin_common.a
++noinst_LTLIBRARIES = libplugin_common.la
+ 
+ noinst_HEADERS = \
+ 	all.h \
+@@ -136,7 +137,7 @@
+ 	vorbiscomment.h
+ 
+ 
+-libplugin_common_a_SOURCES = \
++libplugin_common_la_SOURCES = \
+ 	canonical_tag.c \
+ 	charset.c \
+ 	dither.c \
+@@ -155,15 +156,14 @@
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES =
+-LIBRARIES = $(noinst_LIBRARIES)
++LTLIBRARIES = $(noinst_LTLIBRARIES)
+ 
+-libplugin_common_a_AR = $(AR) cru
+-libplugin_common_a_LIBADD =
+-am_libplugin_common_a_OBJECTS = canonical_tag.$(OBJEXT) \
+-	charset.$(OBJEXT) dither.$(OBJEXT) id3v1.$(OBJEXT) \
+-	id3v2.$(OBJEXT) replaygain_synthesis.$(OBJEXT) \
+-	vorbiscomment.$(OBJEXT)
+-libplugin_common_a_OBJECTS = $(am_libplugin_common_a_OBJECTS)
++libplugin_common_la_LIBADD =
++am_libplugin_common_la_OBJECTS = canonical_tag.lo \
++	charset.lo dither.lo id3v1.lo \
++	id3v2.lo replaygain_synthesis.lo \
++	vorbiscomment.lo
++libplugin_common_la_OBJECTS = $(am_libplugin_common_la_OBJECTS)
+ 
+ DEFS = @DEFS@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+@@ -172,11 +172,11 @@
+ LIBS = @LIBS@
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+ am__depfiles_maybe = depfiles
+-@AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/canonical_tag.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/charset.Po ./$(DEPDIR)/dither.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/id3v1.Po ./$(DEPDIR)/id3v2.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/replaygain_synthesis.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/vorbiscomment.Po
++@AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/canonical_tag.Plo \
++@AMDEP_TRUE@	./$(DEPDIR)/charset.Plo ./$(DEPDIR)/dither.Plo \
++@AMDEP_TRUE@	./$(DEPDIR)/id3v1.Plo ./$(DEPDIR)/id3v2.Plo \
++@AMDEP_TRUE@	./$(DEPDIR)/replaygain_synthesis.Plo \
++@AMDEP_TRUE@	./$(DEPDIR)/vorbiscomment.Plo
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
+@@ -185,7 +185,7 @@
+ LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ CFLAGS = @CFLAGS@
+-DIST_SOURCES = $(libplugin_common_a_SOURCES)
++DIST_SOURCES = $(libplugin_common_la_SOURCES)
+ HEADERS = $(noinst_HEADERS)
+ 
+ 
+@@ -195,7 +195,7 @@
+ 	uninstall-recursive check-recursive installcheck-recursive
+ DIST_COMMON = README $(noinst_HEADERS) Makefile.am Makefile.in
+ DIST_SUBDIRS = $(SUBDIRS)
+-SOURCES = $(libplugin_common_a_SOURCES)
++SOURCES = $(libplugin_common_la_SOURCES)
+ 
+ all: all-recursive
+ 
+@@ -209,12 +209,10 @@
+ 
+ AR = ar
+ 
+-clean-noinstLIBRARIES:
+-	-test -z "$(noinst_LIBRARIES)" || rm -f $(noinst_LIBRARIES)
+-libplugin_common.a: $(libplugin_common_a_OBJECTS) $(libplugin_common_a_DEPENDENCIES) 
+-	-rm -f libplugin_common.a
+-	$(libplugin_common_a_AR) libplugin_common.a $(libplugin_common_a_OBJECTS) $(libplugin_common_a_LIBADD)
+-	$(RANLIB) libplugin_common.a
++clean-noinstLTLIBRARIES:
++	-test -z "$(noinst_LTLIBRARIES)" || rm -f $(noinst_LTLIBRARIES)
++libplugin_common.la: $(libplugin_common_la_OBJECTS) $(libplugin_common_la_DEPENDENCIES) 
++	$(LINK) $(libplugin_common_la_LDFLAGS) $(libplugin_common_la_OBJECTS) $(libplugin_common_la_LIBADD) $(LIBS)
+ 
+ mostlyclean-compile:
+ 	-rm -f *.$(OBJEXT) core *.core
+@@ -222,13 +220,13 @@
+ distclean-compile:
+ 	-rm -f *.tab.c
+ 
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/canonical_tag.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/charset.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dither.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/id3v1.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/id3v2.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/replaygain_synthesis.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/vorbiscomment.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/canonical_tag.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/charset.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dither.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/id3v1.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/id3v2.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/replaygain_synthesis.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/vorbiscomment.Plo@am__quote@
+ 
+ distclean-depend:
+ 	-rm -rf ./$(DEPDIR)
+@@ -398,7 +396,7 @@
+ 	done
+ check-am: all-am
+ check: check-recursive
+-all-am: Makefile $(LIBRARIES) $(HEADERS)
++all-am: Makefile $(LTLIBRARIES) $(HEADERS)
+ installdirs: installdirs-recursive
+ installdirs-am:
+ 
+@@ -428,7 +426,7 @@
+ 	@echo "it deletes files that may require special tools to rebuild."
+ clean: clean-recursive
+ 
+-clean-am: clean-generic clean-libtool clean-noinstLIBRARIES \
++clean-am: clean-generic clean-libtool clean-noinstLTLIBRARIES \
+ 	mostlyclean-am
+ 
+ distclean: distclean-recursive
+@@ -468,7 +466,7 @@
+ uninstall-info: uninstall-info-recursive
+ 
+ .PHONY: $(RECURSIVE_TARGETS) GTAGS all all-am check check-am clean \
+-	clean-generic clean-libtool clean-noinstLIBRARIES \
++	clean-generic clean-libtool clean-noinstLTLIBRARIES \
+ 	clean-recursive distclean distclean-compile distclean-depend \
+ 	distclean-generic distclean-libtool distclean-recursive \
+ 	distclean-tags distdir dvi dvi-am dvi-recursive info info-am \

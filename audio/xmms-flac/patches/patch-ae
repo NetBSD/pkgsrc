@@ -1,0 +1,121 @@
+--- src/share/utf8/Makefile.in.orig	2003-10-31 14:16:13.000000000 +1100
++++ src/share/utf8/Makefile.in	2003-10-31 14:21:14.000000000 +1100
+@@ -90,6 +90,7 @@
+ LN_S = @LN_S@
+ LTLIB = @LTLIB@
+ LTLIBICONV = @LTLIBICONV@
++LTLIBOBJS = @LTLIBOBJS@
+ MAINT = @MAINT@
+ NASM = @NASM@
+ OBJDUMP = @OBJDUMP@
+@@ -119,9 +120,9 @@
+ 
+ INCLUDES = -I$(top_srcdir)/include/share
+ 
+-noinst_LIBRARIES = libutf8.a
++noinst_LTLIBRARIES = libutf8.la
+ 
+-libutf8_a_SOURCES = charset.c charset.h iconvert.c utf8.c
++libutf8_la_SOURCES = charset.c charset.h iconvert.c utf8.c
+ 
+ EXTRA_DIST = \
+ 	Makefile.lite \
+@@ -135,13 +136,12 @@
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES =
+-LIBRARIES = $(noinst_LIBRARIES)
++LTLIBRARIES = $(noinst_LTLIBRARIES)
+ 
+-libutf8_a_AR = $(AR) cru
+-libutf8_a_LIBADD =
+-am_libutf8_a_OBJECTS = charset.$(OBJEXT) iconvert.$(OBJEXT) \
+-	utf8.$(OBJEXT)
+-libutf8_a_OBJECTS = $(am_libutf8_a_OBJECTS)
++libutf8_la_LIBADD =
++am_libutf8_la_OBJECTS = charset.lo iconvert.lo \
++	utf8.lo
++libutf8_la_OBJECTS = $(am_libutf8_la_OBJECTS)
+ 
+ DEFS = @DEFS@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+@@ -150,8 +150,8 @@
+ LIBS = @LIBS@
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+ am__depfiles_maybe = depfiles
+-@AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/charset.Po ./$(DEPDIR)/iconvert.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/utf8.Po
++@AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/charset.Plo ./$(DEPDIR)/iconvert.Plo \
++@AMDEP_TRUE@	./$(DEPDIR)/utf8.Plo
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
+@@ -160,9 +160,9 @@
+ LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ CFLAGS = @CFLAGS@
+-DIST_SOURCES = $(libutf8_a_SOURCES)
++DIST_SOURCES = $(libutf8_la_SOURCES)
+ DIST_COMMON = Makefile.am Makefile.in
+-SOURCES = $(libutf8_a_SOURCES)
++SOURCES = $(libutf8_la_SOURCES)
+ 
+ all: all-am
+ 
+@@ -176,22 +176,19 @@
+ 
+ AR = ar
+ 
+-clean-noinstLIBRARIES:
+-	-test -z "$(noinst_LIBRARIES)" || rm -f $(noinst_LIBRARIES)
+-libutf8.a: $(libutf8_a_OBJECTS) $(libutf8_a_DEPENDENCIES) 
+-	-rm -f libutf8.a
+-	$(libutf8_a_AR) libutf8.a $(libutf8_a_OBJECTS) $(libutf8_a_LIBADD)
+-	$(RANLIB) libutf8.a
+-
++clean-noinstLTLIBRARIES:
++	-test -z "$(noinst_LTLIBRARIES)" || rm -f $(noinst_LTLIBRARIES)
++libutf8.la: $(libutf8_la_OBJECTS) $(libutf8_la_DEPENDENCIES) 
++	$(LINK) $(libutf8_la_LDFLAGS) $(libutf8_la_OBJECTS) $(libutf8_la_LIBADD) $(LIBS)
+ mostlyclean-compile:
+ 	-rm -f *.$(OBJEXT) core *.core
+ 
+ distclean-compile:
+ 	-rm -f *.tab.c
+ 
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/charset.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/iconvert.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/utf8.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/charset.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/iconvert.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/utf8.Plo@am__quote@
+ 
+ distclean-depend:
+ 	-rm -rf ./$(DEPDIR)
+@@ -288,7 +285,7 @@
+ 	done
+ check-am: all-am
+ check: check-am
+-all-am: Makefile $(LIBRARIES)
++all-am: Makefile $(LTLIBRARIES)
+ 
+ installdirs:
+ 
+@@ -318,7 +315,7 @@
+ 	@echo "it deletes files that may require special tools to rebuild."
+ clean: clean-am
+ 
+-clean-am: clean-generic clean-libtool clean-noinstLIBRARIES \
++clean-am: clean-generic clean-libtool clean-noinstLTLIBRARIES \
+ 	mostlyclean-am
+ 
+ distclean: distclean-am
+@@ -356,7 +353,7 @@
+ uninstall-am: uninstall-info-am
+ 
+ .PHONY: GTAGS all all-am check check-am clean clean-generic \
+-	clean-libtool clean-noinstLIBRARIES distclean distclean-compile \
++	clean-libtool clean-noinstLTLIBRARIES distclean distclean-compile \
+ 	distclean-depend distclean-generic distclean-libtool \
+ 	distclean-tags distdir dvi dvi-am info info-am install \
+ 	install-am install-data install-data-am install-exec \

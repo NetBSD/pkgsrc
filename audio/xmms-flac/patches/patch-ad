@@ -1,0 +1,113 @@
+--- src/share/gain_analysis/Makefile.in.orig	2003-10-31 14:09:30.000000000 +1100
++++ src/share/gain_analysis/Makefile.in	2003-10-31 14:14:51.000000000 +1100
+@@ -90,6 +90,7 @@
+ LN_S = @LN_S@
+ LTLIB = @LTLIB@
+ LTLIBICONV = @LTLIBICONV@
++LTLIBOBJS = @LTLIBOBJS@
+ MAINT = @MAINT@
+ NASM = @NASM@
+ OBJDUMP = @OBJDUMP@
+@@ -119,9 +120,9 @@
+ 
+ INCLUDES = -I$(top_srcdir)/include/share
+ 
+-noinst_LIBRARIES = libgain_analysis.a
++noinst_LTLIBRARIES = libgain_analysis.la
+ 
+-libgain_analysis_a_SOURCES = gain_analysis.c
++libgain_analysis_la_SOURCES = gain_analysis.c
+ 
+ EXTRA_DIST = \
+ 	Makefile.lite \
+@@ -131,12 +132,11 @@
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES =
+-LIBRARIES = $(noinst_LIBRARIES)
++LTLIBRARIES = $(noinst_LTLIBRARIES)
+ 
+-libgain_analysis_a_AR = $(AR) cru
+-libgain_analysis_a_LIBADD =
+-am_libgain_analysis_a_OBJECTS = gain_analysis.$(OBJEXT)
+-libgain_analysis_a_OBJECTS = $(am_libgain_analysis_a_OBJECTS)
++libgain_analysis_la_LIBADD =
++am_libgain_analysis_la_OBJECTS = gain_analysis.lo
++libgain_analysis_la_OBJECTS = $(am_libgain_analysis_la_OBJECTS)
+ 
+ DEFS = @DEFS@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+@@ -145,7 +145,7 @@
+ LIBS = @LIBS@
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+ am__depfiles_maybe = depfiles
+-@AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/gain_analysis.Po
++@AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/gain_analysis.Plo
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
+@@ -154,9 +154,9 @@
+ LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ CFLAGS = @CFLAGS@
+-DIST_SOURCES = $(libgain_analysis_a_SOURCES)
++DIST_SOURCES = $(libgain_analysis_la_SOURCES)
+ DIST_COMMON = Makefile.am Makefile.in
+-SOURCES = $(libgain_analysis_a_SOURCES)
++SOURCES = $(libgain_analysis_la_SOURCES)
+ 
+ all: all-am
+ 
+@@ -170,20 +170,17 @@
+ 
+ AR = ar
+ 
+-clean-noinstLIBRARIES:
+-	-test -z "$(noinst_LIBRARIES)" || rm -f $(noinst_LIBRARIES)
+-libgain_analysis.a: $(libgain_analysis_a_OBJECTS) $(libgain_analysis_a_DEPENDENCIES) 
+-	-rm -f libgain_analysis.a
+-	$(libgain_analysis_a_AR) libgain_analysis.a $(libgain_analysis_a_OBJECTS) $(libgain_analysis_a_LIBADD)
+-	$(RANLIB) libgain_analysis.a
+-
++clean-noinstLTLIBRARIES:
++	-test -z "$(noinst_LTLIBRARIES)" || rm -f $(noinst_LTLIBRARIES)
++libgain_analysis.la: $(libgain_analysis_la_OBJECTS) $(libgain_analysis_la_DEPENDENCIES) 
++	$(LINK) $(libgain_analysis_la_LDFLAGS) $(libgain_analysis_la_OBJECTS) $(libgain_analysis_la_LIBADD) $(LIBS)
+ mostlyclean-compile:
+ 	-rm -f *.$(OBJEXT) core *.core
+ 
+ distclean-compile:
+ 	-rm -f *.tab.c
+ 
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/gain_analysis.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/gain_analysis.Plo@am__quote@
+ 
+ distclean-depend:
+ 	-rm -rf ./$(DEPDIR)
+@@ -280,7 +277,7 @@
+ 	done
+ check-am: all-am
+ check: check-am
+-all-am: Makefile $(LIBRARIES)
++all-am: Makefile $(LTLIBRARIES)
+ 
+ installdirs:
+ 
+@@ -310,7 +307,7 @@
+ 	@echo "it deletes files that may require special tools to rebuild."
+ clean: clean-am
+ 
+-clean-am: clean-generic clean-libtool clean-noinstLIBRARIES \
++clean-am: clean-generic clean-libtool clean-noinstLTLIBRARIES \
+ 	mostlyclean-am
+ 
+ distclean: distclean-am
+@@ -348,7 +345,7 @@
+ uninstall-am: uninstall-info-am
+ 
+ .PHONY: GTAGS all all-am check check-am clean clean-generic \
+-	clean-libtool clean-noinstLIBRARIES distclean distclean-compile \
++	clean-libtool clean-noinstLTLIBRARIES distclean distclean-compile \
+ 	distclean-depend distclean-generic distclean-libtool \
+ 	distclean-tags distdir dvi dvi-am info info-am install \
+ 	install-am install-data install-data-am install-exec \

@@ -1,0 +1,30 @@
+--- src/metaflac/Makefile.in.orig	2003-10-31 14:38:44.000000000 +1100
++++ src/metaflac/Makefile.in	2003-10-31 14:39:19.000000000 +1100
+@@ -158,10 +158,10 @@
+ metaflac_LDFLAGS = 
+ 
+ metaflac_LDADD = \
+-	$(top_builddir)/src/share/grabbag/libgrabbag.a \
+-	$(top_builddir)/src/share/gain_analysis/libgain_analysis.a \
++	$(top_builddir)/src/share/grabbag/libgrabbag.la \
++	$(top_builddir)/src/share/gain_analysis/libgain_analysis.la \
+ 	$(top_builddir)/src/share/getopt/libgetopt.a \
+-	$(top_builddir)/src/share/utf8/libutf8.a \
++	$(top_builddir)/src/share/utf8/libutf8.la \
+ 	$(top_builddir)/src/libFLAC/libFLAC.la \
+ 	@LIBICONV@ \
+ 	-lm
+@@ -180,10 +180,10 @@
+ 	operations_shorthand_vorbiscomment.$(OBJEXT) options.$(OBJEXT) \
+ 	usage.$(OBJEXT) utils.$(OBJEXT)
+ metaflac_OBJECTS = $(am_metaflac_OBJECTS)
+-metaflac_DEPENDENCIES = $(top_builddir)/src/share/grabbag/libgrabbag.a \
+-	$(top_builddir)/src/share/gain_analysis/libgain_analysis.a \
++metaflac_DEPENDENCIES = $(top_builddir)/src/share/grabbag/libgrabbag.la \
++	$(top_builddir)/src/share/gain_analysis/libgain_analysis.la \
+ 	$(top_builddir)/src/share/getopt/libgetopt.a \
+-	$(top_builddir)/src/share/utf8/libutf8.a \
++	$(top_builddir)/src/share/utf8/libutf8.la \
+ 	$(top_builddir)/src/libFLAC/libFLAC.la
+ 
+ DEFS = @DEFS@

@@ -1,0 +1,123 @@
+--- src/share/grabbag/Makefile.in.orig	2003-10-31 13:55:26.000000000 +1100
++++ src/share/grabbag/Makefile.in	2003-10-31 14:08:10.000000000 +1100
+@@ -90,6 +90,7 @@
+ LN_S = @LN_S@
+ LTLIB = @LTLIB@
+ LTLIBICONV = @LTLIBICONV@
++LTLIBOBJS = @LTLIBOBJS@
+ MAINT = @MAINT@
+ NASM = @NASM@
+ OBJDUMP = @OBJDUMP@
+@@ -119,9 +120,9 @@
+ 
+ INCLUDES = -I$(top_srcdir)/include
+ 
+-noinst_LIBRARIES = libgrabbag.a
++noinst_LTLIBRARIES = libgrabbag.la
+ 
+-libgrabbag_a_SOURCES = \
++libgrabbag_la_SOURCES = \
+ 	cuesheet.c \
+ 	file.c \
+ 	replaygain.c \
+@@ -136,13 +137,12 @@
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES =
+-LIBRARIES = $(noinst_LIBRARIES)
++LTLIBRARIES = $(noinst_LTLIBRARIES)
+ 
+-libgrabbag_a_AR = $(AR) cru
+-libgrabbag_a_LIBADD =
+-am_libgrabbag_a_OBJECTS = cuesheet.$(OBJEXT) file.$(OBJEXT) \
+-	replaygain.$(OBJEXT) seektable.$(OBJEXT)
+-libgrabbag_a_OBJECTS = $(am_libgrabbag_a_OBJECTS)
++libgrabbag_la_LIBADD =
++am_libgrabbag_la_OBJECTS = cuesheet.lo file.lo \
++	replaygain.lo seektable.lo
++libgrabbag_la_OBJECTS = $(am_libgrabbag_la_OBJECTS)
+ 
+ DEFS = @DEFS@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+@@ -151,8 +151,8 @@
+ LIBS = @LIBS@
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+ am__depfiles_maybe = depfiles
+-@AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/cuesheet.Po ./$(DEPDIR)/file.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/replaygain.Po ./$(DEPDIR)/seektable.Po
++@AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/cuesheet.Plo ./$(DEPDIR)/file.Plo \
++@AMDEP_TRUE@	./$(DEPDIR)/replaygain.Plo ./$(DEPDIR)/seektable.Plo
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
+@@ -161,9 +161,9 @@
+ LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ CFLAGS = @CFLAGS@
+-DIST_SOURCES = $(libgrabbag_a_SOURCES)
++DIST_SOURCES = $(libgrabbag_la_SOURCES)
+ DIST_COMMON = Makefile.am Makefile.in
+-SOURCES = $(libgrabbag_a_SOURCES)
++SOURCES = $(libgrabbag_la_SOURCES)
+ 
+ all: all-am
+ 
+@@ -177,23 +177,20 @@
+ 
+ AR = ar
+ 
+-clean-noinstLIBRARIES:
+-	-test -z "$(noinst_LIBRARIES)" || rm -f $(noinst_LIBRARIES)
+-libgrabbag.a: $(libgrabbag_a_OBJECTS) $(libgrabbag_a_DEPENDENCIES) 
+-	-rm -f libgrabbag.a
+-	$(libgrabbag_a_AR) libgrabbag.a $(libgrabbag_a_OBJECTS) $(libgrabbag_a_LIBADD)
+-	$(RANLIB) libgrabbag.a
+-
++clean-noinstLTLIBRARIES:
++	-test -z "$(noinst_LTLIBRARIES)" || rm -f $(noinst_LTLIBRARIES)
++libgrabbag.la: $(libgrabbag_la_OBJECTS) $(libgrabbag_la_DEPENDENCIES) 
++	$(LINK) $(libgrabbag_la_LDFLAGS) $(libgrabbag_la_OBJECTS) $(libgrabbag_la_LIBADD) $(LIBS)
+ mostlyclean-compile:
+ 	-rm -f *.$(OBJEXT) core *.core
+ 
+ distclean-compile:
+ 	-rm -f *.tab.c
+ 
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cuesheet.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/file.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/replaygain.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/seektable.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cuesheet.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/file.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/replaygain.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/seektable.Plo@am__quote@
+ 
+ distclean-depend:
+ 	-rm -rf ./$(DEPDIR)
+@@ -290,7 +287,7 @@
+ 	done
+ check-am: all-am
+ check: check-am
+-all-am: Makefile $(LIBRARIES)
++all-am: Makefile $(LTLIBRARIES)
+ 
+ installdirs:
+ 
+@@ -320,7 +317,7 @@
+ 	@echo "it deletes files that may require special tools to rebuild."
+ clean: clean-am
+ 
+-clean-am: clean-generic clean-libtool clean-noinstLIBRARIES \
++clean-am: clean-generic clean-libtool clean-noinstLTLIBRARIES \
+ 	mostlyclean-am
+ 
+ distclean: distclean-am
+@@ -358,7 +355,7 @@
+ uninstall-am: uninstall-info-am
+ 
+ .PHONY: GTAGS all all-am check check-am clean clean-generic \
+-	clean-libtool clean-noinstLIBRARIES distclean distclean-compile \
++	clean-libtool clean-noinstLTLIBRARIES distclean distclean-compile \
+ 	distclean-depend distclean-generic distclean-libtool \
+ 	distclean-tags distdir dvi dvi-am info info-am install \
+ 	install-am install-data install-data-am install-exec \
