@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.929 2003/10/09 13:36:34 wiz Exp $
+$NetBSD: TODO,v 1.930 2003/10/10 02:29:31 grant Exp $
 
 Suggested new packages
 ======================
@@ -225,6 +225,7 @@ Suggested package updates
 	o openoffice-1.1 [skrll]
 	o openssl-0.9.7c [jschauma]
 	o oss-3.9.8a
+	o p5-BSD-Resource-1.23
 	o pdmenu-1.2.81
 	o postfix-2.0.16
 	o prboom-2.3.0
