@@ -1,0 +1,9 @@
+This is an input script for xmms-meta-input which allows xmms to play
+unified Csound scores using csound.
+
+An example unified Csound score may be found at
+ftp://ftp.netbsd.org/pub/NetBSD/misc/ben/example.csd.gz
+
+Many Csound songs are distributed in separate orchestra, score, and sample
+files.  A script to convert these to a unified Csound score file is at
+ftp://ftp.netbsd.org/pub/NetBSD/misc/ben/orcsco2csd.sh
