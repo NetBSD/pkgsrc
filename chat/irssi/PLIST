@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/12/02 12:19:19 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5.4.1 2003/12/12 11:53:48 agc Exp $
 bin/irssi
 man/man1/irssi.1
 share/doc/irssi/botnet.txt
@@ -12,6 +12,7 @@ share/doc/irssi/signals.txt
 share/doc/irssi/special_vars.txt
 share/doc/irssi/startup-HOWTO.html
 share/examples/irssi/irssi.conf
+share/irssi/config.h
 share/irssi/help/action
 share/irssi/help/admin
 share/irssi/help/alias
@@ -37,6 +38,7 @@ share/irssi/help/disconnect
 share/irssi/help/echo
 share/irssi/help/eval
 share/irssi/help/exec
+share/irssi/help/flushbuffers
 share/irssi/help/format
 share/irssi/help/hash
 share/irssi/help/help
@@ -51,6 +53,7 @@ share/irssi/help/join
 share/irssi/help/kick
 share/irssi/help/kickban
 share/irssi/help/kill
+share/irssi/help/knock
 share/irssi/help/knockout
 share/irssi/help/lastlog
 share/irssi/help/layout
@@ -130,7 +133,6 @@ share/irssi/help/whowas
 share/irssi/help/window
 share/irssi/help/wjoin
 share/irssi/help/wquery
-share/irssi/config.h
 share/irssi/irssi-config
 share/irssi/scripts/autoop.pl
 share/irssi/scripts/autorejoin.pl

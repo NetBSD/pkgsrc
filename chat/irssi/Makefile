@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2003/05/02 11:54:03 wiz Exp $
+# $NetBSD: Makefile,v 1.19.2.1 2003/12/12 11:53:48 agc Exp $
 
 DISTNAME=		${IRSSI_DISTNAME}
-PKGREVISION=		2
 CATEGORIES=		chat
 MASTER_SITES=		http://real.irssi.org/files/
 EXTRACT_SUFX=		${IRSSI_EXTRACT_SUFX}
@@ -13,14 +12,13 @@ COMMENT=                Secure and modular IRC client with text mode user interf
 .include "${.CURDIR}/Makefile.common"
 
 # list it into IPv6-ready packages
-BUILD_DEFS+=		USE_INET6
+BUILD_DEFS+=		USE_INET6 IRSSI_USE_SSL
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
 
 CONFIGURE_ARGS+=	--with-terminfo \
-			--enable-ipv6 \
 			--without-ncurses \
 			--sysconfdir=${PKG_SYSCONFDIR}
 
@@ -43,9 +41,22 @@ CONFIGURE_ARGS+=	--with-perl-lib=site
 CONFIGURE_ARGS+=	--with-perl=no
 .endif
 
+# IPv6 support
+.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--enable-ipv6
+.endif
+
+# SSL support
+.if defined(IRSSI_USE_SSL) && !empty(IRSSI_USE_SSL:M[Yy][Ee][Ss])
+.  include "../../security/openssl/buildlink2.mk"
+.else
+CONFIGURE_ARGS+=	--disable-ssl
+.endif
+
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/config.h ${IRSSI_CONFIG_H}
 	${INSTALL_DATA} ${WRKSRC}/irssi-config ${IRSSI_CONFIG}
 
-.include "../../devel/glib/buildlink2.mk"
+.include "../../devel/glib2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
