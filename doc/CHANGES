@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6117 2004/06/04 03:36:18 uebayasi Exp $
+$NetBSD: CHANGES,v 1.6118 2004/06/04 03:38:29 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2775,3 +2775,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated bitlbee to 0.90 [xtraeme 2004-06-03]
 	Updated allegro to 4.1.14 [xtraeme 2004-06-03]
 	Updated acpi-isal to 20040311p1 [uebayasi 2004-06-04]
+	Updated mathomatic to 11.2 [minskim 2004-06-04]
