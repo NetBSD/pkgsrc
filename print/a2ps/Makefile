@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2002/11/26 11:02:05 jmmv Exp $
+# $NetBSD: Makefile,v 1.38 2002/11/28 10:25:32 tron Exp $
 
 DISTNAME=		a2ps-4.13b
 PKGNAME=		a2ps-4.13.0.2
-PKGREVISION=		1
+PKGREVISION=		2
 WRKSRC=			${WRKDIR}/a2ps-4.13
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_GNU:=a2ps/} \
@@ -21,6 +21,7 @@ USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/auxdir/ltconfig
 
+USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		LPR=lpr
 CONFIGURE_ARGS+=	--with-medium="${PAPERSIZE}"
@@ -37,6 +38,7 @@ pre-build:
 	${TOUCH} ${WRKSRC}/doc/*.info
 	${TOUCH} ${WRKSRC}/doc/*.dvi
 
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
