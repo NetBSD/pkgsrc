@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.982 2002/05/22 23:15:22 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.983 2002/05/26 15:00:25 fredb Exp $
 #
 # This file is in the public domain.
 #
@@ -28,6 +28,13 @@ MAKE_ENV+=	MAKECONF=/dev/null
 ##### Pass information about desired toolchain to package build.
 .if defined(USETOOLS)
 MAKE_ENV+=	USETOOLS="${USETOOLS}"
+.endif
+
+##### Some NetBSD platforms permitted the user to set the binary format while
+##### they were in the process of transitioning to ELF. Packages with BSD-style
+##### make systems need this setting to be passed in.
+.if defined(OBJECT_FMT)
+MAKE_ENV+=	OBJECT_FMT="${OBJECT_FMT}"
 .endif
 
 ##### Build crypto packages by default.
