@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.624 2002/11/27 19:10:46 jmmv Exp $
+$NetBSD: CHANGES,v 1.625 2002/11/28 05:25:04 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3751,3 +3751,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated py-FourSuite to 0.12.0a3 [drochner 2002-11-27]
 	Updated gettext to 0.11.5 [drochner 2002-11-27]
 	Updated mutt to 1.4nb2 [jmmv 2002-11-27]
+	Updated w3m to 0.3.2.1 [itojun 2002-11-28]
