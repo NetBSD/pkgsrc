@@ -1,0 +1,10 @@
+$NetBSD: patch-ac,v 1.1 1999/08/07 10:36:17 fredb Exp $
+
+--- Imakefile.orig	Thu Oct  9 18:37:08 1997
++++ Imakefile	Sat Aug  7 03:18:22 1999
+@@ -1,4 +1,5 @@
+ CXX = g++
++CXXOPTIONS = -funroll-loops -Wall
+ PROGRAMS = battleball
+ 
+ XCOMM  If your compiler doesn't have STL in its default include path, add

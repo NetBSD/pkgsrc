@@ -1,0 +1,66 @@
+$NetBSD: patch-aa,v 1.1 1999/08/07 10:36:17 fredb Exp $
+
+--- lib3d/rect3d.h.orig	Wed Aug  5 20:55:33 1998
++++ lib3d/rect3d.h	Sat Aug  7 03:18:21 1999
+@@ -13,31 +13,30 @@
+ 
+ 
+ /************************************************************************/
+-/* pnt   = N-dimensional point type which delimits the bounds of the rect
+-   pnts  = container of pts
++/* pt3d   = N-dimensional point type which delimits the bounds of the rect
++   table<pt3d>  = container of pts
+ */
+-template <class pnt, class pnts>
+-struct rect {
+-  pnt	low,
++struct rect3d {
++  pt3d	low,
+   	high;
+ 
+-  bool	Contains(const pnt& p) const
++  bool	Contains(const pt3d& p) const
+         {return p.IsBetween(low,high);};
+-  bool	ContainsInclusively(const pnt& p) const
++  bool	ContainsInclusively(const pt3d& p) const
+         {return p.IsBetweenInclusively(low,high);};
+-  bool	ContainsExclusively(const pnt& p) const
++  bool	ContainsExclusively(const pt3d& p) const
+         {return p.IsBetweenExclusively(low,high);};
+-//  Center used to return "const pnt& "
+-  pnt	Center() const
++//  Center used to return "const pt3d& "
++  pt3d	Center() const
+         {return (low+high)/2;};
+ 
+-  void	MakeBoundingBox(const pnts& pts, pnt::coord& farthestDist) {
+-    pnt::coord d;
++  void	MakeBoundingBox(const table<pt3d>& pts, pt3d::coord& farthestDist) {
++    pt3d::coord d;
+     
+     farthestDist= 0;
+     if (pts.Num()==0) {
+-      low= pnt(0,0,0);
+-      high= pnt(0,0,0);
++      low= pt3d(0,0,0);
++      high= pt3d(0,0,0);
+       return;
+     }
+ 
+@@ -45,7 +44,7 @@
+     high= pts[0];
+     
+     forii(pts.Num()) {
+-      d= (pnt::coord) pts[i].Dist();
++      d= (pt3d::coord) pts[i].Dist();
+       if (d >farthestDist)
+ 	farthestDist= d;
+       low.SetMin(pts[i]);
+@@ -55,7 +54,5 @@
+ 
+ };
+ 
+-
+-typedef rect<pt3d,table<pt3d> > rect3d;
+ 
+ #endif
