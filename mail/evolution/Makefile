@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2002/09/10 16:06:44 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2002/09/30 00:01:15 rh Exp $
 
 DISTNAME=		evolution-1.0.8
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		mail time gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/evolution/}
 EXTRACT_SUFX=		.tar.bz2
@@ -53,6 +53,25 @@ pre-configure:
 		 -e 's/^\(COMPILE.*\)$$/\1 $${BONOBO_GNOME_CFLAGS}/' &&	\
 		${MV} $$i.fixed $$i ;					\
 	done
+
+.include "../../mk/bsd.prefs.mk"
+
+DISPLAY?=	# empty if unset
+checkforx:
+.if ${DISPLAY}=="" || ${DISPLAY_OK:!${X11BASE}/bin/xdpyinfo >/dev/null 2>&1 && echo YES || echo NO!} == "NO"
+.if exists(${X11BASE}/bin/Xvfb)
+	-${SETENV} XAUTHORITY= ${X11BASE}/bin/Xvfb :2 &
+DISPLAY=	':2'
+.else
+	@${ECHO} "Error: Environment variable DISPLAY must be set"
+	@${ECHO} "       and point to a connectible X server."
+	@${FALSE}
+.endif	# Xvfb
+.endif	# DISPLAY
+
+MAKE_ENV+=	DISPLAY=${DISPLAY}
+
+pre-build: checkforx
 
 .include "../../textproc/libunicode/buildlink.mk"
 .include "../../sysutils/gnome-vfs/buildlink.mk"
