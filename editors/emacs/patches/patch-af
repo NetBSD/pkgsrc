@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.6 2002/10/26 19:47:07 bouyer Exp $
+$NetBSD: patch-af,v 1.7 2003/03/01 06:18:22 uebayasi Exp $
 
---- src/Makefile.in.orig	Mon Apr 26 07:19:42 1999
-+++ src/Makefile.in	Tue Oct 22 15:55:06 2002
+--- src/Makefile.in.orig	Thu Jan 16 19:08:48 2003
++++ src/Makefile.in
 @@ -329,7 +329,7 @@
  #ifdef USE_X_TOOLKIT
  #define @X_TOOLKIT_TYPE@
@@ -29,3 +29,19 @@ $NetBSD: patch-af,v 1.6 2002/10/26 19:47:07 bouyer Exp $
  
  /* A macro which other sections of Makefile can redefine to munge the
     flags before they're passed to LD.  This is helpful if you have
+@@ -804,14 +804,7 @@
+ #define OBJECTS_MACHINE
+ #endif
+ 
+-all: emacs bytecomp OTHER_FILES
+-
+-bytecomp: emacs
+-	./emacs -batch -q -f batch-byte-compile \
+-	${lispsource}ange-ftp.el ${lispsource}international/ccl.el \
+-	${lispsource}international/mule-cmds.el \
+-	${lispsource}international/mule.el \
+-	${lispsource}international/titdic-cnv.el
++all: emacs OTHER_FILES
+ 
+ emacs: temacs ${etc}DOC ${lisp}
+ #ifdef CANNOT_DUMP
