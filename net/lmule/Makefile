@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/05/09 09:36:28 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/24 09:50:26 jmmv Exp $
 #
 
 DISTNAME=	lmule-1.2.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lmule/}
 
