@@ -1,82 +1,22 @@
-$NetBSD: patch-ac,v 1.9 2001/08/01 22:16:46 kristerw Exp $
---- configure.orig	Mon Jul 23 20:08:13 2001
-+++ configure	Wed Aug  1 23:24:36 2001
-@@ -4714,6 +4714,8 @@
- 	SOUND_DRIVERS="$SOUND_DRIVERS soundsdl.o"
- fi
- 
-+# we don't want to find OSS emulation, let's use NetBSD's own interface
-+if false; then
- for ac_hdr in linux/soundcard.h machine/soundcard.h
- do
- ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
-@@ -4753,6 +4755,7 @@
-   echo "$ac_t""no" 1>&6
- fi
- done
-+fi
- 
- for ac_hdr in dmedia/audio.h
- do
-@@ -5300,7 +5303,7 @@
-   echo $ac_n "(cached) $ac_c" 1>&6
- else
-   ac_save_LIBS="$LIBS"
--LIBS="-lesd $SOUND_LIBS $LIBS"
-+LIBS="-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lesd $SOUND_LIBS $LIBS"
- cat > conftest.$ac_ext <<EOF
- #line 5306 "configure"
- #include "confdefs.h"
-@@ -5334,7 +5337,7 @@
- #define $ac_tr_lib 1
- EOF
- 
--  LIBS="-lesd $LIBS"
-+  LIBS="-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lesd $LIBS"
- 
- else
-   echo "$ac_t""no" 1>&6
-@@ -5834,7 +5837,7 @@
+$NetBSD: patch-ac,v 1.10 2001/10/02 20:04:33 jlam Exp $
+
+--- configure.orig	Mon Jul 23 14:08:13 2001
++++ configure
+@@ -5834,7 +5834,7 @@
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    ac_save_LIBS="$LIBS"
 -LIBS="-lreadline  $LIBS"
-+LIBS="-ledit -ltermcap $LIBS"
++LIBS="-lreadline -ltermcap $LIBS"
  cat > conftest.$ac_ext <<EOF
  #line 5840 "configure"
  #include "confdefs.h"
-@@ -5862,7 +5865,7 @@
+@@ -5862,7 +5862,7 @@
  fi
  if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
    echo "$ac_t""yes" 1>&6
 -   READLINE="" LIBS="-lreadline $LIBS"
-+   READLINE="" LIBS="-ledit -ltermcap $LIBS"
++   READLINE="" LIBS="-lreadline -ltermcap $LIBS"
  else
    echo "$ac_t""no" 1>&6
   
-@@ -6449,7 +6452,7 @@
-     # For Solaris; some versions of Sun CC require a space after -R and
-     # others require no space.  Words are not sufficient . . . .
-     case "`(uname -sr) 2>/dev/null`" in
--    "SunOS 5"*)
-+    "SunOS 5"*|"NetBSD "*)
-       echo $ac_n "checking whether -R must be followed by a space""... $ac_c" 1>&6
- echo "configure:6455: checking whether -R must be followed by a space" >&5
-       ac_xsave_LIBS="$LIBS"; LIBS="$LIBS -R$x_libraries"
-@@ -7501,7 +7504,7 @@
- 
-   fi
- 
--
-+if false; then
-   echo $ac_n "checking for XpmCreatePixmapFromData in -lXpm""... $ac_c" 1>&6
- echo "configure:7507: checking for XpmCreatePixmapFromData in -lXpm" >&5
- ac_lib_var=`echo Xpm'_'XpmCreatePixmapFromData | sed 'y%./+-%__p_%'`
-@@ -7545,6 +7548,7 @@
-  
- else
-   echo "$ac_t""no" 1>&6
-+fi
- fi
- 
- 
