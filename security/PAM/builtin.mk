@@ -1,8 +1,13 @@
-# $NetBSD: builtin.mk,v 1.3 2004/08/06 03:14:22 reed Exp $
+# $NetBSD: builtin.mk,v 1.4 2004/08/06 15:37:20 jlam Exp $
+
+.include "../../mk/bsd.prefs.mk"
+
+_SECURITY_PAM_APPL_H=	/usr/include/security/pam_appl.h
 
 .if !defined(IS_BUILTIN.pam)
 IS_BUILTIN.pam=	no
-.  if exists(/usr/include/security/pam_appl.h) && (${LOCALBASE} != "/usr")
+.  if exists(${_SECURITY_PAM_APPL_H}) && \
+      !empty(_SECURITY_PAM_APPL_H:M${LOCALBASE}/*)
 IS_BUILTIN.pam=	yes
 .  endif
 .endif	# IS_BUILTIN.pam
