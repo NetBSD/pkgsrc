@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.20 2001/03/04 12:03:52 tron Exp $
+# $NetBSD: Makefile,v 1.21 2001/03/04 16:38:46 tron Exp $
 
-DISTNAME=	kdbg-1.0.1
+DISTNAME=	kdbg-1.2.0
 CATEGORIES=	devel kde
-MASTER_SITES=	http://members.telecom.at/~johsixt/ \
-		ftp://ftp.eudaptics.co.at/pub/people/jsixt/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kdbg/} \
+		ftp://ftp.eudaptics.com/pub/people/jsixt/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tron@netbsd.org
 HOMEPAGE=       http://members.telecom.at/~johsixt/kdbg.html
 COMMENT=	Graphical User Interface around gdb using KDE
 
 BUILD_DEPENDS+= msgfmt:../../devel/gettext
 DEPENDS+=	autoconf-2.13:../autoconf
 DEPENDS+=	automake-1.4:../automake
-DEPENDS+=	kdevelop-1.*:../kdevelop
+DEPENDS+=	kdevelop-base-1.*:../kdevelop-base
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes

@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2000/02/02 13:47:43 scw Exp $
+$NetBSD: patch-aa,v 1.2 2001/03/04 16:38:47 tron Exp $
 
---- configure.orig	Sun Nov 14 17:01:51 1999
-+++ configure	Wed Feb  2 12:51:57 2000
-@@ -3818,7 +3818,8 @@
+--- configure.orig	Sun Dec 24 16:45:11 2000
++++ configure	Sun Mar  4 17:25:57 2001
+@@ -3829,7 +3829,8 @@
      
  
  
@@ -12,18 +12,17 @@ $NetBSD: patch-aa,v 1.1 2000/02/02 13:47:43 scw Exp $
  
  kde_save_cc=$CC
  kde_save_cflags="$CFLAGS"
-@@ -3921,6 +3922,10 @@
+@@ -3939,6 +3940,9 @@
+ 
  CC=$kde_save_cc
  CFLAGS="$kde_save_cflags"
- 
 +fi
 +# Use NetBSD package system libtool (end)
 +
-+
+ 
  echo $ac_n "checking whether NLS is requested""... $ac_c" 1>&6
- echo "configure:3926: checking whether NLS is requested" >&5
-         # Check whether --enable-nls or --disable-nls was given.
-@@ -4254,7 +4259,7 @@
+ echo "configure:3945: checking whether NLS is requested" >&5
+@@ -4273,7 +4277,7 @@
    fi
    
  else
@@ -32,7 +31,7 @@ $NetBSD: patch-aa,v 1.1 2000/02/02 13:47:43 scw Exp $
    
  fi
  
-@@ -4269,7 +4274,9 @@
+@@ -4356,7 +4360,9 @@
  if eval "test \"`echo '$''{'kde_cv_all_paths'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
  else
@@ -43,7 +42,7 @@ $NetBSD: patch-aa,v 1.1 2000/02/02 13:47:43 scw Exp $
    if test -z "$kde_htmldir"; then
      kde_htmldir='\$(prefix)/share/doc/HTML'
    fi
-@@ -4330,6 +4337,124 @@
+@@ -4417,6 +4423,124 @@
  	kde_servicetypesdir=\"$kde_servicetypesdir\" \
  	kde_result=defaults"
  
@@ -168,7 +167,7 @@ $NetBSD: patch-aa,v 1.1 2000/02/02 13:47:43 scw Exp $
  
  fi
  
-@@ -4342,8 +4467,7 @@
+@@ -4429,8 +4553,7 @@
     test -z "$kde_cgidir"  || test -z "$kde_confdir" ||
     test -z "$kde_mimedir" || test -z "$kde_toolbardir" ||
     test -z "$kde_wallpaperdir" || test -z "$kde_bindir" ||
