@@ -1,4 +1,4 @@
-/*	$NetBSD: extract.c,v 1.10 2004/12/29 12:16:56 agc Exp $	*/
+/*	$NetBSD: extract.c,v 1.11 2005/01/07 11:58:12 agc Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "FreeBSD - Id: extract.c,v 1.17 1997/10/08 07:45:35 charnier Exp";
 #else
-__RCSID("$NetBSD: extract.c,v 1.10 2004/12/29 12:16:56 agc Exp $");
+__RCSID("$NetBSD: extract.c,v 1.11 2005/01/07 11:58:12 agc Exp $");
 #endif
 #endif
 
@@ -310,8 +310,7 @@ extract_plist(char *home, package_t *pkg)
 		case PLIST_CMD:
 			format_cmd(cmd, sizeof(cmd), p->name, Directory, last_file);
 			PUSHOUT(Directory);
-			if (Verbose)
-				printf("extract: execute '%s'\n", cmd);
+			printf("Executing '%s'\n", cmd);
 			if (!Fake && system(cmd))
 				warnx("command '%s' failed", cmd);
 			break;
