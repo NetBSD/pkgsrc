@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.6 2004/12/17 19:36:01 kim Exp $
+$NetBSD: patch-inet6-ni_withscopeid,v 1.1.2.2 2005/01/27 05:14:48 snj Exp $
 
 --- src/util/inet_addr_list.h.orig	2004-12-17 04:30:07.000000000 -0500
 +++ src/util/inet_addr_list.h	2004-12-17 04:36:47.000000000 -0500
