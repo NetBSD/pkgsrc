@@ -1,0 +1,19 @@
+$NetBSD: patch-bb,v 1.1.1.1 2003/12/17 16:09:08 wiz Exp $
+
+--- mkisofs/mkisofs.c.orig	Sun Jul 13 14:42:16 2003
++++ mkisofs/mkisofs.c
+@@ -2279,11 +2279,11 @@ parse_input_files:
+ 		}
+ 	}
+ 	/* We don't need root privilleges anymore. */
+-#ifdef	HAVE_SETREUID
+-	if (setreuid(-1, getuid()) < 0)
+-#else
+ #ifdef	HAVE_SETEUID
+ 	if (seteuid(getuid()) < 0)
++#else
++#ifdef	HAVE_SETREUID
++	if (setreuid(-1, getuid()) < 0)
+ #else
+ 	if (setuid(getuid()) < 0)
+ #endif
