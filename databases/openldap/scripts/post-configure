@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd ${WRKDIR}/ldap
+make depend
