@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 1999/09/06 18:18:23 bad Exp $
+# $NetBSD: Makefile,v 1.37 1999/09/12 15:33:25 kim Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/09/30 06:14:59 asami Exp
 #
 
@@ -15,6 +15,7 @@
 #    SUBDIR += cd-write
 #    SUBDIR += contool
     SUBDIR += crashme
+    SUBDIR += cpogm
     SUBDIR += depot
     SUBDIR += fileutils
     SUBDIR += gcombust
