@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/02/01 09:44:29 tron Exp $
+# $NetBSD: Makefile,v 1.17 2000/08/30 21:02:50 tron Exp $
 
 DISTNAME=	tkirc1.202
 PKGNAME=	tkirc-1.202
@@ -9,7 +9,7 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.north.de/~atte/tkirc/
 
 DEPENDS+=	ircII-*:../../net/ircII
-DEPENDS+=	tk-8.0.5:../../x11/tk80
+DEPENDS+=	tk>=8.3.2:../../x11/tk
 
 USE_X11=	yes
 NO_CONFIGURE=	yes
