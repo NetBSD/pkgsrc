@@ -1,22 +1,22 @@
-$NetBSD: patch-ab,v 1.5 2001/02/22 17:04:36 wiz Exp $
+$NetBSD: patch-ab,v 1.6 2002/11/24 21:31:22 hubertf Exp $
 
---- doc/cvs.texinfo.orig	Wed Aug 30 03:16:32 2000
-+++ doc/cvs.texinfo	Thu Feb 22 17:19:43 2001
+--- doc/cvs.texinfo.orig	Wed Apr 17 20:24:27 2002
++++ doc/cvs.texinfo
 @@ -40,6 +40,10 @@
  @setfilename cvs.info
- @include CVSvn.texi
- @settitle CVS---Concurrent Versions System
+ @include version.texi
+ @settitle CVS---Concurrent Versions System v@value{VERSION}
 +@dircategory Programming & development tools
 +@direntry
-+* CVS: (cvs)			CVS Reference Manual.
++* CVS: (cvs)                   CVS Reference Manual.
 +@end direntry
  @setchapternewpage odd
  
  @c -- TODO list:
-@@ -12637,6 +12641,11 @@
- all transactions.  Any subset of the default is
- legal.  (For example, to only log transactions that modify the
- @file{*,v} files, use @samp{LogHistory=TMAR}.)
+@@ -13478,6 +13482,11 @@
+ 
+ @xref{verifymsg}, for more information on how verifymsg
+ may be used.
 +
 +@cindex tag, in CVSROOT/config
 +@item tag=@var{value}
