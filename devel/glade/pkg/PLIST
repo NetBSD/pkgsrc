@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/12/31 13:15:22 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/05/02 14:50:33 rh Exp $
 bin/glade
 share/doc/glade/README
 share/doc/glade/TODO
@@ -12,5 +12,7 @@ share/doc/glade/source_code.txt
 share/locale/de/LC_MESSAGES/glade.mo
 share/locale/es/LC_MESSAGES/glade.mo
 share/locale/fr/LC_MESSAGES/glade.mo
+share/locale/ja/LC_MESSAGES/glade.mo
+share/locale/ru/LC_MESSAGES/glade.mo
 share/locale/pt_BR/LC_MESSAGES/glade.mo
 @dirrm share/doc/glade
