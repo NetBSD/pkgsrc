@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/02/26 15:10:50 jmmv Exp $
+$NetBSD: distinfo,v 1.3 2004/04/03 07:30:27 jmmv Exp $
 
-SHA1 (dasher-3.2.4.tar.gz) = b695f374508400e35964f506e32ce493adce3a27
-Size (dasher-3.2.4.tar.gz) = 2817835 bytes
+SHA1 (dasher-3.2.8.tar.bz2) = 1ee1114fbfe3b7a56f78d4f78890667f2a557285
+Size (dasher-3.2.8.tar.bz2) = 2339112 bytes
