@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/02 01:18:14 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 21:49:19 grant Exp $
 #
 
 DISTNAME=	kdrill5.11.6
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	japanese misc
 MASTER_SITES=	http://www.bolthole.com/kdrill/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.bolthole.com/kdrill/
 COMMENT=	kanji quiz and japanese dictionary
 

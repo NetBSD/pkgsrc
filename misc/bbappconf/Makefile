@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/12/18 04:34:42 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:48:43 grant Exp $
 #
 
 DISTNAME=	bbappconf-0.0.2
@@ -6,7 +6,7 @@ PKGNAME=	bbappconf-0.0.2
 CATEGORIES=	misc x11 wm
 MASTER_SITES=	http://bbtools.windsofstorm.net/sources/
 
-MAINTAINER=	jschauma@netbsd.org
+MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://bbtools.windsofstorm.net
 COMMENT=	Configure the behaviour of an application under Blackbox
 

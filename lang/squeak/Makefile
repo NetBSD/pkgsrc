@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/03/29 12:41:32 jmmv Exp $
+# $NetBSD: Makefile,v 1.23 2003/07/17 21:45:24 grant Exp $
 #
 
 DISTNAME=	Squeak-3.0
@@ -11,7 +11,7 @@ MASTER_SITES+=	ftp://ftp.inria.fr/INRIA/Projects/SOR/users/piumarta/squeak/
 DISTFILES=	ReadMe.txt.gz Squeak3.0-3552.zip SqueakV3.sources.gz
 DISTFILES+=	${DISTNAME}-src${EXTRACT_SUFX}
 
-MAINTAINER=	fredb@netbsd.org
+MAINTAINER=	fredb@NetBSD.org
 HOMEPAGE=	http://www.squeak.org/
 COMMENT=	Full Smalltalk 80 with portability to UN*X, Mac, and Windows
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:18:47 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:45:56 grant Exp $
 
 DISTNAME=		etach-1.2.9
 CATEGORIES=		mail
 MASTER_SITES=		http://rulnick.com/etach/download/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://rulnick.com/etach/
 COMMENT=		Emacs Lisp package for dealing with MIME email attachments
 

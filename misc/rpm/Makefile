@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.41 2003/07/13 13:52:46 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2003/07/17 21:49:52 grant Exp $
 
 DISTNAME=	rpm-2.5.4
 PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.rpm.org/pub/rpm/dist/rpm-2.5.x/
 
-MAINTAINER=	mycroft@netbsd.org
+MAINTAINER=	mycroft@NetBSD.org
 HOMEPAGE=	http://www.rpm.org/
 COMMENT=	The Red Hat Package Manager
 

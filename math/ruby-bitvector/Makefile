@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/01 13:08:06 taca Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 21:48:08 grant Exp $
 # FreeBSD: ports/math/ruby-bitvector/Makefile,v 1.1 2000/11/23 14:13:41 knu Exp
 
 DISTNAME=	bitvector_0-1-6
@@ -6,7 +6,7 @@ PKGNAME=	${RUBY_PKGNAMEPREFIX}bitvector-0.1.6
 CATEGORIES=	math
 MASTER_SITES=	http://www.ce.chalmers.se/~feldt/ruby/extensions/bitvector/
 
-MAINTAINER=	taca@netbsd.org
+MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.ce.chalmers.se/~feldt/ruby/extensions/bitvector/
 COMMENT=	Efficient Ruby bit vector extension
 

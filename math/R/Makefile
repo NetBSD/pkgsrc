@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.43 2003/03/11 02:30:24 jmc Exp $
+# $NetBSD: Makefile,v 1.44 2003/07/17 21:47:15 grant Exp $
 
 DISTNAME=		R-1.6.2
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/}
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		markd@netbsd.org
+MAINTAINER=		markd@NetBSD.org
 HOMEPAGE=		http://www.R-project.org/
 COMMENT=		Statistical language for data analysis and graphics
 

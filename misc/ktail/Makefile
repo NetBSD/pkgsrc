@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2003/07/13 13:52:44 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:49:23 grant Exp $
 
 DISTNAME=	ktail-0.5.1
 PKGREVISION=	3
 CATEGORIES=	misc kde
 MASTER_SITES=	http://www.franken.de/users/duffy1/rjakob/
 
-MAINTAINER=	zuntum@netbsd.org
+MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.franken.de/users/duffy1/rjakob/
 COMMENT=	ktail monitors multiple files and/or command output in one window
 

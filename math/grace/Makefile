@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/06/05 20:56:41 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2003/07/17 21:47:40 grant Exp $
 #
 
 DISTNAME=	grace-5.1.10
@@ -12,7 +12,7 @@ MASTER_SITES=	ftp://plasma-gate.weizmann.ac.il/pub/grace/src/ \
 		ftp://ftp.u-aizu.ac.jp/pub/SciEng/math/grace/src/ \
 		ftp://ftp2.netmor.com/pub/mirrors/grace/src/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://plasma-gate.weizmann.ac.il/Grace/
 COMMENT=	GRaphing, Advanced Computation and Exploration of data
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2003/07/13 13:52:24 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2003/07/17 21:45:42 grant Exp $
 #
 
 DISTNAME=		balsa-1.4.3
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.theochem.kth.se/~pawsa/balsa/ \
 			ftp://ftp.newton.cx/pub/balsa/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		rh@netbsd.org
+MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.balsa.net/
 COMMENT=		GNOME EMail client
 

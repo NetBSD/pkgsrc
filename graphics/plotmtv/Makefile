@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/06/02 01:19:17 jschauma Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/17 21:42:15 grant Exp $
 
 DISTNAME=	Plotmtv1.4.1
 PKGNAME=	plotmtv-1.4.1
@@ -8,7 +8,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/}
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Multipurpose X11 plotting program
 
 USE_IMAKE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2003/06/02 01:19:11 jschauma Exp $
+# $NetBSD: Makefile,v 1.33 2003/07/17 21:43:04 grant Exp $
 
 DISTNAME=	xanim2801
 PKGNAME=	xanim-2.80.1
@@ -14,7 +14,7 @@ MASTER_SITES=	ftp://xanim.va.pubnix.com/\
 		http://smurfland.cit.buffalo.edu/xanim/files/modules/
 DISTFILES=	${EXTRACT_ONLY} ${CODEC_FILES}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://xanim.va.pubnix.com/
 COMMENT=	play most popular animation formats and show pictures
 

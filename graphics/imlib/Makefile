@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2003/07/13 13:52:08 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2003/07/17 21:41:17 grant Exp $
 #
 
 DISTNAME=		imlib-1.9.14
@@ -6,7 +6,7 @@ PKGREVISION=		4
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/imlib/1.9/}
 
-MAINTAINER=		tron@netbsd.org
+MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.nl.rasterman.com/imlib.html
 COMMENT=		image manipulation library for X11
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/13 13:52:08 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/17 21:41:18 grant Exp $
 #
 
 DISTNAME=		imlib2-1.0.6
@@ -6,7 +6,7 @@ PKGREVISION=		2
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 
-MAINTAINER=		rh@netbsd.org
+MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.enlightenment.org/pages/imlib2.html
 COMMENT=		image manipulation library
 

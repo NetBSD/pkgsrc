@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.33 2003/05/06 17:41:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.34 2003/07/17 21:44:42 grant Exp $
 #
 
 VERSION=	1.1.8
 PKGNAME=	jdk-${VERSION}
 PKGREVISION=	4
 CATEGORIES=	lang
-MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/misc/java/i386/${VERSION}/ \
-		ftp://ftp.de.netbsd.org/pub/NetBSD/misc/java/i386/${VERSION}/
+MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/java/i386/${VERSION}/ \
+		ftp://ftp.de.NetBSD.org/pub/NetBSD/misc/java/i386/${VERSION}/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	jwise@netbsd.org
+MAINTAINER=	jwise@NetBSD.org
 COMMENT=	Sun's Java(tm) Development Kit
 
 LICENSE=	jdk-license

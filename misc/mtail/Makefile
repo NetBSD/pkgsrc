@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/09/21 23:46:54 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:49:31 grant Exp $
 #
 
 DISTNAME=	mtail-1.0.0
@@ -6,7 +6,7 @@ CATEGORIES=	misc
 MASTER_SITES=	http://matt.immute.net/src/mtail/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	zuntum@netbsd.org
+MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://matt.immute.net/src/mtail/
 COMMENT=	small tail workalike that performs output coloring
 

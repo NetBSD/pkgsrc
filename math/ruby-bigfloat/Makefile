@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:41:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:48:07 grant Exp $
 # FreeBSD: ports/math/ruby-bigfloat/Makefile,v 1.8 2000/10/02 14:57:26 knu Exp
 
 DISTNAME=	bigfloat-1.1.8
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}
 CATEGORIES=	math
 MASTER_SITES=	http://www.tinyforest.gr.jp/ruby/
 
-MAINTAINER=	taca@netbsd.org
+MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.tinyforest.gr.jp/ruby/bigfloat_en.html
 COMMENT=	Variable precision floating library for Ruby
 

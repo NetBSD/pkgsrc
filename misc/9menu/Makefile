@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/06/17 14:31:36 agc Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/17 21:48:39 grant Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/09/08 12:23:55 tg Exp
 #
 
@@ -7,7 +7,7 @@ CATEGORIES=		misc plan9
 MASTER_SITES=		ftp://ftp.freefriends.org/arnold/Source/
 EXTRACT_SUFX=		.shar.gz
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Simple menu patterned after the plan9 user interface
 
 MAKEFILE=		Makefile.noimake

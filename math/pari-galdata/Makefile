@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/07 23:34:48 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 21:48:00 grant Exp $
 
 DISTNAME=		galdata
 PKGNAME=		pari-galdata-2.1
@@ -7,7 +7,7 @@ CATEGORIES=		math
 MASTER_SITES=		ftp://www.gn-50uma.de/gn/gn-50uma.de/pari/ \
 			http://www.gn-50uma.de/ftp/pari/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.parigp-home.de
 COMMENT=		Galois group data for pari
 

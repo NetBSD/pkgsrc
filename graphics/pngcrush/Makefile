@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2002/08/31 00:01:53 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 21:42:23 grant Exp $
 #
 
 DISTNAME=	pngcrush-1.5.10
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pmt/}
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://pmt.sourceforge.net/pngcrush/index.html
 COMMENT=	Optimizer for PNG (Portable Network Graphics) files
 

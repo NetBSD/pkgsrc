@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/01 12:54:55 taca Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 21:47:00 grant Exp $
 # FreeBSD: ports/mail/ruby-tmail/Makefile,v 1.10 2001/01/27 09:46:32 knu Exp
 
 DISTNAME=	tmail-0.9.4
@@ -6,7 +6,7 @@ PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
 CATEGORIES=	mail
 MASTER_SITES=	http://www.xdsl.ne.jp/Cd/aamine/soft/
 
-MAINTAINER=	taca@netbsd.org
+MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.xdsl.ne.jp/Cd/aamine/
 COMMENT=	Mail manipulating library for Ruby including MIME multipart support
 

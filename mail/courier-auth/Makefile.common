@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.5 2002/10/08 23:15:58 jlam Exp $
+# $NetBSD: Makefile.common,v 1.6 2003/07/17 21:45:46 grant Exp $
 
 DISTNAME?=	courier-${DIST_VERS}
 CATEGORIES+=	mail
 MASTER_SITES?=	${MASTER_SITE_SOURCEFORGE:=courier/}
 
-MAINTAINER?=	jlam@netbsd.org
+MAINTAINER?=	jlam@NetBSD.org
 HOMEPAGE?=	http://www.courier-mta.org/
 
 # Version numbering scheme:

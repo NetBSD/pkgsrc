@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2001/04/22 21:52:23 zuntum Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 21:49:08 grant Exp $
 #
 
 DISTNAME=	granulate-0.1
 CATEGORIES=	misc
 MASTER_SITES=	ftp://134.74.16.12/pub/
 
-MAINTAINER=	zuntum@netbsd.org
+MAINTAINER=	zuntum@NetBSD.org
 COMMENT=	Program for splitting files in place
 
 do-install:

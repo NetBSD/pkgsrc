@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/13 13:52:33 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:48:33 grant Exp $
 #
 
 DISTNAME=	gnustep-1.6.0
@@ -7,7 +7,7 @@ CATEGORIES=	meta-pkgs x11 gnustep
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnustep.org/
 COMMENT=	meta-package for GNUstep
 

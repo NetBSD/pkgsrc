@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2003/07/13 13:52:11 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2003/07/17 21:41:40 grant Exp $
 #
 
 DISTNAME=		libwmf-0.2.8
@@ -6,7 +6,7 @@ PKGREVISION=		2
 CATEGORIES=		graphics devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wvware/}
 
-MAINTAINER=		kei@netbsd.org
+MAINTAINER=		kei@NetBSD.org
 HOMEPAGE=		http://www.wvware.com/libwmf.html
 COMMENT=		library for reading and converting WMF (Windows Meta Files), version 2
 

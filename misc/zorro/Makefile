@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/06/02 01:18:05 jschauma Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/17 21:50:07 grant Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/11/22 19:55:25 jseger Exp
 #
 
@@ -7,7 +7,7 @@ PKGNAME=	zorro-1.1.8
 CATEGORIES=	misc tk
 MASTER_SITES=	ftp://ftp.neosoft.com/pub/tcl/sorted/apps/zorro-1.1p8/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Simple to-do list manager
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk

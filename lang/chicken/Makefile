@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:19:07 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:44:03 grant Exp $
 #
 
 DISTNAME=	chicken-1.0
 CATEGORIES=	lang
 MASTER_SITES=	http://www.call-with-current-continuation.org/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.call-with-current-continuation.org/chicken.html
 COMMENT=	scheme to C compiler, handling R5RS
 

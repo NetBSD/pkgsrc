@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2003/06/02 01:19:13 jschauma Exp $
+# $NetBSD: Makefile,v 1.46 2003/07/17 21:42:52 grant Exp $
 
 DISTNAME=	tiff-v3.5.7
 PKGNAME=	tiff-3.5.7
@@ -9,7 +9,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 # need DISTFILES above for adding lzw-files to it if USE_GIF is defined
 # in mk.conf
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.libtiff.org/
 COMMENT=	Library and tools for reading and writing TIFF data files
 

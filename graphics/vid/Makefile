@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/02 01:19:12 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:42:59 grant Exp $
 #
 
 DISTNAME=	vid-1.0.1
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://members.home.com/housel/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://members.home.com/housel/projects.htm
 COMMENT=	simple-minded image capture program for some USB webcams
 

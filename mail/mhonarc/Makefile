@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/12/31 20:25:34 jwise Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 21:46:30 grant Exp $
 #
 
 DISTNAME=	MHonArc2.5.14
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.oac.uci.edu/indiv/ehood/tar/ \
 		ftp://hhobel.phl.univie.ac.at/MHonArc/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jwise@netbsd.org
+MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://www.mhonarc.org/
 COMMENT=	Mailbox to HTML converter, suitable for list archives
 

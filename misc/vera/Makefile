@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:18:06 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:50:01 grant Exp $
 # FreeBSD Id: ports/misc/vera/Makefile,v 1.7 2000/11/13 12:44:18 demon Exp
 
 DISTNAME=	vera-1.6
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNU:=vera/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://userpage.fu-berlin.de/~oheiabbd/vera-e.html
 COMMENT=	Virtual Entity of Relevant Acronyms
 

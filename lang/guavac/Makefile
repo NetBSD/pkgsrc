@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/06/02 01:19:03 jschauma Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/17 21:44:31 grant Exp $
 #
 
 DISTNAME=	guavac-1.2
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.yggdrasil.com/pub/dist/devel/compilers/guavac/ \
 		ftp://sunsite.mff.cuni.cz/Languages/Java/guavac/ \
 		ftp://sunsite.auc.dk/pub/languages/java/guavac/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 # HOMEPAGE=	http://www.cs.berkeley.edu/~engberg/guavac/ no longer exists
 COMMENT=	Free compiler for the Java language
 

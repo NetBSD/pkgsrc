@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2003/07/04 20:41:36 seb Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:44:14 grant Exp $
 #
 
 DISTNAME=	eieio-0.17
 CATEGORIES=	lang editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cedet/}
 
-MAINTAINER=	cjones@netbsd.org
+MAINTAINER=	cjones@NetBSD.org
 HOMEPAGE=	http://cedet.sourceforge.net/eieio.shtml
 COMMENT=	Enhanced Integration of Emacs Interpreted Objects
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/03/02 20:18:50 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 21:43:41 grant Exp $
 # FreeBSD Id: Makefile,v 1.4 1999/06/06 13:19:49 taoka Exp $
 
 DISTNAME=	kinput2-v3
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/x11/kinput2/
 
-MAINTAINER=	tech-pkg-ja@jp.netbsd.org
+MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 COMMENT=	Input server of Japanese text
 
 USE_BUILDLINK2=	YES

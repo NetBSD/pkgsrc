@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/04/02 12:03:41 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 21:41:33 grant Exp $
 #
 
 DISTNAME=	libgii-0.8.3.src
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.ggi-project.org/pub/ggi/ggi/v2.0/ \
 		${MASTER_SITE_SOURCEFORGE:=ggi/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.ggi-project.org/
 COMMENT=	General Input Interface - API for all possible input sources
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/07 20:52:44 seb Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 21:48:27 grant Exp $
 #
 
 DISTNAME=		rtptools-1.18
 CATEGORIES=		mbone
 MASTER_SITES=		http://www.cs.columbia.edu/IRT/software/rtptools/download/
 
-MAINTAINER=		seb@netbsd.org
+MAINTAINER=		seb@NetBSD.org
 HOMEPAGE=		http://www.cs.columbia.edu/IRT/software/rtptools/
 COMMENT=		tools for processing RTP data
 

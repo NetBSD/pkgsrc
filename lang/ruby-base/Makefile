@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/07/13 13:52:23 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/17 21:45:19 grant Exp $
 # FreeBSD Id: ports/lang/ruby/Makefile,v 1.39 2000/10/20 19:56:03 knu Exp
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -8,7 +8,7 @@ WRKSRC=		${RUBY_WRKSRC}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
-MAINTAINER=	taca@netbsd.org
+MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.ruby-lang.org/en/
 COMMENT= 	base installation of Ruby
 

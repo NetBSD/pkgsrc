@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2003/06/02 01:18:29 jschauma Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 21:47:50 grant Exp $
 
 DISTNAME=		ntl-5.3.1
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 CATEGORIES=		math devel
 MASTER_SITES=		http://www.shoup.net/ntl/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.shoup.net/ntl/
 COMMENT=		C++ library for doing number theory
 

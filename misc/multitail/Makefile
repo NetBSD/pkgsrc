@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/13 13:52:44 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:49:32 grant Exp $
 #
 
 DISTNAME=	multitail-2.4
@@ -7,7 +7,7 @@ CATEGORIES=	misc sysutils
 MASTER_SITES=	http://www.vanheusden.com/multitail/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.vanheusden.com/multitail/
 COMMENT=	view one or multiple files
 

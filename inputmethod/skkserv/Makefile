@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/06/02 01:19:07 jschauma Exp $
+# $NetBSD: Makefile,v 1.3 2003/07/17 21:43:50 grant Exp $
 
 DISTNAME=	skk9.6
 PKGNAME=	skkserv-3.9.4
@@ -11,7 +11,7 @@ PATCHFILES=	SKK-JISYO.L.diff.gz
 PATCH_SITES=	http://www.ht-net21.ne.jp/%7Enaoki-w/skk/
 PATCH_DIST_ARGS= -d ${WRKSRC}/jisyo --forward --quiet
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://skk.kuis.kyoto-u.ac.jp/
 COMMENT=	Dictionary server for Simple Kana-Kanji conversion programs
 

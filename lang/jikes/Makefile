@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/06/02 01:19:01 jschauma Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/17 21:44:43 grant Exp $
 #
 
 DISTNAME=	jikes-1.18
@@ -6,7 +6,7 @@ CATEGORIES=	lang
 MASTER_SITES=	http://oss.software.ibm.com/pub/jikes/1.18/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www10.software.ibm.com/developerworks/opensource/jikes/
 COMMENT=	Java source to byte-code compiler
 

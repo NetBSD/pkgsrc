@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2003/06/18 09:22:21 agc Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/17 21:47:53 grant Exp $
 
 DISTNAME=	otter-3.0.6
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}/source
 CATEGORIES=	math
 MASTER_SITES=	ftp://info.mcs.anl.gov/pub/Otter/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.mcs.anl.gov/AR/otter/
 COMMENT=	Automated Deduction System
 

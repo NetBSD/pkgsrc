@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2003/06/02 01:19:13 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 21:42:56 grant Exp $
 #
 
 DISTNAME=	tuxpaint-stamps-2003.02.22
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tuxpaint/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.newbreedsoftware.com/tuxpaint/
 COMMENT=	rubber stamps for Tux Paint
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2003/06/30 06:45:04 tron Exp $
+# $NetBSD: Makefile,v 1.29 2003/07/17 21:42:08 grant Exp $
 
 .include "../ImageMagick/Makefile.common"
 
@@ -6,7 +6,7 @@ PKGNAME=		p5-PerlMagick-${DISTVERSION}
 
 SVR4_PKGNAME=		p5pma
 
-MAINTAINER=		tron@netbsd.org
+MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.simplesystems.org/ImageMagick/
 COMMENT=		Object-oriented Perl interface to ImageMagick
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/06/24 14:14:17 abs Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 21:49:36 grant Exp $
 
 DISTNAME=		OOo_1.0.3.1_LinuxIntel_install
 PKGNAME=		openoffice-linux-1.0.3.1
@@ -7,7 +7,7 @@ CATEGORIES=		misc
 MASTER_SITES=		http://sf1.mirror.openoffice.org/stable/1.0.3/	\
 			http://www.fs.tum.de/~mrauch/OpenOffice/download/
 
-MAINTAINER=		mrauch@netbsd.org
+MAINTAINER=		mrauch@NetBSD.org
 HOMEPAGE=		http://www.openoffice.org/
 COMMENT=		Integrated office productivity suite (binary pkg)
 

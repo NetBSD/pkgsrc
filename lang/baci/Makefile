@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/09/27 23:18:15 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:44:00 grant Exp $
 #
 
 DISTNAME=	bacisrc
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_BACKUP}
 DISTFILES=	bacisrc.tar.gz \
 		bacidoc.tar.gz
 
-MAINTAINER=	wulf@netbsd.org
+MAINTAINER=	wulf@NetBSD.org
 HOMEPAGE=	http://www.mines.edu/fs_home/tcamp/baci/
 COMMENT=	Ben-Ari Concurrent Interpreter
 

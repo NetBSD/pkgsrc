@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/04/25 15:18:54 yyamano Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:45:53 grant Exp $
 #
 
 DISTNAME=		dot-forward-0.71
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		http://cr.yp.to/software/
 
-MAINTAINER=		zuntum@netbsd.org
+MAINTAINER=		zuntum@NetBSD.org
 HOMEPAGE=		http://cr.yp.to/dot-forward.html
 COMMENT=		get qmail to use .forward files
 
