@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/05/14 17:26:53 rh Exp $
+$NetBSD: distinfo,v 1.2 2001/05/15 07:56:44 rh Exp $
 
-SHA1 (gftp-2.0.7b.tar.gz) = 9a3dae1dbaeb0246ade524d37b8b7c000df61088
-Size (gftp-2.0.7b.tar.gz) = 657874 bytes
+SHA1 (gftp-2.0.8.tar.gz) = 67a93e1b2e6f67a19bb8b6429be99e1870e57430
+Size (gftp-2.0.8.tar.gz) = 786985 bytes
 SHA1 (patch-aa) = dc1720a8d18c2fcbdc45832431d6d68a4501c0ae
-SHA1 (patch-ab) = e9ae08c20a29dac5d7fabba06be87c9473107cf4
+SHA1 (patch-ab) = 629fdd242045ae82b9bc44413767735d1762ac03
