@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2914 2005/01/16 22:18:45 epg Exp $
+$NetBSD: TODO,v 1.2915 2005/01/16 22:28:01 epg Exp $
 
 Suggested new packages
 ======================
@@ -1070,7 +1070,6 @@ Suggested package updates
 	o strace-4.5.8
 	o streamtuner-0.99.99
 	o subtitleripper-0.3.4
-	o subversion-1.1.3
 	o svk-0.27
 	o swfdec-0.3.2
 	o swi-prolog-5.5.2
