@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2004/02/10 23:31:27 jlam Exp $
+# $NetBSD: Makefile.common,v 1.28 2004/02/11 01:46:30 abs Exp $
 #
 
 DISTNAME=	MesaLib-${MESA_VERSION}
@@ -14,6 +14,7 @@ MESA_VERSION=	6.0
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.mesa3d.org/
 
+USE_LANGUAGES=		c c++
 ALL_TARGET=             pkgsrc
 USE_LIBTOOL=		yes
 USE_X11=		yes
