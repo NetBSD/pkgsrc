@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2000/08/10 18:28:30 fredb Exp $
+# $NetBSD: Makefile,v 1.27 2000/08/10 18:31:36 fredb Exp $
 #
 
 DISTNAME=		lynx2.8.3rel.1
@@ -20,7 +20,6 @@ DISTFILES+=		lynx-2.8.3.rel1.sl.po
 
 PATCH_SITES=		http://www.flora.org/lynx-dev/html/month072000/
 PATCHFILES=		gz00000.gz
-
 PATCH_SITES+=		http://www.moxienet.com/lynx/
 PATCHFILES+= 		lynx-283-ssl.patch.gz
 PATCH_DIST_STRIP=	-p1
