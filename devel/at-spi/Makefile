@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2005/02/26 17:25:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.20 2005/03/22 16:25:06 jmmv Exp $
 #
 
-DISTNAME=		at-spi-1.6.2
+DISTNAME=		at-spi-1.6.3
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/at-spi/1.6/}
 EXTRACT_SUFX=		.tar.bz2
@@ -28,6 +28,7 @@ PKGCONFIG_OVERRIDE+=    libspi-1.0.pc.in
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
+.include "../../net/ORBit2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
