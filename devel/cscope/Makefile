@@ -1,16 +1,36 @@
-# $NetBSD: Makefile,v 1.2 2000/04/21 03:50:24 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2000/05/19 11:03:32 wiz Exp $
 
-DISTNAME=	cscope-13.0-2
-PKGNAME=	cscope-13.0.2
+DISTNAME=	cscope-15.0bl2
+PKGNAME=	cscope-15.0.2
 CATEGORIES=	devel
 MASTER_SITES=	http://download.sourceforge.net/cscope/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://cscope.sourceforge.net/
 
-WRKSRC=		${WRKDIR}/cscope-13.0
+GNU_CONFIGURE=	YES
 
-post-install:
-		${INSTALL_MAN} ${WRKSRC}/doc/cscope.1 ${PREFIX}/man/cat1
+OSVER!=		uname -r
+GOOD_CURSES=	1.4[A-Z] 1.[5-9]*
+
+.for PATTERN in ${GOOD_CURSES}
+.if ${OSVER:M${PATTERN}} != ""
+CURSES_GOOD?=
+.endif
+.endfor
+
+.if !defined(CURSES_GOOD)
+DEPEND+=	ncurses>=5.0:../../devel/ncurses
+
+CONFIGURE_ARGS+=--with-ncurses=${LOCALBASE}
+
+post-extract:
+.for FILE in command.c display.c edit.c exec.c find.c help.c input.c main.c
+	@cd ${WRKSRC}/src;						\
+	${MV} ${FILE} ${FILE}.orig;					\
+	${SED} "s/^#include <curses.h>/#include <ncurses.h>/" 		\
+		< ${FILE}.orig > ${FILE}
+.endfor
+.endif
 
 .include <../../mk/bsd.pkg.mk>
