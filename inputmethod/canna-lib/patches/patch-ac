@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/05/31 13:00:58 seb Exp $
+$NetBSD: patch-ac,v 1.2 2002/06/10 09:47:28 sakamoto Exp $
 
 --- dic/phono/Imakefile.orig	Wed Nov 27 16:15:14 1996
 +++ dic/phono/Imakefile	Fri Jul 30 19:57:02 1999
@@ -7,7 +7,9 @@ $NetBSD: patch-ac,v 1.1.1.1 2002/05/31 13:00:58 seb Exp $
         ROMAJI_DIC_DEF = -DSHIFT
  
 -               DICDIR = $(cannaLibDir)/dic
+-            SAMPLEDIR = $(cannaLibDir)/sample
+-         SAMPLESRCDIR = $(cannaLibDir)/sample/src
 +               DICDIR = $(DicDir)
-             SAMPLEDIR = $(cannaLibDir)/sample
-          SAMPLESRCDIR = $(cannaLibDir)/sample/src
- 
++            SAMPLEDIR = $(DicDir)/sample
++         SAMPLESRCDIR = $(DicDir)/sample/src
+
