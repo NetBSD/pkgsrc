@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2002/07/02 15:11:45 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2002/07/02 15:23:48 wiz Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -110,9 +110,9 @@ CONFIGURE_ENV+=	lynx_key=n
 HELP_W3M=			-w3m
 .endif
 .if ${W3M_USE_IMAGE} == YES
-CONFIGURE_ENV+= use_image=y 
+CONFIGURE_ENV+= use_image=y
 .else
-CONFIGURE_ENV+= use_image=n 
+CONFIGURE_ENV+= use_image=n
 .endif
 CONFIGURE_ENV+= use_menu=y use_matrix=n use_ansi_color=y
 CONFIGURE_ENV+= use_help_cgi=n use_migemo=n
