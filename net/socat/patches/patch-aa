@@ -1,15 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/02/14 22:43:38 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2004/09/30 12:42:46 adrianp Exp $
 
---- Makefile.in.orig	2003-10-19 03:01:41.000000000 -0500
-+++ Makefile.in
-@@ -21,11 +21,11 @@ srcdir = @srcdir@
+--- Makefile.in.orig	2004-09-30 13:23:21.000000000 +0000
++++ Makefile.in	2004-09-30 13:24:30.000000000 +0000
+@@ -21,12 +21,12 @@
  VPATH = @srcdir@
  
  CC = @CC@
 -CCOPTS = $(CCOPT) -Wall -Wno-parentheses
 +CCOPTS = $(CCOPT)
  
- INCLS = -I. @V_INCL@
+ CPPFLAGS = -I. @CPPFLAGS@
+ #0 INCLS = -I. @V_INCL@
  DEFS = @DEFS@
 -LIBS = @LIBS@
 +LIBS = @LDFLAGS@ @LIBS@
