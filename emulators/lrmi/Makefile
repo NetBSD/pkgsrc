@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/11 18:13:50 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/12 13:26:23 drochner Exp $
 #
 
 DISTNAME=		lrmi-0.8
@@ -14,6 +14,7 @@ USE_BUILDLINK2=		yes
 MAKEFILE=		Makefile.bsd
 
 do-install:
+	${INSTALL_DATA} ${WRKSRC}/lrmi.h ${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/liblrmi.a ${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/liblrmi.so ${PREFIX}/lib
 	${INSTALL_PROGRAM} ${WRKSRC}/vbetest ${PREFIX}/bin
