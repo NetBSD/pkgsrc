@@ -1,0 +1,41 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/02/16 00:25:30 salo Exp $
+
+--- Makefile.orig	Tue Jan 14 00:12:57 2003
++++ Makefile	Sun Feb 16 01:09:18 2003
+@@ -5,7 +5,7 @@
+ 
+ 
+ # Variables that you may want to modify
+-PREFIX  = /usr/local
++#PREFIX  = /usr/local
+ TMPDIR  = ~/tmp
+ 
+ # Variables that you probably don't want to modify
+@@ -22,12 +22,12 @@
+ 	rm -f $(OBJ) wtail
+ 
+ install:
+-	mkdir -p '$(PREFIX)'/bin
+-	cp wtail '$(PREFIX)'/bin
+-	touch -r wtail '$(PREFIX)'/bin/wtail
+-	mkdir -p "$(MAN)"/man1
+-	sed 's/@{VERSION}/'$(VERSION)'/g' wtail.1 >"$(MAN)"/man1/wtail.1
+-	touch -r wtail.1 "$(MAN)"/man1/wtail.1
++	${BSD_INSTALL_PROGRAM} wtail $(PREFIX)/bin/
++	${SED} 's/@{VERSION}/'$(VERSION)'/g' wtail.1 > wtail.1.fixed
++	${BSD_INSTALL_MAN} wtail.1.fixed $(PREFIX)/man/man1/wtail.1
++	${BSD_INSTALL_DATA_DIR} $(PREFIX)/share/doc/wtail
++	${BSD_INSTALL_DATA} README CHANGES COPYING FAQ VERSION		\
++		$(PREFIX)/share/doc/wtail/
+ 
+ test: chatter
+ 	./chatter /tmp/wtail.a /tmp/wtail.b /tmp/wtail.c		\
+@@ -51,7 +51,7 @@
+ 	arc=$(ARC); cd $(TMPDIR) && tar -cf - $$arc | gzip >$$arc.tar.gz
+ 
+ wtail: $(OBJ)
+-	$(CC) $(LDFLAGS) -o $@ $(OBJ) -lcurses
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(OBJ) -lcurses
+ 
+ version.c: VERSION
+ 	cat VERSION | sed 's/.*/const char version[] = "&";/' >$@
