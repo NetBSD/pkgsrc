@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.30 2002/09/26 21:04:11 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.31 2002/10/04 23:46:26 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -101,6 +101,18 @@ USE_USERADD=		YES
 .if !empty(PKG_GROUPS)
 USE_USERGROUP=		YES
 .endif
+
+# SPECIAL_PERMS are lists that look like:
+#		file user group mode
+#	At post-install time, file (it may be a directory) is changed to be
+#	owned by user:group with mode permissions.
+#
+# SPECIAL_PERMS should be used primarily to change permissions of files or
+# directories listed in the PLIST.  This may be used to make certain files
+# set-uid or to change the ownership or a directory.
+#
+SPECIAL_PERMS?=		# empty
+FILES_SUBST+=		SPECIAL_PERMS=${SPECIAL_PERMS:Q}
 
 # CONF_FILES are pairs of example and true config files, used much like
 #	MLINKS in the base system.  At post-install time, if the true config
@@ -209,6 +221,7 @@ FILES_SUBST+=		CP=${CP:Q}
 FILES_SUBST+=		DIRNAME=${DIRNAME:Q}
 FILES_SUBST+=		ECHO=${ECHO:Q}
 FILES_SUBST+=		EGREP=${EGREP:Q}
+FILES_SUBST+=		EXPR=${EXPR:Q}
 FILES_SUBST+=		FALSE=${FALSE:Q}
 FILES_SUBST+=		GREP=${GREP:Q}
 FILES_SUBST+=		GROUPADD=${GROUPADD:Q}
