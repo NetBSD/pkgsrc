@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/03/22 16:03:04 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/03/25 16:34:47 jmmv Exp $
 include/libgnomeprintui-2.2/libgnomeprintui/gnome-font-dialog.h
 include/libgnomeprintui-2.2/libgnomeprintui/gnome-print-config-dialog.h
 include/libgnomeprintui-2.2/libgnomeprintui/gnome-print-dialog.h
@@ -9,6 +9,23 @@ include/libgnomeprintui-2.2/libgnomeprintui/gnome-print-unit-selector.h
 include/libgnomeprintui-2.2/libgnomeprintui/libgnomeprintui-enum-types.h
 lib/libgnomeprintui-2-2.la
 lib/pkgconfig/libgnomeprintui-2.2.pc
+share/doc/libgnomeprintui/ch02.html
+share/doc/libgnomeprintui/home.png
+share/doc/libgnomeprintui/index.html
+share/doc/libgnomeprintui/index.sgml
+share/doc/libgnomeprintui/left.png
+share/doc/libgnomeprintui/libgnomeprintui-gnome-font-dialog.html
+share/doc/libgnomeprintui/libgnomeprintui-gnome-print-copies.html
+share/doc/libgnomeprintui/libgnomeprintui-gnome-print-dialog.html
+share/doc/libgnomeprintui/libgnomeprintui-gnome-print-job-preview.html
+share/doc/libgnomeprintui/libgnomeprintui-gnome-print-paper-selector.html
+share/doc/libgnomeprintui/libgnomeprintui-gnome-print-preview.html
+share/doc/libgnomeprintui/libgnomeprintui-gnome-printer-selector.html
+share/doc/libgnomeprintui/libgnomeprintui.devhelp
+share/doc/libgnomeprintui/libgnomeprintui.html
+share/doc/libgnomeprintui/right.png
+share/doc/libgnomeprintui/style.css
+share/doc/libgnomeprintui/up.png
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/libgnomeprintui-2.2.mo
@@ -76,5 +93,6 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/libgnomeprintui-2.2.mo
+@dirrm share/doc/libgnomeprintui
 @dirrm include/libgnomeprintui-2.2/libgnomeprintui
 @dirrm include/libgnomeprintui-2.2
