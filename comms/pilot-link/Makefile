@@ -1,20 +1,28 @@
-# $NetBSD: Makefile,v 1.23 2001/06/22 05:25:46 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2001/06/27 18:04:38 jlam Exp $
 #
 
-DISTNAME=		pilot-link.0.9.3
-PKGNAME=		pilot-link-0.9.3
-CATEGORIES=		comms
-MASTER_SITES=		http://www.gnu-designs.com/pilot-link/source/
+.include "../../comms/pilot-link/Makefile.common"
 
-MAINTAINER=		sommerfeld@alum.mit.edu
-HOMEPAGE=		http://www.gnu-designs.com/pilot-link/
+PKGNAME=		pilot-link-${PILOT_LINK_VERS}
 COMMENT=		Tools to talk to the 3Com Pilot PDA
+
+BUILDLINK_DEPENDS.pilot-link-libs=	pilot-link-libs>=${PILOT_LINK_VERS}
 
 USE_BUILDLINK_ONLY=	# defined
 USE_PERL5=		# defined
-GNU_CONFIGURE=		# defined
+USE_GNU_READLINE=	# defined
 
-USE_LIBTOOL=		# defined
-LTCONFIG_OVERRIDE=	${WRKSRC}/scripts/ltconfig
+CONFIGURE_ARGS+=	--with-perl5=${PERL5}
+CONFIGURE_ARGS+=	--with-readline21
+CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_DIR}
 
+LIBS+=			-lpisock -liconv
+
+INSTALL_TARGET=		install-execs install-man
+
+.include "../../comms/pilot-link-libs/buildlink.mk"
+.include "../../devel/readline/buildlink.mk"
+.include "../../lang/tcl/buildlink.mk"
+.include "../../x11/tk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
