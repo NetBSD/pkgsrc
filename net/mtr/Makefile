@@ -1,12 +1,5 @@
-# $NetBSD: Makefile,v 1.4 2000/01/28 14:16:25 sommerfeld Exp $
-#
-# New ports collection makefile for:   mtr
-# Version required:    0.41
-# Date created:        12 August 1998
-# Whom:                Bill Fumerola <billf@chc-chimes.com>
-#
+# $NetBSD: Makefile,v 1.5 2000/03/17 13:56:52 tron Exp $
 # $FreeBSD: ports/net/mtr/Makefile,v 1.16 1999/10/28 08:06:00 mharo Exp $
-#
 
 DISTNAME=	mtr-0.41
 CATEGORIES=	net
@@ -33,25 +26,9 @@ MASTER_SITES+=	ftp://ftp.kame.net/pub/kame/misc/
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 .endif
 
-#.if defined(USE_GTK)
-#USE_XLIB=	yes
-#LIB_DEPENDS=    gtk12.2:../../x11-toolkits/gtk12
-#CONFIGURE_ENV+=	GTK_CONFIG="${X11BASE}/bin/gtk12-config"
-#.endif
-
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-MAN8=	mtr.8
 CONFIGURE_ENV+= CPPFLAGS=-I${PREFIX}/include
-
-#pre-patch:
-#.if !defined(USE_GTK)
-#	@${ECHO} ""
-#	@${ECHO} "If you want to compile with GTK support,"
-#	@${ECHO} "hit Ctrl-C right now and use \"make USE_GTK=yes\" "
-#	@${ECHO} ""
-#CONFIGURE_ARGS+=--with-gtk-prefix=/nopath
-#.endif
 
 do-install:
 	${INSTALL} -c -s -m 4755 -o root -g wheel ${WRKSRC}/mtr ${PREFIX}/sbin
