@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/20 18:50:48 jmmv Exp $
+lib/dia/libpython_plugin.la
+share/dia/python-startup.py
+share/dia/python/diasvg.py
+share/dia/python/diasvg_import.py
+share/dia/python/group_props.py
+share/dia/python/gtkcons.py
+share/dia/python/otypes.py
+share/dia/python/pydiadoc.py
+share/dia/python/scascale.py
+share/dia/python/select_by.py
+@dirrm share/dia/python
+@comment in dia: @dirrm share/dia
+@comment in dia: @dirrm lib/dia
