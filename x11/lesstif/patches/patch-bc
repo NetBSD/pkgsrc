@@ -1,0 +1,25 @@
+$NetBSD: patch-bc,v 1.1 2000/12/22 17:26:20 jlam Exp $
+
+--- lib/Makefile.am.orig	Tue Dec  5 17:51:35 2000
++++ lib/Makefile.am
+@@ -3,5 +3,12 @@
+ #
+ MAINTAINERCLEANFILES=Makefile.in
+-SUBDIRS=	config \
++
++if Version_1_2
++CONFIGDIR=
++else
++CONFIGDIR=	config
++endif
++
++SUBDIRS=	$(CONFIGDIR) \
+ 		Xm Mrm Uil \
+ 		Xm-2.0 Mrm-2.0 Uil-2.0 \
+@@ -10,5 +17,5 @@
+ 		Dt
+ 
+-DIST_SUBDIRS=	config \
++DIST_SUBDIRS=	$(CONFIGDIR) \
+ 		Xm Mrm Uil \
+ 		Xm-2.0 Mrm-2.0 Uil-2.0 \

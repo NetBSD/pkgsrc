@@ -1,24 +1,29 @@
-$NetBSD: patch-as,v 1.6 2000/10/23 19:45:19 jlam Exp $
+$NetBSD: patch-as,v 1.7 2000/12/22 17:26:19 jlam Exp $
 
---- lib/config/LessTif.tmpl.orig	Tue Aug 29 11:04:58 2000
-+++ lib/config/LessTif.tmpl
-@@ -165,7 +165,7 @@
- #endif
+--- include/Motif-1.2/Mrm/Makefile.am.orig	Wed Oct 11 15:36:14 2000
++++ include/Motif-1.2/Mrm/Makefile.am
+@@ -6,6 +6,7 @@
+ h=	MrmAppl.h MrmDecls.h MrmPrivate.h MrmPublic.h
+ EXTRA_DIST=	$(h)
  
- #ifndef LessTifXmVersion
--# define LessTifXmVersion	1	/* configure-time option */
-+# define LessTifXmVersion	2	/* NetBSD installs Xm-2.0 be default */
- #endif
++if Version_1_2
+ #
+ # Install headers
+ #
+@@ -14,16 +15,6 @@
+ #
+ mrmdir =	$(prefix)/LessTif/Motif1.2/include/Mrm
  
- #if LessTifXmVersion == 1
-@@ -176,8 +176,8 @@
- #  define LTDepXpLib		/**/
- #elif LessTifXmVersion == 2
- #  define XmVersion		2
--#  define XmRevision		1
--#  define MotifSharedRev	2.1	/* why 2.0? */
-+#  define XmRevision		0
-+#  define MotifSharedRev	2.0
- #  define LTXpLib 		$(XPLIB)
- #  define LTDepXpLib		$(DEPXPLIB)
- #else
+-if Version_1_2
+-
+ mrm_HEADERS=	$(h)
+ 
+ endif
+-install-data-hook:
+-if Version_1_2
+-if DefaultVersion12
+-	if [ -d $(DESTDIR)$(prefix)/include/Mrm ]; then rm -rf $(DESTDIR)$(prefix)/include/Mrm; else rm -f $(DESTDIR)$(prefix)/include/Mrm; fi
+-	(mkdir -p $(DESTDIR)$(prefix)/include && cd $(DESTDIR)$(prefix)/include && $(LN_S) ../LessTif/Motif1.2/include/Mrm Mrm)
+-endif
+-endif
+-
