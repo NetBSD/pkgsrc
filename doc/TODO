@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2881 2005/01/11 13:42:41 adam Exp $
+$NetBSD: TODO,v 1.2882 2005/01/11 14:02:31 adam Exp $
 
 Suggested new packages
 ======================
@@ -449,7 +449,6 @@ Suggested package updates
 	o erlang-10b-2
 	o esh-0.8.5
 	o etach-1.4.0
-	o eterm-0.9.3
 	o ettercap-0.7.2 [wip/ettercap-NG|adrianp]
 	o everybuddy-0.4.3
 	o everybuddy-gnome-0.4.3
@@ -630,7 +629,6 @@ Suggested package updates
 	o lcab-1.0b11
 	o lcc-4.2
 	o leafpad-0.7.9
-	o libast-0.6
 	o libcdio-0.71
 	o libcomprex-0.3.3
 	o libetpan-0.34b
