@@ -1,0 +1,45 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/12/05 15:20:22 jschauma Exp $
+
+--- demos/Makefile.X11.orig	Tue Aug 21 01:42:11 2001
++++ demos/Makefile.X11	Thu Nov 21 14:42:39 2002
+@@ -9,8 +9,8 @@
+ 
+ ##### MACROS #####
+ 
+-INCDIR = ../include
+-LIBDIR = ../lib
++INCDIR = ${X11PREFIX}/include
++LIBDIR = ${X11PREFIX}/lib
+ 
+ GL_LIBS = -L$(LIBDIR) -lglut -lGLU -lGL $(APP_LIB_DEPS)
+ 
+@@ -36,7 +36,6 @@
+ 	morph3d \
+ 	multiarb \
+ 	occlude \
+-	osdemo \
+ 	paltex \
+ 	pixeltex \
+ 	pointblast \
+@@ -44,7 +43,6 @@
+ 	readpix \
+ 	reflect \
+ 	renormal \
+-	shadowtex \
+ 	spectex \
+ 	stex3d \
+ 	teapot \
+@@ -68,11 +66,11 @@
+ 
+ # make executable from .c file:
+ .c: $(LIB_DEP)
+-	$(CC) -I$(INCDIR) -I../util $(CFLAGS) $< $(GL_LIBS) -o $@
++	$(CC) -I$(INCDIR) $(CFLAGS) -Wl,-R${LIBDIR} $< $(GL_LIBS) -o $@
+ 
+ # special case: need the -lOSMesa library:
+ osdemo: osdemo.c
+-	$(CC) -I$(INCDIR) $(CFLAGS) osdemo.c $(OSMESA_LIBS) -o $@
++	$(CC) -I$(INCDIR) $(CFLAGS) -Wl,-R${LIBDIR} osdemo.c $(OSMESA_LIBS) -o $@
+ 
+ 
+ ##### TARGETS #####
