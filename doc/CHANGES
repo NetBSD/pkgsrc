@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5516 2004/04/11 00:06:05 rh Exp $
+$NetBSD: CHANGES,v 1.5517 2004/04/11 00:09:52 rh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1888,3 +1888,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated Addresses to 0.4.5nb1 [rh 2004-04-11]
 	Updated GNUMail to 1.1.2 [rh 2004-04-11]
 	Updated Gorm to 0.6.0 [rh 2004-04-11]
+	Added gnustep-ssl-1.9.1 [rh 2004-04-11]
