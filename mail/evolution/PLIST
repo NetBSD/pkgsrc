@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2003/03/22 04:35:09 rh Exp $
+@comment $NetBSD: PLIST,v 1.13 2003/04/12 04:26:41 rh Exp $
 bin/csv2vcard
 bin/evolution
 bin/evolution-addressbook
@@ -115,6 +115,7 @@ include/camel/camel-provider.h
 include/camel/camel-sasl-anonymous.h
 include/camel/camel-sasl-cram-md5.h
 include/camel/camel-sasl-digest-md5.h
+include/camel/camel-sasl-gssapi.h
 include/camel/camel-sasl-kerberos4.h
 include/camel/camel-sasl-login.h
 include/camel/camel-sasl-ntlm.h

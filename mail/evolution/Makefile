@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2003/03/22 04:35:09 rh Exp $
+# $NetBSD: Makefile,v 1.35 2003/04/12 04:26:41 rh Exp $
 
-DISTNAME=		evolution-1.2.3
+DISTNAME=		evolution-1.2.4
 CATEGORIES=		mail time gnome
 MASTER_SITES=		ftp://ftp.ximian.com/pub/ximian-evolution/source/ \
 			ftp://ximian.netnitco.net/pub/mirrors/ximian/ximian-evolution/source/ \
@@ -13,6 +13,7 @@ MASTER_SITES=		ftp://ftp.ximian.com/pub/ximian-evolution/source/ \
 			ftp://ftp.tux.is/ximian/ximian-evolution/source/ \
 			ftp://sunsite.cnlab-switch.ch/mirror/ximian/ximian-evolution/source/ \
 			${MASTER_SITE_GNOME:=sources/evolution/1.2/}
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://ximian.com/products/evolution/
@@ -47,6 +48,7 @@ REPLACE_PERL+=		libical/scripts/mkrestrictiontable.pl
 REPLACE_PERL+=		tools/csv2vcard
 REPLACE_PERL+=		tools/evolution-addressbook-clean.in
 REPLACE_PERL+=		tools/killev
+CPPFLAGS+=		-I/usr/include/krb5 -I/usr/include/gssapi
 CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--with-openldap --without-static-ldap
 CONFIGURE_ARGS+=	--enable-nntp=yes
@@ -54,9 +56,7 @@ CONFIGURE_ARGS+=	--enable-openssl=yes
 CONFIGURE_ARGS+=	--with-krb5=/usr --with-krb4=/usr
 CONFIGURE_ARGS+=	--with-db3-includes=${LOCALBASE}/include/db3
 CONFIGURE_ARGS+=	--with-db3-libs=${LOCALBASE}/lib
-CONFIGURE_ENV+=		CFLAGS="-D_POSIX_THREAD_SYSCALL_SOFT=1 ${CFLAGS}"
 CONFIGURE_ENV+=		PKG_CONFIG_PATH="${LOCALBASE}/lib/pkgconfig:${X11BASE}/lib/pkgconfig"
-CPPFLAGS+=		-D_POSIX_THREAD_SYSCALL_SOFT=1
 
 pre-configure:
 	for i in ${WRKSRC}/widgets/*/Makefile.in			\
