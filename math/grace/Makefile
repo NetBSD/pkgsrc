@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/07/19 12:43:51 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2002/09/23 17:22:54 wiz Exp $
 #
 
 DISTNAME=	grace-5.1.4
@@ -18,7 +18,7 @@ COMMENT=	GRaphing, Advanced Computation and Exploration of data
 
 #DEPENDS+=	fftw-[0-9]*:../../math/fftw
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
 USE_GMAKE=		YES
 USE_FORTRAN=		YES
@@ -31,14 +31,13 @@ post-install:
 	${RM} -f ${PREFIX}/bin/xmgrace
 	${LN} -s ${PREFIX}/grace/bin/xmgrace ${PREFIX}/bin
 
-.include "../../devel/netcdf/buildlink.mk"
-.include "../../fonts/t1lib/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../graphics/tiff/buildlink.mk"
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../print/pdflib/buildlink.mk"
-.include "../../x11/Xbae/buildlink.mk"
-.include "../../mk/motif.buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/netcdf/buildlink2.mk"
+.include "../../fonts/t1lib/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/tiff/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../print/pdflib/buildlink2.mk"
+.include "../../x11/Xbae/buildlink2.mk"
+.include "../../mk/motif.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
