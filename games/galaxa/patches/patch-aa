@@ -1,0 +1,63 @@
+--- makefile.orig	Wed Apr 22 22:41:21 1998
++++ makefile	Fri Jul 24 04:39:58 1998
+@@ -16,6 +16,11 @@
+ POSTPROCESS=strip
++INSTALLROOT=$(PREFIX)
++SOUNDS=$(INSTALLROOT)/share/galaxa/sounds
++IMAGES=$(INSTALLROOT)/share/galaxa/images
++DATA=$(INSTALLROOT)/share/galaxa
+ 
++DIRS= -DSOUNDS=\"$(SOUNDS)\" -DIMAGES=\"$(IMAGES)\" -DDATA=\"$(DATA)\"
+ 
+-XLIB=-lX11
+-CFLAGS=
++#XLIB=-lX11
++#CFLAGS=
+ 
+@@ -24,4 +29,4 @@
+ 
+-# XLIB=-L /usr/X11R6/lib -lX11 -lcompat
+-# CFLAGS=-I/usr/X11/include
++XLIB=	-R$(INSTALLROOT)/lib -L$(INSTALLROOT)/lib -lX11 #-lcompat
++CFLAGS=	-I$(INSTALLROOT)/include $(DIRS)
+ 
+@@ -41,3 +46,3 @@
+ galaxa:	$(OBJECTS)
+-	$(CC)	$(OBJECTS) $(XLIB) $(MATHLIB) $(CFLAGS) $(OPTFLAG) -o galaxa
++	$(CC) $(XLIB) $(MATHLIB) $(CFLAGS) $(OPTFLAG) -o $@ $(OBJECTS)
+ 	chmod 755 galaxa
+@@ -45,24 +50,18 @@
+ 
++install: galaxa
++	install -g games -o bin -m 2755 galaxa $(INSTALLROOT)/bin
++	mkdir -p $(DATA)
++	mkdir -p $(SOUNDS)
++	mkdir -p $(IMAGES)
++	install -g bin -o bin -m 0644 sounds/* $(SOUNDS)
++	install -g bin -o bin -m 0644 images/* $(IMAGES)
++	install -g games -o bin -m 0664 galaxa-highs.dat $(DATA)
+ 
+-#-- App object--#
++#-- Dependencies --#
+ 
+ galaxa.o:	galaxa.c hints.h randnum.h setup.h text.h soundmgr.h
+-	$(CC)	galaxa.c -c
+-
+-
+-#-- Lib objects--#
+-
+ hints.o:	hints.c hints.h
+-	$(CC)	hints.c -c
+-
+-text.o:	text.c text.h
+-	$(CC)	text.c -c
+-
++text.o:		text.c text.h
+ soundmgr.o:	soundmgr.c soundmgr.h
+-	$(CC)	soundmgr.c -c
+-
+ randnum.o:	randnum.c randnum.h
+-	$(CC)	randnum.c -c
+-
+ setup.o:	setup.c setup.h hints.h text.h soundmgr.h randnum.h
+-	$(CC)	setup.c -c
