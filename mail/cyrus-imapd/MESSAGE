@@ -1,17 +1,11 @@
-# $NetBSD: INSTALL,v 1.4 2003/08/30 20:22:55 jlam Exp $
-
-case ${STAGE} in
-POST-INSTALL)
-	${CAT} << EOF
 ===========================================================================
+$NetBSD: MESSAGE,v 1.1 2004/02/14 17:55:18 snj Exp $
+
 Please also refer to:
 
-	${PKG_PREFIX}/share/doc/html/cyrus-imapd/install.html
+	${PREFIX}/share/doc/html/cyrus-imapd/install.html
 
 for more detailed instructions on setting up the environment before
 starting the Cyrus IMAP server.  In particular, several services will
 probably need to be added to /etc/services.
 ===========================================================================
-EOF
-	;;
-esac
