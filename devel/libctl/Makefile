@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/01/07 03:56:23 uebayasi Exp $
+# $NetBSD: Makefile,v 1.13 2003/01/10 11:46:49 wiz Exp $
 
 DISTNAME=	libctl-1.4.1
 CATEGORIES=	devel
@@ -9,6 +9,7 @@ HOMEPAGE=	http://ab-initio.mit.edu/libctl/
 COMMENT=	Guile-based flexible control file library for scientific simulations
 
 GNU_CONFIGURE=	yes
+USE_BUILDLINK2=	yes
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/libctl
