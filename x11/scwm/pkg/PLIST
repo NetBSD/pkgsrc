@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1999/10/27 11:25:37 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/11/01 03:48:05 hubertf Exp $
 include/scwmexec.h
 lib/X11/scwm/system.scwmrc
 lib/libscwmexec.so.0.0
@@ -22,6 +22,7 @@ man/man1/scwm.1
 man/man1/scwmexec.1
 man/man1/scwmrepl.1
 info/scwm.info
+@comment the next two files are not installed if emacs is not there
 share/emacs/site-lisp/scwm.el
 share/emacs/site-lisp/scwm.elc
 share/scwm-modules/app/scwm/advice.scm
