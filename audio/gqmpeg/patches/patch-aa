@@ -1,26 +1,29 @@
-$NetBSD: patch-aa,v 1.2 1999/05/15 03:49:14 hubertf Exp $
-
---- Makefile.BAK	Sat May 15 05:28:13 1999
-+++ Makefile	Sat May 15 05:28:41 1999
-@@ -1,11 +1,10 @@
+--- Makefile.orig	Mon May 17 23:11:01 1999
++++ Makefile	Tue May 18 13:38:58 1999
+@@ -1,12 +1,10 @@
  
 -PREFIX=/usr/local
- 
+-
  GTK_INCLUDE = `gtk-config --cflags`
  GTK_LIB = `gtk-config --libs`
  IMLIB_INCLUDE = `imlib-config --cflags-gdk`
  IMLIB_LIB = `imlib-config --libs-gdk`
+ 
 -CFLAGS = $(GTK_INCLUDE) $(IMLIB_INCLUDE)
 +CFLAGS += $(GTK_INCLUDE) $(IMLIB_INCLUDE)
  LDFLAGS = $(GTK_LIB) $(IMLIB_LIB)
- CC = gcc -Wall $(CFLAGS)
  
-@@ -81,7 +80,7 @@
- 		default_skin/volume_sl.xpm
+ CC = gcc -g -Wall
+@@ -107,10 +105,10 @@
+ # targets:
  
  gqmpeg: $(OBJS)
 -	$(CC) $(OBJS) -o gqmpeg $(LDFLAGS)
 +	$(CC) $(OBJS) -o gqmpeg $(LDFLAGS) -lossaudio
  
  static: $(OBJS)
- 	$(CC) $(OBJS) -o gqmpeg.static -static $(LDFLAGS)
+-	$(CC) $(OBJS) -o gqmpeg.static -static $(LDFLAGS)
++	$(CC) $(OBJS) -o gqmpeg.static -static $(LDFLAGS) -lossaudio
+ 
+ install: gqmpeg
+ 	install -c gqmpeg $(PREFIX)/bin/gqmpeg

@@ -1,8 +1,9 @@
-$NetBSD: patch-ab,v 1.3 1999/05/15 18:50:58 he Exp $
+$NetBSD: patch-ab,v 1.4 1999/05/27 00:49:45 hubertf Exp $
 
---- mixer.c.orig	Sat Mar 27 13:38:09 1999
-+++ mixer.c	Sat May 15 20:19:54 1999
-@@ -33,4 +33,9 @@
+--- mixer.c.orig	Tue May 25 00:15:57 1999
++++ mixer.c	Thu May 27 02:16:01 1999
+@@ -42,6 +42,11 @@
+ #include <audio.h>
  #endif
  
 +#ifdef __NetBSD__
@@ -12,21 +13,4 @@ $NetBSD: patch-ab,v 1.3 1999/05/15 18:50:58 he Exp $
 +
  #define LEFT  1
  #define RIGHT 256
-@@ -56,5 +61,5 @@
- static DeviceData *current_device = NULL;
- 
--#if defined (linux) || defined (__FreeBSD__)
-+#if defined (linux) || defined (__FreeBSD__) || defined (__NetBSD__)
- void mixer_init(gint init_device_id)
- {
-@@ -91,5 +96,9 @@
- 	for (i=0; i<SOUND_MIXER_NRDEVICES; i++)
- 		{
--		if ((dev_mask & (1<<i)) && !(rec_mask & (1<<i))) /* skip unsupported & record devs */
-+		if ((dev_mask & (1<<i)) /* skip unsupported */
-+#ifndef __NetBSD__
-+		&& !(rec_mask & (1<<i)) /* & record devs */
-+#endif
-+		) 
- 			{
- 			DeviceData *device = g_new0(DeviceData, 1);
+ #define LEFT_MASK 0x00ff

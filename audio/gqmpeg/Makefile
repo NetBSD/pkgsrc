@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 1999/05/15 03:49:13 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1999/05/27 00:49:44 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/12/28 01:02:05 vanilla Exp
 #
 
-DISTNAME=	gqmpeg-0.5.2
+DISTNAME=	gqmpeg-0.6.0
 CATEGORIES=	audio
 MASTER_SITES=	http://www.geocities.com/SiliconValley/Haven/5235/
 EXTRACT_SUFX=	.src.tgz
