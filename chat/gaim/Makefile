@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2003/10/18 08:18:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.42.2.1 2004/01/29 18:38:50 agc Exp $
 #
 
-DISTNAME=	gaim-0.71
+DISTNAME=	gaim-0.75
+PKGREVISION=	1
 CATEGORIES=	chat x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gaim/}
 EXTRACT_SUFX=	.tar.bz2
@@ -27,6 +28,7 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 CONFIGURE_ARGS+=	--disable-nas
 CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--disable-nss
+CONFIGURE_ARGS+=	--disable-tcl
 
 .include "../../mk/bsd.prefs.mk"
 

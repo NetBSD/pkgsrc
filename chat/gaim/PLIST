@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2003/10/18 08:18:46 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.20.2.1 2004/01/29 18:38:50 agc Exp $
 bin/gaim
 bin/gaim-remote
 include/gaim-remote/remote-socket.h
@@ -54,6 +54,9 @@ lib/gaim/libzephyr.so
 lib/gaim/notify.a
 lib/gaim/notify.la
 lib/gaim/notify.so
+lib/gaim/relnot.a
+lib/gaim/relnot.la
+lib/gaim/relnot.so
 lib/gaim/spellchk.a
 lib/gaim/spellchk.la
 lib/gaim/spellchk.so
@@ -89,6 +92,7 @@ ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gaim.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gaim.mo
@@ -101,14 +105,15 @@ ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gaim.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gaim.mo
-${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gaim.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gaim.mo
 share/pixmaps/gaim.png
@@ -329,6 +334,7 @@ share/pixmaps/gaim/status/default/napster.png
 share/pixmaps/gaim/status/default/notauthorized.png
 share/pixmaps/gaim/status/default/occupied.png
 share/pixmaps/gaim/status/default/offline.png
+share/pixmaps/gaim/status/default/secure.png
 share/pixmaps/gaim/status/default/trepia.png
 share/pixmaps/gaim/status/default/wireless.png
 share/pixmaps/gaim/status/default/yahoo.png
