@@ -1,14 +1,15 @@
-# $NetBSD: Makefile.common,v 1.7 2003/04/17 15:07:56 salo Exp $
+# $NetBSD: Makefile.common,v 1.8 2003/04/22 09:44:59 salo Exp $
 #
 
 DISTNAME=	# empty
 CATEGORIES=	fonts
 MASTER_SITES=	ftp://ftp.mirror.ac.uk/sites/ftp.netscape.com/pub/communicator/extras/fonts/windows/ \
+		http://sunsite.compapp.dcu.ie/pub/netscape/communicator/extras/fonts/windows/ \
 		ftp://ftp.riken.go.jp/pub/net/netscape/communicator/extras/fonts/windows/ \
 		ftp://ftp.man.poznan.pl/mirrors/mirrorsite.netscape.com/netscape/communicator/extras/fonts/windows/ \
 		ftp://ftp.uni-hamburg.de/pub/soft/infosystems/www/clients/netscape/communicator/extras/fonts/windows/ \
 		ftp://ftp-au.netscape.com/pub/communicator/extras/fonts/windows/
-DISTFILES=	${FONT_FILE} ${DOC_FILES}
+DISTFILES=	${FONT_FILE} ReadMe.htm
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.bitstream.com/
@@ -22,10 +23,6 @@ NO_SRC_ON_FTP=  ${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=  ${RESTRICTED}
 
-#BROKEN=		MASTER_SITES is unstable, and we can't mirror DISTFILES.
-
-DOC_FILES=	License.wri Orders.wri ReadMe.htm Readme.wri
-
 DIST_SUBDIR=	cyberbit-ttf
 
 EXTRACT_CMD=	${LOCALBASE}/bin/unzip -Laq $${extract_file}
@@ -36,14 +33,12 @@ NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
 FONTS_TTF_DIRS=	${PREFIX}/lib/X11/fonts/TrueType
-DOCDIR=		${PREFIX}/share/doc/cyberbit-ttf
+DOCDIR=		${PREFIX}/share/doc/html/cyberbit-ttf
 
 do-install:
 	${INSTALL_DATA_DIR} ${FONTS_TTF_DIRS}
 	${INSTALL_DATA} ${WRKDIR}/*.ttf ${FONTS_TTF_DIRS}
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	for f in ${DOC_FILES}; do \
-		${INSTALL_DATA} ${_DISTDIR}/$$f ${DOCDIR}; \
-	done
+	${INSTALL_DATA} ${_DISTDIR}/ReadMe.htm ${DOCDIR}
 
 .include "../../mk/fonts.mk"
