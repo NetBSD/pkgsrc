@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2003/07/25 15:25:15 salo Exp $
+
+--- configure.orig	Tue Jun 10 16:09:27 2003
++++ configure	Fri Jul 25 16:56:40 2003
+@@ -1922,6 +1922,9 @@
+     CFLAGS=
+   fi
+ fi
++if test -z "$GCC" ; then
++  CFLAGS="-DCONSTRUCTOR_FAILS=1 $CFLAGS"
++fi
+ echo "$as_me:$LINENO: checking for $CC option to accept ANSI C" >&5
+ echo $ECHO_N "checking for $CC option to accept ANSI C... $ECHO_C" >&6
+ if test "${ac_cv_prog_cc_stdc+set}" = set; then
