@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/08/16 03:12:13 jschauma Exp $
+# $NetBSD: Makefile,v 1.15 2002/09/29 06:32:37 jlam Exp $
 #
 
 DISTNAME=	angband-3.0.1
@@ -15,7 +15,8 @@ CONFLICTS=	angband-tty-[0-9]*
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-USE_X11=	yes
+USE_BUILDLINK2=	# defined
+USE_X11=	# defined
 USE_NCURSES=	# defined
 
 SPOILERFILE=	angband-spoilers.tar.gz
@@ -24,8 +25,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-setgid=games --prefix=${PREFIX}
 
 .if (${MACHINE_ARCH} == arm32)
-. include "../../lang/gcc/Makefile.gcc"
-MAKE_FLAGS+=		CC=${CC}
+. include "../../lang/gcc/buildlink2.mk"
 .endif
 
 # add spoiler files and clean up a bit
@@ -35,5 +35,5 @@ post-install:
 	${CHOWN} -R bin:games ${PREFIX}/share/games/angband
 	${FIND} ${PREFIX}/share/games/angband -name delete.me -exec ${RM} {} \;
 
-.include "../../devel/ncurses/buildlink.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
