@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/04/21 13:52:25 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/06/28 18:30:26 jlam Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -13,6 +13,7 @@ COMMENT=		tools for providing messages in different languages, libintl only
 
 CONFLICTS=		gettext<=0.10.35
 GNU_CONFIGURE=		yes
+USE_BUILDLINK_ONLY=	yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CONFIGURE_ARGS+=	--with-included-gettext
