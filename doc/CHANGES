@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9300 2005/02/24 22:55:05 jlam Exp $
+$NetBSD: CHANGES,v 1.9301 2005/02/25 09:11:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1077,3 +1077,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated phpmyadmin to 2.6.1pl2 [tron 2005-02-24]
 	Updated pkglint to 4.08 [rillig 2005-02-24]
 	Updated p5-Module-Build to 0.2608nb1 [jlam 2005-02-24]
+	Updated hdf5 to 1.6.3 [adam 2005-02-25]
