@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/04/02 22:52:25 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/04/22 19:48:52 wiz Exp $
 
 DISTNAME=	ppp-2.3.9
 PKGNAME=	ppp-mppe-2.3.9
@@ -9,13 +9,16 @@ MAINTAINER=	dbj@netbsd.org
 HOMEPAGE=	http://www.moretonbay.com/vpn/releases/
 COMMENT=	PPP daemon and LKM with MPPE - Microsoft Point-to-Point Encryption
 
-OPENSSL_VERS=	0.9.5a
+OPENSSL_VERS=	0.9.6
 OPENSSL_SRC=	${BUILD_ROOT}/security/openssl/${WRKDIR:T}/openssl-${OPENSSL_VERS}
 
 HAS_CONFIGURE=  yes
 MANCOMPRESSED_IF_MANZ=	yes
 
 post-extract:
+	if [ ! -e ${OPENSSL_SRC}/crypto/rc4 ]; then			\
+		cd ../../security/openssl && ${MAKE} extract;		\
+	fi
 	@${LN} -sf ${OPENSSL_SRC}/include/openssl ${WRKSRC}/pppd/openssl
 	@${CP} ${OPENSSL_SRC}/crypto/md32_common.h ${WRKSRC}/pppd/md32_common.h
 	@${CP} ${OPENSSL_SRC}/crypto/sha/sha.h ${WRKSRC}/pppd/sha.h
@@ -32,11 +35,6 @@ post-extract:
 	@${CP} ${OPENSSL_SRC}/crypto/sha/sha1dgst.c ${WRKSRC}/netbsd-1.4/sha1dgst.c
 	@${CP} ${OPENSSL_SRC}/crypto/sha/sha_locl.h ${WRKSRC}/netbsd-1.4/sha_locl.h
 	@${CP} ${OPENSSL_SRC}/crypto/sha/sha.h ${WRKSRC}/netbsd-1.4/sha.h
-
-pre-configure:
-	if [ ! -e ${OPENSSL_SRC}/crypto/rc4 ]; then			\
-		cd ../../security/openssl && ${MAKE} extract;		\
-	fi
 
 pre-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/lkm
