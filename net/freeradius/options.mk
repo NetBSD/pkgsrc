@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2004/10/29 07:07:44 xtraeme Exp $
+# $NetBSD: options.mk,v 1.3 2004/11/10 22:27:32 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.freeradius
 PKG_SUPPORTED_OPTIONS=	ldap postgresql73 postgresql74 mysql snmp
@@ -10,14 +10,6 @@ PKG_SUPPORTED_OPTIONS=	ldap postgresql73 postgresql74 mysql snmp
 ###
 .if !empty(PKG_OPTIONS:Mpostgresql73) && !empty(PKG_OPTIONS:Mpostgresql74)
 PKG_FAIL_REASON+=	"PostgreSQL 7.3 and 7.4 cannot both be compiled in." \
-			"Please change ${PKG_OPTIONS_VAR} to one or the other."
-.endif
-
-###
-### Can't support both versions of mySQL
-###
-.if !empty(PKG_OPTIONS:Mmysql3) && !empty(PKG_OPTIONS:Mmysql4)
-PKG_FAIL_REASON+=	"mySQL 3 and 4 cannot both be compiled in." \
 			"Please change ${PKG_OPTIONS_VAR} to one or the other."
 .endif
 

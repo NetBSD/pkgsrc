@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/10/15 12:03:53 tv Exp $
+# $NetBSD: Makefile,v 1.16 2004/11/10 22:27:32 adrianp Exp $
 
 DISTNAME=	freeradius-1.0.1
 PKGREVISION=	3
@@ -18,7 +18,6 @@ GNU_CONFIGURE=		YES
 USE_BUILDLINK3= 	YES
 USE_PKGINSTALL=		YES
 USE_PERL5=		YES
-PTHREAD_OPTS+=		native
 LIBTOOLIZE_PLIST=	NO
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 
@@ -45,6 +44,24 @@ CONFIGURE_ARGS+=	--without-rlm_sql_postgresql
 CONFIGURE_ARGS+=	--without-rlm_sql_oracle
 CONFIGURE_ARGS+=	--without-rlm_sql_unixodbc
 CONFIGURE_ARGS+=	--without-snmp
+
+SUBST_CLASSES=		make
+SUBST_STAGE.make=	post-patch
+SUBST_FILES.make=	src/modules/rlm_counter/Makefile.in \
+			src/modules/rlm_ldap/Makefile.in \
+			src/modules/rlm_sql/drivers/rlm_sql_postgresql/Makefile.in \
+			src/modules/rlm_mschap/Makefile
+SUBST_SED.make=		-e "s|@counter_ldflags@|@counter_ldflags@ \
+				-L${PREFIX}/lib \
+				${COMPILER_RPATH_FLAG}${PREFIX}/lib|g" \
+			-e "s|@ldap_ldflags@|@ldap_ldflags@ -L${PREFIX}/lib \
+				${COMPILER_RPATH_FLAG}${PREFIX}/lib|g" \
+			-e "s|@postgresql_ldflags@|@postgresql_ldflags@ \
+				-L${PREFIX}/lib \
+				${COMPILER_RPATH_FLAG}${PREFIX}/lib|g" \
+			-e "s|RLM_LDFLAGS	=|RLM_LDFLAGS 	= \
+				-L../../../src/lib/.libs/ -lradius|g"
+SUBST_MESSAGE.make=	"Fixing Makefiles."
 
 .include "options.mk"
 
