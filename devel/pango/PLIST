@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2004/08/31 08:21:47 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.18 2004/09/21 16:43:52 jmmv Exp $
 bin/pango-querymodules
 include/pango-1.0/pango/pango-attributes.h
 include/pango-1.0/pango/pango-break.h
@@ -20,6 +20,7 @@ include/pango-1.0/pango/pango-tabs.h
 include/pango-1.0/pango/pango-types.h
 include/pango-1.0/pango/pango-utils.h
 include/pango-1.0/pango/pango.h
+include/pango-1.0/pango/pangofc-decoder.h
 include/pango-1.0/pango/pangofc-font.h
 include/pango-1.0/pango/pangofc-fontmap.h
 include/pango-1.0/pango/pangoft2.h
@@ -28,31 +29,23 @@ include/pango-1.0/pango/pangoxft.h
 lib/libpango-1.0.a
 lib/libpango-1.0.la
 lib/libpango-1.0.so
-lib/libpango-1.0.so.399
-lib/libpango-1.0.so.399.1
-lib/libpango-1.0.so.400
-lib/libpango-1.0.so.400.1
+lib/libpango-1.0.so.600
+lib/libpango-1.0.so.600.0
 lib/libpangoft2-1.0.a
 lib/libpangoft2-1.0.la
 lib/libpangoft2-1.0.so
-lib/libpangoft2-1.0.so.399
-lib/libpangoft2-1.0.so.399.1
-lib/libpangoft2-1.0.so.400
-lib/libpangoft2-1.0.so.400.1
+lib/libpangoft2-1.0.so.600
+lib/libpangoft2-1.0.so.600.0
 lib/libpangox-1.0.a
 lib/libpangox-1.0.la
 lib/libpangox-1.0.so
-lib/libpangox-1.0.so.399
-lib/libpangox-1.0.so.399.1
-lib/libpangox-1.0.so.400
-lib/libpangox-1.0.so.400.1
+lib/libpangox-1.0.so.600
+lib/libpangox-1.0.so.600.0
 lib/libpangoxft-1.0.a
 lib/libpangoxft-1.0.la
 lib/libpangoxft-1.0.so
-lib/libpangoxft-1.0.so.399
-lib/libpangoxft-1.0.so.399.1
-lib/libpangoxft-1.0.so.400
-lib/libpangoxft-1.0.so.400.1
+lib/libpangoxft-1.0.so.600
+lib/libpangoxft-1.0.so.600.0
 lib/pango/1.4.0/modules/pango-arabic-fc.a
 lib/pango/1.4.0/modules/pango-arabic-fc.la
 lib/pango/1.4.0/modules/pango-arabic-fc.so
@@ -83,6 +76,7 @@ libdata/pango/pangox.aliases
 man/man1/pango-querymodules.1
 share/doc/pango/PangoEngineLang.html
 share/doc/pango/PangoEngineShape.html
+share/doc/pango/PangoFcDecoder.html
 share/doc/pango/PangoFcFont.html
 share/doc/pango/PangoFcFontMap.html
 share/doc/pango/PangoMarkupFormat.html
