@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.6 2002/07/03 22:43:40 abs Exp $
+$NetBSD: patch-aa,v 1.7 2002/08/01 09:31:15 martti Exp $
 
---- Makefile.inc.orig	Sun Apr  8 15:11:48 2001
-+++ Makefile.inc
+--- Makefile.inc.orig	Thu Aug  1 10:46:30 2002
++++ Makefile.inc	Thu Aug  1 10:56:14 2002
 @@ -3,6 +3,9 @@
  
  .include <bsd.own.mk>
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.6 2002/07/03 22:43:40 abs Exp $
  LIBINSTALL != cd ${.CURDIR}/../lib && ${PRINTOBJDIR}
  CPPFLAGS+=-I${.CURDIR}/../lib ${DEBUG} -DBINDIR='"${BINDIR}"'
  
-@@ -32,9 +35,27 @@
+@@ -36,9 +39,27 @@
  CHGRP?= /usr/bin/chgrp
  WARNS=0
  .elif ${OPSYS} == "Linux"
