@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/12/22 21:06:56 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/12/25 16:45:33 zuntum Exp $
 #
 
 DISTNAME=	MPlayer-0.18pre
@@ -15,6 +15,10 @@ ONLY_FOR_PLATFORM=	NetBSD-1.5[Y-Z]*-i386
 
 DEPENDS+=	win32-codecs>=010122:../../graphics/win32-codecs
 BUILD_DEPENDS+=	nasm>=0.98:../../devel/nasm
+
+RESTRICTED=		"unsure of the license"
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
 
 USE_X11=		YES
 USE_GMAKE=		YES
