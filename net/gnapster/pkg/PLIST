@@ -1,6 +1,22 @@
-@comment $NetBSD: PLIST,v 1.3 2000/02/27 21:36:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/10/22 11:05:57 rh Exp $
 bin/gnapster
-share/gnome/apps/Applications/gnapster.desktop
-share/locale/fr/LC_MESSAGES/gnapster.mo
-share/locale/pt/LC_MESSAGES/gnapster.mo
 share/pixmaps/gnapster.png
+share/gnapster/themes/cyblue.theme
+share/gnapster/themes/cypress.theme
+share/gnapster/themes/default.theme
+share/gnapster/themes/faded.theme
+share/locale/ca/LC_MESSAGES/gnapster.mo
+share/locale/da/LC_MESSAGES/gnapster.mo
+share/locale/de/LC_MESSAGES/gnapster.mo
+share/locale/el/LC_MESSAGES/gnapster.mo
+share/locale/es/LC_MESSAGES/gnapster.mo
+share/locale/fr/LC_MESSAGES/gnapster.mo
+share/locale/gl/LC_MESSAGES/gnapster.mo
+share/locale/it/LC_MESSAGES/gnapster.mo
+share/locale/no/LC_MESSAGES/gnapster.mo
+share/locale/pl/LC_MESSAGES/gnapster.mo
+share/locale/pt/LC_MESSAGES/gnapster.mo
+share/locale/ru/LC_MESSAGES/gnapster.mo
+share/locale/tr/LC_MESSAGES/gnapster.mo
+@dirrm share/gnapster/themes
+@dirrm share/gnapster
