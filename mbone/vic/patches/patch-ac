@@ -1,5 +1,5 @@
---- grabber-qcam.cc.orig	Sat Nov  2 23:22:46 1996
-+++ grabber-qcam.cc	Sat Nov  2 23:23:34 1996
+--- /usr/local/pkgsrc//mbone/vic/work/vic-2.8/grabber-qcam.cc	Fri Jun 21 06:39:36 1996
++++ grabber-qcam.cc	Tue Nov 18 13:16:25 1997
 @@ -84,6 +84,11 @@
  #define CIF_HEIGHT 288
  
