@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2002/09/20 01:00:27 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2002/10/26 13:09:07 bouyer Exp $
 
 DISTNAME=	kdebase-2.2.2
 PKGREVISION=	1
@@ -60,6 +60,9 @@ post-configure:
 	ln -s ../Linux/conf.c ${WRKSRC}/ksysguard/ksysguardd/FreeBSD/conf.c
 	ln -s ../Linux/conf.h ${WRKSRC}/ksysguard/ksysguardd/FreeBSD/conf.h
 	ln -s ../Linux/ksysguardd.h ${WRKSRC}/ksysguard/ksysguardd/FreeBSD/ksysguardd.h
+	ln -s ../Linux/conf.c ${WRKSRC}/ksysguard/ksysguardd/Solaris/conf.c
+	ln -s ../Linux/conf.h ${WRKSRC}/ksysguard/ksysguardd/Solaris/conf.h
+	ln -s ../Linux/ksysguardd.h ${WRKSRC}/ksysguard/ksysguardd/Solaris/ksysguardd.h
 
 post-build:
 	cd ${WRKSRC};							\
