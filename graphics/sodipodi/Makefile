@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/09/12 00:43:49 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2002/10/07 23:47:50 jlam Exp $
 #
 
 DISTNAME=	sodipodi-0.25
@@ -16,6 +16,7 @@ USE_LIBTOOL=		YES
 USE_X11BASE=		YES
 
 PTHREAD_OPTS+=		require
+LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
 .include "../../devel/bonobo/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
