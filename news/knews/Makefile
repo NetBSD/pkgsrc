@@ -3,7 +3,7 @@
 # Date created:         30th November 1997
 # Whom:                 tron
 #
-# $NetBSD: Makefile,v 1.3 1998/01/24 21:59:43 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/01/29 16:51:27 tron Exp $
 #
 
 DISTNAME=	knews-0.9.8
@@ -11,7 +11,7 @@ CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.nada.kth.se/home/su95-kjo/knews/ \
 		ftp://ftp.cs.tu-berlin.de/pub/net/news/knews/
 
-MAINTAINER=	tron@lyssa.owl.de
+MAINTAINER=	tron@netbsd.org
 
 LIB_DEPENDS=	Xpm\\.4\\.:${PORTSDIR}/graphics/xpm
 
