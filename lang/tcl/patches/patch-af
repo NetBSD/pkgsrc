@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1 2001/05/24 02:58:16 jlam Exp $
+$NetBSD: patch-af,v 1.2 2001/06/13 20:48:02 jlam Exp $
 
 --- tcl.m4.orig	Tue Aug  8 15:17:11 2000
 +++ tcl.m4
@@ -32,13 +32,13 @@ $NetBSD: patch-af,v 1.1 2001/05/24 02:58:16 jlam Exp $
 -		    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so',
 +		    SHLIB_LD='${TCL_CC} -shared -Wl,-x'
 +		    LD_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
-+		    TCL_LIB_SPEC_RPATH='-Wl,-rpath,${exec_prefix}/lib'
++		    TCL_LIB_SPEC_RPATH="-Wl,-rpath,${exec_prefix}/lib"
 +		    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so'
 +		], [
  		    AC_MSG_RESULT(no)
 +		    SHLIB_LD="ld -Bshareable -x"
 +		    LD_SEARCH_FLAGS='-R${LIB_RUNTIME_DIR}'
-+		    TCL_LIB_SPEC_RPATH='-R${exec_prefix}/lib'
++		    TCL_LIB_SPEC_RPATH="-R${exec_prefix}/lib"
  		    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so.1.0'
 -		)
 +		])
