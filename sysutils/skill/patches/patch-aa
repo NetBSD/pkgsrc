@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2000/02/20 02:02:52 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2000/06/26 07:54:42 simonb Exp $
 
 --- ./Makefile.orig	Tue Feb  8 04:21:15 2000
 +++ ./Makefile	Sun Feb 20 02:55:27 2000
@@ -10,7 +10,8 @@ $NetBSD: patch-aa,v 1.7 2000/02/20 02:02:52 wiz Exp $
 -BINGRP=	kmem
 +BINDIR=	${PREFIX}/bin
 +#BINGRP=	kmem
- BINMOD=	2755
+-BINMOD=	2755
++#BINMOD=	${BINMODE}
  
  # CONFIGURE: Set location of man directory and man page suffix.
 -MANDIR=	/usr/man/manl
@@ -23,12 +24,10 @@ $NetBSD: patch-aa,v 1.7 2000/02/20 02:02:52 wiz Exp $
 +#OSTYPE=	bsd-44
  
  # CONFIGURE(Config): Add any OS-specific options here.
--COPTS=	
-+#COPTS=	-DUVM
+ COPTS=	
  
  # CONFIGURE(Config): Add any special libraries your system needs.
--LIBS=	
-+LIBS=	-lkvm
+ LIBS=	
  
  SRCS=	main.c argparse.c getproc.c
  OBJS=	main.o argparse.o getproc.o
