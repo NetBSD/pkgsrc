@@ -1,10 +1,31 @@
-$NetBSD: patch-af,v 1.1 2001/08/21 08:17:41 abs Exp $
+$NetBSD: patch-af,v 1.2 2003/06/01 16:17:02 salo Exp $
 
---- pwm.1x.in.orig	Sat Jul  1 14:11:03 2000
-+++ pwm.1x.in
-@@ -48,7 +48,7 @@
+--- pwm.1x.in.orig	2003-05-28 23:55:08.000000000 +0200
++++ pwm.1x.in	2003-06-01 17:42:00.000000000 +0200
+@@ -168,16 +168,16 @@
+ 
+ .SH FILES
+ .TP
+-.B /usr/local/etc/pwm/pwm.conf
++.B PKG_SYSCONFDIR/pwm.conf
+ System default configuration file
+ .TP
+-.B /usr/local/etc/pwm/look-*.conf
++.B PKG_SYSCONFDIR/look-*.conf
+ Color scheme configuration files
+ .TP
+-.B /usr/local/etc/pwm/keys-*.conf
++.B PKG_SYSCONFDIR/keys-*.conf
+ Key binding configuration files
+ .TP
+-.B /usr/local/etc/pwm/buttons-*.conf
++.B PKG_SYSCONFDIR/buttons-*.conf
+ Pointer (mouse) button binding configuration files
+ .TP
+ .B ~/.pwm/pwm.conf
+@@ -186,7 +186,7 @@
  .SH SEE ALSO
- The PWM home page, http://www.students.tut.fi/~tuomov/pwm/
+ The PWM home page, http://iki.fi/tuomov/pwm/
  .PP
 -.BR PREFIX/doc/pwm/config.txt
 +.BR PREFIX/share/doc/pwm/config.txt
