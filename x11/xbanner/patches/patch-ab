@@ -1,0 +1,11 @@
+--- xbanner.h.orig	Thu May 15 22:38:25 1997
++++ xbanner.h	Tue Aug 18 23:58:23 1998
+@@ -5,7 +5,7 @@
+ 
+ /* default values in case no config file is present */
+ 
+-#define BANNER_DEFVAL		"L i n u x !"
++#define BANNER_DEFVAL		"N e t B S D !"
+ #define XOFFSET_DEFVAL		25
+ #define YOFFSET_DEFVAL		25
+ #define FGCOL_DEFVAL		"black"
