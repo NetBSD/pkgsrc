@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/01/20 11:15:59 agc Exp $
+# $NetBSD: Makefile,v 1.4 2000/09/25 18:51:59 skrll Exp $
 
 DISTNAME=	avltree-1.1
 CATEGORIES=	devel
@@ -8,7 +8,6 @@ MAINTAINER=	wrstuden@netbsd.org
 #HOMEPAGE=
 
 MANCOMPRESSED_IF_MANZ=	yes
-MAKEFILE=	bsd.mk
 INSTALL_TARGET=	includes install
 
 .include "../../mk/bsd.pkg.mk"
