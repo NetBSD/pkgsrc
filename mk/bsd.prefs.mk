@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.34 2001/05/02 04:53:11 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.35 2001/05/17 15:00:26 abs Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -61,6 +61,7 @@ LOWER_OPSYS?=		linux
 .  if !defined(LOWER_ARCH)
 LOWER_ARCH!=		${UNAME} -m | sed -e 's/[456]86/386/'
 .  endif # !defined(LOWER_ARCH)
+MACHINE_ARCH=		${LOWER_ARCH}
 MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
 .  if ${LOWER_ARCH} == "i386"
 LOWER_VENDOR?=		pc
