@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.29 2000/09/05 00:02:16 wiz Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.30 2000/09/11 10:39:05 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -40,15 +40,16 @@ $| = 1;
 
 if ($opt{'D'})
     {
-    my ($file, $pkgname, %vars);
+    my($file);
     foreach $file (@ARGV)
 	{
 	if ( -d $file)
 	    { $file .= "/Makefile"; }
-	($pkgname, %vars) = &parse_makefile($file);
+	my($pkgname, $vars);
+	($pkgname, $vars) = &parse_makefile_pkgsrc($file);
 	print "$file -> $pkgname\n";
-	foreach ( sort keys %vars )
-	    { print "\t$_ = $vars{$_}\n"; }
+	foreach ( sort keys %{$vars} )
+	    { print "\t$_ = $vars->{$_}\n"; }
 	}
     }
 
@@ -306,10 +307,25 @@ sub list_pkgsrc_categories
     my(@categories);
 
     opendir(BASE, $pkgsrcdir) || die("Unable to opendir($pkgsrcdir): $!");
-    @categories = grep(substr($_, 0, 1) ne '.' && -f "$pkgsrcdir/$_/Makefile",
-							readdir(BASE));
+    @categories = grep(substr($_, 0, 1) ne '.' && $_ ne 'CVS' &&
+				-f "$pkgsrcdir/$_/Makefile", readdir(BASE));
     closedir(BASE);
     @categories;
+    }
+
+# For a given category, list potentially valid pkgdirs
+#
+sub list_pkgsrc_pkgdirs
+    {
+    my($cat) = @_;
+    my(@pkgdirs);
+
+    if (! opendir(CAT, "$pkgsrcdir/$cat"))
+	{ die("Unable to opendir($pkgsrcdir/$cat): $!"); }
+    @pkgdirs = sort grep($_ ne 'Makefile' && $_ ne 'pkg' && $_ ne 'CVS' &&
+					substr($_, 0, 1) ne '.', readdir(CAT));
+    close(CAT);
+    @pkgdirs;
     }
 
 sub glob2regex
@@ -419,10 +435,44 @@ sub package_globmatch
     ($matchpkgname, $matchver);
     }
 
-# Extract variable assignments from Makefile, include pkgname.
+# Parse a pkgsrc package makefile and return the pkgname and set variables
+#
+sub parse_makefile_pkgsrc
+    {
+    my($file) = @_;
+    my($pkgname, $vars);
+
+    $vars = &parse_makefile_vars($file);
+
+    if (!$vars) # Missing Makefile
+	{ return(undef); }
+
+    if (defined $vars->{'PKGNAME'})
+	{ $pkgname = $vars->{'PKGNAME'}; }
+    elsif (defined $vars->{'DISTNAME'})
+	{ $pkgname = $vars->{'DISTNAME'}; }
+    if (defined $pkgname)
+	{
+	if ( $pkgname =~ /\$/ )
+	    { print "\rBogus: $pkgname (from $file)\n"; }
+	elsif ($pkgname !~ /(.*)-(\d.*)/)
+	    { print "Cannot extract $pkgname version ($file)\n"; }
+	else
+	    {
+	    if (defined $vars->{'NO_BIN_ON_FTP'} ||
+		defined $vars->{'RESTRICTED'})
+		{ $pkg{$1}{$2}{'restricted'} = 1; }
+	    }
+	return($pkgname, $vars);
+	}
+    else
+	{ return(undef); }
+    }
+
+# Extract variable assignments from Makefile
 # Much unpalatable magic to avoid having to use make (all for speed)
 #
-sub parse_makefile
+sub parse_makefile_vars
     {
     my($file) = @_;
     my($pkgname, %vars, $key, $plus, $value, @data,
@@ -574,26 +624,7 @@ sub parse_makefile
 		}
 	    }
 	}
-
-    if (defined($vars{'PKGNAME'}))
-	{ $pkgname = $vars{'PKGNAME'}; }
-    elsif (defined($vars{'DISTNAME'}))
-	{ $pkgname = $vars{'DISTNAME'}; }
-    if (defined($pkgname))
-	{
-	if ( $pkgname =~ /\$/ )
-	    { print "\rBogus: $pkgname (from $file)\n"; }
-	elsif ($pkgname !~ /(.*)-(\d.*)/)
-	    { print "Cannot extract $pkgname version ($file)\n"; }
-	else
-	    {
-	    if (defined $vars{'NO_BIN_ON_FTP'} || defined $vars{'RESTRICTED'})
-		{ $pkg{$1}{$2}{'restricted'} = 1; }
-	    }
-	return($pkgname, %vars);
-	}
-    else
-	{ return(undef); }
+    \%vars;
     }
 
 sub parse_expand_vars
@@ -643,19 +674,17 @@ sub parse_eval_make_false
 sub pkglint_all_pkgsrc
     {
     my($pkgsrcdir, $pkglint_flags) = @_;
-    my($cat, $pkg, @categories, @output);
+    my($cat, $pkgdir, @categories, @output);
 
     @categories = &list_pkgsrc_categories($pkgsrcdir);
     foreach $cat ( sort @categories )
 	{
 	&safe_chdir("$pkgsrcdir/$cat");
-	if (! opendir(CAT, '.'))
-	    { die("Unable to opendir($pkgsrcdir/$cat): $!"); }
-	foreach $pkg ( sort grep(substr($_, 0, 1) ne '.', readdir(CAT) ) )
+	foreach $pkgdir (&list_pkgsrc_pkgdirs($cat))
 	    {
-	    if (-f "$pkg/Makefile")
+	    if (-f "$pkgdir/Makefile")
 		{
-		if (!open(PKGLINT, "cd $pkg ; pkglint $pkglint_flags|"))
+		if (!open(PKGLINT, "cd $pkgdir ; pkglint $pkglint_flags|"))
 		    { &fail("Unable to run pkglint: $!"); }
 		@output = grep(!/^OK:/ &&
 			     !/^WARN: be sure to cleanup .*work.* before/ &&
@@ -664,10 +693,9 @@ sub pkglint_all_pkgsrc
 			     , <PKGLINT> );
 		close(PKGLINT);
 		if (@output)
-		    { print "===> $cat/$pkg\n", @output, "\n"; }
+		    { print "===> $cat/$pkgdir\n", @output, "\n"; }
 		}
 	    }
-	close(CAT);
 	}
     }
 
@@ -697,13 +725,11 @@ sub scan_pkgsrc_makefiles
 
     foreach $cat ( sort @categories )
 	{
-	if (! opendir(CAT, "$pkgsrcdir/$cat"))
-	    { die("Unable to opendir($pkgsrcdir/$cat): $!"); }
-	foreach $pkgdir ( sort grep(substr($_, 0, 1) ne '.', readdir(CAT) ) )
+	foreach $pkgdir (&list_pkgsrc_pkgdirs($cat))
 	    {
-	    my(%vars);
-	    ($pkgname, %vars) =
-			    &parse_makefile("$pkgsrcdir/$cat/$pkgdir/Makefile");
+	    my($vars);
+	    ($pkgname, $vars) =
+		    &parse_makefile_pkgsrc("$pkgsrcdir/$cat/$pkgdir/Makefile");
 	    if ($pkgname)
 		{
 		if ($pkgname !~ /(.*)-(\d.*)/)
@@ -712,10 +738,9 @@ sub scan_pkgsrc_makefiles
 		    next;
 		    }
 		$pkg{$1}{$2}{'dir'} = "$cat/$pkgdir";
-		$pkg{$1}{$2}{'depends'} = $vars{'DEPENDS'};
+		$pkg{$1}{$2}{'depends'} = $vars->{'DEPENDS'};
 		}
 	    }
-	close(CAT);
 	if (!$opt{'L'})
 	    { &verbose('.'); }
 	}
@@ -758,7 +783,7 @@ sub scan_pkgsrc_makefiles
 sub scan_pkgsrc_distfiles_vs_md5
     {
     my($pkgsrcdir, $check_unref, $check_md5) = @_;
-    my($cat, @categories, $pkg);
+    my($cat, @categories, $pkgdir);
     my(%distfiles, %md5, @distwarn, $file, $numpkg);
     my(@distfiles, @bad_distfiles);
 
@@ -768,11 +793,9 @@ sub scan_pkgsrc_distfiles_vs_md5
     $numpkg = 0;
     foreach $cat ( sort @categories )
 	{
-	if (! opendir(CAT, "$pkgsrcdir/$cat"))
-	    { die("Unable to opendir($pkgsrcdir/$cat): $!"); }
-	foreach $pkg ( sort grep(substr($_, 0, 1) ne '.', readdir(CAT) ) )
+	foreach $pkgdir (&list_pkgsrc_pkgdirs($cat))
 	    {
-	    if (open(MD5, "$pkgsrcdir/$cat/$pkg/files/md5"))
+	    if (open(MD5, "$pkgsrcdir/$cat/$pkgdir/files/md5"))
 		{
 		++$numpkg;
 		while( <MD5> )
@@ -781,20 +804,19 @@ sub scan_pkgsrc_distfiles_vs_md5
 			{
 			if (!defined($distfiles{$1}))
 			    {
-			    $distfiles{$1} = "$cat/$pkg";
+			    $distfiles{$1} = "$cat/$pkgdir";
 			    $md5{$1} = $2;
 			    }
 			elsif( $md5{$1} ne $2 )
 			    {
 			    push(@distwarn, "md5 mismatch between '$1' in ".
-			    "$cat/$pkg and $distfiles{$1}\n");
+			    "$cat/$pkgdir and $distfiles{$1}\n");
 			    }
 			}
 		    }
 		close(MD5);
 		}
 	    }
-	close(CAT);
 	&verbose('.');
 	}
     &verbose(" ($numpkg packages)\n");
@@ -838,18 +860,12 @@ sub scan_pkgsrc_distfiles_vs_md5
 
 sub set_pkgsrcdir # Parse /etc/mk.conf (if present) for PKGSRCDIR
     {
-    my($pkgsrcdir);
+    my($pkgsrcdir, $vars);
+	my($vars);
 
-    $pkgsrcdir = '/usr/pkgsrc';
-    if (open(MK_CONF, '/etc/mk.conf'))
-	{
-	while (<MK_CONF>)
-	    {
-	    if( /PKGSRCDIR\s*=\s*(\S+)/ )
-		{ $pkgsrcdir = $1; last; }
-	    }
-	close(MK_CONF);
-	}
+    if (-f '/etc/mk.conf' && ($vars = &parse_makefile_vars('/etc/mk.conf')))
+	{ $pkgsrcdir = $vars->{'PKGSRCDIR'}; }
+    $pkgsrcdir ||= '/usr/pkgsrc';
     $pkgsrcdir;
     }
 
