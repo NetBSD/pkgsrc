@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/09/26 01:12:12 dmcmahill Exp $
+
+--- bem/configure.ac.orig	Thu Apr 22 20:07:12 2004
++++ bem/configure.ac
+@@ -116,6 +116,8 @@ AC_TYPE_MODE_T
+ AC_TYPE_SIZE_T
+ AC_STRUCT_TM
+ 
++AC_F77_WRAPPERS
++
+ #----------------------------------------------------------------
+ # Checks for library functions.
+ #----------------------------------------------------------------

@@ -1,0 +1,167 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/09/26 01:12:12 dmcmahill Exp $
+
+--- bem/src/math_library.h.orig	Tue Aug 24 01:02:45 2004
++++ bem/src/math_library.h
+@@ -20,115 +20,61 @@
+ #endif
+ 
+ /* Create aliases for NSWC FORTRAN routines so C programs can call them */
+-/* on Alpha/OSF and Sun Sparc hosts */
+ 
+ //--------------------------------------
+-#ifdef FORTRAN_UNDERBARS
+ 
+ 
+-#define FFT fft_
+-#define CEIGV ceigv_
+-#define CMSLV1 cmslv1_
+-#define CMTMS cmtms_
+-#define DCMSLV dcmslv_
+-#define MSLV mslv_
+-#define DMSLV dmslv_
+-#define MTMS mtms_
+-//#define HBRD hbrd_
+-//#define HYBRD hybrd_
+-//#define LMDIFF lmdiff_
+-//#define LMDIF lmdif_
+-#define SGEFA sgefa_
+-#define SGECO sgeco_
+-#define SGESL sgesl_     
+-#define DGEFA dgefa_
+-#define DGESL dgesl_     
++#define FFT F77_FUNC(fft,FFT)
++#define CEIGV F77_FUNC(ceigv,CEIGV)
++#define CMSLV1 F77_FUNC(cmslv1,CMSLV1)
++#define CMTMS F77_FUNC(cmtms,CMTMS)
++#define DCMSLV F77_FUNC(dcmslv,DCMSLV)
++#define MSLV F77_FUNC(mslv,MSLV)
++#define DMSLV F77_FUNC(dmslv,DMSLV)
++#define MTMS F77_FUNC(mtms,MTMS)
++//#define HBRD F77_FUNC(hbrd,HBRD)
++//#define HYBRD F77_FUNC(hybrd,HYBRD)
++//#define LMDIFF F77_FUNC(lmdiff,LMDIFF)
++//#define LMDIF F77_FUNC(lmdif,LMDIF)
++#define SGEFA F77_FUNC(sgefa,SGEFA)
++#define SGECO F77_FUNC(sgeco,SGECO)
++#define SGESL F77_FUNC(sgesl,SGESL)
++#define DGEFA F77_FUNC(dgefa,DGEFA)
++#define DGESL F77_FUNC(dgesl,DGESL)
+ 
+ /* And create aliases so C routines in math_library.c can be called from
+-   FORTRAN on Alpha and Sparc */
++   FORTRAN */
+ 
+-#define c_fft c_fft_
+-#define c_fft_inv c_fft_inv_
+-#define c_set_calc_eigenvalues c_set_calc_eigenvalues_
+-#define c_init_calc_eigenvalues c_init_calc_eigenvalues_
+-#define c_calc_eigenvalues c_calc_eigenvalues_
+-#define c_mult_matricies c_mult_matricies_
+-#define mult_matricies mult_matricies_
+-#define c_set_invert_matrix c_set_invert_matrix_
+-#define c_init_invert_matrix c_init_invert_matrix_
+-#define c_invert_matrix c_invert_matrix_
+-#define set_invert_matrix set_invert_matrix_
+-#define init_invert_matrix init_invert_matrix_
+-#define invert_matrix invert_matrix_
+-#define invert_matrix_cond invert_matrix_cond_
+-#define d_set_invert_matrix d_set_invert_matrix_
+-#define d_init_invert_matrix d_init_invert_matrix_
+-#define d_invert_matrix d_invert_matrix_
+-#define c_set_solve_linear c_set_solve_linear_
+-#define c_init_solve_linear c_init_solve_linear_
+-#define c_solve_linear c_solve_linear_
+-#define d_c_set_solve_linear d_c_set_solve_linear_
+-#define d_c_init_solve_linear d_c_init_solve_linear_
+-#define d_c_solve_linear d_c_solve_linear_
+-//#define set_solve_nonlinear set_solve_nonlinear_
+-//#define init_solve_nonlinear init_solve_nonlinear_
+-//#define solve_nonlinear solve_nonlinear_
+-#define lu_factor lu_factor_
+-#define lu_factor_cond lu_factor_cond_
+-#define lu_solve_linear lu_solve_linear_
+-
+-//  For Gnu gcc and g77, we need double-underbars, before and after
+-// the name.
+-#else
+-#ifdef __GCC__
+-
+-#define FFT _fft_
+-#define CEIGV _ceigv_
+-#define CMSLV1 _cmslv1_
+-#define CMTMS _cmtms_
+-#define DCMSLV _dcmslv_
+-#define MSLV _mslv_
+-#define DMSLV _dmslv_
+-#define MTMS _mtms_
+-//#define HBRD _hbrd_
+-//#define HYBRD _hybrd_
+-//#define LMDIFF _lmdiff_
+-//#define LMDIF _lmdif_
+-#define SGEFA _sgefa_
+-#define SGECO _sgeco_
+-#define SGESL _sgesl_     
+-#define DGEFA _dgefa_
+-#define DGESL _dgesl_     
++#define c_fft F77_FUNC(c_fft,C_FFT)
++#define c_fft_inv F77_FUNC(c_fft_inv,C_FFT_INV)
++#define c_set_calc_eigenvalues F77_FUNC(c_set_calc_eigenvalues,C_SET_CALC_EIGENVALUES)
++#define c_init_calc_eigenvalues F77_FUNC(c_init_calc_eigenvalues,C_INIT_CALC_EIGENVALUES)
++#define c_calc_eigenvalues F77_FUNC(c_calc_eigenvalues,C_CALC_EIGENVALUES)
++#define c_mult_matricies F77_FUNC(c_mult_matricies,C_MULT_MATRICIES)
++#define mult_matricies F77_FUNC(mult_matricies,MULT_MATRICIES)
++#define c_set_invert_matrix F77_FUNC(c_set_invert_matrix,C_SET_INVERT_MATRIX)
++#define c_init_invert_matrix F77_FUNC(c_init_invert_matrix,C_INIT_INVERT_MATRIX)
++#define c_invert_matrix F77_FUNC(c_invert_matrix,C_INVERT_MATRIX)
++#define set_invert_matrix F77_FUNC(set_invert_matrix,SET_INVERT_MATRIX)
++#define init_invert_matrix F77_FUNC(init_invert_matrix,INIT_INVERT_MATRIX)
++#define invert_matrix F77_FUNC(invert_matrix,INVERT_MATRIX)
++#define invert_matrix_cond F77_FUNC(invert_matrix_cond,INVERT_MATRIX_COND)
++#define d_set_invert_matrix F77_FUNC(d_set_invert_matrix,D_SET_INVERT_MATRIX)
++#define d_init_invert_matrix F77_FUNC(d_init_invert_matrix,D_INIT_INVERT_MATRIX)
++#define d_invert_matrix F77_FUNC(d_invert_matrix,D_INVERT_MATRIX)
++#define c_set_solve_linear F77_FUNC(c_set_solve_linear,C_SET_SOLVE_LINEAR)
++#define c_init_solve_linear F77_FUNC(c_init_solve_linear,C_INIT_SOLVE_LINEAR)
++#define c_solve_linear F77_FUNC(c_solve_linear,C_SOLVE_LINEAR)
++#define d_c_set_solve_linear F77_FUNC(d_c_set_solve_linear,D_C_SET_SOLVE_LINEAR)
++#define d_c_init_solve_linear F77_FUNC(d_c_init_solve_linear,D_C_INIT_SOLVE_LINEAR)
++#define d_c_solve_linear F77_FUNC(d_c_solve_linear,D_C_SOLVE_LINEAR)
++//#define set_solve_nonlinear F77_FUNC(set_solve_nonlinear,SET_SOLVE_NONLINEAR)
++//#define init_solve_nonlinear F77_FUNC(init_solve_nonlinear,INIT_SOLVE_NONLINEAR)
++//#define solve_nonlinear F77_FUNC(solve_nonlinear,SOLVE_NONLINEAR)
++#define lu_factor F77_FUNC(lu_factor,LU_FACTOR)
++#define lu_factor_cond F77_FUNC(lu_factor_cond,LU_FACTOR_COND)
++#define lu_solve_linear F77_FUNC(lu_solve_linear,LU_SOLVE_LINEAR)
+ 
+-// Other hosts (hp7, you need just case conversion to call FORTRAN from C
+-// Since FORTRAN uppercase is all converted to lowercase.
+-//--------------------------------------
+-
+-#else
+-
+-
+-#define FFT fft
+-#define CEIGV ceigv
+-#define CMSLV1 cmslv1
+-#define CMTMS cmtms
+-#define DCMSLV dcmslv
+-#define MSLV mslv
+-#define DMSLV dmslv
+-#define MTMS mtms
+-//#define HBRD hbrd
+-//#define HYBRD hybrd
+-//#define LMDIFF lmdiff
+-//#define LMDIF lmdif
+-#define SGEFA sgefa
+-#define SGECO sgeco
+-#define SGESL sgesl     
+-#define DGEFA dgefa
+-#define DGESL dgesl     
+-
+-// end of else for fortran underbars
+-
+-#endif
+-#endif
+ 
+ // C function definitions
+ 

@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/09/26 01:12:12 dmcmahill Exp $
+
+SHA1 (tnt-1.2.2.tar.gz) = bd089863ca2cd939009253e83f4ab75317191047
+Size (tnt-1.2.2.tar.gz) = 2020099 bytes
+SHA1 (patch-aa) = 779955877d1cec32b441c16d615a1e400888c0b1
+SHA1 (patch-ab) = 6a57255b994f0ea4063a2c256fe0ba689a210ba7
+SHA1 (patch-ac) = 32b2a6721a3c1790366c278816c2f188dfa38214
+SHA1 (patch-ad) = 8084532ba3a3387fddfbbfeee019c21e4e139be7
+SHA1 (patch-ae) = cc2992e557b95b9fe1b06c6c9ceb39ab6277cc88
+SHA1 (patch-af) = 429b8dde570ff68b47dd31029327efc4abc2426c
+SHA1 (patch-ag) = a9afe4562b51b01b912ec72a70953820abb19467
+SHA1 (patch-ah) = ec3cb9822e8dd168e6b6d74bb14cd631717187c7
+SHA1 (patch-ai) = 2ab6aa6bd4cd0883725c66bb7d4fa59e9e3172a4
+SHA1 (patch-aj) = 7ec0c75d0e29c2adce2eea442e4b3309455965e7

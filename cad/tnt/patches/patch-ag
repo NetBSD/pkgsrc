@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2004/09/26 01:12:17 dmcmahill Exp $
+
+--- doc/Makefile.am.orig	Wed Jul 21 15:45:26 2004
++++ doc/Makefile.am
+@@ -43,7 +43,7 @@ AUTOMAKE_OPTIONS = foreign
+ #
+ #---------------------------------------------------------------
+ 
+-docdir = $(prefix)/doc
++docdir = $(pkgdatadir)
+ doc_DATA = \
+ 	user-guide.pdf 
+ 
