@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2000/07/31 04:14:11 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2000/08/28 09:14:52 jlam Exp $
 
 DISTNAME=		gtk+-1.2.8
 CATEGORIES=		x11
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.gtk.org/
 
 DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
 DEPENDS+=		glib>=1.2.8:../../devel/glib
-BUILD_DEPENDS+=		${LOCALBASE}/bin/perl:../../lang/perl5
+BUILD_DEPENDS+=		${PERL5}:../../lang/perl5
 
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
