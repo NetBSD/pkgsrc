@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/01/05 18:12:19 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/01/06 13:54:12 jmmv Exp $
 include/gail-1.0/libgail-util/gail-util.h
 include/gail-1.0/libgail-util/gailmisc.h
 include/gail-1.0/libgail-util/gailtextutil.h
@@ -11,9 +11,12 @@ lib/libgailutil.so
 lib/libgailutil.so.17
 lib/libgailutil.so.17.0
 lib/pkgconfig/gail.pc
-share/doc/gail/gail-libgail-util-overrides.txt
-share/doc/gail/gail-libgail-util-sections.txt
-@dirrm share/doc/gail
+share/doc/html/gail-libgail-util/book1.html
+share/doc/html/gail-libgail-util/gail-libgail-util-gailmisc.html
+share/doc/html/gail-libgail-util/gail-libgail-util-gailtextutil.html
+share/doc/html/gail-libgail-util/index.sgml
+share/doc/html/gail-libgail-util/libgail-util-main.html
+@dirrm share/doc/html/gail-libgail-util
 @comment in gtk2: @dirrm lib/gtk-2.0/modules
 @dirrm include/gail-1.0/libgail-util
 @dirrm include/gail-1.0
