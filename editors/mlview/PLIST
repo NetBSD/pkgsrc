@@ -1,10 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/25 22:04:48 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:30 jlam Exp $
 bin/mlv
-lib/libmlview.a
 lib/libmlview.la
-lib/libmlview.so
-lib/libmlview.so.4
-lib/libmlview.so.4.0
 share/applications/mlview.desktop
 share/gconf/schemas/mlview.schemas
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/mlview.mo

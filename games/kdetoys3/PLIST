@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/08/21 14:34:54 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/09/22 08:09:31 jlam Exp $
 bin/amor
 bin/kodo
 bin/kteatime
@@ -8,23 +8,14 @@ bin/kweatherservice
 bin/kworldclock
 include/AmorIface.h
 lib/kde3/eyes_panelapplet.la
-lib/kde3/eyes_panelapplet.so
 lib/kde3/fifteen_panelapplet.la
-lib/kde3/fifteen_panelapplet.so
 lib/kde3/kcm_weather.la
-lib/kde3/kcm_weather.so
 lib/kde3/kcm_weatherservice.la
-lib/kde3/kcm_weatherservice.so
 lib/kde3/kmoon_panelapplet.la
-lib/kde3/kmoon_panelapplet.so
 lib/kde3/kweatherreport.la
-lib/kde3/kweatherreport.so
 lib/kde3/weather_panelapplet.la
-lib/kde3/weather_panelapplet.so
 lib/kde3/ww_panelapplet.la
-lib/kde3/ww_panelapplet.so
 lib/libkdeinit_kweatherreport.la
-lib/libkdeinit_kweatherreport.so
 share/applications/kde/amor.desktop
 share/applications/kde/kodo.desktop
 share/applications/kde/kteatime.desktop

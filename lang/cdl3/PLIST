@@ -1,13 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/23 02:04:23 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:39 jlam Exp $
 bin/cdlc
 include/cdl3rts.h
 include/predef.h
 include/predef.k3
-lib/libcdlrts.a
 lib/libcdlrts.la
-lib/libcdlrts.so
-lib/libcdlrts.so.0
-lib/libcdlrts.so.0.0
 man/man1/cdlc.1
 man/man3/cdl-converting.3
 man/man3/cdl-debug.3

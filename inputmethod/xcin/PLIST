@@ -1,18 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/04 08:47:00 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:38 jlam Exp $
 bin/cin2tab
 bin/xcin
 etc/xcinrc
-lib/libxcin.a
 lib/libxcin.la
-lib/libxcin.so
-lib/libxcin.so.0
-lib/libxcin.so.0.0
-lib/xcin/bimsphone.a
 lib/xcin/bimsphone.la
-lib/xcin/bimsphone.so
-lib/xcin/gen_inp.a
 lib/xcin/gen_inp.la
-lib/xcin/gen_inp.so
 lib/xcin/tab/big5/array30.tab
 lib/xcin/tab/big5/bims_pinyin.tab
 lib/xcin/tab/big5/cj.tab
@@ -32,9 +24,7 @@ lib/xcin/tab/euccn/pinyin.tab
 lib/xcin/tab/euccn/shuangpin.tab
 lib/xcin/tab/euccn/sys.tab
 lib/xcin/tab/euccn/wubizixing.tab
-lib/xcin/zh_hex.a
 lib/xcin/zh_hex.la
-lib/xcin/zh_hex.so
 man/man1/xcin.1
 share/doc/xcin/Bugs
 share/doc/xcin/COPYING

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/09/21 16:56:18 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/09/22 08:09:58 jlam Exp $
 bin/gnome-accessibility-keyboard-properties
 bin/gnome-at-properties
 bin/gnome-background-properties
@@ -21,27 +21,15 @@ bin/gnome-window-properties
 bin/themus-theme-applier
 include/gnome-window-settings-2.0/gnome-window-manager.h
 include/gnome-window-settings-2.0/gnome-wm-manager.h
-lib/bonobo/libthemus-theme-properties-view.a
 lib/bonobo/libthemus-theme-properties-view.la
-lib/bonobo/libthemus-theme-properties-view.so
 lib/bonobo/servers/GNOME_SettingsDaemon.server
 lib/bonobo/servers/Themus_Properties_View.server
 lib/bonobo/servers/fontilus.server
-lib/gnome-vfs-2.0/modules/libfont-method.a
 lib/gnome-vfs-2.0/modules/libfont-method.la
-lib/gnome-vfs-2.0/modules/libfont-method.so
-lib/gnome-vfs-2.0/modules/libtheme-method.a
 lib/gnome-vfs-2.0/modules/libtheme-method.la
-lib/gnome-vfs-2.0/modules/libtheme-method.so
-lib/libgnome-window-settings.a
 lib/libgnome-window-settings.la
-lib/libgnome-window-settings.so
-lib/libgnome-window-settings.so.1
-lib/libgnome-window-settings.so.1.0
 lib/pkgconfig/gnome-window-settings-2.0.pc
-lib/window-manager-settings/libmetacity.a
 lib/window-manager-settings/libmetacity.la
-lib/window-manager-settings/libmetacity.so
 libexec/fontilus-context-menu
 libexec/gnome-settings-daemon
 share/application-registry/fontilus.applications

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/04/28 14:05:36 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:34 jlam Exp $
 include/gtkglext-1.0/gdk/GL/glext.h
 include/gtkglext-1.0/gdk/GL/glxext.h
 include/gtkglext-1.0/gdk/GL/wglext.h
@@ -30,16 +30,8 @@ include/gtkglext-1.0/gtk/gtkglprivate.h
 include/gtkglext-1.0/gtk/gtkglversion.h
 include/gtkglext-1.0/gtk/gtkglwidget.h
 lib/gtkglext-1.0/include/gdkglext-config.h
-lib/libgdkglext-x11-1.0.a
 lib/libgdkglext-x11-1.0.la
-lib/libgdkglext-x11-1.0.so
-lib/libgdkglext-x11-1.0.so.0
-lib/libgdkglext-x11-1.0.so.0.1
-lib/libgtkglext-x11-1.0.a
 lib/libgtkglext-x11-1.0.la
-lib/libgtkglext-x11-1.0.so
-lib/libgtkglext-x11-1.0.so.0
-lib/libgtkglext-x11-1.0.so.0.1
 lib/pkgconfig/gdkglext-1.0.pc
 lib/pkgconfig/gdkglext-x11-1.0.pc
 lib/pkgconfig/gtkglext-1.0.pc

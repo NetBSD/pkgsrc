@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/04 22:37:33 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:47 jlam Exp $
 bin/openRTSP
 bin/playSIP
 bin/qtParse
@@ -90,26 +90,10 @@ include/liblive/liveMedia/SimpleRTPSink.hh
 include/liblive/liveMedia/SimpleRTPSource.hh
 include/liblive/liveMedia/liveMedia.hh
 include/liblive/liveMedia/liveMedia_version.hh
-lib/libBasicUsageEnvironment.a
 lib/libBasicUsageEnvironment.la
-lib/libBasicUsageEnvironment.so
-lib/libBasicUsageEnvironment.so.0
-lib/libBasicUsageEnvironment.so.0.0
-lib/libUsageEnvironment.a
 lib/libUsageEnvironment.la
-lib/libUsageEnvironment.so
-lib/libUsageEnvironment.so.0
-lib/libUsageEnvironment.so.0.0
-lib/libgroupsock.a
 lib/libgroupsock.la
-lib/libgroupsock.so
-lib/libgroupsock.so.0
-lib/libgroupsock.so.0.0
-lib/libliveMedia.a
 lib/libliveMedia.la
-lib/libliveMedia.so
-lib/libliveMedia.so.0
-lib/libliveMedia.so.0.0
 @dirrm include/liblive/liveMedia
 @dirrm include/liblive/groupsock
 @dirrm include/liblive/UsageEnvironment

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/09/21 16:54:57 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/09/22 08:09:54 jlam Exp $
 bin/nautilus
 bin/nautilus-file-management-properties
 include/libnautilus/libnautilus.h
@@ -21,18 +21,10 @@ include/nautilus/libnautilus-extension/nautilus-menu-item.h
 include/nautilus/libnautilus-extension/nautilus-menu-provider.h
 include/nautilus/libnautilus-extension/nautilus-property-page-provider.h
 include/nautilus/libnautilus-extension/nautilus-property-page.h
-lib/bonobo/libnautilus-emblem-view.a
 lib/bonobo/libnautilus-emblem-view.la
-lib/bonobo/libnautilus-emblem-view.so
-lib/bonobo/libnautilus-history-view.a
 lib/bonobo/libnautilus-history-view.la
-lib/bonobo/libnautilus-history-view.so
-lib/bonobo/libnautilus-image-properties-view.a
 lib/bonobo/libnautilus-image-properties-view.la
-lib/bonobo/libnautilus-image-properties-view.so
-lib/bonobo/libnautilus-notes-view.a
 lib/bonobo/libnautilus-notes-view.la
-lib/bonobo/libnautilus-notes-view.so
 lib/bonobo/servers/Nautilus_ComponentAdapterFactory_std.server
 lib/bonobo/servers/Nautilus_Control_throbber.server
 lib/bonobo/servers/Nautilus_View_emblem.server
@@ -41,26 +33,10 @@ lib/bonobo/servers/Nautilus_View_image_properties.server
 lib/bonobo/servers/Nautilus_View_notes.server
 lib/bonobo/servers/Nautilus_View_text.server
 lib/bonobo/servers/Nautilus_shell.server
-lib/libnautilus-adapter.a
 lib/libnautilus-adapter.la
-lib/libnautilus-adapter.so
-lib/libnautilus-adapter.so.2
-lib/libnautilus-adapter.so.2.0
-lib/libnautilus-extension.a
 lib/libnautilus-extension.la
-lib/libnautilus-extension.so
-lib/libnautilus-extension.so.1
-lib/libnautilus-extension.so.1.0
-lib/libnautilus-private.a
 lib/libnautilus-private.la
-lib/libnautilus-private.so
-lib/libnautilus-private.so.2
-lib/libnautilus-private.so.2.0
-lib/libnautilus.a
 lib/libnautilus.la
-lib/libnautilus.so
-lib/libnautilus.so.2
-lib/libnautilus.so.2.0
 lib/pkgconfig/libnautilus-extension.pc
 lib/pkgconfig/libnautilus.pc
 libexec/nautilus-adapter

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/05/24 18:07:13 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:27 jlam Exp $
 include/libgsf-1/gsf-gnome/gsf-input-bonobo.h
 include/libgsf-1/gsf-gnome/gsf-input-gnomevfs.h
 include/libgsf-1/gsf-gnome/gsf-output-bonobo.h
@@ -39,16 +39,8 @@ include/libgsf-1/gsf/gsf-structured-blob.h
 include/libgsf-1/gsf/gsf-timestamp.h
 include/libgsf-1/gsf/gsf-utils.h
 include/libgsf-1/gsf/gsf.h
-lib/libgsf-1.a
 lib/libgsf-1.la
-lib/libgsf-1.so
-lib/libgsf-1.so.10
-lib/libgsf-1.so.10.1
-lib/libgsf-gnome-1.a
 lib/libgsf-gnome-1.la
-lib/libgsf-gnome-1.so
-lib/libgsf-gnome-1.so.10
-lib/libgsf-gnome-1.so.10.1
 lib/pkgconfig/libgsf-1.pc
 lib/pkgconfig/libgsf-gnome-1.pc
 share/doc/libgsf/gsf/api.html
