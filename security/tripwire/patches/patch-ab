@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 1998/11/17 16:27:25 agc Exp $
+$NetBSD: patch-ab,v 1.2 1999/04/09 10:46:57 agc Exp $
 
-NetBSD-specific paths for tripwire.
+NetBSD and Solaris specific paths for tripwire.
 
 --- include/config.h	1994/07/15 11:02:52	1.5
 +++ include/config.h	1998/11/17 14:40:02
@@ -9,7 +9,7 @@ NetBSD-specific paths for tripwire.
   ***/
  
 -#include "../configs/conf-svr4.h"
-+#include "../configs/conf-netbsd.h"
++#include "../configs/conf-@LOWER_OPSYS@.h"
  
  #ifdef TW_TYPE32
  typedef TW_TYPE32 int32;
@@ -20,8 +20,8 @@ NetBSD-specific paths for tripwire.
 -
 -#define CONFIG_PATH     "/tmp/genek"
 -#define DATABASE_PATH   "/tmp/genek"
-+# define CONFIG_PATH     "@localbase@/etc/tripwire"
-+# define DATABASE_PATH   "@localbase@/etc/tripwire/databases"
++# define CONFIG_PATH     "/usr/local/etc/tripwire"
++# define DATABASE_PATH   "/usr/local/etc/tripwire/databases"
  
  /******* name of Tripwire files **************************************
   *
