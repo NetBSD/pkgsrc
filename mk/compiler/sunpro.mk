@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.22 2004/09/21 15:01:41 jlam Exp $
+# $NetBSD: sunpro.mk,v 1.23 2004/11/23 00:46:26 dmcmahill Exp $
 
 .if !defined(COMPILER_SUNPRO_MK)
 COMPILER_SUNPRO_MK=	defined
@@ -24,12 +24,14 @@ _SUNPRO_CC=	${_SUNPRO_DIR}/bin/cc
 _SUNPRO_LINKS+=	_SUNPRO_CC
 PKG_CC=		${_SUNPRO_CC}
 CC=		${PKG_CC:T}
+CCPATH=		${SUNWSPROBASE}/bin/cc
 .endif
 .if exists(${SUNWSPROBASE}/bin/CC)
 _SUNPRO_CXX=	${_SUNPRO_DIR}/bin/CC
 _SUNPRO_LINKS+=	_SUNPRO_CXX
 PKG_CXX=	${_SUNPRO_CXX}
 CXX=		${PKG_CXX:T}
+CXXPATH=	${SUNWSPROBASE}/bin/CC
 .endif
 
 # SunPro passes rpath directives to the linker using "-R".
