@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/26 09:41:39 martti Exp $
+@comment $NetBSD: PLIST,v 1.2.2.1 2002/08/25 21:21:54 jlam Exp $
 bin/genpref
 bin/icehelp
 bin/icesh
@@ -283,6 +283,7 @@ share/doc/icewm/FAQ
 share/doc/icewm/README
 share/doc/icewm/TODO
 share/locale/ca/LC_MESSAGES/icewm.mo
+share/locale/cs/LC_MESSAGES/icewm.mo
 share/locale/de/LC_MESSAGES/icewm.mo
 share/locale/en/LC_MESSAGES/icewm.mo
 share/locale/es/LC_MESSAGES/icewm.mo
@@ -297,6 +298,8 @@ share/locale/pl/LC_MESSAGES/icewm.mo
 share/locale/pt_BR/LC_MESSAGES/icewm.mo
 share/locale/ro/LC_MESSAGES/icewm.mo
 share/locale/ru/LC_MESSAGES/icewm.mo
+share/locale/sv/LC_MESSAGES/icewm.mo
+share/locale/zh_CN.gb2312/LC_MESSAGES/icewm.mo
 share/locale/zh_TW.Big5/LC_MESSAGES/icewm.mo
 @dirrm etc/X11/icewm
 @dirrm lib/X11/icewm/icons

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12.2.1 2002/06/23 06:29:49 jlam Exp $
+# $NetBSD: Makefile,v 1.12.2.2 2002/08/25 21:20:03 jlam Exp $
 #
 
-DISTNAME=		gmp-4.0.1
+DISTNAME=		gmp-4.1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=gmp/}
 
@@ -13,7 +13,7 @@ BUILD_DEPENDS+=		m4-1.4:../../devel/m4
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--enable-cxx
+CONFIGURE_ARGS+=	--enable-cxx --without-readline
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 M4=			${PREFIX}/bin/gm4

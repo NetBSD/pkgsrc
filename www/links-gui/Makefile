@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2.2.4 2002/06/30 04:00:46 jlam Exp $
+# $NetBSD: Makefile,v 1.2.2.5 2002/08/25 21:22:34 jlam Exp $
 #
 
-PKGNAME=	links-gui-2.0
+PKGNAME=	links-gui-2.1.0.2
 COMMENT=	Lynx-like text and graphics WWW browser
 
 CONFLICTS+=	links-[0-9]* elinks-[0-9]*
@@ -16,4 +16,4 @@ CONFIGURE_ARGS+=	--enable-graphics
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../www/links/Makefile.common"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5.2.2 2002/06/30 06:24:12 jlam Exp $
+# $NetBSD: Makefile,v 1.5.2.3 2002/08/25 21:21:14 jlam Exp $
 #
 
 DISTNAME=		zebedee-2.3.1
@@ -10,8 +10,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.winton.org.uk/zebedee/
 COMMENT=		Simple tunneling program for TCP or UDP with encryption
 
-BUILD_DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
-
+USE_PERL5=		build
 USE_GMAKE=		# defined
 USE_BUILDLINK2=		# defined
 

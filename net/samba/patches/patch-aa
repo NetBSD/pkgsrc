@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.18.2.2 2002/08/25 21:20:32 jlam Exp $
+
+--- configure.in.orig	Sun Jul 28 18:13:04 2002
++++ configure.in
+@@ -1976,6 +1976,10 @@ AC_ARG_WITH(pam,
+ # we can't build a pam module if we don't have pam.
+ AC_CHECK_LIB(pam, pam_get_data, [AC_DEFINE(HAVE_LIBPAM)])
+ 
++dnl Checks for libraries.
++AC_CHECK_LIB(c, __libc_sched_setscheduler, PAM_NEEDS_LIBC=, PAM_NEEDS_LIBC=-lc)
++AC_SUBST(PAM_NEEDS_LIBC)
++
+ #################################################
+ # check for pam_smbpass support
+ AC_MSG_CHECKING(whether to use pam_smbpass)

@@ -3,4 +3,4 @@ feature is the lack of features, reducing the code size and improving
 verifiability.
 
 It supports CGI/1.1, HTTP/1.1, HTTP/1.0, HTTP/0.9, ~user translations,
-and can run multiple IP-based http servers on single machine.
+and can run multiple IP-based or virtual http servers on single machine.

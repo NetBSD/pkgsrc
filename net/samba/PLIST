@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6.2.1 2002/06/23 18:56:55 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6.2.2 2002/08/25 21:20:30 jlam Exp $
 bin/findsmb
 bin/make_printerdef
 bin/make_smbcodepage
@@ -442,18 +442,10 @@ share/samba/swat/using_samba/this_edition.html
 @dirrm share/examples/samba/LDAP/smbldap-tools/cgi
 @dirrm share/examples/samba/LDAP/smbldap-tools
 @dirrm share/examples/samba/LDAP
-@dirrm share/examples/samba/VFS/recycle
-@dirrm share/examples/samba/VFS/block
-@dirrm share/examples/samba/VFS
-@dirrm share/examples/samba/appliance
-@dirrm share/examples/samba/autofs
-@dirrm share/examples/samba/dce-dfs
-@dirrm share/examples/samba/libsmbclient
 @dirrm share/examples/samba/misc
 @dirrm share/examples/samba/printer-accounting
 @dirrm share/examples/samba/printing
 @dirrm share/examples/samba/simple
-@dirrm share/examples/samba/svr4-startup
 @dirrm share/examples/samba/thoralf
 @dirrm share/examples/samba/tridge
 @dirrm share/examples/samba/validchars

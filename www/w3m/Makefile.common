@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4.2.3 2002/06/30 06:24:35 jlam Exp $
+# $NetBSD: Makefile.common,v 1.4.2.4 2002/08/25 21:22:44 jlam Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -95,8 +95,7 @@ CONFIGURE_ENV+=	use_cookie=y
 CONFIGURE_ENV+=	use_cookie=n
 .endif
 .if ${W3M_USE_SSL} == YES
-USE_SSL=			YES
-CONFIGURE_ENV+=	use_ssl=y use_ssl_verify=n
+CONFIGURE_ENV+=	use_ssl=y use_ssl_verify=y
 CONFIGURE_ARGS+=	--ssl-includedir=${SSLBASE}/include/openssl
 CONFIGURE_ARGS+=	--ssl-libdir=${SSLBASE}/lib
 .include "../../security/openssl/buildlink2.mk"
@@ -111,9 +110,9 @@ CONFIGURE_ENV+=	lynx_key=n
 HELP_W3M=			-w3m
 .endif
 .if ${W3M_USE_IMAGE} == YES
-CONFIGURE_ENV+= use_image=y 
+CONFIGURE_ENV+= use_image=y
 .else
-CONFIGURE_ENV+= use_image=n 
+CONFIGURE_ENV+= use_image=n
 .endif
 CONFIGURE_ENV+= use_menu=y use_matrix=n use_ansi_color=y
 CONFIGURE_ENV+= use_help_cgi=n use_migemo=n

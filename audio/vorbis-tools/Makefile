@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.13.2.2 2002/06/21 23:04:59 jlam Exp $
+# $NetBSD: Makefile,v 1.13.2.3 2002/08/25 21:19:49 jlam Exp $
 
-DISTNAME=	vorbis-tools-1.0rc3
-PKGNAME=	vorbis-tools-1.0.0.7
-PKGREVISION=	1
+DISTNAME=	vorbis-tools-1.0
+PKGNAME=	vorbis-tools-1.0.0.8
 CATEGORIES=	audio
-MASTER_SITES=	http://www.vorbis.com/files/rc3/unix/
+MASTER_SITES=	http://www.vorbis.com/files/1.0/unix/
 
 MAINTAINER=	lukem@netbsd.org
 HOMEPAGE=	http://www.vorbis.com/
@@ -20,21 +19,18 @@ CONFLICTS=	vorbis-[0-9]*
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-#CONFIGURE_ARGS+=	--with-ogg-prefix=${BUILDLINK_DIR}		\
-#			--with-vorbis-prefix=${BUILDLINK_DIR}		\
-#			--with-ao-prefix=${BUILDLINK_DIR}
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+CONFIGURE_ARGS+=	--with-ogg-prefix=${BUILDLINK_PREFIX.libogg}	\
+			--with-vorbis-prefix=${BUILDLINK_PREFIX.libvorbis} \
+			--with-ao-prefix=${BUILDLINK_PREFIX.libao}
 
 PLIST_SUBST+=	DISTNAME="${DISTNAME}"
 
-# vorbis-tools needs a working pthreads implementation, and pth is proven
-# to work.
-#
-USE_PTHREAD=	native pth
+PTHREAD_OPTS+=	require
 
 .include "../../audio/libao/buildlink2.mk"
 .include "../../audio/libogg/buildlink2.mk"
 .include "../../audio/libvorbis/buildlink2.mk"
-
 .include "../../mk/pthread.buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

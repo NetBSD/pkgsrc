@@ -1,23 +1,16 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/01 00:12:41 zuntum Exp $
+$NetBSD: MESSAGE,v 1.1.2.1 2002/08/25 21:19:59 jlam Exp $
 
-PostgreSQL has a Web site at http://www.postgresql.org/ which carries
-details on the latest release, upcoming features, and other information to
-make your work or play with PostgreSQL more productive.
+To enable this package, put the following into your /etc/rc.conf:
 
-Please check the following URL for a listing of the current user-support
-mailing lists:
+	pgsql=yes
+	pgsql_flags="-i"        # allows TCP/IP connections
+	pgsql_flags="-i -l"     # enables SSL connections (TCP/IP required)
 
-	http://www.postgresql.org/ -> Info Central -> Mailing Lists
+and make sure
 
-All of the mailing lists are currently archived and viewable at:
+	/usr/pkg/etc/rc.d/pgsql start
 
-	http://www.postgresql.org/ -> Info Central -> Mailing Lists
+is started at boot time.
 
-And optionally, please connect to the following registration URL:
-
-	http://www.postgresql.org/ -> Helping Us -> Survey/Register
-
-Thank you for choosing PostgreSQL, the most advanced open source database 
-engine.
 ===========================================================================

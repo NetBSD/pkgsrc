@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4.2.1 2002/07/01 17:45:14 jlam Exp $
+# $NetBSD: Makefile,v 1.4.2.2 2002/08/25 21:22:45 jlam Exp $
 #
 
 DISTNAME=	validate
-PKGNAME=	wdg-validate-1.0.3
+PKGNAME=	wdg-validate-1.0.4
 CATEGORIES=	www
 MASTER_SITES=	http://www.htmlhelp.com/tools/validator/offline/
-DISTFILES=	validate sgml-lib.tar.gz README
+DISTFILES=	validate sgml-lib-1.0.tar.gz README
 
 MAINTAINER=	norm@sandbox.org.uk
 HOMEPAGE=	http://www.htmlhelp.com/tools/validator/offline/
@@ -13,8 +13,8 @@ COMMENT=	HTML validator from the Web Design Group
 
 DEPENDS+=	lq-sp>=1.3.4.5:../../textproc/lq-sp
 
-DIST_SUBDIR=	wdg-validate
-EXTRACT_ONLY=	sgml-lib.tar.gz
+DIST_SUBDIR=	${PKGNAME}
+EXTRACT_ONLY=	sgml-lib-1.0.tar.gz
 
 USE_BUILDLINK2=	YES
 REPLACE_PERL=	validate.netbsd

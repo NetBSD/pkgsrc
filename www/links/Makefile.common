@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.1.2.2 2002/06/23 19:04:08 jlam Exp $
+# $NetBSD: Makefile.common,v 1.1.2.3 2002/08/25 21:22:33 jlam Exp $
 #
 
-DISTNAME=	links-2.0
+DISTNAME=	links-2.1pre2
 CATEGORIES=	www
 MASTER_SITES= \
 	http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/download/ \
