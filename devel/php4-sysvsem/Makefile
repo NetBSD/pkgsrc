@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2001/10/16 06:41:09 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/10/16 06:58:32 jlam Exp $
 
-.include "../php4/Makefile.module"
+.include "../../www/php4/Makefile.module"
 
 MODNAME=		sysvsem
 CATEGORIES+=		devel
