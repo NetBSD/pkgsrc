@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/03/25 01:32:55 salo Exp $
+
+SHA1 (tuxracer-0.61.tar.gz) = e1b98209f99400cd6aa660f6c1c8bd2ab17d5cea
+Size (tuxracer-0.61.tar.gz) = 636628 bytes
+SHA1 (tuxracer-data-0.61.tar.gz) = f8476530106bfc343e9196e2a8285b5a57f75d65
+Size (tuxracer-data-0.61.tar.gz) = 7402317 bytes
