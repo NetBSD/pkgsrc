@@ -1,0 +1,14 @@
+*** sam/io.c	1997/10/01 08:25:28	1.1
+--- sam/io.c	1997/10/01 08:25:59
+***************
+*** 2,8 ****
+--- 2,10 ----
+  #include "sam.h"
+  
+  #define	NSYSFILE	3
++ #ifndef NOFILE
+  #define	NOFILE		128
++ #endif
+  
+  void
+  checkqid(File *f)
