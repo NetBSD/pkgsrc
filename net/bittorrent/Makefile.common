@@ -1,0 +1,21 @@
+# $NetBSD: Makefile.common,v 1.1 2004/03/03 10:02:08 recht Exp $
+#
+
+DISTNAME=	BitTorrent-3.3
+CATEGORIES=	net
+MASTER_SITES=	http://bitconjurer.org/BitTorrent/
+
+MAINTAINER=	recht@NetBSD.org
+HOMEPAGE=	http://bitconjurer.org/BitTorrent/
+COMMENT=	File sharing tool
+
+DESCR_SRC=	${.CURDIR}/../../net/bittorrent/DESCR
+DISTINFO_FILE=	${.CURDIR}/../../net/bittorrent/distinfo
+FILESDIR=	${.CURDIR}/../../net/bittorrent/files
+PATCHDIR=	${.CURDIR}/../../net/bittorrent/patches
+
+USE_BUILDLINK2=	YES
+
+PYTHON_VERSIONS_ACCEPTED=	23pth 22pth
+
+.include "../../lang/python/application.mk"
