@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.1 2000/06/15 21:14:08 rh Exp $
+
+--- plugins.c.orig	Sun Feb 13 05:36:01 2000
++++ plugins.c	Thu Jun 15 22:19:03 2000
+@@ -127,7 +127,7 @@
+    char name[52];
+    char db_name[52];
+    int version, major_version, minor_version;
+-   /* void (*plugin_set_jpilot_logf)(int (*Pjpilot_logf)(int level, char *format, ...));*/
++   void (*plugin_set_jpilot_logf)(int (*Pjpilot_logf)(int level, char *format, ...));
+    void (*plugin_versionM)(int *major_version, int *minor_version);
+    
+    p->full_path = NULL;
+@@ -159,14 +159,14 @@
+    p->handle=h;
+    
+    /* logf */
+-/*
++
+    plugin_set_jpilot_logf = dlsym(h, "plugin_set_jpilot_logf");
+    if ((err = dlerror()) != NULL)  {
+       jpilot_logf(LOG_WARN, "plugin_set_jpilot_logf, [%s]\n [%s]\n", err, path);
+    } else {
+       plugin_set_jpilot_logf(jpilot_logf);
+    }
+-*/
++
+ 
+    p->full_path = strdup(path);
+ 
