@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2001/07/17 13:11:51 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2001/12/17 02:32:22 dmcmahill Exp $
 #
 
 .include "mk/bsd.prefs.mk"
@@ -52,6 +52,14 @@ SUBDIR += x11
 PKGSRCTOP=	yes
 
 .include "mk/bsd.pkg.subdir.mk"
+
+# the bulk-cache and clean-bulk-cache targets are a global-pkgsrc
+# thing and thus it makes sense to run it from the top level pkgsrc
+# directory.
+.if make(bulk-cache) || make(clean-bulk-cache)
+.include "${.CURDIR}/mk/bulk/bsd.bulk-pkg.mk"
+_PKGSRCDIR?=${.CURDIR}
+.endif
 
 index:
 	@rm -f ${.CURDIR}/INDEX
