@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7970 2004/11/24 11:16:14 adam Exp $
+$NetBSD: CHANGES,v 1.7971 2004/11/24 14:53:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5406,3 +5406,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mkvtoolnix to 1.0 [salo 2004-11-24]
 	Updated mmg to 1.0 [salo 2004-11-24]
 	Updated libiconv to 1.9.2nb1 [adam 2004-11-24]
+	Updated mathomatic to 11.5b [minskim 2004-11-24]
