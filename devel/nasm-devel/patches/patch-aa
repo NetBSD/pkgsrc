@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.2 2003/01/13 23:31:12 salo Exp $
+$NetBSD: patch-aa,v 1.3 2003/08/30 15:09:03 wiz Exp $
 
---- Makefile.in.orig	Fri Sep 13 02:25:44 2002
-+++ Makefile.in	Mon Jan 13 23:23:55 2003
-@@ -18,7 +18,7 @@
- CFLAGS		= @CFLAGS@ @GCCFLAGS@ -I$(srcdir) -I. 
+--- Makefile.in.orig	Fri Aug 29 21:56:40 2003
++++ Makefile.in
+@@ -18,7 +18,7 @@ CC		= @CC@
+ CFLAGS		= @CFLAGS@ @GCCFLAGS@ @DEFS@ -I$(srcdir) -I.  
  LDFLAGS		= @LDFLAGS@
  LIBS		= @LIBS@
 -PERL		= perl
