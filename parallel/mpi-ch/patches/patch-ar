@@ -1,0 +1,15 @@
+$NetBSD: patch-ar,v 1.1 2001/03/21 15:29:01 wennmach Exp $
+
+Adopt to pkg hierarchy.
+
+--- mpe/viewers/sbin/install-viewers.in.orig	Wed Mar 21 10:54:28 2001
++++ mpe/viewers/sbin/install-viewers.in	Wed Mar 21 11:01:41 2001
+@@ -382,7 +382,7 @@
+     if [ -d $binbuild_dir/../$pkg ] ; then
+         ( cd $binbuild_dir/../$pkg ; \
+           if [ -x ./sbin/install-viewer ] ; then \
+-              ./sbin/install-viewer -prefix=$datadir/$pkg \
++              ./sbin/install-viewer -prefix=$prefix \
+                                     -uninstall=$UNINSTALLFILE ; \
+           fi )
+     fi
