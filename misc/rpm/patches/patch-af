@@ -1,5 +1,5 @@
---- Makefile.in.orig	Wed Jun 25 18:11:30 1997
-+++ Makefile.in	Wed Jul  2 14:14:10 1997
+--- Makefile.in.orig	Fri Oct 10 23:29:38 1997
++++ Makefile.in	Sun Oct 26 04:17:26 1997
 @@ -25,6 +25,7 @@
  RPMBINDIR=$(subst usr/bin,bin,$(BINDIR))
  MANDIR=$(prefix)/man/man8
@@ -8,6 +8,15 @@
  INCDIR=$(prefix)/include/rpm
  ETCDIR=$(ROOT)/etc
  
+@@ -35,7 +36,7 @@
+ OTHERSUBDIRS = docs autodeps
+ OBJS = rpm.o query.o install.o verify.o checksig.o ftp.o url.o @GETTEXTSTUB@
+ PROGS = @RPM@ rpm2cpio
+-LIBS = @LIBS@ @LIBINTL@ @LIBDL@
++LIBS = @LIBS@ @LIBINTL@ @LIBDL@ -lcompat
+ LOADLIBES = -lbuild popt/libpopt.a $(topdir)/lib/librpm.a -lmisc 
+ 
+ SOURCES = $(subst .o,.c,$(OBJS))
 @@ -49,7 +50,7 @@
  all: $(TARGET)
  
