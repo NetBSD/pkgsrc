@@ -1,4 +1,4 @@
-# $NetBSD: ossaudio.buildlink.mk,v 1.3 2001/08/23 13:12:59 jlam Exp $
+# $NetBSD: ossaudio.buildlink.mk,v 1.4 2001/08/23 13:31:00 jlam Exp $
 #
 # This Makefile fragment is included by packages that use OSS audio.
 #
@@ -23,6 +23,9 @@ BUILDLINK_FILES.ossaudio=	lib/libossaudio.*
 BUILDLINK_TARGETS.ossaudio=	ossaudio-buildlink
 BUILDLINK_TARGETS.ossaudio+=	ossaudio-buildlink-soundcard-h
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.ossaudio}
+
+LIBOSSAUDIO?=			-lossaudio
+MAKE_ENV+=			LIBOSSAUDIO="${LIBOSSAUDIO}"
 
 pre-configure: ${BUILDLINK_TARGETS.ossaudio}
 ossaudio-buildlink: _BUILDLINK_USE
