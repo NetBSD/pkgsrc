@@ -1,0 +1,16 @@
+#!/bin/sh
+# $NetBSD: sfscd,v 1.1.1.1 2003/03/17 21:01:47 agc Exp $
+#
+# start script for SFS client daemon 
+
+# PROVIDE: sfscd
+# REQUIRE: NETWORK
+
+. /etc/rc.subr
+
+name="sfscd"
+rcvar=$name
+command="@PREFIX@/sbin/${name}"
+
+load_rc_config $name
+run_rc_command "$1"

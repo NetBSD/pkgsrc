@@ -1,0 +1,21 @@
+# $NetBSD: sfsrwsd_config.sample,v 1.1.1.1 2003/03/17 21:01:47 agc Exp $
+#
+# Note:
+#
+# * /etc/exports must be modified as well
+#
+#   For the directories below, /etc/exports would be:
+#	@SFSDIR@ localhost
+#	/disk/u1 localhost
+#	/disk/u2 localhost
+#
+# * Create the root directories in @SFSDIR@
+#	mkdir @SFSDIR@/root
+#	mkdir @SFSDIR@/root/usr1
+#	mkdir @SFSDIR@/root/usr2
+#
+#	Local		SFS name 
+#	========================
+Export	@SFSDIR@/root	/
+Export	/disk/u1	/usr1
+Export	/disk/u2	/usr2
