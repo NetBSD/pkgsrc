@@ -1,49 +1,5 @@
-*** sh.func.c.bak	Sat Oct  5 21:39:10 1996
---- sh.func.c	Mon Dec 16 04:25:04 1996
-***************
-*** 1312,1319 ****
-  # ifdef LC_COLLATE
-  	(void) setlocale(LC_COLLATE, "");
-  # endif
-! # if defined(NLS_CATALOGS) && defined(LC_MESSAGES)
-  	(void) setlocale(LC_MESSAGES, "");
-  	(void) catclose(catd);
-  	nlsinit();
-  # endif /* NLS_CATALOGS && LC_MESSAGES */
---- 1312,1321 ----
-  # ifdef LC_COLLATE
-  	(void) setlocale(LC_COLLATE, "");
-  # endif
-! # ifdef NLS_CATALOGS
-! # ifdef LC_MESSAGES
-  	(void) setlocale(LC_MESSAGES, "");
-+ # endif
-  	(void) catclose(catd);
-  	nlsinit();
-  # endif /* NLS_CATALOGS && LC_MESSAGES */
-***************
-*** 1475,1482 ****
-  # ifdef LC_COLLATE
-  		    (void) setlocale(LC_COLLATE, "");
-  # endif
-! # if defined(NLS_CATALOGS) && defined(LC_MESSAGES)
-  		    (void) setlocale(LC_MESSAGES, "");
-  		    (void) catclose(catd);
-  		    nlsinit();
-  # endif /* NLS_CATALOGS && LC_MESSAGES */
---- 1477,1486 ----
-  # ifdef LC_COLLATE
-  		    (void) setlocale(LC_COLLATE, "");
-  # endif
-! # ifdef NLS_CATALOGS
-! # ifdef LC_MESSAGES
-  		    (void) setlocale(LC_MESSAGES, "");
-+ # endif
-  		    (void) catclose(catd);
-  		    nlsinit();
-  # endif /* NLS_CATALOGS && LC_MESSAGES */
---- Makefile.in	1997/10/24 15:41:23	1.1
-+++ Makefile.in	1997/10/24 15:41:34
+--- Makefile.in.orig	Fri Oct 11 13:31:59 1996
++++ Makefile.in	Tue Aug  4 10:19:30 1998
 @@ -261,7 +261,7 @@
  PARALLEL=12				# Make the multi-max run fast.
  #P=&					# Use Sequent's parallel make
@@ -53,3 +9,21 @@
  MANSECT=1
  DESTBIN=${DESTDIR}/bin
  DESTMAN=${DESTDIR}/man/man${MANSECT}
+@@ -452,15 +452,10 @@
+ 	@vgrind -t -x -h Index index >/crp/bill/csh/index.t
+ 
+ install: tcsh 
+-	-mv -f ${DESTBIN}/tcsh  ${DESTBIN}/tcsh.old
+-	cp tcsh ${DESTBIN}/tcsh
+-	-strip ${DESTBIN}/tcsh
+-	chmod 555 ${DESTBIN}/tcsh
++	${BSD_INSTALL_PROGRAM} tcsh ${DESTBIN}/tcsh
+ 
+ install.man: tcsh.man
+-	-rm -f ${DESTMAN}/tcsh.${MANSECT}
+-	cp tcsh.man ${DESTMAN}/tcsh.${MANSECT}
+-	chmod 444 ${DESTMAN}/tcsh.${MANSECT}
++	${BSD_INSTALL_MAN} tcsh.man ${DESTMAN}/tcsh.${MANSECT}
+ 
+ # Amiga Unix
+ #install.man: tcsh.man
