@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4861 2004/02/16 16:36:12 recht Exp $
+$NetBSD: CHANGES,v 1.4862 2004/02/16 17:54:14 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -872,3 +872,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome1-dirs to 1.4 [jmmv 2004-02-16]
 	Updated gnome2-dirs to 1.4 [jmmv 2004-02-16]
 	Updated tkdiff to 3.09 [recht 2004-02-16]
+	Added p5-Scalar-List-Utils-1.13 [minskim 2004-02-16]
