@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.6 2000/12/30 13:05:37 hubertf Exp $
+# $NetBSD: post-build,v 1.7 2000/12/30 14:53:28 dmcmahill Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -15,6 +15,12 @@ if (-f $ENV{"BULK_BUILD_CONF"}) {
 } else {
     $BULK_BUILD_CONF=dirname("$0")."/build.conf";
 }
+
+# read the setting for the .broken.file from the environment (it gets put there by the
+# build script).
+$BROKENFILE=$ENV{"BROKENF"} or 
+die "Error:  BROKENF must be set to the name of the .broken.files\n        This should have happened in the top level build script\n";
+chomp($BROKENFILE);
 
 # Dig given variable out of config file, and set it
 sub getconf
@@ -34,7 +40,6 @@ getconf("REPORT");		# "broken.html"
 getconf("USR_PKGSRC");		# "/usr/pkgsrc"
 getconf("osrev");	       	# `uname -r`
 getconf("arch"); 		# `uname -m`
-getconf("BROKENFILE");		# ".broken.file"
 chomp($date=`date`);
 
 $verbose=1;

@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.7 2000/12/22 01:35:33 dmcmahill Exp $
+# $NetBSD: pre-build,v 1.8 2000/12/30 14:53:28 dmcmahill Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -16,6 +16,17 @@ else
 fi
 
 PRUNEDISTFILES=${PRUNEDISTFILES:-"yes"}
+
+if [ "$BROKENF" = "" ]; then
+        echo "Error:  BROKENF must be set to the name of the .broken.files"
+        echo "        This should have happened in the top level build script"
+	exit 1
+fi
+if [ "$BLDLOG" = "" ]; then
+        echo "Error:  BLDLOG must be set to the name of the .make.files"
+        echo "        This should have happened in the top level build script"
+	exit 1
+fi
 
 #
 # Install cvs package and do a cvs update here
@@ -89,8 +100,8 @@ rm -fr /nonexistant		# broken useradd on pop3d
 
 # Clean up state files
 cd ${USR_PKGSRC}
-rm -f .broken* */*/.broken*
-rm -f .make* */*/.make*
+rm -f $BROKENF */*/$BROKENF
+rm -f $BLDLOG */*/$BLDLOG
 rm -f .start*
 
 mount -o noasync -u /usr
