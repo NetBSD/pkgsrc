@@ -1,15 +1,31 @@
-$NetBSD: patch-ae,v 1.1 2001/08/12 18:15:38 jlam Exp $
+$NetBSD: patch-ae,v 1.2 2002/02/27 06:41:06 jlam Exp $
 
---- configure.orig	Wed Jul 18 11:04:43 2001
-+++ configure
-@@ -3573,8 +3573,8 @@
- #define USE_GMODULE 1
- EOF
+--- configure.in.orig	Thu Apr 26 15:46:16 2001
++++ configure.in	Wed Feb 27 01:35:59 2002
+@@ -130,8 +130,8 @@
  
+ if $dynworks; then
+    AC_DEFINE(USE_GMODULE)
 -   GMODULE_LIBS="`glib-config --libs gmodule`"
 -   GMODULE_FLAGS="`glib-config --cflags gmodule`"
 +   GMODULE_LIBS="`$GLIB_CONFIG --libs gmodule`"
 +   GMODULE_FLAGS="`$GLIB_CONFIG --cflags gmodule`"
-    
-    
-    echo "$ac_t""yes" 1>&6
+    AC_SUBST(GMODULE_LIBS)
+    AC_SUBST(GMODULE_FLAGS)
+    AC_MSG_RESULT(yes)
+@@ -142,6 +142,7 @@
+ dnl Check for location of rgb.txt file (works without, but better with)
+ AC_MSG_CHECKING([for location of rgb.txt database])
+ 
++if test -z "$path_rgb_txt"; then
+ dnl default to this..
+ path_rgb_txt=/usr/lib/X11/rgb.txt
+ 
+@@ -154,6 +155,7 @@
+       break
+     fi
+   done
++fi
+ fi
+ AC_MSG_RESULT([$path_rgb_txt])
+ AC_DEFINE_UNQUOTED(PATH_RGB_TXT,"$path_rgb_txt")
