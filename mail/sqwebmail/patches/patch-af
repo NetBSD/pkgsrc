@@ -1,0 +1,20 @@
+$NetBSD: patch-af,v 1.1 2005/02/18 22:12:56 jlam Exp $
+
+--- pcp/Makefile.in.orig	2004-12-09 21:54:49.000000000 -0500
++++ pcp/Makefile.in
+@@ -802,15 +802,6 @@ sysconfdir.h: config.status
+ 	echo '#define SYSCONFDIR "$(sysconfdir)"' >sysconfdir.h
+ 
+ install-exec-local:
+-	$(mkinstalldirs) $(DESTDIR)$(calendardir)/public
+-	$(mkinstalldirs) $(DESTDIR)$(calendardir)/private
+-	$(mkinstalldirs) $(DESTDIR)$(localpcpdcachedir)
+-	chmod 755 $(DESTDIR)$(calendardir)
+-	chmod 755 $(DESTDIR)$(calendardir)/public
+-	chmod 750 $(DESTDIR)$(calendardir)/private
+-	chmod 700 $(DESTDIR)$(localpcpdcachedir)
+-	-chown @localcacheowner@ $(DESTDIR)$(localpcpdcachedir)
+-	-chgrp -R @mailgroup@ $(DESTDIR)$(calendardir)
+ 	echo "localcacheowner=@localcacheowner@" >uids
+ 	echo "calendardir=$(calendardir)" >>uids
+ 	echo "mailgroup=@mailgroup@" >>uids

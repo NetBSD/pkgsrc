@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2005/02/18 22:12:56 jlam Exp $
+
+--- configure.orig	2004-12-08 21:17:45.000000000 -0500
++++ configure
+@@ -19379,7 +19379,7 @@ echo "$as_me: error: courierauthconfig n
+ fi
+ $COURIERAUTHCONFIG --configfiles >conftest || exit 1
+ sed 's/^/auth/' <conftest >conftest2
+-. conftest2
++. ./conftest2
+ if test ! -x $authsbindir/courierlogger$EXEEXT
+ then
+ 	{ { echo "$as_me:$LINENO: error: authlib configuration error - $authsbindir/courierlogger$EXEEXT not found" >&5
