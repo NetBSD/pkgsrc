@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.obsolete.mk,v 1.16 2004/08/18 06:27:23 jlam Exp $
+# $NetBSD: bsd.pkg.obsolete.mk,v 1.17 2004/08/22 19:10:26 jlam Exp $
 #
 # This file holds make(1) logic to allow obsolete or deprecated variables
 # still to be used.  These may eventually disappear over time as the contents
@@ -91,13 +91,13 @@ PKG_DEFAULT_OPTIONS+=	libcrack
 PKG_DEFAULT_OPTIONS+=	mmx
 .endif
 .if defined(USE_OPENLDAP) && !empty(USE_OPENLDAP:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	openldap
+PKG_DEFAULT_OPTIONS+=	ldap
 .endif
 .if defined(USE_OSS)
 PKG_DEFAULT_OPTIONS+=	oss
 .endif
 .if defined(USE_PAM)
-PKG_DEFAULT_OPTIONS+=	pam
+PKG_DEFAULT_OPTIONS+=	PAM
 .endif
 .if defined(USE_RSAREF2) && !empty(USE_RSAREF2:M[yY][eE][sS])
 PKG_DEFAULT_OPTIONS+=	rsaref
