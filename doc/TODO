@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1333 2004/01/23 23:11:30 recht Exp $
+$NetBSD: TODO,v 1.1334 2004/01/24 06:43:12 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -113,7 +113,6 @@ Suggested package updates
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o abcde-2.1.12
-	o adns-1.1 [pkg/24177]
 	o amanda-2.4.4p1
 	o anjuta-1.2.0 [cube]
 	o asc-1.13.9
