@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 2000/03/23 22:08:52 tron Exp $
+
 --- h/epath.h.orig	Sun Nov 19 03:09:52 1995
 +++ h/epath.h	Wed Mar 25 13:57:22 1998
 @@ -68,7 +68,8 @@
@@ -5,8 +7,8 @@
  	".emacsrc",
  	"emacs.hlp",
 -	"/usr/local/",
-+	"/usr/local/share/uemacs/",
-+	"/usr/local/lib/uemacs/",
++	"%%PREFIX%%/share/uemacs/",
++	"%%PREFIX%%/lib/uemacs/",
  	"/usr/lib/",
  	""
  };

@@ -1,23 +1,27 @@
-# New ports collection makefile for:	MicroEmacs
-# Version required:     4.0
-# Date created:         16 Jan 1995
-# Whom:                 Thomas Gellekum <tg@FreeBSD.org>
-#
+# $NetBSD: Makefile,v 1.2 2000/03/23 22:08:50 tron Exp $
 # FreeBSD: ports/editors/uemacs/Makefile,v 1.14 1999/10/07 06:49:01 tg Exp
-#
 
 DISTNAME=	ue400dev
 PKGNAME=	uemacs-4.0
 CATEGORIES=	editors
 MASTER_SITES=	ftp://aquest.com/pub/uemacs400/disk2/
+EXTRACT_SUFX=	.zip
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	tron@netbsd.org
 
-NO_WRKSUBDIR=	yes
-USE_ZIP=	yes
-EXTRACT_BEFORE_ARGS=	-Laq
+BUILD_DEPENDS+=${UNZIP}:../../archivers/unzip
+
+EXTRACT_CMD=	${UNZIP} -Laq ${DISTDIR}/${EXTRACT_ONLY}
+UNZIP=		${LOCALBASE}/bin/unzip
+WRKSRC=		${WRKDIR}
+
+post-extract:
+	${CP} -r ${WRKSRC}/freebsd ${WRKSRC}/netbsd
 
 post-patch:
-	@${PERL} -pi -e "s|%%PREFIX%%|${PREFIX}|g" ${WRKSRC}/src/*.c
+	for FILE in ${WRKSRC}/src/*.c ${WRKSRC}/h/*.h; do \
+	  ${MV} $${FILE} $${FILE}.old; \
+	  ${SED} -e "s|%%PREFIX%%|${PREFIX}|g" <$${FILE}.old >$${FILE}; \
+	done
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
