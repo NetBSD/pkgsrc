@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.213 2001/05/24 22:18:21 skrll Exp $
+# $NetBSD: mk.conf.example,v 1.214 2001/06/04 16:44:42 jtb Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -176,6 +176,9 @@
 #ACCEPTABLE_LICENSES+=	sun-swing-license
 # Enable it if you accept the download license for Sun's Swing (JFC) toolkit
 # and would like to build JFC.  see pkgsrc/x11/swing.
+#ACCEPTABLE_LICENSES+=	unarj-license
+# Enable it if you accept the license terms for the unarj archiver
+# and would like to build unarj.  see pkgsrc/archivers/unarj.
 
 #SPECIFIC_PKGS=
 # Don't use the default of all packages (from the top-level of the
