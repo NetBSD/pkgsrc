@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2001/10/22 06:14:32 martti Exp $
+# $NetBSD: Makefile,v 1.38 2002/01/02 22:29:55 wiz Exp $
 #
 
 COMMENT=	Character code converters
@@ -23,6 +23,7 @@ SUBDIR+=	recode
 SUBDIR+=	rpm2cpio
 SUBDIR+=	rtf2html
 SUBDIR+=	ruby-iconv
+SUBDIR+=	ttf2pt1
 SUBDIR+=	txt2html
 SUBDIR+=	txt2man
 SUBDIR+=	unix2dos
