@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/08/18 20:57:13 recht Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/04 18:31:43 recht Exp $
 #
 
 DISTNAME=	Python-2.3
@@ -15,6 +15,7 @@ USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=	OPT="${CFLAGS}"
 
 PTHREAD_OPTS=   require
 .include "../../mk/pthread.buildlink2.mk"
