@@ -1,0 +1,12 @@
+$NetBSD: patch-ai,v 1.1 1998/09/06 23:47:34 garbled Exp $
+--- data/VIC20/Makefile.in.orig	Sun Sep  6 11:57:34 1998
++++ data/VIC20/Makefile.in	Sun Sep  6 11:57:44 1998
+@@ -94,7 +94,7 @@
+ VERSION = @VERSION@
+ YACC = @YACC@
+ 
+-vic20dir = $(prefix)/lib/vice/VIC20
++vic20dir = $(prefix)/share/vice/VIC20
+ 
+ vic20_DATA = \
+ 	basic \

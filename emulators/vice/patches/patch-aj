@@ -1,0 +1,12 @@
+$NetBSD: patch-aj,v 1.1 1998/09/06 23:47:35 garbled Exp $
+--- doc/html/Makefile.in.orig	Sun Sep  6 12:09:45 1998
++++ doc/html/Makefile.in	Sun Sep  6 12:10:03 1998
+@@ -94,7 +94,7 @@
+ VERSION = @VERSION@
+ YACC = @YACC@
+ 
+-docdir = $(prefix)/lib/vice/doc
++docdir = $(prefix)/share/doc/vice
+ 
+ doc_DATA = \
+ 	vice_1.html \

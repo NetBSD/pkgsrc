@@ -1,0 +1,5 @@
+VICE is a Versatile Commodore Emulator, i.e. a program that runs on a Unix
+or MS-DOS/Windows 95 machine and executes programs intended for the old
+8-bit Commodore computers. The current version emulates the C64, the C128
+(save the 80 columns screen), the VIC20 and all the PET models (except the
+SuperPET 9000, which is out of line anyway).

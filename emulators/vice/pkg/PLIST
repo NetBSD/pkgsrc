@@ -1,0 +1,83 @@
+@comment $NetBSD: PLIST,v 1.1 1998/09/06 23:47:37 garbled Exp $
+info/dir
+info/vice.info
+info/vice.info-1
+info/vice.info-2
+info/vice.info-3
+info/vice.info-4
+man/man1/c1541.1
+man/man1/petcat.1
+man/man1/vice.1
+share/doc/vice/64doc.txt
+share/doc/vice/Evaluation
+share/doc/vice/PETdoc.txt
+share/doc/vice/cbm_basic_tokens.txt
+share/doc/vice/drive_info.txt
+share/doc/vice/mnemonics.txt
+share/doc/vice/mon.txt
+share/doc/vice/serial.txt
+share/doc/vice/vice_1.html
+share/doc/vice/vice_2.html
+share/doc/vice/vice_3.html
+share/doc/vice/vice_4.html
+share/doc/vice/vice_5.html
+share/doc/vice/vice_6.html
+share/doc/vice/vice_7.html
+share/doc/vice/vice_8.html
+share/doc/vice/vice_9.html
+share/doc/vice/vice_10.html
+share/doc/vice/vice_11.html
+share/doc/vice/vice_12.html
+share/doc/vice/vice_13.html
+share/doc/vice/vice_14.html
+share/doc/vice/vice_toc.html
+share/vice/C64/basic
+share/vice/C64/chargen
+share/vice/C64/ccs64.vpl
+share/vice/C64/frodo.vpl
+share/vice/C64/godot.vpl
+share/vice/C64/default.vkm
+share/vice/C64/position.vkm
+share/vice/C64/default.vpl
+share/vice/C64/dos1541
+share/vice/C64/kernal
+share/vice/C128/basic
+share/vice/C128/chargen
+share/vice/C128/ccs64.vpl
+share/vice/C128/frodo.vpl
+share/vice/C128/default.vkm
+share/vice/C128/default.vpl
+share/vice/C128/dos1541
+share/vice/C128/kernal
+share/vice/VIC20/basic
+share/vice/VIC20/chargen
+share/vice/VIC20/default.vkm
+share/vice/VIC20/default.vpl
+share/vice/VIC20/dos1541
+share/vice/VIC20/kernal
+share/vice/VIC20/position.vkm
+share/vice/PET/busi_uk.vkm
+share/vice/PET/graphics.vkm
+share/vice/PET/posg_de.vkm
+share/vice/PET/edit2.b
+share/vice/PET/edit4.b80
+share/vice/PET/pet2001
+share/vice/PET/pet4032
+share/vice/PET/chargen
+share/vice/PET/edit4.b40
+share/vice/PET/pet3032
+share/vice/PET/amber.vpl
+share/vice/PET/default.vpl
+share/vice/PET/white.vpl
+bin/x64
+bin/x128
+bin/xvic
+bin/xpet
+bin/c1541
+bin/petcat
+@dirrm share/doc/vice
+@dirrm share/vice/C64
+@dirrm share/vice/C128
+@dirrm share/vice/VIC20
+@dirrm share/vice/PET
+@dirrm share/vice

@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.1 1998/09/06 23:47:32 garbled Exp $
+--- data/C64/Makefile.in.orig	Sun Sep  6 11:56:49 1998
++++ data/C64/Makefile.in	Sun Sep  6 11:57:02 1998
+@@ -94,7 +94,7 @@
+ VERSION = @VERSION@
+ YACC = @YACC@
+ 
+-c64dir = $(prefix)/lib/vice/C64
++c64dir = $(prefix)/share/vice/C64
+ 
+ c64_DATA = \
+ 	basic \
