@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.7 2002/02/05 04:17:32 jlam Exp $
+$NetBSD: patch-ab,v 1.8 2002/04/02 11:20:13 seb Exp $
 
---- configure.ac.orig	Sat Nov  3 14:09:33 2001
+--- configure.ac.orig	Sat Nov  3 20:09:33 2001
 +++ configure.ac
 @@ -150,8 +150,6 @@
  	CFLAGS="$CFLAGS"
@@ -21,16 +21,18 @@ $NetBSD: patch-ab,v 1.7 2002/02/05 04:17:32 jlam Exp $
  # Allow user to specify flags
  AC_ARG_WITH(cflags,
  	[  --with-cflags           Specify additional flags to pass to compiler],
-@@ -550,6 +551,8 @@
+@@ -550,6 +551,10 @@
  			AC_MSG_CHECKING(for libwrap)
  			AC_TRY_LINK(
  				[
++#ifdef HAVE_SYS_CDEFS_H
 +#include <sys/cdefs.h>
++#endif
 +#include <stdio.h>
  #include <tcpd.h>
  					int deny_severity = 0, allow_severity = 0;
  				],
-@@ -558,14 +561,18 @@
+@@ -558,14 +563,18 @@
  					AC_MSG_RESULT(yes)
  					AC_DEFINE(LIBWRAP)
  					TCPW_MSG="yes"
@@ -49,7 +51,7 @@ $NetBSD: patch-ab,v 1.7 2002/02/05 04:17:32 jlam Exp $
  
  dnl    Checks for library functions.
  AC_CHECK_FUNCS(arc4random atexit b64_ntop bcopy bindresvport_sa \
-@@ -2194,7 +2201,7 @@
+@@ -2194,7 +2203,7 @@
  echo "                 User binaries: $B"
  echo "               System binaries: $C"
  echo "           Configuration files: $D"
