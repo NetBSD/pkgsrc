@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_comp.8,v 1.19 2004/01/23 09:48:53 jmmv Exp $
+.\" $NetBSD: pkg_comp.8,v 1.20 2004/02/21 13:08:31 jmmv Exp $
 .\"
 .\" pkg_comp - Build packages inside a clean chroot environment
 .\" Copyright (c) 2002, 2003, 2004 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -27,7 +27,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd January 23, 2004
+.Dd February 21, 2004
 .Dt PKG_COMP 8
 .Os
 .Sh NAME
@@ -240,6 +240,16 @@ Defaults to
 Base directory of configuration files.
 Defaults to
 .Pa /usr/pkg/etc .
+.It PKGSRC_COMPILER
+List of values specifying the chain of compilers to invoke when building
+packages.
+Defaults to
+.Ql gcc .
+If you are defining
+.Va REAL_CCACHE ,
+remember to prepend
+.Ql ccache
+to this variable's value.
 .It PKGVULNDIR
 Directory where the
 .Pa vulnerabilities
@@ -346,6 +356,12 @@ to unmount the file systems, this status file may get out of sync.
 Be sure to check that NO file systems are mounted when issuing a
 .Sy removeroot .
 .Bl -tag -width indent
+.It REAL_CCACHE
+Specifies where a global ccache directory resides in the real system.
+Defaults to nothing, which disables the global cache.
+Keep in mind that this is specially useful to keep the cache across
+rebuilds of the sandbox, but be very careful if you plan to share a
+cache directory between different sandboxes, as this can lead to problems.
 .It REAL_DISTFILES
 Specifies where distfiles reside in the real system.
 Defaults to
