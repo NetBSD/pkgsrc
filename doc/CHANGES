@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6941 2004/08/18 14:32:26 cjep Exp $
+$NetBSD: CHANGES,v 1.6942 2004/08/18 20:29:35 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3907,3 +3907,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated Gorm to 0.7.7 [adam 2004-08-18]
 	Updated ProjectCenter to 0.4.0 [adam 2004-08-18]
 	Updated nail to 11.3 [cjep 2004-08-18]
+	Updated scons to 0.96 [recht 2004-08-18]
