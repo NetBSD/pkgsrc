@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.77 2001/10/16 04:11:06 jlam Exp $
+# $NetBSD: Makefile,v 1.78 2001/10/17 19:17:00 jlam Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
 
-DISTNAME=		apache_1.3.20
-PKGNAME=		apache-1.3.20nb1
+DISTNAME=		apache_1.3.22
+PKGNAME=		apache-1.3.22
 CATEGORIES=		www
 MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
 			http://www.apache.de/dist/httpd/ \
@@ -15,7 +15,7 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 MASTER_SITES+=		http://www.modssl.org/source/ \
 			ftp://ftp.uni-trier.de/pub/unix/security/mod_ssl/source/
 DISTFILES+=		${MODSSL_DISTNAME}${EXTRACT_SUFX}
-MODSSL_DISTNAME=	mod_ssl-2.8.4-1.3.20
+MODSSL_DISTNAME=	mod_ssl-2.8.5-1.3.22
 MODSSL_SRC=		${WRKDIR}/${MODSSL_DISTNAME}
 
 MAINTAINER=		jlam@netbsd.org
@@ -25,7 +25,8 @@ COMMENT=		HTTP (Web) server
 CONFLICTS=		apache-*modssl-[0-9]* apache6-[0-9]*
 
 EXTRACT_ONLY=		${DISTFILES:N*.gif}
-HAS_CONFIGURE=		# defined
+USE_BUILDLINK_ONLY=	YES
+HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-layout="${WRKDIR}/config.layout:pkgsrc"
 CONFIGURE_ARGS+=	--enable-module=most				\
 			--enable-module=auth_db				\
@@ -86,11 +87,11 @@ MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
 .endif
 
 .if (${OPSYS} == "SunOS")
-DEPENDS+=		db-2.7.7:../../databases/db
-LDFLAGS+=		-Wl,-R/usr/ucblib -L/usr/ucblib			\
-			-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib
-CONFIGURE_ENV+=		INCLUDES="-I${LOCALBASE}/include/db2"
+LDFLAGS+=		-Wl,-R/usr/ucblib -L/usr/ucblib
+CONFIGURE_ENV+=		INCLUDES="-I${BUILDLINK_DIR}/include/db2"
 CONFIGURE_ENV+=		LIBS="-ldbm -ldb2"
+BUILDLINK_DEPENDS.db=	db>=2.7.7
+.include "../../databases/db/buildlink.mk"
 .endif
 
 BUILD_DEFS+=		APACHE_CUSTOM_CFLAGS
@@ -159,4 +160,5 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/apache.sh ${PREFIX}/etc/rc.d/apache
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
+.include "../../textproc/expat/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
