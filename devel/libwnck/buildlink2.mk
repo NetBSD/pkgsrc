@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2002/09/12 01:41:00 rh Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/09/22 09:52:36 jlam Exp $
 
 .if !defined(LIBWNCK_BUILDLINK2_MK)
 LIBWNCK_BUILDLINK2_MK=	# defined
@@ -11,7 +11,6 @@ EVAL_PREFIX+=			BUILDLINK_PREFIX.libwnck=libwnck
 BUILDLINK_PREFIX.libwnck_DEFAULT=	${X11PREFIX}
 BUILDLINK_FILES.libwnck=	include/libwnck-1.0/libwnck/*
 BUILDLINK_FILES.libwnck+=	lib/libwnck-1.*
-BUILDLINK_FILES.libwnck+=	lib/pkgconfig/libwnck-1.0.pc
 
 .include "../../x11/gtk2/buildlink2.mk"
 
