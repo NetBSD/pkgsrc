@@ -1,12 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2000/03/07 17:46:38 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2000/07/18 15:21:01 agc Exp $
 
-PKGNAME=	${DISTNAME:S/-/-gnome-/}
+PKGNAME=		${DISTNAME:S/-/-gnome-/}
 
-DEPENDS+=	gnome-libs-*:../../x11/gnome-libs
+DEPENDS+=		gnome-libs-*:../../x11/gnome-libs
 
-CONFLICTS+=	icewm-[0-9]*
+CONFLICTS+=		icewm-[0-9]*
 
-CONFIGURE_ARGS+=	--with-gnome-menus=${X11BASE}/bin/gnome-config \
+USE_X11=		yes
+
+EVAL_PREFIX+=		GNOMEDIR=gnome-libs
+CONFIGURE_ARGS+=	--with-gnome-menus=${GNOMEDIR}/bin/gnome-config \
 			--with-imlib
 CONFIGURE_ENV+=		LIBS="-lintl"
 
