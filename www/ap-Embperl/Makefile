@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/22 04:14:18 martti Exp $
+# $NetBSD: Makefile,v 1.9 2004/05/08 19:48:27 snj Exp $
 #
 
 DISTNAME=       HTML-Embperl-1.2.0
@@ -12,7 +12,7 @@ COMMENT=	Perl5 library for embedding perl in HTML documents
 
 DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/HTML/Embperl/.packlist
 
 MAKE_ENV+=	APACHE_SRC=${PREFIX}/include/httpd
@@ -20,5 +20,5 @@ MAKE_ENV+=	APACHE_MODULES=${PREFIX}/lib/httpd
 MAKE_ENV+=	APACHE=${PREFIX}/sbin/httpd
 
 .include "../../lang/perl5/module.mk"
-.include "../../www/ap-perl/buildlink2.mk"
+.include "../../www/ap-perl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

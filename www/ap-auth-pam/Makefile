@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/04/24 22:46:12 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/08 19:48:27 snj Exp $
 
 DISTNAME=	mod_auth_pam-1.0a
 PKGNAME=	ap-auth-pam-1.0a
@@ -9,7 +9,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://pam.sourceforge.net/mod_auth_pam/
 COMMENT=	Module to allow Apache authentication using PAM
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
 APACHE_MODULE_NAME=	mod_auth_pam.so
 LDFLAGS+=		-lpam
@@ -23,6 +23,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/configure.html ${HTMLDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/faq.html ${HTMLDIR}
 
-.include "../../security/PAM/buildlink2.mk"
+.include "../../security/PAM/buildlink3.mk"
 .include "../../www/apache/module.mk"
 .include "../../mk/bsd.pkg.mk"
