@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.443 2000/05/31 01:02:08 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.444 2000/05/31 01:07:14 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1053,6 +1053,10 @@ describe:
 _FETCH_FILE=								\
 	if [ ! -f $$file -a ! -f $$bfile -a ! -h $$bfile ]; then	\
 		${ECHO_MSG} "=> $$bfile doesn't seem to exist on this system."; \
+		if [ ! -w ${_DISTDIR}/. ]; then 			\
+			${ECHO_MSG} "=> Can't download to ${_DISTDIR} (permission denied?)."; \
+			exit 1; 					\
+		fi; 							\
 		for site in $$sites; do					\
 			${ECHO_MSG} "=> Attempting to fetch $$bfile from $${site}."; \
 			if ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${bfile} ${FETCH_AFTER_ARGS}; then \
