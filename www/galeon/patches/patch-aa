@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/07/14 02:34:52 taya Exp $
+
+diff -ru ../Orig/galeon-0.11.1/configure.in ./configure.in
+--- ../Orig/galeon-0.11.1/configure.in	Sat Jun 30 19:25:04 2001
++++ ./configure.in	Wed Jul  4 12:41:44 2001
+@@ -174,10 +174,10 @@
+ LDFLAGS="$_save_ldflags -L$_mozilla_lib_place"
+ 
+ dnl Check for nspr and friends
+-AC_CHECK_LIB(nspr4, PR_Init, [_mozilla_nspr_libs="-lnspr4"],[],[-lpthread])
++AC_CHECK_LIB(nspr4, PR_Init, [_mozilla_nspr_libs="-lnspr4"],[],[])
+ LDFLAGS="$LDFLAGS $_mozilla_nspr_libs"
+-AC_CHECK_LIB(plc4, PL_strcmp, [_mozilla_plc_libs="-lplc4"],[],[-lpthread -lnspr4])
+-AC_CHECK_LIB(plds4, PL_NewHashTable, [_mozilla_plds_libs="-lplds4"],[],[-lpthread -lnspr4])
++AC_CHECK_LIB(plc4, PL_strcmp, [_mozilla_plc_libs="-lplc4"],[],[-lnspr4])
++AC_CHECK_LIB(plds4, PL_NewHashTable, [_mozilla_plds_libs="-lplds4"],[],[-lnspr4])
+ 
+ _mozilla_all_nspr_flags="$_mozilla_nspr_libs $_mozilla_plc_libs $_mozilla_plds_libs"
+ 
+@@ -204,7 +204,7 @@
+ 
+ dnl gtk superwin library
+ LDFLAGS="$_save_ldflags -L$_mozilla_lib_place $_mozilla_all_nspr_flags -lgtksuperwin"
+-AC_CHECK_LIB(gtksuperwin, gdk_superwin_get_type, [_mozilla_gtk_super_win_libs="-lgtksuperwin"],[],[-lpthread])
++AC_CHECK_LIB(gtksuperwin, gdk_superwin_get_type, [_mozilla_gtk_super_win_libs="-lgtksuperwin"],[],[])
+ 
+ dnl gtk moz embed library
+ LDFLAGS="$_save_ldflags -L$_mozilla_lib_place $_mozilla_all_nspr_flags -lgtkembedmoz $_mozilla_xpcom_libs $_mozilla_gtk_super_win_libs"
+@@ -319,7 +319,8 @@
+ dnl ====================================
+ 
+ dnl Add the languages which your application supports here.
+-ALL_LINGUAS="az ca cs da de es et fi fr gl hr hu it ja ko lt nl no pl pt_BR ro ru sk sl sv tr uk zh_TW.Big5 ms zh_CN.GB2312"
++#ALL_LINGUAS="az ca cs da de es et fi fr gl hr hu it ja ko lt nl no pl pt_BR ro ru sk sl sv tr uk zh_TW.Big5 ms zh_CN.GB2312"
++ALL_LINGUAS="az ca cs da de es et fi fr gl hr hu it ja ko lt nl no pl pt_BR ro ru sk sl sv tr uk ms zh_CN.GB2312"
+ AM_GNOME_GETTEXT
+ 
+ dnl Set PACKAGE_LOCALE_DIR in config.h.
