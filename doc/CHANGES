@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4514 2004/01/20 05:26:32 grant Exp $
+$NetBSD: CHANGES,v 1.4515 2004/01/20 12:46:24 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -351,3 +351,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated procmail to procmail-3.22nb1 [lukem 2004-01-20]
 	Updated py-ldap to 2.0.0pre15 [cube 2004-01-20]
 	Updated rsync to 2.6.0 [grant 2004-01-20]
+	Updated galeon to 1.2.13nb2 [abs 2004-01-20]
+
