@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/12/25 23:50:52 tron Exp $
+# $NetBSD: Makefile,v 1.13 2001/01/02 14:18:17 kleink Exp $
 
 DISTNAME=	plex86-20001225
 PKGNAME=	${DISTNAME:S/-/-0./}
@@ -75,7 +75,7 @@ do-install-font:
 do-install-conf:
 	@cd ${WRKSRC}/conf && for f in freedos linuxhd msdos qnx win95 winnt; do \
 		${SED}	-e 's,\.\./\.\./,/PATH/TO/,' \
-			-e 's,\.\./bios/,${PREFIX}/share/plex86/,' \
+			-e 's,\.\./bios/,${PREFIX}/lib/plex86/bios/,' \
 			-e 's,\./plugins/bochs/,${PREFIX}/lib/plex86/,' \
 			$$f >${WRKDIR}/$$f.conf; \
 	done
