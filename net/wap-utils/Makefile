@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2003/02/18 19:54:13 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2003/02/23 05:27:25 jmc Exp $
 #
 
 DISTNAME=	ap-utils-1.3.1
@@ -12,5 +12,8 @@ HOMEPAGE=	http://ap-utils.polesye.net
 COMMENT=	Wireless access points UNIX management tool
 
 GNU_CONFIGURE=	YES
+USE_BUILDLINK2=	YES
+USE_NCURSES=	YES
 
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
