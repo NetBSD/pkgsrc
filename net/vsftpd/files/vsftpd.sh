@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: vsftpd.sh,v 1.1 2003/05/09 23:31:39 salo Exp $
+# $NetBSD: vsftpd.sh,v 1.2 2004/11/11 13:51:31 xtraeme Exp $
 #
 
 # PROVIDE: vsftpd
@@ -12,7 +12,7 @@ name="vsftpd"
 rcvar=$name
 command="@PREFIX@/libexec/${name}"
 command_args="&"
-required_dirs="/var/chroot/vsftpd"
+required_dirs="@VARBASE@/chroot/vsftpd"
 required_files="@PKG_SYSCONFDIR@/vsftpd.conf"
 
 load_rc_config $name
