@@ -1,36 +1,45 @@
-$NetBSD: distinfo,v 1.10 2001/12/03 15:37:20 skrll Exp $
+$NetBSD: distinfo,v 1.11 2001/12/04 11:06:05 skrll Exp $
 
 SHA1 (kdelibs-2.2.2.tar.bz2) = 6ae1096ffb547f317adca6b29cb9ce9dcaf1863c
 Size (kdelibs-2.2.2.tar.bz2) = 5955592 bytes
 SHA1 (patch-aa) = 06628108422b6a8b41671484f0a9955bc321a959
 SHA1 (patch-ab) = 4fcb10ca2605b9641ad317cea37d504f1644e150
+SHA1 (patch-ac) = 06841064266659d9773c1d8728c9affc3d9c09cd
 SHA1 (patch-ad) = 52fe9cdc53496ecbde42ff4a6c46a5bb104738a0
 SHA1 (patch-ae) = 55feaee4a2c1bcedbd135d8f4ed49a9fdc487247
 SHA1 (patch-af) = 0c70385a39340b6d9af67415d761e79c638e7a26
 SHA1 (patch-ag) = 14d75d761888ff56058f305853cf29244d9a3878
+SHA1 (patch-ah) = f15c29a64f49e8a0727d2dd4d7bded99356884b3
 SHA1 (patch-ai) = 02a985d9032412fc98f6497ea81d524a063e3115
 SHA1 (patch-aj) = 4b44ac3b1783b40cdda8e4d60ad0e43c698d2e57
 SHA1 (patch-ak) = 22a5b302970d76b745cb46ec69b65741461e05b3
+SHA1 (patch-al) = b5dd0dcff5c032c8c7c88e1972f7758115805eee
 SHA1 (patch-am) = 946abdc7e5aca8fba56bc38967ab92075898e5ac
 SHA1 (patch-an) = ba06fec81150c267f9f6ad0189ac743d3c0dc586
 SHA1 (patch-ao) = 5b92245db7449b581d6b9f27d2a13cfc6b37d0b0
+SHA1 (patch-ap) = 670fcb8f1e2625e4406567a2beb97965fed206c3
 SHA1 (patch-aq) = 12058bf6cea9a7a3bb0b1758f8e4dab2c5fac202
 SHA1 (patch-ar) = bba44c62eac37af05052d25d82946cd8b62a8fd0
 SHA1 (patch-as) = 539500f116386aea80058ddc42499956164a3bc5
 SHA1 (patch-at) = f1deb9c36e24d562837479c2cc9c5e2b0be5b15e
+SHA1 (patch-au) = 20990ca7a6508554c04dbcc09bacce0aa24fbdf8
 SHA1 (patch-av) = 5f35a3acb5fe1507e19ea564dcece84aeb25bab4
+SHA1 (patch-aw) = 85302a7e3ea82c8d115bb00fdea46dd9b6109ff9
 SHA1 (patch-ax) = f965f2f44ca973d8c4f10cba45b9ab302b4b5093
 SHA1 (patch-ay) = 0f23906c80be4d1fece0792aff5dea389a8c7d74
 SHA1 (patch-az) = 80ac9edd81f5e77ac9a84b08eb1a5e3c46d15016
+SHA1 (patch-ba) = 727ca9bff588684d23a25483dcd773bf92a44b03
 SHA1 (patch-bb) = 141cef41c88677bc663fc833b9676677c1c368ff
 SHA1 (patch-bc) = ce702c385a77af04dd42325408df3355a3fe55b4
 SHA1 (patch-bd) = 87f42ed64b3fdad61b155f6d87e27724a38293b7
+SHA1 (patch-be) = 370f89a0bd09adb0b87a1b10e013a5b1e6328187
 SHA1 (patch-bf) = 8db351c0605b91a9b91c07602a5a8c75da94b8c0
 SHA1 (patch-bg) = b84f9fee2b5f9953c5c18c52a95a91d60251ef96
 SHA1 (patch-bh) = f76ddc313b7a56a196309b98dcd01ff5b818ca8d
 SHA1 (patch-bi) = ea227addf017e108df6bcef333e4195c3b590d58
 SHA1 (patch-bj) = a546588a39e23613008517ca22bbb8099105c4a1
 SHA1 (patch-bk) = 1d623313d38d72534f6607011d78f76f638a9eb0
+SHA1 (patch-bl) = 4d4463257f2b76ef4a13791291f5374b771bc125
 SHA1 (patch-bm) = 5f4609c677c8a55c4269567be1f1ab4ac2eb8249
 SHA1 (patch-bn) = db1962a1424601820b628a82d7e286f4c54f7594
 SHA1 (patch-bo) = 50c88a7ca572409a7f91df075155a1705a7ebca2
