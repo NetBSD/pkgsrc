@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/29 15:34:43 erh Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/04/29 15:56:31 erh Exp $
 tomcat4/LICENSE
 tomcat4/README.txt
 tomcat4/RELEASE-NOTES-4.1.txt
@@ -1475,12 +1475,12 @@ tomcat4/webapps/webdav/tomcat.gif
 @dirrm tomcat4/server/classes
 @dirrm tomcat4/server
 @dirrm tomcat4/logs
-@comment Directory removal handled by CONF_FILES setting:
+@comment Directory removal handled by PKG_SYSCONFDIR setting:
 @comment tomcat4/conf
 @dirrm tomcat4/common/lib
 @dirrm tomcat4/common/endorsed
 @dirrm tomcat4/common/classes
 @dirrm tomcat4/common
 @dirrm tomcat4/bin
-@comment Directory removal handled by CONF_FILES setting:
+@comment Directory removal handled by PKG_SYSCONFDIR setting:
 @comment tomcat4
