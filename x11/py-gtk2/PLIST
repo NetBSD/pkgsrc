@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/08/26 23:43:26 recht Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/03/12 10:48:23 recht Exp $
 bin/pygtk-codegen-2.0
 include/pygtk-2.0/pygobject.h
 include/pygtk-2.0/pygtk/pygtk.h
@@ -6,6 +6,9 @@ lib/pkgconfig/pygtk-2.0.pc
 ${PYSITELIB}/gtk-2.0/atk.a
 ${PYSITELIB}/gtk-2.0/atk.la
 ${PYSITELIB}/gtk-2.0/atk.so
+${PYSITELIB}/gtk-2.0/dsextras.py
+${PYSITELIB}/gtk-2.0/dsextras.pyc
+${PYSITELIB}/gtk-2.0/dsextras.pyo
 ${PYSITELIB}/gtk-2.0/gobject.a
 ${PYSITELIB}/gtk-2.0/gobject.la
 ${PYSITELIB}/gtk-2.0/gobject.so
@@ -18,12 +21,6 @@ ${PYSITELIB}/gtk-2.0/gtk/_gtk.so
 ${PYSITELIB}/gtk-2.0/gtk/compat.py
 ${PYSITELIB}/gtk-2.0/gtk/compat.pyc
 ${PYSITELIB}/gtk-2.0/gtk/compat.pyo
-${PYSITELIB}/gtk-2.0/gtk/dsextras.py
-${PYSITELIB}/gtk-2.0/gtk/dsextras.pyc
-${PYSITELIB}/gtk-2.0/gtk/dsextras.pyo
-${PYSITELIB}/gtk-2.0/gtk/gl.a
-${PYSITELIB}/gtk-2.0/gtk/gl.la
-${PYSITELIB}/gtk-2.0/gtk/gl.so
 ${PYSITELIB}/gtk-2.0/gtk/glade.a
 ${PYSITELIB}/gtk-2.0/gtk/glade.la
 ${PYSITELIB}/gtk-2.0/gtk/glade.so
@@ -80,7 +77,6 @@ share/pygtk/2.0/defs/gdk.defs
 share/pygtk/2.0/defs/gtk-extrafuncs.defs
 share/pygtk/2.0/defs/gtk-types.defs
 share/pygtk/2.0/defs/gtk.defs
-share/pygtk/2.0/defs/gtkgl.defs
 share/pygtk/2.0/defs/libglade.defs
 share/pygtk/2.0/defs/pango-types.defs
 share/pygtk/2.0/defs/pango.defs
