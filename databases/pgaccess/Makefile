@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.9 2001/05/22 04:23:50 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2003/01/11 23:04:11 jlam Exp $
 #
 
-DISTNAME=	pgaccess-0.98.7
-WRKSRC=		${WRKDIR}/pgaccess
+DISTNAME=	pgaccess-0.98.8
 CATEGORIES=	databases
-MASTER_SITES=	http://www.flex.ro/pgaccess/download/
+MASTER_SITES=	http://www.pgaccess.org/download/
 
 MAINTAINER=	jlam@netbsd.org
-HOMEPAGE=	http://www.flex.ro/pgaccess/
-COMMENT=	Free graphical database management tool for PostgreSQL
+HOMEPAGE=	http://www.pgaccess.org/
+COMMENT=	graphical database management tool for PostgreSQL
 
-DEPENDS+=	tk-postgresql>=6.5.3:../../databases/tk-postgresql
+DEPENDS+=	tk-postgresql>=7.2.1:../../databases/tk-postgresql
 
 NO_BUILD=	# defined
 
@@ -21,22 +20,26 @@ PGACCESS_HOME=	${PREFIX}/share/pgaccess
 HTMLDIR=	${PREFIX}/share/doc/html/pgaccess
 EGDIR=		${PREFIX}/share/examples/pgaccess
 
-post-extract:
-	cd ${WRKSRC}; ${MV} -f pgaccess pgaccess.in
-
 do-configure:
-	${SED}	-e "s|@PGTKSH@|${PGTKSH}|g"				\
-		-e "s|@PGACCESS_HOME@|${PGACCESS_HOME}|g"		\
-		${WRKSRC}/pgaccess.in > ${WRKSRC}/pgaccess
+	for file in ${WRKSRC}/pgaccess.tcl; do				\
+		${SED}	-e "s|@PGTKSH@|${PGTKSH}|g"			\
+			-e "s|@PGACCESS_HOME@|${PGACCESS_HOME}|g"	\
+			$$file > $$file.new;				\
+		${MV} -f $$file.new $$file;				\
+	done
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/pgaccess ${PREFIX}/bin/pgaccess
-	${INSTALL_DATA_DIR} ${PGACCESS_HOME} ${HTMLDIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/main.tcl ${PGACCESS_HOME}
-	${CP} -R ${WRKSRC}/lib ${PGACCESS_HOME}
+	${INSTALL_DATA_DIR} ${PGACCESS_HOME}
+	${INSTALL_SCRIPT} ${WRKSRC}/pgaccess.tcl ${PGACCESS_HOME}
+	${LN} -sf ${PGACCESS_HOME}/pgaccess.tcl ${PREFIX}/bin/pgaccess
 	${CP} -R ${WRKSRC}/images ${PGACCESS_HOME}
+	${CP} -R ${WRKSRC}/lib ${PGACCESS_HOME}
+	${INSTALL_DATA_DIR} ${HTMLDIR}
 	${CP} -R ${WRKSRC}/doc/html/* ${HTMLDIR}
-	${INSTALL_DATA} ${WRKSRC}/demo/formdemo.sql ${EGDIR}
+	${INSTALL_DATA_DIR} ${EGDIR}
+	for file in ${WRKSRC}/demo/*; do				\
+		${INSTALL_DATA} $$file ${EGDIR};			\
+	done
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PGACCESS_HOME} ${HTMLDIR} ${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
