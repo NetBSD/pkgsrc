@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.160 2001/05/20 01:58:19 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.161 2001/06/16 04:15:08 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -1772,10 +1772,12 @@ build):
 		cd ../../graphics/jpeg && ${MAKE} extract;              \
 	fi
 
-Please also note the BUILD_USES_MSGFMT definition, which is provided
-as a convenience definition.  This definition works out whether
+Please also note the BUILD_USES_MSGFMT and BUILD_USES_GETTEXT_M4 definitions,
+which are provided as convenience definitions.  The former works out whether
 msgfmt(1) is part of the base system, and, if it isn't, installs the
-devel/gettext package.
+devel/gettext package.  The latter adds a build dependency on either an
+installed version of an older gettext package, or if it isn't, installs the
+devel/gettext-m4 package.
 
 
  9.13 Conflicts with other packages
