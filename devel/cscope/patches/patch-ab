@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.5 2001/06/20 03:19:21 jlam Exp $
+
+--- configure.in.orig	Fri May  5 17:09:35 2000
++++ configure.in
+@@ -52,8 +52,6 @@
+ dnl 
+ # ACNU_PROG_LEX fm AC_PROG_LEX 
+ # -----------  
+-dnl chg: probes for lib in /usr/local/lib
+-dnl sheesh you'd have thought that this was obvious enough to be done anyway
+ AC_DEFUN(ACNU_PROG_LEX,[
+ dnl   autoconf-2.14a
+ dnl    AH_CHECK_LIB(fl)dnl
+@@ -65,9 +63,7 @@
+       flex*) ac_lib=fl ;;
+       *) ac_lib=l ;;
+       esac
+-      LDFLAGS='-L/usr/local/lib'
+-      AC_CHECK_LIB($ac_lib, yywrap, LEXLIB="-L/usr/local/lib -l$ac_lib")
+-      LDFLAGS=
++      AC_CHECK_LIB($ac_lib, yywrap, LEXLIB="-l$ac_lib")
+     fi
+     AC_SUBST(LEXLIB)
+ ])
