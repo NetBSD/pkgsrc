@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/04/17 10:22:28 shell Exp $
+$NetBSD: distinfo,v 1.5 2002/04/19 13:15:12 wiz Exp $
 
 SHA1 (IO-Tty-1.02.tar.gz) = 466e634f5863190a25cb9f3c0878cfe2fe68a3a0
 Size (IO-Tty-1.02.tar.gz) = 23105 bytes
-SHA1 (patch-aa) = eff79e37c1c00331873eed38f66717f788fbe64a
