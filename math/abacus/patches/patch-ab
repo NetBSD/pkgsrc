@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 1998/12/13 00:29:20 frueauf Exp $
+$NetBSD: patch-ab,v 1.2 2000/05/03 17:23:29 rh Exp $
 
 --- Makefile.options.orig	Tue Oct 20 22:19:08 1998
-+++ Makefile.options	Sat Dec 12 23:56:44 1998
++++ Makefile.options	Wed May  3 19:18:51 2000
 @@ -12,7 +12,7 @@
  CPP=g++ -E
  
@@ -16,4 +16,4 @@ $NetBSD: patch-ab,v 1.1.1.1 1998/12/13 00:29:20 frueauf Exp $
  
  # Add extra directories where you want the abacus to search for libraries here
 -LFLAGS = -L/usr/local/lib -L/usr/X11R6/lib -L$(LIBDIR) -L.
-+LFLAGS = -L${LOCALBASE}/lib -L${X11BASE}/lib -L$(LIBDIR) -L.
++LFLAGS = -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -L${X11BASE}/lib -Wl,-R${X11BASE}/lib -L$(LIBDIR) -L.
