@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.151 1998/08/27 14:56:02 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.152 1998/08/28 11:13:23 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1017,7 +1017,7 @@ _PORT_USE: .USE
 	@cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} build-depends misc-depends
 .endif
 .if make(real-install)
-.if !defined(FORCE_PKG_REGISTER)
+.if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER)
 .if defined(CONFLICTS)
 	@${RM} -f ${WRKDIR}/.CONFLICTS
 .for conflict in ${CONFLICTS}
@@ -1174,7 +1174,9 @@ _PORT_USE: .USE
 	@${CAT} ${PKGDIR}/MESSAGE
 	@${ECHO_MSG} ""
 .endif
+.if !defined(NO_PKG_REGISTER)
 	@cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} fake-pkg
+.endif # !NO_PKG_REGISTER
 .endif
 .if !make(real-fetch) \
 	&& (!make(real-patch) || !defined(PATCH_CHECK_ONLY)) \
