@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/07/17 22:52:34 grant Exp $
+# $NetBSD: Makefile,v 1.17 2003/09/27 21:05:22 danw Exp $
 #
 
 DISTNAME=		libgnomeprint-2.2.1.2
@@ -34,6 +34,12 @@ BUILD_DEFS+=		USE_CUPS
 CONFIGURE_ARGS+=	--with-cups
 .else
 CONFIGURE_ARGS+=	--without-cups
+.endif
+
+.if ${OPSYS} == "Darwin"
+# AC_LTDL_SHLIBEXT doesn't work on Darwin (and would give the wrong
+# answer here even if it did).
+CONFIGURE_ENV+=		libltdl_cv_shlibext=so
 .endif
 
 .include "../../devel/gettext-lib/buildlink2.mk"

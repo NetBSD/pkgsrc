@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1 2003/09/27 21:07:03 danw Exp $
+
+--- libgnomeprintui/gpaui/Makefile.in.orig	Mon Sep  1 10:41:51 2003
++++ libgnomeprintui/gpaui/Makefile.in	Mon Sep  1 10:42:28 2003
+@@ -73,12 +73,6 @@
+ CC = @CC@
+ CFLAGS = @CFLAGS@
+ CPP = @CPP@
+-
+-CPPFLAGS = \
+-	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" \
+-	-DBINDIR=\""$(bindir)"\" \
+-	-DDATADIR=\""$(datadir)"\" 
+-
+ CXX = @CXX@
+ DATADIRNAME = @DATADIRNAME@
+ DB2HTML = @DB2HTML@
+@@ -128,7 +122,9 @@
+ 	-I$(top_srcdir)/libgnomeprintui \
+ 	-DWE_ARE_LIBGNOMEPRINT_INTERNALS \
+ 	$(LIBGNOMEPRINTUI_CFLAGS) \
+-	\
++	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" \
++	-DBINDIR=\""$(bindir)"\" \
++	-DDATADIR=\""$(datadir)"\" \
+ 	-DG_DISABLE_DEPRECATED				\
+ 	-DGDK_DISABLE_DEPRECATED				\
+ 	-DGTK_DISABLE_DEPRECATED				\

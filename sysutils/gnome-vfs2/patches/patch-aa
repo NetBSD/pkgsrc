@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.4 2003/09/27 21:10:08 danw Exp $
+
+--- libgnomevfs/gnome-vfs-mime-magic.c.orig	Wed Feb 19 04:31:23 2003
++++ libgnomevfs/gnome-vfs-mime-magic.c	Sat Aug 30 23:14:05 2003
+@@ -29,8 +29,10 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <stdlib.h>
++#ifndef __APPLE__
+ #include <wctype.h>
+ #include <wchar.h>
++#endif
+ 
+ #include <glib/garray.h>
+ #include <glib/gmessages.h>
+@@ -759,6 +761,7 @@
+ 	
+  		if (g_utf8_get_char_validated(end, remaining_bytes) == -2)
+ 			return TRUE;
++#ifndef __APPLE__
+ 		else {
+ 			size_t wlen;
+ 			wchar_t wc;
+@@ -802,6 +805,9 @@
+ 			}
+ 			return TRUE;
+ 		}
++#else
++		return FALSE;
++#endif
+ 	} 
+ }
+ 
