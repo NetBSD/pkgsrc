@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2003/07/13 13:04:09 grant Exp $
+# $NetBSD: Makefile,v 1.38 2003/07/13 13:16:04 grant Exp $
 #
 
 DISTNAME=		gcc-3.3
-PKGREVISION=		5
+PKGREVISION=		4
 PKGNAME=		${DISTNAME:C|gcc|gcc3|}
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-3.3/}
@@ -92,11 +92,15 @@ pre-configure:
 	${MKDIR} ${BUILD_DIRS}
 	cd ${WRKSRC} && contrib/gcc_update --touch
 
+post-build:
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/gcc3.mk > ${WRKDIR}/gcc3.mk
+
 post-install:
 .if ${OPSYS} == "SunOS"
 	-cd ${GCC_ARCHDIR}/include && ${RM} -f fixed && ${RMDIR} v7 v9
 .endif
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/${DISTNAME}
+	${INSTALL_DATA} ${WRKDIR}/gcc3.mk ${PREFIX}/share/examples/${DISTNAME}/mk.conf
 	${LN} -f ${GCC_PREFIX}/bin/gcc ${GCC_PREFIX}/bin/cc
 #	${LN} -f ${GCC_PREFIX}/bin/g77 ${GCC_PREFIX}/bin/f77
 	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
