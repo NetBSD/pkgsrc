@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 09:54:18 wiz Exp $
+$NetBSD: distinfo,v 1.3 2001/07/17 02:51:43 dmcmahill Exp $
 
-SHA1 (libgdgeda-1.6.tar.gz) = 3fab4775bca5e4ea0d37259b7091d297edc97782
-Size (libgdgeda-1.6.tar.gz) = 327181 bytes
+SHA1 (libgdgeda-1.8.tar.gz) = f9af2900c56c6859b33a3f1f16b2ccf8c1522dfa
+Size (libgdgeda-1.8.tar.gz) = 353419 bytes
