@@ -1,4 +1,4 @@
-# $NetBSD: db1.builtin.mk,v 1.3 2004/11/15 18:14:10 jlam Exp $
+# $NetBSD: db1.builtin.mk,v 1.4 2004/11/15 18:23:40 jlam Exp $
 
 .for _lib_ in db db1
 .  if !defined(_BLNK_LIB_FOUND.${_lib_})
@@ -69,5 +69,14 @@ BUILDLINK_LDADD.db1=	-ldb1
 BUILDLINK_TRANSFORM+=	l:db:db1
 .    endif
 BUILDLINK_LIBS.db1=	${BUILDLINK_LDADD.db1}
+
+BUILDLINK_TARGETS+=	buildlink-db1-db185-h
+.    if !target(buildlink-db1-db185-h)
+.PHONY: buildlink-db1-db185-h
+buildlink-db1-db185-h:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${ECHO} "#include <db.h>" > ${BUILDLINK_DIR}/include/db_185.h
+.    endif
+
 .  endif # USE_BUILTIN.db1 == yes
 .endif	# CHECK_BUILTIN.db1
