@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/08/04 15:43:45 jtb Exp $
+# $NetBSD: Makefile,v 1.21 2003/08/09 10:59:11 seb Exp $
 
 DISTNAME=		smalltalk-2.1.4
 CATEGORIES=		lang
@@ -17,7 +17,6 @@ USE_GNU_READLINE=	YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=		gst-base.info gst-libs.info gst.info
 
 GNU_CONFIGURE=		YES

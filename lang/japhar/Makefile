@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 21:44:37 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/08/09 10:59:09 seb Exp $
 #
 
 DISTNAME=		japhar-0.08
@@ -17,7 +17,6 @@ USE_GMAKE=		yes
 USE_GCC_SHLIB=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig ${WRKSRC}/lib/libffi/ltconfig
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	japhar.info
 
 .include "../../mk/bsd.prefs.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/08/04 21:25:58 seb Exp $
+# $NetBSD: Makefile,v 1.16 2003/08/09 11:20:36 seb Exp $
 
 DISTNAME=		auctex-11.13
 PKGREVISION=		1
@@ -17,7 +17,6 @@ EVAL_PREFIX+=		TEX_PREFIX=teTeX
 
 MAKEFLAGS+=		EMACS=${EMACS_BIN}
 
-USE_NEW_TEXINFO=	YES
 USE_MAKEINFO=		YES
 
 .if defined(USE_XEMACS)

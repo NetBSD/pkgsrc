@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/08/04 14:12:58 seb Exp $
+# $NetBSD: Makefile,v 1.6 2003/08/09 11:16:24 seb Exp $
 #
 
 DISTNAME=		scli-0.2.12
@@ -20,7 +20,6 @@ BUILDLINK_DEPENDS.readline?=    readline>=4.0
 
 CONFIGURE_ARGS+=	--with-xml-prefix=${BUILDLINK_PREFIX.libxml2}
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=		scli.info
 
 .for _p_ in ncurses readline

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/08/04 22:45:13 seb Exp $
+# $NetBSD: Makefile,v 1.10 2003/08/09 11:20:38 seb Exp $
 
 DISTNAME=	tetex-src-${TETEX_BIN_VERS}
 PKGNAME=	teTeX2-bin-${TETEX_BIN_VERS}
@@ -16,7 +16,6 @@ DEPENDS+=	dialog-0.6z*:../../misc/dialog
 
 CONFLICTS+=	omega-[0-9]*
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	latex.info dvips.info web2c.info kpathsea.info
 
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
