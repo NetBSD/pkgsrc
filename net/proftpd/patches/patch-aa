@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/10/22 14:26:45 martti Exp $
+
+--- Makefile.in.orig	Mon Oct 22 15:02:42 2001
++++ Makefile.in	Mon Oct 22 15:03:05 2001
+@@ -113,7 +113,7 @@
+ 	$(INSTALL_MAN) $(top_srcdir)/src/ftpcount.1 $(mandir)/man1
+ 	$(INSTALL_MAN) $(top_srcdir)/src/xferlog.5 $(mandir)/man5
+ 
+-install-all: install-proftpd install-utils install-conf install-man
++install-all: install-proftpd install-utils install-man
+ 
+ install: install-all
+ 
