@@ -1,0 +1,17 @@
+Prag is a simple grap(DWB) replacement.  It implements an extended
+subset of grap(DWB)'s input language (sorry:).  You can draw several
+graphs within one diagram, label it, set tick marks, use a grid, etc.
+
+It is written in nawk(1) and you get the whole source code.  It's
+available via anonymous ftp service from
+
+	ftp.informatik.uni-rostock.de:/pub/local/software
+
+Bug reports or suggested improvements should go to
+
+	hme@informatik.uni-rostock.de
+
+Aside some simple examples you got a rudimentary manual page.
+Nevertheless the source is the best documentation.
+
+Holger Meyer
