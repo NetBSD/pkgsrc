@@ -1,4 +1,4 @@
-libgnome is the library that provides access to the non-X11 dependant
+libgnome is the library that provides access to the non-X11 dependent
 parts of the GNOME framework. The libraries in this directory do not
 need to link with any GUI library.
 
