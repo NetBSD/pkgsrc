@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/03/21 14:26:16 ad Exp $
+# $NetBSD: Makefile,v 1.3 2001/04/04 20:58:03 dmcmahill Exp $
 
 DISTNAME=		i2ocfg-1.0
 CATEGORIES=		sysutils
@@ -8,7 +8,7 @@ MAINTAINER=		ad@netbsd.org
 HOMEPAGE=		http://www.netbsd.org/~ad/i2ocfg/
 COMMENT=		I2O configuration dialog gateway
 
-ONLY_FOR_PLATFORM=      NetBSD-*-*
+ONLY_FOR_PLATFORM=      NetBSD-1.5[J-Z]-* NetBSD-1.[6-9]*-*
 
 MANCOMPRESSED_IF_MANZ=  YES
 
