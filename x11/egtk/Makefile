@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/10/14 02:30:25 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2000/02/05 15:37:43 wiz Exp $
 #
 
 DISTNAME=	eiffel_gtk_0.3.3
@@ -17,11 +17,11 @@ USE_X11=	yes
 WRKSRC=		${WRKDIR}/eGTK
 
 post-extract:
-	find ${WRKSRC} -type d -name "CVS" -print | xargs ${RM} -rf
-	find ${WRKSRC} -type d -name "ise" -print | xargs ${RM} -rf
-	find ${WRKSRC} -type f -name "*.ace" -print | xargs ${RM} -f
-	find ${WRKSRC} -type f -name "*.orig" -print | xargs ${RM} -f
-	find ${WRKSRC} -type f -name "*.rej" -print | xargs ${RM} -f
+	${FIND} ${WRKSRC} -type d -name "CVS" -print | xargs ${RM} -rf
+	${FIND} ${WRKSRC} -type d -name "ise" -print | xargs ${RM} -rf
+	${FIND} ${WRKSRC} -type f -name "*.ace" -print | xargs ${RM} -f
+	${FIND} ${WRKSRC} -type f -name "*.orig" -print | xargs ${RM} -f
+	${FIND} ${WRKSRC} -type f -name "*.rej" -print | xargs ${RM} -f
 	${RMDIR} ${WRKSRC}/lib/gdk/se ${WRKSRC}/examples/toolbar
 	${RM} ${WRKSRC}/examples/Makefile
 	cd ${WRKSRC}/C/se; ${MAKE_PROGRAM} -f Makefile.se clean
