@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/03/18 15:30:15 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2002/04/20 13:08:41 cjep Exp $
 #
 
 DISTNAME=		angband-283
@@ -17,10 +17,15 @@ CONFLICTS=		angband-tty-[0-9]*
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 MAKEFILE=		Makefile.std
+MAKE_ENV+=		CC=${CC}
 ALL_TARGET=		angband
 USE_X11=		yes
 
 SPOILERFILE=		angband-spoilers.tar.gz
+
+.if (${MACHINE_ARCH} == arm32)
+. include "../../lang/gcc/Makefile.gcc"
+.endif
 
 do-install:
 	${INSTALL} -d -o bin -g games -m 0775 ${PREFIX}/share/angband
