@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1.1.1 2000/11/21 05:21:09 kei Exp $
+
+--- src/xfns.c.orig	Tue Sep 21 00:13:59 1999
++++ src/xfns.c	Tue Sep 21 00:14:42 1999
+@@ -226,7 +226,7 @@
+ Lisp_Object Qbox;
+ Lisp_Object Qcursor_color;
+ Lisp_Object Qcursor_type;
+-Lisp_Object Qfont;
++extern Lisp_Object Qfont;
+ Lisp_Object Qforeground_color;
+ Lisp_Object Qgeometry;
+ /* Lisp_Object Qicon; */

@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/11/21 05:21:10 kei Exp $
+
+--- src/coding.c.orig	Mon Sep 20 23:39:02 1999
++++ src/coding.c	Mon Sep 20 23:39:41 1999
+@@ -154,7 +154,7 @@
+ /* 92.4.3, 92.12.18 by K.Handa */
+ Lisp_Object Qcoding_system, Qcoding_system_p, Qnon_nil_coding_system_p;
+ Lisp_Object Qeol_type;
+-Lisp_Object Qpriority;
++extern Lisp_Object Qpriority;
+ /* end of patch */
+ #endif /* emacs */
+ 

@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/11/21 05:21:10 kei Exp $
+
+--- src/lisp.h.orig	Mon Sep 20 13:42:34 1999
++++ src/lisp.h	Mon Sep 20 13:43:50 1999
+@@ -30,6 +30,10 @@
+ /* 93.1.15  modified for Mule Ver.0.9.7.1 by Y.Akiba <akiba@cbs.canon.co.jp>
+ 	Patch for NeXT is updated. */
+ 
++#if defined(__NetBSD__)
++#include <machine/limits.h> /* for DBLL_DIG */
++#endif
++
+ /* Define the fundamental Lisp data structures */
+ 
+ /* Define an integer type with the same size as Lisp_Object.

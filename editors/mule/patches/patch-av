@@ -1,0 +1,19 @@
+$NetBSD: patch-av,v 1.1.1.1 2000/11/21 05:21:10 kei Exp $
+
+*** man/forms.texi.orig	Fri Nov 17 13:56:59 2000
+--- man/forms.texi	Fri Nov 17 14:15:09 2000
+***************
+*** 16,21 ****
+--- 16,27 ----
+  @c      @smallbook
+  @comment %**end of header (This is for running Texinfo on a region.)
+  
++ @dircategory Editors
++ @direntry
++ * Forms: (forms).	Emacs package for editing data bases
++ 			  by filling in forms.
++ @end direntry
++ 
+  @ifinfo
+  This file documents Forms mode, a form-editing major mode for GNU Emacs.
+  
