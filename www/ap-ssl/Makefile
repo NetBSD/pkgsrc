@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2001/11/25 18:59:48 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2001/12/02 06:56:45 jlam Exp $
 
 DISTNAME=		mod_ssl-2.8.5-1.3.22
 PKGNAME=		ap-ssl-2.8.5
@@ -95,8 +95,6 @@ post-install:
 		${EGDIR}/ssl.key
 	cd ${WRKSRC}/pkg.sslcfg; ${INSTALL_DATA} README.PRM *.prm	\
 		${EGDIR}/ssl.prm
-
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../security/openssl/buildlink.mk"
 .include "../../mk/bsd.pkg.install.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/11/26 22:20:32 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2001/12/02 06:56:41 jlam Exp $
 #
 
 DISTNAME=	qmail-users-1.0
@@ -26,13 +26,7 @@ NO_BUILD=	YES
 
 WRKSRC=		${WRKDIR}
 
-do-install:
-
-pre-install:
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
-
-post-install:
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
+do-install:	# empty
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

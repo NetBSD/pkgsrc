@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/11/25 18:59:49 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2001/12/02 06:56:47 jlam Exp $
 
 .include "Makefile.php"
 
@@ -31,9 +31,6 @@ MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
 
 CONF_FILES=	${EGDIR}/php.ini-dist ${PKG_SYSCONFDIR}/php.ini
 
-pre-install:
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
-
 post-install:
 	${INSTALL_DATA_DIR} ${CGIDIR}
 	${LN} -sf ../../bin/php ${CGIDIR}/php
@@ -42,7 +39,6 @@ post-install:
 	cd ${WRKSRC}; ${INSTALL_DATA} php.ini-dist php.ini-optimized ${EGDIR}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/php
 	${INSTALL_DATA} ${WRKSRC}/php4.gif ${PREFIX}/share/php
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

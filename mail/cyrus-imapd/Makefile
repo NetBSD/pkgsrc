@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/11/25 18:59:46 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2001/12/02 06:56:40 jlam Exp $
 
 DISTNAME=		cyrus-imapd-2.0.16
 SVR4_PKGNAME=		cimap
@@ -99,7 +99,6 @@ post-install:
 	cd ${WRKSRC}/master/conf; ${INSTALL_DATA} *.conf ${EGDIR}
 	${INSTALL_DATA_DIR} ${HTMLDIR}
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html cyrusv2.mc ${HTMLDIR}
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../databases/db3/buildlink.mk"
 .include "../../lang/perl5/buildlink.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/11/26 20:38:32 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2001/12/02 06:56:44 jlam Exp $
 #
 
 DISTNAME=		nut-0.45.2
@@ -64,7 +64,6 @@ pre-install:
 		${SED} ${FILES_SUBST_SED} ${FILESDIR}/$${script}.sh	\
 			> ${WRKDIR}/$${script};				\
 	done
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 post-install:
 	for script in ${RCD_SCRIPTS}; do				\
@@ -77,7 +76,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/FAQ ${NUT_DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/Changes.trust ${NUT_DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${NUT_DOCDIR}
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

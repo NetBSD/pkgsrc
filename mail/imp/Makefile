@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/11/25 18:59:46 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2001/12/02 06:56:41 jlam Exp $
 
 DISTNAME=	imp-2.2.7
 CATEGORIES=	mail www
@@ -88,7 +88,6 @@ do-build:
 pre-install:
 	${SED}	-e "s|@IMPDIR@|${IMPDIR}|g"				\
 		${FILESDIR}/imp.conf.dist > ${WRKDIR}/imp.conf.dist
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR} ${EGDIR} ${IMPDIR}
@@ -100,9 +99,6 @@ do-install:
 	cd ${WRKSRC}; ${INSTALL_DATA} *.css *.php3 ${IMPDIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${IMPDIR}
 	${CHMOD} -R a-w ${IMPDIR}
-
-post-install:
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

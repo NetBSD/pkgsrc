@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/11/19 23:27:51 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/12/02 06:56:40 jlam Exp $
 # FreeBSD: ports/games/xpat2/Makefile,v 1.11 2000/04/14 12:27:59 asami Exp
 
 DISTNAME=	xpat2-1.06
@@ -24,7 +24,6 @@ MAKE_DIRS=		/var/games
 post-install:
 	${CHOWN} root.games ${PREFIX}/bin/xpat2
 	${CHMOD} 2555 ${PREFIX}/bin/xpat2
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../graphics/xpm/buildlink.mk"
 .include "../../mk/bsd.pkg.install.mk"

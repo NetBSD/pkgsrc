@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/11/25 19:43:58 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2001/12/02 06:56:42 jlam Exp $
 #
 
 DISTNAME=		jwhois-3.0.1
@@ -24,7 +24,6 @@ CONF_FILES_PERMS=	/dev/null /var/db/jwhois.db			\
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/example/jwhois.conf ${PREFIX}/share/examples
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.install.mk"

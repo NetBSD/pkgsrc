@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/12/01 15:08:02 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2001/12/02 06:56:47 jlam Exp $
 #
 
 DISTNAME=	webalizer-2.01-06-src
@@ -30,12 +30,6 @@ post-build:
 			$${file} > $${file}.fixed;			\
 		${MV} -f ${WRKSRC}/$${file}.fixed ${WRKSRC}/$${file};	\
 	done
-
-pre-install:
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
-
-post-install:
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../graphics/gd/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2001/11/25 18:59:45 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2001/12/02 06:56:38 jlam Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/06/13 16:17:01 ache Exp
 #
 
@@ -34,7 +34,6 @@ pre-configure:
 post-install:
 	${SED} ${FILES_SUBST_SED} ${FILESDIR}/rplayd.sh > ${WRKDIR}/rplayd
 	${INSTALL_SCRIPT} ${WRKDIR}/rplayd ${PREFIX}/etc/rc.d/rplayd
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../audio/gsm/buildlink.mk"
 .include "../../devel/readline/buildlink.mk"
