@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2002/07/16 12:51:54 agc Exp $
+# $NetBSD: Makefile,v 1.55 2002/07/16 13:21:34 wiz Exp $
 #
 
 DISTNAME=		gnumeric-1.0.7
@@ -58,6 +58,5 @@ pre-configure:
 .include "../../textproc/libunicode/buildlink.mk"
 .include "../../textproc/libxml/buildlink.mk"
 .include "../../textproc/scrollkeeper/buildlink.mk"
-.include "../../x11/gnome-core/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
