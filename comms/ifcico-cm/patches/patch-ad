@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 1998/11/23 17:48:23 tv Exp $
+
+--- ifcico/call.c.orig	Sun Nov 22 16:31:17 1998
++++ ifcico/call.c	Sun Nov 22 16:31:32 1998
+@@ -37,7 +37,6 @@
+ extern void rdoptions(node*);
+ extern int nodelock(faddr*);
+ extern int nodeulock(faddr*);
+-extern void setproctitle(char*);
+ 
+ int checkretry(st)
+ callstat *st;

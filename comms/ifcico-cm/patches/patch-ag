@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.1.1.1 1998/11/23 17:48:23 tv Exp $
+
+--- ifcico/ifcico.c.orig	Sun Jan  4 09:52:37 1998
++++ ifcico/ifcico.c	Sun Nov 22 16:57:51 1998
+@@ -41,8 +41,6 @@
+ fa_list *callall(void);
+ int answer(char *);
+ void mkdirs(char*);
+-void setargspace(char**,char**);
+-void setproctitle(char*);
+ 
+ void usage(void)
+ {
+@@ -86,8 +84,6 @@
+ 	char *answermode=NULL,*p;
+ 	pid_t child,waitret;
+ 	int status;
+-
+-	setargspace(argv,envp);
+ 
+ #if defined(HAS_SYSLOG) && defined(CICOLOG)
+ 	logfacility=CICOLOG;

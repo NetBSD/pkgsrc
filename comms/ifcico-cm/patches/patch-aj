@@ -1,0 +1,178 @@
+$NetBSD: patch-aj,v 1.1.1.1 1998/11/23 17:48:23 tv Exp $
+
+--- contrib/iftelnetd/iftelnetd.c.orig	Mon Nov 23 10:10:14 1998
++++ contrib/iftelnetd/iftelnetd.c	Mon Nov 23 10:14:01 1998
+@@ -32,10 +32,10 @@
+ #include <stdio.h>
+ #include <sys/time.h>
+ #include <sys/stat.h>
+-#include <sys/fcntl.h>
++#include <fcntl.h>
+ #include <syslog.h>
+ #include <string.h>
+-#include <getopt.h>
++#include <stdlib.h>
+ 
+ #include <sys/socket.h>
+ #include <sys/types.h>
+@@ -87,8 +87,6 @@
+     char *log_file=nil;
+     char *tmp=nil;
+ 
+-    syslog(LOG_INFO,"iftelnetd: Starting...");
+-
+     debug=0;
+     
+     while ((c = getopt(ac,av,"dl:h:p:")) != EOF)
+@@ -111,10 +109,9 @@
+ 
+ 	default:
+ 	    ;
+-		syslog(LOG_ERR,"iftelnetd: Wrong number of args!");
+-		syslog(LOG_ERR,"iftelnetd: Usage:");
+-		syslog(LOG_ERR,"iftelnetd: iftelnetd [-h remote_addr] [-p remote_port] [-l logfile] [-d]");
+-		syslog(LOG_ERR,"iftelnetd: Aborting.");
++		syslog(LOG_ERR,"Wrong number of args!");
++		syslog(LOG_ERR,"Usage: iftelnetd [-h remote_addr] [-p remote_port] [-l logfile] [-d]");
++		syslog(LOG_ERR,"Aborting.");
+ 		if(log_file)    free(log_file);
+ 		if(remote_name) free(remote_name);
+ 		if(remote_port) free(remote_port);
+@@ -124,23 +121,23 @@
+     
+     if(!remote_name)
+     {
+-	syslog(LOG_WARNING,"iftelnetd: Remote addr not set. Assuming 'localhost'");
++	syslog(LOG_WARNING,"Remote addr not set. Assuming 'localhost'");
+ 	remote_name=strdup("localhost");
+     }
+     
+     if(!remote_port)
+     {
+-	syslog(LOG_WARNING,"iftelnetd: Remote port not set. Assuming 'fido'");
++	syslog(LOG_WARNING,"Remote port not set. Assuming 'fido'");
+ 	remote_port=strdup("fido");
+     }
+ 
+     if(getpeername(0,(struct sockaddr*)&peeraddr,&addrlen) == 0)
+     {
+ 	tmp=strdup(inet_ntoa(peeraddr.sin_addr));
+-	syslog(LOG_INFO,"iftelnetd: incoming TCP connection from %s",
++	syslog(LOG_INFO,"incoming TCP connection from %s",
+ 	       tmp ? tmp : "Unknown"
+ 	);
+-	syslog(LOG_INFO,"iftelnetd: Rerouting to %s:%s",
++	syslog(LOG_INFO,"Rerouting to %s:%s",
+ 	       remote_name,
+ 	       remote_port);
+     }
+@@ -163,8 +160,8 @@
+     
+     if((sp=getservbyname(remote_port,"tcp"))==NULL) 
+     {
+-	syslog(LOG_ERR,"iftelnetd: Can't find service: %s",remote_port);
+-	syslog(LOG_ERR,"iftelnetd: Aborting.");
++	syslog(LOG_ERR,"Can't find service: %s",remote_port);
++	syslog(LOG_ERR,"Aborting.");
+ 	free(remote_name);
+ 	free(remote_port);
+ 	return 1;
+@@ -172,8 +169,8 @@
+ 
+     if((s=socket(AF_INET,SOCK_STREAM,0))==-1)
+     {
+-	syslog(LOG_ERR,"iftelnetd: Can't create Internet domain socket");
+-	syslog(LOG_ERR,"iftelnetd: Aborting.");
++	syslog(LOG_ERR,"Can't create Internet domain socket");
++	syslog(LOG_ERR,"Aborting.");
+ 	free(remote_name);
+ 	free(remote_port);
+ 	return  1;
+@@ -181,8 +178,8 @@
+ 
+     if((hp=gethostbyname(remote_name))==NULL)
+     {
+-	syslog(LOG_ERR,"iftelnetd: %s - Unknown host",remote_name);
+-	syslog(LOG_ERR,"iftelnetd: Aborting.");
++	syslog(LOG_ERR,"%s - Unknown host",remote_name);
++	syslog(LOG_ERR,"Aborting.");
+ 	free(remote_name);
+ 	free(remote_port);
+ 	return;
+@@ -196,8 +193,8 @@
+     
+     if(connect(s,(struct sockaddr *)&server,sizeof(server)) == -1)
+     {
+-	syslog(LOG_ERR, "iftelnetd: Can't connect %s",remote_name);
+-	syslog(LOG_ERR, "iftelnetd: Aborting.");
++	syslog(LOG_ERR, "Can't connect %s",remote_name);
++	syslog(LOG_ERR, "Aborting.");
+ 	free(remote_name);
+ 	free(remote_port);
+ 	return;
+@@ -211,7 +208,7 @@
+     free(remote_name);
+     free(remote_port);
+     close(s);
+-    syslog(LOG_INFO,"iftelnetd: Done.");
++    syslog(LOG_INFO,"Done.");
+ }
+ 
+ /* --- This is an artwork of serge terekhov, 2:5000/13@fidonet :) --- */
+@@ -239,13 +236,13 @@
+ 	    r = "DONT";
+ 	    break;
+ 	}
+-	syslog(LOG_SYSLOG, "iftelnetd: TELNET send %s %d", r, opt);
++	syslog(LOG_SYSLOG, "TELNET send %s %d", r, opt);
+     }
+     buf[0] = IAC;
+     buf[1] = tag;
+     buf[2] = opt;
+     if (write (1, buf, 3) != 3)
+-	syslog(LOG_ERR,"iftelnetd: $answer cant send");
++	syslog(LOG_ERR,"$answer cant send");
+ }
+ 
+ int init_telnet(void)
+@@ -293,7 +290,7 @@
+ 		    case WILL:
+ 			m = (unsigned char)*q++; --n;
+ 			if(debug)
+-			    syslog (TELNETD, "iftelnetd: TELNET: recv WILL %d", m);
++			    syslog (TELNETD, "TELNET: recv WILL %d", m);
+ 			
+ 			if (m != TN_TRANSMIT_BINARY && m != TN_SUPPRESS_GA &&
+ 			    m != TN_ECHO)
+@@ -302,12 +299,12 @@
+ 		    case WONT:
+ 			m = *q++; --n;
+ 			if(debug)
+-			    syslog (TELNETD, "iftelnetd: TELNET: recv WONT %d", m);
++			    syslog (TELNETD, "TELNET: recv WONT %d", m);
+ 			break;
+ 		    case DO:
+ 			m = (unsigned char)*q++; --n;
+ 			if(debug)
+-			    syslog (TELNETD, "iftelnetd: TELNET: recv DO %d", m);
++			    syslog (TELNETD, "TELNET: recv DO %d", m);
+ 			if (m != TN_TRANSMIT_BINARY && m != TN_SUPPRESS_GA &&
+ 			    m != TN_ECHO)
+ 			    answer (WONT, m);
+@@ -315,14 +312,14 @@
+ 		    case DONT:
+ 			m = (unsigned char)*q++; --n;
+ 			if(debug)
+-			    syslog (TELNETD, "iftelnetd: TELNET: recv DONT %d", m);
++			    syslog (TELNETD, "TELNET: recv DONT %d", m);
+ 			break;
+ 		    case IAC:
+ 			*p++ = IAC;
+ 			break;
+ 		    default:
+ 			if(debug)
+-			    syslog (TELNETD, "iftelnetd: TELNET: recv IAC %d", m);
++			    syslog (TELNETD, "TELNET: recv IAC %d", m);
+ 			break;
+ 		    }
+ 		}
