@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2003/07/03 13:40:29 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/07/03 17:38:27 jschauma Exp $
 bin/.geomview-animate
 bin/.geomview-drawbdy
-bin/animate
 bin/anytooff
 bin/anytoucd
 bin/bdy
@@ -9,6 +8,7 @@ bin/bez2mesh
 bin/clip
 bin/drawbdy
 bin/geomview
+bin/gv-animate
 bin/gvx
 bin/math2oogl
 bin/offconsol
