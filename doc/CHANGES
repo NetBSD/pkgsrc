@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7102 2004/09/05 23:14:00 seb Exp $
+$NetBSD: CHANGES,v 1.7103 2004/09/05 23:32:41 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4200,3 +4200,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xmame to 0.86 [kristerw 2004-09-05]
 	Updated xmess to 0.86 [kristerw 2004-09-05]
 	Updated pkglint to 3.90 [seb 2004-09-05]
+	Added p5-Convert-BinHex-1.119 [grant 2004-09-05]
