@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 1998/11/26 17:57:03 bad Exp $
+$NetBSD: md5,v 1.2 2001/04/10 00:44:27 mjl Exp $
 
-MD5 (CGI_Lite-1.62.pm.gz) = 740e3653c46cccd5071f2cc18ca700b7
+SHA1 (CGI-Lite-2.0.tar.gz) = db7fa60faece3c0d250d30f55729945ce9051292
