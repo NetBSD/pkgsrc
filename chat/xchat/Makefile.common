@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.common,v 1.13 2003/01/12 21:49:06 tron Exp $
+# $NetBSD: Makefile.common,v 1.14 2003/01/27 12:54:56 jmmv Exp $
 
 DISTNAME=	xchat-1.8.11
+PKGREVISION=	1
 CATEGORIES=	chat x11
 MASTER_SITES=	${HOMEPAGE}files/source/1.8/
 EXTRACT_SUFX=	.tar.bz2
@@ -54,3 +55,4 @@ post-install:
 .include "../../devel/glib/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
 .include "../../lang/python/application.mk"
+.include "../../misc/gnome1-dirs/buildlink2.mk"

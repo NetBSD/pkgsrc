@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/12/19 14:10:04 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/01/27 12:54:53 jmmv Exp $
 bin/everybuddy
 libexec/everybuddy/everybuddy
 libexec/everybuddy/contact-update.pl
@@ -11,4 +11,5 @@ share/sounds/everybuddy/BuddyLeave.au
 share/sounds/everybuddy/Send.au
 share/sounds/everybuddy/Receive.au
 @dirrm share/sounds/everybuddy
+@comment in gnome-dirs: @dirrm share/gnome/apps/Internet
 @dirrm libexec/everybuddy
