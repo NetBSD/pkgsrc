@@ -1,0 +1,6 @@
+To enable GLX hardware acceleration you have to add a configuration
+section like this one to "/etc/XF86Config":
+
+Section "Module"
+  Load "glx.so"
+EndSection

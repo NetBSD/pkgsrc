@@ -1,0 +1,9 @@
+This project is building a hardware accelerated glx module for free unix
+operating systems. Currently, we have support for 3D acceleration on the
+Matrox MGA-G200, MGA-G400, and nvidia's RIVA series for XFree86 3.3. We
+also support software rendering. 
+
+The GLX protocol is a way to send 3D graphics commands over an
+X client-server connection. It was created by Silicon Graphics and
+recently released as open source. We're currently based on a separate
+implementation, however. 
