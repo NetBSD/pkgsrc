@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/15 21:57:42 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/01/16 00:05:13 jlam Exp $
 bin/xpuyopuyo
+include/X11/pixmaps/xpuyopuyo.xpm
 man/man1/xpuyopuyo.1
