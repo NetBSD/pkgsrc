@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1805 2003/03/31 05:41:15 grant Exp $
+$NetBSD: CHANGES,v 1.1806 2003/03/31 07:57:50 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1349,3 +1349,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xrolodex to 1.5nb1 [jmmv 2003-03-29]
 	Updated cvsync to 0.17.2 [gehenna 2003-03-30]
 	Added libnbcompat-20030331 [grant 2003-03-31]
+	Updated bidwatcher to 1.3.7nb1 [tron 2003-03-31]
