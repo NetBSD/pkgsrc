@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1590 2003/03/08 07:00:09 gehenna Exp $
+$NetBSD: CHANGES,v 1.1591 2003/03/08 08:19:17 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -989,3 +989,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sylpheed to 0.8.11 [salo 2003-03-07]
 	Added tinyproxy-1.5.2 [salo 2003-03-06]
 	Updated cvsync to 0.14.2 [gehenna 2003-03-08]
+	Updated cdrecord to 2.0nb2 [grant 2003-03-08]
