@@ -1,15 +1,24 @@
-$NetBSD: patch-ab,v 1.5 2001/07/19 12:22:17 martin Exp $
+$NetBSD: patch-ab,v 1.6 2001/07/23 10:03:10 martin Exp $
 
---- configure.in.orig	Sun Jul 15 14:43:33 2001
-+++ configure.in	Thu Jul 19 14:02:22 2001
-@@ -108,21 +108,24 @@
- fi
+--- configure.in.orig	Wed Jul 18 08:55:23 2001
++++ configure.in	Mon Jul 23 11:54:52 2001
+@@ -124,12 +124,7 @@
+ AC_CHECK_LIB(dl, dlopen)
+ AC_CHECK_LIB(nsl, gethostbyname)
+ AC_CHECK_LIB(socket, socket)
+-AC_CHECK_LIB(pthread, pthread_create)
+-# BSD hack
+-AC_CHECK_LIB(c_r, pthread_create,
+-        [ LIBS="$LIBS -pthread"
+-	AC_DEFINE(HAVE_LIBPTHREAD) ]
+-)
++# XXX pthread does not work with stunnel on NetBSD
+ AC_CHECK_LIB(util, openpty)
  
- dnl Check for libwrap library.
-+wrap_LIB=
- AC_MSG_CHECKING(whether to use the libwrap library)
+ 
+@@ -138,17 +133,19 @@
  AC_ARG_WITH(tcp-wrappers,
- [  --with-tcp-wrappers     Use the libwrap library],
+ [  --with-tcp-wrappers     Use the libwrap (TCP wrappers) library],
    [
 +    saved_LIBS="$LIBS"
      if test "$withval" = "yes"; then
@@ -28,21 +37,7 @@ $NetBSD: patch-ab,v 1.5 2001/07/19 12:22:17 martin Exp $
    ],
    [
      AC_MSG_RESULT((default))
-@@ -154,12 +157,7 @@
- AC_CHECK_LIB(dl, dlopen)
- AC_CHECK_LIB(nsl, gethostbyname)
- AC_CHECK_LIB(socket, socket)
--AC_CHECK_LIB(pthread, pthread_create)
--# BSD hack
--AC_CHECK_LIB(c_r, pthread_create,
--        [ LIBS="$LIBS -pthread"
--	AC_DEFINE(HAVE_LIBPTHREAD) ]
--)
-+# XXX pthread does not work with stunnel on NetBSD 
- AC_CHECK_LIB(util, openpty)
- 
- dnl Add SSL includes and libraries
-@@ -182,7 +180,7 @@
+@@ -184,7 +181,7 @@
  # AC_HEADER_DIRENT
  # AC_HEADER_STDC
  # AC_HEADER_SYS_WAIT
@@ -51,7 +46,7 @@ $NetBSD: patch-ab,v 1.5 2001/07/19 12:22:17 martin Exp $
  
  # dnl Checks for typedefs, structures, and compiler characteristics.
  # AC_C_CONST
-@@ -200,6 +198,8 @@
+@@ -202,6 +199,8 @@
  AC_CHECK_SIZEOF(unsigned int)
  AC_CHECK_SIZEOF(unsigned long)
  AC_CHECK_SIZEOF(unsigned long long)
