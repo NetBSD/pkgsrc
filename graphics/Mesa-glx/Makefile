@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2000/06/01 11:23:26 rh Exp $
+# $NetBSD: Makefile,v 1.10 2000/08/14 07:27:39 tron Exp $
 
-DISTNAME=	glx-20000407
+DISTNAME=	glx-20000813
 PKGNAME=	Mesa-${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	http://snow.ashlu.bc.ca/glx/snapshots/
@@ -21,9 +21,10 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
-USE_PKGLIBTOOL=		yes
+USE_LIBTOOL=		yes
 USE_X11BASE=		yes
 CONFIGURE_ARGS+=	--enable-static --with-mesa=${MESA_WRKSRC}
+CONFIGURE_ARGS+=	--with-moduledir=${PREFIX}/lib/modules
 CONFIGURE_ENV+=		TCLSH=${TCLSH}
 
 AUTOCONF=	${LOCALBASE}/bin/autoconf
