@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/11/17 17:34:39 wennmach Exp $
+
+--- examples/Makefile.in.orig	Sat Aug 28 04:50:27 1999
++++ examples/Makefile.in	Sat Nov  6 00:58:52 1999
+@@ -81,7 +81,7 @@
+ 
+ EXTRA_DIST = cgi-demo.cgi.in    piped-demo.pl.in   shared-demo.pl.in stripes.pl.in bigtops.pl.in minmax.pl.in
+ 
+-examplesdir = $(prefix)/examples
++examplesdir = $(prefix)/share/examples/rrdtool
+ examples_SCRIPTS = cgi-demo.cgi piped-demo.pl shared-demo.pl stripes.pl bigtops.pl minmax.pl
+ mkinstalldirs = $(SHELL) $(top_srcdir)/config/mkinstalldirs
+ CONFIG_HEADER = ../config/config.h

@@ -1,0 +1,103 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/11/17 17:34:39 wennmach Exp $
+bin/rrdcgi
+bin/rrdtool
+lib/librrd.a
+lib/librrd.la
+lib/librrd.so.0.0
+man/man1/rrdtool.1
+man/man1/rrdlast.1
+man/man1/rrdcreate.1
+man/man1/rrdupdate.1
+man/man1/rrdgraph.1
+man/man1/bin_dec_hex.1
+man/man1/rrdfetch.1
+man/man1/rrdrestore.1
+man/man1/rrddump.1
+man/man1/rrdtune.1
+man/man1/rrdresize.1
+man/man1/rrdcgi.1
+man/man1/rrdtutorial.1
+man/man1/RRDs.1
+man/man1/RRDp.1
+share/rrdtool/contrib/README
+share/rrdtool/contrib/log2rrd/README
+share/rrdtool/contrib/log2rrd/log2rrd.pl
+share/rrdtool/contrib/rrd-file-icon/README
+share/rrdtool/contrib/rrd-file-icon/rrd.png
+share/rrdtool/contrib/trytime/README
+share/rrdtool/contrib/trytime/trytime.c
+share/examples/rrdtool/cgi-demo.cgi
+share/examples/rrdtool/piped-demo.pl
+share/examples/rrdtool/shared-demo.pl
+share/examples/rrdtool/stripes.pl
+share/examples/rrdtool/bigtops.pl
+share/examples/rrdtool/minmax.pl
+share/doc/rrdtool/rrdtool.html
+share/doc/rrdtool/rrdlast.html
+share/doc/rrdtool/rrdcreate.html
+share/doc/rrdtool/rrdupdate.html
+share/doc/rrdtool/rrdgraph.html
+share/doc/rrdtool/bin_dec_hex.html
+share/doc/rrdtool/rrdfetch.html
+share/doc/rrdtool/rrdrestore.html
+share/doc/rrdtool/rrddump.html
+share/doc/rrdtool/rrdtune.html
+share/doc/rrdtool/rrdresize.html
+share/doc/rrdtool/rrdcgi.html
+share/doc/rrdtool/rrdtutorial.html
+share/doc/rrdtool/RRDs.html
+share/doc/rrdtool/RRDp.html
+share/doc/rrdtool/rrdtool.pod
+share/doc/rrdtool/rrdlast.pod
+share/doc/rrdtool/rrdcreate.pod
+share/doc/rrdtool/rrdupdate.pod
+share/doc/rrdtool/rrdgraph.pod
+share/doc/rrdtool/bin_dec_hex.pod
+share/doc/rrdtool/rrdfetch.pod
+share/doc/rrdtool/rrdrestore.pod
+share/doc/rrdtool/rrddump.pod
+share/doc/rrdtool/rrdtune.pod
+share/doc/rrdtool/rrdresize.pod
+share/doc/rrdtool/rrdcgi.pod
+share/doc/rrdtool/rrdtutorial.pod
+share/doc/rrdtool/rrdtool.txt
+share/doc/rrdtool/rrdlast.txt
+share/doc/rrdtool/rrdcreate.txt
+share/doc/rrdtool/rrdupdate.txt
+share/doc/rrdtool/rrdgraph.txt
+share/doc/rrdtool/bin_dec_hex.txt
+share/doc/rrdtool/rrdfetch.txt
+share/doc/rrdtool/rrdrestore.txt
+share/doc/rrdtool/rrddump.txt
+share/doc/rrdtool/rrdtune.txt
+share/doc/rrdtool/rrdresize.txt
+share/doc/rrdtool/rrdcgi.txt
+share/doc/rrdtool/rrdtutorial.txt
+share/doc/rrdtool/RRDs.txt
+share/doc/rrdtool/RRDp.txt
+share/rrdtool/lib/perl/RRDp.pm
+share/rrdtool/lib/perl/RRDs.pm
+share/rrdtool/lib/perl/auto/RRDs/RRDs.bs
+share/rrdtool/lib/perl/auto/RRDs/RRDs.so
+lib/perl5/site_perl/RRDp.pm
+lib/perl5/site_perl/RRDs.pm
+lib/perl5/site_perl/ntmake.pl
+lib/perl5/site_perl/i386-netbsd/auto/RRDs/RRDs.bs
+lib/perl5/site_perl/i386-netbsd/auto/RRDs/RRDs.so
+lib/perl5/site_perl/i386-netbsd/auto/RRDp/.packlist
+lib/perl5/site_perl/i386-netbsd/auto/RRDs/.packlist
+lib/perl5/man/man3/RRDp.3
+lib/perl5/man/man3/RRDs.3
+@dirrm lib/perl5/site_perl/i386-netbsd/auto/RRDp
+@dirrm lib/perl5/site_perl/i386-netbsd/auto/RRDs
+@dirrm share/rrdtool/contrib/rrd-file-icon
+@dirrm share/rrdtool/contrib/trytime
+@dirrm share/rrdtool/contrib/log2rrd
+@dirrm share/rrdtool/contrib
+@dirrm share/examples/rrdtool
+@dirrm share/doc/rrdtool
+@dirrm share/rrdtool/lib/perl/auto/RRDs
+@dirrm share/rrdtool/lib/perl/auto
+@dirrm share/rrdtool/lib/perl
+@dirrm share/rrdtool/lib
+@dirrm share/rrdtool

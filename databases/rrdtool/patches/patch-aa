@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/11/17 17:34:39 wennmach Exp $
+
+--- Makefile.in.orig	Sat Aug 28 04:50:18 1999
++++ Makefile.in	Thu Nov  4 08:05:41 1999
+@@ -75,7 +75,7 @@
+ RANLIB = @RANLIB@
+ ZLIB_LIB_DIR = @ZLIB_LIB_DIR@
+ 
+-SUBDIRS = cgilib-0.4 config gd1.3 zlib-1.1.3 libpng-1.0.3 src doc examples contrib
++SUBDIRS = config src doc examples contrib
+ 
+ # the following files are not mentioned in any other Makefile
+ EXTRA_DIST = COPYRIGHT CHANGES NT-BUILD-TIPS.txt TODO CONTRIBUTORS   perl-piped/MANIFEST perl-piped/README perl-piped/rrdpl.ds?  perl-piped/RRDp.pm perl-piped/Makefile.PL  perl-piped/t/base.t  perl-shared/MANIFEST perl-shared/README perl-shared/RRDs.xs  perl-shared/ntmake.pl perl-shared/Makefile.PL perl-shared/t/base.t  perl-shared/rrdpl.ds? perl-shared/RRDs.pm
+@@ -374,11 +374,12 @@
+ 
+ # lets schedule the perl stuff for installation
+ install-data-local:
+-	$(INSTALL) -d -m 755 $(prefix)/lib/perl/auto/RRDs
+-	$(INSTALL) -m 644 perl-piped/RRDp.pm $(prefix)/lib/perl
+-	$(INSTALL) -m 644 perl-shared/RRDs.pm $(prefix)/lib/perl
+-	$(INSTALL) -m 644 perl-shared/blib/arch/auto/RRDs/RRDs.bs $(prefix)/lib/perl/auto/RRDs
+-	$(INSTALL) -m 755 perl-shared/blib/arch/auto/RRDs/RRDs.so $(prefix)/lib/perl/auto/RRDs
++	$(INSTALL) -d -m 755 $(prefix)/share/rrdtool/lib/perl/auto/RRDs
++	$(INSTALL) -m 644 perl-piped/RRDp.pm $(prefix)/share/rrdtool/lib/perl
++	$(INSTALL) -m 644 perl-shared/RRDs.pm $(prefix)/share/rrdtool/lib/perl
++	$(INSTALL) -m 644 perl-shared/blib/arch/auto/RRDs/RRDs.bs $(prefix)/share/rrdtool/lib/perl/auto/RRDs
++	$(INSTALL) -m 755 perl-shared/blib/arch/auto/RRDs/RRDs.so $(prefix)/share/rrdtool/lib/perl/auto/RRDs
++	gmake site-perl-inst
+ 
+ # rules for building the perl module
+ perl_piped: perl-piped/Makefile

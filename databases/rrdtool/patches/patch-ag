@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.1.1.1 1999/11/17 17:34:39 wennmach Exp $
+
+--- doc/Makefile.in.orig	Sat Nov  6 01:34:08 1999
++++ doc/Makefile.in	Sat Nov  6 01:32:55 1999
+@@ -96,9 +96,9 @@
+ EXTRA_DIST = $(POD) $(HTML) $(TXT)
+ 
+ # some install rules
+-idocdir = $(prefix)/doc
++idocdir = $(prefix)/share/doc/rrdtool
+ idoc_DATA = $(POD) $(TXT)
+-ihtmldir = $(prefix)/html
++ihtmldir = $(prefix)/share/doc/rrdtool
+ ihtml_DATA = $(HTML)
+ imandir = $(prefix)/man/man1
+ iman_DATA = $(MAN)
