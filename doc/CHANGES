@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1828 2003/04/02 12:20:02 wiz Exp $
+$NetBSD: CHANGES,v 1.1829 2003/04/03 04:04:54 gson Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1438,3 +1438,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libgii to 0.8.3 [wiz 2003-04-02]
 	Updated libggi to 2.0.3 [wiz 2003-04-02]
 	Updated koth to 0.8.0 [wiz 2003-04-02]
+	Updated st to 1.4 [gson 2003-04-02]
