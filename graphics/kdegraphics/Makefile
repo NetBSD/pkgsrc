@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.37 2002/03/13 17:37:11 fredb Exp $
+# $NetBSD: Makefile,v 1.38 2002/09/01 04:26:10 hubertf Exp $
 #
 
 DISTNAME=	kdegraphics-1.1.2
 PKGREVISION=	1
 CATEGORIES=	graphics kde
-MASTER_SITES=	ftp://ftp.us.kde.org/pub/kde/Attic/old/1.1.2/distribution/tar/generic/source/bz2/ \
-		ftp://ftp.de.kde.org/pub/kde/Attic/old/1.1.2/distribution/tar/generic/source/bz2/
+MASTER_SITES=	${MASTER_SITE_LOCAL}/kde1
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
