@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/11/02 12:06:08 sakamoto Exp $
+# $NetBSD: Makefile,v 1.5 1999/11/04 10:52:01 agc Exp $
 
 DISTNAME=	NetBSD1.3I-jman-19990531
 PKGNAME=	ja-man-19990531
@@ -43,6 +43,8 @@ do-build:
 		-e 's|$${JAMANDIR}|${JAMANDIR}|g' \
 		${WRKSRC}/jman/jman.conf \
 		> ${WRKSRC}/jman/jman.conf.t
+
+MKCATPAGES?=	yes
 
 pre-install:
 	@${SED} -e 's|$${PREFIX}|${PREFIX}|' ${MESSAGE_SRC} > ${MESSAGE_FILE}
