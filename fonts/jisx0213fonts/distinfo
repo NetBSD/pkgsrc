@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:14:19 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/09 21:18:37 wiz Exp $
 
-MD5 (K14-1.bdf.gz) = bc82c035f47bae0e3ef16deb865c94ac
-MD5 (K14-2.bdf.gz) = fe3e2f10c967e1cd0a0db1c3fc77a31d
-MD5 (jiskan16-2000-1.bdf.gz) = dda803774fb1c79a18f0b7d506b744cb
-MD5 (jiskan16-2000-2.bdf.gz) = 83f6280d0d6e521ce3206a961072d830
+SHA1 (K14-1.bdf.gz) = e505daa55add445d9f20e0290d80bb92334911db
+Size (K14-1.bdf.gz) = 256125 bytes
+SHA1 (K14-2.bdf.gz) = 24200ec252b381dd76d4951c359c34844b5b297c
+Size (K14-2.bdf.gz) = 75971 bytes
+SHA1 (jiskan16-2000-1.bdf.gz) = f461dc84c88058510cd0260a5c3942c22cdc9f80
+Size (jiskan16-2000-1.bdf.gz) = 303341 bytes
+SHA1 (jiskan16-2000-2.bdf.gz) = b521f9fded2b89fd8ae751d655106c134695f2cc
+Size (jiskan16-2000-2.bdf.gz) = 92100 bytes
