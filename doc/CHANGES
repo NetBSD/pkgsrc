@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2630 2003/06/30 00:13:51 jtb Exp $
+$NetBSD: CHANGES,v 1.2631 2003/06/30 00:44:00 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2620,3 +2620,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added py-dns-1.0.0b3 [gson 2003-06-29]
 	Updated tinyscheme to 1.33 [jtb 2003-06-29]
 	Updated ncview to 1.92d [jtb 2003-06-29]
+	Updated xemacs-packages to 1.12 [uebayasi 2003-06-30]
