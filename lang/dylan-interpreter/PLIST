@@ -1,7 +1,12 @@
-@comment $NetBSD: PLIST,v 1.5 2002/06/26 10:29:45 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/10/03 14:25:05 wiz Exp $
+bin/gen-makefile
+bin/line-count
+bin/make-dylan-app
+bin/make-dylan-lib
 bin/mindy
 bin/mindycomp
 bin/mindyexec
+bin/mk-build-tree
 lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/base-file-system-lib.dbc
 lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/collection-extensions-lib.dbc
 lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/dylan-lib.dbc
@@ -47,3 +52,5 @@ man/man7/gwydion.7
 @dirrm lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc
 @dirrm lib/dylan/${DYLAN_VERSION}
 @dirrm lib/dylan
+@exec ${MKDIR} %D/share/dylan
+@unexec ${RMDIR} %D/share/dylan 2> /dev/null || ${TRUE}
