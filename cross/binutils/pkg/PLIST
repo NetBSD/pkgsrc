@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1999/01/07 01:07:41 tv Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/10/27 10:43:57 fredb Exp $
 lib/ldscripts/elf32_sparc.x
 lib/ldscripts/elf32_sparc.xbn
 lib/ldscripts/elf32_sparc.xn
@@ -23,12 +23,6 @@ lib/ldscripts/elf32ppc.xn
 lib/ldscripts/elf32ppc.xr
 lib/ldscripts/elf32ppc.xs
 lib/ldscripts/elf32ppc.xu
-lib/ldscripts/elf64_sparc.x
-lib/ldscripts/elf64_sparc.xbn
-lib/ldscripts/elf64_sparc.xn
-lib/ldscripts/elf64_sparc.xr
-lib/ldscripts/elf64_sparc.xs
-lib/ldscripts/elf64_sparc.xu
 lib/ldscripts/elf64alpha.x
 lib/ldscripts/elf64alpha.xbn
 lib/ldscripts/elf64alpha.xn
