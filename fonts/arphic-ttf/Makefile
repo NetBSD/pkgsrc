@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:36:55 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/25 20:26:22 wiz Exp $
 #
 
 DISTNAME=	arphic-ttf-2.11
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/
 DISTFILES=	${FONT_FILES} ${MISC_FILES}
@@ -22,7 +22,7 @@ USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
-FONTS_TTF_DIRS=	${PREFIX}/lib/X11/fonts/TrueType
+FONTS_TTF_DIRS=	${PREFIX}/lib/X11/fonts/TTF
 DOCDIR=		${PREFIX}/share/doc/arphic-ttf
 
 do-install:
