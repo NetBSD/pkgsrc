@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2263 2003/05/19 12:56:34 wiz Exp $
+$NetBSD: CHANGES,v 1.2264 2003/05/19 18:44:41 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1994,3 +1994,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-Date-Manip to 5.40 [mjl 2003-05-19]
 	Updated p5-XML-XQL to 0.68 [mjl 2003-05-19]
 	Updated mldonkey to 2.4.0 [wiz 2003-05-19]
+	Added pyslsk-1.2.0 [hubertf 2003-05-19]
