@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/04/24 14:14:09 rh Exp $
+
+--- configure.orig	Sun Apr 22 11:51:35 2001
++++ configure
+@@ -3009,13 +3009,13 @@
+ if { (eval echo configure:3010: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+   rm -rf conftest*
+   CATOBJEXT=.gmo
+-		   DATADIRNAME=share
++		   DATADIRNAME=${LOCALEDIR}
+ else
+   echo "configure: failed program was:" >&5
+   cat conftest.$ac_ext >&5
+   rm -rf conftest*
+   CATOBJEXT=.mo
+-		   DATADIRNAME=lib
++		   DATADIRNAME=${LOCALEDIR}
+ fi
+ rm -f conftest*
+ 		INSTOBJEXT=.mo
+@@ -3244,7 +3244,7 @@
+       # We need to process the po/ directory.
+       POSUB=po
+     else
+-      DATADIRNAME=share
++      DATADIRNAME=${LOCALEDIR}
+       nls_cv_header_intl=intl/libintl.h
+       nls_cv_header_libgt=intl/libgettext.h
+     fi

@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/04/24 14:14:09 rh Exp $
+
+--- pan/util.c.orig	Fri Mar 16 05:20:42 2001
++++ pan/util.c
+@@ -333,12 +333,14 @@
+ 
+ 				if (!g_file_test (buf, G_FILE_TEST_ISDIR))
+ 				{
++					*(out-1) = '\0';
+ 					if (mkdir (buf, S_IRUSR | S_IWUSR | S_IXUSR))
+ 					{
+ 						pan_error_dialog (_("Couldn't create directory `%s': %s"),
+ 								  buf, g_strerror (errno));
+ 						break;
+ 					}
++					*(out-1) = G_DIR_SEPARATOR;
+ 				}
+ 			}
+ 

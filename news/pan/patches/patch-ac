@@ -1,0 +1,41 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/04/24 14:14:09 rh Exp $
+
+--- pan/pan.c.orig	Tue Mar 20 03:14:26 2001
++++ pan/pan.c
+@@ -117,6 +117,24 @@
+ };
+ 
+ 
++#ifdef __NetBSD__
++#include <gtk/gtk.h>
++#include <pthread.h>
++
++/*
++ * NetBSD uses non-preemptive pth, so we yield the processor periodically
++ */
++
++gint
++pth_nbschedule (gpointer data)
++{
++	pthread_yield_np();
++
++	return TRUE;
++}
++#endif
++
++
+ static int
+ pan_post_gtkmain_init (gpointer null)
+ {
+@@ -234,6 +252,11 @@
+ 		pan_init ();
+ 		gtk_widget_show_all (Pan.window);
+ 	}
++
++
++#ifdef __NetBSD__
++	gtk_timeout_add (200, pth_nbschedule, NULL);
++#endif
+ 
+ 	gtk_main ();
+ 
