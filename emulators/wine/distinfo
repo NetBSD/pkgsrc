@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.30 2005/03/11 21:18:15 rillig Exp $
+$NetBSD: distinfo,v 1.31 2005/03/22 14:53:28 adam Exp $
 
-SHA1 (Wine-20050211.tar.gz) = 6c1b7397d653e5a053e03923db55dfd8209a2566
-RMD160 (Wine-20050211.tar.gz) = 06ce19f57d8235cd280f956d53c77bea0ace4c50
-Size (Wine-20050211.tar.gz) = 11626818 bytes
+SHA1 (Wine-20050310.tar.gz) = 5a1186c30ef43544857cbaa128231b980e976f25
+RMD160 (Wine-20050310.tar.gz) = fc6aaf36e1bfd669bbd6f68aaab4487d9424e12e
+Size (Wine-20050310.tar.gz) = 11798040 bytes
 SHA1 (patch-aa) = 951e96ae5e09c7579249bbb1266fc70a2b13f8c2
 SHA1 (patch-ab) = 7feb8eaad0005ea3b501967ca070a4b397d707c2
 SHA1 (patch-ac) = 8c909b1683185e0ac12f2be6024e26da40addf1c
