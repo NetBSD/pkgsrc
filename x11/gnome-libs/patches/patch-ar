@@ -1,13 +1,13 @@
-$NetBSD: patch-ar,v 1.1 2000/11/11 02:23:52 mycroft Exp $
+$NetBSD: patch-ar,v 1.2 2000/11/12 13:53:21 tron Exp $
 
---- libgnome/gnome-dentry.c.orig	Sat Sep 16 19:24:51 2000
-+++ libgnome/gnome-dentry.c	Sat Nov 11 02:19:52 2000
+--- libgnome/gnome-dentry.c.orig	Tue Oct 24 01:12:33 2000
++++ libgnome/gnome-dentry.c	Sun Nov 12 14:48:28 2000
 @@ -631,7 +631,7 @@
  	}
  		
  	/* FIXME: do something if there's an error.  */
--	if (strcmp (item->type, "URL") == 0) {
-+	if (item->type && strcmp (item->type, "URL") == 0) {
+-	if (item->type && strcmp (item->type, "URL") == 0) {
++	if (strcmp (item->type, "URL") == 0) {
  		gnome_url_show (exec_str);
  	} else {
  		gnome_execute_async_with_env (NULL, uargs, uargv, envc, envp);
