@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2002/10/08 09:57:32 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2002/10/19 19:05:39 heinz Exp $
 
 .if !defined(FREETYPE2_BUILDLINK2_MK)
 FREETYPE2_BUILDLINK2_MK=	# defined
@@ -38,7 +38,7 @@ _FREETYPE_MAJOR!= \
 _FREETYPE_MINOR!= \
 	${AWK} '/.*\#define.*FREETYPE_MINOR/ { print "."$$3 }' ${_FREETYPE_H}
 _FREETYPE_PATCH!= \
-	${AWK} '/.*\#define.*FREETYPE_PATCH/ { print "."$$3 }' ${_FREETYPE_H}
+	${AWK} 'BEGIN { patch=0; } /.*\#define.*FREETYPE_PATCH/ { patch=$$3; } END { print "."patch; }' ${_FREETYPE_H}
 _FREETYPE_VERSION=	${_FREETYPE_MAJOR}${_FREETYPE_MINOR}${_FREETYPE_PATCH}
 _FREETYPE_PKG=		freetype2-${_FREETYPE_VERSION}
 _FREETYPE_DEPENDS=	${BUILDLINK_DEPENDS.freetype2}
