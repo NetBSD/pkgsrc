@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2004/09/22 08:09:51 jlam Exp $
+@comment $NetBSD: PLIST,v 1.13 2005/02/26 17:23:54 jmmv Exp $
 include/libgnomeprint-2.2/libgnomeprint/gnome-font-face.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-font.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-glyphlist.h
@@ -7,6 +7,7 @@ include/libgnomeprint-2.2/libgnomeprint/gnome-print-config.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-print-job.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-print-pango.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-print-paper.h
+include/libgnomeprint-2.2/libgnomeprint/gnome-print-transport.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-print-unit.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-print.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-rfont.h
