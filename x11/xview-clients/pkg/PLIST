@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2000/09/13 22:13:40 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/09/13 22:17:43 jlam Exp $
 bin/clock
 bin/cmdtool
 bin/olwm
@@ -15,4 +15,3 @@ man/cat1/cmdtool.0
 man/cat1/olwm.0
 man/cat1/olwmslave.0
 man/cat1/shelltool.0
-@dirrm lib/help
