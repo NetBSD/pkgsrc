@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.12 2003/03/20 17:30:18 fredb Exp $
+
+--- config-scripts/cups-openssl.m4.orig	Tue Dec 17 12:56:39 2002
++++ config-scripts/cups-openssl.m4
+@@ -45,7 +45,12 @@ if test x$enable_ssl != xno; then
+ 	dnl of OpenSSL exists.  So we test the linking three times in
+ 	dnl case the RSAREF libraries are needed.
+ 
++	dnl NetBSD 1.6 has a crypt() in both -lcrypt and -lcrypto, but only
++	dnl the one in -lcrypt supports blowfish and other password salts,
++	dnl so always link -lcrypt in first, if possible.
++
+ 	for libcrypto in \
++	    "-lcrypt -lcrypto" \
+ 	    "-lcrypto" \
+ 	    "-lcrypto -lrsaref" \
+ 	    "-lcrypto -lRSAglue -lrsaref"
