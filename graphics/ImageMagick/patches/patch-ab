@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.10 2001/01/30 13:18:52 wiz Exp $
+$NetBSD: patch-ab,v 1.11 2001/09/17 15:17:32 tron Exp $
 
---- magick/magick.h.orig	Wed Jan 24 16:12:55 2001
-+++ magick/magick.h	Tue Jan 30 13:53:37 2001
+--- magick/magick.h.orig	Wed Aug 15 04:20:26 2001
++++ magick/magick.h	Mon Sep 17 16:39:59 2001
 @@ -11,8 +11,6 @@
  /*
    System include declarations.
@@ -9,5 +9,5 @@ $NetBSD: patch-ab,v 1.10 2001/01/30 13:18:52 wiz Exp $
 -#define _XOPEN_SOURCE  500
 -#define _POSIX_C_SOURCE  199506L
  
- #include <stdio.h>
- #include <stdlib.h>
+ #define _MAGICK_CONFIG_H
+ #if !defined(vms) && !defined(macintosh)
