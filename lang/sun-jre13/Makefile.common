@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2002/07/28 11:57:41 schmonz Exp $
+# $NetBSD: Makefile.common,v 1.3 2002/07/28 13:16:46 schmonz Exp $
 
 # MASTER_SITES is very special, and must end in "=":
 CATEGORIES=	lang
@@ -21,7 +21,11 @@ NO_BIN_ON_FTP=	${RESTRICTED}
 
 # We need to overwrite JDK_HOME, since JRE and JDK need to be
 # installed in the same directory
-# JDK_HOME:=	${LOCALBASE}/java/sun-1.3.1
+.if ${OPSYS} == "Darwin"
+JDK_HOME=	/usr
+.else
+JDK_HOME:=	${LOCALBASE}/java/sun-1.3.1
+.endif
 MESSAGE_SUBST+=	JDK_HOME=${JDK_HOME}
 
 # Needs to be after bsd.prefs.mk
@@ -58,8 +62,11 @@ do-install:
 	cd ${WRKSRC} && ${PAX} -rw . ${PREFIX}
 .	endif
 
+.if ${OPSYS} != "Darwin"
 .include "../../emulators/suse_linux/Makefile.application"
+.endif
 
+.include "../../mk/bsd.pkg.mk"
 # These need to be after bsd.pkg.mk 
 
 .if ${OPSYS} == "Linux"
