@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.118.2.7 2003/08/16 20:22:11 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.118.2.8 2003/08/16 21:14:52 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -294,12 +294,13 @@ PKG_INFO?=		PKG_DBDIR=${PKG_DBDIR} ${PKG_INFO_CMD}
 PKG_VIEW?=		${PKG_VIEW_CMD}
 LINKFARM?=		${LINKFARM_CMD}
 
+DEPOT_PKG_ADD?=		PKG_DBDIR=${DEPOTBASE} ${PKG_ADD_CMD}
 DEPOT_PKG_ADMIN?=	PKG_DBDIR=${DEPOTBASE} ${PKG_ADMIN_CMD}
 DEPOT_PKG_DELETE?=	PKG_DBDIR=${DEPOTBASE} ${PKG_DELETE_CMD}
 DEPOT_PKG_INFO?=	PKG_DBDIR=${DEPOTBASE} ${PKG_INFO_CMD}
 
 .ifndef PKGTOOLS_VERSION
-PKGTOOLS_VERSION!=	${PKG_INFO} -V 2>/dev/null || echo 20010302
+PKGTOOLS_VERSION!=	${PKG_INFO_CMD} -V 2>/dev/null || echo 20010302
 MAKEFLAGS+=		PKGTOOLS_VERSION="${PKGTOOLS_VERSION}"
 .endif
 
