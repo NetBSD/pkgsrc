@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/07/21 22:56:35 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1999/08/10 10:30:59 agc Exp $
 
 DISTNAME=		ClanLib-0.1.15
 CATEGORIES=		games x11
@@ -27,9 +27,13 @@ CONFIGURE_ARGS+=	--disable-asm386 \
 CONFIGURE_ENV+=		LOCALBASE="${LOCALBASE}"# CC='cc ${CFLAGS} ${LDFLAGS}'
 MAKE_ENV+=		LDFLAGS="${LDFLAGS}"
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
 BROKEN_LIBZ!=ar t /usr/lib/libz.a | grep -w example.o || echo "false"
 .if !empty(BROKEN_LIBZ:Mexample.o)
 BROKEN= "Update to NetBSD 1.4.1, or recompile /usr/lib/libz without example.c"
+.endif
 .endif
 
 .include "../../mk/bsd.pkg.mk"
