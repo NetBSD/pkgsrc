@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.272 2004/01/26 11:43:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.273 2004/01/26 12:28:11 jmmv Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -93,9 +93,7 @@ SUBDIR+=	giram
 SUBDIR+=	gle
 SUBDIR+=	glu
 SUBDIR+=	glut
-SUBDIR+=	gmencoder
 SUBDIR+=	gmngview
-SUBDIR+=	gmplayer
 SUBDIR+=	gnome-icon-theme
 SUBDIR+=	gnome-iconedit
 SUBDIR+=	gnome-pixmaps
@@ -128,7 +126,6 @@ SUBDIR+=	jpeg2ps
 SUBDIR+=	jpeg_ls
 SUBDIR+=	kdegraphics2
 SUBDIR+=	kdegraphics3
-SUBDIR+=	kmplayer
 SUBDIR+=	lcms
 SUBDIR+=	lib3ds
 SUBDIR+=	libart2
@@ -152,7 +149,6 @@ SUBDIR+=	libvideogfx
 SUBDIR+=	libwmf
 SUBDIR+=	ljpeg
 SUBDIR+=	magicpoint
-SUBDIR+=	mencoder
 SUBDIR+=	mgl
 SUBDIR+=	mjpegtools
 SUBDIR+=	mng
@@ -164,8 +160,6 @@ SUBDIR+=	mpeg2codec
 SUBDIR+=	mpeg_encode
 SUBDIR+=	mpeg_play
 SUBDIR+=	mpgtx
-SUBDIR+=	mplayer
-SUBDIR+=	mplayer-share
 SUBDIR+=	mplex
 SUBDIR+=	mtv
 SUBDIR+=	ncview
@@ -225,7 +219,6 @@ SUBDIR+=	qcamview
 SUBDIR+=	qiv
 SUBDIR+=	qvplay
 SUBDIR+=	rayshade
-SUBDIR+=	realplayer-codecs
 SUBDIR+=	resize_image
 SUBDIR+=	ruby-gd
 SUBDIR+=	ruby-opengl
@@ -251,7 +244,6 @@ SUBDIR+=	vcg
 SUBDIR+=	vid
 SUBDIR+=	viewfax
 SUBDIR+=	water
-SUBDIR+=	win32-codecs
 SUBDIR+=	wmphoto
 SUBDIR+=	xanim
 SUBDIR+=	xart
