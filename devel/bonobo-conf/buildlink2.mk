@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:22:24 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/23 19:57:28 jlam Exp $
 
 .if !defined(BONOBO_CONF_BUILDLINK2_MK)
 BONOBO_CONF_BUILDLINK2_MK=	# defined
@@ -14,6 +14,7 @@ BUILDLINK_FILES.bonobo-conf+=		lib/bonobo/monikers/libmoniker_config*
 BUILDLINK_FILES.bonobo-conf+=		lib/bonobo/monikers/libmoniker_gconf*
 BUILDLINK_FILES.bonobo-conf+=		lib/bonobo_conf*
 BUILDLINK_FILES.bonobo-conf+=		lib/libbonobo_conf*
+BUILDLINK_FILES.bonobo-conf+=		share/idl/Bonobo_Config.idl
 
 .include "../../devel/GConf/buildlink2.mk"
 .include "../../devel/bonobo/buildlink2.mk"

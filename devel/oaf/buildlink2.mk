@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/08/28 16:04:05 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2002/09/23 19:57:29 jlam Exp $
 
 .if !defined(OAF_BUILDLINK2_MK)
 OAF_BUILDLINK2_MK=	# defined
@@ -11,6 +11,7 @@ EVAL_PREFIX+=			BUILDLINK_PREFIX.oaf=oaf
 BUILDLINK_PREFIX.oaf_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.oaf=		include/liboaf/*
 BUILDLINK_FILES.oaf+=		lib/liboaf.*
+BUILDLINK_FILES.oaf+=		share/idl/oaf*.idl
 
 .include "../../devel/popt/buildlink2.mk"
 .include "../../textproc/libxml/buildlink2.mk"

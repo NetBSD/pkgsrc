@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:40:31 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/23 19:57:31 jlam Exp $
 
 .if !defined(GNOME_LIBS_BUILDLINK2_MK)
 GNOME_LIBS_BUILDLINK2_MK=	# defined
@@ -26,6 +26,13 @@ BUILDLINK_FILES.gnome-libs+=	lib/libgnorba.*
 BUILDLINK_FILES.gnome-libs+=	lib/libgnorbagtk.*
 BUILDLINK_FILES.gnome-libs+=	lib/libgtkxmhtml.*
 BUILDLINK_FILES.gnome-libs+=	lib/libzvt.*
+BUILDLINK_FILES.gnome-libs+=	share/idl/GnomeObject.idl
+BUILDLINK_FILES.gnome-libs+=	share/idl/Table.idl
+BUILDLINK_FILES.gnome-libs+=	share/idl/desktop-editor.idl
+BUILDLINK_FILES.gnome-libs+=	share/idl/desktop-textviewer.idl
+BUILDLINK_FILES.gnome-libs+=	share/idl/gnome-factory.idl
+BUILDLINK_FILES.gnome-libs+=	share/idl/gnome-unknown.idl
+BUILDLINK_FILES.gnome-libs+=	share/idl/name-service.idl
 
 .include "../../audio/esound/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"

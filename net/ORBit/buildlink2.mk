@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2002/09/23 09:22:15 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2002/09/23 19:57:29 jlam Exp $
 
 .if !defined(ORBIT_BUILDLINK2_MK)
 ORBIT_BUILDLINK2_MK=	# defined
@@ -22,6 +22,7 @@ BUILDLINK_FILES.ORBit+=	lib/libORBitCosNaming.*
 BUILDLINK_FILES.ORBit+=	lib/libORBitutil.*
 BUILDLINK_FILES.ORBit+=	lib/libname-server.*
 BUILDLINK_FILES.ORBit+=	lib/liborbit-c-backend.*
+BUILDLINK_FILES.ORBit+=	share/idl/orbit-1.0/*
 
 BUILDLINK_CPPFLAGS.ORBit=	-I${BUILDLINK_PREFIX.ORBit}/include/orbit-1.0
 
