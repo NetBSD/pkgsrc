@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2003/09/09 07:44:57 itojun Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 19:18:28 agc Exp $
 
 SHA1 (mkfontscale-20020524.tar.gz) = 4c1f8bba8fd2a939a95d1ad18700320b7ec993b5
+RMD160 (mkfontscale-20020524.tar.gz) = 8d05aea75eb7f01e6fe08b63143ef0b8e8ea3115
 Size (mkfontscale-20020524.tar.gz) = 8133 bytes
 SHA1 (patch-aa) = 7d83047966fc6c2eb691669e292b98dfac61a072
 SHA1 (patch-ab) = 8d30dfb71c92fc50df0e9b5334b1b01581def865
