@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7091 2004/09/04 13:45:05 seb Exp $
+$NetBSD: CHANGES,v 1.7092 2004/09/04 13:58:05 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4187,3 +4187,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libwnck to 2.6.2.1 [jmmv 2004-09-02]
 	Updated squid to 2.5.6nb1 [taca 2004-09-02]
 	Updated cvs2svn to 1.0.0 [seb 2004-09-04]
+	Updated jam to 2.5nb1 [schmonz 2004-09-04]
