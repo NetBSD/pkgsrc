@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 1998/08/28 14:23:18 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/09/11 19:04:47 tron Exp $
 #
 
-DISTNAME=		pkg_install-19980828
+DISTNAME=		pkg_install-19980911
 CATEGORIES=		pkgtools
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
@@ -10,6 +10,7 @@ HOMEPAGE=		http://www.netbsd.org/
 
 PREFIX=			/usr
 WRKSRC=			${WRKDIR}/pkg_install
+ALL_TARGET=		depend all
 MAKE_ENV+=		BINDIR=/usr/sbin MANDIR=/usr/share/man
 NO_PKG_REGISTER=	yes
 NO_PACKAGE=		No package registration is done
