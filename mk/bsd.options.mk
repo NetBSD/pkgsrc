@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.14 2004/12/05 23:23:50 schmonz Exp $
+# $NetBSD: bsd.options.mk,v 1.15 2005/01/15 08:59:28 adrianp Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -74,7 +74,7 @@
 # #
 # .if !defined(PKG_OPTIONS.wibble)
 # PKG_DEFAULT_OPTIONS+=		sasl
-# endif
+# .endif
 # .include "../../mk/bsd.options.mk"
 #
 # # Package-specific option-handling
