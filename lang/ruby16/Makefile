@@ -1,90 +1,33 @@
-# $NetBSD: Makefile,v 1.3 2005/02/21 15:27:35 taca Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/06 16:56:55 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-${RUBY_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.ruby-lang.org/en/
-COMMENT=	Ruby programming language 1.6 based release
+COMMENT=	Ruby programming language ${RUBY_VERSION} meta package
 
-CONFLICTS+=		ruby-base-[1-9]*
-CONFLICTS+=		ruby${RUBY_VER}-dbm-* ruby${RUBY_VER}-digest-*
+DEPENDS+= ${RUBY_PKGPREFIX}-base>=${RUBY_VERSION}:../../lang/ruby16-base
+DEPENDS+= ${RUBY_PKGPREFIX}-dbm>=${RUBY_VERSION}nb1:../../databases/ruby-dbm
+DEPENDS+= ${RUBY_PKGPREFIX}-gdbm>=${RUBY_VERSION}nb1:../../databases/ruby-gdbm
+DEPENDS+= ${RUBY_PKGPREFIX}-curses>=${RUBY_VERSION}nb2:../../devel/ruby16-curses
+DEPENDS+= ${RUBY_PKGPREFIX}-readline>=${RUBY_VERSION}nb1:../../devel/ruby-readline
+DEPENDS+= ${RUBY_PKGPREFIX}-digest>=${RUBY_VERSION}nb1:../../security/ruby16-digest
+DEPENDS+= ${RUBY_PKGPREFIX}-tcltllib>=${RUBY_VERSION}nb2:../../x11/ruby16-tcltklib
+DEPENDS+= ${RUBY_PKGPREFIX}-tk>=${RUBY_VERSION}nb2:../../x11/ruby16-tk
 
 RUBY_VERSION=		${RUBY16_VERSION}
-USE_BUILDLINK3=		yes
-GNU_CONFIGURE=		yes
-TEST_TARGET=		test
-CONFIGURE_ARGS+=	--enable-shared
-CONFIGURE_ENV+=		PREFIX="${PREFIX}"
-BUILD_DEFS+=		USE_INET6
+NO_CHECKSUM=		yes
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
 
-# Ruby build process depends on config.status's content
-CONFIG_STATUS_OVERRIDE=	# empty
+do-install:
+	@${ECHO_MSG} This os only a meta package.
 
 .include "../../lang/ruby/rubyversion.mk"
-
-.if !empty(RUBY_SUFFIX)
-CONFIGURE_ARGS+= --program-suffix="${RUBY_SUFFIX}"
-.endif
-.if defined(USE_INET6) && ${USE_INET6} == YES
-CONFIGURE_ARGS+= --enable-ipv6
-.endif
-
-DOCS=		ChangeLog README README.EXT README.EXT.ja README.ja ToDo \
-		doc/NEWS doc/forwardable.rd doc/forwardable.rd.ja \
-		doc/shell.rd doc/shell.rd.ja doc/irb/irb-tools.rd.ja \
-		doc/irb/irb.rd doc/irb/irb.rd.ja doc/net/http.rd.ja \
-		doc/net/pop.rd.ja doc/net/smtp.rd.ja doc/shell.rd \
-		doc/shell.rd.ja
-EXT_DOCS=	digest/digest.txt digest/digest.txt.ja \
-		etc/etc.txt etc/etc.txt.ja syslog/syslog.txt
-PTY_ROCS=	README README.expect README.expect.ja README.ja
-
-REPLACE_RUBY=	bin/irb \
-		lib/matrix.rb sample/biorhythm.rb sample/cal.rb \
-		sample/exyacc.rb sample/from.rb sample/fullpath.rb \
-		sample/goodfriday.rb sample/less.rb \
-		sample/mine.rb sample/mpart.rb sample/observ.rb \
-		sample/pi.rb sample/rcs.rb sample/test.rb \
-		sample/time.rb sample/trojan.rb sample/uumerge.rb
-
-pre-configure:
-	${RM} -f ${WRKSRC}/ext/curses/MANIFEST
-	${RM} -f ${WRKSRC}/ext/gdbm/MANIFEST
-	${RM} -f ${WRKSRC}/ext/readline/MANIFEST
-	${RM} -f ${WRKSRC}/ext/tcltklib/MANIFEST
-	${RM} -f ${WRKSRC}/ext/tk/MANIFEST
-
-pre-build:
-	@${FIND} ${WRKSRC} -name '*.orig' -exec ${RM} -f {} \;
-
-post-install:
-	${STRIP} ${RUBY}
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/irb
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/net
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/pty
-.for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/${f:C/^doc\///}
-.endfor
-.for f in ${EXT_DOCS}
-	${INSTALL_DATA} ${WRKSRC}/ext/${f} ${RUBY_DOCDIR}
-.endfor
-.for f in ${PTY_ROCS}
-	${INSTALL_DATA} ${WRKSRC}/ext/pty/${f} ${RUBY_DOCDIR}/pty/${f}
-.endfor
-	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/irb ${PREFIX}/bin/irb16
-	${INSTALL_DATA} ${WRKSRC}/sample/* ${RUBY_EXAMPLESDIR}
-	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/pty
-	${INSTALL_DATA} ${WRKSRC}/ext/pty/expect_sample.rb \
-		${WRKSRC}/ext/pty/script.rb ${WRKSRC}/ext/pty/shl.rb \
-		${RUBY_EXAMPLESDIR}/pty
-
-.include "../../mk/bdb.buildlink3.mk"
 .include "../../lang/ruby/Makefile.common"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
