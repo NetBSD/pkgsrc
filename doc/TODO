@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.725 2003/07/16 10:57:46 wiz Exp $
+$NetBSD: TODO,v 1.726 2003/07/16 15:36:35 adam Exp $
 
 Suggested new packages
 ======================
@@ -132,7 +132,6 @@ Suggested package updates
 	o gtetrinet-0.7.3
 	o gtk-gnutella-0.92 [pkg/21551]
 	o gtkglext-1.0.0
-	o gtkmm-2.2.2
 	o guile-1.6.4
 	o hatari-0.40
 	o host-20030604
