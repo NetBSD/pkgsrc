@@ -1,0 +1,7 @@
+  This package contains a HTML documentation for gEDA.
+
+  gEDA is a meta package comprising a collection of tools which are
+used to make electrical circuit design, simulation and prototyping/
+production easier/doable.  gEDA is a project, which was started
+because of the lack of free EDA tools for UNIX.  All of the tools
+in gEDA are released under the GNU Public License version 2 (GPL).
