@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.982 2003/11/01 13:08:56 wiz Exp $
+$NetBSD: TODO,v 1.983 2003/11/01 16:54:25 salo Exp $
 
 Suggested new packages
 ======================
@@ -314,8 +314,6 @@ Suggested package updates
 	o scribus-1.1.2
 	o sendfile-20010424
 	o siag-3.6.0
-	o silc-client-0.9.15
-	o silc-server-0.9.15
 	o skill-4.1.1
 	o smarteiffel-1.1 [replacing smalleiffel]
 	o sml-nj-110.43
