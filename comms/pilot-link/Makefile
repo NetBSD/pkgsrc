@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1999/01/20 05:57:14 simonb Exp $
+# $NetBSD: Makefile,v 1.14 1999/05/12 22:32:14 tron Exp $
 #
 
 DISTNAME=	pilot-link.0.9.0
@@ -11,8 +11,25 @@ MAINTAINER=	sommerfeld@alum.mit.edu
 USE_PERL5=	yes
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--with-perl5=${PERL5_BIN} --without-tcl \
+		--without-python --without-java
 CONFIGURE_ENV=	INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 		INSTALL_DATA="${INSTALL_DATA}"
 MAKE_ENV=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
+
+PERL5_BIN=	${LOCALBASE}/bin/perl
+
+post-build:
+	@${ECHO} "===>   Building perl5 library"
+	@cd ${WRKSRC}/Perl5 && \
+	${PERL5_BIN} Makefile.PL && \
+	${SETENV} ${MAKE_ENV} \
+	  ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
+
+post-install:
+	@${ECHO} "===>   Installing perl5 library"
+	@cd ${WRKSRC}/Perl5 && \
+	${SETENV} ${MAKE_ENV} \
+	  ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
 
 .include "../../mk/bsd.pkg.mk"
