@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/04/27 15:03:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/08/02 12:30:01 adam Exp $
 bin/freetype-config
 include/freetype2/freetype/cache/ftccache.h
 include/freetype2/freetype/cache/ftccmap.h
@@ -82,7 +82,7 @@ lib/libfreetype.a
 lib/libfreetype.la
 lib/libfreetype.so
 lib/libfreetype.so.9
-lib/libfreetype.so.9.6
+lib/libfreetype.so.9.7
 lib/pkgconfig/freetype2.pc
 share/aclocal/freetype2.m4
 @unexec ${RMDIR} %D/share/aclocal 2>/dev/null || ${TRUE}
