@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/12/04 12:01:39 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2005/01/31 15:49:48 tron Exp $
 
 DISTNAME=		ppp-001107.src
 PKGNAME=		userppp-001107
@@ -32,6 +32,7 @@ post-patch:
 
 USERPPP_GROUP?=	network
 BUILD_DEFS+=	USERPPP_GROUP
+MAKE_ENV+=	USERPPP_GROUP="${USERPPP_GROUP}"
 
 USE_PKGINSTALL=	yes
 PKG_GROUPS=	${USERPPP_GROUP}
