@@ -1,7 +1,7 @@
-$NetBSD: patch-aq,v 1.1 2000/07/30 02:45:41 jlam Exp $
+$NetBSD: patch-aq,v 1.2 2000/11/29 21:02:05 tron Exp $
 
---- sysdeps/freebsd/procmap.c.orig	Thu May 27 14:56:48 1999
-+++ sysdeps/freebsd/procmap.c	Sat Jul 29 22:09:34 2000
+--- sysdeps/freebsd/procmap.c.orig	Thu May 27 20:56:48 1999
++++ sysdeps/freebsd/procmap.c	Wed Nov 29 21:57:15 2000
 @@ -32,9 +32,13 @@
  #include <sys/param.h>
  #include <sys/proc.h>
@@ -30,3 +30,17 @@ $NetBSD: patch-aq,v 1.1 2000/07/30 02:45:41 jlam Exp $
  /* Fixme ... */
  #undef _KERNEL
  #define _UVM_UVM_AMAP_I_H_ 1
+@@ -214,11 +221,13 @@
+ #endif
+ 
+ #if defined(__NetBSD__) && (__NetBSD_Version__ >= 104000000)
++#if defined(UVM_VNODE_VALID)
+ 		if (!vnode.v_uvm.u_flags & UVM_VNODE_VALID)
+ 			continue;
+ 
+ 		if ((vnode.v_type != VREG) || (vnode.v_tag != VT_UFS) ||
+ 		    !vnode.v_data) continue;
++#endif
+ 
+ 		if (kvm_read (server->machine.kd,
+ 			      (unsigned long) vnode.v_data,
