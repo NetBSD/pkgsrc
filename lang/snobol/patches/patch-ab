@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.2 2001/02/06 18:13:52 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2004/07/10 21:27:46 wiz Exp $
 
---- ./lib/bsd/mstime.c.orig	Wed Oct 30 12:39:40 1996
-+++ ./lib/bsd/mstime.c	Thu Jan 25 07:08:41 2001
+--- lib/bsd/mstime.c.orig	Wed Oct 30 12:39:40 1996
++++ lib/bsd/mstime.c	Thu Jan 25 07:08:41 2001
 @@ -12,11 +12,56 @@
   *	(and you don't need to know HZ)
   */
