@@ -1,0 +1,8 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2004/01/04 18:38:01 xtraeme Exp $
+
+NO_BUILD=	yes
+Q3ROOTDIR=	${PREFIX}/lib/lokigames/quake3server
+ONLY_FOR_PLATFORM=	NetBSD-*-i386
+
+DEPENDS+=       suse_base>=6.3:../../emulators/${SUSE_DIR_PREFIX}_base
+.include "../../emulators/suse_linux/Makefile.application"
