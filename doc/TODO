@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.658 2003/06/26 12:49:31 wiz Exp $
+$NetBSD: TODO,v 1.659 2003/06/26 14:53:10 dillo Exp $
 
 Suggested new packages
 ======================
@@ -231,7 +231,6 @@ Suggested package updates
 	o scmxx-0.6.3.8
 	o scribus-0.8
 	o scrot-0.8 [pkg/21974]
-	o scsh-0.6.4
 	o sendfile-20010424
 	o sipcalc-1.1.2 [pkg/21846]
 	o sketch-0.6.15
