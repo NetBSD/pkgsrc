@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/05/17 09:27:22 salo Exp $
+$NetBSD: distinfo,v 1.3 2004/06/22 08:50:22 salo Exp $
 
-SHA1 (wmi-7.tar.gz) = 3835161969e1f7ce82313c7706e0e1ef99e3a30f
-Size (wmi-7.tar.gz) = 166812 bytes
-SHA1 (patch-aa) = 6300d33fe5a88b87074f8d86b63bcb4482e6be1f
+SHA1 (wmi-8.tar.gz) = 0117f3859c484feb8dc33f3bc27d84a0bb41bdc9
+Size (wmi-8.tar.gz) = 178448 bytes
+SHA1 (patch-aa) = 32222a7358ffad0c89c3bf9581025965980ae6c3
