@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2005/03/14 04:08:42 dmcmahill Exp $
+$NetBSD: distinfo,v 1.7 2005/03/19 20:47:46 dmcmahill Exp $
 
 SHA1 (octave-forge-2004.11.16.tar.gz) = a27dbccd1665eb99b1457d23c1ac6b75eb3a9800
 RMD160 (octave-forge-2004.11.16.tar.gz) = 9356864920a5a4d4a4c1786c3ea74be0ec1e760d
 Size (octave-forge-2004.11.16.tar.gz) = 3639093 bytes
-SHA1 (patch-aa) = 1723f94e7532dd8ddd691bf5a348c5447b4d312b
+SHA1 (patch-aa) = d48898ade563f2ad62f1558f6b6ae98bf18b91ef
 SHA1 (patch-ab) = a9c46217e12f9278dfa9123707183c6d9e702070
 SHA1 (patch-ac) = fdd01692f5f762da42551a816972a80eb27a3819
 SHA1 (patch-ad) = 463f05f1061f4ff0e28f91f04be0aee348044ef8
