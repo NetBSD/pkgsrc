@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.8 1999/04/04 23:00:41 tron Exp $
+$NetBSD: patch-ab,v 1.9 1999/10/23 11:52:07 tron Exp $
 
---- vfs/Make-mc.in.orig	Tue Mar 30 08:34:34 1999
-+++ vfs/Make-mc.in	Mon Apr  5 00:41:09 1999
-@@ -194,11 +194,11 @@
+--- vfs/Make-mc.in.orig	Wed Sep 29 22:39:34 1999
++++ vfs/Make-mc.in	Sat Oct 23 13:36:10 1999
+@@ -16,6 +16,7 @@
+ INSTALL  = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@ -m 755
+ INSTALL_DATA = @INSTALL_DATA@
++INSTALL_SCRIPT = @INSTALL_SCRIPT@
+ AR = @AR@
+ 
+ #
+@@ -336,11 +337,11 @@
  	          $(DESTDIR)$(extfsdir)/$$I; \
  	done
  	for I in $(EXTFS_CONST) ; do \
