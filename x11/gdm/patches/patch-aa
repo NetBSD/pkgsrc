@@ -1,8 +1,34 @@
-$NetBSD: patch-aa,v 1.7 2004/04/02 15:17:43 jmmv Exp $
+$NetBSD: patch-aa,v 1.8 2004/05/17 01:17:46 danw Exp $
 
---- configure.orig	2004-03-15 19:38:10.000000000 +0100
+--- configure.orig	Sun Apr 11 21:53:01 2004
 +++ configure
-@@ -24803,6 +24803,7 @@ VRFY="verify-crypt"
+@@ -21237,7 +21237,8 @@ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+-$ac_includes_default
++#include <sys/types.h>
++#include <sys/socket.h>
+ int
+ main ()
+ {
+@@ -21606,13 +21607,13 @@ echo "${ECHO_T}yes" >&6
+ 
+             echo "$as_me:$LINENO: checking DAEMON_CFLAGS" >&5
+ echo $ECHO_N "checking DAEMON_CFLAGS... $ECHO_C" >&6
+-            DAEMON_CFLAGS=`$PKG_CONFIG --cflags "gtk+-2.0 >= $GTK_REQUIRED"`
++            DAEMON_CFLAGS=`$PKG_CONFIG --cflags "gtk+-2.0 >= $GTK_REQUIRED libgnome-2.0"`
+             echo "$as_me:$LINENO: result: $DAEMON_CFLAGS" >&5
+ echo "${ECHO_T}$DAEMON_CFLAGS" >&6
+ 
+             echo "$as_me:$LINENO: checking DAEMON_LIBS" >&5
+ echo $ECHO_N "checking DAEMON_LIBS... $ECHO_C" >&6
+-            DAEMON_LIBS=`$PKG_CONFIG --libs "gtk+-2.0 >= $GTK_REQUIRED"`
++            DAEMON_LIBS=`$PKG_CONFIG --libs "gtk+-2.0 >= $GTK_REQUIRED libgnome-2.0"`
+             echo "$as_me:$LINENO: result: $DAEMON_LIBS" >&5
+ echo "${ECHO_T}$DAEMON_LIBS" >&6
+         else
+@@ -24803,6 +24804,7 @@ VRFY="verify-crypt"
  if test x$enable_authentication_scheme != xcrypt -a \
  	x$enable_authentication_scheme != xshadow ; then
  
@@ -10,7 +36,7 @@ $NetBSD: patch-aa,v 1.7 2004/04/02 15:17:43 jmmv Exp $
  for ac_header in security/pam_appl.h
  do
  as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
-@@ -24960,6 +24961,7 @@ fi
+@@ -24960,6 +24962,7 @@ fi
  done
  
  fi
@@ -18,7 +44,7 @@ $NetBSD: patch-aa,v 1.7 2004/04/02 15:17:43 jmmv Exp $
  
  GDMASKPASS=
  EXTRA_GDMASKPASS_LIBS=
-@@ -28015,6 +28017,10 @@ else
+@@ -28015,6 +28018,10 @@ else
     X_SERVER="/usr/X11R6/bin/X"
     X_CONF_PATH="/usr/bin/X11:/usr/X11R6/bin:/usr/local/bin:/opt/X11R6/bin"
  fi
@@ -29,7 +55,7 @@ $NetBSD: patch-aa,v 1.7 2004/04/02 15:17:43 jmmv Exp $
  
  
  
-@@ -28064,6 +28070,8 @@ prefix=$old_prefix
+@@ -28064,6 +28071,8 @@ prefix=$old_prefix
  exec_prefix=$old_exec_prefix
  
                                                                                                                                                                                                                                                                                                                                                                                                        ac_config_files="$ac_config_files Makefile daemon/Makefile gui/Makefile gui/greeter/Makefile gui/greeter/themes/Makefile gui/greeter/themes/circles/Makefile gui/greeter/themes/happygnome/Makefile gui/greeter/themes/happygnome-list/Makefile gui/modules/Makefile gui/modules/AccessKeyMouseEvents gui/modules/AccessDwellMouseEvents utils/Makefile pixmaps/Makefile config/Makefile po/Makefile.in vicious-extensions/Makefile docs/Makefile docs/C/Makefile docs/de/Makefile docs/es/Makefile docs/fr/Makefile docs/it/Makefile docs/sv/Makefile docs/ja/Makefile docs/ko/Makefile docs/zh_CN/Makefile docs/zh_HK/Makefile docs/zh_TW/Makefile config/gdm.conf config/Xsession config/Default config/PreSession config/PostSession daemon/gdm gdm-stop gdm-restart gdm-safe-restart gdmsetup-security gdm.spec"
