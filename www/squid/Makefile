@@ -1,18 +1,11 @@
-# $NetBSD: Makefile,v 1.59 2002/02/18 17:00:38 taca Exp $
+# $NetBSD: Makefile,v 1.60 2002/02/22 10:07:38 tron Exp $
 
-DISTNAME=	squid-2.4.STABLE3-src
-PKGNAME=	squid-2.4.3
-PKGREVISION=	1
+DISTNAME=	squid-2.4.STABLE4-src
+PKGNAME=	squid-2.4.4
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.4/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
 		ftp://ftp1.au.squid-cache.org/pub/squid/squid-2/STABLE/
-
-PATCH_SITES=    http://www.squid-cache.org/Versions/v2/2.4/bugs/
-PATCHFILES=     squid-2.4.STABLE3-SNMP_memory_leaks.patch \
-		squid-2.4.STABLE3-ftp_coredump.patch \
-		squid-2.4.STABLE3-htcp_off.patch
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.squid-cache.org/
