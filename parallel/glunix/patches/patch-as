@@ -1,0 +1,9 @@
+$NetBSD: patch-as,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- progs/examples/Makefile~	Wed Nov  5 13:43:42 1997
++++ progs/examples/Makefile	Sat Feb 28 07:21:19 1998
+@@ -10,3 +10,3 @@
+ 
+-LIBS    = -lnsl -lglunix -lsocket
++LIBS    = -lglunix
+ MANPAGES = 

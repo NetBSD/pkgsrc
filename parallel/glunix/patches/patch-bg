@@ -1,0 +1,36 @@
+$NetBSD: patch-bg,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- progs/glupart/glupart_script.pl.orig	Wed Nov  5 15:30:11 1997
++++ progs/glupart/glupart_script.pl	Thu Apr  2 21:55:30 1998
+@@ -75,3 +75,3 @@
+ my $gl_tmpFile = "$gl_dataDir/.__glupart$$-tmp";
+-my $gl_emailAdmin = "glunix-admin\@now.CS.Berkeley.EDU";
++my $gl_emailAdmin = "root";
+ my $gl_datePath = "/bin/date";
+@@ -136,3 +136,3 @@
+     &unlock();
+-    open(USAGE, "|/usr/sww/bin/less") || open(USAGE, "|/bin/less") ||
++    open(USAGE, "|/usr/bin/less") || open(USAGE, "|/bin/less") ||
+ 	open(USAGE, "|/bin/more") || open(USAGE, ">&STDOUT");
+@@ -1491,3 +1491,4 @@
+ 		print "Creating directory $tmp\n";
+-		mkdir($tmp, 0755);
++                mkdir $tmp, 0755 || die("$!");
++		system("/usr/sbin/chown glunix:glunix $tmp");
+ 	    }
+@@ -1501,3 +1502,3 @@
+ 
+-    umask 0755;
++    umask 0022;
+     foreach $f (@files) {
+@@ -1507,2 +1508,3 @@
+ 	    print "Created file $f\n";
++	    system("/usr/sbin/chown glunix:glunix $f");
+ 	}
+@@ -1995,3 +1997,5 @@
+ if ($command eq "install") {
+-    if ($> != 0) {
++    if ($> != 0 && $< == 0) {
++	($<,$>) = ($>,$<);
++    } else {
+ 	print STDERR "You must be root to do \"glupart install\"\n";

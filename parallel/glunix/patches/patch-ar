@@ -1,0 +1,172 @@
+$NetBSD: patch-ar,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- progs/tools/gluinstall.pl.orig	Thu Sep 11 16:28:03 1997
++++ progs/tools/gluinstall.pl	Sat May 23 14:16:26 1998
+@@ -2,3 +2,6 @@
+ 
+-$glunix_base = "%%GLUNIX_DIR%%/release";
++$install_man = "/usr/bin/install -c -m 644 -o glunix -g glunix ";
++$install_bin = "/usr/bin/install -c -m 755 -o glunix -g glunix ";
++$imkdir = "/usr/bin/install -d -m 755 -o glunix -g glunix";
++$glunix_base = "%%GLUNIX_BASE%%";
+ $now_base = "%%INSTALL_DIR%%";
+@@ -23,9 +26,9 @@
+ 
+-&my_mkdir("$now_base/bin");
+-&my_mkdir("$now_base/lib");
+-&my_mkdir("$now_base/include");
+-&my_mkdir("$now_base/man");
+-if ($http_base ne "") {
+-    &my_mkdir("$http_base/man/html");
+-}
++#&my_mkdir("$now_base/bin");
++#&my_mkdir("$now_base/lib");
++#&my_mkdir("$now_base/include");
++#&my_mkdir("$now_base/man");
++#if ($http_base ne "") {
++#    &my_mkdir("$http_base/man/html");
++#}
+ 
+@@ -50,18 +53,39 @@
+ 
+-@files = <$glunix_base/glunix/include/*>;
+-@files = &strip_garbage(@files);
++#@files = <$glunix_base/glunix/include/*>;
++#@files = &strip_garbage(@files);
+ #print "Found include files: ", join(" ", @dirs), "\n";
+ 
+-foreach $val (@files) {
+-    $install_path = "$now_base/include/" . &path_tail($val);
+-    print "Installing $install_path\n";
+-    if ($justTesting) {
+-	print "Unlinking $install_path\n";
+-	print "Linking $install_path to $val\n";
+-    } else {
+-	unlink($install_path);
+-	symlink($val, $install_path);
+-    }
++#foreach $val (@files) {
++#  $install_path = "$now_base/include/" . &path_tail($val);
++#    print "Installing $install_path\n";
++#    if ($justTesting) {
++#	print "Unlinking $install_path\n";
++#	print "Linking $install_path to $val\n";
++#    } else {
++#	unlink($install_path);
++#	system("$install_man $val $install_path");
++#    }
++#}
++# create necc dirs.
++system("$imkdir $now_base/include");
++system("$imkdir $now_base/lib/$glunix_arch");
++system("$imkdir $now_base/bin/$glunix_arch");
++system("$imkdir $now_base/include/glib");
++system("$imkdir $now_base/lib/perl-lib/Time");
++system("$imkdir $now_base/man");
++
++system("$install_bin $glunix_base/glunix/bin/$glunix_arch/master $now_base/bin/$glunix_arch");
++system("$install_bin $glunix_base/glunix/bin/$glunix_arch/daemon $now_base/bin/$glunix_arch");
++system("$install_man $glunix_base/glunix/include/glib/*.h $now_base/include/glib");
++system("$install_man $glunix_base/glunix/include/*.h $now_base/include");
++system("$install_man $glunix_base/progs/tools/perl-lib/Time/* $now_base/lib/perl-lib/Time");
++system("$install_man $glunix_base/progs/tools/perl-lib/*.pl $now_base/lib/perl-lib");
++system("cp -R -p $glunix_base/glunix/man/* $now_base/man");
++system("rm $now_base/man/Makefile");
++@chownme = `find $glunix_base/glunix/man -name \\*`;
++foreach (@chownme) {
++  chomp;
++  $_ =~ s+$glunix_base/glunix/man++;
++  system("chown glunix:glunix $now_base/man/$_");
+ }
+-
+ print "\n";
+@@ -74,3 +98,3 @@
+ # Find all of the man pages in the release directory
+-@dirs = <$glunix_base/man/man?>;
++@dirs = <$glunix_base/glunix/man/man?>;
+ push(@dirs, <$glunix_base/glunix/man/man?>);
+@@ -79,21 +103,22 @@
+ 
+-foreach $val (@dirs) {
+-    @f = <$val/*.*>;
++#foreach $val (@dirs) {
++#    @f = <$val/*.*>;
+ #    print "Found man pages: ", join(" ", &man_pagename(@f)), "\n";
+-    push(@files, @f);
+-}
++#    push(@files, @f);
++#}
+ 
+-@files = <$glunix_base/man/man?/*.*>;
+-&install_manpages("$now_base/man/man", @files);
++#@files = <$glunix_base/man/man?/*.*>;
++#&install_manpages("$now_base/man/man", @files);
+ 
+-if ($http_base ne "") {
+-    @files = <$glunix_base/man/html?/*.*>;
+-    &install_manpages("$http_base/man/html", @files);
+-}
+-
+-print "Creating windex file (this may take a while)\n";
+-if (!$justTesting) {
+-    system("/usr/bin/catman -M $now_base/man -w");
+-    print "Done with catman!\n";
+-}
++#if ($http_base ne "") {
++#    @files = <$glunix_base/man/html?/*.*>;
++#    &install_manpages("$http_base/man/html", @files);
++#}
++
++# no windex file in bsd.
++#print "Creating windex file (this may take a while)\n";
++#if (!$justTesting) {
++#    system("/usr/bin/catman -M $now_base/man -w");
++#    print "Done with catman!\n";
++#}
+ 
+@@ -104,3 +129,3 @@
+ 
+-@files = <$glunix_base/lib/$glunix_arch/*>;
++@files = <$glunix_base/glunix/lib/$glunix_arch/*>;
+ @files = &strip_garbage(@files);
+@@ -115,3 +140,3 @@
+ #       print "Linking $install_path to $val\n";
+-	symlink($val, $install_path);
++	system("$install_man $val $install_path");
+     }
+@@ -131,9 +156,9 @@
+ foreach $val (@copy_progs) {
+-    if (-e "$glunix_base/bin/$glunix_arch/$val") {
+-	print "Copying $glunix_base/bin/$glunix_arch/$val to $now_base/bin/$val\n";
++    if (-e "$glunix_base/glunix/bin/$glunix_arch/$val") {
++	print "Copying $glunix_base/glunix/bin/$glunix_arch/$val to $now_base/bin/$val\n";
+ 	if (!$justTesting) {
+-	    system("/bin/cp $glunix_base/bin/$glunix_arch/$val $now_base/bin/$val");
++	    system("$install_bin $glunix_base/glunix/bin/$glunix_arch/$val $now_base/bin/$val");
+ 	}
+     } else {
+-	print "Cannot find $glunix_base/bin/$glunix_arch/$val to copy\n";
++	print "Cannot find $glunix_base/glunix/bin/$glunix_arch/$val to copy\n";
+     }
+@@ -142,3 +167,3 @@
+ # Find all of the programs in the release directory
+-@dirs = <$glunix_base/bin/*>;
++@dirs = <$glunix_base/glunix/bin/*>;
+ 
+@@ -181,3 +206,3 @@
+ #       print "symlink(\"GLUnix-bin\", $install_path);\n";
+-	symlink("GLUnix-bin", $install_path);
++	system("$install_bin $val $install_path");
+     }
+@@ -188,3 +213,5 @@
+     if (!$justTesting) {
+-	chmod 06511, $val;
++#	chmod 06511, $val;
++      system("chown root:glunix $now_base/bin/$val");
++      system("chmod 6511 $now_base/bin/$val");
+     }
+@@ -227,3 +254,3 @@
+ #           print "symlink($val, $install_path)\n";
+-	    symlink($val, $install_path);
++	    system("$install_man $val $install_path");
+ 	}

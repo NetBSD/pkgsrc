@@ -1,0 +1,13 @@
+$NetBSD: patch-be,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- progs/glumake/make.h~	Fri Aug  2 12:05:32 1996
++++ progs/glumake/make.h	Mon Mar  2 07:44:05 1998
+@@ -88,7 +88,3 @@
+ 
+-#ifdef HAVE_SYS_SIGLIST
+-#ifndef SYS_SIGLIST_DECLARED
+-extern char *sys_siglist[];
+-#endif
+-#else
++#ifndef HAVE_SYS_SIGLIST
+ #include "signame.h"

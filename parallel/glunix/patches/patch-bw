@@ -1,0 +1,15 @@
+$NetBSD: patch-bw,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+diff -U 1 progs/glush/sh.exec.c ../old/progs/glush/sh.exec.c
+--- progs/glush/sh.exec.c	Tue Jul 25 12:13:14 1995
++++ ../old/progs/glush/sh.exec.c	Thu Mar 12 02:12:42 1998
+@@ -153,3 +153,3 @@
+ static	int 	iscommand	__P((Char *));
+-
++/*
+ char *index(a, b)
+@@ -167,3 +167,3 @@
+ }
+-
++*/
+ void

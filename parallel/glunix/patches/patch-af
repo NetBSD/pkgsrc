@@ -1,0 +1,52 @@
+$NetBSD: patch-af,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
+
+--- glunix/src/sched/csched.cc.orig	Thu Jul 25 15:01:27 1996
++++ glunix/src/sched/csched.cc	Thu Mar 12 03:52:15 1998
+@@ -86,2 +86,8 @@
+ #include <errno.h>
++
++#ifdef __NetBSD__
++#include <sys/time.h>
++#include <sys/resource.h>
++typedef short pri_t;
++#else
+ #include <sys/priocntl.h>
+@@ -89,2 +95,3 @@
+ #include <sys/tspriocntl.h>
++#endif
+ 
+@@ -104,2 +111,3 @@
+  *****************************************************************************/
++#ifndef __NetBSD__
+ static short
+@@ -122,2 +130,3 @@
+ }
++#endif
+ 
+@@ -133,2 +142,5 @@
+  *****************************************************************************/
++#ifdef __NetBSD__
++
++#else
+ static id_t
+@@ -154,3 +166,3 @@
+ }
+-
++#endif
+ /******************************************************************************
+@@ -170,4 +182,10 @@
+ void
+-Sched_SetSchedPriority(pid_t targPid, pri_t offset)
++Sched_SetSchedPriority(pid_t targPid, short offset)
+ {
++#ifdef __NetBSD__
++
++  setpriority(PRIO_PROCESS, targPid, PRIO_MIN+offset);
++  return;
++
++#else
+     pcparms_t  parms;
+@@ -184,2 +202,3 @@
+     return;
++#endif
+ }

@@ -1,0 +1,9 @@
+$NetBSD: patch-av,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- progs/glukill/Makefile~	Fri Dec  6 17:19:09 1996
++++ progs/glukill/Makefile	Sat Feb 28 07:21:57 1998
+@@ -2,3 +2,3 @@
+ SRCS    = glukill.c
+-LIBS    = -lglunix -lsocket -lnsl
++LIBS    = -lglunix
+ 

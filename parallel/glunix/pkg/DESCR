@@ -1,0 +1,16 @@
+Recent technology trends in high-speed/low-latency local area networks has
+lead to a convergence of hardware in massively parallel processors (MPPs)
+and Networks of Workstations (NOWs). Relative to traditional MPPs, a NOW
+offers the potential for better cost-effectiveness, increased scalability,
+and decreased hardware and software development time. The main
+differentiating point between NOWs and MPPs will soon be the operating
+system software. 
+
+Our system, called GLUnix, is built as a layer on top of existing
+operating systems. This strategy makes the system quickly portable, tracks
+vendor software upgrades, and reduces development time. Our work is an
+example of "higher-order" systems research where new systems can be built
+quickly by mapping new services onto the functionality provided by the
+layer beneath. 
+
+see: http://now.cs.berkeley.edu

@@ -1,0 +1,32 @@
+$NetBSD: patch-bj,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- glunix/src/part/mpart.cc~	Fri Sep  5 12:30:01 1997
++++ glunix/src/part/mpart.cc	Thu Apr  2 09:15:10 1998
+@@ -272,3 +272,5 @@
+ 	// Child executes here
++#ifndef __NetBSD__
+ 	close(pipeFds[1]);
++#endif
+ 	if (dup2(pipeFds[0], STDIN_FILENO) < 0) {
+@@ -277,4 +279,7 @@
+ 	}
+-
++#ifdef __NetBSD__
++	if (dup2(pipeFds[1], STDOUT_FILENO) < 0) {
++#else
+ 	if (dup2(pipeFds[0], STDOUT_FILENO) < 0) {
++#endif
+ 	    DE("dup2(STDOUT) failed: %s\n", strerror(errno));
+@@ -293,6 +298,11 @@
+     }
++#ifndef __NetBSD__
+     close(pipeFds[0]);
+-
++#endif
+     *pidPtr = pid;
++#ifdef __NetBSD__
++    *fdPtr = pipeFds[0];
++#else
+     *fdPtr = pipeFds[1];
++#endif
+ 

@@ -1,0 +1,172 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- glunix/src/Makefile.orig	Wed Nov  5 15:30:39 1997
++++ glunix/src/Makefile	Mon Oct 12 21:31:58 1998
+@@ -2,7 +2,7 @@
+ #
+ # Basic path definitions
+ #
+-GLUNIX_BASE = /disks/barad-dur/now/glunix
++GLUNIX_BASE = $(GLUNIX_SOURCE)/glunix
+ 
+ #
+ # This lists all of the modules in the system that should be compiled
+@@ -50,6 +50,11 @@
+ # If this Makefile was NOT invoked by glubuild, then we need to set up
+ # the architecture stuff here.  glubuild does this for us if it was run.
+ #
++GLUNIX_ARCH= $(ARCH)
++GLUNIX_OS= $(OPSYS)
++GLUNIX_NET:=tcp
++INSTALL := /usr/bin/install
++
+ ifndef GLUNIX_ARCH
+   GLUNIX_ARCH = sun4
+ endif
+@@ -59,11 +64,8 @@
+   GLUNIX_NET := tcp
+   INSTALL := /usr/sww/bin/ginstall
+ endif
+-ifeq ($(GLUNIX_ARCH),i386)
+-  GLUNIX_OS := solaris2.6
+-  GLUNIX_NET := tcp
+-  INSTALL := /usr/now/bin/install
+-endif
++#ifeq ($(GLUNIX_ARCH),i386)
++#endif
+ GLUNIX_PLATFORM = $(GLUNIX_ARCH)-$(GLUNIX_OS)-$(GLUNIX_NET)
+ 
+ MKDIR        = $(INSTALL) -d -m 0775 -g glunix
+@@ -71,34 +73,43 @@
+ INSTALL_MAN  = $(INSTALL) -m 0664 -g glunix
+ 
+ OBJROOT := ../obj
+-BINROOT := ../../bin
+-LIBROOT := ../../lib
++BINROOT := ../bin
++LIBROOT := ../lib
+ OBJDIR := $(OBJROOT)/$(GLUNIX_PLATFORM)
+ BINDIR := $(BINROOT)/$(GLUNIX_PLATFORM)
+ LIBDIR := $(LIBROOT)/$(GLUNIX_PLATFORM)
+ 
+ CC := gcc
+-LD := gcc
++LD := ld
+ 
+ INCLUDE_DIRS := -I../include $(addprefix -I./,$(ALL_MODULES))
+ #CFLAGS += -pipe -g -Wall -DDEBUG -DGLUNIX_PLATFORM=$(GLUNIX_PLATFORM) $(INCLUDE_DIRS)
+-CFLAGS += -Wall -g -O2 -DDEBUG -DGLUNIX_PLATFORM=$(GLUNIX_PLATFORM) $(INCLUDE_DIRS)
++CFLAGS += -Wall -g -O2 $(FLAGS) -DDEBUG -DGLUNIX_PLATFORM=$(GLUNIX_PLATFORM) $(INCLUDE_DIRS)
+ #CFLAGS += -pipe -Wall -O4 -DGLUNIX_PLATFORM=$(GLUNIX_PLATFORM) $(INCLUDE_DIRS)
+ 
+-MLDLIBS += -lsocket -lnsl \
+-           -L$(GLUNIX_BASE)/release/lib/$(GLUNIX_PLATFORM)
+-DLDLIBS += -R/usr/lib -lsocket -lnsl -lm -lelf -lkvm \
+-           -L$(GLUNIX_BASE)/release/lib/$(GLUNIX_PLATFORM)
++MLDLIBS += -L$(GLUNIX_BASE)/release/lib/$(GLUNIX_PLATFORM)
++DLDLIBS += -R/usr/lib -lm -lkvm -L$(GLUNIX_BASE)/release/lib/$(GLUNIX_PLATFORM)
++
++#MLDLIBS += -lsocket -lnsl \
++#           -L$(GLUNIX_BASE)/release/lib/$(GLUNIX_PLATFORM)
++#DLDLIBS += -R/usr/lib -lsocket -lnsl -lm -lelf -lkvm \
++#           -L$(GLUNIX_BASE)/release/lib/$(GLUNIX_PLATFORM)
+ 
+ MOBJS := $(addprefix $(OBJDIR)/,$(patsubst %.c,%.o,$(MSRC:.cc=.o)))
+ DOBJS := $(addprefix $(OBJDIR)/,$(patsubst %.c,%.o,$(DSRC:.cc=.o)))
+ LOBJS := $(addprefix $(OBJDIR)/,$(patsubst %.c,%.o,$(LSRC:.cc=.o)))
++SOBJS := $(addprefix $(OBJDIR)/,$(patsubst %.c,%.so,$(LSRC:.cc=.so)))
+ 
+ vpath %.cc $(ALL_BUILD_MODULES)
+ vpath %.c list
+ vpath %.o $(OBJDIR)
+ vpath %.a $(OBJDIR)
+ 
++$(OBJDIR)/%.so : %.cc $(OBJDIR)
++	"rm" -f $@ ; \
++	echo $(CC) -fpic -DPIC -c $(CFLAGS) $(CPPFLAGS) $< -o $@ ; \
++	$(CC) -fpic -DPIC -c $(CFLAGS) $(CPPFLAGS) $< -o $@ ; \
++
+ $(OBJDIR)/%.o : %.cc $(OBJDIR)
+ 	"rm" -f $@ ; \
+ 	echo $(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@ ; \
+@@ -136,6 +147,7 @@
+ 	"rm" -f $(DOBJS) $(OBJDIR)/daemon; \
+ 	echo Deleting library objects; \
+ 	"rm" -f $(LOBJS) $(OBJDIR)/libglunix.*
++	"rm" -f $(SOBJS) $(OBJDIR)/libglunix.*
+ 
+ tags:
+ 	echo 'etags -C ../include/*.h ../include/glib/*.h */*.h */*.cc */*.c'
+@@ -143,7 +155,7 @@
+ 
+ master:  $(OBJDIR)/master
+ daemon:  $(OBJDIR)/daemon
+-library: $(OBJDIR)/libglunix.so
++library: $(OBJDIR)/libglunix.so.1.0
+ 
+ install: master daemon library
+ 	$(MKDIR) $(BINDIR); \
+@@ -155,9 +167,9 @@
+ 	$(INSTALL_BIN) $(OBJDIR)/daemon $(BINDIR)/daemon; \
+ 	echo Installing library; \
+ 	$(MKDIR) $(LIBDIR); \
+-	$(INSTALL_BIN) $(LIBDIR)/libglunix.so $(LIBDIR)/libglunix.so.old; \
++	$(INSTALL_BIN) $(LIBDIR)/libglunix.so.1.0 $(LIBDIR)/libglunix.so.old; \
+ 	$(INSTALL_BIN) $(LIBDIR)/libglunix.a $(LIBDIR)/libglunix.a.old; \
+-	$(INSTALL_BIN) $(OBJDIR)/libglunix.so $(LIBDIR)/libglunix.so; \
++	$(INSTALL_BIN) $(OBJDIR)/libglunix.so.1.0 $(LIBDIR)/libglunix.so.1.0; \
+ 	$(INSTALL_BIN) $(OBJDIR)/libglunix.a $(LIBDIR)/libglunix.a
+ endif
+ 
+@@ -165,30 +177,32 @@
+ 	echo " " ; \
+ 	echo Linking master; \
+ 	$(INSTALL_BIN) $(OBJDIR)/master $(OBJDIR)/master.old ; \
+-	echo $(PURIFY_COMMAND) $(LD) -g -o $(OBJDIR)/master $(MOBJS) $(MLDLIBS) ; \
+-	$(PURIFY_COMMAND) $(LD) -g -o $(OBJDIR)/master $(MOBJS) $(MLDLIBS); \
++	echo $(PURIFY_COMMAND) $(CC) -o $(OBJDIR)/master $(MOBJS) $(MLDLIBS) ; \
++	$(PURIFY_COMMAND) $(CC) -o $(OBJDIR)/master $(MOBJS) $(MLDLIBS); \
+ 	echo Master done.
+ 
+ $(OBJDIR)/daemon: $(DOBJS)
+ 	echo " " ; \
+ 	echo Linking daemon; \
+ 	$(INSTALL_BIN) $(OBJDIR)/daemon $(OBJDIR)/daemon.old ; \
+-	echo $(PURIFY_COMMAND) $(LD) -g -o $(OBJDIR)/daemon $(DOBJS) $(DLDLIBS) ; \
+-	$(PURIFY_COMMAND) $(LD) -g -o $(OBJDIR)/daemon $(DOBJS) $(DLDLIBS); \
++	echo $(PURIFY_COMMAND) $(CC) -o $(OBJDIR)/daemon $(DOBJS) $(DLDLIBS) ; \
++	$(PURIFY_COMMAND) $(CC) -o $(OBJDIR)/daemon $(DOBJS) $(DLDLIBS); \
+ 	echo Daemon done.
+ 
+-$(OBJDIR)/libglunix.so: $(LOBJS)
++$(OBJDIR)/libglunix.so.1.0: $(LOBJS) $(SOBJS)
+ 	echo " " ; \
+ 	echo "Building library" ; \
+ 	rm -f $(OBJDIR)/libglunix.a ; \
+ 	echo ar ruc $(OBJDIR)/libglunix.a $(LOBJS) ; \
+ 	ar ruc $(OBJDIR)/libglunix.a $(LOBJS) ; \
+-	echo $(LD) -g -o $(OBJDIR)/libglunix.so -G $(LOBJS) ; \
+-	$(LD) -g -o $(OBJDIR)/libglunix.so -G $(LOBJS) ; \
++	echo ranlib $(OBJDIR)/libglunix.a ; \
++	ranlib $(OBJDIR)/libglunix.a ; \
++	echo $(LD) -x -Bshareable -Bforcearchive -o $(OBJDIR)/libglunix.so.1.0 $(SOBJS) ; \
++	$(LD) -x -Bshareable -Bforcearchive -o $(OBJDIR)/libglunix.so.1.0 $(SOBJS) ; \
+ 	touch $(OBJDIR)/libglunix.a ; \
+-	touch $(OBJDIR)/libglunix.so ; \
+-	chgrp glunix $(OBJDIR)/libglunix.a $(OBJDIR)/libglunix.so; \
+-	chmod g+w $(OBJDIR)/libglunix.a $(OBJDIR)/libglunix.so; \
++	touch $(OBJDIR)/libglunix.so.1.0 ; \
++	chgrp glunix $(OBJDIR)/libglunix.a $(OBJDIR)/libglunix.so.1.0; \
++	chmod g+w $(OBJDIR)/libglunix.a $(OBJDIR)/libglunix.so.1.0; \
+ 	echo Library done.
+ 
+ #$(sort $(MOBJS) $(DOBJS) $(LOBJS)): $(OBJDIR)
+@@ -202,7 +216,7 @@
+ 	echo Rebuilding dependencies.; \
+ 	touch $@.new; \
+ 	echo makedepend -f$@ -p$(OBJDIR)/ -- $(CFLAGS) -- ... ; \
+-	makedepend -f$@.new -w256 -p$(OBJDIR)/ -- $(CFLAGS) -- $(DEPEND_SRC) ;\
++	../../makedepend/makedepend -f$@.new -w256 -p$(OBJDIR)/ -- $(CFLAGS) -- $(DEPEND_SRC) ;\
+ 	cat $@.new | sed -e 's,/usr/include[^ ]*,,g' | sed -e 's,[^:]*: *$$,,' | sed -e 's,$(OBJDIR)/[^/]*,$(OBJDIR),' | uniq >$@ ; \
+ 	rm -f $@.new.bak $@.new ; \
+ 	echo " " ; \

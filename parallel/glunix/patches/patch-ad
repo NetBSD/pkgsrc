@@ -1,0 +1,11 @@
+$NetBSD: patch-ad,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
+
+--- glunix/src/debug/cdebug.cc.orig	Thu Feb  5 03:21:37 1998
++++ glunix/src/debug/cdebug.cc	Thu Feb  5 03:25:35 1998
+@@ -148,4 +148,4 @@
+ 
+-#include <sys/varargs.h>
+-#include <sys/va_list.h>
++/*#include <varargs.h>*/
++/*#include <sys/va_list.h>*/
+ 

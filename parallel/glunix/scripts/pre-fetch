@@ -1,0 +1,30 @@
+#!/bin/sh
+if [ -f $DISTDIR/glunix-release-1-0a.tar.gz ]; then
+  exit 0
+fi
+
+echo ""
+echo "The authors of glunix would like to keep track of"
+echo "who thier user community is.  They promise that the"
+echo "information obtained will not be used for marketing"
+echo "of any kind."
+echo ""
+echo -n "Please enter your Name: "
+
+read dname
+if [ "$dname" = "" ]; then
+	echo "Please run make again, and enter your name."
+	exit 1
+fi
+echo -n "Please enter your email address: "
+read email
+if [ "$email" = "" ]; then
+	echo "Please run make again, and enter your email."
+	exit 1
+fi
+
+name=`echo $dname | sed 's/ /+/'`
+nmail=`echo $email | sed 's/ /+/'`
+
+ftp "http://now.cs.berkeley.edu/cgi-bin/glunix_download.pl?name=$name&email=$nmail&use=NetBSD+pkg+system+download."
+$RM "glunix_download.pl?name=$name&email=$email&use=NetBSD+pkg+system+download."

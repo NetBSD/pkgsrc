@@ -1,0 +1,17 @@
+$NetBSD: patch-bu,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+diff -U 1 progs/glush/sh.c ../old/progs/glush/sh.c
+--- progs/glush/sh.c	Tue Sep 19 11:02:07 1995
++++ ../old/progs/glush/sh.c	Thu Mar 12 01:46:30 1998
+@@ -38,3 +38,3 @@
+ #include "sh.h"
+-#include "glib.h"
++/*#include "glib.h"*/
+ 
+@@ -1172,6 +1172,2 @@
+ 	    sigret_t (*oparintr)() = parintr;
+-
+-/********** GLUnix -- Doug's changes ***********/
+-	srcfile("/disks/barad-dur/now/glunix/data/glush.cshrc", 0, 0, NULL);
+-/***********************************************/
+ 
