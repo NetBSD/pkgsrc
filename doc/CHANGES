@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8884 2005/01/23 09:25:39 wulf Exp $
+$NetBSD: CHANGES,v 1.8885 2005/01/23 17:45:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -507,3 +507,16 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated squirrelmail to 1.4.4 [martti 2005-01-23]
 	Updated xlog to 1.0 [wulf 2005-01-23]
 	Updated xdx to 1.2 [wulf 2005-01-23]
+	Updated ruby to 1.8.2 [taca 2005-01-23]
+	Updated ruby18 to 1.8.2 [taca 2005-01-23]
+	Updated ruby-iconv to 1.8.2 [taca 2005-01-23]
+	Updated ruby-dbm to 1.8.2 [taca 2005-01-23]
+	Updated ruby-gdbm to 1.8.2 [taca 2005-01-23]
+	Updated ruby-curses to 1.8.2 [taca 2005-01-23]
+	Updated ruby-readline to 1.8.2 [taca 2005-01-23]
+	Updated ruby-digest to 1.8.2 [taca 2005-01-23]
+	Updated ruby-zlib to 1.8.2 [taca 2005-01-23]
+	Updated ruby-mode to 1.8.2 [taca 2005-01-23]
+	Updated ruby-openssl to 1.8.2 [taca 2005-01-23]
+	Updated ruby-tcltk to 1.8.2 [taca 2005-01-23]
+	Updated ruby-tk to 1.8.2 [taca 2005-01-23]
