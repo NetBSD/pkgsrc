@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2002/07/02 14:41:20 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2002/10/25 12:18:15 wiz Exp $
 
 DISTNAME=	exim-4.05
 CATEGORIES=	mail net
@@ -12,8 +12,10 @@ HOMEPAGE=	http://www.exim.org/
 COMMENT=	The Exim mail transfer agent, a replacement for sendmail
 
 USE_PERL5=	yes
+USE_BUILDLINK2=	yes
 INTERACTIVE_STAGE=	build # actually, needs "mail" user
                               # before configure step, see below
+MAKE_ENV+=	SSLBASE=${SSLBASE:Q}
 
 pre-patch:
 	${MKDIR} ${WRKSRC}/Local
@@ -57,5 +59,5 @@ post-install:
 	    ${FILESDIR}/mailer.conf.exim \
 	    > ${PREFIX}/etc/exim/mailer.conf.exim
 
-.include "../../security/openssl/buildlink.mk"
+.include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/09/04 00:14:57 itojun Exp $
+# $NetBSD: Makefile,v 1.15 2002/10/25 12:13:18 wiz Exp $
 
 DISTNAME=	cue-snap-20020826
 PKGNAME=	cue-20020826
@@ -9,6 +9,7 @@ MAINTAINER=	packages@netbsd.org
 COMMENT=	mh-e like mail user agent
 
 GNU_CONFIGURE=	yes
+USE_BUILDLINK2=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -21,7 +22,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 # require Canna, for now, cue assumes Japanese encoding anyways
-CONFIGURE_ARGS+=	--with-canna=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-canna=${BUILDLINK_PREFIX.canna-lib}
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 .if defined(USE_IDEA)
 CONFIGURE_ARGS+=	--enable-idea
@@ -35,6 +36,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/cue.hlp  ${PREFIX}/share/doc/cue
 	${INSTALL_DATA} ${WRKSRC}/cue.html ${PREFIX}/share/doc/cue
 
-.include "../../inputmethod/canna-lib/buildlink.mk"
-.include "../../security/openssl/buildlink.mk"
+.include "../../inputmethod/canna-lib/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
