@@ -1,12 +1,19 @@
-# $NetBSD: Makefile,v 1.17 2003/04/29 21:34:02 jtb Exp $
+# $NetBSD: Makefile,v 1.18 2003/05/17 18:28:13 jtb Exp $
 
-DISTNAME=	vm-7.14
+DISTNAME=	vm-7.15
 CATEGORIES=	mail
-MASTER_SITES=	ftp://ftp.uni-mainz.de/pub/gnu/vm/ \
+MASTER_SITES=	ftp://ftp.uni-mainz.de/pub/software/gnu/vm/ \
 		ftp://tug.org/vm/ \
-		ftp://ftp.uu.net/networking/mail/vm/ \
 		ftp://psg.com/pub/vm/ \
-		ftp://sunsite.cnlab-switch.ch/mirror/vm/
+		ftp://sunsite.cnlab-switch.ch/mirror/vm/ \
+		ftp://ftp.uu.net/networking/mail/vm/ \
+		http://www.interhack.net/projects/vm/ \
+		ftp://ftp.ccs.neu.edu/net/mirrors/VM/ \
+		http://www.rge.com/pub/mail/vm/ \
+		http://ftp.lip6.fr/pub/unix/mail/vm/ \
+		http://ftp.jussieu.fr/pub/unix/mail/vm/ \
+		ftp://ftp.surfnet.nl/pub/mail/vm/ \
+		http://ftp.algx.net/pub/packages/mail/vm/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.wonderworks.com/vm/
