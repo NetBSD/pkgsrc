@@ -1,16 +1,16 @@
-$NetBSD: patch-ad,v 1.3 2004/04/25 21:37:59 recht Exp $
+$NetBSD: patch-ad,v 1.4 2004/06/04 15:43:25 xtraeme Exp $
 
---- docs/Makefile.in.orig	2004-04-17 00:50:41.000000000 +0200
-+++ docs/Makefile.in	2004-04-25 21:30:17.000000000 +0200
-@@ -116,8 +116,10 @@
+--- docs/Makefile.in.orig	2004-06-04 15:33:21.000000000 +0000
++++ docs/Makefile.in	2004-06-04 15:33:54.000000000 +0000
+@@ -117,8 +117,10 @@
  am__quote = @am__quote@
  install_sh = @install_sh@
  
 +@BUILD_CLAMD_TRUE@@HAVE_MILTER_TRUE@MILTER_MANS = man/clamav-milter.8
 +
- EXTRA_DIST = clamdoc.pdf DMS Spanish Japanese html man FreeBSD-HowTo Portugese Turkish clamd_supervised clamav-mirror-howto.pdf signatures.pdf French Polish
--man_MANS = man/clamscan.1 man/freshclam.1 man/sigtool.1 man/clamd.8 man/clamav.conf.5 man/clamdscan.1 man/clamav-milter.8
-+man_MANS = man/clamscan.1 man/freshclam.1 man/sigtool.1 man/clamd.8 man/clamav.conf.5 man/clamdscan.1  $(MILTER_MANS)
+ EXTRA_DIST = clamdoc.pdf DMS German Spanish Japanese html man FreeBSD-HowTo Portugese Turkish clamd_supervised clamav-mirror-howto.pdf signatures.pdf French Polish
+-man_MANS = man/clamscan.1 man/freshclam.1 man/sigtool.1 man/clamd.8 man/clamav.conf.5 man/clamdscan.1 man/clamav-milter.8 man/freshclam.conf.5
++man_MANS = man/clamscan.1 man/freshclam.1 man/sigtool.1 man/clamd.8 man/clamav.conf.5 man/clamdscan.1 man/freshclam.conf.5
  subdir = docs
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  CONFIG_HEADER = $(top_builddir)/clamav-config.h
