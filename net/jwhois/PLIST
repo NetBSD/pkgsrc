@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2003/09/16 09:24:57 agc Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/03/09 11:41:44 seb Exp $
 bin/jwhois
-info/jwhois.info
 man/man1/jwhois.1
 man/sv/man1/jwhois.1
 share/examples/jwhois/jwhois.conf.default
