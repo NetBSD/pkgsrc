@@ -1,4 +1,4 @@
-/*	$NetBSD: xpkgwedge.def,v 1.5 2001/06/16 08:53:49 veego Exp $	*/
+/*	$NetBSD: xpkgwedge.def,v 1.6 2001/06/29 18:27:30 jlam Exp $	*/
 
 #ifdef AfterVendorCF
 
@@ -63,4 +63,32 @@ InstallNamedTargetNoClobber(install,file.ad,$(INSTAPPFLAGS),$(XAPPLOADDIR),class
 #define ImakeCmd imake -I$(PREFIX)/lib/X11/config
 #endif
 
+#ifdef BuildLink
+/*
+ * Force the buildlink include and lib directories to the head of the
+ * compiler search paths.  The include directory is added through the
+ * C{,plusplus}DebugFlags, which are the first options given to the
+ * compiler.  It is _required_ that BUILDLINK_DIR be defined in the
+ * environment.
+ */
+#ifdef UseInstalled
+# ifndef BuildLinkCppFlags
+# define BuildLinkCppFlags -I$(BUILDLINK_DIR)/include $(PKGSRC_CPPFLAGS)
+# endif
+# ifndef BuildLinkLdFlags
+# define BuildLinkLdFlags -L$(BUILDLINK_DIR)/lib
+# endif
+# undef DependFlags
+# define DependFlags BuildLinkCppFlags
+# undef OptimizedCDebugFlags
+# define OptimizedCDebugFlags -O2 BuildLinkCppFlags $(PKGSRC_CFLAGS)
+# undef OptimizedCplusplusDebugFlags
+# define OptimizedCplusplusDebugFlags -O2 BuildLinkCppFlags $(PKGSRC_CXXFLAGS)
+# undef LdPreLib
+# define LdPreLib BuildLinkLdFlags
+# undef LdPostLib
+# define LdPostLib BuildLinkLdFlags
 #endif
+#endif /* BuildLink */
+
+#endif /* AfterVendorCF */
