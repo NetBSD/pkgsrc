@@ -1,14 +1,5 @@
 --- Makefile.in.orig	Tue Oct 14 06:12:14 1997
 +++ Makefile.in	Thu Oct 16 06:55:05 1997
-@@ -36,7 +36,7 @@
- 
- # If your system needs extra libraries loaded in, define them here.
- # In particular, add -lresolv if you are running bind 4.9.5
--LOADLIBS = @LIBS@ @LEXLIB@
-+LOADLIBS = @LIBS@ @LEXLIB@ -lmd
- # LOADLIBS = -lsocket3r -lunix3r	# QNX
- 
- # Any extra object files your system needs.
 @@ -82,7 +82,7 @@
  
  protobjs = rcfile_y.o rcfile_l.o socket.o getpass.o pop2.o pop3.o imap.o \
