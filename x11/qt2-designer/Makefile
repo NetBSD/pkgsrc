@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/08/25 18:40:41 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2003/05/02 12:34:24 wiz Exp $
 
 PKGNAME=		qt2-designer-${QTVERSION}
 PKGREVISION=		2
@@ -7,7 +7,6 @@ COMMENT=		Visual (WYSIWYG) QT GUI builder
 CONFLICTS+=		qt2-designer-kde-[0-9]*
 
 USE_BUILDLINK2=		yes
-BUILDLINK_DEPENDS.qt2-libs=	qt2-libs>=${QTVERSION}nb2
 
 .include "../qt2-libs/Makefile.common"
 
