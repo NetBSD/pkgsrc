@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.21 2004/04/06 19:15:13 tv Exp $
+# $NetBSD: java-vm.mk,v 1.23 2004/04/26 17:30:06 tv Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
