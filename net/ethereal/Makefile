@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.100 2004/12/17 18:35:38 salo Exp $
+# $NetBSD: Makefile,v 1.100.2.1 2005/01/21 06:41:53 snj Exp $
 #
 
-DISTNAME=		ethereal-0.10.8
+DISTNAME=		ethereal-0.10.9
 CATEGORIES=		net
 MASTER_SITES=		http://www.ethereal.com/distribution/ \
 			http://ethereal.planetmirror.com/distribution/ \
@@ -49,7 +49,9 @@ PTHREAD_OPTS=		require
 USE_BUILTIN.libpcap=	no
 .endif
 
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../net/net-snmp/buildlink3.mk"
