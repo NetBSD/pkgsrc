@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1999/02/11 19:17:34 tv Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/05/31 22:22:09 tron Exp $
 bin/mattrib
 bin/mcd
 bin/mcopy
@@ -29,6 +29,7 @@ bin/tgz
 bin/mcomp
 bin/lz
 bin/mkmanifest
+bin/floppyd
 @unexec install-info --delete %D/info/mtools.info %D/info/dir
 info/mtools.info
 @exec install-info %D/info/mtools.info %D/info/dir

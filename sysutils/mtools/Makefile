@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/08/20 15:17:27 tsarna Exp $
+# $NetBSD: Makefile,v 1.15 1999/05/31 22:22:08 tron Exp $
 #
 
 DISTNAME=	mtools-3.9.1
@@ -13,13 +13,26 @@ HOMEPAGE=	http://www.tux.org/pub/knaff/mtools/
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
+CPPFLAGS+=	-I${X11BASE}/include
+CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 
 INFO_FILES=	mtools.info
+
+PLIST_SRC=	${WRKDIR}/PLIST
 
 pre-patch:
 	@${LN} -s . ${WRKSRC}/mtools
 
 post-patch:
 	@${RM} ${WRKSRC}/mtools
+
+post-install:
+	@if [ -e ${PREFIX}/bin/floppyd ]; then \
+	  ${CP} ${PKGDIR}/PLIST ${PLIST_SRC}; \
+	else \
+	  ${ECHO} ${RM} -f ${PREFIX}/man/man1/floppyd.1; \
+	  ${RM} -f ${PREFIX}/man/man1/floppyd.1; \
+	  ${GREP} -v /floppyd ${PKGDIR}/PLIST >${PLIST_SRC}; \
+	fi \
 
 .include "../../mk/bsd.pkg.mk"
