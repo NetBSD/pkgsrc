@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/18 01:28:29 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/04 17:44:08 minskim Exp $
 
 DISTNAME=	liteamp-0.2.4.1
 CATEGORIES=	audio
@@ -25,4 +25,6 @@ USE_LIBTOOL=		yes
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
+
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
