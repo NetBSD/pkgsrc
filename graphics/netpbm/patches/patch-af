@@ -1,0 +1,10 @@
+--- ./pnm/pnmmerge.c.org	Mon Jan 31 03:31:47 1994
++++ ./pnm/pnmmerge.c	Tue Jun  3 01:16:17 1997
+@@ -53,6 +53,7 @@
+     TRY("pnmhistmap", pnmhistmap_main);
+     TRY("pnmnlfilt", pnmnlfilt_main);
+     TRY("pnmnoraw", pnmnoraw_main);
++    TRY("pnmpad", pnmpad_main);
+     TRY("pnmpaste", pnmpaste_main);
+     TRY("pnmrotate", pnmrotate_main);
+     TRY("pnmscale", pnmscale_main);

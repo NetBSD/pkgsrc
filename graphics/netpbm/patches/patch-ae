@@ -1,0 +1,68 @@
+--- ./pnm/anytopnm.org	Mon Oct  4 02:11:29 1993
++++ ./pnm/anytopnm	Sat Aug 12 15:05:58 1995
+@@ -53,7 +53,7 @@
+ 	;;
+ 
+ 	*GIF* )
+-	giftoppm "$file"
++	giftopnm "$file"
+ 	break
+ 	;;
+ 
+@@ -130,7 +130,7 @@
+ 	    fitstopgm "$file"
+ 	    ;;
+ 	    *.gif | *.gif.* )
+-	    giftoppm "$file"
++	    giftopnm "$file"
+ 	    ;;
+ 	    *.iff | *.iff.* | *.ilbm | *.ilbm.* )
+ 	    ilbmtoppm "$file"
+--- ./ppm/ppm.5.org	Mon Oct  4 02:12:19 1993
++++ ./ppm/ppm.5	Sat Aug 12 15:06:18 1995
+@@ -73,7 +73,7 @@
+ it will automatically fall back on the slower but more general plain
+ format.
+ .SH "SEE ALSO"
+-giftoppm(1), gouldtoppm(1), ilbmtoppm(1), imgtoppm(1), mtvtoppm(1),
++giftopnm(1), gouldtoppm(1), ilbmtoppm(1), imgtoppm(1), mtvtoppm(1),
+ pcxtoppm(1), pgmtoppm(1), pi1toppm(1), picttoppm(1), pjtoppm(1), qrttoppm(1),
+ rawtoppm(1), rgb3toppm(1), sldtoppm(1), spctoppm(1), sputoppm(1), tgatoppm(1),
+ ximtoppm(1), xpmtoppm(1), yuvtoppm(1),
+--- ./ppm/ppmtoicr.1.org	Mon Oct  4 02:12:38 1993
++++ ./ppm/ppmtoicr.1	Sat Aug 12 15:06:36 1995
+@@ -83,7 +83,7 @@
+ the displayed image by a factor of 2, and
+ run-length encode the data:
+ .nf
+-    giftoppm giffile | ppmtoicr -w giffile -r -e 2
++    giftopnm giffile | ppmtoicr -w giffile -r -e 2
+ .fi
+ .SH BUGS
+ .PP
+--- ./ppm/ppmtogif.1.org	Sat Aug 12 15:08:41 1995
++++ ./ppm/ppmtogif.1	Sat Aug 12 15:06:51 1995
+@@ -54,7 +54,7 @@
+ .PP
+ All flags can be abbreviated to their shortest unique prefix.
+ .SH "SEE ALSO"
+-giftoppm(1), ppmquant(1), ppm(5)
++giftopnm(1), ppmquant(1), ppm(5)
+ .SH AUTHOR
+ Based on GIFENCOD by David Rowley <mgardi@watdcsu.waterloo.edu>.
+ Lempel-Ziv compression based on "compress".
+--- pnm/pnmarith.c~	Wed Jan  5 04:04:53 1994
++++ pnm/pnmarith.c	Mon Aug 19 14:20:21 1996
+@@ -142,9 +142,9 @@
+ 		    break;
+ 
+ 		    case '*':
+-		    r1 = r1 * r2 / maxval3;
+-		    g1 = g1 * g2 / maxval3;
+-		    b1 = b1 * b2 / maxval3;
++		    r1 = (unsigned) r1 * r2 / maxval3;
++		    g1 = (unsigned)g1 * g2 / maxval3;
++		    b1 =(unsigned) b1 * b2 / maxval3;
+ 		    break;
+ 
+ 		    case 'D':

@@ -1,0 +1,19 @@
+*** pbm/libpbm1.c.orig	Mon Jan 10 09:37:22 1994
+--- pbm/libpbm1.c	Fri Oct 14 17:01:15 1994
+***************
+*** 332,338 ****
+      char* reason;
+      {
+  #ifndef A_STRERROR
+!     extern char* sys_errlist[];
+  #endif /* A_STRERROR */
+      extern int errno;
+      char* e;
+--- 332,338 ----
+      char* reason;
+      {
+  #ifndef A_STRERROR
+! /*    extern char* sys_errlist[]; */
+  #endif /* A_STRERROR */
+      extern int errno;
+      char* e;
