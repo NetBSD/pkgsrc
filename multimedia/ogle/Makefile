@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2004/02/03 04:34:06 grant Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/03 05:27:03 reed Exp $
 
 DISTNAME=	ogle-0.9.2
 PKGREVISION=	1
@@ -14,6 +14,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-1.[6-9]*-i386 NetBSD-[2-9]*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-1.6[D-Z]*-powerpc NetBSD-1.[7-9]*-powerpc
 ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-powerpc
 ONLY_FOR_PLATFORM+=	NetBSD-1.6Z*-alpha NetBSD-[2-9]*-alpha
+ONLY_FOR_PLATFORM+=	Linux-*-*
 
 USE_BUILDLINK2=		yes
 USE_X11=		yes
