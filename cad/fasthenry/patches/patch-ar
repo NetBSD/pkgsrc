@@ -1,10 +1,13 @@
-$NetBSD: patch-ar,v 1.1 2001/02/09 11:29:39 dmcmahill Exp $
+$NetBSD: patch-ar,v 1.2 2004/09/20 02:08:58 dmcmahill Exp $
 
---- src/zbuf/uglieralloc.c.orig	Tue Nov 12 14:18:56 1996
-+++ src/zbuf/uglieralloc.c	Thu Feb  8 20:03:45 2001
-@@ -21,4 +21,5 @@
- */
+--- src/zbuf/mulGlobal.h.orig	Tue Aug  3 22:17:22 2004
++++ src/zbuf/mulGlobal.h
+@@ -76,7 +76,7 @@ extern char *   calloc();
+ extern char *   malloc();
+ extern char *   realloc();
+ #else
+-#include <malloc.h>
++#include <stdlib.h>
+ #endif /* end if NEWS */
  #include <stdio.h>
-+#include <string.h>
- 
- #define NALLOC 8184		/* >= sizeof(HEADER)*NALLOC bytes sbrk()'d */
+ #include <math.h>

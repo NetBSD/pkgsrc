@@ -1,22 +1,15 @@
-# $NetBSD: Makefile,v 1.22 2004/08/27 06:29:06 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2004/09/20 02:08:58 dmcmahill Exp $
 #
 
 DISTNAME=	fasthenry-3.0-12Nov96
 PKGNAME=	fasthenry-3.0.19961112
 CATEGORIES=	cad
-MASTER_SITES=	ftp://rle-vlsi.mit.edu/pub/fasthenry/
+MASTER_SITES=	http://www.rle.mit.edu/cpg/codes/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	dmcmahill@NetBSD.org
-HOMEPAGE=	http://kontiki.mit.edu/rle/research/info_research_proj.html
+HOMEPAGE=	http://www.rle.mit.edu/cpg/research_codes.htm
 COMMENT=	Three-dimensional inductance extraction program
-
-LICENSE=		no-commercial-use
-RESTRICTED=		"No redistribution allowed"
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
-NO_SRC_ON_FTP=		${RESTRICTED}
 
 WRKSRC=			${WRKDIR}/fasthenry-3.0
 USE_BUILDLINK3=		yes
