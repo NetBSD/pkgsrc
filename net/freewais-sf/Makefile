@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/03/09 11:24:04 seb Exp $
+# $NetBSD: Makefile,v 1.15 2004/05/11 04:07:52 snj Exp $
 #
 
 DISTNAME=	freeWAIS-sf-2.2.12
@@ -11,6 +11,7 @@ MAINTAINER=	bad@NetBSD.org
 HOMEPAGE=	http://ls6-www.informatik.uni-dortmund.de/ir/projects/freeWAIS-sf/index.html
 COMMENT=	Enhanced Wide Area Information Server
 
+USE_BUILDLINK3=	yes
 USE_PERL5=	build
 USE_LIBTOOL=	# defined
 
