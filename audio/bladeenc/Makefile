@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/03/13 10:51:39 pooka Exp $
+# $NetBSD: Makefile,v 1.17 2002/03/14 15:42:40 agc Exp $
 #
 
 DISTNAME=		bladeenc-0.94.2-src-stable
@@ -13,7 +13,7 @@ COMMENT=		Free MPEG Audio Layer 3 encoder (not decoder)
 
 USE_GMAKE=		yes
 
-WRKSRC=			${WRKDIR}/${PKGNAME}
+WRKSRC:=		${WRKDIR}/${PKGNAME}
 
 GNU_CONFIGURE=		yes
 
