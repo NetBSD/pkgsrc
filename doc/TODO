@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.75 2002/12/16 23:22:28 grant Exp $
+$NetBSD: TODO,v 1.76 2002/12/16 23:31:46 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -125,7 +125,6 @@ Suggested package updates
 	o gmp-4.1.1
 	o gnome-applets-2.0.0
 	o gnome-file-manager-2.0.1
-	o gnome-panel-2.0.11 [pkg/19418|jmmv]
 	o gnome-python-1.4.4
 	o gnome-python-1.99.13
 	o gnome-vfs2-2.1.4 [jmmv]
