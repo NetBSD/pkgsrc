@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/06/26 19:33:02 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/06/26 19:37:28 grant Exp $
 #
 
 DISTNAME=	win32codecs-20040626
@@ -34,7 +34,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/win32
 	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/* ${PREFIX}/lib/win32
 	${INSTALL_DATA} ${WRKDIR}/qt6dlls-20040626/* ${PREFIX}/lib/win32
-	${INSTALL_DATA} ${WRKDIR}/qtextras/* ${PREFIX}/lib/win32
+	${INSTALL_DATA} ${WRKDIR}/qtextras-20040626/* ${PREFIX}/lib/win32
 	${INSTALL_DATA} ${WRKDIR}/rp9codecs-win32-20040626/*.dll ${PREFIX}/lib/win32
 
 .include "../../mk/bsd.pkg.mk"
