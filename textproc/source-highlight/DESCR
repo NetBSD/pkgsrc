@@ -1,3 +1,6 @@
-This package contains GNU java2html version 1.9 and GNU cpp2html version 1.5:
-- java2html highlights the syntax of a Java source file into a HTML document,
-- cpp2html highlights the syntax of a C or C++ source file into a HTML document.
+This program, given a source file, produces a document with syntax
+highlighting.
+
+At the moment this package can handle Java, C/C++, Prolog, Perl,
+Php3, Python, Flex, ChangeLog as source languages, and HTML,  XHTML
+as output format.
