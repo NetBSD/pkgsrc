@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/11/01 13:51:09 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/04/06 23:24:32 wiz Exp $
 bin/ssfe
 bin/sirc
 lib/sirc/dsirc
@@ -21,9 +21,13 @@ lib/sirc/scripts/lastlog.pl
 lib/sirc/scripts/nocolor.pl
 lib/sirc/scripts/patattack.pl
 lib/sirc/scripts/prefix.pl
+lib/sirc/scripts/quiet.pl
 lib/sirc/scripts/quit.pl
 lib/sirc/scripts/ssfe.diff
+lib/sirc/scripts/thx.pl
+lib/sirc/scripts/winnuke.pl
 lib/sirc/scripts/www.pl
+lib/sirc/scripts/yiff.pl
 man/man1/ssfe.1
 man/man1/sirc.1
 @dirrm lib/sirc/scripts
