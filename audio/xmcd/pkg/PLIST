@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1997/12/21 02:11:58 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/02/15 19:05:16 tron Exp $
 bin/xmcd
 bin/cda
 bin/wm2xmcd
@@ -146,22 +146,10 @@ man/man1/wm2xmcd.1
 @exec /bin/mkdir -p %D/lib/X11/xmcd/cddb/country
 @exec /bin/mkdir -p %D/lib/X11/xmcd/cddb/classical
 @exec /bin/mkdir -p %D/lib/X11/xmcd/cddb/blues
-@comment in case users requested using internet cddb server
-@unexec rm -fr %D/lib/X11/xmcd/cddbd
 @dirrm lib/X11/xmcd/pixmaps
 @dirrm lib/X11/xmcd/help
 @dirrm lib/X11/xmcd/config/.tbl
 @dirrm lib/X11/xmcd/config
-@dirrm lib/X11/xmcd/cddb/soundtrack
-@dirrm lib/X11/xmcd/cddb/rock
-@dirrm lib/X11/xmcd/cddb/reggae
-@dirrm lib/X11/xmcd/cddb/newage
-@dirrm lib/X11/xmcd/cddb/misc
-@dirrm lib/X11/xmcd/cddb/jazz
-@dirrm lib/X11/xmcd/cddb/folk
-@dirrm lib/X11/xmcd/cddb/data
-@dirrm lib/X11/xmcd/cddb/country
-@dirrm lib/X11/xmcd/cddb/classical
-@dirrm lib/X11/xmcd/cddb/blues
-@dirrm lib/X11/xmcd/cddb
+@comment in case users requested using internet cddb server
+@unexec rm -fr %D/lib/X11/xmcd/cddb
 @dirrm lib/X11/xmcd
