@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2002/09/19 09:04:26 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/09 21:52:36 wiz Exp $
 
 PKGNAME=		winbind-${SAMBA_DIST_VERS}
 CATEGORIES=		security
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=	# defined
 
 .include "../../net/samba/Makefile.common"
 
@@ -14,8 +14,8 @@ COMMENT=		unified logon information between UNIX and Windows NT
 DEPENDS+=		{samba>=2.0,ja-samba>=2.0}:../../net/samba
 
 CONFIGURE_ARGS+=	--with-ssl
-CONFIGURE_ARGS+=	--with-sslinc=${BUILDLINK_DIR}
-CFLAGS+=		-I${BUILDLINK_DIR}/include/openssl	# ssl.h, err.h
+CONFIGURE_ARGS+=	--with-sslinc=${BUILDLINK_PREFIX.openssl}
+CFLAGS+=		-I${BUILDLINK_PREFIX.openssl}/include/openssl	# ssl.h, err.h
 
 CONFIGURE_ARGS+=	--with-pam
 CONFIGURE_ARGS+=	--with-winbind
@@ -35,8 +35,8 @@ do-install:
 	${INSTALL_LIBRARY} ${WRKSRC}/nsswitch/pam_winbind.so ${PAMDIR}
 	${INSTALL_LIBRARY} ${WRKSRC}/nsswitch/libnss_winbind.so ${PREFIX}/lib
 
-.include "../../security/PAM/buildlink.mk"
-.include "../../security/openssl/buildlink.mk"
+.include "../../security/PAM/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
