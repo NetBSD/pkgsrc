@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1160 2003/01/19 01:28:38 seb Exp $
+$NetBSD: CHANGES,v 1.1161 2003/01/19 05:15:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -325,3 +325,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gtk2-engines to 2.2.0 [jmmv 2003-01-18]
 	Updated wdg-validate to 1.1.2 [wiz 2003-01-19]
 	Updated openssh to 3.5.0.1 [seb 2003-01-19]
+	Updated diffutils to 2.8.1 [wiz 2003-01-19]
