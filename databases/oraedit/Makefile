@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2000/01/31 14:03:00 jdolecek Exp $
+# $NetBSD: Makefile,v 1.2 2000/06/15 11:31:40 hubertf Exp $
 
 DISTNAME=	oraedit-0.1.3
 CATEGORIES=	databases
@@ -6,7 +6,7 @@ MASTER_SITES=	http://www.ics.muni.cz/~dolecek/projects/python/oraedit/
 
 MAINTAINER=	jdolecek@netbsd.org
 
-DEPENDS=	python:../../lang/python
+DEPENDS=	python-1.5*:../../lang/python
 
 NO_CONFIGURE=	1
 NO_BUILD=	1
