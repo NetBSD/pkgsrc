@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/06/01 16:10:56 rh Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/06/05 19:15:20 tron Exp $
 bin/gcalc
 bin/gcharmap
 bin/gcolorsel
@@ -227,6 +227,8 @@ share/pixmaps/gnome-who.png
 @dirrm share/gnome/help/gcolorsel/C/stylesheet-images
 @dirrm share/gnome/help/gcolorsel/C
 @dirrm share/gnome/help/gcolorsel
+@dirrm share/gnome/help/gdict/C
+@dirrm share/gnome/help/gdict
 @dirrm share/pixmaps/logview
 @dirrm share/logview
 @dirrm share/gcolorsel/glade
