@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4825 2004/02/14 14:21:42 wiz Exp $
+$NetBSD: CHANGES,v 1.4826 2004/02/14 17:19:27 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -826,3 +826,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated openldap to 2.1.25 [jlam 2004-02-14]
 	Updated gcc3 to 3.3.2nb2 [tron 2004-02-14]
 	Updated flawfinder to 1.24 [wiz 2004-02-14]
+	Updated gnucap to 0.34 [dmcmahill 2004-02-14]
