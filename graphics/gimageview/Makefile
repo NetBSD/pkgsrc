@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/01/20 22:00:38 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2003/01/28 23:00:53 jmmv Exp $
 
 DISTNAME=	gimageview-0.2.13
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkmmviewer/}
 
@@ -24,6 +25,7 @@ CONFIGURE_ARGS+=	--disable-xinetest
 # don't need both -- gimageview prefers gdk-pixbuf, so do we
 #.include "../../graphics/imlib/buildlink2.mk"
 .include "../../graphics/gdk-pixbuf/buildlink2.mk"
+.include "../../misc/gnome1-dirs/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 .include "../../graphics/mng/buildlink2.mk"
