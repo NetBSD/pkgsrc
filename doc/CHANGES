@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2466 2003/06/09 09:03:56 uebayasi Exp $
+$NetBSD: CHANGES,v 1.2467 2003/06/09 10:07:00 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2388,3 +2388,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated dlcompat to 20030522 [schmonz 2003-06-08]
 	Updated mrtg to 2.9.29 [martti 2003-06-09]
 	Updated elisp-manual to 21.8 [uebayasi 2003-06-09]
+	Updated ja-vfxdvik to 22.40vnb1 [uebayasi 2003-06-09]
