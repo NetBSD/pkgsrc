@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2002/08/25 21:50:36 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2002/10/01 19:53:54 chris Exp $
 #
 
 DISTNAME=	gnupg-1.0.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/pub/gcrypt/gnupg/
 # don't remove this -- we may add idea.c to it below
