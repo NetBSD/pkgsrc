@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.70 1999/08/25 13:37:34 agc Exp $
+# $NetBSD: mk.conf.example,v 1.71 1999/08/26 05:18:06 sakamoto Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -360,6 +360,10 @@ PAPERSIZE=	A4		# Default paper size for packages.
 
 #USE_XFACE=			# Used in xemacs package to build in
                                 # support for xface (pkgsrc/mail/face)
+                                # Possible: not defined, YES
+                                # Default: not defined
+
+#USE_WALLPAPER=			# Used in kterm package to support wallpaper
                                 # Possible: not defined, YES
                                 # Default: not defined
 
