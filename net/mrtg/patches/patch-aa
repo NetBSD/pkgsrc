@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2000/03/17 23:31:48 tron Exp $
+$NetBSD: patch-aa,v 1.9 2000/10/20 16:06:17 bouyer Exp $
 
---- configure.orig	Sun Feb  6 00:56:27 2000
-+++ configure	Mon Feb  7 17:38:11 2000
-@@ -986,7 +986,7 @@
+--- configure.orig	Fri Oct 13 16:07:49 2000
++++ configure	Thu Oct 19 14:16:18 2000
+@@ -1113,7 +1113,7 @@
  fi
  
  
