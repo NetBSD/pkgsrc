@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/07/03 09:08:07 xtraeme Exp $
+
+SHA1 (gtkterm2-0.2.1.tar.gz) = 6bf5ae174b9d1ea969257827fa85b1c4e55ac162
+Size (gtkterm2-0.2.1.tar.gz) = 294362 bytes
+SHA1 (patch-aa) = 1464c4f34e64d670cc861b2c367771d71281c679
