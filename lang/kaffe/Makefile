@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2001/03/04 09:06:16 tron Exp $
+# $NetBSD: Makefile,v 1.31 2001/03/19 17:07:16 wennmach Exp $
 #
 
-DISTNAME=		kaffe-1.0.5
-PKGNAME=		kaffe-1.0.5nb1
+DISTNAME=		kaffe-1.0.6
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.kaffe.org/pub/kaffe/
 
@@ -16,6 +15,7 @@ DEPENDS+=		libungif-*:../../graphics/libungif
 DEPENDS+=		gmp>=3.0.0:../../devel/gmp
 
 USE_X11=		yes
+USE_LIBTOOL=		yes
 
 ONLY_FOR_PLATFORM=	*-*-arm32 *-*-i386 *-*-m68k *-*-mips* *-*-sparc
 
@@ -25,6 +25,12 @@ CONFIGURE_ARGS+=	--with-rtlibraries="${LOCALBASE}/lib ${X11BASE}/lib"
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 CPPFLAGS+=		-Dunix -I${LOCALBASE}/include -I${X11BASE}/include
+
+post-configure:
+	${RM} ${WRKDIR}/${PKGNAME}/libtool
+	${LN} -s ${LOCALBASE}/bin/libtool ${WRKDIR}/${PKGNAME}/libtool
+	${RM} ${WRKDIR}/${PKGNAME}/libltdl/libtool
+	${LN} -s ${LOCALBASE}/bin/libtool ${WRKDIR}/${PKGNAME}/libltdl/libtool
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/license.terms \
