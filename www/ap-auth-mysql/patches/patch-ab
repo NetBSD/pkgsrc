@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/07/16 11:28:19 jdolecek Exp $
+
+--- configure.ac.orig	2003-09-24 01:39:03.000000000 +0200
++++ configure.ac
+@@ -84,11 +84,14 @@ AC_SUBST(build_opts, "$mysql_includes $m
+ 
+ # Checks for header files.
+ AC_CHECK_HEADERS([crypt.h])
++AC_CHECK_LIB([crypt], [crypt])
+ 
+-if test -n $HAVE_CRYPT_H; then
++if test -n $HAVE_CRYPT_H -a $HAVE_LIBCRYPT; then
+ 	AC_TRY_RUN(
+ [
++#ifdef HAVE_CRYPT_H
+ #include <crypt.h>
++#endif
+ #include <string.h>
+ 
+ int main()
+@@ -101,7 +104,9 @@ AC_DEFINE(CRYPT_MD5),
+ ,,)
+ 	AC_TRY_RUN(
+ [
++#ifdef HAVE_CRYPT_H
+ #include <crypt.h>
++#endif
+ #include <string.h>
+ 
+ int main()
