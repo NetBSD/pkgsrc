@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/09/27 23:18:45 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2001/10/04 18:56:53 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.15 1999/01/31 11:15:57 dirk Exp
 #
 
@@ -16,6 +16,18 @@ COMMENT=	Object-oriented SGML/XML parser toolkit and DSSSL engine
 
 CONFLICTS+=	sp-[0-9]*
 
+<<<<<<< Makefile
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+#USE_GMAKE=	yes		# prevent "'sx' is upto date" on install ?
+LTCONFIG_OVERRIDE= \
+		${WRKSRC}/config/ltconfig
+
+CONFIGURE_ENV+=	CXXFLAGS="${CFLAGS}"
+CONFIGURE_ARGS=	--disable-shared
+CONFIGURE_ARGS+= --enable-default-catalog=${PREFIX}/share/sgml/jade/catalog
+CONFIGURE_ARGS+= --enable-mif
+=======
 USE_BUILDLINK_ONLY=	yes
 GNU_CONFIGURE=		yes
 #USE_LIBINTL=		yes
@@ -27,6 +39,7 @@ JADE_CATALOG_DIR=	${PREFIX}/share/sgml/jade/catalog
 CONFIGURE_ARGS=		--disable-shared
 CONFIGURE_ARGS+=	--enable-default-catalog=${JADE_CATALOG_DIR}
 CONFIGURE_ARGS+=	--enable-mif
+>>>>>>> 1.11
 
 CXXFLAGS+=		${CFLAGS}
 
@@ -40,7 +53,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/jade
 	${INSTALL_DATA} ${WRKSRC}/jadedoc/*.htm ${PREFIX}/share/doc/jade
 	${INSTALL_DATA_DIR} ${PREFIX}/share/sgml/jade
-	${RM} ${WRKSRC}/dsssl/*jadetex.*	# installed by print/jadetex!!!
+	${RM} ${WRKSRC}/dsssl/*jadetex.*	# installed by print/tex-jadetex!!!
 	${INSTALL_DATA} ${WRKSRC}/dsssl/* ${PREFIX}/share/sgml/jade
 
 .include "../../devel/gettext-lib/buildlink.mk"
