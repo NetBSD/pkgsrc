@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.119 1998/07/14 16:48:48 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.120 1998/07/16 16:24:40 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1724,9 +1724,9 @@ README_NAME=	${TEMPLATES}/README.port
 .endif
 
 README.html:
-	@${MAKE} depends-list PACKAGE_NAME_AS_LINK=YES >> $@.tmp1
+	@${MAKE} depends-list PACKAGE_NAME_AS_LINK=YES | sort -u >> $@.tmp1
 	@[ -s $@.tmp1 ] || echo "<I>(none)</I>" >> $@.tmp1
-	@${MAKE} package-depends PACKAGE_NAME_AS_LINK=YES >> $@.tmp2
+	@${MAKE} package-depends PACKAGE_NAME_AS_LINK=YES | sort -u >> $@.tmp2
 	@[ -s $@.tmp2 ] || echo "<I>(none)</I>" >> $@.tmp2
 	@${ECHO} ${PKGNAME} | ${HTMLIFY} >> $@.tmp3
 	@${MAKE} binpkg-list  >> $@.tmp4
