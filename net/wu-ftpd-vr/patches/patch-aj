@@ -1,0 +1,12 @@
+$NetBSD: patch-aj,v 1.1.1.1 1999/02/21 12:37:21 rh Exp $
+
+--- support/ftw.c.orig	Mon Jul  6 10:56:21 1998
++++ support/ftw.c	Sat Feb 13 00:54:09 1999
+@@ -30,6 +30,7 @@
+ 
+ #include <errno.h>
+ 
++#include <string.h>
+ #include <sys/param.h>
+ #include <sys/stat.h>
+ #include <sys/stat.h>

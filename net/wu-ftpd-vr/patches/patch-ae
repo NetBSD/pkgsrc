@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 1999/02/21 12:37:21 rh Exp $
+
+--- config.h.orig	Sat Feb 13 23:41:57 1999
++++ config.h	Sat Feb 20 21:28:41 1999
+@@ -72,7 +72,7 @@
+  * See FIXES-2.4-HOBBIT for more information on this option.
+  */
+ 
+-#undef SKEY
++/* #undef SKEY */
+ 
+ /*
+  * OPIE

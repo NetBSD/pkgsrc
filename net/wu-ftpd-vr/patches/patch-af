@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 1999/02/21 12:37:21 rh Exp $
+
+--- support/makefiles/Makefile.nbs.orig	Mon Jul  6 10:57:39 1998
++++ support/makefiles/Makefile.nbs	Sat Feb 13 00:43:35 1999
+@@ -8,7 +8,7 @@
+ LIBC   = /usr/lib/libc.a
+ IFLAGS = 
+ LFLAGS = 
+-CFLAGS = -O ${IFLAGS} ${LFLAGS} -DNO_MALLOC_PROTO
++CFLAGS+= ${IFLAGS} ${LFLAGS} -DNO_MALLOC_PROTO
+ 
+ SRCS   = strcasestr.c authuser.c ftw.c
+ OBJS   = strcasestr.o authuser.o ftw.o

@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/02/21 12:37:21 rh Exp $
+
+--- doc/examples/ftpconversions.orig	Mon Sep 28 20:21:32 1998
++++ doc/examples/ftpconversions	Sat Feb 20 21:28:41 1999
+@@ -1,9 +1,9 @@
+- :.Z:  :  :/bin/compress -d -c %s:T_REG|T_ASCII:O_UNCOMPRESS:UNCOMPRESS
+- :   : :.Z:/bin/compress -c %s:T_REG:O_COMPRESS:COMPRESS
+- :.gz: :  :/bin/gzip -cd %s:T_REG|T_ASCII:O_UNCOMPRESS:GUNZIP
+- :   : :.gz:/bin/gzip -9 -c %s:T_REG:O_COMPRESS:GZIP
+- :   : :.tar:/bin/tar -c -f - %s:T_REG|T_DIR:O_TAR:TAR
+- :   : :.tar.Z:/bin/tar -c -Z -f - %s:T_REG|T_DIR:O_COMPRESS|O_TAR:TAR+COMPRESS
+- :   : :.tar.gz:/bin/tar -c -z -f - %s:T_REG|T_DIR:O_COMPRESS|O_TAR:TAR+GZIP
++ :.Z:  :  :/usr/bin/gzip -d -c %s:T_REG|T_ASCII:O_UNCOMPRESS:UNCOMPRESS
++ :   : :.Z:/usr/bin/compress -c %s:T_REG:O_COMPRESS:COMPRESS
++ :.gz: :  :/usr/bin/gzip -cd %s:T_REG|T_ASCII:O_UNCOMPRESS:GUNZIP
++ :   : :.gz:/usr/bin/gzip -9 -c %s:T_REG:O_COMPRESS:GZIP
++ :   : :.tar:/usr/bin/tar -c -f - %s:T_REG|T_DIR:O_TAR:TAR
++ :   : :.tar.Z:/usr/bin/tar -c -Z -f - %s:T_REG|T_DIR:O_COMPRESS|O_TAR:TAR+COMPRESS
++ :   : :.tar.gz:/usr/bin/tar -c -z -f - %s:T_REG|T_DIR:O_COMPRESS|O_TAR:TAR+GZIP
+  :   : :.crc:/bin/cksum %s:T_REG::CKSUM
+  :   : :.md5:/bin/md5sum %s:T_REG::MD5SUM

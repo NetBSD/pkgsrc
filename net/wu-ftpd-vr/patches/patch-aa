@@ -1,0 +1,64 @@
+$NetBSD$
+
+--- makefiles/Makefile.nbs.orig	Fri Jul  3 19:03:20 1998
++++ makefiles/Makefile.nbs	Sat Feb 13 08:31:28 1999
+@@ -2,32 +2,42 @@
+ # Makefile for NetBSD 1.2
+ # $Id: Makefile.nbs,v 1.3 1998/07/03 17:03:02 sob Beta-17 sob $
+ #
+-BINDIR=		/usr/local/bin
+-ETCDIR=		/usr/local/libexec
+-MANDIR=		/usr/local/man
++PREFIX?=	/usr/pkg
++BINDIR=		${PREFIX}/bin
++ETCDIR=		${PREFIX}/etc
++MANDIR=		${PREFIX}/man
++LIBEXECDIR=	${PREFIX}/libexec
+ MANEXT=		8
+-INSTALL=	install
++INSTALL?=	install
++INSTALL_PROGRAM?= ${INSTALL} -c -o bin -g bin -m 555
++INSTALL_DATA?=	${INSTALL} -c -o root -g wheel -m 444
++INSTALL_MAN?=	${INSTALL} -c -o root -g wheel -m 444
+ 
+ all:
+ 	@ echo 'Use the "build" command (shell script) to make ftpd.'
+ 	@ echo 'You can say "build help" for details on how it works.'
+ 
+ install: bin/ftpd bin/ftpcount bin/ftpshut
+-	-mv -f ${ETCDIR}/ftpd ${ETCDIR}/ftpd-old
++	-mv -f ${LIBEXECDIR}/ftpd ${LIBEXECDIR}/ftpd-old
+ 	@echo installing binaries.
+-	${INSTALL} -c -o bin -g bin -m 755 bin/ftpd ${ETCDIR}/ftpd
+-	${INSTALL} -c -o bin -g bin -m 755 bin/ftpshut ${BINDIR}/ftpshut
+-	${INSTALL} -c -o bin -g bin -m 755 bin/ftpcount ${BINDIR}/ftpcount
+-	${INSTALL} -c -o bin -g bin -m 755 bin/ftpwho ${BINDIR}/ftpwho
++	${INSTALL_PROGRAM} bin/ftpd ${LIBEXECDIR}/ftpd
++	${INSTALL_PROGRAM} bin/ftpshut ${BINDIR}/ftpshut
++	${INSTALL_PROGRAM} bin/ftpcount ${BINDIR}/ftpcount
++	${INSTALL_PROGRAM} bin/ftpwho ${BINDIR}/ftpwho
++	${INSTALL_PROGRAM} bin/ckconfig ${BINDIR}/ftpckconfig
++	@echo Installing basic configuration
++	${INSTALL_DATA} doc/examples/ftpaccess ${ETCDIR}/ftpaccess.example
++	${INSTALL_DATA} doc/examples/ftpusers ${ETCDIR}/ftpusers.example
++	${INSTALL_DATA} doc/examples/ftpconversions ${ETCDIR}/ftpconversions.example
+ 	@echo installing manpages.
+-	${INSTALL} -c -o bin -g bin -m 644 doc/ftpd.8 ${MANDIR}/man8/ftpd.8
+-	${INSTALL} -c -o bin -g bin -m 644 doc/ftpcount.1 ${MANDIR}/man1/ftpcount.1
+-	${INSTALL} -c -o bin -g bin -m 644 doc/ftpwho.1 ${MANDIR}/man1/ftpwho.1
+-	${INSTALL} -c -o bin -g bin -m 644 doc/ftpshut.8 ${MANDIR}/man8/ftpshut.8
+-	${INSTALL} -c -o bin -g bin -m 644 doc/ftpaccess.5 ${MANDIR}/man5/ftpaccess.5
+-	${INSTALL} -c -o bin -g bin -m 644 doc/ftphosts.5 ${MANDIR}/man5/ftphosts.5
+-	${INSTALL} -c -o bin -g bin -m 644 doc/ftpconversions.5 ${MANDIR}/man5/ftpconversions.5
+-	${INSTALL} -c -o bin -g bin -m 644 doc/xferlog.5 ${MANDIR}/man5/xferlog.5
++	${INSTALL_MAN} doc/ftpd.8 ${MANDIR}/man8/ftpd.8
++	${INSTALL_MAN} doc/ftpcount.1 ${MANDIR}/man1/ftpcount.1
++	${INSTALL_MAN} doc/ftpwho.1 ${MANDIR}/man1/ftpwho.1
++	${INSTALL_MAN} doc/ftpshut.8 ${MANDIR}/man8/ftpshut.8
++	${INSTALL_MAN} doc/ftpaccess.5 ${MANDIR}/man5/ftpaccess.5
++	${INSTALL_MAN} doc/ftphosts.5 ${MANDIR}/man5/ftphosts.5
++	${INSTALL_MAN} doc/ftpconversions.5 ${MANDIR}/man5/ftpconversions.5
++	${INSTALL_MAN} doc/xferlog.5 ${MANDIR}/man5/xferlog.5
+ 
+ 
+ 

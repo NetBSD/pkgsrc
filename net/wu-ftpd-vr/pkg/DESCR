@@ -1,0 +1,19 @@
+VR release of the WASHINGTON UNIVERSITY FTP SERVER, RELEASE 2.4
+wu-ftpd-vr is a replacement ftp server for Un*x systems.  Besides
+supporting the ftp protocol defined in RFC 959, it adds the following
+features:
+
+    o  logging of transfers
+    o  logging of commands
+    o  on the fly compression and archiving
+    o  classification of users on type and location
+    o  per class limits
+    o  per directory upload permissions
+    o  restricted guest accounts
+    o  system wide and per directory messages.
+    o  directory alias
+    o  cdpath
+    o  filename filter
+
+The VR series offers a number of enhancements and bug fixes not
+available in the base beta-18 version.
