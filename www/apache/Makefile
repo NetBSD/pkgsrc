@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2003/05/31 13:29:20 grant Exp $
+# $NetBSD: Makefile,v 1.127 2003/05/31 13:30:30 grant Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -105,7 +105,7 @@ APACHE_CUSTOM_CFLAGS+=	-D_FILE_OFFSET_BITS=64
 # certain symbols from the C++ implementation (__get_eh_context, etc.)
 # referenced by DSOs written in C++ will resolve correctly.
 #
-.if (${OPSYS} == "NetBSD") && (${OBJECT_FMT} == "ELF")
+.if ${OPSYS} == "NetBSD" && ${OBJECT_FMT} == "ELF"
 LINK_LIBGCC_LDFLAGS=	-Wl,--whole-archive -lgcc -Wl,--no-whole-archive
 .endif
 
