@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.13 2004/02/09 05:50:03 jlam Exp $
+# $NetBSD: sunpro.mk,v 1.14 2004/02/10 00:37:53 jlam Exp $
 
 .if !defined(COMPILER_SUNPRO_MK)
 COMPILER_SUNPRO_MK=	one
@@ -37,7 +37,7 @@ _COMPILER_LD_FLAG=	# empty
 .  if exists(${SUNWSPROBASE}/bin/cc)
 CC_VERSION!=	${SUNWSPROBASE}/bin/cc -V 2>&1 | ${GREP} '^cc'
 .  else
-CC_VERSION=	sunpro
+CC_VERSION=	cc: Sun C
 .  endif
 .endif	# COMPILER_SUNPRO_MK
 
