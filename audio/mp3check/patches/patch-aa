@@ -1,13 +1,41 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/10/15 21:57:46 tron Exp $
+$NetBSD: patch-aa,v 1.2 2001/08/02 17:48:14 drochner Exp $
 
---- Makefile.orig	Thu Jul 20 22:16:21 2000
-+++ Makefile	Mon Sep 11 21:24:33 2000
-@@ -3,7 +3,7 @@
- TARGET           = mp3check
- 
- # CXXFLAGS         = -Wall -W -ansi -pedantic -Woverloaded-virtual
--CXXFLAGS         = -Wall -W
+--- Makefile.orig	Fri Mar  2 00:54:24 2001
++++ Makefile	Wed Jul 25 12:58:52 2001
+@@ -1,6 +1,6 @@
+ # use this on big-endian machines (like m68k, PowerPC, MIPS and Sparc)
+ # CXXFLAGS         = -O6 -DBIGENDIAN
+-CXXFLAGS         = -O2
 +CXXFLAGS         = $(CFLAGS) -Wall -W
  
- CPPFLAGS         = -DVERSION=\"$(VER)\"
+ # Edited for Debian GNU/Linux by Klaus Kettner (kk@debian.org)
+ DESTDIR    =
+@@ -11,22 +11,22 @@
+ OBJECTS          = crc16.o id3tag.o mp3check.o tappconfig.o tstring.o
  
+ ${TARGET} : ${OBJECTS}
+-	${CC} ${OBJECTS} -o ${TARGET}
++	${CXX} ${OBJECTS} -o ${TARGET}
+ 
+ id3tag.o : id3tag.cc
+-	${CC} ${CXXFLAGS} -c id3tag.cc     -o id3tag.o
++	${CXX} ${CXXFLAGS} -c id3tag.cc     -o id3tag.o
+ 
+ crc16.o : crc16.cc
+-	${CC} ${CXXFLAGS} -c crc16.cc      -o crc16.o
++	${CXX} ${CXXFLAGS} -c crc16.cc      -o crc16.o
+ 
+ mp3check.o : mp3check.cc
+-	${CC} ${CXXFLAGS} -c mp3check.cc   -o mp3check.o 
++	${CXX} ${CXXFLAGS} -c mp3check.cc   -o mp3check.o 
+ 
+ tappconfig.o : tappconfig.cc
+-	${CC} ${CXXFLAGS} -c tappconfig.cc -o tappconfig.o
++	${CXX} ${CXXFLAGS} -c tappconfig.cc -o tappconfig.o
+ 
+ tstring.o : tstring.cc
+-	${CC} ${CXXFLAGS} -c tstring.cc    -o tstring.o
++	${CXX} ${CXXFLAGS} -c tstring.cc    -o tstring.o
+ 
+ clean :
+ 	rm -f ${OBJECTS} ${TARGET} core
