@@ -1,0 +1,10 @@
+# in case this hack is already installed
+X11_ROOT ?= ProjectRoot
+PREFIX = ${X11_ROOT}
+
+install::
+	${BSD_INSTALL_DATA} xpkgwedge.def ${CONFIGDIR}
+	@echo updating ${CONFIGDIR}/host.def
+	@echo '#include <xpkgwedge.def>' >${CONFIGDIR}/host.def.new
+	@grep -v xpkgwedge ${CONFIGDIR}/host.def >>${CONFIGDIR}/host.def.new || true
+	@mv -f ${CONFIGDIR}/host.def.new ${CONFIGDIR}/host.def
