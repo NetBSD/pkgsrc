@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/07/17 21:28:49 grant Exp $
+# $NetBSD: Makefile,v 1.12 2003/09/01 11:24:31 tron Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}-php
 PKGNAME=	phpmyadmin-2.3.3.1
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpmyadmin/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tron@NetBSD.org
-HOMEPAGE=	http://phpwizard.net/projects/phpMyAdmin/
+HOMEPAGE=	http://sourceforge.net/projects/phpmyadmin/
 COMMENT=	Set of PHP-scripts to adminstrate MySQL over the WWW
 
 DEPENDS+=	php-mysql>=4.0.5:../../databases/php4-mysql
