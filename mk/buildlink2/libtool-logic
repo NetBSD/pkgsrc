@@ -1,4 +1,4 @@
-# $NetBSD: libtool-logic,v 1.3 2002/12/28 18:58:09 jlam Exp $
+# $NetBSD: libtool-logic,v 1.4 2003/01/03 04:44:48 jlam Exp $
 
 case $arg in
 -L.|-L./*|-L..*|-L${WRKSRC}*)
@@ -9,6 +9,7 @@ case $arg in
 			# ignore -L.../.libs
 			;;
 		*)
+			$echo "*** [buildlink2] Warning: libtool detected $arg" >> $wrapperlog
 			$echo "*** [buildlink2] Warning: libtool detected $arg"
 			lpath=`$echo "X$arg" | $Xsed -e "s/^-L//"`
 			case "$rellpath" in
@@ -28,6 +29,7 @@ case $arg in
 		for dir in $rellpath; do
 			la="$dir/lib$lib.la"
 			if $test -f "$la"; then
+				$echo "*** [buildlink2] Warning: libtool replaced $arg with $la" >> $wrapperlog
 				$echo "*** [buildlink2] Warning: libtool replaced $arg with $la"
 				arg="$la"
 				cachesettings='skipcache=yes'
