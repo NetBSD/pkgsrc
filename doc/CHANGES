@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.595 2002/11/25 08:48:53 itojun Exp $
+$NetBSD: CHANGES,v 1.596 2002/11/25 12:36:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3711,3 +3711,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated bash to 2.05.2 [schmonz 2002-11-25]
 	Updated bash-doc to 2.05.2 [schmonz 2002-11-25]
 	Updated lynx to 2.8.4.1.4 [itojun 2002-11-25]
+	vcdimager: Downgraded to 0.6.2 [wiz 2002-11-25]
+	Added vcdimager-devel-0.7.12 [wiz 2002-11-25]
