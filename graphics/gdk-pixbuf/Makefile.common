@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2001/06/11 06:34:35 jlam Exp $
+# $NetBSD: Makefile.common,v 1.9 2001/06/15 08:30:44 jlam Exp $
 #
 
 DISTNAME=		gdk-pixbuf-0.10.1
@@ -11,9 +11,10 @@ HOMEPAGE=		http://www.gnome.org/
 BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 BUILD_DEPENDS+=		automake-1.4:../../devel/automake
 DEPENDS+=		gtk+>=1.2.8:../../x11/gtk
-DEPENDS+=		png>=1.0.11:../../graphics/png
-DEPENDS+=		tiff>=3.5.5:../../graphics/tiff
-DEPENDS+=		jpeg-6b:../../graphics/jpeg
+
+.include "../../graphics/jpeg/buildlink.mk"
+.include "../../graphics/png/buildlink.mk"
+.include "../../graphics/tiff/buildlink.mk"
 
 USE_GMAKE=		# defined
 USE_X11BASE=		# defined
@@ -21,8 +22,6 @@ USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		# defined
-CPPFLAGS+=		-I${LOCALBASE}/include
-LDFLAGS+=		-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib
 M4=			${LOCALBASE}/bin/gm4
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 
