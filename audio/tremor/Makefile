@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/02/14 17:21:34 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2004/02/19 01:06:14 wiz Exp $
 
 DISTNAME=	tremor_snapshot_030406
 PKGNAME=	tremor-1.0.2
@@ -13,7 +13,9 @@ COMMENT=	Fixed point decoding library for the Ogg Vorbis audio encoding format
 
 WRKSRC=         ${WRKDIR}/Tremor
 AUTOMAKE_REQD=		1.4
+AUTOCONF_REQD=		2.50
 GNU_CONFIGURE=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 
