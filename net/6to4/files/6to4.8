@@ -1,5 +1,5 @@
-.\"     $NetBSD: 6to4.8,v 1.5 2001/12/03 19:03:21 wiz Exp $
-.Dd February 18, 2001
+.\"     $NetBSD: 6to4.8,v 1.6 2002/09/19 22:15:26 hubertf Exp $
+.Dd July 3, 2002
 .Dt 6TO4 8
 .Os
 .Sh NAME
@@ -160,6 +160,17 @@ via IPv6. A special value of
 .Dq 6to4-anycast
 can be used for the anycast service defined in RFC 3068.
 Other possible values are given in the example config file.
+.It Sy remoteadr4, remoteadr6
+If the
+.Sy peer
+variable is set to the relay router's name, DNS lookups for A and AAAA
+records will be made to 
+determine it's IPv4 and IPv6 address. To avoid these lookups, the variables
+.Sy remoteadr4
+and
+.Sy remoteadr6
+can be set to strings containing the numerical IPv4 and IPv6 numbers
+directly. 
 .El
 .Sh EXAMPLES
 The
