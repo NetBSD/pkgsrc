@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: src2nbcompat,v 1.6 2004/08/20 22:22:24 jlam Exp $
+#	$NetBSD: src2nbcompat,v 1.7 2004/08/20 23:10:32 jlam Exp $
 #
 # Copyright (c) 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -94,6 +94,14 @@ copy_file()
 		#
 		awk '							\
 			BEGIN { config = 0; nbcompat = 0 }		\
+			/^#[ 	]*if[ 	]+HAVE_NBTOOL_CONFIG_H/ {	\
+				if (config == 0) {			\
+					print "#if HAVE_CONFIG_H";	\
+					print "#include \"config.h\"";	\
+					print "#endif";			\
+					config = 1;			\
+				}					\
+			}						\
 			/^#[ 	]*include[ 	]+/ {			\
 				if (config == 0) {			\
 					print "#if HAVE_CONFIG_H";	\
