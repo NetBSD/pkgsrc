@@ -1,4 +1,4 @@
-# $NetBSD: xfree,v 1.2 2003/09/07 21:53:03 jlam Exp $
+# $NetBSD: xfree,v 1.3 2003/10/06 03:00:32 mycroft Exp $
 #
 # The files listed below are the union of the sets of files installed by
 # the supported XFree distributions, minus the set of files representing
@@ -406,6 +406,9 @@ include/fontconfig/fontconfig.h
 include/xf86Optrec.h
 include/xf86Parser.h
 lib/libFS.a
+lib/libFS.so
+lib/libFS.so.6
+lib/libFS.so.6.0
 lib/libICE.a
 lib/libICE.so
 lib/libICE.so.6
@@ -444,6 +447,9 @@ lib/libXIE.dylib
 lib/libXIE.6.dylib
 lib/libXIE.6.0.dylib
 lib/libXRes.a
+lib/libXRes.so
+lib/libXRes.so.1
+lib/libXRes.so.1.0
 lib/libXTrap.a
 lib/libXTrap.so
 lib/libXTrap.so.6
@@ -452,6 +458,9 @@ lib/libXTrap.dylib
 lib/libXTrap.6.dylib
 lib/libXTrap.6.4.dylib
 lib/libXau.a
+lib/libXau.so
+lib/libXau.so.6
+lib/libXau.so.6.0
 lib/libXaw.a
 lib/libXaw.so
 lib/libXaw.so.6
@@ -471,6 +480,9 @@ lib/libXcursor.dylib
 lib/libXcursor.1.dylib
 lib/libXcursor.1.0.dylib
 lib/libXdmcp.a
+lib/libXdmcp.so
+lib/libXdmcp.so.6
+lib/libXdmcp.so.6.0
 lib/libXdpms.a
 lib/libXext.a
 lib/libXext.so
@@ -491,6 +503,9 @@ lib/libXfont.1.dylib
 lib/libXfont.1.3.dylib
 lib/libXfont.1.4.dylib
 lib/libXfontcache.a
+lib/libXfontcache.so
+lib/libXfontcache.so.1
+lib/libXfontcache.so.1.2
 lib/libXft.a
 lib/libXft.so
 lib/libXft.so.1
@@ -553,6 +568,9 @@ lib/libXrandr.1.0.dylib
 lib/libXrandr.2.dylib
 lib/libXrandr.2.0.dylib
 lib/libXss.a
+lib/libXss.so
+lib/libXss.so.1
+lib/libXss.so.1.0
 lib/libXt.a
 lib/libXt.so
 lib/libXt.so.6
@@ -575,9 +593,21 @@ lib/libXv.dylib
 lib/libXv.1.dylib
 lib/libXv.1.0.dylib
 lib/libXvMC.a
+lib/libXvMC.so
+lib/libXvMC.so.1
+lib/libXvMC.so.1.0
 lib/libXxf86dga.a
+lib/libXxf86dga.so
+lib/libXxf86dga.so.1
+lib/libXxf86dga.so.1.0
 lib/libXxf86misc.a
+lib/libXxf86misc.so
+lib/libXxf86misc.so.1
+lib/libXxf86misc.so.1.0
 lib/libXxf86vm.a
+lib/libXxf86vm.so
+lib/libXxf86vm.so.1
+lib/libXxf86vm.so.1.0
 lib/libdps.a
 lib/libdps.so
 lib/libdps.so.1
@@ -608,6 +638,9 @@ lib/libfontconfig.dylib
 lib/libfontconfig.1.dylib
 lib/libfontconfig.1.0.dylib
 lib/libfontenc.a
+lib/libfontenc.so
+lib/libfontenc.so.1
+lib/libfontenc.so.1.0
 lib/liboldX.a
 lib/liboldX.so
 lib/liboldX.so.6
