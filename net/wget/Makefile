@@ -3,7 +3,7 @@
 # Date created:		31 December 1996
 # Whom:			Thomas Gellekum <tg@FreeBSD.ORG>
 #
-# $NetBSD: Makefile,v 1.2 1998/02/17 08:20:03 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/03/10 15:30:38 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/05/22 07:53:29 tg Exp
 #
 
@@ -21,7 +21,7 @@ MAN1=		wget.1
 
 post-install:
 	if [ ! -f ${PREFIX}/info/dir ]; then \
-		sed -ne '1,/Menu:/p' /usr/share/info/dir > ${PREFIX}/info/dir; \
+		${SED} -ne '1,/Menu:/p' /usr/share/info/dir > ${PREFIX}/info/dir; \
 	fi
 	-install-info ${PREFIX}/info/wget.info ${PREFIX}/info/dir
 
