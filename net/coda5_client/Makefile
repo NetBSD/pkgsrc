@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/03/18 02:34:15 rvb Exp $
+# $NetBSD: Makefile,v 1.10 1999/04/09 21:11:14 hubertf Exp $
 #
 
 DISTNAME=	coda-5.2.0
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.coda.cs.cmu.edu/
 
 DEPENDS+=	gdbm-1.7.3:../../databases/gdbm
 DEPENDS+=	readline-2.2:../../devel/readline
-DEPENDS+=	perl-5.00404:../../lang/perl5
 
 ONLY_FOR_ARCHS=	arm32 i386 ns32k
 
@@ -21,6 +20,7 @@ ONLY_FOR_ARCHS=	arm32 i386 ns32k
 ALL_TARGET=	coda
 INSTALL_TARGET=	client-install
 
+USE_PERL5=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
