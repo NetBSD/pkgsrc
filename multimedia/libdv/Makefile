@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/26 17:48:29 grant Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/27 18:48:09 kristerw Exp $
 #
 
 DISTNAME=		libdv-0.102
@@ -28,6 +28,7 @@ CONFIGURE_ARGS+=	--disable-asm
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
