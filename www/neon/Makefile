@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.27 2004/10/03 00:18:26 tv Exp $
+# $NetBSD: Makefile,v 1.28 2004/11/27 00:36:25 epg Exp $
 
 DISTNAME=		neon-0.24.7
 PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		http://www.webdav.org/neon/
 
-MAINTAINER=		epg@pretzelnet.org
+MAINTAINER=		epg@NetBSD.org
 HOMEPAGE=		http://www.webdav.org/neon/
 COMMENT=		HTTP and WebDAV client library
 
