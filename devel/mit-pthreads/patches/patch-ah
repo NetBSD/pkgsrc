@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.4 1999/05/01 18:35:22 tron Exp $
+$NetBSD: patch-ah,v 1.5 1999/05/02 19:46:16 tron Exp $
 
 --- config/Makefile.in.orig	Fri Mar 22 05:29:54 1996
-+++ config/Makefile.in	Sat May  1 20:27:07 1999
++++ config/Makefile.in	Sun May  2 21:19:49 1999
 @@ -18,8 +18,8 @@
  
  # Standard bsd install rules look for the "install" program, rather than
@@ -22,16 +22,14 @@ $NetBSD: patch-ah,v 1.4 1999/05/01 18:35:22 tron Exp $
  
  .include "${srcdir}/pthreads/Makefile.inc"
  .include "${srcdir}/stdlib/Makefile.inc"
-@@ -40,6 +40,12 @@
+@@ -38,6 +38,10 @@
+ .include "${srcdir}/gen/Makefile.inc"
+ .include "${srcdir}/net/Makefile.inc"
  .include "${srcdir}/scripts/Makefile.inc"
++
++.if (${OBJECT_FMT} == "a.out")
++SOBJS+=	/usr/lib/c++rt0.o
++.endif
  
  .include <bsd.lib.mk>
-+
-+.ifdef OBJECT_FMT
-+.if (${OBJECT_FMT} == "a.out")
-+SHLIB_LDSTARTFILE = /usr/lib/c++rt0.o
-+.endif
-+.endif
- 
- $(OBJS) : $(config) $(types) $(paths)
  
