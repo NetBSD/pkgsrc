@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/05/02 11:57:27 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.6 2003/06/24 14:09:53 tron Exp $
 
 DISTNAME=	lablgtk-1.2.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/
 
@@ -22,6 +21,12 @@ USE_DOTOPT=	YES
 CAMLOPT=	ocamlc
 MAKE_ENV+=	CAMLOPT=${CAMLOPT}
 PLIST_SRC=	${PKGDIR}/PLIST.noopt
+.endif
+
+.if exists(${LOCALBASE}/lib/ocaml/libthreadsnat.a)
+PLIST_SUBST+=		NATIVE_THREADS=
+.else
+PLIST_SUBST+=		NATIVE_THREADS="@comment "
 .endif
 
 do-configure:
