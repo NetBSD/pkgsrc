@@ -1,0 +1,68 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/11/09 16:43:42 wiz Exp $
+
+--- unix/unix.cpp.orig	Mon Jan 24 16:13:54 2000
++++ unix/unix.cpp
+@@ -79,7 +79,14 @@
+ #endif
+ #endif
+ 
+-#if defined(__sun) && defined(__GNUC__)
++#ifdef __NetBSD__
++#include <sys/ioctl.h>
++#include <sys/audioio.h>
++#endif
++
++#if defined(__NetBSD__)
++typedef void (*SIG_PF)(int);
++#elif defined(__sun) && defined(__GNUC__)
+ typedef void (*SIG_PF)();
+ #endif
+ 
+@@ -160,7 +167,7 @@
+ char *rom_filename = NULL;
+ char *snapshot_filename = NULL;
+ 
+-#if defined(__linux) || defined(__sun)
++#if defined(__linux) || defined(__sun) || defined(__NetBSD__)
+ static void sigbrkhandler(int)
+ {
+ #ifdef DEBUGGER
+@@ -1354,7 +1361,7 @@
+ }
+ #endif
+ 
+-#ifdef __sun
++#if defined(__sun) || defined(__NetBSD__)
+ static int Rates[8] =
+ {
+     0, 8000, 11025, 16000, 22050, 32000, 37800, 44100
+@@ -1423,9 +1430,9 @@
+ {
+     int I, J, K;
+ 
+-    if ((so.sound_fd = open ("/dev/dsp", O_WRONLY)) < 0)
++    if ((so.sound_fd = open ("/dev/audio", O_WRONLY)) < 0)
+     {
+-	perror ("/dev/dsp");
++	perror ("/dev/audio");
+ 	return (FALSE);
+     }
+ 
+@@ -1525,7 +1532,7 @@
+ }
+ #endif
+ 
+-#if defined (__linux) || defined (__sun)
++#if defined (__linux) || defined (__sun) || defined(__NetBSD__)
+ void S9xUnixProcessSound (void)
+ {
+ }
+@@ -1646,7 +1653,7 @@
+ #endif
+ 
+ #endif
+-#ifdef __sun
++#if defined(__sun) || defined(__NetBSD__)
+     audio_info_t audio;
+     if (!Settings.ThreadSound)
+     {

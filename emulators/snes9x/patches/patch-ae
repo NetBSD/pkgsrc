@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/11/09 16:43:42 wiz Exp $
+
+--- soundux.h.orig	Mon Jan 24 16:13:54 2000
++++ soundux.h
+@@ -77,7 +77,7 @@
+     int stereo;
+     bool8 sixteen_bit;
+     bool8 encoded;
+-#ifdef __sun
++#if defined(__sun) || defined(__NetBSD__)
+     int last_eof;
+ #endif
+ #ifdef __sgi

@@ -1,0 +1,9 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/11/09 16:43:42 wiz Exp $
+
+--- i386/fxemu2.asm.orig	Fri Sep 10 19:18:40 1999
++++ i386/fxemu2.asm
+@@ -2683,4 +2683,3 @@
+ SECTION .data
+ NEWSYM fxtrace, db 0; times 65536 db 0
+ 
+-SECTION .TEXT
