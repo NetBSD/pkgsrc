@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 1999/02/15 23:57:50 is Exp $
+# $NetBSD: Makefile,v 1.12 1999/04/08 07:34:56 tron Exp $
 #
 
-DISTNAME=       mpg123-0.59o
+DISTNAME=       mpg123-0.59q
 CATEGORIES=	audio
 MASTER_SITES=   http://ftp.tu-clausthal.de/pub/unix/audio/mpg123/
 
