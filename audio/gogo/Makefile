@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/22 07:15:00 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/11/28 11:59:34 wiz Exp $
 #
 
 DISTNAME=		gogo239b
@@ -7,7 +7,7 @@ CATEGORIES=		audio
 MASTER_SITES=		http://homepage1.nifty.com/herumi/soft/gogo2/src/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		uebs@gmx.at
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://homepage1.nifty.com/herumi/gogo_e.html
 COMMENT=		Very fast lame-based mp3 encoder, i386 only
 
