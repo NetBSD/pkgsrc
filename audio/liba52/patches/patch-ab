@@ -1,10 +1,16 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/12/10 19:49:46 veego Exp $
+$NetBSD: patch-ab,v 1.2 2002/06/16 18:08:06 wiz Exp $
 
---- configure.in-orig	Fri Aug 31 11:36:47 2001
-+++ configure.in	Thu Oct 11 00:13:14 2001
-@@ -92,4 +92,4 @@
+--- configure.orig	Thu Feb 21 08:55:21 2002
++++ configure	Thu Jun 13 10:12:43 2002
+@@ -8802,6 +8802,11 @@
+ #define LIBAO_SOLARIS
+ EOF
+ ;;
++    *-netbsd*)
++cat >> confdefs.h <<\EOF
++#define LIBAO_SOLARIS 
++EOF
++;;
+     esac
+ fi
  
- AC_C_ATTRIBUTE_ALIGNED
- 
--AC_OUTPUT(Makefile autotools/Makefile include/Makefile test/Makefile doc/Makefile src/Makefile liba52/Makefile libao/Makefile)
-+AC_OUTPUT(Makefile autotools/Makefile include/Makefile liba52/Makefile)
