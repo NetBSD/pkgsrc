@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/08/16 17:17:56 tron Exp $
+# $NetBSD: Makefile,v 1.8 2000/08/16 17:21:25 tron Exp $
 
 DISTNAME=	fxtv-1.02
 CATEGORIES=	graphics
@@ -11,8 +11,8 @@ HOMEPAGE=	http://people.freebsd.org/~rhh/fxtv/
 DEPENDS+=	tiff>=3.5.5:../../graphics/tiff
 DEPENDS+=	xpm-3.4[j-z]:../../graphics/xpm
 
-ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-* NetBSD-1.4Z[A-Z]-i386 \
-			NetBSD-1.5_ALPHA-i386 NetBSD-1.[5-9]*-*
+ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-* NetBSD-1.4Z[A-Z]-* \
+			NetBSD-1.5_ALPHA-* NetBSD-1.[5-9]*-*
 
 USE_GMAKE=	yes
 USE_XAW=	yes
