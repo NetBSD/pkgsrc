@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6006 2004/05/22 11:59:53 wiz Exp $
+$NetBSD: CHANGES,v 1.6007 2004/05/22 17:27:15 cl Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2419,6 +2419,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mkvtoolnix to 0.8.9 [salo 2004-05-08]
 	Added mmg-0.8.9 [salo 2004-05-08]
 	Updated tkpasman to 2.2anb3 [jmmv 2004-05-08]
+	Added xentools12-040418 [cl 2004-05-08]
 	Updated vsftpd to 1.2.2 [salo 2004-05-09]
 	Added xmmsctrl-1.6 [minskim 2004-05-09]
 	Added p5-XML-Sablotron-0.98 [minskim 2004-05-09]
@@ -2619,3 +2620,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnutls to 1.0.13 [adam 2004-05-22]
 	Updated cvs to 1.11.16 [wiz 2004-05-22]
 	Updated hylafax to 4.1.8nb2 [wiz 2004-05-22]
+	Added xen12-040418 [cl 2004-05-22]
