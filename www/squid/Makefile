@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2004/05/06 14:44:53 taca Exp $
+# $NetBSD: Makefile,v 1.107 2004/05/15 13:57:12 heinz Exp $
 
 DISTNAME=	squid-2.5.STABLE5
 PKGNAME=	squid-2.5.5
@@ -104,7 +104,7 @@ post-install:
 	done
 	@(							\
 	for FILE in ${OPTIONAL_FILES}; do			\
-	  ${TEST} ! -e ${PREFIX}/$$FILE || ${ECHO} $$FILE;	\
+	  ${TEST} ! -r ${PREFIX}/$$FILE || ${ECHO} $$FILE;	\
 	done;							\
 	cd ${WRKSRC}/errors;					\
 	for i in *; do						\
