@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.639 2001/01/10 13:10:46 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.640 2001/01/11 10:53:10 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -335,7 +335,7 @@ PATCH_DIST_ARGS+=	-C
 EXTRACT_SUFX?=		.tar.gz
 .if ${EXTRACT_SUFX} == ".tar.bz2"
 .if exists(/usr/bin/bzcat)
-BZCAT=			/usr/bin/bzcat
+BZCAT=			/usr/bin/bzcat <
 .else
 BZCAT=			${LOCALBASE}/bin/bzcat
 BUILD_DEPENDS+=		${BZCAT}:../../archivers/bzip2
