@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2715 2004/12/15 17:02:32 wiz Exp $
+$NetBSD: TODO,v 1.2716 2004/12/15 19:05:57 snj Exp $
 
 Suggested new packages
 ======================
@@ -484,7 +484,6 @@ Suggested package updates
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
 	o g2-0.50
-	o gaim-1.1.0
 	o gal-0.24
 	o gap-4r4p3
 	o gated-3.6
