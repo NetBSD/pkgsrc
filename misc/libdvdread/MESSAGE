@@ -1,9 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2003/05/21 18:04:08 grant Exp $
+$NetBSD: MESSAGE,v 1.5 2003/12/27 04:05:08 grant Exp $
 
-Because of the unclear legal status of libdvdcss, it is not
-automatically installed as part of ${PKGNAME}. It is however
-needed to play encrypted DVDs. If you want to play encrypted DVDs,
-simply install it yourself.
+Because of the unclear legal status of libdvdcss, it is not automatically
+installed as part of ${PKGBASE}. It is however needed to play encrypted
+DVDs. If you want to play encrypted DVDs, simply install it yourself.
 
 ===========================================================================
