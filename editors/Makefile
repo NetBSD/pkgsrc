@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2003/02/15 18:54:44 martti Exp $
+# $NetBSD: Makefile,v 1.80 2003/03/01 09:23:17 uebayasi Exp $
 #
 
 COMMENT=	Editors
@@ -14,6 +14,7 @@ SUBDIR+=	ce-x11
 SUBDIR+=	cooledit
 SUBDIR+=	easyedit
 SUBDIR+=	emacs
+SUBDIR+=	emacs-packages
 SUBDIR+=	emacs21
 SUBDIR+=	emacs21-nox11
 SUBDIR+=	ex
