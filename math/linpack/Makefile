@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2001/05/05 23:41:00 jtb Exp $
+# $NetBSD: Makefile,v 1.3 2001/05/10 23:51:06 jtb Exp $
 
-DISTNAME=	linpack-20010427
-CATEGORIES=	math
+DISTNAME=	linpack-20010510
+CATEGORIES=	math devel
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	packages@netbsd.org
