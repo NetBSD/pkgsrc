@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.472 2004/03/07 14:33:16 taca Exp $
+# $NetBSD: Makefile,v 1.473 2004/03/09 19:15:13 recht Exp $
 #
 
 COMMENT=	Development utilities
@@ -420,6 +420,7 @@ SUBDIR+=	ruby-zlib
 SUBDIR+=	rvm
 SUBDIR+=	rx
 SUBDIR+=	sablecc
+SUBDIR+=	scons
 SUBDIR+=	sdcc
 SUBDIR+=	semantic
 SUBDIR+=	semi
