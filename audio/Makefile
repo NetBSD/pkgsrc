@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 1999/04/06 17:35:32 tron Exp $
+# $NetBSD: Makefile,v 1.29 1999/04/06 17:55:31 tron Exp $
 #
 
     SUBDIR += amp
@@ -54,5 +54,6 @@
     SUBDIR += xmix
     SUBDIR += xmmix
     SUBDIR += xwave
+    SUBDIR += wsoundprefs
 
 .include "../mk/bsd.pkg.subdir.mk"
