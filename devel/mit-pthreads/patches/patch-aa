@@ -1,23 +1,37 @@
-$NetBSD: patch-aa,v 1.7 1998/08/23 06:22:17 garbled Exp $
---- machdep/syscall-i386-netbsd-1.1.S	1998/03/09 00:14:35	1.1
-+++ machdep/syscall-i386-netbsd-1.1.S	1998/03/09 00:16:17
-@@ -160,3 +160,19 @@
- 	xorl %eax,%eax
- 	ret
+$NetBSD: patch-aa,v 1.8 1998/12/28 22:21:59 bad Exp $
+
+--- stdlib/strtod.c.orig	Mon Sep 25 09:30:57 1995
++++ stdlib/strtod.c	Sun Dec 27 23:39:16 1998
+@@ -93,12 +93,23 @@
+ static char *rcsid = "$Id: patch-aa,v 1.8 1998/12/28 22:21:59 bad Exp $";
+ #endif /* LIBC_SCCS and not lint */
  
++#ifndef __arm32__
+ #include <endian.h>
+ #if BYTE_ORDER == BIG_ENDIAN
+ #define IEEE_BIG_ENDIAN			1
+ #else
+ #define IEEE_LITTLE_ENDIAN		1
+ #endif
++#endif
 +
-+/* ==========================================================================
-+ * machdep_sys_fstat()
++#ifdef __arm32__  
++/*
++ * Although the CPU is little endian the FP has different
++ * byte and word endianness. The byte order is still little endian
++ * but the word order is big endian.
 + */
-+        .globl _machdep_sys_fstat;              
-+                                                                        
-+_machdep_sys_fstat:;                            
-+
-+	movl $(SYS___fstat13), %eax;            
-+	.byte 0x9a; .long 0; .word 7;   
-+	cmpl $0, %edx
-+	je   2f
-+	movl $0, %eax
-+2:      
-+        ret                                                    
-+
++#define IEEE_BIG_ENDIAN
++#endif
+ 
+ #include <pthread/ac-types.h>
+ /*
+@@ -222,7 +233,7 @@
+  * An alternative that might be better on some machines is
+  * #define Storeinc(a,b,c) (*a++ = b << 16 | c & 0xffff)
+  */
+-#if defined(IEEE_LITTLE_ENDIAN) + defined(VAX)
++#if defined(IEEE_LITTLE_ENDIAN) + defined(VAX) + defined(__arm32__)
+ #define Storeinc(a,b,c) (((unsigned short *)a)[1] = (unsigned short)b, \
+ ((unsigned short *)a)[0] = (unsigned short)c, a++)
+ #else

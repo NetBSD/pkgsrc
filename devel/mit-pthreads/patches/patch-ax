@@ -1,58 +1,49 @@
-$NetBSD: patch-ad,v 1.2 1998/12/28 22:21:59 bad Exp $
+$NetBSD: patch-ax,v 1.1 1998/12/28 22:22:02 bad Exp $
 
 --- /dev/null	Sun Dec 27 17:07:36 1998
-+++ machdep/engine-alpha-netbsd-1.3.h	Sun Dec 27 17:21:40 1998
-@@ -0,0 +1,112 @@
++++ machdep/engine-i386-netbsd-1.3.h	Sun Dec 27 17:21:41 1998
+@@ -0,0 +1,98 @@
 +/* ==== machdep.h ============================================================
-+ * Copyright (c) 1994 Chris Provenzano (proven@athena.mit.edu) and
-+ * Ken Raeburn (raeburn@mit.edu).
++ * Copyright (c) 1993 Chris Provenzano, proven@athena.mit.edu
 + *
-+ * engine-alpha-osf1.h,v 1.4.4.1 1995/12/13 05:41:42 proven Exp
++ * $Id: patch-ax,v 1.1 1998/12/28 22:22:02 bad Exp $
 + *
 + */
 +
 +#include <unistd.h>
 +#include <setjmp.h>
 +#include <sys/time.h>
-+#include <sys/cdefs.h>
 +#include <sys/signal.h>	/* for _NSIG */
 +
-+/* The first machine dependent functions are the SEMAPHORES needing
-+   the test and set instruction.
-+
-+   On the Alpha, the actual values here are irrelevant; they just have
-+   to be different.  */
++/*
++ * The first machine dependent functions are the SEMAPHORES
++ * needing the test and set instruction.
++ */
 +#define SEMAPHORE_CLEAR 0
 +#define SEMAPHORE_SET   1
 +
-+#if 0
-+#define SEMAPHORE_TEST_AND_SET(lock)    			\
-+({ int *_sem_lock = (lock), locked, old;			\
-+   asm ("mb" : : : "memory");					\
-+   do { asm ("ldl_l %0,%1" : "=r" (old) : "m" (*_sem_lock));	\
-+	/* ?? if (old != SEMAPHORE_CLEAR) break; */		\
-+	asm ("stl_c %0,%1" : "=r" (locked), "=m" (*_sem_lock)	\
-+			   : "0" (SEMAPHORE_SET));		\
-+   } while (!locked);						\
-+   asm ("mb" : : : "memory");					\
-+   old == SEMAPHORE_CLEAR; })
++#define SEMAPHORE_TEST_AND_SET(lock)    \
++({										\
++long temp = SEMAPHORE_SET;              \
++										\
++__asm__ volatile ("xchgl %0,(%2)"       \
++        :"=r" (temp)                    \
++        :"0" (temp),"r" (lock));        \
++temp;                                   \
++})
 +
-+#define SEMAPHORE_RESET(lock)           \
-+({ int *_sem_lock = (lock);		\
-+   *_sem_lock = SEMAPHORE_CLEAR;	\
-+   asm ("mb" : : : "memory"); })
-+#endif
++#define SEMAPHORE_RESET(lock)           *lock = SEMAPHORE_CLEAR
 +
 +/*
 + * New types
 + */
-+typedef int semaphore;
++typedef long    semaphore;
 +
 +/*
 + * sigset_t macros
 + */
 +#define	SIG_ANY(sig)		(sig)
-+#define	SIGMAX			(_NSIG-1)
++#define SIGMAX				(_NSIG-1)
 +
 +/*
 + * New Strutures
@@ -61,9 +52,9 @@ $NetBSD: patch-ad,v 1.2 1998/12/28 22:21:59 bad Exp $
 +    void        		*(*start_routine)(void *);
 +    void        		*start_argument;
 +    void        		*machdep_stack;
-+    struct itimerval		machdep_timer;
-+    unsigned long		machdep_istate[11];
-+    unsigned long     		machdep_fstate[9];
++	struct itimerval	machdep_timer;
++    jmp_buf     		machdep_state;
++    char 	    		machdep_float_state[108];
 +};
 +
 +/*
@@ -71,12 +62,12 @@ $NetBSD: patch-ad,v 1.2 1998/12/28 22:21:59 bad Exp $
 + * For initial thread only.
 + */
 +#define MACHDEP_PTHREAD_INIT    \
-+	{ NULL, NULL, NULL, { { 0, 0 }, { 0, 100000 } }, 0 }
++{ NULL, NULL, NULL, { { 0, 0 }, { 0, 100000 } }, 0 }
 +
 +/*
 + * Minimum stack size
 + */
-+#define PTHREAD_STACK_MIN	2048
++#define PTHREAD_STACK_MIN	1024
 +
 +/*
 + * Some fd flag defines that are necessary to distinguish between posix
@@ -104,13 +95,8 @@ $NetBSD: patch-ad,v 1.2 1998/12/28 22:21:59 bad Exp $
 +
 +void *  __machdep_stack_alloc       __P_((size_t));
 +void    __machdep_stack_free        __P_((void *));
-+
++    
 +int machdep_save_state      __P_((void));
-+
-+int __machdep_save_int_state __P_((unsigned long *));
-+void __machdep_restore_int_state __P_((unsigned long *));
-+void __machdep_save_fp_state __P_((unsigned long *));
-+void __machdep_restore_fp_state __P_((unsigned long *));
 +
 +#endif
 +

@@ -1,208 +1,233 @@
-$NetBSD: patch-af,v 1.1 1998/08/23 06:22:17 garbled Exp $
---- /dev/null	Sat Jul 18 04:39:35 1998
-+++ machdep/engine-alpha-netbsd-1.3.c	Sat Jul 18 04:41:03 1998
-@@ -0,0 +1,204 @@
-+/* ==== machdep.c ============================================================
-+ * Copyright (c) 1993, 1994 Chris Provenzano, proven@athena.mit.edu
-+ *
-+ * Description : Machine dependent functions for NetBSD/Alpha 1.1(+)
-+ *
-+ *	1.00 93/08/04 proven
-+ *      -Started coding this file.
-+ *
-+ *	95/04/22 cgd
-+ *	-Modified to make it go with NetBSD/Alpha
-+ */
-+
-+#ifndef lint
-+static const char rcsid[] = "engine-alpha-osf1.c,v 1.4.4.1 1995/12/13 05:41:37 proven Exp";
-+#endif
-+ 
-+#include <pthread.h>
-+#include <sys/types.h>
-+#include <sys/socket.h>
+$NetBSD: patch-af,v 1.2 1998/12/28 22:22:00 bad Exp $
+
+--- /dev/null	Sun Dec 27 17:07:36 1998
++++ machdep/syscall-alpha-netbsd-1.3.S	Sun Dec 27 17:21:40 1998
+@@ -0,0 +1,228 @@
++#include <machine/asm.h>
++#define	CHMK()		call_pal 0x83
++#define COMPAT_43
 +#include <sys/syscall.h>
-+#include <stdlib.h>
-+#include <fcntl.h>
-+#include <stdio.h>
++#ifndef __CONCAT
++#include <sys/cdefs.h>
++#endif
++#define	CONCAT		__CONCAT
 +
-+/* ==========================================================================
-+ * machdep_save_state()
-+ */
-+int machdep_save_state(void)
-+{
-+  return __machdep_save_int_state(pthread_run->machdep_data.machdep_istate);
-+}
++#undef SYSCALL
 +
-+void machdep_restore_state(void)
-+{
-+  __machdep_restore_int_state(pthread_run->machdep_data.machdep_istate);
-+}
++/* Kernel syscall interface:
++   Input:
++	v0 - system call number
++	a* - arguments, as in C
++   Output:
++	a3 - zero iff successful
++	v0 - errno value on failure, else result
 +
-+void machdep_save_float_state (void)
-+{
-+  __machdep_save_fp_state(pthread_run->machdep_data.machdep_fstate);
-+}
++   This macro is similar to SYSCALL in asm.h, but not completely.
++   There's room for optimization, if we assume this will continue to
++   be assembled as one file.
 +
-+void machdep_restore_float_state (void)
-+{
-+  __machdep_restore_fp_state(pthread_run->machdep_data.machdep_fstate);
-+}
++   This macro expansions does not include the return instruction.
++   If there's no other work to be done, use something like:
++	SYSCALL(foo) ; ret
++   If there is other work to do (in fork, maybe?), do it after the
++   SYSCALL invocation.  */
 +
-+/* ==========================================================================
-+ * machdep_set_thread_timer()
-+ */
-+void machdep_set_thread_timer(struct machdep_pthread *machdep_pthread)
-+{
-+    if (setitimer(ITIMER_VIRTUAL, &(machdep_pthread->machdep_timer), NULL)) {
-+        PANIC();
-+    }
-+}
++#define SYSCALL(x) \
++	.align	4					;\
++	.globl	CONCAT(machdep_sys_,x)			;\
++	.ent	CONCAT(machdep_sys_,x), 0		;\
++CONCAT(machdep_sys_,x):					;\
++	.frame	sp,0,ra					;\
++	ldiq	v0, CONCAT(SYS_,x)			;\
++	CHMK()						;\
++	beq	a3, CONCAT(Lsys_noerr_,x)		;\
++	br	gp, CONCAT(Lsys_err_,x)			;\
++CONCAT(Lsys_err_,x):					;\
++	/* Load gp so we can find cerror to jump to.  */;\
++	ldgp	gp, 0(gp)				;\
++	jmp	zero, machdep_cerror			;\
++CONCAT(Lsys_noerr_,x):
 +
-+/* ==========================================================================
-+ * machdep_unset_thread_timer()
-+ */
-+void machdep_unset_thread_timer(struct machdep_pthread *machdep_pthread)
-+{
-+    struct itimerval zeroval = { { 0, 0 }, { 0, 0} };
++#define XSYSCALL(x)	SYSCALL(x) ; RET ; .end CONCAT(machdep_sys_,x)
 +
-+    if (setitimer(ITIMER_VIRTUAL, &zeroval, NULL)) {
-+        PANIC();
-+    }
-+}
++	.globl	machdep_cerror 
++machdep_cerror:
++	br	t0, Lmachdep_cerror_setgp
++Lmachdep_cerror_setgp:
++	ldgp	gp, 0(t0)
++	stl	v0, errno
++#if 0
++	ldiq	v0, -1
++#else
++	subq	zero, v0, v0
++#endif
++	RET
 +
-+/* ==========================================================================
-+ * machdep_pthread_cleanup()
-+ */
-+void *machdep_pthread_cleanup(struct machdep_pthread *machdep_pthread)
-+{
-+    return(machdep_pthread->machdep_stack);
-+}
++/* The fork system call is special...  */
++SYSCALL(fork)
++	cmovne	a4, 0, v0
++	RET
++	.end	machdep_sys_fork
 +
-+/* ==========================================================================
-+ * machdep_pthread_start()
-+ */
-+void machdep_pthread_start(void)
-+{
-+	context_switch_done();
-+	pthread_sched_resume ();
++/* The pipe system call is special... */
++SYSCALL(pipe)
++	stl	v0, 0(a0)
++	stl	a4, 4(a0)
++	mov	zero, v0
++	RET
++	.end	machdep_sys_pipe
 +
-+    /* Run current threads start routine with argument */
-+    pthread_exit(pthread_run->machdep_data.start_routine
-+      (pthread_run->machdep_data.start_argument));
++#ifndef SYS___sigsuspend14
++/* The sigsuspend system call is special... */
++	.align 4
++	.globl machdep_sys_sigsuspend
++	.ent machdep_sys_sigsuspend, 0
++machdep_sys_sigsuspend:
++	ldl	a0, 0(a0)		/* pass *mask instead of mask */
++	ldiq	v0, SYS_sigsuspend
++	CHMK()
++	mov	zero, v0		/* shouldn't need; just in case... */
++	RET
++	.end 	machdep_sys_sigsuspend
++#endif /* SYS_sigsuspend14 */
 +
-+    /* should never reach here */
-+    PANIC();
-+}
++#ifndef SYS___sigprocmask14
++/* The sigprocmask system call is special... */
++	.align 4
++	.globl machdep_sys_sigprocmask
++	.ent machdep_sys_sigprocmask, 0
++machdep_sys_sigprocmask:
++	mov	a2, a5			/* safe */
++	cmoveq	a1, 1, a0		/* if set == NULL, how = SIG_BLOCK */
++	beq	a1, Ldoit		/* and set = 0, and do it. */
++	ldl	a1, 0(a1)		/* load the set from *set */
++Ldoit:	ldiq	v0, SYS_sigprocmask
++	CHMK()
++	beq	a5, Lret		/* if they don't want old mask, done */	
++	stl	v0, 0(a5)		/* otherwise, give it to them. */
++Lret:	mov	zero, v0
++	RET
++	.end	machdep_sys_sigprocmask
++#endif /* SYS_sigprocmask14 */
 +
-+/* ==========================================================================
-+ * __machdep_stack_free()
-+ */
-+void __machdep_stack_free(void * stack)
-+{
-+    free(stack);
-+}
++/* More stuff ... */
++	.align 4
++	.global __machdep_save_int_state
++	.ent __machdep_save_int_state, 0
++__machdep_save_int_state:
++	.frame	sp, 16, ra
++	ldgp	gp, 0(t12)
++	lda	sp, -16(sp)
++	stq	ra, 0(sp)
 +
-+/* ==========================================================================
-+ * __machdep_stack_alloc()
-+ */
-+void * __machdep_stack_alloc(size_t size)
-+{
-+    void * stack;
++	/* save integer registers */
++	stq	ra, ( 0 * 8)(a0)		/* return address */
++	stq	s0, ( 1 * 8)(a0)		/* callee-saved registers */
++	stq	s1, ( 2 * 8)(a0)
++	stq	s2, ( 3 * 8)(a0)
++	stq	s3, ( 4 * 8)(a0)
++	stq	s4, ( 5 * 8)(a0)
++	stq	s5, ( 6 * 8)(a0)
++	stq	s6, ( 7 * 8)(a0)
++	stq	sp, ( 9 * 8)(a0)
++	stq	ra, ( 8 * 8)(a0)		/* RA on return */
++	stq	pv, (10 * 8)(a0)		/* and PV; we restore it */
 +
-+    return(malloc(size));
-+}
++	mov	zero, v0
++	lda	sp, 16(sp)
++	RET
++	.end __machdep_save_int_state
 +
-+/* ==========================================================================
-+ * __machdep_pthread_create()
-+ */
-+void __machdep_pthread_create(struct machdep_pthread *machdep_pthread,
-+  void *(* start_routine)(), void *start_argument, 
-+  long stack_size, long nsec, long flags)
-+{
-+    machdep_pthread->start_routine = start_routine;
-+    machdep_pthread->start_argument = start_argument;
++	.align 4
++	.global __machdep_restore_int_state
++	.ent __machdep_restore_int_state, 0
++__machdep_restore_int_state:
++	.frame	sp, 16, ra
++	ldgp	gp, 0(t12)
++	lda	sp, -16(sp)
++	stq	ra, 0(sp)
 +
-+    machdep_pthread->machdep_timer.it_value.tv_sec = 0;
-+    machdep_pthread->machdep_timer.it_interval.tv_sec = 0;
-+    machdep_pthread->machdep_timer.it_interval.tv_usec = 0;
-+    machdep_pthread->machdep_timer.it_value.tv_usec = nsec / 1000;
++	/* restore integer registers */
++	ldq	t0, ( 0 * 8)(a0)		/* return address */
++	ldq	s0, ( 1 * 8)(a0)		/* callee-saved registers */
++	ldq	s1, ( 2 * 8)(a0)
++	ldq	s2, ( 3 * 8)(a0)
++	ldq	s3, ( 4 * 8)(a0)
++	ldq	s4, ( 5 * 8)(a0)
++	ldq	s5, ( 6 * 8)(a0)
++	ldq	s6, ( 7 * 8)(a0)
++	ldq	ra, ( 8 * 8)(a0)		/* RA after return */
++	ldq	sp, ( 9 * 8)(a0)
++	ldq	pv, (10 * 8)(a0)		/* and PV; we restore it */
 +
-+    /* Set up new stack frame so that it looks like it returned from a
-+       longjmp() to the beginning of machdep_pthread_start().  */
-+    machdep_pthread->machdep_istate[8/*ISTATE_RA*/] = 0;
-+    machdep_pthread->machdep_istate[0/*ISTATE_PC*/] = (long)machdep_pthread_start;
-+    machdep_pthread->machdep_istate[10/*ISTATE_PV*/] = (long)machdep_pthread_start;
++	ldiq    v0, 1
++	ret     zero,(t0),1
++	.end __machdep_restore_int_state
 +
-+    /* Alpha stack starts high and builds down. */
-+    {
-+      long stk_addr = (long) machdep_pthread->machdep_stack;
-+      stk_addr += stack_size - 1024;
-+      stk_addr &= ~15;
-+      machdep_pthread->machdep_istate[9/*ISTATE_SP*/] = stk_addr;
-+    }
-+}
++	.align 4
++	.global __machdep_save_fp_state
++	.ent __machdep_save_fp_state, 0
++__machdep_save_fp_state:
++	.frame	sp, 16, ra
++	ldgp	gp, 0(t12)
++	lda	sp, -16(sp)
++	stq	ra, 0(sp)
 +
-+int safe_store (loc, new)
-+     int *loc;
-+     int new;
-+{
-+  int locked, old;
-+  asm ("mb" : : : "memory");
-+  do {
-+    asm ("ldl_l %0,%1" : "=r" (old) : "m" (*loc));
-+    asm ("stl_c %0,%1" : "=r" (locked), "=m" (*loc) : "0" (new));
-+  } while (!locked);
-+  asm ("mb" : : : "memory");
-+  return old;
-+}
++	/* save FP registers */
++	stt	fs0, (0 * 8)(a0)		/* callee-saved registers */
++	stt	fs1, (1 * 8)(a0)
++	stt	fs2, (2 * 8)(a0)
++	stt	fs3, (3 * 8)(a0)
++	stt	fs4, (4 * 8)(a0)
++	stt	fs5, (5 * 8)(a0)
++	stt	fs6, (6 * 8)(a0)
++	stt	fs7, (7 * 8)(a0)
++	mf_fpcr ft0 				/* and FP control reg */
++	stt	ft0, (8 * 8)(a0)
 +
-+/* ==========================================================================
-+ * machdep_sys_creat()
-+ */
-+machdep_sys_creat(char * path, int mode)
-+{   
-+        return(machdep_sys_open(path, O_WRONLY | O_CREAT | O_TRUNC, mode));
-+}   
++	lda	sp, 16(sp)
++	RET
++	.end __machdep_save_fp_state
 +
-+/* ==========================================================================
-+ * machdep_sys_wait3()
-+ */  
-+machdep_sys_wait3(int * b, int c, int * d)
-+{    
-+        return(machdep_sys_wait4(0, b, c, d));
-+}   
-+ 
-+/* ==========================================================================
-+ * machdep_sys_waitpid()
-+ */   
-+machdep_sys_waitpid(int a, int * b, int c)
-+{
-+        return(machdep_sys_wait4(a, b, c, NULL));
-+}
++	.align 4
++	.global __machdep_restore_fp_state
++	.ent __machdep_restore_fp_state, 0
++__machdep_restore_fp_state:
++	.frame	sp, 16, ra
++	ldgp	gp, 0(t12)
++	lda	sp, -16(sp)
++	stq	ra, 0(sp)
 +
-+/* ==========================================================================
-+ * machdep_sys_getdtablesize()
-+ */
-+machdep_sys_getdtablesize()
-+{
-+        return(sysconf(_SC_OPEN_MAX));
-+}
++	/* restore FP registers */
++	ldt	fs0, (0 * 8)(a0)		/* callee-saved registers */
++	ldt	fs1, (1 * 8)(a0)
++	ldt	fs2, (2 * 8)(a0)
++	ldt	fs3, (3 * 8)(a0)
++	ldt	fs4, (4 * 8)(a0)
++	ldt	fs5, (5 * 8)(a0)
++	ldt	fs6, (6 * 8)(a0)
++	ldt	fs7, (7 * 8)(a0)
++	ldt	ft0, (8 * 8)(a0)
++	mt_fpcr ft0 				/* and FP control reg */
 +
-+/* ==========================================================================
-+ * machdep_sys_lseek()
-+ */
-+off_t machdep_sys_lseek(int fd, off_t offset, int whence)
-+{
-+	extern off_t __syscall();
++	lda	sp, 16(sp)
++	RET
++	.end __machdep_restore_fp_state
 +
-+	return(__syscall((quad_t)SYS_lseek, fd, 0, offset, whence));
-+}
-+
-+/* ==========================================================================
-+ * machdep_sys_getdirentries()
-+ */
-+machdep_sys_getdirentries(int fd, char * buf, int len, int * seek)
-+{
-+        return(machdep_sys_getdents(fd, buf, len));
-+}  
++/* For fstat() we actually syscall fstat13. */
++	.align	4
++	.globl	machdep_sys_fstat
++	.ent	machdep_sys_fstat, 0
++machdep_sys_fstat:
++	.frame	sp,0,ra
++	ldiq	v0, SYS___fstat13
++	CHMK()
++	beq	a3, Lsys_noerr_fstat
++	br	gp, Lsys_err_fstat
++Lsys_err_fstat:
++	/* Load gp so we can find cerror to jump to.  */
++	ldgp	gp, 0(gp)
++	jmp	zero, machdep_cerror
++Lsys_noerr_fstat:
++	RET
++	.end machdep_sys_fstat
