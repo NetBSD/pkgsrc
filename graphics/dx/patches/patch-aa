@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/10/01 11:23:15 drochner Exp $
+--- src/exec/libdx/message.c.orig	Sun Sep 26 22:04:06 1999
++++ src/exec/libdx/message.c	Sun Sep 26 22:04:26 1999
+@@ -271,7 +271,7 @@
+ DXPrintError(char *s)
+ {
+     extern int sys_nerr;
+-#if !defined(linux) && !defined(freebsd)
++#if !defined(linux) && !defined(freebsd) && !defined(__NetBSD__)
+     extern char *sys_errlist[];
+ #endif
+     char *msg, *errnomsg;
