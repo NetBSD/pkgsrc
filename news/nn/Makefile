@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.8 1999/08/22 22:55:45 kim Exp $
+# $NetBSD: Makefile,v 1.9 1999/08/22 22:59:59 kim Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/30 18:17:48 adam Exp
 #
 
 DISTNAME=	nn-6.5.4
 CATEGORIES=	news
-MASTER_SITES=	ftp://ftp.gw.com/pub/unix/news/nn/
+MASTER_SITES=	ftp://ftp.visi.com/users/mtpins/ \
+		ftp://ftp.gw.com/pub/unix/news/nn/
 
 MAINTAINER=     tron@netbsd.org
 
