@@ -1,25 +1,33 @@
-$NetBSD: patch-aa,v 1.7 2000/11/11 17:08:16 tsarna Exp $
+$NetBSD: patch-aa,v 1.8 2000/12/05 15:03:52 drochner Exp $
 
-Make this work on non-ELF NetBSD.
-Based on current python cvs with (probably broken... are ALL OpenBSD
-ports a.out?) + NetBSD fix.
-
---- Python/dynload_shlib.c.orig	Sat Nov 11 10:32:40 2000
-+++ Python/dynload_shlib.c	Sat Nov 11 10:51:03 2000
-@@ -16,6 +16,12 @@
- #endif
- #endif
+--- Python/dynload_shlib.c.orig	Mon Oct 16 23:49:29 2000
++++ Python/dynload_shlib.c	Tue Dec  5 15:58:49 2000
+@@ -6,7 +6,9 @@
  
+ #include <sys/types.h>
+ #include <sys/stat.h>
+-#if defined(__NetBSD__) && (NetBSD < 199712)
++#if defined(__NetBSD__)
++#include <sys/param.h>
++#if (NetBSD < 199712)
+ #include <nlist.h>
+ #include <link.h>
+ #define dlerror() "error in dynamic linking"
+@@ -15,6 +17,13 @@
+ #include <dlfcn.h>
+ #endif
+ #endif
++#endif /* __NetBSD__ */
++
 +#if (defined(__NetBSD__) || defined(__OpenBSD__)) && !defined(__ELF__)
 +#define LEAD_UNDERSCORE "_"
 +#else
 +#define LEAD_UNDERSCORE ""
 +#endif
-+
+ 
  #ifndef RTLD_LAZY
  #define RTLD_LAZY 1
- #endif
-@@ -55,7 +61,7 @@
+@@ -55,7 +64,7 @@
  	}
  
  	/* ### should there be a leading underscore for some platforms? */
