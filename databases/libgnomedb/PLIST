@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/05/30 16:19:53 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/06/10 14:21:07 jmmv Exp $
 bin/gnome-database-properties
 include/libgnomedb/gnome-db-browser.h
 include/libgnomedb/gnome-db-combo.h
@@ -16,6 +16,7 @@ include/libgnomedb/gnome-db-error.h
 include/libgnomedb/gnome-db-form.h
 include/libgnomedb/gnome-db-gray-bar.h
 include/libgnomedb/gnome-db-grid.h
+include/libgnomedb/gnome-db-i18n.h
 include/libgnomedb/gnome-db-icon-list.h
 include/libgnomedb/gnome-db-list.h
 include/libgnomedb/gnome-db-login-dialog.h
@@ -42,8 +43,8 @@ lib/libglade/2.0/libgnomedb.so
 lib/libgnomedb-2.a
 lib/libgnomedb-2.la
 lib/libgnomedb-2.so
-lib/libgnomedb-2.so.1
-lib/libgnomedb-2.so.1.0
+lib/libgnomedb-2.so.3
+lib/libgnomedb-2.so.3.0
 lib/pkgconfig/libgnomedb.pc
 libexec/gnome-database-components
 share/control-center-2.0/capplets/database-properties.desktop
@@ -88,7 +89,6 @@ share/doc/html/libgnomedb/libgnomedb-gnomedblogin.html
 share/doc/html/libgnomedb/libgnomedb-gnomedblogindialog.html
 share/doc/html/libgnomedb/libgnomedb-gnomedbproviderselector.html
 share/doc/html/libgnomedb/libgnomedb-gnomedbreporteditor.html
-share/doc/html/libgnomedb/libgnomedb-gnomedbsqleditor.html
 share/doc/html/libgnomedb/libgnomedb-gnomedbtableeditor.html
 share/doc/html/libgnomedb/libgnomedb-gnomedbwindow.html
 share/doc/html/libgnomedb/libgnomedb-introduction.html
@@ -104,6 +104,7 @@ ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/libgnomedb-2.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libgnomedb-2.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/libgnomedb-2.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libgnomedb-2.mo
+${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/libgnomedb-2.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/libgnomedb-2.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libgnomedb-2.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/libgnomedb-2.mo
@@ -121,6 +122,8 @@ ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/libgnomedb-2.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/libgnomedb-2.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/libgnomedb-2.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/libgnomedb-2.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/libgnomedb-2.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/libgnomedb-2.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libgnomedb-2.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/libgnomedb-2.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/libgnomedb-2.mo
@@ -133,9 +136,12 @@ share/mime-info/libgnomedb.mime
 share/omf/libgnomedb/libgnomedb-C.omf
 share/pixmaps/libgnomedb/gnome-db-aggregates_16x16.png
 share/pixmaps/libgnomedb/gnome-db-aggregates_24x24.png
+share/pixmaps/libgnomedb/gnome-db-commit_24x24.png
 share/pixmaps/libgnomedb/gnome-db-connect_24x24.png
+share/pixmaps/libgnomedb/gnome-db-database-login_48x48.png
 share/pixmaps/libgnomedb/gnome-db-database_16x16.png
 share/pixmaps/libgnomedb/gnome-db-database_24x24.png
+share/pixmaps/libgnomedb/gnome-db-database_48x48.png
 share/pixmaps/libgnomedb/gnome-db-designer_24x24.png
 share/pixmaps/libgnomedb/gnome-db-disconnect_24x24.png
 share/pixmaps/libgnomedb/gnome-db-indexes_16x16.png
@@ -144,6 +150,7 @@ share/pixmaps/libgnomedb/gnome-db-procedures_16x16.png
 share/pixmaps/libgnomedb/gnome-db-procedures_24x24.png
 share/pixmaps/libgnomedb/gnome-db-query_16x16.png
 share/pixmaps/libgnomedb/gnome-db-query_24x24.png
+share/pixmaps/libgnomedb/gnome-db-rollback_24x24.png
 share/pixmaps/libgnomedb/gnome-db-sequences_16x16.png
 share/pixmaps/libgnomedb/gnome-db-sequences_24x24.png
 share/pixmaps/libgnomedb/gnome-db-sql_16x16.png
