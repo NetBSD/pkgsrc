@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.9 2002/04/04 08:08:26 itohy Exp $
+$NetBSD: patch-ac,v 1.10 2002/04/25 12:17:05 agc Exp $
 
---- configure.orig	Mon Jan  7 18:09:58 2002
-+++ configure	Thu Apr  4 12:39:01 2002
-@@ -2151,9 +2151,9 @@
-   rm -f conf.glibtest
+--- configure.orig	Wed Mar 20 14:45:48 2002
++++ configure	Thu Apr 25 12:42:56 2002
+@@ -7189,9 +7189,9 @@
  
+   rm -f conf.glibtest
  
 -GMODULE_CFLAGS=`glib-config --cflags gmodule`
 +GMODULE_CFLAGS=`$GLIB_CONFIG --cflags gmodule`
@@ -12,9 +12,9 @@ $NetBSD: patch-ac,v 1.9 2002/04/04 08:08:26 itohy Exp $
 -GMODULE_LIBS=`glib-config --libs gmodule`
 +GMODULE_LIBS=`$GLIB_CONFIG --libs gmodule`
  
- 
  for ac_prog in 'bison -y' byacc
-@@ -3451,6 +3451,10 @@
+ do
+@@ -8636,6 +8636,10 @@
  	THEFILE="`echo $I | sed -e 's,^-L,,'`"
  	echo "From $I, checking in dir $THEFILE for libwrap.so" 1>&5
  	if test -f $THEFILE/libwrap.so; then

@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.9 2002/04/04 08:08:24 itohy Exp $
+$NetBSD: distinfo,v 1.10 2002/04/25 12:17:04 agc Exp $
 
-SHA1 (ORBit-0.5.13.tar.gz) = ea8d790b040356e90fd81aa98313c2c1b08f3bcf
-Size (ORBit-0.5.13.tar.gz) = 1183657 bytes
-SHA1 (patch-aa) = ecef5843b4d749ccd8b51e8c7cd5cc96bac00a98
-SHA1 (patch-ab) = 1a8d5c433941930d558a408ebfa2ba4a631bafea
-SHA1 (patch-ac) = 7f5ad581e9ba1ee125c7bd626fb99122326fc679
+SHA1 (ORBit-0.5.15.tar.gz) = 1571976662311060175008d225de05e9bc2eb038
+Size (ORBit-0.5.15.tar.gz) = 1335272 bytes
+SHA1 (patch-aa) = ef745d3d279d57dbdf6380053b6b4a7e63322671
+SHA1 (patch-ab) = c2b7cc5f83230035c214600bff59d4dfefd92422
+SHA1 (patch-ac) = cd1f6d8848ad11927717574dada0b164713aab23
 SHA1 (patch-ad) = 688920ba423aa2994d9e2e6540f8738305cb7fd9
-SHA1 (patch-ae) = f6e8fff6047b359ab92c38c0ae2293655394ea04
+SHA1 (patch-ae) = 95cc6f46fa2cfcd34af2e546f3d4a8d55194e5eb
 SHA1 (patch-af) = b88b26b8fe7d42f267c6761edc3e3b8250bd14fb
 SHA1 (patch-ag) = 875e83a597ab39d57abcfd9259d8ec15707ea45c
-SHA1 (patch-ai) = a5ec30692a14fb6bef617f262b6bb1fdd8903436
+SHA1 (patch-ai) = 06e1cb2bc9f4f5460cdde71526417cdaa38ff310
 SHA1 (patch-ak) = d569014320dbea40ccdb9e369e07c984ee7bd9de
-SHA1 (patch-al) = 0bba5ec17f8b663f1ca9427538bac238411321a0
-SHA1 (patch-am) = c959b34edc150c1d503d2bb294f072e885daed58
-SHA1 (patch-an) = 1ddda1443d527d54f8b4b2ffab500a746e82b0d1
+SHA1 (patch-al) = 7f2992136c3f7b1badfc76a83d6fed0aa73a8873
+SHA1 (patch-am) = f52369447d04a382d6e93a6bddaf3962a3ab6677
+SHA1 (patch-an) = 7b8ead20b77dc8bad497216c958578d1b285391d
