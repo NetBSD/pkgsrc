@@ -1,6 +1,56 @@
-Index: newchannels.c
-*** newchannels.c.orig	Tue Jan 20 05:24:06 1998
---- newchannels.c	Tue Jan 20 20:42:58 1998
+*** newchannels.c.orig	Tue Jan 20 07:24:06 1998
+--- newchannels.c	Wed Mar 18 20:44:26 1998
+***************
+*** 241,247 ****
+  #include "authfd.h"
+  #include "emulate.h"
+  #include "servconf.h"
+! #ifdef LIBWRAP
+  #include <tcpd.h>
+  #include <syslog.h>
+  #ifdef NEED_SYS_SYSLOG_H
+--- 241,247 ----
+  #include "authfd.h"
+  #include "emulate.h"
+  #include "servconf.h"
+! #if defined(LIBWRAP) && defined(LIBWRAP_FWD)
+  #include <tcpd.h>
+  #include <syslog.h>
+  #ifdef NEED_SYS_SYSLOG_H
+***************
+*** 881,887 ****
+  	      sprintf(buf, "X11 connection from %.200s port %d",
+  		      remote_hostname, get_peer_port(newsock));
+  	      xfree(remote_hostname);
+! #ifdef LIBWRAP
+  	      {
+  		struct request_info req;
+  		struct servent *serv;
+--- 881,887 ----
+  	      sprintf(buf, "X11 connection from %.200s port %d",
+  		      remote_hostname, get_peer_port(newsock));
+  	      xfree(remote_hostname);
+! #if defined(LIBWRAP) && defined(LIBWRAP_FWD)
+  	      {
+  		struct request_info req;
+  		struct servent *serv;
+***************
+*** 932,938 ****
+  		      ch->listening_port, remote_hostname,
+  		      get_peer_port(newsock));
+  	      xfree(remote_hostname);
+! #ifdef LIBWRAP
+  	      {
+  		struct request_info req;
+  		struct servent *serv;
+--- 932,938 ----
+  		      ch->listening_port, remote_hostname,
+  		      get_peer_port(newsock));
+  	      xfree(remote_hostname);
+! #if defined(LIBWRAP) && defined(LIBWRAP_FWD)
+  	      {
+  		struct request_info req;
+  		struct servent *serv;
 ***************
 *** 2324,2329 ****
 --- 2324,2333 ----
