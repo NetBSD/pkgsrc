@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/03 16:06:06 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/04 13:57:48 wiz Exp $
 
 DISTNAME=	guile-slib-2.4.2
 PKGREVISION=	5
@@ -15,9 +15,10 @@ DEPENDS+=	slib>=2.4.2:../../devel/slib
 USE_BUILDLINK3=	yes
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
-NO_BUILD=	yes
 
 PLIST_SUBST+=	GUILE14_SUBDIR=${GUILE14_SUBDIR:Q}
+
+do-build:
 
 do-install:
 	${LN} -sf ${PREFIX}/share/slib ${PREFIX}/${GUILE14_SUBDIR}/share/guile/slib
