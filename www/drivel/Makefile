@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2004/10/24 20:33:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2004/10/25 16:42:06 jmmv Exp $
 #
 
 DISTNAME=	drivel-1.2.2
+PKGREVISION=	1
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=drivel/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,6 +16,8 @@ USE_BUILDLINK3=		YES
 USE_DIRS+=		gnome2-1.5
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	YES
+
+GCONF2_SCHEMAS=		drivel.schemas
 
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/GConf2/schemas.mk"
