@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 21:37:49 grant Exp $
+# $NetBSD: Makefile,v 1.14 2003/12/26 19:55:34 wiz Exp $
 #
 
 DISTNAME=	amor-0.6
@@ -11,7 +11,7 @@ MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.powerup.com.au/~mjones/amor/index.html
 COMMENT=	Small blob that sits on top of your active window
 
-DEPENDS+=	kdebase-1.1.2nb3:../../x11/kdebase
+DEPENDS+=	kdebase-1.1.2nb4:../../x11/kdebase
 
 USE_X11BASE=		yes	# To get this near KDE
 GNU_CONFIGURE=		yes

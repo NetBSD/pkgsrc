@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2003/12/23 10:37:56 sketch Exp $
+# $NetBSD: Makefile,v 1.67 2003/12/26 19:56:52 wiz Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:54 asami Exp
 #
 
@@ -15,7 +15,7 @@ COMMENT=		Network modules for the KDE integrated X11 desktop
 DEPENDS=		gdbm>=1.8.3:../../databases/gdbm
 DEPENDS+=		uulib>=0.5.13:../../converters/uulib
 DEPENDS+=		kdesupport-1.1.2:../../converters/kdesupport
-DEPENDS+=		kdebase-1.1.2nb3:../../x11/kdebase
+DEPENDS+=		kdebase-1.1.2nb4:../../x11/kdebase
 
 USE_X11BASE=		yes
 USE_GMAKE=		yes

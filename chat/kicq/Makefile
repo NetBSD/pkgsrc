@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/07/17 21:25:56 grant Exp $
+# $NetBSD: Makefile,v 1.16 2003/12/26 19:57:31 wiz Exp $
 
 DISTNAME=		kicq-1.0.0
 PKGREVISION=		2
@@ -10,7 +10,7 @@ HOMEPAGE=		http://kicq.sourceforge.net/
 COMMENT=		KDE ICQ client
 
 DEPENDS+=		icqlib>=1.0.0:../../chat/icqlib
-DEPENDS+=		kdebase-1.1.2nb3:../../x11/kdebase
+DEPENDS+=		kdebase-1.1.2nb4:../../x11/kdebase
 
 USE_X11BASE=		yes
 USE_GMAKE=		yes
