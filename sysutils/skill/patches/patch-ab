@@ -1,3 +1,4 @@
+$NetBSD: patch-ab,v 1.7 2000/09/03 13:31:00 wiz Exp $
 --- machdep/bsd-44.c.orig	Sun Feb 20 07:37:39 2000
 +++ machdep/bsd-44.c	Tue Jun 27 00:03:39 2000
 @@ -23,11 +23,54 @@
