@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/04/12 15:53:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/04 04:55:49 minskim Exp $
 
 DISTNAME=		libgtop-2.6.0
 PKGNAME=		${DISTNAME:S/-/2-/}
@@ -16,22 +16,6 @@ BUILD_USES_MSGFMT=	YES
 NOT_FOR_PLATFORM=	SunOS-*-*
 OSVERSION_SPECIFIC=	YES
 USE_MSGFMT_PLURALS=	YES
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == NetBSD
-.  if (${MACHINE_ARCH} != alpha) && \
-	(${MACHINE_ARCH} != arm) && (${MACHINE_ARCH} != arm32) && \
-	(${MACHINE_ARCH} != i386) && (${MACHINE_ARCH} != m68k) && \
-	(${MACHINE_ARCH} != mipsel) && (${MACHINE_ARCH} != powerpc) && \
-	(${MACHINE_ARCH} != sparc) && (${MACHINE_ARCH} != sparc64) && \
-	(${MACHINE_ARCH} != x86_64)
-PKG_FAIL_REASON=	"${PKGNAME} has not yet been ported to ${MACHINE_ARCH}."
-PKG_FAIL_REASON+=	"Please look at /usr/include/${MACHINE_ARCH}/pcb.h"
-PKG_FAIL_REASON+=	"and update ${WRKSRC}/sysdeps/freebsd/prockernel.c appropriately."
-PKG_FAIL_REASON+=	"(More information can be found in libgtop.info.)"
-.  endif
-.endif
 
 USE_PERL5=		build
 USE_BUILDLINK3=		YES
@@ -55,6 +39,22 @@ CONFIGURE_ARGS+=	--with-glib-prefix=${BUILDLINK_PREFIX.glib2}
 CONFIGURE_ARGS+=	--with-catgets --with-libgtop-guile=no
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ENV+=		AWK="${AWK}" LN_S="${LN} -s" PERL="${PERL5}"
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == NetBSD
+.  if (${MACHINE_ARCH} != alpha) && \
+	(${MACHINE_ARCH} != arm) && (${MACHINE_ARCH} != arm32) && \
+	(${MACHINE_ARCH} != i386) && (${MACHINE_ARCH} != m68k) && \
+	(${MACHINE_ARCH} != mipsel) && (${MACHINE_ARCH} != powerpc) && \
+	(${MACHINE_ARCH} != sparc) && (${MACHINE_ARCH} != sparc64) && \
+	(${MACHINE_ARCH} != x86_64)
+PKG_FAIL_REASON=	"${PKGNAME} has not yet been ported to ${MACHINE_ARCH}."
+PKG_FAIL_REASON+=	"Please look at /usr/include/${MACHINE_ARCH}/pcb.h"
+PKG_FAIL_REASON+=	"and update ${WRKSRC}/sysdeps/freebsd/prockernel.c appropriately."
+PKG_FAIL_REASON+=	"(More information can be found in libgtop.info.)"
+.  endif
+.endif
 
 .if ${OPSYS} == "Linux"
 PLIST_SUBST+=	LIBGTOP_SERVER="@comment "
