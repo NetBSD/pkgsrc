@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.835 2001/10/26 17:03:04 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.836 2001/10/26 21:42:44 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -3001,6 +3001,12 @@ show-pkgtools-version:
 # i.e. "make show-var VARNAME=var", will print var's value
 show-var:
 	@${ECHO} ${${VARNAME}:Q}
+
+# enhanced version of target above, to display multiple variables
+show-vars:
+.for VARNAME in ${VARNAMES}
+	@${ECHO} ${${VARNAME}:Q}
+.endfor
 
 .if !target(print-build-depends-list)
 print-build-depends-list:
