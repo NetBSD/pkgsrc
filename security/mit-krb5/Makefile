@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2004/10/03 00:18:10 tv Exp $
+# $NetBSD: Makefile,v 1.14.2.1 2004/12/23 04:22:12 snj Exp $
 
-DISTNAME=	krb5-1.3.4
-PKGNAME=	mit-${DISTNAME}
-PKGREVISION=	3
+DISTNAME=	krb5-1.3.6
+PKGNAME=	mit-${DISTNAME:S/-signed$//}
 CATEGORIES=	security
+MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/1.3/
+DISTFILES=	${DISTNAME}-signed${EXTRACT_SUFX}
+EXTRACT_SUFX=	.tar
 
 MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://web.mit.edu/kerberos/www/
@@ -14,29 +16,6 @@ RESTRICTED=	"Redistribution is restricted by U.S. export regulations"
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
 .include "../../mk/bsd.prefs.mk"
-
-USE_MIT_KRB5_MASTER_SITE?=	yes
-.if !empty(USE_MIT_KRB5_MASTER_SITE:M[yY][eE][sS])
-MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/1.3/
-EXTRACT_SUFX=	.tar
-
-post-extract:
-	cd ${WRKDIR} && ${PAX} -O -rzf ${WRKDIR}/${DISTNAME}.tar.gz
-.else
-MASTER_SITES=	http://www.crypto-publish.org/dist/mit-kerberos5/ \
-		http://www.mirrors.wiretapped.net/security/cryptography/apps/kerberos/krb5-mit/unix/
-EXTRACT_SUFX=	.tar.gz
-.endif
-
-# Patches to fix MIT-krb5 security advisories.
-MITKRB5_SA_2004_002_PATCH=	2004-002-patch_1.3.4.txt
-MITKRB5_SA_2004_003_PATCH=	2004-003-patch_1.3.4.txt
-.for _patch_ in ${MITKRB5_SA_2004_002_PATCH} ${MITKRB5_SA_2004_003_PATCH}
-PATCHFILES+=			${_patch_}
-SITES_${_patch_}=		http://web.mit.edu/kerberos/advisories/
-PATCH_DIST_STRIP.${_patch_}=	-p1
-PATCH_DIST_CAT.${_patch_}=	${CAT} ${_patch_}
-.endfor
 
 CONFLICTS+=	heimdal-[0-9]*
 CONFLICTS+=	kth-krb4-[0-9]*
@@ -113,6 +92,13 @@ OWN_DIRS_PERMS=		${MIT_KRB5_STATEDIR}/krb5kdc			\
 RCD_SCRIPTS=		kadmind kdc
 
 INSTALLATION_DIRS=	bin info lib sbin
+
+# The MIT krb5 distribution is actually a tar file that contains the
+# real .tar.gz distfile and a PGP signature.
+#
+post-extract:
+	@extract_file="${WRKDIR}/${DISTNAME}.tar.gz";			\
+	cd ${WRKDIR} && ${EXTRACT_CMD}
 
 pre-configure:
 	@cd ${WRKSRC}; ${FIND} . -name configure -print |		\
