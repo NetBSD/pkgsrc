@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/03 11:24:29 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/04/07 11:17:03 rh Exp $
 share/sounds/card_shuffle.wav
 share/sounds/phone.wav
+share/sounds/shutdown1.wav
+share/sounds/startup3.wav
+share/sounds/warning.wav
+share/sounds/email.wav
+share/sounds/error.wav
+share/sounds/generic.wav
+share/sounds/info.wav
 share/sounds/login.wav
 share/sounds/logout.wav
-share/sounds/shutdown1.wav
-share/sounds/startup1.wav
-share/sounds/startup2.wav
-share/sounds/startup3.wav
 share/sounds/panel/slide.wav
 share/sounds/gtk-events/activate.wav
 share/sounds/gtk-events/clicked.wav
