@@ -1,16 +1,14 @@
---- ckutio.c.orig	Thu Jun 18 05:04:33 1998
-+++ ckutio.c	Thu Jun 18 05:12:25 1998
-@@ -7178,3 +7178,3 @@
+--- ckutio.c.orig	Mon Nov 25 01:20:49 1996
++++ ckutio.c	Sat Jun 20 22:44:33 1998
+@@ -7174,9 +7174,9 @@
+ #ifdef ATTSV				/* AT&T way */
+ /*  extern long time(); */		/* Theoretically these should */
+     char *ctime();			/* already been dcl'd in <time.h> */
+-    long clock_storage;
++    time_t clock_storage;
      clock_storage = time(
 -#ifdef IRIX60
 +#if defined(IRIX60) || defined(__NetBSD__)
  			 (time_t *)
-@@ -7184,3 +7184,7 @@
- 			 0 );
-+#ifdef __NetBSD__
-+    *s = ctime( (time_t *)&clock_storage );
-+#else
-     *s = ctime( &clock_storage );
-+#endif
-     debug(F110,"ztime: ATTSV",*s,0);
-
+ #else
+ 			 (long *)
