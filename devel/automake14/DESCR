@@ -4,3 +4,6 @@ conform to the GNU standards for Makefile variables and targets.
 
 Automake assumes the project uses autoconf.  If you want automatic
 dependency tracking support, the use of GNU make is also required.
+
+This package contains the outdated 1.4 version of automake.
+For new software please use the ``automake'' package.

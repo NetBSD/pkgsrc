@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/03 19:26:12 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/03 19:40:54 wiz Exp $
 #
 
 DISTNAME=	automake-1.4-p6
@@ -8,10 +8,9 @@ MASTER_SITES=	${MASTER_SITE_GNU:=automake/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/automake/automake.html
-COMMENT=	GNU Standards-compliant Makefile generator
+COMMENT=	GNU Standards-compliant Makefile generator (old version)
 
 DEPENDS=	autoconf213>=2.13:../../devel/autoconf213
-#DEPENDS=	autoconf>=2.13:../../devel/autoconf
 
 CONFLICTS=	automake<1.6
 
