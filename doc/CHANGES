@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.968 2003/01/02 03:20:18 rh Exp $
+$NetBSD: CHANGES,v 1.969 2003/01/02 03:22:07 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -10,3 +10,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sysbuild to 1.8 [jmmv 2003-01-01]
 	Updated tcm to 2.01nb1 [jmmv 2003-01-01]
 	Updated gnome-vfs to 1.0.3nb1 [rh 2003-01-02]
+	Updated gnome-mime-data to 2.0.1nb2 [rh 2003-01-02]
