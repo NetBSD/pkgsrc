@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.324 2002/10/20 23:25:29 seb Exp $
+$NetBSD: CHANGES,v 1.325 2002/10/21 01:44:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3345,3 +3345,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated samba to 2.2.6nb1 [jlam 2002-10-20]
 	Updated curl to 7.10.1nb1 [seb 2002-10-20]
 	Updated p5-Module-Dependency to 1.8nb1 [seb 2002-10-20]
+	Updated dctc to 0.83.6 [wiz 2002-10-21]
+	Updated dc_gui to 0.63 [wiz 2002-10-21]
