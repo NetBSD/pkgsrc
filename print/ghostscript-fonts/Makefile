@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/05/07 02:03:37 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/21 15:08:53 fredb Exp $
 
 DISTNAME=		ghostscript-fonts-6.0
 CATEGORIES=		print
 MASTER_SITES+=		http://download.sourceforge.net/gs-fonts/ \
 			ftp://ftp.cs.wisc.edu/ghost/aladdin/fonts/
 DISTFILES=		${GS_FONTS_STD} ${GS_FONTS_OTHER}
+
+MAINTAINER=		jlam@netbsd.org
+HOMEPAGE=		http://gs-fonts.sourceforge.net/
 
 #  Note: the following two are special files.  In the 5.50 directory
 #  on the FTP site, there are symlinks:
@@ -15,9 +18,6 @@ DISTFILES=		${GS_FONTS_STD} ${GS_FONTS_OTHER}
 #
 GS_FONTS_STD=		ghostscript-fonts-std-6.0.tar.gz
 GS_FONTS_OTHER=		ghostscript-fonts-other-6.0.tar.gz
-
-MAINTAINER=		jlam@netbsd.org
-HOMEPAGE=		http://gs-fonts.sourceforge.net/
 
 CONFLICTS=		ghostscript-[0-5]* ghostscript-x11-[0-5]*
 
@@ -32,6 +32,8 @@ do-install:
 	cd ${PREFIX}/share/ghostscript; \
 		${PAX} -zrf ${_DISTDIR}/${GS_FONTS_STD}; \
 		${PAX} -zrf ${_DISTDIR}/${GS_FONTS_OTHER}
+	${INSTALL_DATA} ${FILESDIR}/fonts.alias \
+		${PREFIX}/share/ghostscript/fonts/
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/ghostscript
 	${CHMOD} -R a-w ${PREFIX}/share/ghostscript
 

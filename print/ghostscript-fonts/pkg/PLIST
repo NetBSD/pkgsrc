@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/05/07 02:03:39 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/08/21 15:08:55 fredb Exp $
 share/ghostscript/fonts/a010013l.afm
 share/ghostscript/fonts/a010013l.pfb
 share/ghostscript/fonts/a010013l.pfm
@@ -54,6 +54,7 @@ share/ghostscript/fonts/fhirw.gsf
 share/ghostscript/fonts/fhirw.pfm
 share/ghostscript/fonts/fkarw.gsf
 share/ghostscript/fonts/fkarw.pfm
+share/ghostscript/fonts/fonts.alias
 share/ghostscript/fonts/fonts.dir
 share/ghostscript/fonts/fonts.scale
 share/ghostscript/fonts/hrger.pfa
