@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.3 2004/02/29 17:49:09 jmmv Exp $
+dnl $NetBSD: configure.ac,v 1.4 2004/10/21 21:30:45 tv Exp $
 
 dnl -----------------------------------------------------------------------
 
@@ -50,21 +50,26 @@ AC_HEADER_TIOCGWINSZ
 AC_CHECK_HEADERS([sys/cdefs.h \
                   sys/param.h \
                   sys/types.h \
+                  sys/file.h \
                   sys/ioctl.h \
                   sys/mount.h \
                   sys/resource.h \
+                  sys/socket.h \
                   sys/stat.h \
                   sys/statvfs.h \
                   sys/sysctl.h \
+                  sys/times.h \
                   sys/utsname.h \
                   sys/varargs.h \
                   sys/vfs.h \
+                  netinet/in.h \
                   argz.h \
                   assert.h \
                   ctype.h \
                   err.h \
                   fcntl.h \
                   fstab.h \
+                  grp.h \
                   inttypes.h \
                   libgen.h \
                   limits.h \
@@ -136,8 +141,10 @@ AC_CHECK_FUNCS([__argz_count \
                 __argz_next \
                 __argz_stringify \
                 __fsetlocking \
+                asprintf \
                 basename \
                 bzero \
+                confstr \
                 connect \
                 dirname \
                 dup2 \
@@ -145,6 +152,7 @@ AC_CHECK_FUNCS([__argz_count \
                 errx \
                 feof_unlocked \
                 fgets_unlocked \
+                fnmatch \
                 getc_unlocked \
                 getcwd \
                 getdelim \
@@ -153,13 +161,26 @@ AC_CHECK_FUNCS([__argz_count \
                 geteuid \
                 getgid \
                 gethostbyname \
+                gethostname \
                 getmode \
                 getprogname \
+                getrlimit \
+                getrusage \
                 gettimeofday \
                 getuid \
                 inet_pton \
+                isascii \
+                isblank \
+                isdigit \
+                isgraph \
+                isinf \
+                isprint \
+                isspace \
+                isxdigit \
+                killpg \
                 lockf \
                 lseek64 \
+                lstat \
                 memchr \
                 memcpy \
                 memmove \
@@ -173,19 +194,27 @@ AC_CHECK_FUNCS([__argz_count \
                 mktemp \
                 munmap \
                 open64 \
+                pathconf \
                 poll \
                 putenv \
                 readdir_r \
+                readlink \
                 remove \
+                rename \
+                sbrk \
+                select \
                 setegid \
                 setenv \
                 seteuid \
+                setlinebuf \
                 setmode \
                 setprogname \
                 setresgid \
                 setresuid \
+                setvbuf \
                 shmat \
                 sigaction \
+                siginterrupt \
                 sigset \
                 snprintf \
                 socket \
@@ -203,11 +232,25 @@ AC_CHECK_FUNCS([__argz_count \
                 strncat \
                 strncpy \
                 strndup \
+                strpbrk \
                 strspn \
                 strstr \
+                strtol \
+                strtoll \
                 strtoul \
+                strtoull \
+                strtoimax \
+                strtoumax \
+                sysconf \
+                times \
                 tsearch \
+                ttyname \
+                tzset \
+                ulimit \
                 uname \
+                unsetenv \
+                utime \
+                utimes \
                 vasprintf \
                 vsnprintf \
                 waitpid \
@@ -223,22 +266,31 @@ AC_CHECK_TYPES([gid_t,
                 int32_t,
                 int64_t,
                 int8_t,
+                intmax_t,
+                long long,
                 mode_t,
                 off_t,
                 ptrdiff_t,
+                quad_t,
                 rlim_t,
                 sig_t,
                 size_t,
                 ssize_t,
+                time_t,
+                u_int,
                 u_int16_t,
                 u_int32_t,
                 u_int64_t,
                 u_int8_t,
+                u_long,
+                u_quad_t,
                 uid_t,
                 uint16_t,
                 uint32_t,
                 uint64_t,
-                uint8_t])
+                uint8_t,
+                uintmax_t,
+                unsigned long long])
 
 dnl -----------------------------------------------------------------------
 
@@ -248,5 +300,7 @@ AC_CHECK_SIZEOF(short)
 AC_CHECK_SIZEOF(int)
 AC_CHECK_SIZEOF(long)
 AC_CHECK_SIZEOF(long long)
+AC_CHECK_SIZEOF(float)
+AC_CHECK_SIZEOF(double)
 
 dnl vim: syntax=config:expandtab:shiftwidth=4:softtabstop=4
