@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.8 2001/01/28 02:05:37 jlam Exp $
+$NetBSD: patch-ab,v 1.9 2001/02/08 19:05:01 jlam Exp $
 
---- Makefile.orig	Wed Jan  3 12:44:40 2001
+--- Makefile.orig	Fri Feb  2 11:37:43 2001
 +++ Makefile
 @@ -60,8 +60,8 @@
  		echo Installing in $$dir... ;\
@@ -13,26 +13,3 @@ $NetBSD: patch-ab,v 1.8 2001/01/28 02:05:37 jlam Exp $
  	echo Installing in data...
  	(cd data; $(MAKE) $(MFLAGS) install)
  	echo Installing in doc...
-@@ -75,21 +75,7 @@
- 	echo Installing in templates...
- 	(cd templates; $(MAKE) $(MFLAGS) install)
- 	echo Installing startup script...
--	if test "x$(INITDIR)" != "x"; then \
--		$(MKDIR) $(prefix)/$(INITDIR)/init.d; \
--		$(RM) $(prefix)/$(INITDIR)/init.d/cups; \
--		$(INSTALL_SCRIPT) cups.sh $(prefix)/$(INITDIR)/init.d/cups; \
--		$(CHMOD) ugo+rx $(prefix)/$(INITDIR)/init.d/cups; \
--		$(MKDIR) $(prefix)/$(INITDIR)/rc0.d; \
--		$(RM) $(prefix)/$(INITDIR)/rc0.d/K00cups; \
--		ln -s $(INITDDIR)/cups $(prefix)/$(INITDIR)/rc0.d/K00cups; \
--		$(MKDIR) $(prefix)/$(INITDIR)/rc3.d; \
--		$(RM) $(prefix)/$(INITDIR)/rc3.d/S99cups; \
--		ln -s $(INITDDIR)/cups $(prefix)/$(INITDIR)/rc3.d/S99cups; \
--		$(MKDIR) $(prefix)/$(INITDIR)/rc5.d; \
--		$(RM) $(prefix)/$(INITDIR)/rc5.d/S99cups; \
--		ln -s $(INITDDIR)/cups $(prefix)/$(INITDIR)/rc5.d/S99cups; \
--	fi
-+	$(INITSCRIPT)
- 
- #
- # Make software distributions using EPM (http://www.easysw.com/epm)...

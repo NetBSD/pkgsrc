@@ -1,60 +1,37 @@
-$NetBSD: patch-ad,v 1.5 2001/01/28 02:05:37 jlam Exp $
+$NetBSD: patch-ad,v 1.6 2001/02/08 19:05:01 jlam Exp $
 
---- configure.in.orig	Fri Jan 26 10:01:59 2001
+--- configure.in.orig	Tue Feb  6 20:25:38 2001
 +++ configure.in
-@@ -514,8 +514,14 @@
- dnl Setup init.d locations...
- case "$uname" in
--	FreeBSD* | NetBSD* | OpenBSD*)
--		# *BSD
-+	FreeBSD* | OpenBSD*)
- 		INITDIR=""
- 		INITDDIR=""
-+		INITSCRIPT=""
-+		;;
-+
-+	NetBSD*)
-+		INITDIR="/etc/rc.d"
-+		INITDDIR=""
-+		INITSCRIPT="scripts/netbsd"
- 		;;
+@@ -390,18 +390,7 @@
+ 	# rather than to the executables.  This makes things smaller if you
+ 	# are using any static libraries, and it also allows us to distribute
+-	# a single DSO rather than a bunch...unless the linker is dumb.
+-	case $uname in
+-		NetBSD*)
+-			# NetBSD's linker won't resolve symbols in a shared
+-			# libraries unless their enclosing shared libraries
+-			# are explicitly listed.
+-			DSOLIBS="\$(LIBJPEG) \$(LIBPNG) \$(LIBTIFF) \$(LIBZ)"
+-			IMGLIBS="\$(LIBJPEG) \$(LIBPNG) \$(LIBTIFF) \$(LIBZ)"
+-			;;
+-		*)
+-			DSOLIBS="\$(LIBJPEG) \$(LIBPNG) \$(LIBTIFF) \$(LIBZ)"
+-			IMGLIBS=""
+-			;;
+-	esac
++	# a single DSO rather than a bunch.
++	DSOLIBS="\$(LIBPNG) \$(LIBTIFF) \$(LIBJPEG) \$(LIBZ)"
++	IMGLIBS=""
  
-@@ -526,4 +532,5 @@
- 			INITDIR="/sbin/init.d"
- 			INITDDIR=".."
-+			INITSCRIPT="scripts/sysv"
- 		else
- 			if test -d /etc/rc.d; then
-@@ -531,8 +538,10 @@
- 				INITDIR="/etc/rc.d"
- 				INITDDIR="../init.d"
-+				INITSCRIPT="scripts/sysv"
- 			else
- 				# Others
- 				INITDIR="/etc"
- 				INITDDIR="../init.d"
-+				INITSCRIPT="scripts/sysv"
- 			fi
- 		fi
-@@ -542,4 +551,5 @@
- 		INITDIR="/sbin"
- 		INITDDIR="../init.d"
-+		INITSCRIPT="scripts/sysv"
- 		;;
+ 	# The *BSD, HP-UX, and Solaris run-time linkers need help when
+@@ -427,5 +416,5 @@
+ else
+ 	DSOLIBS=""
+-	IMGLIBS="\$(LIBJPEG) \$(LIBPNG) \$(LIBTIFF) \$(LIBZ)"
++	IMGLIBS="\$(LIBPNG) \$(LIBTIFF) \$(LIBJPEG) \$(LIBZ)"
+ fi
  
-@@ -547,4 +557,5 @@
- 		INITDIR="/etc"
- 		INITDDIR="../init.d"
-+		INITSCRIPT="scripts/sysv"
- 		;;
- 
-@@ -553,4 +564,5 @@
- AC_SUBST(INITDIR)
- AC_SUBST(INITDDIR)
-+AC_SUBST(INITSCRIPT)
- 
- dnl Setup default locations...
-@@ -612,6 +624,6 @@
+@@ -655,6 +644,6 @@
  
  dnl Set the CUPS_DOCROOT directory...
 -CUPS_DOCROOT='${datadir}/doc/cups'
@@ -63,10 +40,10 @@ $NetBSD: patch-ad,v 1.5 2001/01/28 02:05:37 jlam Exp $
 +AC_DEFINE_UNQUOTED(CUPS_DOCROOT, "$datadir/doc/html/cups")
  AC_SUBST(CUPS_DOCROOT)
  
-@@ -619,5 +631,5 @@
+@@ -662,5 +651,5 @@
  AC_DEFINE_UNQUOTED(CUPS_FONTPATH, "$fontpath")
  
 -AC_OUTPUT(Makedefs cups.sh)
-+AC_OUTPUT(Makedefs cups.sh scripts/common)
++AC_OUTPUT(Makedefs cups.sh conf/cupsd.conf)
  
  dnl
