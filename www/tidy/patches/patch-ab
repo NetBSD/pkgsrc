@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2003/10/28 12:33:48 cube Exp $
+$NetBSD: patch-ab,v 1.5 2004/08/30 18:48:57 reed Exp $
 
---- include/platform.h.orig	2003-06-10 08:57:04.000000000 +0200
-+++ include/platform.h
-@@ -48,7 +48,7 @@ extern "C" {
+--- include/platform.h.orig	Fri Mar 19 00:00:57 2004
++++ include/platform.h	Sat Aug 28 15:41:12 2004
+@@ -48,7 +48,7 @@
    Contributed by Todd Lewis.
  */
  
@@ -11,8 +11,8 @@ $NetBSD: patch-ab,v 1.4 2003/10/28 12:33:48 cube Exp $
  
  
  /* Enable/disable support for Big5 and Shift_JIS character encodings */
-@@ -496,7 +496,7 @@ extern "C" {
- #if !defined(HPUX_OS) && !defined(CYGWIN_OS) && !defined(MAC_OS_X) && !defined(BE_OS) && !defined(SOLARIS_OS) && !defined(BSD_BASED_OS) && !defined(OSF_OS) && !defined(IRIX_OS) && !defined(AIX_OS)
+@@ -497,7 +497,7 @@
+ #if !defined(HPUX_OS) && !defined(CYGWIN_OS) && !defined(MAC_OS_X) && !defined(BE_OS) && !defined(SOLARIS_OS) && !defined(BSD_BASED_OS) && !defined(OSF_OS) && !defined(IRIX_OS) && !defined(AIX_OS) && !defined(LINUX_OS)
  typedef unsigned int uint;
  #endif
 -#if defined(HPUX_OS) || defined(CYGWIN_OS) || defined(MAC_OS) || defined(BSD_BASED_OS) || defined(_WIN32)
