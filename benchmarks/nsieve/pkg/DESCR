@@ -1,0 +1,9 @@
+This Sieve of Eratosthenes program works with variable size arrays. It is
+a straight forward extension of the original Gilbreath version (
+Gilbreath, Jim. "A High-Level Language Benchmark." BYTE, September 1981,
+p. 180, and also Gilbreath, Jim and Gary. "Eratosthenes Revisited: Once
+More Through the Sieve." BYTE January 1983, p. 283 ). Unlike the Sieve of
+Gilbreath, NSIEVE uses register long variables, pointers,and large byte
+arrays via 'malloc()'.  Maximum array size is currently set at 2.56 MBytes
+but this can be increased or decreased by changing the program LIMIT
+constant.
