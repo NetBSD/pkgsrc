@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.240 2002/03/23 22:52:32 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.241 2002/03/27 20:50:33 rh Exp $
 ###########################################################################
 
 			==========================
@@ -276,12 +276,15 @@ your packages tree. So, to use /usr/local, set
 
 in your environment.  Please note that you should use a root which is 
 dedicated to packages and not shared with other programs (ie, do not try
-and use LOCALBASE=/usr).  This is to prevent possible conflicts between
-programs and other files installed by the package system and whatever else
-may have been installed there.  There is, of course, one exception to 
-this - X11 packages are traditionally installed in the X11 tree. The
-definition used to identify the root of the X11 tree is the X11BASE
-definition.
+and use LOCALBASE=/usr).  Also, you should not try to add any of your
+own files or directories (such as, for example, src, obj, or pkgsrc) below
+the LOCALBASE tree.  This is to prevent possible conflicts between programs
+and other files installed by the package system and whatever else may have
+been installed there.
+
+There is, of course, one exception to this - X11 packages are traditionally
+installed in the X11 tree. The definition used to identify the root of the
+X11 tree is the X11BASE definition.
 
 It is possible to install X11 packages in the LOCALBASE tree, for
 which you must install the xpkgwedge package
