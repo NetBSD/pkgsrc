@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.235 2001/12/17 14:47:47 tron Exp $
+# $NetBSD: Makefile,v 1.236 2001/12/21 11:34:19 agc Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -53,6 +53,7 @@ SUBDIR+=	khostchooser
 SUBDIR+=	kterm
 SUBDIR+=	lesstif
 SUBDIR+=	lesstif12
+SUBDIR+=	mlterm
 SUBDIR+=	multi-gnome-terminal
 SUBDIR+=	modeline
 SUBDIR+=	oneko
