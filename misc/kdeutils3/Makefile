@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/01/18 03:35:08 minskim Exp $
+# $NetBSD: Makefile,v 1.42 2005/02/16 21:00:22 seb Exp $
 
 DISTNAME=	kdeutils-${_KDE_VERSION}
 PKGREVISION=	1
@@ -17,13 +17,13 @@ LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-1.6*) || !empty(MACHINE_PLATFORM:MNetBSD-[2-9]*)
-CPPFLAGS+=		-DARK_TAR=\"\\\"/usr/bin/tar\\\"\"
+CPPFLAGS+=		-DARK_TAR="\"/usr/bin/tar\""
 .else
 DEPENDS+=	gtar-base>=1.13.25:../../archivers/gtar-base
 
 EVAL_PREFIX+=		PREFIX.gtar=gtar
 PREFIX.gtar_DEFAULT=	${LOCALBASE}
-CPPFLAGS+=		-DARK_TAR=\"\\\"${PREFIX.gtar}/bin/${GNU_PROGRAM_PREFIX}tar\\\"\"
+CPPFLAGS+=		-DARK_TAR="\"${PREFIX.gtar}/bin/${GNU_PROGRAM_PREFIX}tar\""
 .endif
 
 .include "../../mk/bsd.prefs.mk"
