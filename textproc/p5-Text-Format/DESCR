@@ -1,0 +1,4 @@
+The perl5 module Text::Format provides the format(), paragraphs(),
+center(), expand() and unexpand() functions: i.e. various functions
+for paragraph formatting, tabs/spaces expansion/contraction and
+lines centering.
