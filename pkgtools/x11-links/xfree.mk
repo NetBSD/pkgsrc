@@ -1,8 +1,8 @@
-# $NetBSD: xfree.mk,v 1.2 2003/09/07 19:30:23 jlam Exp $
+# $NetBSD: xfree.mk,v 1.3 2003/09/07 19:40:42 jlam Exp $
 
 FILES_LIST=	${FILESDIR}/xfree
 
-X11_MODULES=	MesaLib Xrender freetype2 xpm
+X11_MODULES=	MesaLib Xrender freetype2 glu xpm
 
 .for _module_ in ${X11_MODULES}
 BUILDLINK_CHECK_BUILTIN.${_module_}=	YES
