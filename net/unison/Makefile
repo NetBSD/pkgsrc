@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/06/23 20:36:14 jtb Exp $
-#
+# $NetBSD: Makefile,v 1.15 2003/06/29 23:52:03 jtb Exp $
 
 DISTNAME=	src
 PKGNAME=	unison-2.9.1
@@ -13,7 +12,6 @@ HOMEPAGE=	http://www.cis.upenn.edu/~bcpierce/unison/
 COMMENT=	file-synchronization tool
 
 BUILD_DEPENDS=	ocaml>=3.00:../../lang/ocaml
-BUILD_DEPENDS+=	bash>=2.05:../../shells/bash2
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
@@ -24,8 +22,16 @@ MAKE_ENV+=	HOME=${WRKDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${MACHINE_ARCH} != "i386") || (${MACHINE_ARCH} != "powerpc") || (${MACHINE_ARCH} != "sparc")
+.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || (${MACHINE_ARCH} == "sparc")
+MAKE_FLAGS+=	NATIVE=true
+.else
 MAKE_FLAGS+=	NATIVE=false
+.endif
+
+.include "../../mk/pthread.buildlink2.mk"
+
+.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} != "none")
+MAKE_FLAGS+=	THREADS=true
 .endif
 
 post-install:
