@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.20 1999/08/18 08:31:13 agc Exp $
+# $NetBSD: Makefile,v 1.21 1999/10/07 17:41:57 tron Exp $
 
 DISTNAME=	knews-1.0b.1
 PKGNAME=	knews-1.0b1
 CATEGORIES=	news x11
 MASTER_SITES=	http://www.matematik.su.se/~kjj/
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.matematik.su.se/~kjj/
 
 DEPENDS+=	faces-1.6.1:../../mail/faces

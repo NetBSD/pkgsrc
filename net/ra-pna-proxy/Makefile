@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 1999/09/01 20:05:19 tron Exp $
+# $NetBSD: Makefile,v 1.3 1999/10/07 17:41:56 tron Exp $
 
 DISTNAME=	raproxy3.0b1
 PKGNAME=	ra-pna-proxy-3.0b1
 CATEGORIES=	net
 MASTER_SITES=	# empty
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://service.real.com/firewall/fdev.html
 
 LICENSE=		no-commercial-use

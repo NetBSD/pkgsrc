@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 1999/09/15 18:26:04 tron Exp $
+# $NetBSD: Makefile,v 1.23 1999/10/07 17:42:00 tron Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/27 00:47:46 se Exp
 #
 
@@ -7,7 +7,7 @@ CATEGORIES=	x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.kde.org/
 
 DEPENDS+=	kdeutils-1.1.2:../../misc/kdeutils

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 1999/10/07 03:57:51 jlam Exp $
+# $NetBSD: Makefile,v 1.35 1999/10/07 17:42:00 tron Exp $
 
 DISTNAME=	gtk+-1.2.4
 CATEGORIES=	x11
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/v1.2/ \
 		http://www.ameth.org/gimp/pub/gtk/v1.2/ \
 		ftp://infosoc.uni-koeln.de/pub/ftp.gimp.org/pub/gtk/v1.2/
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gtk.org/
 
 DEPENDS+=	gettext-0.10.35:../../devel/gettext

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 1999/06/20 20:49:28 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/10/07 17:41:52 tron Exp $
 
 DISTNAME=	uae-0.8.8
 CATEGORIES=	emulators
 MASTER_SITES=	ftp://ftp.freiburg.linux.de/pub/uae/
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.freiburg.linux.de/~uae/
 
 NOT_FOR_PLATFORM=	*-*-arm32

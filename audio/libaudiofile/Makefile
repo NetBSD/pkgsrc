@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/08/29 17:55:16 jlam Exp $
+# $NetBSD: Makefile,v 1.8 1999/10/07 17:41:47 tron Exp $
 # FreeBSD Id: Makefile,v 1.2 1999/01/27 08:31:48 fenner Exp
 #
 
@@ -7,7 +7,7 @@ PKGNAME=	libaudiofile-0.1.6
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GNOME:=gnome-1.0/sources/}
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

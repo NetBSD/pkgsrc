@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/09/19 23:58:43 tron Exp $
+# $NetBSD: Makefile,v 1.5 1999/10/07 17:41:52 tron Exp $
 
 DISTNAME=		xforms
 PKGNAME=		suse_xforms-6.1p1
@@ -6,7 +6,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE:=xdev1/}
 EXTRACT_SUFX=		.rpm
 
-MAINTAINER=		tron@netbsd.org
+MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.suse.com/
 
 DEPENDS+=		suse_x11-6.1p1:../suse_x11

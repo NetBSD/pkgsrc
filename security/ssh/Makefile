@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 1999/09/28 20:40:04 soren Exp $
+# $NetBSD: Makefile,v 1.62 1999/10/07 17:41:58 tron Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=		ftp://ftp.cs.hut.fi/pub/ssh/ \
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=		tron@netbsd.org
+MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.cs.hut.fi/ssh/
 
 RESTRICTED=		"Crypto; export-controlled"

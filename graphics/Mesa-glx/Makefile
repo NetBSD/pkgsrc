@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/10/01 18:43:18 tron Exp $
+# $NetBSD: Makefile,v 1.3 1999/10/07 17:41:53 tron Exp $
 
 DISTNAME=	glx-19990804
 PKGNAME=	Mesa-${DISTNAME:S/-/-${GLX_CHIPSET}-/}
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://glx.on.openprojects.net/snap/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://glx.on.openprojects.net/
 
 BUILD_DEPENDS+=	${PERL}:../../lang/perl5 \
