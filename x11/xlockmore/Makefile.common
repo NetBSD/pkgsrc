@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2005/01/28 00:44:04 hubertf Exp $
+# $NetBSD: Makefile.common,v 1.22 2005/02/17 07:55:47 dan Exp $
 #
 # This Makefile.common is included by:
 #
@@ -39,7 +39,7 @@ XLOCK_MODULEDIR=	${PREFIX}/lib/X11/xlock/modules
 XLOCK_NO_DPMS=		YES
 .endif
 
-DEFINES+=		-DDEF_MODULEPATH=\"${XLOCK_MODULEDIR}\"
+DEFINES+=		-DDEF_MODULEPATH="\"${XLOCK_MODULEDIR}\""
 CPPFLAGS+=		${DEFINES}
 CXXFLAGS+=		${DEFINES}
 
