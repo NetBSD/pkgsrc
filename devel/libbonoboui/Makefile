@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/02/11 02:12:36 xtraeme Exp $
+# $NetBSD: Makefile,v 1.28 2004/02/13 12:13:45 jmmv Exp $
 #
 
 DISTNAME=	libbonoboui-2.4.3
@@ -36,5 +36,6 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
