@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.132 2004/03/29 05:42:58 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.133 2004/03/29 06:05:10 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -1219,6 +1219,10 @@ _BLNK_GEN_TRANSFORM=		${BUILDLINK_DIR}/bin/.gen-transform
 _BLNK_TRANSFORM_SEDFILE=	${BUILDLINK_DIR}/bin/.transform.sed
 _BLNK_UNTRANSFORM_SEDFILE=	${BUILDLINK_DIR}/bin/.untransform.sed
 _BLNK_REORDERLIBS=		${BUILDLINK_DIR}/bin/.reorderlibs
+
+.if defined(BUILDLINK_WRAPPER_LOG)
+MAKE_ENV+=	BUILDLINK_WRAPPER_LOG=${BUILDLINK_WRAPPER_LOG}
+.endif
 
 .for _wrappee_ in ${_BLNK_WRAPPEES}
 #
