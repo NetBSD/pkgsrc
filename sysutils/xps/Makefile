@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/04/30 04:16:11 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2001/07/03 01:46:07 jlam Exp $
 
 DISTNAME=	xps-3.14
 CATEGORIES=	sysutils
@@ -12,8 +12,10 @@ BUILD_DEPENDS=	perl>=${PERL5_REQD}:../../lang/perl5
 
 USE_GMAKE=	# defined
 USE_X11BASE=	# defined
-USE_MOTIF=	# defined
 
-GNU_CONFIGURE=	# defined
+USE_BUILDLINK_ONLY=	# defined
+GNU_CONFIGURE=		# defined
+CONFIGURE_ENV+=		XINCLUDES="-I${X11BASE}/include"
 
+.include "../../x11/lesstif/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
