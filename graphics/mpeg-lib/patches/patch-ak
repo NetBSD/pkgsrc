@@ -1,0 +1,8 @@
+--- mono.c.orig	Mon Sep 25 10:22:08 1995
++++ mono.c	Sat Jun 20 00:33:29 1998
+@@ -29,2 +29,5 @@
+ #include "dither.h"
++#ifdef __NetBSD__
++#include <stdlib.h>
++#endif
+ 

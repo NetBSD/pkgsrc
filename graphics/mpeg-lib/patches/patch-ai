@@ -1,0 +1,8 @@
+--- hybriderr.c.orig	Mon Sep 25 10:22:08 1995
++++ hybriderr.c	Sat Jun 20 00:33:29 1998
+@@ -28,2 +28,5 @@
+ #include "dither.h"
++#ifdef __NetBSD__
++#include <stdlib.h>
++#endif
+ 

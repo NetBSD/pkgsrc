@@ -1,0 +1,8 @@
+--- ordered2.c.orig	Mon Sep 25 10:22:09 1995
++++ ordered2.c	Sat Jun 20 00:33:30 1998
+@@ -26,2 +26,5 @@
+ #include "dither.h"
++#ifdef __NetBSD__
++#include <stdlib.h>
++#endif
+ 

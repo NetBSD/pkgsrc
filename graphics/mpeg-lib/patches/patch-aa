@@ -1,0 +1,14 @@
+--- wrapper.c.orig	Tue Oct 10 22:08:39 1995
++++ wrapper.c	Sat Jun 27 00:58:27 1998
+@@ -52,6 +52,11 @@
+ #include "dither.h"
+ #include "globals.h"
+ 
++#ifdef __NetBSD__
++#include <stdlib.h>
++#include <string.h>
++#endif
++
+ #define BUF_LENGTH 80000
+ 
+ 
