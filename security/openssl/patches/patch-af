@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.10 2004/03/26 08:13:24 jlam Exp $
+$NetBSD: patch-af,v 1.11 2004/04/25 20:36:11 tv Exp $
 
 --- Makefile.org.orig	Thu Jul  3 17:43:50 2003
 +++ Makefile.org
@@ -17,10 +17,19 @@ $NetBSD: patch-af,v 1.10 2004/03/26 08:13:24 jlam Exp $
  		-shared -o lib$$i.so.${SHLIB_MAJOR}.${SHLIB_MINOR} \
 -		-Wl,-soname=lib$$i.so.${SHLIB_MAJOR}.${SHLIB_MINOR} \
 -		-Wl,-Bsymbolic \
-+		-Wl,-soname=lib$$i.so.${SHLIB_MAJOR} \
++		-Wl,-h,lib$$i.so.${SHLIB_MAJOR} \
  		-Wl,--whole-archive lib$$i.a \
  		-Wl,--no-whole-archive $$libs ${EX_LIBS} -lc ) || exit 1; \
  	libs="$$libs -l$$i"; \
+@@ -449,7 +448,7 @@ do_hpux64-shared:
+ #  HP/UX-64bit: +forceload
+ #  AIX:		-bnogc
+ # SHAREDFLAGS would be:
+-#  GNU systems: -shared -Wl,-soname=lib$$i.so.${SHLIB_MAJOR}.${SHLIB_MINOR}
++#  GNU systems: -shared -Wl,-h,lib$$i.so.${SHLIB_MAJOR}.${SHLIB_MINOR}
+ #  Tru64 Unix:  -shared \
+ #		-set_version "${SHLIB_VERSION_HISTORY}${SHLIB_VERSION_NUMBER}"
+ #  Solaris:     -G -h lib$$i.so.${SHLIB_MAJOR}.${SHLIB_MINOR}
 @@ -636,14 +635,14 @@ dist:   
  dist_pem_h:
  	(cd crypto/pem; $(MAKE) CC='${CC}' SDIRS='${SDIRS}' CFLAG='${CFLAG}' pem.h; $(MAKE) clean)

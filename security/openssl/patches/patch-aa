@@ -1,8 +1,19 @@
-$NetBSD: patch-aa,v 1.13 2004/03/26 02:22:38 wiz Exp $
+$NetBSD: patch-aa,v 1.14 2004/04/25 20:36:11 tv Exp $
 
---- config.orig	Thu Nov 14 17:30:29 2002
+--- config.orig	Thu Nov 14 11:30:29 2002
 +++ config
-@@ -588,8 +588,8 @@ EOF
+@@ -139,6 +139,10 @@ case "${SYSTEM}:${RELEASE}:${VERSION}:${
+ 	echo "mips4-sgi-irix64"; exit 0
+ 	;;
+ 
++    Interix:3.*)
++	echo "i386-pc-interix3"; exit 0
++	;;
++
+     Linux:[2-9].*)
+ 	echo "${MACHINE}-whatever-linux2"; exit 0
+ 	;;
+@@ -588,8 +592,9 @@ EOF
    *-freebsd[3-9]*) OUT="FreeBSD-elf" ;;
    *-freebsd[1-2]*) OUT="FreeBSD" ;;
    *86*-*-netbsd) OUT="NetBSD-x86" ;;
@@ -10,6 +21,7 @@ $NetBSD: patch-aa,v 1.13 2004/03/26 02:22:38 wiz Exp $
 -  *-*-netbsd) OUT="NetBSD-sparc" ;;
 +  sun3*-*-netbsd) OUT="NetBSD-m68k" ;;
 +  *-*-netbsd) OUT="NetBSD-${MACHINE_ARCH}" ;;
++  *-*-interix3) OUT="Interix3" ;;
    *86*-*-openbsd) OUT="OpenBSD-x86" ;;
    alpha*-*-openbsd) OUT="OpenBSD-alpha" ;;
    pmax*-*-openbsd) OUT="OpenBSD-mips" ;;
