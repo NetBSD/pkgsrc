@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/09/21 19:12:52 jlam Exp $
+
+--- ./pgaccess.in.orig	Wed Aug 25 10:10:36 1999
++++ ./pgaccess.in	Tue Sep 21 15:00:49 1999
+@@ -1,7 +1,7 @@
+ #!/bin/sh
+ 
+-PATH_TO_WISH=/usr/bin/wish
+-PGACCESS_HOME=/usr/local/pgaccess
++PATH_TO_WISH=@PGTKSH@
++PGACCESS_HOME=@PGACCESS_HOME@
+ 
+ export PATH_TO_WISH
+ export PGACCESS_HOME
