@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2001/07/05 23:41:27 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2001/09/28 21:19:16 jlam Exp $
 
---- configure.orig	Thu Feb 22 08:17:34 2001
+--- configure.orig	Tue Mar 20 12:02:28 2001
 +++ configure
 @@ -4460,7 +4460,7 @@
     for dir in $kde_use_extra_libs; do
@@ -53,7 +53,7 @@ $NetBSD: patch-aa,v 1.4 2001/07/05 23:41:27 jlam Exp $
  
  
  # Extract the first word of "X", so it can be a program name with args.
-@@ -11108,7 +11111,7 @@
+@@ -11113,7 +11116,7 @@
  
      ac_save_ldflags="$LDFLAGS"
      ac_save_cflags="$CFLAGS"
@@ -62,7 +62,7 @@ $NetBSD: patch-aa,v 1.4 2001/07/05 23:41:27 jlam Exp $
      CFLAGS="$CFLAGS $X_INCLUDES"
      test -n "$GL_INCLUDE" && CFLAGS="-I$GL_INCLUDE $CFLAGS"
      cat > conftest.$ac_ext <<EOF
-@@ -11173,13 +11176,13 @@
+@@ -11178,13 +11181,13 @@
  
      if test "$GL_LDFLAGS" = ""; then
         if test "$ac_cv_have_gl" = "mesa"; then
@@ -78,7 +78,7 @@ $NetBSD: patch-aa,v 1.4 2001/07/05 23:41:27 jlam Exp $
         else
            GLLIB="$GL_LDFLAGS -lGL -lGLU "'$(LIB_X11)'
         fi
-@@ -11193,7 +11196,7 @@
+@@ -11198,7 +11201,7 @@
      
  GL_SAVERS="kmorph3d.kss kspace.kss kpipes.kss"
  ac_save_CPPFLAGS="$CPPFLAGS"
@@ -87,7 +87,7 @@ $NetBSD: patch-aa,v 1.4 2001/07/05 23:41:27 jlam Exp $
  for ac_hdr in GL/xmesa.h GL/glut.h memory.h
  do
  ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
-@@ -11576,6 +11579,7 @@
+@@ -11581,6 +11584,7 @@
  case "$host" in 
    *-*-linux*) ksysguardd_compile=yes; UNAME='Linux' ;;
    *-*-freebsd*) ksysguardd_compile=yes; UNAME='FreeBSD' ;;
