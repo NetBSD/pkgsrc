@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/07/28 17:23:56 tsarna Exp $
+# $NetBSD: Makefile,v 1.3 2000/07/28 17:25:49 tsarna Exp $
 #
 
 DISTNAME=	Zope-2.2.0-src
@@ -30,7 +30,7 @@ do-install:
 	${INSTALL_SCRIPT_DIR} ${PYTHON_LIBDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/pcgi_publisher.py* ${PYTHON_LIBDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/pcgi-wrapper ${PREFIX}/libexec
-	${INSTALL_SCRIPT} ${WRKSRC}/Util/pcgifile ${PREFIX}/sbin
-	${INSTALL_SCRIPT} ${WRKSRC}/Util/killpcgi ${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKSRC}/Util/pcgifile ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/Util/killpcgi ${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
