@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2002/08/25 21:52:47 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2003/04/26 09:49:38 jmmv Exp $
 
 DISTNAME=	wmessage-0.10
 PKGREVISION=	1
-CATEGORIES=	x11
+CATEGORIES=	x11 windowmaker
 MASTER_SITES=	http://www.ozemail.com.au/~crn/wmessage/
 
 MAINTAINER=	jlam@netbsd.org

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2003/02/02 17:30:42 tron Exp $
+# $NetBSD: Makefile,v 1.10 2003/04/26 09:49:36 jmmv Exp $
 
 DISTNAME=	wmbiff-0.4.13
 PKGREVISION=	1
-CATEGORIES=	mail x11
+CATEGORIES=	mail x11 windowmaker
 MASTER_SITES=	$(MASTER_SITE_SOURCEFORGE:=wmbiff/)
 
 MAINTAINER=	tron@zhadum.de
