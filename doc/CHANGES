@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1660 2003/03/16 14:52:25 cjep Exp $
+$NetBSD: CHANGES,v 1.1661 2003/03/16 15:48:41 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1160,3 +1160,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated vim to 6.1.405 [martti 2003-03-16]
 	Updated scmxx to 0.6.3.6 [kleink 2003-03-16]
 	Updated nawk to 20030314 [cjep 2003-03-16]
+	Updated p5-Bit-Vector to 6.3 [mjl 2003-03-16]
+	Updated p5-Date-Calc to 5.3 [mjl 2003-03-16]
+	Updated p5-DBI to 1.35 [mjl 2003-03-16]
