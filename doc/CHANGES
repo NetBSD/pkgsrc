@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8057 2004/11/27 10:48:02 jdolecek Exp $
+$NetBSD: CHANGES,v 1.8058 2004/11/27 10:50:44 gson Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5494,3 +5494,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pear-Net_URL to 1.0.12 [jdolecek 2004-11-27]
 	Updated p5-Net-Netmask to 1.9011 [wiz 2004-11-27]
 	Updated gnotime to 2.2.1 [jdolecek 2004-11-27]
+	Updated tcl-snack to 2.2.8 [gson 2004-11-27]
