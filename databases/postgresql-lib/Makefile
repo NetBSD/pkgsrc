@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/06/21 21:40:08 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/07/29 17:13:48 tron Exp $
 
 .include "../../databases/postgresql/Makefile.common"
 .include "../../databases/postgresql/Makefile.ssl"
@@ -11,7 +11,14 @@ USE_BUILDLINK_ONLY=	# defined
 
 DIRS_TO_BUILD=		src/include src/interfaces src/pl
 
+.include "../../mk/bsd.prefs.mk"
+
 do-build:
+# Avoid conflict between "/usr/include/crypt.h" and
+# "${LOCALBASE}/include/openssl/des.h".
+.if (${OPSYS} == "SunOS")
+	${TOUCH} ${BUILDLINK_DIR}/include/crypt.h
+.endif
 .for DIR in ${DIRS_TO_BUILD}
 	cd ${WRKSRC}/${DIR} && ${SETENV} ${MAKE_ENV}			\
 		${MAKE_PROGRAM} ${ALL_TARGET}
