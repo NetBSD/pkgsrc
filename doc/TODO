@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.920 2003/10/03 14:44:20 seb Exp $
+$NetBSD: TODO,v 1.921 2003/10/05 07:07:42 jlam Exp $
 
 Suggested new packages
 ======================
@@ -235,7 +235,6 @@ Suggested package updates
 	o oss-3.9.8a
 	o p5-XML-LibXML-1.54
 	o pdmenu-1.2.81
-	o perl-5.8.1
 	o postfix-2.0.16
 	o prboom-2.3.0
 	o proftpd-1.2.9rc2p
