@@ -1,0 +1,27 @@
+$NetBSD: MESSAGE,v 1.1.1.1 2000/10/21 19:02:32 rh Exp $
+
+==========================================================================
+  ISPMan has now been installed on your system.
+
+  Before using this package, copy the default configuration from
+  '@@PREFIX@@/etc/ispman/ispman.conf.default' to
+  '@@PREFIX@@/etc/ispman/ispman.conf' (and edit it accordingly).
+  
+  You also need to create the appropriate template files in
+  '@@PREFIX@@/etc/ispman/templates' (or copy them from the
+  corresponding .default files that can be found there).
+
+  Finally, you need a working apache, cyrus-imapd, postfix, openldap,
+  PAM, and pam-ldap setup.
+
+  ISPMan configuration templates for openldap can be found under
+  '@@PREFIX@@/etc/openldap/ldap.conf.ispman' and
+  '@@PREFIX@@/etc/openldap/slapd.conf.ispman'.  Thereafter, you can
+  initialize openldap by issuing the following command:
+
+	@@PREFIX@@/sbin/ldif2ldbm -i @@PREFIX@@/etc/ispman/ispman.ldif
+
+  On the machine(s) you are running cyrus on, you need to have pam-ldap
+  and an PAM-enabled cyrus-sasl installed and configured (see the
+  corresponding packages for more information).
+==========================================================================
