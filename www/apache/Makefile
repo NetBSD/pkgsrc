@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2002/04/02 14:13:01 jlam Exp $
+# $NetBSD: Makefile,v 1.93 2002/05/08 11:44:51 kleink Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -20,8 +20,7 @@ DISTFILES+=		${NETBSD_LOGO}
 MODSSL_DISTNAME=	mod_ssl-2.8.8-1.3.24
 MODSSL_DIST=		${MODSSL_DISTNAME}${EXTRACT_SUFX}
 MODSSL_SRC=		${WRKDIR}/${MODSSL_DISTNAME}
-SITES_${MODSSL_DIST}=	http://www.modssl.org/source/ \
-			ftp://ftp.uni-trier.de/pub/unix/security/mod_ssl/source/
+SITES_${MODSSL_DIST}=	http://www.modssl.org/source/
 DISTFILES+=		${MODSSL_DIST}
 
 MAINTAINER=		jlam@netbsd.org
