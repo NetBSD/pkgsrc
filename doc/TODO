@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2061 2004/08/18 12:42:21 adam Exp $
+$NetBSD: TODO,v 1.2062 2004/08/18 14:04:51 adam Exp $
 
 Suggested new packages
 ======================
@@ -247,7 +247,6 @@ Suggested package updates
 	o gnomeicu-0.99.5
 	o gnucash-1.8.9
 	o gnunet-0.6.3a
-	o gnustep-0.9.3
 	o gnutls-1.0.17
 	o gogo-3.11p1
 	o gpsdrive-2.09
