@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.678 2001/03/07 00:26:26 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.679 2001/03/07 09:52:53 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -702,7 +702,7 @@ uptodate-pkgtools:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ ${PKGTOOLS_VERSION} -lt ${PKGTOOLS_REQD} ]; then		\
 		case ${PKGNAME} in					\
-		pkg_install-*)						\
+		digest-*|pkg_install-*)					\
 			;;						\
 		*)							\
 			${ECHO} "Your package tools need to be updated to ${PKGTOOLS_REQD:C|(....)(..)(..)|\1/\2/\3|} versions."; \
