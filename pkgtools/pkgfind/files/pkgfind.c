@@ -25,6 +25,19 @@
  *
  */
 
+/*
+ * pancake@phreaker.net ** changes 2004/09/14
+ * 
+ * '-i' ignore case senseitive
+ * -x exact match
+ * -q quite (drop COMMENT on search)
+ * -C comments
+ *
+ * [TODO]
+ * -D DESCR
+ * -P PLIST
+ */
+
 #include <sys/types.h>
 #include <sys/param.h>
 #include <sys/stat.h>
@@ -51,18 +64,46 @@ static int		checkskip(const struct dirent *);
 static int		subcasestr(const char *, const char *);
 static void		usage(void);
 
+static int		quite = 0;
+static int		cases = 0;
+static int		exact = 0;
+static int		comme = 0;
+
 int
 main(int argc, char *argv[])
 {
 	const char *path;
+	int ch;
 
-	if (argc < 2)
+	while ((ch = getopt(argc, argv, "xcqC")) != -1) {
+		switch (ch) {
+		case 'x':	/* exact match */
+			exact = 1;
+			break;
+		case 'c':	/* case sensitive */
+			cases = 1;
+			break;
+		case 'q':	/* quite */
+			quite = 1;
+			break;
+		case 'C':	/* comment search */
+			comme = 1;
+			break;
+		default:
+			usage();
+			/* NOTREACHED */
+		}
+	}
+	argc -= optind;
+	argv += optind;
+
+	if (argc < 1)
 		usage();
 
 	if ((path = getenv("PKGSRCDIR")) == NULL)
 		path = PKGSRCDIR;
 
-	for (++argv; *argv != NULL; ++argv)
+	for (; *argv != NULL; ++argv)
 		pkgfind(path, *argv);
 
 	return 0;
@@ -74,6 +115,7 @@ pkgfind(const char *path, const char *pkg)
 	struct dirent **cat, **list;
 	int ncat, nlist, i, j;
 	char tmp[PATH_MAX];
+	char *comment = NULL;
 	struct stat sb;
 
 	if ((ncat = scandir(path, &cat, checkskip, alphasort)) < 0)
@@ -99,6 +141,16 @@ pkgfind(const char *path, const char *pkg)
 			}
 			if (stat(tmp, &sb) < 0 || !S_ISDIR(sb.st_mode))
 				continue;
+
+			if (comme) {
+				strcat(tmp,"/Makefile");
+				if (getcomment(tmp,&comment) != 0)
+					if (comment!=0)
+					if (subcasestr(comment, pkg))
+						showpkg(path, cat[i]->d_name,
+						    list[j]->d_name);
+				continue;
+			}
 			if (subcasestr(list[j]->d_name, pkg))
 				showpkg(path, cat[i]->d_name, list[j]->d_name);
 			free(list[j]);
@@ -112,26 +164,28 @@ pkgfind(const char *path, const char *pkg)
 static void
 showpkg(const char *path, const char *cat, const char *pkg)
 {
-	char *mk, *comment;
+	char *mk, *comment = NULL;
 
-	(void)asprintf(&mk, "%s/%s/%s/Makefile", path, cat, pkg);
-	if (mk == NULL)
-		err(EXIT_FAILURE, "asprintf");
-
-	comment = NULL;
-	if (getcomment(mk, &comment) == 0) {
-		free(mk);
-		(void)asprintf(&mk, "%s/%s/%s/Makefile.common", path, cat, pkg);
+	if (!quite) {
+		(void)asprintf(&mk, "%s/%s/%s/Makefile", path, cat, pkg);
 		if (mk == NULL)
 			err(EXIT_FAILURE, "asprintf");
-		(void)getcomment(mk, &comment);
+
+		if (getcomment(mk, &comment) == 0) {
+			free(mk);
+			(void)asprintf(&mk, "%s/%s/%s/Makefile.common",
+			    path, cat, pkg);
+			if (mk == NULL)
+				err(EXIT_FAILURE, "asprintf");
+			(void)getcomment(mk, &comment);
+		}
+		free(mk);
 	}
-	free(mk);
 
 	if (comment != NULL)
 		(void)printf("%s/%s: %s\n", cat, pkg, comment);
 	else
-		(void)printf("%s/%s: no description\n", cat, pkg);
+		(void)printf("%s/%s\n", cat, pkg);
 }
 
 static int
@@ -177,13 +231,27 @@ static int
 subcasestr(const char *s, const char *find)
 {
 	size_t len, n;
+	int match = 0;
 
 	len = strlen(find);
 	n = strlen(s) - len;
 
+	if (exact) {
+		if (cases)
+			match = (strcmp(find, s) == 0);
+		else
+			match = (strcasecmp(find, s) == 0);
+		return match;
+	}
+
 	do {
-		if (strncasecmp(s, find, len) == 0)
-			return 1;
+		if (cases) {
+			if (strncmp(s, find, len) == 0)
+				return 1;
+		} else {
+			if (strncasecmp(s, find, len) == 0)
+				return 1;
+		}
 	} while (*++s != '\0' && n-- > 0);
 
 	return 0;
@@ -194,6 +262,6 @@ usage(void)
 {
 	extern char *__progname;
 
-	(void)fprintf(stderr, "Usage: %s keyword [...]\n", __progname);
+	(void)fprintf(stderr, "Usage: %s [-cqxC] keyword [...]\n", __progname);
 	exit(EXIT_FAILURE);
 }
