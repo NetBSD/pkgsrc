@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2342 2004/11/09 14:40:49 adam Exp $
+$NetBSD: TODO,v 1.2343 2004/11/09 14:48:16 salo Exp $
 
 Suggested new packages
 ======================
@@ -456,7 +456,6 @@ Suggested package updates
 	o nut-10.8
 	o nxtvepg-2.7.0
 	o ocaml-3.07pl2
-	o ogmtools-1.5
 	o openal-20040816
 	o openoffice-1.1.3
 	o openssl-0.9.7e [http://www.cs.stevens-tech.edu/~jschauma/netbsd/openssl.diff]
