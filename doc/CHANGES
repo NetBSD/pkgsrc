@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3983 2003/12/05 17:47:53 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3984 2003/12/05 18:10:50 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4979,3 +4979,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added sgi-fonts-1.0.457 [agc 2003-12-05]
 	Updated libnbcompat to 20031205 [erh 2003-12-05]
 	Added nikto-1.32 [xtraeme 2003-12-05]
+	Added gtk2-theme-switch-2.0.0rc2 [xtraeme 2003-12-05]
