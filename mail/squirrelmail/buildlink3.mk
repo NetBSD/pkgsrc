@@ -1,0 +1,18 @@
+# $NetBSD: buildlink3.mk,v 1.1 2005/01/24 19:03:35 martti Exp $
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+SQUIRRELMAIL_BUILDLINK3_MK:=	${SQUIRRELMAIL_BUILDLINK3_MK}+
+
+.if !empty(BUILDLINK_DEPTH:M+)
+BUILDLINK_DEPENDS+=	squirrelmail
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nsquirrelmail}
+BUILDLINK_PACKAGES+=	squirrelmail
+
+.if !empty(SQUIRRELMAIL_BUILDLINK3_MK:M+)
+BUILDLINK_DEPENDS.squirrelmail+=	squirrelmail>=1.4.4
+BUILDLINK_PKGSRCDIR.squirrelmail?=	../../mail/squirrelmail
+.endif	# SQUIRRELMAIL_BUILDLINK3_MK
+
+BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
