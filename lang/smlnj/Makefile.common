@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.3 2003/08/01 15:55:29 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.4 2004/06/22 20:34:11 xtraeme Exp $
 
 # smlnj also supports hppa, sparc, ppc, mlrisc & alpha
 # pkg support for those platforms, and say, solaris-x86
 # is left as an (easy) exercise for the reader.
-ONLY_FOR_PLATFORM=	Linux-*-i386 NetBSD-*-i386 SunOS-*-sparc NetBSD-*-sparc NetBSD-*-powerpc
+ONLY_FOR_PLATFORM=	Linux-*-i386 NetBSD-*-i386 SunOS-*-sparc \
+			NetBSD-*-sparc NetBSD-*-powerpc
 
 .include "../../mk/bsd.prefs.mk"
 
