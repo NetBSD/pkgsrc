@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/01/15 13:06:00 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2004/01/23 23:26:25 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -8,7 +8,7 @@ PERL5_RC_VERS=	# empty
 
 .if empty(PERL5_SNAPSHOT) && empty(PERL5_RC_VERS)
 DISTNAME=	perl-${PERL5_VERS}
-PKGREVISION=	1
+PKGREVISION=	# empty
 SNAPSHOT_SITES=	# empty
 .else
 .  if !empty(PERL5_SNAPSHOT)
@@ -24,7 +24,7 @@ SNAPSHOT_SITES=	http://www.cpan.org/authors/id/J/JH/JHI/
 .  endif
 .endif
 
-PERL5_VERS=	5.8.1
+PERL5_VERS=	5.8.2
 CATEGORIES=	lang devel perl5
 MASTER_SITES=	${SNAPSHOT_SITES} \
 		${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,}
@@ -41,11 +41,11 @@ CONFLICTS=	perl-5.00* perl-base-[0-9]* \
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-BUILDING_PERL5=		YES
-PERL5_CONFIGURE=	NO
+BUILDING_PERL5=		yes
+PERL5_CONFIGURE=	no
 
-USE_BUILDLINK3=		YES
-HAS_CONFIGURE=		YES
+USE_BUILDLINK3=		yes
+HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-sde
 CONFIGURE_ARGS+=	-Dprefix="${PREFIX}"
@@ -99,13 +99,13 @@ CONFIGURE_ARGS+=	-Dcc="${PERL5_CC}"
 # The perl build attempts to work around case-insensitivity problems on
 # HFS filesystems by using GNUmakefiles, so we need to use GNU make.
 #
-USE_GMAKE=	YES
+USE_GMAKE=	yes
 #
 # Perl is _always_ built using shared libraries on Darwin; there's no
 # way to build a statically-linked perl binary.
 #
 MKPIC=		yes
-STATIC_PERL=	NO
+STATIC_PERL=	no
 #
 # "installarchlib" and "installsitearch" have different forms between
 # Darwin and NetBSD.
@@ -157,19 +157,29 @@ CONFIGURE_ARGS+=	-Dlibswanted="${LIBSWANTED.${OPSYS}}"
 
 .if ${OPSYS} == "NetBSD"
 .  if !exists(/usr/libexec/ld.so) && !exists(/usr/libexec/ld.elf_so)
-MKPIC=			no
+MKPIC=		no
 .  endif
-.  if ${MACHINE_ARCH} == "sparc64"
-# The toolchain on sparc64 is not really production-quality right now, but
-# gcc-2.96 is supposed to fix most problems.  Passing -g to the configure
-# process triggers -DDEBUGGING, which plays the real trick and circumvents
-# code-generation bugs, so we add -g to CFLAGS to at least have a really
-# debuggable build.
+.endif
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64)
+.  if !defined(_GCC_IS_AT_LEAST_3_3)
+_GCC_IS_AT_LEAST_3_3!=	\
+	if ${PKG_ADMIN} pmatch 'gcc>=3.3' ${CC_VERSION}; then		\
+		${ECHO} "YES";						\
+	else								\
+		${ECHO} "NO";						\
+	fi
+MAKEFLAGS+=	_GCC_IS_AT_LEAST_3_3="${_GCC_IS_AT_LEAST_3_3}"
+.  endif
+.  if !empty(_GCC_IS_AT_LEAST_3_3:M[nN][oO])
 #
-CFLAGS+=		-g -msoft-quad-float -O2
+# Fix brokenness when using an older toolchain (gcc<3.3) on sparc64.
+# Passing -g to the configure process triggers -DDEBUGGING, which plays
+# the real trick and circumvents some code-generation bugs, so we add
+# -g to CFLAGS to at least have a really debuggable build.
+#
+CFLAGS+=	-g -msoft-quad-float -O2
 .  endif
-.elif ${OPSYS} == "SunOS"
-CFLAGS=
 .endif
 
 .if ${MKPIC} == "yes"
@@ -221,17 +231,17 @@ pre-configure:
 .if ${MKPIC} == "yes"
 .  for _arch_ in mipsel mipseb
 .    if !empty(MACHINE_ARCH:M${_arch_})
-STATIC_PERL?=		NO
+STATIC_PERL?=		no
 .    endif
 .  endfor
 .endif
-STATIC_PERL?=		YES
+STATIC_PERL?=		yes
 
 WRKSRC_PERL5=		${WRKSRC}/perl
 
-.if defined(STATIC_PERL) && ${STATIC_PERL} == "YES"
+.if defined(STATIC_PERL) && !empty(STATIC_PERL:M[yY][eE][sS])
 STATIC_WRKDIR=		${WRKDIR}/static
-STATIC_MAKEFLAGS=	MKPIC=no STATIC_PERL=NO
+STATIC_MAKEFLAGS=	MKPIC=no STATIC_PERL=no
 STATIC_MAKEFLAGS+=	WRKDIR=${STATIC_WRKDIR}
 STATIC_MAKEFLAGS+=	ALL_TARGET=perl
 WRKSRC_PERL5=		${STATIC_WRKDIR}/${WRKSRC:T}/perl

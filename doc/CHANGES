@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4585 2004/01/23 23:10:35 recht Exp $
+$NetBSD: CHANGES,v 1.4586 2004/01/23 23:26:28 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -439,3 +439,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated elinks to 0.9.1 [recht 2004-01-23]
 	Updated curl to 7.11.0 [recht 2004-01-23]
 	Updated py-curl to 7.10.8 [recht 2004-01-23]
+	Updated perl to 5.8.2 [jlam 2004-01-23]
