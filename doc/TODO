@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.650 2003/06/23 09:23:16 adam Exp $
+$NetBSD: TODO,v 1.651 2003/06/23 11:27:47 adam Exp $
 
 Suggested new packages
 ======================
@@ -113,7 +113,6 @@ Suggested package updates
 	o gawk-3.1.2
 	o gcpio-2.5 [pkg/20799]
 	o gcvs-1.0-1
-	o gd-2.0.12
 	o gdm-2.4.1.1
 	o geda-20030525
 	o generator-0.35
