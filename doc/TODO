@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3105 2005/02/24 11:34:02 wiz Exp $
+$NetBSD: TODO,v 1.3106 2005/02/24 11:37:22 bad Exp $
 
 Suggested new packages
 ======================
@@ -587,7 +587,6 @@ Suggested package updates
 	o libcomprex-0.3.3
 	o libetpan-0.34b
 	o libextractor-0.4.1
-	o libfwbuilder-2.0.4
 	o libgda-1.2.0
 	o libggi-2.1
 	o libggiwmh-0.2.0
