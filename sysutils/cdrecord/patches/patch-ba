@@ -1,0 +1,19 @@
+$NetBSD: patch-ba,v 1.1 2001/08/07 11:23:57 drochner Exp $
+
+--- misc/readcd.c.orig	Fri Apr 13 19:41:39 2001
++++ misc/readcd.c	Mon Aug  6 10:42:49 2001
+@@ -301,11 +301,11 @@
+ 	/*
+ 	 * We don't need root privilleges anymore.
+ 	 */
+-#ifdef	HAVE_SETREUID
+-	if (setreuid(-1, getuid()) < 0)
+-#else
+ #ifdef	HAVE_SETEUID
+ 	if (seteuid(getuid()) < 0)
++#else
++#ifdef	HAVE_SETREUID
++	if (setreuid(-1, getuid()) < 0)
+ #else
+ 	if (setuid(getuid()) < 0)
+ #endif

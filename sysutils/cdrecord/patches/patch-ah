@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.1 2000/11/21 23:37:02 mycroft Exp $
+$NetBSD: patch-ah,v 1.2 2001/08/07 11:23:57 drochner Exp $
 
---- cdda2wav/setuid.c.orig	Sat Apr 22 20:37:57 2000
-+++ cdda2wav/setuid.c	Tue Nov 21 23:30:58 2000
+--- cdda2wav/setuid.c.orig	Sat Apr 22 22:37:57 2000
++++ cdda2wav/setuid.c	Mon Aug  6 10:36:07 2001
 @@ -93,7 +93,7 @@
      }
      if (geteuid() == 0) return; /* nothing to do */
@@ -38,37 +38,3 @@ $NetBSD: patch-ah,v 1.1 2000/11/21 23:37:02 mycroft Exp $
      if (setegid(real_gid)) {
  	perror("setegid in dontneedgroup()");
  	exit(1);
---- misc/readcd.c.orig	Thu Jul 20 16:18:45 2000
-+++ misc/readcd.c	Tue Nov 21 23:31:13 2000
-@@ -293,11 +293,11 @@
- 	/*
- 	 * We don't need root privilleges anymore.
- 	 */
--#ifdef	HAVE_SETREUID
--	if (setreuid(-1, getuid()) < 0)
--#else
- #ifdef	HAVE_SETEUID
- 	if (seteuid(getuid()) < 0)
-+#else
-+#ifdef	HAVE_SETREUID
-+	if (setreuid(-1, getuid()) < 0)
- #else
- 	if (setuid(getuid()) < 0)
- #endif
---- mkisofs/mkisofs.c.orig	Thu Jul 20 16:31:17 2000
-+++ mkisofs/mkisofs.c	Tue Nov 21 23:31:20 2000
-@@ -1802,11 +1802,11 @@
- 		}
- 	}
- 	/* We don't need root privilleges anymore. */
--#ifdef	HAVE_SETREUID
--	if (setreuid(-1, getuid()) < 0)
--#else
- #ifdef	HAVE_SETEUID
- 	if (seteuid(getuid()) < 0)
-+#else
-+#ifdef	HAVE_SETREUID
-+	if (setreuid(-1, getuid()) < 0)
- #else
- 	if (setuid(getuid()) < 0)
- #endif

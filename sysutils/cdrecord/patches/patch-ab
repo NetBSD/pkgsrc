@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.4 2000/07/22 16:14:53 rh Exp $
+$NetBSD: patch-ab,v 1.5 2001/08/07 11:23:57 drochner Exp $
 
---- DEFAULTS/Defaults.netbsd.orig	Tue Nov  2 12:41:03 1999
-+++ DEFAULTS/Defaults.netbsd	Mon Nov 15 20:29:31 1999
+--- DEFAULTS/Defaults.netbsd.orig	Mon Mar 13 13:37:50 2000
++++ DEFAULTS/Defaults.netbsd	Mon Aug  6 10:24:20 2001
 @@ -19,7 +19,7 @@
  CWARNOPTS=
  
