@@ -1,3 +1,7 @@
+$NetBSD: patch-ab,v 1.10 2001/10/09 14:05:15 atatat Exp $
+
+Tweak the UVM detection to deal with the work Chuck did on 9/15/2001.
+
 --- Configure.orig	Tue Sep 11 14:22:21 2001
 +++ Configure	Sun Oct  7 17:02:48 2001
 @@ -1881,6 +1881,12 @@
