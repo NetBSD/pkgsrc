@@ -1,16 +1,27 @@
-$NetBSD: patch-ae,v 1.3 2003/12/08 14:33:47 wiz Exp $
-
 --- configure.orig	Sun Oct  5 03:32:52 2003
-+++ configure
-@@ -9074,6 +9074,11 @@ else
++++ configure	Thu Nov 11 16:34:34 2004
+@@ -7834,9 +7834,9 @@
+                 PROFILE="-pg -g -O20 -D__NO_MATH_INLINES -fsigned-char -mv8" ;;
+         *-darwin*)
+                 PLUGIN_LDFLAGS="-module -avoid-version"
+-                DEBUG="-g -Wall -D__NO_MATH_INLINES -fsigned-char -Ddlsym=dlsym_auto_underscore"
+-                CFLAGS="-D__NO_MATH_INLINES -fsigned-char -Ddlsym=dlsym_auto_underscore"
+-                PROFILE="-g -pg -D__NO_MATH_INLINES -fsigned-char -Ddlsym=dlsym_auto_underscore" ;;
++                DEBUG="-g -Wall -D__NO_MATH_INLINES -fsigned-char "
++                CFLAGS="-D__NO_MATH_INLINES -fsigned-char "
++                PROFILE="-g -pg -D__NO_MATH_INLINES -fsigned-char " ;;
+         *)
+                 PLUGIN_LDFLAGS="-export-dynamic -avoid-version"
+                 DEBUG="-g -Wall -D__NO_MATH_INLINES -fsigned-char"
+@@ -9072,6 +9072,11 @@
+    BUILD_ESD="$enableval"
+ else
     BUILD_ESD="yes"
- fi;
- 
++fi;
++
 +if test "$BUILD_ESD" = "no"; then
 +  HAVE_ESD_TRUE='#'
 +  HAVE_ESD_FALSE=
-+fi;
-+
- if test "$BUILD_ESD" = "yes"; then
+ fi;
  
- # Check whether --with-esd-prefix or --without-esd-prefix was given.
+ if test "$BUILD_ESD" = "yes"; then
