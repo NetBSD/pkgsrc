@@ -1,18 +1,14 @@
-# $NetBSD: Makefile,v 1.28 2003/07/17 22:52:10 grant Exp $
+# $NetBSD: Makefile,v 1.29 2003/10/27 21:48:27 cube Exp $
 #
 
-DISTNAME=	slrn-0.9.7.4
-PKGREVISION=	1
+DISTNAME=	slrn-0.9.8.0
 CATEGORIES=	news
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=slrn/}
 EXTRACT_SUFX=	.tar.bz2
 
 PATCH_SITES=	http://slrn.sourceforge.net/patches/
-PATCHFILES=	slrn-0.9.7.4-po.diff \
-		slrn-0.9.7.4-popup_win.diff \
-		slrn-0.9.7.4-mem_leak.diff \
-		slrn-0.9.7.4-link_subjects.diff \
-		slrn-0.9.7.4-strcasecmp.diff
+PATCHFILES=	slrn-0.9.8.0-ranges.diff \
+		slrn-0.9.8.0-post.diff
 PATCH_DIST_STRIP=      -p1
 
 MAINTAINER=	mjl@NetBSD.org
@@ -22,9 +18,8 @@ COMMENT=	Highly customizable threaded newsreader
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=--without-X --disable-inews --with-slrnpull \
-		--enable-spool --enable-grouplens \
-		--with-gen-mid --with-libdir=${PREFIX}/lib/slrn \
+CONFIGURE_ARGS+=--disable-inews --with-slrnpull --enable-spool \
+		--enable-grouplens --with-libdir=${PREFIX}/lib/slrn \
 		--enable-mid-cache \
 		--with-localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 
