@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2102 2004/09/08 04:03:08 salo Exp $
+$NetBSD: TODO,v 1.2103 2004/09/08 10:38:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -277,6 +277,7 @@ Suggested package updates
 	o gsasl-0.1.4
 	o gtar-1.14
 	o gtkglext-1.0.6
+	o gtklife-4.1
 	o gtkmm-2.4.5
 	o gtksee-0.5.6 [pkg/26372]
 	o gtranslator-1.0.1
@@ -342,6 +343,7 @@ Suggested package updates
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.2.2
 	o mummer-3.15
+	o nail-11.6
 	o namazu-2.0.13
 	o nano-1.2.4
 	o nap-1.5.2
@@ -432,6 +434,7 @@ Suggested package updates
 	o tinyproxy-1.6.3
 	o tk-8.4.7
 	o tkdesk-2.0
+	o tkgate-1.8.5
 	o tkman-2.2
 	o tla-1.2.1
 	o tripwire-2.3.1 [see also pkg/22362]
@@ -454,6 +457,7 @@ Suggested package updates
 	o xanalyser-1.23
 	o xanim-2.92.0 [pkg/19934]
 	o xbeeb-0.4.1
+	o xblast-2.9.22
 	o xboard-4.2.7
 	o xchm-0.9.4
 	o xdaliclock-2.20
