@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2004/06/18 22:40:04 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/06/19 17:37:37 xtraeme Exp $
 
 MOZILLA=	firefox
 MOZILLA_BIN=	firefox-bin
 MOZCONFDIR=	.mozilla
 MOZ_VER=	0.8
-PKGREVISION=	4
+PKGREVISION=	3
 EXTRACT_SUFX=	.tar.bz2
 DISTNAME=	${MOZILLA}-source-${MOZ_VER}
 MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MOZ_VER}/ \
