@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/04/28 09:46:05 tron Exp $
+# $NetBSD: Makefile,v 1.13 1998/06/22 13:51:34 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/10/30 05:15:19 jkh Exp
 #
 
@@ -14,8 +14,7 @@ USE_X11=	yes
 
 QTDIR=	${PREFIX}
 
-MAN1=		moc.1
-MAN3=		qaccel.3 qapplication.3 qarray.3 qbitarray.3 \
+MAN_PAGES=	qaccel.3 qapplication.3 qarray.3 qbitarray.3 \
 		qbitmap.3 qbitval.3 qboxlayout.3 qbrush.3 qbuffer.3 \
 		qbutton.3 qbuttongroup.3 qbytearray.3 \
 		qcheckbox.3 qclipboard.3 qcloseevent.3 \
@@ -105,7 +104,7 @@ do-install:
 	${MKDIR} ${QTDIR}/include/qt
 	${INSTALL_DATA} ${WRKSRC}/include/* ${QTDIR}/include/qt
 	${INSTALL_MAN} ${WRKSRC}/man/man1/* ${QTDIR}/man/man1
-	@(for PAGE in ${MAN3}; do \
+	@(for PAGE in ${MAN_PAGES}; do \
 	    set - X `head -1 ${WRKSRC}/man/man3/$${PAGE}qt`; \
 	    if [ $$# -eq 3 ] && [ "$$2" = .so ]; then \
 		${ECHO} ${LN} -s `basename $$3 | ${SED} s/qt$$//` \
