@@ -1,4 +1,4 @@
-/*	$NetBSD: sha1hl.c,v 1.2 2001/03/10 15:55:14 tron Exp $	*/
+/*	$NetBSD: sha1hl.c,v 1.3 2001/03/26 12:57:32 agc Exp $	*/
 
 /* sha1hl.c
  * ----------------------------------------------------------------------------
@@ -25,14 +25,14 @@
 #include <unistd.h>
 
 #if defined(LIBC_SCCS) && !defined(lint)
-__RCSID("$NetBSD: sha1hl.c,v 1.2 2001/03/10 15:55:14 tron Exp $");
+__RCSID("$NetBSD: sha1hl.c,v 1.3 2001/03/26 12:57:32 agc Exp $");
 #endif /* LIBC_SCCS and not lint */
 
 #ifndef _DIAGASSERT
 #define _DIAGASSERT(cond)	assert(cond)
 #endif
 
-#if defined(__weak_alias)
+#if 0
 __weak_alias(SHA1End,_SHA1End)
 __weak_alias(SHA1File,_SHA1File)
 __weak_alias(SHA1Data,_SHA1Data)
