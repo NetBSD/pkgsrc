@@ -1,4 +1,4 @@
-#	$NetBSD: NetBSD.bsd.man.mk,v 1.2 2004/04/04 03:00:02 grant Exp $
+#	$NetBSD: NetBSD.bsd.man.mk,v 1.3 2004/08/15 20:00:05 jlam Exp $
 #	@(#)bsd.man.mk	8.1 (Berkeley) 6/8/93
 
 .if !target(__initialized__)
@@ -24,7 +24,7 @@ HTMLDIR?=	${DESTDIR}/usr/share/man
 # tmac.andoc and tmac.doc were renamed in the update to groff-1.19 in
 # NetBSD-current 20030630.
 .if exists(${TMACDIR}/tmac.andoc)
-CATDEPS?=	${TMACDIR}/tmac.andoc) ${TMACDIR}/tmac.doc
+CATDEPS?=	${TMACDIR}/tmac.andoc ${TMACDIR}/tmac.doc
 .elif exists(${TMACDIR}/andoc.tmac)
 CATDEPS?=	${TMACDIR}/andoc.tmac ${TMACDIR}/doc.tmac
 .endif
