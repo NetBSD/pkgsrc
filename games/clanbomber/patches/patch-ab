@@ -1,6 +1,16 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/12/15 07:42:32 garbled Exp $
---- clanbomber/ClanBomber.cpp.orig	Fri Dec 15 00:27:16 2000
-+++ clanbomber/ClanBomber.cpp	Fri Dec 15 00:27:46 2000
+$NetBSD: patch-ab,v 1.2 2001/01/04 01:08:59 wiz Exp $
+
+--- clanbomber/ClanBomber.cpp.orig	Sat Apr  1 18:39:50 2000
++++ clanbomber/ClanBomber.cpp
+@@ -83,7 +83,7 @@
+ 		CL_SetupCore::init_display();
+ 		CL_SetupCore::init_sound();
+      	
+-     	srand( (long)time(NULL) );
++     	srandom( (long)time(NULL) );
+ 
+      	CL_Display::set_videomode(800, 600, 16);
+ 
 @@ -95,7 +95,7 @@
  		show_fps = false;
  		key_F1 = false;
@@ -10,3 +20,12 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/12/15 07:42:32 garbled Exp $
  		if (!opendir(map_path))
  		{
  			map_path = "/usr/local/share/clanbomber/maps";
+@@ -790,7 +790,7 @@
+ 		Resources::Intro_fl_logo()->put_screen( 100, 250, 0 );
+ 		Resources::Font_small()->print_left( 230, 360, domi_str->mid(0,domispell) );
+ 		CL_Display::flip_display();
+-		CL_System::sleep(rand()%100 + 80);
++		CL_System::sleep(random()%100 + 80);
+ 	}
+ 	CL_System::sleep(1500);
+ 	
