@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/09/21 16:48:38 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/11/30 14:19:56 wiz Exp $
 lib/pkgconfig/gnome-icon-theme.pc
 share/icons/gnome/12x12/emblems/emblem-symbolic-link.png
 share/icons/gnome/12x12/filesystems/gnome-fs-directory-accept.png
@@ -2369,32 +2369,29 @@ share/icons/hicolor/96x96/apps/gnome-globe.png
 share/icons/hicolor/96x96/apps/gnome-starthere.png
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/96x96/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/72x72/apps
-@dirrm share/icons/hicolor/48x48/stock/net
-@dirrm share/icons/hicolor/48x48/stock/io
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/stock/net
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/stock/io
 @dirrm share/icons/hicolor/48x48/stock/generic
 @dirrm share/icons/hicolor/48x48/stock/document
-@dirrm share/icons/hicolor/48x48/stock/data
-@dirrm share/icons/hicolor/48x48/stock/code
-@dirrm share/icons/hicolor/48x48/stock
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/stock/data
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/stock/code
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/stock
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
 @dirrm share/icons/hicolor/36x36/stock/generic
 @dirrm share/icons/hicolor/36x36/stock/document
-@dirrm share/icons/hicolor/36x36/stock
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/36x36/stock
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/36x36/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/36x36
-@dirrm share/icons/hicolor/32x32/stock/object
-@dirrm share/icons/hicolor/32x32/stock/net
-@dirrm share/icons/hicolor/32x32/stock/media
-@dirrm share/icons/hicolor/32x32/stock/io
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/stock/object
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/stock/net
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/stock/media
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/stock/io
 @dirrm share/icons/hicolor/32x32/stock/generic
 @dirrm share/icons/hicolor/32x32/stock/document
-@dirrm share/icons/hicolor/32x32/stock/data
-@dirrm share/icons/hicolor/32x32/stock/code
-@dirrm share/icons/hicolor/32x32/stock/chart
-@dirrm share/icons/hicolor/32x32/stock
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/stock/data
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/stock/code
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/stock/chart
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/stock
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
 @dirrm share/icons/hicolor/24x24/stock/text
 @dirrm share/icons/hicolor/24x24/stock/table
 @dirrm share/icons/hicolor/24x24/stock/object
@@ -2413,24 +2410,23 @@ share/icons/hicolor/96x96/apps/gnome-starthere.png
 @dirrm share/icons/hicolor/24x24/apps
 @dirrm share/icons/hicolor/24x24
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/192x192/apps
-@dirrm share/icons/hicolor/16x16/stock/text
-@dirrm share/icons/hicolor/16x16/stock/table
-@dirrm share/icons/hicolor/16x16/stock/object
-@dirrm share/icons/hicolor/16x16/stock/net
-@dirrm share/icons/hicolor/16x16/stock/navigation
-@dirrm share/icons/hicolor/16x16/stock/media
-@dirrm share/icons/hicolor/16x16/stock/io
-@dirrm share/icons/hicolor/16x16/stock/image
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/stock/text
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/stock/table
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/stock/object
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/stock/net
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/stock/navigation
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/stock/media
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/stock/io
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/stock/image
 @dirrm share/icons/hicolor/16x16/stock/generic
-@dirrm share/icons/hicolor/16x16/stock/form
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/stock/form
 @dirrm share/icons/hicolor/16x16/stock/emoticons
 @dirrm share/icons/hicolor/16x16/stock/document
-@dirrm share/icons/hicolor/16x16/stock/data
-@dirrm share/icons/hicolor/16x16/stock/code
-@dirrm share/icons/hicolor/16x16/stock/chart
-@dirrm share/icons/hicolor/16x16/stock
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/stock/data
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/stock/code
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/stock/chart
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/stock
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @exec ${MKDIR} %D/share/icons/gnome/scalable/mimetypes
 @dirrm share/icons/gnome/scalable/mimetypes
@@ -2497,4 +2493,4 @@ share/icons/hicolor/96x96/apps/gnome-starthere.png
 @dirrm share/icons/gnome/12x12/devices
 @dirrm share/icons/gnome/12x12
 @dirrm share/icons/gnome
-@comment in hicolor-icon-theme: @dirrm share/icons
+@comment in xdg-dirs: @dirrm share/icons
