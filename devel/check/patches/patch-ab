@@ -1,18 +1,28 @@
-$NetBSD: patch-ab,v 1.1 2005/03/11 22:20:49 rillig Exp $
+$NetBSD: patch-ab,v 1.2 2005/03/14 14:19:01 rillig Exp $
 
 This patch makes check compile with cpp-2.95.3. The bug which it fixes
 is quite subtile. When fail_if(x) is expanded, the preprocessor deletes
 the last token before the ##. For cpp-2.95, this token starts with the
-"o" of occured. Later versions of cpp just remove the comma.
+"f" of failed. Later versions of cpp just remove the comma.
 
---- src/check.h.in.orig	Tue Nov  9 14:22:16 2004
-+++ src/check.h.in	Fri Mar 11 22:08:46 2005
-@@ -168,7 +168,7 @@ static void __testname (void)\
+--- src/check.h.in.orig	Wed Aug 18 14:03:46 2004
++++ src/check.h.in	Mon Mar 14 13:29:49 2005
+@@ -157,15 +157,15 @@ static void __testname (void)\
+ /* Fail the test case unless expr is true */
+ #define fail_unless(expr, msg, args...)\
+         _fail_unless(expr, __FILE__, __LINE__,\
+-        msg ? msg : "Assertion '"#expr"' failed", ##args)
++        msg ? msg : "Assertion '"#expr"' failed" , ##args)
+ 
  /* Fail the test case if expr is true */
- #define fail_if(expr, ...)\
+ #define fail_if(expr, msg, args...)\
          _fail_unless(!(expr), __FILE__, __LINE__,\
--        "Failure '"#expr"' occured", ## __VA_ARGS__, NULL)
-+        "Failure '"#expr"' occured" , ## __VA_ARGS__, NULL)
+-        msg ?msg :"Assertion '"#expr"' failed", ##args)
++        msg ?msg :"Assertion '"#expr"' failed" , ##args)
  
  /* Always fail */
- #define fail(...) _fail_unless(0, __FILE__, __LINE__, "Failed" , ## __VA_ARGS__, NULL)
+-#define fail(msg, args...) _fail_unless(0, __FILE__, __LINE__, msg, ##args)
++#define fail(msg, args...) _fail_unless(0, __FILE__, __LINE__, msg , ##args)
+ 
+ /* Non macro version of #fail_unless, with more complicated interface */
+ void _fail_unless (int result, const char *file,
