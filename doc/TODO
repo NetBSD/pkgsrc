@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2684 2004/12/05 18:39:45 he Exp $
+$NetBSD: TODO,v 1.2685 2004/12/05 18:45:59 he Exp $
 
 Suggested new packages
 ======================
@@ -786,7 +786,6 @@ Suggested package updates
 	o p5-GD-2.19
 	o p5-Graph-0.20105
 	o p5-GraphViz-2.01
-	o p5-HTML-Table-1.20
 	o p5-HTMLObject-2.23
 	o p5-HTTP-Request-Form-0.952
 	o p5-HTTPD-User-Manage-1.62
