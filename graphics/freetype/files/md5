@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 1999/03/30 05:00:34 garbled Exp $
+$NetBSD: md5,v 1.2 1999/10/28 00:38:45 jlam Exp $
 
-MD5 (freetype-1.1.full.tar.gz) = fc9bfc35086076bd681461e8da670365
+MD5 (freetype-1.2.tar.gz) = d4821fb579c79ddbe47774d046c60dbc
