@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.62 1999/08/29 22:27:11 rh Exp $
+# $NetBSD: Packages.txt,v 1.63 1999/08/30 22:48:05 tron Exp $
 ###########################################################################
 
 			==========================
@@ -1316,18 +1316,18 @@ files like another package in our pkgsrc tree.
 In this case you can set CONFLICTS to a space seperated list of packages
 (including version string) your package conflicts with.
 
-For example pkgsrc/devel/cvs and pkgsrc/devel/cvs-current install both
-the same files, thus you set in pkgsrc/devel/cvs/Makefile:
+For example pkgsrc/x11/Xaw3d and pkgsrc/x11/Xaw-Xpm install provide the
+same shared library, thus you set in pkgsrc/x11/Xaw3d/Makefile:
 
-CONFLICTS=      cvs-1.9.26 cvs-1.9.27 cvs-1.9.28
+CONFLICTS=      Xaw-Xpm-*
 
-and in pkgsrc/devel/cvs-current/Makefile:
+and in pkgsrc/x11/Xaw-Xpm/Makefile:
 
-CONFLICTS=      cvs-1.9 cvs-1.9.26 cvs-1.9.27
+CONFLICTS=      Xaw3d-*
 
-assuming that cvs is version 1.9 and cvs-current is cvs-1.9.28, and we had
-already cvs-1.9.26 and cvs-1.9.27 in our pkgsrc tree.
-
+Packages will automatically conflict with other packages with the name prefix
+and a different version string. "Xaw3d-1.5" e.g. will automatically conflict
+with the older version "Xaw3d-1.3".
 
  9.14 Software which has a WWW Home Page
  =======================================
