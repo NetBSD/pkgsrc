@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.22 2003/08/18 15:35:08 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.23 2003/08/18 16:16:42 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -2438,6 +2438,21 @@ real-su-install: ${MESSAGE}
 		${ECHO_MSG} "If this is not desired, set it to an appropriate value (${DEF_UMASK})"; \
 		${ECHO_MSG} "and install this package again by \`\`${MAKE} deinstall reinstall''."; \
 	fi
+.if defined(INSTALLATION_DIRS) && !empty(INSTALLATION_DIRS)
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "${_PKGSRC_IN}> Creating installation directories"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	for dir in ${INSTALLATION_DIRS}; do				\
+		case $$dir in						\
+		/*)	;;						\
+		*bin|*bin/*|*libexec|*libexec/*)
+			${INSTALL_PROGRAM_DIR} ${PREFIX}/$$dir ;;	\
+		*man/*)							\
+			${INSTALL_MAN_DIR} ${PREFIX}/$$dir ;;		\
+		*)							\
+			${INSTALL_DATA_DIR} ${PREFIX}/$$dir ;;		\
+		esac;							\
+	done
+.endif	# INSTALLATION_DIRS
 .if !defined(NO_MTREE)
 	${_PKG_SILENT}${_PKG_DEBUG}if [ `${ID} -u` = 0 ]; then		\
 		if [ ! -f ${MTREE_FILE} ]; then				\
