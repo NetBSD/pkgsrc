@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/03/05 08:02:23 cjs Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/05/08 17:18:56 hubertf Exp $
 bin/htdigest
 bin/htpasswd
 bin/dbmmanage
@@ -11,6 +11,11 @@ man/man1/apachectl.1.gz
 man/man1/htpasswd.1.gz
 man/man8/httpd.8.gz
 @exec mkdir -p %D/http/conf %D/http/logs %D/http/cgi-bin %D/http/htdocs
+http/conf/httpd.conf
+http/conf/access.conf
+http/conf/srm.conf
+http/conf/magic
+http/conf/mime.types
 http/conf/httpd.conf-dist
 http/conf/srm.conf-dist
 http/conf/access.conf-dist
@@ -92,3 +97,9 @@ http/icons/uu.gif
 http/icons/uuencoded.gif
 http/icons/world1.gif
 http/icons/world2.gif
+@dirrm http/conf
+@dirrm http/icons
+@dirrm http/cgi-bin
+@dirrm http/htdocs
+@dirrm http/logs
+@dirrm http
