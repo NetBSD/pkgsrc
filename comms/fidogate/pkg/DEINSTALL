@@ -1,0 +1,17 @@
+#! /bin/sh
+
+case "$2" in
+	DEINSTALL) cat <<EOF
+
+==========================================================================
+
+Note that the FIDOGATE spool directory (/var/spool/fido) and log directory
+(/var/log/fido) are NOT deleted by the pkg_delete process.  Please remove
+these directories and all their contents manually, if they are no longer
+needed. 
+
+==========================================================================
+
+EOF
+	;;
+esac

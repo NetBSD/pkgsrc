@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.8 1998/04/15 10:38:16 agc Exp $
+# $NetBSD: Makefile,v 1.9 1998/07/16 17:47:14 tv Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/10/13 04:41:06 max Exp
 #
 
 #    SUBDIR += bpl+
 #    SUBDIR += ecu
+#    SUBDIR += fidogate			# limited useability
 #    SUBDIR += hylafax
     SUBDIR += kermit
     SUBDIR += lrzsz

@@ -1,0 +1,19 @@
+--- src/gate/Makefile.orig	Thu Jul 16 10:49:22 1998
++++ src/gate/Makefile	Thu Jul 16 10:53:10 1998
+@@ -27,11 +27,11 @@
+ 
+ 
+ install:
+-	$(INSTALL_SETUID) rfc2ftn$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftn2rfc$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftnin$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftninpost $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftninrecomb $(PREFIX)$(LIBDIR)
++	$(INSTALL_SETUID) rfc2ftn$(EXE) $(LIBDIR)
++	$(INSTALL_PROG) ftn2rfc$(EXE) $(LIBDIR)
++	$(INSTALL_PROG) ftnin$(EXE) $(LIBDIR)
++	$(INSTALL_SCRIPT) ftninpost $(LIBDIR)
++	$(INSTALL_SCRIPT) ftninrecomb $(LIBDIR)
+ 
+ 
+ clean veryclean:

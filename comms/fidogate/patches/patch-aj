@@ -1,0 +1,19 @@
+--- doc/Makefile.orig	Thu Jul 16 10:59:42 1998
++++ doc/Makefile	Thu Jul 16 11:04:20 1998
+@@ -14,7 +14,7 @@
+ 
+ all::		fidogate.info fidogate.txt
+ 
+-all clean veryclean check depend install::
++all clean veryclean check depend::
+ 	for d in $(SUBDIRS); do \
+ 	  if [ -f $$d/Makefile ]; then $(MAKE) -C $$d $@ || exit 1; fi; \
+ 	done
+@@ -47,6 +47,6 @@
+ check::
+ 
+ install::
+-	$(INSTALL_DATA) fidogate.info* $(PREFIX)$(INFODIR)
++	$(INSTALL_DATA) fidogate.info* $(INFODIR)
+ 
+ depend::

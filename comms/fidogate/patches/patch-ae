@@ -1,0 +1,21 @@
+--- src/ffx/Makefile.orig	Thu Jul 16 10:48:36 1998
++++ src/ffx/Makefile	Thu Jul 16 10:52:46 1998
+@@ -27,12 +27,12 @@
+ 
+ 
+ install:
+-	$(INSTALL_SETUID) ffx$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ffxqt$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ffxbatch$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ffxmail $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ffxrmail $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ffxrun $(PREFIX)$(LIBDIR)
++	$(INSTALL_SETUID) ffx$(EXE) $(LIBDIR)
++	$(INSTALL_PROG) ffxqt$(EXE) $(LIBDIR)
++	$(INSTALL_PROG) ffxbatch$(EXE) $(LIBDIR)
++	$(INSTALL_SCRIPT) ffxmail $(LIBDIR)
++	$(INSTALL_SCRIPT) ffxrmail $(LIBDIR)
++	$(INSTALL_SCRIPT) ffxrun $(LIBDIR)
+ 
+ 
+ clean veryclean:
