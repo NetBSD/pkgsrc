@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/10 09:15:23 sakamoto Exp $
+# $NetBSD: Makefile,v 1.2 2002/06/16 09:54:30 kei Exp $
 #
 
 DISTNAME=	sj3-2.0.1.20
@@ -32,6 +32,7 @@ INSTALL_FILE=	${WRKDIR}/INSTALL
 EVAL_PREFIX+=	SJ3SERVERBINDIR=sj3-server-bin
 
 pre-configure:
+	@${CHMOD} +w ${WRKSRC}/dict/dict/Imakefile*
 	@${MV} ${WRKSRC}/dict/dict/Imakefile ${WRKSRC}/dict/dict/Imakefile.orig
 	@${SED} -e 's|$$(TOOL_DIR)/|${SJ3SERVERBINDIR}/bin/|' \
 		${WRKSRC}/dict/dict/Imakefile.orig \
