@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2003/02/14 20:18:05 jmmv Exp $
+
+--- doc/C/Makefile.in.orig	2003-01-28 02:41:31.000000000 +0100
++++ doc/C/Makefile.in
+@@ -137,7 +137,7 @@ WARN_CFLAGS = @WARN_CFLAGS@
+ cxxflags_set = @cxxflags_set@
+ 
+ DOC_MODULE = libgnomedb
+-HTML_DIR = $(datadir)/gtk-doc/html
++HTML_DIR = $(datadir)/doc/html
+ 
+ # The top-level SGML file. Change it if you want.
+ DOC_MAIN_SGML_FILE = $(DOC_MODULE)-docs.sgml
