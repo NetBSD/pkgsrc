@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 1998/08/20 15:17:10 tsarna Exp $
+# $NetBSD: Makefile,v 1.15 1998/12/12 17:21:04 tron Exp $
 
-DISTNAME=	mutt-0.93.2i
+DISTNAME=	mutt-${MUTT_VERSION}
 CATEGORIES=	mail
 MASTER_SITES=	ftp://riemann.iam.uni-bonn.de/pub/mutt/ \
 		ftp://ftp.gbnet.net/pub/mutt-international/ \
@@ -13,10 +13,8 @@ HOMEPAGE=	http://www.mutt.org/
 
 DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
 
-CONFLICTS=	mutt-0.89.1i mutt-0.91i mutt-0.91.1i mutt-0.93i mutt-0.93.1i
+CONFLICTS=	mutt-*
 
-RESTRICTED=	"Contains PGP code"
-MIRROR_DISTFILE= no
 NO_PATCH=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-curses=${PREFIX} --with-exec-shell=/bin/ksh \
@@ -24,3 +22,16 @@ CONFIGURE_ARGS+= --with-curses=${PREFIX} --with-exec-shell=/bin/ksh \
 CONFIGURE_ENV+=	LDFLAGS=-s
 
 .include "../../mk/bsd.pkg.mk"
+
+MUTT_BASE_VERSION=	0.95
+.if defined(MUTT_INTERNATIONAL) && ${MUTT_INTERNATIONAL} == YES
+MUTT_VERSION=		${MUTT_BASE_VERSION}i
+
+MIRROR_DISTFILE=	no
+RESTRICTED=		"Contains PGP code"
+WRKSRC=			${WRKDIR}/${DISTNAME:C/i$//}
+.else
+MUTT_VERSION=		${MUTT_BASE_VERSION}
+
+WRKSRC=			${WRKDIR}/${DISTNAME}-us
+.endif
