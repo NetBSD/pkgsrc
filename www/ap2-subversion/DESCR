@@ -1,0 +1,12 @@
+The goal of the Subversion project is to build a version control system that
+is a compelling replacement for CVS in the open source community. The software
+is released under an Apache/BSD-style open source license.
+
+This package contains the mod_dav_svn Apache2 module, which implements
+a sub-set of WebDAV DeltaV; it is the server back-end for Subversion's
+'ra_dav' repository access mechanism.  The server for the 'ra_svn'
+access mechanism is included in the subversion package.
+
+One of the long-term goals of mod_dav_svn is to provide a complete
+implementation of WebDAV and DeltaV, so that other WebDAV clients
+(such as Microsoft Office) can use a Subversion repository.
