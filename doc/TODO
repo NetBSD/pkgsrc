@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.464 2003/04/15 01:03:52 grant Exp $
+$NetBSD: TODO,v 1.465 2003/04/15 06:45:12 skrll Exp $
 
 Suggested new packages
 ======================
@@ -162,6 +162,7 @@ Suggested package updates
 	o lesstif-0.93.41
 	o libole2-2.2.8
 	o librsvg-2.2.2.1
+	o libtool-1.5 [skrll]
 	o lilypond-1.6.8
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
