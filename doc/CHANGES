@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.202 2002/10/08 05:30:52 cjep Exp $
+$NetBSD: CHANGES,v 1.203 2002/10/08 06:13:32 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3151,3 +3151,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated matchbox to 0.3.5 [wiz 2002-10-08]
 	Updated gap to 4.3nb1 [cjep 2002-10-08]
 	Added p5-String-CRC32-1.2 [cjep 2002-10-08]
+	Updated sendmail to 8.11.6nb2 [itojun 2002-10-08]
