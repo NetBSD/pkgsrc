@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1932 2003/04/14 18:25:22 grant Exp $
+$NetBSD: CHANGES,v 1.1933 2003/04/14 18:36:05 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1589,3 +1589,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cvsync to 0.19.3 [gehenna 2003-04-14]
 	Added xlreader-0.9.0 [zuntum 2003-04-14]
 	Added mozilla-flash-bin-6.0.69 [grant 2003-04-14]
+	Added qadsl-1.2 [cjep 2003-04-14]
