@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/05/02 11:54:49 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/02 13:33:03 wiz Exp $
 #
 
 DISTNAME=	gpsim-0.20.7
@@ -10,19 +10,21 @@ MAINTAINER=	snoonan@tbearsiberians.com
 HOMEPAGE=	http://www.dattalo.com/gnupic/gpsim
 COMMENT=	PIC emulator with X interface
 
-DEPENDS+=	gtk+>=1.2.10nb4:../../x11/gtk
-DEPENDS+=	gtk+extra-[0-9]*:../../x11/gtk+extra
-DEPENDS+=	eXdbm-[0-9]*:../../devel/eXdbm
-DEPENDS+=	readline>=2.0:../../devel/readline
-DEPENDS+=	popt-[0-9]*:../../devel/popt
-
-CPPFLAGS+=	-I${LOCALBASE}/include
-
+USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=	--with-exdbm=${PREFIX}
+CONFIGURE_ARGS+=	--with-exdbm=${BUILDLINK_PREFIX.eXdbm}
 
 USE_GMAKE=	YES
 USE_LIBTOOL=	YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
+USE_GNU_READLINE=	# rl_callback_read_char, rl_copy_text,
+# rl_callback_handler_remove, rl_forced_update_display,
+# rl_callback_handler_install
+
+.include "../../devel/eXdbm/buildlink2.mk"
+.include "../../devel/popt/buildlink2.mk"
+.include "../../devel/readline/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
+.include "../../x11/gtk+extra/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
