@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.221 2002/10/10 16:52:31 junyoung Exp $
+$NetBSD: CHANGES,v 1.222 2002/10/10 19:01:13 tron Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3170,3 +3170,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated wine to 20021007 [junyoung 2002-10-10]
 	Added bmf-0.84 [mjl 2002-10-10]
 	Updated wine to 20021007nb1 [junyoung 2002-10-10]
+	Updated ptl2 to 2.1.8nb1 [tron 2002-10-10]
