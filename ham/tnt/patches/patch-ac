@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2004/08/02 21:20:54 minskim Exp $
+
+--- configure.orig	2004-07-28 16:37:14.000000000 -0500
++++ configure
+@@ -3544,7 +3544,7 @@ EOF
+                 tnt_main_dir=${prefix}
+                 tnt_work_dir=${localstatedir}/spool/tnt
+                 tnt_conf_dir=${prefix}/share/tnt/conf
+-                tnt_doc_dir=${prefix}/share/tnt/doc
++                tnt_doc_dir=${prefix}/share/doc/tnt
+                 tnt_log_dir=${localstatedir}/log
+ 		tnt_proc_dir=${localstatedir}/run
+                 tnt_bin_dir=${prefix}/libexec/tnt
