@@ -1,11 +1,12 @@
-$NetBSD: patch-aa,v 1.12 2004/04/17 10:37:12 jmmv Exp $
+$NetBSD: patch-aa,v 1.13 2004/04/28 03:43:02 tv Exp $
 
 http://bugzilla.gnome.org/show_bug.cgi?id=139567
 http://bugzilla.gnome.org/show_bug.cgi?id=140329
+http://bugzilla.gnome.org/show_bug.cgi?id=141256
 
---- configure.orig	2004-03-16 18:13:21.000000000 +0100
-+++ configure	2004-04-17 10:06:39.000000000 +0200
-@@ -465,7 +465,7 @@
+--- configure.orig	Tue Mar 16 12:13:21 2004
++++ configure
+@@ -465,7 +465,7 @@ ac_includes_default="\
  # include <unistd.h>
  #endif"
  
@@ -14,7 +15,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=140329
  ac_subst_files=''
  
  # Initialize some variables set by options.
-@@ -30441,6 +30441,7 @@
+@@ -30441,6 +30441,7 @@ else
  fi
  G_MODULE_NEED_USCORE=0
  G_MODULE_BROKEN_RTLD_GLOBAL=0
@@ -22,7 +23,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=140329
  G_MODULE_HAVE_DLERROR=0
  if test -z "$G_MODULE_IMPL"; then
    case "$host" in
-@@ -31048,13 +31049,13 @@
+@@ -31048,13 +31049,13 @@ cat >>conftest.$ac_ext <<_ACEOF
  #ifndef RTLD_LAZY
  #  define RTLD_LAZY 0
  #endif
@@ -40,7 +41,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=140329
      return global == local;
  }
  _ACEOF
-@@ -31090,6 +31091,72 @@
+@@ -31090,6 +31091,72 @@ echo "${ECHO_T}$glib_cv_rtldglobal_broke
  	else
    		G_MODULE_BROKEN_RTLD_GLOBAL=0
  	fi
@@ -113,7 +114,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=140329
  	echo "$as_me:$LINENO: checking for preceeding underscore in symbols" >&5
  echo $ECHO_N "checking for preceeding underscore in symbols... $ECHO_C" >&6
  if test "${glib_cv_uscore+set}" = set; then
-@@ -31714,7 +31781,7 @@
+@@ -31714,7 +31781,7 @@ if test x"$have_threads" != xno; then
      # both CPPFLAG and LIBS.
      # One of them does for most gcc versions and some other platforms/compilers
      # too and could be considered as the canonical way to go.
@@ -122,7 +123,23 @@ http://bugzilla.gnome.org/show_bug.cgi?id=140329
        glib_save_CFLAGS="$CFLAGS"
        CFLAGS="$CFLAGS -$flag"
        if test "$cross_compiling" = yes; then
-@@ -34181,7 +34248,7 @@
+@@ -31869,6 +31936,15 @@ fi
+ 
+   fi
+ 
++# for some reason, the test for -pthread "succeeds" on gcc3.3 for interix
++# even though the option is wrong and invalid
++case $host in
++*-interix*)
++	G_THREAD_CFLAGS="-D_REENTRANT"
++	G_THREAD_LIBS="-lpthread"
++	;;
++esac
++
+     # if we are not finding the localtime_r function, then we probably are
+     # not using the proper multithread flag
+ 
+@@ -34181,7 +34257,7 @@ fi
  #  b) libtool doesn't recognize -pthread as a library dependency.
  #
  case $host in
@@ -131,7 +148,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=140329
      G_THREAD_LIBS_FOR_GTHREAD="`echo $G_THREAD_LIBS | sed s/-pthread/-lpthread/`"
      ;;
    *)
-@@ -38406,6 +38473,7 @@
+@@ -38406,6 +38482,7 @@ s,@G_MODULE_PLUGIN_LIBS@,$G_MODULE_PLUGI
  s,@G_MODULE_LDFLAGS@,$G_MODULE_LDFLAGS,;t t
  s,@G_MODULE_HAVE_DLERROR@,$G_MODULE_HAVE_DLERROR,;t t
  s,@G_MODULE_BROKEN_RTLD_GLOBAL@,$G_MODULE_BROKEN_RTLD_GLOBAL,;t t

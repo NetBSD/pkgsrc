@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.29 2004/04/24 04:54:07 minskim Exp $
+$NetBSD: distinfo,v 1.30 2004/04/28 03:43:02 tv Exp $
 
 SHA1 (glib-2.4.0.tar.bz2) = 17822e7180791f18c1723110e9e757dc5526440c
 Size (glib-2.4.0.tar.bz2) = 2034272 bytes
-SHA1 (patch-aa) = 53ae00ea0fcd545d80c4ba7e94e0a234ad482427
+SHA1 (patch-aa) = 5a1606c02d7d07d33eecc66e80efb4f93be1ac57
 SHA1 (patch-ab) = a231346877b6246e086312fda107a90dffdd0adb
 SHA1 (patch-ac) = 5f3d1446a41e71f1bf5556a1dd2a2a04e77d45da
 SHA1 (patch-ad) = c926d96bdc9ddf4f434fc57af0adbe11002cffc3
 SHA1 (patch-ae) = 09f16e8e14bdea3ee0e478d335f65cb66939e5f5
 SHA1 (patch-af) = c7f29961a832b65feef0e8f4cf218491a440f68c
+SHA1 (patch-ag) = 261e534ba2c17d5e35c0cd5cdec1631eb9f6545f
