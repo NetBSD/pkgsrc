@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/27 21:34:58 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2004/08/27 21:43:39 jlam Exp $
 
 DISTNAME=	regress-buildlink-transform-0.0
 CATEGORIES=	regress
@@ -17,19 +17,19 @@ NO_INSTALL=	yes
 NO_PACKAGE=	yes
 
 REGRESS_ENV=		PATH=${PATH}
-REGRESS_ENV+=		WRAPPER_DEBUG=yes
+#REGRESS_ENV+=		WRAPPER_DEBUG=yes
 
 REGRESS=		${ECHO}
-_WRAPPEES+=		REGRESS
-_WRAP_ALIASES.REGRESS=	regress
+_BLNK_WRAPPEES+=	REGRESS
+_ALIASES.REGRESS=	regress
 
-post-wrapper:
-	@${RM} ${WRAPPER_BINDIR}/${REGRESS}
+post-buildlink:
+	@${RM} ${BUILDLINK_DIR}/bin/${REGRESS}
 
 .PHONY: regress do-regress
 
-regress: wrapper
-	@cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} do-regress PKG_PHASE=wrapper
+regress: buildlink
+	@cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} do-regress PKG_PHASE=buildlink
 
 do-regress:
 	@${DO_NADA}
