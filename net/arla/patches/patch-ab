@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.5 2005/03/15 15:58:52 wennmach Exp $
+
+reorder libs.
+
+--- lib/ko/Makefile.in.orig	Mon Mar 14 11:06:15 2005
++++ lib/ko/Makefile.in	Mon Mar 14 11:07:19 2005
+@@ -489,9 +489,9 @@
+ restest_SOURCES = restest.c
+ LDADD = \
+ 	../../util/libarlautil.la 	\
+-	$(LIB_roken)			\
+ 	$(KRB5_LIB_FLAGS)		\
+-	$(LIBS)
++	$(LIBS)				\
++	$(LIB_roken)
+ 
+ gensysname_LDADD = $(LDADD)
+ kotest_LDADD = libko.la $(LDADD)

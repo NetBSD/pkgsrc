@@ -1,0 +1,10 @@
+$NetBSD: patch-aj,v 1.3 2005/03/15 15:58:52 wennmach Exp $
+
+test_rx_clock needs -llwp.
+
+--- rx/Makefile.in.orig	2005-03-09 16:44:39.000000000 +0100
++++ rx/Makefile.in	2005-03-09 16:46:18.000000000 +0100
+492c492
+< test_rx_clock_LDADD = librx.la $(LIBS)
+---
+> test_rx_clock_LDADD = librx.la -L../lwp -llwp $(LIBS)

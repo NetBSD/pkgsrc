@@ -1,0 +1,30 @@
+$NetBSD: patch-au,v 1.3 2005/03/15 15:58:52 wennmach Exp $
+
+Add missing lib and reorder them.
+
+--- appl/bos/Makefile.in.orig	2005-03-11 09:17:26.000000000 +0100
++++ appl/bos/Makefile.in	2005-03-11 09:19:43.000000000 +0100
+@@ -477,17 +477,19 @@
+ 
+ bos_LDADD = \
+ 	../lib/libarlalib.la \
+-	-L../../rxdef -lrxdefclient \
++	../../rxdef/librxdefclient.a \
++	../../rxdef/libkaclient.a \
+ 	../../rx/librx.la \
+-	-L../../lwp -llwp $(PLWP_LIB_FLAGS) \
++	../../lwp/liblwp.a $(PLWP_LIB_FLAGS) \
+ 	../../lib/vers/libvers.la \
+ 	../../lib/ko/libko.la ../../util/libarlautil.la \
+ 	$(LIB_sl) \
+ 	$(READLINE_lib) \
+-	$(LIB_roken) \
+ 	$(RXKAD_LIBS) \
+ 	$(KAFS_LIBS) \
+-	$(RXKAD_LIBS) @LIBS@
++	$(RXKAD_LIBS) \
++	@LIBS@ \
++	$(LIB_roken)
+ 
+ all: all-am
+ 
