@@ -1,20 +1,24 @@
-$NetBSD: patch-ab,v 1.2 2003/09/19 18:08:16 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2004/11/10 15:32:33 adam Exp $
 
---- Makefile.orig	Mon Sep 10 05:21:01 2001
-+++ Makefile	Fri Sep 19 16:06:02 2003
-@@ -1,8 +1,8 @@
- VERSION = 1.2.01
+--- Makefile.orig	2003-10-16 01:59:00.000000000 +0000
++++ Makefile
+@@ -1,12 +1,11 @@
+ VERSION=2.1
+ 
+-DESTDIR=/usr/local
++DESTDIR=${PREFIX}
+ BINDIR=$(DESTDIR)/bin/
+ MANDIR=$(DESTDIR)/man/man1/
+-DATADIR=./
++DATADIR=$(DESTDIR)/share/dbench/
  
 -CC = gcc
--CFLAGS = -O2 -Wall 
--CPPFLAGS = "-DVERSION=\"$(VERSION)\""
-+#CC = gcc
-+#CFLAGS = -O2 -Wall 
-+CPPFLAGS = "-DVERSION=\"$(VERSION)\"" -DPREFIX='"${PREFIX}"'
+-CFLAGS = -O2 -Wall -DVERSION=\"$(VERSION)\" -DDATADIR=\"$(DATADIR)\"
++CPPFLAGS = -DVERSION=\"$(VERSION)\" -DDATADIR=\"$(DATADIR)\"
  
  DB_OBJS = fileio.o util.o dbench.o child.o
  TB_OBJS = sockio.o util.o dbench.o child.o socklib.o
-@@ -11,13 +11,13 @@
+@@ -15,13 +14,13 @@ SRV_OBJS = util.o tbench_srv.o socklib.o
  all: dbench tbench tbench_srv
  
  dbench: $(DB_OBJS)
@@ -29,5 +33,5 @@ $NetBSD: patch-ab,v 1.2 2003/09/19 18:08:16 wiz Exp $
 -	$(CC) -o $@ $(SRV_OBJS)
 +	$(CC) -o $@ $(SRV_OBJS) $(TB_LDFLAGS)
  
- clean:
- 	rm -f *.o *~ dbench tbench tbench_srv
+ # Careful here: don't install client.txt over itself.
+ install: all
