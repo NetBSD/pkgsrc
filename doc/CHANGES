@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5353 2004/03/29 10:03:02 grant Exp $
+$NetBSD: CHANGES,v 1.5354 2004/03/29 10:33:22 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1581,3 +1581,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated Gauche to 0.7.4.2 [kei 2004-03-29]
 	Added sqsh-x11-2.1 [grant 2004-03-29]
 	Added p5-sybperl-2.16 [grant 2004-03-29]
+	Added vlc-0.7.1 [grant 2004-03-29]
