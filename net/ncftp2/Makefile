@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/05/13 06:13:15 tron Exp $
+# $NetBSD: Makefile,v 1.24 2001/05/16 20:27:23 jlam Exp $
 # FreeBSD Id: Makefile,v 1.39 1998/01/31 17:49:48 jseger Exp
 #
 
@@ -12,24 +12,15 @@ COMMENT=		FTP replacement with advanced user interface
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-extra-dirs
-
-BUILD_DEFS+=		USE_SOCKS
+CONFIGURE_ARGS+=	--disable-ncurses
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
+CONFIGURE_ENV+=		ac_cv_lib_intl_strftime=no
 
 .include "../../mk/bsd.prefs.mk"
 
-# Check for readline.h as standard
-.if exists(/usr/include/readline.h) || exists(/usr/include/readline/readline.h)
-CPPFLAGS+=		-DHAVE_LIBREADLINE=1
-CPPFLAGS+=		-DHAVE_FILENAME_COMPLETION_FUNCTION=1
-CPPFLAGS+=		-DHAVE_READLINE_H=1 -DHAVE_HISTORY_H=1
-CONFIGURE_ARGS+=	--disable-readline --disable-ncurses
-CONFIGURE_ENV+=		LIBS="-ledit -ltermcap"
-.else
-DEPENDS+=		readline>=4.0:../../devel/readline
-.endif
-
 # Include SOCKS firewall support
 .if defined(USE_SOCKS) && (${USE_SOCKS} == 4 || ${USE_SOCKS} == 5)
+BUILD_DEFS+=		USE_SOCKS
 .if ${USE_SOCKS} == 4
 CONFIGURE_ARGS+= 	--enable-socks
 DEPENDS+=		socks4-2.2:../../net/socks4
@@ -39,11 +30,12 @@ DEPENDS+=		socks5-1.0.2:../../net/socks5
 .endif
 .endif
 
-.if ${OPSYS} == "SunOS"
-CPPFLAGS=		-I${LOCALBASE}/include
-LDFLAGS+=		-L${LOCALBASE}/lib
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
-.endif
+.include "../../devel/readline/Makefile.readline"
+
+CPPFLAGS+=		-I${WRKINCDIR}
+LDFLAGS+=		-L${WRKLIBDIR}
+
+pre-configure: link-readline-headers link-readline-libs
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ncftp ${PREFIX}/bin/ncftp2
