@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.8 2004/02/05 03:39:17 jlam Exp $
+# $NetBSD: ccache.mk,v 1.9 2004/02/06 03:04:50 jlam Exp $
 
 .if !defined(COMPILER_CCACHE_MK)
 COMPILER_CCACHE_MK=	one
@@ -58,7 +58,11 @@ COMPILER_CCACHE_MK+=	two
 
 .    if !empty(_USE_CCACHE:M[yY][eE][sS])
 .      if !empty(_LANGUAGES.ccache)
-PATH:=	${_CCACHE_DIR}/bin:${PATH}
+.        if !empty(PHASES_AFTER_BUILDLINK:M${PKG_PHASE}) && \
+            empty(PREPEND_PATH:M${_CCACHE_DIR}/bin)
+PREPEND_PATH+=	${_CCACHE_DIR}/bin
+PATH:=		${_CCACHE_DIR}/bin:${PATH}
+.        endif
 .      endif
 
 BUILD_DEPENDS+=	ccache-[0-9]*:../../devel/ccache
