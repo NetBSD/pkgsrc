@@ -1,28 +1,11 @@
---- krn/Makefile.in.orig	Thu Dec 18 22:07:32 1997
-+++ krn/Makefile.in	Thu Dec 18 22:19:33 1997
-@@ -46,6 +46,7 @@
- INSTALL = @INSTALL@
- INSTALL_PROGRAM = @INSTALL_PROGRAM@
- INSTALL_DATA = @INSTALL_DATA@
-+INSTALL_DIR = $(SHELL) @top_srcdir@/mkinstalldirs
- INSTALL_SCRIPT = @INSTALL_SCRIPT@
- transform = @program_transform_name@
+--- krn/Makefile.in.orig	Sun Feb  1 02:07:48 1998
++++ krn/Makefile.in	Fri Mar 20 23:23:43 1998
+@@ -122,7 +122,7 @@
  
-@@ -126,7 +127,7 @@
+ INCLUDES = $(all_includes)
+ 
+-LDADD = $(LIBCOMPAT) $(LIBSOCKET) $(all_libraries) -lkfm -lkhtmlw -ljscript -lkdeui -lkdecore $(LIBJPEG) -lgif -lqt -lXext -lX11 -lmimelib -luulib -lgdbm $(KDE_RPATH)
++LDADD = $(LIBCOMPAT) $(LIBSOCKET) $(all_libraries) -lkfm -lkhtmlw -ljscript -lkdeui -lkdecore $(LIBJPEG) -lgif -lqt -lXext -lX11 -lmimelib -luu -lgdbm $(KDE_RPATH)
+ 
  ICONDIR = $(kde_icondir)
  MINIDIR =  $(kde_minidir)
- # better would be Internet
--UTILSDIR = $(kde_appsdir)/Utilities
-+UTILSDIR = $(kde_appsdir)/Internet
- 
- BUILTSOURCES =	groupdlg.moc \
- 		NNTP.moc \
-@@ -434,7 +435,7 @@
- install-data: install-data-recursive
- 	@$(NORMAL_INSTALL)
- 
--install: install-recursive install-exec-am
-+install: install-recursive install-exec-am install-local-data 
- 	@:
-  
- uninstall: uninstall-recursive uninstall-am
