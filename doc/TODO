@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.47 2002/12/08 23:56:04 cjep Exp $
+$NetBSD: TODO,v 1.48 2002/12/09 00:06:20 cjep Exp $
 
 Suggested new packages
 ======================
@@ -177,7 +177,6 @@ Suggested package updates
 	o mysql-4.0.3
 	o naim-0.11.4.12
 	o nasm-0.98.35
-	o nawk-20021129
 	o ncurses-5.3
 	o netpbm-10.8
 	o nxtvepg-2.4.1
