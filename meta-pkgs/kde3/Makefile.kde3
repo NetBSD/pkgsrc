@@ -1,27 +1,27 @@
-# $NetBSD: Makefile.kde3,v 1.10 2004/02/25 22:09:11 markd Exp $
+# $NetBSD: Makefile.kde3,v 1.11 2004/03/09 11:07:58 markd Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # KDE3-distributed packages (they all share common configure and build
 # settings).
 
 CATEGORIES+=	kde
-_KDE_VERSION=	3.2.0
-MASTER_SITES_KDE=	ftp://ftp.kde.org/pub/kde/stable/3.2/src/ \
-		ftp://download.uk.kde.org/pub/kde/stable/3.2/src/ \
-		ftp://download.au.kde.org/pub/kde/stable/3.2/src/ \
-		ftp://mirrors.midco.net/pub/kde/stable/3.2/src/ \
-		ftp://ftp.eu.uu.net/pub/kde/stable/3.2/src/ \
-		ftp://ftp.tiscali.nl/pub/mirrors/kde/stable/3.2/src/ \
-		ftp://ftp.roedu.net/pub/mirrors/ftp.kde.org/stable/3.2/src/ \
-		ftp://ftp.rediris.es/mirror/kde/stable/3.2/src/ \
-		ftp://ftp.du.se/pub/mirrors/kde/stable/3.2/src/ \
-		ftp://download.tw.kde.org/pub/kde/stable/3.2/src/ \
-		ftp://www.t.ring.gr.jp/pub/X/kde/stable/3.2/src/ \
-		http://www.t.ring.gr.jp/archives/X/kde/stable/3.2/src/ \
-		ftp://ftp.us.kde.org/pub/kde/stable/3.2/src/ \
-		ftp://ftp.de.kde.org/pub/kde/stable/3.2/src/ \
-		ftp://public.planetmirror.com.au/pub/kde/stable/3.2/src/ \
-		http://public.planetmirror.com.au/pub/kde/stable/3.2/src/
+_KDE_VERSION=	3.2.1
+MASTER_SITES_KDE=	ftp://ftp.kde.org/pub/kde/stable/${_KDE_VERSION}/src/ \
+		ftp://download.uk.kde.org/pub/kde/stable/${_KDE_VERSION}/src/ \
+		ftp://download.au.kde.org/pub/kde/stable/${_KDE_VERSION}/src/ \
+		ftp://mirrors.midco.net/pub/kde/stable/${_KDE_VERSION}/src/ \
+		ftp://ftp.eu.uu.net/pub/kde/stable/${_KDE_VERSION}/src/ \
+		ftp://ftp.tiscali.nl/pub/mirrors/kde/stable/${_KDE_VERSION}/src/ \
+		ftp://ftp.roedu.net/pub/mirrors/ftp.kde.org/stable/${_KDE_VERSION}/src/ \
+		ftp://ftp.rediris.es/mirror/kde/stable/${_KDE_VERSION}/src/ \
+		ftp://ftp.du.se/pub/mirrors/kde/stable/${_KDE_VERSION}/src/ \
+		ftp://download.tw.kde.org/pub/kde/stable/${_KDE_VERSION}/src/ \
+		ftp://www.t.ring.gr.jp/pub/X/kde/stable/${_KDE_VERSION}/src/ \
+		http://www.t.ring.gr.jp/archives/X/kde/stable/${_KDE_VERSION}/src/ \
+		ftp://ftp.us.kde.org/pub/kde/stable/${_KDE_VERSION}/src/ \
+		ftp://ftp.de.kde.org/pub/kde/stable/${_KDE_VERSION}/src/ \
+		ftp://public.planetmirror.com.au/pub/kde/stable/${_KDE_VERSION}/src/ \
+		http://public.planetmirror.com.au/pub/kde/stable/${_KDE_VERSION}/src/
 MASTER_SITES?=	${MASTER_SITES_KDE}
 EXTRACT_SUFX?=	.tar.bz2
 
