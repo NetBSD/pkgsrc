@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2004/07/21 23:30:16 schmonz Exp $
+# $NetBSD: Makefile,v 1.73 2004/08/30 20:16:28 adrianp Exp $
 
 .include "../../mail/sendmail/Makefile.common"
 
@@ -10,98 +10,95 @@ CONFLICTS+=	postfix-[0-9]* fastforward>=0.51nb2
 MESSAGE_SRC=	${WRKDIR}/.MESSAGE_SRC
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
-.if ${OPSYS} == "SunOS"
-USE_DB2?=	YES
-.else
-USE_DB2?=	NO
-.endif
-.if defined(USE_DB4) && ${USE_DB4} == YES
-.include "../../databases/db4/buildlink3.mk"
-.elif ${USE_DB2} == YES
-.include "../../databases/db/buildlink3.mk"
-.endif
+SMRSH_CMDDIR?=	${PREFIX}/libexec/sm.bin
+PLIST_SUBST+=	SMRSH_CMDDIR=${SMRSH_CMDDIR}
 
-.if defined(USE_OPENLDAP) && ${USE_OPENLDAP} == YES
-.include "../../databases/openldap/buildlink3.mk"
-.endif
-
-.if defined(USE_SASL2) && ${USE_SASL2} == YES
-.include "../../security/cyrus-sasl2/buildlink3.mk"
-.elif defined(USE_SASL) && ${USE_SASL} == YES
-.include "../../security/cyrus-sasl/buildlink3.mk"
-.endif
-
-.if defined(USE_STARTTLS) && ${USE_STARTTLS} == YES
-.include "../../security/openssl/buildlink3.mk"
-.endif
-
-USE_TCPWRAPPERS?=	YES
-.if ${USE_TCPWRAPPERS} == YES
-.include "../../security/tcp_wrappers/buildlink3.mk"
-.endif
+SUBST_CLASSES=		paths
+SUBST_STAGE.paths=	pre-build
+SUBST_FILES.paths=	${WRKDIR}/mailer.conf include/sm/conf.h smrsh/smrsh.8
+SUBST_SED.paths=	-e "s|@@PREFIX@@|${PREFIX}|g" \
+			-e "s|@@SMRSH_CMDDIR@@|${SMRSH_CMDDIR}|g"
+SUBST_MESSAGE.paths=	Fixing paths.
 
 post-patch: make-sendmail-siteconfig
-.if ${USE_TCPWRAPPERS} == YES
-	${CAT} ${FILESDIR}/site.config.m4-tcpwrappers >>${SITECONFIG}
-	${ECHO} -n ' TCPWRAPPERS' >>${DESCR_SRC}
+.if !empty(PKG_OPTIONS:Mtcpwrappers)
+	@${CAT} ${FILESDIR}/site.config.m4-tcpwrappers >>${SITECONFIG}
 .endif
-.if defined(USE_OPENLDAP) && ${USE_OPENLDAP} == YES
-	${CAT} ${FILESDIR}/site.config.m4-ldap >>${SITECONFIG}
-	${ECHO} -n ' LDAP' >>${DESCR_SRC}
+.if !empty(PKG_OPTIONS:Mldap)
+	@${CAT} ${FILESDIR}/site.config.m4-ldap >>${SITECONFIG}
 .endif
-.if defined(USE_DB4) && ${USE_DB4} == YES
-	${CAT} ${FILESDIR}/site.config.m4-db4 >>${SITECONFIG}
-	${ECHO} -n ' DB4' >>${DESCR_SRC}
-.elif ${USE_DB2} == YES
-	${CAT} ${FILESDIR}/site.config.m4-db2 >>${SITECONFIG}
-	${ECHO} -n ' DB2' >>${DESCR_SRC}
+.if !empty(PKG_OPTIONS:Mdb2)
+	@${CAT} ${FILESDIR}/site.config.m4-db2 >>${SITECONFIG}
 .endif
-.if defined(USE_STARTTLS) && ${USE_STARTTLS} == YES
-	${CAT} ${FILESDIR}/site.config.m4-starttls >>${SITECONFIG}
-	${ECHO} -n ' STARTTLS' >>${DESCR_SRC}
+.if !empty(PKG_OPTIONS:Mdb4)
+	@${CAT} ${FILESDIR}/site.config.m4-db4 >>${SITECONFIG}
 .endif
-.if defined(USE_SASL2) && ${USE_SASL2} == YES
-	${CAT} ${FILESDIR}/site.config.m4-sasl2 >>${SITECONFIG}
-	${ECHO} -n ' SASL2' >>${DESCR_SRC}
-.elif defined(USE_SASL) && ${USE_SASL} == YES
-	${CAT} ${FILESDIR}/site.config.m4-sasl >>${SITECONFIG}
-	${ECHO} -n ' SASL' >>${DESCR_SRC}
+.if !empty(PKG_OPTIONS:Mstarttls)
+	@${CAT} ${FILESDIR}/site.config.m4-starttls >>${SITECONFIG}
 .endif
-	${ECHO} >>${DESCR_SRC}
+.if !empty(PKG_OPTIONS:Msasl)
+	@${CAT} ${FILESDIR}/site.config.m4-sasl >>${SITECONFIG}
+.endif
+.if !empty(PKG_OPTIONS:Msasl2)
+	@${CAT} ${FILESDIR}/site.config.m4-sasl2 >>${SITECONFIG}
+.endif
+.if !empty(PKG_OPTIONS:Msocketmap)
+	@${CAT} ${FILESDIR}/site.config.m4-socketmap >>${SITECONFIG}
+PLIST_SRC+=	${PKGDIR}/PLIST.socketmap
+.endif
+
+post-extract:
+	@${CP} ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
 
 do-build:
 	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ./Build)
 
 post-build:
-	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \
-	  <${FILESDIR}/mailer.conf >${WRKDIR}/mailer.conf.sendmail
-	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	${CP} ${PKGDIR}/MESSAGE ${MESSAGE_SRC}
-.if ${USE_DB2} == YES
-	${ECHO} "" >>${MESSAGE_SRC}
-	${ECHO} "If you are upgrading from \"sendmail\" 8.8.x don't forget to rebuild all" >>${MESSAGE_SRC}
-	${ECHO} "databases with \"${PREFIX}/bin/newaliases\" and \"${PREFIX}/sbin/makemap\"." >>${MESSAGE_SRC}
-	${ECHO} >>${PLIST_SRC} "@exec mv -f /usr/sbin/makemap /usr/sbin/makemap.8.8 || true"
-	${ECHO} >>${PLIST_SRC} "@unexec mv -f /usr/sbin/makemap.8.8 /usr/sbin/makemap || true"
+	@${CP} ${PKGDIR}/MESSAGE ${MESSAGE_SRC}
+	@${CP} ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
+
+.if !empty(PKG_OPTIONS:Mdb2)
+	@${ECHO} "" >>${MESSAGE_SRC}
+	@${ECHO} "If you are upgrading from \"sendmail\" 8.8.x don't forget to rebuild all" >>${MESSAGE_SRC}
+	@${ECHO} "databases with \"${PREFIX}/bin/newaliases\" and \"${PREFIX}/sbin/makemap\"." >>${MESSAGE_SRC}
 .endif
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/libexec/sendmail
 
 post-install:
+	${INSTALL_DATA_DIR} ${SMRSH_CMDDIR}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/sendmail
 	${INSTALL_DATA_DIR} ${PREFIX}/share/sendmail
-	${INSTALL_DATA} ${WRKDIR}/mailer.conf.sendmail ${PREFIX}/share/examples/sendmail/mailer.conf
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sendmail
+	${INSTALL_DATA} ${WRKDIR}/mailer.conf \
+		${PREFIX}/share/examples/sendmail/
 	cd ${WRKSRC}/cf && ${PAX} -rw -pp -pm . ${PREFIX}/share/sendmail
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/sendmail
-.if ${USE_DB2} == YES
-	${MV} -f /usr/sbin/makemap /usr/sbin/makemap.8.8 || ${TRUE}
+
+.if !empty(PKG_OPTIONS:Mdb2)
+	@${MV} -f /usr/sbin/makemap /usr/sbin/makemap.8.8 || ${TRUE}
 .endif
-	${INSTALL_DATA} ${WRKSRC}/obj.`uname -srm | ${TR} \  . | ${TR} \/ - | ${SED} s/sun4./sun4/`/libsm/libsm.a \
+
+	${INSTALL_DATA} ${WRKSRC}/obj.`${UNAME} -srm | ${TR} \  . | ${TR} \/ - | ${SED} s/sun4./sun4/`/libsm/libsm.a \
 		${PREFIX}/lib
+
 	${INSTALL_DATA} \
-		${WRKSRC}/obj.`uname -srm | ${TR} \  . | ${TR} \/ - | ${SED} s/sun4./sun4/`/libsmutil/libsmutil.a \
+		${WRKSRC}/obj.`${UNAME} -srm | ${TR} \  . | ${TR} \/ - | ${SED} s/sun4./sun4/`/libsmutil/libsmutil.a \
 		${PREFIX}/lib
+
+.if !empty(PKG_OPTIONS:Msocketmap)
+	${INSTALL_SCRIPT} ${WRKSRC}/contrib/socketmapClient.pl \
+		${PREFIX}/share/examples/sendmail
+	${INSTALL_SCRIPT} ${WRKSRC}/contrib/socketmapServer.pl \
+		${PREFIX}/share/examples/sendmail
+.endif
+
+	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${PREFIX}/share/doc/sendmail
+	${INSTALL_DATA} ${WRKSRC}/cf/README ${PREFIX}/share/doc/sendmail
+	${INSTALL_DATA} ${WRKSRC}/sendmail/SECURITY ${PREFIX}/share/doc/sendmail
+	${INSTALL_DATA} ${WRKSRC}/doc/op/op.me ${PREFIX}/share/doc/sendmail
+	${INSTALL_DATA} ${WRKSRC}/doc/op/op.ps ${PREFIX}/share/doc/sendmail
 
 USE_PKGINSTALL=	yes
 PKG_GROUPS=	smmsp
@@ -110,4 +107,4 @@ PKG_USERS=	smmsp:smmsp::Sendmail\\ Message\\ Submission\\ Program
 .include "../../mk/bsd.pkg.mk"
 
 # has to be below include for bsd.pkg.mk, else substition fails
-OBJDIR!=	${ECHO} obj.`uname -srm | ${TR} \  . | ${TR} \/ -`
+OBJDIR!=	${ECHO} obj.`${UNAME} -srm | ${TR} \  . | ${TR} \/ -`

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/06/23 11:02:02 cjep Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/08/30 20:16:28 adrianp Exp $
 bin/hoststat
 bin/mailq
 bin/newaliases
@@ -22,6 +22,11 @@ sbin/editmap
 sbin/mailstats
 sbin/makemap
 sbin/praliases
+share/doc/sendmail/README
+share/doc/sendmail/RELEASE_NOTES
+share/doc/sendmail/SECURITY
+share/doc/sendmail/op.me
+share/doc/sendmail/op.ps
 share/examples/sendmail/mailer.conf
 share/misc/helpfile
 share/sendmail/README
@@ -88,12 +93,14 @@ share/sendmail/feature/bestmx_is_local.m4
 share/sendmail/feature/bitdomain.m4
 share/sendmail/feature/blacklist_recipients.m4
 share/sendmail/feature/compat_check.m4
+share/sendmail/feature/conncontrol.m4
 share/sendmail/feature/delay_checks.m4
 share/sendmail/feature/dnsbl.m4
 share/sendmail/feature/domaintable.m4
 share/sendmail/feature/enhdnsbl.m4
 share/sendmail/feature/generics_entire_domain.m4
 share/sendmail/feature/genericstable.m4
+share/sendmail/feature/greet_pause.m4
 share/sendmail/feature/ldap_routing.m4
 share/sendmail/feature/limited_masquerade.m4
 share/sendmail/feature/local_lmtp.m4
@@ -105,9 +112,9 @@ share/sendmail/feature/mailertable.m4
 share/sendmail/feature/masquerade_entire_domain.m4
 share/sendmail/feature/masquerade_envelope.m4
 share/sendmail/feature/msp.m4
+share/sendmail/feature/mtamark.m4
 share/sendmail/feature/no_default_msa.m4
 share/sendmail/feature/nocanonify.m4
-share/sendmail/feature/nodns.m4
 share/sendmail/feature/notsticky.m4
 share/sendmail/feature/nouucp.m4
 share/sendmail/feature/nullclient.m4
@@ -115,6 +122,7 @@ share/sendmail/feature/preserve_local_plus_detail.m4
 share/sendmail/feature/preserve_luser_host.m4
 share/sendmail/feature/promiscuous_relay.m4
 share/sendmail/feature/queuegroup.m4
+share/sendmail/feature/ratecontrol.m4
 share/sendmail/feature/redirect.m4
 share/sendmail/feature/relay_based_on_MX.m4
 share/sendmail/feature/relay_entire_domain.m4
@@ -123,6 +131,7 @@ share/sendmail/feature/relay_local_from.m4
 share/sendmail/feature/relay_mail_from.m4
 share/sendmail/feature/smrsh.m4
 share/sendmail/feature/stickyhost.m4
+share/sendmail/feature/use_client_ptr.m4
 share/sendmail/feature/use_ct_file.m4
 share/sendmail/feature/use_cw_file.m4
 share/sendmail/feature/uucpdomain.m4
@@ -192,6 +201,9 @@ share/sendmail/ostype/sunos3.5.m4
 share/sendmail/ostype/sunos4.1.m4
 share/sendmail/ostype/svr4.m4
 share/sendmail/ostype/ultrix4.m4
+share/sendmail/ostype/unicos.m4
+share/sendmail/ostype/unicosmk.m4
+share/sendmail/ostype/unicosmp.m4
 share/sendmail/ostype/unixware7.m4
 share/sendmail/ostype/unknown.m4
 share/sendmail/ostype/uxpds.m4
@@ -201,7 +213,6 @@ share/sendmail/siteconfig/uucp.cogsci.m4
 share/sendmail/siteconfig/uucp.old.arpa.m4
 share/sendmail/siteconfig/uucp.ucbarpa.m4
 share/sendmail/siteconfig/uucp.ucbvax.m4
-@dirrm libexec/sendmail
 @dirrm share/sendmail/siteconfig
 @dirrm share/sendmail/sh
 @dirrm share/sendmail/ostype
@@ -212,4 +223,7 @@ share/sendmail/siteconfig/uucp.ucbvax.m4
 @dirrm share/sendmail/domain
 @dirrm share/sendmail/cf
 @dirrm share/sendmail
-@dirrm share/examples/sendmail
+@unexec ${RMDIR} %D/share/examples/sendmail 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} ${SMRSH_CMDDIR} 2>/dev/null || ${TRUE}
+@dirrm share/doc/sendmail
+@dirrm libexec/sendmail

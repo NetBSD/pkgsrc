@@ -1,4 +1,4 @@
-# $NetBSD: site.config.m4-sasl2,v 1.1 2003/03/04 00:21:32 seb Exp $
+# $NetBSD: site.config.m4-sasl2,v 1.2 2004/08/30 20:16:28 adrianp Exp $
 
 # enable SASL 2
 APPENDDEF(`confENVDEF', `-DSASL=2')
