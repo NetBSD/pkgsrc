@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.568 2000/09/10 12:11:25 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.569 2000/09/13 20:23:57 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -2727,7 +2727,7 @@ describe:
 	esac;								\
 	${ECHO} -n "|";							\
 	if [ "${DEPENDS}" != "" ]; then				\
-		*) cd ${.CURDIR} && ${ECHO} -n `${MAKE} ${MAKEFLAGS} run-depends-list|sort -u`;; \
+		cd ${.CURDIR} && ${ECHO} -n `${MAKE} ${MAKEFLAGS} run-depends-list|sort -u`; \
 	fi;								\
 	${ECHO} -n "|";							\
 	if [ "${ONLY_FOR_ARCHS}" = "" ]; then				\
