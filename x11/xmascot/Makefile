@@ -1,3 +1,4 @@
+# $NetBSD: Makefile,v 1.2 1997/10/09 11:56:01 agc Exp $
 # New ports collection makefile for:   xmascot
 # Version required:    2.5p2
 # Date created:        20 November 1996
