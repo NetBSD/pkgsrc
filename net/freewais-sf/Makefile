@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/10/03 00:17:51 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/03/26 20:54:12 kristerw Exp $
 #
 
 DISTNAME=	freeWAIS-sf-2.2.12
@@ -10,6 +10,8 @@ MASTER_SITES=	ftp://ls6-ftp.cs.uni-dortmund.de/pub/src/freeWAIS-sf/
 MAINTAINER=	bad@NetBSD.org
 HOMEPAGE=	http://ls6-www.informatik.uni-dortmund.de/ir/projects/freeWAIS-sf/index.html
 COMMENT=	Enhanced Wide Area Information Server
+
+NOT_FOR_PLATFORM=	Darwin-*-*
 
 USE_BUILDLINK3=	yes
 USE_PERL5=	build
