@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/08/16 00:25:52 hubertf Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/08/16 03:06:31 hubertf Exp $
 #
 # This Makefile fragment is included by packages that use libxmms.
 #
@@ -24,6 +24,13 @@ EVAL_PREFIX+=		BUILDLINK_PREFIX.xmms=xmms
 BUILDLINK_PREFIX.xmms_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.xmms=	include/xmms/*
 BUILDLINK_FILES.xmms+=	lib/libxmms.*
+
+.include "../../audio/esound/buildlink.mk"
+.include "../../audio/libmikmod/buildlink.mk"
+.include "../../audio/libvorbis/buildlink.mk"
+.include "../../graphics/Mesa/buildlink.mk"
+.include "../../textproc/libxml/buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"
 
 BUILDLINK_TARGETS.xmms=	xmms-buildlink
 BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.xmms}
