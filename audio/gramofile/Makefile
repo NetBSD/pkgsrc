@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/04 22:35:40 agc Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/04 22:40:11 agc Exp $
 #
 
 DISTNAME=	gramofile-1.6
@@ -13,6 +13,9 @@ ALL_TARGET=	gramofile
 
 USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/gramofile ${PREFIX}/bin/gramofile
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
