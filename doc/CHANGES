@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4116 2003/12/14 23:11:20 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4117 2003/12/14 23:18:14 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5164,3 +5164,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated glade to 2.0.1 [xtraeme 2003-12-14]
 	Updated yelp to 2.4.2 [xtraeme 2003-12-14]
 	Updated nautilus to 2.4.1 [xtraeme 2003-12-14]
+	Updated file-roller to 2.4.1 [xtraeme 2003-12-14]
