@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/02/26 18:51:50 tron Exp $
+# $NetBSD: Makefile,v 1.3 2002/02/27 17:17:44 jlam Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION}
 CATEGORIES=	www
@@ -51,9 +51,9 @@ post-install-manpage:
 # The SuSE common makefile defines "MANCOMPRESSED".
 .if defined(MANCOMPRESSED)
 	${GZIP_CMD} ${EMULDIR}/usr/share/man/man1/opera.1
-	${LN} -fs ../${EMULSUBDIR}/usr/share/man/man1/opera.1.gz \
+	${LN} -fs ../../${EMULSUBDIR}/usr/share/man/man1/opera.1.gz \
 	  ${PREFIX}/man/man1
 .else
-	${LN} -fs ../${EMULSUBDIR}/usr/share/man/man1/opera \
+	${LN} -fs ../../${EMULSUBDIR}/usr/share/man/man1/opera \
 	  ${PREFIX}/man/man1
 .endif
