@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4042 2003/12/11 15:23:35 adam Exp $
+$NetBSD: CHANGES,v 1.4043 2003/12/11 16:06:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5058,3 +5058,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added phpsview-1.0 [hamajima 2003-12-11]
 	Added qcamview-0.2 [hamajima 2003-12-11]
 	Updated sylpheed-claws to 0.9.7 [adam 2003-12-11]
+	Updated mtools to 3.9.9 [adam 2003-12-11]
