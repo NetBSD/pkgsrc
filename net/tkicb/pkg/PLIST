@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/11/20 06:24:39 jwise Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/01/29 19:34:19 tron Exp $
 bin/tkicb
 libdata/tkicb/icb.tcl
 libdata/tkicb/lib/confuse
