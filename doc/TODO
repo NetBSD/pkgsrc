@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.398 2003/03/22 01:46:37 salo Exp $
+$NetBSD: TODO,v 1.399 2003/03/22 02:21:05 rh Exp $
 
 Suggested new packages
 ======================
@@ -106,7 +106,7 @@ Suggested package updates
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
 	o elm-me-2.4pl101
-	o evolution-1.2.2
+	o evolution-1.2.3 [rh]
 	o exim-4.12 [pkg/19850]
 	o exim-4.14
 	o exmh-2.6.1
