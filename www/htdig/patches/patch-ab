@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1 1999/09/23 01:33:30 fredb Exp $
+
+--- Makefile.in.orig	Wed Apr 21 21:47:53 1999
++++ Makefile.in	Wed Sep 22 15:01:33 1999
+@@ -26,8 +26,7 @@
+ top_builddir= .
+ include Makefile.config
+ 
+-DIRS=		db/dist \
+-		htlib htcommon htfuzzy htdig \
++DIRS=		htlib htcommon htfuzzy htdig \
+ 		htsearch htmerge htnotify
+ INSTALLDIRS=	htfuzzy htdig \
+ 		htsearch htmerge htnotify
+@@ -93,7 +92,7 @@
+ 	done && test -z "$$fail"
+ 	@echo ""
+ 	@echo "Installing default configuration files..."
+-	@if [ ! -f $(INSTALL_ROOT)$(CONFIG_DIR)/htdig.conf ]; then sed -e s%@DATABASE_DIR@%$(DATABASE_DIR)% -e s%@IMAGEDIR@%$(IMAGE_URL_PREFIX)% $(top_srcdir)/installdir/htdig.conf >$(INSTALL_ROOT)$(CONFIG_DIR)/htdig.conf; echo $(INSTALL_ROOT)$(CONFIG_DIR)/htdig.conf;fi
++	@if [ ! -f $(INSTALL_ROOT)$(SEARCH_DIR)/htdig.conf ]; then sed -e s%@DATABASE_DIR@%$(DATABASE_DIR)% -e s%@IMAGEDIR@%$(IMAGE_URL_PREFIX)% $(top_srcdir)/installdir/htdig.conf >$(INSTALL_ROOT)$(SEARCH_DIR)/htdig.conf; echo $(INSTALL_ROOT)$(SEARCH_DIR)/htdig.conf;fi
+ 	@if [ ! -f $(INSTALL_ROOT)$(SEARCH_DIR)/$(SEARCH_FORM) ]; then sed -e s%@IMAGEDIR@%$(IMAGE_URL_PREFIX)% $(top_srcdir)/installdir/search.html >$(INSTALL_ROOT)$(SEARCH_DIR)/$(SEARCH_FORM); echo $(INSTALL_ROOT)$(SEARCH_DIR)/$(SEARCH_FORM);fi
+ 	@for i in $(COMMONHTML); do \
+ 		if [ ! -f $(INSTALL_ROOT)$(COMMON_DIR)/$$i ]; then sed -e s%@IMAGEDIR@%$(IMAGE_URL_PREFIX)% $(top_srcdir)/installdir/$$i >$(INSTALL_ROOT)$(COMMON_DIR)/$$i; echo $(INSTALL_ROOT)$(COMMON_DIR)/$$i;fi; \

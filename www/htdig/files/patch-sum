@@ -1,3 +1,7 @@
-$NetBSD: patch-sum,v 1.1.1.1 1999/09/20 02:40:46 fredb Exp $
+$NetBSD: patch-sum,v 1.2 1999/09/23 01:33:30 fredb Exp $
 
-MD5 (patch-aa) = f849cbac8ebdd03763259e1654c6102c
+MD5 (patch-aa) = f0f1d8f4f8140b748cd16107fe166d9a
+MD5 (patch-ab) = aef75b4d67a833783914f626d6e56f69
+MD5 (patch-ac) = d7fa6f9391e8bb3c7505f14f59dc041a
+MD5 (patch-ad) = b9d6c0357a2eda5141a687abe3f7e7e0
+MD5 (patch-ae) = e1c1c73ff1ead9ae7e25a884f3e551b2
