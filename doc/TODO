@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1155 2003/12/09 11:30:52 drochner Exp $
+$NetBSD: TODO,v 1.1156 2003/12/10 22:40:30 heinz Exp $
 
 Suggested new packages
 ======================
@@ -276,7 +276,6 @@ Suggested package updates
 	o p5-BSD-Resource-1.23 [grant]
 	o p5-CGI-3.00
 	o p5-CGI-Application-3.1
-	o p5-Net-DNS-0.42 [heinz]
 	o pdmenu-1.2.81
 	o php-4.3.4
 	o plib-1.7.0
