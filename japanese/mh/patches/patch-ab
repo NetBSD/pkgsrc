@@ -1,13 +1,12 @@
-$NetBSD: patch-ab,v 1.3 1999/11/01 04:03:10 sakamoto Exp $
+$NetBSD: patch-ab,v 1.4 1999/11/01 10:23:45 sakamoto Exp $
 
---- ./configure.orig	Fri Oct  1 23:01:45 1999
-+++ ./configure	Fri Oct 29 17:02:29 1999
-@@ -1386,4 +1386,8 @@
- 	fi
-       fi
-+      if test "$OBJECT_FMT" = ELF
-+      then
-+        sharedlib=gnuelf  
-+      fi
-       slflags="-fpic"
-       slibdir=$libdir
+--- ./sbr/refile.c.orig	Wed Dec  1 13:01:26 1993
++++ ./sbr/refile.c	Mon Nov  1 19:13:30 1999
+@@ -6,4 +6,7 @@
+ #include "../h/mh.h"
+ #include <stdio.h>
++#ifdef	UNISTD
++#include <unistd.h>
++#endif
+ 
+ int     refile (arg, file)
