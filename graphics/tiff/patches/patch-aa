@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.13 2004/04/12 14:41:03 jschauma Exp $
+$NetBSD: patch-aa,v 1.14 2004/09/05 16:49:03 jschauma Exp $
 
 --- configure.orig	Mon Apr 12 09:58:40 2004
 +++ configure	Mon Apr 12 10:01:34 2004
@@ -29,12 +29,13 @@ $NetBSD: patch-aa,v 1.13 2004/04/12 14:41:03 jschauma Exp $
  	test -z "${ENVOPTS-}"   && ENVOPTS="${C_ANSI-}"
  	return 0
      }
-@@ -1743,6 +1743,8 @@
+@@ -1743,6 +1743,9 @@
  	    -[LR]/*)	echo "$i" ;;
  	    -L*)	echo "$i" | sed 's;^-L;-L../;' ;;
  	    -R*)	echo "$i" | sed 's;^-R;-R../;' ;;
 +	    -rpath*)	echo "$i" ;;
 +	    -W*)	echo "$i" ;;
++	    -*)		echo "$i" ;;
  	    *)		echo "../$i" ;;
  	    esac
  	done) | tr '\012' ' '
