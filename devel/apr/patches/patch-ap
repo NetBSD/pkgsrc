@@ -1,0 +1,22 @@
+$NetBSD: patch-ap,v 1.1.1.1 2003/05/25 08:55:19 epg Exp $
+
+--- apr-util/config.layout.orig	Thu Apr  3 17:15:08 2003
++++ apr-util/config.layout	Thu Apr  3 17:14:15 2003
+@@ -229,3 +229,17 @@
+     infodir:       ${exec_prefix}/share/info
+     libsuffix     -${APRUTIL_MAJOR_VERSION}
+ </Layout>
++
++#   NetBSD (pkgsrc) layout
++<Layout NetBSD>
++    prefix:        /usr/pkg
++    exec_prefix:   ${prefix}
++    bindir:        ${exec_prefix}/bin
++    sbindir:       ${exec_prefix}/sbin
++    libexecdir:    ${exec_prefix}/lib/httpd
++    mandir:        ${prefix}/man
++    datadir:       ${prefix}/share/httpd
++    includedir:    ${prefix}/include/apr
++    localstatedir: /var
++    runtimedir:    ${localstatedir}/run
++</Layout>
