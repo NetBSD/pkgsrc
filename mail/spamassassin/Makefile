@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2003/12/27 19:16:04 heinz Exp $
+# $NetBSD: Makefile,v 1.38 2004/01/06 07:08:13 jlam Exp $
 
 DISTNAME=	Mail-SpamAssassin-${PKGVERSION}
 PKGNAME=	spamassassin-2.61
@@ -15,6 +15,8 @@ COMMENT=	Mail filter to identify spam
 
 CONFLICTS=	p5-Mail-SpamAssassin-[1-9]*
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 .include "../../mk/bsd.prefs.mk"
 
 BUILDLINK_DEPENDS.perl=	perl>=5.6.0  # MakeMaker >= 5.45 needed
@@ -30,7 +32,7 @@ DEPENDS+=	p5-DB_File-[0-9]*:../../databases/p5-DB_File
 SPAMASSASSIN_USE_SSL?=	YES
 
 .if !empty(SPAMASSASSIN_USE_SSL:M[yY][eE][sS])
-.  include "../../security/openssl/buildlink2.mk"
+.  include "../../security/openssl/buildlink3.mk"
 DEPENDS+=		p5-IO-Socket-SSL>=0.92:../../security/p5-IO-Socket-SSL
 CONFIGURE_ARGS+=	--enable-ssl
 MAKE_PARAMS=		ENABLE_SSL=yes
@@ -41,7 +43,7 @@ MAKE_PARAMS=		ENABLE_SSL=no
 SA_SSLCERTS=		'$$LOCAL_RULES_DIR/certs'
 .endif
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 PKG_SYSCONFSUBDIR=	spamassassin
 

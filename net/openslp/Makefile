@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/17 22:51:31 grant Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/06 07:08:50 jlam Exp $
 
 DISTNAME=	openslp-1.0.11
 CATEGORIES=	net
@@ -8,7 +8,9 @@ MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://www.openslp.org/
 COMMENT=	Open-source implementation of the Service Location Protocol
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
