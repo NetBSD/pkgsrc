@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/22 12:50:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/22 17:47:53 jmmv Exp $
 #
 
 .include "../../graphics/swfdec/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/-/-gtk2-/}
 COMMENT+=		(GTK2 modules)
-
-CONFLICTS+=		swfdec<=0.2.1nb6
 
 CONFIGURE_ARGS+=	--enable-pixbuf-loader
 
