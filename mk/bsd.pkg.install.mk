@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.72 2005/01/26 23:15:03 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.73 2005/01/28 06:30:58 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -77,6 +77,13 @@ FILES_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 FILES_SUBST+=		CONF_DEPENDS=${CONF_DEPENDS:C/:.*//:Q}
 FILES_SUBST+=		PKGBASE=${PKGBASE}
 FILES_SUBST+=		PKG_INSTALLATION_TYPE=${PKG_INSTALLATION_TYPE}
+
+# Database directory for reference-counted package objects.  Subdirectories
+# represent different classes of package objects, e.g. dirs, users,
+# group, etc.
+#
+_PKG_REFCOUNT_DBDIR=	${PKG_DBDIR}/.refcount
+FILES_SUBST+=		PKG_REFCOUNT_DBDIR=${_PKG_REFCOUNT_DBDIR:Q}
 
 # PKG_USERS represents the users to create for the package.  It is a
 #	space-separated list of elements of the form
@@ -208,10 +215,59 @@ MAKE_DIRS?=		# empty
 MAKE_DIRS_PERMS?=	# empty
 OWN_DIRS?=		# empty
 OWN_DIRS_PERMS?=	# empty
-FILES_SUBST+=		MAKE_DIRS=${MAKE_DIRS:Q}
-FILES_SUBST+=		MAKE_DIRS_PERMS=${MAKE_DIRS_PERMS:Q}
-FILES_SUBST+=		OWN_DIRS=${OWN_DIRS:Q}
-FILES_SUBST+=		OWN_DIRS_PERMS=${OWN_DIRS_PERMS:Q}
+
+INSTALL_DIRS_FILE=	${WRKDIR}/.install-dirs
+INSTALL_UNPACK_TMPL+=	${INSTALL_DIRS_FILE}
+
+${INSTALL_DIRS_FILE}: ../../mk/install/dirs
+	${_PKG_SILENT}${_PKG_DEBUG}{					\
+	${ECHO} "# start of install-dirs";				\
+	${ECHO} "#";							\
+	${ECHO} "# Generate a +DIRS script that reference counts directories"; \
+	${ECHO} "# that are required for the proper functioning of the"; \
+	${ECHO} "# package.";						\
+	${ECHO} "#";							\
+	${ECHO} "case \$${STAGE} in";					\
+	${ECHO} "PRE-INSTALL)";						\
+	${ECHO} "	\$${CAT} > ./+DIRS << 'EOF_DIRS'";		\
+	${SED} ${FILES_SUBST_SED} ../../mk/install/dirs;		\
+	${ECHO} "";							\
+	case "${CONF_FILES}${CONF_FILES_PERMS}${SUPPORT_FILES}${SUPPORT_FILES_PERMS}" in \
+	"")	;;							\
+	*)	${ECHO} "# DIR: ${PKG_SYSCONFDIR} m" ;;			\
+	esac;								\
+	case "${RCD_SCRIPTS}" in					\
+	"")	;;							\
+	*)	${ECHO} "# DIR: ${RCD_SCRIPTS_DIR} m" ;;		\
+	esac;								\
+	eval set -- ${MAKE_DIRS} ;					\
+	while ${TEST} $$# -gt 0; do					\
+		dir="$$1"; shift;					\
+		${ECHO} "# DIR: $$dir m";				\
+	done;								\
+	eval set -- ${OWN_DIRS} ;					\
+	while ${TEST} $$# -gt 0; do					\
+		dir="$$1"; shift;					\
+		${ECHO} "# DIR: $$dir mo";				\
+	done;								\
+	eval set -- ${MAKE_DIRS_PERMS} ;				\
+	while ${TEST} $$# -gt 0; do					\
+		dir="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
+		shift; shift; shift; shift;				\
+		${ECHO} "# DIR: $$dir m $$owner $$group $$mode";	\
+	done;								\
+	eval set -- ${OWN_DIRS_PERMS} ;					\
+	while ${TEST} $$# -gt 0; do					\
+		dir="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
+		shift; shift; shift; shift;				\
+		${ECHO} "# DIR: $$dir mo $$owner $$group $$mode";	\
+	done;								\
+	${ECHO} "EOF_DIRS";						\
+	${ECHO} "	\$${CHMOD} +x ./+DIRS";				\
+	${ECHO} "	;;";						\
+	${ECHO} "esac";							\
+	} > ${.TARGET}.tmp;						\
+	${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 # PKG_CREATE_USERGROUP indicates whether the INSTALL script should
 #	automatically add any needed users/groups to the system using
@@ -298,6 +354,7 @@ FILES_SUBST+=		XARGS=${XARGS:Q}
 FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
 INSTALL_SCRIPTS_ENV=	PKG_PREFIX=${PREFIX}
+INSTALL_SCRIPTS_ENV+=	PKG_METADATA_DIR=${_PKG_DBDIR}/${PKGNAME}
 
 .PHONY: pre-install-script post-install-script
 
