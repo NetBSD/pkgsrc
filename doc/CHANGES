@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1378 2003/02/15 11:05:38 jmmv Exp $
+$NetBSD: CHANGES,v 1.1379 2003/02/15 11:09:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -673,4 +673,9 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gcombust to 0.1.54 [salo 2003-02-15]
 	Updated gkrellm to 1.2.13 [salo 2003-02-15]
 	Updated p5-Time-HiRes to 1.42 [salo 2003-02-15]
+	Updated glib2 to 2.2.1 [wiz 2003-02-15]
+	Updated pango to 1.2.1 [wiz 2003-02-15]
+	Updated xscreensaver to 4.07 [wiz 2003-02-15]
+	Updated xscreensaver-gnome to 4.07 [wiz 2003-02-15]
+	Updated gtk2 to 2.2.1 [wiz 2003-02-15]
 	Updated seahorse to 0.7.0 [jmmv 2003-02-15]
