@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_alternatives.8,v 1.4 2005/01/28 12:59:57 wiz Exp $
+.\" $NetBSD: pkg_alternatives.8,v 1.5 2005/01/30 12:35:22 jmmv Exp $
 .\"
 .\" pkg_alternatives - Generic wrappers for programs with similar interfaces
 .\" Copyright (c) 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -27,7 +27,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd January 25, 2005
+.Dd January 30, 2005
 .Dt PKG_ALTERNATIVES 8
 .Os
 .Sh NAME
@@ -277,6 +277,34 @@ If there are no more alternatives available, the wrapper is removed.
 This action should not be used directly; packages providing alternatives
 will take care to execute it at deinstallation time.
 .El
+.Ss Filtering wrappers
+.Nm
+lets you choose which wrappers you want on your system and which ones should
+simply be ignored.
+This is accomplished by a filter matched against every wrapper, which is
+defined in the
+.Pa @CONFDIR@/filter.conf
+file.
+.Pp
+A filter is composed of multiple entries.
+Each entry contains an action and a regular expression, separated by a
+.Em single space .
+The action can be either
+.Dq accept
+or
+.Dq ignore .
+The former specifies that, if the regular expression is matched against a
+wrapper name, processing should stop and the wrapper should be created.
+The later is exactly the opposite: if the name matches the expression, the
+wrapper is ignored and processing stops.
+.Pp
+Please note that, after modifying the filter configuration file, the
+wrappers database
+.Em must be rebuilt
+using the
+.Dq rebuild
+action.
+Otherwise your changes will take no effect.
 .Sh ENVIRONMENT
 .Bl -tag -width PKG_DBDIR
 .It Ev PKG_DBDIR
@@ -290,12 +318,64 @@ Defaults to
 User-specific configuration directory.
 .It Pa @CONFDIR@/
 System-wide configuration directory.
+.It Pa @CONFDIR@/filter.conf
+Wrapper filter.
 .It Pa @DATADIR@/
 System-wide configuration database.
 .El
 .Sh DIAGNOSTICS
 .Nm
 exists 0 on success and 1 if an error occurred.
+.Sh EXAMPLES
+.Ss Managing wrapper groups
+The following command tells all Vim related wrappers (which include
+.Xr ex 1 ,
+.Xr vi 1
+and
+.Xr view 1 )
+to always prefer Vim in favour of any other program:
+.Bd -literal -offset indent
+# pkg_alternatives manual vim
+.Ed
+.Pp
+And the following command reverts the previous change, configuring the
+affected wrappers to use whichever alternative is available:
+.Bd -literal -offset indent
+# pkg_alternatives auto vim
+.Ed
+.Ss Managing individual wrappers
+Suppose that you want to use Sun's Java 1.5 by default for all Java-related
+wrappers, except for
+.Xr appletviewer 1 ,
+because you want to use Kaffe in that case.
+The following commands do this, by first selecting Sun's Java 1.5 and later
+overriding the exact wrapper to refer to Kaffe:
+.Bd -literal -offset indent
+# pkg_alternatives manual sun-jre15
+# pkg_alternatives manual sun-jdk15
+# pkg_alternatives -w manual bin/appletviewer \\
+  /usr/pkg/bin/kaffe-appletviewer
+.Ed
+.Ss Applying filters
+Let us consider a very typical situation: you have just installed a Python
+interpreter and you want the
+.Pa bin/python
+wrapper to be created, but you do not want to pollute your system with any
+other wrapper (such as those coming from Vim).
+You can achieve this by using a filter that first accepts the Python wrapper
+and then ignores everything else.
+The following lines could be added to
+.Pa @CONFDIR@/filter.conf
+to achieve this:
+.Bd -literal -offset indent
+accept ^bin/python$
+ignore .*
+.Ed
+.Pp
+Don't forget to run the following command after doing the above changes:
+.Bd -literal -offset indent
+# pkg_alternatives rebuild
+.Ed
 .Sh SEE ALSO
 .Xr pkg_add 1 ,
 .Xr pkg_delete 1
