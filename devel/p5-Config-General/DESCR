@@ -1,4 +1,4 @@
-Config::General opens a config file and parses it's contents for
+Config::General opens a config file and parses its contents for
 you. After parsing the module returns a hash structure which contains
 the representation of the config file.
 

@@ -2,7 +2,7 @@ The kdemultimedia module of KDE provides various sound and movie
 format players:
 
 * noatun: a multimedia player for sound and movies, very extensible due to
-          it's plugin interface
+          its plugin interface
 * aktion: a player specialized on movies, needs xanim
 * kaboodle: light media player
 * kmid: a standalone and embeddable midi player, includes a karaoke-mode

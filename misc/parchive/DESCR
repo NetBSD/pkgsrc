@@ -8,6 +8,6 @@ of those original parts are lost or corrupted in transit (up to the number
 of parity files), a receiver may reconstruct them from only that number
 of parity files.
 
-Though quickly growing in popularity for it's intended application, the
+Though quickly growing in popularity for its intended application, the
 format of the parity files is sufficiently general to be useful for other
 applicatons as well. The format itself is in the public domain.

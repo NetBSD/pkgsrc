@@ -6,7 +6,7 @@ seems to work pretty good.  Unlike most encryption libraries
 libmcrypt does not have everything (random number generators,
 hashes, hmac implementation, key exchange, public key encryption
 etc.).  Libmcrypt only implements an interface to access block and
-stream encryption algorithms. It's purpose was to assist in the
+stream encryption algorithms. Its purpose was to assist in the
 development of mcrypt by providing a uniform interface to access
 several different encryption algorithms, so that the main program
 is independent of the encryption algorithms and the modes used.
