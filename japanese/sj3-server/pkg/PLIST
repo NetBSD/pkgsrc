@@ -1,0 +1,33 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/02 11:29:21 sakamoto Exp $
+@cwd ${DICT_DIR}
+@cwd ${DICT_DIR}
+sj3/sj3main.dic
+@cwd ${PREFIX}
+bin/sj3
+bin/sj3dic
+bin/sj3mkdic
+bin/sj3serv
+bin/sj3stat
+etc/rc.d/sj3.sh
+man/ja_JP.EUC/man1/sj3.1
+man/ja_JP.EUC/man1/sj3dic.1
+man/ja_JP.EUC/man1/sj3mkdic.1
+man/ja_JP.EUC/man1/sj3serv.1
+share/sj3/Nihongo.ps.Z
+share/sj3/cvtkey.news
+share/sj3/cvtkey.nwp511
+share/sj3/cvtkey.nwp517
+share/sj3/cvtkey.xterm
+share/sj3/hinsi.ms
+share/sj3/makedict.ms
+share/sj3/serverrc
+share/sj3/sj3lib.ms
+share/sj3/sj3serv.ms
+share/sj3/sjrc
+share/sj3/sjrk
+@dirrm share/sj3
+@exec mkdir ${DICT_DIR}/sj3/user
+@exec chmod 755 ${DICT_DIR}/sj3/user
+@exec chown ${SJ3OWNER}:${SJ3GROUP} ${DICT_DIR}/sj3/user
+@unexec rmdir ${DICT_DIR}/sj3/user
+@unexec rmdir ${DICT_DIR}/sj3
