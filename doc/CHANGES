@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1018 2003/01/05 05:54:08 dsainty Exp $
+$NetBSD: CHANGES,v 1.1019 2003/01/05 08:43:41 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -89,3 +89,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ns-plugger-communicator to 4.0 [rh 2003-01-05]
 	Updated ns-plugger-navigator to 4.0 [rh 2003-01-05]
 	Updated palmosemulator to 3.5nb1 [dsainty 2003-01-05]
+	Updated phpmyadmin to 2.3.2 [tron 2003-01-05]
