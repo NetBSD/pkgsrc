@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/08/20 15:16:53 tsarna Exp $
+# $NetBSD: Makefile,v 1.4 1998/08/23 20:30:51 frueauf Exp $
 #
 
 DISTNAME=	battalion
@@ -24,11 +24,11 @@ do-install:
 	${MKDIR} ${PREFIX}/share/battalion/battalion.data/MUSIC
 	${MKDIR} ${PREFIX}/share/battalion/battalion.data/SOUNDS
 	${MKDIR} ${PREFIX}/share/battalion/battalion.data/TEXTURES
-	${INSTALL_DATA} ${WRKDIR}/battalionSUN4/battalion.data/DATA/* $(PREFIX)/share/battalion/battalion.data/DATA
-	${INSTALL_DATA} ${WRKDIR}/battalionSUN4/battalion.data/MUSIC/* $(PREFIX)/share/battalion/battalion.data/MUSIC
-	${INSTALL_DATA} ${WRKDIR}/battalionSUN4/battalion.data/SOUNDS/* $(PREFIX)/share/battalion/battalion.data/SOUNDS
-	${INSTALL_DATA} ${WRKDIR}/battalionSUN4/battalion.data/TEXTURES/* $(PREFIX)/share/battalion/battalion.data/TEXTURES
-	${INSTALL_DATA} ${WRKDIR}/battalionSUN4/battalion.data/battalion.sho $(PREFIX)/share/battalion/battalion.data
+	${INSTALL_DATA} ${WRKDIR}/battalionSUN4/battalion.data/DATA/* ${PREFIX}/share/battalion/battalion.data/DATA
+	${INSTALL_DATA} ${WRKDIR}/battalionSUN4/battalion.data/MUSIC/* ${PREFIX}/share/battalion/battalion.data/MUSIC
+	${INSTALL_DATA} ${WRKDIR}/battalionSUN4/battalion.data/SOUNDS/* ${PREFIX}/share/battalion/battalion.data/SOUNDS
+	${INSTALL_DATA} ${WRKDIR}/battalionSUN4/battalion.data/TEXTURES/* ${PREFIX}/share/battalion/battalion.data/TEXTURES
+	${INSTALL_DATA} ${WRKDIR}/battalionSUN4/battalion.data/battalion.sho ${PREFIX}/share/battalion/battalion.data
 	${INSTALL_MAN} ${WRKDIR}/battalionSUN4/battalion.man ${PREFIX}/man/man6/battalion.6
 	${INSTALL_DATA} ${WRKDIR}/battalionSUN4/HELP/* ${PREFIX}/share/battalion/HELP
 	${INSTALL} -c -o root -g games -m 0664 /dev/null ${PREFIX}/share/battalion/battalion_hiscore
