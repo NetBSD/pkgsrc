@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1976 2004/07/27 14:58:38 cube Exp $
+$NetBSD: TODO,v 1.1977 2004/07/27 22:36:57 recht Exp $
 
 Suggested new packages
 ======================
@@ -195,7 +195,7 @@ Suggested package updates
 	o cvs2cl-2.55
 	o cxref-1.5e
 	o cyrus-imapd21-2.1.16
-	o cyrus-sasl2-2.1.19
+	o cyrus-sasl2-2.1.19 [pkg/26447]
 	o dact-0.8.37
 	o dar-2.1.2
 	o dctc-0.85.9
