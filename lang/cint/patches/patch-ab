@@ -1,7 +1,17 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/11/17 14:48:18 drochner Exp $
---- setup.orig	Fri Oct 22 16:34:52 1999
-+++ setup	Sat Nov  6 18:43:29 1999
-@@ -208,13 +208,13 @@
+$NetBSD: patch-ab,v 1.2 1999/11/18 11:00:42 agc Exp $
+
+--- setup.orig	Tue Nov  2 23:42:05 1999
++++ setup	Thu Nov 18 10:36:43 1999
+@@ -26,7 +26,7 @@
+ echo '#######################################################################'
+ echo '# setup'
+ echo '# C/C++ interpreter installation'
+-echo '# Author       : Masaharu Goto 
++echo '# Author       : Masaharu Goto'
+ echo '# Copyright(c) : 1995~1999 Masaharu Goto (MXJ02154@niftyserve.or.jp)'
+ echo '# revision     : 5.14.22'
+ echo '#######################################################################'
+@@ -206,13 +206,13 @@
  #################################################################
  # setup GNU readline library .inputrc file
  #################################################################

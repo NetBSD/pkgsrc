@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/11/17 14:48:18 drochner Exp $
+# $NetBSD: Makefile,v 1.2 1999/11/18 11:00:41 agc Exp $
 
 DISTNAME=		cint5.14
 PKGNAME=		cint-5.14
@@ -10,7 +10,13 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://root.cern.ch/root/Cint.html
 
 do-build:
-	cd $(WRKDIR); sh ./setup platform/netbsd
+	@cd $(WRKDIR);						\
+	case ${OPSYS} in					\
+	NetBSD)							\
+		${SH} ./setup platform/netbsd ;;		\
+	SunOS)							\
+		${SH} ./setup platform/solaris_gcc ;;		\
+	esac
 
 do-install:
 	$(MKDIR) $(PREFIX)/cint
