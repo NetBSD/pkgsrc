@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3149 2003/08/30 16:05:41 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3150 2003/08/30 16:13:10 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3395,3 +3395,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated nasm-devel to 0.98.37 [wiz 2003-08-30]
 	Updated dvipng to 0.6 [wiz 2003-08-30]
 	Updated xchat2 to 2.0.4 [xtraeme 2003-08-30]
+	Added xfe-0.54.2 [xtraeme 2003-08-30]
