@@ -1,0 +1,18 @@
+KMPlayer is a KDE gui frontend to mplayer.  It runs as a standalone application
+as well as being a KPart, making it possible to embed in konqueror or in KHTML.
+As a standalone application it can:
+* Play movies from file/url.
+* Play DVD.
+* Play VCD.
+* Play from a pipe.
+* Play from a TV device.
+* Keep movie sizes ratio.
+* Control arts volume.
+* Resize/fullscreen support.
+* Optional show mplayer output before and after a movie plays.
+* Configurable pattern matching.
+* Position slider.
+* Recording using mencoder.
+* Proxy settings from konqueror are used to set http_proxy environment
+  variable.
+* DCOP KMediaPlayer interface support.
