@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/02/28 22:11:57 jwise Exp $
+bin/csched
+lib/cardboard-schedule/cs/images/Logo2.gif
+lib/cardboard-schedule/cs/images/Logo.gif
+lib/cardboard-schedule/stage/cs.jar
+lib/cardboard-schedule/stage/readme.txt
+lib/cardboard-schedule/stage/swing.jar
+lib/cardboard-schedule/stage/jhbasic.jar
+lib/cardboard-schedule/stage/license.txt
+lib/cardboard-schedule/stage/CsHelp.jar
+@dirrm lib/cardboard-schedule/stage
+@dirrm lib/cardboard-schedule/cs/images
+@dirrm lib/cardboard-schedule/cs
+@dirrm lib/cardboard-schedule
