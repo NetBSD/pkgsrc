@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2791 2004/12/28 22:51:38 jmmv Exp $
+$NetBSD: TODO,v 1.2792 2004/12/28 23:18:08 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -902,7 +902,6 @@ Suggested package updates
 	o pxe-1.4.2
 	o py-FourSuite-1.0a4
 	o py-HappyDoc-3.0
-	o py-InlineEgg-1.08
 	o py-METAR-0.9
 	o py-Numeric-23.6
 	o py-ORBit-2.0.1
