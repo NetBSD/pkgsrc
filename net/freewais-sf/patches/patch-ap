@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.1.1.1 1999/05/11 13:56:53 bad Exp $
+$NetBSD: patch-ap,v 1.2 1999/05/11 20:22:26 bad Exp $
 
 --- lib/ir/irretrvl.c.orig	Fri Apr 16 11:59:32 1999
 +++ lib/ir/irretrvl.c	Sun May  9 23:40:41 1999
@@ -9,7 +9,7 @@ $NetBSD: patch-ap,v 1.1.1.1 1999/05/11 13:56:53 bad Exp $
 +#ifdef __origcode
        endByte = doc->ChunkEnd.Pos + start;
 +#else
-+      endByte = doc->ChunkEnd.Pos + end;
++      endByte = doc->ChunkStart.Pos + end;
 +#endif
      }
      else {
