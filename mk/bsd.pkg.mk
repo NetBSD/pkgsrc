@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.976 2002/05/13 11:43:05 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.977 2002/05/14 12:47:48 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -293,14 +293,13 @@ BUILD_DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
 BUILD_DEPENDS+=		{gettext-0.10.35nb1,gettext-m4-[0-9]*}:../../devel/gettext-m4
 .endif
 
-# Don't change these!!!  These names are built into the _TARGET_USE macro,
-# there is no way to refer to them cleanly from within the macro AFAIK.
 EXTRACT_COOKIE=		${WRKDIR}/.extract_done
 CONFIGURE_COOKIE=	${WRKDIR}/.configure_done
 INSTALL_COOKIE=		${WRKDIR}/.install_done
 BUILD_COOKIE=		${WRKDIR}/.build_done
 PATCH_COOKIE=		${WRKDIR}/.patch_done
 PACKAGE_COOKIE=		${WRKDIR}/.package_done
+NULL_COOKIE=		${WRKDIR}/.null
 
 # New message digest defs
 DIGEST_ALGORITHM?=	SHA1
@@ -1847,7 +1846,7 @@ automake-pre-override:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	(for _PATTERN in ${AUTOMAKE_PATTERNS}; do			\
 	   ${FIND} ${WRKSRC} -type f -name "$$_PATTERN" -print;		\
-	 done; echo /dev/null ) |					\
+	 done; echo ${NULL_COOKIE} ) |					\
 	${XARGS} ${TOUCH} ${TOUCH_FLAGS}
 .  endif
 
@@ -1862,7 +1861,7 @@ automake-post-override:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	(for _PATTERN in ${AUTOMAKE_POST_PATTERNS}; do			\
 	   ${FIND} ${WRKSRC} -type f -name "$$_PATTERN" -print;		\
-	 done; echo /dev/null ) |					\
+	 done; echo ${NULL_COOKIE} ) |					\
 	${XARGS} ${TOUCH} ${TOUCH_FLAGS}
 .  endif
 .endif	# AUTOMAKE_OVERRIDE
