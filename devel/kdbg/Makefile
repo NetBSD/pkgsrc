@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/12/14 20:03:41 tron Exp $
+# $NetBSD: Makefile,v 1.7 1999/12/14 20:28:01 tron Exp $
 
 DISTNAME=	kdbg-1.0.1
 CATEGORIES=	devel kde
@@ -9,9 +9,9 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=       http://members.telecom.at/~johsixt/kdbg.html
 
 BUILD_DEPENDS+= ${LOCALBASE}/bin/msgfmt:../../devel/gettext
-DEPENDS+=	autoconf-2.13:../../devel/autoconf
-DEPENDS+=	automake-1.4:../../devel/automake
-DEPENDS+=	kdevel-1.1.*:../../x11/kdelibs
+DEPENDS+=	autoconf-2.13:../autoconf
+DEPENDS+=	automake-1.4:../automake
+DEPENDS+=	kdevelop-1.*:../kdevelop
 DEPENDS+=	png-1.*:../../graphics/png
 
 USE_X11BASE=	yes
