@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/02/12 10:16:45 skrll Exp $
+# $NetBSD: Makefile,v 1.18 2002/02/12 12:16:54 skrll Exp $
 
 DISTNAME=	ucd-snmp-4.2.3
 CATEGORIES=	net
@@ -73,9 +73,6 @@ post-install:
 
 .if (${OPSYS} == "NetBSD")
 CFLAGS+=	-Dnetbsd1
-.if (${OS_VERSION:M1.5.[12]*} != "")
-CFLAGS+=	-D__HAVE_OLD_DISKLABEL
-.endif
 .endif
 
 .include "../../security/openssl/buildlink.mk"	# USE_SSL=	yes
