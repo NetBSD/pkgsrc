@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2520 2004/11/27 12:14:10 gson Exp $
+$NetBSD: TODO,v 1.2521 2004/11/27 12:16:35 kristerw Exp $
 
 Suggested new packages
 ======================
@@ -343,7 +343,6 @@ Suggested package updates
 	o astyle-1.15.3
 	o atlc-4.2.11
 	o auctex-11.53
-	o autogen-5.6.4
 	o avidemux-2.0.34
 	o avl-2.0.1
 	o awstats-6.3
