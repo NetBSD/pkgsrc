@@ -1,0 +1,34 @@
+--- Makefile.orig	Sat Aug 16 10:10:21 1997
++++ Makefile	Fri May  1 22:49:11 1998
+@@ -5,8 +5,10 @@
+ 
+ SHELL	= /bin/sh
+ 
+-BINDIR	= /usr/local/bin
+-MANDIR	= /usr/local/man/man1
++PREFIX ?= /usr/pkg
++BINDIR	= ${PREFIX}/bin
++MANDIR	= ${PREFIX}/man/man1
++LIBDIR  = ${PREFIX}/share/examples/weblint
+ PSROFF	= groff -Tps
+ PSVIEW	= ghostview
+ RM	= /bin/rm -f
+@@ -16,13 +18,13 @@
+ TARFILE	= $(PROGRAM)-$(VERSION).tar
+ TGZ	= $(TARFILE).gz
+ 
+-all: $(PROGRAM) $(PSFILE)
++all: $(PROGRAM)
+ 
+ install: $(PROGRAM)
+-	-cp $(PROGRAM) $(BINDIR)
+-	-chmod 755 $(BINDIR)/$(PROGRAM)
+-	-cp $(PROGRAM).1 $(MANDIR)
+-	-chmod 644 $(MANDIR)/$(PROGRAM).1
++	install -c -m 755 -o bin -g bin $(PROGRAM)   $(BINDIR)
++	install -c -m 644 -o bin -g bin $(PROGRAM).1 $(MANDIR)
++	mkdir $(LIBDIR)
++	install -c -m 644 -o bin -g bin weblintrc    $(LIBDIR)
+ 
+ test:
+ 	@./test.pl
