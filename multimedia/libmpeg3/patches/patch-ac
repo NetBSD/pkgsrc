@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/08/02 17:34:00 drochner Exp $
+$NetBSD: patch-ac,v 1.1 2004/06/26 18:00:21 grant Exp $
 
 --- mpeg3ifo.c.orig	Tue Jul 31 17:18:25 2001
 +++ mpeg3ifo.c	Tue Jul 31 17:18:56 2001

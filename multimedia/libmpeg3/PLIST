@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/04/29 21:41:41 rh Exp $
+@comment $NetBSD: PLIST,v 1.1 2004/06/26 18:00:21 grant Exp $
 include/mpeg3/libmpeg3.h
 bin/mpeg3dump
 bin/mpeg3cat
