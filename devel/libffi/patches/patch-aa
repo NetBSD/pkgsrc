@@ -1,0 +1,10 @@
+--- configure.old	2005-02-23 12:57:22.000000000 +0100
++++ configure	2005-02-23 12:59:38.000000000 +0100
+@@ -2478,6 +2478,7 @@
+ s390-*-linux-*) TARGET=S390; TARGETDIR=s390;;
+ s390x-*-linux-*) TARGET=S390; TARGETDIR=s390;;
+ x86_64-*-linux*) TARGET=X86_64; TARGETDIR=x86;;
++x86_64-*-netbsd*) TARGET=X86_64; TARGETDIR=x86;;
+ sh-*-linux* | sh[34]*-*-linux*) TARGET=SH; TARGETDIR=sh;;
+ esac
+ 
