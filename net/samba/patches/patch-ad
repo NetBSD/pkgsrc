@@ -1,17 +1,17 @@
-$NetBSD: patch-ad,v 1.3 2001/04/07 10:00:42 hubertf Exp $
+$NetBSD: patch-ad,v 1.4 2001/04/18 12:54:47 tron Exp $
 
---- client/client.c.orig	Wed May 10 16:28:49 2000
-+++ client/client.c
-@@ -1165,7 +1165,7 @@
+--- client/client.c.orig	Wed Apr 18 01:00:52 2001
++++ client/client.c	Wed Apr 18 14:32:09 2001
+@@ -1180,7 +1180,7 @@
  				"find . -name \"%s\" -print > %s",p,tmpname);
  		else
  			slprintf(cmd,sizeof(pstring)-1,
 -				"find . -maxdepth 1 -name \"%s\" -print > %s",p,tmpname);
 +				"ls -1 %s > %s",p,tmpname);
  		system(cmd);
+ 		close(fd);
  
- 		f = sys_fopen(tmpname,"r");
-@@ -1599,22 +1599,19 @@
+@@ -1615,22 +1615,19 @@
  	return True;
  }
  
@@ -38,7 +38,7 @@ $NetBSD: patch-ad,v 1.3 2001/04/07 10:00:42 hubertf Exp $
  	}
  }
  #  endif 
-@@ -1675,7 +1672,7 @@
+@@ -1691,7 +1688,7 @@
    {"setmode",cmd_setmode,"filename <setmode string> change modes of file",{COMPL_REMOTE,COMPL_NONE}},
    {"help",cmd_help,"[command] give help on a command",{COMPL_NONE,COMPL_NONE}},
    {"?",cmd_help,"[command] give help on a command",{COMPL_NONE,COMPL_NONE}},
@@ -47,7 +47,7 @@ $NetBSD: patch-ad,v 1.3 2001/04/07 10:00:42 hubertf Exp $
    {"history",cmd_history,"displays the command history",{COMPL_NONE,COMPL_NONE}},
  #endif
    {"!",NULL,"run a shell command on the local system",{COMPL_NONE,COMPL_NONE}},
-@@ -1735,7 +1732,7 @@
+@@ -1751,7 +1748,7 @@
  	}
  }
  
@@ -56,7 +56,7 @@ $NetBSD: patch-ad,v 1.3 2001/04/07 10:00:42 hubertf Exp $
  /****************************************************************************
  wait for keyboard activity, swallowing network packets
  ****************************************************************************/
-@@ -1814,7 +1811,7 @@
+@@ -1830,7 +1827,7 @@
  	pstring line;
  	char *ptr;
  
@@ -65,7 +65,7 @@ $NetBSD: patch-ad,v 1.3 2001/04/07 10:00:42 hubertf Exp $
  /* Minimal readline support, 29Jun1999, s.xenitellis@rhbnc.ac.uk */
  #ifdef PROMPTSIZE
  #undef PROMPTSIZE
-@@ -1828,7 +1825,7 @@
+@@ -1844,7 +1841,7 @@
  	while (!feof(stdin)) {
  		fstring tok;
  		int i;
@@ -74,7 +74,7 @@ $NetBSD: patch-ad,v 1.3 2001/04/07 10:00:42 hubertf Exp $
  		if ( temp != (char *)NULL )
  		{
  			free( temp );	/* Free memory allocated every time by readline() */
-@@ -2215,7 +2212,7 @@
+@@ -2231,7 +2228,7 @@
  
  	DEBUGLEVEL = 2;
  

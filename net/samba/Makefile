@@ -1,34 +1,36 @@
-# $NetBSD: Makefile,v 1.46 2001/03/27 03:20:11 hubertf Exp $
+# $NetBSD: Makefile,v 1.47 2001/04/18 12:54:47 tron Exp $
 
-DISTNAME=		samba-2.0.7-ja-1.3
-PKGNAME=		samba-2.0.7.1.3
-WRKSRC=			${WRKDIR}/${DISTNAME}/source
-CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.samba.gr.jp/pub/samba-jp/samba-2.0.7-ja/
+DISTNAME=	samba-2.0.8
+WRKSRC=		${WRKDIR}/${DISTNAME}/source
+CATEGORIES=	net
+MASTER_SITES=	ftp://ftp.samba.org/pub/samba/ \
+		ftp://ring.asahi-net.or.jp/pub/net/samba/ \
+		ftp://samba.anu.edu.au/pub/samba/ \
+		ftp://de.samba.org/pub/mirror/samba/ \
+		ftp://se.samba.org/pub/samba/ \
+		ftp://ftp.sunet.se/pub/unix/utilities/samba/
 
-MAINTAINER=		packages@netbsd.org
-HOMEPAGE=		http://www.samba.org/
-COMMENT=		SMB/CIFS protocol server suite for UNIX
+MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.samba.org/
+COMMENT=	SMB/CIFS protocol server suite for UNIX
 
-BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
-BUILD_USES_MSGFMT=	yes
+BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
+BUILD_USES_MSGFMT= YES
 
-.if !exists(/usr/include/readline.h)
+.if !exists(/usr/include/readline/readline.h)
 DEPENDS+=		readline>=4.0:../../devel/readline
 .endif
 
-CONFLICTS+=		samba-2.0.7-ja-*
-
-USE_LIBINTL=		# defined
-GNU_CONFIGURE=		# defined
+USE_LIBINTL=	YES
+GNU_CONFIGURE=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
-SAMPLE_CONFIG=		${PREFIX}/share/examples/samba/smb.conf.sample
-SAMBA_LOGDIR=		/var/log
-SAMBA_LOCKDIR=		/var/run/samba
-SAMBA_ETCDIR?=		/etc/samba
-SAMBA_PRIVATE?=		${SAMBA_ETCDIR}/private
+SAMPLE_CONFIG=	${PREFIX}/share/examples/samba/smb.conf.sample
+SAMBA_LOGDIR=	/var/log
+SAMBA_LOCKDIR=	/var/run/samba
+SAMBA_ETCDIR?=	/etc/samba
+SAMBA_PRIVATE?=	${SAMBA_ETCDIR}/private
 
 .if ${OPSYS} == "SunOS"
 ROOT_GROUP?=		root
@@ -36,19 +38,19 @@ ROOT_GROUP?=		root
 ROOT_GROUP?=		wheel
 .endif
 
-MAKE_ENV+=		ETCDIR=${SAMBA_ETCDIR}
-MAKE_ENV+=		LOGDIR=${SAMBA_LOGDIR}
+MAKE_ENV+=	ETCDIR=${SAMBA_ETCDIR}
+MAKE_ENV+=	LOGDIR=${SAMBA_LOGDIR}
 
-CONFIGURE_ARGS+=	--with-lockdir=${SAMBA_LOCKDIR} \
-			--with-privatedir=${SAMBA_PRIVATE} \
-			--with-swatdir=${PREFIX}/share/swat \
-			--with-i18n-swat \
-			--with-sambabook=${PREFIX}/share/swat/using_samba
+CONFIGURE_ARGS+=--with-lockdir=${SAMBA_LOCKDIR} \
+		--with-privatedir=${SAMBA_PRIVATE} \
+		--with-swatdir=${PREFIX}/share/swat \
+		--with-i18n-swat \
+		--with-sambabook=${PREFIX}/share/swat/using_samba
 
-PLIST_SUBST+=		SAMBA_PRIVATE=${SAMBA_PRIVATE}
+PLIST_SUBST+=	SAMBA_PRIVATE=${SAMBA_PRIVATE}
 
-INSTALL_FILE=		${WRKDIR}/INSTALL
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
+INSTALL_FILE=	${WRKDIR}/INSTALL
+DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
 
 pre-configure:
 	cd ${WRKSRC}; ${LOCALBASE}/bin/autoreconf
