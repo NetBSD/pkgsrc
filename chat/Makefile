@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/10/11 14:03:37 agc Exp $
+# $NetBSD: Makefile,v 1.19 2001/10/15 15:17:10 agc Exp $
 #
 
 COMMENT=	communication programs
@@ -6,6 +6,7 @@ COMMENT=	communication programs
 SUBDIR+=	bitchx
 SUBDIR+=	blackened
 SUBDIR+=	bnc
+SUBDIR+=	dircproxy
 SUBDIR+=	epic4
 SUBDIR+=	fugu
 SUBDIR+=	gaim
