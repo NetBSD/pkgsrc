@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.40 2002/09/29 07:37:54 jlam Exp $
+# $NetBSD: Makefile.common,v 1.41 2002/10/24 17:16:58 bouyer Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -214,7 +214,7 @@ post-patch:
 
 GS_CONF_PREREQ+=	hpijs-configure
 hpijs-configure:
-	@cd ${HPIJS_WRKSRC} &&						\
+	cd ${HPIJS_WRKSRC} &&						\
 	${SETENV} CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}"	\
 		${CONFIGURE_ENV}					\
 		${CONFIGURE_SCRIPT} ${HPIJS_CONFIGURE_ARGS} &&		\
@@ -224,21 +224,21 @@ hpijs-configure:
 
 GS_BUILD_PREREQ+=	hpijs-build
 hpijs-build:
-	@cd ${HPIJS_WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} all
+	cd ${HPIJS_WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} all
 
 GS_INSTALL_PREREQ+=	hpijs-install
 hpijs-install:
-	@cd ${HPIJS_WRKSRC} &&						\
+	cd ${HPIJS_WRKSRC} &&						\
 	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install docdir=${HTMLDIR}/hpijs
 
 GS_CONF_PREREQ+=	gimpprint-configure
 gimpprint-configure:
-	@cd ${GIMPPRINT_WRKSRC} &&					\
+	cd ${GIMPPRINT_WRKSRC} &&					\
 	${SETENV} CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}"	\
 		${GIMPPRINT_CONFIGURE_ENV}				\
 		${CONFIGURE_SCRIPT} ${GIMPPRINT_CONFIGURE_ARGS} &&	\
 	cd ${GIMPPRINT_WRKSRC}/src/ghost &&				\
-	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} all-local &&		\
+	${SETENV} ${MAKE_ENV} SED=${SED} ${MAKE_PROGRAM} all-local &&		\
 	( ${ECHO} '#ifndef GIMPPRINT_VERSION_FIX';			\
 	  ${ECHO} '#define GIMPPRINT_VERSION_FIX';			\
 	  ${EGREP} '#define (VERSION|RELEASE_DATE)' ../../config.h;	\
