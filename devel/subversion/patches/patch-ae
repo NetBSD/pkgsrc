@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.4 2003/09/27 20:14:41 recht Exp $
+$NetBSD: patch-ae,v 1.5 2003/12/03 15:20:44 epg Exp $
 
---- configure.orig	2003-09-24 17:29:51.000000000 +0200
-+++ configure	2003-09-27 12:13:39.000000000 +0200
-@@ -10622,8 +10622,9 @@
+--- configure.orig	2003-11-18 01:58:09.000000000 -0500
++++ configure
+@@ -21072,8 +21072,9 @@ echo "$as_me: WARNING: swig bindings req
      esac
      if test "$PYTHON" != "none" -a "$SWIG_SUITABLE" = "yes"; then
        ### TODO: When it's ready, add the swig-java-lib rule here.
@@ -14,7 +14,16 @@ $NetBSD: patch-ae,v 1.4 2003/09/27 20:14:41 recht Exp $
  
        echo "$as_me:$LINENO: checking for swig library directory" >&5
  echo $ECHO_N "checking for swig library directory... $ECHO_C" >&6
-@@ -10799,8 +10800,9 @@
+@@ -21160,7 +21161,7 @@ echo "${ECHO_T}$ac_cv_python_link" >&6
+     fi
+ 
+     if test "$PERL" != "none" -a "$SWIG_SUITABLE" = "yes"; then
+-      SWIG_PL_INCLUDES="`$PERL -MExtUtils::Embed -e ccopts`"
++      SWIG_PL_INCLUDES="`$PERL -MExtUtils::Embed -e ccopts | sed s/-fno-strict-aliasing//`"
+       SWIG_PL_COMPILE="`$PERL -MConfig -e 'print $Config{cc}'` \$(SWIG_PL_INCLUDES)"
+       SWIG_PL_LINK="`$PERL -MConfig -e 'print $Config{ld}'` `$PERL -MConfig -e 'print $Config{lddlflags}'` `$PERL -MExtUtils::Embed -e ldopts`"
+     fi
+@@ -21254,8 +21255,9 @@ echo "$as_me: WARNING: swig bindings req
      esac
      if test "$PYTHON" != "none" -a "$SWIG_SUITABLE" = "yes"; then
        ### TODO: When it's ready, add the swig-java-lib rule here.
@@ -26,7 +35,16 @@ $NetBSD: patch-ae,v 1.4 2003/09/27 20:14:41 recht Exp $
  
        echo "$as_me:$LINENO: checking for swig library directory" >&5
  echo $ECHO_N "checking for swig library directory... $ECHO_C" >&6
-@@ -10979,8 +10981,9 @@
+@@ -21342,7 +21344,7 @@ echo "${ECHO_T}$ac_cv_python_link" >&6
+     fi
+ 
+     if test "$PERL" != "none" -a "$SWIG_SUITABLE" = "yes"; then
+-      SWIG_PL_INCLUDES="`$PERL -MExtUtils::Embed -e ccopts`"
++      SWIG_PL_INCLUDES="`$PERL -MExtUtils::Embed -e ccopts | sed s/-fno-strict-aliasing//`"
+       SWIG_PL_COMPILE="`$PERL -MConfig -e 'print $Config{cc}'` \$(SWIG_PL_INCLUDES)"
+       SWIG_PL_LINK="`$PERL -MConfig -e 'print $Config{ld}'` `$PERL -MConfig -e 'print $Config{lddlflags}'` `$PERL -MExtUtils::Embed -e ldopts`"
+     fi
+@@ -21439,8 +21441,9 @@ echo "$as_me: WARNING: swig bindings req
      esac
      if test "$PYTHON" != "none" -a "$SWIG_SUITABLE" = "yes"; then
        ### TODO: When it's ready, add the swig-java-lib rule here.
@@ -38,3 +56,12 @@ $NetBSD: patch-ae,v 1.4 2003/09/27 20:14:41 recht Exp $
  
        echo "$as_me:$LINENO: checking for swig library directory" >&5
  echo $ECHO_N "checking for swig library directory... $ECHO_C" >&6
+@@ -21527,7 +21530,7 @@ echo "${ECHO_T}$ac_cv_python_link" >&6
+     fi
+ 
+     if test "$PERL" != "none" -a "$SWIG_SUITABLE" = "yes"; then
+-      SWIG_PL_INCLUDES="`$PERL -MExtUtils::Embed -e ccopts`"
++      SWIG_PL_INCLUDES="`$PERL -MExtUtils::Embed -e ccopts | sed s/-fno-strict-aliasing//`"
+       SWIG_PL_COMPILE="`$PERL -MConfig -e 'print $Config{cc}'` \$(SWIG_PL_INCLUDES)"
+       SWIG_PL_LINK="`$PERL -MConfig -e 'print $Config{ld}'` `$PERL -MConfig -e 'print $Config{lddlflags}'` `$PERL -MExtUtils::Embed -e ldopts`"
+     fi

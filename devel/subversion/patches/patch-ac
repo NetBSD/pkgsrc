@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2003/09/08 04:47:51 epg Exp $
+$NetBSD: patch-ac,v 1.7 2003/12/03 15:20:44 epg Exp $
 
---- contrib/cgi/tweak-log.cgi.orig	2003-08-14 14:25:11.000000000 +0200
-+++ contrib/cgi/tweak-log.cgi	2003-08-15 18:05:37.000000000 +0200
-@@ -29,8 +29,8 @@
+--- contrib/cgi/tweak-log.cgi.orig	Tue Oct  7 08:42:53 2003
++++ contrib/cgi/tweak-log.cgi
+@@ -29,8 +29,8 @@ use CGI qw(:standard);
  ###############################################################################
  # Configuration Section
  
