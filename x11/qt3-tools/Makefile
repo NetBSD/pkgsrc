@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/08/04 16:41:44 jdolecek Exp $
+# $NetBSD: Makefile,v 1.8 2002/08/04 16:45:04 jdolecek Exp $
 #
 
 .include "../qt3-libs/Makefile.common"
@@ -14,6 +14,8 @@ MAKE_ENV+=              LIBQT="-lqt-mt"
 
 USE_BUILDLINK_ONLY=		yes
 REPLACE_BUILDLINK_PATTERNS=	qmake.conf
+# following QMAKE variables seem to be working empty; might need some
+# adjusting eventually
 REPLACE_BUILDLINK_SED=	-e 's/\(QMAKE_INCDIR[ 	]*=\) .*$$/\1/' \
 			-e 's/\(QMAKE_LIBDIR[ 	]*=\) .*$$/\1/' \
 			-e 's^\(QMAKE_INCDIR_OPENGL[ 	]*=\) .*$$^\1^' \
