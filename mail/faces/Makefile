@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/05/21 16:50:04 kim Exp $
+# $NetBSD: Makefile,v 1.14 2000/05/24 09:15:57 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/17 18:47:53 max Exp
 #
 
@@ -31,7 +31,10 @@ post-install:
 	@${SED} -e 's|@localbase@|'${LOCALBASE}'|g' \
 		-e 's|@x11base@|'${X11BASE}'|g' < ${PKGDIR}/PLIST > ${PLIST_SRC}
 
-.include "../../mk/bsd.pkg.mk"
-.if (${OPSYS} == "SunOS")
-MAKE_ENV+= SVR4LIBS="-lnsl -lsocket -lgen" SYSV=-DSYSV32
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+MAKE_ENV+=	SVR4LIBS="-lnsl -lsocket -lgen" SYSV=-DSYSV32 CC=gcc CPPFLAGS=
 .endif
+
+.include "../../mk/bsd.pkg.mk"
