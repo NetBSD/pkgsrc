@@ -1,10 +1,10 @@
-$NetBSD: patch-ae,v 1.6 2003/03/24 12:12:10 jtb Exp $
+$NetBSD: patch-ae,v 1.7 2003/04/05 05:42:56 jtb Exp $
 
---- /dev/null	Sat Jun 23 16:44:46 2001
+--- /dev/null
 +++ config/unix/netbsd/alpha.s
 @@ -0,0 +1,46 @@
 +/*
-+ *  coswitch(old_cs, new_cs, first) for Dec Alpha architecture
++ *  coswitch(old_cs, new_cs, first) for DEC Alpha architecture
 + *             $16     $17    $18
 + */
 +	.data
@@ -40,7 +40,7 @@ $NetBSD: patch-ae,v 1.6 2003/03/24 12:12:10 jtb Exp $
 +	lda	$sp, 72($sp)		/* reset sp */
 +	jsr_coroutine	$31, ($26), 0	/* jump into new_context */
 +
-+first:	
++first:
 +	ldq	$sp, 0($17)		/* load stack pointer only */
 +	bis	$31, $31, $16		/* r16 = 0 */
 +	bis	$31, $31, $17		/* r17 = 0 */

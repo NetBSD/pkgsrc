@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/03/24 12:12:08 jtb Exp $
+# $NetBSD: Makefile,v 1.23 2003/04/05 05:42:55 jtb Exp $
 
 DISTNAME=       	icon.v941src
 PKGNAME=		icon-9.4.1
@@ -10,9 +10,10 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.cs.arizona.edu/icon/index.htm
 COMMENT=		The Icon programming language
 
-ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-i386 NetBSD-*-sparc NetBSD-*-powerpc
+ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-i386 NetBSD-*-sparc NetBSD-*-powerpc \
+			NetBSD-*-mipseb NetBSD-*-mipsel NetBSD-*-m68k NetBSD-*-vax
 
-CONFIGURE_TARGET?=	X-Configure
+CONFIGURE_TARGET=	X-Configure
 ALL_TARGET=		All
 
 pre-build:
