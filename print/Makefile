@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2002/07/16 15:29:22 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2002/07/19 12:33:21 agc Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -13,6 +13,7 @@ SUBDIR+=	apsfilter
 SUBDIR+=	auctex
 SUBDIR+=	bg5pdf
 SUBDIR+=	bg5ps
+SUBDIR+=	cjk-lyx
 SUBDIR+=	cnprint
 SUBDIR+=	cups
 SUBDIR+=	cupsomatic
