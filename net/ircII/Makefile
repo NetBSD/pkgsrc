@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2000/03/18 09:45:02 itojun Exp $
+# $NetBSD: Makefile,v 1.29 2000/03/18 09:52:15 itojun Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/05/14 10:35:13 torstenb Exp
 #
 
@@ -17,6 +17,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-default-server=${DEFAULT_IRC_SERVER}
 .endif
 
+DEPENDS+=		autoconf-*:../../devel/autoconf
+
 BUILD_DEFS+=		USE_INET6
 
 # Note: this pkg auto-detects IPv6 without regarding USE_INET6.
@@ -34,6 +36,9 @@ DEPENDS+=               socks4-2.2:../../net/socks4
 DEPENDS+=               socks5-1.0.2:../../net/socks5
 .endif
 .endif
+
+post-patch:
+	@(cd ${WRKSRC}; autoreconf)
 
 pre-install:
 	@(if [ "X${MANZ}" != X"" ]; then \
