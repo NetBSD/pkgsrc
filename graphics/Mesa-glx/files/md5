@@ -1,3 +1,5 @@
-$NetBSD: md5,v 1.1.1.1 1999/09/29 22:44:17 tron Exp $
+$NetBSD: md5,v 1.2 2000/04/11 22:36:04 tron Exp $
 
-MD5 (glx-19990804.tar.bz2) = 9aff5dcfa7d044a1a8d1b1fb898c56dc
+MD5 (glx-20000407.tar.bz2) = e822567d4f92a5f864b736f92df35d48
+MD5 (MesaLib-3.1.tar.bz2) = 58292669606fd6b06ee109b790c14c1c
+MD5 (MesaDemos-3.1.tar.bz2) = bf16132074cbd0b9f6ce211437966b51
