@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/30 23:47:19 rh Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/05 22:09:23 tv Exp $
 
 DISTNAME=	jdk-1_5_0-linux-i586
 PKGNAME=	sun-jdk15-5.0
+PKGREVISION=	1
 MASTER_SITES=	# empty
 
 COMMENT=	Sun's Java(tm) 2 SDK, Standard Edition 1.5.0
@@ -11,7 +12,8 @@ SHORT=		SDK
 DEPENDS=	sun-jre15>=5.0:../../lang/sun-jre15
 
 WRKSRC=		${WRKDIR}/jdk1.5.0
-JAVA_WRAPPERS=	appletviewer jar javac javadoc javah javap
+JAVA_WRAPPERS=	appletviewer apt extcheck idlj jar jarsigner \
+		javac javadoc javah javap jdb rmic serialver
 
 # Remove parts that are in common with the JRE
 #
