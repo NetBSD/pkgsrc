@@ -1,9 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:22:43 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/13 21:14:12 jlam Exp $
 bin/cervisia
-share/kde/applnk/Development/cervisia.desktop
-share/kde/icons/hicolor/32x32/apps/cervisia.png
-share/kde/icons/hicolor/16x16/apps/cervisia.png
-share/kde/locale/ko/LC_MESSAGES/cervisia.mo
 man/man1/cervisia.1
 share/doc/kde/HTML/en/cervisia/addingremovingdirs.html
 share/doc/kde/HTML/en/cervisia/advancedusage.html
@@ -11,35 +7,42 @@ share/doc/kde/HTML/en/cervisia/annotate.html
 share/doc/kde/HTML/en/cervisia/appendix.html
 share/doc/kde/HTML/en/cervisia/browsinghistory.html
 share/doc/kde/HTML/en/cervisia/checkingout.html
-share/doc/kde/HTML/en/cervisia/commandreference.html
-share/doc/kde/HTML/en/cervisia/commitingfiles.html
-share/doc/kde/HTML/en/cervisia/customization.html
-share/doc/kde/HTML/en/cervisia/customize-look.html
-share/doc/kde/HTML/en/cervisia/diff.html
-share/doc/kde/HTML/en/cervisia/gettingstarted.html
-share/doc/kde/HTML/en/cervisia/importing.html
-share/doc/kde/HTML/en/cervisia/index.html
-share/doc/kde/HTML/en/cervisia/information.html
-share/doc/kde/HTML/en/cervisia/mainscreen.html
-share/doc/kde/HTML/en/cervisia/obtaininginformation.html
-share/doc/kde/HTML/en/cervisia/removingfiles.html
-share/doc/kde/HTML/en/cervisia/resolvingconflicts.html
-share/doc/kde/HTML/en/cervisia/watches.html
-share/doc/kde/HTML/en/cervisia/workingwithfiles.html
 share/doc/kde/HTML/en/cervisia/checkout.png
+share/doc/kde/HTML/en/cervisia/commandreference.html
 share/doc/kde/HTML/en/cervisia/commit.png
-share/doc/kde/HTML/en/cervisia/diff.png
-share/doc/kde/HTML/en/cervisia/history.png
-share/doc/kde/HTML/en/cervisia/import.png
-share/doc/kde/HTML/en/cervisia/logtree.png
-share/doc/kde/HTML/en/cervisia/mainview.png
-share/doc/kde/HTML/en/cervisia/resolve.png
-share/doc/kde/HTML/en/cervisia/updatetag.png
+share/doc/kde/HTML/en/cervisia/commitingfiles.html
 share/doc/kde/HTML/en/cervisia/common/kde-common.css
 share/doc/kde/HTML/en/cervisia/common/kde-default.css
 share/doc/kde/HTML/en/cervisia/common/kde-localised.css
 share/doc/kde/HTML/en/cervisia/common/logotp3.png
 share/doc/kde/HTML/en/cervisia/common/note.png
-@unexec if test -z "`ls -1 %D/share/kde/applnk/Development 2>&1 /dev/null`"; then rmdir %D/kde/applnk/Development; fi
+share/doc/kde/HTML/en/cervisia/customization.html
+share/doc/kde/HTML/en/cervisia/customize-look.html
+share/doc/kde/HTML/en/cervisia/diff.html
+share/doc/kde/HTML/en/cervisia/diff.png
+share/doc/kde/HTML/en/cervisia/gettingstarted.html
+share/doc/kde/HTML/en/cervisia/history.png
+share/doc/kde/HTML/en/cervisia/import.png
+share/doc/kde/HTML/en/cervisia/importing.html
+share/doc/kde/HTML/en/cervisia/index.html
+share/doc/kde/HTML/en/cervisia/information.html
+share/doc/kde/HTML/en/cervisia/logtree.png
+share/doc/kde/HTML/en/cervisia/mainscreen.html
+share/doc/kde/HTML/en/cervisia/mainview.png
+share/doc/kde/HTML/en/cervisia/obtaininginformation.html
+share/doc/kde/HTML/en/cervisia/removingfiles.html
+share/doc/kde/HTML/en/cervisia/resolve.png
+share/doc/kde/HTML/en/cervisia/resolvingconflicts.html
+share/doc/kde/HTML/en/cervisia/updatetag.png
+share/doc/kde/HTML/en/cervisia/watches.html
+share/doc/kde/HTML/en/cervisia/workingwithfiles.html
+share/kde/applnk/Development/cervisia.desktop
+share/kde/icons/hicolor/16x16/apps/cervisia.png
+share/kde/icons/hicolor/32x32/apps/cervisia.png
+share/kde/locale/ko/LC_MESSAGES/cervisia.mo
+@unexec ${RMDIR} %D/share/kde/locale/ko/LC_MESSAGES 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/locale/ko 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk/Development 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/applnk 2>/dev/null || ${TRUE}
 @dirrm share/doc/kde/HTML/en/cervisia/common
 @dirrm share/doc/kde/HTML/en/cervisia
