@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.412 2000/03/02 18:35:59 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.413 2000/03/09 13:54:50 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -544,10 +544,17 @@ TRUE?=		/usr/bin/true
 TYPE?=		type
 .endif # !SunOS
 
+.if defined(DESTDIR)
+PKG_ADD?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_add
+PKG_CREATE?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_create
+PKG_DELETE?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_delete
+PKG_INFO?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_info
+.else
 PKG_ADD?=	${PKG_TOOLS_BIN}/pkg_add
 PKG_CREATE?=	${PKG_TOOLS_BIN}/pkg_create
 PKG_DELETE?=	${PKG_TOOLS_BIN}/pkg_delete
 PKG_INFO?=	${PKG_TOOLS_BIN}/pkg_info
+.endif
 
 .if !defined(PKGTOOLS_VERSION)
 .if !exists(${IDENT})
@@ -610,7 +617,7 @@ PKG_ARGS+=		-m ${MTREE_FILE}
 .endif # !PKG_ARGS
 PKG_SUFX?=		.tgz
 # where pkg_add records its dirty deeds.
-PKG_DBDIR?=		/var/db/pkg
+PKG_DBDIR?=		${DESTDIR}/var/db/pkg
 
 # shared/dynamic motif libs
 MOTIFLIB?=	-L${MOTIFBASE}/lib -L${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-R${MOTIFBASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/lib -lXm
@@ -1870,7 +1877,7 @@ clean: pre-clean
 .ifdef WRKOBJDIR
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${WRKOBJDIR}/${PKGSRC_SUBDIR}
 	-${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${WRKDIR_BASENAME}
-.else
+.else	# WRKOBJDIR
 	${_PKG_SILENT}${_PKG_DEBUG}if [ -d ${WRKDIR} ]; then		\
 		if [ -w ${WRKDIR} ]; then				\
 			${RM} -rf ${WRKDIR};				\
