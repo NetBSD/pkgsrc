@@ -1,0 +1,30 @@
+Host is a very powerful DNS query and testing command-line tool.
+
+Major differences with the ancient version of the program with the same
+name that's included in the BIND-4 and BIND-8 distributions:
+
+ - Major overhaul of the entire code.
+ - Very rigid error checking, with more verbose error messages.
+ - Zone listing section completely rewritten.
+ - It is now possible to do recursive listings into delegated zones.
+ - Maintain resource record statistics during zone listings.
+ - Maintain count of hosts during zone listings.
+ - Check for various extraneous conditions during zone listings.
+ - Check for illegal domain names containing invalid characters.
+ - Verify that certain domain names represent canonical host names.
+ - Perform ttl consistency checking during zone listings.
+ - Exploit multiple server addresses if available.
+ - Option to exploit only primary server for zone transfers.
+ - Option to exclude info from names that do not reside in a zone.
+ - Implement timeout handling during connect and read.
+ - Write resource record output to optional log file.
+ - Special MB tracing by recursively expanding MR and MG records.
+ - Special mode to check SOA records at each nameserver for a zone.
+ - Special mode to check reverse mappings of host addresses.
+ - Extended syntax allows multiple arguments on command line or stdin.
+ - Configurable default options in HOST_DEFAULTS environment variable.
+ - Implement new resource record types from RFC 1183 and 1348.
+ - Basic experimental NSAP support as defined in RFC 1637.
+ - Implement new resource record types from RFC 1664 and 1712.
+ - Implement new resource record types from RFC 1876 and 1886.
+ - Code is extensively documented.

@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/10 17:06:37 wiz Exp $
+
+--- Makefile.orig	Wed Mar 15 22:51:39 2000
++++ Makefile
+@@ -4,11 +4,13 @@
+ # Adapt the installation directories to your local standards.
+ # ----------------------------------------------------------------------
+ 
++PREFIX?= /usr/local
++
+ # This is where the host executable will go.
+-DESTBIN = /usr/local/bin
++DESTBIN = ${PREFIX}/bin
+ 
+ # This is where the host manual page will go.
+-DESTMAN = /usr/local/man
++DESTMAN = ${PREFIX}/man
+ 
+ BINDIR = $(DESTBIN)
+ MANDIR = $(DESTMAN)/man1
+@@ -38,7 +40,10 @@
+ SYSDEFS = -DNO_YP_LOOKUP
+ #endif
+ 
+ SYSDEFS =
++
++#if defined(NetBSD) && you have not removed support for $HOSTALIASES
++SYSDEFS = ${ALLOW_HOSTALIASES}
+ 
+ # ----------------------------------------------------------------------
+ # Configuration definitions.
