@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1 1998/11/02 21:18:14 agc Exp $
+
+Avoid compiler warning.
+
+--- src/lib/sfio/sfwr.c	1998/11/02 17:49:14	1.1
++++ src/lib/sfio/sfwr.c	1998/11/02 17:52:14
+@@ -30,10 +30,14 @@
+ 			sp = buf+1;
+ 			if(buf[0] == 0 && buf[_Sfpage-1] == 0)
+ 			{	/* check byte at a time until int-aligned */
+-				while(((Sfulong_t)sp)%sizeof(int))
++				Sfulong_t	dumbo;
++
++				(void) memcpy(&dumbo, sp, sizeof(dumbo));
++				while(dumbo % sizeof(int) != 0)
+ 				{	if(*sp != 0)
+ 						goto chk_hole;
+ 					sp += 1;
++					(void) memcpy(&dumbo, sp, sizeof(dumbo));
+ 				}
+ 
+ 				/* check using int to speed up */

@@ -1,0 +1,12 @@
+$NetBSD: patch-ah,v 1.1 1998/11/02 21:18:14 agc Exp $
+
+NetBSD included Makefile for sfio functions
+
+--- /dev/null	Mon Nov  2 17:57:38 1998
++++ src/lib/sfio/Sfio_f/Makefile.inc	Mon Nov  2 17:26:53 1998
+@@ -0,0 +1,5 @@
++.PATH: ${.CURDIR}/Sfio_f
++
++SRCS+=	_sfclrerr.c _sfdlen.c _sfeof.c _sferror.c _sffileno.c _sfgetc.c \
++	_sfgetl.c _sfgetu.c _sfllen.c _sfputc.c _sfputd.c _sfputl.c _sfputu.c \
++	_sfslen.c _sfstacked.c _sfulen.c _sfvalue.c

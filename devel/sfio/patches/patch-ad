@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 1998/11/02 21:18:14 agc Exp $
+
+Avoid a compiler warning.
+
+--- src/lib/sfio/sfvscanf.c	1998/11/02 17:38:38	1.1
++++ src/lib/sfio/sfvscanf.c	1998/11/02 17:55:11
+@@ -641,7 +641,7 @@
+ 			{	n_assign += 1;
+ 
+ 				if(fmt == 'p')
+-					*((Void_t**)value) = (Void_t*)argv.lu;
++					(void) memcpy(value, &argv.lu, sizeof(value));
+ #if !_ast_intmax_long
+ 				else if(FMTCMP(size,Sflong_t))
+ 					*((Sflong_t*)value) = argv.ll;

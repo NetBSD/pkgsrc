@@ -1,0 +1,40 @@
+$NetBSD: patch-aj,v 1.1 1998/11/02 21:18:14 agc Exp $
+
+NetBSD Makefile for stdio-compatible library.
+
+--- /dev/null	Mon Nov  2 19:32:07 1998
++++ src/lib/sfio/Stdio_b/stdio.mk	Mon Nov  2 19:31:50 1998
+@@ -0,0 +1,33 @@
++# NetBSD Makefile for stdio
++
++LIB=	stdio
++
++CPPFLAGS+=	-I${.CURDIR} -I${.CURDIR}/..
++
++BINDIR=	${.CURDIR}/../../../../bin
++
++SHLIB_MAJOR=	1
++SHLIB_MINOR=	0
++
++NOLINT=		1
++
++SRCS=	doprnt.c doscan.c fclose.c fdopen.c fflush.c fgetc.c fgets.c filbuf.c \
++	flsbuf.c fopen.c fprintf.c fputc.c fputs.c fread.c freopen.c fscanf.c \
++	fseek.c ftell.c fwrite.c getc.c getchar.c gets.c getw.c pclose.c popen.c \
++	printf.c putc.c putchar.c puts.c putw.c rewind.c scanf.c setbuf.c setbuffer.c \
++	setlinebuf.c setvbuf.c sprintf.c sscanf.c stdextern.c stdstream.c \
++	tmpfile.c ungetc.c vfprintf.c vfscanf.c vprintf.c vscanf.c vsprintf.c \
++	vsscanf.c fileno.c feof.c ferror.c clearerr.c fpurge.c fgetpos.c fsetpos.c \
++	cleanup.c vsnprintf.c snprintf.c
++
++doprnt.o: FEATURE/stdio must
++
++FEATURE/stdio: features/stdio
++	$(BINDIR)/iffe set cc $(CC) : run features/stdio
++
++must:
++	./sfstdhdr.sh $(CC)
++	$(CC) ${CPPFLAGS} sfstdio.c -o sfstdgen >/dev/null 2>&1
++	./sfstdgen > sfstdio.h; rm sfstdgen sfstdhdr.h
++
++.include <bsd.lib.mk>
