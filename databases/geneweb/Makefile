@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2004/12/28 02:47:43 reed Exp $
+# $NetBSD: Makefile,v 1.19 2005/02/04 22:17:51 adrianp Exp $
 #
 
-DISTNAME=	geneweb-4.09
-PKGREVISION=	1
+DISTNAME=	geneweb-4.10
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Projects/cristal/geneweb/Src/
 
@@ -10,7 +9,7 @@ MAINTAINER=	wulf@NetBSD.org
 HOMEPAGE=	http://cristal.inria.fr/~ddr/GeneWeb/
 COMMENT=	GeneWeb is a comprehensive genealogy database application
 
-DEPENDS+=	ocaml>=3.04:../../lang/ocaml
+BUILD_DEPENDS+=	ocaml>=3.04:../../lang/ocaml
 
 USE_PKGINSTALL=	yes
 USE_GNU_TOOLS+=	make
