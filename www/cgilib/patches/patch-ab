@@ -1,12 +1,14 @@
-$NetBSD: patch-ab,v 1.6 2002/08/10 13:59:34 skrll Exp $
+$NetBSD: patch-ab,v 1.7 2002/12/27 14:36:02 cjep Exp $
 
 --- Makefile.orig	Fri Aug 20 22:14:07 1999
 +++ Makefile
-@@ -14,30 +14,48 @@
+@@ -14,30 +14,50 @@
  #   along with this program; if not, write to the Free Software
  #   Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111, USA.
  
 -CFLAGS = -I. -Wall -O2 -g
++NROFF=	nroff -mandoc
++
 +CFLAGS += -I. -Wall -O2
  LDFLAGS = -L.
 -LIBS = -lcgi
@@ -46,21 +48,21 @@ $NetBSD: patch-ab,v 1.6 2002/08/10 13:59:34 skrll Exp $
  htmlman:
  	for f in *.[35]; do \
 -	  man -l $$f|rman -f HTML --title $$f -r "%s.%s.html" > $$f.html; \
-+	  nroff -mandoc $$f|rman -f HTML --title $$f -r "%s.%s.html" > $$f.html; \
++	${NROFF} $$f|rman -f HTML --title $$f -r "%s.%s.html" > $$f.html; \
  	done
 +
 +install:
 +	-mkdir -p ${PREFIX}/libexec/cgi-bin
 +	-mkdir -p ${PREFIX}/share/examples/cgilib
-+	install -c -m 444 cgitest.c ${PREFIX}/share/examples/cgilib
-+	install -c -m 444 jumpto.c ${PREFIX}/share/examples/cgilib
-+	${LIBTOOL} --mode=install install -c -m 444 libcgi.la ${PREFIX}/lib
-+	${LIBTOOL} --mode=install install -c -m 755 cgitest ${PREFIX}/libexec/cgi-bin
-+	${LIBTOOL} --mode=install install -c -m 755 jumpto ${PREFIX}/libexec/cgi-bin
-+	install -c -m 444 cgi.h ${PREFIX}/include
++	${INSTALL} -c -m 444 cgitest.c ${PREFIX}/share/examples/cgilib
++	${INSTALL} -c -m 444 jumpto.c ${PREFIX}/share/examples/cgilib
++	${LIBTOOL} --mode=install ${INSTALL} -c -m 444 libcgi.la ${PREFIX}/lib
++	${LIBTOOL} --mode=install ${INSTALL} -c -m 755 cgitest ${PREFIX}/libexec/cgi-bin
++	${LIBTOOL} --mode=install ${INSTALL} -c -m 755 jumpto ${PREFIX}/libexec/cgi-bin
++	${INSTALL} -c -m 444 cgi.h ${PREFIX}/include
 +	-mkdir -p ${PREFIX}/share/doc/html/cgilib
 +	for i in *.html; do \
-+          install -c -m 444 $$i ${PREFIX}/share/doc/html/cgilib ; \
++          ${INSTALL} -c -m 444 $$i ${PREFIX}/share/doc/html/cgilib ; \
 +        done
 +
 +clean:
