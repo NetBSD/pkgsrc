@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1540.2.21 2005/02/11 16:51:54 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1540.2.22 2005/02/11 17:00:21 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -84,7 +84,7 @@ PLIST_SRC+=		${PKGDIR}/PLIST
 .  if exists(${PKGDIR}/PLIST.common_end)
 PLIST_SRC+=		${PKGDIR}/PLIST.common_end
 .  endif
-.endif	# !PLIST_SRC
+.endif # !PLIST_SRC
 
 ##### Others
 
