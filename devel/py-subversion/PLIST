@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/04 16:41:22 recht Exp $
-bin/cvs2svn
+@comment $NetBSD: PLIST,v 1.2 2004/03/29 18:08:33 epg Exp $
 lib/libsvn_swig_py-1.a
 lib/libsvn_swig_py-1.la
 lib/libsvn_swig_py-1.so
@@ -28,12 +27,6 @@ ${PYSITELIB}/libsvn/repos.py
 ${PYSITELIB}/libsvn/repos.pyc
 ${PYSITELIB}/libsvn/wc.py
 ${PYSITELIB}/libsvn/wc.pyc
-${PYSITELIB}/rcsparse/__init__.py
-${PYSITELIB}/rcsparse/common.py
-${PYSITELIB}/rcsparse/compat.py
-${PYSITELIB}/rcsparse/debug.py
-${PYSITELIB}/rcsparse/default.py
-${PYSITELIB}/rcsparse/texttools.py
 ${PYSITELIB}/svn/__init__.py
 ${PYSITELIB}/svn/__init__.pyc
 ${PYSITELIB}/svn/client.py
@@ -52,7 +45,6 @@ ${PYSITELIB}/svn/util.py
 ${PYSITELIB}/svn/util.pyc
 ${PYSITELIB}/svn/wc.py
 ${PYSITELIB}/svn/wc.pyc
-share/doc/subversion/cvs2svn/README
 share/examples/subversion/hook-scripts/mailer.conf.example
 share/examples/subversion/hook-scripts/mailer.py
 share/examples/subversion/python/blame.py
@@ -65,7 +57,5 @@ share/examples/subversion/python/revplist.py
 share/examples/subversion/python/svnlook.py
 share/examples/subversion/python/svnshell.py
 @dirrm share/examples/subversion/python
-@dirrm share/doc/subversion/cvs2svn
 @dirrm ${PYSITELIB}/svn
-@dirrm ${PYSITELIB}/rcsparse
 @dirrm ${PYSITELIB}/libsvn

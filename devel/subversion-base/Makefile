@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2004/03/26 02:27:39 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2004/03/29 18:08:33 epg Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
-PKGREVISION=	1
 COMMENT=	Version control system, base programs and libraries
 
 PLIST_SUBST+=   INSTALL_INFO=${INSTALL_INFO}
@@ -10,6 +9,10 @@ PLIST_SUBST+=   INSTALL_INFO=${INSTALL_INFO}
 
 CONFIGURE_ARGS+=	--without-apache
 CONFIGURE_ARGS+=	--without-apxs
+
+# XXX Timestamps are broken in 1.0.1 tar file; should go away in 1.0.2.
+post-build:
+	${TOUCH} ${WRKSRC}/doc/programmer/design/svn-design.info
 
 post-patch:
 	${SED} -e 's|@BUILDLINK_PREFIX.db4@|${BUILDLINK_PREFIX.db4}|g' \
