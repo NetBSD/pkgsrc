@@ -1,0 +1,87 @@
+$NetBSD: patch-ad,v 1.5 2002/02/24 21:42:57 wiz Exp $
+
+--- hacks/glx/glsnake.c.orig	Thu Feb 14 13:06:38 2002
++++ hacks/glx/glsnake.c
+@@ -65,7 +65,7 @@
+ #ifdef USE_GL /* whole file */
+ 
+ #include <GL/glu.h>
+-#include <sys/timeb.h>
++#include <sys/time.h>
+ #include <string.h>
+ #include <unistd.h>
+ #include <stdio.h>
+@@ -98,8 +98,8 @@
+ 	int is_legal;
+ 	int last_turn;
+ 	int selected;
+-	struct timeb last_iteration;
+-	struct timeb last_morph;
++	struct timeval last_iteration;
++	struct timeval last_morph;
+ 	int morphing;
+ 	nodeang_t node[24];
+ 	GLfloat roty;
+@@ -660,6 +660,7 @@
+ #define RANDSIGN() ((random() & 1) ? 1 : -1)
+ 
+ void glsnake_init(ModeInfo *mi) {
++	struct timezone localtimezone;
+ 	glsnake_configuration * bp;
+ 	int wire = MI_IS_WIREFRAME(mi);
+ 
+@@ -693,8 +694,8 @@
+ 	bp->dragging = 0;
+ 	bp->interactive = 0;
+ 
+-	ftime(&(bp->last_iteration));
+-	memcpy(&(bp->last_morph), &(bp->last_iteration), sizeof(struct timeb));
++	gettimeofday(&(bp->last_iteration), &localtimezone);
++	memcpy(&(bp->last_morph), &(bp->last_iteration), sizeof(struct timeval));
+ 	/* srand((unsigned int) bp->last_iteration.time); */
+ 
+ 	/* load the model files */
+@@ -871,7 +872,8 @@
+ 	long morf_msec;
+ 	float iter_angle_max;
+ 	int i;
+-	struct timeb current_time;
++	struct timeval current_time;
++	struct timezone localtimezone;
+ 	int still_morphing;
+ 
+ 	/* Do nothing to the model if we are paused */
+@@ -881,7 +883,7 @@
+ 		return;
+ 	}
+ 	/* ftime is winDOS compatible */
+-	ftime(&current_time);
++	gettimeofday(&current_time, &localtimezone);
+ 
+ 	/* <spiv> Well, ftime gives time with millisecond resolution.
+ 	 * <Jaq> if current time is exactly equal to last iteration, 
+@@ -892,18 +894,18 @@
+ 	 *             it would be the same
+ 	 * <spiv>   b) The code will divide by zero
+ 	 */
+-	iter_msec = (long) current_time.millitm - bp->last_iteration.millitm + 
+-		    ((long) current_time.time - bp->last_iteration.time) * 1000L;
++	iter_msec = ((long) current_time.tv_usec - bp->last_iteration.tv_usec)/1000L + 
++		    ((long) current_time.tv_sec - bp->last_iteration.tv_sec) * 1000L;
+ 	if (iter_msec) {
+ 		/* save the current time */
+-		memcpy(&(bp->last_iteration), &current_time, sizeof(struct timeb));
++		memcpy(&(bp->last_iteration), &current_time, sizeof(struct timeval));
+ 		
+ 		/* work out if we have to switch models */
+-		morf_msec = bp->last_iteration.millitm - bp->last_morph.millitm +
+-			((long) (bp->last_iteration.time - bp->last_morph.time) * 1000L);
++		morf_msec = (bp->last_iteration.tv_usec - bp->last_morph.tv_usec)/1000L +
++			((long) (bp->last_iteration.tv_sec - bp->last_morph.tv_sec) * 1000L);
+ 
+ 		if ((morf_msec > statictime) && !bp->interactive) {
+-			memcpy(&(bp->last_morph), &(bp->last_iteration), sizeof(struct timeb));
++			memcpy(&(bp->last_morph), &(bp->last_iteration), sizeof(struct timeval));
+ 			start_morph(RAND(bp->m_count), 0, bp);
+ 		}
+ 
