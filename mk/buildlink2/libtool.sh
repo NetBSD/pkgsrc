@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: libtool.sh,v 1.10 2003/09/02 06:59:51 jlam Exp $
+# $NetBSD: libtool.sh,v 1.11 2004/02/05 08:27:18 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
@@ -33,6 +33,9 @@ BUILDLINK_DIR="@BUILDLINK_DIR@"
 BUILDLINK_X11_DIR="@BUILDLINK_X11_DIR@"
 WRKDIR="@WRKDIR@"
 WRKSRC="@WRKSRC@"
+
+original_cmd="$0 $@"
+$echo [*] $original_cmd >> $wrapperlog
 
 cmd="@WRAPPEE@"
 lafile=
@@ -86,7 +89,7 @@ esac
 @_BLNK_WRAP_ENV@
 @_BLNK_WRAP_SANITIZE_PATH@
 
-$echo $cmd >> $wrapperlog
+$echo "<.>" $cmd >> $wrapperlog
 eval $cmd
 wrapper_result=$?
 
