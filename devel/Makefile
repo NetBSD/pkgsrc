@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.288 2002/05/22 16:09:54 agc Exp $
+# $NetBSD: Makefile,v 1.289 2002/05/29 08:21:41 skrll Exp $
 #
 
 COMMENT=	Development utilities
@@ -241,6 +241,7 @@ SUBDIR+=	prc-tools-gcc
 SUBDIR+=	prc-tools-gdb
 SUBDIR+=	prcs
 SUBDIR+=	pth
+SUBDIR+=	pth-syscall
 SUBDIR+=	ptl2
 SUBDIR+=	pwlib
 SUBDIR+=	py-Checker
