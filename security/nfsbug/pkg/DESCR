@@ -1,0 +1,10 @@
+This package consists of two parts, of which the first one ("nfsbug")
+verifies a given NFS-server for known bugs like world wide exportable
+file systems, determine whether the export list really works,
+determine whether we can mount file systems through the portmapper,
+try to guess file handles, excercise the mknod bug, and the uid
+masking bug.
+
+The second program ("nfsshell") is included for demonstration purpose
+to display the named deficiencies by offering a shell-like interface
+to access NFS file systems.

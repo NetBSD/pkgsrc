@@ -1,0 +1,24 @@
+--- nfsbug.c.orig	Mon Sep 28 17:45:40 1998
++++ nfsbug.c	Mon Sep 28 17:47:58 1998
+@@ -25,16 +25,18 @@
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+-#include <sys/sysmacros.h>
+ #include <sys/time.h>
+ #include <sys/vnode.h>
+-#include <sys/vfs.h>
+-#include <sys/sysmacros.h>
++#include <sys/mount.h>
+ #ifdef SVR4
+ #include <sys/inode.h>
+ #else
+ #ifndef HPUX
++#ifdef __NetBSD__
++#include <ufs/ufs/dinode.h>
++#else
+ #include <ufs/inode.h>
++#endif
+ #endif
+ #endif
+ 
