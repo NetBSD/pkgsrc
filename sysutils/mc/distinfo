@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2002/10/23 10:38:37 bouyer Exp $
+$NetBSD: distinfo,v 1.6.2.1 2003/06/19 01:04:55 grant Exp $
 
 SHA1 (mc-4.5.51.tar.gz) = 24d5d90695266587a2e8190196b32c8f3a4b2406
 Size (mc-4.5.51.tar.gz) = 4330056 bytes
@@ -11,3 +11,4 @@ SHA1 (patch-af) = be7b6906f5cd23e28311519b42a1d8c630e98f2e
 SHA1 (patch-ag) = 60e697e475647038181d12186a0424c4a6165c59
 SHA1 (patch-ah) = a5ef804a13870ae5d100a7f6fb45281303da82c3
 SHA1 (patch-ai) = 7bac376900226618f1bb5849cb5ac277bdd4e4f9
+SHA1 (patch-aj) = b9ab663bf8f2d1b048338b85449846869362f125
