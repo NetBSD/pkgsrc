@@ -1,0 +1,20 @@
+======== WiStumler2 ======================
+Network stumbler for WaveLAN/IEEE wireless
+==========================================
+
+Original code: Isao SEKI <iseki@gongon.com>
+Fork&patches:  pancake <pancake@phreaker.net>
+
+WiStumbler2 is a fork of original wistumbler caused by the incommunication
+of the original author, because seems that development was getting stopped.
+
+In the fork of wistumbler I add some new features and bugfixes.
+
+Diff on wistumbler:
+ - gtk2 and theme support.
+ - some gtk widgets wasn't correctly used.
+ - Support for console mode (no X needed).
+ - Allow log-saving on the fly (new button).
+ - Patches some GPS pointers that segfaults.
+ - Speaker beeps like windows-stumbler. (ear-wardriving)
+ - FreeBSD port finished.
