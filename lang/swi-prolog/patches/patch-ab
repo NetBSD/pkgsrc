@@ -1,13 +1,12 @@
-$NetBSD: patch-ab,v 1.6 2001/06/20 20:33:56 jlam Exp $
+$NetBSD: patch-ab,v 1.7 2001/07/15 12:27:38 jtb Exp $
 
---- src/configure.orig	Wed May 23 08:55:57 2001
+--- src/configure.orig	Sat Jul 14 22:41:44 2001
 +++ src/configure
-@@ -564,7 +564,7 @@
- 
+@@ -569,7 +569,6 @@
  EXTRAOBJ=""
+ EXTRAHDR=""
  INSTALLTARGET=dv-install
 -PL=pl
-+#PL=pl
  PLLIB=libpl.a
  RT=""
  PLVERSION=`cat ../VERSION`
