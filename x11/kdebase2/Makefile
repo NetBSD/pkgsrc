@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/03/15 08:57:14 skrll Exp $
+# $NetBSD: Makefile,v 1.6 2001/03/19 09:57:01 skrll Exp $
 
 DISTNAME=	kdebase-2.1
 CATEGORIES=	x11 kde
@@ -26,6 +26,11 @@ IMAKEDIR=	${WRKDIR}/imake
 BROKEN=		"This package doesn't build on a.out. This is being worked on."
 .endif
 
+PLIST_INIT=	${PKGDIR}/PLIST
+PLIST_SRC=	${WRKDIR}/PLIST
+PLIST_DIRS=	share/kde/applnk \
+		share/kde/apps/kappfinder
+
 post-configure:
 	${MKDIR} ${IMAKEDIR}
 	${LN} -fs ${FILESDIR}/Imakefile ${IMAKEDIR}
@@ -36,6 +41,15 @@ post-configure:
 post-install:
 	@${CHMOD} u+s ${PREFIX}/bin/konsole_grantpty
 	@${CHMOD} u+s ${PREFIX}/bin/*.kss
+	@${CP} ${PLIST_INIT} ${PLIST_SRC}
+	@(cd ${PREFIX}; ${FIND} ${PLIST_DIRS} \! -type d | sort >>${PLIST_SRC})
+	@(cd ${PREFIX}; ${FIND} ${PLIST_DIRS} -type d | sort -r | \
+	    ${SED} "s/^/\@dirrm /" >>${PLIST_SRC})
+	@for DIR in ${KDE_DIRS}; do \
+		${INSTALL_DATA_DIR} ${PREFIX}/${DIR}; \
+		${ECHO} "@exec mkdir -p %D/${DIR}" >>${PLIST_SRC}; \
+		${ECHO} "@dirrm ${DIR}" >>${PLIST_SRC}; \
+	done
 	@# NetBSD Advertisement O:-)
 	@cd ${PREFIX}/share/kde/config ; \
 	${CP} kdmrc kdmrc.new ; \
