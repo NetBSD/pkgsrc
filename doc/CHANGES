@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.116 2002/09/29 23:45:51 simonb Exp $
+$NetBSD: CHANGES,v 1.117 2002/09/29 23:46:52 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3040,3 +3040,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated pkgconfig to 0.13.0 [rh 2002-09-30]
 	Added pfaedit-20020910 [wiz 2002-09-30]
 	Updated spamassassin to 2.41 [simonb 2002-09-30]
+	Updated gnustep-make to 1.5.0nb3 [rh 2002-09-30]
