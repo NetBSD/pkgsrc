@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.229 1999/03/17 10:33:57 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.230 1999/03/17 12:05:40 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -47,7 +47,15 @@ __ARCH_OK?=	1
 .endfor
 .endif
 
+.if defined(ONLY_FOR_OPSYS)
+.for __OPSYS in ${ONLY_FOR_OPSYS}
+.if ${OPSYS:M${__OPSYS}} != ""
 __OPSYS_OK?=	1
+.endif
+.endfor
+.else
+__OPSYS_OK?=	1
+.endif
 
 .if defined(NOT_FOR_OPSYS)
 .for __NOPSYS in ${NOT_FOR_OPSYS}
