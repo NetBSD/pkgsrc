@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2002/05/13 15:15:24 lukem Exp $
+$NetBSD: patch-aa,v 1.5 2002/07/03 11:57:14 lukem Exp $
 
---- Makefile.in.orig	Fri Mar  8 23:21:11 2002
+--- Makefile.in.orig	Wed Apr 17 00:00:49 2002
 +++ Makefile.in
-@@ -9,9 +9,10 @@
+@@ -9,7 +9,7 @@ MODELPATH   = $(INSTALLROOT)@MODELPATH@
  INSTALLDIRS = $(CONFPATH) $(MODELPATH) $(BASEPATH)/@bindir@ $(BASEPATH)/@sbindir@
  STATEPATH   = $(INSTALLROOT)@STATEPATH@
  
@@ -10,11 +10,8 @@ $NetBSD: patch-aa,v 1.4 2002/05/13 15:15:24 lukem Exp $
 +SUBDIRS	= common
  CFLAGS	= -I../include @CFLAGS@
  
-+
  # these are here so they can be overridden during a make install
- RUNUID=@RUN_AS_USER@
- RUNGID=@RUN_AS_GROUP@
-@@ -64,7 +65,7 @@
+@@ -65,7 +65,7 @@ install-dirs:
  install-man:
  	@cd man; $(MAKE) install; cd ..;
  
@@ -23,7 +20,7 @@ $NetBSD: patch-aa,v 1.4 2002/05/13 15:15:24 lukem Exp $
  	@cd clients; $(MAKE) cgi; cd ..;
  
  install-cgi: install-dirs 
-@@ -72,7 +73,6 @@
+@@ -73,7 +73,6 @@ install-cgi: install-dirs 
  		./install-sh -d $(CGIPATH) || exit 1; \
  	fi \
  

@@ -1,0 +1,18 @@
+$NetBSD: patch-ac,v 1.4 2002/07/03 11:57:13 lukem Exp $
+
+--- clients/upslog.c.orig	Fri May 17 08:26:22 2002
++++ clients/upslog.c
+@@ -180,6 +180,13 @@ void print_status(void)
+ 			continue;
+ 		}
+ 
++		/* if a %%, append % and start over */
++		if (logformat[i+1] == '%') {
++			snprintfcat(logbuffer, sizeof(logbuffer), "%%");
++			i++;
++			continue;
++		}
++
+ 		/* it must start with a % now - %<cmd>[ <arg>]%*/
+ 
+ 		cmd = xstrdup(&logformat[i+1]);
