@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.306 2004/02/29 17:49:30 xtraeme Exp $
+# $NetBSD: Makefile,v 1.307 2004/03/03 21:19:34 ben Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -115,7 +115,6 @@ SUBDIR+=	libwww
 SUBDIR+=	links
 SUBDIR+=	links-gui
 SUBDIR+=	lynx
-SUBDIR+=	lynx-current
 SUBDIR+=	mMosaic
 SUBDIR+=	make_album
 SUBDIR+=	micro_httpd

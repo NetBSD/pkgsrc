@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5077 2004/03/03 21:09:52 manu Exp $
+$NetBSD: CHANGES,v 1.5078 2004/03/03 21:19:34 ben Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1142,3 +1142,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated py-ZODB 3.2.1 [recht 2004-03-03]
 	Updated silc-server to 0.9.18 [salo 2004-03-03]
 	Updated milter-regex to 1.2 [manu 2004-03-03]
+	Deleted lynx-current [ben 2004-03-03]
