@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.341 2004/07/24 01:57:07 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.342 2004/07/29 05:15:31 xtraeme Exp $
 ###########################################################################
 
 			==========================
@@ -2911,27 +2911,38 @@ version; this way, the package benefits of any bug fixes that may have appeared
 since it was released.
 
 
- 10.43 How can I use XFree86 from pkgsrc?
- =======================================================
+ 10.43 How can I install/use XFree86 from pkgsrc?
+ ========================================
 
 If you want to use XFree86 from pkgsrc instead of your system's own
 X11 (/usr/X11R6, /usr/openwin, ...), you will have to add the following
-lines into /etc/mk.conf:
+lines into mk.conf:
 
     X11_TYPE=XFree86
     X11BASE=/usr/pkg/X11R6
 
 `LOCALBASE' by default is `/usr/pkg'.
 
+ 10.44 How can I install/use X.org from pkgsrc?
+ ======================================
 
- 10.44 Where's the pkgviews documentation?
+If you want to use X.org from pkgsrc instead of your system's own
+X11 (/usr/X11R6, /usr/openwin, ...) you will have to add the following
+lines into mk.conf:
+
+    X11_TYPE=xorg
+    X11BASE=/usr/pkg/X11R6
+
+`LOCALBASE' by default is `/usr/pkg'.
+
+ 10.45 Where's the pkgviews documentation?
  =========================================
 
 Pkgviews is tightly integrated with buildlink. You can find a
 pkgviews User's Guide in pkgsrc/mk/buildlink3/PKGVIEWS_UG.
 
 
- 10.45 How do I handle common shared directories?
+ 10.46 How do I handle common shared directories?
  ================================================
 
 A "shared directory" is a directory where multiple (and unrelated)
@@ -2980,7 +2991,7 @@ the *-x11-dirs packages.  Just specify the name without that part and pkgsrc
 (in particular, mk/dirs.mk) will take care of it.
 
 
- 10.46 How can I tweak 'make print-PLIST' output?
+ 10.47 How can I tweak 'make print-PLIST' output?
  ================================================
 
 If you have used any of the *-dirs packages, as explained in 10.45, you
