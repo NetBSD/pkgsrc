@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.7 2003/05/02 11:55:34 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2003/05/05 16:36:35 jmmv Exp $
 #
 
 DISTNAME=		gwydion-dylan-${DYLAN_VERSION}
-PKGREVISION=	1
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		ftp://berlin.ccc.de/pub/gd/src/	\
 			ftp://ftp.fu-berlin.de/pub/unix/languages/dylan/src/ \
