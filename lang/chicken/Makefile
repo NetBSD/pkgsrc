@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/08/20 14:53:18 agc Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/20 16:35:22 itojun Exp $
 #
 
 DISTNAME=	chicken-0.1072
@@ -11,6 +11,7 @@ COMMENT=	scheme to C compiler, handling R5RS
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+USE_GMAKE=	yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../mk/bsd.pkg.mk"
