@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:37:32 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/10/06 12:43:08 rh Exp $
 #
 
-DISTNAME=	libunicode-0.4
-CATEGORIES=	textproc devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=unstable/sources/libunicode/}
+DISTNAME=		libunicode-0.4
+CATEGORIES=		textproc devel
+MASTER_SITES=		${MASTER_SITE_GNOME:=unstable/sources/libunicode/}
 
-MAINTAINER=	rh@netbsd.org
-HOMEPAGE=	http://www.pango.org/
-COMMENT=	library for manipulating Unicode characters and strings
+MAINTAINER=		rh@netbsd.org
+HOMEPAGE=		http://www.pango.org/
+COMMENT=		library for manipulating Unicode characters and strings
 
-GNU_CONFIGURE=	YES
-USE_LIBTOOL=	YES
+USE_BUILDLINK_ONLY=	YES
+GNU_CONFIGURE=		YES
+USE_LIBTOOL=		YES
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
