@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.806 2002/12/16 18:06:33 tron Exp $
+$NetBSD: CHANGES,v 1.807 2002/12/16 18:06:59 tron Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3974,3 +3974,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated zope25-ZPhotoSlides to 0.7 [drochner 2002-12-16]
 	Added zope25-RDFSummary-2.3 [drochner 2002-12-16]
 	Updated sane-backends to 1.0.9 [tron 2002-12-16]
+	Updated sane-frontends to 1.0.9 [tron 2002-12-16]
