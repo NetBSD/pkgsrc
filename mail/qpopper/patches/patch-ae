@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.7 1998/09/09 07:20:32 tron Exp $
+
 --- popauth.8.orig	Fri Jul 10 01:44:08 1998
 +++ popauth.8	Wed Sep  9 09:10:57 1998
 @@ -5 +5 @@
