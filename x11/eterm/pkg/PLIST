@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/03/30 04:48:43 garbled Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/04/12 18:57:36 hubertf Exp $
 man/man1/Eterm.1
 lib/libmej.so.8.8
-lib/libmej.la
 lib/libmej.a
 lib/libEterm.so.8.8
-lib/libEterm.la
 lib/libEterm.a
 share/Eterm/pix/004.png
 share/Eterm/pix/015.png
