@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.959 2002/04/07 17:09:57 dmcmahill Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.960 2002/04/09 22:15:40 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -167,7 +167,6 @@ RESTRICTED?=		uses Kerberos encryption code
 BUILD_DEFS+=		KERBEROS
 .endif
 
-PERL5?=			${LOCALBASE}/bin/perl
 PERL5_REQD?=		5.0
 .if defined(USE_PERL5)
 DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
