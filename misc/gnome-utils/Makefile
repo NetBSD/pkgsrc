@@ -1,4 +1,4 @@
-## $NetBSD: Makefile,v 1.25 2001/01/08 16:12:59 wiz Exp $
+## $NetBSD: Makefile,v 1.26 2001/01/28 00:51:53 dmcmahill Exp $
 
 DISTNAME=		gnome-utils-1.2.0
 CATEGORIES=		misc x11 gnome
@@ -16,6 +16,7 @@ DEPENDS+=		libglade>=0.13:../../devel/libglade
 
 USE_CURSES=		# defined
 USE_GMAKE=		# defined
+USE_LIBINTL=		# defined
 USE_X11BASE=		# defined
 
 GNU_CONFIGURE=		# defined
