@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/16 19:41:50 seb Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/23 22:07:53 reed Exp $
 bin/xzwrite
 bin/zaway
 bin/zctl
@@ -9,7 +9,6 @@ bin/znol
 bin/zstat
 bin/zwgc
 bin/zwrite
-etc/rc.d/zhm
 include/zephyr/mit-copyright.h
 include/zephyr/zephyr.h
 include/zephyr/zephyr_err.h
