@@ -1,4 +1,4 @@
-/*	$NetBSD: nbcompat.h,v 1.32 2004/03/11 13:28:45 grant Exp $	*/
+/*	$NetBSD: nbcompat.h,v 1.33 2004/04/20 12:13:05 grant Exp $	*/
 
 /*-
  * Copyright (c) 2003 The NetBSD Foundation, Inc.
@@ -66,10 +66,12 @@
 #include <termios.h>
 #include <unistd.h>
 
-#if HAVE_POLL_H
-# include <poll.h>
-#elif HAVE_SYS_POLL_H
-# include <sys/poll.h>
+#if HAVE_POLL
+# if HAVE_POLL_H
+#  include <poll.h>
+# elif HAVE_SYS_POLL_H
+#  include <sys/poll.h>
+# endif
 #else
 # include <nbcompat/poll.h>
 #endif

@@ -158,6 +158,9 @@
 /* Define to 1 if the `MD5Init' function is built into the library. */
 #undef HAVE_NBCOMPAT_MD5INIT
 
+/* Define to 1 if the `poll' function is built into the library. */
+#undef HAVE_NBCOMPAT_POLL
+
 /* Define to 1 if the `statfs' function is built into the library. */
 #undef HAVE_NBCOMPAT_STATFS
 
@@ -181,9 +184,6 @@
 
 /* Define to 1 if you have the <paths.h> header file. */
 #undef HAVE_PATHS_H
-
-/* Define to 1 if you have the `poll' function. */
-#undef HAVE_POLL
 
 /* Define to 1 if you have the <poll.h> header file. */
 #undef HAVE_POLL_H
