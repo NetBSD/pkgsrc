@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2002/09/13 05:16:46 jlam Exp $
+# $NetBSD: Makefile.common,v 1.37 2002/09/13 23:13:27 jlam Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -133,6 +133,13 @@ ALL_TARGET=		std
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} == "SunOS"
+.  include "../../lang/gcc/Makefile.gcc"
+.endif
+.if defined(ZOULARISBASE)
+LDFLAGS+=	-L${ZOULARISBASE}/lib -Wl,-R${ZOULARISBASE}/lib
+.endif
+
 .if defined(PAPERSIZE) && (${PAPERSIZE} == "A4" || ${PAPERSIZE} == "a4")
 CFLAGS+=		-DA4
 .endif
@@ -235,7 +242,7 @@ gimpprint-configure:
 	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} all-local &&		\
 	( ${ECHO} '#ifndef GIMPPRINT_VERSION_FIX';			\
 	  ${ECHO} '#define GIMPPRINT_VERSION_FIX';			\
-	  ${GREP} "#define \(VERSION\|RELEASE_DATE\)" ../../config.h;	\
+	  ${EGREP} '#define (VERSION|RELEASE_DATE)' ../../config.h;	\
 	  ${ECHO} '#endif /* GIMPPRINT_VERSION_FIX */';			\
 	) >> gdevstp-print.h;						\
 	${CP} *.c *.h ${WRKSRC}/src &&					\
