@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/01 20:06:36 jdolecek Exp $
+lib/php/.lock
+lib/php/.registry/net_dime.reg
+lib/php/Net/DIME.php
+lib/php/test/Net_DIME/test/dime_message_test.php
+lib/php/test/Net_DIME/test/dime_record_test.php
+@dirrm lib/php/test/Net_DIME/test
+@dirrm lib/php/test/Net_DIME
+@dirrm lib/php/test
+@dirrm lib/php/Net
+@dirrm lib/php/.registry
