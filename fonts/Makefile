@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2002/07/08 01:49:21 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2002/07/10 18:19:05 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -13,17 +13,17 @@ SUBDIR+=	arphic-ttf
 SUBDIR+=	bakoma-fonts
 SUBDIR+=	cyr-rfx-bulgarian-mik
 SUBDIR+=	cyr-rfx-ibm-cp866
-SUBDIR+=	cyr-rfx-iso10646-0400
-SUBDIR+=	cyr-rfx-iso8859-15
-SUBDIR+=	cyr-rfx-iso8859-5
-SUBDIR+=	cyr-rfx-koi8-1
+SUBDIR+=	cyr-rfx-iso10646_0400
+SUBDIR+=	cyr-rfx-iso8859_15
+SUBDIR+=	cyr-rfx-iso8859_5
 SUBDIR+=	cyr-rfx-koi8-o
 SUBDIR+=	cyr-rfx-koi8-ru
 SUBDIR+=	cyr-rfx-koi8-ub
+SUBDIR+=	cyr-rfx-koi8_1
 SUBDIR+=	cyr-rfx-mac-cyrillic
 #SUBDIR+=	cyr-rfx-share		# only shared files for cyr-rfx-*
-SUBDIR+=	cyr-rfx-windows-1251
-SUBDIR+=	cyr-rfx-winlatin-1
+SUBDIR+=	cyr-rfx-windows_1251
+SUBDIR+=	cyr-rfx-winlatin_1
 SUBDIR+=	dbz-ttf
 SUBDIR+=	efont-unicode
 SUBDIR+=	freefonts
