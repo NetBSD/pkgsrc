@@ -1,7 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2003/07/30 15:13:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/09/18 01:42:33 markd Exp $
 share/doc/kde/HTML/it/amor/common
 share/doc/kde/HTML/it/amor/index.cache.bz2
 share/doc/kde/HTML/it/amor/index.docbook
+share/doc/kde/HTML/it/artsbuilder/digitalaudio.docbook
+share/doc/kde/HTML/it/artsbuilder/midiintro.docbook
+share/doc/kde/HTML/it/artsbuilder/porting.docbook
+share/doc/kde/HTML/it/artsbuilder/references.docbook
 share/doc/kde/HTML/it/atlantik/common
 share/doc/kde/HTML/it/atlantik/index.cache.bz2
 share/doc/kde/HTML/it/atlantik/index.docbook
@@ -56,6 +60,9 @@ share/doc/kde/HTML/it/common/xml.dcl
 share/doc/kde/HTML/it/flashkard/common
 share/doc/kde/HTML/it/flashkard/index.cache.bz2
 share/doc/kde/HTML/it/flashkard/index.docbook
+share/doc/kde/HTML/it/kaboodle/common
+share/doc/kde/HTML/it/kaboodle/index.cache.bz2
+share/doc/kde/HTML/it/kaboodle/index.docbook
 share/doc/kde/HTML/it/kaddressbook/common
 share/doc/kde/HTML/it/kaddressbook/index.cache.bz2
 share/doc/kde/HTML/it/kaddressbook/index.docbook
@@ -362,6 +369,12 @@ share/doc/kde/HTML/it/kmines/index.cache.bz2
 share/doc/kde/HTML/it/kmines/index.docbook
 share/doc/kde/HTML/it/kmines/kmines1.png
 share/doc/kde/HTML/it/kmines/kmines2.png
+share/doc/kde/HTML/it/kmix/common
+share/doc/kde/HTML/it/kmix/index.cache.bz2
+share/doc/kde/HTML/it/kmix/index.docbook
+share/doc/kde/HTML/it/kmixcfg/common
+share/doc/kde/HTML/it/kmixcfg/index.cache.bz2
+share/doc/kde/HTML/it/kmixcfg/index.docbook
 share/doc/kde/HTML/it/kmoon/common
 share/doc/kde/HTML/it/kmoon/index.cache.bz2
 share/doc/kde/HTML/it/kmoon/index.docbook
@@ -450,6 +463,27 @@ share/doc/kde/HTML/it/kruler/index.docbook
 share/doc/kde/HTML/it/ksame/common
 share/doc/kde/HTML/it/ksame/index.cache.bz2
 share/doc/kde/HTML/it/ksame/index.docbook
+share/doc/kde/HTML/it/kscd/basic_operation.png
+share/doc/kde/HTML/it/kscd/cddb_button.png
+share/doc/kde/HTML/it/kscd/cddb_editor.png
+share/doc/kde/HTML/it/kscd/cdplayer_tab.png
+share/doc/kde/HTML/it/kscd/common
+share/doc/kde/HTML/it/kscd/configuration_button.png
+share/doc/kde/HTML/it/kscd/control_panel.png
+share/doc/kde/HTML/it/kscd/eject_button.png
+share/doc/kde/HTML/it/kscd/exit_button.png
+share/doc/kde/HTML/it/kscd/freedb_tab.png
+share/doc/kde/HTML/it/kscd/index.cache.bz2
+share/doc/kde/HTML/it/kscd/index.docbook
+share/doc/kde/HTML/it/kscd/info_button.png
+share/doc/kde/HTML/it/kscd/kscd_in_kde_panel.png
+share/doc/kde/HTML/it/kscd/no_access.png
+share/doc/kde/HTML/it/kscd/random_button.png
+share/doc/kde/HTML/it/kscd/smtp_tab.png
+share/doc/kde/HTML/it/kscd/status_display.png
+share/doc/kde/HTML/it/kscd/time_display_toggle.png
+share/doc/kde/HTML/it/kscd/track_selector.png
+share/doc/kde/HTML/it/kscd/volume_slider.png
 share/doc/kde/HTML/it/kshisen/common
 share/doc/kde/HTML/it/kshisen/index.cache.bz2
 share/doc/kde/HTML/it/kshisen/index.docbook
@@ -1073,10 +1107,10 @@ share/kde/locale/it/LC_MESSAGES/webarchiver.mo
 share/kde/locale/it/charset
 share/kde/locale/it/entry.desktop
 share/kde/locale/it/flag.png
-@comment dirrm share/kde/locale/it/LC_MESSAGES
-@comment dirrm share/kde/locale/it
+@comment @dirrm share/kde/locale/it/LC_MESSAGES
+@comment @dirrm share/kde/locale/it
 @dirrm share/kde/apps/ktuberling/sounds/it
-@comment dirrm share/kde/apps/ktuberling/sounds
+@comment @dirrm share/kde/apps/ktuberling/sounds
 @dirrm share/doc/kde/HTML/it/megami
 @dirrm share/doc/kde/HTML/it/lskat
 @dirrm share/doc/kde/HTML/it/lisa
@@ -1104,6 +1138,7 @@ share/kde/locale/it/flag.png
 @dirrm share/doc/kde/HTML/it/ksirtet
 @dirrm share/doc/kde/HTML/it/ksim
 @dirrm share/doc/kde/HTML/it/kshisen
+@dirrm share/doc/kde/HTML/it/kscd
 @dirrm share/doc/kde/HTML/it/ksame
 @dirrm share/doc/kde/HTML/it/kruler
 @dirrm share/doc/kde/HTML/it/kreversi
@@ -1121,6 +1156,8 @@ share/kde/locale/it/flag.png
 @dirrm share/doc/kde/HTML/it/knode
 @dirrm share/doc/kde/HTML/it/kmplot
 @dirrm share/doc/kde/HTML/it/kmoon
+@dirrm share/doc/kde/HTML/it/kmixcfg
+@dirrm share/doc/kde/HTML/it/kmix
 @dirrm share/doc/kde/HTML/it/kmines
 @dirrm share/doc/kde/HTML/it/kmessedwords
 @dirrm share/doc/kde/HTML/it/kmenuedit
@@ -1200,8 +1237,11 @@ share/kde/locale/it/flag.png
 @dirrm share/doc/kde/HTML/it/kamera
 @dirrm share/doc/kde/HTML/it/kalzium
 @dirrm share/doc/kde/HTML/it/kaddressbook
+@dirrm share/doc/kde/HTML/it/kaboodle
 @dirrm share/doc/kde/HTML/it/flashkard
-@comment dirrm share/doc/kde/HTML/it/common
+@comment @dirrm share/doc/kde/HTML/it/common
 @dirrm share/doc/kde/HTML/it/atlantik
+@dirrm share/doc/kde/HTML/it/artsbuilder
 @dirrm share/doc/kde/HTML/it/amor
-@comment dirrm share/doc/kde/HTML/it
+@comment @dirrm share/doc/kde/HTML/it
+

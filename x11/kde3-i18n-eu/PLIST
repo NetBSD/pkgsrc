@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/07/30 15:13:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/09/18 01:42:21 markd Exp $
 share/doc/kde/HTML/eu/common/1.png
 share/doc/kde/HTML/eu/common/10.png
 share/doc/kde/HTML/eu/common/2.png
@@ -31,11 +31,13 @@ share/doc/kde/HTML/eu/common/header.html
 share/doc/kde/HTML/eu/common/headerbg.png
 share/doc/kde/HTML/eu/common/kde-common.css
 share/doc/kde/HTML/eu/common/kde-default.css
+share/doc/kde/HTML/eu/common/kde-localised.css
 share/doc/kde/HTML/eu/common/kde-localised.css.template
 share/doc/kde/HTML/eu/common/kde-web.css
 share/doc/kde/HTML/eu/common/kmenu.png
 share/doc/kde/HTML/eu/common/lgpl-license
 share/doc/kde/HTML/eu/common/lgpl-license.html
+share/doc/kde/HTML/eu/common/logotp3.png
 share/doc/kde/HTML/eu/common/mainfooter.html
 share/doc/kde/HTML/eu/common/mainheader.html
 share/doc/kde/HTML/eu/common/qpl-license.html
@@ -110,10 +112,13 @@ share/kde/locale/eu/LC_MESSAGES/kcmkclock.mo
 share/kde/locale/eu/LC_MESSAGES/kcmkded.mo
 share/kde/locale/eu/LC_MESSAGES/kcmkeys.mo
 share/kde/locale/eu/LC_MESSAGES/kcmkicker.mo
+share/kde/locale/eu/LC_MESSAGES/kcmkio.mo
 share/kde/locale/eu/LC_MESSAGES/kcmkmix.mo
 share/kde/locale/eu/LC_MESSAGES/kcmkonq.mo
 share/kde/locale/eu/LC_MESSAGES/kcmkonqhtml.mo
 share/kde/locale/eu/LC_MESSAGES/kcmkonsole.mo
+share/kde/locale/eu/LC_MESSAGES/kcmkurifilt.mo
+share/kde/locale/eu/LC_MESSAGES/kcmkwindecoration.mo
 share/kde/locale/eu/LC_MESSAGES/kcmkwintheme.mo
 share/kde/locale/eu/LC_MESSAGES/kcmkwm.mo
 share/kde/locale/eu/LC_MESSAGES/kcmlaunch.mo
@@ -125,10 +130,14 @@ share/kde/locale/eu/LC_MESSAGES/kcmnotify.mo
 share/kde/locale/eu/LC_MESSAGES/kcmprintmgr.mo
 share/kde/locale/eu/LC_MESSAGES/kcmsamba.mo
 share/kde/locale/eu/LC_MESSAGES/kcmscreensaver.mo
+share/kde/locale/eu/LC_MESSAGES/kcmsmartcard.mo
 share/kde/locale/eu/LC_MESSAGES/kcmsmserver.mo
+share/kde/locale/eu/LC_MESSAGES/kcmsocks.mo
 share/kde/locale/eu/LC_MESSAGES/kcmspellchecking.mo
 share/kde/locale/eu/LC_MESSAGES/kcmstyle.mo
 share/kde/locale/eu/LC_MESSAGES/kcmtaskbar.mo
+share/kde/locale/eu/LC_MESSAGES/kcmthemes.mo
+share/kde/locale/eu/LC_MESSAGES/kcmusb.mo
 share/kde/locale/eu/LC_MESSAGES/kcontrol.mo
 share/kde/locale/eu/LC_MESSAGES/kdat.mo
 share/kde/locale/eu/LC_MESSAGES/kdcop.mo
@@ -148,6 +157,7 @@ share/kde/locale/eu/LC_MESSAGES/kedit.mo
 share/kde/locale/eu/LC_MESSAGES/kenolaba.mo
 share/kde/locale/eu/LC_MESSAGES/kfindpart.mo
 share/kde/locale/eu/LC_MESSAGES/kfloppy.mo
+share/kde/locale/eu/LC_MESSAGES/kfmclient.mo
 share/kde/locale/eu/LC_MESSAGES/kfmexec.mo
 share/kde/locale/eu/LC_MESSAGES/kfontviewpart.mo
 share/kde/locale/eu/LC_MESSAGES/khelpcenter.mo
@@ -157,11 +167,16 @@ share/kde/locale/eu/LC_MESSAGES/kio_devices.mo
 share/kde/locale/eu/LC_MESSAGES/kio_finger.mo
 share/kde/locale/eu/LC_MESSAGES/kio_fish.mo
 share/kde/locale/eu/LC_MESSAGES/kio_floppy.mo
+share/kde/locale/eu/LC_MESSAGES/kio_imap4.mo
 share/kde/locale/eu/LC_MESSAGES/kio_mac.mo
 share/kde/locale/eu/LC_MESSAGES/kio_man.mo
 share/kde/locale/eu/LC_MESSAGES/kio_nfs.mo
 share/kde/locale/eu/LC_MESSAGES/kio_nntp.mo
+share/kde/locale/eu/LC_MESSAGES/kio_pop3.mo
+share/kde/locale/eu/LC_MESSAGES/kio_print.mo
+share/kde/locale/eu/LC_MESSAGES/kio_sftp.mo
 share/kde/locale/eu/LC_MESSAGES/kio_smb.mo
+share/kde/locale/eu/LC_MESSAGES/kio_smbro.mo
 share/kde/locale/eu/LC_MESSAGES/kio_smtp.mo
 share/kde/locale/eu/LC_MESSAGES/kjobviewer.mo
 share/kde/locale/eu/LC_MESSAGES/klegacyimport.mo
@@ -239,9 +254,9 @@ share/kde/locale/eu/LC_MESSAGES/timezones.mo
 share/kde/locale/eu/charset
 share/kde/locale/eu/entry.desktop
 share/kde/locale/eu/flag.png
-@comment dirrm share/kde/locale/eu/LC_MESSAGES
-@comment dirrm share/kde/locale/eu
+@comment @dirrm share/kde/locale/eu/LC_MESSAGES
+@comment @dirrm share/kde/locale/eu
 @dirrm share/doc/kde/HTML/eu/kdesdk
-@comment dirrm share/doc/kde/HTML/eu/common
-@comment dirrm share/doc/kde/HTML/eu
-@comment dirrm share/doc/kde/HTML
+@comment @dirrm share/doc/kde/HTML/eu/common
+@comment @dirrm share/doc/kde/HTML/eu
+@comment @dirrm share/doc/kde/HTML
