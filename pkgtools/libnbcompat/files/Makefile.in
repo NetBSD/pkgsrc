@@ -1,0 +1,70 @@
+# $NetBSD: Makefile.in,v 1.1.1.1 2003/03/31 05:02:20 grant Exp $
+#
+
+srcdir	= @srcdir@
+prefix	= @prefix@
+VPATH	= @srcdir@
+SHELL	= /bin/sh
+
+CC	= @CC@
+CFLAGS	= -I${srcdir} -I. @INCLUDES@ @CFLAGS@
+CPPFLAGS= @CPPFLAGS@
+DEFS	= @DEFS@
+INSTALL	= @INSTALL@
+LDFLAGS	= @LDFLAGS@
+
+AR	= @AR@
+RANLIB	= @RANLIB@
+
+LIB	= libnbcompat.a
+
+OBJS	= @LIBOBJS@ \
+	md5c.o md5hl.o rmd160.o rmd160hl.o sha1.o sha1hl.o \
+	sha2.o sha2hl.o unvis.o vis.o setmode.o __fts13.o \
+	getid.o misc.o pack_dev.o spec.o stat_flags.o \
+	fparseln.o pwcache.o
+
+LINK=   = $(CCLD) $(CFLAGS) $(LDFLAGS) -o $@
+COMPILE = $(CC) $(CPPFLAGS) $(CFLAGS)
+
+.c.o: nbtypes.h
+	$(COMPILE) $(DEFS) -c $< -o $@
+
+all:	${LIB}
+
+${LIB}: ${OBJS}
+	${AR} cr $@ ${OBJS}
+	${RANLIB} $@
+
+nbtypes.h: bits
+	./bits nbtypes.h
+
+bits: bits.c
+	${CC} -o bits bits.c
+
+install:
+	${INSTALL} -m 555 libnbcompat.a ${prefix}/lib
+	${INSTALL} -m 755 -d ${prefix}/include/libnbcompat
+	${INSTALL} -m 444 extern.h ${prefix}/include/libnbcompat
+	${INSTALL} -m 444 ftpglob.h ${prefix}/include/libnbcompat
+	${INSTALL} -m 444 fts.h ${prefix}/include/libnbcompat
+	${INSTALL} -m 444 md5.h ${prefix}/include/libnbcompat
+	${INSTALL} -m 444 mtree.h ${prefix}/include/libnbcompat
+	${INSTALL} -m 444 namespace.h ${prefix}/include/libnbcompat
+	${INSTALL} -m 444 nbcompat.h ${prefix}/include/libnbcompat
+	${INSTALL} -m 444 nbtypes.h ${prefix}/include/libnbcompat
+	${INSTALL} -m 444 pack_dev.h ${prefix}/include/libnbcompat
+	${INSTALL} -m 444 pwcache.h ${prefix}/include/libnbcompat
+	${INSTALL} -m 444 rmd160.h ${prefix}/include/libnbcompat
+	${INSTALL} -m 444 sha1.h ${prefix}/include/libnbcompat
+	${INSTALL} -m 444 sha2.h ${prefix}/include/libnbcompat
+	${INSTALL} -m 444 stat_flags.h ${prefix}/include/libnbcompat
+	${INSTALL} -m 444 util.h ${prefix}/include/libnbcompat
+	${INSTALL} -m 444 vis.h ${prefix}/include/libnbcompat
+
+clean:
+	rm -f *.a *.o bits nbtypes.h config.h
+
+distclean: clean
+	rm -f Makefile config.log config.status configure.lineno
+
