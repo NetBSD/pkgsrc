@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 1999/02/04 18:54:35 agc Exp $
+# $NetBSD: Makefile,v 1.7 1999/03/08 20:58:16 agc Exp $
 #
 
-DISTNAME=	wily-0.13.36
+DISTNAME=	wily-0.13.41
 CATEGORIES=	plan9 editors
 MASTER_SITES=	ftp://ftp.cs.su.oz.au/gary/wily/src/
 EXTRACT_SUFX=	.tgz
