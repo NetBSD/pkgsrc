@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2001/04/12 21:30:40 zuntum Exp $
+# $NetBSD: Makefile,v 1.131 2001/04/22 08:23:42 tron Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -20,6 +20,7 @@ SUBDIR+=	clanlib
 SUBDIR+=	cqcam
 SUBDIR+=	denemo
 SUBDIR+=	dia
+SUBDIR+=	dvdview
 SUBDIR+=	dx
 SUBDIR+=	dxsamples
 SUBDIR+=	ee
