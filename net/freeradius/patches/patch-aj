@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2004/10/02 12:06:03 adrianp Exp $
+
+--- src/modules/rlm_ldap/Makefile.in.orig	2004-09-29 15:44:13.000000000 +0100
++++ src/modules/rlm_ldap/Makefile.in	2004-09-29 15:45:55.000000000 +0100
+@@ -2,7 +2,7 @@
+ SRCS       = rlm_ldap.c
+ HEADERS    =
+ RLM_CFLAGS = @ldap_cflags@
+-RLM_LIBS   = @ldap_ldflags@
++RLM_LIBS   = @ldap_ldflags@ -L${LOCALBASE}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib
+ 
+ include ../rules.mak
+ 
