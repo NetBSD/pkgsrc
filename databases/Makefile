@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2004/01/07 11:08:53 is Exp $
+# $NetBSD: Makefile,v 1.112 2004/01/07 13:42:57 is Exp $
 #
 
 COMMENT=	Databases
@@ -29,6 +29,7 @@ SUBDIR+=	kpsql
 SUBDIR+=	libgda
 SUBDIR+=	libgnomedb
 SUBDIR+=	libpqxx
+SUBDIR+=	libpqxx-doc
 SUBDIR+=	mergeant
 SUBDIR+=	metakit-lib
 SUBDIR+=	myodbc
