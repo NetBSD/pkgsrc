@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2002/03/07 07:41:39 jmc Exp $
+$NetBSD: distinfo,v 1.4 2003/12/01 15:07:03 cube Exp $
 
 SHA1 (ppp-2.3.9.tar.gz) = ef5ef4686f6738193ec88972902f9a5a6fb8f5dd
 Size (ppp-2.3.9.tar.gz) = 768540 bytes
@@ -42,7 +42,7 @@ SHA1 (patch-bp) = c606c83604b588e1574cdb96f035768df50aca53
 SHA1 (patch-bq) = 2e0ea29dcba6571a764f8c1d9019d5e9fa9ff8e0
 SHA1 (patch-br) = 3db283aba2c4f41db05cc5b327383cb5f381a7b7
 SHA1 (patch-bs) = 41cfdbf71044e7f1988f26b56ee35f9501ff054f
-SHA1 (patch-bt) = ca2b43c28de0d59d188231a0219a6b19948b0d37
+SHA1 (patch-bt) = 2387aacd54aa0a5dea1cc0cdeeaaeeb6956d0328
 SHA1 (patch-bu) = f8ed281a92ee7dd9e733c22b54d6e63c7da905b3
 SHA1 (patch-bv) = 4ecb556fa6e8e25d0535a98af122634aae6d5071
 SHA1 (patch-bw) = b1d045d0d4d7e0e6bfe5ce44b976b26c2a9f8416
