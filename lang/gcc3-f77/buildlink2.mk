@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2004/02/01 14:05:47 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/03/01 11:39:58 markd Exp $
 
 .if !defined(GCC3F77_BUILDLINK2_MK)
 GCC3F77_BUILDLINK2_MK=	# defined
@@ -26,6 +26,7 @@ BUILDLINK_WRAPPER_ENV+=	\
 	COMPILER_PATH="${BUILDLINK_DIR}/bin"; export COMPILER_PATH
 
 BUILDLINK_FILES.gcc3f77=	${_GCC_SUBPREFIX}lib/gcc-lib/*/*/include/g2c.h
+BUILDLINK_FILES.gcc3f77+=	${_GCC_SUBPREFIX}lib/libfrtbegin.*
 BUILDLINK_FILES.gcc3f77+=	${_GCC_SUBPREFIX}lib/libg2c.*
 
 BUILDLINK_TARGETS+=	gcc3f77-buildlink
