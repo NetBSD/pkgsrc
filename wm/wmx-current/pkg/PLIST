@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/18 20:17:11 jlam Exp $
+bin/wmx
+share/doc/wmx/README
+share/doc/wmx/README.contrib
+@dirrm share/doc/wmx
+@exec	mkdir -p %D/etc/wmx
+@unexec	rmdir -p %D/etc/wmx 2>/dev/null || true
