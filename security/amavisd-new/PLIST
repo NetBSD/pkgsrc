@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/06 15:05:54 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/11/28 23:31:49 wiz Exp $
 ${MILTER}sbin/amavis
 ${MILTER}sbin/amavis-milter
 sbin/amavisd
+sbin/amavisd-nanny
 share/doc/amavisd-new/AAAREADME.first
 share/doc/amavisd-new/INSTALL
 share/doc/amavisd-new/LDAP.schema
 share/doc/amavisd-new/LICENSE
 share/doc/amavisd-new/MANIFEST
+share/doc/amavisd-new/README.banned
 share/doc/amavisd-new/README.chroot
 share/doc/amavisd-new/README.contributed
 share/doc/amavisd-new/README.courier
@@ -26,6 +28,7 @@ share/doc/amavisd-new/README.protocol
 share/doc/amavisd-new/README.sendmail
 share/doc/amavisd-new/README.sendmail-dual
 share/doc/amavisd-new/RELEASE_NOTES
+share/doc/amavisd-new/amavisd-new-docs.html
 share/examples/amavisd-new/amavisd.conf-default
 share/examples/amavisd-new/amavisd.conf-minimal
 share/examples/amavisd-new/amavisd.conf-sample
