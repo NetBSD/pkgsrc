@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2001/04/29 20:42:28 jlam Exp $
+# $NetBSD: Makefile,v 1.67 2001/04/29 21:21:13 jlam Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -8,21 +8,21 @@ PKGNAME=		apache-1.3.19nb1
 CATEGORIES=		www
 MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
 			http://www.apache.de/dist/httpd/ \
-			http://www.modssl.org/source/ \
-			ftp://ftp.uni-trier.de/pub/unix/security/mod_ssl/source/ \
 			http://www.netbsd.org/images/logos/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
-			${MODSSL_DISTNAME}${EXTRACT_SUFX} \
 			sitedrivenby.gif
+
+MASTER_SITES+=		http://www.modssl.org/source/ \
+			ftp://ftp.uni-trier.de/pub/unix/security/mod_ssl/source/
+DISTFILES+=		${MODSSL_DISTNAME}${EXTRACT_SUFX}
+MODSSL_DISTNAME=	mod_ssl-2.8.2-1.3.19
+MODSSL_SRC=		${WRKDIR}/${MODSSL_DISTNAME}
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://httpd.apache.org/
 COMMENT=		HTTP (Web) server
 
 CONFLICTS=		apache-*modssl-* apache6-*
-
-MODSSL_DISTNAME=	mod_ssl-2.8.2-1.3.19
-MODSSL_SRC=		${WRKDIR}/${MODSSL_DISTNAME}
 
 EXTRACT_ONLY=		${DISTFILES:N*.gif}
 HAS_CONFIGURE=		# defined
