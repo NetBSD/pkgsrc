@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2000/02/02 06:53:21 itojun Exp $
+# $NetBSD: Makefile,v 1.80 2000/02/19 22:34:56 rh Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -60,6 +60,7 @@
 #    SUBDIR += oonsoo
     SUBDIR += omega
     SUBDIR += pacman
+    SUBDIR += plib
     SUBDIR += pysol
 #    SUBDIR += qcc
 #    SUBDIR += quake
