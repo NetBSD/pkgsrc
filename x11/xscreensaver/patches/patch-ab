@@ -1,20 +1,17 @@
-$NetBSD: patch-ab,v 1.4 1999/11/21 16:49:12 frueauf Exp $
+$NetBSD: patch-ab,v 1.5 2000/02/01 02:00:14 wiz Exp $
 
---- hacks/Makefile.in.orig	Fri Nov 19 03:49:27 1999
-+++ hacks/Makefile.in	Sun Nov 21 17:44:36 1999
-@@ -189,9 +189,9 @@
- 	  else								\
- 	    p=$(srcdir)/$$program ;					\
- 	  fi ;								\
--	  echo $(INSTALL_PROGRAM) $$p					\
-+	  echo $(INSTALL) -c -o root -g wheel -m 555 $$p		\
- 	    $(install_prefix)$(HACKDIR)/$$program ;			\
--	  $(INSTALL_PROGRAM) $$p					\
-+	  $(INSTALL) -c -o root -g wheel -m 555 $$p			\
- 	    $(install_prefix)$(HACKDIR)/$$program ;			\
- 	done
- 
-@@ -499,6 +499,11 @@
+--- ./hacks/Makefile.in.orig	Sun Jan 30 13:31:59 2000
++++ ./hacks/Makefile.in	Tue Feb  1 02:34:20 2000
+@@ -30,7 +30,7 @@
+ SHELL		= /bin/sh
+ INSTALL		= @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+-INSTALL_SCRIPT  = @INSTALL_PROGRAM@
++INSTALL_SCRIPT  = @INSTALL_SCRIPT@
+ INSTALL_DATA	= @INSTALL_DATA@
+ INSTALL_DIRS	= @INSTALL_DIRS@
+ HACKDIR		= @HACKDIR@
+@@ -501,6 +500,11 @@
  
  bsod:	 	bsod.o		$(HACK_OBJS) $(COL)
  	$(CC_HACK) -o $@ $@.o	$(HACK_OBJS) $(COL) $(HACK_LIBS) $(XPM_LIBS)
