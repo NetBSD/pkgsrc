@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2000/01/23 10:41:11 itojun Exp $
+@comment $NetBSD: PLIST,v 1.7 2000/08/14 23:48:24 wiz Exp $
 bin/encode_keychange
 bin/snmpbulkwalk
 bin/snmpcheck
@@ -32,6 +32,7 @@ include/ucd-snmp/ucd-snmp-config.h
 include/ucd-snmp/ucd-snmp-includes.h
 include/ucd-snmp/version.h
 lib/libsnmp.a
+lib/libsnmp.la
 lib/libsnmp.so.0.0
 man/man1/snmpbulkwalk.1
 man/man1/snmpcmd.1
