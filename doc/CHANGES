@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4451 2004/01/13 22:28:40 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4452 2004/01/13 22:50:38 epg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -207,3 +207,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated sylpheed-claws to 0.9.8 [adam 2004-01-13]
 	Updated php4-ftp to 4.3.4nb2 [jdolecek 2004-01-13]
 	Updated sylpheed-gtk2 to 0.9.8a [xtraeme 2004-01-13]
+	Updated subversion to 0.36.0 [epg 2004-01-13]
