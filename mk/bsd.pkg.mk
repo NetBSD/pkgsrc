@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.455 2000/06/03 14:24:13 mycroft Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.456 2000/06/03 14:58:06 mycroft Exp $
 #
 # This file is in the public domain.
 #
@@ -1920,13 +1920,12 @@ update-dirlist:
 
 ${DDIR}: ${DLIST}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	ddir=`${SED} 's:-[^-]*$$::' <${DLIST}` ;			\
+	ddir=`${SED} 's:-[^-]*$$::' <${DLIST}`;				\
 	if ${PKG_INFO} -b $${ddir} >/dev/null 2>&1 ; then		\
 		${PKG_INFO} -b $${ddir} |				\
-			${EGREP} '^[^/]+/[^/]+/Makefile:' |		\
-			${CUT} -d'/' -f1-2 >${DDIR} ;			\
+		    ${SED} -ne 's,^\([^/]*/[^/]*\)/Makefile:.*,\1,p'	\
 	else 								\
-		${ECHO} >${DDIR} ;					\
+		${ECHO} >${DDIR};					\
 	fi
 
 ${DLIST}:
@@ -2425,20 +2424,17 @@ binpkg-list:
 		done ; 							\
 		;;							\
 	*)								\
-		cd ${PACKAGES}/../..;					\
+		cd ${PACKAGES};						\
 		for i in [1-9].*/*; do  				\
-			cd ${PACKAGES}/../..;				\
-			d=$$i/${PKGREPOSITORYSUBDIR} ; 			\
-			if [ -d "$$d" ]; then 				\
-				cd "$$d" ; 				\
-				for j in ${PKGNAME:C/-[^-]*$/-[0-9]*/}${PKG_SUFX} ;	\
+			if cd ${PACKAGES}/$$i/${PKGREPOSITORYSUBDIR}; then \
+				for j in ${PKGNAME:C/-[^-]*$/-[0-9]*/}${PKG_SUFX};	\
 				do 					\
-					if [ -f "$$j" ] ; then		\
+					if [ -f "$$j" ]; then		\
 						${ECHO} $$i/$$j; 	\
-					fi ;				\
-				done ; 					\
-			fi  ; 						\
-		done | ${AWK} -F/ '					\
+					fi;				\
+				done; 					\
+			fi; 						\
+		done | sort | ${AWK} -F/ '				\
 			{						\
 				release = $$1;				\
 				arch = $$2; 				\
@@ -2459,7 +2455,7 @@ binpkg-list:
 					release=ava[3];			\
 					print "<TR><TD>" arch ":<TD>" urls[av] "<TD>(${OPSYS} " release ")"; \
 				}					\
-			} ' | sort					\
+			}'						\
 		;;							\
 	esac
 .endif
