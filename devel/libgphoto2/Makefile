@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/10/03 00:13:30 tv Exp $
+# $NetBSD: Makefile,v 1.18 2004/10/30 00:24:16 minskim Exp $
 #
 
 DISTNAME=	libgphoto2-2.1.4
@@ -22,5 +22,6 @@ GNU_CONFIGURE=		YES
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
