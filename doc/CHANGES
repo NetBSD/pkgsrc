@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2472 2003/06/09 22:13:40 jmmv Exp $
+$NetBSD: CHANGES,v 1.2473 2003/06/09 22:18:43 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2398,3 +2398,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libnbcompat to 20030609 [grant 2003-06-09]
 	Updated xmcd to 3.0.2nb1 [jdc 2003-06-09]
 	Updated tkpasman to 2.2a [jmmv 2003-06-09]
+	Added pkg_install-info-4.5 [seb 2003-06-09]
