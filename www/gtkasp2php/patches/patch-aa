@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/11/22 11:32:29 agc Exp $
+
+--- Makefile.orig	Mon Jul  9 02:54:24 2001
++++ Makefile	Mon Jul  9 02:55:51 2001
+@@ -1,5 +1,6 @@
+ 
+-CC=gcc
++CC+= ${CFLAGS}
++BINDIR= ${PREFIX}/bin
+ 
+ default:
+ 	$(CC) -c conditionals.c -Wall
+@@ -46,10 +47,9 @@
+ 	$(CC) -o unipiss unipiss.c html.o general.o -Wall
+ 
+ install:
+-	@if [ -e asp2php ]; then install asp2php /usr/local/bin; fi;
+-	@if [ -e unipiss ]; then install unipiss /usr/local/bin; fi;
+-	@if [ -e gtkasp2php ]; then install gtkasp2php /usr/local/bin; fi;
+-	@echo "Compiled programs have been installed in /usr/local/bin"
++	@if [ -e unipiss ]; then install unipiss ${BINDIR}; fi;
++	@if [ -e gtkasp2php ]; then install gtkasp2php ${BINDIR}; fi;
++	@echo "Compiled programs have been installed in ${BINDIR}"
+ 	@echo ""
+ 
+ all: default
