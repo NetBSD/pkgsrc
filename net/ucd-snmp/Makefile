@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 1999/02/20 22:48:37 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 1999/03/07 04:02:06 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/04/06 20:50:31 andreas Exp
 #
 
-DISTNAME=	ucd-snmp-3.5.3
+DISTNAME=	ucd-snmp-3.6
 CATEGORIES=	net
-MASTER_SITES= 	ftp://ftp.ece.ucdavis.edu/pub/snmp/ \
+MASTER_SITES= 	ftp://ucd-snmp.ucdavis.edu/ \
 		ftp://sunsite.cnlab-switch.ch/mirror/ucd-snmp/ \
 		ftp://ftp.win.or.jp/pub/network/snmp/ucd-snmp/
 
