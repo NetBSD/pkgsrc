@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.xemacs,v 1.1 2002/09/14 02:45:40 uebayasi Exp $
+@comment $NetBSD: PLIST.xemacs,v 1.2 2002/10/19 06:58:24 minoura Exp $
 ${EMACS_LISPPREFIX}/semi/auto-autoloads.el
 ${EMACS_LISPPREFIX}/semi/auto-autoloads.elc
 ${EMACS_LISPPREFIX}/semi/custom-load.el
@@ -21,6 +21,7 @@ ${EMACS_LISPPREFIX}/semi/mime-setup.elc
 ${EMACS_LISPPREFIX}/semi/mime-view.el
 ${EMACS_LISPPREFIX}/semi/mime-view.elc
 ${EMACS_LISPPREFIX}/semi/mime-w3.el
+${EMACS_LISPPREFIX}/semi/mime-w3.elc
 ${EMACS_LISPPREFIX}/semi/pgg-def.el
 ${EMACS_LISPPREFIX}/semi/pgg-def.elc
 ${EMACS_LISPPREFIX}/semi/pgg-gpg.el
