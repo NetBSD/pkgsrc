@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2002/10/28 22:21:14 elric Exp $
+# $NetBSD: Makefile,v 1.47 2002/10/30 02:12:44 elric Exp $
 
 DISTNAME=       imap-2001a
 PKGNAME=        imap-uw-2001.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=     mail
 MASTER_SITES=	ftp://ftp.cac.washington.edu/imap/
 EXTRACT_SUFX=	.tar.Z
@@ -118,7 +118,8 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/src/ipopd/ipopd.8 ${PREFIX}/man/man8
 	${LN} -sf ipopd.8 ${PREFIX}/man/man8/ipop2d.8
 	${LN} -sf ipopd.8 ${PREFIX}/man/man8/ipop3d.8
-	${CP} -R ${WRKSRC}/docs ${DOC_DIR}
+	${MKDIR} -p ${DOC_DIR}
+	${CP} -R ${WRKSRC}/docs/ ${DOC_DIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DOC_DIR}
 	${CHMOD} -R a=rX ${DOC_DIR}
 
