@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/15 23:25:38 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/23 02:08:29 minskim Exp $
 #
 
 DISTNAME=		enchant-1.1.3
@@ -16,5 +16,6 @@ PKGCONFIG_OVERRIDE+=	enchant.pc.in
 GNU_CONFIGURE=		yes
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
