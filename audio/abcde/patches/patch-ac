@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/08/16 06:02:48 lukem Exp $
+
+--- abcde.1.orig	Thu Aug 16 08:12:25 2001
++++ abcde.1	Thu Aug 16 15:55:04 2001
+@@ -42,7 +42,7 @@
+ .TP
+ .B \-c [filename]
+ Specifies an additional configuration file to parse. Configuration options
+-in this file override those in /etc/abcde.conf or $HOME/.abcde.conf.
++in this file override those in @ETCDIR@/abcde.conf or $HOME/.abcde.conf.
+ .TP
+ .B \-C [discid]
+ Allows you to resume a session for
+@@ -91,7 +91,7 @@
+ '.mp3'. This can be modified using the OUTPUTFORMAT and VAOUTPUTFORMAT
+ variables in your abcde.conf.
+ .SH CONFIGURATION
+-abcde sources two configuration files on startup - /etc/abcde.conf and
++abcde sources two configuration files on startup - @ETCDIR@/abcde.conf and
+ $HOME/.abcde.conf, in that order. Here is a list of options abcde recognizes:
+ .TP
+ .B CDDBURL
