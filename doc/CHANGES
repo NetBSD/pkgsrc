@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5289 2004/03/21 12:31:29 uebayasi Exp $
+$NetBSD: CHANGES,v 1.5290 2004/03/22 08:27:13 martti Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1505,3 +1505,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libnbcompat to 20040321 [grant 2004-03-21]
 	Updated yale-tftpd to 3.0nb3 [seb 2004-03-21]
 	Updated ndtpd to 3.1.5 [uebayasi 2004-03-21]
+	Updated xpmroot to 2.4.18 [martti 2004-03-22]
+	Updated fvwm2 to 2.4.18 [martti 2004-03-22]
