@@ -1,10 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.6 2003/09/30 00:42:32 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2003/09/30 10:18:57 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+XRENDER_BUILDLINK3_MK:=	${XRENDER_BUILDLINK3_MK}+
 
-.if !defined(XRENDER_BUILDLINK3_MK)
-XRENDER_BUILDLINK3_MK=	YES
-
+.if !empty(XRENDER_BUILDLINK3_MK:M\+)
 .  include "../../mk/bsd.prefs.mk"
 
 BUILDLINK_DEPENDS.Xrender?=	Xrender>=0.2
@@ -71,7 +70,7 @@ BUILDLINK_DEPENDS+=		Xrender
 .  endif
 .endif
 
-.if !defined(XRENDER_BUILDLINK3_MK)
+.if !empty(XRENDER_BUILDLINK3_MK:M\+)
 .  if ${_NEED_XRENDER} == "YES"
 BUILDLINK_PACKAGES+=		Xrender
 .  else

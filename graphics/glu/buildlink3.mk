@@ -1,10 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.5 2003/09/30 00:42:32 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2003/09/30 10:18:57 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+GLU_BUILDLINK3_MK:=	${GLU_BUILDLINK3_MK}+
 
-.if !defined(GLU_BUILDLINK3_MK)
-GLU_BUILDLINK3_MK=	YES
-
+.if !empty(GLU_BUILDLINK3_MK:M\+)
 .  include "../../mk/bsd.prefs.mk"
 
 MESA_REQD?=		3.4.2
@@ -69,12 +68,12 @@ BUILDLINK_DEPENDS+=	glu
 .  endif
 .endif
 
-.if !defined(GLU_BUILDLINK3_MK)
+.if !empty(GLU_BUILDLINK3_MK:M\+)
 .  if ${_NEED_GLU} == "YES"
 BUILDLINK_PACKAGES+=	glu
 .  else
 BUILDLINK_PREFIX.glu=	${X11BASE}
 .  endif
-.endif
+.endif	# GLU_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}
