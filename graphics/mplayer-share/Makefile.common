@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2003/02/18 11:16:33 mrg Exp $
+# $NetBSD: Makefile.common,v 1.25 2003/02/22 16:26:17 fredb Exp $
 
 MPLAYER_DIST_VERSION=	0.90rc4
 #PKGREVISION=		0
@@ -20,7 +20,7 @@ MAINTAINER?=		packages@netbsd.org
 HOMEPAGE?=		http://www.mplayerhq.hu/
 
 PATCHDIR=		${.CURDIR}/../../graphics/mplayer-share/patches
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-powerpc SunOS-*-*
+ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-i386 NetBSD-*-powerpc SunOS-*-*
 
 NO_BIN_ON_CD=		"a dependency is restricted"
 NO_BIN_ON_FTP=		"a dependency is restricted"
