@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2005/03/05 07:43:05 grant Exp $
+# $NetBSD: Makefile,v 1.59 2005/03/18 15:06:10 tv Exp $
 #
 
 .include "../../devel/libtool/Makefile.common"
@@ -12,7 +12,7 @@
 # on the next libtool update.
 #
 PKGNAME=	${DISTNAME:S/-/-base-/}
-PKGREVISION=	9
+PKGREVISION=	10
 SVR4_PKGNAME=	ltoob
 
 COMMENT=	Generic shared library support script (the script itself)
@@ -22,18 +22,27 @@ CONFLICTS+=	libtool<=1.3.5nb11
 TEST_TARGET=	check
 
 .if ${OPSYS} == "AIX"
+
 # always build libraries and executables that use the runtime linker.
 # in addition, disable libtool locking, as the test is broken on AIX,
 # and results in files being locked indefinitely.
 LDFLAGS+=		-Wl,-brtl
 CONFIGURE_ARGS+=	--disable-libtool-lock
-.endif
-.if ${OPSYS} == "NetBSD"
+
+.elif ${OPSYS} == "IRIX"
+
+# The MIPSpro compiler doesn't support -c with -o, but the locking
+# workaround is itself broken.  Disable it unconditionally.
+CONFIGURE_ARGS+=	--disable-libtool-lock
+
+.elif ${OPSYS} == "NetBSD"
 .  if !exists(/usr/libexec/ld.so) && !exists(/usr/libexec/ld.elf_so)
 CONFIGURE_ARGS+=	--disable-shared
 BUILD_SHLIBTOOL=	NO
 .  endif
+
 .endif
+
 CONFIGURE_ARGS+=	--disable-ltdl-install
 BUILD_SHLIBTOOL?=	YES
 
