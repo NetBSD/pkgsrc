@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/05/09 14:50:12 drochner Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/05/09 19:13:29 drochner Exp $
 
 .if !defined(PYGTK2_BUILDLINK2_MK)
 PYGTK2_BUILDLINK2_MK=	# defined
@@ -19,7 +19,7 @@ BUILDLINK_FILES.pygtk2+=	lib/pkgconfig/pygtk-2.0.pc
 .include "../../devel/libglade2/buildlink2.mk"
 .include "../../math/py-Numeric/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
-.include "../../wip/gtkglarea2/buildlink2.mk"
+.include "../../x11/gtkglarea2/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	pygtk2-buildlink
 
