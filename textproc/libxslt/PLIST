@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2002/09/24 14:49:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2002/10/03 14:06:17 martti Exp $
 bin/xslt-config
 bin/xsltproc
 include/libexslt/exslt.h
@@ -25,12 +25,12 @@ lib/libexslt.a
 lib/libexslt.la
 lib/libexslt.so
 lib/libexslt.so.7
-lib/libexslt.so.7.11
+lib/libexslt.so.7.12
 lib/libxslt.a
 lib/libxslt.la
 lib/libxslt.so
 lib/libxslt.so.1
-lib/libxslt.so.1.20
+lib/libxslt.so.1.21
 lib/libxsltbreakpoint.a
 lib/libxsltbreakpoint.la
 lib/libxsltbreakpoint.so
@@ -54,6 +54,8 @@ share/doc/html/libxslt/APIfiles.html
 share/doc/html/libxslt/APIfunctions.html
 share/doc/html/libxslt/APIsymbols.html
 share/doc/html/libxslt/FAQ.html
+share/doc/html/libxslt/Libxslt-Logo-180x168.gif
+share/doc/html/libxslt/Libxslt-Logo-90x34.gif
 share/doc/html/libxslt/book1.html
 share/doc/html/libxslt/bugs.html
 share/doc/html/libxslt/contexts.gif
@@ -98,13 +100,6 @@ share/doc/html/libxslt/tutorial/libxslttutorial.xml
 share/doc/html/libxslt/xslt.html
 share/doc/html/libxslt/xsltproc.html
 share/doc/html/libxslt/xsltproc2.html
-share/doc/libxslt-python-${PKGVERSION}/examples/basic.py
-share/doc/libxslt-python-${PKGVERSION}/examples/extfunc.py
-share/doc/libxslt-python-${PKGVERSION}/examples/pyxsltproc.py
-share/doc/libxslt-python-${PKGVERSION}/examples/test.xml
-share/doc/libxslt-python-${PKGVERSION}/examples/test.xsl
-@dirrm share/doc/libxslt-python-${PKGVERSION}/examples
-@dirrm share/doc/libxslt-python-${PKGVERSION}
 @dirrm share/doc/html/libxslt/tutorial
 @dirrm share/doc/html/libxslt
 @dirrm include/libxslt

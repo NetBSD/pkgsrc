@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2002/09/06 07:02:05 jlam Exp $
+$NetBSD: patch-ac,v 1.2 2002/10/03 14:06:17 martti Exp $
 
---- libexslt/Makefile.in.orig	Thu Sep  5 23:48:37 2002
-+++ libexslt/Makefile.in
-@@ -146,10 +146,7 @@ libexslt_la_SOURCES = \
+--- libexslt/Makefile.in.orig	Thu Sep 26 20:59:28 2002
++++ libexslt/Makefile.in	Thu Oct  3 12:44:31 2002
+@@ -147,10 +147,7 @@
  	dynamic.c
  
  

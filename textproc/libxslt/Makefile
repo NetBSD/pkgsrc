@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2002/10/01 13:37:07 markd Exp $
+# $NetBSD: Makefile,v 1.12 2002/10/03 14:06:17 martti Exp $
 
-DISTNAME=	libxslt-1.0.20
+DISTNAME=	libxslt-1.0.21
 PKGNAME=	${DISTNAME}
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/libxslt/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxslt/1.0/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://xmlsoft.org/

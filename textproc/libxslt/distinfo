@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2002/09/24 14:07:58 martti Exp $
+$NetBSD: distinfo,v 1.8 2002/10/03 14:06:17 martti Exp $
 
-SHA1 (libxslt-1.0.20.tar.gz) = 2255a0259152b401ac786dcfa8c4d0a2c0d22925
-Size (libxslt-1.0.20.tar.gz) = 2130705 bytes
-SHA1 (patch-aa) = 9c48c47a648d923630f9670f70a960009697d34a
-SHA1 (patch-ab) = 34ad37c9430f310de04c152224387a0859ae4713
-SHA1 (patch-ac) = 2b0db3934fc5e5d813b1cca44d4d9382b73d6ecf
+SHA1 (libxslt-1.0.21.tar.gz) = d040a14a5bb21e8db69df22509b38403c32a679c
+Size (libxslt-1.0.21.tar.gz) = 2148312 bytes
+SHA1 (patch-aa) = 17d7ebcd5d3aeae8322718ba73a1d7f1a3c278d5
+SHA1 (patch-ab) = ce7bfef7ed18d9776a87615979a0bd0605ef587f
+SHA1 (patch-ac) = 16e0dc9aadd2487ec0f69369384e71210d370b37
