@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/03/24 19:40:33 magick Exp $
+
+--- Makefile.in.in.orig	Thu Dec 20 07:08:09 2001
++++ Makefile.in.in
+@@ -470,8 +470,12 @@
+ 	fi
+ 	cd ${srcdir}/etc && \
+ 	  for page in xemacs etags ctags gnuserv gnuclient gnuattach gnudoit; do \
+-	    ${INSTALL_DATA} ${srcdir}/etc/$${page}.1 ${mandir}/$${page}${manext} ; \
+-	    chmod 0644 ${mandir}/$${page}${manext} ; \
++           if [ $${page} = etags ] || [ $${page} = ctags ] ; \
++           then \
++             ${INSTALL_MAN} ${srcdir}/etc/$${page}.1 ${mandir}/xemacs-$${page}${manext} ; \
++           else \
++             ${INSTALL_MAN} ${srcdir}/etc/$${page}.1 ${mandir}/$${page}${manext} ; \
++           fi \
+ 	  done
+ 	@echo "If you would like to save approximately 2M of disk space, do"
+ 	@echo "make gzip-el"

@@ -1,0 +1,55 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/03/24 19:40:33 magick Exp $
+
+--- lib-src/Makefile.in.in.orig	Thu Dec 20 08:58:19 2001
++++ lib-src/Makefile.in.in
+@@ -66,7 +66,7 @@
+ INSTALL = @install_pp@ @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+-
++INSTALL_SCRIPT = @INSTALL_SCRIPT@
+ ## ========================== Lists of Files ===========================
+ 
+ #define NO_SHORTNAMES
+@@ -234,7 +234,7 @@
+ 
+ ## Install the internal utilities.  Until they are installed, we can
+ ## just run them directly from lib-src.
+-${archlibdir}: all
++install-archlibdir: all
+ 	@echo; echo "Installing utilities run internally by XEmacs."
+ 	./make-path ${archlibdir}
+ 	if test "`(cd ${archlibdir} && $(pwd))`" != "`$(pwd)`"; then \
+@@ -245,17 +245,27 @@
+ 	if test "`(cd ${archlibdir} && $(pwd))`" \
+ 	     != "`(cd ${srcdir}     && $(pwd))`"; then \
+ 	  for f in ${PRIVATE_INSTALLABLE_SCRIPTS}; do \
+-	    (cd .. && $(INSTALL_PROGRAM) ${srcdir}/$$f ${archlibdir}/$$f); \
++	    (cd .. && $(INSTALL_SCRIPT) ${srcdir}/$$f ${archlibdir}/$$f); \
+ 	  done ; \
+ 	fi
+ 
+-install: ${archlibdir}
++install: install-archlibdir
+ 	@echo; echo "Installing utilities for users to run."
+ 	for file in ${PUBLIC_INSTALLABLE_EXES} ; do \
+-	  (cd .. && $(INSTALL_PROGRAM) lib-src/$${file} ${bindir}/$${file}) ; \
+-	done
++	            if [ $${file} = etags ] || [ $${file} = ctags ] || [ $${file} = b2m ] ; \
++          then \
++            (cd .. && $(INSTALL_PROGRAM) lib-src/$${file} ${bindir}/xemacs-$${file}) ; \
++          else \
++          (cd .. && $(INSTALL_PROGRAM) lib-src/$${file} ${bindir}/$${file}) ; \
++          fi \
++        done
+ 	for file in ${PUBLIC_INSTALLABLE_SCRIPTS} ; do \
+-	  (cd .. && $(INSTALL_PROGRAM) ${srcdir}/$${file} ${bindir}/$${file}) ; \
++          if [ $${file} = rcs-checkin ] || [ $${file} = send-pr ] ; \
++          then \
++            (cd .. && $(INSTALL_SCRIPT) ${srcdir}/$${file} ${bindir}/xemacs-$${file}) ; \
++          else \
++            (cd .. && $(INSTALL_SCRIPT) ${srcdir}/$${file} ${bindir}/$${file}) ; \
++          fi \
+ 	done
+ 
+ uninstall:
