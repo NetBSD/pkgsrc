@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.555 2004/10/31 21:46:40 jdolecek Exp $
+# $NetBSD: Makefile,v 1.556 2004/11/03 20:42:57 adrianp Exp $
 #
 
 COMMENT=	Development utilities
@@ -374,6 +374,7 @@ SUBDIR+=	p5-PV
 SUBDIR+=	p5-Params-Validate
 SUBDIR+=	p5-Parse-RecDescent
 SUBDIR+=	p5-Parse-Yapp
+SUBDIR==	p5-PatchReader
 SUBDIR+=	p5-Perl-Tidy
 SUBDIR+=	p5-PerlIO-via-dynamic
 SUBDIR+=	p5-PerlIO-via-symlink

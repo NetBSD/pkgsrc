@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7682 2004/11/03 19:13:49 minskim Exp $
+$NetBSD: CHANGES,v 1.7683 2004/11/03 20:42:57 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5056,3 +5056,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated sylpheed-gtk2 to 0.9.99.20041024 [minskim 2004-11-03]
 	Updated cpuflags to 0.77 [abs 2004-11-03]
 	Updated exif to 0.6.9nb2 [minskim 2004-11-03]
+	Added p5-PatchReader-0.9.5 [adrianp 2004-11-03]
