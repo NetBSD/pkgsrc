@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.50 2003/04/15 05:29:46 grant Exp $
+# $NetBSD: defs.Darwin.mk,v 1.50.2.1 2003/08/23 09:45:55 jlam Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -32,6 +32,7 @@ HEAD?=		/usr/bin/head
 HOSTNAME_CMD?=	/bin/hostname
 ID?=		/usr/bin/id
 LDCONFIG?=	/sbin/ldconfig
+LDD?=		/usr/bin/otool -L
 LN?=		/bin/ln
 LS?=		/bin/ls
 M4?=		/usr/bin/m4 
