@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/28 23:51:19 heinz Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/29 00:02:03 heinz Exp $
 #
 
 DISTNAME=	prayer-1.0.8
@@ -34,7 +34,6 @@ pre-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 
 post-install:
-	#${FIND} -d ${PREFIX}/share/prayer -name CVS -type d -exec ${RM} -r {} \;
 	${FIND} ${PREFIX}/share/prayer -name CVS -type d -print | ${SORT} -r | \
 		${XARGS} ${RM} -r
 
