@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2002/09/30 15:50:57 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/22 12:40:38 wiz Exp $
 #
 
-DISTNAME=	tuxpaint-2002.09.29
+DISTNAME=	tuxpaint-2002.10.20
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.sonic.net/pub/users/nbs/unix/x/tuxpaint/
 
@@ -11,6 +11,7 @@ COMMENT=	drawing program for small children
 
 USE_BUILDLINK2=	YES
 USE_GMAKE=	YES
+MANCOMPRESSED=	YES
 
 .include "../../audio/SDL-mixer/buildlink2.mk"
 .include "../../devel/SDL/buildlink2.mk"
