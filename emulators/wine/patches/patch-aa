@@ -1,17 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2002/10/10 10:48:21 junyoung Exp $
+$NetBSD: patch-aa,v 1.8 2003/06/23 08:12:59 adam Exp $
 
---- Make.rules.in.orig	Wed Oct  2 11:34:09 2002
-+++ Make.rules.in	Thu Oct 10 19:01:06 2002
-@@ -26,7 +26,7 @@
- CPP       = @CPP@
- CFLAGS    = @CFLAGS@ $(EXTRACFLAGS)
- OPTIONS   = @OPTIONS@ -D_REENTRANT
--LIBS      = @LIBS@
-+LIBS      = @LIBS@ -lc
- YACC      = @YACC@
- LEX       = @LEX@
- LEXLIB    = @LEXLIB@
-@@ -98,7 +98,7 @@
+--- Make.rules.in.orig	2003-06-14 01:26:02.000000000 +0200
++++ Make.rules.in	2003-06-19 11:33:36.000000000 +0200
+@@ -102,7 +102,7 @@
  CLEAN_FILES     = *.o *.a *.so *.ln *.$(LIBEXT) \\\#*\\\# *~ *% .\\\#* *.bak *.orig *.rej \
                    *.flc *.spec.c *.spec.def *.glue.c *.dbg.c y.tab.c y.tab.h @LEX_OUTPUT_ROOT@.c core
  
