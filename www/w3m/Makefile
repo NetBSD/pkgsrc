@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 1999/09/28 07:20:08 sakamoto Exp $
+# $NetBSD: Makefile,v 1.4 2000/03/02 15:46:44 itojun Exp $
 
-DISTNAME=	w3m-990902
-PKGNAME=	w3m-19990902
+DISTNAME=	w3m-0.1.6
 CATEGORIES=	www
 MASTER_SITES=	ftp://ei5nazha.yz.yamagata-u.ac.jp/w3m/
 
@@ -18,6 +17,7 @@ EXTRACT_ELEMENTS=	--exclude w3m/gc\*
 
 WRKSRC=		${WRKDIR}/w3m
 HELPDIR=	share/doc/w3m
+HELPERDIR=	lib/w3m
 
 HAS_CONFIGURE=	yes
 
@@ -45,12 +45,25 @@ HELP_LYNX=	-lynx
 CONFIGURE_ENV+=	def_lynx_key=n
 .endif
 CONFIGURE_ENV+=	def_bindir=${LOCALBASE}/bin
+CONFIGURE_ENV+=	def_libdir=${LOCALBASE}/${HELPERDIR}
 CONFIGURE_ENV+=	def_helpdir=${LOCALBASE}/${HELPDIR}
 CONFIGURE_ENV+=	def_use_color=y def_use_mouse=y
 CONFIGURE_ENV+=	def_use_menu=y def_use_matrix=y
-CONFIGURE_ENV+=	editor=vi mailer=Mail dbrowser=
+CONFIGURE_ENV+=	editor=vi dmail=Mail dbrowser=
 CONFIGURE_ENV+=	cc="${CC}" termlib="-ltermcap"
 CONFIGURE_ENV+=	dldflags="-Wl,-rpath,${LOCALBASE}/lib -L${LOCALBASE}/lib"
+CONFIGURE_ENV+=	dmodel=1
+CONFIGURE_ENV+=	LOCALBASE="${LOCALBASE}"
+
+post-extract:
+	@(cd ${WRKSRC}/doc; ${RM} -fr CVS)
+	@(cd ${WRKSRC}/doc-jp; ${RM} -fr CVS)
+
+do-configure:
+	@yes '' | (cd ${WRKSRC} && CC="${CC}" ac_cv_path_CC="${CC}" \
+	    INSTALL="/usr/bin/install -c -o ${BINOWN} -g ${BINGRP}" \
+	    CFLAGS="${CFLAGS}" INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
+	    ${CONFIGURE_ENV} ./${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS})
 
 pre-build:
 	@(cd ${WRKSRC}; \
@@ -70,12 +83,17 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/w3mhelp_ja.html ${LOCALBASE}/${HELPDIR}
 	${INSTALL_DATA} ${WRKSRC}/w3mhelp-lynx_en.html ${LOCALBASE}/${HELPDIR}
 	${INSTALL_DATA} ${WRKSRC}/w3mhelp-lynx_ja.html ${LOCALBASE}/${HELPDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/* ${LOCALBASE}/${HELPDIR}/doc
-	${INSTALL_DATA} ${WRKSRC}/doc-jp/* ${LOCALBASE}/${HELPDIR}/doc-jp
+	(cd ${WRKSRC}/doc; ${GTAR} Bcf - .) | \
+	    (cd ${LOCALBASE}/${HELPDIR}/doc; ${GTAR} Bxf -)
+	(cd ${WRKSRC}/doc-jp; ${GTAR} Bcf - .) | \
+	    (cd ${LOCALBASE}/${HELPDIR}/doc-jp; ${GTAR} Bxf -)
+	${INSTALL_DATA_DIR} ${LOCALBASE}/${HELPERDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/w3mbookmark ${LOCALBASE}/${HELPERDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/w3mhelperpanel ${LOCALBASE}/${HELPERDIR}
 
 post-install:
-	${RM} -f ${LOCALBASE}/${HELPDIR}/w3mhelp.html
-	${LN} -s ${LOCALBASE}/${HELPDIR}/w3mhelp${HELP_LYNX}${HELP_LANG}.html \
-			${LOCALBASE}/${HELPDIR}/w3mhelp.html
+	(cd ${LOCALBASE}/${HELPDIR}; \
+	    ${RM} -f w3mhelp.html; \
+	    ${LN} -s w3mhelp${HELP_LYNX}${HELP_LANG}.html w3mhelp.html)
 
 .include "../../mk/bsd.pkg.mk"
