@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/02/14 12:42:15 fredb Exp $
+# $NetBSD: Makefile,v 1.18 2000/02/14 13:15:06 fredb Exp $
 
 DISTNAME=	AfterStep-1.8.0
 PKGNAME=	afterstep-1.8.0
@@ -14,7 +14,7 @@ BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
 DEPENDS+=		jpeg>=6b:../../graphics/jpeg
 DEPENDS+=		png>=1.0.3:../../graphics/png
 DEPENDS+=		rplay>=3.2.0b6:../../audio/rplay
-DEPENDS+=		xpm>=3.4k:../../graphics/xpm
+DEPENDS+=		xpm-3.4k:../../graphics/xpm
 DEPENDS+=		asclock-*:../../x11/asclock
 DEPENDS+=		xp-*:../../x11/xp
 
