@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/04/11 17:29:37 snj Exp $
+# $NetBSD: Makefile,v 1.6 2005/03/08 10:17:10 wiz Exp $
 #
 
 DISTNAME=	cg-0.4
@@ -11,5 +11,6 @@ COMMENT=	Semi-automatic newsgroup binary downloader
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
+TEST_TARGET=		check
 
 .include "../../mk/bsd.pkg.mk"
