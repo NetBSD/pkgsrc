@@ -1,22 +1,20 @@
---- Magick.tmpl.orig	Thu Jan  8 07:16:35 1998
-+++ Magick.tmpl	Sat Jan 24 19:15:35 1998
-@@ -36,13 +36,13 @@
- #ifdef RsArchitecture
- XCOMM EXTENSIONS_DEFINES= -DHasLZW -DHasShape
- #else
--XCOMM EXTENSIONS_DEFINES= -DHasLZW -DHasShape -DHasSharedMemory
-+EXTENSIONS_DEFINES= -DHasLZW -DHasShape -DHasSharedMemory
- #endif
- 
+--- Magick.tmpl.orig	Wed Mar 11 21:28:31 1998
++++ Magick.tmpl	Thu Mar 19 09:58:46 1998
+@@ -43,11 +43,11 @@
  XCOMM Set DoSharedLib to HasSharedLibraries to build ImageMagick with shared
  XCOMM libraries.
  XCOMM
 -XCOMM #define DoSharedLib  HasSharedLibraries
 +#define DoSharedLib  HasSharedLibraries
  
+ XCOMM Define the location of the X11 RGB color database.
+ XCOMM
+-XCOMM DATABASE_DEFINES= -DRGBColorDatabase=\"/usr/openwin/lib/X11/rgb.txt\"
++DATABASE_DEFINES= -DRGBColorDatabase=\"/usr/X11R6/lib/X11/rgb.txt\"
+ 
  XCOMM By default, the maximum color value is 255.  To increase the maximum to
  XCOMM 65535 define:
-@@ -60,10 +60,10 @@
+@@ -67,12 +67,12 @@
  XCOMM #define HasFPX
  XCOMM #define HasHDF
  XCOMM #define HasJBIG
@@ -29,9 +27,12 @@
 +#define HasPNG
 +#define HasTIFF
  XCOMM #define HasTTF
+-XCOMM #define HasZLIB
++#define HasZLIB
  
  #ifdef HasDPS
-@@ -96,29 +96,29 @@
+ DPS_DEFINES= -DHasDPS
+@@ -104,29 +104,29 @@
  
  #ifdef HasJPEG
  JPEG_DEFINES= -DHasJPEG
@@ -52,12 +53,12 @@
  #endif
  
  #ifdef HasPNG
- PNG_DEFINES= -DHasPNG -DHasZLIB
--PNG_INCLUDES= -I$(TOP)/png -I$(TOP)/zlib
--PNG_FLAGS= -L$(TOP)/png -L$(TOP)/zlib
+ PNG_DEFINES= -DHasPNG
+-PNG_INCLUDES= -I$(TOP)/png
+-PNG_FLAGS= -L$(TOP)/png
 +PNG_INCLUDES= -I${LOCALBASE}/include
 +PNG_FLAGS= -L${LOCALBASE}/lib
- PNG_LIBRARIES= -lpng -lz
+ PNG_LIBRARIES= -lpng
  #endif
  
  #ifdef HasTIFF
@@ -69,17 +70,31 @@
  TIFF_LIBRARIES= -ltiff
  #endif
  
-@@ -140,10 +140,12 @@
+@@ -139,8 +139,8 @@
+ 
+ #ifdef HasZLIB
+ ZLIB_DEFINES= -DHasZLIB
+-ZLIB_INCLUDES= -I$(TOP)/zlib
+-ZLIB_FLAGS= -L$(TOP)/zlib
++ZLIB_INCLUDES= 
++ZLIB_FLAGS= 
+ ZLIB_LIBRARIES= -lz
+ #endif
+ 
+@@ -156,16 +156,12 @@
  XCOMM ImageMagick has an include file named X.h.  Do not set LOCALINC to
  XCOMM the top level X11 include directory or X11/X.h will be overwritten.
  
--LOCALDIR= /usr/local/bin
--LOCALINC= /usr/local/include/magick
--LOCALLIB= /usr/local/lib
--LOCALMAN= /usr/local/man/man1
-+LOCALDIR= $(PREFIX)/bin
-+LOCALINC= $(PREFIX)/include/magick
-+LOCALLIB= $(PREFIX)/lib
+-#ifndef PREFIX
+-PREFIX=/usr/local
+-#endif
+-
+ LOCALDIR= $(PREFIX)/bin
+ LOCALINC= $(PREFIX)/include/magick
+ LOCALLIB= $(PREFIX)/lib
+-LOCALMAN1= $(PREFIX)/man/man1
+-LOCALMAN4= $(PREFIX)/man/man4
+-LOCALMAN5= $(PREFIX)/man/man5
 +LOCALMAN1= $(PREFIX)/man/cat1
 +LOCALMAN4= $(PREFIX)/man/cat4
 +LOCALMAN5= $(PREFIX)/man/cat5
