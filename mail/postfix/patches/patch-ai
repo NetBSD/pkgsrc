@@ -1,16 +1,17 @@
-$NetBSD: patch-ai,v 1.3 1999/09/12 00:14:53 simonb Exp $
+$NetBSD: patch-ai,v 1.4 2000/04/09 08:10:20 simonb Exp $
 
 --- global/Makefile.orig	Sun May 30 18:49:13 1999
 +++ global/Makefile	Sun May 30 18:49:13 1999
 @@ -0,0 +1,32 @@
-+#	$NetBSD: patch-ai,v 1.3 1999/09/12 00:14:53 simonb Exp $
++#	$NetBSD: patch-ai,v 1.4 2000/04/09 08:10:20 simonb Exp $
 +
 +LIB	= global
 +
 +SRCS	= been_here.c bounce.c canon_addr.c cleanup_strerror.c clnt_stream.c \
 +	debug_peer.c debug_process.c defer.c deliver_completed.c \
 +	deliver_flock.c deliver_pass.c deliver_request.c domain_list.c \
-+	dot_lockfile.c file_id.c header_opts.c is_header.c mail_addr.c \
++	dot_lockfile.c dot_lockfile_as.c ext_prop.c file_id.c \
++	header_opts.c is_header.c mail_addr.c \
 +	mail_addr_crunch.c mail_addr_find.c mail_addr_map.c \
 +	mail_command_read.c mail_command_write.c mail_conf.c \
 +	mail_conf_bool.c mail_conf_int.c mail_conf_raw.c mail_conf_str.c \
@@ -24,8 +25,7 @@ $NetBSD: patch-ai,v 1.3 1999/09/12 00:14:53 simonb Exp $
 +	recipient_list.c record.c remove.c resolve_clnt.c resolve_local.c \
 +	rewrite_clnt.c sent.c smtp_stream.c split_addr.c string_list.c \
 +	sys_exits.c timed_ipc.c tok822_find.c tok822_node.c tok822_parse.c \
-+	tok822_resolve.c tok822_rewrite.c tok822_tree.c ext_prop.c \
-+	dot_lockfile_as.c
++	tok822_resolve.c tok822_rewrite.c tok822_tree.c
 +
 +MKLINT=		no
 +MKPIC=		no
