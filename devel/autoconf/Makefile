@@ -3,7 +3,7 @@
 # Date created:		7 October 1995
 # Whom:			torstenb@FreeBSD.ORG
 #
-# $NetBSD: Makefile,v 1.8 1998/02/01 01:22:33 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 1998/03/11 22:40:40 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/06/13 20:00:47 max Exp
 #
 
@@ -11,21 +11,20 @@ DISTNAME=       autoconf-2.12
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU}
 
-MAINTAINER=	torstenb@FreeBSD.ORG
-
-OPSYS!= 	uname -s
-.if (${OPSYS} == "NetBSD")
 BUILD_DEPENDS=	${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
-.endif
 RUN_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	M4=${PREFIX}/bin/gm4
 
+PLIST_SRC=	${WRKDIR}/PLIST-src
+
 post-install:
-	@if [ ! -f ${PREFIX}/info/dir ]; then \
-	  ${SED} -ne '1,/Menu:/p' /usr/share/info/dir > ${PREFIX}/info/dir; \
-	 fi
+	@(ex='s|@autoscan@|bin/autoscan|';		\
+	if [ ! -f ${WRKSRC}/autoscan ]; then		\
+		ex='/@autoscan@/d';			\
+	fi;						\
+	${SED} -e "$$ex" < ${PKGDIR}/PLIST > ${PLIST_SRC})
 	@install-info ${PREFIX}/info/autoconf.info ${PREFIX}/info/dir
 	@install-info ${PREFIX}/info/standards.info ${PREFIX}/info/dir
 
