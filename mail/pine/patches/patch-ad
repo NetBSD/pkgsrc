@@ -1,3 +1,4 @@
+$NetBSD: patch-ad,v 1.9 2002/11/26 21:41:09 cjep Exp $
 --- pine/signals.c.orig	Mon Jul  8 14:27:47 2002
 +++ pine/signals.c	Mon Jul  8 14:28:13 2002
 @@ -108,7 +108,9 @@

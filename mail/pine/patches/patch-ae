@@ -1,3 +1,4 @@
+$NetBSD: patch-ae,v 1.6 2002/11/26 21:41:09 cjep Exp $
 --- pine/osdep/os-lnx.h.orig	Mon Jul  8 14:38:13 2002
 +++ pine/osdep/os-lnx.h	Mon Jul  8 14:39:12 2002
 @@ -283,5 +283,6 @@
