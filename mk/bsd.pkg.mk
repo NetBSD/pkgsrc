@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1224 2003/07/28 18:15:56 jmmv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1225 2003/07/28 20:01:54 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -40,15 +40,15 @@ build-defs-message:
 	@${ECHO} "The following variables will affect the build process of this package,"
 	@${ECHO} "${PKGNAME}.  Their current value is shown below:"
 	@${ECHO} ""
-.for var in ${BUILD_DEFS:O:u}
-.if !defined(${var})
+.  for var in ${BUILD_DEFS:O:u}
+.    if !defined(${var})
 	@${ECHO} "        * ${var} (not defined)"
-.elif defined(${var}) && empty(${var})
+.    elif defined(${var}) && empty(${var})
 	@${ECHO} "        * ${var} (defined)"
-.else
+.    else
 	@${ECHO} "        * ${var} = ${${var}}"
-.endif
-.endfor
+.    endif
+.  endfor
 	@${ECHO} ""
 	@${ECHO} "You may want to abort the process now with CTRL+C and change their value"
 	@${ECHO} "before continuing.  Be sure to run \`${MAKE} clean' after the changes."
