@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/01/24 03:12:31 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/02/05 06:58:02 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ICONV_BUILDLINK3_MK:=	${ICONV_BUILDLINK3_MK}+
@@ -17,6 +17,14 @@ BUILDLINK_CHECK_BUILTIN.iconv?=	NO
 BUILDLINK_IS_BUILTIN.iconv=	NO
 .  if exists(/usr/include/iconv.h)
 BUILDLINK_IS_BUILTIN.iconv=	YES
+.  endif
+.endif
+
+.if defined(BUILDLINK_PREFER_PKGSRC)
+.  if empty(BUILDLINK_PREFER_PKGSRC) || \
+      !empty(BUILDLINK_PREFER_PKGSRC:M[yY][eE][sS]) || \
+      !empty(BUILDLINK_PREFER_PKGSRC:Miconv)
+BUILDLINK_USE_BUILTIN.iconv=	NO
 .  endif
 .endif
 
