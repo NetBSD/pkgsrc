@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8591 2005/01/04 10:29:45 wiz Exp $
+$NetBSD: CHANGES,v 1.8592 2005/01/04 12:59:18 markd Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -77,3 +77,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gaim to 1.1.1 [jmmv 2005-01-04]
 	Updated gthumb to 2.6.2 [jmmv 2005-01-04]
 	Updated uim to 0.4.5nb1 [wiz 2005-01-04]
+	Updated netatalk to 2.0.2 [markd 2005-01-04]
