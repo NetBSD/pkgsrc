@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2555 2004/11/28 16:50:44 wiz Exp $
+$NetBSD: TODO,v 1.2556 2004/11/28 20:27:25 snj Exp $
 
 Suggested new packages
 ======================
@@ -404,7 +404,6 @@ Suggested package updates
 	o courier-auth-0.47
 	o courier-imap-3.0.8
 	o crafty-19.5
-	o criticalmass-0.99
 	o crossfire-cli-1.5.0
 	o crossfire-srv-1.5.0
 	o crypto++-52
