@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2004/09/20 23:57:30 wiz Exp $
+$NetBSD: distinfo,v 1.5 2004/10/13 22:16:37 ben Exp $
 
-SHA1 (biew561.tar.bz2) = c8a422149db337c0b57e02d7409d2dfd63ed418d
-Size (biew561.tar.bz2) = 600398 bytes
+SHA1 (biew562.tar.bz2) = 44435c0815a59d38c9a6c74d09c0f495e71e23fe
+Size (biew562.tar.bz2) = 594367 bytes
 SHA1 (patch-aa) = 6a717b0bd36c39dbdc2e50f4536d28e40e876f88
