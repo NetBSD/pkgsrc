@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink-ld,v 1.1 2004/09/21 15:01:41 jlam Exp $
+# $NetBSD: cmd-sink-ld,v 1.2 2004/11/12 05:02:41 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -37,7 +37,7 @@
 # Empty out the command buffer and build up the command line in $cmd.
 while ! queue_is_empty cmdbuf; do
 	pop_queue cmdbuf arg
-	$debug_log $wrapperlog "    (cmd-sink-ld) pop: $arg"
+	$debug_log $wrapperlog "    (cmd-sink-ld) pop:  $arg"
 	case $arg in
 	############################################################
 	# Strip the "-Wl," from arguments that start with that prefix
@@ -56,9 +56,18 @@ while ! queue_is_empty cmdbuf; do
 		done
 		IFS="${save_IFS}"
 		for opt in $revlist; do
-			$debug_log $wrapperlog "    (cmd-sink-ld) pre: $opt"
+			$debug_log $wrapperlog "    (cmd-sink-ld) pre:  $opt"
 			prepend_queue cmdbuf "$opt"
 		done
+		;;
+	############################################################
+	# Silently accept "-pthread" by dropping them.  This allows
+	# "-pthread" to be added to LDFLAGS for use by both the
+	# compiler and the linker.
+	############################################################
+	-pthread)
+                $debug_log $wrapperlog "    (cmd-sink-ld) drop: $arg"
+		arg=
 		;;
 	*)		
 		. $buildcmd
