@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.30 2002/09/24 10:41:25 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.31 2002/09/24 22:16:42 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -493,6 +493,10 @@ BUILDLINK_SUBST_SED.3.unbuildlink=	${_BLNK_UNTRANSFORM_SED.3}
 post-build: unbuildlink-buildlink-subst
 unbuildlink-buildlink-subst: _BUILDLINK_SUBST_USE
 
+.if !defined(USE_LIBTOOL)
+BUILDLINK_FAKE_LA=	${TRUE}
+.else
+#
 # Create a fake libtool archive $$lafile that uses the shared libraries 
 # named in $$libpattern.
 #
@@ -505,6 +509,7 @@ BUILDLINK_FAKE_LA=							\
 		esac;							\
 		${_BLNK_FAKE_LA} $$_lib > $$lafile;			\
 	fi
+.endif
 
 # Generate wrapper scripts for the compiler tools that sanitize the
 # argument list by converting references to ${LOCALBASE} and ${X11BASE}
