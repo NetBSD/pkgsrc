@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.169 2001/01/28 03:21:47 itojun Exp $
+# $NetBSD: mk.conf.example,v 1.170 2001/01/29 11:52:59 wiz Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -739,7 +739,7 @@ PAPERSIZE=	A4
 # Default: not defined
 
 #USE_IDEA=	NO
-# Used in speakfreely and ssh to choose whether to compile using
+# Used in gnupg, speakfreely, and ssh to choose whether to compile using
 # the patented IDEA encryption algorithm.
 # Possible: YES, or NO.
 # Default: package-dependent
