@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:24:28 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/19 18:06:34 wiz Exp $
 #
 
 DISTNAME=	httperf-0.6
@@ -12,6 +12,12 @@ COMMENT=	Popular web server benchmarking program
 LICENSE=	no-commercial-use
 
 USE_GMAKE=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+LDFLAGS+=	-lsocket -lnsl -lresolv
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/httperf ${LOCALBASE}/bin/httperf
