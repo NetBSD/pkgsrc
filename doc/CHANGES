@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2912 2003/07/28 15:56:49 adam Exp $
+$NetBSD: CHANGES,v 1.2913 2003/07/28 16:04:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3046,3 +3046,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pine to 4.56 [adam 2003-07-28]
 	Updated php4-imap to 4.2.3nb2 [adam 2003-07-28]
 	Updated prayer to 1.0.8 [adam 2003-07-28]
+	Updated falcons-eye to 1.9.3nb3 [wiz 2003-07-28]
