@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9027 2005/02/04 21:41:46 jmmv Exp $
+$NetBSD: CHANGES,v 1.9028 2005/02/04 21:52:09 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -743,3 +743,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated speedtouch to 1.3.1nb3 [tron 2005-02-04]
 	Updated ocaml to 3.08.2 [adrianp 2005-02-04]
 	Updated gtk2 to 2.6.2 [jmmv 2005-02-04]
+	Updated advi to 1.6.0 [adrianp 2005-02-04]
