@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/01/01 17:36:28 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2002/10/09 13:55:29 wiz Exp $
 #
 
 DISTNAME=	${PKGNAME:S|-|_|}
@@ -17,10 +17,10 @@ WRKSRC=		${WRKDIR}/pdmenu
 
 REPLACE_PERL=	examples/showdir.pl
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 
-CONFIGURE_ENV=	SLANG_LIB_LOC="${BUILDLINK_DIR}/lib"			\
-		SLANG_H_LOC="${BUILDLINK_DIR}/include/slang.h"
+CONFIGURE_ENV=	SLANG_LIB_LOC="${BUILDLINK_PREFIX.libslang}/lib"	\
+		SLANG_H_LOC="${BUILDLINK_PREFIX.libslang}/include/slang.h"
 
 pre-install:
 	${SED} "s,.B /etc/pdmenurc,.B ${PREFIX}/etc/pdmenurc,g"		\
@@ -41,5 +41,5 @@ post-install:
 		pdmenurc.newbie	rpm-info-on-command \
 		${PREFIX}/share/examples/pdmenu/newbie
 
-.include "../../devel/libslang/buildlink.mk"
+.include "../../devel/libslang/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
