@@ -1,9 +1,21 @@
---- src/s/netbsd.h.orig Sat Oct 11 04:29:49 1997
-+++ src/s/netbsd.h      Sat Oct 11 04:30:46 1997
-@@ -33,7 +33,12 @@
+--- src/s/netbsd.h.orig	Tue Jun 10 21:09:55 1997
++++ src/s/netbsd.h	Mon Mar 16 01:25:54 1998
+@@ -14,8 +14,6 @@
+ #undef LDAV_SYMBOL
+ #define HAVE_GETLOADAVG
+ 
+-#define HAVE_UNION_WAIT
+-
+ #define SIGNALS_VIA_CHARACTERS
+ 
+ #define PENDING_OUTPUT_COUNT(FILE) ((FILE)->_p - (FILE)->_bf._base)
+@@ -31,9 +29,13 @@
+ #define NO_TERMIO
+ 
  #define LIBS_DEBUG
- /* -lutil is not needed for NetBSD >0.9.  */
- /* #define LIBS_SYSTEM -lutil */
+-/* -lutil is not needed for NetBSD >0.9.  */
+-/* #define LIBS_SYSTEM -lutil */
++#define LIBS_SYSTEM -lutil
 +#ifdef HAVE_LIBNCURSES
 +#define TERMINFO
 +#define LIBS_TERMCAP -lncurses
@@ -13,3 +25,37 @@
  
  #define NEED_ERRNO
  #define SYSV_SYSTEM_DIR
+@@ -65,6 +67,33 @@
+ #define NO_MATHERR
+ 
+ #define AMPERSAND_FULL_NAME
++
++/* Don't close pty in process.c to make it as controlling terminal.
++   It is already a controlling terminal of subprocess, because we did
++   ioctl TIOCSCTTY.  */
++#define DONT_REOPEN_PTY
++
++/* We have a function to do all the right magic.  */
++#undef FIRST_PTY_LETTER
++#define PTY_ITERATION		for (i = 0; i < 1; i++) /* ick */
++#define PTY_NAME_SPRINTF	/* none */
++#define PTY_TTY_NAME_SPRINTF	/* none */
++#define PTY_OPEN					\
++  do							\
++    {							\
++      int slave;					\
++      SIGMASKTYPE mask;					\
++      mask = sigblockx (SIGCHLD);			\
++      if (-1 == openpty (&fd, &slave, pty_name, 0, 0))	\
++	fd = -1;					\
++      else						\
++	close (slave);					\
++      sigsetmask (mask);				\
++    }							\
++  while (0)
++
++/* Use POSIX signal interface.  */
++#define POSIX_SIGNALS
+ 
+ #ifdef __ELF__
+ /* Here is how to find X Windows.  LD_SWITCH_X_SITE_AUX gives an -R option
