@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2003/11/27 23:36:42 taya Exp $
+$NetBSD: distinfo,v 1.6 2003/12/26 06:13:52 grant Exp $
 
 SHA1 (mozilla-1.4.1.tar.bz2) = e44aee7c8b3e3d13bdd2d654662694d14a0e40c3
 Size (mozilla-1.4.1.tar.bz2) = 32132892 bytes
@@ -18,6 +18,6 @@ SHA1 (patch-be) = f8046c3bd5c29214d5b9ace250fcf83e57a361fd
 SHA1 (patch-bm) = 7fa8e9701df888a52329b4ecc76ad166038fce06
 SHA1 (patch-bn) = 475190596a9d143b659ff95d23c8b024acf41d88
 SHA1 (patch-bo) = 6763f73c5736e9414e05495a9f92d7c7c8110d91
-SHA1 (patch-bp) = 486763c887979accc405066aa3cf55693d79b3fc
+SHA1 (patch-bp) = 7d51fe511962a597741e3a8a96535d3e5a58a143
 SHA1 (patch-bq) = f81601c6bf7aa3a47d93bd9a24b5d22fd7133e1c
 SHA1 (patch-bugzilla220122) = ef65ed3f1da6452884d71aaf33b83c510dc3f0d2
