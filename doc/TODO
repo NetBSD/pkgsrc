@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.401 2003/03/22 03:12:10 wiz Exp $
+$NetBSD: TODO,v 1.402 2003/03/22 03:16:20 salo Exp $
 
 Suggested new packages
 ======================
@@ -181,7 +181,6 @@ Suggested package updates
 	o mkfontscale-20020618
 	o molden-3.8 [pkg/20819]
 	o mpgtx-1.3 [pkg/19082]
-	o mplayer-0.90rc5 [pkg/20836]
 	o mrproject-0.9.1
 	o mrtg-2.9.27
 	o mtools-3.9.9
