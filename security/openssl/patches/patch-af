@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.11 2004/04/25 20:36:11 tv Exp $
+$NetBSD: patch-af,v 1.12 2004/12/19 02:48:32 grant Exp $
 
---- Makefile.org.orig	Thu Jul  3 17:43:50 2003
+--- Makefile.org.orig	2003-07-04 07:43:50.000000000 +1000
 +++ Makefile.org
 @@ -169,7 +169,7 @@ SDIRS=  \
  MAKEFILE= Makefile.ssl
@@ -21,7 +21,24 @@ $NetBSD: patch-af,v 1.11 2004/04/25 20:36:11 tv Exp $
  		-Wl,--whole-archive lib$$i.a \
  		-Wl,--no-whole-archive $$libs ${EX_LIBS} -lc ) || exit 1; \
  	libs="$$libs -l$$i"; \
-@@ -449,7 +448,7 @@ do_hpux64-shared:
+@@ -277,8 +276,14 @@ DETECT_GNU_LD=${CC} -v 2>&1 | grep '^gcc
+ # For Darwin AKA Mac OS/X (dyld)
+ do_darwin-shared: 
+ 	libs='-L. ${SHLIBDEPS}'; for i in ${SHLIBDIRS}; do \
+-	( set -x ; ${CC} --verbose -dynamiclib -o lib$$i${SHLIB_EXT} \
+-		lib$$i.a $$libs -all_load -current_version ${SHLIB_MAJOR}.${SHLIB_MINOR} \
++	( set -x ; \
++		  find . -name "*.o" -print > allobjs ; \
++		  OBJS= ; export OBJS ; \
++		  for obj in `ar t lib$$i.a` ; do \
++		    OBJS="$${OBJS} `grep /$$obj allobjs`" ; \
++		  done ; \
++		${CC} -dynamiclib -o lib$$i${SHLIB_EXT} \
++		$$libs $${OBJS} -current_version ${SHLIB_MAJOR}.${SHLIB_MINOR} \
+ 		-compatibility_version ${SHLIB_MAJOR}.`echo ${SHLIB_MINOR} | cut -d. -f1` \
+ 		-install_name ${INSTALLTOP}/lib/lib$$i${SHLIB_EXT} ) || exit 1; \
+ 	libs="$$libs -l`basename $$i${SHLIB_EXT} .dylib`"; \
+@@ -449,7 +454,7 @@ do_hpux64-shared:
  #  HP/UX-64bit: +forceload
  #  AIX:		-bnogc
  # SHAREDFLAGS would be:
@@ -30,7 +47,7 @@ $NetBSD: patch-af,v 1.11 2004/04/25 20:36:11 tv Exp $
  #  Tru64 Unix:  -shared \
  #		-set_version "${SHLIB_VERSION_HISTORY}${SHLIB_VERSION_NUMBER}"
  #  Solaris:     -G -h lib$$i.so.${SHLIB_MAJOR}.${SHLIB_MINOR}
-@@ -636,14 +635,14 @@ dist:   
+@@ -636,14 +641,14 @@ dist:   
  dist_pem_h:
  	(cd crypto/pem; $(MAKE) CC='${CC}' SDIRS='${SDIRS}' CFLAG='${CFLAG}' pem.h; $(MAKE) clean)
  
