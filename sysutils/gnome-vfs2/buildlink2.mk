@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.7 2003/04/27 02:03:01 rh Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2003/04/27 14:44:33 jmmv Exp $
 
 .if !defined(GNOME_VFS2_BUILDLINK2_MK)
 GNOME_VFS2_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		gnome-vfs2
-BUILDLINK_DEPENDS.gnome-vfs2?=	gnome-vfs2>=2.2.4
+BUILDLINK_DEPENDS.gnome-vfs2?=	gnome-vfs2>=2.2.4nb1
 BUILDLINK_PKGSRCDIR.gnome-vfs2?=	../../sysutils/gnome-vfs2
 
 EVAL_PREFIX+=				BUILDLINK_PREFIX.gnome-vfs2=gnome-vfs2
