@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2000/11/25 10:47:16 tron Exp $
+@comment $NetBSD: PLIST,v 1.10 2001/02/20 13:04:31 tron Exp $
 bin/gnuattach
 bin/gnuclient
 bin/gnudoit
@@ -748,9 +748,11 @@ lib/${PKGNAME}/lisp/xpm-button.el${ELSUFX}
 lib/${PKGNAME}/lisp/xpm-button.elc
 lib/${PKGNAME}/lisp/finder-inf.el${ELSUFX}
 lib/${PKGNAME}/lisp/finder-inf.elc
+lib/${PKGNAME}/lisp/mule/auto-autoloads.el${ELSUFX}
 lib/${PKGNAME}/lisp/mule/arabic.el${ELSUFX}
 lib/${PKGNAME}/lisp/mule/canna-leim.el${ELSUFX}
 lib/${PKGNAME}/lisp/mule/chinese.el${ELSUFX}
+lib/${PKGNAME}/lisp/mule/custom-load.el${ELSUFX}
 lib/${PKGNAME}/lisp/mule/cyrillic.el${ELSUFX}
 lib/${PKGNAME}/lisp/mule/english.el${ELSUFX}
 lib/${PKGNAME}/lisp/mule/ethiopic.el${ELSUFX}
@@ -774,7 +776,9 @@ lib/${PKGNAME}/lisp/mule/mule-x-init.el${ELSUFX}
 lib/${PKGNAME}/lisp/mule/mule-tty-init.el${ELSUFX}
 lib/${PKGNAME}/lisp/mule/thai-xtis-chars.el${ELSUFX}
 lib/${PKGNAME}/lisp/mule/viet-chars.el${ELSUFX}
+lib/${PKGNAME}/lisp/mule/auto-autoloads.elc
 lib/${PKGNAME}/lisp/mule/arabic.elc
+lib/${PKGNAME}/lisp/mule/custom-load.elc
 lib/${PKGNAME}/lisp/mule/canna-leim.elc
 lib/${PKGNAME}/lisp/mule/chinese.elc
 lib/${PKGNAME}/lisp/mule/cyrillic.elc
