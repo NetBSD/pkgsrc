@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.760 2003/07/31 19:07:00 wiz Exp $
+$NetBSD: TODO,v 1.761 2003/07/31 21:29:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -78,7 +78,6 @@ Suggested package updates
 	o balsa-1.4.4
 	o balsa2-2.0.13
 	o bind-8.4.1 [seb]
-	o bomberclone-0.10.0
 	o bzflag-1.7g0
 	o calc-2.11.8
 	o centericq-4.9.5
