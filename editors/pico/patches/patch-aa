@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 1999/11/11 17:40:17 tv Exp $
+$NetBSD: patch-aa,v 1.10 2000/11/09 03:34:14 hubertf Exp $
 
 --- pico/makefile.neb.orig	Mon Jun 29 18:23:50 1998
 +++ pico/makefile.neb	Sun Sep 27 12:30:46 1998
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.9 1999/11/11 17:40:17 tv Exp $
 +OPTIMIZE=    -O2
  PROFILE=     # -pg
 -DEBUG=       -g -DDEBUG
-+DEBUG=       # -g -DDEBUG
++DEBUG=       -g # -g -DDEBUG
  
  STDCFLAGS=	-Dneb -DJOB_CONTROL -DPOSIX -DMOUSE
  CFLAGS=         $(OPTIMIZE) $(PROFILE) $(DEBUG) $(EXTRACFLAGS) $(STDCFLAGS)
@@ -43,7 +43,7 @@ $NetBSD: patch-aa,v 1.9 1999/11/11 17:40:17 tv Exp $
 -		$(RANLIB) libpico.a
 +libpico.la:	$(OFILES)
 +		$(CC) -o libpico.la $(OFILES:.o=.lo) -rpath $(PREFIX)/lib \
-+			-version-info 3:0
++			-version-info 3:1
  
  clean:
  		rm -f *.a *.o *~ pico_os.c os.h pico pilot
