@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.68 2002/07/11 10:22:26 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.69 2002/08/13 15:05:31 wiz Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1139,19 +1139,26 @@ sub scan_pkgsrc_distfiles_vs_distinfo
 		    {
 		    if (m/^(\w+) ?\(([^\)]+)\) = (\S+)/)
 			{
+			my($dn,$ds,$dt);
 			if ($2 =~ /^patch-[a-z0-9]+$/)
 			    { next; }
-			if (!defined $distfiles{$2})
+			$dt = $1;
+			$dn = $2;
+			$ds = $3;
+			# Strip leading ./ which sometimes gets added
+			# because of DISTSUBDIR=.
+			$dn =~ s/^(\.\/)*//;
+			if (!defined $distfiles{$dn})
 			    {
-			    $distfiles{$2}{sumtype} = $1;
-			    $distfiles{$2}{sum} = $3;
-			    $distfiles{$2}{path} = "$cat/$pkgdir";
+			    $distfiles{$dn}{sumtype} = $dt;
+			    $distfiles{$dn}{sum} = $ds;
+			    $distfiles{$dn}{path} = "$cat/$pkgdir";
 			    }
-			elsif ($distfiles{$2}{sumtype} eq $1 &&
-				$distfiles{$2}{sum} ne $3)
+			elsif ($distfiles{$dn}{sumtype} eq $dt &&
+				$distfiles{$dn}{sum} ne $ds)
 			    {
-			    push(@distwarn, "checksum mismatch between '$1' ".
-			    "in $cat/$pkgdir and $distfiles{$2}{path}\n");
+			    push(@distwarn, "checksum mismatch between '$dt' ".
+			    "in $cat/$pkgdir and $distfiles{$dn}{path}\n");
 			    }
 			}
 		    }
