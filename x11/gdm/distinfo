@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.13 2004/05/17 01:17:46 danw Exp $
+$NetBSD: distinfo,v 1.14 2004/06/20 21:25:46 jmmv Exp $
 
-SHA1 (gdm-2.6.0.2.tar.bz2) = d662a0d0a9f1311423a6486c2471cc85fe9ee815
-Size (gdm-2.6.0.2.tar.bz2) = 3029505 bytes
+SHA1 (gdm-2.6.0.3.tar.bz2) = 03462ee0ac5eb7238e7460fc6c985724500470b1
+Size (gdm-2.6.0.3.tar.bz2) = 3079606 bytes
 SHA1 (Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
 Size (Daemon.README) = 2191 bytes
 SHA1 (Daemon.png) = e77a42c644beecd66c4b95c0ae68c08c728a4e6d
 Size (Daemon.png) = 15725 bytes
-SHA1 (patch-aa) = 48f95c7fb2debc275d6a5792b08f2d9f239a5786
+SHA1 (patch-aa) = 616ffa7ebfe8fa368d9f45c98905b2c25109d315
 SHA1 (patch-ab) = 049d4fe8b6e71239392e7a8bae00006103dff309
 SHA1 (patch-ac) = d810e16076aa69070f238900198a0050eaf12516
-SHA1 (patch-ae) = 1df52914ead2f8aa5b69f60213ebd26e8d2202a4
-SHA1 (patch-af) = 98f890ee76bb463a80ac8cf33428b647b559d83a
+SHA1 (patch-ae) = f05e3bffbcb1522ac6265869eef52655d35511c2
+SHA1 (patch-af) = 467afc3ee4d555fac4d5d26e49c3ff8b098e7369
 SHA1 (patch-ag) = 467552a6da5c83fcc3a37e59d1f4cd63241dee0d
