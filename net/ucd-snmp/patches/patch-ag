@@ -1,9 +1,9 @@
-$NetBSD: patch-ag,v 1.4 2002/02/13 16:41:42 tron Exp $
+$NetBSD: patch-ag,v 1.5 2002/04/09 09:53:55 itojun Exp $
 
---- agent/mibgroup/mibII/ipAddr.c.orig	Tue Jan 30 16:00:58 2001
-+++ agent/mibgroup/mibII/ipAddr.c	Tue Jan 30 16:07:06 2001
-@@ -243,7 +243,11 @@
- #if defined(linux) || defined(sunV3)
+--- agent/mibgroup/mibII/ipAddr.c.orig	Sat Mar  9 11:07:37 2002
++++ agent/mibgroup/mibII/ipAddr.c	Tue Apr  9 18:28:34 2002
+@@ -278,7 +278,11 @@
+ #elif defined(linux) || defined(sunV3)
  	    long_return = ntohl(((struct sockaddr_in *) &lowin_ifnet.ifu_broadaddr)->sin_addr.s_addr) & 1;
  #else
 +#ifdef netbsd1
