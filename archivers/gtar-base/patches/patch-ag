@@ -1,0 +1,76 @@
+$NetBSD: patch-ag,v 1.1.2.2 2002/12/22 08:29:20 agc Exp $
+This include tar-1.13.19-absolutenames.patch, from RedHat tar-1.13.25-4.7.1.src.rpm
+
+--- src/extract.c.orig	Sun Nov 17 18:35:32 2002
++++ src/extract.c	Sun Nov 17 18:35:09 2002
+@@ -180,7 +180,11 @@
+       mode = current_stat_info->st_mode ^ invert_permissions;
+     }
+ 
++#if (defined (__NetBSD__) && NetBSD > 199706 && !defined(NetBSD1_2))
++  if (lchmod (file_name, mode) != 0)
++#else
+   if (chmod (file_name, mode) != 0)
++#endif
+     chmod_error_details (file_name, mode);
+ }
+ 
+@@ -216,7 +220,12 @@
+ {
+   struct utimbuf utimbuf;
+ 
++#if !(defined (__NetBSD__) && NetBSD > 199706 && !defined(NetBSD1_2))
+   if (typeflag != SYMTYPE)
++#else
++  struct timeval tv[2];
++#endif
++
+     {
+       /* We do the utime before the chmod because some versions of utime are
+ 	 broken and trash the modes of the file.  */
+@@ -229,6 +238,7 @@
+ 
+ 	  /* FIXME: incremental_option should set ctime too, but how?  */
+ 
++#if !(defined (__NetBSD__) && NetBSD > 199706 && !defined(NetBSD1_2))
+ 	  if (incremental_option)
+ 	    utimbuf.actime = stat_info->st_atime;
+ 	  else
+@@ -237,6 +247,16 @@
+ 	  utimbuf.modtime = stat_info->st_mtime;
+ 
+ 	  if (utime (file_name, &utimbuf) < 0)
++#else
++	if (incremental_option)
++		tv[0].tv_sec = stat_info->st_atime;
++	else
++		tv[0].tv_sec = start_time;
++	tv[0].tv_usec = 0;
++	tv[1].tv_sec = stat_info->st_mtime;
++	tv[1].tv_usec = 0;
++	if (lutimes (file_name, tv) < 0)
++#endif
+ 	    utime_error (file_name);
+ 	  else
+ 	    {
+@@ -1019,10 +1039,19 @@
+       {
+ 	struct stat st1, st2;
+ 	int e;
++	size_t skiplinkcrud;
++
++	if (absolute_names_option)
++	  skiplinkcrud = 0;
++	else {
++	  skiplinkcrud = FILESYSTEM_PREFIX_LEN (current_link_name);
++	  while (ISSLASH (current_link_name[skiplinkcrud]))
++	    skiplinkcrud++;
++	}
+ 
+ 	/* MSDOS does not implement links.  However, djgpp's link() actually
+ 	   copies the file.  */
+-	status = link (current_link_name, CURRENT_FILE_NAME);
++	status = link (current_link_name + skiplinkcrud, CURRENT_FILE_NAME);
+ 
+ 	if (status == 0)
+ 	  {

@@ -1,21 +1,21 @@
-$NetBSD: patch-ae,v 1.3 2001/12/27 21:50:57 agc Exp $
+$NetBSD: patch-ae,v 1.3.8.1 2002/12/22 08:29:20 agc Exp $
 
---- Makefile.in.orig	Fri Apr 25 20:21:57 1997
-+++ Makefile.in	Thu Dec 27 16:28:31 2001
-@@ -102,9 +102,15 @@
- 
- AUTOMAKE_OPTIONS = gnits dist-shar
+--- Makefile.in.orig	Wed Sep 26 22:35:05 2001
++++ Makefile.in	Sun Nov 17 18:32:32 2002
+@@ -102,10 +102,15 @@
+ rmt_LDADD = @rmt_LDADD@
+ tar_LDADD = @tar_LDADD@
  
 +OPSYS!= uname -s
-+
- BABYL = rmail/* admin/*/RMAIL
- EXTRA_DIST = AC-PATCHES AM-PATCHES BI-PATCHES PORTS rebox.el
--SUBDIRS = doc lib intl src scripts po tests
+ AUTOMAKE_OPTIONS = gnits dist-bzip2 dist-shar
+ ACLOCAL_AMFLAGS = -I m4
+ EXTRA_DIST = ChangeLog.1 PORTS
+-SUBDIRS = doc intl lib m4 src scripts po tests
 +.if ${OPSYS} == "Darwin"
-+SUBDIRS = lib intl src scripts tests
++SUBDIRS = intl lib m4 src scripts tests
 +.else
-+SUBDIRS = lib intl src scripts po tests
++SUBDIRS = intl lib m4 src scripts po tests
 +.endif
+ subdir = .
  ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
- CONFIG_HEADER_IN = config.h.in
- CONFIG_HEADER_FULL = config.h
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
