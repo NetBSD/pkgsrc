@@ -1,20 +1,22 @@
-$NetBSD: patch-ad,v 1.4 2000/11/16 10:42:24 abs Exp $
+$NetBSD: patch-ad,v 1.5 2000/12/06 08:12:38 jlam Exp $
 
---- gcconfig.h.orig	Tue Apr 25 17:41:01 2000
+--- gcconfig.h.orig	Mon Aug 28 16:56:19 2000
 +++ gcconfig.h
-@@ -27,6 +27,11 @@
+@@ -27,6 +27,13 @@
  #    define LINUX
  # endif
  
 +# if defined(__NetBSD__)
 +#    define NETBSD
-+#    define unix /* symbol unix is no longer defined in NetBSD */
++#    ifndef unix
++#       define unix	/* symbol unix is no longer defined in NetBSD */
++#    endif
 +# endif
 +
  /* Determine the machine type: */
  # if defined(sun) && defined(mc68000)
  #    define M68K
-@@ -50,10 +55,13 @@
+@@ -50,10 +57,13 @@
  # endif
  # if defined(__NetBSD__) && defined(m68k)
  #    define M68K
@@ -30,7 +32,7 @@ $NetBSD: patch-ad,v 1.4 2000/11/16 10:42:24 abs Exp $
  #    define ARM32
  #    define NETBSD
  #    define mach_type_known
-@@ -81,6 +89,9 @@
+@@ -81,6 +91,9 @@
  #	 endif
  #      endif
  #    endif /* !LINUX */
@@ -40,7 +42,7 @@ $NetBSD: patch-ad,v 1.4 2000/11/16 10:42:24 abs Exp $
  #    define mach_type_known
  # endif
  # if defined(sequent) && defined(i386)
-@@ -114,7 +125,7 @@
+@@ -114,7 +127,7 @@
  #   define mach_type_known
  # endif
  # if defined(sparc) && defined(unix) && !defined(sun) && !defined(linux) \
@@ -49,7 +51,7 @@ $NetBSD: patch-ad,v 1.4 2000/11/16 10:42:24 abs Exp $
  #   define SPARC
  #   define DRSNX
  #   define mach_type_known
-@@ -123,6 +134,10 @@
+@@ -123,6 +136,10 @@
  #   define RS6000
  #   define mach_type_known
  # endif
@@ -60,7 +62,7 @@ $NetBSD: patch-ad,v 1.4 2000/11/16 10:42:24 abs Exp $
  # if defined(_M_XENIX) && defined(_M_SYSV) && defined(_M_I386)
  	/* The above test may need refinement	*/
  #   define I386
-@@ -172,7 +187,7 @@
+@@ -172,7 +189,7 @@
  # endif
  # if defined(__alpha) || defined(__alpha__)
  #   define ALPHA
@@ -69,7 +71,7 @@ $NetBSD: patch-ad,v 1.4 2000/11/16 10:42:24 abs Exp $
  #     define OSF1	/* a.k.a Digital Unix */
  #   endif
  #   define mach_type_known
-@@ -221,7 +236,6 @@
+@@ -221,7 +238,6 @@
  # endif
  # if defined(__NetBSD__) && defined(i386)
  #   define I386
@@ -77,7 +79,7 @@ $NetBSD: patch-ad,v 1.4 2000/11/16 10:42:24 abs Exp $
  #   define mach_type_known
  # endif
  # if defined(bsdi) && defined(i386)
-@@ -573,6 +587,14 @@
+@@ -573,6 +589,14 @@
  #     define STACKBOTTOM ((ptr_t) 0xc0000000)
  #     define DATAEND	/* not needed */
  #   endif
@@ -92,7 +94,7 @@ $NetBSD: patch-ad,v 1.4 2000/11/16 10:42:24 abs Exp $
  # endif
  
  # ifdef VAX
-@@ -602,7 +624,6 @@
+@@ -602,7 +626,6 @@
  #   define MACH_TYPE "SPARC"
  #   define ALIGNMENT 4	/* Required by hardware	*/
  #   define ALIGN_DOUBLE
@@ -100,7 +102,7 @@ $NetBSD: patch-ad,v 1.4 2000/11/16 10:42:24 abs Exp $
  #   ifdef SUNOS5
  #	define OS_TYPE "SUNOS5"
  	extern int _etext;
-@@ -674,8 +695,20 @@
+@@ -674,8 +697,20 @@
  #   ifdef OPENBSD
  #     define OS_TYPE "OPENBSD"
  #     define STACKBOTTOM ((ptr_t) 0xf8000000)
@@ -121,7 +123,7 @@ $NetBSD: patch-ad,v 1.4 2000/11/16 10:42:24 abs Exp $
  # endif
  
  # ifdef I386
-@@ -960,6 +993,21 @@
+@@ -960,6 +995,21 @@
  #	endif
  #	define DYNAMIC_LOADING
  #   endif
@@ -143,7 +145,7 @@ $NetBSD: patch-ad,v 1.4 2000/11/16 10:42:24 abs Exp $
  # endif
  
  # ifdef RS6000
-@@ -1019,6 +1067,16 @@
+@@ -1019,6 +1069,16 @@
  	/* fp registers in some cases when the target is a 21264.  The assembly	*/
  	/* code doesn't handle that yet, and version dependencies make that a	*/
  	/* bit tricky.  Do the easy thing for now.				*/
