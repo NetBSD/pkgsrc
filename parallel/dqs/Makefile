@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2004/02/26 22:44:09 abs Exp $
+# $NetBSD: Makefile,v 1.5 2004/09/10 20:23:46 wiz Exp $
 #
 
 DISTNAME=	DQS-3.3.2
 PKGNAME=	dqs-3.3.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.go.dlr.de/fresh/unix/src/misc/
 EXTRACT_SUFX=	.tgz
@@ -14,7 +14,7 @@ COMMENT=	Distributed queueing system
 
 WRKSRC=		${WRKDIR}/DQS3
 USE_PKGINSTALL=	yes
-DOCDIR=		${PREFIX}/share/doc/html/dqs
+DOCDIR=		${PREFIX}/share/doc/dqs
 DOCS=		Image16.gif Image17.gif Image18.gif Image19.gif Image20.gif \
 		Image21.gif Image22.gif Image23.gif InstMaint.html \
 		Refernce.html UserGuide.html error_msg.htm
