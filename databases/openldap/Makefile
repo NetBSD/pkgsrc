@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2001/10/18 15:20:07 veego Exp $
-#
+# $NetBSD: Makefile,v 1.28 2001/10/25 16:15:44 tron Exp $
 
-DISTNAME=	openldap-1.2.13
+DISTNAME=	openldap-2.0.17
 SVR4_PKGNAME=	oldap
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
@@ -39,8 +38,7 @@ CPPFLAGS+=	-I${BUILDLINK_DIR}/include/db2
 LIBS=		-ldb2 -lpthread -lrt
 .endif
 
-PLIST_SRC=	${PKGDIR}/PLIST.common
-PLIST_SRC+=	${PKGDIR}/PLIST.${LOWER_OPSYS}
+PLIST_SRC=	${PKGDIR}/PLIST.common ${PKGDIR}/PLIST.${LOWER_OPSYS}
 
 post-configure:
 	${ECHO} "SLAPD_LIBS = " >> ${WRKSRC}/servers/slapd/tools/Makefile
