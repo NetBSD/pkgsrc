@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5372 2004/03/30 15:21:10 martin Exp $
+$NetBSD: CHANGES,v 1.5373 2004/03/30 16:10:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1610,3 +1610,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added py-twisted-1.2.0 [recht 2004-03-30]
 	Added py-twisted-docs-1.2.0 [recht 2004-03-30]
 	Updated dvd+rw-tools to 5.17.4.8.6 [martin 2004-03-30]
+	Updated zsh to 4.2.0nb1 [minskim 2004-03-30]
