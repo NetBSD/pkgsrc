@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.212 2001/11/19 16:28:03 jlam Exp $
+# $NetBSD: Packages.txt,v 1.213 2001/11/25 19:10:27 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -1041,7 +1041,33 @@ the automake sequence.  This may be overridden by setting AUTOMAKE_OVERRIDE
 to YES in the package Makefile.
 
 
- 6.5 Feedback to the author
+ 6.5 Package configuration files
+ ===============================
+
+Packages should be taught to look for their configuration files in
+${PKG_SYSCONFDIR}, which is passed through to the configure and build
+processes.  PKG_SYSCONFDIR may be customized in various ways by setting
+other make variables:
+
+* PKG_SYSCONFBASE is the main config directory under which all package
+  configuration files are to be found.  This defaults to ${PREFIX}/etc, but
+  may be overridden in /etc/mk.conf.
+
+* PKG_SYSCONFSUBDIR is the subdirectory of PKG_SYSCONFBASE under which the
+  configuration files for a particular package may be found, e.g. the
+  Apache configuration files may all be found under the "httpd" subdirectory
+  of ${PKG_SYSCONFBASE}.
+
+* PKG_SYSCONFDIR.${PKGBASE} overrides the value of ${PKG_SYSCONFDIR} for a
+  particular package.  This is not meant to be set by a package Makefile, but
+  is reserved for users who wish to override the PKG_SYSCONFDIR setting for
+  a particular package with a special location.
+
+Users will typically want to set PKG_SYSCONFBASE to /etc, or to accept the
+default location of ${PREFIX}/etc.
+
+
+ 6.6 Feedback to the author
  ==========================
 
 If you have found any bugs in the package you make available, if you had to
