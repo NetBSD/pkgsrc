@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1107 2003/12/03 05:40:16 martti Exp $
+$NetBSD: TODO,v 1.1108 2003/12/03 09:08:07 salo Exp $
 
 Suggested new packages
 ======================
@@ -268,7 +268,6 @@ Suggested package updates
 	o lcms-1.0.9
 	o leafnode-1.9.46
 	o lesstif-0.93.94
-	o lftp-2.6.9
 	o libao-0.8.4
 	o libgcrypt-1.1.44 [pkg/23322]
 	o libgtop-2.0.6
