@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2000/10/06 06:40:35 jlam Exp $
+$NetBSD: patch-aa,v 1.3 2001/06/25 12:17:55 simonb Exp $
 
---- configure.in.orig	Sun Aug 15 18:29:43 1999
-+++ configure.in
+--- configure.in.orig	Mon Aug 16 08:29:43 1999
++++ configure.in	Mon Jun 25 21:15:58 2001
 @@ -20,6 +20,12 @@
  	i?86-*-linux*)
  		DEBUG="-g -Wall -fsigned-char"
@@ -27,18 +27,29 @@ $NetBSD: patch-aa,v 1.2 2000/10/06 06:40:35 jlam Exp $
  
  TYPESIZES="" 
  
-@@ -63,11 +72,14 @@
+@@ -62,15 +71,25 @@
+ 	
  AC_CHECK_HEADERS(linux/sbpcd.h, SBPCD_H="-DSBPCD_H='1' ")
  AC_CHECK_HEADERS(linux/ucdrom.h, UCDROM_H="-DUCDROM_H='1' ")
- 
-+AC_CHECK_FUNCS(getopt_long, GETOPT_LONG="-DGETOPT_LONG='1' ")
++AC_CHECK_HEADERS(util.h,
++  AC_CHECK_LIB(util, getrawpartition,
++    RAWPART="-DHAVE_GETRAWPARTITION='1' " LIBUTIL="-lutil"
++  )
++)
 +
++AC_CHECK_FUNCS(getopt_long, GETOPT_LONG="-DGETOPT_LONG='1' ")
+ 
  AC_PROG_MAKE_SET
  AC_C_CONST
  
  AC_SUBST(SBPCD_H)
  AC_SUBST(UCDROM_H)
 +AC_SUBST(GETOPT_LONG)
++AC_SUBST(RAWPART)
  AC_SUBST(TYPESIZES)
  AC_SUBST(OPT)
  AC_SUBST(DEBUG)
+ AC_SUBST(CC)
++AC_SUBST(LIBUTIL)
+ 
+ AC_OUTPUT(Makefile interface/Makefile paranoia/Makefile)
