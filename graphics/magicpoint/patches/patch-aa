@@ -1,53 +1,44 @@
-$NetBSD: patch-aa,v 1.8 2001/09/14 05:41:06 jlam Exp $
+$NetBSD: patch-aa,v 1.9 2003/09/11 16:09:40 jmmv Exp $
 
---- configure.orig	Tue May 22 02:09:41 2001
-+++ configure	Fri Sep 14 01:34:23 2001
-@@ -1763,7 +1763,7 @@
- if test "$mgp_use_freetype" = "yes"; then
-  	echo $ac_n "checking for freetype library/header""... $ac_c" 1>&6
- echo "configure:1766: checking for freetype library/header" >&5
-- 	for dir in /usr/local/freetype /usr/local /opt/freetype /usr/pkg /usr; do
+--- configure.orig	2003-05-28 07:34:23.000000000 +0200
++++ configure
+@@ -4108,7 +4108,7 @@ if test "$mgp_use_freetype" = "yes"; the
+   # XXX: freetype2 may use freetype-config
+  	echo "$as_me:$LINENO: checking for freetype1 library/header" >&5
+ echo $ECHO_N "checking for freetype1 library/header... $ECHO_C" >&6
+- 	for dir in /usr/local/freetype /usr/local /opt/freetype /usr/pkg /usr /usr/include/freetype1 ; do
 + 	for dir in ${BUILDLINK_DIR}; do
   		ac_cv_ft_lib=no
   		ac_cv_ft_include=no
  		shlib1=`echo $dir/lib/libttf.so* | head -1 | sed -e 's/.*\///'`
-@@ -1958,7 +1958,7 @@
+@@ -4643,7 +4643,7 @@ echo "${ECHO_T}$mgp_use_vflib" >&6
  if test "$mgp_use_vflib" = "yes"; then
- 	echo $ac_n "checking for VFlib library/header""... $ac_c" 1>&6
- echo "configure:1961: checking for VFlib library/header" >&5
+ 	echo "$as_me:$LINENO: checking for VFlib library/header" >&5
+ echo $ECHO_N "checking for VFlib library/header... $ECHO_C" >&6
 -	for dir in /usr/local/VFlib /usr/local/vflib /usr/local /usr/pkg /usr; do
 +	for dir in ${BUILDLINK_DIR}; do
  		ac_cv_vf_libname=VFlib
  		ac_cv_vf_libdir=no
  		ac_cv_vf_hdrdir=no
-@@ -2128,7 +2128,7 @@
- 	fi
- fi
+@@ -4867,7 +4867,7 @@ _ACEOF
  
--for i in /usr/pkg /usr/local /usr; do
-+for i in ${BUILDLINK_DIR}; do
- 	if test -f $i/include/png.h; then 
+   fi
+ else
+-  for i in /usr/pkg /usr/local /usr; do
++  for i in ${BUILDLINK_DIR}; do
+ 	if test -f $i/include/png.h; then
  		if test -f $i/lib/libpng.a ; then
  			DEPLIBS="$DEPLIBS $i/lib/libpng.a"
-@@ -2231,7 +2231,7 @@
- 	fi
- done
+@@ -5010,7 +5010,7 @@ fi
+   done
+ fi
  
 -for i in /usr/pkg /usr/local /usr; do
 +for i in ${BUILDLINK_DIR}; do
- 	if test -f $i/include/libmng.h; then 
+ 	if test -f $i/include/libmng.h; then
  		if test -f $i/lib/libmng.a ; then
  			DEPLIBS="$DEPLIBS $i/lib/libmng.a"
-@@ -2277,7 +2277,7 @@
- fi
- if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
-   echo "$ac_t""yes" 1>&6
--  LIBS="$LIBS -Wl,-rpath,$i/lib -lmng"
-+  LIBS="$LIBS -lmng"
- 			 cat >> confdefs.h <<\EOF
- #define MNG 1
- EOF
-@@ -2764,7 +2764,7 @@
+@@ -5647,7 +5647,7 @@ fi
  		echo 'FATAL: You need libungif to use gif images.  pass proper LIBS to configure.'
  		exit 1
  	fi
@@ -56,7 +47,7 @@ $NetBSD: patch-aa,v 1.8 2001/09/14 05:41:06 jlam Exp $
  		if test -f $i/include/gif_lib.h; then
  			gif_h_ok=yes
  			OPTFLAGS="$OPTFLAGS -I$i/include"
-@@ -2844,7 +2844,7 @@
+@@ -5757,7 +5757,7 @@ fi
  		echo 'FATAL: You need libImlib to use Imlib loading.  pass proper LIBS to configure.'
  		exit 1
  	fi
