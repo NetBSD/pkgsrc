@@ -1,4 +1,4 @@
-# $NetBSD: device-links,v 1.1.1.1 2001/04/25 21:21:47 tron Exp $
+# $NetBSD: device-links,v 1.2 2001/06/30 12:55:04 veego Exp $
 /dev/rcd0a cdrom
 /dev/rfd0a fd0
 /dev/wd0d hda
@@ -16,4 +16,6 @@
 /dev/ttyE3 tty4
 /dev/ttyE4 tty5
 /dev/ttyE5 tty6
+/dev/ttyE6 tty7
+/dev/ttyE7 tty8
 tty1 tty0
