@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/06/19 14:47:23 jtb Exp $
+
+--- Makefile.orig	Tue Jun 19 15:18:13 2001
++++ Makefile
+@@ -19,7 +19,7 @@
+ 	strip bin/lua bin/luac
+ 
+ # official installation
+-install: all strip
++install: all
+ 	mkdir -p $(INSTALL_BIN) $(INSTALL_INC) $(INSTALL_LIB) $(INSTALL_MAN)
+ 	$(INSTALL_EXEC) bin/* $(INSTALL_BIN)
+ 	$(INSTALL_DATA) include/*.h $(INSTALL_INC)

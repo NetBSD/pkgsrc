@@ -1,0 +1,58 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/06/19 14:47:23 jtb Exp $
+
+--- config.orig	Tue Jun 19 14:57:50 2001
++++ config
+@@ -14,7 +14,7 @@
+ 
+ # If you want support for pipes, uncomment the following line.
+ # You need popen in your C library.
+-#POPEN= -DPOPEN
++POPEN= -DPOPEN
+ 
+ # If you need compatibility with previous versions, edit and uncomment the
+ # definition of COMPAT below.
+@@ -28,7 +28,7 @@
+ # ------------------------------------------------------------------ C compiler
+ 
+ # You need an ANSI C compiler. gcc is a popular one.
+-CC= gcc
++#CC= gcc
+ WARN= -ansi -pedantic -Wall
+ 
+ # On IRIX, cc is a good ANSI compiler.
+@@ -65,22 +65,22 @@
+ 
+ # If your system doesn't have (or need) ranlib, use RANLIB=true.
+ # On some systems, "ar s" does what ranlib would do.
+-RANLIB= ranlib
++#RANLIB= ranlib
+ #RANLIB= ar s
+ #RANLIB= true
+ 
+ # ------------------------------------------------------------------ install
+ 
+ # Locations for "make install". You may need to be root do "make install".
+-INSTALL_ROOT= /usr/local
++INSTALL_ROOT= ${PREFIX}
+ INSTALL_BIN= $(INSTALL_ROOT)/bin
+ INSTALL_INC= $(INSTALL_ROOT)/include
+ INSTALL_LIB= $(INSTALL_ROOT)/lib
+ INSTALL_MAN= $(INSTALL_ROOT)/man/man1
+ 
+ # You might prefer to use "install" if you have it.
+-INSTALL_EXEC= cp
+-INSTALL_DATA= cp
++INSTALL_EXEC= ${BSD_INSTALL_PROGRAM}
++INSTALL_DATA= ${BSD_INSTALL_DATA}
+ #INSTALL_EXEC= install -m 0755
+ #INSTALL_DATA= install -m 0644
+ 
+@@ -93,7 +93,7 @@
+ INCS= -I$(INC) $(EXTRA_INCS)
+ DEFS= $(COMPAT) $(NUMBER) $(OLD_ANSI) $(EXTRA_DEFS)
+ 
+-CFLAGS= -O2 $(WARN) $(INCS) $(DEFS)
++CFLAGS+= $(WARN) $(INCS) $(DEFS)
+ 
+ V=4.0
+ 
