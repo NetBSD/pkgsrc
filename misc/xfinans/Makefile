@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 1998/11/19 15:40:48 agc Exp $
+# $NetBSD: Makefile,v 1.7 1999/01/29 21:21:56 tron Exp $
 #
 
 DISTNAME=		xfinans-5.9
 WRKSRC=			${WRKDIR}/Xfinans/Src
-CATEGORIES=		x11
+CATEGORIES=		misc x11
 MASTER_SITES=		${MASTER_SITE_SUNSITE}
 MASTER_SITE_SUBDIR=	apps/financial/accounting
 
