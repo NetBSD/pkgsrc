@@ -1,0 +1,12 @@
+$NetBSD: md5,v 1.1.1.1 2001/04/14 12:50:21 kei Exp $
+
+SHA1 (TeXfamily/ptex-texmf-1.9.tar.gz) = 5a1bd59efbb51b75d64be72f823322ea49ac9adb
+SHA1 (TeXfamily/texfam-texmf-latex209.tar.gz) = b28b3f10701531514503d72c3c2609a63042db29
+SHA1 (TeXfamily/texfam-texmf-j1.9.tar.gz) = f563c0791a649e38624965ee27c8c400639041a8
+SHA1 (TeXfamily/texfam-texmf-j1.9.1.tar.gz) = f0a166bdce7f5aaf244610ab60eaf6e9aef47c2d
+SHA1 (TeXfamily/texfam-texmf-m0.8.tar.gz) = 7d80eec06277b0682f7315c26238b0f88a0057ab
+SHA1 (TeXfamily/mulfonts-vf.tar.gz) = 12a83f6b7fa6388b1a7a2cf9438bb4f55d3efcd3
+SHA1 (TeXfamily/mulfonts-subtfm.tar.gz) = c99f1783980df042d64f9492bb944463a8771a80
+SHA1 (TeXfamily/nmin-ngoth.tar.gz) = 17f0169c92465c0ee7d704c8cc5eea75738d1a2b
+SHA1 (TeXfamily/standard.tar.gz) = b447bbba89018460ec87b257d8a89a9ad2d9fc43
+SHA1 (TeXfamily/morisawa.tar.gz) = f865b0582813f9dddd10f7fc0730d486efef829c
