@@ -1,13 +1,16 @@
-$NetBSD: patch-aa,v 1.7 2000/03/17 23:16:18 tron Exp $
+$NetBSD: patch-aa,v 1.8 2000/06/14 16:33:49 he Exp $
 
---- Makefile.orig	Mon Mar 13 19:25:57 2000
-+++ Makefile	Sat Mar 18 00:14:22 2000
-@@ -11,27 +11,27 @@
+--- Makefile.orig	Sat Jun  3 21:26:12 2000
++++ Makefile	Wed Jun 14 17:43:30 2000
+@@ -5,16 +5,18 @@
+ #compiler; get gcc if you are still using it). 
+ COMPILER=gcc
  
- #If the install command is not in your path, provide
- #an explicit path for it here, or install manually.
--INSTALL=install
-+INSTALL=$(LIBTOOL) install -c
++INSTALL=$(LIBTOOL) install -c -m
++
+ #If the ar command fails on your system, consult the ar manpage
+ #for your system. 
+ AR=ar
  
  #If you don't have FreeType, libjpeg and/or Xpm installed, including the
  #header files, uncomment this (default).
@@ -15,28 +18,38 @@ $NetBSD: patch-aa,v 1.7 2000/03/17 23:16:18 tron Exp $
 +#CFLAGS=-O
  #If you do have FreeType, libjpeg and/or Xpm fully installed, uncomment a
  #variation of this and comment out the line above. See also LIBS below.
--#CFLAGS=-O -DHAVE_XPM -DHAVE_JPEG -DHAVE_LIBTTF
-+CFLAGS=-O -DHAVE_XPM -DHAVE_JPEG -DHAVE_LIBTTF
+-#CFLAGS=-O  -DHAVE_XPM -DHAVE_JPEG -DHAVE_LIBTTF
++CFLAGS=-O  -DHAVE_XPM -DHAVE_JPEG -DHAVE_LIBTTF
  
  #If you don't have FreeType and/or Xpm fully installed, uncomment this
  #(default).
+@@ -23,7 +25,7 @@
+ #Some systems are very picky about link order. They don't all agree
+ #on the right order, either.
+ 
 -LIBS=-lm -lgd -lpng -lz
 +#LIBS=-lm -lgd -lpng -lz
  
  #If you do have FreeType, JPEG and/or Xpm fully installed, uncomment a 
  #variation of this and comment out the line above. Note that
- #Xpm requires X11. See also CFLAGS above.
+@@ -33,14 +35,14 @@
+ #Some systems are very picky about link order. They don't all agree
+ #on the right order, either.
+ 
 -#LIBS=-lm -lgd -lpng -lz -ljpeg -lttf -lXpm -lX11
 +LIBS=$(LIBGD) -lm -lpng -lz -ljpeg -lttf -lXpm -lX11 -lintl
  
  #Typical install locations for freetype, zlib, xpm, libjpeg and libpng header files.
  #If yours are somewhere else, change this. 
--INCLUDEDIRS=-I/usr/local/include -I/usr/include/X11 -I/usr/X11R6/include/X11
-+INCLUDEDIRS=${CPPFLAGS}
+ #-I. is important to ensure that the version of gd you are installing
+ #is used, and not an older release in your directory tree somewhere.
+ 
+-INCLUDEDIRS=-I. -I/usr/local/include -I/usr/include/X11 -I/usr/X11R6/include/X11
++INCLUDEDIRS=-I. ${CPPFLAGS}
  
  #Typical install locations for freetype, zlib, xpm and libpng libraries.
  #If yours are somewhere else, other than a standard location
-@@ -39,16 +39,16 @@
+@@ -48,16 +50,16 @@
  #-L. as this allows the gd library itself to be found.
  #Put -L. first so that old versions of the gd library elsewhere
  #on your system can't cause conflicts while building a new one.
@@ -57,43 +70,71 @@ $NetBSD: patch-aa,v 1.7 2000/03/17 23:16:18 tron Exp $
  
  #
  #
-@@ -58,7 +58,7 @@
+@@ -65,9 +67,9 @@
+ #
+ #
  
- VERSION=1.7
+-VERSION=1.8.1
++VERSION=1.8.3
  
 -CC=$(COMPILER) $(INCLUDEDIRS)
 +CC=$(LIBTOOL) $(COMPILER) $(INCLUDEDIRS)
  LINK=$(CC) $(LIBDIRS) $(LIBS)
  
  PROGRAMS=$(BIN_PROGRAMS) $(TEST_PROGRAMS)
-@@ -66,10 +66,12 @@
+@@ -75,71 +77,71 @@
  BIN_PROGRAMS=pngtogd pngtogd2 gdtopng gd2topng gd2copypal gdparttopng webpng
  TEST_PROGRAMS=gdtest gddemo gd2time gdtestttf
  
 -all: libgd.a $(PROGRAMS)
 +LIBGD=libgd.la
++
++all: $(LIBGD) $(PROGRAMS)
  
 -install: libgd.a $(BIN_PROGRAMS)
--	$(INSTALL) -m 644 libgd.a $(INSTALL_LIB)/libgd.a
-+all: $(LIBGD) $(PROGRAMS)
-+
+-	sh ./install-item 644 libgd.a $(INSTALL_LIB)/libgd.a
+-	sh ./install-item 755 pngtogd $(INSTALL_BIN)/pngtogd
+-	sh ./install-item 755 pngtogd2 $(INSTALL_BIN)/pngtogd2
+-	sh ./install-item 755 gdtopng $(INSTALL_BIN)/gdtopng
+-	sh ./install-item 755 gd2topng $(INSTALL_BIN)/gd2topng
+-	sh ./install-item 755 gd2copypal $(INSTALL_BIN)/gd2copypal
+-	sh ./install-item 755 gdparttopng $(INSTALL_BIN)/gdparttopng
+-	sh ./install-item 755 webpng $(INSTALL_BIN)/webpng
+-	sh ./install-item 755 bdftogd $(INSTALL_BIN)/bdftogd
+-	sh ./install-item 644 gd.h $(INSTALL_INCLUDE)/gd.h
+-	sh ./install-item 644 gdcache.h $(INSTALL_INCLUDE)/gdcache.h
+-	sh ./install-item 644 gd_io.h $(INSTALL_INCLUDE)/gd_io.h
+-	sh ./install-item 644 gdfontg.h $(INSTALL_INCLUDE)/gdfontg.h
+-	sh ./install-item 644 gdfontl.h $(INSTALL_INCLUDE)/gdfontl.h
+-	sh ./install-item 644 gdfontmb.h $(INSTALL_INCLUDE)/gdfontmb.h
+-	sh ./install-item 644 gdfonts.h $(INSTALL_INCLUDE)/gdfonts.h
+-	sh ./install-item 644 gdfontt.h $(INSTALL_INCLUDE)/gdfontt.h
 +install: $(LIBGD) $(BIN_PROGRAMS)
-+	$(INSTALL) -m 644 $(LIBGD) $(INSTALL_LIB)
- 	$(INSTALL) -m 755 pngtogd $(INSTALL_BIN)/pngtogd
- 	$(INSTALL) -m 755 pngtogd2 $(INSTALL_BIN)/pngtogd2
- 	$(INSTALL) -m 755 gdtopng $(INSTALL_BIN)/gdtopng
-@@ -87,50 +89,47 @@
- 	$(INSTALL) -m 644 gdfonts.h $(INSTALL_INCLUDE)/gdfonts.h
- 	$(INSTALL) -m 644 gdfontt.h $(INSTALL_INCLUDE)/gdfontt.h
++	sh $(INSTALL) 644 $(LIBGD) $(INSTALL_LIB)
++	sh $(INSTALL) 755 pngtogd $(INSTALL_BIN)/pngtogd
++	sh $(INSTALL) 755 pngtogd2 $(INSTALL_BIN)/pngtogd2
++	sh $(INSTALL) 755 gdtopng $(INSTALL_BIN)/gdtopng
++	sh $(INSTALL) 755 gd2topng $(INSTALL_BIN)/gd2topng
++	sh $(INSTALL) 755 gd2copypal $(INSTALL_BIN)/gd2copypal
++	sh $(INSTALL) 755 gdparttopng $(INSTALL_BIN)/gdparttopng
++	sh $(INSTALL) 755 webpng $(INSTALL_BIN)/webpng
++	sh $(INSTALL) 755 bdftogd $(INSTALL_BIN)/bdftogd
++	sh $(INSTALL) 644 gd.h $(INSTALL_INCLUDE)/gd.h
++	sh $(INSTALL) 644 gdcache.h $(INSTALL_INCLUDE)/gdcache.h
++	sh $(INSTALL) 644 gd_io.h $(INSTALL_INCLUDE)/gd_io.h
++	sh $(INSTALL) 644 gdfontg.h $(INSTALL_INCLUDE)/gdfontg.h
++	sh $(INSTALL) 644 gdfontl.h $(INSTALL_INCLUDE)/gdfontl.h
++	sh $(INSTALL) 644 gdfontmb.h $(INSTALL_INCLUDE)/gdfontmb.h
++	sh $(INSTALL) 644 gdfonts.h $(INSTALL_INCLUDE)/gdfonts.h
++	sh $(INSTALL) 644 gdfontt.h $(INSTALL_INCLUDE)/gdfontt.h
  
 -gddemo: gddemo.o libgd.a
 +gddemo: gddemo.o $(LIBGD)
  	$(CC) gddemo.o -o gddemo	$(LIBDIRS) $(LIBS)
  
 -pngtogd: pngtogd.o libgd.a
--	$(CC) pngtogd.o -o pngtogd	$(LIBDIRS) $(LIBS) 
 +pngtogd: pngtogd.o $(LIBGD)
-+	$(CC) pngtogd.o -o pngtogd	$(LIBDIRS) $(LIBS)
+ 	$(CC) pngtogd.o -o pngtogd	$(LIBDIRS) $(LIBS) 
  
 -webpng: webpng.o libgd.a
 +webpng: webpng.o $(LIBGD)
@@ -132,24 +173,26 @@ $NetBSD: patch-aa,v 1.7 2000/03/17 23:16:18 tron Exp $
  	$(CC) gdtestttf.o -o gdtestttf	$(LIBDIRS) $(LIBS)
  
 -libgd.a: gd.o gd_gd.o gd_gd2.o gd_io.o gd_io_dp.o gd_io_file.o gd_ss.o \
-+GD_OBJS= gd.o gd_gd.o gd_gd2.o gd_io.o gd_io_dp.o gd_io_file.o gd_ss.o \
- 	gd_io_ss.o gd_png.o gd_jpeg.o gdxpm.o gdfontt.o gdfonts.o gdfontmb.o gdfontl.o \
--	gdfontg.o gdtables.o gdttf.o gdcache.o gdkanji.o \
+-	gd_io_ss.o gd_png.o gd_jpeg.o gdxpm.o gdfontt.o gdfonts.o gdfontmb.o gdfontl.o \
+-	gdfontg.o gdtables.o gdttf.o gdcache.o gdkanji.o  wbmp.o gd_wbmp.o \
 -	gd.h gdfontt.h gdfonts.h gdfontmb.h gdfontl.h gdfontg.h
 -	rm -f libgd.a
 -	$(AR) rc libgd.a gd.o gd_gd.o gd_gd2.o gd_io.o gd_io_dp.o \
 -		gd_io_file.o gd_ss.o gd_io_ss.o gd_png.o gd_jpeg.o gdxpm.o \
 -		gdfontt.o gdfonts.o gdfontmb.o gdfontl.o gdfontg.o \
--		gdtables.o gdttf.o gdcache.o gdkanji.o
+-		gdtables.o gdttf.o gdcache.o gdkanji.o wbmp.o gd_wbmp.o
 -	-ranlib libgd.a
-+	gdfontg.o gdtables.o gdttf.o gdcache.o gdkanji.o
- 
--clean:
--	rm -f *.o *.a ${PROGRAMS}
++GD_OBJS= gd.o gd_gd.o gd_gd2.o gd_io.o gd_io_dp.o gd_io_file.o gd_ss.o \
++	gd_io_ss.o gd_png.o gd_jpeg.o gdxpm.o gdfontt.o gdfonts.o gdfontmb.o \
++	gdfontl.o gdfontg.o gdtables.o gdttf.o gdcache.o gdkanji.o  wbmp.o \
++	gd_wbmp.o
++	
 +$(LIBGD): $(GD_OBJS) gd.h gdfontt.h gdfonts.h gdfontmb.h gdfontl.h gdfontg.h
 +	rm -f $(LIBGD)
 +	$(CC) -o $(LIBGD) $(GD_OBJS:.o=.lo) -rpath ${PREFIX}/lib \
 +		-version-info $(GD_MAJOR):$(GD_MINOR)
  
-+clean:
-+	$(LIBTOOL) rm -f *.o *.a ${PROGRAMS}
+ clean:
+-	rm -f *.o *.a ${PROGRAMS} test/gdtest.jpg test/gdtest.wbmp
+-
++	$(LIBTOOL) rm -f *.o *.a ${PROGRAMS} test/gdtest.jpg test/gdtest.wbmp
