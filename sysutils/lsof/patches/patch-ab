@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.31 2004/11/28 22:39:07 atatat Exp $
+$NetBSD: patch-ab,v 1.32 2004/11/30 02:02:13 atatat Exp $
 
 Incorporate a patch from the author that widens the NETBSDV definition
 to account for new current versioning system, properly handles the
@@ -76,13 +76,19 @@ support.
  		   && __NetBSD_Version__<106060000 */
  #include <miscfs/nullfs/null.h>
  #undef	_KERNEL
-@@ -357,10 +365,20 @@ struct sockproto {
+@@ -357,10 +365,26 @@ struct sockproto {
  #define	Pstatus		PFSstatus
  #define	Pnote		PFSnote
  #define	Pnotepg		PFSnotepg
++#   if	defined(NetBSDV)
++#    if	NETBSDV>=2000000
 +#define	Pfd		PFSfd
++#    endif	/* NETBSDV>=2000000 */
++#    if	NETBSDV>=1006000
 +#define	Pmap		PFSmap
 +#define	Pmaps		PFSmaps
++#    endif	/* NETBSDV>=1006000 */
++#   endif	/* defined(NetBSDV) */
  #  endif	/* defined(HASPROCFS_PFSROOT) */
  #include <machine/reg.h>
  # endif	/* defined(HASPROCFS) */
@@ -97,7 +103,7 @@ support.
  #define	KERNEL
  #define _KERNEL
  #include <sys/file.h>
-@@ -515,9 +533,9 @@ struct sfile {
+@@ -515,9 +539,9 @@ struct sfile {
   */
  
  # if     defined(HASNCACHE)
@@ -109,7 +115,7 @@ support.
  
  #include <sys/uio.h>
  #include <sys/namei.h>
-@@ -527,15 +545,15 @@ struct sfile {
+@@ -527,15 +551,15 @@ struct sfile {
  #define	NCACHE_NODEADDR	nc_vp		/* node address in NCACHE */
  #define	NCACHE_PARADDR	nc_dvp		/* parent node address in NCACHE */
  
