@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1997 2003/04/21 03:36:59 rh Exp $
+$NetBSD: CHANGES,v 1.1998 2003/04/21 06:26:06 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1678,3 +1678,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added gnome-games-2.2.1 as gnome2-games [rh 2003-04-21]
 	Updated gnucap to 0.33 [dmcmahill 2003-04-21]
 	Added gnome-utils-2.2.1 as gnome2-utils [rh 2003-04-21]
+	Updated postfix to 2.0.9 [martti 2003-04-21]
