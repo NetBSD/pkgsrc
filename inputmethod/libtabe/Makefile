@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/10/03 00:14:59 tv Exp $
+# $NetBSD: Makefile,v 1.11 2004/11/13 21:28:28 jlam Exp $
 #
 
 DISTNAME=	libtabe-0.2.5
@@ -11,7 +11,7 @@ HOMEPAGE=	http://libtabe.sourceforge.net/
 COMMENT=	Library for Chinese language processing
 
 WRKSRC=			${WRKDIR}/libtabe
-USE_BUILDLINK3=		# defined
+USE_BUILDLINK3=		yes
 USE_X11=		# defined
 USE_LIBTOOL=		# defined
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/04/11 07:48:07 snj Exp $
+# $NetBSD: Makefile,v 1.14 2004/11/13 21:28:27 jlam Exp $
 # FreeBSD Id: ports/converters/unix2dos/Makefile,v 1.5 2000/07/04 10:31:42 sobomax Exp
 
 DISTNAME=	unix2dos-1.2
@@ -10,7 +10,7 @@ MAINTAINER=	zuntum@NetBSD.org
 COMMENT=	Translate ASCII files to/from DOS (cr/lf) and UNIX (lf)
 
 WRKSRC=		${WRKDIR}
-USE_BUILDLINK3=	# defined
+USE_BUILDLINK3=	yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/unix2dos ${PREFIX}/bin/unix2dos

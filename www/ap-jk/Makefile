@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/07/02 22:01:01 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2004/11/13 21:28:29 jlam Exp $
 
 DISTNAME=	jakarta-tomcat-${TOMCAT_VERSION}-src
 PKGNAME=	ap-jk-${TOMCAT_VERSION}
@@ -17,7 +17,7 @@ BUILD_DEPENDS+=	gtar-base-[0-9]*:../../archivers/gtar-base
 GTAR=		${LOCALBASE}/bin/gtar
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src/native/apache1.3
-USE_BUILDLINK3=		# defined
+USE_BUILDLINK3=		yes
 
 EXTRACT_ELEMENTS=	${DISTNAME}/src/native
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/05/05 00:28:50 snj Exp $
+# $NetBSD: Makefile,v 1.17 2004/11/13 21:28:28 jlam Exp $
 
 DISTNAME=	kdoc-2.0a54
 PKGNAME=	kdoc-3.0
@@ -14,7 +14,7 @@ COMMENT=	C++ and IDL Class Documentation Tool
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
-USE_BUILDLINK3=	# defined
+USE_BUILDLINK3=	yes
 
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

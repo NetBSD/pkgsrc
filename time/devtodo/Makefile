@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/10/03 00:18:21 tv Exp $
+# $NetBSD: Makefile,v 1.21 2004/11/13 21:28:29 jlam Exp $
 #
 
 DISTNAME=	devtodo-0.1.17
@@ -13,7 +13,7 @@ COMMENT=	Display and manage a list of items that are outstanding
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-USE_BUILDLINK3=		# defined
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
 
 # We don't need curses, just termcap.
