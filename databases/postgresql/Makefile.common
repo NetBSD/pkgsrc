@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2001/05/14 15:45:08 jlam Exp $
+# $NetBSD: Makefile.common,v 1.14 2001/05/15 15:59:22 jlam Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution.
@@ -22,6 +22,8 @@ MASTER_SITES=		http://www.postgresql.org/ftpsite/v${PG_DIST_VERS}/ \
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.postgresql.org/
+
+CONFLICTS+=		postgresql-[0-6]* postgresql-7.0*
 
 DISTINFO_FILE=		${.CURDIR}/../../databases/postgresql/distinfo
 COMMON_FILESDIR=	${.CURDIR}/../../databases/postgresql/files
@@ -83,9 +85,13 @@ CFLAGS+=		-I${WRKINCDIR}
 
 post-extract:
 	${MKDIR} -p ${WRKINCDIR}
-	${RM} -f ${WRKSRC}/src/Makefile.custom
-	${CP} -f ${COMMON_FILESDIR}/Makefile.custom			\
-		${WRKSRC}/src/Makefile.custom
-	${RM} -f ${WRKSRC}/src/interfaces/libpq/GNUmakefile
-	${CP} -f ${COMMON_FILESDIR}/GNUmakefile.libpq			\
-		${WRKSRC}/src/interfaces/libpq/GNUmakefile
+	if [ -d ${WRKSRC}/src ]; then					\
+		${RM} -f ${WRKSRC}/src/Makefile.custom;			\
+		${CP} -f ${COMMON_FILESDIR}/Makefile.custom		\
+			${WRKSRC}/src/Makefile.custom;			\
+	fi
+	if [ -d ${WRKSRC}/src/interfaces/libpq ]; then			\
+		${RM} -f ${WRKSRC}/src/interfaces/libpq/GNUmakefile;	\
+		${CP} -f ${COMMON_FILESDIR}/GNUmakefile.libpq		\
+			${WRKSRC}/src/interfaces/libpq/GNUmakefile;	\
+	fi
