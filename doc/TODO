@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3292 2005/03/24 15:40:36 wiz Exp $
+$NetBSD: TODO,v 1.3293 2005/03/24 16:57:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1009,7 +1009,7 @@ Suggested package updates
 	o swig-python-1.3.24
 	o swish-e-2.4.3
 	o sylpheed-1.0.4
-	o sylpheed-claws-1.0.3
+	o sylpheed-claws-1.0.4
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-4.1.5
 	o sysinfo-4.2.2
