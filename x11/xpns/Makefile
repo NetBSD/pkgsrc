@@ -3,7 +3,8 @@
 # Date created:         6 Apr 97
 # Whom:                 Pedro Giffuni <pgiffuni@fps.biblos.unal.edu.co>
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/11 21:55:15 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1998/01/25 00:49:21 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.2 1997/06/29 09:38:20 obrien Exp
 #
 
 DISTNAME=	pns_source
@@ -16,7 +17,7 @@ MAINTAINER=	pgiffuni@fps.biblos.unal.edu.co
 
 USE_X11=	yes
 NO_WRKSUBDIR=	yes
-MAKEFILE=	makefile 
+MAKEFILE=	makefile
 ALL_TARGET=	pns
 
 do-install:
