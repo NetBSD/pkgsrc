@@ -1,0 +1,20 @@
+$NetBSD: patch-bg,v 1.1 2002/01/03 20:40:45 tron Exp $
+
+--- ../gcc-2.95.3/gcc/config/t-netbsd.orig	Wed Dec 16 22:00:12 1998
++++ ../gcc-2.95.3/gcc/config/t-netbsd	Thu Jan  3 20:37:54 2002
+@@ -1,9 +1,9 @@
+-LIBGCC1=libgcc1.null
+-CROSS_LIBGCC1=libgcc1.null
+-LIBGCC1_TEST=
+-
+-# Don't run fixproto
++# Don't run fixproto.
+ STMP_FIXPROTO =
+ 
+-# Don't install "assert.h" in gcc. We use the one in glibc.
++# Don't install "assert.h" in gcc. We use the one in NetBSD's libc.
+ INSTALL_ASSERT_H =
++
++# The stdarg, varargs, etc. that comes with NetBSD is already sane.
++# Don't override these with local versions.
++USER_H = $(EXTRA_HEADERS) $(LANG_EXTRA_HEADERS)

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2001/12/29 18:33:39 fredb Exp $
+# $NetBSD: Makefile,v 1.31 2002/01/03 20:40:39 tron Exp $
 
-DISTNAME=		gcc-2.95.2
-PKGREVISION=		1
+DISTNAME=		gcc-2.95.3
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/}
 
@@ -13,8 +12,7 @@ BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
 # The platforms listed below are the only tested platforms so far.
 # If you get gcc working on other platforms, then please add them.
-ONLY_FOR_PLATFORM=	NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-m68k \
-			NetBSD-*-sparc SunOS-*-*
+ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -32,10 +30,8 @@ CONFIGURE_ARGS=		--host=${MACHINE_GCC_PLATFORM} \
 CONFIGURE_SCRIPT=	${SRCDIR}/configure
 INFO_FILES=		chill.info cpp.info g77.info gcc.info
 
-GCC_VERSION=		${PKGNAME:C/.*-//:C/nb[1-9]*//}
 MESSAGE_SUBST+=		MAKE=${MAKE}
-PLIST_SUBST+=		GCC_VERSION=${GCC_VERSION} \
-			MACHINE_GCC_PLATFORM=${MACHINE_GCC_PLATFORM}
+PLIST_SUBST+=		MACHINE_GCC_PLATFORM=${MACHINE_GCC_PLATFORM}
 SRCDIR=			${WRKDIR}/${DISTNAME}
 WRKSRC=			${WRKDIR}/objdir
 
@@ -61,7 +57,12 @@ CONFLICTS+=		gcc-[0-9]* pgcc-[0-9]*
 
 post-extract:
 	${MKDIR} ${WRKSRC}
-	${CP} ${FILESDIR}/netbsd*.ml ${WRKSRC}/../${DISTNAME}/libstdc++/config
+	cd ${WRKSRC}/../${DISTNAME}/gcc/config; \
+	${CP} ${FILESDIR}/xm-netbsd.h .; \
+	for ARCH in arm arm i386 m68k sh sparc vax; do \
+	  ${MKDIR} $${ARCH}; \
+	  ${CP} ${FILESDIR}/$${ARCH}_netbsd-elf.h $${ARCH}/netbsd-elf.h; \
+	done
 
 post-patch:
 	${ECHO} "bogus" >${WRKSRC}/../${DISTNAME}/gcc/cstamp-h.in
@@ -81,9 +82,9 @@ pre-install:
 
 .if (${OPSYS} != SunOS)
 post-install:
-	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/curses.h ${PREFIX}/${PKGNAME}/bin/cc
+	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/curses.h ${PREFIX}/${PKGNAME}/bin/cc
 	${LN} -s gcc ${PREFIX}/${PKGNAME}/bin/cc
-	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/curses.h
+	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/curses.h
 	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/etc/${PKGNAME}.mk
 .endif
 
