@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2004/02/14 17:21:44 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2004/03/07 11:15:45 recht Exp $
 #
 
 DISTNAME=		balsa-2.0.16
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		mail gnome
 MASTER_SITES=		http://balsa.gnome.org/				\
 			ftp://ftp.newton.cx/pub/balsa/
@@ -33,10 +33,13 @@ EGDIR=		${PREFIX}/share/examples/balsa
 CONF_FILES+=	${EGDIR}/${cnf} ${PKG_SYSCONFDIR}/sound/events/${cnf}
 .endfor
 
+.include "../../mk/bsd.prefs.mk"
+
 .if defined(USE_OPENLDAP) && ${USE_OPENLDAP} == YES
-CONFIGURE_ARGS+=        --enable-ldap
+CONFIGURE_ARGS+=        --with-ldap
 .include "../../databases/openldap/buildlink3.mk"
 .endif
+BUILD_DEFS+=	USE_OPENLDAP
 
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
@@ -48,6 +51,7 @@ CONFIGURE_ARGS+=        --enable-ldap
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../www/gtkhtml3/buildlink3.mk"
 .include "../../mail/libesmtp/buildlink3.mk"
