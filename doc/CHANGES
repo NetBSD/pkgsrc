@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4054 2003/12/12 22:02:20 jmmv Exp $
+$NetBSD: CHANGES,v 1.4055 2003/12/12 22:10:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5072,3 +5072,8 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sun-jdk14 to 2.3 [adam 2003-12-12]
 	Added automake17-1.7.9 [wiz 2003-12-12]
 	Updated rdiff-backup to 0.12.6 [jmmv 2003-12-12]
+	Updated cvs to 1.11.10 [wiz 2033-12-12]
+	Updated gmplayer to 1.0rc3 [wiz 2003-12-12]
+	Updated mencoder to 1.0rc3 [wiz 2003-12-12]
+	Updated mplayer to 1.0rc3 [wiz 2003-12-12]
+	Updated mplayer-share to 1.0rc3 [wiz 2003-12-12]
