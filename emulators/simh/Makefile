@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/12/22 21:07:01 skrll Exp $
+# $NetBSD: Makefile,v 1.19 2005/03/20 11:55:26 jmmv Exp $
 #
 
 DISTNAME=	simhv33-0
@@ -12,7 +12,10 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://simh.trailing-edge.com/
 COMMENT=	Bob Supnik's historical computer simulator
 
+BUILDLINK_DEPENDS.libpcap+=	libpcap>=0.6
+
 EXTRACT_CMD=	unzip -aoq ${DOWNLOADED_DISTFILE}
+USE_BUILDLINK3=	yes
 WRKSRC=		${WRKDIR}
 
 .include "../../mk/bsd.prefs.mk"
@@ -38,4 +41,5 @@ do-install:
 		${INSTALL_DATA} $$TXT ${PREFIX}/share/doc/simh;		\
 	done)
 
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
