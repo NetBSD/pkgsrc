@@ -1,0 +1,31 @@
+$NetBSD: patch-ac,v 1.1.2.2 2003/06/19 00:03:33 grant Exp $
+
+--- plugins/giop/Makefile.in.orig	2003-05-02 03:11:01.000000000 +0200
++++ plugins/giop/Makefile.in	2003-05-05 18:10:34.000000000 +0200
+@@ -186,8 +186,8 @@
+ # add them here.
+ LIBS = 
+ 
+-cosnaming_la_DEPENDENCIES = packet-cosnaming-static.o
+-coseventcomm_la_DEPENDENCIES = packet-coseventcomm-static.o
++@ENABLE_STATIC_TRUE@cosnaming_la_DEPENDENCIES = packet-cosnaming-static.o
++@ENABLE_STATIC_TRUE@coseventcomm_la_DEPENDENCIES = packet-coseventcomm-static.o
+ 
+ CLEANFILES = \
+ 	cosnaming \
+@@ -460,11 +460,11 @@
+ 	uninstall-am uninstall-info-am uninstall-pluginLTLIBRARIES
+ 
+ 
+-packet-cosnaming-static.o:	packet-cosnaming.c moduleinfo.h
+-	$(LTCOMPILE) -c -o packet-cosnaming-static.o -D__ETHEREAL_STATIC__ $(srcdir)/packet-cosnaming.c 
++@ENABLE_STATIC_TRUE@packet-cosnaming-static.o:	packet-cosnaming.c moduleinfo.h
++@ENABLE_STATIC_TRUE@	$(LTCOMPILE) -c -o packet-cosnaming-static.o -D__ETHEREAL_STATIC__ $(srcdir)/packet-cosnaming.c 
+ 
+-packet-coseventcomm-static.o:	packet-coseventcomm.c moduleinfo.h
+-	$(LTCOMPILE) -c -o packet-coseventcomm-static.o -D__ETHEREAL_STATIC__ $(srcdir)/packet-coseventcomm.c 
++@ENABLE_STATIC_TRUE@packet-coseventcomm-static.o:	packet-coseventcomm.c moduleinfo.h
++@ENABLE_STATIC_TRUE@	$(LTCOMPILE) -c -o packet-coseventcomm-static.o -D__ETHEREAL_STATIC__ $(srcdir)/packet-coseventcomm.c 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
