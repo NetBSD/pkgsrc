@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/02/04 00:06:38 hubertf Exp $
+bin/xhippo
+share/doc/xhippo/BUGS
+share/doc/xhippo/ChangeLog
+share/doc/xhippo/LIESMICH
+share/doc/xhippo/README
+share/doc/xhippo/README.fvwm2
+share/doc/xhippo/xhippo.config.example
+@exec if [ ! -f %D/etc/xhippo.config ]; then cp %D/%F %D/etc/xhippo.config ; fi
