@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/09 21:58:43 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/09/10 16:53:02 wiz Exp $
 bin/metacity
 bin/metacity-message
 bin/metacity-theme-viewer
@@ -104,18 +104,16 @@ share/metacity/themes/Gorilla/metacity-theme-1.xml
 @dirrm share/metacity/themes
 @dirrm share/metacity/icons
 @dirrm share/metacity
-@dirrm share/locale/ms/LC_MESSAGES
-@dirrm share/locale/lv/LC_MESSAGES
 @dirrm share/gnome/wm-properties
 @dirrm etc/gconf/schemas
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/metacity/window_keybindings
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/metacity/global_keybindings
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/metacity/general
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/metacity
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps
+@unexec ${RMDIR} %D/etc/gconf/gconf.xml.defaults/schemas/apps 2>/dev/null || ${TRUE}
 @dirrm etc/gconf/gconf.xml.defaults/apps/metacity/window_keybindings
 @dirrm etc/gconf/gconf.xml.defaults/apps/metacity/global_keybindings
 @dirrm etc/gconf/gconf.xml.defaults/apps/metacity/general
 @dirrm etc/gconf/gconf.xml.defaults/apps/metacity
-@dirrm etc/gconf/gconf.xml.defaults/apps
-@dirrm etc/gconf/gconf.xml.defaults
+@unexec ${RMDIR} %D/etc/gconf/gconf.xml.defaults/apps 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/etc/gconf/gconf.xml.defaults 2>/dev/null || ${TRUE}
