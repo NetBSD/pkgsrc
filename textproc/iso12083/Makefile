@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2004/01/20 12:26:49 agc Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/23 17:18:32 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/06/27 05:19:39 asami Exp
 #
 
 DISTNAME=	iso12083-1993
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://info.ex.ac.uk/pub/SGML/ISO-12083/ \
 		ftp://ftp.ifi.uio.no/pub/SGML/ISO12083/ \

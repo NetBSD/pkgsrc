@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2004/01/20 12:26:49 agc Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/23 17:18:32 jmmv Exp $
 #
 
 DISTNAME=	html-4.0b
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	http://fallout.campusview.indiana.edu/ports/distfiles/
 

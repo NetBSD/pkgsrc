@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/01/05 06:20:29 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/23 17:18:31 jmmv Exp $
 
 DISTNAME=	db2latex-0.7
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=db2latex/}
 
