@@ -1,9 +1,9 @@
-/*	$NetBSD: pkgdb.c,v 1.2 2003/01/06 04:34:17 jschauma Exp $	*/
+/*	$NetBSD: pkgdb.c,v 1.3 2003/01/07 06:42:28 grant Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: pkgdb.c,v 1.2 2003/01/06 04:34:17 jschauma Exp $");
+__RCSID("$NetBSD: pkgdb.c,v 1.3 2003/01/07 06:42:28 grant Exp $");
 #endif
 #endif
 
@@ -109,7 +109,7 @@ pkgdb_close(void)
 {
 #if defined(HAVE_DBOPEN)
 	if (pkgdbp != NULL) {
-		(void) (pkgdbp->close) (pkgdbp);
+		(void) (*pkgdbp->close) (pkgdbp);
 		pkgdbp = NULL;
 	}
 #endif /* HAVE_DBOPEN */
@@ -139,7 +139,7 @@ pkgdb_store(const char *key, const char *val)
 	if (keyd.size > FILENAME_MAX || vald.size > FILENAME_MAX)
 		return -1;
 
-	return (pkgdbp->put) (pkgdbp, &keyd, &vald, R_NOOVERWRITE);
+	return (*pkgdbp->put) (pkgdbp, &keyd, &vald, R_NOOVERWRITE);
 #else
 	return 0;
 #endif /* HAVE_DBOPEN */
@@ -167,7 +167,7 @@ pkgdb_retrieve(const char *key)
 
 	vald.data = (void *)NULL;
 	vald.size = 0;
-	status = (pkgdbp->get) (pkgdbp, &keyd, &vald, 0);
+	status = (*pkgdbp->get) (pkgdbp, &keyd, &vald, 0);
 	if (status) {
 		vald.data = NULL;
 		vald.size = 0;
@@ -191,7 +191,6 @@ pkgdb_remove(const char *key)
 {
 #if defined(HAVE_DBOPEN)
 	DBT     keyd;
-	int     status;
 
 	if (pkgdbp == NULL)
 		return -1;
@@ -201,15 +200,7 @@ pkgdb_remove(const char *key)
 	if (keyd.size > FILENAME_MAX)
 		return -1;
 
-	errno = 0;
-	status = (pkgdbp->del) (pkgdbp, &keyd, 0);
-	if (status) {
-		if (errno)
-			return -1;	/* error */
-		else
-			return 1;	/* key not present */
-	} else
-		return 0;	/* everything fine */
+	return (*pkgdbp->del) (pkgdbp, &keyd, 0);
 #else
 	return 0;
 #endif /* HAVE_DBOPEN */
@@ -226,17 +217,17 @@ pkgdb_iter(void)
 {
 #if defined(HAVE_DBOPEN)
 	DBT     key, val;
-	int     status;
+	int	type;
 
 	if (pkgdb_iter_flag == 0) {
 		pkgdb_iter_flag = 1;
-
-		status = (pkgdbp->seq) (pkgdbp, &key, &val, R_FIRST);
+		type = R_FIRST;
 	} else
-		status = (pkgdbp->seq) (pkgdbp, &key, &val, R_NEXT);
+		type = R_NEXT;
 
-	if (status)
+	if ((*pkgdbp->seq)(pkgdbp, &key, &val, type) != 0) {
 		key.data = NULL;
+	}
 
 	return (char *) key.data;
 #else
@@ -262,7 +253,9 @@ _pkgdb_getPKGDB_DIR(void)
 {
 	char   *tmp;
 	static char *cache = NULL;
+
 	if (cache == NULL)
 		cache = (tmp = getenv(PKG_DBDIR)) ? tmp : DEF_LOG_DIR;
+
 	return cache;
 }
