@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/09/07 03:41:55 sakamoto Exp $
+# $NetBSD: Makefile,v 1.11 2000/09/28 15:51:19 sakamoto Exp $
 #
 
 DISTNAME=	king-1.00-tb40-1
@@ -17,9 +17,6 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 
-KINGDISTDIR?=	/cdrom/linux
-DISTDIR=	${KINGDISTDIR}
-
 DEPENDS=	suse_base>=6.1:../../emulators/suse_base
 
 EXTRACT_ONLY=	# empty
@@ -34,16 +31,22 @@ CHECK_SHLIBS=	no
 RPM2PKG=	${PREFIX}/sbin/rpm2pkg
 RPM2PKGARGS=	-d ${PREFIX} -f ${PLIST_SRC} -p ${EMULSUBDIR}
 
-do-fetch:
-	@(if [ ! -f ${KINGDISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then \
-		${ECHO} "If CDROM not mounted, mount_cd9660 /dev/cd0a /cdrom; ${MAKE}"; \
-		${ECHO} "If CDROM mounted to /mnt, ${MAKE} KINGDISTDIR=/mnt/linux"; \
+pre-fetch:
+	@(file=""; for d in "" ${DIST_PATH:S/:/ /g}; do	\
+	    if [ "X$$d" = "X" -o "X$$d" = "X${DISTDIR}" ]; then continue; fi; \
+	    if [ -f $$d/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then \
+		file=${DISTNAME}${EXTRACT_SUFX}; \
+	    fi; \
+	  done; \
+	  if [ \! $$file ]; then \
+		${ECHO} "If CDROM not mounted, mount_cd9660 /dev/cd0a /cdrom; ${MAKE} DIST_PATH=/cdrom/linux"; \
+		${ECHO} "If CDROM mounted to /mnt, ${MAKE} DIST_PATH=/mnt/linux"; \
 		${FALSE}; \
-	fi)
+	  fi)
 
 do-install:
 	${RM} -f ${PLIST_SRC}
-	${RPM2PKG} ${RPM2PKGARGS} ${KINGDISTDIR}/${DISTFILES}
+	${RPM2PKG} ${RPM2PKGARGS} ${_DISTDIR}/${DIST_SUBDIR}/${DISTFILES}
 	@${ECHO} "@exec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR}" \
 		>> ${PLIST_SRC}
 	${EMULDIR}/sbin/ldconfig -r ${EMULDIR} || ${TRUE}
