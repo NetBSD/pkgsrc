@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/26 21:41:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2004/02/14 17:21:34 jlam Exp $
 #
 
 DISTNAME=	tv_scope-0.0.2
@@ -13,7 +13,6 @@ COMMENT=	3D Representation of a waveform
 
 USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=	YES
 
 ONLY_FOR_PLATFORM=	SunOS-*-* Linux-*-* Darwin-*-*

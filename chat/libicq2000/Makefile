@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:25:58 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/14 17:21:34 jlam Exp $
 #
 
 DISTNAME=	libicq2000-0.3.2
@@ -12,7 +12,6 @@ COMMENT=	Library for icq 2000/2001 clients
 
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
 
 .include "../../devel/libsigc++10/buildlink2.mk"

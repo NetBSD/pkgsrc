@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/02/09 18:47:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2004/02/14 17:21:40 jlam Exp $
 #
 
 DISTNAME=	sirius-0.7.0
@@ -19,8 +19,6 @@ USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
-
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../devel/GConf2/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"

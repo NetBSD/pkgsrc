@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/09 18:47:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/14 17:21:35 jlam Exp $
 #
 
 DISTNAME=		wv2-0.2.1
@@ -16,8 +16,6 @@ USE_GNU_ICONV=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.libiconv}

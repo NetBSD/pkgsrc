@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2004/01/22 07:49:20 grant Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/02/14 17:21:34 jlam Exp $
 #
 
 DISTNAME=	gaim-0.59.8
@@ -22,9 +22,7 @@ DEPENDS+=	gnome1-dirs>=1.0:../../misc/gnome1-dirs
 USE_GNU_TOOLS+=		make
 USE_X11BASE=		YES
 USE_PKGLOCALEDIR=	YES
-
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-artsc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/01/23 21:50:43 jmmv Exp $
+# $NetBSD: Makefile,v 1.35 2004/02/14 17:21:35 jlam Exp $
 #
 
 DISTNAME=		wv-1.0.0
@@ -17,7 +17,6 @@ USE_LIBTOOL=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
 
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=    ${WRKSRC}/wv-1.0.pc.in
 
 MAKEFILE=		GNUmakefile

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/24 13:51:13 grant Exp $
+# $NetBSD: Makefile,v 1.18 2004/02/14 17:21:43 jlam Exp $
 
 DISTNAME=		cilk-5.3.1
 PKGREVISION=		2
@@ -17,7 +17,6 @@ USE_BUILDLINK2=	 	# defined
 USE_GNU_TOOLS+=		make
 USE_PERL5=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE= 	${WRKSRC}/libtool
 PTHREAD_OPTS+=		require
 
 INFO_FILES=		cilk-faq.info

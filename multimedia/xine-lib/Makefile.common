@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2004/01/26 13:03:38 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/02/14 17:21:45 jlam Exp $
 #
 
 DISTNAME=		xine-lib-1-rc0a
@@ -19,8 +19,7 @@ GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-LIBTOOL_OVERRIDE+=	${WRKSRC}/libtool-nofpic
+LIBTOOL_OVERRIDE=	libtool libtool-nofpic
 PKGCONFIG_OVERRIDE=	${WRKSRC}/misc/libxine.pc.in
 USE_GNU_TOOLS+=		make
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/01/06 22:03:31 keihan Exp $
+# $NetBSD: Makefile,v 1.12 2004/02/14 17:21:46 jlam Exp $
 #
 
 DISTNAME=		dante-1.1.14
@@ -15,7 +15,6 @@ USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 CONFIGURE_ARGS+=	--with-socks-conf=${PKG_SYSCONFDIR}/socks.conf
 CONFIGURE_ARGS+=	--with-sockd-conf=${PKG_SYSCONFDIR}/sockd.conf
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/22 07:15:01 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/02/14 17:21:34 jlam Exp $
 
 DISTNAME=	tremor_snapshot_030406
 PKGNAME=	tremor-1.0.2
@@ -16,7 +16,6 @@ AUTOMAKE_REQD=		1.4
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
-#LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 PLIST_SUBST+=		DISTNAME=${DISTNAME}
 

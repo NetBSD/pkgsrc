@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/10/11 13:40:19 grant Exp $
+# $NetBSD: Makefile,v 1.18 2004/02/14 17:21:42 jlam Exp $
 #
 
 DISTNAME=	graphviz-1.10
@@ -16,7 +16,6 @@ GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 USE_X11=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 XAW_TYPE=		standard
 
 CONFIGURE_ENV+=		TCLCONFIG=${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh

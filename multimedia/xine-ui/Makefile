@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/26 13:04:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/14 17:21:45 jlam Exp $
 #
 
 DISTNAME=		xine-ui-0.9.22
@@ -17,7 +17,6 @@ USE_PKGLOCALEDIR=	YES
 USE_BUILDLINK2=		YES
 USE_X11=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
 
 .include "../../converters/libiconv/buildlink2.mk"

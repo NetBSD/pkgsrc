@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/02/11 04:58:15 xtraeme Exp $
+# $NetBSD: Makefile,v 1.18 2004/02/14 17:21:42 jlam Exp $
 
 DISTNAME=	libexif-0.5.12
 PKGREVISION=	1
@@ -13,7 +13,6 @@ USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	libexif/libexif.pc.in
 
 .include "../../devel/gettext-lib/buildlink3.mk"

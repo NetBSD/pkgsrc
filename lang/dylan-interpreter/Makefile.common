@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2004/01/24 13:51:14 grant Exp $
+# $NetBSD: Makefile.common,v 1.13 2004/02/14 17:21:43 jlam Exp $
 #
 
 DISTNAME=		gwydion-dylan-${DYLAN_VERSION}
@@ -19,6 +19,7 @@ COMMENT=		Functional language
 
 USE_BUILDLINK2=		yes
 USE_GNU_TOOLS+=		make
+USE_LIBTOOL=		yes
 MAKEFILE=		GNUmakefile
 ALL_TARGET=		default
 
@@ -29,9 +30,6 @@ DYLAN_VERSION=		2.3.6
 
 # other architecture changes will be gratefully received
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-sparc NetBSD-*-powerpc
-
-USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/01/24 15:46:43 grant Exp $
+# $NetBSD: Makefile,v 1.30 2004/02/14 17:21:40 jlam Exp $
 #
 
 DISTNAME=		blender-2.31a
@@ -17,7 +17,6 @@ HAS_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 LDFLAGS+=		-lcrypto
 

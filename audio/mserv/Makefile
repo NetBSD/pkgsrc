@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/01/23 06:37:00 grant Exp $
+# $NetBSD: Makefile,v 1.20 2004/02/14 17:21:33 jlam Exp $
 #
 
 DISTNAME=	mserv-0.35
@@ -17,7 +17,6 @@ CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/mserv
 CONFIGURE_ENV+=		MY_LIBS="-lvorbisfile -lvorbis"
 USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 REPLACE_PERL=		support/mservedit webclient/main.cgi \
 			webclient/margin.cgi webclient/mserv.cgi

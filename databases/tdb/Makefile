@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/22 08:02:16 grant Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/14 17:21:36 jlam Exp $
 #
 
 DISTNAME=	tdb-1.0.6
@@ -13,6 +13,5 @@ GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../mk/bsd.pkg.mk"

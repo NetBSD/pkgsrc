@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:22:43 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/14 17:21:33 jlam Exp $
 #
 
 DISTNAME=	libsamplerate-0.0.13
@@ -10,11 +10,9 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.mega-nerd.com/SRC/
 COMMENT=	Sample rate converter library
 
-GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
-
-USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+GNU_CONFIGURE=	YES
+USE_LIBTOOL=	YES
 
 TEST_TARGET=	check
 

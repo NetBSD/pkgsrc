@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2003/11/06 18:14:03 gavan Exp $
+# $NetBSD: Makefile.common,v 1.4 2004/02/14 17:21:39 jlam Exp $
 
 DISTNAME=       swig-${SWIG_VERSION}
 CATEGORIES=	devel
@@ -20,7 +20,6 @@ USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_GCC_SHLIB=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/Tools/libtool
 
 CONFIGURE_ARGS+=	--without-guile
 CONFIGURE_ARGS+=	--without-java

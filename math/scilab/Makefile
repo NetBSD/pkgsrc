@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2004/02/01 01:43:29 jlam Exp $
+# $NetBSD: Makefile,v 1.48 2004/02/14 17:21:44 jlam Exp $
 #
 
 DISTNAME=	${SCIBASE}.src
@@ -26,9 +26,7 @@ NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
 USE_BUILDLINK2=		yes
 USE_FORTRAN=		yes
 USE_X11BASE=		yes
-
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-xaw3d

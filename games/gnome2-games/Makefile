@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/02/11 08:06:32 xtraeme Exp $
+# $NetBSD: Makefile,v 1.25 2004/02/14 17:21:40 jlam Exp $
 
 DISTNAME=		gnome-games-2.4.2
 PKGREVISION=		1
@@ -21,7 +21,6 @@ USE_X11=		yes
 USE_CONFIG_WRAPPER=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 USE_PKGINSTALL=		yes
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL

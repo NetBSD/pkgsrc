@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/13 19:39:35 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/14 17:21:35 jlam Exp $
 
 DISTNAME=	dbxml-1.2.1
 CATEGORIES=	databases
@@ -13,7 +13,6 @@ USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	../dist/configure
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--with-berkeleydb=${BUILDLINK_PREFIX.db4}
 CONFIGURE_ARGS+=	--with-xerces=${BUILDLINK_PREFIX.xerces-c}

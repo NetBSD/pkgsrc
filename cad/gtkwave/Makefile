@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/23 21:50:43 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/14 17:21:34 jlam Exp $
 #
 
 #DISTNAME=		gtkwave-2.0.0pre3
@@ -16,7 +16,6 @@ COMMENT=		Electronic waveform viewer
 USE_X11=		yes
 USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 
 .include "../../devel/glib/buildlink2.mk"

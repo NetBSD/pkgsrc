@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/28 14:30:24 recht Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/14 17:21:45 jlam Exp $
 
 DISTNAME=	libdvdplay-1.0.1
 PKGREVISION=	1
@@ -13,8 +13,6 @@ GNU_CONFIGURE=	yes
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
 USE_BUILDLINK2=	yes
-
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../multimedia/libdvdread/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

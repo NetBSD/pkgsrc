@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2004/01/22 22:52:10 grant Exp $
+# $NetBSD: Makefile.common,v 1.9 2004/02/14 17:21:33 jlam Exp $
 
 DISTNAME=	libao-0.8.4
 CATEGORIES=	audio devel
@@ -28,8 +28,6 @@ PLIST_SUBST+=		LIBSUN=""
 PLIST_SUBST+=		LIBOSS=""
 PLIST_SUBST+=		LIBSUN=""
 .endif
-
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--disable-alsa
 CONFIGURE_ARGS+=	--disable-alsa09

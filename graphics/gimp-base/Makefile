@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/02/08 04:03:15 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2004/02/14 17:21:41 jlam Exp $
 #
 
 DISTNAME=		gimp-1.2.5
@@ -23,9 +23,7 @@ USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
-
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../mk/bsd.prefs.mk"
 

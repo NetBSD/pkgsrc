@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/02/11 22:56:23 xtraeme Exp $
+# $NetBSD: Makefile,v 1.12 2004/02/14 17:21:37 jlam Exp $
 #
 
 DISTNAME=		giblib-1.2.3
@@ -14,7 +14,6 @@ GNU_CONFIGURE=		YES
 USE_X11=		YES
 USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

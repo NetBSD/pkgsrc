@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/02/01 01:43:28 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2004/02/14 17:21:34 jlam Exp $
 
 DISTNAME=	gabber-0.8.8
 PKGREVISION=	3
@@ -14,7 +14,6 @@ USE_PKGLOCALEDIR=	YES
 USE_GNU_TOOLS+=		make
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GCC_REQD+=		2.95.3
 

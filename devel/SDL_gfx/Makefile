@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/22 08:24:28 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/14 17:21:36 jlam Exp $
 #
 
 DISTNAME=	SDL_gfx-2.0.3
@@ -15,7 +15,6 @@ USE_X11=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .if (${MACHINE_ARCH} != "i386")
 CONFIGURE_ARGS+=	--disable-mmx

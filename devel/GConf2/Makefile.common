@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2004/02/12 19:07:00 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.15 2004/02/14 17:21:36 jlam Exp $
 #
 
 DISTNAME=		GConf-2.4.0.1
@@ -23,7 +23,6 @@ USE_LIBTOOL=		yes
 USE_GNU_TOOLS+=		make
 USE_PERL5=		build
 
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/gconf-2.0.pc.in
 
 PKG_SYSCONFSUBDIR=	gconf

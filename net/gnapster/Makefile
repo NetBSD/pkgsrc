@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/01/24 14:50:05 grant Exp $
+# $NetBSD: Makefile,v 1.30 2004/02/14 17:21:46 jlam Exp $
 
 DISTNAME=	gnapster-1.5.0
 PKGREVISION=	7
@@ -15,9 +15,7 @@ USE_BUILDLINK2=		YES
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
-
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../x11/gnome-core/buildlink2.mk"

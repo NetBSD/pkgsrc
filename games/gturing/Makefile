@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/02/09 18:47:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2004/02/14 17:21:40 jlam Exp $
 #
 
 DISTNAME=		gturing-0.1.1
@@ -19,7 +19,6 @@ USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"

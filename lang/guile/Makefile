@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2004/02/11 07:16:47 xtraeme Exp $
+# $NetBSD: Makefile,v 1.51 2004/02/14 17:21:43 jlam Exp $
 
 DISTNAME=		guile-1.6.4
 CATEGORIES=		lang
@@ -13,12 +13,7 @@ CONFLICTS=		guile14<1.4.1nb1
 USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
-
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-LIBTOOL_OVERRIDE+=	${WRKSRC}/guile-readline/libtool
-LIBTOOL_OVERRIDE+=	${WRKSRC}/libltdl/libtool
-
 USE_GNU_READLINE=	YES
 
 USE_MAKEINFO=		YES

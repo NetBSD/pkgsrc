@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/01/03 18:02:52 salo Exp $
+# $NetBSD: Makefile,v 1.29 2004/02/14 17:21:35 jlam Exp $
 #
 
 DISTNAME=		silc-server-0.9.16
@@ -18,7 +18,7 @@ USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/lib/silcmath/mpi/libtool
+SHLIBTOOL_OVERRIDE=	libtool */*/*/libtool
 
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 

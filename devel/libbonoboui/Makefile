@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/02/13 12:13:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.29 2004/02/14 17:21:38 jlam Exp $
 #
 
 DISTNAME=	libbonoboui-2.4.3
@@ -19,9 +19,8 @@ USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
 USE_X11=		yes
-
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
 PKGCONFIG_OVERRIDE=	bonobo/libbonoboui-2.0.pc.in
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no

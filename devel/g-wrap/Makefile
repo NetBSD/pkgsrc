@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/01/22 08:24:29 grant Exp $
+# $NetBSD: Makefile,v 1.25 2004/02/14 17:21:37 jlam Exp $
 
 DISTNAME=	g-wrap-1.3.4
 PKGREVISION=	3
@@ -25,8 +25,6 @@ CONFIGURE_ENV+=		GUILE=${GUILE14}
 CONFIGURE_ENV+=		BUILD_GUILE=${GUILE14_CONFIG}
 CONFIGURE_ENV+=		ac_cv_path_RSCHEME="nope"
 CONFIGURE_ENV+=		ac_cv_path_GUILE="${LOCALBASE}/guile/1.4/bin/guile"
-
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../devel/glib/buildlink2.mk"
 .include "../../lang/guile14/buildlink2.mk"

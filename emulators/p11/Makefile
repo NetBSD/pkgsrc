@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/22 08:36:04 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/14 17:21:39 jlam Exp $
 #
 
 DISTNAME=	p11-2.10a
@@ -14,7 +14,6 @@ DEPENDS+=	libbegemot-[0-9]*:../../devel/libbegemot
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-begemot=${PREFIX}
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_GNU_TOOLS+=		make
 
 # override MAKEFLAGS in the build and install stages

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2004/02/08 03:00:29 jlam Exp $
+# $NetBSD: Makefile,v 1.58 2004/02/14 17:21:39 jlam Exp $
 
 DISTNAME=		gnucash-1.8.8
 PKGREVISION=		2
@@ -21,7 +21,6 @@ BUILD_DEPENDS+=			bison>=1.28:../../devel/bison
 USE_GNU_TOOLS+=		make
 USE_X11=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 # LIBTOOL_FLAGS+=		--preserve-dup-deps
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES

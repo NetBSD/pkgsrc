@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2003/11/12 03:39:42 jschauma Exp $
+# $NetBSD: Makefile,v 1.53 2004/02/14 17:21:47 jlam Exp $
 
 DISTNAME=	ucd-snmp-4.2.4
 PKGREVISION=	2
@@ -18,12 +18,10 @@ BUILD_DEFS+=	USE_INET6
 
 USE_BUILDLINK2=	# defined
 USE_PERL5=	build
+USE_LIBTOOL=		yes
 USE_PKGINSTALL=	yes
 
 .include "../../mk/bsd.prefs.mk"
-
-USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-defaults

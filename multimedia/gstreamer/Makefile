@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/11 08:16:09 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/14 17:21:45 jlam Exp $
 #
 
 DISTNAME=		gstreamer-0.6.4
@@ -22,7 +22,6 @@ USE_PERL5=		build
 
 CONFIGURE_ARGS+=	--disable-plugin-builddir
 
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libs/ext/cothreads/cothreads.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/pkgconfig/gstreamer-control.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/pkgconfig/gstreamer.pc.in

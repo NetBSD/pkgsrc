@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/05 20:52:10 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2004/02/14 17:21:39 jlam Exp $
 #
 
 DISTNAME=	pkgconfig-0.15.0
@@ -14,7 +14,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/glib-1.2.8/libtool
 CONFIGURE_ARGS+=	--disable-threads
 
 TEST_TARGET=		check

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/12/08 19:28:49 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2004/02/14 17:21:33 jlam Exp $
 #
 
 DISTNAME=	speex-1.0.3
@@ -11,7 +11,6 @@ COMMENT=	Open-source, patent-free voice codec
 
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
 
 # previous versions of the package were called Speex

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/02/09 18:47:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2004/02/14 17:21:45 jlam Exp $
 #
 
 DISTNAME=		gst-plugins-0.6.4
@@ -18,7 +18,6 @@ USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
 USE_X11=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/gst-libs/gst/gconf/gstreamer-gconf.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/pkgconfig/gstreamer-libs.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/pkgconfig/gstreamer-play.pc.in

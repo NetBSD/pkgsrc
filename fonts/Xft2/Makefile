@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/02/09 04:17:28 xtraeme Exp $
+# $NetBSD: Makefile,v 1.25 2004/02/14 17:21:40 jlam Exp $
 #
 
 DISTNAME=	xft-2.1.2
@@ -23,7 +23,6 @@ USE_X11=		YES
 USE_GNU_TOOLS+=		awk
 
 PKGCONFIG_OVERRIDE=	${WRKSRC}/xft.pc.in
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 MAKE_ENV+=		EGREP="${EGREP}"
 
 BUILDLINK_DEPENDS.Xrender=	Xrender>=0.8.2

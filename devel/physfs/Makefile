@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/11/06 17:39:30 gavan Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/14 17:21:39 jlam Exp $
 #
 
 DISTNAME=		physfs-0.1.8
@@ -12,7 +12,6 @@ COMMENT=		Library providing abstract access to various archives
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 USE_GCC_SHLIB=		yes
 

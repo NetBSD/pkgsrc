@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/02/06 13:48:05 tron Exp $
+# $NetBSD: Makefile,v 1.25 2004/02/14 17:21:32 jlam Exp $
 
 DISTNAME=	arts-1.2.0
 PKGREVISION=	1
@@ -12,7 +12,6 @@ CONFLICTS+=	kdelibs-2*
 USE_BUILDLINK2=		yes
 USE_PERL5=		build
 
-LIBTOOL_OVERRIDE+=	${WRKSRC}/libtool ${WRKSRC}/libltdl/libtool
 BUILD_DEPENDS+=		pkgconfig>=0.15.0:../../devel/pkgconfig
 
 # Ensure we export symbols in the linked shared object.

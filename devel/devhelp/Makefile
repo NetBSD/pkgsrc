@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/02/11 07:43:22 xtraeme Exp $
+# $NetBSD: Makefile,v 1.10 2004/02/14 17:21:36 jlam Exp $
 
 DISTNAME=		devhelp-0.7
 PKGREVISION=		7
@@ -18,7 +18,6 @@ USE_LIBTOOL=		yes
 USE_PERL5=		build
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-html-widget=gtkhtml2

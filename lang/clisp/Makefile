@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/01/20 12:19:16 agc Exp $
+# $NetBSD: Makefile,v 1.32 2004/02/14 17:21:43 jlam Exp $
 
 DISTNAME=		clisp-2.30
 CATEGORIES=		lang
@@ -19,13 +19,6 @@ CONFIGURE_ENV+=		CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" \
 GNU_CONFIGURE=		YES
 UNLIMIT_RESOURCES=	stacksize
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/avcall/libtool
-LIBTOOL_OVERRIDE+=	${WRKSRC}/callback/vacall_r/libtool
-LIBTOOL_OVERRIDE+=	${WRKSRC}/callback/libtool
-LIBTOOL_OVERRIDE+=	${WRKSRC}/callback/trampoline_r/libtool
-LIBTOOL_OVERRIDE+=	${WRKSRC}/libiconv/libcharset/libtool
-LIBTOOL_OVERRIDE+=	${WRKSRC}/libiconv/libtool ${WRKSRC}/sigsegv/libtool
-
 USE_GNU_READLINE=	YES
 
 post-patch:

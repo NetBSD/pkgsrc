@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/02/06 10:48:58 markd Exp $
+# $NetBSD: Makefile,v 1.24 2004/02/14 17:21:45 jlam Exp $
 
 DISTNAME=	kdepim-${_KDE_VERSION}
 PKGREVISION=	1
@@ -8,7 +8,6 @@ COMMENT=	Personal Information Management tools for the KDE desktop
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
 USE_BUILDLINK2=		YES
-LIBTOOL_OVERRIDE+=	${WRKSRC}/libical/libtool
 
 REPLACE_PERL=	kmail/kmail-3.1-update-new-mail-notification-settings.pl \
 		kmail/kmail-3.1-use-UOID-for-identities.pl \

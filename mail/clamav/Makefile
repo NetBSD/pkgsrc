@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/02/11 10:55:49 recht Exp $
+# $NetBSD: Makefile,v 1.11 2004/02/14 17:21:44 jlam Exp $
 
 DISTNAME=	clamav-0.66
 CATEGORIES=	mail
@@ -13,7 +13,6 @@ USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 # disable the configure check for user and group:
 CONFIGURE_ARGS+=	--disable-clamav
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}

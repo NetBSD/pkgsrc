@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2004/01/23 21:50:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.45 2004/02/14 17:21:43 jlam Exp $
 #
 
 DISTNAME=	libwmf-0.2.8
@@ -14,7 +14,6 @@ USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_X11=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 CONFIGURE_ARGS+=	--disable-gd
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/html/libwmf
 

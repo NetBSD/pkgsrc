@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/01/22 07:15:00 grant Exp $
+# $NetBSD: Makefile,v 1.12 2004/02/14 17:21:32 jlam Exp $
 #
 
 DISTNAME=	faad2-1.1
@@ -21,7 +21,6 @@ USE_LIBTOOL=		YES
 
 AUTOMAKE_REQD=		1.4
 GNU_CONFIGURE=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/common/mp4v2/libtool
 
 pre-configure:
 	for dir in . common/mp4v2 ; do					\

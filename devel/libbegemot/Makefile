@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/21 16:43:26 martti Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/14 17:21:37 jlam Exp $
 #
 
 DISTNAME=	libbegemot-1.9
@@ -11,6 +11,5 @@ COMMENT=	Base development library, contains useful routines
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../mk/bsd.pkg.mk"

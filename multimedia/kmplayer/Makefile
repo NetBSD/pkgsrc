@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/08 13:11:27 markd Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/14 17:21:45 jlam Exp $
 #
 
 DISTNAME=	kmplayer-0.8.2
@@ -22,7 +22,7 @@ USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 USE_PERL5=		build
 
-SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+SHLIBTOOL_OVERRIDE=	libtool
 
 SUBST_CLASSES+=		desktop
 SUBST_MESSAGE.desktop=	"Fixing application launcher."

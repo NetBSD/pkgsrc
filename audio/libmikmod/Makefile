@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/02/11 08:36:17 xtraeme Exp $
+# $NetBSD: Makefile,v 1.28 2004/02/14 17:21:33 jlam Exp $
 
 DISTNAME=		libmikmod_3.1.10
 PKGNAME=		libmikmod-3.1.10
@@ -18,7 +18,6 @@ INFO_FILES=		mikmod.info
 
 WRKSRC=			${WRKDIR}/${PKGNAME}
 CONFIGURE_ARGS+=	--disable-threads
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../mk/bsd.prefs.mk"
 

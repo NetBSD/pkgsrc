@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:23:54 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/14 17:21:34 jlam Exp $
 #
 
 DISTNAME=	bump_scope-0.0.3
@@ -13,7 +13,6 @@ COMMENT=	Moving light embossing occiliscope
 
 USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=	YES
 
 MAKE_ENV+=	plugindir=${PREFIX}/lib/xmms/Visualization

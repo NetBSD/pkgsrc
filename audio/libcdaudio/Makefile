@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/23 06:20:40 grant Exp $
+# $NetBSD: Makefile,v 1.18 2004/02/14 17:21:33 jlam Exp $
 #
 
 DISTNAME=	libcdaudio-0.99.9
@@ -13,6 +13,5 @@ COMMENT=	Multi-platform CD player development library
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../mk/bsd.pkg.mk"

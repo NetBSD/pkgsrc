@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/01/03 18:49:36 reed Exp $
+# $NetBSD: Makefile,v 1.24 2004/02/14 17:21:35 jlam Exp $
 #
 
 DISTNAME=	psiconv-0.8.3
@@ -12,12 +12,9 @@ COMMENT=	PSION 5 file format data conversion utilities
 
 USE_BUILDLINK2=		YES
 USE_X11=		YES
-
+USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 CPPFLAGS+=		-DIMAGEMAGICK
-
-USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 DOCDIR=		${PREFIX}/share/doc/psiconv
 
