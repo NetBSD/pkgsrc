@@ -8,7 +8,7 @@ INSTALL_INFO="@INSTALL_INFO@"
 INFO_DIR="@INFO_DIR@"
 
 case ${STAGE} in
-POST-INSTALL|VIEW-INSTALL)
+VIEW-INSTALL)
 	if [ -f ${PKG_PREFIX}/${INFO_DIR}/dir ]; then
 		_nentries="`${GREP} -c '^\*' ${PKG_PREFIX}/${INFO_DIR}/dir 2>/dev/null`"
 		if [ x"${_nentries}" != x -a "${_nentries}" -lt 1 ]; then
@@ -23,7 +23,7 @@ POST-INSTALL|VIEW-INSTALL)
 		   ${PKG_PREFIX}/${INFO_DIR}/${f}
 	done
 	;;
-VIEW-DEINSTALL|DEINSTALL)
+VIEW-DEINSTALL)
 	for f in ${INFO_FILES}; do
 		${INSTALL_INFO} --delete --info-dir=${PKG_PREFIX}/${INFO_DIR} \
 		   ${PKG_PREFIX}/${INFO_DIR}/${f} 1>/dev/null 2>&1
