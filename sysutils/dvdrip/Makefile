@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2003/07/29 13:47:32 wulf Exp $
+# $NetBSD: Makefile,v 1.6 2003/08/31 18:42:04 mycroft Exp $
 #
 
-VERS=		0.50.13
+VERS=		0.50.15
 DISTNAME=	Video-DVDRip-${VERS}
 PKGNAME=	dvdrip-${VERS}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	x11 sysutils
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Video/}
 
@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.exit1.org/dvdrip/
 COMMENT=	Graphical frontend for DVD ripping
 
 DEPENDS+=	cdrdao>=1.1.7:../../sysutils/cdrdao
-DEPENDS+=	transcode>=0.6.2:../../graphics/transcode
+DEPENDS+=	transcode>=0.6.9:../../graphics/transcode
 DEPENDS+=	mplayer>=0.90:../../graphics/mplayer
 DEPENDS+=	ogmtools-[0-9]*:../../graphics/ogmtools
 DEPENDS+=	vcdimager>=0.7.12:../../sysutils/vcdimager-devel
