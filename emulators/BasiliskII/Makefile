@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/06/14 06:49:04 tron Exp $
+# $NetBSD: Makefile,v 1.11 2003/06/14 06:50:52 tron Exp $
 
 DISTNAME=	BasiliskII_src_14032003
 PKGNAME=	BasiliskII-1.0.20030314
@@ -7,7 +7,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	http://gwenole.beauchesne.online.fr/basilisk2/files/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tv@pobox.com
 HOMEPAGE=	http://gwenole.beauchesne.online.fr/basilisk2/
 COMMENT=	Open Source 68k Macintosh emulator
 
