@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/03/26 18:55:17 agc Exp $
+$NetBSD: patch-aa,v 1.2 2003/06/07 17:39:15 jmmv Exp $
 
 --- configure.in.orig	Thu Nov 21 01:43:16 2002
 +++ configure.in	Tue Mar 11 17:48:07 2003
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/03/26 18:55:17 agc Exp $
 -else
 -    cfg_dir="$sysconfdir"
 -fi
-+cfg_dir=$prefix/etc
++cfg_dir=$sysconfdir
  
  CFGDIR=$cfg_dir
  AC_SUBST(CFGDIR)
@@ -24,10 +24,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/03/26 18:55:17 agc Exp $
 +    AC_MSG_RESULT(NetBSD detected. Adding pth stuff.)
      have_pthreads="no"
      AC_DEFINE(C_BSD)
-+    LIBCLAMAV_LIBS="$LIBCLAMAV_LIBS -L/usr/pkg/lib -lpthread"
++    LIBCLAMAV_LIBS="$LIBCLAMAV_LIBS $LDFLAGS -lpthread"
 +    AC_DEFINE(CL_THREAD_SAFE)
-+    CLAMD_LIBS="-lpthread -L/usr/pkg/lib"
-+    CFLAGS="$CFLAGS -I/usr/pkg/include"
++    CLAMD_LIBS="-lpthread $LDFLAGS"
++    CFLAGS="$CFLAGS"
      ;;
  bsd*)
      AC_MSG_RESULT(Unknown BSD detected. Disabling thread support.)
