@@ -1,22 +1,25 @@
-$NetBSD: patch-ac,v 1.5 1999/07/07 23:28:13 itojun Exp $
+$NetBSD: patch-ac,v 1.6 1999/11/21 18:37:58 frueauf Exp $
 
---- configure.in.orig	Sat Jun 12 15:57:57 1999
-+++ configure.in	Wed Jul  7 08:46:29 1999
-@@ -276,10 +276,9 @@
+--- configure.in.orig	Sun Nov  7 23:50:31 1999
++++ configure.in	Sun Nov 21 18:21:39 1999
+@@ -287,13 +287,9 @@
  
  AC_ARG_ENABLE(inet6,
  	[  --enable-inet6          support IPv6 (requires the inet6-apps library)],
--        [ unset ac_cv_lib_inet6_getaddrinfo; AC_CHECK_LIB(inet6, getaddrinfo,,
--	[ unset ac_cv_lib_inet6_getaddrinfo; LDFLAGS="$LDFLAGS -L/usr/inet6/lib"; AC_CHECK_LIB(inet6, getaddrinfo,,
--        [ echo 'configure: cannot find libinet6, which is required for IPv6 support.'; exit 1]) ])
--          AC_DEFINE(INET6, 1) ])
-+        [ AC_CHECK_FUNCS(getaddrinfo,
+-        [ unset ac_cv_lib_inet6_getaddrinfo; AC_CHECK_LIB(inet6,getaddrinfo,,
+-	  [ unset ac_cv_lib_inet6_getaddrinfo;
+-	    LDFLAGS="$LDFLAGS -L/usr/inet6/lib";
+-            AC_CHECK_LIB(inet6, getaddrinfo,,
+-              [ echo 'configure: cannot find libinet6, which is required for IPv6 support.'; 
+-	      exit 1]) ]) ]
+-	[with_inet6=no])
++	[ AC_CHECK_FUNCS(getaddrinfo,
 +		[AC_DEFINE(INET6, 1)],
 +		[echo 'configure: cannot find getaddrinfo which is required for inet6 support.'; exit 1]) ])
+ test "$with_inet6" = "yes" && AC_DEFINE(INET6_ENABLE)
  
  AC_ARG_ENABLE(netsec,
- 	[  --enable-netsec         support network security (requires inet6-apps library)],
-@@ -403,7 +402,7 @@
+@@ -496,7 +492,7 @@
      LDEFLAGS="$LDEFLAGS -L$with_hesiod/lib"
      LIBS="$LIBS -lhesiod"
  else
