@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2001/03/19 13:23:43 tron Exp $
+@comment $NetBSD: PLIST,v 1.20 2001/03/28 12:16:19 tron Exp $
 bin/gnumeric
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnumeric.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnumeric.mo
@@ -735,7 +735,6 @@ share/gnumeric/0.64/templates/purchase_order.gnumeric
 etc/CORBA/servers/gnumeric.gnorba
 @unexec rmdir %D/share/mc/templates 2>/dev/null || true
 @unexec rmdir %D/share/mc 2>/dev/null || true
-@unexec rmdir %D/share/pixmaps 2>/dev/null || true
 @unexec rmdir %D/share/idl 2>/dev/null || true
 @unexec rmdir %D/share/mime-info 2>/dev/null || true
 @unexec rmdir %D/etc/CORBA/servers 2>/dev/null || true
