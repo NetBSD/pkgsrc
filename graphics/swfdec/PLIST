@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/23 08:15:40 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/05/01 12:36:15 jmmv Exp $
 bin/swf_play
-etc/gtk-2.0/gdk-pixbuf.loaders
 include/swfdec/swf.h
 include/swfdec/swfdec.h
 lib/gtk-2.0/2.2.0/loaders/swf_loader.a
