@@ -1,13 +1,13 @@
-$NetBSD: patch-ao,v 1.13 2003/12/12 10:11:39 adam Exp $
+$NetBSD: patch-ao,v 1.14 2004/09/28 12:52:14 adam Exp $
 
---- doc/lessdox/functions/Makefile.in.orig	2003-11-27 19:29:48.000000000 +0000
+--- doc/lessdox/functions/Makefile.in.orig	2004-09-26 14:15:02.000000000 +0000
 +++ doc/lessdox/functions/Makefile.in
-@@ -233,7 +233,7 @@ manone_DATA = 
+@@ -257,7 +257,7 @@ manfivedir = @mandir@/man5
+ manone_DATA = 
  manthree_DATA = 
  manfive_DATA = 
- 
 -htmldir = $(prefix)/LessTif/doc/html
 +htmldir = $(prefix)/share/doc/html/lesstif
- 
  html_DATA = ${manone_DATA:.1=.html} ${manthree_DATA:.3=.html} \
                  ${manfive_DATA:.5=.html}
+ 

@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.22 2003/12/12 10:11:39 adam Exp $
+$NetBSD: patch-aa,v 1.23 2004/09/28 12:52:14 adam Exp $
 
---- Makefile.in.orig	2003-11-27 19:29:46.000000000 +0000
+--- Makefile.in.orig	2004-09-26 14:15:08.000000000 +0000
 +++ Makefile.in
-@@ -237,12 +237,12 @@ DIST_SUBDIRS = scripts include lib clien
+@@ -283,11 +283,11 @@ DIST_SUBDIRS = scripts include lib clien
  # Lets put the informational stuff in a sub directory to avoid 
  # poluting /usr/local for default installs.
  #
@@ -10,7 +10,6 @@ $NetBSD: patch-aa,v 1.22 2003/12/12 10:11:39 adam Exp $
 +rootdir = $(prefix)/share/doc/lesstif
  dist_root_DATA = AUTHORS  BUG-REPORTING  COPYING  COPYING.LIB  CREDITS \
                  FAQ  INSTALL.txt  README  ReleaseNotes.html ReleaseNotes.txt
- 
  
 -htmldir = $(prefix)/LessTif/doc
 +htmldir = $(prefix)/share/doc/html/lesstif

@@ -1,13 +1,13 @@
-$NetBSD: patch-an,v 1.16 2003/12/12 10:11:39 adam Exp $
+$NetBSD: patch-an,v 1.17 2004/09/28 12:52:14 adam Exp $
 
---- doc/lessdox/clients/Makefile.in.orig	2003-11-27 19:29:48.000000000 +0000
+--- doc/lessdox/clients/Makefile.in.orig	2004-09-26 14:15:02.000000000 +0000
 +++ doc/lessdox/clients/Makefile.in
-@@ -233,7 +233,7 @@ manone_DATA = mwm.1 xmbind.1 lesstif.1 u
+@@ -257,7 +257,7 @@ manfivedir = @mandir@/man5
+ manone_DATA = mwm.1 xmbind.1 lesstif.1 uil.1 ltversion.1
  manthree_DATA = 
  manfive_DATA = mwmrc.5 VirtualBindings.5
- 
 -htmldir = $(prefix)/LessTif/doc/html
 +htmldir = $(prefix)/share/doc/html/lesstif
- 
  html_DATA = mwm.html mwmrc.html xmbind.html lesstif.html uil.html \
              VirtualBindings.html
+ 
