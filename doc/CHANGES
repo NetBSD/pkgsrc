@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6801 2004/08/04 22:56:02 minskim Exp $
+$NetBSD: CHANGES,v 1.6802 2004/08/05 15:20:48 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3731,3 +3731,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cdrtools-ossdvd to 2.01a27 [wiz 2004-08-04]
 	Updated xchat to 2.0.10nb1 [minskim 2004-08-04]
 	Updated un-ttf to 20040804 [minskim 2004-08-04]
+	Added p5-Text-WikiFormat-0.72 [cube 2004-08-04]
