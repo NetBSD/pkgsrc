@@ -1,0 +1,160 @@
+$NetBSD: patch-ac,v 1.3 1998/08/25 15:52:02 tv Exp $
+
+--- smbmount.8.orig	Tue Aug 25 11:32:47 1998
++++ smbmount.8	Tue Aug 25 11:37:08 1998
+@@ -1,8 +1,8 @@
+-.TH SMBMOUNT 8 11/23/1996 smbmount smbmount
++.TH RUMBA 8 11/23/1996 rumba rumba
+ .SH NAME
+-smbmount \- mount program for smbfs
++rumba \- mount a SMB filesystem through NFS protocol
+ .SH SYNOPSIS
+-.B smbmount
++.B rumba
+ .B servicename mount-point
+ [
+ .B -h
+@@ -54,8 +54,8 @@
+ .SH DESCRIPTION
+ This program is an interface to the SMB filesystem.
+ 
+-.B smbfs
+-is a filesystem which understands the SMB protocol. This is the
++.B rumba
++is a filesystem emulator which understands the SMB protocol. This is the
+ protocol Windows for Workgroups, Windows NT or Lan Manager use to talk
+ to each other. It was inspired by
+ .B samba,
+@@ -94,10 +94,10 @@
+ get rid of difficulties with the shell using \\ as an escape
+ character.
+ 
+-To make smbmount compatible with the automounter, only one leading '/'
++To make rumba compatible with the automounter, only one leading '/'
+ is required, although any number of '/'s is accepted.
+ 
+-Currently smbmount uses gethostbyname() to find the IP number of the
++Currently rumba uses gethostbyname() to find the IP number of the
+ desired host. It is thus not really compatible with Lan Manager
+ conventions, where the netbios name of the server is not necessarily
+ the same as the hostname. In environments which enforce a netbios name
+@@ -115,11 +115,11 @@
+ as in the normal mount command.
+ 
+ If the real uid of the caller is not root,
+-.B smbmount
++.B rumba
+ checks whether the user is allowed to mount a filesystem on the
+-mount-point. So it should be safe to make smbmount setuid root. In the
++mount-point. So it should be safe to make rumba setuid root. In the
+ filesystem, the real uid of the caller is stored, so that
+-.B smbumount
++.B unrumba
+ can check whether the caller is allowed to unmount the filesystem.
+ .RE
+ 
+@@ -153,8 +153,8 @@
+ .B -n
+ nor
+ .B -P
+-are given, smbmount prompts for a password. This makes it difficult to
+-use in scripts such as /etc/rc. But that's not smbmount's fault, but a
++are given, rumba prompts for a password. This makes it difficult to
++use in scripts such as /etc/rc. But that's not rumba's fault, but a
+ general problem with the Lan Manager security model. If anybody has a
+ satisfying solution to this problem, please tell me.
+ .RE
+@@ -168,7 +168,7 @@
+ This option should only be used if the server refuses your login
+ attempt without telling him about his netbios name.
+ 
+-This option does not alter the way smbmount finds the server's IP
++This option does not alter the way rumba finds the server's IP
+ address. It always uses gethostbyname().
+ 
+ The default value for this option is the server name given in the
+@@ -224,7 +224,7 @@
+ .B -u
+ and
+ .B -g
+-you can tell smbmount which id's it should assign to the files in the
++you can tell rumba which id's it should assign to the files in the
+ mounted direcory.
+ 
+ The defaults for these values are the current uid and gid.
+@@ -241,7 +241,7 @@
+ .B -g,
+ these options are also used to bridge differences in concepts between
+ Lan Manager and unix. Lan Manager does not know anything about file
+-permissions. So smbmount has to be told which permissions it should
++permissions. So rumba has to be told which permissions it should
+ assign to the mounted files and direcories. The values have to be
+ given as octal numbers. The default values are taken from the current
+ umask, where the file mode is the current umask, and the dir mode adds
+@@ -256,7 +256,7 @@
+ .B -p
+ .I port
+ .RS 3
+-The port is the TCP port smbmount tries to connect on the server. The
++The port is the TCP port rumba tries to connect on the server. The
+ default for this value is 139, as specified in RFC 1001/1002 (NetBIOS
+ over TCP/IP). Normally it should not be altered, as all commercial
+ servers offer their services on this port.
+@@ -270,7 +270,7 @@
+ .RS 3
+ With 
+ .B -m
+-you can tell smbmount that it should offer some special maximum packet
++you can tell rumba that it should offer some special maximum packet
+ size that it can transfer in one SMB packet. Normally this option
+ should not be used.
+ .RE
+@@ -290,12 +290,8 @@
+ being used, so you need to supply a valid name that would be known to
+ the server.
+ 
+-Starting with smbfs-0.8 it is possible that your smbmount program is
+-newer than the kernel you are currently using. You can fix this by
+-recompiling smbmount with the correct kernel sources installed.
+-
+ .SH NOTES
+-.B smbfs
++.B rumba
+ supports long file names where the server supports the LANMAN2
+ protocol.
+ 
+@@ -310,12 +306,12 @@
+ 
+ .SH DIAGNOSTICS
+ 
+-Most diagnostics issued by smbfs are logged by syslogd. Normally
++Most diagnostics issued by rumba are logged by syslogd. Normally
+ nothing is printed, only error situations are logged there.
+ 
+-If you have problems with smbfs, a good diagnostic tool is the program
++If you have problems with rumba, a good diagnostic tool is the program
+ smbclient from the samba package. If your problem does not occur with
+-smbclient, then it's definitely a problem with smbfs. If smbclient
++smbclient, then it's definitely a problem with rumba. If smbclient
+ also shows the problem, it can print lots of debugging information to
+ help you to find the problem.
+ 
+@@ -323,17 +319,11 @@
+ make does not find the Makefile in a smb-mounted direcory. Why??? If
+ you type make -f Makefile, everything works fine.
+ 
+-There might be lots of race conditions in the kernel code. Anybody
+-more experienced in kernel hacking might take a look at it and tell me
+-about problems. I will do my best. For example I do not know which
+-routines smbfs calls in the kernel might call schedule(). Can kmalloc
+-call the scheduler? Does kfree?
+-
+ You might see the use of gethostbyname() to find the server in a way
+ not conforming to Lan Manager as a bug.
+ 
+ .SH SEE ALSO
+-.B syslogd(8), smbumount(8)
++.B syslogd(8)
+ 
+ .SH CREDITS
+ The original smbfs kernel code was a mixture of user-level smbfs and
