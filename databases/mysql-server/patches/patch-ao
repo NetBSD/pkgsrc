@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.3 2003/09/28 15:09:48 jdolecek Exp $
+
+--- mit-pthreads/include/netdb.h.orig	Sun Sep 28 16:36:39 2003
++++ mit-pthreads/include/netdb.h	Sun Sep 28 16:37:20 2003
+@@ -49,6 +49,8 @@
+ #define __NETDB_MAXALIASES	35
+ #define __NETDB_MAXADDRS	35
+ 
++extern int h_errno;
++
+ /*
+  * Structures returned by network data base library.  All addresses are
+  * supplied in host order, and returned in network order (suitable for
