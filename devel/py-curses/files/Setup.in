@@ -1,0 +1,4 @@
+# $NetBSD: Setup.in,v 1.1 1998/08/12 01:50:01 tsarna Exp $
+#
+*shared*
+cursesmodule cursesmodule.c -I@LOCALBASE@/include -L@LOCALBASE@/lib -lncurses
