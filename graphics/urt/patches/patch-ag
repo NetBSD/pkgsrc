@@ -1,3 +1,5 @@
+$NetBSD: patch-ag,v 1.2 1999/02/10 15:10:47 frueauf Exp $
+
 --- lib/getopt.c~	Tue Jan 28 10:18:23 1992
 +++ lib/getopt.c	Wed Nov 25 23:57:31 1998
 @@ -31,8 +31,6 @@
