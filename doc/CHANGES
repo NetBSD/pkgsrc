@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7877 2004/11/16 11:53:07 taca Exp $
+$NetBSD: CHANGES,v 1.7878 2004/11/16 13:54:47 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5298,4 +5298,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated GWLib to 0.6.5 [rh 2004-11-16]
 	Updated gworkspace to 0.6.5 [rh 2004-11-16]
 	Updated ImageMagick to 6.1.4.3 [adam 2004-11-16]
-	Updated ja-squirrelmail-1.4.3anb3 [taca 2004-11-16]
+	Updated ja-squirrelmail to 1.4.3anb3 [taca 2004-11-16]
+	Updated freeradius to 1.0.1nb4 [adrianp 2004-11-16]
