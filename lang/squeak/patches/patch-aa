@@ -1,24 +1,23 @@
-$NetBSD: patch-aa,v 1.1 2000/02/16 22:02:33 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.2 2000/08/14 16:51:36 mjl Exp $
 
--Get the right flag for exporting symbols from program
--Use the CFLAGS set by the package system
--Don't override everything on alpha
-
---- ./conf/configure.in.orig	Mon Oct 18 12:25:06 1999
-+++ ./conf/configure.in	Wed Feb 16 11:08:18 2000
-@@ -104,8 +104,8 @@
+--- conf/configure.in.orig	Mon Aug 14 18:07:46 2000
++++ conf/configure.in	Mon Aug 14 18:10:40 2000
+@@ -105,10 +105,10 @@
+     AC_TRY_RUN([int main(){return !((__GNUC__ >= 2) && (__GNUC_MINOR__ > 90));}],
        ac_cv_prog_egcs="yes", ac_cv_prog_egcs="no"))
  
 -  CFLAGS="-g -O2"
 -  WFLAGS="-Wall"
-+  #CFLAGS="-g -O2"
-+  #WFLAGS="-Wall"
++#  CFLAGS="-g -O2"
++#  WFLAGS="-Wall"
    LD="$CC"
 -  LDFLAGS="-rdynamic"
 +  LDFLAGS="-Wl,--export-dynamic"
  
    SHCC="$CC"
-@@ -120,10 +120,11 @@
+   if test "$ac_cv_prog_egcs" = "yes"; then
+@@ -121,12 +121,13 @@
+ 
    case "$host" in
      i?86*)		CFLAGS="$CFLAGS -fomit-frame-pointer" ;;
 -    alpha*)		CC="$srcdir/../util/decgcc"
@@ -27,19 +26,22 @@ $NetBSD: patch-aa,v 1.1 2000/02/16 22:02:33 dmcmahill Exp $
 -			SHCC="../$CC"
 -			SHLD="cc"
 -			SHLDFLAGS="-taso -shared -expect_unresolved \"*\"" ;;
-+    alpha*)		#CC="$srcdir/../util/decgcc"
-+			#LD="cc"
-+			#LDFLAGS="-taso -call_shared"
-+			#SHCC="../$CC"
-+			#SHLD="cc"
-+			#SHLDFLAGS="-taso -shared -expect_unresolved \"*\"" 
++    alpha*)		# CC="$srcdir/../util/decgcc"
++			# LD="cc"
++			# LDFLAGS="-taso -call_shared"
++			# SHCC="../$CC"
++			# SHLD="cc"
++			# SHLDFLAGS="-taso -shared -expect_unresolved \"*\""
 +			;;
    esac
  
-@@ -188,5 +189,5 @@
+   AC_PROG_AWK
+@@ -198,7 +199,7 @@
+   AC_PATH_X
    test ! -f /usr/include/X11/Intrinsic.h -a "$x_includes" != NONE && \
      INCS="-I${x_includes}"
 -  test "$x_libraries" != NONE -a ! -z "$x_libraries" && LIBS="$LIBS -L${x_libraries}"
 +  test "$x_libraries" != NONE -a ! -z "$x_libraries" && LIBS="$LIBS -L${x_libraries} -Wl,-R${x_libraries}"
    AC_CHECK_LIB(Xext, XShmAttach)
    if test -z "ac_cv_lib_Xext_XShmAttach"; then
+     AC_MSG_WARN([XShm not found: DISABLING SHARED MEMORY])
