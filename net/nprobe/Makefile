@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2004/01/24 14:50:06 grant Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/26 01:11:32 cjs Exp $
 
 DISTNAME=	nProbe-source-1.3.1
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	nprobe-1.3.1
 CATEGORIES=	net
 MASTER_SITES=	http://luca.ntop.org/nprobeDownload/
@@ -25,5 +25,5 @@ INTERACTIVE_STAGE=	fetch
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nprobe ${PREFIX}/sbin
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
