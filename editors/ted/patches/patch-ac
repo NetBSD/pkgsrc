@@ -1,3 +1,4 @@
+$NetBSD: patch-ac,v 1.2 2002/05/20 17:46:32 cjep Exp $
 --- appUtil/configure.orig	Sun Mar  3 23:24:16 2002
 +++ appUtil/configure	Tue Apr  9 12:13:56 2002
 @@ -787,7 +787,6 @@
