@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2003/01/23 13:47:14 jmmv Exp $
+$NetBSD: distinfo,v 1.6 2003/02/05 18:19:39 jmmv Exp $
 
-SHA1 (buildtool-0.9.tar.gz) = 1088c1c387c3271b261e240688c4adbaa3b0477d
-Size (buildtool-0.9.tar.gz) = 291495 bytes
+SHA1 (buildtool-0.10.tar.gz) = d956d5ff8ca15313f8565d2e93268c65038a6f3c
+Size (buildtool-0.10.tar.gz) = 273977 bytes
