@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/10 13:07:25 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/07/03 11:04:42 skrll Exp $
 bin/java
 bin/wonka
-lib/claudia.fr
 lib/device.config
+lib/ext/crypto.jar
+lib/font.properties
 lib/font/courR10.pcf
 lib/font/courR12.pcf
 lib/font/courR14.pcf
@@ -63,6 +64,7 @@ test/rudolph3.gif
 test/utf8test.data
 test/vte.jar
 @dirrm test
+@dirrm lib/ext
 @dirrm lib/font
 @dirrm lib
 @dirrm bin
