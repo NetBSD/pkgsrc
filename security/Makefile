@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2000/12/12 01:31:03 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2000/12/28 14:10:03 wiz Exp $
 #
 
     SUBDIR += PAM
@@ -43,6 +43,7 @@
     SUBDIR += py-crypto
     SUBDIR += racoon
     SUBDIR += rc5des
+    SUBDIR += rid
     SUBDIR += rsaref
     SUBDIR += smtpd
     SUBDIR += srp_client
