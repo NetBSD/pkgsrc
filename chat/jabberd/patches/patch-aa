@@ -1,0 +1,133 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/23 10:16:21 xtraeme Exp $
+
+--- jabber.xml.in.orig	2003-11-17 11:01:33.000000000 +0100
++++ jabber.xml.in	2003-11-17 11:07:37.000000000 +0100
+@@ -295,21 +295,21 @@
+     -->
+ 
+     <load main="jsm">
+-      <jsm>./jsm/jsm.so</jsm>
+-      <mod_echo>./jsm/jsm.so</mod_echo>
+-      <mod_roster>./jsm/jsm.so</mod_roster>
+-      <mod_time>./jsm/jsm.so</mod_time>
+-      <mod_vcard>./jsm/jsm.so</mod_vcard>
+-      <mod_last>./jsm/jsm.so</mod_last>
+-      <mod_version>./jsm/jsm.so</mod_version>
+-      <mod_announce>./jsm/jsm.so</mod_announce>
+-      <mod_agents>./jsm/jsm.so</mod_agents>
+-      <mod_browse>./jsm/jsm.so</mod_browse>
+-      <mod_disco>./jsm/jsm.so</mod_disco>
+-      <mod_admin>./jsm/jsm.so</mod_admin>
+-      <mod_filter>./jsm/jsm.so</mod_filter>
+-      <mod_offline>./jsm/jsm.so</mod_offline>
+-      <mod_presence>./jsm/jsm.so</mod_presence>
++      <jsm>@LIBDIR@/jsm.so</jsm>
++      <mod_echo>@LIBDIR@/jsm.so</mod_echo>
++      <mod_roster>@LIBDIR@/jsm.so</mod_roster>
++      <mod_time>@LIBDIR@/jsm.so</mod_time>
++      <mod_vcard>@LIBDIR@/jsm.so</mod_vcard>
++      <mod_last>@LIBDIR@/jsm.so</mod_last>
++      <mod_version>@LIBDIR@/jsm.so</mod_version>
++      <mod_announce>@LIBDIR@/jsm.so</mod_announce>
++      <mod_agents>@LIBDIR@/jsm.so</mod_agents>
++      <mod_browse>@LIBDIR@/jsm.so</mod_browse>
++      <mod_disco>@LIBDIR@/jsm.so</mod_disco>
++      <mod_admin>@LIBDIR@/jsm.so</mod_admin>
++      <mod_filter>@LIBDIR@/jsm.so</mod_filter>
++      <mod_offline>@LIBDIR@/jsm.so</mod_offline>
++      <mod_presence>@LIBDIR@/jsm.so</mod_presence>
+ 
+       <!--
+       Authentication
+@@ -325,19 +325,19 @@
+       -->
+       <!-- mod_auth_digest: Password in clear text in storage,
+            encrypted/hashed on the wire -->
+-      <mod_auth_digest>./jsm/jsm.so</mod_auth_digest>
++      <mod_auth_digest>@LIBDIR@/jsm.so</mod_auth_digest>
+       <!-- mod_auth_plain: Password in clear text in storage
+            and on the wire. Disable this if you do not use clients
+            that need plaintext auth -->
+-      <mod_auth_plain>./jsm/jsm.so</mod_auth_plain>
++	<mod_auth_plain>@LIBDIR@/jsm.so</mod_auth_plain>
+       <!-- mod_auth_crypt: Password encrypted/hashed in storage,
+            clear text on the wire. Disabled as this only makes
+            sense when used exclusively and with SSL mandatory
+       <mod_auth_crypt>./jsm/jsm.so</mod_auth_crypt> -->
+ 
+-      <mod_log>./jsm/jsm.so</mod_log>
+-      <mod_register>./jsm/jsm.so</mod_register>
+-      <mod_xml>./jsm/jsm.so</mod_xml>
++      <mod_log>@LIBDIR@/jsm.so</mod_log>
++      <mod_register>@LIBDIR@/jsm.so</mod_register>
++      <mod_xml>@LIBDIR@/jsm.so</mod_xml>
+     </load>
+ 
+   </service>
+@@ -353,10 +353,10 @@
+   <xdb id="xdb">
+     <host/>
+     <load>
+-      <xdb_file>./xdb_file/xdb_file.so</xdb_file>
++	    <xdb_file>@LIBDIR@/xdb_file.so</xdb_file>
+     </load>
+     <xdb_file xmlns="jabber:config:xdb_file">
+-      <spool><jabberd:cmdline flag='s'>./spool</jabberd:cmdline></spool>
++      <spool><jabberd:cmdline flag='s'>@SPOOLDIR@</jabberd:cmdline></spool>
+     </xdb_file>
+   </xdb>
+ 
+@@ -387,7 +387,7 @@
+ 
+   <service id="c2s">
+     <load>
+-      <pthsock_client>./pthsock/pthsock_client.so</pthsock_client>
++      <pthsock_client>@LIBDIR@/pthsock_client.so</pthsock_client>
+     </load>
+     <pthcsock xmlns='jabber:config:pth-csock'>
+       <authtime/>
+@@ -430,7 +430,7 @@
+     <host/>
+     <logtype/>
+     <format>%d: [%t] (%h): %s</format>
+-    <file>error.log</file>
++    <file>@LOGDIR@/error.log</file>
+     <stderr/>
+   </log>
+ 
+@@ -443,7 +443,7 @@
+     <host/>
+     <logtype>record</logtype>
+     <format>%d %h %s</format>
+-    <file>record.log</file>
++    <file>@LOGDIR@/record.log</file>
+   </log>
+ 
+   <!-- The following two services are for handling server-to-server traffic. -->
+@@ -453,7 +453,7 @@
+   <service id="dnsrv">
+     <host/>
+     <load>
+-      <dnsrv>./dnsrv/dnsrv.so</dnsrv>
++      <dnsrv>@LIBDIR@/dnsrv.so</dnsrv>
+     </load>
+     <dnsrv xmlns="jabber:config:dnsrv">
+     	<resend service="_xmpp-server._tcp">s2s</resend> <!-- for supporting XMPP compliant SRV records -->
+@@ -473,7 +473,7 @@
+ 
+   <service id="s2s">
+     <load>
+-      <dialback>./dialback/dialback.so</dialback>
++      <dialback>@LIBDIR@/dialback.so</dialback>
+     </load>
+     <dialback xmlns='jabber:config:dialback'>
+       <legacy/>
+@@ -668,7 +668,7 @@
+   <!--
+   This specifies the file to store the pid of the process in.
+   -->
+-  <pidfile>./jabber.pid</pidfile>
++  <pidfile>@PIDDIR@/jabber.pid</pidfile>
+ 
+ 
+ </jabber>

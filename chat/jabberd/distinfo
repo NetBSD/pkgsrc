@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/12/23 10:16:20 xtraeme Exp $
+
+SHA1 (jabberd-1.4.3.tar.gz) = cf968017c8a4f2d0dc3c139c712846a722d9bbed
+Size (jabberd-1.4.3.tar.gz) = 258016 bytes
+SHA1 (patch-aa) = f51bb9bbab6e884d6f36f4e67c7d76a38fd7db4f
+SHA1 (patch-ab) = 8685472f1acc4b5ae4cc15627076ff67b6964a25
+SHA1 (patch-ac) = 7639bc0762d9e64438034b016c1bb3c87c5f5a94
+SHA1 (patch-ad) = 3b17761c9ea2d1e17f3194ac8cf54fbca4c80367
