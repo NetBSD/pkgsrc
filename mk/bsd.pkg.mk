@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.404 2000/02/12 22:00:04 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.405 2000/02/12 23:46:05 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -1348,7 +1348,7 @@ _PORT_USE: .USE
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${WRKDIR}/.${.TARGET:S/^real-//}_done
 .endif
 
-root-install: ${PLIST}
+root-install:
 .if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER)
 .if defined(CONFLICTS)
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${WRKDIR}/.CONFLICTS
@@ -1417,6 +1417,7 @@ root-install: ${PLIST}
 	install-info --remove --info-dir=${PREFIX}/info ${PREFIX}/info/${f}; \
 	install-info --info-dir=${PREFIX}/info ${PREFIX}/info/${f}
 .endfor
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} ${PLIST}
 	${_PKG_SILENT}(${_PKG_DEBUG}newmanpages=`${EGREP} -h		\
 		'^([^@/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.0)(\.gz)?$$' \
 		${PLIST} 2>/dev/null || ${TRUE}`;			\
