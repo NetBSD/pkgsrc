@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.7 2004/04/06 17:08:01 xtraeme Exp $
+
 --- libraries/clib/security/Makefile.in.orig	2004-04-06 17:39:24.000000000 +0200
 +++ libraries/clib/security/Makefile.in	2004-04-06 17:42:21.000000000 +0200
 @@ -453,16 +453,16 @@
