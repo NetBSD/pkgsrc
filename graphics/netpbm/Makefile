@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 1997/12/31 03:34:45 hubertf Exp $
 # New ports collection makefile for:	netpbm
 # Version required:	1mar1994
 # Date created:		20 December 1997
 # Whom:			jmz (original), asami@FreeBSD.ORG, tron
 #
+# $NetBSD: Makefile,v 1.9 1998/01/24 05:25:12 hubertf Exp $
 #
 
 DISTNAME=	netpbm
@@ -16,6 +16,8 @@ DISTFILES=	netpbm-1mar1994.tar.gz \
 		pcxtoppm.tar.gz \
 		rletopnm.tar.gz \
 		pnmtopng-2.36.tar.gz
+
+MAINTAINER=	packages@netbsd.org
 
 LIB_DEPENDS=	jpeg\\.7\\.:${PORTSDIR}/graphics/jpeg \
 		png\\.0\\.96:${PORTSDIR}/graphics/png \
@@ -68,13 +70,13 @@ MAN1=	atktopbm.1 g3topbm.1 brushtopbm.1 cmuwmtopbm.1 \
 	rasttopnm.1 rletopnm.1 sgitopnm.1 sirtopnm.1 \
 	xwdtopnm.1 zeisstopnm.1 pnmgamma.1 pnmrotate.1 \
 	pnmshear.1 anytopnm.1 pnmindex.1 pnmmargin.1 \
-	pnmsmooth.1 tifftopnm.1 pnmtotiff.1
+	pnmsmooth.1 tifftopnm.1 pnmtotiff.1 pstopnm.1
 MAN3=	libpbm.3 libpgm.3 libppm.3 libpnm.3
 MAN5=	pbm.5 pgm.5 ppm.5 pnm.5
 
 post-extract:
 # make sure our TIFF library is used
-	rm -rf ${WRKSRC}/libtiff
+	${RM} -rf ${WRKSRC}/libtiff
 # move updates into source tree
 	cd ${WRKSRC};\
 	${MV} ../*pcx*.? ppm;\
