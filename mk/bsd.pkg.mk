@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1588 2005/02/13 03:49:12 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1589 2005/02/15 16:21:41 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -1623,7 +1623,7 @@ _ACQUIRE_LOCK=								\
 	while true; do							\
 		: "Remove lock files older than the last reboot";	\
 		if ${TEST} -f /var/run/dmesg.boot -a -f ${LOCKFILE}; then \
-			rebooted=`${FIND} /var/run/dmesg.boot -newer ${LOCKFILE}`; \
+			rebooted=`${FIND} /var/run/dmesg.boot -newer ${LOCKFILE} -print`; \
 			if ${TEST} x"$$rebooted" != x; then		\
 				${ECHO} "=> Removing stale ${LOCKFILE}"; \
 				${RM} ${LOCKFILE};			\
@@ -2316,14 +2316,14 @@ real-su-install: ${MESSAGE}
 	fi
 .if defined(PKG_DEVELOPER) && (${CHECK_FILES} == "YES")
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "${_PKGSRC_IN}> Generating pre-install file lists"
-	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${PREFIX} -type f -or -type l \
+	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${PREFIX} -type f -or -type l -print \
 		2>/dev/null ${CHECK_FILES_SKIP_CMD} >${WRKDIR}/.prefix.pre \
 		|| ${TRUE}
 .  if ${CHECK_FILES_STRICT} == "YES"
-	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${PKG_SYSCONFDIR} \
+	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${PKG_SYSCONFDIR} -print \
 		2>/dev/null ${CHECK_FILES_SKIP_CMD} >${WRKDIR}/.sysconfdir.pre \
 		|| ${TRUE}
-	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${VARBASE} \
+	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${VARBASE} -print \
 		2>/dev/null ${CHECK_FILES_SKIP_CMD} >${WRKDIR}/.varbase.pre \
 		|| ${TRUE}
 .  endif
@@ -2382,14 +2382,14 @@ real-su-install: ${MESSAGE}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} ${PLIST}
 .if defined(PKG_DEVELOPER) && (${CHECK_FILES} == "YES")
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "${_PKGSRC_IN}> Generating post-install file lists"
-	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${PREFIX} -type f -or -type l \
+	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${PREFIX} -type f -or -type l -print \
 		2>/dev/null ${CHECK_FILES_SKIP_CMD} >${WRKDIR}/.prefix.post \
 		|| ${TRUE}
 .  if ${CHECK_FILES_STRICT} == "YES"
-	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${PKG_SYSCONFDIR} \
+	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${PKG_SYSCONFDIR} -print \
 		2>/dev/null ${CHECK_FILES_SKIP_CMD} >${WRKDIR}/.sysconfdir.post\
 		|| ${TRUE}
-	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${VARBASE} \
+	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${VARBASE} -print \
 		2>/dev/null ${CHECK_FILES_SKIP_CMD} >${WRKDIR}/.varbase.post \
 		|| ${TRUE}
 .  endif
