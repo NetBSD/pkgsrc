@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/08/01 10:20:30 shannonjr Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/11/22 22:24:47 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GCCADA_BUILDLINK3_MK:=	${GCCADA_BUILDLINK3_MK}+
@@ -30,7 +30,7 @@ BUILDLINK_FILES_CMD.gcc34-ada=	(cd  ${BUILDLINK_PREFIX.gcc34-ada} && \
 BUILDLINK_TRANSFORM.gcc34-ada=	-e s:\buildlink:buildlink/gcc34-ada:
 
 # Packages that link against shared libraries need a full dependency.
-.  if defined(USE_GCC_SHLIB)
+.  if defined(_USE_GCC_SHLIB)
 BUILDLINK_DEPMETHOD.gcc34-ada?=	full
 .  else
 BUILDLINK_DEPMETHOD.gcc34-ada?=	build
