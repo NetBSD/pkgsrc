@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2000/07/26 20:58:34 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.3 2000/11/23 15:46:34 dmcmahill Exp $
 #
 
-DISTNAME=	dinotrace-9.0k
+DISTNAME=	dinotrace-9.0l
 CATEGORIES=	cad
 MASTER_SITES=	http://www.ultranet.com/~wsnyder/veripool/ftp/
 
@@ -11,11 +11,6 @@ HOMEPAGE= 	http://www.ultranet.com/~wsnyder/veripool/dinotrace/
 INFO_FILES=	dinotrace.info
 
 GNU_CONFIGURE=	YES
-
 USE_MOTIF=	YES
-
-#avoid having this installed later
-post-patch:
-	${RM} ${WRKSRC}/dinotrace.info.orig
 
 .include "../../mk/bsd.pkg.mk"
