@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/10/03 00:18:23 tv Exp $
+# $NetBSD: Makefile,v 1.12 2004/12/15 17:03:58 wiz Exp $
 #
 
 DISTNAME=	icepref-1.1
@@ -6,7 +6,7 @@ PKGREVISION=	5
 CATEGORIES=	wm
 MASTER_SITES=	ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/
 
-MAINTAINER=	ptiJo@noos.fr
+MAINTAINER=	tech-pkg@NetBSD.org
 # This homepage no longer exists - agc 21 June 2002
 #HOMEPAGE=	http://members.xoom.com/SaintChoj/icepref.html
 COMMENT=	Graphical configuration utility for IceWM
