@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/11/09 20:06:05 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/11/09 20:35:07 mycroft Exp $
 bin/GnomeScott
 bin/ctali
 bin/freecell
@@ -401,6 +401,12 @@ share/xbill/cursors/turbolinux.xpm
 share/xbill/cursors/suse.xpm
 share/xbill/cursors/caldera.xpm
 share/xbill/cursors/mandrake.xpm
+share/xbill/pixmaps/beos.xpm
+share/xbill/pixmaps/caldera.xpm
+share/xbill/pixmaps/debian.xpm
+share/xbill/pixmaps/mandrake.xpm
+share/xbill/pixmaps/suse.xpm
+@dirrm share/xbill/pixmaps
 @dirrm share/xbill/cursors
 @dirrm share/sounds/iagno
 @dirrm share/sounds/gnobots2
