@@ -1,7 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/02/09 15:24:24 mjl Exp $
-
---- Makefile.in.orig	Fri Feb  9 15:02:31 2001
-+++ Makefile.in	Fri Feb  9 15:03:32 2001
+$NetBSD: patch-aa,v 1.2 2001/12/30 13:38:07 wiz Exp $
+--- Makefile.in.orig	Thu Jul 27 11:19:17 2000
++++ Makefile.in	Sat Dec 29 03:39:46 2001
 @@ -37,10 +37,10 @@
  ### 
  
@@ -15,6 +14,24 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/02/09 15:24:24 mjl Exp $
  
  ### directory for lclint binary
  INSTALLDIR = @installdir@/bin
+@@ -160,7 +160,7 @@
+ 	setenv LINKFLAGS '$(LINKFLAGS)' ; \
+ 	setenv DEFAULT_LARCHPATH '".:$(LIBDIR)"' ; \
+ 	setenv DEFAULT_LCLIMPORTDIR '"$(IMPORTSDIR)"' ; \
+-	$(MAKE) -e localconstants ; $(MAKE) -e
++	$(MAKE) localconstants ; $(MAKE)
+ else
+ 	cd src ; CC='$(CC)'; export CC; CCOPT='$(CCOPT)'; \
+ 	BISON='$(BISON)' ; export BISON; FLEX='$(FLEX)'; export FLEX; \
+@@ -169,7 +169,7 @@
+ 	DEFAULT_LARCHPATH='".:$(LIBDIR)/"' ; export DEFAULT_LARCHPATH ;\
+ 	LINKFLAGS='$(LINKFLAGS)'; export LINK_FLAGS; \
+ 	DEFAULT_LCLIMPORTDIR='"$(IMPORTSDIR)"' ; export DEFAULT_LCLIMPORTDIR ;\
+-	$(MAKE) -e localconstants ; $(MAKE) -e
++	$(MAKE) localconstants ; $(MAKE)
+ endif
+ 	@echo '// '
+ 	@echo '//  Run: '$(MAKE)' test to check'
 @@ -227,14 +227,14 @@
  dolibraries:
  	@echo '//  Installing libraries in '$(LIBDIR)
