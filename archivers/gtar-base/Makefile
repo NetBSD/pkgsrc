@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2004/05/18 11:58:04 recht Exp $
+# $NetBSD: Makefile,v 1.36 2004/06/02 23:20:55 heinz Exp $
 #
 
 DISTNAME=       tar-1.13.25
@@ -40,6 +40,8 @@ CONFIGURE_ARGS+=	--with-catgets
 PLIST_SUBST+=		GTAR_PROGRAM_PREFIX=${GTAR_PROGRAM_PREFIX}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 BUILD_DEFS+=		GTAR_PROGRAM_PREFIX
+
+TEST_TARGET=		check
 
 .if ${GTAR_PROGRAM_PREFIX} != "g"
 PLIST_SUBST+=           GTAR_LINK=""
