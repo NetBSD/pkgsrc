@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2002/11/14 23:50:51 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/28 21:30:13 wiz Exp $
 
-PKGNAME=        dl-ezkit-0.8.1
 DISTNAME=	dl-ezkit-0.8.1-bsd
+PKGNAME=        dl-ezkit-0.8.1
 CATEGORIES=	comms
 MASTER_SITES=	http://www.ww.tu-freiberg.de/~pberg/download/Unix-sources/
 
