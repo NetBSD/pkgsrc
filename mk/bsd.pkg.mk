@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.975 2002/05/12 15:37:30 schmonz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.976 2002/05/13 11:43:05 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -781,9 +781,9 @@ MASTER_SITE_R_CRAN+=	\
 	http://www.stats.bris.ac.uk/R/src/
 
 MASTER_SITE_TEX_CTAN+= \
-	ftp://ftp.wustl.edu/packages/TeX/  \
-	ftp://ftp.funet.fi/pub/TeX/CTAN/  \
-	ftp://ftp.tex.ac.uk/public/ctan/tex-archive/  \
+	ftp://ftp.wustl.edu/packages/TeX/ \
+	ftp://ftp.funet.fi/pub/TeX/CTAN/ \
+	ftp://ftp.tex.ac.uk/public/ctan/tex-archive/ \
 	ftp://ftp.dante.de/tex-archive/
 
 MASTER_SITE_SUNSITE+=	\
@@ -1658,25 +1658,25 @@ _LOCALPATCHFILES=	${_DFLT_LOCALPATCHFILES}
 do-patch: uptodate-digest
 .  if defined(PATCHFILES)
 	@${ECHO_MSG} "${_PKGSRC_IN}> Applying distribution patches for ${PKGNAME}"
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${_DISTDIR}; \
-	  for i in ${PATCHFILES}; do \
-		if [ ${PATCH_DEBUG_TMP} = yes ]; then \
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${_DISTDIR};			\
+	  for i in ${PATCHFILES}; do					\
+		if [ ${PATCH_DEBUG_TMP} = yes ]; then			\
 			${ECHO_MSG} "${_PKGSRC_IN}> Applying distribution patch $$i" ; \
-		fi; \
-		case $$i in \
-			*.Z|*.gz) \
+		fi;							\
+		case $$i in						\
+			*.Z|*.gz)					\
 				${GZCAT} $$i | ${PATCH} ${PATCH_DIST_ARGS} \
 				|| { ${ECHO} Patch $$i failed ; exit 1; } ; \
-				;; \
-			*.bz2) \
+				;;					\
+			*.bz2)						\
 				${BZCAT} $$i | ${PATCH} ${PATCH_DIST_ARGS} \
 				|| { ${ECHO} Patch $$i failed ; exit 1; } ; \
-				;; \
-			*) \
-				${PATCH} ${PATCH_DIST_ARGS} < $$i \
+				;;					\
+			*)						\
+				${PATCH} ${PATCH_DIST_ARGS} < $$i	\
 				|| { ${ECHO} Patch $$i failed ; exit 1; } ; \
-				;; \
-		esac; \
+				;;					\
+		esac;							\
 	  done
 .  endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -2593,7 +2593,7 @@ update:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	[ ! -s ${DDIR} ] || for dep in `${CAT} ${DDIR}` ; do		\
 		(if cd ../.. && cd "$${dep}" ; then			\
-			${ECHO_MSG} "${_PKGSRC_IN}> Installing in $${dep}" &&	\
+			${ECHO_MSG} "${_PKGSRC_IN}> Installing in $${dep}" && \
 			if [ "${RESUMEUPDATE}" = "NO" -o 		\
 			     "${REINSTALL}" != "NO" ] ; then		\
 				${MAKE} ${MAKEFLAGS} deinstall;		\
@@ -2601,7 +2601,7 @@ update:
 			${MAKE} ${MAKEFLAGS} ${UPDATE_TARGET}		\
 				DEPENDS_TARGET=${DEPENDS_TARGET} ;	\
 		else							\
-			${ECHO_MSG} "${_PKGSRC_IN}> Skipping removed directory $${dep}";\
+			${ECHO_MSG} "${_PKGSRC_IN}> Skipping removed directory $${dep}"; \
 		fi) ;							\
 	done
 .if ${NOCLEAN} == "NO"
