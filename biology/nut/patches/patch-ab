@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/01/11 02:56:33 garbled Exp $
+--- db.c.orig	Mon Jan 10 15:24:03 2000
++++ db.c	Mon Jan 10 15:42:12 2000
+@@ -32,6 +32,11 @@
+ #else
+ char nutdir1[]=NUTDIR ;
+ #endif
++#ifndef DBDIR
++char nutdir2[]=".nutdb";
++#else
++char nutdir2[]=DBDIR ;
++#endif
+ 
+ char rawfoodfile1[] = "abbrev.txt";
+ char rawnutfoodfile1[] = "nutfood.txt";
+@@ -454,7 +459,7 @@
+ 
+ void make_filenames(void)
+ {
+-sprintf(rawfoodfile,"%s/%s/%s",getenv("HOME"),nutdir1,rawfoodfile1);
++sprintf(rawfoodfile,"%s/%s",nutdir2,rawfoodfile1);
+ sprintf(rawnutfoodfile,"%s/%s/%s",getenv("HOME"),nutdir1,rawnutfoodfile1);
+ sprintf(foodfile,"%s/%s/%s",getenv("HOME"),nutdir1,foodfile1);
+ sprintf(mealfile,"%s/%s/%s",getenv("HOME"),nutdir1,mealfile1);

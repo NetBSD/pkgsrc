@@ -1,0 +1,11 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/01/11 02:56:33 garbled Exp $
+--- Makefile.orig	Mon Jan 10 15:49:05 2000
++++ Makefile	Mon Jan 10 15:52:35 2000
+@@ -1,6 +1,6 @@
+ objects := $(patsubst %.c,%.o,$(wildcard *.c))
+ 
+-CFLAGS= -O2 -Wall -DNUTDIR=\".nutdb\"
++CFLAGS= -O2 -Wall -DNUTDIR=\".nutdb\" -DDBDIR=\"${PREFIX}/share/nut\"
+ 
+ nut  : $(objects)
+ 	gcc -O2 -Wall -lm -o nut $(objects)
