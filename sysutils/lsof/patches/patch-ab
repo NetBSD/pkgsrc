@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.5 1999/02/18 23:09:46 frueauf Exp $
+
+--- dialects/n+obsd/dlsof.h-orig	Fri May 22 14:18:33 1998
++++ dialects/n+obsd/dlsof.h	Thu Feb 18 23:59:27 1999
+@@ -52,7 +52,9 @@
+ #include <sys/mount.h>
+ #include <rpc/types.h>
+ #include <sys/protosw.h>
++#define _KERNEL
+ #include <sys/socket.h>
++#undef _KERNEL
+ #include <sys/socketvar.h>
+ #include <sys/un.h>
+ #include <sys/unpcb.h>

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/02/17 05:34:32 erh Exp $
+# $NetBSD: Makefile,v 1.13 1999/02/18 23:09:45 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/03/08 06:44:48 obrien Exp
 #
 
@@ -12,10 +12,11 @@ MASTER_SITES=		ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/  \
 			ftp://ftp.web.ad.jp/pub/UNIX/tools/lsof/  \
 			ftp://ftp.sunet.se/pub/unix/admin/lsof/
 
+PATCH_SITES=		ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/patches/4.40/
+PATCHFILES=		arg.c.patch
+
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www-rcd.cc.purdue.edu/~abe/
-
-CONFLICTS=		lsof-*
 
 DIST_SUBDIR=		lsof
 
