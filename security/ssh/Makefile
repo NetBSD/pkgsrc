@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 1999/12/25 05:28:33 kim Exp $
+# $NetBSD: Makefile,v 1.68 1999/12/25 05:31:49 kim Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -76,6 +76,7 @@ DEPENDS+=		socks5-1.0.2:../../net/socks5
 # http://www.monkey.org/~dugsong/ssh-afs/
 # PATCH_SITES+=		ftp://ftp.monkey.org/pub/users/dugsong/
 # PATCHFILES+=		ssh-1.2.27-afs-kerberos.patch-1
+# MD5 (ssh-1.2.27-afs-kerberos.patch-1) = d440f74958d9c3805b76dbc13e97e87d
 
 .if defined(KERBEROS) && ${KERBEROS} == 4
 USE_KERBEROS=		yes
@@ -112,6 +113,7 @@ CFLAGS+=		-DLIBWRAP_FWD
 # The original IPv6 patches were fetched from
 # PATCH_SITES+=		ftp://ftp.kyoto.wide.ad.jp/IPv6/ssh/
 # PATCHFILES+=		ssh-1.2.27-IPv6-1.5-patch.gz
+# MD5 (ssh-1.2.27-IPv6-1.5-patch.gz) = b854131fe8aa025abeef32cecfe1b037
 
 .if defined(USE_INET6) && ${USE_INET6} == YES
 CONFIGURE_ARGS+=	--enable-ipv6
