@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/12 17:18:41 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2004/05/14 08:04:04 xtraeme Exp $
 
-SHA1 (pnetC-0.6.0.tar.gz) = 0c00f236c7bb80d0e9591e7dea2e16ff6e45e3d6
-Size (pnetC-0.6.0.tar.gz) = 263490 bytes
+SHA1 (pnetC-0.6.4.tar.gz) = d5990a2dd98b2bcd3afc69de54a9a2cd724cd8e8
+Size (pnetC-0.6.4.tar.gz) = 313927 bytes
