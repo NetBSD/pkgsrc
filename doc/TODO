@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2473 2004/11/26 06:47:09 taca Exp $
+$NetBSD: TODO,v 1.2474 2004/11/26 08:47:05 adam Exp $
 
 Suggested new packages
 ======================
@@ -458,7 +458,6 @@ Suggested package updates
 	o eblook-1.6.1
 	o edb-1.0.5
 	o eel-1.0.2
-	o eel2-2.8.2
 	o efax-gtk-2.2.13
 	o efont-unicode-0.4.2
 	o eggdrop-1.6.17
