@@ -1,8 +1,21 @@
-$NetBSD: patch-ai,v 1.1.1.1 2001/03/14 16:03:13 skrll Exp $
+$NetBSD: patch-ai,v 1.2 2001/03/15 17:58:48 skrll Exp $
 
 --- ksysguard/ksysguardd/FreeBSD/Memory.c.orig	Fri Jul 28 00:59:28 2000
 +++ ksysguard/ksysguardd/FreeBSD/Memory.c
-@@ -65,9 +65,16 @@
+@@ -29,7 +29,12 @@
+ 
+ #include <sys/param.h>
+ #include <sys/sysctl.h>
++/* Everything post 1.5.x uses uvm/uvm_* includes */
++#if __NetBSD_Version__ >= 105010000
++#include <uvm/uvm_param.h>
++#else
+ #include <vm/vm_param.h>
++#endif
+ #include <sys/vmmeter.h>
+ #include <string.h>
+ #include <unistd.h>
+@@ -65,9 +70,16 @@
          struct vmtotal p;
          FILE *file;
          char buf[256];
@@ -19,7 +32,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2001/03/14 16:03:13 skrll Exp $
          Total /= 1024;
  
          /* Q&D hack for swap display. Borrowed from xsysinfo-1.4 */
-@@ -92,23 +99,40 @@
+@@ -92,23 +104,40 @@
  	}
  
  
