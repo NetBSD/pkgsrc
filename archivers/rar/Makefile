@@ -4,7 +4,7 @@
 # Date created:         15 May 1996
 # Whom:                 ache
 #
-# $NetBSD: Makefile,v 1.7 1998/01/24 03:20:01 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 1998/03/07 21:23:51 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:27 fenner Exp 
 #
 
@@ -36,8 +36,7 @@ do-build:
 		done
 
 do-install:
-	install -d -m 755 -o ${SHAREOWN} -g ${SHAREGRP} \
-		${PREFIX}/share/doc/rar ${PREFIX}/share/rar
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/rar ${PREFIX}/share/rar
 	cd ${WRKSRC} && \
 		${INSTALL_PROGRAM} RAR ${PREFIX}/bin/rar && \
 		${INSTALL_MAN} Rar.Txt ${PREFIX}/man/cat1/rar.1 && \
