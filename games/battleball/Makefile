@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/03/29 12:41:00 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2003/11/06 19:06:42 gavan Exp $
 
 DISTNAME=	battleball.21.src
 PKGNAME=	battleball-2.1
@@ -13,6 +13,7 @@ COMMENT=	3d game of soccer, with tanks
 
 USE_BUILDLINK2=	YES
 USE_X11=	YES
+USE_GCC_SHLIB=	YES
 
 SED_CMDS=	-e '/^INCS/s|$$|${CPPFLAGS}|' -e '/^LIBS/s|$$|${LDFLAGS}|'
 
