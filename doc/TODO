@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2118 2004/09/14 08:27:32 jmmv Exp $
+$NetBSD: TODO,v 1.2119 2004/09/15 08:01:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -259,7 +259,7 @@ Suggested package updates
 	o fsviewer-0.2.5
 	o galeon-1.3.17
 	o gdb-6.2.1
-	o gdm-2.6.0.4
+	o gdm-2.6.0.5
 	o generator-0.35
 	o getmail-4.1.5
 	o gettext-0.14.1
@@ -300,6 +300,7 @@ Suggested package updates
 	o inform-6.30 [pkg/24631]
 	o intercal-0.24 [dillo]
 	o iozone-3.221
+	o ispman-1.1.1
 	o jakarta-tomcat-3.3.1a
 	o john-1.6.37
 	o jpilot-0.99.7 [pkg/24635]
@@ -309,6 +310,7 @@ Suggested package updates
 	o lavaps-2.5
 	o lbreakout-2.5
 	o leafnode-1.10.5
+	o lftp-3.0.8
 	o libcddb-0.9.5
 	o libggi-2.0.5
 	o libgii-0.8.5
@@ -321,7 +323,7 @@ Suggested package updates
 	o libsigc++-2.0.3
 	o libtool-1.5.8
 	o licq-1.2.7
-	o liferea-0.5.3c
+	o liferea-0.6.0
 	o lilypond-2.2
 	o lmbench-2.0.4
 	o lout-3.29
@@ -443,6 +445,7 @@ Suggested package updates
 	o teapop-0.3.8
 	o texi2html-1.70
 	o tfmxplay-1.1.6
+	o thunderbird-0.8
 	o tinyproxy-1.6.3
 	o tk-8.4.7
 	o tkdesk-2.0
@@ -461,7 +464,7 @@ Suggested package updates
 	o wavesurfer-1.5.3
 	o wdm-1.27
 	o wesnoth-0.8.4
-	o wine-20040813
+	o wine-20040914
 	o wistumbler-2.00pre9 [pkg/26245]
 	o wmakerconf-2.9.2
 	o wmweather-2.4.3
