@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2002/08/04 23:53:21 taya Exp $
+@comment $NetBSD: PLIST,v 1.14 2002/10/08 14:50:52 taya Exp $
 bin/galeon
 bin/galeon-bin
 bin/galeon-config-tool
@@ -138,6 +138,7 @@ share/galeon/spinners/pipeon/012.png
 share/galeon/spinners/pipeon/013.png
 share/galeon/spinners/pipeon/014.png
 share/galeon/spinners/pipeon/rest.png
+share/galeon/stock_trash.xpm
 share/galeon/stocks.png
 share/galeon/stop.png
 share/galeon/tabs.png
@@ -340,9 +341,9 @@ share/oaf/GNOME_Galeon_NautilusView.oaf
 share/omf/galeon/galeon-manual-C.omf
 share/pixmaps/galeon.png
 share/sounds/galeon/clicked.wav
-@dirrm share/sounds/galeon
 @exec ${MKDIR} %D/share/omf/galeon
 @exec env GCONF_CONFIG_SOURCE=xml::${X11PREFIX}/etc/gconf/gconf.xml.defaults gconftool-1 --makefile-install-rule ${X11PREFIX}/etc/gconf/schemas/galeon.schemas
+@dirrm share/sounds/galeon
 @dirrm share/omf/galeon
 @dirrm share/gnome/help/galeon-manual/C/stylesheet-images
 @dirrm share/gnome/help/galeon-manual/C/figures
