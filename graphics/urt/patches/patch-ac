@@ -1,0 +1,83 @@
+$NetBSD: patch-ac,v 1.1 1998/08/24 16:55:36 agc Exp $
+
+Extensive hacking around - instead of installing manual pages which
+simply source other man pages, make a symbolic link to the target.
+
+--- man/makefile.src.orig	Thu Feb 27 21:26:52 1992
++++ man/makefile.src	Mon Aug 24 17:42:59 1998
+@@ -197,11 +197,9 @@
+ GET_SETUP_OK_PAGE3 = man3/rle_get_setup_ok.3
+ #endif
+ 
+-PAGES5 = ${MANPAGES5} ${SOPAGES5}
++MANPAGES5 = man5/rle.5
+ 
+-MANPAGES5 = rle.5
+-
+-SOPAGES5 = RLE.5
++SOPAGES5 = man5/RLE.5
+ 
+ # Default action is to print all man pages
+ all:
+@@ -211,7 +209,6 @@
+ 
+ # Put the manual pages into a global location
+ install: install-1 install-3 install-5
+-	touch install
+ 
+ install-1: $(PAGES1)
+ 	@-sh -c "if test '$(DEST)X' != X ; then \
+@@ -223,11 +220,10 @@
+ 	else \
+ 		true ; \
+ 	fi"
+-	touch install-1
+ 
+-install-3: $(PAGES3)
++install-3: $(MANPAGES3) 3links
+ 	@-sh -c "if test '$(DEST)X' != X ; then \
+-		for i in $? ; do \
++		for i in ${MANPAGES3} ; do \
+ 			dpgm=${PAGE3_INSTALL_NAME} ; \
+ 			echo cp \$$i $(DEST3)/\$$dpgm ; \
+ 			cp \$$i $(DEST3)/\$$dpgm ; \
+@@ -235,15 +231,34 @@
+ 	else \
+ 		true ; \
+ 	fi"
+-	touch install-3
+ 
+-install-5: man5/*.5
++3links: ${SOPAGES3}
++	@for i in ${SOPAGES3}; do \
++		dpgm=`echo $$i | sed -e 's|.*/||'` ; \
++		tgt=`awk '/^\.so/ { print \$$2; exit}' < \$$i`; \
++		echo "ln -fs ${DEST3}/$$tgt ${DEST3}/$$dpgm"; \
++		ln -fs ${DEST3}/$$tgt ${DEST3}/$$dpgm; \
++	done
++
++install-5: ${MANPAGES5} 5links
+ 	@-sh -c "if test $(DEST)X != X; then \
+-		echo cp $? $(DEST5); \
+-		cp $? $(DEST5); \
++		for i in ${MANPAGES5} ; do \
++			dpgm=${PAGE3_INSTALL_NAME} ; \
++			echo cp \$$i $(DEST5)/\$$dpgm; \
++			cp \$$i $(DEST5)/\$$dpgm; \
++		done; \
+ 	else true; \
+ 	fi"
+-	touch install-5
++
++5links: ${SOPAGES5}
++	@for i in ${SOPAGES5}; do \
++		dpgm=`echo $$i | sed -e 's|.*/||'` ; \
++		tgt=`awk '/^\.so/ { print \$$2; exit}' < \$$i`; \
++		echo "ln -fs ${DEST5}/$$tgt ${DEST5}/$$dpgm"; \
++		ln -fs ${DEST5}/$$tgt ${DEST5}/$$dpgm; \
++	done
++
++
+ 
+ # Clean up installed man pages
+ pristine:
