@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/12/03 22:14:45 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/12 00:37:20 snj Exp $
 #
 
 DISTNAME=	myhdl-0.2
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://jandecaluwe.com/Tools/MyHDL/Overview.html
 COMMENT=	Hardware description in Python
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 PYDISTUTILSPKG=	yes
 PYTHON_VERSIONS_ACCEPTED=	22 22pth 23 23pth
 
