@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2946 2005/01/21 12:25:30 abs Exp $
+$NetBSD: TODO,v 1.2947 2005/01/21 14:48:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -276,7 +276,7 @@ Suggested package updates
 	o acpi-iasl-20040715
 	o adzap-20041124
 	o aewm++-1.0.27
-	o afterstep-2.00.01
+	o afterstep-2.00.02
 	o aim-1.5.286
 	o ald-0.1.6 [pkg/26431]
 	o alee-ttf-4.1
@@ -364,7 +364,7 @@ Suggested package updates
 	o classpath-0.13
 	o classpath-gui-0.13
 	o clisp-2.33.2
-	o cmp3-2.0pre6
+	o cmp3-2.0pre6 [pkg/29036]
 	o cocoon-2.1.6
 	o codeville-0.1.10
 	o columba-1.0RC1
@@ -684,7 +684,7 @@ Suggested package updates
 	o mserv-devel-0.41
 	o mtail-1.1.1
 	o multi-gnome-terminal-1.6.2
-	o multitail-3.4.4
+	o multitail-3.4.5
 	o muse-0.9.1
 	o nail-11.20
 	o nano-1.3.5 [devel version]
@@ -1105,7 +1105,6 @@ Suggested package updates
 	o ucblogo-5.4
 	o ucl-1.03
 	o unalz-0.31
-	o unarj-2.65
 	o unison-2.10.2
 	o unix2dos-1.3
 	o upx-1.25
@@ -1199,6 +1198,7 @@ Suggested package updates
 	o zircon-1.18.256
 	o zopeedit-0.8
 	o zsh-4.2.3
+	o zsnes-1.42
 	o zziplib-0.13.37
 
 Infrastructure problems which need addressing
