@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.212 2004/02/17 19:55:54 minskim Exp $
+# $NetBSD: Makefile,v 1.213 2004/02/18 01:29:46 minskim Exp $
 #
 
 COMMENT=	Audio tools
@@ -100,6 +100,7 @@ SUBDIR+=	libshout
 SUBDIR+=	libsidplay
 SUBDIR+=	libsndfile
 SUBDIR+=	libvorbis
+SUBDIR+=	liteamp
 SUBDIR+=	liveice
 SUBDIR+=	mad
 SUBDIR+=	mad123
