@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.31 2004/10/13 18:00:08 tv Exp $
-#
+# $NetBSD: Makefile,v 1.32 2004/10/26 13:56:36 adam Exp $
 
 PKGNAME=	${DISTNAME:S/MesaLib/glut/}
-PKGREVISION=	2
 COMMENT=	GLUT Graphics library similar to SGI's OpenGL
 
 CONFLICTS+=	Mesa-glx-[0-9]*
 CONFLICTS+=	Mesa<3.2.1
 
-.include "../../graphics/Mesa/Makefile.common"
+.include "../Mesa/Makefile.common"
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

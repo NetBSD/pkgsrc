@@ -1,22 +1,21 @@
-$NetBSD: patch-ac,v 1.5 2004/04/09 13:06:06 adam Exp $
+$NetBSD: patch-ac,v 1.6 2004/10/26 13:55:37 adam Exp $
 
---- Makefile.orig	2004-04-02 23:29:33.000000000 +0000
+--- Makefile.orig	2004-10-01 21:34:29.000000000 +0000
 +++ Makefile
-@@ -104,7 +104,7 @@ default:
- 	@echo "  make linux-ia64-ecc-static-nothreads  for Linux IA64 with the Intel C/C++ compiler, static, no threads"
- 	@echo "  make lynxos                for LynxOS systems with GCC"
- 	@echo "  make mklinux               for Linux on Power Macintosh"
--	@echo "  make netbsd                for NetBSD 1.0 systems with GCC"
-+	@echo "  make pkgsrc                for pkgsrc systems"
- 	@echo "  make openbsd               for OpenBSD systems"
- 	@echo "  make openstep              for OpenStep/MacOSX Server systems"
- 	@echo "  make osf1                  for DEC Alpha systems with OSF/1"
-@@ -152,7 +152,7 @@ linux-glide linux-x86-glide linux-glide-
- linux-alpha-static linux-alpha \
- linux-ppc-static linux-ppc \
- linux-sparc linux-sparc5 linux-sparc-ultra \
--mklinux netbsd osf1 osf1-nothreads openbsd qnx \
-+mklinux pkgsrc osf1 osf1-nothreads openbsd qnx \
- solaris-x86 solaris-x86-gcc \
- sunos4 sunos4-sl sunos4-gcc sunos4-gcc-sl sunos4-gcc-x11r6-sl \
- sunos5 sunos5-smp sunos5-gcc sunos5-gcc-debug \
+@@ -2,7 +2,7 @@
+ 
+ TOP = .
+ 
+-SUBDIRS = src progs
++SUBDIRS = src
+ 
+ 
+ default: $(TOP)/configs/current
+@@ -98,6 +98,7 @@ linux-x86-64-static \
+ linux-x86-glide \
+ linux-x86-static \
+ netbsd \
++pkgsrc \
+ openbsd \
+ osf1 \
+ solaris-x86 \
