@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2004/04/11 22:00:12 ben Exp $
+$NetBSD: distinfo,v 1.7 2004/04/12 17:53:35 wiz Exp $
 
-SHA1 (manual-html-4.23.tar.gz) = 84d6c7189f85cef3de70f1b644c005fdaa206c7e
-Size (manual-html-4.23.tar.gz) = 1743661 bytes
+SHA1 (csound-manual-4.23nb1/manual-html-4.23.tar.gz) = 84d6c7189f85cef3de70f1b644c005fdaa206c7e
+Size (csound-manual-4.23nb1/manual-html-4.23.tar.gz) = 1743661 bytes
