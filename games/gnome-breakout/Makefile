@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 15:10:50 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/08/01 18:19:11 wiz Exp $
 #
 
-DISTNAME=	gnome-breakout-0.4
+DISTNAME=	gnome-breakout-0.5.2
 CATEGORIES=	games gnome
-MASTER_SITES=	http://www.tuial.com/~alcaron/software/
+MASTER_SITES=	http://www.senet.com.au/~alcaron/
 
 MAINTAINER=	rh@netbsd.org
-HOMEPAGE=	http://www.tuial.com/~alcaron/software/
+HOMEPAGE=	http://www.senet.com.au/~alcaron/software.html
 COMMENT=	gnome version of the classic breakout game
 
 DEPENDS+=	gnome-core-*:../../x11/gnome-core
@@ -14,4 +14,10 @@ DEPENDS+=	gnome-core-*:../../x11/gnome-core
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
 
+post-install:
+	${TOUCH} /var/games/gnome-breakout.scores
+	${CHOWN} games:games /var/games/gnome-breakout.scores
+	${CHMOD} 664 /var/games/gnome-breakout.scores
+
+.include "../../devel/gettext-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
