@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.5 1999/05/23 22:10:01 tv Exp $
+# $NetBSD: bsd.prefs.mk,v 1.6 1999/05/24 11:17:05 tv Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -42,5 +42,7 @@ MAKE_ENV+=	EXTRA_SYS_MK_INCLUDES="<bsd.own.mk>"
 	@${ECHO_MSG} "depending on your needs.  See the pkg system documentation for more info."
 	@${FALSE}
 .endif
+
+.include <sys.mk>
 
 .endif
