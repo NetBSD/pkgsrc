@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/11/12 15:01:17 agc Exp $
+
 --- xbanner.h.orig	Thu May 15 22:38:25 1997
 +++ xbanner.h	Tue Aug 18 23:58:23 1998
 @@ -5,7 +5,7 @@
