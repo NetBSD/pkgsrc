@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2001/08/20 07:12:27 itojun Exp $
+# $NetBSD: Makefile,v 1.46 2001/08/26 10:32:22 skrll Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=	itojun@itojun.org
 HOMEPAGE=	http://www.zebra.org/
 COMMENT=	Free multithreaded routing daemon software
 
-BUILD_DEPENDS+=	automake-1.4:../../devel/automake
+BUILD_DEPENDS+=	automake>=1.4:../../devel/automake
 BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
 
 .include "../../mk/bsd.prefs.mk"

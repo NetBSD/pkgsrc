@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/07/18 22:44:30 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2001/08/26 10:32:24 skrll Exp $
 
 DISTNAME=	kdebase-2.1
 CATEGORIES=	x11 kde
@@ -7,7 +7,7 @@ COMMENT=	Base modules for the KDE 2 integrated X11 desktop
 
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.png Daemon.README
 
-BUILD_DEPENDS+=		automake-1.4:../../devel/automake
+BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 BUILD_DEPENDS+=		{qt2-designer>=2.2.4,qt2-designer-kde>=2.3.1nb1}:../../x11/qt2-designer
 
 USE_BUILDLINK_ONLY=	yes

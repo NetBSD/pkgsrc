@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/03/27 03:19:58 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 2001/08/26 10:32:20 skrll Exp $
 
 DISTNAME=		xpuyopuyo-0.9.1
 CATEGORIES=		games x11
@@ -10,7 +10,7 @@ HOMEPAGE=		http://chaos2.org/xpuyopuyo/
 COMMENT=		Tetris-like puzzle game
 
 BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
-BUILD_DEPENDS+=		automake-1.4:../../devel/automake
+BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 DEPENDS+=		libmikmod>=3.1.9:../../audio/libmikmod
 

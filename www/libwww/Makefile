@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/07/12 02:14:43 fredb Exp $
+# $NetBSD: Makefile,v 1.27 2001/08/26 10:32:24 skrll Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/06/14 23:34:59 jseger Exp
 #
 
@@ -13,7 +13,7 @@ HOMEPAGE=		http://www.w3.org/Library/
 COMMENT=		The W3C Reference Library
 
 BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
-BUILD_DEPENDS+=		automake-1.4:../../devel/automake
+BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 BUILD_DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
 
 USE_BUILDLINK_ONLY=	yes
