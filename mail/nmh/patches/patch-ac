@@ -53,26 +53,6 @@
  etcdir      = @sysconfdir@
  
  CC       = @CC@
---- support/general/Makefile.in	1997/12/19 13:01:03	1.1
-+++ support/general/Makefile.in	1997/12/19 13:02:49
-@@ -13,7 +13,7 @@
- prefix      = @prefix@
- exec_prefix = @exec_prefix@
- bindir      = @bindir@
--libdir      = @libdir@
-+libdir      = @libexecdir@
- etcdir      = @sysconfdir@
- 
- INSTALL         = @INSTALL@
-@@ -79,7 +79,7 @@
- install-scripts:
- 	$(top_srcdir)/mkinstalldirs $(libdir)
- 	for script in $(SCRIPTS); do \
--	  $(INSTALL_PROGRAM) $(srcdir)/$$script $(libdir)/$$script; \
-+	  $(INSTALL) -m 555 $(srcdir)/$$script $(libdir)/$$script; \
- 	done
- 
- uninstall: uninstall-files uninstall-scripts
 --- man/Makefile.in	1997/12/19 13:01:04	1.1
 +++ man/Makefile.in	1997/12/19 13:01:28
 @@ -15,7 +15,7 @@
@@ -84,3 +64,31 @@
  etcdir      = @sysconfdir@
  mandir      = @mandir@
  manext1     = 1
+--- etc/Makefile.in	1998/06/01 12:43:22	1.1
++++ etc/Makefile.in	1998/06/01 12:46:59
+@@ -13,7 +13,7 @@
+ prefix      = @prefix@
+ exec_prefix = @exec_prefix@
+ bindir      = @bindir@
+-libdir      = @libdir@
++libdir      = @libexecdir@
+ etcdir      = @sysconfdir@
+ 
+ mailspool    = @mailspool@
+@@ -21,6 +21,7 @@
+ INSTALL         = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA    = @INSTALL_DATA@
++INSTALL_SCRIPT=	${BSD_INSTALL_SCRIPT}
+ 
+ # Path to search for programs to display content
+ # for mhn.  Used to create mhn.defaults
+@@ -88,7 +89,7 @@
+ install-scripts:
+ 	$(top_srcdir)/mkinstalldirs $(libdir)
+ 	for script in $(SCRIPTS); do \
+-	  $(INSTALL_PROGRAM) $(srcdir)/$$script $(libdir)/$$script; \
++	  $(INSTALL_SCRIPT) $(srcdir)/$$script $(libdir)/$$script; \
+ 	done
+ 
+ uninstall: uninstall-files uninstall-scripts
