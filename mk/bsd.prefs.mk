@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.150 2004/02/06 19:04:25 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.151 2004/02/13 18:00:29 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -393,10 +393,22 @@ PKG_INFO_CMD?=		${PKG_TOOLS_BIN}/pkg_info
 PKG_VIEW_CMD?=		${PKG_TOOLS_BIN}/pkg_view
 LINKFARM_CMD?=		${PKG_TOOLS_BIN}/linkfarm
 
+.if !defined(PKGTOOLS_VERSION)
+PKGTOOLS_VERSION!=	${PKG_INFO_CMD} -V 2>/dev/null || echo 20010302
+MAKEFLAGS+=		PKGTOOLS_VERSION=${PKGTOOLS_VERSION}
+.endif
+
 # The binary pkg_install tools all need to consistently to refer to the
 # correct package database directory.
 #
+#.if ${PKGTOOLS_VERSION} < 20030823
+.if ${OPSYS} == "NetBSD"
+PKGTOOLS_ENV?=		PKG_DBDIR=${_PKG_DBDIR}
+PKGTOOLS_ARGS?=		# empty
+.else
+PKGTOOLS_ENV?=		# empty
 PKGTOOLS_ARGS?=		-K ${_PKG_DBDIR}
+.endif
 
 # Views are rooted in ${LOCALBASE}, all packages are depoted in
 # ${DEPOTBASE}, and the package database directory for the default view
@@ -404,12 +416,12 @@ PKGTOOLS_ARGS?=		-K ${_PKG_DBDIR}
 #
 PKG_VIEW_ARGS?=		-W ${LOCALBASE} -d ${DEPOTBASE} -k ${PKG_DBDIR}
 
-PKG_ADD?=		${PKG_ADD_CMD} ${PKGTOOLS_ARGS}
-PKG_ADMIN?=		${PKG_ADMIN_CMD} ${PKGTOOLS_ARGS}
-PKG_CREATE?=		${PKG_CREATE_CMD} ${PKGTOOLS_ARGS}
-PKG_DELETE?=		${PKG_DELETE_CMD} ${PKGTOOLS_ARGS}
-PKG_INFO?=		${PKG_INFO_CMD} ${PKGTOOLS_ARGS}
-PKG_VIEW?=		${PKG_VIEW_CMD} ${PKG_VIEW_ARGS}
+PKG_ADD?=		${PKGTOOLS_ENV} ${PKG_ADD_CMD} ${PKGTOOLS_ARGS}
+PKG_ADMIN?=		${PKGTOOLS_ENV} ${PKG_ADMIN_CMD} ${PKGTOOLS_ARGS}
+PKG_CREATE?=		${PKGTOOLS_ENV} ${PKG_CREATE_CMD} ${PKGTOOLS_ARGS}
+PKG_DELETE?=		${PKGTOOLS_ENV} ${PKG_DELETE_CMD} ${PKGTOOLS_ARGS}
+PKG_INFO?=		${PKGTOOLS_ENV} ${PKG_INFO_CMD} ${PKGTOOLS_ARGS}
+PKG_VIEW?=		${PKGTOOLS_ENV} ${PKG_VIEW_CMD} ${PKG_VIEW_ARGS}
 LINKFARM?=		${LINKFARM_CMD}
 
 # "${PKG_BEST_EXISTS} pkgpattern" prints out the name of the installed
@@ -418,11 +430,6 @@ LINKFARM?=		${LINKFARM_CMD}
 # package name.
 #
 PKG_BEST_EXISTS?=	${PKG_ADMIN} -b -d ${_PKG_DBDIR} -S lsbest
-
-.ifndef PKGTOOLS_VERSION
-PKGTOOLS_VERSION!=	${PKG_INFO_CMD} -V 2>/dev/null || echo 20010302
-MAKEFLAGS+=		PKGTOOLS_VERSION=${PKGTOOLS_VERSION}
-.endif
 
 USE_BUILDLINK2?=	no	# default to not using buildlink2
 USE_BUILDLINK3?=	no	# default to not using buildlink3
