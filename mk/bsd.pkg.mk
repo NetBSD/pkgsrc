@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.634 2001/01/04 15:10:50 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.635 2001/01/05 17:37:12 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2942,6 +2942,12 @@ print-run-depends-list:
 .endif
 .endif
 
+.if !target(show-license)
+show-license show-licence:
+	@if [ "${LICENSE}" != "" ]; then				\
+		${CAT} ${PKGSRCDIR}/licenses/${LICENSE};		\
+	fi
+.endif
 
 # Stat all the files of one pkg and sum the sizes up. 
 # 
