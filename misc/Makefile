@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.186 2004/02/07 10:37:51 wiz Exp $
+# $NetBSD: Makefile,v 1.187 2004/02/07 16:01:57 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -74,6 +74,7 @@ SUBDIR+=	jhd
 SUBDIR+=	jitterbug
 SUBDIR+=	jive
 SUBDIR+=	kanjidic
+SUBDIR+=	kanjidic2
 SUBDIR+=	kanjipad
 SUBDIR+=	kdeaccessibility3
 SUBDIR+=	kdeaddons2
