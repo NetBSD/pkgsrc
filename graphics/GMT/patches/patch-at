@@ -1,0 +1,51 @@
+$NetBSD: patch-at,v 1.1 2001/01/27 08:16:02 jtb Exp $
+
+--- src/x2sys/makefile.orig	Wed Oct 18 03:01:23 2000
++++ src/x2sys/makefile
+@@ -7,7 +7,7 @@
+ #------------------------- stop here --------------------------
+ 
+ CFLAGS	= $(CC_OPT) $(WIN32) -I.. -I../mgg -I$(NETCDF)/include
+-ALLLIB	= -L.. -lgmt -L../mgg -lgmt_mgg -lpsl -L$(NETCDF)/lib -lnetcdf $(LIBS)
++ALLLIB	= ../libgmt.la -L../mgg -lgmt_mgg ../libpsl.la -L$(NETCDF)/lib -lnetcdf $(LIBS)
+ 
+ XSYSTEM_H	= x2sys.h
+ XSYSTEM_C	= x2sys_datalist.c x2sys_cross.c
+@@ -19,14 +19,13 @@
+ #---------------------------------------------------------------
+ 
+ libx2sys.a:		x2sys.o
+-			$(AR) cvr libx2sys.a $?
+-			$(RANLIB) libx2sys.a
++			$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ x2sys.lo
+ 
+ all:			$(XSYSTEM) libx2sys.a
+ 
+ install:		all
+ 			for i in $(XSYSTEM); do \
+-				$(INSTALL) $$i$(EXE) $(bindir); \
++				$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) $$i$(EXE) $(bindir); \
+ 			done
+ 
+ uninstall:	
+@@ -35,16 +34,16 @@
+ 			done
+ 
+ clean:
+-			\rm -f *.o
++			\rm -f *.o *.lo
+ 			for i in $(XSYSTEM); do \
+ 				\rm -f $$i$(EXE); \
+ 			done
+ 
+ spotless:		clean
+-			\rm -f *.a
++			\rm -fr .libs *.la
+ 
+ $(XSYSTEM):		$(XSYSTEM_O) libx2sys.a
+-			$(CC) $(CFLAGS) $@.o -o $@ -L. -lx2sys $(ALLLIB) $(LDFLAGS)
++			$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $@.lo -o $@ -L. -lx2sys $(ALLLIB) $(LDFLAGS)
+ 
+ .c.o:
+-			$(CC) -c $(CFLAGS) $<
++			$(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) $<
