@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2891 2005/01/13 11:58:40 wiz Exp $
+$NetBSD: TODO,v 1.2892 2005/01/13 15:07:12 adam Exp $
 
 Suggested new packages
 ======================
@@ -542,7 +542,6 @@ Suggested package updates
 	o gri-2.12.8
 	o gsasl-0.2.4
 	o gsed-4.1.2
-	o gsl-1.6
 	o gtetrinet-0.7.8
 	o gtexinfo-4.8
 	o gtk-systrace-2003.06.23
