@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2848 2005/01/06 10:40:12 adam Exp $
+$NetBSD: TODO,v 1.2849 2005/01/06 11:11:38 adam Exp $
 
 Suggested new packages
 ======================
@@ -777,7 +777,6 @@ Suggested package updates
 	o oo2c-2.1.7
 	o open2300-1.8
 	o opencobol-0.30
-	o openldap-2.2.20
 	o openmotif-2.2.4
 	o openntpd-3.6.1p1
 	o openoffice-1.1.4
