@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.366 1999/11/12 10:34:47 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.367 1999/11/12 11:58:45 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1109,7 +1109,7 @@ do-patch:
 				fuzz="";				\
 				${PATCH} -v > /dev/null 2>&1 && fuzz="${PATCH_FUZZ_FACTOR}"; \
 				${PATCH} $$fuzz ${PATCH_ARGS} < $$i ||	\
-					( ${ECHO} "!!! Fuzzy patch $$i !!!"; ${PATCH} ${PATCH_ARGS} < $$i) || \
+					( ${ECHO} "*** Fuzzy patch $$i ***"; ${PATCH} ${PATCH_ARGS} < $$i) || \
 					( ${ECHO} Patch $$i failed ; exit 1 ) ; \
 			done;						\
 			if [ "X$$fail" != "X" ]; then			\
