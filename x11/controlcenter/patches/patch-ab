@@ -1,40 +1,7 @@
-$NetBSD: patch-ab,v 1.4 2002/04/09 21:39:24 jlam Exp $
+$NetBSD: patch-ab,v 1.5 2002/08/29 08:42:52 jlam Exp $
 
 --- configure.orig	Sun Feb 10 16:36:55 2002
 +++ configure
-@@ -1307,8 +1307,8 @@
- fi
- 	if test x$gnome_cv_orbit_found = xyes; then
- 		
--		ORBIT_CFLAGS=`orbit-config --cflags client server`
--		ORBIT_LIBS=`orbit-config --use-service=name --libs client server`
-+		ORBIT_CFLAGS=`$ORBIT_CONFIG --cflags client server`
-+		ORBIT_LIBS=`$ORBIT_CONFIG --use-service=name --libs client server`
- 		
- 		
- 	else
-@@ -1325,8 +1325,8 @@
-   
- 		gnome_cv_gnorba_found=no
- 		if test x$gnome_cv_orbit_found = xyes; then
--			GNORBA_CFLAGS="`gnome-config --cflags gnorba gnomeui`"
--			GNORBA_LIBS="`gnome-config --libs gnorba gnomeui`"
-+			GNORBA_CFLAGS="`$GNOME_CONFIG --cflags gnorba gnomeui`"
-+			GNORBA_LIBS="`$GNOME_CONFIG --libs gnorba gnomeui`"
- 			if test -n "$GNORBA_LIBS"; then
- 				gnome_cv_gnorba_found=yes
- 			fi
-@@ -1346,8 +1346,8 @@
- fi
- 	if test x$gnome_cv_orbit_found = xyes; then
- 		
--		GNORBA_CFLAGS="`gnome-config --cflags gnorba gnomeui`"
--		GNORBA_LIBS="`gnome-config --libs gnorba gnomeui`"
-+		GNORBA_CFLAGS="`$GNOME_CONFIG --cflags gnorba gnomeui`"
-+		GNORBA_LIBS="`$GNOME_CONFIG --libs gnorba gnomeui`"
- 		
- 		
- 	else
 @@ -7570,7 +7570,7 @@
  
                                
@@ -56,29 +23,3 @@ $NetBSD: patch-ab,v 1.4 2002/04/09 21:39:24 jlam Exp $
  for ac_hdr in dlfcn.h dl.h
  do
  ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
-@@ -8815,7 +8820,7 @@
- fi
- 
- 
--CFLAGS="`gnome-config --cflags gdk_pixbuf`${CFLAGS}"
-+CFLAGS="`$GNOME_CONFIG --cflags gdk_pixbuf`${CFLAGS}"
- 
- have_libesd=no
- # Check whether --with-esd-prefix or --without-esd-prefix was given.
-@@ -9329,10 +9334,13 @@
- 
- echo $ac_n "checking for gnome-vfs library >= 0.9""... $ac_c" 1>&6
- echo "configure:9332: checking for gnome-vfs library >= 0.9" >&5
--VFS_CFLAGS=`gnome-vfs-config --cflags`
--VFS_LIBS=`gnome-vfs-config --libs`
-+if test x${GNOME_VFS_CONFIG+set} != xset ; then
-+  GNOME_VFS_CONFIG=gnome-vfs-config
-+fi
-+VFS_CFLAGS=`$GNOME_VFS_CONFIG --cflags`
-+VFS_LIBS=`$GNOME_VFS_CONFIG --libs`
- if test "x$VFS_CFLAGS" != x ; then
--    vers=`gnome-vfs-config --version | awk 'BEGIN { FS = "."; } { printf "%d", ($1 * 1000 + $2) * 1000 + $3;}'`
-+    vers=`$GNOME_VFS_CONFIG --version | awk 'BEGIN { FS = "."; } { printf "%d", ($1 * 1000 + $2) * 1000 + $3;}'`
-     if test "$vers" -ge 0009000; then
-         echo "$ac_t""found" 1>&6
-     else
