@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/12/24 09:53:50 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/24 14:50:06 grant Exp $
 #
 
 DISTNAME=	rp-l2tp-0.3
@@ -11,7 +11,7 @@ COMMENT=	User-space implementation of layer 2 tunnelling protocol
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=		make
 
 post-patch:
 	for f in l2tp.conf.5 l2tpd.8; do				\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/03 18:49:48 reed Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/24 14:50:05 grant Exp $
 
 DISTNAME=		gkrellmwireless-0.2.2
 PKGNAME=		gkrellm-wireless-0.2.2
@@ -13,7 +13,7 @@ COMMENT=		Wavelan signal strength monitor for gkrellm
 ONLY_FOR_PLATFORM=	*BSD-*-* Linux-*-*
 
 USE_BUILDLINK2=		# defined
-USE_GMAKE=              # defined
+USE_GNU_TOOLS+=		make
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gkrellm/plugins

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/07/17 22:51:13 grant Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/24 14:50:05 grant Exp $
 
 DISTNAME=	gtk_wicontrol-0.17
 PKGREVISION=	2
@@ -15,7 +15,7 @@ USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/01/06 07:05:24 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2004/01/24 14:50:06 grant Exp $
 #
 
 DISTNAME=	mtr-0.54
@@ -14,7 +14,7 @@ COMMENT=	Traceroute and ping in a single graphical network diagnostic tool
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_BUILDLINK3=		YES
 CONFIGURE_ARGS+=	--without-gtk
 INSTALLATION_DIRS=	man/man8 sbin

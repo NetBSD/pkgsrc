@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/03 18:49:52 reed Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/24 14:58:00 grant Exp $
 
 DISTNAME=	scribus-1.1.1
 PKGREVISION=	1
@@ -15,7 +15,7 @@ COMMENT=	Publishing layout with graphical interface
 
 USE_BUILDLINK2=		# defined
 USE_X11=		# defined
-USE_GMAKE=		# defined
+USE_GNU_TOOLS+=		make
 PTHREAD_OPTS+=		require
 
 USE_LIBTOOL=		YES

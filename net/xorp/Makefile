@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/12/12 21:35:24 kristerw Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/24 14:50:06 grant Exp $
 #
 
 DISTNAME=	xorp-0.3
@@ -14,7 +14,7 @@ CONFLICTS+=	ncurses-[0-9]*
 
 HAS_CONFIGURE=	YES
 GNU_CONFIGURE=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
 CONFIG_GUESS_OVERRIDE=	${WRKSRC}/cli/libtecla/config.guess
 CONFIG_SUB_OVERRIDE=	${WRKSRC}/cli/libtecla/config.sub

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2004/01/22 12:53:48 jlam Exp $
+# $NetBSD: Makefile,v 1.99 2004/01/24 14:50:05 grant Exp $
 #
 
 DISTNAME=		ORBit-0.${ORBIT_MAJOR}.${ORBIT_MINOR}
@@ -18,7 +18,7 @@ USE_BUILDLINK3=		YES
 DEPENDS+=		gindent-[0-9]*:../../devel/gindent
 .endif
 
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE+=	${WRKSRC}/libtool

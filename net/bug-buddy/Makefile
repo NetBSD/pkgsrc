@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/01/23 21:50:47 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/24 14:50:05 grant Exp $
 #
 
 DISTNAME=		bug-buddy-2.4.1.1
@@ -17,7 +17,7 @@ DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_X11=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

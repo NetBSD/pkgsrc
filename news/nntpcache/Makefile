@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/07/21 17:11:55 martti Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/24 14:51:52 grant Exp $
 # FreeBSD Id: Makefile,v 1.11 1998/02/01 03:04:11 itojun Exp
 #
 
@@ -31,7 +31,7 @@ BUILD_DEFS+=		NNTP_USE_LDAP NNTP_USE_PGP
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=/var/spool
 CONFIGURE_ENV+=		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 
 INSTALL_TARGET=		SUBDIRS="cf src filters http doc pgp contrib/newshound contrib/perlnewshound innreport scripts unixauth" \
 			install

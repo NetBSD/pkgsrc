@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2003/11/05 21:04:07 dmcmahill Exp $
+# $NetBSD: Makefile.common,v 1.10 2004/01/24 14:58:00 grant Exp $
 
 DISTNAME=		pdflib-${PDFLIB_DIST_VERS}
 PKGREVISION=		1
@@ -20,7 +20,7 @@ DISTINFO_FILE=		${.CURDIR}/../pdflib/distinfo
 PATCHDIR=		${.CURDIR}/../pdflib/patches
 
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-pnglib
 CONFIGURE_ARGS+=	--with-tifflib

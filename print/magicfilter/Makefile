@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2003/07/21 17:16:25 martti Exp $
+# $NetBSD: Makefile,v 1.38 2004/01/24 14:58:00 grant Exp $
 
 DISTNAME=	magicfilter-1.2
 PKGREVISION=	2
@@ -15,7 +15,7 @@ DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX-bin
 DEPENDS+=	papersize-[0-9]*:../../print/papersize
 
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	GHOSTSCRIPT=${LOCALBASE}/bin/gs
 
