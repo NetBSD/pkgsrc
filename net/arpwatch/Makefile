@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/08/24 11:37:07 abs Exp $
+# $NetBSD: Makefile,v 1.14 2001/09/10 16:37:36 wiz Exp $
 #
 
 DISTNAME=	arpwatch-2.1a11
@@ -22,10 +22,5 @@ post-install:
 	${TOUCH} /var/db/arpwatch/arp.dat
 	${INSTALL_DATA} ${WRKSRC}/ethercodes.dat ${PREFIX}/etc
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
-DEPENDS+=	libpcap>=0.4:../../net/libpcap
-.endif
-
+.include "../../net/libpcap/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
