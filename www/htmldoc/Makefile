@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2001/06/11 06:34:55 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2002/03/13 17:37:52 fredb Exp $
 #
 
 DISTNAME=		${PKGNAME}-source
 PKGNAME=		htmldoc-1.7
+PKGREVISION=		1
 WRKSRC=			${WRKDIR}/${PKGNAME}
 CATEGORIES=		www
 MASTER_SITES=		ftp://ftp.easysw.com/pub/htmldoc/1.7/
@@ -12,7 +13,7 @@ HOMEPAGE=		http://www.easysw.com/~mike/htmldoc/
 COMMENT=		Converts HTML to indexed HTML, PDF and/or PostScript
 
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
-DEPENDS+=		png>=1.0.11:../../graphics/png
+DEPENDS+=		png>=1.2.1:../../graphics/png
 
 NOT_FOR_PLATFORM=	NetBSD-1.[3-4]*-alpha	#ps-pdf.cpp:3229: Internal compiler error. on 1.4 - 1.7 unknown
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2002/02/13 12:43:56 drochner Exp $
+# $NetBSD: Makefile,v 1.14 2002/03/13 17:37:04 fredb Exp $
 
 DISTNAME=	dx-4.1.3
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.research.ibm.com/dx/srcDownload/srcArchive/
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.59 2001/09/27 23:19:01 jlam Exp $
+# $NetBSD: Makefile,v 1.60 2002/03/13 17:37:58 fredb Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
 DISTNAME=	kdelibs-1.1.2
+PKGREVISION=	1
 CATEGORIES=	x11 kde
 MASTER_SITES=	ftp://ftp.us.kde.org/pub/kde/Attic/old/1.1.2/distribution/tar/generic/source/bz2/ \
 		ftp://ftp.de.kde.org/pub/kde/Attic/old/1.1.2/distribution/tar/generic/source/bz2/
@@ -13,7 +14,7 @@ HOMEPAGE=       http://www.kde.org/
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png>=1.0.11:../../graphics/png
+DEPENDS+=	png>=1.2.1:../../graphics/png
 DEPENDS+=	qt1-1.44:../../x11/qt1
 DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
 

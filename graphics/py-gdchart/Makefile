@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2002/01/17 12:36:21 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2002/03/13 17:37:16 fredb Exp $
 #
 
 DISTNAME=	gdchart-py-0.6
 PKGNAME=	${PYPKGPREFIX}-gdchart-0.6
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	http://athani.pair.com/msteed/software/gdchart/
 

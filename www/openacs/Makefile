@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2002/03/04 19:41:08 fredb Exp $
+# $NetBSD: Makefile,v 1.6 2002/03/13 17:37:52 fredb Exp $
 #
 
 DISTNAME=		openacs-3.2.5
+PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		# none
 EXTRACT_SUFX=		.tgz
@@ -13,7 +14,7 @@ COMMENT=		TCL-based web programming environment
 # Would also work with AOLServer, but there's no package for that.
 DEPENDS+=		ap-aolserver-1.1:../../www/ap-aolserver
 DEPENDS+=		postgresql-lib>=7.0:../../databases/postgresql-lib
-DEPENDS+=		ImageMagick>=5.2.0:../../graphics/ImageMagick
+DEPENDS+=		ImageMagick>=5.3.9nb1:../../graphics/ImageMagick
 DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 BUILD_DEPENDS+=		postgresql-client>=7.0:../../databases/postgresql-client
 

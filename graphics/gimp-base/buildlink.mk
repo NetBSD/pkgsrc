@@ -1,6 +1,6 @@
-# $NetBSD: buildlink.mk,v 1.1.1.1 2002/02/15 20:52:36 drochner Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/03/13 17:37:08 fredb Exp $
 #
-# This Makefile fragment is included by packages that use gtk.
+# This Makefile fragment is included by packages that use gimp.
 #
 # To use this Makefile fragment, simply:
 #
@@ -17,7 +17,7 @@ GIMPBASE_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.gimpbase?=	gimp-base>=1.2.3
+BUILDLINK_DEPENDS.gimpbase?=	gimp-base>=1.2.3nb1
 DEPENDS+=		${BUILDLINK_DEPENDS.gimpbase}:../../graphics/gimp-base
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.gimpbase=gimp-base

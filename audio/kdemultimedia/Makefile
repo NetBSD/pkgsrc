@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2001/02/16 13:30:43 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2002/03/13 17:36:37 fredb Exp $
 
 DISTNAME=	kdemultimedia-1.1.2
+PKGREVISION=	1
 CATEGORIES=	audio kde
 MASTER_SITES=	ftp://ftp.us.kde.org/pub/kde/Attic/old/1.1.2/distribution/tar/generic/source/bz2/ \
 		ftp://ftp.de.kde.org/pub/kde/Attic/old/1.1.2/distribution/tar/generic/source/bz2/
@@ -10,7 +11,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.kde.org/
 COMMENT=	KDE audio tools
 
-DEPENDS+=	kdebase-1.1.2:../../x11/kdebase
+DEPENDS+=	kdebase-1.1.2nb1:../../x11/kdebase
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes

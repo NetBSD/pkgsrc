@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2001/11/29 01:12:51 hubertf Exp $
+# $NetBSD: Makefile,v 1.42 2002/03/13 17:37:50 fredb Exp $
 
 DISTNAME=		arena-0.3.62
-PKGREVISION=		1
+PKGREVISION=		2
 WRKSRC=			${WRKDIR}/Arena-0.3.62
 CATEGORIES=		www
 MASTER_SITES=		ftp://ftp.yggdrasil.com/pub/dist/web/arena/
@@ -13,7 +13,7 @@ COMMENT=	Experimental HTML 3 browser, supports math and style sheets
 BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		libwww>=5.3.2nb1:../../www/libwww
-DEPENDS+=		png>=1.0.11:../../graphics/png
+DEPENDS+=		png>=1.2.1:../../graphics/png
 
 BUILD_USES_MSGFMT=	YES
 GNU_CONFIGURE=		YES

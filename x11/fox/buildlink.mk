@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/08/05 17:04:21 sakamoto Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/03/13 17:37:55 fredb Exp $
 #
 # This Makefile fragment is included by packages that use fox.
 #
@@ -17,7 +17,7 @@ FOX_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.fox?=	fox-*
+BUILDLINK_DEPENDS.fox?=	fox>=0.99.174nb1
 DEPENDS+=	${BUILDLINK_DEPENDS.fox}:../../x11/fox
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.fox=fox

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2002/01/29 19:41:30 drochner Exp $
+# $NetBSD: Makefile,v 1.13 2002/03/13 17:36:56 fredb Exp $
 #
 
 DISTNAME=       emma-0.8-1
 PKGNAME=	emma-0.8.1
+PKGREVISION=	1
 WRKSRC=         ${WRKDIR}/emma-0.7
 CATEGORIES=	finance
 MASTER_SITES=   ${HOMEPAGE}emma/packages/
@@ -12,7 +13,7 @@ HOMEPAGE=	http://rainbow.mimuw.edu.pl/~la181249/
 COMMENT=	Money management program
 
 BUILD_DEPENDS+=	automake>=1.4:../../devel/automake
-DEPENDS+=	gnome-libs-[0-9]*:../../x11/gnome-libs
+DEPENDS+=	gnome-libs>=1.4.1.2nb1:../../x11/gnome-libs
 
 USE_X11BASE=	YES
 GNU_CONFIGURE=	YES

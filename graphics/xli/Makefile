@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2001/09/09 20:36:31 agc Exp $
+# $NetBSD: Makefile,v 1.13 2002/03/13 17:37:18 fredb Exp $
 
-DISTNAME=	xli-1.16nb1
+DISTNAME=	xli-1.16
+PKGREVISION=	2
 CATEGORIES=	graphics x11
 MASTER_SITES=	ftp://ftp.libpng.org/pub/png/src/ \
 		${MASTER_SITE_XCONTRIB:=applications/}

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2001/10/05 21:34:33 magick Exp $
+# $NetBSD: Makefile,v 1.11 2002/03/13 17:37:30 fredb Exp $
 
 DISTNAME=	gtm-0.4.10
+PKGREVISION=	1
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtm/}
 
@@ -8,7 +9,7 @@ MAINTAINER=	magick@zhadum.de
 HOMEPAGE=	http://gtm.sourceforge.net/
 COMMENT=	Gnome Transfer Manager
 
-DEPENDS+=	gnome-core-[0-9]*:../../x11/gnome-core
+DEPENDS+=	gnome-core>=1.4.0.4nb1:../../x11/gnome-core
 DEPENDS+=	wget-[0-9]*:../../net/wget
 
 GNU_CONFIGURE=	YES
