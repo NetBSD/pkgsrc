@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.13 2003/09/02 00:30:54 pooka Exp $
+# $NetBSD: Makefile.common,v 1.14 2003/10/14 13:42:18 pooka Exp $
 #
 
 NETHACK_BASEVER=	3.4.2
-NETHACK_VERSION=	${NETHACK_BASEVER}
+NETHACK_VERSION=	${NETHACK_BASEVER}nb1
 NETHACK_DISTVER=	342
 NETHACK_DIR=		nethackdir340
 
