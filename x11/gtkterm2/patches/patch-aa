@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/07/03 09:08:07 xtraeme Exp $
+
+--- Makefile.in.orig	2004-06-23 00:20:47.000000000 +0900
++++ Makefile.in
+@@ -113,7 +113,7 @@ VERSION = @VERSION@
+ 
+ SUBDIRS = intl po src pixmaps
+ 
+-gtkterm2docdir = ${prefix}/doc/GTKTerm
++gtkterm2docdir = ${prefix}/share/doc/GTKTerm
+ gtkterm2doc_DATA =  	README 	COPYING 	AUTHORS 	ChangeLog 	INSTALL 	NEWS 	TODO 	ABOUT-NLS
+ 
+ 
