@@ -1,20 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:54 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/06/30 03:47:53 jlam Exp $
 bin/ipa
 bin/ipastat
-etc/ipa.conf.default
-etc/rc.d/ipa.sh.sample
+etc/rc.d/ipa
 man/man5/ipa.5
 man/man5/ipa.conf.5
 man/man8/ipa.8
 man/man8/ipastat.8
-man/ru_SU.KOI8-R/man5/ipa.5
-man/ru_SU.KOI8-R/man5/ipa.conf.5
-man/ru_SU.KOI8-R/man8/ipa.8
-man/ru_SU.KOI8-R/man8/ipastat.8
 share/examples/ipa/README
 share/examples/ipa/example-1
 share/examples/ipa/example-2
+share/examples/ipa/ipa.conf.default
 @dirrm share/examples/ipa
-@unexec if [ -f %D/etc/rc.d/ipa.sh ]; then cmp -s %D/etc/rc.d/ipa.sh.sample %D/etc/rc.d/ipa.sh && ${RM} -f %D/etc/rc.d/ipa.sh || echo "If you are permanently removing this pkg, you should do a ``rm ${PKG_PREFIX}/etc/rc.d/ipa.sh`` to remove startup files left." | fmt ; fi
-@unexec ${RMDIR} %D/man/ru_SU.KOI8-R/man8 %D/man/ru_SU.KOI8-R/man5 %D/man/ru_SU.KOI8-R 2>/dev/null || true
-@unexec if [ -L %D/man/ru_RU.KOI8-R ]; then ${RM} %D/man/ru_RU.KOI8-R 2>/dev/null || true; else ${RMDIR} %D/man/ru_RU.KOI8-R/man8 %D/man/ru_RU.KOI8-R/man5 %D/man/ru_RU.KOI8-R && ${RM} %D/man/ru_RU.KOI8-R 2>/dev/null || true ; fi
