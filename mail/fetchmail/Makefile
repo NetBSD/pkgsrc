@@ -3,7 +3,7 @@
 # Date created:		26 Oct 1996
 # Whom:			Ville Eerola <ve@sci.fi>
 #
-# $NetBSD: Makefile,v 1.3 1998/03/07 22:25:18 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/03/16 08:24:49 mycroft Exp $
 # $FreeBSD Id: Makefile,v 1.55 1998/01/29 17:13:07 ache Exp
 #
 
@@ -18,7 +18,7 @@ CONFIGURE_ENV=  LDFLAGS="${CFLAGS}"
 MAN1=		fetchmail.1
 
 .if exists(/usr/lib/libkrb.a) && (defined(MAKE_EBONES) || defined(MAKE_KERBEROS4))
-CONFIGURE_ARGS += --with-kerberos=/usr/include/kerberosIV
+CONFIGURE_ARGS += --with-kerberos=/usr
 .endif
 
 FDOC=   ${PREFIX}/share/doc/fetchmail
