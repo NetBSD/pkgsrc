@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: setpapersize,v 1.9 2003/09/08 17:38:34 jmmv Exp $
+# $NetBSD: setpapersize,v 1.10 2003/09/15 10:51:40 agc Exp $
 #
 # Small shell script to set the default papersize for packages
 #
@@ -83,6 +83,14 @@ while [ $# -gt 0 ]; do
 			@MV@ $gvfile $gvfile.old
 			@SED@ -e 's|^GV.fallbackPageMedia:.*|GV.fallbackPageMedia:	'$papersize'|' $gvfile.old > $gvfile && @RM@ $gvfile.old
 			@ECHO@ "Set $1 package default paper size to $papersize in $gvfile"
+		fi
+		;;
+	lout)
+		loutfile=@LOCALBASE@/share/lout/include/dsf
+		if [ -s "$loutfile" ]; then
+			@MV@ $loutfile $loutfile.old
+			env PAPERSIZE=$papersize @AWK@ '$1 == "named" && $2 == "@PageType" { printf("    %s %s\t\t{ %s\t%s %s # page type (width, height)\n", $1, $2, ENVIRON["PAPERSIZE"], $5, $6); next } { print $0 }' $loutfile.old > $loutfile
+			@ECHO@ "Set $1 package default paper size to $papersize in $loutfile"
 		fi
 		;;
 	magicfilter)
