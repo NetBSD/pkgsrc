@@ -1,10 +1,16 @@
-# $NetBSD: Makefile,v 1.6 1999/06/04 15:39:10 drochner Exp $
+# $NetBSD: Makefile,v 1.7 1999/07/04 23:42:52 kim Exp $
 #
 
 DISTNAME=	xglobe-0.2
 CATEGORIES=	x11
-MASTER_SITES=	http://www.uni-karlsruhe.de/~uddn/xglobe/ \
-		http://livingearth.com/LE/images/ \
+#
+# The original MASTER_SITE for the program responds "200 OK"
+# and produces a page explaining how the user "uddn" no longer
+# has web pages on their system.
+#
+#MASTER_SITES=	http://www.uni-karlsruhe.de/~uddn/xglobe/ \
+#
+MASTER_SITES=	http://livingearth.com/LE/images/ \
 		http://www.ngdc.noaa.gov/mgg/image/
 DISTFILES+=	${MAPS} ${DISTNAME}${EXTRACT_SUFX}
 
