@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.3 2000/12/22 20:18:13 jlam Exp $
+$NetBSD: patch-ad,v 1.4 2000/12/22 20:19:10 jlam Exp $
 
 --- module/aperture.c.orig	Fri Jul 21 03:37:57 2000
 +++ module/aperture.c	Fri Jul 21 03:42:51 2000
@@ -13,7 +13,7 @@ $NetBSD: patch-ad,v 1.3 2000/12/22 20:18:13 jlam Exp $
 + * 1.5 release, the change to the kernel mmap interface appears.
 + */
 +#if (__NetBSD_Version__ < 105000000) || \
-+    ((__NetBSD_Version__ > 105010000) && (__NetBSD_Version__ < 105020000))
++    ((__NetBSD_Version__ >= 105010000) && (__NetBSD_Version__ < 105020000))
  int
  xf86mmap(dev, offset, length)
  	dev_t dev;
