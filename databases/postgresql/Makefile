@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2001/01/29 11:34:23 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2001/02/13 02:37:43 jlam Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 #
 
@@ -10,7 +10,7 @@ DEPENDS+=		readline-*:../../devel/readline
 MAKEFILE=		GNUmakefile
 
 # Needs ELF clue, mips has no TAS implementation
-NOT_FOR_PLATFORM=	*-*-alpha *-*-mips
+NOT_FOR_PLATFORM=	*-*-mips
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -47,6 +47,14 @@ ADDGROUP=		${LOCALBASE}/sbin/groupadd
 .elif ${OPSYS} == "SunOS"
 ADDUSER=		useradd
 ADDGROUP=		groupadd
+.endif
+
+# The following alpha-specific patch fixes problems in the 7.0.x release
+# that will be fixed in a more complete way in the forthcoming 7.1 release.
+#
+.if ${MACHINE_ARCH} == "alpha"
+post-patch:
+	cd ${WRKSRC} && ${PATCH} < ${FILESDIR}/postgresql-7.0.3-alpha.diff
 .endif
 
 post-build:
