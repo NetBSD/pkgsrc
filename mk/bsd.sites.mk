@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.11 2004/09/19 12:55:53 tron Exp $
+# $NetBSD: bsd.sites.mk,v 1.12 2004/09/19 13:00:28 wiz Exp $
 #
 # Default MASTER_SITES
 
@@ -131,8 +131,9 @@ MASTER_SITE_SOURCEFORGE+=	\
 	http://umn.dl.sourceforge.net/sourceforge/ \
 	http://unc.dl.sourceforge.net/sourceforge/ \
 	http://voxel.dl.sourceforge.net/sourceforge/ \
-	ftp://ftp3.sourceforge.net/pub/sourceforge/ \
-	ftp://ftp.tuwien.ac.at/linux/sourceforge/
+	ftp://ftp3.sourceforge.net/pub/sourceforge/
+#	ftp://ftp.tuwien.ac.at/linux/sourceforge/
+#	http://sf.gds.tuwien.ac.at/
 
 MASTER_SITE_SUSE+=	\
 	http://altruistic.lbl.gov/mirrors/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
