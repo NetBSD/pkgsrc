@@ -1,8 +1,5 @@
 bin/MakeTeXMF
-bin/makeinfo
-bin/texindex
 bin/pslatex
-bin/install-info
 bin/makeindex.bin
 bin/kpsetool
 bin/makeindex
@@ -50,7 +47,6 @@ bin/tangle
 bin/weave
 bin/pooltype
 bin/xdvi
-bin/texi2dvi
 bin/texhash
 bin/texconfig
 bin/ps2frag
@@ -91,27 +87,14 @@ info/kpathsea.info-3
 info/kpathsea.info
 info/latex-1
 info/makeinfo.info
-info/texinfo-10
-info/texinfo-2
-info/texinfo-3
-info/texinfo-4
-info/texinfo-5
-info/texinfo-6
-info/texinfo-7
-info/texinfo-8
-info/texinfo-9
-info/texinfo
 info/latex-3
 info/latex
-info/texinfo-1
-info/texinfo-11
 info/fontname.info-5
 info/fontname.info
 info/latex-2
 info/dvips.info-1
 info/fontname.info-4
 info/kpathsea.info-1
-info/texinfo-12
 @exec [ -f %D/info/dir ] || sed -ne '1,/Menu:/p' /usr/share/info/dir > %D/info/dir
 @exec install-info %D/info/latex %D/info/dir
 @exec install-info %D/info/kpathsea.info %D/info/dir
