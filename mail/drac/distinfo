@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2002/09/25 19:40:38 wiz Exp $
+$NetBSD: distinfo,v 1.4 2003/03/09 12:25:53 jmmv Exp $
 
-SHA1 (drac-1.11/drac.tar.Z) = dcf77aafd0f46685d5309e81d552d64c7f7fea06
-Size (drac-1.11/drac.tar.Z) = 19736 bytes
-SHA1 (patch-aa) = 042e88ebea7e589df1c515266d2e6dcb58c5e52f
+SHA1 (drac-1.12/drac.tar.Z) = 2434e7f238ee1212c742705d3653dedec64266f5
+Size (drac-1.12/drac.tar.Z) = 20705 bytes
+SHA1 (patch-aa) = fb56b4681f131a379f42f449bccbd826a0e97e6f
