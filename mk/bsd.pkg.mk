@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1056 2002/09/25 06:31:00 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1057 2002/09/26 09:57:50 abs Exp $
 #
 # This file is in the public domain.
 #
@@ -2059,7 +2059,7 @@ INSTALL_DIRS?=	${BUILD_DIRS}
 .if !target(do-install)
 do-install:
 .  for DIR in ${INSTALL_DIRS}
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${DIR} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
 .  endfor
 .endif
 
