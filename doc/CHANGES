@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9604 2005/03/24 13:58:28 wiz Exp $
+$NetBSD: CHANGES,v 1.9605 2005/03/24 14:10:42 taya Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1711,3 +1711,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated xscreensaver to 4.21 [wiz 2005-03-24]
 	Updated xscreensaver-demo to 4.21 [wiz 2005-03-24]
 	Removed xscreensaver-gnome [wiz 2005-03-24]
+	Updated mozilla to 1.7.6 [taya 2005-03-24]
+	Updated mozilla-gtk2 to 1.7.6 [taya 2005-03-24]
+
