@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/08/07 14:32:37 agc Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/10 01:01:11 jlam Exp $
 #
 
 DISTNAME=	Flan
@@ -17,8 +17,8 @@ USE_GMAKE=	yes
 WRKSRC=		${WRKDIR}/src
 
 post-build:
-	cd ${WRKSRC} ; ${JAVA_HOME}/bin/jar cf flan.jar flan/ graphic/
-	${SED} -e 's,@JAVA_HOME@,${JAVA_HOME},g'			\
+	cd ${WRKSRC} ; ${PKG_JAVA_HOME}/bin/jar cf flan.jar flan/ graphic/
+	${SED} -e 's,@JAVA_HOME@,${PKG_JAVA_HOME},g'			\
 		-e 's,@PREFIX@,${PREFIX},g'				\
 		< ${FILESDIR}/flan > ${WRKDIR}/flan
 

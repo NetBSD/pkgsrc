@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/09/26 22:56:03 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/10 01:01:10 jlam Exp $
 #
 
 DISTNAME=	sablecc-2.16.2
@@ -13,7 +13,8 @@ USE_JAVA=	run
 PKG_JVM=	sun-jdk
 
 do-build:
-	${SED} -e 's,@PREFIX@,${PREFIX},g' -e 's,@JAVA_HOME@,${JAVA_HOME},g' \
+	${SED}	-e 's,@PREFIX@,${PREFIX},g'				\
+		-e 's,@JAVA_HOME@,${PKG_JAVA_HOME},g'			\
 		< ${FILESDIR}/sablecc > ${WRKDIR}/sablecc
 
 do-install:
