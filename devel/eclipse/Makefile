@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/04/23 03:02:49 jmc Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/03 17:02:46 jschauma Exp $
 #
 
 DISTNAME=	${PKGNAME}
@@ -10,7 +10,7 @@ MAINTAINER=	jschauma@netbsd.org
 HOMEPAGE=	http://www.eclipse.org
 COMMENT=	Java IDE
 
-DEPENDS+=	jakarta-ant>=1.4.1:../../devel/jakarta-ant
+DEPENDS+=	apache-ant>=1.4.1:../../devel/apache-ant
 
 PKG_JVM=	sun-jdk13
 
