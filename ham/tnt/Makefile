@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/07/06 08:02:02 jlam Exp $
+# $NetBSD: Makefile,v 1.3 1999/09/06 21:42:44 hubertf Exp $
 #
 
 DISTNAME=	tnt1.9-pre3
@@ -14,6 +14,7 @@ DEPENDS+=	dialog-0.6z:../../misc/dialog
 DEPENDS+=	ncurses-4.2:../../devel/ncurses
 
 USE_GMAKE=	yes
+IS_INTERACTIVE=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include	# for ncurses' termcap.h
 LDFLAGS+=	-L${LOCALBASE}/lib	# for -lncurses
