@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/24 00:09:55 ben Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/07/05 15:07:33 minskim Exp $
 lib/xmms/Input/libmetainput.so
 share/doc/xmms-input/README
 share/examples/xmms-meta-input/dsp_input
@@ -10,3 +10,6 @@ share/examples/xmms-meta-input/spc
 share/examples/xmms-meta-input/vorbis
 @dirrm share/examples/xmms-meta-input
 @dirrm share/doc/xmms-input
+@exec ${MKDIR} %D/lib/xmms/Input/Meta
+@dirrm lib/xmms/Input/Meta
+@comment in xmms: @dirrm lib/xmms/Input
