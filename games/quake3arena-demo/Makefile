@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/14 00:01:25 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2000/12/24 01:59:52 wiz Exp $
 #
 
 DISTNAME=	linuxq3ademo-1_11-6_x86_gz
@@ -15,8 +15,6 @@ DEPENDS+=	suse_linux>=6.3:../../emulators/suse_linux
 DEPENDS+=	suse_glx-6.4:../../emulators/suse_glx
 
 CONFLICTS=	quake3arena-*
-
-MIRROR_DISTFILE=no
 
 NO_CONFIGURE=	yes
 NO_WRKSUBDIR=	yes
