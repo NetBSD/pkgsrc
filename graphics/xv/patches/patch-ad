@@ -60,3 +60,18 @@
  
  DEFINES= $(SCO) $(UNIX) $(NODIRENT) $(VPRINTF) $(TIMERS) \
  	$(HPUX7) $(JPEG) $(TIFF) $(PDS) $(DXWM) $(RAND) \
+@@ -182,10 +198,10 @@
+ 
+ PROGRAMS= xv bggen vdcomp xcmap xvpictoppm
+ 
+-all::
+-	@echo ""
+-	@echo "  Did you remember to 'make depend' first?"
+-	@echo ""
++#all::
++#	@echo ""
++#	@echo "  Did you remember to 'make depend' first?"
++#	@echo ""
+ 
+ 
+ #if defined(HaveJpeg) || defined(HaveTiff)
