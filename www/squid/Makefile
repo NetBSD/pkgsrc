@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/05/23 21:27:20 tron Exp $
+# $NetBSD: Makefile,v 1.2 1998/05/24 19:01:19 tron Exp $
 # $FreeBSD Id: Makefile,v 1.36 1998/03/20 13:58:54 peter Exp
 #
 
@@ -37,11 +37,11 @@ MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 #MAKE_ENV+=	UNDERSCORES_OPT="-DALLOW_HOSTNAME_UNDERSCORES"
 
 post-build:
-	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/squid.sh >${WRKSRC}/squid.sh
+	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/squid.sh >${WRKDIR}/squid.sh
 
 post-install:
 	cd ${WRKSRC}/src; make install-pinger
-	${INSTALL_SCRIPT} ${WRKSRC}/squid.sh ${PREFIX}/etc/rc.d/squid.sh
+	${INSTALL_SCRIPT} ${WRKDIR}/squid.sh ${PREFIX}/etc/rc.d/squid.sh
 	@${SH} ${PKGDIR}/INSTALL ${PKGNAME} POST-INSTALL
 
 .include <../../mk/bsd.pkg.mk>
