@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/01/24 12:40:38 tron Exp $
+# $NetBSD: Makefile,v 1.11 2002/09/23 10:20:41 jlam Exp $
 
 DISTNAME=	quake106
 PKGNAME=	quakedata-1.0
@@ -11,7 +11,7 @@ MAINTAINER=	itojun@kame.net
 HOMEPAGE=	http://www.idsoftware.com/
 COMMENT=	Game data files for Quake
 
-BUILD_DEPENDS+=	lha-*:../../archivers/lha
+BUILD_DEPENDS+=	lha-[0-9]*:../../archivers/lha
 
 LICENSE+=		shareware
 RESTRICTED=		"This software is shareware"
@@ -20,6 +20,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 EXTRACT_CMD=	unzip -q -o ${DOWNLOADED_DISTFILE} -d ${WRKDIR} resource.*
 WRKSRC=		${WRKDIR}
+USE_BUILDLINK2=	YES
 NO_BUILD=	YES
 
 post-extract:
