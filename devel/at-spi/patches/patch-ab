@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2004/02/13 17:02:09 jmmv Exp $
+
+--- configure.orig	2003-12-05 15:24:20.000000000 +0100
++++ configure
+@@ -20366,7 +20366,6 @@ LIBBONOBO_IDL_DIR="`$PKG_CONFIG --variab
+ 
+ 
+ 
+-CFLAGS="$CFLAGS $X_LIBS"
+ echo "$as_me:$LINENO: checking for XTestFakeKeyEvent in -lXtst" >&5
+ echo $ECHO_N "checking for XTestFakeKeyEvent in -lXtst... $ECHO_C" >&6
+ if test "${ac_cv_lib_Xtst_XTestFakeKeyEvent+set}" = set; then
