@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8076 2004/11/27 15:32:19 taca Exp $
+$NetBSD: CHANGES,v 1.8077 2004/11/27 15:52:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5531,3 +5531,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated covered to 0.3 [dmcmahill 2004-11-27]
 	Updated ruby-mode to 1.8.1 [taca 2004-11-27]
 	Updated ruby-racc to 1.4.4 [taca 2004-11-27]
+	Updated ruby-mysql to 2.5.1 [taca 2004-11-27]
+	Updated ruby-vapor to 0.81 [taca 2004-11-27]
