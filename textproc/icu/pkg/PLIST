@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/01/13 16:25:52 skrll Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/02/22 08:18:40 skrll Exp $
 etc/icu/convrtrs.txt
 include/unicode/bidi.h
 include/unicode/brkiter.h
@@ -83,7 +83,6 @@ include/unicode/utrans.h
 include/unicode/utypes.h
 lib/icu/1.7/Makefile.inc
 lib/icu/1.7/libicudata.so
-lib/icu/1.7/libicudt17l.so
 lib/icu/Makefile.inc
 lib/icu/current
 lib/libicui18n.so
