@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2001/04/06 21:55:40 rh Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/10/01 11:01:04 rh Exp $
 bin/oafd
 bin/oaf-client
 bin/oaf-run-query
 bin/oaf-config
+bin/oaf-empty-server
 bin/oaf-slay
 bin/oaf-sysconf
 etc/oaf/oaf-config.xml
@@ -24,7 +25,6 @@ lib/liboaf.so
 lib/liboaf.so.0
 lib/liboaf.so.0.0
 lib/liboaf.la
-lib/liboaf.a
 lib/oafConf.sh
 share/aclocal/oaf.m4
 share/idl/oaf.idl
@@ -40,6 +40,7 @@ share/locale/hu/LC_MESSAGES/oaf.mo
 share/locale/it/LC_MESSAGES/oaf.mo
 share/locale/ja/LC_MESSAGES/oaf.mo
 share/locale/ko/LC_MESSAGES/oaf.mo
+share/locale/nn/LC_MESSAGES/oaf.mo
 share/locale/no/LC_MESSAGES/oaf.mo
 share/locale/pl/LC_MESSAGES/oaf.mo
 share/locale/pt_BR/LC_MESSAGES/oaf.mo
@@ -48,8 +49,10 @@ share/locale/ru/LC_MESSAGES/oaf.mo
 share/locale/sk/LC_MESSAGES/oaf.mo
 share/locale/sl/LC_MESSAGES/oaf.mo
 share/locale/sv/LC_MESSAGES/oaf.mo
+share/locale/ta/LC_MESSAGES/oaf.mo
 share/locale/tr/LC_MESSAGES/oaf.mo
 share/locale/uk/LC_MESSAGES/oaf.mo
+share/locale/zh_TW.Big5/LC_MESSAGES/oaf.mo
 share/oaf/OAF_naming-service.oaf
 share/oaf/empty.oafinfo
 @exec mkdir -p %D/share/oaf/html/liboaf

@@ -1,14 +1,12 @@
-$NetBSD: patch-ad,v 1.4 2001/04/06 21:55:40 rh Exp $
+$NetBSD: patch-ad,v 1.5 2001/10/01 11:01:03 rh Exp $
 
---- oafd/main.c.orig	Wed Feb 21 10:50:43 2001
+--- oafd/main.c.orig	Tue Jul 24 00:50:25 2001
 +++ oafd/main.c
-@@ -37,7 +37,8 @@
+@@ -37,6 +37,7 @@
  #include <sys/types.h>
  #include <sys/stat.h>
  #include <fcntl.h>
--#include <popt.h>
 +#include <locale.h>
-+#include <popt-gnome.h>
+ #include <popt.h>
  #include <signal.h>
  #include <stdlib.h>
- #include <unistd.h>

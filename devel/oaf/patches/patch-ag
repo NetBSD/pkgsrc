@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.4 2001/04/06 21:55:40 rh Exp $
+$NetBSD: patch-ag,v 1.5 2001/10/01 11:01:04 rh Exp $
 
---- configure.orig	Fri Mar  2 04:16:10 2001
+--- configure.orig	Tue Aug 21 07:45:23 2001
 +++ configure
-@@ -3633,7 +3633,7 @@
+@@ -7215,7 +7215,7 @@
    cat conftest.$ac_ext >&5
    rm -rf conftest*
    CATOBJEXT=.mo
@@ -11,36 +11,7 @@ $NetBSD: patch-ag,v 1.4 2001/04/06 21:55:40 rh Exp $
  fi
  rm -f conftest*
  		INSTOBJEXT=.mo
-@@ -4744,8 +4744,8 @@
- 
- 
- 
--echo $ac_n "checking for poptGetContext in -lpopt""... $ac_c" 1>&6
--echo "configure:4749: checking for poptGetContext in -lpopt" >&5
-+echo $ac_n "checking for poptGetContext in -lgnomesupport""... $ac_c" 1>&6
-+echo "configure:4749: checking for poptGetContext in -lgnomesupport" >&5
- ac_lib_var=`echo popt'_'poptGetContext | sed 'y%./+-%__p_%'`
- if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
-   echo $ac_n "(cached) $ac_c" 1>&6
-@@ -4764,7 +4764,7 @@
- poptGetContext()
- ; return 0; }
- EOF
--if { (eval echo configure:4768: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
-+if true; then
-   rm -rf conftest*
-   eval "ac_cv_lib_$ac_lib_var=yes"
- else
-@@ -4785,7 +4785,7 @@
- #define $ac_tr_lib 1
- EOF
- 
--  LIBS="-lpopt $LIBS"
-+LIBS="$LIBS -lgnomesupport"
- 
- else
-   echo "$ac_t""no" 1>&6
-@@ -5238,7 +5238,6 @@
+@@ -8825,7 +8825,6 @@
  	-Wall \
  	-Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes \
  	-Wnested-externs -Wpointer-arith \
