@@ -1,8 +1,15 @@
-$NetBSD: patch-aa,v 1.5 2003/10/03 18:20:53 xtraeme Exp $
+$NetBSD: patch-aa,v 1.6 2003/11/04 19:03:53 dmcmahill Exp $
 
---- Makefile.orig	1994-01-26 18:32:33.000000000 +0100
+--- Makefile.orig	1994-01-26 12:32:33.000000000 -0500
 +++ Makefile
-@@ -26,7 +26,7 @@ MAKE = make
+@@ -20,13 +20,13 @@ RM = rm
+ # RM = rm -f
+ 
+ # How to run Make 
+-MAKE = make
++#MAKE = make
+ 
+ # How to copy files
  CP = cp
  
  # How to compile C programs
@@ -40,7 +47,7 @@ $NetBSD: patch-aa,v 1.5 2003/10/03 18:20:53 xtraeme Exp $
  #
  #INSTALL = cp
 -INSTALL = install -c -s
-+INSTALL = install -c
++#INSTALL = install -c -s
  
  # Root of installation tree
 -INSTROOT = /usr/local
