@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1566 2005/01/23 21:57:38 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1567 2005/01/23 22:23:40 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -3437,6 +3437,7 @@ do-su-install:
 		${MAKE} clean && ${MAKE} build ;;			\
 	esac
 	@${ECHO_MSG} "${_PKGSRC_IN}> Installing for ${PKGNAME}"
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${PKG_DB_TMPDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	realtarget="real-su-install";					\
 	action="install";						\
@@ -4806,7 +4807,6 @@ PKGVIEWS+=	${DEFAULT_VIEW.${PKGBASE}}
 .PHONY: pre-install-fake-pkg
 .if !target(pre-install-fake-pkg)
 pre-install-fake-pkg:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${PKG_DB_TMPDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${PRESERVE_FILE}
 .  if defined(PKG_PRESERVE)
 	${_PKG_SILENT}${_PKG_DEBUG}${DATE} > ${PRESERVE_FILE}
@@ -4866,7 +4866,6 @@ post-install-fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		${RM} -f ${_PKG_DBDIR};					\
 		${MKDIR} ${_PKG_DBDIR};					\
 	fi
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${PKG_DB_TMPDIR}
 .  if defined(FORCE_PKG_REGISTER)
 	${_PKG_SILENT}${_PKG_DEBUG}${PKG_ADMIN} delete ${PKGNAME}
 .  endif
