@@ -1,0 +1,29 @@
+# $NetBSD: Makefile.common,v 1.1 2003/08/02 19:52:12 wiz Exp $
+
+DISTNAME=	dn9b0401
+WRKSRC=		${WRKDIR}/darcnes
+CATEGORIES=	emulators
+MASTER_SITES=	http://www.dridus.com/~nyef/darcnes/download/
+EXTRACT_SUFX=	.tgz
+
+HOMEPAGE=	http://www.dridus.com/~nyef/darcnes/
+
+LICENSE=	no-commercial-use
+
+USE_GMAKE=	yes
+USE_BUILDLINK2=	yes
+PATCHDIR=	${.CURDIR}/../../emulators/darcnes/patches
+DISTINFO_FILE=	${.CURDIR}/../../emulators/darcnes/distinfo
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ( ${OBJECT_FMT} == "a.out" )
+MAKE_FLAGS+=	ASM_FLAGS=-DASM_UNDERBARS
+MAKE_FLAGS+=	NO_MULTIPLE_COMMON_WARNING=-DNO_MULTIPLE_COMMON_WARNING
+.endif
+
+.if ( ${MACHINE_ARCH} == "i386" )
+MAKE_FLAGS+=	MACH_TYPES=-DMACH_TYPES=\\\"types-i386.h\\\"
+.else
+MAKE_FLAGS+=	C_ONLY=-DC_ONLY
+.endif
