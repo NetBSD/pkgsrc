@@ -1,2 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/08/13 10:11:16 zuntum Exp $
-@unexec cd /var/qmail/bin && rm -f qmail-conf qmail-pop3d-conf qmail-qmqpd-conf qmail-qmtpd-conf qmail-smtpd-conf
+@comment $NetBSD: PLIST,v 1.2 2001/08/13 14:18:29 zuntum Exp $
+qmail/bin/qmail-conf
+qmail/bin/qmail-pop3d-conf
+qmail/bin/qmail-qmqpd-conf
+qmail/bin/qmail-qmtpd-conf
+qmail/bin/qmail-smtpd-conf
