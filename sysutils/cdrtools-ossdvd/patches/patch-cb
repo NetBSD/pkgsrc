@@ -1,8 +1,8 @@
-$NetBSD: patch-cb,v 1.1.1.1 2003/12/17 16:09:07 wiz Exp $
+$NetBSD: patch-cb,v 1.2 2004/08/04 21:19:26 wiz Exp $
 
---- cdrecord/cdrecord.1.orig	Sun Jul 20 23:06:32 2003
+--- cdrecord/cdrecord.1.orig	2004-02-29 18:13:20.000000000 +0100
 +++ cdrecord/cdrecord.1
-@@ -1684,8 +1684,8 @@ login shell.
+@@ -1737,8 +1737,8 @@ login shell.
  
  .SH FILES
  .TP
@@ -13,7 +13,7 @@ $NetBSD: patch-cb,v 1.1.1.1 2003/12/17 16:09:07 wiz Exp $
  For example:
  .SM CDR_FIFOSIZE=8m
  or
-@@ -1694,7 +1694,7 @@ or
+@@ -1747,7 +1747,7 @@ or
  .TP
  CDR_DEVICE
  This may either hold a device identifier that is suitable to the open
