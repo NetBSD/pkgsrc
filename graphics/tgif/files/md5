@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.8 1999/06/29 22:53:55 jlam Exp $
+$NetBSD: md5,v 1.9 1999/09/12 15:59:40 dmcmahill Exp $
 
-MD5 (tgif-4.1.16.tar.gz) = 305b77a905bb6333741a7f14dcc33aa4
+MD5 (tgif-4.1.17.tar.gz) = e4936ba6f25822de24873f6178f8618d
