@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/06 19:06:08 he Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/12 17:36:40 seb Exp $
 #
 
 DISTNAME=	Class-DBI-0.96
@@ -8,7 +8,7 @@ CATEGORIES=	perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~tmtm/Class-DBI-0.96/
+HOMEPAGE=	http://search.cpan.org/dist/Class-DBI/
 COMMENT=	Perl5 module for Simple Database Abstraction
 
 DEPENDS+=	p5-Class-Accessor>=0.18:../../devel/p5-Class-Accessor
