@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.38 2000/10/20 11:00:13 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.39 2000/11/14 17:11:43 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -18,7 +18,7 @@ use strict;
 use Getopt::Std;
 use File::Find;
 my(	$pkgdistdir,		# Distfiles directory
-	%pkg,			# {$ver} ->{'restricted'} and ->{'dir'}
+	%pkg,			# {$ver} ->{restricted} ->{dir} ->{BROKEN}
 	$default_vars,		# Set for Makefiles, inc PACKAGES & PKGSRCDIR
 	%opt,			# Command line options
 	%vuln,			# vulnerability data
@@ -28,11 +28,12 @@ my(	$pkgdistdir,		# Distfiles directory
 
 $ENV{PATH} .= ':/usr/sbin';
 
-if (! &getopts('SVDK:LM:P:Rdhilmopru', \%opt) || $opt{'h'} ||
+if (! &getopts('BS:VDK:LM:P:Rdhilmopru', \%opt) || $opt{'h'} ||
 	! ( defined($opt{'d'}) || defined($opt{'i'}) || defined($opt{'l'}) ||
 	    defined($opt{'m'}) || defined($opt{'o'}) || defined($opt{'p'}) ||
-	    defined($opt{'r'}) || defined($opt{'u'}) || defined($opt{'D'}) ||
-	    defined($opt{'S'}) || defined($opt{'V'}) || defined($opt{'R'}) ))
+	    defined($opt{'r'}) || defined($opt{'u'}) || defined($opt{'B'}) ||
+	    defined($opt{'D'}) || defined($opt{'S'}) || defined($opt{'V'}) ||
+	    defined($opt{'R'}) ))
     { &usage_and_exit; }
 $| = 1;
 
@@ -88,13 +89,28 @@ if ($opt{'D'} && @ARGV)
 	    }
 	}
 
+    # List BROKEN packages
+    if ($opt{'B'})
+	{
+	my($pkgname, $ver);
+	&scan_pkgsrc_makefiles($pkgsrcdir);
+	foreach $pkgname (sort keys %pkg)
+	    {			# Print highest number first
+	    foreach $ver (reverse sort keys %{$pkg{$pkgname}})
+		{
+		if ($pkg{$pkgname}{$ver}{'BROKEN'})
+		    { print "$pkgname-$ver: $pkg{$pkgname}{$ver}{'BROKEN'}\n"; }
+		}
+	    }
+	}
+
     # List obsolete or NO_BIN_ON_FTP/RESTRICTED prebuilt packages
     #
     if ($opt{'p'} || $opt{'R'} || $opt{'V'})
 	{
 	if ($opt{'V'})
 	    {
-	    my($vuln) = "$default_vars->{'PKGSRCDIR'}/distfiles/vulnerabilities";
+	    my($vuln) = "$pkgdistdir/vulnerabilities";
 	    if (! open(VULN, $vuln))
 		{ &fail("Unable to open '$vuln': $!"); }
 	    while (<VULN>)
@@ -105,7 +121,7 @@ if ($opt{'D'} && @ARGV)
 		}
 	    close(VULN);
 	    }
-	if (($opt{'p'} || $opt{'R'}) && !%pkg)
+	if ($opt{'p'} || $opt{'R'})
 	    { &scan_pkgsrc_makefiles($pkgsrcdir); }
 	@prebuilt_pkgdirs = ($default_vars->{'PACKAGES'});
 	while (@prebuilt_pkgdirs)
@@ -122,10 +138,9 @@ if ($opt{'D'} && @ARGV)
 	{
 	my($pkgname, $ver, $tmpfile);
 
-	$tmpfile = "$pkgsrcdir/pkgsrcmap.tmp.$$";
+	$tmpfile = "$opt{'S'}.tmp.$$";
 
-	if (!%pkg)
-	    { &scan_pkgsrc_makefiles($pkgsrcdir); }
+	&scan_pkgsrc_makefiles($pkgsrcdir);
 	if (!open(TABLE, ">$tmpfile"))
 	    { &fail("Unable to write '$tmpfile': $!"); }
 	foreach $pkgname (sort keys %pkg)
@@ -135,13 +150,12 @@ if ($opt{'D'} && @ARGV)
 	    }
 	if (!close(TABLE))
 	    { &fail("Error while writing '$tmpfile': $!"); }
-	if (!rename($tmpfile, "$pkgsrcdir/pkgsrcmap"))
-	    { &fail("Error in rename('$tmpfile','$pkgsrcdir/pkgsrcmap'): $!"); }
+	if (!rename($tmpfile, $opt{'S'}))
+	    { &fail("Error in rename('$tmpfile','$opt{'S'}'): $!"); }
 	}
     if ($opt{'d'})
 	{
-	if (!%pkg)
-	    { &scan_pkgsrc_makefiles($pkgsrcdir); }
+	&scan_pkgsrc_makefiles($pkgsrcdir);
 	&pkgsrc_check_depends;
 	}
     if ($opt{'i'} || $opt{'u'})
@@ -149,8 +163,7 @@ if ($opt{'D'} && @ARGV)
 	my(@pkgs, @bad, $pkg);
 
 	@pkgs = &list_installed_packages;
-	if (!%pkg)
-	    { &scan_pkgsrc_makefiles($pkgsrcdir); }
+	&scan_pkgsrc_makefiles($pkgsrcdir);
 
 	foreach $pkg ( sort @pkgs )
 	    {
@@ -188,7 +201,7 @@ exit;
 # each package name once against the tests.
 sub check_prebuilt_packages
     {
-    if ($_ eq 'distfiles')
+    if ($_ eq 'distfiles' || $_ eq 'pkgsrc') # Skip these subdirs if present
 	{ $File::Find::prune = 1; }
     elsif (/(.+)-(\d.*)\.tgz$/)
 	{
@@ -553,6 +566,8 @@ sub parse_makefile_pkgsrc
 	    if (defined $vars->{'NO_BIN_ON_FTP'} ||
 		defined $vars->{'RESTRICTED'})
 		{ $pkg{$1}{$2}{'restricted'} = 1; }
+	    if (defined $vars->{'BROKEN'})
+		{ $pkg{$1}{$2}{'BROKEN'} = $vars->{'BROKEN'}; }
 	    if ($file =~ m:([^/]+)/([^/]+)/Makefile$:)
 		{
 		$cat = $1;
@@ -842,6 +857,8 @@ sub scan_pkgsrc_makefiles
     my($pkgsrcdir, $check_depends) = @_;
     my($cat, @categories, $pkgdir, $pkgname);
 
+    if (%pkg) # Already done
+	{ return; }
     @categories = &list_pkgsrc_categories($pkgsrcdir);
     &verbose("Scanning pkgsrc Makefiles: ");
     if (!$opt{'L'})
@@ -998,7 +1015,8 @@ opts:
   -p	     : List old/obsolete prebuilt packages (#).
   -r	     : Remove 'bad' distfiles or packages (*).
   -u	     : For each installed package ensure distfiles are fetched.
-  -S	     : Rebuild PKGSRCDIR/pkgsrcmap
+  -B	     : List 'BROKEN' packages
+  -S file    : Output map of 'pkgname pkgdir pkgver'
 
   -L         : List each Makefile when scanned
   -P path    : Set PKGSRCDIR
