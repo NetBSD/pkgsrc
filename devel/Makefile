@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.250 2001/10/17 12:33:24 agc Exp $
+# $NetBSD: Makefile,v 1.251 2001/10/18 10:24:25 agc Exp $
 #
 
 COMMENT=	Development utilities
@@ -254,6 +254,7 @@ SUBDIR+=	tmake
 SUBDIR+=	tpasm
 SUBDIR+=	trio
 SUBDIR+=	tvision
+SUBDIR+=	unidiff
 SUBDIR+=	unproven-pthreads
 SUBDIR+=	w32api
 SUBDIR+=	xdelta
