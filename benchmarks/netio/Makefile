@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/17 12:25:33 tron Exp $
+# $NetBSD: Makefile,v 1.2 2001/04/17 12:44:22 tron Exp $
 
 DISTNAME=	netio113
 PKGNAME=	netio-1.13
@@ -11,6 +11,12 @@ COMMENT=	Network benchmark for DOS, OS/2 2.x, Windows NT/2000 and Unix
 
 ALL_TARGET=	pkgsrc
 WRKSRC=		${WRKDIR}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if (${OPSYS} == SunOS)
+MAKE_ENV+=	LIBS="-lsocket -lnsl"
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/netio ${PREFIX}/bin
