@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/27 21:47:08 jdolecek Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/05 13:36:05 drochner Exp $
 
 PKGNAME=	psi-ssl-2.0
 DISTNAME=	qssl-2.0
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://belnet.dl.sourceforge.net/sourceforge/psi/
 EXTRACT_SUFX=	.tar.bz2
