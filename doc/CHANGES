@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4086 2003/12/14 03:29:10 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4087 2003/12/14 04:16:41 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3388,3 +3388,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Added fribidi-0.10.4 [xtraeme 2003-12-14]
 	Added gucharmap-1.2.0 [xtraeme 2003-12-14]
 	Added abiword2-2.0.1-2 [xtraeme 2003-12-14]
+	Updated elinks to 0.4.3 [xtraeme 2003-12-14]
+	Updated echoping to 5.1.0 [xtraeme 2003-12-14]
+	Updated centericq to 4.9.9 [xtraeme 2003-12-14]
