@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2003/01/04 23:42:59 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.10 2003/01/05 10:33:54 jmmv Exp $
 bin/activation-client
 bin/bonobo-slay
 include/bonobo-activation-2.0/bonobo-activation/Bonobo_Activation_types.h
@@ -101,6 +101,7 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/bonobo-activation.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/bonobo-activation.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/bonobo-activation.mo
 @dirrm share/idl/bonobo-activation-2.0
+@comment in ORBit2: @dirrm share/idl
 @dirrm share/examples/bonobo-activation
 @dirrm share/doc/html/bonobo-activation
 @dirrm lib/bonobo/servers
