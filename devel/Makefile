@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.230 2001/07/13 16:59:17 wulf Exp $
+# $NetBSD: Makefile,v 1.231 2001/07/14 23:30:41 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -101,6 +101,7 @@ SUBDIR+=	libglade
 SUBDIR+=	libgtop
 SUBDIR+=	libhfs
 SUBDIR+=	libmemmgr
+SUBDIR+=	libmm
 SUBDIR+=	libnet
 SUBDIR+=	libole2
 SUBDIR+=	libportlib
@@ -200,15 +201,15 @@ SUBDIR+=	ruby-filelock
 SUBDIR+=	ruby-mode
 SUBDIR+=	ruby-mutexm
 SUBDIR+=	ruby-optparse
-SUBDIR+=	ruby-readline
-#SUBDIR+=	ruby14-readline
 SUBDIR+=	ruby-racc
 SUBDIR+=	ruby-racc-runtime
 SUBDIR+=	ruby-rd-mode
+SUBDIR+=	ruby-readline
 SUBDIR+=	ruby-ri
-SUBDIR+=	ruby-unit
 SUBDIR+=	ruby-strscan
 SUBDIR+=	ruby-textbuf
+SUBDIR+=	ruby-unit
+#SUBDIR+=	ruby14-readline		# only needed for ruby-1.4 package
 SUBDIR+=	rvm
 SUBDIR+=	rx
 SUBDIR+=	sdcc
