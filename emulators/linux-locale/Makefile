@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/08/31 02:35:26 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2000/09/08 02:17:58 jlam Exp $
 #
 
 DISTNAME=	locales-2.1-1mdk
@@ -29,7 +29,7 @@ DISTFILES+=	locales-${locale}-2.1-1mdk${EXTRACT_SUFX}
 DIST_SUBDIR=	linux-locale
 
 ONLY_FOR_PLATFORM=NetBSD-*-i386
-DEPENDS=	suse_base-6.3:../../emulators/suse_linux
+DEPENDS=	suse_base-6.3:../../emulators/suse_base
 
 EXTRACT_ONLY=	# empty
 NO_PATCH=	yes
