@@ -1,11 +1,23 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/04 16:35:07 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/08/11 14:45:31 tv Exp $
 bin/appletviewer
+bin/extcheck
+bin/idlj
 bin/jar
+bin/jarsigner
 bin/java
 bin/javac
 bin/javadoc
 bin/javah
+bin/javakey
 bin/javap
+bin/jdb
+bin/keytool
+bin/policytool
+bin/rmic
+bin/rmid
+bin/rmiregistry
+bin/serialver
+bin/tnameserv
 man/man1/java-wrapper.1
 share/examples/java-wrapper/java-wrapper.conf
 @dirrm share/examples/java-wrapper
