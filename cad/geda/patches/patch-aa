@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.6 1999/03/28 21:22:25 rh Exp $
+$NetBSD: patch-aa,v 1.7 1999/11/12 14:48:21 rh Exp $
 
---- configure.orig	Sat Mar 27 06:00:00 1999
-+++ configure	Sun Mar 28 22:08:28 1999
+--- configure.orig	Sun May 16 07:00:00 1999
++++ configure	Fri Nov 12 15:37:34 1999
 @@ -1336,7 +1336,6 @@
  fi
  
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.6 1999/03/28 21:22:25 rh Exp $
  
  # Check for any special flags to pass to ltconfig.
  libtool_flags=
-@@ -2901,7 +2900,7 @@
+@@ -2902,7 +2901,7 @@
  
  
  CFLAGS="`$GTKCONFIG --cflags` $CFLAGS $CFEXTRA"
@@ -18,4 +18,4 @@ $NetBSD: patch-aa,v 1.6 1999/03/28 21:22:25 rh Exp $
 +LDFLAGS="$LDEXTRA `$GTKCONFIG --libs` $LDFLAGS -lm"
  
  echo $ac_n "checking for the rest of gtk""... $ac_c" 1>&6
- echo "configure:2908: checking for the rest of gtk" >&5
+ echo "configure:2909: checking for the rest of gtk" >&5
