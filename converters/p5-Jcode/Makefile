@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/02/17 15:27:58 dillo Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/16 16:37:05 taca Exp $
 #
 
-DISTNAME=	Jcode-0.82
+DISTNAME=	Jcode-0.83
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5jco
 CATEGORIES=	converters japanese
