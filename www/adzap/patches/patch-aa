@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/04/25 09:40:25 rh Exp $
+$NetBSD: patch-aa,v 1.2 2000/05/20 13:32:14 sommerfeld Exp $
 
---- zapwrap.sh.orig	Fri Apr 21 04:44:53 2000
-+++ zapwrap.sh	Tue Apr 25 10:45:26 2000
-@@ -16,22 +16,9 @@
+--- wrapzap.orig	Tue May  9 01:12:22 2000
++++ wrapzap	Sat May 20 08:46:05 2000
+@@ -16,24 +16,9 @@
  #
  
  # modify this to match your install
@@ -11,19 +11,21 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/04/25 09:40:25 rh Exp $
  
 -ZAP_MODE=				# or "CLEAR"
 -ZAP_BASE=http://adzap.cs.zip.com.au	# a local web server will be better
--ZAP_CHAINING=				# set to one if chaining redirectors
+-ZAP_CHAINING=				# set to "1" or "FULL" if chaining
+-					# redirectors; see web page
 -ZAP_PREMATCH=				# pathname of extra pattern file
--					# for patterns to preempty the stock
+-					# for patterns to preempt the stock
 -					# zapper
 -ZAP_POSTMATCH=				# pathname of extra pattern file
 -					# for patterns in addition to the
--					# stock zapper; this is the one you
--					# should add new ads to
+-					# stock zapper; this is the one to
+-					# which you should add new ads
 -STUBURL_AD=$ZAP_BASE/ad.gif
 -STUBURL_ADJS=$ZAP_BASE/no-op.js
 -STUBURL_ADHTML=$ZAP_BASE/no-op.html
 -STUBURL_ADPOPUP=$ZAP_BASE/closepopup.html
+-STUBURL_COUNTER=$ZAP_BASE/counter.gif
 +. /etc/adzap.conf
  
  export ZAP_MODE ZAP_BASE ZAP_CHAINING ZAP_PREMATCH ZAP_POSTMATCH
- export STUBURL_AD STUBURL_ADJS STUBURL_ADHTML STUBURL_ADPOPUP
+ export STUBURL_AD STUBURL_ADJS STUBURL_ADHTML STUBURL_ADPOPUP \
