@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2002/07/24 19:45:27 jlam Exp $
+# $NetBSD: Makefile,v 1.52 2002/07/28 05:36:29 schmonz Exp $
 
 DISTNAME=		openssl-0.9.6
 PKGREVISION=		2
@@ -25,7 +25,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
 			NetBSD-*-m68k NetBSD-*-mips NetBSD-*-mipseb \
 			NetBSD-*-mipsel NetBSD-*-ns32k NetBSD-*-powerpc \
 			NetBSD-*-sparc NetBSD-*-vax \
-			SunOS-* Linux-*-*
+			SunOS-* Linux-*-* Darwin-*-*
 
 CONFIGURE_SCRIPT=	config
 CONFIGURE_ARGS=		-fPIC -DPIC --openssldir=${PREFIX} --prefix=${PREFIX} \
