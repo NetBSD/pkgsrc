@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/05/30 07:04:26 minskim Exp $
+# $NetBSD: Makefile,v 1.22 2004/05/30 07:06:26 minskim Exp $
 
 DISTNAME=       lha-114i
 PKGNAME=	lha-114.9
@@ -29,6 +29,6 @@ INSTALLATION_DIRS=	bin man/ja_JP.EUC/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/lha ${PREFIX}/bin/
-	${INSTALL_DATA} ${WRKSRC}/man/lha.n ${PREFIX}/man/ja_JP.EUC/man1/lha.1
+	${INSTALL_MAN} ${WRKSRC}/man/lha.n ${PREFIX}/man/ja_JP.EUC/man1/lha.1
 
 .include "../../mk/bsd.pkg.mk"
