@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2794 2003/07/15 15:01:58 agc Exp $
+$NetBSD: CHANGES,v 1.2795 2003/07/15 19:48:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2824,3 +2824,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added gtkwave-2.0.0pre3.20030319 [drochner 2003-07-15]
 	Updated dinotrace to 9.1k [drochner 2003-07-15]
 	Updated xlockmore to 5.09 [hubertf 2003-07-15]
+	Updated dctc to 0.85.4 [wiz 2003-07-15]
