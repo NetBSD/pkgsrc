@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5918 2004/05/13 04:29:12 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5919 2004/05/13 06:44:55 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2501,3 +2501,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tcl to 8.4.6nb4 [minskim 2004-05-13]
 	Updated amaya to 8.5 [xtraeme 2004-05-13]
 	Updated fluxbox to 0.9.9 [xtraeme 2004-05-13]
+	Updated samba to 3.0.4 [xtraeme 2004-05-13]
