@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/01/31 10:50:49 shell Exp $
+$NetBSD: distinfo,v 1.3 2003/12/10 22:00:28 heinz Exp $
 
-SHA1 (Digest-MD2-2.01.tar.gz) = f705604651d19fc5eab2f7efc3631f5c6921a4d9
-Size (Digest-MD2-2.01.tar.gz) = 16353 bytes
+SHA1 (Digest-MD2-2.03.tar.gz) = 01c376c3b68221eb0115727731d6fd271a9d9ad9
+Size (Digest-MD2-2.03.tar.gz) = 17054 bytes
