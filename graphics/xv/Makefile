@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/05/15 13:55:35 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/06/03 13:02:16 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/03 07:37:08 asami Exp
 #
 
@@ -20,15 +20,14 @@ DEPENDS+=	jpeg-6a:../../graphics/jpeg
 
 USE_IMAKE=	yes
 
+FIX_LOCATIONS=	yes
+
 CAT1=		bggen.0 vdcomp.0 xcmap.0 xv.0 xvpictoppm.0
+
+.include "../../mk/bsd.prefs.mk"
 
 pre-patch:
 	@${PATCH} ${PATCH_ARGS} -p1 < ${WRKDIR}/Patch.magpic2.PhotoCD.XV310a
-
-pre-configure:
-	for f in `find ${WRKDIR}/. -name Imakefile -follow -print`; do \
-		${SED} -e 's:/usr/local:'${LOCALBASE}':g' < $$f > $$f.pdone && ${MV} $$f.pdone $$f; \
-	done
 
 post-install:
 	${MKDIR} ${PREFIX}/share/doc/xv
