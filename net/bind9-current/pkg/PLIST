@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2001/07/18 05:22:59 itojun Exp $
+@comment $NetBSD: PLIST,v 1.11 2001/09/14 03:58:48 itojun Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -305,3 +305,4 @@ man/man8/named-checkzone.8
 man/man8/named.8
 man/man8/nsupdate.8
 man/man8/rndc.8
+man/man8/rndc-confgen.8
