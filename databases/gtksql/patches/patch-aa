@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2001/08/23 21:44:12 jlam Exp $
+$NetBSD: patch-aa,v 1.8 2001/08/23 21:46:53 jlam Exp $
 
 --- Makefile.orig	Sat Jun  5 09:05:36 1999
 +++ Makefile
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.7 2001/08/23 21:44:12 jlam Exp $
  # Here, what you need for PostgreSQL
 -PGSQLIBS    = -L/usr/local/pgsql/lib -lpq
 -PGSQLCFLAGS = -I/usr/local/pgsql/include -DUSE_POSTGRESQL
-+PGSQLIBS    = -L${LOCALBASE}/lib -lpq
++PGSQLIBS    = -L${BUILDLINK_DIR}/lib -lpq
 +PGSQLCFLAGS = -I${BUILDLINK_DIR}/include/pgsql -DUSE_POSTGRESQL
  PGSQLOBJS   = postgres.o
  
