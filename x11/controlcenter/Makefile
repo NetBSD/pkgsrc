@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2001/06/11 06:34:56 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2001/09/27 23:18:59 jlam Exp $
 
 DISTNAME=		control-center-1.4.0.1
 CATEGORIES=		x11 gnome
@@ -11,7 +11,7 @@ COMMENT=		GNOME control-center development library
 DEPENDS+=		gnome-libs>=1.2.13:../../x11/gnome-libs
 DEPENDS+=		gdk-pixbuf>=0.10.1:../../graphics/gdk-pixbuf
 DEPENDS+=		gnome-vfs>=1.0:../../sysutils/gnome-vfs
-DEPENDS+=		scrollkeeper-*:../../textproc/scrollkeeper
+DEPENDS+=		scrollkeeper-[0-9]*:../../textproc/scrollkeeper
 
 USE_X11BASE=		YES
 USE_GMAKE=		YES

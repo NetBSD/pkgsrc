@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/04/18 00:33:10 kei Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/27 23:18:15 jlam Exp $
 
 DISTNAME=	TeXfamily-1.2.1
 CATEGORIES=	japanese
@@ -23,7 +23,7 @@ MAINTAINER=	kei@netbsd.org
 COMMENT=	TeXfamily (pTeX, JTeX, MuLTeX) - executables
 
 DEPENDS+=	TeXfamily-share-1.2.1:../../japanese/texfamily-share
-DEPENDS+=	ja-vflib-lib-*:../../japanese/vflib-lib
+DEPENDS+=	ja-vflib-lib-[0-9]*:../../japanese/vflib-lib
 
 DIST_SUBDIR=	TeXfamily
 TETEX_DIR=	${BUILD_ROOT}/print/teTeX-bin/${WRKDIR:T}/teTeX-1.0

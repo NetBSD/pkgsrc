@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/09/05 17:18:22 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/27 23:17:54 jlam Exp $
 #
 
 DISTNAME=		MLDBM-2.00
@@ -10,7 +10,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://theory.uwinnipeg.ca/CPAN/data/MLDBM/MLDBM.html
 COMMENT=		perl5 module for storing arbitrary data in tied hashes
 
-DEPENDS+= 		{p5-Data-Dumper-*,perl>=5.6.1nb2}:../../lang/perl5
+DEPENDS+= 		{p5-Data-Dumper-[0-9]*,perl>=5.6.1nb2}:../../lang/perl5
 
 USE_PERL5=		# defined
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/MLDBM/.packlist

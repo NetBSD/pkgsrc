@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2001/05/19 03:56:33 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2001/09/27 23:17:56 jlam Exp $
 #
 
 DISTNAME=		pthreads-1_60_beta6
@@ -12,7 +12,7 @@ COMMENT=		Chris Provenzano's (MIT) POSIX threads library
 
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
 			NetBSD-*-sparc NetBSD-*-m68k NetBSD-*-powerpc
-CONFLICTS+=             unproven-pthreads-*
+CONFLICTS+=             unproven-pthreads-[0-9]*
 
 HAS_CONFIGURE=		yes
 MAKE_ENV+=		NOLINT=1 NOPROFILE=1 OBJECT_FMT=${OBJECT_FMT}

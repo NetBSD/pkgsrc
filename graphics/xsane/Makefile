@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/08/28 14:32:22 rh Exp $
+# $NetBSD: Makefile,v 1.30 2001/09/27 23:18:14 jlam Exp $
 #
 
 DISTNAME=	xsane-0.79
@@ -21,7 +21,7 @@ BUILD_USES_MSGFMT=	yes
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	gtk+>=1.2.5:../../x11/gtk
 DEPENDS+=	png>=1.0.11:../../graphics/png
-DEPENDS+=	tiff-*:../../graphics/tiff
+DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
 DEPENDS+=	gimp>=1.0.4:../../graphics/gimp
 DEPENDS+=	sane-backends>=1.0.4:../../graphics/sane-backends
 

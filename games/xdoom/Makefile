@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/07/27 11:05:58 abs Exp $
+# $NetBSD: Makefile,v 1.16 2001/09/27 23:18:09 jlam Exp $
 
 DISTNAME=	linuxdoom-1.10
 PKGNAME=	xdoom-1.10nb1
@@ -12,7 +12,7 @@ MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://www.idsoftware.com/archives/doomarc.html
 COMMENT=	3D shoot-em-up for 8-bit X11 displays
 
-BUILD_DEPENDS=	unzip-*:../../archivers/unzip
+BUILD_DEPENDS=	unzip-[0-9]*:../../archivers/unzip
 
 LICENSE=	shareware
 

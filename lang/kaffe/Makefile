@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2001/06/11 06:34:39 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2001/09/27 23:18:17 jlam Exp $
 #
 
 DISTNAME=		kaffe-1.0.6
@@ -11,7 +11,7 @@ COMMENT=		Virtual machine capable of running Java(tm) code
 
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		png>=1.0.11:../../graphics/png
-DEPENDS+=		libungif-*:../../graphics/libungif
+DEPENDS+=		libungif-[0-9]*:../../graphics/libungif
 DEPENDS+=		gmp>=3.0.0:../../devel/gmp
 
 USE_X11=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/08/26 10:32:23 skrll Exp $
+# $NetBSD: Makefile,v 1.17 2001/09/27 23:18:37 jlam Exp $
 
 DISTNAME=		cyrus-sasl-1.5.24
 PKGNAME=		${DISTNAME}nb3
@@ -38,7 +38,7 @@ CONFIGURE_ARGS+=	--with-rc4=${SSLBASE}
 
 .if defined(USE_PAM)
 CONFIGURE_ARGS+=	--with-pam=${PREFIX}
-DEPENDS+=		PAM-*:../../security/PAM
+DEPENDS+=		PAM-[0-9]*:../../security/PAM
 .endif
 
 # Authentication mechanisms
@@ -55,7 +55,7 @@ CONFIGURE_ARGS+=	--disable-x509		# --- no X.509
 .if defined(KERBEROS)
 USE_KERBEROS=		# defined
 CONFIGURE_ARGS+=	--enable-krb4=${PREFIX} --enable-gssapi=/usr # KERBEROS_V4
-DEPENDS+=		kth-krb4-*:../../security/kth-krb4
+DEPENDS+=		kth-krb4-[0-9]*:../../security/kth-krb4
 PLIST_SRC+=		${PKGDIR}/PLIST.krb4 ${PKGDIR}/PLIST.krb5
 .elif ${OPSYS} == "SunOS"
 USE_KERBEROS=		# defined

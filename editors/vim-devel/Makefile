@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/09/08 15:54:01 pooka Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/27 23:18:01 jlam Exp $
 #
 
 DISTNAME=		vim-6.0au
@@ -13,7 +13,7 @@ COMMENT=		Vi IMproved development version (vi clone)
 GNU_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/vim60au
 
-CONFLICTS=		vim-xaw-* vim-gtk-* vim-share-* vim-5*
+CONFLICTS=		vim-xaw-[0-9]* vim-gtk-[0-9]* vim-share-[0-9]* vim-5*
 
 CONFIGURE_ARGS+=	--enable-gui=no --without-x
 

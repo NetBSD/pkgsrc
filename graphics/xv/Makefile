@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2001/07/08 21:40:48 tron Exp $
+# $NetBSD: Makefile,v 1.39 2001/09/27 23:18:14 jlam Exp $
 
 DISTNAME=	xv-3.10a
 PKGNAME=	${DISTNAME}nb1
@@ -17,7 +17,7 @@ HOMEPAGE=	http://www.trilon.com/xv/
 COMMENT=	X11 program that displays images of various formats
 
 DEPENDS+=	png>=1.0.11:../png
-DEPENDS+=	tiff-*:../../graphics/tiff
+DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
 
 USE_IMAKE=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2001/09/27 06:37:11 perry Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/27 23:18:33 jlam Exp $
 #
 
 DISTNAME=	gnus-5.8.8
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.gnus.org/
 COMMENT=	News/Mail reader for Emacs
 
 # XXX Someone who cares can make this work with Xemacs.
-DEPENDS+=	emacs-*:../../editors/emacs
+DEPENDS+=	emacs-[0-9]*:../../editors/emacs
 
 USE_GTEXINFO=	YES
 GNU_CONFIGURE=	YES

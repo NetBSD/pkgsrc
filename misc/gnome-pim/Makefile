@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/06/11 06:34:44 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2001/09/27 23:18:25 jlam Exp $
 #
 
 DISTNAME=		gnome-pim-1.4.0
@@ -9,7 +9,7 @@ MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Personal Information Manager for GNOME
 
-BUILD_DEPENDS+=		bison-*:../../devel/bison
+BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 DEPENDS+=		gnome-core>1.4.0:../../x11/gnome-core
 
 USE_GMAKE=		YES

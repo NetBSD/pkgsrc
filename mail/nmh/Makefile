@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2001/09/21 17:07:12 sommerfeld Exp $
+# $NetBSD: Makefile,v 1.43 2001/09/27 23:18:21 jlam Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/04 06:51:28 markm Exp
 #
 
@@ -12,8 +12,8 @@ MAINTAINER=		kim@tac.nyc.ny.us
 HOMEPAGE=		http://www.mhost.com/nmh/
 COMMENT=		Cleaned up MH mailer suite
 
-CONFLICTS=		ja-mh-*
-CONFLICTS+=		ja-mh6-*
+CONFLICTS=		ja-mh-[0-9]*
+CONFLICTS+=		ja-mh6-[0-9]*
 
 # We choose DOT_LOCKING in our patches because ".lock" files are
 # the most common locking mechanism supported by mail software.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/08/29 22:41:19 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2001/09/27 23:18:14 jlam Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/03/11 03:08:12 vanilla Exp
 # 
 
@@ -12,9 +12,9 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.foolabs.com/xpdf/
 COMMENT=	Display tool for PDF files
 
-DEPENDS+=	ghostscript-fonts-*:../../fonts/ghostscript-fonts
+DEPENDS+=	ghostscript-fonts-[0-9]*:../../fonts/ghostscript-fonts
 
-CONFLICTS=	xpdf-crypto-*
+CONFLICTS=	xpdf-crypto-[0-9]*
 
 USE_BUILDLINK_ONLY=	YES
 USE_X11BASE=		YES

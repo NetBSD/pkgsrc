@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/08/26 10:32:20 skrll Exp $
+# $NetBSD: Makefile,v 1.9 2001/09/27 23:18:03 jlam Exp $
 #
 
 DISTNAME=       emma-0.8-1
@@ -12,9 +12,9 @@ HOMEPAGE=	http://rainbow.mimuw.edu.pl/~la181249/
 COMMENT=	Money management program
 
 BUILD_DEPENDS+=	automake>=1.4:../../devel/automake
-DEPENDS+=	gnome-libs-*:../../x11/gnome-libs
+DEPENDS+=	gnome-libs-[0-9]*:../../x11/gnome-libs
 DEPENDS+=	python>=2.0:../../lang/python
-DEPENDS+=	py-mxDateTime-*:../../time/py-mxDateTime
+DEPENDS+=	py-mxDateTime-[0-9]*:../../time/py-mxDateTime
 
 USE_X11BASE=	YES
 GNU_CONFIGURE=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/08/27 14:35:14 tron Exp $
+# $NetBSD: Makefile,v 1.8 2001/09/27 23:18:44 jlam Exp $
 
 DISTNAME=		nut-0.44.3-pre5
 PKGNAME=		ups-nut-cgi-0.44.3pre5
@@ -9,7 +9,7 @@ MAINTAINER=		collver@linuxfreemail.com
 HOMEPAGE=		http://www.exploits.org/nut/
 COMMENT=		Network UPS Tools CGI scripts
 
-DEPENDS+=		gd-*:../../graphics/gd
+DEPENDS+=		gd-[0-9]*:../../graphics/gd
 DEPENDS+=		ups-nut-0*:../ups-nut
 BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 

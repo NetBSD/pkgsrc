@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/08/27 14:35:06 tron Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/27 23:17:52 jlam Exp $
 
 DISTNAME=	cross-${TARGET_ARCH}-${DISTVERSION}
 TARGET_ARCH=	mipsEEel-netbsd
@@ -44,8 +44,8 @@ DISTFILES+=		gcc-${GCC_VERSION}.EE-linux.patch.bz2
 GCC_PATCH1=		${_DISTDIR}/gcc-${GCC_VERSION}.EE-linux.patch.bz2
 DISTFILES+=		gcc-ps2linux-0.9.1.patch.bz2
 GCC_PATCH2=		${_DISTDIR}/gcc-ps2linux-0.9.1.patch.bz2
-BUILD_DEPENDS+=		bison-*:../../devel/bison
-BUILD_DEPENDS+=		autoconf-*:../../devel/autoconf
+BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
+BUILD_DEPENDS+=		autoconf-[0-9]*:../../devel/autoconf
 
 
 pre-patch: binutils-patch gcc-patch

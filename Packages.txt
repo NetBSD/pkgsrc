@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.193 2001/09/26 04:47:39 jmc Exp $
+# $NetBSD: Packages.txt,v 1.194 2001/09/27 23:17:41 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -1975,7 +1975,7 @@ package, which uses the xpm library, version 3.4j to build.
 
 You can also use wildcards in package dependences:
 
-	DEPENDS+=	xpm-*:../../graphics/xpm
+	DEPENDS+=	xpm-[0-9]*:../../graphics/xpm
 
 Note that such wildcard dependencies are retained when creating binary
 packages.  The dependency is checked when installing the binary
@@ -1998,7 +1998,7 @@ is specified using the DEPENDS definition. The pkgsrc/print/lyx package needs
 to be able to execute the latex binary from the teTex package when it runs,
 and that is specified:
 
-	DEPENDS+=        teTex-*:../../print/teTeX 
+	DEPENDS+=        teTex-[0-9]*:../../print/teTeX 
 
 The comment about wildcard dependencies from previous paragraph
 applies here, too.
@@ -2033,11 +2033,11 @@ In this case you can set CONFLICTS to a space separated list of packages
 For example pkgsrc/x11/Xaw3d and pkgsrc/x11/Xaw-Xpm install provide the
 same shared library, thus you set in pkgsrc/x11/Xaw3d/Makefile:
 
-	CONFLICTS=      Xaw-Xpm-*
+	CONFLICTS=      Xaw-Xpm-[0-9]*
 
 and in pkgsrc/x11/Xaw-Xpm/Makefile:
 
-	CONFLICTS=      Xaw3d-*
+	CONFLICTS=      Xaw3d-[0-9]*
 
 Packages will automatically conflict with other packages with the name prefix
 and a different version string. "Xaw3d-1.5" e.g. will automatically conflict

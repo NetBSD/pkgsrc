@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2001/06/18 15:41:49 fredb Exp $
+# $NetBSD: Makefile.common,v 1.18 2001/09/27 23:19:03 jlam Exp $
 #
 
 DISTNAME=		xscreensaver-3.33
@@ -10,7 +10,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.jwz.org/xscreensaver/
 
 DEPENDS+=		gtk+-1.2.*:../../x11/gtk
-DEPENDS+=		gle-*:../../graphics/gle
+DEPENDS+=		gle-[0-9]*:../../graphics/gle
 
 USE_MESA=		yes
 USE_X11BASE=		yes

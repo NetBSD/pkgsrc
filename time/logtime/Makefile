@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:32:05 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/27 23:18:48 jlam Exp $
 #
 
 DISTNAME=		logtime-1.0
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.gw.com/pub/people/kim/
 MAINTAINER=		kim@tac.nyc.ny.us
 COMMENT=		Prints date and time in a standard format
 
-DEPENDS+=		sh-utils-*:../../sysutils/sh-utils
+DEPENDS+=		sh-utils-[0-9]*:../../sysutils/sh-utils
 
 .include "../../mk/bsd.prefs.mk"
 
