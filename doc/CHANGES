@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4572 2004/01/23 15:47:17 recht Exp $
+$NetBSD: CHANGES,v 1.4573 2004/01/23 16:11:26 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -426,3 +426,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pgpdump to 0.22 [taca 2004-01-23]
 	Added py-xml-0.8.3 [recht 2004-01-23]
 	Removed pyxml [recht 2004-01-23]
+	Updated gnome2-games to 2.4.1.1nb1 [jmmv 2004-01-23]
