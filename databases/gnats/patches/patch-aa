@@ -1,31 +1,22 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/10/11 11:42:26 martti Exp $
+$NetBSD: patch-aa,v 1.2 2004/11/10 21:34:46 soren Exp $
 
---- Makefile.in.orig	Thu Nov  5 11:54:07 1998
-+++ Makefile.in	Fri Jan 21 10:04:50 2000
-@@ -68,7 +68,7 @@
- HOST_PREFIX_1 = loser-
+--- gnats/Makefile.in.orig	2003-07-27 01:23:17.000000000 +0200
++++ gnats/Makefile.in	2003-10-16 15:46:10.000000000 +0200
+@@ -91,7 +91,7 @@
  
- # These flag values are normally overridden by the configure script.
--CFLAGS = -g
-+CFLAGS+= -g
- CXXFLAGS = -g -O2
+ INSTALL = $(srcdir)/../install-sh -c
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+-INSTALL_SCRIPT = @INSTALL_PROGRAM@
++INSTALL_SCRIPT = @INSTALL_SCRIPT@
+ INSTALL_DATA = @INSTALL_DATA@
  
- LIBCFLAGS = $(CFLAGS)
-@@ -121,7 +121,7 @@
- 
- M4 = `if [ -f $$r/m4/m4 ] ; \
- 	then echo $$r/m4/m4 ; \
--	else echo m4 ; fi`
-+	else echo gm4 ; fi`
- 
- MAKEINFO = `if [ -f $$r/texinfo/makeinfo/Makefile ] ; \
- 	then echo $$r/texinfo/makeinfo/makeinfo ; \
-@@ -313,7 +313,7 @@
- 	"AR_FLAGS=$(AR_FLAGS)" \
- 	"AR_FOR_TARGET=$(AR_FOR_TARGET)" \
- 	"AS_FOR_TARGET=$(AS_FOR_TARGET)" \
--	"BISON=$(BISON)" \
-+	"BISON=$(YACC)" \
- 	"CC_FOR_BUILD=$(CC_FOR_BUILD)" \
- 	"CC_FOR_TARGET=$(CC_FOR_TARGET)" \
- 	"CFLAGS=$(CFLAGS)" \
+ SUB_INSTALL = `echo $(INSTALL) | sed 's,^\([^/]\),../\1,'`
+@@ -386,7 +386,7 @@
+ 	$(INSTALL_SCRIPT) edit-pr $(bindir)/edit-pr
+ 	$(INSTALL_SCRIPT) $(srcdir)/diff-prs $(libexecdir)/gnats/diff-prs
+ 	$(INSTALL_SCRIPT) mail-agent $(libexecdir)/gnats/mail-agent
+-	$(INSTALL_PROGRAM) file-pr $(libexecdir)/gnats/file-pr
++	$(INSTALL_SCRIPT) file-pr $(libexecdir)/gnats/file-pr
+ 	$(INSTALL_PROGRAM) pr-age $(libexecdir)/gnats/pr-age
+ 	$(INSTALL_PROGRAM) pr-edit $(libexecdir)/gnats/pr-edit
+ 	@if [ `whoami` = root -o `whoami` = $(GNATS_USER) ] ; then \
