@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:12:52 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/08/01 14:22:18 drochner Exp $
 bin/sqlite
 include/sqlite.h
 lib/libsqlite.a
 lib/libsqlite.la
 lib/libsqlite.so
-lib/libsqlite.so.0
-lib/libsqlite.so.0.0
+lib/libsqlite.so.5
+lib/libsqlite.so.5.3
+lib/pkgconfig/sqlite.pc
