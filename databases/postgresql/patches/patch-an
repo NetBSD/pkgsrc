@@ -1,0 +1,12 @@
+$NetBSD: patch-an,v 1.1 2000/01/18 22:50:28 jwise Exp $
+--- interfaces/jdbc/Makefile.orig	Tue Jan 18 17:47:01 2000
++++ interfaces/jdbc/Makefile	Tue Jan 18 17:47:15 2000
+@@ -26,7 +26,7 @@
+ # In 6.5, the all rule builds the makeVersion class which then calls make using
+ # the jdbc1 or jdbc2 rules
+ all:	makeVersion.class
+-	make $$($(JAVA) makeVersion)
++	${GMAKE} $$($(JAVA) makeVersion)
+ 	@echo ------------------------------------------------------------
+ 	@echo The JDBC driver has now been built. To make it available to
+ 	@echo other applications, copy the postgresql.jar file to a public
