@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.1 2004/09/07 08:05:50 simonb Exp $
+$NetBSD: patch-ab,v 1.2 2005/03/19 16:54:51 wiz Exp $
 
---- src/screen.c.orig	2004-07-09 17:49:42.000000000 +1000
+--- src/screen.c.orig	2005-01-23 18:37:42.000000000 +0100
 +++ src/screen.c
-@@ -267,7 +267,7 @@ paint_status_window(mpdclient_t *c)
+@@ -293,7 +293,7 @@ paint_status_window(mpdclient_t *c)
  	  if( c->song && seek_id == c->song->id )
  	    elapsedTime = seek_target_time;
- 	  snprintf(screen->buf, screen->buf_size, 
+ 	  g_snprintf(screen->buf, screen->buf_size, 
 -		   " [%i:%02i/%i:%02i]",
 +		   " [%i:%02i/%i:%02i] ",
  		   elapsedTime/60, elapsedTime%60,
