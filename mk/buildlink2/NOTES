@@ -1,4 +1,4 @@
-$NetBSD: NOTES,v 1.4 2002/12/23 16:21:10 grant Exp $
+$NetBSD: NOTES,v 1.5 2002/12/23 17:09:17 jlam Exp $
 
  Caching
  =======
@@ -31,4 +31,4 @@ NetBSD 1.6 (jlam)		Yes!		Yes!
 OpenBSD (cjep)			Yes!		N/A
 Solaris 7			N/A		N/A
 Solaris 8 (grant)		Yes!		Yes!
-Solaris 9 (salo)		Yes!		N/A
+Solaris 9 (salo)		Yes!		Yes!

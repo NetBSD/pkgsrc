@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.63 2002/12/22 19:02:43 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.64 2002/12/23 17:09:17 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -74,11 +74,16 @@ CONFIGURE_ENV+=		BUILDLINK_UPDATE_CACHE=no
 # The caching code, which greatly speeds up the build process, works only
 # on certain platforms.
 #
-_BLNK_CACHE_ALL=	NetBSD
-.if !empty(_BLNK_CACHE_ALL:M${OPSYS})
+_BLNK_CACHE_ALL=	# empty
+_BLNK_CACHE_ALL+=	NetBSD-1.[5-9]*-*
+_BLNK_CACHE_ALL+=	SunOS-2.[89]-sparc
+
+.for _pattern_ in ${_BLNK_CACHE_ALL}
+.  if !empty(MACHINE_PLATFORM:M${_pattern_})
 CONFIGURE_ENV+=		BUILDLINK_CACHE_ALL=yes
 MAKE_ENV+=		BUILDLINK_CACHE_ALL=yes
-.endif
+.  endif
+.endfor
 
 .if defined(USE_X11)
 USE_X11_LINKS?=		YES
