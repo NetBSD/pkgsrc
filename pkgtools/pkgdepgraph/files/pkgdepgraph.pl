@@ -1,41 +1,44 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: pkgdepgraph.pl,v 1.1.1.1 2002/11/07 23:18:01 atatat Exp $
+# $NetBSD: pkgdepgraph.pl,v 1.2 2002/12/26 05:40:48 atatat Exp $
 # pkgdepgraph: @DISTVER@
-
-# (1) lintpkgsrc -i > ! pkgdepgraph.in			(optional, adds color)
-# (1a) audit-packages >> pkgdepgraph.in			(optional, adds color)
-# (2) ./pkgdepgraph pkgdepgraph.in > ! pkgdepgraph.out	(can leave off lint)
-# (3) dotty pkgdepgraph.out				(to view it)
-# (4) dot -Tgif pkgdepgraph.out > ! pkgdepgraph.gif
-# (5) file pkgdepgraph.gif				(to determine size)
-# (6) dot -Tps pkgdepgraph.out > ! pkgdepgraph.ps
-# (7) pstopnm -stdout -xsize 26332 -ysize 652 pkgdepgraph.ps > ! pkgdepgraph.ppm
 
 use strict;
 
 use Getopt::Std;
-my($opts, %opt, $usecolor, $locations, $order, $versions) = ('cd:lov');
+my($opts, %opt, $usecolor, $group, $locations, $order, $versions) = ('cd:glov');
 my($pkg_dbdir);
-die("usage: $0 [-d pkg_dbdir] [-clov]\n") if (!getopts($opts, \%opt));
+die("usage: $0 [-d pkg_dbdir] [-cglov]\n") if (!getopts($opts, \%opt));
 $usecolor = $opt{c};
 $pkg_dbdir = $opt{d} || $ENV{'PKG_DBDIR'} || "/var/db/pkg";
+$group = $opt{g};
 $locations = $opt{l};
 $order = $opt{o};
 $versions = $opt{v};
 
 my(@pkgs, $pkg, $req, %req, @reqs, @rreqs);
+my(%clusters, $closeme);
 my(%where, %leaf, $pkgcnt, $num, %num, @num, %ord, @ord, $suffix);
 my(%color, $color1, $color2, $ecolor, %vuln);
 my(%need, $label);
+my($recolor, @graph);
 
 ##
 ## load out-of-date or security problem list (if given)
 ##
+$recolor = 0;
 if (@ARGV || ! -t) {
     $usecolor = 1;
     while (<>) {
-	if (/^Version mismatch: '(\S+)' (\S+) vs (\S+)/) {
+	if (/^digraph/) {
+	    $recolor = 1;
+	    @graph = ($_);
+	}
+	elsif ($recolor == 1) {
+	    push(@graph, $_);
+	    $recolor = 2 if (/^}/);
+	}
+	elsif (/^Version mismatch: '(\S+)' (\S+) vs (\S+)/) {
 	    $color{"$1-$2"} = "red";
 	    $need{"$1-$2"} = "$1-$3";
 	}
@@ -45,7 +48,6 @@ if (@ARGV || ! -t) {
 	elsif (/Package (\S+) has a (\S+) vulnerability/) {
 	    $vuln{$1} = $2;
 	    $color{$1} = "red";
-	    # $1 =~ /(\S+)-([0-9\.]*([a-z]+\d*)?(nb[0-9]*)?)$/i;
 	}
     }
 }
@@ -53,8 +55,7 @@ if (@ARGV || ! -t) {
 ##
 ## load pkg list
 ##
-chdir($pkg_dbdir);
-opendir(P, ".") || die("opendir");
+opendir(P, $pkg_dbdir) || die("opendir");
 @pkgs = grep(/-/, readdir(P));
 closedir(P);
 $pkgcnt = @pkgs;
@@ -65,7 +66,7 @@ $pkgcnt = @pkgs;
 foreach $pkg (@pkgs) {
     $where{$pkg} = $pkg;
     $leaf{$pkg} = 1 unless (defined($leaf{$pkg}));
-    open(R, "<$pkg/+BUILD_INFO") ||
+    open(R, "<$pkg_dbdir/$pkg/+BUILD_INFO") ||
 	die("$pkg: +BUILD_INFO: $!\n");
     while (<R>) {
 	if (/^PKGPATH\s*=\s*(\S+)/) {
@@ -74,13 +75,80 @@ foreach $pkg (@pkgs) {
 	}
     }
     close(R);
-    next if (!open(R, "<$pkg/+REQUIRED_BY"));
+    next if (!open(R, "<$pkg_dbdir/$pkg/+REQUIRED_BY"));
     while ($req = <R>) {
 	chomp($req);
 	$leaf{$pkg} = 0;
 	$req{$req}->{$pkg} = 1;
-#	print("$req -> $pkg\n");
     }
+}
+
+##
+## if we're recoloring an existing graph, recolor it now and finish
+##
+if ($recolor) {
+    my(%over, %nver, @label, $ocolor);
+    map({ /(.*)-(.*)/ && ($nver{$1} = $2) } @pkgs);
+
+    foreach (@graph) {
+	# we don't recolor edges
+	($pkg) = (/\"([^\"]+)\"/);
+	$pkg =~ s/(.*)-(.*)/$1/;
+	$over{$pkg} = $2;
+
+	if (/, EDGE$/) {
+	    if (defined($nver{$pkg})) {
+		s/color=\"[^\"]+\"/color=\"green\"/;
+	    }
+	    else {
+		s/color=\"[^\"]+\"/color=\"black\"/;
+	    }
+	}
+
+	elsif (/label/) {
+	    s/color=\"([^\"]+)\"/color="NEWCOLOR"/;
+	    $ocolor = $1;
+	    s/label=\"([^\"]+)\"/label="NEWLABEL"/;
+	    $label = $1;
+	    if ($nver{$pkg}) {
+		if ($nver{$pkg} ne $over{$pkg} || $ocolor ne "red") {
+		    s/NEWCOLOR/green/;
+		}
+		else {
+		    s/NEWCOLOR/$ocolor/;
+		}
+
+		@label = split(/\\n/, $label);
+		$label = "";
+
+		# "where" tag
+		if ($label[0] =~ m:/:) {
+		    $label .= "\\n" . shift(@label);
+		}
+
+		# installed pkg
+		$label[0] =~ s/(.*$pkg)-\S*$/$1-$nver{$pkg}/ if ($nver{$pkg});
+		$label .= "\\n" . shift(@label);
+
+		# "needed" pkg
+		if ($label[0] =~ /^$pkg-(.*)/) {
+		    $label .= "\\n$label[0]" if ($1 ne $nver{$pkg});
+		    shift(@label);
+		}
+
+		# there shouldn't be anything left, but...
+		$label .= "\\n" . join("\\n", @label);
+
+		$label =~ s/\\n//;
+	    }
+	    else {
+		s/NEWCOLOR/black/;
+	    }
+	    s/NEWLABEL/$label/;
+	}
+	print;
+    }
+    exit(0);
 }
 
 ##
@@ -89,9 +157,13 @@ foreach $pkg (@pkgs) {
 foreach $pkg (@pkgs) {
     @reqs = sort(keys %{$req{$pkg}});
     @rreqs = recurse(@reqs);
-#    print("$pkg -> (@reqs) -> (@rreqs)\n");
     map(delete($req{$pkg}->{$_}), @rreqs);
 }
+
+##
+## Create a hash of clusters of package prefixes, with counts
+##
+map({ $a=""; map({ $a .= $_; $clusters{$a}++; } /([^-_]*[-_])/g); } @pkgs);
 
 ##
 ## impose some sort of order on the pkgs by assigning them numbers
@@ -99,15 +171,6 @@ foreach $pkg (@pkgs) {
 ##
 foreach $pkg (@pkgs) {
     order(1, $pkg);
-}
-
-sub order {
-    my($n, @pkgs) = @_;
-    my($pkg);
-    foreach $pkg (@pkgs) {
-	$ord{$pkg} = $n if ($ord{$pkg} <= $n);
-	order($n + 1, sort(keys %{$req{$pkg}}));
-    }
 }
 
 ##
@@ -146,9 +209,16 @@ foreach $pkg (sort(bynum @pkgs)) {
     }
     $suffix = "\t// \#$ord{$pkg}, group $num{$pkg}, $num[$num{$pkg}] members, $pkgcnt pkgs";
     $suffix .= ", LEAF" if ($leaf{$pkg});
+    $a = "";
+    foreach ($pkg =~ /([^-_]*[-_])/g) {
+	last if ($clusters{$a .= $_} <= 1 || !$group);
+	printf("subgraph \"cluster_%s\" {\n", substr($a, 0, -1));
+	$closeme .= "}\n";
+    }
     printf("\"%s\" [color=\"%s\",label=\"%s\"];$suffix\n", $pkg , $color1, $label);
+    print($closeme);
+    $closeme = "";
     @reqs = sort(keys %{$req{$pkg}});
-#    print("// $pkg -> (@reqs)\n");
     $suffix =~ s/, LEAF$//;
     $suffix .= ", EDGE";
     foreach $req (@reqs) {
@@ -225,4 +295,16 @@ sub bynum {
 sub byord {
     return $ord{$b} <=> $ord{$a} ||
 	$b cmp $a;
+}
+
+##
+## order - the order of a pkg is one higher than anything below it  
+##
+sub order {
+    my($n, @pkgs) = @_;
+    my($pkg);
+    foreach $pkg (@pkgs) {
+	$ord{$pkg} = $n if ($ord{$pkg} <= $n);
+	order($n + 1, sort(keys %{$req{$pkg}}));
+    }
 }

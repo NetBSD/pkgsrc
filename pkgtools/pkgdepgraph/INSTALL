@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1 2002/12/26 05:40:48 atatat Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+case ${STAGE} in
+PRE-INSTALL)
+	;;
+
+POST-INSTALL)
+	echo "============================================================"
+	echo "Note that in order to facilitate the use of this package"
+	echo "on "\""client machines"\"", the dependency of this package upon"
+	echo "the "\""graphviz"\"" package (located in graphics/graphviz) has"
+	echo "been removed.  You must install the "\""graphviz"\"" package in"
+	echo "order to view the data that this program generates."
+	echo "============================================================"
+	;;
+
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+
+exit 0
