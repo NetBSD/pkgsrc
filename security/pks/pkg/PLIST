@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/27 16:10:23 jlam Exp $
+bin/pgpsplit
+bin/pks-mail.sh 
+bin/pks-queue-run.sh
+bin/pksclient 
+bin/pksd
+bin/pksdctl
+etc/rc.d/pksd.sh
+man/man5/pksd.conf.5  
+man/man8/pks-intro.8 
+man/man8/pksclient.8 
+man/man8/pksd.8 
+man/man8/pksdctl.8
+share/examples/pksd.conf
+share/pks/mail_intro 
+share/pks/pks_help.en
