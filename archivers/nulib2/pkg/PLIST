@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/11 03:01:02 tv Exp $
+bin/nulib2
+man/man1/nulib2.1
