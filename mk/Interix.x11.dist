@@ -1,8 +1,8 @@
-#     $NetBSD: Interix.x11.dist,v 1.1 2004/03/11 17:53:16 tv Exp $
+#     $NetBSD: Interix.x11.dist,v 1.2 2004/03/11 21:06:12 tv Exp $
 #     FreeBSD Id: BSD.x11.dist,v 1.2 1997/06/10 07:55:10 asami Exp
 #
 
-/set type=dir uname=root gname=wheel mode=0755
+/set type=dir uname=Administrator gname=+Administrators mode=0775
 .
     bin
     ..
