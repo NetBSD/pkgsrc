@@ -1,4 +1,4 @@
-# $NetBSD: bsd.compiler.mk,v 1.3 2004/02/01 01:36:22 jlam Exp $
+# $NetBSD: bsd.compiler.mk,v 1.4 2004/02/01 11:14:04 jlam Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -86,9 +86,7 @@ _PKGSRC_COMPILER:=	${_compiler_} ${_PKGSRC_COMPILER}
 .endfor
 
 .for _compiler_ in ${_PKGSRC_COMPILER}
-.  if exists(../../mk/compiler/${_compiler_}.mk)
-.    include "../../mk/compiler/${_compiler_}.mk"
-.  endif
+.  include "../../mk/compiler/${_compiler_}.mk"
 .endfor
 
 .endif	# BSD_COMPILER_MK
