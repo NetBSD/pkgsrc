@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2004/12/20 11:30:59 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/27 22:00:31 xtraeme Exp $
 #
 
-DISTNAME=	ExtUtils-PkgConfig-1.03
+DISTNAME=	ExtUtils-PkgConfig-1.06
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=ExtUtils/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://gtk2-perl.sourceforge.net/
