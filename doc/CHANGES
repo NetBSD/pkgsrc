@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2609 2003/06/28 10:56:42 jmmv Exp $
+$NetBSD: CHANGES,v 1.2610 2003/06/28 11:48:18 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2598,3 +2598,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated nautilus to 2.2.3.1nb4 [jmmv 2003-06-27]
 	Updated rc.subr to 20030627 [grant 2003-06-28]
 	Updated xmule to 1.4.1a [jmmv 2003-06-28]
+	Updated yasm to 0.2.2 [jmmv 2003-06-28]
