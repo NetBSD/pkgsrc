@@ -6,7 +6,7 @@
   
   install: all
   	$(INSTALL_PROGRAM) xplot $(bindir)/xplot
-+ 	$(INSTALL_PROGRAM) tcpdump2xplot.pl $(bindir)/tcpdump2xplot.pl
++ 	$(BSD_INSTALL_SCRIPT) tcpdump2xplot.pl $(bindir)/tcpdump2xplot.pl
   
   clean:
   	rm -f ${PROG} ${PROG}.old *.o version_string.c
