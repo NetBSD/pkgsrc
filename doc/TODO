@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2673 2004/12/05 16:13:03 he Exp $
+$NetBSD: TODO,v 1.2674 2004/12/05 16:29:57 he Exp $
 
 Suggested new packages
 ======================
@@ -754,7 +754,6 @@ Suggested package updates
 	o p5-CGI-FormBuilder-2.13
 	o p5-CGI_Lite-2.02
 	o p5-Class-MethodMaker-2.04.1
-	o p5-Compress-Bzip2-1.02
 	o p5-Config-IniFiles-2.38
 	o p5-Convert-BER-1.3101
 	o p5-Crypt-CBC-2.12

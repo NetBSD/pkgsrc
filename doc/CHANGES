@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8288 2004/12/05 16:13:03 he Exp $
+$NetBSD: CHANGES,v 1.8289 2004/12/05 16:29:57 he Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5791,3 +5791,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Class-Container to 0.11 [he 2004-12-05]
 	Updated p5-Class-ObjectTemplate to 0.7 [he 2004-12-05]
 	Updated p5-Class-ReturnValue to 0.52 [he 2004-12-05]
+	Updated p5-Compress-Bzip2 to 1.02 [he 2004-12-05]
