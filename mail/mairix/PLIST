@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/25 00:19:40 simonb Exp $
+bin/mairix
+share/doc/html/mairix/mairix.html
+@dirrm share/doc/html/mairix
