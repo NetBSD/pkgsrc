@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2004/04/07 20:16:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2004/10/15 20:00:57 tv Exp $
 
-DISTNAME=		autoswc-1.2
+DISTNAME=		autoswc-1.3
 CATEGORIES=		pkgtools sysutils
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -43,6 +43,7 @@ SUBST_SED.build+=	-e 's|@AUTOCONF@|${PREFIX.autoconf}/bin/autoconf|g'
 SUBST_SED.build+=	-e 's|@AUTOMAKE@|${PREFIX.automake}/bin/automake|g'
 SUBST_SED.build+=	-e 's|@CACHEDIR@|${CACHEDIR}|g'
 SUBST_SED.build+=	-e 's|@LIBTOOLIZE@|${PREFIX.libtool}/bin/libtoolize|g'
+SUBST_SED.build+=	-e 's|@MACHINE_GNU_PLATFORM@|${MACHINE_GNU_PLATFORM}|g'
 SUBST_SED.build+=	-e 's|@MAKE@|${MAKE}|g'
 SUBST_SED.build+=	-e 's|@MKCONF@|${MKCONF}|g'
 SUBST_SED.build+=	-e 's|@PREFIX@|${PREFIX}|g'
