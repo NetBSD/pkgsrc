@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2004/11/19 10:09:48 adam Exp $
+# $NetBSD: Makefile,v 1.13 2004/12/21 20:14:38 xtraeme Exp $
 
-DISTNAME=	hatari-0.50
+DISTNAME=	hatari-0.60
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hatari/}
 
@@ -20,4 +20,5 @@ post-install:
 			${PREFIX}/share/doc/hatari
 
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
