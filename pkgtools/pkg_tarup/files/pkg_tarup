@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $Id: pkg_tarup,v 1.11 2003/12/11 16:29:08 erh Exp $
+# $Id: pkg_tarup,v 1.12 2004/04/20 16:26:07 wiz Exp $
 #
 # Tar up installed package
 #
@@ -24,7 +24,7 @@ SU=${SU:-@SU@}
 
 if [ `${ID} -u` != 0 ]; then
 	${ECHO} "Becoming root@`/bin/hostname` to create a binary package"
-	${ECHO} -n "`${ECHO} ${SU} | ${AWK} '{ print $$1 }'` ";\
+	${ECHO} -n "`${ECHO} ${SU} | ${AWK} '{ print $1 }'` ";\
 	exec ${SU} root -c "$0 $@"
 fi
 
