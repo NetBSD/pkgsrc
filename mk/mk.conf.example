@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.214 2001/06/04 16:44:42 jtb Exp $
+# $NetBSD: mk.conf.example,v 1.215 2001/06/04 16:56:18 jtb Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -179,6 +179,9 @@
 #ACCEPTABLE_LICENSES+=	unarj-license
 # Enable it if you accept the license terms for the unarj archiver
 # and would like to build unarj.  see pkgsrc/archivers/unarj.
+#ACCEPTABLE_LICENSES+=	unrar-license
+# Enable it if you accept the license terms for the unrar archiver
+# and would like to build unrar.  see pkgsrc/archivers/unrar.
 
 #SPECIFIC_PKGS=
 # Don't use the default of all packages (from the top-level of the
