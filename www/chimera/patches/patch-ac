@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/10/19 14:23:00 fredb Exp $
+
+--- port/getcwd.c.orig	Sun Mar 28 20:22:30 1999
++++ port/getcwd.c	Wed Oct 18 18:35:25 2000
+@@ -34,7 +34,9 @@
+ #include <sys/param.h>
+ 
+ extern char *getwd();
++#ifndef errno
+ extern int errno;
++#endif
+ 
+ char *
+ getcwd(buf, size)

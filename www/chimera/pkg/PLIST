@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/19 14:23:01 fredb Exp $
+bin/chimera
+man/cat1/chimera.0
+share/doc/chimera/HINTS
+share/doc/chimera/INFO
+share/doc/chimera/LICENSE

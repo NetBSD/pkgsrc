@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/10/19 14:23:01 fredb Exp $
+
+--- mxw/TextField.c.orig	Sun Mar 28 20:19:56 1999
++++ mxw/TextField.c	Wed Oct 18 19:29:15 2000
+@@ -943,7 +943,8 @@
+   XSelectionRequestEvent *req = XtGetSelectionRequest(aw, *selection, NULL);
+ 
+   if (*target == XA_TARGETS(XtDisplay(aw))) {
+-    Atom *targetP, *std_targets;
++    Atom *targetP;
++    XPointer std_targets;
+     unsigned long std_length;
+ 
+     XmuConvertStandardSelection(aw, req->time, selection,
