@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/04/01 16:13:17 kim Exp $
+# $NetBSD: Makefile,v 1.16 2004/04/12 18:29:04 kim Exp $
 #
 
 DISTNAME=	Apache-Gallery-0.7
@@ -18,7 +18,7 @@ DEPENDS+=	p5-Image-Imlib2-[0-9]*:../../graphics/p5-Image-Imlib2
 DEPENDS+=	p5-Image-Info>=1.15:../../graphics/p5-Image-Info
 DEPENDS+=	p5-Image-Size-[0-9]*:../../graphics/p5-Image-Size
 DEPENDS+=	p5-CGI-FastTemplate-[0-9]*:../../www/p5-CGI-FastTemplate
-DEPENDS+=	p5-libapreq-[0-9]*:../../www/p5-libapreq
+DEPENDS+=	p5-libapreq{,2}-[0-9]*:../../www/${LIBAPREQ}
 
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
@@ -30,6 +30,12 @@ PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Apache/Gallery/.packlist
 
 PKG_SYSCONFSUBDIR?=	httpd
 MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+
+.if defined(PKG_APACHE_DEFAULT) && (${PKG_APACHE_DEFAULT} == "apache2")
+LIBAPREQ=		p5-libapreq2
+.else
+LIBAPREQ=		p5-libapreq
+.endif
 
 AG=			ag
 AG_DOCDIR=		${PREFIX}/share/doc/${AG}
@@ -94,7 +100,6 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/${AG}.conf ${AG_EGDIR}
 
 .include "../../graphics/imlib2/buildlink3.mk"
-.include "../../www/ap-perl/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 
 .include "../../mk/bsd.pkg.mk"
