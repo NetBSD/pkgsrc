@@ -1,0 +1,61 @@
+$NetBSD: patch-ab,v 1.1 2001/12/19 22:25:31 agc Exp $
+
+Fix up for NetBSD prototypes
+
+--- configure.in	2001/12/19 22:16:23	1.1
++++ configure.in	2001/12/19 22:18:30
+@@ -718,31 +718,31 @@
+ 	["int"],
+ 	["int"],
+ 	["const struct sockaddr *" "__CONST_SOCKADDR_ARG" "struct sockaddr *" "const void *" "__const struct sockaddr *"],
+-	["socklen_t" "int" "size_t"])
++	["socklen_t" "int" "size_t" "__socklen_t"])
+ 
+ 	L_SOCKPROTO(${PROTO_ACCEPT}.accept, [failproto=t],
+ 	["int"],
+ 	["int"],
+ 	["struct sockaddr *" "__SOCKADDR_ARG" "__const struct sockaddr *" "void *"],
+-	["socklen_t *" "int *" "Psocklen_t" "size_t *"])
++	["socklen_t *" "int *" "Psocklen_t" "size_t *" "__socklen_t *"])
+ 
+ 	L_SOCKPROTO(bind, [failproto=t],
+ 	["int"],
+ 	["int"],
+ 	["const struct sockaddr *" "__CONST_SOCKADDR_ARG" "struct sockaddr *" "const void *" "__const struct sockaddr *"],
+-	["socklen_t" "int" "size_t"])
++	["socklen_t" "int" "size_t" "__socklen_t"])
+ 
+ 	L_SOCKPROTO(${PROTO_GETPEERNAME}.getpeername, [failproto=t],
+ 	["int"],
+ 	["int"],
+ 	["struct sockaddr *" "__SOCKADDR_ARG" "void *"],
+-	["socklen_t *" "int *" "Psocklen_t" "size_t *"])
++	["socklen_t *" "int *" "Psocklen_t" "size_t *" "__socklen_t *"])
+ 
+ 	L_SOCKPROTO(${PROTO_GETSOCKNAME}.getsockname, [failproto=t],
+ 	["int"],
+ 	["int"],
+ 	["struct sockaddr *" "__SOCKADDR_ARG" "void *"],
+-	["int *" "socklen_t *" "Psocklen_t" "size_t *"])
++	["int *" "socklen_t *" "Psocklen_t" "size_t *" "__socklen_t *"])
+ 
+ 	L_SOCKPROTO(${PROTO_RECVFROM}.recvfrom, [failproto=t],
+ 	["ssize_t" "int"],
+@@ -751,7 +751,7 @@
+ 	["size_t" "int"],
+ 	["int" "unsigned int"],
+ 	["struct sockaddr *" "__SOCKADDR_ARG" "void *"],
+-	["socklen_t *" "int *" "Psocklen_t" "size_t *"])
++	["socklen_t *" "int *" "Psocklen_t" "size_t *" "__socklen_t *"])
+ 
+ 	L_SOCKPROTO(send, [failproto=t],
+ 	["ssize_t" "int"],
+@@ -767,7 +767,7 @@
+ 	["size_t" "int"],
+ 	["int" "unsigned int"],
+ 	["const struct sockaddr *" "__CONST_SOCKADDR_ARG" "const void *" "__const struct sockaddr *"],
+-	["socklen_t" "int" "size_t"])
++	["socklen_t" "int" "size_t" "__socklen_t"])
+ 
+ 	L_SOCKPROTO(recv, [failproto=t],
+ 	["ssize_t" "int"],
