@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/10/31 08:17:43 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/10/26 06:50:10 grant Exp $
 
 PKGNAME=	aalib-x11-${BASE_VERS}
 CATEGORIES+=	x11
@@ -23,6 +23,10 @@ post-patch:
 			-e "s,libaa_la,libaa_x11_la,g"			\
 			$${file} > $${file}.fixed;			\
 		${MV} -f $${file}.fixed $${file};			\
+	done
+	@for f in `${FIND} ${WRKSRC} -name '*.[ch]'`; do		\
+		${SED} -e "s|<malloc.h>|<stdlib.h>|g" $$f > $$f.patch	\
+		&& ${MV} $$f.patch $$f;					\
 	done
 
 do-build:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2003/09/17 19:40:26 grant Exp $
+# $NetBSD: Makefile.common,v 1.10 2003/10/26 06:50:10 grant Exp $
 
 DISTNAME=	aalib-${DIST_VERS}
 WRKSRC=		${WRKDIR}/aalib-1.4.0
@@ -20,6 +20,14 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 USE_PKGSRC_GCC=		# defined
+.endif
+
+.if !target(post-patch)
+post-patch:
+	@for f in `${FIND} ${WRKSRC} -name '*.[ch]'`; do		\
+		${SED} -e "s|<malloc.h>|<stdlib.h>|g" $$f > $$f.patch	\
+		&& ${MV} $$f.patch $$f;					\
+	done
 .endif
 
 .include "../../mk/bsd.pkg.mk"
