@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1.1.1 2001/03/13 13:18:24 wiz Exp $
+
+--- util1/cscore/Makefile.orig	Wed Oct 11 16:33:37 2000
++++ util1/cscore/Makefile
+@@ -41,7 +41,7 @@
+ 
+ install-$(LIBCSCORE_DYNSO):	$(LIBCSCORE_DYNSO)
+ 		install -m 755 $(LIBCSCORE_DYNSO) $(LIB)
++		ln -sf $(LIBCSCORE_DYNSO) $(LIB)/$(LIBCSCORE_DYN).4
+ 		ln -sf $(LIBCSCORE_DYNSO) $(LIB)/$(LIBCSCORE_DYN)
+-		/sbin/ldconfig $(LIB)
+ 
+ include $(TOP)/Make.Subdirs
