@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 1998/05/08 18:48:46 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/05/09 02:09:08 hubertf Exp $
+@option preserve
 bin/pgs
 bin/tkpod
 bin/tkweb
@@ -42,8 +43,7 @@ lib/perl5/man/man3/Tk::Xrm.3.gz
 lib/perl5/man/man3/Tk::demos::widget_lib::WidgetDemo.3.gz
 lib/perl5/man/man3/Tk::pTk.3.gz
 lib/perl5/man/man3/Tk::widgets.3.gz
-@comment This is (also) part of the main perl pkg and will be removed by that one
-@comment lib/perl5/man/man3/blib.3.gz
+lib/perl5/man/man3/blib.3.gz
 lib/perl5/site_perl/Bundle/Tk.pm
 lib/perl5/site_perl/Tk.pm
 lib/perl5/site_perl/Tk/Adjuster.pm
@@ -528,8 +528,7 @@ lib/perl5/site_perl/auto/Tk/interps.al
 lib/perl5/site_perl/auto/Tk/lsearch.al
 lib/perl5/site_perl/auto/Tk/tkinit.al
 lib/perl5/site_perl/auto/Tk/updateWidgets.al
-@comment This is (also) part of the main perl pkg and will be removed by that one
-@comment lib/perl5/site_perl/blib.pm
+lib/perl5/site_perl/blib.pm
 lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/Config.pm
 lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/TkXSUB.def
 lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/leak_util.h
