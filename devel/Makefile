@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.594 2005/01/02 13:43:18 adrianp Exp $
+# $NetBSD: Makefile,v 1.595 2005/01/03 14:32:27 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -64,7 +64,6 @@ SUBDIR+=	cbrowser
 SUBDIR+=	ccache
 SUBDIR+=	cdecl
 SUBDIR+=	cdk
-SUBDIR+=	cervisia2
 SUBDIR+=	cfitsio
 SUBDIR+=	cgdb
 SUBDIR+=	check
@@ -196,8 +195,6 @@ SUBDIR+=	jam
 SUBDIR+=	javadeps
 SUBDIR+=	jgrasp
 SUBDIR+=	kdbg
-SUBDIR+=	kdebindings2
-SUBDIR+=	kdesdk2
 SUBDIR+=	kdesdk3
 SUBDIR+=	kdevelop
 SUBDIR+=	kdevelop-base
@@ -564,7 +561,6 @@ SUBDIR+=	treecc
 SUBDIR+=	trio
 SUBDIR+=	tvision
 SUBDIR+=	ucl
-SUBDIR+=	uml
 SUBDIR+=	unidiff
 SUBDIR+=	vanessa_adt
 SUBDIR+=	vanessa_logger
