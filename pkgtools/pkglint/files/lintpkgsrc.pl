@@ -1,6 +1,6 @@
 #!@PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.96 2005/02/05 15:39:44 wiz Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.97 2005/03/07 22:21:15 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1101,15 +1101,19 @@ sub parse_eval_make_false
     # XXX Could do something with target
     while ( $test =~ /(target|empty|make|defined|exists)\s*\(([^()]+)\)/ )
 	{
+	my $var = $${vars}{$2};
+	if (defined $var && $var eq $magic_undefined)
+	    { $var = undef; }
 	if ($1 eq 'exists')
 	    { $_ = (-e $2) ?1 :0; }
 	elsif( $1 eq 'defined')
-	    { $_ = (defined($${vars}{$2}) ?1 :0); }
+	    { $_ = defined($var) ?1 :0; }
 	elsif( $1 eq 'empty')
-	    { $_ = ((not defined($${vars}{$2}) or (length($${vars}{$2}) == 0)) ?1 :0); }
+	    { $_ = ((not defined($var) or (length($var) == 0)) ?1 :0); }
 	else
 	    { $_ = 0; }
 	$test =~ s/$1\s*\([^()]+\)/$_/;
+	debug("conditional: update to $test\n");
 	}
     while ( $test =~ /([^\s()\|\&]+)\s+(!=|==)\s+([^\s()]+)/ )
 	{
@@ -1119,7 +1123,7 @@ sub parse_eval_make_false
 	    { $_ = ($1 ne $3) ?1 :0; }
 	$test =~ s/[^\s()\|\&]+\s+(!=|==)\s+[^\s()]+/$_/;
 	}
-    if ($test !~ /[^<>\d()\s&|.]/ )
+    if ($test !~ /[^<>\d()\s&|.!]/ )
 	{
 	$false = eval "($test)?0:1";
 	if (!defined $false)
