@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/05/11 16:03:24 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2001/05/17 19:57:02 jlam Exp $
 #
 # According to AbiSource's explanation of their trademark rights,
 # compilations/distributions of AbiWord not provided by AbiSource must
@@ -36,12 +36,14 @@ ICONVSRC=	libiconv-${ABIWORD_VERS}${EXTRACT_SUFX}
 UNIXFONTS=	unixfonts-${ABIWORD_VERS}${EXTRACT_SUFX}
 WVSRC=		wv-${ABIWORD_VERS}${EXTRACT_SUFX}
 
-CPPFLAGS+=	-I${WRKDIR}/wv 		# avoid installed wv headers
-CPPFLAGS+=	-I${WRKDIR}/libiconv	# avoid installed libiconv headers
-CPPFLAGS+=	-I${LOCALBASE}/include	# png.h
+# Avoid headers from some installed packages.  These must come first!
+CPPFLAGS+=	-I${WRKDIR}/wv
+CPPFLAGS+=	-I${WRKDIR}/libiconv/include
+
+CPPFLAGS+=	-I${LOCALBASE}/include		# png.h
 
 MAKE_ENV+=	ABI_BUILD_VERSION="${ABIWORD_VERS}"
-MAKE_ENV+=	OS_CFLAGS="${CPPFLAGS}"
+MAKE_ENV+=	OS_EXTRA_CFLAGS="${CPPFLAGS}"
 MAKE_ENV+=	OS_DLLFLAGS="${LDFLAGS}"
 
 post-install:

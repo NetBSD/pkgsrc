@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.4 2001/05/17 19:57:03 jlam Exp $
+
+--- src/config/abi_rules.mk.orig	Thu May 17 15:36:47 2001
++++ src/config/abi_rules.mk
+@@ -36,6 +36,7 @@
+ ##################################################################
+ ##################################################################
+ 
++CFLAGS+=	$(OS_EXTRA_CFLAGS)
+ 
+ ifdef LIBRARY_NAME
+ ifeq ($(OS_NAME), WIN32)
