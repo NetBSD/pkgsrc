@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.90 2003/07/24 07:54:46 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.91 2003/07/31 15:13:22 seb Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -384,9 +384,7 @@ sub checkmessage {
 sub checkplist {
 	local($file) = @_;
 	local($curdir) = ($localbase);
-	local($inforemoveseen, $infoinstallseen, $infoseen) = (0, 0, 0);
-	local($infobeforeremove, $infoafterinstall) = (0, 0);
-	local($infooverwrite) = (0);
+	local($installinfoseen) = 0;
 	local($rcsidseen) = 0;
 
 	open(IN, "< $portdir/$file") || return 0;
@@ -412,14 +410,8 @@ sub checkplist {
 			} elsif ($_ =~ /^\@unexec[ \t]+rmdir/) {
 				&perror("WARN: use \"\@dirrm\" ".
 					"instead of \"\@unexec rmdir\".");
-			} elsif ($_ =~ /^\@exec[ \t]+(.*\/)?install-info/) {
-				$infoinstallseen = $.
-			} elsif ($_ =~ /^\@exec[ \t]+(.*\/)?\$\{INSTALL_INFO\}/) {
-				$infoinstallseen = $.
-			} elsif ($_ =~ /^\@unexec[ \t]+(.*\/)?install-info[ \t]+--delete/) {
-				$inforemoveseen = $.
-			} elsif ($_ =~ /^\@unexec[ \t]+(.*\/)?\$\{INSTALL_INFO\}[ \t]+--delete/) {
-				$inforemoveseen = $.
+			} elsif ($_ =~ /^\@(un)?exec[ \t]+(.*\/)?(install-info|\$\{INSTALL_INFO\})/) {
+				$installinfoseen = $.
 			} elsif ($_ =~ /^\@(exec|unexec)/) {
 				if (/ldconfig/
 				 && !/\/usr\/bin\/true/) {
@@ -448,17 +440,10 @@ sub checkplist {
 				"disallowed.");
 		}
 
-		if ($_ =~ /^info\/.*info(-[0-9]+)?$/) {
-			$infoseen = $.;
-			$infoafterinstall++ if ($infoinstallseen);
-			$infobeforeremove++ if (!$inforemoveseen);
-		}
-
 		if ($_ =~ /^info\/dir$/) {
 			&perror("FATAL: \"info/dir\" should not be listed in ".
 				"$file. use install-info to add/remove ".
 				"an entry.");
-			$infooverwrite++;
 		}
 
 		if ($_ =~ /^lib\/locale/) {
@@ -496,33 +481,12 @@ sub checkplist {
 		&perror("FATAL: RCS tag \"\$$rcsidstr\$\" must be present ".
 			"in $file as \@comment.")
 	}
-
-	if (!$infoseen) {
-		close(IN);
-		return 1;
-	}
-	if (!$infoinstallseen) {
-		if ($infooverwrite) {
-			&perror("FATAL: \"\@exec install-info\" must be used ".
-				"to add/delete entries into \"info/dir\".");
-		}
-		&perror("FATAL: \"\@exec install-info\" must be placed ".
-			"after all the info files.");
-	} elsif ($infoafterinstall) {
-		&perror("FATAL: move \"\@exec install-info\" line to make ".
-			"sure that it is placed after all the info files. ".
-			"(currently on line $infoinstallseen in $file)");
-	}
-	if (!$inforemoveseen) {
-		&perror("FATAL: \"\@unexec install-info --delete\" must ".
-			"be placed before any of the info files listed.");
-	} elsif ($infobeforeremove) {
-		&perror("FATAL: move \"\@exec install-info --delete\" ".
-			"line to make sure ".
-			"that it is placed before any of the info files. ".
-			"(currently on line $inforemoveseen in $file)");
+	if ($installinfoseen) {
+		&perror("FATAL: \"\@exec install-info ...\" or \"\@unexec ".
+			"install-info ...\" is deprecated.");
 	}
 	close(IN);
+	return 1;
 }
 
 #
@@ -652,6 +616,9 @@ sub readmakefile {
 			$includefile = $1;
 			if ($includefile =~ /\"([^\"]+)\"/) {
 				$includefile = $1;
+			}
+			if ($includefile =~ /\/mk\/texinfo\.mk/) {
+				&perror("FATAL: do not include $includefile");
 			}
 			if ($includefile =~ /\/mk\/bsd/) {
 				# we don't want to include the whole
