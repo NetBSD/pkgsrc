@@ -1,3 +1,4 @@
+$NetBSD: patch-ah,v 1.2 2002/11/26 21:46:50 cjep Exp $
 --- Xvnc/config/imake/Makefile.ini.orig	Wed Oct 23 19:00:22 2002
 +++ Xvnc/config/imake/Makefile.ini	Wed Oct 23 19:00:32 2002
 @@ -10,7 +10,6 @@
