@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/01/20 12:18:16 agc Exp $
+# $NetBSD: Makefile,v 1.20 2004/04/10 23:49:20 snj Exp $
 #
 
 DISTNAME=	plsrc210
@@ -14,7 +14,7 @@ COMMENT=	Versatile data visualization engine
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 NO_CONFIGURE=	YES
 USE_X11=	YES
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
 ALL_TARGET=	ploticus
 MANSRC=		${WRKDIR}/${DISTNAME}/man
@@ -53,11 +53,11 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/${file} ${DOCDST}/${file}
 .endfor
 
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../graphics/gd/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/freetype-lib/buildlink2.mk"
-.include "../../graphics/freetype2/buildlink2.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/gd/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/freetype-lib/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
