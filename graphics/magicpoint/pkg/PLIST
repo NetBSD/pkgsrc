@@ -1,0 +1,14 @@
+@comment $NetBDS$
+bin/mgp
+bin/mgp2ps
+bin/mgpnet
+bin/xwintoppm
+lib/X11/mgp/default.mgp
+lib/X11/mgp/mgp1.gif
+lib/X11/mgp/mgp2.gif
+lib/X11/mgp/mgp3.gif
+man/cat1/mgp.0
+man/cat1/mgp2ps.0
+man/cat1/mgpnet.0
+man/cat1/xwintoppm.0
+@dirrm lib/X11/mgp
