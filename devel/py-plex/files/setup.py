@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+# $NetBSD: setup.py,v 1.2 2002/10/24 12:38:04 drochner Exp $
 
 from distutils.core import setup
 
