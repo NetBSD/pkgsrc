@@ -1,25 +1,22 @@
-# $NetBSD: Makefile,v 1.7 2002/10/07 19:33:58 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2002/12/24 21:38:33 wiz Exp $
+#
 
-DISTNAME=	gtkam-0.1.2
-PKGREVISION=	3
+DISTNAME=	gtkam-0.1.10
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gphoto/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	root@garbled.net
-HOMEPAGE=	http://www.gphoto.org/gphoto2/
-COMMENT=	GTK+ application for downloading, saving and manipulating on images from digital cameras
+MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://gphoto.sourceforge.net/proj/gphoto2/
+COMMENT=	digital camera access graphical client (GTK2)
 
-BUILD_USES_MSGFMT=	yes
+USE_BUILDLINK2=		YES
+USE_LIBTOOL=		YES
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+USE_PKGLOCALEDIR=	YES
+GNU_CONFIGURE=		YES
 
-USE_BUILDLINK2=		yes
-USE_X11BASE=		yes
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-nls
-CPPFLAGS+=		-DHAVE_CONFIG_H -I${WRKSRC}
-
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../graphics/gdk-pixbuf/buildlink2.mk"
-.include "../../graphics/gphoto2/buildlink2.mk"
-.include "../../graphics/libexif/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../devel/libgphoto2/buildlink2.mk"
+.include "../../graphics/libexif-gtk/buildlink2.mk"
+.include "../../x11/gtk2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
