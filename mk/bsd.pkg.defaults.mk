@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.84 2002/08/31 10:08:59 grant Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.85 2002/08/31 19:51:17 fredb Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -242,6 +242,9 @@ PATCH_FUZZ_FACTOR?= -F0
 #ACCEPTABLE_LICENSES+=	trn-license
 # Enable it if you accept the license terms for trn
 # and would like to build trn.  see pkgsrc/news/trn.
+#ACCEPTABLE_LICENSES+=	trplayer-license
+# Enable it if you accept the license terms for trplayer
+# and would like to build trplayer.  See pkgsrc/audio/trplayer.
 #ACCEPTABLE_LICENSES+=	unarj-license
 # Enable it if you accept the license terms for the unarj archiver
 # and would like to build unarj.  see pkgsrc/archivers/unarj.
