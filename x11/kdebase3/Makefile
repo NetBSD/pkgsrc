@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.66 2004/12/28 02:47:52 reed Exp $
+# $NetBSD: Makefile,v 1.67 2005/03/06 12:21:21 markd Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.png Daemon.README
-SITES_Daemon.png=	${MASTER_SITE_LOCAL}	
-SITES_Daemon.README=	${MASTER_SITE_LOCAL}	
+DISTFILES+=	NetBSD-flag.png
+SITES_Daemon.png=	${MASTER_SITE_LOCAL}
+SITES_Daemon.README=	${MASTER_SITE_LOCAL}
+SITES_NetBSD-flag.png=	http://www.NetBSD.org/images/
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -88,6 +90,7 @@ pre-configure:
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/kde/templates/.source/emptydir
+	${INSTALL_DATA} ${DISTDIR}/NetBSD-flag.png ${PREFIX}/${ICONDIR}
 	${INSTALL_DATA} ${DISTDIR}/Daemon.png ${PREFIX}/${ICONDIR}
 	${INSTALL_DATA} ${DISTDIR}/Daemon.README			\
 		${PREFIX}/share/doc/kde/HTML/en/kdm
@@ -115,7 +118,7 @@ post-install:
 .if ${OPSYS} == "NetBSD"
 	@# NetBSD Advertisement O:-)
 	cd ${PREFIX}/share/kde/config/kdm;				\
-	${SED} -e 's|^#\(LogoPixmap\)=.*|\1=${PREFIX}/${ICONDIR}/Daemon.png|' \
+	${SED} -e 's|^#\(LogoPixmap\)=.*|\1=${PREFIX}/${ICONDIR}/NetBSD-flag.png|' \
 		kdmrc > ${WRKDIR}/kdmrc.ad;				\
 	${CP} -f ${WRKDIR}/kdmrc.ad kdmrc
 .endif
