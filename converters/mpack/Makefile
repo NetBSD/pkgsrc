@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/08/20 02:15:36 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2002/11/14 23:43:48 jlam Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/04/26 23:55:23 asami Exp
 #
 
@@ -12,6 +12,6 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	packages@netbsd.org
 COMMENT=	External MIME packer/unpacker
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=	# defined
 
 .include "../../mk/bsd.pkg.mk"
