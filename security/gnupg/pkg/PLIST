@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2001/05/14 13:40:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2001/05/31 13:30:03 wiz Exp $
 bin/gpg
 bin/gpgv
 @unexec install-info --delete --info-dir=%D/info %D/info/gpg.info
@@ -29,7 +29,6 @@ ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnupg.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnupg.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnupg.mo
 ${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnupg.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnupg.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnupg.mo
 @dirrm share/gnupg
