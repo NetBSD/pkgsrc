@@ -1,39 +1,43 @@
-@comment $NetBSD: PLIST,v 1.6 1998/02/02 08:59:56 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.7 1998/03/05 20:56:26 mycroft Exp $
 include/GL/FooMesa.h
 include/GL/dosmesa.h
+include/GL/fxmesa.h
 include/GL/gl.h
 include/GL/gl_mangle.h
 include/GL/glu.h
 include/GL/glu_mangle.h
+include/GL/glut.h
 include/GL/glx.h
 include/GL/glx_mangle.h
 include/GL/gmesa.h
+include/GL/mglmesa.h
 include/GL/osmesa.h
 include/GL/svgamesa.h
 include/GL/wmesa.h
 include/GL/xmesa.h
-include/GL/fxmesa.h
-include/GL/mglmesa.h
-lib/libMesaGL.so.2.4
-@exec ln %D/%F %D/lib/libGL.so.2.4
-@unexec rm %D/lib/libGL.so.2.4
-lib/libMesaGLU.so.2.4
-@exec ln %D/%F %D/lib/libGLU.so.2.4
-@unexec rm %D/lib/libGLU.so.2.4
-lib/libMesaGL_pic.a
-@exec ln %D/%F %D/lib/libGL_pic.a
-@unexec rm %D/lib/libGL_pic.a
-lib/libMesaGLU_pic.a
-@exec ln %D/%F %D/lib/libGLU_pic.a
-@unexec rm %D/lib/libGLU_pic.a
-lib/libMesaaux.so.2.4
-lib/libMesaaux_pic.a
-lib/libMesatk.so.2.4
-lib/libMesatk_pic.a
+lib/libMesaGL.so.2.6
+@exec ln %D/%F %D/lib/libGL.so.2.6
+@unexec rm %D/lib/libGL.so.2.6
+lib/libMesaGLU.so.2.6
+@exec ln %D/%F %D/lib/libGLU.so.2.6
+@unexec rm %D/lib/libGLU.so.2.6
+lib/libMesaGL.a
+@exec ln %D/%F %D/lib/libGL.a
+@unexec rm %D/lib/libGL.a
+lib/libMesaGLU.a
+@exec ln %D/%F %D/lib/libGLU.a
+@unexec rm %D/lib/libGLU.a
+lib/libMesaaux.so.2.6
+lib/libMesaaux.a
+lib/libMesatk.so.2.6
+lib/libMesatk.a
+lib/libglut.so.3.6
+lib/libglut.a
 @exec ldconfig || /usr/bin/true
 @unexec ldconfig || /usr/bin/true
 share/examples/Mesa/book/Imakefile
 share/examples/Mesa/book/Makefile
+share/examples/Mesa/book/Makefile.win
 share/examples/Mesa/book/README
 share/examples/Mesa/book/accanti
 share/examples/Mesa/book/accanti.c
@@ -175,55 +179,54 @@ share/examples/Mesa/book/texturesurf.c
 share/examples/Mesa/book/trim.c
 share/examples/Mesa/book/xfont
 share/examples/Mesa/book/xfont.c
-share/examples/Mesa/demos/Imakefile
 share/examples/Mesa/demos/Makefile
 share/examples/Mesa/demos/Makefile.DJ
 share/examples/Mesa/demos/Makefile.cygnus
+share/examples/Mesa/demos/Makefile.win
 share/examples/Mesa/demos/bounce
 share/examples/Mesa/demos/bounce.c
+share/examples/Mesa/demos/clearspd
 share/examples/Mesa/demos/clearspd.c
 share/examples/Mesa/demos/descrip.mms
-share/examples/Mesa/demos/fdraw.f
-share/examples/Mesa/demos/ftest.c
+share/examples/Mesa/demos/drawpix
+share/examples/Mesa/demos/drawpix.c
 share/examples/Mesa/demos/gamma
 share/examples/Mesa/demos/gamma.c
 share/examples/Mesa/demos/gears
 share/examples/Mesa/demos/gears.c
-share/examples/Mesa/demos/glxdemo
-share/examples/Mesa/demos/glxdemo.c
-share/examples/Mesa/demos/glxpixmap
-share/examples/Mesa/demos/glxpixmap.c
+share/examples/Mesa/demos/girl.rgb
+share/examples/Mesa/demos/glinfo
+share/examples/Mesa/demos/glinfo.c
+share/examples/Mesa/demos/glutfx
+share/examples/Mesa/demos/glutfx.c
 share/examples/Mesa/demos/isosurf
 share/examples/Mesa/demos/isosurf.c
 share/examples/Mesa/demos/isosurf.dat
 share/examples/Mesa/demos/morph3d
 share/examples/Mesa/demos/morph3d.c
-share/examples/Mesa/demos/offset
-share/examples/Mesa/demos/offset.c
 share/examples/Mesa/demos/osdemo
 share/examples/Mesa/demos/osdemo.c
+share/examples/Mesa/demos/paltex
+share/examples/Mesa/demos/paltex.c
+share/examples/Mesa/demos/pointblast
+share/examples/Mesa/demos/pointblast.c
 share/examples/Mesa/demos/reflect
 share/examples/Mesa/demos/reflect.c
-share/examples/Mesa/demos/shape.c
+share/examples/Mesa/demos/reflect.rgb
+share/examples/Mesa/demos/spectex
 share/examples/Mesa/demos/spectex.c
-share/examples/Mesa/demos/spin
-share/examples/Mesa/demos/spin.c
 share/examples/Mesa/demos/stex3d
 share/examples/Mesa/demos/stex3d.c
-share/examples/Mesa/demos/tess_demo.c
-share/examples/Mesa/demos/test0
-share/examples/Mesa/demos/test0.c
+share/examples/Mesa/demos/tessdemo
+share/examples/Mesa/demos/tessdemo.c
+share/examples/Mesa/demos/texcyl
 share/examples/Mesa/demos/texcyl.c
 share/examples/Mesa/demos/texobj
 share/examples/Mesa/demos/texobj.c
+share/examples/Mesa/demos/trispd
 share/examples/Mesa/demos/trispd.c
-share/examples/Mesa/demos/vgears.c
-share/examples/Mesa/demos/vindex.c
-share/examples/Mesa/demos/vtest.c
 share/examples/Mesa/demos/winpos
 share/examples/Mesa/demos/winpos.c
-share/examples/Mesa/demos/xdemo
-share/examples/Mesa/demos/xdemo.c
 share/examples/Mesa/samples/1.rgb
 share/examples/Mesa/samples/2.rgb
 share/examples/Mesa/samples/3.rgb
@@ -231,6 +234,7 @@ share/examples/Mesa/samples/4.rgb
 share/examples/Mesa/samples/Imakefile
 share/examples/Mesa/samples/Makefile
 share/examples/Mesa/samples/Makefile.DJ
+share/examples/Mesa/samples/Makefile.win
 share/examples/Mesa/samples/README
 share/examples/Mesa/samples/accum
 share/examples/Mesa/samples/accum.c
@@ -299,7 +303,9 @@ share/examples/Mesa/widgets-sgi/GLwMDrawA.c
 share/examples/Mesa/widgets-sgi/GLwMDrawA.h
 share/examples/Mesa/widgets-sgi/GLwMDrawAP.h
 share/examples/Mesa/widgets-sgi/Makefile
+share/examples/Mesa/widgets-sgi/Makefile~
 share/examples/Mesa/widgets-sgi/README
+share/examples/Mesa/widgets-sgi/README~
 share/examples/Mesa/widgets-sgi/boilerplate.c
 share/examples/Mesa/widgets-sgi/depend
 @dirrm share/examples/Mesa/samples
