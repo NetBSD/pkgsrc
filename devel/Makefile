@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.515 2004/07/08 18:35:32 erh Exp $
+# $NetBSD: Makefile,v 1.516 2004/07/14 13:27:15 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -176,7 +176,6 @@ SUBDIR+=	its4
 SUBDIR+=	jam
 SUBDIR+=	javadeps
 SUBDIR+=	jgrasp
-SUBDIR+=	jlib
 SUBDIR+=	kdbg
 SUBDIR+=	kdebindings2
 SUBDIR+=	kdesdk2
