@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/06/21 07:35:18 martin Exp $
+# $NetBSD: Makefile,v 1.23 2001/07/09 17:31:20 zuntum Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/03/07 12:29:49 obrien Exp
 #
 
@@ -12,11 +12,10 @@ MAINTAINER=		gcw@rxvt.org
 HOMEPAGE=		http://www.rxvt.org/
 COMMENT=		Low memory usage xterm replacement that supports color
 
+USE_BUILDLINK_ONKY=	YES
 USE_X11BASE=		YES
-USE_XPM=		YES
 GNU_CONFIGURE=		YES
 
-EVAL_PREFIX+=		XPMDIR=xpm
 CONFIGURE_ARGS+=	--enable-utmp \
 			--enable-wtmp \
 			--enable-lastlog \
@@ -29,8 +28,7 @@ CONFIGURE_ARGS+=	--enable-utmp \
 			--enable-xgetdefault \
 			--enable-frills \
 			--enable-keepscrolling \
-			--enable-mousewheel \
-			--with-xpm-includes=${XPMDIR}/include/X11 \
-			--with-xpm-library=${XPMDIR}/lib
+			--enable-mousewheel
 
+.include "../../graphics/xpm/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
