@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/08/21 08:09:56 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/22 17:43:49 cjep Exp $
 #
 
 DISTNAME=	grape4r1
@@ -11,7 +11,7 @@ MAINTAINER=	cjep@netbsd.org
 HOMEPAGE=	http://www.gap-system.org/Share/grape.html
 COMMENT=	GRAPE (GRape Algorithms using PErmutation groups)
 
-BUILD_DEPENDS+=	zoo:../../archivers/zoo
+BUILD_DEPENDS+=	zoo-[0-9]*:../../archivers/zoo
 
 EXTRACT_CMD=	${LOCALBASE}/bin/zoo -extract ${DOWNLOADED_DISTFILE}
 WRKSRC=		${WRKDIR}/${GAP_PKG_NAME}
