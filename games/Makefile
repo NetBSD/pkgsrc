@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 1999/07/01 08:28:33 garbled Exp $
+# $NetBSD: Makefile,v 1.53 1999/07/21 22:59:22 garbled Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -52,6 +52,7 @@
 #    SUBDIR += netris
 #    SUBDIR += oneko
 #    SUBDIR += oonsoo
+    SUBDIR += pacman
 #    SUBDIR += qcc
 #    SUBDIR += quakeserver
 #    SUBDIR += sokoban
