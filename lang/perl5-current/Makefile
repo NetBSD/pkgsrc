@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/08/28 23:01:46 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2000/08/30 18:59:32 jlam Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/18 06:16:44 markm Exp
 #
 
@@ -11,6 +11,8 @@ MASTER_SITES=		ftp://ftp.digital.com/pub/plan/perl/CPAN/src/5.0/ \
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://language.perl.com/index.html
+
+IGNORE=			"${PKGNAME} has been superseded by the perl5 package"
 
 HAS_CONFIGURE=		# defined
 CONFIGURE_ENV+=		PREFIX=${PREFIX}
