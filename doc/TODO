@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1685 2004/04/29 18:19:05 minskim Exp $
+$NetBSD: TODO,v 1.1686 2004/04/30 10:50:46 grant Exp $
 
 Suggested new packages
 ======================
@@ -131,12 +131,6 @@ Suggested new packages
 	http://www.unixuser.org/~euske/vnc2swf/
 	Vnc2swf captures the live motion of a screen with VNC protocol
 	and generates a Macromedia Flash(TM) movie (.swf).
-
-	musicpd/mpc/etc. [grant]
-	http://musicpd.org/
-	Music Player Daemon (MPD) allows remote access for playing
-	music (MP3, Ogg Vorbis, FLAC, AAC, and wave files) and managing
-	playlists.
 
 Suggested package updates
 =========================
