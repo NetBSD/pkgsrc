@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/03/23 02:36:45 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2002/12/24 18:55:34 wiz Exp $
 #
 
 DISTNAME=		unofficial-csound-4.13.0.2a-linux.src
@@ -6,7 +6,7 @@ PKGNAME=		csound-4.13.0.2a
 CATEGORIES=		audio
 MASTER_SITES=		ftp://mustec.bgsu.edu/pub/linux/
 
-MAINTAINER=		collver@linuxfreemail.com
+MAINTAINER=		collver1@attbi.com
 HOMEPAGE=		http://www.csound.org
 COMMENT=		software synthesizer and sequencer
 

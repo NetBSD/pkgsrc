@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/09/21 00:56:03 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/12/24 18:55:36 wiz Exp $
 #
 
 DISTNAME=		SpiralSynth-0.1.7
@@ -6,7 +6,7 @@ PKGNAME=		spiralsynth-0.1.7
 CATEGORIES=		audio
 MASTER_SITES=		http://www.pawfal.org/Software/SpiralSynth/dload/
 
-MAINTAINER=		collver@linuxfreemail.com
+MAINTAINER=		collver1@attbi.com
 HOMEPAGE=		http://www.pawfal.org/Software/SpiralSynth/
 COMMENT=		polyphonic analogue softsynth
 
