@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.7 2004/03/07 21:25:33 recht Exp $
+$NetBSD: distinfo,v 1.8 2004/03/09 10:26:59 recht Exp $
 
 SHA1 (BitTorrent-3.4.zip) = 58b2a5884bcc71722f6c7332ec6e4b4ec086031e
 Size (BitTorrent-3.4.zip) = 242707 bytes
 SHA1 (patch-aa) = 8c3abb81127bda1594b944fd6e11f587e8477e87
+SHA1 (patch-ab) = 186ad86d153bc0c7a3e3234c03ec854b2325cb03
+SHA1 (patch-ac) = 6f95e52ea2dba423e904ebe2364ae44405ebe2f7
+SHA1 (patch-ad) = 9bd7d1e7cdab69a15ffcb98ad41f4840ba11e1e8
