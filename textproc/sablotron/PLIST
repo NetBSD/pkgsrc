@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:58:45 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/01 03:11:18 jlam Exp $
 bin/sabcmd
 include/sablot.h
 include/sdom.h
 include/shandler.h
+include/sxpath.h
 lib/libsablot.a
 lib/libsablot.la
 lib/libsablot.so
-lib/libsablot.so.60
-lib/libsablot.so.60.0
+lib/libsablot.so.71
+lib/libsablot.so.71.0
