@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.625 2003/06/08 21:26:53 wiz Exp $
+$NetBSD: TODO,v 1.626 2003/06/09 10:15:15 uebayasi Exp $
 
 Suggested new packages
 ======================
@@ -262,6 +262,7 @@ Suggested package updates
 	o xalan-c-1.4
 	o xanim-2.92.0 [pkg/19934]
 	o xerces-c-2.2.0 [heinz]
+	o xerces-j-2.4.0 [pkg/21725]
 	o xine-lib-0.9.21 [pkg/21625]
 	o xine-ui-0.9.21 [pkg/21625]
 	o xisp-2.7 [pkg/19566]
