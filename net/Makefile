@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 1999/12/04 16:53:22 sommerfeld Exp $
+# $NetBSD: Makefile,v 1.99 1999/12/21 22:38:44 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -104,6 +104,7 @@
     SUBDIR += scotty
     SUBDIR += sdist
     SUBDIR += sendfile
+    SUBDIR += sftp
     SUBDIR += sirc
     SUBDIR += sniffit
     SUBDIR += snort
