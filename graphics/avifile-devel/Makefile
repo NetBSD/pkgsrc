@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/16 11:48:04 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/18 21:01:46 zuntum Exp $
 #
 
-DISTNAME=	avifile-0.6.20010616
+DISTNAME=	avifile-0.6.20010618
 CATEGORIES=	graphics
 MASTER_SITES=	http://flis.utech.lublin.pl/~zuntum/distfiles/		\
 		http://zuntum.net/distfiles/
