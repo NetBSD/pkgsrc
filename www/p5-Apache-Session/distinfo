@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2002/01/10 14:21:50 wiz Exp $
+$NetBSD: distinfo,v 1.6 2004/11/05 16:35:29 he Exp $
 
-SHA1 (Apache-Session-1.54.tar.gz) = 7202e097123af9b8df5e5eac8a1c794d7aaff015
-Size (Apache-Session-1.54.tar.gz) = 27355 bytes
+SHA1 (Apache-Session-1.6.tar.gz) = 81a9e8e890fa0ad862fcdcd2dbd28f52c42d818e
+Size (Apache-Session-1.6.tar.gz) = 29391 bytes
