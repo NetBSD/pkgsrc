@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2002/10/02 18:41:44 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2002/10/12 10:17:04 wiz Exp $
 
 DISTNAME=		w3c-libwww-5.3.2
 PKGNAME=		libwww-5.3.2
@@ -36,11 +36,11 @@ pre-configure:
 # Include SOCKS firewall support
 .if defined(USE_SOCKS) && (${USE_SOCKS} == 4 || ${USE_SOCKS} == 5)
 .if ${USE_SOCKS} == 4
-.include "../../net/socks4/buildlink.mk"
+.include "../../net/socks4/buildlink2.mk"
 CONFIGURE_ARGS+= 	--with-socks4=${BUILDLINK_PREFIX.socks4}/lib/libsocks4.a
 CONFIGURE_ARGS+=	--with-socks5=no
 .else
-.include "../../net/socks5/buildlink.mk"
+.include "../../net/socks5/buildlink2.mk"
 CONFIGURE_ARGS+=	--with-socks4=no
 CONFIGURE_ARGS+= 	--with-socks5=${BUILDLINK_prefix.socks5}/lib/libsocks5.a
 .endif
