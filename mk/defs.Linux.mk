@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.38 2002/12/03 21:13:38 agc Exp $
+# $NetBSD: defs.Linux.mk,v 1.39 2002/12/15 02:12:32 salo Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -17,6 +17,7 @@ ECHO?=		/bin/echo
 EGREP?=		/bin/egrep
 EXPR?=		/usr/bin/expr
 FALSE?=		/bin/false
+FGREP?=		/bin/fgrep
 FILE_CMD?=	/usr/bin/file
 FIND?=		/usr/bin/find
 GMAKE?=		/usr/bin/make
