@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.1 2003/07/01 23:10:34 jtb Exp $
+$NetBSD: patch-ap,v 1.2 2003/07/01 23:19:14 jtb Exp $
 
 --- src/runtime/include/cache-flush.h.orig
 +++ src/runtime/include/cache-flush.h

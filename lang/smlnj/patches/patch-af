@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.2 2003/07/01 23:10:34 jtb Exp $
+$NetBSD: patch-af,v 1.3 2003/07/01 23:19:14 jtb Exp $
 
 --- src/runtime/mach-dep/signal-sysdep.h.orig
 +++ src/runtime/mach-dep/signal-sysdep.h
@@ -11,14 +11,12 @@ $NetBSD: patch-af,v 1.2 2003/07/01 23:10:34 jtb Exp $
      /** SPARC, SUNOS **/
  #    define USE_ZERO_LIMIT_PTR_FN
  #    define SIG_FAULT1		SIGFPE
-@@ -318,6 +318,23 @@
+@@ -318,6 +318,19 @@
  
  #    define SIG_Flags           0
  
 +#  elif (defined(TARGET_PPC) && defined(OPSYS_NETBSD))
 +    /* PPC, NetBSD */
-+#    include <signal.h>
-+     typedef struct sigcontext_t SigContext_t;
 +
 +#    define SIG_FAULT1          SIGTRAP
 +
@@ -29,8 +27,6 @@ $NetBSD: patch-af,v 1.2 2003/07/01 23:10:34 jtb Exp $
 +#    define SIG_ZeroLimitPtr(scp)       { ((scp)->sc_frame.fixreg[15] = 0); } /* limitptr = 15 (see src/runtime/mach-dep/PPC.prim.asm) */
 +#    define SIG_GetCode(info,scp)       (info)
 +     typedef void SigReturn_t;
-+
-+#    define SIG_Flags           0
 +
  
  #  endif /* HOST_RS6000/HOST_PPC */
