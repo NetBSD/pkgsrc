@@ -1,6 +1,8 @@
-$NetBSD: md5,v 1.1.1.1 2000/04/09 15:19:30 itojun Exp $
+$NetBSD: distinfo,v 1.1 2001/04/17 11:14:18 agc Exp $
 
 MD5 (jisksp14.bdf.gz) = e8a452c07cd5d1d31d3a6f32c2b74265
 MD5 (jisksp16-1990.bdf.Z) = c4ebfb1328a0d9a738ce7621094e40aa
 MD5 (min-1-24.bdf.gz) = 3c18ee131862b6cf04c662e9c6ef9677
 MD5 (jisksp40.bdf.Z) = 220476f8641f336da48aad3c3e9c386f
+SHA1 (patch-aa) = 366d448cbf803d406945f2a4b9002a68bf346e52
+SHA1 (patch-ab) = e89c21ee2df5eb4312679cb58a7fdb9b243bf04b

@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:14:20 agc Exp $
+
+MD5 (fontkit-nobdf.tar.gz) = 6036cedc6e51012ee5143ac2e3eb957c
+SHA1 (patch-aa) = 8ceafe8ddf66603464ac02e0f83ad64c678134a0
