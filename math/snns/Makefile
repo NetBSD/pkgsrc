@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/12/08 03:50:14 salo Exp $
+# $NetBSD: Makefile,v 1.10 2003/02/18 17:43:06 jlam Exp $
 
 DISTNAME=	SNNSv4.2
 PKGNAME=	snns-4.2
@@ -12,11 +12,9 @@ COMMENT=	Software simulator for neural networks
 USE_BUILDLINK2=	YES
 USE_X11=	YES
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS= --enable-global --prefix=${LOCALBASE}
+CONFIGURE_ARGS= --enable-global
 
-XGUILOADPATH=	${LOCALBASE}/share/snns
-
-AUTOMAKE_PATTERNS+= config.hin
+XGUILOADPATH=	${PREFIX}/share/snns
 
 post-install:
 		${INSTALL_DATA_DIR} ${XGUILOADPATH};

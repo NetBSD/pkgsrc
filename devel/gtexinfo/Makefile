@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2003/02/13 08:28:20 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2003/02/18 17:43:05 jlam Exp $
 #
 
 DISTNAME=		texinfo-4.5
@@ -17,8 +17,6 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
-AUTOMAKE_PATTERNS+=	configure.ac
-AUTOMAKE_PATTERNS+=	config.in
 
 INSTALL_INFO=	${PREFIX}/bin/install-info
 
