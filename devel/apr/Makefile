@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/03/22 19:50:16 reed Exp $
+# $NetBSD: Makefile,v 1.18 2004/07/16 23:21:50 xtraeme Exp $
 
 PKGNAME=	apr-${APR_VERSION}.${APACHE_VERSION}
 CATEGORIES=	devel
@@ -39,7 +39,10 @@ APU_CONFIGURE_ARGS= \
 		--without-gdbm
 
 .include "../../mk/bsd.prefs.mk"
-.if ${APR_USE_DB4} == "YES"
+
+BUILD_DEFS+=		APR_USE_OPENLDAP
+
+.if !empty(APR_USE_DB4:M[Yy][Ee][Ss])
 APU_CONFIGURE_ARGS+=\
 	--with-berkeley-db=${BUILDLINK_PREFIX.db4}/include:${LOCALBASE}
 .else
@@ -58,8 +61,14 @@ post-install:
 
 .include "../../www/apache2/Makefile.common"
 
-.if ${APR_USE_DB4} == "YES"
+.if !empty(APR_USE_DB4:M[Yy][Ee][Ss)
 .include "../../databases/db4/buildlink3.mk"
+.endif
+
+# Enable OpenLDAP support
+.if !empty(APR_USE_OPENLDAP:M[Yy][Ee][Ss])
+APU_CONFIGURE_ARGS+=	--with-ldap
+.include "../../databases/openldap/buildlink3.mk"
 .endif
 
 .include "../../textproc/expat/buildlink3.mk"
