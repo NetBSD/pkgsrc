@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/08/18 22:46:31 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 2000/08/23 14:46:52 wiz Exp $
 #
 
 DISTNAME=		mysql-3.22.32
@@ -10,6 +10,7 @@ MASTER_SITES=		ftp://ftp.mysql.com/MySQL-3.22/ \
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.mysql.com/
 
+BUILD_DEPENDS=		autoconf:../../devel/autoconf
 DEPENDS=		${DISTNAME:S/-/-client-/}:../../databases/mysql-client
 
 RESTRICTED=		"Restrictive license."
@@ -41,6 +42,9 @@ post-extract:
 		${MV} $$dir/Makefile.in $$dir/Makefile.in.orig; \
 		${SED} -e '/^install-exec:/s/install-pkglibLIBRARIES//' $$dir/Makefile.in.orig >$$dir/Makefile.in; \
 	done
+
+pre-configure:
+	@cd ${WRKSRC}/mit-pthreads/config && autoconf
 
 post-configure:
 	@cd ${WRKSRC} && ${CP} config.h include/my_config.h
