@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:56:45 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/11/08 05:38:00 xtraeme Exp $
 
 DISTNAME=	speyes-1.2.0
 CATEGORIES=	x11
-MASTER_SITES=	http://www.halcyon.com/amalmin/speyes/
+MASTER_SITES=	http://www.okb-1.org/speyes/
 
 MAINTAINER=	jlam@NetBSD.org
-HOMEPAGE=	http://www.halcyon.com/amalmin/speyes/speyes.html
-COMMENT=	South Park Eyes
+HOMEPAGE=	http://www.okb-1.org/speyes/speyes.html
+COMMENT=	South Park XEyes clone
 
 USE_BUILDLINK2=	YES
 USE_IMAKE=	YES
