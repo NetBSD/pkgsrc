@@ -1,4 +1,4 @@
-/*	$NetBSD: ftree.c,v 1.2 2003/06/23 13:37:10 grant Exp $	*/
+/*	$NetBSD: ftree.c,v 1.3 2003/09/05 05:48:56 grant Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -83,7 +83,7 @@
 #if 0
 static char sccsid[] = "@(#)ftree.c	8.2 (Berkeley) 4/18/94";
 #else
-__RCSID("$NetBSD: ftree.c,v 1.2 2003/06/23 13:37:10 grant Exp $");
+__RCSID("$NetBSD: ftree.c,v 1.3 2003/09/05 05:48:56 grant Exp $");
 #endif
 #endif /* not lint */
 
@@ -93,7 +93,6 @@ __RCSID("$NetBSD: ftree.c,v 1.2 2003/06/23 13:37:10 grant Exp $");
 #include <sys/param.h>
 #include <ctype.h>
 #include <errno.h>
-#include <fts.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
