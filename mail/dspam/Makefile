@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2004/08/06 21:27:52 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2004/08/07 06:12:20 jlam Exp $
 
 DISTNAME=	dspam-3.0.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	http://www.nuclearelephant.com/projects/dspam/sources/
 
@@ -11,7 +11,6 @@ COMMENT=	extremely scalable, statistical-hybrid anti-spam filter
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
-USE_PKGINSTALL=		yes
 
 USE_PERL5=		yes
 REPLACE_PERL=		tools/dspam_genaliases.in			\
@@ -44,8 +43,6 @@ DSPAM_SIGNATURE_LIFE?=	14
 DSPAM_BINMODE?=		4511
 DSPAM_USER?=		dspam
 DSPAM_GROUP?=		dspam
-PKG_GROUPS=             ${DSPAM_GROUP}
-PKG_USERS=              ${DSPAM_USER}:${DSPAM_GROUP}
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-chi-square
@@ -64,6 +61,13 @@ CONFIGURE_ARGS+=	--with-dspam-home-owner=${DSPAM_USER}		\
 
 DOCDIR=		${PREFIX}/share/doc/dspam
 DATADIR=	${PREFIX}/share/dspam
+
+USE_PKGINSTALL=		yes
+PKG_GROUPS=		${DSPAM_GROUP}
+PKG_USERS=		${DSPAM_USER}:${DSPAM_GROUP}
+SPECIAL_PERMS=		${PREFIX}/bin/dspam ${DSPAM_USER} ${DSPAM_GROUP} \
+			${DSPAM_BINMODE}
+OWN_DIRS_PERMS=		${DSPAM_HOME} ${DSPAM_USER} ${DSPAM_GROUP} 0755
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
