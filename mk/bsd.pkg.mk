@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1201 2003/06/19 21:41:14 seb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1202 2003/06/23 14:26:32 jschauma Exp $
 #
 # This file is in the public domain.
 #
@@ -1005,7 +1005,7 @@ PKGNAME_NOREV=		${PKGNAME}
 .endif
 SVR4_PKGNAME?=		${PKGNAME}
 
-MAINTAINER?=		packages@netbsd.org
+MAINTAINER?=		tech-pkg@netbsd.org
 
 ALLFILES?=	${DISTFILES} ${PATCHFILES}
 CKSUMFILES?=	${ALLFILES}
