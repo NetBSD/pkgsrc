@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:03:50 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/12/01 20:50:06 mjl Exp $
 bin/slrn
 bin/slrnpull
 man/man1/slrn.1
@@ -30,19 +30,27 @@ share/doc/slrn/slrnpull/setgid.txt
 share/doc/slrn/slrnpull/slrn.rc
 share/doc/slrn/slrnpull/slrnpull.conf
 share/doc/slrn/slrnpull/slrnpull.sh
+share/locale/da/LC_MESSAGES/slrn.mo
+share/locale/de/LC_MESSAGES/slrn.mo
+share/locale/it/LC_MESSAGES/slrn.mo
+share/locale/nl/LC_MESSAGES/slrn.mo
+share/locale/pl/LC_MESSAGES/slrn.mo
+share/locale/ru/LC_MESSAGES/slrn.mo
+share/slrn/macros/color.sl
+share/slrn/macros/gsort.sl
+share/slrn/macros/ispell.sl
+share/slrn/macros/latin2.sl
+share/slrn/macros/multipart.sl
+share/slrn/macros/nn.sl
+share/slrn/macros/posthook.sl
+share/slrn/macros/search.sl
+share/slrn/macros/tin-art.sl
+share/slrn/macros/tin-group.sl
+share/slrn/macros/ttyprint.sl
+share/slrn/macros/util.sl
+share/slrn/macros/varset.sl
+share/slrn/macros/xcomment.sl
 @dirrm share/doc/slrn/slrnpull
 @dirrm share/doc/slrn
-share/slrn/color.sl
-share/slrn/gsort.sl
-share/slrn/ispell.sl
-share/slrn/latin2.sl
-share/slrn/multipart.sl
-share/slrn/nn.sl
-share/slrn/posthook.sl
-share/slrn/search.sl
-share/slrn/tin-art.sl
-share/slrn/tin-group.sl
-share/slrn/ttyprint.sl
-share/slrn/util.sl
-share/slrn/xcomment.sl
+@dirrm share/slrn/macros
 @dirrm share/slrn
