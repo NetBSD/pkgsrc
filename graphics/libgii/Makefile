@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:41:33 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/05 00:21:03 xtraeme Exp $
 #
 
-DISTNAME=	libgii-0.8.3.src
+DISTNAME=	libgii-0.8.4.src
 PKGNAME=	${DISTNAME:S/.src//}
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.ggi-project.org/pub/ggi/ggi/v2.0/ \
+MASTER_SITES=	ftp://ftp.ggi-project.org/pub/packages/ggi/ggi/v2.0/ \
 		http://www.ggi-project.org/ftp/ggi/v2.0/ \
 		${MASTER_SITE_SOURCEFORGE:=ggi/}
 EXTRACT_SUFX=	.tar.bz2
