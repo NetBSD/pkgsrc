@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2923 2005/01/18 09:30:32 wiz Exp $
+$NetBSD: TODO,v 1.2924 2005/01/18 13:39:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -340,7 +340,7 @@ Suggested package updates
 	o boost-1.32.0
 	o boson-0.10
 	o btparse-0.34
-	o bzflag-1.10.8
+	o bzflag-2.0.0
 	o c4-1.10
 	o camlimages-2.12
 	o catdoc-0.93.4
@@ -437,7 +437,6 @@ Suggested package updates
 	o egtk-0.3.6
 	o electricfence-2.4.11
 	o elf-0.5.4
-	o elinks-0.10.1
 	o elk-3.99.6
 	o elm-2.5.7
 	o elm-me-2.5plalpha4
@@ -454,8 +453,6 @@ Suggested package updates
 	o fakeroot-1.2.2
 	o fd-2.06b
 	o fdgw-20040609
-	o feh-1.3.0
-	o festival-1.4.3
 	o fhist-1.14
 	o fidogate-4.4.10
 	o file-4.12
@@ -628,7 +625,6 @@ Suggested package updates
 	o libggi-2.1
 	o libggiwmh-0.2.0
 	o libgii-0.9.0
-	o libgnomecanvasmm20-2.0.2
 	o libgnomecanvasmm26-2.8.0?
 	o libgnomecups-0.1.14
 	o libgnomemm26-2.8.0?
@@ -699,7 +695,7 @@ Suggested package updates
 	o mrproject-0.9.1
 	o mrtg-2.11.1
 	o mserv-devel-0.41
-	o msmtp-1.3.1
+	o msmtp-1.3.4
 	o mtail-1.1.1
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.4.4
@@ -1074,7 +1070,7 @@ Suggested package updates
 	o swig-python-1.3.24
 	o swish-e-2.4.3
 	o sylpheed-1.0.0
-	o sylpheed-claws-0.9.13
+	o sylpheed-claws-1.0.0
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sysinfo-4.2.2
 	o tcl-itcl-3.2.1
@@ -1205,7 +1201,6 @@ Suggested package updates
 	o xtide-2.8.1
 	o xtraceroute-0.9.1
 	o xtux-20030306
-	o xvidcore-1.0.3
 	o xzgv-0.8
 	o xzip-182
 	o yacas-1.0.55
