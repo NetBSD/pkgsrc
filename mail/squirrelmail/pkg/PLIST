@@ -1,0 +1,252 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/24 22:44:13 jlam Exp $
+share/squirrelmail/AUTHORS
+share/squirrelmail/COPYING
+share/squirrelmail/ChangeLog
+share/squirrelmail/INSTALL
+share/squirrelmail/README
+share/squirrelmail/UPGRADE
+share/squirrelmail/config/conf.pl
+share/squirrelmail/config/config_default.php
+share/squirrelmail/config/index.php
+share/squirrelmail/configure
+share/squirrelmail/data/default_pref
+share/squirrelmail/data/index.php
+share/squirrelmail/doc/README.russian_apache
+share/squirrelmail/doc/addressbook.txt
+share/squirrelmail/doc/ie_ssl.txt
+share/squirrelmail/doc/index.html
+share/squirrelmail/doc/mime.txt
+share/squirrelmail/doc/plugin.txt
+share/squirrelmail/doc/themes.txt
+share/squirrelmail/doc/translating.txt
+share/squirrelmail/doc/translating_help.txt
+share/squirrelmail/doc/tree.txt
+share/squirrelmail/functions/abook_database.php
+share/squirrelmail/functions/abook_ldap_server.php
+share/squirrelmail/functions/abook_local_file.php
+share/squirrelmail/functions/addressbook.php
+share/squirrelmail/functions/array.php
+share/squirrelmail/functions/auth.php
+share/squirrelmail/functions/date.php
+share/squirrelmail/functions/display_messages.php
+share/squirrelmail/functions/i18n.php
+share/squirrelmail/functions/imap.php
+share/squirrelmail/functions/imap_general.php
+share/squirrelmail/functions/imap_mailbox.php
+share/squirrelmail/functions/imap_messages.php
+share/squirrelmail/functions/imap_search.php
+share/squirrelmail/functions/index.php
+share/squirrelmail/functions/mailbox_display.php
+share/squirrelmail/functions/mime.php
+share/squirrelmail/functions/page_header.php
+share/squirrelmail/functions/plugin.php
+share/squirrelmail/functions/prefs.php
+share/squirrelmail/functions/smtp.php
+share/squirrelmail/functions/strings.php
+share/squirrelmail/functions/tree.php
+share/squirrelmail/functions/url_parser.php
+share/squirrelmail/help/ca/FAQ.hlp
+share/squirrelmail/help/ca/addresses.hlp
+share/squirrelmail/help/ca/basic.hlp
+share/squirrelmail/help/ca/compose.hlp
+share/squirrelmail/help/ca/folders.hlp
+share/squirrelmail/help/ca/main_folder.hlp
+share/squirrelmail/help/ca/options.hlp
+share/squirrelmail/help/ca/read_mail.hlp
+share/squirrelmail/help/ca/search.hlp
+share/squirrelmail/help/cs/FAQ.hlp
+share/squirrelmail/help/cs/addresses.hlp
+share/squirrelmail/help/cs/basic.hlp
+share/squirrelmail/help/cs/compose.hlp
+share/squirrelmail/help/cs/folders.hlp
+share/squirrelmail/help/cs/main_folder.hlp
+share/squirrelmail/help/cs/options.hlp
+share/squirrelmail/help/cs/read_mail.hlp
+share/squirrelmail/help/cs/search.hlp
+share/squirrelmail/help/en/FAQ.hlp
+share/squirrelmail/help/en/addresses.hlp
+share/squirrelmail/help/en/basic.hlp
+share/squirrelmail/help/en/compose.hlp
+share/squirrelmail/help/en/folders.hlp
+share/squirrelmail/help/en/main_folder.hlp
+share/squirrelmail/help/en/options.hlp
+share/squirrelmail/help/en/read_mail.hlp
+share/squirrelmail/help/en/search.hlp
+share/squirrelmail/help/index.php
+share/squirrelmail/help/ko/FAQ.hlp
+share/squirrelmail/help/ko/addresses.hlp
+share/squirrelmail/help/ko/basic.hlp
+share/squirrelmail/help/ko/compose.hlp
+share/squirrelmail/help/ko/folders.hlp
+share/squirrelmail/help/ko/main_folder.hlp
+share/squirrelmail/help/ko/options.hlp
+share/squirrelmail/help/ko/read_mail.hlp
+share/squirrelmail/help/ko/search.hlp
+share/squirrelmail/help/pl/FAQ.hlp
+share/squirrelmail/help/pl/addresses.hlp
+share/squirrelmail/help/pl/basic.hlp
+share/squirrelmail/help/pl/compose.hlp
+share/squirrelmail/help/pl/folders.hlp
+share/squirrelmail/help/pl/main_folder.hlp
+share/squirrelmail/help/pl/options.hlp
+share/squirrelmail/help/pl/read_mail.hlp
+share/squirrelmail/help/pl/search.hlp
+share/squirrelmail/help/ru/FAQ.hlp
+share/squirrelmail/help/ru/addresses.hlp
+share/squirrelmail/help/ru/basic.hlp
+share/squirrelmail/help/ru/compose.hlp
+share/squirrelmail/help/ru/folders.hlp
+share/squirrelmail/help/ru/main_folder.hlp
+share/squirrelmail/help/ru/options.hlp
+share/squirrelmail/help/ru/read_mail.hlp
+share/squirrelmail/help/ru/search.hlp
+share/squirrelmail/images/down_pointer.gif
+share/squirrelmail/images/index.php
+share/squirrelmail/images/sm_logo.jpg
+share/squirrelmail/images/sort_none.gif
+share/squirrelmail/images/up_pointer.gif
+share/squirrelmail/index.php
+share/squirrelmail/locale/ca/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/ca/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/cs/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/cs/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/da/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/da/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/de/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/de/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/es/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/es/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/fr/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/fr/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/index.php
+share/squirrelmail/locale/it/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/it/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/ko/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/ko/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/nl/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/nl/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/no/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/no/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/no_NO_ny/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/no_NO_ny/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/pl/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/pl/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/pt_BR/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/pt_BR/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/ru/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/ru/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/sr/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/sr/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/sv/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/sv/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/tw/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/tw/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/plugins/README.plugins
+share/squirrelmail/plugins/index.php
+share/squirrelmail/po/charsetconvert.pl
+share/squirrelmail/po/index.php
+share/squirrelmail/po/squirrelmail.po
+share/squirrelmail/src/addrbook_popup.php
+share/squirrelmail/src/addrbook_search.php
+share/squirrelmail/src/addrbook_search_html.php
+share/squirrelmail/src/addressbook.php
+share/squirrelmail/src/compose.php
+share/squirrelmail/src/delete_message.php
+share/squirrelmail/src/download.php
+share/squirrelmail/src/empty_trash.php
+share/squirrelmail/src/folders.php
+share/squirrelmail/src/folders_create.php
+share/squirrelmail/src/folders_delete.php
+share/squirrelmail/src/folders_rename_do.php
+share/squirrelmail/src/folders_rename_getname.php
+share/squirrelmail/src/folders_subscribe.php
+share/squirrelmail/src/help.php
+share/squirrelmail/src/index.php
+share/squirrelmail/src/left_main.php
+share/squirrelmail/src/load_prefs.php
+share/squirrelmail/src/login.php
+share/squirrelmail/src/move_messages.php
+share/squirrelmail/src/options.php
+share/squirrelmail/src/options_display.php
+share/squirrelmail/src/options_folder.php
+share/squirrelmail/src/options_highlight.php
+share/squirrelmail/src/options_order.php
+share/squirrelmail/src/options_personal.php
+share/squirrelmail/src/read_body.php
+share/squirrelmail/src/redirect.php
+share/squirrelmail/src/right_main.php
+share/squirrelmail/src/search.php
+share/squirrelmail/src/signout.php
+share/squirrelmail/src/webmail.php
+share/squirrelmail/themes/README.themes
+share/squirrelmail/themes/black_bean_burrito_theme.php
+share/squirrelmail/themes/bluesnews_theme.php
+share/squirrelmail/themes/bluesteel_theme.php
+share/squirrelmail/themes/dark_grey_theme.php
+share/squirrelmail/themes/deepocean_theme.php
+share/squirrelmail/themes/default_theme.php
+share/squirrelmail/themes/forest_theme.php
+share/squirrelmail/themes/high_contrast_theme.php
+share/squirrelmail/themes/ice_theme.php
+share/squirrelmail/themes/index.php
+share/squirrelmail/themes/maize_theme.php
+share/squirrelmail/themes/plain_blue_theme.php
+share/squirrelmail/themes/purple_theme.php
+share/squirrelmail/themes/sandstorm_theme.php
+share/squirrelmail/themes/seaspray_theme.php
+share/squirrelmail/themes/servery_theme.php
+share/squirrelmail/themes/slashdot_theme.php
+@dirrm share/squirrelmail/themes
+@dirrm share/squirrelmail/src
+@dirrm share/squirrelmail/po
+@dirrm share/squirrelmail/plugins
+@dirrm share/squirrelmail/locale/tw/LC_MESSAGES
+@dirrm share/squirrelmail/locale/tw
+@dirrm share/squirrelmail/locale/sv/LC_MESSAGES
+@dirrm share/squirrelmail/locale/sv
+@dirrm share/squirrelmail/locale/sr/LC_MESSAGES
+@dirrm share/squirrelmail/locale/sr
+@dirrm share/squirrelmail/locale/ru/LC_MESSAGES
+@dirrm share/squirrelmail/locale/ru
+@dirrm share/squirrelmail/locale/pt_BR/LC_MESSAGES
+@dirrm share/squirrelmail/locale/pt_BR
+@dirrm share/squirrelmail/locale/pl/LC_MESSAGES
+@dirrm share/squirrelmail/locale/pl
+@dirrm share/squirrelmail/locale/no_NO_ny/LC_MESSAGES
+@dirrm share/squirrelmail/locale/no_NO_ny
+@dirrm share/squirrelmail/locale/no/LC_MESSAGES
+@dirrm share/squirrelmail/locale/no
+@dirrm share/squirrelmail/locale/nl/LC_MESSAGES
+@dirrm share/squirrelmail/locale/nl
+@dirrm share/squirrelmail/locale/ko/LC_MESSAGES
+@dirrm share/squirrelmail/locale/ko
+@dirrm share/squirrelmail/locale/it/LC_MESSAGES
+@dirrm share/squirrelmail/locale/it
+@dirrm share/squirrelmail/locale/ger/LC_MESSAGES
+@dirrm share/squirrelmail/locale/ger
+@dirrm share/squirrelmail/locale/fr/LC_MESSAGES
+@dirrm share/squirrelmail/locale/fr
+@dirrm share/squirrelmail/locale/es/LC_MESSAGES
+@dirrm share/squirrelmail/locale/es
+@dirrm share/squirrelmail/locale/de/LC_MESSAGES
+@dirrm share/squirrelmail/locale/de
+@dirrm share/squirrelmail/locale/da/LC_MESSAGES
+@dirrm share/squirrelmail/locale/da
+@dirrm share/squirrelmail/locale/cs/LC_MESSAGES
+@dirrm share/squirrelmail/locale/cs
+@dirrm share/squirrelmail/locale/ca/LC_MESSAGES
+@dirrm share/squirrelmail/locale/ca
+@dirrm share/squirrelmail/locale
+@dirrm share/squirrelmail/images
+@dirrm share/squirrelmail/help/ru
+@dirrm share/squirrelmail/help/pl
+@dirrm share/squirrelmail/help/ko
+@dirrm share/squirrelmail/help/en
+@dirrm share/squirrelmail/help/cs
+@dirrm share/squirrelmail/help/ca
+@dirrm share/squirrelmail/help
+@dirrm share/squirrelmail/functions
+@dirrm share/squirrelmail/doc
+@dirrm share/squirrelmail/data
+@unexec rmdir %D/share/squirrelmail/config 2>/dev/null || true
+@unexec rmdir %D/share/squirrelmail 2>/dev/null || true
