@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 09:04:20 agc Exp $
+$NetBSD: distinfo,v 1.3 2003/01/13 13:21:08 wiz Exp $
 
-SHA1 (jpilot-syncmal_0.60.tar.gz) = c7540a7f659848f59867bbca37f57f75bedc3315
-Size (jpilot-syncmal_0.60.tar.gz) = 124956 bytes
-SHA1 (malsync_2.0.5.src.tar.gz) = 47e0097f051b1ffb0be67cd092657ff9d80ade3c
-Size (malsync_2.0.5.src.tar.gz) = 178522 bytes
-SHA1 (patch-aa) = 8ae1ca6e229225f1a694d0401ee79906c7c3dfbd
+SHA1 (jpilot-syncmal_0.71.tar.gz) = 561b5b1e090d883cf4cd04d801ae24deeab391ad
+Size (jpilot-syncmal_0.71.tar.gz) = 302724 bytes
+SHA1 (patch-aa) = eaf02c8e0e0fc3664ed9f821aa30f06973039b92
+SHA1 (patch-ab) = 3cfe2caa22b973411602323bd922480815143e19
