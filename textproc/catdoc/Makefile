@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/10/25 23:14:58 agc Exp $
+# $NetBSD: Makefile,v 1.11 1999/10/25 23:25:18 agc Exp $
 #
 
 DISTNAME=	catdoc-0.91.2
@@ -13,6 +13,7 @@ WRKSRC=		${WRKDIR}/catdoc
 
 USE_X11=	yes
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/share
 CPPFLAGS+=	-Dunix -D__unix
 MAKE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 
