@@ -1,10 +1,10 @@
-$NetBSD: patch-ah,v 1.8 2005/02/05 00:04:20 adrianp Exp $
+$NetBSD: patch-ah,v 1.9 2005/02/05 00:26:18 adrianp Exp $
 
---- asmrun/power-bsd.S.orig	2005-02-04 23:36:22.000000000 +0000
-+++ asmrun/power-bsd.S	2005-02-04 23:42:19.000000000 +0000
+--- asmrun/power-bsd.S.orig	2005-02-05 00:20:14.000000000 +0000
++++ asmrun/power-bsd.S	2005-02-05 00:22:01.000000000 +0000
 @@ -13,6 +13,35 @@
  
- /* $Id: patch-ah,v 1.8 2005/02/05 00:04:20 adrianp Exp $ */
+ /* $Id: patch-ah,v 1.9 2005/02/05 00:26:18 adrianp Exp $ */
  
 +#if defined(PROFILING)
 +#define PROFILE_CAML \
@@ -17,23 +17,23 @@ $NetBSD: patch-ah,v 1.8 2005/02/05 00:04:20 adrianp Exp $
 +        stw 5, 20(1) \
 +        stw 6, 24(1) \
 +        stw 7, 28(1) \
-+        bl _mcount \
-+        lwz 2, 8(1) \
-+        lwz 3, 12(1) \
-+        lwz 4, 16(1) \
-+        lwz 5, 20(1) \
-+        lwz 6, 24(1) \
++        bl _mcount \                
++        lwz 2, 8(1) \               
++        lwz 3, 12(1) \              
++        lwz 4, 16(1) \              
++        lwz 5, 20(1) \              
++        lwz 6, 24(1) \              
 +        lwz 7, 28(1) \
 +        addic 1, 1, 32
 +
 +#define PROFILE_C \
 +        mflr 0 \
-+        stw 0, 4(1) \
-+        bl _mcount
-+#else
-+#define PROFILE_CAML
-+#define PROFILE_C
-+#endif
++        stw 0, 4(1) \               
++        bl _mcount                  
++#else                               
++#define PROFILE_CAML                
++#define PROFILE_C                   
++#endif                              
 +
  #define Addrglobal(reg,glob) \
          addis   reg, 0, glob@ha; \
