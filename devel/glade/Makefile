@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/04/07 06:40:13 rh Exp $
+# $NetBSD: Makefile,v 1.24 2001/10/06 17:30:59 rh Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/11/18 17:35:16 vanilla Exp
 #
 
@@ -11,13 +11,11 @@ MAINTAINER=     packages@netbsd.org
 HOMEPAGE=	http://glade.pn.org/
 COMMENT=	User interface builder for GTK+
 
-DEPENDS+=	gnome-core>=1.4.0:../../x11/gnome-core
-
 GNU_CONFIGURE=	yes
 USE_X11BASE=	yes
 
-CONFIGURE_ENV+=	CFLAGS="${CFLAGS} -I${LOCALBASE}/include"
-CONFIGURE_ENV+=	LOCALEDIR=${LOCALEDIR}
+#CONFIGURE_ENV+=	CFLAGS="${CFLAGS} -I${LOCALBASE}/include"
+CONFIGURE_ENV+=	LOCALEDIR=${PKGLOCALEDIR}
 CONFIGURE_ARGS+=--with-bonobo
 
 post-install:
@@ -32,16 +30,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/portability.txt ${PREFIX}/share/doc/glade
 	${INSTALL_DATA} ${WRKSRC}/doc/source_code.txt ${PREFIX}/share/doc/glade
 
-.include "../../mk/bsd.prefs.mk"
-
-# The directory in which locale files are found is:
-#
-#	${PREFIX}/${LOCALEDIR}/locale/<lang>/LC_MESSAGES
-#
-.if ${OPSYS} == "SunOS"
-LOCALEDIR=		lib
-.else
-LOCALEDIR=		share
-.endif
-
+.include "../../x11/gnome-core/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
