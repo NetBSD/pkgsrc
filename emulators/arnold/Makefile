@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/24 10:53:27 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/22 23:55:15 jlam Exp $
 #
 
 DISTNAME=		arnsrc27012002
@@ -13,7 +13,7 @@ HOMEPAGE=		http://arnold.emuunlim.com/
 COMMENT=		Amstrad CPC, Amstrad CPC+ and KC Compact emulator
 
 # we want case sensitive file names.
-EXTRACT_CMD.zip=        ${LOCALBASE}/bin/unzip -aqo $${extract_file}
+EXTRACT_CMD_OPTS.zip=	-aqo
 
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes

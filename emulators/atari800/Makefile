@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/07/17 21:35:19 grant Exp $
+# $NetBSD: Makefile,v 1.21 2003/11/22 23:55:15 jlam Exp $
 #
 
 DISTNAME=	atari800-1.3.0
@@ -6,7 +6,8 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/src
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=atari800/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} xf25.zip
-EXTRACT_CMD.zip=       ${LOCALBASE}/bin/unzip -Lqo $${extract_file}
+
+EXTRACT_CMD_OPTS.zip=	-Lqo
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://atari800.atari.org
