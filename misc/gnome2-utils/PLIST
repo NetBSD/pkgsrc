@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/14 23:40:17 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/01/16 02:38:14 xtraeme Exp $
 bin/gnome-dictionary
 bin/gnome-search-tool
 bin/gnome-system-log
@@ -163,27 +163,42 @@ share/pixmaps/gnome-searchtool.png
 @dirrm share/pixmaps/gnome-search-tool
 @dirrm share/omf/gnome-utils
 @dirrm share/gnome/help/gnome-system-log/zh_TW/figures
+@dirrm share/gnome/help/gnome-system-log/zh_TW
 @dirrm share/gnome/help/gnome-system-log/zh_CN/figures
+@dirrm share/gnome/help/gnome-system-log/zh_CN
 @dirrm share/gnome/help/gnome-system-log/sv/figures
+@dirrm share/gnome/help/gnome-system-log/sv
 @dirrm share/gnome/help/gnome-system-log/ko/figures
+@dirrm share/gnome/help/gnome-system-log/ko
 @dirrm share/gnome/help/gnome-system-log/ja/figures
 @dirrm share/gnome/help/gnome-system-log/ja
 @dirrm share/gnome/help/gnome-system-log/it/figures
+@dirrm share/gnome/help/gnome-system-log/it
 @dirrm share/gnome/help/gnome-system-log/fr/figures
+@dirrm share/gnome/help/gnome-system-log/fr
 @dirrm share/gnome/help/gnome-system-log/es/figures
+@dirrm share/gnome/help/gnome-system-log/es
 @dirrm share/gnome/help/gnome-system-log/de/figures
+@dirrm share/gnome/help/gnome-system-log/de
 @dirrm share/gnome/help/gnome-system-log/C/figures
 @dirrm share/gnome/help/gnome-system-log/C
 @dirrm share/gnome/help/gnome-system-log
 @dirrm share/gnome/help/gnome-search-tool/zh_TW/figures
+@dirrm share/gnome/help/gnome-search-tool/zh_TW
 @dirrm share/gnome/help/gnome-search-tool/zh_CN/figures
+@dirrm share/gnome/help/gnome-search-tool/zh_CN
 @dirrm share/gnome/help/gnome-search-tool/sv/figures
+@dirrm share/gnome/help/gnome-search-tool/sv
 @dirrm share/gnome/help/gnome-search-tool/ko/figures
+@dirrm share/gnome/help/gnome-search-tool/ko
 @dirrm share/gnome/help/gnome-search-tool/ja/figures
 @dirrm share/gnome/help/gnome-search-tool/ja
 @dirrm share/gnome/help/gnome-search-tool/it/figures
+@dirrm share/gnome/help/gnome-search-tool/it
 @dirrm share/gnome/help/gnome-search-tool/fr/figures
+@dirrm share/gnome/help/gnome-search-tool/fr
 @dirrm share/gnome/help/gnome-search-tool/es/figures
+@dirrm share/gnome/help/gnome-search-tool/es
 @dirrm share/gnome/help/gnome-search-tool/C/figures
 @dirrm share/gnome/help/gnome-search-tool/C
 @dirrm share/gnome/help/gnome-search-tool
