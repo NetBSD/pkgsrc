@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/29 00:16:41 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/09/24 21:47:41 reed Exp $
 #
 
 DISTNAME=		xvidcap-1.1.3
@@ -10,7 +10,6 @@ HOMEPAGE=		http://xvidcap.sourceforge.net/
 COMMENT=		Capture X display to individual frames or MPEG video
 
 USE_BUILDLINK3=		yes
-USE_GNU_TOOLS+=		make
 USE_X11=		yes
 GNU_CONFIGURE=		yes
 
