@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/05/16 01:45:44 simonb Exp $
+$NetBSD: distinfo,v 1.2 2003/12/14 11:14:21 jmmv Exp $
 
-SHA1 (diffstat-1.33.tgz) = 049f017acf2ffb365f63226e4ba71e7d9f8f69f2
-Size (diffstat-1.33.tgz) = 56407 bytes
+SHA1 (diffstat-1.34.tgz) = 5a14769e35381fc3a6e784eddd4f7cb4621b46ec
+Size (diffstat-1.34.tgz) = 58633 bytes
