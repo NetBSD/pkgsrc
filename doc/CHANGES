@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8699 2005/01/11 13:19:02 markd Exp $
+$NetBSD: CHANGES,v 1.8700 2005/01/11 13:38:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -243,3 +243,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gnome-vfs2 to 2.8.3nb1 [jmmv 2005-01-11]
 	Updated gnome-session to 2.8.1nb2 [jmmv 2005-01-11]
 	Updated gwenview to 1.1.8 [markd 2005-01-11]
+	Updated imlib2 to 1.2.0 [adam 2005-01-11]
