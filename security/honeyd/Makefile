@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/20 09:14:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/30 17:26:23 tv Exp $
 #
 
 DISTNAME=	honeyd-0.8b
+PKGREVISION=	1
 CATEGORIES=	security net
 MASTER_SITES=	http://niels.xtdnet.nl/honeyd/
 
