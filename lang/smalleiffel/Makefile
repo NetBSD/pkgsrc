@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/04/12 18:19:27 jlam Exp $
+# $NetBSD: Makefile,v 1.2 1999/06/21 21:23:15 jlam Exp $
 #
 
 DISTNAME=	se
-PKGNAME=	smalleiffel-0.79
+PKGNAME=	smalleiffel-0.78
 WRKSRC=		${WRKDIR}/SmallEiffel
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.cs.rit.edu/pub/mirrors/SmallEiffel/ \
@@ -11,26 +11,22 @@ MASTER_SITES=	ftp://ftp.cs.rit.edu/pub/mirrors/SmallEiffel/ \
 		ftp://gd.tuwien.ac.at/pub/languages/SmallEiffel/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	lamj@stat.cmu.edu
+MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://smalleiffel.loria.fr/
 
 SE?=		${PREFIX}/lib/smalleiffel
 BINNAME=	smalleiffel
 
 post-extract:
-	( cd ${WRKSRC}/sys; \
-	  ${RM} compiler.* gc linker.* loadpath.* o_suffix.* system.se )
+	( cd ${WRKSRC}/sys; ${RM} compiler.se gc loadpath.* system.se )
 	( cd ${FILESDIR}; \
-	  ${CP} compiler.UNIX gc linker.UNIX o_suffix.UNIX system.se \
-		${WRKSRC}/sys )
-	${SED} -e "s,@SE@,${SE},g" ${FILESDIR}/loadpath.UNIX \
-		>${WRKSRC}/sys/loadpath.UNIX
+	  ${CP} compiler.se gc loadpath.UNIX system.se ${WRKSRC}/sys )
 	find ${WRKSRC} -type f -print | xargs ${CHMOD} 644
 
 do-build:
 	( cd ${WRKSRC}/bin_c; \
-	  for f in clean compile_to_c compile_to_jvm \
-		   compile finder pretty print_jvm_class short; \
+	  for f in clean compile compile_to_c compile_to_jvm \
+		   finder pretty print_jvm_class short; \
 	  do \
 		${ECHO} Building $$f...; \
 		${SH} -x $$f.make; \
