@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2407 2004/11/21 11:03:35 taca Exp $
+$NetBSD: TODO,v 1.2408 2004/11/22 11:52:08 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -1170,7 +1170,6 @@ Suggested package updates
 	o xtide-2.7.1
 	o xtraceroute-0.9.1
 	o xtux-20030306
-	o xvidcore-1.0.2
 	o xzgv-0.8
 	o xzip-182
 	o yacas-1.0.55
