@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.114 2004/08/22 15:11:07 taca Exp $
+# $NetBSD: Makefile,v 1.115 2004/09/03 22:58:19 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE6
 PKGNAME=	squid-2.5.6
-PKGREVISION=	# empty
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -26,7 +26,14 @@ PATCHFILES=	squid-2.5.STABLE6-ufs_no_valid_dir.patch \
 		squid-2.5.STABLE6-heap_segfault.patch \
 		squid-2.5.STABLE6-initgroups.patch \
 		squid-2.5.STABLE6-external_acl_newlines.patch \
-		squid-2.5.STABLE6-ntlm_fetch_string.patch
+		squid-2.5.STABLE6-ntlm_fetch_string.patch \
+		squid-2.5.STABLE6-ntlm_noreuse_leak.patch \
+		squid-2.5.STABLE6-ntlm_challengereuse_leak.patch \
+		squid-2.5.STABLE6-rotate_error.patch \
+		squid-2.5.STABLE6-digest_crash.patch \
+		squid-2.5.STABLE6-acl_times.patch \
+		squid-2.5.STABLE6-http_header_range.patch \
+		squid-2.5.STABLE6-Content-Disposition.patch
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@NetBSD.org
