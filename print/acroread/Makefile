@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2002/07/02 11:40:16 agc Exp $
+# $NetBSD: Makefile,v 1.31 2002/11/19 07:43:18 schmonz Exp $
 
 PKGNAME=	acroread-4.05
 CATEGORIES=	print
@@ -41,9 +41,6 @@ IGNORE=		'${PKGNAME} requires Solaris libraries - see compat_svr4(8)'
 DISTNAME=	sunsparc-rs-405
 WRKSRC=		${WRKDIR}/SSOLRS.install
 PLATFORM=	sparcsolaris
-.else
-DISTNAME=	${PKGNAME}
-PLATFORM=	unknown
 .endif
 ONLY_FOR_PLATFORM=	*-*-i386 *-1.4[L-Z]-sparc *-1.[5-9]*-sparc *-[2-9]*-sparc
 # *-*-alpha 
@@ -54,6 +51,9 @@ PLATFORM=	sparcsolaris
 
 post-patch:
 	${CHMOD} -R o+rwx ${WRKSRC}
+.else
+DISTNAME=	${PKGNAME}
+PLATFORM=	unknown
 .endif
 
 PLIST_SUBST+=	PLATFORM=${PLATFORM}
