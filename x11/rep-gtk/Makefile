@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2000/07/31 04:14:11 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/07 15:51:37 danw Exp $
 #
 
-DISTNAME=	rep-gtk-0.11
+DISTNAME=	rep-gtk-0.13a
 CATEGORIES=	x11 lang
 MASTER_SITES=	ftp://rep-gtk.sourceforge.net/pub/rep-gtk/
 
@@ -9,10 +9,11 @@ MAINTAINER=	danw@netbsd.org
 HOMEPAGE=	http://rep-gtk.sourceforge.net/
 
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
-DEPENDS+=	librep>=0.11:../../lang/librep
+DEPENDS+=	librep>=0.12:../../lang/librep
 DEPENDS+=	libglade-*:../../devel/libglade
 DEPENDS+=	gnome-libs-*:../../x11/gnome-libs
 DEPENDS+=	gettext>=0.10.35nb1:../../devel/gettext
+DEPENDS+=	gdk-pixbuf-*:../../graphics/gdk-pixbuf
 
 USE_X11=	yes
 GNU_CONFIGURE=	yes
