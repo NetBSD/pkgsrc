@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.8 2003/01/25 16:29:49 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2003/02/14 20:04:06 jmmv Exp $
 bin/gconftool-2
-etc/gconf/2/path
 include/gconf/2/gconf/gconf-changeset.h
 include/gconf/2/gconf/gconf-client.h
 include/gconf/2/gconf/gconf-engine.h
@@ -51,8 +50,10 @@ share/doc/html/gconf/x289.html
 share/doc/html/gconf/x42.html
 share/doc/html/gconf/x462.html
 share/doc/html/gconf/x485.html
+share/examples/GConf2/path
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/GConf2.mo
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/GConf2.mo
@@ -69,6 +70,7 @@ ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/GConf2.mo
+${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/GConf2.mo
@@ -86,15 +88,16 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/GConf2.mo
+share/sgml/gconf/gconf-1.0.dtd
+@dirrm share/sgml/gconf
+@comment in xmlcatmgr: @dirrm share/sgml
+@exec ${MKDIR} %D/share/gconf/schemas
+@dirrm share/gconf/schemas
+@dirrm share/gconf
+@dirrm share/examples/GConf2
 @dirrm share/doc/html/gconf
 @dirrm lib/GConf/2
 @unexec ${RMDIR} -p %D/lib/GConf 2>/dev/null || ${TRUE}
 @dirrm include/gconf/2/gconf
 @dirrm include/gconf/2
 @unexec ${RMDIR} -p %D/include/gconf 2>/dev/null || ${TRUE}
-@exec ${MKDIR} %D/etc/gconf/gconf.xml.mandatory
-@dirrm etc/gconf/gconf.xml.mandatory
-@exec ${MKDIR} %D/etc/gconf/gconf.xml.defaults
-@dirrm etc/gconf/gconf.xml.defaults
-@dirrm etc/gconf/2
-@dirrm etc/gconf
