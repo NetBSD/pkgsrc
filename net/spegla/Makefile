@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.5 2003/09/15 16:27:55 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/09 16:01:58 wiz Exp $
 
-DISTNAME=		spegla-1.1
+DISTNAME=		spegla-1.1p4
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.luth.se/pub/unix/mirror/ \
-			ftp://subzero.campus.luth.se/pub/spegla/
+MASTER_SITES=		ftp://subzero.campus.luth.se/pub/spegla/
 
 MAINTAINER=		jnilsson@ludd.luth.se
 COMMENT=		Mirror program for FTP sites (written in C)
 
 MANCOMPRESSED_IF_MANZ=	yes
 PLIST_SRC=		${WRKDIR}/PLIST
+USE_BUILDLINK3=		yes
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../mk/bsd.prefs.mk"
 
