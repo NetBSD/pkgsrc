@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 1999/07/16 04:57:48 sakamoto Exp $
+$NetBSD: patch-aa,v 1.5 1999/07/19 06:14:30 sakamoto Exp $
 
---- ./configure.orig	Wed Jul 14 16:05:44 1999
-+++ ./configure	Fri Jul 16 10:42:32 1999
-@@ -1049,5 +1049,5 @@
+--- ./configure.orig	Fri Jul 16 23:24:43 1999
++++ ./configure	Mon Jul 19 14:53:37 1999
+@@ -1053,5 +1053,5 @@
  $libtool_flags --no-verify ltmain.sh $PLATFORM ||\
  { echo "configure: error: libtool configuration failed" 1>&2; exit 1; }
 -LIBTOOL="\$(TOP)/libtool"
