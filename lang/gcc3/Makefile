@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2003/07/06 12:31:59 grant Exp $
+# $NetBSD: Makefile,v 1.35 2003/07/06 15:33:36 seb Exp $
 #
 
 DISTNAME=		gcc-3.3
@@ -22,7 +22,6 @@ USE_GMAKE=		YES
 
 HAS_CONFIGURE=		YES
 
-CONFIGURE_ARGS+=	--infodir=${GCC_PREFIX}/info
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX}
 UNLIMIT_RESOURCES=	datasize
 
