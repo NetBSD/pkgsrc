@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.37 2003/10/19 07:38:31 grant Exp $
+# $NetBSD: defs.IRIX.mk,v 1.38 2003/12/16 22:54:13 heinz Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -133,7 +133,7 @@ _OPSYS_PTHREAD_AUTO=	no		# -lpthread needed for pthreads
 _OPSYS_RPATH_NAME=	-rpath,		# name of symbol in rpath directive to linker 
 .if defined(_OPSYS_GPATCH_REQD) && ${_OPSYS_GPATCH_REQD} == "YES"
 _PATCH_CAN_BACKUP=	yes		# patch(1) can make backups
-_PATCH_BACKUP_ARG=	-b -V simple -z # switch to patch(1) for backup suffix
+_PATCH_BACKUP_ARG?=	-b -V simple -z # switch to patch(1) for backup suffix
 .else
 _PATCH_CAN_BACKUP=	no		# native patch(1) can make backups
 .endif
