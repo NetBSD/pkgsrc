@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.193 2004/01/14 15:03:53 wiz Exp $
+# $NetBSD: Makefile,v 1.194 2004/01/22 12:03:26 xtraeme Exp $
 #
 
 COMMENT=	Games
@@ -142,6 +142,7 @@ SUBDIR+=	quake
 SUBDIR+=	quake3arena
 SUBDIR+=	quake3arena-demo
 SUBDIR+=	quake3server
+SUBDIR+=	quake3server-excessive
 SUBDIR+=	quake3server-ra3
 SUBDIR+=	quake6
 SUBDIR+=	quakedata
