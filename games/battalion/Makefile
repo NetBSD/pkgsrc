@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/08/06 21:07:39 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1998/08/09 23:15:06 tron Exp $
 #
 
 DISTNAME=	battalion
@@ -33,7 +33,7 @@ do-install:
 	${INSTALL} -c -o root -g games -m 0664 /dev/null ${PREFIX}/share/battalion/battalion_hiscore
 
 pre-clean:
-	${RM} -rf ${WRKDIR}/battalionSUN4
+	@${RM} -rf ${WRKDIR}/battalionSUN4
 
 .include "../../mk/bsd.pkg.mk"
 
