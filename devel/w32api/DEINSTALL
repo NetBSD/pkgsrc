@@ -1,0 +1,34 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 2002/08/21 12:59:17 kent Exp $
+# $PEACE: DEINSTALL,v 1.1 2002/08/21 02:02:26 kent Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+RM=/bin/rm
+RMDIR=/bin/rmdir
+
+CROSSINC=${PKG_PREFIX}/cross/i386-netbsdpe/include
+
+case ${STAGE} in
+DEINSTALL)
+	;;
+POST-DEINSTALL)
+	${RM} ${CROSSINC}/ctype.h
+	${RM} ${CROSSINC}/stdio.h
+	${RM} ${CROSSINC}/stdlib.h
+	${RM} ${CROSSINC}/time.h
+	${RM} ${CROSSINC}/unistd.h
+	${RM} ${CROSSINC}/i386/ansi.h
+	${RMDIR} ${CROSSINC}/i386
+	${RM} ${CROSSINC}/machine
+	${RM} ${CROSSINC}/sys/param.h
+	${RMDIR} ${CROSSINC}/sys
+	;;
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
