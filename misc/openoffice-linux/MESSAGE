@@ -1,13 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/01/22 21:57:25 mrauch Exp $
+$NetBSD: MESSAGE,v 1.2 2003/01/24 11:15:02 mrauch Exp $
 
   OpenOffice has now been installed in ${PREFIX}/OpenOffice.org1.0.2.
 
-  Before you are able to use this package, on NetBSD the file 
-  /emul/linux/etc/mtab must exist, i.e. run 
-  "touch /emul/linux/etc/mtab" as root.
-
-  Additionally, each user has to run a setup program first, which is 
-  automatically invoked at the first start. Thereafter, OpenOffice can be 
-  started using the ${PREFIX}/bin/soffice command.
+  Before using this package for the first time, each user has to run
+  a setup program, which is automatically invoked at the first start.  
+  Thereafter, OpenOffice can be started using the 
+  ${PREFIX}/bin/soffice command.
 ===========================================================================
