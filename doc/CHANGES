@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5526 2004/04/11 03:17:33 rh Exp $
+$NetBSD: CHANGES,v 1.5527 2004/04/11 03:21:06 rh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1898,3 +1898,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added lsdvd-0.10 [snj 2004-04-11]
 	Updated liteamp to 0.2.4.2 [minskim 2004-04-11]
 	Updated GWLib to 0.6.3 [rh 2004-04-11]
+	Updated gworkspace to 0.6.3 [rh 2004-04-11]
