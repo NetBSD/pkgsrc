@@ -1,0 +1,3 @@
+gconfmm provides a C++ interface for the GConf (version 2) configuration
+database system.  GConf functionally is similar to the Windows registry,
+but lots better.
