@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2002/10/19 03:03:51 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2003/01/05 20:12:30 jlam Exp $
 
 PKGNAME=		tk-postgresql-${BASE_VERS}
 COMMENT=		Tk interface to PostgreSQL
 
-USE_BUILDLINK2=		# defined
-USE_X11=		# defined
+.include "../postgresql/Makefile.common"
 
-.include "../../databases/postgresql/Makefile.common"
-
+USE_X11=		YES
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-tcl
 CONFIGURE_ARGS+=	--with-tk
@@ -25,8 +23,8 @@ post-install:
 	${GTAR} zxCf ${PREFIX}/man ${WRKSRC}/doc/man.tar.gz		\
 		`${SED} -e "s|#.*||" ${FILESDIR}/man.tk`
 
-.include "../../databases/postgresql-lib/buildlink2.mk"
-.include "../../databases/tcl-postgresql/buildlink2.mk"
+.include "../postgresql-lib/buildlink2.mk"
+.include "../tcl-postgresql/buildlink2.mk"
 .include "../../x11/tk/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
