@@ -1,0 +1,184 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/27 22:39:51 jschauma Exp $
+java/blackdown-${RELVERSION}/CHANGES
+java/blackdown-${RELVERSION}/COPYRIGHT
+java/blackdown-${RELVERSION}/INSTALL
+java/blackdown-${RELVERSION}/JavaPluginControlPanel.html
+java/blackdown-${RELVERSION}/LICENSE
+java/blackdown-${RELVERSION}/README
+java/blackdown-${RELVERSION}/bin/.java_wrapper
+java/blackdown-${RELVERSION}/bin/JavaPluginControlPanel
+java/blackdown-${RELVERSION}/bin/awt_robot
+java/blackdown-${RELVERSION}/bin/java
+java/blackdown-${RELVERSION}/bin/keytool
+java/blackdown-${RELVERSION}/bin/policytool
+java/blackdown-${RELVERSION}/bin/rmid
+java/blackdown-${RELVERSION}/bin/rmiregistry
+java/blackdown-${RELVERSION}/bin/tnameserv
+java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/green_threads/java
+java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/green_threads/keytool
+java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/green_threads/policytool
+java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/green_threads/rmid
+java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/green_threads/rmiregistry
+java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/green_threads/tnameserv
+java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/native_threads/java
+java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/native_threads/java_vm
+java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/native_threads/keytool
+java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/native_threads/policytool
+java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/native_threads/rmid
+java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/native_threads/rmiregistry
+java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/native_threads/tnameserv
+java/blackdown-${RELVERSION}/bin/${MACHINE_ARCH}/realpath
+java/blackdown-${RELVERSION}/bin/j2sdk-config
+java/blackdown-${RELVERSION}/bin/realpath
+java/blackdown-${RELVERSION}/lib/audio/soundbank.gm
+java/blackdown-${RELVERSION}/lib/cmm/CIEXYZ.pf
+java/blackdown-${RELVERSION}/lib/cmm/GRAY.pf
+java/blackdown-${RELVERSION}/lib/cmm/LINEAR_RGB.pf
+java/blackdown-${RELVERSION}/lib/cmm/PYCC.pf
+java/blackdown-${RELVERSION}/lib/cmm/sRGB.pf
+java/blackdown-${RELVERSION}/lib/content-types.properties
+java/blackdown-${RELVERSION}/lib/flavormap.properties
+java/blackdown-${RELVERSION}/lib/font.properties
+java/blackdown-${RELVERSION}/lib/font.properties.ja
+java/blackdown-${RELVERSION}/lib/font.properties.zh
+java/blackdown-${RELVERSION}/lib/fonts/LucidaBrightDemiBold.ttf
+java/blackdown-${RELVERSION}/lib/fonts/LucidaBrightDemiItalic.ttf
+java/blackdown-${RELVERSION}/lib/fonts/LucidaBrightItalic.ttf
+java/blackdown-${RELVERSION}/lib/fonts/LucidaBrightRegular.ttf
+java/blackdown-${RELVERSION}/lib/fonts/LucidaSansDemiBold.ttf
+java/blackdown-${RELVERSION}/lib/fonts/LucidaSansDemiOblique.ttf
+java/blackdown-${RELVERSION}/lib/fonts/LucidaSansOblique.ttf
+java/blackdown-${RELVERSION}/lib/fonts/LucidaSansRegular.ttf
+java/blackdown-${RELVERSION}/lib/fonts/LucidaTypewriterBold.ttf
+java/blackdown-${RELVERSION}/lib/fonts/LucidaTypewriterBoldOblique.ttf
+java/blackdown-${RELVERSION}/lib/fonts/LucidaTypewriterOblique.ttf
+java/blackdown-${RELVERSION}/lib/fonts/LucidaTypewriterRegular.ttf
+java/blackdown-${RELVERSION}/lib/fonts/fonts.dir
+java/blackdown-${RELVERSION}/lib/i18n.jar
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/classic/Xusage.txt
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/classic/libjvm.so
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/client/Xusage.txt
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/client/libjvm.so
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/green_threads/libhpi.so
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/libJdbcOdbc.so
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/libawt.so
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/libcmm.so
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/libdcpr.so
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/libfontmanager.so
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/libhprof.so
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/libioser12.so
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/libjava.so
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/libjavaplugin_jni.so
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/libjawt.so
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/libjcov.so
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/libjpeg.so
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/libjsound.so
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/libmlib_image.so
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/libnet.so
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/libpreemptive_close.so
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/libsunwjit.so
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/libverify.so
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/libzip.so
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/native_threads/libhpi.so
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/server/Xusage.txt
+java/blackdown-${RELVERSION}/lib/${MACHINE_ARCH}/server/libjvm.so
+java/blackdown-${RELVERSION}/lib/images/cursors/cursors.properties
+java/blackdown-${RELVERSION}/lib/images/cursors/invalid32x32.gif
+java/blackdown-${RELVERSION}/lib/images/cursors/motif_CopyDrop32x32.gif
+java/blackdown-${RELVERSION}/lib/images/cursors/motif_CopyNoDrop32x32.gif
+java/blackdown-${RELVERSION}/lib/images/cursors/motif_LinkDrop32x32.gif
+java/blackdown-${RELVERSION}/lib/images/cursors/motif_LinkNoDrop32x32.gif
+java/blackdown-${RELVERSION}/lib/images/cursors/motif_MoveDrop32x32.gif
+java/blackdown-${RELVERSION}/lib/images/cursors/motif_MoveNoDrop32x32.gif
+java/blackdown-${RELVERSION}/lib/javaplugin.jar
+java/blackdown-${RELVERSION}/lib/jvm.cfg
+java/blackdown-${RELVERSION}/lib/jvm.hprof.txt
+java/blackdown-${RELVERSION}/lib/jvm.jcov.txt
+java/blackdown-${RELVERSION}/lib/locale/de/LC_MESSAGES/sunw_java_plugin.mo
+java/blackdown-${RELVERSION}/lib/locale/es/LC_MESSAGES/sunw_java_plugin.mo
+java/blackdown-${RELVERSION}/lib/locale/fr/LC_MESSAGES/sunw_java_plugin.mo
+java/blackdown-${RELVERSION}/lib/locale/it/LC_MESSAGES/sunw_java_plugin.mo
+java/blackdown-${RELVERSION}/lib/locale/ja/LC_MESSAGES/sunw_java_plugin.mo
+java/blackdown-${RELVERSION}/lib/locale/ko.UTF-8/LC_MESSAGES/sunw_java_plugin.mo
+java/blackdown-${RELVERSION}/lib/locale/ko/LC_MESSAGES/sunw_java_plugin.mo
+java/blackdown-${RELVERSION}/lib/locale/sv/LC_MESSAGES/sunw_java_plugin.mo
+java/blackdown-${RELVERSION}/lib/locale/zh.GBK/LC_MESSAGES/sunw_java_plugin.mo
+java/blackdown-${RELVERSION}/lib/locale/zh/LC_MESSAGES/sunw_java_plugin.mo
+java/blackdown-${RELVERSION}/lib/locale/zh_TW.BIG5/LC_MESSAGES/sunw_java_plugin.mo
+java/blackdown-${RELVERSION}/lib/locale/zh_TW/LC_MESSAGES/sunw_java_plugin.mo
+java/blackdown-${RELVERSION}/lib/psfont.properties.ja
+java/blackdown-${RELVERSION}/lib/psfontj2d.properties
+java/blackdown-${RELVERSION}/lib/rt.jar
+java/blackdown-${RELVERSION}/lib/security/cacerts
+java/blackdown-${RELVERSION}/lib/security/java.policy
+java/blackdown-${RELVERSION}/lib/security/java.security
+java/blackdown-${RELVERSION}/lib/sunrsasign.jar
+java/blackdown-${RELVERSION}/lib/tzmappings
+java/blackdown-${RELVERSION}/man/ja/man1/java.1
+java/blackdown-${RELVERSION}/man/ja/man1/keytool.1
+java/blackdown-${RELVERSION}/man/ja/man1/rmid.1
+java/blackdown-${RELVERSION}/man/ja/man1/rmiregistry.1
+java/blackdown-${RELVERSION}/man/ja/man1/tnameserv.1
+java/blackdown-${RELVERSION}/man/man1/java.1
+java/blackdown-${RELVERSION}/man/man1/keytool.1
+java/blackdown-${RELVERSION}/man/man1/rmid.1
+java/blackdown-${RELVERSION}/man/man1/rmiregistry.1
+java/blackdown-${RELVERSION}/man/man1/tnameserv.1
+java/blackdown-${RELVERSION}/plugin/${MACHINE_ARCH}/mozilla/javaplugin_oji.so
+java/blackdown-${RELVERSION}/plugin/${MACHINE_ARCH}/netscape4/javaplugin.so
+java/blackdown-${RELVERSION}/plugin/${MACHINE_ARCH}/netscape6
+@dirrm java/blackdown-${RELVERSION}/plugin/i386/netscape4
+@dirrm java/blackdown-${RELVERSION}/plugin/i386/mozilla
+@dirrm java/blackdown-${RELVERSION}/plugin/i386
+@dirrm java/blackdown-${RELVERSION}/plugin
+@dirrm java/blackdown-${RELVERSION}/man/man1
+@dirrm java/blackdown-${RELVERSION}/man/ja/man1
+@dirrm java/blackdown-${RELVERSION}/man/ja
+@dirrm java/blackdown-${RELVERSION}/man
+@dirrm java/blackdown-${RELVERSION}/lib/security
+@dirrm java/blackdown-${RELVERSION}/lib/locale/zh_TW/LC_MESSAGES
+@dirrm java/blackdown-${RELVERSION}/lib/locale/zh_TW.BIG5/LC_MESSAGES
+@dirrm java/blackdown-${RELVERSION}/lib/locale/zh_TW.BIG5
+@dirrm java/blackdown-${RELVERSION}/lib/locale/zh_TW
+@dirrm java/blackdown-${RELVERSION}/lib/locale/zh/LC_MESSAGES
+@dirrm java/blackdown-${RELVERSION}/lib/locale/zh.GBK/LC_MESSAGES
+@dirrm java/blackdown-${RELVERSION}/lib/locale/zh.GBK
+@dirrm java/blackdown-${RELVERSION}/lib/locale/zh
+@dirrm java/blackdown-${RELVERSION}/lib/locale/sv/LC_MESSAGES
+@dirrm java/blackdown-${RELVERSION}/lib/locale/sv
+@dirrm java/blackdown-${RELVERSION}/lib/locale/ko/LC_MESSAGES
+@dirrm java/blackdown-${RELVERSION}/lib/locale/ko.UTF-8/LC_MESSAGES
+@dirrm java/blackdown-${RELVERSION}/lib/locale/ko.UTF-8
+@dirrm java/blackdown-${RELVERSION}/lib/locale/ko
+@dirrm java/blackdown-${RELVERSION}/lib/locale/ja/LC_MESSAGES
+@dirrm java/blackdown-${RELVERSION}/lib/locale/ja
+@dirrm java/blackdown-${RELVERSION}/lib/locale/it/LC_MESSAGES
+@dirrm java/blackdown-${RELVERSION}/lib/locale/it
+@dirrm java/blackdown-${RELVERSION}/lib/locale/fr/LC_MESSAGES
+@dirrm java/blackdown-${RELVERSION}/lib/locale/fr
+@dirrm java/blackdown-${RELVERSION}/lib/locale/es/LC_MESSAGES
+@dirrm java/blackdown-${RELVERSION}/lib/locale/es
+@dirrm java/blackdown-${RELVERSION}/lib/locale/de/LC_MESSAGES
+@dirrm java/blackdown-${RELVERSION}/lib/locale/de
+@dirrm java/blackdown-${RELVERSION}/lib/locale
+@dirrm java/blackdown-${RELVERSION}/lib/images/cursors
+@dirrm java/blackdown-${RELVERSION}/lib/images
+@dirrm java/blackdown-${RELVERSION}/lib/i386/server
+@dirrm java/blackdown-${RELVERSION}/lib/i386/native_threads
+@dirrm java/blackdown-${RELVERSION}/lib/i386/green_threads
+@dirrm java/blackdown-${RELVERSION}/lib/i386/client
+@dirrm java/blackdown-${RELVERSION}/lib/i386/classic
+@dirrm java/blackdown-${RELVERSION}/lib/i386
+@dirrm java/blackdown-${RELVERSION}/lib/fonts
+@exec ${MKDIR} %D/java/blackdown-${RELVERSION}/lib/ext
+@dirrm java/blackdown-${RELVERSION}/lib/ext
+@dirrm java/blackdown-${RELVERSION}/lib/cmm
+@dirrm java/blackdown-${RELVERSION}/lib/audio
+@exec ${MKDIR} %D/java/blackdown-${RELVERSION}/lib/applet
+@dirrm java/blackdown-${RELVERSION}/lib/applet
+@dirrm java/blackdown-${RELVERSION}/lib
+@dirrm java/blackdown-${RELVERSION}/bin/i386/native_threads
+@dirrm java/blackdown-${RELVERSION}/bin/i386/green_threads
+@dirrm java/blackdown-${RELVERSION}/bin/i386
+@dirrm java/blackdown-${RELVERSION}/bin
+@dirrm java/blackdown-${RELVERSION}
