@@ -1,4 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/05/25 17:57:28 wennmach Exp $
+$NetBSD: patch-ab,v 1.2 2000/06/08 13:53:25 wennmach Exp $
+
+Use "cp" instead of "install" during the build process, since the latter
+may require root privileges. 
 
 --- lib/krb/Makefile.in.orig	Thu Nov 25 06:26:26 1999
 +++ lib/krb/Makefile.in	Thu May 25 18:32:21 2000
