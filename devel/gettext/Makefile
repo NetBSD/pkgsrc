@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/11/16 02:40:12 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2000/11/27 11:53:16 itojun Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -26,5 +26,11 @@ post-patch:
 
 post-configure:
 	${RM} -f ${WRKSRC}/intl/libintl.h
+
+post-build:
+	cd ${WRKSRC}/intl; ${MAKE_PROGRAM}
+
+post-install:
+	cd ${WRKSRC}/intl; ${MAKE_PROGRAM} install-data
 
 .include "../../mk/bsd.pkg.mk"
