@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:27:15 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/11 07:17:10 snj Exp $
 
 DISTNAME=	ish-1.11
 CATEGORIES=	converters
@@ -9,6 +9,6 @@ COMMENT=	Binary-to-text file-encoder
 
 MAKEFILE=	makefile
 ALL_TARGET=	ish
-USE_BUILDLINK2=	# defined
+USE_BUILDLINK3=	# defined
 
 .include "../../mk/bsd.pkg.mk"
