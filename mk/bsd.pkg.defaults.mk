@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.33 2002/01/19 21:29:41 agc Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.34 2002/01/21 17:31:02 zuntum Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1061,6 +1061,11 @@ PVM_SSH?=	${LOCALBASE}/bin/ssh
 # systems.
 # Possible:  Any rsh/ssh program.
 # Default:   /usr/bin/ssh if it exists, otherwise ${LOCALBASE}/bin/ssh
+
+QMAILDIR?=	/var/qmail
+# Specify the directory for qmail installation
+# Possible: any valid location
+# Default: /var/qmail
 
 QPOPPER_FAC?= LOCAL1
 # Used by qpopper package as the default syslog facility.
