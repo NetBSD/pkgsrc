@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1 2005/02/09 11:52:03 markd Exp $
+
+--- krusader/DiskUsage/radialMap/sincos.h.orig 2004-11-23 04:55:25.000000000 +0600
++++ krusader/DiskUsage/radialMap/sincos.h
+@@ -6,6 +6,8 @@
+ 
+ #include <math.h>
+ 
++// Not all platforms have defined __GLIB__ macro..
++#if defined(__GLIB__)
+ #if __GLIBC__ < 2 ||  __GLIBC__ == 2 && __GLIBC_MINOR__ < 1
+ 
+    void
+@@ -16,5 +18,14 @@
+    }
+ 
+ #endif
++#else // __GLIB__
++   // Don't know for glib but on NetBSD such cast is prohibited :)
++   inline void
++   sincos( double angleRadians, double *Sin, double *Cos )
++   {
++      *Sin = sin( angleRadians );
++      *Cos = cos( angleRadians );
++   }
++#endif // !__GLIB__
+ 
+ #endif
