@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1999/08/26 07:03:45 tron Exp $
+# $NetBSD: Makefile,v 1.20 1999/08/26 15:05:16 tron Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/07/13 18:49:29 max Exp
 #
 
@@ -18,9 +18,7 @@ USE_XAW=	yes
 
 XAW_TYPE?=	3d
 .if (${XAW_TYPE} == standard)
-.BEGIN:
-	@${ECHO_MSG} "${PKGNAME} cannot be built with the standard Xaw library."
-	@${FALSE}
+DEPENDS+=	Xaw3d-1.5:../../x11/Xaw3d
 .endif
 
 post-extract:
