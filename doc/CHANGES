@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6542 2004/07/13 13:45:45 atatat Exp $
+$NetBSD: CHANGES,v 1.6543 2004/07/13 14:48:15 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3376,3 +3376,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ifp-line to 0.2.4.3 [sekiya 2004-07-13]
 	Updated bsdiff to 4.2 [cjep 2004-07-13]
 	Updated lsof to 4.72 [atatat 2004-07-13]
+	Updated boehm-gc to 6.3nb1 [recht 2004-07-13]
+	Updated mono to 1.0nb1 [recht 2004-07-13]
