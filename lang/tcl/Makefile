@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/03/22 16:14:02 jwise Exp $
+# $NetBSD: Makefile,v 1.29 2004/03/24 15:24:36 jwise Exp $
 #
 
 DISTNAME=		tcl8.4.6-src
@@ -96,4 +96,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/../generic/tclPort.h ${PREFIX}/include/tcl/generic
 	${INSTALL_DATA} ${WRKSRC}/../generic/tclRegexp.h ${PREFIX}/include/tcl/generic
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
