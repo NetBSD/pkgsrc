@@ -1,0 +1,11 @@
+--- Makefile.in.orig	Sun Jun 14 21:37:07 1998
++++ Makefile.in	Sun Jun 14 21:37:22 1998
+@@ -117,7 +117,7 @@
+ EXTRA_DIST =		INSTALL-SOURCE-GENERIC README \
+ 			PUBLIC INSTALL-SOURCE # Built from source in Docs dir
+ SUBDIRS =		Docs @readline_dir@ client @sql_server_dirs@ \
+-			scripts include tests man @bench_dirs@ @perl_dirs@
++			scripts include tests man # @bench_dirs@ @perl_dirs@
+ 
+ # Relink after clean
+ CLEANFILES =		linked_client_sources

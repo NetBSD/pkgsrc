@@ -1,0 +1,53 @@
+--- client/Makefile.in.orig	Sun May 10 17:25:18 1998
++++ client/Makefile.in	Sun Jun 14 20:15:50 1998
+@@ -149,16 +149,18 @@
+ libmysqlclient_a_LIBADD = $(mysysobjects) $(mystringsobjects) $(dbugobjects)
+ 
+ #  Dirty hack to generate names for shared objects (requires GNUmake)
+-SHLIBOBJS = ${libmysqlclient_a_SOURCES:.c=.o} ${libmysqlclient_a_LIBADD}
++SHLIBOBJS = ${libmysqlclient_a_SOURCES:.c=.so} ${libmysqlclient_a_LIBADD:.o=.so}
++
++SHVERSION = 321.30
+ 
+ CLEANFILES =		$(libmysqlclient_a_LIBADD) $(SHLIBOBJS) \
+-			libmysqlclient.so libmysqlclient.so.@VERSION@
++			libmysqlclient.so libmysqlclient.so.${SHVERSION}
+ 
+ DEFS =			-DUNDEF_THREADS_HACK
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../config.h
+ CONFIG_CLEAN_FILES = 
+-LIBRARIES =  $(pkglib_LIBRARIES)
++LIBRARIES =  $(pkglib_LIBRARIES) libmysqlclient.so
+ 
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+@@ -540,18 +542,22 @@
+ 
+ shlib: libmysqlclient.so
+ 
+-libmysqlclient.so: libmysqlclient.so.@VERSION@
++libmysqlclient.so: libmysqlclient.so.${SHVERSION}
+ 	-rm -f $@
+ 	ln -s $< $@
+ 
+-libmysqlclient.so.@VERSION@: $(SHLIBOBJS)
+-	$(CC) -shared -Wl,-h,libmysqlclient.so.@SHARED_LIB_VERSION@ -o $@ \
+-	  $(SHLIBOBJS) $(LIBS)
++libmysqlclient.so.${SHVERSION}: libmysqlclient_pic.a
++	$(LD) -x -Bshareable -Bforcearchive libmysqlclient_pic.a -o $@ $(LIBS)
++
++libmysqlclient_pic.a: $(SHLIBOBJS)
++	${AR} cru $@ $(SHLIBOBJS)
++	${RANLIB} $@
+ 
+ install_shlib: libmysqlclient.so
+-	$(INSTALL) libmysqlclient.so.@VERSION@ $(libdir)
++	$(INSTALL) libmysqlclient_pic.a $(libdir)
++	$(INSTALL) libmysqlclient.so.${SHVERSION} $(libdir)
+ 	-rm -f $(libdir)/libmysqlclient.so
+-	ln -s libmysqlclient.so.@VERSION@ $(libdir)/libmysqlclient.so
++	ln -s libmysqlclient.so.${SHVERSION} $(libdir)/libmysqlclient.so
+ 	@echo "ensure $(libdir) is in your LD_LIBRARY_PATH"
+ 	@echo "and run ldconfig"
+ 
