@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3345 2003/09/12 19:42:37 tron Exp $
+$NetBSD: CHANGES,v 1.3346 2003/09/12 20:48:47 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3660,3 +3660,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added yelp-2.2.2 [xtraeme 2003-09-12]
 	Updated gnome2 to 2.2.6 [xtraeme 2003-09-12]
 	Updated pico to 4.6nb1 [tron 2003-09-12]
+	Updated scilab to 2.7nb2 [dmcmahill 2003-09-12]
+	Updated gwave to 20030804 [dmcmahill 2003-09-12]
