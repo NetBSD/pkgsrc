@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2001/07/29 01:27:01 hubertf Exp $
+# $NetBSD: Makefile,v 1.70 2001/07/29 14:18:09 tron Exp $
 
 DISTNAME=		gimp-1.2.2
 CATEGORIES=		graphics
@@ -62,5 +62,6 @@ post-install:
 	  ${LOCALBASE}/share/aclocal/gimp.m4
 
 .include "../../devel/gettext-lib/buildlink.mk"
+.include "../../graphics/mpeg-lib/buildlink.mk"
 
 .include "../../mk/bsd.pkg.mk"
