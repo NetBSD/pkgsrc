@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.26 2004/02/04 00:27:24 jlam Exp $
+# $NetBSD: gcc.mk,v 1.27 2004/02/04 00:32:16 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -28,7 +28,7 @@ _CC=	${_dir_}/${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
 .endfor
 
 .if !defined(_GCC_VERSION)
-_GCC_VERSION_STRING!=	( ${_CC} -v || ${ECHO} 0 ) 2>&1 | ${GREP} 'gcc version'
+_GCC_VERSION_STRING!=	( ${_CC} -v 2>&1 | ${GREP} 'gcc version' ) || ${ECHO} 0
 .  if !empty(_GCC_VERSION_STRING:Megcs*)
 _GCC_VERSION=	2.8.1		# egcs is considered to be gcc-2.8.1.
 .  elif !empty(_GCC_VERSION_STRING:Mgcc*)
