@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/01 22:08:43 jdolecek Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/05 21:44:44 jdolecek Exp $
 
 MODNAME=		mysqli
 CATEGORIES+=		databases
@@ -8,11 +8,11 @@ MAINTAINER=		jdolecek@NetBSD.org
 
 USE_BUILDLINK3=		yes
 
-PHP_VERSION_REQD=	5
-.include "../../lang/php/ext.mk"
-
 EVAL_PREFIX+=		MYSQLDIR=mysql-client
 CONFIGURE_ARGS+=	--with-${MODNAME}=${PREFIX}/bin/mysql_config
+
+PHP_VERSION_REQD=	5
+.include "../../lang/php/ext.mk"
 
 MYSQL_VERSION_REQD=	41
 .include "../../mk/mysql.buildlink3.mk"
