@@ -1,14 +1,21 @@
-# $NetBSD: Makefile,v 1.7 2003/11/23 05:22:34 grant Exp $
+# $NetBSD: Makefile,v 1.8 2005/01/11 05:12:56 hamajima Exp $
 #
 
 .if ${MACHINE_ARCH} == "sparc64"
 MACHINE32_ARCH=	sparc
+.elif ${MACHINE_ARCH} == "x86_64"
+MACHINE32_ARCH=	i386
 .else
 MACHINE32_ARCH=	${MACHINE_ARCH}
 .endif
 
+.if ${MACHINE32_ARCH} == "sparc"
 DISTNAME=		compat16-${MACHINE32_ARCH}
+.else
+DISTNAME=		compat16-${MACHINE32_ARCH}-1.6.0
+.endif
 PKGNAME=		netbsd32_compat16-1.0
+PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=		.tar.bz2
@@ -19,7 +26,8 @@ COMMENT=		32-bit shared libraries for NetBSD 1.6 (and earlier) compatibility
 
 CONFLICTS=		netbsd32_compat15-[0-9]*
 
-ONLY_FOR_PLATFORM=	NetBSD-*-sparc64
+ONLY_FOR_PLATFORM=	NetBSD-2*-sparc64
+ONLY_FOR_PLATFORM+=	NetBSD-2*-x86_64
 
 NO_MTREE=		# defined
 NO_BUILD=		# defined
@@ -39,6 +47,11 @@ EMULSUBDIR=		emul/netbsd32
 COMPAT_LIBDIR=		${PREFIX}/${EMULSUBDIR}/usr/lib
 COMPAT_LIBEXECDIR=	${PREFIX}/${EMULSUBDIR}/usr/libexec
 COMPAT_XLIBDIR=		${PREFIX}/${EMULSUBDIR}/usr/X11R6/lib
+
+PLIST_SRC+=		${PKGDIR}/PLIST
+.if exists(${PKGDIR}/PLIST.${MACHINE32_ARCH})
+PLIST_SRC+=		${PKGDIR}/PLIST.${MACHINE32_ARCH}
+.endif
 
 PLIST_SUBST+=		COMPAT_EMULSUBDIR=${EMULSUBDIR}
 
