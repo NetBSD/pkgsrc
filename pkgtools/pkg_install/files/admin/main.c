@@ -1,9 +1,9 @@
-/*	$NetBSD: main.c,v 1.5 2003/01/14 15:18:33 jschauma Exp $	*/
+/*	$NetBSD: main.c,v 1.6 2003/03/16 19:44:09 jschauma Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.5 2003/01/14 15:18:33 jschauma Exp $");
+__RCSID("$NetBSD: main.c,v 1.6 2003/03/16 19:44:09 jschauma Exp $");
 #endif
 #endif
 
@@ -539,23 +539,7 @@ main(int argc, char *argv[])
 
 	} else if (strcasecmp(argv[1], "list") == 0 ||
 	    strcasecmp(argv[1], "dump") == 0) {
-
-		char   *key, *val;
-		char	cachename[FILENAME_MAX];
-
-
-		printf("Dumping pkgdb %s:\n", _pkgdb_getPKGDB_FILE(cachename, sizeof(cachename)));
-
-		if (!pkgdb_open(ReadOnly)) {
-			err(EXIT_FAILURE, "cannot open %s", cachename);
-		}
-		while ((key = pkgdb_iter())) {
-			val = pkgdb_retrieve(key);
-
-			printf("file: %-50s pkg: %s\n", key, val);
-		}
-		pkgdb_close();
-
+		 pkgdb_dump();
 	}
 #ifdef PKGDB_DEBUG
 	else if (strcasecmp(argv[1], "del") == 0 ||

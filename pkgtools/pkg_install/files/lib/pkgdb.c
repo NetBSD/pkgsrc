@@ -1,9 +1,9 @@
-/*	$NetBSD: pkgdb.c,v 1.7 2003/02/18 15:45:50 grant Exp $	*/
+/*	$NetBSD: pkgdb.c,v 1.8 2003/03/16 19:44:10 jschauma Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: pkgdb.c,v 1.7 2003/02/18 15:45:50 grant Exp $");
+__RCSID("$NetBSD: pkgdb.c,v 1.8 2003/03/16 19:44:10 jschauma Exp $");
 #endif
 #endif
 
@@ -179,6 +179,24 @@ pkgdb_retrieve(const char *key)
 #endif /* HAVE_DBOPEN */
 }
 
+/* dump contents of the database to stdout */
+void
+pkgdb_dump(void)
+{
+	DBT     key;
+	DBT     val;
+	int     type;
+
+	if (pkgdb_open(ReadOnly)) {
+		for (type = R_FIRST ; (*pkgdbp->seq)(pkgdbp, &key, &val, type) == 0 ; type = R_NEXT) {
+			printf("file: %.*s pkg: %.*s\n",
+					(int) key.size, (char *) key.data,
+					(int) val.size, (char *) val.data);
+		}
+		pkgdb_close();
+	}
+}
+
 /*
  *  Remove data set from pkgdb
  *  Return value as ypdb_delete:
@@ -245,34 +263,6 @@ pkgdb_remove_pkg(const char *pkg)
 #endif /* HAVE_DBOPEN */
 }
 
-/*
- *  Iterate all pkgdb keys (which can then be handled to pkgdb_retrieve())
- *  Return value:
- *    NULL if no more data is available
- *   !NULL else
- */
-char   *
-pkgdb_iter(void)
-{
-#if defined(HAVE_DBOPEN)
-	DBT     key, val;
-	int	type;
-
-	if (pkgdb_iter_flag == 0) {
-		pkgdb_iter_flag = 1;
-		type = R_FIRST;
-	} else
-		type = R_NEXT;
-
-	if ((*pkgdbp->seq)(pkgdbp, &key, &val, type) != 0) {
-		key.data = NULL;
-	}
-
-	return (char *) key.data;
-#else
-	return NULL;
-#endif /* HAVE_DBOPEN */
-}
 
 /*
  *  Return name of cache file in the buffer that was passed.
