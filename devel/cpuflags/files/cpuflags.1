@@ -1,4 +1,4 @@
-.\"	$NetBSD: cpuflags.1,v 1.2 2001/06/07 11:56:46 abs Exp $
+.\"	$NetBSD: cpuflags.1,v 1.3 2001/06/29 11:24:51 abs Exp $
 
 .Dd May 31, 2001
 .Dt CPUFLAGS 1
@@ -16,22 +16,40 @@ to target the current cpu then nothing is output.
 .Pp
 In the event of the cpu not being recognised, a warning is sent to stderr.
 .Pp
+.Sh ENVIRONMENT
+The makefile fragment
+.Pa /usr/pkg/share/mk/cpuflags.mk
+will set the following
+.Xr make 1
+variables. The first two are explicitly added to MAKE_ENV.
+.Bl -tag -width CPU_FLAGS -compact
+.It
+.It CPU_FLAGS
+The output of cpuflags
+.It CPU_DIR
+CPU_FLAGS with spaces stripped (eg: for use in PACKAGES)
+.It CFLAGS
+Has CPU_FLAGS appended
+.It CXXFLAGS
+Has CPU_FLAGS appended
+.El
+.Sh FILES
+.Bl -tag -width /usr/pkg/share/mk/cpuflags.mk -compact
+.It /usr/pkg/share/mk/cpuflags.mk
+for inclusion by /etc/mk.conf
+.El
 .Sh EXAMPLES
 .Nm
-can be used to set default flags for building entries from pkgsrc and
-recompiling the NetBSD kernel or userland by adding the following to
-.Pa /etc/mk.conf
+can be used to set default flags for building entries from pkgsrc
+and recompiling the NetBSD kernel or userland by adding the
+following to /etc/mk.conf.
 .Bd -literal -offset indent
- .if ! defined(CPU_FLAGS) && exists(/usr/pkg/bin/cpuflags)
- CPU_FLAGS!=/usr/pkg/bin/cpuflags
- MAKE_ENV+=CPU_FLAGS=${CPU_FLAGS}
- CFLAGS+=${CPU_FLAGS}
- CXXFLAGS+=${CPU_FLAGS}
- .endif
+ .sinclude "/usr/pkg/share/mk/cpuflags.mk"
 .Ed
 .Sh BUGS
 .Nm
-does not know about many cpu types yet - updates welcomed to <abs@netbsd.org>
+does not know about many cpu types yet - updates welcomed to <abs@netbsd.org>,
+and does not affect packages using imake.
 .Pp
 Currently
 .Nm
