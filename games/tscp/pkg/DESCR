@@ -1,0 +1,11 @@
+TSCP is intended for people who want to learn about chess programming. Its
+source code is designed to be very easy to understand.
+
+The TSCP "package" includes this README file, the TSCP source code, and a copy
+of TSCP for Windows 95/98/NT. The executable was made with Visual C++ 6.0
+(optimizations set to Maximize Speed).
+
+To use TSCP, run the executable and type "help" at the prompt. It's very
+straightforward.
+
+There is a page for TSCP benchmarks: http://ucsu.colorado.edu/~kerrigat/bench/
