@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.69 2003/04/11 18:56:44 salo Exp $
+# $NetBSD: Makefile,v 1.70 2003/04/28 16:24:32 tron Exp $
 
-DISTNAME=	netpbm-10.11.6
-PKGREVISION=	1
+DISTNAME=	netpbm-10.11.8
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netpbm/}
 EXTRACT_SUFX=	.tgz
@@ -58,6 +57,7 @@ post-install:
 	    ${ECHO} "@dirrm $${DIR}";			\
 	done >>${PLIST_SRC} &&				\
 	${GTAR} cf - * | ${GTAR} xpCf ${PREFIX} -
+	${RM} -fr ${STAGEDIR}
 
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
