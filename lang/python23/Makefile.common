@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2004/01/25 21:10:10 recht Exp $
+# $NetBSD: Makefile.common,v 1.4 2004/01/26 11:50:29 grant Exp $
 #
 
 DISTNAME=	Python-2.3.3
@@ -29,9 +29,9 @@ LOWER_OPSYS=   sunos
 .endif
 
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "IRIX"
-PY_PLATNAME=${LOWER_OPSYS}
+PY_PLATNAME=	${LOWER_OPSYS}
 .else
-PY_PLATNAME=${LOWER_OPSYS}${OS_VERSION:C/\..*//}
+PY_PLATNAME=	${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 .endif
 PLIST_SUBST+=	PY_PLATNAME=${PY_PLATNAME}
 
@@ -55,8 +55,8 @@ X86_SUBST=
 OSSAUDIODEV_SUBST=
 .endif
 .endif
-PLIST_SUBST+=  X86_ONLY=${X86_SUBST}
-PLIST_SUBST+=  OSSAUDIODEV=${OSSAUDIODEV_SUBST}
+PLIST_SUBST+=	X86_ONLY=${X86_SUBST}
+PLIST_SUBST+=	OSSAUDIODEV=${OSSAUDIODEV_SUBST}
 
 # ensure that the bsddb185 module is built on all platforms
 .include "../../databases/db/buildlink2.mk"
