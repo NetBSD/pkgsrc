@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.6 2003/09/21 12:14:19 markd Exp $
+
+--- kinit/setproctitle.h.orig	2000-02-12 03:17:07.000000000 +1300
++++ kinit/setproctitle.h
+@@ -72,7 +72,7 @@
+ #endif
+ 
+ #if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
+-# if defined(__NetBSD__) && (NetBSD > 199307 || NetBSD0_9 > 1)
++# if defined(__NetBSD__)
+ #  undef SPT_TYPE
+ #  define SPT_TYPE      SPT_BUILTIN     /* setproctitle is in libc */
+ # endif
