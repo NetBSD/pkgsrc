@@ -1,4 +1,5 @@
-# $NetBSD: Makefile.common,v 1.9 2003/10/18 11:27:11 grant Exp $ -*- Makefile -*-
+# $NetBSD: Makefile.common,v 1.10 2003/10/18 11:32:39 grant Exp $
+
 DISTNAME=	mpg123-0.59r
 MPG123_VERSION=	0.59.18
 CATEGORIES=	audio
