@@ -1,7 +1,36 @@
-$NetBSD: patch-ca,v 1.5 2004/11/23 17:32:36 jlam Exp $
+$NetBSD: patch-ca,v 1.5.2.1 2005/01/05 11:46:51 salo Exp $
 
 --- Configure.orig	2004-05-12 07:00:41.000000000 -0400
 +++ Configure
+@@ -3109,7 +3109,7 @@ EOM
+ 			osvers=`echo "$4"|sed 's/^v//'`
+ 			;;
+ 		freebsd) osname=freebsd 
+-			osvers="$3" ;;
++			osvers=`$uname -r | UU/tr '[A-Z]' '[a-z]'` ;;
+ 		genix)	osname=genix ;;
+ 		gnu)	osname=gnu
+ 			osvers="$3" ;;
+@@ -3131,7 +3131,7 @@ EOM
+ 		MiNT)	osname=mint
+ 			;;
+ 		netbsd*) osname=netbsd
+-			osvers="$3"
++			osvers=`$uname -r | UU/tr '[A-Z]' '[a-z]'`
+ 			;;
+ 		news-os) osvers="$3"
+ 			case "$3" in
+@@ -3142,8 +3142,8 @@ EOM
+ 		next*) osname=next ;;
+ 		nonstop-ux) osname=nonstopux ;;
+ 		openbsd) osname=openbsd
+-                	osvers="$3"
+-                	;;
++			osvers=`$uname -r | UU/tr '[A-Z]' '[a-z]'`
++			;;
+ 		os2)	osname=os2
+ 			osvers="$4"
+ 			;;
 @@ -7850,7 +7850,7 @@ if "$useshrplib"; then
  	solaris)
  		xxx="-R $shrpdir"
