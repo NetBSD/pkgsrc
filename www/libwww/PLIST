@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:17:17 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/10/26 18:11:20 bouyer Exp $
 bin/libwww-config
 bin/w3c
 bin/webbot
@@ -162,11 +162,11 @@ include/w3c-libwww/WWWXML.h
 include/w3c-libwww/WWWZip.h
 include/w3c-libwww/wwwsys.h
 include/w3c-libwww/xmlparse.h
-lib/libmd5.a
-lib/libmd5.la
-lib/libmd5.so
-lib/libmd5.so.1
-lib/libmd5.so.1.0
+${MD5LIB}lib/libmd5.a
+${MD5LIB}lib/libmd5.la
+${MD5LIB}lib/libmd5.so
+${MD5LIB}lib/libmd5.so.1
+${MD5LIB}lib/libmd5.so.1.0
 lib/libpics.a
 lib/libpics.la
 lib/libpics.so
