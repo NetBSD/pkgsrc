@@ -1,4 +1,12 @@
-# $NetBSD: libtool-do-install,v 1.1.2.1 2003/08/14 13:16:50 jlam Exp $
+# $NetBSD: libtool-do-install,v 1.1.2.2 2003/08/16 07:46:32 jlam Exp $
+#
+# This file is called directly by the libtool wrapper when it has
+# figured out that the libtool invocation is meant to do a file
+# installation.  We simply quote the remaining command-line arguments
+# properly to build a correct libtool command line.  The libtool
+# wrapper will perform the actual execution.  We don't worry about
+# caching or speed, since installation is not a bottleneck for package
+# creation.
 
 cmd="$cmd $arg"
 while $test $# -gt 0; do
