@@ -1,46 +1,67 @@
-$NetBSD: patch-aa,v 1.5 1999/04/05 01:01:30 hubertf Exp $
-
-*** configure.in-ORIG	Mon Mar 15 18:31:43 1999
---- configure.in	Sun Apr  4 16:42:20 1999
-***************
-*** 821,831 ****
-  
-  AC_CHECK_STRUCT_FOR([
-  #include <sys/types.h>
-- #define KERNEL
-- #define _KERNEL
-  #include <sys/socket.h>
-- #undef KERNEL
-- #undef _KERNEL
-  #include <net/route.h>
-  ], rtentry, rt_dst, no)
-  
---- 821,827 ----
-***************
-*** 836,846 ****
-  dnl 4.4 compat
-  AC_TRY_COMPILE([
-  #include <sys/types.h>
-- #define KERNEL
-- #define _KERNEL
-  #include <sys/socket.h>
-- #undef KERNEL
-- #undef _KERNEL
-  #include <net/route.h>
-  ],[
-  
---- 832,838 ----
-***************
-*** 857,867 ****
-  if test "x$ac_cv_RTENTRY_TYPE" = "x"; then
-  AC_TRY_COMPILE([
-  #include <sys/types.h>
-- #define KERNEL
-- #define _KERNEL
-  #include <sys/socket.h>
-- #undef KERNEL
-- #undef _KERNEL
-  #include <net/route.h>
-  ],[
-  struct rtentry rt; 
---- 849,855 ----
+# XXX The LIBWRAP horrible hack is necessary because of the stupid linker's
+# insistence on requiring that all externals referenced from a shared library
+# be defined, even if nothing elese from the library is ever used.  In this
+# case the libwrap.so library is at fault as it references 'deny_severity' and
+# 'allow_severity', but none of the configure tests will include this, nor
+# indeed will any product binary except for snmpd (which is the only one that
+# actualy uses tcp_wrappers).
+#
+# /usr/libexec/ld.so: Undefined symbol "_deny_severity" in conftest:/usr/lib/libwrap.so.0.0
+#
+--- configure.in.orig	Mon Mar 15 15:31:43 1999
++++ configure.in	Tue Apr 20 18:35:51 1999
+@@ -97,14 +97,15 @@
+ AC_ARG_WITH(libwrap,
+ [  --with-libwrap[=LIBPATH]        Compile in libwrap (tcp_wrappers) support.],
+     if test "x$withval" != "x" -a -d "$withval"; then
+-        LIBS="-L$withval -lwrap $LIBS"
++        LIBWRAP="-L$withval -lwrap"
+     elif test "x$withval" = "xyes"; then
+-        LIBS="-lwrap $LIBS"
++        LIBWRAP="-lwrap"
+     else
+-        LIBS="$withval $LIBS"
++        LIBWRAP="$withval"
+     fi
+     AC_DEFINE(USE_LIBWRAP)
+ )
++AC_SUBST(LIBWRAP)
+ 
+ AC_ARG_WITH(mib_modules,
+ [  --with-mib-modules=\"item1 ...\"  Compile with additional mib modules
+@@ -821,11 +822,7 @@
+ 
+ AC_CHECK_STRUCT_FOR([
+ #include <sys/types.h>
+-#define KERNEL
+-#define _KERNEL
+ #include <sys/socket.h>
+-#undef KERNEL
+-#undef _KERNEL
+ #include <net/route.h>
+ ], rtentry, rt_dst, no)
+ 
+@@ -836,11 +833,7 @@
+ dnl 4.4 compat
+ AC_TRY_COMPILE([
+ #include <sys/types.h>
+-#define KERNEL
+-#define _KERNEL
+ #include <sys/socket.h>
+-#undef KERNEL
+-#undef _KERNEL
+ #include <net/route.h>
+ ],[
+ 
+@@ -857,11 +850,7 @@
+ if test "x$ac_cv_RTENTRY_TYPE" = "x"; then
+ AC_TRY_COMPILE([
+ #include <sys/types.h>
+-#define KERNEL
+-#define _KERNEL
+ #include <sys/socket.h>
+-#undef KERNEL
+-#undef _KERNEL
+ #include <net/route.h>
+ ],[
+ struct rtentry rt; 
