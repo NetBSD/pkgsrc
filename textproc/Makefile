@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2001/04/16 20:51:11 jtb Exp $
+# $NetBSD: Makefile,v 1.92 2001/04/26 14:27:34 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -36,8 +36,6 @@ SUBDIR+=	lout
 SUBDIR+=	makeztxt
 SUBDIR+=	mminstance
 SUBDIR+=	opensp
-SUBDIR+=	p5-libxml
-SUBDIR+=	p5-libxml-enno
 SUBDIR+=	p5-Convert-ASN1
 SUBDIR+=	p5-Convert-BER
 SUBDIR+=	p5-Filter
@@ -52,9 +50,12 @@ SUBDIR+=	p5-XML-Node
 SUBDIR+=	p5-XML-Parser
 SUBDIR+=	p5-XML-RSS
 SUBDIR+=	p5-XML-XPath
+SUBDIR+=	p5-libxml
+SUBDIR+=	p5-libxml-enno
 SUBDIR+=	par
 SUBDIR+=	py-dtml
 SUBDIR+=	pyxml
+SUBDIR+=	qsubst
 SUBDIR+=	rfcutil
 SUBDIR+=	rman
 SUBDIR+=	rtfm
