@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.62 2004/01/27 08:39:24 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.63 2004/01/27 08:42:13 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -139,12 +139,12 @@ ${_BLNK_RECMETHOD.${_pkg_}}+=	${_rec_}:${BUILDLINK_PKGSRCDIR.${_pkg_}}
 .      endfor
 .    endif
 .  endfor
-.endif
-.for _depmethod_ in DEPENDS BUILD_DEPENDS RECOMMENDED
+.  for _depmethod_ in DEPENDS BUILD_DEPENDS RECOMMENDED
 .  if !empty(_BLNK_ADD_TO.${_depmethod_})
 ${_depmethod_}+=	${_BLNK_ADD_TO.${_depmethod_}}
 .  endif
-.endfor
+.  endfor
+.endif
 
 .if !empty(PHASES_AFTER_BUILDLINK:M${PKG_PHASE})
 # Generate default values for:
