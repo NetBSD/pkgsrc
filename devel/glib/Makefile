@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2003/06/11 20:50:51 abs Exp $
+# $NetBSD: Makefile,v 1.57 2003/06/23 08:48:36 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -26,6 +26,7 @@ CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
 
 INFO_FILES=		glib.info
 TEXINFO_OVERRIDE=	YES
+USE_NEW_TEXINFO=	YES
 
 PTHREAD_OPTS+=		require
 
@@ -88,5 +89,4 @@ test: build
 		tee ${WRKDIR}/check.log
 
 .include "../../mk/pthread.buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
