@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2106 2004/09/08 21:43:38 xtraeme Exp $
+$NetBSD: TODO,v 1.2107 2004/09/09 17:43:30 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -201,6 +201,7 @@ Suggested package updates
 	o blender-2.34
 	o boson-0.10
 	o calc-2.11.10
+	o cdrtools-2.01
 	o celestia-1.3.2
 	o centericq-4.11.0
 	o cervisia-2.1.2
