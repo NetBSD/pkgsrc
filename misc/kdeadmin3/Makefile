@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2003/07/13 13:52:41 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/30 14:08:42 markd Exp $
 
-DISTNAME=	kdeadmin-3.1.2
-PKGREVISION=	1
+DISTNAME=	kdeadmin-3.1.3
 CATEGORIES=	misc
 COMMENT=	System administration tools for the KDE integrated X11 desktop
 
-.include "../../x11/kde3/Makefile.kde3"
+.include "../../meta-pkgs/kde3/Makefile.kde3"
 
 USE_BUILDLINK2=		YES
 
@@ -17,6 +16,6 @@ CONFIGURE_ARGS+=	--with-shadow
 CONFIGURE_ARGS+=	--without-shadow
 .endif
 
-.include "../../x11/kde3/buildlink2.mk"
+.include "../../meta-pkgs/kde3/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
