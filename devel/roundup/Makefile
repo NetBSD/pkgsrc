@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2004/05/10 09:32:23 recht Exp $
+# $NetBSD: Makefile,v 1.16 2004/05/23 11:10:09 recht Exp $
 
-DISTNAME=	roundup-0.7.1
+DISTNAME=	roundup-0.7.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundup/}
 
@@ -17,9 +17,9 @@ PYTHON_VERSIONS_ACCEPTED=	23 23pth 22 22pth 21 21pth
 
 PYTHON_PATCH_SCRIPTS=	cgi-bin/roundup.cgi demo.py roundup/admin.py
 PYTHON_PATCH_SCRIPTS+=	roundup/backends/locking.py roundup/version_check.py
-PYTHON_PATCH_SCRIPTS+=	scripts/add-issue scripts/copy-user.py
-PYTHON_PATCH_SCRIPTS+=	scripts/roundup-reminder tools/migrate-queries.py
-PYTHON_PATCH_SCRIPTS+=	scripts/schema_diagram.py tools/load_tracker.py
+PYTHON_PATCH_SCRIPTS+=	run_tests.py scripts/add-issue scripts/copy-user.py
+PYTHON_PATCH_SCRIPTS+=	scripts/roundup-reminder scripts/schema_diagram.py
+PYTHON_PATCH_SCRIPTS+=	tools/load_tracker.py tools/migrate-queries.py
 PYTHON_PATCH_SCRIPTS+=	tools/pygettext.py
 
 ROUNDUPDOCDIR=	${PREFIX}/share/doc/roundup
