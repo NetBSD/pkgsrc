@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2000/06/16 14:16:51 pooka Exp $
+
+--- olwm/Imakefile.orig	Sat Jan  8 02:39:50 2000
++++ olwm/Imakefile	Sat Jan  8 02:39:58 2000
+@@ -39,7 +39,7 @@
+ MANPAGES = olwm.man
+ BITMAPS = iconbitmap.h
+ SCRIPTS = 
+-MISC 	= openwin-menu
++MISC 	= openwin-menu openwin-menu-programs openwin-menu-demo
+ 
+ 
+ SRCS	= atom.c client.c cmdstream.c \
