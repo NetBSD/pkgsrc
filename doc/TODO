@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1500 2004/03/11 14:20:57 jmmv Exp $
+$NetBSD: TODO,v 1.1501 2004/03/11 20:06:44 minskim Exp $
 
 Suggested new packages
 ======================
@@ -200,7 +200,6 @@ Suggested package updates
 	o gnumeric-1.2.5
 	o gnustep-1.9.1
 	o gpsim-0.21.0 [bouyer]
-	o grace-5.1.14
 	o grepmail-5.23
 	o gsasl-0.0.14
 	o gtetrinet-0.7.4
