@@ -1,39 +1,39 @@
-# $NetBSD: Makefile,v 1.6 2001/03/05 16:41:17 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/03/16 15:52:57 kei Exp $
 
 DISTNAME=		linuxppc_lib-2000.q4.2
 CATEGORIES=		emulators
-MASTER_SITES=	ftp://ftp.linuxppc.org/linuxppc-halloween/software/
+MASTER_SITES=		ftp://ftp.linuxppc.org/linuxppc-halloween/software/
 DISTFILES=		glibc-2.1.3-15f.ppc.rpm glib-1.2.8-3.ppc.rpm \
-					libjpeg-6b-13.ppc.rpm libpng-1.0.5-3.ppc.rpm \
-					libstdc++-2.10.0-2n.ppc.rpm libtermcap-2.0.8-20.ppc.rpm \
-					libtiff-3.5.5-2.ppc.rpm XFree86-libs-3.3.6-20b.ppc.rpm \
-					zlib-1.1.3-6.ppc.rpm ldconfig-1.9.5-16.ppc.rpm \
-					libjpeg6a-6a-5.ppc.rpm xpm-3.4k-1.ppc.rpm \
-					ncurses-5.0-12.ppc.rpm readline-2.2.1-7a.ppc.rpm
+			libjpeg-6b-13.ppc.rpm libpng-1.0.5-3.ppc.rpm \
+			libstdc++-2.10.0-2n.ppc.rpm libtermcap-2.0.8-20.ppc.rpm \
+			libtiff-3.5.5-2.ppc.rpm XFree86-libs-3.3.6-20b.ppc.rpm \
+			zlib-1.1.3-6.ppc.rpm ldconfig-1.9.5-16.ppc.rpm \
+			libjpeg6a-6a-5.ppc.rpm xpm-3.4k-1.ppc.rpm \
+			ncurses-5.0-12.ppc.rpm readline-2.2.1-7a.ppc.rpm
 
 MAINTAINER=		p99dreyf@criens.u-psud.fr
 HOMEPAGE=		http://www.linuxppc.org/
-COMMENT=			libraries to run Linux binaries on NetBSD/powerpc (includes X11)
+COMMENT=		libraries to run Linux binaries on NetBSD/powerpc (includes X11)
 
-BUILD_DEPENDS+=rpm2pkg:../../pkgtools/rpm2pkg
+BUILD_DEPENDS+=		rpm2pkg:../../pkgtools/rpm2pkg
 
 ONLY_FOR_PLATFORM=	NetBSD-*-macppc NetBSD-*-powerpc NetBSD-*-prep \
-							NetBSD-*-bebox NetBSD-*-ofppc NetBSD-*-amigappc
+			NetBSD-*-bebox NetBSD-*-ofppc NetBSD-*-amigappc
 
-SHLIB_HANDLING=NO
-CHECK_SHLIBS=	NO
+SHLIB_HANDLING=		NO
+CHECK_SHLIBS=		NO
 WRKSRC=			${WRKDIR}/${DISTNAME}
-DIST_SUBDIR=	linuxppc_lib
+DIST_SUBDIR=		linuxppc_lib
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 RPMFILES=		${DISTFILES}
 EMUL_LINUX=		emul/linux
-LINUX_LDCONFIG=${PREFIX}/${EMUL_LINUX}/sbin/ldconfig
-RPM2PKG=			rpm2pkg
-SORT=				sort
+LINUX_LDCONFIG=		${PREFIX}/${EMUL_LINUX}/sbin/ldconfig
+RPM2PKG=		rpm2pkg
+SORT=			sort
 RPMARGS+=		-i usr/man -i usr/doc -i usr/info
 .for TEMP in ${RPMFILES}
-RPMARGS+=     ${DISTDIR}/${DIST_SUBDIR}/${TEMP}
+RPMARGS+=		${DISTDIR}/${DIST_SUBDIR}/${TEMP}
 .endfor
 
 do-extract:
