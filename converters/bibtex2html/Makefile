@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/02/04 21:56:14 adrianp Exp $
+# $NetBSD: Makefile,v 1.3 2005/02/14 15:36:19 minskim Exp $
 
 DISTNAME=	bibtex2html-1.74
 CATEGORIES=	converters
@@ -10,8 +10,6 @@ COMMENT=	Collection of tools for translating from BibTeX to HTML
 
 BUILD_DEPENDS=	ocaml-[0-9]*:../../lang/ocaml
 DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX-bin
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_BUILDLINK=	yes
 GNU_CONFIGURE=	yes
