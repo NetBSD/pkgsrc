@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1350 2003/02/13 21:49:54 jmmv Exp $
+$NetBSD: CHANGES,v 1.1351 2003/02/13 22:33:52 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -599,3 +599,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xmame to 0.65.1 [kristerw 2003-02-13]
 	Updated apla to 1.0.3nb2 [fredb 2003-02-13]
 	Updated gnome2-pixmaps to 2.2.0.1 [jmmv 2003-02-13]
+	Updated libwnck to 2.2.1 [jmmv 2003-02-13]
