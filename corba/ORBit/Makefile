@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1999/06/19 15:19:12 tron Exp $
+# $NetBSD: Makefile,v 1.21 1999/08/20 07:22:38 tron Exp $
 #
 
 DISTNAME=	ORBit-0.4.3
@@ -11,7 +11,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 
 DEPENDS+=	glib-1.2.2:../../devel/glib
-DEPENDS+=	gindent-1.9.1:../../devel/gindent
+DEPENDS+=	gindent-2.2.0:../../devel/gindent
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
