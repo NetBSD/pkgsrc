@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7368 2004/10/07 13:38:29 hira Exp $
+$NetBSD: CHANGES,v 1.7369 2004/10/07 14:55:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4568,3 +4568,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated moss to 0.1.9 [minskim 2004-10-06]
 	Updated pkg_tarup to 1.6.3 [erh 2004-10-06]
 	Updated rhythmbox to 0.8.7 [hira 2004-10-06]
+	Updated tuxpaint to 0.9.14 [wiz 2004-10-06]
+	Updated tuxpaint-stamps to 2004.10.03 [wiz 2004-10-06]
