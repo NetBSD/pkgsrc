@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7734 2004/11/06 01:38:59 wiz Exp $
+$NetBSD: CHANGES,v 1.7735 2004/11/06 01:49:56 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5123,3 +5123,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated suse_libjpeg to 9.1nb1 [wiz 2004-11-06]
 	Updated suse_expat to 9.1nb1 [wiz 2004-11-06]
 	Updated suse_gtk2 to 9.1nb1 [wiz 2004-11-06]
+	Updated mserv_irman to 0.20 [abs 2004-11-06]
+
