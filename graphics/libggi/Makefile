@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/07/24 02:31:57 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1999/07/27 13:14:10 hubertf Exp $
 #
 
 DISTNAME=	libggi-2.0b2.1
@@ -7,6 +7,8 @@ MASTER_SITES=	ftp://ftp.ggi-project.org/pub/ggi/ggi/current/
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.ggi-project.org/
+
+DEPENDS+=	libgii-0.6:../libgii
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=--disable-debug \
