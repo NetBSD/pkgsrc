@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.308 2003/09/17 19:04:21 jmmv Exp $
+# $NetBSD: Packages.txt,v 1.309 2003/09/22 13:18:31 wiz Exp $
 ###########################################################################
 
 			==========================
@@ -2629,7 +2629,9 @@ is/does.
 Please note all package updates/additions in pkgsrc/doc/CHANGES! It's very
 important to keep this file up to date and conforming to the existing
 format, because it will be used by scripts to automatically update pages on
-www.netbsd.org and other sites.
+www.netbsd.org and other sites. Additionally, check the pkgsrc/doc/TODO
+file and remove the entry for the package you updated, in case it was
+mentioned there.
 
 For new packages, "cvs import" is preferred to "cvs add" because
 the former gets everything with a single command, and provides a
