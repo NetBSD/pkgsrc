@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2002/11/21 15:40:14 salo Exp $
+# $NetBSD: Makefile,v 1.18 2002/12/04 17:26:48 salo Exp $
 
-DISTNAME=		silc-client-0.9.8
+DISTNAME=		silc-client-0.9.9.1
 CATEGORIES=		chat security
 MASTER_SITES=		http://www.silcnet.org/download/client/sources/ \
 			ftp://ftp.silcnet.org/silc/client/sources/ \
@@ -21,9 +21,16 @@ USE_GNU_ICONV=		# defined
 USE_BUILDLINK2=		# defined
 USE_LIBTOOL=		# defined
 
+BUILDLINK_DEPENDS.iconv=	libiconv>=1.7
+
 .include "../../mk/bsd.prefs.mk"
 
 PKG_SYSCONFSUBDIR?=	silc
+
+MAKE_ENV+=		examplesdir=${PREFIX}/share/examples/silc
+
+CONF_FILES+=		${PREFIX}/share/examples/silc/silc.conf.default \
+			${PKG_SYSCONFDIR}/silc.conf
 
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/silc
 CONFIGURE_ARGS+=	--with-helpdir=${PREFIX}/share/silc/help
@@ -32,8 +39,6 @@ CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-simdir=${PREFIX}/lib/silc/modules
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--with-terminfo
-
-BUILDLINK_DEPENDS.iconv=	libiconv>=1.7
 
 # Use native curses library.
 .if (${OPSYS} == "NetBSD") || (${OPSYS} == "SunOS")
@@ -75,16 +80,17 @@ PLIST_SRC+=		${PKGDIR}/PLIST
 # Temporary hack which prevents installation of static libraries
 #
 post-build:
-	for file in \
+	for f in \
 	${WRKSRC}/lib/libsilc.la \
 	${WRKSRC}/lib/libsilcclient.la \
 	${WRKSRC}/lib/.libs/libsilc.la \
 	${WRKSRC}/lib/.libs/libsilcclient.la ; \
 	do \
-		${CP} $$file $$file.orig ; \
-		${SED} "s|^old_library|#&|" $$file.orig > $$file ; \
+		${CP} $$f $$f.orig ; \
+		${SED} "s|^old_library|#&|" $$f.orig > $$f ; \
 	done
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/glib/buildlink2.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
