@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/10/18 01:32:59 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/10/18 01:34:39 jlam Exp $
 
 PKGNAME=	oss-${OSS_VERSION}
 CATEGORIES=	audio sysutils
@@ -87,7 +87,7 @@ do-install: chroot
 	${LN} -sf ../lib/oss/savemixer ${PREFIX}/bin/osssavemixer
 	${LN} -sf ../lib/oss/soundoff ${PREFIX}/sbin/soundoff
 	${LN} -sf ../lib/oss/soundon ${PREFIX}/sbin/soundon
-	${INSTALL_SCRIPT} ${WRKDIR}/soundconf ${PREFIX}/sbin/soundconf
+	${INSTALL_SCRIPT} ${WRKDIR}/soundconf.sh ${PREFIX}/sbin/soundconf
 
 	${RM} -rf ${WRKSRC}/bin ${WRKSRC}/sbin ${WRKSRC}/usr
 	${RM} -f ${WRKSRC}/dev/mixer0 ${WRKSRC}/dev/null
