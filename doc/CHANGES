@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2592 2003/06/26 12:44:22 seb Exp $
+$NetBSD: CHANGES,v 1.2593 2003/06/26 14:52:27 gehenna Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2574,3 +2574,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cvsync to 0.23.4 [gehenna 2003-06-26]
 	vmware3: Downgraded to 3.2.0 [tron 2003-06-26]
 	Updated festival-doc to 1.4.0.1nb1 [seb 2003-06-26]
+	Updated cvsync to 0.23.5 [gehenna 2003-06-26]
