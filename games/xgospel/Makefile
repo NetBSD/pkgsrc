@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/02/08 00:12:38 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/09/23 10:28:41 jlam Exp $
 #
 
 DISTNAME=	xgospel-1.12d
@@ -9,7 +9,8 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://gailly.net/xgospel/
 COMMENT=	X11 based IGS client
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
+USE_X11=		yes
 GNU_CONFIGURE=		yes
 XAW_TYPE=		3d
 
@@ -24,7 +25,7 @@ CONFIGURE_ARGS+=	--with-xaw3d
 # Don't find libintl.a...it's only needed on SCO UNIX.
 CONFIGURE_ENV+=		ac_cv_lib_intl=no
 
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../mk/xaw.buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../mk/xaw.buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
