@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:19:25 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/03 16:24:28 seb Exp $
 
 DISTNAME=		gri-2.8.7
 CATEGORIES=		graphics
@@ -19,7 +19,10 @@ INFO_FILES=		gri.info
 USE_PERL5=		build
 REPLACE_PERL=		gri_merge gri_unpage
 
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=	YES
+INFO_FILES=	gri.info
+
 .include "../../devel/netcdf/buildlink2.mk"
 .include "../../mk/ghostscript.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
