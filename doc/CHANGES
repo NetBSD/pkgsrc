@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9201 2005/02/19 10:23:43 wiz Exp $
+$NetBSD: CHANGES,v 1.9202 2005/02/19 10:35:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -947,3 +947,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updates news to 0.2 [jschauma 2005-02-19]
 	Updates ruby-byaccr to 0.1nb1 [taca 2005-02-19]
 	Updated grub to 0.96 [wiz 2005-02-19]
+	Updated p5-Module-Signature to 0.44 [wiz 2005-02-19]
