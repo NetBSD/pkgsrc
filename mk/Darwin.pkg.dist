@@ -1,5 +1,5 @@
 #     Id: BSD.local.dist,v 1.30 1997/08/01 13:16:39 phk Exp 
-#	$NetBSD: Darwin.pkg.dist,v 1.52 2004/04/01 12:19:09 jmmv Exp $
+#	$NetBSD: Darwin.pkg.dist,v 1.53 2004/07/26 14:31:10 minskim Exp $
 #
 
 /set type=dir uname=root gname=wheel mode=0755
@@ -552,6 +552,10 @@
                 LC_MESSAGES
                 ..
             ..
+            et_EE
+                LC_MESSAGES
+                ..
+            ..
             eu
                 LC_MESSAGES
                 ..
@@ -617,6 +621,10 @@
                 ..
             ..
             it
+                LC_MESSAGES
+                ..
+            ..
+            it_NA
                 LC_MESSAGES
                 ..
             ..
