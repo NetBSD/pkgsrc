@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.687 2003/07/09 18:39:52 zuntum Exp $
+$NetBSD: TODO,v 1.688 2003/07/09 21:16:20 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -148,7 +148,6 @@ Suggested package updates
 	o hp2xx-3.4.4
 	o hpijs-1.4
 	o icepref-2.2
-	o icewm-1.2.8
 	o inform-6.21.3 [pkg/19298]
 	o inform-6.21.4 [pkg/21934]
 	o inn-2.4.0
