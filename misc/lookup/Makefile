@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/10/18 14:56:03 minoura Exp $
+# $NetBSD: Makefile,v 1.4 2002/11/14 03:46:43 wiz Exp $
 #
 
 DISTNAME=	lookup-1.3
@@ -9,8 +9,9 @@ MAINTAINER=	uebayasi@netbsd.org
 HOMEPAGE=	http://lookup.sourceforge.net/
 COMMENT=	electric dictionary agent for Emacs
 
-DEPENDS+=	apel>=10:../../devel/apel
+DEPENDS+=	${PKGNAME_PREFIX}apel>=10:../../devel/apel
 DEPENDS+=	eblook>=1.3:../../textproc/eblook
+
 EMACS_VERSIONS_ACCEPTED=	emacs21 emacs20
 
 GNU_CONFIGURE=	YES
