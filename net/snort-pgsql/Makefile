@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/03/04 01:02:26 salo Exp $
+# $NetBSD: Makefile,v 1.9 2003/03/30 23:22:21 jmc Exp $
 #
 
 .include "../../net/snort/Makefile.common"
@@ -15,6 +15,7 @@ CONFLICTS+=	snort-mysql-[0-9]*
 CONFIGURE_ARGS+=--with-postgresql=${BUILDLINK_PREFIX.postgresql-lib}
 
 PKGDIR=		${.CURDIR}/../../net/snort
+FILESDIR=	${PKGDIR}/files
 PATCHDIR=	${PKGDIR}/patches
 DISTINFO_FILE=	${PKGDIR}/distinfo
 
