@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.343 2004/07/29 06:40:35 xtraeme Exp $
+# $NetBSD: Packages.txt,v 1.344 2004/07/30 07:48:56 xtraeme Exp $
 ###########################################################################
 
 			==========================
@@ -2919,9 +2919,6 @@ X11 (/usr/X11R6, /usr/openwin, ...), you will have to add the following
 lines into mk.conf:
 
     X11_TYPE=XFree86
-    X11BASE=/usr/pkg/X11R6
-
-`LOCALBASE' by default is `/usr/pkg'.
 
  10.44 How can I install/use X.org from pkgsrc?
  ======================================
@@ -2931,9 +2928,6 @@ X11 (/usr/X11R6, /usr/openwin, ...) you will have to add the following
 lines into mk.conf:
 
     X11_TYPE=xorg
-    X11BASE=/usr/pkg/xorg
-
-`LOCALBASE' by default is `/usr/pkg'.
 
  10.45 Where's the pkgviews documentation?
  =========================================

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2004/07/29 08:59:15 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.4 2004/07/30 07:48:56 xtraeme Exp $
 #
 # XBUILD_DIRS is the group of directories under ${WRKSRC} that will 
 #   be built in.
@@ -103,9 +103,8 @@ PKG_FAIL_REASON+=       "X11_TYPE=xorg is mandatory."
 
 NO_MTREE=		# defined
 
-X11ROOT_PREFIX?=	xorg
 WRKSRC?=		${WRKDIR}/xc
-X11ROOT?=		${PREFIX}/${X11ROOT_PREFIX}
+X11ROOT?=		${LOCALBASE}/${X11ROOT_PREFIX}
 PREPEND_PATH+=		${X11ROOT}/bin # Make sure we have this in PATH :)
 
 PLIST_SUBST+=		X11ROOT_PREFIX=${X11ROOT_PREFIX}
