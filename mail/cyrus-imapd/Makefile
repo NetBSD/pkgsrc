@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2004/03/26 02:27:43 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2004/04/25 01:12:39 wiz Exp $
 
 DISTNAME=		cyrus-imapd-2.0.17
 PKGREVISION=		3
@@ -11,7 +11,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://asg.web.cmu.edu/cyrus/imapd/
 COMMENT=		Cyrus IMAP server
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 PERL5_CONFIGURE=	NO
 AUTOCONF_REQD=		2.13
@@ -116,11 +116,11 @@ post-install:
 	${INSTALL_DATA_DIR} ${HTMLDIR}/man
 	cd ${WRKSRC}/doc/man; ${INSTALL_DATA} *.html ${HTMLDIR}/man
 
-.include "../../databases/db3/buildlink2.mk"
+.include "../../databases/db3/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
-.include "../../security/cyrus-sasl/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
-.include "../../security/tcp_wrappers/buildlink2.mk"
+.include "../../security/cyrus-sasl/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../security/tcp_wrappers/buildlink3.mk"
 
 .include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
