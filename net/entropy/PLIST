@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/29 18:40:43 tv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/25 13:43:05 tv Exp $
 bin/entropy
 bin/entropy-monoopt
 bin/entropy-storechg
@@ -14,6 +14,7 @@ share/examples/entropy/node/mime.types
 share/examples/entropy/node/my0812.bdf.lzw
 share/examples/entropy/node/next.png
 share/examples/entropy/node/prev.png
+share/examples/entropy/node/robots.txt
 share/examples/entropy/node/s15.gif
 share/examples/entropy/node/s30.gif
 share/examples/entropy/node/s45.gif
