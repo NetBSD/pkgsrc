@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/12/20 03:05:14 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2000/01/16 11:09:18 abs Exp $
 #
 
 DISTNAME=	toshutils-991217
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.buzzard.org.uk/toshiba/
 
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 
+ONLY_FOR_PLATFORM= *-*-i386
 GNU_CONFIGURE=	YES
 
 post-install:
