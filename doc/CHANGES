@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2126 2003/05/02 17:51:28 jtb Exp $
+$NetBSD: CHANGES,v 1.2127 2003/05/02 23:26:23 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1833,3 +1833,4 @@ Changes to the packages collection and infrastructure in 2003:
 		[wiz 2003-05-02]
 	Updated gcc3 to 3.2.2nb1 [jmmv 2003-05-02]
 	Updated mercury to 0.11.0 [jtb 2003-05-02]
+	Added yabasic-2.722 [jtb 2003-05-02]
