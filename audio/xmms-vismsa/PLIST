@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:18:36 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/03 20:01:26 hubertf Exp $
+lib/xmms/Visualization/libvismsa.so.0.0
+lib/xmms/Visualization/libvismsa.so.0
 lib/xmms/Visualization/libvismsa.so
 lib/xmms/Visualization/libvismsa.la
 lib/xmms/Visualization/libvismsa.a
