@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2001/03/04 09:06:13 tron Exp $
+# $NetBSD: Makefile,v 1.19 2001/03/04 15:45:42 kei Exp $
 #
 
-DISTNAME=		libwmf-0.1.20
+DISTNAME=		libwmf-0.1.21
 CATEGORIES=		graphics devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wvware/}
 
@@ -26,6 +26,9 @@ CPPFLAGS+=		-I${LOCALBASE}/include			# png.h
 INCLUDEDIR=		${PREFIX}/include/libwmf
 HTMLDIR=		${PREFIX}/share/doc/html/libwmf
 WRKSRC=			${WRKDIR}/libwmf
+
+post-extract:
+	${CHMOD} a-x ${WRKSRC}/doc/*.html
 
 pre-install:
 	${INSTALL_DATA_DIR} ${INCLUDEDIR}
