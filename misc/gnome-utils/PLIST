@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/04/11 11:34:38 tron Exp $
+@comment $NetBSD: PLIST,v 1.9 2003/05/30 16:20:03 jmmv Exp $
 bin/gcalc
 bin/gcharmap
 bin/gcolorsel
@@ -693,6 +693,7 @@ share/stripchart/stripchart.params
 @dirrm share/pixmaps/logview
 @dirrm share/omf/gnome-utils
 @comment in scrollkeeper: @dirrm share/omf
+@comment in gnome-dirs: @dirrm share/mime-info
 @dirrm share/logview
 @dirrm share/gnome/help/stripchart/es/stylesheet-images
 @dirrm share/gnome/help/stripchart/es/figures

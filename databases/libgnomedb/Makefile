@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2003/05/02 11:54:12 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/05/30 16:19:53 jmmv Exp $
 #
 
 DISTNAME=		libgnomedb-0.10.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		databases gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomedb/0.10/}
 EXTRACT_SUFX=		.tar.bz2
@@ -11,7 +11,7 @@ MAINTAINER=		sab@posix.org.uk
 HOMEPAGE=		http://www.gnome-db.org/
 COMMENT=		GNOME2 database library
 
-DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
+DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 
 USE_X11=		YES
 USE_GMAKE=		YES
