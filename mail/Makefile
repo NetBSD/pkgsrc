@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2001/09/27 05:11:04 jlam Exp $
+# $NetBSD: Makefile,v 1.108 2001/10/16 05:40:58 jlam Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -57,6 +57,7 @@ SUBDIR+=	p5-Mail-IMAPClient
 SUBDIR+=	p5-Mail-ListDetector
 SUBDIR+=	p5-Mail-Sendmail
 SUBDIR+=	p5-MailTools
+SUBDIR+=	php4-imap
 SUBDIR+=	pine
 SUBDIR+=	popa3d
 SUBDIR+=	poppassd
