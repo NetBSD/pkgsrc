@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: wrapper.sh,v 1.6 2002/12/26 17:08:57 jlam Exp $
+# $NetBSD: wrapper.sh,v 1.7 2003/01/01 07:16:57 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
@@ -30,7 +30,8 @@ WRKDIR="@WRKDIR@"
 WRKSRC="@WRKSRC@"
 
 cmd="@WRAPPEE@"
-for arg do
+while $test $# -gt 0; do
+	arg="$1"; shift
 	cachehit=no
 	skipcache=no
 	. $private_cache
