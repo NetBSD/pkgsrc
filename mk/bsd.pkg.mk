@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1567 2005/01/23 22:23:40 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1568 2005/01/24 09:31:06 xtraeme Exp $
 #
 # This file is in the public domain.
 #
@@ -4870,37 +4870,37 @@ post-install-fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 	${_PKG_SILENT}${_PKG_DEBUG}${PKG_ADMIN} delete ${PKGNAME}
 .  endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} ${COMMENT:Q} > ${_PKG_DB_TMPDIR}/+COMMENT
+	${ECHO} ${COMMENT:Q} > ${PKG_DB_TMPDIR}/+COMMENT
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	case "${DESCR}" in						\
 	${PKG_DB_TMPDIR}/*|"") ;;					\
 	*)	if ${TEST} -f ${DESCR}; then				\
-			${CP} ${DESCR} ${_PKG_DB_TMPDIR}/+DESC;		\
+			${CP} ${DESCR} ${PKG_DB_TMPDIR}/+DESC;		\
 		fi ;;							\
 	esac
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	case "${MESSAGE}" in						\
 	${PKG_DB_TMPDIR}/*|"") ;;					\
 	*)	if ${TEST} -f ${MESSAGE}; then				\
-			${CP} ${MESSAGE} ${_PKG_DB_TMPDIR}/+DISPLAY;	\
+			${CP} ${MESSAGE} ${PKG_DB_TMPDIR}/+DISPLAY;	\
 		fi ;;							\
 	esac
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	case ${PKG_INSTALLATION_TYPE} in				\
-	pkgview)	${TOUCH} ${_PKG_DB_TMPDIR}/+VIEWS ;;		\
+	pkgview)	${TOUCH} ${PKG_DB_TMPDIR}/+VIEWS ;;		\
 	esac
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	case "${INSTALL_FILE}" in					\
 	${PKG_DB_TMPDIR}/*|"") ;;					\
 	*)	if ${TEST} -f ${INSTALL_FILE}; then			\
-			${CP} ${INSTALL_FILE} ${_PKG_DB_TMPDIR}/+INSTALL; \
+			${CP} ${INSTALL_FILE} ${PKG_DB_TMPDIR}/+INSTALL; \
 		fi ;;							\
 	esac
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	case "${DEINSTALL_FILE}" in					\
 	${PKG_DB_TMPDIR}/*|"") ;;					\
 	*)	if ${TEST} -f ${DEINSTALL_FILE}; then			\
-			${CP} ${DEINSTALL_FILE} ${_PKG_DB_TMPDIR}/+DEINSTALL; \
+			${CP} ${DEINSTALL_FILE} ${PKG_DB_TMPDIR}/+DEINSTALL; \
 		fi ;;							\
 	esac
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${SIZE_PKG_FILE} ${SIZE_ALL_FILE}
