@@ -1,27 +1,24 @@
-$NetBSD: patch-aa,v 1.5 1998/12/03 13:09:12 frueauf Exp $
+$NetBSD: patch-aa,v 1.6 2000/08/31 03:58:14 fredb Exp $
 
---- Makefile.orig	Sat Nov 21 01:21:26 1998
-+++ Makefile	Sun Nov 29 05:26:12 1998
-@@ -41,14 +41,16 @@
+--- Makefile.orig	Thu Jun 22 17:39:42 2000
++++ Makefile	Thu Aug 17 20:10:04 2000
+@@ -26,13 +26,13 @@
  ### you need to localize the paths on these lines
  
- #WISH = /usr/sww/tcl-8.0/bin/wish
+ #WISH = /usr/sww/tcl-8.3/bin/wish
 -WISH = /private/share/bin/wish
-+#WISH = /private/share/bin/wish
- #WISH = /private/share/bin/wish8.1
- #WISH = /usr/local/bin/wish8.0
-+WISH = ${LOCALBASE}/bin/wish8.0
++WISH = ${LOCALBASE}/bin/wish
+ #WISH = /private/share/bin/wish8.3
+ #WISH = /usr/local/bin/wish8.3
  
  # the executable `tkman' is placed in BINDIR
  # this should be a directory that's in your bin PATH
 -BINDIR = /private/share/bin
-+#BINDIR = /private/share/bin
- #BINDIR = /usr/local/bin
 +BINDIR = ${PREFIX}/bin
+ #BINDIR = /usr/local/bin
  
  
- # OPTIONAL
-@@ -94,11 +96,26 @@
+@@ -81,11 +81,26 @@
  # will examine for matches if a search in the usual locations fails while searching
  # for a man pages and displaying its associated binaries (if any).
  # Use this feature carefully as a large number of directories can slow down startup.
@@ -51,19 +48,28 @@ $NetBSD: patch-aa,v 1.5 1998/12/03 13:09:12 frueauf Exp $
  
  # names of common printers, in addition to default printer (PRINTER or LPDEST)
  # (individual users can edit this list in the Preferences panel)
-@@ -127,7 +144,7 @@
+@@ -114,7 +129,7 @@
  # Lines are cached in .../man/cat<n>@<line-length>; 
  #   that is, the line length is appended to the usual cache directory names
- #manformat = {groff -te -Tascii -man /tmp/ll - 2>/dev/null}
--manformat = {groff -te -Tlatin1 -man /tmp/ll - 2>/dev/null}
-+manformat = {groff -te -Tlatin1 -man /tmp/ll${PREFIX} - 2>/dev/null}
+ #manformat = {groff -te -Tascii -man /tmp/ll -}
+-manformat = {groff -te -Tlatin1 -man /tmp/ll -}
++#manformat = {groff -te -Tlatin1 -man /tmp/ll -}
  # Ultrix users should uncomment the following line (you don't have eqn)
  #manformat = {tbl | nroff -man }
  # HP-UX uses a number of macros that groff doesn't define, so use the builtin nroff
-@@ -359,8 +376,8 @@
+@@ -122,7 +137,7 @@
+ #  space between the .de and the macro name, and groff doesn't like this.)
+ #manformat = {tbl | neqn | nroff -man }
+ # BSD macros (.Sh, .Ss, .PP, ...) need -mandoc
+-#manformat = {groff -Tascii -te -mandoc}
++manformat = {groff -Tascii -te -mandoc}
+ # BSDI
+ #manformat = {tbl | eqn -Tascii | nroff -man }
+ # It's actually legal to leave this empty if all the pages you'll ever
+@@ -351,8 +366,8 @@
+ 	echo 'set manx(mintcl) $(mintcl)' >> tkman
  	echo 'set manx(mintk) $(mintk)' >> tkman
  	echo 'set manx(newuser) $(newuser)' >> tkman
- 	echo 'set manx(dirnameindex) $(dirnameindex)' >> tkman
 -	echo 'set manx(mastermen) $(mastermen)' >> tkman
 -	echo 'set manx(masterbin) $(masterbin)' >> tkman
 +	echo 'set manx(mastermen) "$(mastermen)"' >> tkman
