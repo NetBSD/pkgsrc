@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2001/01/27 08:16:01 jtb Exp $
+$NetBSD: patch-aa,v 1.5 2001/01/29 04:10:39 jtb Exp $
 
 --- src/Makefile.orig	Wed Oct 18 03:30:08 2000
 +++ src/Makefile
@@ -114,7 +114,7 @@ $NetBSD: patch-aa,v 1.4 2001/01/27 08:16:01 jtb Exp $
 +libgmt.la:		$(LIB_O) $(TRIANGLE_O) $(ALPHA_SINCOS_O)
 +		$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ \
 +		$(LIB_O:.o=.lo) $(TRIANGLE_O:.o=.lo) $(ALPHA_SINCOS_O.o=.lo) \
-+		$(LDFLAGS) $(CDF) $(LIB) -rpath $(libdir) --version-info 0:0
++		$(LDFLAGS) $(CDF) $(LIBS) -rpath $(libdir) --version-info 0:0
  
  #-------------------------------------------------------------------------------
  #	program dependencies
