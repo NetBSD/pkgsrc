@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.2 2004/12/06 07:56:38 recht Exp $
+@comment $NetBSD: PLIST.common,v 1.2.2.1 2005/02/20 18:38:38 salo Exp $
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
 bin/smtpd${PY_VER_SUFFIX}.py
@@ -1257,6 +1257,7 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/collections.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/crypt.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/datetime.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/dbm.so
+${DLMODULE}lib/python${PY_VER_SUFFIX}/lib-dynload/dl.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/fcntl.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/grp.so
 ${EXTRA_SO}lib/python${PY_VER_SUFFIX}/lib-dynload/imageop.so
