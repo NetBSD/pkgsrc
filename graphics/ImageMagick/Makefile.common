@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.1 2003/04/16 13:27:21 mjl Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/06/30 06:45:02 tron Exp $
 
-IM_MAJOR_VER=		5.5.6
-IM_MINOR_VER=		NONE
-IM_MAJOR_LIB_VER=	${IM_MAJOR_VER}-Q16
+IM_MAJOR_VER=		5.5.7
+IM_MINOR_VER=		9
+IM_MAJOR_LIB_VER=	${IM_MAJOR_VER}
 
 .if (${IM_MINOR_VER} != NONE)
 DISTSUFFIX=		${IM_MAJOR_VER}-${IM_MINOR_VER}
@@ -11,6 +11,7 @@ DISTSUFFIX=		${IM_MAJOR_VER}
 .endif
 
 DISTNAME=		ImageMagick-${DISTSUFFIX}
+DISTVERSION=		${DISTSUFFIX:S/-/./}
 
 WRKSRC=			${WRKDIR}/ImageMagick-${IM_MAJOR_VER}
 
@@ -27,6 +28,6 @@ EXTRACT_SUFX=		.tar.bz2
 # any of these manually as desired (PerlMagick should probably be a separate
 # pkg, however).
 CONFIGURE_ARGS+=	--without-dps --without-fpx \
-			--without-hdf --without-jbig --without-threads \
-			--without-ttf --without-wmf --without-xml \
-			--without-lcms
+			--without-hdf --without-jbig --without-jp2 \
+			--without-threads --without-ttf --without-wmf \
+			--without-xml --without-lcms
