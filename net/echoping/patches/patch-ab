@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/08 16:47:50 wiz Exp $
+
+--- echoping.1.orig	Fri Jun 30 10:28:48 2000
++++ echoping.1	Fri Dec  8 17:28:04 2000
+@@ -2,6 +2,4 @@
+-
+ .TH echoping 1 "November 22, 1996" "ECHOPING" "echoping"
+-
+ .SH NAME
+ echoping \- tests a remote host with TCP or UDP
+ 

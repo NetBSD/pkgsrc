@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/08 16:47:50 wiz Exp $
+bin/echoping
+man/man1/echoping.1

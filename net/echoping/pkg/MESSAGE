@@ -1,0 +1,10 @@
+======================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2000/12/08 16:47:50 wiz Exp $
+
+To use the -i flag, you have to add the following two lines to
+/etc/services:
+
+icpv2		3130/tcp		# ICPv2
+icpv2		3130/udp		# ICPv2
+
+======================================================================
