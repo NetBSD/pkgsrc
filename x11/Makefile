@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.367 2004/10/30 20:53:52 minskim Exp $
+# $NetBSD: Makefile,v 1.368 2004/11/20 22:15:43 jmmv Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -243,6 +243,7 @@ SUBDIR+=	xcursor
 SUBDIR+=	xcursorgen
 SUBDIR+=	xdaemon
 SUBDIR+=	xdaemon2
+SUBDIR+=	xdesktopwaves
 SUBDIR+=	xdialog
 SUBDIR+=	xdm3d
 SUBDIR+=	xearth
