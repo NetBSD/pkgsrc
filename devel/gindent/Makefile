@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2003/07/17 21:30:41 grant Exp $
+# $NetBSD: Makefile,v 1.33 2003/08/09 10:44:41 seb Exp $
 #
 
 DISTNAME=	indent-2.2.8a
@@ -16,7 +16,6 @@ USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
 USE_PKGLOCALEDIR=	# defined
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	indent.info
 
 .include "../../mk/bsd.prefs.mk"

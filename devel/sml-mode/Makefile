@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:33:59 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/08/09 10:44:50 seb Exp $
 
 DISTNAME=	sml-mode-3.9.5
 CATEGORIES=	devel editors
@@ -11,7 +11,6 @@ DEPENDS+=	emacs-[0-9]*:../../editors/emacs
 
 ALL_TARGET=	default
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	sml-mode.info
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:29:35 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/08/09 10:44:36 seb Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/06/13 20:00:47 max Exp
 #
 
@@ -22,7 +22,6 @@ CONFIGURE_ENV+=		AWK="${AWK}"
 CONFIGURE_ARGS+=	--program-transform-name='s/$$/-2.13/'
 M4=			${PREFIX}/bin/gm4
 
-USE_NEW_TEXINFO=	YES
 USE_MAKEINFO=		YES
 INFO_FILES=		autoconf213.info
 

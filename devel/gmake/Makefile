@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2003/07/17 21:30:46 grant Exp $
+# $NetBSD: Makefile,v 1.51 2003/08/09 10:44:42 seb Exp $
 
 DISTNAME=	make-3.80
 PKGNAME=	gmake-3.80
@@ -13,7 +13,6 @@ COMMENT=	GNU version of 'make' utility
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
-USE_NEW_TEXINFO=	YES
 TEXINFO_REQD=		4.0
 INFO_FILES=		make.info
 

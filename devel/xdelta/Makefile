@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/06/25 12:10:42 seb Exp $
+# $NetBSD: Makefile,v 1.24 2003/08/09 10:44:50 seb Exp $
 #
 
 DISTNAME=		xdelta-1.1.1
@@ -15,7 +15,6 @@ USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
-USE_NEW_TEXINFO=	YES
 INFO_FILES=		xdelta.info
 
 .include "../../devel/glib/buildlink2.mk"

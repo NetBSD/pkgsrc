@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/07/17 21:33:51 grant Exp $
+# $NetBSD: Makefile,v 1.12 2003/08/09 10:44:49 seb Exp $
 
 DISTNAME=	rx-1.5
 CATEGORIES=	devel
@@ -13,7 +13,6 @@ USE_BUILDLINK2=	# defined
 USE_LIBTOOL=	# defined
 GNU_CONFIGURE=	# defined
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	rx.info
 
 # When the API changes and breaks binary-compatibility with the previous

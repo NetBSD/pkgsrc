@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/21 16:43:46 martti Exp $
+# $NetBSD: Makefile,v 1.13 2003/08/09 10:44:50 seb Exp $
 
 DISTNAME=	slib2d4
 #
@@ -22,7 +22,6 @@ NO_BUILD=	# defined
 SLIBDIR=	${PREFIX}/share/slib
 DOCDIR=		${PREFIX}/share/doc/slib
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	slib.info
 
 do-install:
