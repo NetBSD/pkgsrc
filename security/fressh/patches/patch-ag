@@ -1,0 +1,40 @@
+$NetBSD: patch-ag,v 1.1 2003/10/28 00:14:11 kristerw Exp $
+
+--- sshd_main.c.orig	Tue Oct 28 00:45:01 2003
++++ sshd_main.c	Tue Oct 28 00:45:34 2003
+@@ -352,7 +352,7 @@
+ 		if(!strcasecmp(option, "hostkey")) {
+ 			if(context->opts.hostkey == NULL) {
+ 				strncpy(hostkey, optval, sizeof(hostkey) - 1);
+-				hostkey[sizeof(hostkey) - 1] = NULL;
++				hostkey[sizeof(hostkey) - 1] = 0;
+ 				context->opts.hostkey = hostkey;
+ 			}
+ 			known++;
+@@ -361,7 +361,7 @@
+ 		if(!strcasecmp(option, "listenaddress")) {
+ 			if(context->opts.address == NULL) {
+ 				strncpy(address, optval, sizeof(address) - 1);
+-				address[sizeof(address) - 1] = NULL;
++				address[sizeof(address) - 1] = 0;
+ 				context->opts.address = address;
+ 			}
+ 			known++;
+@@ -370,7 +370,7 @@
+ 		if(!strcasecmp(option, "port")) {
+ 			if(context->opts.port == NULL) {
+ 				strncpy(port, optval, sizeof(port) -1);
+-				port[sizeof(port) - 1] = NULL;
++				port[sizeof(port) - 1] = 0;
+ 				context->opts.port = port;
+ 			}
+ 			known++;
+@@ -379,7 +379,7 @@
+ 		if(!strcasecmp(option, "pidfile")) {
+ 			if(context->opts.pidfile == NULL) {
+ 				strncpy(pidfile, optval, sizeof(pidfile) -1);
+-				pidfile[sizeof(pidfile) - 1] = NULL;
++				pidfile[sizeof(pidfile) - 1] = 0;
+ 				context->opts.pidfile = pidfile;
+ 			}
+ 			known++;

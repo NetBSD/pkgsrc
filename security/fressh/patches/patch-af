@@ -1,0 +1,10 @@
+$NetBSD: patch-af,v 1.1 2003/10/28 00:14:11 kristerw Exp $
+
+--- ssh_global.h.orig	Tue Oct 28 00:44:16 2003
++++ ssh_global.h	Tue Oct 28 00:44:31 2003
+@@ -23,4 +23,4 @@
+ extern ssh_context_t g_context;
+ extern struct ssh_cipher g_cipher;
+ 
+-#endif _SSH_GLOBAL_H
++#endif /* _SSH_GLOBAL_H */
