@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2000/12/12 01:30:47 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2000/12/13 22:40:57 wiz Exp $
 #
 
     SUBDIR += emma
+    SUBDIR += gnofin
     SUBDIR += gnucash
     SUBDIR += tclticker
     SUBDIR += xfinans
