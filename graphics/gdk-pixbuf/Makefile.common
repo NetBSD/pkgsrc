@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2004/02/15 12:47:35 jlam Exp $
+# $NetBSD: Makefile.common,v 1.37 2004/02/17 02:45:21 dmcmahill Exp $
 
 DISTNAME=		gdk-pixbuf-${VER}.0
 PKGREVISION=		1
@@ -10,6 +10,8 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 
 VER=			0.22
+
+PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
