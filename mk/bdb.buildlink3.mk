@@ -1,4 +1,4 @@
-# $NetBSD: bdb.buildlink3.mk,v 1.7 2004/04/25 15:06:10 minskim Exp $
+# $NetBSD: bdb.buildlink3.mk,v 1.8 2004/04/26 09:39:38 jlam Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a Berkeley DB implementation.  db.buildlink3.mk will:
@@ -29,8 +29,10 @@ BDB_ACCEPTED?=	${_BDB_PKGS}
 _BDB_PKGS?=	native db4 db3 db2
 
 _BDB_PKGBASE.db2=	db
+_BDB_PKGSRCDIR.db2=	../../databases/db
 .  for _bdb_ in ${_BDB_PKGS}
-_BDB_PKGBASE.${_bdb_}?=	${_bdb_}
+_BDB_PKGBASE.${_bdb_}?=		${_bdb_}
+_BDB_PKGSRCDIR.${_bdb_}?=	../../databases/${_bdb_}
 .  endfor
 
 _BDB_DEFAULT=	${BDB_DEFAULT}
@@ -127,14 +129,8 @@ BUILDLINK_PACKAGES+=		db-native
 BUILDLINK_INCDIRS.db-native?=	${_BDB_INCDIRS}
 BUILDLINK_TRANSFORM?=		${_BDB_TRANSFORM}
 BDBBASE=	${BUILDLINK_PREFIX.db-native}
-.  elif ${BDB_TYPE} == "db4"
-BDBBASE=	${BUILDLINK_PREFIX.db4}
-.    include "../../databases/db4/buildlink3.mk"
-.  elif ${BDB_TYPE} == "db3"
-BDBBASE=	${BUILDLINK_PREFIX.db3}
-.    include "../../databases/db3/buildlink3.mk"
-.  elif ${BDB_TYPE} == "db2"
-BDBBASE=	${BUILDLINK_PREFIX.db2}
-.    include "../../databases/db/buildlink3.mk"
+.  else
+BDBBASE=	${BUILDLINK_PREFIX.${_BDB_PKGBASE.${BDB_TYPE}}}
+.    include "${_BDB_PKGSRCDIR.${BDB_TYPE}}/buildlink3.mk"
 .  endif
 .endif
