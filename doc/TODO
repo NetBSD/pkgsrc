@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1686 2004/04/30 10:50:46 grant Exp $
+$NetBSD: TODO,v 1.1687 2004/04/30 15:52:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -192,6 +192,7 @@ Suggested package updates
 	o firewalk-5.0
 	o firewalk-gtk-5.0
 	o foomatic-2.9.1 [jlam]
+	o fop-0.20.5
 	o fox-1.0.51
 	o freetds-0.62.3
 	o fsviewer-0.2.5
