@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.20 2005/01/21 13:07:12 tv Exp $
+# $NetBSD: Interix.mk,v 1.21 2005/01/24 21:47:00 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -24,7 +24,9 @@
 # netpbm	0x6b000000	0x6cffffff	0x00100000	32
 # openssl	0x5e000000	0x5fffffff	0x00100000	32
 # perl58	*
+# python22	*
 # python23	*
+# python24	*
 # ruby16	0x50000000	0x6fffffff	0x00040000	2048
 #   (main lib)	0x48000000
 # ruby18	0x50000000	0x6fffffff	0x00040000	2048
