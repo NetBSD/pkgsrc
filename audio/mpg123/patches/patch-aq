@@ -1,0 +1,25 @@
+$NetBSD: patch-aq,v 1.1.2.2 2004/02/10 17:26:34 agc Exp $
+
+--- httpget.c.orig	Tue Feb 10 10:14:29 2004
++++ httpget.c	Tue Feb 10 10:18:07 2004
+@@ -55,11 +55,10 @@
+ #endif
+ 	int pos = 0;
+ 
+-	while(1) {
++	while(pos < (maxlen - 1)) {
+ 		if( read(fileno(f),string+pos,1) == 1) {
+ 			pos++;
+ 			if(string[pos-1] == '\n') {
+-				string[pos] = 0;
+ 				break;
+ 			}
+ 		}
+@@ -78,6 +77,7 @@
+ 	}
+ #endif
+ 
++	string[pos] = '\0';
+ }
+ 
+ void encode64 (char *source,char *destination)
