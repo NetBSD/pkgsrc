@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2433 2003/06/05 12:55:00 markd Exp $
+$NetBSD: CHANGES,v 1.2434 2003/06/05 13:19:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2341,3 +2341,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated emacs-packages to 0.3 [markd 2003-06-05]
 	Added airport2basestationconfig-2.0.1 [markd 2003-06-05]
 	Added kdirstat-2.3.7 [markd 2003-06-05]
+	Updated speex to 1.0.1 [wiz 2003-06-05]
+	Updated sweep to 0.8.2nb2 [wiz 2003-06-05]
