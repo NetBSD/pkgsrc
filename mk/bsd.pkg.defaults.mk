@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.156 2003/06/23 15:46:22 salo Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.157 2003/06/29 21:25:49 jschauma Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1157,6 +1157,12 @@ MAJORDOMO_USER?= majordom
 # Used by majordomo package as the userid majordomo runs at.
 # Possible: any
 # Default: majordom
+
+#MAKEINFO_ARGS?=
+# flags to be passed to makeinfo(1), if any.  Warning: only use if you
+# know what you're doing, may break PLISTs.
+# Possible: any valid flag for makeinfo(1)
+# Default: defaults for various machine_archs may be set in mk/defs.${OPSYS}.mk
 
 MOZILLA_USE_XFT?=	NO
 # Used by mozilla packages to enable Xft support where available.
