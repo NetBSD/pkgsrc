@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2002/10/30 02:12:44 elric Exp $
+# $NetBSD: Makefile,v 1.48 2002/10/30 12:00:49 wiz Exp $
 
 DISTNAME=       imap-2001a
 PKGNAME=        imap-uw-2001.1
@@ -118,7 +118,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/src/ipopd/ipopd.8 ${PREFIX}/man/man8
 	${LN} -sf ipopd.8 ${PREFIX}/man/man8/ipop2d.8
 	${LN} -sf ipopd.8 ${PREFIX}/man/man8/ipop3d.8
-	${MKDIR} -p ${DOC_DIR}
+	${INSTALL_DATA_DIR} ${DOC_DIR}
 	${CP} -R ${WRKSRC}/docs/ ${DOC_DIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DOC_DIR}
 	${CHMOD} -R a=rX ${DOC_DIR}
