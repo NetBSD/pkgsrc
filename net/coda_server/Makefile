@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/04/09 21:11:15 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 1999/04/26 19:08:44 garbled Exp $
 #
 
 DISTNAME=	coda-4.6.6
@@ -12,6 +12,8 @@ HOMEPAGE=	http://www.coda.cs.cmu.edu/
 
 DEPENDS+=	gdbm-1.7.3:../../databases/gdbm
 DEPENDS+=	readline-2.2:../../devel/readline
+
+NOT_FOR_ARCHS=	alpha # needs custom asm.
 
 ALL_TARGET=	coda
 INSTALL_TARGET=	server-install
