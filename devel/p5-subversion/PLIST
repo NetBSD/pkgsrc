@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/03 15:13:58 epg Exp $
+lib/libsvn_swig_perl-1.a
+lib/libsvn_swig_perl-1.la
+lib/libsvn_swig_perl-1.so
+lib/libsvn_swig_perl-1.so.0
+lib/libsvn_swig_perl-1.so.0.0
