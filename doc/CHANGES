@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.476 2002/11/07 03:51:52 dillo Exp $
+$NetBSD: CHANGES,v 1.477 2002/11/07 06:53:41 frueauf Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3542,8 +3542,8 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated bozohttpd to 20021106 [mrg 2002-11-06]
 	Updated xscreensaver-gnome to 4.06nb1 [wiz 2002-11-06]
 	Updated xscreensaver to 4.06nb1 [wiz 2002-11-06]
-	Updated fetchmail to 4.6.2 [frueauf 2002-11-06]
-	Updated fetchmailconf to 4.6.2 [frueauf 2002-11-06]
+	Updated fetchmail to 6.1.2 [frueauf 2002-11-06]
+	Updated fetchmailconf to 6.1.2 [frueauf 2002-11-06]
 	Updated png to 1.2.5 [fredb 2002-11-06]
 	Updated spamassassin to 2.43nb1 [heinz 2002-11-06]
 	libxslt: Downgraded to 1.0.21 [tron 2002-11-06]
