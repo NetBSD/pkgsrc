@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.311 1999/08/10 10:48:23 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.312 1999/08/13 14:06:55 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2350,6 +2350,7 @@ ${PLIST}: ${PLIST_SRC}
 				-e 's|\$${MACHINE_GNU_PLATFORM}|${MACHINE_GNU_PLATFORM}|g' \
 				-e 's|\$${LOWER_VENDOR}|${LOWER_VENDOR}|g'\
 				-e 's|\$${LOWER_OPSYS}|${LOWER_OPSYS}|g'\
+				-e 's|\$${PKGNAME}|${PKGNAME}|g'	\
 			> ${PLIST}; 					\
 	fi
 
