@@ -1,0 +1,15 @@
+=============================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2000/01/14 14:51:27 tsutsui Exp $
+
+This pkg DOES NOT install headers or runtime link libraries.  Only the
+compilers are installed.
+
+In order to have a complete development setup, you need to install
+includes and libraries in ${CROSSBASE}/m68k-netbsd/include and
+${CROSSBASE}/m68k-netbsd/lib respectively, or symlink these paths to
+the appropriate places.
+
+LIMITATIONS:
+	THIS PACKAGE WILL ONLY SUPPORT STATIC BINARIES.
+
+=============================================================================
