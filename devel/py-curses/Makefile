@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/12/10 15:08:20 drochner Exp $
+# $NetBSD: Makefile,v 1.16 2003/01/29 12:31:12 wiz Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-curses-0
@@ -8,15 +8,17 @@ MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.python.org/doc/current/lib/module-curses.html
 COMMENT=	Curses module for Python
 
-DEPENDS+=	ncurses>=4.2:../../devel/ncurses
-EVAL_PREFIX+=	NCURSESDIR=ncurses
-
+USE_BUILDLINK2=	yes
+USE_NCURSES=	# filter getsyx getwin has_key immedok mvwinsnstr mvwinsstr ...
+# noqiflush pechochar putp putwin qiflush redrawwin setsyx syncok termattrs
+# termname tigetflag tigetnum tigetstr tparm typeahead use_env wcursyncup
+# wechochar winsnstr winsstr wredrawln wsyncdown wsyncup
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/_cursesmodule.c
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes
 PY_PATCHPLIST=	yes
 
-PY_SETUP_SUBST=	NCURSESPREFIX=${NCURSESDIR}
+PY_SETUP_SUBST=	NCURSESPREFIX=${BUILDLINK_PREFIX.ncurses}
 
 # ignore errors due to missing files (EXTRACT_ELEMENTS!)
 do-patch:
@@ -27,4 +29,5 @@ do-patch:
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/srcdist.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
