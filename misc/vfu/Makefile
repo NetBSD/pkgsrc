@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2002/05/25 15:04:04 hubertf Exp $
+# $NetBSD: Makefile,v 1.25 2002/07/24 22:48:23 jschauma Exp $
 #
 
 DISTNAME=	vfu-3.04
@@ -13,6 +13,7 @@ COMMENT=	Small, handy, easy-to-use file manager
 
 USE_BUILDLINK_ONLY=	# defined
 #USE_PERL5=		# defined
+USE_NCURSES=	# defined
 
 DOCDIR=			${PREFIX}/share/doc/vfu
 EGDIR=			${PREFIX}/share/examples/vfu
