@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.111 2004/03/11 06:32:58 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.112 2004/03/11 08:36:41 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -116,10 +116,12 @@ USE_BUILTIN.${_pkg_}?=	no
 # We can then check for this value to avoid build loops.
 #
 .for _pkg_ in ${BUILDLINK_PACKAGES}
-.  if !defined(IGNORE_PKG.${_pkg_}) && \
-      (${BUILDLINK_PKGSRCDIR.${_pkg_}:C|.*/([^/]*/[^/]*)$|\1|} == ${PKGPATH})
+.  if defined(BUILDLINK_PKGSRCDIR.${_pkg_})
+.    if !defined(IGNORE_PKG.${_pkg_}) && \
+        (${BUILDLINK_PKGSRCDIR.${_pkg_}:C|.*/([^/]*/[^/]*)$|\1|} == ${PKGPATH})
 IGNORE_PKG.${_pkg_}=	yes
 MAKEFLAGS+=		IGNORE_PKG.${_pkg_}=${IGNORE_PKG.${_pkg_}}
+.    endif
 .  endif
 .endfor
 
