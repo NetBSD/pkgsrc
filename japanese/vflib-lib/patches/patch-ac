@@ -1,0 +1,24 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/05/01 21:58:42 jlam Exp $
+
+--- src/Makefile.in.orig	Tue Oct 27 02:33:17 1998
++++ src/Makefile.in	Mon May  1 04:37:48 2000
+@@ -183,13 +183,13 @@
+ 
+ # Installing
+ install:
+-	$(LIBTOOL) $(CP) $(VFLIB) $(libdir)/$(VFLIB)
++	$(LIBTOOL) $(BSD_INSTALL_DATA) $(VFLIB) $(libdir)/$(VFLIB)
+ 	$(LIBTOOL) -n --finish $(libdir)
+-	$(CP) VF.h     $(includedir)/VF.h
+-	$(CP) VF.h     $(runtimedir)/VF.h
+-	$(LIBTOOL) $(CP) ttindex  $(bindir)/ttindex
+-	$(LIBTOOL) $(CP) bdfindex $(bindir)/bdfindex
+-	$(LIBTOOL) $(CP) bdfindex $(bindir)/fwindex
++	$(BSD_INSTALL_DATA) VF.h     $(includedir)/VF.h
++	$(BSD_INSTALL_DATA) VF.h     $(runtimedir)/VF.h
++	$(LIBTOOL) $(BSD_INSTALL_PROGRAM) ttindex  $(bindir)/ttindex
++	$(LIBTOOL) $(BSD_INSTALL_PROGRAM) bdfindex $(bindir)/bdfindex
++	$(LIBTOOL) $(BSD_INSTALL_PROGRAM) bdfindex $(bindir)/fwindex
+ uninstall:
+ 	-$(LIBTOOL) $(RM) $(libdir)/$(VFLIB)
+ 	-$(RM)  $(includedir)/VF.h
