@@ -1,3 +1,5 @@
+$NetBSD: patch-ah,v 1.3 1999/09/04 01:19:50 bad Exp $
+
 --- example/amanda.conf.in.old	Thu Feb 25 15:56:29 1999
 +++ example/amanda.conf.in	Tue Nov 17 20:17:36 1998
 @@ -59,8 +59,8 @@
