@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.2 2002/01/24 13:47:03 wiz Exp $
+$NetBSD: patch-ac,v 1.3 2002/03/10 10:47:17 jmc Exp $
 
---- src/skipstone.orig	Fri Dec 28 23:27:52 2001
-+++ src/skipstone
+--- src/skipstone.orig	Wed Feb  6 07:42:16 2002
++++ src/skipstone	Sun Mar 10 10:35:49 2002
 @@ -1,29 +1,3 @@
--#!/bin/bash
+ #!/bin/sh
 -if test -n "$MOZILLA_FIVE_HOME"; then
 -	LD_LIBRARY_PATH=$MOZILLA_FIVE_HOME:$LD_LIBRARY_PATH
 -	export LD_LIBRARY_PATH
@@ -32,6 +32,5 @@ $NetBSD: patch-ac,v 1.2 2002/01/24 13:47:03 wiz Exp $
 -else
 -	exec skipstone-bin $@
 -fi
-+#!/bin/sh
 +export MOZILLA_FIVE_HOME=@PREFIX@/lib/mozilla
 +exec skipstone-bin $@

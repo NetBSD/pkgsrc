@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2002/01/25 17:44:00 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2002/03/10 10:47:16 jmc Exp $
 #
 
-DISTNAME=	skipstone-0.7.8
+DISTNAME=	skipstone-0.7.9
 CATEGORIES=	www
 MASTER_SITES=	http://www.muhri.net/skipstone/
 
@@ -9,7 +9,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.muhri.net/skipstone/
 COMMENT=	Gtk+ web browser that embeds Mozilla's renderer
 
-DEPENDS+=	mozilla>=0.9.7:../../www/mozilla
+DEPENDS+=	mozilla>=0.9.8:../../www/mozilla
 
 USE_GMAKE=	yes
 
