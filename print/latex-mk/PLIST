@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2003/02/27 02:18:37 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/08/04 21:43:43 seb Exp $
 bin/ieee-copyout
 bin/latex-mk
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/latex-mk.info
 info/latex-mk.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/latex-mk.info
 share/latex-mk/dated_draft.ps
 share/latex-mk/example/README-example.txt
 share/latex-mk/example/biblio.tex
