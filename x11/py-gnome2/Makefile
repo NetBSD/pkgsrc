@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/09 13:06:20 recht Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/09 16:30:23 recht Exp $
 #
 
 DISTNAME=	gnome-python-2.0.0
@@ -22,6 +22,9 @@ CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 PYTHON_VERSIONS_ACCEPTED=	23pth 22pth
 BUILDLINK_DEPENDS.python22-pth=	python22-pth>=2.2.2nb2
 
+.include "../../lang/python/extension.mk"
+.include "../../lang/python/application.mk"
+
 .include "../../www/libgtkhtml/buildlink2.mk"
 .include "../../net/py-ORBit/buildlink2.mk"
 .include "../../print/libgnomeprintui/buildlink2.mk"
@@ -29,9 +32,6 @@ BUILDLINK_DEPENDS.python22-pth=	python22-pth>=2.2.2nb2
 .include "../../x11/libzvt/buildlink2.mk"
 .include "../../x11/gnome-panel/buildlink2.mk"
 .include "../../x11/py-gtk2/buildlink2.mk"
-
-.include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
 
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
