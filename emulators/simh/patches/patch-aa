@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2002/10/19 21:38:10 thorpej Exp $
+$NetBSD: patch-aa,v 1.5 2003/03/22 11:58:17 cjep Exp $
 
 --- Makefile.orig	Sat Oct 19 14:23:26 2002
 +++ Makefile	Sat Oct 19 14:24:16 2002
@@ -8,7 +8,7 @@ $NetBSD: patch-aa,v 1.4 2002/10/19 21:38:10 thorpej Exp $
  #
 -CC = gcc -O2 -lm -I .
 -#CC = gcc -O2 -g -lm -I .
-+CC = gcc -O2 -lm -lpcap -I .
++CC = gcc ${CFLAGS} -lm -lpcap -I .
 +#CC = gcc -O2 -g -lm -lpcap -I .
  
  
