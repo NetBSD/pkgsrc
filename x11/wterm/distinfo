@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:15:38 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:07:47 skrll Exp $
 
-MD5 (wterm-6.2.6.tar.bz2) = 56d0f39ce7c0e8a06cd74c52d28cb7dd
+SHA1 (wterm-6.2.6.tar.bz2) = d0bed9b5d338dbd1a156207ccce9dfa4c121dbf3
+Size (wterm-6.2.6.tar.bz2) = 239386 bytes
 SHA1 (patch-aa) = 893933197184c47342984e39b8ba023539fb114f
 SHA1 (patch-ab) = 4d24a9005f6332b512dc46bf86e6d5a9478abb19

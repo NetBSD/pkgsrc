@@ -1,2 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:15:24 agc Exp $
-MD5 (qwtlib-0.2.tgz) = d40ca70a996799337c4027c89c5fedb2
+$NetBSD: distinfo,v 1.2 2001/04/19 11:07:43 skrll Exp $
+
+SHA1 (qwtlib-0.2.tgz) = 29aa2873c25c0c714d87fa798c0c44b65af842eb
+Size (qwtlib-0.2.tgz) = 485222 bytes
