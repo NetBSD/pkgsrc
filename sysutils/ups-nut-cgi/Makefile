@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/11/28 08:18:29 jmc Exp $
+# $NetBSD: Makefile,v 1.13 2001/12/21 04:45:03 jlam Exp $
 
 DISTNAME=		nut-0.45.2
 PKGNAME=		ups-nut-cgi-0.45.2
@@ -15,7 +15,8 @@ DEPENDS+=		ups-nut-0.*:../../sysutils/ups-nut
 ALL_TARGET=		cgi
 INSTALL_TARGET=		install-cgi
 
-NUT_CONFDIR=		${CONFDIR}/nut
+PKG_SYSCONFSUBDIR?=	nut
+NUT_CONFDIR=		${PKG_SYSCONFDIR}
 NUT_STATEDIR=		/var/db/nut
 NUT_CGIDIR=		${PREFIX}/share/nut/cgi
 
