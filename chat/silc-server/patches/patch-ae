@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2002/12/06 19:52:39 salo Exp $
+
+--- lib/silccrypt/Makefile.in.orig	Thu Dec  5 22:44:06 2002
++++ lib/silccrypt/Makefile.in	Fri Dec  6 19:18:48 2002
+@@ -106,7 +106,7 @@
+ CCDEPMODE = @CCDEPMODE@
+ 
+ # Tell libtool to compile silccrypt as shared since silcsim will need it.
+-CFLAGS = --libtool-enable-shared
++#CFLAGS = --libtool-enable-shared
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+ CYGPATH_W = @CYGPATH_W@

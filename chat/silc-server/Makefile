@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2002/12/04 17:31:55 salo Exp $
+# $NetBSD: Makefile,v 1.18 2002/12/06 19:52:37 salo Exp $
 
-DISTNAME=		silc-server-0.9.9.1
+DISTNAME=		silc-server-0.9.10
 CATEGORIES=		chat security
 MASTER_SITES=		http://www.silcnet.org/download/server/sources/ \
 			ftp://ftp.silcnet.org/silc/server/sources/ \
@@ -19,6 +19,7 @@ GNU_CONFIGURE=		# defined
 USE_GMAKE=		# defined
 USE_BUILDLINK2=		# defined
 USE_LIBTOOL=		# defined
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/lib/silcmath/mpi/libtool
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -71,7 +72,7 @@ CONFIGURE_ARGS+=	--enable-ipv6
 CONFIGURE_ARGS+=	--disable-asm
 .endif
 
-# Temporary hack which prevents installation of static libraries
+# Ugly hack which prevents installation of static libraries.
 #
 post-build:
 	for f in \
