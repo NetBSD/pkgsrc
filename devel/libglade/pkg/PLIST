@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2001/01/04 15:10:29 agc Exp $
+@comment $NetBSD: PLIST,v 1.12 2001/03/18 00:40:50 mjl Exp $
 bin/libglade-config
 bin/libglade-xgettext
 include/glade/glade.h
@@ -7,15 +7,17 @@ include/glade/glade-build.h
 include/glade/glade-widget-tree.h
 lib/libglade.so
 lib/libglade.so.4
-lib/libglade.so.4.0
+lib/libglade.so.4.2
 lib/libglade.la
 lib/libglade.a
 lib/libglade-gnome.so
 lib/libglade-gnome.so.4
-lib/libglade-gnome.so.4.0
+lib/libglade-gnome.so.4.2
 lib/libglade-gnome.la
 lib/libglade-gnome.a
 lib/libgladeConf.sh
+lib/pkgconfig/libglade.pc
+lib/pkgconfig/libglade-gnome.pc
 share/aclocal/libglade.m4
 share/gnome/html/libglade/gladexml.html
 share/gnome/html/libglade/libglade-embedding.html
