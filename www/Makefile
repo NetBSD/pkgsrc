@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.162 2001/11/12 09:18:34 jlam Exp $
+# $NetBSD: Makefile,v 1.163 2001/11/13 21:36:49 jlam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -123,6 +123,7 @@ SUBDIR+=	php4-apc
 SUBDIR+=	py-pcgi
 SUBDIR+=	py-zpublisher
 SUBDIR+=	quanta
+SUBDIR+=	quanta-docs
 SUBDIR+=	ruby-htmlsplit
 SUBDIR+=	ruby-tag
 SUBDIR+=	ruby-uri
