@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.34 2003/07/21 06:20:17 taca Exp $
+$NetBSD: distinfo,v 1.35 2003/08/18 16:03:01 taca Exp $
 
 SHA1 (squid-2.5.3/squid-2.5.STABLE3.tar.bz2) = 37ceb0a65e9ac644e52ba29cd8bd0c296dca64cb
 Size (squid-2.5.3/squid-2.5.STABLE3.tar.bz2) = 1028081 bytes
@@ -58,6 +58,26 @@ SHA1 (squid-2.5.3/squid-2.5.STABLE3-peer_digest_not_found_assertion.patch) = 7d7
 Size (squid-2.5.3/squid-2.5.STABLE3-peer_digest_not_found_assertion.patch) = 794 bytes
 SHA1 (squid-2.5.3/squid-2.5.STABLE3-round_robin_max_size.patch) = 89aa269b95f79115b8870c67971ac6d1176b59f8
 Size (squid-2.5.3/squid-2.5.STABLE3-round_robin_max_size.patch) = 688 bytes
+SHA1 (squid-2.5.3/squid-2.5.STABLE3-syscalls.disk-counters.patch) = ccafdad340b1813d1ec90349030314949e5f37ae
+Size (squid-2.5.3/squid-2.5.STABLE3-syscalls.disk-counters.patch) = 2478 bytes
+SHA1 (squid-2.5.3/squid-2.5.STABLE3-coss-improvements.patch) = 18e6bee6ee607bcb7def026503f3d34260fbafaf
+Size (squid-2.5.3/squid-2.5.STABLE3-coss-improvements.patch) = 1260 bytes
+SHA1 (squid-2.5.3/squid-2.5.STABLE3-blank-username-log.patch) = 8b0b2f62b78bdd6751b4d364be5f50f8774a573f
+Size (squid-2.5.3/squid-2.5.STABLE3-blank-username-log.patch) = 394 bytes
+SHA1 (squid-2.5.3/squid-2.5.STABLE3-coss-improvements-2.patch) = c2b3a2d7abe19f688afb7b97703a52780b51fb70
+Size (squid-2.5.3/squid-2.5.STABLE3-coss-improvements-2.patch) = 21096 bytes
+SHA1 (squid-2.5.3/squid-2.5.STABLE3-mem_cfd.patch) = 533ed4b0bd7d338e1212647124b3352ed9732bf2
+Size (squid-2.5.3/squid-2.5.STABLE3-mem_cfd.patch) = 8088 bytes
+SHA1 (squid-2.5.3/squid-2.5.STABLE3-aufs_open_fail.patch) = 7f5fd4c5761fa5478f42269957916ccaf33ed92b
+Size (squid-2.5.3/squid-2.5.STABLE3-aufs_open_fail.patch) = 817 bytes
+SHA1 (squid-2.5.3/squid-2.5.STABLE3-aufs_threads.patch) = 7c4e1ac6ded7d8d163ef5c5c5395d514ce7d75bc
+Size (squid-2.5.3/squid-2.5.STABLE3-aufs_threads.patch) = 4093 bytes
+SHA1 (squid-2.5.3/squid-2.5.STABLE3-digest_compile.patch) = cfbf9d650268269bd6492ac19c00e799306b423d
+Size (squid-2.5.3/squid-2.5.STABLE3-digest_compile.patch) = 1445 bytes
+SHA1 (squid-2.5.3/squid-2.5.STABLE3-407_user_name.patch) = b35eda048d1cea42dcaf6751c52939bb4d13c2d3
+Size (squid-2.5.3/squid-2.5.STABLE3-407_user_name.patch) = 723 bytes
+SHA1 (squid-2.5.3/squid-2.5.STABLE3-multicast-ICP-timeout.patch) = f3b93425b2979249c7dad536fb77b0f0445e01ca
+Size (squid-2.5.3/squid-2.5.STABLE3-multicast-ICP-timeout.patch) = 1863 bytes
 SHA1 (patch-aa) = 2e0d96f6ccb9d0c42db2da49e76846edad09624f
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0
