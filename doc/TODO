@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2552 2004/11/28 15:48:57 recht Exp $
+$NetBSD: TODO,v 1.2553 2004/11/28 16:04:47 martti Exp $
 
 Suggested new packages
 ======================
@@ -282,7 +282,6 @@ Suggested package updates
 	o GridSim-3.1
 	o GutenMark-20040320
 	o ImageMagick-6.1.5.5
-	o LPRng-3.8.28
 	o Ngraph-6.3.30
 	o ORBit-0.5.17
 	o PAM-0.78
