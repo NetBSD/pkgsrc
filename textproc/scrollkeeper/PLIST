@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/02/09 20:24:55 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/05/06 16:20:17 minskim Exp $
 bin/scrollkeeper-config
 bin/scrollkeeper-extract
 bin/scrollkeeper-gen-seriesid
@@ -112,7 +112,6 @@ share/xml/scrollkeeper/dtds/scrollkeeper-omf.dtd
 @dirrm share/scrollkeeper/Templates/zh_TW
 @dirrm share/scrollkeeper/Templates/zh_CN
 @dirrm share/scrollkeeper/Templates/vi
-@dirrm share/scrollkeeper/Templates/uk
 @dirrm share/scrollkeeper/Templates/tr
 @dirrm share/scrollkeeper/Templates/sv
 @dirrm share/scrollkeeper/Templates/sr@Latn
@@ -126,7 +125,6 @@ share/xml/scrollkeeper/dtds/scrollkeeper-omf.dtd
 @dirrm share/scrollkeeper/Templates/no
 @dirrm share/scrollkeeper/Templates/nl
 @dirrm share/scrollkeeper/Templates/ko
-@dirrm share/scrollkeeper/Templates/kn
 @dirrm share/scrollkeeper/Templates/ja
 @dirrm share/scrollkeeper/Templates/it
 @dirrm share/scrollkeeper/Templates/hu
@@ -138,7 +136,6 @@ share/xml/scrollkeeper/dtds/scrollkeeper-omf.dtd
 @dirrm share/scrollkeeper/Templates/cs
 @dirrm share/scrollkeeper/Templates/ca
 @dirrm share/scrollkeeper/Templates/be
-@dirrm share/scrollkeeper/Templates/az
 @dirrm share/scrollkeeper/Templates/am
 @dirrm share/scrollkeeper/Templates/C
 @dirrm share/scrollkeeper/Templates
