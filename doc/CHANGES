@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1401 2003/02/16 12:17:18 jmmv Exp $
+$NetBSD: CHANGES,v 1.1402 2003/02/16 16:01:28 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -705,3 +705,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added kssh-0.7 [markd 2003-02-16]
 	Added ap-throttle-3.1.2 [grant 2003-02-16]
 	Updated ms-ttf to 20020306nb2 [jmmv 2003-02-16]
+	Added xchat2-2.0.0 [jmmv 2003-02-16]
