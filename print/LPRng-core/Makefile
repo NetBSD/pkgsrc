@@ -1,21 +1,24 @@
-# $NetBSD: Makefile,v 1.9 2004/04/24 22:46:11 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2004/05/21 13:44:29 adam Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/10/21 00:57:27 steve Exp
-#
 
-DISTNAME=		LPRng-3.6.26
-PKGNAME=		LPRng-core-3.6.26
-CATEGORIES=		print
-MASTER_SITES=		ftp://ftp.astart.com/pub/LPRng/LPRng/
-EXTRACT_SUFX=		.tgz
+DISTNAME=	LPRng-3.8.27
+PKGNAME=	LPRng-core-3.8.27
+CATEGORIES=	print
+MASTER_SITES=	ftp://ftp.lprng.com/pub/LPRng/LPRng/ \
+		http://www.lprng.com/DISTRIB/LPRng/ \
+		http://lprng.sourceforge.net/DISTRIB/LPRng/
+EXTRACT_SUFX=	.tgz
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.lprng.com/
-COMMENT=		Enhanced Printer Spooler
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.lprng.com/
+COMMENT=	Enhanced Printer Spooler
 
 CONFLICTS+=		cups-[0-9]*
 
 USE_GNU_TOOLS+=		make
-GNU_CONFIGURE=		# defined
+USE_LIBTOOL=		yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir="/etc"
 CONFIGURE_ARGS+=	--with-lpd_perms_path="${LPD_PERMS_PATH}"
 CONFIGURE_ARGS+=	--with-lpd_printcap_path="${LPD_PRINTCAP_PATH}"
@@ -48,9 +51,10 @@ FILTER_PATH=		${FILTER_DIR}:/sbin:/usr/sbin:/bin:/usr/bin:${PREFIX}/sbin:${PREFI
 
 MAKE_ENV+=		POSTINSTALL="NO"
 
-EXAMPLES_DIR=	 	${PREFIX}/share/examples/LPRng
+EXAMPLESDIR=	 	${PREFIX}/share/examples/LPRng
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
+#RCD_SCRIPTS=		LPRng
 
 FILES_SUBST=		CAT=${CAT:Q}
 FILES_SUBST+=		CHMOD=${CHMOD:Q}
@@ -61,7 +65,7 @@ FILES_SUBST+=		TRUE=${TRUE:Q}
 FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
 pre-patch:
-	${MV} ${WRKSRC}/man/lpd.conf.5 ${WRKSRC}/man/lpd.conf.5.in
+	${MV} ${WRKSRC}/man/lpd.conf.n ${WRKSRC}/man/lpd.conf.n.in
 
 post-configure:
 	${SED}	-e "s,@FILTER_LD_PATH@,${FILTER_LD_PATH},g" \
@@ -69,7 +73,7 @@ post-configure:
 		-e "s,@LPD_PRINTCAP_PATH@,${LPD_PRINTCAP_PATH},g" \
 		-e "s,@LPD_PERMS_PATH@,${LPD_PERMS_PATH},g" \
 		-e "s,@PRINTCAP_PATH@,${PRINTCAP_PATH},g" \
-		< ${WRKSRC}/man/lpd.conf.5.in > ${WRKSRC}/man/lpd.conf.5
+		< ${WRKSRC}/man/lpd.conf.n.in > ${WRKSRC}/man/lpd.conf.n
 
 pre-install:
 	${SED}	-e "s,@PREFIX@,${PREFIX},g" \
@@ -79,10 +83,10 @@ pre-install:
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/LPRng.sh ${PREFIX}/etc/rc.d/LPRng
-	${INSTALL_DATA_DIR} ${EXAMPLES_DIR}
+	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
 	for file in lpd.conf lpd.perms printcap; do \
 		${INSTALL_DATA} ${WRKSRC}/$${file} \
-			${EXAMPLES_DIR}/$${file}.example; \
+			${EXAMPLESDIR}/$${file}.example; \
 	done
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
