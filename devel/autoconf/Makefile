@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2001/11/30 21:22:25 jmc Exp $
+# $NetBSD: Makefile,v 1.31 2002/02/01 17:09:35 skrll Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/06/13 20:00:47 max Exp
 #
 
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.gnu.org/software/autoconf/autoconf.html
 COMMENT=	Generates automatic source code configuration scripts
 
 DEPENDS=	m4-1.4:../../devel/m4
+
+CONFLICTS=		autoconf-devel-[0-9]*
 
 USE_BUILDLINK_ONLY=	YES
 
