@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2001/11/06 20:04:46 tv Exp $
+# $NetBSD: Makefile,v 1.54 2001/11/27 03:12:54 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -71,6 +71,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/contrib/krb5-setup ${PREFIX}/share/pine/contrib
 	${INSTALL_DATA} ${WRKSRC}/contrib/ldap-setup ${PREFIX}/share/pine/contrib
 	${INSTALL_DATA} ${WRKSRC}/contrib/utils/* ${PREFIX}/share/pine/contrib/utils
+	${CHMOD} +x ${PREFIX}/share/pine/contrib/utils/*.sh
 
 .include "../../mk/bsd.pkg.mk"
 .if ${OPSYS} == "SunOS"
