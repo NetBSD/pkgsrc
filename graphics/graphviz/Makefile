@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2003/07/17 21:41:09 grant Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/28 10:06:43 seb Exp $
 #
 
-DISTNAME=	graphviz-1.9
-PKGREVISION=	2
+DISTNAME=	graphviz-1.10
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.graphviz.org/pub/graphviz/ARCHIVE/
 
@@ -41,13 +40,6 @@ CONFIGURE_ARGS+=	--with-expatlibdir=${BUILDLINK_PREFIX.expat}/lib
 #UNLIMIT_RESOURCES=	datasize stacksize memorysize
 CONFIGURE_ARGS+=	--without-dynagraph
 
-# clean up a bit to help package maintainer produce patch files
-# *And* remove this annoying ast_common.h!
-post-extract:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${FIND} ${WRKSRC} -type f -name "*.orig" | ${XARGS} ${RM} -f
-	${RM} -f ${WRKSRC}/ast_common.h
-
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/graphviz
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/graphviz
@@ -67,7 +59,6 @@ post-install:
 	done
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/doc/graphviz
 	${INSTALL_DATA} ${WRKSRC}/MINTERMS.txt ${PREFIX}/share/doc/graphviz
-
 
 .include "../../graphics/png/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"

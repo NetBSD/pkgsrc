@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/07/13 13:52:07 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/07/28 10:06:44 seb Exp $
 #
 # This Makefile fragment is included by packages that use graphviz.
 #
@@ -9,7 +9,7 @@
 GRAPHVIZ_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			graphviz
-BUILDLINK_DEPENDS.graphviz?=		graphviz>=1.9nb2
+BUILDLINK_DEPENDS.graphviz?=		graphviz>=1.10
 BUILDLINK_PKGSRCDIR.graphviz?=		../../graphics/graphviz
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.graphviz=graphviz
