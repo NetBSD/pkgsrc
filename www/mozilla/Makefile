@@ -3,11 +3,11 @@
 # Date created:		08 Apr 1998
 # Whom:			fvdl
 #
-# $NetBSD: Makefile,v 1.4 1998/04/09 10:05:50 fvdl Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/10 09:34:52 tron Exp $
 #
 
 DISTNAME=	unix_19980331
-PKGNAME=	mozilla
+PKGNAME=	mozilla-19980331
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/source/ \
 	ftp://sunsite.org.uk/Mirrors/ftp.mozilla.org/pub/mozilla/source/ \
