@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2004/02/06 01:42:29 jlam Exp $
+# $NetBSD: Makefile.common,v 1.11 2004/02/06 02:49:54 jlam Exp $
 
 GCC_VERSION=	3.3.2
 DISTNAME=	gcc-${GCC_VERSION}
@@ -49,18 +49,35 @@ GCC_PLATFORM=		${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--host=${GCC_PLATFORM}
 PLIST_SUBST+=		GCC_PLATFORM=${GCC_PLATFORM}
 
-.if ${OPSYS} == "NetBSD" && !defined(USE_BINUTILS)
+.if ${OPSYS} == "NetBSD"
+.  if !defined(USE_BINUTILS)
+AS_PATH:=   ${AS}
+.    for _dir_ in ${PATH:C/\:/ /g}
+.      if empty(AS_PATH:M/*)
+.        if exists(${_dir_}/${AS})
+AS_PATH:=   ${_dir_}/${AS}
+.        endif
+.      endif
+.    endfor
+.    if !empty(AS_PATH:M${LOCALBASE}/*)
+USE_BINUTILS=	YES
+.    else
 AS_VERSION!=	${AS} --version | ${AWK} '{				\
 		    split($$3, v, /[.]/);				\
 		    printf "%02d%02d%02d%02d\n",v[1],v[2],v[3],v[4];	\
 		    exit;						\
 		}'
-USE_BINUTILS!=	${TEST} ${AS_VERSION} -lt 02130201 && echo YES || echo NO
+USE_BINUTILS!=	${TEST} ${AS_VERSION} -lt 02130201 && ${ECHO} YES || ${ECHO} NO
+.    endif
+MAKEFLAGS+=	USE_BINUTILS="${USE_BINUTILS}"
+.  endif
 .endif
 
 .if defined(USE_BINUTILS) && !empty(USE_BINUTILS:M[yY][eE][sS])
 DEPENDS+=		binutils>=2.13.2.1:../../devel/binutils
-CONFIGURE_ARGS+=	--with-as=${PREFIX}/${MACHINE_GNU_PLATFORM}/bin/as
+EVAL_PREFIX+=		BINUTILS_PREFIX=binutils
+BINUTILS_PREFIX_DEFAULT= ${LOCALBASE}
+CONFIGURE_ARGS+=	--with-as=${BINUTILS_PREFIX}/${MACHINE_GNU_PLATFORM}/bin/as
 .endif
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
