@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2680 2004/12/05 17:51:30 he Exp $
+$NetBSD: TODO,v 1.2681 2004/12/05 18:20:59 he Exp $
 
 Suggested new packages
 ======================
@@ -788,7 +788,6 @@ Suggested package updates
 	o p5-GraphViz-2.01
 	o p5-HTML-FillInForm-1.04
 	o p5-HTML-Format-2.04
-	o p5-HTML-Mason-1.28
 	o p5-HTML-Parser-3.37
 	o p5-HTML-Table-1.20
 	o p5-HTMLObject-2.23
