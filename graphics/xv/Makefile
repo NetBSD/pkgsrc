@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2004/01/03 18:49:45 reed Exp $
+# $NetBSD: Makefile,v 1.53 2004/03/29 00:50:41 dillo Exp $
 
 DISTNAME=	xv-3.10a
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=     graphics x11
 MASTER_SITES=	ftp://ftp.cis.upenn.edu/pub/xv/ \
 		ftp://ftp.kuis.kyoto-u.ac.jp/X11/contrib/clients/xv/ \
@@ -16,7 +16,7 @@ MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://www.trilon.com/xv/
 COMMENT=	X11 program that displays images of various formats
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
 USE_IMAKE=	YES
 
@@ -46,6 +46,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/xv
 	${INSTALL_DATA} ${WRKSRC}/docs/xvdocs.ps ${PREFIX}/share/doc/xv
 
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/tiff/buildlink2.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
