@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/01/19 13:15:52 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/01/24 03:26:46 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GMP_BUILDLINK3_MK:=	${GMP_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	gmp
 
 .if !empty(GMP_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		gmp
-BUILDLINK_DEPENDS.gmp?=		gmp>=4.1.2
+BUILDLINK_DEPENDS.gmp+=		gmp>=4.1.2
 BUILDLINK_PKGSRCDIR.gmp?=	../../devel/gmp
 
 .endif # GMP_BUILDLINK3_MK

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 11:05:46 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/01/24 03:26:48 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CUPS_BUILDLINK3_MK:=	${CUPS_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	cups
 
 .if !empty(CUPS_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		cups
-BUILDLINK_DEPENDS.cups?=	cups>=1.1.14nb1
+BUILDLINK_DEPENDS.cups+=	cups>=1.1.14nb1
 BUILDLINK_PKGSRCDIR.cups?=	../../print/cups
 
 .  include "../../graphics/png/buildlink3.mk"

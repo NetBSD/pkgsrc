@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 11:05:45 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/01/24 03:26:46 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GLIB_BUILDLINK3_MK:=	${GLIB_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	glib
 
 .if !empty(GLIB_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		glib
-BUILDLINK_DEPENDS.glib?=	glib>=1.2.10nb5
+BUILDLINK_DEPENDS.glib+=	glib>=1.2.10nb5
 BUILDLINK_PKGSRCDIR.glib?=	../../devel/glib
 
 PTHREAD_OPTS+=	require
