@@ -46,11 +46,15 @@ dnl all of the functions that we need.
 dnl
 pkg_use_nbcompat_vis=yes
 AC_CHECK_HEADER(vis.h, [
-	AC_MSG_TRY_COMPILE([for VIS_WHITE in vis.h], pkg_cv_have_vis_white,
-		[ #include <sys/types.h>
-		  #include <vis.h> ],
-		[ int X = VIS_WHITE ],
-		[ AC_DEFINE(HAVE_VIS_H) ], [ pkg_use_nbcompat_vis=no ])
+	AC_MSG_TRY_COMPILE([for VIS_WHITE in vis.h], pkg_cv_have_vis_white, [
+		#include <sys/types.h>
+		#include <vis.h>
+	], [ int X = VIS_WHITE ], [
+		AC_DEFINE(HAVE_VIS_H)
+		AH_TEMPLATE([HAVE_VIS_H], [
+			Define to 1 if you have the <vis.h> header file.
+		])
+	], [ pkg_use_nbcompat_vis=no ])
 ])
 
 dnl Checks for typedefs, structures, and compiler characteristics.
@@ -98,6 +102,9 @@ AC_CHECK_FUNCS([strunvis strvis strsvis],
 
 if test $pkg_use_nbcompat_vis = yes; then
 	AC_DEFINE(HAVE_NBCOMPAT_VIS)
+	AH_TEMPLATE([HAVE_NBCOMPAT_VIS], [
+		Define to 1 if the `vis' function is built into the library.
+	])
 	AC_LIBOBJ(vis)
 	AC_LIBOBJ(unvis)
 fi
@@ -134,6 +141,9 @@ AC_CHECK_FUNC(statfs, [
 
 if test $pkg_use_nbcompat_statfs = yes; then
 	AC_DEFINE(HAVE_NBCOMPAT_STATFS, 1)
+	AH_TEMPLATE([HAVE_NBCOMPAT_STATFS], [
+		Define to 1 if the `statfs' function is built into the library.
+	])
 	AC_LIBOBJ(statfs)
 fi
 
@@ -172,6 +182,10 @@ dnl		support because we don't know how to display it.
 			AC_MSG_RESULT(yes)
 			can_printf_longlong=yes
 			AC_DEFINE(HAVE_PRINTF_QD, 1)
+			AH_TEMPLATE([HAVE_PRINTF_QD], [
+				Define to 1 if *printf() uses %qd to print
+				`long long' (otherwise uses %lld).
+			])
 		], [
 			AC_MSG_RESULT(no)
 		], [ : ])
@@ -179,43 +193,37 @@ dnl		support because we don't know how to display it.
 
 	if test $can_printf_longlong = yes; then
 		AC_DEFINE(HAVE_QUAD_SUPPORT, 1)
+		AH_TEMPLATE([HAVE_QUAD_SUPPORT], [
+			Define to 1 if `long long' is supported and
+			sizeof(off_t) >= 8.
+		])
 		AC_REPLACE_FUNCS(strtoll)
 	fi
 
 fi
 
 AC_MSG_TRY_COMPILE(for optarg declaration, ftp_cv_HAVE_OPTARG_D, [
-#include <stdlib.h>
-#include <unistd.h> ], [ char *X = optarg ], [:], [AC_DEFINE(HAVE_OPTARG_D, 1)])
+	#include <stdlib.h>
+	#include <unistd.h>
+], [ char *X = optarg ], [:], [
+	AC_DEFINE(HAVE_OPTARG_D, 1)
+	AH_TEMPLATE([HAVE_OPTARG_D], [
+		Define to 1 if optarg is declared in <stdlib.h> or <unistd.h>
+	])
+])
 
 AC_MSG_TRY_COMPILE(for optind declaration, ftp_cv_HAVE_OPTIND_D, [
-#include <stdlib.h>
-#include <unistd.h> ], [ int X = optind ], [:] [AC_DEFINE(HAVE_OPTIND_D, 1)])
+	#include <stdlib.h>
+	#include <unistd.h>
+], [ int X = optind ], [:] [
+	AC_DEFINE(HAVE_OPTIND_D, 1)
+	AH_TEMPLATE([HAVE_OPTIND_D], [
+		Define to 1 if optind is declared in <stdlib.h> or <unistd.h>
+	])
+])
 
 AH_BOTTOM([
-/* Define to 1 if you have the <vis.h> header file. */
-#undef HAVE_VIS_H
-
 /* NBCOMPAT template section follows. */
-
-/* Define to 1 if the `vis' function is built into the library. */
-#undef HAVE_NBCOMPAT_VIS
-
-/* Define to 1 if the `statfs' function is built into the library. */
-#undef HAVE_NBCOMPAT_STATFS
-
-/* Define to 1 if *printf() uses %qd to print `long long' (otherwise uses
-   %lld) */
-#undef HAVE_PRINTF_QD
-
-/* Define to 1 if `long long' is supported and sizeof(off_t) >= 8 */
-#undef HAVE_QUAD_SUPPORT
-
-/* Define to 1 if optarg is declared in <stdlib.h> or <unistd.h> */
-#undef HAVE_OPTARG_D
-
-/* Define to 1 if optind is declared in <stdlib.h> or <unistd.h> */
-#undef HAVE_OPTIND_D
 
 #ifndef HAVE___ATTRIBUTE__
 # define __attribute__(x)
