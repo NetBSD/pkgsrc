@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2004/03/29 03:11:03 grant Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/03/29 09:39:18 grant Exp $
 
 DISTNAME=	sqsh-2.1-src
 CATEGORIES=	databases
@@ -6,7 +6,7 @@ MASTER_SITES=	${HOMEPAGE}
 
 MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://www.sqsh.org/
-COMMENT=	Sybase SQL shell
+COMMENT?=	SQL shell for Sybase and MS-SQL servers
 
 ALL_TARGET=		build
 
