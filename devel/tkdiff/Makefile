@@ -1,23 +1,28 @@
-# $NetBSD: Makefile,v 1.12 2004/03/08 20:27:14 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2004/03/10 00:17:31 minskim Exp $
 #
 
-DISTNAME=	tkdiff_3_09
-PKGNAME=	tkdiff-3.09
+DISTNAME=	tkdiff
+PKGNAME=	${DISTNAME}-4.0b2
 CATEGORIES=	devel
-MASTER_SITES=	http://www.accurev.com/ftp/free/tkdiff/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tkdiff/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	recht@NetBSD.org
-HOMEPAGE=	http://www.accurev.com/free/tkdiff/
+HOMEPAGE=	http://www.accurev.com/free/tkdiff/index.html
 COMMENT=	Graphical 2-way diff/merge tool
 
-DEPENDS+=	tk>=8.3.2:../../x11/tk83
+DEPENDS+=	tk>=8.3.2:../../x11/tk
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+DIST_SUBDIR=	${PKGNAME_NOREV}
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
 NO_BUILDLINK=	yes
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/tkdiff.tcl ${LOCALBASE}/bin/tkdiff3
+	${INSTALL_SCRIPT} ${WRKDIR}/tkdiff ${PREFIX}/bin/tkdiff4
 
 .include "../../mk/bsd.pkg.mk"
