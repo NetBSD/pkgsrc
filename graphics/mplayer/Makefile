@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2002/08/28 07:00:47 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2002/10/01 12:51:46 dillo Exp $
 
 .include "../../graphics/mplayer-share/Makefile.common"
 
@@ -7,6 +7,7 @@ COMMENT=	Software only MPEG-1/2/4 video decoder
 
 USE_BUILDLINK2=		# defined
 CONFIGURE_ARGS+=	--disable-mencoder
+CONFIGURE_ARGS+=	--confdir=${PREFIX}/share/mplayer
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mplayer ${PREFIX}/bin
