@@ -1,18 +1,20 @@
-$NetBSD: distinfo,v 1.8 2002/10/02 22:00:09 dillo Exp $
+$NetBSD: distinfo,v 1.9 2004/04/26 07:10:16 fredb Exp $
 
-SHA1 (squeak/ReadMe.txt.gz) = e632f908e576d8ccbf8386a1b94689e261a2aec7
-Size (squeak/ReadMe.txt.gz) = 6513 bytes
-SHA1 (squeak/Squeak3.0-3552.zip) = ffa356344ef7a9b14de4b4e449a4e8d97b04580d
-Size (squeak/Squeak3.0-3552.zip) = 4868994 bytes
-SHA1 (squeak/SqueakV3.sources.gz) = 7e992d801856ef57565fca34f8af324495dcd871
-Size (squeak/SqueakV3.sources.gz) = 3476504 bytes
-SHA1 (squeak/Squeak-3.0-src.tar.gz) = 231cc39c8dceafea270da1652ced83ec769a0bb5
-Size (squeak/Squeak-3.0-src.tar.gz) = 745258 bytes
-SHA1 (patch-aa) = 5b88ea010030c20a8712e1cc71e12adc1ae267c0
-SHA1 (patch-ab) = c58b921df217fca2221893a6b017cbc7aba28bbe
-SHA1 (patch-ac) = 035cb8f3d00619de7b2c638168834ac6da2aaad8
-SHA1 (patch-ad) = b9b9b99da74429a4a42e7ff5ecc632c0dfe61648
-SHA1 (patch-ae) = c1714d9dbeeb7a86cfda350c567d29431616e281
-SHA1 (patch-af) = 8fc7494c1182ff9a55ae26aaa389e94e52c9f6c7
-SHA1 (patch-ag) = 42fc9206783c74b948915ddcee93aa5eed929323
-SHA1 (patch-ba) = eae0e8c40b14e3e04b278b1b841c4c89ddebea7b
+SHA1 (squeak/Squeak-3.6-3.src.tar.gz) = 9631fd9778bea45bedddc878a7132d46936d8148
+Size (squeak/Squeak-3.6-3.src.tar.gz) = 2552981 bytes
+SHA1 (squeak/Squeak-3.6-5429.image.tar.gz) = 60900eafcd755bd1a898758615045b806f27bd48
+Size (squeak/Squeak-3.6-5429.image.tar.gz) = 7756686 bytes
+SHA1 (squeak/Squeak-3.sources.tar.gz) = 0a265f5c631970fe39a483967dab39c26304092c
+Size (squeak/Squeak-3.sources.tar.gz) = 4184537 bytes
+SHA1 (patch-aa) = fdb5b9c06e02056d1c52344c1e5577ac9d09a5e6
+SHA1 (patch-ab) = ae371a47efb513721b19990ebd2a8ebec78bd89e
+SHA1 (patch-ac) = 38eb12424792eba344c4963132012aa90c70dd8d
+SHA1 (patch-ad) = e70f82454c74ca93f2e448ce055a72130f59dc8f
+SHA1 (patch-ae) = 54e06ce67bbe71280e846dfbb81e7ebd6becd3f7
+SHA1 (patch-af) = 41561264023700df277d81f528c9dad42a11e31f
+SHA1 (patch-ag) = e45917200167817c134eb51cf424179569bb7952
+SHA1 (patch-ah) = 112dac126b8d18d645c4c83184888412a571f5ec
+SHA1 (patch-ai) = 8ca9289dea3484205b65759f2aa052d57d6af2ee
+SHA1 (patch-aj) = 18d81c878ee88bf334e3700d46d66dfa458618d0
+SHA1 (patch-ak) = 25cb1f447a6f3c247a301a4a6d02c25028cb1b70
+SHA1 (patch-al) = d58a1800600ff1a124c3db7aa382b085218160f3
