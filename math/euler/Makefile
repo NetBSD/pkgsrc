@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/04 01:49:09 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/13 11:56:33 wiz Exp $
 
 DISTNAME=		euler-1.60.2
 CATEGORIES=		math
@@ -11,7 +11,7 @@ COMMENT=		Interactive numerical analysis and graphics program
 WRKSRC=			${WRKDIR}/euler-1.60/source
 MAKEFILE=		makefile
 ALL_TARGET=		euler
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 
-.include "../../x11/gtk/buildlink.mk"
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
