@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/12/27 15:31:51 jlam Exp $
+$NetBSD: distinfo,v 1.3 2005/02/02 17:28:56 jlam Exp $
 
-SHA1 (Kwiki-Favorites-0.12.tar.gz) = bbeaed49b42ea48e1f48e5726ede4943ca65c68b
-Size (Kwiki-Favorites-0.12.tar.gz) = 8397 bytes
+SHA1 (Kwiki-Favorites-0.13.tar.gz) = c78c073860061fa9ebf73c45b1cb8526e9c584fe
+Size (Kwiki-Favorites-0.13.tar.gz) = 8447 bytes
