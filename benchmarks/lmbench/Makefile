@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/12/28 04:26:18 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2000/01/05 11:42:49 agc Exp $
 
 DISTNAME=		lmbench-2alpha11
 PKGNAME=		lmbench-2.11a
@@ -26,7 +26,8 @@ post-configure:
 	@chmod 0755 ${WRKSRC}/scripts/lmbench
 
 do-install:
-	@${SETENV} PREFIX=${PREFIX} WRKSRC=${WRKSRC} ${SCRIPTDIR}/do-install
+	@${SETENV} PREFIX=${PREFIX} WRKSRC=${WRKSRC} \
+		INSTALL_PROGRAM=${INSTALL} ${SCRIPTDIR}/do-install
 
 .include "../../mk/bsd.prefs.mk"
 
