@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/03/08 21:15:45 jtb Exp $
+# $NetBSD: Makefile,v 1.4 2001/03/09 22:47:43 jtb Exp $
 
 DISTNAME=	HDF4.1r4
 PKGNAME=	hdf-4.1r4
@@ -16,6 +16,10 @@ DEPENDS+=	jpeg-[0-9]*:../../graphics/jpeg
 USE_FORTRAN=	#defined
 
 EVAL_PREFIX+=	JPEGBASE=jpeg F2CBASE=f2c
+
+.if (${MACHINE_ARCH} == "alpha")
+MAKE_ENV+="CPPFLAGS=-DDEC_ALPHA"
+.endif
 
 post-patch:
 	for i in fortran/config/jackets-fbsd.c			\
