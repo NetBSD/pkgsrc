@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.450 2000/06/01 11:23:11 rh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.451 2000/06/02 23:30:52 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1121,23 +1121,23 @@ SORTED_MASTER_SITES!= echo '${MASTER_SITES}' | ${AWK} '${MASTER_SORT_AWK}'
 .if !target(do-fetch)
 do-fetch:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_DISTDIR}
-	${_PKG_SILENT}(${_PKG_DEBUG}cd ${_DISTDIR};			\
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${_DISTDIR};			\
 	 sites="${SORTED_MASTER_SITES}";				\
 	 for file in "" ${_DISTFILES}; do				\
 		if [ "X$$file" = X"" ]; then continue; fi;		\
 		bfile=`${BASENAME} $$file`;				\
 		${_CHECK_DIST_PATH};					\
 		${_FETCH_FILE}						\
-	 done)
+	 done
 .if defined(_PATCHFILES)
-	${_PKG_SILENT}(${_PKG_DEBUG}cd ${_DISTDIR};			\
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${_DISTDIR};			\
 	 sites="${PATCH_SITES}";					\
 	 for file in "" ${_PATCHFILES}; do				\
 		if [ "X$$file" = X"" ]; then continue; fi;		\
 		bfile=`${BASENAME} $$file`;				\
 		${_CHECK_DIST_PATH};					\
 		${_FETCH_FILE}						\
-	 done)
+	 done
 .endif
 .endif
 
@@ -1217,7 +1217,7 @@ do-extract:
 do-patch:
 .if defined(PATCHFILES)
 	@${ECHO_MSG} "${_PKGSRC_IN}> Applying distribution patches for ${PKGNAME}"
-	${_PKG_SILENT}(${_PKG_DEBUG}cd ${_DISTDIR}; \
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${_DISTDIR}; \
 	  for i in ${PATCHFILES}; do \
 		if [ ${PATCH_DEBUG_TMP} = yes ]; then \
 			${ECHO_MSG} "${_PKGSRC_IN}> Applying distribution patch $$i" ; \
@@ -1236,7 +1236,7 @@ do-patch:
 				|| ( ${ECHO} Patch $$i failed ; exit 1 ) ; \
 				;; \
 		esac; \
-	  done)
+	  done
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}if [ -d ${PATCHDIR} ]; then		\
 		if [ "`${ECHO} ${PATCHDIR}/patch-*`" = "${PATCHDIR}/patch-*" ]; then \
@@ -1309,17 +1309,17 @@ do-configure:
 		  ${SCRIPTDIR}/configure; \
 	fi
 .if defined(HAS_CONFIGURE)
-	${_PKG_SILENT}(${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} CC="${CC}" ac_cv_path_CC="${CC}" \
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} CC="${CC}" ac_cv_path_CC="${CC}" \
 	    CFLAGS="${CFLAGS}" \
 	    INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}" \
 	    ac_given_INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}" \
 	    INSTALL_DATA="${INSTALL_DATA}" \
 	    INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 	    INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
-	    ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS})
+	    ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
 .endif
 .if defined(USE_IMAKE)
-	${_PKG_SILENT}(${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} ${SCRIPTS_ENV} XPROJECTROOT=${X11BASE} ${XMKMF})
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} ${SCRIPTS_ENV} XPROJECTROOT=${X11BASE} ${XMKMF}
 .endif
 .if (defined(USE_LIBTOOL) || defined(USE_PKGLIBTOOL)) && defined(LIBTOOL_OVERRIDE) && !defined(LTCONFIG_OVERRIDE)
 .for libtool in ${LIBTOOL_OVERRIDE}
@@ -1335,14 +1335,14 @@ do-configure:
 
 .if !target(do-build)
 do-build:
-	${_PKG_SILENT}(${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET})
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
 .endif
 
 # Install
 
 .if !target(do-install)
 do-install:
-	${_PKG_SILENT}(${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET})
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
 .endif
 
 # Package
@@ -1510,7 +1510,7 @@ root-install:
 	install-info --info-dir=${PREFIX}/info ${PREFIX}/info/${f}
 .endfor
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} ${PLIST}
-	${_PKG_SILENT}(${_PKG_DEBUG}newmanpages=`${EGREP} -h		\
+	${_PKG_SILENT}${_PKG_DEBUG}newmanpages=`${EGREP} -h		\
 		'^([^@/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.0)(\.gz)?$$' \
 		${PLIST} 2>/dev/null || ${TRUE}`;			\
 	if [ X"${MANCOMPRESSED}" != X"" -a X"${MANZ}" = X"" ]; then	\
@@ -1550,9 +1550,9 @@ root-install:
 				${ECHO_MSG} "$$manpage";		\
 			fi;						\
 		done;							\
-	fi)
+	fi
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
-	${_PKG_SILENT}(${_PKG_DEBUG}					\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
 	sos=`${EGREP} -h -x '.*/lib[^/]+\.so\.[0-9]+(\.[0-9]+)+' ${PLIST} || ${TRUE}`; \
 	if [ "X$$sos" != "X" ]; then					\
 		shlib_type=`${MAKE} ${.MAKEFLAGS} show-shlib-type`;	\
@@ -1615,7 +1615,7 @@ root-install:
 			done;						\
 			;;						\
 		esac;							\
-	fi)
+	fi
 .endif
 .ifdef MESSAGE_FILE
 	@${ECHO_MSG} "${_PKGSRC_IN}> Please note the following:"
@@ -2006,11 +2006,11 @@ cleandir: clean
 .if !target(distclean)
 distclean: pre-distclean clean
 	${_PKG_SILENT}${ECHO_MSG} "${_PKGSRC_IN}> Dist cleaning for ${PKGNAME}"
-	${_PKG_SILENT}(${_PKG_DEBUG}if [ -d ${_DISTDIR} ]; then		\
+	${_PKG_SILENT}${_PKG_DEBUG}if [ -d ${_DISTDIR} ]; then		\
 		cd ${_DISTDIR} &&					\
 		${TEST} -z "${DISTFILES}" || ${RM} -f ${DISTFILES};	\
 		${TEST} -z "${PATCHFILES}" || ${RM} -f ${PATCHFILES};	\
-	fi)
+	fi
 .if defined(DIST_SUBDIR)
 	-${_PKG_SILENT}${_PKG_DEBUG}${RMDIR} ${_DISTDIR}  
 .endif
@@ -2084,11 +2084,11 @@ makesum: fetch
 		${ECHO} -n "NetBSD" >> ${MD5_FILE}; 			\
 		${ECHO} "$$" >> ${MD5_FILE};				\
 		${ECHO} "" >> ${MD5_FILE}
-	${_PKG_SILENT}(${_PKG_DEBUG}cd ${DISTDIR};			\
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${DISTDIR};			\
 	for sumfile in "" ${_CKSUMFILES}; do				\
 		if [ "X$$sumfile" = "X" ]; then continue; fi;		\
 		${MD5} $$sumfile >> ${MD5_FILE};			\
-	done)
+	done
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for ignore in "" ${_IGNOREFILES}; do				\
 		if [ "X$$ignore" = "X" ]; then continue; fi;		\
