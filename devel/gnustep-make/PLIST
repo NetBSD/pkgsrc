@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.8 2004/08/18 13:58:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/09/24 01:24:31 rh Exp $
+share/GNUstep/System/.GNUsteprc
 share/GNUstep/System/Library/Makefiles/GNUstep-reset.sh
 share/GNUstep/System/Library/Makefiles/GNUstep.csh
 share/GNUstep/System/Library/Makefiles/GNUstep.sh
@@ -102,6 +103,7 @@ share/GNUstep/System/Library/Makefiles/spec-debug-rules.template
 share/GNUstep/System/Library/Makefiles/spec-rules.template
 share/GNUstep/System/Library/Makefiles/strip_makefiles.sh
 share/GNUstep/System/Library/Makefiles/subproject.make
+share/GNUstep/System/Library/Makefiles/tar-exclude-list
 share/GNUstep/System/Library/Makefiles/target.make
 share/GNUstep/System/Library/Makefiles/test-application.make
 share/GNUstep/System/Library/Makefiles/test-library.make
@@ -126,6 +128,8 @@ share/GNUstep/System/share/config.site
 @dirrm share/GNUstep/System/Library/Sounds
 @exec ${MKDIR} %D/share/GNUstep/System/Library/Services
 @dirrm share/GNUstep/System/Library/Services
+@exec ${MKDIR} %D/share/GNUstep/System/Library/PostScript
+@dirrm share/GNUstep/System/Library/PostScript
 @exec ${MKDIR} %D/share/GNUstep/System/Library/Makefiles/ix86
 @dirrm share/GNUstep/System/Library/Makefiles/ix86
 @dirrm share/GNUstep/System/Library/Makefiles/Master
