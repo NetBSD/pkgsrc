@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.4 2002/08/06 01:20:21 itojun Exp $
+$NetBSD: patch-ac,v 1.5 2002/08/06 01:58:35 itojun Exp $
 
---- src/wwwoffled.c-	Tue Aug  6 10:12:48 2002
-+++ src/wwwoffled.c	Tue Aug  6 10:12:58 2002
+--- src/wwwoffled.c.orig	Sun Jun 23 20:02:35 2002
++++ src/wwwoffled.c	Tue Aug  6 10:53:39 2002
 @@ -292,10 +292,6 @@
  #endif
  
@@ -9,6 +9,17 @@ $NetBSD: patch-ac,v 1.4 2002/08/06 01:20:21 itojun Exp $
 - if(http_fd[1]!=-1 && ConfigString(Bind_IPv4) && ConfigString(Bind_IPv6) &&
 -    !strcmp(ConfigString(Bind_IPv6),"0:0:0:0:0:0:0:0") && !strcmp(ConfigString(Bind_IPv4),"0.0.0.0"))
 -    PrintMessage(Inform,"Not creating HTTP IPv4 server socket on all addresses since IPv6 one is bound to all addresses.");
+- else
+    {
+ #endif
+     if(ConfigString(Bind_IPv4))
+@@ -336,10 +332,6 @@
+ #endif
+ 
+ #if USE_IPV6
+- if(wwwoffle_fd[1]!=-1 && ConfigString(Bind_IPv4) && ConfigString(Bind_IPv6) &&
+-    !strcmp(ConfigString(Bind_IPv6),"0:0:0:0:0:0:0:0") && !strcmp(ConfigString(Bind_IPv4),"0.0.0.0"))
+-    PrintMessage(Inform,"Not creating WWWOFFLE IPv4 server socket on all addresses since IPv6 one is bound to all addresses.");
 - else
     {
  #endif
