@@ -1,0 +1,13 @@
+$NetBSD: patch-cg,v 1.1 2004/04/24 21:04:43 tv Exp $
+
+--- t/op/groups.t.orig	Fri Apr 23 12:46:39 2004
++++ t/op/groups.t	Fri Apr 23 12:46:53 2004
+@@ -133,7 +133,7 @@
+ 
+ print "# gr = @gr\n";
+ 
+-if ($^O =~ /^(?:uwin|cygwin|solaris)$/) {
++if ($^O =~ /^(?:uwin|cygwin|interix|solaris)$/) {
+ 	# Or anybody else who can have spaces in group names.
+ 	$gr1 = join(' ', grep(!$did{$_}++, sort split(' ', join(' ', @gr))));
+ } else {
