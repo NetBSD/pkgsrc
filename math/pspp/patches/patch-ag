@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.1 1999/07/13 01:31:10 jlam Exp $
+
+--- src/filename.h.orig	Fri Aug 14 10:40:39 1998
++++ src/filename.h	Thu Jul  8 14:44:29 1999
+@@ -31,7 +31,9 @@
+ const char *getenv_default (const char *key, const char *def);
+ char *interp_vars (const char *, const char *(*)(const char *));
+ 
++#if !HAVE_TILDE_EXPAND
+ char *tilde_expand (const char *);
++#endif
+ char *search_path (const char *name, const char *path, const char *prepend);
+ 
+ char *gnu_getcwd (void);

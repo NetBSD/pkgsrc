@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 1999/07/13 01:31:09 jlam Exp $
+
+--- src/error.c.orig	Fri Aug 14 10:39:09 1998
++++ src/error.c	Thu Jul  8 14:31:59 1999
+@@ -50,7 +50,9 @@
+ #include "command.h"
+ 
+ #if HAVE_LIBHISTORY
+-#if HAVE_READLINE_HISTORY_H
++#if HAVE_HISTORY_H
++#include <history.h>
++#elif HAVE_READLINE_HISTORY_H
+ #include <readline/history.h>
+ #else
+ int write_history (char *);

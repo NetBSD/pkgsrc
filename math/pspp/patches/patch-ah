@@ -1,0 +1,25 @@
+$NetBSD: patch-ah,v 1.1 1999/07/13 01:31:11 jlam Exp $
+
+--- src/getline.c.orig	Thu Jan 21 19:54:44 1999
++++ src/getline.c	Thu Jul  8 14:34:13 1999
+@@ -354,14 +354,18 @@
+ /* PORTME: Adapt to your local system's idea of the terminal. */
+ #if HAVE_LIBREADLINE
+ 
+-#if HAVE_READLINE_READLINE_H
++#if HAVE_READLINE_H
++#include <readline.h>
++#elif HAVE_READLINE_READLINE_H
+ #include <readline/readline.h>
+ #else /* no readline/readline.h */
+ extern char *readline (char *);
+ #endif /* no readline/readline.h */
+ 
+ #if HAVE_LIBHISTORY
+-#if HAVE_READLINE_HISTORY_H
++#if HAVE_HISTORY_H
++#include <history.h>
++#elif HAVE_READLINE_HISTORY_H
+ #include <readline/history.h>
+ #else /* no readline/history.h */
+ extern void add_history (char *);

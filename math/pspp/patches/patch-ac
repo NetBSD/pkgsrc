@@ -1,0 +1,30 @@
+$NetBSD: patch-ac,v 1.1 1999/07/13 01:31:08 jlam Exp $
+
+--- config.h.in.orig	Tue Mar  9 14:02:30 1999
++++ config.h.in	Thu Jul  8 14:41:55 1999
+@@ -274,9 +274,15 @@
+ /* Define if you have the <nl_types.h> header file.  */
+ #undef HAVE_NL_TYPES_H
+ 
++/* Define if you have the <history.h> header file.  */
++#undef HAVE_HISTORY_H
++
+ /* Define if you have the <readline/history.h> header file.  */
+ #undef HAVE_READLINE_HISTORY_H
+ 
++/* Define if you have the <readline.h> header file.  */
++#undef HAVE_READLINE_H
++
+ /* Define if you have the <readline/readline.h> header file.  */
+ #undef HAVE_READLINE_READLINE_H
+ 
+@@ -312,6 +318,9 @@
+ 
+ /* Define if you have the readline library (-lreadline).  */
+ #undef HAVE_LIBREADLINE
++
++/* Define if you have the tilde_expand function.  */
++#undef HAVE_TILDE_EXPAND
+ 
+ /* Name of package */
+ #undef PACKAGE
