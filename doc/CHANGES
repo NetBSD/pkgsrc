@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2580 2003/06/24 13:39:37 agc Exp $
+$NetBSD: CHANGES,v 1.2581 2003/06/24 14:11:14 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2563,3 +2563,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xscreensaver to 4.11 [wiz 2003-06-24]
 	Updated xscreensaver-gnome to 4.11 [wiz 2003-06-24]
 	Added claspath-0.05 [agc 2003-06-24]
+	Updated lablgtk to 1.2.5nb2 [tron 2003-06-24]
