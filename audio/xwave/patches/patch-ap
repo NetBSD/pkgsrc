@@ -1,0 +1,33 @@
+$NetBSD: patch-ap,v 1.1 2001/11/18 15:03:39 itohy Exp $
+
+--- src/aifc.h.orig	Thu Aug 13 08:27:09 1998
++++ src/aifc.h	Sun Nov 18 21:05:29 2001
+@@ -1,5 +1,5 @@
+ 
+-#define ID int
++#define ID int32_t
+ #define FORM 0x464F524D
+ #define AIFF 0x41494646
+ #define AIFC 0x41494643
+@@ -13,18 +13,18 @@
+ 
+ typedef struct {
+    ID form;
+-   long length;
++   int32_t length;
+    ID type;
+ } Aif_Form;
+ 
+ typedef struct {
+    ID type;
+-   long length;
++   int32_t length;
+ } Aif_Chunk;
+ 
+ typedef struct {
+    short channels;
+-   unsigned long s_frames;
++   u_int32_t s_frames;
+    short bps;
+    double freq;
+    ID comp_typ;
