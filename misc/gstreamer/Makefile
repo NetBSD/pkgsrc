@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2004/01/24 14:11:10 grant Exp $
+# $NetBSD: Makefile,v 1.16 2004/01/24 16:34:19 jmmv Exp $
 #
 
-DISTNAME=		gstreamer-0.6.1
-PKGREVISION=		9
+DISTNAME=		gstreamer-0.6.4
 CATEGORIES=		misc gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gstreamer/0.6/}
 EXTRACT_SUFX=		.tar.bz2
@@ -19,6 +18,8 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_GNU_TOOLS+=		make
 USE_PERL5=		build
+
+CONFIGURE_ARGS+=	--disable-plugin-builddir
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libs/ext/cothreads/cothreads.pc.in
