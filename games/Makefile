@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2002/12/12 12:14:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.158 2003/01/02 04:44:17 explorer Exp $
 #
 
 COMMENT=	Games
@@ -53,6 +53,7 @@ SUBDIR+=	freeciv-manual
 SUBDIR+=	freeciv-server
 SUBDIR+=	freeciv-share
 SUBDIR+=	frotz
+SUBDIR+=	frozen-bubble
 SUBDIR+=	galaxa
 SUBDIR+=	gemdropx
 SUBDIR+=	glchess
