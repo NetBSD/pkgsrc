@@ -1,0 +1,162 @@
+$NetBSD: patch-ao,v 1.1 1998/12/14 02:17:11 tv Exp $
+
+--- ole/variant.c.orig	Sun Dec 13 12:04:14 1998
++++ ole/variant.c	Sun Dec 13 12:11:16 1998
+@@ -32,6 +32,8 @@
+ #include <time.h>
+ 
+ 
++#undef CHAR_MAX
++#undef CHAR_MIN
+ static const char CHAR_MAX = 127;
+ static const char CHAR_MIN = -128;
+ static const BYTE UI1_MAX = 255;
+@@ -40,10 +42,10 @@
+ static const unsigned short UI2_MIN = 0;
+ static const short I2_MAX = 32767;
+ static const short I2_MIN =  -32768;
+-static const unsigned long UI4_MAX = 4294967295;
++static const unsigned long UI4_MAX = 4294967295UL;
+ static const unsigned long UI4_MIN = 0;
+ static const long I4_MAX = 2147483647;
+-static const long I4_MIN = -2147483648;
++static const long I4_MIN = -(2147483648UL);
+ static const DATE DATE_MIN = -657434;
+ static const DATE DATE_MAX = 2958465;
+ 
+@@ -1768,7 +1770,7 @@
+  * Convert currency to unsigned char
+  */
+ HRESULT WINAPI VarUI1FromCy32(CY cyIn, BYTE* pbOut) {
+-   double t = round((((double)cyIn.u.Hi * 4294967296) + (double)cyIn.u.Lo) / 10000);
++   double t = round((((double)cyIn.u.Hi * 4294967296.0) + (double)cyIn.u.Lo) / 10000);
+    
+    if (t > UI1_MAX || t < UI1_MIN) return DISP_E_OVERFLOW;
+    
+@@ -1974,7 +1976,7 @@
+  * Convert currency to signed short
+  */
+ HRESULT WINAPI VarI2FromCy32(CY cyIn, short* psOut) {
+-   double t = round((((double)cyIn.u.Hi * 4294967296) + (double)cyIn.u.Lo) / 10000);
++   double t = round((((double)cyIn.u.Hi * 4294967296.0) + (double)cyIn.u.Lo) / 10000);
+    
+    if (t > I2_MAX || t < I2_MIN) return DISP_E_OVERFLOW;
+    
+@@ -2167,7 +2169,7 @@
+  * Convert currency to signed long
+  */
+ HRESULT WINAPI VarI4FromCy32(CY cyIn, LONG* plOut) {
+-   double t = round((((double)cyIn.u.Hi * 4294967296) + (double)cyIn.u.Lo) / 10000);
++   double t = round((((double)cyIn.u.Hi * 4294967296.0) + (double)cyIn.u.Lo) / 10000);
+    
+    if (t > I4_MAX || t < I4_MIN) return DISP_E_OVERFLOW;
+    
+@@ -2341,7 +2343,7 @@
+  * Convert currency to float
+  */
+ HRESULT WINAPI VarR4FromCy32(CY cyIn, FLOAT* pfltOut) {
+-   *pfltOut = (FLOAT)((((double)cyIn.u.Hi * 4294967296) + (double)cyIn.u.Lo) / 10000);
++   *pfltOut = (FLOAT)((((double)cyIn.u.Hi * 4294967296.0) + (double)cyIn.u.Lo) / 10000);
+    
+    return S_OK;
+ }
+@@ -2491,7 +2493,7 @@
+  * Convert currency to double
+  */
+ HRESULT WINAPI VarR8FromCy32(CY cyIn, double* pdblOut) {
+-   *pdblOut = (double)((((double)cyIn.u.Hi * 4294967296) + (double)cyIn.u.Lo) / 10000);
++   *pdblOut = (double)((((double)cyIn.u.Hi * 4294967296.0) + (double)cyIn.u.Lo) / 10000);
+    
+    return S_OK;
+ }
+@@ -2674,7 +2676,7 @@
+  * Convert currency to date
+  */
+ HRESULT WINAPI VarDateFromCy32(CY cyIn, DATE* pdateOut) {
+-   *pdateOut = (DATE)((((double)cyIn.u.Hi * 4294967296) + (double)cyIn.u.Lo) / 10000);
++   *pdateOut = (DATE)((((double)cyIn.u.Hi * 4294967296.0) + (double)cyIn.u.Lo) / 10000);
+ 
+    if (*pdateOut > DATE_MAX || *pdateOut < DATE_MIN) return DISP_E_TYPEMISMATCH;
+    return S_OK;
+@@ -3384,7 +3386,7 @@
+  * Convert currency to signed char
+  */
+ HRESULT WINAPI VarI1FromCy32(CY cyIn, CHAR* pcOut) {
+-   double t = round((((double)cyIn.u.Hi * 4294967296) + (double)cyIn.u.Lo) / 10000);
++   double t = round((((double)cyIn.u.Hi * 4294967296.0) + (double)cyIn.u.Lo) / 10000);
+    
+    if (t > CHAR_MAX || t < CHAR_MIN) return DISP_E_OVERFLOW;
+    
+@@ -3618,7 +3620,7 @@
+  * Convert currency to unsigned short
+  */
+ HRESULT WINAPI VarUI2FromCy32(CY cyIn, USHORT* pusOut) {
+-   double t = round((((double)cyIn.u.Hi * 4294967296) + (double)cyIn.u.Lo) / 10000);
++   double t = round((((double)cyIn.u.Hi * 4294967296.0) + (double)cyIn.u.Lo) / 10000);
+    
+    if (t > UI2_MAX || t < UI2_MIN) return DISP_E_OVERFLOW;
+       
+@@ -3766,7 +3768,7 @@
+  * Convert currency to unsigned long
+  */
+ HRESULT WINAPI VarUI4FromCy32(CY cyIn, ULONG* pulOut) {
+-   double t = round((((double)cyIn.u.Hi * 4294967296) + (double)cyIn.u.Lo) / 10000);
++   double t = round((((double)cyIn.u.Hi * 4294967296.0) + (double)cyIn.u.Lo) / 10000);
+    
+    if (t > UI4_MAX || t < UI4_MIN) return DISP_E_OVERFLOW;
+ 
+@@ -3804,8 +3806,8 @@
+  */
+ HRESULT WINAPI VarCyFromI432(LONG lIn, CY* pcyOut) {
+       double t = (double)lIn * (double)10000;
+-      pcyOut->u.Hi = (LONG)(t / (double)4294967296);
+-      pcyOut->u.Lo = (ULONG)fmod(t, (double)4294967296);
++      pcyOut->u.Hi = (LONG)(t / (double)4294967296.0);
++      pcyOut->u.Lo = (ULONG)fmod(t, (double)4294967296.0);
+       if (lIn < 0) pcyOut->u.Hi--;
+    
+       return S_OK;
+@@ -3817,8 +3819,8 @@
+  */
+ HRESULT WINAPI VarCyFromR432(FLOAT fltIn, CY* pcyOut) {
+    double t = round((double)fltIn * (double)10000);
+-   pcyOut->u.Hi = (LONG)(t / (double)4294967296);
+-   pcyOut->u.Lo = (ULONG)fmod(t, (double)4294967296);
++   pcyOut->u.Hi = (LONG)(t / (double)4294967296.0);
++   pcyOut->u.Lo = (ULONG)fmod(t, (double)4294967296.0);
+    if (fltIn < 0) pcyOut->u.Hi--;
+    
+    return S_OK;
+@@ -3830,8 +3832,8 @@
+  */
+ HRESULT WINAPI VarCyFromR832(double dblIn, CY* pcyOut) {
+    double t = round(dblIn * (double)10000);
+-   pcyOut->u.Hi = (LONG)(t / (double)4294967296);
+-   pcyOut->u.Lo = (ULONG)fmod(t, (double)4294967296);
++   pcyOut->u.Hi = (LONG)(t / (double)4294967296.0);
++   pcyOut->u.Lo = (ULONG)fmod(t, (double)4294967296.0);
+    if (dblIn < 0) pcyOut->u.Hi--;
+ 
+    return S_OK;
+@@ -3843,8 +3845,8 @@
+  */
+ HRESULT WINAPI VarCyFromDate32(DATE dateIn, CY* pcyOut) {
+    double t = round((double)dateIn * (double)10000);
+-   pcyOut->u.Hi = (LONG)(t / (double)4294967296);
+-   pcyOut->u.Lo = (ULONG)fmod(t, (double)4294967296);
++   pcyOut->u.Hi = (LONG)(t / (double)4294967296.0);
++   pcyOut->u.Lo = (ULONG)fmod(t, (double)4294967296.0);
+    if (dateIn < 0) pcyOut->u.Hi--;
+ 
+    return S_OK;
+@@ -3891,8 +3893,8 @@
+  */
+ HRESULT WINAPI VarCyFromUI432(ULONG ulIn, CY* pcyOut) {
+    double t = (double)ulIn * (double)10000;
+-   pcyOut->u.Hi = (LONG)(t / (double)4294967296);
+-   pcyOut->u.Lo = (ULONG)fmod(t, (double)4294967296);
++   pcyOut->u.Hi = (LONG)(t / (double)4294967296.0);
++   pcyOut->u.Lo = (ULONG)fmod(t, (double)4294967296.0);
+       
+    return S_OK;
+ }

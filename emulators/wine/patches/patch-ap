@@ -1,0 +1,10 @@
+$NetBSD: patch-ap,v 1.1 1998/12/14 02:17:12 tv Exp $
+
+--- graphics/psdrv/Makefile.in.orig	Sun Dec 13 17:23:30 1998
++++ graphics/psdrv/Makefile.in	Sun Dec 13 17:23:46 1998
+@@ -1,4 +1,4 @@
+-DEFS      = -D__WINE__
++DEFS      = @DLLFLAGS@ -D__WINE__
+ TOPSRCDIR = @top_srcdir@
+ TOPOBJDIR = ../..
+ SRCDIR    = @srcdir@
