@@ -1,13 +1,12 @@
-$NetBSD: patch-ad,v 1.6 2001/08/04 01:20:44 dmcmahill Exp $
+$NetBSD: patch-ad,v 1.7 2004/10/14 22:29:04 dmcmahill Exp $
 
-work around a c++ -O2 bug which is present on at least sparc 
-and pmax using egcs-1.1.1 
-
---- Makefile.in.orig	Sun Mar 25 00:59:46 2001
-+++ Makefile.in	Wed May 16 09:38:37 2001
-@@ -143,5 +143,14 @@
+--- Makefile.in.orig	2003-06-25 03:48:39.000000000 +0200
++++ Makefile.in	2003-07-12 19:11:41.000000000 +0200
+@@ -170,7 +170,17 @@
+ 
  lexor.o: lexor.cc parse.h
  
++# work around buggy compilers when compiling the parser with optimization
 +# make sure no one sneaks a -O* in on us via one of these variables
 +# set in the environment
 +CXX_NOOPT=$(CXX:-O%=)
@@ -19,4 +18,5 @@ and pmax using egcs-1.1.1
 +	$(CXX_NOOPT) $(CPPFLAGS_NOOPT) $(CXXFLAGS_NOOPT) -MD -c $< -o $*.o
 +	mv $*.d dep/$*.d
  
- parse.h parse.cc: $(srcdir)/parse.y
+ parse.cc: $(srcdir)/parse.y
+ 	$(YACC) --verbose -t -p VL -d -o parse.cc $(srcdir)/parse.y
