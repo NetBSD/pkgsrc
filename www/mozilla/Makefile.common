@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2003/05/22 23:41:48 taya Exp $
+# $NetBSD: Makefile.common,v 1.18 2003/05/29 23:49:14 grant Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
@@ -15,6 +15,7 @@ FILESDIR=	"../../www/mozilla/files"
 BUILD_DEPENDS+=	zip>=2.3:../../archivers/zip
 
 USE_BUILDLINK2=	yes
+USE_GCC_SHLIB=	yes
 USE_PERL5=	build
 USE_GMAKE=	yes
 USE_X11=	yes
