@@ -1,13 +1,14 @@
-$NetBSD: patch-aa,v 1.6 2004/06/28 13:58:25 minskim Exp $
+$NetBSD: patch-aa,v 1.7 2004/08/04 19:59:59 minskim Exp $
 
---- makefile.orig	2004-06-25 18:30:52.000000000 -0500
+--- makefile.orig	2004-08-02 20:07:42.000000000 -0500
 +++ makefile
-@@ -1,13 +1,13 @@
+@@ -1,14 +1,14 @@
  # Makefile for compiling Mathomatic for UNIX or Linux or Mac OS X.
  
--CFLAGS		= -O -DUNIX
+ VERSION		= `cat VERSION`
+-CFLAGS		= -O -DUNIX -DVERSION=\"$(VERSION)\"
 -LDFLAGS		= -s
-+CFLAGS		+= -O -DUNIX
++CFLAGS		+= -O -DUNIX -DVERSION=\"$(VERSION)\"
 +#LDFLAGS		= -s
  LIBS		= -lm
  
