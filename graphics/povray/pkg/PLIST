@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/01/04 16:28:44 agc Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/01/20 00:35:22 pooka Exp $
 bin/povray
 man/man1/povray.1
 lib/povray31/allscene.ini
@@ -403,8 +403,8 @@ lib/povray31/scenes/macros/pyramid2.pov
 lib/povray31/scenes/radios/rad2.pov
 lib/povray31/scenes/radios/rad2.inc
 lib/povray31/scenes/radios/rad2.ini
-@dirrm lib/povray31/scenes/textures/pigments
 @dirrm lib/povray31/scenes/textures/pigments/skies
+@dirrm lib/povray31/scenes/textures/pigments
 @dirrm lib/povray31/scenes/textures/surfaces
 @dirrm lib/povray31/scenes/textures
 @dirrm lib/povray31/scenes/objects/math
@@ -453,6 +453,5 @@ lib/povray31/scenes/radios/rad2.ini
 @dirrm lib/povray31/scenes/radios
 @dirrm lib/povray31/scenes
 @dirrm lib/povray31/allscene
-@dirrm lib/povray31/include
 @dirrm lib/povray31/include
 @dirrm lib/povray31
