@@ -1,0 +1,91 @@
+$NetBSD: patch-ad,v 1.1 2000/08/12 15:12:41 deberg Exp $
+
+--- configure.orig	Sun Aug  6 20:29:43 2000
++++ configure	Sat Aug 12 10:23:24 2000
+@@ -1208,20 +1208,20 @@
+ fi
+ 
+ 
+-echo $ac_n "checking for readline in readline.h""... $ac_c" 1>&6
+-echo "configure:1213: checking for readline in readline.h" >&5
++echo $ac_n "checking for readline in readline.h with libedit""... $ac_c" 1>&6
++echo "configure:1213: checking for readline in readline.h with libedit" >&5
+ if eval "test \"`echo '$''{'g_cv_readline'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   
+ 	save_LIBS="$LIBS"
+-	LIBS="-lreadline $LIBS"
++	LIBS="-ledit -ltermcap $LIBS"
+ 	cat > conftest.$ac_ext <<EOF
+ #line 1221 "configure"
+ #include "confdefs.h"
+ 
+ 		#include <stdio.h>
+-		#include <readline/readline.h>
++		#include <readline.h>
+ 		
+ int main() {
+ readline(NULL);
+@@ -1244,10 +1244,60 @@
+ echo "$ac_t""$g_cv_readline" 1>&6
+ 	
+ if test $g_cv_readline = yes ; then
+-	LIBS="$LIBS -lreadline"
++	LIBS="$LIBS -ledit -ltermcap"
+ 	cat >> confdefs.h <<\EOF
+ #define HAVE_READLINE 1
+ EOF
++
++	cat >> confdefs.h <<\EOF
++#define HAVE_LIBEDIT 1
++EOF
++
++fi
++
++if test $g_cv_readline = no ; then
++	echo $ac_n "checking for readline in readline.h""... $ac_c" 1>&6
++echo "configure:1261: checking for readline in readline.h" >&5
++if eval "test \"`echo '$''{'g_cv_readline'+set}'`\" = set"; then
++  echo $ac_n "(cached) $ac_c" 1>&6
++else
++  
++		save_LIBS="$LIBS"
++		LIBS="-lreadline $LIBS"
++		cat > conftest.$ac_ext <<EOF
++#line 1269 "configure"
++#include "confdefs.h"
++
++			#include <stdio.h>
++			#include <readline/readline.h>
++			
++int main() {
++readline(NULL);
++; return 0; }
++EOF
++if { (eval echo configure:1279: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
++  rm -rf conftest*
++  g_cv_readline=yes
++else
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
++  g_cv_readline=no
++fi
++rm -f conftest*
++		LIBS="$save_LIBS"
++	
++fi
++
++echo "$ac_t""$g_cv_readline" 1>&6
++		
++	if test $g_cv_readline = yes ; then
++		LIBS="$LIBS -lreadline"
++		cat >> confdefs.h <<\EOF
++#define HAVE_READLINE 1
++EOF
++
++	fi
+ 
+ fi
+ 
