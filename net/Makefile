@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.344 2002/12/07 20:21:55 cjep Exp $
+# $NetBSD: Makefile,v 1.345 2002/12/18 07:55:24 rh Exp $
 #
 
 COMMENT=	Networking tools
@@ -232,6 +232,7 @@ SUBDIR+=	snort-mysql
 SUBDIR+=	snort-pgsql
 SUBDIR+=	socks4
 SUBDIR+=	socks5
+SUBDIR+=	soup
 SUBDIR+=	speakfreely
 SUBDIR+=	speedtouch
 SUBDIR+=	spegla
