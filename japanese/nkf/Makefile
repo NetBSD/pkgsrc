@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 15:25:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/04/03 02:55:24 itojun Exp $
 
 DISTNAME=	nkf-1.7
 CATEGORIES=	japanese converters
@@ -15,6 +15,7 @@ PATCH_DIST_ARGS+= -R -d ${WRKSRC}
 
 post-extract:
 	@cd ${WRKSRC} && ${PATCH} ${PATCH_ARGS} < ${FILESDIR}/nkf.post-extract
+	@${RM} -rf ${WRKSRC}/NKF
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nkf ${PREFIX}/bin
