@@ -1,0 +1,11 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/03/28 10:11:41 drochner Exp $
+
+--- libusb-config.in.orig	Fri Feb 16 18:10:59 2001
++++ libusb-config.in	Fri Feb 16 18:12:52 2001
+@@ -75,5 +75,5 @@
+ 	echo $includes
+ fi
+ if test "$echo_libs" = "yes"; then
+-	echo -L@libdir@ -lusb
++	echo -L@libdir@ -Wl,-R@libdir@ -lusb
+ fi
