@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:54:03 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:36 wiz Exp $
 
-MD5 (tcptrace.5.2.1.tar.gz) = 2f182bede17f3be0f5d0ba9736463149
+SHA1 (tcptrace.5.2.1.tar.gz) = 838f81a2f5537631c16af6ca49b69863f43d2bd3
+Size (tcptrace.5.2.1.tar.gz) = 1178005 bytes
 SHA1 (patch-aa) = b338e2dada6cb3b1fee66d8d28b909cc5e6858fc

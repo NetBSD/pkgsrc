@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:52:19 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:24 wiz Exp $
 
-MD5 (netperf-2.1pl3.tar.gz) = ca221caf6dc60322386158c2885fcf68
-MD5 (netperf-21pl3-20000721.diff.gz) = 1655f780a86d97c8a0f0b55841059c6c
+SHA1 (netperf-2.1pl3.tar.gz) = e288cc4093058451625b288c96589414e6682ea6
+Size (netperf-2.1pl3.tar.gz) = 832946 bytes
+SHA1 (netperf-21pl3-20000721.diff.gz) = b660eda13e7c1a8f4f7ad601be0940999f5451d9
+Size (netperf-21pl3-20000721.diff.gz) = 8570 bytes
 SHA1 (patch-aa) = 71af36a516994072f57081c961d81997407cceb3

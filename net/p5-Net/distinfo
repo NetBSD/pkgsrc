@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:52:31 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:26 wiz Exp $
 
-MD5 (libnet-1.0703.tar.gz) = 78dc0672a735756ec3c2bba15498cfa0
+SHA1 (libnet-1.0703.tar.gz) = ec1fe8058105f230ee89738b1fdc7443e458d971
+Size (libnet-1.0703.tar.gz) = 64719 bytes
 SHA1 (patch-aa) = 244a00a054a41951a9afee9e7df65290de7204e2

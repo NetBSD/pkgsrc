@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:54:55 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:41 wiz Exp $
 
-MD5 (wu-ftpd-2.6.1.tar.gz) = 857ab8504998a753195eb94ac2dc39a4
+SHA1 (wu-ftpd-2.6.1.tar.gz) = 972c02ebd32d4480d28f243923172c18162bfcc8
+Size (wu-ftpd-2.6.1.tar.gz) = 341520 bytes
 SHA1 (patch-aa) = 0e11b95eb9ce697d48d3665d3bb5dc903b67d89b
 SHA1 (patch-ab) = c3c91639939142ac5c49aa6897d4c0df211b74c6
 SHA1 (patch-ac) = b5f6142045bb092e7dc6b1420d17c15d594d9350

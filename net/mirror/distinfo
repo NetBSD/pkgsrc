@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:52:00 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:22 wiz Exp $
 
-MD5 (mirror-2.9.tar.gz) = 55178a53c7b4253c9a396a38c5a9cb94
+SHA1 (mirror-2.9.tar.gz) = 7a4f7a395cfff06be04a449a050b32e2c055e6c4
+Size (mirror-2.9.tar.gz) = 123194 bytes
 SHA1 (patch-aa) = 3203f4817bc265b5227304c083e606ffb45ce4fd
 SHA1 (patch-ab) = 09045d218a86890f95e381f355fa61c3dfc34ef0
 SHA1 (patch-ac) = 5dd115284903102cf1f83de57d2aacdf9addf2f7

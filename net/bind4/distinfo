@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:50:39 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:10 wiz Exp $
 
-MD5 (bind-4.9.8-REL.tar.gz) = 54af73af5b4988b23e774e6f2401625f
+SHA1 (bind-4.9.8-REL.tar.gz) = bc690813c8e8bb3569ceee3c10ebfeb52b47ad00
+Size (bind-4.9.8-REL.tar.gz) = 1972069 bytes
