@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.211 2004/01/31 23:46:18 snj Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.212 2004/02/05 07:19:34 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -117,6 +117,15 @@ PKGSRC_SHOW_BUILD_DEFS?=yes
 PKGSRC_RUN_TEST?=	no
 # Run test target before install
 # Possible: yes, no
+# Default: no
+
+PREFER_PKGSRC?=		no
+#
+# When building packages, whether or not to prefer the pkgsrc versions of
+# software that's also part of the base system.  Its value can be either
+# yes/no, or a list of packages as named in the BUILDLINK_PACKAGES line
+# in a package's buildlink[23].mk file.
+# Possible: yes, no, or a list of packages
 # Default: no
 
 #WRKOBJDIR=	/usr/tmp
