@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 1999/01/23 17:02:18 simonb Exp $
+# $NetBSD: Makefile,v 1.44 1999/01/31 22:08:43 bad Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -8,13 +8,14 @@
 #    SUBDIR += an
     SUBDIR += angband-tty
     SUBDIR += angband-x11
+    SUBDIR += baduki
     SUBDIR += battalion
     SUBDIR += battleball
 #    SUBDIR += block
 #    SUBDIR += blue
 #    SUBDIR += bs
     SUBDIR += cbzone
-#    SUBDIR += cgoban
+    SUBDIR += cgoban
 #    SUBDIR += connect4
 #    SUBDIR += cosmo
     SUBDIR += craft
@@ -25,6 +26,7 @@
     SUBDIR += finalbattle
 #    SUBDIR += flying
     SUBDIR += freeciv
+    SUBDIR += freedom
     SUBDIR += galaxa
 #    SUBDIR += galaxis
     SUBDIR += gemdropx
