@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/12/28 02:48:38 tv Exp $
+# $NetBSD: Makefile,v 1.4 1999/07/02 08:37:23 agc Exp $
 #
 
 DISTNAME=	libscsi-1.6
@@ -9,10 +9,6 @@ MAINTAINER=	packages@netbsd.org
 
 MAKE_ENV=	LIBDIR=${PREFIX}/lib MANDIR=${PREFIX}/man NOPIC=1 NOPROFILE=1
 
-.include "../../mk/bsd.prefs.mk"
-
-.ifdef MANZ
-MANCOMPRESSED=	yes
-.endif
+MANCOMPRESSED_IF_MANZ=	yes
 
 .include "../../mk/bsd.pkg.mk"

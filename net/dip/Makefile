@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/07/03 23:30:10 tron Exp $
+# $NetBSD: Makefile,v 1.7 1999/07/02 08:37:27 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/04/30 03:18:07 asami Exp
 #
 
@@ -14,11 +14,6 @@ MAINTAINER=	packages@netbsd.org
 
 MIRROR_DISTFILE= no
 NO_CONFIGURE=	yes
-
-.include "../../mk/bsd.prefs.mk"
-
-.ifdef MANZ
-MANCOMPRESSED=	yes
-.endif
+MANCOMPRESSED_IF_MANZ=	yes
 
 .include "../../mk/bsd.pkg.mk"

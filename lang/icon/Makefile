@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/06/20 21:06:20 tron Exp $
+# $NetBSD: Makefile,v 1.13 1999/07/02 08:37:23 agc Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/02/12 08:39:15 tg Exp
 #
 
@@ -16,9 +16,6 @@ DIST_SUBDIR=		icon
 NO_WRKSUBDIR=		true
 ALL_TARGET=		Icon Icon-iconc
 
-.include "../../mk/bsd.prefs.mk"
-.if defined(MANZ)
-MANCOMPRESSED=		yes
-.endif
+MANCOMPRESSED_IF_MANZ=	yes
 
 .include "../../mk/bsd.pkg.mk"

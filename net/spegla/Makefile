@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/02/26 11:27:18 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1999/07/02 08:37:27 agc Exp $
 #
 
 DISTNAME=	spegla-1.04
@@ -7,11 +7,6 @@ MASTER_SITES=	ftp://ftp.luth.se/pub/unix/mirror/ \
 		ftp://subzero.campus.luth.se/pub/spegla/
 
 MAINTAINER=	jnilsson@ludd.luth.se
-
-.include "../../mk/bsd.prefs.mk"
-
-.ifdef MANZ
-MANCOMPRESSED=	yes
-.endif
+MANCOMPRESSED_IF_MANZ=	yes
 
 .include "../../mk/bsd.pkg.mk"
