@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2002/08/25 19:22:41 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2002/08/29 14:39:40 agc Exp $
 #
 
 DISTNAME=		unproven-pthreads-0.17
@@ -15,23 +15,16 @@ CONFLICTS+=		mit-pthreads-[0-9]*
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/pthreads
-MAKE_ENV+=		NOLINT=1 NOPROFILE=1 OBJECT_FMT=${OBJECT_FMT}
+MAKE_ENV+=		NOLINT=1 NOPROFILE=1 OBJECT_FMT=${OBJECT_FMT} USETOOLS=no
 
 CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config/config.guess
 CONFIG_SUB_OVERRIDE=	${WRKSRC}/config/config.sub
-
-# build makes some assumptions about OBJDIR, avoid confusing it
-do-build:
-	unset MAKEOBJDIRPREFIX; cd ${WRKSRC} && ${MAKE}
 
 post-extract:
 	@${RM} ${WRKSRC}/include/pthread/unistd.h
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/pthreads
-
-do-install:
-	unset MAKEOBJDIRPREFIX; cd ${WRKSRC} && ${MAKE} install
 
 post-install:
 	@${RM} -f ${PREFIX}/pthreads/lib/libpthread_pic.a
@@ -41,3 +34,5 @@ post-install:
 	@${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/pthreads/include
 
 .include "../../mk/bsd.pkg.mk"
+
+SETENV:=	unset MAKEOBJDIRPREFIX; ${SETENV}
