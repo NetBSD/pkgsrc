@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/09/18 04:43:39 taca Exp $
+$NetBSD: distinfo,v 1.3 2004/11/21 18:52:36 kristerw Exp $
 
 SHA1 (mh-6.8.4-JP-3.03.tar.gz) = e533b22c23e79e8cba50ed2fe391f0f3b3ca332a
 Size (mh-6.8.4-JP-3.03.tar.gz) = 1567712 bytes
@@ -21,3 +21,4 @@ SHA1 (patch-ap) = bde44e5f75ee1e124b5fff9679823e1ee2c313f0
 SHA1 (patch-aq) = e9399fe4a26005be428960666ac7ac437789aaa5
 SHA1 (patch-ar) = 3f9a0e510c9649ac07f07ef86f4a139bba1a5055
 SHA1 (patch-as) = 287118b416c42d4ec340c4548242d4e15afa6748
+SHA1 (patch-at) = 5594d3beac4e911cfa3ff277d4ae034a6dccdccb
