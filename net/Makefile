@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.308 2002/06/25 02:14:45 markd Exp $
+# $NetBSD: Makefile,v 1.309 2002/06/25 04:14:01 grant Exp $
 #
 
 COMMENT=	Networking tools
@@ -40,6 +40,7 @@ SUBDIR+=	coda_server
 SUBDIR+=	dante
 SUBDIR+=	ddclient
 SUBDIR+=	delegate
+SUBDIR+=	docsis
 SUBDIR+=	dgd
 SUBDIR+=	dhid
 SUBDIR+=	dhisd
