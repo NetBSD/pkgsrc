@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.411 2002/10/30 06:47:51 rh Exp $
+$NetBSD: CHANGES,v 1.412 2002/10/30 07:38:06 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3448,3 +3448,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated imap-uw to 2001.1nb2 [elric 2002-10-30]
 	Updated jikes to 1.17 [skrll 2002-10-30]
 	Added gnome-db-0.8.192 [rh 2002-10-30]
+	Updated libgnomeprint to 1.116.0nb2 [rh 2002-10-30]
+	Updated libgnomeprintui to 1.116.0nb1 [rh 2002-10-30]
