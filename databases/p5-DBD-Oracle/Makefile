@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/15 10:48:43 grant Exp $
+# $NetBSD: Makefile,v 1.2 2004/08/16 11:41:18 kristerw Exp $
 
 DISTNAME=	DBD-Oracle-1.14
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ USE_BUILDLINK3=	yes
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/DBD/Oracle/.packlist
 
 .if !defined(ORACLE_HOME)
-PKG_FAIL_REASON+=	"You must set ORACLE_HOME to the location of your Oracle installation"
+PKG_SKIP_REASON+=	"You must set ORACLE_HOME to the location of your Oracle installation"
 .elif !exists(${ORACLE_HOME})
 PKG_FAIL_REASON+=	"The location of ORACLE_HOME does not exist"
 .endif
