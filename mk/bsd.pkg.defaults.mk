@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.240 2004/05/22 18:58:29 jschauma Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.241 2004/05/22 19:09:53 cl Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -2163,6 +2163,11 @@ XCHAT_USE_SSL?=	YES
 # Enable SSL in xchat (for IRC server connections)
 # Possible: YES, NO
 # Default: YES
+
+XEN12_USE_COM2?=	NO
+# This option changes Xen's serial console port to com2.
+# Possible: YES, NO
+# Default: NO
 
 #XLOCK_DEFAULT_MODE=
 # Set the default display (screen saver) mode for xlockmore.
