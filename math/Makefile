@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2000/02/08 12:06:26 fredb Exp $
+# $NetBSD: Makefile,v 1.21 2000/02/20 14:41:45 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.38 1998/04/13 00:51:58 jseger Exp
 #
 
@@ -49,5 +49,6 @@
     SUBDIR += xmgr
 #    SUBDIR += xplot
 #    SUBDIR += xspread
+    SUBDIR += yacas
 
 .include "../mk/bsd.pkg.subdir.mk"
