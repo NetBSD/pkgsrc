@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 22:53:54 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/21 17:24:40 martti Exp $
 #
 
 DISTNAME=       tits-1.0.3
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=   http://www.mctavish.co.uk/tits/
 
 MAINTAINER=	scw@NetBSD.org
-COMMENT=	server which provides telnet(1) access to one or more tty ports
+COMMENT=	Server which provides telnet(1) access to one or more tty ports
 
 BINDIR=		${PREFIX}/sbin
 MANDIR=		${PREFIX}/man
