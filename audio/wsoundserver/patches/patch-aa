@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/12 21:10:25 wiz Exp $
+
+--- src/Makefile.in.orig	Fri Mar 31 22:10:25 2000
++++ src/Makefile.in
+@@ -106,7 +106,7 @@
+ INCLUDES =  	-I$(top_srcdir)/wslib @HEADER_SEARCH_PATH@
+ 
+ 
+-wsoundserver_LDADD =  	$(top_builddir)/wslib/libwsound.la 	@LIBRARY_SEARCH_PATH@ 	@LIBPL@ 	@XLIBS@ 	@LIBDA@
++wsoundserver_LDADD =  	$(top_builddir)/wslib/libwsound.la 	@LIBRARY_SEARCH_PATH@ 	@LIBPL@ -Wl,-R${X11BASE}/lib	@XLIBS@ 	@LIBDA@
+ 
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_CLEAN_FILES = 

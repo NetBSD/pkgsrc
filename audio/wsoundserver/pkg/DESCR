@@ -1,0 +1,4 @@
+WSoundServer is a dockapp which interprets WindowMaker events (such as
+shading a window or minimizing an application) and plays a sound associated
+with that event. Since it's dockable, you can have it automatically launch
+on startup, or "kill" it off if it becomes too noisy.

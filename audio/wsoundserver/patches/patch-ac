@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/03/12 21:10:25 wiz Exp $
+
+--- wslib/Makefile.in.orig	Fri Mar 31 22:10:25 2000
++++ wslib/Makefile.in
+@@ -227,7 +227,7 @@
+ maintainer-clean-libtool:
+ 
+ libwsound.la: $(libwsound_la_OBJECTS) $(libwsound_la_DEPENDENCIES)
+-	$(LINK) -rpath $(libdir) $(libwsound_la_LDFLAGS) $(libwsound_la_OBJECTS) $(libwsound_la_LIBADD) $(LIBS)
++	$(LINK) -rpath $(libdir) $(libwsound_la_LDFLAGS) $(libwsound_la_OBJECTS) $(libwsound_la_LIBADD) $(LIBS) -lossaudio
+ 
+ mostlyclean-noinstPROGRAMS:
+ 

@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/03/12 21:10:25 wiz Exp $
+
+--- util/Makefile.in.orig	Fri Mar 31 22:10:25 2000
++++ util/Makefile.in
+@@ -103,17 +103,17 @@
+ # X_EXTRA_LIBS is for libproplist in systems that need -lsocket
+ liblist = @LIBRARY_SEARCH_PATH@ @LIBPL@ @X_EXTRA_LIBS@
+ 
+-wsoundplay_LDADD =  	$(top_builddir)/wslib/libwsound.la 	@LIBRARY_SEARCH_PATH@ 	@LIBPL@ 	@XLIBS@
++wsoundplay_LDADD =  	$(top_builddir)/wslib/libwsound.la 	@LIBRARY_SEARCH_PATH@ 	@LIBPL@ -Wl,-R${X11BASE}/lib	@XLIBS@
+ 
+ 
+ wsoundplay_SOURCES = wsoundplay.c
+ 
+-getsoundset_LDADD =  	$(top_builddir)/wslib/libwsound.la 	@LIBRARY_SEARCH_PATH@ 	@LIBPL@ 	@XLIBS@
++getsoundset_LDADD =  	$(top_builddir)/wslib/libwsound.la 	@LIBRARY_SEARCH_PATH@ 	@LIBPL@ -Wl,-R${X11BASE}/lib 	@XLIBS@
+ 
+ 
+ getsoundset_SOURCES = getsoundset.c
+ 
+-setsoundset_LDADD =  	$(top_builddir)/wslib/libwsound.la 	@LIBRARY_SEARCH_PATH@ 	@LIBPL@ 	@XLIBS@
++setsoundset_LDADD =  	$(top_builddir)/wslib/libwsound.la 	@LIBRARY_SEARCH_PATH@ 	@LIBPL@ -Wl,-R${X11BASE}/lib 	@XLIBS@
+ 
+ 
+ setsoundset_SOURCES = setsoundset.c
