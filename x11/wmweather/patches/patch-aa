@@ -1,0 +1,46 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/05/12 05:57:52 rh Exp $
+
+--- Makefile.orig	Wed Mar 17 01:59:39 1999
++++ Makefile	Tue May  2 13:20:57 2000
+@@ -1,8 +1,6 @@
+-CC     = gcc
+-CFLAGS = -O2 -Wall
+-INCDIR = -I/usr/X11R6/include/X11 -I/usr/X11R6/include
+-DESTDIR= /usr/X11R6
+-LIBDIR = -L/usr/X11R6/lib
++INCDIR = -I${PREFIX}/include
++DESTDIR= ${PREFIX}
++LIBDIR = -L${PREFIX}/lib -Wl,-R${PREFIX}/lib
+ # for linux
+ LIBS   = -lXpm -lX11 -lXext
+ # for Solaris
+@@ -10,16 +8,14 @@
+ OBJS   = wmWeather.o \
+          xutils.o
+ 
+-
+ .c.o:
+-	$(CC) $(CFLAGS) -D$(shell echo `uname -s`) -c $< -o $*.o $(INCDIR)
+-
++	$(CC) $(CFLAGS) -c $< -o $*.o $(INCDIR)
+ 
+ all:	wmWeather.o wmWeather
+ 
+ wmWeather.o: wmWeather_master.xpm wmWeather_mask.xbm
+ wmWeather:	$(OBJS) 
+-	$(CC) $(CFLAGS) $(SYSTEM) -o wmWeather $^ $(INCDIR) $(LIBDIR) $(LIBS)
++	$(CC) $(CFLAGS) $(SYSTEM) -o wmWeather ${OBJS} $(LIBDIR) $(LIBS)
+ 
+ clean:
+ 	for i in $(OBJS) ; do \
+@@ -28,7 +24,7 @@
+ 	rm -f wmWeather
+ 
+ install:: wmWeather
+-	install -c -s -m 0755 wmWeather $(DESTDIR)/bin
+-	install -c    -m 0755 GrabWeather $(DESTDIR)/bin
+-	install -c    -m 0644 wmWeather.1 $(DESTDIR)/man/man1 
++	${BSD_INSTALL_PROGRAM} wmWeather $(DESTDIR)/bin
++	${BSD_INSTALL_SCRIPT} GrabWeather $(DESTDIR)/bin
++	${BSD_INSTALL_MAN} wmWeather.1 $(DESTDIR)/man/man1 
+ 

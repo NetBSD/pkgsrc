@@ -1,0 +1,7 @@
+  wmWeather displays your current local weather conditions. You need
+to give it a 4-character "METAR" station identifier code (most major
+airports have one). Shows station ID, time of last update (i.e. time
+the data was updated not the time the App last checked for data),
+temperature, dew point, pressure, humidity, and wind speed. The
+various entries can be forced to display in a variety of different
+units.
