@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.639 2002/11/29 09:04:30 tron Exp $
+$NetBSD: CHANGES,v 1.640 2002/11/29 17:26:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3765,3 +3765,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated findutils to 4.1nb2 [tron 2002-11-29]
 	Updated xchat to 1.8.10nb2 [tron 2002-11-29]
 	Updated xchat-gnome to 1.8.10nb2 [tron 2002-11-29]
+	Updated gtk2 to 2.0.9 [wiz 2002-11-29]

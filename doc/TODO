@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16 2002/11/29 10:49:19 wiz Exp $
+$NetBSD: TODO,v 1.17 2002/11/29 17:26:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -119,7 +119,6 @@ Suggested package updates
 	o gnomeicu-0.99beta
 	o gnucash-1.7.3
 	o gnumeric-1.1.11 [devel]
-	o gtk+-2.0.9
 	o gtkmm-2.0.1
 	o guile-1.6.0
 	o htmldoc-1.8.23
