@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.493 2000/06/30 01:56:08 hubertf Exp $			\
+#	$NetBSD: bsd.pkg.mk,v 1.494 2000/07/03 14:47:11 agc Exp $			\
 #
 # This file is in the public domain.
 #
@@ -84,16 +84,15 @@ CONFIGURE_ENV+=		CLASSPATH=${CLASSPATH} JAVA_HOME=${JAVA_HOME}
 SCRIPTS_ENV+=		CLASSPATH=${CLASSPATH} JAVA_HOME=${JAVA_HOME}
 .endif
 
-# if xpkgwedge is installed, set _USE_LOCALBASE_FOR_X11 and X11PREFIX
+# set X11PREFIX to reflect installed dir of X11 packages
 .if exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
-_USE_LOCALBASE_FOR_X11=	yes
 X11PREFIX=		${LOCALBASE}
 .else
 X11PREFIX=		${X11BASE}
 .endif
 
 .if defined(USE_MOTIF)
-.if defined(_USE_LOCALBASE_FOR_X11)
+.if ${X11PREFIX} == ${LOCALBASE}
 MOTIFBASE?=		${LOCALBASE}
 .elif ${OPSYS} == "SunOS"
 MOTIFBASE?=		/usr/dt
@@ -103,7 +102,7 @@ MOTIFBASE?=		${X11BASE}
 .endif # USE_MOTIF
 
 .if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11BASE)
-.if defined(_USE_LOCALBASE_FOR_X11)
+.if ${X11PREFIX} == ${LOCALBASE}
 PREFIX=			${LOCALBASE}
 .else
 PREFIX=			${X11BASE}
@@ -860,7 +859,7 @@ CONFIGURE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin
 .if defined(GNU_CONFIGURE)
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM} --prefix=${PREFIX}
 HAS_CONFIGURE=		yes
-.if defined(_USE_LOCALBASE_FOR_X11)
+.if ${X11PREFIX} == ${LOCALBASE}
 CONFIGURE_ARGS+=        --x-libraries=${X11BASE}/lib --x-includes=${X11BASE}/include
 .endif
 .endif
