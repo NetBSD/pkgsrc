@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2005/02/16 18:56:22 ben Exp $
+$NetBSD: distinfo,v 1.8 2005/02/17 21:05:08 reed Exp $
 
 SHA1 (falcons-eye-1.9.3nb4-20050216-2/nethack_source_331_jtp_193.zip) = f25a3b77925d247762d18b6f022500aac7c42b29
 Size (falcons-eye-1.9.3nb4-20050216-2/nethack_source_331_jtp_193.zip) = 8349587 bytes
@@ -17,3 +17,4 @@ SHA1 (patch-bf) = b58009fe635389483c34b50afca6aba9cb75fc72
 SHA1 (patch-bh) = 65bf424d1e60b0ee9b9acc8b04359f2f4621e605
 SHA1 (patch-bi) = 6b3d0d1eca3a23c3086155c1da3c2965d7092d5f
 SHA1 (patch-bj) = 281f1d3b8d9eafe7fbe7ca729861d4bdccea5a41
+SHA1 (patch-bk) = f234c26a95d179c4723676c180db95f26c84bb49
