@@ -1,61 +1,66 @@
-# $NetBSD: Makefile,v 1.26 2000/12/05 18:30:05 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2000/12/06 06:33:39 jlam Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/11/12 03:24:41 obrien Exp
 #
 
-DISTNAME=	sudo-1.6.3p5
-CATEGORIES=	security
-MASTER_SITES=	http://www.courtesan.com/sudo/dist/ \
-		ftp://ftp.courtesan.com/pub/sudo/ \
-		ftp://ftp.cs.colorado.edu/pub/sudo/ \
-		ftp://ftp.uu.net/pub/security/sudo/ \
-		ftp://ftp.tux.org/pub/security/sudo/
+DISTNAME=		sudo-1.6.3p5
+CATEGORIES=		security
+MASTER_SITES=		http://www.courtesan.com/sudo/dist/ \
+			ftp://ftp.courtesan.com/pub/sudo/ \
+			ftp://ftp.cs.colorado.edu/pub/sudo/ \
+			ftp://ftp.uu.net/pub/security/sudo/ \
+			ftp://ftp.tux.org/pub/security/sudo/
 
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.courtesan.com/sudo/
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.courtesan.com/sudo/
 
-BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
+BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
 
 .include "../../mk/bsd.prefs.mk"
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		# defined
 
 .if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=--with-skey
+CONFIGURE_ARGS+=	--with-skey
 .elif ${OPSYS} == "SunOS"
-CONFIGURE_ARGS+=--without-skey
+CONFIGURE_ARGS+=	--without-skey
 .endif
 
 .if defined(KERBEROS) && ${KERBEROS} == 4
-USE_KERBEROS=	yes
-CONFIGURE_ARGS+=--with-kerb4
+USE_KERBEROS=		# defined
+CONFIGURE_ARGS+=	--with-kerb4
 .else
-CONFIGURE_ARGS+=--without-kerb4
+CONFIGURE_ARGS+=	--without-kerb4
 .endif
 
 .if defined(KERBEROS) && ${KERBEROS} == 5
-USE_KERBEROS=	yes
-CONFIGURE_ARGS+=--with-kerb5
+USE_KERBEROS=		# defined
+CONFIGURE_ARGS+=	--with-kerb5
 .else
-CONFIGURE_ARGS+=--without-kerb5
+CONFIGURE_ARGS+=	--without-kerb5
 .endif
 
-CONFIGURE_ARGS+=--with-nbsdops --disable-path-info
+CONFIGURE_ARGS+=	--with-nbsdops --disable-path-info
 
-PLIST_SRC=	${WRKDIR}/.PLIST_SRC
+PLIST_SRC=		${PKGDIR}/PLIST.common
+PLIST_SRC+=		${PKGDIR}/PLIST.${LOWER_OPSYS}
+MESSAGE_FILE=		${WRKDIR}/MESSAGE
 
-# The UPGRADE file has important information on upgrading from a previous
-# version of sudo.
-#
-MESSAGE_FILE=	${WRKSRC}/UPGRADE
+DOCDIR=			${PREFIX}/share/doc/sudo
+EGDIR=			${PREFIX}/share/examples/sudo
 
 pre-configure:
-	cd ${WRKSRC}; ${LOCALBASE}/bin/autoconf
+	cd ${WRKSRC} && autoconf
+
+post-build:
+	${SED} -e "s,@PREFIX@,${PREFIX},g" \
+		< ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
 
 post-install:
-	${CAT} ${PKGDIR}/PLIST.common ${PKGDIR}/PLIST.${LOWER_OPSYS} > ${PLIST_SRC}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/sudo
-	${INSTALL_DATA} ${WRKSRC}/sudoers ${PREFIX}/share/examples/sudo/sudoers
-	${INSTALL_DATA} ${WRKSRC}/sample.sudoers \
-		${PREFIX}/share/examples/sudo/sudoers.sample
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/UPGRADE ${DOCDIR}
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/sudoers ${EGDIR}/sudoers
+	${INSTALL_DATA} ${WRKSRC}/sample.sudoers ${EGDIR}/sudoers.sample
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
