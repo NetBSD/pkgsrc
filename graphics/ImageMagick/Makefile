@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2001/02/16 15:22:14 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2001/03/04 09:06:10 tron Exp $
 
 DISTNAME=		ImageMagick-5.2.8
 CATEGORIES=		graphics
@@ -11,7 +11,7 @@ COMMENT=		Package for display and interactive manipulation of images
 
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		mpeg2codec-1.2:../../graphics/mpeg2codec
-DEPENDS+=		png>=1.0.6:../../graphics/png
+DEPENDS+=		png>1.0.9:../../graphics/png
 DEPENDS+=		tiff-*:../../graphics/tiff
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
