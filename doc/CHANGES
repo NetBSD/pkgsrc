@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6404 2004/06/30 12:36:19 martti Exp $
+$NetBSD: CHANGES,v 1.6405 2004/06/30 16:20:59 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3189,3 +3189,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added florist-3.15p [shannonjr 2004-06-30]
 	Updated xfce4-weather-plugin to 0.3.9.1 [martti 2004-06-30]
 	Updated xfce4-cpugraph-plugin to 0.2.2 [martti 2004-06-30]
+	Updated binutils to 2.15.0.0 [shannonjr 2004-06-30]
+
