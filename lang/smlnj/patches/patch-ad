@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1.1.1 2003/03/21 22:20:56 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2003/07/01 23:10:34 jtb Exp $
 
---- src/runtime/include/asm-base.h.orig	Fri Apr 12 13:54:31 2002
+--- src/runtime/include/asm-base.h.orig
 +++ src/runtime/include/asm-base.h
 @@ -36,6 +36,11 @@
  #    define _ASM
@@ -14,3 +14,12 @@ $NetBSD: patch-ad,v 1.1.1.1 2003/03/21 22:20:56 wiz Exp $
  #  endif
  #  define CGLOBAL(ID)	.global	CSYM(ID)
  #  define LABEL(ID)	ID:
+@@ -104,7 +109,7 @@
+ #    define DOUBLE(V)	.double V
+ #    define LABEL(ID)   ID:
+ 
+-#  elif (defined(OPSYS_LINUX) && defined(TARGET_PPC))
++#  elif ((defined(OPSYS_LINUX) || defined(OPSYS_NETBSD)) && defined(TARGET_PPC))
+ #    define CFUNSYM(ID)	ID
+ #    define CGLOBAL(ID)	.globl CSYM(ID)
+ #    define TEXT	.section ".text"
