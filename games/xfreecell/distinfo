@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/12/22 21:17:25 hubertf Exp $
+
+SHA1 (xfreecell-1.0.5b.tgz) = b0453b09ea2211822a5f03f532097c9eb14db2a6
+Size (xfreecell-1.0.5b.tgz) = 49367 bytes
+SHA1 (patch-aa) = 9ae72142536bac8feb8e1ae1576cf56c2f30ae55
+SHA1 (patch-ab) = 5cdece49362d32b1673180268ffc2d4eb5bdfe6a
