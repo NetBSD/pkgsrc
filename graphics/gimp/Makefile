@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2000/03/27 08:54:56 tron Exp $
+# $NetBSD: Makefile,v 1.50 2000/04/15 20:47:35 mycroft Exp $
 
 DISTNAME=		gimp-1.0.4
 CATEGORIES=		graphics
@@ -46,7 +46,7 @@ LDFLAGS+=		-Wl,-E
 post-configure:
 	@${ECHO_MSG} "--> now configuring in ${GIMP_DATA}"
 	@(cd ${WRKDIR}/${GIMP_DATA} && ${SETENV} ${CONFIGURE_ENV} \
-		${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS})
+		./${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS})
 
 pre-build:
 	@if [ "$$DISPLAY" = "" ]; then \
