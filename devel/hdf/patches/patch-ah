@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.4 2001/03/25 01:09:50 jtb Exp $
+$NetBSD: patch-ah,v 1.5 2001/04/19 00:56:34 jtb Exp $
 
 --- /dev/null	Sun Mar 25 00:38:33 2001
 +++ mfhdf/dumper/Makefile
@@ -11,7 +11,7 @@ $NetBSD: patch-ah,v 1.4 2001/03/25 01:09:50 jtb Exp $
 +BINDIR= ${PREFIX}/bin
 +LIBDIR= ${PREFIX}/lib
 +
-+CPPFLAGS+= -Dunix @SWAP@
++CPPFLAGS+= -Dunix
 +CPPFLAGS+= -I${.CURDIR}/../libsrc
 +CPPFLAGS+= -I${.CURDIR}/../../hdf/src
 +
