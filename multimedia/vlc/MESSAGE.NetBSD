@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1.1.1 2004/03/29 10:30:29 grant Exp $
+
+You may need to increase the maximum number of shared memory pages
+(SHMMAXPGS) in your kernel to run ${PKGNAME}. One possible setting is:
+
+	options		SHMMAXPGS=32768
+
+===========================================================================
