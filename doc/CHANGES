@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2526 2003/06/18 00:35:57 gehenna Exp $
+$NetBSD: CHANGES,v 1.2527 2003/06/18 06:57:58 gehenna Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2481,3 +2481,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated nmapfe to 0.95nb6 [salo 2003-06-17]
 	Added tet3-3.3h [agc 2003-06-17]
 	Updated cvsync to 0.23.2 [gehenna 2003-06-18]
+	Updated cvsync to 0.23.3 [gehenna 2003-06-18]
