@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/06/30 21:14:10 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2001/07/16 19:50:50 nra Exp $
 #
 
 DISTNAME=		snd
@@ -17,6 +17,7 @@ USE_BUILDLINK_ONLY=	YES
 MAKEFILE=		makefile.netbsd
 ALL_TARGET=		snd
 HTMLDIR=		${PREFIX}/share/doc/html/snd
+USE_X11BASE=		YES
 
 do-install:
 	cd ${WRKSRC} ; ${INSTALL_PROGRAM} snd ${PREFIX}/bin
