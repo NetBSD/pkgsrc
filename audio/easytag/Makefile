@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/08/03 17:07:24 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/08/03 17:08:48 wiz Exp $
 #
 
 DISTNAME=	easytag-0.15
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=easytag/}
 
 MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://easytag.sourceforge.net/
-COMMENT=	Tool to view, edit and write ID3 v1 TAGs with a GTK+ interface
+COMMENT=	Tool to view, edit and write ID3 v1&2 TAGs with a GTK+ interface
 
 USE_GMAKE=	yes
 #USE_LIBINTL=	yes
