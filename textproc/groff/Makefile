@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/08/16 14:43:44 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/08/21 14:56:44 wiz Exp $
 #
 
 DISTNAME=	groff-1.16.1
@@ -16,7 +16,7 @@ PLIST_SRC=	${PKGDIR}/PLIST.${LOWER_OPSYS}
 
 .include "../../mk/bsd.prefs.mk"
 
-.ifdef ${PAPERSIZE}
+.ifdef PAPERSIZE
 CONFIGURE_ENV+=	PAGE=${PAPERSIZE}
 .endif
 
