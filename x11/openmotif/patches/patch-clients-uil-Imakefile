@@ -1,0 +1,15 @@
+$NetBSD: patch-clients-uil-Imakefile,v 1.1.1.1 2000/10/29 16:17:13 mjl Exp $
+
+--- clients/uil/Imakefile.orig	Sun Oct 29 14:29:52 2000
++++ clients/uil/Imakefile	Sun Oct 29 14:30:05 2000
+@@ -40,8 +40,10 @@
+ 
+ #define DoNormalLib	NormalLibUil
+ #define DoSharedLib	SharedLibUil
++#if 0
+ #define DoDebugLib	DebugLibUil
+ #define DoProfileLib	ProfileLibUil
++#endif
+ #define LibName		Uil
+ #define	SoRev		SOUILREV
+ #define HasSharedData	NO
