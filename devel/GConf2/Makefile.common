@@ -1,0 +1,31 @@
+# $NetBSD: Makefile.common,v 1.1 2003/02/05 22:06:45 jmmv Exp $
+#
+
+DISTNAME=		GConf-1.2.1
+CATEGORIES=		devel gnome
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/GConf/1.2/}
+EXTRACT_SUFX=		.tar.bz2
+
+MAINTAINER=		jmmv@netbsd.org
+HOMEPAGE=		http://advogato.org/proj/GConf/
+COMMENT=		configuration database system used by GNOME (v2)
+
+BUILD_USES_MSGFMT=	yes
+
+DISTINFO_FILE=		${.CURDIR}/../GConf2/distinfo
+FILESDIR=		${.CURDIR}/../GConf2/files
+PATCHDIR=		${.CURDIR}/../GConf2/patches
+PKGDIR=			${.CURDIR}/../GConf2
+PLIST_SRC=		${.CURDIR}/PLIST
+
+USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_GMAKE=		yes
+USE_PERL5=		build
+
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--enable-gtk-doc=no
