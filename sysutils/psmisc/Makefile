@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/07/21 17:24:23 martti Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/05 12:48:30 jlam Exp $
 
 DISTNAME=		psmisc-20.1
 CATEGORIES=		sysutils
@@ -11,7 +11,9 @@ COMMENT=		Miscellaneous procfs tools: killall, pidof, and pstree
 
 CONFLICTS+=		pstree<=2.16
 
-USE_BUILDLINK2=		# defined
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		# defined
 GNU_CONFIGURE=		# defined
 LIBS+=			${LIBGETOPT}
 
@@ -20,5 +22,5 @@ post-install:
 	${RM} -f ${PREFIX}/bin/pidof
 	${LN} -f ${PREFIX}/bin/killall ${PREFIX}/bin/pidof
 
-.include "../../devel/libgetopt/buildlink2.mk"
+.include "../../devel/libgetopt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

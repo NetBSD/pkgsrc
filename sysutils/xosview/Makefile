@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2003/11/11 07:57:42 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2004/01/05 12:48:30 jlam Exp $
 
 DISTNAME=	xosview-1.8.1
 CATEGORIES=	sysutils
@@ -8,13 +8,17 @@ MAINTAINER=	bgrayson@NetBSD.org
 HOMEPAGE=	http://xosview.sourceforge.net/
 COMMENT=	X11 graphical display of OS statistics
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 USE_X11BASE=		YES
 
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include
 CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib
+
+INSTALLATION_DIRS=	bin lib/X11/app-defaults man/man1
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -32,5 +36,5 @@ CPPFLAGS+=	-I${X11BASE}/include
 LIBS+=		-lsocket -lnsl
 .endif
 
-.include "../../graphics/xpm/buildlink2.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
