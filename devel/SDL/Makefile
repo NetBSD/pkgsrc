@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2002/08/27 08:25:52 martti Exp $
+# $NetBSD: Makefile,v 1.41 2002/08/27 18:19:44 jlam Exp $
 #
 
 DISTNAME=	SDL-1.2.3
@@ -12,8 +12,8 @@ COMMENT=	Simple DirectMedia Layer, a cross-platform multimedia library
 
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
-USE_BUILDLINK_ONLY=	YES
-
+USE_BUILDLINK2=		YES
+USE_X11=		YES
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
 PTHREAD_OPTS+=		require
@@ -30,7 +30,7 @@ NASMFLAGS=		-f aoutb
 .endif
 
 .ifdef SDL_USE_NAS
-.include "../../audio/nas/buildlink.mk"
+.  include "../../audio/nas/buildlink2.mk"
 .else
 CONFIGURE_ARGS+=	--disable-nas
 .endif
@@ -55,10 +55,10 @@ pre-patch:
 post-configure:
 	cd ${WRKSRC}/src/audio && ${CP} *.[ch] netbsd/
 
-.include "../../audio/esound/buildlink.mk"
-.include "../../graphics/Mesa/buildlink.mk"
+.include "../../audio/esound/buildlink2.mk"
+.include "../../graphics/Mesa/buildlink2.mk"
 .include "../../graphics/aalib-x11/buildlink2.mk"
-.include "../../mk/pthread.buildlink.mk"
-.include "../../mk/ossaudio.buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/ossaudio.buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
