@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2002/03/24 21:23:57 rh Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/09/11 22:17:11 wiz Exp $
 #
 # This Makefile fragment is included by packages that use gnome--.
 #
@@ -17,7 +17,7 @@ GNOMEMM_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.gnomemm?=	gnome-->=1.1.19
+BUILDLINK_DEPENDS.gnomemm?=	gnome-->=1.1.19nb2
 DEPENDS+=	${BUILDLINK_DEPENDS.gnomemm}:../../x11/gnome--
 
 EVAL_PREFIX+=				BUILDLINK_PREFIX.gnomemm=gnome--
