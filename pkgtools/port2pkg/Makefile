@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/07/27 11:33:06 sakamoto Exp $
+# $NetBSD: Makefile,v 1.2 1999/08/10 00:36:18 sakamoto Exp $
 #
 
 DISTNAME=	port2pkg-1.1
@@ -8,7 +8,7 @@ DISTFILES=	# empty
 
 MAINTAINER=	sakamoto@netbsd.org
 
-DEPENDS+=	pkglint-1.73:../../pkgtools/pkglint
+RUN_DEPENDS+=	pkglint:../../pkgtools/pkglint
 
 USE_PERL5=	YES
 
