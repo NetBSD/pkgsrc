@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/20 12:15:41 agc Exp $
+# $NetBSD: Makefile,v 1.16 2004/04/15 00:20:29 xtraeme Exp $
 
 DISTNAME=	linuxq3apoint-1.32b.x86
 PKGREVISION=	1
@@ -12,7 +12,7 @@ MAINTAINER=	jmcneill@invisible.yi.org
 HOMEPAGE=	http://www.quake3arena.com/
 COMMENT=	Quake 3 Arena -- first person shooter (binary only, no data files)
 
-CONFLICTS=     quake3arena-demo-[0-9]*
+CONFLICTS=	quake3arena-demo-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -29,6 +29,8 @@ USE_X11=	yes
 NO_SRC_ON_FTP=	no
 NO_BIN_ON_FTP=	no
 NO_CONFIGURE=	yes
+CHECK_SHLIBS=	NO
+
 EXTRACT_CMD=	${SED} '1,265d' ${DOWNLOADED_DISTFILE} | ${GTAR} xzf -
 
 .if !make(fetch)
@@ -58,5 +60,10 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README-linux.txt ${SHAREDIR}/${BINNAME}-README
 
 	cd ${WRKSRC} && ${PAX} -rw baseq3 ${LIBDIR}
+
+.if ${OPSYS} == "FreeBSD"
+post-install:
+	${BRANDELF} -t Linux ${LIBDIR}/${BINNAME}
+.endif
 
 .include "../../mk/bsd.pkg.mk"
