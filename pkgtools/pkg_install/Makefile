@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2004/10/05 21:08:32 erh Exp $
+# $NetBSD: Makefile,v 1.105 2004/11/02 00:10:15 erh Exp $
 
 # Notes to package maintainers:
 #
@@ -36,9 +36,12 @@ PKG_PRESERVE=		# defined
 # compiler to avoid problems with depending on pkgsrc GCC for building
 # pkg_install.  We also avoid building digest as that would involve
 # using the newer pkg_install tools.
+# We also use the newly built pkg_delete since upgrading from
+# an older pkg_install might required features of the new program.
 #
 USE_NATIVE_GCC=		yes
 USE_DIGEST=		no
+PKG_DELETE=	${WRKSRC}/delete/pkg_delete
 
 PLIST_SUBST+=		MANDIR=${MANDIR}
 PLIST_SUBST+=		PKG_TOOLS_BIN=${PKG_TOOLS_BIN}
