@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.97 2000/07/19 02:27:16 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.98 2000/07/20 12:56:13 rh Exp $
 ###########################################################################
 
 			==========================
@@ -1255,6 +1255,10 @@ debugging aids.
  9.13 Conflicts with other packages
  9.14 Software which has a WWW Home Page
  9.15 How to handle modified distfiles with the 'old' name
+ 9.16 What does "Don't know how to make /usr/share/tmac/tmac.andoc" mean?
+ 9.17 How to handle incrementing versions when fixing an existing package
+ 9.18 "Could not find bsd.own.mk" - what's wrong?
+ 9.19 Restricted packages
 
 
  9.1 Packages using GNU autoconfig
@@ -1488,6 +1492,7 @@ Packages will automatically conflict with other packages with the name prefix
 and a different version string. "Xaw3d-1.5" e.g. will automatically conflict
 with the older version "Xaw3d-1.3".
 
+
  9.14 Software which has a WWW Home Page
  =======================================
 
@@ -1496,6 +1501,7 @@ If the software being packaged has a home page, the Makefile should
 include the URL for that page in the HOMEPAGE variable. The definition
 of the variable should be placed immediately after the MAINTAINER
 variable.
+
 
  9.15 How to handle modified distfiles with the 'old' name
  =========================================================
@@ -1511,6 +1517,7 @@ Furthermore, a mail to the package's author seems appropriate making sure
 the distfile was really updated on purpose, and that no trojan horse or so
 crept in.
 
+
  9.16 What does "Don't know how to make /usr/share/tmac/tmac.andoc" mean?
  ========================================================================
 
@@ -1519,6 +1526,7 @@ from make that it doesn't know how to make /usr/share/tmac/tmac.andoc? This
 indicates that you don't have installed the "text" set on your machine
 (nroff, ...). Please do that.
 
+
  9.17 How to handle incrementing versions when fixing an existing package
  ========================================================================
 
@@ -1526,6 +1534,7 @@ When making fixes to an existing package it can be useful to change
 the version number in PKGNAME. To avoid conflicting with future versions
 by the original author, use a 'nb1' suffix (later versions should
 increment this to give 'nb2' and so on).
+
 
  9.18 "Could not find bsd.own.mk" - what's wrong?
  ================================================
@@ -1539,11 +1548,48 @@ comp.tgz is part of every NetBSD release, please get the one matching
 the release you have installed (determine via "uname -r").
 
 
+ 9.19 Restricted packages
+ ========================
+
+Some licenses restrict how software may be re-distributed.  In order to
+satisfy these restrictions, the package system defines five make variables
+that can be set to note these restrictions:
+
+    - RESTRICTED:
+      This variable should be set whenever a restriction exists
+      (regardless of its kind).  Set this variable to a string
+      containing the reason for the restriction.
+
+    - NO_BIN_ON_CDROM:
+      Binaries may not be placed on CD-ROM.  Set this variable to
+      ${RESTRICTED} whenever a binary package may not be included
+      on a CD-ROM.
+
+    - NO_BIN_ON_FTP:
+      Binaries may not be placed on an ftp server.  Set this
+      variable to ${RESTRICTED} whenever a binary package may not
+      not be made available on the internet.
+
+    - NO_SRC_ON_CDROM:
+      Distfiles may not be placed on CD-ROM.  Set this variable to
+      ${RESTRICTED} if re-distribution of the source code or other
+      distfile(s) is not allowed on CD-ROMs.
+
+    - NO_SRC_ON_FTP:
+      Distfiles may not be placed on FTP.  Set this variable to
+      ${RESTRICTED} if re-distribution of the source code or other
+      distfile(s) via the internet is not allowed.
+
+Please note that the use of NO_PACKAGE, IGNORE, or other generic make
+variables to denote restrictions is deprecated, because they
+unconditionally prevent users from generating binary packages!
+
+
  10 Submitting
  =============
 
  * precompiled binary packages:
-   Our policy is that we accept binaries from only NetBSD developers to
+   Our policy is that we accept binaries only from NetBSD developers to
    guarantee that the packages don't contain any trojan horses etc. 
    This is not to piss anyone off but rather to protect our users!
    You're still free to put up your home-made binary packages and tell
