@@ -1,4 +1,4 @@
-# $NetBSD: plugins.tmpl,v 1.1 2004/04/06 09:30:01 jmmv Exp $
+# $NetBSD: plugins.tmpl,v 1.2 2005/01/06 11:23:44 jmmv Exp $
 #
 # Handle registration of GStreamer plugins into the global plugin registry.
 #
@@ -8,9 +8,22 @@ GST_REGISTER="@GST_REGISTER@"
 GST_DBDIR="@GST_DBDIR@"
 
 case ${STAGE} in
-DEINSTALL|POST-INSTALL)
+POST-INSTALL)
 	${GST_REGISTER} --gst-registry=${GST_DBDIR}/registry.xml >/dev/null
 	${GST_COMPPREP} --gst-registry=${GST_DBDIR}/registry.xml >/dev/null
+	;;
+DEINSTALL)
+	if [ "${PKGBASE}" = gstreamer ]; then
+		${RM} -f ${GST_DBDIR}/compreg.xml ${GST_DBDIR}/registry.xml
+	fi
+	;;
+POST-DEINSTALL)
+	if [ "${PKGBASE}" != gstreamer ]; then
+		${GST_REGISTER} --gst-registry=${GST_DBDIR}/registry.xml \
+			>/dev/null
+		${GST_COMPPREP} --gst-registry=${GST_DBDIR}/registry.xml \
+			>/dev/null
+	fi
 	;;
 *)
 	;;
