@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.220 2001/06/24 13:30:50 zuntum Exp $
+# $NetBSD: Makefile,v 1.221 2001/06/24 23:13:40 zuntum Exp $
 #
 
 COMMENT=	Development utilities
@@ -52,6 +52,7 @@ SUBDIR+=	fortran-utils
 SUBDIR+=	ftnchek
 SUBDIR+=	g-wrap
 SUBDIR+=	gal
+SUBDIR+=	gcvs
 SUBDIR+=	gdb
 SUBDIR+=	gettext
 SUBDIR+=	gettext-lib
