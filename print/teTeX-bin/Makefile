@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/08/03 13:54:56 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1999/08/10 14:51:54 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -15,6 +15,7 @@ DEPENDS+=	dialog-0.6z:../../misc/dialog
 DEPENDS+=	libwww-5.1m1:../../www/libwww
 DEPENDS+=	ncurses-4.2:../../devel/ncurses
 DEPENDS+=	png-1.0.3:../../graphics/png
+BUILD_DEPENDS+=	bison:../../devel/bison
 
 ALL_TARGET=	all
 INSTALL_TARGET=	install strip
