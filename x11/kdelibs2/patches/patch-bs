@@ -1,0 +1,13 @@
+$NetBSD: patch-bs,v 1.1 2001/11/17 12:01:34 skrll Exp $
+
+--- kio/ftp/ftp.cc.orig	Mon Jul 30 23:11:23 2001
++++ kio/ftp/ftp.cc
+@@ -664,7 +664,7 @@
+     return false;
+   }
+ 
+-  if (sscanf(rspbuf, "%*[^(](%d,%d,%d,%d,%d,%d)",&i[0], &i[1], &i[2], &i[3], &i[4], &i[5]) != 6)
++  if (sscanf(rspbuf+4, "%*[^0-9]%d,%d,%d,%d,%d,%d",&i[0], &i[1], &i[2], &i[3], &i[4], &i[5]) != 6)
+   {
+     return false;
+   }
