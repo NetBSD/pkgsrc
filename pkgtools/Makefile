@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2001/11/29 15:31:07 seb Exp $
+# $NetBSD: Makefile,v 1.36 2002/01/15 13:21:46 agc Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -22,6 +22,7 @@ SUBDIR+=	pkgsurvey
 SUBDIR+=	port2pkg
 SUBDIR+=	python-mk
 SUBDIR+=	rpm2pkg
+SUBDIR+=	shlock
 SUBDIR+=	url2pkg
 SUBDIR+=	x11-links
 #SUBDIR+=	xpkgwedge	# Only under instruction of user
