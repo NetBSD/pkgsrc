@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2000/10/25 19:39:06 tsarna Exp $
+# $NetBSD: Makefile,v 1.43 2000/11/27 01:02:18 wiz Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/30 11:47:51 tg Exp 
 #
 
@@ -27,7 +27,6 @@
     SUBDIR += p5-gdbm
     SUBDIR += p5-perl-ldap
     SUBDIR += p5-pgsql
-    SUBDIR += p5-SQL-Statement
     SUBDIR += pgaccess
     SUBDIR += postgresql
     SUBDIR += py-gdbm
