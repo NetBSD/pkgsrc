@@ -1,0 +1,17 @@
+--- c_gpr.c.orig	Wed Jul 29 12:05:16 1992
++++ c_gpr.c	Mon Jul 27 22:29:01 1998
+@@ -300,12 +300,12 @@
+ 
+     pallocated = 0;
+     if (!success) {
+-      XFreeColors(d, cmap, pixels, dallocated, 0);
++      if (pixels) XFreeColors(d, cmap, pixels, dallocated, 0);
+       if (!opt->defaultcolormap) {
+         cmap = XCreateColormap(d, root, visual, AllocNone);
+         pallocated = writecolormap(&success);
+         if (!success) {
+-          XFreeColors(d, cmap, pixels, pallocated, 0);
++          if (pixels) XFreeColors(d, cmap, pixels, pallocated, 0);
+           XFreeColormap(d, cmap);
+         }
+       }
