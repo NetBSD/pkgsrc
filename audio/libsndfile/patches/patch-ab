@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.4 2004/06/28 08:14:03 adam Exp $
+$NetBSD: patch-ab,v 1.5 2004/11/19 12:15:14 adam Exp $
 
---- src/common.h.orig	2004-06-16 10:17:04.000000000 +0000
+--- src/common.h.orig	2004-11-14 19:56:44.000000000 +0000
 +++ src/common.h
-@@ -118,7 +118,7 @@ typedef struct
- {	unsigned int	version ;	/* version of the PEAK chunk */
+@@ -137,7 +137,7 @@ typedef struct
  	unsigned int	timestamp ;	/* secs since 1/1/1970  */
  #if HAVE_FLEXIBLE_ARRAY
--	PEAK_POS		peaks [] ;	/* the per channel peak info */
-+	PEAK_POS		*peaks ;	/* the per channel peak info */
+ 	/* the per channel peak info */
+-	PEAK_POS		peaks [] ;
++	PEAK_POS		*peaks ;
  #else
- 	PEAK_POS		peaks [1] ;	/* the per channel peak info */
- #endif
+ 	/*
+ 	** This is not ISO compliant C. It works on some compilers which
