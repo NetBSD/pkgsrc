@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.2 2004/01/11 21:52:46 jlam Exp $
+# $NetBSD: Makefile.common,v 1.3 2004/01/20 21:11:33 snj Exp $
 #
 # NOTE: This file is included by:
 #
-#	net/samba/Makefile
+#	net/samba2/Makefile
 #	security/pam-smbpass/Makefile
 #	security/winbind/Makefile
 
@@ -10,13 +10,11 @@ DISTNAME=		samba-${SAMBA_DIST_VERS}
 SAMBA_DIST_VERS=	2.2.8a
 WRKSRC?=		${WRKDIR}/${DISTNAME}/source
 CATEGORIES?=		net
-MASTER_SITES=		ftp://ftp.samba.org/pub/samba/ \
-			ftp://ring.asahi-net.or.jp/pub/net/samba/ \
-			ftp://samba.anu.edu.au/pub/samba/ \
-			ftp://ftp.sunet.se/pub/unix/utilities/samba/
-COUNTRY_MIRRORS=	au1 ca fi fr de it pl ru sg se us1 us6
+MASTER_SITES=		ftp://ftp.samba.org/pub/samba/old-versions/ \
+			ftp://ring.asahi-net.or.jp/pub/net/samba/old-versions/
+COUNTRY_MIRRORS=	fi ru se us1 us2
 .for COUNTRY in ${COUNTRY_MIRRORS}
-MASTER_SITES+=		ftp://${COUNTRY}.samba.org/pub/samba/
+MASTER_SITES+=		ftp://${COUNTRY}.samba.org/pub/samba/old-versions/
 .endfor
 EXTRACT_SUFX=		.tar.bz2
 
