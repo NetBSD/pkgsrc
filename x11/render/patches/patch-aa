@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2003/12/19 11:32:52 sketch Exp $
+$NetBSD: patch-aa,v 1.2 2004/02/14 00:07:29 snj Exp $
 
 --- renderproto.h.orig	2003-04-21 18:19:22.000000000 +0100
 +++ renderproto.h	2003-12-16 15:32:39.752161000 +0000
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1 2003/12/19 11:32:52 sketch Exp $
  #include <X11/extensions/render.h>
  
 +/* Work around bug in -r1.47 of XConsortium: Xmd.h, which breaks packages
-+ * dependant on x11/render for certain versions of OpenWindows */
++ * dependent on x11/render for certain versions of OpenWindows */
 +#undef _SIZEOF
 +#undef SIZEOF
 +#if ((defined(__STDC__) || defined(__cplusplus) || defined(c_plusplus)) && !defined(UNIXCPP)) || defined(ANSICPP) || defined(_LP64)
