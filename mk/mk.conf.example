@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.234 2001/07/23 18:30:24 wiz Exp $
+# $NetBSD: mk.conf.example,v 1.235 2001/07/25 12:12:54 abs Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -572,7 +572,7 @@
 #JAVA_HOME=
 # Location for packages which install java code
 # Possible: any directory
-# Default: home of JVM chosen by ${PACKAGE_JVM}
+# Default: home of JVM chosen by ${PKG_JVM}
 
 #JDK_HOME=
 # Used by the lang/JDK package to choose an install location
@@ -716,10 +716,10 @@
 # Possible: export, us
 # Default: export
 
-#NS_NAVIGATOR=
-# Used by netscape package if navigator is preferred over communicator
-# Possible: not defined, YES
-# Default: not defined
+#NS_PREFERRED=
+# Used by netscape to determine preferred browser to open
+# Possible: not defined, communicator, navigator, mozilla
+# Default: not defined, which implies communicator
 
 #NS_NO_FLASH=
 # Used by navigator/communicator package to decide if flash should be
@@ -792,7 +792,7 @@ PAPERSIZE=	A4
 
 #PKG_JVM=
 # Used to choose a java virtual machine for packages which use Java.
-# Possible: jdk, kaffe (kaffe currently has some problems)
+# Possible: jdk, sun-jdk, kaffe (kaffe currently has some problems)
 # Default: jdk on NetBSD/i386, kaffe elsewhere
 
 #POPTOP_USE_MPPE=
