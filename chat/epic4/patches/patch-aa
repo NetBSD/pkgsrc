@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2003/09/19 18:23:21 wiz Exp $
+
+--- source/server.c.orig	Fri Aug  9 16:10:16 2002
++++ source/server.c	Fri Sep 19 17:28:02 2003
+@@ -2172,8 +2172,8 @@
+ 
+ 	if (!(host = strchr(userhost, '@')))
+ 	{
+-		yell("Cannot set your userhost to [%s] because it does not
+-		      contain a @ character!", userhost);
++		yell("Cannot set your userhost to [%s] because it does not "
++		     "contain a @ character!", userhost);
+ 		return;
+ 	}
+ 
