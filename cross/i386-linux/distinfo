@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:36:27 agc Exp $
+
+MD5 (glibc-2.0.7-13.i386.rpm) = c3987d385a0f08baa0b151f6ae712827
+MD5 (glibc-devel-2.0.7-13.i386.rpm) = 0740cbffceae93df3178123f7486e921
+MD5 (kernel-headers-2.0.34-0.6.i386.rpm) = c94e310590ba5cdf01bf81ad0e141e25
+MD5 (binutils-2.9.1.tar.gz) = 8f9ad1a6e96742fd3069479171a63c22
+MD5 (egcs-1.1.1.tar.gz) = 0b3f0e856dcbb2241c183081fc7271af
+MD5 (egcs-1.1.1-NetBSD-19980104.diff.gz) = 8c4d952d999ead62f6604948c65c2454
+SHA1 (patch-aa) = 5d229e0148adc27274e38d41aa9f260d4d0c9fc6

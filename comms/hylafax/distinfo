@@ -1,0 +1,22 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:33:41 agc Exp $
+
+MD5 (hylafax/hylafax-4.1beta2.tar.gz) = d8560726e4f75093b9d6c7d1403694ce
+MD5 (hylafax/tiff-3.5-interfaces.patch) = c1d2847c9967a10961bb7fe123ecd8e6
+SHA1 (patch-aa) = a75c65ac39cda121b3fabb96f9103b1322d9d90a
+SHA1 (patch-ab) = b521e363f0098827bb9341467f272d109e08a2eb
+SHA1 (patch-ac) = 49dd31a6c86d1854c32aa5f997232b1ef8e53d2e
+SHA1 (patch-ad) = f17e299c24b0fc519646f6d709dcebfc724ad82c
+SHA1 (patch-ae) = a484221b5b7991289d34a8359d9e9546a2379bdb
+SHA1 (patch-af) = 9f9e34540b9c8d55df6bd88ade7a424a393cb5cd
+SHA1 (patch-ag) = 31e968a0136b2f264981029755c62cf199792ed4
+SHA1 (patch-ah) = 235a59f71b29da1dc1e09e649909766015cd070e
+SHA1 (patch-ai) = 8da1b6179213f367deeef4b83f0a077395fb5bfe
+SHA1 (patch-aj) = 0bb5f670dcd2ddebbdaf9ad8d2c7ea4adc0f7a77
+SHA1 (patch-ak) = d5f302424fe919021a1ce33a099c5e049c064b58
+SHA1 (patch-al) = e8a7576143b51781fc2aa985e761a19c0e756d13
+SHA1 (patch-am) = 7d50f78d38e114e3e4e8e32dc8db4fc8195aabfd
+SHA1 (patch-an) = 12498e08136b0dd75e3941a831d5ac8ed4f1cd64
+SHA1 (patch-ao) = f1c084ca1b4e5fbba29d723bdeaac9d34b2f5289
+SHA1 (patch-ap) = 64a54dd34080fd734bac291ec91785ec36c6f747
+SHA1 (patch-aq) = e1258d83583bfa416b1d59e18ef58918e34f8e05
+SHA1 (patch-ar) = 93434ba83ea22a7b3609c6c39d7eb105733684d6
