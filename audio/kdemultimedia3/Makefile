@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/10/07 00:36:34 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/10/09 08:23:36 skrll Exp $
 
 DISTNAME=	kdemultimedia-3.0.3
 CATEGORIES=	audio
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	--enable-audio=oss
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
-PTHREAD_OPT+=	require
+PTHREAD_OPTS+=	require
 
 .include "../../audio/arts/buildlink2.mk"
 .include "../../x11/kde3/buildlink2.mk"
