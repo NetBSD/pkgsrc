@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:53:13 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/23 13:15:17 jmmv Exp $
 #
 
 DISTNAME=	rid-1.11
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.theorygroup.com/Software/RID/
 COMMENT=	Remote Intrusion Detection to track down compromised hosts
 
 GNU_CONFIGURE=	YES
+USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES
 
 CONF_FILES=	${PREFIX}/share/examples/rid/rid.conf ${PKG_SYSCONFDIR}/rid.conf
@@ -30,4 +31,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/rid
 	${INSTALL_DATA} ${WRKSRC}/rid.conf ${PREFIX}/share/examples/rid
 
+.include "../../net/libpcap/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
