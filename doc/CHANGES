@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6203 2004/06/12 05:18:23 minskim Exp $
+$NetBSD: CHANGES,v 1.6204 2004/06/12 09:41:15 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2935,3 +2935,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated subversion to 1.0.5 [epg 2004-06-11]
 	Updated milter-regex to 1.5 [jdarrow 2004-06-11]
 	Updated nbsed to 20040612 [minskim 2004-06-12]
+	Updated jwhois to 3.2.2nb6 [kleink 2004-06-12]
