@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6411 2004/07/01 07:37:11 grant Exp $
+$NetBSD: CHANGES,v 1.6412 2004/07/01 10:31:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3197,3 +3197,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated rss2email to 2.51 [schmonz 2004-06-30]
 	Updated sqlite to 2.8.13nb1 [pooka 2004-06-30]
 	Updated mips64emul to 0.1 [xtraeme 2004-07-01]
+	Updated gd to 2.0.26 [adam 2004-07-01]
