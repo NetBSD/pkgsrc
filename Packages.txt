@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.228 2002/02/12 09:36:00 skrll Exp $
+# $NetBSD: Packages.txt,v 1.229 2002/02/13 12:30:52 mjl Exp $
 ###########################################################################
 
 			==========================
@@ -927,7 +927,7 @@ have to be passed to the compiler, linker etc. to get the Right Thing,
 which can be pretty annoying especially if you don't have all the
 machines at your hand to test things.  The "libtool" pkg can help
 here, as it just "knows" how to build both static and dynamic
-libraries from a set our source files, thus being platform
+libraries from a set of source files, thus being platform
 independent. 
 
 Here's how to use libtool in a pkg in seven simple steps:
