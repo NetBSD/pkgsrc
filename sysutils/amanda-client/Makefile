@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2002/09/05 18:07:52 jschauma Exp $
-# FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
+# $NetBSD: Makefile,v 1.30 2002/10/25 18:52:44 wiz Exp $
 #
 
 DISTNAME=		amanda-2.4.2p2
@@ -14,11 +13,13 @@ COMMENT=		Client part of Amanda, a network backup system
 
 DEPENDS+=		amanda-common-2.4.2p2:../../sysutils/amanda-common
 
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../sysutils/amanda-common/Makefile.common"
-.include "../../devel/readline/buildlink.mk"
+.include "../../sysutils/amanda-common/buildlink2.mk"
+#.include "../../devel/readline/buildlink2.mk"
 
 .if ${OPSYS} != "Linux"
 DEPENDS+=		{gtar,gtar-base}>=1.12:../../archivers/gtar-base
@@ -28,7 +29,7 @@ CONFIGURE_ARGS+=	--without-server --without-restore
 
 # Prevent configure script from finding unnecessary libraries.  We'll patch
 # the amrecover Makefile to add the readline libraries as it's the only
-# program that uses readline.
+# program that uses readline. (XXX: incorrect, does not happen)
 #
 CONFIGURE_ENV+=         ac_cv_lib_intl_main=no
 CONFIGURE_ENV+=         ac_cv_lib_termcap_tgetent=no
