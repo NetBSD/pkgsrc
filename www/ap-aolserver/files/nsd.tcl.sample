@@ -5,8 +5,8 @@
 # running OpenACS.
 #
 # by Roberto Mello (rmello@fslc.usu.edu)
-# $Id: nsd.tcl.sample,v 1.1.1.1 2001/07/16 17:04:02 cjones Exp $
-# $NetBSD: nsd.tcl.sample,v 1.1.1.1 2001/07/16 17:04:02 cjones Exp $
+# $Id: nsd.tcl.sample,v 1.2 2001/07/19 04:19:02 cjones Exp $
+# $NetBSD: nsd.tcl.sample,v 1.2 2001/07/19 04:19:02 cjones Exp $
 
 ns_log notice "nsd.tcl: starting to read config file..."
 
@@ -33,19 +33,23 @@ set address               [ns_info address]
 # For example: if your AOLserver is in /usr/local/aolserver and your server is "server1"
 # you will need a /usr/local/aolserver/servers/server1 directory.
 #
-set server		   "server1" 
-set servername             "openacs" 
+set server		   "server1"
+set servername             ${server}
+
+global server
 
 # 
-# AOLserver's home and binary directories. Autoconfigurable. 
+# Your DocumentRoot should be ${homedir}/${server}/www.  If you're running
+# Ars Digita or OpenACS, check the setting in the config file in the
+# parameters directory.
 #
-set homedir                 [file dirname [ns_info config]] 
-set bindir                  [file dirname [ns_info nsd]] 
+set homedir                 /usr/local/share/httpd/htdocs
+set bindir                  ${homedir}/${server}/bin
 
 #
 # Where are your pages going to live ?
 #
-set pageroot                /web/${server}/www 
+set pageroot                ${homedir}/${server}/www 
 set directoryfile           index.adp,index.tcl,index.html,index.htm
 
 # 
@@ -86,7 +90,7 @@ ns_section "ns/threads"
 ns_section "ns/mimetypes" 
         ns_param   default         "*/*"     ;# MIME type for unknown extension 
         ns_param   noextension     "*/*"     ;# MIME type for missing extension 
-        #ns_param   ".xls"         "application/vnd.ms-excel''
+        #ns_param   ".xls"         "application/vnd.ms-excel"
 
 # 
 # Tcl Configuration 
@@ -100,7 +104,7 @@ ns_section "ns/server/${server}/tcl"
 # are parsed when AOLserver starts. The crucial procedures used in OpenACS are
 # defined through this library
 #
-        ns_param library "/web/${server}/tcl" 
+        ns_param library "${homedir}/${server}/tcl" 
 
 ############################################################ 
 # 
@@ -166,7 +170,7 @@ ns_section "ns/server/${server}/adp/parsers"
 ns_section "ns/server/${server}/module/nssock" 
         ns_param   port         $httpport 
         ns_param   hostname     $hostname 
-        ns_param   address      $address
+#        ns_param   address      $address
 
 # 
 # Socket driver module (HTTPS) -- nsssl 
@@ -176,7 +180,7 @@ ns_section "ns/server/${server}/module/nssock"
 ns_section "ns/server/${server}/module/nsssl" 
         ns_param   port        $httpsport 
         ns_param   hostname    $hostname 
-        ns_param   address     $address 
+#        ns_param   address     $address 
         ns_param   keyfile     $sslkeyfile 
         ns_param   certfile    $sslcertfile
 
@@ -187,6 +191,9 @@ ns_section "ns/server/${server}/module/nsssl"
 #
 #ns_section "ns/db/drivers" 
 #    ns_param   postgres     ${bindir}/postgres.so  ;# Load PostgreSQL driver
+
+ns_section "ns/db/driver/postgres"
+    ns_param   datestyle iso
 
 # 
 # Database Pools: This is how AOLserver  ``talks'' to the RDBMS. You need three for
@@ -289,8 +296,8 @@ ns_section "ns/server/acs-pg/module/nsjava"
 # if your script calls the appropriate interpreter itself.
 # 
 #ns_section "ns/server/${server}/module/nscgi" 
-#       ns_param   map "GET  /cgi-bin /web/$server/cgi-bin"
-#       ns_param   map "POST /cgi-bin /web/$server/cgi-bin" 
+#       ns_param   map "GET  /cgi-bin ${homedir}/$server/cgi-bin"
+#       ns_param   map "POST /cgi-bin ${homedir}/$server/cgi-bin" 
 #       ns_param   Interps CGIinterps
 
 #ns_section "ns/interps/CGIinterps" 
@@ -326,10 +333,10 @@ if { $nscp_user != "" } {
 # 
 # To Source OpenACS Config File. You need a "yourservername.tcl" file in the
 # OpenACS parameters dir. e.g.: say your server is "server1" then you'd need a
-# file named /web/server1/parameters/server1.tcl
+# file named ${homedir}/server1/parameters/server1.tcl
 # (Hint: Rename ad.tcl to yourservername.tcl and edit it.)
 #
 
-source /web/${server}/parameters/${server}.tcl
+source ${homedir}/${server}/parameters/${server}.tcl
 
 ns_log notice "nsd.tcl: finished reading config file."
