@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2003/11/12 03:39:43 jschauma Exp $
+# $NetBSD: Makefile,v 1.18 2003/12/04 19:48:25 xtraeme Exp $
 #
 
 DISTNAME=		gnome-vfs-2.2.4
 PKGNAME=		${DISTNAME:S/vfs/vfs2/}
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-vfs/2.2/}
 EXTRACT_SUFX=		.tar.bz2
