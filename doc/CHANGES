@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1709 2003/03/21 23:45:14 salo Exp $
+$NetBSD: CHANGES,v 1.1710 2003/03/22 00:09:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1221,3 +1221,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated smlnj to 110.42 [wiz 2003-03-21]
 	Updated libdvdcss to 1.2.6nb1 [wiz 2003-03-21]
 	Updated icu to 2.4 [salo 2003-03-21]
+	Updated lynx-devel to 2.8.5.0.7nb1 [wiz 2003-03-22]
