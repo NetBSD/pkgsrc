@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/08/06 17:40:30 pooka Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/08 15:54:01 pooka Exp $
 #
 
-DISTNAME=		vim-6.0aq
+DISTNAME=		vim-6.0au
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.vim.org/pub/vim/unreleased/unix/
 EXTRACT_SUFX=		.tar.bz2
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.vim.org/
 COMMENT=		Vi IMproved development version (vi clone)
 
 GNU_CONFIGURE=		yes
-WRKSRC=			${WRKDIR}/vim60aq
+WRKSRC=			${WRKDIR}/vim60au
 
 CONFLICTS=		vim-xaw-* vim-gtk-* vim-share-* vim-5*
 
