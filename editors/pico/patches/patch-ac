@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2000/11/09 03:34:14 hubertf Exp $
+$NetBSD: patch-ac,v 1.6 2001/10/10 13:36:59 martti Exp $
 
---- build.orig	Tue Aug  1 00:28:01 2000
-+++ build
-@@ -303,17 +303,20 @@
+--- build.orig	Thu Aug  2 03:35:02 2001
++++ build	Mon Oct  8 09:52:25 2001
+@@ -345,30 +345,12 @@
  	  echo "Including SSL functionality"
  	fi
  
@@ -12,29 +12,17 @@ $NetBSD: patch-ac,v 1.5 2000/11/09 03:34:14 hubertf Exp $
 -        ln -s imap/mtest mtest
 -        if [ -s imapd    ] ; then rm -f imapd    ; fi
 -        ln -s imap/imapd imapd
+-        if [ -s ipopd    ] ; then rm -f ipopd    ; fi
+-        ln -s imap/ipopd ipopd
 -        echo "Making c-client library, mtest and imapd"
 -        eval echo make "$makeargs" "$SSL" "$K1" "$K2" $ccltarg
 -        cd $PHOME/imap
 -        eval make "$makeargs" "$SSL" "$K1" "$K2" $ccltarg
 -        echo ''
-+#
-+# Built in mail/imap-uw:
-+#
-+#       if [ -s c-client ] ; then rm -f c-client ; fi
-+#       ln -s imap/c-client c-client
-+#       if [ -s mtest    ] ; then rm -f mtest    ; fi
-+#       ln -s imap/mtest mtest
-+#       if [ -s imapd    ] ; then rm -f imapd    ; fi
-+#       ln -s imap/imapd imapd
-+#       echo "Making c-client library, mtest and imapd"
-+#       eval echo make "$makeargs" "$SSL" "$K1" "$K2" $ccltarg
-+#       cd $PHOME/imap
-+#       eval make "$makeargs" "$SSL" "$K1" "$K2" $ccltarg
-+#       echo ''
- 
+-
          echo "Making Pico and Pilot"
          cd $PHOME/pico
-@@ -321,10 +324,10 @@
+         eval echo make "$makeargs" -f makefile.$picotarg
          eval make "$makeargs" -f makefile.$picotarg
          echo ''
  
@@ -42,19 +30,15 @@ $NetBSD: patch-ac,v 1.5 2000/11/09 03:34:14 hubertf Exp $
 -        cd $PHOME/pine
 -        eval echo make "$makeargs" "$L1" "$L2" -f makefile.$pinetarg
 -        eval make "$makeargs" "$L1" "$L2" -f makefile.$pinetarg
-+#       echo "Making Pine".
-+#       cd $PHOME/pine
-+#       eval echo make "$makeargs" "$L1" "$L2" -f makefile.$pinetarg
-+#       eval make "$makeargs" "$L1" "$L2" -f makefile.$pinetarg
          cd $PHOME
          if [ ! -d bin ] ;  then    mkdir bin;        fi
          cd $PHOME/bin
-@@ -336,8 +339,6 @@
-         if [ -s ../pico/pilot ] ;     then ln ../pico/pilot pilot ; fi
+@@ -384,8 +366,6 @@
+         if [ -s ../pine/rpdump ] ;    then ln ../pine/rpdump rpdump   ; fi
          cd $PHOME
          echo ''
 -        echo "Links to executables are in bin directory:"
--        size bin/pine bin/mtest bin/imapd bin/pico bin/pilot
+-        size bin/pine bin/mtest bin/imapd bin/pico bin/pilot bin/rpdump bin/rpload bin/ipop2d bin/ipop3d
  	case $maketarg in
  	    mnt)    echo "Fixing stacksizes ..."
  		    fixstk 64K bin/pine bin/pico bin/imapd bin/mtest bin/pilot
