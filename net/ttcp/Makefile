@@ -3,7 +3,7 @@
 # Date created:		14 December 1997
 # Whom:			thorpej
 #
-# $NetBSD: Makefile,v 1.4 1998/02/27 00:02:51 tron Exp $
+# $NetBSD: Makefile,v 1.5 1998/02/28 19:03:13 tron Exp $
 #
 
 DISTNAME=	ttcp
@@ -18,8 +18,9 @@ WRKSRC=		${WRKDIR}
 
 MAN1=		ttcp.1
 
-real-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ttcp ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/ttcp.1 ${PREFIX}/man/man1
+# MANZ is handled automatically
+.if defined(MANZ)
+MANCOMPRESSED=	1
+.endif
 
 .include <bsd.port.mk>
