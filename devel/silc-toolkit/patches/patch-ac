@@ -1,0 +1,38 @@
+$NetBSD: patch-ac,v 1.1 2004/06/11 10:05:06 salo Exp $
+
+--- configure.orig	Wed Jan 14 14:28:30 2004
++++ configure	Wed Jun  9 10:22:17 2004
+@@ -10456,9 +10456,16 @@
+ 
+ fi
+ if test $ac_cv_header_regex_h = yes; then
++
++    cat >>confdefs.h <<\_ACEOF
++#define HAVE_REGEX 1
++_ACEOF
++
+   have_regex=1
++
+ else
+   have_regex=0
++
+ fi
+ 
+ 
+@@ -10563,9 +10570,16 @@
+ echo "$as_me:$LINENO: result: $ac_cv_func_getopt_long" >&5
+ echo "${ECHO_T}$ac_cv_func_getopt_long" >&6
+ if test $ac_cv_func_getopt_long = yes; then
++
++    cat >>confdefs.h <<\_ACEOF
++#define HAVE_GETOPT_LONG 1
++_ACEOF
++
+   have_getopt_long=1
++
+ else
+   have_getopt_long=0
++
+ fi
+ 
+ 
