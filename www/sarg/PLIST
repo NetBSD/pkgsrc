@@ -1,0 +1,28 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/04 16:06:32 xtraeme Exp $
+sbin/sarg
+man/man1/sarg.1
+share/examples/sarg/sarg.conf
+share/examples/sarg/exclude_codes
+share/examples/sarg/languages/Bulgarian_windows1251
+share/examples/sarg/languages/Catalan
+share/examples/sarg/languages/Czech
+share/examples/sarg/languages/Dutch
+share/examples/sarg/languages/English
+share/examples/sarg/languages/French
+share/examples/sarg/languages/German
+share/examples/sarg/languages/Hungarian
+share/examples/sarg/languages/Indonesian
+share/examples/sarg/languages/Italian
+share/examples/sarg/languages/Japanese
+share/examples/sarg/languages/Latvian
+share/examples/sarg/languages/Polish
+share/examples/sarg/languages/Portuguese
+share/examples/sarg/languages/Romanian
+share/examples/sarg/languages/Russian_koi8
+share/examples/sarg/languages/Russian_windows1251
+share/examples/sarg/languages/Serbian
+share/examples/sarg/languages/Spanish
+share/examples/sarg/languages/Turkish
+share/examples/sarg/languages/Ukrainian_windows1251
+@dirrm share/examples/sarg/languages
+@dirrm share/examples/sarg

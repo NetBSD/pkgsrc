@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/12/04 16:06:32 xtraeme Exp $
+
+SHA1 (sarg-1.4.1/sarg-1.4.1.tar.gz) = 7b01ad67ca1e6795e33301ac03e455c01259b0f9
+Size (sarg-1.4.1/sarg-1.4.1.tar.gz) = 125589 bytes
+SHA1 (sarg-1.4.1/sarg-1.4.1-index.sort.patch) = 4fb150014d027dd24891a292c1c4ad7fafe0e66f
+Size (sarg-1.4.1/sarg-1.4.1-index.sort.patch) = 2034 bytes
+SHA1 (patch-aa) = c625b392bb7bc6cec773c8c6c14dbe2fba86377e
+SHA1 (patch-ab) = fd2d38a511e1bc3b95a854a8e9fc8beb9631fe3e
+SHA1 (patch-ac) = 59ac8d12b3e8fbd6230fed23fd5da542aee18184
+SHA1 (patch-ad) = 393cc7a76e0a8d01b0387890f7c9f12c08787827
+SHA1 (patch-ae) = d3fac03932f2471fa298069336a890d0a884557f
+SHA1 (patch-af) = 13a7d437eb90ccdcb18851338ab2ebe5512dc84e

@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/12/04 16:06:32 xtraeme Exp $
+
+--- convlog.c.orig	2003-04-25 20:20:55.000000000 +0300
++++ convlog.c
+@@ -19,7 +19,7 @@ void convlog(char *arq, char *df, int df
+    struct tm *t;
+ 
+    if(arq[0] == '\0')
+-      strcpy(arq,"/usr/local/squid/logs/access.log");
++      strcpy(arq,SQUID_ACCESSLOG);
+ 
+    if((fp_in=fopen(arq,"r"))==NULL) {
+       fprintf(stderr, "SARG: (convlog) %s: %s\n",text[8],arq);
