@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2004/05/22 12:32:40 grant Exp $
+# $NetBSD: Makefile.common,v 1.16 2004/05/23 01:44:10 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -25,7 +25,7 @@ MASTER_SITES?=		http://ftp.mozilla.org/pub/mozilla.org/${MOZILLA_SHORT}/releases
 MAINTAINER=		grant@NetBSD.org
 HOMEPAGE?=		http://www.mozilla.org/
 
-WRKSRC=			${WRKDIR}/${MOZILLA}
+WRKSRC?=		${WRKDIR}/${MOZILLA}
 NO_CONFIGURE=		# defined
 
 FILESDIR=		${.CURDIR}/../../www/mozilla-bin/files
