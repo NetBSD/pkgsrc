@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2003/12/13 00:45:24 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/12/14 17:56:39 wiz Exp $
 #
 
 DISTNAME=		balsa-2.0.15
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		mail gnome
 MASTER_SITES=		http://balsa.gnome.org/				\
 			ftp://ftp.newton.cx/pub/balsa/
@@ -44,7 +44,7 @@ CONFIGURE_ARGS+=        --enable-ldap
 CONFIGURE_ENV+=	ac_cv_lib_iconv_iconv_open=yes
 .endif
 
-.include "../../security/gpgme/buildlink2.mk"
+.include "../../security/gpgme03/buildlink2.mk"
 .include "../../devel/pcre/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
 .include "../../devel/libtool/buildlink2.mk"
