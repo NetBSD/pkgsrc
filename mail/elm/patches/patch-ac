@@ -1,16 +1,13 @@
-$NetBSD: patch-ac,v 1.3 1999/11/18 14:54:51 agc Exp $
+$NetBSD: patch-ac,v 1.4 2000/06/04 16:28:23 jdolecek Exp $
 
---- Configure.orig	Thu Nov 18 14:49:06 1999
-+++ Configure	Thu Nov 18 14:49:06 1999
-@@ -15,11 +15,6 @@
+--- Configure.orig	Sun Jun  4 17:21:26 2000
++++ Configure	Sun Jun  4 17:22:17 2000
+@@ -15,7 +15,7 @@
  PATH=".:$PATH:/bin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/ucb:/usr/local:/usr/lbin:/etc:/usr/new:/usr/new/bin:/usr/nbin"
  export PATH || (echo "OOPS, this isn't sh.  Desperation time.  I will feed myself to sh."; sh $0; kill $$)
  
 -if test ! -t 0; then
--    echo "Say 'sh Configure', not 'sh <Configure'"
--    exit 1
--fi
--
- (alias) >/dev/null 2>&1 && \
-     echo "(I see you are using the Korn shell.  Some ksh's blow up on Configure," && \
-     echo "especially on exotic machines.  If yours does, try the Bourne shell instead.)"
++if test "X$RUN_AS_BATCH" = "X" -a ! -t 0; then
+     echo "Say 'sh Configure', not 'sh <Configure'"
+     exit 1
+ fi

@@ -10,10 +10,14 @@ cppstdin='/usr/bin/cpp'
 cppminus=''
 d_getopt='define'
 d_memcpy='define'
-d_rename='define'
 d_symlink='define'
 d_whoami='undef'
 d_poll='define'
+d_select='define'
+d_mmap='define'
+d_socket='define'
+d_netdb='define'
+d_netinet_in='define'
 d_inttypes='define'
 d_nointtypes='undef'
 n='-n'
@@ -29,9 +33,13 @@ cat
 chgrp
 chmod
 cp
+dirname
 echo
 expr
+egrep
 grep
+fgrep
+head
 ln
 ls
 make
@@ -41,6 +49,7 @@ sed
 sleep
 touch
 tr
+cut
 '
 expr='/bin/expr'
 sed='/usr/bin/sed'
@@ -54,6 +63,8 @@ tr='/usr/bin/tr'
 sort=''
 uniq=''
 grep='/usr/bin/grep'
+fgrep='/usr/bin/fgrep'
+head='/usr/bin/head'
 trylist='
 Mcc
 compress
@@ -62,6 +73,7 @@ date
 emacs
 execmail
 finger
+gpg
 ispell
 line
 lint
@@ -91,10 +103,10 @@ uname
 uuname
 vi
 '
-test='/bin/test'
+test='test'
 inews=''
 ispell='ispell'
-egrep=''
+egrep='/usr/bin/egrep'
 more='/usr/bin/more'
 pg='pg'
 Mcc='Mcc'
@@ -135,9 +147,9 @@ col=''
 pack='pack'
 compress='/usr/bin/compress'
 execmail=''
-libswanted='intl nls'
+libswanted='sun intl nls c_s'
 noaddlib='yes'
-c_date='Tue Apr 13 17:07:42 GMT 1999'
+c_date='Sun Jun  4 16:46:03 CEST 2000'
 d_ascii='undef'
 d_broke_ctype='undef'
 d_calendar='define'
@@ -152,7 +164,7 @@ d_domname='define'
 d_usegetdom='define'
 d_errlst='undef'
 d_flock='define'
-d_dotlock='undef'
+d_dotlock='define'
 d_fcntlock='undef'
 has_flock='define'
 has_fcntl='define'
@@ -167,13 +179,13 @@ d_index='define'
 d_internet=''
 d_ispell='define'
 ispell_path='ispell'
-ispell_options=''
+ispell_options='-x'
 d_locale='define'
 d_nl_types='define'
 d_msgcat='define'
 d_usenls='undef'
 d_mallocvoid='define'
-d_mboxedit='define'
+d_mboxedit='undef'
 metamail_path='none'
 defencoding=''
 d_8bitmime='undef'
@@ -242,7 +254,7 @@ libc='/usr/lib/libc.so.12.40'
 linepr='/usr/bin/lp'
 maildir='/var/mail'
 mailer='/usr/sbin/sendmail'
-mailgrp='bin'
+mailgrp='wheel'
 mansrc="${PREFIX}/man/man1"
 catmansrc="${PREFIX}/man/cat1"
 manext='.1'
@@ -254,13 +266,7 @@ manroff='/usr/bin/nroff'
 manroffopts=''
 suffix=''
 packer=''
-models='none'
-split=''
-small=''
-medium=''
-large=''
-huge=''
-optimize="$CFLAGS"
+optimize='-O'
 ccflags=''
 cppflags=''
 ldflags='-s'
@@ -288,9 +294,9 @@ d_bsd='define'
 locale='locale'
 d_pgp='define'
 pgp='pgp'
-pgp_path="${PREFIX}/bin/pgp"
-special_path='/sbin'
-d_remailer='undef'
-finger='/usr/bin/finger'
-finger_path=''
+pgp2_path="${PREFIX}/bin/pgp"
+pgp5_dir='none'
+gpg_path='none'
+special_path="${PREFIX}/bin"
+locale_dir='/usr/share/locale'
 CONFIG=true
