@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/03/13 17:38:05 fredb Exp $
+# $NetBSD: Makefile,v 1.5.4.1 2002/07/22 17:07:43 agc Exp $
 
 DISTNAME=	xdaemon-2.0
 PKGREVISION=	1
@@ -27,10 +27,13 @@ do-extract:
 	@${ECHO} Bringing daemonic powers to you!
 
 do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/xteddy
 .for pic in ${PIX}
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${pic} ${PREFIX}/share/xteddy/${pic}
 .endfor
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/Daemon.README ${PREFIX}/share/doc/xdaemon.README
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/bin
 	${LN} -s ${PREFIX}/bin/xteddy	${PREFIX}/bin/xdaemon
 	${LN} -s ${PREFIX}/bin/xteddy	${PREFIX}/bin/xdaemon2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2002/07/15 14:39:21 fredb Exp $
+# $NetBSD: Makefile,v 1.32.2.1 2002/07/22 17:09:10 agc Exp $
 
 DISTNAME=		w3c-libwww-5.3.2
 PKGNAME=		libwww-5.3.2
@@ -31,7 +31,7 @@ CFLAGS+=		${LDFLAGS}
 
 pre-configure:
 	cd ${WRKSRC}; \
-	    ${LOCALBASE}/bin/aclocal && \
+	    ${LOCALBASE}/bin/aclocal --acdir=${LOCALBASE}/share/aclocal && \
 	    ${LOCALBASE}/bin/automake && \
 	    ${LOCALBASE}/bin/autoconf
 

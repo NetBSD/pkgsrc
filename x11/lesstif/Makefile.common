@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2001/11/29 19:46:14 jlam Exp $
+# $NetBSD: Makefile.common,v 1.15.4.1 2002/07/22 17:05:47 agc Exp $
 
 DISTNAME=		lesstif-${LESSTIF_VERSION}
 LESSTIF_VERSION=	0.93.0
@@ -60,10 +60,10 @@ post-patch:
 pre-configure:
 	${TOUCH} ${WRKDIR}/nonexecutable
 	${CHMOD} a-x ${WRKDIR}/nonexecutable
-	for dir in . test ; do				\
+	for dir in . test ; do						\
 		cd ${WRKSRC}/$${dir};					\
 		${LOCALBASE}/bin/libtoolize --force;			\
-		${LOCALBASE}/bin/aclocal;				\
+		${LOCALBASE}/bin/aclocal --acdir=${LOCALBASE}/share/aclocal; \
 		${LOCALBASE}/bin/autoheader; 				\
 		${LOCALBASE}/bin/automake -a --foreign -i;		\
 		${LOCALBASE}/bin/autoconf;				\
