@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.886 2002/12/23 14:04:31 wiz Exp $
+$NetBSD: CHANGES,v 1.887 2002/12/23 20:42:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4073,3 +4073,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated monafonts to 2.22 [toshii 2002-12-23]
 	Updated cpuflags to 0.38 [abs 2002-12-23]
 	Updated createbuildlink to 2.3 [wiz 2002-12-23]
+	Updated m4 to 1.4nb1 [wiz 2002-12-23]
+	Updated gmake to 3.80nb1 [wiz 2002-12-23]
