@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1316 2003/02/04 08:41:14 martti Exp $
+$NetBSD: CHANGES,v 1.1317 2003/02/04 11:26:40 chris Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -548,3 +548,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated covered-current to 20021214 [dmcmahill 2003-02-03]
 	Updated spim to 6.5 [dmcmahill 2003-02-03]
 	Updated etcupdate to 20030204 [martti 2003-02-04]
+	Updated sylpheed to 0.8.10 [chris 2003-02-04]
