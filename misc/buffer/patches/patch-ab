@@ -1,12 +1,29 @@
-$NetBSD: patch-ab,v 1.1 1999/04/05 02:00:49 hubertf Exp $
+$NetBSD: patch-ab,v 1.2 1999/09/12 16:50:41 kim Exp $
 
---- sem.c.BAK	Mon Apr  5 03:56:15 1999
-+++ sem.c	Mon Apr  5 03:57:04 1999
-@@ -148,10 +148,12 @@
+--- sem.c.orig	Wed Jul 14 11:59:18 1993
++++ sem.c	Sun Sep 12 12:45:24 1999
+@@ -32,8 +32,10 @@
+ #include <sys/ipc.h>
+ #include <sys/sem.h>
+ #include <errno.h>
++#include <sys/param.h>
+ 
+-#if defined(SYS5) || defined(ultrix) || defined(_AIX)
++#if defined(SYS5) || defined(ultrix) || defined(_AIX) \
++    || (defined(__NetBSD_Version__) && (__NetBSD_Version__ >= 104110000))
+ union semun {
+ 	int val;
+ 	struct semid_ds *buf;
+@@ -148,10 +150,17 @@
  remove_sems( sem_id )
  	int sem_id;
  {
++#if defined(__NetBSD__) && defined(__NetBSD_Version__) \
++    && (__NetBSD_Version__ < 104110000)
 +	union semun dummy;
++#else
++#define dummy NULL
++#endif
 +
  	if( sem_id == -1 )
  		return;
