@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2002/10/27 16:08:53 chris Exp $
+$NetBSD: patch-ad,v 1.2 2003/05/26 06:53:07 martti Exp $
 
---- imap/mbpath.c.orig	Sat Aug 31 17:59:21 2002
-+++ imap/mbpath.c	Sat Aug 31 17:59:35 2002
-@@ -97,7 +97,7 @@
+--- imap/mbpath.c.orig	2003-02-13 22:15:28.000000000 +0200
++++ imap/mbpath.c	2003-05-21 10:20:05.000000000 +0300
+@@ -96,7 +96,7 @@
  {
    char *path;
    int rc, i, quiet = 0, stop_on_error=0;
