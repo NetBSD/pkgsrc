@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/07/17 22:51:27 grant Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/08 12:06:37 agc Exp $
 #
 # XXX do not use -- see ../netatalk instead
 
@@ -15,6 +15,8 @@ COMMENT=		University of Michigan's netatalk; AppleTalk interworking
 
 CONFLICTS=		netatalk-asun-[0-9]*
 CONFLICTS+=		netatalk-[0-9]*
+
+MAKE_ENV+=		MKLINT=no NOGCCERROR=true
 
 do-configure:
 	${CP} ${FILESDIR}/shlib_version ${WRKSRC}/libatalk
