@@ -1,7 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2003/08/04 14:12:58 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/03/09 15:00:45 seb Exp $
 bin/scli
-info/scli.info
-info/scli.info-1
-info/scli.info-2
-info/scli.info-3
 man/man1/scli.1
