@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/10/05 16:43:08 jschauma Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/10/05 16:46:12 jschauma Exp $
 #
 # This Makefile fragment is included by packages that use vis5d+.
 #
@@ -10,7 +10,7 @@ VIS5D+_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			vis5d+
 BUILDLINK_DEPENDS.vis5d+?=		vis5d+>=1.2.1
-BUILDLINK_PKGSRCDIR.vis5d+?=		../../gis/vis5dx
+BUILDLINK_PKGSRCDIR.vis5d+?=		../../geography/vis5dx
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.vis5d+=vis5d+
 BUILDLINK_PREFIX.vis5d+_DEFAULT=	${LOCALBASE}
