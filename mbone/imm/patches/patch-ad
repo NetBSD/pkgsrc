@@ -1,5 +1,5 @@
 --- Makefile.orig	Mon Feb 10 16:56:48 1997
-+++ Makefile	Mon Nov 24 15:19:47 1997
++++ Makefile	Sun Feb  8 12:17:31 1998
 @@ -1,9 +1,9 @@
  ##################################
  # Common Area
@@ -26,3 +26,12 @@
  	all
  
  linux:
+@@ -61,7 +61,7 @@
+ 
+ ##############
+ # common defines
+-INSTALL=cp
++INSTALL=${INSTALL_PROGRAM}
+ VERSION=36a1
+ EXECS=imm immserv mnm mdpsniff
+ 
