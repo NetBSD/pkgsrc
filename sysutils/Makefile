@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2000/12/27 15:46:16 hubertf Exp $
+# $NetBSD: Makefile,v 1.84 2000/12/28 16:12:20 martin Exp $
 #
 
     SUBDIR += amanda
@@ -59,6 +59,8 @@
     SUBDIR += tload
     SUBDIR += top
     SUBDIR += toshutils
+    SUBDIR += ups-nut
+    SUBDIR += ups-nut-cgi
     SUBDIR += usbutil
     SUBDIR += user
     SUBDIR += vidc-tools
