@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.178 2001/03/05 20:25:43 jtb Exp $
+# $NetBSD: Makefile,v 1.179 2001/03/10 12:04:08 wulf Exp $
 #
 
 COMMENT=	Development utilities
@@ -130,6 +130,7 @@ SUBDIR+=	p5-PV
 SUBDIR+=	p5-Safe-Hole
 SUBDIR+=	p5-Storable
 SUBDIR+=	p5-Term-ReadKey
+SUBDIR+=	p5-Test-Cmd
 SUBDIR+=	p5-Time-HiRes
 SUBDIR+=	p5-TimeDate
 SUBDIR+=	p5-perl-headers
