@@ -1,41 +1,28 @@
-# $NetBSD: Makefile,v 1.28 2002/09/20 21:13:39 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2003/02/06 00:41:12 dmcmahill Exp $
 #
 
-DISTNAME=	vipec-2.0.4
-PKGREVISION=		1
+DISTNAME=	ViPEC-3.1.3
 CATEGORIES=	cad
-MASTER_SITES=	http://netfold.com/~vipec/public_ftp/stable/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vipec/}
 
 MAINTAINER=	dmcmahill@netbsd.org
-HOMEPAGE=	http://www.netfold.com/~vipec/
+HOMEPAGE=	http://vipec.sourceforge.net
 COMMENT=	Network analyser for electrical networks
+
+BUILD_DEPENDS+=		tmake-*:../../devel/tmake
 
 USE_BUILDLINK2=		yes
 USE_X11=		yes
+USE_GMAKE=		yes
 
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-qt-dir=${QTDIR}
-CONFIGURE_ENV+=		USER_LDFLAGS="${LDFLAGS}"
-
-USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+CONFLICTS+=		vipec-[0-9]*
 
 post-patch:
-	${MV} -f ${WRKSRC}/vipec/helpwindow.cpp ${WRKSRC}/vipec/helpwindow.cpp.in
-	${SED} "s;@prefix@;${PREFIX};g" ${WRKSRC}/vipec/helpwindow.cpp.in > \
-		${WRKSRC}/vipec/helpwindow.cpp
+	${SED} 's;@prefix@;${PREFIX};g' < ${FILESDIR}/vipec.sh.in > ${WRKDIR}/vipec.sh
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/vipec/vipec ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/vipec
-	${INSTALL_DATA} ${WRKSRC}/vipec/ckt/*.ckt ${PREFIX}/share/examples/vipec
-	${INSTALL_DATA} ${WRKSRC}/vipec/ckt/*.s2p ${PREFIX}/share/examples/vipec
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/vipec
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/vipec/models
-	${INSTALL_DATA} ${WRKSRC}/vipec/help/*.html ${PREFIX}/share/doc/vipec
-	${INSTALL_DATA} ${WRKSRC}/vipec/help/*.png ${PREFIX}/share/doc/vipec
-	${INSTALL_DATA} ${WRKSRC}/vipec/help/models/*.html ${PREFIX}/share/doc/vipec/models
-	${INSTALL_DATA} ${WRKSRC}/vipec/help/models/*.png ${PREFIX}/share/doc/vipec/models
+post-install:
+	${INSTALL_SCRIPT} ${WRKDIR}/vipec.sh ${PREFIX}/bin/vipec
+	${INSTALL_DATA} ${WRKSRC}/vipec.cfg ${PREFIX}/vipec
 
 .include "../../x11/qt2-libs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
