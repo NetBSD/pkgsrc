@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/05/14 03:23:43 salo Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/03/01 15:12:10 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use libtasn1.
 #
@@ -9,7 +9,7 @@
 LIBTASN1_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libtasn1
-BUILDLINK_DEPENDS.libtasn1?=		libtasn1>=0.1.2
+BUILDLINK_DEPENDS.libtasn1?=		libtasn1>=0.2.7
 BUILDLINK_PKGSRCDIR.libtasn1?=		../../security/libtasn1
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libtasn1=libtasn1
