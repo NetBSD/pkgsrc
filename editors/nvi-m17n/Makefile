@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/04/30 15:01:45 sakamoto Exp $
+# $NetBSD: Makefile,v 1.8 2000/05/01 14:20:15 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.11 1999/04/17 10:51:03 itojun Exp
 
 DISTNAME=	nvi-1.79
@@ -27,7 +27,9 @@ PATCH_FUZZ_FACTOR=	-F1
 .if !defined(USE_CANNA) || ${USE_CANNA} == YES
 DEPENDS+=	Canna-lib-3.5b2:../../japanese/canna-lib
 CONFIGURE_ARGS+=--enable-canna=${LOCALBASE}
-CANNA_OPT=	canna cannactrl cannakey=
+CANNA_OPT.euc-jp=canna cannactrl cannakey=
+CANNA_OPT.sjis=${CANNA_OPT.euc-jp}
+CANNA_OPT.iso-2022-jp=${CANNA_OPT.euc-jp}
 .endif
 
 PLIST_TMP=	${WRKDIR}/PLIST
@@ -55,7 +57,7 @@ ENCODING+=	euc-jp euc-cn euc-kr sjis big5 euc-tw hz
 
 post-build:
 .for encoding in ${ENCODING}
-	@${SED} -e 's|$${CANNA_OPT}|${CANNA_OPT}|'			\
+	@${SED} -e 's|$${CANNA_OPT}|${CANNA_OPT.${encoding}}|'		\
 		-e 's|$${AUTODETECT}|${AUTODETECT.${encoding}}|'	\
 		-e 's|$${ENCODING}|${encoding}|g'			\
 		-e 's|$${PREFIX}|${PREFIX}|'				\
