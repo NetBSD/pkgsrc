@@ -1,4 +1,4 @@
-# $NetBSD: silcd.generic,v 1.2 2002/05/24 22:15:36 hubertf Exp $
+# $NetBSD: silcd.generic,v 1.3 2003/10/16 12:37:44 salo Exp $
 #
 
 KILL="/bin/kill"
@@ -15,7 +15,7 @@ start_precmd="silcd_precmd"
 
 silcd_precmd() {       
 	if [ ! -f $confdir/silcd.prv ]; then
-		$command -C $confdir
+		umask 7177 && $command -C $confdir
 	fi
 }
 

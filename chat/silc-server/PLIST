@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.10 2003/03/17 20:12:47 salo Exp $
+@comment $NetBSD: PLIST,v 1.11 2003/10/16 12:37:44 salo Exp $
 etc/rc.d/silcd
 lib/silcd/libsilc-1.0.so
-lib/silcd/libsilc-1.0.so.1
-lib/silcd/libsilc-1.0.so.1.0
+lib/silcd/libsilc-1.0.so.2
+lib/silcd/libsilc-1.0.so.2.0
 lib/silcd/libsilc.la
 lib/silcd/libsilc.so
 lib/silcd/modules/aes.sim.so

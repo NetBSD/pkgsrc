@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2003/08/30 22:51:13 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2003/10/16 12:37:44 salo Exp $
 #
 
-DISTNAME=		silc-server-0.9.13
-PKGREVISION=		1
+DISTNAME=		silc-server-0.9.14
 CATEGORIES=		chat security
 MASTER_SITES=		http://www.silcnet.org/download/server/sources/ \
 			ftp://ftp.silcnet.org/silc/server/sources/ \
@@ -18,7 +17,6 @@ COMMENT=                Server for the Secure Internet Live Conferencing (SILC) 
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
-USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/lib/silcmath/mpi/libtool
 
@@ -64,9 +62,11 @@ CONFIGURE_ARGS+=	--with-silcd-pid-file=/var/run/silcd.pid
 CONFIGURE_ARGS+=	--without-iconv
 CONFIGURE_ARGS+=	--without-libtoolfix
 
-# List it into IPv6-ready packages.
 BUILD_DEFS+=		USE_INET6
+
+.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-ipv6
+.endif
 
 # If you want to debug silc-server, uncomment this.
 #
