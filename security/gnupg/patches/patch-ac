@@ -1,21 +1,21 @@
-$NetBSD: patch-ac,v 1.3 1999/12/02 15:50:45 frueauf Exp $
+$NetBSD: patch-ac,v 1.4 2000/03/02 08:21:33 wiz Exp $
 
---- mpi/config.links.orig	Mon Aug 30 11:06:48 1999
-+++ mpi/config.links	Thu Dec  2 15:42:48 1999
+--- ./mpi/config.links.orig	Fri Dec 10 14:04:00 1999
++++ ./mpi/config.links	Thu Mar  2 01:53:31 2000
 @@ -22,6 +22,16 @@
         cat  $srcdir/mpi/i386/syntax.h	   >>./mpi/asm-syntax.h
         path="i586 i386"
         ;;
-+    i[34]86*-*-netbsd*)
-+	echo '#define ELF_SYNTAX' >>./mpi/asm-syntax.h
-+	cat  $srcdir/mpi/i386/syntax.h      >>./mpi/asm-syntax.h
-+	path="i386"
-+	;;
-+    i[56]86*-*-netbsd* | pentium-*-netbsd* | pentiumpro-*-netbsd*)
-+	echo '#define ELF_SYNTAX' >>./mpi/asm-syntax.h
-+	cat  $srcdir/mpi/i386/syntax.h      >>./mpi/asm-syntax.h
-+	path="i586 i386"
-+	;;
-     i[34]86*-*-linuxaout* | i[34]86*-*-linuxoldld* | i[34]86*-*-*bsd*)
- 	echo '#define BSD_SYNTAX' >>./mpi/asm-syntax.h
- 	echo '#define X86_BROKEN_ALIGN' >>./mpi/asm-syntax.h
++     i[34]86*-*-netbsd*)
++       echo '#define ELF_SYNTAX' >>./mpi/asm-syntax.h
++       cat  $srcdir/mpi/i386/syntax.h      >>./mpi/asm-syntax.h
++       path="i386"
++       ;;
++     i[56]86*-*-netbsd* | pentium-*-netbsd* | pentiumpro-*-netbsd*)
++       echo '#define ELF_SYNTAX' >>./mpi/asm-syntax.h
++       cat  $srcdir/mpi/i386/syntax.h      >>./mpi/asm-syntax.h
++       path="i586 i386"
++       ;;
+     i[34]86*-*-bsdi4*)
+        echo '#define ELF_SYNTAX' >>./mpi/asm-syntax.h
+        cat  $srcdir/mpi/i386/syntax.h	 >>./mpi/asm-syntax.h
