@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.2 2004/12/17 07:36:13 jdolecek Exp $
+# $NetBSD: Makefile.php,v 1.2.2.1 2004/12/28 23:21:22 salo Exp $
 #
 
 .include "../../lang/php5/Makefile.common"
@@ -17,7 +17,7 @@ PLIST_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR}
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=	--with-config-file-path=${PREFIX}/etc/
+CONFIGURE_ARGS+=	--with-config-file-path=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-regex=system
 
 CONFIGURE_ARGS+=	--without-mysql
