@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.6 2001/09/24 13:10:48 wulf Exp $
+$NetBSD: patch-ah,v 1.7 2002/08/10 13:59:35 skrll Exp $
 
---- src/Makefile.in.orig	Thu Feb 22 12:07:34 2001
+--- src/Makefile.in.orig	Thu Feb 22 03:07:34 2001
 +++ src/Makefile.in
-@@ -87,12 +87,7 @@
+@@ -87,12 +87,7 @@ TCL_SHLIB_SUFFIX = @TCL_SHLIB_SUFFIX@
  TROFF = @TROFF@
  VERSION = @VERSION@
  
@@ -16,7 +16,7 @@ $NetBSD: patch-ah,v 1.6 2001/09/24 13:10:48 wulf Exp $
  
  #COMPILE   = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) $(CFLAGS_EXTRA)
  #LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) $(CFLAGS_EXTRA)
-@@ -108,7 +103,7 @@
+@@ -108,7 +103,7 @@ RRD_C_FILES =  	gdpng.c			getopt.c		geto
  # creates a ./.lib/*.al file that contains the PIC compiled object
  # files.
  
@@ -25,7 +25,16 @@ $NetBSD: patch-ah,v 1.6 2001/09/24 13:10:48 wulf Exp $
  
  
  lib_LTLIBRARIES = librrd.la
-@@ -146,18 +141,12 @@
+@@ -123,7 +118,7 @@ librrd_la_LDFLAGS = -version-info 0:0:0
+ include_HEADERS = rrd.h
+ 
+ librrd_private_la_LIBADD = $(RRD_LIBS)
+-librrd_private_la_LDFLAGS = -static
++librrd_private_la_LDFLAGS = -prefer-pic
+ 
+ bin_PROGRAMS = rrdcgi rrdtool rrdupdate
+ 
+@@ -146,18 +141,12 @@ LTLIBRARIES =  $(lib_LTLIBRARIES) $(noin
  DEFS = @DEFS@ -I. -I$(srcdir) -I../config
  CPPFLAGS = @CPPFLAGS@
  LDFLAGS = @LDFLAGS@
@@ -45,18 +54,18 @@ $NetBSD: patch-ah,v 1.6 2001/09/24 13:10:48 wulf Exp $
  librrd_private_la_OBJECTS =  gdpng.lo getopt.lo getopt1.lo gifsize.lo \
  parsetime.lo pngsize.lo rrd_create.lo rrd_diff.lo rrd_dump.lo \
  rrd_info.lo rrd_error.lo rrd_fetch.lo rrd_format.lo rrd_graph.lo \
-@@ -279,8 +268,8 @@
+@@ -279,8 +268,8 @@ maintainer-clean-libtool:
  librrd.la: $(librrd_la_OBJECTS) $(librrd_la_DEPENDENCIES)
  	$(LINK) -rpath $(libdir) $(librrd_la_LDFLAGS) $(librrd_la_OBJECTS) $(librrd_la_LIBADD) $(LIBS)
  
 -librrd_private.la: $(librrd_private_la_OBJECTS) $(librrd_private_la_DEPENDENCIES)
 -	$(LINK)  $(librrd_private_la_LDFLAGS) $(librrd_private_la_OBJECTS) $(librrd_private_la_LIBADD) $(LIBS)
 +librrd_private.la: $(librrd_private_la_OBJECTS)
-+	$(LINK)  -rpath $(libdir) $(librrd_private_la_LDFLAGS) $(librrd_private_la_OBJECTS) $(librrd_private_la_LIBADD) $(LIBS)
++	$(LINK) $(librrd_private_la_LDFLAGS) $(librrd_private_la_OBJECTS) $(librrd_private_la_LIBADD) $(LIBS)
  
  mostlyclean-binPROGRAMS:
  
-@@ -307,7 +296,7 @@
+@@ -307,7 +296,7 @@ uninstall-binPROGRAMS:
  	  rm -f $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
  	done
  
@@ -65,7 +74,7 @@ $NetBSD: patch-ah,v 1.6 2001/09/24 13:10:48 wulf Exp $
  	@rm -f rrdcgi
  	$(LINK) $(rrdcgi_LDFLAGS) $(rrdcgi_OBJECTS) $(rrdcgi_LDADD) $(LIBS)
  
-@@ -378,49 +367,6 @@
+@@ -378,49 +367,6 @@ distdir: $(DISTFILES)
  	    || cp -p $$d/$$file $(distdir)/$$file || :; \
  	  fi; \
  	done

@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:16:28 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/08/10 13:59:33 skrll Exp $
 include/cgi.h
 lib/libcgi.a
+lib/libcgi.la
+lib/libcgi.so
+lib/libcgi.so.0
+lib/libcgi.so.0.0
 libexec/cgi-bin/cgitest
 libexec/cgi-bin/jumpto
 share/doc/html/cgilib/cgi.5.html
@@ -18,5 +22,5 @@ share/doc/html/cgilib/cgiSetHeader.3.html
 share/doc/html/cgilib/cgiSetType.3.html
 share/examples/cgilib/cgitest.c
 share/examples/cgilib/jumpto.c
-@dirrm share/doc/html/cgilib
 @dirrm share/examples/cgilib
+@dirrm share/doc/html/cgilib

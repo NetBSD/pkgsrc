@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.5 2002/08/10 13:59:34 skrll Exp $
+
+--- src/Makefile.am.orig	Mon Feb 19 11:05:56 2001
++++ src/Makefile.am
+@@ -64,7 +64,7 @@ librrd_la_LDFLAGS         = -version-inf
+ include_HEADERS	= rrd.h
+ 
+ librrd_private_la_LIBADD  = $(RRD_LIBS)
+-librrd_private_la_LDFLAGS = -static
++librrd_private_la_LDFLAGS = -prefer-pic
+ 
+ bin_PROGRAMS	= rrdcgi rrdtool rrdupdate
+ 

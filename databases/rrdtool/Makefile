@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/07/31 17:04:07 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2002/08/10 13:59:34 skrll Exp $
 #
 
 DISTNAME=	rrdtool-1.0.33
@@ -10,7 +10,7 @@ MAINTAINER=	wulf@ping.net.au
 HOMEPAGE=	http://ee-staff.ethz.ch/~oetiker/webtools/rrdtool
 COMMENT=	Data analysis tool generating graphical representations
 
-DEPENDS+=	cgilib-0.5:../../www/cgilib
+DEPENDS+=	cgilib>=0.5nb1:../../www/cgilib
 DEPENDS+=	gd>=1.8.4nb1:../../graphics/gd
 DEPENDS+=	jpeg-6*:../../graphics/jpeg
 
@@ -35,6 +35,16 @@ MAKE_ENV+=	X11BASE=${X11BASE} X11PREFIX=${X11PREFIX}
 USE_PERL5=		# defined
 PERL5_PACKLIST+= 	${PERL5_SITEARCH}/auto/RRDp/.packlist
 PERL5_PACKLIST+=	${PERL5_SITEARCH}/auto/RRDs/.packlist
+
+post-patch:
+	cd ${WRKSRC};							\
+        files="perl-shared/Makefile.PL";				\
+        for file in $${files}; do					\
+		${SED}	-e "s|@X11BASE@|${X11BASE}|"			\
+			-e "s|@LOCALBASE@|${LOCALBASE}|"		\
+			$${file} > $${file}.new;			\
+		${MV} -f $${file}.new $${file};				\
+	done
 
 # tcl build not enabled at this time.  If this is turned on, the
 # following files & directory would have to be added to PLIST:
