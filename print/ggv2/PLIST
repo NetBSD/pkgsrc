@@ -1,21 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/11/03 09:17:01 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/02/14 21:12:49 jmmv Exp $
 bin/ggv
-etc/gconf/gconf.xml.defaults/apps/ggv/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/ggv/control/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/ggv/coordinates/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/ggv/gtkgs/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/ggv/layout/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/ggv/printing/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/ggv/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/ggv/control/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/ggv/coordinates/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/ggv/gtkgs/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/ggv/layout/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/ggv/printing/%gconf.xml
-etc/gconf/schemas/ggv.schemas
 lib/bonobo/servers/GNOME_GGV.server
 libexec/ggv-postscript-viewer
 share/applications/ggv.desktop
+share/gconf/schemas/ggv.schemas
 share/gnome-2.0/ui/ggv-control-ui.xml
 share/gnome-2.0/ui/ggv-postscript-view-ui.xml
 share/gnome-2.0/ui/ggv-ui.xml
@@ -75,15 +63,3 @@ share/pixmaps/gnome-ghostview.png
 @dirrm share/gnome/help/ggv/C/figures
 @dirrm share/gnome/help/ggv/C
 @dirrm share/gnome/help/ggv
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/ggv/printing
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/ggv/layout
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/ggv/gtkgs
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/ggv/coordinates
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/ggv/control
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/ggv
-@dirrm etc/gconf/gconf.xml.defaults/apps/ggv/printing
-@dirrm etc/gconf/gconf.xml.defaults/apps/ggv/layout
-@dirrm etc/gconf/gconf.xml.defaults/apps/ggv/gtkgs
-@dirrm etc/gconf/gconf.xml.defaults/apps/ggv/coordinates
-@dirrm etc/gconf/gconf.xml.defaults/apps/ggv/control
-@dirrm etc/gconf/gconf.xml.defaults/apps/ggv
