@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/11/20 12:09:09 fredb Exp $
+# $NetBSD: Makefile,v 1.30 2003/11/21 01:02:24 fredb Exp $
 #
 
 DISTNAME=	ntp-4.2.0
@@ -19,14 +19,15 @@ CONFIGURE_ENV+=	PATH_PERL="${PERL5}" ac_cv_header_sys_soundcard_h=no
 
 DOCDIR=		${PREFIX}/share/doc/html
 EXAMPLESDIR=	${PREFIX}/share/examples
+ALL_NTP_DOCS=	${DOCDIR}/ntp4 ${EXAMPLESDIR}/ntp4
 
 post-install:
-	cd ${WRKSRC} &&								\
-	    ${CHOWN} -R ${SHAREOWN}:${SHAREGRP} conf html;			\
-	    ${FIND} conf html -type d -printx | ${XARGS} ${CHMOD} ${PKGDIRMODE}; \
-	    ${FIND} conf html -type f -printx | ${XARGS} ${CHMOD} ${SHAREMODE};	\
+	(cd ${WRKSRC} &&							\
 	    ${PAX} -rw -pe -s "/html/ntp4/" html ${DOCDIR};			\
-	    ${PAX} -rw -pe -s "/conf/ntp4/" conf ${EXAMPLESDIR}
+	    ${PAX} -rw -pe -s "/conf/ntp4/" conf ${EXAMPLESDIR});		\
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${ALL_NTP_DOCS};			\
+	${FIND} ${ALL_NTP_DOCS} -type d -printx | ${XARGS} ${CHMOD} ${PKGDIRMODE}; \
+	${FIND} ${ALL_NTP_DOCS} -type f -printx | ${XARGS} ${CHMOD} ${SHAREMODE};
 
 .include "../../mk/bsd.prefs.mk"
 
