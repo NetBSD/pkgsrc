@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/03/10 20:01:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2001/03/12 08:02:01 zuntum Exp $
 #
 
 COMMENT=	window managers (for X)
@@ -22,6 +22,7 @@ SUBDIR+=	icewm
 SUBDIR+=	icewm-gnome
 SUBDIR+=	lwm
 SUBDIR+=	olvwm
+SUBDIR+=	ratpoison
 SUBDIR+=	sawfish
 SUBDIR+=	sawfish-replibs
 SUBDIR+=	scwm
