@@ -1,0 +1,28 @@
+$NetBSD: patch-ab,v 1.1 2001/12/21 21:04:23 jlam Exp $
+
+--- vtund.8.orig	Sun Oct 29 14:30:30 2000
++++ vtund.8
+@@ -68,7 +68,7 @@
+ .I -f file 
+ Read config information from the
+ .I file
+-(full path required). By default vtund uses /etc/vtund.conf
++(full path required). By default vtund uses @PKG_SYSCONFDIR@/vtund.conf
+ .TP
+ .I -n 
+ Do not become daemon.
+@@ -112,12 +112,12 @@
+ specified.
+ .SH FILES
+ .TP
+-.B /etc/vtund.conf
++.B @PKG_SYSCONFDIR@/vtund.conf
+ Main configuration file with sessions and other information. 
+ See vtund.conf example provided with distribution and vtund.conf(5) 
+ for more information.
+ .TP
+-.B /var/lock/vtund/
++.B /var/run/vtund/
+ Session lock files. 
+ .TP
+ .B /var/log/vtund/
