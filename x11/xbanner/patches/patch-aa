@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 1998/08/18 21:54:39 tron Exp $
+
+--- Imakefile.orig	Thu May 15 13:38:25 1997
++++ Imakefile	Tue Aug 18 01:44:23 1998
+@@ -8,3 +8,3 @@
+ 
+-LOCALBINDIR=/usr/X11/bin
++LOCALBINDIR=$(X11BASE)/bin
+ ETCDIR=/etc/X11/xdm
+@@ -25,4 +25,4 @@
+ XCOMM Install directives
+-InstallTarget(install,xbanner, --strip --mode "0755" --owner root --group bin , $(LOCALBINDIR))
+-InstallTarget(install,freetemp, --strip --mode "0755" --owner root --group bin , $(LOCALBINDIR))
+-InstallTarget(install,xb_check, --strip --mode "0755" --owner root --group bin , $(LOCALBINDIR))
++InstallTarget(install,xbanner, -s -m 0755 -o root -g bin , $(LOCALBINDIR))
++InstallTarget(install,freetemp, -s -m 0755 -o root -g bin , $(LOCALBINDIR))
++InstallTarget(install,xb_check, -s -m 0755 -o root -g bin , $(LOCALBINDIR))
