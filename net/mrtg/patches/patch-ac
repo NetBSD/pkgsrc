@@ -1,12 +1,12 @@
-$NetBSD: patch-ac,v 1.1 2000/10/20 16:06:17 bouyer Exp $
+$NetBSD: patch-ac,v 1.2 2002/09/30 09:12:14 martti Exp $
 
---- Makefile.in.orig	Fri Oct 20 11:18:50 2000
-+++ Makefile.in	Fri Oct 20 11:20:39 2000
-@@ -29,6 +29,7 @@
+--- Makefile.in.orig	Wed Jul 31 01:32:07 2002
++++ Makefile.in	Tue Sep 24 15:43:19 2002
+@@ -34,6 +34,7 @@
  subst:
- 	$(PERL) -0777 -pi -e 's@^#!\s*/\S*perl@#! $(PERL)@' bin/cfgmaker bin/indexmaker bin/mrtg
- 	$(PERL) -0777 -pi -e 's@GRAPHFMT="...";@GRAPHFMT="$(GDFORM_EXT)";@' bin/mrtg bin/indexmaker
-+	$(PERL) -0777 -pi -e "s@__PREFIX__@${prefix}@g" bin/cfgmaker bin/mrtg bin/indexmaker
+ 	$(PERL) -0777 -pi -e 's@^#!\s*/\S*perl@#! $(PERL)@' $(top_srcdir)/bin/cfgmaker $(top_srcdir)/bin/indexmaker $(top_srcdir)/bin/mrtg
+ 	$(PERL) -0777 -pi -e 's@GRAPHFMT="...";@GRAPHFMT="$(GDFORM_EXT)";@' $(top_srcdir)/bin/mrtg $(top_srcdir)/bin/indexmaker
++	$(PERL) -0777 -pi -e "s@__PREFIX__@${prefix}@g" $(top_srcdir)/bin/cfgmaker $(top_srcdir)/bin/mrtg $(top_srcdir)/bin/indexmaker
  
  clean:
  	-rm bin/rateup
