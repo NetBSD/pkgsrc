@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1999/02/18 23:38:46 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 1999/02/19 23:07:21 tron Exp $
 bin/kdvi
 bin/kfax
 bin/kfract
@@ -268,11 +268,8 @@ share/kde/applnk/Graphics/kview.kdelnk
 share/kde/applnk/Graphics/kiconedit.kdelnk
 share/kde/applnk/Graphics/ksnapshot.kdelnk
 @dirrm share/doc/kde/HTML/da/kiconedit
-@dirrm share/doc/kde/HTML/da
 @dirrm share/doc/kde/HTML/cs/ksnapshot
-@dirrm share/doc/kde/HTML/cs
 @dirrm share/doc/kde/HTML/fi/kdvi
-@dirrm share/doc/kde/HTML/fi
 @dirrm share/doc/kde/HTML/en/ksnapshot
 @dirrm share/doc/kde/HTML/en/kiconedit
 @dirrm share/doc/kde/HTML/en/kview

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1999/02/18 23:38:45 tron Exp $
+# $NetBSD: Makefile,v 1.15 1999/02/19 23:07:21 tron Exp $
 #
 
 DISTNAME=	kdegraphics-1.1
@@ -12,8 +12,6 @@ HOMEPAGE=	http://www.kde.org/
 
 DEPENDS+=	giflib-3.0:../../graphics/giflib
 DEPENDS+=	kdebase-1.1:../../x11/kdebase
-
-CONFLICTS=	kdegraphics-*
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
