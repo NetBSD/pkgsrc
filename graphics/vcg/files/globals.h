@@ -17,7 +17,8 @@
 /*                                                                    */
 /*--------------------------------------------------------------------*/
 
-/* $Id: globals.h,v 1.2 1999/06/13 12:54:19 sakamoto Exp $ */
+/* $NetBSD: globals.h,v 1.3 1999/06/13 13:06:08 sakamoto Exp $ */
+/* FreeBSD Id: globals.h,v 1.1.1.1 1995/02/19 09:25:43 hsu Exp $ */
 
 /*
  *   Copyright (C) 1993--1995 by Georg Sander, Iris Lemke, and
@@ -43,6 +44,9 @@
 
 
 /* $Log: globals.h,v $
+/* Revision 1.3  1999/06/13 13:06:08  sakamoto
+/* Fix FreeBSD RCS Id,Log.
+/*
 /* Revision 1.2  1999/06/13 12:54:19  sakamoto
 /* Adapt this package to NetBSD.
 /*
