@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1563 2003/03/05 13:12:28 wennmach Exp $
+$NetBSD: CHANGES,v 1.1564 2003/03/05 13:15:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -955,5 +955,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated easytag to 0.27nb1 [wiz 2003-03-05]
 	Updated rioutil to 1.3.3nb1 [wiz 2003-03-05]
 	Updated streamtuner-local to 0.2.1nb1 [wiz 2003-03-05]
+	Updated neXtaw to 0.14.0 [wiz 2003-03-05]
 	Updated zlib to 1.1.4nb1 [salo 2003-03-05]
 	Updated arla to 0.35.12 [wennmach 2003-03-05]
+	Updated mowitz to 0.2.2 [wiz 2003-03-05]
