@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2003/03/29 12:40:47 jmmv Exp $
+# $NetBSD: Makefile,v 1.35 2003/05/05 17:38:02 grant Exp $
 
 DISTNAME=	xemacs-packages
 PKGNAME=	xemacs-packages-1.11
@@ -179,11 +179,11 @@ xemacs-update-package: xemacs-fetch-package-list xemacs-merge-package-list
 .endif	# PKG_DEVELOPER && OPSYS == "NetBSD"
 
 do-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/lib/xemacs/xemacs-packages
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/xemacs/xemacs-packages
 .for DISTFILE in ${DISTFILES}
 	@${ECHO_MSG} -n "Extracting ${DISTFILE} ... "
 	@${GTAR} xCzf ${PREFIX}/lib/xemacs/xemacs-packages \
-	  ${DISTDIR}/${DIST_SUBDIR}/${DISTFILE}
+		${DISTDIR}/${DIST_SUBDIR}/${DISTFILE}
 	@${ECHO_MSG} "done"
 .endfor
 	@${ECHO_MSG} -n "Fixing file ownerships ... "
@@ -192,9 +192,9 @@ do-install:
 .if defined(MANZ)
 	@${ECHO_MSG} -n "Compressing \".el\" files ... "
 	@cd ${PREFIX} && \
-	${GREP} '\$${ELSUFX}$$' ${PLIST_SRC} | \
-	${SED} -e 's#\$${ELSUFX}$$##' | \
-	${XARGS} ${GZIP_CMD}
+		${GREP} '\$${ELSUFX}$$' ${PLIST_SRC} | \
+		${SED} -e 's#\$${ELSUFX}$$##' | \
+		${XARGS} ${GZIP_CMD}
 	@${ECHO_MSG} "done"
 .endif
 
