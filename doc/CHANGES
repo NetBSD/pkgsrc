@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7972 2004/11/24 17:07:03 wiz Exp $
+$NetBSD: CHANGES,v 1.7973 2004/11/25 05:47:23 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5408,3 +5408,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libiconv to 1.9.2nb1 [adam 2004-11-24]
 	Updated mathomatic to 11.5b [minskim 2004-11-24]
 	Added kapooka-0.2 [wiz 2004-11-24]
+	Added gld-1.4 [xtraeme 2004-11-25]
