@@ -1,0 +1,17 @@
+# $NetBSD: DEINSTALL,v 1.1.1.1 2004/07/23 19:28:32 jlam Exp $
+
+WEBMIN_DIR="@WEBMIN_DIR@"
+WEBMIN_ETCDIR="@WEBMIN_ETCDIR@"
+
+case ${STAGE} in
+DEINSTALL)
+	uninstall="${WEBMIN_ETCDIR}/uninstall.sh"
+	if [ -x ${uninstall} ]; then
+		${ECHO} "Removing ${PKGNAME}..."
+		${ECHO} "y" | ${uninstall}
+	else
+		${ECHO} "Removing ${WEBMIN_DIR}..."
+		${RM} -rf ${WEBMIN_DIR}
+	fi
+	;;
+esac

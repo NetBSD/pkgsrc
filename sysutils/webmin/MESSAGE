@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/07/23 19:28:32 jlam Exp $
+
+To configure Webmin for the first time or to upgrade, you will need to
+run the following command as ${ROOT_USER}:
+
+	${WEBMIN_DIR}/setup.sh
+
+If you are configuring Webmin for the first time, then you can safely
+accept all of the defaults for options prompted by the setup script.
+
+===========================================================================
