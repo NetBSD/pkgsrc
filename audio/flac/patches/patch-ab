@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2002/09/04 19:31:44 jlam Exp $
+
+--- doc/images/Makefile.in.orig	Wed Sep  4 01:49:17 2002
++++ doc/images/Makefile.in
+@@ -126,7 +126,7 @@ install_sh = @install_sh@
+ 
+ AUTOMAKE_OPTIONS = foreign
+ 
+-docdir = $(datadir)/doc/$(PACKAGE)-$(VERSION)/images
++docdir = $(datadir)/doc/html/$(PACKAGE)/images
+ 
+ doc_DATA = \
+ 	1x1.gif \
