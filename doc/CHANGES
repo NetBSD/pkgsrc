@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3848 2003/11/21 09:26:57 abs Exp $
+$NetBSD: CHANGES,v 1.3849 2003/11/21 23:08:21 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4632,4 +4632,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated dt to 1.1.7nb3 [fredb 2003-11-19]
 	Updated rdesktop to 1.3.0 [grant 2003-11-20]
 	Updated hylafax to 4.1.8 [abs 2003-11-20]
-
+	Updated dircproxy to 1.05nb1 [xtraeme 2003-11-21]
