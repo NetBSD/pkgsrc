@@ -1,0 +1,39 @@
+$NetBSD: patch-as,v 1.4 2004/08/06 06:36:18 jlam Exp $
+
+--- utils/Makefile.in.orig	Fri Jul  2 15:40:14 2004
++++ utils/Makefile.in
+@@ -237,11 +237,11 @@ noinst_PROGRAMS = dbconverter-2
+ 
+ @NO_SASL_DB_MANS_TRUE@man_MANS = 
+ 
+-saslpasswd2_LDADD = ../sasldb/libsasldb.la $(all_sasl_libs)
++saslpasswd2_LDADD = $(SASL_DB_BACKEND_STATIC) $(all_sasl_libs)
+ saslpasswd2_SOURCES = saslpasswd.c
+-sasldblistusers2_LDADD = ../sasldb/libsasldb.la $(all_sasl_libs)
++sasldblistusers2_LDADD = $(SASL_DB_BACKEND_STATIC) $(all_sasl_libs)
+ sasldblistusers2_SOURCES = sasldblistusers.c
+-dbconverter_2_LDADD = ../sasldb/libsasldb.la $(all_sasl_libs)
++dbconverter_2_LDADD = $(SASL_DB_BACKEND_STATIC) $(all_sasl_libs)
+ 
+ testsuite_LDADD = $(all_sasl_libs) @DMALLOC_LIBS@
+ 
+@@ -287,16 +287,16 @@ PROGRAMS = $(noinst_PROGRAMS) $(sbin_PRO
+ 
+ dbconverter_2_SOURCES = dbconverter-2.c
+ dbconverter_2_OBJECTS = dbconverter-2.$(OBJEXT)
+-dbconverter_2_DEPENDENCIES = ../sasldb/libsasldb.la ../lib/libsasl2.la
++dbconverter_2_DEPENDENCIES = $(SASL_DB_BACKEND_STATIC) ../lib/libsasl2.la
+ dbconverter_2_LDFLAGS =
+ am_sasldblistusers2_OBJECTS = sasldblistusers.$(OBJEXT)
+ sasldblistusers2_OBJECTS = $(am_sasldblistusers2_OBJECTS)
+-sasldblistusers2_DEPENDENCIES = ../sasldb/libsasldb.la \
++sasldblistusers2_DEPENDENCIES = $(SASL_DB_BACKEND_STATIC) \
+ 	../lib/libsasl2.la
+ sasldblistusers2_LDFLAGS =
+ am_saslpasswd2_OBJECTS = saslpasswd.$(OBJEXT)
+ saslpasswd2_OBJECTS = $(am_saslpasswd2_OBJECTS)
+-saslpasswd2_DEPENDENCIES = ../sasldb/libsasldb.la ../lib/libsasl2.la
++saslpasswd2_DEPENDENCIES = $(SASL_DB_BACKEND_STATIC) ../lib/libsasl2.la
+ saslpasswd2_LDFLAGS =
+ am_smtptest_OBJECTS =
+ smtptest_OBJECTS = $(am_smtptest_OBJECTS)
