@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/05/08 21:22:35 tron Exp $
+# $NetBSD: Makefile,v 1.6 1998/07/03 23:30:09 tron Exp $
 #
 
 DISTNAME=	compat12
@@ -10,6 +10,7 @@ MAINTAINER=	tv@netbsd.org
 
 ONLY_FOR_ARCHS=	amiga atari hp300 i386 mac68k mvme68k pc532 sparc sun3
 
+MIRROR_DISTFILE= no
 HAS_CONFIGURE=	yes
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/usr/lib
