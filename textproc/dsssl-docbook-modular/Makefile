@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/05/07 16:37:06 hrs Exp $
+# $NetBSD: Makefile,v 1.22 2004/06/06 13:04:24 grant Exp $
 # FreeBSD Id: Makefile,v 1.17 1999/04/24 09:25:32 kuriyama Exp
 
 DISTNAME=	docbook-dsssl-1.78
@@ -16,6 +16,7 @@ DEPENDS+=	docbook>=4.0:../../textproc/docbook
 NO_MTREE=	yes
 
 USE_BUILDLINK3=	yes
+USE_LANGUAGES=	# empty
 INSTDIR=	${PREFIX}/share/sgml/docbook/dsssl/modular
 
 SGML_CATALOGS=	${INSTDIR}/catalog
