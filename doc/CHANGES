@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3453 2003/09/19 09:41:57 abs Exp $
+$NetBSD: CHANGES,v 1.3454 2003/09/19 12:59:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3841,4 +3841,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added msmtp-0.5.0 [wiz 2003-09-19]
 	Updated p5-Devel-StackTrace to 1.0.3 [wiz 2003-09-19]
 	Updated rconfig to 0.19 [abs 2003-09-19]
-
+	Updated avr-binutils to 2.13.2.1nb1 [wiz 2003-09-19]
