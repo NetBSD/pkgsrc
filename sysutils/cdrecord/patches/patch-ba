@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.1 2001/08/07 11:23:57 drochner Exp $
+$NetBSD: patch-ba,v 1.2 2003/01/03 16:27:10 lukem Exp $
 
---- misc/readcd.c.orig	Fri Apr 13 19:41:39 2001
-+++ misc/readcd.c	Mon Aug  6 10:42:49 2001
-@@ -301,11 +301,11 @@
+--- readcd/readcd.c.orig	Fri Sep 20 09:00:12 2002
++++ readcd/readcd.c
+@@ -341,11 +341,11 @@ main(ac, av)
  	/*
  	 * We don't need root privilleges anymore.
  	 */
