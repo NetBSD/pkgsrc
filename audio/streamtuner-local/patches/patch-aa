@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/02/16 05:59:54 salo Exp $
+
+--- configure.orig	2003-02-07 20:25:35.000000000 +0100
++++ configure	2003-02-07 20:25:59.000000000 +0100
+@@ -7933,7 +7933,7 @@
+ fi
+ 
+ ID3LIB_CFLAGS="-I$ID3LIB_PREFIX/include"
+-ID3LIB_LIBS="-L$ID3LIB_PREFIX/lib -lstdc++ -lz -lid3"
++ID3LIB_LIBS="-L$ID3LIB_PREFIX/lib -lm -lstdc++ -lz -lid3"
+ 
+ found=yes
+ id3lib_min_version=3.8.0
