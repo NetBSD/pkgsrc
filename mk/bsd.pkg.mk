@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.675 2001/02/28 10:16:58 skrll Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.676 2001/03/06 14:50:45 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -24,11 +24,8 @@
 MKCRYPTO?=		yes
 
 ##### Some overrides of defaults below on a per-OS basis.
-.if (${OPSYS} == "NetBSD")
-LOCALBASE?=		${DESTDIR}/usr/pkg
-.elif (${OPSYS} == "SunOS")
+.if (${OPSYS} == "SunOS")
 DEF_UMASK?=		022
-X11BASE?=		${DESTDIR}/usr/openwin
 .elif (${OPSYS} == "Linux")
 DEF_UMASK?=		022
 NOMANCOMPRESS?=		yes
@@ -41,10 +38,6 @@ REINSTALL?=		NO	# reinstall upon update
 CHECK_SHLIBS?=		YES	# run check-shlibs after install
 SHLIB_HANDLING?=	YES	# do automatic shared lib handling
 NOCLEAN?=		NO	# don't clean up after update
-
-LOCALBASE?=		${DESTDIR}/usr/local
-X11BASE?=		${DESTDIR}/usr/X11R6
-CROSSBASE?=		${LOCALBASE}/cross
 
 PKGSRCDIR?=		${.CURDIR:C|/[^/]*/[^/]*$||}
 PKGPATH?=		${.CURDIR:C|.*/([^/]*/[^/]*)$|\1|}
@@ -271,20 +264,13 @@ BUILD_COOKIE=		${WRKDIR}/.build_done
 PATCH_COOKIE=		${WRKDIR}/.patch_done
 PACKAGE_COOKIE=		${WRKDIR}/.package_done
 
+# New message digest defs
+DIGEST_ALGORITHM?=	SHA1
+
 # Miscellaneous overridable commands:
 SHCOMMENT?=		${ECHO_MSG} >/dev/null '***'
-.if exists(/sbin/md5)
-MD5?=			/sbin/md5
-.elif exists(/bin/md5)
-MD5?=			/bin/md5
-.elif exists(/usr/bin/md5)
-MD5?=			/usr/bin/md5
-.elif exists(${LOCALBASE}/bsd/bin/md5)
-MD5?=			${LOCALBASE}/bsd/bin/md5
-.else
-MD5?=			md5
-.endif
-MD5_FILE?=		${FILESDIR}/md5
+
+DIGEST_FILE?=		${FILESDIR}/md5
 PATCH_SUM_FILE?=	${FILESDIR}/patch-sum
 
 .if exists(/usr/bin/m4)
@@ -691,6 +677,25 @@ PKG_ADMIN?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_admin
 PKG_CREATE?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_create
 PKG_DELETE?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_delete
 PKG_INFO?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_info
+
+# Latest version of digest(1) required for pkgsrc
+DIGEST_REQD=		20010302
+
+uptodate-digest:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ ! -f ${DIGEST} -o ${DIGEST_VERSION} -lt ${DIGEST_REQD} ]; then \
+		case ${PKGNAME} in					\
+		digest-*)						\
+			;;						\
+		*)							\
+			(cd ${PKGSRCDIR}/pkgtools/digest;		\
+			${MAKE} clean;					\
+			if [ -f ${DIGEST} ]; then			\
+				${MAKE} ${MAKEFLAGS} deinstall;		\
+			fi;						\
+			${MAKE} ${MAKEFLAGS} install) 			\
+		esac							\
+	fi
 
 .if !defined(PKGTOOLS_VERSION)
 .if !exists(${IDENT})
@@ -1269,9 +1274,10 @@ _FETCH_FILE=								\
 		for site in $$sites; do					\
 			${ECHO_MSG} "=> Attempting to fetch $$bfile from $${site}."; \
 			if ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${bfile} ${FETCH_AFTER_ARGS}; then \
-				if [ -n "${FAILOVER_FETCH}" -a -f ${MD5_FILE} -a -f ${_DISTDIR}/$$bfile ]; then	\
-					CKSUM=`${MD5} < ${_DISTDIR}/$$bfile`; \
-					CKSUM2=`${AWK} '$$1 == "MD5" && $$2 == "('$$file')"{print $$4;}' ${MD5_FILE}`; \
+				if [ -n "${FAILOVER_FETCH}" -a -f ${DIGEST_FILE} -a -f ${_DISTDIR}/$$bfile ]; then \
+					alg=`${AWK} 'NF == 4 && $$2 == "('$$file')" && $$3 == "=" {print $$1;}' ${DIGEST_FILE}`; \
+					CKSUM=`${DIGEST} $$alg < ${_DISTDIR}/$$bfile`; \
+					CKSUM2=`${AWK} '$$1 == '"$$alg"' && $$2 == "('$$file')"{print $$4;}' ${DIGEST_FILE}`; \
 					if [ "$$CKSUM" = "$$CKSUM2" -o "$$CKSUM2" = "IGNORE" ]; then \
 						continue 2;		\
 					else				\
@@ -1438,7 +1444,7 @@ do-extract:
 # Patch
 
 .if !target(do-patch)
-do-patch:
+do-patch: uptodate-digest
 .if defined(PATCHFILES)
 	@${ECHO_MSG} "${_PKGSRC_IN}> Applying distribution patches for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${_DISTDIR}; \
@@ -1482,8 +1488,13 @@ do-patch:
 				*)					\
 					if [ -f ${PATCH_SUM_FILE} ]; then \
 						filename=`expr $$i : '.*/\(.*\)'`; \
-						calcsum=`${SED} -e '/\$$NetBSD.*/d' $$i | ${MD5}`; \
-						recorded=`${AWK} '$$1 == "MD5" && $$2 == "('$$filename')" { print $$4; }' ${PATCH_SUM_FILE} || ${TRUE}`; \
+						algsum=`${AWK} 'NF == 4 && $$2 == "('$$filename')" && $$3 == "=" {print $$1 " " $$4}' ${PATCH_SUM_FILE} || ${TRUE}`; \
+						alg=`${ECHO} $$algsum | ${AWK} '{ print $$1 }'`; \
+						recorded=`${ECHO} $$algsum | ${AWK} '{ print $$2 }'`; \
+						calcsum=`${SED} -e '/\$$NetBSD.*/d' $$i | ${DIGEST} $$alg`; \
+						if [ ${PATCH_DEBUG_TMP} = yes ]; then	\
+							${ECHO_MSG} "=> Verifying $$filename (using digest algorithm $$alg)" ; \
+						fi;			\
 						if [ "X$$recorded" = "X" ]; then \
 							${ECHO_MSG} "**************************************"; \
 							${ECHO_MSG} "Ignoring unknown patch file: $$i"; \
@@ -2441,30 +2452,30 @@ fetch-list-one-pkg:
 # Checksumming utilities
 
 .if !target(makesum)
-makesum: fetch
+makesum: fetch uptodate-digest
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${FILESDIR}
-	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${MD5_FILE} ]; then ${RM} -f ${MD5_FILE}; fi
-	@${ECHO} -n "$$" > ${MD5_FILE};					\
-		${ECHO} -n "NetBSD" >> ${MD5_FILE}; 			\
-		${ECHO} "$$" >> ${MD5_FILE};				\
-		${ECHO} "" >> ${MD5_FILE}
+	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${DIGEST_FILE} ]; then ${RM} -f ${DIGEST_FILE}; fi
+	@${ECHO} -n "$$" > ${DIGEST_FILE};				\
+		${ECHO} -n "NetBSD" >> ${DIGEST_FILE}; 			\
+		${ECHO} "$$" >> ${DIGEST_FILE};				\
+		${ECHO} "" >> ${DIGEST_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${DISTDIR};			\
 	for sumfile in "" ${_CKSUMFILES}; do				\
 		if [ "X$$sumfile" = "X" ]; then continue; fi;		\
-		${MD5} $$sumfile >> ${MD5_FILE};			\
+		${DIGEST} ${DIGEST_ALGORITHM} $$sumfile >> ${DIGEST_FILE}; \
 	done
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for ignore in "" ${_IGNOREFILES}; do				\
 		if [ "X$$ignore" = "X" ]; then continue; fi;		\
-		${ECHO} "MD5 ($$ignore) = IGNORE" >> ${MD5_FILE};	\
+		${ECHO} "${DIGEST_ALGORITHM} ($$ignore) = IGNORE" >> ${DIGEST_FILE}; \
 	done
 .endif
 
 .if !target(makepatchsum)
-makepatchsum mps:
+makepatchsum mps: uptodate-digest
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	(${MKDIR} ${FILESDIR};						\
-	${ECHO_MSG} "${_PKGSRC_IN}> Making patch checksums";			\
+	${ECHO_MSG} "${_PKGSRC_IN}> Making patch checksums";		\
 	if [ -f "${PATCH_SUM_FILE}" ]; then				\
 		${AWK} -- '{print ; exit}' < ${PATCH_SUM_FILE} > ${PATCH_SUM_FILE}.new; \
 	else								\
@@ -2482,7 +2493,7 @@ makepatchsum mps:
 			case $$sumfile in				\
 				patch-local-*) ;;			\
 				*.orig) continue ;;			\
-				*)	${ECHO} "MD5 ($$sumfile) = `${SED} -e '/\$$NetBSD.*/d' $$sumfile | ${MD5}`" >> ${PATCH_SUM_FILE}.new; \
+				*)	${ECHO} "${DIGEST_ALGORITHM} ($$sumfile) = `${SED} -e '/\$$NetBSD.*/d' $$sumfile | ${DIGEST} ${DIGEST_ALGORITHM}`" >> ${PATCH_SUM_FILE}.new; \
 					havepatches=1 ;;		\
 			esac;						\
 		done;							\
@@ -2509,21 +2520,22 @@ makepatchsum mps:
 .endif
 
 .if !target(checksum)
-checksum: fetch
+checksum: fetch uptodate-digest
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ ! -f ${MD5_FILE} ]; then					\
-		${ECHO_MSG} "=> No MD5 checksum file.";			\
+	if [ ! -f ${DIGEST_FILE} ]; then				\
+		${ECHO_MSG} "=> No checksum file.";			\
 	else								\
 		(cd ${DISTDIR}; OK="true";				\
 		  for file in "" ${_CKSUMFILES}; do			\
 		  	if [ "X$$file" = X"" ]; then continue; fi; 	\
-			CKSUM=`${MD5} < $$file`;			\
-			CKSUM2=`${AWK} '$$1 == "MD5" && $$2 == "('$$file')"{print $$4;}' ${MD5_FILE}`; \
+			alg=`${AWK} 'NF == 4 && $$2 == "('$$file')" && $$3 == "=" {print $$1;}' ${DIGEST_FILE}`; \
+			CKSUM=`${DIGEST} $$alg < $$file`;		\
+			CKSUM2=`${AWK} '$$1 == "'$$alg'" && $$2 == "('$$file')"{print $$4;}' ${DIGEST_FILE}`; \
 			if [ "$$CKSUM2" = "" ]; then			\
 				${ECHO_MSG} "=> No checksum recorded for $$file."; \
 				OK="false";				\
 			elif [ "$$CKSUM2" = "IGNORE" ]; then		\
-				${ECHO_MSG} "=> Checksum for $$file is set to IGNORE in md5 file even though"; \
+				${ECHO_MSG} "=> Checksum for $$file is set to IGNORE in checksum file even though"; \
 				${ECHO_MSG} "   the file is not in the "'$$'"{IGNOREFILES} list."; \
 				OK="false";				\
 			elif [ "$$CKSUM" = "$$CKSUM2" ]; then		\
@@ -2535,18 +2547,18 @@ checksum: fetch
 		  done;							\
 		  for file in "" ${_IGNOREFILES}; do			\
 		  	if [ "X$$file" = X"" ]; then continue; fi; 	\
-			CKSUM2=`${AWK} '$$1 == "MD5" && $$2 == "('$$file')"{print $$4;}' ${MD5_FILE}`; \
+			CKSUM2=`${AWK} 'NF == 4 && $$3 == "=" && $$2 == "('$$file')"{print $$4;}' ${DIGEST_FILE}`; \
 			if [ "$$CKSUM2" = "" ]; then			\
 				${ECHO_MSG} "=> No checksum recorded for $$file, file is in "'$$'"{IGNOREFILES} list."; \
 				OK="false";				\
 			elif [ "$$CKSUM2" != "IGNORE" ]; then		\
-				${ECHO_MSG} "=> Checksum for $$file is not set to IGNORE in md5 file even though"; \
+				${ECHO_MSG} "=> Checksum for $$file is not set to IGNORE in checksum file even though"; \
 				${ECHO_MSG} "   the file is in the "'$$'"{IGNOREFILES} list."; \
 				OK="false";				\
 			fi;						\
 		  done;							\
 		  if [ "$$OK" != "true" ]; then				\
-			${ECHO_MSG} "Make sure the Makefile and md5 file (${MD5_FILE})"; \
+			${ECHO_MSG} "Make sure the Makefile and checksum file (${DIGEST_FILE})"; \
 			${ECHO_MSG} "are up to date.  If you want to override this check, type"; \
 			${ECHO_MSG} "\"${MAKE} NO_CHECKSUM=yes [other args]\"."; \
 			exit 1;						\
@@ -3185,7 +3197,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		fi;							\
 	done;								\
 	if [ -f ${PATCH_SUM_FILE} ]; then				\
-		for f in `${AWK} '$$1 == "MD5" { gsub("[()]", "", $$2); print $$2 }' < ${PATCH_SUM_FILE}`; do \
+		for f in `${AWK} 'NF == 4 && $$3 == "=" { gsub("[()]", "", $$2); print $$2 }' < ${PATCH_SUM_FILE}`; do \
 			if [ -f ${PATCHDIR}/$$f ]; then			\
 				files="$$files ${PATCHDIR}/$$f";	\
 			fi;						\

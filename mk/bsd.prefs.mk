@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.21 2000/12/03 14:10:03 wiz Exp $
+# $NetBSD: bsd.prefs.mk,v 1.22 2001/03/06 14:50:46 agc Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -142,5 +142,30 @@ NEED_NCURSES=   	YES
 # will start to require ncurses, which is not true (and raises some
 # recursive dependency problems!)
 .endif # USE_CURSES
+
+##### Some overrides of defaults below on a per-OS basis.
+.if (${OPSYS} == "NetBSD")
+LOCALBASE?=             ${DESTDIR}/usr/pkg
+.elif (${OPSYS} == "SunOS")
+X11BASE?=               ${DESTDIR}/usr/openwin
+.endif
+
+LOCALBASE?=		${DESTDIR}/usr/local
+X11BASE?=		${DESTDIR}/usr/X11R6
+CROSSBASE?=		${LOCALBASE}/cross
+     
+.ifndef DIGEST
+DIGEST:=		${LOCALBASE}/bin/digest
+MAKEFLAGS+=		DIGEST=${DIGEST}
+.endif
+
+.if !defined(DIGEST_VERSION)
+.if exists(${DIGEST})
+DIGEST_VERSION!= 	${DIGEST} -V
+.else
+DIGEST_VERSION=		${DIGEST_REQD}
+.endif
+MAKEFLAGS+=		DIGEST_VERSION="${DIGEST_VERSION}"
+.endif
 
 .endif	# BSD_PKG_MK
