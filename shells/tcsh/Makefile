@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 1997/11/27 11:56:07 explorer Exp $
 # New ports collection makefile for:	tcsh
 # Version required:     6.07.02
 # Date created:		22 August 1994
 # Whom:			jkh
 #
+# $NetBSD: Makefile,v 1.5 1998/01/24 23:17:36 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.17 1996/12/17 05:18:09 asami Exp
 #
 
@@ -21,7 +21,7 @@ INSTALL_TARGET= install install.man
 MAN1=		tcsh.1
 
 post-patch:
-	( cd ${WRKSRC}/nls/greek ; for i in * ; do echo $$i ; mv $$i $$i.BAK ; sed -e 's/\\"/"/g' -e "s/\\\'/'/g" <$$i.BAK >$$i ; done )
+	( cd ${WRKSRC}/nls/greek ; for i in * ; do ${ECHO} $$i ; ${MV} $$i $$i.BAK ; ${SED} -e 's/\\"/"/g' -e "s/\\\'/'/g" <$$i.BAK >$$i ; done )
 
 post-install:
 	chown bin.bin ${PREFIX}/bin/tcsh
@@ -36,6 +36,6 @@ post-install:
 	ln -sf ${PREFIX}/share/nls/de_DE.ISO_8859-1/tcsh.cat ${PREFIX}/share/nls/de_CH.ISO_8859-1/tcsh.cat
 	install -d -o ${BINOWN} -g ${BINGRP} -m 755 ${PREFIX}/share/nls/el_GR.ISO_8859-7
 	cd ${WRKSRC}; ${INSTALL_DATA} tcsh.greek.cat ${PREFIX}/share/nls/el_GR.ISO_8859-7/tcsh.cat
-	echo "updating /etc/shells"; cp /etc/shells /etc/shells.bak; (grep -v ${PREFIX}/bin/tcsh /etc/shells.bak; echo ${PREFIX}/bin/tcsh) >/etc/shells
+	${ECHO} "updating /etc/shells"; ${CP} /etc/shells /etc/shells.bak; (grep -v ${PREFIX}/bin/tcsh /etc/shells.bak; ${ECHO} ${PREFIX}/bin/tcsh) >/etc/shells
 
 .include <bsd.port.mk>
