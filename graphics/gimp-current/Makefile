@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/03/02 02:12:07 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2000/03/02 09:39:05 tron Exp $
 
 DISTNAME=		gimp-1.1.13
 CATEGORIES=		graphics
@@ -28,8 +28,14 @@ CONFIGURE_ARGS+=	--with-gtk-prefix=${X11BASE} \
 CONFIGURE_ENV=		CPPFLAGS="${CPPFLAGS}" INTLLIBS="-lintl"
 
 CPPFLAGS=		-I${LOCALBASE}/include
-LDFLAGS+=		-L${LOCALBASE}/lib -Wl,-E
+LDFLAGS+=		-L${LOCALBASE}/lib
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if (${OBJECT_FMT} == ELF)
+LDFLAGS+=		-Wl,-E
+.endif
 
 post-install:
 	${TEST} ${PREFIX} = ${LOCALBASE} || \
