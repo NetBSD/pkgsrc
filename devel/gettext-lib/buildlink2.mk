@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.15 2002/12/10 20:00:57 drochner Exp $
+# $NetBSD: buildlink2.mk,v 1.16 2002/12/11 22:22:47 jlam Exp $
 
 .if !defined(GETTEXT_BUILDLINK2_MK)
 GETTEXT_BUILDLINK2_MK=	# defined
@@ -47,12 +47,25 @@ _NEED_GNU_GETTEXT=	YES
 .endif
 
 .if ${_NEED_GNU_GETTEXT} == "YES"
-# XXX overwrite previous value
-BUILDLINK_DEPENDS.gettext=	gettext-lib>=0.11.5
 BUILDLINK_PACKAGES+=			gettext
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gettext=gettext-lib
 BUILDLINK_PREFIX.gettext_DEFAULT=	${LOCALBASE}
-.include "../../converters/libiconv/buildlink2.mk"
+_GETTEXT_ICONV_DEPENDS=		gettext-lib>=0.11.5
+_INSTALLED_GETTEXT_PKG!=	${PKG_INFO} -e gettext-lib || ${ECHO} "NO"
+.  if ${_INSTALLED_GETTEXT_PKG} == "NO"
+_GETTEXT_NEEDS_ICONV=	YES
+.  else
+_GETTEXT_NEEDS_ICONV!= \
+	if ${PKG_ADMIN} pmatch '${_GETTEXT_ICONV_DEPENDS}' ${_INSTALLED_GETTEXT_PKG}; then \
+		${ECHO} "YES";						\
+	else								\
+		${ECHO} "NO";						\
+	fi
+.  endif
+.  if ${_GETTEXT_NEEDS_ICONV} == "YES"
+BUILDLINK_DEPENDS.gettext=		${_GETTEXT_ICONV_DEPENDS}
+.    include "../../converters/libiconv/buildlink2.mk"
+.  endif
 .else
 BUILDLINK_PREFIX.gettext=	/usr
 .endif
