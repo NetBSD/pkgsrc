@@ -1,0 +1,5 @@
+# $NetBSD: site.config.m4-sasl,v 1.1.1.1 2004/08/30 19:56:46 adrianp Exp $
+
+# enable SASL
+APPENDDEF(`confENVDEF', `-DSASL')
+APPENDDEF(`conf_sendmail_LIBS', `-lsasl')
