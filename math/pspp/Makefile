@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/03/15 15:04:13 rh Exp $
+# $NetBSD: Makefile,v 1.5 1999/07/06 08:03:46 jlam Exp $
 #
 
 DISTNAME=	pspp-0.2.3
@@ -17,10 +17,10 @@ HOMEPAGE=	http://www.gnu.org/software/pspp/
 
 DEPENDS+=	gettext-0.10.35:../../devel/gettext
 DEPENDS+=	readline-2.2:../../devel/readline
-DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
+DEPENDS+=	ncurses-4.2:../../devel/ncurses
 
 GNU_CONFIGURE=	yes
 USE_GTEXINFO=	yes
-CONFIGURE_ENV=	CPPFLAGS="-Dunix -I ${PREFIX}/include"
+CONFIGURE_ENV=	CPPFLAGS="-Dunix -I${LOCALBASE}/include"
 
 .include "../../mk/bsd.pkg.mk"
