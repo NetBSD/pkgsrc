@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/09/15 14:50:58 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/10/15 02:17:17 jlam Exp $
 share/doc/html/p5-CGI/cgi-lib_porting.html
 share/doc/html/p5-CGI/cgi_docs.html
 share/doc/html/p5-CGI/examples/caution.xbm
@@ -22,7 +22,6 @@ share/doc/html/p5-CGI/examples/internal_links.cgi
 share/doc/html/p5-CGI/examples/internal_links.txt
 share/doc/html/p5-CGI/examples/javascript.cgi
 share/doc/html/p5-CGI/examples/javascript.txt
-share/doc/html/p5-CGI/examples/make_links.pl
 share/doc/html/p5-CGI/examples/monty.cgi
 share/doc/html/p5-CGI/examples/monty.txt
 share/doc/html/p5-CGI/examples/multiple_forms.cgi
