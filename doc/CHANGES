@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6301 2004/06/24 18:20:03 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6302 2004/06/24 18:31:51 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3047,3 +3047,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added freedroid-1.02 [dillo 2004-06-24]
 	Updated postgresql to 7.3.6 [darcy 2004-06-24]
 	Updated icecast to 2.0.1 [xtraeme 2004-06-24]
+	Added ccd2iso-0.9 [xtraeme 2004-06-24]
