@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/10/13 23:36:40 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2000/10/14 00:01:58 jlam Exp $
 #
 
 DISTNAME=		compat13-${MACHINE_ARCH}
@@ -36,9 +36,11 @@ PLIST_SUBST+=		COMPAT_LIBDIR=${COMPAT_LIBDIR}
 do-build:
 	${SED}	-e "s,@MACHINE_ARCH@,${MACHINE_ARCH},g" \
 		-e "s,@COMPAT_LIBDIR@,${COMPAT_LIBDIR},g" \
+		-e "s,@LDCONFIG@,${LDCONFIG},g" \
 		< ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 	${SED}	-e "s,@MACHINE_ARCH@,${MACHINE_ARCH},g" \
 		-e "s,@OBJECT_FMT@,${OBJECT_FMT},g" \
+		-e "s,@LDCONFIG@,${LDCONFIG},g" \
 		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
 do-install:
