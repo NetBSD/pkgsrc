@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/04/02 19:49:19 rh Exp $
+bin/gnome-breakout
+share/pixmaps/gnome-breakout/ball.default.0.png
+share/pixmaps/gnome-breakout/bat.default.0.png
+share/pixmaps/gnome-breakout/block.default.0.png
+share/pixmaps/gnome-breakout/block.default.die.0.png
+share/pixmaps/gnome-breakout/block.default.die.1.png
+share/pixmaps/gnome-breakout/block.default.die.2.png
+share/pixmaps/gnome-breakout/block.default.die.3.png
+share/pixmaps/gnome-breakout/block.default.die.4.png
+share/pixmaps/gnome-breakout/block.default.die.5.png
+share/pixmaps/gnome-breakout/block.default.die.6.png
+share/pixmaps/gnome-breakout/block.default.die.7.png
+share/pixmaps/gnome-breakout/block.invincible.0.png
+share/pixmaps/gnome-breakout/powerup.score500.0.png
+share/pixmaps/gnome-breakout/title.png
+share/gnome/apps/Games/gnome-breakout.desktop
+@dirrm share/pixmaps/gnome-breakout
