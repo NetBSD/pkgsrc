@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2468 2004/11/25 20:03:46 minskim Exp $
+$NetBSD: TODO,v 1.2469 2004/11/25 20:10:33 minskim Exp $
 
 Suggested new packages
 ======================
@@ -632,7 +632,6 @@ Suggested package updates
 	o ion3-20041104
 	o ipcheck-0.219
 	o iperf-2.0.1
-	o ipgrab-0.9.9
 	o ircd-hybrid-7.0.4
 	o ircservices-5.0.42
 	o iroffer-1.309
