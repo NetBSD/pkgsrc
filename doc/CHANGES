@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2685 2003/07/06 07:50:11 uebayasi Exp $
+$NetBSD: CHANGES,v 1.2686 2003/07/06 08:52:52 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2680,3 +2680,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xplanet to 1.0.1 [wulf 2003-07-05]
 	Updated ccache to 2.2 [chris 2003-07-05]
 	Updated monafonts to 2.22nb1 [uebayasi 2003-07-06]
+	Updated GWLib to 0.5.3 [rh 2003-07-06]
+	Updated gworkspace to 0.5.3 [rh 2003-07-06]
