@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9196 2005/02/19 00:27:05 wiz Exp $
+$NetBSD: CHANGES,v 1.9197 2005/02/19 00:46:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -943,5 +943,3 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated courier-imap to 4.0.1 [jlam 2005-02-18]
 	Updated sqwebmail to 5.0.0 [jlam 2005-02-18]
 	Updated gnutls to 1.2.0 [wiz 2005-02-19]
-	Updated docbook-website to 2.5.0 [wiz 2005-02-19]
-	Updated netbsd-www to 1.3 [wiz 2005-02-19]
