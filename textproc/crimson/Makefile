@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2003/04/10 01:28:24 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/06/03 17:02:46 jschauma Exp $
 #
 # We use the binary distribution of crimson because otherwise we
-# have a bootstrap-loop between jakarta-ant and crimson, each of which
+# have a bootstrap-loop between apache-ant and crimson, each of which
 # uses the other.
 
 DISTNAME=	${PKGNAME}-bin
