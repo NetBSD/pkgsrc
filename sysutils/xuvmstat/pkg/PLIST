@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/19 12:15:16 wiz Exp $
+bin/xuvmstat
+share/doc/xuvmstat/LICENSE
+@dirrm share/doc/xuvmstat
