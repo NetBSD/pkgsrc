@@ -1,0 +1,19 @@
+# $NetBSD: INSTALL,v 1.1.1.1 2004/08/03 15:33:49 cube Exp $
+
+case $STAGE in
+POST-INSTALL)
+	@ECHO@ "==> Creating additional directories"
+	@MKDIR@ @RTVARDIR@ 2>/dev/null
+	@MKDIR@ @RTVARDIR@/mason_data 2>/dev/null
+	@MKDIR@ @RTVARDIR@/session_data 2>/dev/null
+	@MKDIR@ @RTLOCALDIR@ 2>/dev/null
+	@MKDIR@ @RTLOCALDIR@/etc 2>/dev/null
+	@MKDIR@ @RTLOCALDIR@/lib 2>/dev/null
+	@MKDIR@ @RTLOCALDIR@/po 2>/dev/null
+	@MKDIR@ @RTLOCALDIR@/html 2>/dev/null
+	@ECHO@ "==> Fixing permissions"
+	@CHMOD@ 0770 @RTVARDIR@/mason_data @RTVARDIR@/session_data 2>/dev/null
+	@CHOWN@ @WEBUSER@ @RTVARDIR@/mason_data @RTVARDIR@/session_data 2>/dev/null
+	@CHGRP@ @WEBGROUP@ @RTVARDIR@/mason_data @RTVARDIR@/session_data 2>/dev/null
+	;;
+esac
