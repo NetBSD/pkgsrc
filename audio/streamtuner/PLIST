@@ -1,0 +1,35 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/16 05:58:49 salo Exp $
+bin/streamtuner
+include/streamtuner/st_category.h
+include/streamtuner/st_dialog.h
+include/streamtuner/st_handler.h
+include/streamtuner/st_handler_field.h
+include/streamtuner/st_handlers.h
+include/streamtuner/st_programs.h
+include/streamtuner/st_re.h
+include/streamtuner/st_state.h
+include/streamtuner/st_stream.h
+include/streamtuner/st_transfer.h
+include/streamtuner/st_version.h
+include/streamtuner/streamtuner.h
+lib/pkgconfig/streamtuner.pc
+lib/streamtuner/plugins/shoutcast.la
+lib/streamtuner/plugins/shoutcast.so
+man/man1/streamtuner.1
+share/streamtuner/themes/Default/AUTHORS
+share/streamtuner/themes/Default/browse-prelight.png
+share/streamtuner/themes/Default/browse.png
+share/streamtuner/themes/Default/record-prelight.png
+share/streamtuner/themes/Default/record.png
+share/streamtuner/themes/Default/reload-prelight.png
+share/streamtuner/themes/Default/reload.png
+share/streamtuner/themes/Default/stop-prelight.png
+share/streamtuner/themes/Default/stop.png
+share/streamtuner/themes/Default/tune_in-prelight.png
+share/streamtuner/themes/Default/tune_in.png
+@dirrm share/streamtuner/themes/Default
+@dirrm share/streamtuner/themes
+@dirrm share/streamtuner
+@dirrm lib/streamtuner/plugins
+@dirrm lib/streamtuner
+@dirrm include/streamtuner

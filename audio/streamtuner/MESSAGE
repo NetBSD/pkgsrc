@@ -1,0 +1,15 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/02/16 05:58:49 salo Exp $
+
+You may wish to install a MP3 player to listen to streams from streamtuner
+(if you don't have one already).  You can try one of the following packages:
+
+  audio/amp         another mp3 player
+  audio/mp3blaster  MP3 console curses-based player
+  audio/mpg123      Command-line player for mpeg layer 1, 2 and 3 audio
+  audio/mpg321      Free replacement for mpg123
+  audio/splay       Audio player/decoder that decodes MPEG Layer I,II,III
+                    and WAV files
+  audio/xmms        X Multimedia System --- An audio player with a Winamp GUI
+
+===========================================================================
