@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.34 2002/12/06 13:23:15 wiz Exp $
+$NetBSD: TODO,v 1.35 2002/12/06 16:51:38 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -95,7 +95,6 @@ Suggested package updates
 	o cyrus-imapd-2.1.10
 	o dante-1.1.13
 	o db4-4.1.24
-	o dopewars-1.5.8
 	o dylan-*-2.3.9
 	o easytags-0.25
 	o eggdrop-1.6.13
