@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/03 11:29:34 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2001/05/02 19:34:54 wiz Exp $
 #
 
 DISTNAME=	poink-1.5
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://zuntum.net/distfiles/
 
 MAINTAINER=	zuntum@netbsd.org
-COMMENT=	nosuid, absolutery secure version of ping utility
+COMMENT=	nosuid, absolutely secure version of ping utility
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/poink ${PREFIX}/bin
