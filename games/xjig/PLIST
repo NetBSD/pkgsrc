@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:56:59 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/02/26 04:07:49 jschauma Exp $
 bin/xjig
-man/cat1/xjig.0
+${IMAKE_MAN_DIR}/xjig.${IMAKE_MANNEWSUFFIX}
 lib/xjig/tina.gif
