@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.4 1998/11/05 05:32:19 mycroft Exp $
+$NetBSD: patch-ae,v 1.5 1999/10/04 20:57:01 is Exp $
 
---- src/generic_prototypes.h.orig	Tue Jan 27 11:56:28 1998
-+++ src/generic_prototypes.h	Wed Nov  4 23:48:53 1998
+--- sdr/src/generic_prototypes.h.orig	Tue Jan 27 11:56:28 1998
++++ sdr/src/generic_prototypes.h	Wed Nov  4 23:48:53 1998
 @@ -37,7 +37,7 @@
  #endif
  

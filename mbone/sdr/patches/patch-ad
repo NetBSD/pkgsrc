@@ -1,6 +1,5 @@
-$NetBSD: patch-ad,v 1.6 1999/01/01 07:58:29 garbled Exp $
---- src/sd_listen.c.orig	Wed Oct  7 04:18:56 1998
-+++ src/sd_listen.c	Thu Dec 31 22:59:57 1998
+--- sdr/src/sd_listen.c.orig	Fri Jul 16 15:07:27 1999
++++ sdr/src/sd_listen.c	Sat Oct  2 20:42:45 1999
 @@ -55,6 +55,9 @@
  #include <unistd.h>
  #include <fcntl.h>
@@ -11,8 +10,8 @@ $NetBSD: patch-ad,v 1.6 1999/01/01 07:58:29 garbled Exp $
  #include <sys/types.h>
  #include <sys/stat.h>
  #include <setjmp.h>
-@@ -484,10 +487,18 @@
-       }
+@@ -515,10 +518,18 @@
+ /* set p to point to line following "n=....\nk=...\n" */
  
        if (strncmp(k1, "k=", 2)==0) {
 +#ifdef HAVE_SYS_INTTYPES_H
@@ -31,7 +30,7 @@ $NetBSD: patch-ad,v 1.6 1999/01/01 07:58:29 garbled Exp $
            key[0]='\0';
          }
  	p=strchr(k1, '\n')+1;
-@@ -1344,7 +1355,11 @@
+@@ -1383,7 +1394,11 @@
      if (cli) {
        init_cli();
        inChannel = fileno(stdin);
@@ -43,9 +42,9 @@ $NetBSD: patch-ad,v 1.6 1999/01/01 07:58:29 garbled Exp $
      }
  #endif
  
-@@ -1509,7 +1524,11 @@
-     char buf[MAXADSIZE];
-     char debugbuf[MAXADSIZE];
+@@ -1507,7 +1522,11 @@
+     unsigned long src, hfrom;
+     unsigned long endtime;
  
 +#ifdef HAVE_SYS_INTTYPES_H
 +    intptr_t ix = rfd2sock[PTOI(fd)];
@@ -53,5 +52,5 @@ $NetBSD: patch-ad,v 1.6 1999/01/01 07:58:29 garbled Exp $
      int ix = rfd2sock[PTOI(fd)];
 +#endif
  
-     memset(new_data,       0, MAXADSIZE);
-     memset(aid,            0, AIDLEN);
+     writelog(printf("entered recv_packets\n");)
+ 

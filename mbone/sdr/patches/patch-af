@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.3 1998/11/05 05:32:19 mycroft Exp $
+$NetBSD: patch-af,v 1.4 1999/10/04 20:57:01 is Exp $
 
 --- /dev/null	Wed Nov  4 23:28:48 1998
-+++ src/plugins/sdr2.plugin.S53.image.imm	Wed Nov  4 23:48:53 1998
++++ sdr/src/plugins/sdr2.plugin.S53.image.imm	Wed Nov  4 23:48:53 1998
 @@ -0,0 +1,5 @@
 +media:image
 +proto:MDP

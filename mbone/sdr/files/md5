@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.4 1998/11/05 05:32:19 mycroft Exp $
+$NetBSD: md5,v 1.5 1999/10/04 20:57:00 is Exp $
 
-MD5 (sdr-2.5.8.tar.gz) = 6894a0dcf96ee3cc8bb722f7a1c338fb
+MD5 (sdr-2.7.tar.gz) = da28a7a960007af129673997da945c0d
