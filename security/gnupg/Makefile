@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/05/31 13:30:02 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2001/06/04 23:41:36 wiz Exp $
 #
 
 DISTNAME=	gnupg-1.0.6
@@ -30,12 +30,12 @@ BUILD_DEFS+=	USE_IDEA
 # use of IDEA as crypto function
 LICENCE=        fee-based-commercial-use
 MASTER_SITES+=	ftp://ftp.gnupg.org/pub/gcrypt/contrib/
-DISTFILES+=	idea.c
+DISTFILES+=	idea.c.20010605
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 PLIST_SUBST+=	IDEA=""
 
 post-extract:
-		${CP} ${_DISTDIR}/idea.c ${WRKSRC}
+		${CP} ${_DISTDIR}/idea.c.20010605 ${WRKSRC}/idea.c
 
 post-build:
 		cd ${WRKSRC} && 				\
