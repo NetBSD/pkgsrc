@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 #
-# $NetBSD: port2pkg.pl,v 1.6 2000/12/15 14:58:44 wiz Exp $
+# $NetBSD: port2pkg.pl,v 1.7 2001/01/04 20:22:47 sommerfeld Exp $
 #
 
 require 'getopts.pl';
@@ -69,7 +69,8 @@ sub fix_new_ports {
 	}
 	unlink <$pkgdir/files/patch*>;
 	unlink("$pkgdir/distinfo");
-	mkdir("$pkgdir/patches");
+	mkdir("$pkgdir/patches",0777);
+	mkdir("$pkgdir/files",0777);
 }
 
 sub read_Makefile {
