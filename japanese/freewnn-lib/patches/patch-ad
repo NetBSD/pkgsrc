@@ -1,11 +1,23 @@
-$NetBSD: patch-ad,v 1.1 2002/02/28 17:45:45 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2002/03/22 03:48:55 uebayasi Exp $
 
---- ./configure.in.orig	Tue Apr  6 12:12:19 1999
-+++ ./configure.in	Thu Sep  2 14:57:48 1999
-@@ -55,5 +55,5 @@
+--- configure.in.orig	Tue Apr  6 12:12:19 1999
++++ configure.in
+@@ -54,12 +54,17 @@
+         CPP=/lib/cpp
      fi
      ;;
 -"FreeBSD")
-+"FreeBSD" | "NetBSD" | "OpenBSD")
++"FreeBSD" | "OpenBSD")
      CCOPTIONS="-DCSRG_BASED"
      CDEBUGFLAGS="-O2 -fno-strength-reduce"
+     if test -x /usr/libexec/cpp; then
+         CPP=/usr/libexec/cpp
+     fi
++    ;;
++"NetBSD")
++    CCOPTIONS="-DCSRG_BASED"
++    CDEBUGFLAGS="-O2 -fno-strength-reduce"
++    CPP=/usr/bin/cpp
+     ;;
+ "SunOS")
+     if test $CC = gcc; then
