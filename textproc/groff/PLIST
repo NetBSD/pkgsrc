@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/04/16 08:59:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/05/07 13:18:25 wiz Exp $
 bin/addftinfo
 bin/afmtodit
 bin/eqn
@@ -281,6 +281,7 @@ share/groff/${PKGVERSION}/font/devdvi/MI
 share/groff/${PKGVERSION}/font/devdvi/S
 share/groff/${PKGVERSION}/font/devdvi/SA
 share/groff/${PKGVERSION}/font/devdvi/SB
+share/groff/${PKGVERSION}/font/devdvi/SC
 share/groff/${PKGVERSION}/font/devdvi/TB
 share/groff/${PKGVERSION}/font/devdvi/TBEC
 share/groff/${PKGVERSION}/font/devdvi/TBI
@@ -305,6 +306,7 @@ share/groff/${PKGVERSION}/font/devdvi/generate/texi.map
 share/groff/${PKGVERSION}/font/devdvi/generate/texmi.map
 share/groff/${PKGVERSION}/font/devdvi/generate/texr.map
 share/groff/${PKGVERSION}/font/devdvi/generate/texsy.map
+share/groff/${PKGVERSION}/font/devdvi/generate/textex.map
 share/groff/${PKGVERSION}/font/devdvi/generate/textt.map
 share/groff/${PKGVERSION}/font/devhtml/B
 share/groff/${PKGVERSION}/font/devhtml/BI
@@ -393,6 +395,7 @@ share/groff/${PKGVERSION}/font/devps/CBI
 share/groff/${PKGVERSION}/font/devps/CI
 share/groff/${PKGVERSION}/font/devps/CR
 share/groff/${PKGVERSION}/font/devps/DESC
+share/groff/${PKGVERSION}/font/devps/EURO
 share/groff/${PKGVERSION}/font/devps/HB
 share/groff/${PKGVERSION}/font/devps/HBI
 share/groff/${PKGVERSION}/font/devps/HI
@@ -419,6 +422,7 @@ share/groff/${PKGVERSION}/font/devps/ZCMI
 share/groff/${PKGVERSION}/font/devps/ZD
 share/groff/${PKGVERSION}/font/devps/ZDR
 share/groff/${PKGVERSION}/font/devps/download
+share/groff/${PKGVERSION}/font/devps/freeeuro.pfa
 share/groff/${PKGVERSION}/font/devps/generate/Makefile
 share/groff/${PKGVERSION}/font/devps/generate/afmname
 share/groff/${PKGVERSION}/font/devps/generate/dingbats.map
@@ -443,6 +447,7 @@ share/groff/${PKGVERSION}/tmac/a4.tmac
 share/groff/${PKGVERSION}/tmac/an-old.tmac
 share/groff/${PKGVERSION}/tmac/an.tmac
 share/groff/${PKGVERSION}/tmac/andoc.tmac
+share/groff/${PKGVERSION}/tmac/composite.tmac
 share/groff/${PKGVERSION}/tmac/cp1047.tmac
 share/groff/${PKGVERSION}/tmac/doc-old.tmac
 share/groff/${PKGVERSION}/tmac/doc.tmac
@@ -450,9 +455,14 @@ share/groff/${PKGVERSION}/tmac/dvi.tmac
 share/groff/${PKGVERSION}/tmac/e.tmac
 share/groff/${PKGVERSION}/tmac/ec.tmac
 share/groff/${PKGVERSION}/tmac/eqnrc
+share/groff/${PKGVERSION}/tmac/europs.tmac
+share/groff/${PKGVERSION}/tmac/html-end.tmac
 share/groff/${PKGVERSION}/tmac/html.tmac
 share/groff/${PKGVERSION}/tmac/hyphen.us
+share/groff/${PKGVERSION}/tmac/hyphenex.us
 share/groff/${PKGVERSION}/tmac/latin1.tmac
+share/groff/${PKGVERSION}/tmac/latin2.tmac
+share/groff/${PKGVERSION}/tmac/latin9.tmac
 share/groff/${PKGVERSION}/tmac/lbp.tmac
 share/groff/${PKGVERSION}/tmac/lj4.tmac
 share/groff/${PKGVERSION}/tmac/m.tmac
@@ -477,6 +487,7 @@ share/groff/${PKGVERSION}/tmac/mom.tmac
 share/groff/${PKGVERSION}/tmac/ms.tmac
 share/groff/${PKGVERSION}/tmac/mse.tmac
 share/groff/${PKGVERSION}/tmac/om.tmac
+share/groff/${PKGVERSION}/tmac/papersize.tmac
 share/groff/${PKGVERSION}/tmac/pic.tmac
 share/groff/${PKGVERSION}/tmac/ps.tmac
 share/groff/${PKGVERSION}/tmac/psatk.tmac
