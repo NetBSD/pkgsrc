@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2003/08/04 15:32:30 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/03/09 16:42:24 seb Exp $
 bin/updatenews
-info/NewsCache.info
 man/man5/newscache.conf.5
 man/man8/NewsCache.8
 man/man8/NewsCacheClean.8
