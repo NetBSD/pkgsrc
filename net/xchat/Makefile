@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/09/01 13:50:51 wennmach Exp $
+# $NetBSD: Makefile,v 1.15 2000/09/04 17:38:48 tron Exp $
 
 DISTNAME=	xchat-1.5.7
 CATEGORIES=	net x11 gnome
@@ -11,16 +11,14 @@ HOMEPAGE=	http://xchat.org/
 DEPENDS+=	gnome-core>=1.0.55:../../x11/gnome-core
 DEPENDS+=	python>=1.5.2:../../lang/python
 
-GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_PERL5=	yes
 USE_X11BASE=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ENV+=	CPPFLAGS=-I${LOCALBASE}/include
 
 pre-configure:
 	@${TOUCH} ${WRKSRC}/stamp-h.in
-
-#post-configure:
-#	@cd ${WRKSRC} && ${LN} -fs myconfig.h config.h
 
 post-install:
 	${MKDIR} ${PREFIX}/share/doc/xchat
