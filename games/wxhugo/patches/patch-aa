@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/05/22 23:35:39 dillo Exp $
+$NetBSD: patch-aa,v 1.2 2005/01/10 16:26:34 dillo Exp $
 
---- Makefile.orig	Thu Jan 15 19:23:19 2004
+--- Makefile.orig	2004-08-07 21:32:02.000000000 +0200
 +++ Makefile
 @@ -15,12 +15,12 @@
  # (The wxWindows file locations should really be taken from wx-config.)
@@ -13,11 +13,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/05/22 23:35:39 dillo Exp $
  # If a working libmikmod.so has been compiled on the runtime system
  # and the wxGTK library is installed:
 -LDFLAGS = `wx-config --libs` -lgtk -lgdk -lmikmod
-+LDFLAGS = `wx-config --libs` -lmikmod
++LDFLAGS += `wx-config --libs` -lmikmod
  STATICLIBS =
  # Otherwise, use these LDFLAGS and STATICLIBS:
  #LDFLAGS = -lwx_gtk -lgtk -lgdk -lpthread -lmikmod
-@@ -34,27 +34,28 @@ MYCODEDIR := .
+@@ -34,7 +34,7 @@ MYCODEDIR := .
  
  # Directories to search for header files
  
@@ -26,74 +26,35 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/05/22 23:35:39 dillo Exp $
  
  # makemake variables
  
--LINKER       := gcc
-+LINKER       := ${CC}
- DEPENDFLAGS  := ${SEARCHDIRS}
- TOUCHHEADERS := ${MYCODEDIR}/*.h
+@@ -44,17 +44,18 @@ TOUCHHEADERS := ${MYCODEDIR}/*.h
  
  # C
  
 -CC     := gcc
 +#CC     := gcc
  # Debugging:
- #CFLAGS  = ${DEPENDFLAGS} -D__WXGTK__ -DWXWINDOWS -DNO_WXCARET -fwritable-strings -fno-rtti -g3 -Wall `wx-config --cflags`
+ #CFLAGS  = ${DEPENDFLAGS} -D__WXGTK__ -DWXWINDOWS -DNO_WXCARET -fwritable-strings -g3 -Wall `wx-config --cflags`
  # Release build:
--CFLAGS  = ${DEPENDFLAGS} -D__WXGTK__ -DWXWINDOWS -DNO_WXCARET -fwritable-strings -fno-rtti -O2 -Wall `wx-config --cflags`
-+MY_CFLAGS  = ${DEPENDFLAGS} -D__WXGTK__ -DWXWINDOWS -DNO_WXCARET -fwritable-strings -fno-rtti -O2 -Wall `wx-config --cflags`
-+CFLAGS+=${MY_CFLAGS}
+-CFLAGS  = ${DEPENDFLAGS} -D__WXGTK__ -DWXWINDOWS -DNO_WXCARET -fwritable-strings -O2 -Wall `wx-config --cflags`
++CPPFLAGS  += ${DEPENDFLAGS} -D__WXGTK__ -DWXWINDOWS -DNO_WXCARET
++CFLAGS  += -fwritable-strings `wx-config --cflags`
  
  # C++
  
 -CXX      := g++
 +#CXX      := g++
  #CXXFLAGS  = ${DEPENDFLAGS}
--CXXFLAGS = ${CFLAGS}
-+CXXFLAGS+=${MY_CFLAGS}
+-CXXFLAGS = ${CFLAGS} -fno-rtti
++CXXFLAGS += ${CFLAGS} -fno-rtti
  
  %.o : %.cpp
  	${CXX} ${CPPFLAGS} -c $< ${CXXFLAGS}
-@@ -133,31 +134,28 @@ jdepend:
+@@ -64,7 +65,7 @@ CXXFLAGS = ${CFLAGS} -fno-rtti
  
- # DO NOT DELETE THIS LINE -- makemake depends on it.
+ # C preprocessor
  
--../source/he.o: ../source/hdinter.h ../source/heheader.h ../source/htokens.h /usr/include/ctype.h /usr/include/stdio.h /usr/include/stdlib.h /usr/include/string.h /usr/include/time.h /usr/include/unistd.h
-+../source/he.o: ../source/hdinter.h ../source/heheader.h ../source/htokens.h
+-CPPFLAGS = 
++#CPPFLAGS = 
  
--../source/hebuffer.o: ../source/hdinter.h ../source/heheader.h ../source/htokens.h /usr/include/ctype.h /usr/include/stdio.h /usr/include/stdlib.h /usr/include/string.h /usr/include/time.h /usr/include/unistd.h
-+../source/hebuffer.o: ../source/hdinter.h ../source/heheader.h ../source/htokens.h
+ # linker
  
--../source/heexpr.o: ../source/hdinter.h ../source/heheader.h ../source/htokens.h /usr/include/ctype.h /usr/include/stdio.h /usr/include/stdlib.h /usr/include/string.h /usr/include/time.h /usr/include/unistd.h
-+../source/heexpr.o: ../source/hdinter.h ../source/heheader.h ../source/htokens.h
- 
--./hejpeg.o: ../source/hdinter.h ../source/heheader.h ../source/htokens.h ./hewx.h /usr/include/assert.h /usr/include/ctype.h /usr/include/dirent.h /usr/include/g++-3/iostream /usr/include/g++-3/iostream.h /usr/include/limits.h /usr/include/math.h /usr/include/stdio.h /usr/include/stdlib.h /usr/include/string.h /usr/include/strings.h /usr/include/sys/types.h /usr/include/time.h /usr/include/unistd.h /usr/include/wchar.h /usr/include/wctype.h
-+./hejpeg.o: ../source/hdinter.h ../source/heheader.h ../source/htokens.h ./hewx.h
- 
--../source/hemisc.o: ../source/hdinter.h ../source/heheader.h ../source/htokens.h /usr/include/ctype.h /usr/include/stdio.h /usr/include/stdlib.h /usr/include/string.h /usr/include/time.h /usr/include/unistd.h
-+../source/hemisc.o: ../source/hdinter.h ../source/heheader.h ../source/htokens.h
- 
--../source/heobject.o: ../source/hdinter.h ../source/heheader.h ../source/htokens.h /usr/include/ctype.h /usr/include/stdio.h /usr/include/stdlib.h /usr/include/string.h /usr/include/time.h /usr/include/unistd.h
-+../source/heobject.o: ../source/hdinter.h ../source/heheader.h ../source/htokens.h
- 
--../source/heparse.o: ../source/hdinter.h ../source/heheader.h ../source/htokens.h /usr/include/ctype.h /usr/include/stdio.h /usr/include/stdlib.h /usr/include/string.h /usr/include/time.h /usr/include/unistd.h
-+../source/heparse.o: ../source/hdinter.h ../source/heheader.h ../source/htokens.h
- 
--../source/heres.o: ../source/hdinter.h ../source/heheader.h ../source/htokens.h /usr/include/ctype.h /usr/include/stdio.h /usr/include/stdlib.h /usr/include/string.h /usr/include/time.h /usr/include/unistd.h
-+../source/heres.o: ../source/hdinter.h ../source/heheader.h ../source/htokens.h
- 
--../source/herun.o: ../source/hdinter.h ../source/heheader.h ../source/htokens.h /usr/include/ctype.h /usr/include/stdio.h /usr/include/stdlib.h /usr/include/string.h /usr/include/time.h /usr/include/unistd.h
-+../source/herun.o: ../source/hdinter.h ../source/heheader.h ../source/htokens.h
- 
--../source/heset.o: ../source/hdinter.h ../source/heheader.h ../source/htokens.h /usr/include/ctype.h /usr/include/stdio.h /usr/include/stdlib.h /usr/include/string.h /usr/include/time.h /usr/include/unistd.h
-+../source/heset.o: ../source/hdinter.h ../source/heheader.h ../source/htokens.h
- 
--./hesound.o: ../source/hdinter.h ../source/heheader.h ../source/htokens.h ./hewx.h /usr/include/assert.h /usr/include/ctype.h /usr/include/dirent.h /usr/include/g++-3/iostream /usr/include/g++-3/iostream.h /usr/include/limits.h /usr/include/mikmod.h /usr/include/stdio.h /usr/include/stdlib.h /usr/include/string.h /usr/include/strings.h /usr/include/sys/types.h /usr/include/time.h /usr/include/unistd.h /usr/include/wchar.h /usr/include/wctype.h 
-+./hesound.o: ../source/hdinter.h ../source/heheader.h ../source/htokens.h ./hewx.h
- 
--./hewx.o: ../source/hdinter.h ../source/heheader.h ../source/htokens.h ./hewx.h /usr/include/assert.h /usr/include/ctype.h /usr/include/dirent.h /usr/include/g++-3/iostream /usr/include/g++-3/iostream.h /usr/include/limits.h /usr/include/stdio.h /usr/include/stdlib.h /usr/include/string.h /usr/include/strings.h /usr/include/sys/types.h /usr/include/time.h /usr/include/unistd.h /usr/include/wchar.h /usr/include/wctype.h 
--
--./hewxwin.o: ../source/hdinter.h ../source/heheader.h ../source/htokens.h ./hewx.h /usr/include/assert.h /usr/include/ctype.h /usr/include/dirent.h /usr/include/g++-3/iostream /usr/include/g++-3/iostream.h /usr/include/limits.h /usr/include/stdio.h /usr/include/stdlib.h /usr/include/string.h /usr/include/strings.h /usr/include/sys/types.h /usr/include/time.h /usr/include/unistd.h /usr/include/wchar.h /usr/include/wctype.h 
--
--../source/stringfn.o: /usr/include/ctype.h /usr/include/stdio.h /usr/include/string.h
-+./hewx.o: ../source/hdinter.h ../source/heheader.h ../source/htokens.h ./hewx.h
- 
-+./hewxwin.o: ../source/hdinter.h ../source/heheader.h ../source/htokens.h ./hewx.h
