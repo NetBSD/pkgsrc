@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.10 1999/07/08 07:58:42 agc Exp $
+# $NetBSD: bsd.prefs.mk,v 1.11 1999/07/08 08:06:59 agc Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -43,7 +43,7 @@ MACHINE_GNU_ARCH?=	${GNU_ARCH.${MACHINE_ARCH}}
 LOWER_OPSYS?=		netbsd
 .elif ${OPSYS} == "SunOS"
 LOWER_VENDOR?=		sun
-LOWER_OPSYS?=		sunos
+LOWER_OPSYS?=		solaris
 .elif ${OPSYS} == "Linux"
 LOWER_OPSYS?=		linux
 .elif !defined(LOWER_OPSYS)
