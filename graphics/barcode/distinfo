@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/06/15 12:47:32 grant Exp $
+$NetBSD: distinfo,v 1.3 2004/06/27 08:50:03 seb Exp $
 
-SHA1 (barcode-0.96.tar.gz) = d567b95c325df474ebaaf9393d02e0f91781ada1
-Size (barcode-0.96.tar.gz) = 259848 bytes
-SHA1 (patch-aa) = aad4f40e0cd9f0ef428e2a5d17628518d24aff43
-SHA1 (patch-ab) = dcdd5d1dd9e4744cc78c765001579613d88aff2a
+SHA1 (barcode-0.98.tar.gz) = 15b9598bcaa67bcff1f63309d1a18840b9a12899
+Size (barcode-0.98.tar.gz) = 335658 bytes
+SHA1 (patch-aa) = eb0812ae80a65828a20021ba1e718488899c212d
+SHA1 (patch-ab) = 166fce927fdb3ce77600f3fbab3b28faa7c9d340
+SHA1 (patch-ac) = 9e0ea49bb4b647d6daeb9666f0546dd0101fb507
