@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.514 2000/07/20 18:13:51 dmcmahill Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.515 2000/07/21 06:30:04 rh Exp $
 #
 # This file is in the public domain.
 #
@@ -1916,6 +1916,10 @@ CLEAR_DIRLIST?=	NO
 update:
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG}				\
 		"${_PKGSRC_IN}> Resuming update for ${PKGNAME}"
+.if ${REINSTALL} != "NO"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+		${MAKE} ${MAKEFLAGS} deinstall DEINSTALLDEPENDS=ALL
+.endif
 .else
 RESUMEUPDATE?=	NO
 CLEAR_DIRLIST?=	YES
@@ -1925,24 +1929,17 @@ update:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 		${MAKE} ${MAKEFLAGS} deinstall DEINSTALLDEPENDS=ALL
 .endif
-.if ${REINSTALL} == "NO"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 		${MAKE} ${MAKEFLAGS} ${DEPENDS_TARGET} KEEP_WRKDIR=YES
-.else
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} reinstall
-.endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	[ ! -s ${DDIR} ] || for dep in `${CAT} ${DDIR}` ; do		\
 		(if cd ../.. && cd "$${dep}" ; then				\
 			${ECHO_MSG} "${_PKGSRC_IN}> Installing in $${dep}" &&	\
-			if [ "${RESUMEUPDATE}" = "NO" ] ; then		\
-				${MAKE} ${MAKEFLAGS} deinstall;	\
+			if [ "${RESUMEUPDATE}" = "NO" -o 		\
+			     "${REINSTALL}" != "NO" ] ; then		\
+				${MAKE} ${MAKEFLAGS} deinstall;		\
 			fi &&						\
-			if [ "${REINSTALL}" = "NO" ] ; then		\
-				${MAKE} ${MAKEFLAGS} ${DEPENDS_TARGET};\
-			else						\
-				${MAKE} ${MAKEFLAGS} reinstall;	\
-			fi ;						\
+			${MAKE} ${MAKEFLAGS} ${DEPENDS_TARGET};		\
 		else							\
 			${ECHO_MSG} "${_PKGSRC_IN}> Skipping removed directory $${dep}";\
 		fi) ;							\
@@ -1971,6 +1968,10 @@ clean-update:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 		${MAKE} ${MAKEFLAGS} clean update-dirlist		\
 		DIRLIST="`${CAT} ${DDIR}`" PKGLIST="`${CAT} ${DLIST}`"
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG}				\
+		"${_PKGSRC_IN}> Warning: preserved leftover directory list.  Your next";\
+		${ECHO_MSG} "${_PKGSRC_IN}>          \`\`${MAKE} update'' may fail.  It is advised to use";\
+		${ECHO_MSG} "${_PKGSRC_IN}>          \`\`${MAKE} update REINSTALL=YES'' instead!"
 .endif
 
 
