@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8085 2004/11/27 18:18:11 wiz Exp $
+$NetBSD: CHANGES,v 1.8086 2004/11/27 20:29:25 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5546,3 +5546,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated rss2html to 0.7 [wiz 2004-11-27]
 	Updated classpath to 0.11 [wiz 2004-11-27]
 	Updated classpath-gui to 0.11 [wiz 2004-11-27]
+	Added qca-tls-1.0 [jdolecek 2004-11-27]
