@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/08 14:35:57 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/08 15:30:08 grant Exp $
 #
 
 DISTNAME=	faad2-1.1
@@ -35,7 +35,7 @@ pre-configure:
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} == "SunOS")
+.if ${OPSYS} == "SunOS"
 post-configure:
 	${CP} ${WRKSRC}/common/faad/getopt.* ${WRKSRC}/frontend
 	${CP} ${WRKSRC}/frontend/Makefile ${WRKSRC}/frontend/Makefile.orig
