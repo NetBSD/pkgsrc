@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2003/07/24 06:29:42 grant Exp $
+$NetBSD: distinfo,v 1.8 2004/06/26 10:25:18 grant Exp $
 
 SHA1 (netscape/7.1/english/netscape-i686-pc-linux-gnu-sea.tar.gz) = 11e95b3c53fb92dd936ab1b07fd50c66a0d59c38
 Size (netscape/7.1/english/netscape-i686-pc-linux-gnu-sea.tar.gz) = 17228433 bytes
-SHA1 (patch-aa) = afdb1766ebdbf914eb9688cc4782f8275db3aeb2
+SHA1 (patch-aa) = 3105637b55b45326fcfa2ba1f2f3bade343e38b1
