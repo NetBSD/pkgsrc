@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/01/28 02:05:36 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2001/02/05 09:01:02 tron Exp $
 #
 
 DISTNAME=		cups-${VERS}-1-source
@@ -18,7 +18,7 @@ HOMEPAGE=		http://www.cups.org/
 
 CONFLICTS+=		LPRng-[0-9]* LPRng-core-[0-9]*
 
-BUILD_DEPENDS+=		autoconf:../../devel/autoconf
+BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		png>=1.0.6:../../graphics/png
 DEPENDS+=		tiff-*:../../graphics/tiff
@@ -85,7 +85,7 @@ post-patch:
 	cd ${WRKSRC}/scripts; ${CHMOD} +x netbsd sysv
 
 pre-configure:
-	cd ${WRKSRC} && autoconf
+	cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf
 
 post-build:
 	${SED}	-e "s,@CUPS_USER@,${CUPS_USER},g"			\

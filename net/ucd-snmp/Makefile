@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2001/01/31 00:33:23 hubertf Exp $
+# $NetBSD: Makefile,v 1.28 2001/02/05 09:01:02 tron Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/04/06 20:50:31 andreas Exp
 #
 
@@ -16,7 +16,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=net-snmp/} \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://net-snmp.sourceforge.net/
 
-BUILD_DEPENDS+=	autoreconf:../../devel/autoconf
+BUILD_DEPENDS+=	${LOCALBASE}/bin/autoremake:../../devel/autoconf
 
 BUILD_DEFS+=	USE_INET6
 
@@ -50,7 +50,7 @@ post-extract:
 	@${ECHO} 'int allow_severity, deny_severity;' >${WRKSRC}/snmplib/libwrap.c
 
 pre-configure:
-	@(cd ${WRKSRC} && autoreconf)
+	@(cd ${WRKSRC} && ${LOCALBASE}/bin/autoremake)
 
 post-build:
 	${SED} 's,@PREFIX@,${PREFIX},g' < ${FILESDIR}/snmpd.sh > ${WRKDIR}/snmpd
