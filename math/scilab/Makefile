@@ -1,23 +1,17 @@
-# $NetBSD: Makefile,v 1.53 2004/06/06 04:29:17 schmonz Exp $
+# $NetBSD: Makefile,v 1.54 2004/07/15 04:00:46 dmcmahill Exp $
 #
 
 DISTNAME=	${SCIBASE}.src
 PKGNAME=	${SCIBASE}
-PKGREVISION=	3
 CATEGORIES=	math
-MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Projects/Meta2/Scilab/distributions/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX}  scicos.tar.gz scicos_blocks.tar.gz
+MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Scilab/distributions/
 
 MAINTAINER=	dmcmahill@NetBSD.org
-HOMEPAGE=	http://www-rocq.inria.fr/scilab/
+HOMEPAGE=	http://www.scilab.org/
 COMMENT=	High-level scientific math programming environment with graphics
 
-DIST_SUBDIR=	${SCIBASE}
-SCIBASE=	scilab-2.7
+SCIBASE=	scilab-3.0
 WRKSRC=		${WRKDIR}/${SCIBASE}
-
-SITES_scicos.tar.gz=		ftp://ftp.inria.fr/INRIA/Projects/Meta2/Scilab/misc/
-SITES_scicos_blocks.tar.gz=	ftp://ftp.inria.fr/INRIA/Projects/Meta2/Scilab/misc/
 
 #needs FPC code not found in older versions of NetBSD
 NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
@@ -52,6 +46,8 @@ PLIST_SUBST+=		SCIBASE=${SCIBASE}
 
 UNBUILDLINK_FILES+=	Makemex config/configuration config/Makeso.incl
 
+BUILDLINK_DEPMETHOD.sablotron=	build
+
 .include "../../mk/bsd.prefs.mk"
 
 .if (${MACHINE_ARCH} == "alpha")
@@ -69,18 +65,20 @@ pre-fetch:
 .endif
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
-post-extract:
-.for f in scicos scicos_blocks
-	@extract_file=${DISTDIR}/${DIST_SUBDIR}/${f}.tar.gz ; export extract_file ; \
-		cd ${WRKSRC}/macros/${f} && ${EXTRACT_CMD}
-.endfor
+#post-extract:
+#.for f in scicos scicos_blocks
+#	@extract_file=${DISTDIR}/${DIST_SUBDIR}/${f}.tar.gz ; export extract_file ; \
+#		cd ${WRKSRC}/macros/${f} && ${EXTRACT_CMD}
+#.endfor
 
 # clean up any possible leftovers from 'make test' so that our PLIST
 # will still be right.  Also clean up a reference to WRKSRC.
 pre-install:
 	cd ${WRKSRC}/tests && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} distclean
 	cd ${WRKSRC}/examples && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} distclean
-	mv ${WRKSRC}/maple/maple2scilab.mpl ${WRKSRC}/maple/maple2scilab.mpl.bak
+	${FIND} ${WRKSRC}/tests -name \*.blsav -exec ${RM} {} \;
+	${FIND} ${WRKSRC}/examples -name \*.blsav -exec ${RM} {} \;
+	${MV} ${WRKSRC}/maple/maple2scilab.mpl ${WRKSRC}/maple/maple2scilab.mpl.bak
 	${SED} 's;${WRKSRC};${PREFIX}/lib/${SCIBASE};g' ${WRKSRC}/maple/maple2scilab.mpl.bak > \
 		${WRKSRC}/maple/maple2scilab.mpl
 	${RM} -f ${WRKSRC}/maple/maple2scilab.mpl.bak
@@ -102,11 +100,12 @@ GCC_REQD+=		2.95.3
 do-test:
 	SCI=0 && unset SCI && cd ${WRKSRC}/tests && \
 		${MAKE_ENV} ${MAKE_PROGRAM} tests 2>&1 | \
-		 tee ${WRKDIR}/tests.log
+		 ${TEE} ${WRKDIR}/tests.log
 	SCI=0 && unset SCI && cd ${WRKSRC}/examples && \
 		${MAKE_ENV} ${MAKE_PROGRAM} tests 2>&1 | \
-		tee ${WRKDIR}/examples.log
+		${TEE} ${WRKDIR}/examples.log
 
 .include "../../parallel/pvm3/buildlink3.mk"
+.include "../../textproc/sablotron/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
