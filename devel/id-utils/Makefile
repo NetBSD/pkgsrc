@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/09/27 23:17:55 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2001/10/03 15:28:56 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1996/11/18 10:22:47 asami Exp
 #
 
@@ -31,13 +31,14 @@ EMACS=			${LOCALBASE}/bin/emacs
 BUILD_DEPENDS+=		emacs-[0-9]*:../../editors/emacs
 .endif
 
-# we end-up installing .el file there whenever we use emacs or xemacs
-LISPDIR?=		share/emacs/site-lisp
 # install byte-compiled file here whenever we use emacs or xemacs...
 .if defined(USE_EMACS) || defined(USE_XEMACS)
+# we end-up installing .el file there whenever we use emacs or xemacs
+LISPDIR?=		share/emacs/site-lisp
 CLISPDIR=		${LISPDIR}
 .else
 # ...or don't install it at all
+LISPDIR?=		'@comment '
 CLISPDIR?=		'@comment '
 .endif
 # if not already, set this to the *full* pathname to false command
