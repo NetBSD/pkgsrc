@@ -1,0 +1,37 @@
+$NetBSD: patch-an,v 1.1 2003/04/15 00:02:26 heinz Exp $
+
+--- configure.in.orig	Fri Mar 28 22:25:56 2003
++++ configure.in
+@@ -1,4 +1,9 @@
+ AC_INIT
++AC_ARG_ENABLE(ssl,
++	AC_HELP_STRING([--enable-ssl],
++		[build spamc with ssl support (default is NO)]),
++	[with_ssl=${enableval:-no}],
++	[with_ssl=${enableval:-no}])
+ AC_CONFIG_SRCDIR([Makefile.PL])
+ AC_CONFIG_HEADER(config.h)
+ 
+@@ -41,8 +46,12 @@
+ dnl ----------------------------------------------------------------------
+ 
+ AC_CHECK_LIB(socket, socket)
+-AC_CHECK_LIB(crypto, CRYPTO_lock)
+-AC_CHECK_LIB(ssl, SSL_CTX_free,,,-lcrypto)
++if test $with_ssl = yes ; then
++	AC_CHECK_LIB(crypto, CRYPTO_lock,[SSLLIBS="-lcrypto $SSLLIBS"])
++	AC_CHECK_LIB(ssl, SSL_CTX_free,[SSLLIBS="-lssl $SSLLIBS"],,-lcrypto)
++else
++	SSLLIBS=""
++fi
+ AC_CHECK_LIB(inet, connect)
+ AC_CHECK_LIB(nsl, t_accept)
+ AC_CHECK_LIB(dl, dlopen)
+@@ -125,6 +134,7 @@
+ # we cheat, since we *know* we have Perl installed ;)
+ CCDLFLAGS=`perl -e 'use Config; print $Config::Config{ccdlflags}'`
+ LDDLFLAGS=`perl -e 'use Config; print $Config::Config{lddlflags}'`
++AC_SUBST(SSLLIBS)
+ AC_SUBST(CCDLFLAGS)
+ AC_SUBST(LDDLFLAGS)
+ AC_SUBST(HAVE_SHUT_RD)

@@ -1,14 +1,14 @@
-$NetBSD: patch-ae,v 1.3 2003/02/02 19:38:40 heinz Exp $
+$NetBSD: patch-ae,v 1.4 2003/04/15 00:02:25 heinz Exp $
 
---- spamd/spamd.raw.orig	Fri Jan 31 15:49:03 2003
+--- spamd/spamd.raw.orig	Fri Mar 28 22:26:44 2003
 +++ spamd/spamd.raw
-@@ -837,7 +837,8 @@
+@@ -979,7 +979,8 @@
  use POSIX 'setsid';
  sub daemonize
  {
--    $0 = join(' ', $0, @ARGV) unless($opt{'debug'}); # pretty command line in ps
+-    $0 = join(' ', $0, @ARGV) unless($opt{'debug'});; # pretty command line in ps
 +    # no pretty 'ps' command line (easier for NetBSD rc script)
-+    # $0 = join(' ', $0, @ARGV) unless($opt{'debug'}); # pretty command line in ps
++    # $0 = join(' ', $0, @ARGV) unless($opt{'debug'});; # pretty command line in ps
      chdir '/' or die "Can't chdir to '/': $!";
      $SIG{__WARN__} = sub { logmsg($_[0]); };
      open STDIN,'/dev/null' or die "Can't read '/dev/null': $!";
