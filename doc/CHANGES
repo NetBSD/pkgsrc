@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2989 2003/08/04 17:30:15 jtb Exp $
+$NetBSD: CHANGES,v 1.2990 2003/08/05 03:38:19 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3198,3 +3198,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated RScheme to 0.7.3.2 [jtb 2003-08-04]
 	Updated smalltalk to 2.1.4 [jtb 2003-08-04]
 	Updated hdf5 to 1.6.0 [jtb 2003-08-04]
+	Added libdvdplay-1.0.1 [wulf 2003-08-05]
