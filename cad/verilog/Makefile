@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2002/02/08 01:48:31 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.13 2002/12/15 01:57:12 dmcmahill Exp $
 #
 
-DISTNAME=	verilog-0.6
+DISTNAME=	verilog-0.7
 CATEGORIES=	cad
-MASTER_SITES=	ftp://icarus.com/pub/eda/verilog/v0.6/
+MASTER_SITES=	ftp://icarus.com/pub/eda/verilog/v0.7/
 
 MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://icarus.com/eda/verilog/index.html
@@ -24,10 +24,7 @@ USE_GMAKE=      yes
 #CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}" LDFLAGS+="${LDFLAGS}"
 CONFIGURE_ARGS+=	--without-ipal
 YACC=			${LOCALBASE}/bin/bison
-
-test: build
-	cd ${WRKSRC} && \
-		${MAKE_ENV} ${MAKE_PROGRAM} check 2>&1 | \
-		tee ${WRKDIR}/tests.log
+TEST_DIRS=	${WRKSRC}
+TEST_TARGET=	check
 
 .include "../../mk/bsd.pkg.mk"
