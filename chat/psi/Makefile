@@ -1,14 +1,25 @@
-# $NetBSD: Makefile,v 1.18 2004/10/03 00:13:15 tv Exp $
+# $NetBSD: Makefile,v 1.19 2004/11/27 21:58:18 jdolecek Exp $
 
-DISTNAME=	psi-0.9
-PKGREVISION=	5
+PSI_VERSION=	0.9.2
+DISTNAME=	psi-${PSI_VERSION}
+PKGREVISION=	# empty
 CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=psi/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=psi/}	\
+		http://psi.affinix.com/?version=${PSI_VERSION}&file=
 EXTRACT_SUFX=	.tar.bz2
+
+DIST_SUBDIR=	${DISTNAME}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${LANG_FILES}
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+
+# XXX uses internal bsd.pkg.mk variable
+FETCH_BEFORE_ARGS+=	-o "${DISTDIR}/${DIST_SUBDIR}/$$bfile"
 
 MAINTAINER=	jdolecek@NetBSD.org
 HOMEPAGE=	http://psi.affinix.com/
 COMMENT=	PSI Jabber Client
+
+DEPENDS+=	qca-tls>=1.0:../../security/qca-tls
 
 USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
@@ -16,26 +27,42 @@ USE_LIBTOOL=	yes
 USE_X11=	yes
 HAS_CONFIGURE=	yes
 
-CONFIGURE_ARGS+= -p ${PREFIX}
+CONFIGURE_ARGS= --prefix="${PREFIX}" --qtdir="${QTDIR}"
 
+LANG_FILES=	psi_zh.qm psi_nl.qm psi_sk.qm psi_fr.qm psi_fi.qm	\
+		psi_de.qm psi_sw.qm psi_pl.qm psi_mk.qm psi_el.qm	\
+		psi_es.qm psi_ru.qm
+
+# XXX the psiwidgets.so symlink is somewhat ugly, but without that
+# uic doesn't find the built plug-in and generates sources without
+# proper psiwidgets #include's. This should eventually be fixed in
+# qmake template.
 post-configure:
 	${SED} \
 	-e 's:^CHK_DIR_EXISTS *= *$$:CHK_DIR_EXISTS=test -d:' \
 	-e "s:^MKDIR *= *$$:MKDIR=${MKDIR}:" \
-	-e "s:/bin/true:${TRUE}:" < ${BUILD_DIRS}/Makefile \
-		> ${BUILD_DIRS}/Makefile.orig
-	${MV} ${BUILD_DIRS}/Makefile.orig ${BUILD_DIRS}/Makefile
+	-e "s:/bin/true:${TRUE}:" < ${WRKSRC}/Makefile \
+		> ${WRKSRC}/Makefile.new
+	${MV} ${WRKSRC}/Makefile.new ${WRKSRC}/Makefile
+	cd ${WRKSRC}/libpsi/psiwidgets && (	\
+		${QTDIR}/bin/qmake psiwidgets.pro -o Makefile; \
+		${SED} -e 's,-rpath.*$$,-rpath "${QTDIR}/lib",' < Makefile > Makefile.new; \
+		${MV} Makefile.new Makefile; \
+		${LN} -s .libs/libpsiwidgets.so psiwidgets.so; \
+	)
 
 do-install:
-	cd ${WRKSRC} && ${QTDIR}/bin/lrelease psi.pro
 	${INSTALL_DATA_DIR} ${PREFIX}/share/psi
-	cd ${WRKSRC} && ${CP} -f -pR image iconsets sound certs lang/*.qm \
-		README COPYING \
-		${PREFIX}/share/psi/
-	cd ${WRKSRC} && ${CP} -f psi ${PREFIX}/bin/psi
+	cd ${WRKSRC} && \
+	${CP} -f -pR iconsets sound certs README COPYING ${PREFIX}/share/psi/
+	for f in ${LANG_FILES}; do \
+		${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/$$f \
+			 ${PREFIX}/share/psi/; \
+	done
+	${INSTALL_PROGRAM} ${WRKSRC}/psi ${PREFIX}/bin/psi
 
 .include "../../x11/qt3-libs/buildlink3.mk"
-BUILDLINK_DEPENDS.qt3-tools=	qt3-tools>=3.1.2nb2	# need lrelease
+BUILDLINK_DEPMETHOD.qt3-tools=	build
 .include "../../x11/qt3-tools/buildlink3.mk"
-
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
