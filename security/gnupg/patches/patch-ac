@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1 1999/04/07 23:01:27 mellon Exp $
+
+diff -rc2 gnupg-0.9.5/mpi/config.links gnupg-0.9.5-hacked/mpi/config.links
+*** gnupg-0.9.5/mpi/config.links	Mon Mar  8 12:51:20 1999
+--- gnupg-0.9.5-hacked/mpi/config.links	Wed Apr  7 16:43:18 1999
+***************
+*** 35,38 ****
+--- 35,48 ----
+  	path="i586 i386"
+  	;;
++     i[34]86*-*-netbsd*)
++ 	echo '#define BSD_SYNTAX' >>./mpi/asm-syntax.h
++ 	cat  $srcdir/mpi/i386/syntax.h	    >>./mpi/asm-syntax.h
++ 	path="i386"
++ 	;;
++     i[56]86*-*-netbsd* | pentium-*-netbsd* | pentiumpro-*-netbsd*)
++ 	echo '#define BSD_SYNTAX' >>./mpi/asm-syntax.h
++ 	cat  $srcdir/mpi/i386/syntax.h	    >>./mpi/asm-syntax.h
++ 	path="i586 i386"
++ 	;;
+      i[34]86*-*-*)
+  	echo '#define ELF_SYNTAX' >>./mpi/asm-syntax.h
