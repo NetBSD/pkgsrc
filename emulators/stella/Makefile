@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/28 05:36:26 kristerw Exp $
+# $NetBSD: Makefile,v 1.16 2004/02/01 01:43:29 jlam Exp $
 
 DISTNAME=	stella-1.1-src
 PKGNAME=	stella-1.1
@@ -16,7 +16,7 @@ MAKEFILE=	makefile
 ALL_TARGET=	unix-x
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-GCC_REQD=	3.0
+GCC_REQD+=	3.0
 .endif
 
 MAKE_ENV=	CXXFLAGS="${CXXFLAGS} -fno-rtti"
