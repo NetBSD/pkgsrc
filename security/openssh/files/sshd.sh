@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: sshd.sh,v 1.3 2000/07/24 16:44:52 jlam Exp $
+# $NetBSD: sshd.sh,v 1.4 2000/09/01 20:40:10 jlam Exp $
 #
 
 name="sshd"
@@ -16,7 +16,7 @@ start)
 	fi
 	if [ ! -f @SSH_CONF_DIR@/ssh_host_dsa_key ]
 	then
-		/usr/pkg/bin/ssh-keygen -d -N "" -f /etc/ssh_host_dsa_key
+		@PREFIX@/bin/ssh-keygen -d -N "" -f /etc/ssh_host_dsa_key
 	fi
 	if [ -x @PREFIX@/sbin/sshd -a -f @SSH_CONF_DIR@/sshd_config ]
 	then
