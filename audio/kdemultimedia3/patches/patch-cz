@@ -1,0 +1,15 @@
+$NetBSD: patch-cz,v 1.1 2003/11/08 16:05:49 jdolecek Exp $
+
+--- mpeglib/lib/mpegplay/copyFunctions_asm.h.orig	2003-11-08 14:09:16.000000000 +0100
++++ mpeglib/lib/mpegplay/copyFunctions_asm.h	2003-11-08 14:09:26.000000000 +0100
+@@ -18,7 +18,9 @@
+ #include "config.h"
+ #endif
+ 
+-#include <iostream.h>
++#include <iostream>
++
++using namespace std;
+ 
+ class CopyFunctions_ASM {
+ 

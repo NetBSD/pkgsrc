@@ -1,0 +1,19 @@
+$NetBSD: patch-cx,v 1.1 2003/11/08 16:05:49 jdolecek Exp $
+
+--- mpeglib/lib/mpegplay/recon.h.orig	2003-11-08 14:08:31.000000000 +0100
++++ mpeglib/lib/mpegplay/recon.h	2003-11-08 14:08:41.000000000 +0100
+@@ -15,11 +15,13 @@
+ #define __RECON_H
+ 
+ 
+-#include <iostream.h>
++#include <iostream>
+ #include "../util/render/pictureArray.h"
+ #include "copyFunctions.h"
+ #include "videoDecoder.h"
+ 
++using namespace std;
++
+ class Recon {
+ 
+ 
