@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/08 11:54:02 markd Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/13 06:53:36 jlam Exp $
 
 DISTNAME=	dvipdfm-0.13.2c
 CATEGORIES=	print converters
@@ -9,7 +9,6 @@ HOMEPAGE=	http://gaspra.kettering.edu/dvipdfm
 COMMENT=	a DVI to PDF translator
 
 DEPENDS+=       teTeX-bin>=1.0.6:../../print/teTeX-bin
-DEPENDS+=	ghostscript{,-nox11}-[6-9]*:../../print/ghostscript
 
 WRKSRC=		${WRKDIR}/dvipdfm
 GNU_CONFIGURE=		# defined
@@ -29,4 +28,5 @@ post-install:
 	mktexlsr
 
 .include "../../graphics/png/buildlink.mk"
+.include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"

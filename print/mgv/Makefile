@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/08/25 21:50:32 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/09/13 06:53:42 jlam Exp $
 
 DISTNAME=		mgv-3.1.5
 PKGREVISION=		1
@@ -8,8 +8,6 @@ MASTER_SITES=		http://www.trends.net/~mu/srcs/
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.trends.net/~mu/mgv.html
 COMMENT=		Motif/LessTif user interface for Ghostscript
-
-DEPENDS+=		ghostscript-[6-9]*:../../print/ghostscript
 
 GNU_CONFIGURE=		yes
 USE_X11BASE=		yes
@@ -26,4 +24,5 @@ post-install:
 .include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/motif.buildlink2.mk"
 
+.include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"

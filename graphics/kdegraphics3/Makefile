@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/09/04 14:47:37 agc Exp $
+# $NetBSD: Makefile,v 1.6 2002/09/13 06:53:34 jlam Exp $
 
 DISTNAME=	kdegraphics-3.0.3
 CATEGORIES=	graphics
@@ -6,7 +6,6 @@ COMMENT=	Graphics programs for the KDE integrated X11 desktop
 
 .include "../../x11/kde3/Makefile.kde3"
 
-DEPENDS+=	ghostscript>=6.01:../../print/ghostscript
 #DEPENDS+=	gPhoto2
 #DEPENDS+=	gpio
 
@@ -21,5 +20,6 @@ LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 .include "../../graphics/imlib/buildlink.mk"
 .include "../../x11/kde3/buildlink.mk"
 .include "../../x11/kdebase3/buildlink.mk"
+.include "../../mk/ghostscript.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/07/11 19:44:29 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2002/09/13 06:53:35 jlam Exp $
 #
 
 DISTNAME=	netbsd-doc-print-1.1
@@ -11,7 +11,6 @@ MAINTAINER=	hubertf@netbsd.org
 COMMENT=	meta-package including all packages to convert SGML->PDF/PS
 
 DEPENDS+=	tex-jadetex>=2.20nb1:../../print/tex-jadetex
-DEPENDS+=	ghostscript-[0-9]*:../../print/ghostscript
 DEPENDS+=	netbsd-doc-1.2:../netbsd-doc
 
 EXTRACT_ONLY=	# empty
@@ -22,4 +21,5 @@ NO_BUILD=	yes
 
 do-install:	# empty
 
+.include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2002/05/20 14:04:43 fredb Exp $
+# $NetBSD: Makefile,v 1.34 2002/09/13 06:53:41 jlam Exp $
 
 DISTNAME=	magicfilter-1.2
 PKGREVISION=	2
@@ -11,7 +11,6 @@ COMMENT=	customizable, extensible automatic printer filter
 # Any version will do:
 #
 DEPENDS+=	a2ps-[0-9]*:../../print/a2ps
-DEPENDS+=	ghostscript{,-nox11}-[6-9]*:../../print/ghostscript
 DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX-bin
 DEPENDS+=	papersize-[0-9]*:../../print/papersize
@@ -44,4 +43,5 @@ post-install:
 	  done)
 	@${ECHO} "@dirrm ${FILTER_DIR}" >>${PLIST_SRC}
 
+.include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"

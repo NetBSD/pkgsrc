@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/07/24 19:45:24 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/13 06:53:33 jlam Exp $
 
 DISTNAME=		gri-2.8.7
 CATEGORIES=		graphics
@@ -11,9 +11,9 @@ COMMENT=		language for scientific graphics applications
 
 BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 BUILD_DEPENDS+=		ImageMagick-[0-9]*:../../graphics/ImageMagick
-BUILD_DEPENDS+=		ghostscript-[6-9]*:../../print/ghostscript
 
 GNU_CONFIGURE=		# defined
+USE_X11=		# defined
 USE_GMAKE=		# defined
 USE_BUILDLINK_ONLY= 	# defined
 INFO_FILES=		gri.info
@@ -24,5 +24,6 @@ pre-configure:
 	cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf
 
 .include "../../devel/netcdf/buildlink.mk"
+.include "../../mk/ghostscript.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

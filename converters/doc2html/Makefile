@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/03/13 17:36:44 fredb Exp $
+# $NetBSD: Makefile,v 1.7 2002/09/13 06:53:32 jlam Exp $
 #
 
 DISTNAME=	doc2html
@@ -13,7 +13,6 @@ COMMENT=	PERL external filter for htdig to convert numerous doc formats to HTML
 
 DEPENDS+=	xlhtml-[0-9]*:../../converters/xlHtml
 DEPENDS+=	rtf2html-[0-9]*:../../converters/rtf2html
-DEPENDS+=	ghostscript{,-nox11}-[6-9]*:../../print/ghostscript
 DEPENDS+=	xpdf-[0-9]*:../../print/xpdf
 DEPENDS+=	catdoc-[0-9]*:../../textproc/catdoc
 
@@ -32,4 +31,5 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/doc2html ${PREFIX}/bin/doc2html
 	${INSTALL_SCRIPT} ${WRKSRC}/pdf2html ${PREFIX}/bin/pdf2html
 
+.include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"

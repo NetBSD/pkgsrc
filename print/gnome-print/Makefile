@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2002/08/26 19:39:29 mjl Exp $
+# $NetBSD: Makefile,v 1.49 2002/09/13 06:53:38 jlam Exp $
 #
 
 DISTNAME=		gnome-print-0.36
@@ -15,6 +15,7 @@ BUILDLINK_DEPENDS.libxml=	libxml>=1.8.8
 BUILDLINK_DEPENDS.gdk-pixbuf=	gdk-pixbuf>=0.7.0
 
 USE_BUILDLINK_ONLY=	YES
+USE_X11=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
@@ -28,5 +29,6 @@ MAKE_ENV+=		HOME=${WRKSRC}
 .include "../../graphics/gdk-pixbuf-gnome/buildlink.mk"
 .include "../../textproc/libunicode/buildlink.mk"
 .include "../../textproc/libxml/buildlink.mk"
+.include "../../mk/ghostscript.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
