@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.620 2003/06/05 08:23:46 wiz Exp $
+$NetBSD: TODO,v 1.621 2003/06/05 20:58:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -87,7 +87,6 @@ Suggested package updates
 	o bogofilter-0.11.2
 	o bzflag-1.7g0
 	o calamaris-2.58 [pkg/21662]
-	o cdrtools-2.00.3
 	o centericq-4.9.4
 	o cervisia-2.0
 	o cfengine-1.6.5 [pkg/19459|seb]
@@ -151,6 +150,7 @@ Suggested package updates
 	o guile-1.6.4
 	o host-20030604
 	o hpijs-1.4
+	o hylafax-4.1.5 [pkg/21804]
 	o icepref-2.2
 	o inform-6.21.3 [pkg/19298]
 	o inn-2.4.0
