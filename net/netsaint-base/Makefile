@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/01/29 11:34:36 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/01 10:39:40 wiz Exp $
 #
 
 DISTNAME=	netsaint-0.0.6
@@ -10,6 +10,8 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.netsaint.org/
 
 DEPENDS+=	gd>1.8.1:../../graphics/gd
+
+USE_PERL5=	YES
 
 .include "Makefile.common"
 
