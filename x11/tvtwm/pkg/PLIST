@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/06/19 14:36:57 mrg Exp $
+bin/tvtwm
+bin/xsetroot
+lib/X11/twm/system.tvtwmrc
+man/cat1/tvtwm.0
