@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2002/12/05 21:44:31 drochner Exp $
+$NetBSD: distinfo,v 1.8 2003/11/16 15:58:52 cube Exp $
 
 SHA1 (dx-4.2.0.tar.gz) = 792d472e854b0d6afd516f41cc22a5f28346a381
 Size (dx-4.2.0.tar.gz) = 9335729 bytes
@@ -14,3 +14,4 @@ SHA1 (patch-ap) = 06c04dfb585891499bd2d26078e6bfb118172dcd
 SHA1 (patch-ar) = cafb9f3eec34cc3909eea194c644497ad53960ca
 SHA1 (patch-as) = 3ef53092e58cf09fe0b60a453c9c00df4b9546d6
 SHA1 (patch-at) = 158c05f4c30e92a1c5ca470f763f1038c2c34418
+SHA1 (patch-au) = 7e5e6a865e15d70aaf05daa98b31fff99f3a84f2
