@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:38:46 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/10/09 21:46:56 jlam Exp $
 #
 # Optionally define USE_GNU_READLINE to force use of GNU readline.
 #
@@ -56,11 +56,11 @@ BUILDLINK_FILES.history+=	lib/libhistory.*
 _BLNK_LIBEDIT_LIST!=		${ECHO} /usr/lib/libedit.*
 .  if ${_BLNK_LIBEDIT_LIST} != "/usr/lib/libedit.*"
 BUILDLINK_FILES.readline+=	lib/libedit.*
-BUILDLINK_TRANSFORM.readline=	-e "s|/readline.h|/readline/readline.h|g"
+BUILDLINK_TRANSFORM.readline=	-e "s|include/readline.h|include/readline/readline.h|g"
 BUILDLINK_TRANSFORM+=		l:readline:edit
 
 BUILDLINK_FILES.history+=	lib/libedit.*
-BUILDLINK_TRANSFORM.history=	-e "s|/history.h|/readline/history.h|g"
+BUILDLINK_TRANSFORM.history=	-e "s|include/history.h|include/readline/history.h|g"
 BUILDLINK_TRANSFORM+=		l:history:edit
 .  endif
 .endif
