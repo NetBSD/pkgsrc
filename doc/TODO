@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.923 2003/10/05 13:06:25 wiz Exp $
+$NetBSD: TODO,v 1.924 2003/10/05 15:50:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -133,7 +133,6 @@ Suggested package updates
 	o freetds-0.61.2 [tarball still called 0.61]
 	o fsviewer-0.2.5
 	o gauche-0.7 [kei]
-	o gawk-3.1.3
 	o gcpio-2.5 [pkg/20799]
 	o gcvs-1.0-1
 	o gdm-2.4.1.3
