@@ -1,4 +1,4 @@
-$NetBSD: buildlink2.txt,v 1.1.2.1 2002/05/08 07:37:26 jlam Exp $
+$NetBSD: buildlink2.txt,v 1.1.2.2 2002/05/11 02:08:46 jlam Exp $
 
 The buildlink2 framework is a departure from the original buildlink
 framework, which tries to do its work up-front before the configure
@@ -74,3 +74,9 @@ A: The full build now takes longer than it used to.  Since we are using
 
    The i386 box is an Intel P3 850MHz + UDMA IDE HD + 512MB SDRAM.
    The mac68k box is a Quadra 650 (68040) + SCSI2 HD + 48MB RAM.
+
+Q: What happened to x11.buildlink.mk?
+A: x11.buildlink.mk is now deprecated, as it's all handled directly by
+   the buildlink2.mk framework.  However, in converting packages to use
+   buildlink2, if it uses x11.buildlink.mk, then you will need to define
+   USE_X11 if USE_X11BASE is not already defined.

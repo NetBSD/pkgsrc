@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2002/02/18 15:14:05 seb Exp $
+# $NetBSD: Makefile,v 1.24.2.1 2002/05/11 02:09:00 jlam Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/01/28 08:11:23 asami Exp 
 #
 
@@ -10,7 +10,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/gdbm/gdbm.html
 COMMENT=	The GNU database manager
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2_ONLY=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/01/29 22:20:54 jlam Exp $
+# $NetBSD: Makefile,v 1.10.2.1 2002/05/11 02:09:22 jlam Exp $
 #
 
 DISTNAME=	Linux-${PKGNAME}
@@ -11,7 +11,7 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.kernel.org/pub/linux/libs/pam/
 COMMENT=	Pluggable Authentication Modules
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2_ONLY=	yes
 USE_GMAKE=		yes
 
 GNU_CONFIGURE=		yes
@@ -57,6 +57,6 @@ post-install:
 		${INSTALL_DATA} $${file} ${HTMLDIR};			\
 	done
 
-.include "../../security/libcrack/buildlink.mk"
+.include "../../security/libcrack/buildlink2.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/07/16 10:29:50 jlam Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2002/05/11 02:08:54 jlam Exp $
 
 DISTNAME=	ppsmall-1.0
 PKGNAME=	ppunpack-1.0
@@ -10,10 +10,10 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	packages@netbsd.org
 COMMENT=	Decompresses Amiga PowerPacker files
 
-NO_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2_ONLY=	# defined
 
 WRKSRC=		${WRKDIR}/PPUnpack
-MAKE_FLAGS=	CC="${CC}" COPTS="${CFLAGS}"
+MAKE_FLAGS=	CC="${BUILDLINK_CC}" COPTS="${CFLAGS}"
 ALL_TARGET=	ppunpack
 LICENSE=	no-commercial-use
 

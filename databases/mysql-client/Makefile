@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.17 2002/02/18 15:14:06 seb Exp $
+# $NetBSD: Makefile,v 1.17.2.1 2002/05/11 02:09:00 jlam Exp $
 #
-
-.include "Makefile.common"
 
 PKGNAME=		${DISTNAME:S/-/-client-/}
 SVR4_PKGNAME=		mysqc
 COMMENT=		MySQL, a free SQL database (client)
 
-USE_BUILDLINK_ONLY=	YES
-REPLACE_BUILDLINK+=	scripts/mysql_config
-REPLACE_BUILDLINK+=	scripts/mysqlbug
+USE_BUILDLINK2_ONLY=	YES
+
+.include "Makefile.common"
 
 CONFIGURE_ARGS+=	--without-server
 
@@ -19,6 +17,6 @@ post-install:
 	cd ${PREFIX}/man/man1; ${RM} -f mysqld.1 safe_mysqld.1
 	${INSTALL_DATA} ${WRKSRC}/Docs/mysql.info ${PREFIX}/info
 
-.include "../../devel/readline/buildlink.mk"
+.include "../../devel/readline/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

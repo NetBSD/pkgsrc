@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/07/14 07:38:29 jlam Exp $
+# $NetBSD: Makefile,v 1.10.2.1 2002/05/11 02:09:20 jlam Exp $
 
 DISTNAME=	rpm2pkg-1.2
 CATEGORIES=	pkgtools
@@ -11,7 +11,7 @@ COMMENT=	Convert RPM archives to NetBSD packages
 
 CONFLICTS+=	suse-base<=6.4
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2_ONLY=	YES
 NO_CHECKSUM=		YES
 WRKSRC=			${WRKDIR}
 
@@ -21,13 +21,13 @@ CFLAGS+=	-I${BUILDLINK_DIR}/include/rpm
 LIBS=		${RPMLIB} -lintl -lz
 
 do-build:
-	${CC} ${FILESDIR}/rpm2pkg.c ${CFLAGS} ${LDFLAGS} ${LIBS}	\
-		-o ${WRKSRC}/rpm2pkg
+	${BUILDLINK_CC} ${FILESDIR}/rpm2pkg.c \
+		${CFLAGS} ${LDFLAGS} ${LIBS} -o ${WRKSRC}/rpm2pkg
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rpm2pkg ${PREFIX}/sbin
 	${INSTALL_MAN} ${FILESDIR}/rpm2pkg.8 ${PREFIX}/man/man8
 
-.include "../../devel/zlib/buildlink.mk"
-.include "../../misc/rpm/buildlink.mk"
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../misc/rpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

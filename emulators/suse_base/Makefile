@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2002/04/04 09:46:54 tron Exp $
+# $NetBSD: Makefile,v 1.29.2.1 2002/05/11 02:09:07 jlam Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
 CATEGORIES=		emulators
@@ -13,6 +13,7 @@ COMMENT=		Linux compatibility package
 CONFLICTS=		linux_SuSE-5.3 linux_lib-2.4
 ONLY_FOR_PLATFORM=	NetBSD-1.5Z[C-Z]-i386 NetBSD-1.6*-i386
 
+USE_BUILDLINK2_ONLY=	# defined
 EXTRACT_ONLY=		# empty
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2002/03/15 00:46:02 fredb Exp $
+# $NetBSD: Makefile.common,v 1.21.2.1 2002/05/11 02:09:10 jlam Exp $
 #
 
 DISTNAME=		gdk-pixbuf-0.11.0
@@ -31,7 +31,7 @@ pre-configure:
 	${LOCALBASE}/bin/automake -a --foreign -i;			\
 	${LOCALBASE}/bin/autoconf
 
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../graphics/tiff/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/tiff/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"

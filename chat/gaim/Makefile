@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/03/30 23:43:03 reinoud Exp $
+# $NetBSD: Makefile,v 1.16.2.1 2002/05/11 02:08:58 jlam Exp $
 #
 
 DISTNAME=	gaim-0.55
@@ -10,7 +10,7 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://gaim.sourceforge.net/
 COMMENT=	GTK+-based client for AOL's Instant Messenger chat system
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2_ONLY=	YES
 USE_GMAKE=		YES
 USE_X11BASE=		YES
 
@@ -29,10 +29,7 @@ CONFIGURE_ARGS+=	--enable-esd
 CONFIGURE_ARGS+=	--enable-perl
 CONFIGURE_ARGS+=	--enable-pixbuf
 
-CONFIGURE_ENV+=		pixbufcfg="${GDK_PIXBUF_CONFIG}"
-
-.include "../../audio/esound/buildlink.mk"
-.include "../../graphics/gdk-pixbuf/buildlink.mk"
-.include "../../lang/perl5/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../audio/esound/buildlink2.mk"
+.include "../../graphics/gdk-pixbuf/buildlink2.mk"
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2002/04/10 12:30:23 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.36.2.1 2002/05/11 02:09:30 jlam Exp $
 
 DISTNAME=	kdelibs-2.2.2
 PKGREVISION=	1
@@ -7,14 +7,14 @@ COMMENT=	Support libraries for the KDE integrated X11 desktop
 
 .include "../../x11/kde2/Makefile.kde2"
 
-BUILDLINK_DEPENDS.libxml2=     libxml2>=2.4.8
+BUILDLINK_DEPENDS.libxml2=	libxml2>=2.4.8
 BUILDLINK_DEPENDS.audiofile=	libaudiofile>=0.1.9
 BUILDLINK_DEPENDS.qt2-libs=	qt2-libs>=2.3.1nb2
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2_ONLY=	YES
 USE_OPENSSL_VERSION=	${OPENSSL_VERSION_096}
 
-CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_DIR}"
+CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -24,21 +24,8 @@ LIBS+=			-Wl,--export-dynamic
 
 GCC_VERSION!=		gcc --version
 .if (${GCC_VERSION:C/-.*$$//} == egcs) && (${MACHINE_ARCH} == alpha)
-.include "../../lang/gcc/Makefile.gcc"
+.  include "../../lang/gcc/Makefile.gcc"
 .endif
-
-# Override KDE_INCLUDES and QT_INCLUDES at build-time since their values
-# are used by reference within the kdelibs2 Makefiles
-#
-MAKE_FLAGS+=		KDE_INCLUDES="-I${BUILDLINK_DIR}/include"
-MAKE_FLAGS+=		QT_INCLUDES="-I${BUILDLINK_QTDIR}/include"
-
-# The configure script looks for xml2-config in the environment as
-# ${XML_CONFIG}, not as ${XML2_CONFIG} like it's supposed to.
-#
-CONFIGURE_ENV+=		XML_CONFIG="${XML2_CONFIG}"
-KDEDIR=			${PREFIX}
-BUILDLINK_KDEDIR=	${BUILDLINK_DIR}
 
 REPLACE_PERL= \
 	${WRKSRC}/kio/proxytype.pl \
@@ -48,7 +35,7 @@ PLIST_SRC=		${WRKDIR}/PLIST
 UNLIMIT_RESOURCES=	datasize
 
 .if defined(USE_CUPS) && (${USE_CUPS} == "YES")
-.include "../../print/cups/buildlink.mk"
+.  include "../../print/cups/buildlink2.mk"
 BUILD_DEFS+=		USE_CUPS
 
 PLIST_SUBST+=		CUPS=
@@ -102,18 +89,18 @@ post-install:
 	  ${ECHO} "@dirrm share/kde";					\
 	) > ${PLIST_SRC}
 
-.include "../../archivers/bzip2/buildlink.mk"
-.include "../../audio/libaudiofile/buildlink.mk"
-.include "../../devel/pcre/buildlink.mk"
-.include "../../graphics/tiff/buildlink.mk"
-.include "../../lang/perl5/buildlink.mk"
-.include "../../security/openssl/buildlink.mk"
-.include "../../textproc/libxml2/buildlink.mk"
-.include "../../textproc/libxslt/buildlink.mk"
-.include "../../x11/kde2/buildlink.mk"
-.include "../../x11/qt2-libs/buildlink.mk"
-.include "../../mk/ossaudio.buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../archivers/bzip2/buildlink2.mk"
+.include "../../audio/libaudiofile/buildlink2.mk"
+.include "../../devel/pcre/buildlink2.mk"
+.include "../../graphics/tiff/buildlink2.mk"
+.include "../../lang/perl5/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
+.include "../../textproc/libxml2/buildlink2.mk"
+.include "../../textproc/libxslt/buildlink2.mk"
+.include "../../x11/kde2/buildlink2.mk"
+.include "../../x11/qt2-libs/buildlink2.mk"
+.include "../../mk/ossaudio.buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
 
 # XXX On NetBSD, the egcs and gcc-2.95.3 for:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2002/02/27 04:45:57 yyamano Exp $
+# $NetBSD: Makefile,v 1.31.2.1 2002/05/11 02:08:56 jlam Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 05:30:04 ache Exp 
 #
 
@@ -15,7 +15,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.info-zip.org/pub/infozip/UnZip.html
 COMMENT=	List, test and extract compressed files in a ZIP archive
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2_ONLY=	# defined
 
 MAKEFILE=	unix/Makefile
 ALL_TARGET=	generic_zlib unzipsfx
@@ -31,5 +31,5 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} BUGS COPYING.OLD LICENSE README WHERE \
 		${PREFIX}/share/doc/unzip
 
-.include "../../devel/zlib/buildlink.mk"
+.include "../../devel/zlib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
