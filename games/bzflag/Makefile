@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/12/08 13:07:42 cjep Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/09 20:05:08 jschauma Exp $
 
 DISTNAME=	bzflag-1.7e6
 PKGNAME=	${DISTNAME:S/e/.5./}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games x11
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=bzflag/}
 EXTRACT_SUFX=   .tgz
@@ -30,5 +30,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/bzflag
 	${CP} ${WRKSRC}/data/* ${PREFIX}/share/bzflag
 
-.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink2.mk"
+.include "../../graphics/glu/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

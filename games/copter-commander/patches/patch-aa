@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2002/10/09 10:46:10 agc Exp $
+$NetBSD: patch-aa,v 1.4 2003/03/09 20:05:09 jschauma Exp $
 
 --- Makefile.orig	Fri Feb  8 22:12:31 2002
 +++ Makefile	Wed Jul 17 16:03:20 2002
@@ -59,7 +59,7 @@ $NetBSD: patch-aa,v 1.3 2002/10/09 10:46:10 agc Exp $
  CFLAGS_UNANSI=-Wall ${COCO_OPTIMIZATION_FLAGS}
  # While everything else uses CFLAGS.
 -CFLAGS=-ansi -pedantic ${CFLAGS_UNANSI}
-+CFLAGS=${CFLAGS_UNANSI}
++CFLAGS+=${CFLAGS_UNANSI}
  # CFLAGS=${CFLAGS_UNANSI}
  
  # COMMON LISP COMPILER
