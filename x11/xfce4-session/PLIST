@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/17 12:52:48 martti Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/03/18 07:59:09 martti Exp $
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xfce4-session.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xfce4-session.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/xfce4-session.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xfce4-session.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/xfce4-session.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfce4-session.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/xfce4-session.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfce4-session.mo
@@ -73,12 +74,12 @@ share/xfce4/doc/C/images/xfsm-general.png
 share/xfce4/doc/C/images/xfsm-splash.png
 share/xfce4/doc/C/xfce4-session.html
 @dirrm share/themes/Default/balou
-@dirrm share/icons/hicolor/72x72/apps
-@dirrm share/icons/hicolor/72x72
-@dirrm share/icons/hicolor/64x64/apps
-@dirrm share/icons/hicolor/64x64
-@dirrm share/icons/hicolor/128x128/apps
-@dirrm share/icons/hicolor/128x128
+@unexec ${RMDIR} %D/share/icons/hicolor/72x72/apps 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/icons/hicolor/72x72 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/icons/hicolor/64x64/apps 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/icons/hicolor/64x64 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/icons/hicolor/128x128/apps 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/icons/hicolor/128x128 2>/dev/null || ${TRUE}
 @dirrm lib/xfce4/splash/engines
 @dirrm lib/xfce4/splash
 @dirrm include/xfce4/xfce4-session-4.2/libxfsm

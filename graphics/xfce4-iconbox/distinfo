@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2005/02/24 08:45:14 agc Exp $
+$NetBSD: distinfo,v 1.10 2005/03/18 07:59:09 martti Exp $
 
-SHA1 (xfce4-iconbox-4.2.0.tar.gz) = dfc5caaf4249f906fc42bb140e4de4ef95850e8f
-RMD160 (xfce4-iconbox-4.2.0.tar.gz) = a1bbe0a533f4bc6039e20a892679190fce591287
-Size (xfce4-iconbox-4.2.0.tar.gz) = 395861 bytes
+SHA1 (xfce4-iconbox-4.2.1.tar.gz) = 8dfbbdbbccd76bee8ac314fe9c42fa9dec202f45
+RMD160 (xfce4-iconbox-4.2.1.tar.gz) = eb2783cc08b41db1e1c4cd39b29ce5d2d3bfb317
+Size (xfce4-iconbox-4.2.1.tar.gz) = 395875 bytes
