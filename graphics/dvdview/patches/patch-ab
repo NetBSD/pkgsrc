@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/04/20 16:46:27 tron Exp $
+
+--- src/Makefile.in.orig	Mon Sep 25 17:43:10 2000
++++ src/Makefile.in	Fri Apr 20 17:11:35 2001
+@@ -42,13 +42,13 @@
+ OBJS = $(COMMONOBJS) @OBJLIST@ # $(ARCHOBJS) $(MOCOBJS)
+ 
+ CC = @CC@
+-SHELL = /bin/bash
++SHELL = /bin/sh
+ PROFILEFLAGS =
+ DEBUGFLAGS = -g
+-CFLAGS = $(PROFILEFLAGS) $(DEBUGFLAGS)
+-OPTIMIZE = -O3
+-INCLUDES = -I/usr/include/g++ -I$(ULIBROOT) -I. # -I$(QTROOT)/include
+-LNPATH   = -L/usr/X11R6/lib # -L$(QTROOT)/lib
++#CFLAGS = $(PROFILEFLAGS) $(DEBUGFLAGS)
++#OPTIMIZE = -O3
++INCLUDES = -I$(X11BASE)/include -I$(ULIBROOT) -I. # -I$(QTROOT)/include
++LNPATH   = $(LDFLAGS)
+ CPPFLAGS = $(INCLUDES)
+ LNFLAGS  = $(LNPATH) $(PROFILEFLAGS) $(DEBUGFLAGS)
+ DEFS = # -DNDEBUG
