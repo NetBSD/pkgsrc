@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.20 2002/03/27 21:16:48 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.21 2002/04/11 11:14:31 abs Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -25,7 +25,7 @@ case $hw_machine_arch in
 	    FLAGS="-mcpu=21164a"
 	fi ;;
 
-    arm32) case $hw_model in
+    arm | arm32) case $hw_model in
 	ARM610*)		FLAGS="-mcpu=arm610"		;; # risc pc
 	ARM710*)		FLAGS="-mcpu=arm710"		;; # risc pc
 	SA-110*)	
