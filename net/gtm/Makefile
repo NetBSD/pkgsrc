@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 18:18:57 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/03/13 16:33:42 wiz Exp $
 
-DISTNAME=	gtm-0.4.5
+DISTNAME=	gtm-0.4.6
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtm/}
 
-MAINTAINER=	magick@bundy.lip.owl.de
+MAINTAINER=	magick@zhadum.de
 HOMEPAGE=	http://gtm.sourceforge.net/
 COMMENT=	Gnome Transfer Manager
 
