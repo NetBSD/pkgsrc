@@ -1,15 +1,18 @@
-$NetBSD: patch-ag,v 1.1 2001/09/23 01:34:31 mycroft Exp $
+$NetBSD: patch-ag,v 1.2 2002/10/20 14:33:54 lukem Exp $
 
---- vncserver.orig	Thu Oct 26 16:16:37 2000
+--- vncserver.orig	Tue Aug 27 22:19:38 2002
 +++ vncserver
-@@ -149,8 +149,8 @@
- # Add font path and color database stuff here, e.g.:
- #
- # $cmd .= " -fp unix/:7100";
--# $cmd .= " -fp /usr/lib/X11/fonts/misc/,/usr/lib/X11/fonts/75dpi/";
--# $cmd .= " -co /usr/lib/X11/rgb";
-+$cmd .= " -fp /usr/X11R6/lib/X11/fonts/misc/,/usr/X11R6/lib/X11/fonts/75dpi/";
-+$cmd .= " -co /usr/X11R6/lib/X11/rgb";
- #
+@@ -41,10 +41,11 @@ $vncUserDir = "$ENV{HOME}/.vnc";
+ $fontPath = "unix/:7100";
  
- foreach $arg (@ARGV) {
+ # Here is another example of setting the font path:
+-# $fontPath = "/usr/lib/X11/fonts/misc/,/usr/lib/X11/fonts/75dpi/";
++# $fontPath = "/usr/X11R6/lib/X11/fonts/misc/,/usr/X11R6/lib/X11/fonts/75dpi/";
++$fontPath = "/usr/X11R6/lib/X11/fonts/misc/,/usr/X11R6/lib/X11/fonts/75dpi/";
+ 
+ # X colors database path is optional, uncomment and edit to use:
+-# $colorPath = "/usr/lib/X11/rgb";
++# $colorPath = "/usr/X11R6/lib/X11/rgb";
+ 
+ # You might wish to make your vnc directory under /tmp, to make sure
+ # passwords are always kept on the local filesystem. To do that, just

@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2001/09/23 01:34:30 mycroft Exp $
+$NetBSD: patch-aa,v 1.2 2002/10/20 14:33:54 lukem Exp $
 
---- Imakefile.orig	Thu Oct 26 14:28:32 2000
+--- Imakefile.orig	Fri Oct 18 10:51:23 2002
 +++ Imakefile
 @@ -1,7 +1,7 @@
  #define IHaveSubdirs
@@ -11,13 +11,13 @@ $NetBSD: patch-aa,v 1.1 2001/09/23 01:34:30 mycroft Exp $
  
  World:
  	make Makefiles
-@@ -9,8 +9,7 @@
+@@ -9,8 +9,7 @@ World:
  	make all
  	@echo ""
  	@echo Built $(SUBDIRS).
--	@echo 'To build Xvnc, do "cd Xvnc", followed by "make World"'
+-	@echo 'To build Xvnc, do "cd Xvnc", followed by "./configure" then "make"'
 -	@echo ""
-+	(cd Xvnc && make World)
++	(cd Xvnc && ./configure && make)
  
- MakeSubdirs($(SUBDIRS))
- DependSubdirs($(SUBDIRS))
+ libs:
+ 	@echo 'No libraries included.'
