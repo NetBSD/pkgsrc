@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/09/19 01:26:41 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.4 2002/09/19 14:47:34 tron Exp $
 
 DISTNAME=	t1lib-1.3.1
 CATEGORIES=	fonts devel graphics
@@ -9,10 +8,11 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=libs/graphics/} \
 MAINTAINER=	packages@netbsd.org
 COMMENT=	library for generating bitmaps from Adobe Type 1 fonts
 
-USE_BUILDLINK2=		# defined
-USE_GMAKE=		# defined
-GNU_CONFIGURE=		# defined
-USE_LIBTOOL=		# defined
+USE_BUILDLINK2=		YES
+USE_GMAKE=		YES
+GNU_CONFIGURE=		YES
+USE_LIBTOOL=		YES
+USE_X11=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ac-tools/ltconfig
 
 ALL_TARGET=	without_doc
