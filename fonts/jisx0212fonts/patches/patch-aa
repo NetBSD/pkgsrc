@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/04/09 15:19:31 itojun Exp $
+--- Makefile.orig	Thu Nov 12 11:49:58 1998
++++ Makefile	Thu Nov 12 16:11:26 1998
+@@ -0,0 +1,25 @@
++.SUFFIXES: .bdf .pcf
++
++TMP=	${DISTFILES:C/.gz$//}
++BDF=	${TMP:C/.Z$//}
++PCF=	${BDF:C/.bdf$/.pcf/}
++
++DIR=	${PREFIX}/lib/X11/fonts/local
++
++all:	${PCF}
++
++install:
++	@if test ! -d ${DIR}; then \
++		echo "============================================"; \
++		echo "installing fonts into ${DIR}."; \
++		echo "You should upgrade XFree86 to 3.3.3 (or later), or add ${DIR} to /etc/XF86Config."; \
++		echo "============================================"; \
++	fi
++	@mkdir -p ${DIR}
++	@for i in ${PCF}; do \
++		compress -c < $$i > ${DIR}/$$i.Z; \
++	done
++	@cd ${DIR}; mkfontdir
++
++.bdf.pcf:
++	bdftopcf $*.bdf > $*.pcf
