@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8560 2005/01/01 17:02:36 minskim Exp $
+$NetBSD: CHANGES,v 1.8561 2005/01/01 17:17:09 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -21,3 +21,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gnumeric14 to 1.4.1nb1 [minskim 2005-01-01]
 	Updated monotone to 0.16 [jmmv 2005-01-01]
 	Updated gramps to 1.0.8nb1 [minskim 2005-01-01]
+	Updated texi2html to 1.64nb2 [minskim 2005-01-01]
