@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 1999/05/04 20:16:36 tv Exp $
+$NetBSD: patch-aa,v 1.5 2001/10/01 08:36:44 jlam Exp $
 
 --- apaci/Makefile.tmpl.orig	Tue Nov 24 11:38:52 1998
 +++ apaci/Makefile.tmpl	Fri Apr 30 20:36:05 1999
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.4 1999/05/04 20:16:36 tv Exp $
  libperl.so: $(MP_OBJS_PIC)
  	$(MP_RM) $@
 -	$(MP_LD) $(MP_LDFLAGS_SHLIB) -o $@ $(MP_OBJS_PIC) $(MP_LIBS)
-+	ld $(MP_LDFLAGS_SHLIB) -o $@ $(MP_OBJS_PIC) $(MP_LIBS:S/-Wl,//:N*.a)
++	ld $(MP_LDFLAGS_SHLIB:S/-Wl,//g) -o $@ $(MP_OBJS_PIC) $(MP_LIBS:S/-Wl,//g:N*.a)
  
  .SUFFIXES: .xs .c .o .lo
  
