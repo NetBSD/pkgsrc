@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.118 2002/12/31 15:15:24 uebayasi Exp $
+$NetBSD: TODO,v 1.119 2003/01/01 09:56:50 tron Exp $
 
 Suggested new packages
 ======================
@@ -141,6 +141,7 @@ Suggested package updates
 	o imlib2-1.0.6 [pkg/19144]
 	o imp-3.1 [pkg/19497]
 	o inform-6.21.3 [pkg/19298]
+	o inn 2.3.4
 	o intltool-0.23 [pkg/18891]
 	o ircu-2.10.11.03
 	o iozone-3.147
