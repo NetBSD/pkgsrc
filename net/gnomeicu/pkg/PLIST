@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/07 13:25:33 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/11/27 06:34:50 tron Exp $
 bin/gnomeicu
 bin/gnomeicu-client
 etc/CORBA/servers/GnomeICU.gnorba
@@ -17,6 +17,26 @@ share/gnome/help/gnomeicu/C/options.html
 share/gnome/help/gnomeicu/C/topic.dat
 share/gnome/help/gnomeicu/C/usage.html
 share/gnome/help/gnomeicu/C/userprefs.html
+share/locale/ca/LC_MESSAGES/gnomeicu.mo
+share/locale/da/LC_MESSAGES/gnomeicu.mo
+share/locale/de/LC_MESSAGES/gnomeicu.mo
+share/locale/el/LC_MESSAGES/gnomeicu.mo
+share/locale/es/LC_MESSAGES/gnomeicu.mo
+share/locale/fr/LC_MESSAGES/gnomeicu.mo
+share/locale/gl/LC_MESSAGES/gnomeicu.mo
+share/locale/hu/LC_MESSAGES/gnomeicu.mo
+share/locale/it/LC_MESSAGES/gnomeicu.mo
+share/locale/ja/LC_MESSAGES/gnomeicu.mo
+share/locale/ko/LC_MESSAGES/gnomeicu.mo
+share/locale/lt/LC_MESSAGES/gnomeicu.mo
+share/locale/nl/LC_MESSAGES/gnomeicu.mo
+share/locale/no/LC_MESSAGES/gnomeicu.mo
+share/locale/pl/LC_MESSAGES/gnomeicu.mo
+share/locale/pt_BR/LC_MESSAGES/gnomeicu.mo
+share/locale/ru/LC_MESSAGES/gnomeicu.mo
+share/locale/sv/LC_MESSAGES/gnomeicu.mo
+share/locale/tr/LC_MESSAGES/gnomeicu.mo
+share/locale/uk/LC_MESSAGES/gnomeicu.mo
 share/pixmaps/gnome-gnomeicu.xpm
 share/pixmaps/gnomeicu/animeyes.png
 share/pixmaps/gnomeicu/cancel.xpm
