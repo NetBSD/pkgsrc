@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/05/24 05:46:54 jlam Exp $
+
+--- stl_config.h.orig	Thu Apr 22 20:47:11 1999
++++ stl_config.h	Sat May 13 02:19:46 2000
+@@ -260,6 +260,9 @@
+ #   ifdef _REENTRANT
+ #     define __STL_PTHREADS
+ #   endif
++#   ifdef __NetBSD__
++#     define __STL_LONG_LONG
++#   endif
+ # endif
+ 
+ # if defined(__SUNPRO_CC) 
