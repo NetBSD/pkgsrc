@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/12 04:46:33 reed Exp $
+bin/${GNU_PROGRAM_PREFIX}ed
+bin/${GNU_PROGRAM_PREFIX}red
+info/ed.info
+man/man1/${GNU_PROGRAM_PREFIX}ed.1
+man/man1/${GNU_PROGRAM_PREFIX}red.1
