@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.84 2002/12/08 13:09:44 kristerw Exp $
+# $NetBSD: Makefile,v 1.85 2002/12/14 14:59:38 kristerw Exp $
 #
 
-DISTNAME=		xmame-0.62.1-rc1
+DISTNAME=		xmame-0.62.1-rc3
 PKGNAME=		xmame-0.62.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		emulators games x11
-MASTER_SITES=		http://x.mame.net/download/ \
-			http://roms2.mame.dk/emu/
+MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		kristerw@netbsd.org
@@ -86,7 +85,7 @@ post-configure:
 	cd ${WRKSRC}/doc;						\
 	${SED}	-e "s|@ROMPATH@|${ROMPATH}|g"				\
 		-e "s|@SPOOLDIR@|${SPOOLDIR}|g"				\
-		xmamerc.dist > ${TARGET}rc
+		${TARGET}rc.dist > ${TARGET}rc
 .if !empty(MAKE_FLAGS:M*USB*)
 	${LN} -fs /usr/include/usb.h ${BUILDLINK_DIR}/include
 	for FILE in /usr/lib/libusb*; do				\
