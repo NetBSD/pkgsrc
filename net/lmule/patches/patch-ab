@@ -1,0 +1,28 @@
+$NetBSD: patch-ab,v 1.3 2003/05/24 09:50:27 jmmv Exp $
+
+--- src/SysTray.cpp.orig	2003-05-23 09:12:44.000000000 +0200
++++ src/SysTray.cpp	2003-05-23 09:13:32.000000000 +0200
+@@ -37,6 +37,8 @@
+ #include <config.h>
+ #define _(String) gettext(String)
+ 
++const char * GetAppTitle();
++
+ CSysTray::CSysTray(wxWindow* _parent,int _desktopMode)
+ {
+   gdk_rgb_init();
+@@ -71,11 +73,11 @@
+ 
+   if(use_legacy) {
+     status_docklet=gtk_window_new(GTK_WINDOW_TOPLEVEL);
+-    gtk_window_set_title(GTK_WINDOW(status_docklet),_("eMule for Linux"));
++    gtk_window_set_title(GTK_WINDOW(status_docklet),GetAppTitle());
+     gtk_window_set_wmclass(GTK_WINDOW(status_docklet),"lMule_StatusDocklet","lmule");
+     gtk_widget_set_usize(status_docklet,22,22);
+   } else {
+-    status_docklet=GTK_WIDGET(egg_tray_icon_new(_("eMule for Linux")));
++    status_docklet=GTK_WIDGET(egg_tray_icon_new(GetAppTitle()));
+     if(status_docklet==NULL) {
+       printf("**** WARNING: Can't create status docklet. Systray will not be created.\n");
+       desktopMode=4;
+
