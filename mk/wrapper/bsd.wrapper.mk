@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.24 2005/02/19 04:19:59 grant Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.25 2005/03/06 22:27:12 agc Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -36,7 +36,7 @@
 
 .include "../../mk/wrapper/wrapper-defs.mk"
 
-.if ${PKG_DEBUG_LEVEL} > 0
+.if ${PKG_DEBUG_LEVEL} > 0 || defined(PKG_VERBOSE)
 ECHO_WRAPPER_MSG?=	${ECHO}
 .else
 ECHO_WRAPPER_MSG?=	${TRUE}
