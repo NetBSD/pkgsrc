@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.6 1998/11/12 23:50:33 frueauf Exp $
+$NetBSD: patch-ac,v 1.7 1998/11/17 14:14:43 mycroft Exp $
 
 --- include/btorder.h.orig	Sun Jul 19 19:28:10 1998
 +++ include/btorder.h	Sat Nov  7 14:40:40 1998
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.6 1998/11/12 23:50:33 frueauf Exp $
  
  #	if defined(__i386) || defined(i386) || \
 -	   defined(__alpha) || defined(alpha)
-+	   defined(__alpha) || defined(alpha) || defined(__arm6__)
++	   defined(__alpha) || defined(alpha) || defined(__arm6__) || defined(__arm__)
  #		define _BIT_FIELDS_LTOH
  #	endif
  
