@@ -1,16 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2004/04/17 03:57:33 ben Exp $
+# $NetBSD: Makefile,v 1.10 2004/05/11 04:03:26 simonb Exp $
 #
 
 DISTNAME=		#defined
-PKGNAME=		fprot-workstation-bin-4.4.1
-PKGREVISION=		1
+PKGNAME=		fprot-workstation-bin-4.4.2
 CATEGORIES=		security
 
 MAINTAINER=		ben@NetBSD.org
 HOMEPAGE=		http://www.f-prot.com/products/home_use/bsd/
 COMMENT=		F-prot antivirus for home users
-
-DIST_SUBDIR=		${PKGNAME}
 
 DEPENDS+=		p5-libwww>=5.69:../../www/p5-libwww
 DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
@@ -33,12 +30,12 @@ USE_BUILDLINK3=		yes
 
 .if ${OPSYS} == "NetBSD"
 MASTER_SITES=		ftp://ftp.f-prot.com/pub/bsd/
-DISTNAME=		fp-netbsd-ws-4.4.1
+DISTNAME=		fp-netbsd-ws-${PKGVERSION}
 .endif
 
 .if ${OPSYS} == "Linux"
 MASTER_SITES=		ftp://ftp.f-prot.com/pub/linux/
-DISTNAME=		fp-linux-ws-4.4.1
+DISTNAME=		fp-linux-ws-${PKGVERSION}
 .endif
 
 post-patch:
