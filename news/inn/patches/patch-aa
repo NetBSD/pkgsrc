@@ -1,42 +1,19 @@
-$NetBSD: patch-aa,v 1.7 2000/09/01 20:16:59 veego Exp $
+$NetBSD: patch-aa,v 1.8 2001/02/08 16:23:06 tron Exp $
 
---- configure	Wed Jul 19 01:54:07 2000
-+++ configure	Fri Sep  1 21:42:33 2000
-@@ -1019,20 +1019,9 @@
- 
- 
- 
--LIBTOOL=''
--UPLIBTOOL=''
--EXTOBJ='o'
--EXTLIB='a'
--# Check whether --enable-libtool or --disable-libtool was given.
--if test "${enable_libtool+set}" = set; then
--  enableval="$enable_libtool"
--  if test "$enableval" = yes; then
--  LIBTOOL='$(SHELL) ../libtool'
--  UPLIBTOOL='$(SHELL) ../../libtool'
--  EXTOBJ='lo'
--  EXTLIB='la'
--fi
--fi
-+UPLIBTOOL="${LIBTOOL}"
-+EXTOBJ='lo'
-+EXTLIB='la'
- 
- 
- 
-@@ -1291,7 +1280,7 @@
- 
- 
- RNEWSGRP=$NEWSGRP
--RNEWSMODE=0500
-+RNEWSMODE=4555
- # Check whether --enable-uucp-rnews or --disable-uucp-rnews was given.
+--- configure.orig	Mon Feb  5 10:10:58 2001
++++ configure	Mon Feb  5 10:21:23 2001
+@@ -953,8 +953,7 @@
  if test "${enable_uucp_rnews+set}" = set; then
    enableval="$enable_uucp_rnews"
-@@ -1582,7 +1571,7 @@
-   SET_MAKE="MAKE=${MAKE-make}"
+   if test "x$enableval" = xyes ; then
+-        RNEWSGRP=uucp
+-        RNEWSMODE=4550
++        RNEWSMODE=4555
+     fi
+ fi
+ 
+@@ -2333,7 +2332,7 @@
+   echo "$ac_t""no" 1>&6
  fi
  
 -for ac_prog in 'bison -y' byacc

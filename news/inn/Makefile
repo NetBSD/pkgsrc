@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2001/01/26 05:21:47 hubertf Exp $
+# $NetBSD: Makefile,v 1.22 2001/02/08 16:23:06 tron Exp $
 
-DISTNAME=		inn-2.2.3
+DISTNAME=		inn-2.3.1
 CATEGORIES=		news
 MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
 			ftp://ftp.sunet.se/pub/news/nntp/inn/ \
@@ -11,14 +11,18 @@ HOMEPAGE=		http://www.isc.org/inn.html
 
 CONFLICTS+=		nntpclnt-*
 
+PATCH_SITES=		ftp://ftp.north.ad.jp/pub/IPv6/INN/
+PATCHFILES=		inn-2.3.1-v6-20010204.diff.gz
+PATCH_DIST_STRIP=	-p1
+
 INN_DATA_DIR?=		/var/news
 
-USE_PERL5=		# defined
-USE_LIBTOOL=		# defined
-HAS_CONFIGURE=		# defined
+USE_PERL5=		YES
+HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM} --prefix=${PREFIX}/inn \
+			--enable-uucp-rnews \
 			--mandir=${PREFIX}/man \
-			--with-perl --with-tmp-path=/tmp \
+			--with-perl --with-tmp-path=${INN_DATA_DIR}/tmp \
 			--with-db-dir=${INN_DATA_DIR}/db \
 			--with-etc-dir=${INN_DATA_DIR}/etc \
 			--with-log-dir=${INN_DATA_DIR}/log \
@@ -27,6 +31,13 @@ CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM} --prefix=${PREFIX}/inn \
 CONFIGURE_ENV+=		_PATH_PERL=${PERL5}
 
 .include "../../mk/bsd.prefs.mk"
+
+# IPv6 support
+.if defined(USE_INET6) && ${USE_INET6} == YES
+CONFIGURE_ARGS+=	--enable-ipv6
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
+.endif
 
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	--with-sendmail=/usr/lib/sendmail
@@ -61,10 +72,11 @@ pre-install:
 	${MKDIR} ${INN_DATA_DIR} ${PREFIX}/etc/nntp ${PREFIX}/inn
 
 post-install:
+	${RM} -f ${PREFIX}/bin/inews
 	${LN} -s ../inn/bin/inews ${PREFIX}/bin/inews
 	${MKDIR} ${PREFIX}/share/examples/inn
 	for FILE in `ls -1 ${WRKSRC}/samples/* | \
-		     ${EGREP} -v '\.(in|orig)$'`; do \
+		     ${EGREP} -v '(Makefile|.*\.(in|orig)$$)'`; do \
 	  ${INSTALL_DATA} $$FILE ${PREFIX}/share/examples/inn; \
 	done
 	cd ${WRKSRC}/site && \
