@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2361 2003/05/30 10:06:08 mjl Exp $
+$NetBSD: CHANGES,v 1.2362 2003/05/30 11:54:32 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2204,3 +2204,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-DBI to 1.37 [mjl 2003-05-30]
 	Updated p5-MIME-Base64 to 2.20 [mjl 2003-05-30]
 	Updated sylpheed to 0.9.1 [chris 2003-05-30]
+	Updated ipa to 1.3.4 [salo 2003-05-30]
