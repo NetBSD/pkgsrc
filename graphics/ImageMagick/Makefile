@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1998/06/06 15:18:38 tron Exp $
+# $NetBSD: Makefile,v 1.20 1998/06/22 12:39:47 agc Exp $
 #
 
 DISTNAME=	ImageMagick-4.0.6
@@ -15,12 +15,6 @@ DEPENDS+=	mpeg-1.2.1:../../graphics/mpeg-lib
 USE_IMAKE=	yes
 XMKMF=		${MAKE_ENV} xmkmf -a
 MAKE_ENV=	LOCALBASE=${LOCALBASE} PREFIX=${PREFIX}
-
-CAT1=		display.0 montage.0 import.0 animate.0 convert.0 identify.0 \
-		mogrify.0 combine.0 ImageMagick.0 xtp.0
-
-CAT4=		miff.0
-CAT5=		quantize.0
 
 post-install:
 	${LDCONFIG} || ${TRUE}

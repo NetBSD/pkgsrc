@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/04/22 14:22:41 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/06/22 12:32:17 agc Exp $
 #
 
 DISTNAME=       xdemineur-2.1
@@ -12,7 +12,5 @@ MAINTAINER= bouyer@netbsd.org
 DEPENDS+=	xpm-3.4j:../../graphics/xpm
 
 USE_IMAKE=	yes
-
-CAT1=		xdemineur.0
 
 .include "../../mk/bsd.pkg.mk"
