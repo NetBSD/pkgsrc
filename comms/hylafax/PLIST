@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/06/27 12:18:11 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/08/04 06:54:13 jmc Exp $
 bin/faxalter
 bin/faxcover
 bin/faxmail
@@ -120,7 +120,6 @@ sbin/faxsetup.irix
 sbin/faxsetup.linux
 sbin/faxstate
 sbin/faxwatch
-sbin/hylafax
 sbin/probemodem
 sbin/recvstats
 sbin/tagtest
