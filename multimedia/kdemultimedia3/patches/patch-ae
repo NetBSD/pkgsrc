@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/01/26 15:42:04 jmmv Exp $
+
+--- kaboodle/main.cpp.orig	Sun Oct 27 11:20:11 2002
++++ kaboodle/main.cpp
+@@ -42,7 +42,9 @@ static KCmdLineOptions options[] =
+ 	{ 0, 0, 0}
+ };
+ 
+-int main(int argc, char **argv)
++extern "C" int kdemain(int, char**);
++
++int kdemain(int argc, char **argv)
+ {
+ 	KCmdLineArgs::init(argc, argv, Kaboodle::KaboodleFactory::aboutData());
+ 	KCmdLineArgs::addCmdLineOptions(options);

@@ -1,0 +1,72 @@
+$NetBSD: patch-bl,v 1.1.1.1 2004/01/26 15:42:37 jmmv Exp $
+
+--- noatun/modules/infrared/Makefile.in.orig	2003-12-29 11:29:39.000000000 +1300
++++ noatun/modules/infrared/Makefile.in
+@@ -385,7 +385,7 @@ noatun_infrared_la_SOURCES = infrared.cp
+ noinst_HEADERS = infrared.h lirc.h irprefs.h
+ 
+ noatun_infrared_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
+-noatun_infrared_la_LIBADD = $(LIB_KFILE) $(top_builddir)/noatun/library/libnoatun.la \
++noatun_infrared_la_LIBADD = $(LIB_KFILE) $(top_builddir)/noatun/library/libnoatun_core.la \
+                         -lqtmcop -lkmedia2_idl -lsoundserver_idl
+ 
+ 
+@@ -400,7 +400,7 @@ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(kde_module_LTLIBRARIES)
+ 
+ noatun_infrared_la_DEPENDENCIES = \
+-	$(top_builddir)/noatun/library/libnoatun.la
++	$(top_builddir)/noatun/library/libnoatun_core.la
+ am_noatun_infrared_la_OBJECTS = infrared.lo lirc.lo irprefs.lo
+ #>- noatun_infrared_la_OBJECTS = $(am_noatun_infrared_la_OBJECTS)
+ #>+ 4
+@@ -624,7 +624,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=infrared.plugin 
++KDE_DIST=infrared.plugin Makefile.in.rej 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -779,20 +779,20 @@ irprefs.moc: $(srcdir)/irprefs.h
+ #>+ 1
+ mocs: irprefs.moc
+ #>+ 3
+-lirc.moc: $(srcdir)/lirc.h
+-	$(MOC) $(srcdir)/lirc.h -o lirc.moc
+-
+-#>+ 1
+-mocs: lirc.moc
+-#>+ 3
+ infrared.moc: $(srcdir)/infrared.h
+ 	$(MOC) $(srcdir)/infrared.h -o infrared.moc
+ 
+ #>+ 1
+ mocs: infrared.moc
+ #>+ 3
++lirc.moc: $(srcdir)/lirc.h
++	$(MOC) $(srcdir)/lirc.h -o lirc.moc
++
++#>+ 1
++mocs: lirc.moc
++#>+ 3
+ clean-metasources:
+-	-rm -f  irprefs.moc lirc.moc infrared.moc
++	-rm -f  irprefs.moc infrared.moc lirc.moc
+ 
+ #>+ 3
+ clean-closures:
+@@ -845,9 +845,9 @@ kde-rpo-clean:
+ 	-rm -f *.rpo
+ 
+ #>+ 7
++infrared.o: infrared.moc 
+ lirc.o: lirc.moc 
+-irprefs.o: irprefs.moc 
+-infrared.lo: infrared.moc 
+ irprefs.lo: irprefs.moc 
++infrared.lo: infrared.moc 
+ lirc.lo: lirc.moc 
+-infrared.o: infrared.moc 
++irprefs.o: irprefs.moc 

@@ -1,0 +1,68 @@
+$NetBSD: patch-bv,v 1.1.1.1 2004/01/26 15:42:40 jmmv Exp $
+
+--- noatun/modules/metatag/Makefile.in.orig	2003-12-29 11:29:40.000000000 +1300
++++ noatun/modules/metatag/Makefile.in
+@@ -383,7 +383,7 @@ kde_module_LTLIBRARIES = noatun_metatag.
+ noatun_metatag_la_SOURCES = metatag.cpp edit.cpp
+ 
+ noatun_metatag_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
+-noatun_metatag_la_LIBADD = $(LIB_KIO) $(top_builddir)/noatun/library/libnoatun.la \
++noatun_metatag_la_LIBADD = $(LIB_KIO) $(top_builddir)/noatun/library/libnoatun_core.la \
+ 	$(top_builddir)/noatun/library/noatuntags/libnoatuntags.la
+ 
+ 
+@@ -400,7 +400,7 @@ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(kde_module_LTLIBRARIES)
+ 
+ noatun_metatag_la_DEPENDENCIES = \
+-	$(top_builddir)/noatun/library/libnoatun.la \
++	$(top_builddir)/noatun/library/libnoatun_core.la \
+ 	$(top_builddir)/noatun/library/noatuntags/libnoatuntags.la
+ am_noatun_metatag_la_OBJECTS = metatag.lo edit.lo
+ #>- noatun_metatag_la_OBJECTS = $(am_noatun_metatag_la_OBJECTS)
+@@ -621,7 +621,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=HANDLED_ITEMS metatag.plugin 
++KDE_DIST=HANDLED_ITEMS Makefile.in.rej metatag.plugin 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -770,20 +770,20 @@ noatun_metatag.la.closure: $(noatun_meta
+ 
+ 
+ #>+ 3
+-metatag.moc: $(srcdir)/metatag.h
+-	$(MOC) $(srcdir)/metatag.h -o metatag.moc
+-
+-#>+ 1
+-mocs: metatag.moc
+-#>+ 3
+ edit.moc: $(srcdir)/edit.h
+ 	$(MOC) $(srcdir)/edit.h -o edit.moc
+ 
+ #>+ 1
+ mocs: edit.moc
+ #>+ 3
++metatag.moc: $(srcdir)/metatag.h
++	$(MOC) $(srcdir)/metatag.h -o metatag.moc
++
++#>+ 1
++mocs: metatag.moc
++#>+ 3
+ clean-metasources:
+-	-rm -f  metatag.moc edit.moc
++	-rm -f  edit.moc metatag.moc
+ 
+ #>+ 3
+ clean-closures:
+@@ -836,7 +836,7 @@ kde-rpo-clean:
+ 	-rm -f *.rpo
+ 
+ #>+ 5
++metatag.o: metatag.moc 
+ edit.lo: edit.moc 
+ metatag.lo: metatag.moc 
+ edit.o: edit.moc 
+-metatag.o: metatag.moc 

@@ -1,0 +1,301 @@
+$NetBSD: patch-cj,v 1.1.1.1 2004/01/26 15:42:41 jmmv Exp $
+
+--- noatun/modules/winskin/Makefile.in.orig	2003-12-29 11:29:40.000000000 +1300
++++ noatun/modules/winskin/Makefile.in
+@@ -446,7 +446,7 @@ noatun_winskin_la_LDFLAGS = $(all_librar
+ 					-module -avoid-version -no-undefined 
+ 
+ 
+-noatun_winskin_la_LIBADD = $(top_builddir)/noatun/library/libnoatun.la \
++noatun_winskin_la_LIBADD = $(top_builddir)/noatun/library/libnoatun_core.la \
+ 					$(top_builddir)/noatun/modules/winskin/vis/libwinskinvis.la
+ 
+ 
+@@ -459,7 +459,7 @@ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(kde_module_LTLIBRARIES)
+ 
+ noatun_winskin_la_DEPENDENCIES = \
+-	$(top_builddir)/noatun/library/libnoatun.la \
++	$(top_builddir)/noatun/library/libnoatun_core.la \
+ 	$(top_builddir)/noatun/modules/winskin/vis/libwinskinvis.la
+ am_noatun_winskin_la_OBJECTS = fileInfo.lo guiSpectrumAnalyser.lo \
+ 	plugin.lo waBalanceSlider.lo waButton.lo waClutterbar.lo \
+@@ -841,7 +841,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=waVolumeSlider.h waIndicator.h waSkinModel.h waSkinMapping.h waSlider.h waBalanceSlider.h waColor.h waButton.h skinMap.h fileInfo.h waWidget.h waSkins.h guiSpectrumAnalyser.h winskin.plugin waDigit.h waSkin.h waJumpSlider.h waMain.h waTitleBar.h waShadeMapping.h waSkinManager.h waLabel.h waClutterbar.h winSkinConfig.h winSkinVis.h waRegion.h waInfo.h waStatus.h 
++KDE_DIST=winSkinConfig.h waClutterbar.h waBalanceSlider.h waDigit.h waStatus.h winSkinVis.h waLabel.h waSlider.h fileInfo.h waWidget.h winskin.plugin waShadeMapping.h Makefile.in.rej waSkins.h waMain.h waInfo.h waRegion.h waSkinModel.h waSkinMapping.h skinMap.h waJumpSlider.h waIndicator.h waSkin.h waVolumeSlider.h waColor.h waSkinManager.h waTitleBar.h waButton.h guiSpectrumAnalyser.h 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -1019,65 +1019,65 @@ noatun_winskin.la.closure: $(noatun_wins
+ 
+ 
+ #>+ 3
+-waTitleBar.moc: $(srcdir)/waTitleBar.h
+-	$(MOC) $(srcdir)/waTitleBar.h -o waTitleBar.moc
++waVolumeSlider.moc: $(srcdir)/waVolumeSlider.h
++	$(MOC) $(srcdir)/waVolumeSlider.h -o waVolumeSlider.moc
+ 
+ #>+ 1
+-mocs: waTitleBar.moc
++mocs: waVolumeSlider.moc
+ #>+ 3
+-waInfo.moc: $(srcdir)/waInfo.h
+-	$(MOC) $(srcdir)/waInfo.h -o waInfo.moc
++guiSpectrumAnalyser.moc: $(srcdir)/guiSpectrumAnalyser.h
++	$(MOC) $(srcdir)/guiSpectrumAnalyser.h -o guiSpectrumAnalyser.moc
+ 
+ #>+ 1
+-mocs: waInfo.moc
++mocs: guiSpectrumAnalyser.moc
+ #>+ 3
+-waDigit.moc: $(srcdir)/waDigit.h
+-	$(MOC) $(srcdir)/waDigit.h -o waDigit.moc
++winSkinConfig.moc: $(srcdir)/winSkinConfig.h
++	$(MOC) $(srcdir)/winSkinConfig.h -o winSkinConfig.moc
+ 
+ #>+ 1
+-mocs: waDigit.moc
++mocs: winSkinConfig.moc
+ #>+ 3
+-waBalanceSlider.moc: $(srcdir)/waBalanceSlider.h
+-	$(MOC) $(srcdir)/waBalanceSlider.h -o waBalanceSlider.moc
++waButton.moc: $(srcdir)/waButton.h
++	$(MOC) $(srcdir)/waButton.h -o waButton.moc
+ 
+ #>+ 1
+-mocs: waBalanceSlider.moc
++mocs: waButton.moc
+ #>+ 3
+-waSkin.moc: $(srcdir)/waSkin.h
+-	$(MOC) $(srcdir)/waSkin.h -o waSkin.moc
++waInfo.moc: $(srcdir)/waInfo.h
++	$(MOC) $(srcdir)/waInfo.h -o waInfo.moc
+ 
+ #>+ 1
+-mocs: waSkin.moc
++mocs: waInfo.moc
+ #>+ 3
+-waSkinManager.moc: $(srcdir)/waSkinManager.h
+-	$(MOC) $(srcdir)/waSkinManager.h -o waSkinManager.moc
++waStatus.moc: $(srcdir)/waStatus.h
++	$(MOC) $(srcdir)/waStatus.h -o waStatus.moc
+ 
+ #>+ 1
+-mocs: waSkinManager.moc
++mocs: waStatus.moc
+ #>+ 3
+-winSkinVis.moc: $(srcdir)/winSkinVis.h
+-	$(MOC) $(srcdir)/winSkinVis.h -o winSkinVis.moc
++waTitleBar.moc: $(srcdir)/waTitleBar.h
++	$(MOC) $(srcdir)/waTitleBar.h -o waTitleBar.moc
+ 
+ #>+ 1
+-mocs: winSkinVis.moc
++mocs: waTitleBar.moc
+ #>+ 3
+-waSkinModel.moc: $(srcdir)/waSkinModel.h
+-	$(MOC) $(srcdir)/waSkinModel.h -o waSkinModel.moc
++waSkin.moc: $(srcdir)/waSkin.h
++	$(MOC) $(srcdir)/waSkin.h -o waSkin.moc
+ 
+ #>+ 1
+-mocs: waSkinModel.moc
++mocs: waSkin.moc
+ #>+ 3
+-waVolumeSlider.moc: $(srcdir)/waVolumeSlider.h
+-	$(MOC) $(srcdir)/waVolumeSlider.h -o waVolumeSlider.moc
++waDigit.moc: $(srcdir)/waDigit.h
++	$(MOC) $(srcdir)/waDigit.h -o waDigit.moc
+ 
+ #>+ 1
+-mocs: waVolumeSlider.moc
++mocs: waDigit.moc
+ #>+ 3
+-winSkinConfig.moc: $(srcdir)/winSkinConfig.h
+-	$(MOC) $(srcdir)/winSkinConfig.h -o winSkinConfig.moc
++waWidget.moc: $(srcdir)/waWidget.h
++	$(MOC) $(srcdir)/waWidget.h -o waWidget.moc
+ 
+ #>+ 1
+-mocs: winSkinConfig.moc
++mocs: waWidget.moc
+ #>+ 3
+ waSlider.moc: $(srcdir)/waSlider.h
+ 	$(MOC) $(srcdir)/waSlider.h -o waSlider.moc
+@@ -1085,62 +1085,62 @@ waSlider.moc: $(srcdir)/waSlider.h
+ #>+ 1
+ mocs: waSlider.moc
+ #>+ 3
+-guiSpectrumAnalyser.moc: $(srcdir)/guiSpectrumAnalyser.h
+-	$(MOC) $(srcdir)/guiSpectrumAnalyser.h -o guiSpectrumAnalyser.moc
++waClutterbar.moc: $(srcdir)/waClutterbar.h
++	$(MOC) $(srcdir)/waClutterbar.h -o waClutterbar.moc
+ 
+ #>+ 1
+-mocs: guiSpectrumAnalyser.moc
++mocs: waClutterbar.moc
+ #>+ 3
+-waLabel.moc: $(srcdir)/waLabel.h
+-	$(MOC) $(srcdir)/waLabel.h -o waLabel.moc
++waJumpSlider.moc: $(srcdir)/waJumpSlider.h
++	$(MOC) $(srcdir)/waJumpSlider.h -o waJumpSlider.moc
+ 
+ #>+ 1
+-mocs: waLabel.moc
++mocs: waJumpSlider.moc
+ #>+ 3
+-waButton.moc: $(srcdir)/waButton.h
+-	$(MOC) $(srcdir)/waButton.h -o waButton.moc
++waMain.moc: $(srcdir)/waMain.h
++	$(MOC) $(srcdir)/waMain.h -o waMain.moc
+ 
+ #>+ 1
+-mocs: waButton.moc
++mocs: waMain.moc
+ #>+ 3
+-waWidget.moc: $(srcdir)/waWidget.h
+-	$(MOC) $(srcdir)/waWidget.h -o waWidget.moc
++waLabel.moc: $(srcdir)/waLabel.h
++	$(MOC) $(srcdir)/waLabel.h -o waLabel.moc
+ 
+ #>+ 1
+-mocs: waWidget.moc
++mocs: waLabel.moc
+ #>+ 3
+-waMain.moc: $(srcdir)/waMain.h
+-	$(MOC) $(srcdir)/waMain.h -o waMain.moc
++winSkinVis.moc: $(srcdir)/winSkinVis.h
++	$(MOC) $(srcdir)/winSkinVis.h -o winSkinVis.moc
+ 
+ #>+ 1
+-mocs: waMain.moc
++mocs: winSkinVis.moc
+ #>+ 3
+-waIndicator.moc: $(srcdir)/waIndicator.h
+-	$(MOC) $(srcdir)/waIndicator.h -o waIndicator.moc
++waSkinManager.moc: $(srcdir)/waSkinManager.h
++	$(MOC) $(srcdir)/waSkinManager.h -o waSkinManager.moc
+ 
+ #>+ 1
+-mocs: waIndicator.moc
++mocs: waSkinManager.moc
+ #>+ 3
+-waJumpSlider.moc: $(srcdir)/waJumpSlider.h
+-	$(MOC) $(srcdir)/waJumpSlider.h -o waJumpSlider.moc
++waIndicator.moc: $(srcdir)/waIndicator.h
++	$(MOC) $(srcdir)/waIndicator.h -o waIndicator.moc
+ 
+ #>+ 1
+-mocs: waJumpSlider.moc
++mocs: waIndicator.moc
+ #>+ 3
+-waStatus.moc: $(srcdir)/waStatus.h
+-	$(MOC) $(srcdir)/waStatus.h -o waStatus.moc
++waBalanceSlider.moc: $(srcdir)/waBalanceSlider.h
++	$(MOC) $(srcdir)/waBalanceSlider.h -o waBalanceSlider.moc
+ 
+ #>+ 1
+-mocs: waStatus.moc
++mocs: waBalanceSlider.moc
+ #>+ 3
+-waClutterbar.moc: $(srcdir)/waClutterbar.h
+-	$(MOC) $(srcdir)/waClutterbar.h -o waClutterbar.moc
++waSkinModel.moc: $(srcdir)/waSkinModel.h
++	$(MOC) $(srcdir)/waSkinModel.h -o waSkinModel.moc
+ 
+ #>+ 1
+-mocs: waClutterbar.moc
++mocs: waSkinModel.moc
+ #>+ 3
+ clean-metasources:
+-	-rm -f  waTitleBar.moc waInfo.moc waDigit.moc waBalanceSlider.moc waSkin.moc waSkinManager.moc winSkinVis.moc waSkinModel.moc waVolumeSlider.moc winSkinConfig.moc waSlider.moc guiSpectrumAnalyser.moc waLabel.moc waButton.moc waWidget.moc waMain.moc waIndicator.moc waJumpSlider.moc waStatus.moc waClutterbar.moc
++	-rm -f  waVolumeSlider.moc guiSpectrumAnalyser.moc winSkinConfig.moc waButton.moc waInfo.moc waStatus.moc waTitleBar.moc waSkin.moc waDigit.moc waWidget.moc waSlider.moc waClutterbar.moc waJumpSlider.moc waMain.moc waLabel.moc winSkinVis.moc waSkinManager.moc waIndicator.moc waBalanceSlider.moc waSkinModel.moc
+ 
+ #>+ 4
+ clean-idl:
+@@ -1162,7 +1162,7 @@ force-reedit:
+ 
+ 
+ #>+ 11
+-noatun_winskin_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/fileInfo.cpp $(srcdir)/guiSpectrumAnalyser.cpp $(srcdir)/plugin.cpp $(srcdir)/waBalanceSlider.cpp $(srcdir)/waButton.cpp $(srcdir)/waClutterbar.cpp $(srcdir)/waColor.cpp $(srcdir)/waDigit.cpp $(srcdir)/waInfo.cpp $(srcdir)/waIndicator.cpp $(srcdir)/waJumpSlider.cpp $(srcdir)/waLabel.cpp $(srcdir)/waMain.cpp $(srcdir)/waRegion.cpp $(srcdir)/waSkin.cpp $(srcdir)/waSkinModel.cpp $(srcdir)/waSlider.cpp $(srcdir)/waStatus.cpp $(srcdir)/waTitleBar.cpp $(srcdir)/waVolumeSlider.cpp $(srcdir)/waWidget.cpp $(srcdir)/winSkinConfig.cpp $(srcdir)/winSkinVis.cpp $(srcdir)/waSkinManager.cpp waSkinManager_skel.cpp  waLabel.moc waTitleBar.moc waButton.moc waWidget.moc waInfo.moc waDigit.moc waIndicator.moc waMain.moc waSkin.moc waBalanceSlider.moc waSkinManager.moc waJumpSlider.moc winSkinVis.moc waStatus.moc waSkinModel.moc waVolumeSlider.moc winSkinConfig.moc waSlider.moc waClutterbar.moc guiSpectrumAnalyser.moc
++noatun_winskin_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/fileInfo.cpp $(srcdir)/guiSpectrumAnalyser.cpp $(srcdir)/plugin.cpp $(srcdir)/waBalanceSlider.cpp $(srcdir)/waButton.cpp $(srcdir)/waClutterbar.cpp $(srcdir)/waColor.cpp $(srcdir)/waDigit.cpp $(srcdir)/waInfo.cpp $(srcdir)/waIndicator.cpp $(srcdir)/waJumpSlider.cpp $(srcdir)/waLabel.cpp $(srcdir)/waMain.cpp $(srcdir)/waRegion.cpp $(srcdir)/waSkin.cpp $(srcdir)/waSkinModel.cpp $(srcdir)/waSlider.cpp $(srcdir)/waStatus.cpp $(srcdir)/waTitleBar.cpp $(srcdir)/waVolumeSlider.cpp $(srcdir)/waWidget.cpp $(srcdir)/winSkinConfig.cpp $(srcdir)/winSkinVis.cpp $(srcdir)/waSkinManager.cpp waSkinManager_skel.cpp  waVolumeSlider.moc winSkinConfig.moc guiSpectrumAnalyser.moc waButton.moc waInfo.moc waStatus.moc waTitleBar.moc waSkin.moc waDigit.moc waWidget.moc waSlider.moc waClutterbar.moc waJumpSlider.moc waMain.moc waLabel.moc winSkinVis.moc waIndicator.moc waSkinManager.moc waBalanceSlider.moc waSkinModel.moc
+ 	@echo 'creating noatun_winskin_la.all_cpp.cpp ...'; \
+ 	rm -f noatun_winskin_la.all_cpp.files noatun_winskin_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> noatun_winskin_la.all_cpp.final; \
+@@ -1198,43 +1198,43 @@ kde-rpo-clean:
+ 	-rm -f *.rpo
+ 
+ #>+ 41
+-waWidget.o: waWidget.moc 
+-waVolumeSlider.lo: waVolumeSlider.moc 
+-waTitleBar.o: waTitleBar.moc 
+-waInfo.o: waInfo.moc 
+-waClutterbar.o: waClutterbar.moc 
+-waStatus.o: waStatus.moc 
++waClutterbar.lo: waClutterbar.moc 
+ waWidget.lo: waWidget.moc 
+-waInfo.lo: waInfo.moc 
+-waMain.o: waMain.moc 
++guiSpectrumAnalyser.o: guiSpectrumAnalyser.moc 
++guiSpectrumAnalyser.lo: guiSpectrumAnalyser.moc 
++waClutterbar.o: waClutterbar.moc 
++winSkinConfig.o: winSkinConfig.moc 
++waMain.lo: waMain.moc 
+ winSkinConfig.lo: winSkinConfig.moc 
+ waSkinManager.lo: waSkinManager.moc 
+-waSkin.lo: waSkin.moc 
+-waStatus.lo: waStatus.moc 
+-waIndicator.lo: waIndicator.moc 
+-winSkinVis.lo: winSkinVis.moc 
+-waSlider.lo: waSlider.moc 
+-winSkinConfig.o: winSkinConfig.moc 
+-waBalanceSlider.lo: waBalanceSlider.moc 
+-waDigit.lo: waDigit.moc 
+-waDigit.o: waDigit.moc 
+-guiSpectrumAnalyser.lo: guiSpectrumAnalyser.moc 
+-waVolumeSlider.o: waVolumeSlider.moc 
+ waBalanceSlider.o: waBalanceSlider.moc 
+-waSkinManager.o: waSkinManager.moc 
+-waIndicator.o: waIndicator.moc 
++waInfo.lo: waInfo.moc 
+ waSkinModel.lo: waSkinModel.moc 
+-waButton.lo: waButton.moc 
+-waButton.o: waButton.moc 
+-waClutterbar.lo: waClutterbar.moc 
+-waJumpSlider.o: waJumpSlider.moc 
++waDigit.o: waDigit.moc 
++waIndicator.lo: waIndicator.moc 
++winSkinVis.o: winSkinVis.moc 
++waStatus.o: waStatus.moc 
+ waJumpSlider.lo: waJumpSlider.moc 
+-waLabel.lo: waLabel.moc 
+ waLabel.o: waLabel.moc 
++waSlider.o: waSlider.moc 
++waWidget.o: waWidget.moc 
++waButton.lo: waButton.moc 
++waMain.o: waMain.moc 
++waInfo.o: waInfo.moc 
++waDigit.lo: waDigit.moc 
+ waSkinModel.o: waSkinModel.moc 
++waSkin.lo: waSkin.moc 
++winSkinVis.lo: winSkinVis.moc 
+ waTitleBar.lo: waTitleBar.moc 
+-guiSpectrumAnalyser.o: guiSpectrumAnalyser.moc 
+-winSkinVis.o: winSkinVis.moc 
+-waMain.lo: waMain.moc 
+-waSlider.o: waSlider.moc 
++waVolumeSlider.lo: waVolumeSlider.moc 
++waIndicator.o: waIndicator.moc 
++waJumpSlider.o: waJumpSlider.moc 
++waBalanceSlider.lo: waBalanceSlider.moc 
+ waSkin.o: waSkin.moc 
++waVolumeSlider.o: waVolumeSlider.moc 
++waStatus.lo: waStatus.moc 
++waLabel.lo: waLabel.moc 
++waSkinManager.o: waSkinManager.moc 
++waTitleBar.o: waTitleBar.moc 
++waSlider.lo: waSlider.moc 
++waButton.o: waButton.moc 
