@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1 2003/05/25 07:12:55 dan Exp $
+$NetBSD: patch-ae,v 1.2 2003/12/08 19:20:49 wiz Exp $
 
---- libmpdemux/tvi_bsdbt848.c.orig	2003-01-15 05:20:17.000000000 +1100
-+++ libmpdemux/tvi_bsdbt848.c	2003-05-25 16:40:00.000000000 +1000
+--- libmpdemux/tvi_bsdbt848.c.orig	Sat Oct  4 19:29:01 2003
++++ libmpdemux/tvi_bsdbt848.c
 @@ -41,6 +41,7 @@
  
  #ifdef __NetBSD__
@@ -10,7 +10,7 @@ $NetBSD: patch-ae,v 1.1 2003/05/25 07:12:55 dan Exp $
  #else
  #include <machine/ioctl_meteor.h>
  #include <machine/ioctl_bt848.h>
-@@ -777,14 +778,29 @@
+@@ -785,14 +786,29 @@ return(priv->dspbytesread * 1.0 / priv->
  static int get_audio_framesize(priv_t *priv)
  {
  int bytesavail;
@@ -39,4 +39,4 @@ $NetBSD: patch-ae,v 1.1 2003/05/25 07:12:55 dan Exp $
 +#endif
  
  /* When mencoder wants audio data, it wants data..
-    it wont go do anything else until it gets it :( */
+    it won't go do anything else until it gets it :( */
