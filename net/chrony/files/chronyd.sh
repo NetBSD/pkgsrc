@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: chronyd.sh,v 1.3 2002/09/20 02:01:57 grant Exp $
+# $NetBSD: chronyd.sh,v 1.4 2002/09/23 07:04:39 grant Exp $
 #
 # PROVIDE: chronyd
 # REQUIRE: DAEMON
@@ -10,7 +10,7 @@
 name="chronyd"
 command="@PREFIX@/sbin/${name}"
 pidfile="/var/run/${name}.pid"
-required_files="@PREFIX@/etc/chrony.conf"
+required_files="@PKG_SYSCONFDIR@/chrony.conf"
 extra_commands="online offline"
 online_cmd="chronyd_online"
 online_precmd="chronyd_precmd"
@@ -20,14 +20,14 @@ offline_precmd="chronyd_precmd"
 chronyd_precmd()
 {
 	local id kfile
-	id=`awk '$1 == "commandkey" { print $2 }' @PREFIX@/etc/chrony.conf`
+	id=`awk '$1 == "commandkey" { print $2 }' @PKG_SYSCONFDIR@/chrony.conf`
 	if [ -z "$id" ]; then
-		echo "ERROR: no commandkey in @PREFIX@/etc/chrony.conf!"
+		echo "ERROR: no commandkey in @PKG_SYSCONFDIR@/chrony.conf!"
 		exit 1
 	fi
-	kfile=`awk '$1 == "keyfile" { print $2 }' @PREFIX@/etc/chrony.conf`
+	kfile=`awk '$1 == "keyfile" { print $2 }' @PKG_SYSCONFDIR@/chrony.conf`
 	if [ -z "$kfile" ]; then
-		echo "ERROR: no keyfile in @PREFIX@/etc/chrony.conf!"
+		echo "ERROR: no keyfile in @PKG_SYSCONFDIR@/chrony.conf!"
 		exit 1
 	fi
 	chronyd_password=`awk '$1 == "'$id'" { print $2 }' $kfile`
