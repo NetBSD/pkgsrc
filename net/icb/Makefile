@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/07/03 23:30:10 tron Exp $
+# $NetBSD: Makefile,v 1.8 1998/11/20 17:27:57 tsarna Exp $
 #
 
 DISTNAME=		icb-5.0.9
@@ -6,6 +6,7 @@ CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		cjs@netbsd.org
+HOMEPAGE=		http://www.icb.net/
 
 MIRROR_DISTFILE=	no
 
