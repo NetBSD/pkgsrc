@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:46:47 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:40:30 agc Exp $
 
-MD5 (crack5.0.tar.gz) = 6511dca525b7b921ea09eca855cc58f2
+SHA1 (crack5.0.tar.gz) = e5e59d1e5e9e42c816a4dbd3f24cc13e16a31365
+Size (crack5.0.tar.gz) = 2964507 bytes
 SHA1 (patch-aa) = 09d92c511781128729c3b7669cb4f3a93c2e7754
 SHA1 (patch-ab) = a60df3b47288abf28e44400e4035580da765e279
 SHA1 (patch-ac) = efa6903c59be394db1282d0760d55953a955e1ee

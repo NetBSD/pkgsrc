@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:47:16 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:40:37 agc Exp $
 
-MD5 (pgp50i-unix-src.tar.gz) = 7a01203f0053aa78a781367461d52187
+SHA1 (pgp50i-unix-src.tar.gz) = b740afe0bf557deedb53604274997cb2bbecac33
+Size (pgp50i-unix-src.tar.gz) = 927363 bytes
 SHA1 (patch-aa) = 2d8bd22762b130ce0178c937f5c352c7442a2bed
 SHA1 (patch-ab) = a33fb784788d54d96ffb9dc620391bc33cbbab98
 SHA1 (patch-ac) = 18908d3b5203cd10a85f06b2c58be3d76f838cc8

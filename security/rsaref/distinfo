@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:47:26 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:40:38 agc Exp $
 
-MD5 (rsaref.tar.Z) = 79caad60fbaa21e30aea89db325d23f7
+SHA1 (rsaref.tar.Z) = 9515c7d58150aa949e1fb01ea939131fca638dc6
+Size (rsaref.tar.Z) = 144092 bytes
 SHA1 (patch-aa) = d1ae15fddfadbe15bfc841ade743a97f2cc92ca9
 SHA1 (patch-ab) = b415044c5d67bef14e231e9c4030af5ca457df50
 SHA1 (patch-ac) = 498ff6a59786afbbc5273ecc65d93e73c5e5467c
