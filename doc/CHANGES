@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9307 2005/02/25 15:06:18 wiz Exp $
+$NetBSD: CHANGES,v 1.9308 2005/02/25 16:00:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1099,3 +1099,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated cyrus-imapd to 2.2.12 [adrianp 2005-02-25]
 	Updated nasm to 0.98.39 [adam 2005-02-25]
 	Updated libusb to 0.1.10a [adam 2005-02-25]
+	Updated p5-Log-Dispatch-Config to 1.01 [wiz 2005-02-25]
