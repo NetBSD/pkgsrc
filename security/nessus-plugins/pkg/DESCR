@@ -1,0 +1,10 @@
+The Nessus Security Scanner performs its security checks by
+launching external pieces of code called 'plugins'.
+One plugin is in charge of one security check against one
+host.
+
+There are, at this time, two languages to write security checks :
+NASL (the Nessus Attack Scripting Language) and C.
+NASL should be prefered as it makes plugins which are easily
+portable and shareable. C plugins should be avoided, except when
+NASL proves to not be powerful enough.
