@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.7 1999/05/20 20:38:42 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 1999/05/22 18:14:04 frueauf Exp $
 bin/addresses
 bin/ccexample
 bin/debugsh
 bin/dlpsh
 bin/getrom
+bin/hinotes
 bin/iambicexample
 bin/ietf2datebook
 bin/install-datebook
+bin/install-hinote
 bin/install-memo
 bin/install-todos
 bin/install-user
@@ -36,6 +38,7 @@ include/pi-appinfo.h
 include/pi-appinfo.hxx
 include/pi-args.h
 include/pi-cmp.h
+include/pi-config-win32.h
 include/pi-config.h
 include/pi-datebook.h
 include/pi-datebook.hxx
@@ -43,6 +46,7 @@ include/pi-dlp.h
 include/pi-dlp.hxx
 include/pi-expense.h
 include/pi-file.h
+include/pi-hinote.h
 include/pi-iambicExpense.h
 include/pi-iambicExpense.hxx
 include/pi-inet.h
@@ -55,6 +59,7 @@ include/pi-money.h
 include/pi-padp.h
 include/pi-serial.h
 include/pi-slp.h
+include/pi-sockaddr-win32.h
 include/pi-sockaddr.h
 include/pi-socket.h
 include/pi-source.h
@@ -79,6 +84,7 @@ lib/pix/casemask.xbm
 man/man1/dlpsh.1
 man/man1/ietf2datebook.1
 man/man1/install-datebook.1
+man/man1/install-hinote.1
 man/man1/install-memo.1
 man/man1/install-user.1
 man/man1/pilot-xfer.1
