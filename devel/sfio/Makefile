@@ -1,8 +1,15 @@
-# $NetBSD: Makefile,v 1.3 1999/12/28 05:10:24 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/13 17:42:22 itojun Exp $
 #
 
-DISTNAME=       sfio_1998.src.unix
-PKGNAME=        sfio-1998
+# pkgsrc/mail/sendmail (as of 8.11.0) specifically wants 1999, not 2000.
+# if you upgrade it, please check if sendmail works right.
+#
+# the original distribution requires us to put name onto web form, however,
+# the license term permits redistribution.  a copy of the distribution kit
+# is put into ${MASTER_SITE_LOCAL}.
+#
+DISTNAME=       sfio_1999.src.unix
+PKGNAME=        sfio-1999
 CATEGORIES=	devel
 MASTER_SITES=   ${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.cpio
