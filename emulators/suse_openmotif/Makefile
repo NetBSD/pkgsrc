@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/14 10:11:01 tron Exp $
+# $NetBSD: Makefile,v 1.2 2002/04/15 12:00:23 wiz Exp $
 
 DISTNAME=		openmotif
 PKGNAME=		suse_${DISTNAME}-${SUSE_VERSION}
 CATEGORIES=		emulators
-MASTER_SITES=		${MASTER_SITE_SUSE:=xdev/}
+MASTER_SITES=		${MASTER_SITE_SUSE:=xdev1/}
 EXTRACT_SUFX=		.rpm
 
 MAINTAINER=		tron@netbsd.org
