@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 14:48:45 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/03/01 22:30:52 wiz Exp $
 
-SHA1 (Regexp-Common-2.117.tar.gz) = 8f77a2189674eeed53b1a9470dd4d8de617f30b9
-RMD160 (Regexp-Common-2.117.tar.gz) = 0b50a83d1d093cf9fd2ceeaf5d12bb24c7e28928
-Size (Regexp-Common-2.117.tar.gz) = 100179 bytes
+SHA1 (Regexp-Common-2.119.tar.gz) = ab85a9e65737424b572af3330314a9ce1bdbbe84
+RMD160 (Regexp-Common-2.119.tar.gz) = 5d034f767c2dfece0d05cc94233ed8d7978f4b8a
+Size (Regexp-Common-2.119.tar.gz) = 109761 bytes
