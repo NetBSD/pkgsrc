@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2002/06/09 05:06:27 taca Exp $
+# $NetBSD: Makefile,v 1.5 2002/09/04 14:42:41 taca Exp $
 
 DISTNAME=	tamago-4.0.6
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	ftp://www.m17n.org/pub/tamago/
 
