@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2725 2004/12/18 13:01:34 wiz Exp $
+$NetBSD: TODO,v 1.2726 2004/12/19 16:49:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -420,7 +420,7 @@ Suggested package updates
 	o devIL-1.6.7
 	o devhelp-0.9.3
 	o devtodo-0.1.18
-	o dhisd-5.1
+	o dhisd-5.1 [pkg/28704]
 	o dict-client-1.9.11
 	o dict-server-1.9.11
 	o diction-1.06
@@ -449,7 +449,7 @@ Suggested package updates
 	o edb-1.0.5
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o eel-1.0.2
-	o efax-gtk-2.2.13
+	o efax-gtk-2.2.14
 	o efont-unicode-0.4.2
 	o egtk-0.3.6
 	o elk-3.99.6
@@ -517,6 +517,7 @@ Suggested package updates
 	o gift-0.11.8
 	o gift-fasttrack-0.8.7
 	o gift-openft-0.2.1.4
+	o gimp-2.2.0
 	o git-4.3.20
 	o gkrellm-volume-2.1.13
 	o gkrellm1-moon-0.6
@@ -908,6 +909,7 @@ Suggested package updates
 	o p5-razor-agents-2.61
 	o p5-sybperl-2.17
 	o p5-xmltv-0.5.37
+	o p7zip-4.13
 	o pango-1.8.0
 	o pari-2.2.7
 	o pdmenu-1.2.85
