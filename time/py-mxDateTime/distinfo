@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:53:11 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 14:47:14 agc Exp $
 
-MD5 (mxDateTime-1.3.0.zip) = 85c832e0b0cf6ddd230d76f04025e191
+SHA1 (mxDateTime-1.3.0.zip) = 91aceeea7256138b7b42a4761f0f1dbac4f80d0f
+Size (mxDateTime-1.3.0.zip) = 145186 bytes
