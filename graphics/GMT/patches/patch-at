@@ -1,4 +1,4 @@
-$NetBSD: patch-at,v 1.2 2001/04/19 20:51:33 jtb Exp $
+$NetBSD: patch-at,v 1.3 2001/04/19 21:36:31 jtb Exp $
 
 --- src/x2sys/makefile.orig	Wed Apr 11 19:58:09 2001
 +++ src/x2sys/makefile
@@ -21,7 +21,8 @@ $NetBSD: patch-at,v 1.2 2001/04/19 20:51:33 jtb Exp $
 +libx2sys.la:		x2sys.o
 +			$(LIBTOOL) $(CC) -o libx2sys.la x2sys.lo --version-info 0:0 -rpath $(libdir)
  
- all:			$(XSYSTEM) libx2sys.a
+-all:			$(XSYSTEM) libx2sys.a
++all:			libx2sys.la $(XSYSTEM)
  
  install:		all
  			for i in $(XSYSTEM); do \
@@ -45,7 +46,7 @@ $NetBSD: patch-at,v 1.2 2001/04/19 20:51:33 jtb Exp $
  
  $(XSYSTEM):		$(XSYSTEM_O) libx2sys.a
 -			$(CC) $(CFLAGS) $@.o -o $@ -L. -lx2sys $(ALLLIB) $(LDFLAGS)
-+			@$(LIBTOOL) $(CC) $(CFLAGS) $@.lo -o $@ -L. -lx2sys $(ALLLIB) $(LDFLAGS)
++			@$(LIBTOOL) $(CC) $(CFLAGS) $@.lo -o $@ libx2sys.la $(ALLLIB) $(LDFLAGS)
  
  .c.o:
 -			$(CC) -c $(CFLAGS) $<
