@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2004/05/17 09:27:23 salo Exp $
+
+--- configure.orig	2004-05-07 16:47:05.000000000 +0200
++++ configure	2004-05-16 22:51:18.000000000 +0200
+@@ -5158,7 +5158,7 @@
+ 
+ # Add extra flags if in debug mode
+ CFLAGS=""
+-CXXFLAGS="-Os"
++#CXXFLAGS="-Os"
+ # Check whether --enable-debug or --disable-debug was given.
+ if test "${enable_debug+set}" = set; then
+   enableval="$enable_debug"
