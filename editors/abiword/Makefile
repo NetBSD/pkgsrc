@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2001/06/29 04:54:52 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2001/07/02 08:07:08 jlam Exp $
 #
 # According to AbiSource's explanation of their trademark rights,
 # compilations/distributions of AbiWord not provided by AbiSource must
@@ -28,7 +28,6 @@ DEPENDS+=	ispell-base-*:../../textproc/ispell-base
 USE_BUILDLINK_ONLY=	# defined
 
 USE_X11=	# defined
-USE_XPM=	# defined
 USE_GMAKE=	# defined
 ALL_TARGET=	compile canonical
 
@@ -62,5 +61,6 @@ post-install:
 
 .include "../../converters/libiconv/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
+.include "../../graphics/xpm/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
