@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.112 2004/06/21 21:55:04 kristerw Exp $
+# $NetBSD: Makefile,v 1.113 2004/07/18 23:36:17 kristerw Exp $
 #
 
-DISTNAME=		xmame-0.83.1
+DISTNAME=		xmame-0.84.1
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -33,6 +33,7 @@ MAKE_FLAGS+=		TARGET="${TARGET:S/x//}"
 MAKE_FLAGS+=		LIBS="${LDFLAGS} ${LIBS}"
 MAKE_FLAGS+=		CFLAGS="${CFLAGS}"
 MAKE_FLAGS+=		X11INC= X11LIB=
+MAKE_FLAGS+=		XMAME_NET=1
 
 .if !empty(USE_ESOUND:M[Yy][Ee][Ss])
 MAKE_FLAGS+=		SOUND_ESOUND=1
