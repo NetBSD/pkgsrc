@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.4 2004/07/06 21:12:58 drochner Exp $
+$NetBSD: distinfo,v 1.5 2005/02/22 00:44:20 wiz Exp $
 
 SHA1 (xine-ui-0.99.2.tar.gz) = 0815f3b660e50a3a69bac1d54bdf8036e9ff57e2
 Size (xine-ui-0.99.2.tar.gz) = 2374176 bytes
 SHA1 (patch-aa) = 2e32fd05f1c47fd5edd1be6997840cfc04e0b448
 SHA1 (patch-ab) = 7f3a44781d0a0418f277c082486e606058fa5357
 SHA1 (patch-ac) = 6b25785ab06d40d49acf0fd4c748e7b8e081c91f
-SHA1 (patch-ad) = 44e69b2a8f087082a4db186eecb8dc562d0fa58f
-SHA1 (patch-ae) = 813c897b89edbc1e37b731008b87fe6b04cf53f2
-SHA1 (patch-ag) = 4dd810e87922da673dc463367dc231105cfdeb6a
+SHA1 (patch-ad) = d5bfdfe1714d1c00a15a5da6b6b392329a277c86
+SHA1 (patch-ae) = baf9bf2a9f2c375208fce090b9030e938b5ba428
+SHA1 (patch-ag) = dddbea5257a5b21e3a7ba21207661f4a47a9fa7e
 SHA1 (patch-ah) = 9d61282de803459e4b9c49814796dcc97658849d
 SHA1 (patch-ai) = 78228fa174cb0d455a9debec18125d9ee13d34dd
-SHA1 (patch-aj) = 13648ce45993399bb44ac5f275bd0431b1ce0e02
+SHA1 (patch-aj) = 48deb40db11492858245b8affca709f11a6c240f
 SHA1 (patch-ak) = 21d6d048502b71a703365e3fab136b096c4575d3
