@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.486 2000/06/26 01:19:09 hubertf Exp $			\
+#	$NetBSD: bsd.pkg.mk,v 1.487 2000/06/26 23:53:33 wiz Exp $			\
 #
 # This file is in the public domain.
 #
@@ -620,8 +620,8 @@ BUILD_VERSION_FILE=	${WRKDIR}/.build_version
 BUILD_INFO_FILE=	${WRKDIR}/.build_info
 
 # Files containing size of pkg w/o and w/ all required pkgs
-SIZE_PKG_FILE=		${WRKDIR}/SizePkg
-SIZE_ALL_FILE=		${WRKDIR}/SizeAll
+SIZE_PKG_FILE=		${WRKDIR}/.SizePkg
+SIZE_ALL_FILE=		${WRKDIR}/.SizeAll
 
 .ifndef PKG_ARGS
 PKG_ARGS=		-v -c ${COMMENT} -d ${DESCR} -f ${PLIST} -l
@@ -1981,8 +1981,8 @@ clean: pre-clean
 .endif
 .else
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${RM} -f ${WRKDIR}/.*_done SizeAll SizePkg .build_info .build_version \
-	    .DESCR .PLIST
+	${RM} -f ${WRKDIR}/.*_done .SizeAll .SizePkg .build_info 	\
+		.build_version .DESCR .PLIST
 .endif
 .endif
 
@@ -2723,7 +2723,7 @@ COMMON_DIRS!= 	${AWK} 'BEGIN  { 				\
 
 .if !target(print-PLIST)
 print-PLIST:
-	@${ECHO} '@comment $$NetBSD: bsd.pkg.mk,v 1.486 2000/06/26 01:19:09 hubertf Exp $$'
+	@${ECHO} '@comment $$NetBSD: bsd.pkg.mk,v 1.487 2000/06/26 23:53:33 wiz Exp $$'
 	@${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} \! -type d 	\
 	 | ${SED} s@${PREFIX}/./@@ 				\
 	 | sort							\
