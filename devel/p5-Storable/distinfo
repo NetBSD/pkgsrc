@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2002/06/10 02:40:07 shell Exp $
+$NetBSD: distinfo,v 1.6 2003/04/12 15:40:36 martti Exp $
 
-SHA1 (Storable-2.04.tar.gz) = 7cf845afed5ca783b582a52e4488b2691b27caf5
-Size (Storable-2.04.tar.gz) = 91034 bytes
+SHA1 (Storable-2.06.tar.gz) = 5b7745ab86f8e08210a00d630a698959ee6adecf
+Size (Storable-2.06.tar.gz) = 118374 bytes
