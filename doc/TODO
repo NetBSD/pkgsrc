@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1823 2004/06/07 02:59:09 snj Exp $
+$NetBSD: TODO,v 1.1824 2004/06/07 14:47:34 minskim Exp $
 
 Suggested new packages
 ======================
@@ -404,7 +404,6 @@ Suggested package updates
 	o xerces-j-2.6.2
 	o xfce-4.0.5
 	o xinvest-2.6.9
-	o xisp-2.7 [pkg/19566]
 	o xmbmon-2.04
 	o xmcd-3.3.0
 	o xmms-alarm-0.3.5

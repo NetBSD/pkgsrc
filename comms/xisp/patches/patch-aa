@@ -1,16 +1,18 @@
-$NetBSD: patch-aa,v 1.7 2002/09/21 23:17:25 jlam Exp $
+$NetBSD: patch-aa,v 1.8 2004/06/07 14:47:34 minskim Exp $
 
---- Makefile.orig	Thu Aug 26 08:08:51 1999
-+++ Makefile	Wed Apr 17 14:55:31 2002
-@@ -8,11 +8,11 @@
+--- Makefile.orig	2003-06-28 09:03:03.000000000 -0500
++++ Makefile
+@@ -12,12 +12,12 @@
  #  Compilation/installation vars (global for all following sections) |
  #=====================================================================
  #
+-CC         = gcc
 -PREFIX     = /usr/local
 -X11PREFIX  = /usr/X11R6
 -INCX11     = $(X11PREFIX)/include
 -LIBX11     = $(X11PREFIX)/lib
 -INCFORMS   = $(X11PREFIX)/include
++#CC         = gcc
 +#PREFIX     = /usr/local
 +#X11PREFIX  = /usr/X11R6
 +INCX11     = $(X11BASE)/include
@@ -19,10 +21,10 @@ $NetBSD: patch-aa,v 1.7 2002/09/21 23:17:25 jlam Exp $
  LIBFORMS   = $(X11PREFIX)/lib
  MODEM_DEV  = modem
  MODEM_PATH = /dev/$(MODEM_DEV)
-@@ -24,25 +24,25 @@
- # Normal (i.e. SuSE-6.x) vars; for SuSE-5.x use the lines which
- # DO NOT include -lcrypt in EXTRALIBS and -DGLIBC2 in EXTRADEFS.
- #----------------------------------------------------------------
+@@ -29,26 +29,26 @@ MODEM_PATH = /dev/$(MODEM_DEV)
+ # Normal (i.e. SuSE-[678].x) vars; for SuSE-5.x use the lines which
+ # DO NOT include -lcrypt for EXTRALIBS and -DGLIBC2 for EXTRADEFS.
+ #-------------------------------------------------------------------
 -BINX11     = $(X11PREFIX)/bin
 -USRLOCAL   = $(PREFIX)/bin
 -SBINDIR    = /usr/sbin
@@ -32,10 +34,11 @@ $NetBSD: patch-aa,v 1.7 2002/09/21 23:17:25 jlam Exp $
 -MANDIR     = $(X11PREFIX)/man/man1
 -ETCPPP     = /etc/ppp
 -INSTPPPDIR = $(ETCPPP)
+-PPPDLCKDIR = /var/lock
 -DESTDIR    = 
 -GROUP      = uucp
--GCCFLAGS   = -Wall -O
--EXTRADEFS  = -DMODEM_DEVICE=\"$(MODEM_PATH)\" -DGLIBC2
+-CCFLAGS    = -Wall -O
+-EXTRADEFS  = -DMODEM_DEVICE=\"$(MODEM_PATH)\" -DGLIBC2 -DHAVE_STRERROR
 +#BINX11     = $(X11PREFIX)/bin
 +#USRLOCAL   = $(PREFIX)/bin
 +#SBINDIR    = /usr/sbin
@@ -45,10 +48,11 @@ $NetBSD: patch-aa,v 1.7 2002/09/21 23:17:25 jlam Exp $
 +#MANDIR     = $(X11PREFIX)/man/man1
 +#ETCPPP     = /etc/ppp
 +#INSTPPPDIR = $(ETCPPP)
++#PPPDLCKDIR = /var/lock
 +#DESTDIR    = 
 +#GROUP      = uucp
-+#GCCFLAGS   = -Wall -O
-+#EXTRADEFS  = -DMODEM_DEVICE=\"$(MODEM_PATH)\" -DGLIBC2
++#CCFLAGS    = -Wall -O
++#EXTRADEFS  = -DMODEM_DEVICE=\"$(MODEM_PATH)\" -DGLIBC2 -DHAVE_STRERROR
  #EXTRADEFS  = -DMODEM_DEVICE=\"$(MODEM_PATH)\"
 -EXTRALIBS  = -lcrypt
 +#EXTRALIBS  = -lcrypt
@@ -62,7 +66,7 @@ $NetBSD: patch-aa,v 1.7 2002/09/21 23:17:25 jlam Exp $
  #
  # Debian vars (if your Debian distribution is relatively
  # old and does not use glibc2, use the lines which DO NOT
-@@ -166,24 +166,24 @@
+@@ -187,25 +187,25 @@ INSTALL    = install
  #
  # NetBSD vars
  #-------------
@@ -84,52 +88,57 @@ $NetBSD: patch-aa,v 1.7 2002/09/21 23:17:25 jlam Exp $
 +OPTSDIR    = $(ETCPPP)
  #INSTPPPDIR = $(ETCPPP)
 -##INSTPPPDIR = $(PREFIX)/share/examples/xisp
+-#PPPDLCKDIR = /var/spool/lock
 -#DESTDIR    = 
 -#GROUP      = dialer
--#GCCFLAGS   = -Wall -O
+-#CCFLAGS    = -Wall -O
 -#EXTRADEFS  = -DMODEM_DEVICE=\"$(MODEM_PATH)\" -DHAVE_STRERROR
 -#EXTRALIBS  = -lcrypt
 -#LINKX11    = -Wl,-R$(LIBX11)
 -#LINKFORMS  = -L$(LIBFORMS) -lforms
 -#INSTALL    = /usr/bin/install
 +INSTPPPDIR = $(PREFIX)/share/examples/xisp
++PPPDLCKDIR = /var/spool/lock
 +DESTDIR    = 
 +GROUP      = dialer
-+GCCFLAGS   = -Wall -O
++CCFLAGS    = -Wall -O
 +EXTRADEFS  = -DMODEM_DEVICE=\"$(MODEM_PATH)\" -DHAVE_STRERROR
 +EXTRALIBS  = -lcrypt
-+LINKX11    = -Wl,-R$(LIBX11) -Wl,-R$(LOCALBASE)/lib
-+LINKFORMS  = -L$(LIBFORMS) -L$(LOCALBASE)/lib -lforms -ljpeg -lXpm
++LINKX11    = -Wl,-R$(LIBX11)
++LINKFORMS  = -Wl,-R$(LIBFORMS) -L$(LIBFORMS) -lforms
 +INSTALL    = /usr/bin/install
  #
  # FreeBSD vars
  #-------------
-@@ -261,16 +261,16 @@
- 	gcc $(GCCOPTS) -c network.c
+@@ -325,19 +325,19 @@ network.o: network.h network.c
+ 	$(CC) $(CCOPTS) -c network.c
  
- xispdial: xispdial.c common.h version.h
--	gcc $(GCCOPTS) -o xispdial xispdial.c
-+	gcc $(GCCOPTS) $(LINKX11) -o xispdial xispdial.c
+ xispdial: xispdial.o $(SHAREOBJ)
+-	$(CC) $(CCOPTS) -o xispdial xispdial.o $(SHAREOBJ)
++	$(CC) $(CCOPTS) $(LINKX11) -o xispdial xispdial.o $(SHAREOBJ)
+   
+ xispdial.o: xispdial.c common.h version.h
+ 	$(CC) $(CCOPTS) -c xispdial.c
  
- xisprccv: xisprccv.o pcode.o
--	gcc -o xisprccv xisprccv.o pcode.o $(EXTRALIBS) -lm
-+	gcc -o xisprccv xisprccv.o pcode.o $(EXTRALIBS) $(LINKX11) -lm
- 
+ xisprccv: xisprccv.o pcode.o $(SHAREOBJ)
+-	$(CC) -o xisprccv xisprccv.o pcode.o $(SHAREOBJ) $(EXTRALIBS) -lm
++	$(CC) -o xisprccv xisprccv.o pcode.o $(SHAREOBJ) $(EXTRALIBS) $(LINKX11) -lm
+   
  xisprccv.o: xisprccv.c common.h version.h pcode.h logs.h
- 	gcc $(GCCOPTS) -c xisprccv.c
+ 	$(CC) $(CCOPTS) -c xisprccv.c
  
  xispterm: xispterm.h xispterm.c
--	gcc $(GCCOPTS) -I$(INCX11) -I$(INCFORMS) -o xispterm xispterm.c $(EXTRALIBS) -L$(LIBX11) $(LINKFORMS) -lX11 -lm
-+	gcc $(GCCOPTS) $(LINKX11) -I$(INCX11) -I$(INCFORMS) -o xispterm xispterm.c $(EXTRALIBS) -L$(LIBX11) $(LINKFORMS) -lX11 -lm
+-	$(CC) $(CCOPTS) -I$(INCX11) -I$(INCFORMS) -o xispterm xispterm.c \
++	$(CC) $(CCOPTS) $(LINKX11) -I$(INCX11) -I$(INCFORMS) -o xispterm xispterm.c \
+ 	$(EXTRALIBS) -L$(LIBX11) $(LINKFORMS) -lXpm -lX11 -lm
  
  rcio.o: rcio.h rcio.c common.h version.h
- 	gcc $(GCCOPTS) -c rcio.c
-@@ -279,7 +279,7 @@
- 	gcc $(GCCOPTS) -c logs.c
+@@ -350,7 +350,7 @@ xisp_euidaccess.o: xisp_euidaccess.c
+ 	$(CC) $(CCOPTS) -c xisp_euidaccess.c
  
  xispid: xispid.c
--	gcc $(GCCOPTS) -o xispid xispid.c
-+	gcc $(GCCOPTS) $(LINKX11) -o xispid xispid.c
+-	$(CC) $(CCOPTS) -o xispid xispid.c
++	$(CC) $(CCOPTS) $(LINKX11) -o xispid xispid.c
  
- install: xisp xispdial xisprccv xispterm xispid
- 	if [ ! -d $(DESTDIR)$(BINX11) ]; then $(INSTALL) -d $(DESTDIR)$(BINX11); fi
+ xisp.1: xisp.man
+ 	sed -e s,@ETCPPP@,$(DESTDIR)$(ETCPPP),g \
