@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/29 00:33:10 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/02/19 17:08:13 jtb Exp $
 bin/greencard-nhc98
 bin/harch
 bin/hi
@@ -81,22 +81,22 @@ include/nhc98/tracer/Ratio.hi
 include/nhc98/tracer/System.hi
 include/nhc98/tracer/Text.hi
 include/nhc98/twopass.h
-lib/hmake/ix86-${OPSYS}/HInteractive
-lib/hmake/ix86-${OPSYS}/MkProg
-lib/hmake/ix86-${OPSYS}/Older
-lib/hmake/ix86-${OPSYS}/hmake.config
+lib/hmake/${HARCH}/HInteractive
+lib/hmake/${HARCH}/MkProg
+lib/hmake/${HARCH}/Older
+lib/hmake/${HARCH}/hmake.config
 lib/nhc98/hood.jar
-lib/nhc98/ix86-${OPSYS}/Prelude.a
-lib/nhc98/ix86-${OPSYS}/Runtime.a
-lib/nhc98/ix86-${OPSYS}/config
-lib/nhc98/ix86-${OPSYS}/greencard-nhc98
-lib/nhc98/ix86-${OPSYS}/hmake.config
-lib/nhc98/ix86-${OPSYS}/libdebug.a
-lib/nhc98/ix86-${OPSYS}/main.o
-lib/nhc98/ix86-${OPSYS}/mutator.o
-lib/nhc98/ix86-${OPSYS}/mutlib.o
-lib/nhc98/ix86-${OPSYS}/nhc98comp
-lib/nhc98/ix86-${OPSYS}/nhc98heap
+lib/nhc98/${HARCH}/Prelude.a
+lib/nhc98/${HARCH}/Runtime.a
+lib/nhc98/${HARCH}/config
+lib/nhc98/${HARCH}/greencard-nhc98
+lib/nhc98/${HARCH}/hmake.config
+lib/nhc98/${HARCH}/libdebug.a
+lib/nhc98/${HARCH}/main.o
+lib/nhc98/${HARCH}/mutator.o
+lib/nhc98/${HARCH}/mutlib.o
+lib/nhc98/${HARCH}/nhc98comp
+lib/nhc98/${HARCH}/nhc98heap
 lib/nhc98/rtb.jar
 man/man1/harch.1
 man/man1/hmake.1
@@ -186,9 +186,9 @@ share/doc/nhc98/york-release.html
 @dirrm share/doc/nhc98/examples
 @dirrm share/doc/nhc98/bugs
 @dirrm share/doc/nhc98
-@dirrm lib/nhc98/ix86-${OPSYS}
+@dirrm lib/nhc98/${HARCH}
 @dirrm lib/nhc98
-@dirrm lib/hmake/ix86-${OPSYS}
+@dirrm lib/hmake/${HARCH}
 @dirrm lib/hmake
 @dirrm include/nhc98/tracer
 @dirrm include/nhc98
