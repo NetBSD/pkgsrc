@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5147 2004/03/08 01:56:53 minskim Exp $
+$NetBSD: CHANGES,v 1.5148 2004/03/08 03:05:27 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1235,3 +1235,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated wistumbler2 to 2.00pre7 [xtraeme 2004-03-07]
 	Updated echoping to 5.2.0 [minskim 2004-03-08]
 	Updated dgd to 1.2.0.4 [minskim 2004-03-08]
+	Updated gnuchess to 5.07 [minskim 2004-03-08]
