@@ -1,18 +1,19 @@
-$NetBSD: patch-ac,v 1.6 2000/08/17 14:00:28 wiz Exp $
+$NetBSD: patch-ac,v 1.7 2000/09/01 20:16:59 veego Exp $
 
---- Makefile.global.in	Mon Dec 13 14:18:37 1999
-+++ Makefile.global.in	Mon Jul  3 11:31:41 2000
-@@ -40,7 +40,7 @@
+--- Makefile.global.in	Wed Jul 19 01:54:07 2000
++++ Makefile.global.in	Fri Sep  1 20:59:13 2000
+@@ -39,8 +39,8 @@
+ TCLINC	= @TCL_INC@
  EXTRA_SRC = @EXTRA_SRC@
  
 -OWNER		= -O @NEWSUSER@ -G @NEWSGRP@
+-ROWNER		= -O @NEWSUSER@ -G @RNEWSGRP@
 +OWNER		= -o @NEWSUSER@ -g @NEWSGRP@
--ROWNER		= -O @NEWSUSER@ -G uucp
-+ROWNER		= -o @NEWSUSER@ -g @NEWSGRP@
++ROWNER		= -o @NEWSUSER@ -g @RNEWSGRP@
  NEWSGROUP	= @NEWSGRP@
- 
- PATHNEWS = @prefix@
-@@ -61,10 +61,10 @@
+ INEWSMODE	= @INEWSMODE@
+ RNEWSMODE	= @RNEWSMODE@
+@@ -63,10 +63,10 @@
  
  # Pick on of SOURCE, NROFF-PACK or NROFF-PACK-SCO
  MANPAGESTYLE	= SOURCE
