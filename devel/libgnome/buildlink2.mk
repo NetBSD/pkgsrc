@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/05/02 11:54:36 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/07/13 13:51:19 wiz Exp $
 
 .if !defined(LIBGNOME_BUILDLINK2_MK)
 LIBGNOME_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		libgnome
-BUILDLINK_DEPENDS.libgnome?=	libgnome>=2.2.0.1nb2
+BUILDLINK_DEPENDS.libgnome?=	libgnome>=2.2.3nb1
 BUILDLINK_PKGSRCDIR.libgnome?=	../../devel/libgnome
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libgnome=libgnome

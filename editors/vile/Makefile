@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2003/06/02 01:20:02 jschauma Exp $
+# $NetBSD: Makefile,v 1.31 2003/07/13 13:51:36 wiz Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:55:09 gj Exp
 
 DISTNAME=		vile-9.3
+PKGREVISION=		1
 CATEGORIES=		editors
 MASTER_SITES=		ftp://dickey.his.com/vile/ \
 			ftp://invisible-island.net/vile/

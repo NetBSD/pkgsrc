@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1 2003/07/09 08:17:42 grant Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/07/13 13:52:20 wiz Exp $
 
 .if !defined(GAWK_BUILDLINK2_MK)
 GAWK_BUILDLINK2_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILDLINK_DEPENDS.gawk?=	gawk>=3.1.1
+BUILDLINK_DEPENDS.gawk?=	gawk>=3.1.1nb1
 BUILDLINK_PKGSRCDIR.gawk?=	../../lang/gawk
 
 #

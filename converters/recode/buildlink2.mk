@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:22:02 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/07/13 13:50:54 wiz Exp $
 
 .if !defined(RECODE_BUILDLINK2_MK)
 RECODE_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		recode
-BUILDLINK_DEPENDS.recode?=	recode>=3.5
+BUILDLINK_DEPENDS.recode?=	recode>=3.6nb1
 BUILDLINK_PKGSRCDIR.recode?=	../../databases/recode
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.recode=recode

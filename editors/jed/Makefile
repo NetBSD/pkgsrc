@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2003/04/05 21:40:53 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2003/07/13 13:51:33 wiz Exp $
 #
 PKGNAME=		jed-0.99.16
+PKGREVISION=		1
 .include "../jed/Makefile.common"
 COMMENT=		Extensible folding editor with Emacs/WordStar/EDT emulations
 

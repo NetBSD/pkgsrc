@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/05/02 11:53:48 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/07/13 13:50:39 wiz Exp $
 
 .if !defined(XMMS_BUILDLINK2_MK)
 XMMS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		xmms
-BUILDLINK_DEPENDS.xmms?=	xmms>=1.2.7nb6
+BUILDLINK_DEPENDS.xmms?=	xmms>=1.2.7nb7
 BUILDLINK_PKGSRCDIR.xmms?=	../../audio/xmms
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.xmms=xmms

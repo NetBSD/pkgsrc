@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2003/01/13 18:29:52 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/13 13:50:51 wiz Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV:S/-/_/}.src
 PKGNAME=	malsync-2.1.1
+PKGREVISION=			1
 WRKSRC=		${WRKDIR}/malsync
 CATEGORIES=	comms
 MASTER_SITES=	http://www.tomw.org/malsync/

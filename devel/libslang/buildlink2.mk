@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:22:32 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/07/13 13:51:21 wiz Exp $
 
 .if !defined(LIBSLANG_BUILDLINK2_MK)
 LIBSLANG_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		libslang
-BUILDLINK_DEPENDS.libslang?=	libslang>=1.4.4
+BUILDLINK_DEPENDS.libslang?=	libslang>=1.4.9nb1
 BUILDLINK_PKGSRCDIR.libslang?=	../../devel/libslang
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libslang=libslang
