@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8605 2005/01/04 23:50:34 jmmv Exp $
+$NetBSD: CHANGES,v 1.8606 2005/01/04 23:54:21 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -97,3 +97,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated tnftp to 20050103 [lukem 2005-01-04]
 	Added vino-2.8.1 [jmmv 2005-01-04]
 	Updated gnome to 2.8.2nb1 [jmmv 2005-01-04]
+	Updated gtk2 to 2.6.0nb2 [jmmv 2005-01-04]
