@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/21 16:44:37 martti Exp $
+# $NetBSD: Makefile,v 1.9 2003/08/29 16:20:56 taca Exp $
 
 DISTNAME=	Mule-UCS-0.84
 PKGREVISION=	4
@@ -35,8 +35,7 @@ do-install:
 	    ${EMACS_LISPPREFIX}/mule-ucs/jisx0213; \
 	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/mule-ucs/reldata
 	${INSTALL_DATA} ${WRKSRC}/lisp/reldata/* \
-	    ${EMACS_LISPPREFIX}/mule-ucs/reldata; \
-	done
+	    ${EMACS_LISPPREFIX}/mule-ucs/reldata
 
 .include "../../mk/emacs.mk"
 .include "../../mk/bsd.pkg.mk"
