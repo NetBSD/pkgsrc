@@ -1,18 +1,45 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/04 11:52:50 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/25 15:45:20 xtraeme Exp $
 bin/conglomerate
 share/applications/conglomerate.desktop
 share/conglomerate/dispspecs/cnxml.xds
+share/conglomerate/dispspecs/dispspec.xds
 share/conglomerate/dispspecs/docbook.xds
+share/conglomerate/dispspecs/kernel-traffic-newsletter.xds
 share/conglomerate/dispspecs/readme.xds
+share/conglomerate/dispspecs/relax-ng.xds
 share/conglomerate/dispspecs/website-layout.xds
 share/conglomerate/dispspecs/website-webpage.xds
-share/conglomerate/dispspecs/xsl.xds
+share/conglomerate/dispspecs/xhtml1-strict.xds
+share/conglomerate/dtd/xds.dtd
 share/conglomerate/examples/cnxml.xml
+share/conglomerate/examples/error-proposal.xml
+share/conglomerate/examples/file-roller.xml
+share/conglomerate/examples/i18n.xml
 share/conglomerate/examples/readme.xml
 share/conglomerate/examples/test-docbook.xml
+share/conglomerate/examples/test-entities.xml
+share/conglomerate/examples/test-table.xml
+share/conglomerate/glade/cong-file-import.glade
 share/conglomerate/glade/docbook-common-properties.glade
+share/conglomerate/glade/docbook-orderedlist-properties.glade
+share/gnome/help/conglomerate/C/conglomerate.xml
+share/gnome/help/conglomerate/C/figures/conglomerate_logo.png
+share/gnome/help/conglomerate/C/figures/intro.png
+share/gnome/help/conglomerate/C/figures/menu-properties.png
+share/gnome/help/conglomerate/C/figures/new-doc-wizard.png
+share/gnome/help/conglomerate/C/figures/new.png
+share/gnome/help/conglomerate/C/figures/properties-dialog.png
+share/gnome/help/conglomerate/C/figures/quote.png
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/conglomerate.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/conglomerate.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/conglomerate.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/conglomerate.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/conglomerate.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/conglomerate.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/conglomerate.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/conglomerate.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/conglomerate.mo
+share/omf/conglomerate/conglomerate-C.omf
 share/pixmaps/cong-address-16.png
 share/pixmaps/cong-answer-16.png
 share/pixmaps/cong-author-16.png
@@ -41,6 +68,7 @@ share/pixmaps/cong-subsection-16.png
 share/pixmaps/cong-summary-16.png
 share/pixmaps/cong-title-16.png
 share/pixmaps/cong-wrapper-16.png
+@dirrm share/conglomerate/dtd
 @dirrm share/conglomerate/glade
 @dirrm share/conglomerate/examples
 @dirrm share/conglomerate/dispspecs
