@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.331 2004/02/17 03:24:28 snj Exp $
+# $NetBSD: Packages.txt,v 1.332 2004/02/18 18:06:24 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -348,7 +348,8 @@ overridden by setting the following variables in /etc/mk.conf:
 	distcc		distributed C/C++ (chainable)
 	ccache		compiler cache (chainable)
 	gcc		GNU
-	mipspro		Silicon Graphics, Inc. MIPSpro
+	mipspro		Silicon Graphics, Inc. MIPSpro (n32/n64)
+	mipspro-ucode	Silicon Graphics, Inc. MIPSpro (o32)
 	sunpro		Sun Microsystems, Inc. WorkShip/Forte/Sun
 			ONE Studio
 
