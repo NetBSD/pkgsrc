@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/02/14 17:21:50 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2004/03/23 07:16:10 snj Exp $
 #
 
 DISTNAME=	gpgme-0.4.3
@@ -16,6 +16,9 @@ USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 PTHREAD_OPTS+=		require
+
+# Avoid an ICE in gcc2 on sparc64
+CONFIGURE_ENV+=		F77=${FALSE}
 
 TEST_TARGET=		check
 
