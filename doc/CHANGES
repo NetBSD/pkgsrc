@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3844 2003/11/18 21:11:11 markd Exp $
+$NetBSD: CHANGES,v 1.3845 2003/11/19 12:50:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4627,3 +4627,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated silc-client to 0.9.16 [salo 2003-11-18]
 	Updated silc-client-icb to 0.14nb5 [salo 2003-11-18]
 	Updated ivtools to 1.1.0 [markd 2003-11-18]
+	Updated rocksndiamonds to 3.0.7 [adam 2003-11-19]
+	Updated rocksndiamonds-sdl to 3.0.7 [adam 2003-11-19]
