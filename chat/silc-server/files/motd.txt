@@ -1,0 +1,10 @@
+-
+- Message of the Day:
+-
+- This is new installed SILC Server from the NetBSD pkgsrc package.
+-
+- Example configuration files are located in the following directory:
+-   @PREFIX@/share/doc/silcd/examples/
+-
+- For more information about the SILC browse to http://silcnet.org/
+-

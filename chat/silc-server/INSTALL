@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1.1.1 2001/11/30 23:33:34 hubertf Exp $
+# $NetBSD: INSTALL,v 1.2 2001/12/17 00:43:10 hubertf Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -15,7 +15,7 @@ SERVERROOT="@SILCD_CONF_DIR@"
 LOGDIR=/var/log/silcd
 SAMPLECONFDIR=${PKG_PREFIX}/share/doc/silcd
 CONFDIR=${SERVERROOT}
-CONFFILES="silcd.conf"
+CONFFILES="silcd.conf motd.txt"
 PUBKEY="silcd.pub"
 PRIVKEY="silcd.prv"
 
@@ -24,6 +24,7 @@ PRE-INSTALL)
 	;;
 
 POST-INSTALL)
+	${MKDIR} ${SERVERROOT}
         ${CAT} << EOF
 ===========================================================================
 
@@ -31,11 +32,17 @@ POST-INSTALL)
 
 EOF
 
-	${MKDIR} ${SERVERROOT}
-	${MKDIR} ${LOGDIR}
+	if [ -d ${LOGDIR} ]
+	then
+		echo "        WARNING: ${LOGDIR} already exists, owner"
+		echo "                 and permissions may be changed."
+	else
+		${MKDIR} ${LOGDIR}
+		echo "        ${LOGDIR}"
+	fi
+
 	${CHOWN} root:nobody ${LOGDIR}
 	${CHMOD} 2775 ${LOGDIR}
-	echo "        ${LOGDIR}"
 
         ${CAT} << EOF
 
@@ -58,12 +65,13 @@ EOF
 		else
 			echo "        ${FILE}"
 			${CP} ${SAMPLEFILE} ${FILE}
-			${CHMOD} 600 ${FILE}
 		fi
 	done
+	${CHMOD} 600 ${CONFDIR}/silcd.conf
+	${CHMOD} 644 ${CONFDIR}/motd.txt
 	${CAT} << EOF
 
-  * you might need to customize your configuration file
+  * you might need to customize your configuration file and the MOTD
 
 ===========================================================================
 
