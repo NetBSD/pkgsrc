@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/09/21 17:38:53 xtraeme Exp $
+# $NetBSD: Makefile,v 1.10 2004/11/01 23:41:58 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-imake-${XORG_VER}
@@ -33,6 +33,7 @@ PLIST_SUBST+=	LNDIR=
 
 post-extract:
 	@${TOUCH} ${WRKSRC}/config/cf/date.def
+	@${CP} ${FILESDIR}/DragonFly.cf ${WRKSRC}/config/cf/
 .for F in ${SYSTEMS}
 	@${MV} ${WRKSRC}/config/cf/${F}.cf  ${WRKSRC}/config/cf/${F}.cf.in
 .endfor
