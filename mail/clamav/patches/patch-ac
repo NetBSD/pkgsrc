@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1 2004/01/29 17:14:53 cube Exp $
+
+--- docs/Makefile.am.orig	Wed Nov 12 02:08:39 2003
++++ docs/Makefile.am
+@@ -15,5 +15,11 @@
+ #  along with this program; if not, write to the Free Software
+ #  Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+ 
++if BUILD_CLAMD
++if HAVE_MILTER
++MILTER_MANS = man/clamav-milter.8
++endif
++endif
++
+ EXTRA_DIST = clamdoc.pdf DMS Spanish Japanese html man FreeBSD-HowTo Portugese Turkish clamd_supervised clamav-mirror-howto.pdf signatures.pdf
+-man_MANS = man/clamscan.1 man/freshclam.1 man/sigtool.1 man/clamd.8 man/clamav.conf.5 man/clamdscan.1 man/clamav-milter.8
++man_MANS = man/clamscan.1 man/freshclam.1 man/sigtool.1 man/clamd.8 man/clamav.conf.5 man/clamdscan.1 $(MILTER_MANS)
