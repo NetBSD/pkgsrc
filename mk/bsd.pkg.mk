@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.480 2000/06/16 09:18:26 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.481 2000/06/19 01:24:16 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -2224,11 +2224,6 @@ package-name:
 .endif # PACKAGE_NAME_TYPE
 .endif # !target(package-name)
 
-.if !target(package-path)
-package-path:
-	@${ECHO} ${PKGPATH}
-.endif
-
 # Show (recursively) all the packages this package depends on.
 # If PACKAGE_DEPENDS_WITH_PATTERNS is set, print as pattern (if possible)
 PACKAGE_DEPENDS_WITH_PATTERNS?=true
@@ -2728,7 +2723,7 @@ COMMON_DIRS!= 	${AWK} 'BEGIN  { 				\
 
 .if !target(print-PLIST)
 print-PLIST:
-	@${ECHO} '@comment $$NetBSD: bsd.pkg.mk,v 1.480 2000/06/16 09:18:26 hubertf Exp $$'
+	@${ECHO} '@comment $$NetBSD: bsd.pkg.mk,v 1.481 2000/06/19 01:24:16 hubertf Exp $$'
 	@${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} \! -type d 	\
 	 | ${SED} s@${PREFIX}/./@@ 				\
 	 | sort							\
