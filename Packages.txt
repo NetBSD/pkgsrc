@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.109 2000/08/27 10:59:53 jlam Exp $
+# $NetBSD: Packages.txt,v 1.110 2000/09/07 09:53:13 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -313,11 +313,11 @@ You may want to set things in /etc/mk.conf:
  3.2.2 Other environmental considerations
  ========================================
 
-Drop your favourite login shell in /usr/local, or pkg_add it from
-/etc/rc.local. Also, be sure to pkg_add ssh before starting it from
+Drop your favourite login shell in /usr/local, or install it from
+/etc/rc.local. Also, be sure to install ssh before starting it from
 rc.local:
 
-    /usr/sbin/pkg_add /usr/pkgsrc/packages/i386/All/ssh-1.2.27.tgz
+    ( cd /usr/pkgsrc/security/ssh ; make bulk-install )
     if [ -f /usr/pkg/etc/rc.d/sshd.sh ]; then
             /usr/pkg/etc/rc.d/sshd.sh
     fi
