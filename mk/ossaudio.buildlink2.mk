@@ -1,4 +1,4 @@
-# $NetBSD: ossaudio.buildlink2.mk,v 1.8 2002/10/03 20:24:33 jlam Exp $
+# $NetBSD: ossaudio.buildlink2.mk,v 1.9 2002/10/03 20:31:14 jlam Exp $
 #
 # This file should be included by Makefiles for packages that use OSS.
 # By checking the value of HAVE_OSS after including this file, it's possible
@@ -16,8 +16,12 @@ OSSAUDIO_BUILDLINK2_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
+.if defined(USE_OSS)
+BUILD_DEFS+=	USE_OSS
+.endif
+
 _HAVE_OSS!=	if ${PKG_INFO} -qe oss; then echo YES; else echo NO; fi
-HAVE_OSS?=		${_HAVE_OSS}
+HAVE_OSS?=	${_HAVE_OSS}
 
 .if defined(HAVE_OSS) && (${HAVE_OSS} == "YES")
 .  include "../../audio/oss/buildlink2.mk"
