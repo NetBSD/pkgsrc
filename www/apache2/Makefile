@@ -1,41 +1,31 @@
-# $NetBSD: Makefile,v 1.22 2003/05/22 09:44:42 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2003/05/25 08:58:10 epg Exp $
 
-DISTNAME=		httpd-${APACHE_VERSION}
 PKGNAME=		apache-${APACHE_VERSION}
-APACHE_VERSION=		2.0.45
 CATEGORIES=		www
-MASTER_SITES=		${MASTER_SITE_APACHE:=httpd/} \
-			${MASTER_SITE_APACHE:=httpd/old/} \
-			http://www.netbsd.org/images/logos/
 
-MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://httpd.apache.org/
 COMMENT=		Apache HTTP (Web) server, version 2
 
 CONFLICTS=		apache-*ssl-[0-9]* apache-[0-9]* apache6-[0-9]*
 CONFLICTS+=		ap-*-[0-9]*	# Apache-1.x DSOs
-CONFLICTS+=		apr-[0-9]*	# devel/apr-devel package
 
 BUILD_DEFS+=		USE_INET6
 
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
-USE_GMAKE=		YES
 
-USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/srclib/apr/libtool
+#USE_LIBTOOL=		YES
+#LIBTOOL_OVERRIDE=	${WRKSRC}/srclib/apr/libtool
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-layout=NetBSD
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-port=80
+CONFIGURE_ARGS+=	--with-mpm=prefork
 
 # Apache Portable Runtime library configure options
-CONFIGURE_ARGS+=	--with-mpm=prefork --with-devrandom=/dev/urandom
-
-# Apache Portable Runtime Utility library configure options
-CONFIGURE_ARGS+=	--with-dbm=sdbm
-CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_PREFIX.expat}
+CONFIGURE_ARGS+=	--with-apr=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-apr-util=${LOCALBASE}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -125,8 +115,7 @@ AP_CONF_FILE_SED+=	-e "s|^\(User[	 ]\).*|\1${APACHE_USER}|g"
 AP_CONF_FILE_SED+=	-e "s|^\(Group[	 ]\).*|\1${APACHE_GROUP}|g"
 
 post-install:
-	${RM} ${PREFIX}/share/httpd/build/libtool
-	${INSTALL_SCRIPT} ${LIBTOOL} ${PREFIX}/share/httpd/build/libtool
+	${LN} -sf ${LOCALBASE}/libexec/apr/libtool ${PREFIX}/share/httpd/build
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV}				\
 		${MAKE_PROGRAM} install-conf sysconfdir="${EGDIR}"
 	@cd ${EGDIR};							\
@@ -153,6 +142,9 @@ post-install:
 		${MV} -f $${file}.new $${file};				\
 	done
 
+.include "Makefile.common"
+
+.include "../../devel/apr/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
 .include "../../textproc/expat/buildlink2.mk"
 

@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.8 2003/02/02 09:59:09 jlam Exp $
+$NetBSD: patch-aa,v 1.9 2003/05/25 08:58:10 epg Exp $
 
---- Makefile.in.orig	Mon Sep 30 08:34:40 2002
+--- Makefile.in.orig	Mon Sep 30 10:34:40 2002
 +++ Makefile.in
 @@ -14,7 +14,7 @@ PROGRAM_DEPENDENCIES = \
  PROGRAMS        = $(PROGRAM_NAME)
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.8 2003/02/02 09:59:09 jlam Exp $
  	    	chmod 0644 $(DESTDIR)$(sysconfdir)/$$i; \
  	    	file=`echo $$i|sed s/-std//`; \
  	    	if [ "$$file" = "httpd.conf" ]; then \
-@@ -79,13 +80,16 @@ install-conf:
+@@ -79,21 +80,22 @@ install-conf:
  	    	if test "$$file" != "$$i" && test ! -f $(DESTDIR)$(sysconfdir)/$$file; then \
  	    		$(INSTALL_DATA) $(DESTDIR)$(sysconfdir)/$$i $(DESTDIR)$(sysconfdir)/$$file; \
  	    	fi; \
@@ -36,7 +36,15 @@ $NetBSD: patch-aa,v 1.8 2003/02/02 09:59:09 jlam Exp $
  	fi
  
  install-build:
-@@ -106,7 +110,7 @@ dox::
+ 	@echo Installing build system files 
+ 	@test -d $(DESTDIR)$(installbuilddir) || $(MKINSTALLDIRS) $(DESTDIR)$(installbuilddir) 
+ 	@cp build/*.mk $(DESTDIR)$(installbuilddir); \
+-	sed 's#LIBTOOL = \(.*\)#LIBTOOL = $(SHELL) $(installbuilddir)/libtool $(LTFLAGS)#' \
+-	    build/config_vars.mk > $(DESTDIR)$(installbuilddir)/config_vars.mk; \
+ 	cp $(top_srcdir)/build/instdso.sh $(DESTDIR)$(installbuilddir);
+ 
+ htdocs-srcdir = $(top_srcdir)/docs/docroot
+@@ -106,7 +108,7 @@ dox::
  	doxygen $(top_srcdir)/docs/doxygen.conf
  
  install-htdocs:
@@ -45,7 +53,7 @@ $NetBSD: patch-aa,v 1.8 2003/02/02 09:59:09 jlam Exp $
             echo "[PRESERVING EXISTING HTDOCS SUBDIR: $(DESTDIR)$(htdocsdir)]"; \
          else \
  	    echo Installing HTML documents ; \
-@@ -116,7 +120,7 @@ install-htdocs:
+@@ -116,7 +118,7 @@ install-htdocs:
  	fi
  
  install-error:
@@ -54,7 +62,7 @@ $NetBSD: patch-aa,v 1.8 2003/02/02 09:59:09 jlam Exp $
             echo "[PRESERVING EXISTING ERROR SUBDIR: $(DESTDIR)$(errordir)]"; \
          else \
  	    echo Installing error documents ; \
-@@ -126,7 +130,7 @@ install-error:
+@@ -126,7 +128,7 @@ install-error:
  	fi
  
  install-icons:
@@ -63,7 +71,7 @@ $NetBSD: patch-aa,v 1.8 2003/02/02 09:59:09 jlam Exp $
             echo "[PRESERVING EXISTING ICONS SUBDIR: $(DESTDIR)$(iconsdir)]"; \
          else \
  	    echo Installing icons ; \
-@@ -136,7 +140,7 @@ install-icons:
+@@ -136,7 +138,7 @@ install-icons:
  	fi
  
  install-cgi:
