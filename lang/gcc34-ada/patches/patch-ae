@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1.1.1 2004/06/29 18:00:17 shannonjr Exp $
+$NetBSD: patch-ae,v 1.2 2004/08/01 10:20:30 shannonjr Exp $
 
 --- gcc/ada/Makefile.in.orig	2004-01-26 14:57:32.000000000 -0700
 +++ gcc/ada/Makefile.in
@@ -30,7 +30,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2004/06/29 18:00:17 shannonjr Exp $
 +
 +endif
 +
-+ifeq ($(strip $(filter-out %x86_64 netbsdelf%,$(arch) $(osys))),)
++ifeq ($(strip $(filter-out %x86_64 netbsd%,$(arch) $(osys))),)
 +  LIBGNAT_TARGET_PAIRS = \
 +    a-numaux.adb<86numaux.adb \
 +    a-numaux.ads<86numaux.ads \
