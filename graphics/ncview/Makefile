@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/04/20 15:47:01 cjep Exp $
+# $NetBSD: Makefile,v 1.7 2002/09/29 07:09:33 jlam Exp $
 
 DISTNAME=		ncview-1.92c
 CATEGORIES=		graphics
@@ -8,25 +8,21 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://meteora.ucsd.edu/~pierce/ncview_home_page.html
 COMMENT=		Visual browser for netCDF format files
 
-DEPENDS+=		netcdf>=3.4:../../devel/netcdf
-DEPENDS+=		udunits>=1.11.7:../../math/udunits
-
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
-USE_XAW=		yes
 USE_X11BASE=		yes
 
-NETCDF_DEFAULT=		${LOCALBASE}
-EVAL_PREFIX+=		NETCDF=netcdf
-UDUNITS_DEFAULT=	${LOCALBASE}
-EVAL_PREFIX+=		UDUNITS=udunits
-
-CONFIGURE_ARGS+=	--with-netcdf_incdir=${NETCDF}/include
-CONFIGURE_ARGS+=	--with-netcdf_libdir=${NETCDF}/lib
-CONFIGURE_ARGS+=	--with-udunits_incdir=${UDUNITS}/include
-CONFIGURE_ARGS+=	--with-udunits_libdir=${UDUNITS}/lib
+CONFIGURE_ARGS+=	--with-netcdf_incdir=${BUILDLINK_PREFIX.netcdf}/include
+CONFIGURE_ARGS+=	--with-netcdf_libdir=${BUILDLINK_PREFIX.netcdf}/lib
+CONFIGURE_ARGS+=	--with-udunits_incdir=${BUILDLINK_PREFIX.udunits}/include
+CONFIGURE_ARGS+=	--with-udunits_libdir=${BUILDLINK_PREFIX.udunits}/lib
 
 .if (${MACHINE_ARCH} == "arm32")
 . include "../../lang/gcc/Makefile.gcc"
 .endif
+
+.include "../../devel/netcdf/buildlink2.mk"
+.include "../../math/udunits/buildlink2.mk"
+.include "../../mk/xaw.buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
