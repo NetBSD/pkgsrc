@@ -1,978 +1,766 @@
-$NetBSD: patch-ad,v 1.1 1998/09/04 18:33:47 christos Exp $
-
-*** old/mush.h	Fri Sep  4 12:08:00 1998
---- mush.h	Fri Sep  4 13:12:45 1998
-***************
-*** 4,92 ****
-  
-  /* POSIX -- a collection of standardized parts from SYSV and BSD */
-  #if defined(POSIX) || defined(BSD44)
-! #include <unistd.h>
-! #ifndef	NO_STDLIB
-! #include <stdlib.h>
-! #endif
-! #define SIGRET void
-  #endif
-  #ifdef SVR4
-! #include <libgen.h>
-  #endif
-  
-  /* STDC -- i.e. ANSI C, a collection of standardized modifications to
-   * the C language, often accompanied by [partial] POSIX compliance
-   */
-  #ifdef __STDC__
-! #ifndef VPRINTF
-! #define VPRINTF
-! #endif
-  #endif
-  
-  #ifdef CURSES
-  
-! #ifndef POSIX
-! #ifdef USG
-! #    define _USG
-! #    undef USG
-! #endif /* USG */
-! #ifdef SYSV
-! #    define _SYSV
-! #    undef SYSV
-! #endif /* SYSV */
-! #endif /* POSIX */
-! 
-! #ifdef NCURSES
-! # undef NCURSES
-! # include <ncurses.h>
-! #else
-! # include <curses.h>
-! #endif
-! 
-! #ifdef timeout
-! #undef timeout
-! #endif
-! #ifdef overwrite
-! #undef overwrite
-! #endif
-! 
-! #ifdef linux
-! #include <termios.h>
-! #endif /* linux */
-! 
-! #if !defined(USG) && defined(_USG)
-! #    define USG
-! #endif /* USG */
-! #if !defined(SYSV) && defined(_SYSV)
-! #    define SYSV
-! #endif /* SYSV */
-  
-  #else /* CURSES */
-! #include <stdio.h>
-! #if defined(POSIX) || defined(SVR4)
-! #include <termios.h>
-! #else /* POSIX */
-! #if defined(SYSV) && defined(USG) || defined(AIX)
-! #include <termio.h>
-! #ifdef DGUX
-! #include <ioctl.h>
-! #endif /* DGUX */
-! #endif /* POSIX */
-! #endif /* SYSV && USG */
-  #endif /* CURSES */
-  
-  #ifdef HPUX
-! #include <termio.h>
-  #endif /* HPUX */
-  
-  #if defined(SVR4)
-! #include <sys/ttold.h>
-  #endif /* SVR4 */
-  
-  #include <ctype.h>
-  #include <errno.h>
-  #include <setjmp.h>
-  #include "strings.h"
-  
-  #ifndef __STDC__
-  extern char
---- 4,101 ----
-  
-  /* POSIX -- a collection of standardized parts from SYSV and BSD */
-  #if defined(POSIX) || defined(BSD44)
-! # include <unistd.h>
-! # ifndef	NO_STDLIB
-! #  include <stdlib.h>
-! # endif
-! # define SIGRET void
-  #endif
+$NetBSD: patch-ad,v 1.2 1998/09/15 06:18:07 garbled Exp $
+--- mush.h.orig	Mon Sep 14 22:55:37 1998
++++ mush.h	Mon Sep 14 22:57:28 1998
+@@ -4,89 +4,98 @@
+ 
+ /* POSIX -- a collection of standardized parts from SYSV and BSD */
+ #if defined(POSIX) || defined(BSD44)
+-#include <unistd.h>
+-#ifndef	NO_STDLIB
+-#include <stdlib.h>
+-#endif
+-#define SIGRET void
++# include <unistd.h>
++# ifndef	NO_STDLIB
++#  include <stdlib.h>
++# endif
++# define SIGRET void
+ #endif
++
+ #ifdef SVR4
+-#include <libgen.h>
++# include <libgen.h>
+ #endif
+ 
+ /* STDC -- i.e. ANSI C, a collection of standardized modifications to
+  * the C language, often accompanied by [partial] POSIX compliance
+  */
+ #ifdef __STDC__
+-#ifndef VPRINTF
+-#define VPRINTF
+-#endif
++# ifndef VPRINTF
++#  define VPRINTF
++# endif
+ #endif
+ 
+ #ifdef CURSES
+ 
+-#ifndef POSIX
+-#ifdef USG
+-#    define _USG
+-#    undef USG
+-#endif /* USG */
+-#ifdef SYSV
+-#    define _SYSV
+-#    undef SYSV
+-#endif /* SYSV */
+-#endif /* POSIX */
+-
+-#ifdef NCURSES
+-# undef NCURSES
+-# include <ncurses.h>
+-#else
+-# include <curses.h>
+-#endif
+-
+-#ifdef timeout
+-#undef timeout
+-#endif
+-#ifdef overwrite
+-#undef overwrite
+-#endif
+-
+-#ifdef linux
+-#include <termios.h>
+-#endif /* linux */
+-
+-#if !defined(USG) && defined(_USG)
+-#    define USG
+-#endif /* USG */
+-#if !defined(SYSV) && defined(_SYSV)
+-#    define SYSV
+-#endif /* SYSV */
++# ifndef POSIX
++#  ifdef USG
++#   define _USG
++#   undef USG
++#  endif /* USG */
++#  ifdef SYSV
++#   define _SYSV
++#   undef SYSV
++#  endif /* SYSV */
++# endif /* POSIX */
++
++# ifdef BSD44
++#  include <termios.h>
++# endif /* BSD44 */
++# ifdef NCURSES
++#  undef NCURSES
++#  include <ncurses.h>
++# else
++#  include <curses.h>
++# endif
++
++# ifdef timeout
++#  undef timeout
++# endif
++# ifdef overwrite
++#  undef overwrite
++# endif
++
++# ifdef linux
++#  include <termios.h>
++# endif /* linux */
++
++# if !defined(USG) && defined(_USG)
++#  define USG
++# endif /* USG */
++# if !defined(SYSV) && defined(_SYSV)
++#  define SYSV
++# endif /* SYSV */
+ 
+ #else /* CURSES */
+-#include <stdio.h>
+-#if defined(POSIX) || defined(SVR4)
+-#include <termios.h>
+-#else /* POSIX */
+-#if defined(SYSV) && defined(USG) || defined(AIX)
+-#include <termio.h>
+-#ifdef DGUX
+-#include <ioctl.h>
+-#endif /* DGUX */
+-#endif /* POSIX */
+-#endif /* SYSV && USG */
++# include <stdio.h>
++# if defined(POSIX) || defined(SVR4)
++#  include <termios.h>
++# else /* POSIX */
++#  if defined(SYSV) && defined(USG) || defined(AIX)
++#   include <termio.h>
++#   ifdef DGUX
++#    include <ioctl.h>
++#   endif /* DGUX */
++#  endif /* SYSV && USG || AIX */
++# endif /* POSIX */
+ #endif /* CURSES */
+ 
+ #ifdef HPUX
+-#include <termio.h>
++# include <termio.h>
+ #endif /* HPUX */
+ 
+ #if defined(SVR4)
+-#include <sys/ttold.h>
++# include <sys/ttold.h>
+ #endif /* SVR4 */
+ 
+ #include <ctype.h>
+ #include <errno.h>
+ #include <setjmp.h>
+ #include "strings.h"
++#ifdef MSGS_DYNAMIC
++# if (defined(sun) || defined(__sun__)) && (defined(sparc) || defined(__sparc__))
++#  include <alloca.h>
++# endif
++#endif
+ 
+ #ifndef __STDC__
+ extern char
+@@ -100,79 +109,85 @@
+     xfree();		/* free malloc'ed pointers */
+ 
+ #ifdef BSD
+-#define fputs Fputs	/* See comments in print.c */
++# define fputs Fputs	/* See comments in print.c */
+ #endif /* BSD */
+ 
+ #if (defined(BSD) || defined(GETWD)) && !defined(__STDC__)
+ extern char *getwd();
+-#define GetCwd(buf,len)	getwd(buf)
++# define GetCwd(buf,len)	getwd(buf)
+ #else
+-#ifndef __STDC__
++# ifndef __STDC__
+ extern char *getcwd();
+-#endif
+-#define GetCwd(buf,len) getcwd(buf,len)
++# endif
++# define GetCwd(buf,len) getcwd(buf,len)
+ #endif /* BSD || GETWD */
+ 
+ #ifdef SUNTOOL
+-#    include <suntool/sunview.h>
+-#ifdef SUN_4_0
+-#    include <suntool/alert.h>
+-#endif /* SUN_4_0 */
+-#    include <suntool/textsw.h>
+-#    include <sys/ioctl.h>   /* for ltchars */
++# include <suntool/sunview.h>
++# ifdef SUN_4_0
++#  include <suntool/alert.h>
++# endif /* SUN_4_0 */
++# include <suntool/textsw.h>
++# include <sys/ioctl.h>   /* for ltchars */
+ #else
+-#    include <sys/types.h>
+-#    include <signal.h>
+-#    ifndef SYSV
+-#	include <sys/time.h>
+-#	include <sys/ioctl.h>   /* for ltchars */
+-#    else
+-#	include <time.h>
+-#	ifdef M_UNIX
+-#	    ifndef SELECT
+-#		define SELECT
+-#	    endif
+-#	    include <sys/select.h>
+-#	endif /* M_UNIX */
+-#	include <fcntl.h>
+-#    endif /* SYSV */
++# include <sys/types.h>
++# include <signal.h>
++# ifndef SYSV
++#  include <sys/time.h>
++#  include <sys/ioctl.h>   /* for ltchars */
++# else
++#  include <time.h>
++#  ifdef M_UNIX
++#   ifndef SELECT
++#    define SELECT
++#   endif
++#   include <sys/select.h>
++#  endif /* M_UNIX */
++#  include <fcntl.h>
++# endif /* SYSV */
+ #endif /* SUNTOOL */
+ 
++#ifdef BSD44
++# define REGCOMP
++# include <regex.h>
++#endif
++
+ #ifdef POSIX_UTIME
+-#ifdef POSIX
+-#include <utime.h>
+-#else  /* POSIX */
+-#include <sys/utime.h>
+-#endif /* POSIX */
++# ifdef POSIX
++#  include <utime.h>
++# else  /* POSIX */
++#  include <sys/utime.h>
++# endif /* POSIX */
+ #endif /* POSIX_UTIME */
++
+ #include <sys/stat.h>
+ #include <sys/file.h>
+ 
+ #ifdef SUNTOOL
+-#    include <suntool/panel.h>
+-#    include <suntool/canvas.h>
+-#    include <suntool/tty.h>
+-#    include <suntool/menu.h>
+-#    include <suntool/icon.h>
+-#    include <suntool/scrollbar.h>
+-#    include <suntool/icon_load.h>
++# include <suntool/panel.h>
++# include <suntool/canvas.h>
++# include <suntool/tty.h>
++# include <suntool/menu.h>
++# include <suntool/icon.h>
++# include <suntool/scrollbar.h>
++# include <suntool/icon_load.h>
+ #endif /* SUNTOOL */
+ 
+ /* if no maximum number of files can be found, we'll use getdtablesize() */
+ #ifdef _NFILE
+-#    define MAXFILES _NFILE
++# define MAXFILES _NFILE
+ #else
+-#ifdef NOFILE
+-#    define MAXFILES NOFILE
+-#endif /* NOFILE */
++# ifdef NOFILE
++#  define MAXFILES NOFILE
++# endif /* NOFILE */
+ #endif /* _NFILE */
+ 
+ #ifndef MAXPATHLEN
+-#define MAXPATHLEN BUFSIZ
++# define MAXPATHLEN BUFSIZ
+ #endif /* MAXPATHLEN */
+ 
+ #ifdef CTRL
+-#undef CTRL
++# undef CTRL
+ #endif /* CTRL */
+ #define CTRL(c)		((c) & 037)
+ 
+@@ -180,20 +195,24 @@
+ 
+ #define NO_STRING	""
+ #ifdef  NULL
+-#undef  NULL
++# undef  NULL
+ #endif /* NULL */
++#ifdef __STDC__
++#define NULL		(void *)0
++#else
+ #define NULL		(char *)0
++#endif
+ #define NULL_FILE	(FILE *)0
+ #define DUBL_NULL	(char **)0
+ #define TRPL_NULL	(char ***)0
+ #ifdef putchar
+-#undef putchar
++# undef putchar
+ #endif /* putchar */
+ #define putchar(c)	(void) (fputc(c, stdout), fflush(stdout))
+ #ifdef SUNTOOL
+ extern int bell();
+ #else /* SUNTOOL */
+-#define bell()		(void) (fputc('\007', stderr), fflush(stderr))
++# define bell()		(void) (fputc('\007', stderr), fflush(stderr))
+ #endif /* SUNTOOL */
+ 
+ /* For error recovery purposes, send keyboard generated signals to a special
+@@ -211,121 +230,121 @@
+ 
+ /* Don't flush input when setting echo or cbreak modes (allow typeahead) */
+ #ifdef TIOCSETN
+-#ifdef stty
+-#undef stty
+-#endif /* stty */
+-#define stty(fd, sgttybuf)	ioctl(fd, TIOCSETN, sgttybuf)
++# ifdef stty
++#  undef stty
++# endif /* stty */
++# define stty(fd, sgttybuf)	ioctl(fd, TIOCSETN, sgttybuf)
+ #endif /* TIOCSETN */
+ 
+ /* for system-V machines that run termio */
+ #if defined(SYSV) && defined(USG) || defined(AIX) || defined(POSIX) || defined(BSD44)
+-#ifdef crmode
+-#undef crmode
+-#undef nocrmode
+-#endif /* nocrmode */
++# ifdef crmode
++#  undef crmode
++#  undef nocrmode
++# endif /* nocrmode */
+ 
+ unsigned char vmin, vtime;
+ 
+-#ifdef __linux__
+-# undef TCGETA
+-# undef TCSETAW
+-# define TCGETA TCGETS
+-# define TCSETAW TCSETSW
+-#endif
+-#ifdef BSD44
+-# undef TCGETA
+-# undef TCSETAW
+-# define TCGETA TIOCGETA
+-# define TCSETAW TIOCSETAW
+-#endif
+-
+-#ifdef POSIX
+-#define sg_erase  c_cc[VERASE]
+-#define sg_flags  c_lflag
+-#define sg_kill   c_cc[VKILL]
+-#define gtty(fd, SGTTYbuf)	tcgetattr(fd, SGTTYbuf)
+-#undef stty
+-#define stty(fd, SGTTYbuf)	tcsetattr(fd, TCSADRAIN, SGTTYbuf)
+-#else /* !POSIX */
+-#define sg_erase  c_cc[2]
+-#define sg_flags  c_lflag
+-#define sg_kill   c_cc[3]
+-#define sg_ospeed c_cflag
+-#define gtty(fd, SGTTYbuf)	ioctl(fd, TCGETA, SGTTYbuf)
+-#undef stty
+-#define stty(fd, SGTTYbuf)	ioctl(fd, TCSETAW, SGTTYbuf)
+-#endif /* POSIX */
+-
+-#define echon()    (_tty.sg_flags |= (ECHO|ECHOE),    stty(0, &_tty))
+-#define echoff()   (_tty.sg_flags &= ~ECHO,   stty(0, &_tty))
+-#define cbrkon()   \
++# ifdef __linux__
++#  undef TCGETA
++#  undef TCSETAW
++#  define TCGETA TCGETS
++#  define TCSETAW TCSETSW
++# endif
++# ifdef BSD44
++#  undef TCGETA
++#  undef TCSETAW
++#  define TCGETA TIOCGETA
++#  define TCSETAW TIOCSETAW
++# endif
++
++# ifdef POSIX
++#  define sg_erase  c_cc[VERASE]
++#  define sg_flags  c_lflag
++#  define sg_kill   c_cc[VKILL]
++#  define gtty(fd, SGTTYbuf)	tcgetattr(fd, SGTTYbuf)
++#  undef stty
++#  define stty(fd, SGTTYbuf)	tcsetattr(fd, TCSADRAIN, SGTTYbuf)
++# else /* !POSIX */
++#  define sg_erase  c_cc[2]
++#  define sg_flags  c_lflag
++#  define sg_kill   c_cc[3]
++#  define sg_ospeed c_cflag
++#  define gtty(fd, SGTTYbuf)	ioctl(fd, TCGETA, SGTTYbuf)
++#  undef stty
++#  define stty(fd, SGTTYbuf)	ioctl(fd, TCSETAW, SGTTYbuf)
++# endif /* POSIX */
++
++# define echon()    (_tty.sg_flags |= (ECHO|ECHOE),    stty(0, &_tty))
++# define echoff()   (_tty.sg_flags &= ~ECHO,   stty(0, &_tty))
++# define cbrkon()   \
+ 	(_tty.sg_flags &= ~ICANON, _tty.c_cc[VMIN] = 1, stty(0, &_tty))
+-#define cbrkoff()  \
++# define cbrkoff()  \
+ 	(_tty.sg_flags |= ICANON,_tty.c_cc[VMIN] = vmin,_tty.c_iflag |= ICRNL, \
+ 		_tty.c_cc[VTIME] = vtime, stty(0, &_tty))
+ 
+-#ifdef __linux__
+-# undef savetty
+-# undef cbreak
+-# undef nocbreak
+-#endif
++# ifdef __linux__
++#  undef savetty
++#  undef cbreak
++#  undef nocbreak
++# endif
+ 
+-#ifndef savetty
+-# define savetty()  \
++# ifndef savetty
++#  define savetty()  \
+ 	(void) gtty(0, &_tty), vtime = _tty.c_cc[VTIME], vmin = _tty.c_cc[VMIN]
+-#endif
+-#ifndef cbreak
+-# define cbreak()   cbrkon()
+-#endif
+-#ifndef nocbreak
+-# define nocbreak() cbrkoff()
+-#endif
++# endif
++# ifndef cbreak
++#  define cbreak()   cbrkon()
++# endif
++# ifndef nocbreak
++#  define nocbreak() cbrkoff()
++# endif
+ 
+ /* If curses isn't defined, declare our 'tty' and macros for echo/cbreak */
+-#ifndef CURSES
+-#ifdef POSIX
++# ifndef CURSES
++#  ifdef POSIX
+ typedef struct termios SGTTY;
+-#else
++#  else
+ typedef struct termio SGTTY;
+-#endif
+-#define echom()    echon()
+-#define noechom()  echoff()
+-#define crmode()   cbrkon()
+-#define nocrmode() cbrkoff()
++#  endif
++#  define echom()    echon()
++#  define noechom()  echoff()
++#  define crmode()   cbrkon()
++#  define nocrmode() cbrkoff()
+ 
+ /* These two moved from above; is that right?? Were they misplaced? */
+ /* are these even needed?  I don't think any code (except below) uses them. */
+-#define cbreak()   cbrkon()
+-#define nocbreak() cbrkoff()
++#  define cbreak()   cbrkon()
++#  define nocbreak() cbrkoff()
+ 
+-#else /* CURSES */
+-#ifdef DEFINE_CURSES_SGTTY
++# else /* CURSES */
++#  if defined(DEFINE_CURSES_SGTTY) || defined(BSD44)
+ typedef struct termios SGTTY;
+-#endif
++#  endif
+ /* If curses is defined, use the echo/cbreak commands in library only
+  * if curses is running.  If curses isn't running, use macros above.
+  */
+-#define echom()    ((iscurses) ? echo(): echon())
+-#define noechom()  ((iscurses) ? noecho(): echoff())
+-#define crmode()   ((iscurses) ? cbreak() : cbrkon())
+-#define nocrmode() ((iscurses) ? nocbreak() : cbrkoff())
+-#endif /* CURSES */
++#  define echom()    ((iscurses) ? echo(): echon())
++#  define noechom()  ((iscurses) ? noecho(): echoff())
++#  define crmode()   ((iscurses) ? cbreak() : cbrkon())
++#  define nocrmode() ((iscurses) ? nocbreak() : cbrkoff())
++# endif /* CURSES */
+ #endif /* SYSV && USG || AIX || POSIX || BSD44 */
+ 
+ #if !defined(USG) && !defined(AIX) && !defined(POSIX) && !defined(BSD44)
+-#ifndef CURSES
++# ifndef CURSES
+ /* if curses is not defined, simulate the same tty based macros */
+ typedef struct sgttyb SGTTY;
+ /* Do real ioctl calls to set the tty modes */
+-#define crmode()   (_tty.sg_flags |= CBREAK,  stty(0, &_tty))
+-#define nocrmode() (_tty.sg_flags &= ~CBREAK, stty(0, &_tty))
+-#define echom()    (_tty.sg_flags |= ECHO,    stty(0, &_tty))
+-#define noechom()  (_tty.sg_flags &= ~ECHO,   stty(0, &_tty))
+-#define savetty()  (void) gtty(0, &_tty)
+-#else /* CURSES */
+-#define echom()    echo()
+-#define noechom()  noecho()
+-#endif /* ~CURSES */
++#  define crmode()   (_tty.sg_flags |= CBREAK,  stty(0, &_tty))
++#  define nocrmode() (_tty.sg_flags &= ~CBREAK, stty(0, &_tty))
++#  define echom()    (_tty.sg_flags |= ECHO,    stty(0, &_tty))
++#  define noechom()  (_tty.sg_flags &= ~ECHO,   stty(0, &_tty))
++#  define savetty()  (void) gtty(0, &_tty)
++# else /* CURSES */
++#  define echom()    echo()
++#  define noechom()  noecho()
++# endif /* ~CURSES */
+ #endif /* ~USG */
+ 
+ /* With all that out of the way, we can now declare our tty type */
+@@ -351,78 +370,78 @@
+ #define Debug		if (debug == 0) {;} else (void) wprint
+ 
+ #ifdef SYSV
+-#ifndef L_SET
+-#define L_SET	0
+-#endif /* L_SET */
+-#ifndef F_OK
+-#define F_OK	000
+-#define R_OK	004
+-#define W_OK	002
+-#define E_OK	001
+-#endif /* F_OK */
+-#ifdef u_long
+-#undef u_long
+-#endif /* u_long */
+-#define u_long	unsigned long
+-#ifndef HPUX
+-#define vfork   fork
+-#endif /* HPUX */
+-#ifndef SIGCHLD
+-#define SIGCHLD SIGCLD
+-#endif /* SIGCHLD */
++# ifndef L_SET
++#  define L_SET	0
++# endif /* L_SET */
++# ifndef F_OK
++#  define F_OK	000
++#  define R_OK	004
++#  define W_OK	002
++#  define E_OK	001
++# endif /* F_OK */
++# ifdef u_long
++#  undef u_long
++# endif /* u_long */
++# define u_long	unsigned long
++# ifndef HPUX
++#  define vfork   fork
++# endif /* HPUX */
++# ifndef SIGCHLD
++#  define SIGCHLD SIGCLD
++# endif /* SIGCHLD */
+ #endif /* SYSV */
+ 
+ #if !defined(SUNTOOL) && !defined(CURSES)
+ 
+-#define TRUE		  1
+-#define FALSE		  0
+-#define print		  (void) printf
+-#define wprint		  (void) printf
+-#define print_more	  (void) printf
++# define TRUE		  1
++# define FALSE		  0
++# define print		  (void) printf
++# define wprint		  (void) printf
++# define print_more	  (void) printf
+ 
+ #endif /* !SUNTOOL && !CURSES */
+ 
+ #ifndef max
+-#define max(a,b) (((a) > (b)) ? (a) : (b))
+-#define min(a,b) (((a) < (b)) ? (a) : (b))
++# define max(a,b) (((a) > (b)) ? (a) : (b))
++# define min(a,b) (((a) < (b)) ? (a) : (b))
+ #endif /* max */
+ 
+ #if defined(CURSES) && (!defined(SUNTOOL))
+-#define wprint	(void) printf
++# define wprint	(void) printf
+ #endif /* CURSES && (!SUNTOOL) */
+ 
+ #ifdef SUNTOOL
+ /* stdout may be closed */
+-#define printf wprint
++# define printf wprint
+ #else /* !SUNTOOL */
+-#define ok_box print
++# define ok_box print
+ #endif /* SUNTOOL */
+ 
+ #if defined(CURSES) || defined(SUNTOOL)
+-#define print_more	  turnon(glob_flags, CONT_PRNT), print
+-#ifdef __STDC__
++# define print_more	  turnon(glob_flags, CONT_PRNT), print
++# ifdef __STDC__
+ void print(char *fmt,...);	/* compliance with ansi header for varargs */
+-#else /* __STDC__ */
++# else /* __STDC__ */
+ void print();	/* printf to window or curses or tty accordingly */
+-#endif /* __STDC__ */
++# endif /* __STDC__ */
+ #endif /* CURSES || SUNTOOL */
+ 
+ #define ArraySize(o)	  (sizeof(o) / sizeof(*o))
+ 
+ #ifdef SUNTOOL
+ 
+-#define NO_ITEM		(Panel_item)0
+-#define NO_EVENT	(struct inputevent *)0
+-#define TIME_OUT	60	/* sleep 60 secs between mailchecks */
+-#define PIX_XOR		PIX_SRC ^ PIX_DST
+-#define ID		event_id(event)
+-#define l_width()	mush_font->pf_defaultsize.x /* width of letter */
+-#define l_height()	mush_font->pf_defaultsize.y /* height of letter */
+-#define Clrtoeol(w,x,y)	((void) pw_text(w, x, y, PIX_SRC, mush_font, blank))
+-
++# define NO_ITEM		(Panel_item)0
++# define NO_EVENT	(struct inputevent *)0
++# define TIME_OUT	60	/* sleep 60 secs between mailchecks */
++# define PIX_XOR		PIX_SRC ^ PIX_DST
++# define ID		event_id(event)
++# define l_width()	mush_font->pf_defaultsize.x /* width of letter */
++# define l_height()	mush_font->pf_defaultsize.y /* height of letter */
++# define Clrtoeol(w,x,y)	((void) pw_text(w, x, y, PIX_SRC, mush_font, blank))
 + 
-  #ifdef SVR4
-! # include <libgen.h>
-  #endif
-  
-  /* STDC -- i.e. ANSI C, a collection of standardized modifications to
-   * the C language, often accompanied by [partial] POSIX compliance
-   */
-  #ifdef __STDC__
-! # ifndef VPRINTF
-! #  define VPRINTF
-! # endif
-  #endif
-  
-  #ifdef CURSES
-  
-! # ifndef POSIX
-! #  ifdef USG
-! #   define _USG
-! #   undef USG
-! #  endif /* USG */
-! #  ifdef SYSV
-! #   define _SYSV
-! #   undef SYSV
-! #  endif /* SYSV */
-! # endif /* POSIX */
-! 
-! # ifdef BSD44
-! #  include <termios.h>
-! # endif /* BSD44 */
-! # ifdef NCURSES
-! #  undef NCURSES
-! #  include <ncurses.h>
-! # else
-! #  include <curses.h>
-! # endif
-! 
-! # ifdef timeout
-! #  undef timeout
-! # endif
-! # ifdef overwrite
-! #  undef overwrite
-! # endif
-! 
-! # ifdef linux
-! #  include <termios.h>
-! # endif /* linux */
-! 
-! # if !defined(USG) && defined(_USG)
-! #  define USG
-! # endif /* USG */
-! # if !defined(SYSV) && defined(_SYSV)
-! #  define SYSV
-! # endif /* SYSV */
-  
-  #else /* CURSES */
-! # include <stdio.h>
-! # if defined(POSIX) || defined(SVR4)
-! #  include <termios.h>
-! # else /* POSIX */
-! #  if defined(SYSV) && defined(USG) || defined(AIX)
-! #   include <termio.h>
-! #   ifdef DGUX
-! #    include <ioctl.h>
-! #   endif /* DGUX */
-! #  endif /* SYSV && USG || AIX */
-! # endif /* POSIX */
-  #endif /* CURSES */
-  
-  #ifdef HPUX
-! # include <termio.h>
-  #endif /* HPUX */
-  
-  #if defined(SVR4)
-! # include <sys/ttold.h>
-  #endif /* SVR4 */
-  
-  #include <ctype.h>
-  #include <errno.h>
-  #include <setjmp.h>
-  #include "strings.h"
-+ #ifdef MSGS_DYNAMIC
-+ # if (defined(sun) || defined(__sun__)) && (defined(sparc) || defined(__sparc__))
-+ #  include <alloca.h>
-+ # endif
-+ #endif
-  
-  #ifndef __STDC__
-  extern char
-***************
-*** 100,178 ****
-      xfree();		/* free malloc'ed pointers */
-  
-  #ifdef BSD
-! #define fputs Fputs	/* See comments in print.c */
-  #endif /* BSD */
-  
-  #if (defined(BSD) || defined(GETWD)) && !defined(__STDC__)
-  extern char *getwd();
-! #define GetCwd(buf,len)	getwd(buf)
-  #else
-! #ifndef __STDC__
-  extern char *getcwd();
-! #endif
-! #define GetCwd(buf,len) getcwd(buf,len)
-  #endif /* BSD || GETWD */
-  
-  #ifdef SUNTOOL
-! #    include <suntool/sunview.h>
-! #ifdef SUN_4_0
-! #    include <suntool/alert.h>
-! #endif /* SUN_4_0 */
-! #    include <suntool/textsw.h>
-! #    include <sys/ioctl.h>   /* for ltchars */
-  #else
-! #    include <sys/types.h>
-! #    include <signal.h>
-! #    ifndef SYSV
-! #	include <sys/time.h>
-! #	include <sys/ioctl.h>   /* for ltchars */
-! #    else
-! #	include <time.h>
-! #	ifdef M_UNIX
-! #	    ifndef SELECT
-! #		define SELECT
-! #	    endif
-! #	    include <sys/select.h>
-! #	endif /* M_UNIX */
-! #	include <fcntl.h>
-! #    endif /* SYSV */
-  #endif /* SUNTOOL */
-  
-  #ifdef POSIX_UTIME
-! #ifdef POSIX
-! #include <utime.h>
-! #else  /* POSIX */
-! #include <sys/utime.h>
-! #endif /* POSIX */
-  #endif /* POSIX_UTIME */
-  #include <sys/stat.h>
-  #include <sys/file.h>
-  
-  #ifdef SUNTOOL
-! #    include <suntool/panel.h>
-! #    include <suntool/canvas.h>
-! #    include <suntool/tty.h>
-! #    include <suntool/menu.h>
-! #    include <suntool/icon.h>
-! #    include <suntool/scrollbar.h>
-! #    include <suntool/icon_load.h>
-  #endif /* SUNTOOL */
-  
-  /* if no maximum number of files can be found, we'll use getdtablesize() */
-  #ifdef _NFILE
-! #    define MAXFILES _NFILE
-  #else
-! #ifdef NOFILE
-! #    define MAXFILES NOFILE
-! #endif /* NOFILE */
-  #endif /* _NFILE */
-  
-  #ifndef MAXPATHLEN
-! #define MAXPATHLEN BUFSIZ
-  #endif /* MAXPATHLEN */
-  
-  #ifdef CTRL
-! #undef CTRL
-  #endif /* CTRL */
-  #define CTRL(c)		((c) & 037)
-  
---- 109,193 ----
-      xfree();		/* free malloc'ed pointers */
-  
-  #ifdef BSD
-! # define fputs Fputs	/* See comments in print.c */
-  #endif /* BSD */
-  
-  #if (defined(BSD) || defined(GETWD)) && !defined(__STDC__)
-  extern char *getwd();
-! # define GetCwd(buf,len)	getwd(buf)
-  #else
-! # ifndef __STDC__
-  extern char *getcwd();
-! # endif
-! # define GetCwd(buf,len) getcwd(buf,len)
-  #endif /* BSD || GETWD */
-  
-  #ifdef SUNTOOL
-! # include <suntool/sunview.h>
-! # ifdef SUN_4_0
-! #  include <suntool/alert.h>
-! # endif /* SUN_4_0 */
-! # include <suntool/textsw.h>
-! # include <sys/ioctl.h>   /* for ltchars */
-  #else
-! # include <sys/types.h>
-! # include <signal.h>
-! # ifndef SYSV
-! #  include <sys/time.h>
-! #  include <sys/ioctl.h>   /* for ltchars */
-! # else
-! #  include <time.h>
-! #  ifdef M_UNIX
-! #   ifndef SELECT
-! #    define SELECT
-! #   endif
-! #   include <sys/select.h>
-! #  endif /* M_UNIX */
-! #  include <fcntl.h>
-! # endif /* SYSV */
-  #endif /* SUNTOOL */
-  
-+ #ifdef BSD44
-+ # define REGCOMP
-+ # include <regex.h>
-+ #endif
-+ 
-  #ifdef POSIX_UTIME
-! # ifdef POSIX
-! #  include <utime.h>
-! # else  /* POSIX */
-! #  include <sys/utime.h>
-! # endif /* POSIX */
-  #endif /* POSIX_UTIME */
-+ 
-  #include <sys/stat.h>
-  #include <sys/file.h>
-  
-  #ifdef SUNTOOL
-! # include <suntool/panel.h>
-! # include <suntool/canvas.h>
-! # include <suntool/tty.h>
-! # include <suntool/menu.h>
-! # include <suntool/icon.h>
-! # include <suntool/scrollbar.h>
-! # include <suntool/icon_load.h>
-  #endif /* SUNTOOL */
-  
-  /* if no maximum number of files can be found, we'll use getdtablesize() */
-  #ifdef _NFILE
-! # define MAXFILES _NFILE
-  #else
-! # ifdef NOFILE
-! #  define MAXFILES NOFILE
-! # endif /* NOFILE */
-  #endif /* _NFILE */
-  
-  #ifndef MAXPATHLEN
-! # define MAXPATHLEN BUFSIZ
-  #endif /* MAXPATHLEN */
-  
-  #ifdef CTRL
-! # undef CTRL
-  #endif /* CTRL */
-  #define CTRL(c)		((c) & 037)
-  
-***************
-*** 180,199 ****
-  
-  #define NO_STRING	""
-  #ifdef  NULL
-! #undef  NULL
-  #endif /* NULL */
-  #define NULL		(char *)0
-  #define NULL_FILE	(FILE *)0
-  #define DUBL_NULL	(char **)0
-  #define TRPL_NULL	(char ***)0
-  #ifdef putchar
-! #undef putchar
-  #endif /* putchar */
-  #define putchar(c)	(void) (fputc(c, stdout), fflush(stdout))
-  #ifdef SUNTOOL
-  extern int bell();
-  #else /* SUNTOOL */
-! #define bell()		(void) (fputc('\007', stderr), fflush(stderr))
-  #endif /* SUNTOOL */
-  
-  /* For error recovery purposes, send keyboard generated signals to a special
---- 195,218 ----
-  
-  #define NO_STRING	""
-  #ifdef  NULL
-! # undef  NULL
-  #endif /* NULL */
-+ #ifdef __STDC__
-+ #define NULL		(void *)0
-+ #else
-  #define NULL		(char *)0
-+ #endif
-  #define NULL_FILE	(FILE *)0
-  #define DUBL_NULL	(char **)0
-  #define TRPL_NULL	(char ***)0
-  #ifdef putchar
-! # undef putchar
-  #endif /* putchar */
-  #define putchar(c)	(void) (fputc(c, stdout), fflush(stdout))
-  #ifdef SUNTOOL
-  extern int bell();
-  #else /* SUNTOOL */
-! # define bell()		(void) (fputc('\007', stderr), fflush(stderr))
-  #endif /* SUNTOOL */
-  
-  /* For error recovery purposes, send keyboard generated signals to a special
-***************
-*** 211,331 ****
-  
-  /* Don't flush input when setting echo or cbreak modes (allow typeahead) */
-  #ifdef TIOCSETN
-! #ifdef stty
-! #undef stty
-! #endif /* stty */
-! #define stty(fd, sgttybuf)	ioctl(fd, TIOCSETN, sgttybuf)
-  #endif /* TIOCSETN */
-  
-  /* for system-V machines that run termio */
-  #if defined(SYSV) && defined(USG) || defined(AIX) || defined(POSIX) || defined(BSD44)
-! #ifdef crmode
-! #undef crmode
-! #undef nocrmode
-! #endif /* nocrmode */
-  
-  unsigned char vmin, vtime;
-  
-! #ifdef __linux__
-! # undef TCGETA
-! # undef TCSETAW
-! # define TCGETA TCGETS
-! # define TCSETAW TCSETSW
-! #endif
-! #ifdef BSD44
-! # undef TCGETA
-! # undef TCSETAW
-! # define TCGETA TIOCGETA
-! # define TCSETAW TIOCSETAW
-! #endif
-! 
-! #ifdef POSIX
-! #define sg_erase  c_cc[VERASE]
-! #define sg_flags  c_lflag
-! #define sg_kill   c_cc[VKILL]
-! #define gtty(fd, SGTTYbuf)	tcgetattr(fd, SGTTYbuf)
-! #undef stty
-! #define stty(fd, SGTTYbuf)	tcsetattr(fd, TCSADRAIN, SGTTYbuf)
-! #else /* !POSIX */
-! #define sg_erase  c_cc[2]
-! #define sg_flags  c_lflag
-! #define sg_kill   c_cc[3]
-! #define sg_ospeed c_cflag
-! #define gtty(fd, SGTTYbuf)	ioctl(fd, TCGETA, SGTTYbuf)
-! #undef stty
-! #define stty(fd, SGTTYbuf)	ioctl(fd, TCSETAW, SGTTYbuf)
-! #endif /* POSIX */
-! 
-! #define echon()    (_tty.sg_flags |= (ECHO|ECHOE),    stty(0, &_tty))
-! #define echoff()   (_tty.sg_flags &= ~ECHO,   stty(0, &_tty))
-! #define cbrkon()   \
-  	(_tty.sg_flags &= ~ICANON, _tty.c_cc[VMIN] = 1, stty(0, &_tty))
-! #define cbrkoff()  \
-  	(_tty.sg_flags |= ICANON,_tty.c_cc[VMIN] = vmin,_tty.c_iflag |= ICRNL, \
-  		_tty.c_cc[VTIME] = vtime, stty(0, &_tty))
-  
-! #ifdef __linux__
-! # undef savetty
-! # undef cbreak
-! # undef nocbreak
-! #endif
-  
-! #ifndef savetty
-! # define savetty()  \
-  	(void) gtty(0, &_tty), vtime = _tty.c_cc[VTIME], vmin = _tty.c_cc[VMIN]
-! #endif
-! #ifndef cbreak
-! # define cbreak()   cbrkon()
-! #endif
-! #ifndef nocbreak
-! # define nocbreak() cbrkoff()
-! #endif
-  
-  /* If curses isn't defined, declare our 'tty' and macros for echo/cbreak */
-! #ifndef CURSES
-! #ifdef POSIX
-  typedef struct termios SGTTY;
-! #else
-  typedef struct termio SGTTY;
-! #endif
-! #define echom()    echon()
-! #define noechom()  echoff()
-! #define crmode()   cbrkon()
-! #define nocrmode() cbrkoff()
-  
-  /* These two moved from above; is that right?? Were they misplaced? */
-  /* are these even needed?  I don't think any code (except below) uses them. */
-! #define cbreak()   cbrkon()
-! #define nocbreak() cbrkoff()
-  
-! #else /* CURSES */
-! #ifdef DEFINE_CURSES_SGTTY
-  typedef struct termios SGTTY;
-! #endif
-  /* If curses is defined, use the echo/cbreak commands in library only
-   * if curses is running.  If curses isn't running, use macros above.
-   */
-! #define echom()    ((iscurses) ? echo(): echon())
-! #define noechom()  ((iscurses) ? noecho(): echoff())
-! #define crmode()   ((iscurses) ? cbreak() : cbrkon())
-! #define nocrmode() ((iscurses) ? nocbreak() : cbrkoff())
-! #endif /* CURSES */
-  #endif /* SYSV && USG || AIX || POSIX || BSD44 */
-  
-  #if !defined(USG) && !defined(AIX) && !defined(POSIX) && !defined(BSD44)
-! #ifndef CURSES
-  /* if curses is not defined, simulate the same tty based macros */
-  typedef struct sgttyb SGTTY;
-  /* Do real ioctl calls to set the tty modes */
-! #define crmode()   (_tty.sg_flags |= CBREAK,  stty(0, &_tty))
-! #define nocrmode() (_tty.sg_flags &= ~CBREAK, stty(0, &_tty))
-! #define echom()    (_tty.sg_flags |= ECHO,    stty(0, &_tty))
-! #define noechom()  (_tty.sg_flags &= ~ECHO,   stty(0, &_tty))
-! #define savetty()  (void) gtty(0, &_tty)
-! #else /* CURSES */
-! #define echom()    echo()
-! #define noechom()  noecho()
-! #endif /* ~CURSES */
-  #endif /* ~USG */
-  
-  /* With all that out of the way, we can now declare our tty type */
---- 230,350 ----
-  
-  /* Don't flush input when setting echo or cbreak modes (allow typeahead) */
-  #ifdef TIOCSETN
-! # ifdef stty
-! #  undef stty
-! # endif /* stty */
-! # define stty(fd, sgttybuf)	ioctl(fd, TIOCSETN, sgttybuf)
-  #endif /* TIOCSETN */
-  
-  /* for system-V machines that run termio */
-  #if defined(SYSV) && defined(USG) || defined(AIX) || defined(POSIX) || defined(BSD44)
-! # ifdef crmode
-! #  undef crmode
-! #  undef nocrmode
-! # endif /* nocrmode */
-  
-  unsigned char vmin, vtime;
-  
-! # ifdef __linux__
-! #  undef TCGETA
-! #  undef TCSETAW
-! #  define TCGETA TCGETS
-! #  define TCSETAW TCSETSW
-! # endif
-! # ifdef BSD44
-! #  undef TCGETA
-! #  undef TCSETAW
-! #  define TCGETA TIOCGETA
-! #  define TCSETAW TIOCSETAW
-! # endif
-! 
-! # ifdef POSIX
-! #  define sg_erase  c_cc[VERASE]
-! #  define sg_flags  c_lflag
-! #  define sg_kill   c_cc[VKILL]
-! #  define gtty(fd, SGTTYbuf)	tcgetattr(fd, SGTTYbuf)
-! #  undef stty
-! #  define stty(fd, SGTTYbuf)	tcsetattr(fd, TCSADRAIN, SGTTYbuf)
-! # else /* !POSIX */
-! #  define sg_erase  c_cc[2]
-! #  define sg_flags  c_lflag
-! #  define sg_kill   c_cc[3]
-! #  define sg_ospeed c_cflag
-! #  define gtty(fd, SGTTYbuf)	ioctl(fd, TCGETA, SGTTYbuf)
-! #  undef stty
-! #  define stty(fd, SGTTYbuf)	ioctl(fd, TCSETAW, SGTTYbuf)
-! # endif /* POSIX */
-! 
-! # define echon()    (_tty.sg_flags |= (ECHO|ECHOE),    stty(0, &_tty))
-! # define echoff()   (_tty.sg_flags &= ~ECHO,   stty(0, &_tty))
-! # define cbrkon()   \
-  	(_tty.sg_flags &= ~ICANON, _tty.c_cc[VMIN] = 1, stty(0, &_tty))
-! # define cbrkoff()  \
-  	(_tty.sg_flags |= ICANON,_tty.c_cc[VMIN] = vmin,_tty.c_iflag |= ICRNL, \
-  		_tty.c_cc[VTIME] = vtime, stty(0, &_tty))
-  
-! # ifdef __linux__
-! #  undef savetty
-! #  undef cbreak
-! #  undef nocbreak
-! # endif
-  
-! # ifndef savetty
-! #  define savetty()  \
-  	(void) gtty(0, &_tty), vtime = _tty.c_cc[VTIME], vmin = _tty.c_cc[VMIN]
-! # endif
-! # ifndef cbreak
-! #  define cbreak()   cbrkon()
-! # endif
-! # ifndef nocbreak
-! #  define nocbreak() cbrkoff()
-! # endif
-  
-  /* If curses isn't defined, declare our 'tty' and macros for echo/cbreak */
-! # ifndef CURSES
-! #  ifdef POSIX
-  typedef struct termios SGTTY;
-! #  else
-  typedef struct termio SGTTY;
-! #  endif
-! #  define echom()    echon()
-! #  define noechom()  echoff()
-! #  define crmode()   cbrkon()
-! #  define nocrmode() cbrkoff()
-  
-  /* These two moved from above; is that right?? Were they misplaced? */
-  /* are these even needed?  I don't think any code (except below) uses them. */
-! #  define cbreak()   cbrkon()
-! #  define nocbreak() cbrkoff()
-  
-! # else /* CURSES */
-! #  if defined(DEFINE_CURSES_SGTTY) || defined(BSD44)
-  typedef struct termios SGTTY;
-! #  endif
-  /* If curses is defined, use the echo/cbreak commands in library only
-   * if curses is running.  If curses isn't running, use macros above.
-   */
-! #  define echom()    ((iscurses) ? echo(): echon())
-! #  define noechom()  ((iscurses) ? noecho(): echoff())
-! #  define crmode()   ((iscurses) ? cbreak() : cbrkon())
-! #  define nocrmode() ((iscurses) ? nocbreak() : cbrkoff())
-! # endif /* CURSES */
-  #endif /* SYSV && USG || AIX || POSIX || BSD44 */
-  
-  #if !defined(USG) && !defined(AIX) && !defined(POSIX) && !defined(BSD44)
-! # ifndef CURSES
-  /* if curses is not defined, simulate the same tty based macros */
-  typedef struct sgttyb SGTTY;
-  /* Do real ioctl calls to set the tty modes */
-! #  define crmode()   (_tty.sg_flags |= CBREAK,  stty(0, &_tty))
-! #  define nocrmode() (_tty.sg_flags &= ~CBREAK, stty(0, &_tty))
-! #  define echom()    (_tty.sg_flags |= ECHO,    stty(0, &_tty))
-! #  define noechom()  (_tty.sg_flags &= ~ECHO,   stty(0, &_tty))
-! #  define savetty()  (void) gtty(0, &_tty)
-! # else /* CURSES */
-! #  define echom()    echo()
-! #  define noechom()  noecho()
-! # endif /* ~CURSES */
-  #endif /* ~USG */
-  
-  /* With all that out of the way, we can now declare our tty type */
-***************
-*** 351,428 ****
-  #define Debug		if (debug == 0) {;} else (void) wprint
-  
-  #ifdef SYSV
-! #ifndef L_SET
-! #define L_SET	0
-! #endif /* L_SET */
-! #ifndef F_OK
-! #define F_OK	000
-! #define R_OK	004
-! #define W_OK	002
-! #define E_OK	001
-! #endif /* F_OK */
-! #ifdef u_long
-! #undef u_long
-! #endif /* u_long */
-! #define u_long	unsigned long
-! #ifndef HPUX
-! #define vfork   fork
-! #endif /* HPUX */
-! #ifndef SIGCHLD
-! #define SIGCHLD SIGCLD
-! #endif /* SIGCHLD */
-  #endif /* SYSV */
-  
-  #if !defined(SUNTOOL) && !defined(CURSES)
-  
-! #define TRUE		  1
-! #define FALSE		  0
-! #define print		  (void) printf
-! #define wprint		  (void) printf
-! #define print_more	  (void) printf
-  
-  #endif /* !SUNTOOL && !CURSES */
-  
-  #ifndef max
-! #define max(a,b) (((a) > (b)) ? (a) : (b))
-! #define min(a,b) (((a) < (b)) ? (a) : (b))
-  #endif /* max */
-  
-  #if defined(CURSES) && (!defined(SUNTOOL))
-! #define wprint	(void) printf
-  #endif /* CURSES && (!SUNTOOL) */
-  
-  #ifdef SUNTOOL
-  /* stdout may be closed */
-! #define printf wprint
-  #else /* !SUNTOOL */
-! #define ok_box print
-  #endif /* SUNTOOL */
-  
-  #if defined(CURSES) || defined(SUNTOOL)
-! #define print_more	  turnon(glob_flags, CONT_PRNT), print
-! #ifdef __STDC__
-  void print(char *fmt,...);	/* compliance with ansi header for varargs */
-! #else /* __STDC__ */
-  void print();	/* printf to window or curses or tty accordingly */
-! #endif /* __STDC__ */
-  #endif /* CURSES || SUNTOOL */
-  
-  #define ArraySize(o)	  (sizeof(o) / sizeof(*o))
-  
-  #ifdef SUNTOOL
-  
-! #define NO_ITEM		(Panel_item)0
-! #define NO_EVENT	(struct inputevent *)0
-! #define TIME_OUT	60	/* sleep 60 secs between mailchecks */
-! #define PIX_XOR		PIX_SRC ^ PIX_DST
-! #define ID		event_id(event)
-! #define l_width()	mush_font->pf_defaultsize.x /* width of letter */
-! #define l_height()	mush_font->pf_defaultsize.y /* height of letter */
-! #define Clrtoeol(w,x,y)	((void) pw_text(w, x, y, PIX_SRC, mush_font, blank))
-! 
-  /* Miscellaneous old-SunView cleanup */
-  #ifndef TTY_ARGV_DO_NOT_FORK
-! #define TTY_ARGV_DO_NOT_FORK (-1)
-  #endif
-  
-  #endif /* SUNTOOL */
---- 370,447 ----
-  #define Debug		if (debug == 0) {;} else (void) wprint
-  
-  #ifdef SYSV
-! # ifndef L_SET
-! #  define L_SET	0
-! # endif /* L_SET */
-! # ifndef F_OK
-! #  define F_OK	000
-! #  define R_OK	004
-! #  define W_OK	002
-! #  define E_OK	001
-! # endif /* F_OK */
-! # ifdef u_long
-! #  undef u_long
-! # endif /* u_long */
-! # define u_long	unsigned long
-! # ifndef HPUX
-! #  define vfork   fork
-! # endif /* HPUX */
-! # ifndef SIGCHLD
-! #  define SIGCHLD SIGCLD
-! # endif /* SIGCHLD */
-  #endif /* SYSV */
-  
-  #if !defined(SUNTOOL) && !defined(CURSES)
-  
-! # define TRUE		  1
-! # define FALSE		  0
-! # define print		  (void) printf
-! # define wprint		  (void) printf
-! # define print_more	  (void) printf
-  
-  #endif /* !SUNTOOL && !CURSES */
-  
-  #ifndef max
-! # define max(a,b) (((a) > (b)) ? (a) : (b))
-! # define min(a,b) (((a) < (b)) ? (a) : (b))
-  #endif /* max */
-  
-  #if defined(CURSES) && (!defined(SUNTOOL))
-! # define wprint	(void) printf
-  #endif /* CURSES && (!SUNTOOL) */
-  
-  #ifdef SUNTOOL
-  /* stdout may be closed */
-! # define printf wprint
-  #else /* !SUNTOOL */
-! # define ok_box print
-  #endif /* SUNTOOL */
-  
-  #if defined(CURSES) || defined(SUNTOOL)
-! # define print_more	  turnon(glob_flags, CONT_PRNT), print
-! # ifdef __STDC__
-  void print(char *fmt,...);	/* compliance with ansi header for varargs */
-! # else /* __STDC__ */
-  void print();	/* printf to window or curses or tty accordingly */
-! # endif /* __STDC__ */
-  #endif /* CURSES || SUNTOOL */
-  
-  #define ArraySize(o)	  (sizeof(o) / sizeof(*o))
-  
-  #ifdef SUNTOOL
-  
-! # define NO_ITEM		(Panel_item)0
-! # define NO_EVENT	(struct inputevent *)0
-! # define TIME_OUT	60	/* sleep 60 secs between mailchecks */
-! # define PIX_XOR		PIX_SRC ^ PIX_DST
-! # define ID		event_id(event)
-! # define l_width()	mush_font->pf_defaultsize.x /* width of letter */
-! # define l_height()	mush_font->pf_defaultsize.y /* height of letter */
-! # define Clrtoeol(w,x,y)	((void) pw_text(w, x, y, PIX_SRC, mush_font, blank))
-!  
-  /* Miscellaneous old-SunView cleanup */
-  #ifndef TTY_ARGV_DO_NOT_FORK
-! # define TTY_ARGV_DO_NOT_FORK (-1)
-  #endif
-  
-  #endif /* SUNTOOL */
-***************
-*** 547,554 ****
-  /* It is possible to reset MAX_PRIORITY to as high as 9 */
-  #define MAX_PRIORITY	5
-  
-! #define	MAXMSGS_BITS	((MAXMSGS+7)/8)	/* number of bits for bitmap */
-! 
-  struct msg {
-      u_long m_flags;
-      long   m_offset;	/* offset in tempfile of msg */
---- 566,578 ----
-  /* It is possible to reset MAX_PRIORITY to as high as 9 */
-  #define MAX_PRIORITY	5
-  
-! #ifndef MSGS_DYNAMIC
-! # define	MAXMSGS_BITS	MAXMSGS/sizeof(char)	/* number of bits for bitmap */
-! #else
-! # define MSGS_BITS(a)	(((a)+7)/8)
-! # define MSGS_INCR	500
-! #endif
-!   
-  struct msg {
-      u_long m_flags;
-      long   m_offset;	/* offset in tempfile of msg */
-***************
-*** 559,565 ****
-      char   *m_to;	/* Cached To: field */
-      char   *m_subject;	/* Cached Subject: field */
-      char   *m_from;	/* Cached Reply-To: or From: field */
-! } msg[MAXMSGS];
-  
-  struct options {
-      char *option;
---- 583,598 ----
-      char   *m_to;	/* Cached To: field */
-      char   *m_subject;	/* Cached Subject: field */
-      char   *m_from;	/* Cached Reply-To: or From: field */
-!     char   *m_addr;	/* Cached Reply-To: or From: field */
-!     char   *m_name;	/* Cached Reply-To: or From: field */
-!     char   m_author;	/* if any of the 3 preceding ones has been inited */
-!     u_long m_spare;	/* spare field */
-! }
-! #ifdef MSGS_DYNAMIC
-!     *msg;
-! #else
-!     msg[MAXMSGS];
-! #endif
-  
-  struct options {
-      char *option;
-***************
-*** 603,609 ****
---- 636,646 ----
-  char
-      debug,		/* debug causes various print statements in code */
-      tempfile[MAXPATHLEN],	/* path to filename of temporary file */
-+ #ifdef MSGS_DYNAMIC
-+     *msg_list,		/* boolean storage */
-+ #else
-      msg_list[MAXMSGS_BITS],	/* MAXMSGS bits of boolean storage */
-+ #endif
-      **alternates,	/* alternates list --see alts() */
-      *cmd_help,		/* filename of location for "command -?" commands. */
-      *login,		/* login name of user */
-***************
-*** 658,663 ****
---- 695,703 ----
-  int
-      last_msg_cnt,	/* when checking for new mail, save the last msg_cnt */
-      msg_cnt,		/* total number of messages */
-+ #ifdef MSGS_DYNAMIC
-+     msg_max,		/* current maximum allocation limit */
-+ #endif
-      crt,		/* min number of lines msg contains to invoke pager */
-      current_msg,	/* the current message we're dealing with */
-      exec_pid,		/* pid of a command that has been "exec"ed */
-***************
-*** 666,672 ****
-  #if defined(SUNTOOL) || defined(lint)
-      istool,		/* argv[0] == "xxxxtool", ranges from 0 to 2 */
-  #else /* !SUNTOOL */
-! #define istool 0
-  #endif /* SUNTOOL */
-      n_array[128],	/* array of message numbers in the header window */
-      screen,		/* number of headers window can handle */
---- 706,712 ----
-  #if defined(SUNTOOL) || defined(lint)
-      istool,		/* argv[0] == "xxxxtool", ranges from 0 to 2 */
-  #else /* !SUNTOOL */
-! # define istool 0
-  #endif /* SUNTOOL */
-      n_array[128],	/* array of message numbers in the header window */
-      screen,		/* number of headers window can handle */
-***************
-*** 725,731 ****
-  char * quoteit();
-  
-  #ifndef SIGRET
-! #define SIGRET int
-  #endif /* SIGRET */
-  SIGRET
-      rm_edfile(),	/* remove letter-compose file on interrupts */
---- 765,771 ----
-  char * quoteit();
-  
-  #ifndef SIGRET
-! # define SIGRET int
-  #endif /* SIGRET */
-  SIGRET
-      rm_edfile(),	/* remove letter-compose file on interrupts */
-***************
-*** 754,762 ****
-  #ifdef TIOCGLTC
-  struct ltchars ltchars;			/* tty character settings */
-  #endif /* TIOCGLTC */
-! #if defined(BSD) && !defined(AIX) /* (TIOCGETC) */
-  struct tchars  tchars;			/* more tty character settings */
-! #endif /* BSD && !AIX (TIOCGETC) */
-  
-  #ifdef CURSES
-  
---- 794,802 ----
-  #ifdef TIOCGLTC
-  struct ltchars ltchars;			/* tty character settings */
-  #endif /* TIOCGLTC */
-! #if defined(BSD) && !defined(AIX) && defined(TIOCGETC)
-  struct tchars  tchars;			/* more tty character settings */
-! #endif /* BSD && !AIX && TIOCGETC */
-  
-  #ifdef CURSES
-  
-***************
-*** 775,790 ****
-      mac_flush();	/* Abandon macro processing (on error) */
-  
-  #if defined(SUNTOOL) || defined(POP3_SUPPORT)
-! #ifdef POP3_SUPPORT
-! #define MIN_TIME_OUT	(15 * 60)	/* 15 min. checks */
-  extern void popchkmail();
-  extern void popgetmail();
-! #ifdef MAIL_FROM_POPHOST
-  extern char *pophostname();
-! #endif /* MAIL_FROM_POPHOST */
-! #else
-! #define MIN_TIME_OUT	30		/* 30 sec. checks */
-! #endif /* POP3_SUPPORT */
-  
-  int
-      time_out;		/* time out interval to wait for new mail */
---- 815,830 ----
-      mac_flush();	/* Abandon macro processing (on error) */
-  
-  #if defined(SUNTOOL) || defined(POP3_SUPPORT)
-! # ifdef POP3_SUPPORT
-! #  define MIN_TIME_OUT	(15 * 60)	/* 15 min. checks */
-  extern void popchkmail();
-  extern void popgetmail();
-! #  ifdef MAIL_FROM_POPHOST
-  extern char *pophostname();
-! #  endif /* MAIL_FROM_POPHOST */
-! # else
-! #  define MIN_TIME_OUT	30		/* 30 sec. checks */
-! # endif /* POP3_SUPPORT */
-  
-  int
-      time_out;		/* time out interval to wait for new mail */
+ /* Miscellaneous old-SunView cleanup */
+ #ifndef TTY_ARGV_DO_NOT_FORK
+-#define TTY_ARGV_DO_NOT_FORK (-1)
++# define TTY_ARGV_DO_NOT_FORK (-1)
+ #endif
+ 
+ #endif /* SUNTOOL */
+@@ -547,8 +566,13 @@
+ /* It is possible to reset MAX_PRIORITY to as high as 9 */
+ #define MAX_PRIORITY	5
+ 
+-#define	MAXMSGS_BITS	((MAXMSGS+7)/8)	/* number of bits for bitmap */
+-
++#ifndef MSGS_DYNAMIC
++# define	MAXMSGS_BITS	MAXMSGS/sizeof(char)	/* number of bits for bitmap */
++#else
++# define MSGS_BITS(a)	(((a)+7)/8)
++# define MSGS_INCR	500
++#endif
++  
+ struct msg {
+     u_long m_flags;
+     long   m_offset;	/* offset in tempfile of msg */
+@@ -559,7 +583,16 @@
+     char   *m_to;	/* Cached To: field */
+     char   *m_subject;	/* Cached Subject: field */
+     char   *m_from;	/* Cached Reply-To: or From: field */
+-} msg[MAXMSGS];
++    char   *m_addr;	/* Cached Reply-To: or From: field */
++    char   *m_name;	/* Cached Reply-To: or From: field */
++    char   m_author;	/* if any of the 3 preceding ones has been inited */
++    u_long m_spare;	/* spare field */
++}
++#ifdef MSGS_DYNAMIC
++    *msg;
++#else
++    msg[MAXMSGS];
++#endif
+ 
+ struct options {
+     char *option;
+@@ -603,7 +636,11 @@
+ char
+     debug,		/* debug causes various print statements in code */
+     tempfile[MAXPATHLEN],	/* path to filename of temporary file */
++#ifdef MSGS_DYNAMIC
++    *msg_list,		/* boolean storage */
++#else
+     msg_list[MAXMSGS_BITS],	/* MAXMSGS bits of boolean storage */
++#endif
+     **alternates,	/* alternates list --see alts() */
+     *cmd_help,		/* filename of location for "command -?" commands. */
+     *login,		/* login name of user */
+@@ -658,6 +695,9 @@
+ int
+     last_msg_cnt,	/* when checking for new mail, save the last msg_cnt */
+     msg_cnt,		/* total number of messages */
++#ifdef MSGS_DYNAMIC
++    msg_max,		/* current maximum allocation limit */
++#endif
+     crt,		/* min number of lines msg contains to invoke pager */
+     current_msg,	/* the current message we're dealing with */
+     exec_pid,		/* pid of a command that has been "exec"ed */
+@@ -666,7 +706,7 @@
+ #if defined(SUNTOOL) || defined(lint)
+     istool,		/* argv[0] == "xxxxtool", ranges from 0 to 2 */
+ #else /* !SUNTOOL */
+-#define istool 0
++# define istool 0
+ #endif /* SUNTOOL */
+     n_array[128],	/* array of message numbers in the header window */
+     screen,		/* number of headers window can handle */
+@@ -725,7 +765,7 @@
+ char * quoteit();
+ 
+ #ifndef SIGRET
+-#define SIGRET int
++# define SIGRET int
+ #endif /* SIGRET */
+ SIGRET
+     rm_edfile(),	/* remove letter-compose file on interrupts */
+@@ -737,8 +777,8 @@
+ 
+ long
+     spool_size,		/* size of spool mail regardless of current folder */
+-    last_size,		/* the last size of the mailfile since last check */
+-    time();		/* satisfy lint */
++    last_size;		/* the last size of the mailfile since last check */
++/*    time();		 satisfy lint */
+ 
+ void
+     error(), getmail(), mail_status(), sign_letter(),
+@@ -754,9 +794,9 @@
+ #ifdef TIOCGLTC
+ struct ltchars ltchars;			/* tty character settings */
+ #endif /* TIOCGLTC */
+-#if defined(BSD) && !defined(AIX) /* (TIOCGETC) */
++#if defined(BSD) && !defined(AIX) && defined(TIOCGETC)
+ struct tchars  tchars;			/* more tty character settings */
+-#endif /* BSD && !AIX (TIOCGETC) */
++#endif /* BSD && !AIX && TIOCGETC */
+ 
+ #ifdef CURSES
+ 
+@@ -775,16 +815,16 @@
+     mac_flush();	/* Abandon macro processing (on error) */
+ 
+ #if defined(SUNTOOL) || defined(POP3_SUPPORT)
+-#ifdef POP3_SUPPORT
+-#define MIN_TIME_OUT	(15 * 60)	/* 15 min. checks */
++# ifdef POP3_SUPPORT
++#  define MIN_TIME_OUT	(15 * 60)	/* 15 min. checks */
+ extern void popchkmail();
+ extern void popgetmail();
+-#ifdef MAIL_FROM_POPHOST
++#  ifdef MAIL_FROM_POPHOST
+ extern char *pophostname();
+-#endif /* MAIL_FROM_POPHOST */
+-#else
+-#define MIN_TIME_OUT	30		/* 30 sec. checks */
+-#endif /* POP3_SUPPORT */
++#  endif /* MAIL_FROM_POPHOST */
++# else
++#  define MIN_TIME_OUT	30		/* 30 sec. checks */
++# endif /* POP3_SUPPORT */
+ 
+ int
+     time_out;		/* time out interval to wait for new mail */
