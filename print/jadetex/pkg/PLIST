@@ -1,0 +1,52 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/06/26 02:27:41 hubertf Exp $
+share/texmf/web2c/pdfjadetex.fmt
+share/texmf/web2c/jadetex.fmt
+share/texmf/tex/jadetex/dsssl.def
+share/texmf/tex/jadetex/jadetex.ltx
+man/man1/jadetex.1
+man/man1/pdfjadetex.1
+share/doc/jadetex/Makefile
+share/doc/jadetex/demo.sgm
+share/doc/jadetex/demo.tex
+share/doc/jadetex/install.aux
+share/doc/jadetex/install.fot
+share/doc/jadetex/install.log
+share/doc/jadetex/install.out
+share/doc/jadetex/install.pdf
+share/doc/jadetex/install.sgm
+share/doc/jadetex/install.tex
+@dirrm share/doc/jadetex
+share/examples/jadetex/Makefile
+share/examples/jadetex/aftermath.discuss
+share/examples/jadetex/aftermath.dsl
+share/examples/jadetex/aftermath.sgm
+share/examples/jadetex/aftermath.tex
+share/examples/jadetex/defective-table2.sgml
+share/examples/jadetex/defective-table2.tex
+share/examples/jadetex/demo.dsl
+share/examples/jadetex/demo.sgm
+share/examples/jadetex/demo.tex
+share/examples/jadetex/ex-table.sgm
+share/examples/jadetex/ex-table.sgml
+share/examples/jadetex/ex-table.tex
+share/examples/jadetex/fence.discuss
+share/examples/jadetex/fence.dsl
+share/examples/jadetex/fence.sgm
+share/examples/jadetex/fence.tex
+share/examples/jadetex/jadetex.cfg
+share/examples/jadetex/span.aux
+share/examples/jadetex/span.discuss
+share/examples/jadetex/span.dsl
+share/examples/jadetex/span.dvi
+share/examples/jadetex/span.log
+share/examples/jadetex/span.out
+share/examples/jadetex/span.sgm
+share/examples/jadetex/span.tex
+share/examples/jadetex/tables.sgm
+share/examples/jadetex/test-tables.sgm
+share/examples/jadetex/test-tables.tex
+@dirrm share/examples/jadetex
+@dirrm share/texmf/tex/jadetex
+@unexec rm -f %D/share/texmf/web2c/texmf.cnf
+@unexec mv %D/share/texmf/web2c/texmf.cnf-before-jadetex %D/share/texmf/web2c/texmf.cnf
+@unexec %D/bin/mktexlsr
