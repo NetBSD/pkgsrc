@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/17 23:32:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/12/18 00:21:56 wiz Exp $
 bin/ical
-bin/${PKGNAME}
+bin/ical-2.2
 lib/ical/v2.2/actions.tcl
 lib/ical/v2.2/alarm.tcl
 lib/ical/v2.2/apptlist.tcl
@@ -61,7 +61,7 @@ lib/ical/v2.2/tcllib/tclIndex
 lib/ical/v2.2/tcllib/textwin.tcl
 lib/ical/v2.2/timerange.tcl
 lib/ical/v2.2/trigger.tcl
-man/man1/ical.1.gz
+man/man1/ical.1
 @dirrm lib/ical/v2.2/contrib
 @dirrm lib/ical/v2.2/tcllib
 @dirrm lib/ical/v2.2
