@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2450 2004/11/25 16:08:01 ben Exp $
+$NetBSD: TODO,v 1.2451 2004/11/25 16:24:46 dillo Exp $
 
 Suggested new packages
 ======================
@@ -1284,7 +1284,6 @@ Suggested package updates
 	o tfmxplay-1.1.6
 	o thunderbird-0.9
 	o tileworld-1.2.1
-	o tin-1.6.3
 	o tinc-1.0.3
 	o tinyproxy-1.7.0
 	o tk-8.4.8
