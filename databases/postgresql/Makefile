@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.18 1998/09/22 06:11:35 garbled Exp $
+# $NetBSD: Makefile,v 1.19 1998/11/12 16:24:39 agc Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 
 DISTNAME=	postgresql-6.3.2
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.PostgreSQL.org/pub/ \
 		ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/
-
-NOT_FOR_ARCHS=	alpha	# Needs ELF clue
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.PostgreSQL.ORG/
@@ -16,7 +14,8 @@ DEPENDS+=	tcl-8.0p2:../../lang/tcl80
 DEPENDS+=	addnerd-1.5:../../sysutils/addnerd
 DEPENDS+=	bison-1.25:../../devel/bison
 
-NOT_FOR_ARCHS=	m68k
+NOT_FOR_ARCHS=	alpha	# Needs ELF clue
+NOT_FOR_ARCHS+=	m68k
 
 NO_PACKAGE=	"Requires pgsql uid"
 
