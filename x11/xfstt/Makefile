@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:07:08 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/18 04:34:15 hubertf Exp $
 #
 
 DISTNAME=		xfstt-1.1
+PKGNAME=		${DISTNAME}nb1
 CATEGORIES=		x11 net
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=X11/fonts/}
 
@@ -28,5 +29,10 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/CHANGES ${PREFIX}/share/doc/xfstt
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/xfstt
 	${INSTALL_DATA} ${WRKSRC}/THANKS.txt ${PREFIX}/share/doc/xfstt
+	${SED} -e "/%%PREFIX%%/s##${PREFIX}#g" ${FILESDIR}/xfstt.sh \
+		> ${PREFIX}/etc/rc.d/xfstt
+	${CHMOD} 755 ${PREFIX}/etc/rc.d/xfstt
+	$(INSTALL_DATA_DIR) $(PREFIX)/lib/X11/fonts/TrueType
+	${ECHO} belongs to xfstt pkg >$(PREFIX)/lib/X11/fonts/TrueType/.keepme
 
 .include "../../mk/bsd.pkg.mk"
