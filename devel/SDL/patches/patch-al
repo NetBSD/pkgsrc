@@ -1,0 +1,54 @@
+$NetBSD: patch-al,v 1.4 2001/09/24 14:29:39 rh Exp $
+
+--- src/audio/openbsd/SDL_openbsdaudio.c.orig	Mon Jul 23 04:58:42 2001
++++ src/audio/openbsd/SDL_openbsdaudio.c
+@@ -37,6 +37,7 @@
+ #include <sys/stat.h>
+ #include <sys/types.h>
+ #include <sys/audioio.h>
++#include <pthread.h>
+ 
+ #include "SDL_audio.h"
+ #include "SDL_error.h"
+@@ -46,8 +47,12 @@
+ #include "SDL_audiodev_c.h"
+ #include "SDL_openbsdaudio.h"
+ 
+-/* The tag name used by OpenBSD audio */
++/* The tag name used by NetBSD/OpenBSD audio */
++#ifdef __NetBSD__
++#define OBSD_DRIVER_NAME         "netbsd"
++#else
+ #define OBSD_DRIVER_NAME         "openbsd"
++#endif
+ 
+ /* Open the audio device for playback, and don't block if busy */
+ /* #define USE_BLOCKING_WRITES */
+@@ -132,7 +137,11 @@
+ }
+ 
+ AudioBootStrap OPENBSD_AUDIO_bootstrap = {
++#ifdef __NetBSD__
++	OBSD_DRIVER_NAME, "Native NetBSD audio",
++#else
+ 	OBSD_DRIVER_NAME, "Native OpenBSD audio",
++#endif
+ 	Audio_Available, Audio_CreateDevice
+ };
+ 
+@@ -140,6 +149,7 @@
+ static void
+ OBSD_WaitAudio(_THIS)
+ {
++#ifdef __OpenBSD__
+ 	/* Check to see if the thread-parent process is still alive */
+ 	{ static int cnt = 0;
+ 		/* Note that this only works with thread implementations 
+@@ -151,6 +161,7 @@
+ 			}
+ 		}
+ 	}
++#endif
+ 
+ #ifndef USE_BLOCKING_WRITES /* Not necessary when using blocking writes */
+ 	/* See if we need to use timed audio synchronization */
