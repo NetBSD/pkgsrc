@@ -1,0 +1,16 @@
+SMB2WWW, the gateway to Windows networking, is a Windows Network client
+that is accessible through a web browser. It is based on the samba
+package.
+
+Add this to your apache config:
+
+	Alias /smb2www/images @PREFIX@/libexec/smb2www/images
+	ScriptAlias /smb2www/ @PREFIX@/libexec/smb2www/cgi-bin/
+	AddHandler cgi-script .pl
+
+You can access the gateway at the following URL:
+
+	http://localhost/smb2www/smb2www.pl
+
+To make modifications to the smb2www setup, edit
+@PREFIX@/libexec/smb2www/etc/smb2www.conf
