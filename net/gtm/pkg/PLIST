@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/28 06:27:16 tron Exp $
+bin/gtm_applet
+bin/gtm
+etc/sound/events/gtm.soundlist
+etc/CORBA/servers/gtm.gnorba
+etc/CORBA/servers/gtm_applet.gnorba
+share/locale/de/LC_MESSAGES/gtm.mo
+share/locale/es/LC_MESSAGES/gtm.mo
+share/locale/fr/LC_MESSAGES/gtm.mo
+share/locale/it/LC_MESSAGES/gtm.mo
+share/locale/ko/LC_MESSAGES/gtm.mo
+share/locale/no/LC_MESSAGES/gtm.mo
+share/locale/pt/LC_MESSAGES/gtm.mo
+share/locale/ru/LC_MESSAGES/gtm.mo
+share/locale/da/LC_MESSAGES/gtm.mo
+share/locale/pt_BR/LC_MESSAGES/gtm.mo
+share/locale/uk/LC_MESSAGES/gtm.mo
+share/locale/tr/LC_MESSAGES/gtm.mo
+share/pixmaps/gtm.png
+share/idl/Gtm.idl
+share/gnome/help/gtm/C/index.html
+share/gnome/help/gtm/C/topic.dat
+share/gnome/help/gtm/C/authors.html
+share/gnome/help/gtm/C/bugs.html
+share/gnome/help/gtm/C/license.html
+share/gnome/help/gtm/C/prefs.html
+share/gnome/help/gtm/C/usage.html
+share/gnome/help/gtm/C/docbook.css
+share/gnome/apps/Internet/gtm.desktop
+share/sounds/gtm/add.wav
+share/sounds/gtm/complete.wav
+share/sounds/gtm/start.wav
+share/applets/Network/gtm_applet.desktop
+@dirrm share/sounds/gtm
+@dirrm share/gnome/help/gtm/C/images
+@dirrm share/gnome/help/gtm/C
+@dirrm share/gnome/help/gtm
