@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/14 17:21:39 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/11 08:17:01 snj Exp $
 #
 
 DISTNAME=	lpe-1.2.6
@@ -13,7 +13,7 @@ COMMENT=	Small and efficient programmer's editor for UNIX systems
 
 BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 USE_PKGINSTALL=		YES
 USE_LIBTOOL=		YES
@@ -33,6 +33,6 @@ post-patch:
 		${SED} ${FILES_SUBST_SED} lpe.1.$${f}.orig > lpe.1.$${f}; \
 	done
 
-.include "../../devel/libslang/buildlink2.mk"
+.include "../../devel/libslang/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
