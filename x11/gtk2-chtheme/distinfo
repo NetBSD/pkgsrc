@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/12/28 03:26:19 minskim Exp $
+
+SHA1 (gtk-chtheme-0.3.1.tar.bz2) = dbea31f4092877e786fe040fae1374238fada94a
+Size (gtk-chtheme-0.3.1.tar.bz2) = 18205 bytes
+SHA1 (patch-aa) = ac7fa718bf0cdd0b36382761b8fd716cf00e6bad
