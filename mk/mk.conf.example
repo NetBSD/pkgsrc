@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.236 2001/07/29 19:25:27 tron Exp $
+# $NetBSD: mk.conf.example,v 1.237 2001/08/14 12:49:09 agc Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -917,11 +917,6 @@ PAPERSIZE=	A4
 # Used to enable reading directly in an inn spool.
 # Possible: YES, or NO.
 # Default: NO
-
-#TCSH_STATIC=
-# Produce static version of tcsh binary - advised if used as login shell
-# Possible: defined, not defined
-# Default: not defined
 
 #TEAPOP_WITHOUT_VPOP=
 # Compile teapop without virtual domain support
