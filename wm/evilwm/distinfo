@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/12/21 23:14:36 zuntum Exp $
+
+SHA1 (evilwm_0.3.11-1.tar.gz) = ee7d7b4676b188ee3f77bcbd63af814c7d9b7a1c
+Size (evilwm_0.3.11-1.tar.gz) = 16780 bytes
+SHA1 (patch-aa) = 3dac1d0b7ed3762c374e353160b88e3059f0e05a

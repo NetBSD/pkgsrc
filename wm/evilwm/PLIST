@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/12/21 23:14:36 zuntum Exp $
+bin/evilwm
+man/man1/evilwm.1
+share/doc/evilwm/ChangeLog
+share/doc/evilwm/README
+share/doc/evilwm/README.multihead
+@dirrm share/doc/evilwm
