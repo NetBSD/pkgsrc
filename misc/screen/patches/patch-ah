@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2000/09/01 14:39:54 wiz Exp $
+
+--- screen.c.orig	Wed Sep  1 23:57:25 1999
++++ screen.c
+@@ -2311,7 +2311,7 @@
+ 	      else if (visual && !D_VB && (!D_status || !D_status_bell))
+ 		{
+ 		  D_status_delayed = -1;
+-		  Msg(0, VisualBellString);
++		  Msg(0, "%", VisualBellString);
+ 		  if (D_status)
+ 		    {
+ 		      D_status_bell = 1;
