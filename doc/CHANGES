@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2651 2003/07/02 00:08:46 jtb Exp $
+$NetBSD: CHANGES,v 1.2652 2003/07/02 02:32:27 taya Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2644,3 +2644,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated netscape7 to 7.1 [jschauma 2003-07-01]
 	Added jdk-openjit-1.1.16 [jlam 2003-07-01]
 	Updated smalltalk to 2.1.3 [jtb 2003-07-01]
+	Updated mozilla to 1.4 [taya 2003-07-02]
