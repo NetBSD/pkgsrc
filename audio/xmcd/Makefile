@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2002/07/02 11:29:11 agc Exp $
+# $NetBSD: Makefile,v 1.33 2002/10/08 11:50:04 jlam Exp $
 
 DISTNAME=	xmcd-3.0.2
 CATEGORIES=	audio
@@ -13,12 +13,29 @@ PATCHFILES=		xmcd-3.0.2-proxyauth-patch
 PATCH_DIST_STRIP=	-p1
 
 WRKSRC=		${WRKDIR}/xmcd-3.0
-USE_NCURSES=	yes
-USE_IMAKE=	yes
-INTERACTIVE_STAGE=	install
-MAKE_ENV+=	SHELL=${SH}
 
-post-patch:
+USE_BUILDLINK2=		# defined
+USE_NCURSES=		# defined
+USE_IMAKE=		# defined
+MAKE_ENV+=		BATCH_BINDIR=${PREFIX}/bin
+MAKE_ENV+=		BATCH_LIBDIR=${PREFIX}/lib/X11
+MAKE_ENV+=		BATCH_MANDIR=${PREFIX}/man/man1
+MAKE_ENV+=		SHELL=${SH}
+
+ARCHBIN=	${PREFIX}/lib/X11/xmcd/bin-${OPSYS}-${MACHINE_ARCH}
+XMCDDIR=	${PREFIX}/lib/X11/xmcd
+
+_SETUID_ROOT=	${ROOT_USER} ${ROOT_GROUP} 4711
+SPECIAL_PERMS=	${ARCHBIN}/cda ${_SETUID_ROOT}
+SPECIAL_PERMS+=	${ARCHBIN}/xmcd ${_SETUID_ROOT}
+
+SFILES=		common.cfg device.cfg wwwwarp.cfg
+.for FILE in ${SFILES}
+SUPPORT_FILES+=	${XMCDDIR}/config/${FILE}.dist ${XMCDDIR}/config/${FILE}
+.endfor
+MAKE_DIRS=	${XMCDDIR} ${XMCDDIR}/cdinfo ${XMCDDIR}/config ${XMCDDIR}/discog
+
+pre-configure:
 	cd ${WRKSRC} && \
 	for f in libdi_d/config.sh misc_d/start.sh install.sh; do \
 		${SED} -e "s/@MACHINE_ARCH@/${MACHINE_ARCH}/" $$f > $$f.new; \
@@ -26,17 +43,15 @@ post-patch:
 	done
 
 post-install:
-.for FILE in cda xmcd gobrowser
-	@${TEST} -n "${_STRIPFLAG_INSTALL}" && \
-	strip ${PREFIX}/lib/X11/xmcd/bin-${OPSYS}-${MACHINE_ARCH}/${FILE}
-.endfor
-	${MV} ${PREFIX}/man/cat1/cda.1 ${PREFIX}/man/man1/cda.1
-	${MV} ${PREFIX}/man/cat1/xmcd.1 ${PREFIX}/man/man1/xmcd.1
-.if ! defined(BATCH)
-	${PREFIX}/lib/X11/xmcd/config/config.sh
-.endif
+	if [ -n "${_STRIPFLAG_INSTALL}" ]; then				\
+		for file in cda xmcd gobrowser; do			\
+			strip ${ARCHBIN}/$$file;			\
+		done;							\
+	fi
 
-.include "../../devel/ncurses/buildlink.mk"
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../mk/motif.buildlink.mk"
+.include "../../devel/ncurses/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../mk/motif.buildlink2.mk"
+
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
