@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/01/15 18:46:33 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2001/01/08 14:59:18 wiz Exp $
 #
 
 DISTNAME=		sniffit.0.3.5
@@ -9,17 +9,25 @@ MASTER_SITES=		http://reptile.rug.ac.be/~coder/sniffit/files/
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://reptile.rug.ac.be/~coder/sniffit/sniffit.html
 
-DEPENDS=		ncurses>=4.2:../../devel/ncurses
-
 NOT_FOR_PLATFORM=	*-*-alpha	# severe LP64 loss
 
+USE_CURSES=		yes
+REPLACE_NCURSES=	${WRKSRC}/configure
+
 HAS_CONFIGURE=		YES
-CONFIGURE_ENV+=		NCURSES_LOCATION=${LOCALBASE}/include/ncurses.h
 ALL_TARGET=
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sniffit ${PREFIX}/sbin/sniffit
 	${INSTALL_MAN}     ${WRKSRC}/sniffit.5 ${PREFIX}/man/man5
 	${INSTALL_MAN}     ${WRKSRC}/sniffit.8 ${PREFIX}/man/man8
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${NEED_NCURSES} == "YES"
+CONFIGURE_ENV+=		NCURSES_LOCATION=${LOCALBASE}/include/ncurses.h
+.else
+CONFIGURE_ENV+=		NCURSES_LOCATION=no
+.endif
 
 .include "../../mk/bsd.pkg.mk"
