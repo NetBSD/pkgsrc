@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/06/05 14:37:58 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/06/19 14:36:22 rh Exp $
 #
 
 DISTNAME=	amavis-0.2.0-pre6
@@ -27,9 +27,13 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=--with-virusdir=${VIRUSDIR}
 CONFIGURE_ARGS+=--with-mailto=${VIRUSMAILTO}
 
+MESSAGE_FILE=	${WRKDIR}/MESSAGE
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/zipsecure/zipsecure ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/src/securetar/securetar ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/src/scanmails/scanmails ${PREFIX}/sbin
+	${SED} -e 's#@PREFIX@#${PREFIX}#g' < ${PKGDIR}/MESSAGE \
+		>${WRKDIR}/MESSAGE
 
 .include "../../mk/bsd.pkg.mk"
