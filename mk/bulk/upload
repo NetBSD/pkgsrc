@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.15 2004/02/25 09:20:59 grant Exp $
+# $NetBSD: upload,v 1.16 2004/03/16 13:55:51 hubertf Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
@@ -65,10 +65,20 @@ upload_others=$TMP/upload_others
 # May be different than $USR_PKGSRC:
 pkgsrcdir=`cd pkgtools/pkglint ; ${BMAKE} show-var VARNAME=_PKGSRCDIR`
 packages=`cd pkgtools/pkglint ; ${BMAKE} show-var VARNAME=PACKAGES`
+distdir=`cd pkgtools/pkglint ; ${BMAKE} show-var VARNAME=DISTDIR`
 
 # Pull in some pkgs needed
-( cd pkgtools/pkglint ; ${BMAKE} bulk-install )
-( cd net/rsync ;        ${BMAKE} bulk-install )
+( cd pkgtools/pkglint ;        ${BMAKE} bulk-install )
+( cd net/rsync ;               ${BMAKE} bulk-install )
+( cd security/audit-packages ; ${BMAKE} bulk-install )
+
+echo "Making sure vulnerability-list is upto date:"
+if [ $UPDATE_VULNERABILITY_LIST = "yes" ]
+then
+	env PKGVULNDIR=${distdir} download-vulnerability-list
+else
+	echo '(skipped)'
+fi
 
 echo "Checking for restricted, out of date, and vulnerable packages:"
 # -p  =  report old versions of packages
