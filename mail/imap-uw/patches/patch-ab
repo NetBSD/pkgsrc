@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.9 2002/12/11 12:21:23 tron Exp $
+$NetBSD: patch-ab,v 1.10 2003/01/23 01:25:11 dmcmahill Exp $
 
 --- src/osdep/unix/Makefile.orig	Wed Dec 11 12:15:02 2002
 +++ src/osdep/unix/Makefile	Wed Dec 11 12:18:05 2002
@@ -42,7 +42,7 @@ $NetBSD: patch-ab,v 1.9 2002/12/11 12:21:23 tron Exp $
  	 ACTIVEFILE=/usr/share/news/active \
  	 RSHPATH=/usr/bin/rsh \
 -	 BASECFLAGS="-g -O2" \
-+	 BASECFLAGS="-O2" \
++	 BASECFLAGS="" \
  	 BASELDFLAGS="-lsocket -lnsl -lgen" \
 -	 RANLIB=true CC=gcc
 +	 RANLIB=true
@@ -57,7 +57,7 @@ $NetBSD: patch-ab,v 1.9 2002/12/11 12:21:23 tron Exp $
 +	 ACTIVEFILE=/var/news/db/active \
  	 RSHPATH=/usr/bin/rsh \
 -	 BASECFLAGS="-g -O -pipe" \
-+	 BASECFLAGS="-O -pipe" \
++	 BASECFLAGS="-pipe" \
  	 BASELDFLAGS="-lcrypt"
  
  nec:	# NEC UX
