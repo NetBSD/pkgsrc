@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.19 2001/11/28 12:05:20 jlam Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.20 2001/11/30 00:30:40 wiz Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1261,7 +1261,7 @@ XCHAT_USE_SSL?=	YES
 
 # Austria
 #
-#MASTER_SITE_XCONTRIB=	ftp://ftp.at.netbsd.org/hci/X11/contrib/
+#MASTER_SITE_XCONTRIB=	ftp://ftp.at.netbsd.org/hci/X11/x.org/contrib/
 #MASTER_SITE_GNU=	ftp://ftp.at.netbsd.org/gnu/gnusrc/
 #MASTER_SITE_PERL_CPAN=	ftp://ftp.at.netbsd.org/languages/perl/CPAN/modules/by-module/
 #MASTER_SITE_TEX_CTAN=	ftp://ftp.at.netbsd.org/publishing/tex/CTAN/
