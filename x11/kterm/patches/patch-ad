@@ -1,0 +1,24 @@
+$NetBSD: patch-ad,v 1.1 2002/07/04 14:05:33 itojun Exp $
+
+--- main.c.orig	Thu Jul  4 23:02:25 2002
++++ main.c	Thu Jul  4 23:03:03 2002
+@@ -392,6 +392,10 @@
+ #include <locale.h>
+ #endif
+ 
++#ifdef __NetBSD__
++#include <util.h>
++#endif
++
+ #ifdef SYSV
+ extern char *ptsname();
+ #endif
+@@ -1719,7 +1723,7 @@
+ get_pty (pty)
+     int *pty;
+ {
+-#ifdef __osf__
++#if defined(__osf__) || defined(__NetBSD__)
+     int tty;
+     return (openpty(pty, &tty, ttydev, NULL, NULL));
+ #endif
