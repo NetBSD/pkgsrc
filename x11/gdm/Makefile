@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/01/15 10:16:18 tron Exp $
+# $NetBSD: Makefile,v 1.10 2000/07/11 10:30:43 agc Exp $
 
 DISTNAME=	gdm-2.0beta4
 PKGNAME=	gdm-2.0b4
@@ -44,28 +44,28 @@ GDMCFGFILES=	Default:Init.default/Default \
 		gnomerc:../gnomerc.default
 
 post-build:
-.for FILE in DEINSTALL INSTALL
-	${SED} -e 's#@@CP@@#${CP}#' \
-	  -e 's#@@LN@@#${LN}#' \
-	  -e 's#@@MKDIR@@#${MKDIR}#' \
-	  -e 's#@@RM@@#${RM}#' \
-	  -e 's#@@GDMCFGDIR@@#${GDMCFGDIR}#g' \
-	  -e 's#@@GDMCFGFILES@@#${GDMCFGFILES:C/.*://g}#g' \
-	  ${PKGDIR}/${FILE} >${WRKDIR}/${FILE}
-.endfor
-.for FILE in Default PostSession PreSession
-	cd ${WRKSRC}/config; \
-	${SED} -e 's#/usr/bin/X11#${X11BASE}/bin#g' ${FILE} >${FILE}.new; \
-	${MV} ${FILE}.new ${FILE}; \
-	${CHMOD} +x ${FILE}
-.endfor
-	cd ${WRKSRC}/config; \
-	${RM} -f KDE Xsession; \
-	${ECHO} '#!${SH}' >KDE; \
-	${ECHO} 'export KDEDIR=${X11BASE}' >>KDE; \
-	${ECHO} 'exec $${KDEDIR}/bin/startkde $$@' >>KDE; \
-	${ECHO} '#!${SH}' >Xsession; \
-	${ECHO} 'exec ${X11BASE}/lib/X11/xdm/Xsession $$@' >>Xsession; \
+	for f in DEINSTALL INSTALL; do					\
+		${SED} -e 's#@@CP@@#${CP}#'				\
+		  -e 's#@@LN@@#${LN}#'					\
+		  -e 's#@@MKDIR@@#${MKDIR}#'				\
+		  -e 's#@@RM@@#${RM}#'					\
+		  -e 's#@@GDMCFGDIR@@#${GDMCFGDIR}#g'			\
+		  -e 's#@@GDMCFGFILES@@#${GDMCFGFILES:C/.*://g}#g'	\
+		  ${PKGDIR}/$$f >${WRKDIR}/$$f;				\
+	done
+	cd ${WRKSRC}/config;						\
+	for f in Default PostSession PreSession; do			\
+		${SED} -e 's#/usr/bin/X11#${X11PREFIX}/bin#g' $$f >$$f.new; \
+		${MV} $$f.new $$f;					\
+		${CHMOD} +x $$f;					\
+	done
+	cd ${WRKSRC}/config;						\
+	${RM} -f KDE Xsession;						\
+	${ECHO} '#! ${SH}' >KDE;					\
+	${ECHO} "export KDEDIR=`${PKG_INFO} -qp kdebase | ${AWK} '{print $$2}'`" >>KDE; \
+	${ECHO} 'exec $${KDEDIR}/bin/startkde $$@' >>KDE;		\
+	${ECHO} '#! ${SH}' >Xsession;					\
+	${ECHO} 'exec ${X11BASE}/lib/X11/xdm/Xsession $$@' >>Xsession;	\
 	${CHMOD} +x KDE Xsession
 
 post-install:
