@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.953 2002/12/31 05:50:42 kei Exp $
+$NetBSD: CHANGES,v 1.954 2002/12/31 09:19:55 martti Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4323,3 +4323,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated xpdf to 2.0.1nb2 [uebayasi 2002-12-31]
 	Updated navi2ch to 1.6.1 [uebayasi 2002-12-31]
 	Added pcf2bdf-1.04 [kei 2002-12-30]
+	Updated lyx to 1.2.2 [martti 2002-12-31]
+	Updated proftpd to 1.2.7 [martti 2002-12-31]
