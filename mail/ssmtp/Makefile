@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/20 12:19:44 agc Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/24 13:55:30 grant Exp $
 # FreeBSD Id: ports/mail/ssmtp/Makefile,v 1.10 2003/04/14 08:41:04 leeym Exp
 #
 # TLS functionality needs testing. Please let me know the result,
@@ -21,7 +21,7 @@ WRKSRC=			${WRKDIR}/${PKGBASE}-${PKGVERSION:C/([0-9]+.[0-9]+)(.[0-9]+)(nb[0-9]+)
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
 
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-ssl --enable-inet6
 

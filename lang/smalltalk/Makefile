@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/08/11 18:27:27 jmc Exp $
+# $NetBSD: Makefile,v 1.23 2004/01/24 13:51:15 grant Exp $
 
 DISTNAME=		smalltalk-2.1.4
 CATEGORIES=		lang
@@ -11,7 +11,7 @@ COMMENT=		GNU Smalltalk: A smalltalk-80 implementation
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc *-*-powerpc
 
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_GNU_READLINE=	YES
 
 USE_LIBTOOL=		YES

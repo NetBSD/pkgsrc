@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/08/09 11:11:30 seb Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/24 13:58:23 grant Exp $
 
 .if (${MACHINE_ARCH} == "powerpc")
 DISTNAME=		fftw-3.0.1-fma
@@ -20,7 +20,7 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/fftw.pc.in
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--enable-shared
 USE_FORTRAN=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 INFO_FILES=		fftw3.info
 
 TEST_TARGET=		check

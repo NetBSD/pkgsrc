@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2004/01/03 18:49:45 reed Exp $
+# $NetBSD: Makefile,v 1.78 2004/01/24 13:58:23 grant Exp $
 #
 
 DISTNAME=		gnumeric-1.0.13
@@ -17,7 +17,7 @@ DEPENDS+=		gnome1-dirs>=1.2:../../misc/gnome1-dirs
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_PERL5=		YES
 
 GNU_CONFIGURE=		YES

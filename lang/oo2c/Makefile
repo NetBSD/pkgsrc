@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/12/04 19:48:25 xtraeme Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/24 13:51:14 grant Exp $
 
 DISTNAME=		oo2c_${BITS}-2.0.11
 PKGNAME=		oo2c-2.0.11
@@ -22,7 +22,7 @@ BITS=32
 
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 
 EVAL_PREFIX+=		LIBTOOL_PREFIX=libtool-base

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/07/17 21:47:23 grant Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/24 13:58:23 grant Exp $
 #
 
 DISTNAME=		cassowary-0.60
@@ -13,7 +13,7 @@ COMMENT=		Constraint-solving toolkit for linear equalities and inequalities
 BUILD_DEPENDS+=		bison>=1.34:../../devel/bison
 
 USE_BUILDLINK2=		# defined
-USE_GMAKE=		# defined
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		# defined
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 

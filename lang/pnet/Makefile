@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/16 06:40:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/24 13:51:15 grant Exp $
 #
 
 DISTNAME=	pnet-0.6.2
@@ -14,7 +14,7 @@ BUILD_DEPENDS=	treecc>=0.2.6:../../devel/treecc
 
 CONFLICTS=	mono-[0-9]*
 
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 USE_MAKEINFO=	yes
 GNU_CONFIGURE=	yes
 USE_BUILDLINK2=	yes
