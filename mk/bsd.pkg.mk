@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.185 1998/10/26 11:53:56 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.186 1998/10/26 17:40:57 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -375,13 +375,19 @@ REQ_FILE=		${PKGDIR}/REQ
 MESSAGE_FILE=		${PKGDIR}/MESSAGE
 .endif
 
+# Files to create for versioning and build information
+BUILD_VERSION_FILE=	${WRKDIR}/BuildVersion
+BUILD_INFO_FILE=	${WRKDIR}/BuildInfo
+
 PKG_ADD?=	/usr/sbin/pkg_add
 PKG_CREATE?=	/usr/sbin/pkg_create
 PKG_DELETE?=	/usr/sbin/pkg_delete
 PKG_INFO?=	/usr/sbin/pkg_info
 
 .ifndef PKG_ARGS
-PKG_ARGS=		-v -c ${COMMENT} -d ${DESCR} -f ${PLIST} -p ${PREFIX} -P "`${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=true|sort -u`"
+PKG_ARGS=		-v -c ${COMMENT} -d ${DESCR} -f ${PLIST}
+PKG_ARGS+=		-b ${BUILD_VERSION_FILE} -B ${BUILD_INFO_FILE}
+PKG_ARGS+=		-p ${PREFIX} -P "`${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=true|sort -u`"
 .ifdef CONFLICTS
 PKG_ARGS+=		-C "${CONFLICTS}"
 .endif
@@ -1914,10 +1920,44 @@ print-package-depends:
 
 .if !target(fake-pkg)
 fake-pkg: ${PLIST} ${DESCR}
-	@if [ ! -f ${PLIST} -o ! -f ${COMMENT} -o ! -f ${DESCR} ]; then ${ECHO} "** Missing package files for ${PKGNAME} - installation not recorded."; exit 1; fi
-	@if [ ! -d ${PKG_DBDIR} ]; then ${RM} -f ${PKG_DBDIR}; ${MKDIR} ${PKG_DBDIR}; fi
+	@if [ ! -f ${PLIST} -o ! -f ${COMMENT} -o ! -f ${DESCR} ]; then \
+		${ECHO} "** Missing package files for ${PKGNAME} - installation not recorded."; \
+		exit 1;							\
+	fi
+	@if [ ! -d ${PKG_DBDIR} ]; then					\
+		${RM} -f ${PKG_DBDIR};					\
+		${MKDIR} ${PKG_DBDIR};					\
+	fi
 .if defined(FORCE_PKG_REGISTER)
 	@${RM} -rf ${PKG_DBDIR}/${PKGNAME}
+.endif
+	@${RM} ${BUILD_VERSION_FILE} ${BUILD_INFO_FILE}
+	@files="";							\
+	for f in ${.CURDIR}/Makefile ${FILESDIR}/* ${PKGDIR}/*; do	\
+		if [ -f $$f ]; then					\
+			files="$$files $$f";				\
+		fi;							\
+	done;								\
+	if [ -d ${PATCHDIR} ]; then					\
+		for f in ${PATCHDIR}/patch-*; do			\
+			case $$f in					\
+			*.orig|*.rej|*~) ;;				\
+			*)						\
+				files="$$files $$f" ;;			\
+			esac;						\
+		done;							\
+	fi;								\
+	pkgsrcdir=`(cd ../.. ; /bin/pwd)`;				\
+	${GREP} '\$$NetBSD' $$files | ${SED} -e 's|^'$$pkgsrcdir'/||' > ${BUILD_VERSION_FILE};
+.for def in ${BUILD_DEFS}
+	@${ECHO} "${def}=	${${def}}" | ${SED} -e 's|PATH=[^ 	]*|PATH=...|' >> ${BUILD_INFO_FILE}
+.endfor
+	@${ECHO} "CC=	${CC}-`${CC} --version`" >> ${BUILD_INFO_FILE}
+.ifdef USE_PERL5
+	@${ECHO} "PERL=	`${LOCALBASE}/bin/perl --version | ${GREP} version`" >> ${BUILD_INFO_FILE}
+.endif
+.ifdef USE_GMAKE
+	@${ECHO} "GMAKE=	`${GMAKE} --version | ${GREP} version`" >> ${BUILD_INFO_FILE}
 .endif
 	@if [ ! -d ${PKG_DBDIR}/${PKGNAME} ]; then			\
 		${ECHO_MSG} "===>  Registering installation for ${PKGNAME}"; \
@@ -1925,6 +1965,8 @@ fake-pkg: ${PLIST} ${DESCR}
 		${PKG_CREATE} ${PKG_ARGS} -O ${PKGFILE} > ${PKG_DBDIR}/${PKGNAME}/+CONTENTS; \
 		${CP} ${DESCR} ${PKG_DBDIR}/${PKGNAME}/+DESC;		\
 		${CP} ${COMMENT} ${PKG_DBDIR}/${PKGNAME}/+COMMENT;	\
+		${CP} ${BUILD_VERSION_FILE} ${PKG_DBDIR}/${PKGNAME}/+BUILD_VERSION; \
+		${CP} ${BUILD_INFO_FILE} ${PKG_DBDIR}/${PKGNAME}/+BUILD_INFO; \
 		if [ -n "${INSTALL_FILE}" ]; then			\
 			if [ -e ${INSTALL_FILE} ]; then			\
 				${CP} ${INSTALL_FILE} ${PKG_DBDIR}/${PKGNAME}/+INSTALL; \
@@ -1945,23 +1987,6 @@ fake-pkg: ${PLIST} ${DESCR}
 				${CP} ${MESSAGE_FILE} ${PKG_DBDIR}/${PKGNAME}/+DISPLAY; \
 			fi;						\
 		fi;							\
-		files="";						\
-		for f in ${.CURDIR}/Makefile ${FILESDIR}/* ${PKGDIR}/*; do \
-			if [ -f $$f ]; then				\
-				files="$$files $$f";			\
-			fi;						\
-		done;							\
-		if [ -d ${PATCHDIR} ]; then				\
-			for f in ${PATCHDIR}/patch-*; do		\
-				case $$f in				\
-				*.orig|*.rej|*~) ;;			\
-				*)					\
-					files="$$files $$f" ;;		\
-				esac;					\
-			done;						\
-		fi;							\
-		pkgsrcdir=`(cd ../.. ; /bin/pwd)`;			\
-		${GREP} '\$$NetBSD' $$files | ${SED} -e 's|^'$$pkgsrcdir'/||' > ${PKG_DBDIR}/${PKGNAME}/+BUILD_VERSION; \
 		for dep in `${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=true ECHO_MSG=${TRUE} | sort -u`; do \
 			realdep="`${PKG_INFO} -e \"$$dep\" || ${TRUE}`" ; \
 			${ECHO} "a sanity check should be put in here to prevent some user having the pkg installed/registered twice somehow - HF" >/dev/null ; \
@@ -1978,16 +2003,6 @@ fake-pkg: ${PLIST} ${DESCR}
 			fi;						\
 		done;							\
 	fi
-.for def in ${BUILD_DEFS}
-	@${ECHO} "${def}=	${${def}}" | ${SED} -e 's|PATH=[^ 	]*|PATH=...|' >> ${PKG_DBDIR}/${PKGNAME}/+BUILD_INFO
-.endfor
-	@${ECHO} "CC=	${CC}-`${CC} --version`" >> ${PKG_DBDIR}/${PKGNAME}/+BUILD_INFO
-.ifdef USE_PERL5
-	@${ECHO} "PERL=	`${LOCALBASE}/bin/perl --version | ${GREP} version`" >> ${PKG_DBDIR}/${PKGNAME}/+BUILD_INFO
-.endif
-.ifdef USE_GMAKE
-	@${ECHO} "GMAKE=	`${GMAKE} --version | ${GREP} version`" >> ${PKG_DBDIR}/${PKGNAME}/+BUILD_INFO
-.endif
 .endif
 
 # Depend is generally meaningless for arbitrary ports, but if someone wants
