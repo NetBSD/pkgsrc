@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1310 2004/01/19 19:53:56 wiz Exp $
+$NetBSD: TODO,v 1.1311 2004/01/19 20:19:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -325,7 +325,6 @@ Suggested package updates
 	o tuxpaint-0.9.13
 	o tuxpaint-stamps-2003.12.23
 	o txt2html-2.20 [wennmach]
-	o unrar-3.3.4
 	o vfu-4.03
 	o vim-kde-6.2.14 [pkg/23681]
 	o vnc-3.3.7 [http://www.realvnc.com/download.html]
