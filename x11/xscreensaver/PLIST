@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2004/05/15 13:13:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2004/09/27 14:19:44 wiz Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-getimage
@@ -8,6 +8,7 @@ bin/xscreensaver-gl-helper
 bin/xscreensaver.kss
 lib/X11/app-defaults/XScreenSaver
 libexec/xscreensaver/anemone
+libexec/xscreensaver/anemotaxis
 libexec/xscreensaver/ant
 libexec/xscreensaver/antinspect
 libexec/xscreensaver/antspotlight
@@ -36,6 +37,7 @@ libexec/xscreensaver/cloudlife
 libexec/xscreensaver/compass
 libexec/xscreensaver/config/README
 libexec/xscreensaver/config/anemone.xml
+libexec/xscreensaver/config/anemotaxis.xml
 libexec/xscreensaver/config/ant.xml
 libexec/xscreensaver/config/antinspect.xml
 libexec/xscreensaver/config/antspotlight.xml
@@ -139,6 +141,7 @@ libexec/xscreensaver/config/lissie.xml
 libexec/xscreensaver/config/lmorph.xml
 libexec/xscreensaver/config/loop.xml
 libexec/xscreensaver/config/maze.xml
+libexec/xscreensaver/config/memscroller.xml
 libexec/xscreensaver/config/menger.xml
 libexec/xscreensaver/config/metaballs.xml
 libexec/xscreensaver/config/mirrorblob.xml
@@ -305,6 +308,7 @@ libexec/xscreensaver/ljlatest
 libexec/xscreensaver/lmorph
 libexec/xscreensaver/loop
 libexec/xscreensaver/maze
+libexec/xscreensaver/memscroller
 libexec/xscreensaver/menger
 libexec/xscreensaver/metaballs
 libexec/xscreensaver/mirrorblob
@@ -390,6 +394,7 @@ libexec/xscreensaver/xsublim
 libexec/xscreensaver/xteevee
 libexec/xscreensaver/zoom
 man/man1/anemone.1
+man/man1/anemotaxis.1
 man/man1/ant.1
 man/man1/antinspect.1
 man/man1/antspotlight.1
@@ -490,6 +495,7 @@ man/man1/ljlatest.1
 man/man1/lmorph.1
 man/man1/loop.1
 man/man1/maze.1
+man/man1/memscroller.1
 man/man1/menger.1
 man/man1/metaballs.1
 man/man1/mirrorblob.1
