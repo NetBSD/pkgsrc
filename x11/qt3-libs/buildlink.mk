@@ -17,7 +17,7 @@ QT3_LIBS_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.qt3-libs?=	qt3-libs>=3.0.1nb1
+BUILDLINK_DEPENDS.qt3-libs?=	qt3-libs>=3.0.2
 DEPENDS+=			${BUILDLINK_DEPENDS.qt3-libs}:../../x11/qt3-libs
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.qt3-libs=qt3-libs
