@@ -1,0 +1,32 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/05 07:30:07 wulf Exp $
+lib/libdvbpsi.la
+lib/libdvbpsi.so.1.1
+lib/libdvbpsi.so.1
+lib/libdvbpsi.so
+lib/libdvbpsi.a
+include/dvbpsi/dvbpsi.h
+include/dvbpsi/psi.h
+include/dvbpsi/descriptor.h
+include/dvbpsi/pat.h
+include/dvbpsi/pmt.h
+include/dvbpsi/demux.h
+include/dvbpsi/dr_02.h
+include/dvbpsi/dr_03.h
+include/dvbpsi/dr_04.h
+include/dvbpsi/dr_05.h
+include/dvbpsi/dr_06.h
+include/dvbpsi/dr_07.h
+include/dvbpsi/dr_08.h
+include/dvbpsi/dr_09.h
+include/dvbpsi/dr_0a.h
+include/dvbpsi/dr_0b.h
+include/dvbpsi/dr_0c.h
+include/dvbpsi/dr_0d.h
+include/dvbpsi/dr_0e.h
+include/dvbpsi/dr_0f.h
+include/dvbpsi/dr_42.h
+include/dvbpsi/dr_47.h
+include/dvbpsi/dr_48.h
+include/dvbpsi/dr.h
+include/dvbpsi/sdt.h
+@dirrm include/dvbpsi
