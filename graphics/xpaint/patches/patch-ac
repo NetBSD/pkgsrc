@@ -1,14 +1,23 @@
-$NetBSD: patch-ac,v 1.3 1998/08/07 10:40:55 agc Exp $
-
---- ./misc.h.org	Tue Jun 25 01:50:41 1996
-+++ ./misc.h	Tue Mar 25 18:20:30 1997
-@@ -23,7 +23,9 @@
- 
- #ifndef linux
- #if defined(BSD4_4) || defined(HPArchitecture) || defined(SGIArchitecture) || defined(_AIX)
-+#if !defined(__FreeBSD__) && !defined(__NetBSD__)
- void srandom(unsigned int);
-+#endif
- #else
- int srandom(unsigned int);
- #endif	/* BSD4_4 */
+$NetBSD: patch-ac,v 1.4 1998/12/20 14:18:02 christos Exp $
+*** rw/rwTable.c.orig	Tue Jun  9 17:09:32 1998
+--- rw/rwTable.c	Sat Dec 19 13:57:15 1998
+***************
+*** 231,236 ****
+--- 231,237 ----
+  char *
+  RWGetMsg()
+  {
++ #ifndef __NetBSD__
+  #if defined(BSD4_4)
+      __const extern char *__const sys_errlist[];
+  #else
+***************
+*** 239,244 ****
+--- 240,246 ----
+  #endif
+  #endif
+      extern int errno;
++ #endif
+  
+      if (RWtableMsg[0] == '\0') {
+  	if (errno == 0)
