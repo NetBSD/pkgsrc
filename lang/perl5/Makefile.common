@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.5 2001/12/03 17:51:14 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2003/03/18 10:06:26 heinz Exp $
 
 DISTNAME=	perl-${PERL5_DIST_VERS}
 CATEGORIES+=	perl5
-MASTER_SITES+=	ftp://gatekeeper.dec.com/pub/plan/perl/CPAN/src/5.0/maint/ \
-		ftp://ftp.cdrom.com/pub/perl/CPAN/src/5.0/maint/ \
+MASTER_SITES+=	ftp://cpan.teleglobe.net/pub/CPAN/src/5.0/maint/ \
+		ftp://perl.secsup.org/pub/perl/src/5.0/maint/ \
+		ftp://ftp.lug.udel.edu/pub/CPAN/src/5.0/maint/ \
 		ftp://ftp.funet.fi/pub/languages/perl/CPAN/src/5.0/maint/ \
 		ftp://ftp.ruhr-uni-bochum.de/mirrors/ftp.funet.fi/pub/languages/perl/CPAN/src/5.0/maint/
 
