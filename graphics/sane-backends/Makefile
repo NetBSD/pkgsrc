@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/21 19:53:27 veego Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/24 19:08:37 tron Exp $
 # FreeBSD Id: Makefile,v 1.3 1998/04/30 02:38:03 obrien Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.mostang.com/pub/sane/ \
 		ftp://metalab.unc.edu/pub/Linux/apps/graphics/capture/ \
 		ftp://metalab.unc.edu/pub/Linux/Incoming/ \
 		ftp://ftp.u-aizu.ac.jp/pub/misc/device/scsi/scanner/sane/ \
-		http://gd.tuwien.ac.at/hci/sane/
+		ftp://ftp.informatik.uni-oldenburg.de/pub/sane/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.mostang.com/sane/
