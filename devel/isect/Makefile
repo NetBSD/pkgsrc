@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2002/02/18 15:14:12 seb Exp $
+# $NetBSD: Makefile,v 1.9 2002/08/03 20:00:34 jlam Exp $
 #
 
 DISTNAME=	isect-1.0
 CATEGORIES=	devel
 MASTER_SITES=	ftp://home.netcom.com/pub/users/tgagne/
 
-MAINTAINER=	jlam@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://home.netcom.com/~tgagne/
 COMMENT=	open source middleware daemon
 
