@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2002/08/01 02:37:41 jschauma Exp $
+# $NetBSD: Makefile,v 1.35 2002/08/07 15:56:22 fredb Exp $
 
 DISTNAME=		w3c-libwww-5.3.2
 PKGNAME=		libwww-5.3.2
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		www devel
 MASTER_SITES=		http://www.w3.org/Library/Distribution/ \
 			ftp://ftp.uni-hannover.de/pub/mirror/info-systems/WWW/libwww/
@@ -13,8 +13,6 @@ COMMENT=		The W3C Reference Library
 
 BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 
-BUILDLINK_DEPENDS.openssl= openssl-*
-
 USE_BUILDLINK_ONLY=	YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
@@ -22,12 +20,10 @@ USE_PERL5=		build
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--with-zlib --with-regex --without-x
-CONFIGURE_ARGS+=	--with-ssl="${BUILDLINK_DIR}"
+CONFIGURE_ARGS+=	--with-ssl="${BUILDLINK_PREFIX.openssl}"
 
 DOCDIR=			${PREFIX}/share/doc/libwww
 LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
-
-CFLAGS+=		${LDFLAGS}
 
 pre-configure:
 	cd ${WRKSRC}; \
