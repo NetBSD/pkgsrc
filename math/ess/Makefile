@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/05 11:51:10 markd Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/12 22:48:49 jmc Exp $
 
 DISTNAME=	ess-5.1.24
 CATEGORIES=	math
@@ -21,6 +21,7 @@ INFO_FILES+=	ess.info
 
 MAKE_ENV+=	LISPDIR=${EMACS_LISPPREFIX}/ess
 PLIST_SUBST+=	INFODIR=${INFODIR}
+USE_PERL5=	build
 
 do-install:
 	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/ess
