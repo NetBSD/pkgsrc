@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2004/05/05 00:28:50 snj Exp $
+# $NetBSD: Makefile.common,v 1.4 2004/11/01 00:27:41 wiz Exp $
 #
 
 DISTNAME=	catdoc-0.91.4
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://www.go.dlr.de/fresh/unix/src/misc/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.fe.msk.ru/~vitus/catdoc/
+HOMEPAGE=	http://www.45.free.net/~vitus/ice/catdoc/
 COMMENT=	Reads MS-Word file and puts out its content as plain text
 
 DISTINFO_FILE=		${.CURDIR}/../../textproc/catdoc/distinfo
