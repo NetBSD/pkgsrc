@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/11/29 08:36:06 martti Exp $
+bin/weex
+man/man1/weex.1
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/weex.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/weex.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/weex.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/weex.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/weex.mo
+share/doc/weex/AUTHORS
+share/doc/weex/BUGS
+share/doc/weex/BUGS.ja
+share/doc/weex/COPYING
+share/doc/weex/COPYING.ja
+share/doc/weex/ChangeLog
+share/doc/weex/ChangeLog.ja
+share/doc/weex/FAQ
+share/doc/weex/FAQ.ja
+share/doc/weex/README
+share/doc/weex/README.ja
+share/doc/weex/THANKS
+share/doc/weex/TODO
+share/doc/weex/TODO.ja
+@dirrm share/doc/weex
+share/examples/weex/sample.weexrc
+@dirrm share/examples/weex
