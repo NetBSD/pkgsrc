@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/09/11 09:16:18 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2002/10/07 07:57:53 jlam Exp $
 
 DISTNAME=	kde-3.0.3
 PKGREVISION=	1
@@ -23,6 +23,7 @@ DEPENDS+=	kdetoys-3.0.3:../../games/kdetoys3
 DEPENDS+=	kdeutils-3.0.3:../../misc/kdeutils3
 
 EXTRACT_ONLY=	# empty
+USE_BUILDLINK2=	yes
 USE_X11BASE=	yes
 NO_CHECKSUM=	yes
 NO_PATCH=	yes
