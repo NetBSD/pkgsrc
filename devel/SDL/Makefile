@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2001/11/29 19:46:10 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2001/12/11 16:30:45 jlam Exp $
 #
 
 DISTNAME=	SDL-1.2.2
+PKGREVISION=	1
 CATEGORIES=	devel games
 MASTER_SITES=	http://www.libsdl.org/release/
 
@@ -39,6 +40,12 @@ CONFIGURE_ARGS+=	--disable-arts
 CONFIGURE_ARGS+=	--disable-pthread-sem
 CONFIGURE_ENV+=		NASMFLAGS="${NASMFLAGS}"
 MAKE_ENV+=		NASMFLAGS="${NASMFLAGS}"
+
+# Pass in LDFLAGS via SYSTEM_LIBS as it's used as the linker options for
+# finding various libraries.  This ensure that any unusual -Wl,-R options
+# are noted correctly in the generated sdl-config.
+#
+CONFIGURE_ENV+=		SYSTEM_LIBS="${LDFLAGS}"
 
 pre-patch:
 	cd ${WRKSRC} && ${MKDIR} src/audio/netbsd
