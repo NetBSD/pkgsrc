@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.4 2004/05/14 08:03:59 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/05/29 12:20:21 xtraeme Exp $
 #
 
-DISTNAME=	pnetlib-0.6.4
+DISTNAME=	pnetlib-0.6.6
 CATEGORIES=	lang
 MASTER_SITES=	http://www.southern-storm.com.au/download/
 
