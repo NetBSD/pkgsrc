@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.362 2004/10/16 00:41:40 dan Exp $
+# $NetBSD: Packages.txt,v 1.363 2004/11/19 18:39:14 peter Exp $
 ###########################################################################
 
 			==========================
@@ -834,31 +834,6 @@ modify the sources as distributed in the distribution file into a form that
 will compile and run perfectly on NetBSD.  The files are applied
 successively in alphabetic order (as returned by a shell "patches/patch-*"
 glob expansion), so patch-aa is applied before patch-ab etc.
-
-Patch files which are optional and will depend on local site configuration
-can be included with names matching the pattern "patches/patch-optional-*".
-Their suffixes should match the configuration options.  The selected
-optional patch file names should be assigned to the variable
-$OPTIONAL_PATCHFILES.  They will not be applied by default.
-
-For example if a package data file needs patching to indicate the default
-local printer paper size as specified in the $PAPERSIZE file you can
-include patches for all the possible paper sizes other than the one the
-package comes configured for by default.  In this case you might have a
-patch called "patch-optional-Letter-papersize" and/or another patch called
-"patch-optional-A4-papersize".  In your Makefile you would select between
-them with the following construct:
-
-   PATCHDIR=	${.CURDIR}/patches
-   .if exists(${PATCHDIR}/patch-optional-${PAPERSIZE}-papersize)
-	OPTIONAL_PATCHFILES+= ${PATCHDIR}/patch-optional-${PAPERSIZE}-papersize
-   .endif
-
-Note that you have to define the value of $PATCHDIR in order to use it in a
-".if" statement like this as otherwise it's not defined until too late
-during the processing of the Makefile.  You should use a ".if" statement in
-order to avoid problems should the configuration item ($PAPERSIZE in this
-example) be set to an unexpected value.
 
 The patch-* files should be in "diff -bu" format, and apply without a fuzz
 to avoid problems (to force patches to apply with fuzz you can set
