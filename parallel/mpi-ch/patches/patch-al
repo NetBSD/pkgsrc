@@ -1,19 +1,24 @@
-$NetBSD: patch-al,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
 --- util/mpiinstall.in.orig	Sun Jul 12 08:28:14 1998
-+++ util/mpiinstall.in	Thu Aug  6 23:35:41 1998
-@@ -122,3 +122,3 @@
++++ util/mpiinstall.in	Tue Oct 20 14:57:33 1998
+@@ -120,12 +120,12 @@
+ # script from the library directory itself.
+ if [ -n "$libonly" ] ; then
  #   trialname=`sed -n -e "s/DEFAULT_MACHINE='\(.*\)'/\1/p" \
 -#	lib/$ARCH/$COMM/config.status`
 +#	libdata/$ARCH/$COMM/config.status`
  #   if [ -n "$trialname" ] ; then 
-@@ -126,4 +126,4 @@
+ #	DEFAULT_MACHINE="$trialname"
  #   fi
 -    if [ $inlib = 0 -a -x lib/$ARCH/$COMM/mpiinstall ] ; then
 -        ./lib/$ARCH/$COMM/mpiinstall -inlib "$@"
 +    if [ $inlib = 0 -a -x libdata/$ARCH/$COMM/mpiinstall ] ; then
 +        ./libdata/$ARCH/$COMM/mpiinstall -inlib "$@"
          exit $?
-@@ -136,5 +136,5 @@
+     fi
+ fi
+@@ -134,15 +134,15 @@
+ # These work by extracting the syntax for specifying the library, and then
+ # adding the correct destination to it.
  NFLIB_PATH=`echo "@FLIB_PATH@" | \
 -	sed -e "s%^\([^/ ]*\)/[^ ]*%\1$PREFIX/lib/$ARCH/$COMM%g"`
 +	sed -e "s%^\([^/ ]*\)/[^ ]*%\1$PREFIX/libdata/$ARCH/$COMM%g"`
@@ -21,12 +26,18 @@ $NetBSD: patch-al,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
 -	sed -e "s%^\([^/ ]*\)/[^ ]*%\1$PREFIX/lib/$ARCH/$COMM%g"`
 +	sed -e "s%^\([^/ ]*\)/[^ ]*%\1$PREFIX/libdata/$ARCH/$COMM%g"`
  NF90INC=`echo "@F90INC@" | \
-@@ -144,3 +144,3 @@
+ 	sed -e "s%^\([^/ ]*\)/[^ ]*%\1$PREFIX/include%g"`
+ # This one is especially tricky because the default include path goes to the
+ # source directory for the C++ interface
  NCPPFLAGS=`echo "A$CPPFLAGS" | \
 -    sed -e "s%-I.*/MPI-2-C++/src%-I$PREFIX/lib/$ARCH/$COMM/c++%g" \
 +    sed -e "s%-I.*/MPI-2-C++/src%-I$PREFIX/libdata/$ARCH/$COMM/c++%g" \
          -e "s/^A//g"`
-@@ -271,5 +271,6 @@
+ #
+ # Remove old uninstall file
+@@ -269,9 +269,10 @@
+     if [ -f $dest ] ; then $Show /bin/rm -f $dest ; fi
+     if [ $just_testing = 0 ] ; then
          sed \
 +	-e "s%/lib/%/libdata/%g" \
  	-e "s%\#ARCH\#%$ARCH%g" \
@@ -34,31 +45,52 @@ $NetBSD: patch-al,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
 -        -e "s%\#BITMAP_DIR\#%$PREFIX/lib/bitmaps%g" \
 +        -e "s%\#BITMAP_DIR\#%$PREFIX/libdata/bitmaps%g" \
  	-e "s%\#CC\#%@CC@%g" \
-@@ -282,3 +283,3 @@
+ 	-e "s%\#CFLAGS\#%@CFLAGS@%g" \
+ 	-e "s%\#USER_CFLAGS\#%@USER_CFLAGS@%g" \
+@@ -280,7 +281,7 @@
+ 	-e "s%\#DEFAULT_ARCH\#%$ARCH%g" \
+ 	-e "s%\#DEFAULT_DEVICE\#%$DEVICE%g" \
  	-e "s%\#DEFAULT_MACHINE\#%$DEFAULT_MACHINE%g" \
 -       	-e "s%\#EXECER_DIR\#%$PREFIX/util%g" \
 +       	-e "s%\#EXECER_DIR\#%$PREFIX/share/util%g" \
  	-e "s%\#F77\#%@F77@%g" \
-@@ -344,3 +345,3 @@
+ 	-e "s%\#FFLAGS\#%@FFLAGS@%g" \
+ 	-e "s%\#FLIB_PATH_LEADER\#%@FLIB_PATH_LEADER@%g" \
+@@ -342,7 +343,7 @@
+     # the LIB_PATH to contain multiple names, as long as the MPICH libpath
+     # is first
      NLIBPATH=`echo "@LIB_PATH@" | \
 -	sed -e "s%^\([^/ ]*\)/[^ ]*%\1$PREFIX/lib/$ARCH/$COMM%g"`
 +	sed -e "s%^\([^/ ]*\)/[^ ]*%\1$PREFIX/libdata/$ARCH/$COMM%g"`
  if [ -d $2 ] ; then
-@@ -358,2 +359,3 @@
+     dest=$2/`basename $1`
+ else
+@@ -356,11 +357,12 @@
+     if [ -f $dest ] ; then $Show /bin/rm -f $dest ; fi
+     if [ $just_testing = 0 ] ; then
          sed \
 +	-e "s%/lib/%/libdata/%g" \
  	-e "s%[@]ARCH[@]%$ARCH%g" \
-@@ -362,3 +364,3 @@
+ 	-e "s%[@]AUTOMOUNTFIX[@]%@AUTOMOUNTFIX@%g" \
+ 	-e "s%[@]FINC[@]%$NFINC%g" \
  	-e "s%[@]F90INC[@]%$NF90INC%g" \
 -        -e "s%[@]BITMAP_DIR[@]%$PREFIX/lib/bitmaps%g" \
 +        -e "s%[@]BITMAP_DIR[@]%$PREFIX/libdata/bitmaps%g" \
  	-e "s%[@]CC[@]%@CC@%g" \
-@@ -377,3 +379,3 @@
+ 	-e "s%[@]CCC[@]%@CCC@%g" \
+ 	-e "s%[@]CPP_COMPILER[@]%@CPP_COMPILER@%g" \
+@@ -375,7 +377,7 @@
+ 	-e "s%[@]DEFAULT_ARCH[@]%$ARCH%g" \
+ 	-e "s%[@]DEFAULT_DEVICE[@]%$DEVICE%g" \
  	-e "s%[@]DEFAULT_MACHINE[@]%$DEFAULT_MACHINE%g" \
 -       	-e "s%[@]EXECER_DIR[@]%$PREFIX/util%g" \
 +       	-e "s%[@]EXECER_DIR[@]%$PREFIX/share/util%g" \
  	-e "s%[@]F77[@]%@F77@%g" \
-@@ -457,18 +459,19 @@
+ 	-e "s%[@]FFLAGS[@]%@FFLAGS@%g" \
+ 	-e "s%[@]FLIB_PATH_LEADER[@]%@FLIB_PATH_LEADER@%g" \
+@@ -455,22 +457,23 @@
+     MkDir $PREFIX 
+ fi
  
 -MkDir $PREFIX/lib
 -MkDir $PREFIX/lib/$ARCH
@@ -89,24 +121,36 @@ $NetBSD: patch-al,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
 +MkDir $PREFIX/share/doc
 +MkDir $PREFIX/share/doc/mpi
  if [ -z "$libonly" ] ; then
-@@ -480,3 +483,3 @@
+     CopyFile bin/tarch $PREFIX/bin $XMODE
+     CopyFile bin/tdevice $PREFIX/bin $XMODE
+@@ -478,7 +481,7 @@
+     # mpiman
+     $Show /bin/rm -f $PREFIX/bin/mpiman
      FixupFile util/mpiman.in $PREFIX/bin/mpiman $XMODE
 -    CopyFile $PREFIX/bin/mpiman $PREFIX/lib/$ARCH/$COMM $XMODE
 +    CopyFile $PREFIX/bin/mpiman $PREFIX/libdata/$ARCH/$COMM $XMODE
      #
-@@ -490,3 +493,3 @@
+     # Upshot and Nupshot
+     # Do Upshot/Nupshot early in case there is a problem.
+@@ -488,7 +491,7 @@
+         #
+         # Should clean nupshot sources  (*.c/h) 
          if [ -n "@TCL_DIR@" -a -z "$cpnupshot" -a -n "@TK_DIR@" -a \
 -	   "@TK_VERSION@" = "3.6" ] ; then 
 +	   "@TK_VERSION@" = "8.0" ] ; then 
              echo "Attempting to build nupshot... "
-@@ -528,4 +531,4 @@
+             $Show $CPRP -r mpe/profiling/nupshot $PREFIX
+ 	    echo "/bin/rm -rf $PREFIX/nupshot" >> $UNINSTALLFILE
+@@ -526,16 +529,16 @@
+             echo "Creating $PREFIX/bin/$bfile from $file"
+         fi
          FixupFile $file $PREFIX/bin/$bfile $XMODE
 -        $Show /bin/rm -f $PREFIX/lib/$ARCH/$COMM/$bfile 
 -        CopyFile $PREFIX/bin/$bfile $PREFIX/lib/$ARCH/$COMM $XMODE
 +        $Show /bin/rm -f $PREFIX/libdata/$ARCH/$COMM/$bfile 
 +        CopyFile $PREFIX/bin/$bfile $PREFIX/libdata/$ARCH/$COMM $XMODE
      done
-@@ -533,7 +536,7 @@
+     $Show mv $PREFIX/bin/mpirun.sh $PREFIX/bin/mpirun
      echo "/bin/rm -f $PREFIX/bin/mpirun" >> $UNINSTALLFILE
 -    $Show mv $PREFIX/lib/$ARCH/$COMM/mpirun.sh $PREFIX/lib/$ARCH/$COMM/mpirun
 -    echo "/bin/rm -f $PREFIX/lib/$ARCH/$COMM/mpirun" >> $UNINSTALLFILE
@@ -119,12 +163,18 @@ $NetBSD: patch-al,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
 +	( cd $PREFIX/libdata/$ARCH/$COMM ; 	ln -s ../../../bin/tarch tarch )
 +        echo "/bin/rm -f $PREFIX/libdata/$ARCH/$COMM/tarch" >> $UNINSTALLFILE
      fi
-@@ -545,3 +548,3 @@
+     #
+     $Show /bin/rm -f $PREFIX/bin/mpireconfig
+@@ -543,22 +546,22 @@
+         echo "Creating mpireconfig from util/mpireconfig.in"
+     fi
      FixupFile util/mpireconfig.in $PREFIX/bin/mpireconfig $XMODE
 -    CopyFile $PREFIX/bin/mpireconfig $PREFIX/lib/$ARCH/$COMM $XMODE
 +    CopyFile $PREFIX/bin/mpireconfig $PREFIX/libdata/$ARCH/$COMM $XMODE
      $Show /bin/rm -f $PREFIX/bin/execer
-@@ -551,7 +554,7 @@
+     CopyFile util/execer $PREFIX/bin/execer $XMODE
+     #
+     # mpicc, mpif77, mpif90
      FixupFileWithAt util/mpicc.in $PREFIX/bin/mpicc $XMODE
 -    CopyFile $PREFIX/bin/mpicc $PREFIX/lib/$ARCH/$COMM $XMODE
 +    CopyFile $PREFIX/bin/mpicc $PREFIX/libdata/$ARCH/$COMM $XMODE
@@ -135,12 +185,17 @@ $NetBSD: patch-al,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
 -    CopyFile $PREFIX/bin/mpif90 $PREFIX/lib/$ARCH/$COMM $XMODE
 +    CopyFile $PREFIX/bin/mpif90 $PREFIX/libdata/$ARCH/$COMM $XMODE
      #
-@@ -560,3 +563,3 @@
+     # mpiCC, if C++ selected
+     if [ -n "@CPP_COMPILER@" ] ; then
  	FixupFileWithAt util/mpiCC.in $PREFIX/bin/mpiCC $XMODE
 -        CopyFile $PREFIX/bin/mpiCC $PREFIX/lib/$ARCH/$COMM $XMODE
 +        CopyFile $PREFIX/bin/mpiCC $PREFIX/libdata/$ARCH/$COMM $XMODE
      fi
-@@ -570,24 +573,24 @@
+ else
+     # libonly
+@@ -568,28 +571,28 @@
+     for file in util/mpirun.*.in util/tstmachines.in ; do
+         bfile=`basename $file .in`
          if [ $verbose = 1 ] ; then 
 -            echo "Creating $PREFIX/lib/$ARCH/$COMM/$bfile from $file"
 +            echo "Creating $PREFIX/libdata/$ARCH/$COMM/$bfile from $file"
@@ -181,7 +236,11 @@ $NetBSD: patch-al,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
 +        CopyFile romio/include/mpio.h $PREFIX/libdata/$ARCH/$COMM
 +        CopyFile romio/include/mpiof.h $PREFIX/libdata/$ARCH/$COMM
      fi
-@@ -601,8 +604,8 @@
+ fi
+ #
+@@ -599,12 +602,12 @@
+     echo "Attempting to build ch_p4 secure server"
+     $Show "( cd mpid/ch_p4/p4/servers ; $MAKE serv_p4 ; )" 
      CopyFile mpid/ch_p4/p4/bin/serv_p4 $PREFIX/bin $XMODE
 -    CopyFile $PREFIX/bin/serv_p4 $PREFIX/lib/$ARCH/$COMM $XMODE
 +    CopyFile $PREFIX/bin/serv_p4 $PREFIX/libdata/$ARCH/$COMM $XMODE
@@ -195,7 +254,11 @@ $NetBSD: patch-al,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
 +    CopyFile util/chkserv $PREFIX/share/util/chkserv $XMODE
 +    CopyFile $PREFIX/share/util/chkserv $PREFIX/libdata/$ARCH/$COMM $XMODE
  fi
-@@ -617,8 +620,8 @@
+ #
+ # P4
+@@ -615,12 +618,12 @@
+     fi
+     if [ -x mpid/server/server ] ; then 
  	CopyFile mpid/server/server $PREFIX/bin $XMODE
 -        CopyFile mpid/server/server $PREFIX/lib/$ARCH/$COMM $XMODE
 +        CopyFile mpid/server/server $PREFIX/libdata/$ARCH/$COMM $XMODE
@@ -209,7 +272,11 @@ $NetBSD: patch-al,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
 +	CopyFile util/chkserv $PREFIX/share/util/chkserv $XMODE
 +	CopyFile $PREFIX/share/util/chkserv $PREFIX/libdata/$ARCH/$COMM $XMODE
      else
-@@ -631,7 +634,7 @@
+         echo "Server not available"
+     fi
+@@ -629,15 +632,15 @@
+ if [ -z "$libonly" ] ; then
+     #
      # Machines database
 -    #	if [ ! -d $PREFIX/util/machines.anl ] ; then \
 -    #	    mkdir $PREFIX/util/machines.anl ; fi
@@ -221,26 +288,35 @@ $NetBSD: patch-al,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
 -        CopyFile $file $PREFIX/util/machines
 +        CopyFile $file $PREFIX/share/util/machines
      done
-@@ -639,3 +642,3 @@
+     for file in mpe/profiling/upshot/bitmaps/* ; do 
  	if [ -f $file ] ; then 
 -            CopyFile $file $PREFIX/lib/bitmaps
 +            CopyFile $file $PREFIX/libdata/bitmaps
  	fi
-@@ -651,4 +654,4 @@
+     done
+     #
+@@ -649,33 +652,33 @@
+     CopyFile include/protofix.h $PREFIX/include
+     CopyFile include/mpeexten.h $PREFIX/include
      CopyFile include/patchlevel.h $PREFIX/include
 -    CopyFile lib/$ARCH/$COMM/mpichconf.h $PREFIX/lib/$ARCH/$COMM
 -    CopyFile lib/$ARCH/$COMM/mpidefs.h $PREFIX/lib/$ARCH/$COMM
 +    CopyFile lib/$ARCH/$COMM/mpichconf.h $PREFIX/libdata/$ARCH/$COMM
 +    CopyFile lib/$ARCH/$COMM/mpidefs.h $PREFIX/libdata/$ARCH/$COMM
      CopyFile mpe/mpe.h $PREFIX/include
-@@ -659,4 +662,4 @@
+     CopyFile mpe/mpe_graphics.h $PREFIX/include
+     CopyFile mpe/mpe_log.h $PREFIX/include
+     CopyFile mpe/mpetools.h $PREFIX/include
+     CopyFile mpe/basex11.h $PREFIX/include
      if [ -s romio/include/mpio.h ] ; then
 -        CopyFile romio/include/mpio.h $PREFIX/lib/$ARCH/$COMM
 -        CopyFile romio/include/mpiof.h $PREFIX/lib/$ARCH/$COMM
 +        CopyFile romio/include/mpio.h $PREFIX/libdata/$ARCH/$COMM
 +        CopyFile romio/include/mpiof.h $PREFIX/libdata/$ARCH/$COMM
      fi
-@@ -666,7 +669,7 @@
+ fi
+ #
+ # Include files for C++
  if [ -n "$CPP_DIR" -a "$buildcpp" = 1 ] ; then 
 -    if [ ! -d $PREFIX/lib/$ARCH/$COMM/c++ ] ; then
 -        MkDir $PREFIX/lib/$ARCH/$COMM/c++
@@ -251,39 +327,57 @@ $NetBSD: patch-al,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
 -        CopyFile $file $PREFIX/lib/$ARCH/$COMM/c++
 +        CopyFile $file $PREFIX/libdata/$ARCH/$COMM/c++
      done
-@@ -677,3 +680,3 @@
+ fi
+ #
+ # Libaries (includeing shared libraries)
+ for file in lib/$ARCH/$COMM/*.a lib/$ARCH/$COMM/*.so* ; do
      if [ -f $file ] ; then 
 -        CopyFileP $file $PREFIX/lib/$ARCH/$COMM
 +        CopyFileP $file $PREFIX/libdata/$ARCH/$COMM
      fi
-@@ -686,3 +689,3 @@
+ done
+ #
+@@ -684,7 +687,7 @@
+ #     spxcp - Executable copy program for IBM SP.
+ for file in spxcp ; do
      if [ -x lib/$ARCH/$COMM/$file ] ; then 
 -        CopyFileP lib/$ARCH/$COMM/$file $PREFIX/lib/$ARCH/$COMM
 +        CopyFileP lib/$ARCH/$COMM/$file $PREFIX/libdata/$ARCH/$COMM
      fi
-@@ -698,4 +701,4 @@
+ done
+ #
+@@ -696,18 +699,18 @@
+         if [ $file = "mpich.cat" ] ; then
+ 	    # This is a link; it assumes that En_US is the default.
              if [ -f lib/$ARCH/mpich.En_US.cat ] ; then 
 -                $Show ln -s $PREFIX/lib/$ARCH/mpich.En_US.cat \
 -	   		    $PREFIX/lib/$ARCH/mpich.cat
 +                $Show ln -s $PREFIX/libdata/$ARCH/mpich.En_US.cat \
 +	   		    $PREFIX/libdata/$ARCH/mpich.cat
              fi
-@@ -703,3 +706,3 @@
+         elif [ -s $file ] ; then 
  	    # This will handle the case of no mpich.* matches
 -            CopyFile $file $PREFIX/lib/$ARCH
 +            CopyFile $file $PREFIX/libdata/$ARCH
          fi
-@@ -709,3 +712,3 @@
+     done
+ fi
+     
  # Other files in lib need to be updated...
 -CopyFile lib/$ARCH/$COMM/mpidefs.h $PREFIX/lib/$ARCH/$COMM
 +CopyFile lib/$ARCH/$COMM/mpidefs.h $PREFIX/libdata/$ARCH/$COMM
  #
-@@ -737,3 +740,3 @@
+ # Documentation
+ # Note that we're not doing the www pages yet.
+@@ -735,15 +738,15 @@
+ if [ -z "$libonly" ] ; then
+     for file in functions.ps.Z guide.ps.Z install.ps.Z ; do
  	if [ -f $file ] ; then 
 -            CopyFile doc/$file $PREFIX/doc
 +            CopyFile doc/$file $PREFIX/share/doc/mpi
  	fi
-@@ -742,6 +745,6 @@
+     done
+     #$Show $CPRP -r doc $PREFIX
      if [ -f ref/adiman.ps.Z ] ; then 
 -        CopyFile ref/adiman.ps.Z $PREFIX/doc
 +        CopyFile ref/adiman.ps.Z $PREFIX/share/doc/mpi
@@ -292,7 +386,11 @@ $NetBSD: patch-al,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
 -        CopyFile ref/mpiman.ps.Z $PREFIX/doc
 +        CopyFile ref/mpiman.ps.Z $PREFIX/share/doc/mpi
      fi
-@@ -757,12 +760,12 @@
+ fi
+ #
+@@ -755,94 +758,94 @@
+ if [ $just_testing = 0 ] ; then
+     cat lib/$ARCH/$COMM/config.status | \
  	sed -e "s%MPIR_HOME=.*\$%MPIR_HOME='$PREFIX'%g" \
 -    -e "s%^LIB_PATH=\([^/ ]*\)/[^ ']*%LIB_PATH=\1$PREFIX/lib/$ARCH/$COMM%g" \
 -    -e "s%^FLIB_PATH=\([^/ ]*\)/[^ ']*%FLIB_PATH=\1$PREFIX/lib/$ARCH/$COMM%g" \
@@ -314,7 +412,8 @@ $NetBSD: patch-al,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
 +    echo "/bin/rm -f $PREFIX/libdata/$ARCH/$COMM/config.status" >> $UNINSTALLFILE
 +    chmod $XMODE $PREFIX/libdata/$ARCH/$COMM/config.status 
  else 
-@@ -771,11 +774,11 @@
+ cat <<.
+ cat lib/$ARCH/$COMM/config.status | \
  	sed -e "s%MPIR_HOME=.*\$%MPIR_HOME='$PREFIX'%g" \
 -    -e "s%^LIB_PATH=\([^/ ]*\)/[^ ']*%LIB_PATH=\1$PREFIX/lib/$ARCH/$COMM%g" \
 -    -e "s%^FLIB_PATH=\([^/ ]*\)/[^ ']*%FLIB_PATH=\1$PREFIX/lib/$ARCH/$COMM%g" \
@@ -334,7 +433,7 @@ $NetBSD: patch-al,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
 +		        > $PREFIX/libdata/$ARCH/$COMM/config.status
 +    chmod $XMODE $PREFIX/libdata/$ARCH/$COMM/config.status 
  .
-@@ -783,7 +786,7 @@
+ fi
  if [ -z "$libonly" ] ; then
 -    #CopyFile $PREFIX/lib/$ARCH/$COMM/config.status $PREFIX
 +    #CopyFile $PREFIX/libdata/$ARCH/$COMM/config.status $PREFIX
@@ -346,18 +445,19 @@ $NetBSD: patch-al,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
 +    $Show ln -s $PREFIX/include/mpif.h $PREFIX/share/examples/mpi/mpif.h
 +    echo "/bin/rm -f $PREFIX/share/examples/mpi/mpif.h" >> $UNINSTALLFILE
  fi
-@@ -791,3 +794,3 @@
+ #
  # Example programs
 -CopyFile installtest/Makefile.in $PREFIX/examples
 +CopyFile installtest/Makefile.in $PREFIX/share/examples/mpi
  #
-@@ -796,24 +799,24 @@
+ # This SHOULD use mpireconfig...
+ Savevar=$PREFIX
  PREFIX=$APREFIX
 -#FixupFile installtest/makefile.proto $PREFIX/examples/Makefile
 -(cd $PREFIX/examples ; $PREFIX/lib/$ARCH/$COMM/mpireconfig Makefile )
 -echo "(cd $PREFIX/examples ; $MAKE clean)" >> $UNINSTALLFILE
 -echo "/bin/rm -f $PREFIX/examples/Makefile" >> $UNINSTALLFILE
-+#FixupFile installtest/makefile.proto $PREFIX/share/examples/mpi/Makefile
++#FixupFile installtest/makefile.proto $PREFIX/wshare/examples/mpi/Makefile
 +(cd $PREFIX/share/examples/mpi ; $PREFIX/libdata/$ARCH/$COMM/mpireconfig Makefile )
 +echo "(cd $PREFIX/share/examples/mpi ; $MAKE clean)" >> $UNINSTALLFILE
 +echo "/bin/rm -f $PREFIX/share/examples/mpi/Makefile" >> $UNINSTALLFILE
@@ -386,11 +486,14 @@ $NetBSD: patch-al,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
 -echo "/bin/rm -f $PREFIX/examples/mpirun" >> $UNINSTALLFILE
 +echo "/bin/rm -f $PREFIX/share/examples/mpi/mpirun" >> $UNINSTALLFILE
  #
- echo "About to run installation test..."
+-echo "About to run installation test..."
 -$Show "(cd $PREFIX/examples; $MAKE all )"
-+$Show "(cd $PREFIX/share/examples/mpi; $MAKE all )"
++#echo "About to run installation test..."
++#$Show "(cd $PREFIX/share/examples/mpi; $MAKE all )"
  #
-@@ -823,24 +826,24 @@
+ # This SHOULD use mpireconfig...
+ Savevar=$PREFIX
+ if [ -n "$CPP_DIR" -a "$buildcpp" = 1 ] ; then 
      # C++ Example programs 
 -    CopyFile installtest/mpi-2-c++/Makefile.in $PREFIX/$CPP_DIR/examples
 +    CopyFile installtest/mpi-2-c++/Makefile.in $PREFIX/share/examples/$CPP_DIR
@@ -425,7 +528,10 @@ $NetBSD: patch-al,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
 -    echo "/bin/rm -f $PREFIX/$CPP_DIR/examples/mpirun" >> $UNINSTALLFILE
 +    echo "/bin/rm -f $PREFIX/share/examples/$CPP_DIR/mpirun" >> $UNINSTALLFILE
      #
-     echo "About to run C++ installation test..."
+-    echo "About to run C++ installation test..."
 -    $Show "(cd $PREFIX/$CPP_DIR/examples; $MAKE)"
-+    $Show "(cd $PREFIX/share/examples/$CPP_DIR; $MAKE)"
++    #echo "About to run C++ installation test..."
++    #$Show "(cd $PREFIX/share/examples/$CPP_DIR; $MAKE)"
      #
+ fi
+ #
