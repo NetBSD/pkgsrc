@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.4 2004/11/27 10:46:37 markd Exp $
+$NetBSD: patch-ae,v 1.5 2005/03/23 22:38:45 markd Exp $
 
---- languages/pascal/Makefile.in.orig	2004-08-14 12:07:01.000000000 +1200
+--- languages/pascal/Makefile.in.orig	2005-03-05 01:48:02.000000000 +1300
 +++ languages/pascal/Makefile.in
 @@ -62,7 +62,6 @@ am__installdirs = "$(DESTDIR)$(kde_modul
  kde_moduleLTLIBRARIES_INSTALL = $(INSTALL)
@@ -10,12 +10,13 @@ $NetBSD: patch-ae,v 1.4 2004/11/27 10:46:37 markd Exp $
  	$(top_builddir)/lib/libkdevelop.la \
  	$(top_builddir)/lib/antlr/src/libantlr.la \
  	$(top_builddir)/lib/catalog/libkdevcatalog.la
-@@ -427,11 +426,11 @@ xdg_appsdir = @xdg_appsdir@
- xdg_directorydir = @xdg_directorydir@
- xdg_menudir = @xdg_menudir@
+@@ -438,12 +437,12 @@ xdg_menudir = @xdg_menudir@
  KDE_CXXFLAGS = $(USE_EXCEPTIONS)
--INCLUDES = -I$(top_srcdir)/lib/antlr -I$(top_srcdir)/lib/catalog -I$(top_srcdir)/lib/interfaces -I$(top_srcdir)/lib/util -I$(top_srcdir)/lib/external_interfaces -I$(top_builddir)/bdb/build_unix -I$(top_srcdir)/bdb/include $(all_includes)
-+INCLUDES = -I$(top_srcdir)/lib/antlr -I$(top_srcdir)/lib/catalog -I$(top_srcdir)/lib/interfaces -I$(top_srcdir)/lib/util -I$(top_srcdir)/lib/external_interfaces $(all_includes)
+ INCLUDES = -I$(top_srcdir)/lib/antlr -I$(top_srcdir)/lib/catalog \
+ 	-I$(top_srcdir)/lib/interfaces -I$(top_srcdir)/lib/interfaces/external -I$(top_srcdir)/lib/util \
+-	-I$(top_builddir)/bdb/build_unix -I$(top_srcdir)/bdb/include $(all_includes)
++	$(all_includes)
+ 
  SUBDIRS = file_templates app_templates compiler doc
  kde_module_LTLIBRARIES = libkdevpascalsupport.la
 -libkdevpascalsupport_la_LDFLAGS = $(LEXLIB) $(all_libraries) $(KDE_PLUGIN)

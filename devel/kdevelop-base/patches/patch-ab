@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.5 2004/08/21 15:39:02 markd Exp $
+$NetBSD: patch-ab,v 1.6 2005/03/23 22:38:45 markd Exp $
 
---- Makefile.in.orig	2004-08-21 09:22:56.000000000 +1200
+--- Makefile.in.orig	2005-03-05 01:47:58.000000000 +1300
 +++ Makefile.in
-@@ -403,7 +403,7 @@ x_libraries = @x_libraries@
+@@ -413,7 +413,7 @@ x_libraries = @x_libraries@
  xdg_appsdir = @xdg_appsdir@
  xdg_directorydir = @xdg_directorydir@
  xdg_menudir = @xdg_menudir@
 -SUBDIRS = bdb lib parts languages buildtools editors vcs src pics doc mimetypes embedded kdevdesigner
 +SUBDIRS = lib parts languages buildtools editors vcs src pics doc mimetypes embedded kdevdesigner
  EXTRA_DIST = AUTHORS COPYING COPYING.LIB NEWS ChangeLog INSTALL README TODO HACKING HACKING.language admin configure.in.bot
- apps_DATA = kdevelop.desktop kdevassistant.desktop
- appsdir = $(kde_appsdir)/Development
+ xdg_apps_DATA = kdevelop.desktop kdevassistant.desktop kdevelop_ruby.desktop \
+ 	kdevelop_c_cpp.desktop  kdevelop_kde_cpp.desktop  kdevelop_scripting.desktop
