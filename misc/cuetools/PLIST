@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/10 09:47:56 jmmv Exp $
-bin/cuebreakpoints
+@comment $NetBSD: PLIST,v 1.2 2004/05/07 11:27:16 jmmv Exp $
 bin/cueconvert
 bin/cuerename
-share/doc/cuetools/README
-share/doc/cuetools/README.formats
+man/man1/cueconvert.1
+man/man1/cuerename.1
+share/doc/cuetools/formats
 share/doc/cuetools/usage
-share/examples/cuetools/cuerenamerc
+share/examples/cuetools/cuerename
 @dirrm share/examples/cuetools
 @dirrm share/doc/cuetools
