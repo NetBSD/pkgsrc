@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/04/21 08:07:50 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/04/30 15:09:57 veego Exp $
 bin/gmplayer
 man/man1/gmplayer.1
 share/gmplayer/DOCS/DVB
@@ -20,6 +20,8 @@ share/gmplayer/DOCS/German/encoding.html
 share/gmplayer/DOCS/German/faq.html
 share/gmplayer/DOCS/German/formats.html
 share/gmplayer/DOCS/German/gcc-2.96-3.0.html
+share/gmplayer/DOCS/German/mencoder.1
+share/gmplayer/DOCS/German/mplayer.1
 share/gmplayer/DOCS/German/sound.html
 share/gmplayer/DOCS/German/video.html
 share/gmplayer/DOCS/Hungarian/bugreports.html
@@ -34,11 +36,38 @@ share/gmplayer/DOCS/Hungarian/mplayer.1
 share/gmplayer/DOCS/Hungarian/skin-hu.html
 share/gmplayer/DOCS/Hungarian/sound.html
 share/gmplayer/DOCS/Hungarian/video.html
+share/gmplayer/DOCS/Italian/bugreports.html
+share/gmplayer/DOCS/Italian/cd-dvd.html
+share/gmplayer/DOCS/Italian/codecs.html
+share/gmplayer/DOCS/Italian/documentation.html
+share/gmplayer/DOCS/Italian/encoding.html
+share/gmplayer/DOCS/Italian/faq.html
+share/gmplayer/DOCS/Italian/formats.html
+share/gmplayer/DOCS/Italian/gcc-2.96-3.0.html
+share/gmplayer/DOCS/Italian/skin-it.html
+share/gmplayer/DOCS/Italian/sound.html
+share/gmplayer/DOCS/Italian/users_against_developers.html
+share/gmplayer/DOCS/Italian/video.html
 share/gmplayer/DOCS/Polish/DVB
+share/gmplayer/DOCS/Polish/DXR3
 share/gmplayer/DOCS/Polish/bugreports.html
+share/gmplayer/DOCS/Polish/cd-dvd.html
+share/gmplayer/DOCS/Polish/codecs-in.html
 share/gmplayer/DOCS/Polish/codecs.html
 share/gmplayer/DOCS/Polish/documentation.html
+share/gmplayer/DOCS/Polish/encoding.html
+share/gmplayer/DOCS/Polish/faq.html
+share/gmplayer/DOCS/Polish/formats.html
 share/gmplayer/DOCS/Polish/gcc-2.96-3.0.html
+share/gmplayer/DOCS/Polish/mencoder.1
+share/gmplayer/DOCS/Polish/mplayer.1
+share/gmplayer/DOCS/Polish/skin-en.html
+share/gmplayer/DOCS/Polish/sound.html
+share/gmplayer/DOCS/Polish/users_against_developers.html
+share/gmplayer/DOCS/Polish/video.html
+share/gmplayer/DOCS/SGML/DO_NOT_USE
+share/gmplayer/DOCS/SGML/c
+share/gmplayer/DOCS/SGML/docs.sgml
 share/gmplayer/DOCS/bugreports.html
 share/gmplayer/DOCS/cd-dvd.html
 share/gmplayer/DOCS/codecs-in.html
@@ -55,14 +84,22 @@ share/gmplayer/DOCS/sound.html
 share/gmplayer/DOCS/tech/TODO
 share/gmplayer/DOCS/tech/codec-devel.txt
 share/gmplayer/DOCS/tech/codecs.conf.txt
+share/gmplayer/DOCS/tech/colorspaces.txt
 share/gmplayer/DOCS/tech/cvs-howto.txt
+share/gmplayer/DOCS/tech/dr-methods.txt
 share/gmplayer/DOCS/tech/formats-hun.txt
 share/gmplayer/DOCS/tech/formats.txt
+share/gmplayer/DOCS/tech/hwac3.txt
+share/gmplayer/DOCS/tech/libvo.txt
 share/gmplayer/DOCS/tech/libvo2.txt
 share/gmplayer/DOCS/tech/mpsub.sub
+share/gmplayer/DOCS/tech/osd.txt
 share/gmplayer/DOCS/tech/patches.txt
+share/gmplayer/DOCS/tech/playtree
+share/gmplayer/DOCS/tech/playtree-hun
 share/gmplayer/DOCS/tech/tech-eng.txt
-share/gmplayer/DOCS/tech/tech-hun.txt
+share/gmplayer/DOCS/tech/vidix.txt
+share/gmplayer/DOCS/tech/vop.txt
 share/gmplayer/DOCS/users_against_developers.html
 share/gmplayer/DOCS/video.html
 share/gmplayer/Skin/AlienMind/README
@@ -542,7 +579,9 @@ share/gmplayer/codecs.conf
 @dirrm share/gmplayer/Skin/AlienMind
 @dirrm share/gmplayer/Skin
 @dirrm share/gmplayer/DOCS/tech
+@dirrm share/gmplayer/DOCS/SGML
 @dirrm share/gmplayer/DOCS/Polish
+@dirrm share/gmplayer/DOCS/Italian
 @dirrm share/gmplayer/DOCS/Hungarian
 @dirrm share/gmplayer/DOCS/German
 @dirrm share/gmplayer/DOCS/French
