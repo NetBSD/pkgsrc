@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/06/11 12:32:01 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/06/22 12:29:06 agc Exp $
 #
 
 DISTNAME=		xmame-0.30.1_src
@@ -18,8 +18,6 @@ USE_GMAKE=		yes
 MAKE_ENV+=		OPSYS=${OPSYS} ARCH=${ARCH} DESTDIR=${DESTDIR} \
 			INSTALL_MAN="${INSTALL_MAN}" \
 			INSTALL_PROGRAM="${INSTALL_PROGRAM}"
-
-MAN6=	xmame.6
 
 post-patch:
 	${CP} ${WRKSRC}/makefile.unix ${WRKSRC}/Makefile
