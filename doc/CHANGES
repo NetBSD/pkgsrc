@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7906 2004/11/19 12:16:21 adam Exp $
+$NetBSD: CHANGES,v 1.7907 2004/11/19 12:33:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5335,3 +5335,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated hatari to 0.50 [adam 2004-11-19]
 	Updated ploticus to 2.30 [adam 2004-11-19]
 	Updated libsndfile to 1.0.11 [adam 2004-11-19]
+	Added qalculate-0.7.0 [adam 2004-11-19]
