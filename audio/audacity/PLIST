@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/04/20 18:02:16 ben Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/05/24 18:17:18 drochner Exp $
 bin/audacity
 man/man1/audacity.1
 share/audacity/nyquist/bug.lsp
@@ -36,11 +36,18 @@ ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/audacity.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/audacity.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/audacity.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/audacity.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/audacity.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/audacity.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/audacity.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/audacity.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/audacity.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/audacity.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/audacity.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/audacity.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/audacity.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/audacity.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/audacity.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/audacity.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/audacity.mo
 @dirrm share/audacity/nyquist
 @dirrm share/audacity/plug-ins
