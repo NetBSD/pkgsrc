@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/22 22:07:22 lukem Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/03/23 14:28:32 lukem Exp $
 bin/dirsearch
 bin/newaid
 bin/rex
@@ -10,7 +10,6 @@ bin/sfsproac
 bin/ssu
 etc/rc.d/sfscd
 etc/rc.d/sfssd
-etc/sfs/sfsrwsd_config.sample
 include/sfs
 include/${PKGNAME}/aclnt.h
 include/${PKGNAME}/aes.h
@@ -194,10 +193,9 @@ share/sfs/sfs_srp_parms
 share/sfs/sfsauthd_config
 share/sfs/sfscd_config
 share/sfs/sfssd_config
+share/examples/sfs/sfsrwsd_config.sample
 @exec ${MKDIR} %D/var/sfs
-@dirrm var/sfs
-@dirrm var
+@dirrm share/examples/sfs
 @dirrm share/sfs
 @dirrm lib/${PKGNAME}
 @dirrm include/${PKGNAME}
-@dirrm etc/sfs
