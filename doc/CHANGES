@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1934 2003/04/14 20:03:57 grant Exp $
+$NetBSD: CHANGES,v 1.1935 2003/04/14 20:21:44 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1592,3 +1592,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Added qadsl-1.2 [cjep 2003-04-14]
 	Added phoenix-bin-0.5 [grant 2003-04-14]
 	Deleted phoenix-linux, renamed to phoenix-bin [grant 2003-04-14]
+	Added phoenix-bin-nightly [grant 2003-04-14]
+	Deleted phoenix-linux-nightly, renamed to phoenix-bin-nightly
+		[grant 2003-04-14]
