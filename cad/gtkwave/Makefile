@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/14 13:21:18 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/15 12:32:58 drochner Exp $
 #
 
-DISTNAME=		gtkwave-2.0.0pre3
+#DISTNAME=		gtkwave-2.0.0pre3
+DISTNAME=		gtkwave-2.0.0pre3-20030319
+PKGNAME=		gtkwave-2.0.0pre3.20030319
 CATEGORIES=		cad
-MASTER_SITES=		ftp://ftp.cs.man.ac.uk/pub/amulet/gtkwave/2.0/
+#MASTER_SITES=		ftp://ftp.cs.man.ac.uk/pub/amulet/gtkwave/2.0/
+MASTER_SITES=	ftp://ftp.cs.man.ac.uk/pub/amulet/gtkwave/snapshots/
 
 MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		ftp://ftp.cs.man.ac.uk/pub/amulet/gtkwave/2.0/
