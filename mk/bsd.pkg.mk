@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.815 2001/09/25 20:26:37 mycroft Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.816 2001/09/30 22:10:34 abs Exp $
 #
 # This file is in the public domain.
 #
@@ -1282,6 +1282,13 @@ show-downlevel:
 .  endif
 .endif
 
+.if !target(show-installed-depends)
+show-installed-depends:
+	@for i in ${DEPENDS:C/:.*$//:Q:S/\ / /g} ; do \
+		echo "$$i =>" `pkg_info -e $$i` ; \
+	done
+.endif
+
 .if defined(EVAL_PREFIX)
 .  for def in ${EVAL_PREFIX}
 .    if !defined(${def:C/=.*//}_DEFAULT)
@@ -1491,6 +1498,7 @@ do-configure:
 	    INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 	    INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
 	    ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
+
 .  endif
 .  if defined(USE_IMAKE)
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} ${SCRIPTS_ENV} XPROJECTROOT=${X11BASE} ${XMKMF}
