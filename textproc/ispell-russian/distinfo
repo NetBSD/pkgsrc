@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/11/19 15:53:25 jschauma Exp $
+$NetBSD: distinfo,v 1.2 2003/09/25 17:45:35 wiz Exp $
 
-SHA1 (rus-ispell-0.99f3.tar.gz) = 153644a00d150d71d65e791fa0007cbb24ce2a59
-Size (rus-ispell-0.99f3.tar.gz) = 460756 bytes
+SHA1 (rus-ispell-0.99f5.tar.gz) = c6c8c0305dd7be9bc0e181bce91e74a6287708f0
+Size (rus-ispell-0.99f5.tar.gz) = 473507 bytes
 SHA1 (patch-aa) = 341837cb81ba27b8e7ff472a8dcf842ff049536e
