@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/09/23 15:39:46 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2002/09/25 08:44:30 hubertf Exp $
 
 --- Makefile.orig	Sun May 13 06:09:39 2001
 +++ Makefile
@@ -12,8 +12,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/09/23 15:39:46 hubertf Exp $
  CC=cc ${INC_PATH} ${LIB_PATH} -Wall
 -INSTALL_BIN=/usr/X11R6/bin
 -INSTALL_MAN1=/usr/X11R6/man/man1
-+INSTALL_BIN=${X11BASE}/bin
-+INSTALL_MAN1=${X11BASE}/man/man1
++INSTALL_BIN=${X11PREFIX}/bin
++INSTALL_MAN1=${X11PREFIX}/man/man1
  
  all: xkbset xkbset.1
  
