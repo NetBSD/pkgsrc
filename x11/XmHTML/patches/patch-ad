@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.3 1999/11/13 07:31:40 jlam Exp $
+$NetBSD: patch-ad,v 1.4 2001/03/05 13:52:42 skrll Exp $
 
---- lib/Makefile.orig	Wed Feb  3 19:43:26 1999
-+++ lib/Makefile	Tue Nov  2 01:28:54 1999
+--- lib/Makefile.orig	Thu Feb  4 00:43:26 1999
++++ lib/Makefile
 @@ -25,7 +25,7 @@
  # Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.         #
  ##############################################################################
@@ -19,7 +19,7 @@ $NetBSD: patch-ad,v 1.3 1999/11/13 07:31:40 jlam Exp $
 -	$(AR) $@ common/*.o $(PLATFORM)/*.o
 -	$(RANLIB) $@
 +	$(RM) $@
-+	$(CC) -o $@ common/*.lo $(PLATFORM)/*.lo \
++	${LIBTOOL} $(CC) -o $@ common/*.lo $(PLATFORM)/*.lo \
 +		-rpath ${PREFIX}/lib -version-info 1:2
  	
  depend:: 
