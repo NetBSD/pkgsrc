@@ -1,13 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2004/03/29 14:03:28 recht Exp $
-lib/aspell/de-only.rws
+@comment $NetBSD: PLIST,v 1.3 2004/12/24 03:09:17 wiz Exp $
+lib/aspell/de-common.rws
 lib/aspell/de.multi
+lib/aspell/de_AT-only.rws
+lib/aspell/de_AT.multi
 lib/aspell/de_CH-only.rws
 lib/aspell/de_CH.multi
 lib/aspell/de_DE-only.rws
 lib/aspell/de_DE.multi
 lib/aspell/deutsch.alias
 lib/aspell/german.alias
-lib/aspell/ngerman.alias
 lib/aspell/swiss.alias
 share/aspell/de.dat
+share/aspell/de_affix.dat
 share/aspell/de_phonet.dat
