@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/09/11 11:11:34 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2004/04/01 18:35:00 jmmv Exp $
 
---- docs/reference/Makefile.in.orig	2003-08-25 20:59:45.000000000 +0200
+--- docs/reference/Makefile.in.orig	2003-12-29 18:21:41.000000000 +0000
 +++ docs/reference/Makefile.in
-@@ -441,6 +441,7 @@ uninstall-am: uninstall-info-am uninstal
+@@ -445,6 +445,7 @@ uninstall-am: uninstall-info-am uninstal
  	uninstall-info-am uninstall-local
  
  

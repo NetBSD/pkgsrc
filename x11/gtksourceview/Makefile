@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2004/02/14 17:21:56 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2004/04/01 18:35:00 jmmv Exp $
 #
 
-DISTNAME=	gtksourceview-0.7.0
-PKGREVISION=	8
+DISTNAME=	gtksourceview-1.0.0
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtksourceview/0.7/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtksourceview/1.0/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/softwaremap/projects/gtksourceview
@@ -22,7 +22,6 @@ USE_GNU_TOOLS+=		make
 PKGCONFIG_OVERRIDE=	gtksourceview-1.0.pc.in
 
 CONFIGURE_ARGS=		--disable-build-tests
-CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 
 .include "../../devel/gettext-lib/buildlink3.mk"
