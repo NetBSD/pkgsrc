@@ -1,5 +1,9 @@
-# $NetBSD: Makefile.common,v 1.1 2004/07/21 22:35:59 schmonz Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/08/02 03:57:17 schmonz Exp $
 #
+
+QMAIL_VERS=	qmail-1.03
+DISTNAME=	netqmail-1.05
+MASTER_SITES=	http://qmail.org/
 
 DEPENDS+=	checkpassword-[0-9]*:../../sysutils/checkpassword
 DEPENDS+=	daemontools-[0-9]*:../../sysutils/daemontools
@@ -13,12 +17,19 @@ CONFLICTS+=	pulsar<=0.1.1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+WRKSRC=			${WRKDIR}/${DISTNAME}/${PKGNAME_NOREV}
+
+.if defined(PKG_PHASE) && ${PKG_PHASE} == "extract"
+WRKSRC=			${WRKDIR}/${DISTNAME}
+.endif
+
 ALL_TARGET= 		it man
 INSTALL_TARGET=		setup check
 
 FILESDIR=		${.CURDIR}/../../mail/qmail/files
 MESSAGE_SRC=		${.CURDIR}/../../mail/qmail/MESSAGE
 PLIST_SRC=		${.CURDIR}/../../mail/qmail/PLIST
+DISTINFO_FILE=		${.CURDIR}/../../mail/netqmail/distinfo
 
 USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/../../mail/qmail/DEINSTALL
@@ -27,7 +38,6 @@ MAKE_DIRS+=		${PKG_SYSCONFDIR} ${PKG_SYSCONFDIR}/alias ${EGDIR}/boot
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/control ${DOCDIR}
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/users
 OWN_DIRS+=		${QMAILDIR} ${QMAIL_QUEUE_DIR}
-RCD_SCRIPTS=		qmail qmailqread qmailpop3d qmailsend qmailsmtpd
 PKG_SYSCONFSUBDIR=	qmail
 
 DOCDIR=			${PREFIX}/share/doc/qmail
@@ -39,9 +49,9 @@ FILES_SUBST+=		DOCDIR=${DOCDIR}
 FILES_SUBST+=		EGDIR=${EGDIR}
 FILES_SUBST+=		SHAREDIR=${SHAREDIR}
 FILES_SUBST+=		QMAILDIR=${QMAILDIR}
-FILES_SUBST+=		QMAIL_AUTOCONFIG=${QMAIL_AUTOCONFIG}
 FILES_SUBST+=		QMAIL_QUEUE_DIR=${QMAIL_QUEUE_DIR}
 FILES_SUBST+=		QMAIL_QUEUE_EXTRA=${QMAIL_QUEUE_EXTRA}
+PLIST_SUBST+=		OSXSUFX+=${OSXSUFX}
 
 SETUP_PROGRAMS=		dnsfq dnsip dnsptr hostname install ipmeprint
 SETUP_SCRIPTS=		config config-fast
@@ -57,8 +67,16 @@ INSTALLATION_DIRS+=	share/doc/qmail share/examples/qmail share/qmail
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS+=		QMAILDIR QMAIL_AUTOCONFIG
-BUILD_DEFS+=		QMAIL_QUEUE_DIR QMAIL_QUEUE_EXTRA
+.if ${OPSYS} == "Darwin"
+OSXSUFX=		.doc
+PATCHFILES=		panther.patch
+PATCH_SITES=		http://http.netdevice.com:9080/qmail/patch/
+PATCH_DIST_STRIP=	-p1
+.else
+OSXSUFX=		# empty
+.endif
+
+BUILD_DEFS+=		QMAILDIR QMAIL_QUEUE_DIR QMAIL_QUEUE_EXTRA
 
 .if !empty(QMAIL_QUEUE_DIR:M${QMAILDIR}/*)
 PKG_FAIL_REASON+=	"QMAIL_QUEUE_DIR must not be under ${QMAILDIR}"
@@ -74,16 +92,15 @@ SUBST_SED.logging=	-e 's|0|${QUEUE_EXTRALEN}|g'
 SUBST_SED.logging+=	-e 's|""|${QUEUE_EXTRA}|g'
 .endif
 
+post-extract:
+	@extract_file=${QMAIL_VERS}.tar.gz; export extract_file;	\
+	cd ${WRKSRC}; ${EXTRACT_CMD}; cd ${QMAIL_VERS};			\
+	${APPLY_NETQMAIL}
+
 do-configure:
 	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
 	${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
 	${ECHO} ${QMAILDIR} > ${WRKSRC}/conf-qmail
-
-post-build:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/mailer.conf		\
-		> ${WRKDIR}/mailer.conf.qmail
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/qmail-qread-client.sh	\
-		> ${WRKDIR}/qmail-qread-client
 
 post-install:
 	# qmail's installer sets strange permissions; set them back
@@ -98,9 +115,6 @@ post-install:
 	    ${CHGRP} ${MANGRP} ${QMAILDIR}/${i}
 .	  endfor
 .	endif
-
-	${INSTALL_DATA} ${WRKDIR}/mailer.conf.qmail ${EGDIR}/mailer.conf
-	${INSTALL_SCRIPT} ${WRKDIR}/qmail-qread-client ${PREFIX}/bin
 
 	${INSTALL_DATA_DIR} ${SHAREDIR}
 	${INSTALL_PROGRAM_DIR} ${SHAREDIR}/setup
