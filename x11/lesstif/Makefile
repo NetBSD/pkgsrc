@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 1998/11/13 02:02:25 frueauf Exp $
+# $NetBSD: Makefile,v 1.34 1999/01/12 23:17:34 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/08 08:34:13 tg Exp
 #
 
-DISTNAME=	lesstif-0.87.0
+DISTNAME=	lesstif-0.87.1
 CATEGORIES=	x11
 MASTER_SITES=	ftp://linux.gt.ed.net/pub/linux/libs/lesstif/srcdist/ \
 		ftp://ftp.mathematik.th-darmstadt.de/pub/linux/mirrors/misc/lesstif/srcdist/ \
@@ -11,9 +11,7 @@ MASTER_SITES=	ftp://linux.gt.ed.net/pub/linux/libs/lesstif/srcdist/ \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.lesstif.org/
 
-CONFLICTS=	lesstif-0.82 lesstif-0.83 lesstif-0.84 lesstif-0.85 \
-		lesstif-19980510 lesstif-0.85.2 lesstif-0.85.3 lesstif-0.86.0 \
-		lesstif-0.86.5 lesstif-0.86.9
+CONFLICTS=	lesstif-*
 
 GNU_CONFIGURE=  yes
 USE_LIBTOOL=	yes
