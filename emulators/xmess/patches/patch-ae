@@ -1,22 +1,19 @@
-$NetBSD: patch-ae,v 1.8 2003/04/13 17:37:48 kristerw Exp $
---- doc/xmessrc.dist.orig	Sun Apr  6 23:41:26 2003
-+++ doc/xmessrc.dist	Sun Apr 13 19:15:47 2003
-@@ -69,21 +69,17 @@
+$NetBSD: patch-ae,v 1.9 2004/05/16 00:28:23 kristerw Exp $
+
+--- doc/xmessrc.dist.orig	Sat May 15 23:56:37 2004
++++ doc/xmessrc.dist	Sat May 15 23:58:14 2004
+@@ -69,17 +69,17 @@
  mouse                   1
  
  ### Fileio Related ###
 -biospath                /usr/local/share/xmess/bios
 -softwarepath            /usr/local/share/xmess/software
--CRC_directory           /usr/local/share/xmess/crc
+-hash_directory          /usr/local/share/xmess/hash
 +biospath                @ROMPATH@/bios
 +softwarepath            @ROMPATH@/software
-+CRC_directory           @ROMPATH@/crc
++hash_directory          @ROMPATH@/hash
  snapshot_directory      .
--cheat_directory         /usr/local/share/xmess/cheat
--cheatfile               cheat.cdb
 -hiscore_file            /usr/local/share/xmess/hiscore.dat
--history_file            /usr/local/share/xmess/history.dat
--mameinfo_file           /usr/local/share/xmess/mameinfo.dat
 +hiscore_file            @SPOOLDIR@/hiscore.dat
  
  ### Mess Related ###
