@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/11/23 19:29:06 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2000/02/05 20:02:11 wiz Exp $
 
 DISTNAME=		root_v2.23.08.source
 PKGNAME=		root-2.23
@@ -14,21 +14,21 @@ DEPENDS+= xpm-*:../../graphics/xpm
 
 USE_GMAKE= yes
 ALL_TARGET= netbsd
-MAKE_ENV= LD_LIBRARY_PATH=$(WRKDIR)/lib ROOTSYS=$(WRKDIR)
+MAKE_ENV= LD_LIBRARY_PATH=${WRKDIR}/lib ROOTSYS=${WRKDIR}
 
 do-configure:
-	$(CP) $(FILESDIR)/Makefile.netbsd $(WRKDIR)/src
-	$(MKDIR) $(WRKDIR)/bin
-	$(MKDIR) $(WRKDIR)/lib
-	$(CP) $(PREFIX)/cint/MAKEINFO $(WRKDIR)/cint
-	$(CP) $(PREFIX)/cint/include/iosenum.h $(WRKDIR)/cint/include
+	${CP} ${FILESDIR}/Makefile.netbsd ${WRKDIR}/src
+	${MKDIR} ${WRKDIR}/bin
+	${MKDIR} ${WRKDIR}/lib
+	${CP} ${PREFIX}/cint/MAKEINFO ${WRKDIR}/cint
+	${CP} ${PREFIX}/cint/include/iosenum.h ${WRKDIR}/cint/include
 
 do-install:
-	$(MKDIR) $(PREFIX)/root
-	$(MKDIR) $(PREFIX)/root/include
-	(cd $(WRKDIR)/src; $(CP) *.h MAIN_rmain.cxx $(PREFIX)/root/include)
-	(cd $(WRKDIR); tar cf - lib bin cint)|(cd $(PREFIX)/root;tar xf -)
-	$(SED) "s;XXXPREFIXXXX;$(PREFIX);g" <$(FILESDIR)/root.sh >$(PREFIX)/bin/root
-	$(CHMOD) +x $(PREFIX)/bin/root
+	${MKDIR} ${PREFIX}/root
+	${MKDIR} ${PREFIX}/root/include
+	(cd ${WRKDIR}/src; ${CP} *.h MAIN_rmain.cxx ${PREFIX}/root/include)
+	(cd ${WRKDIR}; tar cf - lib bin cint)|(cd ${PREFIX}/root;tar xf -)
+	${SED} "s;XXXPREFIXXXX;${PREFIX};g" <${FILESDIR}/root.sh >${PREFIX}/bin/root
+	${CHMOD} +x ${PREFIX}/bin/root
 
 .include "../../mk/bsd.pkg.mk"
