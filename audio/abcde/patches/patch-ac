@@ -1,8 +1,20 @@
-$NetBSD: patch-ac,v 1.3 2001/10/12 09:52:20 agc Exp $
+$NetBSD: patch-ac,v 1.4 2002/01/16 05:37:51 lukem Exp $
 
---- abcde.orig	Wed Aug 15 22:39:29 2001
-+++ abcde	Fri Oct 12 10:47:00 2001
-@@ -552,7 +552,7 @@
+--- abcde.orig	Thu Aug 16 07:39:29 2001
++++ abcde
+@@ -199,6 +199,11 @@
+ 			TRACKARTIST="$(echo $DTITLEARTIST | cut -f1 -d~)"
+ 			TRACKNAME="$(echo $DTITLEARTIST | cut -f2 -d~)"
+ 			;;
++		trailing-paren)
++			DTITLEARTIST="$(echo $TRACKNAME | sed 's,^\(.*\) (\(.*\)),\1~\2,')"
++			TRACKARTIST="$(echo $DTITLEARTIST | cut -f2 -d~)"
++			TRACKNAME="$(echo $DTITLEARTIST | cut -f1 -d~)"
++			;;
+ 		esac
+ 	else
+ 		TRACKARTIST=$DARTIST
+@@ -552,7 +557,7 @@
  			fi
  			# List out disc title/author and contents
  			echo ---- $(cut '-d ' -f4- "$ABCDETEMPDIR/cddbquery") ---- >> "$ABCDETEMPDIR/cddbchoices"
@@ -11,7 +23,7 @@ $NetBSD: patch-ac,v 1.3 2001/10/12 09:52:20 agc Exp $
  			do
  				echo $TRACK: $(grep ^TTITLE$(expr $TRACK - 1)= "$ABCDETEMPDIR/cddbread.1" | cut -f2- -d= | tr -d \\r\\n) >> "$ABCDETEMPDIR/cddbchoices"
  			done
-@@ -568,7 +568,7 @@
+@@ -568,7 +573,7 @@
  			$CDDBTOOL template $(cat "$ABCDETEMPDIR/discid") > "$ABCDETEMPDIR/cddbread.1"
  			# List out disc title/author and contents of template
  			echo ---- Unknown Artist / Unknown Album ---- >> "$ABCDETEMPDIR/cddbchoices"
@@ -20,7 +32,7 @@ $NetBSD: patch-ac,v 1.3 2001/10/12 09:52:20 agc Exp $
  			do
  				echo $TRACK: $(grep ^TTITLE$(expr $TRACK - 1)= "$ABCDETEMPDIR/cddbread.1" | cut -f2- -d= | tr -d \\r\\n) >> "$ABCDETEMPDIR/cddbchoices"
  			done
-@@ -598,7 +598,7 @@
+@@ -598,7 +603,7 @@
  				fi
  				# List out disc title/author and contents
  				echo \#$X: ---- "$DISCINFO" ---- >> "$ABCDETEMPDIR/cddbchoices"
@@ -29,16 +41,40 @@ $NetBSD: patch-ac,v 1.3 2001/10/12 09:52:20 agc Exp $
  				do
  					echo $TRACK: $(grep ^TTITLE$(expr $TRACK - 1)= $ABCDETEMPDIR/cddbread.$X | cut -f2- -d= | tr -d \\r\\n) >> "$ABCDETEMPDIR/cddbchoices"
  				done
-@@ -757,7 +757,7 @@
+@@ -742,6 +747,9 @@
+ 		elif [ "$(grep -c "^TTITLE.*\-" "$CDDBDATA")" -gt "$(expr $NUMTRACKS / 2 )" ]; then
+ 			# More than 1/2 contain a "-", so guess forward-dash
+ 			DEFAULTSTYLE=2
++		elif [ "$(grep -c "^TTITLE.*(.*)" "$CDDBDATA")" -gt "$(expr $NUMTRACKS / 2 )" ]; then
++			# More than 1/2 contain something in parens, so guess trailing-paren
++			DEFAULTSTYLE=6
+ 		fi
+ 
+ 		echo "1) Artist / Title" >&2
+@@ -749,23 +757,24 @@
+ 		echo "3) Title / Artist" >&2
+ 		echo "4) Title - Artist" >&2
+ 		echo "5) Artist: Title" >&2
+-		echo "6) This is a single-artist CD" >&2
+-		echo -n "Which style of multiple artist entries is it? [1-6] ($DEFAULTSTYLE): " >&2
++		echo "6) Title (Artist)" >&2
++		echo "7) This is a single-artist CD" >&2
++		echo -n "Which style of multiple artist entries is it? [1-7] ($DEFAULTSTYLE): " >&2
+ 		if [ "$INTERACTIVE" = "y" ]; then
+ 			read VARIOUSARTISTSTYLE
+ 		else
  			echo $DEFAULTSTYLE >&2
  			VARIOUSARTISTSTYLE=$DEFAULTSTYLE
  		fi
 -		VARIOUSARTISTSTYLE=$(echo $VARIOUSARTISTSTYLE | xargs printf %d)
 +		VARIOUSARTISTSTYLE=$(echo 0$VARIOUSARTISTSTYLE | xargs printf %d)
  		# If they press Enter, then the default style (0) was chosen
- 		while [ $VARIOUSARTISTSTYLE -lt 0 ] || [ $VARIOUSARTISTSTYLE -gt 6 ]; do
- 			echo "Invalid selection. Please choose a number between 1 and 6."
-@@ -765,7 +765,7 @@
+-		while [ $VARIOUSARTISTSTYLE -lt 0 ] || [ $VARIOUSARTISTSTYLE -gt 6 ]; do
+-			echo "Invalid selection. Please choose a number between 1 and 6."
+-			echo -n "Selection [1-6]: "
++		while [ $VARIOUSARTISTSTYLE -lt 0 ] || [ $VARIOUSARTISTSTYLE -gt 7 ]; do
++			echo "Invalid selection. Please choose a number between 1 and 7."
++			echo -n "Selection [1-7]: "
  
  
  			read VARIOUSARTISTSTYLE
@@ -47,7 +83,19 @@ $NetBSD: patch-ac,v 1.3 2001/10/12 09:52:20 agc Exp $
  		done
  		if [ "$VARIOUSARTISTSTYLE" = "0" ]; then
  			VARIOUSARTISTSTYLE=$DEFAULTSTYLE
-@@ -856,7 +856,7 @@
+@@ -787,7 +796,10 @@
+ 		5) # Artist: Title
+ 			VARIOUSARTISTSTYLE=colon
+ 			;;
+-		6) # Single Artist
++		6) # Title (Artist)
++			VARIOUSARTISTSTYLE=trailing-paren
++			;;
++		7) # Single Artist
+ 			VARIOUSARTISTS=n
+ 			;;
+ 		esac
+@@ -856,7 +868,7 @@
  PLAYLISTFORMAT='${ARTISTFILE}_-_${ALBUMFILE}.m3u'
  PLAYLISTDATAPREFIX=''
  COMMENT=''
@@ -56,7 +104,7 @@ $NetBSD: patch-ac,v 1.3 2001/10/12 09:52:20 agc Exp $
  ENCNICE=10
  READNICE=10
  VARIOUSARTISTS=n
-@@ -926,17 +926,12 @@
+@@ -926,17 +938,12 @@
  	WAVOUTPUTDIR="$OUTPUTDIR"
  fi
  
@@ -78,7 +126,7 @@ $NetBSD: patch-ac,v 1.3 2001/10/12 09:52:20 agc Exp $
  fi
  # Load user preference defaults
  if [ -r $HOME/.abcde.conf ]; then
-@@ -972,7 +967,7 @@
+@@ -972,7 +979,7 @@
  	if [ "$RSTART" = "$REND" ]; then 
  		NEWTRACKS="$RSTART"
  	else
@@ -87,7 +135,7 @@ $NetBSD: patch-ac,v 1.3 2001/10/12 09:52:20 agc Exp $
  	fi
  	TRACKQUEUE=$(echo "$TRACKQUEUE" "$NEWTRACKS")
  
-@@ -1145,7 +1140,7 @@
+@@ -1145,7 +1152,7 @@
  do
  	ENCODELOCATIONS="$ENCODELOCATIONS $REMOTEHOST"
  done
