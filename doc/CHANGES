@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.305 2002/10/18 23:06:12 wiz Exp $
+$NetBSD: CHANGES,v 1.306 2002/10/19 01:33:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3316,4 +3316,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Added pyca-0.6.5.20020902 [jlam 2002-10-18]
 	Added p5-Number-Latin-1.01 [abs 2002-10-18]
 	Added cmu-dhcpd-3.3.7.9 [abs 2002-10-18]
-	links,links-gui: Downgraded to 2.1.0.3 [wiz 2002-10-19]
+	links: Downgraded to 2.1.0.3 [wiz 2002-10-19]
+	links-gui: Downgraded to 2.1.0.3 [wiz 2002-10-19]
