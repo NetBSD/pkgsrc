@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9344 2005/02/27 22:50:12 wiz Exp $
+$NetBSD: CHANGES,v 1.9345 2005/02/27 23:07:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1186,3 +1186,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devilspie to 0.8 [wiz 2005-02-27]
 	Updated mtr to 0.69 [wiz 2005-02-27]
 	Updated mtr-gtk to 0.69 [wiz 2005-02-27]
+	Updated bash to 3.0pl16 [wiz 2005-02-27]
