@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2002/06/13 08:44:56 martti Exp $
+# $NetBSD: Makefile,v 1.28 2002/06/21 15:10:37 agc Exp $
 #
 
 COMMENT=	window managers (for X)
@@ -21,6 +21,7 @@ SUBDIR+=	fluxbox
 SUBDIR+=	flwm
 SUBDIR+=	fvwm1
 SUBDIR+=	fvwm2
+SUBDIR+=	icepref
 SUBDIR+=	icewm
 SUBDIR+=	icewm-gnome
 SUBDIR+=	icewmconf
