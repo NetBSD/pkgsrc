@@ -1,6 +1,3 @@
-WHAT IS AMANDA?
----------------
-
 This is an alpha-test release of Amanda, the Advanced Maryland Automatic
 Network Disk Archiver.  Amanda is a backup system designed to archive many
 computers on a network to a single large-capacity tape drive.  This release
@@ -68,4 +65,3 @@ Actually, Amanda will still work if you have full dumps that are larger
 than the holding disk: Amanda will send those dumps directly to tape one at
 a time.  If you have many such dumps you will be limited by the dump speed
 of those machines.
-
