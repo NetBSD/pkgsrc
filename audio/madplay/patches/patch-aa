@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/10/15 10:24:55 simonb Exp $
+
+--- Makefile.in.orig	Mon Sep 25 04:49:25 2000
++++ Makefile.in	Sun Oct 15 21:15:32 2000
+@@ -38,7 +38,7 @@
+ MANEXT =	1
+ 
+ INSTALL =	@INSTALL@
+-BININSTALL =	@INSTALL_PROGRAM@ -m 755
++BININSTALL =	@INSTALL_PROGRAM@
+ LIBINSTALL =	@INSTALL_DATA@
+ 
+ ACSUBDIRS =	@subdirs@
+@@ -60,7 +60,7 @@
+ 
+ ## FLAGS ######################################################################
+ 
+-CFLAGS =	$(COPTS) $(INCLUDES) $(DEFINES)
++CFLAGS+=	$(COPTS) $(INCLUDES) $(DEFINES)
+ LDFLAGS =	$(LDOPTS)
+ 
+ ## OBJECTS ####################################################################

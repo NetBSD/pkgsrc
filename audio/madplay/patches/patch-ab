@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/10/15 10:24:55 simonb Exp $
+
+--- libmad/Makefile.in.orig	Wed Sep 20 12:06:22 2000
++++ libmad/Makefile.in	Sun Oct 15 21:12:24 2000
+@@ -85,7 +85,7 @@
+ 
+ ## FLAGS ######################################################################
+ 
+-CFLAGS =	$(SOOPTS) $(COPTS) $(INCLUDES) $(DEFINES)
++CFLAGS+=	$(SOOPTS) $(COPTS) $(INCLUDES) $(DEFINES)
+ LDFLAGS =	$(LDOPTS)
+ 
+ ## OBJECTS ####################################################################
