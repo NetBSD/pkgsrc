@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/08/04 17:39:37 tv Exp $
+$NetBSD: distinfo,v 1.3 2004/08/10 21:22:28 tv Exp $
 
-SHA1 (Sendmail-PMilter-0.94.tar.gz) = b6790439438c8e086a0bfe4554d4a9dad8f32036
-Size (Sendmail-PMilter-0.94.tar.gz) = 28423 bytes
+SHA1 (Sendmail-PMilter-0.95.tar.gz) = 6788d44723c9de85f1783141521f8b8e24d2bf4e
+Size (Sendmail-PMilter-0.95.tar.gz) = 28832 bytes
