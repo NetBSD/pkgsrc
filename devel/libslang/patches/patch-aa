@@ -1,5 +1,5 @@
 --- src/Makefile.in.orig	Fri Apr 24 02:17:04 1998
-+++ src/Makefile.in	Thu Jul 16 11:32:33 1998
++++ src/Makefile.in	Thu Jul 16 13:57:13 1998
 @@ -2,9 +2,9 @@
  #---------------------------------------------------------------------------
  # ANSI C compiler
@@ -47,7 +47,13 @@
  EXECDEPS = $(OBJDIR_NORMAL_LIB)
  
  OFILES = @PROGRAM_OFILES@
-@@ -90,8 +90,8 @@
+@@ -85,13 +85,13 @@
+ #---------------------------------------------------------------------------
+ # Rules
+ #---------------------------------------------------------------------------
+-all: $(OBJDIR) $(CONFIG_H) $(OBJDIR_NORMAL_LIB) $(OTHERSTUFF)
++all: $(OBJDIR) $(CONFIG_H) $(OBJDIR_NORMAL_LIB)
+ elf: $(ELFDIR) $(CONFIG_H) $(ELFDIR_ELF_LIB)
  
  $(OBJDIR_NORMAL_LIB): $(OBJDIR) $(CONFIG_H) $(OBJS)
  	-$(RM) $(OBJDIR_NORMAL_LIB)
