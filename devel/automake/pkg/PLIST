@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 1998/04/14 01:51:06 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/09/22 10:48:43 agc Exp $
 bin/aclocal
 bin/automake
 @unexec %D/bin/install-info --delete %D/info/automake.info %D/info/dir
 info/automake.info
-@exec [ -f %D/info/dir ] || sed -ne '1,/Menu:/p' /usr/share/info/dir > %D/info/dir
 @exec %D/bin/install-info %D/info/automake.info %D/info/dir
 share/aclocal/ccstdc.m4
 share/aclocal/cond.m4
