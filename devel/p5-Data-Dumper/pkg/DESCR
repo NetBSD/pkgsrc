@@ -1,6 +1,0 @@
-Given a list of scalars or reference variables, writes out their contents
-in perl syntax.  The references can also be objects.  The contents of each
-variable is output in a single Perl statement.  The return value can be
-eval'ed to get back the original reference structure.  Bear in mind that a
-reference so created will not preserve pointer equalities with the original
-reference.
