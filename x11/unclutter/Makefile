@@ -1,10 +1,7 @@
-# New ports collection makefile for:	unclutter
-# Version required:	-8
-# Date created:		03 Aug 1996
-# Whom:			shanee@rabbit.augusta.de
+# Makefile for:		unclutter
+# Version required:	8
 #
-# $NetBSD: Makefile,v 1.3 1998/03/12 00:01:32 agc Exp $
-# FreeBSD Id: Makefile,v 1.6 1997/10/26 23:57:06 fenner Exp
+# $NetBSD: Makefile,v 1.4 1998/03/20 06:51:55 mycroft Exp $
 #
 
 DISTNAME=	unclutter-8
@@ -13,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_XCONTRIB}
 MASTER_SITE_SUBDIR=	utilities
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	shanee@rabbit.augusta.de
+MAINTAINER=	mycroft@NetBSD.ORG
 
 WRKSRC=		${WRKDIR}/unclutter
 USE_IMAKE=	yes
