@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:08:02 skrll Exp $
+$NetBSD: distinfo,v 1.3 2002/02/11 03:07:47 dmcmahill Exp $
 
-SHA1 (xwrits-2.12.tar.gz) = 3f06e187cb13115df3cf4857d9dcd5070c75d264
-Size (xwrits-2.12.tar.gz) = 123755 bytes
+SHA1 (xwrits-2.19.tar.gz) = ad2051a75b85697898d2616435a1817983529da5
+Size (xwrits-2.19.tar.gz) = 130987 bytes
