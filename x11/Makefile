@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 1999/08/23 14:18:18 agc Exp $
+# $NetBSD: Makefile,v 1.106 1999/08/26 11:33:47 jlam Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -96,6 +96,7 @@
 #    SUBDIR += viewfax
     SUBDIR += windowmaker
     SUBDIR += wmakerconf
+    SUBDIR += wmessage
     SUBDIR += wmextra
     SUBDIR += wmthemes
 #    SUBDIR += wm2
