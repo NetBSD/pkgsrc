@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3040 2005/02/18 14:52:01 wiz Exp $
+$NetBSD: TODO,v 1.3041 2005/02/18 15:55:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -266,7 +266,6 @@ Suggested package updates
 	o MyPasswordSafe-20041210
 	o PAM-0.78
 	o TeXmacs-1.0.4-R3
-	o Xaw3d-1.5E
 	o YoSucker-65
 	o aap-0.144
 	o abiword1-1.0.7
