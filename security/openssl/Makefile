@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.3 1999/05/24 20:39:48 tv Exp $
+# $NetBSD: Makefile,v 1.4 1999/05/26 15:36:28 tv Exp $
 #
 
-DISTNAME=		openssl-0.9.2b
+DISTNAME=		openssl-0.9.3
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.openssl.org/source/
-
-PATCH_SITES=		${MASTER_SITES}
-PATCHFILES=		openssl-0.9.2b-rsaoaep.patch
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.openssl.org/
@@ -31,7 +28,7 @@ IGNORE=			requires shared object support
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
-DEPENDS=		rsaref-2.0p1:../../security/rsaref
+DEPENDS=		rsaref-2.0p2:../../security/rsaref
 CONFIGURE_ARGS+=	-DRSAref -L${PREFIX}/lib -lrsaref ${LDFLAGS}
 .endif
 
