@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3713 2003/10/19 10:24:05 jmmv Exp $
+$NetBSD: CHANGES,v 1.3714 2003/10/20 00:32:30 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4226,3 +4226,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cpuflags to 0.58 [rh 2003-10-19]
 	Updated xbattbar to 1.4.2nb3 [agc 2003-10-19]
 	Updated squidGuard to 1.2.0nb2 [jmmv 2003-10-19]
+	Added dmesg2gif-1.0 [hubertf 2003-10-20]
