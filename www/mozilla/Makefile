@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 1998/11/16 14:13:21 agc Exp $
+# $NetBSD: Makefile,v 1.19 1999/01/04 09:30:46 frueauf Exp $
 #
 
 DISTNAME=	mozilla-19981008
+WRKSRC=		${WRKDIR}/mozilla
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/source/ \
 	ftp://sunsite.org.uk/Mirrors/ftp.mozilla.org/pub/mozilla/source/ \
@@ -17,7 +18,7 @@ USE_MOTIF=	yes
 
 CONFLICTS=	mozilla-19980429 mozilla-19980603 mozilla-19980728
 
-WRKSRC=		${WRKDIR}/mozilla
+NOT_FOR_ARCHS=  mips
 
 MOZ_OBJDIR=	${OPSYS}${OS_VERSION}_OPT.OBJ
 MOZ_LIBDIR=	${PREFIX}/lib/mozilla
