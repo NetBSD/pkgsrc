@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.149 2003/05/22 14:36:31 wiz Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.150 2003/05/22 16:53:40 salo Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1152,12 +1152,12 @@ MPLAYER_USE_REALMEDIA?= NO
 # Possible: not defined, YES
 # Default: not defined
 
-#MTOOLS_ENABLE_FLOPPYD=
+MTOOLS_ENABLE_FLOPPYD?=	NO
 # Used by the mtools package to determine whether or not the floppyd
 # program is installed. X11 libraries and header files are needed to
 # build floppyd and run floppyd.
-# Possible: defined, not defined
-# Default: not defined
+# Possible: YES, NO
+# Default: NO
 
 MUTT_USE_NCURSES?= NO
 # Force ncurses to be used by mutt. (Older NetBSD and most non-NetBSD
