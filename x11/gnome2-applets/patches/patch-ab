@@ -1,15 +1,14 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/04/20 23:19:24 rh Exp $
+$NetBSD: patch-ab,v 1.2 2003/12/29 12:05:20 xtraeme Exp $
 
---- mini-commander/src/mc-install-default-macros.c.orig	2003-03-11 03:45:54.000000000 +1000
-+++ mini-commander/src/mc-install-default-macros.c
-@@ -67,8 +67,8 @@ install_default_macros_list (GConfClient
- 
- 	error = NULL;
- 	schema = gconf_client_get_schema (client, key, &error);
--	if (error) {
--		g_warning (_("Cannot get schema for %s : %s"), key, error->message);
-+	if (error || !schema) {
-+		g_warning (_("Cannot get schema for %s : %s"), key, error ? error->message : _("unknown error"));
- 		g_error_free (error);
- 		return;
- 	}
+--- configure.orig	2003-10-26 20:27:25.000000000 +0000
++++ configure	2003-10-26 20:29:06.000000000 +0000
+@@ -22265,7 +22265,8 @@
+ case "$host" in
+ *irix*) CDROM_HOST=irix; CDROM_LIBS="-lcdaudio -lmediad -lds";cd_device_path="/dev/cdrom";;
+ *linux*) CDROM_HOST=linux;cd_device_path="/dev/cdrom";;
+-*netbsd*) CDROM_HOST=netbsd;cd_device_path="/dev/rcd0";;
++*freebsd*) CDROM_HOST=bsd;cd_device_path="/dev/acd0";;
++*netbsd*|*openbsd*) CDROM_HOST=bsd;cd_device_path="/dev/rcd0d";;
+ *solaris*) CDROM_HOST=solaris;cd_device_path="/vol/dev/aliases/cdrom0";cdplayer_type_sun=true;;
+ esac
+ case "$host" in
