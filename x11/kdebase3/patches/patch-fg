@@ -1,0 +1,13 @@
+$NetBSD: patch-fg,v 1.1 2004/01/22 18:55:26 jmmv Exp $
+
+--- ksysguard/gui/ksysguard.cc.orig	2003-05-07 13:44:16.000000000 +0200
++++ ksysguard/gui/ksysguard.cc
+@@ -156,7 +156,7 @@ void TopLevel::resetWorkSheets()
+ 	ws->removeAllWorkSheets();
+ 
+ 	KStandardDirs* kstd = KGlobal::dirs();
+-	kstd->addResourceType("data", "share/apps/ksysguard");
++	kstd->addResourceType("data", "share/kde/apps/ksysguard");
+ 
+ 	QString workDir = kstd->saveLocation("data", "ksysguard");
+ 

@@ -1,0 +1,22 @@
+$NetBSD: patch-ff,v 1.1 2004/01/22 18:55:26 jmmv Exp $
+
+--- ksysguard/gui/Workspace.cc.orig	2003-07-13 21:24:24.000000000 +0200
++++ ksysguard/gui/Workspace.cc
+@@ -91,7 +91,7 @@ Workspace::readProperties(KConfig* cfg)
+ 		 * probably the first time the user has started KSysGuard. We
+ 		 * then "restore" a special default configuration. */
+ 		KStandardDirs* kstd = KGlobal::dirs();
+-		kstd->addResourceType("data", "share/apps/ksysguard");
++		kstd->addResourceType("data", "share/kde/apps/ksysguard");
+ 
+ 		workDir = kstd->saveLocation("data", "ksysguard");
+ 
+@@ -470,7 +470,7 @@ void
+ Workspace::showProcesses()
+ {
+ 	KStandardDirs* kstd = KGlobal::dirs();
+-	kstd->addResourceType("data", "share/apps/ksysguard");
++	kstd->addResourceType("data", "share/kde/apps/ksysguard");
+ 
+ 	QString f = kstd->findResource("data", "ProcessTable.sgrd");
+ 	if (!f.isEmpty())
