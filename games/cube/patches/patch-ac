@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/01/18 17:48:53 peter Exp $
+
+--- source/src/clientgame.cpp.orig	2004-05-09 01:55:34.000000000 +0200
++++ source/src/clientgame.cpp	2004-06-10 01:30:50.000000000 +0200
+@@ -200,8 +200,8 @@
+ 
+ int sleepwait = 0;
+ string sleepcmd;
+-void sleep(char *msec, char *cmd) { sleepwait = atoi(msec)+lastmillis; strcpy_s(sleepcmd, cmd); };
+-COMMAND(sleep, ARG_2STR);
++void dosleep(char *msec, char *cmd) { sleepwait = atoi(msec)+lastmillis; strcpy_s(sleepcmd, cmd); };
++COMMAND(dosleep, ARG_2STR);
+ 
+ void updateworld(int millis)        // main game update loop
+ {
