@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2001/07/09 16:01:54 abs Exp $
+# $NetBSD: Makefile,v 1.32 2001/08/11 18:46:34 rh Exp $
 #
 
-DISTNAME=		gnumeric-0.64
+DISTNAME=		gnumeric-0.68
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnumeric/}
 
@@ -11,21 +11,21 @@ COMMENT=		Powerful and easy to use spreadsheet program from the GNOME project
 
 BUILD_DEPENDS+=		python>=2.0:../../lang/python
 DEPENDS+=		libglade>=0.16:../../devel/libglade
-DEPENDS+=		gal>=0.3:../../devel/gal
-DEPENDS+=		gb>=0.0.17:../../lang/gb
+DEPENDS+=		gal>=0.10:../../devel/gal
+DEPENDS+=		gb>=0.0.20:../../lang/gb
 DEPENDS+=		libole2>=0.1.7:../../devel/libole2
-DEPENDS+=		oaf>=0.6.0:../../devel/oaf
+DEPENDS+=		oaf>=0.6.5:../../devel/oaf
 
 GNU_CONFIGURE=		YES
 USE_LIBINTL=		YES
 USE_LIBTOOL=		YES
 USE_X11BASE=		YES
+USE_GMAKE=		YES
 USE_PERL5=		YES
 LDFLAGS+=      		-L${LOCALBASE}/lib
 LDFLAGS+=      		-Wl,-R${LOCALBASE}/lib
 LDFLAGS+=      		-lunicode
 CPPFLAGS+=		-I${LOCALBASE}/include
-CONFIGURE_ARGS=		--without-bonobo
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .include "../../mk/bsd.pkg.mk"
