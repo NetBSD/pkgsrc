@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/01/10 22:09:15 pooka Exp $
+
+--- cmdline.inc.orig	Thu Oct 21 22:06:11 1999
++++ cmdline.inc	Sat Jan  8 23:19:04 2000
+@@ -432,7 +432,7 @@
+ # ifdef USE_BEOS_SNOOZE
+ 		            "(#%lambda () \"/boot/apps/plt/collects\")"
+ # else
+-		            "(#%lambda () \"/usr/local/lib/plt/collects\")"
++		            "(#%lambda () \"XXXPREFIXXXX/lib/plt/collects\")"
+ # endif
+ #endif
+ #ifdef DOS_FILE_SYSTEM

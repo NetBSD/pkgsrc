@@ -1,0 +1,16 @@
+MzScheme is an implementation of the Scheme programming language for
+Windows 95/98/NT, MacOS, Unix, and BeOS. MzScheme is R4RS-compliant
+(including the full numerical tower) and nearly R5RS-compliant (some macro
+support is lacking).
+
+ MzScheme also provides: 
+
+- Pre-emptive threads for all platforms 
+- Generative structures (a.k.a. record datatypes) 
+- Built-in exceptions; each primitive error raises a specific exception 
+- First-class compilation units (modules) for organizing program components 
+- A class-based object system reminiscent of C++/Java 
+- Built-in regular expression matching tools 
+- Simple TCP communication support on all platforms 
+- Portable filesystem access procedures 
+- Platform-specific process control, including AppleEvent support 

@@ -1,0 +1,25 @@
+$NetBSD: patch-bd,v 1.1.1.1 2000/01/10 22:09:15 pooka Exp $
+
+--- gc/misc.c.orig	Thu Oct 21 22:06:15 1999
++++ gc/misc.c	Mon Jan  3 10:21:54 2000
+@@ -58,6 +58,10 @@
+ #   endif
+ # endif
+ 
++#if defined(NETBSD) && defined(__ELF__)
++void GC_init_netbsd_elf(void);
++#endif
++
+ GC_FAR struct _GC_arrays GC_arrays /* = { 0 } */;
+ 
+ 
+@@ -430,6 +434,9 @@
+ #   endif
+ #   if defined(LINUX) && (defined(POWERPC) || defined(ALPHA) || defined(SPARC))
+ 	GC_init_linux_data_start();
++#   endif
++#   if defined(NETBSD) && defined(__ELF__)
++	GC_init_netbsd_elf();
+ #   endif
+ #   ifdef SOLARIS_THREADS
+ 	GC_thr_init();
