@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.92 2003/04/21 06:25:50 martti Exp $
+# $NetBSD: Makefile,v 1.93 2003/05/01 14:07:57 jmmv Exp $
 
 DISTNAME=	postfix-2.0.9
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
 
@@ -16,6 +17,8 @@ USE_BUILDLINK2=	yes
 USE_PKGINSTALL=	yes
 
 PKG_SYSCONFSUBDIR=	postfix
+
+OWN_DIRS=	${POSTFIX_SPOOL}
 
 CCARGS+=	-DDEF_CONFIG_DIR=\"${PKG_SYSCONFDIR}\"
 CCARGS+=	-DDEF_SENDMAIL_PATH=\"${PREFIX}/sbin/sendmail\"
@@ -111,6 +114,8 @@ MAKE_ENV+=	AUXLIBS="${AUXLIBS}" CCARGS="${CCARGS}"
 POSTFIX_CONF_FILES=	conf/main.cf src/util/sys_defs.h postfix-install
 POSTFIX_CONF_FILES+=	conf/sample-misc.cf src/global/mail_params.h
 
+FILES_SUBST+=	SHAREDIR=${SHAREDIR}
+MESSAGE_SUBST+=	SHAREDIR=${SHAREDIR}
 PLIST_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 PLIST_SUBST+=	POSTFIX_SPOOL=${POSTFIX_SPOOL}
 
@@ -118,10 +123,18 @@ PKG_GROUPS?=	postfix maildrop
 PKG_USERS?=	postfix:postfix::Postfix\\ User:${POSTFIX_SPOOL}
 
 LIBEXECDIR=	${PREFIX}/libexec/${PKGBASE}
-SHAREDIR=	${PREFIX}/share/${PKGBASE}
+SHAREDIR=	${PREFIX}/share/examples/${PKGBASE}
 
-CONF_FILES+=	${SHAREDIR}/main.cf ${PKG_SYSCONFDIR}/main.cf
+CONF_FILES=	${SHAREDIR}/main.cf ${PKG_SYSCONFDIR}/main.cf
 CONF_FILES+=	${SHAREDIR}/master.cf ${PKG_SYSCONFDIR}/master.cf
+CONF_FILES_PERMS=
+.for confscr in post-install postfix-files postfix-script
+CONF_FILES_PERMS+=	${SHAREDIR}/${confscr} ${PKG_SYSCONFDIR}/${confscr} \
+			${ROOT_USER} ${ROOT_GROUP} 755
+.endfor
+.undef confscr
+
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 pre-configure:
 	@for i in ${POSTFIX_CONF_FILES}; do				\
@@ -154,25 +167,14 @@ pre-install:
 	${INSTALL_DATA} ${WRKDIR}/smtpd.conf ${PREFIX}/lib/sasl
 	${ECHO} lib/sasl/smtpd.conf > ${WRKDIR}/PLIST.sasl
 .endif
-	for pf in postfix-files postfix-script main.cf master.cf; do \
-		${TEST} -f ${PKG_SYSCONFDIR}/$$pf || \
-		    ${INSTALL_DATA} ${WRKSRC}/conf/$$pf ${PKG_SYSCONFDIR}; \
-	done
-
-do-install:
-	(cd ${WRKSRC} && ${SH} postfix-install -non-interactive)
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/conf/main.cf ${SHAREDIR}
-	${INSTALL_DATA} ${WRKSRC}/conf/master.cf ${SHAREDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/conf/post-install ${SHAREDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/conf/postfix-files ${SHAREDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/conf/postfix-script ${SHAREDIR}
-	${INSTALL_DATA} ${WRKDIR}/mailer.conf.postfix ${PREFIX}/etc
-	${LN} -sf ${SHAREDIR}/post-install ${PKG_SYSCONFDIR}
-	${LN} -sf ${SHAREDIR}/postfix-files ${PKG_SYSCONFDIR}
-	${LN} -sf ${SHAREDIR}/postfix-script ${PKG_SYSCONFDIR}
-	${INSTALL_DATA_DIR} ${POSTFIX_SPOOL}
-	${CHMOD} 755 ${POSTFIX_SPOOL}
+	${INSTALL_DATA} ${WRKSRC}/conf/main.cf ${SHAREDIR}
+	${INSTALL_DATA} ${WRKSRC}/conf/master.cf ${SHAREDIR}
+	${INSTALL_DATA} ${WRKDIR}/mailer.conf.postfix ${SHAREDIR}/mailer.conf
+
+do-install:
+	(cd ${WRKSRC} && ${SETENV} config_directory="${SHAREDIR}" ${SH} postfix-install -non-interactive)
 
 .include "../../mk/bsd.pkg.mk"
