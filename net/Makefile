@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.531 2005/01/13 10:22:06 xtraeme Exp $
+# $NetBSD: Makefile,v 1.532 2005/01/13 12:57:38 drochner Exp $
 #
 
 COMMENT=	Networking tools
@@ -152,7 +152,6 @@ SUBDIR+=	jigdo
 SUBDIR+=	jumpgate
 SUBDIR+=	jwhois
 SUBDIR+=	kdenetwork3
-SUBDIR+=	kenosis
 SUBDIR+=	kphone
 SUBDIR+=	lambdamoo
 SUBDIR+=	lambdamoo-core
@@ -296,6 +295,7 @@ SUBDIR+=	py-ORBit
 SUBDIR+=	py-adns
 SUBDIR+=	py-dns
 SUBDIR+=	py-google
+SUBDIR+=	py-kenosis
 SUBDIR+=	py-mimelib
 SUBDIR+=	py-soaplib
 SUBDIR+=	py-soappy
