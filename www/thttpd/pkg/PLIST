@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2000/02/09 20:55:29 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.7 2000/03/01 16:12:13 hubertf Exp $
 sbin/thttpd
 sbin/syslogtocern
 sbin/makeweb
@@ -14,5 +14,5 @@ libexec/cgi-bin/phf
 libexec/cgi-bin/ssi
 share/www/index.html
 share/www/sitedrivenby.gif
-@dirrm %D/libexec/cgi-bin
+@dirrm libexec/cgi-bin
 @dirrm share/www
