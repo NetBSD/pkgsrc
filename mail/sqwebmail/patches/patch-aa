@@ -1,33 +1,42 @@
-$NetBSD: patch-aa,v 1.2 2004/02/23 23:41:43 jlam Exp $
+$NetBSD: patch-aa,v 1.3 2004/07/14 20:07:22 jlam Exp $
 
---- Makefile.in.orig	Thu Nov 27 16:46:50 2003
-+++ Makefile.in
-@@ -156,9 +156,9 @@ sysconf_DATA = authmodulelist
- @HAS_USERDB_TRUE@userdb_data = makeuserdb.8 userdb.8 userdbpw.8
+--- Makefile.in.orig	Tue Jul 13 13:41:32 2004
++++ Makefile.in	Tue Jul 13 13:45:36 2004
+@@ -156,17 +156,15 @@
+ @HAS_USERDB_FALSE@userdb_data = 
  
  scriptbindir = $(sbindir)
--scriptbin_SCRIPTS = $(userdb_scripts)
-+scriptbin_SCRIPTS =
+-scriptbin_SCRIPTS = $(userdb_scripts) \
+-	sharedindexinstall sharedindexsplit
+-
++scriptbin_SCRIPTS = 
  
--pkglibPROGRAMS = maildirmake deliverquota reformime makemime pcpd
+-pkglibPROGRAMS = maildirmake deliverquota reformime makemime pcpd authenumerate
 +pkglibPROGRAMS = reformime makemime pcpd
  
  pkglibexecdir = $(libexecdir)/sqwebmail
  pkglibexec_PROGRAMS = @pkglibPROGRAMS_exec@
-@@ -168,10 +168,10 @@ EXTRA_PROGRAMS = 
- CLEANFILES = $(userdb_scripts) $(pkgman1_DATA) $(pkgman8_DATA) $(sysconf_DATA)
+ libexec_SCRIPTS = sqwebmaild.rc
+ 
+-pkgsbinPROGRAMS = courierlogger
++pkgsbinPROGRAMS = 
+ pkgsbindir = $(sbindir)
+ pkgsbin_PROGRAMS = @pkgsbinPROGRAMS_exec@
+ 
+@@ -177,10 +175,10 @@
+ 
  
  pkgman8dir = @mandir@/man8
 -pkgman8_DATA = deliverquota.8 $(userdb_data)
-+pkgman8_DATA =
++pkgman8_DATA = 
  
  pkgman1dir = @mandir@/man1
 -pkgman1_DATA = maildirmake.1
-+pkgman1_DATA =
++pkgman1_DATA = 
  subdir = .
  ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
-@@ -773,44 +773,21 @@ makemime: rfc2045/makemime
+@@ -826,42 +824,20 @@
  # Install SqWebMail setuid to root, if we're running as root
  #
  
@@ -71,7 +80,5 @@ $NetBSD: patch-aa,v 1.2 2004/02/23 23:41:43 jlam Exp $
  	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
 -	cp /dev/null $(DESTDIR)$(sysconfdir)/nodsn
  	@cat sqwebmail/sqwebmail.msg
--	@cat authlib/authdaemon.msg
  
  uninstall-local: uninstall-userdb-local uninstall-userdb-script
- 	test -w $(DESTDIR)$(cgibindir) || exit 0; \
