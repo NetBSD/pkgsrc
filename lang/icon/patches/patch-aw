@@ -1,35 +1,37 @@
-$NetBSD: patch-aw,v 1.4 2003/03/24 12:12:10 jtb Exp $
+$NetBSD: patch-aw,v 1.5 2003/06/06 08:58:43 jtb Exp $
 
---- src/common/Makefile.orig	Wed Dec 12 18:28:10 2001
+--- src/common/Makefile.orig
 +++ src/common/Makefile
-@@ -5,7 +5,7 @@ OBJS =	long.o getopt.o time.o filepart.o
+@@ -5,7 +5,7 @@
  	munix.o literals.o rswitch.o alloc.o long.o getopt.o time.o\
- 	save.o redirerr.o xwindow.o dlrgint.o ipp.o
+ 	save.o xwindow.o dlrgint.o ipp.o
  
--common:		doincl patchstr $(OBJS) xpmaybe
-+common:		doincl patchstr $(OBJS) fixheaders xpmaybe
+-common:		doincl $(OBJS) gpxmaybe
++common:		doincl patchstr $(OBJS) fixheaders gpxmaybe
  
  doincl:		doincl.c ../h/arch.h
  		$(CC) $(CFLAGS) -o doincl doincl.c
-@@ -15,12 +15,20 @@ patchstr:	patchstr.c
- 		$(CC) $(CFLAGS) -o patchstr patchstr.c
- 		cp patchstr ../../bin
+@@ -13,13 +13,22 @@
  
+ patchstr:	patchstr.c
+ 		$(CC) $(CFLAGS) -o patchstr patchstr.c
++		cp patchstr ../../bin
++
 +fixheaders:
 +		cd ../h; for f in *.h; do							\
 +		sed -e 's:../h/::g;s:../xpm/::g' $$f > ../../lib/icon/$$f;			\
 +		done
-+
- xpmaybe:
- 		-if [ "x$(XL)" != "x" ]; then $(MAKE) xpm; fi
+ 
+ gpxmaybe:
+ 		-if [ "x$(XL)" != "x" ]; then $(MAKE) $(GDIR); fi
  
  xpm:
  		cd ../xpm; $(MAKE) libXpm.a
--		cp ../xpm/libXpm.a ../../bin
-+		cp ../xpm/libXpm.a ../../lib/icon
+-		cp -p ../xpm/libXpm.a ../../bin/libIgpx.a
++		cp -p ../xpm/libXpm.a ../../lib/icon/libIgpx.a
 +		cd ../xpm; for f in *.h; do							\
 +		sed -e 's:../h/::g;s:../xpm/::g' $$f >	../../lib/icon/$$f;			\
 +		done
  
- $(OBJS): ../h/define.h ../h/arch.h ../h/config.h ../h/cstructs.h ../h/mproto.h \
- 	  ../h/typedefs.h ../h/proto.h ../h/cpuconf.h
+ wincap:		
+ 		cd ../wincap; $(MAKE) libWincap.a

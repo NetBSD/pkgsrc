@@ -1,12 +1,12 @@
-$NetBSD: patch-at,v 1.3 2001/06/25 18:00:16 jtb Exp $
+$NetBSD: patch-at,v 1.4 2003/06/06 08:58:43 jtb Exp $
 
---- src/rtt/Makefile.orig	Tue May 29 23:43:05 2001
+--- src/rtt/Makefile.orig
 +++ src/rtt/Makefile
 @@ -24,7 +24,6 @@
  rtt:	$(OBJ)
  	$(CC) $(LDFLAGS) -o rtt $(OBJ)
  	cp rtt ../../bin
--	strip ../../bin/rtt
+-	strip ../../bin/rtt$(EXE)
  
  library:	$(OBJ)
  		rm -rf rtt.a

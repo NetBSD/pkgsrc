@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/03/24 12:12:08 jtb Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/06/06 08:58:42 jtb Exp $
 bin/colrbook
 bin/colrpick
 bin/fontpick
@@ -6,7 +6,6 @@ bin/icon
 bin/iconc
 bin/icont
 bin/iconx
-bin/ipatch
 bin/palette
 bin/patchstr
 bin/rtt
@@ -64,6 +63,8 @@ lib/icon/bkutil.u1
 lib/icon/bkutil.u2
 lib/icon/bold.u1
 lib/icon/bold.u2
+lib/icon/boolops.u1
+lib/icon/boolops.u2
 lib/icon/bufread.u1
 lib/icon/bufread.u2
 lib/icon/button.u1
@@ -212,7 +213,6 @@ lib/icon/filedim.u1
 lib/icon/filedim.u2
 lib/icon/filenseq.u1
 lib/icon/filenseq.u2
-lib/icon/filepat.h
 lib/icon/filesize.u1
 lib/icon/filesize.u2
 lib/icon/findre.u1
@@ -342,6 +342,8 @@ lib/icon/iscreen.u1
 lib/icon/iscreen.u2
 lib/icon/isdplot.u1
 lib/icon/isdplot.u2
+lib/icon/isdxplot.u1
+lib/icon/isdxplot.u2
 lib/icon/iterfncs.u1
 lib/icon/iterfncs.u2
 lib/icon/itlib.u1
@@ -373,7 +375,7 @@ lib/icon/lastname.u2
 lib/icon/lcseval.u1
 lib/icon/lcseval.u2
 lib/icon/lexdef.h
-lib/icon/libXpm.a
+lib/icon/libIgpx.a
 lib/icon/libcfunc.so
 lib/icon/linddefs.u1
 lib/icon/linddefs.u2
@@ -409,6 +411,8 @@ lib/icon/makelsys.u1
 lib/icon/makelsys.u2
 lib/icon/mapbit.u1
 lib/icon/mapbit.u2
+lib/icon/mapnav.u1
+lib/icon/mapnav.u2
 lib/icon/mapstr.u1
 lib/icon/mapstr.u2
 lib/icon/matchlib.u1
@@ -482,6 +486,8 @@ lib/icon/patch.u1
 lib/icon/patch.u2
 lib/icon/patterns.u1
 lib/icon/patterns.u2
+lib/icon/pattread.u1
+lib/icon/pattread.u2
 lib/icon/patutils.u1
 lib/icon/patutils.u2
 lib/icon/patword.u1
@@ -524,7 +530,6 @@ lib/icon/procname.u1
 lib/icon/procname.u2
 lib/icon/progary.u1
 lib/icon/progary.u2
-lib/icon/proto.h
 lib/icon/pscript.u1
 lib/icon/pscript.u2
 lib/icon/psrecord.u1
@@ -833,6 +838,7 @@ share/doc/icon/blubordr.gif
 share/doc/icon/build.htm
 share/doc/icon/clnroff.sed
 share/doc/icon/cube128.gif
+share/doc/icon/cygwin.htm
 share/doc/icon/docguide.htm
 share/doc/icon/faq.htm
 share/doc/icon/faq.txt

@@ -1,40 +1,26 @@
-$NetBSD: patch-aj,v 1.5 2003/03/24 12:12:10 jtb Exp $
+$NetBSD: patch-aj,v 1.6 2003/06/06 08:58:43 jtb Exp $
 
---- Makefile.orig	Thu Mar 28 02:45:33 2002
+--- Makefile.orig
 +++ Makefile
-@@ -15,7 +15,7 @@ dest=/must/specify/dest/
+@@ -14,7 +14,7 @@
  #
  # Default targets.
  
 -All:	Icont Ilib Ibin
 +All:	Icont Iconc Ilib Ibin
  
- config/unix/$(name)/status src/h/define.h:
+ config/$(name)/status src/h/define.h:
  	:
-@@ -62,7 +62,7 @@ Status:
- 
- Icont bin/icont: Common
- 		cd src/icont;		$(MAKE)
--		cd src/runtime;		$(MAKE) 
-+		cd src/runtime;		$(MAKE)
- 
- 
- # The compiler: rtt, the run-time system, and iconc.
-@@ -98,21 +98,23 @@ Ibin:		bin/icont
+@@ -97,16 +97,22 @@
  
  D=$(dest)
  Install:
--		test -d $D || mkdir $D
--		test -d $D/bin || mkdir $D/bin
--		test -d $D/lib || mkdir $D/lib
--		test -d $D/doc || mkdir $D/doc
--		test -d $D/man || mkdir $D/man
--		test -d $D/man/man1 || mkdir $D/man/man1
--		rm -f $D/bin/icon* $D/doc/* $D/man/man1/*
--		cd $D/lib; rm -f *
+-		mkdir $D
+-		mkdir $D/bin $D/lib $D/doc $D/man $D/man/man1
 -		cp README $D
--		cp bin/[abcdefghijklmnopqrstuvwxyz]* $D/bin
--		rm -f $D/bin/libXpm* $D/bin/rt* $D/bin/icon
+-		cp bin/[cflpvwx]* $D/bin
+-		cp bin/icon[tx]* $D/bin
+-		rm -f $D/bin/libI*
 -		(cd $D/bin; ln -s icont icon)
 -		cp lib/*.* $D/lib
 -		cp doc/*.* $D/doc
@@ -47,7 +33,7 @@ $NetBSD: patch-aj,v 1.5 2003/03/24 12:12:10 jtb Exp $
 +		$(BSD_INSTALL_DATA_DIR) $D/lib/icon
 +		$(BSD_INSTALL_DATA) lib/icon/*.* $D/lib/icon
 +		$(BSD_INSTALL_DATA_DIR) $D/share/doc/icon
-+		for f in ipatch colrbook colrpick fontpick palette vib	\
++		for f in colrbook colrpick fontpick palette vib	\
 +		wevents xgamma; do					\
 +		if [ -f bin/$$f ]; then					\
 +			${BSD_INSTALL_SCRIPT} bin/$$f $D/bin;		\
@@ -55,7 +41,6 @@ $NetBSD: patch-aj,v 1.5 2003/03/24 12:12:10 jtb Exp $
 +		done
 +		$(BSD_INSTALL_DATA) doc/*.* $D/share/doc/icon
 +		$(BSD_INSTALL_MAN) man/man1/* $D/man/man1
-+
  
  
  # Bundle up for binary distribution.

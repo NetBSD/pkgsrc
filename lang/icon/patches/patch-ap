@@ -1,7 +1,7 @@
-$NetBSD: patch-ap,v 1.6 2003/04/05 05:42:57 jtb Exp $
+$NetBSD: patch-ap,v 1.7 2003/06/06 08:58:43 jtb Exp $
 
 --- /dev/null
-+++ config/unix/netbsd/mipsel.s
++++ config/netbsd/mipsel.s
 @@ -0,0 +1,76 @@
 +	.data	
 +	.align	0
