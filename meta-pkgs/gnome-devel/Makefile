@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2004/12/28 22:26:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2005/02/26 17:27:44 jmmv Exp $
 
-DISTNAME=	gnome-devel-2.8.2
+DISTNAME=	gnome-devel-2.8.3
 CATEGORIES=	meta-pkgs devel gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -11,12 +11,12 @@ COMMENT=	Meta-package for development utilities used in the GNOME desktop
 
 DEPENDS+=	autoconf>=2.59:../../devel/autoconf
 DEPENDS+=	autoconf213>=2.13:../../devel/autoconf213
-DEPENDS+=	automake>=1.9.3:../../devel/automake
+DEPENDS+=	automake>=1.9.5:../../devel/automake
 DEPENDS+=	automake14>=1.4.6:../../devel/automake14
 DEPENDS+=	gettext-m4>=0.11.5:../../devel/gettext-m4
 DEPENDS+=	gnome-common>=2.8.0:../../devel/gnome-common
 DEPENDS+=	gtk-doc>=1.2:../../textproc/gtk-doc
-DEPENDS+=	intltool>=0.32.0:../../textproc/intltool
+DEPENDS+=	intltool>=0.33:../../textproc/intltool
 DEPENDS+=	libtool>=1.5.10:../../devel/libtool
 DEPENDS+=	pkgconfig>=0.15:../../devel/pkgconfig
 
