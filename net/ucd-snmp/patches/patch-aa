@@ -1,28 +1,24 @@
-$NetBSD: patch-aa,v 1.10 2000/01/24 04:18:37 itojun Exp $
---- configure.in.orig	Fri Jan 21 07:52:17 2000
-+++ configure.in	Fri Jan 21 08:04:52 2000
-@@ -407,7 +407,8 @@
-     else
-       SHLIB_CFLAGS="-Kpic"
+$NetBSD: patch-aa,v 1.11 2000/10/13 17:55:36 kim Exp $
+
+--- configure.in.orig	Sat May  6 01:46:26 2000
++++ configure.in	Wed Oct 11 19:15:06 2000
+@@ -461,3 +461,4 @@
      fi
 -    SHLIB_EXTENSION="so"
 +#   SHLIB_EXTENSION="so"
 +    SHLIB_EXTENSION="la"
- 	SHLIB_VERSION=
-     SHLIB_LD_CMD="ld -r -o"
-     SHLIB_LDCONFIG_CMD=
-@@ -712,7 +713,7 @@
- done
- module_list_o=`echo "$module_list_code " | sed 's/\([^ ]\) /\1.o /g'`
- module_list_c=`echo "$module_list_code " | sed 's/\([^ ]\) /\1.c /g'`
--mibgroup_list_o=`echo " $module_list_o " | sed 's@ \([^ ]*\)\.o@ mibgroup/\1.o @g'`
-+mibgroup_list_o=`echo " $module_list_o " | sed -e 's@ \([^ ]*\)\.o@ mibgroup/\1.o @g' -e 's@ mibgroup/[^ ]*/\([^ /]*\).o@ mibgroup/\1.o@g'`
- changequote([, ])
- AC_SUBST(module_list_c)
- AC_SUBST(module_list_h)
-@@ -1034,11 +1035,7 @@
- 
- AC_CHECK_STRUCT_FOR([
+     SHLIB_VERSION=
+@@ -1069,3 +1070,3 @@
+ AC_HEADER_SYS_WAIT
+-AC_CHECK_HEADERS(stdarg.h string.h fcntl.h limits.h sys/file.h sys/ioctl.h syslog.h unistd.h netinet/tcpip.h netinet/in.h netinet/ip.h net/if.h netdb.h sys/dmap.h machine/pte.h xti.h sys/sockio.h sys/socket.h sys/un.h fstab.h sys/fs.h mtab.h ufs/fs.h ufs/ffs/fs.h sys/fixpoint.h machine/param.h sys/vm.h vm/vm.h sys/vmmeter.h sys/vmparam.h sys/vmmac.h sys/vmsystm.h sys/mbuf.h sys/time.h sys/swap.h inet/mib2.h sys/statvfs.h sys/vfs.h sys/mnttab.h sys/user.h sys/proc.h sys/select.h mntent.h sys/mntent.h kstat.h utsname.h sys/utsname.h sys/cdefs.h getopt.h locale.h pthread.h sys/loadavg.h regex.h)
++AC_CHECK_HEADERS(stdarg.h string.h fcntl.h limits.h sys/file.h sys/ioctl.h syslog.h unistd.h netinet/tcpip.h netinet/in.h netinet/ip.h net/if.h netdb.h sys/dmap.h machine/pte.h xti.h sys/sockio.h sys/socket.h sys/un.h fstab.h sys/fs.h mtab.h ufs/fs.h ufs/ffs/fs.h sys/fixpoint.h machine/param.h sys/vm.h sys/vmmeter.h sys/vmparam.h sys/vmmac.h sys/vmsystm.h sys/mbuf.h sys/time.h sys/swap.h inet/mib2.h sys/statvfs.h sys/vfs.h sys/mnttab.h sys/user.h sys/proc.h sys/select.h mntent.h sys/mntent.h kstat.h utsname.h sys/utsname.h sys/cdefs.h getopt.h locale.h pthread.h sys/loadavg.h regex.h)
+ dnl FreeBSD required headers
+@@ -1077,3 +1078,3 @@
+ dnl BSDi2 headers
+-AC_CHECK_HEADERS(sys/mount.h vm/swap_pager.h ufs/ufs/dinode.h)
++AC_CHECK_HEADERS(sys/mount.h ufs/ufs/dinode.h)
+ dnl BSDi3 headers
+@@ -1276,7 +1277,3 @@
  #include <sys/types.h>
 -#define KERNEL
 -#define _KERNEL
@@ -30,11 +26,7 @@ $NetBSD: patch-aa,v 1.10 2000/01/24 04:18:37 itojun Exp $
 -#undef KERNEL
 -#undef _KERNEL
  #include <net/route.h>
- ], rtentry, rt_dst, no)
- 
-@@ -1049,11 +1046,7 @@
- dnl 4.4 compat
- AC_TRY_COMPILE([
+@@ -1291,7 +1288,3 @@
  #include <sys/types.h>
 -#define KERNEL
 -#define _KERNEL
@@ -42,11 +34,7 @@ $NetBSD: patch-aa,v 1.10 2000/01/24 04:18:37 itojun Exp $
 -#undef KERNEL
 -#undef _KERNEL
  #include <net/route.h>
- ],[
- 
-@@ -1070,11 +1063,7 @@
- if test "x$ac_cv_RTENTRY_TYPE" = "x"; then
- AC_TRY_COMPILE([
+@@ -1312,7 +1305,3 @@
  #include <sys/types.h>
 -#define KERNEL
 -#define _KERNEL
@@ -54,11 +42,7 @@ $NetBSD: patch-aa,v 1.10 2000/01/24 04:18:37 itojun Exp $
 -#undef KERNEL
 -#undef _KERNEL
  #include <net/route.h>
- ],[
- struct rtentry rt; 
-@@ -1124,11 +1113,7 @@
- [
- AC_TRY_COMPILE([
+@@ -1366,7 +1355,3 @@
  #include <sys/types.h>
 -#define KERNEL
 -#define _KERNEL
@@ -66,11 +50,7 @@ $NetBSD: patch-aa,v 1.10 2000/01/24 04:18:37 itojun Exp $
 -#undef KERNEL
 -#undef _KERNEL
  #include <net/route.h>
- ],[
- struct rtentry rt; 
-@@ -1145,41 +1130,25 @@
- dnl Check struct rtentry for various things.
- AC_CHECK_STRUCT_FOR([
+@@ -1387,7 +1372,3 @@
  #include <sys/types.h>
 -#define KERNEL
 -#define _KERNEL
@@ -78,9 +58,7 @@ $NetBSD: patch-aa,v 1.10 2000/01/24 04:18:37 itojun Exp $
 -#undef KERNEL
 -#undef _KERNEL
  #include <net/route.h>
- ], rtentry, rt_unit)
- 
- AC_CHECK_STRUCT_FOR([
+@@ -1397,7 +1378,3 @@
  #include <sys/types.h>
 -#define KERNEL
 -#define _KERNEL
@@ -88,9 +66,7 @@ $NetBSD: patch-aa,v 1.10 2000/01/24 04:18:37 itojun Exp $
 -#undef KERNEL
 -#undef _KERNEL
  #include <net/route.h>
- ], rtentry, rt_refcnt)
- 
- AC_CHECK_STRUCT_FOR([
+@@ -1407,7 +1384,3 @@
  #include <sys/types.h>
 -#define KERNEL
 -#define _KERNEL
@@ -98,9 +74,7 @@ $NetBSD: patch-aa,v 1.10 2000/01/24 04:18:37 itojun Exp $
 -#undef KERNEL
 -#undef _KERNEL
  #include <net/route.h>
- ], rtentry, rt_hash)
- 
- AC_CHECK_STRUCT_FOR([
+@@ -1417,7 +1390,3 @@
  #include <sys/types.h>
 -#define KERNEL
 -#define _KERNEL
@@ -108,5 +82,3 @@ $NetBSD: patch-aa,v 1.10 2000/01/24 04:18:37 itojun Exp $
 -#undef KERNEL
 -#undef _KERNEL
  #include <net/route.h>
- ], rtentry, rt_use)
- 

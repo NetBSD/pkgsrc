@@ -1,12 +1,13 @@
-$NetBSD: patch-ah,v 1.1 2000/01/23 10:41:10 itojun Exp $
---- agent/mibgroup/Makefile.in-	Fri Jan 21 05:58:34 2000
-+++ agent/mibgroup/Makefile.in	Fri Jan 21 05:58:15 2000
+$NetBSD: patch-ah,v 1.2 2000/10/13 17:55:36 kim Exp $
+
+--- agent/mibgroup/Makefile.in.orig	Fri Feb  4 16:15:15 2000
++++ agent/mibgroup/Makefile.in	Fri Oct 13 13:15:57 2000
 @@ -7,7 +7,7 @@
  # object files in the sub directory.
  
  .c.o:
 -	$(CC) -c $(CPPFLAGS) $(CFLAGS) -o $@ $<
-+	$(LIBTOOL) $(CC) -c $(CPPFLAGS) $(CFLAGS) $<
++	$(LIBTOOL) $(CC) -c $(CPPFLAGS) $(CFLAGS) -o $@ $<
  
  OBJS = @module_list_o@
  SRCS = @module_list_c@

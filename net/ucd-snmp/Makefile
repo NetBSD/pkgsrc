@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.20 2000/08/14 23:48:24 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2000/10/13 17:55:35 kim Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/04/06 20:50:31 andreas Exp
 #
 
-DISTNAME=	ucd-snmp-4.0.1
+DISTNAME=	ucd-snmp-4.1.2
 CATEGORIES=	net
 MASTER_SITES= 	ftp://ucd-snmp.ucdavis.edu/ \
 		ftp://sunsite.cnlab-switch.ch/mirror/ucd-snmp/ \
 		ftp://ftp.win.or.jp/pub/network/snmp/ucd-snmp/
 
-PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES=	ucd-snmp-4.0.1-v6-20000124b.diff.gz
-PATCH_DIST_STRIP=	-p1
+#PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
+#PATCHFILES=	ucd-snmp-4.0.1-v6-20000124b.diff.gz
+#PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://ucd-snmp.ucdavis.edu/
@@ -22,6 +22,7 @@ BUILD_DEFS+=	USE_INET6
 .include "../../mk/bsd.prefs.mk"
 
 USE_LIBTOOL=	yes
+USE_SSL=	yes
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-defaults --with-libwrap --with-logfile="/var/log/snmpd"
@@ -45,7 +46,7 @@ pre-configure:
 
 post-install:
 	@${MKDIR} ${PREFIX}/share/examples/ucd-snmp
-	${INSTALL_DATA} ${WRKSRC}/etc/* ${PREFIX}/share/examples/ucd-snmp
+	${INSTALL_DATA} ${WRKSRC}/EXAMPLE.conf ${PREFIX}/share/examples/ucd-snmp
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/snmp/dlmod
 
 .if (${OPSYS} == "NetBSD")

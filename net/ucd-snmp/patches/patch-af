@@ -1,25 +1,18 @@
-$NetBSD: patch-af,v 1.2 2000/01/23 10:41:10 itojun Exp $
---- agent/mibgroup/mibII/interfaces.c.orig	Fri Jan 21 05:33:12 2000
-+++ agent/mibgroup/mibII/interfaces.c	Fri Jan 21 05:46:58 2000
-@@ -121,7 +121,7 @@
- #if defined(freebsd3)
- #    define USE_SYSCTL_IFLIST
+$NetBSD: patch-af,v 1.3 2000/10/13 17:55:36 kim Exp $
+
+--- agent/mibgroup/mibII/interfaces.c.orig	Tue Mar 14 06:26:21 2000
++++ agent/mibgroup/mibII/interfaces.c	Wed Oct 11 19:03:17 2000
+@@ -134,3 +134,3 @@
  #else
 -# if defined(CTL_NET) && !defined(freebsd2)
 +# if defined(CTL_NET) && !defined(freebsd2) && !defined(netbsd1)
  #  ifdef PF_ROUTE
- #   ifdef NET_RT_IFLIST
- #    define USE_SYSCTL_IFLIST
-@@ -1549,16 +1549,31 @@
- 	    cp = strchr(saveName, '\0');
- 	    string_append_int (cp, ifnet.if_unit);
+@@ -1562,3 +1562,3 @@
  #endif
 -	    if (1 || strcmp(saveName,"lo0") != 0) {  /* XXX */
 +	    if (1) {  /* XXX */
  		/*
- 		 *  Try to find an address for this interface
- 		 */
- 
+@@ -1568,6 +1568,21 @@
  		auto_nlist(IFADDR_SYMBOL, (char *)&ia, sizeof(ia));
 +#ifdef netbsd1
 +           ia=(struct in_ifaddr *)ifnet.if_addrlist.tqh_first; 
@@ -41,5 +34,3 @@ $NetBSD: patch-af,v 1.2 2000/01/23 10:41:10 itojun Exp $
  		    ia = in_ifaddr.ia_next;
 +#endif
  		}
- 
- #if !defined(netbsd1) && !defined(freebsd2) && !defined(openbsd2) && !defined(STRUCT_IFNET_HAS_IF_ADDRLIST)
