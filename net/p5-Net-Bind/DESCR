@@ -1,0 +1,2 @@
+This module provides an interface to various files related to the bind
+DNS daemon.
