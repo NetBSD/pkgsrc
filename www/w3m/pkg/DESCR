@@ -1,0 +1,6 @@
+W3m is a termial-based WWW browser which supports HTML tables and frames.  It's
+small, so faster than other WWW browsers.  It also supports following URL by
+clicking mouse button on the anchor in xterm and its variants from 990526
+version.
+
+It uses Boehm-GC to implement the table/frame parser.
