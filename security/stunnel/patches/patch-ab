@@ -1,8 +1,33 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/04/03 09:25:36 martin Exp $
+$NetBSD: patch-ab,v 1.2 2000/04/03 16:52:17 tron Exp $
 
---- configure.in.orig	Sun Apr  2 11:13:49 2000
-+++ configure.in	Sun Apr  2 11:13:55 2000
-@@ -88,8 +88,9 @@
+--- configure.in.orig	Tue Feb 22 14:19:04 2000
++++ configure.in	Mon Apr  3 18:47:04 2000
+@@ -28,16 +28,14 @@
+ )
+ 
+ checkssldir() { :
+-    if test -d "$1/certs"; then
+-        if test -f "$1/include/openssl/ssl.h"; then
+-            AC_DEFINE(HAVE_OPENSSL)
+-            ssldir="$1"
+-            return 0
+-        fi
+-        if test -f "$1/include/ssl.h"; then
+-            ssldir="$1"
+-            return 0
+-        fi
++    if test -f "$1/include/openssl/ssl.h"; then
++        AC_DEFINE(HAVE_OPENSSL)
++        ssldir="$1"
++        return 0
++    fi
++    if test -f "$1/include/ssl.h"; then
++        ssldir="$1"
++        return 0
+     fi
+     return 1
+ }
+@@ -88,8 +86,9 @@
  LIBS="-lwrap $saved_LIBS"
  AC_TRY_LINK([int hosts_access(); int allow_severity, deny_severity;],
  [hosts_access()],
@@ -14,7 +39,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/04/03 09:25:36 martin Exp $
  
  dnl Add SSL includes and libraries
  CFLAGS="$CFLAGS -I$ssldir/include"
-@@ -122,6 +123,8 @@
+@@ -122,6 +121,8 @@
  
  dnl Checks for library functions.
  AC_CHECK_FUNCS(getopt snprintf vsnprintf openpty _getpty)
