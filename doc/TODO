@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2406 2004/11/21 09:00:06 jmmv Exp $
+$NetBSD: TODO,v 1.2407 2004/11/21 11:03:35 taca Exp $
 
 Suggested new packages
 ======================
@@ -980,6 +980,7 @@ Suggested package updates
 	o rudiments-0.27
 	o rvm-1.9
 	o sablecc-2.18.2
+	o samba-3.0.9
 	o same-1.8
 	o sarah-0.9.1b
 	o sawfish-1.3
