@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.30 2005/01/12 17:40:48 jlam Exp $
+# $NetBSD: sunpro.mk,v 1.31 2005/01/12 18:37:52 jlam Exp $
 
 .if !defined(COMPILER_SUNPRO_MK)
 COMPILER_SUNPRO_MK=	defined
@@ -7,19 +7,15 @@ COMPILER_SUNPRO_MK=	defined
 
 SUNWSPROBASE?=	/opt/SUNWspro
 
-# LANGUAGES.<compiler> is the list of supported languages by the compiler.
-# _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the ones
-# requested by the package in USE_LANGUAGES.
+# LANGUAGES.<compiler> is the list of supported languages by the
+# compiler.
 #
-LANGUAGES.sunpro=	c c++
-_LANGUAGES.sunpro=	# empty
-.for _lang_ in ${USE_LANGUAGES}
-_LANGUAGES.sunpro+=	${LANGUAGES.sunpro:M${_lang_}}
-.endfor
+LANGUAGES.sunpro=	# empty
 
 _SUNPRO_DIR=		${WRKDIR}/.sunpro
 _SUNPRO_VARS=		# empty
 .if exists(${SUNWSPROBASE}/bin/cc)
+LANGUAGES.sunpro+=	c
 _SUNPRO_VARS+=		CC
 _SUNPRO_CC=		${_SUNPRO_DIR}/bin/cc
 _ALIASES.CC=		cc
@@ -27,6 +23,7 @@ CCPATH=			${SUNWSPROBASE}/bin/cc
 PKG_CC:=		${_SUNPRO_CC}
 .endif
 .if exists(${SUNWSPROBASE}/bin/CC)
+LANGUAGES.sunpro+=	c++
 _SUNPRO_VARS+=		CXX
 _SUNPRO_CXX=		${_SUNPRO_DIR}/bin/CC
 _ALIASES.CXX=		CC c++
@@ -51,6 +48,14 @@ CC_VERSION!=		${CCPATH} -V 2>&1 | ${GREP} '^cc'
 CC_VERSION_STRING?=	${CC_VERSION}
 CC_VERSION?=		cc: Sun C
 .endif
+
+# _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the
+# ones requested by the package in USE_LANGUAGES.
+#
+_LANGUAGES.sunpro=	# empty
+.for _lang_ in ${USE_LANGUAGES}
+_LANGUAGES.sunpro+=	${LANGUAGES.sunpro:M${_lang_}}
+.endfor
 
 # Prepend the path to the compiler to the PATH.
 .if !empty(_LANGUAGES.sunpro)
