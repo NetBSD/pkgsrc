@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/06 12:32:06 jdolecek Exp $
+# $NetBSD: Makefile,v 1.2 2005/02/06 13:21:45 taca Exp $
 
 PKGNAME=		postgresql80-server-${BASE_VERS}
 PKGREVISION=		# empty
 COMMENT=		PostgreSQL database server programs
 
-DEPENDS+=		postgresql80-client>=${BASE_VERS}:../../wip/postgresql80-client
+DEPENDS+=		postgresql80-client>=${BASE_VERS}:../../databases/postgresql80-client
 
 # mips has no TAS implementation
 NOT_FOR_PLATFORM=	*-*-mips
 
-.include "../../wip/postgresql80/Makefile.common"
+.include "../../databases/postgresql80/Makefile.common"
 
 USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
@@ -76,5 +76,5 @@ post-install:
 	cd ${PG_DIR}/man && ${TAR} -zxm -T ${WRKDIR}/man_tar  		\
 		-f ${WRKSRC}/doc/man.tar.gz
 
-.include "../../wip/postgresql80-lib/buildlink3.mk"
+.include "../../databases/postgresql80-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
