@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:30:18 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/08 16:08:22 adam Exp $
 #
 
-DISTNAME=	dlcompat-20030522
+DISTNAME=	dlcompat-20030629
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fink/}
 
@@ -11,7 +11,7 @@ COMMENT=	Library for dlopen() emulation on Darwin
 
 ONLY_FOR_PLATFORM=	Darwin-*-*
 
-USE_BUILDLINK2=	# defined
-GNU_CONFIGURE=	# defined
+USE_BUILDLINK2=		# defined
+GNU_CONFIGURE=		# defined
 
 .include "../../mk/bsd.pkg.mk"
