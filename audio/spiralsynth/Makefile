@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2004/10/03 00:13:09 tv Exp $
+# $NetBSD: Makefile,v 1.15 2004/11/25 17:24:27 ben Exp $
 #
 
-DISTNAME=		SpiralSynth-0.1.7
-PKGNAME=		spiralsynth-0.1.7
-PKGREVISION=		2
+DISTNAME=		SpiralSynth-2.0.0
+PKGNAME=		spiralsynth-2.0.0
 CATEGORIES=		audio
 MASTER_SITES=		http://www.pawfal.org/Software/SpiralSynth/dload/
 
@@ -32,4 +31,5 @@ do-install:
 
 .include "../../x11/fltk/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
