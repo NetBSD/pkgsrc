@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2001/05/26 06:37:46 jlam Exp $
+$NetBSD: patch-ab,v 1.7 2003/12/01 16:35:51 ben Exp $
 
---- configure.in.orig	Mon May  7 10:34:22 2001
+--- configure.in.orig	2001-05-07 07:34:22.000000000 -0700
 +++ configure.in
-@@ -30,6 +30,9 @@
+@@ -30,6 +30,9 @@ AC_INIT(src/Fl.cxx)
  AC_PROG_RANLIB
  
  LIBNAME="libfltk.a"
@@ -12,7 +12,7 @@ $NetBSD: patch-ab,v 1.6 2001/05/26 06:37:46 jlam Exp $
  if test "$RANLIB" != ":"; then
    LIBCOMMAND="ar cr"
  else
-@@ -58,8 +61,17 @@
+@@ -58,8 +61,17 @@ AC_ARG_ENABLE(debug, [  --enable-debug  
    DEBUGFLAG="-g "
  fi])
  AC_ARG_ENABLE(gl, [  --enable-gl             turn on OpenGL support [default=yes]])
@@ -32,7 +32,7 @@ $NetBSD: patch-ab,v 1.6 2001/05/26 06:37:46 jlam Exp $
    PICFLAG=1
    case $uname in
        SunOS* | UNIX_S*)
-@@ -95,7 +107,14 @@
+@@ -95,7 +107,14 @@ if eval "test x$enable_shared = xyes"; t
            DSOCOMMAND="\$(CXX) -Wl,-soname,libfltk.so.1 \$(LDLIBS) -shared $DEBUGFLAG -o"
  	  ;;
    esac
@@ -48,7 +48,16 @@ $NetBSD: patch-ab,v 1.6 2001/05/26 06:37:46 jlam Exp $
  
  AC_PROG_CC
  AC_PROG_CXX
-@@ -375,7 +394,11 @@
+@@ -262,7 +281,7 @@ MAKEDEPEND="\$(CXX) -M"
+ if test -n "$GXX"; then
+     # Use gcc instead of c++ or g++, since we don't need the C++
+     # library to depend on...
+-    CXX="$CC"
++#    CXX="$CC"
+     CFLAGS="-Wall $CFLAGS"
+     CXXFLAGS="-Wall $CXXFLAGS"
+     if test -z "$DEBUGFLAG"; then
+@@ -375,7 +394,11 @@ CXXFLAGS="$DEBUGFLAG $CXXFLAGS"
  AC_SUBST(DSONAME)
  AC_SUBST(DSOCOMMAND)
  AC_SUBST(LIBNAME)
