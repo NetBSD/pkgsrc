@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/02/14 00:02:42 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/02/14 00:23:34 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use nautilus.
 #
@@ -14,7 +14,7 @@ BUILDLINK_DEPENDS+=	nautilus
 
 .if !empty(NAUTILUS_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=			nautilus
-BUILDLINK_DEPENDS.nautilus+=		nautilus>=2.4.2
+BUILDLINK_DEPENDS.nautilus+=		nautilus>=2.4.2nb4
 BUILDLINK_PKGSRCDIR.nautilus?=		../../sysutils/nautilus
 
 .include "../../audio/esound/buildlink3.mk"
@@ -27,7 +27,6 @@ BUILDLINK_PKGSRCDIR.nautilus?=		../../sysutils/nautilus
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../graphics/imlib2/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/librsvg2/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
