@@ -1,27 +1,27 @@
-# $NetBSD: Makefile,v 1.2 2000/01/03 16:34:27 tsarna Exp $
+# $NetBSD: Makefile,v 1.3 2000/01/08 22:46:31 tsarna Exp $
 #
 
-DISTNAME=	Zope-2.1.1-src
-PKGNAME=	py-dtml-2.1.1
+DISTNAME=	Zope-2.1.2-src
+PKGNAME=	py-dtml-2.1.2
 CATEGORIES=	textproc
-MASTER_SITES=   http://www.zope.org/Products/Zope/2.1.1/
+MASTER_SITES=   http://www.zope.org/Products/Zope/2.1.2/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.zope.org/Documentation/Guides/DTML-HTML/DTML.html
 
-DEPENDS+=	py-extclass-2.1.1:../../lang/python
+DEPENDS+=	py-extclass-2.1.*:../../lang/python
 
 ALL_TARGET=	default
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 SITE_PKG=		lib/python1.5/site-packages
 PYTHON_LIBDIR=		${LOCALBASE}/${SITE_PKG}
 PYTHON_CONFIGDIR=	${LOCALBASE}/lib/python1.5/config
-EXTRACT_ELEMENTS=	Zope-2.1.1-src/lib/python/DocumentTemplate \
-			Zope-2.1.1-src/lib/python/StructuredText \
-			Zope-2.1.1-src/lib/python/ts_regex.py
+EXTRACT_ELEMENTS=	${DISTNAME}/lib/python/DocumentTemplate \
+			${DISTNAME}/lib/python/StructuredText \
+			${DISTNAME}/lib/python/ts_regex.py
 
-WRKSRC=		${WRKDIR}/Zope-2.1.1-src/lib/python/DocumentTemplate
+WRKSRC=		${WRKDIR}/${DISTNAME}/lib/python/DocumentTemplate
 
 do-configure:
 	( cd ${WRKSRC} ;\
