@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2003/08/31 10:55:26 jlam Exp $
+# $NetBSD: Makefile,v 1.75 2003/08/31 11:06:02 jlam Exp $
 
 # Notes to package maintainers:
 #
@@ -43,11 +43,11 @@ do-extract:
 	@${CP} -Rp ${FILESDIR} ${WRKSRC}
 
 post-install:
-	if [ ! -f ${PKG_DBDIR}/pkgdb.byfile.db ]; then \
-		if [ ! -d ${PKG_DBDIR} ]; then \
-			${INSTALL_DATA_DIR} ${PKG_DBDIR}; \
-		fi; \
-		${PKG_ADMIN} rebuild ; \
+	if [ ! -f ${PKG_DBDIR}/pkgdb.byfile.db ]; then			\
+		if [ ! -d ${PKG_DBDIR} ]; then				\
+			${INSTALL_DATA_DIR} ${PKG_DBDIR};		\
+		fi;							\
+		${PKG_ADMIN} rebuild;					\
 	fi
 
 .include "../../mk/bsd.pkg.mk"
