@@ -1,0 +1,45 @@
+$NetBSD: patch-ba,v 1.1.1.1 2000/01/10 22:09:15 pooka Exp $
+
+--- gc/Makefile.orig	Thu Oct 21 22:06:13 1999
++++ gc/Makefile	Thu Jan  6 23:15:25 2000
+@@ -15,9 +15,9 @@
+ #	 c++ interface to $(OBJDIR)/gc.a
+ # cord/de - builds dumb editor based on cords.
+ ABI_FLAG=
+-CC= gcc $(ABI_FLAG)
+-CXX= $(CC) $(ABI_FLAG)
+-AS= as $(ABI_FLAG)
++CC=gcc $(ABI_FLAG)
++CXX=g++ $(ABI_FLAG)
++AS=gcc -c -x assembler-with-cpp $(ABI_FLAG)
+ 
+ OBJDIR = objects
+ EXEDIR = $(OBJDIR)
+@@ -34,8 +34,8 @@
+ 
+ # Debugging, warnings, optimization
+ DEBUGFLAGS=
+-WARN= -Wall
+-OPT= -O
++WARN=
++OPT= -O2
+ 
+ CFLAGS= -DNO_SIGNALS $(WARN) $(OPT) $(OPTIONS) $(DEBUGFLAGS) -DNO_EXECUTE_PERMISSION -DSILENT -DOLD_BLOCK_ALLOC
+ # Setjmp_test may yield overly optimistic results when compiled
+@@ -176,7 +176,7 @@
+     threadlibs.c if_mach.c if_not_there.c gc_cpp.cc gc_cpp.h weakpointer.h \
+     gcc_support.c mips_ultrix_mach_dep.s include/gc_alloc.h gc_alloc.h \
+     include/new_gc_alloc.h include/javaxfc.h sparc_sunos4_mach_dep.s \
+-    solaris_threads.h backptr.h $(CORD_SRCS)
++    sparc_netbsd_mach_dep.s solaris_threads.h backptr.h $(CORD_SRCS)
+ 
+ OTHER_FILES= Makefile PCR-Makefile OS2_MAKEFILE NT_MAKEFILE BCC_MAKEFILE \
+            README test.c test_cpp.cc setjmp_t.c SMakefile.amiga \
+@@ -291,6 +291,7 @@
+ 	./$(EXEDIR)/if_mach SPARC SUNOS5 $(AS) -o $(OBJDIR)/mach_dep.o $(srcdir)/sparc_mach_dep.s
+ 	./$(EXEDIR)/if_mach SPARC SUNOS4 $(AS) -o $(OBJDIR)/mach_dep.o $(srcdir)/sparc_sunos4_mach_dep.s
+ 	./$(EXEDIR)/if_mach SPARC OPENBSD $(AS) -o $(OBJDIR)mach_dep.o $(srcdir)/sparc_sunos4_mach_dep.s
++	./$(EXEDIR)/if_mach SPARC NETBSD $(AS) -o $(OBJDIR)/mach_dep.o $(srcdir)/sparc_netbsd_mach_dep.s
+ 	./$(EXEDIR)/if_not_there $(OBJDIR)/mach_dep.o $(CC) -c $(SPECIALCFLAGS) -o $(OBJDIR)/mach_dep.o $(srcdir)/mach_dep.c
+ 
+ $(OBJDIR)/mark_rts.o: $(srcdir)/mark_rts.c $(UTILS)

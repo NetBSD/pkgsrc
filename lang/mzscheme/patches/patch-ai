@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1.1.1 2000/01/10 22:09:15 pooka Exp $
+
+--- ../../collects/mzlib/restartr.ss.orig	Thu Mar 11 17:13:43 1999
++++ ../../collects/mzlib/restartr.ss	Sat Jan  8 23:58:48 2000
+@@ -144,7 +144,7 @@
+ 			  (lambda () (find-executable-path program "collects"))
+ 			  (lambda ()
+ 			    (case (system-type)
+-			      [(unix beos) "/usr/local/lib/plt/collects"]
++			      [(unix beos) "XXXPREFIXXXX/lib/plt/collects"]
+ 			      [(windows) "c:\\plt\\collects"]
+ 			      [else #f]))))
+ 			null)))))

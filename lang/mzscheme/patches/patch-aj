@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1.1.1 2000/01/10 22:09:15 pooka Exp $
+
+--- ../../collects/slibinit/init.ss.orig	Thu Apr 22 19:21:19 1999
++++ ../../collects/slibinit/init.ss	Sun Jan  9 00:00:34 2000
+@@ -46,7 +46,7 @@
+ 			       [(base name dir?) (split-path base)])
+ 		   (and (string? base) base))))
+ 	     (case (system-type)
+-	       ((unix) "/usr/local/lib/plt")
++	       ((unix) "XXXPREFIXXXX/lib/plt")
+ 	       ((windows) "C:\\Program Files\\PLT")
+ 	       ((macos) "My Disk:plt:")))])
+     (lambda () path)))

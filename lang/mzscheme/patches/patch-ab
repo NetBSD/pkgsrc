@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/01/10 22:09:15 pooka Exp $
+
+--- mzmake.orig	Thu Oct 21 22:06:11 1999
++++ mzmake	Thu Dec 30 17:23:33 1999
+@@ -37,6 +37,9 @@
+       make "$@" $GCOPTS RANLIB=':' CC='cc' WARN='' 
+     fi
+     ;;
++  NetBSD)
++    gmake 'CC=gcc' 'PERL=' 'OPTIONS=-DSILENT' $GCOPTS "$@"
++    ;;
+   FreeBSD)
+     gmake 'CC=gcc' $GCOPTS LIBS="-lm -rdynamic" "$@"
+     ;;

@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1.1.1 2000/01/10 22:09:15 pooka Exp $
+
+--- ../../man/man1/mzscheme.1.orig	Fri Jan 29 00:31:45 1999
++++ ../../man/man1/mzscheme.1	Sat Jan  8 23:30:27 2000
+@@ -223,7 +223,7 @@
+ "mzscheme") are checked. Links are followed as in the 
+ first case.
+ .IP
+-The "/usr/local/lib/plt/collects" directory is 
++The "XXXPREFIXXXX/lib/plt/collects" directory is 
+ tried.
+ .PP
+ Please consult your local administrator to determine whether

@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/01/10 22:09:15 pooka Exp $
+
+--- ../../bin/mzscheme.orig	Sun Dec 21 03:47:24 1997
++++ ../../bin/mzscheme	Sat Jan  8 23:15:58 2000
+@@ -1,14 +1,11 @@
+ #!/bin/sh
+ 
+-# This script picks the right binary for a mutli-platform
+-#  configuration
++# mzscheme execution script modified for the NetBSD pkg system
+ 
+ if [ "$PLTHOME" = '' ] ; then
+-  PLTHOME=/usr/local/lib/plt
++  PLTHOME=XXXPREFIXXXX/lib/plt
+   export PLTHOME
+ fi
+ 
+-SYS=`${PLTHOME}/bin/archsys z`
+-
+-exec ${PLTHOME}/.bin/${SYS}/mzscheme ${1+"$@"}
++exec ${PLTHOME}/bin/mzscheme ${1+"$@"}
+ 

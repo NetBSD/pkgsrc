@@ -1,0 +1,24 @@
+$NetBSD: patch-bf,v 1.1.1.1 2000/01/10 22:09:15 pooka Exp $
+
+--- gc/mach_dep.c.orig	Thu Oct 21 22:06:14 1999
++++ gc/mach_dep.c	Thu Dec 30 22:17:41 1999
+@@ -197,6 +197,8 @@
+ 	&& !defined(SCO) && !defined(SCO_ELF) \
+  	&& !(defined(LINUX)       && defined(__ELF__)) \
+ 	&& !(defined(__FreeBSD__) && defined(__ELF__)) \
++	&& !(defined(__NetBSD__) && defined(__ELF__)) \
++	&& !(defined(__OpenBSD__) && defined(__ELF__)) \
+ 	&& !defined(DOS4GW)
+ 	/* I386 code, generic code does not appear to work */
+ 	/* It does appear to work under OS2, and asms dont */
+@@ -211,7 +213,9 @@
+ #       endif
+ 
+ #	if ( defined(I386) && defined(LINUX) && defined(__ELF__) ) \
+-	|| ( defined(I386) && defined(__FreeBSD__) && defined(__ELF__) )
++	|| ( defined(I386) && defined(__FreeBSD__) && defined(__ELF__) ) \
++	|| ( defined(I386) && defined(__NetBSD__) && defined(__ELF__) ) \
++	|| ( defined(I386) && defined(__OpenBSD__) && defined(__ELF__) )
+ 
+ 	/* This is modified for Linux with ELF (Note: _ELF_ only) */
+ 	/* This section handles FreeBSD with ELF. */
