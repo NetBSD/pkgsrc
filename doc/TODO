@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2802 2004/12/29 13:54:43 adrianp Exp $
+$NetBSD: TODO,v 1.2803 2004/12/29 20:27:39 kristerw Exp $
 
 Suggested new packages
 ======================
@@ -1144,10 +1144,8 @@ Suggested package updates
 	o xkbset-0.5
 	o xlispstat-3.52.20
 	o xm7-303
-	o xmame-0.89
 	o xmbdfed-4.5
 	o xmcd-3.3.0
-	o xmess-0.89
 	o xmlstarlet-0.9.5
 	o xmms-crossfade-0.3.7
 	o xmms-dspectogram-1.2.1
