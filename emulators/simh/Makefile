@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2003/07/17 21:35:44 grant Exp $
+# $NetBSD: Makefile,v 1.16 2003/09/26 21:36:11 jmmv Exp $
 #
 
-DISTNAME=	simhv210-4
-PKGNAME=	simh-2.10.4
-PKGREVISION=	1
+DISTNAME=	simhv30-2
+PKGNAME=	simh-3.0.2
 WRKSRC=		${WRKDIR}
 CATEGORIES=	emulators
 MASTER_SITES=	http://simh.trailing-edge.com/sources/
