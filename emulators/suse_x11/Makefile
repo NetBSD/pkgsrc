@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2001/02/17 18:38:30 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2002/02/21 17:27:39 martti Exp $
 
 DISTNAME=		suse_x11-${SUSE_VERSION}
+PKGREVISION=		1
 CATEGORIES=		emulators
-MASTER_SITES=		${MASTER_SITE_SUSE:=x1/}
+MASTER_SITES=		${MASTER_SITE_SUSE:=x1/} \
+			ftp://ftp.suse.com/pub/suse/i386/update/${SUSE_VERSION}/x1/
 DISTFILES=		${RPMFILES}
 
 MAINTAINER=		packages@netbsd.org
@@ -17,6 +19,6 @@ EXTRACT_ONLY=		# empty
 NO_BUILD=		yes
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
-RPMFILES=		xshared.rpm xpm.rpm
+RPMFILES=		xshared-3.3.6-43.i386.rpm xpm.rpm
 
 .include "../suse_linux/Makefile.common"
