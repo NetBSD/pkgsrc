@@ -1,0 +1,33 @@
+$NetBSD: patch-au,v 1.1.1.1 2000/08/14 04:33:24 itojun Exp $
+
+--- postconf/Makefile.orig	Wed Apr 26 20:25:55 2000
++++ postconf/Makefile	Wed Apr 26 20:39:03 2000
+@@ -0,0 +1,28 @@
++#	$NetBSD: patch-au,v 1.1.1.1 2000/08/14 04:33:24 itojun Exp $
++.include "../conf/main.cf"
++PROG=	postconf
++BINDIR=${command_directory}
++
++PSRCS=	postconf.c
++GENSRCS=bool_table.h bool_vars.h int_table.h int_vars.h str_table.h \
++	str_vars.h
++SRCS=	${PSRCS} ${GENSRCS}
++
++CLEANFILES+= ${GENSRCS}
++
++CPPFLAGS+= -I${.OBJDIR}
++
++DPADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++LDADD+= ${LIBPGLOBAL} ${LIBPUTIL} ${AUXLIBS}
++
++# XXX
++NOMAN=1
++
++AWK?=	awk
++${GENSRCS}: ${.CURDIR}/../global/mail_params.h
++	$(AWK) -f $(.CURDIR)/extract.awk $(.CURDIR)/../*/*.c
++
++# XXX
++${PSRCS}: ${GENSRCS}
++
++.include <bsd.prog.mk>
