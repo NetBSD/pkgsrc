@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/07/31 03:42:52 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2004/07/31 03:52:00 jlam Exp $
 
 DISTNAME=		cyrus-imapd-2.1.15
 PKGREVISION=		3
@@ -162,18 +162,24 @@ PERL5_PACKLIST= \
 #
 post-patch:
 	cd ${WRKSRC}/man;						\
-	for file in deliver.8 imapd.8 master.8 pop3d.8; do		\
-		${MV} $${file} cyrus-$${file};				\
-		${SED}	-e "s|\(\$$(srcdir)/\)\($${file}\)|\1cyrus-\2|g" \
-			Makefile.in > Makefile.in.fixed;		\
-		${MV} -f Makefile.in.fixed Makefile.in;			\
+	set --	deliver 8 imapd 8 master 8 pop3d 8;			\
+	while [ $$# -gt 0 ]; do						\
+		man=$$1.$$2;						\
+		for file in Makefile.in *.[0-9]; do			\
+			${SED}	-e "s|\(\$$(srcdir)/\)\($$man\)|\1cyrus-\2|g" \
+				-e "s|\(\\\fB\)\($$1($$2)\\\fR\)|\1cyrus-\2|g" \
+				$$file > $$file.fixed;			\
+			${MV} -f $$file.fixed $$file;			\
+		done;							\
+		if [ -f $$man ]; then					\
+			${MV} $$man cyrus-$$man;			\
+		fi;							\
+		shift 2;						\
 	done
-	files=`${FIND} ${WRKSRC} -type f -exec ${GREP} -l \
-		-e /etc/imapd\.conf -e /etc/cyrus\.conf {} \;`; \
-	for file in $${files}; do					\
-		${SED}	-e "s|\(\\fB\)\($${name}($${suffix})\)|\1cyrus-\2|g" \
-			-e "s|\(\$$(srcdir)/\)\($${man}\)|\1cyrus-\2|g"	\
-			-e "s|/etc/\(cyrus\.conf\)|${PKG_SYSCONFDIR}/\1|g" \
+	${FIND} ${WRKSRC} -type f -print |				\
+	${XARGS} -n 1 ${GREP} -l -e /etc/imapd\.conf -e /etc/cyrus\.conf | \
+	while read file; do						\
+		${SED}	-e "s|/etc/\(cyrus\.conf\)|${PKG_SYSCONFDIR}/\1|g" \
 			-e "s|/etc/\(imapd\.conf\)|${PKG_SYSCONFDIR}/\1|g" \
 			$${file} > $${file}.fixed;			\
 		${MV} -f $${file}.fixed $${file};			\
