@@ -1,0 +1,3 @@
+This package provides the dvdread plugin for GStreamer, which allows reading
+of DVD disks.  You'll probably want to install the dvdnav plugin (from the
+gst-plugins-dvdnav package), too.

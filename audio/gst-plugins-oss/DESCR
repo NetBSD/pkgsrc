@@ -1,0 +1,2 @@
+This package provides the oss plugin for GStreamer, which allows playback
+and recording of sound through the Open Sound System audio libraries.

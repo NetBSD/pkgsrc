@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2004/04/06 11:10:06 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.3 2004/04/07 11:32:09 jmmv Exp $
 #
 
 DISTNAME=		gst-plugins-0.8.0
@@ -126,7 +126,8 @@ INSTALL_DIRS=		${WRKSRC}/${GST_PLUGINS_DIR}
 
 # Generate a description automatically.
 DESCR_SRC=		${.CURDIR}/../../multimedia/gst-plugins/DESCR
-DESCR_SRC+=		${WRKDIR}/.gen_descr
+DESCR_SRC+=		${.CURDIR}/../../multimedia/gst-plugins/DESCR.blank
+DESCR_SRC+=		${.CURDIR}/DESCR
 
 # Fix paths to already installed libraries (by the gst-plugins package).
 SUBST_CLASSES+=		libs
@@ -134,10 +135,6 @@ SUBST_MESSAGE.libs=	"Fixing path to dependent libraries."
 SUBST_STAGE.libs=	pre-configure
 SUBST_FILES.libs=	${GST_PLUGINS_DIR}/Makefile.in
 SUBST_SED.libs=		-e 's|$$(top_builddir)/gst-libs/gst/libgst|${BUILDLINK_PREFIX.gst-plugins}/lib/libgst|g'
-
-post-build:
-	@${ECHO} "" >${WRKDIR}/.gen_descr
-	@${ECHO} "This package provides the ${GST_PLUGINS_NAME} plugin for GStreamer." >>${WRKDIR}/.gen_descr
 
 .include "../../multimedia/gst-plugins/buildlink3.mk"
 .endif
