@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6303 2004/06/24 21:07:09 recht Exp $
+$NetBSD: CHANGES,v 1.6304 2004/06/24 23:14:07 taya Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3049,3 +3049,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated icecast to 2.0.1 [xtraeme 2004-06-24]
 	Added ccd2iso-0.9 [xtraeme 2004-06-24]
 	Updated roundup to 0.7.5 [recht 2004-06-24]
+	Updated thunderbird to 0.7 [taya 2004-06-24]
+	Updated thunderbird-gtk2 to 0.7 [taya 2004-06-24]
