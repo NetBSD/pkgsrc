@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/12/01 14:23:06 taca Exp $
+# $NetBSD: Makefile,v 1.5 2002/12/08 11:34:39 cjep Exp $
 # FreeBSD Id: ports/japanese/namazu2/Makefile,v 1.16 2000/10/26 20:56:25 knu Exp
 
 DISTNAME=	namazu-2.0.12
@@ -59,5 +59,6 @@ post-install:
 test:
 	@cd ${WRKSRC}; make check
 
+.include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
