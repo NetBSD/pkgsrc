@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.537 2002/11/17 01:21:59 seb Exp $
+$NetBSD: CHANGES,v 1.538 2002/11/17 12:00:22 grant Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3642,3 +3642,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated ispell-german to 20021114 [wiz 2002-11-15]
 	Updated win32-codecs to 020909 [wiz 2002-11-16]
 	Updated gtexinfo to 4.3 [seb 2002-11-17]
+	Updated libtool to 1.4.20010614nb10 [grant 2002-11-17]
