@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/13 13:53:20 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/05 20:29:55 seb Exp $
 #
 
 DISTNAME=		pv-0.4.5
@@ -17,6 +17,7 @@ USE_GMAKE=		yes
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 
+USE_NEW_TEXINFO=	YES
 INFO_FILES=		pv.info
 
 post-install:
@@ -26,5 +27,4 @@ post-install:
 .endfor
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
