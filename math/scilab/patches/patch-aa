@@ -1,47 +1,11 @@
-$NetBSD: patch-aa,v 1.6 2001/04/08 16:25:28 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.7 2003/02/22 04:31:06 dmcmahill Exp $
 
-fix install target.
-
---- Makefile.in.orig	Mon Mar 26 02:59:13 2001
-+++ Makefile.in	Thu Mar 29 07:54:47 2001
-@@ -1,4 +1,9 @@
- SHELL = /bin/sh
- 
-+prefix=@prefix@
-+exec_prefix=@exec_prefix@
-+bindir=@bindir@
-+
-+
- binary:
- 	@if test -f .binary; then \
-@@ -151,19 +156,15 @@
- 
- install:
--	@if test `pwd` != ${LIBPREFIX}/$(SCIBASE); then \
--		touch .binary; \
--		strip $(SCIDIR)/bin/scilex; \
--		(cd tests; make distclean); \
--		(cd examples; make distclean); \
--		(cd .. ; tar cf - $(BINDISTFILES) | (cd ${LIBPREFIX}; tar xf -)); \
--		(cd ${LIBPREFIX}/$(SCIBASE); make); \
--		$(RM) .binary; \
--	fi
--	$(RM) /usr/bin/scilab
--	ln -fs ${LIBPREFIX}/$(SCIBASE)/bin/scilab /usr/bin/scilab
--	$(RM) /usr/bin/intersci
--	ln -fs ${LIBPREFIX}/$(SCIBASE)/bin/intersci /usr/bin/intersci
--	$(RM) /usr/bin/intersci-n
--	ln -fs ${LIBPREFIX}/$(SCIBASE)/bin/intersci-n /usr/bin/intersci-n
-+	touch .binary
-+	strip $(SCIDIR)/bin/scilex
-+	cd tests && $(MAKE) distclean
-+	cd examples && $(MAKE) distclean
-+	cd .. && tar cf - $(BINDISTFILES) | (cd ${prefix}; tar xf -)
-+	cd ${prefix}/$(SCIBASE) && $(MAKE)
-+	$(RM) .binary
-+	for f in ${prefix}/${SCIBASE}/bin/* ; \
-+	do \
-+		ln -fs $$f ${bindir}/`basename $$f` ; \
-+	done
- 
- uninstall:
+--- configure.in.orig	Thu Feb 20 22:05:02 2003
++++ configure.in	Fri Feb 21 06:46:43 2003
+@@ -992,5 +992,5 @@
+    FC_OPTIONS="${FFLAGS}"
+    FC_OPTIONS_O0=`echo $FC_OPTIONS | sed 's/-O[0-9]*//g'`
+-   FC_LDFLAGS="${LDLAGS} -Wl,-R${X11BASE}/lib"
++   FC_LDFLAGS="${LDFLAGS} -Wl,-R${X11BASE}/lib"
+    FC_PICFLAGS='-fPIC'
+    # check for --export-dynamic

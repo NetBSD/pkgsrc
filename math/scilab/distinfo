@@ -1,29 +1,8 @@
-$NetBSD: distinfo,v 1.7 2002/05/22 10:37:04 dmcmahill Exp $
+$NetBSD: distinfo,v 1.8 2003/02/22 04:31:05 dmcmahill Exp $
 
-SHA1 (scilab-2.6.src.tar.gz) = a91d9a33e849844ec8d6ce98657ded085c5928e0
-Size (scilab-2.6.src.tar.gz) = 6725259 bytes
-SHA1 (patch-aa) = a4028254852fb938eb9e3a64b9964526195e13ab
-SHA1 (patch-ab) = 8896079c2b11e41faf1760d5e88cfc2771a30120
-SHA1 (patch-ac) = fb7bddba451b7737c031a7eabe12c341daa7b4d0
-SHA1 (patch-ad) = dd61bb74802f892d558e282450073ac013a89599
-SHA1 (patch-ae) = 5dc250f876b0932adbc7f2771843f71440c9038e
-SHA1 (patch-af) = 5a94f300bfbaf7791cc3dc52382ee48693189647
-SHA1 (patch-ag) = ba61ea2d65f4e4dfef8e32b1383a956140f61871
-SHA1 (patch-ah) = bf21644c8cc3fa5eadca1440e47c769f1af3a8ac
-SHA1 (patch-ai) = 12bca09d2866492fb66b76fa98f339d60cd0830f
-SHA1 (patch-aj) = 3e7bdaf50537798b846ffafd9eb4025b3e8ca383
-SHA1 (patch-ak) = f77c630154ea33701bc4ade5daae30b03ae5ca73
-SHA1 (patch-al) = d4e15553a5eb9dd022db2512ca6177debe54c70c
-SHA1 (patch-am) = 295a23a71ea78e21309dfc70e65bac7fc5c341ec
-SHA1 (patch-an) = c0086cf9d5f89c952ec3d5b9ddf8b25835ec696d
-SHA1 (patch-ao) = 7ce1918c057a9f55626dcdd511c7dcbda9ff53d6
-SHA1 (patch-ap) = 50f6adb8083c317e9f61b6d85236b41dd850f696
-SHA1 (patch-aq) = 41326a5f035c827a0c9c8595e175273297dc20c8
-SHA1 (patch-ar) = 2162ecb3f6571b6ac81288c3ac74c8986147a319
-SHA1 (patch-as) = fbd24619bcd50d0975bdd687f7458300b3598c05
-SHA1 (patch-at) = 7b7911f192bd5fb9cda288b65bfd2f1b4ed22759
-SHA1 (patch-au) = 6d4bb69d7ff1bc1c06c1bc7359725c14da6222da
-SHA1 (patch-av) = 96297761da050b71096f41d32566152a52e470a5
-SHA1 (patch-aw) = b243b52711a6219811d26d8640e185b698585493
-SHA1 (patch-ax) = 760f7b506fbe47d6db6ecfdf4440c03dce07d6cf
-SHA1 (patch-ay) = 0be5a69e6146fbd664406c7ed10fabe0c7d6e785
+SHA1 (scilab-2.7.src.tar.gz) = ce1ab6cb06d938239590e31ac3701ced6f9b3505
+Size (scilab-2.7.src.tar.gz) = 9510676 bytes
+SHA1 (patch-aa) = 93efb013a8651829dcef30b13fa6de085375d76c
+SHA1 (patch-ab) = 2a13fc2bf4bd6dc55dc12480acb4f44b8c5ef14f
+SHA1 (patch-ac) = 8d8e2352815b4c1ad61545ccb7e430169eae876e
+SHA1 (patch-ad) = 3554377aa2188f55355218408a9e12b5faef177b

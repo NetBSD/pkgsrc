@@ -1,20 +1,11 @@
-$NetBSD: patch-ab,v 1.4 2001/04/08 16:25:28 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.5 2003/02/22 04:31:06 dmcmahill Exp $
 
-makes the pvm demo work.  patch derived from a post to
-comp.soft-sys.math.scilab
-
---- routines/pvm/pvm_proc_ctrl.c.orig	Fri Aug 18 07:10:38 2000
-+++ routines/pvm/pvm_proc_ctrl.c	Tue Mar 27 10:18:59 2001
-@@ -464,5 +464,11 @@
-   }
- #else 
--  strcpy(cmd, "scilex");
-+  if (path = getenv("SCI")){
-+	strcpy(cmd,path);
-+	strcat(cmd,"/bin/scilex");
-+  }
-+  else {
-+  	strcpy(cmd, "scilex");
-+  }
- #endif 
- #if (defined __MSC__) || (defined __ABSC__)
+--- configure.orig	Thu Feb 20 22:05:02 2003
++++ configure	Fri Feb 21 06:47:13 2003
+@@ -10229,5 +10229,5 @@
+    FC_OPTIONS="${FFLAGS}"
+    FC_OPTIONS_O0=`echo $FC_OPTIONS | sed 's/-O0-9*//g'`
+-   FC_LDFLAGS="${LDLAGS} -Wl,-R${X11BASE}/lib"
++   FC_LDFLAGS="${LDFLAGS} -Wl,-R${X11BASE}/lib"
+    FC_PICFLAGS='-fPIC'
+    # check for --export-dynamic
