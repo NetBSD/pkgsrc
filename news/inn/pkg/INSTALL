@@ -1,0 +1,37 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1 1999/07/18 23:34:14 tron Exp $
+
+if [ "$2" != "POST-INSTALL" ]; then
+  exit 0
+fi
+
+if [ ! -d @@INN_DATA_DIR@@ ]; then
+	mkdir -p @@INN_DATA_DIR@@
+	chown news:news @@INN_DATA_DIR@@
+	chmod 775 @@INN_DATA_DIR@@
+fi
+
+DIRS="db etc log log/OLD run spool"
+for DIR in $DIRS; do
+	if [ ! -d @@INN_DATA_DIR@@/$DIR ]; then
+		install -d -o news -g news -m 775 @@INN_DATA_DIR@@/$DIR
+	fi
+done
+
+SPOOLS="articles overview archive incoming incoming/bad outgoing uniover innfeed"
+for DIR in $SPOOLS; do
+	if [ ! -d @@INN_DATA_DIR@@/spool/$DIR ]; then
+		install -d -o news -g news -m 775 @@INN_DATA_DIR@@/spool/$DIR
+	fi
+done
+
+ETC="actsync.cfg actsync.ign control.ctl cycbuff.conf distrib.pats expire.ctl incoming.conf inn.conf innfeed.conf innreport.conf innwatch.ctl moderators motd.news news2mail.cf newsfeeds nnrp.access nnrpd.track nntpsend.ctl overview.ctl overview.fmt passwd.nntp storage.conf"
+
+for FILE in $ETC; do 
+	if [ ! -e @@INN_DATA_DIR@@/etc/$FILE ]; then
+		install -c -o news -g news -m 664 @@PREFIX@@/share/examples/inn/$FILE @@INN_DATA_DIR@@/etc
+	fi
+done
+
+exit 0
