@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 1998/07/04 23:29:54 fvdl Exp $
+@comment $NetBSD: PLIST,v 1.7 1998/08/04 13:09:22 fvdl Exp $
 bin/moz-export
 bin/mozilla-export
+bin/mozilla
 lib/mozilla/libDtWidgets.so.1.0
 lib/mozilla/libXfeBm.so.1.0
 lib/mozilla/libXfeWidgets.so.1.0
@@ -32,6 +33,7 @@ lib/mozilla/libmocha.so.1.0
 lib/mozilla/libmsgc21.so
 lib/mozilla/libnetcache.so.1.0
 lib/mozilla/libnetcnvts.so.1.0
+lib/mozilla/libnetutil.so.1.0
 lib/mozilla/libnetwork.so.1.0
 lib/mozilla/libnspr21.so
 lib/mozilla/libparse.so.1.0
