@@ -1,0 +1,15 @@
+--- /dev/null	Fri Jul 31 02:54:09 1998
++++ Makefile	Fri Jul 31 04:12:51 1998
+@@ -0,0 +1,12 @@
++all:
++	cd server && make
++	cd client && xmkmf -a && make
++install:
++	/usr/bin/install -o bin -g games -m 0755 client/tanked $(X11BASE)/bin
++	/usr/bin/install -o bin -g games -m 2755 server/tankedserv $(X11BASE)/bin
++	/usr/bin/install -d -o bin -g games -m 0775 $(X11BASE)/share/tanked/logs
++	/usr/bin/install -d -o bin -g games -m 0775 $(X11BASE)/share/tanked/maps
++	/usr/bin/install -o bin -g bin -m 0644 server/maps/* $(X11BASE)/share/tanked/maps
++	/usr/bin/install -o bin -g bin -m 0644 server/maps.list $(X11BASE)/share/tanked
++	/usr/bin/install -o bin -g bin -m 0644 server/.motd $(X11BASE)/share/tanked/motd
++	/usr/bin/install -o bin -g bin -m 0644 server/.players $(X11BASE)/share/tanked/players

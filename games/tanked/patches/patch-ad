@@ -1,0 +1,12 @@
+--- server/motd.c.orig	Sat Apr 11 18:34:29 1998
++++ server/motd.c	Fri Jul 31 03:47:57 1998
+@@ -31,3 +31,3 @@
+ 
+-    if ((mf = fopen("./.motd", "r")) == 0) {
++    if ((mf = fopen(TANKDIR "/motd", "r")) == 0) {
+         printf("No motd file, I'm bummed :-(\n");
+@@ -47,3 +47,3 @@
+     /* read into motd array */
+-    mf = fopen("./.motd", "r");
++    mf = fopen(TANKDIR "/motd", "r");
+     for (i = 0; i < GLO_motdLines; i++) {
