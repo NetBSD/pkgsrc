@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6436 2004/07/03 23:07:22 recht Exp $
+$NetBSD: CHANGES,v 1.6437 2004/07/04 10:26:52 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3231,3 +3231,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cairo to 0.1.23nb1 [recht 2004-07-03]
 	Updated mono to 1.0 [recht 2004-07-03]
 	Updated libgdiplus to 1.0 [recht 2004-07-03]
+	Updated swfdef to 0.2.2 [mrg 2004-07-04]
