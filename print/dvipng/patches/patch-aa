@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2003/12/12 22:36:14 wiz Exp $
+
+--- configure.orig	Tue Dec  9 22:42:51 2003
++++ configure
+@@ -6237,7 +6237,7 @@ echo "${ECHO_T}$TEXMF_CNF" >&6
+ echo $ECHO_N "checking for psfonts.map... $ECHO_C" >&6
+   cp `which kpsewhich` .
+   PSFONTS_MAP=`./kpsewhich psfonts.map`
+-  rm ./kpsewhich
++  rm -f ./kpsewhich
+   if test -n "$PSFONTS_MAP"; then
+     echo "$as_me:$LINENO: result: $PSFONTS_MAP" >&5
+ echo "${ECHO_T}$PSFONTS_MAP" >&6
