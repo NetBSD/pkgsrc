@@ -1,20 +1,13 @@
-# $NetBSD: Makefile,v 1.47 2005/03/18 19:28:09 jmmv Exp $
+# $NetBSD: Makefile,v 1.48 2005/03/22 15:56:41 jmmv Exp $
 #
 
 PKGCONFIG_OVERRIDE=	gnome-vfs-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gnome-vfs-module-2.0.pc.in
 
-OWN_DIRS=		${PKG_SYSCONFDIR}/modules ${PKG_SYSCONFDIR}/vfolders
+OWN_DIRS=		${PKG_SYSCONFDIR}/modules
 
 EGFILES+=		modules/default-modules.conf
 EGFILES+=		modules/ssl-modules.conf
-EGFILES+=		vfolders/applications-all-users.vfolder-info
-EGFILES+=		vfolders/favorites.vfolder-info
-EGFILES+=		vfolders/network.vfolder-info
-EGFILES+=		vfolders/preferences-all-users.vfolder-info
-EGFILES+=		vfolders/server-settings.vfolder-info
-EGFILES+=		vfolders/start-here.vfolder-info
-EGFILES+=		vfolders/system-settings.vfolder-info
 
 GCONF2_SCHEMAS=		desktop_default_applications.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_url_handlers.schemas
@@ -23,6 +16,8 @@ GCONF2_SCHEMAS+=	system_http_proxy.schemas
 GCONF2_SCHEMAS+=	system_smb.schemas
 
 LDFLAGS.Darwin+=	-lresolv
+
+BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
 
 .include "Makefile.common"
 
