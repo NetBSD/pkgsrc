@@ -1,48 +1,61 @@
-$NetBSD: patch-aa,v 1.6 2004/02/02 00:00:48 recht Exp $
+$NetBSD: patch-aa,v 1.7 2004/02/11 10:55:49 recht Exp $
 
---- configure.in.orig	2003-11-12 02:27:29.000000000 +0100
-+++ configure.in	2004-02-02 00:03:11.000000000 +0100
-@@ -74,12 +74,15 @@
-     AC_CHECK_LIB(bz2, bzReadOpen, AC_DEFINE(NOBZ2PREFIX),)
+--- configure.orig	2004-02-11 00:16:08.000000000 +0100
++++ configure	2004-02-11 11:34:05.000000000 +0100
+@@ -8773,7 +8773,17 @@
  fi
  
+ 
 -have_milter="no"
--AC_CHECK_HEADER(libmilter/mfapi.h,have_milter="yes",)
--
- AC_ARG_ENABLE(milter,
- [  --enable-milter	  Build clamav-milter (if milter library found)],
--,have_milter="no")
-+want_milter=$enableval, want_milter=no)
++# Check whether --enable-milter or --disable-milter was given.
++if test "${enable_milter+set}" = set; then
++  enableval="$enable_milter"
 +
-+have_milter=no
++else
++  have_milter="no"
++  want_milter="no"
++fi;
++
 +if test "$want_milter" = "yes"
 +then
-+	AC_CHECK_HEADER(libmilter/mfapi.h,[have_milter=yes],)
+ if test "${ac_cv_header_libmilter_mfapi_h+set}" = set; then
+   echo "$as_me:$LINENO: checking for libmilter/mfapi.h" >&5
+ echo $ECHO_N "checking for libmilter/mfapi.h... $ECHO_C" >&6
+@@ -8879,15 +8889,7 @@
+   have_milter="yes"
+ fi
+ 
+-
+-
+-# Check whether --enable-milter or --disable-milter was given.
+-if test "${enable_milter+set}" = set; then
+-  enableval="$enable_milter"
+-
+-else
+-  have_milter="no"
+-fi;
 +fi
  
  want_dsig="yes"
- AC_ARG_ENABLE(dsig,
-@@ -193,7 +196,7 @@
- AC_DEFINE_UNQUOTED(CONFDIR,"$cfg_dir",)
+ # Check whether --enable-dsig or --disable-dsig was given.
+@@ -9502,11 +9504,17 @@
  
- dnl Do not overwrite the current config file
--AM_CONDITIONAL(INSTALL_CONF, test ! -r "$cfg_dir/clamav.conf")
-+AM_CONDITIONAL(INSTALL_CONF, test "yes" = "yes")
- 
- if test "$test_urandom" = "yes"
- then
-@@ -271,8 +274,12 @@
-     AC_DEFINE(C_BSD)
      ;;
  netbsd*)
--    AC_MSG_RESULT(NetBSD detected. Disabling thread support.)
+-    echo "$as_me:$LINENO: result: NetBSD detected. Disabling thread support." >&5
+-echo "${ECHO_T}NetBSD detected. Disabling thread support." >&6
 -    have_pthreads="no"
 +    if test "$have_pthreads" = "yes"; then
-+    	LIBCLAMAV_LIBS="$LIBCLAMAV_LIBS -lpthread"
-+	CLAMD_LIBS="-lpthread"
-+	TH_SAFE="-thread-safe"
-+	AC_DEFINE(CL_THREAD_SAFE)
++        LIBCLAMAV_LIBS="$LIBCLAMAV_LIBS -lpthread"
++        CLAMD_LIBS="-lpthread"
++        TH_SAFE="-thread-safe"
+ 
+ cat >>confdefs.h <<\_ACEOF
++#define CL_THREAD_SAFE 1
++_ACEOF
++
 +    fi
-     AC_DEFINE(C_BSD)
-     ;;
- bsd*)
++cat >>confdefs.h <<\_ACEOF
+ #define C_BSD 1
+ _ACEOF
+ 
