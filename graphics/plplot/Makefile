@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/07/06 13:16:55 jtb Exp $
+# $NetBSD: Makefile,v 1.20 2001/07/06 15:27:14 jtb Exp $
 
 DISTNAME=		plplot-5.0.4
 CATEGORIES=		graphics
@@ -65,8 +65,8 @@ pre-configure:
 	${CP} ${WRKSRC}/cf/configure ${WRKSRC}
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/plplotdoc-info-0.4.1/*.info	\
-		${PREFIX}/info
+	cd ${WRKSRC}/doc/plplotdoc-info-0.4.1/;				\
+	${INSTALL_DATA} plplotdoc.info plplotdoc.info-*	${PREFIX}/info
 	${INSTALL_DATA} ${WRKSRC}/doc/plplotdoc-0.4.1.dvi 		\
 		${PREFIX}/share/doc/plplot
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/plplot
