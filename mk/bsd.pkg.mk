@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1396 2004/02/13 19:02:07 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1397 2004/02/14 00:40:55 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -1299,6 +1299,13 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include
 CONFIGURE_ARGS+=        --x-libraries=${X11BASE}/lib
 .  endif
+#
+# By default, override config.guess and config.sub for GNU configure
+# packages. pkgsrc's updated versions of these scripts allows GNU
+# configure to recognise NetBSD ports such as shark.
+#
+CONFIG_GUESS_OVERRIDE?=	${WRKSRC}/config.guess
+CONFIG_SUB_OVERRIDE?=	${WRKSRC}/config.sub
 .endif
 
 #
