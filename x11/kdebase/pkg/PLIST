@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/03/23 20:04:16 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/03/23 20:09:52 mycroft Exp $
 bin/kappfinder
 bin/kappfinder_restart
 bin/kcmkpanel
@@ -52,66 +52,6 @@ bin/kcmkwm
 bin/kcminfo
 bin/kcontrol
 bin/unpack
-share/apps/kappfinder/apps/.directory
-share/apps/kappfinder/apps/Development/.directory
-share/apps/kappfinder/apps/Development/ddd.kdelnk
-share/apps/kappfinder/apps/Development/dlgedit.kdelnk
-share/apps/kappfinder/apps/Editors/.directory
-share/apps/kappfinder/apps/Editors/emacs.kdelnk
-share/apps/kappfinder/apps/Editors/lemacs.kdelnk
-share/apps/kappfinder/apps/Editors/xedit.kdelnk
-share/apps/kappfinder/apps/Editors/xemacs.kdelnk
-share/apps/kappfinder/apps/Graphic/.directory
-share/apps/kappfinder/apps/Graphic/xfig.kdelnk
-share/apps/kappfinder/apps/Graphic/xpaint.kdelnk
-share/apps/kappfinder/apps/Graphic/xv.kdelnk
-share/apps/kappfinder/apps/Internet/.directory
-share/apps/kappfinder/apps/Internet/arena.kdelnk
-share/apps/kappfinder/apps/Internet/coolmail.kdelnk
-share/apps/kappfinder/apps/Internet/netscape.kdelnk
-share/apps/kappfinder/apps/Internet/pine.kdelnk
-share/apps/kappfinder/apps/Internet/xfmail.kdelnk
-share/apps/kappfinder/apps/Internet/xftp.kdelnk
-share/apps/kappfinder/apps/System/.directory
-share/apps/kappfinder/apps/System/xosview.kdelnk
-share/apps/kappfinder/apps/Toys/.directory
-share/apps/kappfinder/apps/Toys/xeyes.kdelnk
-share/apps/kappfinder/apps/Toys/xpinguin.kdelnk
-share/apps/kappfinder/apps/Utilities/.directory
-share/apps/kappfinder/apps/Utilities/xcalc.kdelnk
-share/apps/kappfinder/apps/Utilities/xclipboard.kdelnk
-share/apps/kappfinder/apps/Utilities/xclock.kdelnk
-share/apps/kappfinder/apps/Utilities/xconsole.kdelnk
-share/apps/kappfinder/apps/Utilities/xload.kdelnk
-share/apps/kappfinder/apps/Utilities/xterm.kdelnk
-share/apps/kappfinder/apps/WordProcessing/.directory
-share/apps/kappfinder/apps/WordProcessing/acroread.kdelnk
-share/apps/kappfinder/apps/WordProcessing/ghostview.kdelnk
-share/apps/kappfinder/apps/WordProcessing/gv.kdelnk
-share/apps/kappfinder/apps/WordProcessing/lyx.kdelnk
-share/apps/kappfinder/apps/WordProcessing/xdvi.kdelnk
-share/apps/kappfinder/apps/WordProcessing/xpdf.kdelnk
-share/apps/kappfinder/pics/mini/gv.xpm
-share/apps/kappfinder/pics/mini/mini-plan.xpm
-share/apps/kappfinder/pics/mini/mini-xslight.xpm
-share/apps/kappfinder/pics/mini/pinguin.xpm
-share/apps/kappfinder/pics/mini/xfig.xpm
-share/apps/kappfinder/pics/mini/xpaint.xpm
-share/apps/kappfinder/pics/applix.xpm
-share/apps/kappfinder/pics/edit.xpm
-share/apps/kappfinder/pics/emacs.xpm
-share/apps/kappfinder/pics/gv.xpm
-share/apps/kappfinder/pics/lyx.xpm
-share/apps/kappfinder/pics/nogo.xpm
-share/apps/kappfinder/pics/pinguin.xpm
-share/apps/kappfinder/pics/plan.xpm
-share/apps/kappfinder/pics/xcalc.xpm
-share/apps/kappfinder/pics/xeyes.xpm
-share/apps/kappfinder/pics/xfig.xpm
-share/apps/kappfinder/pics/xfmail.xpm
-share/apps/kappfinder/pics/xftp.xpm
-share/apps/kappfinder/pics/xpaint.xpm
-share/apps/kappfinder/pics/xv.xpm
 share/apps/kcmlocale/pics/flag_de.gif
 share/apps/kcmlocale/pics/flag_en.gif
 share/apps/kcmlocale/pics/flag_fr.gif
@@ -893,18 +833,6 @@ cgi-bin/helpindex
 @dirrm share/doc/HTML/en/kcontrol/kcminfo
 @dirrm share/doc/HTML/en/kcontrol/kcmlocale
 @dirrm share/doc/HTML/en/kcontrol
-@dirrm share/apps/kappfinder/apps/Development
-@dirrm share/apps/kappfinder/apps/Editors
-@dirrm share/apps/kappfinder/apps/Graphic
-@dirrm share/apps/kappfinder/apps/Internet
-@dirrm share/apps/kappfinder/apps/System
-@dirrm share/apps/kappfinder/apps/Toys
-@dirrm share/apps/kappfinder/apps/Utilities
-@dirrm share/apps/kappfinder/apps/WordProcessing
-@dirrm share/apps/kappfinder/apps
-@dirrm share/apps/kappfinder/pics/mini
-@dirrm share/apps/kappfinder/pics
-@dirrm share/apps/kappfinder
 @dirrm share/apps/kwm/pics
 @dirrm share/apps/kwm
 @dirrm share/apps/kpanel/pics/mini
