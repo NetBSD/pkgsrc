@@ -1,17 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2004/04/20 14:15:41 markd Exp $
+$NetBSD: patch-aa,v 1.6 2004/08/21 15:39:02 markd Exp $
 
---- configure.orig	2004-04-06 02:57:52.000000000 +1200
+--- configure.orig	2004-08-14 12:07:07.000000000 +1200
 +++ configure
-@@ -38961,7 +38961,7 @@ ac_link='rm -rf SunWS_cache; ${CXX-g++} 
- 
-     save_CXXFLAGS="$CXXFLAGS"
- 
--    CXXFLAGS="$CXXFLAGS $X_CFLAGS -ldb"
-+    CXXFLAGS="$CXXFLAGS $X_CFLAGS -ldb4"
- 
-     cat >conftest.$ac_ext <<_ACEOF
- /* confdefs.h.  */
-@@ -40101,9 +40101,9 @@ fi
+@@ -40078,9 +40078,9 @@ fi
  
    test -n "$TAR" && break
  done
@@ -20,6 +11,19 @@ $NetBSD: patch-aa,v 1.5 2004/04/20 14:15:41 markd Exp $
 -"
 +#test -n "$TAR" || TAR="
 +#tar=${tar-"${am_missing_run}"}
++#"
+ 
+ for ac_prog in gzip
+ do
+@@ -40121,9 +40121,9 @@ fi
+ 
+   test -n "$GZIP" && break
+ done
+-test -n "$GZIP" || GZIP="
+-gzip=${gzip-"${am_missing_run}"}
+-"
++#test -n "$GZIP" || GZIP="
++#gzip=${gzip-"${am_missing_run}"}
 +#"
  
  

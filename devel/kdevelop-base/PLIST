@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2004/04/20 14:15:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/08/21 15:39:02 markd Exp $
+bin/kdevassistant
+bin/kdevdesigner
 bin/kdevelop
 bin/kdevelop-htdig
 bin/kdevprj2kdevelop
@@ -41,9 +43,13 @@ include/kdevelop/kdevcompileroptions.h
 include/kdevelop/kdevcore.h
 include/kdevelop/kdevcreatefile.h
 include/kdevelop/kdevdebugger.h
+include/kdevelop/kdevdesignerintegration.h
 include/kdevelop/kdevdifffrontend.h
+include/kdevelop/kdevdocumentationplugin.h
+include/kdevelop/kdevfile.h
 include/kdevelop/kdevgenericfactory.h
 include/kdevelop/kdevlanguagesupport.h
+include/kdevelop/kdevlicense.h
 include/kdevelop/kdevmainwindow.h
 include/kdevelop/kdevmakefrontend.h
 include/kdevelop/kdevpartcontroller.h
@@ -57,23 +63,39 @@ include/kdevelop/ksavealldialog.h
 include/kdevelop/makeoptionswidget.h
 include/kdevelop/makeoptionswidgetbase.h
 include/kdevelop/pathutil.h
-include/kdevelop/pcheckbox.h
-include/kdevelop/pcolorcombo.h
-include/kdevelop/pcombobox.h
-include/kdevelop/pdoublenuminput.h
-include/kdevelop/pfontcombo.h
-include/kdevelop/plineedit.h
-include/kdevelop/plinestyle.h
 include/kdevelop/processlinemaker.h
 include/kdevelop/processwidget.h
 include/kdevelop/projectconfigurationwidget.h
-include/kdevelop/property.h
-include/kdevelop/propertyeditor.h
-include/kdevelop/propertyutils.h
-include/kdevelop/propertywidget.h
-include/kdevelop/pspinbox.h
-include/kdevelop/pstringlistedit.h
-include/kdevelop/psymbolcombo.h
+include/kdevelop/propeditor/childproperty.h
+include/kdevelop/propeditor/multiproperty.h
+include/kdevelop/propeditor/pcheckbox.h
+include/kdevelop/propeditor/pcolorbutton.h
+include/kdevelop/propeditor/pcolorcombo.h
+include/kdevelop/propeditor/pcombobox.h
+include/kdevelop/propeditor/pcursoredit.h
+include/kdevelop/propeditor/pdateedit.h
+include/kdevelop/propeditor/pdatetimeedit.h
+include/kdevelop/propeditor/pdoublenuminput.h
+include/kdevelop/propeditor/pdummywidget.h
+include/kdevelop/propeditor/pfontbutton.h
+include/kdevelop/propeditor/pfontcombo.h
+include/kdevelop/propeditor/plineedit.h
+include/kdevelop/propeditor/ppixmapedit.h
+include/kdevelop/propeditor/ppointedit.h
+include/kdevelop/propeditor/prectedit.h
+include/kdevelop/propeditor/property.h
+include/kdevelop/propeditor/propertyeditor.h
+include/kdevelop/propeditor/propertylist.h
+include/kdevelop/propeditor/propertymachinefactory.h
+include/kdevelop/propeditor/propertywidget.h
+include/kdevelop/propeditor/propertywidgetproxy.h
+include/kdevelop/propeditor/psizeedit.h
+include/kdevelop/propeditor/psizepolicyedit.h
+include/kdevelop/propeditor/pspinbox.h
+include/kdevelop/propeditor/pstringlistedit.h
+include/kdevelop/propeditor/psymbolcombo.h
+include/kdevelop/propeditor/purledit.h
+include/kdevelop/propeditor/pyesnobutton.h
 include/kdevelop/removesubprojectdialog.h
 include/kdevelop/removesubprojectdlgbase.h
 include/kdevelop/runoptionswidget.h
@@ -82,22 +104,29 @@ include/kdevelop/splitter.h
 include/kdevelop/subclassesdlg.h
 include/kdevelop/subclassesdlgbase.h
 include/kdevelop/urlutil.h
+include/kinterfacedesigner/designer.h
 lib/kde3/kio_chm.la
 lib/kde3/kio_chm.so
-lib/kde3/kio_kdeapi.la
-lib/kde3/kio_kdeapi.so
 lib/kde3/kio_perldoc.la
 lib/kde3/kio_perldoc.so
 lib/kde3/kio_pydoc.la
 lib/kde3/kio_pydoc.so
+lib/kde3/libdoccustomplugin.la
+lib/kde3/libdoccustomplugin.so
+lib/kde3/libdoccustomplugin.so.0
+lib/kde3/libdoccustomplugin.so.0.0
+lib/kde3/libdocqtplugin.la
+lib/kde3/libdocqtplugin.so
+lib/kde3/libdocqtplugin.so.0
+lib/kde3/libdocqtplugin.so.0.0
 lib/kde3/libkchmpart.la
 lib/kde3/libkchmpart.so
 lib/kde3/libkdevabbrev.la
 lib/kde3/libkdevabbrev.so
 lib/kde3/libkdevadaproject.la
 lib/kde3/libkdevadaproject.so
-lib/kde3/libkdevadasupport.a
 lib/kde3/libkdevadasupport.la
+lib/kde3/libkdevadasupport.so
 lib/kde3/libkdevantproject.la
 lib/kde3/libkdevantproject.so
 lib/kde3/libkdevappwizard.la
@@ -118,26 +147,30 @@ lib/kde3/libkdevclearcase.la
 lib/kde3/libkdevclearcase.so
 lib/kde3/libkdevcloser.la
 lib/kde3/libkdevcloser.so
+lib/kde3/libkdevcopyto.la
+lib/kde3/libkdevcopyto.so
 lib/kde3/libkdevcppsupport.la
 lib/kde3/libkdevcppsupport.so
 lib/kde3/libkdevctags.la
 lib/kde3/libkdevctags.so
+lib/kde3/libkdevctags2.la
+lib/kde3/libkdevctags2.so
 lib/kde3/libkdevcustomproject.la
 lib/kde3/libkdevcustomproject.so
-lib/kde3/libkdevcvs.la
-lib/kde3/libkdevcvs.so
 lib/kde3/libkdevcvsservice.la
 lib/kde3/libkdevcvsservice.so
 lib/kde3/libkdevdccoptions.la
 lib/kde3/libkdevdccoptions.so
 lib/kde3/libkdevdebugger.la
 lib/kde3/libkdevdebugger.so
+lib/kde3/libkdevdesignerpart.la
+lib/kde3/libkdevdesignerpart.so
 lib/kde3/libkdevdiff.la
 lib/kde3/libkdevdiff.so
 lib/kde3/libkdevdistpart.la
 lib/kde3/libkdevdistpart.so
-lib/kde3/libkdevdoctreeview.la
-lib/kde3/libkdevdoctreeview.so
+lib/kde3/libkdevdocumentation.la
+lib/kde3/libkdevdocumentation.so
 lib/kde3/libkdevdoxygen.la
 lib/kde3/libkdevdoxygen.so
 lib/kde3/libkdeveditorchooser.la
@@ -146,6 +179,8 @@ lib/kde3/libkdevfilecreate.la
 lib/kde3/libkdevfilecreate.so
 lib/kde3/libkdevfilegroups.la
 lib/kde3/libkdevfilegroups.so
+lib/kde3/libkdevfilelist.la
+lib/kde3/libkdevfilelist.so
 lib/kde3/libkdevfileselector.la
 lib/kde3/libkdevfileselector.so
 lib/kde3/libkdevfileview.la
@@ -166,8 +201,8 @@ lib/kde3/libkdevgrepview.la
 lib/kde3/libkdevgrepview.so
 lib/kde3/libkdevhaskellproject.la
 lib/kde3/libkdevhaskellproject.so
-lib/kde3/libkdevhaskellsupport.a
 lib/kde3/libkdevhaskellsupport.la
+lib/kde3/libkdevhaskellsupport.so
 lib/kde3/libkdevhistory.la
 lib/kde3/libkdevhistory.so
 lib/kde3/libkdevjavadebugger.la
@@ -184,8 +219,8 @@ lib/kde3/libkdevpartexplorer.la
 lib/kde3/libkdevpartexplorer.so
 lib/kde3/libkdevpascalproject.la
 lib/kde3/libkdevpascalproject.so
-lib/kde3/libkdevpascalsupport.a
 lib/kde3/libkdevpascalsupport.la
+lib/kde3/libkdevpascalsupport.so
 lib/kde3/libkdevperforce.la
 lib/kde3/libkdevperforce.so
 lib/kde3/libkdevperlsupport.la
@@ -206,6 +241,8 @@ lib/kde3/libkdevrubysupport.la
 lib/kde3/libkdevrubysupport.so
 lib/kde3/libkdevscriptproject.la
 lib/kde3/libkdevscriptproject.so
+lib/kde3/libkdevsnippet.la
+lib/kde3/libkdevsnippet.so
 lib/kde3/libkdevsqlsupport.la
 lib/kde3/libkdevsqlsupport.so
 lib/kde3/libkdevsubversion.la
@@ -224,6 +261,22 @@ lib/kde3/libkdevvalgrind.la
 lib/kde3/libkdevvalgrind.so
 lib/kde3/libqeditorpart.la
 lib/kde3/libqeditorpart.so
+lib/libdocchmplugin.la
+lib/libdocchmplugin.so
+lib/libdocchmplugin.so.0
+lib/libdocchmplugin.so.0.0
+lib/libdocdevhelpplugin.la
+lib/libdocdevhelpplugin.so
+lib/libdocdevhelpplugin.so.0
+lib/libdocdevhelpplugin.so.0.0
+lib/libdocdoxygenplugin.la
+lib/libdocdoxygenplugin.so
+lib/libdocdoxygenplugin.so.0
+lib/libdocdoxygenplugin.so.0.0
+lib/libdockdevtocplugin.la
+lib/libdockdevtocplugin.so
+lib/libdockdevtocplugin.so.0
+lib/libdockdevtocplugin.so.0.0
 lib/libkdevcatalog.la
 lib/libkdevcatalog.so
 lib/libkdevcatalog.so.0
@@ -246,12 +299,16 @@ lib/libkdevgenericproject.la
 lib/libkdevgenericproject.so
 lib/libkdevkdelibsimporter.la
 lib/libkdevkdelibsimporter.so
+lib/libkdevpropertyeditor.la
+lib/libkdevpropertyeditor.so
+lib/libkdevpropertyeditor.so.0
+lib/libkdevpropertyeditor.so.0.0
 lib/libkdevqtimporter.la
 lib/libkdevqtimporter.so
-lib/libpropertyeditor.la
-lib/libpropertyeditor.so
-lib/libpropertyeditor.so.0
-lib/libpropertyeditor.so.0.0
+lib/libkinterfacedesigner.la
+lib/libkinterfacedesigner.so
+lib/libkinterfacedesigner.so.0
+lib/libkinterfacedesigner.so.0.0
 share/doc/kde/HTML/en/kde_app_devel/appwizard.png
 share/doc/kde/HTML/en/kde_app_devel/common
 share/doc/kde/HTML/en/kde_app_devel/index.cache.bz2
@@ -275,19 +332,30 @@ share/doc/kde/HTML/en/kdevelop/configure-doctree-TOC.png
 share/doc/kde/HTML/en/kdevelop/configure-doctree-bookmark.png
 share/doc/kde/HTML/en/kdevelop/configure-doctree-general.png
 share/doc/kde/HTML/en/kdevelop/configure-doctree-textsearch.png
+share/doc/kde/HTML/en/kdevelop/configure-docu-chm.png
+share/doc/kde/HTML/en/kdevelop/configure-docu-custom.png
+share/doc/kde/HTML/en/kdevelop/configure-docu-devhelp.png
+share/doc/kde/HTML/en/kdevelop/configure-docu-dox.png
+share/doc/kde/HTML/en/kdevelop/configure-docu-edit.png
+share/doc/kde/HTML/en/kdevelop/configure-docu-general.png
+share/doc/kde/HTML/en/kdevelop/configure-docu-toc.png
 share/doc/kde/HTML/en/kdevelop/configure-editor.png
 share/doc/kde/HTML/en/kdevelop/configure-file-selector.png
 share/doc/kde/HTML/en/kdevelop/configure-general.png
+share/doc/kde/HTML/en/kdevelop/configure-project-doc.png
 share/doc/kde/HTML/en/kdevelop/configure-select.png
 share/doc/kde/HTML/en/kdevelop/configure-snippets.png
 share/doc/kde/HTML/en/kdevelop/create-new-project-cvs.png
 share/doc/kde/HTML/en/kdevelop/createnewproject.png
 share/doc/kde/HTML/en/kdevelop/doctree-add-bookmark.png
+share/doc/kde/HTML/en/kdevelop/doctree-reduced.png
 share/doc/kde/HTML/en/kdevelop/doctree.png
 share/doc/kde/HTML/en/kdevelop/doctreeview.png
+share/doc/kde/HTML/en/kdevelop/documents-contents.png
 share/doc/kde/HTML/en/kdevelop/edit-doctree-TOC-entry.png
 share/doc/kde/HTML/en/kdevelop/file-selector.png
 share/doc/kde/HTML/en/kdevelop/filetree.png
+share/doc/kde/HTML/en/kdevelop/folded-tabs.png
 share/doc/kde/HTML/en/kdevelop/importdirectory.png
 share/doc/kde/HTML/en/kdevelop/index.cache.bz2
 share/doc/kde/HTML/en/kdevelop/index.docbook
@@ -301,20 +369,16 @@ share/doc/kde/HTML/en/kdevelop/kdevelop-toplevel-mode.png
 share/doc/kde/HTML/en/kdevelop/loading-progress-bar.png
 share/doc/kde/HTML/en/kdevelop/open-project.png
 share/doc/kde/HTML/en/kdevelop/open-recent-project.png
+share/doc/kde/HTML/en/kdevelop/project-advanced.docbook
 share/doc/kde/HTML/en/kdevelop/project-management.docbook
 share/doc/kde/HTML/en/kdevelop/select-user-interface-0.png
 share/doc/kde/HTML/en/kdevelop/select-user-interface.png
 share/doc/kde/HTML/en/kdevelop/setup.docbook
 share/doc/kde/HTML/en/kdevelop/unixdev.docbook
 share/doc/kde/HTML/en/kdevelop/wrong-project-location.png
+share/kde/applnk/Development/kdevassistant.desktop
+share/kde/applnk/Development/kdevdesigner.desktop
 share/kde/applnk/Development/kdevelop.desktop
-share/kde/apps/devdoctreeview/indices/kde2book.index
-share/kde/apps/devdoctreeview/indices/libc.index
-share/kde/apps/devdoctreeview/indices/libstdc++.index
-share/kde/apps/devdoctreeview/indices/php.index
-share/kde/apps/devdoctreeview/indices/python.index
-share/kde/apps/devdoctreeview/indices/ruby.index
-share/kde/apps/devdoctreeview/indices/stl.index
 share/kde/apps/kdevabbrev/kdevabbrev.rc
 share/kde/apps/kdevabbrev/sources/cpp_keywords
 share/kde/apps/kdevabbrev/sources/qt_classes
@@ -324,6 +388,38 @@ share/kde/apps/kdevabbrev/templates/phptemplates
 share/kde/apps/kdevadaproject/kdevadaproject.rc
 share/kde/apps/kdevadasupport/kdevadasupport.rc
 share/kde/apps/kdevantproject/kdevantproject.rc
+share/kde/apps/kdevappwizard/adahello.png
+share/kde/apps/kdevappwizard/adahello.tar.gz
+share/kde/apps/kdevappwizard/bashhello.png
+share/kde/apps/kdevappwizard/bashhello.tar.gz
+share/kde/apps/kdevappwizard/chello.png
+share/kde/apps/kdevappwizard/chello.tar.gz
+share/kde/apps/kdevappwizard/chellogba.png
+share/kde/apps/kdevappwizard/chellogba.tar.gz
+share/kde/apps/kdevappwizard/clanlib.png
+share/kde/apps/kdevappwizard/clanlib.tar.gz
+share/kde/apps/kdevappwizard/cppcurseshello.png
+share/kde/apps/kdevappwizard/cppcurseshello.tar.gz
+share/kde/apps/kdevappwizard/cpphello.png
+share/kde/apps/kdevappwizard/cpphello.tar.gz
+share/kde/apps/kdevappwizard/cppsdlhello.png
+share/kde/apps/kdevappwizard/cppsdlhello.tar.gz
+share/kde/apps/kdevappwizard/dcopservice.png
+share/kde/apps/kdevappwizard/dcopservice.tar.gz
+share/kde/apps/kdevappwizard/fortranhello.png
+share/kde/apps/kdevappwizard/fortranhello.tar.gz
+share/kde/apps/kdevappwizard/fpcgtk.png
+share/kde/apps/kdevappwizard/fpcgtk.tar.gz
+share/kde/apps/kdevappwizard/fpchello.png
+share/kde/apps/kdevappwizard/fpchello.tar.gz
+share/kde/apps/kdevappwizard/fpcsharedlib.png
+share/kde/apps/kdevappwizard/fpcsharedlib.tar.gz
+share/kde/apps/kdevappwizard/gnomeapp.png
+share/kde/apps/kdevappwizard/gnomeapp.tar.gz
+share/kde/apps/kdevappwizard/gtk2mmapp.png
+share/kde/apps/kdevappwizard/gtk2mmapp.tar.gz
+share/kde/apps/kdevappwizard/haskellhello.png
+share/kde/apps/kdevappwizard/haskellhello.tar.gz
 share/kde/apps/kdevappwizard/importfiles/ada.kdevelop
 share/kde/apps/kdevappwizard/importfiles/c-auto.kdevelop
 share/kde/apps/kdevappwizard/importfiles/c.kdevelop
@@ -362,52 +458,118 @@ share/kde/apps/kdevappwizard/imports/python
 share/kde/apps/kdevappwizard/imports/qtqmake
 share/kde/apps/kdevappwizard/imports/qttmake
 share/kde/apps/kdevappwizard/imports/ruby
+share/kde/apps/kdevappwizard/javahello.png
+share/kde/apps/kdevappwizard/javahello.tar.gz
+share/kde/apps/kdevappwizard/kapp.png
+share/kde/apps/kdevappwizard/kapp.tar.gz
+share/kde/apps/kdevappwizard/kappjava.png
+share/kde/apps/kdevappwizard/kappjava.tar.gz
+share/kde/apps/kdevappwizard/kateplugin.png
+share/kde/apps/kdevappwizard/kateplugin.tar.gz
+share/kde/apps/kdevappwizard/kateplugin2.png
+share/kde/apps/kdevappwizard/kateplugin2.tar.gz
+share/kde/apps/kdevappwizard/kbearimportfilter.png
+share/kde/apps/kdevappwizard/kbearimportfilter.tar.gz
+share/kde/apps/kdevappwizard/kbearplugin.png
+share/kde/apps/kdevappwizard/kbearplugin.tar.gz
+share/kde/apps/kdevappwizard/kcmodule.png
+share/kde/apps/kdevappwizard/kcmodule.tar.gz
+share/kde/apps/kdevappwizard/kdedcop.png
+share/kde/apps/kdevappwizard/kdedcop.tar.gz
 share/kde/apps/kdevappwizard/kdevappwizard.rc
-share/kde/apps/kdevappwizard/template-adahello/ada-Makefile
-share/kde/apps/kdevappwizard/template-adahello/app.kdevelop
-share/kde/apps/kdevappwizard/template-adahello/app.kdevelop.filelist
-share/kde/apps/kdevappwizard/template-adahello/main.adb
-share/kde/apps/kdevappwizard/template-adahello/script
-share/kde/apps/kdevappwizard/template-bashhello/app.kdevelop
-share/kde/apps/kdevappwizard/template-bashhello/app.sh
-share/kde/apps/kdevappwizard/template-bashhello/script
-share/kde/apps/kdevappwizard/template-chello/app.kdevelop
-share/kde/apps/kdevappwizard/template-chello/c-Makefile.am
-share/kde/apps/kdevappwizard/template-chello/c-Makefile.cvs
-share/kde/apps/kdevappwizard/template-chello/chello.png
-share/kde/apps/kdevappwizard/template-chello/configure.in
-share/kde/apps/kdevappwizard/template-chello/main.c
-share/kde/apps/kdevappwizard/template-chello/script
-share/kde/apps/kdevappwizard/template-chello/src-Makefile.am
-share/kde/apps/kdevappwizard/template-chellogba/README.devel
-share/kde/apps/kdevappwizard/template-chellogba/app.kdevelop
-share/kde/apps/kdevappwizard/template-chellogba/c-Makefile.am
-share/kde/apps/kdevappwizard/template-chellogba/c-Makefile.cvs
-share/kde/apps/kdevappwizard/template-chellogba/chellogba.png
-share/kde/apps/kdevappwizard/template-chellogba/configure.in
-share/kde/apps/kdevappwizard/template-chellogba/font.bmp
-share/kde/apps/kdevappwizard/template-chellogba/font.raw.c
-share/kde/apps/kdevappwizard/template-chellogba/gba.h
-share/kde/apps/kdevappwizard/template-chellogba/main.c
-share/kde/apps/kdevappwizard/template-chellogba/main.h
-share/kde/apps/kdevappwizard/template-chellogba/master.pal.c
-share/kde/apps/kdevappwizard/template-chellogba/script
-share/kde/apps/kdevappwizard/template-chellogba/src-Makefile.am
+share/kde/apps/kdevappwizard/kdevlang.png
+share/kde/apps/kdevappwizard/kdevlang.tar.gz
+share/kde/apps/kdevappwizard/kdevpart.png
+share/kde/apps/kdevappwizard/kdevpart.tar.gz
+share/kde/apps/kdevappwizard/kdevpart2.png
+share/kde/apps/kdevappwizard/kdevpart2.tar.gz
+share/kde/apps/kdevappwizard/kfileplugin.png
+share/kde/apps/kdevappwizard/kfileplugin.tar.gz
+share/kde/apps/kdevappwizard/khello.png
+share/kde/apps/kdevappwizard/khello.tar.gz
+share/kde/apps/kdevappwizard/khello2.png
+share/kde/apps/kdevappwizard/khello2.tar.gz
+share/kde/apps/kdevappwizard/kicker.png
+share/kde/apps/kdevappwizard/kicker.tar.gz
+share/kde/apps/kdevappwizard/kioslave.png
+share/kde/apps/kdevappwizard/kioslave.tar.gz
+share/kde/apps/kdevappwizard/kmod.png
+share/kde/apps/kdevappwizard/kmod.tar.gz
+share/kde/apps/kdevappwizard/konqnavpanel.png
+share/kde/apps/kdevappwizard/konqnavpanel.tar.gz
+share/kde/apps/kdevappwizard/kopart.png
+share/kde/apps/kdevappwizard/kopart.tar.gz
+share/kde/apps/kdevappwizard/kpartapp.png
+share/kde/apps/kdevappwizard/kpartapp.tar.gz
+share/kde/apps/kdevappwizard/kpartplugin.png
+share/kde/apps/kdevappwizard/kpartplugin.tar.gz
+share/kde/apps/kdevappwizard/kscreensaver.png
+share/kde/apps/kdevappwizard/kscreensaver.tar.gz
+share/kde/apps/kdevappwizard/kxt.png
+share/kde/apps/kdevappwizard/kxt.tar.gz
+share/kde/apps/kdevappwizard/noatunui.png
+share/kde/apps/kdevappwizard/noatunui.tar.gz
+share/kde/apps/kdevappwizard/noatunvisual.png
+share/kde/apps/kdevappwizard/noatunvisual.tar.gz
+share/kde/apps/kdevappwizard/opieapp.png
+share/kde/apps/kdevappwizard/opieapp.tar.gz
+share/kde/apps/kdevappwizard/opieapplet.png
+share/kde/apps/kdevappwizard/opieapplet.tar.gz
+share/kde/apps/kdevappwizard/opieinput.png
+share/kde/apps/kdevappwizard/opieinput.tar.gz
+share/kde/apps/kdevappwizard/opiemenu.png
+share/kde/apps/kdevappwizard/opiemenu.tar.gz
+share/kde/apps/kdevappwizard/opienet.png
+share/kde/apps/kdevappwizard/opienet.tar.gz
+share/kde/apps/kdevappwizard/opietoday.png
+share/kde/apps/kdevappwizard/opietoday.tar.gz
+share/kde/apps/kdevappwizard/pascalhello.png
+share/kde/apps/kdevappwizard/pascalhello.tar.gz
+share/kde/apps/kdevappwizard/perlhello.png
+share/kde/apps/kdevappwizard/perlhello.tar.gz
+share/kde/apps/kdevappwizard/phphello.png
+share/kde/apps/kdevappwizard/phphello.tar.gz
+share/kde/apps/kdevappwizard/pyqt.png
+share/kde/apps/kdevappwizard/pyqt.tar.gz
+share/kde/apps/kdevappwizard/pythonhello.png
+share/kde/apps/kdevappwizard/pythonhello.tar.gz
+share/kde/apps/kdevappwizard/pytk.png
+share/kde/apps/kdevappwizard/pytk.tar.gz
+share/kde/apps/kdevappwizard/qmakeapp.png
+share/kde/apps/kdevappwizard/qmakeapp.tar.gz
+share/kde/apps/kdevappwizard/qmakesimple.png
+share/kde/apps/kdevappwizard/qmakesimple.tar.gz
+share/kde/apps/kdevappwizard/qtopiaapp.png
+share/kde/apps/kdevappwizard/qtopiaapp.tar.gz
+share/kde/apps/kdevappwizard/qtruby.png
+share/kde/apps/kdevappwizard/qtruby.tar.gz
+share/kde/apps/kdevappwizard/rubyhello.png
+share/kde/apps/kdevappwizard/rubyhello.tar.gz
+share/kde/apps/kdevappwizard/sqlsimple.png
+share/kde/apps/kdevappwizard/sqlsimple.tar.gz
+share/kde/apps/kdevappwizard/superwaba.png
+share/kde/apps/kdevappwizard/superwaba.tar.gz
 share/kde/apps/kdevappwizard/template-common/Artistic
 share/kde/apps/kdevappwizard/template-common/COPYING
 share/kde/apps/kdevappwizard/template-common/COPYING.LIB
 share/kde/apps/kdevappwizard/template-common/LICENSE.BSD
 share/kde/apps/kdevappwizard/template-common/LICENSE.QPL
+share/kde/apps/kdevappwizard/template-common/admin.kdevtemplate
 share/kde/apps/kdevappwizard/template-common/admin.tar.gz
+share/kde/apps/kdevappwizard/template-common/dockbook.kdevtemplate
 share/kde/apps/kdevappwizard/template-common/gnome-Makefile.am
 share/kde/apps/kdevappwizard/template-common/gnome-Makefile.cvs
 share/kde/apps/kdevappwizard/template-common/gnome-app.lsm
 share/kde/apps/kdevappwizard/template-common/gnome-app.png
 share/kde/apps/kdevappwizard/template-common/gnome-pixmaps-Makefile.am
 share/kde/apps/kdevappwizard/template-common/gnome.tar.gz
+share/kde/apps/kdevappwizard/template-common/gnome2.kdevtemplate
+share/kde/apps/kdevappwizard/template-common/gnome2.tar.gz
+share/kde/apps/kdevappwizard/template-common/gnu.kdevtemplate
 share/kde/apps/kdevappwizard/template-common/gnu.tar.gz
 share/kde/apps/kdevappwizard/template-common/hi16-app-app.png
 share/kde/apps/kdevappwizard/template-common/hi32-app-app.png
+share/kde/apps/kdevappwizard/template-common/incadmin.kdevtemplate
 share/kde/apps/kdevappwizard/template-common/incadmin.tar.gz
 share/kde/apps/kdevappwizard/template-common/kde-Makefile.am
 share/kde/apps/kdevappwizard/template-common/kde-Makefile.cvs
@@ -419,462 +581,81 @@ share/kde/apps/kdevappwizard/template-common/kde-doc-en-Makefile.am
 share/kde/apps/kdevappwizard/template-common/kde-index.docbook
 share/kde/apps/kdevappwizard/template-common/kde-part.desktop
 share/kde/apps/kdevappwizard/template-common/kde-po-Makefile.am
-share/kde/apps/kdevappwizard/template-common/kdevelop.pm
 share/kde/apps/kdevappwizard/template-common/wx-Makefile.am
 share/kde/apps/kdevappwizard/template-common/wx-Makefile.cvs
 share/kde/apps/kdevappwizard/template-common/wx-configure.in
 share/kde/apps/kdevappwizard/template-common/wxwidgets.tar.gz
-share/kde/apps/kdevappwizard/template-cpphello/app.kdevelop
-share/kde/apps/kdevappwizard/template-cpphello/configure.in
-share/kde/apps/kdevappwizard/template-cpphello/cpp-Makefile.am
-share/kde/apps/kdevappwizard/template-cpphello/cpp-Makefile.cvs
-share/kde/apps/kdevappwizard/template-cpphello/cpphello.png
-share/kde/apps/kdevappwizard/template-cpphello/main.cpp
-share/kde/apps/kdevappwizard/template-cpphello/script
-share/kde/apps/kdevappwizard/template-cpphello/src-Makefile.am
-share/kde/apps/kdevappwizard/template-cppsdlhello/acinclude.m4
-share/kde/apps/kdevappwizard/template-cppsdlhello/app.kdevelop
-share/kde/apps/kdevappwizard/template-cppsdlhello/configure.in
-share/kde/apps/kdevappwizard/template-cppsdlhello/cpp-Makefile.am
-share/kde/apps/kdevappwizard/template-cppsdlhello/cpp-Makefile.cvs
-share/kde/apps/kdevappwizard/template-cppsdlhello/cppsdlhello.png
-share/kde/apps/kdevappwizard/template-cppsdlhello/main.cpp
-share/kde/apps/kdevappwizard/template-cppsdlhello/script
-share/kde/apps/kdevappwizard/template-cppsdlhello/src-Makefile.am
-share/kde/apps/kdevappwizard/template-dcopservice/dcopservice.cpp
-share/kde/apps/kdevappwizard/template-dcopservice/dcopservice.desktop
-share/kde/apps/kdevappwizard/template-dcopservice/dcopservice.h
-share/kde/apps/kdevappwizard/template-dcopservice/dcopservice.kdevelop
-share/kde/apps/kdevappwizard/template-dcopservice/dcopservice.png
-share/kde/apps/kdevappwizard/template-dcopservice/main.cpp
-share/kde/apps/kdevappwizard/template-dcopservice/script
-share/kde/apps/kdevappwizard/template-dcopservice/src-Makefile.am
-share/kde/apps/kdevappwizard/template-dcopservice/subdirs
-share/kde/apps/kdevappwizard/template-fortranhello/app.kdevelop
-share/kde/apps/kdevappwizard/template-fortranhello/configure.in
-share/kde/apps/kdevappwizard/template-fortranhello/fortran-Makefile.am
-share/kde/apps/kdevappwizard/template-fortranhello/fortran-Makefile.cvs
-share/kde/apps/kdevappwizard/template-fortranhello/fortranhello.png
-share/kde/apps/kdevappwizard/template-fortranhello/main.f
-share/kde/apps/kdevappwizard/template-fortranhello/script
-share/kde/apps/kdevappwizard/template-fortranhello/src-Makefile.am
-share/kde/apps/kdevappwizard/template-fpcgtk/app.kdevelop
-share/kde/apps/kdevappwizard/template-fpcgtk/main.pp
-share/kde/apps/kdevappwizard/template-fpcgtk/script
-share/kde/apps/kdevappwizard/template-fpchello/app.kdevelop
-share/kde/apps/kdevappwizard/template-fpchello/main.pp
-share/kde/apps/kdevappwizard/template-fpchello/script
-share/kde/apps/kdevappwizard/template-fpcsharedlib/app.kdevelop
-share/kde/apps/kdevappwizard/template-fpcsharedlib/main.pp
-share/kde/apps/kdevappwizard/template-fpcsharedlib/script
-share/kde/apps/kdevappwizard/template-gnomeapp/app.c
-share/kde/apps/kdevappwizard/template-gnomeapp/app.desktop
-share/kde/apps/kdevappwizard/template-gnomeapp/app.h
-share/kde/apps/kdevappwizard/template-gnomeapp/app.kdevelop
-share/kde/apps/kdevappwizard/template-gnomeapp/configure.in
-share/kde/apps/kdevappwizard/template-gnomeapp/gnomeapp.png
-share/kde/apps/kdevappwizard/template-gnomeapp/main.c
-share/kde/apps/kdevappwizard/template-gnomeapp/menus.c
-share/kde/apps/kdevappwizard/template-gnomeapp/menus.h
-share/kde/apps/kdevappwizard/template-gnomeapp/script
-share/kde/apps/kdevappwizard/template-gnomeapp/src-Makefile.am
-share/kde/apps/kdevappwizard/template-haskellhello/Main.hs
-share/kde/apps/kdevappwizard/template-haskellhello/app.kdevelop
-share/kde/apps/kdevappwizard/template-haskellhello/haskellhello.png
-share/kde/apps/kdevappwizard/template-haskellhello/script
-share/kde/apps/kdevappwizard/template-javahello/Main.java
-share/kde/apps/kdevappwizard/template-javahello/build.xml
-share/kde/apps/kdevappwizard/template-javahello/javahello.filelist
-share/kde/apps/kdevappwizard/template-javahello/javahello.kdevelop
-share/kde/apps/kdevappwizard/template-javahello/script
-share/kde/apps/kdevappwizard/template-kapp/README
-share/kde/apps/kdevappwizard/template-kapp/app.cpp
-share/kde/apps/kdevappwizard/template-kapp/app.h
-share/kde/apps/kdevappwizard/template-kapp/app.kdevelop
-share/kde/apps/kdevappwizard/template-kapp/app_client.cpp
-share/kde/apps/kdevappwizard/template-kapp/appiface.h
-share/kde/apps/kdevappwizard/template-kapp/appui.rc
-share/kde/apps/kdevappwizard/template-kapp/appview.cpp
-share/kde/apps/kdevappwizard/template-kapp/appview.h
-share/kde/apps/kdevappwizard/template-kapp/kapp.png
-share/kde/apps/kdevappwizard/template-kapp/main.cpp
-share/kde/apps/kdevappwizard/template-kapp/pref.cpp
-share/kde/apps/kdevappwizard/template-kapp/pref.h
-share/kde/apps/kdevappwizard/template-kapp/script
-share/kde/apps/kdevappwizard/template-kapp/src-Makefile.am
-share/kde/apps/kdevappwizard/template-kapp/subdirs
-share/kde/apps/kdevappwizard/template-kappjava/app.java
-share/kde/apps/kdevappwizard/template-kappjava/app.kdevelop
-share/kde/apps/kdevappwizard/template-kappjava/app_client.java
-share/kde/apps/kdevappwizard/template-kappjava/appui.rc
-share/kde/apps/kdevappwizard/template-kappjava/appview.java
-share/kde/apps/kdevappwizard/template-kappjava/kappjava.png
-share/kde/apps/kdevappwizard/template-kappjava/pref.java
-share/kde/apps/kdevappwizard/template-kappjava/script
-share/kde/apps/kdevappwizard/template-kappjava/src-Makefile.am
-share/kde/apps/kdevappwizard/template-kappjava/subdirs
-share/kde/apps/kdevappwizard/template-kateplugin/hi16-action-plugin.png
-share/kde/apps/kdevappwizard/template-kateplugin/hi22-action-plugin.png
-share/kde/apps/kdevappwizard/template-kateplugin/kateplugin.png
-share/kde/apps/kdevappwizard/template-kateplugin/plugin.desktop
-share/kde/apps/kdevappwizard/template-kateplugin/plugin.kdevelop
-share/kde/apps/kdevappwizard/template-kateplugin/plugin_app.cpp
-share/kde/apps/kdevappwizard/template-kateplugin/plugin_app.h
-share/kde/apps/kdevappwizard/template-kateplugin/plugin_app.rc
-share/kde/apps/kdevappwizard/template-kateplugin/script
-share/kde/apps/kdevappwizard/template-kateplugin/src-Makefile.am
-share/kde/apps/kdevappwizard/template-kateplugin/subdirs
-share/kde/apps/kdevappwizard/template-kateplugin2/hi16-action-plugin.png
-share/kde/apps/kdevappwizard/template-kateplugin2/hi22-action-plugin.png
-share/kde/apps/kdevappwizard/template-kateplugin2/kateplugin.png
-share/kde/apps/kdevappwizard/template-kateplugin2/plugin.desktop
-share/kde/apps/kdevappwizard/template-kateplugin2/plugin.kdevelop
-share/kde/apps/kdevappwizard/template-kateplugin2/plugin_app.cpp
-share/kde/apps/kdevappwizard/template-kateplugin2/plugin_app.h
-share/kde/apps/kdevappwizard/template-kateplugin2/plugin_app.rc
-share/kde/apps/kdevappwizard/template-kateplugin2/script
-share/kde/apps/kdevappwizard/template-kateplugin2/src-Makefile.am
-share/kde/apps/kdevappwizard/template-kateplugin2/subdirs
-share/kde/apps/kdevappwizard/template-kbearimportfilter/kbearimportfilter
-share/kde/apps/kdevappwizard/template-kbearimportfilter/kbearimportfilter-configure.in.in
-share/kde/apps/kdevappwizard/template-kbearimportfilter/kbearimportfilter.desktop
-share/kde/apps/kdevappwizard/template-kbearimportfilter/plugin.cpp
-share/kde/apps/kdevappwizard/template-kbearimportfilter/plugin.h
-share/kde/apps/kdevappwizard/template-kbearimportfilter/plugin.kdevelop
-share/kde/apps/kdevappwizard/template-kbearimportfilter/preview.png
-share/kde/apps/kdevappwizard/template-kbearimportfilter/script
-share/kde/apps/kdevappwizard/template-kbearimportfilter/src-Makefile.am
-share/kde/apps/kdevappwizard/template-kbearimportfilter/subdirs
-share/kde/apps/kdevappwizard/template-kbearplugin/Makefile.am
-share/kde/apps/kdevappwizard/template-kbearplugin/configwidget.cpp
-share/kde/apps/kdevappwizard/template-kbearplugin/configwidget.h
-share/kde/apps/kdevappwizard/template-kbearplugin/hi32-action-plugin.png
-share/kde/apps/kdevappwizard/template-kbearplugin/kbearplugin-configure.in.in
-share/kde/apps/kdevappwizard/template-kbearplugin/kbearplugin.desktop
-share/kde/apps/kdevappwizard/template-kbearplugin/outputwidget.cpp
-share/kde/apps/kdevappwizard/template-kbearplugin/outputwidget.h
-share/kde/apps/kdevappwizard/template-kbearplugin/plugin.cpp
-share/kde/apps/kdevappwizard/template-kbearplugin/plugin.h
-share/kde/apps/kdevappwizard/template-kbearplugin/plugin.kdevelop
-share/kde/apps/kdevappwizard/template-kbearplugin/plugin.rc
-share/kde/apps/kdevappwizard/template-kbearplugin/preview.png
-share/kde/apps/kdevappwizard/template-kbearplugin/script
-share/kde/apps/kdevappwizard/template-kbearplugin/src-Makefile.am
-share/kde/apps/kdevappwizard/template-kbearplugin/subdirs
-share/kde/apps/kdevappwizard/template-kcmodule/kcmodule.png
-share/kde/apps/kdevappwizard/template-kcmodule/module.cpp
-share/kde/apps/kdevappwizard/template-kcmodule/module.desktop
-share/kde/apps/kdevappwizard/template-kcmodule/module.h
-share/kde/apps/kdevappwizard/template-kcmodule/module.kdevelop
-share/kde/apps/kdevappwizard/template-kcmodule/script
-share/kde/apps/kdevappwizard/template-kcmodule/src-Makefile.am
-share/kde/apps/kdevappwizard/template-kcmodule/subdirs
-share/kde/apps/kdevappwizard/template-kdedcop/app.cpp
-share/kde/apps/kdevappwizard/template-kdedcop/app.h
-share/kde/apps/kdevappwizard/template-kdedcop/app.kdevelop
-share/kde/apps/kdevappwizard/template-kdedcop/app_iface.h
-share/kde/apps/kdevappwizard/template-kdedcop/kdedcop.png
-share/kde/apps/kdevappwizard/template-kdedcop/main.cpp
-share/kde/apps/kdevappwizard/template-kdedcop/mainclass.cpp
-share/kde/apps/kdevappwizard/template-kdedcop/mainclass.h
-share/kde/apps/kdevappwizard/template-kdedcop/script
-share/kde/apps/kdevappwizard/template-kdedcop/src-Makefile.am
-share/kde/apps/kdevappwizard/template-kdedcop/subdirs
-share/kde/apps/kdevappwizard/template-kdevlang/README.dox
-share/kde/apps/kdevappwizard/template-kdevlang/app.kdevelop
-share/kde/apps/kdevappwizard/template-kdevlang/kdevlang-configure.in.in
-share/kde/apps/kdevappwizard/template-kdevlang/kdevlang.desktop
-share/kde/apps/kdevappwizard/template-kdevlang/kdevlang.rc
-share/kde/apps/kdevappwizard/template-kdevlang/kdevlang_part.cpp
-share/kde/apps/kdevappwizard/template-kdevlang/kdevlang_part.h
-share/kde/apps/kdevappwizard/template-kdevlang/script
-share/kde/apps/kdevappwizard/template-kdevlang/src-Makefile.am
-share/kde/apps/kdevappwizard/template-kdevpart/README.dox
-share/kde/apps/kdevappwizard/template-kdevpart/app.kdevelop
-share/kde/apps/kdevappwizard/template-kdevpart/kdevpart.desktop
-share/kde/apps/kdevappwizard/template-kdevpart/kdevpart_part.cpp
-share/kde/apps/kdevappwizard/template-kdevpart/kdevpart_part.h
-share/kde/apps/kdevappwizard/template-kdevpart/kdevpart_part.rc
-share/kde/apps/kdevappwizard/template-kdevpart/kdevpart_widget.cpp
-share/kde/apps/kdevappwizard/template-kdevpart/kdevpart_widget.h
-share/kde/apps/kdevappwizard/template-kdevpart/script
-share/kde/apps/kdevappwizard/template-kdevpart/src-Makefile.am
-share/kde/apps/kdevappwizard/template-kdevpart2/README.dox
-share/kde/apps/kdevappwizard/template-kdevpart2/app.kdevelop
-share/kde/apps/kdevappwizard/template-kdevpart2/kdevpart-configure.in.in
-share/kde/apps/kdevappwizard/template-kdevpart2/kdevpart.desktop
-share/kde/apps/kdevappwizard/template-kdevpart2/kdevpart_part.cpp
-share/kde/apps/kdevappwizard/template-kdevpart2/kdevpart_part.h
-share/kde/apps/kdevappwizard/template-kdevpart2/kdevpart_part.rc
-share/kde/apps/kdevappwizard/template-kdevpart2/kdevpart_widget.cpp
-share/kde/apps/kdevappwizard/template-kdevpart2/kdevpart_widget.h
-share/kde/apps/kdevappwizard/template-kdevpart2/script
-share/kde/apps/kdevappwizard/template-kdevpart2/src-Makefile.am
-share/kde/apps/kdevappwizard/template-kfileplugin/README.devel
-share/kde/apps/kdevappwizard/template-kfileplugin/kfile_plugin.cpp
-share/kde/apps/kdevappwizard/template-kfileplugin/kfile_plugin.desktop
-share/kde/apps/kdevappwizard/template-kfileplugin/kfile_plugin.h
-share/kde/apps/kdevappwizard/template-kfileplugin/kfileplugin
-share/kde/apps/kdevappwizard/template-kfileplugin/plugin.kdevelop
-share/kde/apps/kdevappwizard/template-kfileplugin/preview.png
-share/kde/apps/kdevappwizard/template-kfileplugin/script
-share/kde/apps/kdevappwizard/template-kfileplugin/src-Makefile.am
-share/kde/apps/kdevappwizard/template-kfileplugin/subdirs
-share/kde/apps/kdevappwizard/template-khello/app.cpp
-share/kde/apps/kdevappwizard/template-khello/app.desktop
-share/kde/apps/kdevappwizard/template-khello/app.h
-share/kde/apps/kdevappwizard/template-khello/app.kdevelop
-share/kde/apps/kdevappwizard/template-khello/appui.rc
-share/kde/apps/kdevappwizard/template-khello/main.cpp
-share/kde/apps/kdevappwizard/template-khello/preview.png
-share/kde/apps/kdevappwizard/template-khello/script
-share/kde/apps/kdevappwizard/template-khello/src-Makefile.am
-share/kde/apps/kdevappwizard/template-khello/subdirs
-share/kde/apps/kdevappwizard/template-khello2/app.cpp
-share/kde/apps/kdevappwizard/template-khello2/app.desktop
-share/kde/apps/kdevappwizard/template-khello2/app.h
-share/kde/apps/kdevappwizard/template-khello2/app.kdevelop
-share/kde/apps/kdevappwizard/template-khello2/appui.rc
-share/kde/apps/kdevappwizard/template-khello2/main.cpp
-share/kde/apps/kdevappwizard/template-khello2/preview.png
-share/kde/apps/kdevappwizard/template-khello2/script
-share/kde/apps/kdevappwizard/template-khello2/src-Makefile.am
-share/kde/apps/kdevappwizard/template-khello2/subdirs
-share/kde/apps/kdevappwizard/template-khello2/widget.cpp
-share/kde/apps/kdevappwizard/template-khello2/widget.h
-share/kde/apps/kdevappwizard/template-khello2/widgetbase.ui
-share/kde/apps/kdevappwizard/template-kicker/applet.cpp
-share/kde/apps/kdevappwizard/template-kicker/applet.desktop
-share/kde/apps/kdevappwizard/template-kicker/applet.h
-share/kde/apps/kdevappwizard/template-kicker/applet.kdevelop
-share/kde/apps/kdevappwizard/template-kicker/kicker.png
-share/kde/apps/kdevappwizard/template-kicker/script
-share/kde/apps/kdevappwizard/template-kicker/src-Makefile.am
-share/kde/apps/kdevappwizard/template-kicker/subdirs
-share/kde/apps/kdevappwizard/template-kioslave/kioslave.png
-share/kde/apps/kdevappwizard/template-kioslave/script
-share/kde/apps/kdevappwizard/template-kioslave/slave.cpp
-share/kde/apps/kdevappwizard/template-kioslave/slave.h
-share/kde/apps/kdevappwizard/template-kioslave/slave.kdevelop
-share/kde/apps/kdevappwizard/template-kioslave/slave.protocol
-share/kde/apps/kdevappwizard/template-kioslave/src-Makefile.am
-share/kde/apps/kdevappwizard/template-kioslave/subdirs
-share/kde/apps/kdevappwizard/template-kmod/kmod-driver.c
-share/kde/apps/kdevappwizard/template-kmod/kmod.kdevelop
-share/kde/apps/kdevappwizard/template-kmod/script
-share/kde/apps/kdevappwizard/template-kmod/src-Makefile
-share/kde/apps/kdevappwizard/template-konqnavpanel/konqnavpanel.cpp
-share/kde/apps/kdevappwizard/template-konqnavpanel/konqnavpanel.desktop
-share/kde/apps/kdevappwizard/template-konqnavpanel/konqnavpanel.h
-share/kde/apps/kdevappwizard/template-konqnavpanel/konqnavpanel.kdevelop
-share/kde/apps/kdevappwizard/template-konqnavpanel/konqnavpanel.png
-share/kde/apps/kdevappwizard/template-konqnavpanel/script
-share/kde/apps/kdevappwizard/template-konqnavpanel/src-Makefile.am
-share/kde/apps/kdevappwizard/template-konqnavpanel/subdirs
-share/kde/apps/kdevappwizard/template-kopart/kde-configure.in.in
-share/kde/apps/kdevappwizard/template-kopart/kopart.desktop
-share/kde/apps/kdevappwizard/template-kopart/kopart.kdevelop
-share/kde/apps/kdevappwizard/template-kopart/kopart.png
-share/kde/apps/kdevappwizard/template-kopart/kopart.rc
-share/kde/apps/kdevappwizard/template-kopart/kopart_aboutdata.h
-share/kde/apps/kdevappwizard/template-kopart/kopart_factory.cpp
-share/kde/apps/kdevappwizard/template-kopart/kopart_factory.h
-share/kde/apps/kdevappwizard/template-kopart/kopart_part.cpp
-share/kde/apps/kdevappwizard/template-kopart/kopart_part.h
-share/kde/apps/kdevappwizard/template-kopart/kopart_view.cpp
-share/kde/apps/kdevappwizard/template-kopart/kopart_view.h
-share/kde/apps/kdevappwizard/template-kopart/main.cpp
-share/kde/apps/kdevappwizard/template-kopart/script
-share/kde/apps/kdevappwizard/template-kopart/src-Makefile.am
-share/kde/apps/kdevappwizard/template-kopart/subdirs
-share/kde/apps/kdevappwizard/template-kopart/x-kopart.desktop
-share/kde/apps/kdevappwizard/template-kpartapp/app.cpp
-share/kde/apps/kdevappwizard/template-kpartapp/app.h
-share/kde/apps/kdevappwizard/template-kpartapp/app.kdevelop
-share/kde/apps/kdevappwizard/template-kpartapp/app_part.cpp
-share/kde/apps/kdevappwizard/template-kpartapp/app_part.h
-share/kde/apps/kdevappwizard/template-kpartapp/app_part.rc
-share/kde/apps/kdevappwizard/template-kpartapp/app_shell.rc
-share/kde/apps/kdevappwizard/template-kpartapp/kpartapp.png
-share/kde/apps/kdevappwizard/template-kpartapp/main.cpp
-share/kde/apps/kdevappwizard/template-kpartapp/script
-share/kde/apps/kdevappwizard/template-kpartapp/src-Makefile.am
-share/kde/apps/kdevappwizard/template-kpartapp/subdirs
-share/kde/apps/kdevappwizard/template-kpartplugin/hi16-action-plugin.png
-share/kde/apps/kdevappwizard/template-kpartplugin/hi22-action-plugin.png
-share/kde/apps/kdevappwizard/template-kpartplugin/kpartplugin.png
-share/kde/apps/kdevappwizard/template-kpartplugin/plugin.kdevelop
-share/kde/apps/kdevappwizard/template-kpartplugin/plugin_app.cpp
-share/kde/apps/kdevappwizard/template-kpartplugin/plugin_app.h
-share/kde/apps/kdevappwizard/template-kpartplugin/plugin_app.rc
-share/kde/apps/kdevappwizard/template-kpartplugin/script
-share/kde/apps/kdevappwizard/template-kpartplugin/src-Makefile.am
-share/kde/apps/kdevappwizard/template-kpartplugin/subdirs
-share/kde/apps/kdevappwizard/template-kscreensaver/kscreensaver.cpp
-share/kde/apps/kdevappwizard/template-kscreensaver/kscreensaver.desktop
-share/kde/apps/kdevappwizard/template-kscreensaver/kscreensaver.h
-share/kde/apps/kdevappwizard/template-kscreensaver/kscreensaver.kdevelop
-share/kde/apps/kdevappwizard/template-kscreensaver/kscreensaver.png
-share/kde/apps/kdevappwizard/template-kscreensaver/kscreensaverui.ui
-share/kde/apps/kdevappwizard/template-kscreensaver/script
-share/kde/apps/kdevappwizard/template-kscreensaver/src-Makefile.am
-share/kde/apps/kdevappwizard/template-kscreensaver/subdirs
-share/kde/apps/kdevappwizard/template-noatunui/noatunplugin.png
-share/kde/apps/kdevappwizard/template-noatunui/plugin.kdevelop
-share/kde/apps/kdevappwizard/template-noatunui/plugin.plugin
-share/kde/apps/kdevappwizard/template-noatunui/plugin_app.cpp
-share/kde/apps/kdevappwizard/template-noatunui/plugin_impl.cpp
-share/kde/apps/kdevappwizard/template-noatunui/plugin_impl.h
-share/kde/apps/kdevappwizard/template-noatunui/script
-share/kde/apps/kdevappwizard/template-noatunui/src-Makefile.am
-share/kde/apps/kdevappwizard/template-noatunui/subdirs
-share/kde/apps/kdevappwizard/template-noatunvisual/noatunplugin.png
-share/kde/apps/kdevappwizard/template-noatunvisual/noatunvisual-configure.in.in
-share/kde/apps/kdevappwizard/template-noatunvisual/plugin.kdevelop
-share/kde/apps/kdevappwizard/template-noatunvisual/plugin.plugin
-share/kde/apps/kdevappwizard/template-noatunvisual/plugin_app.cpp
-share/kde/apps/kdevappwizard/template-noatunvisual/plugin_app.h
-share/kde/apps/kdevappwizard/template-noatunvisual/plugin_impl.cpp
-share/kde/apps/kdevappwizard/template-noatunvisual/plugin_impl.h
-share/kde/apps/kdevappwizard/template-noatunvisual/script
-share/kde/apps/kdevappwizard/template-noatunvisual/src-Makefile.am
-share/kde/apps/kdevappwizard/template-noatunvisual/subdirs
-share/kde/apps/kdevappwizard/template-pascalhello/app.kdevelop
-share/kde/apps/kdevappwizard/template-pascalhello/main.pp
-share/kde/apps/kdevappwizard/template-pascalhello/script
-share/kde/apps/kdevappwizard/template-perlhello/app.kdevelop
-share/kde/apps/kdevappwizard/template-perlhello/app.pl
-share/kde/apps/kdevappwizard/template-perlhello/camel.png
-share/kde/apps/kdevappwizard/template-perlhello/script
-share/kde/apps/kdevappwizard/template-phphello/app.kdevelop
-share/kde/apps/kdevappwizard/template-phphello/app.php
-share/kde/apps/kdevappwizard/template-phphello/script
-share/kde/apps/kdevappwizard/template-pyqt/app-Makefile.am
-share/kde/apps/kdevappwizard/template-pyqt/app-autogen.sh
-share/kde/apps/kdevappwizard/template-pyqt/app-configure.ac
-share/kde/apps/kdevappwizard/template-pyqt/app.kdevelop
-share/kde/apps/kdevappwizard/template-pyqt/app.py
-share/kde/apps/kdevappwizard/template-pyqt/documentdetails.ui
-share/kde/apps/kdevappwizard/template-pyqt/fileopen.pyxpm
-share/kde/apps/kdevappwizard/template-pyqt/fileprint.pyxpm
-share/kde/apps/kdevappwizard/template-pyqt/filesave.pyxpm
-share/kde/apps/kdevappwizard/template-pyqt/install-sh
-share/kde/apps/kdevappwizard/template-pyqt/missing
-share/kde/apps/kdevappwizard/template-pyqt/mkinstalldirs
-share/kde/apps/kdevappwizard/template-pyqt/pyqt-am-preproc.py
-share/kde/apps/kdevappwizard/template-pyqt/pyqt.png
-share/kde/apps/kdevappwizard/template-pyqt/script
-share/kde/apps/kdevappwizard/template-pyqt/templates-ui-dialog
-share/kde/apps/kdevappwizard/template-pyqt/templates-ui-mainwin
-share/kde/apps/kdevappwizard/template-pythonhello/app.kdevelop
-share/kde/apps/kdevappwizard/template-pythonhello/app.py
-share/kde/apps/kdevappwizard/template-pythonhello/pythonhello.png
-share/kde/apps/kdevappwizard/template-pythonhello/script
-share/kde/apps/kdevappwizard/template-pytk/app.kdevelop
-share/kde/apps/kdevappwizard/template-pytk/app.py
-share/kde/apps/kdevappwizard/template-pytk/pytk.png
-share/kde/apps/kdevappwizard/template-pytk/script
-share/kde/apps/kdevappwizard/template-qmakeapp/fileopen.xpm
-share/kde/apps/kdevappwizard/template-qmakeapp/fileprint.xpm
-share/kde/apps/kdevappwizard/template-qmakeapp/filesave.xpm
-share/kde/apps/kdevappwizard/template-qmakeapp/main.cpp
-share/kde/apps/kdevappwizard/template-qmakeapp/qmakeapp.cpp
-share/kde/apps/kdevappwizard/template-qmakeapp/qmakeapp.h
-share/kde/apps/kdevappwizard/template-qmakeapp/qmakeapp.kdevelop
-share/kde/apps/kdevappwizard/template-qmakeapp/qmakeapp.png
-share/kde/apps/kdevappwizard/template-qmakeapp/qmakeapp.pro
-share/kde/apps/kdevappwizard/template-qmakeapp/script
-share/kde/apps/kdevappwizard/template-qmakeapp/src.pro
-share/kde/apps/kdevappwizard/template-qmakesimple/app.kdevelop
-share/kde/apps/kdevappwizard/template-qmakesimple/app.pro
-share/kde/apps/kdevappwizard/template-qmakesimple/main.cpp
-share/kde/apps/kdevappwizard/template-qmakesimple/qmakesimple.png
-share/kde/apps/kdevappwizard/template-qmakesimple/script
-share/kde/apps/kdevappwizard/template-qmakesimple/src.pro
-share/kde/apps/kdevappwizard/template-qtopiaapp/Example.png
-share/kde/apps/kdevappwizard/template-qtopiaapp/Makefile.am
-share/kde/apps/kdevappwizard/template-qtopiaapp/app.kdevelop
-share/kde/apps/kdevappwizard/template-qtopiaapp/app.pro
-share/kde/apps/kdevappwizard/template-qtopiaapp/example.control
-share/kde/apps/kdevappwizard/template-qtopiaapp/example.cpp
-share/kde/apps/kdevappwizard/template-qtopiaapp/example.desktop
-share/kde/apps/kdevappwizard/template-qtopiaapp/example.h
-share/kde/apps/kdevappwizard/template-qtopiaapp/example.html
-share/kde/apps/kdevappwizard/template-qtopiaapp/examplebase.ui
-share/kde/apps/kdevappwizard/template-qtopiaapp/main.cpp
-share/kde/apps/kdevappwizard/template-qtopiaapp/qtopiaapp
-share/kde/apps/kdevappwizard/template-qtopiaapp/script
-share/kde/apps/kdevappwizard/template-rubyhello/app.kdevelop
-share/kde/apps/kdevappwizard/template-rubyhello/app.rb
-share/kde/apps/kdevappwizard/template-rubyhello/script
-share/kde/apps/kdevappwizard/template-sqlsimple/app.kdevelop
-share/kde/apps/kdevappwizard/template-sqlsimple/app.sql
-share/kde/apps/kdevappwizard/template-sqlsimple/script
-share/kde/apps/kdevappwizard/template-superwaba/script
-share/kde/apps/kdevappwizard/template-superwaba/src-Makefile
-share/kde/apps/kdevappwizard/template-superwaba/superwaba.png
-share/kde/apps/kdevappwizard/template-superwaba/sw.filelist
-share/kde/apps/kdevappwizard/template-superwaba/sw.java
-share/kde/apps/kdevappwizard/template-superwaba/sw.kdevelop
-share/kde/apps/kdevappwizard/template-wxhello/app.cpp
-share/kde/apps/kdevappwizard/template-wxhello/app.desktop
-share/kde/apps/kdevappwizard/template-wxhello/app.h
-share/kde/apps/kdevappwizard/template-wxhello/app.kdevelop
-share/kde/apps/kdevappwizard/template-wxhello/script
-share/kde/apps/kdevappwizard/template-wxhello/src-Makefile.am
-share/kde/apps/kdevappwizard/template-wxhello/subdirs
-share/kde/apps/kdevappwizard/template-wxhello/wxhello.png
-share/kde/apps/kdevappwizard/templates/adahello
-share/kde/apps/kdevappwizard/templates/bashhello
-share/kde/apps/kdevappwizard/templates/chello
-share/kde/apps/kdevappwizard/templates/chellogba
-share/kde/apps/kdevappwizard/templates/cpphello
-share/kde/apps/kdevappwizard/templates/cppsdlhello
-share/kde/apps/kdevappwizard/templates/dcopservice
-share/kde/apps/kdevappwizard/templates/fortranhello
-share/kde/apps/kdevappwizard/templates/fpcgtk
-share/kde/apps/kdevappwizard/templates/fpchello
-share/kde/apps/kdevappwizard/templates/fpcsharedlib
-share/kde/apps/kdevappwizard/templates/gnomeapp
-share/kde/apps/kdevappwizard/templates/haskellhello
-share/kde/apps/kdevappwizard/templates/javahello
-share/kde/apps/kdevappwizard/templates/kapp
-share/kde/apps/kdevappwizard/templates/kappjava
-share/kde/apps/kdevappwizard/templates/kateplugin
-share/kde/apps/kdevappwizard/templates/kateplugin2
-share/kde/apps/kdevappwizard/templates/kbearimportfilter
-share/kde/apps/kdevappwizard/templates/kbearplugin
-share/kde/apps/kdevappwizard/templates/kcmodule
-share/kde/apps/kdevappwizard/templates/kdedcop
-share/kde/apps/kdevappwizard/templates/kdevlang
-share/kde/apps/kdevappwizard/templates/kdevpart
-share/kde/apps/kdevappwizard/templates/kdevpart2
-share/kde/apps/kdevappwizard/templates/kfileplugin
-share/kde/apps/kdevappwizard/templates/khello
-share/kde/apps/kdevappwizard/templates/khello2
-share/kde/apps/kdevappwizard/templates/kicker
-share/kde/apps/kdevappwizard/templates/kioslave
-share/kde/apps/kdevappwizard/templates/kmod
-share/kde/apps/kdevappwizard/templates/konqnavpanel
-share/kde/apps/kdevappwizard/templates/kopart
-share/kde/apps/kdevappwizard/templates/kpartapp
-share/kde/apps/kdevappwizard/templates/kpartplugin
-share/kde/apps/kdevappwizard/templates/kscreensaver
-share/kde/apps/kdevappwizard/templates/noatunui
-share/kde/apps/kdevappwizard/templates/noatunvisual
-share/kde/apps/kdevappwizard/templates/pascalhello
-share/kde/apps/kdevappwizard/templates/perlhello
-share/kde/apps/kdevappwizard/templates/phphello
-share/kde/apps/kdevappwizard/templates/pyqt
-share/kde/apps/kdevappwizard/templates/pythonhello
-share/kde/apps/kdevappwizard/templates/pytk
-share/kde/apps/kdevappwizard/templates/qmakeapp
-share/kde/apps/kdevappwizard/templates/qmakesimple
-share/kde/apps/kdevappwizard/templates/qtopiaapp
-share/kde/apps/kdevappwizard/templates/rubyhello
-share/kde/apps/kdevappwizard/templates/sqlsimple
-share/kde/apps/kdevappwizard/templates/superwaba
-share/kde/apps/kdevappwizard/templates/wxhello
+share/kde/apps/kdevappwizard/templates/adahello.kdevtemplate
+share/kde/apps/kdevappwizard/templates/bashhello.kdevtemplate
+share/kde/apps/kdevappwizard/templates/chello.kdevtemplate
+share/kde/apps/kdevappwizard/templates/chellogba.kdevtemplate
+share/kde/apps/kdevappwizard/templates/clanlib.kdevtemplate
+share/kde/apps/kdevappwizard/templates/cppcurseshello.kdevtemplate
+share/kde/apps/kdevappwizard/templates/cpphello.kdevtemplate
+share/kde/apps/kdevappwizard/templates/cppsdlhello.kdevtemplate
+share/kde/apps/kdevappwizard/templates/dcopservice.kdevtemplate
+share/kde/apps/kdevappwizard/templates/fortranhello.kdevtemplate
+share/kde/apps/kdevappwizard/templates/fpcgtk.kdevtemplate
+share/kde/apps/kdevappwizard/templates/fpchello.kdevtemplate
+share/kde/apps/kdevappwizard/templates/fpcsharedlib.kdevtemplate
+share/kde/apps/kdevappwizard/templates/gnomeapp.kdevtemplate
+share/kde/apps/kdevappwizard/templates/gtk2mmapp.kdevtemplate
+share/kde/apps/kdevappwizard/templates/haskellhello.kdevtemplate
+share/kde/apps/kdevappwizard/templates/javahello.kdevtemplate
+share/kde/apps/kdevappwizard/templates/kapp.kdevtemplate
+share/kde/apps/kdevappwizard/templates/kappjava.kdevtemplate
+share/kde/apps/kdevappwizard/templates/kateplugin.kdevtemplate
+share/kde/apps/kdevappwizard/templates/kateplugin2.kdevtemplate
+share/kde/apps/kdevappwizard/templates/kbearimportfilter.kdevtemplate
+share/kde/apps/kdevappwizard/templates/kbearplugin.kdevtemplate
+share/kde/apps/kdevappwizard/templates/kcmodule.kdevtemplate
+share/kde/apps/kdevappwizard/templates/kdedcop.kdevtemplate
+share/kde/apps/kdevappwizard/templates/kdevlang.kdevtemplate
+share/kde/apps/kdevappwizard/templates/kdevpart.kdevtemplate
+share/kde/apps/kdevappwizard/templates/kdevpart2.kdevtemplate
+share/kde/apps/kdevappwizard/templates/kfileplugin.kdevtemplate
+share/kde/apps/kdevappwizard/templates/khello.kdevtemplate
+share/kde/apps/kdevappwizard/templates/khello2.kdevtemplate
+share/kde/apps/kdevappwizard/templates/kicker.kdevtemplate
+share/kde/apps/kdevappwizard/templates/kioslave.kdevtemplate
+share/kde/apps/kdevappwizard/templates/kmod.kdevtemplate
+share/kde/apps/kdevappwizard/templates/konqnavpanel.kdevtemplate
+share/kde/apps/kdevappwizard/templates/kopart.kdevtemplate
+share/kde/apps/kdevappwizard/templates/kpartapp.kdevtemplate
+share/kde/apps/kdevappwizard/templates/kpartplugin.kdevtemplate
+share/kde/apps/kdevappwizard/templates/kscreensaver.kdevtemplate
+share/kde/apps/kdevappwizard/templates/kxt.kdevtemplate
+share/kde/apps/kdevappwizard/templates/noatunui.kdevtemplate
+share/kde/apps/kdevappwizard/templates/noatunvisual.kdevtemplate
+share/kde/apps/kdevappwizard/templates/opieapp.kdevtemplate
+share/kde/apps/kdevappwizard/templates/opieapplet.kdevtemplate
+share/kde/apps/kdevappwizard/templates/opieinput.kdevtemplate
+share/kde/apps/kdevappwizard/templates/opiemenu.kdevtemplate
+share/kde/apps/kdevappwizard/templates/opienet.kdevtemplate
+share/kde/apps/kdevappwizard/templates/opietoday.kdevtemplate
+share/kde/apps/kdevappwizard/templates/pascalhello.kdevtemplate
+share/kde/apps/kdevappwizard/templates/perlhello.kdevtemplate
+share/kde/apps/kdevappwizard/templates/phphello.kdevtemplate
+share/kde/apps/kdevappwizard/templates/pyqt.kdevtemplate
+share/kde/apps/kdevappwizard/templates/pythonhello.kdevtemplate
+share/kde/apps/kdevappwizard/templates/pytk.kdevtemplate
+share/kde/apps/kdevappwizard/templates/qmakeapp.kdevtemplate
+share/kde/apps/kdevappwizard/templates/qmakesimple.kdevtemplate
+share/kde/apps/kdevappwizard/templates/qtopiaapp.kdevtemplate
+share/kde/apps/kdevappwizard/templates/qtruby.kdevtemplate
+share/kde/apps/kdevappwizard/templates/rubyhello.kdevtemplate
+share/kde/apps/kdevappwizard/templates/sqlsimple.kdevtemplate
+share/kde/apps/kdevappwizard/templates/superwaba.kdevtemplate
+share/kde/apps/kdevappwizard/templates/win32gui.kdevtemplate
+share/kde/apps/kdevappwizard/templates/win32hello.kdevtemplate
+share/kde/apps/kdevappwizard/templates/wxhello.kdevtemplate
+share/kde/apps/kdevappwizard/win32gui.png
+share/kde/apps/kdevappwizard/win32gui.tar.gz
+share/kde/apps/kdevappwizard/win32hello.png
+share/kde/apps/kdevappwizard/win32hello.tar.gz
+share/kde/apps/kdevappwizard/wxhello.png
+share/kde/apps/kdevappwizard/wxhello.tar.gz
+share/kde/apps/kdevassistant/kdevassistantui.rc
 share/kde/apps/kdevastyle/kdevpart_astyle.rc
 share/kde/apps/kdevautoproject/kdevautoproject.rc
 share/kde/apps/kdevbashsupport/kdevbashsupport.rc
@@ -903,6 +684,7 @@ share/kde/apps/kdevclassview/pics/CVpublic_signal.png
 share/kde/apps/kdevclassview/pics/CVpublic_slot.png
 share/kde/apps/kdevclassview/pics/CVpublic_var.png
 share/kde/apps/kdevclassview/pics/CVstruct.png
+share/kde/apps/kdevclassview/pics/CVtypedef.png
 share/kde/apps/kdevcloser/kdevpart_closer.rc
 share/kde/apps/kdevcppsupport/configuration
 share/kde/apps/kdevcppsupport/kdevcppsupport.rc
@@ -918,64 +700,288 @@ share/kde/apps/kdevcppsupport/templates/default.cpp
 share/kde/apps/kdevcppsupport/templates/default.h
 share/kde/apps/kdevctags/kdevctags.rc
 share/kde/apps/kdevcustomproject/kdevcustomproject.rc
-share/kde/apps/kdevcvs/buildcvs.sh
-share/kde/apps/kdevcvs/kdevcvspart.rc
 share/kde/apps/kdevcvsservice/buildcvs.sh
-share/kde/apps/kdevcvsservice/kdevcvsservicepart.rc
 share/kde/apps/kdevcvsservice/pics/kdev_cvs.png
 share/kde/apps/kdevdebugger/kdevdebugger.rc
+share/kde/apps/kdevdesigner/kdevdesigner_shell.rc
+share/kde/apps/kdevdesignerpart/kdevdesigner_part.rc
+share/kde/apps/kdevdesignerpart/kdevdesigner_part_sh.rc
+share/kde/apps/kdevdesignerpart/pics/designer_adjustsize.png
+share/kde/apps/kdevdesignerpart/pics/designer_appicon.png
+share/kde/apps/kdevdesignerpart/pics/designer_arrow.png
+share/kde/apps/kdevdesignerpart/pics/designer_background.png
+share/kde/apps/kdevdesignerpart/pics/designer_book.png
+share/kde/apps/kdevdesignerpart/pics/designer_buttongroup.png
+share/kde/apps/kdevdesignerpart/pics/designer_checkbox.png
+share/kde/apps/kdevdesignerpart/pics/designer_combobox.png
+share/kde/apps/kdevdesignerpart/pics/designer_connecttool.png
+share/kde/apps/kdevdesignerpart/pics/designer_cross.png
+share/kde/apps/kdevdesignerpart/pics/designer_customwidget.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_adjustsize.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_book.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_buttongroup.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_checkbox.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_combobox.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_connecttool.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_customwidget.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_databrowser.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_datatable.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_dataview.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_dateedit.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_datetimeedit.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_dial.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_down.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_editbreaklayout.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_editcopy.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_editcut.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_editdelete.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_editgrid.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_edithlayout.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_edithlayoutsplit.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_editlower.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_editpaste.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_editraise.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_editslots.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_editvlayout.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_editvlayoutsplit.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_filenew.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_fileopen.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_filesave.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_folder.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_form.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_frame.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_groupbox.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_help.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_home.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_iconview.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_image.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_label.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_layout.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_lcdnumber.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_left.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_line.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_lineedit.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_listbox.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_listview.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_multilineedit.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_newform.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_ordertool.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_pixlabel.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_pointer.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_print.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_progress.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_project.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_pushbutton.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_radiobutton.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_redo.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_richtextedit.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_right.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_scrollbar.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_searchfind.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_setbuddy.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_slider.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_spacer.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_spinbox.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_table.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_tabwidget.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_textbold.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_textbrowser.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_textcenter.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_textedit.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_textfont.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_texth1.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_texth2.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_texth3.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_textitalic.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_textjustify.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_textlarger.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_textleft.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_textlinebreak.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_textparagraph.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_textright.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_textsmaller.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_textteletext.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_textunderline.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_textview.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_timeedit.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_toolbox.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_toolbutton.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_undo.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_up.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_widgetstack.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_wizarddata.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_wizarddialog.png
+share/kde/apps/kdevdesignerpart/pics/designer_d_wordwrap.png
+share/kde/apps/kdevdesignerpart/pics/designer_databrowser.png
+share/kde/apps/kdevdesignerpart/pics/designer_datatable.png
+share/kde/apps/kdevdesignerpart/pics/designer_dataview.png
+share/kde/apps/kdevdesignerpart/pics/designer_dateedit.png
+share/kde/apps/kdevdesignerpart/pics/designer_datetimeedit.png
+share/kde/apps/kdevdesignerpart/pics/designer_dial.png
+share/kde/apps/kdevdesignerpart/pics/designer_down.png
+share/kde/apps/kdevdesignerpart/pics/designer_editbreaklayout.png
+share/kde/apps/kdevdesignerpart/pics/designer_editcopy.png
+share/kde/apps/kdevdesignerpart/pics/designer_editcut.png
+share/kde/apps/kdevdesignerpart/pics/designer_editdelete.png
+share/kde/apps/kdevdesignerpart/pics/designer_editgrid.png
+share/kde/apps/kdevdesignerpart/pics/designer_edithlayout.png
+share/kde/apps/kdevdesignerpart/pics/designer_edithlayoutsplit.png
+share/kde/apps/kdevdesignerpart/pics/designer_editlower.png
+share/kde/apps/kdevdesignerpart/pics/designer_editpaste.png
+share/kde/apps/kdevdesignerpart/pics/designer_editraise.png
+share/kde/apps/kdevdesignerpart/pics/designer_editslots.png
+share/kde/apps/kdevdesignerpart/pics/designer_editvlayout.png
+share/kde/apps/kdevdesignerpart/pics/designer_editvlayoutsplit.png
+share/kde/apps/kdevdesignerpart/pics/designer_filenew.png
+share/kde/apps/kdevdesignerpart/pics/designer_fileopen.png
+share/kde/apps/kdevdesignerpart/pics/designer_filesave.png
+share/kde/apps/kdevdesignerpart/pics/designer_folder.png
+share/kde/apps/kdevdesignerpart/pics/designer_form.png
+share/kde/apps/kdevdesignerpart/pics/designer_frame.png
+share/kde/apps/kdevdesignerpart/pics/designer_groupbox.png
+share/kde/apps/kdevdesignerpart/pics/designer_hand.png
+share/kde/apps/kdevdesignerpart/pics/designer_help.png
+share/kde/apps/kdevdesignerpart/pics/designer_home.png
+share/kde/apps/kdevdesignerpart/pics/designer_hsplit.png
+share/kde/apps/kdevdesignerpart/pics/designer_ibeam.png
+share/kde/apps/kdevdesignerpart/pics/designer_iconview.png
+share/kde/apps/kdevdesignerpart/pics/designer_image.png
+share/kde/apps/kdevdesignerpart/pics/designer_label.png
+share/kde/apps/kdevdesignerpart/pics/designer_layout.png
+share/kde/apps/kdevdesignerpart/pics/designer_lcdnumber.png
+share/kde/apps/kdevdesignerpart/pics/designer_left.png
+share/kde/apps/kdevdesignerpart/pics/designer_line.png
+share/kde/apps/kdevdesignerpart/pics/designer_lineedit.png
+share/kde/apps/kdevdesignerpart/pics/designer_listbox.png
+share/kde/apps/kdevdesignerpart/pics/designer_listview.png
+share/kde/apps/kdevdesignerpart/pics/designer_multilineedit.png
+share/kde/apps/kdevdesignerpart/pics/designer_newform.png
+share/kde/apps/kdevdesignerpart/pics/designer_no.png
+share/kde/apps/kdevdesignerpart/pics/designer_object.png
+share/kde/apps/kdevdesignerpart/pics/designer_ordertool.png
+share/kde/apps/kdevdesignerpart/pics/designer_pixlabel.png
+share/kde/apps/kdevdesignerpart/pics/designer_pointer.png
+share/kde/apps/kdevdesignerpart/pics/designer_print.png
+share/kde/apps/kdevdesignerpart/pics/designer_progress.png
+share/kde/apps/kdevdesignerpart/pics/designer_project.png
+share/kde/apps/kdevdesignerpart/pics/designer_pushbutton.png
+share/kde/apps/kdevdesignerpart/pics/designer_qtlogo.png
+share/kde/apps/kdevdesignerpart/pics/designer_radiobutton.png
+share/kde/apps/kdevdesignerpart/pics/designer_redo.png
+share/kde/apps/kdevdesignerpart/pics/designer_resetproperty.png
+share/kde/apps/kdevdesignerpart/pics/designer_richtextedit.png
+share/kde/apps/kdevdesignerpart/pics/designer_right.png
+share/kde/apps/kdevdesignerpart/pics/designer_s_down.png
+share/kde/apps/kdevdesignerpart/pics/designer_s_editcut.png
+share/kde/apps/kdevdesignerpart/pics/designer_s_left.png
+share/kde/apps/kdevdesignerpart/pics/designer_s_right.png
+share/kde/apps/kdevdesignerpart/pics/designer_s_up.png
+share/kde/apps/kdevdesignerpart/pics/designer_scrollbar.png
+share/kde/apps/kdevdesignerpart/pics/designer_searchfind.png
+share/kde/apps/kdevdesignerpart/pics/designer_setbuddy.png
+share/kde/apps/kdevdesignerpart/pics/designer_sizeall.png
+share/kde/apps/kdevdesignerpart/pics/designer_sizeb.png
+share/kde/apps/kdevdesignerpart/pics/designer_sizef.png
+share/kde/apps/kdevdesignerpart/pics/designer_sizeh.png
+share/kde/apps/kdevdesignerpart/pics/designer_sizev.png
+share/kde/apps/kdevdesignerpart/pics/designer_slider.png
+share/kde/apps/kdevdesignerpart/pics/designer_spacer.png
+share/kde/apps/kdevdesignerpart/pics/designer_spinbox.png
+share/kde/apps/kdevdesignerpart/pics/designer_splash.png
+share/kde/apps/kdevdesignerpart/pics/designer_table.png
+share/kde/apps/kdevdesignerpart/pics/designer_tabwidget.png
+share/kde/apps/kdevdesignerpart/pics/designer_textbold.png
+share/kde/apps/kdevdesignerpart/pics/designer_textbrowser.png
+share/kde/apps/kdevdesignerpart/pics/designer_textcenter.png
+share/kde/apps/kdevdesignerpart/pics/designer_textedit.png
+share/kde/apps/kdevdesignerpart/pics/designer_textfont.png
+share/kde/apps/kdevdesignerpart/pics/designer_texth1.png
+share/kde/apps/kdevdesignerpart/pics/designer_texth2.png
+share/kde/apps/kdevdesignerpart/pics/designer_texth3.png
+share/kde/apps/kdevdesignerpart/pics/designer_textitalic.png
+share/kde/apps/kdevdesignerpart/pics/designer_textjustify.png
+share/kde/apps/kdevdesignerpart/pics/designer_textlarger.png
+share/kde/apps/kdevdesignerpart/pics/designer_textleft.png
+share/kde/apps/kdevdesignerpart/pics/designer_textlinebreak.png
+share/kde/apps/kdevdesignerpart/pics/designer_textparagraph.png
+share/kde/apps/kdevdesignerpart/pics/designer_textright.png
+share/kde/apps/kdevdesignerpart/pics/designer_textsmaller.png
+share/kde/apps/kdevdesignerpart/pics/designer_textteletext.png
+share/kde/apps/kdevdesignerpart/pics/designer_textunderline.png
+share/kde/apps/kdevdesignerpart/pics/designer_textview.png
+share/kde/apps/kdevdesignerpart/pics/designer_timeedit.png
+share/kde/apps/kdevdesignerpart/pics/designer_toolbox.png
+share/kde/apps/kdevdesignerpart/pics/designer_toolbutton.png
+share/kde/apps/kdevdesignerpart/pics/designer_undo.png
+share/kde/apps/kdevdesignerpart/pics/designer_up.png
+share/kde/apps/kdevdesignerpart/pics/designer_uparrow.png
+share/kde/apps/kdevdesignerpart/pics/designer_vsplit.png
+share/kde/apps/kdevdesignerpart/pics/designer_wait.png
+share/kde/apps/kdevdesignerpart/pics/designer_widgetstack.png
+share/kde/apps/kdevdesignerpart/pics/designer_wizarddata.png
+share/kde/apps/kdevdesignerpart/pics/designer_wizarddialog.png
+share/kde/apps/kdevdesignerpart/pics/designer_wordwrap.png
 share/kde/apps/kdevdiff/kdevdiff.rc
 share/kde/apps/kdevdistpart/kdevpart_distpart.rc
-share/kde/apps/kdevdoctreeview/en/long.html
-share/kde/apps/kdevdoctreeview/en/nomatch.html
-share/kde/apps/kdevdoctreeview/en/short.html
-share/kde/apps/kdevdoctreeview/en/syntax.html
-share/kde/apps/kdevdoctreeview/en/wrapper.html
-share/kde/apps/kdevdoctreeview/kdevdoctreeview.rc
-share/kde/apps/kdevdoctreeview/pics/checked.xpm
-share/kde/apps/kdevdoctreeview/pics/htdig.png
-share/kde/apps/kdevdoctreeview/pics/star.png
-share/kde/apps/kdevdoctreeview/pics/star_blank.png
-share/kde/apps/kdevdoctreeview/pics/unchecked.xpm
-share/kde/apps/kdevdoctreeview/tocs/ada.toc
-share/kde/apps/kdevdoctreeview/tocs/ada_bugs_gcc.toc
-share/kde/apps/kdevdoctreeview/tocs/bash.toc
-share/kde/apps/kdevdoctreeview/tocs/bash_bugs.toc
-share/kde/apps/kdevdoctreeview/tocs/c++_bugs_gcc.toc
-share/kde/apps/kdevdoctreeview/tocs/clanlib.toc
-share/kde/apps/kdevdoctreeview/tocs/fortran_bugs_gcc.toc
-share/kde/apps/kdevdoctreeview/tocs/gnome1.toc
-share/kde/apps/kdevdoctreeview/tocs/gnustep.toc
-share/kde/apps/kdevdoctreeview/tocs/gtk_bugs.toc
-share/kde/apps/kdevdoctreeview/tocs/haskell.toc
-share/kde/apps/kdevdoctreeview/tocs/haskell_bugs_ghc.toc
-share/kde/apps/kdevdoctreeview/tocs/java_bugs_gcc.toc
-share/kde/apps/kdevdoctreeview/tocs/java_bugs_sun.toc
-share/kde/apps/kdevdoctreeview/tocs/kde2book.toc
-share/kde/apps/kdevdoctreeview/tocs/kdev3api.toc
-share/kde/apps/kdevdoctreeview/tocs/libc.toc
-share/kde/apps/kdevdoctreeview/tocs/libstdc++.toc
-share/kde/apps/kdevdoctreeview/tocs/opengl.toc
-share/kde/apps/kdevdoctreeview/tocs/pascal_bugs_fp.toc
-share/kde/apps/kdevdoctreeview/tocs/perl.toc
-share/kde/apps/kdevdoctreeview/tocs/perl_bugs.toc
-share/kde/apps/kdevdoctreeview/tocs/php.toc
-share/kde/apps/kdevdoctreeview/tocs/php_bugs.toc
-share/kde/apps/kdevdoctreeview/tocs/python.toc
-share/kde/apps/kdevdoctreeview/tocs/python_bugs.toc
-share/kde/apps/kdevdoctreeview/tocs/qt-kdev3.toc
-share/kde/apps/kdevdoctreeview/tocs/ruby.toc
-share/kde/apps/kdevdoctreeview/tocs/ruby_bugs.toc
-share/kde/apps/kdevdoctreeview/tocs/sdl.toc
-share/kde/apps/kdevdoctreeview/tocs/stl.toc
-share/kde/apps/kdevdoctreeview/tocs/sw.toc
-share/kde/apps/kdevdoctreeview/tocs/w3c-dom-level2-html.toc
-share/kde/apps/kdevdoctreeview/tocs/w3c-svg.toc
-share/kde/apps/kdevdoctreeview/tocs/w3c-uaag10.toc
-share/kde/apps/kdevdoctreeview/tocs/wxwidgets_bugs.toc
+share/kde/apps/kdevdocumentation/en/long.html
+share/kde/apps/kdevdocumentation/en/nomatch.html
+share/kde/apps/kdevdocumentation/en/short.html
+share/kde/apps/kdevdocumentation/en/syntax.html
+share/kde/apps/kdevdocumentation/en/wrapper.html
+share/kde/apps/kdevdocumentation/kdevpart_documentation.rc
+share/kde/apps/kdevdocumentation/pics/checked.xpm
+share/kde/apps/kdevdocumentation/pics/htdig.png
+share/kde/apps/kdevdocumentation/pics/star.png
+share/kde/apps/kdevdocumentation/pics/star_blank.png
+share/kde/apps/kdevdocumentation/pics/unchecked.xpm
+share/kde/apps/kdevdocumentation/tocs/ada.toc
+share/kde/apps/kdevdocumentation/tocs/ada_bugs_gcc.toc
+share/kde/apps/kdevdocumentation/tocs/bash.toc
+share/kde/apps/kdevdocumentation/tocs/bash_bugs.toc
+share/kde/apps/kdevdocumentation/tocs/c++_bugs_gcc.toc
+share/kde/apps/kdevdocumentation/tocs/clanlib.toc
+share/kde/apps/kdevdocumentation/tocs/cppannotations.toc
+share/kde/apps/kdevdocumentation/tocs/fortran_bugs_gcc.toc
+share/kde/apps/kdevdocumentation/tocs/gnome1.toc
+share/kde/apps/kdevdocumentation/tocs/gnustep.toc
+share/kde/apps/kdevdocumentation/tocs/gtk_bugs.toc
+share/kde/apps/kdevdocumentation/tocs/haskell.toc
+share/kde/apps/kdevdocumentation/tocs/haskell_bugs_ghc.toc
+share/kde/apps/kdevdocumentation/tocs/java_bugs_gcc.toc
+share/kde/apps/kdevdocumentation/tocs/java_bugs_sun.toc
+share/kde/apps/kdevdocumentation/tocs/kde2book.toc
+share/kde/apps/kdevdocumentation/tocs/kdev3api.toc
+share/kde/apps/kdevdocumentation/tocs/libc.toc
+share/kde/apps/kdevdocumentation/tocs/libstdc++.toc
+share/kde/apps/kdevdocumentation/tocs/opengl.toc
+share/kde/apps/kdevdocumentation/tocs/pascal_bugs_fp.toc
+share/kde/apps/kdevdocumentation/tocs/perl.toc
+share/kde/apps/kdevdocumentation/tocs/perl_bugs.toc
+share/kde/apps/kdevdocumentation/tocs/php.toc
+share/kde/apps/kdevdocumentation/tocs/php_bugs.toc
+share/kde/apps/kdevdocumentation/tocs/python.toc
+share/kde/apps/kdevdocumentation/tocs/python_bugs.toc
+share/kde/apps/kdevdocumentation/tocs/qt-kdev3.toc
+share/kde/apps/kdevdocumentation/tocs/ruby.toc
+share/kde/apps/kdevdocumentation/tocs/ruby_bugs.toc
+share/kde/apps/kdevdocumentation/tocs/sdl.toc
+share/kde/apps/kdevdocumentation/tocs/stl.toc
+share/kde/apps/kdevdocumentation/tocs/sw.toc
+share/kde/apps/kdevdocumentation/tocs/w3c-dom-level2-html.toc
+share/kde/apps/kdevdocumentation/tocs/w3c-svg.toc
+share/kde/apps/kdevdocumentation/tocs/w3c-uaag10.toc
+share/kde/apps/kdevdocumentation/tocs/wxwidgets_bugs.toc
 share/kde/apps/kdevdoxygen/kdevdoxygen.rc
 share/kde/apps/kdevelop/eventsrc
 share/kde/apps/kdevelop/kdevelopui.rc
+share/kde/apps/kdevelop/kdevhtml_partui.rc
+share/kde/apps/kdevelop/licenses/BSD
+share/kde/apps/kdevelop/licenses/GPL
+share/kde/apps/kdevelop/licenses/GPL+Qt-Exception
+share/kde/apps/kdevelop/licenses/LGPL
+share/kde/apps/kdevelop/licenses/QPL
+share/kde/apps/kdevelop/pics/kdevassistant-splash.png
+share/kde/apps/kdevelop/pics/kdevdesigner-splash.png
 share/kde/apps/kdevelop/pics/kdevelop-splash.png
 share/kde/apps/kdevelop/profiles/tiny
 share/kde/apps/kdevfilecreate/file-templates/F
@@ -1034,7 +1040,6 @@ share/kde/apps/kdevoutputviews/kdevmakeview.rc
 share/kde/apps/kdevpartexplorer/kdevpartexplorer.rc
 share/kde/apps/kdevpascalproject/kdevpascalproject.rc
 share/kde/apps/kdevpascalsupport/kdevpascalsupport.rc
-share/kde/apps/kdevperforce/kdevperforcepart.rc
 share/kde/apps/kdevperlsupport/kdevperlsupport.rc
 share/kde/apps/kdevphpsupport/kdevphpsupport.rc
 share/kde/apps/kdevphpsupport/phpfunctions
@@ -1045,7 +1050,6 @@ share/kde/apps/kdevreplace/kdevpart_replace.rc
 share/kde/apps/kdevrubysupport/kdevrubysupport.rc
 share/kde/apps/kdevscriptproject/kdevscriptproject.rc
 share/kde/apps/kdevsqlsupport/kdevsqlsupport.rc
-share/kde/apps/kdevsubversion/kdevpart_subversion.rc
 share/kde/apps/kdevtipofday/kdevpart_tipofday.rc
 share/kde/apps/kdevtipofday/tips
 share/kde/apps/kdevtools/kdevpart_tools.rc
@@ -1085,6 +1089,8 @@ share/kde/icons/hicolor/16x16/actions/servicenew_kdevelop.png
 share/kde/icons/hicolor/16x16/actions/target_kdevelop.png
 share/kde/icons/hicolor/16x16/actions/targetnew_kdevelop.png
 share/kde/icons/hicolor/16x16/actions/variablenew.png
+share/kde/icons/hicolor/16x16/apps/kdevassistant.png
+share/kde/icons/hicolor/16x16/apps/kdevdesigner.png
 share/kde/icons/hicolor/16x16/apps/kdevelop.png
 share/kde/icons/hicolor/22x22/actions/classnew.png
 share/kde/icons/hicolor/22x22/actions/classwiz.png
@@ -1114,9 +1120,13 @@ share/kde/icons/hicolor/22x22/actions/save_all.png
 share/kde/icons/hicolor/22x22/actions/tree_win.png
 share/kde/icons/hicolor/32x32/actions/classnew.png
 share/kde/icons/hicolor/32x32/actions/ktip.png
+share/kde/icons/hicolor/32x32/apps/kdevassistant.png
+share/kde/icons/hicolor/32x32/apps/kdevdesigner.png
 share/kde/icons/hicolor/32x32/apps/kdevelop.png
 share/kde/icons/hicolor/32x32/mimetypes/kdevelop_project.png
 share/kde/icons/hicolor/48x48/actions/ktip.png
+share/kde/icons/hicolor/48x48/apps/kdevassistant.png
+share/kde/icons/hicolor/48x48/apps/kdevdesigner.png
 share/kde/icons/hicolor/48x48/apps/kdevelop.png
 share/kde/icons/locolor/16x16/actions/kdevelop_tip.png
 share/kde/icons/locolor/32x32/actions/kdevelop_tip.png
@@ -1124,8 +1134,13 @@ share/kde/mimelnk/application/chm.desktop
 share/kde/mimelnk/application/x-kdevelop.desktop
 share/kde/mimelnk/text/x-fortran.desktop
 share/kde/services/chm.protocol
+share/kde/services/docchmplugin.desktop
+share/kde/services/doccustomplugin.desktop
+share/kde/services/docdevhelpplugin.desktop
+share/kde/services/docdoxygenplugin.desktop
+share/kde/services/dockdevtocplugin.desktop
+share/kde/services/docqtplugin.desktop
 share/kde/services/kchmpart.desktop
-share/kde/services/kdeapi.protocol
 share/kde/services/kdevabbrev.desktop
 share/kde/services/kdevadaproject.desktop
 share/kde/services/kdevadasupport.desktop
@@ -1142,12 +1157,11 @@ share/kde/services/kdevcsupport.desktop
 share/kde/services/kdevctags.desktop
 share/kde/services/kdevcustomimporter.desktop
 share/kde/services/kdevcustomproject.desktop
-share/kde/services/kdevcvs.desktop
 share/kde/services/kdevcvsservice.desktop
 share/kde/services/kdevdccoptions.desktop
 share/kde/services/kdevdebugger.desktop
+share/kde/services/kdevdesigner_part.desktop
 share/kde/services/kdevdiff.desktop
-share/kde/services/kdevdoctreeview.desktop
 share/kde/services/kdevdoxygen.desktop
 share/kde/services/kdevfilegroups.desktop
 share/kde/services/kdevfileview.desktop
@@ -1173,13 +1187,18 @@ share/kde/services/kdevopenwith.desktop
 share/kde/services/kdevpart_astyle.desktop
 share/kde/services/kdevpart_bookmarks.desktop
 share/kde/services/kdevpart_closer.desktop
+share/kde/services/kdevpart_copyto.desktop
+share/kde/services/kdevpart_ctags2.desktop
 share/kde/services/kdevpart_distpart.desktop
+share/kde/services/kdevpart_documentation.desktop
 share/kde/services/kdevpart_editorchooser.desktop
 share/kde/services/kdevpart_filecreate.desktop
+share/kde/services/kdevpart_filelist.desktop
 share/kde/services/kdevpart_fileselector.desktop
 share/kde/services/kdevpart_fullscreen.desktop
 share/kde/services/kdevpart_quickopen.desktop
 share/kde/services/kdevpart_replace.desktop
+share/kde/services/kdevpart_snippet.desktop
 share/kde/services/kdevpart_subversion.desktop
 share/kde/services/kdevpart_tipofday.desktop
 share/kde/services/kdevpart_tools.desktop
@@ -1210,6 +1229,7 @@ share/kde/servicetypes/kdevelopbuildsystems.desktop
 share/kde/servicetypes/kdevelopcompileroptions.desktop
 share/kde/servicetypes/kdevelopcreatefile.desktop
 share/kde/servicetypes/kdevelopdifffrontend.desktop
+share/kde/servicetypes/kdevelopdocumentationplugins.desktop
 share/kde/servicetypes/kdeveloplanguagesupport.desktop
 share/kde/servicetypes/kdevelopmakefrontend.desktop
 share/kde/servicetypes/kdeveloppcsimporter.desktop
@@ -1217,6 +1237,21 @@ share/kde/servicetypes/kdevelopplugin.desktop
 share/kde/servicetypes/kdevelopproject.desktop
 share/kde/servicetypes/kdevelopsourceformatter.desktop
 share/kde/servicetypes/kdevelopversioncontrol.desktop
+@comment dirrm share/kde/servicetypes
+@comment dirrm share/kde/services
+@comment dirrm share/kde/mimelnk/text
+@comment dirrm share/kde/mimelnk/application
+@comment dirrm share/kde/icons/locolor/32x32/actions
+@comment dirrm share/kde/icons/locolor/16x16/actions
+@comment dirrm share/kde/icons/hicolor/48x48/apps
+@comment dirrm share/kde/icons/hicolor/48x48/actions
+@comment dirrm share/kde/icons/hicolor/32x32/mimetypes
+@comment dirrm share/kde/icons/hicolor/32x32/apps
+@comment dirrm share/kde/icons/hicolor/32x32/actions
+@comment dirrm share/kde/icons/hicolor/22x22/actions
+@comment dirrm share/kde/icons/hicolor/16x16/apps
+@comment dirrm share/kde/icons/hicolor/16x16/actions
+@comment dirrm share/kde/config
 @dirrm share/kde/apps/qeditorpart/highlight
 @dirrm share/kde/apps/qeditorpart
 @dirrm share/kde/apps/manager
@@ -1225,7 +1260,6 @@ share/kde/servicetypes/kdevelopversioncontrol.desktop
 @dirrm share/kde/apps/kdevtrollproject
 @dirrm share/kde/apps/kdevtools
 @dirrm share/kde/apps/kdevtipofday
-@dirrm share/kde/apps/kdevsubversion
 @dirrm share/kde/apps/kdevsqlsupport
 @dirrm share/kde/apps/kdevscriptproject
 @dirrm share/kde/apps/kdevrubysupport
@@ -1235,7 +1269,6 @@ share/kde/servicetypes/kdevelopversioncontrol.desktop
 @dirrm share/kde/apps/kdevpythonsupport
 @dirrm share/kde/apps/kdevphpsupport
 @dirrm share/kde/apps/kdevperlsupport
-@dirrm share/kde/apps/kdevperforce
 @dirrm share/kde/apps/kdevpascalsupport
 @dirrm share/kde/apps/kdevpascalproject
 @dirrm share/kde/apps/kdevpartexplorer
@@ -1254,18 +1287,21 @@ share/kde/servicetypes/kdevelopversioncontrol.desktop
 @dirrm share/kde/apps/kdevfilecreate
 @dirrm share/kde/apps/kdevelop/profiles
 @dirrm share/kde/apps/kdevelop/pics
+@dirrm share/kde/apps/kdevelop/licenses
 @dirrm share/kde/apps/kdevelop
 @dirrm share/kde/apps/kdevdoxygen
-@dirrm share/kde/apps/kdevdoctreeview/tocs
-@dirrm share/kde/apps/kdevdoctreeview/pics
-@dirrm share/kde/apps/kdevdoctreeview/en
-@dirrm share/kde/apps/kdevdoctreeview
+@dirrm share/kde/apps/kdevdocumentation/tocs
+@dirrm share/kde/apps/kdevdocumentation/pics
+@dirrm share/kde/apps/kdevdocumentation/en
+@dirrm share/kde/apps/kdevdocumentation
 @dirrm share/kde/apps/kdevdistpart
 @dirrm share/kde/apps/kdevdiff
+@dirrm share/kde/apps/kdevdesignerpart/pics
+@dirrm share/kde/apps/kdevdesignerpart
+@dirrm share/kde/apps/kdevdesigner
 @dirrm share/kde/apps/kdevdebugger
 @dirrm share/kde/apps/kdevcvsservice/pics
 @dirrm share/kde/apps/kdevcvsservice
-@dirrm share/kde/apps/kdevcvs
 @dirrm share/kde/apps/kdevcustomproject
 @dirrm share/kde/apps/kdevctags
 @dirrm share/kde/apps/kdevcppsupport/templates
@@ -1278,59 +1314,9 @@ share/kde/servicetypes/kdevelopversioncontrol.desktop
 @dirrm share/kde/apps/kdevbashsupport
 @dirrm share/kde/apps/kdevautoproject
 @dirrm share/kde/apps/kdevastyle
+@dirrm share/kde/apps/kdevassistant
 @dirrm share/kde/apps/kdevappwizard/templates
-@dirrm share/kde/apps/kdevappwizard/template-wxhello
-@dirrm share/kde/apps/kdevappwizard/template-superwaba
-@dirrm share/kde/apps/kdevappwizard/template-sqlsimple
-@dirrm share/kde/apps/kdevappwizard/template-rubyhello
-@dirrm share/kde/apps/kdevappwizard/template-qtopiaapp
-@dirrm share/kde/apps/kdevappwizard/template-qmakesimple
-@dirrm share/kde/apps/kdevappwizard/template-qmakeapp
-@dirrm share/kde/apps/kdevappwizard/template-pytk
-@dirrm share/kde/apps/kdevappwizard/template-pythonhello
-@dirrm share/kde/apps/kdevappwizard/template-pyqt
-@dirrm share/kde/apps/kdevappwizard/template-phphello
-@dirrm share/kde/apps/kdevappwizard/template-perlhello
-@dirrm share/kde/apps/kdevappwizard/template-pascalhello
-@dirrm share/kde/apps/kdevappwizard/template-noatunvisual
-@dirrm share/kde/apps/kdevappwizard/template-noatunui
-@dirrm share/kde/apps/kdevappwizard/template-kscreensaver
-@dirrm share/kde/apps/kdevappwizard/template-kpartplugin
-@dirrm share/kde/apps/kdevappwizard/template-kpartapp
-@dirrm share/kde/apps/kdevappwizard/template-kopart
-@dirrm share/kde/apps/kdevappwizard/template-konqnavpanel
-@dirrm share/kde/apps/kdevappwizard/template-kmod
-@dirrm share/kde/apps/kdevappwizard/template-kioslave
-@dirrm share/kde/apps/kdevappwizard/template-kicker
-@dirrm share/kde/apps/kdevappwizard/template-khello2
-@dirrm share/kde/apps/kdevappwizard/template-khello
-@dirrm share/kde/apps/kdevappwizard/template-kfileplugin
-@dirrm share/kde/apps/kdevappwizard/template-kdevpart2
-@dirrm share/kde/apps/kdevappwizard/template-kdevpart
-@dirrm share/kde/apps/kdevappwizard/template-kdevlang
-@dirrm share/kde/apps/kdevappwizard/template-kdedcop
-@dirrm share/kde/apps/kdevappwizard/template-kcmodule
-@dirrm share/kde/apps/kdevappwizard/template-kbearplugin
-@dirrm share/kde/apps/kdevappwizard/template-kbearimportfilter
-@dirrm share/kde/apps/kdevappwizard/template-kateplugin2
-@dirrm share/kde/apps/kdevappwizard/template-kateplugin
-@dirrm share/kde/apps/kdevappwizard/template-kappjava
-@dirrm share/kde/apps/kdevappwizard/template-kapp
-@dirrm share/kde/apps/kdevappwizard/template-javahello
-@dirrm share/kde/apps/kdevappwizard/template-haskellhello
-@dirrm share/kde/apps/kdevappwizard/template-gnomeapp
-@dirrm share/kde/apps/kdevappwizard/template-fpcsharedlib
-@dirrm share/kde/apps/kdevappwizard/template-fpchello
-@dirrm share/kde/apps/kdevappwizard/template-fpcgtk
-@dirrm share/kde/apps/kdevappwizard/template-fortranhello
-@dirrm share/kde/apps/kdevappwizard/template-dcopservice
-@dirrm share/kde/apps/kdevappwizard/template-cppsdlhello
-@dirrm share/kde/apps/kdevappwizard/template-cpphello
 @dirrm share/kde/apps/kdevappwizard/template-common
-@dirrm share/kde/apps/kdevappwizard/template-chellogba
-@dirrm share/kde/apps/kdevappwizard/template-chello
-@dirrm share/kde/apps/kdevappwizard/template-bashhello
-@dirrm share/kde/apps/kdevappwizard/template-adahello
 @dirrm share/kde/apps/kdevappwizard/imports
 @dirrm share/kde/apps/kdevappwizard/importfiles
 @dirrm share/kde/apps/kdevappwizard
@@ -1340,10 +1326,13 @@ share/kde/servicetypes/kdevelopversioncontrol.desktop
 @dirrm share/kde/apps/kdevabbrev/templates
 @dirrm share/kde/apps/kdevabbrev/sources
 @dirrm share/kde/apps/kdevabbrev
-@dirrm share/kde/apps/devdoctreeview/indices
-@dirrm share/kde/apps/devdoctreeview
+@comment dirrm share/kde/apps
+@comment dirrm share/kde/applnk/Development
 @dirrm share/doc/kde/HTML/en/kdevelop
 @dirrm share/doc/kde/HTML/en/kde_app_devel
+@comment dirrm share/doc/kde/HTML/en
+@dirrm include/kinterfacedesigner
+@dirrm include/kdevelop/propeditor
 @dirrm include/kdevelop/cppparser
 @dirrm include/kdevelop/catalog
 @dirrm include/kdevelop
