@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2000/02/08 03:44:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/08/27 14:08:36 wiz Exp $
 bin/c1541
 bin/petcat
+bin/vsid
 bin/x128
 bin/x64
 bin/xcbm2
@@ -24,7 +25,6 @@ share/doc/vice/PETdoc.txt
 share/doc/vice/Readme.dos
 share/doc/vice/cbm_basic_tokens.txt
 share/doc/vice/drive_info.txt
-share/doc/vice/mnemonics.txt
 share/doc/vice/mon.txt
 share/doc/vice/serial.txt
 share/doc/vice/vice_1.html
@@ -55,6 +55,7 @@ share/vice/C128/default.vpl
 share/vice/C128/default.vrs
 share/vice/C128/godot.vpl
 share/vice/C128/kernal
+share/vice/C128/os2.vkm
 share/vice/C128/pc64.vpl
 share/vice/C128/position.vkm
 share/vice/C128/vdc_deft.vpl
@@ -75,6 +76,7 @@ share/vice/C64/kernal
 share/vice/C64/kernal.4064
 share/vice/C64/kernal.64gs
 share/vice/C64/kernal.sx64
+share/vice/C64/os2.vkm
 share/vice/C64/pc64.vpl
 share/vice/C64/position.vkm
 share/vice/C64/sx64.vrs
@@ -97,6 +99,9 @@ share/vice/DRIVES/dos1541
 share/vice/DRIVES/dos1571
 share/vice/DRIVES/dos1581
 share/vice/DRIVES/dos2031
+share/vice/DRIVES/dos2040
+share/vice/DRIVES/dos3040
+share/vice/DRIVES/dos4040
 share/vice/PET/amber.vpl
 share/vice/PET/basic1
 share/vice/PET/basic2
@@ -130,7 +135,10 @@ share/vice/VIC20/default.vkm
 share/vice/VIC20/default.vpl
 share/vice/VIC20/default.vrs
 share/vice/VIC20/kernal
+share/vice/VIC20/os2.vkm
 share/vice/VIC20/position.vkm
+share/vice/fonts/fonts.dir
+share/vice/fonts/vice-cbm.pcf
 @dirrm share/doc/vice
 @dirrm share/vice/C128
 @dirrm share/vice/C64
@@ -138,4 +146,5 @@ share/vice/VIC20/position.vkm
 @dirrm share/vice/DRIVES
 @dirrm share/vice/PET
 @dirrm share/vice/VIC20
+@dirrm share/vice/fonts
 @dirrm share/vice
