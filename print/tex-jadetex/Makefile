@@ -1,19 +1,16 @@
-# $NetBSD: Makefile,v 1.10 2004/09/29 01:26:16 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2004/09/29 13:10:23 hubertf Exp $
 #
 
-DISTNAME=	jadetex-2.20
+DISTNAME=	jadetex-3.13
 PKGNAME=	tex-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	print
-MASTER_SITES=	http://www.tug.org/applications/jadetex/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jadetex/}
 
 MAINTAINER=	hubertf@NetBSD.org
 COMMENT=	Process tex files produced by the TeX backend of Jade
 
 DEPENDS+=	tex-hugelatex>=1.0nb1:../tex-hugelatex
 
-WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
 TEXMF_CNF=	${LOCALBASE}/share/texmf/web2c/texmf.cnf
 
@@ -21,23 +18,19 @@ do-install:
 	${CP} -p ${TEXMF_CNF} ${TEXMF_CNF}-before-jadetex
 	${CAT} ${FILESDIR}/texmf.cnf-add >>${TEXMF_CNF}
 	cd ${WRKSRC}; ${SETENV} TEXFORMATS=${LOCALBASE}/share/texmf/web2c \
-		${MAKE} ${MAKEFLAGS};
+	       ${MAKE} ${MAKEFLAGS};
 	cd ${WRKSRC}; ${SETENV} TEXFORMATS=${LOCALBASE}/share/texmf/web2c \
-		${MAKE} ${MAKEFLAGS} install
+	       ${MAKE} ${MAKEFLAGS} install
+	:
 	${RM} -f ${PREFIX}/bin/jadetex
 	${LN} -s tex ${PREFIX}/bin/jadetex
 	${RM} -f ${PREFIX}/bin/pdfjadetex
 	${LN} -s pdftex ${PREFIX}/bin/pdfjadetex
-	${PREFIX}/bin/mktexlsr
 	${INSTALL_MAN} ${WRKSRC}/jadetex.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/pdfjadetex.1 ${PREFIX}/man/man1
 	${INSTALL_MAN_DIR} ${PREFIX}/share/doc/jadetex
 	for i in ${WRKSRC}/doc/* ; do \
 		${INSTALL_MAN} $$i ${PREFIX}/share/doc/jadetex; \
-	done
-	${INSTALL_MAN_DIR} ${PREFIX}/share/examples/jadetex
-	for i in ${WRKSRC}/test/* ; do \
-		${INSTALL_MAN} $$i ${PREFIX}/share/examples/jadetex; \
 	done
 	:
 	: Complete the set that the textproc/jade pkg started. We
@@ -48,5 +41,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/jadetex.ini ${PREFIX}/share/sgml/jade
 	${INSTALL_DATA} ${WRKSRC}/jadetex.ins ${PREFIX}/share/sgml/jade
 	${INSTALL_DATA} ${WRKSRC}/pdfjadetex.ini ${PREFIX}/share/sgml/jade
+	${PREFIX}/bin/mktexlsr
 
 .include "../../mk/bsd.pkg.mk"
