@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.1.1.1 2003/05/25 08:55:19 epg Exp $
+$NetBSD: patch-ap,v 1.2 2003/06/06 10:50:00 jmmv Exp $
 
 --- apr-util/config.layout.orig	Thu Apr  3 17:15:08 2003
 +++ apr-util/config.layout	Thu Apr  3 17:14:15 2003
@@ -9,7 +9,7 @@ $NetBSD: patch-ap,v 1.1.1.1 2003/05/25 08:55:19 epg Exp $
 +
 +#   NetBSD (pkgsrc) layout
 +<Layout NetBSD>
-+    prefix:        /usr/pkg
++    prefix:        @PREFIX@
 +    exec_prefix:   ${prefix}
 +    bindir:        ${exec_prefix}/bin
 +    sbindir:       ${exec_prefix}/sbin
