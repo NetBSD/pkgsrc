@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2004/02/12 04:57:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2004/03/09 11:33:08 markd Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -137,8 +137,6 @@ lib/kde3/appletproxy.la
 lib/kde3/appletproxy.so
 lib/kde3/childpanel_panelextension.la
 lib/kde3/childpanel_panelextension.so
-lib/kde3/childpanel_panelextension.so.0
-lib/kde3/childpanel_panelextension.so.0.0
 lib/kde3/clock_panelapplet.la
 lib/kde3/clock_panelapplet.so
 ${HAVE_XCURSOR}lib/kde3/cursorthumbnail.la
@@ -149,6 +147,8 @@ lib/kde3/dockbar_panelextension.la
 lib/kde3/dockbar_panelextension.so
 lib/kde3/extensionproxy.la
 lib/kde3/extensionproxy.so
+lib/kde3/fontthumbnail.la
+lib/kde3/fontthumbnail.so
 lib/kde3/gsthumbnail.la
 lib/kde3/gsthumbnail.so
 lib/kde3/htmlthumbnail.la
@@ -429,12 +429,12 @@ lib/kde3/kxkb.la
 lib/kde3/kxkb.so
 lib/kde3/launcher_panelapplet.la
 lib/kde3/launcher_panelapplet.so
-lib/kde3/launcher_panelapplet.so.0
-lib/kde3/launcher_panelapplet.so.0.0
 lib/kde3/libkdeprint_part.la
 lib/kde3/libkdeprint_part.so
 lib/kde3/libkfindpart.la
 lib/kde3/libkfindpart.so
+lib/kde3/libkfontviewpart.la
+lib/kde3/libkfontviewpart.so
 lib/kde3/libkmanpart.la
 lib/kde3/libkmanpart.so
 lib/kde3/libkonsolepart.la
@@ -1364,6 +1364,7 @@ share/kde/apps/kappfinder/apps/Internet/knews.desktop
 share/kde/apps/kappfinder/apps/Internet/licq.desktop
 share/kde/apps/kappfinder/apps/Internet/mldonkey_gui.desktop
 share/kde/apps/kappfinder/apps/Internet/mozilla-firebird.desktop
+share/kde/apps/kappfinder/apps/Internet/mozilla-firefox.desktop
 share/kde/apps/kappfinder/apps/Internet/mozilla-thunderbird.desktop
 share/kde/apps/kappfinder/apps/Internet/mozilla.desktop
 share/kde/apps/kappfinder/apps/Internet/netscape.desktop
@@ -1496,6 +1497,7 @@ share/kde/apps/kconf_update/klipper-1-2.pl
 share/kde/apps/kconf_update/klipper-kde31.sh
 share/kde/apps/kconf_update/klipperrc.upd
 share/kde/apps/kconf_update/klippershortcuts.upd
+share/kde/apps/kconf_update/konqueror_gestures_kde321_update.upd
 share/kde/apps/kconf_update/konsole.upd
 share/kde/apps/kconf_update/ksmserver.upd
 share/kde/apps/kconf_update/kuriikwsfilter.upd
@@ -1715,6 +1717,7 @@ share/kde/apps/khelpcenter/plugins/userguide.desktop
 share/kde/apps/khelpcenter/plugins/welcome.desktop
 share/kde/apps/khelpcenter/table-of-contents.xslt
 share/kde/apps/khotkeys/kde32b1.khotkeys
+share/kde/apps/khotkeys/konqueror_gestures_kde321.khotkeys
 share/kde/apps/kicker/applets/clockapplet.desktop
 share/kde/apps/kicker/applets/klipper.desktop
 share/kde/apps/kicker/applets/ksysguardapplet.desktop
@@ -3214,6 +3217,7 @@ share/kde/services/finger.protocol
 share/kde/services/fish.protocol
 share/kde/services/floppy.protocol
 share/kde/services/fonts.protocol
+share/kde/services/fontthumbnail.desktop
 share/kde/services/gsthumbnail.desktop
 share/kde/services/gzip.protocol
 share/kde/services/htmlthumbnail.desktop
@@ -3228,6 +3232,7 @@ share/kde/services/kded/konqy_preloader.desktop
 share/kde/services/kdeprint_part.desktop
 share/kde/services/kfile_font.desktop
 share/kde/services/kfindpart.desktop
+share/kde/services/kfontviewpart.desktop
 share/kde/services/khelpcenter.desktop
 share/kde/services/kmanpart.desktop
 share/kde/services/konq_aboutpage.desktop
