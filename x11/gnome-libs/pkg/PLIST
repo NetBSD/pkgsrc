@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 1999/09/30 13:49:41 agc Exp $
+@comment $NetBSD: PLIST,v 1.20 1999/10/22 23:48:45 tron Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -178,15 +178,15 @@ lib/libgnome.a
 lib/libgnomesupport.a
 lib/libgnomesupport.so.0.0
 lib/libgnomeui.a
-lib/libgnomeui.so.42.2
+lib/libgnomeui.so.42.3
 lib/libgnorba.a
-lib/libgnorba.so.28.7
+lib/libgnorba.so.28.8
 lib/libgnorbagtk.a
 lib/libgnorbagtk.so.0.0
 lib/libgtkxmhtml.a
 lib/libgtkxmhtml.so.1.1
 lib/libzvt.a
-lib/libzvt.so.4.5
+lib/libzvt.so.4.6
 man/man1/gnome-config.1
 man/man1/gnome.1
 man/man5/gnome-mime.5
@@ -316,7 +316,6 @@ share/doc/gnome-libs/html/gnomeui/gtkdial.html
 share/doc/gnome-libs/html/gnomeui/gtkpixmapmenuitem.html
 share/doc/gnome-libs/html/gnomeui/gtkted.html
 share/doc/gnome-libs/html/gnomeui/libgnomeui.html
-share/doc/gnome-libs/html/gnome-faq.html
 share/doc/gnome-libs/html/architecture.html
 share/doc/gnome-libs/html/archives.html
 share/doc/gnome-libs/html/autoconf.html
@@ -415,9 +414,6 @@ share/gnome/help/gnome-dev-info/C/gnome-dialog.html
 share/gnome/help/gnome-dev-info/C/gnome-dns.html
 share/gnome/help/gnome-dev-info/C/gnome-fileconvert.html
 share/gnome/help/gnome-dev-info/C/gnome-font-selector.html
-share/gnome/help/gnome-dev-info/C/gnome-hello-0-basic.jpg
-share/gnome/help/gnome-dev-info/C/gnome-hello-1-menus.jpg
-share/gnome/help/gnome-dev-info/C/gnome-hello-2-i18n.jpg
 share/gnome/help/gnome-dev-info/C/gnome-help.html
 share/gnome/help/gnome-dev-info/C/gnome-history.html
 share/gnome/help/gnome-dev-info/C/gnome-hook.html
@@ -524,10 +520,12 @@ share/locale/de/LC_MESSAGES/gnome-libs.mo
 share/locale/el/LC_MESSAGES/gnome-libs.mo
 share/locale/en_GB/LC_MESSAGES/gnome-libs.mo
 share/locale/es/LC_MESSAGES/gnome-libs.mo
+share/locale/et/LC_MESSAGES/gnome-libs.mo
 share/locale/eu/LC_MESSAGES/gnome-libs.mo
 share/locale/fi/LC_MESSAGES/gnome-libs.mo
 share/locale/fr/LC_MESSAGES/gnome-libs.mo
 share/locale/ga/LC_MESSAGES/gnome-libs.mo
+share/locale/gl/LC_MESSAGES/gnome-libs.mo
 share/locale/hr/LC_MESSAGES/gnome-libs.mo
 share/locale/hu/LC_MESSAGES/gnome-libs.mo
 share/locale/it/LC_MESSAGES/gnome-libs.mo
@@ -537,6 +535,7 @@ share/locale/nl/LC_MESSAGES/gnome-libs.mo
 share/locale/no/LC_MESSAGES/gnome-libs.mo
 share/locale/pl/LC_MESSAGES/gnome-libs.mo
 share/locale/pt/LC_MESSAGES/gnome-libs.mo
+share/locale/pt_BR/LC_MESSAGES/gnome-libs.mo
 share/locale/ru/LC_MESSAGES/gnome-libs.mo
 share/locale/sk/LC_MESSAGES/gnome-libs.mo
 share/locale/sv/LC_MESSAGES/gnome-libs.mo
@@ -554,6 +553,8 @@ share/pixmaps/yes.xpm
 share/type-convert/gnome-make-postscript-mimes
 share/type-convert/postscript.convert
 share/type-convert/type.convert
+@exec test %D = ${LOCALBASE} || ln -s %D/share/aclocal/libart.m4 ${LOCALBASE}/share/aclocal/libart.m4
+@unexec test %D = ${LOCALBASE} || rm ${LOCALBASE}/share/aclocal/libart.m4
 @dirrm etc/sound/events
 @dirrm etc/sound
 @dirrm include/gtk-xmhtml
