@@ -2,7 +2,7 @@
 #
 # start of header
 #
-# $NetBSD: header,v 1.28 2005/01/28 06:30:59 jlam Exp $
+# $NetBSD: header,v 1.29 2005/01/28 07:37:55 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -62,9 +62,6 @@ ${LOCALBASE}/*)	VIEW="${PKG_PREFIX#${LOCALBASE}/}" ;;
 *)		VIEW="" ;;
 esac
 
-PKG_USERS="@PKG_USERS@"
-PKG_GROUPS="@PKG_GROUPS@"
-
 SPECIAL_PERMS="@SPECIAL_PERMS@"
 
 CONF_FILES="@CONF_FILES@"
@@ -90,8 +87,6 @@ esac
 PKG_REGISTER_SHELLS="@PKG_REGISTER_SHELLS@"
 PKG_SHELL="@PKG_SHELL@"
 
-ALL_USERS=
-ALL_GROUPS=
 ALL_FILES=
 VIEW_FILES=
 

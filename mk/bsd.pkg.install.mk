@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.73 2005/01/28 06:30:58 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.74 2005/01/28 07:37:55 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -104,14 +104,12 @@ FILES_SUBST+=		PKG_REFCOUNT_DBDIR=${_PKG_REFCOUNT_DBDIR:Q}
 #
 #	Only the group is required; the groupid is optional.
 #
+PKG_GROUPS?=		# empty
 PKG_USERS?=		# empty
 _PKG_USER_HOME?=	/nonexistent
 _PKG_USER_SHELL?=	${NOLOGIN}
-PKG_GROUPS?=		# empty
-FILES_SUBST+=		PKG_USERS=${PKG_USERS:Q}
 FILES_SUBST+=		PKG_USER_HOME=${_PKG_USER_HOME}
 FILES_SUBST+=		PKG_USER_SHELL=${_PKG_USER_SHELL}
-FILES_SUBST+=		PKG_GROUPS=${PKG_GROUPS:Q}
 
 # Interix is very Special in that users are groups cannot have the
 # same name.  Interix.mk tries to work around this by overriding
@@ -130,6 +128,41 @@ BROKEN:=		"User and group '${user:C/:.*//}' cannot have the same name on Interix
 .if !empty(PKG_USERS) || !empty(PKG_GROUPS)
 DEPENDS+=		${_USER_DEPENDS}
 .endif
+
+INSTALL_USERGROUP_FILE=	${WRKDIR}/.install-usergroup
+INSTALL_UNPACK_TMPL+=	${INSTALL_USERGROUP_FILE}
+
+${INSTALL_USERGROUP_FILE}: ../../mk/install/usergroup
+	${_PKG_SILENT}${_PKG_DEBUG}{					\
+	${ECHO} "# start of install-usergroup";				\
+	${ECHO} "#";							\
+	${ECHO} "# Generate a +USERGROUP script that reference counts users"; \
+	${ECHO} "# and groups that are required for the proper functioning"; \
+	${ECHO} "# of the package.";					\
+	${ECHO} "#";							\
+	${ECHO} "case \$${STAGE} in";					\
+	${ECHO} "PRE-INSTALL)";						\
+	${ECHO} "	\$${CAT} > ./+USERGROUP << 'EOF_USERGROUP'";	\
+	${SED} ${FILES_SUBST_SED} ../../mk/install/usergroup;		\
+	${ECHO} "";							\
+	eval set -- ${PKG_GROUPS} ;					\
+	while ${TEST} $$# -gt 0; do					\
+		i="$$1"; shift;						\
+		${ECHO} "# GROUP: $$i";					\
+	done;								\
+	eval set -- ${PKG_USERS} ;					\
+	while ${TEST} $$# -gt 0; do					\
+		i="$$1"; shift;						\
+		${ECHO} "# USER: $$i";					\
+	done;								\
+	${ECHO} "EOF_USERGROUP";					\
+	${ECHO} "	\$${CHMOD} +x ./+USERGROUP";			\
+	${ECHO} "	;;";						\
+	${ECHO} "esac";							\
+	${ECHO} "";							\
+	${ECHO} "# end of install-usergroup";				\
+	} > ${.TARGET}.tmp;						\
+	${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 # SPECIAL_PERMS are lists that look like:
 #		file user group mode
