@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.737 2003/07/23 11:23:25 jmmv Exp $
+$NetBSD: TODO,v 1.738 2003/07/23 15:40:27 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -171,7 +171,6 @@ Suggested package updates
 	o maildrop-1.5.2
 	o mailsync-5.1.0
 	o memtest86-3.0
-	o metacity-2.4.55 [pkg/21767]
 	o mgetty-1.1.30
 	o mhonarc-2.6.3 [pkg/21306]
 	o mhonarc-2.6.5
