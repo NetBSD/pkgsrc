@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/03/29 00:30:16 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/07/29 05:54:11 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-fontsScalable-${XF_VER}
@@ -11,6 +11,9 @@ HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	XFree86 scalable fonts
 
 DEPENDS+=	XFree86-fontsEncodings>=4.4.0:../XFree86-fontsEncodings
+
+CONFLICTS=	xorg-fontsTruetype-[0-9]*
+CONFLICTS+=	xorg-fontsType1-[0-9]*
 
 NO_BUILD=		yes
 NO_BUILDLINK=		# defined
