@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8960 2005/01/28 11:54:54 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.8961 2005/01/28 14:18:42 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -640,3 +640,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added scponly-4.0 [snj 2005-01-28]
 	Updated mencvcd to 0.3 [tron 2005-01-28]
 	Updated pcb-current to 20050127 [dmcmahill 2005-01-28]
+	Updated alee-ttf to 4.1 [minskim 2005-01-28]
