@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.37 2001/05/14 15:25:14 jlam Exp $
+$NetBSD: TODO,v 1.38 2001/05/14 16:16:28 kleink Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
@@ -55,8 +55,6 @@ package update TODO (Suggested package updates)
 	o update editors/manedit to recent version
 		(zuntum will do that)
 	o update editors/vim because of security problems
-	o update databases/openldap to 1.2.12 because of security problems
-		(kleink, after freeze)
 	o update IPv6 patch in mail/postfix to 20010510a
 	o update net/samba to 2.2.0 [jlam has new version ready]
 	o update print/a2ps to 4.13 [pkgsrc version was released on 1999-02-10, whee]
