@@ -1,0 +1,10 @@
+$NetBSD: patch-ac,v 1.1 2000/05/20 01:08:32 kim Exp $
+
+--- protos.h.orig	Tue Mar  7 06:13:38 2000
++++ protos.h	Fri May 19 20:56:17 2000
+@@ -437,4 +437,4 @@
+ void ci_bounce_message (HEADER *, int *);
+ int ci_send_message (int, HEADER *, char *, CONTEXT *, HEADER *);
+ 
+-
++char *mutt_expand_realname(char *, const char *);
