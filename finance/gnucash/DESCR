@@ -1,5 +1,6 @@
-GNUcash: a personal double-entry accounting program
-
-GNUcash is intended to be a fully-featured accounting program that could
-easily replace something like Quicken or Microsoft Money.   It is extensible
-in guile (an embedded scheme interpreter).
+GnuCash is designed to be easy to use, yet powerful and flexible.
+It allows you to track bank accounts, stocks, income and expenses.
+As quick and intuitive to use as a checkbook register, it is based
+on professional accounting principles to ensure balanced books and
+accurate reports. It is extensible in guile (an embedded scheme
+interpreter).
