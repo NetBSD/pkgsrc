@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/03/30 18:27:32 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2004/05/10 18:05:49 minskim Exp $
 #
 
 DISTNAME=	dact-0.8.3
@@ -10,12 +10,16 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.rkeene.org/devel/dact/
 COMMENT=	Dynamic adaptive compression tool
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 USE_GNU_TOOLS+=	make
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ENV+=		ac_cv_lib_mcrypt_main=no
+
+INSTALLATION_DIRS=	bin man/man1
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/dact
