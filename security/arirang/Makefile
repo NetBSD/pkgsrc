@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2002/07/21 15:33:30 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/07/21 15:33:54 wiz Exp $
 #
 
 DISTNAME=	arirang-1.6
-PKGNAME=	arirang-1.6
 CATEGORIES=	security www
 MASTER_SITES=	http://www.monkey.org/~pilot/arirang/
 
