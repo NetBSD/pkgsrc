@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 1998/10/14 21:34:45 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.9 1998/12/08 23:19:49 frueauf Exp $
 bin/Kaffe
 bin/appletviewer
 bin/install-jar
@@ -31,24 +31,25 @@ include/kaffe/jtypes.h
 include/kaffe/native.h
 lib/libkaffevm.so
 lib/libkaffevm.so.1.00
+lib/kaffe/libawt.so
+lib/kaffe/libawt.so.1.00
+lib/kaffe/libio.so
+lib/kaffe/libio.so.1.00
+lib/kaffe/libmanagement.so
+lib/kaffe/libmanagement.so.1.00
+lib/kaffe/libmath.so
+lib/kaffe/libmath.so.1.00
+lib/kaffe/libnative.so
+lib/kaffe/libnative.so.1.00
+lib/kaffe/libnet.so
+lib/kaffe/libnet.so.1.00
+lib/kaffe/libzip.so
+lib/kaffe/libzip.so.1.00
 man/man1/kaffe.1
 share/kaffe/ENVIRONMENT
 share/kaffe/Klasses.jar
-share/kaffe/lib/${MACHINE_GNU_ARCH}-netbsd1/libawt.so
-share/kaffe/lib/${MACHINE_GNU_ARCH}-netbsd1/libawt.so.1.00
-share/kaffe/lib/${MACHINE_GNU_ARCH}-netbsd1/libmanagement.so
-share/kaffe/lib/${MACHINE_GNU_ARCH}-netbsd1/libmanagement.so.1.00
-share/kaffe/lib/${MACHINE_GNU_ARCH}-netbsd1/libmath.so
-share/kaffe/lib/${MACHINE_GNU_ARCH}-netbsd1/libmath.so.1.00
-share/kaffe/lib/${MACHINE_GNU_ARCH}-netbsd1/libnative.so
-share/kaffe/lib/${MACHINE_GNU_ARCH}-netbsd1/libnative.so.1.00
-share/kaffe/lib/${MACHINE_GNU_ARCH}-netbsd1/libnet.so
-share/kaffe/lib/${MACHINE_GNU_ARCH}-netbsd1/libnet.so.1.00
-share/kaffe/lib/${MACHINE_GNU_ARCH}-netbsd1/libzip.so
-share/kaffe/lib/${MACHINE_GNU_ARCH}-netbsd1/libzip.so.1.00
 share/kaffe/license.terms
 share/kaffe/pizza.jar
 @dirrm include/kaffe
-@dirrm share/kaffe/lib/${MACHINE_GNU_ARCH}-netbsd1
-@dirrm share/kaffe/lib
+@dirrm lib/kaffe
 @dirrm share/kaffe
