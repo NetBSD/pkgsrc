@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/12/04 15:01:55 peter Exp $
+$NetBSD: distinfo,v 1.3 2005/01/18 17:35:27 peter Exp $
 
-SHA1 (pflkm-20041204.tar.gz) = 057af53e5f935e29d576acc822c52467510cda87
-Size (pflkm-20041204.tar.gz) = 893641 bytes
+SHA1 (pflkm-20050118.tar.gz) = 1f03fa4656f23594a260dafd6373b289daad4775
+Size (pflkm-20050118.tar.gz) = 886852 bytes
