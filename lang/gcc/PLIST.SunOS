@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.SunOS,v 1.4 2002/08/19 18:20:08 seb Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.5 2002/09/09 03:23:06 dmcmahill Exp $
 ${MACHINE_GNU_PLATFORM}/include/_G_config.h
 ${MACHINE_GNU_PLATFORM}/include/assert.h
 bin/${MACHINE_GNU_PLATFORM}-gcc
@@ -294,8 +294,8 @@ lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/libstdc++.a
 lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/libstdc++.so
 lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/specs
 lib/libiberty.a
-lib/libstdc++.a.2.10.0
-lib/libstdc++.so.2.10.0
+lib/libstdc++.a.2.10.0nb1
+lib/libstdc++.so.2.10.0nb1
 man/man1/cccp.1
 man/man1/g++.1
 man/man1/g77.1
