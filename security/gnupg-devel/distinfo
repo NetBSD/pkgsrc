@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.5 2005/01/04 13:52:01 shannonjr Exp $
+$NetBSD: distinfo,v 1.6 2005/01/17 18:32:47 shannonjr Exp $
 
-SHA1 (gnupg-1.9.14.tar.gz) = 6e5a3b27a4eb6a781bc8d8ad9458ea3e99449b48
-Size (gnupg-1.9.14.tar.gz) = 1925582 bytes
-SHA1 (pth-2.0.0.tar.gz) = 91b7593e5435604090c3974a8584478877194533
-Size (pth-2.0.0.tar.gz) = 536605 bytes
+SHA1 (gnupg-1.9.15.tar.gz) = a00a688dc33f1f22743eb857a16e8506f8d765d9
+Size (gnupg-1.9.15.tar.gz) = 1928702 bytes
+SHA1 (pth-2.0.3.tar.gz) = c2445bcf24ce3615cfbfbd58b79bbab36542617d
+Size (pth-2.0.3.tar.gz) = 639243 bytes
 SHA1 (patch-aa) = 4fdedc1f98dbe717fd5a1229944703f19c3c10e5
 SHA1 (patch-ab) = 2bd1b553cc45ed66e3f95364058b227dfcc74be5
 SHA1 (patch-ac) = 82cae75a7fed505bf2e358d6471b85951513976c
-SHA1 (patch-ad) = 698e585fd554d3581792e0e613d43d20d2ffda77
