@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2002/02/05 04:13:20 jlam Exp $
+# $NetBSD: Makefile,v 1.98 2002/02/05 04:26:56 jlam Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -7,7 +7,7 @@
 # modifying/redistributing it.
 #
 DISTNAME=		ssh-1.2.27
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security net
 MASTER_SITES=		ftp://ftp.ssh.com/pub/ssh/old/ \
 			ftp://ftp.funet.fi/pub/unix/security/login/ssh/ \
