@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.535 2003/05/09 13:04:11 jmmv Exp $
+$NetBSD: TODO,v 1.536 2003/05/09 20:34:52 salo Exp $
 
 Suggested new packages
 ======================
@@ -97,7 +97,6 @@ Suggested package updates
 	o db4-4.1.25 [pkg/20289]
 	o dctc-0.85.2
 	o ddd-3.3.5
-	o dia-0.91 [pkg/20750,21308]
 	o disc-cover-1.5.0
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
