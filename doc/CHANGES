@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5399 2004/04/01 00:53:33 minskim Exp $
+$NetBSD: CHANGES,v 1.5400 2004/04/01 02:40:48 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1643,3 +1643,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Renamed py-dbxml to py-bdb-xml [minskim 2004-03-31]
 	Added mathomatic-10.9b [minskim 2004-03-31]
 	Updated ical to 2.2.1nb1 [minskim 2004-04-01]
+	Updated racoon to 20040401a [itojun 2004-04-01]
