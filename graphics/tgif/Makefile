@@ -1,20 +1,18 @@
-# $NetBSD: Makefile,v 1.8 1998/10/01 19:29:39 frueauf Exp $
+# $NetBSD: Makefile,v 1.9 1999/01/24 11:47:33 frueauf Exp $
+#
 
-DISTNAME=		tgif-3.0-p17
-PKGNAME=		tgif-3.0p17x
+DISTNAME=		tgif-4.0.7
 CATEGORIES=		graphics
-MASTER_SITES=		${MASTER_SITE_XCONTRIB}
-MASTER_SITE_SUBDIR=	applications/tgif
+MASTER_SITES=		ftp://bourbon.cs.umd.edu/pub/tgif/ \
+			ftp://ftp.cs.ucla.edu/pub/tgif/
 
 MAINTAINER=		mcmahill@alum.mit.edu
 HOMEPAGE=		http://bourbon.cs.umd.edu:8001/tgif/tgif.html
 
-CONFLICTS=		tgif-3.0p16
-
 USE_IMAKE=		yes
 
-# patch tgif-3.0-patch17x is supplied in the package as
-# patches/patch-ac.  It fixes a bug that causes imported EPS files
-# to print with an offset.
+post-patch::
+	@${RM} -f ${WRKSRC}/Tgif.tmpl
+	@${CP} ${WRKSRC}/Tgif.tmpl-netbsd ${WRKSRC}/Tgif.tmpl
 
 .include "../../mk/bsd.pkg.mk"
