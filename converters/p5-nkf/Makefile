@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/31 13:00:22 seb Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/20 17:45:59 seb Exp $
 #
 
 DISTNAME=	nkf-1.7
@@ -10,13 +10,10 @@ MASTER_SITES=	ftp://ftp.sra.co.jp/pub/cmd/nkf/
 MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 COMMENT=	Perl library for Network Kanji code conversion Filter
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/NKF/.packlist
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/NKF
 
-do-configure:
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/20 01:07:10 grant Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/20 17:46:01 seb Exp $
 #
 
 DISTNAME=	Net-Goofey-1.5
@@ -10,11 +10,8 @@ MAINTAINER=	grant@netbsd.org
 HOMEPAGE=	http://tertius.net.au/~gossamer/code/
 COMMENT=	perl module for communicating with a Goofey server
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/Goofey/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
