@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/01/29 21:15:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.20 2003/02/26 01:00:09 uebayasi Exp $
 # FreeBSD Id: Makefile,v 1.4 1998/06/27 05:19:35 asami Exp
 #
 
@@ -27,7 +27,6 @@ USE_BUILDLINK2=	yes
 EXTRACT_ONLY=	# empty
 NO_BUILD=       yes
 WRKSRC=		${WRKDIR}
-USE_BUILDLINK2=	yes
 
 INSTDIR=	${PREFIX}/share/sgml/docbook
 ISOCAT=		${PREFIX}/share/sgml/iso8879/catalog
