@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/10/09 13:31:20 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/02/24 15:30:54 kei Exp $
 
 DISTNAME=	dvipdfm-0.13.2c
 CATEGORIES=	print converters
@@ -8,7 +8,8 @@ MAINTAINER=	markd@netbsd.org
 HOMEPAGE=	http://gaspra.kettering.edu/dvipdfm
 COMMENT=	DVI to PDF translator
 
-CONFLICTS=	ja-dvipdfm-[0-9]*
+CONFLICTS+=	dvipdfmx-[0-9]*
+CONFLICTS+=	ja-dvipdfm-[0-9]*
 
 WRKSRC=			${WRKDIR}/dvipdfm
 USE_BUILDLINK2=		# defined
