@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/05/12 05:57:52 rh Exp $
+$NetBSD: patch-aa,v 1.2 2001/07/15 14:03:13 jlam Exp $
 
 --- Makefile.orig	Wed Mar 17 01:59:39 1999
 +++ Makefile	Tue May  2 13:20:57 2000
@@ -8,9 +8,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/05/12 05:57:52 rh Exp $
 -INCDIR = -I/usr/X11R6/include/X11 -I/usr/X11R6/include
 -DESTDIR= /usr/X11R6
 -LIBDIR = -L/usr/X11R6/lib
-+INCDIR = -I${PREFIX}/include
++INCDIR = ${CPPFLAGS}
 +DESTDIR= ${PREFIX}
-+LIBDIR = -L${PREFIX}/lib -Wl,-R${PREFIX}/lib
++LIBDIR = ${LDFLAGS}
  # for linux
  LIBS   = -lXpm -lX11 -lXext
  # for Solaris

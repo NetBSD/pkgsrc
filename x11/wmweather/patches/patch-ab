@@ -1,13 +1,34 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/05/12 05:57:52 rh Exp $
+$NetBSD: patch-ab,v 1.2 2001/07/15 14:03:13 jlam Exp $
 
---- GrabWeather.orig	Fri Apr 16 23:41:53 1999
-+++ GrabWeather	Tue May  2 13:50:28 2000
-@@ -49,7 +49,7 @@
-     #  for some people? Dont know why... (Perhaps they have a ~/.wgetrc file
-     #  that overrides command line options?).
+--- GrabWeather.orig	Fri Apr 16 17:41:53 1999
++++ GrabWeather
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl
++#!/usr/pkg/bin/perl
+ 
+ #
+ #    Grabs the latest local weather conditions from the National Weather Service (NWS).
+@@ -38,19 +38,17 @@
+ 
+     $StationID    = $ARGV[0];
+     $HTMLFileName = "$StationID.TXT";
++    $FTP          = "ftp -V -r 5";
+     $URL          = "ftp://weather.noaa.gov/data/observations/metar/decoded/$HTMLFileName";
+     $DataFileName = "$StationID.dat";
+ 
+ 
+ 
+ 
++    # $FTP must be able to fetch URLs.
      #
+-    #  I think some of these wget command line options may cause problems
+-    #  for some people? Dont know why... (Perhaps they have a ~/.wgetrc file
+-    #  that overrides command line options?).
+-    #
 -    $GrabCmd = "wget --proxy=off --passive-ftp --tries 0 -q -O $home/.wmWeatherReports/$StationID.TXT $URL";
-+    $GrabCmd = "/usr/bin/ftp -o $home/.wmWeatherReports/$StationID.TXT $URL";
-     system "$GrabCmd";
+-    system "$GrabCmd";
++    $GrabCmd = "$FTP -o $home/.wmWeatherReports/$StationID.TXT $URL";
++    system "$GrabCmd 2>/dev/null";
+ 
  
  
