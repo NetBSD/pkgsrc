@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/10/03 00:13:02 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/02/18 11:24:33 abs Exp $
 #
 
 DISTNAME=	gmencoder-0.1.0
@@ -23,7 +23,7 @@ USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
 
-CFLAGS+=		-DPKG_SYSCONFDIR=\"\\\"${PKG_SYSCONFDIR}\\\"\"
+CFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 EGDIR=			${PREFIX}/share/examples/gmencoder
 CONF_FILES=		${EGDIR}/gmencoder_opts ${PKG_SYSCONFDIR}/gmencoder_opts
 
