@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.255 2002/06/30 03:52:32 rh Exp $
+# $NetBSD: Packages.txt,v 1.256 2002/07/02 11:26:05 agc Exp $
 ###########################################################################
 
 			==========================
@@ -960,6 +960,28 @@ The variables PERL5_SITELIB, PERL5_SITEARCH, and PERL5_ARCHLIB represent
 the three locations in which perl5 modules may be installed, and may be
 used by perl5 packages that don't have a packlist.  These three variables
 are also substituted for in the PLIST.
+
+ 5.5 User Interaction
+ ====================
+
+Occasionally, packages require interaction from the user, and this can be
+in a number of ways: 
+
++ help in fetching the distfiles
++ help to configure the package before it is built
++ help during the build process
++ help during the installation of a package
+
+The INTERACTIVE_STAGE definition is provided, to notify the pkgsrc mechanism
+of an interactive stage which will be needed, and this should be set in the
+package's Makefile. e.g.
+
+INTERACTIVE_STAGE= build
+
+Multiple interactive stages can be specified:
+
+INTERACTIVE_STAGE= configure install
+
 
  6 Notes on fixes for packages
  =============================
