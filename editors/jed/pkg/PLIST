@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1998/10/31 23:25:18 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.3 1998/11/01 14:55:37 hwr Exp $
 bin/jed
 bin/rgrep
 man/man1/rgrep.1
@@ -124,9 +124,41 @@ share/jed/lib/vhdlmode.sl
 share/jed/lib/tm/linuxdoc.tm
 share/jed/lib/ide.sl
 share/jed/lib/compat.sl
+share/jed/info/dir.info
+share/jed/info/info.info
+share/jed/info/jed.1in
+share/jed/info/jed.2in
+share/jed/info/jed.3in
+share/jed/info/jed.info
+share/jed/doc/README
+share/jed/doc/jed.tex
+share/jed/doc/abbrev.txt
+share/jed/doc/color.txt
+share/jed/doc/edt.txt
+share/jed/doc/hooks.txt
+share/jed/doc/jed_faq.txt
+share/jed/doc/mouse.txt
+share/jed/doc/pc-keys.txt
+share/jed/doc/program.txt
+share/jed/doc/rgrep.txt
+share/jed/doc/rmail.txt
+share/jed/doc/script.txt
+share/jed/doc/syntax.txt
+share/jed/doc/fold.txt
+share/jed/doc/wjed.txt
+share/jed/doc/dfa.txt
+share/jed/doc/wordstar.txt
+share/jed/doc/xjed.txt
+share/jed/doc/undo.txt
+share/jed/doc/yankpop.txt
+share/jed/doc/emacs.txt
+share/jed/doc/tm/Makefile
+share/jed/doc/tm/jedfuns.tm
+share/jed/doc/jedfuns.txt
+share/jed/doc/slangfun.txt
 @dirrm share/jed/lib/tm
 @dirrm share/jed/lib
-@dirrm share/jed/bin
-@dirrm share/jed/info
+@dirrm share/jed/doc/tm
 @dirrm share/jed/doc
+@dirrm share/jed/info
 @dirrm share/jed
