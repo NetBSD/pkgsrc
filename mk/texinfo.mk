@@ -1,4 +1,4 @@
-# $NetBSD: texinfo.mk,v 1.12 2003/06/29 21:25:49 jschauma Exp $
+# $NetBSD: texinfo.mk,v 1.13 2003/07/01 14:56:25 seb Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk when INFO_FILES and
 # USE_NEW_TEXINFO are defined.
@@ -94,7 +94,12 @@ _MAKEINFO=	${_i_}
 # the following would have to be changed as well as the comparison below.
 .  if !empty(_MAKEINFO) && !defined(MAKEINFO_VERSION)
 MAKEINFO_VERSION_OUTPUT!=	${_MAKEINFO} --version 2>/dev/null || ${ECHO}
-MAKEINFO_VERSION=${MAKEINFO_VERSION_OUTPUT:M[0-9]*.[0-9]*:C/[^0-9.]//}
+MAKEINFO_VERSION=
+.    for _i_ in ${MAKEINFO_VERSION_OUTPUT:M[0-9]*.[0-9]*:C/[^0-9.]//}
+.       if empty(MAKEINFO_VERSION)
+MAKEINFO_VERSION=	${_i_}
+.       endif
+.    endfor
 MAKEFLAGS+=			MAKEINFO_VERSION=${MAKEINFO_VERSION}
 .  endif
 
