@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.24 2001/12/08 21:15:47 kristerw Exp $
+# $NetBSD: Makefile.common,v 1.25 2001/12/20 22:31:09 jlam Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
 CATEGORIES=		print
-MASTER_SITES+=		http://download.sourceforge.net/ghostscript/ \
-			ftp://ftp.cs.wisc.edu/ghost/aladdin/gs601/
+MASTER_SITES+=		${MASTER_SITE_SOURCEFORGE:=ghostscript/} \
+			ftp://mirror.cs.wisc.edu/pub/mirrors/ghost/aladdin/gs${GS_VERS:S/.//}/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jlam@netbsd.org
@@ -13,16 +13,21 @@ HOMEPAGE=		http://www.cs.wisc.edu/~ghost/index.html
 DEPENDS+=		ghostscript-fonts-6.0:../../fonts/ghostscript-fonts
 DEPENDS+=		watanabe-vfont-19930318:../../fonts/watanabe_vfont
 
-GS_SOURCES=		${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=		${GS_SOURCES}
+USE_GMAKE=		YES
+
+GS_SRCS=		${DISTNAME}${EXTRACT_SUFX}
+WRKSRC=			${WRKDIR}/gs${GS_VERS}
+DISTFILES+=		${GS_SRCS}
+EXTRACT_ONLY=		${GS_SRCS}
 
 # Adobe's JPEG implementation in their PDF/PS documents is non-standard,
 # so we can't use an already installed libjpeg.so.
 #
-JPEG_SOURCES=		jpegsrc.v6b.tar.gz
-MASTER_SITES_${JPEG_SOURCES}=		ftp://ftp.uu.net/graphics/jpeg/
-DISTFILES+=		${JPEG_SOURCES}
-EXTRACT_LIST+=		${JPEG_SOURCES}
+JPEG_SRCS=		jpegsrc.v6b.tar.gz
+JPEG_WRKSRC=		${WRKDIR}/jpeg-6b
+MASTER_SITES_${JPEG_SRCS}=	ftp://ftp.uu.net/graphics/jpeg/
+DISTFILES+=		${JPEG_SRCS}
+EXTRACT_ONLY+=		${JPEG_SRCS}
 
 # VFlib & Japanese PDF patch
 PATCH_SITES=		http://www.sat.t.u-tokyo.ac.jp/~hideyuki/Ghostscript/
@@ -34,82 +39,108 @@ PDF_SEC=		pdf_sec.ps
 MASTER_SITES_${PDF_SEC}=	http://www.ozemail.com.au/~geoffk/pdfencrypt/
 DISTFILES+=		${PDF_SEC}
 
+# Gimp-print/STP drivers for photo-quality inkjet output
+GIMPPRINT=		gimp-print-4.2.0
+GIMPPRINT_SRCS=		${GIMPPRINT}.tar.gz
+GIMPPRINT_WRKSRC=	${WRKDIR}/${GIMPPRINT}
+MASTER_SITES_${GIMPPRINT_SRCS}=	${MASTER_SITE_SOURCEFORGE:=gimp-print/}
+DISTFILES+=			${GIMPPRINT_SRCS}
+EXTRACT_ONLY+=			${GIMPPRINT_SRCS}
+GIMPPRINT_CONFIGURE_ARGS=	--without-gimp --with-ghost
+
+# Drivers from the HP Inkjet Project (IJS/HPIJS)
+HPIJS_DRV=		hpijs0.97
+HPIJS_SRCS=		${HPIJS_DRV}.tar.gz
+HPIJS_WRKSRC=		${WRKDIR}/${HPIJS_DRV}
+MASTER_SITES_${HPIJS_SRCS}=	${MASTER_SITE_SOURCEFORGE:=hpinkjet/}
+DISTFILES+=		${HPIJS_SRCS}
+EXTRACT_ONLY+=		${HPIJS_SRCS}
+
 # Additional driver for several HP deskjets
 HPDJ_DRV=		hpdj-2.6
 MASTER_SITES_${HPDJ_DRV}.tar.gz=	ftp://ftp.sbs.de/pub/graphics/ghostscript/pcl3/
 DISTFILES+=		${HPDJ_DRV}.tar.gz
-EXTRACT_LIST+=		${HPDJ_DRV}.tar.gz
+EXTRACT_ONLY+=		${HPDJ_DRV}.tar.gz
 
 # I don't know the primary destribution sites of these drivers....
 DMPRT_DRV=		dmprt-2.01
 MASTER_SITES_${DMPRT_DRV}.tar.gz=	ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/
 DISTFILES+=		${DMPRT_DRV}.tar.gz
-EXTRACT_LIST+=		${DMPRT_DRV}.tar.gz
+EXTRACT_ONLY+=		${DMPRT_DRV}.tar.gz
 
 BJ10V_DRV=		gdev10v
 DISTFILES+=		${BJ10V_DRV}.tar.gz
-EXTRACT_LIST+=		${BJ10V_DRV}.tar.gz
+EXTRACT_ONLY+=		${BJ10V_DRV}.tar.gz
 
 # EPSON MJ-700V2C
 MJC_DRV=		gdevmjc-0.8
 DISTFILES+=		${MJC_DRV}.tar.gz
-EXTRACT_LIST+=		${MJC_DRV}.tar.gz
+EXTRACT_ONLY+=		${MJC_DRV}.tar.gz
 
 # Alps MD5000 printer 600dpi monochrome mode
 MD5000_DRV=		gdevalps-0.2
 DISTFILES+=		${MD5000_DRV}.tar.gz
-EXTRACT_LIST+=		${MD5000_DRV}.tar.gz
+EXTRACT_ONLY+=		${MD5000_DRV}.tar.gz
 
 # Alps MD-2000/2010/4000/1300/1500/5000
 MD2000_DRV=		gdevmd2k-0.2a
 MASTER_SITES_${MD2000_DRV}.tar.gz=	http://plaza26.mbn.or.jp/~higamasa/gdevmd2k/
 DISTFILES+=		${MD2000_DRV}.tar.gz
-EXTRACT_LIST+=		${MD2000_DRV}.tar.gz
+EXTRACT_ONLY+=		${MD2000_DRV}.tar.gz
 
 # Canon LIPS II+, III, IV; EPSON ESC/Page; NEC NPDL drivers
 LIPS_DRV=		gdevlips-2.3.6
 MASTER_SITES_${LIPS_DRV}.tar.gz=	http://www.bukka.p.chiba-u.ac.jp/~ohmori/gs/
 DISTFILES+=		${LIPS_DRV}.tar.gz
-EXTRACT_LIST+=		${LIPS_DRV}.tar.gz
+EXTRACT_ONLY+=		${LIPS_DRV}.tar.gz
 
 # Ricoh RPDL
 RPDL_DRV=		gdevrpdl
 MASTER_SITES_${RPDL_DRV}.tar.gz=	http://home.jp.FreeBSD.org/~mita/LOCAL_PORTS/
 DISTFILES+=		${RPDL_DRV}.tar.gz
-EXTRACT_LIST+=		${RPDL_DRV}.tar.gz
+EXTRACT_ONLY+=		${RPDL_DRV}.tar.gz
 
 # Kyocera Prescribe
 PRESCR_DRV=		gdevprsc-0.3
 MASTER_SITES_${PRESCR_DRV}.tar.gz=	${MASTER_SITE_LOCAL}
 DISTFILES+=		${PRESCR_DRV}.tar.gz
-EXTRACT_LIST+=		${PRESCR_DRV}.tar.gz
+EXTRACT_ONLY+=		${PRESCR_DRV}.tar.gz
+
+# Samsung SmartGDI laser printers
+GDI_DRV=		samsung-gdi-driver
+MASTER_SITES_${GDI_DRV}.tar.gz=	http://www.linuxprinting.org/download/printing/
+DISTFILES+=		${GDI_DRV}.tar.gz
+EXTRACT_ONLY+=		${GDI_DRV}.tar.gz
 
 DISTINFO_FILE=		${.CURDIR}/../../print/ghostscript-nox11/distinfo
 FILESDIR=		${.CURDIR}/../../print/ghostscript-nox11/files
 PATCHDIR=		${.CURDIR}/../../print/ghostscript-nox11/patches
 PLIST_SRC=		${.CURDIR}/../../print/ghostscript-nox11/PLIST
 
-EXTRACT_ONLY=		${GS_SOURCES}
 DIST_SUBDIR=		ghostscript
-WRKSRC=			${WRKDIR}/gs${GS_VERS}
 MAKEFILE=		src/unix-gcc.mak
 ALL_TARGET=		std
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../japanese/vflib-lib/buildlink.mk"
 
 .if defined(PAPERSIZE) && (${PAPERSIZE} == "A4" || ${PAPERSIZE} == "a4")
 CFLAGS+=		-DA4
 .endif
-
 CFLAGS+=		-DHAVE_MKSTEMP=1
+
+XLIBS?=			# empty
+GS_DISPLAY_DEVICE?=	# empty
+
+MAKE_FLAGS+=		CFLAGS="${CFLAGS}"
+MAKE_FLAGS+=		LDFLAGS="${LDFLAGS}"
+MAKE_FLAGS+=		GS_DISPLAY_DEVICE="${GS_DISPLAY_DEVICE}"
+MAKE_FLAGS+=		XINCLUDE=		# x11.buildlink.mk will handle
+MAKE_FLAGS+=		XLIBDIRS=		# these two automatically
+MAKE_FLAGS+=		XLIBS="${XLIBS}"
 
 .if ${OPSYS} == "SunOS"
 LDFLAGS+=		-L${LOCALBASE}/bsd/lib -Wl,-R${LOCALBASE}/bsd/lib
 .endif
-
-MAKE_ENV+=		XLDFLAGS="${LDFLAGS}"
 
 # Define whether this platform has floating point hardware:
 #	FPU_TYPE=2 means floating point is faster than fixed point.
@@ -121,22 +152,58 @@ MAKE_ENV+=		XLDFLAGS="${LDFLAGS}"
 # fixed point.
 #
 FPU_TYPE?=		1
-MAKE_ENV+=		FPU_TYPE=${FPU_TYPE}
+MAKE_FLAGS+=		FPU_TYPE=${FPU_TYPE}
 
-.if defined(USE_X11)
-MAKEFRAGS=		${FILESDIR}/devs.x11
+# Determine the endianness of the CPU by checking header files.
+.if !defined(MACHINE_ENDIAN)
+_ENDIAN_H_FILES=	/usr/include/sys/endian.h
+_ENDIAN_H_FILES+=	/usr/include/machine/endian.h
+_ENDIAN_H_FILES+=	/usr/include/endian.h
+_ENDIAN_H_FILES+=	/usr/include/sys/byteorder.h
+_ENDIAN_H_FILES+=	/dev/null
+.  for FILE in ${_ENDIAN_H_FILES}
+.    if exists(${FILE})
+_ENDIAN_H?=		${FILE:S/\/usr\/include\///}
+.    endif
+.  endfor
+MACHINE_ENDIAN!=							\
+	if (								\
+		${ECHO} "\#include <${_ENDIAN_H}>";			\
+		${ECHO} "\#ifndef BYTE_ORDER";				\
+		${ECHO} "\#ifdef _BIG_ENDIAN";				\
+		${ECHO} "\#define BYTE_ORDER 4321";			\
+		${ECHO} "\#else";					\
+		${ECHO} "\#define BYTE_ORDER 1234";			\
+		${ECHO} "\#endif";					\
+		${ECHO} "\#endif";					\
+		${ECHO} "BYTE_ORDER";					\
+	   ) | ${CC} -E - | ${GREP} "4321" >/dev/null 2>&1;		\
+	then								\
+		${ECHO} big;						\
+	else								\
+		${ECHO} little;						\
+	fi
+MAKEFLAGS+=	MACHINE_ENDIAN="${MACHINE_ENDIAN}"
+.  endif
+
+.if defined(MACHINE_ENDIAN) && (${MACHINE_ENDIAN} == "little")
+HPIJS_CFLAGS+=		-DIS_LITTLE_ENDIAN
+MAKE_ENV+=		HPIJS_CFLAGS="${HPIJS_CFLAGS}"
 .endif
-MAKEFRAGS+=		${FILESDIR}/devs.nox11
 
-GSINST_DIR=		${PREFIX}/share/ghostscript/${GS_VERS}vflib
-DOC_DIR=		${PREFIX}/share/doc/ghostscript
-HTML_DIR=		${PREFIX}/share/doc/html/ghostscript
-LIB_DIR=		${GSINST_DIR}/lib
+PLIST_SUBST+=		GS_VERS=${GS_VERS}vflib
 
-post-extract:
-	@cd ${WRKDIR}; for file in ${EXTRACT_LIST}; do			\
-		${PAX} -zrf ${_DISTDIR}/$${file};			\
-	done
+MAKEFRAGS=		${FILESDIR}/devs.nox11
+REPLACE_PERL=		lib/fixmswrd.pl
+
+GSDATADIR=		${PREFIX}/share/ghostscript/${GS_VERS}vflib
+DOCDIR=			${PREFIX}/share/doc/ghostscript
+HTMLDIR=		${PREFIX}/share/doc/html/ghostscript
+LIBDIR=			${GSDATADIR}/lib
+
+GS_CONF_PREREQ=		# empty
+
+contrib-drivers:
 	cd ${WRKSRC}/src; ${PAX} -rf ${WRKDIR}/${HPDJ_DRV}/hpdj.tar
 	${MV} ${WRKSRC}/src/gs-hpdj.1 ${WRKSRC}/man
 	cd ${WRKDIR}; ${CP} gdevdmpr.c gdevdmpr.mak		${WRKSRC}/src
@@ -151,21 +218,60 @@ post-extract:
 		${CP} gdevmd2k.c gdevmd2k.mak-5.8x		${WRKSRC}/src
 	cd ${WRKDIR}/${PRESCR_DRV}; \
 		${CP} gdevprsc.c gdevprsc.mak			${WRKSRC}/src
+	cd ${WRKDIR}; ${CP} gdevgdi.c				${WRKSRC}/src
 
+post-extract: contrib-drivers
 	${RM} -f ${WRKSRC}/jpeg
-	${LN} -sf ${WRKDIR}/jpeg-6b ${WRKSRC}/jpeg
+	${LN} -s ${JPEG_WRKSRC} ${WRKSRC}/jpeg
 	${RM} -f ${WRKSRC}/lib/${PDF_SEC}
 	${LN} -s ${_DISTDIR}/${PDF_SEC} ${WRKSRC}/lib/${PDF_SEC}
-	${MV} ${WRKSRC}/lib/fixmswrd.pl ${WRKSRC}/lib/fixmswrd.pl.in
 
 post-patch:
 	if [ ! -f ${WRKDIR}/dmp_site.ps.bak ]; then			\
 		${MV} ${WRKDIR}/dmp_site.ps ${WRKDIR}/dmp_site.ps.bak;	\
 	fi
-	${SED} -e "s|epsimage\.src|${GSINST_DIR}/lib/escp_24.src|g"	\
+	${SED}	-e "s|epsimage\.src|${GSDATADIR}/lib/escp_24.src|g"	\
 		${WRKDIR}/dmp_site.ps.bak > ${WRKDIR}/dmp_site.ps
 
-do-configure:
+GS_CONF_PREREQ+=	hpijs-driver
+hpijs-driver:
+	@cd ${HPIJS_WRKSRC} &&						\
+	${CP} gdevhpij.* ${WRKSRC}/src &&				\
+	${HEAD} -474 contrib.mak | ${TAIL} -31 |			\
+		${SED}	-e "s|\$$(GLSRC)\([^ ]*\.dev\)|\$$(DD)\1|g"	\
+			-e "s|\(\$$(SETPDEV) \)|\1\$$(DD)|g"		\
+		>> ${WRKSRC}/src/contrib.mak
+
+hpijs-server:
+	@cd ${HPIJS_WRKSRC} &&						\
+	for file in							\
+		aladdin.h compression.cpp				\
+		ernieplatform.h versioncode.cpp;			\
+	do								\
+		${SED}	-e "s|_LITTLE_ENDIAN|IS_LITTLE_ENDIAN|g"	\
+			$${file} > $${file}.fixed;			\
+		${MV} -f $${file}.fixed $${file};			\
+	done
+	@cd ${HPIJS_WRKSRC} &&						\
+	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} default
+
+GS_CONF_PREREQ+=	gimpprint-driver
+gimpprint-driver:
+	@cd ${GIMPPRINT_WRKSRC} &&					\
+	${SETENV} CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}"	\
+		${CONFIGURE_ENV}					\
+		${CONFIGURE_SCRIPT} ${GIMPPRINT_CONFIGURE_ARGS} &&	\
+	cd ${GIMPPRINT_WRKSRC}/src/ghost &&				\
+	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} all-local &&		\
+	( ${ECHO} '#ifndef GIMPPRINT_VERSION_FIX';			\
+	  ${ECHO} '#define GIMPPRINT_VERSION_FIX';			\
+	  ${GREP} "#define \(VERSION\|RELEASE_DATE\)" ../../config.h;	\
+	  ${ECHO} '#endif /* GIMPPRINT_VERSION_FIX */';			\
+	) >> gdevstp-print.h;						\
+	${CP} *.c *.h ${WRKSRC}/src &&					\
+	${CAT} contrib.mak.addon.old >> ${WRKSRC}/src/contrib.mak
+ 
+do-configure: ${GS_CONF_PREREQ}
 	#
 	# Append build rules for extra drivers to contrib.mak
 	#
@@ -182,35 +288,39 @@ do-configure:
 	#
 	# Prepend device list to unix-gcc.mak
 	#
-	${CAT}	${MAKEFRAGS}						\
-		${WRKSRC}/src/unix-gcc.mak				\
-		> ${WRKDIR}/unix-gcc.mak
+	( if [ -n "${GS_DISPLAY_DEVICE:Q}" ]; then			\
+		${ECHO} 'DEVICE_DEVS=	$$(DD)${GS_DISPLAY_DEVICE}';	\
+		${ECHO} '';						\
+	  fi;								\
+	  ${CAT} ${MAKEFRAGS} ${WRKSRC}/src/unix-gcc.mak		\
+	) > ${WRKDIR}/unix-gcc.mak
 	${MV} -f ${WRKDIR}/unix-gcc.mak ${WRKSRC}/src
 
-	${SED}	-e "s|@PERL@|${PERL5}|g"				\
-		${WRKSRC}/lib/fixmswrd.pl.in > ${WRKSRC}/lib/fixmswrd.pl
+post-build: hpijs-server
 
 post-install:
 	strip ${PREFIX}/bin/gs
-	${INSTALL_DATA_DIR} ${DOC_DIR}
-	${INSTALL_DATA} ${WRKDIR}/${LIPS_DRV}/Gdevlips.htm ${HTML_DIR}
-	${INSTALL_DATA} ${WRKDIR}/${BJ10V_DRV}/gdev10v.jis ${DOC_DIR}
-	${INSTALL_DATA} ${WRKDIR}/gdevdmpr.sj ${DOC_DIR}
-	${INSTALL_DATA} ${WRKDIR}/dmp_init.ps ${LIB_DIR}
-	${INSTALL_DATA} ${WRKDIR}/dmp_site.ps ${LIB_DIR}
-	${INSTALL_DATA} ${WRKDIR}/escp_24.src ${LIB_DIR}
-	${INSTALL_DATA} ${WRKDIR}/testpage.ps ${LIB_DIR}
-	${INSTALL_DATA} ${WRKDIR}/${PRESCR_DRV}/gdevprsc.?? ${DOC_DIR}
-	${INSTALL_DATA_DIR} ${DOC_DIR}/${MJC_DRV}
-	${INSTALL_DATA} ${WRKDIR}/${MJC_DRV}/README.mjc ${DOC_DIR}/${MJC_DRV}
-	${INSTALL_DATA} ${WRKDIR}/${MJC_DRV}/README.noz ${DOC_DIR}/${MJC_DRV}
-	${INSTALL_DATA} ${WRKDIR}/${MJC_DRV}/README.mje ${DOC_DIR}/${MJC_DRV}
-	${INSTALL_DATA} ${WRKDIR}/${MJC_DRV}/cpem.doc ${DOC_DIR}/${MJC_DRV}
-	${INSTALL_DATA} ${WRKDIR}/${MJC_DRV}/MJ700V2C.FAQ ${DOC_DIR}/${MJC_DRV}
+	${INSTALL_PROGRAM} ${HPIJS_WRKSRC}/hpijs ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA} ${WRKDIR}/${LIPS_DRV}/Gdevlips.htm ${HTMLDIR}
+	${INSTALL_DATA} ${WRKDIR}/${BJ10V_DRV}/gdev10v.jis ${DOCDIR}
+	${INSTALL_DATA} ${WRKDIR}/gdevdmpr.sj ${DOCDIR}
+	${INSTALL_DATA} ${WRKDIR}/dmp_init.ps ${LIBDIR}
+	${INSTALL_DATA} ${WRKDIR}/dmp_site.ps ${LIBDIR}
+	${INSTALL_DATA} ${WRKDIR}/escp_24.src ${LIBDIR}
+	${INSTALL_DATA} ${WRKDIR}/testpage.ps ${LIBDIR}
+	${INSTALL_DATA} ${WRKDIR}/${PRESCR_DRV}/gdevprsc.?? ${DOCDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}/${MJC_DRV}
+	${INSTALL_DATA} ${WRKDIR}/${MJC_DRV}/README.mjc ${DOCDIR}/${MJC_DRV}
+	${INSTALL_DATA} ${WRKDIR}/${MJC_DRV}/README.noz ${DOCDIR}/${MJC_DRV}
+	${INSTALL_DATA} ${WRKDIR}/${MJC_DRV}/README.mje ${DOCDIR}/${MJC_DRV}
+	${INSTALL_DATA} ${WRKDIR}/${MJC_DRV}/cpem.doc ${DOCDIR}/${MJC_DRV}
+	${INSTALL_DATA} ${WRKDIR}/${MJC_DRV}/MJ700V2C.FAQ ${DOCDIR}/${MJC_DRV}
+	${INSTALL_DATA_DIR} ${HTMLDIR}/hpijs
+	${INSTALL_DATA} ${HPIJS_WRKSRC}/append_db.sh ${HTMLDIR}/hpijs
+	${INSTALL_DATA} ${HPIJS_WRKSRC}/printerdb_append ${HTMLDIR}/hpijs
+	${INSTALL_DATA} ${HPIJS_WRKSRC}/hpijs_readme.html ${HTMLDIR}/hpijs
+	${INSTALL_DATA} ${HPIJS_WRKSRC}/*.jpg ${HTMLDIR}/hpijs
 
-.include "../../mk/bsd.pkg.mk"
-
-# arm32 compiler has an optimizer problem
-.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "arm32"
-CFLAGS+=		-O0
-.endif
+.include "../../graphics/png/buildlink.mk"
+.include "../../japanese/vflib-lib/buildlink.mk"

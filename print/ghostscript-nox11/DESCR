@@ -1,6 +1,6 @@
-Ghostscript is the well-known PostScript interpreter which is
-available for all common and most esoteric platforms and supports
-many different printers and some displays.
+Ghostscript is the well-known PostScript interpreter which is available for
+all common and most esoteric platforms and supports many different printers
+and some displays.
 
-This version of Ghostscript includes support for the Japanese
-Vector Font library.
+This version of Ghostscript includes support for the Japanese Vector Font
+library and contains a full installation without the X11 drivers.

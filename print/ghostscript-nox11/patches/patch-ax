@@ -1,0 +1,10 @@
+$NetBSD: patch-ax,v 1.1 2001/12/20 22:31:10 jlam Exp $
+
+--- ../hpijs0.97/makefile.orig	Thu Jun  7 17:10:57 2001
++++ ../hpijs0.97/makefile
+@@ -1,4 +1,4 @@
+-FLAGS = -D_LITTLE_ENDIAN -D_DJ660 -D_DJ6xx -D_DJ6xxPhoto -D_DJ8xx -D_DJ9xx \
++FLAGS = ${HPIJS_CFLAGS} -D_DJ660 -D_DJ6xx -D_DJ6xxPhoto -D_DJ8xx -D_DJ9xx \
+ 	-D_DJ9xxVIP -D_DJ630 -D_APOLLO2100 -D_DJ600 -D_DJ350
+ 
+ VERSION=0.97
