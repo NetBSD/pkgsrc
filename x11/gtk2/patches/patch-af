@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.1.1.1 2002/03/24 20:34:37 dmcmahill Exp $
+
+--- demos/gtk-demo/main.c.orig	Sat Mar  2 23:16:18 2002
++++ demos/gtk-demo/main.c
+@@ -87,7 +87,7 @@
+   int n_read = 0;
+   
+ #ifndef G_OS_WIN32
+-  flockfile (stream);
++  /* flockfile (stream); */
+ #endif
+ 
+   g_string_truncate (str, 0);
+@@ -133,7 +133,7 @@
+  done:
+ 
+ #ifndef G_OS_WIN32
+-  funlockfile (stream);
++  /* funlockfile (stream); */
+ #endif
+ 
+   return n_read > 0;

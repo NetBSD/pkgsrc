@@ -1,0 +1,12 @@
+$NetBSD: patch-ai,v 1.1.1.1 2002/03/24 20:34:37 dmcmahill Exp $
+
+--- demos/Makefile.in.orig	Sun Mar 17 15:03:23 2002
++++ demos/Makefile.in
+@@ -194,6 +194,7 @@
+ 	$(top_builddir)/gdk-pixbuf/libgdk_pixbuf-$(GTK_API_VERSION).la	\
+ 	$(top_builddir)/gdk/@gdktargetlib@        			\
+ 	$(top_builddir)/gtk/@gtktargetlib@ 				\
++	@LDFLAGS@							\
+ @STRIP_END@
+ 
+ 
