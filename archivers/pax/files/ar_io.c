@@ -1,4 +1,4 @@
-/*	$NetBSD: ar_io.c,v 1.5 2003/12/20 04:45:04 grant Exp $	*/
+/*	$NetBSD: ar_io.c,v 1.6 2004/03/11 20:10:29 tv Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -44,7 +44,7 @@
 #if 0
 static char sccsid[] = "@(#)ar_io.c	8.2 (Berkeley) 4/18/94";
 #else
-__RCSID("$NetBSD: ar_io.c,v 1.5 2003/12/20 04:45:04 grant Exp $");
+__RCSID("$NetBSD: ar_io.c,v 1.6 2004/03/11 20:10:29 tv Exp $");
 #endif
 #endif /* not lint */
 
@@ -134,7 +134,9 @@ static pid_t zpid = -1;			/* pid of child process */
 time_t starttime;			/* time the run started */
 int force_one_volume;			/* 1 if we ignore volume changes */
 
+#ifdef SUPPORT_TAPE
 static int get_phys(void);
+#endif /* SUPPORT_TAPE */
 extern sigset_t s_mask;
 static void ar_start_gzip(int, const char *, int);
 static const char *timefmt(char *, size_t, off_t, time_t);
@@ -162,7 +164,9 @@ static int rmtwrite_with_restart(int, void *, int);
 int
 ar_open(const char *name)
 {
+#ifdef SUPPORT_TAPE
 	struct mtget mb;
+#endif /* SUPPORT_TAPE */
 
 	if (arfd != -1)
 		(void)close(arfd);
@@ -251,7 +255,11 @@ ar_open(const char *name)
 	}
 
 	if (S_ISCHR(arsb.st_mode))
+#ifdef SUPPORT_TAPE
 		artyp = ioctl(arfd, MTIOCGET, &mb) ? ISCHR : ISTAPE;
+#else
+		artyp = ISCHR;
+#endif /* SUPPORT_TAPE */
 	else if (S_ISBLK(arsb.st_mode))
 		artyp = ISBLK;
 	else if ((lseek(arfd, (off_t)0L, SEEK_CUR) == -1) && (errno == ESPIPE))
@@ -299,6 +307,7 @@ ar_open(const char *name)
 	 * stored.
 	 */
 	switch(artyp) {
+#ifdef SUPPORT_TAPE
 	case ISTAPE:
 		/*
 		 * Tape drives come in at least two flavors. Those that support
@@ -316,6 +325,7 @@ ar_open(const char *name)
 		 */
 		blksz = rdblksz = MAXBLK;
 		break;
+#endif /* SUPPORT_TAPE */
 	case ISPIPE:
 	case ISBLK:
 	case ISCHR:
@@ -398,7 +408,7 @@ ar_close(void)
 		return;
 	}
 
-
+#ifdef SUPPORT_TAPE
 	/*
 	 * Close archive file. This may take a LONG while on tapes (we may be
 	 * forced to wait for the rewind to complete) so tell the user what is
@@ -413,6 +423,7 @@ ar_close(void)
 			argv0);
 		(void)fflush(listf);
 	}
+#endif /* SUPPORT_TAPE */
 
 	/*
 	 * if nothing was written to the archive (and we created it), we remove
@@ -442,11 +453,13 @@ ar_close(void)
 	if (zpid > 0)
 		waitpid(zpid, &status, 0);
 
+#ifdef SUPPORT_TAPE
 	if (vflag && (artyp == ISTAPE)) {
 		(void)fputs("done.\n", listf);
 		vfpart = 0;
 		(void)fflush(listf);
 	}
+#endif /* SUPPORT_TAPE */
 	arfd = -1;
 
 	if (!io_ok && !did_io) {
@@ -776,6 +789,7 @@ ar_read(char *buf, int cnt)
 		}
 		break;
 #endif /* SUPPORT_RMT */
+#ifdef SUPPORT_TAPE
 	case ISTAPE:
 		if ((res = read_with_restart(arfd, buf, cnt)) > 0) {
 			/*
@@ -803,6 +817,7 @@ ar_read(char *buf, int cnt)
 			return(res);
 		}
 		break;
+#endif
 	case ISREG:
 	case ISBLK:
 	case ISCHR:
@@ -895,7 +910,9 @@ ar_write(char *buf, int bsz)
 		if ((errno == ENOSPC) || (errno == EFBIG) || (errno == EDQUOT))
 			res = lstrval = 0;
 		break;
+#ifdef SUPPORT_TAPE
 	case ISTAPE:
+#endif /* SUPPORT_TAPE */
 	case ISCHR:
 	case ISBLK:
 #ifdef SUPPORT_RMT
@@ -974,7 +991,9 @@ ar_rdsync(void)
 	long fsbz;
 	off_t cpos;
 	off_t mpos;
+#ifdef SUPPORT_TAPE
 	struct mtop mb;
+#endif /* SUPPORT_TAPE */
 
 	/*
 	 * Fail resync attempts at user request (done) or if this is going to be
@@ -995,6 +1014,7 @@ ar_rdsync(void)
 #ifdef SUPPORT_RMT
 	case ISRMT:
 #endif /* SUPPORT_RMT */
+#ifdef SUPPORT_TAPE
 	case ISTAPE:
 		/*
 		 * if the last i/o was a successful data transfer, we assume
@@ -1024,6 +1044,7 @@ ar_rdsync(void)
 #endif /* SUPPORT_RMT */
 		lstrval = 1;
 		break;
+#endif /* SUPPORT_TAPE */
 	case ISREG:
 	case ISCHR:
 	case ISBLK:
@@ -1088,7 +1109,10 @@ ar_fow(off_t sksz, off_t *skipped)
 	 * number of physical blocks to skip (we do not know physical block
 	 * size at this point), so we must only read forward on tapes!
 	 */
-	if (artyp == ISTAPE || artyp == ISPIPE
+	if (artyp == ISPIPE
+#ifdef SUPPORT_TAPE
+	    || artyp == ISTAPE
+#endif /* SUPPORT_TAPE */
 #ifdef SUPPORT_RMT
 	    || artyp == ISRMT
 #endif /* SUPPORT_RMT */
@@ -1136,7 +1160,9 @@ int
 ar_rev(off_t sksz)
 {
 	off_t cpos;
+#ifdef SUPPORT_TAPE
 	struct mtop mb;
+#endif /* SUPPORT_TAPE */
 	int phyblk;
 
 	/*
@@ -1201,6 +1227,7 @@ ar_rev(off_t sksz)
 			return(-1);
 		}
 		break;
+#ifdef SUPPORT_TAPE
 	case ISTAPE:
 #ifdef SUPPORT_RMT
 	case ISRMT:
@@ -1258,11 +1285,13 @@ ar_rev(off_t sksz)
 			return(-1);
 		}
 		break;
+#endif /* SUPPORT_TAPE */
 	}
 	lstrval = 1;
 	return(0);
 }
 
+#ifdef SUPPORT_TAPE
 /*
  * get_phys()
  *	Determine the physical block size on a tape drive. We need the physical
@@ -1419,6 +1448,7 @@ get_phys(void)
 	}
 	return(phyblk);
 }
+#endif /* SUPPORT_TAPE */
 
 /*
  * ar_next()
@@ -1461,6 +1491,7 @@ ar_next(void)
 	 */
 	if (strcmp(arcname, STDO) && strcmp(arcname, STDN) && (artyp != ISREG)
 	    && (artyp != ISPIPE)) {
+#ifdef SUPPORT_TAPE
 		if (artyp == ISTAPE
 #ifdef SUPPORT_RMT
 		    || artyp == ISRMT
@@ -1469,7 +1500,9 @@ ar_next(void)
 			tty_prnt("%s ready for archive tape volume: %d\n",
 				arcname, arvol);
 			tty_prnt("Load the NEXT TAPE on the tape drive");
-		} else {
+		} else
+#endif /* SUPPORT_TAPE */
+		{
 			tty_prnt("%s ready for archive volume: %d\n",
 				arcname, arvol);
 			tty_prnt("Load the NEXT STORAGE MEDIA (if required)");
