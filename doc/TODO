@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1720 2004/05/07 13:51:54 adam Exp $
+$NetBSD: TODO,v 1.1721 2004/05/07 17:48:43 abs Exp $
 
 Suggested new packages
 ======================
@@ -136,6 +136,10 @@ Suggested new packages
 	http://www.unixuser.org/~euske/vnc2swf/
 	Vnc2swf captures the live motion of a screen with VNC protocol
 	and generates a Macromedia Flash(TM) movie (.swf).
+
+	Filelight
+	http://www.methylblue.com/filelight/
+	Graphical representation of disk space usage
 
 Suggested package updates
 =========================

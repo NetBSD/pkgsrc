@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5860 2004/05/07 16:38:53 hrs Exp $
+$NetBSD: CHANGES,v 1.5861 2004/05/07 17:48:43 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2399,3 +2399,9 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Mail-Mbox-MessageParser-0.14 [wiz 2004-05-07]
 	Updated grepmail to 5.22nb1 [wiz 2004-05-07]
 	Updated dsssl-docbook-modular to 1.78 [hrs 2004-05-07]
+	Updated exim3 to 3.36nb2 [abs 2004-05-07]
+	Updated exim to 4.33nb1 [abs 2004-05-07]
+	Updated exim-exiscan to 4.33_20nb1 [abs 2004-05-07]
+	Updated exim-html to 4.30 [abs 2004-05-07]
+	Deleted exim-user [abs 2004-05-07]
+
