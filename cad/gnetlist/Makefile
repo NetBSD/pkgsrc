@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/01/02 22:41:23 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/01/02 23:28:35 rh Exp $
 #
 
 DISTNAME=		gnetlist-${PKGVERSION}
@@ -17,6 +17,8 @@ PKGVERSION=		19991011
 
 DEPENDS+=		libgeda-${PKGVERSION}:../../cad/libgeda
 DEPENDS+=		geda-symbols-${PKGVERSION}:../../cad/geda-symbols
+
+CONFLICTS+=		gEDA<19991011
 
 GNU_CONFIGURE=		YES
 USE_X11BASE=		YES
