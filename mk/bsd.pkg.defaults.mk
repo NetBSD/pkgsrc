@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.109 2002/11/26 10:27:06 salo Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.110 2002/12/05 21:52:33 jmmv Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1432,6 +1432,11 @@ TIN_USE_INN_SPOOL?= NO
 # set ${PREFIX} to /usr/local.  Use another path in such a case.
 # Possible: any valid path
 # Default: none
+
+TKPASMAN_USE_SSL?=	YES
+# Enable SSL in tkpasman (to encode stored passwords)
+# Possible: YES, NO
+# Default: YES
 
 USE_CANNA?= YES
 # Used in kinput2 and nvi-m17n to enable Canna kana-kanji converter
