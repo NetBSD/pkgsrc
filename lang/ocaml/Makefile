@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/11/10 23:12:47 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/05 11:28:07 jlam Exp $
 #
 
 DISTNAME=	ocaml-3.06
@@ -10,17 +10,20 @@ MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://caml.inria.fr/ocaml/
 COMMENT=	The latest implementation of the Caml dialect of ML
 
-DEPENDS+=	tk>=8.3.2:../../x11/tk
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_GMAKE=	yes
-HAS_CONFIGURE=	yes
-CONFIGURE_ARGS+=	-prefix ${LOCALBASE}
-CONFIGURE_ARGS+=	-tklibs -L${LOCALBASE}/lib
-CONFIGURE_ARGS+=	-tkdefs "-I${LOCALBASE}/include "
-CONFIGURE_ARGS+=	-libs "${OCAML_LDFLAGS}"
-OCAML_LDFLAGS=		-Wl,${RPATH_FLAG}${X11BASE}/lib			\
-			-Wl,${RPATH_FLAG}${LOCALBASE}/lib
-FIX_RPATH+=		OCAML_LDFLAGS
+USE_BUILDLINK3=		yes
+USE_GMAKE=		yes
+HAS_CONFIGURE=		yes
+CONFIGURE_ARGS+=	-prefix ${PREFIX}
+CONFIGURE_ARGS+=	-tkdefs "${OCAML_CPPFLAGS}"
+CONFIGURE_ARGS+=	-tklibs "${OCAML_LDFLAGS}"
+CONFIGURE_ARGS+=	-libs "${OCAML_LIBS}"
+
+OCAML_CPPFLAGS=		${CPPFLAGS}
+OCAML_LDFLAGS=		${LDFLAGS:M-L*}
+OCAML_LIBS=		${LDFLAGS:N-L*}
+FIX_RPATH+=		OCAML_LIBS
 
 ALL_TARGET=	world
 
@@ -44,7 +47,7 @@ PLIST_SRC=	${PKGDIR}/PLIST
 .endif
 
 PTHREAD_OPTS+=	native
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} != "none")
 CONFIGURE_ARGS+=	-with-pthread
@@ -56,4 +59,5 @@ PLIST_SUBST+=		NATIVE_THREADS=
 
 PLIST_SRC+=		${PKGDIR}/PLIST.common_end
 
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

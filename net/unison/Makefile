@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/07/21 17:11:26 martti Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/05 11:28:52 jlam Exp $
 
 DISTNAME=	src
 PKGNAME=	unison-2.9.1
@@ -11,11 +11,12 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cis.upenn.edu/~bcpierce/unison/
 COMMENT=	File-synchronization tool
 
-BUILD_DEPENDS=	ocaml>=3.00:../../lang/ocaml
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
 # docs: unison-manual.pdf/html/ps/dvi
+USE_BUILDLINK3=	yes
 USE_GMAKE=	yes
 MAKE_FLAGS+=	CFLAGS="" UISTYLE=text
 MAKE_ENV+=	HOME=${WRKDIR}
@@ -28,11 +29,13 @@ MAKE_FLAGS+=	NATIVE=true
 MAKE_FLAGS+=	NATIVE=false
 .endif
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} != "none")
 MAKE_FLAGS+=	THREADS=true
 .endif
+
+INSTALLATION_DIRS=	bin
 
 post-install:
 		${INSTALL_MAN_DIR} ${PREFIX}/share/doc/unison
@@ -46,4 +49,5 @@ post-install:
 		${INSTALL_MAN} ${WRKSRC}/ROADMAP.txt ${PREFIX}/share/doc/unison
 		${INSTALL_MAN} ${WRKSRC}/TODO.txt ${PREFIX}/share/doc/unison
 
+.include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/08/09 10:44:45 seb Exp $
+# $NetBSD: Makefile,v 1.25 2004/01/05 11:34:26 jlam Exp $
 #
 
 DISTNAME=	m4-1.4
@@ -10,7 +10,9 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/directory/gnum4.html
 COMMENT=	GNU version of Unix m4 macro-processor
 
-USE_BUILDLINK2=		yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 INFO_FILES=		m4.info
 USE_MAKEINFO=		yes

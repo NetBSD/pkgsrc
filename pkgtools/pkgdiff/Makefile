@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2003/09/15 16:16:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.42 2004/01/05 11:32:40 jlam Exp $
 #
 
 DISTNAME=	pkgdiff-0.113
@@ -11,13 +11,15 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/Packages.txt
 COMMENT=	Tools to ease creating and maintaining patches for pkgsrc
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 PERL5_REQD=	5.6.0
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 MAKE_ENV=	PKGSRCDIR=${_PKGSRCDIR:Q}
 
@@ -33,6 +35,8 @@ MANINSTALL=
 NROFF=		nroff
 DIFF?=		diff
 .endif
+
+INSTALLATION_DIRS=	bin man/cat1 man/man1
 
 do-build:
 .for FILE in mkpatches patchdiff
@@ -63,5 +67,5 @@ do-install:
 .   endif
 .endfor
 
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
