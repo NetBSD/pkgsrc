@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.878 2003/09/18 05:39:58 markd Exp $
+$NetBSD: TODO,v 1.879 2003/09/18 11:31:19 salo Exp $
 
 Suggested new packages
 ======================
@@ -199,7 +199,7 @@ Suggested package updates
 	o netatalk-1.6.3 [pkg/21930]
 	o newscache-0.99.22p1
 	o ngrep-1.41
-	o nmap-3.45
+	o nmap-3.45 [salo]
 	o ns-flash-6.0.79
 	o openh323-1.11.2
 	o openoffice-1.0.3.1 [skrll]
@@ -234,6 +234,7 @@ Suggested package updates
 	o sml-nj-110.43
 	o snd-6.8
 	o snes9x-1.41
+	o snort-2.0.2
 	o spamassassin-2.60
 	o squeak-3.2 [fredb|pkg/17950]
 	o squeak-3.5
