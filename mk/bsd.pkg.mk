@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.463 2000/06/03 19:20:55 mycroft Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.464 2000/06/03 19:43:20 mycroft Exp $
 #
 # This file is in the public domain.
 #
@@ -2229,11 +2229,10 @@ PACKAGE_DEPENDS_QUICK?=false
 .if !target(package-depends)
 package-depends:
 .for dep in ${DEPENDS}
-	${_PKG_SILENT}${_PKG_DEBUG}\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
 	pkg="${dep:C/:.*//}";						\
 	dir="${dep:C/[^:]*://}";					\
-	cd ${.CURDIR};							\
-	if cd $$dir 2>/dev/null; then						\
+	if cd ${.CURDIR}/$$dir 2>/dev/null; then			\
 		if ${PACKAGE_DEPENDS_WITH_PATTERNS}; then		\
 			${ECHO} "$$pkg";				\
 		else							\
@@ -2418,8 +2417,8 @@ check-depends:
 .if !target(depends-list)
 depends-list:
 .for dir in ${BUILD_DEPENDS} ${DEPENDS}
-	@\
-	cd ${dir:C/^[^:]*://:C/:.*//} ; \
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	cd ${dir:C/^[^:]*://:C/:.*//};					\
 	${MAKE} ${MAKEFLAGS} package-name depends-list PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}
 .endfor
 .endif
