@@ -1,18 +1,17 @@
-@comment $NetBSD: PLIST,v 1.6 2000/12/14 14:39:46 kei Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/05/25 23:01:33 kei Exp $
 bin/bochs
 share/doc/html/bochs/00README
 share/doc/html/bochs/3rdparty.license.html
-share/doc/html/bochs/DOS.html
 share/doc/html/bochs/Linux.html
 share/doc/html/bochs/Minix.html
 share/doc/html/bochs/OldWindows95.html
-share/doc/html/bochs/Windows31.html
 share/doc/html/bochs/Windows95.html
 share/doc/html/bochs/changelog.html
 share/doc/html/bochs/codingguidelines.html
 share/doc/html/bochs/configure.html
 share/doc/html/bochs/construction.html
 share/doc/html/bochs/cosimulation.html
+share/doc/html/bochs/cvs-status.html
 share/doc/html/bochs/debugger.html
 share/doc/html/bochs/developers.html
 share/doc/html/bochs/faq.html
@@ -28,7 +27,8 @@ share/doc/html/bochs/undercon.gif
 share/doc/html/bochs/whatisbochs.html
 share/doc/html/bochs/win32.html
 share/bochs/bios/BIOS-bochs-990925a
-share/bochs/bios/VGABIOS-elpin-2.20
+share/bochs/bios/VGABIOS-elpin-2.40
+share/bochs/bios/VGABIOS-elpin-LICENSE
 share/bochs/xfonts/fonts.dir
 share/bochs/xfonts/hercules.bdf
 share/bochs/xfonts/vga.bdf
