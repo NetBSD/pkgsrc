@@ -1,8 +1,16 @@
-# $NetBSD: Packages.txt,v 1.364 2004/11/20 12:25:27 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.365 2004/11/20 12:32:24 hubertf Exp $
 ###########################################################################
 
 The "Documentation on the NetBSD Packages System" is now known as 
-"The pkgsrc Guide", which can be found in pkgsrc/doc/pkgsrc.{txt,html}.
+"The pkgsrc Guide", which can be found in various places and formats:
+
+ * ASCII:      pkgsrc/doc/pkgsrc.txt
+               http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.txt
+ * HTML:       pkgsrc.doc/pkgsrc.html
+               http://www.NetBSD.org/Documentation/pkgsrc/
+ * PDF:        http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.pdf
+ * PostScript: http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.ps
+
 
 This notice will be removed at some point in time when people got used
 to the new path. - HF
