@@ -1,0 +1,24 @@
+diff -rc ../old/xview3.2p1-X11R6/config/XView.rules XView.rules
+*** ../old/xview3.2p1-X11R6/config/XView.rules	Tue Jun 29 01:13:20 1993
+--- XView.rules	Sun Nov 20 13:38:59 1994
+***************
+*** 366,374 ****
+  #ifndef InstallSharedLibraryNoBuild
+  #define	InstallSharedLibraryNoBuild(libname,rev,dest)				@@\
+  install::  								@@\
+!         $(RM) /dest/lib/**/libname.so                                   @@\
+  	$(INSTALL) -c $(INSTSHAREDLIBFLAGS) lib/**/libname.so.rev dest	@@\
+!         (cd dest; $(LN) lib/**/libname.so.rev lib/**/libname.so)
+  
+  #endif /* InstallSharedLibraryNoBuild */
+  
+--- 366,374 ----
+  #ifndef InstallSharedLibraryNoBuild
+  #define	InstallSharedLibraryNoBuild(libname,rev,dest)				@@\
+  install::  								@@\
+! 	$(RM) /dest/lib/**/libname.so                                   @@\
+  	$(INSTALL) -c $(INSTSHAREDLIBFLAGS) lib/**/libname.so.rev dest	@@\
+! 	(cd dest; $(LN) lib/**/libname.so.rev lib/**/libname.so)
+  
+  #endif /* InstallSharedLibraryNoBuild */
+  
