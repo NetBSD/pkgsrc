@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/09/28 23:01:15 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/25 05:23:54 snj Exp $
 #
 
 DISTNAME=	elf-0.5.3
@@ -10,7 +10,7 @@ MAINTAINER=	virtus@wanadoo.nl
 HOMEPAGE=	http://www.kerneled.com/projects/elf/
 COMMENT=	ELF header analyzer
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
 BUILD_DIRS=	${WRKSRC}/src
@@ -20,6 +20,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/elf ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/doc/elf.1 ${PREFIX}/man/man1
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
