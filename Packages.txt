@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.298 2003/06/28 09:58:11 agc Exp $
+# $NetBSD: Packages.txt,v 1.299 2003/07/04 11:33:54 martti Exp $
 ###########################################################################
 
 			==========================
@@ -713,7 +713,7 @@ Please pay attention to the following gotchas:
    info files' in this document.
  - Adjust MAINTAINER to be either yourself, if you plan to maintain the
    package for future updates, or set it to the default MAINTAINER
-   packages@netbsd.org.
+   tech-pkg@netbsd.org.
  - If there exists a home page for the software in question, please
    add the variable HOMEPAGE right after MAINTAINER. The value of this
    variable should be the URL for the home page.
