@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/09/24 17:57:25 jschauma Exp $
+
+SHA1 (pvs-3.0-redhat5.tgz) = 62996ae43bf8c61a99d324bf92598dbcf7c9e527
+Size (pvs-3.0-redhat5.tgz) = 12252501 bytes
+SHA1 (pvs-3.0-system.tgz) = d019ab1c52c6f53d6fb14088dba9eae8550159d4
+Size (pvs-3.0-system.tgz) = 1343169 bytes
+SHA1 (pvs-3.0-emacs19.tgz) = 191a63c304fa4244cc885fad39826eaa2106744b
+Size (pvs-3.0-emacs19.tgz) = 352394 bytes
+SHA1 (pvs-3.0-libraries.tgz) = cf67df788384be6c94593a3b4f3aa901e20cba9c
+Size (pvs-3.0-libraries.tgz) = 1104488 bytes
+SHA1 (patch-aa) = c2da82352e0adc0f4d27ff895136baf1b1430437
