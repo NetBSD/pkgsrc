@@ -1,117 +1,47 @@
-$NetBSD: patch-aa,v 1.6 1998/08/07 10:40:26 agc Exp $
+$NetBSD: patch-aa,v 1.7 1999/07/06 07:51:04 jlam Exp $
 
---- c++/Makefile.in.orig	Wed Nov 26 13:39:11 1997
-+++ c++/Makefile.in	Wed Nov 26 13:39:59 1997
-@@ -50,6 +50,8 @@
- LINK		= $(CXX)
- LDFLAGS		= @LDFLAGS@ @LD_MODEL@ @LIBS@ @LOCAL_LDFLAGS@
+--- progs/Makefile.in.orig	Wed Feb 11 07:14:03 1998
++++ progs/Makefile.in	Tue Jun 29 08:59:34 1999
+@@ -84,7 +84,7 @@
+ CFLAGS_DEFAULT	= $(CFLAGS_@DFT_UPR_MODEL@)
  
-+ABI_VERSION	= @nc_cv_abi_version@
-+
- all: demo
+ LD		= @LD@
+-LINK		= $(CC)
++LINK		= $(LIBTOOL) --mode=link $(CC)
+ LDFLAGS		= @EXTRA_LDFLAGS@ \
+ 		@PROG_ARGS@ @LDFLAGS@ @LD_MODEL@ @LIBS@ @EXTRA_LIBS@
  
- OBJS_DEMO = \
---- test/Makefile.in.orig	Sat Nov 16 22:05:54 1996
-+++ test/Makefile.in	Fri Jan  9 12:13:01 1998
-@@ -39,7 +39,9 @@
- 
- CPPFLAGS	= @CPPFLAGS@ -DHAVE_CONFIG_H -I$(srcdir)
- 
--CCFLAGS		= $(CFLAGS) $(CPPFLAGS) $(CFLAGS_@DFT_UPR_MODEL@)
-+CCFLAGS		= $(CFLAGS) $(CPPFLAGS) $(CFLAGS_NORMAL)
-+
-+ABI_VERSION	= @nc_cv_abi_version@
- 
- LOCAL_LIBS	= @TEST_DEPS@
- 
---- progs/Makefile.in.orig	Sat Jun 15 21:40:53 1996
-+++ progs/Makefile.in	Fri Jan  9 12:41:20 1998
-@@ -79,12 +79,12 @@
+@@ -102,7 +102,7 @@
  AUTO_SRC = \
  	termsort.c
  
--PROGS = tic toe infocmp clear tput tset
-+PROGS = tic toe infocmp
+-PROGS = tic$x toe$x infocmp$x clear$x tput$x tset$x
++PROGS = tic$x toe$x infocmp$x
  
- TESTPROGS = mvcur tctest hardscroll hashmap
+ TESTPROGS = mvcur$x tctest$x hardscroll$x hashmap$x
  
- # Default library, for linking applications
--LIB_CURSES = ../lib/libncurses@DFT_DEP_SUFFIX@
-+LIB_CURSES = -L../lib -lncurses
+@@ -122,21 +122,15 @@
+ uninstall.libs:
  
- ################################################################################
- all:	$(AUTO_SRC) $(PROGS) 
-@@ -98,15 +98,9 @@
- 	$(INSTALL_PROGRAM) tic     $(INSTALL_PREFIX)$(bindir)/tic
- 	$(INSTALL_PROGRAM) toe     $(INSTALL_PREFIX)$(bindir)/toe
- 	$(INSTALL_PROGRAM) infocmp $(INSTALL_PREFIX)$(bindir)/infocmp
--	$(INSTALL_PROGRAM) clear   $(INSTALL_PREFIX)$(bindir)/clear
--	$(INSTALL_PROGRAM) tput    $(INSTALL_PREFIX)$(bindir)/tput
--	$(INSTALL_PROGRAM) tset    $(INSTALL_PREFIX)$(bindir)/tset
+ install.progs: $(PROGS) $(INSTALL_PREFIX)$(bindir)
+-	$(INSTALL_PROGRAM) tic$x     $(INSTALL_PREFIX)$(bindir)/tic$x
+-	$(INSTALL_PROGRAM) toe$x     $(INSTALL_PREFIX)$(bindir)/toe$x
+-	$(INSTALL_PROGRAM) infocmp$x $(INSTALL_PREFIX)$(bindir)/infocmp$x
+-	$(INSTALL_PROGRAM) clear$x   $(INSTALL_PREFIX)$(bindir)/clear$x
+-	$(INSTALL_PROGRAM) tput$x    $(INSTALL_PREFIX)$(bindir)/tput$x
+-	$(INSTALL_PROGRAM) tset$x    $(INSTALL_PREFIX)$(bindir)/tset$x
++	$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) tic$x     $(INSTALL_PREFIX)$(bindir)/tic$x
++	$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) toe$x     $(INSTALL_PREFIX)$(bindir)/toe$x
++	$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) infocmp$x $(INSTALL_PREFIX)$(bindir)/infocmp$x
  	@echo "linking captoinfo to tic"
- 	-@rm -f $(INSTALL_PREFIX)$(bindir)/captoinfo
- 	-@ln $(INSTALL_PREFIX)$(bindir)/tic $(INSTALL_PREFIX)$(bindir)/captoinfo
+ 	-@rm -f $(INSTALL_PREFIX)$(bindir)/captoinfo$x
+ 	(cd $(INSTALL_PREFIX)$(bindir) && $(LN_S) tic$x captoinfo$x)
+ 	@echo "linking infotocap to tic"
+ 	-@rm -f $(INSTALL_PREFIX)$(bindir)/infotocap$x
+ 	(cd $(INSTALL_PREFIX)$(bindir) && $(LN_S) tic$x infotocap$x)
 -	@echo "linking reset to tset"
--	-@rm -f $(INSTALL_PREFIX)$(bindir)/reset
--	-@ln $(INSTALL_PREFIX)$(bindir)/tset $(INSTALL_PREFIX)$(bindir)/reset
+-	-@rm -f $(INSTALL_PREFIX)$(bindir)/reset$x
+-	(cd $(INSTALL_PREFIX)$(bindir) && $(LN_S) tset$x reset$x)
  
- $(INSTALL_PREFIX)$(bindir) :
- 	$(srcdir)/../mkinstalldirs $@
-@@ -120,40 +114,40 @@
- 	$(MODEL)/dump_entry.o \
- 	$(LIB_CURSES)
- tic: $(DEPS_TIC)
--	@ECHO_LINK@ $(LINK) $(CFLAGS_DEFAULT) $(DEPS_TIC) $(LDFLAGS) -o $@
-+	@ECHO_LINK@ $(LINK) $(CFLAGS_NORMAL) $(DEPS_TIC) $(LDFLAGS) -o $@
- 
- DEPS_TOE = \
- 	$(MODEL)/toe.o \
- 	$(MODEL)/dump_entry.o \
- 	$(LIB_CURSES)
- toe: $(DEPS_TOE)
--	@ECHO_LINK@ $(LINK) $(CFLAGS_DEFAULT) $(DEPS_TOE) $(LDFLAGS) -o $@
-+	@ECHO_LINK@ $(LINK) $(CFLAGS_NORMAL) $(DEPS_TOE) $(LDFLAGS) -o $@
- 
- DEPS_CLEAR = \
- 	$(MODEL)/clear.o \
- 	$(LIB_CURSES)
- clear: $(DEPS_CLEAR)
--	@ECHO_LINK@ $(LINK) $(CFLAGS_DEFAULT) $(DEPS_CLEAR) $(LDFLAGS) -o $@
-+	@ECHO_LINK@ $(LINK) $(CFLAGS_NORMAL) $(DEPS_CLEAR) $(LDFLAGS) -o $@
- 
- DEPS_TPUT = \
- 	$(MODEL)/tput.o \
- 	$(LIB_CURSES)
- tput: $(DEPS_TPUT)
--	@ECHO_LINK@ $(LINK) $(CFLAGS_DEFAULT) $(DEPS_TPUT) $(LDFLAGS) -o $@
-+	@ECHO_LINK@ $(LINK) $(CFLAGS_NORMAL) $(DEPS_TPUT) $(LDFLAGS) -o $@
- 
- DEPS_INFOCMP = \
- 	$(MODEL)/infocmp.o \
- 	$(MODEL)/dump_entry.o \
- 	$(LIB_CURSES)
- infocmp: $(DEPS_INFOCMP)
--	@ECHO_LINK@ $(LINK) $(CFLAGS_DEFAULT) $(DEPS_INFOCMP) $(LDFLAGS) -o $@
-+	@ECHO_LINK@ $(LINK) $(CFLAGS_NORMAL) $(DEPS_INFOCMP) $(LDFLAGS) -o $@
- 
- DEPS_TSET = \
- 	$(MODEL)/tset.o \
- 	$(MODEL)/dump_entry.o \
- 	$(LIB_CURSES)
- tset: $(DEPS_TSET)
--	@ECHO_LINK@ $(LINK) $(CFLAGS_DEFAULT) $(DEPS_TSET) $(LDFLAGS) -o $@
-+	@ECHO_LINK@ $(LINK) $(CFLAGS_NORMAL) $(DEPS_TSET) $(LDFLAGS) -o $@
- 
- termsort.c: $(srcdir)/MKtermsort.sh
- 	sh -c "$(srcdir)/MKtermsort.sh $(AWK) $(srcdir)/../include/Caps" >$@
---- panel/Makefile.in	1998/03/06 22:13:13	1.1
-+++ panel/Makefile.in	1998/03/06 22:13:29
-@@ -35,7 +35,7 @@
- THIS		= Makefile
- 
- MODEL		= @DFT_LWR_MODEL@
--INSTALL_PREFIX	= @INSTALL_PREFIX
-+INSTALL_PREFIX	= @INSTALL_PREFIX@
- srcdir		= @srcdir@
- prefix		= @prefix@
- exec_prefix	= @exec_prefix@
+ uninstall.progs:
+ 	-@rm -f $(INSTALL_PREFIX)$(bindir)/tic$x

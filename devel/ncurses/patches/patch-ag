@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 1999/07/06 07:51:05 jlam Exp $
+
+--- test/Makefile.in.orig	Wed Feb 11 07:14:05 1998
++++ test/Makefile.in	Tue Jun 29 05:10:01 1999
+@@ -65,7 +65,7 @@
+ MATH_LIB	= @MATH_LIB@
+ 
+ LD		= @LD@
+-LINK		= $(CC)
++LINK		= $(LIBTOOL) --mode=link $(CC)
+ 
+ LDFLAGS		= @LD_MODEL@ @TEST_ARGS@ @LIBS@ @EXTRA_LIBS@ @LOCAL_LDFLAGS@ @LDFLAGS@
+ 

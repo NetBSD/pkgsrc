@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 1999/07/06 07:51:05 jlam Exp $
+
+--- form/form.h.orig	Wed Feb 11 07:13:43 1998
++++ form/form.h	Fri Jul  2 02:46:17 1999
+@@ -33,7 +33,7 @@
+ #ifndef FORM_H
+ #define FORM_H
+ 
+-#include <curses.h>
++#include <ncurses.h>
+ #include <eti.h>
+ 
+ #ifdef __cplusplus

@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 1998/08/07 13:21:25 agc Exp $
+$NetBSD: md5,v 1.4 1999/07/06 07:51:04 jlam Exp $
 
-MD5 (ncurses-1.9.9g.tar.gz) = 4cfe23b29218a11f304652659d4dd84f
+MD5 (ncurses-4.2.tar.gz) = 7926ed3ef7090f72c0a45da1f59400bf
