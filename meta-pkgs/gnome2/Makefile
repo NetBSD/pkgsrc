@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2003/06/02 01:18:19 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/06 12:03:13 rh Exp $
 
-DISTNAME=	gnome-2.2.3
-PKGREVISION=	1
+DISTNAME=	gnome-2.2.4
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -11,7 +10,11 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	meta-package for the GNU Network Object Model Environment
 
 DEPENDS+=	balsa>=2.0.10:../../mail/balsa2
+DEPENDS+=	eog>=2.2.0nb3:../../graphics/eog2
 DEPENDS+=	file-roller>=2.2.1nb1:../../archivers/file-roller
+DEPENDS+=	gcalctool>=4.2.83:../../math/gcalctool
+DEPENDS+=	gconf-editor>=0.3.1nb2:../../editors/gconf-editor
+DEPENDS+=	gedit>=2.2.1nb2:../../editors/gedit
 DEPENDS+=	gdm>=2.2.0nb2:../../x11/gdm
 DEPENDS+=	ggv>=2.0.0:../../print/ggv2
 DEPENDS+=	glade2>=2.0.0:../../devel/glade2
