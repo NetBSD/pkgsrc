@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3212 2003/09/02 17:29:17 taca Exp $
+$NetBSD: CHANGES,v 1.3213 2003/09/02 17:47:49 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3484,3 +3484,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Added skk 12.2.0 [minoura 2003-09-02]
 	Updated libart2 to 2.3.14 [jmmv 2003-09-02]
 	Updated ftpproxy-1.2.1 [taca 2003-09-02]
+	Updated mplayer-share to 1.0rc1 [jmmv 2003-09-02]
+	Updated mplayer to 1.0rc1 [jmmv 2003-09-02]
+	Updated gmplayer to 1.0rc1 [jmmv 2003-09-02]
+	Updated mencoder to 1.0rc1 [jmmv 2003-09-02]
