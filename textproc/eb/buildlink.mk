@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2002/03/14 13:54:04 uebayasi Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/03/22 03:57:54 uebayasi Exp $
 #
 # This Makefile fragment is included by packages that use EB.
 #
@@ -19,6 +19,7 @@ EB_BUILDLINK_MK=	# defined
 
 # 3.2.0 had an 'appendix' bug, so bump the base version.
 BUILDLINK_DEPENDS.eb?=	eb>=3.2.1
+DEPENDS+=	${BUILDLINK_DEPENDS.eb}:../../textproc/eb
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.eb=eb
 #BUILDLINK_PREFIX.png_DEFAULT=	${LOCALBASE}
