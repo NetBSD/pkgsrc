@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/29 22:25:06 snj Exp $
+# $NetBSD: Makefile,v 1.15 2004/04/11 21:31:10 jschauma Exp $
 #
 
 DISTNAME=	pkgdepgraph-2.5
@@ -24,17 +24,10 @@ DISTVER=	${DISTNAME:S/pkgdepgraph-//}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS"
-# This doesn't create readable manual pages. "mandoc" should be added
-# to zoularis.
-NROFF=		nroff -man
-.else
-NROFF=		nroff -mandoc
-.endif
-
 do-extract:
 	${CP} ${FILESDIR}/pkgdepgraph.pl ${WRKSRC}/pkgdepgraph.pl
 	${CP} ${FILESDIR}/pkgdepgraph.1 ${WRKSRC}/pkgdepgraph.1.in
+	${CP} ${FILESDIR}/pkgdepgraph.0 ${WRKSRC}/pkgdepgraph.0.in
 
 do-build:
 .for FILE in pkgdepgraph
@@ -45,13 +38,16 @@ do-build:
 		< ${WRKSRC}/${FILE}.pl 		\
 		> ${WRKSRC}/${FILE}
 .endfor
-.for FILE in pkgdepgraph
+.for FILE in pkgdepgraph.1 pkgdepgraph.0
 	${SED} -e 's|@PKG_DBDIR@|${PKG_DBDIR}|g'	\
 		-e 's|@PKGSRCDIR@|${_PKGSRCDIR}|g'	\
-		< ${WRKSRC}/${FILE}.1.in		\
-		> ${WRKSRC}/${FILE}.1
-	${NROFF} ${WRKSRC}/${FILE}.1 >${WRKSRC}/${FILE}.0
+		< ${WRKSRC}/${FILE}.in		\
+		> ${WRKSRC}/${FILE}
 .endfor
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "AIX"
+	# the pre-generated man-pages are 'mandoc';  these OS need 'man'
+	nroff -man ${WRKSRC}/pkgdepgraph.1 > ${WRKSRC}/pkgdepgraph.0
+.endif
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pkgdepgraph ${PREFIX}/bin/pkgdepgraph
