@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/06/23 19:26:56 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2001/06/29 04:54:55 jlam Exp $
 #
 
 DISTNAME=	gqview-0.10.1
@@ -11,9 +11,7 @@ COMMENT=	another gtk-based graphic file viewer
 
 BUILD_USES_MSGFMT=	yes
 USE_BUILDLINK_ONLY=	yes
-USE_CONFIG_WRAPPER=	yes
 
-#USE_LIBINTL=	yes
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	ac_cv_path_GNOME_CONFIG=no

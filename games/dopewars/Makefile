@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/06/20 08:07:38 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/06/29 04:54:53 jlam Exp $
 
 DISTNAME=		dopewars-1.5.0
 CATEGORIES=		games
@@ -12,9 +12,6 @@ HOMEPAGE=		http://bellatrix.pcl.ox.ac.uk/~ben/dopewars/
 COMMENT=		Make a fortune dealing drugs on the streets of New York
 
 USE_BUILDLINK_ONLY=	YES
-USE_CONFIG_WRAPPER=	YES
-
-#USE_LIBINTL=		YES
 USE_GMAKE=		YES
 
 GNU_CONFIGURE=		YES

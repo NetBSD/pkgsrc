@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/28 16:15:17 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/29 04:54:56 jlam Exp $
 
 DISTNAME=	amaterus-0.34.1
 CATEGORIES=	wm
@@ -10,7 +10,6 @@ COMMENT=	GTK+ window manager
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK_ONLY=	YES
-USE_CONFIG_WRAPPER=	YES
 USE_X11=		YES
 
 post-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/06/26 10:08:31 zuntum Exp $
+# $NetBSD: Makefile,v 1.3 2001/06/29 04:54:53 jlam Exp $
 #
 
 DISTNAME=	fire-1.0
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.libsdl.org/projects/fire/index.html
 COMMENT=	organic fireworks demo
 
 USE_BUILDLINK_ONLY=	YES
-USE_CONFIG_WRAPPER=	YES
 GNU_CONFIGURE=		YES
 USE_X11=		YES
 

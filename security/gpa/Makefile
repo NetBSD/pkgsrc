@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/28 17:01:03 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/29 04:54:55 jlam Exp $
 #
 
 DISTNAME=	gpa-0.4.1
@@ -12,7 +12,6 @@ COMMENT=	GUI frontend to gnupg
 DEPENDS+=	gnupg>=1.0.0:../../security/gnupg
 
 GNU_CONFIGURE=		YES
-USE_CONFIG_WRAPPER=	YES
 USE_BUILDLINK_ONLY=	YES
 
 .include "../../x11/gtk/buildlink.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/06/21 05:06:16 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/06/29 04:54:53 jlam Exp $
 
 .include "../../games/freeciv-share/Makefile.common"
 
@@ -10,7 +10,6 @@ DEPENDS+=		freeciv-share-${FC_VERS}:../../games/freeciv-share
 
 USE_X11=		# defined
 USE_BUILDLINK_ONLY=	# defined
-USE_CONFIG_WRAPPER=	# defined
 
 CONFIGURE_ARGS+=	--disable-server
 CONFIGURE_ARGS+=	--disable-make-data

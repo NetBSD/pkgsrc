@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/06/28 21:48:15 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/06/29 04:54:52 jlam Exp $
 #
 
 DISTNAME=	smpeg-0.4.3
@@ -17,7 +17,6 @@ USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 USE_BUILDLINK_ONLY=	yes
-USE_CONFIG_WRAPPER=	yes
 REPLACE_BUILDLINK=	smpeg-config
 
 CPPFLAGS+=		-Dunix=1

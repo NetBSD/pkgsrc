@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/06/26 08:53:32 zuntum Exp $
+# $NetBSD: Makefile,v 1.11 2001/06/29 04:54:54 jlam Exp $
 
 DISTNAME=	avifile-0.53.5
 CATEGORIES=	graphics
@@ -15,7 +15,6 @@ DEPENDS=	win32-codecs>=010122:../../graphics/win32-codecs
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 USE_BUILDLINK_ONLY=	YES
-USE_CONFIG_WRAPPER=	YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig

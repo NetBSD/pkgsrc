@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2001/06/19 04:32:29 jlam Exp $
+# $NetBSD: Makefile,v 1.52 2001/06/29 04:54:55 jlam Exp $
 #
 
 DISTNAME=		imlib-1.9.8.1
@@ -20,17 +20,6 @@ PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 USE_GMAKE=		yes
 
 USE_BUILDLINK_ONLY=	yes
-USE_CONFIG_WRAPPER=	yes
-
-.include "../../mk/bsd.prefs.mk"
-
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/libungif/buildlink.mk"
-.include "../../graphics/netpbm/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../graphics/tiff/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
 
 CPPFLAGS+=		-DENABLE_NLS
 CONFIGURE_ENV+=		ac_cv_path_CONVERT_PROG="${LOCALBASE}/bin/convert"
@@ -52,4 +41,11 @@ post-install:
 	${LN} -fs ${PREFIX}/share/aclocal/imlib.m4 \
 		${LOCALBASE}/share/aclocal/imlib.m4
 
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../graphics/jpeg/buildlink.mk"
+.include "../../graphics/libungif/buildlink.mk"
+.include "../../graphics/netpbm/buildlink.mk"
+.include "../../graphics/png/buildlink.mk"
+.include "../../graphics/tiff/buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
