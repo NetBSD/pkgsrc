@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1345 2004/01/14 06:57:45 rh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1346 2004/01/18 00:51:30 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -4918,8 +4918,9 @@ _PLIST_AWK_IMAKE_MAN=							\
 # XXX When all info file entries will be removed from PLIST files
 # the non-BEGIN pattern-action statements generated below will be retired.
 _PLIST_AWK_INFO=
-.if !empty(INFO_FILES)
-.  for _f_ in ${INFO_FILES}
+.if ${PLIST_TYPE} == "static"
+.  if !empty(INFO_FILES)
+.    for _f_ in ${INFO_FILES}
 _PLIST_AWK_INFO+=							\
 BEGIN {									\
 	cmd="${_f_}"; gsub("'\''", "\\'\''", cmd);			\
@@ -4934,7 +4935,8 @@ BEGIN {									\
 	close(cmd);							\
 }									\
 /^${INFO_DIR:S|/|\\/|g}\/${_f_}(-[0-9]+)?$$/ { next; }
-.  endfor
+.    endfor
+.  endif
 .endif
 
 # _PLIST_AWK_SCRIPT hold the complete awk script for plist target.
