@@ -1,4 +1,4 @@
-#	$NetBSD: CHANGES-1.6.1,v 1.1.2.42 2003/10/22 23:02:40 jmc Exp $
+#	$NetBSD: CHANGES-1.6.1,v 1.1.2.43 2003/10/23 02:46:09 jmc Exp $
 
 Changes to the pkgsrc-1-6-1 branch:
 
@@ -785,3 +785,14 @@ mail/imp/distinfo				1.8 (via patch)
 	"session fixation" security problem.
 	[bouyer, ticket #1419]
 
+www/horde/Makefile				1.26
+www/horde/PLIST					1.6
+www/horde/distinfo				1.9
+
+	Update to 2.2.4, based on patch from Adrian Portelli in PR#22629.
+	Changes since 2.2.4rc1:
+	SECURITY: Add dereferer to strip off session information from links to
+	the outside of the Horde system to protect against session hijacking.
+	Fix a bug with importing vCard 2.1 data. 
+	Add Arabic (Syria) translation.
+	[bouyer, ticket #1467]
