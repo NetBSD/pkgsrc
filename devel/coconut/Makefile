@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/10/03 00:13:25 tv Exp $
+# $NetBSD: Makefile,v 1.23 2004/12/14 19:49:41 minskim Exp $
 #
 
 DISTNAME=	coconut-0.3.0
@@ -20,18 +20,21 @@ GNU_CONFIGURE=	YES
 CPPFLAGS+=	-I${PREFIX}/include/libxml2/libxml -DGL_GLEXT_LEGACY
 MAKE_ENV+=	AM_MAKEFLAGS="am__depfiles_maybe="
 
+.include "../../graphics/gtkglext/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
+.include "../../net/gnet1/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+
 pre-configure:
 	cd ${WRKSRC} &&							\
 	${CP} configure configure.old &&				\
 	${SED} < configure.old > configure				\
 	's|^\(INCLUDE_DIR_LIST=\).*|\1"${PREFIX}/include ${X11PREFIX}/include"|'
-
-.include "../../graphics/gtkglext/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
-.include "../../textproc/libxslt/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
-.include "../../devel/popt/buildlink3.mk"
-.include "../../net/gnet1/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
