@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/06/04 16:13:39 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 1998/07/14 19:55:49 tv Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/09/24 06:55:01 tg Exp
 #
 
@@ -8,13 +8,12 @@ MASTER_SITES=	http://www.ccil.org/~esr/giflib/
 
 MAINTAINER=	packages@netbsd.org
 
-.include "../../mk/bsd.prefs.mk"
+BUILD_DEPENDS=	${PREFIX}/bin/libtool:../../devel/libtool
+
+MAKE_ENV=	LIBTOOL=${PREFIX}/bin/libtool
 
 post-install:
-.if !defined(NOPORTDOCS)
 	@${MKDIR} ${PREFIX}/share/doc/giflib
 	@${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/doc/giflib
-.endif
-	@${LDCONFIG} || ${TRUE}
 
 .include "../../mk/bsd.pkg.mk"
