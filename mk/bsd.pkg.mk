@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.973.2.7 2002/06/30 06:15:33 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.973.2.8 2002/06/30 08:26:21 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1015,9 +1015,11 @@ SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR} \
 SCRIPTS_ENV+=	BATCH=yes
 .endif
 
-.if !defined(USE_BUILDLINK2)
+.if defined(USE_BUILDLINK2)
+.  if (${USE_BUILDLINK2} == "NO") || (${USE_BUILDLINK2} == "no")
 NO_BUILDLINK2=		# defined
-.elif (${USE_BUILDLINK2} == "NO") || (${USE_BUILDLINK2} == "no")
+.  endif
+.else
 NO_BUILDLINK2=		# defined
 .endif
 
