@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
+
+--- configure.in.orig	Mon Aug 16 07:29:43 1999
++++ configure.in	Mon Jan 17 23:05:41 2000
+@@ -63,11 +63,14 @@
+ AC_CHECK_HEADERS(linux/sbpcd.h, SBPCD_H="-DSBPCD_H='1' ")
+ AC_CHECK_HEADERS(linux/ucdrom.h, UCDROM_H="-DUCDROM_H='1' ")
+ 
++AC_CHECK_FUNCS(getopt_long, GETOPT_LONG="-DGETOPT_LONG='1' ")
++
+ AC_PROG_MAKE_SET
+ AC_C_CONST
+ 
+ AC_SUBST(SBPCD_H)
+ AC_SUBST(UCDROM_H)
++AC_SUBST(GETOPT_LONG)
+ AC_SUBST(TYPESIZES)
+ AC_SUBST(OPT)
+ AC_SUBST(DEBUG)

@@ -1,0 +1,22 @@
+$NetBSD: patch-ca,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
+
+--- interface/Makefile.in.orig	Tue Dec 14 13:27:59 1999
++++ interface/Makefile.in	Mon Jan 17 23:26:00 2000
+@@ -21,8 +21,6 @@
+ OFILES = scan_devices.o	common_interface.o cooked_interface.o interface.o\
+ 	scsi_interface.o smallft.o toc.o test_interface.o
+ 
+-export VERSION
+-
+ all: lib slib
+ 
+ debug: 
+@@ -33,7 +31,7 @@
+ 
+ slib:	
+ 	$(MAKE) lessmessy
+-	$(MAKE) libcdda_interface.so CFLAGS="$(OPT) -fpic" 
++	$(MAKE) libcdda_interface.so VERSION=$(VERSION) CFLAGS="$(OPT) -fpic" 
+ 	[ -e libcdda_interface.so.0 ] || ln -s libcdda_interface.so libcdda_interface.so.0
+ 
+ test:	

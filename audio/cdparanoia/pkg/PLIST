@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/19 08:03:01 itohy Exp $
+bin/cdparanoia
+man/man1/cdparanoia.1
