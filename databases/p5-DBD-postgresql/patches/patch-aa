@@ -1,8 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2002/06/18 07:05:32 explorer Exp $
+$NetBSD: patch-aa,v 1.2 2002/08/21 23:10:39 mjl Exp $
 
-diff -ur dbdimp.c.orig dbdimp.c
---- dbdimp.c.orig	Thu Apr  4 18:55:51 2002
-+++ dbdimp.c	Wed May 15 19:16:54 2002
+--- dbdimp.c.orig	Sat Apr 27 22:35:52 2002
++++ dbdimp.c	Thu Aug 22 01:01:06 2002
 @@ -40,6 +40,30 @@
  
  
@@ -12,7 +11,7 @@ diff -ur dbdimp.c.orig dbdimp.c
 +	PGresult *result = NULL;
 +	ExecStatusType status;
 +
-+	if (DBIc_has(imp_dbh, DBIcf_AutoCommit) == TRUE)
++	if (DBIc_has(imp_dbh, DBIcf_AutoCommit) != FALSE)
 +		return 1;
 +
 +	if (imp_dbh->need_begin == 0)
@@ -126,13 +125,15 @@ diff -ur dbdimp.c.orig dbdimp.c
              }
              if (dbis->debug >= 2) { PerlIO_printf(DBILOGFP, "dbd_db_STORE: switch AutoCommit to off: begin\n"); }
          }
-@@ -1027,6 +1036,9 @@
-     SV **svp;
- 
-     if (dbis->debug >= 1) { PerlIO_printf(DBILOGFP, "dbd_st_execute\n"); }
+@@ -1080,6 +1089,11 @@
+         return -2;
+     }   
+     
++    if (_dbd_begin(imp_dbh) == 0) {
++		 pg_error(sth, -1, "executing begin failed\n");
++	    return -2;
++	 }
 +
-+    if (_dbd_begin(imp_dbh) == 0)
-+	    return 0;
- 
-     /*
-     here we get the statement from the statement handle where
+     statement = imp_sth->statement;
+     if (! statement) {
+         /* are we prepared ? */
