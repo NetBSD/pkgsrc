@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2003/01/28 12:41:15 wiz Exp $
+$NetBSD: distinfo,v 1.6 2003/03/04 17:51:22 wiz Exp $
 
-SHA1 (naim-0.11.5.3.tar.gz) = 955380c0a42b521f1094381fe5edda21d2eb2b20
-Size (naim-0.11.5.3.tar.gz) = 395396 bytes
+SHA1 (naim-0.11.5.5.tar.gz) = c1b6fcf31adbeaa5860034d2e988cf8bff9a9bef
+Size (naim-0.11.5.5.tar.gz) = 401561 bytes
