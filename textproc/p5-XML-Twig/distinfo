@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2004/02/21 01:44:00 gson Exp $
+$NetBSD: distinfo,v 1.3 2004/04/23 20:38:44 minskim Exp $
 
 SHA1 (XML-Twig-3.13.tar.gz) = 1d3d01de03820c0f72f1a77d8430852682819eac
 Size (XML-Twig-3.13.tar.gz) = 222081 bytes
 SHA1 (patch-aa) = e464572c1b8d5c70908e755635d15556211c3333
-SHA1 (patch-ab) = 999126e8dce49891eb47ccf0429ed83fb87376fd
+SHA1 (patch-ab) = 44fed1d983383395a06e1ba6fb2dba7fb17dbb2f
