@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/19 07:45:12 skrll Exp $
+
+qt2/bin/uic
+qt2/bin/designer
+qt2/lib/libqutil.a
+qt2/lib/libqutil.la
+qt2/lib/libqutil.so.1.0
