@@ -1,7 +1,16 @@
-$NetBSD: patch-af,v 1.8 2000/02/11 00:07:51 jlam Exp $
+$NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
 
---- sshd.c.orig	Wed May 12 07:19:29 1999
-+++ sshd.c	Thu Feb 10 18:29:16 2000
+--- sshd.c.orig	Wed May 12 13:19:29 1999
++++ sshd.c	Mon Mar  6 15:19:36 2000
+@@ -511,7 +511,7 @@
+ #include "firewall.h"   /* TIS authsrv authentication */
+ #endif
+ 
+-#if defined (__FreeBSD__) && defined(HAVE_LOGIN_CAP_H)
++#if (defined (__FreeBSD__) || defined(__NetBSD__)) && defined(HAVE_LOGIN_CAP_H)
+ #include <login_cap.h>
+ #endif
+ 
 @@ -537,15 +537,26 @@
  #define O_NOCTTY        0
  #endif
@@ -269,7 +278,7 @@ $NetBSD: patch-af,v 1.8 2000/02/11 00:07:51 jlam Exp $
  
        /* Stay listening for connections until the system crashes or the
           daemon is killed with a signal. */
-@@ -1139,18 +1199,28 @@
+@@ -1139,9 +1199,15 @@
            
            /* Wait in select until there is a connection. */
            FD_ZERO(&fdset);
@@ -288,13 +297,12 @@ $NetBSD: patch-af,v 1.8 2000/02/11 00:07:51 jlam Exp $
              {
                if (errno == EINTR)
                  continue;
-               error("select: %.100s", strerror(errno));
+@@ -1149,8 +1215,12 @@
                continue;
              }
--          
+           
 -          aux = sizeof(sin);
 -          newsock = accept(listen_sock, (struct sockaddr *)&sin, &aux);
-+
 +      for (i = 0; i < num_listen_socks; i++)
 +	{
 +	  if (!FD_ISSET(listen_socks[i], &fdset))
@@ -394,45 +402,30 @@ $NetBSD: patch-af,v 1.8 2000/02/11 00:07:51 jlam Exp $
 +#ifdef BSD4_4
 +  if(pwd->pw_change || pwd->pw_expire) {
      time_t currtime;
--    
+     
 -    if (pwd->pw_change || pwd->pw_expire)
--      currtime = time(NULL);
-+
-+    currtime = time(NULL);
+       currtime = time(NULL);
      
      /*
       * Check for an expired password
       */
 -    if (pwd->pw_change && pwd->pw_change <= currtime)
--      {
--        debug("Account %.100s's password is too old - forced to change.",
--              user);
--        if (options.forced_passwd_change)
--          {
--            forced_command = xmalloc(sizeof(PASSWD_PATH) + strlen(user) + 2);
--            snprintf(forced_command, sizeof(PASSWD_PATH) + strlen(user) + 2,
--                     "%.100s %.100s", PASSWD_PATH, user);
--          }
--        else
--          {
--            return 0;
--          }
--      }
--    else
 +
 +    if (pwd->pw_change)
        {
--        if (pwd->pw_change)
--          {
--            days_before_password_expires = (pwd->pw_change - currtime) / 86400;
--          }
+-        debug("Account %.100s's password is too old - forced to change.",
+-              user);
+-        if (options.forced_passwd_change)
 +       /* PASSWD_CHGNOW seems to be -1 for now but... */
 +       if (
 +#if defined(PASSWD_CHGNOW) && PASSWD_CHGNOW > 0
 +           pwd->pw_change == PASSWD_CHGNOW ||
 +#endif
 +           pwd->pw_change <= currtime)
-+         {
+           {
+-            forced_command = xmalloc(sizeof(PASSWD_PATH) + strlen(user) + 2);
+-            snprintf(forced_command, sizeof(PASSWD_PATH) + strlen(user) + 2,
+-                     "%.100s %.100s", PASSWD_PATH, user);
 +	   packet_send_debug("Password has expired");
 +	   if(options.forced_passwd_change)
 +	     {
@@ -441,19 +434,23 @@ $NetBSD: patch-af,v 1.8 2000/02/11 00:07:51 jlam Exp $
 +	       forced_command = xmalloc(sizeof(PASSWD_PATH) +
 +					strlen(user) + 1);
 +	       sprintf(forced_command, "%s %s", PASSWD_PATH, user);
-+	     }
-+	   else
-+	     {
-+	       return 0;
-+	     }
-+         }
+           }
+         else
+           {
+             return 0;
+           }
+       }
+-    else
+-      {
+-        if (pwd->pw_change)
+-          {
 +#ifdef PASSWD_CHGNOW
 +      if(pwd->pw_change != PASSWD_CHGNOW)
-+	days_before_password_expires = (pwd->pw_change - currtime) / 86400;
+             days_before_password_expires = (pwd->pw_change - currtime) / 86400;
+-          }
 +#endif
        }
--    
-+     
+     
      /*
       * Check for expired account
       */
@@ -461,20 +458,19 @@ $NetBSD: patch-af,v 1.8 2000/02/11 00:07:51 jlam Exp $
 +    if (pwd->pw_expire)
        {
 -        debug("Account %.100s has expired - access denied.", user);
--        return 0;
--      }
++        if (pwd->pw_expire <= currtime)
++          {
++            packet_send_debug("Account has expired");
+         return 0;
+       }
 -    else
 -      {
 -        if (pwd->pw_expire)
-+        if (pwd->pw_expire <= currtime)
-           {
--            days_before_account_expires = (pwd->pw_expire - currtime) / 86400;
-+            packet_send_debug("Account has expired");
-+	    return 0;
+-          {
+             days_before_account_expires = (pwd->pw_expire - currtime) / 86400;
            }
-+	days_before_account_expires = (pwd->pw_expire - currtime) / 86400;
        }
-   }
+-  }
 -#endif  /* !FreeBSD */
 +#endif  /* !BSD4_4 */
  
@@ -489,7 +485,7 @@ $NetBSD: patch-af,v 1.8 2000/02/11 00:07:51 jlam Exp $
    grp = getgrgid(pwd->pw_gid);
    if (grp)
      group = grp->gr_name;
-@@ -2151,11 +2241,11 @@
+@@ -2151,12 +2241,12 @@
    unsigned int client_host_key_bits;
    MP_INT client_host_key_e, client_host_key_n;
    int password_attempts = 0;
@@ -499,10 +495,12 @@ $NetBSD: patch-af,v 1.8 2000/02/11 00:07:51 jlam Exp $
    krb5_principal client = 0, tkt_client = 0;
    krb5_data krb5data;
 -#endif /* defined(KERBEROS) && defined(KRB5) */
+-#if defined (__FreeBSD__) && defined(HAVE_LOGIN_CAP_H)
 +#endif /* KRB5 */
- #if defined (__FreeBSD__) && defined(HAVE_LOGIN_CAP_H)
++#if (defined (__FreeBSD__) || defined(__NetBSD__)) && defined(HAVE_LOGIN_CAP_H)
    login_cap_t *lc;
    const char *hostname;
+   const char *ipaddr;
 @@ -2167,10 +2257,18 @@
    ipaddr = get_remote_ipaddr();
  #endif /* HAVE_LOGIN_CAP_H */
@@ -623,8 +621,6 @@ $NetBSD: patch-af,v 1.8 2000/02/11 00:07:51 jlam Exp $
            }
            free(krb5data.data);
 -#endif
--          continue;
--#endif /* KERBEROS_TGT_PASSING */
 +#else /* KRB5 */
 +	  {
 +	    /* Accept Kerberos tgt. */
@@ -634,7 +630,8 @@ $NetBSD: patch-af,v 1.8 2000/02/11 00:07:51 jlam Exp $
 +	    xfree(tgt);
 +	  }
 +#endif /* KRB5 */
-+	  continue;
+           continue;
+-#endif /* KERBEROS_TGT_PASSING */
 +#endif /* KRB5 || AFS */
            
 -#ifdef KERBEROS
@@ -688,6 +685,9 @@ $NetBSD: patch-af,v 1.8 2000/02/11 00:07:51 jlam Exp $
                  }
                free(tkt_user);
              }
+-#endif /* KRB5 */
+-          debug("Kerberos authentication failed for %.100s from %.200s",
+-                user, get_canonical_hostname());
 +#else /* !KRB5  XXX - how to make these coexist? */
 +	  else {
 +	    /* Try Kerberos v4 authentication. */
@@ -706,16 +706,13 @@ $NetBSD: patch-af,v 1.8 2000/02/11 00:07:51 jlam Exp $
 +	      authentication_type = SSH_AUTH_KERBEROS;
 +	      authenticated = 1;
 +	      xfree(tkt_user);
-+	  break;
+           break;
+-#endif /* KERBEROS */
 +	    }
 +	    log_msg("Kerberos authentication failed for account "
 +		    "%.100s from %.200s", user, get_canonical_hostname());
 +	  }
- #endif /* KRB5 */
--          debug("Kerberos authentication failed for %.100s from %.200s",
--                user, get_canonical_hostname());
--          break;
--#endif /* KERBEROS */
++#endif /* KRB5 */
 +#endif /* KRB5 || KRB4 */
            
          case SSH_CMSG_AUTH_RHOSTS:
@@ -833,6 +830,15 @@ $NetBSD: patch-af,v 1.8 2000/02/11 00:07:51 jlam Exp $
    if (pw->pw_uid == UID_ROOT && options.permit_root_login == 1)
      {
        if (authentication_type == SSH_AUTH_PASSWORD)
+@@ -2724,7 +2917,7 @@
+                             get_canonical_hostname());
+       }
+ 
+-#if defined (__FreeBSD__) && defined (HAVE_LOGIN_CAP_H)
++#if (defined (__FreeBSD__) || defined(__NetBSD__)) && defined (HAVE_LOGIN_CAP_H)
+   
+   lc = login_getclass(pw->pw_class);
+   
 @@ -2775,6 +2968,9 @@
    packet_start(SSH_SMSG_SUCCESS);
    packet_send();
@@ -873,7 +879,8 @@ $NetBSD: patch-af,v 1.8 2000/02/11 00:07:51 jlam Exp $
 +  struct sockaddr_storage from;
    int fromlen;
    struct pty_cleanup_context cleanup_context;
- #if defined (__FreeBSD__) && defined(HAVE_LOGIN_CAP_H)
+-#if defined (__FreeBSD__) && defined(HAVE_LOGIN_CAP_H)
++#if (defined(__FreeBSD__) || defined(__NetBSD__)) && defined(HAVE_LOGIN_CAP_H)
    login_cap_t *lc;
  #endif
 -#if defined (__bsdi__) && _BSDI_VERSION >= 199510 
@@ -882,16 +889,46 @@ $NetBSD: patch-af,v 1.8 2000/02/11 00:07:51 jlam Exp $
  
    /* We no longer need the child running on user's privileges. */
    userfile_uninit();
-@@ -3387,7 +3595,7 @@
+@@ -3387,9 +3595,9 @@
  
        /* Record that there was a login on that terminal. */
        record_login(pid, ttyname, pw->pw_name, pw->pw_uid, hostname, 
 -                   &from);
 +		   (struct sockaddr *)&from);
  
- #if defined (__FreeBSD__) && defined(HAVE_LOGIN_CAP_H)
+-#if defined (__FreeBSD__) && defined(HAVE_LOGIN_CAP_H)
++#if (defined (__FreeBSD__) || defined(__NetBSD__)) && defined(HAVE_LOGIN_CAP_H)
        lc = login_getclass(pw->pw_class);
-@@ -3469,30 +3677,6 @@
+ #endif
+ 
+@@ -3398,7 +3606,7 @@
+       snprintf(line, sizeof(line), "%.200s/.hushlogin", pw->pw_dir);
+       quiet_login = stat(line, &st) >= 0;
+ 
+-#if defined (__FreeBSD__) && defined(HAVE_LOGIN_CAP_H)
++#if (defined (__FreeBSD__) || defined(__NetBSD__)) && defined(HAVE_LOGIN_CAP_H)
+       quiet_login = login_getcapbool(lc, "hushlogin", quiet_login);
+ #endif
+      
+@@ -3425,7 +3633,7 @@
+         }
+ #endif /* HAVE_SIA */
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__)  || defined(__NetBSD__)
+       if (command == NULL && !quiet_login)
+         {
+ #ifdef HAVE_LOGIN_CAP_H
+@@ -3457,7 +3665,7 @@
+           FILE *f;
+ 
+           /* Print /etc/motd if it exists. */
+-#if defined (__FreeBSD__) && defined(HAVE_LOGIN_CAP_H)
++#if (defined (__FreeBSD__) || defined(__NetBSD__)) && defined(HAVE_LOGIN_CAP_H)
+           f = fopen(login_getcapstr(lc, "welcome", "/etc/motd", "/etc/motd"),
+                     "r");
+ #else
+@@ -3469,33 +3677,9 @@
                  fputs(line, stdout);
                fclose(f);
              }
@@ -921,7 +958,11 @@ $NetBSD: patch-af,v 1.8 2000/02/11 00:07:51 jlam Exp $
 -#endif /* __bsdi__ & _BSDI_VERSION >= 199510   */
          }
  
- #if defined (__FreeBSD__) && defined HAVE_LOGIN_CAP_H
+-#if defined (__FreeBSD__) && defined HAVE_LOGIN_CAP_H
++#if (defined (__FreeBSD__) || defined(__NetBSD__)) && defined HAVE_LOGIN_CAP_H
+       login_close(lc);
+ #endif
+ 
 @@ -3876,6 +4060,7 @@
    char *user_shell;
    char *remote_ip;
@@ -930,7 +971,20 @@ $NetBSD: patch-af,v 1.8 2000/02/11 00:07:51 jlam Exp $
  #if defined (__FreeBSD__) && defined(HAVE_LOGIN_CAP_H)
    login_cap_t *lc;
    char *real_shell;
-@@ -3981,6 +4166,7 @@
+@@ -3883,8 +4068,11 @@
+   lc = login_getclass(pw->pw_class);
+   auth_checknologin(lc);
+ #else /* !HAVE_LOGIN_CAP_H */
+-#if defined (__bsdi__) && _BSDI_VERSION > 199510
++#if ( defined (__bsdi__) && _BSDI_VERSION > 199510 ) || (defined(HAVE_LOGIN_CAP_H) && defined(__NetBSD__))
+   login_cap_t *lc = 0;
++#if defined(__NetBSD__)
++  char *real_shell;
++#endif
+   
+   if ((lc = login_getclass(pw->pw_class)) == NULL)
+     {
+@@ -3981,6 +4169,7 @@
    user_shell = xstrdup(pw->pw_shell);
    remote_ip = xstrdup(get_remote_ipaddr());
    remote_port = get_remote_port();
@@ -938,7 +992,7 @@ $NetBSD: patch-af,v 1.8 2000/02/11 00:07:51 jlam Exp $
  
    /* Close the connection descriptors; note that this is the child, and the 
       server will still have the socket open, and it is important that we
-@@ -4000,7 +4186,6 @@
+@@ -4000,7 +4189,6 @@
    /* Close any extra file descriptors.  Note that there may still be
       descriptors left by system functions.  They will be closed later. */
    endpwent();
@@ -946,7 +1000,21 @@ $NetBSD: patch-af,v 1.8 2000/02/11 00:07:51 jlam Exp $
  
    /* Set dummy encryption key to clear information about the key from
       memory.  This key will never be used. */
-@@ -4184,6 +4369,19 @@
+@@ -4019,7 +4207,7 @@
+   if (command != NULL || !options.use_login)
+ #endif /* USELOGIN */
+     {
+-#if defined (__FreeBSD__) && defined(HAVE_LOGIN_CAP_H)
++#if (defined (__FreeBSD__) || defined(__NetBSD__)) && defined(HAVE_LOGIN_CAP_H)
+       char *p, *s, **tmpenv;
+ 
+       /* Initialize the new environment.
+@@ -4180,10 +4368,23 @@
+      and means /bin/sh. */
+   shell = (user_shell[0] == '\0') ? DEFAULT_SHELL : user_shell;
+ 
+-#if defined (__FreeBSD__) && defined(HAVE_LOGIN_CAP_H)
++#if (defined(__FreeBSD__) || defined(__NetBSD__)) && defined(HAVE_LOGIN_CAP_H)
    real_shell = login_getcapstr(lc, "shell", (char*)shell, (char*)shell);
    login_close(lc);
  #endif /* HAVE_LOGIN_CAP_H */
@@ -966,7 +1034,7 @@ $NetBSD: patch-af,v 1.8 2000/02/11 00:07:51 jlam Exp $
    /* Initialize the environment if not already done. In the first part we
       allocate space for all environment variables. */
    if (env == NULL)
-@@ -4257,7 +4455,7 @@
+@@ -4257,7 +4458,7 @@
  
    /* Set SSH_CLIENT. */
    snprintf(buf, sizeof(buf),
@@ -975,7 +1043,7 @@ $NetBSD: patch-af,v 1.8 2000/02/11 00:07:51 jlam Exp $
    child_set_env(&env, &envsize, "SSH_CLIENT", buf);
  
    /* Set SSH_TTY if we have a pty. */
-@@ -4290,13 +4488,21 @@
+@@ -4290,13 +4491,21 @@
    }
  #endif
  
@@ -1000,7 +1068,7 @@ $NetBSD: patch-af,v 1.8 2000/02/11 00:07:51 jlam Exp $
  
    /* Set variable for forwarded authentication connection, if we have one. */
    if (auth_get_socket_name() != NULL)
-@@ -4426,7 +4632,8 @@
+@@ -4426,7 +4635,8 @@
                  int i;
                  char name[255], *p;
                  char line[256];
@@ -1010,7 +1078,7 @@ $NetBSD: patch-af,v 1.8 2000/02/11 00:07:51 jlam Exp $
                  
                  strncpy(name, display, sizeof(name));
                  name[sizeof(name) - 1] = '\0';
-@@ -4443,7 +4650,10 @@
+@@ -4443,7 +4653,10 @@
                  /* Moved this call here to avoid a nasty buf in SunOS
                     4.1.4 libc where gethostbyname closes an unrelated
                     file descriptor. */
@@ -1022,7 +1090,7 @@ $NetBSD: patch-af,v 1.8 2000/02/11 00:07:51 jlam Exp $
  
                  snprintf(line, sizeof(line),
                           "%.200s -q -", options.xauth_path);
-@@ -4461,21 +4671,24 @@
+@@ -4461,21 +4674,24 @@
                                  cp - display, display, cp, auth_proto,
                                  auth_data);
  #endif
@@ -1053,3 +1121,21 @@ $NetBSD: patch-af,v 1.8 2000/02/11 00:07:51 jlam Exp $
                                          cp, auth_proto, auth_data);
                                }
                            }
+@@ -4554,7 +4770,7 @@
+           /* Execute the shell. */
+           argv[0] = buf;
+           argv[1] = NULL;
+-#if defined (__FreeBSD__) && defined(HAVE_LOGIN_CAP_H)
++#if (defined (__FreeBSD__)  || defined(__NetBSD__)) && defined(HAVE_LOGIN_CAP_H)
+           execve(real_shell, argv, env);
+ #else
+           execve(shell, argv, env);
+@@ -4579,7 +4795,7 @@
+   argv[1] = "-c";
+   argv[2] = (char *)command;
+   argv[3] = NULL;
+-#if defined (__FreeBSD__) && defined(HAVE_LOGIN_CAP_H)
++#if (defined (__FreeBSD__) || defined(__NetBSD__)) && defined(HAVE_LOGIN_CAP_H)
+   execve(real_shell, argv, env);
+ #else
+   execve(shell, argv, env);
