@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2773 2004/12/26 21:35:31 wiz Exp $
+$NetBSD: TODO,v 1.2774 2004/12/26 22:17:38 zuntum Exp $
 
 Suggested new packages
 ======================
@@ -898,7 +898,6 @@ Suggested package updates
 	o plplot-5.3.1
 	o pnet-0.6.10 [pkg/28555]
 	o poedit-1.3.1
-	o polsms-2.0.2
 	o poppy-4.01
 	o poptop-1.2.1
 	o postgresql-autodoc-1.24
