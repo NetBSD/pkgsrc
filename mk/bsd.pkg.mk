@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.179 1998/10/17 06:39:48 mycroft Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.180 1998/10/19 12:50:51 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -527,18 +527,20 @@ PKGTOOLS_REQD=		19980908
 
 # Check that we're using up-to-date pkg_* tools with this file.
 .ifndef _PKGTOOLS_VER
-_PKGTOOLS_VER!= /usr/bin/strings ${PKG_CREATE} ${PKG_DELETE} ${PKG_INFO} ${PKG_ADD} | ${AWK} '$$1 ~ "\$$NetBSD" { gsub("/", "", $$4); print $$4 }' | sort | tail -n 1
+_PKGTOOLS_VER!= /usr/bin/ident ${PKG_CREATE} ${PKG_DELETE} ${PKG_INFO} ${PKG_ADD} | ${AWK} '$$1 ~ "\$$NetBSD" && $$2 !~ "^crt0" { gsub("/", "", $$4); print $$4 }' | sort | tail -n 1
+uptodate-pkgtools:
 .if ${_PKGTOOLS_VER} < ${PKGTOOLS_REQD}
-.BEGIN:
 	@case ${PKGNAME} in						\
 	pkg_install-*)							\
 		;;							\
 	*)								\
-		${ECHO} "Your package tools need to be updated to ${PKGTOOLS_REQD}"; \
-		${ECHO} "The installed package tools were last updated on ${_PKGTOOLS_VER}"; \
+		${ECHO} "Your package tools need to be updated to `${ECHO} ${PKGTOOLS_REQD} | ${SED} -e 's|\(....\)\(..\)\(..\)|\1/\2/\3|'` versions."; \
+		${ECHO} "The installed package tools were last updated on `${ECHO} ${_PKGTOOLS_VER} | ${SED} -e 's|\(....\)\(..\)\(..\)|\1/\2/\3|'`."; \
 		${ECHO} "Please make and install the pkgsrc/pkgtools/pkg_install package."; \
 		${FALSE} ;;						\
 	esac
+.else
+	@${DO_NADA}
 .endif # bad version date
 .endif # !defined _PKGTOOLS_VER
 
@@ -1264,11 +1266,11 @@ build: configure ${BUILD_COOKIE}
 .endif
 
 .if !target(install)
-install: build ${INSTALL_COOKIE}
+install: uptodate-pkgtools build ${INSTALL_COOKIE}
 .endif
 
 .if !target(package)
-package: install ${PACKAGE_COOKIE}
+package: uptodate-pkgtools install ${PACKAGE_COOKIE}
 .endif
 
 ${EXTRACT_COOKIE}:
@@ -1340,7 +1342,7 @@ reinstall:
 # Special target to remove installation
 
 .if !target(deinstall)
-deinstall:
+deinstall: uptodate-pkgtools
 	@${ECHO_MSG} "===> Deinstalling for ${PKGNAME}"
 .ifdef PKG_VERBOSE
 	@${PKG_DELETE} -v -f ${PKGNAME}
@@ -1669,7 +1671,7 @@ fetch-depends:	_DEPENDS_USE
 build-depends:	_DEPENDS_USE
 run-depends:	_DEPENDS_USE
 
-misc-depends:
+misc-depends: uptodate-pkgtools
 .if defined(DEPENDS)
 .if !defined(NO_DEPENDS)
 .for dep in ${DEPENDS}
