@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2002/12/09 16:01:55 tron Exp $
+@comment $NetBSD: PLIST,v 1.10 2003/01/14 21:41:07 jmmv Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -252,6 +252,39 @@ share/doc/gnome-libs/mime-type-handling.txt
 share/doc/gnome-libs/mkstub
 share/doc/gnome-libs/session-management.txt
 share/doc/gnome-libs/suggestions.txt
+share/doc/html/libart/basic-foo.html
+share/doc/html/libart/basic-rendering.html
+share/doc/html/libart/basic.html
+share/doc/html/libart/fdl-section1.html
+share/doc/html/libart/fdl-section10.html
+share/doc/html/libart/fdl-section2.html
+share/doc/html/libart/fdl-section3.html
+share/doc/html/libart/fdl-section4.html
+share/doc/html/libart/fdl-section5.html
+share/doc/html/libart/fdl-section6.html
+share/doc/html/libart/fdl-section7.html
+share/doc/html/libart/fdl-section8.html
+share/doc/html/libart/fdl-section9.html
+share/doc/html/libart/fdl-using.html
+share/doc/html/libart/fdl.html
+share/doc/html/libart/internals-intersector.html
+share/doc/html/libart/internals.html
+share/doc/html/libart/intro-file-names.html
+share/doc/html/libart/intro.html
+share/doc/html/libart/libart-affine-transformation-matrices.html
+share/doc/html/libart/libart-art-alpha-gamma-stuff.html
+share/doc/html/libart/libart-core-construction-apis.html
+share/doc/html/libart/libart-extended-construction-apis.html
+share/doc/html/libart/libart-memory-management.html
+share/doc/html/libart/libart-svp-rendering.html
+share/doc/html/libart/libart-svps.html
+share/doc/html/libart/libart-transformation-operations.html
+share/doc/html/libart/libart.html
+share/doc/html/libart/problems-memory.html
+share/doc/html/libart/problems.html
+share/doc/html/libart/sample-display.html
+share/doc/html/libart/sample.html
+share/doc/html/libart/x35.html
 share/gnome/help/gnome-dev-info/C/addauth.html
 share/gnome/help/gnome-dev-info/C/altpol.html
 share/gnome/help/gnome-dev-info/C/arch.html
@@ -469,39 +502,6 @@ share/gnome/html/zvt/zvtterm-reference.html
 share/gnome/html/zvt/zvtterm-window-hints.html
 share/gnome/html/zvt/zvtterm.html
 share/gnome/html/zvtterm.html
-share/gtk-doc/html/libart/basic-foo.html
-share/gtk-doc/html/libart/basic-rendering.html
-share/gtk-doc/html/libart/basic.html
-share/gtk-doc/html/libart/fdl-section1.html
-share/gtk-doc/html/libart/fdl-section10.html
-share/gtk-doc/html/libart/fdl-section2.html
-share/gtk-doc/html/libart/fdl-section3.html
-share/gtk-doc/html/libart/fdl-section4.html
-share/gtk-doc/html/libart/fdl-section5.html
-share/gtk-doc/html/libart/fdl-section6.html
-share/gtk-doc/html/libart/fdl-section7.html
-share/gtk-doc/html/libart/fdl-section8.html
-share/gtk-doc/html/libart/fdl-section9.html
-share/gtk-doc/html/libart/fdl-using.html
-share/gtk-doc/html/libart/fdl.html
-share/gtk-doc/html/libart/internals-intersector.html
-share/gtk-doc/html/libart/internals.html
-share/gtk-doc/html/libart/intro-file-names.html
-share/gtk-doc/html/libart/intro.html
-share/gtk-doc/html/libart/libart-affine-transformation-matrices.html
-share/gtk-doc/html/libart/libart-art-alpha-gamma-stuff.html
-share/gtk-doc/html/libart/libart-core-construction-apis.html
-share/gtk-doc/html/libart/libart-extended-construction-apis.html
-share/gtk-doc/html/libart/libart-memory-management.html
-share/gtk-doc/html/libart/libart-svp-rendering.html
-share/gtk-doc/html/libart/libart-svps.html
-share/gtk-doc/html/libart/libart-transformation-operations.html
-share/gtk-doc/html/libart/libart.html
-share/gtk-doc/html/libart/problems-memory.html
-share/gtk-doc/html/libart/problems.html
-share/gtk-doc/html/libart/sample-display.html
-share/gtk-doc/html/libart/sample.html
-share/gtk-doc/html/libart/x35.html
 share/gtkrc
 share/gtkrc.el
 share/gtkrc.eo
@@ -584,9 +584,6 @@ share/type-convert/postscript.convert
 share/type-convert/type.convert
 @dirrm share/type-convert
 @dirrm share/mime-info
-@dirrm share/gtk-doc/html/libart
-@unexec ${RMDIR} %D/share/gtk-doc/html 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gtk-doc 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/gnome/html/zvt 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/gnome/html/gnorba 2>/dev/null || ${TRUE}
 @dirrm share/gnome/html/gnomeui
@@ -597,6 +594,7 @@ share/type-convert/type.convert
 @dirrm share/gnome/help
 @unexec ${RMDIR} %D/share/gnome/apps 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/gnome 2>/dev/null || ${TRUE}
+@dirrm share/doc/html/libart
 @dirrm share/doc/gnome-libs
 @dirrm lib/gnome-libs/include
 @dirrm lib/gnome-libs

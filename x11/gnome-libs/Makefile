@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.81 2003/01/10 07:59:08 cjep Exp $
+# $NetBSD: Makefile,v 1.82 2003/01/14 21:41:07 jmmv Exp $
 
 DISTNAME=		gnome-libs-1.4.1.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-libs/1.4/}
 
@@ -18,6 +18,8 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR} \
+			--enable-gtk-doc=no \
+			--with-html-dir=${PREFIX}/share/doc/html \
 			--with-glib-prefix=${LOCALBASE} \
 			--with-kde-datadir=${X11PREFIX}/share/kde
 CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE} \
