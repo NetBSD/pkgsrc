@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2001/02/19 15:52:29 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2001/02/24 05:10:44 itojun Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -60,6 +60,7 @@ SUBDIR+=	py-readline
 SUBDIR+=	qterm
 SUBDIR+=	root
 SUBDIR+=	rpm
+SUBDIR+=	sch
 SUBDIR+=	sci
 SUBDIR+=	screen
 SUBDIR+=	setiathome
