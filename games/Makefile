@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2002/05/12 00:03:40 wiz Exp $
+# $NetBSD: Makefile,v 1.141 2002/05/31 14:08:42 skrll Exp $
 #
 
 COMMENT=	Games
@@ -69,8 +69,10 @@ SUBDIR+=	iso-pernangband
 SUBDIR+=	jetpack
 SUBDIR+=	kdegames
 SUBDIR+=	kdegames2
+SUBDIR+=	kdegames3
 SUBDIR+=	kdetoys
 SUBDIR+=	kdetoys2
+SUBDIR+=	kdetoys3
 SUBDIR+=	ketm
 SUBDIR+=	knightcap
 SUBDIR+=	knightcap-brain
