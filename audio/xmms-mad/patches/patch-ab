@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/05/26 04:00:51 jmcneill Exp $
+
+--- src/xmms-mad.c.orig	Sat May 25 21:07:02 2002
++++ src/xmms-mad.c	Sat May 25 21:07:05 2002
+@@ -83,6 +83,9 @@
+       printf ("waiting for thread\n");
+ #endif /* DEBUG */
+       pthread_join (decode_thread, 0);
++#ifdef __NetBSD__
++      pthread_yield_np ();
++#endif
+ #ifdef DEBUG
+       printf ("thread done\n");
+ #endif /* DEBUG */
+@@ -99,6 +102,9 @@
+       info.playing = 1;
+       input_get_info (&info);
+       pthread_create (&decode_thread, 0, decode, (void *) &info);
++#ifdef __NetBSD__
++      pthread_yield_np ();
++#endif
+     }
+ }
+ 
