@@ -1,4 +1,4 @@
-/*	$NetBSD: pax.c,v 1.5 2003/12/20 04:45:04 grant Exp $	*/
+/*	$NetBSD: pax.c,v 1.6 2004/06/20 10:11:02 grant Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -49,7 +49,7 @@ __COPYRIGHT("@(#) Copyright (c) 1992, 1993\n\
 #if 0
 static char sccsid[] = "@(#)pax.c	8.2 (Berkeley) 4/18/94";
 #else
-__RCSID("$NetBSD: pax.c,v 1.5 2003/12/20 04:45:04 grant Exp $");
+__RCSID("$NetBSD: pax.c,v 1.6 2004/06/20 10:11:02 grant Exp $");
 #endif
 #endif /* not lint */
 
@@ -138,7 +138,7 @@ int	docrc;			/* check/create file crc */
 int	to_stdout;		/* extract to stdout */
 char	*dirptr;		/* destination dir in a copy */
 char	*ltmfrmt;		/* -v locale time format (if any) */
-char	*argv0;			/* root of argv[0] */
+const char *argv0;		/* root of argv[0] */
 sigset_t s_mask;		/* signal mask for cleanup critical sect */
 FILE	*listf;			/* file pointer to print file list to */
 char	*tempfile;		/* tempfile to use for mkstemp(3) */
@@ -271,7 +271,7 @@ int	secure = 1;		/* don't extract names that contain .. */
 int
 main(int argc, char **argv)
 {
-	char *tmpdir;
+	const char *tmpdir;
 	size_t tdlen;
 
 	setprogname(argv[0]);
@@ -369,10 +369,13 @@ sig_cleanup(int which_sig)
 	 */
 	vflag = vfpart = 1;
 	if (which_sig == SIGXCPU)
-		tty_warn(0, "Cpu time limit reached, cleaning up.");
+		tty_warn(0, "CPU time limit reached, cleaning up.");
 	else
 		tty_warn(0, "Signal caught, cleaning up.");
 
+	/* delete any open temporary file */
+	if (xtmp_name)
+		(void)unlink(xtmp_name);
 	ar_close();
 	proc_dir();
 	if (tflag)
@@ -439,7 +442,7 @@ gen_init(void)
 	/*
 	 * signal handling to reset stored directory times and modes. Since
 	 * we deal with broken pipes via failed writes we ignore it. We also
-	 * deal with any file size limit thorugh failed writes. Cpu time
+	 * deal with any file size limit thorugh failed writes. CPU time
 	 * limits are caught and a cleanup is forced.
 	 */
 	if ((sigemptyset(&s_mask) < 0) || (sigaddset(&s_mask, SIGTERM) < 0) ||
