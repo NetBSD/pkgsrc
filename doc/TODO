@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2354 2004/11/10 15:33:22 adam Exp $
+$NetBSD: TODO,v 1.2355 2004/11/10 16:23:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -243,6 +243,7 @@ Suggested package updates
 	o TeXmacs-1.0.4.3
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
+	o abcde-2.2.0
 	o afterstep-2.00.00
 	o aim-1.5.286
 	o ald-0.1.6 [pkg/26431]
@@ -297,6 +298,7 @@ Suggested package updates
 	o cyrus-imapd21-2.1.16
 	o daapd-0.2.3
 	o dact-0.8.37
+	o db4-4.3.21
 	o dctc-0.85.9
 	o dict-client-1.9.11
 	o dict-server-1.9.11
@@ -385,6 +387,7 @@ Suggested package updates
 	o jamjar-0.7.1
 	o john-1.6.37
 	o jpilot-0.99.7 [pkg/24635]
+	o kkbswitch-1.4.2 [tech-pkg/20041110]
 	o kmess-1.3
 	o kth-kerberos-1.2.2
 	o larswm-7.5.3
@@ -416,6 +419,7 @@ Suggested package updates
 	o maketool-0.8.4
 	o maradns-1.0.23
 	o marbles-1.0.6
+	o mathomatic-11.5
 	o micq-0.4.11
 	o midnight-commander-4.6.0 [pkgsrc-wip]
 	o mikmod-3.2.1
@@ -518,7 +522,6 @@ Suggested package updates
 	o slib-3a1
 	o slrn-0.9.8.1
 	o smalltalk-2.1.9
-	o smarteiffel-2.0b2 [replacing smalleiffel|pkg/26540]
 	o sml-nj-110.49 [pkgsrc-wip]
 	o sml-nj-110.50
 	o snd-7.7
