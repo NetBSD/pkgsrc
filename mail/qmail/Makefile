@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/08/22 00:10:51 schmonz Exp $
+# $NetBSD: Makefile,v 1.27 2004/08/22 12:44:32 schmonz Exp $
 #
 
 DISTNAME=		netqmail-1.05
@@ -25,7 +25,7 @@ CONFLICTS+=		pulsar<=0.1.1
 .if defined(PKG_PHASE) && ${PKG_PHASE} == "extract"
 WRKSRC=			${WRKDIR}/${DISTNAME}
 .else
-WRKSRC=			${WRKDIR}/${DISTNAME}/${PKGNAME_NOREV}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 .endif
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
@@ -95,7 +95,8 @@ SUBST_MESSAGE.logging=	"Setting QUEUE_EXTRA."
 
 post-extract:
 	${_PKG_SILENT}${_PKG_DEBUG}extract_file=${PKGNAME_NOREV}.tar.gz;\
-	export extract_file; cd ${WRKSRC}; ${EXTRACT_CMD}
+	export extract_file; cd ${WRKSRC}; ${EXTRACT_CMD};		\
+	${MV} ${PKGNAME_NOREV} ..; ${MV} ${DISTNAME}.patch ..
 
 do-configure:
 	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
