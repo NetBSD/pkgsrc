@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.130 2000/03/30 12:13:13 wiz Exp $
+# $NetBSD: mk.conf.example,v 1.131 2000/04/02 08:22:44 fredb Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -14,9 +14,12 @@
 # ************************************************************************
 
 # Deal with namespace issues. BSD_PKG_MK is always defined when "make"
-# is invoked in pkgsrc, but never in src or xsrc. Don't forget to close
-# the conditional with ".endif"!
+# is invoked in pkgsrc, but never in src or xsrc. Don't forget to add the
+# ".endif" at the bottom.
 .ifndef BSD_PKG_MK
+#	Non-package stuff
+.else
+#	Begin package stuff
 
 #
 #	Firstly, definitions for NetBSD and package collection
