@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/03/27 03:20:03 hubertf Exp $
+# $NetBSD: Makefile,v 1.21 2001/04/21 14:07:30 wiz Exp $
 
 DISTNAME=		gcc-2.95.2
 CATEGORIES=		lang
@@ -55,10 +55,10 @@ CONFLICTS+=		gcc-[0-9]* pgcc-[0-9]*
 post-extract:
 	${MKDIR} ${WRKSRC}
 .if ${MACHINE_PLATFORM:MNetBSD-*-sparc}
-	echo '$${PKGNAME}/lib/gcc-lib/$${MACHINE_GCC_PLATFORM}/$${GCC_VERSION}/crtbegin.o' >>${PLIST_SRC}
-	echo '$${PKGNAME}/lib/gcc-lib/$${MACHINE_GCC_PLATFORM}/$${GCC_VERSION}/crtbeginS.o' >>${PLIST_SRC}
-	echo '$${PKGNAME}/lib/gcc-lib/$${MACHINE_GCC_PLATFORM}/$${GCC_VERSION}/crtend.o' >>${PLIST_SRC}
-	echo '$${PKGNAME}/lib/gcc-lib/$${MACHINE_GCC_PLATFORM}/$${GCC_VERSION}/crtendS.o' >>${PLIST_SRC}
+	${ECHO} '$${PKGNAME}/lib/gcc-lib/$${MACHINE_GCC_PLATFORM}/$${GCC_VERSION}/crtbegin.o' >>${PLIST_SRC}
+	${ECHO} '$${PKGNAME}/lib/gcc-lib/$${MACHINE_GCC_PLATFORM}/$${GCC_VERSION}/crtbeginS.o' >>${PLIST_SRC}
+	${ECHO} '$${PKGNAME}/lib/gcc-lib/$${MACHINE_GCC_PLATFORM}/$${GCC_VERSION}/crtend.o' >>${PLIST_SRC}
+	${ECHO} '$${PKGNAME}/lib/gcc-lib/$${MACHINE_GCC_PLATFORM}/$${GCC_VERSION}/crtendS.o' >>${PLIST_SRC}
 .endif
 	${CAT} ${PKGDIR}/PLIST >>${PLIST_SRC}
 
