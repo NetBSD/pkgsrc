@@ -1,8 +1,8 @@
-$NetBSD: patch-dx,v 1.5 2003/05/22 02:42:51 markd Exp $
+$NetBSD: patch-dx,v 1.6 2004/01/15 10:15:14 markd Exp $
 
---- kwin/clients/modernsystem/Makefile.in.orig	Tue May 13 23:08:02 2003
+--- kwin/clients/modernsystem/Makefile.in.orig	2004-01-02 14:06:04.000000000 +1300
 +++ kwin/clients/modernsystem/Makefile.in
-@@ -430,7 +430,7 @@ SUBDIRS = config
+@@ -432,7 +432,7 @@ SUBDIRS = config
  kde_module_LTLIBRARIES = kwin_modernsys.la
  
  kwin_modernsys_la_SOURCES = modernsys.cpp
@@ -11,7 +11,7 @@ $NetBSD: patch-dx,v 1.5 2003/05/22 02:42:51 markd Exp $
  kwin_modernsys_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN) -module
  
  #>- METASOURCES = AUTO
-@@ -447,7 +447,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -449,7 +449,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES)
  
@@ -20,19 +20,12 @@ $NetBSD: patch-dx,v 1.5 2003/05/22 02:42:51 markd Exp $
  am_kwin_modernsys_la_OBJECTS = modernsys.lo
  #>- kwin_modernsys_la_OBJECTS = $(am_kwin_modernsys_la_OBJECTS)
  #>+ 1
-@@ -739,7 +739,7 @@ distclean-tags:
+@@ -741,7 +741,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=modernsystem.desktop btnhighcolor.h buttondata.h 
-+KDE_DIST=btnhighcolor.h buttondata.h modernsystem.desktop 
+-KDE_DIST=buttondata.h modernsystem.desktop btnhighcolor.h 
++KDE_DIST=btnhighcolor.h modernsystem.desktop Makefile.in.rej buttondata.h 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -953,5 +953,5 @@ kde-rpo-clean:
- 	-rm -f *.rpo
- 
- #>+ 3
--modernsys.o: modernsys.moc 
- modernsys.lo: modernsys.moc 
-+modernsys.o: modernsys.moc 
