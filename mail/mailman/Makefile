@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/12/23 11:02:13 xtraeme Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/11 17:17:25 kim Exp $
 
 DISTNAME=	mailman-2.1.3
 CATEGORIES=	mail www
@@ -28,7 +28,9 @@ EGDIR=                  ${PREFIX}/share/examples/mailman
 DOCDIR=                 ${PREFIX}/share/doc/mailman
 MAILMAN_USER?= 		mailman
 MAILMAN_GROUP?= 	mailman
+MAILMAN_CGIGROUP?= 	${APACHE_GROUP}
 MAILMAN_MAILGROUP?= 	guest # group of user 'daemon'
+MAILMAN_CGIEXT?=	.cgi
 
 MESSAGE_SUBST+=		EXECDIR=${EXECDIR}
 FILES_SUBST+=		EXECDIR=${EXECDIR}
@@ -63,10 +65,10 @@ PYTHON_PATCH_SCRIPTS+=	admin/bin/faq2ht.py
 PYTHON_PATCH_SCRIPTS+=	admin/bin/mm2do
 PYTHON_PATCH_SCRIPTS+=	bin/msgfmt.py
 
-APACHE_GROUP?=		www
-
-CONFIGURE_ARGS+=	--with-cgi-gid=${APACHE_GROUP}
-CONFIGURE_ARGS+=	--with-cgi-ext=.cgi
+CONFIGURE_ARGS+=	--with-cgi-gid=${MAILMAN_CGIGROUP}
+.if ${MAILMAN_CGIEXT} != "none"
+CONFIGURE_ARGS+=	--with-cgi-ext=${MAILMAN_CGIEXT}
+.endif
 CONFIGURE_ARGS+=	--with-groupname=${MAILMAN_GROUP}
 CONFIGURE_ARGS+=	--with-mail-gid=${MAILMAN_MAILGROUP}
 CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
@@ -77,6 +79,13 @@ CONFIGURE_ARGS+=	--without-permcheck
 # Put in externally invalid defaults (MESSAGE directs how to fix it)
 CONFIGURE_ARGS+=	--with-mailhost=localhost
 CONFIGURE_ARGS+=	--with-urlhost=localhost
+
+BUILD_DEFS+=		MAILMAN_DATADIR
+BUILD_DEFS+=		MAILMAN_USER
+BUILD_DEFS+=		MAILMAN_GROUP
+BUILD_DEFS+=		MAILMAN_CGIGROUP
+BUILD_DEFS+=		MAILMAN_MAILGROUP
+BUILD_DEFS+=		MAILMAN_CGIEXT
 
 post-patch:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/mailman.conf.dist \
