@@ -1,4 +1,4 @@
-<!-- $NetBSD: README.pkg,v 1.7 1998/07/22 09:18:47 agc Exp $ -->
+<!-- $NetBSD: README.pkg,v 1.8 1998/08/20 15:17:28 tsarna Exp $ -->
 <html>
 <head>
 <title>The NetBSD Packages Collection: %%PORT%%</title>
@@ -19,6 +19,8 @@
 <p>Please read the file "<a href="pkg/DESCR">pkg/DESCR</a>" for a
 longer description.
 </p>
+
+%%HOMEPAGE%%
 
 %%LICENSE%%
 

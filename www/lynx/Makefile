@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/07/04 08:50:42 mycroft Exp $
+# $NetBSD: Makefile,v 1.12 1998/08/20 15:17:30 tsarna Exp $
 #
 
 DISTNAME=       lynx2-8
@@ -8,6 +8,7 @@ CATEGORIES=	www
 MASTER_SITES=   http://sol.slcc.edu/lynx/release2-8/
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://sol.slcc.edu/lynx/
 
 CONFLICTS=	lynx-2.8rel.2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/06/22 12:47:36 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/08/20 15:17:12 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/09/11 03:54:53 fenner Exp
 #
 
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.ee.lbl.gov/conferencing/vic/
 DISTFILES=	vicsrc-2.8.tar.gz
 
 MAINTAINER=	is@netbsd.org
+HOMEPAGE=	http://www-nrg.ee.lbl.gov/vic/
 
 DEPENDS+=	tk-8.0p2:../../x11/tk80
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/07/14 18:48:37 tv Exp $
+# $NetBSD: Makefile,v 1.9 1998/08/20 15:17:24 tsarna Exp $
 #
 
 DISTNAME=		rsaref20
@@ -10,6 +10,7 @@ MASTER_SITES=		${RSA_SITE}
 EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		tv@netbsd.org
+HOMEPAGE=		http://www.rsa.com/rsalabs/newfaq/q174.html
 
 BUILD_DEPENDS=		${PREFIX}/bin/libtool:../../devel/libtool
 

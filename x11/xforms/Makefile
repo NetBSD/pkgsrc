@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/07/15 13:01:56 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/08/20 15:17:39 tsarna Exp $
 #
 
 DISTNAME=		bxform-088
@@ -16,6 +16,7 @@ MASTER_SITE_SUBDIR=	netBSD-${MACHINE_ARCH}
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		lamj@stat.cmu.edu
+HOMEPAGE=		http://bragg.phys.uwm.edu/xforms/
 
 ONLY_FOR_ARCHS=		arm32 i386 m68k sparc pc532
 

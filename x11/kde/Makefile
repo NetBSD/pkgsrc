@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/07/14 22:57:39 tron Exp $
+# $NetBSD: Makefile,v 1.14 1998/08/20 15:17:34 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/27 00:47:46 se Exp
 #
 
@@ -8,6 +8,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	tron@netbsd.org
+HOMEPAGE=	http://www.kde.org/
 
 DEPENDS+=	kdeutils-1.0:../../misc/kdeutils
 DEPENDS+=	kdegames-1.0:../../games/kdegames

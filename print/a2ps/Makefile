@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1998/07/28 11:18:58 frueauf Exp $
+# $NetBSD: Makefile,v 1.18 1998/08/20 15:17:23 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/02/15 21:24:42 steve Exp
 #
 
@@ -8,6 +8,7 @@ CATEGORIES=	print
 MASTER_SITES=	http://www-inf.enst.fr/~demaille/ftp/a2ps/
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www-inf.enst.fr/~demaille/a2ps/
 
 CONFLICTS=	a2ps-A4-4.9.9 a2ps-Letter-4.9.9 a2ps-Letterdj-4.9.9
 

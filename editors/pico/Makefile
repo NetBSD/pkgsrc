@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/07/22 02:45:45 tv Exp $
+# $NetBSD: Makefile,v 1.9 1998/08/20 15:16:51 tsarna Exp $
 #
 
 DISTNAME=	pine4.02
@@ -7,6 +7,7 @@ CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/
 
 MAINTAINER=	root@garbled.net
+HOMEPAGE=	http://www.washington.edu/pine/
 
 BUILD_DEPENDS=	${PREFIX}/bin/libtool:../../devel/libtool
 

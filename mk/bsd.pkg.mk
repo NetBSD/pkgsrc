@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.145 1998/08/19 15:21:20 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.146 1998/08/20 15:17:16 tsarna Exp $
 #
 # This file is in the public domain.
 #
@@ -1739,6 +1739,13 @@ SED_LICENSE_EXPR=       -e 's|%%LICENSE%%|<p>Please note that this package has a
 SED_LICENSE_EXPR=       -e 's|%%LICENSE%%||'
 .endif
 
+# set up the "more info URL" information as a sed expression
+.ifdef HOMEPAGE
+SED_HOMEPAGE_EXPR=       -e 's|%%HOMEPAGE%%|<p><a HREF="${HOMEPAGE}">This package has a home page.</a></p>|'
+.else
+SED_HOMEPAGE_EXPR=       -e 's|%%HOMEPAGE%%||'
+.endif
+
 README.html:
 	@${MAKE} depends-list PACKAGE_NAME_AS_LINK=YES | sort -u >> $@.tmp1
 	@[ -s $@.tmp1 ] || echo "<I>(none)</I>" >> $@.tmp1
@@ -1752,6 +1759,7 @@ README.html:
 			-e '/%%PKG%%/r$@.tmp3' \
 			-e '/%%PKG%%/d' \
 			${SED_LICENSE_EXPR} \
+			${SED_HOMEPAGE_EXPR} \
 			-e '/%%COMMENT%%/r${PKGDIR}/COMMENT' \
 			-e '/%%COMMENT%%/d' \
 			-e '/%%BUILD_DEPENDS%%/r$@.tmp1' \
@@ -1775,7 +1783,7 @@ README.html:
 		mv $@.tmp $@ ; \
 		rm -f $@.BAK ; \
 	fi
-	@rm -f $@.tmp1 $@.tmp2 $@.tmp3 $@.tmp4
+	@rm -f $@.tmp1 $@.tmp2 $@.tmp3 $@.tmp4 $@.tmp5
 
 .if !target(print-depends-list)
 print-depends-list:

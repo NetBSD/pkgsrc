@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/06/22 13:20:59 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/08/20 15:17:35 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/09/14 04:00:00 jfitz Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN}
 MASTER_SITE_SUBDIR=	Tk
 
 MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://theory.uwinnipeg.ca/CPAN/data/Tk/pod/overview.html
 
 BUILD_DEPENDS= 		${PREFIX}/lib/perl5/site_perl/HTML/Parse.pm:../../www/p5-libwww
 DEPENDS+=		tk-8.0p2:../../x11/tk80

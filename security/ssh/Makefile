@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 1998/08/06 19:48:40 tv Exp $
+# $NetBSD: Makefile,v 1.33 1998/08/20 15:17:25 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -8,6 +8,7 @@ MASTER_SITES=		ftp://ftp.cs.hut.fi/pub/ssh/ \
 			ftp://ftp.funet.fi/pub/unix/security/login/ssh/
 
 MAINTAINER=		tron@netbsd.org
+HOMEPAGE=		http://www.cs.hut.fi/ssh/
 
 CONFLICTS=		ssh-1.2.22 ssh-1.2.23 ssh-1.2.25
 

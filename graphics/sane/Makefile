@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/07/29 10:00:10 frueauf Exp $
+# $NetBSD: Makefile,v 1.6 1998/08/20 15:17:01 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.3 1998/04/30 02:38:03 obrien Exp
 #
 
@@ -7,6 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.mostang.com/pub/sane/
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.mostang.com/sane/
 
 DEPENDS+=	gtk+-1.0.4:../../x11/gtk
 

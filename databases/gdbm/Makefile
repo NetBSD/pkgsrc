@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/08/10 15:29:39 tv Exp $
+# $NetBSD: Makefile,v 1.12 1998/08/20 15:16:44 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/01/28 08:11:23 asami Exp 
 #
 
@@ -7,6 +7,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GNU}
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.gnu.org/software/gdbm/gdbm.html
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

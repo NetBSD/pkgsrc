@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/06/18 15:51:28 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/08/20 15:16:34 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/11/20 08:18:40 tg Exp
 #
 
@@ -8,6 +8,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	http://www.muraroa.demon.co.uk/
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.muraroa.demon.co.uk/
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bzip2 ${PREFIX}/bin

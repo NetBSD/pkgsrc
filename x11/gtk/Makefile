@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1998/07/24 01:57:01 tv Exp $
+# $NetBSD: Makefile,v 1.16 1998/08/20 15:17:34 tsarna Exp $
 
 DISTNAME=	gtk+-1.0.4
 CATEGORIES=	x11
@@ -7,6 +7,7 @@ MASTER_SITES=	ftp://ftp.gimp.org/pub/gtk/v1.0/ \
 		ftp://ftp.flirble.org/pub/X/gimp/pub/gtk/v1.0/
 
 MAINTAINER=	bsieker@techfak.uni-bielefeld.de
+HOMEPAGE=	http://www.gtk.org/
 
 CONFLICTS=	gtk+-1.0.0
 

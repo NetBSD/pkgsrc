@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/08/14 20:52:38 frueauf Exp $
+# $NetBSD: Makefile,v 1.8 1998/08/20 15:17:27 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/03/08 06:44:48 obrien Exp
 #
 
@@ -15,6 +15,7 @@ PATCH_SITES=		ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/patches/4.36/
 PATCHFILES=		fd_lookup_patch
 
 MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www-rcd.cc.purdue.edu/abe/
 
 CONFLICTS=		lsof-4.29 lsof-4.31 lsof-4.33
 

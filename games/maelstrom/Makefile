@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/07/30 23:11:40 tron Exp $
+# $NetBSD: Makefile,v 1.2 1998/08/20 15:16:56 tsarna Exp $
 
 DISTNAME=		Maelstrom-1.4.3-L2.0.6-src.tar.gz
 PKGNAME=		maelstrom-2.0.6
@@ -9,6 +9,7 @@ MASTER_SITES+=		ftp://ftp.devolution.com/pub/maelstrom/Add-Ons/
 DISTFILES=		${DISTNAME} ${STREK} ${SWARS} ${ESOUND}
 
 MAINTAINER=		root@garbled.net
+HOMEPAGE=		http://www.ambrosiasw.com/Products/Maelstrom.html
 
 ESOUND=			Maelstrom-Sounds-L2.0.0.tar.gz
 STREK=			Star_Trek.tar.gz

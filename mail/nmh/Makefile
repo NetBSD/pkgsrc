@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1998/07/12 21:29:46 frueauf Exp $
+# $NetBSD: Makefile,v 1.20 1998/08/20 15:17:10 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/04 06:51:28 markm Exp
 #
 
@@ -7,6 +7,7 @@ CATEGORIES=	mail
 MASTER_SITES=   ftp://ftp.math.gatech.edu/pub/nmh/
 
 MAINTAINER=     packages@netbsd.org
+HOMEPAGE=	http://www.math.gatech.edu/nmh/
 
 CONFLICTS=	nmh-0.17 nmh-0.22 nmh-0.23 nmh-0.24 nmh-0.25 nmh-0.26
 

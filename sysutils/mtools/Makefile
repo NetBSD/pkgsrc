@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/08/15 08:09:29 tron Exp $
+# $NetBSD: Makefile,v 1.14 1998/08/20 15:17:27 tsarna Exp $
 #
 
 DISTNAME=	mtools-3.9.1
@@ -9,6 +9,7 @@ PATCH_SITES=	ftp://ftp.tux.org/pub/tux/knaff/mtools/
 PATCHFILES=	mtools-3.9.1-0907b.diff.gz
 
 MAINTAINER=	is@netbsd.org
+HOMEPAGE=	http://www.tux.org/pub/knaff/mtools/
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes

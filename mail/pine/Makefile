@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 1998/07/31 17:51:21 tv Exp $
+# $NetBSD: Makefile,v 1.22 1998/08/20 15:17:10 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -8,6 +8,7 @@ CATEGORIES=     mail news
 MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.washington.edu/pine/
 
 # This pkg doesn't build pico or libpico; the pico pkg does that part.
 DEPENDS=	pico-3.2:../../editors/pico

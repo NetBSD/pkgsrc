@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/07/08 10:37:48 frueauf Exp $
+# $NetBSD: Makefile,v 1.8 1998/08/20 15:17:23 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/11/27 08:10:30 tg Exp
 #
 
@@ -8,6 +8,7 @@ CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_GNU}
 
 MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.ngs.fi/mtr/genscript/
 
 CONFLICTS=		enscript-Letter-1.6.0 enscript-A4-1.6.0 \
 			enscript-Letterdj-1.6.0

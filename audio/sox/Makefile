@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/06/18 16:15:11 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/08/20 15:16:40 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/02/04 10:32:34 max Exp 
 #
 
@@ -8,6 +8,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://www.spies.com/Sox/Archive/
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.spies.com/Sox/
 
 NO_WRKSUBDIR=	yes
 MAKEFILE=	Makefile.unx

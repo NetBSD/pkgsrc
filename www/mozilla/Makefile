@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/08/04 13:09:21 fvdl Exp $
+# $NetBSD: Makefile,v 1.14 1998/08/20 15:17:31 tsarna Exp $
 #
 
 DISTNAME=	mozilla-19980728
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/source/ \
 	ftp://mirror.aarnet.edu.au/pub/mozilla/mozilla/source/
 
 MAINTAINER=	fvdl@netbsd.org
+HOMEPAGE=	http://www.mozilla.org/
 
 USE_X11=	yes
 USE_GMAKE=	yes

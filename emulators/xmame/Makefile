@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/07/04 12:05:06 mycroft Exp $
+# $NetBSD: Makefile,v 1.11 1998/08/20 15:16:53 tsarna Exp $
 #
 
 DISTNAME=		xmame-0.33b6.1
@@ -7,6 +7,7 @@ MASTER_SITES=		ftp://drake.dit.upm.es/pub/emulators/mame/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		mycroft@NetBSD.ORG
+HOMEPAGE=		http://drake.dit.upm.es/~mame/
 
 CONFLICTS=		xmame-0.30.1
 

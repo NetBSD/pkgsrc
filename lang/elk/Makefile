@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/06/22 12:44:30 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/08/20 15:17:04 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.15 1997/09/01 12:28:30 tg Exp
 #
 
@@ -8,6 +8,7 @@ CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.uni-bremen.de/pub/programming/languages/scheme/elk/
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www-rn.informatik.uni-bremen.de/software/elk/
 
 ALL_TARGET=	default
 

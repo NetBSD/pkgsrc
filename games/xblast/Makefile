@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/06/22 12:32:17 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/08/20 15:16:57 tsarna Exp $
 #
 
 DISTNAME=		xblast-2.2
@@ -10,6 +10,7 @@ DISTFILES=		xblast-2.2.tar.gz \
 			xblast-2.2-to-2.2.1.tar.gz
 
 MAINTAINER=		root@garbled.futureone.com
+HOMEPAGE=		http://www.ikp.uni-koeln.de/~vogel/xblast/xblast.html
 
 USE_IMAKE=		yes
 

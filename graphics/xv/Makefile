@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/07/13 13:09:36 mycroft Exp $
+# $NetBSD: Makefile,v 1.15 1998/08/20 15:17:03 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/03 07:37:08 asami Exp
 #
 
@@ -14,6 +14,7 @@ PATCH_SITES=    ftp://ftp.cis.upenn.edu/pub/xv/
 PATCHFILES=     xv-3.10a.JPEG-patch xv-3.10a.TIFF-patch # (for tiff3.4)
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www-vis.lbl.gov/software/xv.html
 
 DEPENDS+=	tiff-3.4:../../graphics/tiff
 DEPENDS+=	jpeg-6b:../../graphics/jpeg

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/08/03 20:54:46 tron Exp $
+# $NetBSD: Makefile,v 1.6 1998/08/20 15:17:21 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
@@ -10,6 +10,7 @@ DISTFILES=		vnc-3.3.2r2_unixsrc.tgz \
 			vnc-3.3.2_doc.tgz
 
 MAINTAINER=	 	packages@netbsd.org
+HOMEPAGE=		http://www.orl.co.uk/vnc/
 
 IGNOREFILES=		${DISTFILES}
 

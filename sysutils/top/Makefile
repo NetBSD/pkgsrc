@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/06/22 13:09:51 agc Exp $
+# $NetBSD: Makefile,v 1.14 1998/08/20 15:17:27 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/04/30 23:49:14 asami Exp
 #
 
@@ -8,6 +8,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=   ftp://ftp.groupsys.com/pub/top/
 
 MAINTAINER=	agc@netbsd.org
+HOMEPAGE=	http://www.groupsys.com/topinfo/
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	Configure

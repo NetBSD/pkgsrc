@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/07/20 16:17:39 tv Exp $
+# $NetBSD: Makefile,v 1.7 1998/08/20 15:16:45 tsarna Exp $
 
 DISTNAME=	MySQLmodule-1.1
 PKGNAME=	py-mysql-1.1
@@ -7,7 +7,8 @@ MASTER_SITES=	http://snail.earthlight.co.nz/mysql/
 DISTFILES=	MySQLmodule-1.1${EXTRACT_SUFX} \
 		Mysqldb.py mysqlshelve.py
 
-MAINTAINER=	tsarna@endicor.com
+MAINTAINER=	tsarna@netbsd.org
+HOMEPAGE=	http://snail.earthlight.co.nz/projects.html
 
 DEPENDS+=	python-1.5.1:../../lang/python \
 		mysql-3.21.33:../../databases/mysql
