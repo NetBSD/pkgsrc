@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/11/05 21:04:38 jdolecek Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/06 18:35:19 jdolecek Exp $
 
 DISTNAME=	php-extensions-4.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	meta-pkgs www php
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -47,6 +47,7 @@ DEPENDS+=	php-sysvsem-4.3.*:../../devel/php-sysvsem
 DEPENDS+=	php-sysvshm-4.3.*:../../devel/php-sysvshm
 DEPENDS+=	php-wddx-4.3.*:../../textproc/php-wddx
 DEPENDS+=	php-yp-4.3.*:../../net/php-yp
+DEPENDS+=	php-zip-4.3.*:../../archivers/php-zip
 DEPENDS+=	php-zlib-4.3.*:../../archivers/php-zlib
 
 # PHP 4.x-only extensions
@@ -54,7 +55,6 @@ DEPENDS+=	php-apc-4.3.*:../../www/php4-apc
 DEPENDS+=	php-domxml-4.3.*:../../textproc/php4-domxml
 DEPENDS+=	php-pdflib-4.3.*:../../print/php4-pdflib
 DEPENDS+=	php-xslt-4.3.*:../../textproc/php4-xslt
-DEPENDS+=	php-zip-4.3.*:../../archivers/php4-zip
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
