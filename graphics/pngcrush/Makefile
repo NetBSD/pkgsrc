@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/12/07 19:56:21 rh Exp $
+# $NetBSD: Makefile,v 1.2 1999/12/28 10:04:34 rh Exp $
 #
 
-DISTNAME=	pngcrush-1.2.1
+DISTNAME=	pngcrush-1.3.1
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.xnot.com/pmt/pub/pngcrush/src/
 
