@@ -1,7 +1,7 @@
-$NetBSD: patch-gdc.h,v 1.1 2001/10/18 11:13:56 darcy Exp $
+$NetBSD: patch-aa,v 1.1 2001/10/18 11:39:24 wiz Exp $
 
---- gdc.h.orig	Mon Jun 18 00:51:01 2001
-+++ gdc.h	Mon Jun 18 00:51:16 2001
+--- gdc.h.orig	Sat Nov  4 02:49:46 2000
++++ gdc.h
 @@ -9,7 +9,7 @@
  #define _GDC_H
  
