@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/17 17:18:27 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/11/25 14:16:36 rh Exp $
 #
 
-DISTNAME=	gb-0.0.12
+DISTNAME=	gb-0.0.15
 CATEGORIES=	lang gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=unstable/sources/gb/}
 
