@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2002/08/26 02:26:26 gson Exp $
+$NetBSD: distinfo,v 1.3 2002/08/27 04:36:19 gson Exp $
 
 SHA1 (snack2.2a2.tar.Z) = 01a0f1c0f82823317c9eecc21bdb3357d08aff33
 Size (snack2.2a2.tar.Z) = 1854805 bytes
 SHA1 (patch-aa) = 10b99adfd6be5bce665bc684df2ff4e2ba98b8a6
 SHA1 (patch-ab) = 9d23177311cb392ad5e0203c1a4f5e2cf6d2ca55
 SHA1 (patch-ac) = 470511443dab1a8fd0e4a0b94f30f43a733a43e4
+SHA1 (patch-ad) = e6868638722219bf18a345563d8ae2e3436bec81
