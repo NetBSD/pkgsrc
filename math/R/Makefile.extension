@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.extension,v 1.1 2002/04/23 01:14:49 markd Exp $
+# $NetBSD: Makefile.extension,v 1.2 2002/09/23 13:41:15 markd Exp $
 #
 # This Makefile fragment is included by packages for R library packages.
 #
@@ -28,7 +28,7 @@ R_LIB=			lib/R/library
 R_INST_DIRS?=		${R_PKGNAME}
 
 R_PACKLIST_FILES=	( cd ${PREFIX}; for dir in ${R_INST_DIRS}; do \
-	${FIND} ${R_LIB}/$${dir} \( -type f -or -type l \) -print; done ) | ${SORT} -u
+	${FIND} ${R_LIB}/$${dir} \( -type f -o -type l \) -print; done ) | ${SORT} -u
 R_PACKLIST_DIRS=	( cd ${PREFIX}; for dir in ${R_INST_DIRS}; do \
 	${FIND} ${R_LIB}/$${dir} -type d -print; done ) | ${SORT} -ur | ${SED} -e "s|^|@dirrm |"
 R_PACKLIST_CMDS=	( ${ECHO} '@exec R CMD ${PERL5} %D/lib/R/share/perl/build-help.pl --htmllists 2>/dev/null'; \
