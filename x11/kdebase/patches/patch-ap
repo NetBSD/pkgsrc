@@ -1,18 +1,27 @@
-$NetBSD: patch-ap,v 1.3 1999/07/15 08:46:23 tron Exp $
+$NetBSD: patch-ap,v 1.4 1999/11/12 04:50:00 hubertf Exp $
 
---- po/cs/kcminfo.po.orig	Sat Jan 30 01:04:03 1999
-+++ po/cs/kcminfo.po	Sat Jan 30 00:53:33 1999
-@@ -205,6 +205,13 @@
- msgid "Buffer memory"
- msgstr "Vyrovnávací pamì»"
+--- ./kfm/kiojob.cpp	Thu May  6 00:10:12 1999
++++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/kfm/kiojob.cpp	Fri Nov 12 05:10:33 1999
+@@ -163,10 +163,11 @@
+     server->getSlave( this );
+ }
  
-+#: memory.cpp: NetBSD-specific memory types
-+msgid "Active memory"
-+msgstr "Aktivní pamì»"
-+
-+msgid "Inactive memory"
-+msgstr "Neaktivní pamì»"
-+
- #: memory.cpp:49
- msgid "Swap memory"
- msgstr "Swapovací pamì»"
+-void KIOJob::unmount( const char *_point )
++void KIOJob::unmount( const char* _dev, const char *_point )
+ {
+     action = KIOJob::JOB_UNMOUNT;
+-    
++   
++    mntDev   = _dev; 
+     mntPoint = _point;
+     mntPoint.detach();
+ 
+@@ -1850,7 +1851,7 @@
+ 	    if ( action == KIOJob::JOB_MOUNT )
+ 		slave->mount( mntReadOnly, mntFSType.data(), mntDev.data(), mntPoint.data() );
+ 	    else
+-		slave->unmount( mntPoint.data() );
++		slave->unmount( mntDev.data() );
+ 	}
+ 	break;
+     case KIOJob::JOB_LIST:

@@ -1,28 +1,13 @@
-$NetBSD: patch-av,v 1.1 1999/10/08 15:55:08 bouyer Exp $
+$NetBSD: patch-av,v 1.2 1999/11/12 04:50:00 hubertf Exp $
 
-diff -u kfm/kiojob.cpp.orig kfm/kiojob.cpp
---- kfm/kiojob.cpp.orig	Tue Oct  5 20:27:53 1999
-+++ kfm/kiojob.cpp	Tue Oct  5 22:32:24 1999
-@@ -163,10 +163,11 @@
-     server->getSlave( this );
- }
+--- ./kvt/xsetup.c	Tue Mar 30 10:23:20 1999
++++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/kvt/xsetup.c	Fri Nov 12 05:10:31 1999
+@@ -135,8 +135,6 @@
  
--void KIOJob::unmount( const char *_point )
-+void KIOJob::unmount( const char* _dev, const char *_point )
- {
-     action = KIOJob::JOB_UNMOUNT;
--    
-+   
-+    mntDev   = _dev; 
-     mntPoint = _point;
-     mntPoint.detach();
  
-@@ -1850,7 +1851,7 @@
- 	    if ( action == KIOJob::JOB_MOUNT )
- 		slave->mount( mntReadOnly, mntFSType.data(), mntDev.data(), mntPoint.data() );
- 	    else
--		slave->unmount( mntPoint.data() );
-+		slave->unmount( mntDev.data() );
- 	}
- 	break;
-     case KIOJob::JOB_LIST:
+ extern KeySym SecureKeysym;
+-extern KeySym BigFontKeysym;
+-extern KeySym SmallFontKeysym;
+ extern KeySym PageUpKeysym;
+ extern KeySym PageDownKeysym;
+ #ifdef GREEK_KBD
