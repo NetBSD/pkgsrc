@@ -1,31 +1,30 @@
-# $NetBSD: Makefile,v 1.34 2004/08/18 21:44:08 minskim Exp $
+# $NetBSD: Makefile,v 1.35 2004/12/21 18:12:25 agc Exp $
 
-DISTNAME=	festival-1.4.1
-PKGREVISION=	1
+DISTNAME=	festival-1.95-beta
+PKGNAME=	festival-1.95beta
 CATEGORIES=	audio
-MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.1/ \
-		http://www.speech.cs.cmu.edu/festival/cstr/festival/1.4.1/ \
+MASTER_SITES=	http://www.cstr.ed.ac.uk/download/festival/1.95/ \
+		http://festvox.org/packed/festival/1.95/ \
 		ftp://cslu.cse.ogi.edu/pub/tts/
 DISTFILES=	${DISTNAME}.tar.gz \
-		speech_tools-1.2.1.tar.gz \
-		OGIresLPC-2.0.9.tar.gz \
-		OGIfestpatch-1.4.1.2.tar.gz
-# note that OGIfestpatch above file must be extracted last. it is, however
-# this behavior not defined in pkgsrc at the time of writing
+		speech_tools-1.2.95-beta.tar.gz
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival/
-COMMENT=	Festival is an advanced multi-lingual speech synthesis system
+COMMENT=	Advanced multi-lingual speech synthesis system
 
 WRKSRC=		${WRKDIR}
 USE_BUILDLINK3=	yes
-USE_GNU_TOOLS+=		make
+USE_GNU_TOOLS+=	make
 USE_X11=	yes
 
 SPEECHTOOLS=	${WRKSRC}/speech_tools
 FESTIVAL=	${WRKSRC}/festival
 
 FHOME=		${PREFIX}/share/festival
+
+CONFIG_GUESS_OVERRIDE=	${SPEECHTOOLS}/config.guess ${FESTIVAL}/config.guess
+CONFIG_SUB_OVERRIDE=	${SPEECHTOOLS}/config.sub ${FESTIVAL}/config.sub
 
 .include "../../mk/compiler.mk"
 
@@ -37,7 +36,7 @@ PKG_COMPILER!=	case "${CC_VERSION}" in					\
 			gcc-2.7.*)	${ECHO} gcc27;;			\
 			gcc-2.8.*)	${ECHO} gcc28;;			\
 			gcc-2.95.*)	${ECHO} gcc295;;		\
-			gcc-3.3.*)	${ECHO} gcc295;;		\
+			gcc-3.3.*)	${ECHO} gcc32;;			\
 			egcs*)		${ECHO} egcs;;			\
 			*)		${ECHO} ;;			\
 		esac
@@ -67,15 +66,15 @@ MAKE_ENV+=	PKG_EST_HOME="${SPEECHTOOLS}"				\
 		CC="${CC}"						\
 		CXX="${CXX}"
 
-pre-patch:
-	@ ${CP} ${SPEECHTOOLS}/config/config-dist ${SPEECHTOOLS}/config/config && \
-	  ${CHMOD} u+w ${SPEECHTOOLS}/config/config
-	@ ${CP} ${FESTIVAL}/config/config-dist ${FESTIVAL}/config/config && \
-	  ${CHMOD} u+w ${FESTIVAL}/config/config
-
 post-patch:
-	@ ${CP} ${FILESDIR}/top-Makefile ${WRKSRC}/Makefile
-	@ ${CP} ${FILESDIR}/NetBSD.mak ${SPEECHTOOLS}/config/systems/NetBSD.mak
+	@${CP} ${FILESDIR}/top-Makefile ${WRKSRC}/Makefile
+	@${CP} ${FILESDIR}/ix86_NetBSD.mak ${SPEECHTOOLS}/config/systems/
+	@${CP} ${FILESDIR}/ix86_NetBSD2.0.mak ${SPEECHTOOLS}/config/systems/
+	@${CP} ${FILESDIR}/ix86_NetBSD.mak ${FESTIVAL}/config/systems/
+	@${CP} ${FILESDIR}/ix86_NetBSD2.0.mak ${FESTIVAL}/config/systems/
+
+do-configure:
+	cd ${SPEECHTOOLS} && ${ENV} ${CONFIGURE_ENV} ./configure ${CONFIGURE_ARGS}
 
 do-install:
 	${INSTALL_DATA_DIR} ${FHOME}
@@ -83,7 +82,7 @@ do-install:
 	${FIND} ${FESTIVAL}/lib -type d -print | ${XARGS} ${CHMOD} 755
 	cd ${FESTIVAL} && ${PAX} -rw lib examples ${FHOME}
 	${RM} -f ${FHOME}/lib/etc/NetBSD/audsp
-	${INSTALL_PROGRAM} ${FESTIVAL}/lib/etc/NetBSD/audsp ${PREFIX}/libexec
+	${INSTALL_PROGRAM} ${FESTIVAL}/lib/etc/ix86_NetBSD/audsp ${PREFIX}/libexec
 	${INSTALL_PROGRAM} ${FESTIVAL}/src/main/festival ${PREFIX}/libexec/festival.naked
 	${INSTALL_PROGRAM} ${FESTIVAL}/src/main/festival_client ${PREFIX}/libexec/festival_client.naked
 	for n in festival.sh festival_client.sh sitevars.scm; \
