@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2003/12/19 21:30:00 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/12/20 13:38:37 grant Exp $
 #
 
 DISTNAME=		tnftpd-20031217
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/tnftp/
 
@@ -14,6 +15,12 @@ CONFLICTS+=		lukemftpd-[0-9]*
 
 GNU_CONFIGURE=		YES
 MANCOMPRESSED_IF_MANZ=	YES
+USE_PKGINSTALL=		YES
+
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+CONF_FILES+=		${EXAMPLEDIR}/ftpd.conf ${PKG_SYSCONFDIR}/ftpd.conf
+CONF_FILES+=		${EXAMPLEDIR}/ftpusers ${PKG_SYSCONFDIR}/ftpusers
 
 .include "../../mk/bsd.prefs.mk"
 
