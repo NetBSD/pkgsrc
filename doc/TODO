@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.376 2003/03/15 16:15:56 wiz Exp $
+$NetBSD: TODO,v 1.377 2003/03/15 16:18:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -216,7 +216,6 @@ Suggested package updates
 	o sane-backends-1.0.11
 	o sane-frontends-1.0.10
 	o scmxx-0.6.3.5 [pkg/20017]
-	o screen-3.9.15
 	o scribus-0.8
 	o scsh-0.6.3
 	o sendfile-20010424
