@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6598 2004/07/19 12:36:15 wiz Exp $
+$NetBSD: CHANGES,v 1.6599 2004/07/19 13:19:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3444,3 +3444,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-XML-Simple to 2.12 [bad 2004-07-19]
 	Updated p5-Net to 1.19 [bad 2004-07-19]
 	Updated p4-docs to 2002.1nb1 [wiz 2004-07-19]
+	Updated htmllint to 20040719 [wiz 2004-07-19]
