@@ -23,6 +23,9 @@ AC_SUBST(AUTOCONF)
 AUTOHEADER=${AUTOHEADER-"$srcdir/missing --run autoheader"}
 AC_SUBST(AUTOHEADER)
 
+dnl Checks for libraries
+AC_CHECK_LIB(util, fparseln)
+
 dnl Checks for header files.
 AC_HEADER_STDC
 AC_HEADER_TIME
