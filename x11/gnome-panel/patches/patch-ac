@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2003/02/14 21:05:28 jmmv Exp $
+$NetBSD: patch-ac,v 1.3 2003/02/15 12:02:34 jmmv Exp $
 
 --- applets/gen_util/Makefile.in.orig	2003-02-04 00:29:54.000000000 +0100
 +++ applets/gen_util/Makefile.in
-@@ -182,7 +182,7 @@ PRINTER_BITMAPS = print.xpm
+@@ -182,10 +182,10 @@ PRINTER_BITMAPS = print.xpm
  MAILCHECK_BITMAPS = email.png email-e.png tux-anim.png email-eclouds.png                     email-tiny.png eclouds.png
  
  
@@ -10,7 +10,11 @@ $NetBSD: patch-ac,v 1.2 2003/02/14 21:05:28 jmmv Exp $
 +mailcheckbitmapsdir = $(datadir)/pixmaps/mailcheck2
  mailcheckbitmaps_DATA = $(MAILCHECK_BITMAPS)
  
- soundlistdir = $(sysconfdir)/sound/events
+-soundlistdir = $(sysconfdir)/sound/events
++soundlistdir = $(datadir)/examples/gnome-panel/sound/events
+ soundlist_in_files = mailcheck.soundlist.in
+ soundlist_DATA = $(soundlist_in_files:.soundlist.in=.soundlist)
+ 
 @@ -197,7 +197,7 @@ serverdir = $(libdir)/bonobo/servers
  server_in_files = GNOME_GenUtilApplet_Factory.server.in
  server_DATA = $(server_in_files:.server.in=.server)
