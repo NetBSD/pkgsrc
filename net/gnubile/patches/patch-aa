@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/02/24 23:27:19 tron Exp $
+
+--- src/admin.c.orig	Wed Apr 12 00:19:00 2000
++++ src/admin.c	Sun Feb 25 00:13:01 2001
+@@ -32,8 +32,8 @@
+ #include <dirent.h>
+ #include <sys/stat.h>
+ #include <gtk/gtk.h>
+-#include <gnome-xml/parser.h>
+-#include <gnome-xml/tree.h>
++#include <parser.h>
++#include <tree.h>
+ 
+ #include "interface.h"
+ #include "support.h"
