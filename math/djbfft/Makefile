@@ -1,26 +1,26 @@
-# $NetBSD: Makefile,v 1.6 2005/03/23 00:51:10 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2005/03/23 00:57:20 schmonz Exp $
 
-DISTNAME=       djbfft-0.76
-CATEGORIES=     math
-MASTER_SITES=   http://cr.yp.to/djbfft/
+DISTNAME=       	djbfft-0.76
+CATEGORIES=     	math
+MASTER_SITES=   	http://cr.yp.to/djbfft/
 
-MAINTAINER=     tech-pkg@NetBSD.org
-HOMEPAGE=       http://pobox.com/~djb/djbfft.html
-COMMENT=        Extremely fast library for floating-point convolution
+MAINTAINER=     	tech-pkg@NetBSD.org
+HOMEPAGE=       	http://pobox.com/~djb/djbfft.html
+COMMENT=        	Extremely fast library for floating-point convolution
 
-USE_BUILDLINK3=	yes
+USE_BUILDLINK3=		yes
 
-DJB_RESTRICTED=	YES
+DJB_RESTRICTED=		YES
 NOT_FOR_PLATFORM=	IRIX-*-*
 
 .ifdef(WITH_OPT_PENTIUM)
-DJB_CONFIG_CMDS=${ECHO} pentium > conf-opt
+DJB_CONFIG_CMDS=	${ECHO} pentium > conf-opt
 .endif
 .ifdef(WITH_OPT_PPRO)
-DJB_CONFIG_CMDS=${ECHO} ppro > conf-opt
+DJB_CONFIG_CMDS=	${ECHO} ppro > conf-opt
 .endif
 .if (${MACHINE_ARCH} == "sparc")
-DJB_CONFIG_CMDS=${ECHO} sparc > conf-opt
+DJB_CONFIG_CMDS=	${ECHO} sparc > conf-opt
 .endif
 
 post-extract:
