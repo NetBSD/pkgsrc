@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/08/27 09:03:44 abs Exp $
+$NetBSD: distinfo,v 1.2 2003/04/03 20:40:20 abs Exp $
 
-SHA1 (mrstat-1.15.tar.gz) = 7c7a3b296d88fec7332794a4efc47778b18bf1ca
-Size (mrstat-1.15.tar.gz) = 5596 bytes
+SHA1 (mrstat-1.16.tar.gz) = 911c67d21b76696f2af0ca06d7aae431bf614caa
+Size (mrstat-1.16.tar.gz) = 5718 bytes
