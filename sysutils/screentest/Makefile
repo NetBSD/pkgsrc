@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:53:50 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/18 23:07:05 snj Exp $
 #
 
 DISTNAME=	screentest-1.0
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.fi.muni.cz/~kas/screentest/
 COMMENT=	CRT screen testing utility using GTK+
 
 GNU_CONFIGURE=	yes
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_X11=	yes
 
 post-install:
@@ -21,5 +21,5 @@ post-install:
 .endfor
 .undef f
 
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
