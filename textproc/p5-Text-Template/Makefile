@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/16 09:57:50 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/11/14 13:44:09 rh Exp $
 #
 
 DISTNAME=       Text-Template-1.23
@@ -10,7 +10,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.plover.com/~mjd/perl/Template/
 
 USE_PERL5=	YES
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/IMAP/Admin/.packlist
+PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Text/Template/.packlist
 
 do-configure:
 	@cd ${WRKSRC} && ${ECHO} >.test && \
