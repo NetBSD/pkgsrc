@@ -1,0 +1,19 @@
+$NetBSD: patch-ah,v 1.1 1998/08/23 06:49:29 garbled Exp $
+--- cdrom_callb.c.orig	Tue Jan 12 11:59:48 1993
++++ cdrom_callb.c	Wed Jul 22 21:25:45 1998
+@@ -24,2 +24,5 @@
+ # include "cdrom_globs.h"
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
++# include "cdrom_freebsd.h"
++#endif
+ #ifdef sun
+@@ -31,2 +34,4 @@
+ 
++extern AppData app_data;
++
+ void		cdrom_new_disc();
+@@ -289,3 +294,3 @@
+ 	 */
+-	if (cdi.duration < replayThreshold)
++	if (cdi.duration < app_data.replayThreshold)
+ 	{
