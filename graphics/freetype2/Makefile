@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/27 14:42:19 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/24 02:27:41 wiz Exp $
 #
 
-DISTNAME=	freetype2-beta8
-PKGNAME=	freetype2-2.0b8
+DISTNAME=	freetype-2.0.1
+PKGNAME=	freetype2-2.0.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freetype/}			\
 		http://freetype.sourceforge.net/pub/freetype/freetype2/	\
@@ -36,7 +36,7 @@ do-configure:
 			INSTALL_SCRIPT="${INSTALL_SCRIPT}"		\
 			${CONFIGURE_ENV} ${CONFIGURE_SCRIPT}		\
 				${CONFIGURE_ARGS}			\
-				--includedir=${PREFIX}/include/freetype2
+				--includedir=${PREFIX}/include
 		cd ${WRKSRC} && ${LN} -s builds/unix/unix.mk config.mk
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 2000/11/27 14:42:20 rh Exp $
+$NetBSD: md5,v 1.2 2000/12/24 02:27:41 wiz Exp $
 
-MD5 (freetype2-beta8.tar.gz) = 6324c8e0a7b7f978de3f28a2bdfe8e5b
+MD5 (freetype-2.0.1.tar.gz) = 2781732a9150e524d6959f4f297b411a
