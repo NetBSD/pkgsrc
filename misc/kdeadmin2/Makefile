@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/03/26 02:27:46 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2004/05/03 04:22:57 snj Exp $
 
 DISTNAME=	kdeadmin-2.2.2
 PKGREVISION=	7
@@ -9,7 +9,7 @@ COMMENT=	System administration tools for the KDE integrated X11 desktop
 
 BUILD_DEPENDS+=	qt2-designer-kde>=2.3.1nb2:../../x11/qt2-designer-kde
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--with-shadow
 CONFIGURE_ARGS+=	--without-shadow
 .endif
 
-.include "../../x11/kde2/buildlink2.mk"
-.include "../../x11/kdebase2/buildlink2.mk"
+.include "../../x11/kde2/kde2.mk"
+.include "../../x11/kdebase2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
