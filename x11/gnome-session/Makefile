@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2005/01/11 12:36:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.47 2005/02/13 23:30:07 recht Exp $
 #
 
 DISTNAME=		gnome-session-2.8.1
@@ -27,8 +27,8 @@ USE_LIBTOOL=		yes
 
 MAKE_ENV+=		REAL_GCONFTOOL="${GCONFTOOL2}"
 
-CPPFLAGS+=		-DPREFIX=\"\\\"${PREFIX}\\\"\"
-CPPFLAGS+=		-DPKG_SYSCONFDIR=\"\\\"${PKG_SYSCONFDIR}\\\"\"
+CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
+CPPFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 
 GCONF2_SCHEMAS= 	gnome-session.schemas
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2005/02/04 21:42:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.76 2005/02/13 23:30:07 recht Exp $
 #
 
 DISTNAME=		gtk+-2.6.2
@@ -49,7 +49,7 @@ MAKE_DIRS+=		${PREFIX}/libdata/gtk-2.0
 
 BUILD_DIRS=		${WRKSRC} ${WRKSRC}/demos/gtk-demo
 
-CPPFLAGS+=		-DPREFIX=\"\\\"${PREFIX}\\\"\"
+CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
 
 PRINT_PLIST_AWK+=	/^@dirrm share\/themes\/Default$$/ \
 				{ print "@unexec $${RMDIR} %D/" $$2 \
