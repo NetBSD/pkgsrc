@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2002/10/23 10:54:55 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2002/10/30 09:28:34 martti Exp $
 
---- Makefile.orig	Sat Sep 28 01:24:32 2002
-+++ Makefile
-@@ -38,7 +38,7 @@ CC?=		/usr/bin/cc
+--- Makefile.orig	Mon Oct 28 21:40:37 2002
++++ Makefile	Tue Oct 29 22:31:42 2002
+@@ -38,7 +38,7 @@
  #	-Ox   - optimize;
  #	-g    - produce debugging information.
  #
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.6 2002/10/23 10:54:55 wiz Exp $
  
  #
  # PREFIX - prefix for all below listed paths
-@@ -58,7 +58,7 @@ DSTMANDIR=	${PREFIX}/man
+@@ -58,7 +58,7 @@
  #
  # DSTETCDIR - where to install template configuration
  #
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.6 2002/10/23 10:54:55 wiz Exp $
  
  #
  # DSTRCDIR - where to install sample rc-script
-@@ -96,10 +96,10 @@ MKDIR?=		/bin/mkdir
+@@ -81,10 +81,10 @@
  #
  # Some INSTALL_* variables
  #
@@ -35,7 +35,7 @@ $NetBSD: patch-aa,v 1.6 2002/10/23 10:54:55 wiz Exp $
  INSTALL_MAN_DIR=	${INSTALL} -d -m 0555 -g wheel -o root
  INSTALL_DATA_DIR=	${INSTALL} -d -m 0555 -g wheel -o root
  
-@@ -230,21 +230,9 @@ install:
+@@ -236,21 +236,9 @@
  	${INSTALL_PROGRAM} ipa ipastat ${DSTBINDIR}
  	${INSTALL_MAN} man/ipa.5 man/ipa.conf.5 ${DSTMANDIR}/man5
  	${INSTALL_MAN} man/ipa.8 man/ipastat.8 ${DSTMANDIR}/man8
