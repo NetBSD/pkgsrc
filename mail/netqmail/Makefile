@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/21 22:42:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2004/08/02 03:57:17 schmonz Exp $
 #
 
-DISTNAME=	netqmail-1.05
+PKGNAME=	${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	mail
-MASTER_SITES=	http://qmail.org/
 
 MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://qmail.org/netqmail/
@@ -19,18 +19,10 @@ NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 NO_PACKAGE=	"needs work to function properly as a binary package"
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/${DISTNAME}
+APPLY_NETQMAIL=	\
+	${PATCH} ${PATCH_DIST_ARGS} < ../${DISTNAME}.patch;		\
+	cd ..; ${MV} ${QMAIL_VERS} ${DISTNAME}
 
 .include "../../mail/qmail/Makefile.common"
-
-.if defined(PKG_PHASE) && ${PKG_PHASE} == "extract"
-WRKSRC=		${WRKDIR}/${DISTNAME}
-.endif
-
-post-extract:
-	@extract_file=qmail-1.03.tar.gz; export extract_file;		\
-	cd ${WRKSRC}; ${EXTRACT_CMD}; cd qmail-1.03;			\
-	${PATCH} ${PATCH_DIST_ARGS} < ../${DISTNAME}.patch;		\
-	cd ..; ${MV} qmail-1.03 ${DISTNAME}
 
 .include "../../mk/bsd.pkg.mk"
