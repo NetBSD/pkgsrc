@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3177 2005/03/02 19:18:32 reed Exp $
+$NetBSD: TODO,v 1.3178 2005/03/02 21:10:51 kim Exp $
 
 Suggested new packages
 ======================
@@ -642,7 +642,6 @@ Suggested package updates
 	o mDNSResponder-98
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.11b
-	o mailman-2.1.5 [kim]
 	o mailscanner-4.39.5
 	o mairix-0.15.2
 	o makeself-2.1.3

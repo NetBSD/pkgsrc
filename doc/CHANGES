@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9395 2005/03/02 20:29:56 tron Exp $
+$NetBSD: CHANGES,v 1.9396 2005/03/02 21:10:50 kim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1238,3 +1238,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated quagga to 0.98.2 [reed 2005-03-02]
 	Updated gftp to 2.0.18 [tron 2005-03-02]
 	Updated gftp-gtk1 to 2.0.18 [tron 2005-03-02]
+	Updated mailman to 2.1.5 [kim 2005-03-02]
