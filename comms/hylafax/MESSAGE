@@ -1,0 +1,22 @@
+======================================================================
+$NetBSD: MESSAGE,v 1.1 2001/10/31 20:44:06 zuntum Exp $
+
+Hylafax was installed.  You'll need manual configurations to actually
+activate it.
+
+Setting up: (for impatients)
+
+	Invoke faxsetup, and answer what she asks.
+
+	Add the following to your rc.local script:
+
+	if [ -x ${PREFIX}/sbin/faxq ]; then 
+		${PREFIX}/sbin/faxq && echo -n ' hylafax' 
+	fi
+
+	For accepting incoming FAX/data calls, modify /etc/ttys as below
+	and send SIGHUP to the init process: 
+
+>tty00	"${PREFIX}/libexec/faxgetty"	dialup	on secure
+
+======================================================================
