@@ -1,11 +1,18 @@
-# $NetBSD: Makefile,v 1.58 2002/02/10 19:26:56 veego Exp $
+# $NetBSD: Makefile,v 1.59 2002/02/18 17:00:38 taca Exp $
 
 DISTNAME=	squid-2.4.STABLE3-src
 PKGNAME=	squid-2.4.3
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.4/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
 		ftp://ftp1.au.squid-cache.org/pub/squid/squid-2/STABLE/
+
+PATCH_SITES=    http://www.squid-cache.org/Versions/v2/2.4/bugs/
+PATCHFILES=     squid-2.4.STABLE3-SNMP_memory_leaks.patch \
+		squid-2.4.STABLE3-ftp_coredump.patch \
+		squid-2.4.STABLE3-htcp_off.patch
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.squid-cache.org/
@@ -42,12 +49,6 @@ PKG_SYSCONFSUBDIR?=	squid
 SQUID_SYSCONFDIR?=	${PKG_SYSCONFDIR}
 
 OPTIONAL_FILES=	libexec/diskd libexec/dnsserver libexec/pinger libexec/unlinkd
-
-post-configure:
-	@cd ${WRKSRC}/include && \
-	${MV} autoconf.h autoconf.h.prepatch && \
-	${SED} -e 's%#define fd_mask int%/* #undef fd_mask */%' <autoconf.h.prepatch \
-	 >autoconf.h
 
 post-build:
 	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/squid.sh >${WRKDIR}/squid.sh
