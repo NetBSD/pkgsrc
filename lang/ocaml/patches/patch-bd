@@ -1,0 +1,15 @@
+$NetBSD: patch-bd,v 1.1 2004/04/22 09:18:42 tron Exp $
+
+--- otherlibs/labltk/compiler/Makefile.orig	Fri Apr 26 14:15:45 2002
++++ otherlibs/labltk/compiler/Makefile	Thu Apr 22 10:34:37 2004
+@@ -45,8 +45,8 @@
+ 	rm -f *.cm*  pplex.ml ppyac.ml ppyac.mli pp$(EXE)
+ 
+ install: 
+-	cp tkcompiler$(EXE) $(INSTALLDIR)
+-	cp pp$(EXE) $(INSTALLDIR)
++	${BSD_INSTALL_SCRIPT} tkcompiler$(EXE) $(INSTALLDIR)
++	${BSD_INSTALL_SCRIPT} pp$(EXE) $(INSTALLDIR)
+ 
+ .SUFFIXES :
+ .SUFFIXES : .mli .ml .cmi .cmo .mlp

@@ -1,0 +1,13 @@
+$NetBSD: patch-au,v 1.1 2004/04/22 09:18:39 tron Exp $
+
+--- debugger/Makefile.orig	Sat Apr 27 16:45:32 2002
++++ debugger/Makefile	Thu Apr 22 10:34:37 2004
+@@ -79,7 +79,7 @@
+ 	$(CAMLC) $(LINKFLAGS) -o ocamldebug$(EXE) $(OTHEROBJS) $(OBJS)
+ 
+ install:
+-	cp ocamldebug$(EXE) $(BINDIR)/ocamldebug$(EXE)
++	${BSD_INSTALL_PROGRAM} ocamldebug$(EXE) $(BINDIR)/ocamldebug$(EXE)
+ 
+ clean::
+ 	rm -f ocamldebug$(EXE)
