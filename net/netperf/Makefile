@@ -1,15 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2004/10/26 09:14:33 salo Exp $
+# $NetBSD: Makefile,v 1.11 2004/12/02 06:41:48 itojun Exp $
 # KAME Id: Makefile,v 1.3 2000/01/21 12:34:29 itojun Exp
 #
 
-DISTNAME=	netperf-2.1pl3
-PKGNAME=	netperf-2.1.3
+DISTNAME=	netperf-2.3pl1
+PKGNAME=	netperf-2.3.1
 CATEGORIES=	benchmarks
 MASTER_SITES=	ftp://ftp.cup.hp.com/dist/networking/benchmarks/netperf/
-
-PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES=	netperf-21pl3-20000721.diff.gz
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	itojun@kame.net
 HOMEPAGE=	http://www.netperf.org/
@@ -20,13 +16,7 @@ USE_BUILDLINK3=	yes
 MAKEFILE=	makefile
 MAN1=		netperf.1 netserver.1
 
-BUILD_DEFS+=	USE_INET6
-
 .include "../../mk/bsd.prefs.mk"
-
-.if defined(USE_INET6) && ${USE_INET6} == "YES"
-CFLAGS+=	-DDO_IPV6
-.endif
 
 CFLAGS.IRIX+=	-DIRIX
 
