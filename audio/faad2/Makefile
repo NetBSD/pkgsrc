@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/05/03 00:41:56 grant Exp $
+# $NetBSD: Makefile,v 1.18 2004/05/15 13:03:20 grant Exp $
 #
 
 DISTNAME=	faad2-2.0
@@ -27,6 +27,13 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-mp4v2
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+CPPFLAGS+=		-D_FILE_OFFSET_BITS=64
+CPPFLAGS+=		_D_LARGEFILE_SOURCE=1
+.endif
 
 pre-configure:
 	${CP} ${WRKSRC}/common/faad/getopt.* ${WRKSRC}/frontend
