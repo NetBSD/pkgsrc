@@ -1,53 +1,41 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/03/13 01:39:20 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.2 2004/12/01 04:47:53 dmcmahill Exp $
 
---- Makefile.in.orig	Mon Feb 25 21:20:07 2002
-+++ Makefile.in	Tue Mar  5 15:33:22 2002
-@@ -811,9 +811,9 @@
+--- Makefile.in.orig	Fri Jul 16 01:59:50 2004
++++ Makefile.in
+@@ -796,11 +796,11 @@ CORE_SRC = \
+ BUILDOPTS = $(DEBUG) $(ARCHFLAGS) 
  BUILDDIR = obj
  HDS = src/include
--CFLAGS = $(GRAPH_FLAGS) $(DEBUG) $(ARCHFLAGS) -I$(HDS) \
-+CFLAGS = @CPPFLAGS@ $(GRAPH_FLAGS) $(DEBUG) $(ARCHFLAGS) -I$(HDS) \
-     $(LANGLISPCFLAGS) $(LANGTCLCFLAGS) $(LANGJAVACFLAGS) $(IRSIMCFLAGS) \
-     $(CADENCECFLAGS) $(SUNCFLAGS) $(INTERNATIONALCFLAGS)
--XCFLAGS = $(CFLAGS) $(TIFFLAGS) $(XPOWER) $(TRUETYPECFLAGS) $(QTINC)
--LIBS = @X_PRE_LIBS@ @X_LIBS@ $(TRUETYPE_LIBS) $(GRAPH_LIBS) -lX11 -lm @X_EXTRA_LIBS@ $(LANGJAVALIBS)
-+XCFLAGS = @CPPFLAGS@ $(CFLAGS) $(TIFFLAGS) $(XPOWER) $(TRUETYPECFLAGS) $(QTINC)
-+LIBS = @LDFLAGS@ @X_PRE_LIBS@ @X_LIBS@ $(TRUETYPE_LIBS) $(GRAPH_LIBS) -lX11 -lm @X_EXTRA_LIBS@ $(LANGJAVALIBS)
+-CFLAGS = $(OPTIMIZE) $(DEBUG) $(GRAPH_FLAGS) $(ARCHFLAGS) $(FORTECFLAGS) -I$(HDS) \
++CFLAGS = @CPPFLAGS@ $(OPTIMIZE) $(DEBUG) $(GRAPH_FLAGS) $(ARCHFLAGS) $(FORTECFLAGS) -I$(HDS) \
+     $(LANGLISPCFLAGS) $(LANGTCLCFLAGS) $(LANGJAVACFLAGS) $(SIMIRSIM_CFLAGS) \
+     $(CADENCECFLAGS) $(SUNCFLAGS) $(INTERNATIONALCFLAGS) $(UNICODECFLAGS) @PTHREAD_CFLAGS@
+-XCFLAGS = $(CFLAGS) $(XPOWER) $(TRUETYPECFLAGS) $(QT_CFLAGS)
+-LIBS = @X_PRE_LIBS@ @X_LIBS@ $(TRUETYPE_LIBS) $(FSDB_LIBS) $(GRAPH_LIBS) -lm @X_EXTRA_LIBS@ \
++XCFLAGS = @CPPFLAGS@ $(CFLAGS) $(XPOWER) $(TRUETYPECFLAGS) $(QT_CFLAGS)
++LIBS = @LDFLAGS@ @X_PRE_LIBS@ @X_LIBS@ $(TRUETYPE_LIBS) $(FSDB_LIBS) $(GRAPH_LIBS) -lm @X_EXTRA_LIBS@ \
+     $(LANGTCLLIBS) $(LANGJAVALIBS) @PTHREAD_CFLAGS@ @PTHREAD_LIBS@
  FIND = find
  INSTALL = install
-@@ -931,25 +931,25 @@
- 
- install: all
--	$(INSTALL) -d -m755 @bindir@ $(prefix)/lib/electric
-+	$(INSTALL) -d -m755 @bindir@ $(prefix)/share/electric
- 	$(INSTALL) -m755 $(PROGNAME) @bindir@/$(PROGNAME)
--	$(INSTALL) -m644 lib/.cadrc $(prefix)/lib/electric
-+	$(INSTALL) -m644 lib/.cadrc $(prefix)/share/electric
- 	@(cd lib ; \
+@@ -943,8 +943,8 @@ install: all
  	for d in `$(FIND) . -type d -print`; do \
--	  $(INSTALL) -d -m755 $(prefix)/lib/electric/$$d ; \
-+	  $(INSTALL) -d -m755 $(prefix)/share/electric/$$d ; \
+ 	  $(INSTALL) -d -m755 $(DESTDIR)@datadir@/electric/lib/$$d ; \
  	  (cd $$d ; \
 -	  for f in `$(FIND) . -type f -maxdepth 1 -print`; do \
--	    install -m644 $$f $(prefix)/lib/electric/$$d/$$f ; \
-+	  for f in `ls -1`; do \
-+	    if [ -f $$f ] ; then install -m644 $$f $(prefix)/share/electric/$$d/$$f ; fi ; \
+-	    $(INSTALL) -m644 $$f $(DESTDIR)@datadir@/electric/lib/$$d/$$f ; \
++	  for f in * ; do \
++	    if test -f $$f ; then $(INSTALL) -m644 $$f $(DESTDIR)@datadir@/electric/lib/$$d/$$f ; fi ; \
  	  done ) ; \
  	done ) ; 
  
- install.html:
--	$(INSTALL) -d -m755 $(prefix)/doc/electric/html
-+	$(INSTALL) -d -m755 $(prefix)/share/doc/electric/html
- 	@(cd html/manual ; \
--	$(INSTALL) -m644 index.html $(prefix)/doc/electric/html ; \
-+	$(INSTALL) -m644 index.html $(prefix)/share/doc/electric/html ; \
+@@ -955,8 +955,8 @@ install.html:
  	for d in `$(FIND) . -type d -print`; do \
--	  $(INSTALL) -d -m755 $(prefix)/doc/electric/html/$$d ; \
-+	  $(INSTALL) -d -m755 $(prefix)/share/doc/electric/html/$$d ; \
+ 	  $(INSTALL) -d -m755 $(DESTDIR)@datadir@/electric/doc/html/$$d ; \
  	  (cd $$d ; \
 -	  for f in `$(FIND) . -type f -maxdepth 1 -print`; do \
--	    install -m644 $$f $(prefix)/doc/electric/html/$$d/$$f ; \
-+	  for f in `ls -1`; do \
-+	    if [ -f $$f ]; then install -m644 $$f $(prefix)/share/doc/electric/html/$$d/$$f ; fi ;\
+-	    $(INSTALL) -m644 $$f $(DESTDIR)@datadir@/electric/doc/html/$$d/$$f ; \
++	  for f in * ; do \
++	    if test -f $$f ; then $(INSTALL) -m644 $$f $(DESTDIR)@datadir@/electric/doc/html/$$d/$$f ; fi ; \
  	  done ) ; \
  	done ) ; 
+ 
