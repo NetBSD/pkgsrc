@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/08/30 17:29:44 kei Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/30 17:46:18 kei Exp $
 
 DISTNAME=		samba-2.0.7-ja-1.2
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
@@ -8,6 +8,8 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		oishi@ims.ac.jp
 HOMEPAGE=		http://www.samba.gr.jp/
+
+CONFLICTS+=		samba-*
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/autoreconf:../../devel/autoconf
 
