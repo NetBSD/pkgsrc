@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/17 15:10:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/17 15:12:14 jmmv Exp $
 #
 
 .include "../../x11/xbindkeys/Makefile.common"
@@ -15,4 +15,5 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/xbindkeys_show ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/xbindkeys_show.1 ${PREFIX}/man/man1
 
+.include "../../x11/tk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
