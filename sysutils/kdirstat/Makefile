@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/01/03 18:49:53 reed Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/23 21:50:48 jmmv Exp $
 
 DISTNAME=	kdirstat-2.3.7
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils kde
 MASTER_SITES=	http://kdirstat.sourceforge.net/download/
 EXTRACT_SUFX=	.tar.bz2

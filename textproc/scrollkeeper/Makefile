@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2004/01/23 16:55:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/23 21:50:49 jmmv Exp $
 #
 
 DISTNAME=		scrollkeeper-0.3.14
+PKGREVISION=		1
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scrollkeeper/}	\
 			${MASTER_SITE_GNOME:=sources/scrollkeeper/0.3/}
