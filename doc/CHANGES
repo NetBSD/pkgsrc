@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4777 2004/02/10 18:00:29 jmmv Exp $
+$NetBSD: CHANGES,v 1.4778 2004/02/10 19:35:29 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -770,3 +770,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mldonkey to 2.5.10 [wiz 2004-02-10]
 	Updated py-bsddb3 to 4.1.6 [minskim 2004-02-10]
 	Updated nautilus to 2.4.2nb2 [jmmv 2004-02-10]
+	Added py-gnutls-0.2 [minskim 2004-02-10]
