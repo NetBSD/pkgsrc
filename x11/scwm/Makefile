@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/07/20 15:41:10 tron Exp $
+# $NetBSD: Makefile,v 1.16 2000/08/01 02:35:07 wiz Exp $
 #
 
 DISTNAME=	scwm-0.9
@@ -13,6 +13,8 @@ DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	gtar-1.12:../../archivers/gtar
 DEPENDS+=	readline>=4.0:../../devel/readline
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
+
+BROKEN=		Current release does not work with guile-1.4.0.
 
 EVAL_PREFIX+=	GTKDIR=gtk+
 CONFIGURE_ARGS+=	--with-guile-prefix=${LOCALBASE}	\
