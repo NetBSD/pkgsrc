@@ -4,7 +4,7 @@ CFLAGS=`cat /tmp/build-ports-misc-amanda-cflags`
 rm /tmp/build-ports-misc-amanda-cflags
 echo $CFLAGS
 
-if [ "X`uname -s`" = "NetBSD" ]; then
+if [ "X`uname -s`" = X"NetBSD" ]; then
 	mv $WRKSRC/config/config.h-netbsd1 $WRKSRC/config/config.h
 else
 	mv $WRKSRC/config/config.h-freebsd2 $WRKSRC/config/config.h
