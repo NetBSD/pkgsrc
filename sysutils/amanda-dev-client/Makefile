@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/06/25 15:42:21 taca Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/05 18:07:54 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -7,7 +7,6 @@ SVR4_PKGNAME=		amacl
 
 COMMENT=		Client part of Amanda, a network backup system
 
-DEPENDS+=		gtar-1.12:../../archivers/gtar
 DEPENDS+=		amanda-common-${VERS}:../../sysutils/amanda-dev-common
 
 GNU_CONFIGURE=		yes
@@ -15,6 +14,10 @@ GNU_CONFIGURE=		yes
 .include "../../mk/bsd.prefs.mk"
 .include "../../sysutils/amanda-dev-common/Makefile.common"
 .include "../../devel/readline/buildlink.mk"
+
+.if ${OPSYS} != "Linux"
+DEPENDS+=		gtar-1.12:../../archivers/gtar
+.endif
 
 CONFIGURE_ARGS+=	--without-server --without-restore
 
