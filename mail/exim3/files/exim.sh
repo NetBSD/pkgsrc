@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-#	$NetBSD: exim.sh,v 1.2 2003/12/18 02:30:54 grant Exp $
+#	$NetBSD: exim.sh,v 1.2.2.1 2004/05/30 08:53:09 grant Exp $
 #
 # PROVIDE: mail
 # REQUIRE: LOGIN
@@ -12,7 +12,7 @@ exim_flags=${exim_flags-"-bd -q30m"}
 rcvar=$name
 command="@PREFIX@/sbin/${name}"
 pidfile="/var/run/${name}.pid"
-required_files="@PREFIX@/etc/exim/configure"
+required_files="@PKG_SYSCONFDIR@/configure"
 
 load_rc_config $name
 run_rc_command "$1"
