@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2001/07/15 11:23:25 jlam Exp $
+$NetBSD: distinfo,v 1.4 2002/12/14 04:34:39 jschauma Exp $
 
-SHA1 (fastjar-0.90.tgz) = bf88e42e10f66ed8a142833a93c5bc59c3ef9d84
-Size (fastjar-0.90.tgz) = 40115 bytes
-SHA1 (patch-aa) = fb2ff3febff6e35511eb9294aa718cf4a4d427df
+SHA1 (fastjar-0.93.tgz) = 74acc8e8a920ea6da18a180cd0a691c5d7c4699f
+Size (fastjar-0.93.tgz) = 62419 bytes
+SHA1 (patch-aa) = 12cc5397a89c18d239164caa3955121ca6d01de0
+SHA1 (patch-ab) = c13f46e1a3e60a3bbe656af609a5c9fb047a4ca3
