@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2000/02/05 07:04:47 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2000/02/19 02:40:33 wiz Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/04/30 23:49:14 asami Exp
 #
 
@@ -28,11 +28,8 @@ CONFIGURE_ARGS+=	${CONF}
 IGNORE=			"is part of your NetBSD distribution"
 .endif
 
-# UVM definition will be pulled in from pkgsrc's mk/bsd.own.mk for now
-
 MAKE_ENV+=	INSTALL_MAN="${INSTALL_MAN}" \
-		COPY="${COPY}" STRIPFLAG="${STRIPFLAG}" \
-		UVM=${UVM}
+		COPY="${COPY}" STRIPFLAG="${STRIPFLAG}"
 
 pre-configure:
 	${CP} ${FILESDIR}/defaults.${CONF} ${WRKSRC}/.defaults

@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.8 1999/06/28 22:19:12 tron Exp $
+$NetBSD: patch-ab,v 1.9 2000/02/19 02:40:35 wiz Exp $
 
---- machine/m_netbsd13.c.orig	Tue Jun 29 00:14:19 1999
-+++ machine/m_netbsd13.c	Tue Jun 29 00:16:18 1999
-@@ -0,0 +1,884 @@
+--- ./machine/m_netbsd13.c.orig	Sat Feb 19 03:24:47 2000
++++ ./machine/m_netbsd13.c	Sat Feb 19 03:31:13 2000
+@@ -0,0 +1,887 @@
 +/*
 + * top - a top users display for Unix
 + *
@@ -31,12 +31,15 @@ $NetBSD: patch-ab,v 1.8 1999/06/28 22:19:12 tron Exp $
 + *		matthew green <mrg@eterna.com.au>
 + *
 + *
-+ * $Id: patch-ab,v 1.8 1999/06/28 22:19:12 tron Exp $
++ * $Id: patch-ab,v 1.9 2000/02/19 02:40:35 wiz Exp $
 + */
 +
 +#include <sys/types.h>
 +#include <sys/signal.h>
 +#include <sys/param.h>
++#if __NetBSD_Version__ > 103080000
++#define UVM
++#endif
 +#include <sys/stat.h>
 +#include <sys/errno.h>
 +#include <sys/sysctl.h>
