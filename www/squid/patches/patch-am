@@ -1,0 +1,21 @@
+$NetBSD: patch-am,v 1.1 2001/12/12 17:06:20 taca Exp $
+
+--- src/client_side.c.orig	Sat Apr 21 08:21:41 2001
++++ src/client_side.c
+@@ -2441,8 +2441,15 @@
+ 	    natLookup.nl_inip = http->conn->me.sin_addr;
+ 	    natLookup.nl_outip = http->conn->peer.sin_addr;
+ 	    natLookup.nl_flags = IPN_TCP;
+-	    if (natfd < 0)
++	    if (natfd < 0) {
++		int save_errno;
++
++		enter_suid();
+ 		natfd = open(IPL_NAT, O_RDONLY, 0);
++		save_errno = errno;
++		leave_suid();
++		errno = save_errno;
++	    }
+ 	    if (natfd < 0) {
+ 		debug(50, 1) ("parseHttpRequest: NAT open failed: %s\n",
+ 		    xstrerror());
