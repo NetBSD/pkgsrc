@@ -1,6 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/08/31 01:43:26 jtb Exp $
+$NetBSD: distinfo,v 1.2 2005/02/04 21:50:25 adrianp Exp $
 
-SHA1 (advi-1.4.0.tar.gz) = 580625328cb555bd97e8be3438d65fb396fc3457
-Size (advi-1.4.0.tar.gz) = 4390953 bytes
-SHA1 (patch-aa) = e75541089b7eb05b15b5ff8553a973edcce5e18d
-SHA1 (patch-ab) = 3d0f800d8eb48b5dbb339e09dc69548e886e00bc
+SHA1 (advi-1.6.0.tgz) = 8c033df906f3e208471506f64ffa0b175c1c5ee8
+Size (advi-1.6.0.tgz) = 11436152 bytes
