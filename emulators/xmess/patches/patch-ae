@@ -1,0 +1,30 @@
+$NetBSD: patch-ae,v 1.4 2001/09/02 23:04:24 kristerw Exp $
+--- doc/xmamerc.dist.orig	Mon Jul  2 02:03:49 2001
++++ doc/xmamerc.dist	Mon Sep  3 00:34:24 2001
+@@ -70,20 +70,18 @@
+ mouse                   1
+ 
+ ### Fileio Related ###
+-rompath                 /usr/games/lib/xmame
+-spooldir                /usr/games/lib/xmame
++rompath                 @ROMPATH@
++spooldir                @SPOOLDIR@
+ screenshotdir           .
+-cheatfile               /usr/games/lib/xmame/cheat.dat
+-hiscorefile             /usr/games/lib/xmame/hiscore.dat
+-historyfile             /usr/games/lib/xmame/history.dat
+-mameinfofile            /usr/games/lib/xmame/mameinfo.dat
++cheatfile               @SPOOLDIR@/cheat.dat
++hiscorefile             @SPOOLDIR@/hiscore.dat
++historyfile             @SPOOLDIR@/history.dat
++mameinfofile            @SPOOLDIR@/mameinfo.dat
+ 
+ ### Mame Related ###
+-defaultgame             pacman
+ language                english
+ fuzzycmp                1
+ cheat                   0
+-debug                   0
+ 
+ ### Frontend Related ###
+ clones                  1
