@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/06/01 11:23:18 rh Exp $
+# $NetBSD: Makefile,v 1.16 2000/06/20 21:58:01 jlam Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/18 22:20:02 hoek Exp
 #
 
@@ -13,8 +13,8 @@ HOMEPAGE=	http://www.informatik.uni-frankfurt.de/~fp/uudeview/
 # "kdesupport-2.1b" included "uu" library.
 CONFLICTS=	kdesupport-2.1b
 
-GNU_CONFIGURE=	yes
-USE_PKGLIBTOOL=	yes
+GNU_CONFIGURE=	# defined
+USE_LIBTOOL=	# defined
 
 ALL_TARGET=	libuu.la
 
@@ -29,7 +29,8 @@ DOCFILES=	HISTORY doc/Makefile doc/README doc/binhex.fig \
 do-install:
 	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/libuu.la ${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/uudeview.h ${PREFIX}/include/uu.h
-	${SED} -e 's|FUNKYTOKENHERE|${PREFIX}|g' <${FILESDIR}/uulib.3 >${WRKSRC}/uulib.3
+	${SED} -e 's|FUNKYTOKENHERE|${PREFIX}|g' \
+		< ${FILESDIR}/uulib.3 > ${WRKSRC}/uulib.3
 	${INSTALL_MAN} ${WRKSRC}/uulib.3 ${PREFIX}/man/man3
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/uulib
 	@${INSTALL_MAN} ${FILESDIR}/porting.notes ${PREFIX}/share/doc/uulib
