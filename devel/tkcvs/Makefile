@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2001/09/14 22:24:16 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2001/10/21 10:02:03 wiz Exp $
 #
 
-DISTNAME=	tkcvs-7.0.1
+DISTNAME=	tkcvs-7.0.2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.twobarleycorns.net/ \
 		${MASTER_SITE_SOURCEFORGE:=tkcvs/}
