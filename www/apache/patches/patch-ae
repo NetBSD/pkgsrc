@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.3 2000/10/13 21:46:46 jlam Exp $
+$NetBSD: patch-ae,v 1.4 2001/02/02 16:39:57 jlam Exp $
 
---- src/modules/standard/mod_include.c.orig	Fri Sep 22 14:26:32 2000
+--- src/modules/standard/mod_include.c.orig	Mon Jan 15 12:05:42 2001
 +++ src/modules/standard/mod_include.c
-@@ -92,7 +92,11 @@
+@@ -93,7 +93,11 @@
  #include "http_log.h"
  #include "http_main.h"
  #include "util_script.h"
@@ -14,7 +14,7 @@ $NetBSD: patch-ae,v 1.3 2000/10/13 21:46:46 jlam Exp $
  
  #define STARTING_SEQUENCE "<!--#"
  #define ENDING_SEQUENCE "-->"
-@@ -351,7 +355,8 @@
+@@ -352,7 +356,8 @@
   * the tag value is html decoded if dodecode is non-zero
   */
  
@@ -24,7 +24,7 @@ $NetBSD: patch-ae,v 1.3 2000/10/13 21:46:46 jlam Exp $
  {
      char *t = tag, *tag_val, c, term;
  
-@@ -470,7 +475,8 @@
+@@ -471,7 +476,8 @@
  /*
   * Do variable substitution on strings
   */
@@ -34,7 +34,7 @@ $NetBSD: patch-ae,v 1.3 2000/10/13 21:46:46 jlam Exp $
  			size_t length, int leave_name)
  {
      char ch;
-@@ -668,7 +674,8 @@
+@@ -669,7 +675,8 @@
              parse_string(r, tag_val, parsed_string, sizeof(parsed_string), 0);
              if (tag[0] == 'f') {
                  /* be safe; only files in this directory or below allowed */
@@ -44,7 +44,7 @@ $NetBSD: patch-ae,v 1.3 2000/10/13 21:46:46 jlam Exp $
                      error_fmt = "unable to include file \"%s\" "
                          "in parsed file %s";
                  }
-@@ -1080,7 +1087,8 @@
+@@ -1081,7 +1088,8 @@
                          "in parsed file %s";
          }
          else {
@@ -54,7 +54,7 @@ $NetBSD: patch-ae,v 1.3 2000/10/13 21:46:46 jlam Exp $
              rr = ap_sub_req_lookup_file(tag_val, r);
  
              if (rr->status == HTTP_OK && rr->finfo.st_mode != 0) {
-@@ -2159,6 +2167,16 @@
+@@ -2160,6 +2168,16 @@
      }
  }
  
@@ -71,7 +71,7 @@ $NetBSD: patch-ae,v 1.3 2000/10/13 21:46:46 jlam Exp $
  
  
  /* -------------------------- The main function --------------------------- */
-@@ -2283,6 +2301,13 @@
+@@ -2284,6 +2302,13 @@
              }
  #endif
              else {

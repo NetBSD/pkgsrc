@@ -1,12 +1,13 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.3 2000/12/22 19:41:53 jlam Exp $
+# $NetBSD: INSTALL,v 1.4 2001/02/02 16:39:58 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
 
 CAT="@CAT@"
 CHMOD="@CHMOD@"
+CHOWN="@CHOWN@"
 CP="@CP@"
 MKDIR="@MKDIR@"
 
@@ -32,6 +33,7 @@ POST-INSTALL)
 	${MKDIR} ${LOGDIR}
 	${MKDIR} ${SPOOLDIR}
 	${MKDIR} ${SPOOLDIR}/proxy
+	${CHOWN} nobody:nobody ${SPOOLDIR}/proxy
 
 	echo "Installing configuration files:"
 	for file in ${CONFFILES} ${NONCONFFILES}
