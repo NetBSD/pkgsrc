@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2001/05/31 22:52:17 jlam Exp $
+
+--- fail/parser.c.orig	Mon Jan 31 17:23:07 2000
++++ fail/parser.c	Wed May 30 14:40:41 2001
+@@ -30,10 +30,7 @@
+ 
+ #define	READLINE_LIBRARY
+ #include <readline/readline.h>
+-
+-extern void using_history();
+-extern void stifle_history(int);
+-extern void add_history(char *);
++#include <readline/history.h>
+ 
+ #ifdef __cplusplus
+ }
