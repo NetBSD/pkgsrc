@@ -1,13 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/02/22 16:32:45 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2004/04/02 05:51:03 jmmv Exp $
 
---- cddb-slave2/Makefile.in.orig	2003-12-09 09:24:28.000000000 +0000
-+++ cddb-slave2/Makefile.in	2003-12-09 09:24:55.000000000 +0000
-@@ -243,7 +243,7 @@
- 	cddb-slave-client.h
+http://bugzilla.gnome.org/show_bug.cgi?id=137198
+
+--- gstreamer-properties/Makefile.in.orig	2004-03-09 09:19:42.000000000 +0100
++++ gstreamer-properties/Makefile.in
+@@ -239,7 +239,7 @@ desktop_icons_DATA = gstreamer-propertie
+ gladedir = $(datadir)/gstreamer-properties/glade
+ glade_DATA = gstreamer-properties.glade 
  
+-desktopdir = $(datadir)/applications
++desktopdir = $(datadir)/control-center-2.0/capplets
+ Desktop_in_files = gstreamer-properties.desktop.in
+ desktop_DATA = $(Desktop_in_files:.desktop.in=.desktop)
  
--schemadir = $(sysconfdir)/gconf/schemas
-+schemadir = @GCONF_SCHEMA_FILE_DIR@
- schema_DATA = CDDB-Slave2.schemas
- 
- server_in_files = GNOME_Media_CDDBSlave2.server.in.in
