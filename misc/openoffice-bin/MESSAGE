@@ -1,13 +1,13 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2005/02/26 01:22:16 dmcmahill Exp $
+$NetBSD: MESSAGE,v 1.3 2005/02/27 11:11:24 wiz Exp $
 
   OpenOffice has now been installed in ${PREFIX}/OpenOffice.org${VER}.
 
   Before using this package for the first time, each user has to run
-  a setup program, which is automatically invoked at the first start of 
+  a setup program, which is automatically invoked at the first start of
   ${PREFIX}/bin/soffice.
 
-  For (optional) Java support, please run 
+  For (optional) Java support, please run
   ${PREFIX}/OpenOffice.org${VER}/program/jvmsetup
   after having run the user setup program.
 ===========================================================================
