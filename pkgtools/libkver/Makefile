@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/12/13 17:45:59 seb Exp $
+# $NetBSD: Makefile,v 1.9 2003/12/23 19:48:31 seb Exp $
 
 DISTNAME=		libkver-${VERSION}
 CATEGORIES=		pkgtools
@@ -35,13 +35,12 @@ FILES_SUBST+=		HAS_SYSCTL=false
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 
+INSTALLATION_DIRS+=	lib man/man3 man/cat3
+.if empty(LDD_SYSCTL:M*libc*)
+INSTALLATION_DIRS+=	sbin
+.endif
+
 do-extract:
 	@${CP} -Rp ${FILESDIR} ${WRKSRC}
-
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib
-.if empty(LDD_SYSCTL:M*libc*)
-	${INSTALL_DATA_DIR} ${PREFIX}/sbin
-.endif
 
 .include "../../mk/bsd.pkg.mk"
