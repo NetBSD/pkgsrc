@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: createbuildlink,v 1.22 2004/04/27 03:51:24 dmcmahill Exp $
+#	$NetBSD: createbuildlink,v 1.23 2004/07/06 23:18:04 wiz Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -40,35 +40,23 @@
 # and PLIST
 #
 
-REV=`echo '$Revision: 1.22 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.23 $' | sed 's/\\$//g'`
 tmpdir=/tmp
 spacesintab=8
 makefile=Makefile
 sedrules=$tmpdir/sedrules.buildlink.$$
 PLIST=PLIST
-blver=2
-otherver=3
 
-args=`getopt j23 $*`
+args=`getopt 3 $*`
 if [ $? != 0 ]; then
-	echo "Usage: $0 -2 [-j] > buildlink2.mk"
-	echo "   or: $0 -3 > buildlink3.mk"
+	echo "Usage: $0 > buildlink3.mk"
 	exit 2
 fi
 set -- $args
 while [ $# -gt 0 ]; do
 	case "$1" in
-	-j)
-		join=YES
-		;;
-	-2)
-		blver=2
-		otherver=3
-		;;
 	-3)
-		blver=3
-		otherver=2
-		;;
+		shift;;
 	--)
 		shift; break
 		;;
@@ -82,12 +70,6 @@ done
 if [ ! -f $makefile ]; then
 	echo "===> Incomplete package! To create a buildlink file <==="
 	echo "===> a working $makefile is required!                <==="
-	exit 1
-fi
-
-if [ $blver = 2 -a ! -f "$PLIST" ]; then
-	echo "===> Incomplete package! To create a buildlink file <==="
-	echo "===> a working PLIST is required!                   <==="
 	exit 1
 fi
 
@@ -135,7 +117,7 @@ sed -f $sedrules <<EOF
 # XXX This file was created automatically using createbuildlink-@PKGVERSION@.
 # XXX After this file as been verified as correct, the comment lines
 # XXX beginning with "XXX" should be removed.  Please do not commit
-# XXX unverified buildlink[23].mk files.
+# XXX unverified buildlink3.mk files.
 # XXX
 # XXX Packages that only install static libraries or headers should
 # XXX include the following line:
@@ -143,19 +125,6 @@ sed -f $sedrules <<EOF
 # XXX	BUILDLINK_DEPMETHOD.$PKGNOVER?=	build
 
 EOF
-
-##
-## buildlink 2
-##
-if [ $blver = 2 ]; then
-
-sed -f $sedrules <<EOF
-.if !defined(${PKGUPPER}_BUILDLINK2_MK)
-${PKGUPPER}_BUILDLINK2_MK=	# defined
-
-EOF
-
-else	# buildlink 3
 
 gap="	"
 for i in 1 2 3; do
@@ -182,114 +151,31 @@ BUILDLINK_PACKAGES+=	$PKGNOVER
 .if !empty(${PKGUPPER}_BUILDLINK3_MK:M+)
 EOF
 
-fi	# buildlink 2/3
-
-if [ $blver = 2 ]; then
-
-sed -f $sedrules <<EOF
-BUILDLINK_PACKAGES+=		$PKGNOVER
-BUILDLINK_DEPENDS.$PKGNOVER?=	$PKGNOVER>=$PKGVER
-EOF
-
-else # [ $blver = 3 ]
-
 sed -f $sedrules <<EOF
 BUILDLINK_DEPENDS.$PKGNOVER+=	$PKGNOVER>=$PKGVER
 EOF
-
-fi
 
 sed -f $sedrules <<EOF
 BUILDLINK_PKGSRCDIR.$PKGNOVER?=	../../$CURDIR
 EOF
 
-if [ $blver = 3 ]; then
-
 sed -f $sedrules <<EOF
 .endif	# ${PKGUPPER}_BUILDLINK3_MK
 EOF
 
-fi
-
-##
-## buildlink2-only part
-##
-if [ $blver = 2 ]; then
-sed -f $sedrules <<EOF
-
-EVAL_PREFIX+=	BUILDLINK_PREFIX.$PKGNOVER=$PKGNOVER
-BUILDLINK_PREFIX.${PKGNOVER}_DEFAULT=	\${$PREFIX}
-EOF
-
-##
-## buildlinked includes (buildlink2 only)
-##
-if [ "$join" = "YES" ]; then
-	for i in `egrep "^include/|/Headers/.*\.h" $PLIST \
-	| sed -e 's|[^/]*\.h\([Hhpx+]*\)$|*.h\1|' | sort -u`; do
-		echo "BUILDLINK_FILES.$PKGNOVER+=	$i"
-	done
-else
-	for i in `egrep "^include/|/Headers/.*\.h" $PLIST` ; do
-		echo "BUILDLINK_FILES.$PKGNOVER+=	$i"
-	done
-fi
-
-##
-## buildlinked libraries (buildlink2 only)
-##
-for i in \
-`egrep '^lib/|/Libraries/.*/lib[^\.]*\.a$|/Libraries/.*/lib[^\.]*\.so' $PLIST \
-| egrep -v '\.pc$' | sed -e 's/\.a$/.*/' -e 's/\.la$/.*/' -e 's/\.so.*$/.*/'  \
-| sort -u`; do
-	echo "BUILDLINK_FILES.$PKGNOVER+=	$i"
-done
-
-fi	## end of buildlink2-only part
-
 ##
 ## buildlinked dependencies
 ##
-grep -l '^.include.*\.\.\/.*\/.*/buildlink[23].mk\"' $makefile $commons \
+grep -l '^.include.*\.\.\/.*\/.*/buildlink3.mk\"' $makefile $commons \
 	>/dev/null 2>&1 && echo ""	# Be careful not to print duplicate \n
 for i in $makefile $commons ; do
-	[ ! -f $i ] || grep '^.include.*\.\.\/.*\/.*/buildlink[23].mk\"' $i |
-		sed "s/buildlink$otherver/buildlink$blver/"		|
+	[ ! -f $i ] || grep '^.include.*\.\.\/.*\/.*/buildlink3.mk\"' $i |
 		egrep -v '/devel/pkgconfig/|/textproc/intltool/'
 done
-if [ $blver = 2 ]; then
-grep -l '^.include.*\.\.\/.*\/.*/buildlink[23].mk\"' $makefile $commons \
-	>/dev/null 2>&1 && echo ""	# Be careful not to print duplicate \n
-fi
-
-##
-## buildlink2-only part
-##
-if [ $blver = 2 ]; then
-##
-## main buildlink target for this package
-##
-sed -f $sedrules <<EOF
-BUILDLINK_TARGETS+=	${PKGNOVER}-buildlink
-
-EOF
-
-##
-## buildlink targets for this package
-##
-sed -f $sedrules <<EOF
-${PKGNOVER}-buildlink: _BUILDLINK_USE
-
-.endif	# ${PKGUPPER}_BUILDLINK2_MK
-EOF
-
-else	# buildlink 3
 
 sed -f $sedrules <<EOF
 
 BUILDLINK_DEPTH:=     \${BUILDLINK_DEPTH:S/+\$//}
 EOF
-
-fi	# buildlink 2/3
 
 rm -f $sedrules
