@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2004/04/20 19:41:35 minskim Exp $
+
+--- xclock.ad.orig	1992-12-20 21:24:20.000000000 -0600
++++ xclock.ad
+@@ -2,7 +2,7 @@
+ # XClock
+ #
+ XClock*font 	  : 9x15
+-XClock*foreground : black 
++XClock*foreground : black
+ XClock*background : blue
+ XClock*highlight  : black
+ XClock*hands      : red
