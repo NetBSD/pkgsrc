@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/15 01:35:11 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/01/11 20:16:18 dent Exp $
 #
 
 DISTNAME=		xfinans-5.9
@@ -7,7 +7,7 @@ CATEGORIES=		finance x11
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=apps/financial/accounting/}
 
 MAINTAINER=		root@garbled.net
-#HOMEPAGE=		http://www.cs.auc.dk/~lupus/xfinans.html
+HOMEPAGE=		http://www.io.com/~acroyear/xfinans/
 
 DEPENDS=		gnuplot-3.7:../../graphics/gnuplot
 
