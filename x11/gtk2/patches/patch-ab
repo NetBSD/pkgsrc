@@ -1,12 +1,13 @@
-$NetBSD: patch-ab,v 1.6 2002/12/24 04:07:33 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2004/04/01 18:15:41 jmmv Exp $
 
---- demos/Makefile.am.orig	Sat Nov  9 01:07:21 2002
-+++ demos/Makefile.am
-@@ -19,6 +19,7 @@ DEPS = \
- 	$(top_builddir)/gtk/@gtktargetlib@
+--- gtk/Makefile.in.orig	2004-03-09 16:08:31.000000000 +0100
++++ gtk/Makefile.in
+@@ -1113,7 +1113,7 @@ PROGRAMS = $(bin_PROGRAMS)
  
- LDADDS = @STRIP_BEGIN@ 							\
-+	@LDFLAGS@							\
- 	$(top_builddir)/gdk-pixbuf/libgdk_pixbuf-$(GTK_API_VERSION).la	\
- 	$(top_builddir)/gdk/@gdktargetlib@        			\
- 	$(top_builddir)/gtk/@gtktargetlib@ 				\
+ am_gtk_query_immodules_2_0_OBJECTS = queryimmodules.$(OBJEXT)
+ gtk_query_immodules_2_0_OBJECTS = $(am_gtk_query_immodules_2_0_OBJECTS)
+-gtk_query_immodules_2_0_LDFLAGS =
++gtk_query_immodules_2_0_LDFLAGS = $(PTHREAD_LDFLAGS)
+ 
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
