@@ -1,0 +1,11 @@
+$NetBSD: patch-ac,v 1.1 2000/03/28 21:48:42 dmcmahill Exp $
+
+--- vipec/Makefile.in.orig	Wed Oct 27 20:01:06 1999
++++ vipec/Makefile.in	Mon Mar 27 20:13:59 2000
+@@ -89,5 +89,5 @@
+ LIBSOCKET = @LIBSOCKET@
+ LIBTIFF = @LIBTIFF@
+-LIBTOOL = @LIBTOOL@
++#LIBTOOL = @LIBTOOL@
+ LIBUCB = @LIBUCB@
+ LIBUTIL = @LIBUTIL@
