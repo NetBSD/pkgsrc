@@ -1,9 +1,18 @@
-$NetBSD: patch-bo,v 1.2 2003/03/17 16:07:35 taya Exp $
+$NetBSD: patch-bo,v 1.3 2003/04/27 09:49:06 grant Exp $
 
-diff -ru ../Orig/mozilla/nsprpub/configure.in ./nsprpub/configure.in
---- ../Orig/mozilla/nsprpub/configure.in	2003-01-21 05:49:52.000000000 +0900
-+++ ./nsprpub/configure.in	2003-03-14 16:59:14.000000000 +0900
-@@ -2144,7 +2144,14 @@
+--- nsprpub/configure.in.orig	20 Jan 2003 20:49:52 -0000
++++ nsprpub/configure.in	15 Apr 2003 14:51:35 -0000
+@@ -929,6 +929,9 @@
+     DSO_LDOPTS='-shared -Wl,-soname -Wl,$(notdir $@)'
+     MDCPUCFG_H=_freebsd.cfg
+     PR_MD_CSRCS=freebsd.c
++    if test "$LIBRUNPATH"; then
++        DSO_LDOPTS="$DSO_LDOPTS -Wl,-R$LIBRUNPATH"
++    fi
+     ;;
+ 
+ *-hpux*)
+@@ -2144,7 +2147,14 @@
  	        _PTHREAD_LDFLAGS="-lc_r"
  	    fi
  	    ;;
