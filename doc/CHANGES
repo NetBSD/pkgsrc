@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5189 2004/03/10 13:01:15 taya Exp $
+$NetBSD: CHANGES,v 1.5190 2004/03/10 18:13:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1382,3 +1382,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mozilla-stable to 1.4.1nb3 [taya 2004-03-10]
 	Updated firefox to 0.8nb1 [taya 2004-03-10]
 	Updated firefox-gtk2 to 0.8nb1 [taya 2004-03-10]
+	Updated doclifter to 1.8 [wiz 2004-03-10]
