@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9325 2005/02/26 17:52:45 wiz Exp $
+$NetBSD: CHANGES,v 1.9326 2005/02/26 18:32:29 is Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1152,3 +1152,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gnome-devel to 2.8.3 [jmmv 2005-02-26]
 	Updated p5-WWW-Mechanize to 1.12 [wiz 2005-02-26]
 	Updated p5-File-Temp to 0.16 [wiz 2005-02-26]
+	Added sr-2.3.2 [is 2005-02-26]
+	Added sr-examples-2.3.2 [is 2005-02-26]
