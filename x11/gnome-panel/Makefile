@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/02/18 14:56:04 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/04/20 14:06:43 rh Exp $
 #
 
-DISTNAME=		gnome-panel-2.2.0.1
-PKGREVISION=		2
+DISTNAME=		gnome-panel-2.2.1
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-panel/2.2/}
 EXTRACT_SUFX=		.tar.bz2
@@ -24,14 +23,16 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
+MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 
 EGDIR=			${PREFIX}/share/examples/gnome-panel
 .if defined(PKG_SYSCONFDIR.libgnome)
-CONF_FILES=		${EGDIR}/sound/events/mailcheck2.soundlist \
-			${PKG_SYSCONFDIR.libgnome}/sound/events/mailcheck2.soundlist
+CONF_FILES=		${EGDIR}/sound/events/mailcheck.soundlist \
+			${PKG_SYSCONFDIR.libgnome}/sound/events/mailcheck.soundlist
 .else
-CONF_FILES=		${EGDIR}/sound/events/mailcheck2.soundlist \
-			${PKG_SYSCONFBASE}/sound/events/mailcheck2.soundlist
+CONF_FILES=		${EGDIR}/sound/events/mailcheck.soundlist \
+			${PKG_SYSCONFBASE}/sound/events/mailcheck.soundlist
 .endif
 
 GCONF2_SCHEMAS= 	clock.schemas

@@ -1,42 +1,13 @@
-$NetBSD: patch-ac,v 1.4 2003/02/18 20:52:09 jmmv Exp $
+$NetBSD: patch-ac,v 1.5 2003/04/20 14:06:44 rh Exp $
 
---- applets/gen_util/Makefile.in.orig	2003-02-04 00:29:54.000000000 +0100
+--- applets/gen_util/Makefile.in.orig	2003-03-11 08:54:40.000000000 +1000
 +++ applets/gen_util/Makefile.in
-@@ -182,10 +182,10 @@ PRINTER_BITMAPS = print.xpm
- MAILCHECK_BITMAPS = email.png email-e.png tux-anim.png email-eclouds.png                     email-tiny.png eclouds.png
- 
- 
--mailcheckbitmapsdir = $(datadir)/pixmaps/mailcheck
-+mailcheckbitmapsdir = $(datadir)/pixmaps/mailcheck2
+@@ -186,7 +186,7 @@ MAILCHECK_BITMAPS = email.png email-e.pn
+ mailcheckbitmapsdir = $(datadir)/pixmaps/mailcheck
  mailcheckbitmaps_DATA = $(MAILCHECK_BITMAPS)
  
 -soundlistdir = $(sysconfdir)/sound/events
 +soundlistdir = $(datadir)/examples/gnome-panel/sound/events
  soundlist_in_files = mailcheck.soundlist.in
  soundlist_DATA = $(soundlist_in_files:.soundlist.in=.soundlist)
- 
-@@ -197,7 +197,7 @@ serverdir = $(libdir)/bonobo/servers
- server_in_files = GNOME_GenUtilApplet_Factory.server.in
- server_DATA = $(server_in_files:.server.in=.server)
- 
--schemasdir = $(sysconfdir)/gconf/schemas
-+schemasdir = $(datadir)/gconf/schemas
- schemas_in_files = mailcheck.schemas.in				   pager.schemas.in				   tasklist.schemas.in				   clock.schemas.in
- 
- schemas_DATA = $(schemas_in_files:.schemas.in=.schemas)
-@@ -423,12 +423,13 @@ install-soundlistDATA: $(soundlist_DATA)
- 	@$(NORMAL_INSTALL)
- 	$(mkinstalldirs) $(DESTDIR)$(soundlistdir)
- 	@list='$(soundlist_DATA)'; for p in $$list; do \
-+	inst=`echo "$$p" | sed s/mailcheck/mailcheck2/`; \
- 	  if test -f $(srcdir)/$$p; then \
- 	    echo " $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(soundlistdir)/$$p"; \
--	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(soundlistdir)/$$p; \
-+	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(soundlistdir)/$$inst; \
- 	  else if test -f $$p; then \
- 	    echo " $(INSTALL_DATA) $$p $(DESTDIR)$(soundlistdir)/$$p"; \
--	    $(INSTALL_DATA) $$p $(DESTDIR)$(soundlistdir)/$$p; \
-+	    $(INSTALL_DATA) $$p $(DESTDIR)$(soundlistdir)/$$inst; \
- 	  fi; fi; \
- 	done
  
