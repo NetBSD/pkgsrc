@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2002/11/18 08:19:37 martti Exp $
+# $NetBSD: Makefile,v 1.114 2002/11/18 10:36:35 tron Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -188,8 +188,8 @@ post-install:
 		${RM} -f ${PKG_SYSCONFDIR}/$${file}.default;		\
 	done
 	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/share/httpd/htdocs
-	${CHMOD} 0 ${PREFIX}/libexec/cgi-bin/printenv
-	${CHMOD} 0 ${PREFIX}/libexec/cgi-bin/test-cgi
+	${CHMOD} ${NONBINMODE} ${PREFIX}/libexec/cgi-bin/printenv \
+	  ${NONBINMODE} ${PREFIX}/libexec/cgi-bin/test-cgi
 
 .include "../../devel/libmm/buildlink2.mk"
 .include "../../textproc/expat/buildlink2.mk"
