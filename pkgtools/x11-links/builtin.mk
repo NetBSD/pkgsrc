@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2004/07/24 07:00:39 grant Exp $
+# $NetBSD: builtin.mk,v 1.6 2005/03/05 18:16:21 wiz Exp $
 
 .if !defined(XF86_VERSION)
 .  if exists(${X11BASE}/lib/X11/config/xorg.cf)
@@ -51,11 +51,3 @@ BUILDLINK_VARS+=	XF86_VERSION
 .endif
 
 USE_BUILTIN.x11-links?=	no
-
-# Xrandr won't build without the X Extension library which is only present
-# in XFree86>=4.3; ignore it when checking dependencies or buildlinking.
-#
-.if !exists(${X11BASE}/include/X11/extensions/extutil.h)
-IGNORE_PKG.Xrandr=	yes
-IGNORE_PKG.randrext=	yes
-.endif
