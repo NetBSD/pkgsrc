@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/08/20 15:17:24 tsarna Exp $
+# $NetBSD: Makefile,v 1.13 1998/08/23 20:49:18 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -40,7 +40,7 @@ ASMFLAG=	-DASM
 .elif ${MACHINE_ARCH} == "m68k"
 .ifdef M68060
 OBJS_EXT=
-ASMFLAG=	-m68060 -DPORTABLE -DMPORTABLE 
+ASMFLAG=	-m68060 -DPORTABLE -DMPORTABLE
 .else
 OBJS_EXT=	mc68020.o
 ASMFLAG=
