@@ -1,4 +1,4 @@
-# $NetBSD: sunpro-cc-post-logic,v 1.2 2003/09/02 07:00:03 jlam Exp $
+# $NetBSD: sunpro-cc-post-logic,v 1.3 2004/01/06 08:48:29 jlam Exp $
 #
 # Silently accept some GCC compiler arguments by silently converting
 # them to the SunPro compiler equivalents.  This makes the SunPro
@@ -6,6 +6,21 @@
 # nowadays.
 
 case $arg in
+-O[12345])
+	# SunPro can handle -xO<n> (n={1|2|3|4|5}), so optimistically
+	# convert those GCC -O<n> values to -xO<n>.
+	#
+	arg=`$echo "X$arg" | $Xsed -e "s|^-O|-xO|g"`
+	addtoprivatecache=yes
+	;;
+-O?*)
+	# Siliently ignore all other -O* options, except for "-O",
+	# which SunPro interprets as asking for the default
+	# optimization level.
+	#
+	arg=
+	addtoprivatecache=yes
+	;;
 -Werror)
 	# "-errwarn" is the right way to convince the SunPro compiler
 	# to stop on compilation warnings.
