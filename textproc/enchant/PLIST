@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/17 21:11:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/26 18:19:47 wiz Exp $
 bin/enchant
 bin/enchant-lsmod
 include/enchant/enchant++.h
@@ -7,23 +7,24 @@ include/enchant/enchant.h
 lib/enchant/libenchant_aspell.a
 lib/enchant/libenchant_aspell.la
 lib/enchant/libenchant_aspell.so
-lib/enchant/libenchant_aspell.so.4
-lib/enchant/libenchant_aspell.so.4.0
+lib/enchant/libenchant_aspell.so.2
+lib/enchant/libenchant_aspell.so.2.3
 lib/enchant/libenchant_ispell.a
 lib/enchant/libenchant_ispell.la
 lib/enchant/libenchant_ispell.so
-lib/enchant/libenchant_ispell.so.4
-lib/enchant/libenchant_ispell.so.4.0
+lib/enchant/libenchant_ispell.so.2
+lib/enchant/libenchant_ispell.so.2.3
 lib/enchant/libenchant_myspell.a
 lib/enchant/libenchant_myspell.la
 lib/enchant/libenchant_myspell.so
-lib/enchant/libenchant_myspell.so.4
-lib/enchant/libenchant_myspell.so.4.0
+lib/enchant/libenchant_myspell.so.2
+lib/enchant/libenchant_myspell.so.2.3
 lib/libenchant.a
 lib/libenchant.la
 lib/libenchant.so
-lib/libenchant.so.4
-lib/libenchant.so.4.0
+lib/libenchant.so.2
+lib/libenchant.so.2.3
 lib/pkgconfig/enchant.pc
+man/man1/enchant.1
 @dirrm lib/enchant
 @dirrm include/enchant
