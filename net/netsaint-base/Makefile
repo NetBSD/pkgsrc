@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/03/14 00:43:09 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2002/03/22 11:00:34 rh Exp $
 #
 
 DISTNAME=	netsaint-0.0.6
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://netsaint.sourceforge.net/download/
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.netsaint.org/
 COMMENT=	network monitor
 
