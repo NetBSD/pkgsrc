@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2004/03/16 08:50:38 tron Exp $
+# $NetBSD: Makefile,v 1.42 2004/03/16 14:04:44 tron Exp $
 
 DISTNAME=		gnome-vfs-1.0.5
-PKGREVISION=		6
+PKGREVISION=		5
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-vfs/1.0/}
 
@@ -26,7 +26,6 @@ CONFIGURE_ARGS.gnu-iconv=	--with-libiconv=yes
 
 .include "../../archivers/bzip2/buildlink2.mk"
 .include "../../converters/libiconv/buildlink2.mk"
-.include "../../databases/db4/buildlink2.mk"
 .include "../../databases/gnome-mime-data/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
