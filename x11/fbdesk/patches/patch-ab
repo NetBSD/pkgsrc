@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1 2004/09/24 19:06:39 reed Exp $
+
+--- src/FbTk/FbPixmap.cc.orig   Mon Sep 20 03:26:19 2004
++++ src/FbTk/FbPixmap.cc
+@@ -23,2 +23,4 @@
+
++#include <stdio.h>
++
+ #include "FbPixmap.hh"
+
