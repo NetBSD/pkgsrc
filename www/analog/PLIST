@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/11/08 08:27:02 tron Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/02/13 13:03:13 tron Exp $
 bin/analog
 etc/analog.cfg.default
 @exec test -f %D/etc/analog.cfg || cp -p %D/%F %D/etc/analog.cfg
@@ -259,6 +259,8 @@ lib/analog/lang/yu.lng
 lib/analog/lang/yua.lng
 lib/analog/lang/yudom.tab
 man/man1/analog.1
+share/doc/analog/LicBSD.txt
+share/doc/analog/Licapach.txt
 share/doc/analog/Licence.txt
 share/doc/analog/Licgd.txt
 share/doc/analog/Licpcre.txt
