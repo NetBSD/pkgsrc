@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 09:54:25 wiz Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 08:45:12 agc Exp $
 
 SHA1 (gdmodule.c) = 1173fcd1e8dbe06d250d7c501317b5d5fe30fc68
+RMD160 (gdmodule.c) = a07e85accbee1664f4aeb0d0beef494efde22f40
 Size (gdmodule.c) = 27972 bytes
 SHA1 (patch-aa) = e441bafbcc19c4890c3e473b5510e07c41e5889e

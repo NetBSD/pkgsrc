@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.4 2005/02/18 03:51:07 jschauma Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 08:45:12 agc Exp $
 
 SHA1 (rad3R6P1.tar.gz) = 71f46abd1c30be282a93237fa0c162d3bf0b1f99
+RMD160 (rad3R6P1.tar.gz) = 3bcf40518a57cdb5455264c83a3e206b67b3d1fa
 Size (rad3R6P1.tar.gz) = 7115997 bytes
 SHA1 (rad3R6P1supp.tar.gz) = 8a13227eae507a7a4947a49b6aa741c95198ed4e
+RMD160 (rad3R6P1supp.tar.gz) = 9581a9f979044399e528114875c818b1de2f54ae
 Size (rad3R6P1supp.tar.gz) = 4632166 bytes
 SHA1 (patch-aa) = a80bd880e1b293240e9a5d712dc318a9fdc1d272
 SHA1 (patch-ab) = 5d06bcf2216ed084a757724045391bfbe05d56d2

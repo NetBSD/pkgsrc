@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/08/24 12:39:49 drochner Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 08:45:07 agc Exp $
 
 SHA1 (h5utils-1.9.1.tar.gz) = 052c64d79826337a5449df0ad4720dfc3b55cdbd
+RMD160 (h5utils-1.9.1.tar.gz) = e821cd728e6d02912e1d8f577995a32c1ff34173
 Size (h5utils-1.9.1.tar.gz) = 131897 bytes

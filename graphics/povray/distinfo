@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2004/11/18 16:15:35 adam Exp $
+$NetBSD: distinfo,v 1.10 2005/02/24 08:45:12 agc Exp $
 
 SHA1 (povray-3.6.1.tar.bz2) = 1fab3ccbdedafbf77e3a66087709bbdf60bc643d
+RMD160 (povray-3.6.1.tar.bz2) = 84ba679da66089f192cc1bfcf8bdd498e736a9a3
 Size (povray-3.6.1.tar.bz2) = 8200160 bytes
 SHA1 (patch-aa) = 351e2eb509cdb3e95c788de5f9ff41c993d4363d
 SHA1 (patch-ad) = 7c3436957fc4451e12302a6c4884c0fce963d78a

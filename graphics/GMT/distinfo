@@ -1,20 +1,28 @@
-$NetBSD: distinfo,v 1.9 2003/05/01 11:31:46 kivinen Exp $
+$NetBSD: distinfo,v 1.10 2005/02/24 08:45:01 agc Exp $
 
 SHA1 (GMT3.4/GMT3.4_progs.tar.bz2) = b9fa8f60fe20ff9509ef3ebdf15fcc74e01d3f95
+RMD160 (GMT3.4/GMT3.4_progs.tar.bz2) = efa76d4066070af694ec106c3d85d374af085e78
 Size (GMT3.4/GMT3.4_progs.tar.bz2) = 551406 bytes
 SHA1 (GMT3.4/GMT3.4_suppl.tar.bz2) = 9e961d24d804e71c9b4f32bce729899c56dde360
+RMD160 (GMT3.4/GMT3.4_suppl.tar.bz2) = 4e41ebb883627c127339eafc90b5ff1b5e6ef3df
 Size (GMT3.4/GMT3.4_suppl.tar.bz2) = 534636 bytes
 SHA1 (GMT3.4/GMT_share.tar.bz2) = 3d3d5cfd75ad3499454dcc902f63099ff1b2cc2c
+RMD160 (GMT3.4/GMT_share.tar.bz2) = 85d424770771c58a4a997b662e857f188b0da0e8
 Size (GMT3.4/GMT_share.tar.bz2) = 3662062 bytes
 SHA1 (GMT3.4/GMT3.4_ps.tar.bz2) = 5490ad074e8801c1b1dc85108d3ebf3c0d2b1746
+RMD160 (GMT3.4/GMT3.4_ps.tar.bz2) = 25b3fa9d3c5699d70a83af4726af7c5758a26f5a
 Size (GMT3.4/GMT3.4_ps.tar.bz2) = 3140145 bytes
 SHA1 (GMT3.4/GMT3.4_man.tar.bz2) = 3f33b1eee6c47faf3f8d2d6c7efb27b57b88c303
+RMD160 (GMT3.4/GMT3.4_man.tar.bz2) = 57d646a44730f49aac28c46dcdd59116232c85a7
 Size (GMT3.4/GMT3.4_man.tar.bz2) = 86015 bytes
 SHA1 (GMT3.4/GMT3.4_tut.tar.bz2) = 64476de1f504a3561574705a52cd87fee82dae67
+RMD160 (GMT3.4/GMT3.4_tut.tar.bz2) = b0b637fe182f94d3d0c5011f7536c49153896076
 Size (GMT3.4/GMT3.4_tut.tar.bz2) = 986173 bytes
 SHA1 (GMT3.4/GMT3.4_scripts.tar.bz2) = a0013ce9141cb668df1af5025ac54cb09fab6b7c
+RMD160 (GMT3.4/GMT3.4_scripts.tar.bz2) = 018366561664a9acaec3e9e0fb1fb14aa138684a
 Size (GMT3.4/GMT3.4_scripts.tar.bz2) = 3050798 bytes
 SHA1 (GMT3.4/GMT3.4_web.tar.bz2) = efbde777b67d45cf706b680f23c0171bc983c4e3
+RMD160 (GMT3.4/GMT3.4_web.tar.bz2) = a428c198fcc7de3a6f380717634b14c1952d4218
 Size (GMT3.4/GMT3.4_web.tar.bz2) = 1644571 bytes
 SHA1 (patch-aa) = b36fa4900d8f27b1c9663172ccf95b8810f0afcc
 SHA1 (patch-ab) = 51e6616f5c08c7e1f0ae414f310b01e42c90e91f

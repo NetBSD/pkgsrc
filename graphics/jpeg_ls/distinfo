@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/21 21:29:08 wiz Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 08:45:08 agc Exp $
 
 SHA1 (jpeg_ls_v2.2.tar.gz) = d4fde989359eebdc98cf57feeac3076fdfd06c64
+RMD160 (jpeg_ls_v2.2.tar.gz) = e0879e170ee18fae46d148c711a8b5a398586cd9
 Size (jpeg_ls_v2.2.tar.gz) = 854276 bytes
 SHA1 (patch-aa) = 0b6996179e458c785043aa728600bdc56d96baaf
 SHA1 (patch-ab) = e87c51ca50be30ae6c07094fd935fedee8a1a2f5

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2004/01/20 10:18:25 agc Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 08:45:11 agc Exp $
 
 SHA1 (plplot-5.2.1.tar.gz) = e69c4e2a22409f23e0c9f40f7d5cac7dda5d4ec2
+RMD160 (plplot-5.2.1.tar.gz) = 69454a0d9cb217719179dfccc259cb122ca3d544
 Size (plplot-5.2.1.tar.gz) = 4625477 bytes
 SHA1 (patch-aa) = cdc22b1371b42364d03adaf0f338267d9d724689
 SHA1 (patch-ab) = 9edefeed3f64d1ae01b85009af289de59e281a44

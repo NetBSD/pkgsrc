@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/07 08:13:56 hamajima Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 08:45:04 agc Exp $
 
 SHA1 (cnxtutil-0.00-alpha.tar.gz) = bd151410026a307562ed928d72feb8aa57b2cb51
+RMD160 (cnxtutil-0.00-alpha.tar.gz) = a9ef8504c8254c2f6e99cea2a1345dcdc48a6bda
 Size (cnxtutil-0.00-alpha.tar.gz) = 21087 bytes
 SHA1 (patch-aa) = 18829cc00accda0e31144def1e6180f981cfb500

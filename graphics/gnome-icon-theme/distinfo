@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.7 2004/09/21 16:48:38 jmmv Exp $
+$NetBSD: distinfo,v 1.8 2005/02/24 08:45:06 agc Exp $
 
 SHA1 (gnome-icon-theme-2.8.0.tar.bz2) = 9ebd540a0b2165c25f50ef5ca07f9f9154dc7f12
+RMD160 (gnome-icon-theme-2.8.0.tar.bz2) = 597d4e89b74b831293a4ebae873abc8802c356ab
 Size (gnome-icon-theme-2.8.0.tar.bz2) = 2867812 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2004/08/29 16:44:48 kim Exp $
+$NetBSD: distinfo,v 1.8 2005/02/24 08:45:12 agc Exp $
 
 SHA1 (pngcrush-1.5.10.tar.gz) = 469e41c2fdf5fefd307119643616d8d2c86e35b4
+RMD160 (pngcrush-1.5.10.tar.gz) = 78b3b01fc05ec87b003b7492931f1d2cf8b433cd
 Size (pngcrush-1.5.10.tar.gz) = 313220 bytes
 SHA1 (patch-aa) = e0c26f3cb2eb01c7f11f7cfb1b575d3c5ab71361

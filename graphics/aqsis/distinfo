@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2004/05/25 21:13:26 kristerw Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 08:45:03 agc Exp $
 
 SHA1 (aqsis-0.6.4.tar.gz) = 7a8e10db5502907840d8d2f4269eb3b489875dd4
+RMD160 (aqsis-0.6.4.tar.gz) = d2b034e05d47e31aa040471be37b34750154e6e5
 Size (aqsis-0.6.4.tar.gz) = 857020 bytes
 SHA1 (patch-aa) = c7d5c7f758d3b9faa2d0f98ac4baeb284c343829
 SHA1 (patch-ab) = 2f0f878996aa551a35c65d90299162e13661cbab

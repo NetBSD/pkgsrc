@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/10/05 09:55:18 taca Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 08:45:13 agc Exp $
 
 SHA1 (ruby/ruby-GD-0.7.4-1.tar.gz) = 87ad45f8b224ab2abb87d289112a245f58b16218
+RMD160 (ruby/ruby-GD-0.7.4-1.tar.gz) = a1d941cc44c22f25cff0ee964c8dcb6eb00f9749
 Size (ruby/ruby-GD-0.7.4-1.tar.gz) = 38725 bytes

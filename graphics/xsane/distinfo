@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.9 2004/11/05 13:54:03 adam Exp $
+$NetBSD: distinfo,v 1.10 2005/02/24 08:45:15 agc Exp $
 
 SHA1 (xsane-0.96.tar.gz) = fdac7ee389dba73142d68b32689882a297a1f10a
+RMD160 (xsane-0.96.tar.gz) = 66b281f10a3d87dc4fc880c8889725cc15ca1e32
 Size (xsane-0.96.tar.gz) = 3173665 bytes

@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.4 2004/11/25 16:31:05 ben Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 08:45:05 agc Exp $
 
 SHA1 (gfract-0.30.tar.gz) = fb8603fd32fe2aae90c51f0b75efec66411093c2
+RMD160 (gfract-0.30.tar.gz) = 8d4594fecd6bf6ba976ea15b69b9c0a95bccae52
 Size (gfract-0.30.tar.gz) = 32384 bytes
 SHA1 (gfract-palettes-0.1.tar.gz) = f05e06e6012e1b1526e0c796ca7f6617fca8ab7d
+RMD160 (gfract-palettes-0.1.tar.gz) = 3430c31cb5cb2317a02b1e2cf506c5ffa9601a7c
 Size (gfract-palettes-0.1.tar.gz) = 223648 bytes
 SHA1 (patch-aa) = 5b865c0ce7cf35cd4920ce07f42a5acc1732c3df

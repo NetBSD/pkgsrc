@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.2 2004/03/07 08:23:14 hamajima Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 08:45:12 agc Exp $
 
 SHA1 (qce-ga-0.40d.tar.gz) = 508b74d3d839b4a837a5fa1fbb0f48678e9b0bad
+RMD160 (qce-ga-0.40d.tar.gz) = 4c1cd898e75e30a654b9a8979d4c61f915f8bb23
 Size (qce-ga-0.40d.tar.gz) = 40715 bytes
 SHA1 (qce-ga-bsd-0.04.patch.gz) = 3984481734d308545f12451748b3e45ff03b11a0
+RMD160 (qce-ga-bsd-0.04.patch.gz) = 3febc74b1f8034aca58d8bcd40522b294394878d
 Size (qce-ga-bsd-0.04.patch.gz) = 17623 bytes
 SHA1 (patch-aa) = 9b717ed225e9f6d2334ba2122a4ff764e789f074
