@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2004/02/13 22:15:33 snj Exp $
+$NetBSD: distinfo,v 1.18 2004/03/28 01:14:04 snj Exp $
 
-SHA1 (naim-0.11.6.6.tar.bz2) = 62eb3f251dba31a9616b4b4cf50627f8c465cf86
-Size (naim-0.11.6.6.tar.bz2) = 542162 bytes
+SHA1 (naim-0.11.6.7.tar.bz2) = edaf9d8b2f97caeb189f2c336b367de87cc45abb
+Size (naim-0.11.6.7.tar.bz2) = 542312 bytes
