@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5413 2004/04/01 19:45:52 abs Exp $
+$NetBSD: CHANGES,v 1.5414 2004/04/02 07:42:45 rh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1742,4 +1742,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome-extras to 2.6.0 [jmmv 2004-04-01]
 	Updated cpuflags to 0.64 [abs 2004-04-01]
 	Updated cpuflags to 0.65 [abs 2004-04-01]
-
+	Added Addresses-0.4.5 [rh 2004-04-02]
