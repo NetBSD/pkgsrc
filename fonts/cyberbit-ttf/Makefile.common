@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2002/08/11 15:54:57 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.2 2002/08/12 11:36:21 wiz Exp $
 
 DISTNAME=	# empty
 CATEGORIES=	fonts
@@ -20,8 +20,6 @@ NO_BIN_ON_FTP=  ${RESTRICTED}
 DOC_FILES=	License.wri Orders.wri ReadMe.htm Readme.wri
 
 DIST_SUBDIR=	cyberbit-ttf
-
-DESCR_SRC=	${.CURDIR}/../cyberbit-ttf/DESCR
 
 EXTRACT_CMD=	${LOCALBASE}/bin/unzip -Laq $${extract_file}
 EXTRACT_ONLY=	${FONT_FILE}
