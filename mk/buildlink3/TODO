@@ -1,4 +1,10 @@
-$NetBSD: TODO,v 1.3 2004/01/20 22:16:02 snj Exp $
+$NetBSD: TODO,v 1.4 2004/02/16 20:50:50 jlam Exp $
+
+TODO items
+==========
+
+* Teach linkfarm to do tree-folding a la GNU stow.
+* Correct handling of pkgconfig *.pc files.
 
 Package views integration plan:
 ==============================
