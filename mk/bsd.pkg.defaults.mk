@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.251 2004/06/20 02:52:56 xtraeme Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.252 2004/06/20 20:57:17 xtraeme Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -999,16 +999,6 @@ GOLEM_WITH_SOUND?=	NO
 # "--enable-ne-scan=0x300" to let the boot loader search for an NE 2000 ISA
 # card at I/O offset 0x300.
 # Default: not defined
-
-GRUB_USE_ISO9660?=	NO
-# This option will add support for the ISO9660 filesystem to GRUB.
-# Possible: yes or no.
-# Default: no.
-
-GRUB_USE_UFS2?=		NO
-# This option will add support for the UFS2 filesystem to GRUB.
-# Possible: yes or no.
-# Default: no.
 
 ICECAST_CHROOTDIR?=	  ${VARBASE}/chroot/icecast
 # Used in icecast2 to specify the chroot directory in which icecast
