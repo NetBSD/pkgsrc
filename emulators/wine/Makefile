@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/03/15 04:10:20 junyoung Exp $
+# $NetBSD: Makefile,v 1.26 2002/04/05 20:20:26 kent Exp $
 
 DISTNAME=		Wine-20020228
 PKGNAME=		wine-20020228
@@ -10,7 +10,7 @@ MAINTAINER=		junyoung@netbsd.org
 HOMEPAGE=		http://www.winehq.com/
 COMMENT=		Free implementation of Windows on Unix (still alpha)
 
-ONLY_FOR_PLATFORM=	NetBSD-1.[5-9]*-i386
+ONLY_FOR_PLATFORM=	NetBSD-1.5Z*-i386 NetBSD-1.[6-9]*-i386
 
 USE_BUILDLINK_ONLY=	YES
 USE_GMAKE=		YES
