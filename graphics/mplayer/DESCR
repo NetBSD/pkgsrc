@@ -9,6 +9,6 @@ you can use GGI and SDL (and this way all their drivers) and some
 lowlevel card-specific drivers (for Matrox, 3Dfx, and Radeon) too!
 Most of them support software or hardware scaling, so you can
 enjoy movies in fullscreen. It also sports nice big antialiased
-shaded subtitles (10 supported  types) with european/ISO 8859-1,
+shaded subtitles (10 supported types) with european/ISO 8859-1,
 2 (hungarian, english, czech, etc), cyrillic, korean fonts, and
 OSD.
