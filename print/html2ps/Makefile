@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/09/22 21:02:51 kim Exp $
+# $NetBSD: Makefile,v 1.11 2003/10/08 10:08:00 taca Exp $
 #
 
 DISTNAME=	html2ps-1.0b1
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.tdb.uu.se/~jan/html2ps.html
 COMMENT=	HTML to PostScript converter
 
 DEPENDS+=	ImageMagick>=5.3.9nb1:../../graphics/ImageMagick
-DEPENDS+=	jpeg-6b:../../graphics/jpeg
+DEPENDS+=	jpeg>=6b:../../graphics/jpeg
 DEPENDS+=	p5-PerlMagick-[0-9]*:../../graphics/p5-PerlMagick
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	teTeX{,2}-bin>=1.0.6:../../print/teTeX-bin
