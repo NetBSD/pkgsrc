@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1.1.1 1999/06/12 20:22:53 kleink Exp $
+
+--- x11/Makefile.in.orig	Tue Apr 21 05:21:21 1998
++++ x11/Makefile.in	Wed Jun  9 00:38:37 1999
+@@ -11,7 +11,7 @@
+ exec_prefix = $(prefix)
+ bindir = $(exec_prefix)/bin
+ libdir = $(exec_prefix)/lib
+-datadir = $(prefix)/lib/xconqdir
++datadir = $(prefix)/share/xconq
+ mandir = $(prefix)/man
+ man6dir = $(mandir)/man6
+ infodir = $(prefix)/info
+@@ -35,7 +35,7 @@
+ SHELL = /bin/sh
+ 
+ INSTALL = install -c
+-INSTALL_PROGRAM = $(INSTALL)
++INSTALL_PROGRAM = $(INSTALL) -s
+ INSTALL_DATA = $(INSTALL)
+ 
+ CC = cc

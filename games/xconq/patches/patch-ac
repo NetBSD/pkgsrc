@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/06/12 20:22:53 kleink Exp $
+
+--- SelFile/SelFile.c.orig	Wed Jul  1 06:27:39 1998
++++ SelFile/SelFile.c	Tue Jun  8 22:02:47 1999
+@@ -44,7 +44,7 @@
+ #include <stdio.h>
+ #include <errno.h>
+ 
+-#if !defined(__GLIBC__) && !defined(__FreeBSD__)
++#if !defined(__GLIBC__) && !defined(__FreeBSD__) && !defined(__NetBSD__)
+ /* BSD 4.3 errno.h does not declare errno */
+ extern int errno;
+ extern int sys_nerr;
