@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.27 2005/01/12 16:42:13 jschauma Exp $
+# $NetBSD: bootstrap,v 1.28 2005/01/16 02:56:24 grant Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -469,7 +469,7 @@ fi
 # export the proper environment
 PATH=$prefix/bin:$prefix/sbin:${PATH}; export PATH
 if [ -d /usr/ccs/bin -a -x /usr/ccs/bin/make ]; then
-	PATH=/usr/ccs/bin:$PATH; export PATH
+	PATH=${PATH}:/usr/ccs/bin; export PATH
 fi
 PKG_DBDIR=$pkgdbdir; export PKG_DBDIR
 LOCALBASE=$prefix; export LOCALBASE
