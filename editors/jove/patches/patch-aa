@@ -1,0 +1,68 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/03/06 22:07:50 agc Exp $
+
+--- Makefile.orig	Thu Mar  4 14:54:17 1999
++++ Makefile	Thu Mar  4 15:59:51 1999
+@@ -27,16 +27,20 @@
+ # LIBDIR and SHAREDIR.  All others must already exist.
+ 
+ SHELL = /bin/sh
+-TMPDIR = /usr/tmp
+-RECDIR = /usr/preserve
++TMPDIR = /var/tmp
++RECDIR = /var/preserve
+ 
++.if defined(LOCALBASE)
++JOVEHOME = $(LOCALBASE)
++.else
+ JOVEHOME = /usr/local
+-SHAREDIR = $(JOVEHOME)/lib/jove
++.endif
++SHAREDIR = $(JOVEHOME)/share/jove
+ LIBDIR = $(JOVEHOME)/lib/jove
+ BINDIR = $(JOVEHOME)/bin
+ MANDIR = $(JOVEHOME)/man/man$(MANEXT)
+ MANEXT = 1
+-DFLTSHELL = /bin/csh
++DFLTSHELL = /bin/sh
+ 
+ # The install commands of BSD and System V differ in unpleasant ways:
+ # -c: copy (BSD); -c dir: destination directory (SysV)
+@@ -47,15 +51,15 @@
+ # "cp" will work reasonably well, but be aware that any links continue
+ # referencing the old file with new contents.
+ 
+-INSTALLFLAGS = # -g bin -o root
++INSTALLFLAGS = -g wheel -o root
+ 
+ # to install executable files
+-XINSTALL=cp
+-#XINSTALL=/usr/ucb/install $(INSTALLFLAGS) -c -m 755 # -s
++#XINSTALL=cp
++XINSTALL=/usr/bin/install $(INSTALLFLAGS) -c -m 755 # -s
+ 
+ # to install text files
+-TINSTALL=cp
+-#TINSTALL=/usr/ucb/install $(INSTALLFLAGS) -c -m 644
++#TINSTALL=cp
++TINSTALL=/usr/bin/install $(INSTALLFLAGS) -c -m 644
+ 
+ # These should all just be right if the above ones are.
+ # You will confuse JOVE if you move anything from LIBDIR or SHAREDIR.
+@@ -79,7 +83,7 @@
+ # compiler, adding -Xa -v will increase compiler checking.
+ # On DEC OSF/1, -std1 -O
+ 
+-OPTFLAGS = -O
++OPTFLAGS = -O2
+ 
+ # For making dependencies under BSD systems
+ DEPENDFLAG = -M
+@@ -163,7 +167,7 @@
+ #
+ # You can just say 'make SYSDEFS=-Dwhatever' on these systems.
+ 
+-SYSDEFS =
++SYSDEFS = -DBSDPOSIX
+ 
+ # for SCO Xenix, set
+ #	MEMFLAGS = -Mle
