@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8862 2005/01/22 08:38:01 jdolecek Exp $
+$NetBSD: CHANGES,v 1.8863 2005/01/22 09:28:59 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -485,3 +485,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated cqcam to 0.45anb2 [minskim 2005-01-22]
 	Updated XF86Setup to 3.3.6nb2 [minskim 2005-01-22]
 	Updated ImageMagick to 6.1.9-1 [jdolecek 2005-01-22]
+	Updated 3ddesktop to 0.2.8 [xtraeme 2005-01-22]
