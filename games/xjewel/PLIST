@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:56:55 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/13 22:33:33 skrll Exp $
 bin/xjewel
 man/cat6/xjewel.0
-@exec touch /var/games/xjewel.scores && chown games:games /var/games/xjewel.scores && chmod 664 /var/games/xjewel.scores
+@exec touch /var/games/xjewel.scores && ${CHOWN} games:games /var/games/xjewel.scores && ${CHMOD} 664 /var/games/xjewel.scores
