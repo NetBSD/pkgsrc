@@ -1,0 +1,12 @@
+$NetBSD: patch-ah,v 1.1 2003/09/28 05:27:30 grant Exp $
+
+--- configure.orig	2003-02-11 14:19:48.000000000 +1100
++++ configure
+@@ -501,7 +501,6 @@ while [ "$#" -gt 0 ]; do
+ 	    CFG_EXCEPTION_SUPPORT=no
+ 	    QMAKE_VARS="$QMAKE_VARS \"QMAKE_CFLAGS+=-fno-exceptions\""
+ 	    QMAKE_VARS="$QMAKE_VARS \"QMAKE_CXXFLAGS+=-fno-exceptions\""
+-	    QMAKE_VARS="$QMAKE_VARS \"QMAKE_LFLAGS+=-fno-exceptions\""
+ 	else
+ 	    UNKNOWN_OPT=yes
+ 	fi
