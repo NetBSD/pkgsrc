@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2001/07/13 07:09:20 jlam Exp $
+# $NetBSD: Makefile,v 1.61 2001/07/13 16:08:40 taca Exp $
 
-DISTNAME=		samba-2.2.0a
-PKGNAME=		samba-2.2.0nb2
+DISTNAME=		samba-2.2.1a
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.samba.org/pub/samba/ \
@@ -32,6 +31,7 @@ SAMBA_LOGDIR=		/var/log
 SAMBA_LOCKDIR=		/var/run/samba
 SAMBA_ETCDIR?=		/etc/samba
 SAMBA_PRIVATE?=		${SAMBA_ETCDIR}/private
+SAMBA_SHARE?=		${PREFIX}/share
 
 MAKE_ENV+=		ETCDIR=${SAMBA_ETCDIR}
 MAKE_ENV+=		LOGDIR=${SAMBA_LOGDIR}
@@ -39,9 +39,11 @@ MAKE_ENV+=		LOGDIR=${SAMBA_LOGDIR}
 CONFIGURE_ARGS+=	--localstatedir=${SAMBA_LOGDIR}
 CONFIGURE_ARGS+=	--sbindir=${PREFIX}/sbin
 CONFIGURE_ARGS+=	--with-configdir=${SAMBA_ETCDIR}
+CONFIGURE_ARGS+=	--with-codepagedir=${SAMBA_SHARE}/samba/codepages
+CONFIGURE_ARGS+=	--with-datadir=${SAMBA_SHARE}
 CONFIGURE_ARGS+=	--with-lockdir=${SAMBA_LOCKDIR}
 CONFIGURE_ARGS+=	--with-privatedir=${SAMBA_PRIVATE}
-CONFIGURE_ARGS+=	--with-swatdir=${PREFIX}/share/swat
+CONFIGURE_ARGS+=	--with-swatdir=${SAMBA_SHARE}/samba/swat
 
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-ssl
@@ -68,6 +70,7 @@ DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 
 DOCDIR=			${PREFIX}/share/doc/samba
 HTMLDIR=		${PREFIX}/share/doc/html/samba
+EXAMPLESDIR=		${PREFIX}/share/examples/samba
 
 FILES_SUBST=		SAMBA_PRIVATE=${SAMBA_PRIVATE}
 FILES_SUBST+=		SAMBA_LOCKDIR=${SAMBA_LOCKDIR}
@@ -86,9 +89,12 @@ FILES_SUBST+=		RMDIR=${RMDIR:Q}
 FILES_SUBST+=		TRUE=${TRUE:Q}
 FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
+MESSAGE_SUBST+=		ETCDIR=${SAMBA_ETCDIR}
+
 post-extract:
 	${FIND} ${WRKDIR}/${DISTNAME} -name ".cvsignore" -print0 |	\
 		${XARGS} -0 ${RM} -f
+	${RM} -r ${WRKDIR}/${DISTNAME}/docs/textdocs/outdated
 
 pre-install:
 	for file in nmbd.sh smbd.sh; do					\
@@ -96,6 +102,7 @@ pre-install:
 			${FILESDIR}/$${file} > ${WRKDIR}/$${file};	\
 	done
 	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 
 post-install:
@@ -106,13 +113,14 @@ post-install:
 		${INSTALL_DATA} faq/*.html ${HTMLDIR}
 
 	# Install Samba examples.
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/samba
-	${CP} -R ${WRKDIR}/${DISTNAME}/examples/* ${PREFIX}/share/examples/samba
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/examples/samba
-	${CHMOD} -R ugo-w ${PREFIX}/share/examples/samba
+	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
+	${CP} -R ${WRKDIR}/${DISTNAME}/examples/* ${EXAMPLESDIR}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${EXAMPLESDIR}
+	${CHMOD} -R ugo-w ${EXAMPLESDIR}
 
 	${INSTALL_SCRIPT} ${WRKDIR}/nmbd.sh ${PREFIX}/etc/rc.d/nmbd
 	${INSTALL_SCRIPT} ${WRKDIR}/smbd.sh ${PREFIX}/etc/rc.d/smbd
+	${INSTALL_SCRIPT} ${WRKSRC}/script/convert_smbpasswd ${PREFIX}/sbin
 	${INSTALL_SCRIPT} ${WRKSRC}/script/mksmbpasswd.sh		\
 		${PREFIX}/sbin/mksmbpasswd
 
