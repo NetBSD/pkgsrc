@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.1.1.1 2000/05/07 02:04:35 jlam Exp $
+$NetBSD: patch-ah,v 1.2 2001/12/20 22:31:10 jlam Exp $
 
 --- src/gdevcd8.c.orig	Thu Mar  9 03:40:40 2000
-+++ src/gdevcd8.c	Mon May  1 20:26:23 2000
++++ src/gdevcd8.c
 @@ -31,7 +31,7 @@
  
  /*
@@ -11,16 +11,24 @@ $NetBSD: patch-ah,v 1.1.1.1 2000/05/07 02:04:35 jlam Exp $
  
     To be used with the Ghostscript printing system.
     Please report all problems to uliw@erdw.ethz.ch 
-@@ -59,6 +59,8 @@
+@@ -43,6 +43,16 @@
+ 	    and hp1600 was added by Martin Gerbershagen.
+ */
  
-  */
- 
-+/* Add public code to add support for HP880 color printers. */
++/* Merge code by Matthew J. Gelhaus to add support for the HP DeskJet
++   880 series color printers.  The code has the following copyright:
 +
- /* 1999-01-07 edited by L. Peter Deutsch <ghost@aladdin.com> to eliminate
-    non-const statics and otherwise bring up to date with Ghostscript coding
-    style guidelines. */
-@@ -303,6 +305,107 @@
++		DeskJet 880C/882C/895C Ghostscript Driver
++		  (c) Copyright 2000 Matthew J. Gelhaus
++		           All rights reserved.
++
++   The code is publicly available at http://www.gelhaus.net/index.html.
++ */
++
+ /* Note: Depending on how you transfered the files, 
+    you might need to remove some CR-codes used on intel-based machines:
+ 
+@@ -303,6 +313,107 @@
       166, 169, 174, 177, 182, 187, 194, 203, 215, 255}
  };
  
@@ -128,7 +136,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2000/05/07 02:04:35 jlam Exp $
  private const Gamma gammat890 =
  {
  /* Lookup values for cyan */
-@@ -408,6 +511,7 @@
+@@ -408,6 +519,7 @@
  {
      &gammat850,			/* CDJ670 */
      &gammat850,			/* CDJ850 */
@@ -136,7 +144,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2000/05/07 02:04:35 jlam Exp $
      &gammat890,			/* CDJ890 */
      &gammat850			/* CDJ1600 */
  };
-@@ -464,7 +568,7 @@
+@@ -464,7 +576,7 @@
  
  /* Printer types */
  typedef enum {
@@ -145,7 +153,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2000/05/07 02:04:35 jlam Exp $
  } cdj_printer_type_t;
  
  /* No. of ink jets (used to minimise head movements) */
-@@ -586,7 +690,7 @@
+@@ -586,7 +698,7 @@
      int intensities;		/* intensity values per pixel [2,4] */
      int xscal;			/* boolean to indicate x scaling by 2 */
      int yscal;			/* boolean to indicate y scaling by 2 */
@@ -154,7 +162,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2000/05/07 02:04:35 jlam Exp $
      int compression;		/* compression level */
      float mastergamma;		/* Gammavalue applied to all colors */
      float gammavalc;		/* range to which gamma-correction is
-@@ -705,6 +809,10 @@
+@@ -705,6 +817,10 @@
       cdj850_terminate_page(P2(gx_device_printer * pdev, FILE * prn_stream));
  
  private void
@@ -165,7 +173,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2000/05/07 02:04:35 jlam Exp $
       cdj1600_start_raster_mode(P3(gx_device_printer * pdev,
  				  int papersize, FILE * prn_stream));
  private void
-@@ -727,6 +835,10 @@
+@@ -727,6 +843,10 @@
  cmyk_colour_procs(hp_colour_open, cdj850_get_params, cdj850_put_params,
  		  NULL, gdev_cmyk_map_color_rgb, gdev_cmyk_map_cmyk_color);
  
@@ -176,7 +184,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2000/05/07 02:04:35 jlam Exp $
  private const gx_device_procs cdj890_procs =
  cmyk_colour_procs(hp_colour_open, cdj850_get_params, cdj850_put_params,
  		  NULL, gdev_cmyk_map_color_rgb, gdev_cmyk_map_cmyk_color);
-@@ -749,6 +861,13 @@
+@@ -749,6 +869,13 @@
  	       cdj850_start_raster_mode, cdj850_print_non_blank_lines,
  	       cdj850_terminate_page);
  
@@ -190,7 +198,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2000/05/07 02:04:35 jlam Exp $
  const gx_device_cdj850 gs_cdj890_device =
  cdj_850_device(cdj890_procs, "cdj890", 600, 600, 32, cdj850_print_page, 0,
  	       PRESENTATION, PLAIN_PAPER, 4, DJ890C, 9,
-@@ -823,6 +942,7 @@
+@@ -823,6 +950,7 @@
  	m = (gdev_pcl_paper_size(pdev) == PAPER_SIZE_A4 ? dj_a4 : dj_letter);
  	break;
      case DJ850C:
@@ -198,7 +206,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2000/05/07 02:04:35 jlam Exp $
      case DJ890C:
  	if (cdj850->quality == DRAFT) {
  	    gx_device_set_resolution(pdev, 300.0, 300.0);
-@@ -2722,6 +2842,20 @@
+@@ -2722,6 +2850,20 @@
   * }
   * end of unused code */
  

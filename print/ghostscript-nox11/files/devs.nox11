@@ -1,8 +1,15 @@
-# $NetBSD: devs.nox11,v 1.3 2001/05/02 17:07:23 wiz Exp $
+# $NetBSD: devs.nox11,v 1.4 2001/12/20 22:31:09 jlam Exp $
 #
 # non-X11 drivers for Ghostscript
 
 DEVICE_DEVS+=	\
+	$(DD)AP21xx.dev \
+	$(DD)DJ630.dev \
+	$(DD)DJ6xx.dev \
+	$(DD)DJ6xxP.dev \
+	$(DD)DJ8xx.dev \
+	$(DD)DJ9xx.dev \
+	$(DD)DJ9xxVIP.dev \
 	$(DD)ap3250.dev \
 	$(DD)appledmp.dev \
 	$(DD)bit.dev \
@@ -30,6 +37,7 @@ DEVICE_DEVS+=	\
 	$(DD)cdj550.dev \
 	$(DD)cdj670.dev \
 	$(DD)cdj850.dev \
+	$(DD)cdj880.dev \
 	$(DD)cdj890.dev \
 	$(DD)cdjcolor.dev \
 	$(DD)cdjmono.dev \
@@ -59,8 +67,10 @@ DEVICE_DEVS+=	\
 	$(DD)faxg32d.dev \
 	$(DD)faxg4.dev \
 	$(DD)fs600.dev \
+	$(DD)gdi.dev \
 	$(DD)hl7x0.dev \
 	$(DD)hpdj.dev \
+	$(DD)hpijs.dev \
 	$(DD)ibmpro.dev \
 	$(DD)imagen.dev \
 	$(DD)inferno.dev \
@@ -166,6 +176,7 @@ DEVICE_DEVS+=	\
 	$(DD)sj48.dev \
 	$(DD)st800.dev \
 	$(DD)stcolor.dev \
+	$(DD)stp.dev \
 	$(DD)sunhmono.dev \
 	$(DD)t4693d2.dev \
 	$(DD)t4693d4.dev \
