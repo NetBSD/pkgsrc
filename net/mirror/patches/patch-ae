@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.5 2000/03/26 22:33:18 kim Exp $
+$NetBSD: patch-ae,v 1.6 2000/04/20 03:22:50 kim Exp $
 
 --- ftp.pl.orig	Fri Jun  5 05:10:27 1998
-+++ ftp.pl	Sat Mar 25 03:00:20 2000
++++ ftp.pl	Wed Apr 19 23:14:00 2000
 @@ -233,7 +233,7 @@
  			}
  			else {
@@ -11,7 +11,22 @@ $NetBSD: patch-ae,v 1.5 2000/03/26 22:33:18 kim Exp $
  				return 0;
  			}
  		}
-@@ -486,7 +486,7 @@
+@@ -270,6 +270,14 @@
+ 	$SIG{ 'PIPE' } = "ftp'ftp__sighandler";
+ }
+ 
++# Setup a signal handler for user interrupts.
++sub ftp'set_user_signals
++{
++ 	$ftp_logger = @_;
++ 	$SIG{ 'INT' } = "ftp'ftp__sighandler";
++}
++ 
++
+ # &ftp'set_namemap( function to map outgoing name,  function to map incoming )
+ sub ftp'set_namemap
+ {
+@@ -486,7 +494,7 @@
  		return 0;
  	}
  	if( $ret == 1 ) {
@@ -20,7 +35,26 @@ $NetBSD: patch-ae,v 1.5 2000/03/26 22:33:18 kim Exp $
  			$newhost = sprintf( "%d.%d.%d.%d", $1, $2, $3, $4 );
  			$newport = $5 * 256 + $6;
  		}
-@@ -708,6 +708,7 @@
+@@ -581,6 +589,9 @@
+ 		return 0;
+ 	}
+ 
++ 	# shut down our end of the socket
++ 	&close_data_socket;
++
+ 	# read the close
+ 	#
+ 	$ret = &expect($timeout,
+@@ -590,8 +601,6 @@
+ 		$ret = 0;
+ 	}
+ 
+-	# shut down our end of the socket
+-	&close_data_socket;
+ 
+ 	if( ! $ret ){
+ 		return 0;
+@@ -708,6 +717,7 @@
  	if( ! $service_open ){
  		return 0;
  	}
