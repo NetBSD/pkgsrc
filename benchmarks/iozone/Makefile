@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2003/06/24 07:34:13 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2003/12/13 10:48:33 wiz Exp $
 
-DISTNAME=		iozone3_185
-PKGNAME=		iozone-3.185
+DISTNAME=		iozone3_211
+PKGNAME=		iozone-3.211
 WRKSRC=			${WRKDIR}/src/current
 CATEGORIES=		benchmarks
 MASTER_SITES=		http://www.iozone.org/src/current/
