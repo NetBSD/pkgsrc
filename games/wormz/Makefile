@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/24 13:30:57 grant Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/08 01:32:26 snj Exp $
 #
 
 DISTNAME=		Wormz-1.0b5
@@ -11,7 +11,7 @@ HOMEPAGE=		http://lide.punknet.cz/miri/wormz.html
 COMMENT=		Networked game for X11
 
 WRKSRC=			${WRKDIR}/Wormz
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_X11=		yes
 USE_GNU_TOOLS+=		make
 
