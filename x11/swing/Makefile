@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/05/25 20:52:12 jwise Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/02 12:44:35 veego Exp $
 
 DISTNAME=	swing1_1_1
 PKGNAME=	swing-1.1.1
 CATEGORIES=	devel x11
 MASTER_SITES=	# none
-EXTRACT_SUFX=	.tar.Z
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.javasoft.com/products/jfc/
@@ -20,6 +20,12 @@ NO_CDROM=	${RESTRICTED}
 MIRROR_DISTFILE=no
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+ROOT_GROUP?=	root
+.else
+ROOT_GROUP?=	wheel
+.endif
 
 do-fetch:
 	@if [ ! -f ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then \
@@ -48,5 +54,7 @@ do-install:
 	${INSTALL_DATA} -c -m 644 ${WRKSRC}/README.txt ${PREFIX}/share/doc/java/swing
 	${MKDIR} ${PREFIX}/share/examples/java/swing
 	cd ${WRKSRC}/examples ; ${GTAR} pcf - . | ( cd ${PREFIX}/share/examples/java/swing ; ${GTAR} pvxf - )
+	${CHOWN} -R root:${ROOT_GROUP} ${PREFIX}/share/doc/java/swing \
+		${PREFIX}/share/examples/java/swing
 
 .include "../../mk/bsd.pkg.mk"
