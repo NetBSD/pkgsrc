@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.46 2005/01/23 18:07:20 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.47 2005/01/27 05:00:16 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -101,3 +101,5 @@ Pullup ticket 238 - requested by Mark Davies
 security fix for koffice
 Pullup ticket 242 - requested by Takahiro Kambe
 security fix for webmin
+Pullup ticket 247 - requested by Takahiro Kambe
+security fix for squid
