@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2002/12/15 02:49:37 salo Exp $
+# $NetBSD: Makefile,v 1.51 2003/01/05 13:37:15 dmcmahill Exp $
 #
 
 .include "mk/bsd.prefs.mk"
@@ -50,6 +50,40 @@ SUBDIR += x11
 .endif
 
 PKGSRCTOP=	yes
+
+
+# If PACKAGES is set to the default (${_PKGSRCDIR}/packages), the current
+# ${MACHINE_ARCH} and "release" (uname -r) will be used. Otherwise a directory
+# structure of ...pkgsrc/packages/`uname -r`/${MACHINE_ARCH} is assumed.
+# The PKG_URL is set from FTP_PKG_URL_* or CDROM_PKG_URL_*, depending on
+# the target used to generate the README.html file.
+.PHONY: README.html
+_README_TYPE_FLAG?=	none
+README.html: .PRECIOUS
+.if ${_README_TYPE_FLAG} == "--ftp" || ${_README_TYPE_FLAG} == "--cdrom"
+	@if [ -e ${PACKAGES} ]; then					\
+		cd ${PACKAGES};						\
+		case `pwd` in						\
+			${.CURDIR}/packages)				\
+				MULTIARCH=;				\
+				;;					\
+			*)						\
+				MULTIARCH=--multi-arch;			\
+				;;					\
+		esac;							\
+		cd ${.CURDIR} ;						\
+	fi;								\
+	${ENV} TMPDIR=${TMPDIR:U/tmp}/mkreadme	 			\
+		BMAKE=${MAKE} AWK=${AWK} EXPR=${EXPR} 			\
+		./mk/scripts/mkreadme --pkgsrc ${.CURDIR} 		\
+		--packages ${PACKAGES} ${_README_TYPE_FLAG} $$MULTIARCH \
+		--prune 
+.else
+	@${ECHO} "ERROR:  please do not use the README.html target directly."
+	@${ECHO} "        Instead use either the \"readme\" or \"cdrom-readme\""
+	@${ECHO} "        target."
+	@${FALSE}
+.endif
 
 .include "mk/bsd.pkg.subdir.mk"
 
