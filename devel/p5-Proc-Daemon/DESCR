@@ -1,0 +1,2 @@
+Proc::Daemon provides the capability for a Perl program to run as
+a Unix daemon process.
