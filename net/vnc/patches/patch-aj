@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2005/02/04 09:57:12 tron Exp $
+
+--- Xvnc/programs/Xserver/include/misc.h.orig	1996-12-23 07:09:29.000000000 +0000
++++ Xvnc/programs/Xserver/include/misc.h	2005-02-04 09:51:52.000000000 +0000
+@@ -159,7 +159,7 @@
+ #define min(a, b) (((a) < (b)) ? (a) : (b))
+ #define max(a, b) (((a) > (b)) ? (a) : (b))
+ #if !defined(AMOEBA) && !defined(__EMX__)
+-#ifndef abs
++#if !defined(abs) && !defined(__NetBSD__)
+ #define abs(a) ((a) > 0 ? (a) : -(a))
+ #endif
+ #else /* AMOEBA || __EMX__ */
