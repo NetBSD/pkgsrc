@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2004/03/31 10:11:46 tron Exp $
+
+--- config.m4.orig	Mon Jul 14 12:43:51 2003
++++ config.m4	Wed Mar 31 12:02:43 2004
+@@ -2,8 +2,6 @@
+ dnl $Id: patch-aa,v 1.1 2004/03/31 10:11:46 tron Exp $
+ dnl
+ 
+-sinclude(ext/mysql/libmysql/acinclude.m4)
+-sinclude(ext/mysql/libmysql/mysql.m4)
+ sinclude(libmysql/acinclude.m4)
+ sinclude(libmysql/mysql.m4)
+ 
