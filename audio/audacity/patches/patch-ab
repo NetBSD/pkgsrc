@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/06/17 19:13:52 drochner Exp $
+
+--- snd/audiooss.c.orig	Mon Apr 30 01:07:29 2001
++++ snd/audiooss.c	Sun Jun 17 09:18:04 2001
+@@ -9,7 +9,7 @@
+ #include <fcntl.h>
+ 
+ #include <sys/ioctl.h>
+-#include <sys/soundcard.h>
++#include <soundcard.h>
+ #include <sys/time.h>
+ 
+ /* snd includes */
+@@ -70,7 +70,7 @@
+   int channels;
+   int rate;
+   oss_info dp;
+-  const char *device = "/dev/dsp";
++  const char *device = "/dev/sound";
+ 
+   snd->u.audio.descriptor = (oss_info) malloc(sizeof(oss_info_struct));
+   dp = get_oss_info(snd);

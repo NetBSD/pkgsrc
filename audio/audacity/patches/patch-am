@@ -1,0 +1,31 @@
+$NetBSD: patch-am,v 1.1.1.1 2001/06/17 19:13:52 drochner Exp $
+
+--- AudioIO.cpp.orig	Mon Apr 30 01:07:29 2001
++++ AudioIO.cpp	Sat Jun 16 21:29:10 2001
+@@ -33,7 +33,7 @@
+ 
+ #ifdef __WXGTK__
+ bool gLinuxFirstTime = true;
+-char gLinuxDevice[256] = "/dev/dsp";
++char gLinuxDevice[256] = "/dev/sound";
+ #endif
+ 
+ #ifdef BOUNCE
+@@ -71,7 +71,7 @@
+   mPlayNode.format.bits = 16;
+   mPlayNode.format.srate = project->GetRate();
+ #ifdef __WXGTK__
+-  wxString linuxDevice = gPrefs->Read("/AudioIO/PlaybackDevice", "/dev/dsp");
++  wxString linuxDevice = gPrefs->Read("/AudioIO/PlaybackDevice", "/dev/sound");
+   strcpy(mPlayNode.u.audio.devicename,linuxDevice.c_str());
+ #else
+   strcpy(mPlayNode.u.audio.devicename,"");
+@@ -202,7 +202,7 @@
+   mRecordNode.format.bits = 16;
+   mRecordNode.format.srate = project->GetRate();
+ #ifdef __WXGTK__
+-  wxString linuxDevice = gPrefs->Read("/AudioIO/RecordingDevice", "/dev/dsp");
++  wxString linuxDevice = gPrefs->Read("/AudioIO/RecordingDevice", "/dev/sound");
+   strcpy(mRecordNode.u.audio.devicename,linuxDevice.c_str());
+ #else
+   strcpy(mRecordNode.u.audio.devicename,"");
