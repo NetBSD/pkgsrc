@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 1998/09/27 22:24:43 tsarna Exp $
+# $NetBSD: Makefile,v 1.6 1998/11/13 00:47:51 frueauf Exp $
 #
 
 DISTNAME=	pyth151
 PKGNAME=	py-gdbm-1.5.1
+WRKSRC=		${WRKDIR}/Python-1.5.1/Modules
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.python.org/pub/python/src/
 EXTRACT_SUFX=	.tgz
-DIST_SUBDIR=	python
 
 MAINTAINER=	dolecek@ics.muni.cz
 HOMEPAGE=	http://www.python.org/doc/lib/module-gdbm.html
@@ -16,8 +16,10 @@ DEPENDS+=	python-1.5.1:../../lang/python	\
 
 NOT_FOR_ARCHS=	alpha # possibly broken
 
-WRKSRC=		${WRKDIR}/Python-1.5.1/Modules
+DIST_SUBDIR=	python
+
 ALL_TARGET=	default
+
 EXTRACT_AFTER_ARGS=	Python-1.5.1/Modules/gdbmmodule.c
 
 PYTHON_CONFIGDIR=	${LOCALBASE}/lib/python1.5/config/
