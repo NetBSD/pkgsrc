@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2000/01/15 17:37:53 hubertf Exp $
+# $NetBSD: Makefile,v 1.25 2000/04/07 18:52:25 scottr Exp $
 #
 
 DISTNAME=       lynx2-8-2
@@ -22,6 +22,18 @@ CONFIGURE_ARGS+= --with-screen=slang --with-zlib --libdir="${PREFIX}/etc"
 CONFIGURE_ENV+=	LIBS="-lm -ltermcap" CPPFLAGS="-Dunix -DNOPORT"
 .else
 CONFIGURE_ENV+=	LIBS="-lm -ltermcap" CPPFLAGS=-Dunix
+.endif
+
+# Include SOCKS firewall support
+.if defined(USE_SOCKS) && (${USE_SOCKS} == 4 || ${USE_SOCKS} == 5)
+CONFIGURE_ENV+=        CFLAGS=-I${PREFIX}/include # XXX
+.if ${USE_SOCKS} == 4
+CONFIGURE_ARGS+= 	--with-socks
+DEPENDS+=		socks4-2.2:../../net/socks4
+.else
+CONFIGURE_ARGS+= 	--with-socks5
+DEPENDS+=		socks5-1.0.2:../../net/socks5
+.endif
 .endif
 
 # The patches for this code are from the KAME project:
