@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6015 2004/05/23 22:42:23 snj Exp $
+$NetBSD: CHANGES,v 1.6016 2004/05/24 13:44:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2635,3 +2635,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated roundup to 0.7.2 [recht 2004-05-23]
 	Updated imapfilter to 1.0 [seb 2004-05-23]
 	Updated bogofilter to 0.17.5 [snj 2004-05-23]
+	Updated xplanet to 1.0.8 [adam 2004-05-24]
