@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2004/04/01 18:21:20 jmmv Exp $
+$NetBSD: patch-ab,v 1.7 2004/11/28 13:00:17 recht Exp $
 
---- Makefile.in.orig	2004-03-08 12:54:56.000000000 +0100
-+++ Makefile.in
-@@ -203,7 +203,6 @@ SUBDIRS = \
+--- Makefile.in.orig	Thu Oct 28 16:16:56 2004
++++ Makefile.in	Sat Nov 27 20:51:12 2004
+@@ -221,7 +221,6 @@
  	modules					\
  	daemon					\
  	schemas					\
