@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2003/01/11 02:57:11 rh Exp $
+# $NetBSD: Makefile,v 1.46 2003/01/13 12:39:31 wiz Exp $
 #
 
 COMMENT=	Communication utilities
@@ -18,9 +18,7 @@ SUBDIR+=	gsmlib
 SUBDIR+=	hylafax
 SUBDIR+=	ifcico-cm
 SUBDIR+=	jpilot
-SUBDIR+=	jpilot-expense
 SUBDIR+=	jpilot-syncmal
-SUBDIR+=	jpilot-synctime
 SUBDIR+=	kermit
 SUBDIR+=	lrzsz
 SUBDIR+=	malsync
