@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/06 14:32:11 taca Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/20 14:38:58 taca Exp $
 
 DISTNAME=	squirrelmail-1.4.3a
 PKGNAME=	ja-${DISTNAME}
+PKGREVISION=	2
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/}
 EXTRACT_SUFX=	.tar.bz2
 
 PATCH_SITES=	http://www.yamaai-tech.com/~masato/Download/
-PATCHFILES=	squirrelmail-1.4.3a-ja-20040603-patch.gz
+PATCHFILES=	squirrelmail-1.4.3a-ja-20041014-patch.gz
 PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	martti@NetBSD.org
