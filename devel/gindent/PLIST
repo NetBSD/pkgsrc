@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2002/08/31 00:29:59 wiz Exp $
-bin/gindent
-bin/gtexinfo2man
-man/man1/gindent.1
+@comment $NetBSD: PLIST,v 1.4 2002/12/23 19:12:51 wiz Exp $
+bin/${GNU_PROGRAM_PREFIX}indent
+bin/${GNU_PROGRAM_PREFIX}texinfo2man
+man/man1/${GNU_PROGRAM_PREFIX}indent.1
 @unexec ${INSTALL_INFO} --delete %D/info/indent.info %D/info/dir
 info/indent.info
 @exec ${INSTALL_INFO} %D/info/indent.info %D/info/dir
