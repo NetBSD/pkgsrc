@@ -1,4 +1,4 @@
-#	$Id: bsd.bulk-pkg.mk,v 1.8 2000/08/24 00:52:23 hubertf Exp $
+#	$Id: bsd.bulk-pkg.mk,v 1.9 2000/08/24 00:59:18 hubertf Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -61,9 +61,6 @@ BUILDLOG?=	.make
 
 # check if the $REF file is uptodate, i.e. is newer than any of
 # the pkg files; prints "1" if upto date, "0" if not.
-# XXX the setting of "pkg" when looking at required packages is
-#     broken for packages with dewey depends (and other non-glob
-#     style wildcards).
 bulk-check-uptodate:
 	@uptodate=1 ; \
 	if [ -f "${REF}" ]; then \
