@@ -1,7 +1,8 @@
-$NetBSD: md5,v 1.2 1999/09/14 02:19:15 jlam Exp $
+$NetBSD: md5,v 1.3 2000/02/29 18:31:30 jlam Exp $
 
-MD5 (abisuite/abi-0.7.5.tar.gz) = 8ae9d28cbd5905b2f0869114f1259510
-MD5 (abisuite/abidistfiles-0.7.5.tar.gz) = 57bf3b793de91edb6fc0f06c483c66ed
-MD5 (abisuite/unixfonts-0.7.5.tar.gz) = b19603bf0a1f6a2c8f962122f48cb7cf
-MD5 (abisuite/expat-0.7.5.tar.gz) = 415a6b3be9fab57964b1f5114ef6bce0
-MD5 (abisuite/wv-0.7.5.tar.gz) = adf037852c2587c7db35c5fefd09e776
+MD5 (abisuite/abi-0.7.8.tar.gz) = fbbf39257b4d4af94013825a4fad5f59
+MD5 (abisuite/abidistfiles-0.7.8.tar.gz) = 3d704137bbb0741cac7eeb0642f58f41
+MD5 (abisuite/libiconv-0.7.8.tar.gz) = 9ea7b4657beb387a52ae12a4f337a01d
+MD5 (abisuite/expat-0.7.8.tar.gz) = e5ccdcbb82325fec3e82c813461b1d51
+MD5 (abisuite/unixfonts-0.7.8.tar.gz) = b0e01a14ff369966c6d3e8a9b8fb053e
+MD5 (abisuite/wv-0.7.8.tar.gz) = 835450d4a8cdc5962aa475ad159d2432

@@ -1,109 +1,88 @@
-$NetBSD: patch-ag,v 1.1.1.1 1999/09/11 18:27:49 jlam Exp $
+$NetBSD: patch-ag,v 1.2 2000/02/29 18:31:30 jlam Exp $
 
---- src/pkg/common/unix/scripts/makewrapper.sh.orig	Thu Jun 24 16:54:37 1999
-+++ src/pkg/common/unix/scripts/makewrapper.sh	Sat Sep 11 13:33:11 1999
-@@ -3,15 +3,20 @@
- # This script is invoked to create wrapper scripts for AbiSuite
- # binaries.  One should pass it the _base_ name of the program
- # to wrap (one would pass "AbiWord" to wrap "AbiWord_s" and 
--# "AbiWord_d"), and the install base of the tree, to which "bin"
--# will be appended for binary and script locations.
-+# "AbiWord_d"), the install base of the tree, the location of the
-+# machine-dependent binaries and scripts, and the base of the X11
-+# tree.
+--- src/pkg/common/unix/scripts/install.sh.orig	Wed Jun  2 16:19:32 1999
++++ src/pkg/common/unix/scripts/install.sh	Tue Feb 29 12:17:41 2000
+@@ -2,14 +2,14 @@
+ #
+ # This script is invoked by the Makefiles when the "install" target
+ # is specified.  It just puts things where most users will probably
+-# be happy, in $TARGET, with symbolic links (in $BINDIR) to the binaries
+-# in $TARGET/bin
++# be happy, in $TARGET, with the binaries in $LIBEXECDIR, with
++# symbolic links (in $BINDIR) to the binaries in $LIBEXECDIR.
+ # 
+ # $SRCDIR should be the place where the compile process (the "canonical"
+ # target especially) put all the stuff.  $SCRIPTDIR should be set by the 
+ # caller so we can know where we are.  $BINDIR is where the symbolic
+-# links are eventually installed, to point to the "bin/*" files within
+-# $TARGET/bin
++# links are eventually installed, to point to the executable files within
++# $LIBEXECDIR
  
- # Examples:
--#     makewrapper.sh AbiWord /usr/local/AbiSuite
--#     makewrapper.sh AbiCalc /usr/local/AbiSuite
-+#     makewrapper.sh AbiWord /usr/pkg/share/AbiSuite \
-+#		     /usr/pkg/libexec/AbiSuite /usr/X11R6
-+#     makewrapper.sh AbiCalc /usr/pkg/share/AbiSuite \
-+#		     /usr/pkg/libexec/AbiSuite /usr/X11R6
- 
- PROGRAM_NAME=$1
- INSTALL_BASE=$2
-+LIBEXECDIR=$3
-+X11_BASE=$4
- 
- # Did they supply any arguments?
- if [ -z "$PROGRAM_NAME" ]
-@@ -28,11 +33,25 @@
-     echo ""
+ # if no target, bail
+ if [ -z "$TARGET" ]
+@@ -52,6 +52,21 @@
      exit 1
  fi
+ 
++# Make sure the libexec dir exists
 +if [ -z "$LIBEXECDIR" ]
 +then
-+    echo ""
-+    echo "Error: third argument (MD binaries directory) not specified."
-+    echo ""
-+    exit 1
++    LIBEXECDIR=${TARGET}/bin
 +fi
-+if [ -z "$X11_BASE" ]
++mkdir -p $LIBEXECDIR
++
++if [ ! -d $LIBEXECDIR ]
 +then
 +    echo ""
-+    echo "Error: fourth argument (X11 base directory) not specified."
++    echo "Error creating directory [$LIBEXECDIR]."
 +    echo ""
 +    exit 1
 +fi
- 
- # Make directory path up to program we're creating
--mkdir -p $INSTALL_BASE/bin
-+mkdir -p $LIBEXECDIR
- 
--cat >$INSTALL_BASE/bin/$PROGRAM_NAME<<EOF
-+cat >$LIBEXECDIR/$PROGRAM_NAME<<EOF
- #!/bin/sh
- #
- # AbiSuite program wrapper script, dynamically generated
-@@ -42,28 +61,31 @@
- ABISUITE_HOME=$INSTALL_BASE
- export ABISUITE_HOME
- 
-+# Change this if you move the AbiSuite binaries.
-+ABISUITE_LIBEXEC=$LIBEXECDIR
 +
- # Change this if you move your fonts.
- ABISUITE_FONT_HOME=\$ABISUITE_HOME/fonts
+ # start with breathing room
+ echo ""
  
- # Set run-time font path
- if [ -d \$ABISUITE_FONT_HOME ]
- then
--    xset fp+ \$ABISUITE_FONT_HOME 1>/dev/null 2>/dev/null
-+    $X11_BASE/bin/xset fp+ \$ABISUITE_FONT_HOME 1>/dev/null 2>/dev/null
- fi
+@@ -63,9 +78,9 @@
+ # Copy the files from $SRCDIR to $TARGET
+ (cd $SRCDIR/AbiSuite; tar cf - *) | (cd $TARGET; tar xf -)
  
- # Figure out which binary to run
--if [ -f \$ABISUITE_HOME/bin/${PROGRAM_NAME}_d ]
-+if [ -f \$ABISUITE_LIBEXEC/${PROGRAM_NAME}_d ]
- then
--    \$ABISUITE_HOME/bin/${PROGRAM_NAME}_d "\$@"
--elif [ -f \$ABISUITE_HOME/bin/${PROGRAM_NAME}_s ]
-+    \$ABISUITE_LIBEXEC/${PROGRAM_NAME}_d "\$@"
-+elif [ -f \$ABISUITE_LIBEXEC/${PROGRAM_NAME}_s ]
- then
--    \$ABISUITE_HOME/bin/${PROGRAM_NAME}_s "\$@"
-+    \$ABISUITE_LIBEXEC/${PROGRAM_NAME}_s "\$@"
- else
-     echo ""
-     echo "Error: can't find ${PROGRAM_NAME} executables:"
--    echo "    \$ABISUITE_HOME/bin/${PROGRAM_NAME}_d"
-+    echo "    \$ABISUITE_LIBEXEC/${PROGRAM_NAME}_d"
-     echo "    -or-"
--    echo "    \$ABISUITE_HOME/bin/${PROGRAM_NAME}_s"
-+    echo "    \$ABISUITE_LIBEXEC/${PROGRAM_NAME}_s"
-     echo ""
-     exit
- fi
-@@ -71,10 +93,10 @@
- # Set post run-time font path
- if [ -d \$ABISUITE_FONT_HOME ]
- then
--    xset fp- \$ABISUITE_FONT_HOME 1>/dev/null 2>/dev/null
-+    $X11_BASE/bin/xset fp- \$ABISUITE_FONT_HOME 1>/dev/null 2>/dev/null
- fi
- EOF
+-echo "Installing program binaries to [$TARGET/bin]..."
++echo "Installing program binaries to [$LIBEXECDIR]..."
+ # Setup bins 
+-(cd $SRCDIR; tar cf - bin/Abi*) | (cd $TARGET; tar xf -)
++(cd $SRCDIR/bin; tar cf - Abi*) | (cd $LIBEXECDIR; tar xf -)
  
--chmod 755 ${INSTALL_BASE}/bin/$PROGRAM_NAME
-+chmod 755 $LIBEXECDIR/$PROGRAM_NAME
+ ########################################################################
+ # If we're on Solaris, run makepsres on the font path
+@@ -91,10 +106,10 @@
+ cd $SCRIPTDIR
+ 
+ echo "Making wrapper script at [$TARGET/bin/AbiWord]..."
+-./makewrapper.sh AbiWord $TARGET
++./makewrapper.sh AbiWord $TARGET $LIBEXECDIR
+ # TODO : make use of these
+-# ./makewrapper.sh AbiCalc $TARGET
+-# ./makewrapper.sh AbiFile $TARGET
++# ./makewrapper.sh AbiCalc $TARGET $LIBEXECDIR
++# ./makewrapper.sh AbiFile $TARGET $LIBEXECDIR
  
  
+ ########################################################################
+@@ -107,12 +122,12 @@
+ 
+ # NOTE : Solaris ln doesn't seem to honor the -f (force flag), so
+ # NOTE : we have to remove them first.
+-rm -f $BINDIR/AbiWord ; ln -s $TARGET/bin/AbiWord $BINDIR/AbiWord
+-rm -f $BINDIR/abiword ; ln -s $TARGET/bin/AbiWord $BINDIR/abiword
++rm -f $BINDIR/AbiWord ; ln -s $LIBEXECDIR/AbiWord $BINDIR/AbiWord
++rm -f $BINDIR/abiword ; ln -s $LIBEXECDIR/AbiWord $BINDIR/abiword
+ 
+ # TODO : make use of these, etc.
+-# rm -f $BINDIR/AbiCalc ; ln -s $TARGET/bin/AbiCalc $LINK_DIR/AbiCalc
+-# rm -f $BINDIR/abicalc ; ln -s $TARGET/bin/AbiCalc $LINK_DIR/abicalc
++# rm -f $BINDIR/AbiCalc ; ln -s $LIBEXECDIR/AbiCalc $LINK_DIR/AbiCalc
++# rm -f $BINDIR/abicalc ; ln -s $LIBEXECDIR/AbiCalc $LINK_DIR/abicalc
+ 
+ ########################################################################
+ # Done
