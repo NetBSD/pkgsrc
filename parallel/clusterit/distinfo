@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.4 2003/10/27 08:26:41 wiz Exp $
+$NetBSD: distinfo,v 1.5 2004/02/10 09:27:15 garbled Exp $
 
-SHA1 (clusterit-2.0.tar.gz) = b92d114fa0931a25bf20581ab6def56af63dddf0
-Size (clusterit-2.0.tar.gz) = 124564 bytes
-SHA1 (patch-aa) = 47034b17863563bce89390ef7af8b1e0a01478aa
+SHA1 (clusterit-2.2.tar.gz) = cc50c018f9cc34f90e385eeb83884563afd9a3f9
+Size (clusterit-2.2.tar.gz) = 127581 bytes
