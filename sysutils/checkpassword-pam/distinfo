@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/08/12 09:22:00 schmonz Exp $
+
+SHA1 (checkpassword-pam-0.98.tar.gz) = e7966a69c4db5c8225d69f4a5aedb6b64ff254a6
+Size (checkpassword-pam-0.98.tar.gz) = 81850 bytes
