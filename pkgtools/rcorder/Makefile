@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/08/27 17:08:07 reed Exp $
+# $NetBSD: Makefile,v 1.6 2005/01/06 05:32:30 tv Exp $
 #
 
 DISTNAME=		rcorder-20031013
@@ -23,6 +23,6 @@ GNU_CONFIGURE=		yes
 .endif
 
 do-extract:
-	@${CP} -Rp ${FILESDIR} ${WRKSRC}
+	@${CP} -R ${FILESDIR} ${WRKSRC}
 
 .include "../../mk/bsd.pkg.mk"

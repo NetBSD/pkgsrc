@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/28 00:01:07 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/06 05:38:56 tv Exp $
 
 DISTNAME=	xenvstat-20041127
 CATEGORIES=	sysutils
@@ -19,7 +19,7 @@ USE_BUILDLINK3=	yes
 LIBS=		-lXmu -lXext -lXt -lX11 -lm
 
 do-extract:
-	@${CP} -Rp ${FILESDIR} ${WRKSRC}
+	@${CP} -R ${FILESDIR} ${WRKSRC}
 
 do-build:
 	${CC} ${CFLAGS} ${LDFLAGS} -o ${WRKSRC}/xenvstat \
