@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/06/27 16:07:36 mrauch Exp $
+# $NetBSD: Makefile,v 1.25 2004/10/01 10:37:33 grant Exp $
 
 DISTNAME=		OOo_1.1.2_LinuxIntel_install
 PKGNAME=		openoffice-linux-1.1.2
@@ -18,7 +18,7 @@ NO_CONFIGURE=           yes
 CONFLICTS+=		staroffice-[0-9]*
 CONFLICTS+=		openoffice-[0-9]*
 
-ONLY_FOR_PLATFORM=	NetBSD-1.[6-9]*-i386 NetBSD-[2-9]*-i386
+ONLY_FOR_PLATFORM=	NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
 ONLY_FOR_PLATFORM+=	Linux-*-i[3-6]86
 
 TEMP?=			${WRKSRC}
