@@ -1,68 +1,41 @@
-$NetBSD: patch-aj,v 1.4 1998/08/07 11:13:50 agc Exp $
+$NetBSD: patch-aj,v 1.5 1998/11/04 23:43:39 tron Exp $
 
-Index: configure.in
-*** configure.in.orig	Tue Jan 20 05:24:14 1998
---- configure.in	Sat Jan 24 19:05:51 1998
-***************
-*** 635,643 ****
-  
-  export CFLAGS CC
-  
-! # Socket pairs appear to be broken on several systems.  I don't know exactly
-! # where, so I'll use pipes everywhere for now.
-! AC_DEFINE(USE_PIPES)
-  
-  AC_MSG_CHECKING([that the compiler works])
-  AC_TRY_RUN([ main(int ac, char **av) { return 0; } ],
---- 635,643 ----
-  
-  export CFLAGS CC
-  
-! dnl # Socket pairs appear to be broken on several systems.  I don't know exactly
-! dnl # where, so I'll use pipes everywhere for now.
-! dnl AC_DEFINE(USE_PIPES)
-  
-  AC_MSG_CHECKING([that the compiler works])
-  AC_TRY_RUN([ main(int ac, char **av) { return 0; } ],
-***************
-*** 1506,1519 ****
-  [ case "$enableval" in
-    no)
-         AC_MSG_RESULT(no)
-!        SSHINSTALLMODE=0711
-         ;;
-    *)   AC_MSG_RESULT(yes)
-!        SSHINSTALLMODE=04711
-         ;;
-    esac ],
-    AC_MSG_RESULT(yes)
-!   SSHINSTALLMODE=04711
-  )
-  
-  # We include this here only to make it visible in --help; this is only used
---- 1506,1519 ----
-  [ case "$enableval" in
-    no)
-         AC_MSG_RESULT(no)
-!        SSHINSTALLMODE=0511
-         ;;
-    *)   AC_MSG_RESULT(yes)
-!        SSHINSTALLMODE=04511
-         ;;
-    esac ],
-    AC_MSG_RESULT(yes)
-!   SSHINSTALLMODE=04511
-  )
-  
-  # We include this here only to make it visible in --help; this is only used
-***************
-*** 1539,1542 ****
-  AC_SUBST(CONFOBJS)
-  AC_SUBST(SSHINSTALLMODE)
-  
-! AC_OUTPUT(Makefile sshd.8 ssh.1 make-ssh-known-hosts.1 zlib-1.0.4/Makefile)
---- 1539,1542 ----
-  AC_SUBST(CONFOBJS)
-  AC_SUBST(SSHINSTALLMODE)
-  
-! AC_OUTPUT(Makefile sshd.8 ssh.1 make-ssh-known-hosts.pl make-ssh-known-hosts.1 zlib-1.0.4/Makefile)
+--- configure.in.orig	Wed Jul  8 18:41:10 1998
++++ configure.in	Thu Nov  5 00:28:07 1998
+@@ -317,9 +317,9 @@
+ 
+ export CFLAGS CC
+ 
+-# Socket pairs appear to be broken on several systems.  I don't know exactly
+-# where, so I'll use pipes everywhere for now.
+-AC_DEFINE(USE_PIPES)
++dnl # Socket pairs appear to be broken on several systems.  I don't know exactly
++dnl # where, so I'll use pipes everywhere for now.
++dnl AC_DEFINE(USE_PIPES)
+ 
+ AC_MSG_CHECKING([that the compiler works])
+ AC_TRY_RUN([ main(int ac, char **av) { return 0; } ],
+@@ -1236,14 +1236,14 @@
+ [ case "$enableval" in
+   no)
+        AC_MSG_RESULT(no)
+-       SSHINSTALLMODE=0711
++       SSHINSTALLMODE=0511
+        ;;
+   *)   AC_MSG_RESULT(yes)
+-       SSHINSTALLMODE=04711
++       SSHINSTALLMODE=04511
+        ;;
+   esac ],
+   AC_MSG_RESULT(yes)
+-  SSHINSTALLMODE=04711
++  SSHINSTALLMODE=04511
+ )
+ 
+ AC_MSG_CHECKING(whether to enable TCP_NODELAY)
+@@ -1345,4 +1345,4 @@
+ AC_SUBST(SSHDCONFOBJS)
+ AC_SUBST(SSHINSTALLMODE)
+ 
+-AC_OUTPUT(Makefile sshd.8 ssh.1 make-ssh-known-hosts.1 zlib-1.0.4/Makefile)
++AC_OUTPUT(Makefile sshd.8 ssh.1 make-ssh-known-hosts.pl make-ssh-known-hosts.1 zlib-1.0.4/Makefile)
