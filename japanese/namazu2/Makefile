@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/25 04:17:54 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/05/03 11:21:32 agc Exp $
 # FreeBSD Id: ports/japanese/namazu2/Makefile,v 1.16 2000/10/26 20:56:25 knu Exp
 
 DISTNAME=	namazu-2.0.5
@@ -9,9 +9,9 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.namazu.org/index.html.en
 COMMENT=	Full-text search system intended for easy use
 
-DEPENDS+=	p5-File-MMagic>=1.09:../../misc/p5-File-MMagic \
-		p5-Text-Kakasi>=1.04:../../japanese/p5-Text-Kakasi \
-		p5-nkf>=1.7:../../japanese/p5-nkf
+DEPENDS+=	p5-File-MMagic>=1.09:../../misc/p5-File-MMagic
+DEPENDS+=	p5-Text-Kakasi>=1.04:../../japanese/p5-Text-Kakasi
+DEPENDS+=	p5-nkf>=1.7:../../japanese/p5-nkf
 .if !defined(WITH_CHASEN) || ${WITH_CHASEN} != NO
 DEPENDS+=	p5-Text-ChaSen>=1.0:../../japanese/p5-Text-ChaSen
 .endif
