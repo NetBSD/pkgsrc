@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6140 2004/06/05 13:18:32 taca Exp $
+$NetBSD: CHANGES,v 1.6141 2004/06/05 14:06:34 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2794,3 +2794,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated stella to 1.3 [dillo 2004-06-05]
 	Added stella-sdl-1.3 [dillo 2004-06-05]
 	Updated ja-samba to 2.2.9.1.0 [taca 2004-06-05]
+	Updated SDL to 1.2.7nb1 [dillo 2004-06-05]
