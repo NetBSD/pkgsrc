@@ -1,0 +1,22 @@
+$NetBSD: patch-bb,v 1.1 1999/07/07 23:28:13 itojun Exp $
+
+--- conf.c.orig	Mon Jan  4 05:11:43 1999
++++ conf.c	Tue Jan  5 19:47:33 1999
+@@ -230,7 +230,7 @@
+ 
+ 	    using_kpop =
+ 		(ctl->server.protocol == P_POP3 &&
+-#if !INET6
++#ifndef INET6
+ 		 ctl->server.port == KPOP_PORT &&
+ #else
+ 		 0 == strcmp( ctl->server.service, KPOP_PORT ) &&
+@@ -242,7 +242,7 @@
+ 	    stringdump("via", ctl->server.via); 
+ 	    stringdump("protocol", 
+ 		       using_kpop ? "KPOP" : showproto(ctl->server.protocol));
+-#if !INET6
++#ifndef INET6
+ 	    numdump("port",  ctl->server.port);
+ #else
+ 	    stringdump("service", ctl->server.service); 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 1999/07/02 15:20:23 frueauf Exp $
+# $NetBSD: Makefile,v 1.46 1999/07/07 23:28:12 itojun Exp $
 #
 
 DISTNAME=       fetchmail-5.0.5
@@ -20,6 +20,9 @@ CONFIGURE_ENV=  LDFLAGS="${CFLAGS}"
 .if defined(USE_KERBEROS4)
 CONFIGURE_ARGS+=--with-kerberos=yes
 RESTRICTED=	uses Kerberos encryption code
+.endif
+.if defined(USE_INET6)
+CONFIGURE_ARGS+=--enable-inet6
 .endif
 
 FDOC=	${PREFIX}/share/doc/fetchmail
