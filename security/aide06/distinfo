@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/06/23 13:48:33 agc Exp $
+
+SHA1 (aide-0.6.tar.gz) = e6d112193ad96bdbbe1e1b685dac644d958a1155
+Size (aide-0.6.tar.gz) = 212475 bytes
+SHA1 (patch-aa) = db675e373464c5127f9bd4cbfd38e6634c950ebf
+SHA1 (patch-ab) = 5cc5fdd9fcfde2c5e118bfa4cf68ec7e05215003
