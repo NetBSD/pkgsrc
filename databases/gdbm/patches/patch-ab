@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.10 2002/09/11 00:50:05 schmonz Exp $
+$NetBSD: patch-ab,v 1.11 2002/11/01 00:31:18 wiz Exp $
 
---- Makefile.in.orig	Tue May 18 23:16:06 1999
+--- Makefile.in.orig	Tue Oct  8 18:09:12 2002
 +++ Makefile.in
 @@ -14,10 +14,6 @@ INSTALL = @INSTALL@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
@@ -13,42 +13,30 @@ $NetBSD: patch-ab,v 1.10 2002/09/11 00:50:05 schmonz Exp $
  MAKEINFO = makeinfo
  TEXI2DVI = texi2dvi
  
-@@ -27,11 +23,11 @@ DEFS =
- LIBS = @LIBS@ -lc
- 
- # SunOS 4 users might wish to add '-fpcc-struct-return' to CFLAGS. see INSTALL.
--CFLAGS = -O
-+#CFLAGS =
- LDFLAGS =
- 
- # Common prefix for installation directories
--prefix = /usr/local
-+prefix = @prefix@
- exec_prefix = $(prefix)
- binprefix = $(exec_prefix)
- manprefix = $(prefix)
-@@ -121,18 +117,18 @@ progs: $(PROGS)
- 
- install: libgdbm.la gdbm.h gdbm.info
- 	$(srcdir)/mkinstalldirs $(libdir) $(includedir) $(man3dir) $(infodir)
--	$(LIBTOOL) install -c libgdbm.la $(libdir)/libgdbm.la
--	$(INSTALL_DATA) -o $(BINOWN) -g $(BINGRP) gdbm.h $(includedir)/gdbm.h
+@@ -131,11 +127,11 @@ install: libgdbm.la gdbm.h gdbm.info
+ 		$(INSTALL_ROOT)$(includedir) $(INSTALL_ROOT)$(man3dir) \
+ 		$(INSTALL_ROOT)$(infodir)
+ 	$(LIBTOOL) $(INSTALL) -c libgdbm.la $(INSTALL_ROOT)$(libdir)/libgdbm.la
+-	$(INSTALL_DATA) -o $(BINOWN) -g $(BINGRP) gdbm.h \
++	$(INSTALL_DATA) gdbm.h \
+ 		$(INSTALL_ROOT)$(includedir)/gdbm.h
 -	$(INSTALL_DATA) -o $(BINOWN) -g $(BINGRP) $(srcdir)/gdbm.3 \
-+	$(LIBTOOL) $(INSTALL) -c libgdbm.la $(libdir)/libgdbm.la
-+	$(INSTALL_DATA) gdbm.h $(includedir)/gdbm.h
 +	$(INSTALL_DATA) $(srcdir)/gdbm.3 \
- 		$(man3dir)/gdbm.3
+ 		$(INSTALL_ROOT)$(man3dir)/gdbm.3
 -	$(INSTALL_DATA) -o $(BINOWN) -g $(BINGRP) $(srcdir)/gdbm.info \
 +	$(INSTALL_DATA) $(srcdir)/gdbm.info \
- 		$(infodir)/gdbm.info
+ 		$(INSTALL_ROOT)$(infodir)/gdbm.info
  
  install-compat:
- 	$(srcdir)/mkinstalldirs $(includedir)
+@@ -143,9 +139,9 @@ install-compat:
+ 		$(INSTALL_ROOT)$(includedir)
+ 	$(LIBTOOL) $(INSTALL) -c libgdbm_compat.la \
+ 		$(INSTALL_ROOT)$(libdir)/libgdbm_compat.la
 -	$(INSTALL_DATA) -o $(BINOWN) -g $(BINGRP) $(srcdir)/dbm.h \
 +	$(INSTALL_DATA) $(srcdir)/dbm.h \
- 		$(includedir)/dbm.h
+ 		$(INSTALL_ROOT)$(includedir)/dbm.h
 -	$(INSTALL_DATA) -o $(BINOWN) -g $(BINGRP) $(srcdir)/ndbm.h \
 +	$(INSTALL_DATA) $(srcdir)/ndbm.h \
- 		$(includedir)/ndbm.h
+ 		$(INSTALL_ROOT)$(includedir)/ndbm.h
  
  #libgdbm.a: $(OBJS) gdbm.h
