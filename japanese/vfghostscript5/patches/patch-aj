@@ -1,3 +1,4 @@
+$NetBSD: patch-aj,v 1.2 2000/01/05 01:10:03 wiz Exp $
 --- ../gdevalps/gdevalps.mk.orig	Tue Mar  9 09:58:18 1999
 +++ ../gdevalps/gdevalps.mk	Tue Mar  9 10:04:00 1999
 @@ -1,8 +1,9 @@
