@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2004/02/19 23:30:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/07 12:09:21 jmmv Exp $
 #
 
 DISTNAME=		gok-0.8.4
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GNOME:=desktop/2.4/2.4.1/sources/}
 EXTRACT_SUFX=		.tar.bz2
