@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2196 2004/10/04 12:19:30 wiz Exp $
+$NetBSD: TODO,v 1.2197 2004/10/04 21:32:29 minskim Exp $
 
 Suggested new packages
 ======================
@@ -331,7 +331,6 @@ Suggested package updates
 	o maketool-0.8.4
 	o maradns-1.0.23
 	o marbles-1.0.6
-	o mathomatic-11.4
 	o micq-0.4.11
 	o midnight-commander-4.6.0 [pkgsrc-wip]
 	o mimedefang-2.45
