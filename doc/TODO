@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.803 2003/08/30 23:28:53 wiz Exp $
+$NetBSD: TODO,v 1.804 2003/08/31 00:14:07 chris Exp $
 
 Suggested new packages
 ======================
@@ -227,7 +227,6 @@ Suggested package updates
 	o openoffice-1.0.3.1 [skrll]
 	o openssl-0.9.7b
 	o oss-3.9.7l
-	o pan-0.14.1
 	o p5-GdGraph-1.43 [pkg/22463]
 	o p5-Net-SNMP-4.1.0 [pkg/21782]
 	o p5-Net-Server-0.85 [pkg/22542]
