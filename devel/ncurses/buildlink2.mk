@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.9 2003/09/23 09:58:12 yyamano Exp $
+# $NetBSD: buildlink2.mk,v 1.10 2003/09/27 10:20:29 grant Exp $
 #
 # Optionally define:
 #
@@ -7,7 +7,7 @@
 #			some needed functions.
 
 .if !defined(NCURSES_BUILDLINK2_MK)
-NCURSES_BUILDLINK2_MK=     # defined
+NCURSES_BUILDLINK2_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -22,8 +22,8 @@ _NEED_NCURSES=		NO
 # These versions of NetBSD didn't have a curses library that was capable of
 # replacing ncurses.
 #
-_INCOMPAT_CURSES=       NetBSD-0.*-* NetBSD-1.[0123]*-*
-_INCOMPAT_CURSES+=      NetBSD-1.4.*-* NetBSD-1.4[A-X]-*
+_INCOMPAT_CURSES=	NetBSD-0.*-* NetBSD-1.[0123]*-*
+_INCOMPAT_CURSES+=	NetBSD-1.4.*-* NetBSD-1.4[A-X]-*
 #
 # This catch-all for SunOS is probably too broad, but better to err on
 # the safe side.  We can narrow down the match when we have better
@@ -33,8 +33,8 @@ _INCOMPAT_CURSES+=	SunOS-*-*
 #
 # Similarly for IRIX and Darwin
 #
-_INCOMPAT_CURSES+=      IRIX-*-*
-_INCOMPAT_CURSES+=     	Darwin-*-* 
+_INCOMPAT_CURSES+=	IRIX-*-*
+_INCOMPAT_CURSES+=	Darwin-*-* 
 INCOMPAT_CURSES?=	# empty
 .  for _pattern_ in ${_INCOMPAT_CURSES} ${INCOMPAT_CURSES}
 .    if !empty(MACHINE_PLATFORM:M${_pattern_})
@@ -94,7 +94,7 @@ ncurses-extra-includes-buildlink:
 	extra_includes="						\
 		include/term.h						\
 	";								\
-	for f in $${extra_includes}; do				\
+	for f in $${extra_includes}; do					\
 		if [ ! -f ${BUILDLINK_DIR}/$${f} ]; then		\
 			${ECHO_BUILDLINK_MSG} "Touching extra ncurses header ($${f}) in ${BUILDLINK_DIR}."; \
 			${TOUCH} ${TOUCH_FLAGS} ${BUILDLINK_DIR}/$${f}; \
@@ -108,4 +108,4 @@ ncurses-curses-h:
 		${LN} -s ${BUILDLINK_PREFIX.ncurses}/include/ncurses.h ${BUILDLINK_DIR}/include/curses.h; \
 	fi
 
-.endif  # NCURSES_BUILDLINK2_MK
+.endif	# NCURSES_BUILDLINK2_MK
