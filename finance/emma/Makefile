@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/06/30 16:06:06 tron Exp $
+# $NetBSD: Makefile,v 1.6 2001/06/30 16:56:30 tron Exp $
 #
 
 DISTNAME=       emma-0.8-1
@@ -13,7 +13,7 @@ COMMENT=	Money management program
 
 BUILD_DEPENDS+=	automake-1.4:../../devel/automake
 DEPENDS+=	gnome-libs-*:../../x11/gnome-libs
-DEPENDS+=	python-*:../../lang/python
+DEPENDS+=	python>=2.0:../../lang/python
 
 USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
