@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2955 2003/07/31 10:39:40 jmmv Exp $
+$NetBSD: CHANGES,v 1.2956 2003/07/31 11:08:19 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3156,3 +3156,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pax to 20030731 [grant 2003-07-31]
 	Updated cfs to 1.4.1nb1 [jmmv 2003-07-31]
 	Updated isakmpd to 20021118nb1 [jmmv 2003-07-31]
+	Updated bkpupsd to 2.1.2nb1 [jmmv 2003-07-31]
