@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.7 2000/05/27 02:47:14 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2000/06/16 23:53:43 wiz Exp $
 
---- makemake.in.orig	Thu May 25 16:35:13 2000
-+++ makemake.in	Thu May 25 16:51:16 2000
+--- makemake.in.orig	Mon Mar  6 12:37:21 2000
++++ makemake.in	Mon Jun  5 23:32:06 2000
+@@ -159,7 +159,7 @@
+ srcdir=''
+ prefix=''
+ exec_prefix=''
+-fsstnd=gnu_ext # supported styles: gnu, gnu_ext, suse, redhat, debian
++fsstnd=gnu_ext # supported styles: gnu_ext, suse, redhat, debian, netbsd
+ MODULES=''
+ CP='cp -p'
+ LN_S='ln -s'
 @@ -317,7 +317,7 @@
       LIBDL='@LIBDL@'                     # either '-ldl' or ''
       LIBICONV='@LIBICONV@'               # either '-liconv' or ''
@@ -16,94 +25,91 @@ $NetBSD: patch-aa,v 1.7 2000/05/27 02:47:14 wiz Exp $
  fi
  
 +if [ "$TSYSOS" = "netbsd" ] ; then # NetBSD
-+       XCFLAGS=$XCFLAGS' -DNO_GENERATIONAL_GC -fpcc-struct-return -Dunix'
++       XCFLAGS=$XCFLAGS' -Dunix'
 +fi
  if [ $TSYS = sun4 -a $CROSS = false ] ; then
    ARCH_K=`(arch -k) 2>/dev/null || uname -m 2>/dev/null` # kernel architecture, see arch(1)
    if [ "$ARCH_K" = sun4 -o "$ARCH_K" = sun4c -o "$ARCH_K" = sun4e ] ; then
-@@ -1623,7 +1626,7 @@
- echol "dvidir = \$(exec_prefix)${NEXT_}share${NEXT_}dvi"
- case "$fsstnd" in
-   gnu_ext)
--    echol "docdir = \$(exec_prefix)${NEXT_}doc"
-+    echol "docdir = \$(exec_prefix)${NEXT_}share${NEXT_}doc"
+@@ -1626,6 +1629,10 @@
+     echol "docdir = \$(exec_prefix)${NEXT_}doc"
      echol "lispdocdir = \$(docdir)${NEXT_}clisp"
      ;;
++  netbsd)
++    echol "docdir = \$(exec_prefix)${NEXT_}share${NEXT_}doc"
++    echol "lispdocdir = \$(docdir)${NEXT_}clisp"
++    ;;
    suse)
-@@ -2533,7 +2536,7 @@
-   if [ $HOS = unix ] ; then
-     echotab "if test -d locale; then rm -rf locale; fi"
-     echotab "mkdir locale"
--    echotab "(cd gettext/po && \$(MAKE) && \$(MAKE) install datadir=../.. localedir='\$\$(datadir)/locale' INSTALL_DATA=ln) || (rm -rf locale ; exit 1)"
-+    echotab "(cd gettext/po && \$(MAKE) && \$(MAKE) install datadir=../.. localedir='\$\$(datadir)/locale' INSTALL_DATA=\"ln -f\") || (rm -rf locale ; exit 1)"
-   else
-     echotab "mkdir locale"
-     eval `grep ALL_LINGUAS= src/gettext/configure.in`
-@@ -3130,13 +3133,11 @@
-     case "$fsstnd" in
-       gnu_ext)
-         echotab "if [ ! -d \$(install_root)\$(exec_prefix)/share ] ; then mkdir \$(install_root)\$(exec_prefix)/share ; fi"
--        echotab "if [ ! -d \$(install_root)\$(htmldir) ] ; then mkdir \$(install_root)\$(htmldir) ; fi"
--        echotab "if [ ! -d \$(install_root)\$(dvidir) ] ; then mkdir \$(install_root)\$(dvidir) ; fi"
-+        echotab "if [ ! -d \$(prefix)/share/doc/clisp ] ; then mkdir \$(prefix)/share/doc/clisp ; fi"
+     echol "docdir = \$(exec_prefix)${NEXT_}doc"
+     echol "lispdocdir = \$(docdir)${NEXT_}packages${NEXT_}clisp"
+@@ -3133,10 +3140,17 @@
+         echotab "if [ ! -d \$(install_root)\$(htmldir) ] ; then mkdir \$(install_root)\$(htmldir) ; fi"
+         echotab "if [ ! -d \$(install_root)\$(dvidir) ] ; then mkdir \$(install_root)\$(dvidir) ; fi"
          ;;
++      netbsd)
++        echotab "if [ ! -d \$(install_root)\$(exec_prefix)/share ] ; then mkdir \$(install_root)\$(exec_prefix)/share ; fi"
++        echotab "if [ ! -d \$(prefix)/share/doc/clisp ] ; then mkdir \$(prefix)/share/doc/clisp ; fi"
++        ;;
      esac
      echotab "if [ ! -d \$(install_root)\$(docdir) ] ; then mkdir \$(install_root)\$(docdir) ; fi"
      echotab "if [ ! -d \$(install_root)\$(lispdocdir) ] ; then mkdir \$(install_root)\$(lispdocdir) ; fi"
 -    echotab "if [ ! -d \$(install_root)\$(lispdocdir)/doc ] ; then mkdir \$(install_root)\$(lispdocdir)/doc ; fi"
++    if [ "$fsstnd" != netbsd ]
++    then
++	echotab "if [ ! -d \$(install_root)\$(lispdocdir)/doc ] ; then mkdir \$(install_root)\$(lispdocdir)/doc ; fi"
++    fi
      echol
      echol "install-bin : lisp${LEXE} lispinit.mem clisp.c force"
      echotab "if [ ! -d \$(install_root)\$(prefix) ] ; then mkdir \$(install_root)\$(prefix) ; fi"
-@@ -3178,17 +3179,10 @@
-     case "$fsstnd" in
-       gnu_ext)
-         echotab "if [ ! -d \$(install_root)\$(exec_prefix)/share ] ; then mkdir \$(install_root)\$(exec_prefix)/share ; fi"
--        echotab "if [ ! -d \$(install_root)\$(htmldir) ] ; then mkdir \$(install_root)\$(htmldir) ; fi"
--        echotab "\$(INSTALL_DATA) clisp.html \$(install_root)\$(htmldir)/clisp.html"
-+        echotab "if [ ! -d \$(install_root)\$(prefix)/share/doc/clisp ] ; then mkdir \$(install_root)\$(prefix)/share/doc/clisp ; fi"
-+        echotab "\$(INSTALL_DATA) clisp.html \$(install_root)\$(prefix)/share/doc/clisp/clisp.html"
-         if [ $TERMINAL = readline ] ; then
--          echotab "\$(INSTALL_DATA) clreadline.html \$(install_root)\$(htmldir)/clreadline.html"
--        fi
--        echotab "if [ ! -d \$(install_root)\$(dvidir) ] ; then mkdir \$(install_root)\$(dvidir) ; fi"
--        if test -n "$GROFF"; then
--          echotab "\$(INSTALL_DATA) clisp.dvi \$(install_root)\$(dvidir)/clisp.dvi"
--        fi
--        if [ $TERMINAL = readline ] ; then
--          echotab "\$(INSTALL_DATA) clreadline.dvi \$(install_root)\$(dvidir)/clreadline.dvi"
-+          echotab "\$(INSTALL_DATA) clreadline.html \$(install_root)\$(prefix)/share/doc/clisp/clreadline.html"
+@@ -3191,6 +3205,14 @@
+           echotab "\$(INSTALL_DATA) clreadline.dvi \$(install_root)\$(dvidir)/clreadline.dvi"
          fi
          ;;
++      netbsd)
++        echotab "if [ ! -d \$(install_root)\$(exec_prefix)/share ] ; then mkdir \$(install_root)\$(exec_prefix)/share ; fi"
++        echotab "if [ ! -d \$(install_root)\$(prefix)/share/doc/clisp ] ; then mkdir \$(install_root)\$(prefix)/share/doc/clisp ; fi"
++        echotab "\$(INSTALL_DATA) clisp.html \$(install_root)\$(prefix)/share/doc/clisp/clisp.html"
++        if [ $TERMINAL = readline ] ; then
++          echotab "\$(INSTALL_DATA) clreadline.html \$(install_root)\$(prefix)/share/doc/clisp/clreadline.html"
++        fi
++        ;;
      esac
-@@ -3198,9 +3192,8 @@
+     echol
+     echol "install-doc : \$(READMES) \$(MANUALS)${manual_dvi} force"
+@@ -3198,9 +3220,14 @@
      echotab "if [ ! -d \$(install_root)\$(exec_prefix) ] ; then mkdir \$(install_root)\$(exec_prefix) ; fi"
      echotab "if [ ! -d \$(install_root)\$(docdir) ] ; then mkdir \$(install_root)\$(docdir) ; fi"
      echotab "if [ ! -d \$(install_root)\$(lispdocdir) ] ; then mkdir \$(install_root)\$(lispdocdir) ; fi"
 -    echotab "if [ ! -d \$(install_root)\$(lispdocdir)/doc ] ; then mkdir \$(install_root)\$(lispdocdir)/doc ; fi"
      echotab "\$(INSTALL_DATA) \$(READMES) \$(install_root)\$(lispdocdir)/"
 -    echotab "\$(INSTALL_DATA) \$(MANUALS)${manual_dvi} \$(install_root)\$(lispdocdir)/doc/"
-+    echotab "\$(INSTALL_DATA) \$(MANUALS)${manual_dvi} \$(install_root)\$(lispdocdir)/"
++    if [ "$fsstnd" = netbsd ]
++    then
++	echotab "\$(INSTALL_DATA) \$(MANUALS)${manual_dvi} \$(install_root)\$(lispdocdir)/"
++    else
++	echotab "if [ ! -d \$(install_root)\$(lispdocdir)/doc ] ; then mkdir \$(install_root)\$(lispdocdir)/doc ; fi"
++	echotab "\$(INSTALL_DATA) \$(MANUALS)${manual_dvi} \$(install_root)\$(lispdocdir)/doc/"
++    fi
      echol
      echol
      echol "installcheck : ${TESTSDIR} force"
-@@ -3227,18 +3220,13 @@
-     fi
-     case "$fsstnd" in
-       gnu_ext)
--        echotab "\$(RM) \$(install_root)\$(htmldir)/clisp.html"
--        if [ $TERMINAL = readline ] ; then
--          echotab "\$(RM) \$(install_root)\$(htmldir)/clreadline.html"
--        fi
--        echotab "\$(RM) \$(install_root)\$(dvidir)/clisp.dvi"
-         if [ $TERMINAL = readline ] ; then
--          echotab "\$(RM) \$(install_root)\$(dvidir)/clreadline.dvi"
-+          echotab "\$(RM) \$(install_root)\$(prefix)/share/doc/clisp/clreadline.html"
+@@ -3236,9 +3263,19 @@
+           echotab "\$(RM) \$(install_root)\$(dvidir)/clreadline.dvi"
          fi
          ;;
++      netbsd)
++        if [ $TERMINAL = readline ] ; then
++          echotab "\$(RM) \$(install_root)\$(prefix)/share/doc/clisp/clreadline.html"
++        fi
++        ;;
      esac
      echotab "for f in \$(READMES); do \$(RM) \$(install_root)\$(lispdocdir)/\$\$f; done"
 -    echotab "for f in \$(MANUALS)${manual_dvi}; do \$(RM) \$(install_root)\$(lispdocdir)/doc/\$\$f; done"
-+    echotab "for f in \$(MANUALS)${manual_dvi}; do \$(RM) \$(install_root)\$(lispdocdir)/\$\$f; done"
++    if [ "$fsstnd" = netbsd ]
++    then
++	echotab "for f in \$(MANUALS)${manual_dvi}; do \$(RM) \$(install_root)\$(lispdocdir)/\$\$f; done"
++    else
++	echotab "for f in \$(MANUALS)${manual_dvi}; do \$(RM) \$(install_root)\$(lispdocdir)/doc/\$\$f; done"
++    fi
      echol
      echol
    fi
