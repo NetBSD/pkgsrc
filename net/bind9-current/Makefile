@@ -1,33 +1,35 @@
-# $NetBSD: Makefile,v 1.8 2001/01/18 13:12:30 itojun Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/04 10:39:11 itojun Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
+MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/snapshots/
 
 MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.isc.org/products/BIND/
-
-IGNORE=		"net/bind9 is newer"
 
 # IPv6 ready, automatically detected
 .include "../../mk/bsd.prefs.mk"
 BUILD_DEFS+=	USE_INET6
 
-# we cannot disable pthreads at this moment, it looks to be a a bug in
-# BIND9 configure.in
-DEPENDS+=	unproven-pthreads>=0.17:../../devel/unproven-pthreads
-
 # No need to set USE_INET6, will auto-detect.
-BIND_VERSION=	9.1.0b2
+BIND_VERSION=	9.2.0s20010119
 DIST_SUBDIR=	bind/${BIND_VERSION}
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=--disable-threads	# Until we have real threads
 # dnssec-keygen needs "good enough" random number, use /dev/urandom
 CONFIGURE_ARGS+=--with-libtool=yes \
 		--sysconfdir=/etc \
 		--localstatedir=/var \
 		--with-randomdev=/dev/urandom
 LDFLAGS+=	-Wl,-R${LOCALBASE}/pthreads/lib -L${LOCALBASE}/pthreads/lib
+
+post-build:
+	${SED} \
+		-e 's|@PREFIX@|${PREFIX}|' \
+		<${FILESDIR}/named.sh >${WRKDIR}/named
+
+PLIST_SRC=	${WRKSRC}/PLIST
 
 post-install:
 	${MKDIR} ${PREFIX}/share/doc/bind9
@@ -40,9 +42,9 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/draft/* ${PREFIX}/share/doc/bind9/draft
 	${INSTALL_DATA} ${WRKSRC}/doc/misc/* ${PREFIX}/share/doc/bind9/misc
 	${INSTALL_DATA} ${WRKSRC}/doc/rfc/* ${PREFIX}/share/doc/bind9/rfc
-	${INSTALL_MAN} ${WRKSRC}/doc/man/bin/*.8 ${PREFIX}/man/man8
-	${INSTALL_MAN} ${WRKSRC}/doc/man/bin/*.5 ${PREFIX}/man/man5
-	${INSTALL_MAN} ${WRKSRC}/doc/man/bin/*.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/man/dnssec/*.8 ${PREFIX}/man/man8
+	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+	(cd ${PREFIX}; find share/doc/bind9 -type f -print ) >> ${PLIST_SRC}
+	(cd ${PREFIX}; find share/doc/bind9 -type d -print ) | sed -e 's/^/@dirrm /' | sort -r >> ${PLIST_SRC}
+	${INSTALL_DATA} ${WRKDIR}/named ${PREFIX}/etc/rc.d/named9
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2001/02/04 10:39:13 itojun Exp $
+
+--- bin/rndc/Makefile.in-	Sun Feb  4 19:03:12 2001
++++ bin/rndc/Makefile.in	Sun Feb  4 19:03:20 2001
+@@ -65,8 +65,8 @@
+ 
+ install:: rndc installdirs
+ 	${LIBTOOL} ${INSTALL_PROGRAM} rndc ${DESTDIR}${sbindir}
+-	${INSTALL_PROGRAM} rndc.8 ${DESTDIR}${mandir}/man8
+-	${INSTALL_PROGRAM} rndc.conf.5 ${DESTDIR}${mandir}/man5
++	${INSTALL_DATA} rndc.8 ${DESTDIR}${mandir}/man8
++	${INSTALL_DATA} rndc.conf.5 ${DESTDIR}${mandir}/man5
+ 
+ clean distclean::
+ 	rm -f ${TARGETS}
