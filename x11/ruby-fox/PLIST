@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/08/30 02:55:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/11/28 05:56:42 taca Exp $
 ${RUBY_DOCDIR}/fox/apes02.html
 ${RUBY_DOCDIR}/fox/apes03.html
 ${RUBY_DOCDIR}/fox/book.html
@@ -9,7 +9,11 @@ ${RUBY_DOCDIR}/fox/ch02s04.html
 ${RUBY_DOCDIR}/fox/ch02s05.html
 ${RUBY_DOCDIR}/fox/ch03s02.html
 ${RUBY_DOCDIR}/fox/ch03s03.html
+${RUBY_DOCDIR}/fox/ch03s04.html
+${RUBY_DOCDIR}/fox/ch04s02.html
+${RUBY_DOCDIR}/fox/ch04s03.html
 ${RUBY_DOCDIR}/fox/changes.html
+${RUBY_DOCDIR}/fox/clipboardtut.html
 ${RUBY_DOCDIR}/fox/cvs.html
 ${RUBY_DOCDIR}/fox/differences.html
 ${RUBY_DOCDIR}/fox/dragdroptut.html
@@ -84,7 +88,6 @@ ${RUBY_EXAMPLESDIR}/fox/hello.rb
 ${RUBY_EXAMPLESDIR}/fox/hello2.rb
 ${RUBY_EXAMPLESDIR}/fox/iRAA.rb
 ${RUBY_EXAMPLESDIR}/fox/iconlist.rb
-${RUBY_EXAMPLESDIR}/fox/iconlist2.rb
 ${RUBY_EXAMPLESDIR}/fox/icons/AngryGuyInBunnySuit.ico
 ${RUBY_EXAMPLESDIR}/fox/icons/FatBot.ico
 ${RUBY_EXAMPLESDIR}/fox/icons/FlippedySwitch.ico
@@ -116,6 +119,8 @@ ${RUBY_EXAMPLESDIR}/fox/icons/fonts.png
 ${RUBY_EXAMPLESDIR}/fox/icons/fox.png
 ${RUBY_EXAMPLESDIR}/fox/icons/foxicon.png
 ${RUBY_EXAMPLESDIR}/fox/icons/frontview.png
+${RUBY_EXAMPLESDIR}/fox/icons/gem_big.png
+${RUBY_EXAMPLESDIR}/fox/icons/gem_small.png
 ${RUBY_EXAMPLESDIR}/fox/icons/hello2.png
 ${RUBY_EXAMPLESDIR}/fox/icons/help.png
 ${RUBY_EXAMPLESDIR}/fox/icons/indent.png
@@ -166,54 +171,6 @@ ${RUBY_EXAMPLESDIR}/fox/splitter.rb
 ${RUBY_EXAMPLESDIR}/fox/styledtext.rb
 ${RUBY_EXAMPLESDIR}/fox/tabbook.rb
 ${RUBY_EXAMPLESDIR}/fox/table.rb
-${RUBY_EXAMPLESDIR}/fox/tests/README
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXAccelTable.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXButton.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXCheckButton.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXDC.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXDCPrint.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXDCWindow.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXDataTarget.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXFileAssoc.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXFileStream.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXFont.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXFontDesc.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXGLGroup.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXGLShape.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXGLViewer.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXHMat.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXHVec.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXHeader.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXIconList.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXId.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXLight.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXList.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXListBox.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXMaterial.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXMenuCommand.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXPoint.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXRadioButton.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXRange.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXRectangle.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXRegion.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXRegistry.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXShell.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXSize.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXTable.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXTableItem.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXText.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXTopWindow.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXTreeList.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXVec.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_FXViewport.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TC_Misc.rb
-${RUBY_EXAMPLESDIR}/fox/tests/TS_All.rb
-${RUBY_EXAMPLESDIR}/fox/tests/blankpage.ps
-${RUBY_EXAMPLESDIR}/fox/tests/howdypage.ps
-${RUBY_EXAMPLESDIR}/fox/tests/stress1.rb
-${RUBY_EXAMPLESDIR}/fox/tests/stress2.rb
-${RUBY_EXAMPLESDIR}/fox/tests/stress3.rb
-${RUBY_EXAMPLESDIR}/fox/tests/testcase.rb
 ${RUBY_EXAMPLESDIR}/fox/textedit/commands.rb
 ${RUBY_EXAMPLESDIR}/fox/textedit/helpwindow.rb
 ${RUBY_EXAMPLESDIR}/fox/textedit/prefdialog.rb
@@ -231,6 +188,8 @@ ${RUBY_SITELIBDIR}/fox/irb.rb
 ${RUBY_SITELIBDIR}/fox/iterators.rb
 ${RUBY_SITELIBDIR}/fox/keys.rb
 ${RUBY_SITELIBDIR}/fox/missingdep.rb
+${RUBY_SITELIBDIR}/fox/pseudokeyboard.rb
+${RUBY_SITELIBDIR}/fox/pseudomouse.rb
 ${RUBY_SITELIBDIR}/fox/responder.rb
 ${RUBY_SITELIBDIR}/fox/responder2.rb
 ${RUBY_SITELIBDIR}/fox/scintilla.rb
@@ -243,7 +202,6 @@ ${RUBY_SITEARCHLIBDIR}/fox.so
 @dirrm ${RUBY_DOCDIR}/fox/images
 @dirrm ${RUBY_DOCDIR}/fox
 @dirrm ${RUBY_EXAMPLESDIR}/fox/textedit
-@dirrm ${RUBY_EXAMPLESDIR}/fox/tests
 @dirrm ${RUBY_EXAMPLESDIR}/fox/icons
 @dirrm ${RUBY_EXAMPLESDIR}/fox
 @dirrm ${RUBY_SITELIBDIR}/fox
