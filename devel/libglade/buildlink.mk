@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/10/05 21:15:10 tron Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/10/06 11:47:31 rh Exp $
 #
 # This Makefile fragment is included by packages that use libglade.
 #
@@ -36,7 +36,6 @@ BUILDLINK_CONFIG_WRAPPER_SED+=	\
 .include "../../textproc/libxml/buildlink.mk"
 .include "../../x11/gnome-libs/buildlink.mk"
 .include "../../audio/esound/buildlink.mk"
-
 
 BUILDLINK_TARGETS.libglade=	libglade-buildlink
 BUILDLINK_TARGETS.libglade+=	libglade-buildlink-config-wrapper
