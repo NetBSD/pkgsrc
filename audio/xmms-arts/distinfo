@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/24 14:25:35 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2004/12/01 11:47:44 markd Exp $
 
-SHA1 (xmmsarts-0.4.tar.bz2) = f8f02efcc3826cc086bdb5c2279c793dae695966
-Size (xmmsarts-0.4.tar.bz2) = 94742 bytes
-SHA1 (patch-aa) = 0a1947aec7bf6d8868f5ec415e31a6cda0c33413
+SHA1 (arts_output-0.7.1.tar.gz) = 026b7b0be459cfff75557c04e54425c4d21dacaf
+Size (arts_output-0.7.1.tar.gz) = 236839 bytes
+SHA1 (patch-ab) = b5205b675f9db35d1035a68d4e01f9473322c39d

@@ -1,18 +1,15 @@
-# $NetBSD: Makefile,v 1.7 2004/10/03 00:13:10 tv Exp $
+# $NetBSD: Makefile,v 1.8 2004/12/01 11:47:44 markd Exp $
 #
 
-DISTNAME=	xmmsarts-0.4
-PKGNAME=	${DISTNAME:S/xmms/xmms-/}
-PKGREVISION=			2
+DISTNAME=	arts_output-0.7.1
+PKGNAME=	xmms-arts-0.7.1
 CATEGORIES=	audio kde
-MASTER_SITES=	http://stukach.com/hosted/m.i.a/xmmsarts/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	http://havardk.xmms.org/plugins/arts_output/
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.xmms.org/plugins.php?category=output
 COMMENT=	XMMS plugin to output sound through the aRts sound daemon
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
