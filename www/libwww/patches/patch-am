@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.1 2002/11/19 20:54:12 reinoud Exp $
+$NetBSD: patch-am,v 1.2 2004/02/12 20:31:35 minskim Exp $
 
---- configure.in.orig	Wed Jun 12 11:26:46 2002
+--- configure.in.orig	2002-06-12 04:26:46.000000000 -0500
 +++ configure.in
 @@ -237,6 +237,8 @@ AC_CHECK_FUNC(unlink)
       fi
@@ -97,7 +97,7 @@ $NetBSD: patch-am,v 1.1 2002/11/19 20:54:12 reinoud Exp $
  LWWWSSL=""
  LIBWWWSSL=""
  WWWSSLEX=""
-@@ -645,14 +642,40 @@ AC_ARG_WITH(ssl,
+@@ -645,10 +642,35 @@ AC_ARG_WITH(ssl,
      ;;
    *)
      if test "x$withval" = "xyes"; then
@@ -132,16 +132,11 @@ $NetBSD: patch-am,v 1.1 2002/11/19 20:54:12 reinoud Exp $
      fi
 -    LIBS="$LIBS $withval"
 +    SAVED_LIBS="${LIBS}"
-+    LIBS="${SSLLIBS}"
++    LIBS="${LIBS} ${SSLLIBS}"
      AC_TRY_LINK([],
  		[ SSL_library_init(); ],
  		[],
- 		[ AC_MSG_ERROR(Could not find the $withval libraries.  You must first install openSSL.) ])
-+    LIBS="${SAVED_LIBS}"
-     AC_MSG_RESULT(yes)
-     WWWSSL="libwwwssl.la"
-     LWWWSSL="-lwwwssl" 
-@@ -663,6 +686,7 @@ AC_ARG_WITH(ssl,
+@@ -663,6 +685,7 @@ AC_ARG_WITH(ssl,
  [ AC_MSG_RESULT(no) ])
  AC_SUBST(WWWSSL)
  AC_SUBST(SSLINC)
