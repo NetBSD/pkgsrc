@@ -1,4 +1,4 @@
-# $NetBSD: defs.FreeBSD.mk,v 1.31 2004/01/31 16:52:16 xtraeme Exp $
+# $NetBSD: defs.FreeBSD.mk,v 1.32 2004/03/09 10:34:31 xtraeme Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -156,8 +156,8 @@ _STRIPFLAG_CC?=		-s	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	-s	# install(1) option to strip
 .endif
 
-DEFAULT_SERIAL_DEVICE?=	/dev/null
-SERIAL_DEVICES?=	/dev/null
+DEFAULT_SERIAL_DEVICE?=	/dev/cuaa0
+SERIAL_DEVICES?=	/dev/cuaa0
 
 # check for kqueue(2) support
 .if exists(/usr/include/sys/event.h)
