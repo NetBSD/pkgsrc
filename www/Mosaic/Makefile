@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/05/22 09:32:25 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2001/06/06 00:28:04 jtb Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/05/27 08:44:56 dburr Exp
 #
 
@@ -14,6 +14,8 @@ COMMENT=		World Wide Web browser
 
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		png>=1.0.11:../../graphics/png
+
+LICENSE=		mosaic-license
 
 NOT_FOR_PLATFORM=	*-*-alpha	#LP64 problems
 
