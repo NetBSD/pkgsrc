@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2004/11/16 18:01:11 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.33 2004/11/16 18:04:38 xtraeme Exp $
 
 DISTNAME=		mysql-4.0.22
 CATEGORIES=		databases
@@ -91,7 +91,7 @@ USE_PERL5=		# defined
 USE_LIBTOOL=		# defined
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
 
-SUBST_CLASSES+=		mk scripts
+SUBST_CLASSES+=		mk scripts thr
 SUBST_STAGE.mk=		post-extract
 SUBST_FILES.mk=		dbug/Makefile.in heap/Makefile.in isam/Makefile.in \
 			merge/Makefile.in mysys/Makefile.in \
