@@ -1,10 +1,10 @@
-.\"	$NetBSD: pkglint.1,v 1.5 2000/09/05 00:02:17 wiz Exp $
+.\"	$NetBSD: pkglint.1,v 1.6 2001/11/20 17:34:16 wiz Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
 .\" All Rights Reserved.  Absolutely no warranty.
 .\"
-.Dd September 05, 2000
+.Dd September 5, 2000
 .Dt PKGLINT 1
 .Sh NAME
 .Nm pkglint
@@ -35,11 +35,16 @@ especially when checking complex
 .Pp
 .Sy Options
 .Bl -tag -width Fl
+.It Fl B Ar n
+Set the number of contiguous blank lines allowed in
+.Pa Makefile
+to
+.Ar n
+(by default,
+.Ar n
+is 1.)
 .It Fl h
 Show the summary of command line options, then exit.
-.It Fl v
-Be verbose.
-Show the progress report for items that are being checked.
 .It Fl I
 Show the Makefile that is constructed by including all the files that
 are slurped in via .include directives.
@@ -49,21 +54,30 @@ New package flag.
 Adds several checks specific to newly submitted packages.
 If you are willing to submit the directory to be checked as a new package,
 use this option.
-.It Fl B Ar n
-Set the number of contiguous blank lines allowed in 
-.Pa Makefile
-to
-.Ar n
-(by default,
-.Ar n
-is 1.)
+.It Fl v
+Be verbose.
+Show the progress report for items that are being checked.
 .It dir
 The pkgsrc directory to be checked.
-If omitted, all checks will be performed over the current directory.
+If omitted, all checks will be performed on the current directory.
+.El
+.Sh FILES
+.Bl -tag -width /usr/share/mk/bsd.port.mk -compact
+.\".It FreeBSD:
+.\".It Pa /usr/share/mk/bsd.port.mk
+.\"master Makefile for ports
+.\".It Pa /usr/ports/*
+.\"port collection
+.\".Pp
+.\".It NetBSD:
+.It Pa /usr/pkgsrc/mk/bsd.pkg.mk
+master Makefile for pkgsrc
+.It Pa /usr/pkgsrc/*
+pkgsrc collection
 .El
 .Sh DIAGNOSTICS
 Messages will be sent to standard output, not standard error.
-.Bl -tag -width WARN: foobaa
+.Bl -tag -width "WARN: foobaa"
 .It FATAL: ...
 This type of error messages suggests that there is some fatal error
 in the pkgsrc directory.
@@ -91,20 +105,6 @@ and obey/ignore the result.
 This type of messages is used in verbose mode
 .Pq Fl v .
 .El
-.Sh FILES
-.Bl -tag -width /usr/share/mk/bsd.port.mk -compact
-.\".It FreeBSD:
-.\".It Pa /usr/share/mk/bsd.port.mk
-.\"master Makefile for ports
-.\".It Pa /usr/ports/*
-.\"port collection
-.\".Pp
-.\".It NetBSD:
-.It Pa /usr/pkgsrc/mk/bsd.pkg.mk
-master Makefile for pkgsrc
-.It Pa /usr/pkgsrc/*
-.El
-pkgsrc collection
 .Sh AUTHORS
 Jun-ichiro Itoh <itojun@itojun.org>
 and
