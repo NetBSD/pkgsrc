@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.6 1999/03/04 22:44:42 tron Exp $
+$NetBSD: patch-ad,v 1.7 1999/06/04 00:05:51 tron Exp $
 
---- kdm/Makefile.in.orig	Sat Feb  6 18:49:17 1999
-+++ kdm/Makefile.in	Thu Mar  4 21:30:30 1999
-@@ -100,7 +100,7 @@
+--- kdm/Makefile.in.orig	Wed Apr 28 17:20:50 1999
++++ kdm/Makefile.in	Fri Jun  4 01:01:03 1999
+@@ -102,7 +102,7 @@
  LIBXDMCP = @LIBXDMCP@
  LIBZ = @LIBZ@
  LIB_KAB = @LIB_KAB@
@@ -11,12 +11,12 @@ $NetBSD: patch-ad,v 1.6 1999/03/04 22:44:42 tron Exp $
  LIB_KDEUI = @LIB_KDEUI@
  LIB_KDEUTIL = @LIB_KDEUTIL@
  LIB_KFILE = @LIB_KFILE@
-@@ -255,7 +255,7 @@
- CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CXXFLAGS)
- LTCXXCOMPILE = $(LIBTOOL) --mode=compile $(CXX) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CXXFLAGS)
- CXXLINK = $(LIBTOOL) --mode=link $(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@
+@@ -234,7 +234,7 @@
+ LTCXXCOMPILE = $(LIBTOOL) --mode=compile $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ CXXLD = $(CXX)
+ CXXLINK = $(LIBTOOL) --mode=link $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@
 -CFLAGS = @CFLAGS@
 +CFLAGS = @CFLAGS@ -DPREFIX=\"${prefix}\"
- COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
- LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
- LINK = $(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o $@
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ CCLD = $(CC)
