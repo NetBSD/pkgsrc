@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:50:00 agc Exp $
+
+MD5 (depot-5.14.tar.gz) = f5a3cb7437927db716892c6706c6e38a
+SHA1 (patch-aa) = 5b11b84bf134b292e65b05c42bf2dce277f6bc37

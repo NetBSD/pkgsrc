@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:49:46 agc Exp $
+
+MD5 (aperture-2.0nb1/apNetBSD.shar) = bd6de13f74a74e849d6b3caf2e49848f
+SHA1 (patch-aa) = 544d71b6524b7aaeb5deb985372599f1962af4fe
+SHA1 (patch-ad) = 22aa063237f08f38712017f310d535bc3e3ad0c8
+SHA1 (patch-ae) = b6ae1d888db3a0cbefd7088a7acf7ca881fdc767
+SHA1 (patch-af) = 475c127658ba1050154a7dcabe39482c088e2d02

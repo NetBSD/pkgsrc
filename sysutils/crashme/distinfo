@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:49:58 agc Exp $
+
+MD5 (crashme-2.4-shar) = a8c7b4be19b9e4535964c7b391c30988
+SHA1 (patch-aa) = a23fe7c1ea008913f3e085f0eb67f997b155e21b
+SHA1 (patch-ab) = 4c7bdcbaae5c802ee27142b3a41638151dff3638

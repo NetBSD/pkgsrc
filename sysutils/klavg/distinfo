@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:50:25 agc Exp $
+
+MD5 (klavg-1.1.tar.gz) = 569781a3e20f87d7b97cd99ab3b8520e
+SHA1 (patch-aa) = 7a027f64e30892199cce3203eaae6f0bf0b596ef
+SHA1 (patch-ab) = 5a023d20eb73ba9f0eb8181423e70bdcf36bc706

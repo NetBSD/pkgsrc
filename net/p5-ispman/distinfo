@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:52:46 agc Exp $
+
+MD5 (ispman-0.5.tar.gz) = 6be2cd9a4842a8198f6a06cd36ba040c
+SHA1 (patch-aa) = a4319eab69a25ccaaadb8e2a8d089d24460fe6cc
+SHA1 (patch-ab) = 5d1c6b43999b75b34d999958dffc55ae939b633c
+SHA1 (patch-ac) = 614222eef5edb9b5726140d7e7a1f142d28845d8

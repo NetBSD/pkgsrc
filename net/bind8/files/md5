@@ -1,4 +1,0 @@
-$NetBSD: md5,v 1.4 2001/01/27 07:33:22 itojun Exp $
-
-MD5 (bind/8.2.3/bind-src.tar.gz) = e21e2854d72afd2ffbee17cfe8caa581
-MD5 (bind/8.2.3/bind-doc.tar.gz) = c26474bb791552cc0cbc5af72190a772

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:47:37 agc Exp $
+
+MD5 (sslwrap206.tar.gz) = 5a09f966f9114a108572f70a57bafdf7
+SHA1 (patch-aa) = b54ec5ed8fbb29aefd52c4ba85bcc373ed46d9eb
+SHA1 (patch-ab) = 7f28cb5eca2a004408cb20aa365edad0d4f7d45a

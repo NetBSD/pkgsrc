@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:46:52 agc Exp $
+
+MD5 (fressh-0.8.1.tar.bz2) = 94204676bbdbde3395726a7c98d15f85
+SHA1 (patch-aa) = 0b65db8177ffb81084412f9716f73e92920d559c

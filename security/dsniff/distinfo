@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:46:50 agc Exp $
+
+MD5 (dsniff-2.3.tar.gz) = 183e336a45e38013f3af840bddec44b4
+SHA1 (patch-aa) = b50347c772c13abd6b62a80315c7bfecc139ba60

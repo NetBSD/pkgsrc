@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:52:10 agc Exp $
+
+MD5 (ncftp-3.0.2-src.tar.gz) = 54d15c76fcc68f18094bb06dc1676e15
+SHA1 (patch-aa) = 3c26a25258be2fdb2843ff3ccdc032e2320002ad

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:43:53 agc Exp $
+
+MD5 (magicfilter-1.2.tar.gz) = dcece221e363ca5dbc79bdd84713c04e
+SHA1 (patch-aa) = 2a79b49acd5e655308d81fdc509db5b3ff8fb165
+SHA1 (patch-ab) = d55a2db4b9048a41be60c51f651ef0dfcb3f315e

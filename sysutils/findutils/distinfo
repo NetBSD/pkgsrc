@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:50:04 agc Exp $
+
+MD5 (findutils-4.1.tar.gz) = 3ea8fe58ef5386da75f6c707713aa059
+SHA1 (patch-aa) = 34d2a60cbed74cb7abfaf8c8b2df9ef8a64ff623
+SHA1 (patch-ab) = 13664baa3e9348413416c920776be659d5dc59c3

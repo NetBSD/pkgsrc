@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:43:32 agc Exp $
+
+MD5 (scsh-0.5.2.tar.gz) = 6661518731117eb21eda644aa5babe46
+SHA1 (patch-aa) = 13858d98dd707609ba8affbf54183f3604f1944f
+SHA1 (patch-ab) = da18166513216043ccd0d0c0c9ecec06d71ae8a9
+SHA1 (patch-ac) = 79796d35cd5dcfd5df98b085cf54b0aed09144c9
+SHA1 (patch-ad) = 2be4dc2b966cbbf66736abe90fa63e1182f8772f
+SHA1 (patch-ae) = cdbcb424a87630f3f274ae653a0414e51022f0fb
+SHA1 (patch-af) = 88190d8ad6b1289efbcf37b5919fc81df8eed3f0
+SHA1 (patch-ag) = cd9af4cc7148fbe9d9200d1c7938f22545fd45f2
+SHA1 (patch-ah) = 2488edef91f43217b5dea7c7b87d2580f9f781de
+SHA1 (patch-ai) = cc60a1adca95e8bf907588851a541714991f01ea
+SHA1 (patch-aj) = 32392725a42955446a090a088a23fe82811bd5a2
+SHA1 (patch-ak) = 28567dbcac8a659bd6fbadb92f0e1ef0ec1fea7a
+SHA1 (patch-al) = 7db462cb71b727992e15726178af57438686936e
+SHA1 (patch-am) = b7fda2201a9b7117ac5098e05749cf9f977fbe7d
+SHA1 (patch-an) = 8e014caa38ca4c14438124fe9e7f3d68f5bb1643
+SHA1 (patch-ao) = 3719e0f75614cd1bee3453cbc1d09d59b5b70b1a
