@@ -1,31 +1,38 @@
-$NetBSD: patch-ag,v 1.2 2002/02/19 06:25:58 jmc Exp $
+$NetBSD: patch-ag,v 1.3 2002/10/19 20:06:46 heinz Exp $
 
---- src/joystick.c.orig	Tue Dec  5 00:11:08 2000
-+++ src/joystick.c	Tue Feb 19 05:54:30 2002
-@@ -11,7 +11,7 @@
+--- src/libgame/joystick.c.orig	Mon Jul 22 01:13:43 2002
++++ src/libgame/joystick.c
+@@ -11,12 +11,13 @@
  * joystick.c                                               *
  ***********************************************************/
  
 -#if defined(PLATFORM_FREEBSD)
-+#if defined(__FreeBSD__) || (defined(__NetBSD__) && defined(HAVE_JOYSTICK))
++#include "misc.h"
++
++#if defined(PLATFORM_FREEBSD) || (defined(PLATFORM_NETBSD) && defined(HAVE_JOYSTICK))
  #include <machine/joystick.h>
  #endif
  
-@@ -319,7 +319,7 @@
- #if defined(PLATFORM_UNIX)
- int Joystick(int player_nr)
+ #include "joystick.h"
+-#include "misc.h"
+ 
+ 
+ /* ========================================================================= */
+@@ -60,7 +61,7 @@
+ 
+ boolean UnixReadJoystick(int fd, int *x, int *y, boolean *b1, boolean *b2)
  {
--#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || (defined(__NetBSD__) && defined(HAVE_JOYSTICK))
+-#if defined(PLATFORM_FREEBSD)
++#if defined(PLATFORM_FREEBSD) || (defined(PLATFORM_NETBSD) && defined(HAVE_JOYSTICK))
    struct joystick joy_ctrl;
  #else
    struct joystick_control
-@@ -355,7 +355,7 @@
-   js_x  = joy_ctrl.x;
-   js_y  = joy_ctrl.y;
+@@ -79,7 +80,7 @@
+   if (y != NULL)
+     *y = joy_ctrl.y;
  
--#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || (defined(__NetBSD__) && defined(HAVE_JOYSTICK))
-   js_b1 = joy_ctrl.b1;
-   js_b2 = joy_ctrl.b2;
- #else
+-#if defined(PLATFORM_FREEBSD)
++#if defined(PLATFORM_FREEBSD) || (defined(PLATFORM_NETBSD) && defined(HAVE_JOYSTICK))
+   if (b1 != NULL)
+     *b1 = joy_ctrl.b1;
+   if (b2 != NULL)
