@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.155 2000/09/15 15:07:30 jwise Exp $
+# $NetBSD: mk.conf.example,v 1.156 2000/09/26 11:09:26 agc Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -502,6 +502,13 @@
 # Used by the majordomo package as the directory to store temp files.
 # Possible: any directory.
 # Default: /var/tmp
+
+#MTOOLS_ENABLE_FLOPPYD=
+# Used by the mtools package to determine whether or not the floppyd
+# program is installed. X11 libraries and header files are needed to
+# build floppyd and run floppyd.
+# Possible: defined, not defined
+# Default: not defined
 
 #MUTT_USE_SSL=	YES
 # Enable SSL in mutt (for pop and imap connections)
