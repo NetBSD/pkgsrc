@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/01/29 12:37:16 wiz Exp $
+
+--- src/dirpane.c.orig	Thu Oct 11 20:25:08 2001
++++ src/dirpane.c
+@@ -1178,7 +1178,7 @@
+ {
+ 	int	old_errno = errno;
+ 
+-#if defined __linux || defined __OpenBSD__ || defined __FreeBSD__
++#if defined __linux || defined __OpenBSD__ || defined __FreeBSD__ || defined __NetBSD__
+ 	dp->dir.fs.valid = (statfs(dp->dir.path, &dp->dir.fs.stat) == 0);
+ #else
+ 	dp->dir.fs.valid = (statvfs(dp->dir.path, &dp->dir.fs.stat) == 0);
