@@ -1,0 +1,2 @@
+cat ${FILESDIR}/Makefile.freebsd ${WRKSRC}/src/Makefile.template > ${WRKSRC}/freebsd/Makefile
+cp ${FILESDIR}/Makefile.work ${WRKSRC}/Makefile
