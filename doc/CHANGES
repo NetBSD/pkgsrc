@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.711 2002/12/07 11:04:48 jmmv Exp $
+$NetBSD: CHANGES,v 1.712 2002/12/07 15:15:05 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3847,3 +3847,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added cgoban-java-2.4.55 [rh 2002-12-07]
 	Updated gentoo to 0.11.34 [jmmv 2002-12-07]
 	Updated SDL-image to 1.2.2 [jmmv 2002-12-07]
+	Added isync-0.8 [cjep 2002-12-07]
