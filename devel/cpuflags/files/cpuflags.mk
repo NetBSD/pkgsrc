@@ -1,4 +1,4 @@
-# $Id: cpuflags.mk,v 1.4 2002/06/27 20:49:02 abs Exp $
+# $Id: cpuflags.mk,v 1.5 2002/07/16 10:42:45 abs Exp $
 # Makefile include fragment to simplify use of cpuflags in pkgsrc
 # abs@netbsd.org - freely distributable, no warrenties, stick no bills.
 
@@ -11,26 +11,24 @@
 #	CXXFLAGS	Has CPU_FLAGS appended
 #
 #	CPU_DIR		CPU_FLAGS with spaces stripped (eg: for use in PACKAGES)
-#	LOWER_CPU_DIR	As CPU_FLAGS but all lower case
-
 
 .ifndef CPU_FLAGS
 
-CPU_FLAGS!=/usr/pkg/bin/cpuflags
-CPU_DIR!=echo ${CPU_FLAGS} | sed 's/ //'
-LOWER_CPU_DIR!=echo ${CPU_DIR} | tr A-Z a-z
-# Make the flags available to make
-MAKE_ENV+=CPU_FLAGS=${CPU_FLAGS} CPU_DIR=${CPU_DIR} LOWER_CPU_DIR=${LOWER_CPU_DIR}
-
+xCPU_FLAGS!=/usr/pkg/bin/cpuflags
+xCPU_DIR!=echo ${CPU_FLAGS} | sed 's/ //'
+# Make the flags available to sub makes
+.MAKEFLAGS+=CPU_FLAGS="${xCPU_FLAGS}" CPU_DIR="${xCPU_DIR}"
+CPU_FLAGS=${xCPU_FLAGS}
+CPU_DIR=${xCPU_DIR}
 .endif
 
 .ifdef BSD_PKG_MK
 
-# Try to catch the varuous package mechanisms
+# Try to catch the various package mechanisms
 CFLAGS+=${CPU_FLAGS}
 CXXFLAGS+=${CPU_FLAGS}
 # Override CCOPTIONS for imake
-MAKE_FLAGS+=CCOPTIONS=${CPU_FLAGS}
+MAKE_FLAGS+=CCOPTIONS="${CPU_FLAGS}"
 
 .else
 
