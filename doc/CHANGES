@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2208 2003/05/10 01:35:56 jtb Exp $
+$NetBSD: CHANGES,v 1.2209 2003/05/10 10:09:14 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1931,3 +1931,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated hdf5 to 1.4.5.2 [jtb 2003-05-09]
 	Updated STk to 4.0.1 [jtb 2003-05-09]
 	Updated gperiodic to 2.0.4 [jtb 2003-05-09]
+	Added ssh2-nox11-3.2.2 [seb 2003-05-10]
