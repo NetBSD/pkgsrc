@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/06/16 01:32:51 simonb Exp $
+
+--- watch.c.orig	Mon Mar 22 04:49:20 1999
++++ watch.c	Wed Jun 16 10:41:38 1999
+@@ -6,7 +6,7 @@
+  * Slighty modified, and corrected, Francois Pinard, 91-04.
+  */
+ 
+-#include <ncurses.h>
++#include <curses.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
