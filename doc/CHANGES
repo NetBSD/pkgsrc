@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8915 2005/01/25 14:52:03 jschauma Exp $
+$NetBSD: CHANGES,v 1.8916 2005/01/25 16:03:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -590,3 +590,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added p5-Set-Crontab-1.00 [cube 2005-01-25]
 	Added p5-Set-Infinite-0.61 [cube 2005-01-25]
 	Updated nspr to 4.4.1 [jschauma 2005-01-25]
+	Updated evolution to 2.0.3nb1 [drochner 2005-01-25]
