@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7651 2004/11/02 00:13:30 adrianp Exp $
+$NetBSD: CHANGES,v 1.7652 2004/11/02 00:23:53 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5014,7 +5014,9 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated dspam to 3.2.1 [xtraeme 2004-11-01]
 	Updated pkg_install to 20041101 [erh 2004-11-01]
 	Updated nessus to 2.2.0 [adrianp 2004-11-01]
-	Updated nessus-core to 2.2.0 [adrianp 2004-11-02]
-	Updated nessus-libraries to 2.2.0 [adrianp 2004-11-02]
-	Updated nessus-plugins to 2.2.0 [adrianp 2004-11-02]
-	Updated libnasl to 2.2.0 [adrianp 2004-11-02]
+	Updated nessus-core to 2.2.0 [adrianp 2004-11-01]
+	Updated nessus-libraries to 2.2.0 [adrianp 2004-11-01]
+	Updated nessus-plugins to 2.2.0 [adrianp 2004-11-01]
+	Updated libnasl to 2.2.0 [adrianp 2004-11-01]
+	Updated gtk-send-pr to 0.3.5 [xtraeme 2004-11-01]
+
