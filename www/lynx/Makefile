@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/08/20 15:17:30 tsarna Exp $
+# $NetBSD: Makefile,v 1.13 1998/10/04 17:59:42 tv Exp $
 #
 
 DISTNAME=       lynx2-8
@@ -12,10 +12,12 @@ HOMEPAGE=	http://sol.slcc.edu/lynx/
 
 CONFLICTS=	lynx-2.8rel.2
 
-DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
+DEPENDS+=	libslang-1.2.2:../../devel/libslang
 
-CONFIGURE_ARGS+= --with-screen=ncurses --with-zlib --libdir="${PREFIX}/etc"
+CONFIGURE_ARGS+= --with-screen=slang --with-zlib --libdir="${PREFIX}/etc"
+CONFIGURE_ENV+=	LIBS=-lm CPPFLAGS=-Dunix
 GNU_CONFIGURE=  YES
+
 INSTALL_TARGET= install install-help
 MAKEFILE=       makefile
 
