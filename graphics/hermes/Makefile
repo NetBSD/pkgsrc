@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/07/08 17:16:39 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1999/11/30 08:22:15 rh Exp $
 
-DISTNAME=		Hermes-1.2.5
+DISTNAME=		Hermes-1.2.6-2
+PKGNAME=		Hermes-1.2.6.2
+WRKSRC=			${WRKDIR}/Hermes-1.2.6
 CATEGORIES=		graphics
 MASTER_SITES=		http://hermes.terminal.at/files/
 

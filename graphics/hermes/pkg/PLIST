@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/08 17:16:40 garbled Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/11/30 08:22:17 rh Exp $
 include/Hermes/Hermes.h
 include/Hermes/Types.h
 include/Hermes/H_Conv.h
@@ -7,6 +7,6 @@ include/Hermes/H_Pal.h
 include/Hermes/H_Format.h
 include/Hermes/H_Config.h
 include/Hermes/H_Types.h
-lib/libHermes.so.1.2
+lib/libHermes.so.1.3
 lib/libHermes.a
 @dirrm include/Hermes
