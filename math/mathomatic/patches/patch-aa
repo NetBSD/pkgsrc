@@ -1,0 +1,71 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/31 18:14:08 minskim Exp $
+
+--- makefile.orig	2004-03-21 18:58:00.000000000 -0700
++++ makefile
+@@ -1,54 +1,22 @@
+ # Makefile for compiling Mathomatic for UNIX or Linux.
+ 
+-#CC		= cc
+-
+-CFLAGS		= -c -DUNIX
+-LFLAGS		= -s
+ # To use readline, uncomment the following two lines:
+ #CFLAGS		= -c -DUNIX -DREADLINE
+ #LFLAGS		= -s -lreadline -lcurses
+ 
+-INSTALL_DIR	= /usr/local
++INSTALL_DIR	= ${PREFIX}
+ 
+-AOUT	=am
++AOUT	= am
+ OBJECTS	=main.o am.o parse.o cmds.o simplify.o factor.o super.o \
+ 	unfactor.o diff.o complex.o list.o
+ 
++.c.o:
++	$(CC) $(CFLAGS) -c $<
++
+ all: $(AOUT)
+ 	@echo Make completed.
+ 
+-main.o: main.c am.h
+-	$(CC) $(CFLAGS) $*.c
+-
+-am.o: am.c am.h externs.h
+-	$(CC) $(CFLAGS) $*.c
+-
+-parse.o: parse.c parse.h am.h externs.h
+-	$(CC) $(CFLAGS) $*.c
+-
+-cmds.o: cmds.c am.h externs.h
+-	$(CC) $(CFLAGS) $*.c
+-
+-simplify.o: simplify.c am.h externs.h
+-	$(CC) $(CFLAGS) $*.c
+-
+-factor.o: factor.c am.h externs.h
+-	$(CC) $(CFLAGS) $*.c
+-
+-super.o: super.c am.h externs.h
+-	$(CC) $(CFLAGS) $*.c
+-
+-unfactor.o: unfactor.c am.h externs.h
+-	$(CC) $(CFLAGS) $*.c
+-
+-diff.o: diff.c am.h externs.h
+-	$(CC) $(CFLAGS) $*.c
+-
+-complex.o: complex.c am.h externs.h
+-	$(CC) $(CFLAGS) $*.c
+-
+-list.o: list.c am.h externs.h
+-	$(CC) $(CFLAGS) $*.c
++$(OBJECTS): am.h externs.h
+ 
+ $(AOUT): $(OBJECTS)
+ 	$(CC) $(LFLAGS) $(OBJECTS) -lm -o $(AOUT)
+@@ -59,4 +27,4 @@ install: $(AOUT)
+ 	@echo Install completed.
+ 
+ clean:
+-	rm *.o
++	rm -f $(OBJECTS)

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/31 18:14:08 minskim Exp $
+bin/am_mathomatic
+man/man1/am_mathomatic.1
