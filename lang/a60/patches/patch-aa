@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/05/15 21:21:45 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2001/06/18 10:05:59 jtb Exp $
 
 --- Makefile.in.orig	Mon Jul 12 08:15:42 1999
 +++ Makefile.in
+@@ -34,7 +34,7 @@
+ exec_prefix =	@exec_prefix@
+ 
+ BINDIR = $(exec_prefix)/bin
+-LIBDIR = $(prefix)/lib
++LIBDIR = $(prefix)/share/a60
+ MANDIR = $(prefix)/man/man1
+ MANSUFF = 1
+ 
 @@ -66,13 +66,15 @@
  DEFS = -DHAVE_CONFIG_H
  ##
