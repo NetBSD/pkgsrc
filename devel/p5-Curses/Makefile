@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/11/26 06:49:46 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2002/10/13 14:09:57 wiz Exp $
 # FreeBSD Id: Makefile,v 1.8 1998/04/04 13:58:26 vanilla Exp
 #
 
@@ -14,7 +14,7 @@ COMMENT=	perl5 module for terminal screen handling and optimization
 
 USE_NCURSES=	# needs libpanel.so
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Curses/.packlist
 
 MAKE_PARAMS=	PANELS
@@ -23,6 +23,6 @@ do-configure:
 	@${LN} -sf ${WRKSRC}/hints/c-netbsd.ncurses.h ${WRKSRC}/c-config.h
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL ${MAKE_PARAMS}
 
-.include "../../devel/ncurses/buildlink.mk"
-.include "../../lang/perl5/buildlink.mk"
+.include "../../devel/ncurses/buildlink2.mk"
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
