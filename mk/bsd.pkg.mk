@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1540.2.10 2005/01/10 16:15:25 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1540.2.11 2005/01/13 20:22:03 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -6,6 +6,8 @@
 #
 # Please see the pkgsrc/doc/guide manual for details on the
 # variables used in this make file template.
+#
+# XXX tv: rev 1.1554 is not merged yet (phase "error handlers")
 #
 
 ############################################################################
