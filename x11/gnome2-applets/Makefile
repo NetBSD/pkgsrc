@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2004/01/04 17:30:55 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/17 01:12:43 xtraeme Exp $
 #
 
-DISTNAME=		gnome-applets-2.4.1
-PKGREVISION=		2
+DISTNAME=		gnome-applets-2.4.2
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-applets/2.4/}
 EXTRACT_SUFX=		.tar.bz2
@@ -52,7 +51,7 @@ BUILD_DEFS+=		USE_INET6
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
-.if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
+.if ${OPSYS} == "Linux"
 GCONF2_SCHEMAS+=	battstat.schemas
 PLIST_SUBST+=		BATTSTAT=""
 CONF_FILES+=		${EGDIR}/sound/events/batt_stat_applet.soundlist \
@@ -74,4 +73,5 @@ INSTALL_EXTRA_TMPL+=	${FILESDIR}/install.tmpl
 .include "../../x11/gnome-panel/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
 
+.include "../../mk/ossaudio.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
