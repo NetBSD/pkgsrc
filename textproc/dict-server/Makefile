@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/10/11 00:47:28 uebayasi Exp $
+# $NetBSD: Makefile,v 1.6 2002/11/11 12:36:40 uebayasi Exp $
 
 DISTNAME=       dictd-1.8.0
 PKGNAME=	dict-server-1.8.0
@@ -43,6 +43,10 @@ WEB1913=	web1913.dict.dz \
 WN=		wn.dict.dz \
 		wn.index
 
+post-extract:
+	${RM} -fr ${WRKDIR}/dict-web1913-1.4/libmaa
+	${LN} -fs ${WRKDIR}/dictd-1.8.0/libmaa ${WRKDIR}/dict-web1913-1.4/libmaa
+
 # A symbol T_USER is defined in trap.h so...
 post-patch:
 	${GREP} -lr T_USER ${WRKSRC} | \
@@ -56,12 +60,18 @@ post-patch:
 
 # Build dictinaries
 post-build:
-	@${LN} -s ${WRKDIR}/web-1913-0.46a ${WRKDIR}/dict-web1913-1.4/web1913
+	@${LN} -fs ${WRKDIR}/web1913-0.46-a ${WRKDIR}/dict-web1913-1.4/web1913
 	@for d in dict-misc-1.5 dict-gazetteer-1.3 dict-web1913-1.4 dict-wn-1.5; do \
-		(cd $$d; \
+		(cd ${WRKDIR}/$$d; \
 		    ${SH} configure; \
 		    ${MAKE_PROGRAM} db; \
 		); \
+	done
+	${FIND} ${WRKDIR} -name '*.dict' | \
+	while read f; do \
+		if [ ! -f $${f}.dz ]; then \
+			${WRKSRC}/dictzip $$f; \
+		fi; \
 	done
 
 post-install:
