@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9643 2005/03/26 17:29:41 adrianp Exp $
+$NetBSD: CHANGES,v 1.9644 2005/03/26 23:10:45 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1770,3 +1770,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ximian-connector to 2.2.1 [jmmv 2005-03-26]
 	Added lucy-1.18p [minskim 2005-03-26]
 	Updated ircservices to 5.0.49 [adrianp 2005-03-26]
+	Added sparsehash-0.1 [jschauma 2005-03-26]
