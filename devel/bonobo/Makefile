@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2002/11/28 15:30:27 drochner Exp $
+# $NetBSD: Makefile,v 1.33 2002/11/30 23:21:33 salo Exp $
 #
 
 DISTNAME=		bonobo-1.0.18
@@ -15,6 +15,7 @@ BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 BUILDLINK_DEPENDS.libxml=	libxml>1.8.15
 
 USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES
 USE_GMAKE=		YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/10/19 10:54:43 rh Exp $
+# $NetBSD: Makefile,v 1.8 2002/11/30 23:21:33 salo Exp $
 #
 
 DISTNAME=		GConf-1.2.1
@@ -16,6 +16,7 @@ BUILD_USES_MSGFMT=	yes
 
 USE_GNU_GETTEXT=	yes
 USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_GMAKE=		yes

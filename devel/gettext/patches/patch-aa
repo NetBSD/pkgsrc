@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2002/11/27 17:41:06 drochner Exp $
+$NetBSD: patch-aa,v 1.10 2002/11/30 23:21:35 salo Exp $
 
 --- configure.orig	Tue Aug  6 15:57:16 2002
 +++ configure	Sun Sep  1 16:06:20 2002
@@ -13,12 +13,3 @@ $NetBSD: patch-aa,v 1.9 2002/11/27 17:41:06 drochner Exp $
        fi
  
        if test "$gt_use_preinstalled_gnugettext" = "yes" \
-@@ -14369,7 +14365,7 @@
-         nls_cv_header_intl=
-     nls_cv_header_libgt=
- 
--        DATADIRNAME=share
-+        DATADIRNAME=${PKGLOCALEDIR}
- 
-         INSTOBJEXT=.mo
- 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/10/30 03:09:29 rh Exp $
+# $NetBSD: Makefile,v 1.3 2002/11/30 23:21:34 salo Exp $
 #
 
 DISTNAME=		eel-2.0.7
@@ -14,6 +14,7 @@ COMMENT=		Eazel Extentions Library for GNOME2
 BUILD_USES_MSGFMT=	YES
 
 USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
