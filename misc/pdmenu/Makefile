@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/01/18 01:50:46 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2001/01/19 13:13:43 hubertf Exp $
 # FreeBSD Id: ports/misc/pdmenu/Makefile,v 1.11 2001/01/16 17:31:42 sobomax Exp
 
-DISTNAME=	pdmenu_1.2.65
+DISTNAME=	${PKGNAME:S|-|_|}
 PKGNAME=	pdmenu-1.2.65
 CATEGORIES=	misc
 MASTER_SITES=	http://kitenet.net/programs/code/pdmenu/
