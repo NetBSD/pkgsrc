@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/04/04 19:23:10 recht Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/05/11 17:33:42 recht Exp $
 bin/MakeCert.exe
 bin/al
 bin/al.exe
@@ -12,15 +12,16 @@ bin/cilc
 bin/cilc.exe
 bin/disco
 bin/disco.exe
+bin/gacutil
+bin/gacutil.exe
 bin/genxs
 bin/genxs.exe
+bin/gmcs
 bin/ilasm
 bin/ilasm.exe
 bin/makecert
 bin/mbas
-bin/mbas.exe
 bin/mcs
-bin/mcs.exe
 bin/mint
 bin/mono
 bin/monodis
@@ -39,6 +40,7 @@ bin/setreg.exe
 bin/signcode
 bin/signcode.exe
 bin/sn
+bin/sn.exe
 bin/soapsuds
 bin/soapsuds.exe
 bin/sqlsharp
@@ -62,6 +64,7 @@ include/mono/io-layer/macros.h
 include/mono/io-layer/mono-mutex.h
 include/mono/io-layer/mutexes.h
 include/mono/io-layer/processes.h
+include/mono/io-layer/security.h
 include/mono/io-layer/semaphores.h
 include/mono/io-layer/sockets.h
 include/mono/io-layer/status.h
@@ -113,59 +116,6 @@ include/mono/utils/mono-logger.h
 include/mono/utils/mono-math.h
 include/mono/utils/mono-uri.h
 include/mono/utils/monobitset.h
-lib/Accessibility.dll
-lib/ByteFX.Data.dll
-lib/Commons.Xml.Relaxng.dll
-lib/Cscompmgd.dll
-lib/I18N.CJK.dll
-lib/I18N.MidEast.dll
-lib/I18N.Other.dll
-lib/I18N.Rare.dll
-lib/I18N.West.dll
-lib/I18N.dll
-lib/ICSharpCode.SharpZipLib.dll
-lib/Microsoft.VisualBasic.dll
-lib/Microsoft.VisualC.dll
-lib/Microsoft.Vsa.dll
-lib/Mono.CSharp.Debugger.dll
-lib/Mono.Cairo.dll
-lib/Mono.Data.DB2Client.dll
-lib/Mono.Data.MySql.dll
-lib/Mono.Data.PostgreSqlClient.dll
-lib/Mono.Data.SqliteClient.dll
-lib/Mono.Data.SybaseClient.dll
-lib/Mono.Data.Tds.dll
-lib/Mono.Data.TdsClient.dll
-lib/Mono.GetOptions.dll
-lib/Mono.Http.dll
-lib/Mono.PEToolkit.dll
-lib/Mono.Posix.dll
-lib/Mono.Security.Win32.dll
-lib/Mono.Security.dll
-lib/NUnit.Framework.dll
-lib/NUnit.Util.dll
-lib/Novell.Directory.Ldap.dll
-lib/Npgsql.dll
-lib/PEAPI.dll
-lib/System.Configuration.Install.dll
-lib/System.Data.OracleClient.dll
-lib/System.Data.dll
-lib/System.Design.dll
-lib/System.DirectoryServices.dll
-lib/System.Drawing.Design.dll
-lib/System.Drawing.dll
-lib/System.EnterpriseServices.dll
-lib/System.Management.dll
-lib/System.Messaging.dll
-lib/System.Runtime.Remoting.dll
-lib/System.Runtime.Serialization.Formatters.Soap.dll
-lib/System.Security.dll
-lib/System.ServiceProcess.dll
-lib/System.Web.Services.dll
-lib/System.Web.dll
-lib/System.Windows.Forms.dll
-lib/System.Xml.dll
-lib/System.dll
 lib/libMonoPosixHelper.a
 lib/libMonoPosixHelper.la
 lib/libMonoPosixHelper.so
@@ -186,6 +136,59 @@ lib/libmono.la
 lib/libmono.so
 lib/libmono.so.0
 lib/libmono.so.0.0
+lib/mono/1.0/Accessibility.dll
+lib/mono/1.0/ByteFX.Data.dll
+lib/mono/1.0/Commons.Xml.Relaxng.dll
+lib/mono/1.0/Cscompmgd.dll
+lib/mono/1.0/I18N.CJK.dll
+lib/mono/1.0/I18N.MidEast.dll
+lib/mono/1.0/I18N.Other.dll
+lib/mono/1.0/I18N.Rare.dll
+lib/mono/1.0/I18N.West.dll
+lib/mono/1.0/I18N.dll
+lib/mono/1.0/ICSharpCode.SharpZipLib.dll
+lib/mono/1.0/Microsoft.VisualBasic.dll
+lib/mono/1.0/Microsoft.VisualC.dll
+lib/mono/1.0/Microsoft.Vsa.dll
+lib/mono/1.0/Mono.CSharp.Debugger.dll
+lib/mono/1.0/Mono.Cairo.dll
+lib/mono/1.0/Mono.Data.SqliteClient.dll
+lib/mono/1.0/Mono.Data.SybaseClient.dll
+lib/mono/1.0/Mono.Data.Tds.dll
+lib/mono/1.0/Mono.Data.TdsClient.dll
+lib/mono/1.0/Mono.GetOptions.dll
+lib/mono/1.0/Mono.Http.dll
+lib/mono/1.0/Mono.Posix.dll
+lib/mono/1.0/Mono.Security.Win32.dll
+lib/mono/1.0/Mono.Security.dll
+lib/mono/1.0/NUnit.Framework.dll
+lib/mono/1.0/NUnit.Util.dll
+lib/mono/1.0/Novell.Directory.Ldap.dll
+lib/mono/1.0/Npgsql.dll
+lib/mono/1.0/PEAPI.dll
+lib/mono/1.0/System.Configuration.Install.dll
+lib/mono/1.0/System.Data.OracleClient.dll
+lib/mono/1.0/System.Data.dll
+lib/mono/1.0/System.Design.dll
+lib/mono/1.0/System.DirectoryServices.dll
+lib/mono/1.0/System.Drawing.Design.dll
+lib/mono/1.0/System.Drawing.dll
+lib/mono/1.0/System.EnterpriseServices.dll
+lib/mono/1.0/System.Management.dll
+lib/mono/1.0/System.Messaging.dll
+lib/mono/1.0/System.Runtime.Remoting.dll
+lib/mono/1.0/System.Runtime.Serialization.Formatters.Soap.dll
+lib/mono/1.0/System.Security.dll
+lib/mono/1.0/System.ServiceProcess.dll
+lib/mono/1.0/System.Web.Services.dll
+lib/mono/1.0/System.Web.dll
+lib/mono/1.0/System.Windows.Forms.dll
+lib/mono/1.0/System.Xml.dll
+lib/mono/1.0/System.dll
+lib/mono/1.0/mbas.exe
+lib/mono/1.0/mcs.exe
+lib/mono/2.0/gmcs.exe
+lib/mono/2.0/mscorlib.dll
 lib/mscorlib.dll
 lib/pkgconfig/mint.pc
 lib/pkgconfig/mono.pc
@@ -194,6 +197,7 @@ man/man1/certmgr.1
 man/man1/chktrust.1
 man/man1/cilc.1
 man/man1/disco.1
+man/man1/gacutil.1
 man/man1/genxs.1
 man/man1/ilasm.1
 man/man1/makecert.1
@@ -212,6 +216,7 @@ man/man1/sn.1
 man/man1/soapsuds.1
 man/man1/sqlsharp.1
 man/man1/wsdl.1
+man/man1/xsd.1
 man/man5/mono-config.5
 share/examples/mono/DefaultWsdlHelpGenerator.aspx
 share/examples/mono/browscap.ini
@@ -221,6 +226,10 @@ share/mono/cil/cil-opcodes.xml
 @dirrm share/mono/cil
 @dirrm share/mono
 @dirrm share/examples/mono
+@dirrm lib/mono/gac
+@dirrm lib/mono/2.0
+@dirrm lib/mono/1.0
+@dirrm lib/mono
 @dirrm include/mono/utils
 ${GC}@dirrm include/mono/private
 @dirrm include/mono/metadata
