@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.20 2004/01/03 18:49:40 reed Exp $
+# $NetBSD: Makefile,v 1.21 2004/03/05 12:09:35 adam Exp $
 
-PKGNAME=		${DISTNAME:S/-/-client-gtk-/}
-PKGREVISION=		3
-COMMENT=		Freeciv client with GTK+ interface
+PKGNAME=	${DISTNAME:S/-/-client-gtk-/}
+COMMENT=	Freeciv client with GTK+ interface
 
-DEPENDS+=		freeciv-share>=${FC_VERS}:../../games/freeciv-share
-DEPENDS+=		freeciv-sounds>=2.0:../../games/freeciv-sounds
+DEPENDS+=	freeciv-share>=${FC_VERS}:../../games/freeciv-share
+DEPENDS+=	freeciv-sounds>=2.0:../../games/freeciv-sounds
 
-USE_BUILDLINK2=		# defined
-USE_X11=		# defined
+USE_BUILDLINK2=		yes
+USE_X11=		yes
 
-CONFIGURE_ARGS+=	--disable-server
-CONFIGURE_ARGS+=	--disable-make-data
+CONFIGURE_ARGS+=	--disable-server --disable-make-data
 CONFIGURE_ARGS+=	--enable-client=gtk
 CONFIGURE_ARGS+=	--program-transform-name="s,civclient,civclient-gtk,"
 

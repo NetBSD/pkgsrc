@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2003/02/23 13:18:20 salo Exp $
+$NetBSD: distinfo,v 1.6 2004/03/05 12:06:38 adam Exp $
 
-SHA1 (freeciv-1.14.0.tar.bz2) = 73a7dceb84215194c7beda4712933f5b596784ea
-Size (freeciv-1.14.0.tar.bz2) = 5416607 bytes
+SHA1 (freeciv-1.14.1.tar.bz2) = fc41f5e44eb7be37a4632999a5bd709c4cf975a2
+Size (freeciv-1.14.1.tar.bz2) = 5850722 bytes
