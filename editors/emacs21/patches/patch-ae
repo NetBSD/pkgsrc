@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1.1.1 2002/04/24 17:27:41 drochner Exp $
+$NetBSD: patch-ae,v 1.2 2003/01/13 13:00:30 uebayasi Exp $
 
---- Makefile.in.orig	Wed Apr 24 14:24:16 2002
-+++ Makefile.in	Wed Apr 24 17:04:47 2002
+--- Makefile.in.orig	Mon Jan 13 21:24:28 2003
++++ Makefile.in
 @@ -429,28 +429,24 @@
  	      chmod a+r ${infodir}/dir); \
  	   fi; \
@@ -23,7 +23,8 @@ $NetBSD: patch-ae,v 1.1.1.1 2002/04/24 17:27:41 drochner Exp $
 -	     ${INSTALL_INFO} --info-dir=${infodir} ${infodir}/$$f); \
 -	  done; \
 -	else true; fi
- 	-chmod -R a+r ${datadir}/emacs ${COPYDESTS} ${infodir}
+-	-chmod -R a+r ${datadir}/emacs ${COPYDESTS} ${infodir}
++	chmod -R a+r ${datadir}/emacs ${COPYDESTS} ${infodir}
  	thisdir=`/bin/pwd`; \
  	cd ${srcdir}/etc; \
  	for page in emacs etags ctags gfdl ; do \
