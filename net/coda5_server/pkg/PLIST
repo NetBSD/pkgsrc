@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1999/03/18 02:34:16 rvb Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/06/04 23:45:45 rvb Exp $
 bin/filcon
 bin/norton
 bin/norton-reinit
