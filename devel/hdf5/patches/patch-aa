@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.3 2001/03/04 18:05:24 jtb Exp $
+$NetBSD: patch-aa,v 1.4 2002/05/03 20:51:33 jtb Exp $
 
---- configure.orig	Sun Mar  4 17:58:18 2001
-+++ configure
-@@ -1797,7 +1797,7 @@
- rm maketest
+--- tools/misc/Makefile.in.orig	Mon Aug 27 19:41:43 2001
++++ tools/misc/Makefile.in	Wed May  1 17:47:54 2002
+@@ -26,7 +26,7 @@
+ LIBTOOLS=../lib/libh5tools.la
+ LIBHDF5=$(top_builddir)/src/libhdf5.la
  
- if test "X$GCC" = "Xyes"; then
--   CFLAGS="$CFLAGS -ansi -pedantic -Wchar-subscripts -Wall -W -Wshadow -Wbad-function-cast -Wcast-qual -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wnested-externs -Winline"
-+   CFLAGS="$CFLAGS -Wchar-subscripts -Wall -W -Wshadow -Wbad-function-cast -Wcast-qual -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wnested-externs -Winline"
- fi
+-PUB_PROGS=h5cc h5debug h5import h5repart @PDB2HDF@
++PUB_PROGS=h5debug h5import h5repart @PDB2HDF@
+ PROGS=$(PUB_PROGS) $(TEST_PROGS)
  
- echo $ac_n "checking for production mode""... $ac_c" 1>&6
+ ## Source and object files for the library; do not install
