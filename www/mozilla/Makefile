@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2001/03/28 11:59:33 abs Exp $
+# $NetBSD: Makefile,v 1.61 2001/03/30 09:37:47 taya Exp $
 
-MOZ_VER=	0.8
+MOZ_VER=	0.8.1
 DISTNAME=	mozilla-source-${MOZ_VER}
 PKGNAME=	mozilla-${MOZ_VER}
 WRKSRC=		${WRKDIR}/mozilla
@@ -56,21 +56,11 @@ SCRIPTS_ENV+=	BINMODE=${BINMODE}
 SCRIPTS_ENV+=	SETENV=${SETENV}
 SHAREMODE?=	644
 
-XPTCFILES+=	xptcinvoke_asm_ppc_netbsd.s xptcstubs_asm_ppc_netbsd.s
-XPTCFILES+=	xptcinvoke_ppc_netbsd.cpp xptcstubs_ppc_netbsd.cpp
-XPTCFILES+=	xptcinvoke_asm_sparc_netbsd.s xptcstubs_asm_sparc_netbsd.s
-XPTCFILES+=	xptcinvoke_sparc_netbsd.cpp xptcstubs_sparc_netbsd.cpp
-XPTCFILES+=	xptcinvoke_arm_netbsd.cpp xptcstubs_arm_netbsd.cpp
-
-post-extract:
-.for F in ${XPTCFILES}
-	${CP} ${FILESDIR}/${F} ${WRKSRC}/xpcom/reflect/xptcall/src/md/unix/${F}
-.endfor
-
 .include "../../mk/bsd.prefs.mk"
 
 pre-configure:
 	(cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf)
+	(cd ${WRKSRC}/nsprpub && ${LOCALBASE}/bin/autoconf)
 
 do-build:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
