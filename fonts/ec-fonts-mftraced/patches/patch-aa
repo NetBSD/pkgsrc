@@ -1,13 +1,35 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/12/30 04:59:48 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.2 2005/03/09 11:03:28 dmcmahill Exp $
 
---- GNUmakefile.orig	2004-11-04 22:47:34.000000000 +0000
-+++ GNUmakefile
-@@ -25,7 +25,7 @@ DISTDIR=$(builddir)/$(NAME)-$(VERSION)
- TARBALL=$(DISTDIR).tar.gz
+--- GNUmakefile.orig	2004-11-04 17:47:34.000000000 -0500
++++ GNUmakefile	2005-03-08 19:10:18.605935000 -0500
+@@ -26,5 +26,5 @@
  WWWDIR=base.lilypond.org:/var/www/lilypond/download/fonts/
  
 -prefix=$(DESTDIR)/usr
 +prefix=$(PREFIX)
  docdir=$(prefix)/share/doc
  sysconfdir=$(DESTDIR)/etc
+@@ -88,15 +88,15 @@
  
+ install: $(TFMS) $(PFAS)
+-	install -d $(PFADIR)
+-	install -m644 $(PFAS) $(PFADIR)
++	${BSD_INSTALL_DATA_DIR} $(PFADIR)
++	${BSD_INSTALL_DATA} $(PFAS) $(PFADIR)
+ 
+-	install -d $(TFMDIR)
+-	install -m644 $(TFMS) $(TFMDIR)
++	${BSD_INSTALL_DATA_DIR} $(TFMDIR)
++	${BSD_INSTALL_DATA} $(TFMS) $(TFMDIR)
+ 
+-	install -d $(MAPDIR)
+-	install -m644 $(MAPFILE) $(MAPDIR)
++	${BSD_INSTALL_DATA_DIR} $(MAPDIR)
++	${BSD_INSTALL_DATA} $(MAPFILE) $(MAPDIR)
+ 
+-	install -d $(docdir)/$(NAME)
+-	install -m644 $(README_FILES) $(docdir)/$(NAME)
++	${BSD_INSTALL_DATA_DIR} $(docdir)/$(NAME)
++	${BSD_INSTALL_DATA} $(README_FILES) $(docdir)/$(NAME)
+ 
+ 	@echo "Run texhash before using."
