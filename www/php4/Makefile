@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2002/08/25 18:40:25 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2002/08/26 00:16:57 grant Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
 PKGREVISION=		# empty
@@ -10,9 +10,6 @@ CONFLICTS+=		ap-php-4.0.3pl1
 USE_BUILDLINK2=		YES
 
 .include "Makefile.php"
-
-# Ensure we export symbols in the linked shared object.
-LDFLAGS+=		-Wl,--export-dynamic
 
 CGIDIR=			${PREFIX}/libexec/cgi-bin
 EGDIR=			${PREFIX}/share/examples/php
@@ -27,6 +24,11 @@ EGDIR=			${PREFIX}/share/examples/php
 .if (${OPSYS} == "NetBSD") && (${OBJECT_FMT} == "ELF")
 LINK_LIBGCC_LDFLAGS=	-Wl,--whole-archive -Wl,-lgcc -Wl,--no-whole-archive
 MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
+.endif
+
+# Ensure we export symbols in the linked shared object.
+.if ${OPSYS} != "SunOS"
+LDFLAGS+=		-Wl,--export-dynamic
 .endif
 
 CONF_FILES=	${EGDIR}/php.ini-recommended ${PKG_SYSCONFDIR}/php.ini
