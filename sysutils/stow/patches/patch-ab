@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2001/04/28 04:51:01 jtb Exp $
+$NetBSD: patch-ab,v 1.2 2001/05/05 16:38:52 skrll Exp $
 
---- Makefile.in.orig	Fri Oct 11 22:10:57 1996
+--- Makefile.in.orig	Fri Oct 11 23:10:57 1996
 +++ Makefile.in
 @@ -51,7 +51,7 @@
  
@@ -11,3 +11,12 @@ $NetBSD: patch-ab,v 1.1 2001/04/28 04:51:01 jtb Exp $
  INFO_DEPS = stow.info
  DVIS = stow.dvi
  TEXINFOS = stow.texi
+@@ -140,7 +140,7 @@
+ install-info: $(INFO_DEPS)
+ 	$(mkinstalldirs) $(infodir)
+ 	for file in $(INFO_DEPS); do		\
+-	  for ifile in `cd $(srcdir) && echo $$file*`; do \
++	  for ifile in `cd $(srcdir) && echo $$file`; do \
+ 	    $(INSTALL_DATA) $(srcdir)/$$ifile $(infodir)/$$ifile; \
+ 	  done;					\
+ 	done
