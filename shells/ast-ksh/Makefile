@@ -1,5 +1,5 @@
 # $OpenBSD: Makefile,v 1.5 2001/11/21 01:17:43 naddy Exp $
-# $NetBSD: Makefile,v 1.4 2002/11/29 04:16:45 uebayasi Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/08 07:04:13 uebayasi Exp $
 
 DISTNAME=	ast-ksh-${ASTKSH_VERSION}
 PKGNAME=	ast-ksh-${ASTKSH_VERSION:S/-//g}
@@ -20,7 +20,7 @@ NO_SRC_ON_FTP=	${RESTRICTED}
 # needs pdksh
 ONLY_FOR_PLATFORM=	NetBSD-*
 
-ASTKSH_VERSION=	2002-09-22
+ASTKSH_VERSION=	2002-12-21
 
 USE_BUILDLINK2=	YES
 WRKSRC=		${WRKDIR}
@@ -37,15 +37,23 @@ PKG_SHELL=	${PREFIX}/bin/ksh93
 # XXX Note that this 'make' is not an executable command, but a target name
 # ./bin/package uses.
 do-build:
-	cd ${WRKSRC}; \
-	${SETENV} SHELL=${PDKSH} ${PDKSH} ./bin/package make
+	@cd ${WRKSRC}; \
+		${SETENV} SHELL=${PDKSH} ${PDKSH} ./bin/package make
 
 do-install:
-	arch=`${WRKSRC}/bin/package host`; \
-	${INSTALL_PROGRAM} ${WRKSRC}/arch/$${arch}/bin/ksh \
-		${PREFIX}/bin/ksh93; \
-	${INSTALL_MAN} ${WRKSRC}/arch/$${arch}/man/man1/sh.1 \
-		${PREFIX}/man/man1/ksh93.1
+	@arch=`${WRKSRC}/bin/package host`; \
+		${INSTALL_PROGRAM} ${WRKSRC}/arch/$${arch}/bin/ksh \
+			${PREFIX}/bin/ksh93; \
+		${INSTALL_MAN} ${WRKSRC}/arch/$${arch}/man/man1/sh.1 \
+			${PREFIX}/man/man1/ksh93.1
+
+# Part of regression test
+do-test:
+	@cd ${WRKSRC}/src/cmd/ksh93/tests && \
+		${ENV} SHELL=${PREFIX}/bin/ksh93 ${PREFIX}/bin/ksh93 shtests
+# XXX Their 'test' target needs nmake (Korn's another tool)
+#	@cd ${WRKSRC}; \
+#		${SETENV} SHELL=${PDKSH} ${PDKSH} ./bin/package test
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
