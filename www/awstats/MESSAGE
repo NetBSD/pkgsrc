@@ -1,0 +1,12 @@
+==========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/07/31 03:18:21 jschauma Exp $
+
+An example file has been installed as 
+${PREFIX}/share/examples/awstats/awstats.conf.  After adjusting it to
+your needs, copy it to ${PREFIX}/awstats/cgi-bin/awstats.conf.
+
+You may need to adjust the cgi-bin path of your webserver -- for details,
+refer to the documentation in
+	${PREFIX}/share/doc/html/awstats
+
+==========================================================================
