@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.1 2002/06/28 16:03:03 agc Exp $
+
+--- types.h	2002/06/28 15:41:29	1.1
++++ types.h	2002/06/28 15:42:27
+@@ -1562,8 +1562,8 @@
+ };
+ 
+ /* A structure to describe a music. */
+-typedef struct music music;
+-struct music {
++typedef struct music_t music_t;
++struct music_t {
+   char desc[80];          /* Desc of the music */
+   s16b music;             /* Music. */
+   s16b dur;               /* Duration(if any) */
+@@ -1590,8 +1590,8 @@
+ };
+ 
+ /* A structure to describe the fate of the player */
+-typedef struct fate fate;
+-struct fate {
++typedef struct fate_t fate_t;
++struct fate_t {
+         byte fate;      /* Which fate */
+         byte level;     /* On which level */
+         byte serious;   /* Is it sure? */
