@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:27:34 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/04/11 07:44:14 snj Exp $
 #
 
 DISTNAME=	rtf2html
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.45.free.net/~vitus/ice/catdoc/
 COMMENT=	Rich Text to HTML file converter
 
-USE_BUILDLINK2=	# defined
+USE_BUILDLINK3=	# defined
 ALL_TARGET=	rtf2html
 MAKE_FLAGS+=	CFLAGS="${CFLAGS}"
 
