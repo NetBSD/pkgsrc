@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2004/01/07 21:45:18 jmmv Exp $
+# $NetBSD: Makefile,v 1.28 2004/01/10 14:23:52 recht Exp $
 #
 
-DISTNAME=		wxGTK-2.4.1
-PKGREVISION=		3
+DISTNAME=		wxGTK-2.4.2
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wxwindows/}
 EXTRACT_SUFX=		.tar.bz2
@@ -16,6 +15,7 @@ USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--with-opengl
 CONFIGURE_ARGS+=	--with-libjpeg=sys
 CONFIGURE_ARGS+=	--with-zlib=sys
 CONFIGURE_ARGS+=	--with-libpng=sys
@@ -42,6 +42,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/LICENCE.txt ${DOCDIR}/LICENSE
 
 .include "../../devel/zlib/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
