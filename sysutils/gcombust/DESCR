@@ -1,6 +1,6 @@
 Features:
-        Burning on the fly, without making an image 
-        Tooltips to keep you from reading man pages 
+        Burning on the fly, without making an image
+        Tooltips to keep you from reading man pages
         Make creation of iso-images easy
                 (support for making your own directory hierarchy on the image
                 without the need for copying files/making symlinks)

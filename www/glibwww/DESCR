@@ -2,6 +2,6 @@
 event loop.  This makes lib www fit nicely into just about any gnome or
 gtk+ program.
 
-  This code may be useful for other people wanting to use libwww with gtk. 
+  This code may be useful for other people wanting to use libwww with gtk.
 
   This code includes a nice bonobo control.

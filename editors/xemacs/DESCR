@@ -13,7 +13,7 @@ loop (Lisp-Interaction-Mode), automated psychotherapy (Doctor :-) and
 many more. There is a WWW browsing mode written fully in elisp
 that looks and behaves much like the netscape WWW browser.
 
-XEmacs has similar functionality to GNU Emacs. It uses a different 
+XEmacs has similar functionality to GNU Emacs. It uses a different
 display model, including support for Motif menu and scroll bars and the
 ability to run as a widget inside other applications. Many people say
 it looks nicer than GNU Emacs.

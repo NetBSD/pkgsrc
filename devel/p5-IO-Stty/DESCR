@@ -1,5 +1,5 @@
 
-	The two perl items in this package are an stty shell script and a 
+	The two perl items in this package are an stty shell script and a
 module for setting terminal parameters. to use the Stty.pm module stuff it in
 your $PERL_LIB_DIR/site_perl/IO directory. In your scripts do:
 

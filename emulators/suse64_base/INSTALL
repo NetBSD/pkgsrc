@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: INSTALL,v 1.2 2002/10/05 15:48:45 manu Exp $
+# $NetBSD: INSTALL,v 1.3 2003/05/06 17:41:10 jmmv Exp $
 
 emul=linux
 if [ "$2" != "POST-INSTALL" ]; then exit 0; fi
@@ -8,7 +8,7 @@ cat <<EOF
 ==============================================================================
 
 Do not forget to include COMPAT_LINUX (and EXEC_ELF32 on NetBSD systems older
-than 1.5) in your kernel configuration file.  (Linux binaries require these 
+than 1.5) in your kernel configuration file.  (Linux binaries require these
 options in order to work.)
 EOF
 

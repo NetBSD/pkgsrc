@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.27 2002/12/31 12:42:37 cjep Exp $
+# $NetBSD: build,v 1.28 2003/05/06 17:42:03 jmmv Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -201,20 +201,20 @@ echo "Build finished.  Removing all installed packages left over from build..."
 
 for pkgname in `pkg_info -e \*`
 do
-	if `pkg_info -qe $pkgname`; then 
+	if `pkg_info -qe $pkgname`; then
 		pkgdir=`grep " $pkgname " $INDEXFILE | awk '{print $1}'`	
-		case "${BULK_PREREQ}" in 
-			*$pkgdir* ) 
+		case "${BULK_PREREQ}" in
+			*$pkgdir* )
 				echo "Keeping BULK_PREREQ: $pkgname ($pkgdir)" ;
-				;; 
-			* ) 
+				;;
+			* )
 				echo pkg_delete -r $pkgname
 				pkg_delete -r $pkgname
 				if `pkg_info -qe $pkgname` ; then
 					echo "$pkgname ($pkgdir) did not deinstall nicely.  Forcing the deinstall"
-					pkg_delete -f $pkgname || true 
-				fi 
-				;; 
+					pkg_delete -f $pkgname || true
+				fi
+				;;
 		esac
 	fi
 done

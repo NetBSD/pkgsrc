@@ -5,7 +5,7 @@ is sent back to the user with an address of "help@my-company.com".  You
 can set the envelope sender to an empty string.  However, some programs
 will parse the message for the "From:"  field and send an autoresponse
 back to it.  It is received at your autoresponder, and you now have a mail
-loop. 
+loop.
 
 This autoresponder also catches some other simple situations such as mail
-from a mailer-daemon, empty envelope sender, bulk precedence headers, etc. 
+from a mailer-daemon, empty envelope sender, bulk precedence headers, etc.

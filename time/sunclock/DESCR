@@ -1,6 +1,6 @@
 X11 version by John Mackin, <john@cs.su.oz.AU>, based on a Suntools program
 by John Walker, <kelvin@acad.uu.NET>.
- 
+
 This program is a clock that shows which portion of the Earth's surface is
 illuminated by the Sun.  It is designed to be usually iconic, but can be
 opened for a larger display with the time updated every second and both the

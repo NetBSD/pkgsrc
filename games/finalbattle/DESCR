@@ -4,7 +4,7 @@ information and controls, including a short range viewscreen showing your
 ship in the center and other objects near it, a long range "map" (aka
 "radar") showing all players, a damage report and repair window, a weapon
 selection window, a ship's-computer and player-to-player communications
-window, and a ship upgrade status window. 
+window, and a ship upgrade status window.
 
 The game uses the X network protocol to display graphics and receive
 player input from mulitple servers.  Only one client is running and is in

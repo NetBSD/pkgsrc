@@ -1,5 +1,5 @@
 Bibindex and biblook are programs for fast lookup in BibTeX
-bibliography data bases. 
+bibliography data bases.
 
 Bibindex converts a .bib file to a .bix file, which is a compact
 binary representation of the .bib file containing hash tables for fast
