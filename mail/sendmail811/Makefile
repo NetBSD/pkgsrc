@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2003/09/18 17:10:35 taca Exp $
+# $NetBSD: Makefile,v 1.13 2003/11/12 03:39:41 jschauma Exp $
 
 DISTNAME=	sendmail.8.11.6
 PKGNAME=	sendmail-8.11.6
-PKGREVISION=	6
+PKGREVISION=	7
 WRKSRC=		${WRKDIR}/${PKGNAME:C/nb[0-9]+$//}
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \

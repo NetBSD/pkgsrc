@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2003/08/04 07:57:26 jmc Exp $
+# $NetBSD: Makefile,v 1.25 2003/11/12 03:39:40 jschauma Exp $
 #
 
 DISTNAME=		blender-2.28
 CATEGORIES=		graphics
+PKGREVISION=		1
 MASTER_SITES=		ftp://ftp.cs.umn.edu/pub/blender.org/source/ \
 			http://download.blender.org/source/
 EXTRACT_SUFX=		.tar.bz2

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/07 15:12:41 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/12 03:39:40 jschauma Exp $
 #
 
 DISTNAME=	isync-0.8
+PKGREVISION=	1
 CATEGORIES=	mail net
 MASTER_SITES=	http://www.cs.hmc.edu/~me/isync/
 
