@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.6 2001/02/16 13:46:18 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/05/22 23:24:51 wiz Exp $
 #
 
 DISTNAME=	fastcap-2.0-15Jul92
 PKGNAME=	fastcap-2.0.19920715
 WRKSRC=		${WRKDIR}/fastcap
 CATEGORIES=	cad
-MASTER_SITES=	ftp://rle-vlsi.mit.edu/pub/fastcap/
+MASTER_SITES=	ftp://rle-vlsi.mit.edu/pub/fastcap/ \
+		ftp://rle-vlsi.mit.edu/pub/fastcap/postscript/
 DISTFILES=	fastcap-2.0-15Jul92.tar.Z \
-		postscript/ug.ps.Z \
-		postscript/mtt.ps.Z \
-		postscript/tcad.ps.Z
+		ug.ps.Z \
+		mtt.ps.Z \
+		tcad.ps.Z
 
 MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://kontiki.mit.edu/rle/research/info_research_proj.html
@@ -17,9 +18,6 @@ COMMENT=	Fast 3-D capacitance solver
 
 DIST_SUBDIR=	fastcap
 EXTRACT_ONLY=	fastcap-2.0-15Jul92.tar.Z
-IGNOREFILES=	postscript/ug.ps.Z \
-		postscript/mtt.ps.Z \
-		postscript/tcad.ps.Z
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./config
