@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 1999/03/04 09:12:42 kim Exp $
+@comment $NetBSD: PLIST,v 1.11 2000/01/18 15:50:33 agc Exp $
 bin/ali
 bin/anno
 bin/burst
@@ -49,8 +49,8 @@ etc/nmh/mhl.format
 etc/nmh/mhl.forward
 etc/nmh/mhl.headers
 etc/nmh/mhl.reply
-etc/nmh/mhn.defaults
-etc/nmh/mts.conf
+etc/nmh/mhn.defaults.dist
+etc/nmh/mts.conf.dist
 etc/nmh/rcvdistcomps
 etc/nmh/replcomps
 etc/nmh/replgroupcomps
