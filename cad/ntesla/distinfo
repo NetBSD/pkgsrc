@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 16:27:00 agc Exp $
+$NetBSD: distinfo,v 1.3 2003/12/17 16:58:25 sketch Exp $
 
 SHA1 (ntesla-1.7.tar.gz) = e52fbc19b6e6203aababb649c72989ee38003cf4
 Size (ntesla-1.7.tar.gz) = 47626 bytes
-SHA1 (patch-aa) = 1e5afe8fdfce28d86cb98359936fa376747e5fbb
+SHA1 (patch-aa) = f4e3436874c264f254d82ef3b6daf1fd596a413b
 SHA1 (patch-ab) = d4668bf6b3b7bc25f87b0b5b021a79c3375d0d87
+SHA1 (patch-ac) = 2f111ccca8ad225b126f6f8c76c754473ce14b1c
+SHA1 (patch-ad) = 2bf11bfb21c65be39fefd46dc2eb545d2fd673b4
+SHA1 (patch-ae) = f015bbe483ac45fd4ba56945c776595de0392b49
