@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.484 2000/06/25 04:26:56 hubertf Exp $			\
+#	$NetBSD: bsd.pkg.mk,v 1.485 2000/06/25 06:31:12 hubertf Exp $			\
 #
 # This file is in the public domain.
 #
@@ -2643,14 +2643,12 @@ print-package-depends:
 # XXX This is intended to be run before pkg_create is called, so the
 # existance of ${PLIST} can be assumed as granted.
 print-pkg-size-this:
-	${_PKG_SILENT}${_PKG_DEBUG}(					\
-	${SHCOMMENT} "This pkg's files" ;				\
+	@${SHCOMMENT} "This pkg's files" ;				\
 	${AWK} 'BEGIN { base = "${PREFIX}/" }				\
 		/^@cwd/ { base = $$2 "/" }				\
 		/^@ignore/ { next }					\
 		NF == 1 { print base $$1 }'				\
-		<${PLIST} ;						\
-	)								\
+		<${PLIST}						\
 	| sort -u							\
 	| ${SED} -e 's, ,\\ ,g'						\
 	| xargs ls -ld							\
@@ -2663,8 +2661,7 @@ print-pkg-size-this:
 # XXX This is intended to be run before pkg_create is called, so the
 # dependencies are all installed
 print-pkg-size-depends:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${MAKE} ${.MAKEFLAGS} print-pkg-size-depends-help 		\
+	@${MAKE} ${.MAKEFLAGS} print-pkg-size-depends-help 		\
 	| ${AWK} 'BEGIN { sum=0; }					\
 		  { sum+=$$1; }						\
 		  END { print sum; }'
@@ -2672,8 +2669,7 @@ print-pkg-size-depends:
 # also includes size of depends of depends (XXX)
 print-pkg-size-depends-help:
 .for dep in ${DEPENDS}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	pkg="${dep:C/:.*//}";						\
+	@pkg="${dep:C/:.*//}";						\
 	${PKG_INFO} -qS "$$pkg"
 .endfor
 
@@ -2727,7 +2723,7 @@ COMMON_DIRS!= 	${AWK} 'BEGIN  { 				\
 
 .if !target(print-PLIST)
 print-PLIST:
-	@${ECHO} '@comment $$NetBSD: bsd.pkg.mk,v 1.484 2000/06/25 04:26:56 hubertf Exp $$'
+	@${ECHO} '@comment $$NetBSD: bsd.pkg.mk,v 1.485 2000/06/25 06:31:12 hubertf Exp $$'
 	@${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} \! -type d 	\
 	 | ${SED} s@${PREFIX}/./@@ 				\
 	 | sort							\
@@ -2811,7 +2807,7 @@ fake-pkg: ${PLIST} ${DESCR}
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	size_this=`${MAKE} ${MAKEFLAGS} print-pkg-size-this`;		\
 	size_depends=`${MAKE} ${MAKEFLAGS} print-pkg-size-depends`;	\
-	${ECHO} $$size_this	>${SIZE_PKG_FILE};			\
+	${ECHO} $$size_this	>${SIZE_PKG_FILE} ;			\
 	expr $$size_this + $$size_depends >${SIZE_ALL_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 		if [ ! -d ${PKG_DBDIR}/${PKGNAME} ]; then		\
