@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/22 08:24:31 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/27 07:24:52 xtraeme Exp $
 #
 
 DISTNAME=	treecc-0.2.6
@@ -11,7 +11,7 @@ COMMENT=	DotGNU Portable.NET aspect-oriented programming tool
 
 GNU_CONFIGURE=	yes
 USE_GNU_TOOLS+=	make
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 INFO_FILES=	treecc.info
 
