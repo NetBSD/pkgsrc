@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/06/05 16:32:02 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/18 21:58:55 tv Exp $
 #
 
 DISTNAME=		libiberty-1.0
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://www.johnrshannon.com/NetBSD/
 
@@ -16,8 +17,12 @@ GNU_CONFIGURE=		yes
 
 INSTALLATION_DIRS=	include lib
 
+post-extract:
+	${CP} -f ${WRKSRC}/include/ansidecl.h ${WRKSRC}/include/libiberty_decl.h
+
 do-install:
-	${INSTALL_LIB} ${WRKSRC}/libiberty/libiberty.a ${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/include/libiberty.h ${PREFIX}/include
+	${INSTALL_LIB} ${WRKSRC}/libiberty/libiberty.a ${PREFIX}/lib/
+	${INSTALL_DATA} ${WRKSRC}/include/libiberty_decl.h ${PREFIX}/include/
+	${INSTALL_DATA} ${WRKSRC}/include/libiberty.h ${PREFIX}/include/
 
 .include "../../mk/bsd.pkg.mk"
