@@ -1,0 +1,21 @@
+$NetBSD: patch-mi_mi_cmd_disas_c,v 1.1.1.1 2004/06/01 19:29:30 shannonjr Exp $
+
+--- gdb/mi/mi-cmd-disas.c.orig	2002-09-30 09:57:26.000000000 -0600
++++ gdb/mi/mi-cmd-disas.c
+@@ -51,7 +51,6 @@
+ enum mi_cmd_result
+ mi_cmd_disassemble (char *command, char **argv, int argc)
+ {
+-  enum mi_cmd_result retval;
+   CORE_ADDR start;
+ 
+   int mixed_source_and_assembly;
+@@ -84,7 +83,7 @@ mi_cmd_disassemble (char *command, char 
+     {"n", NUM_OPT, 1},
+     {"s", START_OPT, 1},
+     {"e", END_OPT, 1},
+-    0
++    {0}
+   };
+ 
+   /* Get the options with their arguments. Keep track of what we

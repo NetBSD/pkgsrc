@@ -1,0 +1,13 @@
+$NetBSD: patch-mi_mi_getopt_c,v 1.1.1.1 2004/06/01 19:29:30 shannonjr Exp $
+
+--- gdb/mi/mi-getopt.c.orig	2003-04-02 15:10:35.000000000 -0700
++++ gdb/mi/mi-getopt.c
+@@ -82,7 +82,7 @@ mi_valid_noargs (const char *prefix, int
+   char *optarg;
+   static struct mi_opt opts[] =
+   {
+-    0
++    {0}
+   };
+ 
+   if (mi_getopt (prefix, argc, argv, opts, &optind, &optarg) == -1)
