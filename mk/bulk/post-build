@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.49 2005/01/13 19:29:28 tv Exp $
+# $NetBSD: post-build,v 1.50 2005/01/14 13:08:28 jmmv Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -227,6 +227,9 @@ sub pkgResult ($$) {
 
 	my $maintainer = `grep ^MAINTAINER $vars{USR_PKGSRC}/$pkg/Makefile`;
 	$maintainer =~ s/MAINTAINER=[ \t]*//;
+	if (! $maintainer) {
+		 $maintainer = `cd $vars{USR_PKGSRC}/$pkg ; $BMAKE show-var VARNAME=MAINTAINER`;
+	}
 	$maintainer =~ s/</&lt;/g;
 	$maintainer =~ s/>/&gt;/g;
 	chomp($maintainer);
