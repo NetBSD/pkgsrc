@@ -1,4 +1,4 @@
-#	$NetBSD: IRIX.bsd.lib.mk,v 1.3 2004/08/15 22:15:18 jschauma Exp $
+#	$NetBSD: IRIX.bsd.lib.mk,v 1.4 2004/08/15 22:20:02 jschauma Exp $
 #	@(#)bsd.lib.mk	8.3 (Berkeley) 4/22/94
 
 .if !target(__initialized__)
@@ -171,7 +171,7 @@ FFLAGS+=	${FOPTS}
 .else
 	@echo ${COMPILE.c:Q} -pg ${.IMPSRC} -o ${.TARGET}
 	@${COMPILE.c} -pg ${.IMPSRC} -o ${.TARGET}.o
-	@${LD} -X -r ${.TARGET}.o -o ${.TARGET}
+	@${LD} -x -r ${.TARGET}.o -o ${.TARGET}
 	@rm -f ${.TARGET}.o
 .endif
 
@@ -204,7 +204,7 @@ FFLAGS+=	${FOPTS}
 .else
 	@echo ${COMPILE.cc:Q} -pg ${.IMPSRC} -o ${.TARGET}
 	@${COMPILE.cc} -pg ${.IMPSRC} -o ${.TARGET}.o
-	@${LD} -X -r ${.TARGET}.o -o ${.TARGET}
+	@${LD} -x -r ${.TARGET}.o -o ${.TARGET}
 	@rm -f ${.TARGET}.o
 .endif
 
@@ -234,7 +234,7 @@ FFLAGS+=	${FOPTS}
 .else
 	@echo ${COMPILE.f:Q} -pg ${.IMPSRC} -o ${.TARGET}
 	@${COMPILE.f} -pg ${.IMPSRC} -o ${.TARGET}.o
-	@${LD} -X -r ${.TARGET}.o -o ${.TARGET}
+	@${LD} -x -r ${.TARGET}.o -o ${.TARGET}
 	@rm -f ${.TARGET}.o
 .endif
 
@@ -267,7 +267,7 @@ FFLAGS+=	${FOPTS}
 .else
 	@echo ${COMPILE.m:Q} -pg ${.IMPSRC} -o ${.TARGET}
 	@${COMPILE.m} -pg ${.IMPSRC} -o ${.TARGET}.o
-	@${LD} -X -r ${.TARGET}.o -o ${.TARGET}
+	@${LD} -x -r ${.TARGET}.o -o ${.TARGET}
 	@rm -f ${.TARGET}.o
 .endif
 
@@ -290,7 +290,7 @@ FFLAGS+=	${FOPTS}
 .S.po .s.po:
 	@echo ${COMPILE.S:Q} -DGPROF -DPROF ${CFLAGS:M-[ID]*} ${AINC} ${.IMPSRC} -o ${.TARGET}
 	@${COMPILE.S} -DGPROF -DPROF ${CFLAGS:M-[ID]*} ${AINC} ${.IMPSRC} -o ${.TARGET}.o
-	@${LD} -X -r ${.TARGET}.o -o ${.TARGET}
+	@${LD} -x -r ${.TARGET}.o -o ${.TARGET}
 	@rm -f ${.TARGET}.o
 
 .S.so .s.so:
@@ -376,13 +376,13 @@ lib${LIB}.so.${SHLIB_FULLVERSION}: ${SOLIB} ${DPADD} \
 	$(LD) -nostdlib -x -shared ${SHLIB_SHFLAGS} -o ${.TARGET} \
 	    ${SHLIB_LDSTARTFILE} \
 	    -all archive ${SOLIB} \
-	    -notall ${LDADD} \
+	    -none ${LDADD} \
 	    -L${DESTDIR}${LIBDIR} -rpath ${LIBDIR} \
 	    ${SHLIB_LDENDFILE}
 .else
 	$(LD) -x -shared ${SHLIB_SHFLAGS} -o ${.TARGET} \
 	    ${SHLIB_LDSTARTFILE} \
-	    -all ${SOLIB} -notall ${LDADD} \
+	    -all ${SOLIB} -none ${LDADD} \
 	    ${SHLIB_LDENDFILE}
 .endif
 .if ${OBJECT_FMT} == "ELF"
