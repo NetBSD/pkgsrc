@@ -1,17 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/11/14 15:48:35 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/11/27 16:27:04 drochner Exp $
 lib/zope/lib/python/Products/PropertyObject/CHANGES.txt
 lib/zope/lib/python/Products/PropertyObject/LICENSE.txt
 lib/zope/lib/python/Products/PropertyObject/PropertyObject.py
 lib/zope/lib/python/Products/PropertyObject/PropertyObject.pyc
 lib/zope/lib/python/Products/PropertyObject/README.txt
-lib/zope/lib/python/Products/PropertyObject/StripTagParser.py
-lib/zope/lib/python/Products/PropertyObject/StripTagParser.pyc
 lib/zope/lib/python/Products/PropertyObject/__init__.py
 lib/zope/lib/python/Products/PropertyObject/__init__.pyc
 lib/zope/lib/python/Products/PropertyObject/dtml/addForm.dtml
 lib/zope/lib/python/Products/PropertyObject/dtml/manageForm.dtml
 lib/zope/lib/python/Products/PropertyObject/dtml/propertiesForm.dtml
-lib/zope/lib/python/Products/PropertyObject/dtml/publishForm.dtml
 lib/zope/lib/python/Products/PropertyObject/refresh.txt
 lib/zope/lib/python/Products/PropertyObject/version.txt
 lib/zope/lib/python/Products/PropertyObject/www/down.gif
