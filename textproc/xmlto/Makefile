@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/30 14:22:56 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/03 13:36:36 wiz Exp $
 #
 
 DISTNAME=		xmlto-0.0.18
@@ -13,6 +13,7 @@ COMMENT=		Tool to help transform XML documents into other formats
 DEPENDS+=		getopt-[0-9]*:../../misc/getopt
 DEPENDS+=		bash-[0-9]*:../../shells/bash
 DEPENDS+=		docbook-xsl>=1.67.0nb1:../../textproc/docbook-xsl
+DEPENDS+=		libxml2>=2.6.2:../../textproc/libxml2
 
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
