@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2004/04/18 18:41:51 ben Exp $
+# $NetBSD: Makefile,v 1.48 2004/07/02 15:12:07 drochner Exp $
 #
 
 DISTNAME=	TiMidity++-2.13.0
@@ -11,7 +11,7 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://timidity.sourceforge.net/
 COMMENT=	MIDI to WAV renderer and player
 
-CONFLICTS=	kdemultimedia-[0-9]*
+CONFLICTS=	kdemultimedia-2.[0-9]*
 
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
