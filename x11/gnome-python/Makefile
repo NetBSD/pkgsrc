@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2004/04/27 02:04:07 snj Exp $
+# $NetBSD: Makefile,v 1.42 2004/08/27 06:29:11 jlam Exp $
 
 DISTNAME=		gnome-python-1.4.4
 PKGNAME=		${PYPKGPREFIX}-gnome-1.4.4
@@ -33,8 +33,8 @@ PYBINMODULE=		yes
 post-configure:
 .for DIR in pygtk pygnome
 	${MV} ${WRKSRC}/${DIR}/Makefile ${WRKSRC}/${DIR}/Makefile.old
-	${SED} -e 's#-Wl,-R#${RPATH_FLAG}#g' ${WRKSRC}/${DIR}/Makefile.old \
-	  >${WRKSRC}/${DIR}/Makefile
+	${SED} -e 's#-Wl,-R#${LINKER_RPATH_FLAG} #g' \
+		${WRKSRC}/${DIR}/Makefile.old >${WRKSRC}/${DIR}/Makefile
 .endfor
 .endif
 

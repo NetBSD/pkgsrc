@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2004/04/30 05:25:59 snj Exp $
+# $NetBSD: Makefile,v 1.90 2004/08/27 06:29:11 jlam Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -134,7 +134,7 @@ CONFIGURE_ENV+=		INCLUDES="-I${BUILDLINK_PREFIX.db}/include/db2"
 # on Solaris, we also need libdbm
 .  if ${OPSYS} == "SunOS"
 CONFIGURE_ENV+=		LIBS="-ldbm -ldb2"
-LDFLAGS+=		-Wl,${RPATH_FLAG}/usr/ucblib -L/usr/ucblib
+LDFLAGS+=		${COMPILER_RPATH_FLAG}/usr/ucblib -L/usr/ucblib
 .  else
 CONFIGURE_ENV+=		LIBS="-ldb2"
 .  endif

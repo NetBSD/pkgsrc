@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2003/07/02 20:07:30 jmc Exp $
+$NetBSD: patch-aa,v 1.4 2004/08/27 06:29:08 jlam Exp $
 
 --- Makefile.orig	Fri Mar 16 19:08:18 2001
 +++ Makefile	Wed Jul  2 13:09:19 2003
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.3 2003/07/02 20:07:30 jmc Exp $
 -GCC = gcc
 -CFLAGS = -Wall -fpic -O2
 +INC_DIRS = -I${GDCHART_INCLUDE} -I$(GD_INCLUDE) -I$(PYTHON_INCLUDE)
-+LIB_DIRS = -L${LOCALBASE}/lib -L/usr/lib -Wl,${RPATH_FLAG}${LOCALBASE}/lib -L${X11PREFIX}/lib -Wl,${RPATH_FLAG}${X11PREFIX}/lib
++LIB_DIRS = -L${LOCALBASE}/lib -L/usr/lib ${COMPILER_RPATH_FLAG}${LOCALBASE}/lib -L${X11PREFIX}/lib ${COMPILER_RPATH_FLAG}${X11PREFIX}/lib
 +GCC = ${CC}
 +CFLAGS ?= -Wall -fpic -O2
  

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2004/05/15 21:00:57 itojun Exp $
+# $NetBSD: Makefile,v 1.45 2004/08/27 06:29:09 jlam Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	bind-${BIND_VERSION}
@@ -24,7 +24,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-libtool=yes \
 		--sysconfdir=/etc \
 		--localstatedir=/var
-#LDFLAGS+=	-Wl,${RPATH_FLAG}${LOCALBASE}/pthreads/lib -L${LOCALBASE}/pthreads/lib
+#LDFLAGS+=	${COMPILER_RPATH_FLAG}${LOCALBASE}/pthreads/lib -L${LOCALBASE}/pthreads/lib
 # use external OpenSSL.  comment out the following line and the buildlink
 # include at the bottom to use OpenSSL shipped with BIND9.
 CONFIGURE_ARGS+=--with-openssl=${SSLBASE}

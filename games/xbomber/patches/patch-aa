@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2003/11/18 14:43:08 xtraeme Exp $
+$NetBSD: patch-aa,v 1.8 2004/08/27 06:29:07 jlam Exp $
 
 --- makefile.orig	1998-06-19 04:28:34.000000000 +0100
 +++ makefile	2003-11-05 12:36:20.000000000 +0000
@@ -24,7 +24,7 @@ $NetBSD: patch-aa,v 1.7 2003/11/18 14:43:08 xtraeme Exp $
  
  # adjust according to target
 -XLIB=-L/usr/X11/lib -lX11
-+XLIB=-Wl,${RPATH_FLAG}${PREFIX}/lib -L$(PREFIX)/lib -Wl,${RPATH_FLAG}${X11BASE}/lib -L${X11BASE}/lib -lX11
++XLIB=${COMPILER_RPATH_FLAG}${PREFIX}/lib -L$(PREFIX)/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib -L${X11BASE}/lib -lX11
  
  # uncomment for sunos/solaris
  #XLIB=-L/usr/openwin/lib -lX11

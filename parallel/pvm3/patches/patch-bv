@@ -1,4 +1,4 @@
-$NetBSD: patch-bv,v 1.1 2004/07/19 22:41:16 dmcmahill Exp $
+$NetBSD: patch-bv,v 1.2 2004/08/27 06:29:10 jlam Exp $
 
 --- gexamples/Makefile.aimk.orig	Wed Feb 16 21:48:37 2000
 +++ gexamples/Makefile.aimk	Thu Mar 25 02:04:18 2004
@@ -6,9 +6,9 @@ $NetBSD: patch-bv,v 1.1 2004/07/19 22:41:16 dmcmahill Exp $
  			tjf$(EXESFX) trsg$(EXESFX) frsg$(EXESFX) gs$(EXESFX)
  
 +LTCC=		${LIBTOOL} --mode=compile ${CC}
-+LTCC_LINK=	${LIBTOOL} --mode=link ${CC} ${PVM_STATIC} -Wl,${RPATH_FLAG}${PVM_DIR}/lib/${PVM_ARCH}
++LTCC_LINK=	${LIBTOOL} --mode=link ${CC} ${PVM_STATIC} ${COMPILER_RPATH_FLAG}${PVM_DIR}/lib/${PVM_ARCH}
 +LTFORT=		${LIBTOOL} --mode=compile ${FC}
-+LTFORT_LINK=	${LIBTOOL} --mode=link ${FC} ${PVM_STATIC} -Wl,${RPATH_FLAG}${PVM_DIR}/lib/${PVM_ARCH}
++LTFORT_LINK=	${LIBTOOL} --mode=link ${FC} ${PVM_STATIC} ${COMPILER_RPATH_FLAG}${PVM_DIR}/lib/${PVM_ARCH}
 +
  all:  $(PROGS)
  

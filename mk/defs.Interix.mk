@@ -1,4 +1,4 @@
-# $NetBSD: defs.Interix.mk,v 1.26 2004/08/23 23:34:45 tv Exp $
+# $NetBSD: defs.Interix.mk,v 1.27 2004/08/27 06:29:09 jlam Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -134,7 +134,6 @@ _OPSYS_LIBTOOL_REQD=	1.5.2nb7 # base version of libtool required
 _OPSYS_PERL_REQD=	5.8.3nb1 # base version of perl required
 _OPSYS_PKGTOOLS_REQD=	20040330
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
-_OPSYS_RPATH_NAME=	-R	# name of symbol in rpath directive to linker 
 _OPSYS_SHLIB_TYPE=	ELF	# shared lib type - not exactly true, but near enough
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 _PATCH_BACKUP_ARG?=	-b -V simple -z	# switch to patch(1) for backup suffix

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2004/07/20 04:53:09 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.12 2004/08/27 06:29:07 jlam Exp $
 
 DISTNAME=		mysql-4.0.20
 CATEGORIES=		databases
@@ -69,7 +69,7 @@ USE_LANGUAGES=		c c++
 USE_GNU_TOOLS+=		make
 USE_PERL5=		# defined
 USE_LIBTOOL=		# defined
-LDFLAGS+=		-Wl,${RPATH_FLAG}${LOCALBASE}/lib/mysql
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
 
 post-extract:
 	cd ${WRKSRC};							\

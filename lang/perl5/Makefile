@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2004/07/03 14:13:06 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2004/08/27 06:29:08 jlam Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -98,9 +98,9 @@ LOCINCPATH=		${LOCALBASE}/include
 # flags to the link command in the right way.
 #
 .if ${OBJECT_FMT} == "a.out"
-LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/${RPATH_FLAG}/g}
+LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/${LINKER_RPATH_FLAG} /g}
 .else
-LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/-Wl,${RPATH_FLAG}/g}
+LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/${COMPILER_RPATH_FLAG}/g}
 .endif
 FIX_RPATH+=		LOCLIBRPATHFLAGS
 

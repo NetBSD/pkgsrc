@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2004/06/25 17:41:47 abs Exp $
+# $NetBSD: Makefile,v 1.48 2004/08/27 06:29:08 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -168,9 +168,9 @@ LOCINCPATH=		${LOCALBASE}/include
 # flags to the link command in the right way.
 #
 .if ${OBJECT_FMT} == "a.out"
-LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/${RPATH_FLAG}/g}
+LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/${LINKER_RPATH_FLAG} /g}
 .elif ${OBJECT_FMT} == "ELF"
-LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/-Wl,${RPATH_FLAG}/g}
+LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/${COMPILER_RPATH_FLAG}/g}
 .else
 LOCLIBRPATHFLAGS=	# empty
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2004/07/18 09:38:26 schmonz Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/08/27 06:29:07 jlam Exp $
 
 DISTNAME=	sqsh-2.1-src
 CATEGORIES=	databases
@@ -34,7 +34,7 @@ CONFIGURE_ENV+=		SYBASE_LIBS=-lct
 MAKE_FLAGS+=		SYBASE_LIBS=-lct
 .endif
 
-LDFLAGS+=		-Wl,${RPATH_FLAG}${_SYBASE}/lib
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${_SYBASE}/lib
 CONFIGURE_ENV+=		SYBASE="${_SYBASE}"
 CONFIGURE_ENV+=		INCDIRS="${BUILDLINK_PREFIX.readline}/include"
 CONFIGURE_ENV+=		LIBDIRS="${BUILDLINK_PREFIX.readline}/lib"
