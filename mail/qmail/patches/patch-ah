@@ -1,0 +1,16 @@
+$NetBSD: patch-ah,v 1.1 2004/04/10 05:30:06 schmonz Exp $
+
+--- ipme.c.orig	1998-06-15 06:53:16.000000000 -0400
++++ ipme.c
+@@ -46,6 +46,11 @@ int ipme_init()
+   ipme.len = 0;
+   ix.pref = 0;
+  
++  /* 0.0.0.0 is a special address which always refers to 
++   * "this host, this network", according to RFC 1122, Sec. 3.2.1.3a.
++  */
++  byte_copy(&ix.ip,4,"\0\0\0\0");
++  if (!ipalloc_append(&ipme,&ix)) { return 0; }
+   if ((s = socket(AF_INET,SOCK_STREAM,0)) == -1) return -1;
+  
+   len = 256;

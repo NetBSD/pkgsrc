@@ -1,0 +1,16 @@
+$NetBSD: patch-aj,v 1.1 2004/04/10 05:30:06 schmonz Exp $
+
+--- qmail-log.5.orig	1998-06-15 06:53:16.000000000 -0400
++++ qmail-log.5
+@@ -232,6 +232,11 @@ It will try again later.
+ is unable to queue a bounce message,
+ usually because the machine is almost out of memory.
+ It will try again later.
++This can also be caused by incorrect settings of
++.B $QMAILQUEUE
++or errors in a program or script which
++.B $QMAILQUEUE
++points to.
+ .TP
+ .B unable to stat ...
+ .B qmail-send
