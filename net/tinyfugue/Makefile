@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/10/03 00:18:00 tv Exp $
-# FreeBSD Id: Makefile,v 1.8 1998/04/11 04:21:19 jseger Exp
-#
+# $NetBSD: Makefile,v 1.14 2005/03/24 21:12:59 wiz Exp $
 
 DISTNAME=	tf-40s1
 PKGNAME=	tf-4.0s1

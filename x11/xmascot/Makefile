@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/03/03 04:17:33 jschauma Exp $
-# FreeBSD Id: Makefile,v 1.2 1997/06/07 19:47:09 max Exp
-#
+# $NetBSD: Makefile,v 1.13 2005/03/24 21:13:04 wiz Exp $
 
 DISTNAME=	xmascot2.5p2
 PKGNAME=        xmascot-2.5p2

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:54:48 grant Exp $
-# FreeBSD Id: ports/misc/rtfm/Makefile,v 1.10 2001/01/16 17:31:43 sobomax Exp
+# $NetBSD: Makefile,v 1.5 2005/03/24 21:13:02 wiz Exp $
 
 DISTNAME=	rtfm-1.0
 CATEGORIES=	textproc

@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/04/28 00:05:24 snj Exp $
-# $FreeBSD Id: Makefile,v 1.11 1996/11/16 10:49:52 asami Exp
-#
+# $NetBSD: Makefile,v 1.25 2005/03/24 21:13:04 wiz Exp $
 
 DISTNAME=		xview3.2p1-X11R6
 PKGNAME=		xview-clients-3.2.1

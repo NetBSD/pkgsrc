@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/08/11 15:57:42 seb Exp $
-# FreeBSD Id: ports/mail/mailcrypt/Makefile,v 1.7 2000/05/14 05:21:52 billf Exp
+# $NetBSD: Makefile,v 1.9 2005/03/24 21:12:56 wiz Exp $
 
 DISTNAME=	mailcrypt-3.5.8
 CATEGORIES=	mail security

@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/10/03 00:13:10 tv Exp $
-# FreeBSD ID: Makefile,v 1.5 1997/09/08 13:37:47 tg Exp
-#
+# $NetBSD: Makefile,v 1.22 2005/03/24 21:12:51 wiz Exp $
 
 DISTNAME=       xmmix-1.2
 PKGREVISION=	2

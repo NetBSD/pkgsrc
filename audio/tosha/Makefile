@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/03/12 11:05:37 jmmv Exp $
-# FreeBSD Id: Makefile,v 1.2 1997/05/25 08:58:43 andreas Exp
-#
+# $NetBSD: Makefile,v 1.11 2005/03/24 21:12:51 wiz Exp $
 
 DISTNAME=	tosha-0.05
 CATEGORIES=	audio

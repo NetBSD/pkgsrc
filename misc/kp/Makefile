@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/01/12 21:13:22 minskim Exp $
-# FreeBSD Id: Makefile,v 1.8 1997/04/20 13:19:32 wosch Exp
-#
+# $NetBSD: Makefile,v 1.21 2005/03/24 21:12:57 wiz Exp $
 
 DISTNAME=       kp-0.96
 CATEGORIES=	misc tk
