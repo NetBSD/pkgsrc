@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/10/01 13:29:21 markd Exp $
+# $NetBSD: Makefile,v 1.9 2002/10/01 19:28:34 jlam Exp $
 
 DISTNAME=	kdelibs-3.0.3
 PKGREVISION=	1
@@ -11,6 +11,7 @@ BUILDLINK_DEPENDS.audiofile=	libaudiofile>=0.1.9
 BUILDLINK_DEPENDS.qt3-libs=	qt3-libs>=3.0.3
 
 USE_BUILDLINK2=		YES
+USE_CXX=		YES
 USE_OPENSSL_VERSION=	${OPENSSL_VERSION_096}
 
 CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
@@ -18,18 +19,9 @@ CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-LIBS+=			-Wl,--export-dynamic
+LIBS+=			${EXPORT_SYMBOLS_LDFLAGS}
 .endif
 
-GCC_VERSION!=		gcc --version
-.if (${GCC_VERSION:C/-.*$$//} == egcs) && (${MACHINE_ARCH} == alpha)
-.include "../../lang/gcc/buildlink2.mk"
-.endif
-
-# The configure script looks for xml2-config in the environment as
-# ${XML_CONFIG}, not as ${XML2_CONFIG} like it's supposed to.
-#
-CONFIGURE_ENV+=		XML_CONFIG="${XML2_CONFIG}"
 KDEDIR=			${PREFIX}
 
 REPLACE_PERL= \
@@ -89,6 +81,9 @@ post-install:
 	  ${ECHO} "@dirrm share/kde";					\
 	) > ${PLIST_SRC}
 
+.if ${MACHINE_ARCH} == "alpha"
+.  include "../../lang/gcc/buildlink2.mk"
+.endif
 .include "../../archivers/bzip2/buildlink2.mk"
 .include "../../audio/arts/buildlink2.mk"
 .include "../../audio/libaudiofile/buildlink2.mk"
@@ -101,9 +96,10 @@ post-install:
 .include "../../x11/kde3/buildlink2.mk"
 .include "../../x11/qt3-libs/buildlink2.mk"
 .include "../../mk/ossaudio.buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
 
-# XXX On NetBSD, the egcs for:
+# XXX On NetBSD, the gcc for:
 # XXX
 # XXX     alpha
 # XXX
