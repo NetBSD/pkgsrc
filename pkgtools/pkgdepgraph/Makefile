@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/07/28 01:42:43 atatat Exp $
+# $NetBSD: Makefile,v 1.18 2004/10/07 02:01:38 jlam Exp $
 #
 
 DISTNAME=	pkgdepgraph-2.7
@@ -33,14 +33,14 @@ do-build:
 .for FILE in pkgdepgraph
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
 		-e 's|@PKG_DBDIR@|${PKG_DBDIR}|g'	\
-		-e 's|@PKGSRCDIR@|${_PKGSRCDIR}|g'	\
+		-e 's|@PKGSRCDIR@|${PKGSRCDIR}|g'	\
 		-e 's|@DISTVER@|${DISTVER}|g'		\
 		< ${WRKSRC}/${FILE}.pl 		\
 		> ${WRKSRC}/${FILE}
 .endfor
 .for FILE in pkgdepgraph.1 pkgdepgraph.0
 	${SED} -e 's|@PKG_DBDIR@|${PKG_DBDIR}|g'	\
-		-e 's|@PKGSRCDIR@|${_PKGSRCDIR}|g'	\
+		-e 's|@PKGSRCDIR@|${PKGSRCDIR}|g'	\
 		< ${WRKSRC}/${FILE}.in		\
 		> ${WRKSRC}/${FILE}
 .endfor

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2004/08/28 00:26:57 gavan Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/07 02:01:38 jlam Exp $
 
 DISTNAME=	pkg_regress-0.0
 CATEGORIES=	pkgtools
@@ -22,7 +22,7 @@ INSTALLATION_DIRS=	sbin
 
 do-build:
 	${SED} -e 's#@MAKE@#${MAKE}#g' \
-	  -e 's#@PKGSRCDIR@#${_PKGSRCDIR}#g' \
+	  -e 's#@PKGSRCDIR@#${PKGSRCDIR}#g' \
 	  -e 's#@SH@#${SH}#g' \
 	  -e 's#@EGREP@#${EGREP}#g' \
 	  ${FILESDIR}/pkg_regress.sh >${WRKSRC}/pkg_regress.sh
