@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6126 2004/06/04 15:34:51 taca Exp $
+$NetBSD: CHANGES,v 1.6127 2004/06/04 15:43:25 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2777,3 +2777,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated squirrelmail to 1.4.3a [xtraeme 2004-06-04]
 	Updated tcl-scotty to 2.1.11nb2 [minskim 2004-06-04]
 	Updated squid to 2.5.5nb3 [taca 2004-06-04]
+	Updated clamav to 0.72 [xtraeme 2004-06-04]
