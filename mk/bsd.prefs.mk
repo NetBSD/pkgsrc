@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.83 2002/10/20 11:47:05 wiz Exp $
+# $NetBSD: bsd.prefs.mk,v 1.84 2002/10/21 01:17:12 wiz Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -82,7 +82,7 @@ MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
 .  endif
 LOWER_VENDOR?=		sun
 LOWER_OPSYS?=		solaris
-# We need to set this early to get "USE_MESA" and "USE_XPM" working.
+# We need to set this early to get "USE_XPM" working.
 X11BASE?=               ${DESTDIR}/usr/openwin
 
 .elif ${OPSYS} == "Linux"
@@ -214,37 +214,6 @@ USE_INET6?=		NO
 .if defined(USE_XAW)
 XAW_TYPE?=		standard
 .endif
-
-# Check if we got Mesa distributed with XFree86 4.x or if we need to
-# depend on the Mesa package.
-# XFree86 starting with 4.1.0 contains now a libGLU, so also check for it.
-.if (defined(CHECK_MESA) || defined(USE_MESA))
-X11BASE?=		/usr/X11R6
-.if exists(${X11BASE}/include/GL/glx.h) && \
-    exists(${X11BASE}/lib/X11/config/X11.tmpl)
-__BUILTIN_MESA!=	${EGREP} -c BuildGLXLibrary ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
-.else
-__BUILTIN_MESA=		0
-.endif
-.if exists(${X11BASE}/include/GL/glu.h) && \
-    exists(${X11BASE}/lib/X11/config/X11.tmpl)
-__BUILTIN_GLU!=		egrep -c BuildGLULibrary ${X11BASE}/lib/X11/config/X11.tmpl || true
-.else
-__BUILTIN_GLU=		0
-.endif
-.if ${__BUILTIN_MESA} == "0"
-HAVE_BUILTIN_MESA=	NO
-.else
-HAVE_BUILTIN_MESA=	YES
-.endif
-.if ${__BUILTIN_GLU} == "0"
-HAVE_BUILTIN_GLU=	NO
-.else
-HAVE_BUILTIN_GLU=	YES
-.endif
-.undef __BUILTIN_MESA
-.undef __BUILTIN_GLU
-.endif	# CHECK_MESA
 
 # Check if we got Xpm distributed with XFree86 4.x or Solaris 9 or if we need
 # to depend on the Xpm package.
