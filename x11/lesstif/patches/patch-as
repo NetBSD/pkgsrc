@@ -1,11 +1,24 @@
-$NetBSD: patch-as,v 1.5 2000/07/25 14:42:10 jlam Exp $
+$NetBSD: patch-as,v 1.6 2000/10/23 19:45:19 jlam Exp $
 
---- lib/config/Makefile.am.orig	Wed May 12 14:48:53 1999
-+++ lib/config/Makefile.am	Tue Jul 25 08:18:13 2000
-@@ -4,5 +4,5 @@
- MAINTAINERCLEANFILES=Makefile.in
- bin_SCRIPTS=	mxmkmf
+--- lib/config/LessTif.tmpl.orig	Tue Aug 29 11:04:58 2000
++++ lib/config/LessTif.tmpl
+@@ -165,7 +165,7 @@
+ #endif
  
--configdir=	$(libdir)/X11/config
-+configdir=	$(libdir)/X11/lesstif
- config_DATA=	Imake.tmpl Motif.rules Motif.tmpl
+ #ifndef LessTifXmVersion
+-# define LessTifXmVersion	1	/* configure-time option */
++# define LessTifXmVersion	2	/* NetBSD installs Xm-2.0 be default */
+ #endif
+ 
+ #if LessTifXmVersion == 1
+@@ -176,8 +176,8 @@
+ #  define LTDepXpLib		/**/
+ #elif LessTifXmVersion == 2
+ #  define XmVersion		2
+-#  define XmRevision		1
+-#  define MotifSharedRev	2.1	/* why 2.0? */
++#  define XmRevision		0
++#  define MotifSharedRev	2.0
+ #  define LTXpLib 		$(XPLIB)
+ #  define LTDepXpLib		$(DEPXPLIB)
+ #else

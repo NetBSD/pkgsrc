@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.10 2000/07/25 14:42:03 jlam Exp $
+$NetBSD: patch-ab,v 1.11 2000/10/23 19:45:10 jlam Exp $
 
 --- clients/Motif-1.2/mwm/system.mwmrc.orig	Sun Jan 16 06:06:11 2000
-+++ clients/Motif-1.2/mwm/system.mwmrc	Tue Jul 25 08:18:13 2000
++++ clients/Motif-1.2/mwm/system.mwmrc
 @@ -4,7 +4,7 @@
  Menu DefaultRootMenu
  {

@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.9 2000/07/25 14:42:06 jlam Exp $
+$NetBSD: patch-aj,v 1.10 2000/10/23 19:45:17 jlam Exp $
 
 --- include/Motif-1.2/Mrm/Makefile.am.orig	Sun Apr 11 08:28:41 1999
-+++ include/Motif-1.2/Mrm/Makefile.am	Tue Jul 25 08:20:31 2000
++++ include/Motif-1.2/Mrm/Makefile.am
 @@ -16,11 +16,3 @@
  mrm_HEADERS=	MrmAppl.h MrmDecls.h MrmPrivate.h MrmPublic.h
  

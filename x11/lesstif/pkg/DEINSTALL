@@ -1,0 +1,32 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 2000/10/23 19:45:23 jlam Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+case ${STAGE} in
+DEINSTALL)
+	;;
+POST-DEINSTALL)
+	LOCALBASE=@LOCALBASE@
+	X11_HOSTDEF=${PKG_PREFIX}/lib/X11/config/host.def
+
+	echo -n "Updating ${X11_HOSTDEF}..."
+	cp -f ${X11_HOSTDEF} ${X11_HOSTDEF}.bak
+	( grep -v LessTif ${X11_HOSTDEF}.bak || true ) \
+		> ${X11_HOSTDEF}
+	echo "done."
+
+	if [ ${PKG_PREFIX} != ${LOCALBASE} ]
+	then
+		rm -f ${LOCALBASE}/share/aclocal/ac_find_motif.m4
+		rmdir -p ${PKG_PREFIX}/share/aclocal 2>/dev/null || true
+	fi
+	;;
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0

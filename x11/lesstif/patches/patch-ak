@@ -1,7 +1,7 @@
-$NetBSD: patch-ak,v 1.9 2000/07/25 14:42:07 jlam Exp $
+$NetBSD: patch-ak,v 1.10 2000/10/23 19:45:17 jlam Exp $
 
 --- include/Motif-1.2/Xm/Makefile.am.orig	Sun Apr 11 08:28:42 1999
-+++ include/Motif-1.2/Xm/Makefile.am	Tue Jul 25 08:20:43 2000
++++ include/Motif-1.2/Xm/Makefile.am
 @@ -46,10 +46,3 @@
  xm_DATA = Xm.h
  

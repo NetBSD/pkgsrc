@@ -1,0 +1,32 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1 2000/10/23 19:45:24 jlam Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+case ${STAGE} in
+PRE-INSTALL)
+	;;
+POST-INSTALL)
+	LOCALBASE=@LOCALBASE@
+	X11_HOSTDEF=${PKG_PREFIX}/lib/X11/config/host.def
+
+	echo -n "Updating ${X11_HOSTDEF}..."
+	cp -f ${X11_HOSTDEF} ${X11_HOSTDEF}.bak
+	( grep -v LessTif ${X11_HOSTDEF}.bak; echo '#include <LessTif.def>' ) \
+		> ${X11_HOSTDEF}
+	echo "done."
+
+	if [ ${PKG_PREFIX} != ${LOCALBASE} ]
+	then
+		ln -fs ${PKG_PREFIX}/share/aclocal/ac_find_motif.m4 \
+			${LOCALBASE}/share/aclocal/ac_find_motif.m4
+	fi
+	;;
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
