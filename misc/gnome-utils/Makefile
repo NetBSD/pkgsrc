@@ -1,4 +1,4 @@
-## $NetBSD: Makefile,v 1.24 2000/11/17 20:15:26 tron Exp $
+## $NetBSD: Makefile,v 1.25 2001/01/08 16:12:59 wiz Exp $
 
 DISTNAME=		gnome-utils-1.2.0
 CATEGORIES=		misc x11 gnome
@@ -10,18 +10,16 @@ HOMEPAGE=		http://www.gnome.org/
 BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
 BUILD_DEPENDS+=		automake:../../devel/automake
 BUILD_DEPENDS+=		bison:../../devel/bison
-DEPENDS+=		ncurses>=4.2:../../devel/ncurses
 DEPENDS+=		gnome-core>=1.2.0:../../x11/gnome-core
 DEPENDS+=		libgtop>=1.0.9:../../devel/libgtop
 DEPENDS+=		libglade>=0.13:../../devel/libglade
 
+USE_CURSES=		# defined
 USE_GMAKE=		# defined
 USE_X11BASE=		# defined
 
 GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--with-ncurses=${LOCALBASE}
-CONFIGURE_ENV+=		CPPFLAGS=-I${LOCALBASE}/include \
-			LOCALEBASE=${LOCALEBASE}
+CONFIGURE_ENV+=		LOCALEBASE=${LOCALEBASE}
 
 PLIST_SUBST+=		LOCALEBASE=${LOCALEBASE}
 
@@ -41,6 +39,11 @@ pre-configure:
 LOCALEBASE=		lib
 .else
 LOCALEBASE=		share
+.endif
+
+.if ${NEED_NCURSES} == "YES"
+CONFIGURE_ARGS+=	--with-ncurses=${LOCALBASE}
+CONFIGURE_ENV+=		CPPFLAGS=-I${LOCALBASE}/include
 .endif
 
 .include "../../mk/bsd.pkg.mk"
