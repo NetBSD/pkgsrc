@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1273 2003/09/12 13:03:38 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1274 2003/09/12 23:33:07 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -275,22 +275,31 @@ ${_PERL5_DEPMETHOD}+=	${_PERL5_DEPENDS}:${PERL5_PKGSRCDIR}
 .endif
 
 .if defined(USE_PERL5) && (${USE_PERL5} == "run")
-.  if exists(${PERL5})
-.    if exists(${LOCALBASE}/share/mk/bsd.perl.mk)
-.      include "${LOCALBASE}/share/mk/bsd.perl.mk"
-.    elif !defined(PERL5_SITELIB) || !defined(PERL5_SITEARCH) || !defined(PERL5_ARCHLIB)
+.  if !defined(PERL5_SITELIB) || !defined(PERL5_SITEARCH) || !defined(PERL5_ARCHLIB)
+.    if exists(${PERL5})
+.      if exists(${LOCALBASE}/share/mk/bsd.perl.mk)
+.        include "${LOCALBASE}/share/mk/bsd.perl.mk"
+.      else
 PERL5_SITELIB!=		eval `${PERL5} -V:installsitelib 2>/dev/null`; \
 			${ECHO} $${installsitelib}
 PERL5_SITEARCH!=	eval `${PERL5} -V:installsitearch 2>/dev/null`; \
 			${ECHO} $${installsitearch}
 PERL5_ARCHLIB!=		eval `${PERL5} -V:installarchlib 2>/dev/null`; \
 			${ECHO} $${installarchlib}
-MAKEFLAGS+=		PERL5_SITELIB=${PERL5_SITELIB}
-MAKEFLAGS+=		PERL5_SITEARCH=${PERL5_SITEARCH}
-MAKEFLAGS+=		PERL5_ARCHLIB=${PERL5_ARCHLIB}
-.    endif # !exists(bsd.perl.mk) && !defined(PERL5_*)
-.  endif # exists($PERL5)
-.endif # USE_PERL5 == run
+.      endif # !exists(bsd.perl.mk)
+.      if ${PKG_INSTALLATION_TYPE} == "overwrite"
+_PERL5_PREFIX!=		eval `${PERL5} -V:prefix 2>/dev/null`; \
+			${ECHO} $${prefix}
+PERL5_SITELIB:=		${PERL5_SITELIB:S/^${_PERL5_PREFIX}/${LOCALBASE}/}
+PERL5_SITEARCH:=	${PERL5_SITEARCH:S/^${_PERL5_PREFIX}/${LOCALBASE}/}
+PERL5_ARCHLIB:=		${PERL5_ARCHLIB:S/^${_PERL5_PREFIX}/${LOCALBASE}/}
+MAKEFLAGS+=		PERL5_SITELIB="${PERL5_SITELIB}"
+MAKEFLAGS+=		PERL5_SITEARCH="${PERL5_SITEARCH}"
+MAKEFLAGS+=		PERL5_ARCHLIB="${PERL5_ARCHLIB}"
+.      endif # PKG_INSTALLATION_TYPE == "overwrite"
+.    endif   # exists($PERL5)
+.  endif     # !defined(PERL5_*)
+.endif       # USE_PERL5 == run
 
 .if defined(USE_FORTRAN)
 .  if !exists(/usr/bin/f77)
