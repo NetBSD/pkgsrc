@@ -1,9 +1,18 @@
-$NetBSD: patch-ac,v 1.21 2004/01/17 00:04:49 taya Exp $
+$NetBSD: patch-ac,v 1.22 2004/05/30 14:02:01 sekiya Exp $
 
-diff -ru ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in ./xpcom/reflect/xptcall/src/md/unix/Makefile.in
---- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in	2003-08-15 13:00:23.000000000 +0900
-+++ ./xpcom/reflect/xptcall/src/md/unix/Makefile.in	2004-01-16 23:17:21.000000000 +0900
-@@ -135,7 +135,7 @@
+--- xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2003-08-15 13:00:23.000000000 +0900
++++ xpcom/reflect/xptcall/src/md/unix/Makefile.in	2004-05-30 21:36:44.000000000 +0900
+@@ -49,6 +49,9 @@
+ ifeq (86,$(findstring 86,$(OS_TEST)))
+ CPPSRCS		:= xptcinvoke_unixish_x86.cpp xptcstubs_unixish_x86.cpp
+ endif
++ifeq (amd64,$(OS_TEST))
++CPPSRCS                := xptcinvoke_unixish_amd64.cpp xptcstubs_unixish_amd64.cpp
++endif
+ endif
+ #
+ # New code for Linux, et. al., with gcc
+@@ -135,7 +138,7 @@
  # NetBSD/ARM
  #
  ifeq ($(OS_ARCH),NetBSD)
@@ -12,7 +21,7 @@ diff -ru ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in ./xpcom/r
  CPPSRCS		:= xptcinvoke_arm_netbsd.cpp xptcstubs_arm_netbsd.cpp
  endif
  endif
-@@ -169,7 +169,7 @@
+@@ -169,7 +172,7 @@
  # NetBSD/m68k
  #
  ifeq ($(OS_ARCH),NetBSD)
@@ -21,7 +30,7 @@ diff -ru ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in ./xpcom/r
  CPPSRCS		:= xptcinvoke_netbsd_m68k.cpp xptcstubs_netbsd_m68k.cpp
  endif
  endif
-@@ -295,6 +295,13 @@
+@@ -295,6 +298,13 @@
  CPPSRCS		:= xptcinvoke_sparc_netbsd.cpp xptcstubs_sparc_netbsd.cpp
  ASFILES		:= xptcinvoke_asm_sparc_netbsd.s xptcstubs_asm_sparc_netbsd.s
  endif
