@@ -28,6 +28,7 @@
 #include <sys/types.h>
 #include <sys/param.h>
 #include <sys/stat.h>
+#include <sys/wait.h>
 
 #include <err.h>
 #include <dirent.h>
@@ -44,11 +45,7 @@ static const char * const skip[] = {
 };
 
 static void	pkgclean(const char *, const char *);
-#ifdef __OpenBSD__
-static int	checkskip(struct dirent *);
-#else
 static int	checkskip(const struct dirent *);
-#endif
 
 int
 main(int argc, char *argv[])
@@ -70,9 +67,10 @@ static void
 pkgclean(const char *path, const char *work)
 {
 	struct dirent **cat, **list;
-	int ncat, nlist, i, j;
+	int status, ncat, nlist, i, j;
 	char tmp[PATH_MAX];
 	struct stat sb;
+	pid_t pid;
 
 	if ((ncat = scandir(path, &cat, checkskip, alphasort)) < 0)
 		err(EXIT_FAILURE, "scandir: %s", path);
@@ -98,10 +96,16 @@ pkgclean(const char *path, const char *work)
 			if (stat(tmp, &sb) < 0 || !S_ISDIR(sb.st_mode))
 				continue;
 			(void)printf("Deleting %s\n", tmp);
-			if (fork() == 0) {
-				(void)execl("/bin/rm", "rm", "-rf", tmp, (char *)NULL);
-				err(EXIT_FAILURE, "Failed to exec /bin/rm"); 
-			}
+			pid = fork();
+			if (pid < 0) {
+				warn("fork");
+				continue;
+			} else if (pid == 0)
+				(void)execl("/bin/rm", "rm", "-rf", tmp, NULL);
+			if (waitpid(pid, &status, 0) == -1)
+				err(EXIT_FAILURE, "waitpid");
+			if (WEXITSTATUS(status))
+				warn("/bin/rm terminated abnormally");
 			free(list[j]);
 		}
 		free(cat[i]);
@@ -110,14 +114,8 @@ pkgclean(const char *path, const char *work)
 	free(cat);
 }
 
-
-#ifdef __OpenBSD__
-static int
-checkskip(struct dirent *dp)
-#else
 static int
 checkskip(const struct dirent *dp)
-#endif
 {
 	const char * const *p;
 
