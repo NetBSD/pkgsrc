@@ -1,0 +1,93 @@
+$NetBSD: patch-ab,v 1.1 1999/08/02 04:26:50 sakamoto Exp $
+
+--- sbr/advertise.c-	Thu May 20 01:53:16 1999
++++ sbr/advertise.c	Thu May 20 01:53:43 1999
+@@ -22,7 +22,7 @@
+ extern char *sys_errlist[];
+ #endif
+ #ifdef __NetBSD__ /* XXX */
+-#include <sys/errno.h>
++#include <errno.h>
+ #endif
+ 
+ /*  */
+--- uip/ftpsbr.c-	Thu May 20 01:53:16 1999
++++ uip/ftpsbr.c	Thu May 20 01:53:49 1999
+@@ -72,7 +72,7 @@
+ extern	char   *sys_errlist[];
+ #endif
+ #ifdef __NetBSD__ /* XXX */
+-#include <sys/errno.h>
++#include <errno.h>
+ #endif
+ 
+ 
+--- uip/mhn.c-	Thu May 20 01:53:16 1999
++++ uip/mhn.c	Thu May 20 01:54:00 1999
+@@ -221,6 +221,9 @@
+ extern	int	sys_nerr;
+ extern	char   *sys_errlist[];
+ #endif
++#ifdef __NetBSD__
++#include <errno.h>
++#endif
+ 
+ off_t	lseek ();
+ time_t	time ();
+--- uip/popsbr.c-	Thu May 20 01:53:16 1999
++++ uip/popsbr.c	Thu May 20 01:54:04 1999
+@@ -33,7 +33,7 @@
+ extern char *sys_errlist[];
+ #endif
+ #ifdef __NetBSD__ /* XXX */
+-#include <sys/errno.h>
++#include <errno.h>
+ #endif
+ 
+ static int  poprint = 0;
+--- uip/pshsbr.c-	Thu May 20 01:53:16 1999
++++ uip/pshsbr.c	Thu May 20 01:54:04 1999
+@@ -33,7 +33,7 @@
+ extern char *sys_errlist[];
+ #endif
+ #ifdef __NetBSD__ /* XXX */
+-#include <sys/errno.h>
++#include <errno.h>
+ #endif
+ 
+ static int  poprint = 0;
+--- uip/vmh.c-	Thu May 20 01:53:16 1999
++++ uip/vmh.c	Thu May 20 01:54:23 1999
+@@ -221,6 +221,9 @@
+ extern int  sys_nerr;
+ extern char *sys_errlist[];
+ #endif
++#ifdef __NetBSD__
++#include <errno.h>
++#endif
+ 
+ static void	adorn ();
+ 
+--- uip/vmhsbr.c-	Thu May 20 01:53:16 1999
++++ uip/vmhsbr.c	Thu May 20 01:54:28 1999
+@@ -31,7 +31,7 @@
+ extern char *sys_errlist[];
+ #endif
+ #ifdef __NetBSD__ /* XXX */
+-#include <sys/errno.h>
++#include <errno.h>
+ #endif
+ 
+ static int	rclose();
+--- uip/wmh.c-	Thu May 20 01:53:16 1999
++++ uip/wmh.c	Thu May 20 01:54:40 1999
+@@ -148,6 +148,9 @@
+ extern int  sys_nerr;
+ extern char *sys_errlist[];
+ #endif
++#ifdef __NetBSD__
++#include <errno.h>
++#endif
+ 
+ void	adorn ();
+ 
