@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.434 2003/12/03 19:21:37 xtraeme Exp $
+# $NetBSD: Makefile,v 1.435 2003/12/04 04:53:48 gson Exp $
 #
 
 COMMENT=	Development utilities
@@ -205,6 +205,7 @@ SUBDIR+=	libsigc++10
 SUBDIR+=	libslang
 SUBDIR+=	libsmi
 SUBDIR+=	libstash
+SUBDIR+=	libstree
 SUBDIR+=	libstroke
 SUBDIR+=	libtar
 SUBDIR+=	libtool
