@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/12/23 22:27:48 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/06/12 01:17:30 seb Exp $
 bin/cpp2html
 bin/java2html
 bin/source-highlight
@@ -31,6 +31,7 @@ share/doc/html/source-highlight/test.php3.html
 share/doc/html/source-highlight/test.pl.html
 share/doc/html/source-highlight/test.pm.html
 share/doc/html/source-highlight/test.py.html
+share/doc/html/source-highlight/test.rb.html
 share/doc/html/source-highlight/xhtml.css
 share/doc/source-highlight/COPYING
 share/doc/source-highlight/CREDITS
