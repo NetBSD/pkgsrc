@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2004/03/05 13:03:48 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.29 2004/06/03 16:28:53 minskim Exp $
 #
 
 DISTNAME=		libgeda-${PKGVERSION}
+PKGREVISION=		1
 CATEGORIES=		cad
 MASTER_SITES=		ftp://ftp.geda.seul.org/pub/geda/devel/${PKGVERSION}/ \
 			ftp://ieee.ing.uniroma1.it/pub/geda/devel/${PKGVERSION}/ \
@@ -22,7 +23,6 @@ USE_BUILDLINK3=		YES
 
 INFO_FILES=		libgedadoc.info
 
-.include "../../devel/libstroke/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../graphics/libgdgeda/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
