@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/06/02 14:05:03 abs Exp $
+# $NetBSD: Makefile,v 1.9 2003/06/24 00:35:34 seb Exp $
 #
 
 DISTNAME=	prc-tools-2.2
@@ -33,7 +33,9 @@ USE_GMAKE=	YES
 GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
 AUTOCONF_REQD=	2.50
-TEXINFO_OVERRIDE=	YES
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=	YES
+INFO_FILES=	prc-tools.info
 
 #CONFIGURE_ARGS+=--target=m68k-palmos
 CONFIGURE_ARGS+=--enable-targets=m68k-palmos,arm-palmos
@@ -60,5 +62,4 @@ pre-patch:
 .include "../../mk/autoconf.mk"
 .include "../../mk/gcc.buildlink2.mk"
 .include "../../devel/ncurses/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
