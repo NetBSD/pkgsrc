@@ -1,0 +1,274 @@
+$NetBSD: patch-ao,v 1.1.1.1 2000/08/25 16:15:53 jlam Exp $
+
+--- src/cmd/shells.c.orig	Thu Jan  2 13:33:30 1997
++++ src/cmd/shells.c
+@@ -7,18 +7,24 @@
+ //
+ // ^HISTORY:
+ //    04/19/92	Brad Appleton	<bradapp@enteract.com>	Created
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Updated to ISO C++ standard
+ //-^^---------------------------------------------------------------------
+ 
+-#include <stdlib.h>
+-#include <iostream.h>
+-#include <string.h>
+-#include <ctype.h>
++#include <cctype>
++#include <cstdlib>
++#include <cstring>
++#include <iostream>
+ 
+ #include <fifolist.h>
+ 
+ #include "shells.h"
+ #include "argtypes.h"
+ 
++using namespace cmdline;
++using namespace std;
++
+ //--------------------------------------------------------------- ShellVariable
+ 
+ ShellVariable::ShellVariable(const char * name)
+@@ -26,7 +32,7 @@
+ {
+ }
+ 
+-ShellVariable::~ShellVariable(void)
++ShellVariable::~ShellVariable()
+ {
+ }
+ 
+@@ -38,10 +44,10 @@
+    CharPtrList       list;
+    CharPtrListArray  array;
+ 
+-   ShellArrayValues(void);
++   ShellArrayValues();
+ } ;
+ 
+-ShellArrayValues::ShellArrayValues(void)
++ShellArrayValues::ShellArrayValues()
+    : array(list)
+ {
+    list.self_cleaning(1);
+@@ -54,7 +60,7 @@
+ {
+ }
+ 
+-ShellArray::~ShellArray(void)
++ShellArray::~ShellArray()
+ {
+    delete  array_value ;
+ }
+@@ -72,21 +78,21 @@
+    }
+ }
+ 
+-unsigned
+-ShellArray::count(void) const
++unsigned int
++ShellArray::count() const
+ {
+    return  ((array_value) ? array_value->list.count() : 0);
+ }
+ 
+ const char *
+-ShellArray::operator[](unsigned  index) const
++ShellArray::operator[](unsigned int index) const
+ {
+    return  ((array_value) ? array_value->array[index] : NULL);
+ }
+ 
+ //----------------------------------------------------------- AbstractUnixShell
+ 
+-AbstractUnixShell::~AbstractUnixShell(void)
++AbstractUnixShell::~AbstractUnixShell()
+ {
+ }
+ 
+@@ -122,13 +128,13 @@
+    }
+ }
+ 
+-UnixShell::~UnixShell(void)
++UnixShell::~UnixShell()
+ {
+    delete  shell;
+ }
+ 
+ const char *
+-UnixShell::name(void) const
++UnixShell::name() const
+ {
+    return  ((shell) ? shell->name() : NULL);
+ }
+@@ -171,16 +177,16 @@
+ 
+ const char * BourneShell::NAME = "sh" ;
+ 
+-BourneShell::BourneShell(void)
++BourneShell::BourneShell()
+ {
+ }
+ 
+-BourneShell::~BourneShell(void)
++BourneShell::~BourneShell()
+ {
+ }
+ 
+ const char *
+-BourneShell::name(void) const
++BourneShell::name() const
+ {
+    return  BourneShell::NAME ;
+ }
+@@ -275,16 +281,16 @@
+ 
+ const char * KornShell::NAME = "ksh" ;
+ 
+-KornShell::KornShell(void)
++KornShell::KornShell()
+ {
+ }
+ 
+-KornShell::~KornShell(void)
++KornShell::~KornShell()
+ {
+ }
+ 
+ const char *
+-KornShell::name(void) const
++KornShell::name() const
+ {
+    return  KornShell::NAME ;
+ }
+@@ -323,16 +329,16 @@
+ 
+ const char * BourneAgainShell::NAME = "bash" ;
+ 
+-BourneAgainShell::BourneAgainShell(void)
++BourneAgainShell::BourneAgainShell()
+ {
+ }
+ 
+-BourneAgainShell::~BourneAgainShell(void)
++BourneAgainShell::~BourneAgainShell()
+ {
+ }
+ 
+ const char *
+-BourneAgainShell::name(void) const
++BourneAgainShell::name() const
+ {
+    return  BourneAgainShell::NAME ;
+ }
+@@ -353,16 +359,16 @@
+ 
+ const char * CShell::NAME = "csh" ;
+ 
+-CShell::CShell(void)
++CShell::CShell()
+ {
+ }
+ 
+-CShell::~CShell(void)
++CShell::~CShell()
+ {
+ }
+ 
+ const char *
+-CShell::name(void) const
++CShell::name() const
+ {
+    return  CShell::NAME ;
+ }
+@@ -433,16 +439,16 @@
+ 
+ const char * ZShell::NAME = "zsh" ;
+ 
+-ZShell::ZShell(void)
++ZShell::ZShell()
+ {
+ }
+ 
+-ZShell::~ZShell(void)
++ZShell::~ZShell()
+ {
+ }
+ 
+ const char *
+-ZShell::name(void) const
++ZShell::name() const
+ {
+    return  ZShell::NAME ;
+ }
+@@ -515,16 +521,16 @@
+ 
+ const char * Plan9Shell::NAME = "rc" ;
+ 
+-Plan9Shell::Plan9Shell(void)
++Plan9Shell::Plan9Shell()
+ {
+ }
+ 
+-Plan9Shell::~Plan9Shell(void)
++Plan9Shell::~Plan9Shell()
+ {
+ }
+ 
+ const char *
+-Plan9Shell::name(void) const
++Plan9Shell::name() const
+ {
+    return  Plan9Shell::NAME ;
+ }
+@@ -594,7 +600,7 @@
+ 
+ const char * PerlShell::NAME = "perl" ;
+ 
+-PerlShell::PerlShell(void)
++PerlShell::PerlShell()
+ {
+    static const char perl_true[]  = "1" ;
+    static const char perl_false[] = "0" ;
+@@ -604,12 +610,12 @@
+    ShellCmdArgBool::False(perl_false);
+ }
+ 
+-PerlShell::~PerlShell(void)
++PerlShell::~PerlShell()
+ {
+ }
+ 
+ const char *
+-PerlShell::name(void) const
++PerlShell::name() const
+ {
+    return  PerlShell::NAME ;
+ }
+@@ -683,7 +689,7 @@
+ 
+ const char * TclShell::NAME = "tcl" ;
+ 
+-TclShell::TclShell(void)
++TclShell::TclShell()
+ {
+    static const char tcl_true[]  = "1" ;
+    static const char tcl_false[] = "0" ;
+@@ -693,12 +699,12 @@
+    ShellCmdArgBool::False(tcl_false);
+ }
+ 
+-TclShell::~TclShell(void)
++TclShell::~TclShell()
+ {
+ }
+ 
+ const char *
+-TclShell::name(void) const
++TclShell::name() const
+ {
+    return  TclShell::NAME ;
+ }

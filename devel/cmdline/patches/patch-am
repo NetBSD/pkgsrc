@@ -1,0 +1,99 @@
+$NetBSD: patch-am,v 1.1.1.1 2000/08/25 16:15:53 jlam Exp $
+
+--- src/cmd/shell_arg.c.orig	Thu Jan  2 13:33:29 1997
++++ src/cmd/shell_arg.c
+@@ -7,15 +7,21 @@
+ //
+ // ^HISTORY:
+ //    04/22/92	Brad Appleton	<bradapp@enteract.com>	Created
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Updated to ISO C++ standard
+ //-^^---------------------------------------------------------------------
+ 
+-#include <stdlib.h>
+-#include <iostream.h>
+-#include <string.h>
+-#include <ctype.h>
++#include <cctype>
++#include <cstdlib>
++#include <cstring>
++#include <iostream>
+ 
+ #include "shell_arg.h"
+ 
++using namespace cmdline;
++using namespace std;
++
+ //----------------------------------------------------------------- initialize
+ 
+ void
+@@ -30,12 +36,12 @@
+ 
+ //---------------------------------------------------------------- constructors
+ 
+-ShellCmdArg::ShellCmdArg(char    * variable_name,
+-                         char      optchar,
+-                         char    * keyword,
+-                         char    * value,
+-                         char    * description,
+-                         unsigned  syntax_flags)
++ShellCmdArg::ShellCmdArg(char       * variable_name,
++                         char         optchar,
++                         char       * keyword,
++                         char       * value,
++                         char       * description,
++                         unsigned int syntax_flags)
+    : CmdArg(optchar, keyword, value, description, syntax_flags),
+      sca_name(variable_name), sca_keyword(keyword),
+      sca_value(value), sca_description(description)
+@@ -43,11 +49,11 @@
+    initialize(variable_name);
+ }
+ 
+-ShellCmdArg::ShellCmdArg(char    * variable_name,
+-                         char      optchar,
+-                         char    * keyword,
+-                         char    * description,
+-                         unsigned  syntax_flags)
++ShellCmdArg::ShellCmdArg(char       * variable_name,
++                         char         optchar,
++                         char       * keyword,
++                         char       * description,
++                         unsigned int syntax_flags)
+    : CmdArg(optchar, keyword, description, syntax_flags),
+      sca_name(variable_name), sca_keyword(keyword),
+      sca_value(NULL), sca_description(description)
+@@ -55,10 +61,10 @@
+    initialize(variable_name);
+ }
+ 
+-ShellCmdArg::ShellCmdArg(char    * variable_name,
+-                         char    * value,
+-                         char    * description,
+-                         unsigned  syntax_flags)
++ShellCmdArg::ShellCmdArg(char       * variable_name,
++                         char       * value,
++                         char       * description,
++                         unsigned int syntax_flags)
+    : CmdArg(value, description, syntax_flags),
+      sca_name(variable_name), sca_keyword(NULL),
+      sca_value(value), sca_description(description)
+@@ -68,7 +74,7 @@
+ 
+ //------------------------------------------------------------------ destructor
+ 
+-ShellCmdArg::~ShellCmdArg(void)
++ShellCmdArg::~ShellCmdArg()
+ {
+    if (is_array()) {
+       delete  shell_array ;
+@@ -84,7 +90,7 @@
+ //-------------------------------------------------------------------- is_array
+ 
+ int
+-ShellCmdArg::is_array(void) const
++ShellCmdArg::is_array() const
+ {
+    return  (syntax() & CmdArg::isLIST) ;
+ }

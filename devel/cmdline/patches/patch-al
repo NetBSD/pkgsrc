@@ -1,0 +1,62 @@
+$NetBSD: patch-al,v 1.1.1.1 2000/08/25 16:15:53 jlam Exp $
+
+--- src/cmd/quoted.h.orig	Thu Jan  2 13:33:29 1997
++++ src/cmd/quoted.h
+@@ -12,24 +12,28 @@
+ //
+ // ^HISTORY:
+ //    05/01/92	Brad Appleton	<bradapp@enteract.com>	Created
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Updated to ISO C++ standard
+ //-^^---------------------------------------------------------------------
+ 
+ #ifndef _quoted_h
+ #define _quoted_h
+ 
+-class  istream ;
++#include <iosfwd>
++
+ class  QuotedString {
+ public:
+       // constructors and destructors
+-   QuotedString(unsigned  max_size);
++   QuotedString(unsigned int max_size);
+ 
+    QuotedString(const char * str);
+ 
+-   QuotedString(const char * str, unsigned  max_size);
++   QuotedString(const char * str, unsigned int max_size);
+ 
+    QuotedString(const QuotedString & qstr);
+ 
+-   virtual ~QuotedString(void);
++   virtual ~QuotedString();
+ 
+       // assignment
+    QuotedString &
+@@ -39,19 +43,19 @@
+    operator=(const char * str);
+ 
+       // convert to a string
+-   operator  char*(void) { return  buffer; }
++   operator  char*() { return  buffer; }
+ 
+       // operator >> reads a quoted string from input.
+       // If no beginning or ending quote is seen, than
+       // a message is printed on cerr and the failbit
+       // of the input stream is set.
+       //
+-   friend  istream &
+-   operator>>(istream & is, QuotedString & qstr);
++   friend  std::istream &
++   operator>>(std::istream & is, QuotedString & qstr);
+ 
+ private:
+-   unsigned  size;
+-   char    * buffer;
++   unsigned int size;
++   char       * buffer;
+ } ;
+ 
+ #endif  /* _quoted_h */
