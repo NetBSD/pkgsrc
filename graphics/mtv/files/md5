@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.1.1.1 1999/05/17 12:40:42 tron Exp $
+$NetBSD: md5,v 1.2 1999/07/15 18:09:22 thorpej Exp $
 
-MD5 (mtv/mtv-1.0.9.2-1.i386.rpm) = 03faa3be4992350e15d0c57bedb0ae1b
+MD5 (mtv/mtv-1.0.9.10-1.i386.rpm) = e01d20c90ea271e285bc2873083f99e1
 MD5 (mtv/SDL-0.9.9-5.i386.rpm) = 701a391e37723bbb2472f08440678ae7
