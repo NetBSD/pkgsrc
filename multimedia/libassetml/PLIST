@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/16 18:38:41 reed Exp $
+bin/assetml-query
+include/libassetml-1.0/libassetml/assetml.h
+lib/libassetml.la
+lib/pkgconfig/libassetml.pc
+share/gnome/help/libassetml/C/libassetml.html
+share/gnome/help/libassetml/C/topic.dat
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libassetml.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/libassetml.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/libassetml.mo
+@dirrm share/gnome/help/libassetml/C
+@dirrm share/gnome/help/libassetml
+@comment in gnome2-dirs: @dirrm share/gnome/help
+@dirrm include/libassetml-1.0/libassetml
+@dirrm include/libassetml-1.0
