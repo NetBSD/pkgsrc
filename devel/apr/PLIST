@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/25 08:55:19 epg Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/05/29 01:02:27 itojun Exp $
 bin/apr-config
 bin/apu-config
 include/apr-0/apr.h
@@ -68,12 +68,12 @@ lib/libapr-0.a
 lib/libapr-0.la
 lib/libapr-0.so
 lib/libapr-0.so.9
-lib/libapr-0.so.9.3
+lib/libapr-0.so.9.4
 lib/libaprutil-0.a
 lib/libaprutil-0.la
 lib/libaprutil-0.so
 lib/libaprutil-0.so.9
-lib/libaprutil-0.so.9.3
+lib/libaprutil-0.so.9.4
 libexec/apr/apr_rules.mk
 libexec/apr/libtool
 @dirrm libexec/apr
