@@ -1,58 +1,50 @@
-$NetBSD: patch-aa,v 1.3 2003/01/15 00:27:11 salo Exp $
+$NetBSD: patch-aa,v 1.4 2003/01/20 09:55:10 salo Exp $
 
---- Makefile.orig	Mon Dec 23 18:25:39 2002
-+++ Makefile	Wed Jan 15 00:53:08 2003
-@@ -1,27 +1,24 @@
--PREFIX=/usr
+--- Makefile.pre.orig	Sat Jan 11 22:07:22 2003
++++ Makefile.pre	Mon Jan 20 09:35:21 2003
+@@ -5,7 +5,7 @@
+ 
+ cwl_files = sk.cwl sk-misc.cwl  sk-skratky.cwl
+ data_files = sk.dat 
+-doc_files = AUTHORS CHANGELOG COPYING Copyright gnu.sk.txt README sample.aspell.conf
++doc_files = AUTHORS CHANGELOG COPYING Copyright gnu.sk.txt README
+ extra_files = configure info Makefile.pre
+ multi_files = sk.multi slovak.alias
+ rws_files = sk.rws sk-extend.rws
+@@ -16,21 +16,16 @@
+ all: ${rws_files} ${data_files}
+ 
+ install: all install-doc
+-	mkdir -p ${DESTDIR}${dictdir}/
+-	cp ${rws_files} ${multi_files} ${DESTDIR}${dictdir}/
+-	cd ${DESTDIR}${dictdir}/ && chmod 644 ${rws_files} ${multi_files}
+-	mkdir -p ${DESTDIR}${datadir}/
+-	cp ${data_files} ${DESTDIR}${datadir}/
+-	cd ${DESTDIR}${datadir}/ && chmod 644 ${data_files}
+-	rm -f ${DESTDIR}${datadir}/slovak.dat
+-	rm -f ${DESTDIR}${dictdir}/slovak.multi
+-	ln -s ${DESTDIR}${datadir}/sk.dat ${DESTDIR}${datadir}/slovak.dat
+-	ln -s ${DESTDIR}${dictdir}/sk.multi  ${DESTDIR}${dictdir}/slovak.multi 
 -
- ASPELLDATA=${PREFIX}/share/aspell
- ASPELLDICT=${PREFIX}/lib/aspell
- ASPELLDOC=${PREFIX}/share/doc/aspell-slovak
- PSPELLDATA=${PREFIX}/share/pspell
- 
--ASPELL=aspell
--WORD_LIST_COMPRESS=word-list-compress
--INSTALL_DATA=install -c -m 644
--INSTALL_DATA_DIR=mkdir -p
-+ASPELL=${PREFIX}/bin/aspell
-+WORD_LIST_COMPRESS=${PREFIX}/bin/word-list-compress
-+INSTALL_DATA=${BSD_INSTALL_DATA}
-+INSTALL_DATA_DIR=${BSD_INSTALL_DATA_DIR}
- 
- all: slovak
- 
- slovak: decompress
- 	$(ASPELL) --lang=slovak create master ./slovak-master < slovak-master.raw
- 	$(ASPELL) --lang=slovak create master ./slovak-extend < slovak-extend.raw
--	echo $(ASPELLDICT) > sk-slovak-aspell.pwli
- 
- decompress: aspell.dat
- 	$(WORD_LIST_COMPRESS) decompress < aspell.dat > slovak-master.raw
- 	$(WORD_LIST_COMPRESS) decompress < aspell-misc.dat > tmp.raw
- 	$(WORD_LIST_COMPRESS) decompress < aspell-skratky.dat >> tmp.raw
--	sort -uf <tmp.raw >  slovak-extend.raw
-+	${SORT} -uf < tmp.raw >  slovak-extend.raw
- 
- install: install-data install-doc
- 
-@@ -29,17 +26,18 @@
- 	${INSTALL_DATA} slovak.dat $(ASPELLDATA)
- 	${INSTALL_DATA} slovak_phonet.dat $(ASPELLDATA)
- 	${INSTALL_DATA} sk-slovak-aspell.pwli $(PSPELLDATA)
--	${INSTALL_DATA} slovak-master $(ASPELLDICT)
-+	${INSTALL_DATA} slovak-master $(ASPELLDICT)/slovak
- 	${INSTALL_DATA} slovak-extend $(ASPELLDICT)
- 	${INSTALL_DATA} slovak.multi $(ASPELLDICT)
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${dictdir}/
++	${BSD_INSTALL_DATA} ${rws_files} ${multi_files} ${DESTDIR}${dictdir}/
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${datadir}/
++	${BSD_INSTALL_DATA} ${data_files} ${DESTDIR}${datadir}/
  
  install-doc:
- 	${INSTALL_DATA_DIR} $(ASPELLDOC)
-+	${INSTALL_DATA_DIR} $(PREFIX)/share/examples/aspell-slovak
- 	${INSTALL_DATA} AUTHORS $(ASPELLDOC)
- 	${INSTALL_DATA} CHANGELOG $(ASPELLDOC)
- 	${INSTALL_DATA} Copyright $(ASPELLDOC)
- 	${INSTALL_DATA} README $(ASPELLDOC)
--	${INSTALL_DATA} sample.aspell.conf $(ASPELLDOC)
-+	${INSTALL_DATA} sample.aspell.conf $(PREFIX)/share/examples/aspell-slovak/aspell.conf.default
+-	mkdir -p ${docdir}/${distdir}/
+-	cp -f ${doc_files} $(docdir)/${distdir}/
++	${BSD_INSTALL_DATA_DIR} ${docdir}/aspell-slovak
++	${BSD_INSTALL_DATA} ${doc_files} $(docdir)/aspell-slovak
++	${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/examples/aspell-slovak
++	${BSD_INSTALL_DATA} sample.aspell.conf ${PREFIX}/share/examples/aspell-slovak/aspell.conf
  
- uninstall:
- 	rm $(ASPELLDOC)/AUTHORS
+ clean:
+ 	rm -f ${rws_files}
+@@ -72,5 +67,5 @@
+ sk-extend.rws: sk-misc.cwl  sk-skratky.cwl
+ 	${WORD_LIST_COMPRESS} d < sk-misc.cwl >tmp.dat
+ 	${WORD_LIST_COMPRESS} d < sk-skratky.cwl >>tmp.dat
+-	sort -uf <tmp.dat | ${ASPELL} ${ASPELL_FLAGS} --lang=sk create master ./sk-extend.rws
++	${SORT} -uf <tmp.dat | ${ASPELL} ${ASPELL_FLAGS} --lang=sk create master ./sk-extend.rws
+ 
