@@ -1,4 +1,4 @@
-.\"	$NetBSD: lintpkgsrc.1,v 1.14 2000/11/17 12:45:31 abs Exp $
+.\"	$NetBSD: lintpkgsrc.1,v 1.15 2001/05/14 15:01:24 agc Exp $
 .\"
 .\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -93,15 +93,15 @@ pkgsrc.
 Run pkglint on every package in pkgsrc.
 .It Fl m
 For each current distfile, verify its checksum against the appropriate
-package's md5 file. Also report if any package's md5 file references
-the same distfile with a different md5 checksum.
+package's distinfo file. Also report if any package's distinfo file references
+the same distfile with a different distinfo checksum.
 .It Fl o
-Report any old distfile (not referenced by any package's md5 file).
+Report any old distfile (not referenced by any package's distinfo file).
 .It Fl p
 Report any old binary packages in any subdirs of
 .Em PACKAGES .
 .It Fl r
-Remove distfiles which are not referenced from any package's md5 file,
+Remove distfiles which are not referenced from any package's distinfo file,
 or have an incorrect checksum (usually due to an interrupted download),
 and any old binary packages. To remove any given type, additionally
 specify the -o, -m, or -p flags respectively.
