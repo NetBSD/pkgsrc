@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1126 2003/01/10 08:44:19 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1127 2003/01/10 11:57:09 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -579,6 +579,9 @@ BUILD_INFO_FILE=	${WRKDIR}/.build_info
 SIZE_PKG_FILE=		${WRKDIR}/.SizePkg
 SIZE_ALL_FILE=		${WRKDIR}/.SizeAll
 
+# File to denote "no deletion of a package"
+PRESERVE_FILE=		${WRKDIR}/.PRESERVE
+
 .ifndef PKG_ARGS_COMMON
 PKG_ARGS_COMMON=	-v -c -${COMMENT:Q}" " -d ${DESCR} -f ${PLIST}
 PKG_ARGS_COMMON+=	-l -b ${BUILD_VERSION_FILE} -B ${BUILD_INFO_FILE}
@@ -598,6 +601,9 @@ PKG_ARGS_COMMON+=	-D ${MESSAGE}
 .  endif
 .  ifndef NO_MTREE
 PKG_ARGS_COMMON+=	-m ${MTREE_FILE}
+.  endif
+.  ifdef PKG_PRESERVE
+PKG_ARGS_COMMON+=	-n ${PRESERVE_FILE}
 .  endif
 
 PKG_ARGS_INSTALL=	-p ${PREFIX} ${PKG_ARGS_COMMON}
@@ -3893,6 +3899,10 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 .  endif
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${BUILD_VERSION_FILE} ${BUILD_INFO_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${SIZE_PKG_FILE} ${SIZE_ALL_FILE}
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${PRESERVE_FILE}
+.  if defined(PKG_PRESERVE)
+	${_PKG_SILENT}${_PKG_DEBUG}${DATE} > ${PRESERVE_FILE}
+.  endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	files="";							\
 	for f in ${.CURDIR}/Makefile ${FILESDIR}/* ${PKGDIR}/*; do	\
@@ -3950,6 +3960,9 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		fi ; 							\
 		if ${TEST} -e ${SIZE_ALL_FILE}; then 			\
 			${CP} ${SIZE_ALL_FILE} ${PKG_DBDIR}/${PKGNAME}/+SIZE_ALL; \
+		fi ; 							\
+		if ${TEST} -e ${PRESERVE_FILE}; then 			\
+			${CP} ${PRESERVE_FILE} ${PKG_DBDIR}/${PKGNAME}/+PRESERVE; \
 		fi ; 							\
 		if [ -n "${INSTALL_FILE}" ]; then			\
 			if ${TEST} -e ${INSTALL_FILE}; then		\
