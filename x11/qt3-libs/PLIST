@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/01/07 08:07:58 skrll Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/03/19 17:54:36 drochner Exp $
 qt3/bin/moc
 qt3/include/jri.h
 qt3/include/jri_md.h
@@ -274,6 +274,7 @@ qt3/include/qsessionmanager.h
 qt3/include/qsettings.h
 qt3/include/qsgistyle.h
 qt3/include/qshared.h
+qt3/include/qsharedmemory.h
 qt3/include/qsignal.h
 qt3/include/qsignalmapper.h
 qt3/include/qsignalslotimp.h
@@ -316,7 +317,6 @@ qt3/include/qstylefactory.h
 qt3/include/qstyleplugin.h
 qt3/include/qstylesheet.h
 qt3/include/qt.h
-qt3/include/qt_windows.h
 qt3/include/qt_x11.h
 qt3/include/qtabbar.h
 qt3/include/qtabdialog.h
@@ -372,7 +372,6 @@ qt3/include/qwindowsstyle.h
 qt3/include/qwizard.h
 qt3/include/qwmatrix.h
 qt3/include/qworkspace.h
-qt3/include/qwsgfx_qnx.h
 qt3/include/qxml.h
 qt3/include/qxt.h
 qt3/lib/libqt.a
