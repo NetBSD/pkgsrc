@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/01/06 14:42:56 drochner Exp $
+# $NetBSD: Makefile,v 1.28 2005/03/02 06:19:28 minskim Exp $
 
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
@@ -50,7 +50,7 @@ SITES_${skin}= ${SKIN_SITES}
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=	${SKINS}
 DISTINFO_FILE=	${.CURDIR}/distinfo
-DIST_SUBDIR=	${PKGNAME_NOREV}-20050106
+DIST_SUBDIR=	${PKGNAME_NOREV}-20050302
 
 USE_BUILDLINK3=		YES
 CONFIGURE_ARGS+=	--enable-gui --disable-mencoder \
