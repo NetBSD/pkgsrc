@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.225 2001/06/05 23:39:48 hubertf Exp $
+# $NetBSD: Makefile,v 1.226 2001/06/07 11:54:01 rh Exp $
 #
 
 COMMENT=	Networking tools
@@ -96,6 +96,7 @@ SUBDIR+=	nmap
 SUBDIR+=	nmapfe
 SUBDIR+=	nocol
 SUBDIR+=	nsca
+SUBDIR+=	nslint
 SUBDIR+=	ntop
 SUBDIR+=	ntp4
 SUBDIR+=	openh323
