@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2001/05/10 13:19:28 agc Exp $
+
+--- Makefile.in	2001/05/10 13:11:30	1.1
++++ Makefile.in	2001/05/10 13:12:12
+@@ -76,7 +76,7 @@
+ PROGRAMS =  $(bin_PROGRAMS)
+ 
+ 
+-DEFS = @DEFS@ -I. -I$(srcdir) -I.
++DEFS = @DEFS@ -I. -I$(srcdir) -I. -I${XPMDIR}/include
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
