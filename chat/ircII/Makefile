@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2001/06/12 20:33:01 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/07/07 20:54:52 mrg Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/05/14 10:35:13 torstenb Exp
 #
 
-DISTNAME=		ircii-20001231
-PKGNAME=		ircII-20001231
-WRKSRC=			${WRKDIR}/ircii-20001231
+DISTNAME=		ircii-20010612
+PKGNAME=		ircII-20010612
+WRKSRC=			${WRKDIR}/ircii-20010612
 CATEGORIES=		chat
 MASTER_SITES=		ftp://ircftp.au.eterna.com.au/pub/ircII/
 EXTRACT_SUFX=		.tar.bz2
@@ -41,6 +41,13 @@ DEPENDS+=               socks5-1.0.2:../../net/socks5
 
 .if (${OPSYS} == SunOS)
 LIBS=			-lnsl
+.endif
+
+.if defined(IRCII_CONFIGURE_ARGS)
+CONFIGURE_ARGS+=	${IRCII_CONFIGURE_ARGS}
+.endif
+.if defined(IRCII_CONFIGURE_ENV)
+CONFIGURE_ENV+=		${IRCII_CONFIGURE_ENV}
 .endif
 
 pre-install:
