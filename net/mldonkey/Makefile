@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2003/05/15 19:16:55 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/19 12:52:58 wiz Exp $
 #
 
-DISTNAME=	mldonkey-2.04rc1.sources
-PKGNAME=	${DISTNAME:S/.sources//}
-PKGREVISION=	1
+DISTNAME=	mldonkey-2.4-0.sources
+PKGNAME=	${DISTNAME:S/-0.sources/.0/}
 WRKSRC=		${WRKDIR}/mldonkey
 CATEGORIES=	net
-MASTER_SITES=	http://savannah.nongnu.org/download/mldonkey/release-2.04rc1/
+MASTER_SITES=	http://savannah.nongnu.org/download/mldonkey/release-2.4/official/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.nongnu.org/mldonkey/
@@ -38,10 +37,11 @@ do-install:
 	( cd ${WRKSRC} && \
 	    ${INSTALL_PROGRAM_DIR} ${PREFIX}/libexec/mldonkey && \
 	    ${INSTALL_PROGRAM} mlchat ${PREFIX}/libexec/mldonkey && \
-	    ${INSTALL_PROGRAM} mldonkey ${PREFIX}/libexec/mldonkey && \
-	    ${INSTALL_PROGRAM} mldonkey_gui ${PREFIX}/libexec/mldonkey && \
-	    ${INSTALL_PROGRAM} mldonkey_gui2 ${PREFIX}/libexec/mldonkey && \
-	    ${INSTALL_PROGRAM} mldonkey_guistarter ${PREFIX}/libexec/mldonkey \
+	    ${INSTALL_PROGRAM} mlguistarter ${PREFIX}/libexec/mldonkey && \
+	    ${INSTALL_PROGRAM} mlgui ${PREFIX}/libexec/mldonkey && \
+	    ${INSTALL_PROGRAM} mlim ${PREFIX}/libexec/mldonkey && \
+	    ${INSTALL_PROGRAM} mlnet ${PREFIX}/libexec/mldonkey && \
+	    ${INSTALL_PROGRAM} mlnet+gui ${PREFIX}/libexec/mldonkey \
 	)
 
 .include "../../archivers/bzip2/buildlink2.mk"
