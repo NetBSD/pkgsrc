@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2004/04/19 22:23:02 xtraeme Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/28 15:54:46 wiz Exp $
 
 PKGNAME=	gmplayer-${MPLAYER_PKG_VERSION}
-PKGREVISION=	5
 
 SKIN_SITES=	http://www.mplayerhq.hu/MPlayer/Skin/		\
 		ftp://ftp.mplayerhq.hu/MPlayer/Skin/		\
@@ -15,14 +14,14 @@ SKIN_SITES=	http://www.mplayerhq.hu/MPlayer/Skin/		\
 COMMENT=	Software only MPEG-1/2/4 video decoder with a GTK+ interface
 
 SKINS +=	default-1.7${EXTRACT_SUFX}			\
-		AlienMind-1.1${EXTRACT_SUFX}			\
-		BlueHeart-1.4${EXTRACT_SUFX}			\
-		CornerMP-1.0${EXTRACT_SUFX}			\
-		CornerMP-aqua-1.0${EXTRACT_SUFX}		\
-		Cyrus-1.0${EXTRACT_SUFX}			\
-		MidnightLove-1.5${EXTRACT_SUFX}			\
-		WindowsMediaPlayer6-1.2${EXTRACT_SUFX}		\
-		avifile-1.5${EXTRACT_SUFX}			\
+		AlienMind-1.2${EXTRACT_SUFX}			\
+		BlueHeart-1.5${EXTRACT_SUFX}			\
+		CornerMP-1.1${EXTRACT_SUFX}			\
+		CornerMP-aqua-1.3${EXTRACT_SUFX}		\
+		Cyrus-1.2${EXTRACT_SUFX}			\
+		MidnightLove-1.6${EXTRACT_SUFX}			\
+		WindowsMediaPlayer6-1.3${EXTRACT_SUFX}		\
+		avifile-1.6${EXTRACT_SUFX}			\
 		gnome-1.1${EXTRACT_SUFX}			\
 		hayraphon-1.0${EXTRACT_SUFX}			\
 		hwswskin-1.0${EXTRACT_SUFX}			\

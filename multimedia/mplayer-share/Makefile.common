@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.6 2004/04/10 12:23:55 salo Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/04/28 15:54:46 wiz Exp $
 #
 
-MPLAYER_DIST_VERSION=	1.0pre3
+MPLAYER_DIST_VERSION=	1.0pre4
 
 # This variable is used in all packages which depend on this package
-MPLAYER_PKG_VERSION=	1.0rc3
+MPLAYER_PKG_VERSION=	1.0rc4
 
 DISTNAME=		MPlayer-${MPLAYER_DIST_VERSION}
 CATEGORIES?=		multimedia
@@ -68,11 +68,11 @@ CONFIGURE_ARGS+=	--disable-mlib
 
 # Keep this list in sync with the one in bsd.pkg.defaults.mk, where
 # MPLAYER_DISABLE_DRIVERS is explained.
-MPLAYER_DRIVERS=	arts		audio/arts \
-			esd		audio/esound \
-			matroska	multimedia/libmatroska \
-			nas		audio/nas \
-			sdl		devel/SDL
+MPLAYER_DRIVERS=	arts		audio/arts 		arts \
+			esd		audio/esound 		esd \
+			matroska	multimedia/libmatroska	external-matroska \
+			nas		audio/nas		nas \
+			sdl		devel/SDL		sdl
 
 # arts is currently broken on Solaris.
 .if ${OPSYS} == "SunOS"
@@ -84,10 +84,10 @@ MPLAYER_DISABLE_DRIVERS=arts esd matroska nas sdl
 .else
 BUILD_DEFS+=		MPLAYER_DISABLE_DRIVERS
 .endif
-.for drv pkg in ${MPLAYER_DRIVERS}
+.for drv pkg val in ${MPLAYER_DRIVERS}
 .  if empty(MPLAYER_DISABLE_DRIVERS:M${drv})
-CONFIGURE_ARGS+=	--enable-${drv}
+CONFIGURE_ARGS+=	--enable-${val}
 .  else
-CONFIGURE_ARGS+=	--disable-${drv}
+CONFIGURE_ARGS+=	--disable-${val}
 .  endif
 .endfor
