@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pgsql.sh,v 1.14 2002/10/19 18:00:16 jlam Exp $
+# $NetBSD: pgsql.sh,v 1.15 2002/10/19 19:01:52 jlam Exp $
 #
 # PostgreSQL database rc.d control script
 #
@@ -11,14 +11,17 @@
 # You will need to set some variables in /etc/rc.conf to start PostgreSQL:
 #
 # pgsql=YES
-#	pgsql_flags="-i"	# allows TCP/IP connections
-#	pgsql_flags="-i -l"	# enables SSL connections (TCP/IP required)
+#
+# The following variables are optional:
+#
+#	pgsql_flags="-i"		# allows TCP/IP connections
+#	pgsql_flags="-i -l"		# enables SSL connections
+#	pgsql_home="/path/to/home"	# path to pgsql database directory
 #
 # "pgsql_flags" contains options for the PostgreSQL postmaster.  See
 # postmaster(1) for possible options.
 
-if [ -f /etc/rc.subr ]
-then
+if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
 fi
 
@@ -27,15 +30,22 @@ rcd_dir=`@DIRNAME@ $0`
 name="pgsql"
 rcvar=$name
 pgsql_user="@PGUSER@"
-eval PGHOME="~$pgsql_user"
+pgsql_group="@PGGROUP@"
+eval pgsql_home="~$pgsql_user"
 
 command="@PREFIX@/bin/postmaster"
 ctl_command="@PREFIX@/bin/pg_ctl"
-pidfile="${PGHOME}/data/postmaster.pid"
 extra_commands="initdb"
 
-command_args="-D ${PGHOME}/data"
-start_command_args="-w -s -l ${PGHOME}/errlog"
+if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
+	load_rc_config $name
+elif [ -f /etc/rc.conf ]; then
+	. /etc/rc.conf
+fi
+
+pidfile="${pgsql_home}/data/postmaster.pid"
+common_args="-D ${pgsql_home}/data"
+start_command_args="-w -s -l ${pgsql_home}/errlog"
 stop_command_args="-s -m fast"
 
 initdb_cmd="pgsql_initdb"
@@ -46,8 +56,7 @@ stop_cmd="pgsql_doit stop"
 
 pgsql_precmd()
 {
-	if [ ! -f ${PGHOME}/data/base/1/PG_VERSION ]
-	then
+	if [ ! -f ${pgsql_home}/data/base/1/PG_VERSION ]; then
 		$rcd_dir/pgsql initdb
 	fi
 }
@@ -56,17 +65,19 @@ pgsql_initdb()
 {
 	initdb="@PREFIX@/bin/initdb"
 
-	if [ ! -x ${initdb} ]
-	then
-		return
+	if [ ! -x ${initdb} ]; then
+		return 1
 	fi
-	if [ -f ${PGHOME}/data/base/1/PG_VERSION ]
-	then
+	if [ -f ${pgsql_home}/data/base/1/PG_VERSION ]; then
 		@ECHO@ "The PostgreSQL template databases have already been initialized."
 		@ECHO@ "Skipping database initialization."
 	else
 		@ECHO@ "Initializing PostgreSQL databases."
-		@SU@ -m ${pgsql_user} -c "${initdb} ${command_args} ${flags}"
+		@MKDIR@ -p ${pgsql_home}
+		@CHOWN@ ${pgsql_user} ${pgsql_home}
+		@CHGRP@ ${pgsql_group} ${pgsql_home}
+		@CHMOD@ 0750 ${pgsql_home}
+		@SU@ -m ${pgsql_user} -c "${initdb} ${common_args} ${flags}"
 	fi
 }
 
@@ -76,19 +87,20 @@ pgsql_doit()
 
 	case ${action} in
 	start|restart)
-		command_args="${command_args} ${start_command_args}"
-		if [ -n "${pgsql_flags}" ]
-		then
-			command_args="${command_args} -o \"${pgsql_flags}\""
+		if [ -n "${pgsql_flags}" ]; then
+			start_command_args="${start_command_args} -o \"${pgsql_flags}\""
 		fi
+		command_args="${common_args} ${start_command_args} ${command_args}"
 		;;
 	stop)
-		command_args="${command_args} ${stop_command_args}"
+		command_args="${common_args} ${stop_command_args} ${command_args}"
+		;;
+	*)
+		command_args="${common_args} ${command_args}"
 		;;
 	esac
 
-	if [ ! -x ${ctl_command} ]
-	then
+	if [ ! -x ${ctl_command} ]; then
 		return
 	fi
 
@@ -101,13 +113,11 @@ pgsql_doit()
 	@SU@ -m ${pgsql_user} -c "${ctl_command} ${action} ${command_args}"
 }
 
-if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]
-then
+if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
 	load_rc_config $name
 	run_rc_command "$1"
 else
-	if [ -f /etc/rc.conf ]
-	then
+	if [ -f /etc/rc.conf ]; then
 		. /etc/rc.conf
 	fi
 	case "$1" in
