@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2004/03/11 17:26:02 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2004/04/05 18:41:14 wiz Exp $
 #
 # This Makefile fragment is included by packages that use xine-lib.
 #
@@ -7,7 +7,7 @@
 XINE_LIB_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xine-lib
-BUILDLINK_DEPENDS.xine-lib?=		xine-lib>=1rc3a
+BUILDLINK_DEPENDS.xine-lib?=		xine-lib>=1rc3bnb1
 BUILDLINK_PKGSRCDIR.xine-lib?=		../../multimedia/xine-lib
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xine-lib=xine-lib
