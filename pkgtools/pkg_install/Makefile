@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2004/02/09 22:04:12 jlam Exp $
+# $NetBSD: Makefile,v 1.95 2004/02/11 11:41:43 grant Exp $
 
 # Notes to package maintainers:
 #
@@ -43,8 +43,8 @@ CFLAGS+=		-I${LIBNBCOMPAT_SRCDIR}
 LDFLAGS+=		-L${LIBNBCOMPAT_SRCDIR}
 LIBS+=			-lnbcompat
 
-CPPFLAGS+=		-DOPSYS_NAME='\"${OPSYS}\"'
-CPPFLAGS+=		-DMACHINE_ARCH='\"${MACHINE_ARCH}\"'
+MAKE_ENV+=		MACHINE_ARCH="${MACHINE_ARCH}"
+MAKE_ENV+=		OPSYS="${OPSYS}"
 
 PKG_DBDIR?=		/var/db/pkg
 PKG_INFO=		PKG_DBDIR=${PKG_DBDIR} ${PKG_INFO_CMD}
