@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/01/04 19:53:08 fredb Exp $
+
+--- Arena/Source/toolbar.c.orig	Wed Nov 25 05:26:52 1998
++++ Arena/Source/toolbar.c	Mon Oct  4 01:47:53 1999
+@@ -1010,14 +1010,15 @@
+   * and proceed if looks valid
+   */
+  if (Printer != NULL)
++   {
+     argv = SpawnStringToRagged(Printer, &argc);
+-
+- if (Printer == NULL || argv == NULL || argc == 0)
++    if (argv == NULL || argc == 0) return;
++   }
++ else
+    {
+     Announce(_("No printer specified"));
+     XUndefineCursor(display, win);
+     XFlush(display);
+-    SpawnFreeRagged(&argc, &argv);
+     SpawnUnBlock(&PrintBlocker);
+     return;
+    }
