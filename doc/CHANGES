@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5169 2004/03/09 10:45:22 recht Exp $
+$NetBSD: CHANGES,v 1.5170 2004/03/09 11:25:14 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1270,3 +1270,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated clamav to 1.66nb1 [grant 2004-03-09]
 	Updated cgoban-java to 2.5.7 [rh 2004-03-09]
 	Updated bittorrent to 3.4nb1 [recht 2004-03-09]
+	Updated freewais-sf to 2.2.12nb1 [seb 2004-03-09]
