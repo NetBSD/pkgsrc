@@ -1,0 +1,496 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/17 11:06:50 skrll Exp $
+bin/adddebug
+bin/catalogmanager
+bin/cervisia
+bin/create_cvsignore
+bin/create_makefile
+bin/create_makefiles
+bin/cvs2pack
+bin/cvsblame
+bin/cvscheck
+bin/cvslastchange
+bin/cvslastlog
+bin/cvsrevertlast
+bin/cvsversion
+bin/cxxmetric
+bin/extend_dmalloc
+bin/extractrc
+bin/fixsgml
+bin/includemocs
+bin/kapptemplate
+bin/kbabel
+bin/kbabeldict
+bin/kbugbuster
+bin/kde-build
+bin/kdedoc
+bin/kdekillall
+bin/kdelnk2desktop.py
+bin/kompare
+bin/licensecheck
+bin/makeobj
+bin/noncvslist
+bin/po2xml
+bin/pruneemptydirs
+bin/qtdoc
+bin/split2po
+bin/swappo
+bin/transxx
+bin/xml2pot
+include/kbabel/catalog.h
+include/kbabel/catalogitem.h
+include/kbabel/catalogsettings.h
+include/kbabel/catalogview.h
+include/kbabel/dictchooser.h
+include/kbabel/dictionarymenu.h
+include/kbabel/editcmd.h
+include/kbabel/findoptions.h
+include/kbabel/kbabeldictbox.h
+include/kbabel/kbabeldictiface.h
+include/kbabel/msgfmt.h
+include/kbabel/searchengine.h
+include/kbabel/tagextractor.h
+include/kspy.h
+lib/kde3/libdbsearchengine.a
+lib/kde3/libdbsearchengine.la
+lib/kde3/libdbsearchengine.so
+lib/kde3/libkomparepart.a
+lib/kde3/libkomparepart.la
+lib/kde3/libkomparepart.so
+lib/kde3/libpoauxiliary.a
+lib/kde3/libpoauxiliary.la
+lib/kde3/libpoauxiliary.so
+lib/kde3/libpocompendium.a
+lib/kde3/libpocompendium.la
+lib/kde3/libpocompendium.so
+lib/kde3/pothumbnail.a
+lib/kde3/pothumbnail.la
+lib/kde3/pothumbnail.so
+lib/libcatalogmanager.a
+lib/libcatalogmanager.la
+lib/libcatalogmanager.so
+lib/libcatalogmanager.so.1
+lib/libcatalogmanager.so.1.0
+lib/libcervisia.a
+lib/libcervisia.la
+lib/libcervisia.so
+lib/libcervisia.so.1
+lib/libcervisia.so.1.0
+lib/libkbabel.a
+lib/libkbabel.la
+lib/libkbabel.so
+lib/libkbabel.so.1
+lib/libkbabel.so.1.0
+lib/libkbabelcommon.a
+lib/libkbabelcommon.la
+lib/libkbabelcommon.so
+lib/libkbabelcommon.so.1
+lib/libkbabelcommon.so.1.0
+lib/libkbabeldict.a
+lib/libkbabeldict.la
+lib/libkbabeldict.so
+lib/libkbabeldict.so.1
+lib/libkbabeldict.so.1.0
+lib/libkbabeldictplugin.a
+lib/libkbabeldictplugin.la
+lib/libkbabeldictplugin.so
+lib/libkbabeldictplugin.so.1
+lib/libkbabeldictplugin.so.1.0
+lib/libkspy.a
+lib/libkspy.la
+lib/libkspy.so
+lib/libkspy.so.1
+lib/libkspy.so.1.0
+man/man1/cvs2pack.1
+man/man1/cvsversion.1
+man/man1/kde-build.1
+man/man1/noncvslist.1
+share/doc/kde/HTML/en/cervisia/checkout.png
+share/doc/kde/HTML/en/cervisia/commit.png
+share/doc/kde/HTML/en/cervisia/common
+share/doc/kde/HTML/en/cervisia/diff.png
+share/doc/kde/HTML/en/cervisia/history.png
+share/doc/kde/HTML/en/cervisia/import.png
+share/doc/kde/HTML/en/cervisia/index.cache.bz2
+share/doc/kde/HTML/en/cervisia/index.docbook
+share/doc/kde/HTML/en/cervisia/logtree.png
+share/doc/kde/HTML/en/cervisia/mainview.png
+share/doc/kde/HTML/en/cervisia/resolve.png
+share/doc/kde/HTML/en/cervisia/updatetag.png
+share/doc/kde/HTML/en/kbabel/back.png
+share/doc/kde/HTML/en/kbabel/bottom.png
+share/doc/kde/HTML/en/kbabel/catalogmanager.png
+share/doc/kde/HTML/en/kbabel/catalogmanager_broken.png
+share/doc/kde/HTML/en/kbabel/catalogmanager_missing.png
+share/doc/kde/HTML/en/kbabel/catalogmanager_needwork.png
+share/doc/kde/HTML/en/kbabel/catalogmanager_nopot.png
+share/doc/kde/HTML/en/kbabel/catalogmanager_nopot_ok.png
+share/doc/kde/HTML/en/kbabel/catalogmanager_ok.png
+share/doc/kde/HTML/en/kbabel/common
+share/doc/kde/HTML/en/kbabel/editcopy.png
+share/doc/kde/HTML/en/kbabel/editcut.png
+share/doc/kde/HTML/en/kbabel/editpaste.png
+share/doc/kde/HTML/en/kbabel/fileopen.png
+share/doc/kde/HTML/en/kbabel/filesave.png
+share/doc/kde/HTML/en/kbabel/find.png
+share/doc/kde/HTML/en/kbabel/forward.png
+share/doc/kde/HTML/en/kbabel/index.cache.bz2
+share/doc/kde/HTML/en/kbabel/index.docbook
+share/doc/kde/HTML/en/kbabel/msgid2msgstr.png
+share/doc/kde/HTML/en/kbabel/next.png
+share/doc/kde/HTML/en/kbabel/nexterror.png
+share/doc/kde/HTML/en/kbabel/nextfuzzy.png
+share/doc/kde/HTML/en/kbabel/nextfuzzyuntrans.png
+share/doc/kde/HTML/en/kbabel/nextuntranslated.png
+share/doc/kde/HTML/en/kbabel/preverror.png
+share/doc/kde/HTML/en/kbabel/prevfuzzy.png
+share/doc/kde/HTML/en/kbabel/prevfuzzyuntrans.png
+share/doc/kde/HTML/en/kbabel/previous.png
+share/doc/kde/HTML/en/kbabel/prevuntranslated.png
+share/doc/kde/HTML/en/kbabel/redo.png
+share/doc/kde/HTML/en/kbabel/snap1.png
+share/doc/kde/HTML/en/kbabel/snap_catalogmanager.png
+share/doc/kde/HTML/en/kbabel/stop.png
+share/doc/kde/HTML/en/kbabel/top.png
+share/doc/kde/HTML/en/kbabel/transsearch.png
+share/doc/kde/HTML/en/kbabel/undo.png
+share/kde/applnk/Development/catalogmanager.desktop
+share/kde/applnk/Development/cervisia.desktop
+share/kde/applnk/Development/kbabel.desktop
+share/kde/applnk/Development/kbabeldict.desktop
+share/kde/applnk/Development/kbugbuster.desktop
+share/kde/applnk/Development/kompare.desktop
+share/kde/apps/catalogmanager/catalogmanagerui.rc
+share/kde/apps/catalogmanager/icons/hicolor/16x16/actions/statistics.png
+share/kde/apps/catalogmanager/icons/hicolor/16x16/actions/syntax.png
+share/kde/apps/catalogmanager/icons/hicolor/22x22/actions/statistics.png
+share/kde/apps/catalogmanager/icons/hicolor/22x22/actions/syntax.png
+share/kde/apps/catalogmanager/icons/hicolor/32x32/actions/statistics.png
+share/kde/apps/catalogmanager/icons/hicolor/32x32/actions/syntax.png
+share/kde/apps/catalogmanager/icons/locolor/16x16/actions/statistics.png
+share/kde/apps/catalogmanager/icons/locolor/16x16/actions/syntax.png
+share/kde/apps/catalogmanager/icons/locolor/22x22/actions/statistics.png
+share/kde/apps/catalogmanager/icons/locolor/22x22/actions/syntax.png
+share/kde/apps/catalogmanager/icons/locolor/32x32/actions/statistics.png
+share/kde/apps/catalogmanager/icons/locolor/32x32/actions/syntax.png
+share/kde/apps/catalogmanager/pics/broken.png
+share/kde/apps/catalogmanager/pics/missing.png
+share/kde/apps/catalogmanager/pics/needwork.png
+share/kde/apps/catalogmanager/pics/ok.png
+share/kde/apps/cervisia/cervisiashellui.rc
+share/kde/apps/cervisia/cervisiaui.rc
+share/kde/apps/kapptemplate/admin/ChangeLog
+share/kde/apps/kapptemplate/admin/Makefile
+share/kde/apps/kapptemplate/admin/Makefile.am
+share/kde/apps/kapptemplate/admin/Makefile.common
+share/kde/apps/kapptemplate/admin/Makefile.in
+share/kde/apps/kapptemplate/admin/acinclude.m4.in
+share/kde/apps/kapptemplate/admin/am_edit
+share/kde/apps/kapptemplate/admin/conf.change.pl
+share/kde/apps/kapptemplate/admin/config.guess
+share/kde/apps/kapptemplate/admin/config.pl
+share/kde/apps/kapptemplate/admin/config.sub
+share/kde/apps/kapptemplate/admin/configure.in.min
+share/kde/apps/kapptemplate/admin/debianrules
+share/kde/apps/kapptemplate/admin/depcomp
+share/kde/apps/kapptemplate/admin/install-sh
+share/kde/apps/kapptemplate/admin/libtool.m4.in
+share/kde/apps/kapptemplate/admin/ltconfig
+share/kde/apps/kapptemplate/admin/ltmain.sh
+share/kde/apps/kapptemplate/admin/missing
+share/kde/apps/kapptemplate/admin/mkinstalldirs
+share/kde/apps/kapptemplate/admin/old-libtool.m4.in
+share/kde/apps/kapptemplate/admin/old-ltcf-c.sh
+share/kde/apps/kapptemplate/admin/old-ltcf-cxx.sh
+share/kde/apps/kapptemplate/admin/old-ltcf-gcj.sh
+share/kde/apps/kapptemplate/admin/old-ltconfig
+share/kde/apps/kapptemplate/admin/old-ltmain.sh
+share/kde/apps/kapptemplate/admin/ylwrap
+share/kde/apps/kapptemplate/appframework/AUTHORS
+share/kde/apps/kapptemplate/appframework/COPYING
+share/kde/apps/kapptemplate/appframework/ChangeLog
+share/kde/apps/kapptemplate/appframework/INSTALL
+share/kde/apps/kapptemplate/appframework/NEWS
+share/kde/apps/kapptemplate/appframework/README
+share/kde/apps/kapptemplate/appframework/VERSION
+share/kde/apps/kapptemplate/appframework/app.lsm
+share/kde/apps/kapptemplate/appframework/app.spec
+share/kde/apps/kapptemplate/appframework/base-Makefile.am
+share/kde/apps/kapptemplate/appframework/base-Makefile.cvs
+share/kde/apps/kapptemplate/appframework/config.h.bot
+share/kde/apps/kapptemplate/appframework/configure.in.in.in
+share/kde/apps/kapptemplate/appframework/no-exe/COPYING
+share/kde/apps/kapptemplate/appframework/no-exe/INSTALL
+share/kde/apps/kapptemplate/appframework/po-Makefile.am
+share/kde/apps/kapptemplate/bin/mkinstalldirs
+share/kde/apps/kapptemplate/existing/app-Makefile.am
+share/kde/apps/kapptemplate/existing/app.desktop
+share/kde/apps/kapptemplate/include/existing.module
+share/kde/apps/kapptemplate/include/kapptemplate.common
+share/kde/apps/kapptemplate/include/kapptemplate.module
+share/kde/apps/kapptemplate/include/kpartapp.module
+share/kde/apps/kapptemplate/include/kpartplugin.module
+share/kde/apps/kapptemplate/kapp/app-Makefile.am
+share/kde/apps/kapptemplate/kapp/app-configure.in.in
+share/kde/apps/kapptemplate/kapp/app.cpp
+share/kde/apps/kapptemplate/kapp/app.desktop
+share/kde/apps/kapptemplate/kapp/app.h
+share/kde/apps/kapptemplate/kapp/app_client.cpp
+share/kde/apps/kapptemplate/kapp/appiface.h
+share/kde/apps/kapptemplate/kapp/apppref.cpp
+share/kde/apps/kapptemplate/kapp/apppref.h
+share/kde/apps/kapptemplate/kapp/appui.rc
+share/kde/apps/kapptemplate/kapp/appview.cpp
+share/kde/apps/kapptemplate/kapp/appview.h
+share/kde/apps/kapptemplate/kapp/doc-Makefile.am
+share/kde/apps/kapptemplate/kapp/doc-app-Makefile.am
+share/kde/apps/kapptemplate/kapp/hi16-app-app.png
+share/kde/apps/kapptemplate/kapp/hi32-app-app.png
+share/kde/apps/kapptemplate/kapp/hi48-app-app.png
+share/kde/apps/kapptemplate/kapp/index.docbook
+share/kde/apps/kapptemplate/kapp/lo16-app-app.png
+share/kde/apps/kapptemplate/kapp/lo32-app-app.png
+share/kde/apps/kapptemplate/kapp/main.cpp
+share/kde/apps/kapptemplate/kapp/no-exe/hi16-app-app.png
+share/kde/apps/kapptemplate/kapp/no-exe/hi32-app-app.png
+share/kde/apps/kapptemplate/kapp/no-exe/hi48-app-app.png
+share/kde/apps/kapptemplate/kapp/no-exe/lo16-app-app.png
+share/kde/apps/kapptemplate/kapp/no-exe/lo32-app-app.png
+share/kde/apps/kapptemplate/kapp/pics-Makefile.am
+share/kde/apps/kapptemplate/kpartapp/app-Makefile.am
+share/kde/apps/kapptemplate/kpartapp/app-configure.in.in
+share/kde/apps/kapptemplate/kpartapp/app.cpp
+share/kde/apps/kapptemplate/kpartapp/app.desktop
+share/kde/apps/kapptemplate/kpartapp/app.h
+share/kde/apps/kapptemplate/kpartapp/app_part.cpp
+share/kde/apps/kapptemplate/kpartapp/app_part.desktop
+share/kde/apps/kapptemplate/kpartapp/app_part.h
+share/kde/apps/kapptemplate/kpartapp/app_part.rc
+share/kde/apps/kapptemplate/kpartapp/app_shell.rc
+share/kde/apps/kapptemplate/kpartapp/doc-Makefile.am
+share/kde/apps/kapptemplate/kpartapp/doc-app-Makefile.am
+share/kde/apps/kapptemplate/kpartapp/hi16-app-app.png
+share/kde/apps/kapptemplate/kpartapp/hi32-app-app.png
+share/kde/apps/kapptemplate/kpartapp/hi48-app-app.png
+share/kde/apps/kapptemplate/kpartapp/index.docbook
+share/kde/apps/kapptemplate/kpartapp/lo16-app-app.png
+share/kde/apps/kapptemplate/kpartapp/lo32-app-app.png
+share/kde/apps/kapptemplate/kpartapp/main.cpp
+share/kde/apps/kapptemplate/kpartapp/no-exe/hi16-app-app.png
+share/kde/apps/kapptemplate/kpartapp/no-exe/hi32-app-app.png
+share/kde/apps/kapptemplate/kpartapp/no-exe/hi48-app-app.png
+share/kde/apps/kapptemplate/kpartapp/no-exe/lo16-app-app.png
+share/kde/apps/kapptemplate/kpartapp/no-exe/lo32-app-app.png
+share/kde/apps/kapptemplate/kpartplugin/hi16-action-plugin.png
+share/kde/apps/kapptemplate/kpartplugin/hi22-action-plugin.png
+share/kde/apps/kapptemplate/kpartplugin/no-exe/hi16-action-plugin.png
+share/kde/apps/kapptemplate/kpartplugin/no-exe/hi22-action-plugin.png
+share/kde/apps/kapptemplate/kpartplugin/plugin-Makefile.am
+share/kde/apps/kapptemplate/kpartplugin/plugin_app.cpp
+share/kde/apps/kapptemplate/kpartplugin/plugin_app.h
+share/kde/apps/kapptemplate/kpartplugin/plugin_app.rc
+share/kde/apps/kbabel/icons/hicolor/16x16/actions/autodiff.png
+share/kde/apps/kbabel/icons/hicolor/16x16/actions/catalogmanager.png
+share/kde/apps/kbabel/icons/hicolor/16x16/actions/diff.png
+share/kde/apps/kbabel/icons/hicolor/16x16/actions/insert_tag.png
+share/kde/apps/kbabel/icons/hicolor/16x16/actions/msgid2msgstr.png
+share/kde/apps/kbabel/icons/hicolor/16x16/actions/nexterror.png
+share/kde/apps/kbabel/icons/hicolor/16x16/actions/nextfuzzy.png
+share/kde/apps/kbabel/icons/hicolor/16x16/actions/nextfuzzyuntrans.png
+share/kde/apps/kbabel/icons/hicolor/16x16/actions/nextuntranslated.png
+share/kde/apps/kbabel/icons/hicolor/16x16/actions/preverror.png
+share/kde/apps/kbabel/icons/hicolor/16x16/actions/prevfuzzy.png
+share/kde/apps/kbabel/icons/hicolor/16x16/actions/prevfuzzyuntrans.png
+share/kde/apps/kbabel/icons/hicolor/16x16/actions/prevuntranslated.png
+share/kde/apps/kbabel/icons/hicolor/16x16/actions/search2msgstr.png
+share/kde/apps/kbabel/icons/hicolor/16x16/actions/togglefuzzy.png
+share/kde/apps/kbabel/icons/hicolor/16x16/actions/transsearch.png
+share/kde/apps/kbabel/icons/hicolor/22x22/actions/autodiff.png
+share/kde/apps/kbabel/icons/hicolor/22x22/actions/catalogmanager.png
+share/kde/apps/kbabel/icons/hicolor/22x22/actions/diff.png
+share/kde/apps/kbabel/icons/hicolor/22x22/actions/insert_tag.png
+share/kde/apps/kbabel/icons/hicolor/22x22/actions/msgid2msgstr.png
+share/kde/apps/kbabel/icons/hicolor/22x22/actions/nexterror.png
+share/kde/apps/kbabel/icons/hicolor/22x22/actions/nextfuzzy.png
+share/kde/apps/kbabel/icons/hicolor/22x22/actions/nextfuzzyuntrans.png
+share/kde/apps/kbabel/icons/hicolor/22x22/actions/nextuntranslated.png
+share/kde/apps/kbabel/icons/hicolor/22x22/actions/preverror.png
+share/kde/apps/kbabel/icons/hicolor/22x22/actions/prevfuzzy.png
+share/kde/apps/kbabel/icons/hicolor/22x22/actions/prevfuzzyuntrans.png
+share/kde/apps/kbabel/icons/hicolor/22x22/actions/prevuntranslated.png
+share/kde/apps/kbabel/icons/hicolor/22x22/actions/search2msgstr.png
+share/kde/apps/kbabel/icons/hicolor/22x22/actions/togglefuzzy.png
+share/kde/apps/kbabel/icons/hicolor/22x22/actions/transsearch.png
+share/kde/apps/kbabel/icons/hicolor/32x32/actions/autodiff.png
+share/kde/apps/kbabel/icons/hicolor/32x32/actions/catalogmanager.png
+share/kde/apps/kbabel/icons/hicolor/32x32/actions/diff.png
+share/kde/apps/kbabel/icons/hicolor/32x32/actions/insert_tag.png
+share/kde/apps/kbabel/icons/hicolor/32x32/actions/msgid2msgstr.png
+share/kde/apps/kbabel/icons/hicolor/32x32/actions/nexterror.png
+share/kde/apps/kbabel/icons/hicolor/32x32/actions/nextfuzzy.png
+share/kde/apps/kbabel/icons/hicolor/32x32/actions/nextfuzzyuntrans.png
+share/kde/apps/kbabel/icons/hicolor/32x32/actions/nextuntranslated.png
+share/kde/apps/kbabel/icons/hicolor/32x32/actions/preverror.png
+share/kde/apps/kbabel/icons/hicolor/32x32/actions/prevfuzzy.png
+share/kde/apps/kbabel/icons/hicolor/32x32/actions/prevfuzzyuntrans.png
+share/kde/apps/kbabel/icons/hicolor/32x32/actions/prevuntranslated.png
+share/kde/apps/kbabel/icons/hicolor/32x32/actions/search2msgstr.png
+share/kde/apps/kbabel/icons/hicolor/32x32/actions/togglefuzzy.png
+share/kde/apps/kbabel/icons/hicolor/32x32/actions/transsearch.png
+share/kde/apps/kbabel/icons/locolor/16x16/actions/autodiff.png
+share/kde/apps/kbabel/icons/locolor/16x16/actions/catalogmanager.png
+share/kde/apps/kbabel/icons/locolor/16x16/actions/diff.png
+share/kde/apps/kbabel/icons/locolor/16x16/actions/insert_tag.png
+share/kde/apps/kbabel/icons/locolor/16x16/actions/msgid2msgstr.png
+share/kde/apps/kbabel/icons/locolor/16x16/actions/nexterror.png
+share/kde/apps/kbabel/icons/locolor/16x16/actions/nextfuzzy.png
+share/kde/apps/kbabel/icons/locolor/16x16/actions/nextfuzzyuntrans.png
+share/kde/apps/kbabel/icons/locolor/16x16/actions/nextuntranslated.png
+share/kde/apps/kbabel/icons/locolor/16x16/actions/preverror.png
+share/kde/apps/kbabel/icons/locolor/16x16/actions/prevfuzzy.png
+share/kde/apps/kbabel/icons/locolor/16x16/actions/prevfuzzyuntrans.png
+share/kde/apps/kbabel/icons/locolor/16x16/actions/prevuntranslated.png
+share/kde/apps/kbabel/icons/locolor/16x16/actions/search2msgstr.png
+share/kde/apps/kbabel/icons/locolor/16x16/actions/togglefuzzy.png
+share/kde/apps/kbabel/icons/locolor/16x16/actions/transsearch.png
+share/kde/apps/kbabel/icons/locolor/32x32/actions/autodiff.png
+share/kde/apps/kbabel/icons/locolor/32x32/actions/catalogmanager.png
+share/kde/apps/kbabel/icons/locolor/32x32/actions/diff.png
+share/kde/apps/kbabel/icons/locolor/32x32/actions/insert_tag.png
+share/kde/apps/kbabel/icons/locolor/32x32/actions/msgid2msgstr.png
+share/kde/apps/kbabel/icons/locolor/32x32/actions/nexterror.png
+share/kde/apps/kbabel/icons/locolor/32x32/actions/nextfuzzy.png
+share/kde/apps/kbabel/icons/locolor/32x32/actions/nextfuzzyuntrans.png
+share/kde/apps/kbabel/icons/locolor/32x32/actions/nextuntranslated.png
+share/kde/apps/kbabel/icons/locolor/32x32/actions/preverror.png
+share/kde/apps/kbabel/icons/locolor/32x32/actions/prevfuzzy.png
+share/kde/apps/kbabel/icons/locolor/32x32/actions/prevfuzzyuntrans.png
+share/kde/apps/kbabel/icons/locolor/32x32/actions/prevuntranslated.png
+share/kde/apps/kbabel/icons/locolor/32x32/actions/search2msgstr.png
+share/kde/apps/kbabel/icons/locolor/32x32/actions/togglefuzzy.png
+share/kde/apps/kbabel/icons/locolor/32x32/actions/transsearch.png
+share/kde/apps/kbabel/kbabelui.rc
+share/kde/apps/kbabel/pics/broken.png
+share/kde/apps/kbabel/pics/missing.png
+share/kde/apps/kbabel/pics/needwork.png
+share/kde/apps/kbabel/pics/ok.png
+share/kde/apps/kbabel/pics/pref_identity.png
+share/kde/apps/kbabel/pics/splash.png
+share/kde/apps/kbabeldict/modules/dbsearchengine.rc
+share/kde/apps/kbabeldict/modules/poauxiliary.rc
+share/kde/apps/kbabeldict/modules/pocompendium.rc
+share/kde/apps/kbugbuster/kbugbusterui.rc
+share/kde/apps/kbugbuster/pics/bars.png
+share/kde/apps/kbugbuster/pics/logo.png
+share/kde/apps/kbugbuster/pics/tools.png
+share/kde/apps/kompare/icons/hicolor/16x16/apps/kompare.png
+share/kde/apps/kompare/icons/locolor/16x16/apps/kompare.png
+share/kde/apps/kompare/icons/locolor/32x32/apps/kompare.png
+share/kde/apps/kompare/kompareui.rc
+share/kde/apps/komparepart/komparepartui.rc
+share/kde/icons/hicolor/16x16/apps/catalogmanager.png
+share/kde/icons/hicolor/16x16/apps/cervisia.png
+share/kde/icons/hicolor/16x16/apps/kbabel.png
+share/kde/icons/hicolor/16x16/apps/kbabeldict.png
+share/kde/icons/hicolor/16x16/apps/kompare.png
+share/kde/icons/hicolor/16x16/mimetypes/gettext.png
+share/kde/icons/hicolor/32x32/apps/catalogmanager.png
+share/kde/icons/hicolor/32x32/apps/cervisia.png
+share/kde/icons/hicolor/32x32/apps/kbabel.png
+share/kde/icons/hicolor/32x32/apps/kbabeldict.png
+share/kde/icons/hicolor/32x32/mimetypes/gettext.png
+share/kde/icons/hicolor/48x48/apps/catalogmanager.png
+share/kde/icons/hicolor/48x48/apps/kbabel.png
+share/kde/icons/hicolor/48x48/mimetypes/gettext.png
+share/kde/icons/locolor/16x16/apps/catalogmanager.png
+share/kde/icons/locolor/16x16/apps/kbabel.png
+share/kde/icons/locolor/16x16/apps/kbabeldict.png
+share/kde/icons/locolor/16x16/apps/kompare.png
+share/kde/icons/locolor/16x16/mimetypes/gettext.png
+share/kde/icons/locolor/32x32/apps/catalogmanager.png
+share/kde/icons/locolor/32x32/apps/kbabel.png
+share/kde/icons/locolor/32x32/apps/kbabeldict.png
+share/kde/icons/locolor/32x32/apps/kompare.png
+share/kde/icons/locolor/32x32/mimetypes/gettext.png
+share/kde/mimelnk/application/x-gettext.desktop
+share/kde/services/kompare_part.desktop
+share/kde/services/pothumbnail.desktop
+@comment dirrm share/kde/services
+@comment dirrm share/kde/mimelnk/application
+@comment dirrm share/kde/icons/locolor/32x32/mimetypes
+@comment dirrm share/kde/icons/locolor/32x32/apps
+@comment dirrm share/kde/icons/locolor/16x16/mimetypes
+@comment dirrm share/kde/icons/locolor/16x16/apps
+@comment dirrm share/kde/icons/hicolor/48x48/mimetypes
+@comment dirrm share/kde/icons/hicolor/48x48/apps
+@comment dirrm share/kde/icons/hicolor/32x32/mimetypes
+@comment dirrm share/kde/icons/hicolor/32x32/apps
+@comment dirrm share/kde/icons/hicolor/16x16/mimetypes
+@comment dirrm share/kde/icons/hicolor/16x16/apps
+@dirrm share/kde/apps/komparepart
+@dirrm share/kde/apps/kompare/icons/locolor/32x32/apps
+@dirrm share/kde/apps/kompare/icons/locolor/32x32
+@dirrm share/kde/apps/kompare/icons/locolor/16x16/apps
+@dirrm share/kde/apps/kompare/icons/locolor/16x16
+@dirrm share/kde/apps/kompare/icons/locolor
+@dirrm share/kde/apps/kompare/icons/hicolor/16x16/apps
+@dirrm share/kde/apps/kompare/icons/hicolor/16x16
+@dirrm share/kde/apps/kompare/icons/hicolor
+@dirrm share/kde/apps/kompare/icons
+@dirrm share/kde/apps/kompare
+@dirrm share/kde/apps/kbugbuster/pics
+@dirrm share/kde/apps/kbugbuster
+@dirrm share/kde/apps/kbabeldict/modules
+@dirrm share/kde/apps/kbabeldict
+@dirrm share/kde/apps/kbabel/pics
+@dirrm share/kde/apps/kbabel/icons/locolor/32x32/actions
+@dirrm share/kde/apps/kbabel/icons/locolor/32x32
+@dirrm share/kde/apps/kbabel/icons/locolor/16x16/actions
+@dirrm share/kde/apps/kbabel/icons/locolor/16x16
+@dirrm share/kde/apps/kbabel/icons/locolor
+@dirrm share/kde/apps/kbabel/icons/hicolor/32x32/actions
+@dirrm share/kde/apps/kbabel/icons/hicolor/32x32
+@dirrm share/kde/apps/kbabel/icons/hicolor/22x22/actions
+@dirrm share/kde/apps/kbabel/icons/hicolor/22x22
+@dirrm share/kde/apps/kbabel/icons/hicolor/16x16/actions
+@dirrm share/kde/apps/kbabel/icons/hicolor/16x16
+@dirrm share/kde/apps/kbabel/icons/hicolor
+@dirrm share/kde/apps/kbabel/icons
+@dirrm share/kde/apps/kbabel
+@dirrm share/kde/apps/kapptemplate/kpartplugin/no-exe
+@dirrm share/kde/apps/kapptemplate/kpartplugin
+@dirrm share/kde/apps/kapptemplate/kpartapp/no-exe
+@dirrm share/kde/apps/kapptemplate/kpartapp
+@dirrm share/kde/apps/kapptemplate/kapp/no-exe
+@dirrm share/kde/apps/kapptemplate/kapp
+@dirrm share/kde/apps/kapptemplate/include
+@dirrm share/kde/apps/kapptemplate/existing
+@dirrm share/kde/apps/kapptemplate/bin
+@dirrm share/kde/apps/kapptemplate/appframework/no-exe
+@dirrm share/kde/apps/kapptemplate/appframework
+@dirrm share/kde/apps/kapptemplate/admin
+@dirrm share/kde/apps/kapptemplate
+@dirrm share/kde/apps/cervisia
+@dirrm share/kde/apps/catalogmanager/pics
+@dirrm share/kde/apps/catalogmanager/icons/locolor/32x32/actions
+@dirrm share/kde/apps/catalogmanager/icons/locolor/32x32
+@dirrm share/kde/apps/catalogmanager/icons/locolor/22x22/actions
+@dirrm share/kde/apps/catalogmanager/icons/locolor/22x22
+@dirrm share/kde/apps/catalogmanager/icons/locolor/16x16/actions
+@dirrm share/kde/apps/catalogmanager/icons/locolor/16x16
+@dirrm share/kde/apps/catalogmanager/icons/locolor
+@dirrm share/kde/apps/catalogmanager/icons/hicolor/32x32/actions
+@dirrm share/kde/apps/catalogmanager/icons/hicolor/32x32
+@dirrm share/kde/apps/catalogmanager/icons/hicolor/22x22/actions
+@dirrm share/kde/apps/catalogmanager/icons/hicolor/22x22
+@dirrm share/kde/apps/catalogmanager/icons/hicolor/16x16/actions
+@dirrm share/kde/apps/catalogmanager/icons/hicolor/16x16
+@dirrm share/kde/apps/catalogmanager/icons/hicolor
+@dirrm share/kde/apps/catalogmanager/icons
+@dirrm share/kde/apps/catalogmanager
+@comment dirrm share/kde/apps
+@comment dirrm share/kde/applnk/Development
+@dirrm share/doc/kde/HTML/en/kbabel
+@dirrm share/doc/kde/HTML/en/cervisia
+@comment dirrm share/doc/kde/HTML/en
+@comment dirrm lib/kde3
+@dirrm include/kbabel
