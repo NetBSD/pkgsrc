@@ -1,4 +1,4 @@
-$NetBSD: patch-bc,v 1.4 2001/09/10 08:23:20 skrll Exp $
+$NetBSD: patch-bc,v 1.5 2003/07/02 18:06:40 jmmv Exp $
 
 --- kdehelp/man.cpp.orig	Thu Aug 19 20:32:11 1999
 +++ kdehelp/man.cpp
@@ -24,9 +24,9 @@ $NetBSD: patch-bc,v 1.4 2001/09/10 08:23:20 skrll Exp $
              searchPath[numPaths++] = StrDup("/usr/X11R6/man");
 +#else
 +#ifdef __NetBSD__
++            searchPath[numPaths++] = StrDup(PREFIX "/man");
 +            searchPath[numPaths++] = StrDup("/usr/share/man");
 +            searchPath[numPaths++] = StrDup("/usr/X11R6/man");
-+            searchPath[numPaths++] = StrDup("/usr/pkg/man");
 +#else
 +            searchPath[numPaths++] = StrDup("/usr/man");
 +#endif
