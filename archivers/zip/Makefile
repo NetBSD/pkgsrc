@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2003/05/06 17:40:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.33 2003/06/01 01:57:16 grant Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/04/27 16:06:15 ache Exp
 #
 
@@ -20,6 +20,10 @@ MAKEFILE=	unix/Makefile
 MAKE_FLAGS=	LOCAL_ZIP="${CFLAGS}" LFLAGS1="${_STRIPFLAG_CC}"
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "powerpc"
+CFLAGS=		-O0
+.endif
 
 .if ${OPSYS} == "SunOS"
 ALL_TARGET=	generic_gcc
