@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/07/31 02:49:52 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/13 14:43:18 minskim Exp $
 #
 
-DISTNAME=	html2text-1.3.1
+DISTNAME=	html2text-1.3.2
 CATEGORIES=	textproc
 MASTER_SITES=	http://userpage.fu-berlin.de/~mbayer/tools/
 
@@ -13,7 +13,7 @@ HAS_CONFIGURE=	YES
 
 CONFIGURE_ENV+=	ECHO="${ECHO}"
 
-pre-install:
+post-build:
 	${GUNZIP_CMD} -d ${WRKSRC}/html2text.1.gz ${WRKSRC}/html2textrc.5.gz
 
 do-install:
