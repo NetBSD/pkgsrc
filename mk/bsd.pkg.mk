@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.842 2001/11/03 04:58:15 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.843 2001/11/08 09:29:56 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1645,25 +1645,6 @@ delete-package:
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${PKGFILE}
 .endif
 
-################################################################
-# This is the "generic" package target, actually a macro used from the
-# six main targets.  See below for more.
-################################################################
-
-_PORT_USE: .USE
-.if make(real-extract)
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} install-depends DEPENDS_TARGET=${DEPENDS_TARGET}
-.endif
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} ${.TARGET:S/^real-/pre-/}
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} ${.TARGET:S/^real-/do-/}
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} ${.TARGET:S/^real-/post-/}
-.if !make(real-fetch)							\
-	&& (!make(real-package) || !defined(PACKAGE_NOINSTALL))
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${TOUCH} ${TOUCH_FLAGS} ${WRKDIR}/.${.TARGET:S/^real-//}_done
-.endif
-
-
 real-su-install: ${MESSAGE}
 .if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER)
 .  if defined(CONFLICTS)
@@ -2007,7 +1988,6 @@ package: uptodate-pkgtools install ${PACKAGE_COOKIE}
 
 ${EXTRACT_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-extract DEPENDS_TARGET=${DEPENDS_TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >> ${EXTRACT_COOKIE}
 ${PATCH_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-patch
 ${CONFIGURE_COOKIE}:
@@ -2019,17 +1999,38 @@ ${INSTALL_COOKIE}:
 ${PACKAGE_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-package
 
-# And call the macros
-
-real-fetch: _PORT_USE
-real-extract: _PORT_USE
+extract-message:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Extracting for ${PKGNAME}"
-real-patch: _PORT_USE
+patch-message:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Patching for ${PKGNAME}"
-real-configure: _PORT_USE
+configure-message:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Configuring for ${PKGNAME}"
-real-build: _PORT_USE
+build-message:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Building for ${PKGNAME}"
+
+extract-cookie:
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >> ${EXTRACT_COOKIE}
+patch-cookie:
+	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${PATCH_COOKIE}
+configure-cookie:
+	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${CONFIGURE_COOKIE}
+build-cookie:
+	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${BUILD_COOKIE}
+
+.ORDER: pre-fetch do-fetch post-fetch
+.ORDER: extract-message install-depends pre-extract do-extract post-extract extract-cookie
+.ORDER: patch-message pre-patch do-patch post-patch patch-cookie
+.ORDER: configure-message pre-configure do-configure post-configure configure-cookie
+.ORDER: build-message pre-build do-build post-build build-cookie
+
+# Please note that the order of the following targets is important, and
+# should not be modified (.ORDER is not recognised by make(1) in a serial
+# make i.e. without -j n)
+real-fetch: pre-fetch do-fetch post-fetch
+real-extract: extract-message install-depends pre-extract do-extract post-extract extract-cookie
+real-patch: patch-message pre-patch do-patch post-patch patch-cookie
+real-configure: configure-message pre-configure do-configure post-configure configure-cookie
+real-build: build-message pre-build do-build post-build build-cookie
 real-install: do-su-install
 real-package: do-su-package
 
@@ -2085,8 +2086,7 @@ do-su-package:
 	${_SU_TARGET} 
 	
 
-# Empty pre-* and post-* targets, note we can't use .if !target()
-# in the _PORT_USE macro
+# Empty pre-* and post-* targets
 
 .for name in fetch extract patch configure build install package
 
