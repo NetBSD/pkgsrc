@@ -3,7 +3,7 @@
 # Date created:				26 August 1997
 # Whom:					Michael Elbel (me)
 #
-# $NetBSD: Makefile,v 1.15 1998/02/23 08:38:55 tron Exp $
+# $NetBSD: Makefile,v 1.16 1998/02/23 11:32:46 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 #
 
@@ -91,7 +91,7 @@ post-install:
 	strip ${PREFIX}/bin/${file}
 .endfor
 .if defined(MANZ)
-	${.CURDIR}/work/xemacs-20.3/lib-src/gzip-el.sh ${PREFIX}/lib/xemacs-20.3/lisp
+	${WRKSRC}/lib-src/gzip-el.sh ${PREFIX}/lib/xemacs-20.3/lisp
 .endif
 
 .include <bsd.port.mk>
