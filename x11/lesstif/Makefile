@@ -3,7 +3,7 @@
 # Date created:		December 10, 1996
 # Whom:			1wardd@airmail.net
 #
-# $NetBSD: Makefile,v 1.12 1998/03/23 17:17:43 tron Exp $
+# $NetBSD: Makefile,v 1.13 1998/03/23 20:36:04 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/08 08:34:13 tg Exp
 #
 
@@ -16,7 +16,7 @@ MAINTAINER=	packages@netbsd.org
 
 GNU_CONFIGURE=  yes
 USE_X11=	yes
-# change this and remove the strip statement in post-install for debugging
+# change this for debugging
 CONFIGURE_ENV=	CCFLAGS="-O -pipe" INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
 # this is worst case, when you're about to overwrite real Motif with Lesstif
