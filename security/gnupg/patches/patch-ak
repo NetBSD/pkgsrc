@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.1 2003/12/01 14:16:17 he Exp $
+$NetBSD: patch-ak,v 1.2 2004/12/25 02:54:13 wiz Exp $
 
---- include/types.h.orig	Wed Jul 30 09:44:43 2003
-+++ include/types.h	Sun Nov 30 12:04:15 2003
-@@ -103,7 +103,12 @@
+--- include/types.h.orig	2003-09-28 13:35:29.000000000 +0200
++++ include/types.h
+@@ -103,7 +103,12 @@ typedef unsigned long u32;
  #undef u64	    /* maybe there is a macro with this name */
  #if SIZEOF_UINT64_T == 8
  typedef uint64_t u64;
