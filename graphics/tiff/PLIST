@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:54:11 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/03/05 10:33:35 martti Exp $
 bin/fax2ps
 bin/fax2tiff
 bin/gif2tiff
@@ -16,10 +16,12 @@ bin/tiffdither
 bin/tiffdump
 bin/tiffinfo
 bin/tiffmedian
+bin/tiffset
 bin/tiffsplit
 include/tiff.h
 include/tiffconf.h
 include/tiffio.h
+include/tiffvers.h
 lib/libtiff.a
 lib/libtiff.la
 lib/libtiff.so
@@ -36,6 +38,7 @@ man/man1/sgi2tiff.1
 man/man1/thumbnail.1
 man/man1/tiff2bw.1
 man/man1/tiff2ps.1
+man/man1/tiff2rgba.1
 man/man1/tiffcmp.1
 man/man1/tiffcp.1
 man/man1/tiffdither.1
@@ -46,6 +49,7 @@ man/man1/tiffmedian.1
 man/man1/tiffsplit.1
 man/man1/tiffsv.1
 man/man3/TIFFCheckTile.3
+man/man3/TIFFClientOpen.3
 man/man3/TIFFClose.3
 man/man3/TIFFComputeStrip.3
 man/man3/TIFFComputeTile.3
@@ -91,6 +95,7 @@ man/man3/TIFFReadScanline.3
 man/man3/TIFFReadTile.3
 man/man3/TIFFRegisterCODEC.3
 man/man3/TIFFReverseBits.3
+man/man3/TIFFRewriteDirectory.3
 man/man3/TIFFScanlineSize.3
 man/man3/TIFFSetDirectory.3
 man/man3/TIFFSetErrorHandler.3
@@ -133,6 +138,11 @@ man/man3/TIFFstrip.3
 man/man3/TIFFswab.3
 man/man3/TIFFtile.3
 man/man3/libtiff.3
+share/doc/html/tiff/bugs.html
+share/doc/html/tiff/build.html
+share/doc/html/tiff/contrib.html
+share/doc/html/tiff/document.html
+share/doc/html/tiff/images.html
 share/doc/html/tiff/images/back.gif
 share/doc/html/tiff/images/bali.jpg
 share/doc/html/tiff/images/cat.gif
@@ -149,12 +159,6 @@ share/doc/html/tiff/images/ring.gif
 share/doc/html/tiff/images/smallliz.jpg
 share/doc/html/tiff/images/strike.gif
 share/doc/html/tiff/images/warning.gif
-@dirrm share/doc/html/tiff/images
-share/doc/html/tiff/bugs.html
-share/doc/html/tiff/build.html
-share/doc/html/tiff/contrib.html
-share/doc/html/tiff/document.html
-share/doc/html/tiff/images.html
 share/doc/html/tiff/index.html
 share/doc/html/tiff/internals.html
 share/doc/html/tiff/intro.html
@@ -177,4 +181,5 @@ share/doc/html/tiff/v3.4beta036.html
 share/doc/html/tiff/v3.5.1.html
 share/doc/html/tiff/v3.5.2.html
 share/doc/html/tiff/v3.5.3.html
+@dirrm share/doc/html/tiff/images
 @dirrm share/doc/html/tiff
