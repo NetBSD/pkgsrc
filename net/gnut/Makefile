@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.2 2000/04/18 06:57:33 deberg Exp $
+# $NetBSD: Makefile,v 1.2 2000/04/18 07:05:14 deberg Exp $
 #
 
 DISTNAME=	gnut-0.3.22
@@ -18,5 +18,12 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-mit-pthreads
 CONFIGURE_ENV+=	CC=${LOCALBASE}/pthreads/bin/pgcc \
 		CXX=${LOCALBASE}/pthreads/bin/pg++
+
+GNUTDOCDIR=		${PREFIX}/share/doc/gnut
+
+post-install:
+	${MKDIR} ${GNUTDOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/TUTORIAL ${GNUTDOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/gnutrc.sample ${GNUTDOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
