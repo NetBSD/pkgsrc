@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/21 21:25:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/26 09:38:52 jmmv Exp $
 bin/caca-config
 bin/caca-spritedit
 bin/cacademo
@@ -11,5 +11,12 @@ man/man1/caca-config.1
 man/man1/caca-spritedit.1
 man/man1/cacademo.1
 man/man1/cacaview.1
+share/doc/libcaca-dev/AUTHORS
+share/doc/libcaca-dev/BUGS
+share/doc/libcaca-dev/NEWS
+share/doc/libcaca-dev/NOTES
+share/doc/libcaca-dev/README
+share/doc/libcaca-dev/TODO
 share/libcaca/caca.txt
 @dirrm share/libcaca
+@dirrm share/doc/libcaca-dev
