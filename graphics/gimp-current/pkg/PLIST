@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2000/07/05 03:39:33 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.8 2000/07/05 16:12:53 tron Exp $
 bin/gimp
 bin/gimp-config
 bin/gimptool
@@ -1364,7 +1364,7 @@ share/locale/uk/LC_MESSAGES/gimp.mo
 @dirrm share/gimp/1.1/brushes
 @dirrm share/gimp/1.1
 @dirrm share/gimp
-@dirrm share/aclocal
+@unexec rmdir %D/share/aclocal 2>/dev/null || true
 @dirrm lib/gimp/1.1/plug-ins
 @dirrm lib/gimp/1.1/modules
 @dirrm lib/gimp/1.1
