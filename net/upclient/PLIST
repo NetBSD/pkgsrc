@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/07 22:20:59 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/05/07 22:25:03 hubertf Exp $
 bin/upclient
 etc/rc.d/upclient
 etc/upclient.conf
