@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2004/04/14 21:48:49 danw Exp $
+
+--- snmplib/snmpUDPIPv6Domain.c.orig	Fri Apr  9 19:14:10 2004
++++ snmplib/snmpUDPIPv6Domain.c
+@@ -36,6 +36,10 @@
+ #include <dmalloc.h>
+ #endif
+ 
++#if defined(darwin)
++#include <stdint.h> /* for uint8_t */
++#endif
++
+ #include <net-snmp/types.h>
+ #include <net-snmp/output_api.h>
+ #include <net-snmp/config_api.h>
