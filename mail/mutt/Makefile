@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2003/09/16 15:12:51 agc Exp $
+# $NetBSD: Makefile,v 1.102 2003/09/25 08:36:16 grant Exp $
 
 DISTNAME=		mutt-1.4.1i
 PKGNAME=                ${DISTNAME:C/i$//}
@@ -73,6 +73,9 @@ pre-build:
 
 post-install:
 	${LN} -s ${EGDIR} ${PREFIX}/share/doc/mutt/samples
+	@if [ -f ${PREFIX}/bin/mutt_dotlock ]; then \
+		${ECHO} "bin/mutt_dotlock" >> ${PLIST}; \
+	fi
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
