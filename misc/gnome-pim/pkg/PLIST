@@ -1,0 +1,45 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/03 16:38:45 rh Exp $
+bin/gnomecal
+bin/gnomecard
+etc/CORBA/servers/gnomecard.gnorba
+lib/libversit.a
+share/pixmaps/gnome-card.xpm
+share/idl/gnome-pim.idl
+share/locale/fr/LC_MESSAGES/gnome-pim.mo
+share/locale/sv/LC_MESSAGES/gnome-pim.mo
+share/locale/cs/LC_MESSAGES/gnome-pim.mo
+share/locale/de/LC_MESSAGES/gnome-pim.mo
+share/locale/es/LC_MESSAGES/gnome-pim.mo
+share/locale/ru/LC_MESSAGES/gnome-pim.mo
+share/locale/hu/LC_MESSAGES/gnome-pim.mo
+share/locale/it/LC_MESSAGES/gnome-pim.mo
+share/locale/pt/LC_MESSAGES/gnome-pim.mo
+share/locale/no/LC_MESSAGES/gnome-pim.mo
+share/locale/fi/LC_MESSAGES/gnome-pim.mo
+share/locale/ko/LC_MESSAGES/gnome-pim.mo
+share/locale/ga/LC_MESSAGES/gnome-pim.mo
+share/locale/ja/LC_MESSAGES/gnome-pim.mo
+share/mime-info/gnome-pim.keys
+share/gnome/apps/Applications/gncal.desktop
+share/gnome/apps/Applications/gnomecard.desktop
+share/gnome/help/cal/C/topic.dat
+share/gnome/help/cal/C/gnome-cal.html
+share/gnome/help/cal/C/index.html
+share/gnome/help/gnomecard/C/index.html
+share/gnome/help/gnomecard/C/topic.dat
+share/gnome/help/gnomecard/C/description.html
+share/gnome/help/gnomecard/C/dialogs.html
+share/gnome/help/gnomecard/C/display.html
+share/gnome/help/gnomecard/C/ln9.html
+share/gnome/help/gnomecard/C/menubar.html
+share/gnome/help/gnomecard/C/recordview.html
+share/gnome/help/gnomecard/C/toolbar.html
+share/gnome/help/gnomecard/C/docbook.css
+@dirrm share/gnome/help/gnomecard/C
+@dirrm share/gnome/help/gnomecard
+@dirrm share/gnome/help/cal/C
+@dirrm share/gnome/help/cal
+@unexec rmdir %D/share/gnome/apps/Applications 2>/dev/null || true
+@unexec rmdir %D/share/gnome/apps 2>/dev/null || true
+@unexec rmdir %D/share/gnome/help 2>/dev/null || true
+@unexec rmdir %D/share/gnome 2>/dev/null || true
