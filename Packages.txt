@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.219 2001/12/08 02:14:38 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.220 2001/12/12 16:30:04 wiz Exp $
 ###########################################################################
 
 			==========================
@@ -1540,7 +1540,6 @@ directly adding a dependency on that package, include that package's
 buildlink.mk instead.  The following variables may also be replaced with
 buildlink.mk files:
 
-    USE_CURSES	-->	.include "../../devel/ncurses/buildlink.mk"
     USE_LIBINTL	-->	.include "../../devel/gettext-lib/buildlink.mk"
     USE_LTDL	-->	.include "../../devel/libtool/buildlink.mk"
     USE_MESA	-->	.include "../../graphics/Mesa/buildlink.mk"
