@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.4 2002/10/20 18:57:38 jlam Exp $
+
+--- templates/Makefile.orig	Sun Oct 20 13:19:53 2002
++++ templates/Makefile
+@@ -99,7 +99,7 @@ install:
+ 	for file in $(FILES); do \
+ 		$(INSTALL_DATA) $$file $(DATADIR)/templates; \
+ 	done
+-	cd fr; make install
++	cd fr; $(MAKE) $(MFLAGS) install
+ 
+ 
+ #
