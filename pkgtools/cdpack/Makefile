@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2002/05/22 22:30:43 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.9 2002/09/18 02:42:20 dmcmahill Exp $
 #
 
-DISTNAME=	cdpack-1.4.1
+DISTNAME=	cdpack-1.4.2
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty

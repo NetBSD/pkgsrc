@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cdpack.sh,v 1.6 2002/05/22 22:30:45 dmcmahill Exp $
+# $NetBSD: cdpack.sh,v 1.7 2002/09/18 02:42:20 dmcmahill Exp $
 #
 # Copyright (c) 2001, 2002 Dan McMahill, All rights reserved.
 #
@@ -58,7 +58,7 @@ touch $exclude
 
 usage(){
 	echo "$prog - generates ISO9660 images for a multi-cd binary package collection"
-	echo "Usage:      $prog [-l logfile] [-n] [-R] [-v] [-V] [-x dir] [-X dir] packages_directory cdimage_directory"
+	echo "Usage:      $prog [-ac | -ec] [-af | -ef] [-l logfile] [-dnRvV] [-x dir] [-X dir] packages_directory cdimage_directory"
 	echo "Example:    $prog /usr/pkgsrc/packages/netbsd-1.5/alpha/All  /images/netbsd-1.5/alpha"
 	echo "Please refer to the manual page for complete documentation."
 }
