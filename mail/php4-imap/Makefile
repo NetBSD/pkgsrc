@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/09/19 12:22:44 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/16 15:04:54 jdolecek Exp $
 
 MODNAME=		imap
 CATEGORIES+=		mail
@@ -12,6 +12,7 @@ DISTINFO_FILE=		${.CURDIR}/distinfo
 
 CONFIGURE_ARGS+=	--with-${MODNAME}=shared,${BUILDLINK_PREFIX.imap-uw}
 CONFIGURE_ARGS+=	--with-${MODNAME}-ssl=${SSLBASE}
+CONFIGURE_ARGS+=	--with-${MODNAME}-linkage
 CONFIGURE_ENV+=		ac_cv_lib_pam_pam_start=no
 
 LIBS+=			-lssl -lcrypto
