@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/02/21 21:24:53 zuntum Exp $
+# $NetBSD: Makefile,v 1.13 2002/08/28 02:14:36 jlam Exp $
 
 DISTNAME=	avifile-0.53.5
 CATEGORIES=	graphics
@@ -14,15 +14,14 @@ DEPENDS=	win32-codecs>=010122:../../graphics/win32-codecs
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		YES
-
 CONFIGURE_ARGS+=	--with-win32-path="${LOCALBASE}/lib/win32"
 CONFIGURE_ARGS+=	--without-qt
 
-.include "../../devel/SDL/buildlink.mk"
+.include "../../devel/SDL/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
