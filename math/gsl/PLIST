@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/08/30 21:51:00 jtb Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/03/07 22:44:00 seb Exp $
 bin/gsl-config
 bin/gsl-histogram
 bin/gsl-randist
@@ -211,11 +211,6 @@ include/gsl/gsl_vector_uint.h
 include/gsl/gsl_vector_ulong.h
 include/gsl/gsl_vector_ushort.h
 include/gsl/gsl_version.h
-info/gsl-ref.info
-info/gsl-ref.info-1
-info/gsl-ref.info-2
-info/gsl-ref.info-3
-info/gsl-ref.info-4
 lib/libgsl.a
 lib/libgsl.la
 lib/libgsl.so

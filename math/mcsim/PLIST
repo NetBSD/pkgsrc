@@ -1,10 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2003/08/02 13:27:27 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/03/07 22:45:10 seb Exp $
 bin/mcsim
 bin/mod
-info/mcsim
-info/mcsim-1
-info/mcsim-2
-info/mcsim-3
 share/doc/html/mcsim/mcsim.html
 share/doc/mcsim/About-Datasets.txt
 share/doc/mcsim/About-Doc.txt
