@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST,v 1.3 2003/03/22 00:08:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/04/27 12:48:58 cjep Exp $
 bin/lynx
 man/man1/lynx.1
-share/locale/cs/LC_MESSAGES/lynx.mo
-share/locale/da/LC_MESSAGES/lynx.mo
-share/locale/de/LC_MESSAGES/lynx.mo
-share/locale/fr/LC_MESSAGES/lynx.mo
-share/locale/ja/LC_MESSAGES/lynx.mo
-share/locale/nl/LC_MESSAGES/lynx.mo
-share/locale/pt_BR/LC_MESSAGES/lynx.mo
-share/locale/ru/LC_MESSAGES/lynx.mo
-share/locale/sl/LC_MESSAGES/lynx.mo
-share/locale/sv/LC_MESSAGES/lynx.mo
+${PKGLOCALEDIR}/cs/LC_MESSAGES/lynx.mo
+${PKGLOCALEDIR}/da/LC_MESSAGES/lynx.mo
+${PKGLOCALEDIR}/de/LC_MESSAGES/lynx.mo
+${PKGLOCALEDIR}/fr/LC_MESSAGES/lynx.mo
+${PKGLOCALEDIR}/ja/LC_MESSAGES/lynx.mo
+${PKGLOCALEDIR}/nl/LC_MESSAGES/lynx.mo
+${PKGLOCALEDIR}/pt_BR/LC_MESSAGES/lynx.mo
+${PKGLOCALEDIR}/ru/LC_MESSAGES/lynx.mo
+${PKGLOCALEDIR}/sl/LC_MESSAGES/lynx.mo
+${PKGLOCALEDIR}/sv/LC_MESSAGES/lynx.mo
 share/lynx/lynx.cfg
 share/lynx/lynx.lss
 share/lynx/lynx_doc/CHANGES
