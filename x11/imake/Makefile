@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/04/20 16:17:26 xtraeme Exp $
+# $NetBSD: Makefile,v 1.11 2004/07/21 21:42:51 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	imake-${XF_VER}
@@ -22,6 +22,11 @@ NO_XFREE86_TARGETS=	# defined
 .if ${OPSYS} == "Linux"
 DEPENDS+=	bison-[0-9]*:../../devel/bison
 DEPENDS+=	flex-[0-9]*:../../devel/flex
+PLIST_SUBST+=	LNDIR=
+.elif ${OPSYS} == "OpenBSD"
+PLIST_SUBST+=	LNDIR="@comment "
+.else
+PLIST_SUBST+=	LNDIR=
 .endif
 
 .include "../../meta-pkgs/XFree86/Makefile.common"
