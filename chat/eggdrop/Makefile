@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2004/10/03 00:13:14 tv Exp $
-#
+# $NetBSD: Makefile,v 1.15 2004/12/03 12:15:54 adam Exp $
 
-DISTNAME=	eggdrop1.6.15
-PKGNAME=	${DISTNAME:S/eggdrop/eggdrop-/}
-PKGREVISION=	3
+DISTNAME=	eggdrop1.6.17
+PKGNAME=	eggdrop-1.6.17
 CATEGORIES=	chat
 MASTER_SITES=	ftp://ftp.eggheads.org/pub/eggdrop/source/1.6/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,10 +10,9 @@ MAINTAINER=     tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.eggheads.org/
 COMMENT=	IRC robot with TCL scripting and multi-channel ability
 
-USE_BUILDLINK3=	YES
-USE_PKGINSTALL=	YES
-GNU_CONFIGURE=	YES
-
+USE_BUILDLINK3=		yes
+USE_PKGINSTALL=		yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ENV+=		TCLLIB="${PREFIX}/lib" TCLINC="${PREFIX}/include"
 
@@ -49,9 +46,9 @@ do-install-program:
 	cd ${WRKSRC}/doc/html && ${INSTALL_DATA} *.html \
 		${PREFIX}/share/doc/html/eggdrop
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/eggdrop
-	cd ${WRKSRC}/doc && ${INSTALL_DATA} BANS BOTNET MODULES PARTYLINE \
-		USERS first_script.txt tcl-commands.doc text-substitutions.doc \
-		tricks ${PREFIX}/share/doc/eggdrop
+	cd ${WRKSRC}/doc && ${INSTALL_DATA} BANS BOTNET FIRST-SCRIPT MODULES \
+		PARTYLINE USERS TRICKS TEXT-SUBSTITUTIONS tcl-commands.doc \
+		${PREFIX}/share/doc/eggdrop
 	${INSTALL_DATA_DIR} ${PREFIX}/share/eggdrop
 	${INSTALL_DATA_DIR} ${PREFIX}/share/eggdrop/help
 	${INSTALL_DATA_DIR} ${PREFIX}/share/eggdrop/language
