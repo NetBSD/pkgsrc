@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2002/10/20 00:33:50 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2003/03/18 12:11:55 tron Exp $
 
-DISTNAME=	netpbm-9.25
+DISTNAME=	netpbm-10.11.6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netpbm/}
 EXTRACT_SUFX=	.tgz
@@ -13,11 +13,14 @@ USE_BUILDLINK2=	yes
 USE_GMAKE=	yes
 USE_PERL5=	yes
 
-REPLACE_PERL=	pnm/pnmquant ppm/ppmfade ppm/ppmrainbow ppm/ppmshadow
-
-INSTALL_TARGET=	install-dev install
-MAKE_ENV+=	INSTALL="${INSTALL}" STRIPFLAG="${_STRIPFLAG_INSTALL}"
+INSTALL_TARGET=	install-dev install-run
+MAKE_ENV+=	INSTALL="${INSTALL}" STRIPFLAG="${_STRIPFLAG_INSTALL}" \
+		pkgdir="${STAGEDIR}"
 MAKEFILE=	GNUmakefile
+PLIST_SRC=	${WRKDIR}/PLIST_STAGE
+REPLACE_PERL=	editor/ppmfade editor/ppmshadow editor/pnmquant \
+		generator/ppmrainbow
+STAGEDIR=	${WRKDIR}/staging
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,10 +38,27 @@ MAKE_ENV+=	NETWORKLD=""
 pre-configure:
 	${CP} ${WRKSRC}/Makefile.config.in ${WRKSRC}/Makefile.config
 
+pre-install:
+	${RM} -rf ${STAGEDIR}
+
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/shhopt/shhopt.h ${PREFIX}/include
+	cd ${STAGEDIR} && 				\
+	${MV} link/* lib && 				\
+	${RM} -rf link man/web && 			\
+	${MKDIR} share/doc/netpbm &&			\
+	${CP} ${WRKSRC}/doc/* share/doc/netpbm &&	\
+	${MV} share/doc/netpbm/*.1	man/man1 &&	\
+	${MV} misc share/netpbm && 			\
+	${CHOWN} -R ${BINOWN}:${BINGRP} . &&		\
+	${FIND} * \! -type d | ${SORT} >${PLIST_SRC} &&	\
+	${FIND} * -type d | 				\
+	while read DIR; do				\
+	  ${TEST} -d "${PREFIX}/$${DIR}" ||		\
+	    ${ECHO} "@dirrm $${DIR}";			\
+	done >>${PLIST_SRC} &&				\
+	${GTAR} cf - * | ${GTAR} xpCf ${PREFIX} - &&	\
+	${RM} -fr ${STAGEDIR}
 
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
-
 .include "../../mk/bsd.pkg.mk"
