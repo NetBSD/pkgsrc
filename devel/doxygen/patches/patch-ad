@@ -1,0 +1,11 @@
+$NetBSD: patch-ad,v 1.1 2002/01/14 17:18:04 wiz Exp $
+
+--- src/scanner.l.orig	Sun Aug 26 11:18:58 2001
++++ src/scanner.l
+@@ -4110,5 +4110,5 @@
+ 
+ //----------------------------------------------------------------------------
+ extern "C" { // some bogus code to keep the compiler happy
+-  void scannerYYdummy() { yy_flex_realloc(0,0); } 
++//  void scannerYYdummy() { yy_flex_realloc(0,0); } 
+ }

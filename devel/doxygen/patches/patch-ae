@@ -1,0 +1,11 @@
+$NetBSD: patch-ae,v 1.1 2002/01/14 17:18:04 wiz Exp $
+
+--- src/code.l.orig	Sat Aug 18 16:32:44 2001
++++ src/code.l
+@@ -1644,5 +1644,5 @@
+ 
+ extern "C" { // some bogus code to keep the compiler happy
+ //  int  codeYYwrap() { return 1 ; }
+-  void codeYYdummy() { yy_flex_realloc(0,0); } 
++//  void codeYYdummy() { yy_flex_realloc(0,0); } 
+ }
