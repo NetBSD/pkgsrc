@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2002/04/21 08:05:23 rh Exp $
+# $NetBSD: Makefile.common,v 1.2 2002/04/22 11:45:52 rh Exp $
 
 DISTNAME?=		MPlayer-0.60
 CATEGORIES?=		graphics
@@ -7,7 +7,6 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER?=		svs@ropnet.ru,zuntum@netbsd.org
 HOMEPAGE?=		http://www.mplayerhq.hu/
-COMMENT?=		Software only MPEG-1/2/4 video decoder
 
 ONLY_FOR_PLATFORM?=	NetBSD-1.5[Y-Z]*-i386 NetBSD-1.[6-9]*-i386
 

@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.20 2002/04/21 08:05:23 rh Exp $
+# $NetBSD: Makefile,v 1.21 2002/04/22 11:45:52 rh Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/MP/mp/}
 PKGREVISION=	2
 MASTER_SITES=	http://mp.dev.hu/MPlayer/releases/
+
+COMMENT=	Software only MPEG-1/2/4 video decoder
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mplayer ${PREFIX}/bin
