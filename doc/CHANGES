@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8443 2004/12/25 21:47:45 minskim Exp $
+$NetBSD: CHANGES,v 1.8444 2004/12/25 23:15:19 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6550,3 +6550,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mtr to 0.67 [wiz 2004-12-25]
 	Updated mtr-gtk to 0.67 [wiz 2004-12-25]
 	Updated xbindkeys-tk to 1.7.1nb1 [minskim 2004-12-25]
+	Added p5-Kwiki-0.36 [jlam 2004-12-25]
