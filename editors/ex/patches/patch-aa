@@ -1,24 +1,40 @@
-$NetBSD: patch-aa,v 1.2 2002/12/16 15:05:56 itojun Exp $
+$NetBSD: patch-aa,v 1.3 2004/02/15 22:29:39 itojun Exp $
 
---- Makefile.orig	Mon Feb  4 10:06:32 2002
-+++ Makefile	Tue Dec 17 00:03:27 2002
-@@ -83,13 +83,13 @@
+--- Makefile.orig	2004-01-03 23:22:47.000000000 +0900
++++ Makefile	2004-02-16 07:24:39.000000000 +0900
+@@ -83,13 +83,15 @@
  BINDIR		= bin
  LIBEXECDIR	= libexec
  MANDIR		= man
 -DESTDIR		= /usr/local
+-PRESERVEDIR	= /var/preserve
++#DESTDIR	= /usr/local
 +DESTDIR		= ${PREFIX}
- PRESERVEDIR	= /var/preserve
++PRESERVEDIR	= /var/tmp/vi.recover
  
  #
  # A BSD-like install program. GNU install will fit well here, too.
  #
 -INSTALL		= /usr/ucb/install
-+#INSTALL		= /usr/ucb/install
++#INSTALL	= /usr/ucb/install
++INSTALL		= ${INSTALL_PROGRAM}
  
  #
  # Compiler and linker flags.
-@@ -169,7 +169,7 @@
+@@ -140,9 +142,9 @@
+ # advanced multibyte character support etc. which might not be present
+ # on your system.
+ #
+-REINC	= -I./libuxre -DUXRE
+-RELIB	= -L./libuxre -luxre
+-RETGT	= uxre
++#REINC	= -I./libuxre -DUXRE
++#RELIB	= -L./libuxre -luxre
++#RETGT	= uxre
+ 
+ #
+ # These settings should be correct for any modern Unix.
+@@ -182,7 +184,7 @@
  # On System V, the terminfo library may be more accurate than the termcap
  # file. To use it, link against the curses library.
  #
@@ -27,7 +43,7 @@ $NetBSD: patch-aa,v 1.2 2002/12/16 15:05:56 itojun Exp $
  #
  # You may also get terminfo access by using the ncurses library.
  #
-@@ -178,7 +178,7 @@
+@@ -191,7 +193,7 @@
  # The preferred choice for ex on Linux and other systems that provide a good
  # termcap file is the 2.11BSD termcap library included here.
  #
