@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 1998/09/01 04:07:33 garbled Exp $
+--- src/context1.c.orig	Mon Aug 31 06:33:46 1998
++++ src/context1.c	Mon Aug 31 20:54:52 1998
+@@ -25,6 +25,9 @@
+ #include <stdio.h>
+ #include "timeit.c"
+ #include <errno.h>
++#include <sys/types.h>
++#include <unistd.h>
++#include <stdlib.h>
+ 
+ unsigned long iter;
+ 
+@@ -39,7 +42,7 @@
+ char	*argv[];
+ {
+ 	int duration;
+-	int	check;
++	unsigned long	check;
+ 	int	p1[2], p2[2];
+ 
+ 	if (argc != 2) {
