@@ -1,4 +1,4 @@
-/*	$NetBSD: nbcompat.h,v 1.29 2003/12/10 07:21:20 grant Exp $	*/
+/*	$NetBSD: nbcompat.h,v 1.30 2003/12/19 22:45:14 grant Exp $	*/
 
 /*-
  * Copyright (c) 2003 The NetBSD Foundation, Inc.
@@ -469,19 +469,27 @@ void strmode(mode_t, char *);
 char   *strptime(const char *, const char *, struct tm *);
 #endif
 
-#if HAVE_QUAD_SUPPORT
+#if HAVE_WORKING_LONG_LONG
 # if !defined(HAVE_STRTOLL) && defined(HAVE_LONG_LONG)
 long long strtoll(const char *, char **, int);
-#  if ! defined(QUAD_MIN)
-#   define QUAD_MIN	(-0x7fffffffffffffffL-1)
-#  endif
-#  if ! defined(QUAD_MAX)
-#   define QUAD_MAX	(0x7fffffffffffffffL)
+# endif
+# if ! defined(LLONG_MAX)
+#  if defined(LONG_LONG_MAX)
+#   define LLONG_MAX	LONG_LONG_MAX
+#  else
+#   define LLONG_MAX	(0x7fffffffffffffffL)
 #  endif
 # endif
-#else	/* ! HAVE_QUAD_SUPPORT */
+# if ! defined(LLONG_MIN)
+#  if defined(LONG_LONG_MIN)
+#   define LLONG_MIN	LONG_LONG_MIN
+#  else
+#   define LLONG_MIN	(-0x7fffffffffffffffL-1)
+#  endif
+# endif
+#else	/* ! HAVE_WORKING_LONG_LONG */
 # define NO_LONG_LONG	1
-#endif	/* ! HAVE_QUAD_SUPPORT */
+#endif	/* ! HAVE_WORKING_LONG_LONG */
 
 #if ! defined(LLONG_MAX)
 # define LLONG_MAX	0x7fffffffffffffffLL	/* max long long */
