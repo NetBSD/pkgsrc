@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/09/21 17:17:43 jmmv Exp $
+
+--- tools/Makefile.in.orig	2004-03-10 16:24:01.000000000 +0100
++++ tools/Makefile.in
+@@ -267,7 +267,8 @@ killev_SOURCES = \
+ 
+ 
+ killev_LDADD = \
+-	$(top_builddir)/e-util/libeutil.la
++	$(top_builddir)/e-util/libeutil.la \
++	$(E_UTIL_LIBS)
+ 
+ 
+ CLEANFILES = evolution-addressbook-clean $(BUILT_SOURCES)
