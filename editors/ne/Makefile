@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/08/14 22:14:40 tron Exp $
+# $NetBSD: Makefile,v 1.2 1998/11/12 23:03:40 frueauf Exp $
 
 DISTNAME=	ne
 PKGNAME=	ne-1.25
@@ -6,9 +6,10 @@ WRKSRC=		${WRKDIR}/src
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.cus.cam.ac.uk/pub/software/programs/NE/
 DISTFILES=	ne.tar.gz ne.manpage.1 NE.spec.ascii NE.changes.spec
-DIST_SUBDIR=	ne
 
 MAINTAINER=	bjh@mail.dotcom.fr
+
+DIST_SUBDIR=	ne
 
 EXTRACT_ONLY=	ne.tar.gz
 
