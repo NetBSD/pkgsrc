@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8226 2004/12/03 13:12:58 adam Exp $
+$NetBSD: CHANGES,v 1.8227 2004/12/03 13:29:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5723,3 +5723,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gaim to 1.1.0 [adam 2004-12-03]
 	Updated nosefart to 2.3 [wiz 2004-12-03]
 	Updated gtk-gnutella to 0.95 [adam 2004-12-03]
+	Updated xpat2 to 1.07 [wiz 2004-12-03]
