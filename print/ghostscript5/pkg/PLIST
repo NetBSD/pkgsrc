@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.8 2000/04/10 02:19:18 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2000/04/20 16:28:48 jlam Exp $
 bin/bdftops
 bin/dvipdf
 bin/font2c
+bin/gs
 bin/gsbj
 bin/gsdj
 bin/gsdj500
 bin/gslj
 bin/gslp
 bin/gsnd
-bin/gstty
 bin/pdf2dsc
 bin/pdf2ps
 bin/printafm
