@@ -5,8 +5,8 @@
 # (c) Copyright 2000 Hubert Feyrer <hubert@feyrer.de>
 #
 
-#$etcdir="@PREFIX@/etc";
-$etcdir="/usr/pkg/etc";
+$etcdir="@PREFIX@/etc";
+#$etcdir="/usr/pkg/etc";		# debug
 
 require "$etcdir/6to4.conf";
 
@@ -126,7 +126,11 @@ if ($ARGV[0] eq "rtadvd-start" or $ARGV[0] eq "start-rtadvd" ) {
 	print "rtadvd already running!\n";
     } else {
 	run("sysctl -w net.inet6.ip6.forwarding=1");
+<<<<<<< 6to4
+	run("sysctl -w net.inet6.ip6.accept_rtadvd=1");
+=======
 	run("sysctl -w net.inet6.ip6.accept_rtadv=0");
 	run("rtadvd $in_if");
+>>>>>>> 1.4
     }
 }
