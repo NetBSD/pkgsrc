@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.7 2001/01/29 11:34:31 wiz Exp $
+$NetBSD: MESSAGE,v 1.8 2001/04/03 13:10:17 wiz Exp $
 
-Add the following to /etc/services:
+Add the following to /etc/services (if not already there):
 
  imap		143/tcp		# Internet Message Access Protocol
  imap		143/udp
@@ -18,7 +18,10 @@ Add the following to /etc/inetd.conf:
  pop3   stream  tcp     nowait  root    ${PREFIX}/libexec/ipop3d   ipop3d
  pop3s  stream  tcp     nowait  root    ${PREFIX}/libexec/ipop3d   ipop3d
 
-To put the changes into effect, reboot the machine or "kill -HUP"
-your inetd.
+To put the changes into effect, make inetd reload its configuration:
+On NetBSD 1.5 or later:
+	/etc/rc.d/inetd reload
+on earlier NetBSD releases:
+	kill -HUP `cat /var/run/inetd.pid`
 
 ===========================================================================
