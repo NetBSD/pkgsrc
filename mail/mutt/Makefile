@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2000/05/20 18:39:45 kim Exp $
+# $NetBSD: Makefile,v 1.47 2000/06/08 12:57:18 wiz Exp $
 
 DISTNAME=	mutt-1.2i
 CATEGORIES=	mail
@@ -18,7 +18,7 @@ RESTRICTED=	"Contains PGP and SSL code"
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-CONFIGURE_ARGS+= --with-curses=${LOCALBASE} --with-exec-shell=/bin/ksh \
+CONFIGURE_ARGS+= --with-exec-shell=/bin/ksh \
 		 --with-docdir=${PREFIX}/share/doc/mutt \
 		 --enable-pop --enable-imap
 
@@ -46,7 +46,19 @@ PLIST_SUBST+=	LOCALEBASE=share
 .endif
 
 .if ${OPSYS} == "NetBSD"
+OSVER!=		uname -r
+GOOD_CURSES=	1.4[Y-Z] 1.4Z[A-Z] 1.[5-9]*
+
+.for PATTERN in ${GOOD_CURSES}
+.if ${OSVER:M${PATTERN}} != ""
+CURSES_GOOD?=	# defined
+.endif
+.endfor
+
+.if !defined(CURSES_GOOD)
 DEPENDS+=	ncurses>=4.2:../../devel/ncurses
+CONFIGURE_ARGS+= --with-curses=${LOCALBASE}
+.endif
 .endif
 
 .include "../../mk/bsd.pkg.mk"
