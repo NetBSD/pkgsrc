@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2004/01/23 21:50:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2004/02/09 18:47:36 jmmv Exp $
 #
 
 DISTNAME=	gtranslator-1.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 MASTER_SITES=	http://www.gtranslator.org/download/releases/1.0/
 

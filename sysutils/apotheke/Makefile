@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/02/06 22:37:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/09 18:47:38 jmmv Exp $
 #
 
 DISTNAME=	apotheke-0.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	ftp://ftp.berlios.de/pub/apotheke/
 
