@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9075 2005/02/07 16:17:42 seb Exp $
+$NetBSD: CHANGES,v 1.9076 2005/02/08 05:29:55 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -795,3 +795,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-URI to 1.35 [wiz 2005-02-07]
 	Updated p5-HTML-Parser to 3.45 [wiz 2005-02-07]
 	Updated pkg_install-info to 4.5nb3 [seb 2005-02-07]
+	Updated ezmlm-idx to 0.434 [schmonz 2005-02-08]
