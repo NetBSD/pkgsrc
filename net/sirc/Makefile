@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/10/04 01:59:52 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 1998/11/01 13:51:09 hubertf Exp $
 
 DISTNAME=	sirc-2.211
 CATEGORIES=	net
@@ -28,9 +28,7 @@ SIRC_SCRIPTS= \
 		prefix.pl			\
 		quit.pl				\
 		ssfe.diff			\
-		winnuke.pl			\
-		www.pl 				\
-		yiff.pl
+		www.pl 				
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
