@@ -1,6 +1,6 @@
-AfterStep is a window manager for X which started by emulating the
-NextStep look and feel, but which has evolved significantly from
-its origins. It remains highly configurable, functional, and
-intuitive. AfterStep was one of the first window managers to
-achieve gnome compatibility, and it can be configured to complement
-the Gnome Desktop very well.
+AfterStep is a window manager for the Unix X Window System.  Based on the
+look and feel of the NeXTStep interface, it provides end users with a
+consistent, clean, and elegant desktop.
+
+Some of the distinguishing features of AfterStep compared to other window
+managers are its low usage of resources, stability and configurability.
