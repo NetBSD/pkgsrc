@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/11/18 13:36:20 cjep Exp $
+
+SHA1 (9e.tar.gz) = fc966f51a167e4ed3dc371e399bbc8909f074b54
+Size (9e.tar.gz) = 2019 bytes
+SHA1 (patch-aa) = 5d5982bfc544910f3d36eb40a9de9c5caa8432fd
+SHA1 (patch-ab) = ff56f66a9bb5d1dc2880ec1d2c39a4ca0dc48f1a
