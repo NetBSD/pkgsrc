@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.9 2002/04/05 01:49:47 hubertf Exp $
+$NetBSD: patch-aa,v 1.10 2002/09/21 08:10:57 jlam Exp $
 
---- Makefile.orig	Sat Jun  5 15:05:36 1999
+--- Makefile.orig	Sat Jun  5 06:05:36 1999
 +++ Makefile
 @@ -1,17 +1,17 @@
  # Your favorite compilation options here :-)
@@ -13,8 +13,8 @@ $NetBSD: patch-aa,v 1.9 2002/04/05 01:49:47 hubertf Exp $
  # Here, what you need for PostgreSQL
 -PGSQLIBS    = -L/usr/local/pgsql/lib -lpq
 -PGSQLCFLAGS = -I/usr/local/pgsql/include -DUSE_POSTGRESQL
-+PGSQLIBS    = -L${BUILDLINK_DIR}/lib -lpq
-+PGSQLCFLAGS = -I${BUILDLINK_DIR}/include/pgsql/server -I${BUILDLINK_DIR}/include/pgsql -DUSE_POSTGRESQL
++PGSQLIBS    = -L${LOCALBASE}/lib -lpq
++PGSQLCFLAGS = -I${LOCALBASE}/include/pgsql/server -I${LOCALBASE}/include/pgsql -DUSE_POSTGRESQL
  PGSQLOBJS   = postgres.o
  
  # Here, what you need for MySQL
@@ -27,14 +27,8 @@ $NetBSD: patch-aa,v 1.9 2002/04/05 01:49:47 hubertf Exp $
  
  # Nothing to change below this point...
  DBSQLIBS = $(PGSQLIBS) $(MYSQLIBS)
-@@ -24,17 +24,17 @@
- OBJS    = $(MOBJS) $(DBSQLOBJS)
- CFLAGS  = $(MCFLAGS) $(DBSQLFLAGS)
- 
--GTKLIBS     = `gtk-config --libs`
--GTKCFLAGS   = `gtk-config --cflags`
-+GTKLIBS     = `${GTK_CONFIG} --libs`
-+GTKCFLAGS   = `${GTK_CONFIG} --cflags`
+@@ -28,13 +28,13 @@ GTKLIBS     = `gtk-config --libs`
+ GTKCFLAGS   = `gtk-config --cflags`
  
  all: $(OBJS)
 -	gcc -o gtksql $(OBJS) $(DBSQLIBS) $(GTKLIBS) $(CFLAGS) $(LDFLAGS)
