@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2003/07/11 00:21:45 fredb Exp $
+# $NetBSD: Makefile,v 1.74 2003/07/13 14:16:10 wulf Exp $
 
 DISTNAME=	netpbm-10.11.8
 CATEGORIES=	graphics
@@ -19,7 +19,7 @@ MAKE_ENV+=	INSTALL="${INSTALL}" STRIPFLAG="${_STRIPFLAG_INSTALL}" \
 MAKEFILE=	GNUmakefile
 PLIST_SRC=	${WRKDIR}/PLIST_STAGE
 REPLACE_PERL=	editor/ppmfade editor/ppmshadow editor/pnmquant \
-		generator/ppmrainbow
+		generator/ppmrainbow manweb
 STAGEDIR=	${WRKDIR}/staging
 
 .include "../../mk/bsd.prefs.mk"
