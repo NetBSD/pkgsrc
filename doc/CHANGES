@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6844 2004/08/10 20:42:08 heinz Exp $
+$NetBSD: CHANGES,v 1.6845 2004/08/10 21:23:24 tv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3785,3 +3785,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cvsgraph to 1.4.1 [adrianp 2004-08-10]
 	Updated libnbcompat to 20040809 [jlam 2004-08-10]
 	Updated spamassassin to 2.64 [heinz 2004-08-10]
+	Updated p5-Sendmail-PMilter to 0.95 [tv 2004-08-10]
