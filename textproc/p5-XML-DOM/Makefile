@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/04/17 10:59:55 shell Exp $
+# $NetBSD: Makefile,v 1.9 2002/10/27 20:49:00 seb Exp $
 #
 
 DISTNAME=	XML-DOM-1.39
@@ -16,11 +16,8 @@ DEPENDS+=	p5-XML-RegExp-[0-9]*:../../textproc/p5-XML-RegExp
 
 CONFLICTS+=	p5-libxml-enno-[0-9]*
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XML-DOM/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/11/26 06:50:30 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/27 20:49:01 seb Exp $
 
 DISTNAME=	Apache-SSI-2.16
 PKGNAME=	p5-${DISTNAME}
@@ -9,14 +9,11 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Apache/}
 MAINTAINER=	packages@netbsd.org
 COMMENT=	perl5 module to implement Server Side Includes
 
-DEPENDS+=	ap-perl>=1.19:../../www/ap-perl
 DEPENDS+=	p5-HTML-SimpleParse>=0.06:../../www/p5-HTML-SimpleParse
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Apache/SSI/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../www/ap-perl/buildlink2.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
