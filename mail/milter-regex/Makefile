@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/03/03 21:09:52 manu Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/06 13:50:57 tv Exp $
 #
 
 DISTNAME=	milter-regex-1.2
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.benzedrine.cx/
 
