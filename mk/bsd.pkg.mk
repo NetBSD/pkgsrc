@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.607 2000/11/17 09:58:49 skrll Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.608 2000/11/18 01:03:33 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -72,7 +72,7 @@ PKG_JVM?=		kaffe
 .endif
 .endif
 .if ${PKG_JVM} == "jdk"
-DEPENDS+=		{blackdown-jre,jdk}-*:../../lang/jdk
+DEPENDS+=		{sun-jre,jdk}-*:../../lang/jdk
 .if defined(JDK_HOME)
 JAVA_HOME?=		${JDK_HOME}
 .else
