@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/11/25 14:08:22 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/01/29 11:02:58 jlam Exp $
 README.html
 bin/HtmlConverter
 bin/${BLACKDOWN_ARCH}/green_threads/appletviewer
@@ -626,12 +626,6 @@ man/man1/native2ascii.1
 man/man1/rmic.1
 man/man1/serialver.1
 src.jar
-@unexec ${RMDIR} %D/man/man1 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/ja/man1 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/ja 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/ 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/${BLACKDOWN_ARCH} 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib 2>/dev/null || ${TRUE}
 @dirrm include/linux
 @dirrm include-old/linux
 @dirrm include-old
@@ -731,8 +725,3 @@ src.jar
 @dirrm demo/applets/Animator
 @dirrm demo/applets
 @dirrm demo
-@unexec ${RMDIR} %D/bin/${BLACKDOWN_ARCH}/native_threads 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/bin/${BLACKDOWN_ARCH}/green_threads 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/bin/${BLACKDOWN_ARCH} 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/bin 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D 2>/dev/null || ${TRUE}
