@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7642 2004/11/01 20:45:15 jdolecek Exp $
+$NetBSD: CHANGES,v 1.7643 2004/11/01 21:39:29 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5005,3 +5005,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated automake to 1.9.3 [wiz 2004-11-01]
 	Added pear-Mail_Mime-1.2.1 [jdolecek 2004-11-01]
 	Added pear-Net_URL-1.0.10 [jdolecek 2004-11-01]
+	Added pear-Net_Socket-1.0.1 [jdolecek 2004-11-01]
