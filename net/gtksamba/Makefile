@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2003/05/02 13:51:31 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/05/05 19:05:16 jmmv Exp $
 #
 
 DISTNAME=	gtksamba-0.3.2pl1
-PKGREVISION=	1
 PKGNAME=	gtksamba-0.3.2.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.open-systems.com/gtksamba/
 
