@@ -1,0 +1,59 @@
+$NetBSD: patch-au,v 1.1.1.1 2002/03/05 13:37:29 seb Exp $
+
+--- tclpathplan/Makefile.in.orig	Fri Mar  1 22:35:40 2002
++++ tclpathplan/Makefile.in
+@@ -187,10 +187,7 @@
+ 
+ AUTOMAKE_OPTIONS = 1.4
+ 
+-INCLUDES = @TCL_CFLAGS@ \
+-	-I$(top_srcdir)/tclhandle \
+-	-I$(top_srcdir)/pathplan \
+-	-I@TCLSH_EXEC_PREFIX@/include
++INCLUDES = @TCL_CFLAGS@ 	-I$(top_srcdir)/tclhandle 	-I$(top_srcdir)/pathplan
+ 
+ 
+ LIBS = 
+@@ -200,14 +197,10 @@
+ 
+ SUBDIRS = demo
+ 
+-libtclplan_la_SOURCES = find_ints.c intersect.c makecw.c \
+-	tclpathplan.c wrapper.c simple.h
++libtclplan_la_SOURCES = find_ints.c intersect.c makecw.c 	tclpathplan.c wrapper.c simple.h
+ 
+ 
+-libtclplan_la_LIBADD = \
+-	../tclhandle/libtclhandle.la \
+-	../pathplan/libpathplan.la \
+-        ../tclstubs/libtclstubs.la -lm
++libtclplan_la_LIBADD =  	../tclhandle/libtclhandle.la 	../pathplan/libpathplan.la         ${TCL_STUB_LIB_SPEC} -lm
+ 
+ 
+ CLEANFILES = pkgIndex.tcl
+@@ -226,7 +219,7 @@
+ X_PRE_LIBS = @X_PRE_LIBS@
+ libtclplan_la_LDFLAGS = 
+ libtclplan_la_DEPENDENCIES =  ../tclhandle/libtclhandle.la \
+-../pathplan/libpathplan.la ../tclstubs/libtclstubs.la
++../pathplan/libpathplan.la
+ libtclplan_la_OBJECTS =  find_ints.lo intersect.lo makecw.lo \
+ tclpathplan.lo wrapper.lo
+ CFLAGS = @CFLAGS@
+@@ -241,7 +234,7 @@
+ 
+ DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ 
+-TAR = gtar
++TAR = tar
+ GZIP_ENV = --best
+ SOURCES = $(libtclplan_la_SOURCES)
+ OBJECTS = $(libtclplan_la_OBJECTS)
+@@ -443,7 +436,6 @@
+ 	      || exit 1; \
+ 	  fi; \
+ 	done
+-
+ info-am:
+ info: info-recursive
+ dvi-am:

@@ -1,0 +1,23 @@
+$NetBSD: patch-al,v 1.1.1.1 2002/03/05 13:37:29 seb Exp $
+
+--- tcldgr/Makefile.am.orig	Thu Feb 21 23:16:54 2002
++++ tcldgr/Makefile.am
+@@ -5,8 +5,7 @@
+ INCLUDES = @TCL_CFLAGS@ \
+ 	-I$(top_srcdir)/agraph \
+ 	-I$(top_srcdir)/cdt \
+-	-I$(top_srcdir)/tclhandle \
+-	-I@TCLSH_EXEC_PREFIX@/include
++	-I$(top_srcdir)/tclhandle
+ 
+ LIBS =
+ 
+@@ -21,7 +20,7 @@
+ libtcldgr_la_LIBADD = ../tclhandle/libtclhandle.la \
+ 	../agraph/libagraph.la \
+ 	../cdt/libcdt.la \
+-        ../tclstubs/libtclstubs.la
++        ${TCL_STUB_LIB_SPEC}
+ 
+ all-local: pkgIndex.tcl
+ 
