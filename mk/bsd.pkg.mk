@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1510 2004/10/07 02:01:38 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1511 2004/10/09 03:47:13 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -1999,7 +1999,8 @@ EXTRACT_CMD.zoo?=	${LOCALBASE}/bin/unzoo ${EXTRACT_CMD_OPTS.zoo} $${extract_file
 EXTRACT_CMD_OPTS.zoo?=	-x
 EXTRACT_CMD.rar?=	${LOCALBASE}/bin/unrar ${EXTRACT_CMD_OPTS.rar} $${extract_file}
 EXTRACT_CMD_OPTS.rar?=	x -inul
-EXTRACT_CMD.bin?=	${ECHO} yes | $${extract_file} ${EXTRACT_CMD_OPTS.bin} >/dev/null
+EXTRACT_ENV.bin?=	# empty
+EXTRACT_CMD.bin?=	${ECHO} yes | ${SETENV} ${EXTRACT_ENV.bin} $${extract_file} ${EXTRACT_CMD_OPTS.bin} >/dev/null
 
 .for __suffix__ in .gz .bz2 .Z
 EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} > `${BASENAME} $${extract_file} ${__suffix__}`
