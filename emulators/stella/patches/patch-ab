@@ -1,24 +1,159 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/05/18 23:14:16 tv Exp $
+$NetBSD: patch-ab,v 1.2 2004/06/05 11:56:31 dillo Exp $
 
---- ../ui/sound/makefile.orig	Tue May 18 10:25:27 1999
-+++ ../ui/sound/makefile	Tue May 18 10:26:05 1999
-@@ -1,9 +1,8 @@
- ###############################################################################
- ## C compiler to use
- ###############################################################################
--CC = gcc
+--- makefile.orig	2003-02-18 02:19:44.000000000 +0100
++++ makefile
+@@ -43,7 +43,7 @@ OPTIMIZATIONS    = -O2 -Wall -Wno-unused
+ ### comment out all lines to completely disable sound
+ ###
+ #SOUND_ALSA = 1
+-SOUND_OSS  = 1
++#SOUND_OSS  = 1
+ #SOUND_SDL  = 1
  
--CFLAGS = -DWIN32 -O -ansi -Wall
-+CPPFLAGS = -DWIN32
+ ### if your C++ compiler doesn't support the bool type
+@@ -61,7 +61,7 @@ SOUND_OSS  = 1
+ ### to include support for saving snapshots in png format
+ ### (requires PNG library)
+ ### Only X11 and SDL ports supported for now
+-# SNAPSHOT_SUPPORT = 1
++SNAPSHOT_SUPPORT = 1
  
- OBJS = TIASound.o
+ ### comment this out if your system doesn't
+ ### have the gettimeofday function
+@@ -72,23 +72,26 @@ HAVE_GETTIMEOFDAY = 1
+ ### enables some extra commandline options that allow the user
+ ### to override some emulation defaults
+ ### Only X11 and SDL ports supported for now
+-# DEVELOPER_SUPPORT = 1
++DEVELOPER_SUPPORT = 1
  
-@@ -29,7 +28,7 @@
- uss: oss
+ ##============================================================================
+ ## All done, type make to get a list of frontends
+ ## No configurable options below this line ...
+ ##============================================================================
  
- oss: $(OBJS) OSS.o
--	$(CC) -o stella-sound OSS.o $(OBJS)
-+	$(CC) -o stella-sound OSS.o $(OBJS) -lossaudio
+-CXX	= g++
+-LD	= g++
++#CXX	= g++
++#LD	= g++
  
- clean:
- 	rm -f *.o stella-sound
+-LDFLAGS = 
++#LDFLAGS = 
+ LDLIBS	= 
+ 
++CFLAGS+=	-DPKG_SYSCONFDIR=\"${PKG_SYSCONFDIR}\" \
++		-DDATADIR=\"${PREFIX}/share/stella\"
++
+ OBJS.X11   =
+ OPTS.X11   =
+-LIBS.X11   =
+-CFLAGS.X11 =
++LIBS.X11   = 
++CFLAGS.X11 = 
+ 
+ OBJS.SDL   =
+ OPTS.SDL   =
+@@ -152,8 +155,11 @@ endif
+ ifeq ($(SOUND_OSS), 1)
+   OPTS.X11 += -DSOUND_OSS=1
+   OBJS.X11 += SoundOSS.o
++  LIBS.X11 += ${LIBOSSAUDIO}
+   OPTS.SDL += -DSOUND_OSS=1
+   OBJS.SDL += SoundOSS.o
++  LIBS.SDL += ${LIBOSSAUDIO}
++  CFLAGS   += -DDSP_DEVICE=\"${DEVOSSSOUND}\"
+ endif
+ 
+ ifeq ($(SOUND_SDL), 1)
+@@ -207,11 +213,10 @@ unix-x:
+           SYS_INCLUDES="" \
+           OPTIONS="-DBSPF_UNIX=1" \
+           OPTIONS+="$(OPTS.X11)" \
+-          LDFLAGS="-L/usr/X11R6/lib" \
+-          LDFLAGS+="$(CFLAGS.X11)" \
++          CFLAGS+="$(CFLAGS.X11)" \
+           LDLIBS="-lX11 -lXext" \
+           LDLIBS+="$(LIBS.X11)" \
+-          OBJS="mainX11.o"
++          OBJS="mainX11.o" \
+           OBJS+="$(OBJS.X11)"
+ 
+ linux-x:
+@@ -233,9 +238,7 @@ linux-sdl:
+           SYS_INCLUDES="" \
+           OPTIONS="-DBSPF_UNIX=1" \
+           OPTIONS+="$(OPTS.SDL)" \
+-          LDFLAGS="-L/usr/X11R6/lib" \
+-          LDFLAGS+="$(CFLAGS.SDL)" \
+-          LDLIBS="-lX11 -lXext" \
++          CFLAGS+="$(CFLAGS.SDL)" \
+           LDLIBS+="$(LIBS.SDL)" \
+           OBJS="mainSDL.o RectList.o" \
+           OBJS+="$(OBJS.SDL)"
+@@ -290,10 +293,10 @@ stella.exe: $(CORE_OBJS) $(OBJS)
+ 	del a.exe
+ 
+ stella.x11: $(CORE_OBJS) $(OBJS)
+-	$(LD) -o stella.x11 $(CORE_OBJS) $(OBJS) $(LDFLAGS) $(LDLIBS)
++	$(CXX) -o stella.x11 $(CORE_OBJS) $(OBJS) $(LDFLAGS) $(LDLIBS)
+ 
+ stella.sdl: $(CORE_OBJS) $(OBJS)
+-	$(LD) -o stella.sdl $(CORE_OBJS) $(OBJS) $(LDFLAGS) $(LDLIBS)
++	$(CXX) -o stella.sdl $(CORE_OBJS) $(OBJS) $(LDFLAGS) $(LDLIBS)
+ 
+ M6502Low.ins: $(CORE)/m6502/src/M6502Low.m4 $(CORE)/m6502/src/M6502.m4
+ 	m4 $(CORE)/m6502/src/M6502Low.m4 $(CORE)/m6502/src/M6502.m4 > M6502Low.ins
+@@ -422,7 +425,7 @@ Random.o: $(CORE)/Random.cxx
+ 	$(CXX) -c $(CXXFLAGS) $(OPTIONS) $(CORE)/Random.cxx
+ 
+ Sound.o: $(CORE)/Sound.cxx $(CORE)/Sound.hxx
+-	$(CXX) -c $(CXXFLAGS) $(OPTIONS) $(LDFLAGS) $(CORE)/Sound.cxx
++	$(CXX) -c $(CXXFLAGS) $(OPTIONS) $(CFLAGS) $(CORE)/Sound.cxx
+ 
+ Switches.o: $(CORE)/Switches.cxx
+ 	$(CXX) -c $(CXXFLAGS) $(OPTIONS) $(CORE)/Switches.cxx
+@@ -434,7 +437,7 @@ Deserializer.o: $(CORE)/Deserializer.cxx
+ 	$(CXX) -c $(CXXFLAGS) $(OPTIONS) $(CORE)/Deserializer.cxx
+ 
+ Settings.o: $(UI)/common/Settings.cxx $(UI)/common/Settings.hxx
+-	$(CXX) -c $(CXXFLAGS) $(OPTIONS) $(LDFLAGS) $(UI)/common/Settings.cxx
++	$(CXX) -c $(CXXFLAGS) $(OPTIONS) $(CFLAGS) $(UI)/common/Settings.cxx
+ 
+ Terminal.o: $(UI)/x11/Terminal.cxx
+ 	$(CXX) -c $(CXXFLAGS) $(OPTIONS) $(UI)/x11/Terminal.cxx
+@@ -455,28 +458,28 @@ vga.o: $(UI)/dos/vga.cxx
+ 	$(CXX) -c $(CXXFLAGS) $(OPTIONS) $(UI)/dos/vga.cxx
+ 
+ SoundALSA.o: $(UI)/sound/SoundALSA.cxx $(UI)/sound/SoundALSA.hxx
+-	$(CXX) -c $(CXXFLAGS) $(OPTIONS) $(LDFLAGS) $(UI)/sound/SoundALSA.cxx
++	$(CXX) -c $(CXXFLAGS) $(OPTIONS) $(CFLAGS) $(UI)/sound/SoundALSA.cxx
+ 
+ SoundOSS.o: $(UI)/sound/SoundOSS.cxx $(UI)/sound/SoundOSS.hxx
+-	$(CXX) -c $(CXXFLAGS) $(OPTIONS) $(LDFLAGS) $(UI)/sound/SoundOSS.cxx
++	$(CXX) -c $(CXXFLAGS) $(OPTIONS) $(CFLAGS) $(UI)/sound/SoundOSS.cxx
+ 
+ SoundSDL.o: $(UI)/sound/SoundSDL.cxx $(UI)/sound/SoundSDL.hxx
+-	$(CXX) -c $(CXXFLAGS) $(OPTIONS) $(LDFLAGS) $(UI)/sound/SoundSDL.cxx
++	$(CXX) -c $(CXXFLAGS) $(OPTIONS) $(CFLAGS) $(UI)/sound/SoundSDL.cxx
+ 
+ TermX11.o: $(UI)/x11/TermX11.cxx
+ 	$(CXX) -c $(CXXFLAGS) $(OPTIONS) $(UI)/x11/TermX11.cxx
+ 
+ mainX11.o: $(UI)/x11/mainX11.cxx
+-	$(CXX) -c $(CXXFLAGS) $(OPTIONS) $(LDFLAGS) $(UI)/x11/mainX11.cxx
++	$(CXX) -c $(CXXFLAGS) $(OPTIONS) $(CFLAGS) $(UI)/x11/mainX11.cxx
+ 
+ mainSDL.o: $(UI)/sdl/mainSDL.cxx
+-	$(CXX) -c $(CXXFLAGS) $(OPTIONS) $(LDFLAGS) $(UI)/sdl/mainSDL.cxx
++	$(CXX) -c $(CXXFLAGS) $(OPTIONS) $(CFLAGS) $(UI)/sdl/mainSDL.cxx
+ 
+ RectList.o: $(UI)/sdl/RectList.cxx $(UI)/sdl/RectList.hxx
+-	$(CXX) -c $(CXXFLAGS) $(OPTIONS) $(LDFLAGS) $(UI)/sdl/RectList.cxx
++	$(CXX) -c $(CXXFLAGS) $(OPTIONS) $(CFLAGS) $(UI)/sdl/RectList.cxx
+ 
+ Snapshot.o: $(UI)/common/Snapshot.cxx $(UI)/common/Snapshot.hxx
+-	$(CXX) -c $(CXXFLAGS) $(OPTIONS) $(LDFLAGS) $(UI)/common/Snapshot.cxx
++	$(CXX) -c $(CXXFLAGS) $(OPTIONS) $(CFLAGS) $(UI)/common/Snapshot.cxx
+ 
+ D6502.o: $(CORE)/m6502/src/D6502.cxx
+ 	$(CXX) -c $(CXXFLAGS) $(OPTIONS) $(CORE)/m6502/src/D6502.cxx
