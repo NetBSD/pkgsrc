@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/05/11 07:27:18 jmc Exp $
+# $NetBSD: Makefile,v 1.4 2003/05/12 21:48:04 jmc Exp $
 
 DISTNAME=	xcursorgen-4.3.0
 WRKSRC=		${WRKDIR}/${DISTNAME:C/-.*//}
@@ -16,8 +16,7 @@ USE_IMAKE=	YES
 .include "../../mk/bsd.prefs.mk"
 
 .if !exists(${X11BASE}/bin/xcursor-config)
-BROKEN=		This package requires XFree86 4.3.0 or newer.
-PKG_FAIL_REASON=	This package requires XFree86 4.3.0 or newer.
+PKG_FAIL_REASON="This package requires XFree86 4.3.0 or newer."
 .endif
 
 .include "../../graphics/png/buildlink2.mk"
