@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/03/23 12:25:03 dmcmahill Exp $
+
+--- src/unitscombo.c.orig	Mon Jul 15 07:46:36 2002
++++ src/unitscombo.c
+@@ -31,6 +31,7 @@ USA.
+ #include <math.h>
+ 
+ #include "transcalc.h"
++#include "unitscombo.h"
+ 
+ gchar *length_unit_name[] = { "mil",
+ 			      "cm",
