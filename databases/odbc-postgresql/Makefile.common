@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2004/05/08 05:25:12 snj Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/06/12 02:39:57 grant Exp $
 
 DISTNAME=		postgresql-${DIST_VERS}
 CATEGORIES=		databases
@@ -70,3 +70,5 @@ CONFIGURE_ARGS+=	--with-CXX
 CONFIGURE_ARGS+=	--with-template="${LOWER_OPSYS}"
 
 BUILD_DIRS=		${WRKSRC}/src/interfaces/odbc
+
+.include "../../security/openssl/buildlink3.mk"
