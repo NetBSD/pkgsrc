@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2000/05/03 17:44:29 rh Exp $
+@comment $NetBSD: PLIST,v 1.8 2001/01/04 15:10:52 agc Exp $
 bin/socks5
 bin/runsocks
 bin/stopsocks
@@ -18,4 +18,6 @@ man/man5/libsocks5.conf.5.gz
 man/man5/socks5.conf.5.gz
 man/man5/socks5.passwd.5
 lib/libsocks5.a
+lib/libsocks5_sh.so
+lib/libsocks5_sh.so.0
 lib/libsocks5_sh.so.0.0

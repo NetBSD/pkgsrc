@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2000/06/20 21:58:01 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/01/04 15:10:23 agc Exp $
 include/uu.h
 lib/libuu.a
 lib/libuu.la
+lib/libuu.so
+lib/libuu.so.1
 lib/libuu.so.1.0
 man/man3/uulib.3
 share/doc/uulib/HISTORY

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2000/04/11 22:36:39 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:36 agc Exp $
 etc/glx.conf.default
 @exec test -f %D/etc/glx.conf || cp %D/etc/glx.conf.default %D/etc/glx.conf
 etc/mesa.conf
@@ -14,12 +14,18 @@ include/GL/osmesa.h
 include/GL/xmesa.h
 include/GL/xmesa_x.h
 include/GL/xmesa_xf86.h
+lib/libGL.so
+lib/libGL.so.3
 lib/libGL.so.3.0
 lib/libGL.a
 lib/libGL.la
+lib/libGLU.so
+lib/libGLU.so.3
 lib/libGLU.so.3.0
 lib/libGLU.a
 lib/libGLU.la
+lib/libglut.so
+lib/libglut.so.10
 lib/libglut.so.10.0
 lib/libglut.a
 lib/libglut.la

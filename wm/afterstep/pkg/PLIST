@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/12 02:03:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:57 agc Exp $
 bin/ASSound
 bin/Animate
 bin/Audio
@@ -25,15 +25,23 @@ bin/installastheme.pl
 bin/makeastheme.pl
 lib/libafterstep.a
 lib/libafterstep.la
+lib/libafterstep.so
+lib/libafterstep.so.1
 lib/libafterstep.so.1.5
 lib/libasConfig.a
 lib/libasConfig.la
+lib/libasConfig.so
+lib/libasConfig.so.1
 lib/libasConfig.so.1.0
 lib/libasimage.a
 lib/libasimage.la
+lib/libasimage.so
+lib/libasimage.so.1
 lib/libasimage.so.1.9
 lib/libWidgets.a
 lib/libWidgets.la
+lib/libWidgets.so
+lib/libWidgets.so.1
 lib/libWidgets.so.1.5
 man/man1/Animate.1
 man/man1/Audio.1

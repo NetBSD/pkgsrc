@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/24 02:31:30 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:40 agc Exp $
 man/man3/giiSetEventMask.3
 man/man3/giiRemoveEventMask.3
 man/man3/giiPanic.3
@@ -14,8 +14,12 @@ man/man3/giiClose.3
 man/man3/giiAddEventMask.3
 man/man1/mhub.1
 lib/libgii.la
+lib/libgii.so
+lib/libgii.so.0
 lib/libgii.so.0.6
 lib/libgg.la
+lib/libgg.so
+lib/libgg.so.0
 lib/libgg.so.0.6
 lib/ggi/filter/save.la
 lib/ggi/filter/save.so

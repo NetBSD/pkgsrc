@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/08/24 19:53:34 jwise Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:47 agc Exp $
 bin/tclsh
 bin/tclsh8.3
 include/tcl.h
@@ -108,6 +108,8 @@ lib/tcl8.3/tclAppInit.c
 lib/tcl8.3/ldAix
 lib/tclConfig.sh
 lib/libtclstub83.a
+lib/libtcl83.so
+lib/libtcl83.so.1
 lib/libtcl83.so.1.0
 lib/libtcl83.la
 lib/libtcl83.a

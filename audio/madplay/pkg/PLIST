@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2000/12/04 22:04:48 rh Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/01/04 15:10:19 agc Exp $
 bin/abxtest
 bin/madplay
 include/mad.h
+lib/libmad.so
+lib/libmad.so.0
 lib/libmad.so.0.0
 lib/libmad.a
 lib/libmad.la

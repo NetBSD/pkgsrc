@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2000/07/03 07:31:37 sakamoto Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/01/04 15:10:46 agc Exp $
 bin/ruby
-lib/libruby.so.${RUBY_VERSION}
+lib/libruby.so
+lib/libruby.so.1
+lib/libruby.so.1.4
 lib/ruby/${RUBY_VERSION}/English.rb
 lib/ruby/${RUBY_VERSION}/Env.rb
 lib/ruby/${RUBY_VERSION}/base64.rb

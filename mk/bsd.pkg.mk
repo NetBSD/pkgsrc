@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.633 2001/01/04 14:17:54 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.634 2001/01/04 15:10:50 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1766,69 +1766,48 @@ do-shlib-handling:
 	sos=`${EGREP} -h -x '.*/lib[^/]+\.so\.[0-9]+(\.[0-9]+)+' ${PLIST} || ${TRUE}`; \
 	if [ "$$sos" != "" ]; then					\
 		shlib_type=`${MAKE} ${MAKEFLAGS} show-shlib-type`;	\
+		if [ "${SHLIB_PLIST_MODE}" = "0" ]; then 		\
+			${ECHO_MSG} "${_PKGSRC_IN}> [Automatic $$shlib_type shared object handling]"; \
+		fi;  							\
 		case "$$shlib_type" in					\
-		"ELF")							\
-			if [ "${SHLIB_PLIST_MODE}" = "0" ]; then 	\
-				${ECHO_MSG} "${_PKGSRC_IN}> [Automatic ELF shared object handling]"; \
-			fi ; 						\
-			${AWK} 'function makelinks(target, lib, v1, v2, v3) { \
-					if (${SHLIB_PLIST_MODE}) {	\
-						print target;		\
-					}				\
-					slashc = split(target, slashes, "/"); \
-					if (v3 >= 0) {			\
-						if (${SHLIB_PLIST_MODE}) {	\
-							printf("%s.%s.%s.%s\n", lib, v1, v2, v3); \
-						} else {		\
-							system(sprintf("${RM} -f ${PREFIX}/%s.%s.%s.%s; ${LN} -s %s ${PREFIX}/%s.%s.%s.%s", lib, v1, v2, v3, slashes[slashc], lib, v1, v2, v3)); \
-						}			\
-					}				\
-					if (${SHLIB_PLIST_MODE}) {	\
-						printf("%s.%s.%s\n%s.%s\n", lib, v1, v2, lib, v1); \
-					} else {			\
-						system(sprintf("${RM} -f ${PREFIX}/%s.%s.%s; ${LN} -s %s ${PREFIX}/%s.%s.%s", lib, v1, v2, slashes[slashc], lib, v1, v2)); \
-						system(sprintf("${RM} -f ${PREFIX}/%s.%s; ${LN} -s %s ${PREFIX}/%s.%s", lib, v1, slashes[slashc], lib, v1)); \
-					}				\
-				}					\
-				/^@/ { 					\
-					if (${SHLIB_PLIST_MODE}) {	\
-						print; 			\
-					}				\
-					next; 				\
-				}					\
+		ELF) 	;;						\
+		"a.out") 						\
+			${AWK} ' 					\
+				BEGIN { linkc = 1 }			\
+				/^@/ { lines[NR] = $$0; next }		\
 				/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { \
-					dotc = split($$0, dots, "\.");	\
-					lib = dots[1];			\
-					for (i = 2 ; i <= dotc - 4 ; i++) \
-						lib = lib "." dots[i];	\
-					makelinks($$0, lib, dots[dotc - 3], dots[dotc - 2], dots[dotc - 1]); \
-					next;				\
+					lines[NR] = $$0;		\
+					sub("\.[0-9]+$$", "");		\
+					links[linkc++] = $$0;		\
+					sub("\.[0-9]+$$", "");		\
+					links[linkc++] = $$0;		\
+					sub("\.[0-9]+$$", "");		\
+					links[linkc++] = $$0;		\
+					next				\
 				}					\
 				/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+$$/ {	\
-					dotc = split($$0, dots, "\.");	\
-					lib = dots[1];			\
-					for (i = 2 ; i <= dotc - 3 ; i++) \
-						lib = lib "." dots[i];	\
-					makelinks($$0, lib, dots[dotc - 2], dots[dotc - 1], -1); \
-					next;				\
+					lines[NR] = $$0;		\
+					sub("\.[0-9]+$$", "");		\
+					links[linkc++] = $$0;		\
+					sub("\.[0-9]+$$", "");		\
+					links[linkc++] = $$0;		\
+					next				\
 				}					\
-				/.*\/lib[^\/]+\.so\.[0-9]+$$/ { 	\
-					next;				\
+				{ lines[NR] = $$0 }			\
+				END {					\
+					for (i = 1 ; i <= linkc ; i++)	\
+						for (j = 1 ; j < NR ; j++) \
+							if (lines[j] == links[i]) \
+								lines[j] = "@comment " lines[j]; \
+					if (${SHLIB_PLIST_MODE}) 	\
+						for (i = 1 ; i <= NR ; i++) \
+							print lines[i]; \
 				}					\
-				{					\
-					if (${SHLIB_PLIST_MODE}) {	\
-						print; 			\
-					}				\
-				}' <${PLIST} >${PLIST}.tmp ;		\
-				if [ "${SHLIB_PLIST_MODE}" = "1" ]; then \
-					${MV} ${PLIST}.tmp ${PLIST};	\
-				else 					\
-					${RM} ${PLIST}.tmp ;		\
-				fi ; 					\
-			;;						\
-		"a.out")						\
-			if [ "${SHLIB_PLIST_MODE}" = "0" ]; then 	\
-				${ECHO_MSG} "${_PKGSRC_IN}> [Automatic a.out shared object handling]"; \
+			' <${PLIST} >${PLIST}.tmp ;			\
+			if [ "${SHLIB_PLIST_MODE}" = "1" ]; then	\
+				${MV} ${PLIST}.tmp ${PLIST};		\
+			else 						\
+				${RM} ${PLIST}.tmp ;			\
 			fi ; 						\
 			cnt=`${EGREP} -c -x '@exec[ 	]*${LDCONFIG}' ${PLIST} || ${TRUE}`; \
 			if [ "${SHLIB_PLIST_MODE}" = "1" ]; then 	\
@@ -3049,11 +3028,10 @@ COMMON_DIRS!= 	${AWK} 'BEGIN  { 				\
 print-PLIST:
 	@${ECHO} '@comment $$'NetBSD'$$'
 	@shlib_type=`${MAKE} ${MAKEFLAGS} show-shlib-type`;		\
-	RM_ELFLIBS='';							\
-	case "$$shlib_type" in						\
-	"ELF")								\
-		RMELFLIBS='-e /.*\/lib[^\/]*\.so\.[0-9]*$$/d';		\
-	esac ;								\
+	case $$shlib_type in 						\
+	"a.out")	genlinks=1 ;;					\
+	*)		genlinks=0 ;;					\
+	esac;								\
 	${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} \! -type d 	\
 	 | ${SED}							\
 		-e  's@${PREFIX}/./@@' 					\
@@ -3065,9 +3043,27 @@ print-PLIST:
 		-e  's@${LOWER_VENDOR}@\$${LOWER_VENDOR}@' 		\
 		-e  's@${LOWER_OPSYS}@\$${LOWER_OPSYS}@' 		\
 		-e  's@${PKGNAME}@\$${PKGNAME}@' 			\
-		$$RMELFLIBS 						\
 	 | sort								\
 	 | ${AWK} '							\
+		/^@/ { print $$0; next }				\
+		/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { 	\
+			print $$0;					\
+			sub("\.[0-9]+$$", "");				\
+			if ('$$genlinks') print $$0;			\
+			sub("\.[0-9]+$$", "");				\
+			if ('$$genlinks') print $$0;			\
+			sub("\.[0-9]+$$", "");				\
+			if ('$$genlinks') print $$0;			\
+			next;						\
+		}							\
+		/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+$$/ { 		\
+			print $$0;					\
+			sub("\.[0-9]+$$", "");				\
+			if ('$$genlinks') print $$0;			\
+			sub("\.[0-9]+$$", "");				\
+			if ('$$genlinks') print $$0;			\
+			next;						\
+		}							\
 		{ 							\
 		  if (/\.info$$/) {					\
 		    print "\@unexec install-info --delete --info-dir=%D/info %D/" $$1; \

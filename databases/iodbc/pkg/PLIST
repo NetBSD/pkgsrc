@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2000/08/14 15:07:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/01/04 15:10:24 agc Exp $
 include/isql.h
 include/isqlext.h
 include/isqltypes.h
@@ -7,6 +7,8 @@ include/sqlext.h
 include/sqltypes.h
 lib/libiodbc.a
 lib/libiodbc.la
+lib/libiodbc.so
+lib/libiodbc.so.2
 lib/libiodbc.so.2.50
 share/doc/iodbc/COPYING
 share/doc/iodbc/README

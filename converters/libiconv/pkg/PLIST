@@ -1,13 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/01 17:29:20 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:23 agc Exp $
 bin/iconv
 include/iconv.h
 include/libcharset.h
 lib/charset.alias
 lib/libcharset.a
 lib/libcharset.la
+lib/libcharset.so
+lib/libcharset.so.1
 lib/libcharset.so.1.0
 lib/libiconv.a
 lib/libiconv.la
+lib/libiconv.so
+lib/libiconv.so.2
 lib/libiconv.so.2.2
 man/man1/iconv.1
 man/man3/iconv.3

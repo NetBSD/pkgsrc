@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/10 03:57:16 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:48 agc Exp $
 lib/libdfftpack.a
 lib/libdfftpack.la
+lib/libdfftpack.so
+lib/libdfftpack.so.0
 lib/libdfftpack.so.0.0
 share/doc/dfftpack/README
 share/doc/dfftpack/doc

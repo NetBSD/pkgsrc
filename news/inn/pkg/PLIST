@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2000/08/17 14:00:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2001/01/04 15:10:53 agc Exp $
 bin/inews
 etc/rc.d/innd.sh
 @exec mkdir -p %D/etc/nntp
@@ -106,9 +106,13 @@ inn/lib/innshellvars.pl
 inn/lib/innshellvars.tcl
 inn/lib/libinn.a
 inn/lib/libinn.la
+inn/lib/libinn.so
+inn/lib/libinn.so.2
 inn/lib/libinn.so.2.0
 inn/lib/libstorage.a
 inn/lib/libstorage.la
+inn/lib/libstorage.so
+inn/lib/libstorage.so.2
 inn/lib/libstorage.so.2.0
 man/man1/convdate.1
 man/man1/getlist.1

@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.11 2000/12/19 14:17:32 wulf Exp $
+@comment $NetBSD: PLIST,v 1.12 2001/01/04 15:10:29 agc Exp $
 include/kdlgloader.h
 lib/libkdlgloader.a
 lib/libkdlgloader.la
+lib/libkdlgloader.so
+lib/libkdlgloader.so.1
 lib/libkdlgloader.so.1.0
 bin/kdevelop
 share/doc/kde/HTML/de/kdevelop/index-1.html

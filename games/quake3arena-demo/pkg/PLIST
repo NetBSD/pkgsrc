@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/09 18:25:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:36 agc Exp $
 bin/quake3arena-demo
 lib/lokigames/quake3arena-demo/demoq3/pak0.pk3
 lib/lokigames/quake3arena-demo/q3ded
 lib/lokigames/quake3arena-demo/quake3arena-demo
 lib/lokigames/quake3arena-demo/icon.bmp
 lib/lokigames/quake3arena-demo/icon.xpm
+lib/lokigames/quake3arena-demo/libMesaVoodooGL.so
+lib/lokigames/quake3arena-demo/libMesaVoodooGL.so.3
 lib/lokigames/quake3arena-demo/libMesaVoodooGL.so.3.2
 share/doc/lokigames/quake3arena-Help/BotCommands.html
 share/doc/lokigames/quake3arena-Help/DedicatedServer.html

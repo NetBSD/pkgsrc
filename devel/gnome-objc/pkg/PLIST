@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/15 17:11:59 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:28 agc Exp $
 bin/obgnome-config
 include/obgnome/obgnome.h
 include/obgnome/obgnomeAbout.h
@@ -122,9 +122,13 @@ include/obgtk/obgtkWidget.h
 include/obgtk/obgtkWindow.h
 lib/libobgnome.a
 lib/libobgnome.la
+lib/libobgnome.so
+lib/libobgnome.so.0
 lib/libobgnome.so.0.0
 lib/libobgtk.a
 lib/libobgtk.la
+lib/libobgtk.so
+lib/libobgtk.so.3
 lib/libobgtk.so.3.1
 lib/obGnomeConf.sh
 @dirrm include/obgtk

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/11/27 18:38:08 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/01/04 15:10:20 agc Exp $
 bin/wmxmms
 bin/xmms
 bin/xmms-config
@@ -11,6 +11,8 @@ include/xmms/util.h
 include/xmms/xmmsctrl.h
 lib/libxmms.a
 lib/libxmms.la
+lib/libxmms.so
+lib/libxmms.so.1
 lib/libxmms.so.1.0
 lib/xmms/Effect/libecho.la
 lib/xmms/Effect/libecho.a

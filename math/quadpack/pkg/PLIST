@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/30 01:25:21 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:49 agc Exp $
 lib/libquadpack.a
 lib/libquadpack.la
+lib/libquadpack.so
+lib/libquadpack.so.0
 lib/libquadpack.so.0.0
 share/doc/quadpack/doc
 share/doc/quadpack/readme

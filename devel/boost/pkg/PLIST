@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2000/11/03 00:16:37 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2001/01/04 15:10:26 agc Exp $
 include/boost/array.hpp
 include/boost/array_traits.hpp
 include/boost/call_traits.hpp
@@ -126,6 +126,8 @@ include/boost/type_traits.hpp
 include/boost/utility.hpp
 lib/libboost.a
 lib/libboost.la
+lib/libboost.so
+lib/libboost.so.0
 lib/libboost.so.0.0
 share/doc/html/boost/c++boost.gif
 share/doc/html/boost/index.htm

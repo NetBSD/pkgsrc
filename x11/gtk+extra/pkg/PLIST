@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/15 12:25:51 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:11:01 agc Exp $
 bin/gtkextra-config
 include/gtkextra/gtkbordercombo.h
 include/gtkextra/gtkcheckitem.h
@@ -19,6 +19,8 @@ include/gtkextra/gtkplotprint.h
 include/gtkextra/gtkplotps.h
 include/gtkextra/gtkpsfont.h
 include/gtkextra/gtksheet.h
+lib/libgtkextra.so
+lib/libgtkextra.so.10
 lib/libgtkextra.so.10.1
 lib/libgtkextra.a
 lib/libgtkextra.la

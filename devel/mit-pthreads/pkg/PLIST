@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.12 1999/11/05 17:16:41 explorer Exp $
+@comment $NetBSD: PLIST,v 1.13 2001/01/04 15:10:31 agc Exp $
 pthreads/bin/pgcc
 pthreads/bin/pg++
 pthreads/lib/libpthread.a
+pthreads/lib/libpthread.so
+pthreads/lib/libpthread.so.1
 pthreads/lib/libpthread.so.1.60
 pthreads/include/Makefile.inc
 pthreads/include/dirent.h

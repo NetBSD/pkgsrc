@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/12/03 04:33:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/01/04 15:10:26 agc Exp $
 bin/sdl-config
 include/SDL/SDL.h
 include/SDL/SDL_active.h
@@ -27,6 +27,8 @@ include/SDL/begin_code.h
 include/SDL/close_code.h
 lib/libSDL.a
 lib/libSDL.la
+lib/libSDL.so
+lib/libSDL.so.5
 lib/libSDL.so.5.1
 lib/libSDLmain.a
 man/man3/SDLKey.3

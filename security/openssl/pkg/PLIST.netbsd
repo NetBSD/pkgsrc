@@ -1,3 +1,7 @@
-@comment $NetBSD: PLIST.netbsd,v 1.1 2000/05/10 12:28:45 veego Exp $
+@comment $NetBSD: PLIST.netbsd,v 1.2 2001/01/04 15:10:55 agc Exp $
+lib/libcrypto.so
+lib/libcrypto.so.1
 lib/libcrypto.so.1.0
+lib/libssl.so
+lib/libssl.so.1
 lib/libssl.so.1.0

@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/15 17:29:14 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:51 agc Exp $
 bin/socksify
 lib/libdsocks.a
 lib/libdsocks.la
+lib/libdsocks.so
+lib/libdsocks.so.1
 lib/libdsocks.so.1.0
 lib/libsocks.a
 lib/libsocks.la
+lib/libsocks.so
+lib/libsocks.so.1
 lib/libsocks.so.1.0
 man/man5/sockd.conf.5
 man/man5/socks.conf.5

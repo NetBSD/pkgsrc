@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/06 17:55:12 wennmach Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:48 agc Exp $
 lib/libblas.a
 lib/libblas.la
+lib/libblas.so
+lib/libblas.so.0
 lib/libblas.so.0.0

@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.131 2000/12/30 11:24:31 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.132 2001/01/04 15:10:17 agc Exp $
 ###########################################################################
 
 			==========================
@@ -857,7 +857,8 @@ Here's how to use libtool in a pkg in six simple steps:
    strip off the shared library version else. Also, any "-release" should
    be removed, as it removes the version info as well.
 
-   PLIST only gets the .a, .la and .so.major.minor entries.
+   PLIST gets all of the .a, .la and so, .so.major and .so.major.minor
+   entries.
 
 4. When linking shared object (.so) files, i.e. files that are loaded via
    dlopen(3), NOT shared libraries, use "-module -avoid-version" to prevent
@@ -894,9 +895,8 @@ Here's how to use libtool in a pkg in six simple steps:
    This will install the static .a, shared library, any needed symlinks,
    and run "ldconfig."
 
-7. In your PLIST, include the .a, .la, and .so.major.minor files.  Don't
-   include the ELF symlink files (.so.major, .so); those are added
-   automatic.  
+7. In your PLIST, include all of the .a, .la, and so, .so.major and
+   .so.major.minor files (this is a change from the previous behaviour).
 
 
  6.3 Using libtool on GNU packages that already support libtool

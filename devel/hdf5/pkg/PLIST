@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/24 20:43:02 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:28 agc Exp $
 bin/h5debug
 bin/h5dump
 bin/h5import
@@ -31,6 +31,8 @@ include/hdf5.h
 lib/libhdf5.a
 lib/libhdf5.la
 lib/libhdf5.settings
+lib/libhdf5.so
+lib/libhdf5.so.0
 lib/libhdf5.so.0.0
 share/doc/hdf5/ADGuide.html
 share/doc/hdf5/ADGuide/H4toH5Mapping.pdf

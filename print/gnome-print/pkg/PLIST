@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2000/11/25 13:53:08 rh Exp $
+@comment $NetBSD: PLIST,v 1.17 2001/01/04 15:10:54 agc Exp $
 bin/gnome-font-install
 include/libgnomeprint/gnome-font-dialog.h
 include/libgnomeprint/gnome-font-face.h
@@ -24,6 +24,8 @@ include/libgnomeprint/gnome-rfont.h
 include/libgnomeprint/gnome-text.h
 lib/libgnomeprint.a
 lib/libgnomeprint.la
+lib/libgnomeprint.so
+lib/libgnomeprint.so.13
 lib/libgnomeprint.so.13.4
 lib/printConf.sh
 share/fonts/afms/adobe/pagd8a.afm

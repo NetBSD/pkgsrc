@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2000/06/08 23:33:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2001/01/04 15:10:22 agc Exp $
 bin/addresses
 bin/ccexample
 bin/debugsh
@@ -71,6 +71,8 @@ include/pi-version.h
 lib/libpicc.a
 lib/libpisock.a
 lib/libpisock.la
+lib/libpisock.so
+lib/libpisock.so.3
 lib/libpisock.so.3.1
 lib/pix/b1.gif
 lib/pix/b2.gif

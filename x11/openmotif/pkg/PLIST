@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/29 16:17:13 mjl Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:11:02 agc Exp $
 bin/DNDDemo
 bin/UTMXmText
 bin/aicon
@@ -335,10 +335,16 @@ lib/X11/uid/xmanimate.uid
 @dirrm lib/X11/uid/swedish
 @dirrm lib/X11/uid
 lib/libMrm.a
+lib/libMrm.so
+lib/libMrm.so.2
 lib/libMrm.so.2.1
 lib/libUil.a
+lib/libUil.so
+lib/libUil.so.2
 lib/libUil.so.2.1
 lib/libXm.a
+lib/libXm.so
+lib/libXm.so.2
 lib/libXm.so.2.1
 man/man1/mwm.1
 man/man1/uil.1

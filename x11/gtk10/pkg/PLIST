@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2000/08/16 02:12:30 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/01/04 15:11:01 agc Exp $
 bin/gtk10-config
 include/gtk10/gdk/gdk.h
 include/gtk10/gdk/gdkcursors.h
@@ -119,12 +119,18 @@ info/gtk10.info-5
 @exec install-info %D/info/gtk10.info %D/info/dir
 lib/libgdk10.a
 lib/libgdk10.la
+lib/libgdk10.so
+lib/libgdk10.so.1
 lib/libgdk10.so.1.6
 lib/libglib10.a
 lib/libglib10.la
+lib/libglib10.so
+lib/libglib10.so.1
 lib/libglib10.so.1.6
 lib/libgtk10.a
 lib/libgtk10.la
+lib/libgtk10.so
+lib/libgtk10.so.1
 lib/libgtk10.so.1.6
 man/man1/gtk10-config.1
 share/aclocal/gtk10.m4

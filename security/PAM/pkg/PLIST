@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:54 agc Exp $
 etc/pam.conf
 etc/pam/access.conf
 etc/pam/group.conf
@@ -13,10 +13,16 @@ include/security/pam_filter.h
 include/security/pam_misc.h
 include/security/pam_modules.h
 lib/libpam.a
+lib/libpam.so
+lib/libpam.so.0
 lib/libpam.so.0.72
 lib/libpam_misc.a
+lib/libpam_misc.so
+lib/libpam_misc.so.0
 lib/libpam_misc.so.0.72
 lib/libpamc.a
+lib/libpamc.so
+lib/libpamc.so.0
 lib/libpamc.so.0.72
 lib/security/pam_access.so
 lib/security/pam_cracklib.so

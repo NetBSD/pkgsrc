@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/07 05:09:18 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:57 agc Exp $
 include/glibwww/glibwww.h
 lib/glibwwwConf.sh
 lib/libglibwww.a
 lib/libglibwww.la
+lib/libglibwww.so
+lib/libglibwww.so.1
 lib/libglibwww.so.1.0
 @dirrm include/glibwww

@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/09/07 17:44:13 jwise Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:52 agc Exp $
 bin/tkined1.4.10
 bin/tkined
 man/man1/tkined.1
+lib/libtkined.so
+lib/libtkined.so.1
 lib/libtkined.so.1.0
 lib/libtkined.la
 lib/libtkined.a

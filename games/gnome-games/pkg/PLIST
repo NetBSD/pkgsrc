@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2000/11/27 16:34:06 tron Exp $
+@comment $NetBSD: PLIST,v 1.10 2001/01/04 15:10:35 agc Exp $
 bin/GnomeScott
 bin/ctali
 bin/freecell
@@ -31,6 +31,8 @@ lib/gnome-stones/objects/libgnomekoban.la
 lib/gnome-stones/objects/libgnomekoban.so
 lib/libgdkcardimage.a
 lib/libgdkcardimage.la
+lib/libgdkcardimage.so
+lib/libgdkcardimage.so.0
 lib/libgdkcardimage.so.0.0
 share/gnibbles/level001.gnl
 share/gnibbles/level002.gnl

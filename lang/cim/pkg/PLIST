@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/25 21:59:30 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:45 agc Exp $
 bin/cim
 bin/cim2latex
 bin/cim2ps
@@ -10,5 +10,7 @@ info/cim.info
 lib/libcim-atr.a
 lib/libcim.a
 lib/libcim.la
+lib/libcim.so
+lib/libcim.so.3
 lib/libcim.so.3.0
 man/man1/cim.1

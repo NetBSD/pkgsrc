@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2000/08/23 23:45:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/01/04 15:10:52 agc Exp $
 bin/aecho
 bin/getzones
 bin/hqx2bin
@@ -27,6 +27,8 @@ include/atalk/paths.h
 include/atalk/rtmp.h
 include/atalk/zip.h
 lib/libatalk.a
+lib/libatalk.so
+lib/libatalk.so.1
 lib/libatalk.so.1.0
 lib/libatalk_pic.a
 libexec/psa

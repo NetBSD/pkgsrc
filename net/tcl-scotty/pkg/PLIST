@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/09/07 17:38:43 jwise Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:52 agc Exp $
 bin/scotty2.1.10
 bin/scotty
 bin/ntping
@@ -203,6 +203,8 @@ lib/tcl/tnm2.1.10/examples/pcnfs
 lib/tcl/tnm2.1.10/examples/pcnfs.n
 lib/tcl/tnm2.1.10/examples/mibgrep
 lib/tcl/tnm2.1.10/examples/mibgrep.n
+lib/libtnm.so
+lib/libtnm.so.1
 lib/libtnm.so.1.0
 lib/libtnm.la
 lib/libtnm.a

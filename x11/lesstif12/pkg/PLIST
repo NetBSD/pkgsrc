@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2000/12/22 17:26:22 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/01/04 15:11:02 agc Exp $
 LessTif/Motif1.2/include/Mrm/MrmAppl.h
 LessTif/Motif1.2/include/Mrm/MrmDecls.h
 LessTif/Motif1.2/include/Mrm/MrmPrivate.h
@@ -129,12 +129,18 @@ LessTif/Motif1.2/include/uil/UilSymDef.h
 LessTif/Motif1.2/include/uil/UilSymGl.h
 LessTif/Motif1.2/lib/libMrm.a
 LessTif/Motif1.2/lib/libMrm.la
+LessTif/Motif1.2/lib/libMrm.so
+LessTif/Motif1.2/lib/libMrm.so.1
 LessTif/Motif1.2/lib/libMrm.so.1.2
 LessTif/Motif1.2/lib/libUil.a
 LessTif/Motif1.2/lib/libUil.la
+LessTif/Motif1.2/lib/libUil.so
+LessTif/Motif1.2/lib/libUil.so.1
 LessTif/Motif1.2/lib/libUil.so.1.2
 LessTif/Motif1.2/lib/libXm.a
 LessTif/Motif1.2/lib/libXm.la
+LessTif/Motif1.2/lib/libXm.so
+LessTif/Motif1.2/lib/libXm.so.1
 LessTif/Motif1.2/lib/libXm.so.1.2
 @dirrm LessTif/Motif1.2/lib
 @dirrm LessTif/Motif1.2/include/uil

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2000/12/06 17:14:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/01/04 15:10:41 agc Exp $
 bin/gif2epsn
 bin/gif2ps
 bin/gif2rgb
@@ -29,9 +29,13 @@ bin/gifcompose
 bin/gifburst
 include/gif_lib.h
 lib/libgif.a
+lib/libgif.so
+lib/libgif.so.5
 lib/libgif.so.5.0
 lib/libungif.a
 lib/libungif.la
+lib/libungif.so
+lib/libungif.so.5
 lib/libungif.so.5.0
 share/doc/html/libungif/GifFileType.png
 share/doc/html/libungif/gif2bgi.html

@@ -1,13 +1,17 @@
-@comment $NetBSD: PLIST,v 1.5 2000/06/21 01:58:40 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/01/04 15:10:57 agc Exp $
 bin/type1afm
 bin/xglyph
 include/t1lib.h
 include/t1libx.h
 lib/libt1.a
 lib/libt1.la
+lib/libt1.so
+lib/libt1.so.1
 lib/libt1.so.1.1
 lib/libt1x.a
 lib/libt1x.la
+lib/libt1x.so
+lib/libt1x.so.1
 lib/libt1x.so.1.1
 share/doc/t1lib/Makefile
 share/doc/t1lib/Makefile.in

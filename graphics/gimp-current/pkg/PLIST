@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2000/11/30 04:13:27 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.15 2001/01/04 15:10:38 agc Exp $
 bin/escputil
 bin/gimp
 bin/gimp-config
@@ -262,12 +262,18 @@ lib/gimp/1.1/plug-ins/xwd
 lib/gimp/1.1/plug-ins/zealouscrop
 lib/libgck.a
 lib/libgck.la
+lib/libgck.so
+lib/libgck.so.29
 lib/libgck.so.29.0
 lib/libgimp.a
 lib/libgimp.la
+lib/libgimp.so
+lib/libgimp.so.29
 lib/libgimp.so.29.0
 lib/libgimpui.a
 lib/libgimpui.la
+lib/libgimpui.so
+lib/libgimpui.so.29
 lib/libgimpui.so.29.0
 man/man1/escputil.1
 man/man1/gimp.1

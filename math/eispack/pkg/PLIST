@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/30 01:46:18 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:48 agc Exp $
 lib/libeispack.a
 lib/libeispack.la
+lib/libeispack.so
+lib/libeispack.so.0
 lib/libeispack.so.0.0

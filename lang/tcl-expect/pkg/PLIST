@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/09/05 16:20:30 jwise Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:47 agc Exp $
 bin/expect
 include/expect.h
 include/expect_comm.h
@@ -7,6 +7,8 @@ include/tcldbg.h
 lib/tcl/expect5.32/pkgIndex.tcl
 lib/libexpect532.a
 lib/libexpect532.la
+lib/libexpect532.so
+lib/libexpect532.so.1
 lib/libexpect532.so.1.0
 man/man1/expect.1.gz
 man/man3/libexpect.3.gz

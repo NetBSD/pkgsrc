@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2000/12/31 14:01:44 rh Exp $
+@comment $NetBSD: PLIST,v 1.8 2001/01/04 15:10:26 agc Exp $
 bin/bonobo-application-x-mines
 bin/bonobo-audio-ulaw
 bin/bonobo-echo
@@ -95,15 +95,23 @@ lib/bonobo/plugin/libstorage_fs.a
 lib/bonobo/plugin/libstorage_fs.so
 lib/libbonobo-print.la
 lib/libbonobo-print.a
+lib/libbonobo-print.so
+lib/libbonobo-print.so.2
 lib/libbonobo-print.so.2.0
 lib/libbonobo.la
 lib/libbonobo.a
+lib/libbonobo.so
+lib/libbonobo.so.2
 lib/libbonobo.so.2.0
 lib/libbonobox.la
 lib/libbonobox.a
+lib/libbonobox.so
+lib/libbonobox.so.2
 lib/libbonobox.so.2.0
 lib/libefs.a
 lib/libefs.la
+lib/libefs.so
+lib/libefs.so.1
 lib/libefs.so.1.0
 lib/pkgconfig/libefs.pc
 share/bonobo/html/bonobo-api.sgml

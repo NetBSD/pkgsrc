@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2000/12/14 00:44:08 jtb Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/01/04 15:10:36 agc Exp $
 bin/blockmean
 bin/blockmedian
 bin/blockmode
@@ -80,9 +80,13 @@ include/gmt/gmt_unique.h
 include/gmt/pslib.h
 lib/libgmt.a
 lib/libgmt.la
+lib/libgmt.so
+lib/libgmt.so.0
 lib/libgmt.so.0.0
 lib/libpsl.a
 lib/libpsl.la
+lib/libpsl.so
+lib/libpsl.so.0
 lib/libpsl.so.0.0
 share/gmt/.gmtdefaults_SI
 share/gmt/.gmtdefaults_SI.orig

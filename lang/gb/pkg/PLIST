@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/12/30 18:41:21 rh Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/01/04 15:10:45 agc Exp $
 bin/gb
 include/gb/gb-constants.h
 include/gb/gb-eval.h
@@ -27,9 +27,13 @@ include/gbrun/objects/libgbobj.h
 lib/gbConf.sh
 lib/libgb.a
 lib/libgb.la
+lib/libgb.so
+lib/libgb.so.0
 lib/libgb.so.0.0
 lib/libgbrun.a
 lib/libgbrun.la
+lib/libgbrun.so
+lib/libgbrun.so.0
 lib/libgbrun.so.0.0
 @dirrm include/gbrun/objects
 @dirrm include/gbrun

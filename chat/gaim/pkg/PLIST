@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/12/27 22:15:12 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/01/04 15:10:21 agc Exp $
 bin/gaim
 lib/gaim/autorecon.so
 lib/gaim/iconaway.so
@@ -6,15 +6,23 @@ lib/gaim/irc.so
 lib/gaim/lagmeter.so
 lib/gaim/libgaimicq.a
 lib/gaim/libgaimicq.la
+lib/gaim/libgaimicq.so
+lib/gaim/libgaimicq.so.0
 lib/gaim/libgaimicq.so.0.0
 lib/gaim/libjabber.a
 lib/gaim/libjabber.la
+lib/gaim/libjabber.so
+lib/gaim/libjabber.so.0
 lib/gaim/libjabber.so.0.0
 lib/gaim/libmsn.a
 lib/gaim/libmsn.la
+lib/gaim/libmsn.so
+lib/gaim/libmsn.so.0
 lib/gaim/libmsn.so.0.0
 lib/gaim/libyahoo.a
 lib/gaim/libyahoo.la
+lib/gaim/libyahoo.so
+lib/gaim/libyahoo.so.0
 lib/gaim/libyahoo.so.0.0
 lib/gaim/napster.so
 lib/gaim/notify.so

@@ -1,13 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/11 13:53:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:35 agc Exp $
 bin/gnc-prices
 bin/gnucash
 etc/gnucash/config
 lib/gnucash/perl/gnucash.so
 lib/gnucash/perl/libgncswig.a
 lib/gnucash/perl/libgncswig.la
+lib/gnucash/perl/libgncswig.so
+lib/gnucash/perl/libgncswig.so.1
 lib/gnucash/perl/libgncswig.so.1.1
 lib/libgncengine.a
 lib/libgncengine.la
+lib/libgncengine.so
+lib/libgncengine.so.1
 lib/libgncengine.so.1.1
 man/man1/gnc-prices.1
 man/man1/gnucash.1

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/27 17:37:50 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:34 agc Exp $
 include/stlport/algorithm
 include/stlport/bitset
 include/stlport/cassert
@@ -277,12 +277,18 @@ include/stlport/wrap_std/streambuf
 include/stlport/wrap_std/strstream
 lib/libstlport_gcc.a
 lib/libstlport_gcc.la
+lib/libstlport_gcc.so
+lib/libstlport_gcc.so.0
 lib/libstlport_gcc.so.0.0
 lib/libstlport_gcc_debug.a
 lib/libstlport_gcc_debug.la
+lib/libstlport_gcc_debug.so
+lib/libstlport_gcc_debug.so.0
 lib/libstlport_gcc_debug.so.0.0
 lib/libstlport_gcc_stldebug.a
 lib/libstlport_gcc_stldebug.la
+lib/libstlport_gcc_stldebug.so
+lib/libstlport_gcc_stldebug.so.0
 lib/libstlport_gcc_stldebug.so.0.0
 share/doc/html/stlport/FAQ.html
 share/doc/html/stlport/README.BC.html
