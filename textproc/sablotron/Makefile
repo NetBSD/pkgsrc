@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/18 12:39:17 grant Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/22 14:05:48 jwise Exp $
 
 DISTNAME=		Sablot-0.96
 PKGNAME=		sablotron-0.96
@@ -17,7 +17,6 @@ USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-LIBS+=			-liconv
 
 .include "../../mk/bsd.prefs.mk"
 
