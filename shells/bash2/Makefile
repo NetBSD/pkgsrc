@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/04/21 14:23:27 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 1998/06/03 13:50:58 agc Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/06/27 23:03:27 ache Exp 
 #
 
@@ -7,6 +7,9 @@ DISTNAME=       bash-${V}
 CATEGORIES=	shells
 MASTER_SITES=	ftp://slc2.ins.cwru.edu/pub/dist/  \
 		${MASTER_SITE_GNU}
+
+.include "../../mk/bsd.prefs.mk"
+
 .if !defined(NOPORTDOCS)
 DISTFILES=      bash-${V}.tar.gz bash-doc-${V}.tar.gz
 .endif
