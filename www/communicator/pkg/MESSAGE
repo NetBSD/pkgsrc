@@ -1,0 +1,12 @@
+==========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 1999/02/22 07:44:48 abs Exp $
+
+i386:	To run the BSDi version of Netscape, you do not need any compat
+	libraries, but you must have all of COMPAT_43, COMPAT_NOMID, COMPAT_09,
+	COMPAT_10, COMPAT_12 (and COMPAT_13, if applicable) in your kernel.
+
+sparc:	To run the SunOS version of Netscape, you need COMPAT_SUNOS in your
+	kernel, plus a full set of /emul/sunos/usr/lib libraries.
+	The default version uses DNS, the NIS version is 'netscape_nis'.
+
+==========================================================================
