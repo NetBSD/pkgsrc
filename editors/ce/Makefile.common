@@ -1,17 +1,16 @@
-# $NetBSD: Makefile.common,v 1.4 2004/02/14 15:29:15 jlam Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/01/08 07:46:15 schmonz Exp $
 #
 
 DISTNAME=		ce-${VERSION}
-VERSION=		4.4
+VERSION=		4.5
 CATEGORIES=		editors
-MASTER_SITES=		http://cnswww.cns.cwru.edu/~chet/dist/ \
-			ftp://ftp.cwru.edu/pub/chet/
+MASTER_SITES=		http://cnswww.cns.cwru.edu/~chet/dist/
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://cnswww.cns.cwru.edu/php/chet/
 COMMENT=		Chet's Emacs: small, fast emacs-like editor
 
-GNU_CONFIGURE=		YES
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--without-ce-malloc
 CONFIGURE_ARGS+=	--with-curses
