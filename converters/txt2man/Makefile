@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/13 15:12:09 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2001/07/26 08:39:43 zuntum Exp $
 #
 
-DISTNAME=	txt2man-1.4.1
+DISTNAME=	txt2man-1.4.2
 CATEGORIES=	converters
 MASTER_SITES=	http://mvertes.free.fr/download/
 
