@@ -1,15 +1,7 @@
-$NetBSD: patch-ab,v 1.4 2002/10/18 14:40:24 jlam Exp $
+$NetBSD: patch-ab,v 1.5 2002/10/18 23:00:25 wiz Exp $
 
 --- x.c.orig	Sun Sep 22 02:05:29 2002
 +++ x.c
-@@ -294,7 +294,6 @@ static void x_translate_key(XKeyEvent *e
- 	int len;
- 
- 	len=XLookupString(e,str,15,&ks,NULL);
--	printf("ks=%ld\n",ks);
- 	str[len>15?15:len]=0;
- 	*flag=0;
- 	*key=0;
 @@ -964,6 +963,11 @@ bytes_per_pixel_found:
  						case 15:
  						case 16:
