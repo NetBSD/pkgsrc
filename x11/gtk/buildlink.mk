@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.11 2001/10/03 20:56:55 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.12 2002/04/10 22:46:53 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gtk.
 #
@@ -29,9 +29,9 @@ BUILDLINK_FILES.gtk+=	lib/libgdk.*
 BUILDLINK_FILES.gtk+=	lib/libgtk.*
 
 REPLACE_BUILDLINK_SED+=	\
-	-e "s|-I${BUILDLINK_DIR}/\(include/gtk-[^/]*/\)|-I${BUILDLINK_PREFIX.gtk}/\1|g"
+	-e "s|-I${BUILDLINK_DIR}/\(include/gtk-[^ 	/]*\)|-I${BUILDLINK_PREFIX.gtk}/\1|g"
 BUILDLINK_CONFIG_WRAPPER_SED+=	\
-	-e "s|-I${BUILDLINK_PREFIX.gtk}/\(include/gtk-[^/]*/\)|-I${BUILDLINK_DIR}/\1|g"
+	-e "s|-I${BUILDLINK_PREFIX.gtk}/\(include/gtk-[^ 	/]*\)|-I${BUILDLINK_DIR}/\1|g"
 
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/glib/buildlink.mk"
