@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.3 2004/06/28 20:43:54 shannonjr Exp $
+$NetBSD: distinfo,v 1.4 2004/10/04 22:35:17 shannonjr Exp $
 
-SHA1 (gdb-6.1.1.tar.bz2) = 39f239373e282061eb6b7d024f17516e2e6e2226
-Size (gdb-6.1.1.tar.bz2) = 12586670 bytes
+SHA1 (gdb-6.2.1.tar.bz2) = 50cee3887744c4140aafcc0e4eb579d94464dfd7
+Size (gdb-6.2.1.tar.bz2) = 12820148 bytes
 SHA1 (patch-Makefile_tpl) = b5c98fc990606e2f5c566864d02565d8fc9adeb4
 SHA1 (patch-ax_gdb_c) = bc9a4e5d77d571a6f06b88984fb2030beec37654
+SHA1 (patch-bsd_kvm_c) = 909612a85a4c46a13f9de3408df4c69e502c02a5
 SHA1 (patch-cli_cli_decode_c) = 19dbdb326643bf32a3d0c26cfea056cca19deb13
 SHA1 (patch-cli_cli_dump_c) = 976cbe2b27c23a113c43cab791562a04d9e6d7e3
 SHA1 (patch-cli_cli_script_c) = c53cc22ac5a2c5d5b2c1a7b0825558d8787b2bed
@@ -11,10 +12,9 @@ SHA1 (patch-cli_cli_setshow_c) = 048c03512a18f3234422a3afc00d6c45f2dea58d
 SHA1 (patch-cli_cmds_c) = 66e40920b5de734cbcf66c0b357e82a74f3c48c0
 SHA1 (patch-config_xm_nbsd_h) = a54471bf7cdd42def5e78137df3674988ae3c04b
 SHA1 (patch-corelow_c) = 6ae7afb646fe7464b8a3667913ac6681b1df34e6
-SHA1 (patch-gdb_configure_in) = 5721068e232c1418bec9a3e7b2dd0d911f841f27
-SHA1 (patch-i386_nbsdelf_mh) = 45b48c56f8d3e6ad61644ee02fd04d21c79fba20
+SHA1 (patch-gdb_configure_in) = c883cc007cd43c478b1ba0f09ca084391552ba3b
+SHA1 (patch-i386_nbsdelf_mh) = 3d9a9eb8dce8a8cb83f8e7afc504bf52cdec0b1d
 SHA1 (patch-i386_nm_nbsd_h) = 11df264e672894836effbb922381dff6abb42aca
-SHA1 (patch-i386bsd_nat_c) = 00e6c4298513e237dab5040dcb58e536a5c530e5
 SHA1 (patch-i386nbsd_tdep_c) = 6b977d1da6d94ff32bdf1e3627ee534333cc2a79
 SHA1 (patch-i387_tdep_c) = 3e41ee1623a52802268d5986559ce7ab742f36e7
 SHA1 (patch-inftarg_c) = bf4b1c62b003e65f5810a7d28f8464e936e8d190
@@ -27,9 +27,8 @@ SHA1 (patch-mi_mi_getopt_c) = 272b4035d1bcde2fadc04a90ad471de681680c34
 SHA1 (patch-mi_mi_interp_c) = bacd2687675ccbb7cbc05359323c0bf32f75e9e5
 SHA1 (patch-mi_mi_main_c) = edcb6662c891738a0582bbfed151bff3812a5f8d
 SHA1 (patch-mi_mi_out_c) = b3f7b9f8a3ad7762637fe9f60a45e50206b713ae
-SHA1 (patch-nm_nbsd_h) = cb22084e35ec088a5a2c9153f83e13406e6a8e78
+SHA1 (patch-nm_nbsd_h) = d85e155d88e17da9c316c69e6fea3a7ba2e470ee
 SHA1 (patch-readline_rltty_c) = 63dde49eaf61bf85ce6dae12ec9af33ae4addfb5
-SHA1 (patch-remote_c) = 1d61936ee63219576a1d70d154d8696dfe7de29e
 SHA1 (patch-remote_fileio_c) = 9c8d886a5b412e64a9a8e6165110a5c336ff65ae
 SHA1 (patch-ser_pipe_c) = 840ce6ceb34afea4c8b789c70fb848ad9942ce39
 SHA1 (patch-tui_interp_c) = dd353978d62cc45aadf6259e8b5f7b2895317f9c

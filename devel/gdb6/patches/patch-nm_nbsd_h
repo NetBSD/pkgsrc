@@ -1,8 +1,8 @@
-$NetBSD: patch-nm_nbsd_h,v 1.1.1.1 2004/06/01 19:29:30 shannonjr Exp $
+$NetBSD: patch-nm_nbsd_h,v 1.2 2004/10/04 22:35:17 shannonjr Exp $
 
---- gdb/config/nm-nbsd.h.orig	2002-05-21 21:59:53.000000000 -0600
+--- gdb/config/nm-nbsd.h.orig	2004-10-04 08:11:51.000000000 -0600
 +++ gdb/config/nm-nbsd.h
-@@ -18,10 +18,16 @@
+@@ -18,8 +18,13 @@
     Foundation, Inc., 59 Temple Place - Suite 330,
     Boston, MA 02111-1307, USA.  */
  
@@ -11,10 +11,7 @@ $NetBSD: patch-nm_nbsd_h,v 1.1.1.1 2004/06/01 19:29:30 shannonjr Exp $
  
  #define FETCH_INFERIOR_REGISTERS
  
- #define ATTACH_DETACH
- 
  #include "solib.h"		/* Support for shared libraries. */
-+
 +#include <signal.h>
 +#ifdef SIGRTMIN
 +#define REALTIME_LO SIGRTMIN
