@@ -1,7 +1,7 @@
-$NetBSD: patch-at,v 1.1 2000/03/20 02:25:40 itojun Exp $
+$NetBSD: patch-at,v 1.2 2000/04/23 19:17:30 thorpej Exp $
 
---- auth-passwd.c.orig	Wed May 12 07:19:23 1999
-+++ auth-passwd.c	Fri Dec 24 21:50:04 1999
+--- auth-passwd.c.orig	Wed May 12 04:19:23 1999
++++ auth-passwd.c	Tue Apr 18 11:48:03 2000
 @@ -301,29 +301,25 @@
  static int securid_initialized = 0;
  #endif /* HAVE_SECURID */
@@ -84,10 +84,11 @@ $NetBSD: patch-at,v 1.1 2000/03/20 02:25:40 itojun Exp $
    saved_pw_passwd = xstrdup(pw->pw_passwd);
    
 -#if defined(KERBEROS)
-+#if defined(KRB5)
-   if (options.kerberos_authentication)
-     {
--#if defined(KRB5)
+-  if (options.kerberos_authentication)
+-    {
+ #if defined(KRB5)
++  if (options.kerberos_authentication && client != NULL)
++    {
        snprintf(ccname, sizeof(ccname), "FILE:/tmp/krb5cc_l%d", getpid());
        
        if (problem = krb5_cc_resolve(ssh_context, ccname, &ccache))
