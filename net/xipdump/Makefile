@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/06/01 17:51:28 recht Exp $
+# $NetBSD: Makefile,v 1.13 2004/12/04 14:55:59 wiz Exp $
 #
 
 DISTNAME=	xipdump-1.5.4
@@ -10,7 +10,7 @@ MAINTAINER=	sakamoto@NetBSD.org
 #HOMEPAGE=	http://www.epita.fr/~lse/xipdump/	
 COMMENT=	Displays IP packets using X Window System
 
-DEPENDS+=	libnet>=1.0.1bnb3:../../devel/libnet
+USE_BUILDLINK3=	YES
 
 LIBNET_CONFIG=	${LOCALBASE}/bin/libnet-config
 
@@ -18,8 +18,8 @@ PLIST_SRC=	${WRKDIR}/PLIST
 
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
-CFLAGS+=	`${LIBNET_CONFIG} --cflags` `${LIBNET_CONFIG} --defines`
-LIBS=		`${LIBNET_CONFIG} --libs`
+CFLAGS+=	-I${PREFIX}/include `${LIBNET_CONFIG} --defines`
+LIBS=		-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -lnet
 
 post-build:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
@@ -29,4 +29,5 @@ post-build:
 	@${ECHO} "@dirrm share/xipdump/pkc" >> ${PLIST_SRC}
 	@${ECHO} "@dirrm share/xipdump" >> ${PLIST_SRC}
 
+.include "../../devel/libnet/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
