@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2002/06/06 02:14:02 thorpej Exp $
+$NetBSD: distinfo,v 1.4 2002/06/12 23:26:25 wiz Exp $
 
 SHA1 (make-3.79.1.tar.gz) = d3cdff9f91a9cda71af8b2df2a94f9b844fa9704
 Size (make-3.79.1.tar.gz) = 1030393 bytes
@@ -6,4 +6,4 @@ SHA1 (patch-aa) = 1ee1298fcd4dddcc632948aeda046d1df115319f
 SHA1 (patch-ab) = 40d3a68312743d5994d2cb137579d2f3be28320e
 SHA1 (patch-ac) = b5cb517d1ea11692203b3d1fbc6cec19e5c11660
 SHA1 (patch-ad) = 1a873f5db090d29a104e3c021950ab20644cc3a1
-SHA1 (patch-ae) = 36e0ce641e163792c5daf53df527629202926dea
+SHA1 (patch-ae) = 71a54be609287cee1b163e843ccac4748810e304
