@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2003/03/04 01:02:26 salo Exp $
+
+--- etc/snort.conf.orig	2003-02-23 20:29:24.000000000 +0100
++++ etc/snort.conf	2003-03-04 00:51:11.000000000 +0100
+@@ -99,7 +99,7 @@
+ var AIM_SERVERS [64.12.24.0/24,64.12.25.0/24,64.12.26.14/24,64.12.28.0/24,64.12.29.0/24,64.12.161.0/24,64.12.163.0/24,205.188.5.0/24,205.188.9.0/24]
+ 
+ # Path to your rules files (this can be a relative path)
+-var RULE_PATH ../rules
++var RULE_PATH @PREFIX@/share/snort/rules
+ 
+ ###################################################
+ # Step #2: Configure preprocessors
