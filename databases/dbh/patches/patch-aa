@@ -1,9 +1,0 @@
-$NetBSD: patch-aa,v 1.3 2005/03/16 13:29:46 martti Exp $
-
---- src/dbh-1.0.pc.in.orig	2005-01-28 22:26:35.000000000 +0200
-+++ src/dbh-1.0.pc.in	2005-03-16 15:20:44.000000000 +0200
-@@ -9,3 +9,3 @@
- Version: @DBH_VERSION@
--Libs: -Wl,-R${libdir} -L${libdir} -ldbh -lm
-+Libs: -L${libdir} -ldbh -lm
- Cflags: -I${includedir}
