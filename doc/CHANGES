@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5468 2004/04/06 17:04:51 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5469 2004/04/06 19:02:33 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1824,3 +1824,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome2-games to 2.6.0nb1 [jmmv 2004-04-06]
 	Updated kaffe to 1.1.4 [xtraeme 2004-04-06]
 	Added kaffe-nox11-1.1.4 [xtraeme 2004-04-06]
+	Update nail to 10.7 [cjep 2004-04-06]
