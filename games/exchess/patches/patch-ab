@@ -1,8 +1,17 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/10/25 08:40:00 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2002/07/16 13:39:03 agc Exp $
 
 --- chess.h.orig	Sat Feb 19 11:28:46 2000
-+++ chess.h
-@@ -86,7 +86,7 @@
++++ chess.h	Tue Jul 16 14:37:30 2002
+@@ -3,6 +3,8 @@
+ #ifndef CHESS_H
+ #define CHESS_H
+ 
++#include <sys/types.h>
++
+ // move structure to encapsulate several important move parameters
+ // note: The char used below is treated like an integer.
+ 
+@@ -86,7 +88,7 @@
  // Structure for position in the opening book
  
  struct book_rec {
