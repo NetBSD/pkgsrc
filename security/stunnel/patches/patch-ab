@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.7 2001/08/10 14:41:19 martin Exp $
+$NetBSD: patch-ab,v 1.8 2001/08/19 16:26:08 martin Exp $
 
---- configure.in.orig	Fri Aug 10 11:30:46 2001
-+++ configure.in	Fri Aug 10 16:33:18 2001
+--- configure.in.orig	Wed Aug 15 20:25:28 2001
++++ configure.in	Thu Aug 16 09:03:22 2001
 @@ -125,20 +125,7 @@
  AC_CHECK_LIB(nsl, gethostbyname)
  AC_CHECK_LIB(socket, socket)
@@ -24,12 +24,3 @@ $NetBSD: patch-ab,v 1.7 2001/08/10 14:41:19 martin Exp $
  
  AC_CHECK_LIB(util, openpty)
  
-@@ -195,7 +182,7 @@
- # AC_HEADER_DIRENT
- # AC_HEADER_STDC
- # AC_HEADER_SYS_WAIT
--AC_CHECK_HEADERS(getopt.h unistd.h sys/select.h tcpd.h pthread.h pty.h stropts.h)
-+AC_CHECK_HEADERS(getopt.h unistd.h sys/select.h tcpd.h pthread.h util.h pty.h stropts.h)
- 
- # dnl Checks for typedefs, structures, and compiler characteristics.
- # AC_C_CONST
