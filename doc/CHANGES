@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3780 2003/11/04 07:44:12 wiz Exp $
+$NetBSD: CHANGES,v 1.3781 2003/11/04 12:51:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4303,3 +4303,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p0f to 2.0.3 [recht 2003-11-03]
 	Updated gforth to 0.5.0nb1 [jmmv 2003-11-03]
 	Updated x2vnc to 1.5.1 [wiz 2003-11-04]
+	Updated ethereal to 0.9.16 [adam 2003-11-04]
