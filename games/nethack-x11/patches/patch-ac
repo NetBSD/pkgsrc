@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.10 2002/03/22 17:26:26 pooka Exp $
+$NetBSD: patch-ac,v 1.1 2002/03/22 17:26:28 pooka Exp $
 
 --- include/system.h.orig	Thu Jan  6 21:20:08 2000
 +++ include/system.h	Thu Aug 10 18:16:03 2000

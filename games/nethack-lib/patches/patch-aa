@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2000/08/10 17:50:06 pooka Exp $
+$NetBSD: patch-aa,v 1.6 2002/03/22 17:26:25 pooka Exp $
 
---- include/config.h.orig	Sat Jul 22 04:13:51 2000
-+++ include/config.h	Thu Aug 10 17:39:35 2000
-@@ -151,11 +151,11 @@
+--- include/config.h.old	Thu Mar 21 01:42:43 2002
++++ include/config.h	Fri Mar 22 15:00:37 2002
+@@ -163,11 +163,11 @@
  
  #ifdef UNIX
  /* path and file name extension for compression program */
@@ -13,21 +13,21 @@ $NetBSD: patch-aa,v 1.5 2000/08/10 17:50:06 pooka Exp $
  /* An example of one alternative you might want to use: */
 -/* #define COMPRESS "/usr/local/bin/gzip" */	/* FSF gzip compression */
 -/* #define COMPRESS_EXTENSION ".gz" */		/* normal gzip extension */
-+#define COMPRESS "@GZIP_PROGRAM@" 		/* FSF gzip compression */
++#define COMPRESS "@GZIP_PROGRAM@"		/* FSF gzip compression */
 +#define COMPRESS_EXTENSION ".gz"		/* normal gzip extension */
  #endif
  
  #ifndef COMPRESS
-@@ -186,7 +186,7 @@
-  * otherwise it will be the current directory.
-  */
- # ifndef HACKDIR
--#  define HACKDIR "/usr/games/lib/nethackdir"	/* nethack directory */
-+#  define HACKDIR "XXXPREFIXXXX/share/nethackdir"	/* nethack directory */
+@@ -201,7 +201,7 @@
+ #  ifdef __APPLE__
+ #    define HACKDIR "nethackdir"	/* nethack directory */
+ #  else
+-#    define HACKDIR "/usr/games/lib/nethackdir"
++#    define HACKDIR "XXXPREFIXXXX/share/nethackdir"
+ #  endif
  # endif
  
- /*
-@@ -282,7 +282,7 @@
+@@ -298,7 +298,7 @@
   * functions that have been macroized.
   */
  
