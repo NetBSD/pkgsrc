@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/14 17:21:45 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/18 00:13:28 jmmv Exp $
 
 DISTNAME=	mjpegtools-1.6.1.93
 CATEGORIES=	multimedia
@@ -11,7 +11,7 @@ COMMENT=	Programs for compressing video streams
 DEPENDS+=		toolame>=02l:../../audio/toolame
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 
 USE_LIBTOOL=		yes
@@ -24,15 +24,15 @@ CONFIGURE_ARGS+=	--with-lame-includes=${BUILDLINK_PREFIX.lame}
 # XXX fix me
 CONFIGURE_ARGS+=	--without-avifile
 
-.include "../../audio/lame/buildlink2.mk"
-.include "../../devel/SDL/buildlink2.mk"
-.include "../../graphics/ImageMagick/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-#.include "../../multimedia/avifile/buildlink2.mk"
+.include "../../audio/lame/buildlink3.mk"
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../graphics/ImageMagick/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+#.include "../../multimedia/avifile/buildlink3.mk"
 # GTK+ support is disabled to avoid a dependency on GTK+ when building GNOME2.
 # This only disables the "glav" program.  If you really need it, please add an
 # external package for it.
-#.include "../../x11/gtk/buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+#.include "../../x11/gtk/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
