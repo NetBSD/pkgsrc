@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/01/20 12:19:17 agc Exp $
+# $NetBSD: Makefile,v 1.23 2004/02/20 15:32:52 taca Exp $
 # FreeBSD Id: ports/lang/ruby/Makefile,v 1.39 2000/10/20 19:56:03 knu Exp
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -23,6 +23,8 @@ CONFIGURE_ARGS=	--enable-shared
 MLINKS=		ruby${_RUBY_SUFFIX}.1 ruby.1
 TEST_TARGET=	test
 CONFIGURE_ENV+=	PREFIX="${PREFIX}"
+# Ruby build process depends on config.status's content
+CONFIG_STATUS_OVERRIDE=	# empty
 
 DOCS=		ChangeLog README README.EXT README.EXT.ja README.ja ToDo \
 		doc/NEWS doc/forwardable.rd doc/forwardable.rd.ja \
