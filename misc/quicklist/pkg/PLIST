@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/15 03:23:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/04/28 00:35:00 garbled Exp $
+share/doc/quicklist/gtksheet/AUTHORS
+share/doc/quicklist/gtksheet/ChangeLog
+share/doc/quicklist/gtksheet/TODO
+share/doc/quicklist/gtksheet/BUGS
+share/doc/quicklist/gtksheet/CONTRIB
+share/doc/quicklist/gtksheet/COPYING
+share/doc/quicklist/gtksheet/README
+share/doc/quicklist/file_format
+share/doc/quicklist/functionality
+share/doc/quicklist/functions
 bin/quicklist
-share/doc/quicklist-0.8.2/file_format
-share/doc/quicklist-0.8.2/functionality
-share/doc/quicklist-0.8.2/functions
-share/doc/quicklist-0.8.2/gtksheet/AUTHORS
-share/doc/quicklist-0.8.2/gtksheet/BUGS
-share/doc/quicklist-0.8.2/gtksheet/CONTRIB
-share/doc/quicklist-0.8.2/gtksheet/COPYING
-share/doc/quicklist-0.8.2/gtksheet/ChangeLog
-share/doc/quicklist-0.8.2/gtksheet/README
-share/doc/quicklist-0.8.2/gtksheet/TODO
-@dirrm share/doc/quicklist-0.8.2/gtksheet
-@dirrm share/doc/quicklist-0.8.2
+@dirrm share/doc/quicklist/gtksheet
+@dirrm share/doc/quicklist
