@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1962 2004/07/21 07:34:36 taca Exp $
+$NetBSD: TODO,v 1.1963 2004/07/22 01:16:04 lukem Exp $
 
 Suggested new packages
 ======================
@@ -464,6 +464,18 @@ Suggested pkgsrc enhancements
 	  of CFLAGS, LDFLAGS etc are present when the compiler/linker is
 	  called. To be used as a means to detect packages which ignore
 	  such environment variables.
+
+	o Add framework to generate messages (lines) for email to send
+	  to PKGSRC_MESSAGE_RECIPIENTS after pkg install/deinstall, for
+	  purposes including:
+		- MESSAGE files
+		- msgprint() messages
+		- CONF_FILES*, SUPPORT_FILES* installation/customization
+		- OWN_DIRS* messages (from PKG_CONFIG=NO)
+		- User/group changes (PKG_CREATE_USERGROUP=YES)
+		- /etc/shells changes (PKG_REGISTER_SHELLS=YES)
+		- pkg-specific rc.d script instructions
+	  (Consider renaming PKGSRC_MESSAGE_RECIPIENTS as well.)
 
 Suggested other platform enhancements
 =====================================
