@@ -5,7 +5,7 @@ cat >>Makefile<<END
 BINDIR = $PREFIX/bin
 INCLUDEDIR = $PREFIX/share/psutils
 MANDIR =$PREFIX/man/man1
-PERL = /usr/bin/perl
+PERL = $PREFIX/bin/perl
 CC=cc
 END
 exit 0
