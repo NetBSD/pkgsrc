@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/01 17:44:43 tv Exp $
+# $NetBSD: Makefile,v 1.2 2002/07/24 19:45:29 jlam Exp $
 #
 
 DISTNAME=	mod_gzip.c
@@ -13,8 +13,7 @@ HOMEPAGE=	http://www.remotecommunications.com/apache/mod_gzip/
 COMMENT=	On-the-fly GZIP compression for Apache 1.3.x
 
 DEPENDS+=	apache{,6}-1.3.*:../../www/apache
-# For "apxs":
-BUILD_DEPENDS=	perl>=${PERL5_REQD}:../../lang/perl5
+USE_PERL5=	build	# for "apxs"
 
 VERSION=	1.3.19.1a
 DIST_SUBDIR=	${PKGNAME}

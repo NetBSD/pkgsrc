@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/02/18 15:14:41 seb Exp $
+# $NetBSD: Makefile,v 1.9 2002/07/24 19:45:28 jlam Exp $
 
 DISTNAME=		sh-utils-2.0
 PKGREVISION=		1
@@ -9,8 +9,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/shellutils/shellutils.html
 COMMENT=		GNU shell utilities
 
-BUILD_DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
-
+USE_PERL5=		build
 USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--program-prefix=g

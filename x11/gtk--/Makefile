@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2002/02/14 13:58:24 drochner Exp $
+# $NetBSD: Makefile,v 1.23 2002/07/24 19:45:32 jlam Exp $
 # FreeBSD Id: Makefile,v 1.6 1999/01/12 16:50:43 vanilla Exp
 #
 
@@ -13,12 +13,12 @@ HOMEPAGE=		http://gtkmm.sourceforge.net/
 COMMENT=		C++ wrapper for GTK+
 
 BUILD_DEPENDS+=		m4>=1.4:../../devel/m4
-BUILD_DEPENDS+=		perl-*:../../lang/perl5
 
 USE_X11BASE=		YES
 
 USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
+USE_PERL5=		build
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/scripts/ltconfig

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/05/12 10:16:51 abs Exp $
+# $NetBSD: Makefile,v 1.9 2002/07/24 19:45:32 jlam Exp $
 #
 
 DISTNAME=	gnomemm-1.1.19
@@ -11,9 +11,8 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://gtkmm.sourceforge.net/
 COMMENT=	C++ binding for the GNOME libraries
 
-BUILD_DEPENDS+=	perl-*:../../lang/perl5
-
 GNU_CONFIGURE=	YES
+USE_PERL5=	build
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 USE_X11BASE=	yes
