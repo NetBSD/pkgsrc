@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2880 2005/01/11 13:19:02 markd Exp $
+$NetBSD: TODO,v 1.2881 2005/01/11 13:42:41 adam Exp $
 
 Suggested new packages
 ======================
@@ -443,7 +443,6 @@ Suggested package updates
 	o elm-me-2.5plalpha4
 	o emacs-w3m-1.4.3
 	o emech-2.8.5.1
-	o enlightenment-0.16.7.2
 	o enscript-1.6.4
 	o epic4-2.2
 	o eric3-3.5.1
