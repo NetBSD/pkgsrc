@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/13 16:37:05 agc Exp $
+bin/squeak
+share/squeak/Squeak2.6.changes
+share/squeak/Squeak2.6.image
+@dirrm share/squeak
