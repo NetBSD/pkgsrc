@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4381 2004/01/07 16:56:59 tron Exp $
+$NetBSD: CHANGES,v 1.4382 2004/01/07 19:12:57 ben Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -86,3 +86,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added libpqxx-doc-2.1.3 [is 2004-01-07]
 	Added upx-1.24 [ben 2004-01-07]
 	Updated mpg321 to 0.2.10nb3 [tron 2004-01-07]
+	Deleted fp-netbsd-ws [ben 2004-01-07]
+	Added fprot-workstation-bin-4.3.1 [ben 2004-01-07]
