@@ -1,26 +1,18 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/11 00:47:04 xtraeme Exp $
-#
-# This Makefile fragment is included by packages that use cdparanoia.
-#
-# This file was created automatically using createbuildlink-3.1.
-#
+# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:06 jlam Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 CDPARANOIA_BUILDLINK3_MK:=	${CDPARANOIA_BUILDLINK3_MK}+
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	cdparanoia
 .endif
 
-.include "../../mk/bsd.prefs.mk"
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ncdparanoia}
+BUILDLINK_PACKAGES+=	cdparanoia
 
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "Linux"
-.  if !empty(CDPARANOIA_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			cdparanoia
+.if !empty(CDPARANOIA_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.cdparanoia+=		cdparanoia>=3.0
 BUILDLINK_PKGSRCDIR.cdparanoia?=	../../audio/cdparanoia
-
-.  endif # CDPARANOIA_BUILDLINK3_MK
-.endif #
+.endif	# CDPARANOIA_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

@@ -1,21 +1,18 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/11 02:54:41 xtraeme Exp $
-#
-# This Makefile fragment is included by packages that use libesmtp.
-#
-# This file was created automatically using createbuildlink-3.1.
-#
+# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:37 jlam Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBESMTP_BUILDLINK3_MK:=	${LIBESMTP_BUILDLINK3_MK}+
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	libesmtp
 .endif
 
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibesmtp}
+BUILDLINK_PACKAGES+=	libesmtp
+
 .if !empty(LIBESMTP_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			libesmtp
-BUILDLINK_DEPENDS.libesmtp+=		libesmtp>=1.0rc1nb1
-BUILDLINK_PKGSRCDIR.libesmtp?=		../../mail/libesmtp
+BUILDLINK_DEPENDS.libesmtp+=	libesmtp>=1.0rc1nb1
+BUILDLINK_PKGSRCDIR.libesmtp?=	../../mail/libesmtp
 
 LIBESMTP=	-lesmtp
 
@@ -24,6 +21,6 @@ MAKE_ENV+=	LIBESMTP="${LIBESMTP}"
 
 .include "../../security/openssl/buildlink3.mk"
 
-.endif # LIBESMTP_BUILDLINK3_MK
+.endif	# LIBESMTP_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
