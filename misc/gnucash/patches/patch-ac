@@ -1,7 +1,9 @@
+$NetBSD$
+
 --- /dev/null	Mon Mar 22 08:33:49 1999
 +++ src/engine/asprintf.c	Mon Mar 22 09:26:19 1999
 @@ -0,0 +1,95 @@
-+/*	$NetBSD: asprintf.c,v 1.4 1998/11/15 17:19:53 christos Exp $	*/
++/*	$NetBSD: patch-ac,v 1.1 1999/03/22 15:56:11 mellon Exp $	*/
 +
 +/*
 + * Copyright (c) 1997 Todd C. Miller <Todd.Miller@courtesan.com>
@@ -39,7 +41,7 @@
 +
 +#include <sys/cdefs.h>
 +#if defined(LIBC_SCCS) && !defined(lint)
-+__RCSID("$NetBSD: asprintf.c,v 1.4 1998/11/15 17:19:53 christos Exp $");
++__RCSID("$NetBSD: patch-ac,v 1.1 1999/03/22 15:56:11 mellon Exp $");
 +#endif /* LIBC_SCCS and not lint */
 +
 +#include <stdio.h>
