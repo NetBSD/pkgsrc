@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/01/16 05:40:54 uebayasi Exp $
+
+SHA1 (Mowitz-0.2.1.tar.gz) = 4ef55a2e5a294880ce4cab3df1f3749758d0d92c
+Size (Mowitz-0.2.1.tar.gz) = 1029051 bytes
+SHA1 (patch-aa) = a4c54c4150b276b8de10d497c2b1541e2e2323f1
