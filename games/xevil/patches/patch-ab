@@ -1,31 +1,17 @@
-$NetBSD: patch-ab,v 1.3 2004/03/26 01:34:08 kristerw Exp $
+$NetBSD: patch-ab,v 1.4 2005/01/25 16:02:26 xtraeme Exp $
 
---- actual.C.orig	Tue Sep 24 00:18:08 1996
-+++ actual.C	Fri Mar 26 02:17:46 2004
-@@ -23,6 +23,7 @@
-     hardts@alum.mit.edu
-     http://graphics.lcs.mit.edu/~hardts/xevil.html
- */
-+using namespace std;
- 
- #ifndef NO_PRAGMAS
- #pragma implementation "actual.h"
-@@ -30,7 +31,8 @@
+--- cmn/utils.cpp.orig	Sun Apr 13 15:11:54 2003
++++ cmn/utils.cpp	Sun Apr 13 15:12:19 2003
+@@ -483,11 +483,7 @@
+ #endif
  
  
- // Include Files
--#include <strstream.h>
-+#include <strstream>
-+using std::ostrstream;
+-#ifdef UNAME_USR_BIN
+-#define UNAME_PATH "/usr/bin/uname"
+-#else
+-#define UNAME_PATH "/bin/uname"
+-#endif
++#define UNAME_PATH "@UNAME@"
  
- #include "utils.h"
- #include "coord.h"
-@@ -685,7 +687,7 @@
- // More general and easy to extend.
- PhysicalP Transmogifier::new_physical(const Pos &middle)
- {
--  PhysicalContext *list[A_CLASSES_NUM];
-+  const PhysicalContext *list[A_CLASSES_NUM];
-   int size;
-   LocatorP l = get_locator();
-   WorldP w = get_world();
+ #ifdef X11
+   FILE* fp = popen(UNAME_PATH " -a","r");

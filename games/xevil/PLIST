@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/25 15:59:27 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/25 16:02:26 xtraeme Exp $
 bin/xevil
 share/doc/xevil/UNIXSetControls.gif
 share/doc/xevil/UNIXShowControls.gif

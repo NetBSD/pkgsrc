@@ -1,44 +1,16 @@
-$NetBSD: patch-ac,v 1.3 2004/03/26 01:34:08 kristerw Exp $
+$NetBSD: patch-ac,v 1.4 2005/01/25 16:02:26 xtraeme Exp $
 
---- game.C.orig	Tue Sep 24 02:27:18 1996
-+++ game.C	Fri Mar 26 02:19:24 2004
-@@ -22,6 +22,7 @@
-     hardts@alum.mit.edu
-     http://graphics.lcs.mit.edu/~hardts/xevil.html
- */
-+using namespace std;
+--- makefile.orig	2003-03-23 00:09:08.000000000 +0000
++++ makefile	2003-08-16 11:20:02.000000000 +0000
+@@ -63,11 +63,6 @@
  
- #ifndef NO_PRAGMAS
- #pragma implementation "game.h"
-@@ -34,7 +35,7 @@
- #include <stdio.h>
- }
+ # Could also include serverping in the distribution
+ $(OBJ_DIR)/xevil$(VERSION).$(PCKG_NAME).tar.Z::
+-	cp readme.txt $(OBJ_DIR)
+-	cp gpl.txt $(OBJ_DIR)
+-	cp -r instructions $(OBJ_DIR)
+-	(cd $(OBJ_DIR); tar cf xevil$(VERSION).$(PCKG_NAME).tar xevil readme.txt gpl.txt instructions)
+-	(cd $(OBJ_DIR); $(COMPRESS) -f xevil$(VERSION).$(PCKG_NAME).tar)
  
--#include <strstream.h>
-+#include <strstream>
- #include <iomanip.h>
- 
- #include "utils.h"
-@@ -386,11 +387,11 @@
-   
-   // Get arrays of potential weapons and potential otherItems.
-   int weaponsNum;
--  PhysicalContext *weapons[A_CLASSES_NUM];
-+  const PhysicalContext *weapons[A_CLASSES_NUM];
-   weaponsNum = locator->filter_contexts(weapons,NULL,
- 					potential_weapon_filter);
-   int oItemsNum;
--  PhysicalContext *oItems[A_CLASSES_NUM];
-+  const PhysicalContext *oItems[A_CLASSES_NUM];
-   oItemsNum = locator->filter_contexts(oItems,NULL,
- 				       potential_other_item_filter);
-   
-@@ -1381,7 +1382,7 @@
-       // Choose class randomly.
- 
-       // Get list of all classes that are potential Human classes.
--      PhysicalContext *list[A_CLASSES_NUM];
-+      const PhysicalContext *list[A_CLASSES_NUM];
-       int size = locator.filter_contexts(list,NULL,potential_human_filter);
-       assert(size);
-       theContext = list[Utils::choose(size)];
+ ## Make a distribution file.
+ #dist:
