@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.20 2000/11/21 00:16:44 hubertf Exp $
+# $NetBSD: bsd.prefs.mk,v 1.21 2000/12/03 14:10:03 wiz Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -103,6 +103,8 @@ SHAREMODE?=		${DOCMODE}
 .if (${OPSYS} == "NetBSD") && !defined(USE_SOCKS) && \
     exists(/usr/include/netinet6)
 USE_INET6?=		YES
+.else
+USE_INET6?=		NO
 .endif
 
 # Preload all default values for CFLAGS, LDFLAGS, etc. before bsd.pkg.mk
