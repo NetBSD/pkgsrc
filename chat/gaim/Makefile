@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.78 2005/01/21 13:26:42 adam Exp $
+# $NetBSD: Makefile,v 1.79 2005/02/21 09:46:43 adam Exp $
 
-DISTNAME=	gaim-1.1.2
+DISTNAME=	gaim-1.1.3
 CATEGORIES=	chat x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gaim/}
 EXTRACT_SUFX=	.tar.bz2
@@ -9,17 +9,17 @@ MAINTAINER=	mjl@luckie.org.nz
 HOMEPAGE=	http://gaim.sourceforge.net/
 COMMENT=	GTK+ 2.x based multi-protocol instant messaging client
 
-BUILD_USES_MSGFMT=	YES
+BUILD_USES_MSGFMT=	yes
 
 CONFLICTS+=		gaim-gnome-[0-9]*
 
-USE_BUILDLINK3=		YES
+USE_BUILDLINK3=		yes
 USE_DIRS+=		xdg-1.1
 USE_GNU_TOOLS+=		make
-USE_LIBTOOL=		YES
-USE_PKGLOCALEDIR=	YES
-USE_X11=		YES
-GNU_CONFIGURE=		YES
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+USE_X11=		yes
+GNU_CONFIGURE=		yes
 
 SHLIBTOOL_OVERRIDE=	libtool
 
