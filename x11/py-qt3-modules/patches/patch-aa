@@ -1,42 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/07/22 17:24:50 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2004/05/09 17:06:07 recht Exp $
 
---- build.py.orig	2003-07-05 12:52:49.000000000 +0200
-+++ build.py	2003-07-22 15:42:01.000000000 +0200
-@@ -50,7 +50,7 @@
- pyVersNr = None
- makefileGen = None
- makeBin = None
--buildModules = ["qt"]
-+buildModules = []
- proPatches = {}
- makefilePatches = {}
- tempBuildDir = None
-@@ -162,12 +162,13 @@
-     global pyFullVers, pyVersNr
+--- configure.py.orig	2004-03-11 20:23:30.000000000 +0100
++++ configure.py	2004-05-09 17:37:45.000000000 +0200
+@@ -38,7 +38,7 @@
+ sip_min_v3_version = 0x030a01
+ sip_min_v4_version = 0x040000
  
-     pyFullVers = string.split(sys.version)[0]
-+    pyFullVersn = string.replace(pyFullVers, 'p', '.');
- 
--    vl = string.split(re.findall("[0-9.]*",pyFullVers)[0],".")
-+    vl = string.split(re.findall("[0-9.]*",pyFullVersn)[0],".")
-     major = vl[0]
-     minor = vl[1]
- 
--    pyVers = major + "." + minor
-+    pyVers = sys.version[0:3]
-     pyVersNr = int(major) * 10 + int(minor)
- 
-     global platMake, platCopy, platMkdir, platRmdir
-@@ -592,7 +593,7 @@
-         incdirs = incdirs + " " + escape(qtIncDir)
- 
-     # Find the QScintilla header files.
--    if qtVersion >= 0x030000:
-+    if 0:
-         global sciIncDir
- 
-         if not sciIncDir:
-@@ -717,7 +718,7 @@
+-pyqt_modules = ["qt"]
++pyqt_modules = []
+ qt_sip_flags = []
+ qtext_sip_flags = []
+ qtpe_sip_flags = []
+@@ -663,7 +663,7 @@
      print "Type 'no' to decline the terms of the license."
      print
  
@@ -45,50 +20,178 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/07/22 17:24:50 drochner Exp $
          try:
              resp = raw_input("Do you accept the terms of the license? ")
          except:
-@@ -997,7 +998,7 @@
-         buildMakefile("qttest.pro")
+@@ -697,82 +697,82 @@
+         # The Professional Edition needs special handling.
+         prof = (sipcfg.qt_edition == "professional")
  
-         # Check the location of the QScintilla library.
--        if sciVersion >= 0:
-+        if 0:
-             global sciLibDir
+-        sipconfig.inform("Creating pyuic Makefile...")
++#        sipconfig.inform("Creating pyuic Makefile...")
  
-             if not sciLibDir:
-@@ -1551,23 +1552,23 @@
-         subdirs = subdirs + " qtpe"
+-        if prof:
+-            buildfile= "pyuic-prof.sbf"
++#        if prof:
++#            buildfile= "pyuic-prof.sbf"
  
-     # See which version of pyuic to build.
--    proPatches["BINDIR"] = [re.compile("@BL_BINDIR@",re.M), escape(platBinDir)]
-+#    proPatches["BINDIR"] = [re.compile("@BL_BINDIR@",re.M), escape(platBinDir)]
- 
--    if qtVersion >= 0x030000:
--        inform("Creating Makefile for pyuic3.")
--        subdirs = subdirs + " pyuic3"
--        olddir = pushDir("pyuic3")
--    elif qtVersion >= 0x020000:
--        inform("Creating Makefile for pyuic2.")
--        subdirs = subdirs + " pyuic2"
--        olddir = pushDir("pyuic2")
+-            for xml in ("qdom.cpp", "qxml.cpp"):
+-                shutil.copyfile(sipcfg.qt_dir + "/src/xml/" + xml, "pyuic3/" + xml)
+-        else:
+-            buildfile= "pyuic.sbf"
 -
--    buildMakefile("pyuic.pro")
--    fixInstallTarget()
--    popDir(olddir)
-+#    if qtVersion >= 0x030000:
-+#        inform("Creating Makefile for pyuic3.")
-+#        subdirs = subdirs + " pyuic3"
-+#        olddir = pushDir("pyuic3")
-+#    elif qtVersion >= 0x020000:
-+#        inform("Creating Makefile for pyuic2.")
-+#        subdirs = subdirs + " pyuic2"
-+#        olddir = pushDir("pyuic2")
+-        makefile = sipconfig.ProgramMakefile(
+-            configuration=sipcfg,
+-            build_file=buildfile,
+-            dir="pyuic3",
+-            install_dir=opt_pyqtbindir,
+-            console=1,
+-            qt=1,
+-            warnings=1
+-        )
+-
+-        makefile.extra_defines.append("UIC")
+-        makefile.extra_defines.append("QT_INTERNAL_XML")
+-
+-        if prof:
+-            makefile.extra_defines.append("QT_MODULE_XML")
+-
+-        if sipcfg.qt_version < 0x030100:
+-            makefile.extra_include_dirs.append(sipcfg.qt_dir + "/src/3rdparty/zlib")
+-
+-        makefile.generate()
+-        subdirs.append("pyuic3")
++#            for xml in ("qdom.cpp", "qxml.cpp"):
++#                shutil.copyfile(sipcfg.qt_dir + "/src/xml/" + xml, "pyuic3/" + xml)
++#        else:
++#            buildfile= "pyuic.sbf"
 +
-+#    buildMakefile("pyuic.pro")
-+#    fixInstallTarget()
-+#    popDir(olddir)
++#        makefile = sipconfig.ProgramMakefile(
++#            configuration=sipcfg,
++#            build_file=buildfile,
++#            dir="pyuic3",
++#            install_dir=opt_pyqtbindir,
++#            console=1,
++#            qt=1,
++#            warnings=1
++#        )
++
++#        makefile.extra_defines.append("UIC")
++#        makefile.extra_defines.append("QT_INTERNAL_XML")
++
++#        if prof:
++#            makefile.extra_defines.append("QT_MODULE_XML")
++
++#        if sipcfg.qt_version < 0x030100:
++#            makefile.extra_include_dirs.append(sipcfg.qt_dir + "/src/3rdparty/zlib")
++
++#        makefile.generate()
++#        subdirs.append("pyuic3")
++
++#        sipconfig.inform("Creating pylupdate Makefile...")
++
++#        if prof:
++#            buildfile= "pylupdate-prof.sbf"
++
++#            shutil.copyfile(sipcfg.qt_dir + "/src/xml/qxml.cpp", "pylupdate3/qxml.cpp")
++#        else:
++#            buildfile= "pylupdate.sbf"
++
++#        makefile = sipconfig.ProgramMakefile(
++#            configuration=sipcfg,
++#            build_file=buildfile,
++#            dir="pylupdate3",
++#            install_dir=opt_pyqtbindir,
++#            console=1,
++#            qt=1,
++#            warnings=1
++#        )
++
++#        makefile.extra_defines.append("QT_INTERNAL_XML")
++
++#        if prof:
++#            makefile.extra_defines.append("QT_MODULE_XML")
++
++#        makefile.generate()
++#        subdirs.append("pylupdate3")
++#    elif sipcfg.qt_version >= 0x020000:
++#        sipconfig.inform("Creating pyuic Makefile...")
++
++#        makefile = sipconfig.ProgramMakefile(
++#            configuration=sipcfg,
++#            build_file="pyuic.sbf",
++#            dir="pyuic2",
++#            install_dir=opt_pyqtbindir,
++#            console=1,
++#            qt=1,
++#            warnings=1
++#        )
  
-     # Build pylupdate if Qt v3.0 or later.
--    if qtVersion >= 0x030000:
-+    if 0:
-         inform("Creating Makefile for pylupdate3.")
-         subdirs = subdirs + " pylupdate3"
-         olddir = pushDir("pylupdate3")
+-        sipconfig.inform("Creating pylupdate Makefile...")
++#        makefile.extra_defines.append("UIC")
++#        makefile.extra_include_dirs.append(sipcfg.qt_dir + "/src/3rdparty/zlib")
+ 
+-        if prof:
+-            buildfile= "pylupdate-prof.sbf"
+-
+-            shutil.copyfile(sipcfg.qt_dir + "/src/xml/qxml.cpp", "pylupdate3/qxml.cpp")
+-        else:
+-            buildfile= "pylupdate.sbf"
+-
+-        makefile = sipconfig.ProgramMakefile(
+-            configuration=sipcfg,
+-            build_file=buildfile,
+-            dir="pylupdate3",
+-            install_dir=opt_pyqtbindir,
+-            console=1,
+-            qt=1,
+-            warnings=1
+-        )
+-
+-        makefile.extra_defines.append("QT_INTERNAL_XML")
+-
+-        if prof:
+-            makefile.extra_defines.append("QT_MODULE_XML")
+-
+-        makefile.generate()
+-        subdirs.append("pylupdate3")
+-    elif sipcfg.qt_version >= 0x020000:
+-        sipconfig.inform("Creating pyuic Makefile...")
+-
+-        makefile = sipconfig.ProgramMakefile(
+-            configuration=sipcfg,
+-            build_file="pyuic.sbf",
+-            dir="pyuic2",
+-            install_dir=opt_pyqtbindir,
+-            console=1,
+-            qt=1,
+-            warnings=1
+-        )
+-
+-        makefile.extra_defines.append("UIC")
+-        makefile.extra_include_dirs.append(sipcfg.qt_dir + "/src/3rdparty/zlib")
+-
+-        makefile.generate()
+-        subdirs.append("pyuic2")
++#        makefile.generate()
++#        subdirs.append("pyuic2")
+ 
+     sipconfig.inform("Creating top level Makefile...")
+ 
+@@ -853,7 +853,7 @@
+             sipcfg.error("This version of PyQt requires SIP v%s or later" % sipcfg.version_to_string(minv))
+ 
+     # Check for QScintilla.
+-    check_qscintilla()
++    #check_qscintilla()
+ 
+     # Check which modules to build.
+     check_module("qtcanvas", "qcanvas.h", "QCanvas()")
+@@ -866,8 +866,8 @@
+         check_module("qtsql", "qsql.h", "QSql()")
+         check_module("qtui", "qwidgetfactory.h", "QWidgetFactory()", lib="qui")
+ 
+-    if qsci_version:
+-        check_module("qtext", "qextscintillabase.h", "QextScintillaBase()", define=qsci_define, include_dir=opt_qsciincdir, lib_dir=opt_qscilibdir, lib="qscintilla")
++    #if qsci_version:
++    #    check_module("qtext", "qextscintillabase.h", "QextScintillaBase()", define=qsci_define, include_dir=opt_qsciincdir, lib_dir=opt_qscilibdir, lib="qscintilla")
+ 
+     if opt_qtpetag:
+         pyqt_modules.append("qtpe")
