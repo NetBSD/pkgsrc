@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1596 2005/02/27 22:10:25 veego Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1597 2005/03/02 11:11:36 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1277,7 +1277,7 @@ _FETCH_FILE=								\
 			fi;						\
 			if ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${bfile} ${FETCH_AFTER_ARGS}; then \
 				if [ -n "${FAILOVER_FETCH}" -a -f ${DISTINFO_FILE} -a -f ${_DISTDIR}/$$bfile ]; then \
-					alg=`${AWK} 'NF == 4 && $$2 == "('$$file')" && $$3 == "=" {print $$1;}' ${DISTINFO_FILE}`; \
+					alg=`${AWK} 'NF == 4 && $$2 == "('$$file')" && $$3 == "=" {print $$1; exit}' ${DISTINFO_FILE}`; \
 					if [ -z "$$alg" ]; then		\
 						alg=${PATCH_DIGEST_ALGORITHM};\
 					fi;				\
