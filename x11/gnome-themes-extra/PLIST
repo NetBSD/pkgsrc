@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/29 11:36:13 xtraeme Exp $
-lib/gtk-2.0/2.2.0/engines/libindustrial.a
-lib/gtk-2.0/2.2.0/engines/libindustrial.la
-lib/gtk-2.0/2.2.0/engines/libindustrial.so
-lib/gtk-2.0/2.2.0/engines/libsmooth.a
-lib/gtk-2.0/2.2.0/engines/libsmooth.la
-lib/gtk-2.0/2.2.0/engines/libsmooth.so
+@comment $NetBSD: PLIST,v 1.2 2004/04/01 19:17:53 jmmv Exp $
+lib/gtk-2.0/2.4.0/engines/libindustrial.a
+lib/gtk-2.0/2.4.0/engines/libindustrial.la
+lib/gtk-2.0/2.4.0/engines/libindustrial.so
+lib/gtk-2.0/2.4.0/engines/libsmooth.a
+lib/gtk-2.0/2.4.0/engines/libsmooth.la
+lib/gtk-2.0/2.4.0/engines/libsmooth.so
 share/icons/Amaranth/index.theme
 share/icons/Amaranth/scalable/apps/abiword_48.svg
 share/icons/Amaranth/scalable/apps/accessibility-keyboard-capplet.svg
@@ -158,9 +158,11 @@ share/icons/Amaranth/scalable/stock/stock_about.svg
 share/icons/Amaranth/scalable/stock/stock_cdrom.svg
 share/icons/Amaranth/scalable/stock/stock_copy.svg
 share/icons/Amaranth/scalable/stock/stock_cut.svg
+share/icons/Amaranth/scalable/stock/stock_delete.svg
 share/icons/Amaranth/scalable/stock/stock_dialog_error.png
 share/icons/Amaranth/scalable/stock/stock_dialog_info.png
 share/icons/Amaranth/scalable/stock/stock_dialog_warning.png
+share/icons/Amaranth/scalable/stock/stock_execute.svg
 share/icons/Amaranth/scalable/stock/stock_floppy.svg
 share/icons/Amaranth/scalable/stock/stock_go-back.svg
 share/icons/Amaranth/scalable/stock/stock_go-down.svg
@@ -690,6 +692,8 @@ share/icons/Nuvola/scalable/stock/find.svg
 share/icons/Nuvola/scalable/stock/findreplace.svg
 share/icons/Nuvola/scalable/stock/folder.svg
 share/icons/Nuvola/scalable/stock/folder_new.svg
+share/icons/Nuvola/scalable/stock/gaim_insert-smiley-small.svg
+share/icons/Nuvola/scalable/stock/gaim_send-im.svg
 share/icons/Nuvola/scalable/stock/gnome-logo.svg
 share/icons/Nuvola/scalable/stock/panel-lockscreen.svg
 share/icons/Nuvola/scalable/stock/print-preview.svg
@@ -716,6 +720,8 @@ share/icons/Nuvola/scalable/stock/stock_go-back.svg
 share/icons/Nuvola/scalable/stock/stock_go-down.svg
 share/icons/Nuvola/scalable/stock/stock_go-forward.svg
 share/icons/Nuvola/scalable/stock/stock_go-up.svg
+share/icons/Nuvola/scalable/stock/stock_gtk-goto-first.svg
+share/icons/Nuvola/scalable/stock/stock_gtk-goto-last.svg
 share/icons/Nuvola/scalable/stock/stock_help.svg
 share/icons/Nuvola/scalable/stock/stock_home.svg
 share/icons/Nuvola/scalable/stock/stock_quit.svg
@@ -771,12 +777,10 @@ share/icons/Wasp/scalable/apps/my-computer.svg
 share/icons/Wasp/scalable/apps/network-config.svg
 share/icons/Wasp/scalable/apps/network.svg
 share/icons/Wasp/scalable/apps/procman.svg
-share/icons/Wasp/scalable/apps/redhat-accessories.svg
 share/icons/Wasp/scalable/apps/redhat-config-date.svg
 share/icons/Wasp/scalable/apps/redhat-config-users.svg
 share/icons/Wasp/scalable/apps/redhat-config-xfree86.svg
 share/icons/Wasp/scalable/apps/redhat-games.svg
-share/icons/Wasp/scalable/apps/redhat-graphics.svg
 share/icons/Wasp/scalable/apps/redhat-home.svg
 share/icons/Wasp/scalable/apps/redhat-internet.svg
 share/icons/Wasp/scalable/apps/redhat-main-menu.svg
@@ -886,6 +890,11 @@ share/icons/Wasp/scalable/stock/filenew.svg
 share/icons/Wasp/scalable/stock/find.svg
 share/icons/Wasp/scalable/stock/findreplace.svg
 share/icons/Wasp/scalable/stock/folder.svg
+share/icons/Wasp/scalable/stock/gaim_auth.svg
+share/icons/Wasp/scalable/stock/gaim_error.svg
+share/icons/Wasp/scalable/stock/gaim_info.svg
+share/icons/Wasp/scalable/stock/gaim_offline.svg
+share/icons/Wasp/scalable/stock/gaim_online.svg
 share/icons/Wasp/scalable/stock/help_book.svg
 share/icons/Wasp/scalable/stock/home.svg
 share/icons/Wasp/scalable/stock/information.svg
@@ -921,6 +930,7 @@ ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnome-themes-extra.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnome-themes-extra.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnome-themes-extra.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnome-themes-extra.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnome-themes-extra.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gnome-themes-extra.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gnome-themes-extra.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnome-themes-extra.mo
@@ -984,20 +994,16 @@ share/themes/Lush/metacity-1/BT-fermer.png
 share/themes/Lush/metacity-1/BT-neutre.png
 share/themes/Lush/metacity-1/BT-reduire.png
 share/themes/Lush/metacity-1/BT-reduirefenetre.png
-share/themes/Lush/metacity-1/arrondisbleu-gris.png
 share/themes/Lush/metacity-1/barre-grise-bas.png
-share/themes/Lush/metacity-1/barre-grise.png
-share/themes/Lush/metacity-1/barre-inac-suitearrondigris.png
-share/themes/Lush/metacity-1/barre-inactive-morceaugris.png
-share/themes/Lush/metacity-1/barre-inactive_r1_c5.png
-share/themes/Lush/metacity-1/coin-inactif_Bas-D.png
-share/themes/Lush/metacity-1/coin-inactive_Bas-G.png
+share/themes/Lush/metacity-1/coindroit-bas.png
+share/themes/Lush/metacity-1/coingauche-bas.png
 share/themes/Lush/metacity-1/cote-droit.png
 share/themes/Lush/metacity-1/cote-gauche.png
-share/themes/Lush/metacity-1/cote_suitearrondibleu.png
+share/themes/Lush/metacity-1/cote_suitearrondi.png
+share/themes/Lush/metacity-1/degrade-color.png
 share/themes/Lush/metacity-1/degrade-gris.png
-share/themes/Lush/metacity-1/dessousbarre-gris.png
 share/themes/Lush/metacity-1/metacity-theme-1.xml
+share/themes/Lush/metacity-1/transition.png
 share/themes/Nuvola-old/metacity-1/metacity-theme-1.xml
 share/themes/Nuvola-old/metacity-1/wm-close.png
 share/themes/Nuvola-old/metacity-1/wm-inac.png
@@ -1021,16 +1027,7 @@ share/themes/Nuvola/metacity-1/wm-restore.svg
 share/themes/Wasp/gtk-2.0/gtkrc
 share/themes/Wasp/gtk-2.0/iconrc
 share/themes/Wasp/index.theme
-share/themes/Wasp/metacity-1/close-active.png
-share/themes/Wasp/metacity-1/close-inactive.png
-share/themes/Wasp/metacity-1/maximize-active.png
-share/themes/Wasp/metacity-1/maximize-inactive.png
 share/themes/Wasp/metacity-1/metacity-theme-1.xml
-share/themes/Wasp/metacity-1/mid-title-active.png
-share/themes/Wasp/metacity-1/minimize-active.png
-share/themes/Wasp/metacity-1/minimize-inactive.png
-share/themes/Wasp/metacity-1/restore-active.png
-share/themes/Wasp/metacity-1/restore-inactive.png
 @dirrm share/themes/Wasp/metacity-1
 @dirrm share/themes/Wasp/gtk-2.0
 @dirrm share/themes/Wasp
@@ -1052,6 +1049,7 @@ share/themes/Wasp/metacity-1/restore-inactive.png
 @dirrm share/themes/Amaranth/metacity-1
 @dirrm share/themes/Amaranth/gtk-2.0
 @dirrm share/themes/Amaranth
+@comment in xdg-dirs: @dirrm share/themes
 @dirrm share/icons/Wasp/scalable/stock
 @dirrm share/icons/Wasp/scalable/mimetypes
 @dirrm share/icons/Wasp/scalable/filesystems
@@ -1094,3 +1092,5 @@ share/themes/Wasp/metacity-1/restore-inactive.png
 @dirrm share/icons/Amaranth/scalable/apps
 @dirrm share/icons/Amaranth/scalable
 @dirrm share/icons/Amaranth
+@comment in xdg-dirs: @dirrm share/icons
+@comment in gtk2: @dirrm lib/gtk-2.0/2.4.0/engines
