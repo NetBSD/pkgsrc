@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/19 22:33:49 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/20 13:54:53 jschauma Exp $
 #
 
 DISTNAME=		netscape-i686-pc-linux-gnu-installer
@@ -12,7 +12,7 @@ MASTER_SITES=		ftp://ftp.netscape.com/pub/netscape7/${SUB}/ \
 
 MAINTAINER=		jschauma@netbsd.org
 HOMEPAGE=		http://channels.netscape.com/ns/browsers/default.jsp
-COMMENT=		Netscape's Browser/Mail- and Newsreader suite version 7
+COMMENT=		Netscape Browser/Mail- and Newsreader suite version 7
 
 RESTRICTED=		"No re-distribution without agreement from Netscape"
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -20,6 +20,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
+ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386
 INTERACTIVE_STAGE=	build
 
 VERS_MAJ=		7
@@ -51,4 +52,9 @@ do-install:
 # everything specific to your OS/Arch goes into it's own Makefile
 # group together i386, i486, i586 and i686 (for Linux)
 ARCH=${MACHINE_ARCH:C/i[3-6]86/i386/g}
-.include "Makefile.${OPSYS}.${ARCH}"
+
+.if exists(Makefile.${OPSYS}.${ARCH})
+.  include "Makefile.${OPSYS}.${ARCH}"
+.else
+.  include "../../mk/bsd.pkg.mk"
+.endif
