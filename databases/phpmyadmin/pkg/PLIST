@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/07/08 20:53:04 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/07/10 13:43:01 tron Exp $
 share/doc/phpmyadmin/CREDITS
 share/doc/phpmyadmin/DEVELOPERS
 share/doc/phpmyadmin/Documentation.html
@@ -13,6 +13,7 @@ share/phpmyadmin/db_printview.php3
 share/phpmyadmin/db_readdump.php3
 share/phpmyadmin/defines.inc.php3
 share/phpmyadmin/footer.inc.php3
+share/phpmyadmin/functions.js
 share/phpmyadmin/grab_globals.inc.php3
 share/phpmyadmin/header.inc.php3
 share/phpmyadmin/images/bkg.gif
@@ -23,6 +24,7 @@ share/phpmyadmin/images/spacer.gif
 share/phpmyadmin/index.php3
 share/phpmyadmin/ldi_check.php3
 share/phpmyadmin/ldi_table.php3
+share/phpmyadmin/left.js
 share/phpmyadmin/left.php3
 share/phpmyadmin/lib.inc.php3
 share/phpmyadmin/main.php3
