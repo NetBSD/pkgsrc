@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/06 10:07:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/09 13:36:50 markd Exp $
 share/kde/locale/mn/30x16.png
 share/kde/locale/mn/60x40.png
 share/kde/locale/mn/LC_MESSAGES/appletproxy.mo
@@ -6,6 +6,7 @@ share/kde/locale/mn/LC_MESSAGES/childpanelextension.mo
 share/kde/locale/mn/LC_MESSAGES/clockapplet.mo
 share/kde/locale/mn/LC_MESSAGES/cupsdconf.mo
 share/kde/locale/mn/LC_MESSAGES/desktop_kde-i18n.mo
+share/kde/locale/mn/LC_MESSAGES/desktop_kdeaccessibility.mo
 share/kde/locale/mn/LC_MESSAGES/desktop_kdeadmin.mo
 share/kde/locale/mn/LC_MESSAGES/desktop_kdebase.mo
 share/kde/locale/mn/LC_MESSAGES/desktop_kdeedu.mo
@@ -158,11 +159,14 @@ share/kde/locale/mn/LC_MESSAGES/kjobviewer.mo
 share/kde/locale/mn/LC_MESSAGES/klegacyimport.mo
 share/kde/locale/mn/LC_MESSAGES/klettres.mo
 share/kde/locale/mn/LC_MESSAGES/klipper.mo
+share/kde/locale/mn/LC_MESSAGES/kmag.mo
 share/kde/locale/mn/LC_MESSAGES/kmcop.mo
 share/kde/locale/mn/LC_MESSAGES/kmenuapplet.mo
 share/kde/locale/mn/LC_MESSAGES/kmenuedit.mo
 share/kde/locale/mn/LC_MESSAGES/kmessedwords.mo
 share/kde/locale/mn/LC_MESSAGES/kminipagerapplet.mo
+share/kde/locale/mn/LC_MESSAGES/kmousetool.mo
+share/kde/locale/mn/LC_MESSAGES/kmouth.mo
 share/kde/locale/mn/LC_MESSAGES/knorskverbs.mo
 share/kde/locale/mn/LC_MESSAGES/knotify.mo
 share/kde/locale/mn/LC_MESSAGES/konqueror.mo
@@ -233,4 +237,3 @@ share/kde/locale/mn/entry.desktop
 share/kde/locale/mn/flag_new_30x16.png
 @comment dirrm share/kde/locale/mn/LC_MESSAGES
 @comment dirrm share/kde/locale/mn
-@comment dirrm share/kde/locale
