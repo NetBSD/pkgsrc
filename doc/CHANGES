@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7857 2004/11/14 21:54:56 jmmv Exp $
+$NetBSD: CHANGES,v 1.7858 2004/11/14 21:56:30 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5276,3 +5276,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated drivel to 1.2.2nb2 [jmmv 2004-11-14]
 	Updated cpuflags to 0.78 [abs 2004-11-14]
 	Updated epiphany to 1.4.5 [jmmv 2004-11-14]
+	Updated abcde to 2.2.0 [snj 2004-11-14]
