@@ -3,7 +3,7 @@
 # Date created:         30th November 1997
 # Whom:                 tron@lyssa.owl.de, soren@t.dk
 #
-# $NetBSD: Makefile,v 1.10 1998/02/02 08:59:32 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 1998/03/12 00:58:06 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 09:33:26 asami Exp
 #
 
@@ -16,13 +16,20 @@ MAINTAINER=	tron@netbsd.org
 
 USE_IMAKE=	yes
 WRKSRC=		${WRKDIR}/xc/lib/Xaw3d
+PLIST_SRC=	${WRKDIR}/PLIST-src
 
 post-extract:
-	@(cd ${WRKSRC};ln -s .. X11)
+	@(cd ${WRKSRC}; ${LN} -s .. X11)
 
 post-install:
 	${LDCONFIG} || ${TRUE}
 	${MKDIR} ${PREFIX}/share/doc/Xaw3d
 	${CP} ${WRKSRC}/README.XAW3D ${PREFIX}/share/doc/Xaw3d
+	@if [ -f ${WRKSRC}/libXaw3d.a ]; then			\
+		${CP} ${PKGDIR}/PLIST ${PLIST_SRC};		\
+	else							\
+		${SED} -e '/lib\/libXaw3d\.a/d'			\
+			< ${PKGDIR}/PLIST > ${PLIST_SRC};	\
+	fi
 
 .include <bsd.port.mk>
