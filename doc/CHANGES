@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1428 2003/02/17 23:36:14 grant Exp $
+$NetBSD: CHANGES,v 1.1429 2003/02/18 00:25:00 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -731,4 +731,5 @@ Changes to the packages collection and infrastructure in 2003:
         Added gpc-2.1 [jtb 2003-02-17]
 	Added fbdesk-1.1.3 [jschauma 2003-02-17]
 	Updated tightvncviewer to 1.2.8 [jlam 2003-02-17]
-	Added ap-bandwidth-2.0.5 grant 2003-02-17]
+	Added ap-bandwidth-2.0.5 [grant 2003-02-17]
+	Added ap-auth-script-1.3 [grant 2003-02-17]
