@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/04 10:39:11 itojun Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/04 10:40:00 itojun Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
@@ -43,8 +43,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/misc/* ${PREFIX}/share/doc/bind9/misc
 	${INSTALL_DATA} ${WRKSRC}/doc/rfc/* ${PREFIX}/share/doc/bind9/rfc
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	(cd ${PREFIX}; find share/doc/bind9 -type f -print ) >> ${PLIST_SRC}
-	(cd ${PREFIX}; find share/doc/bind9 -type d -print ) | sed -e 's/^/@dirrm /' | sort -r >> ${PLIST_SRC}
+	(cd ${PREFIX}; ${FIND} share/doc/bind9 -type f -print ) >> ${PLIST_SRC}
+	(cd ${PREFIX}; ${FIND} share/doc/bind9 -type d -print ) | ${SED} -e 's/^/@dirrm /' | sort -r >> ${PLIST_SRC}
 	${INSTALL_DATA} ${WRKDIR}/named ${PREFIX}/etc/rc.d/named9
 
 .include "../../mk/bsd.pkg.mk"
