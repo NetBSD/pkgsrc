@@ -1,14 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2003/11/28 18:41:03 jschauma Exp $
+$NetBSD: patch-aa,v 1.5 2004/01/20 02:48:33 jschauma Exp $
 
---- book/Makefile.am.orig	2003-11-07 09:32:07.000000000 -0500
-+++ book/Makefile.am	2003-11-28 12:47:45.000000000 -0500
-@@ -15,8 +15,7 @@
- 
- EXTRA_DIST = jitter.h
- 
--LDADD = $(GLUT_LIBS) $(top_builddir)/$(GLU_DIR)/libGLU.la \
--	$(top_builddir)/src/libGL.la -lm
-+LDADD = $(GLUT_LIBS) -lGLU -lGL -lm
- #LDFLAGS = -no-install
- 
- # execute all programs
+--- progs/demos/lodbias.c.orig	2004-01-19 20:06:16.000000000 -0500
++++ progs/demos/lodbias.c	2004-01-19 20:06:28.000000000 -0500
+@@ -212,7 +212,7 @@
+       }
+       /* resize to 256 x 256 */
+       if (width != 256 || height != 256) {
+-         GLubyte *newImage = malloc(256 * 256 * 4);
++         GLubyte *newImage = (GLubyte *)malloc(256 * 256 * 4);
+          gluScaleImage(format, width, height, GL_UNSIGNED_BYTE, image,
+                        256, 256, GL_UNSIGNED_BYTE, newImage);
+          free(image);

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2004/01/05 11:47:33 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2004/01/20 02:48:33 jschauma Exp $
 
 PKGNAME=		${DISTNAME:S/MesaLib/glut/}
-PKGREVISION=		3
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		${DISTNAME:S/MesaLib/MesaDemos/}${EXTRACT_SUFX}
 WRKSRC=			${WRKDIR}/${DISTNAME:S/Lib//}
@@ -17,12 +16,15 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 USE_X11=		yes
-CONFIGURE_DIRS=		${WRKSRC}
-BUILD_DIRS=		${WRKSRC}/src-glut
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+INSTLIBS=		libglut.so.3.7
 
-post-install:
+pre-build:
+	${RM} -fr ${WRKSRC}/src/mesa ${WRKSRC}/src/glw 			\
+		${WRKSRC}/src/glu ${WRKSRC}/progs
+
+do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/GL
 	cd ${WRKSRC}/include/GL; for hdr in				\
 		glut.h glutf90.h;					\

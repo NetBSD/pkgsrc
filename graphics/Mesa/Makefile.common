@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2003/11/18 16:10:55 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.21 2004/01/20 02:48:33 jschauma Exp $
 
 DISTNAME?=		MesaLib-${MESA_VERSION}
 CATEGORIES?=		graphics
@@ -8,20 +8,24 @@ EXTRACT_SUFX?=		.tar.bz2
 MAINTAINER?=		tech-pkg@NetBSD.org
 HOMEPAGE?=		http://www.mesa3d.org/
 
-AUTOMAKE_REQD=		1.7
-USE_GMAKE=		yes
+ALL_TARGET=             pkgsrc
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-GNU_CONFIGURE?=		yes
-CONFIGURE_ARGS+=	--enable-static
+NO_CONFIGURE?=		yes
 DIST_SUBDIR=		Mesa-${MESA_VERSION}
+PATCHDIR?=		${.CURDIR}/../../graphics/MesaLib/patches
+DISTINFO_FILE?=		${.CURDIR}/../../graphics/MesaLib/distinfo
 
-.if !target(post-patch)
-post-patch:
-	cd ${WRKSRC} && ${ACLOCAL} && ${AUTOMAKE}
-.endif
+pre-install:
+	for lib in ${INSTLIBS}; do					\
+		${INSTALL_DATA} ${WRKSRC}/lib/$${lib} ${PREFIX}/lib/;	\
+		cd ${PREFIX}/lib && ${LN} -s $${lib} $${lib%%.[0-9]};	\
+		cd ${PREFIX}/lib && ${LN} -s $${lib%%.[0-9]}		\
+						$${lib%%.[0-9].[0-9]};	\
+		${INSTALL_DATA} ${WRKSRC}/lib/$${lib%%.*}_pic.a		\
+					${PREFIX}/lib/;			\
+	done;
 
 .include "../../graphics/Mesa/version.mk"
-.include "../../mk/automake.mk"
 .include "../../mk/bsd.prefs.mk"

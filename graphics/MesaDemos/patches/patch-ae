@@ -1,17 +1,35 @@
-$NetBSD: patch-ae,v 1.1 2003/11/18 16:10:55 jschauma Exp $
+$NetBSD: patch-ae,v 1.2 2004/01/20 02:48:33 jschauma Exp $
 
---- src/GGI/Makefile.am.orig	2003-11-13 21:47:55.000000000 -0500
-+++ src/GGI/Makefile.am	2003-11-13 21:48:04.000000000 -0500
-@@ -7,10 +7,10 @@
- ggimesaconfdatadir = ${sysconfdir}/ggi
- ggimesaconfdata_DATA = ggimesa.conf
+--- progs/demos/Makefile.X11.orig	2003-10-03 10:03:15.000000000 -0400
++++ progs/demos/Makefile.X11	2004-01-19 20:47:16.000000000 -0500
+@@ -7,7 +7,7 @@
+ INCDIR = $(TOP)/include
+ LIBDIR = $(TOP)/lib
  
--INCLUDES += -I$(top_srcdir)/include -I$(top_srcdir)/src/GGI/include \
-+INCLUDES = -I$(top_srcdir)/include -I$(top_srcdir)/src/GGI/include \
- 	-I$(top_srcdir)/src $(GGI_CFLAGS)
+-LIBS = -L$(LIBDIR) $(APP_LIB_DEPS)
++LIBS+= -L$(LIBDIR) $(APP_LIB_DEPS) -lGL -lGLU -lglut
  
--DEFS += -DGGIMESACONFFILE=\"$(ggimesaconfdatadir)/ggimesa.conf\"
-+DEFS = -DGGIMESACONFFILE=\"$(ggimesaconfdatadir)/ggimesa.conf\"
+ OSMESA_LIBS = -L$(LIBDIR) -lglut -lOSMesa -lGLU -lGL $(APP_LIB_DEPS)
  
- if HAVE_GGI
- # Build a libtool convenience library.
+@@ -36,7 +36,6 @@
+ 	multiarb \
+ 	occlude \
+ 	osdemo \
+-	paltex \
+ 	pixeltex \
+ 	pointblast \
+ 	ray \
+@@ -68,11 +67,11 @@
+ 
+ # make executable from .c file:
+ .c: $(LIB_DEP)
+-	$(CC) -I$(INCDIR) $(CFLAGS) $< $(LIBS) -o $@
++	$(CXX) -I$(INCDIR) $(CFLAGS) $< $(LIBS) -o $@
+ 
+ # special case: need the -lOSMesa library:
+ osdemo: osdemo.c
+-	$(CC) -I$(INCDIR) $(CFLAGS) osdemo.c $(OSMESA_LIBS) -o $@
++	$(CXX) -I$(INCDIR) $(CFLAGS) osdemo.c $(OSMESA_LIBS) -o $@
+ 
+ 
+ ##### TARGETS #####

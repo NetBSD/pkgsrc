@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2004/01/05 11:47:33 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2004/01/20 02:48:33 jschauma Exp $
 
 PKGNAME=		${DISTNAME:C/MesaLib/glu/}
-PKGREVISION=		3
 WRKSRC=			${WRKDIR}/${DISTNAME:C/Lib//}
 MAINTAINER=		rh@NetBSD.org
 COMMENT=		GLU polygon tesselation facility for Mesa
@@ -15,11 +14,14 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 USE_X11=		yes
-BUILD_DIRS=		${WRKSRC}/si-glu
+INSTLIBS=		libGLU.so.1.3
 
 .include "../../mk/bsd.prefs.mk"
 
-post-install:
+pre-build:
+	${RM} -fr ${WRKSRC}/src/mesa ${WRKSRC}/src/glw
+
+do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/GL
 	cd ${WRKSRC}/include/GL; for hdr in				\
 		glu.h glu_mangle.h;					\
