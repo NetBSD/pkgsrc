@@ -1,25 +1,18 @@
-$NetBSD: patch-ae,v 1.4 2001/08/13 11:14:31 rh Exp $
+$NetBSD: patch-ae,v 1.5 2002/08/25 18:39:12 jlam Exp $
 
---- imlib-config.in.orig	Wed Mar 28 05:18:40 2001
+--- imlib-config.in.orig	Tue Mar 27 22:18:40 2001
 +++ imlib-config.in
-@@ -55,15 +55,15 @@
-       if test @includedir@ != /usr/include ; then
-         includes=-I@includedir@
-       fi
--      echo `@GTK_CONFIG@ --cflags` $includes @X_CFLAGS@
-+      echo `gtk-config --cflags` $includes @X_CFLAGS@
+@@ -58,11 +58,11 @@
+       echo `@GTK_CONFIG@ --cflags` $includes @X_CFLAGS@
        ;;
      --libs)
 -      libdirs=-L@libdir@
--      echo $libdirs -lImlib @LDFLAGS@ $gx_libs @X_LIBS@ @X_PRE_LIBS@ -lXext -lX11 @X_EXTRA_LIBS@
 +      libdirs="-L@libdir@ -Wl,-R@libdir@"
-+      echo $libdirs -lImlib @X_LDFLAGS@ $gx_libs @X_LIBS@ @X_PRE_LIBS@ -lXext -lX11 @X_EXTRA_LIBS@
+       echo $libdirs -lImlib @LDFLAGS@ $gx_libs @X_LIBS@ @X_PRE_LIBS@ -lXext -lX11 @X_EXTRA_LIBS@
        ;;
      --libs-gdk)
 -      libdirs=-L@libdir@
--      echo $libdirs -lgdk_imlib$gdk_gx_libs `@GTK_CONFIG@ --libs` $gdk_libs
 +      libdirs="-L@libdir@ -Wl,-R@libdir@"
-+      echo $libdirs -lgdk_imlib$gdk_gx_libs `gtk-config --libs` $gdk_libs
+       echo $libdirs -lgdk_imlib$gdk_gx_libs `@GTK_CONFIG@ --libs` $gdk_libs
        ;;
      *)
-       echo "${usage}" 1>&2

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/05/21 14:03:38 schmonz Exp $
+# $NetBSD: Makefile,v 1.11 2002/08/25 18:38:36 jlam Exp $
 #
 
 .include "../libtool/Makefile.common"
@@ -9,6 +9,8 @@ SVR4_PKGNAME=	ltoob
 COMMENT=	Generic shared library support script (the script itself)
 
 CONFLICTS+=	libtool<=1.3.5nb11
+
+USE_BUILDLINK2=	# defined
 
 test: build
 	cd ${WRKSRC} && ${MAKE} check

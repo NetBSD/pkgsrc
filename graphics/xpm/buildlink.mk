@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.11 2002/06/26 05:40:34 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.12 2002/08/25 18:39:25 jlam Exp $
 #
 # This Makefile fragment is included by packages that use xpm.
 #

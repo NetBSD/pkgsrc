@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/09/14 01:57:44 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2002/08/25 18:40:39 jlam Exp $
 
 PKGNAME=	lesstif12-${LESSTIF_VERSION}
 COMMENT=	API compatible clone of the OSF/Motif toolkit, version 1.2
@@ -7,7 +7,7 @@ CONFLICTS+=	lesstif-0.[0-8]*
 CONFLICTS+=	lesstif-0.90*
 CONFLICTS+=	lesstif-0.91 lesstif-0.91.[0-3]
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=	# defined
 
 .include "../lesstif/Makefile.common"
 
@@ -22,5 +22,4 @@ CONFIGURE_ARGS+=	--enable-default-12
 post-install:
 	${RMDIR} -p ${PREFIX}/share/doc/html/lesstif 2> /dev/null || ${TRUE}
 
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

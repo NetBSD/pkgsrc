@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.5 2002/08/07 15:56:24 fredb Exp $
+$NetBSD: patch-ah,v 1.6 2002/08/25 18:40:23 jlam Exp $
 --- configure.in.orig	Thu Dec 14 11:49:06 2000
 +++ configure.in	Tue Aug 28 17:09:57 2001
 @@ -213,7 +213,12 @@

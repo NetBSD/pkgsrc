@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/08/03 01:24:53 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2002/08/25 18:40:23 jlam Exp $
 
 DISTNAME=		neon-0.21.3
 CATEGORIES=		www
@@ -9,17 +9,18 @@ HOMEPAGE=		http://www.webdav.org/neon/
 COMMENT=		HTTP and WebDAV client library
 
 USE_GMAKE=		# defined
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--with-ssl
-CONFIGURE_ARGS+=	--enable-libxml
+CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
+CONFIGURE_ARGS+=	--with-libxml1
 CONFIGURE_ARGS+=	--enable-shared
 
-.include "../../devel/zlib/buildlink.mk"
-.include "../../security/openssl/buildlink.mk"
-.include "../../textproc/libxml/buildlink.mk"
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
+.include "../../textproc/libxml/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
