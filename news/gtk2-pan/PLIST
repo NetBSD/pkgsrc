@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/02 03:10:19 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/12/24 22:46:37 wiz Exp $
 bin/pan
 share/gnome/apps/Internet/pan.desktop
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/pan.mo
@@ -33,3 +33,6 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/pan.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/pan.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/pan.mo
 share/pixmaps/pan.png
+@unexec ${RMDIR} %D/share/gnome/apps/Internet 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome/apps 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome 2>/dev/null || ${TRUE}
