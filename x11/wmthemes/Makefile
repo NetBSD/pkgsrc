@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/01/16 12:45:15 tron Exp $
+# $NetBSD: Makefile,v 1.5 1999/01/23 14:58:07 tron Exp $
 
 DISTNAME=	wm-themes-0.50.x
 CATEGORIES=	x11
