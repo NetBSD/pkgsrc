@@ -1,16 +1,32 @@
-# $NetBSD: Makefile,v 1.100 2005/01/13 18:34:47 jlam Exp $
+# $NetBSD: Makefile,v 1.101 2005/02/02 23:43:42 jlam Exp $
 
-DISTNAME=	openssl-0.9.7e
+OPENSSL_SNAPSHOT?=	# empty
+OPENSSL_STABLE?=	# empty
+OPENSSL_VERS?=		0.9.7e
+
+.if empty(OPENSSL_SNAPSHOT)
+DISTNAME=	openssl-${OPENSSL_VERS}
 PKGREVISION=	1
-SVR4_PKGNAME=	ossl
-CATEGORIES=	security
 MASTER_SITES=	http://mirrors.isc.org/pub/openssl/source/ \
 		http://www.mirrors.wiretapped.net/security/cryptography/libraries/tls/openssl/ \
 		http://sunsite.rediris.es/pub/mirror/OpenSSL/ \
 		http://ftp.wayne.edu/pub/openssl/source/ \
 		http://www.binarycode.org/openssl/source/ \
 		ftp://ftp.openssl.org/source/
+.else
+.  if !empty(OPENSSL_STABLE:M[yY][eE][sS])
+DISTNAME=	openssl-${OPENSSL_VERS:C/[a-z]$//}-stable-SNAP-${OPENSSL_SNAPSHOT}
+PKGNAME=	openssl-${OPENSSL_VERS}beta${OPENSSL_SNAPSHOT}
+MASTER_SITES=	ftp://ftp.openssl.org/snapshot/
+.  else
+DISTNAME=	openssl-SNAP-${OPENSSL_SNAPSHOT}
+PKGNAME=	openssl-${OPENSSL_VERS}alpha${OPENSSL_SNAPSHOT}
+MASTER_SITES=	ftp://ftp.openssl.org/snapshot/
+.  endif
+.endif
 
+SVR4_PKGNAME=	ossl
+CATEGORIES=	security
 MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://www.openssl.org/
 COMMENT=	Secure Socket Layer and cryptographic library
@@ -65,8 +81,8 @@ PLIST_SHLIB=		${PKGDIR}/PLIST.shlib
 .endif
 PLIST_SRC=		${PLIST_SHLIB}
 PLIST_SRC+=		${PKGDIR}/PLIST.common
-PLIST_SUBST+=		SHLIB_VERSION=${DISTNAME:S/openssl-//:C/[^0-9]*$//}
-PLIST_SUBST+=		SHLIB_MAJOR=${DISTNAME:S/openssl-//:C/\..*$//}
+PLIST_SUBST+=		SHLIB_VERSION=${OPENSSL_VERS:C/[^0-9]*$//}
+PLIST_SUBST+=		SHLIB_MAJOR=${OPENSSL_VERS:C/\..*$//}
 
 .if ${OPSYS} == "NetBSD"
 PKG_SYSCONFDIR.openssl?=	/etc/openssl
