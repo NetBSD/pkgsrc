@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/04/24 09:07:55 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/05/08 23:17:58 tron Exp $
 # FreeBSD Id: Makefile,v 1.19 1997/12/04 17:34:28 asami Exp
 #
 
@@ -24,7 +24,7 @@ pre-install:
 	@[ -d ${PREFIX} ] || ${MKDIR} ${PREFIX}
 
 do-install:
-	@zcat ${DISTDIR}/${DISTNAME}.tar.gz |(cd ${PREFIX}; pax -r)
+	@${GZCAT} ${DISTDIR}/${DISTNAME}.tar.gz |(cd ${PREFIX}; pax -r)
 
 post-install:
 	${RM} ${PREFIX}/lib/libc.so.5.4.23
