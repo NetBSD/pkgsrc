@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/20 16:00:12 martti Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/02 10:57:13 seb Exp $
 bin/make_win_src_distribution
 bin/msql2mysql
 bin/mysql
@@ -50,7 +50,6 @@ include/mysql/raid.h
 include/mysql/sslopt-case.h
 include/mysql/sslopt-longopts.h
 include/mysql/sslopt-vars.h
-info/mysql.info
 lib/mysql/libmysqlclient.a
 lib/mysql/libmysqlclient.la
 lib/mysql/libmysqlclient.so
