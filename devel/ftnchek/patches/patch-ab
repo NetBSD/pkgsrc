@@ -1,8 +1,45 @@
-$NetBSD: patch-ab,v 1.1 2001/06/17 14:27:28 jtb Exp $
-
---- Makefile.in.orig	Sun Jun 17 03:22:17 2001
-+++ Makefile.in
-@@ -487,18 +487,9 @@
+--- Makefile.in.orig	Sat Nov  3 00:49:25 2001
++++ Makefile.in	Mon Apr 29 11:14:13 2002
+@@ -436,30 +436,19 @@
+ install:	install-exe @INSTALL_MAN@ install-lisp
+ 
+ install-exe:	ftnchek$(EXE) dcl2inc$(CMD)
+-	-$(MKDIR) -p $(bindir)
+-	$(CP) ftnchek$(EXE) $(bindir)
+-	-$(STRIP) $(bindir)/ftnchek$(EXE)
+-	$(CHMOD) 755 $(bindir)/ftnchek$(EXE)
+-	-$(MKDIR) -p $(libdir)
+-	$(CP) dcl2inc.awk $(libdir)/dcl2inc.awk
+-	$(CHMOD) 644 $(libdir)/dcl2inc.awk
+-	$(CP) dcl2inc$(CMD) $(bindir)/dcl2inc$(CMD)
+-	$(CHMOD) 755 $(bindir)/dcl2inc$(CMD)
+-	-$(RM) $(bindir)/fcl2vcg
++	$(BSD_INSTALL_PROGRAM_DIR) $(bindir)
++	$(BSD_INSTALL_PROGRAM) ftnchek$(EXE) $(bindir)
++	$(BSD_INSTALL_DATA_DIR) $(libdir)
++	$(BSD_INSTALL_DATA) dcl2inc.awk $(libdir)
++	$(BSD_INSTALL_SCRIPT) dcl2inc$(CMD) $(bindir)
+ 
+ # Install man pages, taking care to remove old formatted ones, because
+ # many man implentations fail to compare time stamps of raw and
+ # formatted files, and will show out-of-date formatted files.
+ install-man: ftnchek$(manext)
+-	-$(MKDIR) -p $(mandir)
+-	$(CP) dcl2inc.man $(mandir)/man1/dcl2inc$(manext)
+-	-$(RM) $(mandir)/cat1/dcl2inc$(manext)
+-	$(CHMOD) 644 $(mandir)/man1/dcl2inc$(manext)
+-	$(CP) ftnchek$(manext) $(mandir)/man1/ftnchek$(manext)
+-	-$(RM) $(mandir)/cat1/ftnchek$(manext)
+-	$(CHMOD) 644 $(mandir)/man1/ftnchek$(manext)
+-	-$(RM) $(mandir)/man1/fcl2vcg$(manext)
+-	-$(RM) $(mandir)/cat1/fcl2vcg$(manext)
++	$(BSD_INSTALL_MAN_DIR) $(mandir)
++	$(BSD_INSTALL_MAN) dcl2inc.man $(mandir)/man1/dcl2inc$(manext)
++	$(BSD_INSTALL_MAN) ftnchek$(manext) $(mandir)/man1/ftnchek$(manext)
+ 
+ # IRIX uses pre-formatted, packed man pages and nroff is not bundled with it.
+ install-man-sgi: catman
+@@ -502,18 +491,8 @@
  #  The emacs lisp file will be installed only if lispdir exists, since
  #  if it doesn't exist, this machine probably doesn't have emacs.
  install-lisp:
@@ -18,9 +55,8 @@ $NetBSD: patch-ab,v 1.1 2001/06/17 14:27:28 jtb Exp $
 -	  echo "If you want to install ftnchek.el, create $(lispdir)" ; \
 -	  echo "or re-run make install with 'lispdir=path-to-site-lisp'" ; \
 -	fi
-+	-$(MKDIR) -p $(lispdir)
-+	$(CP) ftnchek.el $(lispdir)/ftnchek.el
-+	@echo "If desired, use emacs to byte-compile $(lispdir)/ftnchek.el"
++	$(BSD_INSTALL_DATA_DIR) $(lispdir)
++	$(BSD_INSTALL_DATA) ftnchek.el $(lispdir)
  
  # Remove everything that the install target installed.
  uninstall:

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2001/06/17 14:27:27 jtb Exp $
+$NetBSD: distinfo,v 1.5 2002/05/03 22:47:15 jtb Exp $
 
-SHA1 (ftnchek-3.1.1.tar.gz) = 0a334e6152e8220628b4d439903c54916215f9f7
-Size (ftnchek-3.1.1.tar.gz) = 886004 bytes
-SHA1 (patch-aa) = 2548f10786c1e6ea3412d8b0b01da67bd5d16504
-SHA1 (patch-ab) = 428d0f981e593f520aad738ce0a76dcbec23e7c4
+SHA1 (ftnchek-3.1.2.tar.gz) = b9744dace4c88e713ce7e3c11afcf46aa9885fe7
+Size (ftnchek-3.1.2.tar.gz) = 901656 bytes
+SHA1 (patch-aa) = 087278e131418a87bedc0330b3c5cae094854094
+SHA1 (patch-ab) = 443cff97fb33b68f552911c009a328b359e23315
