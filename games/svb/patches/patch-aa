@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 1998/09/07 03:23:09 garbled Exp $
+--- Imakefile.orig	Sun Sep  6 20:07:30 1998
++++ Imakefile	Sun Sep  6 20:07:39 1998
+@@ -1,7 +1,7 @@
+ SRCS = score.c svs.c
+ OBJS = score.o svs.o
+ LOCAL_LIBRARIES = -lX11
+-DEFINES = -DSCOREFILE=\"/tmp/svb.scorefile\"
++DEFINES = -DSCOREFILE=\"/var/games/svb.scorefile\"
+ 
+ ComplexProgramTarget(svb)
+ 
