@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9445 2005/03/06 17:24:02 taca Exp $
+$NetBSD: CHANGES,v 1.9446 2005/03/06 17:54:16 hira Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1300,3 +1300,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated imap-uw to 2004c1nb2 [thorpej 2005-03-06]
 	Added ruby16-base-1.6.8 [taca 2005-03-06]
 	Added ruby18-base-1.8.2 [taca 2005-03-06]
+	Updated mlterm to 2.9.2 [hira 2005-03-06]
