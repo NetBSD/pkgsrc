@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.310 2003/09/23 01:27:53 yyamano Exp $
+# $NetBSD: Packages.txt,v 1.311 2003/09/28 20:22:08 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -2574,6 +2574,15 @@ Utilities for people maintaining pkgsrc (or more obscure pkg utilities)
   pkgconflict - find packages that conflict but aren't marked as such
   pkgcomp - build packages in a chrooted area
   libkver - spoof kernel version for chrooted cross builds
+
+
+ 10.36 How to use pkgsrc as non-root?
+ ====================================
+
+If you want to use pkgsrc as non-root user, you can set some variables
+to make pkgsrc work under these conditions. Please see 
+http://mail-index.netbsd.org/tech-pkg/2003/09/27/0023.html
+for more details.
 
 
  11 Submitting & Committing
