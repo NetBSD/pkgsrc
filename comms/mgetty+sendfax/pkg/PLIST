@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2000/05/17 03:43:49 fredb Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/06/21 17:02:25 fredb Exp $
 bin/autopvf
 bin/basictopvf
 bin/faxspool
@@ -33,13 +33,6 @@ bin/rmdtopvf
 bin/vm
 bin/voctopvf
 bin/wavtopvf
-etc/mgetty+sendfax/dialin.config
-etc/mgetty+sendfax/faxheader
-etc/mgetty+sendfax/faxrunq.config
-etc/mgetty+sendfax/faxspool.rules.sample
-etc/mgetty+sendfax/login.config
-etc/mgetty+sendfax/mgetty.config
-etc/mgetty+sendfax/sendfax.config
 @unexec install-info --delete %D/info/mgetty.info %D/info/dir
 info/mgetty.info
 info/mgetty.info-1
@@ -70,5 +63,12 @@ sbin/faxrunqd
 sbin/mgetty
 sbin/sendfax
 sbin/vgetty
-@dirrm etc/mgetty+sendfax
+share/examples/mgetty+sendfax/dialin.config
+share/examples/mgetty+sendfax/faxheader
+share/examples/mgetty+sendfax/faxrunq.config
+share/examples/mgetty+sendfax/faxspool.rules.sample
+share/examples/mgetty+sendfax/login.config
+share/examples/mgetty+sendfax/mgetty.config
+share/examples/mgetty+sendfax/sendfax.config
+@dirrm share/examples/mgetty+sendfax
 @dirrm lib/mgetty+sendfax
