@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.14 1999/07/05 21:56:03 hubertf Exp $
+# $NetBSD: Makefile,v 1.15 1999/07/10 10:39:02 tron Exp $
 #
+
+DISTNAME=       mpg123-0.59r
+CATEGORIES=	audio
+MASTER_SITES=	http://www-ti.informatik.uni-tuebingen.de/~hippm/mpg123/
+
+MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www-ti.informatik.uni-tuebingen.de/~hippm/mpg123.html
 
 # for OBJECT_FMT
 .include "../../mk/bsd.prefs.mk"
-
-DISTNAME=       mpg123-0.59q
-CATEGORIES=	audio
-MASTER_SITES=   http://ftp.tu-clausthal.de/pub/unix/audio/mpg123/
-
-MAINTAINER=	augustss@cs.chalmers.se
-HOMEPAGE=	http://mpg.123.org/
 
 .if (${MACHINE_ARCH} == "i386")
 .if (${OBJECT_FMT} == "ELF")
