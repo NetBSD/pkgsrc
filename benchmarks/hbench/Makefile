@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/12/28 04:26:18 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2000/10/18 04:26:53 garbled Exp $
 
 DISTNAME=		hbench-OS-1.0
 PKGNAME=		hbench-1.0
@@ -10,6 +10,7 @@ HOMEPAGE=		http://www.eecs.harvard.edu/vino/perf/hbench/
 
 DEPENDS+=		gnuplot-3.7:../../graphics/gnuplot
 
+OSVERSION_SPECIFIC=	yes
 ALL_TARGET=		build
 USE_PERL5=		yes
 WRKSRC=			${WRKDIR}/hbench-OS
