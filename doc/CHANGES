@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3024 2003/08/11 10:52:34 markd Exp $
+$NetBSD: CHANGES,v 1.3025 2003/08/11 15:59:09 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3235,3 +3235,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated nut to 9.0 [wiz 2003-08-11]
 	Updated xuvmstat to 20030810 [martin 2003-08-11]
 	Updated citrix_ica to 7.00.77757 [markd 2003-08-11]
+	Updated mailcrypt to 3.5.8 [seb 2003-08-11]
