@@ -1,10 +1,5 @@
-@comment $NetBSD: PLIST,v 1.8 2003/12/08 21:44:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/03/09 15:23:53 seb Exp $
 bin/wget
-info/wget.info
-info/wget.info-1
-info/wget.info-2
-info/wget.info-3
-info/wget.info-4
 man/man1/wget.1
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/wget.mo
