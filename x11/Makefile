@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.174 2000/09/04 15:50:40 kim Exp $
+# $NetBSD: Makefile,v 1.175 2000/09/11 14:48:57 jwise Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -83,7 +83,7 @@
     SUBDIR += scwm
     SUBDIR += speyes
     SUBDIR += sunclock
-#    SUBDIR += swing		# requires a manual download due to licensing restrictions
+    SUBDIR += swing
     SUBDIR += swisswatch
     SUBDIR += titrax
     SUBDIR += tix
