@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9288 2005/02/24 11:53:07 wiz Exp $
+$NetBSD: CHANGES,v 1.9289 2005/02/24 13:55:36 mrauch Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1065,3 +1065,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libfwbuilder to 2.0.5 [bad 2005-02-24]
 	Added fwbuilder-2.05 [bad 2005-02-24]
 	Updated ap-bandwidth to 2.0.6 [wiz 2005-02-24]
+	Renamed openoffice-linux to openoffice-bin [mrauch 2005-02-24]
