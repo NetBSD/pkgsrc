@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/11/28 05:48:32 taca Exp $
+# $NetBSD: Makefile,v 1.13 2004/12/01 15:40:23 taca Exp $
 #
 
 DISTNAME=	webrick-1.3.1
@@ -10,7 +10,7 @@ MAINTAINER=	rasputin@idoru.mine.nu
 HOMEPAGE=	http://www.webrick.org/
 COMMENT=	Ruby library to build HTTP servers
 
-DEPENDS+=	${RUBY_PKGPREFIX}-openssl>=0.1.3:../../security/ruby-openssl
+DEPENDS+=	${RUBY_PKGPREFIX}-openssl>=0.1.3:../../security/ruby16-openssl
 DEPENDS+=	${RUBY_PKGPREFIX}-erb>=1.4.3:../../textproc/ruby-erb
 
 RUBY_VERSION=		${RUBY16_VERSION}
