@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2001/07/14 18:22:35 jlam Exp $
+$NetBSD: distinfo,v 1.9 2001/07/15 08:48:19 jlam Exp $
 
 SHA1 (WindowMaker-0.65.0.tar.bz2) = acc08353dbdbd0af26b0fa653322f60347c5a6fe
 Size (WindowMaker-0.65.0.tar.bz2) = 1876239 bytes
@@ -6,3 +6,6 @@ SHA1 (patch-aa) = 2c353985edb3f993235428b0124ae00ddd74e60b
 SHA1 (patch-ab) = cb1f893635746725dd4143fb74bf16ab61f56319
 SHA1 (patch-ac) = 8e4b85dc9b8b3cf211b6c76dbca46f60308ac591
 SHA1 (patch-ad) = cc41fd43ae1682bd0fe7129de4eafd8531b548c2
+SHA1 (patch-ae) = 3e9e44fb44b83278d4536319962b0df9bc22698c
+SHA1 (patch-af) = 517a32cfeb61556ff057be5cef74785e358110c5
+SHA1 (patch-ag) = 7e64472f406c9692082b3fc5f05ad8a8d260affd
