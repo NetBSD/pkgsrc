@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: etcupdate,v 1.5 2001/11/22 13:20:00 martti Exp $
+# $NetBSD: etcupdate,v 1.6 2001/11/22 15:39:31 martti Exp $
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -58,6 +58,7 @@ PAGER="${PAGER:=/usr/bin/more}"
 WIDTH="${WIDTH:=80}"
 VERBOSE=
 CONTINUE=
+BINARY=
 
 # Settings for post-installlation procedures
 NEED_MTREE=
@@ -72,6 +73,7 @@ Usage: `basename $0` [options]
 
 Options:
 
+  -b binfile   Location of the .tgz files
   -p pager     Which pager to use              (default: /usr/bin/more)
   -s srcdir    Location of the source files    (default: /usr/src)
   -t temproot  Where to store temporary files  (default: /tmp/temproot)
@@ -242,25 +244,29 @@ USERRC="${HOME}/.`basename $0`rc"
 [ -r ${USERRC} ] && . ${USERRC}
 
 # Read command line arguments
-ARGV=`getopt hp:s:t:vw: $*`
+ARGV=`getopt b:hp:s:t:vw: $*`
 [ $? != 0 ] && usage
 set -- ${ARGV}
 for i; do
 	case "${i}" in
+	-b)
+		BINARY="${BINARY} ${2}"
+		shift 2
+		;;
 	-h)
 		usage
 		;;
 	-p)
 		PAGER="${2}"
-		shift
+		shift 2
 		;;
 	-s)
 		SRCDIR="${2}"
-		shift
+		shift 2
 		;;
 	-t)
 		TEMPROOT="${2}"
-		shift
+		shift 2
 		;;
 	-v)
 		VERBOSE=YES
@@ -268,7 +274,7 @@ for i; do
 		;;
 	-w)
 		WIDTH="${2}"
-		shift
+		shift 2
 		;;
 	--)
 		shift
@@ -279,7 +285,7 @@ done
 
 # Last minute sanity checks
 if [ `id -u` -ne 0 ]; then
-	echo "*** WARNING: You MUST be root"
+	echo "*** ERROR: You MUST be root"
 	exit 1
 fi
 if [ -z "${SRCDIR}" -o -z "${TEMPROOT}" ]; then
@@ -311,21 +317,29 @@ if [ -z "${CONTINUE}" ]; then
 		exit 1
 	fi
 
-	# Populate ${TEMPROOT} from ${SRCDIR}
-	if [ ! -f "${SRCDIR}/etc/Makefile" ]; then
-		echo "*** ERROR: Unable to find ${SRCDIR}/etc/Makefile"
-		exit 1
-	fi
-	echo "*** Populating ${TEMPROOT} from ${SRCDIR}"
-	cd ${SRCDIR}/etc
-	if [ -z "${VERBOSE}" ]; then
-		make DESTDIR="${TEMPROOT}" MTREE="mtree"	\
-			INSTALL_DONE=1 NO_SENDMAIL=1		\
-			distribution > /dev/null
+	# Are we using the sources or binaries?
+	if [ -z "${BINARY}" ]; then
+		# Populate ${TEMPROOT} from ${SRCDIR}
+		if [ ! -f "${SRCDIR}/etc/Makefile" ]; then
+			echo "*** ERROR: Unable to find ${SRCDIR}/etc/Makefile"
+			exit 1
+		fi
+		echo "*** Populating ${TEMPROOT} from ${SRCDIR}"
+		cd ${SRCDIR}/etc
+		if [ -z "${VERBOSE}" ]; then
+			make DESTDIR="${TEMPROOT}" MTREE="mtree"	\
+				INSTALL_DONE=1 NO_SENDMAIL=1		\
+				distribution > /dev/null
+		else
+			make DESTDIR="${TEMPROOT}" MTREE="mtree"	\
+				INSTALL_DONE=1 NO_SENDMAIL=1		\
+				distribution
+		fi
 	else
-		make DESTDIR="${TEMPROOT}" MTREE="mtree"	\
-			INSTALL_DONE=1 NO_SENDMAIL=1		\
-			distribution
+		for i in ${BINARY}; do
+			echo "*** Extracting ${i} to ${TEMPROOT}"
+			tar xzf "${i}" -C "${TEMPROOT}"
+		done
 	fi
 
 	# Ignore the following files during comparision
