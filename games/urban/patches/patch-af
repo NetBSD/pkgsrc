@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2004/04/16 18:18:29 xtraeme Exp $
+
+--- src/sound/sound.cc.orig	2004-04-16 19:42:23.000000000 +0200
++++ src/sound/sound.cc	2004-04-16 19:42:33.000000000 +0200
+@@ -90,7 +90,7 @@
+ 	md_mode = DMODE_SOFT_SNDFX | DMODE_SOFT_MUSIC | DMODE_16BITS;
+ 	md_mixfreq = 22050;
+         
+-	if(MikMod_Init()) {
++	if(MikMod_Init(NULL)) {
+         	fprintf(stderr,"Could not initialize sound, reason: %s\n",
+                 	MikMod_strerror(MikMod_errno));
+ 			
