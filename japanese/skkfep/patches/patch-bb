@@ -1,19 +1,49 @@
-$NetBSD: patch-bb,v 1.1.1.1 1999/12/24 03:21:10 itohy Exp $
+$NetBSD: patch-bb,v 1.2 2000/11/09 03:53:31 itohy Exp $
 
 --- connserv.c.orig	Tue Jul  7 00:31:16 1998
-+++ connserv.c	Fri Dec 24 00:25:24 1999
-@@ -40,8 +40,33 @@
++++ connserv.c	Tue Nov  7 20:58:57 2000
+@@ -14,6 +14,10 @@
+ #include <netinet/in.h>
+ #include <netdb.h>
+ 
++#ifdef PF_INET6
++# define HAVE_GETADDRINFO
++#endif
++
+ #define SKK_PORT_NUMBER	1178
+ #define SKK_SERVICENAME	"skkserv"
+ 
+@@ -36,50 +40,112 @@
+ 	int sock;
+ 	int i;
+ 	unsigned short port;
++#ifdef HAVE_GETADDRINFO
++	struct addrinfo aihint, *ai0, *ai;
++	int error;
++#else
+ 	struct sockaddr_in hostaddr;
  	struct hostent *entry;
  	struct servent *serv;
  	struct protoent *proto;
 -	int a1,a2,a3,a4;
++#endif
  	char *hostname;
+-
+-	serv = getservbyname(SKK_SERVICENAME,"tcp");
+-	fillzero((char*)&hostaddr,sizeof(struct sockaddr_in));
+-	if ((proto = getprotobyname("tcp")) == NULL) {
+-		return -1;
+-	}
+-
+-	if ((sock = socket(AF_INET,SOCK_STREAM,proto->p_proto)) < 0) {
+-		return -1;
 +#ifdef SKK_CONF		/* use skk.conf */
 +	FILE *conffp;
 +	char line[128];
 +	char hostbuf[128];
++	char servbuf[128];
 +	char *confhost = NULL;
-+	int confport = 0;
++	char *confport = SKK_SERVICENAME;
 +
 +	if ((conffp = fopen(SKK_CONF, "r")) != NULL) {
 +		char *p, *data;
@@ -29,15 +59,15 @@ $NetBSD: patch-bb,v 1.1.1.1 1999/12/24 03:21:10 itohy Exp $
 +				strcpy(hostbuf, data);
 +				confhost = hostbuf;
 +			} else if (!strcmp(p, "skkserv_port")) {
-+				confport = atoi(data);
++				strcpy(servbuf, data);
++				confport = servbuf;
 +			}
 +		}
-+	}
+ 	}
++# undef SKK_SERVICENAME
++# define SKK_SERVICENAME confport
 +#endif
  
- 	serv = getservbyname(SKK_SERVICENAME,"tcp");
- 	fillzero((char*)&hostaddr,sizeof(struct sockaddr_in));
-@@ -56,27 +81,27 @@
  	if (SKKServerHost)
  		hostname = SKKServerHost;
  	else if ((hostname = getenv("SKKSERVER")) == NULL) {
@@ -56,8 +86,43 @@ $NetBSD: patch-bb,v 1.1.1.1 1999/12/24 03:21:10 itohy Exp $
 -		}
 -		a1 = (a1<<24)|(a2<<16)|(a3<<8)|a4;
 -		hostaddr.sin_addr.s_addr = htonl(a1);
--	}
++
++#ifdef HAVE_GETADDRINFO
++	fillzero((char*)&aihint, sizeof aihint);
++	aihint.ai_family = PF_UNSPEC;
++	aihint.ai_socktype = SOCK_STREAM;
++	aihint.ai_flags = AI_CANONNAME;
++	error = getaddrinfo(hostname, SKK_SERVICENAME, &aihint, &ai0);
++	if (error) {
++		printf("%s: %s\r\n", gai_strerror(error), hostname);
++		return -1;
++	}
++
++	sock = -1;
++	for (ai = ai0; ai; ai = ai->ai_next) {
++		sock = socket(ai->ai_family, ai->ai_socktype, ai->ai_protocol);
++		if (sock >= 0 &&
++		    connect(sock, ai->ai_addr, ai->ai_addrlen) == 0)
++			break;
++		close(sock);
++		sock = -1;
++	}
++	if (sock < 0) {
++		perror(hostname);
++		return -1;
++	}
++#else
++	serv = getservbyname(SKK_SERVICENAME,"tcp");
++	fillzero((char*)&hostaddr,sizeof(struct sockaddr_in));
++	if ((proto = getprotobyname("tcp")) == NULL) {
++		return -1;
+ 	}
 -	else {
++
++	if ((sock = socket(AF_INET,SOCK_STREAM,proto->p_proto)) < 0) {
++		return -1;
++	}
++
 +	if ((hostaddr.sin_addr.s_addr = inet_addr(hostname)) == INADDR_NONE) {
  		if ((entry = gethostbyname(hostname)) == NULL) {
  			return -1;
@@ -67,10 +132,15 @@ $NetBSD: patch-bb,v 1.1.1.1 1999/12/24 03:21:10 itohy Exp $
          hostaddr.sin_family = AF_INET;
 -	hostaddr.sin_port = serv ? serv->s_port : htons(SKK_PORT_NUMBER);
 +	hostaddr.sin_port =
++		serv ? serv->s_port :
 +#ifdef SKK_CONF
-+		confport ? htons(confport) :
++		(i = atoi(confport)) > 0 ? htons(i) :
 +#endif
-+		serv ? serv->s_port : htons(SKK_PORT_NUMBER);
++		htons(SKK_PORT_NUMBER);
  	if (connect(sock,(struct sockaddr *)&hostaddr,sizeof(struct sockaddr_in)) < 0) {
  		return -1;
  	}
++#endif
+ 	printf("SKKSERVER=%s\r\n",hostname);
+ 	skkservsock = sock;
+ 	rserv = fdopen(sock,"r");
