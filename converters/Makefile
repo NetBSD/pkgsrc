@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/05/14 13:37:44 agc Exp $
+# $NetBSD: Makefile,v 1.30 2001/05/14 14:04:17 agc Exp $
 #
 
 COMMENT=	Character code converters
@@ -6,6 +6,7 @@ COMMENT=	Character code converters
 SUBDIR+=	base64
 SUBDIR+=	bbcim
 SUBDIR+=	cbmconvert
+SUBDIR+=	doc2html
 SUBDIR+=	ish
 SUBDIR+=	kdesupport
 SUBDIR+=	kdesupport2
