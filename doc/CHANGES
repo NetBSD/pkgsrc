@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8922 2005/01/25 18:22:08 xtraeme Exp $
+$NetBSD: CHANGES,v 1.8923 2005/01/25 18:58:31 reed Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -598,4 +598,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sun-jdk14 to 2.7 [jschauma 2005-01-25]
 	Updated sun-jre13 to 1.0.15 [jschauma 2005-01-25]
 	Updated sun-jdk13 to 1.0.15 [jschauma 2005-01-25]
-\TUpdated p5-Kwiki to 0.37 [xtraeme 2005-01-25]
+	Updated p5-Kwiki to 0.37 [xtraeme 2005-01-25]
+	Updated tcpdump to 3.8.3 [reed 2005-01-25]
