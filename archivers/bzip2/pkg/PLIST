@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 1998/06/18 15:51:29 agc Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/10/14 21:51:15 tron Exp $
 bin/bzip2
 bin/bunzip2
+bin/bzcat
 bin/bzip2recover
-man/man1/bzip2.1.gz
-man/man1/bunzip2.1.gz
-man/man1/bzip2recover.1.gz
+man/man1/bzip2.1
+man/man1/bunzip2.1
+man/man1/bzcat.1
+man/man1/bzip2recover.1

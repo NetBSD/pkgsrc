@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1 1998/10/14 21:51:14 tron Exp $
+
+--- Makefile.orig	Wed Sep  9 13:30:41 1998
++++ Makefile	Wed Oct 14 23:36:32 1998
+@@ -14,12 +14,13 @@
+ 
+ bzip2: lib
+ 	$(CC) $(CFLAGS) -c bzip2.c
+-	$(CC) $(CFLAGS) -o bzip2 bzip2.o -L. -lbz2
+-	$(CC) $(CFLAGS) -o bzip2recover bzip2recover.c
++	$(CC) $(CFLAGS) -static -o bzip2 bzip2.o -L. -lbz2
++	$(CC) $(CFLAGS) -static -o bzip2recover bzip2recover.c
+ 
+ lib: $(OBJS)
+ 	rm -f libbz2.a
+ 	ar clq libbz2.a $(OBJS)
++	ranlib libbz2.a
+ 
+ test: bzip2
+ 	@cat words1
+@@ -37,9 +38,6 @@
+ 
+ clean: 
+ 	rm -f *.o libbz2.a bzip2 bzip2recover sample1.rb2 sample2.rb2 sample1.tst sample2.tst
+-
+-.c.o: $*.o bzlib.h bzlib_private.h
+-	$(CC) $(CFLAGS) -c $*.c -o $*.o
+ 
+ tarfile:
+ 	tar cvf interim.tar *.c *.h Makefile manual.texi manual.ps LICENSE bzip2.1 bzip2.1.preformatted bzip2.txt words1 words2 words3 sample1.ref sample2.ref sample1.bz2 sample2.bz2 *.html README libbz2.def libbz2.dsp dlltest.dsp 
