@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2004/07/27 15:39:21 recht Exp $
+
+--- src/ft_search_exec.c.orig	2004-07-27 22:32:38.000000000 +0800
++++ src/ft_search_exec.c
+@@ -235,7 +235,7 @@ static int next_letter (const char **str
+ 		len--;
+ 	}
+ 
+-	c = tolower (*str);
++	c = tolower ((unsigned char)*str);
+ 	assert (c != '\0');
+ 
+ 	*strref = str + 1;
