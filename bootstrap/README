@@ -1,9 +1,9 @@
-$NetBSD: README,v 1.3 2004/05/11 02:19:48 schmonz Exp $
+$NetBSD: README,v 1.4 2004/06/23 19:06:40 wiz Exp $
 
 To try to get pkgsrc working on your system, please try the following
 as root:
 
-# ./bootstrap [ --prefix=${PREFIX} ] [ --pkgdbdir=${PKGDBDIR} ] \
+# ./bootstrap [ --prefix=${PREFIX} ] [ --pkgdbdir=${PKG_DBDIR} ] \
 	[ --sysconfdir=${PKG_SYSCONFBASE} ] [ --workdir=working directory] \
 	[ --ignore-case-check ] [ --ignore-user-check ] [ --help ]
 
@@ -14,7 +14,7 @@ The defaults for the arguments are as follows:
 	--sysconfdir	/usr/pkg/etc
 	--workdir	work
 
-It is perfectly acceptable to place ${PKGDBDIR} under ${PREFIX}.
+It is perfectly acceptable to place ${PKG_DBDIR} under ${PREFIX}.
 
 The working directory will be created if it doesn't exist and has to be
 writable by the user executing ./bootstrap.
