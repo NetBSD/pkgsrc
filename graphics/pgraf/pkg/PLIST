@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/01 04:34:23 jtb Exp $
+bin/pgeps
+bin/pgfig
+bin/pghp
+bin/pgps
+bin/pgsps
+bin/pgtek
+bin/pgx
+include/pgraf.h
+lib/libpgc.a
+man/man1/pgraf.1
+man/man3/pgraf.3
+man/man5/pgraf.5
+share/doc/pgraf/pgraf_paper
+share/examples/pgraf/READ_ME
+share/examples/pgraf/example1.c
+share/examples/pgraf/example3.c
+share/examples/pgraf/example4.c
+share/examples/pgraf/gridc.c
+share/examples/pgraf/house.c
+share/examples/pgraf/markc.c
+share/examples/pgraf/pgdemo.r
+share/examples/pgraf/pgraf.r
+share/examples/pgraf/radar.c
+share/examples/pgraf/surface.c
+@dirrm share/examples/pgraf
+@dirrm share/doc/pgraf

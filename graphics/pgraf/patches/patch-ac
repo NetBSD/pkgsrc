@@ -1,0 +1,33 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/02/01 04:34:23 jtb Exp $
+
+--- lolevels/Makefile.orig	Wed Jan 31 09:58:57 2001
++++ lolevels/Makefile
+@@ -2,20 +2,23 @@
+ # so a failure to find these won't stop the compilation of the others.
+ #
+ PROGS = pghp pgtek pgx pgfig pgps pgeps pgsps pgx
+-BINDIR = /usr/local/bin
+-CC = gcc
+-CFLAGS = -O -I../../include -I/usr/local/X11R6/include
++BINDIR = ${PREFIX}/bin
++#CC = gcc
++CFLAGS += -I../../include -I${X11BASE}/include
+ # Put the location of X11 libraries here, e. g.,
+ # X11FLAGS = -L/usr/openwin/lib for Open Windows.
+ # If X11 libraries are in /usr/lib or /usr/local/lib, this can be left blank.
+-X11FLAGS = -L/usr/X11R6/lib
++X11FLAGS = -Wl,-R${X11BASE}/lib -L${X11BASE}/lib
++
++all : system
++
+ system : $(PROGS)
+ 	touch system
+ clean :
+ 	-rm -f $(PROGS) core
+ 	-rm -f *.o *.bak *~
+ install :
+-	-cp $(PROGS) $(BINDIR)
++	-$(BSD_INSTALL_PROGRAM) $(PROGS) $(BINDIR)
+ pghp : pg.o pghp.o
+ 	$(CC) -o pghp pg.o pghp.o -lm
+ pgtek : pg.o pgtek.o
