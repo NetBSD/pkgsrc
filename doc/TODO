@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.985 2003/11/02 13:19:14 grant Exp $
+$NetBSD: TODO,v 1.986 2003/11/02 18:27:11 cube Exp $
 
 Suggested new packages
 ======================
@@ -125,7 +125,7 @@ Suggested package updates
 	o TeXmacs-1.0.2.5
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
-	o abiword-2.0
+	o abiword-2.0.1
 	o abcde 2.1.8
 	o amanda-2.4.4p1
 	o anjuta-1.0.2
