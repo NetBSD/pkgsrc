@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.Linux,v 1.6 2004/07/27 19:25:44 abs Exp $
+# $NetBSD: cpuflags.Linux,v 1.7 2004/07/28 16:54:03 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 if [ -n "$1" ]; then
@@ -18,11 +18,12 @@ fi
 
 case $hw_machine_arch in
     # i386
-    i386)				FLAGS='-march=i386'	;;
-    i486)				FLAGS='-march=i486'	;;
-    i586)				FLAGS='-march=pentium'	;;
+    i386)				FLAGS='-march=i386'		;;
+    i486)				FLAGS='-march=i486'		;;
+    i586)				FLAGS='-march=pentium'		;;
     i686) case $hw_model in
-	"AMD Duron(TM)")		FLAGS='-march=athlon'	;;
+	"AMD Duron(TM)")		FLAGS='-march=athlon'		;;
+	"AMD Athlon(tm) XP "*)		FLAGS='-march=athlon-xp'	;;
     esac
     ;;
     #
@@ -61,10 +62,10 @@ if [ -n "$FLAGS" ]; then
 2.90:-mcpu=v9:-mv8
 2.95:-march=k6:-march=pentium
 3.0:-march=athlon:-march=pentiumpro
-3.1:-march=athlon-4:-march=pentiumpro
-3.1:-march=athlon-mp:-march=pentiumpro
-3.1:-march=athlon-tbird:-march=pentiumpro
-3.1:-march=athlon-xp:-march=pentiumpro
+3.1:-march=athlon-4:-march=athlon
+3.1:-march=athlon-mp:-march=athlon
+3.1:-march=athlon-tbird:-march=athlon
+3.1:-march=athlon-xp:-march=athlon
 3.1:-march=k6-2:-march=k6
 3.1:-march=k6-3:-march=k6
 3.1:-march=pentium-mmx:-march=pentium
@@ -96,6 +97,18 @@ if [ -n "$FLAGS" ]; then
 3.1:-mtune=r6000:-cpu=r6000
 3.1:-mtune=r8000:-cpu=r8000
 3.3:-march=c3:-march=i586
+3.3:-march=winchip-c6:-march=i586
+3.3:-march=winchip2:-march=i586
+3.4:-march=athlon64:-march=athlon-xp
+3.4:-march=athlong-fx:-march=athlon-xp
+3.4:-march=c3-2:-march=c3
+3.4:-march=k8:-march=athlon-xp
+3.4:-march=nocona:-march=pentium4
+3.4:-march=opteron:-march=athlon-xp
+3.4:-march=pentium-m:-march=pentium3
+3.4:-march=pentium3m:-march=pentium3
+3.4:-march=pentium4m:-march=pentium4
+3.4:-march=prescott:-march=pentium4
 EOD
 `
 fi
