@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/03/31 01:52:04 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2004/05/01 16:02:49 kim Exp $
 
 DISTNAME=		Test-Harness-2.40
 PKGNAME=		p5-${DISTNAME}
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
 MAINTAINER=		shell@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Test-Harness/
 COMMENT=		Perl5 module for testing
+
+CONFLICTS=		perl>=5.8.3
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
