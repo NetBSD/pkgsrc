@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2004/07/23 00:35:03 minskim Exp $
+# $NetBSD: Makefile,v 1.71 2004/07/29 05:02:26 xtraeme Exp $
 #
 
 COMMENT=	Fonts
@@ -101,5 +101,13 @@ SUBDIR+=	vera-ttf
 SUBDIR+=	vfontcap-kochi
 SUBDIR+=	watanabe_vfont
 SUBDIR+=	xmbdfed
+SUBDIR+=        xorg-fonts100dpi
+SUBDIR+=        xorg-fonts75dpi
+SUBDIR+=        xorg-fontsCyrillic
+SUBDIR+=        xorg-fontsEncodings
+SUBDIR+=        xorg-fontsMisc
+SUBDIR+=        xorg-fontsTruetype
+SUBDIR+=	xorg-fontsType1
+SUBDIR+=        xorg-fontserver
 
 .include "../mk/bsd.pkg.subdir.mk"
