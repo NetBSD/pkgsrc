@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/01/06 00:06:06 rh Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/02/18 14:55:56 jmmv Exp $
 bin/anjuta
 bin/anjuta_import.sh
 bin/anjuta_launcher
@@ -464,10 +464,9 @@ share/pixmaps/anjuta/wizard.xpm
 @unexec rm -f %D/lib/anjuta/libanjuta_sample1.so
 @exec ln -fs libanjuta_sample1.so.0.0 %D/lib/anjuta/libanjuta_sample1.so.0
 @unexec rm -f %D/lib/anjuta/libanjuta_sample1.so.0
-@exec scrollkeeper-update
-@unexec scrollkeeper-update
 @dirrm share/pixmaps/anjuta
 @dirrm share/omf/anjuta
+@comment in scrollkeeper: @dirrm share/omf
 @dirrm share/mimelnk/application
 @dirrm share/mimelnk
 @dirrm share/gnome/help/anjuta/ja/anjuta-manual/figures
