@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 1998/12/03 09:08:24 frueauf Exp $
+
+--- ddd/Makefile.in-orig	Thu Nov 12 14:32:27 1998
++++ ddd/Makefile.in	Sun Nov 15 16:36:38 1998
+@@ -267,7 +267,7 @@
+ ## Installation commands.
+ 
+ # General install program.  (install -c)
+-INSTALL = @INSTALL@
++INSTALL = /usr/bin/install -c
+ 
+ # Command for installing programs.  (install -c)
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
