@@ -102,28 +102,14 @@
  
  termsort.c: $(srcdir)/MKtermsort.sh
  	sh -c "$(srcdir)/MKtermsort.sh $(AWK) $(srcdir)/../include/Caps" >$@
---- configure.orig	Sun Dec  1 02:08:35 1996
-+++ configure	Fri Jan  9 13:51:38 1998
-@@ -1283,12 +1283,7 @@
-     do
-        nc_test=`echo $nc_name | sed -e 's/*//'`
-        if test "x$nc_test" = "x$nc_name" ; then
--	  case "$nc_name" in
--	  *.gz) nc_form=gzip;     nc_name=`basename $nc_name .gz`;;
--	  *.Z)  nc_form=compress; nc_name=`basename $nc_name .Z`;;
--	  *.0)	nc_form=BSDI; nc_format=yes;;
--	  *)    nc_form=cat;;
--	  esac
-+	  nc_form=cat
- 	  break
-        fi
-     done
-@@ -1392,7 +1387,7 @@
- BSDI)
- cat >>man/edit_man.sh <<NC_EOF
- 	# BSDI installs only .0 suffixes in the cat directories
--	target="\`echo \$target|sed -e 's/\.[1-9]\+.\?/.0/'\`"
-+	target="\`echo \$target|sed -e 's/\.[1-9]\(\.gz|\.Z\)\{0,1\}/.0\1/'\`"
- NC_EOF
-   ;;
- esac
+--- panel/Makefile.in	1998/03/06 22:13:13	1.1
++++ panel/Makefile.in	1998/03/06 22:13:29
+@@ -35,7 +35,7 @@
+ THIS		= Makefile
+ 
+ MODEL		= @DFT_LWR_MODEL@
+-INSTALL_PREFIX	= @INSTALL_PREFIX
++INSTALL_PREFIX	= @INSTALL_PREFIX@
+ srcdir		= @srcdir@
+ prefix		= @prefix@
+ exec_prefix	= @exec_prefix@
