@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2004/02/11 11:30:49 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2004/02/12 01:59:37 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 BINUTILS_BUILDLINK3_MK:=	${BINUTILS_BUILDLINK3_MK}+
@@ -16,6 +16,7 @@ BUILDLINK_CHECK_BUILTIN.binutils?=	NO
 
 .if !defined(BUILDLINK_IS_BUILTIN.binutils)
 BUILDLINK_IS_BUILTIN.binutils=	YES
+.  if !empty(BUILDLINK_CHECK_BUILTIN.binutils:M[nN][oO])
 #
 # These versions of NetBSD didn't have a toolchain that was capable of
 # replacing binutils.
@@ -27,12 +28,19 @@ _INCOMPAT_BINUTILS+=	NetBSD-1.5.*-* NetBSD-1.5[A-X]-*
 # XXX: needed here
 #
 INCOMPAT_BINUTILS?=       # empty
-.  for _pattern_ in ${_INCOMPAT_BINUTILS} ${INCOMPAT_BINUTILS}
-.    if !empty(MACHINE_PLATFORM:M${_pattern_})
+.    for _pattern_ in ${_INCOMPAT_BINUTILS} ${INCOMPAT_BINUTILS}
+.      if !empty(MACHINE_PLATFORM:M${_pattern_})
 BUILDLINK_IS_BUILTIN.binutils=	NO
-.    endif
-.  endfor
+.      endif
+.    endfor
+.  endif
 MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.binutils=${BUILDLINK_IS_BUILTIN.binutils}
+.endif
+
+.if !empty(BUILDLINK_IS_BUILTIN.binutils:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.binutils=	YES
+.else
+BUILDLINK_USE_BUILTIN.binutils=	NO
 .endif
 
 .if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
@@ -46,15 +54,6 @@ BUILDLINK_USE_BUILTIN.binutils=	NO
 
 .if !empty(BUILDLINK_CHECK_BUILTIN.binutils:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.binutils=	YES
-.endif
-
-.if !defined(BUILDLINK_USE_BUILTIN.binutils)
-.  if !empty(BUILDLINK_IS_BUILTIN.binutils:M[nN][oO])
-BUILDLINK_USE_BUILTIN.binutils=	NO
-.  else
-BUILDLINK_USE_BUILTIN.binutils=	YES
-.  endif
-MAKEFLAGS+=	BUILDLINK_USE_BUILTIN.binutils=${BUILDLINK_USE_BUILTIN.binutils}
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.binutils:M[nN][oO])

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.15 2004/02/09 20:20:43 reed Exp $
+# $NetBSD: buildlink2.mk,v 1.16 2004/02/12 01:59:38 jlam Exp $
 
 .if !defined(FREETYPE2_BUILDLINK2_MK)
 FREETYPE2_BUILDLINK2_MK=	# defined
@@ -15,18 +15,10 @@ _REQUIRE_BUILTIN_FREETYPE2?=	NO
 
 _FREETYPE_H=		${X11BASE}/include/freetype2/freetype/freetype.h
 _X11_TMPL=		${X11BASE}/lib/X11/config/X11.tmpl
-.if exists(${_FREETYPE_H}) && exists(${_X11_TMPL})
-_IS_BUILTIN_FREETYPE2!= ${GREP} -c BuildFreetype2Library ${_X11_TMPL} || ${TRUE}
-.else
-_IS_BUILTIN_FREETYPE2=	0
-.endif
 
-.if !empty(_REQUIRE_BUILTIN_FREETYPE2:M[yY][eE][sS])
-_NEED_FREETYPE2=	NO
-.else
-.  if ${_IS_BUILTIN_FREETYPE2} == "0"
-_NEED_FREETYPE2=	YES
-.  else
+.if !defined(_BUILTIN_FREETYPE2)
+_BUILTIN_FREETYPE2=	NO
+.  if exists(${_FREETYPE_H}) && exists(${_X11_TMPL})
 #
 # Create an appropriate freetype2 package name for the built-in freetype2
 # distributed with XFree86 4.x.  This package name can be used to check
@@ -42,18 +34,33 @@ _FREETYPE_PATCH!= \
 _FREETYPE_VERSION=	${_FREETYPE_MAJOR}${_FREETYPE_MINOR}${_FREETYPE_PATCH}
 _FREETYPE_PKG=		freetype2-${_FREETYPE_VERSION}
 _FREETYPE_DEPENDS=	${BUILDLINK_DEPENDS.freetype2}
-_NEED_FREETYPE2!= \
+_BUILTIN_FREETYPE2!=	\
 	if ${PKG_ADMIN} pmatch '${_FREETYPE_DEPENDS}' ${_FREETYPE_PKG}; then \
-		${ECHO} "NO";						\
+		if ${GREP} -q BuildFreetype2Library ${_X11_TMPL}; then	\
+			${ECHO} "YES";					\
+		else							\
+			${ECHO} "NO";					\
+		fi;							\
 	else								\
-		${ECHO} "YES";						\
+		${ECHO} "NO";						\
 	fi
 .  endif
+MAKEFLAGS+=	_BUILTIN_FREETYPE=${_BUILTIN_FREETYPE}
+.endif
+
+.if !empty(_BUILTIN_FREETYPE2:M[yY][eE][sS])
+_NEED_FREETYPE2=	NO
+.else
+_NEED_FREETYPE2=	YES
 .endif
 
 .if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
     !empty(PREFER_PKGSRC:Mfreetype2)
 _NEED_FREETYPE2=	YES
+.endif
+
+.if !empty(_REQUIRE_BUILTIN_FREETYPE2:M[yY][eE][sS])
+_NEED_FREETYPE2=	NO
 .endif
 
 .if ${_NEED_FREETYPE2} == "YES"
