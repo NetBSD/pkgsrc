@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1432 2004/03/31 10:07:47 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1433 2004/03/31 10:14:22 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -1360,6 +1360,11 @@ SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR} \
 
 .if defined(BATCH)
 SCRIPTS_ENV+=	BATCH=yes
+.endif
+
+# If NO_BUILD is defined, default to not needing a compiler.
+.if defined(NO_BUILD)
+USE_LANGUAGES?=		# empty
 .endif
 
 # Get the proper dependencies and set the PATH to use the compiler
