@@ -1,8 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 1997/10/27 04:28:54 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/10/28 00:12:41 hubertf Exp $
 # FreeBSD comes with ncurses, we don't, so...
 
 DISTNAME=	ncurses-1.9.9e
 CATEGORIES=	devel
+# XXX this should be moved to ftp.netcom.com:/pub/zm/zmbenhal/ncurses
+# XXX once upgraded to the latest version - hubertf
+MASTER_SITES=	ftp://ftp.fu-berlin.de/unix/gnu/ncurses
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-normal --with-shared --enable-bsdpad
