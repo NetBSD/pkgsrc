@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.575 2000/09/15 09:18:21 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.576 2000/09/15 16:53:30 veego Exp $
 #
 # This file is in the public domain.
 #
@@ -525,6 +525,7 @@ ID?=		/usr/xpg4/bin/id
 IDENT?=		${LOCALBASE}/bin/ident
 LDCONFIG?=	/usr/bin/true
 LN?=		/usr/bin/ln
+LS?=		/usr/bin/ls
 MKDIR?=		/usr/bin/mkdir -p
 MTREE?=		${LOCALBASE}/bsd/bin/mtree
 MV?=		/usr/bin/mv
@@ -569,6 +570,7 @@ ID?=		/usr/bin/id
 IDENT?=		/usr/bin/ident
 LDCONFIG?=	/sbin/ldconfig
 LN?=		/bin/ln
+LS?=		/bin/ls
 MKDIR?=		/bin/mkdir -p
 MTREE?=		${LOCALBASE}/bsd/bin/mtree
 MV?=		/bin/mv
@@ -613,6 +615,7 @@ ID?=		/usr/bin/id
 IDENT?=		/usr/bin/ident
 LDCONFIG?=	/sbin/ldconfig
 LN?=		/bin/ln
+LS?=		/bin/ls
 MKDIR?=		/bin/mkdir -p
 MTREE?=		/usr/sbin/mtree
 MV?=		/bin/mv
@@ -2856,9 +2859,9 @@ print-pkg-size-this:
 		<${PLIST} 						\
 	| sort -u							\
 	| ${SED} -e 's, ,\\ ,g'						\
-	| xargs ls -ld							\
-	| ${AWK} 'BEGIN { print("0"); }					\
-		  { print($$5, " +"); }					\
+	| xargs ${LS} -ld							\
+	| ${AWK} 'BEGIN { print("0 "); }					\
+		  { print($$5, " + "); }					\
 		  END { print("p"); }'					\
 	| ${DC}
 
@@ -2967,7 +2970,7 @@ print-PLIST:
 				-e '/^${PREFIX:S/\//\\\//g}\/.$$/d'	\
 			| sort -r | ${SED} ${COMMON_DIRS}` ;		\
 	do								\
-		if [ `ls -la ${PREFIX}/$$i | wc -l` = 3 ]; then		\
+		if [ `${LS} -la ${PREFIX}/$$i | wc -l` = 3 ]; then		\
 			${ECHO} @exec /bin/mkdir -p ${PREFIX}/$$i ;	\
 		fi ;							\
 		${ECHO} @dirrm $$i ;					\
