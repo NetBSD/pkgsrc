@@ -1,12 +1,20 @@
-$NetBSD: patch-af,v 1.1 1999/11/15 13:07:12 rh Exp $
-
---- ../audioIO.h.orig	Sat May 31 19:47:58 1997
-+++ ../audioIO.h	Mon Nov 15 13:58:45 1999
-@@ -26,3 +26,7 @@
- #ifdef OS_SunOS
-   #define AUSIZ 4096
- #endif
-+
-+#ifdef OS_NetBSD
-+  #define AUSIZ 32768
-+#endif
+diff -c ../audioIO.h:1.1.1.1 xamp/audioIO.h:1.2
+*** ../audioIO.h:1.1.1.1	Wed Jun 14 22:23:47 2000
+--- ../audioIO.h	Wed Jun 14 22:23:47 2000
+***************
+*** 7,13 ****
+    #define AUSIZ 32768
+  #endif
+  
+! #ifdef OS_Linux
+  extern int AUSIZ;
+  #endif
+  
+--- 7,13 ----
+    #define AUSIZ 32768
+  #endif
+  
+! #if defined(OS_Linux) || defined(OS_NetBSD)
+  extern int AUSIZ;
+  #endif
+  
