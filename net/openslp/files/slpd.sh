@@ -1,5 +1,7 @@
 #! /bin/sh
 #
+# $NetBSD: slpd.sh,v 1.6 2002/09/20 01:43:22 grant Exp $
+#
 # Service Location Protocol daemon
 #
 # PROVIDE: slpd
