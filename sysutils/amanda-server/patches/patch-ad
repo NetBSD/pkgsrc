@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.3 1999/09/04 01:19:50 bad Exp $
+$NetBSD: patch-ad,v 1.4 1999/09/06 18:16:34 bad Exp $
 
---- man/Makefile.in.old	Tue Feb 23 10:43:23 1999
-+++ man/Makefile.in	Tue Feb 23 10:42:34 1999
+--- man/Makefile.in.orig	Sat Nov 21 18:34:50 1998
++++ man/Makefile.in	Sat Sep  4 03:26:17 1999
 @@ -158,10 +158,10 @@
  
  transform =	s,x,x,;
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.3 1999/09/04 01:19:50 bad Exp $
  		amcheckdb.8	amcleanup.8	amdump.8	\
  		amflush.8	amlabel.8	amoverview.8	\
 -		amplot.8	amrecover.8	amrestore.8	\
-+		amplot.8	amrestore.8	\
++						amrestore.8	\
  		amrmtape.8	amtape.8	amtoc.8		\
  		amverify.8	amstatus.8	amreport.8
  

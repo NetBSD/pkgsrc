@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/09/04 01:21:25 bad Exp $
+# $NetBSD: Makefile,v 1.11 1999/09/06 18:16:34 bad Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -11,7 +11,6 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.amanda.org/
 
 DEPENDS+=		readline-4.0:../../devel/readline
-DEPENDS+=		gnuplot-3.7:../../graphics/gnuplot
 DEPENDS+=		amanda-common-2.4.1p1:../../sysutils/amanda-common
 
 USE_X11=		yes

@@ -1,8 +1,25 @@
-$NetBSD: patch-aa,v 1.2 1999/04/04 23:34:46 tron Exp $
+$NetBSD: patch-aa,v 1.3 1999/09/06 18:16:34 bad Exp $
 
---- configure.orig	Sat Jul 18 10:34:33 1998
-+++ configure	Sat Jul 18 10:35:03 1998
-@@ -4204,6 +4204,7 @@
+--- configure.orig	Sat Nov 21 18:12:59 1998
++++ configure	Fri Sep  3 20:08:38 1999
+@@ -2943,6 +2943,7 @@
+ done
+ 
+ 
++if false ;then
+ for ac_prog in gnuplot
+ do
+ # Extract the first word of "$ac_prog", so it can be a program name with args.
+@@ -2978,6 +2979,8 @@
+ 
+ test -n "$GNUPLOT" && break
+ done
++fi
++GNUPLOT=""
+ 
+ if test -z "$GNUPLOT"; then
+     BUILD_AMPLOT_SBIN=
+@@ -4457,6 +4460,7 @@
    echo "$ac_t""no" 1>&6
  fi
  
@@ -10,11 +27,11 @@ $NetBSD: patch-aa,v 1.2 1999/04/04 23:34:46 tron Exp $
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
  
-@@ -4249,6 +4250,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
+@@ -4502,6 +4506,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
  $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
  || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
 +fi
  
- # Extract the first word of "gcc", so it can be a program name with args.
- set dummy gcc; ac_word=$2
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
