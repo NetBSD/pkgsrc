@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.17 2000/01/10 15:06:49 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.18 2000/01/14 01:02:01 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -29,7 +29,7 @@ my(	$pkgsrcdir,		# Base of pkgsrc tree
 
 $ENV{PATH} .= ':/usr/sbin';
 
-if (! &getopts('DK:P:Rdhilmopru', \%opt) || $opt{'h'} ||
+if (! &getopts('DK:LP:Rdhilmopru', \%opt) || $opt{'h'} ||
 	! ( defined($opt{'d'}) || defined($opt{'i'}) || defined($opt{'l'}) ||
 	    defined($opt{'m'}) || defined($opt{'o'}) || defined($opt{'p'}) ||
 	    defined($opt{'r'}) || defined($opt{'u'}) || defined($opt{'D'}) ||
@@ -172,8 +172,8 @@ sub dewey_cmp
     my($match, $test, $val) = @_;
     my($cmp, @matchlist, @vallist);
 
-    @matchlist = split(/\./, $match);
-    @vallist = split(/\./, $val);
+    @matchlist = split(/\D+/, $match);
+    @vallist = split(/\D+/, $val);
     $cmp = 0;
     while( ! $cmp && (@matchlist || @vallist))
 	{
@@ -184,7 +184,6 @@ sub dewey_cmp
 	else
 	    { $cmp = (shift @matchlist <=> shift @vallist) }
 	}
-    print "$cmp $test 0\n";
     eval "$cmp $test 0";
     }
 
@@ -304,7 +303,7 @@ sub package_globmatch
 		{ return($ver); }
 	    @chars = split(//, $matchver);
 	    $regexver = '^';
-	    while ($_ = shift @chars)
+	    while (defined($_ = shift @chars))
 		{
 		if ($_ eq '*')
 		    { $regexver .= '.*'; }
@@ -328,15 +327,17 @@ sub package_globmatch
 		{ $matchver = undef; }
 	    }
 	}
-    elsif ( $pkgmatch =~ /^([^*?[]+)(<|>|<=|>=)([\d.]+)/ ) 
+    elsif ( $pkgmatch =~ /^([^*?[]+)(<|>|<=|>=)(\d.+)/ ) 
 	{						# (package)(cmp)(dewey)
 	my($test);
 
-	($pkg, $test, $matchver) = ($1, $2);
+	($pkg, $test, $matchver) = ($1, $2, $3);
 
-	if (defined($ver = $pkg2ver{$pkg}))
+	if ($matchver =~ /[^\d.]/ )
+	    { $matchver = "invalid-dewey($test$matchver)"; }
+	elsif (defined($ver = $pkg2ver{$pkg}))
 	    {
-	    if ( dewey_cmp($matchver, $test, $ver) )
+	    if ( dewey_cmp($ver, $test, $matchver) )
 		{ $matchver = undef; }
 	    else
 		{ $matchver = "$test$matchver"; }
@@ -365,7 +366,8 @@ sub parse_makefile
     %vars = %default_makefile_vars;
     if ($file =~ m#(.*)/#)
 	{ $vars{'.CURDIR'} = $1; }
-    debug("read: $file\n");
+    if ($opt{'L'})
+	{ print "$file\n"; }
 
     while( defined($_ = shift(@data)) )
 	{
@@ -451,7 +453,7 @@ sub parse_makefile
 	    next;
 	    }
 
-	if (/^ *(\w+)([+?]?)=\s*(\S.*)/)
+	if (/^ *(\w+)([+?]?)\s*=\s*(\S.*)/)
 	    {
 	    $key = $1;
 	    $plus = $2;
@@ -473,12 +475,10 @@ sub parse_makefile
 	$loop = 0;
 	foreach $key ( keys %vars )
 	    {
-	    while ( $vars{$key} =~ /\$\{([\w.]+)\}/ )
+	    $_ = parse_expand_vars($vars{$key}, \%vars);
+	    if ( $_ ne $vars{$key} )
 		{
-		if (defined($vars{$1}))
-		    { $vars{$key} = $`.$vars{$1}.$'; }
-		else
-		    { $vars{$key} = $`.'UNDEFINED'.$'; }
+		$vars{$key} = $_;
 		$loop = 1;
 		}
 	    }
@@ -587,7 +587,7 @@ sub pkglint_all_pkgsrc
 	&safe_chdir("$pkgsrcdir/$cat");
 	if (! opendir(CAT, '.'))
 	    { die("Unable to opendir($pkgsrcdir/$cat): $!"); }
-	foreach $pkg ( grep(substr($_, 0, 1) ne '.', readdir(CAT) ) )
+	foreach $pkg ( sort grep(substr($_, 0, 1) ne '.', readdir(CAT) ) )
 	    {
 	    if (-f "$pkg/Makefile")
 		{
@@ -630,13 +630,17 @@ sub scan_pkgsrc_makefiles
     my(%depends);
 
     @categories = &list_pkgsrc_categories($pkgsrcdir);
-    &verbose("Scanning pkgsrc Makefiles: ".'_'x@categories."\b"x@categories);
+    &verbose("Scanning pkgsrc Makefiles: ");
+    if (!$opt{'L'})
+	{ &verbose('_'x@categories."\b"x@categories); }
+    else
+	{ &verbose("\n"); }
 
     foreach $cat ( sort @categories )
 	{
 	if (! opendir(CAT, "$pkgsrcdir/$cat"))
 	    { die("Unable to opendir($pkgsrcdir/$cat): $!"); }
-	foreach $pkgdir ( grep(substr($_, 0, 1) ne '.', readdir(CAT) ) )
+	foreach $pkgdir ( sort grep(substr($_, 0, 1) ne '.', readdir(CAT) ) )
 	    {
 	    my(%vars);
 	    ($pkgname, %vars) =
@@ -653,13 +657,17 @@ sub scan_pkgsrc_makefiles
 		}
 	    }
 	close(CAT);
-	&verbose('.');
+	if (!$opt{'L'})
+	    { &verbose('.'); }
 	}
 
-    my ($len);
-    $_ = scalar(keys %pkgver2dir).' packages';
-    $len = @categories - length($_);
-    &verbose("\b"x@categories, $_, ' 'x$len, "\b"x$len, "\n");
+    if (!$opt{'L'})
+	{
+	my ($len);
+	$_ = scalar(keys %pkgver2dir).' packages';
+	$len = @categories - length($_);
+	&verbose("\b"x@categories, $_, ' 'x$len, "\b"x$len, "\n");
+	}
 
     if ($check_depends)
 	{
@@ -699,7 +707,7 @@ sub scan_pkgsrc_distfiles_vs_md5
 	{
 	if (! opendir(CAT, "$pkgsrcdir/$cat"))
 	    { die("Unable to opendir($pkgsrcdir/$cat): $!"); }
-	foreach $pkg ( grep(substr($_, 0, 1) ne '.', readdir(CAT) ) )
+	foreach $pkg ( sort grep(substr($_, 0, 1) ne '.', readdir(CAT) ) )
 	    {
 	    if (open(MD5, "$pkgsrcdir/$cat/$pkg/files/md5"))
 		{
@@ -798,6 +806,7 @@ opts:
   -p	     : List old/obsolete prebuilt packages.
   -r	     : Remove any 'bad' distfiles (Without -m, -o, or -p, implies all).
 
+  -L         : List each Makefile when scanned
   -P path    : Set PKGSRCDIR
   -K path    : Set basedir for prebuild packages (default PKGSRCDIR/packages)
   -D [paths] : Parse Makefiles and output contents (For debugging)

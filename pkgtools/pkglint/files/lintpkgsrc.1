@@ -1,4 +1,4 @@
-.\"	$NetBSD: lintpkgsrc.1,v 1.7 1999/12/22 21:37:58 abs Exp $
+.\"	$NetBSD: lintpkgsrc.1,v 1.8 2000/01/14 01:02:01 abs Exp $
 .\"
 .\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -10,7 +10,7 @@
 .Nd a verifier for the pkgsrc tree
 .Sh SYNOPSIS
 .Nm
-.Op Fl Rdhilmor
+.Op Fl LRdhilmor
 .Op Fl D Ar paths
 .Op Fl K Ar binpkgdir
 .Op Fl P Ar pkgsrcdir
@@ -28,6 +28,8 @@ Note that it does NOT implement complete Makefile parser.
 Parse Makefiles and output contents (Useful for debugging).
 .It Fl K Ar binpkgdir
 Set basedir for binary packages, otherwise PKGSRCDIR/packages is used.
+.It Fl L
+List the filenames of Makefiles as they are parsed (for debugging).
 .It Fl P Ar pkgsrcdir
 Set pkgsrcdir - otherwise
 .Pa /etc/mk.conf is parsed for
