@@ -1,37 +1,38 @@
-# $NetBSD: Makefile,v 1.43 2000/06/01 11:23:45 rh Exp $
+# $NetBSD: Makefile,v 1.44 2000/06/05 01:12:37 wiz Exp $
 
-DISTNAME=	gtk+-1.2.8
-CATEGORIES=	x11
-MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/v1.2/ \
-		ftp://ftp.cs.umn.edu/pub/gimp/gtk/v1.2/ \
-		http://www.ameth.org/gimp/pub/gtk/v1.2/ \
-		ftp://infosoc.uni-koeln.de/pub/ftp.gimp.org/pub/gtk/v1.2/
+DISTNAME=		gtk+-1.2.8
+CATEGORIES=		x11
+MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v1.2/ \
+			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v1.2/ \
+			http://www.ameth.org/gimp/pub/gtk/v1.2/ \
+			ftp://infosoc.uni-koeln.de/pub/ftp.gimp.org/pub/gtk/v1.2/
 
-MAINTAINER=	tron@netbsd.org
-HOMEPAGE=	http://www.gtk.org/
+MAINTAINER=		tron@netbsd.org
+HOMEPAGE=		http://www.gtk.org/
 
-DEPENDS+=	gettext-0.10.*:../../devel/gettext
-DEPENDS+=	glib>=1.2.8:../../devel/glib
-BUILD_DEPENDS+=	${LOCALBASE}/bin/perl:../../lang/perl5
+DEPENDS+=		gettext-0.10.*:../../devel/gettext
+DEPENDS+=		glib>=1.2.8:../../devel/glib
+BUILD_DEPENDS+=		${LOCALBASE}/bin/perl:../../lang/perl5
 
-USE_PKGLIBTOOL=	yes
-USE_X11BASE=	yes
-USE_GMAKE=	yes
+USE_LIBTOOL=		yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+USE_X11BASE=		yes
+USE_GMAKE=		yes
 
-GNU_CONFIGURE=  yes
-CONFIGURE_ARGS+=--with-xinput=xfree
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}" X_LDFLAGS="${X_LDFLAGS}"
+GNU_CONFIGURE=		 yes
+CONFIGURE_ARGS+=	--with-xinput=xfree
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}" X_LDFLAGS="${X_LDFLAGS}"
 
-INFO_FILES=	gdk.info gtk.info
+INFO_FILES=		gdk.info gtk.info
 
-CPPFLAGS=	-I${LOCALBASE}/include				# libintl.h
-LDFLAGS=	-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib	# -lintl
-PLIST_SUBST+=	LOCALBASE=${LOCALBASE}
+CPPFLAGS=		-I${LOCALBASE}/include			   # libintl.h
+LDFLAGS=		-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib  # -lintl
+PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 
 # The following ensures that `gtk-config --libs' includes the correct linker
 # flags for linking the X11 libs.
 #
-X_LDFLAGS=	-Wl,-R${X11BASE}/lib -L${X11BASE}/lib
+X_LDFLAGS=		-Wl,-R${X11BASE}/lib -L${X11BASE}/lib
 
 post-install:
 	${TEST} ${PREFIX} = ${LOCALBASE} || \

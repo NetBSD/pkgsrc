@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.18 2000/05/26 05:38:21 rh Exp $
+$NetBSD: patch-aa,v 1.19 2000/06/05 01:12:43 wiz Exp $
 
 --- configure.orig	Thu May 25 02:31:48 2000
 +++ configure	Thu May 25 18:53:46 2000
@@ -13,22 +13,6 @@ $NetBSD: patch-aa,v 1.18 2000/05/26 05:38:21 rh Exp $
  GTK_BINARY_AGE=8
  GTK_VERSION=$GTK_MAJOR_VERSION.$GTK_MINOR_VERSION.$GTK_MICRO_VERSION
  ac_help="$ac_help
-@@ -1393,6 +1393,7 @@
- *) lt_target="$target" ;;
- esac
- 
-+if false; then
- # Check for any special flags to pass to ltconfig.
- libtool_flags="--cache-file=$cache_file"
- test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
-@@ -1546,6 +1547,7 @@
- 
- # Always use our own libtool.
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
-+fi
- 
- # Redirect the config.log output again, so that the ltconfig log is not
- # clobbered by the next message.
 @@ -4099,7 +4101,7 @@
  
  # AM_GTK_GNU_GETTEXT above substs $DATADIRNAME
