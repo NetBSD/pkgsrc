@@ -1,4 +1,6 @@
 #!/bin/sh
+#
+# $NetBSD: configure,v 1.2 1998/11/15 20:45:30 tron Exp $
 
 cd $WRKSRC || exit 1
 cp policy.h-dist policy.h
@@ -23,7 +25,7 @@ cat >> policy.h <<END
 #define MAILER		"/usr/sbin/sendmail"
 
 #undef DEVICE_GROUP
-#define DEVICE_GROUP	"uucp"
+#define DEVICE_GROUP	"wheel"
 
 END
 
