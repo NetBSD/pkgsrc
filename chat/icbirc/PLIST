@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/18 14:21:18 tron Exp $
+bin/icbirc
+man/cat8/icbirc.0
+man/man8/icbirc.8
