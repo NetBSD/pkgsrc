@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 17:36:09 wiz Exp $
+$NetBSD: distinfo,v 1.5 2005/02/27 22:43:24 wiz Exp $
 
-SHA1 (devilspie-0.7.tar.gz) = 25cbf60969b5204cd97c5e158188760120a94391
-RMD160 (devilspie-0.7.tar.gz) = 490dc79323583b2e5de5e0207218c4daac6d5b92
-Size (devilspie-0.7.tar.gz) = 166105 bytes
+SHA1 (devilspie-0.8.tar.gz) = eb775b6e0e6ac41ecb0dcf4c64e166ad8fcf39d5
+RMD160 (devilspie-0.8.tar.gz) = 6222371f4c5f5ba9e7c2d7118745a90bf46186f7
+Size (devilspie-0.8.tar.gz) = 174449 bytes
