@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/09/26 04:41:09 epg Exp $
+
+SHA1 (PerlIO-via-symlink-0.02.tar.gz) = e9799781a210c49fd71d0a883c6ad29be3d8d0ce
+Size (PerlIO-via-symlink-0.02.tar.gz) = 15792 bytes
