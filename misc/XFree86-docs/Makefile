@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/03/28 22:06:15 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/29 05:48:38 xtraeme Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-docs-${XF_VER}
@@ -11,6 +11,8 @@ HOMEPAGE=		http://www.xfree86.org/
 COMMENT=		XFree86 Documentation
 
 DEPENDS=		imake>=4.4.0:../../x11/imake
+
+CONFLICTS=		xorg-docs-[0-9]*
 
 USE_LANGUAGES=		# empty
 NO_BUILDLINK=		# defined
