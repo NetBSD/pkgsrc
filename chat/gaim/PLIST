@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2004/06/25 12:24:21 gavan Exp $
+@comment $NetBSD: PLIST,v 1.30 2004/07/17 23:25:04 jmmv Exp $
 bin/gaim
 bin/gaim-remote
 include/gaim/account.h
@@ -149,6 +149,7 @@ ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gaim.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gaim.mo
@@ -392,6 +393,7 @@ share/pixmaps/gaim/status/default/gadu-gadu.png
 share/pixmaps/gaim/status/default/game.png
 share/pixmaps/gaim/status/default/hiptop.png
 share/pixmaps/gaim/status/default/icq.png
+share/pixmaps/gaim/status/default/ignored.svg
 share/pixmaps/gaim/status/default/invisible.png
 share/pixmaps/gaim/status/default/irc.png
 share/pixmaps/gaim/status/default/jabber.png
