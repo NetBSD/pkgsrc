@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/01/28 12:13:02 xtraeme Exp $
+# $NetBSD: Makefile,v 1.34 2004/04/12 03:35:28 snj Exp $
 
 DISTNAME=	nedit-${VERS}-source
 PKGNAME=	nedit-${VERS}
@@ -19,7 +19,7 @@ COMMENT=	Motif based standard GUI style text editor
 VERS=		5.4
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_X11=		YES
 ALL_TARGET=		netbsd
 
@@ -34,7 +34,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/faq.txt ${PREFIX}/share/doc/nedit
 	${INSTALL_DATA} ${WRKSRC}/doc/NEdit.ad ${PREFIX}/share/doc/nedit
 
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../mk/motif.buildlink2.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../mk/motif.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
