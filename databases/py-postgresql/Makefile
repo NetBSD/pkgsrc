@@ -1,26 +1,23 @@
-# $NetBSD: Makefile,v 1.18 2002/01/19 16:13:00 drochner Exp $
-
-.include "../../databases/postgresql/Makefile.common"
-.include "../../databases/postgresql/Makefile.ssl"
+# $NetBSD: Makefile,v 1.19 2002/04/04 14:36:42 jlam Exp $
 
 PKGNAME=		${PYPKGPREFIX}-postgresql-3.2
 COMMENT=		Python interface to PostgreSQL
-
 MAINTAINER=		darcy@netbsd.org
 
-USE_BUILDLINK_ONLY=			# defined
-BUILDLINK_DEPENDS.postgresql-lib=	postgresql-lib>=${PG_BASE_VERS}
+USE_BUILDLINK_ONLY=	YES
+
+.include "../../databases/postgresql/Makefile.common"
 
 MAKEFLAGS+=		PYTHON_VERSION="${PYVERSSUFFIX}"
 
 PLIST_SUBST+=		PYTHON_LIBDIR=${PYLIB}
 PLIST_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX}
 
-MAKE_ENV+=		INSTALLED_LIBPQ=1
-
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--with-python
 CONFIGURE_ARGS+=	--with-python-compile
 CONFIGURE_ENV+=		PYTHON="${PYTHONBIN}"
+MAKE_ENV+=		INSTALLED_LIBPQ=1
 
 DIRS_TO_BUILD=		src/interfaces/python
 DOCDIR=			${PREFIX}/share/doc/${PYPKGPREFIX}-postgresql
@@ -44,7 +41,7 @@ post-install:
 		${INSTALL_DATA} $${file} ${DOCDIR}/tutorial;		\
 	done
 
+.include "../../databases/postgresql-lib/buildlink.mk"
 .include "../../lang/python/extension.buildlink.mk"
 .include "../../time/py-mxDateTime/buildlink.mk"
-.include "../../databases/postgresql-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
