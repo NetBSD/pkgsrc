@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2004/09/10 20:23:46 wiz Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 12:23:31 agc Exp $
 
 SHA1 (DQS-3.3.2.tgz) = fbb165cc058dcbda8bcfa6dbead78e2f1a4f031e
+RMD160 (DQS-3.3.2.tgz) = eb32ef1cd8243b508fbee91710982637de185b7a
 Size (DQS-3.3.2.tgz) = 1498996 bytes
 SHA1 (patch-aa) = 0b9880000157f2c9795991d1441ccd48e817d300
 SHA1 (patch-ab) = c3b1c4561f450b5c0628eb4d84f40c7850c1fb84
