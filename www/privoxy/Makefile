@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.9 2004/09/22 16:09:57 kim Exp $
+# $NetBSD: Makefile,v 1.10 2004/09/24 14:08:36 tv Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}-stable-src
 PKGNAME=	privoxy-3.0.3
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ijbswa/}
 
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.privoxy.org/
 COMMENT=	Web proxy with advanced filtering capabilities
-
-DEPENDS+=       privoxy-user>=3.0.2:../../www/privoxy-user
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -22,6 +21,8 @@ PKG_SYSCONFSUBDIR?=	privoxy
 
 USE_PKGINSTALL=		YES
 RCD_SCRIPTS=		privoxy
+PKG_GROUPS=		${PRIVOXY_GROUP}
+PKG_USERS=		${PRIVOXY_USER}:${PRIVOXY_GROUP}::Privoxy\\ user
 
 EGDIR=			${PREFIX}/share/examples/privoxy
 
