@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2000/06/12 16:21:26 rh Exp $
+# $NetBSD: Makefile,v 1.65 2000/06/22 16:58:53 rh Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/09/30 06:14:59 asami Exp
 #
 
@@ -36,6 +36,7 @@
     SUBDIR += mc
     SUBDIR += memconf
     SUBDIR += mkhybrid
+#    SUBDIR += mkisofs
     SUBDIR += mksunbootcd
     SUBDIR += mtools
     SUBDIR += osname
