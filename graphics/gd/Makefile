@@ -1,20 +1,21 @@
-# $NetBSD: Makefile,v 1.12 2000/02/09 20:20:54 tron Exp $
+# $NetBSD: Makefile,v 1.13 2000/03/17 21:05:19 he Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/02/14 07:55:45 asami Exp
 #
 
-DISTNAME=       gd-1.7.3
+DISTNAME=       gd-1.8.1
 CATEGORIES=	graphics
 MASTER_SITES=   http://www.boutell.com/gd/http/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.boutell.com/gd/
 
-USE_LIBTOOL=	yes
-USE_X11=	yes
-
 DEPENDS+=	freetype-*:../../graphics/freetype
 DEPENDS+=	png>=1.0.3:../../graphics/png
 DEPENDS+=	xpm-*:../../graphics/xpm
+DEPENDS+=	jpeg-*:../../graphics/jpeg
+
+USE_LIBTOOL=	yes
+USE_X11=	yes
 
 NO_CONFIGURE=	yes
 
@@ -30,7 +31,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include				# zlib.h
 # bump the MINOR when a new version comes out.
 #
 GD_MAJOR=	1
-GD_MINOR=	7
+GD_MINOR=	8
 MAKE_ENV+=	GD_MAJOR="${GD_MAJOR}" GD_MINOR="${GD_MINOR}"
 
 MAKE_ENV+=	CPPFLAGS="${CPPFLAGS}"
