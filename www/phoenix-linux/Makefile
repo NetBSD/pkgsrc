@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/10/31 00:47:02 grant Exp $
+# $NetBSD: Makefile,v 1.4 2002/11/10 12:22:36 grant Exp $
 #
 
 DISTNAME=		phoenix-0.4-i686-pc-linux-gnu
@@ -25,7 +25,7 @@ post-build:
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/phoenix-linux
-	cd ${WRKDIR}/phoenix; && ${PAX} -rw .  ${PREFIX}/lib/phoenix-linux
+	cd ${WRKSRC}; && ${PAX} -rw . ${PREFIX}/lib/phoenix-linux
 	${INSTALL_SCRIPT} ${WRKDIR}/phoenix.sh ${PREFIX}/bin/phoenix-linux
 
 .include "../../mk/bsd.prefs.mk"
