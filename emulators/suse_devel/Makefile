@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2003/03/26 04:05:48 jschauma Exp $
+# $NetBSD: Makefile,v 1.17 2003/05/30 15:35:20 taca Exp $
 
 DISTNAME=		suse_devel-${SUSE_VERSION}
 CATEGORIES=		emulators
-PKGREVISION=		1
+PKGREVISION=		2
 MASTER_SITES=		${MASTER_SITE_SUSE:=d1/} \
 			${MASTER_SITE_SUSE:=d2/} \
 			${MASTER_SITE_SUSE_UPD:=d1/}
@@ -26,9 +26,9 @@ RPMFILES=		binutils.rpm cpp.rpm g77.rpm gcc.rpm gpp.rpm make.rpm
 .include "../suse_linux/arch.mk"
 
 .if ${SUSE_ARCH} == "i386"
-RPMFILES+=      glibc-devel-2.2.4-77.${SUSE_ARCH}.rpm bin86.rpm
+RPMFILES+=      glibc-devel-2.2.4-78.${SUSE_ARCH}.rpm bin86.rpm
 .elif ${SUSE_ARCH} == "ppc"
-RPMFILES+=      glibc-devel-2.2.4-66.${SUSE_ARCH}.rpm
+RPMFILES+=      glibc-devel-2.2.4-69.${SUSE_ARCH}.rpm
 .else
 RPMFILES+=      glibc.rpm
 .endif
