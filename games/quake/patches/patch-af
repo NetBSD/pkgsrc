@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.1 2000/02/01 02:30:33 wiz Exp $
+$NetBSD: patch-af,v 1.2 2002/01/02 10:01:35 hubertf Exp $
 
---- QW/server/sys_unix.c	Tue Dec 21 18:45:14 1999
+--- qw/server/sys_unix.c	Tue Dec 21 18:45:14 1999
 +++ ../work/QW/server/sys_unix.c	Sat Jan 15 23:02:46 2000
 @@ -24,7 +24,7 @@
  #include <libc.h>
