@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2002/09/24 09:32:59 chris Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/09/24 09:49:03 chris Exp $
 
 .if !defined(TREMOR_BUILDLINK2_MK)
 TREMOR_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		tremor
-BUILDLINK_DEPENDS.tremor?=	tremor>=1.2.0
+BUILDLINK_DEPENDS.tremor?=	tremor>=1.0.2
 BUILDLINK_PKGSRCDIR.tremor?=	../../audio/tremor
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.tremor=tremor
