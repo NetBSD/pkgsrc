@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 1999/02/11 19:17:29 tv Exp $
+@comment $NetBSD: PLIST,v 1.6 1999/03/05 00:25:10 tron Exp $
+bin/libIDL-config
 bin/name-client
 bin/old-name-server
 bin/orbit-idl
@@ -6,19 +7,20 @@ bin/orbit-config
 bin/orbit-event-server
 bin/orbit-ird
 bin/orbit-name-server
-lib/libIDL.so.5.7
+lib/libIDL-0.6.so.0.0
 lib/libIDL.la
 lib/libIDL.a
-lib/libORBitCosNaming.so.3.0
+lib/libIDLConf.sh
+lib/libORBitCosNaming.so.4.0
 lib/libORBitCosNaming.la
 lib/libORBitCosNaming.a
-lib/libORBitutil.so.3.0
+lib/libORBitutil.so.4.0
 lib/libORBitutil.la
 lib/libORBitutil.a
-lib/libIIOP.so.3.0
+lib/libIIOP.so.4.0
 lib/libIIOP.la
 lib/libIIOP.a
-lib/libORBit.so.3.0
+lib/libORBit.so.4.0
 lib/libORBit.la
 lib/libORBit.a
 lib/libname-server.a
@@ -82,7 +84,8 @@ include/orb/orbit_poa.h
 include/orb/orbit_poa_type.h
 @unexec install-info --delete %D/info/libIDL.info %D/info/dir
 info/libIDL.info
-@exec install-info %D/info/libIDL.info %D/info/libIDL.info
+@exec install-info %D/info/libIDL.info %D/info/dir
+share/aclocal/libIDL.m4
 @dirrm include/libIDL
 @dirrm include/ORBitutil
 @dirrm include/ORBitservices
