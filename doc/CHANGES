@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9033 2005/02/04 22:35:03 adrianp Exp $
+$NetBSD: CHANGES,v 1.9034 2005/02/04 22:41:22 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -749,3 +749,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated geneweb to 4.10 [adrianp 2005-02-04]
 	Updated hevea to 1.07 [adrianp 2005-02-04]
 	Updated mldonkey to 2.5.28 [adrianp 2005-02-04]
+	Updated ocaml-graphics to 3.08.2 [adrianp 2005-02-04]
