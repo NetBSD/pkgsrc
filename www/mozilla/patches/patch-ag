@@ -1,8 +1,9 @@
-$NetBSD: patch-ag,v 1.8 2000/11/05 02:20:38 mycroft Exp $
+$NetBSD: patch-ag,v 1.9 2001/01/16 16:01:22 taya Exp $
 
---- config/rules.mk.orig	Thu Sep 28 00:02:15 2000
-+++ config/rules.mk	Wed Nov  1 08:59:03 2000
-@@ -354,6 +354,27 @@
+diff -ru ../Orig/mozilla/config/rules.mk ./config/rules.mk
+--- ../Orig/mozilla/config/rules.mk	Wed Dec 13 06:28:24 2000
++++ ./config/rules.mk	Mon Jan 15 15:37:54 2001
+@@ -373,6 +373,27 @@
  endif
  
  #
@@ -30,7 +31,7 @@ $NetBSD: patch-ag,v 1.8 2000/11/05 02:20:38 mycroft Exp $
  # HP-UXBeOS specific section: for COMPONENTS only, add -Bsymbolic flag
  # which uses internal symbols first
  #
-@@ -1393,7 +1414,7 @@
+@@ -1413,7 +1434,7 @@
  	@echo "OS_CFLAGS          = $(OS_CFLAGS)"
  	@echo "COMPILE_CFLAGS     = $(COMPILE_CFLAGS)"
  	@echo "CXXFLAGS           = $(CXXFLAGS)"
