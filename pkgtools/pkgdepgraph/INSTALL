@@ -1,14 +1,11 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.2 2003/03/06 21:13:13 atatat Exp $
+# $NetBSD: INSTALL,v 1.3 2003/08/30 20:23:00 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
 
 case ${STAGE} in
-PRE-INSTALL)
-	;;
-
 POST-INSTALL)
 	echo "============================================================"
 	echo "Note that in order to facilitate the use of this package on"
@@ -19,11 +16,6 @@ POST-INSTALL)
 	echo "much of the functionality of this program does not require"
 	echo "you to look at the graphs."
 	echo "============================================================"
-	;;
-
-*)
-	echo "Unexpected argument: ${STAGE}"
-	exit 1
 	;;
 esac
 
