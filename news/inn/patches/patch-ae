@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.3 1999/07/18 23:34:14 tron Exp $
+
+--- backends/actsyncd.sh.in.orig	Sat Oct 17 03:07:27 1998
++++ backends/actsyncd.sh.in	Sun Jul 18 01:47:43 1999
+@@ -156,7 +156,7 @@
+     if [ -z "$ftp" ]; then
+        echo "getlist -h $host" >>$out
+        if getlist -h $host > active 2>>$out; then
+-         :
++         status=0
+        else
+          status=$NOSYNC
+        fi
+@@ -172,7 +172,7 @@
+          # does not understand gzip.
+          *.gz|*.Z) echo "$COMPRESS -d active" >>$out
+                if $COMPRESS -d active  >>$out 2>&1; then
+-                 :
++                 status=0
+                else
+                  status=1
+                fi ;;
