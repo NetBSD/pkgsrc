@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 1999/07/02 10:26:02 agc Exp $
+# $NetBSD: Makefile,v 1.3 1999/07/15 00:44:03 hubertf Exp $
 #
 
-DISTNAME=	ngrep-1.31
+DISTNAME=	ngrep-1.33
 CATEGORIES=	net
 MASTER_SITES=	http://www.packetfactory.net/ngrep/
 
