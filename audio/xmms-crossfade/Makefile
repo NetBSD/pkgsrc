@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2001/06/11 06:34:19 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/06/21 17:00:31 rh Exp $
 #
 
-DISTNAME=		xmms-crossfade-0.2.7
+DISTNAME=		xmms-crossfade-0.2.9
 CATEGORIES=		audio
 MASTER_SITES=		http://www.netcologne.de/~nc-eisenlpe2/xmms-crossfade/ \
 			ftp://ftp.falsehope.com/pub/xmms-crossfade/
@@ -10,7 +10,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.netcologne.de/~nc-eisenlpe2/xmms-crossfade/
 COMMENT=		Crossfading/Gapless Plugin for XMMS
 
-DEPENDS+=		xmms>=1.2.4:../../audio/xmms
+DEPENDS+=		xmms>=1.2.5:../../audio/xmms
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
