@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1 2001/03/10 10:31:33 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2001/03/11 11:04:20 drochner Exp $
 
---- io.c~	Sun Nov 26 13:55:57 2000
-+++ io.c	Fri Mar  9 21:43:07 2001
+--- io.c.orig	Sun Nov 26 13:55:57 2000
++++ io.c	Sat Mar 10 16:34:38 2001
 @@ -20,7 +20,8 @@
  #include <sys/soundcard.h>
  #include <sys/ioctl.h>
@@ -75,3 +75,13 @@ $NetBSD: patch-ac,v 1.1 2001/03/10 10:31:33 drochner Exp $
  
  	dodebug(10,"setting mixer %s to %d\n", setupdata.mix_device, val);
  	mix = open(setupdata.mix_device, O_WRONLY);
+@@ -3026,6 +3027,9 @@
+ 		/* got the message that no medium is present?
+ 		   in this case, ignore return code */ 
+ 		if (strstr(line,"medium not present")) {
++			found = 1;
++		}
++		if (strstr(line,"Device not ready")) {
+ 			found = 1;
+ 		}
+ 	}
