@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/01/27 02:01:55 taca Exp $
+
+--- Makefile.in.orig	Thu May 20 19:09:16 1999
++++ Makefile.in	Tue Jun  8 19:22:39 1999
+@@ -21,7 +21,7 @@
+ 
+ BASEDIR		= @prefix@
+ CGIDIR		= @CGIDIR@
+-NAMAZUDIR	= $(BASEDIR)/namazu
++NAMAZUDIR	= $(BASEDIR)/lib/namazu
+ BINDIR_SYS	= $(BASEDIR)/bin  # install 'namazu' 'mknmz' command.
+ BINDIR		= $(NAMAZUDIR)/bin
+ INDEXDIR	= $(NAMAZUDIR)/index
+@@ -317,6 +317,7 @@
+ 	cp ../COPYING ../ToDo ../ChangeLog $(DOCDIR)
+ 	cp ../README.ja ../doc/ja/* "$(DOCDIR)/ja"
+ 	cp ../README.en ../doc/en/* "$(DOCDIR)/en"
++	rm -f ../lib/*.bak
+ 	cp ../lib/* $(LIBDIR)
+ 	cp ../contrib/* $(CONTRIBDIR)
+ 	cp namazu mknmz $(BINDIR_SYS)
