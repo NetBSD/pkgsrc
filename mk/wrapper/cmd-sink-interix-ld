@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink-interix-ld,v 1.1 2004/09/21 15:01:41 jlam Exp $
+# $NetBSD: cmd-sink-interix-ld,v 1.2 2004/11/10 21:08:11 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -37,7 +37,7 @@
 # Empty out the command buffer and build up the command line in $cmd.
 while ! queue_is_empty cmdbuf; do
 	pop_queue cmdbuf arg
-	$debug_log $wrapperlog "    (cmd-sink) pop: $arg"
+	$debug_log $wrapperlog "    (cmd-sink-interix-ld) pop: $arg"
 	case $arg in
 	-shared|-Bshareable)
 		$echo "$0: Interix GNU ld doesn't support \`$arg'." 1>&2
