@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/19 07:53:47 skrll Exp $
+# $NetBSD: Makefile,v 1.2 2000/10/28 11:55:21 pooka Exp $
 #
 
 DISTNAME=	qt2-2.2.1
+PKGNAME=	qt2-2.2.1nb1
 CATEGORIES=	x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -13,7 +14,7 @@ DEPENDS+=	qt2-libs-2.2.1:../../x11/qt2-libs
 DEPENDS+=	qt2-docs-2.2.1:../../x11/qt2-docs
 DEPENDS+=	qt2-designer-2.2.1:../../x11/qt2-designer
 
-USE_X11=	yes
+USE_X11BASE=	yes
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_PATCH=	yes
