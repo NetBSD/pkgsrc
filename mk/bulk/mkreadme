@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.1 2002/11/11 21:51:04 dmcmahill Exp $
+# $NetBSD: mkreadme,v 1.2 2002/11/12 02:17:58 dmcmahill Exp $
 #
 # Script for README.html generation
 #
@@ -226,6 +226,7 @@ DATABASEFILE=$TMPDIR/database
 export DATABASEFILE
 BINPKGFILE=$TMPDIR/binpkglist
 
+echo "Starting README.html generation: `date`"
 
 ######################################################################
 #
@@ -435,7 +436,7 @@ if [ $? != 0 ]; then
 fi
 
 echo " "
-echo "README.html generation finished"
+echo "README.html generation finished:  `date`"
 echo " "
 if [ "x$DEBUG" = "xno" -a "x$restart" = "xno" ]; then
     rm -fr $TMPDIR
