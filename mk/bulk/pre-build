@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.6 2000/12/15 23:08:42 hubertf Exp $
+# $NetBSD: pre-build,v 1.7 2000/12/22 01:35:33 dmcmahill Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -15,6 +15,7 @@ else
     . `dirname $0`/build.conf
 fi
 
+PRUNEDISTFILES=${PRUNEDISTFILES:-"yes"}
 
 #
 # Install cvs package and do a cvs update here
@@ -36,10 +37,15 @@ fi
 #
 # Remove old/broken distfiles and binary packages
 #
-echo Removing old/broken distfiles and binary packages
-( cd ${USR_PKGSRC}/pkgtools/pkglint ; make bulk-install )
-lintpkgsrc -r -P${USR_PKGSRC}
-echo done.
+
+if [ $PRUNEDISTFILES = "yes" -o $PRUNEDISTFILES = "YES" ]; then
+	echo Removing old/broken distfiles and binary packages
+	( cd ${USR_PKGSRC}/pkgtools/pkglint ; make bulk-install )
+	lintpkgsrc -r -P${USR_PKGSRC}
+	echo done.
+else
+	echo "Skipping distfile pruning."
+fi
 
 #
 # Clean out everything and it's mother
