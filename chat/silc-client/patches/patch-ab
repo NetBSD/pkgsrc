@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.8 2003/01/08 23:53:53 salo Exp $
+$NetBSD: patch-ab,v 1.9 2003/01/26 14:35:08 salo Exp $
 
 --- lib/silccrypt/Makefile.in.orig	Wed Jan  8 17:19:42 2003
 +++ lib/silccrypt/Makefile.in	Wed Jan  8 23:00:18 2003
@@ -6,7 +6,7 @@ $NetBSD: patch-ab,v 1.8 2003/01/08 23:53:53 salo Exp $
  .c.obj:
  	$(COMPILE) -c `if test -f '$<'; then $(CYGPATH_W) '$<'; else $(CYGPATH_W) '$(srcdir)/$<'`
  
-+# Workaround a bug in GCC which causes momory exhaustion
++# Workaround a bug in GCC which causes memory exhaustion
 +# when compiling sha1 with optimizations on UltraSPARC.
 +#
 +ifeq (sparc64, $(host_cpu))
