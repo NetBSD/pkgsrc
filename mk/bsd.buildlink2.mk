@@ -1,8 +1,8 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.1.2.1 2002/05/08 08:49:43 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.1.2.2 2002/05/08 08:50:09 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink2.mk files.  This
 # file defines a macro target, _BUILDLINK_USE, that symlinks package files
-# into a new hierarchy under ${BUILDLINK_DIR};
+# into a new hierarchy under ${BUILDLINK_DIR}.
 #
 # The variables required to be defined prior to including this file are
 # listed below.  <pkgname> refers to the name of the package and should be
