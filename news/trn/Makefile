@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2001/06/04 20:03:20 jtb Exp $
+# $NetBSD: Makefile,v 1.13 2002/01/21 15:14:14 agc Exp $
 
 DISTNAME=		trn4-test74
 PKGNAME=		trn-4.74
+PKGREVISION=		1
 CATEGORIES=		news
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=trn/} \
 			ftp://trn.sourceforge.net/pub/trn/
@@ -12,13 +13,13 @@ COMMENT=		Threaded version of rn, the classic news reader
 
 LICENSE=		trn-license
 
+.include "../../mk/bsd.prefs.mk"
+
 .if defined(USE_INN) && ${USE_INN} == YES
 DEPENDS=		inn>=2.2:../inn
 .else
 DEPENDS=		nntpclnt-1.6.1:../nntpclnt
 .endif
-
-.include "../../mk/bsd.prefs.mk"
 
 # TRN_HOSTBITS determines the number of "name segments" (x.y.z.com), counting
 # from right to left, that TRN will match to allow cancels, with 0 requiring
