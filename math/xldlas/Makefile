@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/10/03 20:37:01 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1999/01/16 17:26:03 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/09/26 23:18:07 steve Exp
 #
 
 DISTNAME=	xldlas-0.85
+WRKSRC=		${WRKDIR}/xldlas
 CATEGORIES=	math
 MASTER_SITES=	http://a42.com/~thor/xldlas/			\
 		http://sunsite.math.klte.hu/mirrors/xldlas/	\
@@ -15,7 +16,7 @@ HOMEPAGE=	http://a42.com/~thor/xldlas/
 
 DEPENDS+=	xforms-0.88:../../x11/xforms
 
-WRKSRC=		${WRKDIR}/xldlas
+ONLY_FOR_ARCHS=	arm32 i386 m68k sparc ns32k
 
 USE_X11=	yes
 
