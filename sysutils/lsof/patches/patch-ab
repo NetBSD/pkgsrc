@@ -1,0 +1,83 @@
+$NetBSD: patch-ab,v 1.25 2004/01/13 02:50:28 atatat Exp $
+
+Support for LFS.
+
+--- Configure.orig	2003-10-15 16:30:40.000000000 -0400
++++ Configure
+@@ -2253,6 +2253,14 @@ kernel generation process.
+       fi	# }
+       LSOF_TMP1=1
+     fi	# }
++    if test -r ${LSOF_INCLUDE}/sys/vnode.h	# {
++    then
++      grep -q VT_LFS ${LSOF_INCLUDE}/sys/vnode.h
++      if test $? -eq 0   # {
++      then
++	LSOF_CFGF="$LSOF_CFGF -DHASLFS"
++      fi	# }
++    fi	# }
+     if test -r ${LSOF_INCLUDE}/miscfs/nullfs/null.h	# {
+     then
+       LSOF_CFGF="$LSOF_CFGF -DHASNULLFS"
+@@ -2619,11 +2627,15 @@ kernel generation process.
+ 	LSOF_TSTBIGF=" "
+ 	LSOF_VERS=3030
+ 	;;
++      3.4*)
++	LSOF_TSTBIGF=" "
++	LSOF_VERS=3040
++	;;
+       3*)
+ 	LSOF_TSTBIGF=" "
+-	LSOF_VERS=3020
++	LSOF_VERS=3030
+ 	echo "!!!WARNING!!!  Unsupported OpenBSD 3.x version: $LSOF_VSTR"
+-	echo "!!!WARNING!!!  Configuring for OpenBSD 3.2"
++	echo "!!!WARNING!!!  Configuring for OpenBSD 3.3"
+ 	;;
+       *)
+ 	echo "Unknown OpenBSD release: $LSOF_VSTR"
+@@ -2636,7 +2648,7 @@ kernel generation process.
+     # Test for legal OpenBSD version.
+ 
+     case $LSOF_VERS in	# {
+-    1020|2050|2060|2070|2080|2090|3000|3010|3020|3030)
++    1020|2050|2060|2070|2080|2090|3000|3010|3020|3030|3040)
+       ;;
+     *)
+       echo "Unknown OpenBSD version: $LSOF_VERS"
+@@ -2680,6 +2692,14 @@ kernel generation process.
+       fi	# }
+       LSOF_TMP1=1
+     fi	# }
++    if test -r ${LSOF_INCLUDE}/sys/vnode.h	# {
++    then
++      grep -q VT_LFS ${LSOF_INCLUDE}/sys/vnode.h
++      if test $? -eq 0   # {
++      then
++	LSOF_CFGF="$LSOF_CFGF -DHASLFS"
++      fi	# }
++    fi	# }
+     if test -r ${LSOF_INCLUDE}/miscfs/nullfs/null.h	# {
+     then
+       LSOF_CFGF="$LSOF_CFGF -DHASNULLFS"
+@@ -2733,12 +2753,18 @@ kernel generation process.
+     grep -q VT_EXT2FS ${LSOF_INCLUDE}/sys/vnode.h
+     if test $? -eq 0	# {
+     then
+-      LSOF_CFGF="$LSOF_CFGF -DHASEXT2FS"
++      LSOF_TMP1=1
+       grep -q "*e2fs_din" ${LSOF_INCLUDE}/ufs/ufs/inode.h
+       if test $? -eq 0	# {
+       then
+ 	LSOF_CFGF="$LSOF_CFGF -DHASI_E2FS_PTR"
+       fi	# }
++      grep -q "^#define[ 	]i_e2din" ${LSOF_INCLUDE}/ufs/ufs/inode.h
++      if test $? -eq 0	# {
++      then
++	LSOF_TMP1=2
++      fi	# }
++      LSOF_CFGF="$LSOF_CFGF -DHASEXT2FS=$LSOF_TMP1"
+     fi	# }
+     if test -r ${LSOF_INCLUDE}/sys/namei.h
+     then
