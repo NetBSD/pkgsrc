@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/28 14:39:37 recht Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/05 16:04:49 tron Exp $
 #
 
 DISTNAME=		gst-plugins-0.6.4
@@ -40,6 +40,7 @@ SUBST_SED.devoss=	-e 's|/dev/dsp|${DEVOSSAUDIO}|g'
 pre-install:
 	${ECHO} "install:" >${WRKSRC}/gst-libs/ext/ffmpeg/Makefile
 
+.include "../../audio/arts/buildlink2.mk"
 .include "../../audio/cdparanoia/buildlink2.mk"
 .include "../../audio/flac/buildlink2.mk"
 .include "../../audio/gsm/buildlink2.mk"
