@@ -4,7 +4,7 @@
  
  #ifndef linux
  #if defined(BSD4_4) || defined(HPArchitecture) || defined(SGIArchitecture) || defined(_AIX)
-+#if !defined(__FreeBSD__)
++#if !defined(__FreeBSD__) && !defined(__NetBSD__)
  void srandom(unsigned int);
 +#endif
  #else
