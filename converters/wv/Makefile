@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/11/11 17:49:24 tron Exp $
+# $NetBSD: Makefile,v 1.8 2000/11/16 18:26:09 wiz Exp $
 #
 
 DISTNAME=		wv-0.6.0
@@ -8,11 +8,11 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wvware/}
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.wvWare.com/
 
-DEPENDS+=		libwmf-0.1.17nb1:../../graphics/libwmf
+DEPENDS+=		libwmf>=0.1.17nb1:../../graphics/libwmf
 DEPENDS+=		ImageMagick>=5.2.2:../../graphics/ImageMagick
 
 # not detected by configure, causes conflicts with the one coming with wv
-CONFLICTS+=		libgetopt-*
+#CONFLICTS+=		libgetopt-*
 
 USE_X11=		YES
 USE_XPM=		YES
