@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2002/09/27 12:28:15 jlam Exp $
+# $NetBSD: Makefile,v 1.48 2002/10/20 20:40:11 jlam Exp $
 
 # Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-2.95.3
@@ -80,6 +80,7 @@ post-build:
 #	make install; make deinstall; make install
 #
 post-install:
+	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/etc/${PKGNAME}.mk
 	-cd ${GCC_ARCHDIR}/include && ${RM} -f fixed && ${RMDIR} v7 v9
 .else
 post-install:
