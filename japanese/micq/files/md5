@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.1.1.1 1999/03/30 07:56:03 garbled Exp $
+$NetBSD: md5,v 1.2 2000/02/06 01:08:30 wiz Exp $
 
-MD5 (micq.tgz) = 2bdb5c91dcb7308e9994cd7889ba84ae
-MD5 (micq981218ja.patch) = d98f7a6a4c0cdfcbc27989a39468f3e2
+MD5 (micq-0.4.3.tgz) = aea8f4bee64c0508adb0c87517039622
+MD5 (micq-0.4.3-jp.patch) = 26921359ea461488f68b00ba1d8ab9a5
