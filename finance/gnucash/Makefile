@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2002/12/24 06:10:01 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2003/01/07 03:56:24 uebayasi Exp $
 #
 
 DISTNAME=		gnucash-1.6.8
@@ -13,8 +13,8 @@ COMMENT=		Personal double-entry accounting program
 
 BUILDLINK_DEPENDS.g-wrap=	g-wrap>=1.2.1:../../devel/g-wrap
 BUILDLINK_DEPENDS.g-wrap+=	g-wrap<1.3.0:../../devel/g-wrap
-BUILDLINK_DEPENDS.guile=	guile>=1.4:../../lang/guile
-BUILDLINK_DEPENDS.guile+=	guile<1.5.0:../../lang/guile
+BUILDLINK_DEPENDS.guile14=	guile14>=1.4:../../lang/guile14
+BUILDLINK_DEPENDS.guile14+=	guile14<1.5.0:../../lang/guile14
 BUILD_DEPENDS+=			bison>=1.28:../../devel/bison
 
 USE_GMAKE=		YES
@@ -51,7 +51,7 @@ post-extract:
 .include "../../devel/popt/buildlink2.mk"
 .include "../../devel/swig/buildlink2.mk"
 .include "../../graphics/gdk-pixbuf/buildlink2.mk"
-.include "../../lang/guile/buildlink2.mk"
+.include "../../lang/guile14/buildlink2.mk"
 .include "../../math/guppi/buildlink2.mk"
 .include "../../net/ORBit/buildlink2.mk"
 .include "../../textproc/libxml/buildlink2.mk"

@@ -1,28 +1,28 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/01/07 02:21:23 uebayasi Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/01/07 03:56:26 uebayasi Exp $
 
-.if !defined(GUILE_BUILDLINK2_MK)
-GUILE_BUILDLINK2_MK=	# defined
+.if !defined(GUILE14_BUILDLINK2_MK)
+GUILE14_BUILDLINK2_MK=	# defined
 
-BUILDLINK_PACKAGES+=		guile
-BUILDLINK_DEPENDS.guile?=	guile>=1.4
-BUILDLINK_PKGSRCDIR.guile?=	../../lang/guile14
+BUILDLINK_PACKAGES+=		guile14
+BUILDLINK_DEPENDS.guile14?=	guile14>=1.4
+BUILDLINK_PKGSRCDIR.guile14?=	../../lang/guile14
 
-EVAL_PREFIX+=		BUILDLINK_PREFIX.guile=guile
-BUILDLINK_PREFIX.guile_DEFAULT=	${X11PREFIX}
-BUILDLINK_FILES.guile+=	include/guile/*
-BUILDLINK_FILES.guile+=	include/guile-readline/*
-BUILDLINK_FILES.guile+=	include/libguile.h
-BUILDLINK_FILES.guile+=	include/libguile/*
-BUILDLINK_FILES.guile+=	lib/libguile.*
-BUILDLINK_FILES.guile+=	lib/libguilereadline.*
+EVAL_PREFIX+=				BUILDLINK_PREFIX.guile14=guile14
+BUILDLINK_PREFIX.guile14_DEFAULT=	${LOCALBASE}
+BUILDLINK_FILES.guile14+=		include/guile/*
+BUILDLINK_FILES.guile14+=		include/guile-readline/*
+BUILDLINK_FILES.guile14+=		include/libguile.h
+BUILDLINK_FILES.guile14+=		include/libguile/*
+BUILDLINK_FILES.guile14+=		lib/libguile.*
+BUILDLINK_FILES.guile14+=		lib/libguilereadline.*
 
 USE_GNU_READLINE=	# defined
 
 .include "../../devel/libtool/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
 
-BUILDLINK_TARGETS+=	guile-buildlink
+BUILDLINK_TARGETS+=	guile14-buildlink
 
-guile-buildlink: _BUILDLINK_USE
+guile14-buildlink: _BUILDLINK_USE
 
-.endif	# GUILE_BUILDLINK2_MK
+.endif	# GUILE14_BUILDLINK2_MK
