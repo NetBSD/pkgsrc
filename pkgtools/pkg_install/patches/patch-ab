@@ -1,30 +1,13 @@
-$NetBSD: patch-ab,v 1.5 2002/06/08 16:45:48 schmonz Exp $
+$NetBSD: patch-ab,v 1.6 2002/07/03 22:43:40 abs Exp $
 
---- Makefile.inc	2001/12/17 21:10:41	1.1
-+++ Makefile.inc	2001/12/17 21:13:54
-@@ -3,6 +3,9 @@
+--- Makefile.orig	Tue Jan  9 03:13:43 2001
++++ Makefile
+@@ -2,5 +2,7 @@
+ # Original from FreeBSD, no rcs id.
  
- .include <bsd.own.mk>
+-SUBDIR=lib .WAIT add admin create delete info
++SUBDIR=lib add admin create delete info
++
++all-add all-admin all-create all-delete all-info: all-lib
  
-+.if !defined(PRINTOBJDIR)
-+PRINTOBJDIR=   printf "xxx: .MAKE\n\t@echo \$${.OBJDIR}\n" | ${MAKE} -B -s -f-
-+.endif
- LIBINSTALL != cd ${.CURDIR}/../lib && ${PRINTOBJDIR}
- CPPFLAGS+=-I${.CURDIR}/../lib ${DEBUG} -DBINDIR='"${BINDIR}"'
- 
-@@ -35,6 +38,15 @@
- CHMOD?= /bin/chmod
- CHOWN?= /bin/chown
- CHGRP?= /bin/chgrp
-+.elif ${OPSYS} == "Darwin"
-+CHMOD?= /bin/chmod
-+CHOWN?= /usr/sbin/chown
-+CHGRP?= /usr/bin/chgrp
-+TAR_CMD?= gnutar
-+TAR_FULLPATHNAME?= /usr/bin/${TAR_CMD}
-+CPPFLAGS+=-DTAR_CMD='"${TAR_CMD}"' -DTAR_FULLPATHNAME='"${TAR_FULLPATHNAME}"'
-+.PATH: ${DIGESTDIR}
-+CPPFLAGS+= -I${DIGESTDIR}
- .endif
- 
- CPPFLAGS+= -DCHMOD='"${CHMOD}"' -DCHOWN='"${CHOWN}"' -DCHGRP='"${CHGRP}"'
+ .include <bsd.subdir.mk>
