@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/06/03 10:23:19 abs Exp $
+
+--- org/postgresql/jdbc2/AbstractJdbc2ResultSet.java.orig	2004-05-21 12:54:29.000000000 +0100
++++ org/postgresql/jdbc2/AbstractJdbc2ResultSet.java
+@@ -1448,7 +1450,7 @@ public abstract class AbstractJdbc2Resul
+ 			{
+ 				if (name.toLowerCase().equals("from"))
+ 				{
+-					tableName = st.nextToken();
++					tableName = st.nextToken().replaceAll(";", "");
+ 					tableFound = true;
+ 				}
+ 			}
