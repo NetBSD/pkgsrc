@@ -1,9 +1,6 @@
-#	$NetBSD: Makefile,v 1.35 1999/03/14 20:58:55 tron Exp $
+#	$NetBSD: Makefile,v 1.36 1999/04/05 00:29:48 tron Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/10/13 04:41:07 max Exp
 
-    SUBDIR += amanda-common
-    SUBDIR += amanda-server
-    SUBDIR += amanda-client
     SUBDIR += astrolog
     SUBDIR += buffer
     SUBDIR += cal
