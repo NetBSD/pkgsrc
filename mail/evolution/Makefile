@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.75 2005/03/04 12:20:25 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2005/03/22 16:39:39 jmmv Exp $
 
-DISTNAME=		evolution-2.0.4
+DISTNAME=		evolution-2.2.0
 CATEGORIES=		mail time gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.0/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.2/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -15,7 +15,6 @@ BUILD_USES_MSGFMT=	YES
 BUILDLINK_DEPENDS.gal2+=	gal2>=2.2.5
 BUILDLINK_DEPENDS.glib2+=	glib2>=2.4.0nb2
 BUILDLINK_DEPENDS.gtkhtml3+=	gtkhtml3>=3.2.5
-BUILDLINK_DEPENDS.evolution-data-server+=	evolution-data-server>=1.0.4
 BUILDLINK_DEPENDS.libsoup-devel+=		libsoup-devel>=2.2.1
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.evolution
@@ -51,7 +50,6 @@ CONFIGURE_ARGS+=	--with-openldap
 CONFIGURE_ARGS+=	--without-static-ldap
 CONFIGURE_ARGS+=	--enable-openssl=no
 CONFIGURE_ARGS+=	--enable-pilot-conduits=no
-CONFIGURE_ARGS+=	--enable-smime=no
 CONFIGURE_ARGS+=	--with-krb4=/usr
 CONFIGURE_ARGS+=	--with-krb5=/usr
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
@@ -80,16 +78,14 @@ CONFIGURE_ARGS+=	--without-krb5
 
 .if !empty(PKG_OPTIONS:Mssl)
 CONFIGURE_ARGS+=	--enable-nss=yes
-# XXX We should have a standalone NSS package and use it here, instead of
-# depending on the whole mozilla-gtk2...
-BUILDLINK_DEPENDS.mozilla-gtk2+=	mozilla-gtk2>=1.7.3nb1
 # XXX Workaround for the following problem: addressbook/util/libeabutil.la
 # is compiled as a static library only which uses the NSS stuff.  When other
 # parts of the program use this .la archive, they get the right -L flags
 # (from the dependency_libs variable) but not the rpaths.  buildlink3 should
 # add rpath flags to the dependency_libs, but there is an strange comment
 # in the wrapper saying that it shouldn't.
-LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mozilla-gtk2}/lib/mozilla-gtk2
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.nss}/lib/nss
+# XXX Change to use devel/nss (but a mozilla-nss.pc file is required).
 .  include "../../www/mozilla-gtk2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-nss
@@ -98,10 +94,10 @@ CONFIGURE_ARGS+=	--disable-nss
 PKGCONFIG_OVERRIDE=	camel.pc.in
 PKGCONFIG_OVERRIDE+=	evolution-shell.pc.in
 
-GCONF2_SCHEMAS=		apps_evolution_addressbook-2.0.schemas
-GCONF2_SCHEMAS+=	apps_evolution_calendar-2.0.schemas
-GCONF2_SCHEMAS+=	apps_evolution_shell-2.0.schemas
-GCONF2_SCHEMAS+=	evolution-mail-2.0.schemas
+GCONF2_SCHEMAS=		apps_evolution_addressbook-2.2.schemas
+GCONF2_SCHEMAS+=	apps_evolution_calendar-2.2.schemas
+GCONF2_SCHEMAS+=	apps_evolution_shell-2.2.schemas
+GCONF2_SCHEMAS+=	evolution-mail-2.2.schemas
 
 BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
 BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
@@ -125,13 +121,17 @@ LDFLAGS+=	-lsemaphore
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
+.include "../../multimedia/gstreamer/buildlink3.mk"
 .include "../../net/libsoup-devel/buildlink3.mk"
+.include "../../net/ORBit2/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../www/gtkhtml3/buildlink3.mk"
+.include "../../www/gtkhtml36/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

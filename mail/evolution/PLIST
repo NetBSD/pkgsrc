@@ -1,545 +1,470 @@
-@comment $NetBSD: PLIST,v 1.20 2004/10/15 21:31:51 jmmv Exp $
-bin/evolution-2.0
-include/evolution-2.0/camel/broken-date-parser.h
-include/evolution-2.0/camel/camel-address.h
-include/evolution-2.0/camel/camel-arg.h
-include/evolution-2.0/camel/camel-block-file.h
-include/evolution-2.0/camel/camel-certdb.h
-include/evolution-2.0/camel/camel-charset-map.h
-include/evolution-2.0/camel/camel-cipher-context.h
-include/evolution-2.0/camel/camel-data-cache.h
-include/evolution-2.0/camel/camel-data-wrapper.h
-include/evolution-2.0/camel/camel-debug.h
-include/evolution-2.0/camel/camel-digest-folder.h
-include/evolution-2.0/camel/camel-digest-store.h
-include/evolution-2.0/camel/camel-digest-summary.h
-include/evolution-2.0/camel/camel-disco-diary.h
-include/evolution-2.0/camel/camel-disco-folder.h
-include/evolution-2.0/camel/camel-disco-store.h
-include/evolution-2.0/camel/camel-exception-list.def
-include/evolution-2.0/camel/camel-exception.h
-include/evolution-2.0/camel/camel-file-utils.h
-include/evolution-2.0/camel/camel-filter-driver.h
-include/evolution-2.0/camel/camel-filter-search.h
-include/evolution-2.0/camel/camel-folder-search.h
-include/evolution-2.0/camel/camel-folder-summary.h
-include/evolution-2.0/camel/camel-folder-thread.h
-include/evolution-2.0/camel/camel-folder.h
-include/evolution-2.0/camel/camel-gpg-context.h
-include/evolution-2.0/camel/camel-http-stream.h
-include/evolution-2.0/camel/camel-i18n.h
-include/evolution-2.0/camel/camel-imap-command.h
-include/evolution-2.0/camel/camel-imap-folder.h
-include/evolution-2.0/camel/camel-imap-message-cache.h
-include/evolution-2.0/camel/camel-imap-search.h
-include/evolution-2.0/camel/camel-imap-store-summary.h
-include/evolution-2.0/camel/camel-imap-store.h
-include/evolution-2.0/camel/camel-imap-summary.h
-include/evolution-2.0/camel/camel-imap-types.h
-include/evolution-2.0/camel/camel-imap-utils.h
-include/evolution-2.0/camel/camel-imap-wrapper.h
-include/evolution-2.0/camel/camel-index.h
-include/evolution-2.0/camel/camel-internet-address.h
-include/evolution-2.0/camel/camel-junk-plugin.h
-include/evolution-2.0/camel/camel-local-folder.h
-include/evolution-2.0/camel/camel-local-store.h
-include/evolution-2.0/camel/camel-local-summary.h
-include/evolution-2.0/camel/camel-lock-client.h
-include/evolution-2.0/camel/camel-lock.h
-include/evolution-2.0/camel/camel-maildir-folder.h
-include/evolution-2.0/camel/camel-maildir-store.h
-include/evolution-2.0/camel/camel-maildir-summary.h
-include/evolution-2.0/camel/camel-mbox-folder.h
-include/evolution-2.0/camel/camel-mbox-store.h
-include/evolution-2.0/camel/camel-mbox-summary.h
-include/evolution-2.0/camel/camel-medium.h
-include/evolution-2.0/camel/camel-mh-folder.h
-include/evolution-2.0/camel/camel-mh-store.h
-include/evolution-2.0/camel/camel-mh-summary.h
-include/evolution-2.0/camel/camel-mime-filter-basic.h
-include/evolution-2.0/camel/camel-mime-filter-bestenc.h
-include/evolution-2.0/camel/camel-mime-filter-canon.h
-include/evolution-2.0/camel/camel-mime-filter-charset.h
-include/evolution-2.0/camel/camel-mime-filter-crlf.h
-include/evolution-2.0/camel/camel-mime-filter-enriched.h
-include/evolution-2.0/camel/camel-mime-filter-from.h
-include/evolution-2.0/camel/camel-mime-filter-gzip.h
-include/evolution-2.0/camel/camel-mime-filter-html.h
-include/evolution-2.0/camel/camel-mime-filter-index.h
-include/evolution-2.0/camel/camel-mime-filter-linewrap.h
-include/evolution-2.0/camel/camel-mime-filter-save.h
-include/evolution-2.0/camel/camel-mime-filter-tohtml.h
-include/evolution-2.0/camel/camel-mime-filter-windows.h
-include/evolution-2.0/camel/camel-mime-filter-yenc.h
-include/evolution-2.0/camel/camel-mime-filter.h
-include/evolution-2.0/camel/camel-mime-message.h
-include/evolution-2.0/camel/camel-mime-parser.h
-include/evolution-2.0/camel/camel-mime-part-utils.h
-include/evolution-2.0/camel/camel-mime-part.h
-include/evolution-2.0/camel/camel-mime-utils.h
-include/evolution-2.0/camel/camel-movemail.h
-include/evolution-2.0/camel/camel-multipart-encrypted.h
-include/evolution-2.0/camel/camel-multipart-signed.h
-include/evolution-2.0/camel/camel-multipart.h
-include/evolution-2.0/camel/camel-nntp-folder.h
-include/evolution-2.0/camel/camel-nntp-resp-codes.h
-include/evolution-2.0/camel/camel-nntp-store-summary.h
-include/evolution-2.0/camel/camel-nntp-store.h
-include/evolution-2.0/camel/camel-nntp-stream.h
-include/evolution-2.0/camel/camel-nntp-summary.h
-include/evolution-2.0/camel/camel-object.h
-include/evolution-2.0/camel/camel-operation.h
-include/evolution-2.0/camel/camel-partition-table.h
-include/evolution-2.0/camel/camel-pop3-engine.h
-include/evolution-2.0/camel/camel-pop3-folder.h
-include/evolution-2.0/camel/camel-pop3-store.h
-include/evolution-2.0/camel/camel-pop3-stream.h
-include/evolution-2.0/camel/camel-provider.h
-include/evolution-2.0/camel/camel-sasl-anonymous.h
-include/evolution-2.0/camel/camel-sasl-cram-md5.h
-include/evolution-2.0/camel/camel-sasl-digest-md5.h
-include/evolution-2.0/camel/camel-sasl-gssapi.h
-include/evolution-2.0/camel/camel-sasl-kerberos4.h
-include/evolution-2.0/camel/camel-sasl-login.h
-include/evolution-2.0/camel/camel-sasl-ntlm.h
-include/evolution-2.0/camel/camel-sasl-plain.h
-include/evolution-2.0/camel/camel-sasl-popb4smtp.h
-include/evolution-2.0/camel/camel-sasl.h
-include/evolution-2.0/camel/camel-seekable-stream.h
-include/evolution-2.0/camel/camel-seekable-substream.h
-include/evolution-2.0/camel/camel-sendmail-transport.h
-include/evolution-2.0/camel/camel-service.h
-include/evolution-2.0/camel/camel-session.h
-include/evolution-2.0/camel/camel-smime-context.h
-include/evolution-2.0/camel/camel-smtp-transport.h
-include/evolution-2.0/camel/camel-spool-folder.h
-include/evolution-2.0/camel/camel-spool-store.h
-include/evolution-2.0/camel/camel-spool-summary.h
-include/evolution-2.0/camel/camel-store-summary.h
-include/evolution-2.0/camel/camel-store.h
-include/evolution-2.0/camel/camel-stream-buffer.h
-include/evolution-2.0/camel/camel-stream-filter.h
-include/evolution-2.0/camel/camel-stream-fs.h
-include/evolution-2.0/camel/camel-stream-mem.h
-include/evolution-2.0/camel/camel-stream-null.h
-include/evolution-2.0/camel/camel-stream-process.h
-include/evolution-2.0/camel/camel-stream.h
-include/evolution-2.0/camel/camel-string-utils.h
-include/evolution-2.0/camel/camel-tcp-stream-raw.h
-include/evolution-2.0/camel/camel-tcp-stream-ssl.h
-include/evolution-2.0/camel/camel-tcp-stream.h
-include/evolution-2.0/camel/camel-text-index.h
-include/evolution-2.0/camel/camel-transport.h
-include/evolution-2.0/camel/camel-types.h
-include/evolution-2.0/camel/camel-uid-cache.h
-include/evolution-2.0/camel/camel-url-scanner.h
-include/evolution-2.0/camel/camel-url.h
-include/evolution-2.0/camel/camel-utf8.h
-include/evolution-2.0/camel/camel-vee-folder.h
-include/evolution-2.0/camel/camel-vee-store.h
-include/evolution-2.0/camel/camel-vtrash-folder.h
-include/evolution-2.0/camel/camel.h
-include/evolution-2.0/e-conduit/e-pilot-map.h
-include/evolution-2.0/e-conduit/e-pilot-util.h
-include/evolution-2.0/e-util/e-account-list.h
-include/evolution-2.0/e-util/e-account.h
-include/evolution-2.0/e-util/e-bconf-map.h
-include/evolution-2.0/e-util/e-categories-config.h
-include/evolution-2.0/e-util/e-categories-master-list-wombat.h
-include/evolution-2.0/e-util/e-component-listener.h
-include/evolution-2.0/e-util/e-config-listener.h
-include/evolution-2.0/e-util/e-corba-utils.h
-include/evolution-2.0/e-util/e-dialog-utils.h
-include/evolution-2.0/e-util/e-dialog-widgets.h
-include/evolution-2.0/e-util/e-folder-map.h
-include/evolution-2.0/e-util/e-fsutils.h
-include/evolution-2.0/e-util/e-gtk-utils.h
-include/evolution-2.0/e-util/e-gui-utils.h
-include/evolution-2.0/e-util/e-host-utils.h
-include/evolution-2.0/e-util/e-html-utils.h
-include/evolution-2.0/e-util/e-icon-factory.h
-include/evolution-2.0/e-util/e-iterator.h
-include/evolution-2.0/e-util/e-list-iterator.h
-include/evolution-2.0/e-util/e-list.h
-include/evolution-2.0/e-util/e-memory.h
-include/evolution-2.0/e-util/e-mktemp.h
-include/evolution-2.0/e-util/e-msgport.h
-include/evolution-2.0/e-util/e-passwords.h
-include/evolution-2.0/e-util/e-path.h
-include/evolution-2.0/e-util/e-request.h
-include/evolution-2.0/e-util/e-sexp.h
-include/evolution-2.0/e-util/e-signature-list.h
-include/evolution-2.0/e-util/e-signature.h
-include/evolution-2.0/e-util/e-time-utils.h
-include/evolution-2.0/e-util/e-trie.h
-include/evolution-2.0/e-util/e-uid.h
-include/evolution-2.0/e-util/e-url.h
-include/evolution-2.0/e-util/md5-utils.h
-include/evolution-2.0/importer/GNOME_Evolution_Importer.h
-include/evolution-2.0/importer/evolution-importer-client.h
-include/evolution-2.0/importer/evolution-importer-listener.h
-include/evolution-2.0/importer/evolution-importer.h
-include/evolution-2.0/importer/evolution-intelligent-importer.h
-include/evolution-2.0/shell/Evolution.h
-include/evolution-2.0/shell/e-shell-corba-icon-utils.h
-include/evolution-2.0/shell/e-shell-utils.h
-include/evolution-2.0/shell/e-user-creatable-items-handler.h
-include/evolution-2.0/shell/evolution-config-control.h
-include/evolution-2.0/shell/evolution-shell-component-utils.h
-include/evolution-2.0/shell/evolution-wizard.h
-include/evolution-2.0/widgets/e-activity-handler.h
-include/evolution-2.0/widgets/e-calendar-item.h
-include/evolution-2.0/widgets/e-calendar.h
-include/evolution-2.0/widgets/e-cell-date-edit.h
-include/evolution-2.0/widgets/e-cell-percent.h
-include/evolution-2.0/widgets/e-cell-renderer-combo.h
-include/evolution-2.0/widgets/e-charset-picker.h
-include/evolution-2.0/widgets/e-clipped-label.h
-include/evolution-2.0/widgets/e-combo-button.h
-include/evolution-2.0/widgets/e-combo-cell-editable.h
-include/evolution-2.0/widgets/e-config-page.h
-include/evolution-2.0/widgets/e-dateedit.h
-include/evolution-2.0/widgets/e-dropdown-button.h
-include/evolution-2.0/widgets/e-error.h
-include/evolution-2.0/widgets/e-expander.h
-include/evolution-2.0/widgets/e-image-chooser.h
-include/evolution-2.0/widgets/e-info-label.h
-include/evolution-2.0/widgets/e-map.h
-include/evolution-2.0/widgets/e-multi-config-dialog.h
-include/evolution-2.0/widgets/e-search-bar.h
-include/evolution-2.0/widgets/e-source-option-menu.h
-include/evolution-2.0/widgets/e-source-selector.h
-include/evolution-2.0/widgets/e-task-bar.h
-include/evolution-2.0/widgets/e-task-widget.h
-include/evolution-2.0/widgets/e-title-bar.h
-include/evolution-2.0/widgets/e-url-entry.h
-lib/bonobo/servers/GNOME_Evolution_Addressbook_2.0.server
-lib/bonobo/servers/GNOME_Evolution_Addressbook_LDIF_Importer_2.0.server
-lib/bonobo/servers/GNOME_Evolution_Addressbook_SelectNames_2.0.server
-lib/bonobo/servers/GNOME_Evolution_Addressbook_VCard_Importer_2.0.server
-lib/bonobo/servers/GNOME_Evolution_Calendar_2.0.server
-lib/bonobo/servers/GNOME_Evolution_Calendar_AlarmNotify_2.0.server
-lib/bonobo/servers/GNOME_Evolution_Calendar_Importer_2.0.server
-lib/bonobo/servers/GNOME_Evolution_Mail_2.0.server
-lib/bonobo/servers/GNOME_Evolution_Mail_Importers_2.0.server
-lib/bonobo/servers/GNOME_Evolution_Shell_2.0.server
-lib/evolution/2.0/camel-providers/libcamelgroupwise.la
-lib/evolution/2.0/camel-providers/libcamelgroupwise.urls
-lib/evolution/2.0/camel-providers/libcamelimap.la
-lib/evolution/2.0/camel-providers/libcamelimap.urls
-lib/evolution/2.0/camel-providers/libcamellocal.la
-lib/evolution/2.0/camel-providers/libcamellocal.urls
-lib/evolution/2.0/camel-providers/libcamelnntp.la
-lib/evolution/2.0/camel-providers/libcamelnntp.urls
-lib/evolution/2.0/camel-providers/libcamelpop3.la
-lib/evolution/2.0/camel-providers/libcamelpop3.urls
-lib/evolution/2.0/camel-providers/libcamelsendmail.la
-lib/evolution/2.0/camel-providers/libcamelsendmail.urls
-lib/evolution/2.0/camel-providers/libcamelsmtp.la
-lib/evolution/2.0/camel-providers/libcamelsmtp.urls
-lib/evolution/2.0/components/libevolution-addressbook.la
-lib/evolution/2.0/components/libevolution-calendar.la
-lib/evolution/2.0/components/libevolution-mail.la
-lib/evolution/2.0/evolution-addressbook-importers/libevolution-addressbook-ldif-importer.la
-lib/evolution/2.0/evolution-addressbook-importers/libevolution-addressbook-vcard-importer.la
-lib/evolution/2.0/evolution-calendar-importers/libevolution-calendar-importers.la
-lib/evolution/2.0/libcamel.la
-lib/evolution/2.0/libeconduit.la
-lib/evolution/2.0/libemiscwidgets.la
-lib/evolution/2.0/libeselectnames.la
-lib/evolution/2.0/libeshell.la
-lib/evolution/2.0/libeutil.la
-lib/evolution/2.0/libevolution-a11y.la
-lib/evolution/2.0/libevolution-addressbook-a11y.la
-lib/evolution/2.0/libevolution-calendar-a11y.la
-lib/evolution/2.0/libevolution-importer.la
-lib/evolution/2.0/libevolution-mail-importers.la
-lib/evolution/2.0/libevolution-widgets-a11y.la
-lib/pkgconfig/camel-2.0.pc
-lib/pkgconfig/evolution-shell-2.0.pc
-libexec/evolution/2.0/camel/camel-index-control
-libexec/evolution/2.0/camel/camel-lock-helper
-libexec/evolution/2.0/csv2vcard
-libexec/evolution/2.0/evolution-addressbook-clean
-libexec/evolution/2.0/evolution-addressbook-export
-libexec/evolution/2.0/evolution-alarm-notify
-libexec/evolution/2.0/killev
-share/applications/evolution-2.0.desktop
-share/evolution/2.0/addresstypes.xml
-share/evolution/2.0/default/C/mail/local/Inbox
-share/evolution/2.0/ecps/medbook.ecps
-share/evolution/2.0/ecps/phonelist.ecps
-share/evolution/2.0/ecps/smallbook.ecps
-share/evolution/2.0/errors/addressbook-errors.xml
-share/evolution/2.0/errors/calendar-errors.xml
-share/evolution/2.0/errors/e-system-errors.xml
-share/evolution/2.0/errors/filter-errors.xml
-share/evolution/2.0/errors/mail-composer-errors.xml
-share/evolution/2.0/errors/mail-errors.xml
-share/evolution/2.0/errors/shell-errors.xml
-share/evolution/2.0/etspec/e-addressbook-view.etspec
-share/evolution/2.0/etspec/e-cal-list-view.etspec
-share/evolution/2.0/etspec/e-calendar-table.etspec
-share/evolution/2.0/etspec/e-contact-list-editor.etspec
-share/evolution/2.0/etspec/e-meeting-time-sel.etspec
-share/evolution/2.0/etspec/e-select-names-section.etspec
-share/evolution/2.0/etspec/e-select-names.etspec
-share/evolution/2.0/etspec/message-list.etspec
-share/evolution/2.0/filtertypes.xml
-share/evolution/2.0/glade/alarm-dialog.glade
-share/evolution/2.0/glade/alarm-list-dialog.glade
-share/evolution/2.0/glade/alarm-notify.glade
-share/evolution/2.0/glade/cal-prefs-dialog.glade
-share/evolution/2.0/glade/calendar-setup.glade
-share/evolution/2.0/glade/contact-editor.glade
-share/evolution/2.0/glade/contact-list-editor.glade
-share/evolution/2.0/glade/e-active-connection-dialog.glade
-share/evolution/2.0/glade/e-contact-print.glade
-share/evolution/2.0/glade/e-delegate-dialog.glade
-share/evolution/2.0/glade/e-itip-control.glade
-share/evolution/2.0/glade/e-msg-composer-attachment.glade
-share/evolution/2.0/glade/e-timezone-dialog.glade
-share/evolution/2.0/glade/eab-contact-commit-duplicate-detected.glade
-share/evolution/2.0/glade/eab-contact-duplicate-detected.glade
-share/evolution/2.0/glade/event-page.glade
-share/evolution/2.0/glade/evolution-startup-wizard.glade
-share/evolution/2.0/glade/filter.glade
-share/evolution/2.0/glade/fulladdr.glade
-share/evolution/2.0/glade/fullname.glade
-share/evolution/2.0/glade/goto-dialog.glade
-share/evolution/2.0/glade/im.glade
-share/evolution/2.0/glade/import.glade
-share/evolution/2.0/glade/ldap-config.glade
-share/evolution/2.0/glade/mail-config.glade
-share/evolution/2.0/glade/mail-dialogs.glade
-share/evolution/2.0/glade/meeting-page.glade
-share/evolution/2.0/glade/recurrence-page.glade
-share/evolution/2.0/glade/schedule-page.glade
-share/evolution/2.0/glade/select-names.glade
-share/evolution/2.0/glade/task-details-page.glade
-share/evolution/2.0/glade/task-page.glade
-share/evolution/2.0/glade/url-editor-dialog.glade
-share/evolution/2.0/help/quickref/C/quickref.pdf
-share/evolution/2.0/images/about-box.png
-share/evolution/2.0/images/bcg.png
-share/evolution/2.0/images/evolution-contacts-mini.png
-share/evolution/2.0/images/monkey-16.png
-share/evolution/2.0/images/offline.png
-share/evolution/2.0/images/online.png
-share/evolution/2.0/images/world_map-960.png
-share/evolution/2.0/searchtypes.xml
-share/evolution/2.0/ui/evolution-addressbook.xml
-share/evolution/2.0/ui/evolution-calendar.xml
-share/evolution/2.0/ui/evolution-comp-editor.xml
-share/evolution/2.0/ui/evolution-composer-entries.xml
-share/evolution/2.0/ui/evolution-contact-editor.xml
-share/evolution/2.0/ui/evolution-contact-list-editor.xml
-share/evolution/2.0/ui/evolution-event-editor.xml
-share/evolution/2.0/ui/evolution-executive-summary.xml
-share/evolution/2.0/ui/evolution-mail-global.xml
-share/evolution/2.0/ui/evolution-mail-list.xml
-share/evolution/2.0/ui/evolution-mail-message.xml
-share/evolution/2.0/ui/evolution-mail-messagedisplay.xml
-share/evolution/2.0/ui/evolution-message-composer.xml
-share/evolution/2.0/ui/evolution-signature-editor.xml
-share/evolution/2.0/ui/evolution-subscribe.xml
-share/evolution/2.0/ui/evolution-task-editor.xml
-share/evolution/2.0/ui/evolution-tasks.xml
-share/evolution/2.0/ui/evolution.xml
-share/evolution/2.0/vfoldertypes.xml
-share/evolution/2.0/views/addressbook/Address_Cards.galview
-share/evolution/2.0/views/addressbook/By_Company.galview
-share/evolution/2.0/views/addressbook/Phone_List.galview
-share/evolution/2.0/views/addressbook/galview.xml
-share/evolution/2.0/views/calendar/List_View.galview
-share/evolution/2.0/views/calendar/galview.xml
-share/evolution/2.0/views/mail/As_Sent_Folder.galview
-share/evolution/2.0/views/mail/By_Follow_Up_Flag.galview
-share/evolution/2.0/views/mail/By_Sender.galview
-share/evolution/2.0/views/mail/By_Status.galview
-share/evolution/2.0/views/mail/By_Subject.galview
-share/evolution/2.0/views/mail/Messages.galview
-share/evolution/2.0/views/mail/galview.xml
-share/evolution/2.0/views/tasks/Tasks.galview
-share/evolution/2.0/views/tasks/With_DueDate.galview
-share/evolution/2.0/views/tasks/With_Status.galview
-share/evolution/2.0/views/tasks/galview.xml
-share/gconf/schemas/apps_evolution_addressbook-2.0.schemas
-share/gconf/schemas/apps_evolution_calendar-2.0.schemas
-share/gconf/schemas/apps_evolution_shell-2.0.schemas
-share/gconf/schemas/evolution-mail-2.0.schemas
-share/gnome/help/evolution-2.0/C/evolution-2.0.xml
-share/gnome/help/evolution-2.0/C/figures/calendar.png
-share/gnome/help/evolution-2.0/C/figures/config-cal.png
-share/gnome/help/evolution-2.0/C/figures/config-mail.png
-share/gnome/help/evolution-2.0/C/figures/contact-editor.png
-share/gnome/help/evolution-2.0/C/figures/contact.png
-share/gnome/help/evolution-2.0/C/figures/contacts_mainwindow_a.png
-share/gnome/help/evolution-2.0/C/figures/evo_account_info_a.png
-share/gnome/help/evolution-2.0/C/figures/evo_contacteditor_a.png
-share/gnome/help/evolution-2.0/C/figures/evo_email_a.png
-share/gnome/help/evolution-2.0/C/figures/evo_gwreceive_a.png
-share/gnome/help/evolution-2.0/C/figures/evo_identity_a.png
-share/gnome/help/evolution-2.0/C/figures/evo_imapreceive_a.png
-share/gnome/help/evolution-2.0/C/figures/evo_mail_callout_a.png
-share/gnome/help/evolution-2.0/C/figures/evo_maildirreceive_a.png
-share/gnome/help/evolution-2.0/C/figures/evo_mboxreceive_a.png
-share/gnome/help/evolution-2.0/C/figures/evo_mereceive_a.png
-share/gnome/help/evolution-2.0/C/figures/evo_mhreceive_a.png
-share/gnome/help/evolution-2.0/C/figures/evo_newmess_a.png
-share/gnome/help/evolution-2.0/C/figures/evo_popreceive_a.png
-share/gnome/help/evolution-2.0/C/figures/evo_receive_setup2_a.png
-share/gnome/help/evolution-2.0/C/figures/evo_receive_setup_a.png
-share/gnome/help/evolution-2.0/C/figures/evo_rule_a.png
-share/gnome/help/evolution-2.0/C/figures/evo_send_setup_a.png
-share/gnome/help/evolution-2.0/C/figures/evo_timezone_a.png
-share/gnome/help/evolution-2.0/C/figures/evo_usereceive_a.png
-share/gnome/help/evolution-2.0/C/figures/exchange-delegation.png
-share/gnome/help/evolution-2.0/C/figures/exchange-identity.png
-share/gnome/help/evolution-2.0/C/figures/exchange-receive-options.png
-share/gnome/help/evolution-2.0/C/figures/exchange-receive.png
-share/gnome/help/evolution-2.0/C/figures/filter-new-fig.png
-share/gnome/help/evolution-2.0/C/figures/full-1.png
-share/gnome/help/evolution-2.0/C/figures/full-2.png
-share/gnome/help/evolution-2.0/C/figures/full-3.png
-share/gnome/help/evolution-2.0/C/figures/full-4.png
-share/gnome/help/evolution-2.0/C/figures/full-5.png
-share/gnome/help/evolution-2.0/C/figures/full-6.png
-share/gnome/help/evolution-2.0/C/figures/full-7.png
-share/gnome/help/evolution-2.0/C/figures/mail-druid-pic.png
-share/gnome/help/evolution-2.0/C/figures/mail-inbox.png
-share/gnome/help/evolution-2.0/C/figures/mail-threaded.png
-share/gnome/help/evolution-2.0/C/figures/mail_mainwindow_a.png
-share/gnome/help/evolution-2.0/C/figures/mainwindow-pic.png
-share/gnome/help/evolution-2.0/C/figures/newmsg.png
-share/gnome/help/evolution-2.0/C/figures/replymsg.png
-share/gnome/help/evolution-2.0/C/figures/schedule.png
-share/gnome/help/evolution-2.0/C/figures/vfolder-createrule-fig.png
-share/idl/evolution-2.0/Composer.idl
-share/idl/evolution-2.0/Evolution-Addressbook-SelectNames.idl
-share/idl/evolution-2.0/Evolution-Component.idl
-share/idl/evolution-2.0/Evolution-Composer.idl
-share/idl/evolution-2.0/Evolution-ConfigControl.idl
-share/idl/evolution-2.0/Evolution-Offline.idl
-share/idl/evolution-2.0/Evolution-Shell.idl
-share/idl/evolution-2.0/Evolution-Wizard.idl
-share/idl/evolution-2.0/Evolution-common.idl
-share/idl/evolution-2.0/Evolution.idl
-share/idl/evolution-2.0/GNOME_Evolution_Importer.idl
-share/idl/evolution-2.0/evolution-calendar.idl
-${PKGLOCALEDIR}/locale/am/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/az/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/be/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/el/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/en_AU/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/et/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/he/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/id/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/is/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/no/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/evolution-2.0.mo
-${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/evolution-2.0.mo
-share/mime-info/evolution-2.0.keys
-share/mime-info/evolution-2.0.mime
-share/omf/evolution/evolution-2.0-C.omf
-share/pixmaps/evolution-2.0.png
+@comment $NetBSD: PLIST,v 1.21 2005/03/22 16:39:39 jmmv Exp $
+bin/evolution-2.2
+include/evolution-2.2/calendar/gui/e-cal-config.h
+include/evolution-2.2/e-conduit/e-pilot-map.h
+include/evolution-2.2/e-conduit/e-pilot-util.h
+include/evolution-2.2/e-util/e-account-list.h
+include/evolution-2.2/e-util/e-account.h
+include/evolution-2.2/e-util/e-bconf-map.h
+include/evolution-2.2/e-util/e-categories-config.h
+include/evolution-2.2/e-util/e-categories-master-list-wombat.h
+include/evolution-2.2/e-util/e-component-listener.h
+include/evolution-2.2/e-util/e-config-listener.h
+include/evolution-2.2/e-util/e-config.h
+include/evolution-2.2/e-util/e-corba-utils.h
+include/evolution-2.2/e-util/e-dialog-utils.h
+include/evolution-2.2/e-util/e-dialog-widgets.h
+include/evolution-2.2/e-util/e-event.h
+include/evolution-2.2/e-util/e-folder-map.h
+include/evolution-2.2/e-util/e-fsutils.h
+include/evolution-2.2/e-util/e-gtk-utils.h
+include/evolution-2.2/e-util/e-gui-utils.h
+include/evolution-2.2/e-util/e-html-utils.h
+include/evolution-2.2/e-util/e-icon-factory.h
+include/evolution-2.2/e-util/e-iterator.h
+include/evolution-2.2/e-util/e-list-iterator.h
+include/evolution-2.2/e-util/e-list.h
+include/evolution-2.2/e-util/e-menu.h
+include/evolution-2.2/e-util/e-mktemp.h
+include/evolution-2.2/e-util/e-plugin.h
+include/evolution-2.2/e-util/e-popup.h
+include/evolution-2.2/e-util/e-print.h
+include/evolution-2.2/e-util/e-request.h
+include/evolution-2.2/e-util/e-signature-list.h
+include/evolution-2.2/e-util/e-signature.h
+include/evolution-2.2/e-util/e-time-utils.h
+include/evolution-2.2/e-util/e-uid.h
+include/evolution-2.2/e-util/md5-utils.h
+include/evolution-2.2/importer/GNOME_Evolution_Importer.h
+include/evolution-2.2/importer/evolution-importer-client.h
+include/evolution-2.2/importer/evolution-importer-listener.h
+include/evolution-2.2/importer/evolution-importer.h
+include/evolution-2.2/importer/evolution-intelligent-importer.h
+include/evolution-2.2/shell/Evolution.h
+include/evolution-2.2/shell/e-shell-corba-icon-utils.h
+include/evolution-2.2/shell/e-shell-utils.h
+include/evolution-2.2/shell/e-user-creatable-items-handler.h
+include/evolution-2.2/shell/evolution-config-control.h
+include/evolution-2.2/shell/evolution-shell-component-utils.h
+include/evolution-2.2/shell/evolution-wizard.h
+include/evolution-2.2/widgets/e-activity-handler.h
+include/evolution-2.2/widgets/e-calendar-item.h
+include/evolution-2.2/widgets/e-calendar.h
+include/evolution-2.2/widgets/e-cell-date-edit.h
+include/evolution-2.2/widgets/e-cell-percent.h
+include/evolution-2.2/widgets/e-cell-renderer-combo.h
+include/evolution-2.2/widgets/e-charset-picker.h
+include/evolution-2.2/widgets/e-clipped-label.h
+include/evolution-2.2/widgets/e-combo-button.h
+include/evolution-2.2/widgets/e-combo-cell-editable.h
+include/evolution-2.2/widgets/e-config-page.h
+include/evolution-2.2/widgets/e-dateedit.h
+include/evolution-2.2/widgets/e-dropdown-button.h
+include/evolution-2.2/widgets/e-error.h
+include/evolution-2.2/widgets/e-expander.h
+include/evolution-2.2/widgets/e-image-chooser.h
+include/evolution-2.2/widgets/e-info-label.h
+include/evolution-2.2/widgets/e-map.h
+include/evolution-2.2/widgets/e-multi-config-dialog.h
+include/evolution-2.2/widgets/e-search-bar.h
+include/evolution-2.2/widgets/e-send-options.h
+include/evolution-2.2/widgets/e-task-bar.h
+include/evolution-2.2/widgets/e-task-widget.h
+include/evolution-2.2/widgets/e-url-entry.h
+lib/bonobo/servers/GNOME_Evolution_Addressbook_2.2.server
+lib/bonobo/servers/GNOME_Evolution_Addressbook_LDIF_Importer_2.2.server
+lib/bonobo/servers/GNOME_Evolution_Addressbook_VCard_Importer_2.2.server
+lib/bonobo/servers/GNOME_Evolution_Calendar_2.2.server
+lib/bonobo/servers/GNOME_Evolution_Calendar_AlarmNotify_2.2.server
+lib/bonobo/servers/GNOME_Evolution_Calendar_Importer_2.2.server
+lib/bonobo/servers/GNOME_Evolution_Mail_2.2.server
+lib/bonobo/servers/GNOME_Evolution_Mail_Importers_2.2.server
+lib/bonobo/servers/GNOME_Evolution_Shell_2.2.server
+lib/evolution/2.2/components/libevolution-addressbook.la
+lib/evolution/2.2/components/libevolution-calendar.la
+lib/evolution/2.2/components/libevolution-mail.la
+lib/evolution/2.2/evolution-addressbook-importers/libevolution-addressbook-ldif-importer.la
+lib/evolution/2.2/evolution-addressbook-importers/libevolution-addressbook-vcard-importer.la
+lib/evolution/2.2/evolution-calendar-importers/libevolution-calendar-importers.la
+lib/evolution/2.2/libeabutil.la
+lib/evolution/2.2/libeconduit.la
+lib/evolution/2.2/libecontacteditor.la
+lib/evolution/2.2/libecontactlisteditor.la
+lib/evolution/2.2/libefilterbar.la
+lib/evolution/2.2/libemiscwidgets.la
+lib/evolution/2.2/libeshell.la
+lib/evolution/2.2/libessmime.la
+lib/evolution/2.2/libetimezonedialog.la
+lib/evolution/2.2/libeutil.la
+lib/evolution/2.2/libevolution-a11y.la
+lib/evolution/2.2/libevolution-addressbook-a11y.la
+lib/evolution/2.2/libevolution-calendar-a11y.la
+lib/evolution/2.2/libevolution-importer.la
+lib/evolution/2.2/libevolution-mail-importers.la
+lib/evolution/2.2/libevolution-smime.la
+lib/evolution/2.2/libevolution-widgets-a11y.la
+lib/evolution/2.2/libfilter.la
+lib/evolution/2.2/libmenus.la
+lib/evolution/2.2/plugins/liborg-gnome-addressbook-file.la
+lib/evolution/2.2/plugins/liborg-gnome-addressbook-groupwise.la
+lib/evolution/2.2/plugins/liborg-gnome-audio-inline.la
+lib/evolution/2.2/plugins/liborg-gnome-calendar-file.la
+lib/evolution/2.2/plugins/liborg-gnome-calendar-http.la
+lib/evolution/2.2/plugins/liborg-gnome-calendar-weather.la
+lib/evolution/2.2/plugins/liborg-gnome-compose-send-options.la
+lib/evolution/2.2/plugins/liborg-gnome-copy-tool.la
+lib/evolution/2.2/plugins/liborg-gnome-default-source.la
+lib/evolution/2.2/plugins/liborg-gnome-evolution-bbdb.la
+lib/evolution/2.2/plugins/liborg-gnome-evolution-startup-wizard.la
+lib/evolution/2.2/plugins/liborg-gnome-exchange-account-settings.la
+lib/evolution/2.2/plugins/liborg-gnome-gw-account-setup.la
+lib/evolution/2.2/plugins/liborg-gnome-itip-formatter.la
+lib/evolution/2.2/plugins/liborg-gnome-mail-folder-unsubscribe.la
+lib/evolution/2.2/plugins/liborg-gnome-mail-to-task.la
+lib/evolution/2.2/plugins/liborg-gnome-mailing-list-actions.la
+lib/evolution/2.2/plugins/liborg-gnome-mark-calendar-offline.la
+lib/evolution/2.2/plugins/liborg-gnome-plugin-manager.la
+lib/evolution/2.2/plugins/liborg-gnome-prefer-plain.la
+lib/evolution/2.2/plugins/liborg-gnome-save-attachments.la
+lib/evolution/2.2/plugins/liborg-gnome-save-calendar.la
+lib/evolution/2.2/plugins/liborg-gnome-select-one-source.la
+lib/evolution/2.2/plugins/liborg-gnome-send-options.la
+lib/evolution/2.2/plugins/liborg-gnome-shared-folder.la
+lib/evolution/2.2/plugins/liborg-gnome-status-track.la
+lib/evolution/2.2/plugins/liborg-gnome-subject-thread.la
+lib/evolution/2.2/plugins/org-gnome-addressbook-file.eplug
+lib/evolution/2.2/plugins/org-gnome-addressbook-groupwise.eplug
+lib/evolution/2.2/plugins/org-gnome-audio-inline.eplug
+lib/evolution/2.2/plugins/org-gnome-calendar-file.eplug
+lib/evolution/2.2/plugins/org-gnome-calendar-http.eplug
+lib/evolution/2.2/plugins/org-gnome-calendar-weather.eplug
+lib/evolution/2.2/plugins/org-gnome-compose-send-options.eplug
+lib/evolution/2.2/plugins/org-gnome-compose-send-options.xml
+lib/evolution/2.2/plugins/org-gnome-copy-tool.eplug
+lib/evolution/2.2/plugins/org-gnome-default-source.eplug
+lib/evolution/2.2/plugins/org-gnome-evolution-bbdb.eplug
+lib/evolution/2.2/plugins/org-gnome-evolution-startup-wizard.eplug
+lib/evolution/2.2/plugins/org-gnome-exchange-account-setup.eplug
+lib/evolution/2.2/plugins/org-gnome-gw-account-setup.eplug
+lib/evolution/2.2/plugins/org-gnome-itip-formatter.eplug
+lib/evolution/2.2/plugins/org-gnome-mail-folder-unsubscribe.eplug
+lib/evolution/2.2/plugins/org-gnome-mail-to-task.eplug
+lib/evolution/2.2/plugins/org-gnome-mailing-list-actions.eplug
+lib/evolution/2.2/plugins/org-gnome-mailing-list-actions.xml
+lib/evolution/2.2/plugins/org-gnome-mark-calendar-offline.eplug
+lib/evolution/2.2/plugins/org-gnome-plugin-manager.eplug
+lib/evolution/2.2/plugins/org-gnome-plugin-manager.xml
+lib/evolution/2.2/plugins/org-gnome-prefer-plain.eplug
+lib/evolution/2.2/plugins/org-gnome-save-attachments.eplug
+lib/evolution/2.2/plugins/org-gnome-save-attachments.xml
+lib/evolution/2.2/plugins/org-gnome-save-calendar.eplug
+lib/evolution/2.2/plugins/org-gnome-select-one-source.eplug
+lib/evolution/2.2/plugins/org-gnome-send-options.eplug
+lib/evolution/2.2/plugins/org-gnome-shared-folder.eplug
+lib/evolution/2.2/plugins/org-gnome-status-track.eplug
+lib/evolution/2.2/plugins/org-gnome-subject-thread.eplug
+lib/pkgconfig/evolution-plugin-2.2.pc
+lib/pkgconfig/evolution-shell-2.2.pc
+libexec/evolution/2.2/csv2vcard
+libexec/evolution/2.2/evolution-addressbook-clean
+libexec/evolution/2.2/evolution-addressbook-export
+libexec/evolution/2.2/evolution-alarm-notify
+libexec/evolution/2.2/killev
+share/applications/evolution-2.2.desktop
+share/evolution/2.2/addresstypes.xml
+share/evolution/2.2/default/C/mail/local/Inbox
+share/evolution/2.2/default/de/mail/local/Inbox
+share/evolution/2.2/default/ja/mail/local/Inbox
+share/evolution/2.2/default/nl/mail/local/Inbox
+share/evolution/2.2/default/pt/mail/local/Inbox
+share/evolution/2.2/default/zh_CN/mail/local/Inbox
+share/evolution/2.2/ecps/medbook.ecps
+share/evolution/2.2/ecps/phonelist.ecps
+share/evolution/2.2/ecps/smallbook.ecps
+share/evolution/2.2/errors/addressbook-errors.xml
+share/evolution/2.2/errors/calendar-errors.xml
+share/evolution/2.2/errors/e-system-errors.xml
+share/evolution/2.2/errors/filter-errors.xml
+share/evolution/2.2/errors/mail-composer-errors.xml
+share/evolution/2.2/errors/mail-errors.xml
+share/evolution/2.2/errors/org-gnome-itip-formatter-errors.xml
+share/evolution/2.2/errors/org-gnome-mailing-list-actions-errors.xml
+share/evolution/2.2/errors/org-gnome-shared-folder-errors.xml
+share/evolution/2.2/errors/shell-errors.xml
+share/evolution/2.2/etspec/e-addressbook-view.etspec
+share/evolution/2.2/etspec/e-cal-list-view.etspec
+share/evolution/2.2/etspec/e-calendar-table.etspec
+share/evolution/2.2/etspec/e-contact-list-editor.etspec
+share/evolution/2.2/etspec/e-meeting-time-sel.etspec
+share/evolution/2.2/etspec/message-list.etspec
+share/evolution/2.2/filtertypes.xml
+share/evolution/2.2/glade/alarm-dialog.glade
+share/evolution/2.2/glade/alarm-list-dialog.glade
+share/evolution/2.2/glade/alarm-notify.glade
+share/evolution/2.2/glade/cal-attachment.glade
+share/evolution/2.2/glade/cal-prefs-dialog.glade
+share/evolution/2.2/glade/contact-editor.glade
+share/evolution/2.2/glade/contact-list-editor.glade
+share/evolution/2.2/glade/e-active-connection-dialog.glade
+share/evolution/2.2/glade/e-contact-print.glade
+share/evolution/2.2/glade/e-delegate-dialog.glade
+share/evolution/2.2/glade/e-itip-control.glade
+share/evolution/2.2/glade/e-msg-composer-attachment.glade
+share/evolution/2.2/glade/e-send-options.glade
+share/evolution/2.2/glade/e-timezone-dialog.glade
+share/evolution/2.2/glade/eab-contact-commit-duplicate-detected.glade
+share/evolution/2.2/glade/eab-contact-duplicate-detected.glade
+share/evolution/2.2/glade/event-page.glade
+share/evolution/2.2/glade/evolution-startup-wizard.glade
+share/evolution/2.2/glade/filter.glade
+share/evolution/2.2/glade/fulladdr.glade
+share/evolution/2.2/glade/fullname.glade
+share/evolution/2.2/glade/goto-dialog.glade
+share/evolution/2.2/glade/im.glade
+share/evolution/2.2/glade/import.glade
+share/evolution/2.2/glade/ldap-config.glade
+share/evolution/2.2/glade/mail-config.glade
+share/evolution/2.2/glade/mail-dialogs.glade
+share/evolution/2.2/glade/meeting-page.glade
+share/evolution/2.2/glade/properties.glade
+share/evolution/2.2/glade/recurrence-page.glade
+share/evolution/2.2/glade/schedule-page.glade
+share/evolution/2.2/glade/smime-ui.glade
+share/evolution/2.2/glade/task-details-page.glade
+share/evolution/2.2/glade/task-page.glade
+share/evolution/2.2/glade/url-editor-dialog.glade
+share/evolution/2.2/help/quickref/C/quickref.pdf
+share/evolution/2.2/images/about-box.png
+share/evolution/2.2/images/bcg.png
+share/evolution/2.2/images/evolution-contacts-mini.png
+share/evolution/2.2/images/monkey-16.png
+share/evolution/2.2/images/offline.png
+share/evolution/2.2/images/online.png
+share/evolution/2.2/images/world_map-960.png
+share/evolution/2.2/searchtypes.xml
+share/evolution/2.2/ui/evolution-addressbook.xml
+share/evolution/2.2/ui/evolution-calendar.xml
+share/evolution/2.2/ui/evolution-composer-entries.xml
+share/evolution/2.2/ui/evolution-executive-summary.xml
+share/evolution/2.2/ui/evolution-mail-global.xml
+share/evolution/2.2/ui/evolution-mail-list.xml
+share/evolution/2.2/ui/evolution-mail-message.xml
+share/evolution/2.2/ui/evolution-mail-messagedisplay.xml
+share/evolution/2.2/ui/evolution-message-composer.xml
+share/evolution/2.2/ui/evolution-signature-editor.xml
+share/evolution/2.2/ui/evolution-subscribe.xml
+share/evolution/2.2/ui/evolution-tasks.xml
+share/evolution/2.2/ui/evolution.xml
+share/evolution/2.2/vfoldertypes.xml
+share/evolution/2.2/views/addressbook/Address_Cards.galview
+share/evolution/2.2/views/addressbook/By_Company.galview
+share/evolution/2.2/views/addressbook/Phone_List.galview
+share/evolution/2.2/views/addressbook/galview.xml
+share/evolution/2.2/views/calendar/List_View.galview
+share/evolution/2.2/views/calendar/galview.xml
+share/evolution/2.2/views/mail/As_Sent_Folder.galview
+share/evolution/2.2/views/mail/By_Follow_Up_Flag.galview
+share/evolution/2.2/views/mail/By_Sender.galview
+share/evolution/2.2/views/mail/By_Status.galview
+share/evolution/2.2/views/mail/By_Subject.galview
+share/evolution/2.2/views/mail/Messages.galview
+share/evolution/2.2/views/mail/galview.xml
+share/evolution/2.2/views/tasks/Tasks.galview
+share/evolution/2.2/views/tasks/With_DueDate.galview
+share/evolution/2.2/views/tasks/With_Status.galview
+share/evolution/2.2/views/tasks/galview.xml
+share/evolution/2.2/weather/category_weather_cloudy_16.png
+share/evolution/2.2/weather/category_weather_fog_16.png
+share/evolution/2.2/weather/category_weather_partly_cloudy_16.png
+share/evolution/2.2/weather/category_weather_rain_16.png
+share/evolution/2.2/weather/category_weather_snow_16.png
+share/evolution/2.2/weather/category_weather_sun_16.png
+share/evolution/2.2/weather/category_weather_tstorm_16.png
+share/gconf/schemas/apps_evolution_addressbook-2.2.schemas
+share/gconf/schemas/apps_evolution_calendar-2.2.schemas
+share/gconf/schemas/apps_evolution_shell-2.2.schemas
+share/gconf/schemas/evolution-mail-2.2.schemas
+share/gnome/help/evolution-2.2/C/evolution-2.2.xml
+share/gnome/help/evolution-2.2/C/figures/calendar.png
+share/gnome/help/evolution-2.2/C/figures/config-cal.png
+share/gnome/help/evolution-2.2/C/figures/config-mail.png
+share/gnome/help/evolution-2.2/C/figures/contact-editor.png
+share/gnome/help/evolution-2.2/C/figures/contact.png
+share/gnome/help/evolution-2.2/C/figures/contacts_mainwindow_a.png
+share/gnome/help/evolution-2.2/C/figures/evo_account_info_a.png
+share/gnome/help/evolution-2.2/C/figures/evo_contacteditor_a.png
+share/gnome/help/evolution-2.2/C/figures/evo_email_a.png
+share/gnome/help/evolution-2.2/C/figures/evo_gwreceive_a.png
+share/gnome/help/evolution-2.2/C/figures/evo_identity_a.png
+share/gnome/help/evolution-2.2/C/figures/evo_imapreceive_a.png
+share/gnome/help/evolution-2.2/C/figures/evo_mail_callout_a.png
+share/gnome/help/evolution-2.2/C/figures/evo_maildirreceive_a.png
+share/gnome/help/evolution-2.2/C/figures/evo_mboxreceive_a.png
+share/gnome/help/evolution-2.2/C/figures/evo_mereceive_a.png
+share/gnome/help/evolution-2.2/C/figures/evo_mhreceive_a.png
+share/gnome/help/evolution-2.2/C/figures/evo_newmess_a.png
+share/gnome/help/evolution-2.2/C/figures/evo_popreceive_a.png
+share/gnome/help/evolution-2.2/C/figures/evo_receive_setup2_a.png
+share/gnome/help/evolution-2.2/C/figures/evo_receive_setup_a.png
+share/gnome/help/evolution-2.2/C/figures/evo_rule_a.png
+share/gnome/help/evolution-2.2/C/figures/evo_send_setup_a.png
+share/gnome/help/evolution-2.2/C/figures/evo_timezone_a.png
+share/gnome/help/evolution-2.2/C/figures/evo_usereceive_a.png
+share/gnome/help/evolution-2.2/C/figures/exchange-delegation.png
+share/gnome/help/evolution-2.2/C/figures/exchange-identity.png
+share/gnome/help/evolution-2.2/C/figures/exchange-receive-options.png
+share/gnome/help/evolution-2.2/C/figures/exchange-receive.png
+share/gnome/help/evolution-2.2/C/figures/filter-new-fig.png
+share/gnome/help/evolution-2.2/C/figures/full-1.png
+share/gnome/help/evolution-2.2/C/figures/full-2.png
+share/gnome/help/evolution-2.2/C/figures/full-3.png
+share/gnome/help/evolution-2.2/C/figures/full-4.png
+share/gnome/help/evolution-2.2/C/figures/full-5.png
+share/gnome/help/evolution-2.2/C/figures/full-6.png
+share/gnome/help/evolution-2.2/C/figures/full-7.png
+share/gnome/help/evolution-2.2/C/figures/mail-druid-pic.png
+share/gnome/help/evolution-2.2/C/figures/mail-inbox.png
+share/gnome/help/evolution-2.2/C/figures/mail-threaded.png
+share/gnome/help/evolution-2.2/C/figures/mail_mainwindow_a.png
+share/gnome/help/evolution-2.2/C/figures/mainwindow-pic.png
+share/gnome/help/evolution-2.2/C/figures/newmsg.png
+share/gnome/help/evolution-2.2/C/figures/replymsg.png
+share/gnome/help/evolution-2.2/C/figures/schedule.png
+share/gnome/help/evolution-2.2/C/figures/vfolder-createrule-fig.png
+share/idl/evolution-2.2/Composer.idl
+share/idl/evolution-2.2/Evolution-Component.idl
+share/idl/evolution-2.2/Evolution-Composer.idl
+share/idl/evolution-2.2/Evolution-ConfigControl.idl
+share/idl/evolution-2.2/Evolution-Offline.idl
+share/idl/evolution-2.2/Evolution-Shell.idl
+share/idl/evolution-2.2/Evolution-Wizard.idl
+share/idl/evolution-2.2/Evolution-common.idl
+share/idl/evolution-2.2/Evolution.idl
+share/idl/evolution-2.2/GNOME_Evolution_Importer.idl
+share/idl/evolution-2.2/evolution-calendar.idl
+${PKGLOCALEDIR}/locale/am/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/en_AU/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/is/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/evolution-2.2.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/evolution-2.2.mo
+share/mime-info/evolution-2.2.keys
+share/mime-info/evolution-2.2.mime
+share/omf/evolution/evolution-2.2-C.omf
+share/pixmaps/evolution-2.2.png
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/evolution
 @comment in scrollkeeper: @dirrm share/omf
 @comment in xdg-dirs: @dirrm share/mime-info
-@dirrm share/idl/evolution-2.0
+@dirrm share/idl/evolution-2.2
 @comment in ORBit2: @dirrm share/idl
-@dirrm share/gnome/help/evolution-2.0/C/figures
-@dirrm share/gnome/help/evolution-2.0/C
-@dirrm share/gnome/help/evolution-2.0
+@dirrm share/gnome/help/evolution-2.2/C/figures
+@dirrm share/gnome/help/evolution-2.2/C
+@dirrm share/gnome/help/evolution-2.2
 @comment in gnome2-dirs: @dirrm share/gnome/help
 @comment in GConf2: @dirrm share/gconf/schemas
-@dirrm share/evolution/2.0/views/tasks
-@dirrm share/evolution/2.0/views/mail
-@dirrm share/evolution/2.0/views/calendar
-@dirrm share/evolution/2.0/views/addressbook
-@dirrm share/evolution/2.0/views
-@dirrm share/evolution/2.0/ui
-@dirrm share/evolution/2.0/images
-@dirrm share/evolution/2.0/help/quickref/C
-@dirrm share/evolution/2.0/help/quickref
-@dirrm share/evolution/2.0/help
-@dirrm share/evolution/2.0/glade
-@dirrm share/evolution/2.0/etspec
-@dirrm share/evolution/2.0/errors
-@dirrm share/evolution/2.0/ecps
-@dirrm share/evolution/2.0/default/C/mail/local
-@dirrm share/evolution/2.0/default/C/mail
-@dirrm share/evolution/2.0/default/C
-@dirrm share/evolution/2.0/default
-@dirrm share/evolution/2.0
+@dirrm share/evolution/2.2/weather
+@dirrm share/evolution/2.2/views/tasks
+@dirrm share/evolution/2.2/views/mail
+@dirrm share/evolution/2.2/views/calendar
+@dirrm share/evolution/2.2/views/addressbook
+@dirrm share/evolution/2.2/views
+@dirrm share/evolution/2.2/ui
+@dirrm share/evolution/2.2/images
+@dirrm share/evolution/2.2/help/quickref/C
+@dirrm share/evolution/2.2/help/quickref
+@dirrm share/evolution/2.2/help
+@dirrm share/evolution/2.2/glade
+@dirrm share/evolution/2.2/etspec
+@dirrm share/evolution/2.2/errors
+@dirrm share/evolution/2.2/ecps
+@dirrm share/evolution/2.2/default/zh_CN/mail/local
+@dirrm share/evolution/2.2/default/zh_CN/mail
+@dirrm share/evolution/2.2/default/zh_CN
+@dirrm share/evolution/2.2/default/pt/mail/local
+@dirrm share/evolution/2.2/default/pt/mail
+@dirrm share/evolution/2.2/default/pt
+@dirrm share/evolution/2.2/default/nl/mail/local
+@dirrm share/evolution/2.2/default/nl/mail
+@dirrm share/evolution/2.2/default/nl
+@dirrm share/evolution/2.2/default/ja/mail/local
+@dirrm share/evolution/2.2/default/ja/mail
+@dirrm share/evolution/2.2/default/ja
+@dirrm share/evolution/2.2/default/de/mail/local
+@dirrm share/evolution/2.2/default/de/mail
+@dirrm share/evolution/2.2/default/de
+@dirrm share/evolution/2.2/default/C/mail/local
+@dirrm share/evolution/2.2/default/C/mail
+@dirrm share/evolution/2.2/default/C
+@dirrm share/evolution/2.2/default
+@dirrm share/evolution/2.2
 @dirrm share/evolution
 @comment in xdg-dirs: @dirrm share/applications
-@dirrm libexec/evolution/2.0/camel
-@dirrm libexec/evolution/2.0
+@dirrm libexec/evolution/2.2
 @dirrm libexec/evolution
-@dirrm lib/evolution/2.0/evolution-calendar-importers
-@dirrm lib/evolution/2.0/evolution-addressbook-importers
-@dirrm lib/evolution/2.0/components
-@dirrm lib/evolution/2.0/camel-providers
-@dirrm lib/evolution/2.0
+@dirrm lib/evolution/2.2/plugins
+@dirrm lib/evolution/2.2/evolution-calendar-importers
+@dirrm lib/evolution/2.2/evolution-addressbook-importers
+@dirrm lib/evolution/2.2/components
+@dirrm lib/evolution/2.2
 @dirrm lib/evolution
 @comment in libbonobo: @dirrm lib/bonobo/servers
-@dirrm include/evolution-2.0/widgets
-@dirrm include/evolution-2.0/shell
-@dirrm include/evolution-2.0/importer
-@dirrm include/evolution-2.0/e-util
-@dirrm include/evolution-2.0/e-conduit
-@dirrm include/evolution-2.0/camel
-@dirrm include/evolution-2.0
+@dirrm include/evolution-2.2/widgets
+@dirrm include/evolution-2.2/shell
+@dirrm include/evolution-2.2/importer
+@dirrm include/evolution-2.2/e-util
+@dirrm include/evolution-2.2/e-conduit
+@dirrm include/evolution-2.2/calendar/gui
+@dirrm include/evolution-2.2/calendar
+@dirrm include/evolution-2.2
