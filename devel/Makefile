@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.175 2001/02/28 22:22:28 jtb Exp $
+# $NetBSD: Makefile,v 1.176 2001/03/04 16:10:43 tron Exp $
 #
 
 COMMENT=	Development utilities
@@ -69,6 +69,7 @@ SUBDIR+=	jakarta-ant
 SUBDIR+=	jlib
 SUBDIR+=	kdbg
 SUBDIR+=	kdevelop
+SUBDIR+=	kdevelop-base
 SUBDIR+=	ldapsdk
 SUBDIR+=	lclint
 SUBDIR+=	libavl
