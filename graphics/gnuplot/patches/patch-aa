@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.6 2005/03/10 17:26:18 tv Exp $
+
+--- term/x11.trm.orig	Wed Apr 14 08:18:24 2004
++++ term/x11.trm
+@@ -55,6 +55,7 @@
+  */
+ 
+ #include "driver.h"
++#include <sys/time.h>
+ 
+ #ifdef TERM_REGISTER
+ register_term(x11)
