@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7137 2004/09/11 03:36:54 minskim Exp $
+$NetBSD: CHANGES,v 1.7138 2004/09/11 12:17:05 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4234,3 +4234,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated dqs to 3.3.2nb2 [wiz 2004-09-10]
 	Updated teixsl-html to 3.3 [minskim 2004-09-11]
 	Updated teixsl-fo to 3.3 [minskim 2004-09-11]
+	Updated pixieplus to 0.5.4nb5 [markd 2004-09-11]
