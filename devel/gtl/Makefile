@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2004/11/02 20:36:50 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2004/11/02 20:55:29 wiz Exp $
 
-DISTNAME=		GTL-1.2.0
-PKGNAME=		gtl-1.2.0
+DISTNAME=		GTL-1.2.1
+PKGNAME=		gtl-1.2.1
 CATEGORIES=		devel
 MASTER_SITES=		http://infosun.fmi.uni-passau.de/GTL/download/
 EXTRACT_SUFX=		.tar.bz2
