@@ -1,7 +1,16 @@
-$NetBSD: patch-ae,v 1.5 2001/08/10 04:50:08 jlam Exp $
+$NetBSD: patch-ae,v 1.6 2001/10/22 05:25:25 mycroft Exp $
 
 --- src/other/spell/xp/ispell.h.orig	Tue Jun 26 12:33:27 2001
 +++ src/other/spell/xp/ispell.h
+@@ -248,7 +248,7 @@
+ ** character counts as two!
+ */
+ #ifndef MAXSTRINGCHARS
+-#define MAXSTRINGCHARS 128
++#define MAXSTRINGCHARS 100
+ #endif /* MAXSTRINGCHARS */
+ 
+ /*
 @@ -531,8 +531,8 @@
      short maxstringcharlen;			/* Max strchr len supported */
      short compoundmin;				/* Min lth of compound parts */
