@@ -1,49 +1,22 @@
-$NetBSD: patch-aa,v 1.3 1999/05/02 17:46:19 tsarna Exp $
---- Makefile.orig	Tue Aug  8 15:28:27 1995
-+++ Makefile	Fri Apr 16 03:49:36 1999
-@@ -7,28 +7,32 @@
- #If the ar command fails on your system, consult the ar manpage
- #for your system. 
+$NetBSD: patch-aa,v 1.4 1999/08/26 15:26:28 agc Exp $
+
+Use NetBSD libtool
+
+--- configure	1999/08/26 15:11:27	1.1
++++ configure	1999/08/26 15:12:16
+@@ -1366,6 +1366,7 @@
+ fi
  
--CC=gcc 
--AR=ar
--CFLAGS=-O
--LIBS=-L./ -lgd -lm
-+CC=${LIBTOOL} cc
-+LIBS=libgd.la -lm
-+OBJS=gd.o gdfontt.o gdfonts.o gdfontmb.o gdfontl.o gdfontg.o
  
- all: libgd.a gddemo giftogd webgif
++if false; then
+ # Check for any special flags to pass to ltconfig.
+ libtool_flags="--cache-file=$cache_file"
+ test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
+@@ -1523,6 +1524,7 @@
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+ exec 5>>./config.log
++fi
  
- gddemo: gddemo.o libgd.a gd.h gdfonts.h gdfontl.h
--	$(CC) gddemo.o -o gddemo	$(LIBS)
-+	${LIBTOOL} --mode=link cc gddemo.o -o gddemo	$(LIBS)
- 
- giftogd: giftogd.o libgd.a gd.h
--	$(CC) giftogd.o -o giftogd	$(LIBS) 
-+	${LIBTOOL} --mode=link cc giftogd.o -o giftogd	$(LIBS) 
- 
--libgd.a: gd.o gdfontt.o gdfonts.o gdfontmb.o gdfontl.o gdfontg.o \
--	gd.h gdfontt.h gdfonts.h gdfontmb.h gdfontl.h gdfontg.h
--	rm -f libgd.a
--	$(AR) rc libgd.a gd.o gdfontt.o gdfonts.o gdfontmb.o \
--		gdfontl.o gdfontg.o
-+libgd.a: ${OBJS} gd.h gdfontt.h gdfonts.h gdfontmb.h gdfontl.h gdfontg.h
-+	${LIBTOOL} --mode=link cc -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 0:0
- 
- webgif: webgif.o libgd.a gd.h
--	$(CC) webgif.o -o webgif	$(LIBS)
-+	${LIBTOOL} --mode=link cc webgif.o -o webgif	$(LIBS)
- 
- clean:
--	rm -f *.o *.a gddemo giftogd 
-+	rm -f *.lo *.o *.a gddemo giftogd 
- 
-+install:
-+	${LIBTOOL} --mode=install install -cs -o bin -g bin gddemo giftogd webgif ${PREFIX}/bin
-+	${LIBTOOL} --mode=install install -c -o bin -g bin libgd.la ${PREFIX}/lib
-+	install -c -o bin -g bin gd.h gdfonts.h ${PREFIX}/include/gd
-+	install -c -o bin -g bin gdfontt.h gdfontmb.h ${PREFIX}/include/gd
-+	install -c -o bin -g bin gdfontl.h gdfontg.h ${PREFIX}/include/gd
-+	install -c -o bin -g bin index.html ${PREFIX}/share/examples/gd
-+	install -c -o bin -g bin demoin.gif ${PREFIX}/share/examples/gd
+ # Find a good install program.  We prefer a C program (faster),
+ # so one script is as good as another.  But avoid the broken or
