@@ -3,7 +3,7 @@
 # Date created:		7 October 1995
 # Whom:			torstenb@FreeBSD.ORG
 #
-# $NetBSD: Makefile,v 1.9 1998/03/11 22:40:40 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/03/11 23:18:46 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/06/13 20:00:47 max Exp
 #
 
@@ -20,9 +20,9 @@ CONFIGURE_ENV+=	M4=${PREFIX}/bin/gm4
 PLIST_SRC=	${WRKDIR}/PLIST-src
 
 post-install:
-	@(ex='s|@autoscan@|bin/autoscan|';		\
+	@(ex='s|@HaveAutoscan@||';			\
 	if [ ! -f ${WRKSRC}/autoscan ]; then		\
-		ex='/@autoscan@/d';			\
+		ex='/@HaveAutoscan@/d';			\
 	fi;						\
 	${SED} -e "$$ex" < ${PKGDIR}/PLIST > ${PLIST_SRC})
 	@install-info ${PREFIX}/info/autoconf.info ${PREFIX}/info/dir
