@@ -1,0 +1,17 @@
+--- mit-pthreads/config/Makefile.in.orig	Mon Mar  2 19:44:34 1998
++++ mit-pthreads/config/Makefile.in	Sun Dec  5 03:24:04 1999
+@@ -2,8 +2,12 @@
+ #
+ 
+ LIB=pthread
+-#NOPIC=
+-#NOPROFILE=1
++NOPIC=1
++NOPROFILE=1
++NOLINT=1
++MKPIC=no
++MKPROFILE=no
++MKLINT=no
+ CPPFLAGS+= -I${.CURDIR} -I${.CURDIR}/include -I${srcdir}/include -DPTHREAD_KERNEL
+ CDEBUGFLAGS= @CFLAGS@
+ CFLAGS+= ${CDEBUGFLAGS}

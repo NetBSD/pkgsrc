@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 1999/08/24 18:55:28 bad Exp $
+# $NetBSD: Makefile,v 1.8 1999/12/13 20:36:21 bad Exp $
 #
 
-DISTNAME=		mysql-3.22.22
+DISTNAME=		mysql-3.22.27
 PKGNAME=		${DISTNAME:S/-/-server-/}
 CATEGORIES=		databases
 MASTER_SITES=		ftp://ftp.mysql.com/pub/mysql/Downloads/MySQL-3.22/ \
@@ -11,7 +11,7 @@ MASTER_SITES=		ftp://ftp.mysql.com/pub/mysql/Downloads/MySQL-3.22/ \
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.mysql.com/
 
-DEPENDS=		${DISTNAME:S/-/-client-/}:../../databases/mysql-client
+DEPENDS=		${DISTNAME:S/-/-client-/}:../../databases/mysql-client-current
 
 NO_CDROM=		"Restrictive license."
 
@@ -33,7 +33,6 @@ CFLAGS+=		-Dunix
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
 			NetBSD-*-sparc NetBSD-*-m68k SunOS-*-sparc
 
-USE_GMAKE=
 USE_PERL5=
 
 post-extract:

@@ -1,4 +1,4 @@
-$NetBSD: patch-bi,v 1.1 1999/08/03 20:30:41 bad Exp $
+$NetBSD: patch-bi,v 1.2 1999/12/13 20:36:28 bad Exp $
 
 --- mit-pthreads/config/config.guess.orig	Sun Jul  7 05:51:23 1996
 +++ mit-pthreads/config/config.guess	Tue Jul 27 16:55:36 1999
@@ -18,7 +18,7 @@ $NetBSD: patch-bi,v 1.1 1999/08/03 20:30:41 bad Exp $
 +    mac68k:NetBSD:*:*)
 +	echo m68k-apple-netbsd${UNAME_RELEASE}
 +	exit 0 ;;
-+    mvme68:NetBSD:*:*)
++    mvme68k:NetBSD:*:*)
 +	echo m68k-motorola-netbsd${UNAME_RELEASE}
 +	exit 0 ;;
 +    next68k:NetBSD:*:*)
