@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.550 2004/10/23 12:18:59 shannonjr Exp $
+# $NetBSD: Makefile,v 1.551 2004/10/23 17:20:53 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -366,6 +366,7 @@ SUBDIR+=	p5-Module-Versions-Report
 SUBDIR+=	p5-Net-CIDR
 SUBDIR+=	p5-Net-Netmask
 SUBDIR+=	p5-OLE-Storage_Lite
+SUBDIR+=	p5-OOTools
 SUBDIR+=	p5-Object-Realize-Later
 SUBDIR+=	p5-POE
 SUBDIR+=	p5-PV
