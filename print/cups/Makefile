@@ -1,30 +1,29 @@
-# $NetBSD: Makefile,v 1.80 2004/10/03 00:18:04 tv Exp $
+# $NetBSD: Makefile,v 1.81 2004/11/08 16:30:59 adam Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
 # cups-bugs@cups.org.
 
-DISTNAME=		cups-${DIST_VERS}-source
-PKGNAME=		cups-${VERS}
-PKGREVISION=		# empty
-BASE_VERS=		1.1.20
-DIST_VERS=		${BASE_VERS}
-VERS=			${DIST_VERS:S/-/./g}
-PKGREVISION=		3
-CATEGORIES=		print
-MASTER_SITES=		ftp://ftp.easysw.com/pub/cups/${BASE_VERS}/ \
-			ftp://ftp2.easysw.com/pub/cups/${BASE_VERS}/ \
-			ftp://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/cups/${BASE_VERS}/ \
-			ftp://ftp.mpg.goe.ni.schule.de/pub/internet/printing/cups/${BASE_VERS}/ \
-			ftp://ftp.ntua.gr/pub/gnu/cups/${BASE_VERS}/ \
-			ftp://ftp.fisek.com.tr/pub/cups/${BASE_VERS}/
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	cups-${DIST_VERS}-source
+PKGNAME=	cups-${VERS}
+BASE_VERS=	1.1.22
+DIST_VERS=	${BASE_VERS}
+VERS=		${DIST_VERS:S/-/./g}
+CATEGORIES=	print
+MASTER_SITES=	ftp://ftp.easysw.com/pub/cups/${BASE_VERS}/ \
+		ftp://ftp2.easysw.com/pub/cups/${BASE_VERS}/ \
+		ftp://ftp3.easysw.com/pub/cups/${BASE_VERS}/ \
+		ftp://ftp.ntua.gr/pub/gnu/cups/${BASE_VERS}/ \
+		ftp://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/cups/${BASE_VERS}/ \
+		ftp://ftp.mpg.goe.ni.schule.de/pub/internet/printing/cups/${BASE_VERS}/ \
+		ftp://ftp.fisek.com.tr/pub/cups/${BASE_VERS}/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		jlam@NetBSD.org
-HOMEPAGE=		http://www.cups.org/
-COMMENT=		Common UNIX Printing System
+MAINTAINER=	jlam@NetBSD.org
+HOMEPAGE=	http://www.cups.org/
+COMMENT=	Common UNIX Printing System
 
-CONFLICTS+=		LPRng-[0-9]* LPRng-core-[0-9]*
+CONFLICTS+=	LPRng-[0-9]* LPRng-core-[0-9]*
 
 #PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
