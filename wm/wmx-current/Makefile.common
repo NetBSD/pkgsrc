@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2001/06/18 05:09:08 jlam Exp $
+# $NetBSD: Makefile.common,v 1.5 2001/07/14 02:27:35 jlam Exp $
 
 DISTNAME=	wmx-6pre6
 WMX_VERS=	5.0.6
@@ -18,8 +18,6 @@ DISTINFO_FILE=	${.CURDIR}/../../wm/wmx-current/distinfo
 PATCHDIR=	${.CURDIR}/../../wm/wmx-current/patches
 PLIST_SRC=	${.CURDIR}/../../wm/wmx-current/pkg/PLIST
 
-.include "../../graphics/xpm/buildlink.mk"
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wmx ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/wmx
@@ -27,4 +25,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README.contrib ${PREFIX}/share/doc/wmx
 	${INSTALL_DATA_DIR} ${PREFIX}/etc/wmx
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../graphics/xpm/buildlink.mk"
