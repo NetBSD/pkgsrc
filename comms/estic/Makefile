@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/04/11 06:17:39 snj Exp $
+# $NetBSD: Makefile,v 1.12 2004/08/29 16:18:54 recht Exp $
 
 DISTNAME=	estic-1.61
 CATEGORIES=	comms
@@ -27,8 +27,9 @@ LIBSRC=		${WRKDIR}/spunk
 MAKEFILE=	make/freebsd-x.mak
 
 post-extract:
-	${_PKG_SILENT}${_PKG_DEBUG}${GZCAT} ${DISTDIR}/${ESTICPATCH} | \
-	${PATCH} ${PATCH_DIST_ARGS}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC} && \
+	${LOCALBASE}/bin/unzip -p ${DISTDIR}/${ESTICPATCH} | \
+		${PATCH} -p0 ${PATCH_DIST_ARGS}
 
 pre-build:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${LIBSRC} && \
