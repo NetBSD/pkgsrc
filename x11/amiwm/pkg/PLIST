@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 1998/03/01 20:42:55 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/05/22 13:49:42 tron Exp $
 bin/amiwm
+bin/ppmtoinfo
 bin/requestchoice
 lib/amiwm/requestchoice
 lib/amiwm/executecmd
@@ -7,5 +8,12 @@ lib/amiwm/Background
 lib/amiwm/Keyboard
 lib/amiwm/system.amiwmrc
 lib/amiwm/def_tool.info
+lib/amiwm/system.map
+lib/amiwm/magicwb.map
+lib/amiwm/schwartz.map
+lib/amiwm/Xsession
+lib/amiwm/Xsession2
+lib/amiwm/Xinitrc
+lib/amiwm/amiwm-init
 @dirrm lib/amiwm
 man/man1/amiwm.1
