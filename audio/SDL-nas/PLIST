@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/26 23:06:11 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/03 19:31:03 drochner Exp $
 lib/libaudio_nas.la
 lib/libaudio_nas.so
 lib/libaudio_nas.so.0
-lib/libaudio_nas.so.0.5
+lib/libaudio_nas.so.0.6
