@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.5 1999/03/19 08:43:55 rh Exp $
+$NetBSD: patch-ab,v 1.6 1999/03/28 07:55:05 rh Exp $
 
---- Imakefile.orig	Tue Mar 16 00:58:48 1999
-+++ Imakefile	Wed Mar 17 20:43:19 1999
+--- Imakefile.orig	Sun Mar 21 23:36:26 1999
++++ Imakefile	Sun Mar 28 09:14:27 1999
 @@ -96,9 +96,9 @@
  XCOMM   to link against symbols inside xanim.
  XCOMM 
@@ -14,18 +14,28 @@ $NetBSD: patch-ab,v 1.5 1999/03/19 08:43:55 rh Exp $
  
  
  XCOMM #########################################################################
-@@ -109,8 +109,8 @@
- XCOMM  So far I've only tested this on Linux_x86, SunOS_Sparc and Solaris_Sparc
+@@ -111,17 +111,17 @@
+ XCOMM NOTE: not all machines need the XA_DLL_LIB define.
  XCOMM #########################################################################
  XCOMM 
--XA_DLL_DEF = -DXA_DLL
+-XA_DLL_DEF = -DXA_DLL -DXA_PRINT
++XA_DLL_DEF = -DXA_PRINT
+ XCOMM ### Use this only if the above doesn't work
+ XCOMM XA_DLL_DEF = -DXA_DLL
+ XCOMM
+ XCOMM ### You may need this library.
 -XA_DLL_LIB = -ldl
-+XCOMM XA_DLL_DEF = -DXA_DLL
 +XCOMM XA_DLL_LIB = -ldl
+ XCOMM
+ XCOMM If you'd like to change the default directory that XAnim searches while
+ XCOMM looking for dlls, then change the directory below.
+ XCOMM
+-XA_DLL_PATH = /usr/local/xanim/mods
++XA_DLL_PATH = ${PREFIX}/lib/xanim
  
  
- XCOMM #########################################################################
-@@ -165,13 +165,29 @@
+ 
+@@ -186,13 +186,29 @@
  XCOMM  
  XCOMM  Again don't use these if you are using the dynamically loadable modules.
  XCOMM 
@@ -62,7 +72,7 @@ $NetBSD: patch-ab,v 1.5 1999/03/19 08:43:55 rh Exp $
  XCOMM 
  XCOMM ##########################
  XCOMM  NOTE: SGI Machines Only: 
-@@ -242,8 +258,8 @@
+@@ -267,8 +283,8 @@
  XCOMM  XA_AUDIO_DEFS =
  XCOMM 
  XCOMM ## -- Linux PCs ---------------------------------------------------------
@@ -73,7 +83,7 @@ $NetBSD: patch-ab,v 1.5 1999/03/19 08:43:55 rh Exp $
  XCOMM 
  XCOMM  -- Linux PC's with OLD Rev sound drivers -------------------------------
  XCOMM  XA_AUDIO_DEFS = -DXA_LINUX_AUDIO -DXA_LINUX_OLDER_SND
-@@ -282,7 +298,7 @@
+@@ -307,7 +323,7 @@
  XCOMM  XA_AUDIO_DEFS = -DXA_SONY_AUDIO
  XCOMM 
  XCOMM  -- NetBSD-current (as of 30/April 1995)---------------------------------
@@ -82,7 +92,7 @@ $NetBSD: patch-ab,v 1.5 1999/03/19 08:43:55 rh Exp $
  XCOMM 
  XCOMM  -- QNX 4.2 PC's --------------------------------------------------------
  XCOMM  XA_AUDIO_DEFS = -DXA_LINUX_AUDIO -DXA_SELECT
-@@ -440,7 +456,7 @@
+@@ -465,7 +481,7 @@
  
  PROGRAMS = $(XANIM)
  

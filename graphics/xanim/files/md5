@@ -1,6 +1,6 @@
-$NetBSD: md5,v 1.5 1999/03/19 08:43:55 rh Exp $
+$NetBSD: md5,v 1.6 1999/03/28 07:55:05 rh Exp $
 
-MD5 (xanim2800.tar.gz) = 60d187d8393b7c47443293215a13a966
+MD5 (xanim2801.tar.gz) = e2ecd086c160f18dd7cc3cac438758c2
 MD5 (xa2.0_cvid_netbsd386.o.Z) = 80a70d69ea532c7f32a074381fff8468
 MD5 (xa2.0_iv32_netbsd386.o.Z) = 1968c29d77e02c53df14bc4f2a29a1c0
 MD5 (xa1.0_cyuv_netbsd386.o.Z) = 9f2d2b1a14f4518ffd02c0f45ccbf9e6
