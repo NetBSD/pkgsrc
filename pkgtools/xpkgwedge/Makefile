@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/07/31 15:00:41 tv Exp $
+# $NetBSD: Makefile,v 1.6 1998/07/31 19:30:49 tv Exp $
 #
 
 DISTNAME=	xpkgwedge-0.4
@@ -6,8 +6,6 @@ CATEGORIES=	devel x11
 DISTFILES=	# none
 
 MAINTAINER=	tv@netbsd.org
-
-RESTRICTED=	optional package affecting many pkg builds
 
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
