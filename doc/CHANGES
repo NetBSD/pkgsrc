@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3552 2003/09/27 12:04:21 tron Exp $
+$NetBSD: CHANGES,v 1.3553 2003/09/27 14:20:45 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3967,3 +3967,11 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated conglomerate to 0.7.4nb1 [xtraeme 2003-09-27]
 	Updated trickle to 1.06nb1 [xtraeme 2003-09-27]
 	Updated xplot to 0.90.7.1nb1 [tron 2003-09-27]
+	Renamed phoenix-bin to MozillaFirebird-bin [grant 2003-09-27]
+	Renamed phoenix-bin-acroread to MozillaFirebird-bin-acroread [grant 2003-09-27]
+	Renamed phoenix-bin-acroread3 to MozillaFirebird-bin-acroread3 [grant 2003-09-27]
+	Renamed phoenix-bin-acroread5 to MozillaFirebird-bin-acroread5 [grant 2003-09-27]
+	Renamed phoenix-bin-flash to MozillaFirebird-bin-flash [grant 2003-09-27]
+	Renamed phoenix-bin-java to MozillaFirebird-bin-java [grant 2003-09-27]
+	Renamed phoenix-bin-nightly to MozillaFirebird-bin-nightly [grant 2003-09-27]
+	Renamed phoenix-bin-realplayer to MozillaFirebird-bin-realplayer [grant 2003-09-27]
