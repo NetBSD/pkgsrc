@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1998/01/16 17:07:19 agc Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/01/25 00:05:31 hubertf Exp $
 bin/mwm
 bin/mxmkmf
 bin/uil
@@ -136,8 +136,8 @@ lib/libMrm.so.0.1
 lib/libUil.so.0.1
 lib/libXm.so.0.1
 lib/libltc.a
-@exec ldconfig -m %D/lib || true
-@unexec ldconfig -m %D/lib || true
+@exec ldconfig -m %D/lib || /usr/bin/true
+@unexec ldconfig -m %D/lib || /usr/bin/true
 @dirrm lib/X11/mwm
 @dirrm lib/X11/lesstif
 @dirrm include/Xm
