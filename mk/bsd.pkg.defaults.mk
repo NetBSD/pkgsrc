@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.273 2004/08/05 07:20:33 jlam Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.274 2004/08/07 14:13:06 xtraeme Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1322,11 +1322,6 @@ JABBERD_LOGDIR?= ${VARBASE}/log/jabberd
 # files are placed.
 # Possible: any directory
 # Default: ${VARBASE}/log/jabberd
-
-JABBERD_METHOD?=	mysql
-# Used in jabberd to specify the default auth/reg/storage method.
-# Possible: mysql, pgsql, ldap, db or pam.
-# Default: mysql
 
 JABBERD_SPOOLDIR?= ${VARBASE}/spool/jabberd
 # Used in jabberd to specify the default directory under which server
