@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
+$NetBSD: md5,v 1.2 2001/03/11 16:59:03 mjl Exp $
 
-MD5 (WindowMaker-0.62.1.tar.bz2) = 9d2deac6de78af0766392803cb414c62
+SHA1 (WindowMaker-0.64.0.tar.bz2) = a79f91c2da4f72058b803ed380e044c5913ec7d8
