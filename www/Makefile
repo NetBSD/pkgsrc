@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.348 2004/10/01 19:21:19 wiz Exp $
+# $NetBSD: Makefile,v 1.349 2004/10/20 18:12:05 adrianp Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -177,6 +177,7 @@ SUBDIR+=	p5-HTML-Clean
 SUBDIR+=	p5-HTML-FillInForm
 SUBDIR+=	p5-HTML-FixEntities
 SUBDIR+=	p5-HTML-Format
+SUBDIR+=	p5-HTML-LinkExtractor
 SUBDIR+=	p5-HTML-Mason
 SUBDIR+=	p5-HTML-Parser
 SUBDIR+=	p5-HTML-PrettyPrinter
