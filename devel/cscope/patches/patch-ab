@@ -1,37 +1,23 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/04/20 07:03:55 itojun Exp $
-*** i386/Makefile.orig	Tue Apr 18 10:43:47 2000
---- i386/Makefile	Thu Apr 20 15:52:18 2000
-***************
-*** 42,48 ****
-  
-  INS= install
-! INSDIR=/usr/local/bin
-! INSMANDIR=/usr/local/man/man1
-  MANPAGE=../doc/cscope.1
-  
-  OBJ = dir.o crossref.o scanner.o lookup.o command.o display.o find.o \
---- 42,48 ----
-  
-  INS= install
-! INSDIR=${PREFIX}/bin
-! INSMANDIR=${PREFIX}/man/man1
-  MANPAGE=../doc/cscope.1
-  
-  OBJ = dir.o crossref.o scanner.o lookup.o command.o display.o find.o \
-***************
-*** 163,169 ****
-  
-  install: all
-  	$(INS) -s -m 755 $(PROGRAM) $(INSDIR)
-! 	$(INS) -m 755 $(MANPAGE) $(INSMANDIR)
-  
-  clean:
-  	rm -f *.o *.out lex.yy.c y.tab.? scanner.c egrep.c
---- 163,169 ----
-  
-  install: all
-  	$(INS) -s -m 755 $(PROGRAM) $(INSDIR)
-! #	$(INS) -m 755 $(MANPAGE) $(INSMANDIR)
-  
-  clean:
-  	rm -f *.o *.out lex.yy.c y.tab.? scanner.c egrep.c
+$NetBSD: patch-ab,v 1.2 2000/05/04 01:33:06 hubertf Exp $
+
+diff -x *.orig -urN ./common/display.c /disk1/cvs/pkgsrc/devel/cscope/work.i386.unpatched/cscope-13.0/common/display.c
+--- ./common/display.c	Tue Apr 18 03:39:04 2000
++++ /disk1/cvs/pkgsrc/devel/cscope/work.i386.unpatched/cscope-13.0/common/display.c	Thu May  4 03:24:28 2000
+@@ -43,6 +43,9 @@
+ #endif
+ #include <curses.h>	/* LINES, COLS */
+ #include <setjmp.h>	/* jmp_buf */
++#ifdef __NetBSD__
++#include <errno.h>
++#endif
+ 
+ static char const rcsid[] = "$Id: patch-ab,v 1.2 2000/05/04 01:33:06 hubertf Exp $";
+ 
+@@ -515,7 +518,6 @@
+ 	static	long	start;
+ 	long	now;
+ 	char	msg[MSGLEN + 1];
+-	long	time();
+ 
+ 	/* save the start time */
+ 	if (searchcount == 0) {
