@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/02/17 18:47:25 jtb Exp $
+
+--- ../gcc-2.95.3/libiberty/Makefile.in.orig	Thu Aug 29 20:05:50 2002
++++ ../gcc-2.95.3/libiberty/Makefile.in
+@@ -57,7 +57,7 @@ CFLAGS = @CFLAGS@
+ LIBCFLAGS = $(CFLAGS)
+ RANLIB = @RANLIB@
+ 
+-PICFLAG =
++PICFLAG = -fPIC -DPIC
+ 
+ MAKEOVERRIDES =
+ 

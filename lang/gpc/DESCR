@@ -1,0 +1,24 @@
+GNU Pascal is the free 32/64-bit Pascal compiler of the GNU Compiler
+Collection (GNU CC or GCC). It combines a Pascal front-end with the
+proven GCC back-end for code generation and optimization.  Unlike
+utilities such as p2c, this is a true compiler, not just a converter.
+
+The purpose of the GNU Pascal project is to produce a Pascal compiler
+(called GNU Pascal or GPC) which
+
+   * combines the clarity of Pascal with powerful tools suitable for
+     real-life programming,
+   * supports both the Pascal standard and the Extended Pascal standard
+     as defined by ISO, ANSI and IEEE (ISO 7185:1990, ISO/IEC
+     10206:1991, ANSI/IEEE 770X3.160-1989),
+   * supports other Pascal standards (UCSD Pascal, Borland Pascal,
+     parts of Borland Delphi and Pascal-SC) in so far as this serves the
+     goal of clarity and usability,
+   * may be distributed under GNU license conditions, and
+   * can generate code for and run on any computer for which the GNU C
+     compiler can generate code and run on.
+
+The current release implements Standard Pascal (ISO 7185, levels 0 and
+1), a large subset of Extended Pascal (ISO 10206, aiming for full
+compliance), is highly compatible to Borland Pascal (version 7.0) with
+some Delphi extensions, and provides a lot of useful GNU extensions.

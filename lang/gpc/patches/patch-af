@@ -1,0 +1,37 @@
+$NetBSD: patch-af,v 1.1.1.1 2003/02/17 18:47:25 jtb Exp $
+
+--- ../gcc-2.95.3/gcc/p/Make-lang.in.orig	Fri Jan 17 21:44:39 2003
++++ ../gcc-2.95.3/gcc/p/Make-lang.in	Fri Jan 17 21:46:16 2003
+@@ -44,9 +44,9 @@
+ # - define the names for selecting the language in LANGUAGES.
+ 
+ GPC_GCC_VERSION_OBJS=
+-GPC_GCC_VERSION_OBJS=choose-temp.o pexecute.o # gcc-2.8.1-ONLY
++#GPC_GCC_VERSION_OBJS=choose-temp.o pexecute.o # gcc-2.8.1-ONLY
+ GPC_GCC_VERSION_MAN1DIR_SUFFIX=man1
+-GPC_GCC_VERSION_MAN1DIR_SUFFIX= # gcc-2.8.1-ONLY
++#GPC_GCC_VERSION_MAN1DIR_SUFFIX= # gcc-2.8.1-ONLY
+ 
+ RTSSRCDIR=$(srcdir)/p/rts
+ 
+@@ -78,8 +78,8 @@
+ PASCAL_INSTALL_DOC=pascal.real-install-doc
+ 
+ # Where to install the documentation and demos (relative to the prefix)
+-DOC_DIR=doc/gpc
+-docdir=$(prefix)/$(DOC_DIR)
++DOC_DIR=share/doc/gpc
++docdir=$(PREFIX)/$(DOC_DIR)
+ demodir=$(docdir)/demos
+ docdemodir=$(docdir)/docdemos
+ 
+@@ -677,8 +677,7 @@
+ 	  chmod a+x $(bindir)/$(GPC_INSTALL_NAME)$(exeext); \
+ 	fi
+ 	rm -f $(bindir)/gpc-run
+-	$(INSTALL_PROGRAM) $(srcdir)/p/script/gpc-run $(bindir)/gpc-run
+-	chmod a+x $(bindir)/gpc-run
++	$(BSD_INSTALL_SCRIPT) $(srcdir)/p/script/gpc-run $(bindir)/gpc-run
+ 
+ pascal.install-lib: pascal.install-dir pascal.rts
+ 	if [ -f libgpc.a ]; then \

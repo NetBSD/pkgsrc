@@ -1,0 +1,7 @@
+$NetBSD: patch-ae,v 1.1.1.1 2003/02/17 18:47:24 jtb Exp $
+
+--- ../gcc-2.95.3/config/mt-sparcpic.orig	Thu Feb  5 19:33:04 1998
++++ ../gcc-2.95.3/config/mt-sparcpic
+@@ -1 +1 @@
+-PICFLAG_FOR_TARGET=`case "${LIBCFLAGS} ${LIBCXXFLAGS}" in *-fpic* ) echo -fpic ;; * ) echo -fPIC ;; esac`
++PICFLAG_FOR_TARGET=`case '${LIBCFLAGS} ${LIBCXXFLAGS}' in *-fpic* ) echo -fpic ;; * ) echo -fPIC ;; esac`
