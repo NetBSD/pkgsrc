@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2005/01/20 00:43:15 xtraeme Exp $
+# $NetBSD: Makefile,v 1.24 2005/01/24 16:49:06 xtraeme Exp $
 #
 
-DISTNAME=		zsnes141src
-PKGNAME=		zsnes-1.41
+DISTNAME=		zsnes142src
+PKGNAME=		zsnes-1.42
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=zsnes/}
 
@@ -16,7 +16,7 @@ ONLY_FOR_PLATFORM=	*-*-i386
 
 BUILD_TARGET=		zsnes
 
-WRKSRC=			${WRKDIR}/zsnes_1_41/src
+WRKSRC=			${WRKDIR}/zsnes_1_42/src
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 USE_BUILDLINK3=		yes

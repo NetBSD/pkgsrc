@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2005/01/20 00:43:15 xtraeme Exp $
+$NetBSD: distinfo,v 1.6 2005/01/24 16:49:06 xtraeme Exp $
 
-SHA1 (zsnes141src.tar.gz) = 7f6d80a5d1aefafaf33c7cdd1967a617e8ebceb8
-Size (zsnes141src.tar.gz) = 1099608 bytes
+SHA1 (zsnes142src.tar.gz) = d38ca8c1b4168edc5bb5815f504b52654100bc4b
+Size (zsnes142src.tar.gz) = 1102840 bytes
 SHA1 (patch-ab) = fdcec7ca532199189821bb89ea9baaa3908bd449
 SHA1 (patch-ac) = 76e640aec3816eb4cbbfbe0dff1fcd2fa52f7876
 SHA1 (patch-ad) = 3c79a4c3ffe65151cd4d299b9837c6d20c8f8522
