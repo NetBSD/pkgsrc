@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/03/26 17:56:09 zuntum Exp $
+# $NetBSD: Makefile,v 1.14 2001/10/10 11:17:28 abs Exp $
 # FreeBSD Id: ports/net/djbdns/Makefile,v 1.4 2000/09/28 18:18:41 nbm Exp
 
 DISTNAME=	djbdns-1.05
@@ -30,6 +30,10 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}				\
 
 ALL_TARGET=	it
 INSTALL_TARGET=	setup check
+
+.if (${MACHINE_ARCH} == "arm32" && ${CFLAGS} == "-O2")
+CFLAGS=		-O0
+.endif
 
 post-extract:
 	${SED} "s|/usr/bin/perl|${LOCALBASE}/bin/perl|"			\
