@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/08/11 22:08:33 recht Exp $
+# $NetBSD: Makefile,v 1.9 2003/09/14 16:43:53 recht Exp $
 #
 
 DISTNAME=	pygoogle-0.5.2
@@ -19,6 +19,6 @@ USE_BUILDLINK2=	yes
 post-extract:
 	${RM} ${WRKSRC}/soap.py
 
-.include "../../net/py-soappy/buildlink2.mk"
 .include "../../lang/python/extension.mk"
+.include "../../net/py-soappy/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
