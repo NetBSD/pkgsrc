@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/05/21 14:06:37 frueauf Exp $
+# $NetBSD: Makefile,v 1.8 1998/06/20 09:20:39 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/04/30 03:18:06 asami Exp
 #
 
@@ -12,8 +12,11 @@ MAINTAINER=	packages@netbsd.org
 
 WRKSRC=		${WRKDIR}/ls
 
-# Do not list MAN/CAT pages here. It will confuse if MANZ is set.
-# The pkg uses BSD-style-Makefiles itself, so it does the right thing.
+.include "../../mk/bsd.prefs.mk"
+
+.ifdef MANZ
+MANCOMPRESSED=	yes
+.endif
 
 pre-patch:
 	${CP} ${WRKSRC}/ls.1 ${WRKSRC}/colorls.1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/04/20 11:56:20 frueauf Exp $
+# $NetBSD: Makefile,v 1.8 1998/06/20 09:20:38 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/26 23:09:14 jseger Exp
 #
 
@@ -12,8 +12,11 @@ MAINTAINER=	packages@netbsd.org
 
 NO_CONFIGURE=	yes
 
-# Do not list MAN/CAT pages here. It will confuse if MANZ is set.
-# The pkg uses BSD-style-Makefiles itself, so it does the right thing.
+.include "../../mk/bsd.prefs.mk"
+
+.ifdef MANZ
+MANCOMPRESSED=	yes
+.endif
 
 post-extract:
 	${MV} ${WRKSRC}/Bonnie.c ${WRKSRC}/bonnie.c
