@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/27 12:06:55 wennmach Exp $
+# $NetBSD: Makefile,v 1.2 2001/03/27 20:15:02 wennmach Exp $
 
 DISTNAME=	octave-2.1.33
 CATEGORIES=	math
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.che.wisc.edu/octave/
-COMMENT=	A high-level language, primarily intended for numerical computations
+COMMENT=	High-level language, primarily intended for numerical computations
 
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 DEPENDS+=	readline>=4.0:../../devel/readline
@@ -33,19 +33,23 @@ LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
 INFO_FILES=	octave.info liboctave.info
 LIBOCTAVE_INFO=	liboctave.info liboctave.info-1 \
 		liboctave.info-2 liboctave.info-3
-OCTAVE_DOC=	faq/Octave-FAQ.ps faq/Octave-FAQ_toc.html \
-		interpreter/octave.ps interpreter/octave_*.html \
-		liboctave/liboctave.ps liboctave/liboctave_*.html \
-		refcard/refcard-a4.ps refcard/refcard-legal.ps \
-		refcard/refcard-letter.ps
+OCTAVE_DOC=	faq/Octave-FAQ.ps interpreter/octave.ps \
+		liboctave/liboctave.ps refcard/refcard-a4.ps \
+		refcard/refcard-legal.ps  refcard/refcard-letter.ps
+OCTAVE_HTML=	faq/Octave-FAQ_toc.html interpreter/octave_*.html \
+		liboctave/liboctave_*.html 
 
 post-install:
-	${MKDIR} ${PREFIX}/share/octave/doc
 .for file in ${LIBOCTAVE_INFO}
 	${INSTALL_DATA} ${WRKSRC}/doc/liboctave/${file} ${PREFIX}/info
 .endfor
+	${MKDIR} ${PREFIX}/share/doc/octave
 .for file in ${OCTAVE_DOC}
-	${INSTALL_DATA} ${WRKSRC}/doc/${file} ${PREFIX}/share/octave/doc
+	${INSTALL_DATA} ${WRKSRC}/doc/${file} ${PREFIX}/share/doc/octave
+.endfor
+	${MKDIR} ${PREFIX}/share/doc/html/octave
+.for file in ${OCTAVE_HTML}
+	${INSTALL_DATA} ${WRKSRC}/doc/${file} ${PREFIX}/share/doc/html/octave
 .endfor
 
 .include <../../mk/bsd.pkg.mk>
