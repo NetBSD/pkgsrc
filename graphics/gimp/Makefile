@@ -1,0 +1,80 @@
+# New ports collection Makefile for: gimp
+# Version required:	0.99.18
+# Date created:         29 January 1998
+# Whom:                 Bernd Sieker <bsieker@techfak.uni-bielefeld.de>
+#
+# $NetBSD: Makefile,v 1.1 1998/02/03 10:17:01 tron Exp $
+
+DISTNAME=	gimp-0.99.18
+CATEGORIES=	graphics
+MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/0.99/0.99.18/  \
+		ftp://infosoc.uni-koeln.de/pub/ftp.gimp.org/pub/gimp/0.99/0.99.18/ \
+		ftp://ftp.flirble.org/pub/X/gimp/pub/gimp/0.99/0.99.18/
+
+MAINTAINER=	bsieker@techfak.uni-bielefeld.de
+
+GIMP_DATA_MIN=	gimp-data-min-0.99b
+GIMP_DATA_EXT=	gimp-data-extras-0.99a
+
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
+		${GIMP_DATA_MIN}${EXTRACT_SUFX}
+
+.if !defined(GIMP_SMALL_DATA)
+DISTFILES+=	${GIMP_DATA_EXT}${EXTRACT_SUFX}
+.endif
+
+RUN_DEPENDS=	${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
+
+BUILD_DEPENDS=	${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
+
+LIB_DEPENDS=	jpeg.7.:${PORTSDIR}/graphics/jpeg \
+		mpeg.1.2:${PORTSDIR}/graphics/mpeg-lib \
+		png.0.96:${PORTSDIR}/graphics/png \
+		tiff.3.4:${PORTSDIR}/graphics/tiff \
+		tcl80.1.0:${PORTSDIR}/lang/tcl80 \
+		tk80.1.0:${PORTSDIR}/x11/tk80 \
+		gtk.1.0:${PORTSDIR}/x11/gtk \
+
+GNU_CONFIGURE=	yes
+CONFIGURE_ENV=	LDFLAGS="-L${PREFIX}/lib -L${X11BASE}/lib"
+
+USE_GMAKE=	yes
+
+CFLAGS=		-pipe -O2 -I${PREFIX}/include -I${X11BASE}/include
+
+pre-fetch:
+.if !defined(GIMP_SMALL_DATA)
+	@${ECHO_MSG} " "
+	@${ECHO_MSG} "    Now installing large data set (5.5 MB)."
+	@${ECHO_MSG} " "
+	@${ECHO_MSG} "    If you only want the small data set (0.7 MB), abort"
+	@${ECHO_MSG} "    and use \"make GIMP_SMALL_DATA=yes\"."
+	@${ECHO_MSG} " "
+.else
+	@${ECHO_MSG} " "
+	@${ECHO_MSG} "    Now installing small data set. (0.7 MB)"
+	@${ECHO_MSG} " "
+.endif
+
+post-configure:
+	@${ECHO_MSG} "--> now configuring in ${GIMP_DATA_MIN}"
+	@(cd ${WRKDIR}/${GIMP_DATA_MIN} && ${SETENV} ${CONFIGURE_ENV} ${SH} \
+		${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS} )
+.if !defined(GIMP_SMALL_DATA)
+	@${ECHO_MSG} "--> now configuring in ${GIMP_DATA_EXT}"
+	@(cd ${WRKDIR}/${GIMP_DATA_EXT} && ${SETENV} ${CONFIGURE_ENV} ${SH} \
+		${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS} )
+.endif
+
+post-install:
+	${PREFIX}/bin/install-info ${PREFIX}/info/pdb.info   ${PREFIX}/info/dir
+	@${ECHO_MSG} "--> now installing in ${GIMP_DATA_MIN}"
+	@(cd ${WRKDIR}/${GIMP_DATA_MIN} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} \
+		${MAKE_FLAGS} ${MAKEFILE} ${INSTALL_TARGET})
+.if !defined(GIMP_SMALL_DATA)
+	@${ECHO_MSG} "--> now installing in ${GIMP_DATA_EXT}"
+	@(cd ${WRKDIR}/${GIMP_DATA_EXT} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} \
+		${MAKE_FLAGS} ${MAKEFILE} ${INSTALL_TARGET})
+.endif
+
+.include <bsd.port.mk>
