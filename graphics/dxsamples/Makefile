@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2004/01/24 15:46:43 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/04/20 22:11:48 drochner Exp $
 
-DISTNAME=	dxsamples-4.2.0
+DISTNAME=	dxsamples-4.3.2
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.research.ibm.com/dx/srcDownload/srcArchive/
+MASTER_SITES=	http://opendx.npaci.edu/source/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.research.ibm.com/dx/
