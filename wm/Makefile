@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.40 2003/02/16 08:05:30 salo Exp $
+# $NetBSD: Makefile,v 1.41 2003/03/12 03:22:25 jschauma Exp $
 #
 
 COMMENT=	window managers (for X)
 
 SUBDIR+=	9wm
+SUBDIR+=	aewm++
 SUBDIR+=	afterstep
 SUBDIR+=	amaterus
 SUBDIR+=	amiwm
