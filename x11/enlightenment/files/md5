@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 1999/03/29 23:21:18 garbled Exp $
+$NetBSD: md5,v 1.3 1999/10/28 04:58:36 jlam Exp $
 
-MD5 (enlightenment-0.15.4.tar.gz) = e7f6b4fda0d61fa739a143986177a75c
+MD5 (enlightenment-0.16.0.tar.gz) = 828c4278ddb2ecbbcde86cb316fb0f5c
