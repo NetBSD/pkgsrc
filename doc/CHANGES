@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8137 2004/11/29 10:12:58 adam Exp $
+$NetBSD: CHANGES,v 1.8138 2004/11/29 10:15:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5626,3 +5626,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated krusader to 1.50 [markd 2004-11-29]
 	Removed pfaedit [adam 2004-11-29]
 	Added fontforge-20041115 [adam 2004-11-29]
+	Updated mftrace to 1.0.35nb1 [adam 2004-11-26]
