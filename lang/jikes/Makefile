@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/10/06 04:33:31 tv Exp $
+# $NetBSD: Makefile,v 1.29 2004/11/13 22:04:53 jlam Exp $
 #
 
 DISTNAME=	jikes-1.22
@@ -14,7 +14,6 @@ COMMENT=	Java source to byte-code compiler
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-USE_GCC_SHLIB=		yes
 UNLIMIT_RESOURCES=      datasize
 
 # enable "-source 1.5" -- not complete, but does not break normal compiles

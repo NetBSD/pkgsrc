@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2004/06/02 15:43:09 minskim Exp $
+# $NetBSD: Makefile.common,v 1.11 2004/11/13 22:04:53 jlam Exp $
 
 DISTNAME=	wmx-6
 WMX_VERS=	6.0
@@ -13,9 +13,9 @@ CONFLICTS+=	wmx-[0-9]* wmx-gnome-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_LANGUAGES=	c c++
 USE_BUILDLINK3=	yes
 USE_X11BASE=	# defined
-USE_GCC_SHLIB=	# defined
 GNU_CONFIGURE=	# defined
 ALL_TARGET=	depend all
 

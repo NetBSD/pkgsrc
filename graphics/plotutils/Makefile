@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/10/03 00:14:56 tv Exp $
+# $NetBSD: Makefile,v 1.33 2004/11/13 22:04:53 jlam Exp $
 #
 
 DISTNAME=		plotutils-2.4.1
@@ -15,7 +15,6 @@ CONFLICTS+=		plotutils-nox11-[0-9]*
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
-USE_GCC_SHLIB=		YES
 USE_LANGUAGES=		c c++
 USE_X11=		YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2004/10/03 00:18:36 tv Exp $
+# $NetBSD: Makefile,v 1.67 2004/11/13 22:04:53 jlam Exp $
 
 DISTNAME=	kdelibs-2.2.2
 PKGREVISION=	13
@@ -10,7 +10,7 @@ COMMENT=	Support libraries for the KDE integrated X11 desktop
 CONFLICTS=	arts-[1-9]*
 
 USE_BUILDLINK3=		YES
-USE_GCC_SHLIB=		YES
+USE_LANGUAGES=		c c++
 
 CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
 CONFIGURE_ENV+=		PKG_CONFIG=${WRKDIR}/must-not-exist

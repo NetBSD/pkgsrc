@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2004/11/13 21:28:28 jlam Exp $
+# $NetBSD: Makefile.common,v 1.3 2004/11/13 22:04:52 jlam Exp $
 
 DISTNAME=		mysql-3.23.58
 CATEGORIES=		databases
@@ -10,7 +10,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.mysql.com/
 
 EXTRACT_USING_PAX=	# defined
-USE_GCC_SHLIB=		# defined
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -28,6 +27,7 @@ MYSQL_DATADIR?=		${VARBASE}/mysql
 MYSQL_CHARSET?=		latin1
 MYSQL_EXTRA_CHARSET?=	all
 
+USE_LANGUAGES=		c c++
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
 USE_GNU_TOOLS+=		make

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/10/03 00:15:01 tv Exp $
+# $NetBSD: Makefile,v 1.14 2004/11/13 22:04:53 jlam Exp $
 #
 
 DISTNAME=		japhar-0.08
@@ -15,7 +15,7 @@ ONLY_FOR_PLATFORM=	SunOS-*-*       # untested on NetBSD
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_GNU_TOOLS+=		make
-USE_GCC_SHLIB=		yes
+USE_LANGUAGES=		c c++
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig ${WRKSRC}/lib/libffi/ltconfig
 
 INFO_FILES=	japhar.info
