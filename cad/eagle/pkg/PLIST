@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/04/26 19:31:05 rh Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/06/05 16:49:09 dillo Exp $
 bin/eagle
 eagle/README
 eagle/bin/eagle
@@ -365,20 +365,19 @@ eagle/lbr/chipcard-siemens.lbr
 eagle/lbr/con-3m.lbr
 eagle/lbr/con-amp-champ.lbr
 eagle/lbr/con-amp-mt.lbr
-eagle/lbr/con-amp-mt6.lbr
 eagle/lbr/con-amp-quick.lbr
 eagle/lbr/con-amp.lbr
 eagle/lbr/con-amphenol.lbr
 eagle/lbr/con-berg.lbr
 eagle/lbr/con-chipcard-iso7816.lbr
 eagle/lbr/con-coax.lbr
-eagle/lbr/con-commcon.lbr
 eagle/lbr/con-conrad.lbr
 eagle/lbr/con-deutsch.lbr
 eagle/lbr/con-dil.lbr
 eagle/lbr/con-erni.lbr
 eagle/lbr/con-friwo.lbr
 eagle/lbr/con-harting-h.lbr
+eagle/lbr/con-harting-ml.lbr
 eagle/lbr/con-harting-v.lbr
 eagle/lbr/con-harting.lbr
 eagle/lbr/con-hirschmann.lbr
@@ -386,9 +385,7 @@ eagle/lbr/con-jst.lbr
 eagle/lbr/con-lsta.lbr
 eagle/lbr/con-lstb.lbr
 eagle/lbr/con-lumberg.lbr
-eagle/lbr/con-ml.lbr
 eagle/lbr/con-molex.lbr
-eagle/lbr/con-msf.lbr
 eagle/lbr/con-panduit.lbr
 eagle/lbr/con-pc.lbr
 eagle/lbr/con-pc104.lbr
@@ -462,7 +459,6 @@ eagle/lbr/piher.lbr
 eagle/lbr/pinhead.lbr
 eagle/lbr/plcc-socket.lbr
 eagle/lbr/pld-intel.lbr
-eagle/lbr/polcap.lbr
 eagle/lbr/pot-vitrohm.lbr
 eagle/lbr/pot-xicor.lbr
 eagle/lbr/pot.lbr
@@ -544,6 +540,7 @@ eagle/scr/mylayers.scr
 eagle/scr/nofill.scr
 eagle/ulp/DESCRIPTION
 eagle/ulp/bom.ulp
+eagle/ulp/cmd_change_swap_layer.ulp
 eagle/ulp/cmd_rename-in-lbr.ulp
 eagle/ulp/cmd_renumber.ulp
 eagle/ulp/cmd_showzoom.ulp
@@ -554,6 +551,7 @@ eagle/ulp/count.ulp
 eagle/ulp/del_devices.ulp
 eagle/ulp/del_empty_devices.ulp
 eagle/ulp/del_pack_sym.ulp
+eagle/ulp/drill-aid.ulp
 eagle/ulp/drillcfg.ulp
 eagle/ulp/dxf.ulp
 eagle/ulp/eagle.bmp
@@ -603,6 +601,7 @@ eagle/ulp/prevpac.ulp
 eagle/ulp/prevpacdescript.ulp
 eagle/ulp/psdraw4.ulp
 eagle/ulp/remove_dev-sym-pac.ulp
+eagle/ulp/rename-in-lbr.ulp
 eagle/ulp/useful_routines.ulp
 eagle/uninstall
 eagle/userinstall
