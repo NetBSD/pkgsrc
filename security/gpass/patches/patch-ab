@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/04/29 08:01:24 jmmv Exp $
+
+--- gpass.desktop.in.orig	2004-04-27 01:58:41.000000000 +0200
++++ gpass.desktop.in
+@@ -1,10 +1,10 @@
+-
+ [Desktop Entry]
+ Name=Password Manager
+-Comment=Password Manager Version 0.1
+-Exec=passwordmanager
+-Icon=@PACKAGE_PIXMAPS_DIR@/ 
++Comment=Manages your password collection
++Exec=gpass
++#Icon= Not available yet
+ Terminal=false
+ MultipleArgs=false
+ Type=Application
+-
++StartupNotify=true
++Categories=GNOME;Application;Utility;
