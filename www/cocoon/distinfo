@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:12:38 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/21 21:49:51 wiz Exp $
 
 SHA1 (Cocoon-1.8.2.tar.gz) = 5aada2f32a3019f32c9be7b7c920a6c53e62a28e
+Size (Cocoon-1.8.2.tar.gz) = 5005122 bytes
 SHA1 (patch-aa) = 162c9352b00aac0746e0bf8e0de2fa60fed6dc83

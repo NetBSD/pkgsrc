@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:12:50 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/21 21:54:11 wiz Exp $
 
 SHA1 (jakarta-tomcat-3.2.1-src.tar.gz) = c28d97378dcc1c9a15d15cae404733674ae91c9c
+Size (jakarta-tomcat-3.2.1-src.tar.gz) = 920745 bytes
 SHA1 (patch-aa) = 7d2810e5306c68e416f04b26e505504924488f98
 SHA1 (patch-ab) = 6bbd0e0655dbac92dfaff25274d6c68b2deadf0d
 SHA1 (patch-ac) = 9d5927d7cf660cc0e8d9b8aa27543436dd503aec

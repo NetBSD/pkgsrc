@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:12:40 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/21 21:45:45 wiz Exp $
 
 SHA1 (curl-7.7.1.tar.gz) = df5963aa4211096fc289d438f34b412756983249
+Size (curl-7.7.1.tar.gz) = 494935 bytes
