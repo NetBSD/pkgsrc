@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.14 2004/05/04 21:10:13 jmmv Exp $
+$NetBSD: distinfo,v 1.15 2004/08/31 14:18:32 jmmv Exp $
 
-SHA1 (libgnome-2.6.1.1.tar.bz2) = 09a7780136ec290434c3b2c106acd2e2e192e98b
-Size (libgnome-2.6.1.1.tar.bz2) = 1093492 bytes
+SHA1 (libgnome-2.6.1.2.tar.bz2) = 7251a07620dbb76fbf31121d9a7a9e309ef0c3e8
+Size (libgnome-2.6.1.2.tar.bz2) = 1050839 bytes
 SHA1 (patch-aa) = 809d964c6233d1a30eb195272a59970e497caea5
 SHA1 (patch-ab) = 67f74ada3cc07c686a4c7540df45064ef886524a
 SHA1 (patch-ac) = 3322e5de39ebe36b2174fceec4adecb6b168a4f1
