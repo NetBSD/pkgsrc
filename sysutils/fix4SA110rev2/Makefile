@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 22:53:34 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/31 09:17:45 abs Exp $
 #
 
 DISTNAME=	fix4SA110rev2-1.0
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/arch/arm32/misc/
