@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2002/09/21 10:29:40 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/07/09 14:04:06 agc Exp $
 
 .if !defined(TCL_BUILDLINK2_MK)
 TCL_BUILDLINK2_MK=	# defined
@@ -9,7 +9,8 @@ BUILDLINK_PKGSRCDIR.tcl?=	../../lang/tcl
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.tcl=tcl
 BUILDLINK_PREFIX.tcl_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.tcl=	include/tcl.h
+BUILDLINK_FILES.tcl=	bin/tclsh*
+BUILDLINK_FILES.tcl+=	include/tcl.h
 BUILDLINK_FILES.tcl+=	include/tclDecls.h
 BUILDLINK_FILES.tcl+=	include/tclPlatDecls.h
 BUILDLINK_FILES.tcl+=	include/tcl/*/*.h
