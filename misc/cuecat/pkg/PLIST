@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/13 13:55:42 wiz Exp $
+bin/read_cuecat
+share/doc/cuecat/README
+@dirrm share/doc/cuecat

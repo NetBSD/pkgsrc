@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2001/02/13 13:55:42 wiz Exp $
+
+Please note that you can only use the executable "read_cuecat"
+on the console.
+
+(The startup error "WSKBDIO_GETMODE: Inappropriate ioctl for device"
+will remind you if you forget.)
+
+===========================================================================
