@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 1999/06/04 15:10:15 agc Exp $
+$NetBSD: patch-aa,v 1.4 2004/06/12 12:44:33 grant Exp $
 
---- Imakefile.orig	Mon Jun 19 23:20:55 1995
-+++ Imakefile	Fri Jun  4 15:59:01 1999
-@@ -23,7 +23,7 @@
+--- Imakefile.orig	1995-06-20 08:20:55.000000000 +1000
++++ Imakefile
+@@ -23,7 +23,7 @@ CCOPTIONS=-m68881
  #endif
  #else
          DEFINES = -DSYSV -DSVR4 -DSUNOS4 $(DEFGDB)
@@ -11,14 +11,14 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:10:15 agc Exp $
  #endif
  #else
          DEFINES = -DOLDSUNOS -DNEED_STRSTR $(DEFGDB)
-@@ -72,6 +72,10 @@
- #else
- DEFINES = -DOLDSUNOS $(DEFGDB) -DNEXTOS_2
+@@ -74,6 +74,10 @@ DEFINES = -DOLDSUNOS $(DEFGDB) -DNEXTOS_
  #endif
-+#endif
-+
-+#ifdef NetBSDArchitecture
-+DEFINES = $(DEFGDB)
  #endif
  
++#ifdef NetBSDArchitecture
++DEFINES = $(DEFGDB)
++#endif
++
  # Add to use new multi window format
+ #DEFINES+=-DNEW_INTERFACE
+ # Add to open all windows at startup
