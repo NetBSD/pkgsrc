@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4848 2004/02/15 22:27:05 minskim Exp $
+$NetBSD: CHANGES,v 1.4849 2004/02/15 22:30:44 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -858,3 +858,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated urlget to 1.4 [kim 2004-02-15]
 	Added py-ao-0.81 [minskim 2004-02-15]
 	Added py-mad-0.5.1 [minskim 2004-02-15]
+	Updated ex to 20040103 [itojun 2004-02-15]
