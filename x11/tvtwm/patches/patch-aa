@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/06/19 14:36:58 mrg Exp $
+$NetBSD: patch-aa,v 1.2 1999/07/21 04:17:50 mrg Exp $
 
 --- Imakefile.orig	Fri Feb  3 11:25:44 1995
 +++ Imakefile	Sun Jun 20 00:19:00 1999
@@ -25,7 +25,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/06/19 14:36:58 mrg Exp $
 -InstallNonExecFile(system.twmrc,$(TWMDIR))
 -/* InstallNamedProg(ssetroot,xsetroot,$(BINDIR)) */
 +InstallNonExecFile(system.tvtwmrc,$(TWMDIR))
-+InstallNamedProg(ssetroot,xsetroot,$(BINDIR))
++InstallNamedProg(ssetroot,ssetroot,$(BINDIR))
  #endif
  
  gram.h gram.c: gram.y
