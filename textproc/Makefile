@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2001/04/07 10:33:10 rh Exp $
+# $NetBSD: Makefile,v 1.84 2001/04/12 19:24:38 manu Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -81,6 +81,7 @@ SUBDIR+=	xalan-c
 SUBDIR+=	xalan-j
 SUBDIR+=	xerces-c
 SUBDIR+=	xerces-j
+SUBDIR+=	xerces-p
 SUBDIR+=	xml-i18n-tools
 SUBDIR+=	xp
 SUBDIR+=	xt
