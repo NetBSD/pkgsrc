@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/01/20 10:03:41 skrll Exp $
+# $NetBSD: Makefile,v 1.12.2.1 2003/03/02 10:35:00 agc Exp $
 
 DISTNAME=	kdemultimedia-3.0.5a
 CATEGORIES=	audio
@@ -19,6 +19,8 @@ CONFIGURE_ARGS+=	--enable-audio=oss
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
 PTHREAD_OPTS+=	require
+
+UNLIMIT_RESOURCES+=	datasize
 
 FOO_MAIN_FILES= \
 	kaboodle/kaboodle_main.cpp \
