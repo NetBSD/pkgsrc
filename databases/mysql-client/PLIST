@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/06/29 22:28:17 seb Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/09/28 09:03:52 jdolecek Exp $
 bin/msql2mysql
 bin/mysql
 bin/mysqlcheck
@@ -62,7 +62,7 @@ share/mysql/my-huge.cnf
 share/mysql/my-large.cnf
 share/mysql/my-medium.cnf
 share/mysql/my-small.cnf
-share/mysql/mysql-3.23.49.spec
+share/mysql/mysql-3.23.51.spec
 share/mysql/mysql-log-rotate
 @dirrm share/mysql
 @dirrm lib/mysql

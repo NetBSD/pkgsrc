@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3560 2003/09/27 23:48:25 jschauma Exp $
+$NetBSD: CHANGES,v 1.3561 2003/09/28 09:03:52 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3986,3 +3986,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added profit-2.2 [jschauma 2003-09-27]
 	Added sewer-2.6 [jschauma 2003-09-27]
 	Added stride-20030804 [jschauma 2003-09-27]
+	Updated mysql-client to 3.23.51nb1 [jdolecek 2003-09-28]
+	Updated mysql-server to 3.23.51nb1 [jdolecek 2003-09-28]
