@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.7 1998/04/22 14:22:45 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/06/18 10:45:54 is Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/10/15 20:35:20 fenner Exp 
 #
 
-DISTNAME=	sdr.V2.3a1
-PKGNAME=	sdr-2.3a1
+DISTNAME=	sdr.V2.4a7n
+PKGNAME=	sdr-2.4a7-mmrz
 CATEGORIES=	mbone tk80
-MASTER_SITES=	ftp://cs.ucl.ac.uk/mice/sdr/
+MASTER_SITES=	http://north.east.isi.edu/sdr/
 
 MAINTAINER=	is@netbsd.org
 
 DEPENDS+=	tk-8.0p2:../../x11/tk80
 
-RESTRICTED=	"Contains DES encryption"
 MIRROR_DISTFILE=	no
 NO_WRKSUBDIR=	yes
 USE_GMAKE=	yes
