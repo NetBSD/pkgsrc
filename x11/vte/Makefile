@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/10/03 00:18:38 tv Exp $
+# $NetBSD: Makefile,v 1.13 2004/11/06 16:52:57 minskim Exp $
 #
 
 DISTNAME=	vte-0.11.11
@@ -29,7 +29,12 @@ PKGCONFIG_OVERRIDE+=    vte.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../fonts/Xft2/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libzvt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
