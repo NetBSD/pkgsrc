@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/11/09 14:26:33 itojun Exp $
+# $NetBSD: Makefile,v 1.16 2001/01/12 23:33:38 jlam Exp $
 
 DISTNAME=	bison-1.28
 CATEGORIES=	devel
@@ -16,5 +16,6 @@ INFO_FILES=	bison.info
 USE_LIBINTL=	YES
 CPPFLAGS+=	-Dunix				# for $TMPDIR parsing
 CONFIGURE_ARGS+=--without-included-gettext
+CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 
 .include "../../mk/bsd.pkg.mk"
