@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/26 05:52:57 epg Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/27 01:57:05 epg Exp $
 #
 
 DISTNAME=	trac-0.5.1
@@ -15,6 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-subversion>=0.37:../../devel/py-subversion
 
 PYDISTUTILSPKG=	YES
 PY_PATCHPLIST=	YES
+PYTHON_PATCH_SCRIPTS=	cgi-bin/trac.cgi
 
 post-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/libexec/cgi-bin
