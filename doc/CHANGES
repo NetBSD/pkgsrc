@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5838 2004/05/06 13:38:14 taca Exp $
+$NetBSD: CHANGES,v 1.5839 2004/05/06 13:41:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2377,3 +2377,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated chasen-base to 2.3.3 [taca 2004-05-06]
 	Updated ipadic to 2.7.0 [taca 2004-05-06]
 	Updated chasen to 2.3.3 [taca 2004-05-06]
+	Updated namazu to 2.0.13 [taca 2004-05-06]
