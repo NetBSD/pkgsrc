@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/05/31 16:17:56 rh Exp $
+@comment $NetBSD: PLIST.mi,v 1.1 2000/07/05 23:49:30 hubertf Exp $
 bin/gdk-pixbuf-config
 include/gdk-pixbuf/gdk-pixbuf.h
 include/gdk-pixbuf/gdk-pixbuf-features.h
