@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2004/02/23 19:02:19 jmmv Exp $
+# $NetBSD: Makefile,v 1.97 2004/02/25 22:05:56 jmmv Exp $
 #
 
 COMMENT=	Editors
@@ -46,6 +46,7 @@ SUBDIR+=	manedit
 SUBDIR+=	matlab-mode
 SUBDIR+=	mg2a
 SUBDIR+=	mined
+SUBDIR+=	mlview
 SUBDIR+=	mule
 SUBDIR+=	mule-ucs
 SUBDIR+=	nano
