@@ -1,91 +1,59 @@
-*** Imakefile.orig	Mon Dec 13 13:01:21 1993
---- Imakefile	Wed Sep 21 21:26:49 1994
-***************
-*** 22,64 ****
-  #endif
-  
-  all::
-!       stamp-date
-  
-  MakeSubdirs($(SUBDIRS))
-  DependSubdirs($(SUBDIRS))
-  
-  World::
-!         @echo ""
-!         @echo "Building PBMPLUS"
-!         @echo ""
-!         @date
-!         @echo ""
-  	$(MAKE) $(MFLAGS) Makefiles
-!         $(MAKE) $(MFLAGS) clean
-!         $(MAKE) $(MFLAGS) includes
-!         $(MAKE) $(MFLAGS) depend
-!         $(MAKE) $(MFLAGS)
-!         @echo ""
-!         @date
-!         @echo ""
-!         @echo "Full build of PBMPLUS complete."
-!         @echo ""
-  
-  Everything::
-!         @echo ""
-!         @echo "Rebuilding PBMPLUS"
-!         @echo ""
-!         @date
-!         @echo ""
-!         $(MAKE) $(MFLAGS) Makefiles
-!         $(MAKE) $(MFLAGS) includes
-!         $(MAKE) $(MFLAGS) depend
-!         $(MAKE) $(MFLAGS)
-!         @echo ""
-!         @date
-!         @echo ""
-!         @echo "Rebuild of PBMPLUS complete."
-!         @echo ""
-  
-  #if InstallIncludes
-  InstallMultipleFlags(pbmplus.h,$(PBMPLUSDIR)$(PBMPLUSINCDIR),$(INSTINCFLAGS))
---- 22,64 ----
-  #endif
-  
-  all::
-! 	./stamp-date
-  
-  MakeSubdirs($(SUBDIRS))
-  DependSubdirs($(SUBDIRS))
-  
-  World::
-! 	@echo ""
-! 	@echo "Building PBMPLUS"
-! 	@echo ""
-! 	@date
-! 	@echo ""
-  	$(MAKE) $(MFLAGS) Makefiles
-! 	$(MAKE) $(MFLAGS) clean
-! 	$(MAKE) $(MFLAGS) includes
-! 	$(MAKE) $(MFLAGS) depend
-! 	$(MAKE) $(MFLAGS)
-! 	@echo ""
-! 	@date
-! 	@echo ""
-! 	@echo "Full build of PBMPLUS complete."
-! 	@echo ""
-  
-  Everything::
-! 	@echo ""
-! 	@echo "Rebuilding PBMPLUS"
-! 	@echo ""
-! 	@date
-! 	@echo ""
-! 	$(MAKE) $(MFLAGS) Makefiles
-! 	$(MAKE) $(MFLAGS) includes
-! 	$(MAKE) $(MFLAGS) depend
-! 	$(MAKE) $(MFLAGS)
-! 	@echo ""
-! 	@date
-! 	@echo ""
-! 	@echo "Rebuild of PBMPLUS complete."
-! 	@echo ""
-  
-  #if InstallIncludes
-  InstallMultipleFlags(pbmplus.h,$(PBMPLUSDIR)$(PBMPLUSINCDIR),$(INSTINCFLAGS))
+--- Makefile.orig	Wed Jan 26 12:47:35 1994
++++ Makefile	Sat Dec 20 22:54:14 1997
+@@ -48,24 +48,24 @@
+ # By the way, you must have at least version 2.4 of libtiff.  Earlier
+ # versions will not work.
+ TIFFDEF =	-DLIBTIFF
+-TIFFINC =	-I../libtiff
+-TIFFLIB =	../libtiff/libtiff.a
++TIFFINC =	-I$(PREFIX)/include
++TIFFLIB =	-L$(PREFIX)/lib -ltiff -ljpeg
+ TIFFBINARIES =	tifftopnm pnmtotiff
+ TIFFOBJECTS =	tifftopnm.o pnmtotiff.o
+ 
+ # CONFIGURE: Define the directory that you want the binaries copied to.
+ # If you need scripts and binaries to be in different directories, you
+ # can set that up too.
+-INSTALLBINARIES =	/usr/local/netpbm
++INSTALLBINARIES =	$(PREFIX)/bin
+ INSTALLSCRIPTS =	$(INSTALLBINARIES)
+ 
+ # CONFIGURE: Define the directories that you want the manual sources copied to,
+ # plus the suffix you want them to have.
+-INSTALLMANUALS1 =	/usr/local/man/man1
++INSTALLMANUALS1 =	$(PREFIX)/man/man1
+ SUFFIXMANUALS1 =	1
+-INSTALLMANUALS3 =	/usr/local/man/man3
++INSTALLMANUALS3 =	$(PREFIX)/man/man3
+ SUFFIXMANUALS3 =	3
+-INSTALLMANUALS5 =	/usr/local/man/man5
++INSTALLMANUALS5 =	$(PREFIX)/man/man5
+ SUFFIXMANUALS5 =	5
+ 
+ # CONFIGURE: Normally the man pages are installed using "cp".  By changing
+@@ -87,10 +87,10 @@
+ #
+ # Note that if you make a "merge", the executables don't get created
+ # until you do the install.
+-#all:		binaries
+-#install:	install.bin install.man
+-all:		merge
+-install:	install.merge install.man
++all:		binaries
++install:	install.bin install.man
++#all:		merge
++#install:	install.merge install.man
+ 
+ # End of configurable definitions.
+ 
+@@ -99,8 +99,8 @@
+ SUBDIRS =	pbm pgm ppm pnm
+ 
+ binaries:
+-	./stamp-date
+-	( echo "libtiff" ; cd libtiff ; make )
++#	./stamp-date
++#	( echo "libtiff" ; cd libtiff ; make )
+ 	for i in $(SUBDIRS) ; do \
+ 	    ( echo $$i ; cd $$i ; $(MAKE) $(MFLAGS) 'CC=$(CC)' 'CFLAGS=$(CFLAGS)' 'TIFFDEF=$(TIFFDEF)' 'TIFFINC=$(TIFFINC)' 'TIFFLIB=$(TIFFLIB)' 'TIFFBINARIES=$(TIFFBINARIES)' 'TIFFOBJECTS=$(TIFFOBJECTS)' 'LDFLAGS=$(LDFLAGS)' binaries ); \
+ 	done

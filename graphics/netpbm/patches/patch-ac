@@ -1,28 +1,41 @@
-*** pbm/pbmtext.c~	Wed Oct 27 08:27:04 1993
---- pbm/pbmtext.c	Thu Nov 24 23:59:38 1994
-***************
-*** 105,114 ****
-      else
-  	{ /* Read text from stdin. */
-  	lines = 0;
-! 	while ( gets( buf ) != NULL )
-  	    {
-  	    int l;
-  
-  	    fix_control_chars( buf );
-  	    l = strlen( buf );
-  	    if ( lines >= maxlines )
---- 105,117 ----
-      else
-  	{ /* Read text from stdin. */
-  	lines = 0;
-! 	while ( fgets( buf , 5000, stdin) != NULL )
-  	    {
-  	    int l;
-+ 	    char *nl = strchr (buf, '\n');
-  
-+ 	    if (nl)
-+ 		*nl = 0;
-  	    fix_control_chars( buf );
-  	    l = strlen( buf );
-  	    if ( lines >= maxlines )
+--- pnm/Makefile.orig	Mon Jan 31 17:47:32 1994
++++ pnm/Makefile	Wed Dec 31 04:14:11 1997
+@@ -60,10 +60,11 @@
+ 		pnmcut pnmdepth pnmenlarge pnmfile pnmflip pnmhistmap \
+ 		pnminvert pnmnoraw pnmpad pnmpaste \
+ 		pnmtile pnmtoddif pnmtofits pnmtops pnmtorast \
+-		pnmtosgi pnmtosir pnmtoxwd \
+-		rasttopnm sgitopnm sirtopnm xwdtopnm zeisstopnm
++		pnmtorle pnmtosgi pnmtosir pnmtoxwd \
++		rasttopnm rletopnm sgitopnm sirtopnm xwdtopnm zeisstopnm
+ MATHBINARIES =	pnmgamma pnmnlfilt pnmrotate pnmscale pnmshear
+-BINARIES =      $(PORTBINARIES) $(MATHBINARIES) $(TIFFBINARIES)
++PNGBINARIES =	pngtopnm pnmtopng
++BINARIES =      $(PORTBINARIES) $(MATHBINARIES) $(PNGBINARIES) $(TIFFBINARIES)
+ SCRIPTS =	anytopnm pnmindex pnmmargin pnmsmooth pstopnm
+ 
+ PORTOBJECTS =	fitstopnm.o giftopnm.o \
+@@ -74,7 +75,7 @@
+ 		pnmtosgi.o pnmtosir.o pnmtoxwd.o \
+ 		rasttopnm.o sgitopnm.o sirtopnm.o xwdtopnm.o zeisstopnm.o \
+ 		pnmgamma.o pnmnlfilt.o pnmrotate.o pnmscale.o pnmshear.o
+-OBJECTS =	$(PORTOBJECTS) $(TIFFOBJECTS)
++OBJECTS =	$(PORTOBJECTS)
+ 
+ MANUALS1 =	$(BINARIES) $(SCRIPTS)
+ MANUALS3 =	libpnm
+@@ -128,7 +129,13 @@
+ 
+ 
+ # Rules for plain programs.
+-$(PORTBINARIES) $(TIFFBINARIES):	pnm.h $(DEFPPM) $(DEFPGM) $(DEFPBM) $(LIBPNM) $(LIBPPM) $(LIBPGM) $(LIBPBM) $(TIFFLIB)
++$(PORTBINARIES):	pnm.h $(DEFPPM) $(DEFPGM) $(DEFPBM) $(LIBPNM) $(LIBPPM) $(LIBPGM) $(LIBPBM)
++	$(CC) $(ALLCFLAGS) $(LDFLAGS) -o $@ $@.c $(LIBPNM) $(LIBPPM) $(LIBPGM) $(LIBPBM)
++
++$(PNGBINARIES):	pnm.h $(DEFPPM) $(DEFPGM) $(DEFPBM) $(LIBPNM) $(LIBPPM) $(LIBPGM) $(LIBPBM)
++	$(CC) $(ALLCFLAGS) $(LDFLAGS) -o $@ $@.c $(LIBPNM) $(LIBPPM) $(LIBPGM) $(LIBPBM) -L/usr/pkg/lib -lpng -lz
++
++$(TIFFBINARIES):	pnm.h $(DEFPPM) $(DEFPGM) $(DEFPBM) $(LIBPNM) $(LIBPPM) $(LIBPGM) $(LIBPBM)
+ 	$(CC) $(ALLCFLAGS) $(LDFLAGS) -o $@ $@.c $(LIBPNM) $(LIBPPM) $(LIBPGM) $(LIBPBM) $(TIFFLIB)
+ 
+ # Rule for math-dependent programs.
