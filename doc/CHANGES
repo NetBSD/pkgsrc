@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.518 2002/11/14 01:00:26 hubertf Exp $
+$NetBSD: CHANGES,v 1.519 2002/11/14 04:14:59 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3607,3 +3607,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated aide to 0.9 [jschauma 2002-11-13]
 	Added i2cb-6.0_ALPHA [hubertf 2002-11-14]
 	Added i2cbd-2.0_BETA0 [hubertf 2002-11-14]
+	Updated bind4 to 4.9.10nb1 [itojun 2002-11-14]
+	Updated bind8 to 8.3.3nb1 [itojun 2002-11-14]
