@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/09/27 23:18:23 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2001/10/11 17:04:28 tron Exp $
 
 DISTNAME=	WMMail.app-0.64
 PKGNAME=	wmmail-0.64
@@ -9,6 +9,7 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.eecg.toronto.edu/cgi-bin/cgiwrap/chanb/index.cgi?wmmail
 COMMENT=	xbiff like "mail-checker" for WindowMaker
 
+DEPENDS+=	libproplist>=0.10.1:../../devel/libproplist
 DEPENDS+=	windowmaker-[0-9]*:../../wm/windowmaker
 
 USE_X11BASE=		yes
