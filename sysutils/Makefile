@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.284 2005/01/27 23:11:09 tron Exp $
+# $NetBSD: Makefile,v 1.285 2005/01/30 11:20:32 agc Exp $
 
 COMMENT=	System utilities
 
@@ -120,6 +120,7 @@ SUBDIR+=	mksunbootcd
 SUBDIR+=	mktemp
 SUBDIR+=	mtools
 SUBDIR+=	mtoolsfm
+SUBDIR+=	mtscan
 SUBDIR+=	nautilus
 SUBDIR+=	nautilus-cd-burner
 SUBDIR+=	news
