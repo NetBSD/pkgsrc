@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.760 2001/06/13 07:09:33 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.761 2001/06/16 04:11:30 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -280,7 +280,11 @@ DEPENDS+=		Xaw3d-1.5:../../x11/Xaw3d
 .endif
 
 .if defined(BUILD_USES_MSGFMT) && !exists(/usr/bin/msgfmt)
-BUILD_DEPENDS+=		gettext-0.10.35nb1:../../devel/gettext
+BUILD_DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
+.endif
+
+.if defined(BUILD_USES_GETTEXT_M4)
+BUILD_DEPENDS+=		{gettext-0.10.35nb1,gettext-m4-*}:../../devel/gettext-m4
 .endif
 
 # Don't change these!!!  These names are built into the _TARGET_USE macro,
