@@ -1,0 +1,24 @@
+$NetBSD: patch-bc,v 1.1 2004/11/08 23:53:20 shannonjr Exp $
+
+--- libkdenetwork/libgpgme-copy/gpgme/engine-gpgsm.c.orig	2004-06-25 02:57:52.000000000 -0600
++++ libkdenetwork/libgpgme-copy/gpgme/engine-gpgsm.c
+@@ -27,6 +27,9 @@
+ #include <sys/types.h>
+ #include <assert.h>
+ #include <unistd.h>
++#if HAVE_RFUNCS_H
++#include <rfuncs.h>
++#endif
+ #include <locale.h>
+ #include <fcntl.h> /* FIXME */
+ #include <errno.h>
+@@ -448,7 +451,8 @@ gpgsm_new (void **engine, const char *lc
+ 
+   if (isatty (1))
+     {
+-      if (ttyname_r (1, dft_ttyname, sizeof (dft_ttyname)))
++      /* ttyname_r() return numeric status */
++      if (err = ttyname_r (1, dft_ttyname, sizeof (dft_ttyname)))
+ 	{
+ 	  err = gpg_error_from_errno (errno);
+ 	  goto leave;
