@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2005/03/22 10:17:50 tron Exp $
+$NetBSD: distinfo,v 1.9 2005/03/24 08:53:25 tron Exp $
 
-SHA1 (firefox-gtk2/releases/1.0.1/linux-i686/en-US/firefox-1.0.1.tar.gz) = ea5c7752a9079053229004f342abf26ca3ec2796
-RMD160 (firefox-gtk2/releases/1.0.1/linux-i686/en-US/firefox-1.0.1.tar.gz) = dc1586d3533376d85e7cdc236830a47f8f305342
-Size (firefox-gtk2/releases/1.0.1/linux-i686/en-US/firefox-1.0.1.tar.gz) = 8231204 bytes
+SHA1 (firefox-gtk2/releases/1.0.2/linux-i686/en-US/firefox-1.0.2.tar.gz) = 67bba8599608fe67aa46f15b88ee2323908532fe
+RMD160 (firefox-gtk2/releases/1.0.2/linux-i686/en-US/firefox-1.0.2.tar.gz) = ebebf00c17e645087c4c1ab6fc61825f30fb6b1f
+Size (firefox-gtk2/releases/1.0.2/linux-i686/en-US/firefox-1.0.2.tar.gz) = 8241659 bytes
