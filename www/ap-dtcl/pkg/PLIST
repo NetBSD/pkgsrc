@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1999/11/12 19:59:57 jwise Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/08/30 00:22:22 jwise Exp $
 bin/testdtcl
 lib/httpd/mod_dtcl.so
 libexec/mod_dtcl/dtcl.tcl
@@ -7,12 +7,17 @@ libexec/mod_dtcl/infodebug.tcl
 libexec/mod_dtcl/testdtcl.tcl
 man/man1/testdtcl.1
 share/doc/mod_dtcl/INSTALL.html
+share/doc/mod_dtcl/TODO.html
 share/doc/mod_dtcl/benchmark.html
+share/doc/mod_dtcl/browse-source.html
 share/doc/mod_dtcl/dtcl-tcl.html
+share/doc/mod_dtcl/readme.hpux.html
 share/doc/mod_dtcl/readme.html
 share/doc/mod_dtcl/table.html
 share/doc/mod_dtcl/use.html
+share/doc/mod_dtcl/dtcl.gif
 share/examples/mod_dtcl/examples.ttml
+share/examples/mod_dtcl/clocks.ttml
 @dirrm libexec/mod_dtcl
 @dirrm share/doc/mod_dtcl
 @dirrm share/examples/mod_dtcl
