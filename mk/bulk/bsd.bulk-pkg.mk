@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.23 2001/03/31 00:03:03 dmcmahill Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.24 2001/05/02 13:51:43 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -236,8 +236,12 @@ bulk-package:
 				pkgname=`${GREP} "^$$pkgdir " ${INDEXFILE} | ${AWK} '{print $$2}'` ; \
 				pkgfile=${PACKAGES}/All/$${pkgname}.tgz ;\
 				if ! `${PKG_INFO} -qe $$pkgname` ; then \
-					${ECHO_MSG} "BULK> " ${PKG_ADD} $$pkgfile ; \
-					${DO} ${PKG_ADD} $$pkgfile ; \
+					if [ -f $$pkgfile ]; then \
+						${ECHO_MSG} "BULK>  ${PKG_ADD} $$pkgfile"; \
+						${DO} ${PKG_ADD} $$pkgfile ; \
+					else \
+						${ECHO_MSG} "BULK> warning:  $$pkgfile does not exist.  It will be rebuilt." ;\
+					fi ;\
 				else \
 					${ECHO_MSG} "BULK> Required package $$pkgname ($$pkgdir) is already installed" ; \
 				fi ;\
