@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/07/17 21:23:49 grant Exp $
+# $NetBSD: Makefile,v 1.19 2004/04/11 19:02:40 xtraeme Exp $
 #
 
 DISTNAME=	xhippo-3.3
@@ -12,16 +12,19 @@ COMMENT=	Generic playlist manager for UNIX
 
 USE_X11=	yes
 GNU_CONFIGURE=	yes
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 CONFIGURE_ENV+=	--with-gnome=no
 
-CONF_FILES=	${PREFIX}/share/doc/xhippo/xhippo.config.example ${PKG_SYSCONFDIR}/xhippo.config
+CONF_FILES=	${PREFIX}/share/doc/xhippo/xhippo.config.example \
+		${PKG_SYSCONFDIR}/xhippo.config
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xhippo
-	${INSTALL_DATA} ${WRKSRC}/xhippo.config ${PREFIX}/share/doc/xhippo/xhippo.config.example
-	${INSTALL_DATA} ${WRKSRC}/xhippo.gtkrc ${PREFIX}/share/doc/xhippo/xhippo.gtkrc
+	${INSTALL_DATA} ${WRKSRC}/xhippo.config \
+		${PREFIX}/share/doc/xhippo/xhippo.config.example
+	${INSTALL_DATA} ${WRKSRC}/xhippo.gtkrc \
+		${PREFIX}/share/doc/xhippo/xhippo.gtkrc
 	${INSTALL_DATA} ${WRKSRC}/BUGS ${PREFIX}/share/doc/xhippo
 	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${PREFIX}/share/doc/xhippo
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/xhippo
@@ -30,6 +33,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/xhippo.txt.gz ${PREFIX}/share/doc/xhippo
 	${INSTALL_DATA} ${WRKSRC}/doc/xhippo.sgml ${PREFIX}/share/doc/xhippo
 
-.include "../../x11/gtk/buildlink2.mk"
-.include "../../audio/libmad/buildlink2.mk"
+.include "../../x11/gtk/buildlink3.mk"
+.include "../../audio/libmad/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
