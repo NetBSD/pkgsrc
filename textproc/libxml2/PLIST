@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2002/11/06 07:56:51 tron Exp $
+@comment $NetBSD: PLIST,v 1.13 2003/01/02 22:44:48 jmmv Exp $
 bin/xml2-config
 bin/xmlcatalog
 bin/xmllint
@@ -102,4 +102,3 @@ share/doc/libxml2/html/xml.html
 @dirrm share/doc/libxml2-${LIBXML_VERSION}
 @dirrm share/doc/libxml2/html
 @dirrm share/doc/libxml2
-@unexec ${RMDIR} -p %D/lib/pkgconfig 2>/dev/null || ${TRUE}
