@@ -1,4 +1,4 @@
-# $NetBSD: plugins.mk,v 1.4 2004/12/17 14:48:53 cube Exp $
+# $NetBSD: plugins.mk,v 1.5 2005/03/06 16:45:47 chris Exp $
 #
 
 .include "../../mail/sylpheed-claws/Makefile.common"
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=	--disable-clamav-plugin
 CONFIGURE_ARGS+=	--disable-dillo-viewer-plugin
 CONFIGURE_ARGS+=	--disable-spamassassin-plugin
 CONFIGURE_ARGS+=	--disable-mathml-viewer-plugin
+CONFIGURE_ARGS+=	--disable-pgpmime-plugin
 
 PLIST_SRC=	${.CURDIR}/../../mail/sylpheed-claws/PLIST.plugins
 PLIST_SUBST+=	PLUGIN_NAME=${PLUGIN_NAME}
