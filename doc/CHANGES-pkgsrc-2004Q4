@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.6 2004/12/23 02:31:04 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.7 2004/12/23 02:36:07 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -15,3 +15,5 @@ Pullup ticket 175 - requested by Adrian Portelli
 usability fixes for freeradius
 Pullup ticket 178 - requested by Juan RP
 build fix for pan
+Pullup ticket 179 - requested by Adrian Portelli
+security fix for xpdf
