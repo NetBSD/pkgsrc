@@ -1,4 +1,4 @@
-$NetBSD: patch-bc,v 1.4 2002/11/21 10:41:44 grant Exp $
+$NetBSD: patch-bc,v 1.5 2002/11/21 10:52:16 grant Exp $
 
 --- config/Makefile.in.orig	Tue Mar 13 11:24:39 2001
 +++ config/Makefile.in
@@ -62,7 +62,7 @@ $NetBSD: patch-bc,v 1.4 2002/11/21 10:41:44 grant Exp $
  		$(mkinstalldirs) $(authdir); \
 -		chown gdm.gdm $(authdir); \
 -		chmod 750 $(authdir); \
-+		${CHOWN} gdm:gdm $(authdir); \
++		${CHOWN} ${GDMOWN}:${GDMGRP} $(authdir); \
 +		${CHMOD} 750 $(authdir); \
  	fi
  
