@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.4 2002/08/23 00:27:59 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.5 2002/08/27 17:34:04 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -343,7 +343,7 @@ _BLNK_TRANSFORM_SED.3+= \
 #
 _BLNK_WRAPPEES=		AS CC CXX CPP LD
 .if defined(USE_FORTRAN)
-_BLNK_WRAPPEES+=	FC F77
+_BLNK_WRAPPEES+=	FC
 .endif
 .if defined(USE_LIBTOOL)
 PKGLIBTOOL=		${BUILDLINK_LIBTOOL}
@@ -424,6 +424,11 @@ _BLNK_WRAP_LOGIC.${_wrappee_}=		${_BLNK_WRAP_LOGIC_TRANSFORM}
 #
 _BLNK_WRAP_ENV.AS=		# empty
 _BLNK_WRAP_ENV.CPP=		# empty
+
+# Also override any F77 value in the environment when compiling Fortran
+# code.
+#
+_BLNK_WRAP_ENV.FC+=		F77="${BUILDLINK_FC:T}"
 
 # Don't override the default LIBTOOL setting in the environment, as
 # it already correctly points to ${PKGLIBTOOL}, and don't sanitize the PATH
