@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.2 2000/04/12 17:51:58 jdolecek Exp $
+$NetBSD: patch-ad,v 1.3 2002/01/10 13:17:12 jlam Exp $
 
---- Makefile.in.orig	Thu Mar 30 06:14:21 2000
-+++ Makefile.in	Wed Apr 12 19:23:52 2000
+--- Makefile.in.orig	Tue Oct  3 12:37:55 2000
++++ Makefile.in
 @@ -63,7 +63,7 @@
         snprintf.c php3_sprintf.c alloc.c list.c highlight.c debugger.c \
         configuration-parser.tab.c configuration-scanner.c \
