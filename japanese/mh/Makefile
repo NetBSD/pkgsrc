@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 1999/10/29 08:50:00 sakamoto Exp $
+# $NetBSD: Makefile,v 1.5 1999/10/30 17:06:32 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.13 1999/02/10 18:13:21 motoyuki Exp $
 
 DISTNAME=	mh-6.8.4-JP-3.03
-PKGNAME=	ja-mh-6.8.4-JP-3.03
+PKGNAME=	ja-mh-6.8.4_JP_3.03
 CATEGORIES=	japanese mail
 MASTER_SITES=	ftp://ports.jp.freebsd.org/pub/FreeBSD-jp/ports-jp/LOCAL_PORTS/ \
 		ftp://komadori.planet.sci.kobe-u.ac.jp/pub/MH/ \
