@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/12/21 17:07:16 tron Exp $
+# $NetBSD: Makefile,v 1.9 1999/12/21 17:25:18 tron Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -27,10 +27,10 @@ DEPENDS+=		ncurses-4.2:../../devel/ncurses
 .endif
 
 post-install:
-	${LN} -fs vim.1.gz ${PREFIX}/man/man1/gvim.1
-	${LN} -fs vim.1.gz ${PREFIX}/man/man1/gview.1
-	${LN} -fs vim.1.gz ${PREFIX}/man/man1/rgvim.1
-	${LN} -fs vim.1.gz ${PREFIX}/man/man1/rgview.1
+	${LN} -fs vim.1 ${PREFIX}/man/man1/gvim.1
+	${LN} -fs vim.1 ${PREFIX}/man/man1/gview.1
+	${LN} -fs vim.1 ${PREFIX}/man/man1/rgvim.1
+	${LN} -fs vim.1 ${PREFIX}/man/man1/rgview.1
 	${LN} -fs vim ${PREFIX}/bin/gvim
 	${LN} -fs vim ${PREFIX}/bin/gview
 	${LN} -fs vim ${PREFIX}/bin/rgvim
