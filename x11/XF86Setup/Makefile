@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/08/18 22:46:52 hubertf Exp $
+# $NetBSD: Makefile,v 1.16 2000/08/30 23:56:03 jwise Exp $
 
 DISTNAME=		XF86Setup-3.3.6
 CATEGORIES=		x11
@@ -8,13 +8,13 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.xfree86.org/
 
-BUILD_DEPENDS= 		${TCLLIB}:../../lang/tcl80
-BUILD_DEPENDS+=		${TKLIB}:../../x11/tk80
+BUILD_DEPENDS= 		${TCLLIB}:../../lang/tcl
+BUILD_DEPENDS+=		${TKLIB}:../../x11/tk
 
 ONLY_FOR_PLATFORM=	*-*-i386
 
-TCLLIB=			${LOCALBASE}/lib/libtcl80.a
-TKLIB=			${LOCALBASE}/lib/libtk80.a
+TCLLIB=			${LOCALBASE}/lib/libtcl83.a
+TKLIB=			${LOCALBASE}/lib/libtk83.a
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
