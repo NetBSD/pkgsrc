@@ -1,0 +1,17 @@
+# $NetBSD: plugins.tmpl,v 1.1 2004/04/06 09:30:01 jmmv Exp $
+#
+# Handle registration of GStreamer plugins into the global plugin registry.
+#
+
+GST_COMPPREP="@GST_COMPPREP@"
+GST_REGISTER="@GST_REGISTER@"
+GST_DBDIR="@GST_DBDIR@"
+
+case ${STAGE} in
+DEINSTALL|POST-INSTALL)
+	${GST_REGISTER} --gst-registry=${GST_DBDIR}/registry.xml >/dev/null
+	${GST_COMPPREP} --gst-registry=${GST_DBDIR}/registry.xml >/dev/null
+	;;
+*)
+	;;
+esac
