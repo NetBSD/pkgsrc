@@ -1,0 +1,55 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/01 11:47:22 jmmv Exp $
+bin/sigc-config
+include/sigc++-1.0/sigc++/adaptor.h
+include/sigc++-1.0/sigc++/basic_signal.h
+include/sigc++-1.0/sigc++/bind.h
+include/sigc++-1.0/sigc++/class_slot.h
+include/sigc++-1.0/sigc++/convert.h
+include/sigc++-1.0/sigc++/func_slot.h
+include/sigc++-1.0/sigc++/generator.h
+include/sigc++-1.0/sigc++/handle.h
+include/sigc++-1.0/sigc++/handle_system.h
+include/sigc++-1.0/sigc++/macros/basic_signal.h.m4
+include/sigc++-1.0/sigc++/macros/bind.h.m4
+include/sigc++-1.0/sigc++/macros/class_slot.h.m4
+include/sigc++-1.0/sigc++/macros/convert.h.m4
+include/sigc++-1.0/sigc++/macros/func_slot.h.m4
+include/sigc++-1.0/sigc++/macros/object_slot.h.m4
+include/sigc++-1.0/sigc++/macros/retbind.h.m4
+include/sigc++-1.0/sigc++/macros/rettype.h.m4
+include/sigc++-1.0/sigc++/macros/slot.h.m4
+include/sigc++-1.0/sigc++/macros/template.macros.m4
+include/sigc++-1.0/sigc++/marshal.h
+include/sigc++-1.0/sigc++/object.h
+include/sigc++-1.0/sigc++/object_slot.h
+include/sigc++-1.0/sigc++/retbind.h
+include/sigc++-1.0/sigc++/rettype.h
+include/sigc++-1.0/sigc++/scope.h
+include/sigc++-1.0/sigc++/signal_system.h
+include/sigc++-1.0/sigc++/slot.h
+include/sigc++-1.0/sigc++/thread.h
+include/sigc++-1.0/sigc++/type.h
+lib/sigc++-1.0/include/sigc++config.h
+lib/libsigc.a
+lib/libsigc.la
+lib/libsigc.so
+lib/libsigc.so.0
+lib/libsigc.so.0.0
+share/aclocal/sigc++.m4
+share/doc/sigc++/API
+share/doc/sigc++/FAQ
+share/doc/sigc++/UML
+share/doc/sigc++/conventions
+share/doc/sigc++/diagrams
+share/doc/sigc++/marshal
+share/doc/sigc++/powerusers
+share/doc/sigc++/requirements
+share/doc/sigc++/riscos
+share/doc/sigc++/signals
+share/doc/sigc++/win32
+@dirrm share/doc/sigc++
+@dirrm lib/sigc++-1.0/include
+@dirrm lib/sigc++-1.0
+@dirrm include/sigc++-1.0/sigc++/macros
+@dirrm include/sigc++-1.0/sigc++
+@dirrm include/sigc++-1.0
