@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/24 12:57:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/04 17:52:50 wiz Exp $
 
 DISTNAME=	teTeX-src-1.0.7
 PKGNAME=	teTeX-bin-1.0.7
@@ -15,7 +15,8 @@ BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 DEPENDS+=	teTeX-share-1.0.[2-9]*:../teTeX1-share
 DEPENDS+=	dialog-0.6z*:../../misc/dialog
 
-CONFLICTS+=	omega-[0-9]*
+# games/omega previously installed an omega executable too
+CONFLICTS+=	omega<0.90.4nb1
 
 DIST_SUBDIR=		teTeX
 ALL_TARGET=		all
