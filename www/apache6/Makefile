@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/02/06 12:50:19 itojun Exp $
+# $NetBSD: Makefile,v 1.24 2001/02/06 12:55:42 itojun Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -29,12 +29,6 @@ HOMEPAGE=		http://httpd.apache.org/
 
 CONFLICTS=		apache-*modssl-* apache6-*
 CONFLICTS=		apache-*
-
-.if defined(PATCH_DEBUG) || defined(PKG_VERBOSE)
-PATCH_DIST_ARGS1=	-d ${WRKSRC} -E -p1
-.else
-PATCH_DIST_ARGS1=	-d ${WRKSRC} --forward --quiet -E -p1
-.endif
 
 EXTRACT_ONLY=		${DISTFILES:N*.gif:N*.diff.gz}
 HAS_CONFIGURE=		# defined
@@ -111,8 +105,9 @@ pre-patch:
 
 post-patch:
 	for i in apache-1.3.17-v6-20010206a.diff.gz; do \
-		${GZCAT} ${_DISTDIR}/$$i | ${PATCH} ${PATCH_DIST_ARGS1} \
-		|| ( ${ECHO} Patch $$i failed ; exit 1 ) ; \
+		${GZCAT} ${_DISTDIR}/$$i | \
+		    ${PATCH} ${PATCH_DIST_ARGS:C/-p0/-p1/} \
+		    || ( ${ECHO} Patch $$i failed ; exit 1 ) ; \
 	done
 	${CHMOD} +x ${CONFIGURE_SCRIPT}
 
