@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/12/21 11:33:28 agc Exp $
+
+--- mkf/lib/Makefile.in	2001/12/21 11:20:59	1.1
++++ mkf/lib/Makefile.in	2001/12/21 11:21:17
+@@ -17,7 +17,7 @@
+ SRCDIR = $(TOPDIR)/lib
+ BUILDDIR = $(TOPDIR)/build
+ 
+-CFLAGS = $(CFLAGS_LOCAL) @DEB_CFLAGS@ @KIK_CFLAGS@ @CFLAGS@ -I/usr/local/include
++CFLAGS = $(CFLAGS_LOCAL) @DEB_CFLAGS@ @KIK_CFLAGS@ @CFLAGS@ -I${LOCALBASE}/include
+ LIBS = $(LIBS_LOCAL)
+ 
+ PARSER_OBJ = mkf_parser.o mkf_iso2022_parser.o mkf_iso8859_parser.o mkf_eucjp_parser.o \
