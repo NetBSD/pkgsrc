@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.13 2001/04/22 06:37:38 fredb Exp $
+$NetBSD: patch-aa,v 1.14 2001/08/14 04:51:46 fredb Exp $
 
---- Makefile.orig	Mon Apr  2 16:48:09 2001
-+++ Makefile	Mon Apr  2 16:50:24 2001
+--- Makefile.orig	Tue May 29 13:29:03 2001
++++ Makefile
 @@ -18,11 +18,11 @@
  LOCALHOST=localhost:8080
  
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.13 2001/04/22 06:37:38 fredb Exp $
  
  # For Cygwin (win32).
  #INSTDIR=/wwwoffle
-@@ -51,13 +51,13 @@
+@@ -54,13 +54,13 @@
  ########
  
  CC=gcc
@@ -34,9 +34,14 @@ $NetBSD: patch-aa,v 1.13 2001/04/22 06:37:38 fredb Exp $
  
  # For HP/UX this is a good idea.
  #LDFLAGS=
-@@ -82,8 +82,8 @@
- # The option to not use zlib for compression.
- #USE_ZLIB=0
+@@ -89,12 +89,12 @@
+ #USE_IPV6=1
+ 
+ # The option to use IPv6 sockets if required.
+-USE_IPV6=0
++#USE_IPV6=0
+ 
+ ########
  
 -INCLUDE=
 -LIBRARY=-lz
@@ -45,7 +50,7 @@ $NetBSD: patch-aa,v 1.13 2001/04/22 06:37:38 fredb Exp $
  
  # To compile without zlib
  #LIBRARY=
-@@ -153,7 +153,7 @@
+@@ -167,7 +167,7 @@
  	     configfile.o config.o errors.o io.o misc.o proto.o sockets.o md5.o
  
  wwwoffle : $(WWWOFFLE_OBJ)
@@ -54,7 +59,7 @@ $NetBSD: patch-aa,v 1.13 2001/04/22 06:37:38 fredb Exp $
  
  ####
  
-@@ -165,7 +165,7 @@
+@@ -179,7 +179,7 @@
  	      configfile.o config.o errors.o io.o misc.o proto.o sockets.o md5.o
  
  wwwoffled : $(WWWOFFLED_OBJ)
@@ -63,7 +68,7 @@ $NetBSD: patch-aa,v 1.13 2001/04/22 06:37:38 fredb Exp $
  
  ####
  
-@@ -176,7 +176,7 @@
+@@ -190,7 +190,7 @@
  	           configfile.o config.o errors.o io.o misc.o proto.o sockets.o md5.o
  
  wwwoffle-tools : $(WWWOFFLE_TOOLS_OBJ)
@@ -72,8 +77,8 @@ $NetBSD: patch-aa,v 1.13 2001/04/22 06:37:38 fredb Exp $
  
  ####
  
-@@ -184,7 +184,7 @@
- 	    configfile.o config.o errors.o io.o misc.o proto-none.o sockets.o spool.o md5.o
+@@ -200,7 +200,7 @@
+ 	    configfile.o config.o errors.o io.o misc.o proto.o sockets.o spool.o md5.o
  
  convert-cache : $(CONVERT_OBJ)
 -	$(LINK) $(CONVERT_OBJ) -o $@ $(LIBRARY)
@@ -81,8 +86,8 @@ $NetBSD: patch-aa,v 1.13 2001/04/22 06:37:38 fredb Exp $
  
  ####
  
-@@ -193,7 +193,7 @@
- 	       configfile.o config.o errors.o io.o misc.o proto-none.o sockets.o spool.o md5.o
+@@ -210,7 +210,7 @@
+ 	       configfile.o config.o errors.o io.o misc.o proto.o sockets.o spool.o md5.o
  
  uncompress-cache : $(UNCOMPRESS_OBJ)
 -	$(LINK) $(UNCOMPRESS_OBJ) -o $@ $(LIBRARY)
