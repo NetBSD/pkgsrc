@@ -1,52 +1,73 @@
-@comment $NetBSD: PLIST,v 1.2 2003/01/03 07:13:35 rh Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/01/25 11:01:52 rh Exp $
 share/GNUstep/System/Applications/Gorm.app/Gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/Resources/MenusPalette.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/Resources/palette.table
 share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/0Menus
-share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/GormWindowInspector.gorm
-share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/GormWindowSizeInspector.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/GormNSWindowInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/GormNSWindowInspector.gorm/objects.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/GormNSWindowSizeInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/GormNSWindowSizeInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/WindowDrag.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/WindowsPalette.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/palette.table
 share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/1Windows
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/ControlsPalette.tiff
-share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormBoxInspector.gorm
-share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormButtonInspector.gorm
-share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormCellInspector.gorm
-share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormFormInspector.gorm
-share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormMatrixInspector.gorm
-share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormPopUpButtonInspector.gorm
-share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormSliderInspector.gorm
-share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormStepperInspector.gorm
-share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormTextFieldInspector.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSBoxInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSBoxInspector.gorm/objects.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSButtonInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSButtonInspector.gorm/objects.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSCellInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSCellInspector.gorm/objects.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSFormInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSFormInspector.gorm/objects.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSMatrixInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSMatrixInspector.gorm/objects.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSPopUpButtonInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSPopUpButtonInspector.gorm/objects.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSSliderInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSSliderInspector.gorm/objects.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSStepperInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSStepperInspector.gorm/objects.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSTextFieldInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSTextFieldInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/palette.table
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/2Controls
 share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/ContainersPalette.tiff
-share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormBrowserInspector.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSBrowserInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSBrowserInspector.gorm/objects.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSTableColumnInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSTableColumnInspector.gorm/objects.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSTableColumnSizeInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSTableColumnSizeInspector.gorm/objects.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSTableViewInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSTableViewInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormTabViewInspector.gorm/data.classes
 share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormTabViewInspector.gorm/objects.gorm
-share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormTableColumnInspector.gorm
-share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormTableColumnSizeInspector.gorm
-share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormTableViewInspector.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/palette.table
 share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/3Containers
 share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/DataPalette.tiff
-share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormDateFormatterInspector.gorm
-share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormImageViewInspector.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSComboBoxInspector.gorm/data.classes
 share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSComboBoxInspector.gorm/objects.gorm
-share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNumberFormatterInspector.gorm
-share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormTextViewInspector.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSDateFormatterInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSDateFormatterInspector.gorm/objects.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSImageViewInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSImageViewInspector.gorm/objects.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSNumberFormatterInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSNumberFormatterInspector.gorm/objects.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSTextViewInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSTextViewInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/palette.table
 share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/4Data
 share/GNUstep/System/Applications/Gorm.app/Resources/ClassInformation.plist
 share/GNUstep/System/Applications/Gorm.app/Resources/Defaults.plist
 share/GNUstep/System/Applications/Gorm.app/Resources/Gorm.desktop
+share/GNUstep/System/Applications/Gorm.app/Resources/Gorm.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/Gorm.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/Gorm.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/GormAction.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/GormActionSelected.tiff
@@ -71,6 +92,8 @@ share/GNUstep/System/Applications/Gorm.app/Resources/GormMenu.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/GormObject.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/GormOutlet.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/GormOutletSelected.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormPreferences.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/GormPreferences.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/GormSound.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/GormSoundInspector.gorm/data.classes
 share/GNUstep/System/Applications/Gorm.app/Resources/GormSoundInspector.gorm/objects.gorm
@@ -117,78 +140,75 @@ share/GNUstep/System/Applications/GormTest.app/Resources/GormTest.desktop
 share/GNUstep/System/Applications/GormTest.app/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/GormTest.app/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/GormTest
 share/GNUstep/System/Applications/GormTest.app/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/library_paths.openapp
-share/GNUstep/System/Developer/Palettes/0Menus.palette/Resources/Info-gnustep.plist
 share/GNUstep/System/Developer/Palettes/0Menus.palette/Resources/MenusPalette.tiff
-share/GNUstep/System/Developer/Palettes/0Menus.palette/Resources/palette.table
-share/GNUstep/System/Developer/Palettes/0Menus.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/0Menus
-share/GNUstep/System/Developer/Palettes/1Windows.palette/Resources/GormWindowInspector.gorm
-share/GNUstep/System/Developer/Palettes/1Windows.palette/Resources/GormWindowSizeInspector.gorm
-share/GNUstep/System/Developer/Palettes/1Windows.palette/Resources/Info-gnustep.plist
+share/GNUstep/System/Developer/Palettes/1Windows.palette/Resources/GormNSWindowInspector.gorm/data.classes
+share/GNUstep/System/Developer/Palettes/1Windows.palette/Resources/GormNSWindowInspector.gorm/objects.gorm
+share/GNUstep/System/Developer/Palettes/1Windows.palette/Resources/GormNSWindowSizeInspector.gorm/data.classes
+share/GNUstep/System/Developer/Palettes/1Windows.palette/Resources/GormNSWindowSizeInspector.gorm/objects.gorm
 share/GNUstep/System/Developer/Palettes/1Windows.palette/Resources/WindowDrag.tiff
 share/GNUstep/System/Developer/Palettes/1Windows.palette/Resources/WindowsPalette.tiff
-share/GNUstep/System/Developer/Palettes/1Windows.palette/Resources/palette.table
-share/GNUstep/System/Developer/Palettes/1Windows.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/1Windows
 share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/ControlsPalette.tiff
-share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormBoxInspector.gorm
-share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormButtonInspector.gorm
-share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormCellInspector.gorm
-share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormFormInspector.gorm
-share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormMatrixInspector.gorm
-share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormPopUpButtonInspector.gorm
-share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormSliderInspector.gorm
-share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormStepperInspector.gorm
-share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormTextFieldInspector.gorm
-share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/Info-gnustep.plist
-share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/palette.table
-share/GNUstep/System/Developer/Palettes/2Controls.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/2Controls
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSBoxInspector.gorm/data.classes
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSBoxInspector.gorm/objects.gorm
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSButtonInspector.gorm/data.classes
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSButtonInspector.gorm/objects.gorm
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSCellInspector.gorm/data.classes
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSCellInspector.gorm/objects.gorm
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSFormInspector.gorm/data.classes
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSFormInspector.gorm/objects.gorm
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSMatrixInspector.gorm/data.classes
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSMatrixInspector.gorm/objects.gorm
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSPopUpButtonInspector.gorm/data.classes
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSPopUpButtonInspector.gorm/objects.gorm
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSSliderInspector.gorm/data.classes
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSSliderInspector.gorm/objects.gorm
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSStepperInspector.gorm/data.classes
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSStepperInspector.gorm/objects.gorm
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSTextFieldInspector.gorm/data.classes
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSTextFieldInspector.gorm/objects.gorm
 share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/ContainersPalette.tiff
-share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/GormBrowserInspector.gorm
+share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/GormNSBrowserInspector.gorm/data.classes
+share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/GormNSBrowserInspector.gorm/objects.gorm
+share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/GormNSTableColumnInspector.gorm/data.classes
+share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/GormNSTableColumnInspector.gorm/objects.gorm
+share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/GormNSTableColumnSizeInspector.gorm/data.classes
+share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/GormNSTableColumnSizeInspector.gorm/objects.gorm
+share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/GormNSTableViewInspector.gorm/data.classes
+share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/GormNSTableViewInspector.gorm/objects.gorm
 share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/GormTabViewInspector.gorm/data.classes
 share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/GormTabViewInspector.gorm/objects.gorm
-share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/GormTableColumnInspector.gorm
-share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/GormTableColumnSizeInspector.gorm
-share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/GormTableViewInspector.gorm
-share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/Info-gnustep.plist
-share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/palette.table
-share/GNUstep/System/Developer/Palettes/3Containers.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/3Containers
 share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/DataPalette.tiff
-share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/GormDateFormatterInspector.gorm
-share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/GormImageViewInspector.gorm
 share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/GormNSComboBoxInspector.gorm/data.classes
 share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/GormNSComboBoxInspector.gorm/objects.gorm
-share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/GormNumberFormatterInspector.gorm
-share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/GormTextViewInspector.gorm
-share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/Info-gnustep.plist
-share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/palette.table
-share/GNUstep/System/Developer/Palettes/4Data.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/4Data
-@dirrm share/GNUstep/System/Developer/Palettes/4Data.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Developer/Palettes/4Data.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
-@dirrm share/GNUstep/System/Developer/Palettes/4Data.palette/${GNUSTEP_HOST_CPU}
+share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/GormNSDateFormatterInspector.gorm/data.classes
+share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/GormNSDateFormatterInspector.gorm/objects.gorm
+share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/GormNSImageViewInspector.gorm/data.classes
+share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/GormNSImageViewInspector.gorm/objects.gorm
+share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/GormNSNumberFormatterInspector.gorm/data.classes
+share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/GormNSNumberFormatterInspector.gorm/objects.gorm
+share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/GormNSTextViewInspector.gorm/data.classes
+share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/GormNSTextViewInspector.gorm/objects.gorm
+@dirrm share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/GormNSTextViewInspector.gorm
+@dirrm share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/GormNSNumberFormatterInspector.gorm
+@dirrm share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/GormNSImageViewInspector.gorm
+@dirrm share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/GormNSDateFormatterInspector.gorm
 @dirrm share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/GormNSComboBoxInspector.gorm
-@dirrm share/GNUstep/System/Developer/Palettes/4Data.palette/Resources
-@dirrm share/GNUstep/System/Developer/Palettes/4Data.palette
-@dirrm share/GNUstep/System/Developer/Palettes/3Containers.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Developer/Palettes/3Containers.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
-@dirrm share/GNUstep/System/Developer/Palettes/3Containers.palette/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/GormTabViewInspector.gorm
-@dirrm share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources
-@dirrm share/GNUstep/System/Developer/Palettes/3Containers.palette
-@dirrm share/GNUstep/System/Developer/Palettes/2Controls.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Developer/Palettes/2Controls.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
-@dirrm share/GNUstep/System/Developer/Palettes/2Controls.palette/${GNUSTEP_HOST_CPU}
-@dirrm share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources
-@dirrm share/GNUstep/System/Developer/Palettes/2Controls.palette
-@dirrm share/GNUstep/System/Developer/Palettes/1Windows.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Developer/Palettes/1Windows.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
-@dirrm share/GNUstep/System/Developer/Palettes/1Windows.palette/${GNUSTEP_HOST_CPU}
-@dirrm share/GNUstep/System/Developer/Palettes/1Windows.palette/Resources
-@dirrm share/GNUstep/System/Developer/Palettes/1Windows.palette
-@dirrm share/GNUstep/System/Developer/Palettes/0Menus.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Developer/Palettes/0Menus.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
-@dirrm share/GNUstep/System/Developer/Palettes/0Menus.palette/${GNUSTEP_HOST_CPU}
-@dirrm share/GNUstep/System/Developer/Palettes/0Menus.palette/Resources
-@dirrm share/GNUstep/System/Developer/Palettes/0Menus.palette
-@dirrm share/GNUstep/System/Developer/Palettes
+@dirrm share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/GormNSTableViewInspector.gorm
+@dirrm share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/GormNSTableColumnSizeInspector.gorm
+@dirrm share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/GormNSTableColumnInspector.gorm
+@dirrm share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/GormNSBrowserInspector.gorm
+@dirrm share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSTextFieldInspector.gorm
+@dirrm share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSStepperInspector.gorm
+@dirrm share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSSliderInspector.gorm
+@dirrm share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSPopUpButtonInspector.gorm
+@dirrm share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSMatrixInspector.gorm
+@dirrm share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSFormInspector.gorm
+@dirrm share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSCellInspector.gorm
+@dirrm share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSButtonInspector.gorm
+@dirrm share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormNSBoxInspector.gorm
+@dirrm share/GNUstep/System/Developer/Palettes/1Windows.palette/Resources/GormNSWindowSizeInspector.gorm
+@dirrm share/GNUstep/System/Developer/Palettes/1Windows.palette/Resources/GormNSWindowInspector.gorm
 @dirrm share/GNUstep/System/Applications/GormTest.app/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu
 @dirrm share/GNUstep/System/Applications/GormTest.app/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
 @dirrm share/GNUstep/System/Applications/GormTest.app/${GNUSTEP_HOST_CPU}
@@ -199,10 +219,16 @@ share/GNUstep/System/Developer/Palettes/4Data.palette/${GNUSTEP_HOST_CPU}/${LOWE
 @dirrm share/GNUstep/System/Applications/Gorm.app/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/GormViewSizeInspector.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/GormSoundInspector.gorm
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/GormPreferences.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/GormCustomClassInspector.gorm
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/Gorm.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/${GNUSTEP_HOST_CPU}
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSTextViewInspector.gorm
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSNumberFormatterInspector.gorm
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSImageViewInspector.gorm
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSDateFormatterInspector.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSComboBoxInspector.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette
@@ -210,16 +236,31 @@ share/GNUstep/System/Developer/Palettes/4Data.palette/${GNUSTEP_HOST_CPU}/${LOWE
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormTabViewInspector.gorm
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSTableViewInspector.gorm
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSTableColumnSizeInspector.gorm
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSTableColumnInspector.gorm
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSBrowserInspector.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/${GNUSTEP_HOST_CPU}
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSTextFieldInspector.gorm
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSStepperInspector.gorm
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSSliderInspector.gorm
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSPopUpButtonInspector.gorm
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSMatrixInspector.gorm
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSFormInspector.gorm
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSCellInspector.gorm
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSButtonInspector.gorm
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSBoxInspector.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/${GNUSTEP_HOST_CPU}
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/GormNSWindowSizeInspector.gorm
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/GormNSWindowInspector.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu
