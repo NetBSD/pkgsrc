@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 1998/08/12 22:44:21 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.14 1998/09/29 08:44:17 tron Exp $
 bin/mwm
 bin/mxmkmf
 bin/uil
@@ -137,7 +137,6 @@ lib/libMrm.a
 lib/libMrm.so.1.2
 lib/libXm.a
 lib/libXm.so.1.2
-lib/libXm.so.2.0
 share/lesstif/AUTHORS
 share/lesstif/BUG-REPORTING
 share/lesstif/COPYING
