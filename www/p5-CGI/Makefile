@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2001/11/26 06:50:31 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2002/01/28 00:27:36 jlam Exp $
 #
 
-DISTNAME=       	CGI.pm-2.752
-PKGNAME=        	p5-CGI-2.75.2
+DISTNAME=       	CGI.pm-2.79
+PKGNAME=        	p5-CGI-2.79
 SVR4_PKGNAME=		p5cgi
 CATEGORIES=		www perl5
 MASTER_SITES=		http://stein.cshl.org/WWW/software/CGI/ \
