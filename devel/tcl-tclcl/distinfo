@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2004/12/02 17:25:05 seb Exp $
+$NetBSD: distinfo,v 1.5 2005/02/14 04:40:49 minskim Exp $
 
-SHA1 (tclcl-src-1.15.tar.gz) = 5b927893d4d3b3f49e86f4ee43266668595d34e3
-Size (tclcl-src-1.15.tar.gz) = 143000 bytes
-SHA1 (patch-aa) = 4b9b5dfd52c039ba2fdae36bd9f455111fc4e643
+SHA1 (tclcl-src-1.16.tar.gz) = b7eea104131b0472c79a2d7ad2b8763c087fe731
+Size (tclcl-src-1.16.tar.gz) = 203269 bytes
+SHA1 (patch-aa) = 624c6dccac5b41205f58bb89e7498e4bce10f04a
