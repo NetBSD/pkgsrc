@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 22:55:43 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/18 07:31:16 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -41,21 +41,22 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/mozilla.sh ${PREFIX}/bin/mozilla-${PLATFORM}
 
 post-install:
+# this build for Solaris wants exactly 'libgtk-1.2.so.0', etc.
+.if ${OPSYS} == "SunOS"
+	@cd ${MOZILLA_LIB} && \
+	${LN} -s ${LOCALBASE}/lib/libglib.*so* .;			\
+	${LN} -s ${LOCALBASE}/lib/libgmodule.*so* .;			\
+	${LN} -s ${X11BASE}/lib/libgdk.*so* .;				\
+	${LN} -s ${X11BASE}/lib/libgtk.*so* .;				\
+	${LN} -s libgtk.so libgtk-1.2.so.0;				\
+	${LN} -s libgdk.so libgdk-1.2.so.0;				\
+	${LN} -s libglib.so libglib-1.2.so.0
+.endif
 	@${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
 	@${ECHO} bin/mozilla-${PLATFORM} >> ${PLIST_SRC}
 	@${FIND} ${MOZILLA_LIB} \( -type f -o -type l \) -print		\
 		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"			\
 		>> ${PLIST_SRC}
-# this build for Solaris wants exactly 'libgtk-1.2.so.0'
-.if ${OPSYS} == "SunOS"
-	@cd ${MOZILLA_LIB} && \
-	${LN} -s ${LOCALBASE}/lib/libglib.so libglib-1.2.so.0; \
-	${LN} -s ${X11BASE}/lib/libgdk.so libgdk-1.2.so.0; \
-	${LN} -s ${X11BASE}/lib/libgtk.so libgtk-1.2.so.0
-.  for _lib_ in glib gdk gtk
-	@${ECHO} lib/mozilla-${PLATFORM}/lib${_lib_}-1.2.so.0 >> ${PLIST_SRC}
-.  endfor
-.endif
 	@${FIND} ${MOZILLA_LIB} -type d -print				\
 		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
 		>> ${PLIST_SRC}
