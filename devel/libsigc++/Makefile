@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/07/15 08:00:45 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/07/15 08:41:26 jlam Exp $
 
 DISTNAME=		libsigc++-1.0.1
 CATEGORIES=		devel
@@ -14,7 +14,6 @@ USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/scripts/ltconfig
 
 post-install:
-	${RM} -f ${PREFIX}/lib/libsigc.so
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sigc++
 	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/doc/sigc++
 
