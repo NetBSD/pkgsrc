@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 1999/07/02 15:35:14 bad Exp $
+
+--- ext/POSIX/Makefile.PL.orig	Mon Jun 24 16:25:03 1996
++++ ext/POSIX/Makefile.PL	Thu Jul  1 18:46:41 1999
+@@ -1,7 +1,7 @@
+ use ExtUtils::MakeMaker;
+ WriteMakefile(
+     NAME	=> 'POSIX',
+-    LIBS	=> ["-lm -lposix -lcposix"],
++    LIBS	=> ["-lm"],
+     MAN3PODS 	=> ' ', 	# Pods will be built by installman.
+     XSPROTOARG => '-noprototypes', 		# XXX remove later?
+     VERSION_FROM => 'POSIX.pm', 
