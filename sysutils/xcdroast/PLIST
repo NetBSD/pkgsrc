@@ -1,29 +1,57 @@
-@comment $NetBSD: PLIST,v 1.2 2002/09/26 12:29:55 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/12/02 20:29:48 drochner Exp $
 bin/xcdroast
-lib/xcdroast-${BASE_VERS}/bin/wavplay
-lib/xcdroast-${BASE_VERS}/bin/rmtool
-lib/xcdroast-${BASE_VERS}/bin/vrfytool
-lib/xcdroast-${BASE_VERS}/bin/cddbtool
-lib/xcdroast-${BASE_VERS}/bin/xcdrwrap
-lib/xcdroast-${BASE_VERS}/icons/burnproof.gif
-lib/xcdroast-${BASE_VERS}/icons/cddblogo.gif
-lib/xcdroast-${BASE_VERS}/icons/dialog_default.png
-lib/xcdroast-${BASE_VERS}/icons/dialog_error.png
-lib/xcdroast-${BASE_VERS}/icons/dialog_information.png
-lib/xcdroast-${BASE_VERS}/icons/dialog_question.png
-lib/xcdroast-${BASE_VERS}/icons/dialog_warning.png
-lib/xcdroast-${BASE_VERS}/icons/xcdrlogo.gif
-lib/xcdroast-${BASE_VERS}/lang/lang_extract.sh
-lib/xcdroast-${BASE_VERS}/lang/langhelp.def
-lib/xcdroast-${BASE_VERS}/lang/language.def
-lib/xcdroast-${BASE_VERS}/sound/test.wav
-share/doc/xcdroast/COPYING
+lib/xcdroast-0.98/bin/cddbtool
+lib/xcdroast-0.98/bin/rmtool
+lib/xcdroast-0.98/bin/vrfytool
+lib/xcdroast-0.98/bin/wavplay
+lib/xcdroast-0.98/bin/xcdrwrap
+lib/xcdroast-0.98/icons/burnproof.gif
+lib/xcdroast-0.98/icons/cddblogo.gif
+lib/xcdroast-0.98/icons/dialog_default.png
+lib/xcdroast-0.98/icons/dialog_error.png
+lib/xcdroast-0.98/icons/dialog_information.png
+lib/xcdroast-0.98/icons/dialog_question.png
+lib/xcdroast-0.98/icons/dialog_warning.png
+lib/xcdroast-0.98/icons/xcdricon.gif
+lib/xcdroast-0.98/icons/xcdricon.png
+lib/xcdroast-0.98/icons/xcdrlogo.gif
+lib/xcdroast-0.98/sound/test.wav
+man/man1/xcdroast.1
 share/doc/xcdroast/DOCUMENTATION
 share/doc/xcdroast/FAQ
+share/doc/xcdroast/README.AIX
+share/doc/xcdroast/README.HPUX
+share/doc/xcdroast/README.MacOSX
+share/doc/xcdroast/README.ProDVD
+share/doc/xcdroast/README.atapi
 share/doc/xcdroast/README.nonroot
+share/doc/xcdroast/README.setup-bulgarian.html
+share/doc/xcdroast/TRANSLATION.HOWTO
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/xcdroast.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xcdroast.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xcdroast.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/xcdroast.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xcdroast.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xcdroast.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/xcdroast.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/xcdroast.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xcdroast.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/xcdroast.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/xcdroast.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xcdroast.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/xcdroast.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xcdroast.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xcdroast.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xcdroast.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/xcdroast.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xcdroast.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/xcdroast.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xcdroast.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/xcdroast.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/xcdroast.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xcdroast.mo
+${PKGLOCALEDIR}/locale/zh_CN.GB2312/LC_MESSAGES/xcdroast.mo
+${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/xcdroast.mo
 @dirrm share/doc/xcdroast
-@dirrm lib/xcdroast-${BASE_VERS}/bin
-@dirrm lib/xcdroast-${BASE_VERS}/icons
-@dirrm lib/xcdroast-${BASE_VERS}/lang
-@dirrm lib/xcdroast-${BASE_VERS}/sound
-@dirrm lib/xcdroast-${BASE_VERS}
+@dirrm lib/xcdroast-0.98/sound
+@dirrm lib/xcdroast-0.98/icons
