@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1.1.1 2004/09/26 01:12:17 dmcmahill Exp $
+
+--- gui/splash.tcl.orig	Thu Jul 22 13:16:21 2004
++++ gui/splash.tcl
+@@ -81,7 +81,7 @@ proc ::gui::showLicense {} {
+     } else {
+ 	set filename COPYING
+     }
+-    set licenseFile [file join $::scriptDir .. $filename]
++    set licenseFile [file join $::scriptDir ../share/tnt-mmtl $filename]
+     if { [file exists $licenseFile] } {
+ 	::gui::guiPopupFile $licenseFile
+     } else {
