@@ -1,2 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 1999/11/17 14:48:18 drochner Exp $
-MD5 (cint5.14.tar.gz) = 49d4325043efa6e00612adcdb53e218c
+$NetBSD: md5,v 1.2 1999/11/18 11:00:42 agc Exp $
+
+MD5 (cint5.14.tar.gz) = 510a66927667c813d78e885408969aef
