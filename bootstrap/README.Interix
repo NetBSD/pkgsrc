@@ -1,41 +1,45 @@
-$NetBSD: README.Interix,v 1.7 2004/04/21 20:34:16 tv Exp $
+$NetBSD: README.Interix,v 1.8 2004/04/27 13:58:43 tv Exp $
 
 Please read the general README file as well.
 
-NOTE:  Currently, Interix support in pkgsrc is unstable, so errors and
-problems are expected.  Known caveats are listed at the bottom of this
-document.
-
-Interix is a POSIX compatible subsystem for the Windows NT kernel, providing
-a Unix-like environment with a tighter kernel integration than available
-with Cygwin.  It is part of the Windows Services for Unix package, available
-for Windows 2000, XP, and 2003.  SFU can be downloaded from:
+Interix is a POSIX compatible subsystem for the Windows NT kernel,
+providing a Unix-like environment with a tighter kernel integration than
+available with Cygwin.  It is part of the Windows Services for Unix
+package, available for free for any licensed copy of Windows 2000, XP,
+or 2003.  SFU can be downloaded from:
 
     http://www.microsoft.com/windows/sfu/
 
-Services for Unix 3.5 (current as of this writing) has been tested.  3.0 may
-work, but is not officially supported.
+Services for Unix 3.5, current as of this writing, has been tested.  3.0
+or 3.1 may work, but are not officially supported.  (The main difference
+in 3.0/3.1 is lack of pthreads.)
 
-At an absolute minimum, the following packages must be installed from the
-Windows Services for Unix 3.5 distribution in order to use bootstrap-pkgsrc:
+At an absolute minimum, the following packages must be installed from
+the Windows Services for Unix 3.5 distribution in order to use pkgsrc:
 
     Utilities -> Base Utilities
     Interix GNU Components -> (all)
     Remote Connectivity
     Interix SDK
 
-The Remote Connectivity subcomponent, Windows Remote Shell Service, does not
-need to be installed, but Remote Connectivity itself should be installed in
-order to have a working inetd.
+When using pkgsrc on Interix, it is best NOT to install the Utilities
+subcomponent "UNIX Perl".  That is Perl 5.6 without shared module
+support, installed to /usr/local, and will only cause confusion. 
+Instead, install Perl 5.8 from pkgsrc (or from a binary package
+available at the URL above).
 
-Last but not least, if the installer prompts whether to change the default
-POSIX behavior to case-sensitive, answer Yes.  If the filename handling
-remains as case-insensitive, then "bootstrap" will require the
-"--ignore-case-check" option.
+The Remote Connectivity subcomponent "Windows Remote Shell Service" does
+not need to be installed, but Remote Connectivity itself should be
+installed in order to have a working inetd.
+
+Finally, during installation you may be asked whether to enable setuid
+behavior for Interix programs, and whether to make pathnames default to
+case-sensitive.  Both options should be enabled.  (If you choose to
+disable setuid, many system programs from pkgsrc may not work.)
 
 =====
 
-KNOWN CAVEATS
+IMPORTANT NOTES
 
 * The package imanager (either the pkgsrc "su" user, or the user
   running "pkg_add") must be a member of the local Administrators
@@ -46,6 +50,19 @@ KNOWN CAVEATS
   automatically complain if this is not the case.  This ensures that
   directories written in /var/db/pkg are Administrators-group writeable. 
 
+* The popular Interix binary packages from http://www.interopsystems.com/
+  use an older version of pkgsrc's pkg_* tools.  Ideally, these should
+  NOT be used in conjunction with pkgsrc.  If you choose to use them at
+  the same time as the pkgsrc packages, ensure that you use the proper
+  pkg_* tools for each type of binary package.
+
+=====
+
+KNOWN ISSUES
+
+* "pkg_add" creates directories of mode 0755, not 0775, in $PKG_DBDIR.
+  This will be fixed.
+
 * It is not necessary, in general, to have a "root" user on the Windows
   system; any member of the local Administrators group will suffice. 
   However, some packages currently assume that the user named "root" is
@@ -53,14 +70,4 @@ KNOWN CAVEATS
   these, you may create such a user; make sure it is in the local group
   Administrators.
 
-* The popular Interix binary packages from http://www.interopsystems.com/
-  use an older version of pkgsrc's pkg_* tools and occupy the /var/db/pkg
-  directory (though the packages install to /usr/local).  If you want to
-  have both kinds of packages installed in the system, supply the option
-  "--pkgdbdir=DIRECTORY" to "bootstrap".
-
-* On Windows under Interix, the "root" user is actually named
-  "Administrator".  This may require some modification to pkgsrc to
-  introduce a parameterized root user for installation purposes.  
-  (Likewise, the bootstrap script sets the root group to
-  "+Administrators".)
+=====
