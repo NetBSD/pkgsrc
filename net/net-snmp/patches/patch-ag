@@ -1,0 +1,18 @@
+$NetBSD: patch-ag,v 1.1 2004/04/26 17:39:00 tron Exp $
+
+--- agent/mibgroup/host/hr_storage.c.orig	2002-12-19 16:07:30.000000000 +0100
++++ agent/mibgroup/host/hr_storage.c	2004-04-26 19:10:23.000000000 +0200
+@@ -148,6 +148,13 @@
+ #define HRFS_mount	mnt_mountp
+ #define HRFS_statfs	statvfs
+ 
++#elif defined(HAVE_STATVFS) && defined(__NetBSD__)
++
++extern struct statvfs *HRFS_entry;
++extern int      fscount;
++#define HRFS_statfs	statvfs
++#define HRFS_mount	f_mntonname
++
+ #elif defined(HAVE_STATVFS)
+ 
+ extern struct mntent *HRFS_entry;
