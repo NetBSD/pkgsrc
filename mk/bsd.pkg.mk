@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.190 1998/11/07 14:41:50 mycroft Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.191 1998/11/07 16:08:41 mycroft Exp $
 #
 # This file is in the public domain.
 #
@@ -986,10 +986,6 @@ do-build:
 .if !target(do-install)
 do-install:
 	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET})
-	@for f in ${INFO_FILES}; do		\
-		${ECHO} "${LOCALBASE}/bin/install-info --info-dir=${PREFIX}/info ${PREFIX}/info/$$f";	\
-		${LOCALBASE}/bin/install-info --info-dir=${PREFIX}/info ${PREFIX}/info/$$f;		\
-	done
 .endif
 
 # Package
@@ -1140,6 +1136,10 @@ _PORT_USE: .USE
 			${SCRIPTDIR}/${.TARGET:S/^real-/post-/}; \
 	fi
 .if make(real-install)
+	@for f in ${INFO_FILES}; do		\
+		${ECHO} "${LOCALBASE}/bin/install-info --info-dir=${PREFIX}/info ${PREFIX}/info/$$f";	\
+		${LOCALBASE}/bin/install-info --info-dir=${PREFIX}/info ${PREFIX}/info/$$f;		\
+	done
 	@(newmanpages=`/usr/bin/egrep -h				\
 		'^([^/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.0)(\.gz)?$$'	\
 		${PLIST_SRC} || /usr/bin/true`;				\
