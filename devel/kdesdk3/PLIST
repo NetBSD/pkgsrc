@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/17 11:06:50 skrll Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/10/03 12:32:20 markd Exp $
 bin/adddebug
 bin/catalogmanager
 bin/cervisia
@@ -404,11 +404,13 @@ share/kde/icons/hicolor/48x48/mimetypes/gettext.png
 share/kde/icons/locolor/16x16/apps/catalogmanager.png
 share/kde/icons/locolor/16x16/apps/kbabel.png
 share/kde/icons/locolor/16x16/apps/kbabeldict.png
+share/kde/icons/locolor/16x16/apps/kbugbuster.png
 share/kde/icons/locolor/16x16/apps/kompare.png
 share/kde/icons/locolor/16x16/mimetypes/gettext.png
 share/kde/icons/locolor/32x32/apps/catalogmanager.png
 share/kde/icons/locolor/32x32/apps/kbabel.png
 share/kde/icons/locolor/32x32/apps/kbabeldict.png
+share/kde/icons/locolor/32x32/apps/kbugbuster.png
 share/kde/icons/locolor/32x32/apps/kompare.png
 share/kde/icons/locolor/32x32/mimetypes/gettext.png
 share/kde/mimelnk/application/x-gettext.desktop
