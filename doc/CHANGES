@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3057 2003/08/17 04:02:17 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.3058 2003/08/17 04:46:37 kei Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3288,3 +3288,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated horde to 2.2.4rc1 [bouyer 2003-08-16]
 	Updated imp to 3.2.2rc1 [bouyer 2003-08-16]
 	Added pcb-current-20030815 [dmcmahill 2003-08-17]
+	Updated acroread5 to 5.0.8 [kei 2003-08-17]
