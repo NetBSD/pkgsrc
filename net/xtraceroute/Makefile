@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/09/27 23:18:33 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2002/10/09 11:03:32 agc Exp $
 #
 
 DISTNAME=	xtraceroute-0.8.14
@@ -12,16 +12,14 @@ HOMEPAGE=	http://www.dtek.chalmers.se/~d3august/xt/index.html
 COMMENT=	Graphical version of traceroute, which traces the route IP packets go
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=	gtkglarea>=1.2.1:../../x11/gtkglarea
-DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
 
 USE_X11=	yes
 #USE_MESA=	yes
 GNU_CONFIGURE=	yes
 USE_LIBINTL=	yes
+USE_BUILDLINK2=	yes
 
-EVAL_PREFIX+=	GTKDIR=gtk+
-CONFIGURE_ARGS+= --with-gtk-prefix="${GTKDIR}"
+CONFIGURE_ARGS+= --with-gtk-prefix="${BUILDLINK_PREFIX.gtk}"
 # XXX Actually, Mesa's in X11PREFIX too, but as our tiff is in LOCALBASE
 # and xtraceroute doesn't have a switch to tell it so (yet?), we abuse
 # the --with-GL-prefix switch for this.
@@ -32,5 +30,9 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/xtraceroute
 	${INSTALL_DATA} ${WRKDIR}/hosts.cache    ${PREFIX}/share/xtraceroute/hosts.cache
 	${INSTALL_DATA} ${WRKDIR}/networks.cache ${PREFIX}/share/xtraceroute/networks.cache
+
+.include "../../graphics/tiff/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
+.include "../../x11/gtkglarea/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
