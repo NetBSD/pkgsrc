@@ -1,9 +1,47 @@
-@comment $NetBSD: PLIST,v 1.3 2000/08/16 05:38:36 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/08/23 12:39:37 jlam Exp $
 bin/bluefish
 man/man1/bluefish.1
 share/bluefish/php3_functions
 share/bluefish/rxml_functions
 share/bluefish/ssi_functions
+share/pixmaps/bluefish_icon.xpm
+share/doc/html/bluefish/bluefish.gif
+share/doc/html/bluefish/bluefish.png
+share/doc/html/bluefish/button_close.gif
+share/doc/html/bluefish/button_config.gif
+share/doc/html/bluefish/button_copy.gif
+share/doc/html/bluefish/button_cut.gif
+share/doc/html/bluefish/button_new.gif
+share/doc/html/bluefish/button_new.png
+share/doc/html/bluefish/button_open.gif
+share/doc/html/bluefish/button_paste.gif
+share/doc/html/bluefish/button_print.gif
+share/doc/html/bluefish/button_quickstart.gif
+share/doc/html/bluefish/button_redo.gif
+share/doc/html/bluefish/button_replace.gif
+share/doc/html/bluefish/button_save.gif
+share/doc/html/bluefish/button_saveas.gif
+share/doc/html/bluefish/button_search.gif
+share/doc/html/bluefish/button_undo.gif
+share/doc/html/bluefish/chapter1.html
+share/doc/html/bluefish/chapter2.html
+share/doc/html/bluefish/chapter3.html
+share/doc/html/bluefish/chapter4.html
+share/doc/html/bluefish/config_editor.png
+share/doc/html/bluefish/config_external.png
+share/doc/html/bluefish/config_gui.png
+share/doc/html/bluefish/config_html.png
+share/doc/html/bluefish/config_img.png
+share/doc/html/bluefish/editarea.gif
+share/doc/html/bluefish/float.gif
+share/doc/html/bluefish/index.html
+share/doc/html/bluefish/mainscreen.gif
+share/doc/html/bluefish/mainscreen.png
+share/doc/html/bluefish/manual.book
+share/doc/html/bluefish/manual.css
+share/doc/html/bluefish/preface.html
+share/doc/html/bluefish/tfilemenu.gif
+share/doc/html/bluefish/tfilemenu.png
 share/locale/cs/LC_MESSAGES/bluefish.mo
 share/locale/da/LC_MESSAGES/bluefish.mo
 share/locale/de/LC_MESSAGES/bluefish.mo
@@ -15,6 +53,7 @@ share/locale/it/LC_MESSAGES/bluefish.mo
 share/locale/ja/LC_MESSAGES/bluefish.mo
 share/locale/ro/LC_MESSAGES/bluefish.mo
 share/locale/ru/LC_MESSAGES/bluefish.mo
-share/pixmaps/bluefish_icon.xpm
+share/locale/sv/LC_MESSAGES/bluefish.mo
 @unexec rmdir -p %D/share/pixmaps 2>/dev/null || true
+@dirrm share/doc/html/bluefish
 @dirrm share/bluefish
