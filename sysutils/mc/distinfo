@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2005/02/24 13:40:54 agc Exp $
+$NetBSD: distinfo,v 1.13 2005/03/22 15:29:53 wiz Exp $
 
-SHA1 (mc-4.6.1-pre2b.tar.gz) = 1e66efa538cd682fca9bee16b4d6b751b4d87bab
-RMD160 (mc-4.6.1-pre2b.tar.gz) = 2886091fee5ae2a582199eb4d46f9dc9f92cd19f
-Size (mc-4.6.1-pre2b.tar.gz) = 3903628 bytes
+SHA1 (mc-4.6.1-pre4a.tar.gz) = eca6ae768a3e1649167bc351f3708c913d5cc4cd
+RMD160 (mc-4.6.1-pre4a.tar.gz) = 54d6f54589ced2316eb02d42ad09f132acd47327
+Size (mc-4.6.1-pre4a.tar.gz) = 3902578 bytes
 SHA1 (patch-ab) = 7f6ace2493bc2e453f570153073183a289fbd153
