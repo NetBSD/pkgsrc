@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5970 2004/05/16 01:33:45 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5971 2004/05/16 01:52:41 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2573,3 +2573,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added flac123-0.0.7 [xtraeme 2004-05-16]
 	Added libjit-0.0.2 [xtraeme 2004-05-16]
 	Added advancecomp-1.10 [xtraeme 2004-05-16]
+	Added faac-1.24 [xtraeme 2004-05-16]
