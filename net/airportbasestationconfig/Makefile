@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/10/18 21:24:55 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2002/12/18 22:14:29 schmonz Exp $
 
 DISTNAME=	configurator_152-128
 PKGNAME=	${BINNAME}-1.5.2
@@ -35,7 +35,7 @@ do-build:
 .if defined(CLASSPATH)
 	${ECHO} "CLASSPATH=${CLASSPATH}:\$${CLASSPATH}; export CLASSPATH" >>${WRKSRC}/${BINNAME}
 .endif
-	${ECHO} "exec java ${JVM_OPTS} ${LIBDIR}/${JARNAME}" >>${WRKSRC}/${BINNAME}
+	${ECHO} "exec java -jar ${LIBDIR}/${JARNAME}" >>${WRKSRC}/${BINNAME}
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR} ${LIBDIR}
@@ -50,9 +50,3 @@ do-install:
 
 .include "../../mk/java.mk"
 .include "../../mk/bsd.pkg.mk"
-
-.if ${PKG_JVM} == "blackdown-jdk13"
-JVM_OPTS+=	-green -jar
-.else
-JVM_OPTS+=	-jar
-.endif
