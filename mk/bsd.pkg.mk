@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.96 1998/06/05 20:31:55 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.97 1998/06/05 23:27:48 frueauf Exp $
 #
 # This file is in the public domain.
 #
@@ -1728,7 +1728,7 @@ fake-pkg: ${PLIST}
 .if defined(FORCE_PKG_REGISTER)
 	@${RM} -rf ${PKG_DBDIR}/${PKGNAME}
 .endif
-	if [ ! -d ${PKG_DBDIR}/${PKGNAME} ]; then \
+	@if [ ! -d ${PKG_DBDIR}/${PKGNAME} ]; then \
 		${ECHO_MSG} "===>  Registering installation for ${PKGNAME}"; \
 		${MKDIR} ${PKG_DBDIR}/${PKGNAME}; \
 		${PKG_CMD} ${PKG_ARGS} -O ${PKGFILE} > ${PKG_DBDIR}/${PKGNAME}/+CONTENTS; \
