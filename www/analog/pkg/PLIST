@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 1999/06/20 10:46:17 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 1999/09/02 20:16:47 tron Exp $
 bin/analog
 etc/analog.cfg.default
 @exec cp -p %F %D/etc/analog.cfg
@@ -53,6 +53,7 @@ lib/analog/images/barh4.gif
 lib/analog/images/barh8.gif
 lib/analog/images/analogo.gif
 lib/analog/images/html2.gif
+lib/analog/lang/yu.lng
 lib/analog/lang/bra.lng
 lib/analog/lang/brh.lng
 lib/analog/lang/cata.lng
@@ -86,7 +87,9 @@ lib/analog/lang/is.lng
 lib/analog/lang/isa.lng
 lib/analog/lang/ish.lng
 lib/analog/lang/ita.lng
+lib/analog/lang/itadom.tab
 lib/analog/lang/ith.lng
+lib/analog/lang/ithdom.tab
 lib/analog/lang/jp.lng
 lib/analog/lang/jpform.html
 lib/analog/lang/kr.lng
@@ -107,6 +110,7 @@ lib/analog/lang/pth.lng
 lib/analog/lang/ro.lng
 lib/analog/lang/rua.lng
 lib/analog/lang/ruh.lng
+lib/analog/lang/ruhdom.tab
 lib/analog/lang/sea.lng
 lib/analog/lang/seh.lng
 lib/analog/lang/si1250.lng
@@ -119,12 +123,15 @@ lib/analog/lang/trh.lng
 lib/analog/lang/uk.lng
 lib/analog/lang/ukdom.tab
 lib/analog/lang/us.lng
+share/doc/analog/reports.html
 share/doc/analog/Licence.txt
 share/doc/analog/Readme.html
 share/doc/analog/acknow.html
 share/doc/analog/alias.html
 share/doc/analog/basiccmd.html
 share/doc/analog/bara8.gif
+share/doc/analog/barb1.gif
+share/doc/analog/barb32.gif
 share/doc/analog/barb8.gif
 share/doc/analog/barc8.gif
 share/doc/analog/bard8.gif
@@ -154,6 +161,7 @@ share/doc/analog/map.html
 share/doc/analog/meaning.html
 share/doc/analog/othreps.html
 share/doc/analog/output.html
+share/doc/analog/quickref.html
 share/doc/analog/start.html
 share/doc/analog/startmac.html
 share/doc/analog/startos2.html
