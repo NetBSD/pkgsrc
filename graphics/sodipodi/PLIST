@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2003/03/10 23:02:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/12/18 04:14:05 xtraeme Exp $
 bin/sodipodi
+lib/sodipodi/extensions/ill2svg.pl
 man/man1/sodipodi.1
 share/applications/sodipodi.desktop
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/sodipodi.mo
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/sodipodi.mo
@@ -17,6 +19,7 @@ ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/sodipodi.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/sodipodi.mo
@@ -24,6 +27,8 @@ ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/sodipodi.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/sodipodi.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/sodipodi.mo
