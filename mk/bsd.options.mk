@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.9.4.1 2004/11/22 22:48:04 tv Exp $
+# $NetBSD: bsd.options.mk,v 1.9.4.2 2004/11/28 20:11:32 tv Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -160,19 +160,7 @@ PKG_FAIL_REASON+=	"\"${_opt_}\" is not a supported build option."
 .  endif
 .endfor
 
-# Store the result in the +BUILD_INFO file so we can query for the build
-# options using "pkg_info -Q PKG_OPTIONS <pkg>".
-BUILD_DEFS_FIXED+=	PKG_OPTIONS
-
-.if defined(PKG_SUPPORTED_OPTIONS)
-.PHONY: supported-options-message
-pre-extract: supported-options-message
-supported-options-message:
-.  if !empty(PKG_SUPPORTED_OPTIONS)
-	@${ECHO} "=========================================================================="
-	@${ECHO} "The supported build options for this package are:"
-	@${ECHO} ""
-	@${ECHO} "${PKG_SUPPORTED_OPTIONS}" | ${XARGS} -n 1 | ${SORT} |	\
+_PKG_OPTIONS_WORDWRAP_FILTER=						\
 	${AWK} '							\
 		BEGIN { printwidth = 40; line = "" }			\
 		{							\
@@ -187,6 +175,28 @@ supported-options-message:
 		}							\
 		END { if (length(line) > 0) print "	"line }		\
 	'
+
+# Store the result in the +BUILD_INFO file so we can query for the build
+# options using "pkg_info -Q PKG_OPTIONS <pkg>".
+BUILD_DEFS_FIXED+=	PKG_OPTIONS
+
+.if defined(PKG_SUPPORTED_OPTIONS)
+.PHONY: supported-options-message
+pre-extract: supported-options-message
+supported-options-message:
+.  if !empty(PKG_SUPPORTED_OPTIONS)
+	@${ECHO} "=========================================================================="
+	@${ECHO} "The supported build options for this package are:"
+	@${ECHO} ""
+	@${ECHO} "${PKG_SUPPORTED_OPTIONS}" | ${XARGS} -n 1 | ${SORT} |	\
+		${_PKG_OPTIONS_WORDWRAP_FILTER}
+.    if !empty(PKG_OPTIONS)
+	@${ECHO} ""
+	@${ECHO} "The currently selected options are:"
+	@${ECHO} ""
+	@${ECHO} "${PKG_OPTIONS}" | ${XARGS} -n 1 | ${SORT} |		\
+		${_PKG_OPTIONS_WORDWRAP_FILTER}
+.    endif
 	@${ECHO} ""
 	@${ECHO} "You can select which build options to use by setting the following"
 	@${ECHO} "variables.  Their current value is shown:"
