@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.150 2003/01/24 15:16:31 wiz Exp $
+# $NetBSD: Makefile,v 1.151 2003/01/27 17:59:01 atatat Exp $
 #
 
 DISTNAME=	pkglint-3.45
@@ -14,7 +14,6 @@ DEPENDS+=	digest>=20010101:../../pkgtools/digest
 
 USE_PERL5=	YES
 
-EXTRACT_ONLY=	# empty
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
@@ -33,20 +32,26 @@ NROFF=		nroff -man
 NROFF=		nroff -mandoc
 .endif
 
+do-extract:
+	@${MKDIR} ${WRKSRC}/src
+.for FILE in lintpkgsrc.1 lintpkgsrc.pl pkglint.1 pkglint.pl plist-clash.pl
+	${CP} ${FILESDIR}/${FILE} ${WRKSRC}/src/${FILE}
+.endfor
+
 do-build:
 .for FILE in pkglint lintpkgsrc plist-clash
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
 		-e 's|@PORTSDIR@|${_PKGSRCDIR}|g'	\
 		-e 's|@DISTVER@|${DISTVER}|g'		\
 		-e 's|@MAKE@|${MAKE}|g'			\
-		< ${FILESDIR}/${FILE}.pl 		\
+		< ${WRKSRC}/src/${FILE}.pl 		\
 		> ${WRKSRC}/${FILE}
 .endfor
 .for FILE in pkglint lintpkgsrc
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
 		-e 's|@PORTSDIR@|${_PKGSRCDIR}|g'	\
 		-e 's|@MAKE@|${MAKE}|g'			\
-		< ${FILESDIR}/${FILE}.1			\
+		< ${WRKSRC}/src/${FILE}.1		\
 		> ${WRKSRC}/${FILE}.1
 	${NROFF} ${WRKSRC}/${FILE}.1 >${WRKSRC}/${FILE}.0
 .endfor
