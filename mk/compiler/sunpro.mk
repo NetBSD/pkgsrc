@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.17 2004/02/12 21:37:08 jlam Exp $
+# $NetBSD: sunpro.mk,v 1.18 2004/02/15 13:34:33 jlam Exp $
 
 .if !defined(COMPILER_SUNPRO_MK)
 COMPILER_SUNPRO_MK=	one
@@ -17,13 +17,13 @@ _LANGUAGES.sunpro+=	${LANGUAGES.sunpro:M${_lang_}}
 
 _SUNPRO_DIR=	${WRKDIR}/.sunpro
 _SUNPRO_LINKS=	# empty
-.  if !empty(_LANGUAGES.sunpro:Mc)
+.  if exists(${SUNWSPROBASE}/bin/cc)
 _SUNPRO_CC=	${_SUNPRO_DIR}/bin/cc
 _SUNPRO_LINKS+=	_SUNPRO_CC
 PKG_CC=		${_SUNPRO_CC}
 CC=		${PKG_CC:T}
 .  endif
-.  if !empty(_LANGUAGES.sunpro:Mc++)
+.  if exists(${SUNWSPROBASE}/bin/CC)
 _SUNPRO_CXX=	${_SUNPRO_DIR}/bin/CC
 _SUNPRO_LINKS+=	_SUNPRO_CXX
 PKG_CXX=	${_SUNPRO_CXX}
