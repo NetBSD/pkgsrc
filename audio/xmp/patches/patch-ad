@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/12/28 01:25:40 hubertf Exp $
+
+--- src/main/Makefile.orig	Fri Sep 15 23:17:25 2000
++++ src/main/Makefile	Fri Sep 15 23:20:30 2000
+@@ -6,7 +6,7 @@
+ XDEPS	=
+ BINS	= xmp $(X_XMP)
+ XLIBS	= -L../../lib -lxmp #-lefence
+-X11LIBS	= -lX11 -lXext
++X11LIBS	= -lX11 -lXext -Wl,-R${X11BASE}/lib
+ XPMS	= bg1.xpm bg2.xpm bg3.xpm
+ DFILES	= Makefile $(OBJS:.o=.c) $(X11OBJS:.o=.c) main.c xpanel.h $(XPMS) \
+ 	  simple.c
