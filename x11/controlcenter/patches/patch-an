@@ -1,0 +1,22 @@
+$NetBSD: patch-an,v 1.1 2000/05/30 19:28:21 drochner Exp $
+
+--- configure.orig	Sun May 28 17:02:45 2000
++++ configure	Sun May 28 17:03:39 2000
+@@ -2137,6 +2137,8 @@
+ *) lt_target="$target" ;;
+ esac
+ 
++if false; then
++
+ # Check for any special flags to pass to ltconfig.
+ #
+ # the following will cause an existing older ltconfig to fail, so
+@@ -2299,6 +2301,8 @@
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+ exec 5>>./config.log
++
++fi
+ 
+ missing_dir=`cd $ac_aux_dir && pwd`
+ for ac_prog in flex lex
