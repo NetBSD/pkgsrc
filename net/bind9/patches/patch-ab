@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.3 2000/08/10 12:51:48 itojun Exp $
+
+--- lib/isc/unix/socket.c.orig	Tue Jun 27 06:28:21 2000
++++ lib/isc/unix/socket.c	Sat Jul  8 11:29:29 2000
+@@ -1177,2 +1177,13 @@
+ #if defined(ISC_PLATFORM_HAVEIPV6)
++#ifdef IPV6_RECVPKTINFO
++		/* 2292bis */
++		if ((pf == AF_INET6)
++		    && (setsockopt(sock->fd, IPPROTO_IPV6, IPV6_RECVPKTINFO,
++				   (void *)&on, sizeof (on)) < 0)) {
++			UNEXPECTED_ERROR(__FILE__, __LINE__,
++					 "setsockopt(%d, IPV6_RECVPKTINFO) failed: %s",
++					 sock->fd, strerror(errno));
++		}
++#else
++		/* 2292 */
+ 		if ((pf == AF_INET6)
+@@ -1184,2 +1195,3 @@
+ 		}
++#endif
+ 
