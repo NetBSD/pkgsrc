@@ -1,15 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:00:24 zuntum Exp $
-etc/mailserv/listproc.cf
-etc/mailserv/listserv.cf
-etc/mailserv/mail-list.cf
-etc/mailserv/maiser.cf
-etc/mailserv/majordomo-admin.cf
-etc/mailserv/majordomo-share.cf
-etc/mailserv/majordomo.cf
-etc/mailserv/mlp.cf
-etc/mailserv/pmdf.cf
-etc/mailserv/smartlist.cf
-etc/mailserv/subscribe.cf
+@comment $NetBSD: PLIST,v 1.2 2003/05/01 11:59:49 jmmv Exp $
 libexec/cgi-bin/mailserv/cgi-lib.pl
 libexec/cgi-bin/mailserv/listproc
 libexec/cgi-bin/mailserv/listserv
@@ -40,4 +29,3 @@ share/examples/mailserv/subscribe.cf
 @dirrm share/examples/mailserv
 @dirrm share/doc/mailserv
 @dirrm libexec/cgi-bin/mailserv
-@dirrm etc/mailserv
