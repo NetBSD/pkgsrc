@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/26 22:42:23 wulf Exp $
-
+@comment $NetBSD: PLIST,v 1.2 2003/07/04 12:49:43 wiz Exp $
 include/hamlib/rig.h
 include/hamlib/riglist.h
 include/hamlib/rig_dll.h
