@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/04/11 01:15:51 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/04/12 14:15:07 wiz Exp $
 share/emacs/${PKGVERSION}/leim/ja-dic/ja-dic.el
 share/emacs/${PKGVERSION}/leim/ja-dic/ja-dic.elc
 share/emacs/${PKGVERSION}/leim/leim-list.el
@@ -100,3 +100,4 @@ share/emacs/${PKGVERSION}/leim/quail/viqr.el
 share/emacs/${PKGVERSION}/leim/quail/viqr.elc
 @dirrm share/emacs/${PKGVERSION}/leim/ja-dic
 @dirrm share/emacs/${PKGVERSION}/leim/quail
+@comment belongs to emacs package: dirrm share/emacs/${PKGVERSION}/leim
