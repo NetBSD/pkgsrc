@@ -1,16 +1,16 @@
-$NetBSD: patch-ae,v 1.2 1998/08/07 11:09:28 agc Exp $
+$NetBSD: patch-ae,v 1.3 1999/04/03 00:51:31 tron Exp $
 
---- tools/cpmanpages.tcl	1998/03/08 02:16:19	1.1
-+++ tools/cpmanpages.tcl	1998/03/08 02:16:44
-@@ -204,9 +204,9 @@
+--- tools/cpmanpages.tcl.orig	Sat Apr  3 02:34:22 1999
++++ tools/cpmanpages.tcl	Sat Apr  3 02:41:01 1999
+@@ -207,9 +207,9 @@
          set targetFile  $targetDir/$manName.$extension
-         catch {file delete $targetFile}
-         if {[catch {
--                link $firstFilePath $targetFile
-+                link -sym $firstFilePath $targetFile
-             } msg] != 0} {
--            puts stderr "error from: link $firstFilePath $targetFile"
-+            puts stderr "error from: link -sym $firstFilePath $targetFile"
-             puts stderr "    $msg"
+         file delete $targetFile $targetFile.gz
+         if $gzip {
+-            set cmd "link $firstFilePath.gz $targetFile.gz"
++            set cmd "link -sym $firstFilePath.gz $targetFile.gz"
          } else {
-             lappend created [file tail $targetFile]
+-            set cmd "link $firstFilePath $targetFile"
++            set cmd "link -sym $firstFilePath $targetFile"
+         }
+         if {[catch {
+                 eval $cmd
