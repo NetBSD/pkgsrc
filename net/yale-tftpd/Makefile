@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:52:06 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/21 09:15:30 jmc Exp $
 # FreeBSD Id: ports/ftp/yale-tftpd/Makefile,v 1.14 2000/04/12 05:31:29 mharo Exp
 
 DISTNAME=	yale-tftpd-3.0
-PKGREVISION=	1
+PKGREVISION=	2
 WRKSRC=		${WRKDIR}
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.cert.dfn.de/pub/tools/net/yale-tftpd/
