@@ -1,0 +1,11 @@
+--- src/audio.c.orig	2003-10-08 22:19:27.000000000 +1000
++++ src/audio.c	2003-10-08 22:19:40.000000000 +1000
+@@ -297,7 +297,7 @@
+                 spi->loop_delay = 5000;
+ #else
+ 		spi->loop_delay = 1500;
+-#endif WIN32
++#endif /* WIN32 */
+ 		zerocount++;
+ 		return (0);
+ 	} else {
