@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2000/08/21 21:01:32 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2000/08/30 13:04:00 wennmach Exp $
 #
 
-DISTNAME=		arla-0.34.1
+DISTNAME=		arla-0.34.2
 CATEGORIES=		net security
 MASTER_SITES=		ftp://ftp.stacken.kth.se/pub/arla/
 
