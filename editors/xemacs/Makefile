@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2002/03/22 22:25:05 tron Exp $
+# $NetBSD: Makefile,v 1.44 2002/03/25 19:07:39 magick Exp $
 
 DISTNAME=	xemacs-21.1.14
 PKGREVISION=	2
@@ -24,6 +24,7 @@ NOT_FOR_PLATFORM=	*-*-mips*	#fails purespace dumping
 
 HAS_CONFIGURE=	YES
 USE_XPM=	YES
+USE_X11=	YES
 
 BUILD_DEFS+=	USE_LDAP USE_XFACE
 DIST_SUBDIR=	xemacs
