@@ -1,5 +1,5 @@
-/*	$Id: getnameinfo.c,v 1.1.1.1 2003/02/28 10:44:46 lukem Exp $	*/
-/*	$NetBSD: getnameinfo.c,v 1.1.1.1 2003/02/28 10:44:46 lukem Exp $	*/
+/*	$Id: getnameinfo.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
+/*	$NetBSD: getnameinfo.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
 /*	$KAME: getnameinfo.c,v 1.43 2000/06/12 04:27:03 itojun Exp $	*/
 
 /*

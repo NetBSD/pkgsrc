@@ -1,5 +1,5 @@
-/*	$Id: fparseln.c,v 1.1.1.1 2003/02/28 10:44:46 lukem Exp $	*/
-/*	$NetBSD: fparseln.c,v 1.1.1.1 2003/02/28 10:44:46 lukem Exp $	*/
+/*	$Id: fparseln.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
+/*	$NetBSD: fparseln.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
 
 /*
  * Copyright (c) 1997 Christos Zoulas.  All rights reserved.

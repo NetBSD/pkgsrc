@@ -1,5 +1,5 @@
-/*	$Id: strtoll.c,v 1.1.1.1 2003/02/28 10:44:49 lukem Exp $	*/
-/*	$NetBSD: strtoll.c,v 1.1.1.1 2003/02/28 10:44:49 lukem Exp $	*/
+/*	$Id: strtoll.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
+/*	$NetBSD: strtoll.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
 
 /*-
  * Copyright (c) 1992, 1993

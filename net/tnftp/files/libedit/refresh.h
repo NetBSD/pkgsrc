@@ -1,4 +1,4 @@
-/*	$NetBSD: refresh.h,v 1.1.1.1 2001/04/13 01:49:05 lukem Exp $	*/
+/*	$NetBSD: refresh.h,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
 
 /*-
  * Copyright (c) 1992, 1993
