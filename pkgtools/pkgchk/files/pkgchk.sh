@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.44 2003/09/16 14:36:12 abs Exp $
+# $Id: pkgchk.sh,v 1.45 2003/10/01 11:25:02 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -60,6 +60,69 @@ check_packages_installed()
 		echo "$PKGNAME: OK"
 	    fi
 	fi
+    done
+    }
+
+list_packages()
+    {
+    CHECKLIST=' '
+    for pkgdir in $* ; do
+
+	if [ ! -f $PKGSRCDIR/$pkgdir/Makefile ];then
+	    echo "WARNING: No $pkgdir/Makefile - package moved or obsolete?"
+	    continue
+	fi
+	cd $PKGSRCDIR/$pkgdir
+	extract_make_vars PKGNAME
+	if [ -z "$PKGNAME" ]; then
+	    echo "Unable to extract PKGNAME for $pkgdir"
+	    exit 1
+	fi
+	if [ ! -f $PACKAGES/All/$PKGNAME.tgz ] ;then
+	    echo " ** $PKGNAME - binary package missing"
+	    if [ -n "$opt_k" ];then
+		exit 1
+	    fi
+	    continue
+	fi
+	if [ -n "$opt_v" ];then
+	    echo "$PKGNAME.tgz: found"
+	fi
+	CHECKLIST="$CHECKLIST$PKGNAME ";
+	if [ $PKGNAME = 'samba-2.2.8anb4.tgz' ] ; then
+	    echo XXX
+	    break
+	fi
+    done
+    while [ "$CHECKLIST" != ' ' ]; do
+	PKGLIST="$PKGLIST$CHECKLIST"
+	NEXTCHECK=' '
+	for pkg in $CHECKLIST ; do
+	    if [ ! -f $PACKAGES/All/$pkg.tgz ] ; then
+		echo " ** $PKGNAME - binary package (dependency) missing"
+		if [ -n "$opt_k" ];then
+		    exit 1
+		fi
+		continue
+	    fi
+	    for dep in `pkg_info -N $PACKAGES/All/$pkg.tgz | ${SED} '1,/Built using:/d' | ${GREP} ..` ; do
+		case "$PKGLIST" in
+		    *\ $dep\ *)
+			if [ -n "$opt_v" ];then
+			    echo "Duplicate depend $dep"
+			fi;;
+		    *)
+			NEXTCHECK="$NEXTCHECK$dep "
+			if [ -n "$opt_v" ];then
+			    echo "Add depend $dep"
+			fi;;
+		esac
+	    done
+	done
+	CHECKLIST="$NEXTCHECK"
+    done
+    for pkg in $PKGLIST ; do
+	echo $pkg.tgz
     done
     }
 
@@ -228,14 +291,15 @@ run_cmd()
     echo $1
     if [ -z "$opt_n" ];then
 	if [ -n "$opt_L" ] ; then
-	    sh -c "$1" > "$opt_L" 2>&1 || FAIL=1
+	    sh -c "$1" >> "$opt_L" 2>&1 || FAIL=1
 	else
 	    sh -c "$1" || FAIL=1
 	fi
 	if [ -n "$FAIL" ] ; then
             echo "** '$1' failed"
 	    if [ -n "$opt_L" ] ; then
-		tail -20 "$opt_L"
+		tail -100 "$opt_L" | egrep -v '^(\*\*\* Error code 1|Stop\.)' |\
+			tail -40
 	    fi
             if [ "$FAILOK" != 1 ]; then
                 exit 1
@@ -244,7 +308,7 @@ run_cmd()
     fi
     }
 
-args=`getopt BC:D:L:U:abcfhiknrsuv $*`
+args=`getopt BC:D:L:U:abcfhiklnrsuv $*`
 if [ $? != 0 ]; then
     opt_h=1
 fi
@@ -263,6 +327,7 @@ while [ $# != 0 ]; do
 	-h )	opt_h=1 ;;
 	-i )	opt_i=1 ;;
 	-k )	opt_k=1 ;;
+	-l )	opt_l=1 ;;
 	-n )	opt_n=1 ;;
 	-r )	opt_r=1 ;;
 	-s )	opt_s=1 ;;
@@ -277,8 +342,8 @@ if [ -z "$opt_b" -a -z "$opt_s" ];then
     opt_b=1; opt_s=1;
 fi
 
-if [ -z "$opt_a" -a -z "$opt_c" -a -z "$opt_i" ];then
-    echo "Must specify at least one of -a, -c, -i, or -u";
+if [ -z "$opt_a" -a -z "$opt_c" -a -z "$opt_i" -a -z "$opt_l" ];then
+    echo "Must specify at least one of -a, -c, -i, -l, or -u";
     echo
     opt_h=1;
 fi
@@ -297,6 +362,7 @@ if [ -n "$opt_h" -o $# != 1 ];then
 	-h      This help
 	-i	Check versions of installed packages (not using pkgchk.conf)
 	-k	Continue with further packages if errors are encountered
+	-l	List binary packages including dependencies (implies -c)
 	-n	Display actions that would be taken, but do not perform them
 	-r	Recursively remove mismatched files (use with care)
 	-s      Limit installations to building from source
@@ -355,7 +421,7 @@ if [ -n "$opt_i" ];then
 fi
 
 
-if [ -n "$opt_c" ];then
+if [ -n "$opt_c" -o -n "$opt_l" ];then
 
     if [ ! -r $PKGCHK_CONF ];then
 	echo "Unable to read PKGCHK_CONF '$PKGCHK_CONF'"
@@ -440,9 +506,13 @@ if [ -n "$opt_c" ];then
     `
 fi
 
-# Check $PKGDIRLIST packages are installed and correct version
-#
-check_packages_installed $PKGDIRLIST
+if [ -n "$opt_l" ] ; then
+    list_packages $PKGDIRLIST
+else
+    # Check $PKGDIRLIST packages are installed and correct version
+    #
+    check_packages_installed $PKGDIRLIST
+fi
 
 if [ -n "$opt_r" -a -n "$MISMATCH_TODO" ]; then
     run_cmd "${PKG_DELETE} -r $MISMATCH_TODO" 1

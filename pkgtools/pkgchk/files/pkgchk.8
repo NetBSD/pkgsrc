@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkgchk.8,v 1.16 2003/09/16 14:45:53 wiz Exp $
+.\"	$NetBSD: pkgchk.8,v 1.17 2003/10/01 11:25:02 abs Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -10,7 +10,7 @@
 .Nd check, and optionally update, installed packages
 .Sh SYNOPSIS
 .Nm
-.Op Fl aBbcfhiknrsuv
+.Op Fl aBbcfhiklnrsuv
 .Op Fl C Ar conf
 .Op Fl D Ar tags
 .Op Fl L Ar file
@@ -48,13 +48,16 @@ then
 .Nm
 will automatically generate binary packages for later reuse.
 .It Fl C Ar conf
-Use the pkgchk.conf file
+Use the
+.Pa pkgchk.conf
+file
 .Sq Ar conf .
 .It Fl c
-Check versions of packages specified in pkgchk.conf.
+Check versions of packages specified in
+.Pa pkgchk.conf .
 .It Fl D Ar tags
 Add the comma separated list of tags to those checked when parsing
-pkgchk.conf.
+.Pa pkgchk.conf .
 Also includes
 .Ev PKGCHK_TAGS .
 .It Fl f
@@ -71,7 +74,8 @@ to just fetch missing/mismatches packages.
 .It Fl h
 Brief help.
 .It Fl i
-Check versions of installed packages, ignoring pkgchk.conf.
+Check versions of installed packages, ignoring
+.Pa pkgchk.conf .
 .It Fl k
 Continue with further packages if errors are encountered.
 .It Fl L Ar file
@@ -79,6 +83,14 @@ Redirect the output for all commands run into the logfile
 .Pa file .
 Should be specified as a full pathname.
 On any error the tail end of the logfile will be displayed.
+.It Fl l
+List the filename for all binary packages (including the exact dependencies
+against which each package was built) based on
+.Pa pkgchk.conf .
+Will abort if a binary package is missing.
+This can be used (in conjunction with -U and -D) to determine what
+packages would need to be copied to a remote machine to ensure it
+was completely up to date.
 .It Fl n
 Display actions that would be taken, but do not change anything.
 .It Fl r
@@ -89,7 +101,8 @@ for later update.
 Limit additions or updates to building from source.
 .It Fl U Ar tags
 Remove the comma separated list of tags from those checked when
-parsing pkgchk.conf.
+parsing
+.Pa pkgchk.conf .
 Also includes
 .Ev PKGCHK_NOTAGS .
 Package directories can also be skipped by listing them under
@@ -106,10 +119,14 @@ options are given.
 Note: If the update fails (particularly when building from source), the system
 will be left with missing packages.
 .It Fl v
-Verbose - list the tags set when checking pkgchk.conf, and all packages checked.
+Verbose - list the tags set when checking
+.Pa pkgchk.conf ,
+and all packages checked.
 .El
 .Sh FILE FORMAT
-Each non comment line in pkgsrc.conf should contain a package
+Each non comment line in
+.Pa pkgsrc.conf
+should contain a package
 directory (such as sysutils/skill) followed by an optional list of
 tags.
 Tags are checked against the current machine's set:
@@ -143,7 +160,9 @@ match the current machine.
 .El
 .Pp
 The default set of tags used to determine which packages to match
-in pkgsrc.conf are equivalent to the output of the following with
+in
+.Pa pkgsrc.conf
+are equivalent to the output of the following with
 any spaces converted to hypens (-): hostname -s, hostname, uname
 -srm, uname -sr, uname -sm, uname -s, uname -r, uname -m.
 If
@@ -211,12 +230,16 @@ If not set in environment then read from
 Defaults to
 .Pa ${PKGSRCDIR}/pkgchk.conf .
 .It Ev PKGCHK_TAGS
-Additional tags to add when parsing pkgchk.conf.
+Additional tags to add when parsing
+.Pa pkgchk.conf .
 .It Ev PKGCHK_NOTAGS
-Additional tags to unset when parsing pkgchk.conf.
+Additional tags to unset when parsing
+.Pa pkgchk.conf .
 .El
 .Sh EXAMPLES
-Sample pkgchk.conf file:
+Sample
+.Pa pkgchk.conf
+file:
 .Bd -literal
 # Must install before others
 devel/cpuflags
