@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.tls,v 1.1 2002/07/22 10:39:26 martti Exp $
+libexec/postfix/tlsmgr
+man/man8/tlsmgr.8
+share/postfix/sample-tls.cf
