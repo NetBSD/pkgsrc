@@ -1,0 +1,199 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/09/07 17:38:46 jwise Exp $
+--- Makefile.in.orig	Mon Sep  7 13:12:57 1998
++++ Makefile.in	Thu Sep  7 12:10:37 2000
+@@ -35,13 +35,13 @@
+ LIB_RUNTIME_DIR =       $(exec_prefix)/lib
+ 
+ # Directory in which to install library files belonging to the extension.
+-TNM_INSTALL_DIR =	$(prefix)/lib/tnm$(TNM_VERSION)
++TNM_INSTALL_DIR =	$(prefix)/lib/tcl/tnm$(TNM_VERSION)
+ 
+ # Directory in which to install library files belonging to the extension.
+ TCL_INSTALL_DIR =	$(prefix)/lib/tcl$(TCL_VERSION)
+ 
+ # Directory in which to install the library of tkined scripts.
+-TKI_INSTALL_DIR =	$(prefix)/lib/tkined$(TKI_VERSION)
++TKI_INSTALL_DIR =	$(prefix)/lib/tcl/tkined$(TKI_VERSION)
+ 
+ # Top-level directory for manual entries:
+ MAN_INSTALL_DIR =	$(prefix)/man
+@@ -82,7 +82,7 @@
+ 
+ # The full name of the tclsh executable (including the full path
+ # and the Tcl version number).
+-TCL_TCLSH=$(TCL_EXEC_PREFIX)/bin/tclsh$(TCL_VERSION)
++TCL_TCLSH=$(TCL_EXEC_PREFIX)/bin/tclsh
+ 
+ # Top-level directory in which Tk's platform-specific files (e.g.
+ # executables) are installed.
+@@ -90,7 +90,7 @@
+ 
+ # The full name of the wish executable (including the full path
+ # and the Tk version number).
+-TK_WISH=$(TK_EXEC_PREFIX)/bin/wish$(TK_VERSION)
++TK_WISH=$(TK_EXEC_PREFIX)/bin/wish
+ 
+ # A "-I" switch that can be used when compiling to make all the
+ # Tcl include files accessible (the configure script will try to
+@@ -207,8 +207,8 @@
+ #----------------------------------------------------------------
+ 
+ INSTALL =		@INSTALL@
+-INSTALL_PROGRAM =	@INSTALL_PROGRAM@
+-INSTALL_DATA =		@INSTALL_DATA@
++INSTALL_PROGRAM =	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM}
++INSTALL_DATA =		${LIBTOOL} --mode=install ${BSD_INSTALL_DATA}
+ RPCGEN =		@RPCGEN@
+ LEX =			@LEX@
+ YACC =			@YACC@
+@@ -244,8 +244,8 @@
+ # either.
+ #----------------------------------------------------------------
+ 
+-CC =		@CC@
+-LD =		@CC@
++CC =		${LIBTOOL} --mode=compile @CC@
++LD =		${LIBTOOL} --mode=link @CC@
+ 
+ CC_SWITCHES	= $(CFLAGS) $(PROTO_FLAGS) $(SHLIB_CFLAGS) $(MEM_DEBUG_FLAGS)
+ 
+@@ -261,13 +261,14 @@
+ 		$(TNM_GENERIC_DIR)/tnmHttp.c $(TNM_GENERIC_DIR)/tnmNetdb.c \
+ 		$(UNIX_DIR)/tnmUnixInit.c $(UNIX_DIR)/tnmUnixLog.c \
+ 		$(UNIX_DIR)/tnmUnixSocket.c $(UNIX_DIR)/tnmUnixIcmp.c
+-TNM_GENERIC_OBJS = tnmInit.o tnmUtil.o tnmJob.o tnmIned.o \
++TNM_GENERIC_OBJS = tnmJob.o tnmIned.o \
+ 		tnmSyslog.o tnmIcmp.o tnmDns.o tnmEvent.o \
+ 		tnmUdp.o tnmSunRpc.o tnmNtp.o tnmRpc.o tnmHttp.o \
+ 		tnmNetdb.o tnmUnixInit.o tnmUnixLog.o \
+ 		tnmUnixSocket.o tnmUnixIcmp.o \
+ 		mount_clnt.o mount_xdr.o ether_clnt.o ether_xdr.o \
+-		rstat_clnt.o rstat_xdr.o pcnfsd_clnt.o pcnfsd_xdr.o
++		rstat_clnt.o rstat_xdr.o pcnfsd_clnt.o pcnfsd_xdr.o \
++		tnmInit.o tnmUtil.o
+ 
+ SNMP_SRCS =	$(TNM_SNMP_DIR)/tnmAsn1.c $(TNM_SNMP_DIR)/tnmMD5.c \
+ 		$(TNM_SNMP_DIR)/tnmSnmpNet.c $(TNM_SNMP_DIR)/tnmSnmpUtil.c \
+@@ -406,21 +407,23 @@
+ 
+ all: @TARGET@
+ 
+-scotty: tnm$(SHLIB_SUFFIX) ntping straps scotty.o
++scotty: libtnm$(SHLIB_SUFFIX) ntping straps scotty.o
+ 	$(LD) $(LD_FLAGS) $(LD_SEARCH_FLAGS) -o scotty scotty.o $(TCL_LIB_SPEC) $(LIBS) $(DL_LIBS) -lm
+ 
+-tnm$(SHLIB_SUFFIX): $(TNM_OBJS)
+-	$(SHLIB_LD) $(TNM_OBJS) -o tnm$(SHLIB_SUFFIX) $(LIBS) $(OSIMIS_LIBS) $(MSQL_LIBS) $(GDMO_LIBS)
++libtnm$(SHLIB_SUFFIX): $(TNM_OBJS)
++	${LIBTOOL} --mode=link @CC@ $(TNM_OBJS:.o=.lo) -o libtnm${SHLIB_SUFFIX:C/\.so.*/.la/} \
++		-Wl,-R${PREFIX}/lib $(LIBS) $(OSIMIS_LIBS) $(MSQL_LIBS) $(GDMO_LIBS) $(TCL_LIB_SPEC) -lm -rpath ${PREFIX}/lib -version-info 1:0
+ 
+-tkined: tkined$(SHLIB_SUFFIX) $(UNIX_DIR)/tkined.in
++tkined: libtkined$(SHLIB_SUFFIX) $(UNIX_DIR)/tkined.in
+ 	@sed -e 's+%WISH%+$(TK_WISH)+' \
+ 	    -e 's+%TCL_VERSION%+$(TCL_VERSION)+' \
+ 	    -e 's+%TK_VERSION%+$(TK_VERSION)+' \
+ 	    -e 's+%TKI_VERSION%+$(TKI_VERSION)+' \
+ 		    $(UNIX_DIR)/tkined.in > tkined
+ 
+-tkined$(SHLIB_SUFFIX): $(TKI_GENERIC_OBJS)
+-	$(SHLIB_LD) $(TKI_GENERIC_OBJS) -o tkined$(SHLIB_SUFFIX) $(LIBS)
++libtkined$(SHLIB_SUFFIX): $(TKI_OBJS)
++	${LIBTOOL} --mode=link @CC@ $(TKI_OBJS:.o=.lo) -o libtkined${SHLIB_SUFFIX:C/\.so.*/.la/} \
++		-Wl,-R${PREFIX}/lib -Wl,-R${X11BASE}/lib -L${PREFIX}/lib -L${X11BASE}/lib $(LIBS) -ltnm -ltk83 -ltcl83 -lX11 -lm -rpath ${PREFIX}/lib:${X11BASE}/lib -version-info 1:0
+ 
+ test:
+ 	@echo
+@@ -495,7 +498,7 @@
+ 	    chmod 444 $(MANN_INSTALL_DIR)/$$i; \
+ 	    done;
+ 
+-tnm-install-bin: scotty tnm$(SHLIB_SUFFIX)
++tnm-install-bin: scotty libtnm$(SHLIB_SUFFIX)
+ 	@for i in $(BIN_INSTALL_DIR) $(LIB_RUNTIME_DIR) $(TNM_INSTALL_DIR) ; \
+ 	    do \
+ 	    if [ ! -d $$i ] ; then \
+@@ -505,11 +508,10 @@
+ 		else true; \
+ 		fi; \
+ 	    done;
+-	@echo "Installing scotty$(TNM_VERSION) and tnm$(TNM_VERSION)$(SHLIB_SUFFIX)"
++	@echo "Installing scotty$(TNM_VERSION) and libtnm$(SHLIB_SUFFIX)"
+ 	@$(INSTALL_PROGRAM) scotty $(BIN_INSTALL_DIR)/scotty$(TNM_VERSION)
+-	@$(INSTALL_DATA) tnm$(SHLIB_SUFFIX) $(LIB_RUNTIME_DIR)/tnm$(TNM_VERSION)$(SHLIB_SUFFIX)
+-	@chmod 555 $(LIB_RUNTIME_DIR)/tnm$(TNM_VERSION)$(SHLIB_SUFFIX)
+-	@echo 'package ifneeded Tnm $(TNM_VERSION) "load $(LIB_RUNTIME_DIR)/tnm$(TNM_VERSION)[info sharedlibextension]"' > $(TNM_INSTALL_DIR)/pkgIndex.tcl
++	@$(INSTALL_DATA) libtnm$(SHLIB_SUFFIX:C/\.so.*/.la/) $(LIB_RUNTIME_DIR)
++	@echo 'package ifneeded Tnm $(TNM_VERSION) "load $(LIB_RUNTIME_DIR)/libtnm[info sharedlibextension]"' > $(TNM_INSTALL_DIR)/pkgIndex.tcl
+ 
+ tnm-install-mibs:
+ 	@for i in $(TNM_INSTALL_DIR)/mibs ; \
+@@ -597,7 +599,7 @@
+ 	    $(INSTALL_DATA) $$i $(TNM_INSTALL_DIR)/agents; \
+ 	    done
+ 
+-tki-install-bin: tkined tkined$(SHLIB_SUFFIX) $(TKI_LIBRARY_DIR)/pkgIndex.tcl
++tki-install-bin: tkined libtkined$(SHLIB_SUFFIX) $(TKI_LIBRARY_DIR)/pkgIndex.tcl
+ 	@for i in $(BIN_INSTALL_DIR) $(LIB_RUNTIME_DIR) $(TKI_INSTALL_DIR) ; \
+ 	    do \
+ 	    if [ ! -d $$i ] ; then \
+@@ -607,11 +609,10 @@
+ 		else true; \
+ 		fi; \
+ 	    done;
+-	@echo "Installing tkined$(TKI_VERSION) and tkined$(TKI_VERSION)$(SHLIB_SUFFIX)"
+-	@$(INSTALL_PROGRAM) tkined $(BIN_INSTALL_DIR)/tkined$(TKI_VERSION)
+-	@$(INSTALL_DATA) tkined$(SHLIB_SUFFIX) $(LIB_RUNTIME_DIR)/tkined$(TKI_VERSION)$(SHLIB_SUFFIX)
+-	@chmod 555 $(LIB_RUNTIME_DIR)/tkined$(TKI_VERSION)$(SHLIB_SUFFIX)
+-	@echo 'package ifneeded Tkined $(TKI_VERSION) "load $(LIB_RUNTIME_DIR)/tkined$(TKI_VERSION)[info sharedlibextension]"' > $(TKI_INSTALL_DIR)/pkgIndex.tcl
++	@echo "Installing tkined$(TKI_VERSION) and libtkined$(SHLIB_SUFFIX)"
++	$(BSD_INSTALL_SCRIPT) tkined $(BIN_INSTALL_DIR)/tkined$(TKI_VERSION)
++	$(INSTALL_DATA) libtkined$(SHLIB_SUFFIX:C/\.so.*/.la/) $(LIB_RUNTIME_DIR)
++	@echo 'package ifneeded Tkined $(TKI_VERSION) "load $(LIB_RUNTIME_DIR)/libtkined[info sharedlibextension]"' > $(TKI_INSTALL_DIR)/pkgIndex.tcl
+ 	@$(INSTALL_DATA) $(TKI_DIR)/tkined.defaults $(TKI_INSTALL_DIR)
+ 
+ tki-install-library:
+@@ -696,9 +697,9 @@
+ uninstall: tnm-uninstall uninstall-man tki-uninstall
+ 
+ tnm-uninstall:
+-	@echo "Removing scotty$(TNM_VERSION) and tnm$(TNM_VERSION)$(SHLIB_SUFFIX)"
++	@echo "Removing scotty$(TNM_VERSION) and libtnm$(SHLIB_SUFFIX)"
+ 	@rm -f $(BIN_INSTALL_DIR)/scotty$(TNM_VERSION)
+-	@rm -f $(LIB_RUNTIME_DIR)/tnm$(TNM_VERSION)$(SHLIB_SUFFIX)
++	@rm -f $(LIB_RUNTIME_DIR)/libtnm$(SHLIB_SUFFIX)
+ 	@for i in $(LIB_INSTALL_DIR)/tnm$(TNM_VERSION)/* ; \
+ 	    do \
+ 	    if [ "`basename $$i`" != "site" ] ; then \
+@@ -713,9 +714,9 @@
+ 	    fi
+ 
+ tki-uninstall:
+-	@echo "Removing tkined$(TNM_VERSION) and tkined$(TNM_VERSION)$(SHLIB_SUFFIX)"
++	@echo "Removing tkined$(TNM_VERSION) and libtkined$(SHLIB_SUFFIX)"
+ 	@rm -f $(BIN_INSTALL_DIR)/tkined$(TKI_VERSION)
+-	@rm -f $(LIB_RUNTIME_DIR)/tkined$(TKI_VERSION)$(SHLIB_SUFFIX)
++	@rm -f $(LIB_RUNTIME_DIR)/libtkined$(SHLIB_SUFFIX)
+ 	@for i in $(LIB_INSTALL_DIR)/tkined$(TKI_VERSION)/* ; \
+ 	    do \
+ 	    if [ "`basename $$i`" != "site" ] ; then \
+@@ -750,7 +751,7 @@
+ 	@rm -f $(TNM_OBJS) $(TKI_OBJS) scotty.o ntping.o straps.o
+ 	@rm -f tnmGdmoScan.c tnmGdmoParser.c tnmGdmoParser.h
+ 	@rm -f scotty ntping straps tkined
+-	@rm -f tnm$(SHLIB_SUFFIX) tkined$(SHLIB_SUFFIX)
++	@rm -f libtnm$(SHLIB_SUFFIX) libtkined$(SHLIB_SUFFIX)
+ 	@rm -f core *_svc.c *~ *.bak so_locations lmake.???
+ 	@rm -f map.so tnmMap.o tnmMapUtil.o 
+ 	@rm -f tnmMapNode.o tnmMapClnt.o tnmMapAppl.o
+@@ -821,8 +822,8 @@
+ 		$(MAN8_INSTALL_DIR)/straps.8 \
+ 		$(BIN_INSTALL_DIR)/ntping \
+ 		$(MAN8_INSTALL_DIR)/ntping.8 \
+-		$(LIB_RUNTIME_DIR)/tkined$(SHLIB_SUFFIX) \
+-		$(LIB_RUNTIME_DIR)/tnm$(SHLIB_SUFFIX) \
++		$(LIB_RUNTIME_DIR)/libtkined$(SHLIB_SUFFIX) \
++		$(LIB_RUNTIME_DIR)/libtnm$(SHLIB_SUFFIX) \
+ 		$(TNM_INSTALL_DIR) $(TKI_INSTALL_DIR)
+ 
+ bintar:

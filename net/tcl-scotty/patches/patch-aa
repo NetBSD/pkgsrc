@@ -1,0 +1,36 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/09/07 17:38:43 jwise Exp $
+--- configure.orig	Tue Sep 22 05:44:19 1998
++++ configure	Wed Sep  6 13:19:49 2000
+@@ -1059,7 +1059,11 @@
+ fi
+ 
+ fi
++
++if [ x"$TARGET" = x ]
++then
+ TARGET="scotty tkined"
++fi
+ 
+ #--------------------------------------------------------------------
+ #       Check for various system specific things.
+@@ -1480,9 +1484,8 @@
+ done
+ 
+ if test "$found" -eq 0 ; then
+-    { echo "configure: error: "tkConfig.sh not found - use the --with-tk-config option"" 1>&2; exit 1; }
+-fi
+-
++    { echo "configure: error: tkConfig.sh not found" 1>&2; }
++else
+ . $tnm_cv_path_tk_config/tkConfig.sh
+ TK_INCLUDES=-I$TK_PREFIX/include
+ if test "$TK_INCLUDES" = "$TCL_INCLUDES" ; then
+@@ -1497,6 +1500,8 @@
+ fi
+ if test 4 -eq $TK_MAJOR_VERSION -a 1 -gt $TK_MINOR_VERSION; then
+     { echo "configure: error: "tk 4.1 or later needed"" 1>&2; exit 1; }
++fi
++
+ fi
+ 
+ #----------------------------------------------------------------------------
