@@ -6,5 +6,5 @@ static html files.
 
 This is a portable solution, similar to ActiveWare's PerlScript and MKS's
 PScript implementation of perl for IIS ASP. Work has been done and will
-continue to make ports to and from these other implementations as seemless
+continue to make ports to and from these other implementations as seamless
 as possible.
