@@ -1,4 +1,4 @@
-# $NetBSD: rc.subr,v 1.2 2003/06/23 07:03:50 grant Exp $
+# $NetBSD: rc.subr,v 1.3 2003/06/28 07:15:28 grant Exp $
 #
 # Copyright (c) 1997-2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -37,6 +37,12 @@
 # rc.subr
 #	functions used by various rc scripts
 #
+
+if ${_rc_subr_loaded:-false}; then
+	return
+else
+	_rc_subr_loaded=true
+fi
 
 #	global variables
 #	----------------
@@ -122,7 +128,7 @@ checkyesno()
 reverse_list()
 {
 	_revlist=
-	for _revfile in $*; do
+	for _revfile; do
 		_revlist="$_revfile $_revlist"
 	done
 	${_RCCMD_echo} $_revlist
@@ -262,7 +268,7 @@ _find_processes()
 #
 wait_for_pids()
 {
-	_list=$*
+	_list="$@"
 	if [ -z "$_list" ]; then
 		return
 	fi
@@ -545,7 +551,7 @@ run_rc_command()
 				exit 1
 			fi
 
-			if [ ! -x $command ]; then
+			if [ ! -x ${_chroot}${command} ]; then
 				return 0
 			fi
 
@@ -815,7 +821,7 @@ rc_usage()
 	${_RCCMD_echo} -n 1>&2 "Usage: $0 [fast|force]("
 
 	_sep=
-	for _elem in $*; do
+	for _elem; do
 		${_RCCMD_echo} -n 1>&2 "$_sep$_elem"
 		_sep="|"
 	done
