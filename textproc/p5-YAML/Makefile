@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2004/12/20 11:31:12 grant Exp $
+# $NetBSD: Makefile,v 1.4 2005/02/19 12:31:15 wiz Exp $
 
-DISTNAME=	YAML-0.35
+DISTNAME=	YAML-0.36
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	perl5 textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=YAML/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://search.cpan.org/dist/YAML/
 COMMENT=	YAML implementation for Perl
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews

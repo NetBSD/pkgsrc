@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/03 15:56:20 epg Exp $
+$NetBSD: distinfo,v 1.2 2005/02/19 12:31:15 wiz Exp $
 
-SHA1 (YAML-0.35.tar.gz) = fb97a08a56f3b2dd80c62d7b33ee0c5da480ef32
-Size (YAML-0.35.tar.gz) = 55741 bytes
-SHA1 (patch-aa) = 1dc1f95c9e9b504d6112d59470b60794c2d6442c
+SHA1 (YAML-0.36.tar.gz) = a2d86fe407905c058597023ff05c01014f47179e
+Size (YAML-0.36.tar.gz) = 59834 bytes
