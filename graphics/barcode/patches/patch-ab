@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/07/12 21:32:54 dillo Exp $
+$NetBSD: patch-ab,v 1.2 2004/06/15 12:47:32 grant Exp $
 
---- Makefile.in.orig	Wed Nov  8 19:17:40 2000
+--- Makefile.in.orig	2000-11-09 05:17:40.000000000 +1100
 +++ Makefile.in
-@@ -55,7 +55,7 @@
+@@ -55,7 +55,7 @@ $(LIBRARY): $(LIBOBJECTS)
  	$(RANLIB) $(LIBRARY)
  
  $(MAN1) $(MAN3): doc/doc.$(TARGET)
@@ -11,3 +11,19 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/07/12 21:32:54 dillo Exp $
  
  
  # Unfortunately, pmake has no "-C". Also, "pmake -n" doesn't follow the cd.
+@@ -63,8 +63,13 @@ $(INFO): doc/doc.$(TARGET)
+ 	cd doc && $(MAKE) 
+ 
+ install:
+-	$(INSTALL) -d $(BINDIR) $(INCDIR) $(LIBDIR) $(MAN1DIR) \
+-		$(MAN3DIR) $(INFODIR)
++	$(INSTALL) -d $(BINDIR)
++	$(INSTALL) -d $(INCDIR)
++	$(INSTALL) -d $(LIBDIR)
++	$(INSTALL) -d $(MAN1DIR)
++	$(INSTALL) -d $(MAN3DIR)
++	$(INSTALL) -d $(MAN3DIR)
++	$(INSTALL) -d $(INFODIR)
+ 	$(INSTALL) -c $(TARGET) $(BINDIR)
+ 	$(INSTALL) -c -m 0644 $(HEADER) $(INCDIR)
+ 	$(INSTALL) -c -m 0644  $(LIBRARY) $(LIBDIR)
