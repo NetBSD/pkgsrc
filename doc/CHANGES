@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.67 2002/09/25 23:18:11 jwise Exp $
+$NetBSD: CHANGES,v 1.68 2002/09/26 10:07:58 abs Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2976,3 +2976,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated automake-devel to 1.6.3 [wiz 2002-09-25]
 	Updated drac to 1.11 [wiz 2002-09-25]
 	Updated sablotron to 0.96 [jwise 2002-09-25]
+	Updated jdbc-postgresql to 7.2.2 [abs 2002-09-25]
