@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/01/23 18:11:05 fredb Exp $
+# $NetBSD: Makefile,v 1.2 2003/01/25 04:10:42 fredb Exp $
 #
 
 DISTNAME=	musixtex-109
@@ -61,8 +61,5 @@ post-install:
 		makeindex musixdoc.idx ; \
 		latex  musixdoc ; \
 		dvips musixdoc.dvi -o musixdoc.ps
-	@${ECHO} "======> Converting musixdoc.ps into musixdoc.pdf"
-	ps2pdf ${PREFIX}/share/texmf/doc/musixtex/musixdoc.ps \
-		${PREFIX}/share/texmf/doc/musixtex/musixdoc.pdf
 
 .include "../../mk/bsd.pkg.mk"
