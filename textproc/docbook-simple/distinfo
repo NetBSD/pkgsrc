@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.4 2004/10/30 06:31:02 minskim Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 14:48:41 agc Exp $
 
 SHA1 (docbook-simple-1.1CR2.zip) = 440025c6b5ceede7c1270da61aa7d026063d9c42
+RMD160 (docbook-simple-1.1CR2.zip) = 782b3b7e7d60829544e763ea82fc0791afe1ce0d
 Size (docbook-simple-1.1CR2.zip) = 34525 bytes
