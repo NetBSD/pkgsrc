@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2004/01/23 21:50:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.39 2004/02/04 14:25:58 markd Exp $
 
-DISTNAME=	kdebase-3.1.5
-PKGREVISION=	2
+DISTNAME=	kdebase-3.2.0
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -22,7 +21,14 @@ CONFIGURE_ARGS+=	--without-lame
 CONFIGURE_ARGS+=	--without-vorbis
 CONFIGURE_ARGS+=	--without-java
 
-REPLACE_PERL=		kcontrol/fileshare/fileshareset
+REPLACE_PERL= \
+			kcontrol/fileshare/fileshareset \
+			kcontrol/keys/convertShortcuts.pl \
+			kicker/kicker-3.1-properSizeSetting.pl \
+			kioslave/finger/kio_finger.pl \
+			kwin/kwin3_plugin.pl \
+			kwin/pluginlibFix.pl \
+			konsole/schemaStrip.pl
 
 RCD_SCRIPTS=		kdm
 
@@ -68,43 +74,17 @@ PLIST_SUBST+=		KCMKEYBOARD="kcm_keyboard.so"
 
 ICONDIR=		share/kde/icons
 
-FOO_MAIN_FILES= \
-	kate/app/dummy_main.cpp \
-	kcontrol/access/kaccess_main.cpp \
-	kcontrol/kcontrol/kcminit_main.cpp \
-	kcontrol/kcontrol/kcmshell_main.cpp \
-	kcontrol/kcontrol/kcontrol_main.cpp \
-	kdeprint/kjobviewer/kjobviewer_main.cpp \
-	kdesktop/kdesktop_main.cc \
-	khotkeys/khotkeys/khotkeys_main.cpp \
-	kicker/kicker_main.cpp \
-	kicker/proxy/appletproxy_main.cpp \
-	kicker/proxy/extensionproxy_main.cpp \
-	klipper/klipper_main.cpp \
-	kmenuedit/kmenuedit_main.cpp \
-	konqueror/client/kfmclient_main.cc \
-	konqueror/keditbookmarks/keditbookmarks_main.cpp \
-	konqueror/konqueror_main.cc \
-	konsole/konsole/konsole_main.cpp \
-	konsole/konsole/kwrited_main.cpp \
-	ksmserver/ksmserver_main.cpp \
-	kxkb/kxkb_main.cpp \
-	legacyimport/klegacyimport_main.cpp
-
-.include "../../meta-pkgs/kde3/Makefile.foo_main"
-
 # Several programs need to be setuid-root, but due to the way that KDE3
 # finds executables, the files must have their read bit set so that
 # KStandardDir::findResource() will find them.
 #
 _KDE_SETUID_ROOT=	${ROOT_USER} ${ROOT_GROUP} 4755
-SPECIAL_PERMS+=	${PREFIX}/bin/konsole_grantpty	${_KDE_SETUID_ROOT}
 SPECIAL_PERMS+=	${PREFIX}/bin/kcheckpass	${_KDE_SETUID_ROOT}
 SPECIAL_PERMS+=	${PREFIX}/bin/ksysguardd	${_KDE_SETUID_ROOT}
 
 pre-configure:
 	cd ${WRKSRC};							\
-	files="kioslave/info/kde-info2html.conf khelpcenter/infoconsts.h"; \
+	files="kioslave/info/kde-info2html.conf";			\
 	for file in $${files}; do					\
 		${SED} -e 's|@LOCALBASE@|${LOCALBASE}|' $${file} >	\
 			$${file}.new;					\

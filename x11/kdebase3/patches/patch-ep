@@ -1,8 +1,8 @@
-$NetBSD: patch-ep,v 1.4 2003/07/30 13:35:00 markd Exp $
+$NetBSD: patch-ep,v 1.5 2004/02/04 14:25:59 markd Exp $
 
---- startkde.orig	2003-07-14 08:10:07.000000000 +1200
+--- startkde.orig	2003-10-26 23:45:35.000000000 +1300
 +++ startkde
-@@ -21,7 +21,7 @@ trap 'echo GOT SIGHUP' HUP
+@@ -24,7 +24,7 @@ unset DYLD_FORCE_FLAT_NAMESPACE
  #
  # * Then ksmserver is started which in turn starts
  #   1) the window manager (kwin)
@@ -11,8 +11,8 @@ $NetBSD: patch-ep,v 1.4 2003/07/30 13:35:00 markd Exp $
  #   3) the rest of the session.
  
  # The user's personal KDE directory is usually ~/.kde, but this setting
-@@ -51,11 +51,11 @@ usr_odir=$HOME/.fonts/kde-override
- usr_fdir=$HOME/.fonts
+@@ -77,11 +77,11 @@ fi
+ 
  if test -n "$KDEDIRS"; then
    kdedirs_first=`echo "$KDEDIRS"|sed -e 's/:.*//'`
 -  sys_odir=$kdedirs_first/share/fonts/override
@@ -27,12 +27,3 @@ $NetBSD: patch-ep,v 1.4 2003/07/30 13:35:00 markd Exp $
  fi
  
  # We run mkfontdir on the user's font dirs (if we have permission) to pick
-@@ -70,7 +70,7 @@ test -d "$sys_fdir" && xset fp+ "$sys_fd
- 
- #
- # Add any user-installed font directories to the X font path
--kde_fontsdir=$kdehome/share/fonts
-+kde_fontsdir=$kdehome/share/kde/fonts
- kde_fontpaths=$kde_fontsdir/fontpaths
- 
- if test -r "$kde_fontpaths" ; then
