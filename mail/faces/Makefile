@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/07/11 09:53:10 agc Exp $
+# $NetBSD: Makefile,v 1.17 2000/09/04 11:29:35 tron Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/17 18:47:53 max Exp
 #
 
@@ -18,8 +18,8 @@ MAKE_ENV+=	MKLINT=no
 
 post-configure:
 	@cd ${WRKSRC}; \
-	for f in Makefile faces.h x11.c scripts/addxface scripts/facesall \
-	          scripts/mkfacesindex; do \
+	for f in Makefile faces.h x11.c compface/Makefile 		\
+		scripts/addxface scripts/facesall scripts/mkfacesindex; do \
 		${MV} $$f $$f.in;					\
 		${SED} -e 's|@localbase@|'${LOCALBASE}'|g' 		\
 			-e 's|@x11prefix@|'${X11PREFIX}'|g'		\
