@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/10/05 11:51:47 wiz Exp $
+
+SHA1 (XML-LibXML-Common-0.13.tar.gz) = 0a8fd1fef22101633556529223508e7f9c7af186
+Size (XML-LibXML-Common-0.13.tar.gz) = 12930 bytes
+SHA1 (patch-aa) = 2a6e80f65f9d5dd04cd3f82e2280c073aeae0ff0
