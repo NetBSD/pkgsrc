@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2002/01/16 20:26:44 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2002/01/28 09:07:23 drochner Exp $
 #
 
 DISTNAME=	Python-2.0.1
 PKGNAME=	python20-2.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.0.1/
 EXTRACT_SUFX=	.tgz
@@ -39,9 +39,8 @@ SSLFLAGS=	-DUSE_SSL -I/usr/include/openssl -lssl -lcrypto
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${MACHINE_ARCH} == "alpha" || ${MACHINE_ARCH} == "sparc64"
+# don't build modules which don't work on all platforms
 NO64BIT=\#
-.endif
 .if ${OPSYS} == "SunOS"
 ZOULARIS?=	${PREFIX}/bsd
 MODADD=		-I${ZOULARIS}/include -L${ZOULARIS}/lib -R${ZOULARIS}/lib
