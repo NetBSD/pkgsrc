@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2004/08/07 18:26:25 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2004/08/09 20:14:21 jlam Exp $
 
 DISTNAME=	dspam-3.0.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mail
 MASTER_SITES=	http://www.nuclearelephant.com/projects/dspam/sources/
 
@@ -48,8 +48,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-chi-square
 CONFIGURE_ARGS+=	--enable-robinson-pvalues
 CONFIGURE_ARGS+=	--with-signature-life=${DSPAM_SIGNATURE_LIFE}
-CONFIGURE_ARGS+=	--with-dspam-home=${DSPAM_HOME}
-CONFIGURE_ARGS+=	--with-dspam-home-owner=${DSPAM_USER}		\
+CONFIGURE_ARGS+=	--with-dspam-home=${DSPAM_HOME}			\
+			--with-dspam-home-owner=${DSPAM_USER}		\
 			--with-dspam-home-group=${DSPAM_GROUP}		\
 			--with-dspam-owner=${DSPAM_USER}		\
 			--with-dspam-group=${DSPAM_GROUP}		\
