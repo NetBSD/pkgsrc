@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.27 2004/06/04 19:21:23 tv Exp $
+# $NetBSD: gen-transform.sh,v 1.28 2004/08/10 15:13:25 jlam Exp $
 
 transform="@_BLNK_TRANSFORM_SEDFILE@"
 untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
@@ -93,6 +93,7 @@ EOF
 		gen $action mangle:-Wl,-rpath-link,$2:-Wl,-rpath-link,$3
 		gen $action mangle:-Wl,-rpath,$2:-Wl,-rpath,$3
 		gen $action mangle:-Wl,-R$2:-Wl,-R$3
+		gen $action mangle:-Wl,@_OPSYS_RPATH_NAME@$2:-Wl,@_OPSYS_RPATH_NAME@$3
 		gen $action mangle:-R$2:-R$3
 		;;
 	sub-rpath)
@@ -101,6 +102,7 @@ EOF
 		gen $action sub-mangle:-Wl,-rpath-link,$2:-Wl,-rpath-link,$3
 		gen $action sub-mangle:-Wl,-rpath,$2:-Wl,-rpath,$3
 		gen $action sub-mangle:-Wl,-R$2:-Wl,-R$3
+		gen $action sub-mangle:-Wl,@_OPSYS_RPATH_NAME@$2:-Wl,@_OPSYS_RPATH_NAME@$3
 		gen $action sub-mangle:-R$2:-R$3
 		;;
 	abs-rpath)
@@ -109,6 +111,7 @@ EOF
 		gen $action __r:-Wl,-rpath-link,\\.
 		gen $action __r:-Wl,-rpath,\\.
 		gen $action __r:-Wl,-R\\.
+		gen $action __r:-Wl,@_OPSYS_RPATH_NAME@\\.
 		gen $action __r:-R\\.
 		;;
 	no-rpath)
@@ -117,6 +120,7 @@ EOF
 		gen $action __r:-Wl,-rpath-link,
 		gen $action __r:-Wl,-rpath,
 		gen $action __r:-Wl,-R
+		gen $action __r:-Wl,@_OPSYS_RPATH_NAME@
 		gen $action __r:-R
 		;;
 	reorder)
@@ -270,6 +274,7 @@ EOF
 		gen $action $r:-Wl,-rpath-link,$2
 		gen $action $r:-Wl,-rpath,$2
 		gen $action $r:-Wl,-R$2
+		gen $action $r:-Wl,@_OPSYS_RPATH_NAME@$2
 		gen $action $r:-R$2
 		;;
 	S)
