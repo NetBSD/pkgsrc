@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2002/05/07 00:51:17 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.5 2002/07/08 03:30:55 dmcmahill Exp $
 #
 
-DISTNAME=	gerbv-0.0.8
+DISTNAME=	gerbv-0.0.9
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gerbv/}
 
@@ -11,8 +11,9 @@ COMMENT=	Gerber file viewer
 
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
+CONFIGURE_ARGS+=	--enable-exportpng
 
-DEPENDS+=	guile>=1.4:../../lang/guile
-
+.include "../../graphics/gdk-pixbuf/buildlink.mk"
+.include "../../graphics/png/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
