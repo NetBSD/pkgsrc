@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2004/02/16 00:11:32 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2004/02/16 00:12:52 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use gucharmap.
 #
@@ -14,13 +14,7 @@ BUILDLINK_PKGSRCDIR.gucharmap?=		../../fonts/gucharmap
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gucharmap=gucharmap
 BUILDLINK_PREFIX.gucharmap_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.gucharmap+=	include/gucharmap/gucharmap-charmap.h
-BUILDLINK_FILES.gucharmap+=	include/gucharmap/gucharmap-mini-fontsel.h
-BUILDLINK_FILES.gucharmap+=	include/gucharmap/gucharmap-table.h
-BUILDLINK_FILES.gucharmap+=	include/gucharmap/gucharmap-unicode-info.h
-BUILDLINK_FILES.gucharmap+=	include/gucharmap/gucharmap-window.h
-BUILDLINK_FILES.gucharmap+=	include/gucharmap/gucharmap.h
-BUILDLINK_FILES.gucharmap+=	lib/gtk-2.0/2.2.0/immodules/im-gucharmap.*
+BUILDLINK_FILES.gucharmap+=	include/gucharmap/*
 BUILDLINK_FILES.gucharmap+=	lib/libgucharmap.*
 
 .include "../../devel/gettext-lib/buildlink2.mk"
