@@ -1,9 +1,9 @@
-$NetBSD: patch-af,v 1.2 1999/06/26 16:55:28 christos Exp $
+$NetBSD: patch-af,v 1.3 1999/09/12 00:14:53 simonb Exp $
 
---- conf/main.cf.orig	Wed Mar 17 23:35:48 1999
-+++ conf/main.cf	Sun May 30 18:49:15 1999
+--- conf/main.cf.orig	Tue Sep  7 06:20:55 1999
++++ conf/main.cf	Sat Sep 11 14:55:13 1999
 @@ -1,3 +1,5 @@
-+#	$NetBSD: patch-af,v 1.2 1999/06/26 16:55:28 christos Exp $
++#	$NetBSD: patch-af,v 1.3 1999/09/12 00:14:53 simonb Exp $
 +#
  # Global Postfix configuration file. This file lists only a subset
  # of all 100+ parameters. See the sample-xxx.cf files for a full list.
@@ -18,7 +18,7 @@ $NetBSD: patch-af,v 1.2 1999/06/26 16:55:28 christos Exp $
  # The command_directory parameter specifies the location of all
  # postXXX commands.  The default value is $program_directory.
  #
--#command_directory = /usr/sbin
+-command_directory = /usr/sbin
 +command_directory = __PREFIX/sbin
  
  # The daemon_directory parameter specifies the location of all Postfix
@@ -26,7 +26,7 @@ $NetBSD: patch-af,v 1.2 1999/06/26 16:55:28 christos Exp $
  # default value is $program_directory. This directory must be owned
  # by root.
  #
--#daemon_directory = /usr/libexec/postfix
+-daemon_directory = /usr/libexec/postfix
 +daemon_directory = __PREFIX/libexec/postfix
 +
 +# Shared files and etc directory
@@ -36,15 +36,7 @@ $NetBSD: patch-af,v 1.2 1999/06/26 16:55:28 christos Exp $
  
  # QUEUE AND PROCESS OWNERSHIP
  #
-@@ -40,14 +47,14 @@
- # OWNS NO OTHER FILES OR PROCESSES ON THE SYSTEM.  In particular,
- # don't specify nobody or daemon. PLEASE USE A DEDICATED USER.
- #
--#mail_owner = postfix
-+mail_owner = postfix
- 
- # The default_privs parameter specifies the default rights used by
- # the local delivery agent for delivery to external file or command.
+@@ -47,7 +54,7 @@
  # These rights are used in the absence of a recipient user context.
  # DO NOT SPECIFY A PRIVILEGED USER OR THE POSTFIX OWNER.
  #
@@ -53,7 +45,7 @@ $NetBSD: patch-af,v 1.2 1999/06/26 16:55:28 christos Exp $
  
  # INTERNET HOST AND DOMAIN NAMES
  # 
-@@ -347,8 +354,7 @@
+@@ -384,8 +391,7 @@
  # the process marches on. If you use an X-based debugger, be sure to
  # set up your XAUTHORITY environment variable before starting Postfix.
  #

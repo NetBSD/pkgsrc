@@ -1,9 +1,9 @@
-$NetBSD: patch-au,v 1.1 1999/05/30 18:18:32 tron Exp $
+$NetBSD: patch-au,v 1.2 1999/09/12 00:14:53 simonb Exp $
 
 --- postconf/Makefile.orig	Sun May 30 18:49:13 1999
 +++ postconf/Makefile	Sun May 30 18:49:13 1999
-@@ -0,0 +1,27 @@
-+#	$NetBSD: patch-au,v 1.1 1999/05/30 18:18:32 tron Exp $
+@@ -0,0 +1,28 @@
++#	$NetBSD: patch-au,v 1.2 1999/09/12 00:14:53 simonb Exp $
 +.include "../conf/main.cf"
 +PROG=	postconf
 +BINDIR=${command_directory}
@@ -23,8 +23,9 @@ $NetBSD: patch-au,v 1.1 1999/05/30 18:18:32 tron Exp $
 +# XXX
 +NOMAN=1
 +
++AWK?=	awk
 +${GENSRCS}: ${.CURDIR}/../global/mail_params.h
-+	sh ${.CURDIR}/extract.sh ${.CURDIR}/../*/*.c
++	$(AWK) -f $(.CURDIR)/extract.awk $(.CURDIR)/../*/*.c
 +
 +# XXX
 +${PSRCS}: ${GENSRCS}
