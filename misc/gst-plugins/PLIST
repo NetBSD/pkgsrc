@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/25 04:43:50 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/11/26 23:18:34 wiz Exp $
 bin/gst-launch-ext
 bin/gst-visualise
 include/gstreamer-0.6/gst/audio/audio.h
@@ -28,6 +28,9 @@ lib/gstreamer-0.6/libgstalaw.so
 lib/gstreamer-0.6/libgstaudio.a
 lib/gstreamer-0.6/libgstaudio.la
 lib/gstreamer-0.6/libgstaudio.so
+lib/gstreamer-0.6/libgstaudiofile.a
+lib/gstreamer-0.6/libgstaudiofile.la
+lib/gstreamer-0.6/libgstaudiofile.so
 lib/gstreamer-0.6/libgstaudioscale.a
 lib/gstreamer-0.6/libgstaudioscale.la
 lib/gstreamer-0.6/libgstaudioscale.so
@@ -109,6 +112,10 @@ lib/gstreamer-0.6/libgstintfloat.so
 lib/gstreamer-0.6/libgstjpeg.a
 lib/gstreamer-0.6/libgstjpeg.la
 lib/gstreamer-0.6/libgstjpeg.so
+lib/gstreamer-0.6/libgstjpegmmxdec.a
+lib/gstreamer-0.6/libgstjpegmmxdec.la
+lib/gstreamer-0.6/libgstjpegmmxenc.a
+lib/gstreamer-0.6/libgstjpegmmxenc.la
 lib/gstreamer-0.6/libgstlame.a
 lib/gstreamer-0.6/libgstlame.la
 lib/gstreamer-0.6/libgstlame.so
