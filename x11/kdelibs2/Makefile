@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2001/07/18 22:44:30 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2001/09/07 14:32:21 drochner Exp $
 #
 
-DISTNAME=	kdelibs-2.1
-PKGNAME=	${DISTNAME}nb1
+DISTNAME=	kdelibs-2.1.2
 CATEGORIES=	x11 kde
 .include "../../x11/kde2/Makefile.part1"
 COMMENT=	Support libraries for the KDE integrated X11 desktop
