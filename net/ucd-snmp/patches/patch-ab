@@ -1,8 +1,25 @@
-$NetBSD: patch-ab,v 1.2 1999/05/04 03:51:57 tv Exp $
+$NetBSD: patch-ab,v 1.3 1999/08/15 09:44:01 tron Exp $
 
---- snmplib/Makefile.in.orig	Mon Mar 15 11:49:10 1999
-+++ snmplib/Makefile.in	Mon May  3 23:26:56 1999
-@@ -35,19 +35,18 @@
+--- snmplib/Makefile.in.orig	Mon Mar 15 17:49:10 1999
++++ snmplib/Makefile.in	Sun Aug 15 11:17:50 1999
+@@ -7,12 +7,14 @@
+ 	snmp_auth.c asn1.c md5.c \
+ 	party.c context.c acl.c view.c \
+ 	party_parse.c context_parse.c acl_parse.c \
+-	system.c vacm.c int64.c read_config.c snmp_debug.c
++	system.c vacm.c int64.c read_config.c snmp_debug.c \
++	libwrap.c
+ OBJS=	snmp_client.o mib.o parse.o snmp_api.o snmp.o \
+ 	snmp_auth.o asn1.o md5.o \
+ 	party.o context.o acl.o view.o \
+ 	party_parse.o context_parse.o acl_parse.o \
+-	system.o vacm.o int64.o read_config.o snmp_debug.o
++	system.o vacm.o int64.o read_config.o snmp_debug.o \
++	libwrap.o
+ 
+ #all but md5.h, vacm.h, libsnmp.h, and read_config.h are copied to the installed
+ #include directory
+@@ -35,19 +37,18 @@
  
  CFLAGS=@CFLAGS@ @SHLIB_CFLAGS@
  CPPFLAGS=@CPPFLAGS@ -I. -I.. -I$(srcdir) -I$(srcdir)/..
