@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/30 17:41:04 sommerfeld Exp $
+bin/tzc
