@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:33:39 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 09:04:18 agc Exp $
 
-MD5 (fidogate-4.4.2.tar.gz) = 055ff66f68455ff746d4974d7d072036
+SHA1 (fidogate-4.4.2.tar.gz) = 46e3d7d89abdbd8e6ce1397cb956cad16e67d6ab
+Size (fidogate-4.4.2.tar.gz) = 1165471 bytes
 SHA1 (patch-aa) = 169ef1122c1d2050249c1cc79106f335b714ef8a
 SHA1 (patch-ab) = c453ad1e3955259f01cd0692cf5568d2f3fafacb
 SHA1 (patch-ac) = b93a8656afea504e00692d4a235f117dfb67df68

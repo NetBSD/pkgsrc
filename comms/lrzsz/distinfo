@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:33:47 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 09:04:21 agc Exp $
 
-MD5 (lrzsz-0.12.20.tar.gz) = b5ce6a74abc9b9eb2af94dffdfd372a4
+SHA1 (lrzsz-0.12.20.tar.gz) = 451e6a1813dfb71a412c973acd1b88b9ee3f28c4
+Size (lrzsz-0.12.20.tar.gz) = 280938 bytes
 SHA1 (patch-aa) = aaf33281da19658906eee6a922397968a200f186
 SHA1 (patch-ab) = 273f343a3e4ca8190ae4ab52483600f7bcf8e404

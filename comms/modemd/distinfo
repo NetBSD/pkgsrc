@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:33:50 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 09:04:23 agc Exp $
 
-MD5 (modemd-970221.tar.gz) = 92f501361161074206e9bb2761055182
+SHA1 (modemd-970221.tar.gz) = 104f8e596f711e349203b2da8c4f2ecf40d490c3
+Size (modemd-970221.tar.gz) = 56093 bytes
 SHA1 (patch-aa) = fdd18e77e89127af6fc150f4ade9b4e3224a2579
 SHA1 (patch-ab) = 8afeab67a4715d7f6ed553dee5c82d442120876d
 SHA1 (patch-ac) = 2f87a347c6723179da84379ced6f6ad83d412708
