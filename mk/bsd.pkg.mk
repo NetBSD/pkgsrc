@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.758 2001/06/12 20:30:09 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.759 2001/06/12 20:39:13 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -97,11 +97,13 @@ SCRIPTS_ENV+=		CLASSPATH=${CLASSPATH} JAVA_HOME=${JAVA_HOME}
 .if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) || \
     exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
 X11PREFIX=		${LOCALBASE}
-XMKMF?=			${X11PREFIX}/bin/pkgxmkmf -a
+XMKMF_CMD?=		${X11PREFIX}/bin/pkgxmkmf
 .else
 X11PREFIX=		${X11BASE}
-XMKMF?=			${X11PREFIX}/bin/xmkmf -a
+XMKMF_CMD?=		${X11PREFIX}/bin/xmkmf
 .endif
+XMKMF_FLAGS?=		-a
+XMKMF?=			${XMKMF_CMD} ${XMKMF_FLAGS}
 
 .if defined(USE_MOTIF12)
 USE_MOTIF=		# defined
