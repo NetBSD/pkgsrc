@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink2.mk,v 1.10 2003/05/25 19:02:32 jlam Exp $
+# $NetBSD: pthread.buildlink2.mk,v 1.11 2003/07/10 23:10:08 grant Exp $
 #
 # The pthreads strategy for pkgsrc is to "bless" a particular pthread
 # package as the Official Pthread Replacement (OPR).  A package that uses
@@ -154,9 +154,27 @@ BUILDLINK_TARGETS+=		pthread-buildlink-la
 
 BUILDLINK_CFLAGS.pthread=	-pthread
 
+# handle systems which have pthreads functions in libc_r such as
+# FreeBSD 5.x, or fall back to libc if we don't find libc_r.
+#
+.  if exists(/usr/lib/libpthread.so) || exists(/lib/libpthread.so)
+BUILDLINK_LDFLAGS.pthread=	-lpthread
 LIBTOOL_ARCHIVE_UNTRANSFORM_SED+= \
 	-e "s|${BUILDLINK_PREFIX.pthread}/lib/libpthread.la|-lpthread|g" \
 	-e "s|${LOCALBASE}/lib/libpthread.la|-lpthread|g"
+.  else
+.    if exists(/usr/lib/libc_r.so)
+BUILDLINK_LDFLAGS.pthread=	-lc_r
+LIBTOOL_ARCHIVE_UNTRANSFORM_SED+= \
+	-e "s|${BUILDLINK_PREFIX.pthread}/lib/libpthread.la|-lc_r|g" \
+	-e "s|${LOCALBASE}/lib/libpthread.la|-lc_r|g"
+.    else
+BUILDLINK_LDFLAGS.pthread=	# empty
+LIBTOOL_ARCHIVE_UNTRANSFORM_SED+= \
+	-e "s|${BUILDLINK_PREFIX.pthread}/lib/libpthread.la||g" \
+	-e "s|${LOCALBASE}/lib/libpthread.la||g"
+.    endif
+.  endif
 
 pthread-buildlink: _BUILDLINK_USE
 
@@ -179,10 +197,11 @@ PKG_FAIL_REASON= "${PKGNAME} needs pthreads, but ${_PKG_PTHREAD_BUILDLINK2_MK} i
 .  endif
 .endif
 
-# Define user-visible PTHREAD_CFLAGS as compiler options used to
-# compile/link pthreaded code.
+# Define user-visible PTHREAD_CFLAGS and PTHREAD_LDFLAGS as compiler
+# options used to compile/link pthreaded code.
 #
 PTHREAD_CFLAGS=	${BUILDLINK_CFLAGS.pthread}
+PTHREAD_LDFLAGS=${BUILDLINK_LDFLAGS.pthread}
 
 PTHREADBASE=	${BUILDLINK_PREFIX.pthread}
 CONFIGURE_ENV+=	PTHREADBASE=${PTHREADBASE}
