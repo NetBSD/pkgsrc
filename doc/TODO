@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2952 2005/01/22 09:28:59 xtraeme Exp $
+$NetBSD: TODO,v 1.2953 2005/01/22 15:08:18 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -674,7 +674,6 @@ Suggested package updates
 	o mpi-ch-1.2.6 [pkg/27273]
 	o mplayer-plugin-firefox-2.75
 	o mrproject-0.9.1
-	o mrtg-2.11.1
 	o mserv-devel-0.41
 	o mtail-1.1.1
 	o multi-gnome-terminal-1.6.2
