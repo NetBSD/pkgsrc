@@ -1,4 +1,4 @@
-.\"	$NetBSD: lintpkgsrc.1,v 1.21 2002/07/11 09:59:01 wiz Exp $
+.\"	$NetBSD: lintpkgsrc.1,v 1.22 2003/01/02 22:58:41 schmonz Exp $
 .\"
 .\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -131,7 +131,7 @@ flags respectively.
 As
 .Fl i
 plus for mismatched packages, display REQUIRED details and run
-.Ql make fetch-list | sh
+.Ql @MAKE@ fetch-list | sh
 to ensure all the distfiles needed for
 the latest version are present.
 .Pp

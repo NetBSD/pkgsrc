@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.145 2003/01/02 22:17:45 atatat Exp $
+# $NetBSD: Makefile,v 1.146 2003/01/02 22:58:41 schmonz Exp $
 #
 
-DISTNAME=	pkglint-3.40
+DISTNAME=	pkglint-3.41
 CATEGORIES=	pkgtools devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -17,7 +17,6 @@ USE_PERL5=	YES
 EXTRACT_ONLY=	# empty
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
-NO_PATCH=	yes
 NO_CONFIGURE=	yes
 
 MAKE_ENV=	PKGSRCDIR=${_PKGSRCDIR}
@@ -39,12 +38,14 @@ do-build:
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
 		-e 's|@PORTSDIR@|${_PKGSRCDIR}|g'	\
 		-e 's|@DISTVER@|${DISTVER}|g'		\
+		-e 's|@MAKE@|${MAKE}|g'			\
 		< ${FILESDIR}/${FILE}.pl 		\
 		> ${WRKSRC}/${FILE}
 .endfor
 .for FILE in pkglint lintpkgsrc
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
 		-e 's|@PORTSDIR@|${_PKGSRCDIR}|g'	\
+		-e 's|@MAKE@|${MAKE}|g'			\
 		< ${FILESDIR}/${FILE}.1			\
 		> ${WRKSRC}/${FILE}.1
 	${NROFF} ${WRKSRC}/${FILE}.1 >${WRKSRC}/${FILE}.0
