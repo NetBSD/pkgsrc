@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9168 2005/02/18 07:09:13 xtraeme Exp $
+$NetBSD: CHANGES,v 1.9169 2005/02/18 10:10:27 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -910,3 +910,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated criticalmass to 0.9.10 [peter 2005-02-17]
 	Updated pkglint to 4.06 [rillig 2005-02-17]
 	Added blur6ex-0.1.198 [xtraeme 2005-02-18]
+	Updated flow-tools to 0.67nb2 [seb 2005-02-18]
