@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/08/20 15:17:20 tsarna Exp $
+# $NetBSD: Makefile,v 1.14 1999/02/20 22:26:22 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/28 06:49:06 obrien Exp
 #
 
@@ -12,7 +12,7 @@ EXTRACT_SUFX=	.gz
 MAINTAINER=	ambrisko@ambrisko.roble.com
 HOMEPAGE=	http://www.socks.nec.com/
 
-CONFLICTS=	socks4-2.2
+CONFLICTS=	socks4-*
 
 NO_CDROM=	"NEC has a funky license for this software"
 RESTRICTED=	"no commercial use"
