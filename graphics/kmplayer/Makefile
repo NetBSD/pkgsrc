@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/01/20 12:18:16 agc Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/22 16:13:56 jmmv Exp $
 #
 
 DISTNAME=	kmplayer-0.8.2rc5
+PKGREVISION=	1
 CATEGORIES=	graphics kde
 MASTER_SITES=	http://www.xs4all.nl/~jjvrieze/
 EXTRACT_SUFX=	.tar.bz2
@@ -13,6 +14,7 @@ COMMENT=	KDE frontend to mplayer
 BUILD_USES_MSGFMT=	yes
 DEPENDS=		mplayer>=1.0rc3:../../graphics/mplayer
 DEPENDS+=		mencoder>=1.0rc3:../../graphics/mencoder
+DEPENDS+=		xine-arts>=1rc0a:../../audio/xine-arts
 
 WRKSRC=			${WRKDIR}/kmplayer
 GNU_CONFIGURE=		yes
