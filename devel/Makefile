@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 1999/05/18 21:27:30 hwr Exp $
+# $NetBSD: Makefile,v 1.60 1999/06/07 22:15:59 tron Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -112,6 +112,7 @@
 #    SUBDIR += sawt
 #    SUBDIR += scogdb
     SUBDIR += sfio
+    SUBDIR += stooop
     SUBDIR += swig
 #    SUBDIR += tclcheck
     SUBDIR += tkcvs
