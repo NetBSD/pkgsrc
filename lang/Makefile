@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2003/08/26 10:20:34 itojun Exp $
+# $NetBSD: Makefile,v 1.158 2003/08/30 21:24:30 jtb Exp $
 #
 
 COMMENT=	Programming languages
@@ -67,6 +67,7 @@ SUBDIR+=	jini
 SUBDIR+=	joos
 SUBDIR+=	kaffe
 SUBDIR+=	kali
+SUBDIR+=	ksi
 SUBDIR+=	libperl
 SUBDIR+=	librep
 SUBDIR+=	lua
