@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:29:04 agc Exp $
+$NetBSD: distinfo,v 1.3 2001/10/31 02:03:29 hubertf Exp $
 
-SHA1 (lavaps-1.15.tar.gz) = bb3fa1b59f65fcf8b898533898b14aa4dc94e1c9
-Size (lavaps-1.15.tar.gz) = 153336 bytes
-SHA1 (patch-aa) = 3be933a17396c051d79d8d3695f91f459fb29d3a
+SHA1 (lavaps-1.20.tar.gz) = 36411710a29bcb751f23ae35a2782a5286ec0f2e
+Size (lavaps-1.20.tar.gz) = 160724 bytes
