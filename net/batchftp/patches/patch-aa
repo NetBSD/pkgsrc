@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/05/30 21:34:39 tron Exp $
+$NetBSD: patch-aa,v 1.2 2000/12/28 00:03:20 wiz Exp $
 
 --- batchftp.c.orig	Tue Oct 23 21:12:42 1990
-+++ batchftp.c	Sun May 30 23:20:33 1999
++++ batchftp.c
+@@ -66,7 +66,7 @@
+ /* All string functions used in Batchftp are user-defined */
+ 
+ char *strcpy ();
+-int  strlen ();
++size_t  strlen ();
+ int   strncmp ();
+ char  *substr ();
+ char  *strcat ();
 @@ -129,7 +129,7 @@
  
  
@@ -20,3 +29,21 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/05/30 21:34:39 tron Exp $
  	char            *sh_args[3];            /* arguments for execv */
  
  	*alarm_flag = _FALSE;                   /* alarm has not been called */
+@@ -755,7 +755,7 @@
+ 	sh_args[1] = sh_name;
+ 	sh_args[2] = 0;
+ 
+-	if ((int) signal(SIGALRM, alarm_handler) == -1) {
++	if (signal(SIGALRM, alarm_handler) == (void *)-1) {
+ 		fprintf(*mptr, "\nSYSTEM ERROR -- Unable to establish timer");
+ 		return;
+ 		}
+@@ -986,7 +986,7 @@
+ }
+ /*------------------------------------------------------- */
+ 
+-int  strlen (s)
++size_t  strlen (s)
+ 
+ register char  *s;
+ {
