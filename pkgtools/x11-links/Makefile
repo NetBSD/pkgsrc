@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2003/04/10 01:28:22 grant Exp $
+# $NetBSD: Makefile,v 1.32 2003/06/12 15:29:52 jschauma Exp $
 #
 # NOTE:	If you update this package, then you'll likely need to also update
 #	the x11-links dependency in mk/buildlink2/bsd.buildlink2.mk to the
@@ -39,7 +39,7 @@ PKG_FAIL_REASON= "${PKGNAME} requires X headers to be installed"
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${BUILDLINK_X11_SUBDIR}
-	cd ${BUILDLINK_DIR} && { ${ECHO} include ; ${ECHO} lib ; } | \
+	cd ${BUILDLINK_DIR} && { ${ECHO} include ; ${ECHO} lib${ABI} ; } | \
 		${PAX} -rw ${PREFIX}/${BUILDLINK_X11_SUBDIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/${BUILDLINK_X11_SUBDIR}
 	${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}
