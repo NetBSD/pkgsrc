@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/08/22 02:22:14 grant Exp $
+# $NetBSD: Makefile,v 1.9 2002/09/27 14:47:06 grant Exp $
 #
 
 DISTNAME=		xfstt_1.3
@@ -16,6 +16,8 @@ MAKE_ENV+=		CXXFLAGS="${CXXFLAGS}"
 USE_X11BASE=		YES
 USE_GMAKE=		YES
 WRKSRC=			${WRKDIR}/${PKGNAME}
+
+RCD_SCRIPTS=		xfstt
 
 post-patch:
 	@( \
@@ -35,10 +37,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/CHANGES ${PREFIX}/share/doc/xfstt
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/xfstt
 	${INSTALL_DATA} ${WRKSRC}/THANKS ${PREFIX}/share/doc/xfstt
-	${SED} -e "/%%PREFIX%%/s##${PREFIX}#g" ${FILESDIR}/xfstt.sh \
-		> ${PREFIX}/etc/rc.d/xfstt
-	${CHMOD} 755 ${PREFIX}/etc/rc.d/xfstt
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/fonts/TrueType
 	${ECHO} belongs to xfstt pkg >${PREFIX}/lib/X11/fonts/TrueType/.keepme
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
