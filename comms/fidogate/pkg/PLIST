@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1999/02/11 19:17:28 tv Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/08/14 13:55:08 wiz Exp $
 bin/pktdebug
 bin/pktmore
 bin/sumcrc
@@ -41,6 +41,7 @@ lib/fidogate/runin
 lib/fidogate/runout
 lib/fidogate/runtoss
 lib/fidogate/rununpack
+lib/libfidogate.la
 lib/libfidogate.so.0.0
 share/fidogate/inn/send-ffx
 share/fidogate/inn/send-fidogate
