@@ -1,4 +1,4 @@
-SHA1 (patch-aa) = b36fa4900d8f27b1c9663172ccf95b8810f0afcc
+$NetBSD: distinfo,v 1.7 2002/07/02 12:43:57 wiz Exp $
 
 SHA1 (GMT3.4/GMT3.4_progs.tar.bz2) = b9fa8f60fe20ff9509ef3ebdf15fcc74e01d3f95
 Size (GMT3.4/GMT3.4_progs.tar.bz2) = 551406 bytes
