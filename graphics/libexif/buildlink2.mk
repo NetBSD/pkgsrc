@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.6 2003/07/25 12:42:45 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2003/08/05 10:07:24 wiz Exp $
 
 .if !defined(LIBEXIF_BUILDLINK2_MK)
 LIBEXIF_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		libexif
-BUILDLINK_DEPENDS.libexif?=	libexif>=0.5.10
+BUILDLINK_DEPENDS.libexif?=	libexif>=0.5.12
 BUILDLINK_PKGSRCDIR.libexif?=	../../graphics/libexif
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.libexif=libexif
