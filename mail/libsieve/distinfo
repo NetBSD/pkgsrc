@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/02/22 01:05:18 rh Exp $
+
+SHA1 (cyrus-imapd-2.1.12.tar.gz) = f77c7328faba7bdb6b2af55ec562433a29255e4a
+Size (cyrus-imapd-2.1.12.tar.gz) = 1664202 bytes
