@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9416 2005/03/04 12:09:29 wiz Exp $
+$NetBSD: CHANGES,v 1.9417 2005/03/04 15:31:45 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1210,6 +1210,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated tor to 0.0.9.5 [jschauma 2005-02-28]
 	Updated tinyca to 0.6.8 [adrianp 2005-02-28]
 	Updated gqview to 2.0.0 [snj 2005-02-28]
+	Updated xemacs to 21.4.17 [uebayasi 2005-02-28]
 	Added xmms-wma-1.0.4 [xtraeme 2005-03-01]
 	Updated squid to 2.5.9 [taca 2005-03-01]
 	Updated gerbv to 1.0.1 [dmcmahill 2005-03-01]
