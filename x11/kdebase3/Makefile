@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2004/01/15 10:15:14 markd Exp $
+# $NetBSD: Makefile,v 1.36 2004/01/15 12:22:10 markd Exp $
 
 DISTNAME=	kdebase-3.1.5
 CATEGORIES=	x11
@@ -158,6 +158,5 @@ post-install:
 .include "../../meta-pkgs/kde3/buildlink2.mk"
 .include "../../x11/qt3-tools/buildlink2.mk"
 .include "../../x11/kdelibs3/buildlink2.mk"
-.include "../../mk/kerberos.mk"
 
 .include "../../mk/bsd.pkg.mk"
