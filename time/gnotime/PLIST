@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/10/23 13:54:46 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/11/27 10:48:03 jdolecek Exp $
 bin/gnotime
 include/gnotime/gnc-date.h
 include/gnotime/gnc-engine-util.h
@@ -16,6 +16,8 @@ include/gnotime/qofgobj.h
 include/gnotime/qofid.h
 include/gnotime/qofinstance.h
 include/gnotime/qofobject.h
+include/gnotime/qofquery-deserial.h
+include/gnotime/qofquery-serialize.h
 include/gnotime/qofquery.h
 include/gnotime/qofquerycore.h
 include/gnotime/qofsession.h
@@ -45,6 +47,7 @@ share/gnotime/ghtml/C/gtt-style.css
 share/gnotime/ghtml/C/gtt.scm
 share/gnotime/ghtml/C/invoice.ghtml
 share/gnotime/ghtml/C/journal.ghtml
+share/gnotime/ghtml/C/journal-rss.ghtml
 share/gnotime/ghtml/C/noproject.ghtml
 share/gnotime/ghtml/C/primer.ghtml
 share/gnotime/ghtml/C/query.ghtml
