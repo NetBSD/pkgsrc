@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/05/29 13:06:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/08/22 03:20:49 markd Exp $
 bin/comdraw
 bin/comterp
 bin/comtest
@@ -104,6 +104,7 @@ include/Dispatch/rpcregistry.h
 include/Dispatch/rpcservice.h
 include/Dispatch/rpcstream.h
 include/Dispatch/rpcwriter.h
+include/DrawServ/ackback-handler.h
 include/DrawServ/drawcatalog.h
 include/DrawServ/drawclasses.h
 include/DrawServ/drawcomps.h
@@ -111,8 +112,17 @@ include/DrawServ/drawcreator.h
 include/DrawServ/draweditor.h
 include/DrawServ/drawfunc.h
 include/DrawServ/drawkit.h
+include/DrawServ/drawlink.h
+include/DrawServ/drawlinkcomp.h
+include/DrawServ/drawlinklist.h
+include/DrawServ/drawserv-handler.h
 include/DrawServ/drawserv.h
 include/DrawServ/drawviews.h
+include/DrawServ/grid.h
+include/DrawServ/gridlist.h
+include/DrawServ/linkselection.h
+include/DrawServ/rcdialog.h
+include/DrawServ/sid.h
 include/FrameUnidraw/framecatalog.h
 include/FrameUnidraw/frameclasses.h
 include/FrameUnidraw/framecmds.h
