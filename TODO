@@ -1,15 +1,15 @@
-$NetBSD: TODO,v 1.4 2001/05/04 13:04:08 zuntum Exp $
+$NetBSD: TODO,v 1.5 2001/05/04 13:27:42 skrll Exp $
 
 This file will eventually hold a current 'TODO' list for people
 working on pkgsrc.
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
-    figfonts		More fonts for figlet
-    ftp://ftp.plig.org/pub/figlet/fonts/contributed/
-
     compat_solaris8	Solaris and Intel compat libraries
     http://www.sun.com/software/solaris/binaries/download.html
+
+    figfonts		More fonts for figlet
+    ftp://ftp.plig.org/pub/figlet/fonts/contributed/
 
     kde-i18n		Internationalisation package for KDE 2.
     ftp://ftp.kde.org/pub/kde/stable/2.1/distribution/tar/generic/src
@@ -21,6 +21,10 @@ packages TODO (Suggested new packages)
     sp			very simple divx player, it depends on graphics/avifile
     http://zuntum.net/sp.tar.gz
 		zuntum will take care of that.
+
+    SquirrelMail plugins
+			SquirrelMail has a plugings features and several plugins exist.
+    http://www.squirrelmail.org/index.php3?page=15
 
 
 packages TODO (Suggested package updates)
@@ -35,7 +39,7 @@ packages TODO (Suggested package updates)
 pksgrc TODO (Suggested pkgsrc features and enhancements)
 ^^^^^^^^^^^
 
-     o	Add a default test target to mk/*.mk and override in any pkgs
+     o	Add a default test target to mk/*.mk and override it in any pkgs
 	that have testsuites. Use it in bulk builds/test.
 
      o	Add a USE_PTHREADS variable with ALT_PTHREADS override.
