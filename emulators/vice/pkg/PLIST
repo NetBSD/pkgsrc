@@ -1,5 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 1998/09/06 23:47:37 garbled Exp $
-info/dir
+@comment $NetBSD: PLIST,v 1.2 1998/09/07 08:38:46 frueauf Exp $
+bin/x64
+bin/x128
+bin/xvic
+bin/xpet
+bin/c1541
+bin/petcat
 info/vice.info
 info/vice.info-1
 info/vice.info-2
@@ -69,12 +74,6 @@ share/vice/PET/pet3032
 share/vice/PET/amber.vpl
 share/vice/PET/default.vpl
 share/vice/PET/white.vpl
-bin/x64
-bin/x128
-bin/xvic
-bin/xpet
-bin/c1541
-bin/petcat
 @dirrm share/doc/vice
 @dirrm share/vice/C64
 @dirrm share/vice/C128
