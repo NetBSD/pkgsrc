@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2003/05/02 11:57:29 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2003/05/05 14:42:01 jmmv Exp $
 #
 
 DISTNAME=		Gtk-Perl-0.7008
-PKGREVISION=	1
+PKGREVISION=		1
 PKGNAME=		p5-gtk-0.7008
 SVR4_PKGNAME=		p5gtk
 WRKSRC=			${WRKDIR}/${DISTNAME}/Gtk
