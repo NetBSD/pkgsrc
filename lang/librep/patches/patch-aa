@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.6 2002/04/10 11:13:28 hubertf Exp $
+$NetBSD: patch-aa,v 1.7 2002/06/28 07:46:25 agc Exp $
 
---- Makedefs.in.orig	Wed Apr 10 12:57:38 2002
-+++ Makedefs.in
+--- Makedefs.in.orig	Fri Aug 10 03:37:48 2001
++++ Makedefs.in	Fri Jun 28 08:43:07 2002
+@@ -36,7 +36,7 @@
+ localstatedir=@localstatedir@
+ mandir=@mandir@
+ sharedstatedir=@sharedstatedir@
+-aclocaldir=@aclocaldir@
++aclocaldir=@prefix@/share/aclocal
+ emacssitelispdir=@emacssitelispdir@
+ 
+ host_type=@host@
 @@ -57,7 +57,7 @@
  EXTRA_LIBOBJS=@EXTRA_LIBOBJS@
  READLINE_LIBS=@READLINE_LIBS@
