@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/11/15 11:35:30 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/15 15:38:15 soren Exp $
 #
 
 DISTNAME=		qemu-0.6.1
+PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		http://fabrice.bellard.free.fr/qemu/
 
