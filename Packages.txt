@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.313 2003/10/04 19:34:46 agc Exp $
+# $NetBSD: Packages.txt,v 1.314 2003/10/04 19:59:38 agc Exp $
 ###########################################################################
 
 			==========================
@@ -2344,7 +2344,8 @@ examples.
  ===================================
 
 Some packages install info files or use the makeinfo or install-info
-commands. Each info files:
+commands. Each of the info files:
+
 	- is considered to be installed in the directory
 	  ${PREFIX}/${INFO_DIR};
 	- is registered in the Info directory file
@@ -2353,29 +2354,29 @@ commands. Each info files:
 	  in the package Makefile.
  
 INFO_DIR defaults to `info' and can be overridden in the package Makefile.
-INSTALL and DEINSTALL scripts will be generated for handling registration
+INSTALL and DEINSTALL scripts will be generated to handle the registration
 of the info files in the Info directory file.
-The command install-info used for the info files registration is either
+The install-info command (used for the info files registration) is either
 provided by the system or by a special purpose package automatically 
 added as dependency if needed.
 
-A package which need the makeinfo command at build time must define
-the variable USE_MAKEINFO in its Makefile. If a minimum version of the
-makeinfo command is needed it should be noted with the TEXINFO_REQD variable
-in the package Makefile. By default a minimum version of 3.12 is required.
-If the system does not provide a makeinfo command or if it does not match
-the required minimum a build dependency on the devel/gtexinfo package is
-added.
+A package which needs the makeinfo command at build time must define
+the variable USE_MAKEINFO in its Makefile.  If a minimum version of
+the makeinfo command is needed, it should be noted with the
+TEXINFO_REQD variable in the package Makefile.  By default a minimum
+version of 3.12 is required.  If the system does not provide a
+makeinfo command or if it does not match the required minimum, a build
+dependency on the devel/gtexinfo package will be added automatically.
 
 The build and installation process of the software provided by the package
-should not use the install-info as the registration of info files
+should not use the install-info command as the registration of info files
 is the task of the package INSTALL script, and it must use the appropriate
 makeinfo command.
 
 To achieve this goal the pkgsrc infrastructure creates overriding scripts
 for the install-info and makeinfo command in a directory listed early in PATH.
 
-The script overriding install-info as no effect expect the logging of a
+The script overriding install-info has no effect expect the logging of a
 message. The script overriding makeinfo logs a message and according to the
 value of USE_MAKEINFO and TEXINFO_REQD either run the appropriate makeinfo
 command or exit on error.
