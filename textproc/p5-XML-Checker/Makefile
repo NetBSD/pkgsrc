@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/04/27 19:17:02 shell Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/27 20:49:01 seb Exp $
 
 DISTNAME=	XML-Checker-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -12,11 +12,8 @@ CONFLICTS+=	p5-libxml-enno-[0-9]*
 
 DEPENDS+=	p5-XML-DOM-[0-9]*:../../textproc/p5-XML-DOM
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XML/Checker/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/01/18 22:50:16 mjl Exp $
+# $NetBSD: Makefile,v 1.9 2002/10/27 20:48:58 seb Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/06/27 18:38:15 jfitz Exp
 #
 
@@ -17,11 +17,8 @@ DEPENDS+=	p5-Digest-MD5>=2.11:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Digest-SHA1>=1.02:../../security/p5-Digest-SHA1
 DEPENDS+=	p5-Digest-HMAC>=1.00:../../security/p5-Digest-HMAC
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/SNMP/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
