@@ -1,0 +1,6 @@
+# $NetBSD: DEINSTALL,v 1.1.1.1 2000/01/07 05:23:30 sakamoto Exp $
+grep -v 'libwcsmbs\.so' ${EMULPRELOAD} > /tmp/.ld.so.preload.save 2> /dev/null
+mv /tmp/.ld.so.preload.save ${EMULPRELOAD}
+if [ ! -s ${EMULPRELOAD} ]; then
+	rm -f ${EMULPRELOAD}
+fi
