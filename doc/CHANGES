@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6373 2004/06/28 14:33:47 hubertf Exp $
+$NetBSD: CHANGES,v 1.6374 2004/06/28 14:50:57 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3136,3 +3136,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome-icon-theme to 1.2.3 [jmmv 2004-06-28]
 	Updated gnome-netstatus to 2.6.2 [jmmv 2004-06-28]
 	Updated pkglint to 3.82 [hubertf 2004-06-28]
+	Updated gnome-panel to 2.6.2 [jmmv 2004-06-28]
