@@ -1,0 +1,19 @@
+--- ltmain.sh.orig	Thu Dec 31 13:06:58 1998
++++ ltmain.sh	Thu Dec 31 13:07:53 1998
+@@ -923,6 +923,16 @@
+         versuffix="$current.$revision"
+         ;;
+ 
++      freebsd)
++        version_vars="$version_vars major versuffix"
++        major="$current"
++	if [ $PORTOBJFORMAT = elf ]; then
++        versuffix="$current"
++	else
++        versuffix="$current.$revision"
++	fi
++        ;;
++
+       *)
+         $echo "$modename: unknown library version type \`$version_type'" 1>&2
+         echo "Fatal configuration error.  See the $PACKAGE docs for more information." 1>&2
