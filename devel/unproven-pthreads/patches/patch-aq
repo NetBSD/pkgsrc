@@ -1,16 +1,17 @@
-$NetBSD: patch-aq,v 1.1 2001/03/23 15:57:46 agc Exp $
+$NetBSD: patch-aq,v 1.2 2002/04/13 12:53:42 fredb Exp $
 
-Patch from Wofgang Solfrank:
-
-The changes to unproven-pthreads fix a problem with fstat not using
-the pthreads filedescriptors, but the native ones (the code for this
-was already there (slightly buggy), but it wasn't used for some
-unknown reason).  In addition, the handling of select is improved, as
-the original code may wake up not all threads waiting for some event.
-
---- pthreads/stat.c.orig	Sat Nov  6 23:30:50 1999
-+++ pthreads/stat.c	Fri Mar 23 15:43:59 2001
-@@ -54,7 +54,7 @@
+--- pthreads/stat.c.orig	Sat Nov  6 17:30:50 1999
++++ pthreads/stat.c
+@@ -44,6 +44,8 @@
+ 
+ struct stat;
+ 
++int fstat(int, struct stat *);
++
+ /* ==========================================================================
+  * fstat()
+  *
+@@ -54,7 +56,7 @@
  	int ret;
  
  	if ((ret = fd_lock(fd, FD_READ, NULL)) == OK) {
@@ -19,7 +20,7 @@ the original code may wake up not all threads waiting for some event.
  			SET_ERRNO(-ret);
  			ret = NOTOK;
  		}
-@@ -63,6 +63,7 @@
+@@ -63,6 +65,7 @@
  	return(ret);
  }
  
@@ -27,7 +28,7 @@ the original code may wake up not all threads waiting for some event.
  /* ==========================================================================
   * stat()
   */
-@@ -92,4 +93,4 @@
+@@ -92,4 +95,4 @@
  	return(ret);
  
  }
