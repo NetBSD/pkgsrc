@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/11/08 11:47:50 mrg Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/11/27 16:13:55 recht Exp $
 bin/ae-sccs-put
 bin/ae_diff2htm
 bin/aeannotate
@@ -6,73 +6,28 @@ bin/aebuffy
 bin/aecomp
 bin/aecomplete
 bin/aedist
+bin/aeedit
 bin/aefind
+bin/aeget
 bin/aegis
 bin/aegis.cgi
 bin/aegis.cgi.i
 bin/aeimport
 bin/aeintegratq
 bin/aels
+bin/aemeasure
 bin/aepatch
 bin/aerect
 bin/aereport
 bin/aesub
 bin/aetar
+bin/aexml
 bin/tkaeca
 bin/tkaegis
 bin/tkaenc
 bin/tkaepa
 bin/tkaer
 bin/xaegis
-lib/aegis/de/LC_MESSAGES/aedist.mo
-lib/aegis/de/LC_MESSAGES/aefind.mo
-lib/aegis/de/LC_MESSAGES/aegis.mo
-lib/aegis/de/LC_MESSAGES/aeimport.mo
-lib/aegis/de/LC_MESSAGES/aepatch.mo
-lib/aegis/de/LC_MESSAGES/aerect.mo
-lib/aegis/de/LC_MESSAGES/aereport.mo
-lib/aegis/de/LC_MESSAGES/aesub.mo
-lib/aegis/de/LC_MESSAGES/aetar.mo
-lib/aegis/en/LC_MESSAGES/aeannotate.mo
-lib/aegis/en/LC_MESSAGES/aecomplete.mo
-lib/aegis/en/LC_MESSAGES/aedist.mo
-lib/aegis/en/LC_MESSAGES/aefind.mo
-lib/aegis/en/LC_MESSAGES/aegis.mo
-lib/aegis/en/LC_MESSAGES/aeimport.mo
-lib/aegis/en/LC_MESSAGES/aels.mo
-lib/aegis/en/LC_MESSAGES/aepatch.mo
-lib/aegis/en/LC_MESSAGES/aerect.mo
-lib/aegis/en/LC_MESSAGES/aereport.mo
-lib/aegis/en/LC_MESSAGES/aesub.mo
-lib/aegis/en/LC_MESSAGES/aetar.mo
-lib/aegis/fr/LC_MESSAGES/aedist.mo
-lib/aegis/fr/LC_MESSAGES/aefind.mo
-lib/aegis/fr/LC_MESSAGES/aegis.mo
-lib/aegis/fr/LC_MESSAGES/aeimport.mo
-lib/aegis/fr/LC_MESSAGES/aels.mo
-lib/aegis/fr/LC_MESSAGES/aepatch.mo
-lib/aegis/fr/LC_MESSAGES/aerect.mo
-lib/aegis/fr/LC_MESSAGES/aereport.mo
-lib/aegis/fr/LC_MESSAGES/aesub.mo
-lib/aegis/fr/LC_MESSAGES/aetar.mo
-lib/aegis/nl/LC_MESSAGES/aedist.mo
-lib/aegis/nl/LC_MESSAGES/aefind.mo
-lib/aegis/nl/LC_MESSAGES/aegis.mo
-lib/aegis/nl/LC_MESSAGES/aerect.mo
-lib/aegis/nl/LC_MESSAGES/aereport.mo
-lib/aegis/nl/LC_MESSAGES/aesub.mo
-lib/aegis/nl/LC_MESSAGES/aetar.mo
-lib/aegis/ru/LC_MESSAGES/aecomplete.mo
-lib/aegis/ru/LC_MESSAGES/aedist.mo
-lib/aegis/ru/LC_MESSAGES/aefind.mo
-lib/aegis/ru/LC_MESSAGES/aegis.mo
-lib/aegis/ru/LC_MESSAGES/aeimport.mo
-lib/aegis/ru/LC_MESSAGES/aels.mo
-lib/aegis/ru/LC_MESSAGES/aepatch.mo
-lib/aegis/ru/LC_MESSAGES/aerect.mo
-lib/aegis/ru/LC_MESSAGES/aereport.mo
-lib/aegis/ru/LC_MESSAGES/aesub.mo
-lib/aegis/ru/LC_MESSAGES/aetar.mo
 man/man1/ae-sccs-put.1
 man/man1/ae_c.1
 man/man1/ae_p.1
@@ -95,8 +50,10 @@ man/man1/aede.1
 man/man1/aedeu.1
 man/man1/aedist.1
 man/man1/aedn.1
+man/man1/aeedit.1
 man/man1/aefind.1
 man/man1/aefp.1
+man/man1/aeget.1
 man/man1/aegis.1
 man/man1/aegis.cgi.1
 man/man1/aeib.1
@@ -108,6 +65,9 @@ man/man1/aeipass.1
 man/man1/ael.1
 man/man1/aelic.1
 man/man1/aels.1
+man/man1/aemeasure.1
+man/man1/aemt.1
+man/man1/aemtu.1
 man/man1/aemv.1
 man/man1/aemvu.1
 man/man1/aena.1
@@ -146,6 +106,7 @@ man/man1/aesub.1
 man/man1/aet.1
 man/man1/aetar.1
 man/man1/aev.1
+man/man1/aexml.1
 man/man1/tkaeca.1
 man/man1/tkaegis.1
 man/man1/tkaenc.1
@@ -185,6 +146,9 @@ share/aegis/db_forced.sh
 share/aegis/de.inews.sh
 share/aegis/de.sh
 share/aegis/de/LC_MESSAGES/glossary
+share/aegis/de/auug97.dvi
+share/aegis/de/auug97.ps
+share/aegis/de/auug97.txt
 share/aegis/deu.inews.sh
 share/aegis/deu.sh
 share/aegis/en/aoss4.dvi
@@ -202,6 +166,9 @@ share/aegis/en/auug97.txt
 share/aegis/en/building.dvi
 share/aegis/en/building.ps
 share/aegis/en/building.txt
+share/aegis/en/change_log.dvi
+share/aegis/en/change_log.ps
+share/aegis/en/change_log.txt
 share/aegis/en/cvs-comparison.dvi
 share/aegis/en/cvs-comparison.ps
 share/aegis/en/cvs-comparison.txt
@@ -211,7 +178,6 @@ share/aegis/en/faq.txt
 share/aegis/en/howto.dvi
 share/aegis/en/howto.ps
 share/aegis/en/howto.txt
-share/aegis/en/html/chan_files.rpt
 share/aegis/en/html/chan_hstry.rpt
 share/aegis/en/html/chan_menu.rpt
 share/aegis/en/html/changes.rpt
@@ -221,11 +187,11 @@ share/aegis/en/html/file_cflct.rpt
 share/aegis/en/html/file_densi.rpt
 share/aegis/en/html/file_diff.rpt
 share/aegis/en/html/file_hstry.rpt
+share/aegis/en/html/file_list.rpt
 share/aegis/en/html/file_menu.rpt
 share/aegis/en/html/proj_cch1.rpt
 share/aegis/en/html/proj_cch2.rpt
 share/aegis/en/html/proj_cch3.rpt
-share/aegis/en/html/proj_files.rpt
 share/aegis/en/html/proj_filme.rpt
 share/aegis/en/html/proj_hstg2.rpt
 share/aegis/en/html/proj_hstg3.rpt
@@ -263,8 +229,10 @@ share/aegis/en/man1/aede.1
 share/aegis/en/man1/aedeu.1
 share/aegis/en/man1/aedist.1
 share/aegis/en/man1/aedn.1
+share/aegis/en/man1/aeedit.1
 share/aegis/en/man1/aefind.1
 share/aegis/en/man1/aefp.1
+share/aegis/en/man1/aeget.1
 share/aegis/en/man1/aegis.1
 share/aegis/en/man1/aegis.cgi.1
 share/aegis/en/man1/aeib.1
@@ -276,6 +244,9 @@ share/aegis/en/man1/aeipass.1
 share/aegis/en/man1/ael.1
 share/aegis/en/man1/aelic.1
 share/aegis/en/man1/aels.1
+share/aegis/en/man1/aemeasure.1
+share/aegis/en/man1/aemt.1
+share/aegis/en/man1/aemtu.1
 share/aegis/en/man1/aemv.1
 share/aegis/en/man1/aemvu.1
 share/aegis/en/man1/aena.1
@@ -314,6 +285,7 @@ share/aegis/en/man1/aesub.1
 share/aegis/en/man1/aet.1
 share/aegis/en/man1/aetar.1
 share/aegis/en/man1/aev.1
+share/aegis/en/man1/aexml.1
 share/aegis/en/man1/tkaeca.1
 share/aegis/en/man1/tkaegis.1
 share/aegis/en/man1/tkaenc.1
@@ -374,6 +346,8 @@ share/aegis/report/file_cflct.rpt
 share/aegis/report/file_hstry.rpt
 share/aegis/report/proj_activ.rpt
 share/aegis/report/proj_admin.rpt
+share/aegis/report/proj_ances.rpt
+share/aegis/report/proj_brada.rpt
 share/aegis/report/proj_bran.rpt
 share/aegis/report/proj_brana.rpt
 share/aegis/report/proj_detai.rpt
@@ -401,6 +375,13 @@ share/aegis/wish/proj_attr.rpt
 share/aegis/wish/proj_conf.rpt
 share/aegis/wish/proj_list.rpt
 share/aegis/wish/tkaer_info.rpt
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/aegis.mo
+${PKGLOCALEDIR}/locale/en/LC_MESSAGES/aegis.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/aegis.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/aegis.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/aegis.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/aegis.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/aegis.mo
 @dirrm share/aegis/wish
 @dirrm share/aegis/report
 @dirrm share/aegis/remind
@@ -417,17 +398,6 @@ share/aegis/wish/tkaer_info.rpt
 @dirrm share/aegis/de
 @dirrm share/aegis/config.example
 @dirrm share/aegis
-@dirrm lib/aegis/ru/LC_MESSAGES
-@dirrm lib/aegis/ru
-@dirrm lib/aegis/nl/LC_MESSAGES
-@dirrm lib/aegis/nl
-@dirrm lib/aegis/fr/LC_MESSAGES
-@dirrm lib/aegis/fr
-@dirrm lib/aegis/en/LC_MESSAGES
-@dirrm lib/aegis/en
-@dirrm lib/aegis/de/LC_MESSAGES
-@dirrm lib/aegis/de
-@dirrm lib/aegis
 @exec ${MKDIR} %D/com/aegis
 @dirrm com/aegis
 @dirrm com
