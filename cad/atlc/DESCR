@@ -6,7 +6,7 @@ formula known, yet you still require an answer. It can calculate:
   The impedance Zo (in Ohms)
   The capacitance per unit length (pF/m)
   The inductance per unit length (nF/m)
-  The velocity of propogation v (m/s)
+  The velocity of propagation v (m/s)
   The velocity factor, v/c, which is dimensionless.
 
 A bitmap file (usually with the extension .bmp or .BMP) of the cross
