@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7086 2004/09/03 10:19:58 abs Exp $
+$NetBSD: CHANGES,v 1.7087 2004/09/03 12:49:30 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4182,4 +4182,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added suse91_locale-9.1 [recht 2004-09-02]
 	Updated fluxbox to 0.9.10 [xtraeme 2004-09-02]
 	Updated pkg_chk to 1.51 [abs 2004-09-02]
-
+	Updated gnome2-user-docs to 2.6.0.1 [jmmv 2004-09-02]
