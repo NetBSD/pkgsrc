@@ -1,0 +1,44 @@
+ Getting help
+ ============
+
+You've installed an automated and customized qmail-run package. If
+you're having trouble getting the qmail daemons to run, ask the
+package's maintainer (<schmonz-nbqmail@schmonz.com>).
+
+While qmail includes installation instructions, many members of
+the qmail list instead recommend following Dave Sill's "Life with
+qmail" document:
+
+<URL:http://www.lifewithqmail.org/lwq.html>
+
+The qmail package you've installed follows LWQ in many aspects,
+but consciously deviates from it in others. Therefore, if you need
+to ask for help on the qmail list, please mention that you use the
+pkgsrc qmail-run package. If you can first reproduce your problem
+on a manual LWQ-style installation, your request for help is likely
+to be better received.
+
+It is highly recommended that you read Charles Cazabon's "12 Steps
+to qmail List Bliss" before posting to the list:
+
+<URL:http://www.qcc.ca/~charlesc/writings/12-steps-to-qmail-list-bliss.html>
+
+
+ Deviations from LWQ
+ ===================
+
+LWQ suggests doing some things that the qmail package doesn't do:
+* Copying a script from /var/qmail/boot to /var/qmail/rc.
+* Configuring svscan(8) to run at boot.
+* Creating and/or populating /service.
+* Using supervise(8) and multilog(8).
+* Using the qmailctl script to control qmail.
+* Using the inst_check script to verify the installation.
+* Storing tcp.smtp{,cdb} in /etc.
+* Renaming the system sendmail(8) and marking it non-executable.
+
+Instead, to behave more like a typical pkgsrc package, the package:
+* Provides NetBSD-style rc.d scripts, including one very similar to qmailctl.
+* Sends log messages to syslog(3) by default.
+* Stores tcp.smtp{,cdb} and tcp.pop3{,cdb} in ${PKG_SYSCONFDIR}.
+* Uses mailwrapper(8) and mailer.conf(5).
