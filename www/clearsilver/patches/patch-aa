@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/02/26 05:50:23 epg Exp $
+
+--- rules.mk.in.orig	Mon Aug 11 16:37:09 2003
++++ rules.mk.in
+@@ -73,7 +73,7 @@ PYTHON     = @PYTHON@
+ PERL	   = @PERL@
+ RUBY       = @RUBY@
+ 
+-CFLAGS     = @CFLAGS@ -Wall -c -I$(NEOTONIC_ROOT) @CPPFLAGS@
++CFLAGS     = @CFLAGS@ -Wall -I$(NEOTONIC_ROOT) @CPPFLAGS@
+ CPPFLAGS   = -I$(NEOTONIC_ROOT) @CPPFLAGS@
+ OUTPUT_OPTION = -o $@
+ LD         = $(CC) -o
+@@ -127,7 +127,7 @@ endif
+ ## endif
+ 
+ .c.o:
+-	$(CC) $(CFLAGS) $(OUTPUT_OPTION) $<
++	$(CC) -c $(CFLAGS) $(OUTPUT_OPTION) $<
+ 
+ everything: depend all
+ 
