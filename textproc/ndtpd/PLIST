@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/03/15 07:19:58 uebayasi Exp $
-etc/ndtpd.conf.sample
-etc/rc.d/ndtpd.sh
+@comment $NetBSD: PLIST,v 1.2 2003/04/13 01:29:42 salo Exp $
+etc/rc.d/ndtpd
 @unexec install-info --delete %D/info/ndtpd-ja.info %D/info/dir
 @unexec install-info --delete %D/info/ndtpd.info %D/info/dir
 info/ndtpd-ja.info
@@ -12,8 +11,10 @@ info/ndtpd.info-2
 @exec install-info %D/info/ndtpd-ja.info %D/info/dir
 @exec install-info %D/info/ndtpd.info %D/info/dir
 libexec/ndtpstat
+share/examples/ndtpd/ndtpd.conf.default
 sbin/ndtpd
 sbin/ndtpcheck
 sbin/ndtpcontrol
 sbin/ndtpdaily
 sbin/ndtpupgrade
+@dirrm share/examples/ndtpd
