@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1051 2002/09/21 23:19:22 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1052 2002/09/22 12:19:36 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -4179,7 +4179,8 @@ _IMAKE_MAN_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*0(\.gz)?$$/ {
 _IMAKE_MAN_CMD=
 .endif # USE_IMAKE
 
-.if defined(PERL5_PACKLIST)
+.if !defined(PERL5_GENERATE_PLIST)
+.  if defined(PERL5_PACKLIST)
 PERL5_COMMENT=		( ${ECHO} "@comment The following lines are automatically generated"; \
 	${ECHO} "@comment from the installed .packlist files." )
 PERL5_PACKLIST_FILES=	( ${CAT} ${PERL5_PACKLIST}; for f in ${PERL5_PACKLIST}; do [ ! -f $$f ] || ${ECHO} $$f; done ) \
@@ -4194,6 +4195,7 @@ PERL5_GENERATE_PLIST=	${PERL5_COMMENT}; \
 			${PERL5_PACKLIST_FILES}; \
 			${PERL5_PACKLIST_DIRS}
 GENERATE_PLIST+=	${PERL5_GENERATE_PLIST};
+.  endif
 .endif
 
 message: ${MESSAGE}
