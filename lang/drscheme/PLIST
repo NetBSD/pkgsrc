@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:23:00 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/09 03:03:03 dogcow Exp $
 bin/drscheme
 bin/drscheme-jr
 bin/help-desk
@@ -1887,6 +1887,24 @@ lib/plt/collects/zodiac/sexp.ss
 lib/plt/collects/zodiac/sigs.ss
 lib/plt/collects/zodiac/x.ss
 lib/plt/collects/zodiac/zsigs.ss
+lib/plt/notes/teachpack/HISTORY
+lib/plt/notes/mred/fontsall.mre
+lib/plt/notes/mred/MrEd_100.txt
+lib/plt/notes/mred/MrEd_100_Framework.txt
+lib/plt/notes/mred/OPENBUGS
+lib/plt/notes/mred/FONTS
+lib/plt/notes/mred/MrEd.ad
+lib/plt/notes/mred/fonts12.mre
+lib/plt/notes/mred/HISTORY
+lib/plt/notes/mzscheme/HISTORY
+lib/plt/notes/mzscheme/OPENBUGS
+lib/plt/notes/drscheme/OPENBUGS
+lib/plt/notes/drscheme/HISTORY
+lib/plt/notes/stepper/DESIGN-NOTES
+lib/plt/notes/stepper/HISTORY
+lib/plt/notes/stepper/OPENBUGS
+lib/plt/notes/mzc/OPENBUGS
+lib/plt/notes/COPYING.LIB
 lib/plt/teachpack/htdp/arrow-gui.ss
 lib/plt/teachpack/htdp/arrow.ss
 lib/plt/teachpack/htdp/convert-new.ss
@@ -1965,7 +1983,7 @@ man/man1/mred.1
 @dirrm lib/plt/collects/doc/intermediate
 @dirrm lib/plt/collects/doc/icons
 @dirrm lib/plt/collects/doc/help/tour
-@exec /bin/mkdir -p /usr/pkg/lib/plt/collects/doc/help/scheme/resources
+@exec /bin/mkdir -p %D/lib/plt/collects/doc/help/scheme/resources
 @dirrm lib/plt/collects/doc/help/scheme/resources
 @dirrm lib/plt/collects/doc/help/scheme/misc
 @dirrm lib/plt/collects/doc/help/scheme
@@ -1984,5 +2002,12 @@ man/man1/mred.1
 @dirrm lib/plt/collects/browser
 @dirrm lib/plt/collects/afm
 @dirrm lib/plt/collects
+@dirrm lib/plt/notes/teachpack
+@dirrm lib/plt/notes/mred
+@dirrm lib/plt/notes/mzscheme
+@dirrm lib/plt/notes/drscheme
+@dirrm lib/plt/notes/stepper
+@dirrm lib/plt/notes/mzc
+@dirrm lib/plt/notes
 @dirrm lib/plt/bin
 @dirrm lib/plt
