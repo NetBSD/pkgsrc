@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.17 2003/12/19 15:43:31 skrll Exp $
+# $NetBSD: buildlink2.mk,v 1.18 2004/03/29 09:27:11 recht Exp $
 
 .if !defined(QT3_LIBS_BUILDLINK2_MK)
 QT3_LIBS_BUILDLINK2_MK=	# defined
@@ -29,6 +29,8 @@ PTHREAD_OPTS+=	require
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/mng/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
+.include "../../x11/Xrandr/buildlink2.mk"
+.include "../../x11/xcursor/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 
 CONFIGURE_ENV+=		MOC="${QTDIR}/bin/moc"
