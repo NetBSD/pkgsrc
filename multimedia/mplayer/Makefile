@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/03/31 13:23:27 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/05 18:41:14 wiz Exp $
 
 PKGNAME=	mplayer-${MPLAYER_PKG_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 COMMENT=	Software-only MPEG-1/2/4 video decoder
 
 .include "../../multimedia/mplayer-share/Makefile.common"
