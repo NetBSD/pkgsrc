@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/08/17 11:10:27 adrianp Exp $
+# $NetBSD: Makefile,v 1.24 2004/08/17 19:19:53 adrianp Exp $
 #
 
 DISTNAME=	tcptrace-6.6.1
@@ -22,8 +22,8 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tcptrace ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/tcptrace.man ${PREFIX}/man/man1/tcptrace.1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tcptrace
-.for file in ${DOCFILES}
-	${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/share/doc/tcptrace
+.for f in ${DOCFILES}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/doc/tcptrace
 .endfor
 
 .include "../../archivers/bzip2/buildlink3.mk"
