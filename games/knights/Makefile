@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/04/24 22:46:10 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2004/05/02 02:03:07 snj Exp $
 
 DISTNAME=	knights-0.4.6
 PKGREVISION=	6
@@ -9,7 +9,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://knights.sourceforge.net/
 COMMENT=	Chess interface for KDE
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=          YES
 USE_LIBTOOL=            YES
@@ -25,7 +25,7 @@ post-build:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/en/index.cache.bz2 ${DOCDIR}
 
-.include "../../x11/kde2/buildlink2.mk"
-.include "../../x11/kdebase2/buildlink2.mk"
+.include "../../x11/kde2/kde2.mk"
+.include "../../x11/kdebase2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
