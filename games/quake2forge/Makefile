@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/08/24 23:11:17 snj Exp $
+# $NetBSD: Makefile,v 1.9 2004/08/28 06:05:32 jlam Exp $
 #
 
 DISTNAME=	quake2-0.2.1
@@ -20,7 +20,7 @@ GNU_CONFIGURE=	yes
 USE_BUILTIN.glu=	yes
 USE_BUILTIN.MesaLib=	yes
 
-BUILDLINK_TRANSFORM+=	S:-Werror:
+BUILDLINK_TRANSFORM+=	rm:-Werror
 CONFIGURE_ARGS+=	--program-transform-name='s/^quake2$$/quake2forge/'
 
 post-install:
