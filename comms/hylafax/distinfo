@@ -1,26 +1,24 @@
-$NetBSD: distinfo,v 1.4 2001/05/10 21:00:33 dmcmahill Exp $
+$NetBSD: distinfo,v 1.5 2001/07/08 13:32:14 bad Exp $
 
-SHA1 (hylafax/hylafax-4.1beta3.tar.gz) = a54eab5a92b59a82699d08185433ea83b7647bd1
-Size (hylafax/hylafax-4.1beta3.tar.gz) = 1233050 bytes
-SHA1 (hylafax/hfaxd-vulnerability.patch) = b5f1cecc19b529342815607c3f9d3da195313a58
-Size (hylafax/hfaxd-vulnerability.patch) = 813 bytes
+SHA1 (hylafax/hylafax-4.1.tar.gz) = 1b505492788c791a9db6b30e64e02e43117ce832
+Size (hylafax/hylafax-4.1.tar.gz) = 1243832 bytes
 SHA1 (patch-aa) = 74271a248f82daa1d340b83e70eaf679387b4eb0
 SHA1 (patch-ab) = d4cd3bdebfdd9cb13bd9a4feb5115bb918cb2a12
-SHA1 (patch-ac) = 8085488a52793e653b70f32026ce8061573b6557
+SHA1 (patch-ac) = a796fe8b5f19cc3fe7f6c9e1f3342670f79014ab
 SHA1 (patch-ad) = f7a05f020bc6e97a8908b1fc938460ac333a029a
-SHA1 (patch-ae) = 5ebc7e58f51d67dc6555292f635e3274b67e25dd
-SHA1 (patch-af) = 7271d4c6f2c521da14f4f8d041ec93723a0c1a7a
+SHA1 (patch-ae) = b0ec8e91250f0bda788dee79503a2f8f1d6ee351
+SHA1 (patch-af) = e1e09b2914e4071807ca83f134134bd5cf42519d
 SHA1 (patch-ag) = 75c7c633587a952d7f62e7f450a816b8e6ad298b
 SHA1 (patch-ah) = fbd4d348186e866099d2abb0fd001ec1e9b5a1e0
-SHA1 (patch-ai) = 1a2c68a52f703a54b293b977fd923e2373941b40
+SHA1 (patch-ai) = 5c21f46f9e861784b7e060d7cf8938bf34ff4f39
 SHA1 (patch-aj) = 86520589dc1be4517e0c0f0b349b04a04bed41d9
 SHA1 (patch-ak) = f72d797419ce1c9d50d03f2c5e5db16a0b30e5cb
 SHA1 (patch-al) = e8a7576143b51781fc2aa985e761a19c0e756d13
 SHA1 (patch-am) = 0eb61a129610c59f01282926fa4b3448fa2567ec
-SHA1 (patch-an) = 40abb2e767a65a7d54e8773118700e20a32d90d8
+SHA1 (patch-an) = 82b110b055cd768947c60fdae41e478f303c51ae
 SHA1 (patch-ao) = f1c084ca1b4e5fbba29d723bdeaac9d34b2f5289
 SHA1 (patch-ap) = 64a54dd34080fd734bac291ec91785ec36c6f747
 SHA1 (patch-aq) = 04add689446223f5b3541f1100d063b38f6ede0e
-SHA1 (patch-ar) = 63b47f7f5197dea10b8c542b04eff61b2cd03ed4
+SHA1 (patch-ar) = 1652e72e2e8f33044bf8ef8fc01490433c3fcd39
 SHA1 (patch-as) = 0b169ee8ba8385112e88a7335ff74bd3c0825e69
 SHA1 (patch-at) = 2833cfe9bc94b1fb99cbb6c3015093f274f7f69f
