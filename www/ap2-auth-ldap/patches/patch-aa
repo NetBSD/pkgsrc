@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/02/21 21:55:25 adrianp Exp $
+
+--- Makefile.in.orig	2005-02-18 21:27:01.000000000 +0000
++++ Makefile.in	2005-02-18 21:27:47.000000000 +0000
+@@ -45,7 +45,7 @@
+ 
+ $(MODULE): $(OBJS)
+ 	@echo "*******"
+-	$(APXS) -c $(OBJS) $(LDFLAGS) $(LIBS)
++	#$(APXS) -c $(OBJS) $(LDFLAGS) $(LIBS)
+ 
+ install:
+ 	@echo ""
