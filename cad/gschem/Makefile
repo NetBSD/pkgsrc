@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/06/26 23:32:57 seb Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/09 14:46:49 drochner Exp $
 #
 
 DISTNAME=		geda-gschem-${PKGVERSION}
@@ -23,14 +23,10 @@ PKGVERSION=		20030223
 
 GNU_CONFIGURE=		YES
 USE_X11BASE=		YES
-USE_LIBTOOL=		YES
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
-USE_GNU_GETTEXT=	YES
 USE_NEW_TEXINFO=	YES
 INFO_FILES=		gschemdoc.info
-
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .include "../../cad/libgeda/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
