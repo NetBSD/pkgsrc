@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:42:12 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/26 03:41:29 hubertf Exp $
 # FreeBSD Id: ports/sysutils/daemontools/Makefile,v 1.8 2000/12/03 05:16:41 steve Exp
 
 DISTNAME=	daemontools-0.70
 CATEGORIES=	sysutils
-MASTER_SITES=	http://cr.yp.to/daemontools/ \
-		ftp://cr.yp.to/daemontools/ \
+MASTER_SITES=	http://cr.yp.to/daemontools/				\
+		ftp://cr.yp.to/daemontools/				\
+		ftp://ftp.innominate.org/gpa/djb/			\
 		http://zuntum.eik.pl/pkgsrc/distfiles/
-
-PATCH_SITES=  	http://www.fefe.de/daemontools/
-PATCHFILES=	daemontools-0.70-man.diff.bz2
-PATCH_DIST_STRIP=       -p1
+DISTFILES=	${DISTNAME}.tar.gz					\
+		${DISTNAME}-man.tar.gz
 
 MAINTAINER=	zuntum@eik.pl
 HOMEPAGE=	http://cr.yp.to/daemontools.html
@@ -31,15 +30,20 @@ post-patch:
 post-build:
 	@${SED} \
 		-e "s!/usr/local/!${PREFIX}/!" \
-		-e "s!/var/service!${SERVICEDIR}!g" \
+		-e "s!/service!${SERVICEDIR}!g" \
 		${FILESDIR}/${SAMPLERC} > ${WRKDIR}/${SAMPLERC}
 	@${SED} \
-		-e "s!/var/service!${SERVICEDIR}!g" \
+		-e "s!/service!${SERVICEDIR}!g" \
 		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/daemontools
 	${INSTALL_DATA} ${WRKDIR}/${SAMPLERC} ${PREFIX}/share/examples/daemontools
 	${INSTALL_DATA_DIR} ${SERVICEDIR}
+
+	cd ${WRKDIR}/${DISTNAME}-man && ${INSTALL_MAN} envdir.8 envuidgid.8	\
+		fghack.8 multilog.8 setlock.8 setuidgid.8 softlimit.8		\
+		supervise.8 svc.8 svok.8 svscan.8 svstat.8 tai64n.8		\
+		tai64nlocal.8 ${PREFIX}/man/man8
 
 .include "../../mk/bsd.pkg.mk"
