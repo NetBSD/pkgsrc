@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.20 2001/02/15 20:13:28 dmcmahill Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.21 2001/02/17 15:48:51 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -194,7 +194,6 @@ bulk-package:
 		if [ "${USE_BULK_CACHE}" = "yes" ]; then \
 			thisdir=`${GREP} " ${PKGNAME} " ${INDEXFILE} | ${AWK} '{print $$1}'` ;\
 			for pkgdir in $$thisdir `${GREP} "^$$thisdir " ${DEPENDSFILE} | ${SED} -e 's;^.*:;;g'`; do \
-				${ECHO_MSG} "(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} clean)" ; \
 				${DO}       (cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} clean) ; \
 			done ;\
 		else \
@@ -209,21 +208,14 @@ bulk-package:
 				pkgdir=`${GREP} " $$pkgname " ${INDEXFILE} | ${AWK} '{print $$1}'` ;\
 				if `${PKG_INFO} -qe $$pkgname` ; then \
 					if ! `${EGREP} "^$$thisdir.* $$pkgdir( |$$)" ${DEPENDSFILE} >/dev/null 2>&1` ; then \
-						${ECHO_MSG} "BULK> ${PKGNAME} does not require installed package $$pkgname ($$pkgdir) to build." ;\
-						${ECHO_MSG} "BULK> Deinstalling $$pkgname" ;\
 						${ECHO_MSG} ${PKG_DELETE} -r $$pkgname ; \
 						${DO}       ${PKG_DELETE} -r $$pkgname || true ; \
 						if `${PKG_INFO} -qe $$pkgname` ; then \
-							${ECHO_MSG} "BULK> $$pkgname ($$pkgdir) did not nicely deinstall.  Forcing the deinstall." ;\
-							${ECHO_MSG} ${PKG_DELETE} -f $$pkgname ; \
 							${DO}       ${PKG_DELETE} -f $$pkgname || true ; \
 						fi ;\
 					else \
 						${ECHO_MSG} "BULK> ${PKGNAME}  requires installed package $$pkgname ($$pkgdir) to build." ;\
-						${ECHO_MSG} "BULK> Keeping $$pkgname" ;\
 					fi ;\
-				else \
-					${ECHO_MSG} "BULK> package $$pkgname ($$pkgdir) is no longer installed" ;\
 				fi ;\
 			done ; \
 		fi ;\
@@ -287,7 +279,6 @@ bulk-package:
 		if [ "${USE_BULK_CACHE}" = "yes" ]; then \
 			thisdir=`${GREP} " ${PKGNAME} " ${INDEXFILE} | ${AWK} '{print $$1}'` ;\
 			for pkgdir in $$thisdir `${GREP} "^$$thisdir " ${DEPENDSFILE} | ${SED} -e 's;^.*:;;g'`; do \
-				${ECHO_MSG} "(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} clean)" ; \
 				${DO}       (cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} clean) ; \
 			done ;\
 		else \
