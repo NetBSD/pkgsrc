@@ -1,13 +1,18 @@
-$NetBSD: patch-ad,v 1.3 2002/08/26 08:29:14 martti Exp $
+$NetBSD: patch-ad,v 1.4 2003/06/03 16:04:46 jmmv Exp $
 
---- src/Makefile.orig	Sun Jun 30 18:05:18 2002
-+++ src/Makefile	Mon Aug 26 10:12:58 2002
-@@ -19,7 +19,7 @@
- 	-DEXEEXT='"$(EXEEXT)"' \
- 	-DICEWMEXE='"icewm"EXEEXT' \
- 	-DICEHELPEXE='"icehelp"EXEEXT' \
--	-DICEHELPIDX='"$(DOCDIR)/icewm-$(VERSION)/icewm.html"' \
-+	-DICEHELPIDX='"$(prefix)/share/doc/html/icewm/icewm.html"' \
-         $(SYS_CFLAGS) $(SYS_INCDIRS)
- LFLAGS = $(SYS_LIBDIRS) 
- LIBS = $(SYS_LIBS)
+--- src/Makefile.in.orig	2003-03-08 20:37:53.000000000 +0100
++++ src/Makefile.in
+@@ -28,11 +28,11 @@ DEFS =          @DEFS@ \
+                 -DEXEEXT='"$(EXEEXT)"' \
+                 -DICEWMEXE='"icewm$(EXEEXT)"' \
+                 -DICEHELPEXE='"icehelp$(EXEEXT)"' \
+-                -DICEHELPIDX='"$(DOCDIR)/icewm-$(VERSION)/icewm.html"'
++                -DICEHELPIDX='"$(prefix)/share/doc/html/icewm/icewm.html"'
+ 
+ CXXFLAGS =      @CXXFLAGS@ $(DEBUG) $(DEFS) \
+ 	        @CORE_CFLAGS@ @IMAGE_CFLAGS@ @AUDIO_CFLAGS@ # `fc-config --cflags`
+-LFLAGS =
++LFLAGS =	@LDFLAGS@
+ LIBS =          @LIBS@
+ 
+ CORE_LIBS =     @CORE_LIBS@ # `fc-config --libs`
