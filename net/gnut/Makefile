@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/11/29 19:46:13 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2002/03/11 09:00:25 skrll Exp $
 #
 
 DISTNAME=	gnut-0.4.20
@@ -9,9 +9,6 @@ MAINTAINER=	deberg@netbsd.org
 HOMEPAGE=	http://www.gnutelliums.com/linux_unix/gnut/
 COMMENT=	Text-mode Gnutella client
 
-#BUILD_DEPENDS+=	automake>=1.4:../../devel/automake
-#DEPENDS+=	pth>=1.3.6:../../devel/pth
-
 DEPENDS+=	unproven-pthreads-0.*:../../devel/unproven-pthreads
 CONFIGURE_ENV+=	CC=${LOCALBASE}/pthreads/bin/pgcc \
 		CXX=${LOCALBASE}/pthreads/bin/pg++
@@ -21,16 +18,9 @@ GNU_CONFIGURE=	yes
 GNUTDOCDIR=	${PREFIX}/share/doc/gnut
 
 # Find <pthread.h>
-#.if make(do-configure)
-#CFLAGS+=	-I${LOCALBASE}/include
-#.endif
-
 .if make(do-configure)
 LDFLAGS=	-Wl,-R${LOCALBASE}/pthreads/lib -L${LOCALBASE}/pthreads/lib
 .endif
-
-#post-patch:
-#	cd ${WRKSRC} && ${CP} aclocal.m4 acinclude.m4 && ${LOCALBASE}/bin/autoreconf
 
 GNUTDOCS=	TUTORIAL \
 		gnut-1.html \
