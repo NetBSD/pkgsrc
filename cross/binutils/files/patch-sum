@@ -1,19 +1,19 @@
-$NetBSD: patch-sum,v 1.6 2001/01/24 11:24:12 tsutsui Exp $
+$NetBSD: patch-sum,v 1.7 2001/04/05 15:27:24 wiz Exp $
 
-MD5 (patch-aa) = ada1c082c4558f36129d80481e6d259a
-MD5 (patch-ab) = a5d51269ccf1c469d9df710427aadf04
-MD5 (patch-ac) = 35977516832bbee30eecb839d4b5e74c
-MD5 (patch-af) = 2901cb223115cdf1103df469dad2abad
-MD5 (patch-ai) = 828307f10a0fb177c89bfd1806c6e8aa
-MD5 (patch-aj) = 8b44272fa18007c17f70f551cdee8ad6
-MD5 (patch-ak) = ad1a6595440ca966acd8aef98788a07b
-MD5 (patch-al) = d9cd2d526fbf2361e49144c4c6cc0a10
-MD5 (patch-am) = f50e32848bde85e1eb18d9b6169e75cc
-MD5 (patch-an) = 56ecff9a9865807044a82a7ccc8262ea
-MD5 (patch-archive) = 82c7bbe7dd204fc269e11941f83b9035
-MD5 (patch-arm32) = 6853eeb965aae339be0842cf75079673
-MD5 (patch-arrays) = 963e8978c12ad5f94eaf77764ff022bb
-MD5 (patch-m68k) = af300da0043b3ec37f5e068e573bb163
-MD5 (patch-mips) = 6669059635686d505a1aaeeaf9b96bf9
-MD5 (patch-powerpc) = f41758e5bf1f6e2f6ba7661f90cd2587
-MD5 (patch-sh) = 9ac7ce23853780ca8b15cb5930d61a27
+SHA1 (patch-aa) = 03d481416a6cd1ecca402d6ee8d236a37b1326b0
+SHA1 (patch-ab) = c5d33158dfeb46135e2288a1d9ec59e62a9a46ad
+SHA1 (patch-ac) = 757023426ede33305b3b6d4ce148ec7de0fd8234
+SHA1 (patch-af) = bd5ee47fd4734c9f7dcdb7d53b6cac27c510529b
+SHA1 (patch-ai) = 5317f31a87c25d55c7b4747e94af5f090e3037a1
+SHA1 (patch-aj) = d1fe1886b6d6d6fe7e3f85060f237d84a640e213
+SHA1 (patch-ak) = b0d8c958e04e31453c47e4b59bb4bc80b0d283ef
+SHA1 (patch-al) = 8adfd5a5fddcd74ce39b7c682b1cdf0333b6923c
+SHA1 (patch-am) = f39fcc54c7ef2ee69ceb796c92a25d7e5f36d2c6
+SHA1 (patch-an) = b35263d97e85ba25521d697e34f26f4fa607a17c
+SHA1 (patch-archive) = cbdb51dc72870843bcf0c9b5e8a11421259dd813
+SHA1 (patch-armthirtytwo) = 177620bd2e259041a984e8a60df42b00212cc2b4
+SHA1 (patch-arrays) = 82ceaa4049c4e862d50988de2f25c8d31c9b64f4
+SHA1 (patch-mips) = 9480188e72b1eaf0064795cb4a718adcc306d091
+SHA1 (patch-msixtyeightk) = ddcc471e77306881c555d340d6a2ef5e874802d5
+SHA1 (patch-powerpc) = 7aa4f800f9f74ec7868a3d29aea7436f8e6b85a4
+SHA1 (patch-sh) = a6e5f4b4ac7298d90ab0d44276ecd9888464b786
