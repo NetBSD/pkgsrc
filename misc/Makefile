@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.218 2004/12/01 03:50:29 uebayasi Exp $
+# $NetBSD: Makefile,v 1.219 2004/12/09 15:42:54 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -125,6 +125,7 @@ SUBDIR+=	openoffice-linux
 SUBDIR+=	p5-Array-PrintCols
 SUBDIR+=	p5-Business-CreditCard
 SUBDIR+=	p5-Business-ISBN
+SUBDIR+=	p5-Business-ISBN-Data
 SUBDIR+=	p5-Business-UPS
 SUBDIR+=	p5-ControlX10-CM11
 SUBDIR+=	p5-ControlX10-CM17
