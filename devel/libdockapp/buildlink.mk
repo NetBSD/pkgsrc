@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/07/20 01:54:38 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/07/24 10:07:07 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libdockapp.
 #
@@ -23,6 +23,8 @@ DEPENDS+=	${BUILDLINK_DEPENDS.libdockapp}:../../devel/libdockapp
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libdockapp=libdockapp
 BUILDLINK_FILES.libdockapp=	include/dockapp.h
 BUILDLINK_FILES.libdockapp+=	lib/libdockapp.*
+
+.include "../../graphics/xpm/buildlink.mk"
 
 BUILDLINK_TARGETS.libdockapp=	libdockapp-buildlink
 BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.libdockapp}
