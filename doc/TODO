@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2809 2005/01/01 06:28:00 cube Exp $
+$NetBSD: TODO,v 1.2810 2005/01/01 23:51:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1106,7 +1106,6 @@ Suggested package updates
 	o wdm-1.27
 	o webmin-1.170
 	o weechat-0.0.8
-	o wesnoth-0.8.8
 	o windowlab-1.24
 	o wine-20041201 [mmap problem on NetBSD]
 	o wmbiff-0.4.26
