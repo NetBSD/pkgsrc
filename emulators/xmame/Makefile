@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2000/11/05 00:43:30 mycroft Exp $
+# $NetBSD: Makefile,v 1.40 2000/12/07 12:58:13 abs Exp $
 #
 
 DISTNAME=		xmame-0.37b6.1
@@ -43,10 +43,14 @@ MAME_CPU=		m68k
 MAME_CPU=		alpha
 .elif ${MACHINE_ARCH} == "i386"
 MAME_CPU=		i386
-.elif ${MACHINE_ARCH} == "mipsel"
+.else
+# Rather than enumerating all CPU types, check machine/endian.h
+ENDIAN!=		sh files/endian.sh
+.if ${ENDIAN} == "LITTLE_ENDIAN"
 MAME_CPU=		risc_lsb
 .else
 MAME_CPU=		risc
+.endif
 .endif
 
 post-patch:
