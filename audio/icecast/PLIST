@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2004/04/23 22:07:52 reed Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/11/27 20:45:04 wiz Exp $
 bin/icecast
 share/doc/icecast/AUTHORS
 share/doc/icecast/COPYING
+share/doc/icecast/ChangeLog
 share/doc/icecast/NEWS
 share/doc/icecast/README
 share/doc/icecast/TODO
@@ -11,6 +12,7 @@ share/doc/icecast/icecast2_config_file.html
 share/doc/icecast/icecast2_faq.html
 share/doc/icecast/icecast2_glossary.html
 share/doc/icecast/icecast2_introduction.html
+share/doc/icecast/icecast2_listenerauth.html
 share/doc/icecast/icecast2_relay.html
 share/doc/icecast/icecast2_stats.html
 share/doc/icecast/icecast2_win32.html
@@ -19,11 +21,20 @@ share/doc/icecast/index.html
 share/examples/icecast/icecast.xml
 share/icecast/admin/listclients.xsl
 share/icecast/admin/listmounts.xsl
+share/icecast/admin/manageauth.xsl
 share/icecast/admin/moveclients.xsl
 share/icecast/admin/response.xsl
 share/icecast/admin/stats.xsl
+share/icecast/web/auth.xsl
+share/icecast/web/corner_bottomleft.jpg
+share/icecast/web/corner_bottomright.jpg
+share/icecast/web/corner_topleft.jpg
+share/icecast/web/corner_topright.jpg
+share/icecast/web/icecast.png
+share/icecast/web/key.gif
 share/icecast/web/status.xsl
 share/icecast/web/status2.xsl
+share/icecast/web/style.css
 @dirrm share/icecast/web
 @dirrm share/icecast/admin
 @dirrm share/icecast
