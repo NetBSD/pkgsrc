@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2000/06/01 17:54:26 rh Exp $
+@comment $NetBSD: PLIST,v 1.16 2000/10/19 23:31:18 jlam Exp $
 bin/mc
 bin/mcedit
 bin/mcmfmt
@@ -94,13 +94,14 @@ ${LOCALEBASE}/locale/pl/LC_MESSAGES/mc.mo
 ${LOCALEBASE}/locale/pt_BR/LC_MESSAGES/mc.mo
 ${LOCALEBASE}/locale/ro/LC_MESSAGES/mc.mo
 ${LOCALEBASE}/locale/ru/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/sv/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/wa/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/uk/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/zh_TW.Big5/LC_MESSAGES/mc.mo
 ${LOCALEBASE}/locale/sk/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/sl/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/sv/LC_MESSAGES/mc.mo
 ${LOCALEBASE}/locale/tr/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/uk/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/wa/LC_MESSAGES/mc.mo
 ${LOCALEBASE}/locale/zh_CN.GB2312/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/zh_TW.Big5/LC_MESSAGES/mc.mo
 @dirrm lib/mc/term
 @dirrm lib/mc/syntax
 @dirrm lib/mc/extfs

@@ -1,35 +1,15 @@
-# $NetBSD: Makefile,v 1.39 2000/10/04 11:04:58 toshii Exp $
+# $NetBSD: Makefile,v 1.40 2000/10/19 23:31:17 jlam Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/11/30 19:37:48 vanilla Exp
 #
 
-DISTNAME=	mc-4.5.50
-CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/mc/}
+CONFIGURE_ARGS+=	--without-x
+CONFIGURE_ARGS+=	--without-tm-x-support
+CONFIGURE_ARGS+=	--without-gnome
 
-MAINTAINER=	tron@netbsd.org
-HOMEPAGE=	http://www.gnome.org/mc/
+# Remove unwanted directories in a non-GNOME installation.
+#
+post-install:
+	cd ${PREFIX}; ${RMDIR} -p share/idl 2>/dev/null || ${TRUE}
+	cd ${PREFIX}; ${RMDIR} -p share/pixmaps/mc 2>/dev/null || ${TRUE}
 
-DEPENDS+=	libslang-*:../../devel/libslang
-DEPENDS+=	glib-1.2.*:../../devel/glib
-
-CONFLICTS+=	gmc-*
-
-GNU_CONFIGURE=		YES
-USE_GMAKE=		YES
-CONFIGURE_ARGS+=	--with-netrc --with-slang --without-x \
-			--without-gnome --without-tk
-
-# Funny stuff to get this to use the system libslang.
-CONFIGURE_ENV+=		LIBS="-lm -ltermcap" CPPFLAGS="-I${LOCALBASE}/include"
-CFLAGS+=		-Dunix -I${LOCALBASE}/include -DxBSD
-LDFLAGS+=		-L${LOCALBASE}/lib
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-PLIST_SUBST+=	LOCALEBASE=lib
-.else
-PLIST_SUBST+=	LOCALEBASE=share
-.endif
-
-.include "../../mk/bsd.pkg.mk"
+.include "../../sysutils/mc/Makefile.common"
