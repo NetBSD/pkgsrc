@@ -1,0 +1,14 @@
+--- score.c.orig	Sun Aug  9 03:56:41 1998
++++ score.c	Sun Aug  9 03:57:23 1998
+@@ -72,3 +72,3 @@
+ static FILE *scorefile = 0;
+-char *score_filename;
++extern AppData app_data;
+ 
+@@ -102,4 +102,4 @@
+ 
+-  if( !(scorefile = fopen(score_filename,"r+")) ) {
+-    scorefile = fopen(score_filename, "w");
++  if( !(scorefile = fopen(app_data.score_filename,"r+")) ) {
++    scorefile = fopen(app_data.score_filename, "w");
+     return;
