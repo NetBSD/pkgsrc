@@ -1,9 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/01/03 23:06:43 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:05 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 DB2_BUILDLINK3_MK:=	${DB2_BUILDLINK3_MK}+
 
-.if !empty(DB2_BUILDLINK3_MK:M\+)
+.if !empty(DB2_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		db
 BUILDLINK_DEPENDS.db?=		db>=2.7.3
 BUILDLINK_PKGSRCDIR.db?=	../../databases/db
@@ -26,12 +26,12 @@ MAKEFLAGS+=	_NEED_DB2="${_NEED_DB2}"
 .endif
 
 .if ${_NEED_DB2} == "YES"
-.  if !empty(BUILDLINK_DEPTH:M\+)
+.  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	db
 .  endif
 .endif
 
-.if !empty(DB2_BUILDLINK3_MK:M\+)
+.if !empty(DB2_BUILDLINK3_MK:M+)
 .  if ${_NEED_DB2} == "YES"
 BUILDLINK_INCDIRS.db=	include/db2
 BUILDLINK_TRANSFORM+=	l:db:db2

@@ -1,21 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/01/03 23:06:43 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:05 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SDL_BUILDLINK3_MK:=	${SDL_BUILDLINK3_MK}+
 
-.if !empty(SDL_BUILDLINK3_MK:M\+)
-.  include "../../mk/bsd.prefs.mk"
-
-BUILDLINK_DEPENDS.SDL?=		SDL>=1.2.5nb5
-BUILDLINK_PKGSRCDIR.SDL?=	../../devel/SDL
-.endif	# SDL_BUILDLINK3_MK
-
-.if !empty(BUILDLINK_DEPTH:M\+)
+.if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	SDL
 .endif
 
-.if !empty(SDL_BUILDLINK3_MK:M\+)
-BUILDLINK_PACKAGES+=	SDL
+.if !empty(SDL_BUILDLINK3_MK:M+)
+BUILDLINK_PACKAGES+=		SDL
+BUILDLINK_DEPENDS.SDL?=		SDL>=1.2.5nb5
+BUILDLINK_PKGSRCDIR.SDL?=	../../devel/SDL
 
 USE_X11=		YES
 PTHREAD_OPTS+=		require

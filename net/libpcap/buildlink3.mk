@@ -1,9 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/01/03 23:06:44 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:07 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBPCAP_BUILDLINK3_MK:=	${LIBPCAP_BUILDLINK3_MK}+
 
-.if !empty(LIBPCAP_BUILDLINK3_MK:M\+)
+.if !empty(LIBPCAP_BUILDLINK3_MK:M+)
 .  include "../../mk/bsd.prefs.mk"
 
 BUILDLINK_DEPENDS.libpcap?=	libpcap>=0.7.2
@@ -33,12 +33,12 @@ MAKEFLAGS+=	_NEED_LIBPCAP="${_NEED_LIBPCAP}"
 .endif
 
 .if ${_NEED_LIBPCAP} == "YES"
-.  if !empty(BUILDLINK_DEPTH:M\+)
+.  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	libpcap
 .  endif
 .endif
 
-.if !empty(LIBPCAP_BUILDLINK3_MK:M\+)
+.if !empty(LIBPCAP_BUILDLINK3_MK:M+)
 .  if ${_NEED_LIBPCAP} == "YES"
 BUILDLINK_PACKAGES+=		libpcap
 .  else
