@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.10 1999/08/10 10:38:10 agc Exp $
+# $NetBSD: pkglint.pl,v 1.11 1999/09/09 20:21:18 hubertf Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -117,20 +117,27 @@ $sharedocused = 0;
 
 %predefined = ();
 foreach $i (split("\n", <<EOF)) {
-XCONTRIB	ftp://ftp.x.org/contrib/
 XCONTRIB	ftp://crl.dec.com/pub/X11/contrib/
-GNU		ftp://prep.ai.mit.edu/pub/gnu/
-GNU		ftp://wuarchive.wustl.edu/systems/gnu/
+XCONTRIB	ftp://ftp.sunsite.auc.dk/pub/X/X.org/contrib/
+XCONTRIB	ftp://ftp.uni-paderborn.de/pub/X11/contrib/
+XCONTRIB	ftp://ftp.x.org/contrib/
+GNU		ftp://ftp.gnu.org/pub/gnu/
+GNU		ftp://ftp.wustl.edu/systems/gnu/
+GNU		ftp://ftp.informatik.tu-muenchen.de/pub/comp/os/unix/gnu/
 PERL_CPAN	ftp://ftp.digital.com/pub/plan/perl/CPAN/modules/by-module/
 PERL_CPAN	ftp://ftp.cdrom.com/pub/perl/CPAN/modules/by-module/
 TEX_CTAN	ftp://ftp.cdrom.com/pub/tex/ctan/
-TEX_CTAN	ftp://wuarchive.wustl.edu/packages/TeX/
+TEX_CTAN	ftp://ftp.wustl.edu/packages/TeX/
 TEX_CTAN	ftp://ftp.funet.fi/pub/TeX/CTAN/
 TEX_CTAN	ftp://ftp.tex.ac.uk/public/ctan/tex-archive/
 TEX_CTAN	ftp://ftp.dante.de/tex-archive/
 SUNSITE		ftp://sunsite.unc.edu/pub/Linux/
 SUNSITE		ftp://ftp.infomagic.com/pub/mirrors/linux/sunsite/
 SUNSITE		ftp://ftp.funet.fi/pub/mirrors/sunsite.unc.edu/pub/Linux/
+GNOME		ftp://ftp.gnome.org/pub/GNOME/
+GNOME		ftp://ftp.sunet.se/pub/X11/GNOME/
+GNOME		ftp://ftp.informatik.uni-bonn.de/pub/os/unix/gnome/
+GNOME		ftp://ftp.tuwien.ac.at/hci/gnome.org/GNOME/
 EOF
 	($j, $k) = split(/\t+/, $i);
 	$predefined{$k} = $j;
@@ -1304,8 +1311,7 @@ sub is_predefined {
 		$subdir = $';
 		$subdir =~ s/\/$//;
 		&perror("WARN: how about using ".
-			"\${MASTER_SITE_$predefined{$site}} with ".
-			"\"MASTER_SITE_SUBDIR=$subdir\", instead of \"$url\?");
+			"\${MASTER_SITE_$predefined{$site}:=$subdir/} instead of \"$url\?");
 		return &TRUE;
 	}
 	undef;
