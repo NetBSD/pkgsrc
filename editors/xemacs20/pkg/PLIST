@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 1998/01/28 15:33:52 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.8 1998/01/28 17:14:25 tron Exp $
 bin/b2m
 bin/ctags
 bin/etags
@@ -19,10 +19,10 @@ man/man1/gnuclient.1.gz
 man/man1/gnudoit.1.gz
 man/man1/gnuserv.1.gz
 man/man1/xemacs.1.gz
-@exec mkdir -p lib/xemacs/lock ; chmod 1777 lib/xemacs/lock
-@exec mkdir -p lib/xemacs/site-lisp ; chmod 755 lib/xemacs/site-lisp
+@exec mkdir -p %D/lib/xemacs/lock ; chmod 1777 %D/lib/xemacs/lock
+@exec mkdir -p %D/lib/xemacs/site-lisp ; chmod 755 %D/lib/xemacs/site-lisp
 @unexec rm -rf %D/lib/xemacs
-@exec mkdir -p share/xemacs/site-lisp ; chmod 755 share/xemacs/site-lisp
+@exec mkdir -p %D/share/xemacs/site-lisp ; chmod 755 %D/share/xemacs/site-lisp
 @unexec rm -rf %D/share/xemacs
 lib/xemacs-20.3/etc/BABYL
 lib/xemacs-20.3/etc/BETA
