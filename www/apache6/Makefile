@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2002/06/20 07:24:17 itojun Exp $
+# $NetBSD: Makefile,v 1.51 2002/06/20 09:45:27 itojun Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -32,9 +32,11 @@ USE_BUILDLINK_ONLY=	YES
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-layout="${WRKDIR}/config.layout:pkgsrc"
 CONFIGURE_ARGS+=	--enable-module=most \
-			--enable-module=auth_db	\
+			--enable-module=auth_db \
+			--enable-module=so \
 			--disable-module=auth_dbm \
 			--enable-rule=INET6
+# proxy module is broken with the IPv6 patch
 CONFIGURE_ARGS+=	--disable-module=proxy
 CONFIGURE_ARGS+=	--with-perl=${PERL5}
 CONFIGURE_ARGS+=	--with-port=80
