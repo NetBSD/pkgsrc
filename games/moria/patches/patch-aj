@@ -1,0 +1,28 @@
+$NetBSD: patch-aj,v 1.1 1999/09/04 09:46:37 simonb Exp $
+--- source/types.h.orig	Fri Jul 22 11:47:49 1994
++++ source/types.h	Sat Sep  4 19:39:07 1999
+@@ -6,11 +6,24 @@
+    not for profit purposes provided that this copyright and statement are
+    included in all such copies. */
+ 
++#if (defined(__unix__) || defined(unix)) && !defined(USG)
++#include <sys/param.h>
++#endif
++
++#if (defined(BSD) && BSD >= 199306)
++#include <sys/types.h>
++typedef u_int32_t int32u;
++typedef int32_t   int32;
++typedef u_int16_t int16u;
++typedef int16_t   int16;
++typedef u_int8_t  int8u;
++#else
+ typedef unsigned long  int32u;
+ typedef long	       int32;
+ typedef unsigned short int16u;
+ typedef short	       int16;
+ typedef unsigned char  int8u;
++#endif
+ /* some machines will not accept 'signed char' as a type, and some accept it
+    but still treat it like an unsigned character, let's just avoid it,
+    any variable which can ever hold a negative value must be 16 or 32 bits */
