@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:33 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/10/27 20:14:20 drochner Exp $
 bin/gimv
 lib/gimageview/archiver/libgimv_lha_extarc.la
 lib/gimageview/archiver/libgimv_rar_extarc.la
@@ -31,8 +31,6 @@ lib/gimageview/thumbnail/libgimv_nautilus_thumb.la
 lib/gimageview/thumbnail/libgimv_thumb.la
 lib/gimageview/thumbnail/libgimv_xvpics_thumb.la
 lib/gimageview/thumbnail_view/libgimv_thumbview_detail.la
-lib/gimageview/thumbnail_view/libgimv_thumbview_list.la
-lib/gimageview/thumbnail_view/libgimv_thumbview_table.la
 share/doc/gimageview/html/ja/01.html
 share/doc/gimageview/html/ja/02.html
 share/doc/gimageview/html/ja/03.html
