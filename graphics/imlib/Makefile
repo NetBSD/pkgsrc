@@ -1,20 +1,21 @@
-# $NetBSD: Makefile,v 1.16 1999/03/04 09:30:45 tron Exp $
+# $NetBSD: Makefile,v 1.17 1999/03/05 23:46:19 tron Exp $
 #
 
-DISTNAME=	imlib-1.9.0
+DISTNAME=	imlib-1.9.4
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.gnome.org/pub/imlib/TAR/ \
-		ftp://ftp.jimpick.com/pub/mirrors/gnome/sources/imlib/ \
-		ftp://ftp.cdrom.com/pub/png/src/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${PNG_DISTNAME}${EXTRACT_SUFX}
+MASTER_SITES=   ftp://ftp.gnome.org/pub/GNOME/sources/gnome-1.0/sources/ \
+		ftp://ftp.jimpick.com/pub/mirrors/gnome/gnome-1.0/sources/ \
+		ftp://ftp.informatik.uni-bonn.de/pub/os/unix/gnome/gnome-1.0/sources/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.labs.redhat.com/imlib/
 
 DEPENDS+=	gtk+-1.2.0:../../x11/gtk
-DEPENDS+=	tiff-3.4:../../graphics/tiff
-DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	giflib-3.0:../../graphics/giflib
+DEPENDS+=	jpeg-6b:../../graphics/jpeg
+DEPENDS+=	netpbm-19940301:../../graphics/netpbm
+DEPENDS+=	png-1.0.3:../../graphics/png
+DEPENDS+=	tiff-3.4:../../graphics/tiff
 
 USE_X11BASE=	yes
 USE_LIBTOOL=	yes
@@ -23,21 +24,6 @@ GNU_CONFIGURE=	yes
 
 LDFLAGS+=		-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=	--with-gtk-prefix=${X11BASE}
-CONFIGURE_ENV+=		CPPFLAGS='-I${PNG_WRKSRC} -I${LOCALBASE}/include -I${LOCALBASE}/include/giflib'
-
-PNG_DISTNAME=		libpng-1.0.1
-PNG_MAKE_PROGRAM=	make
-PNG_MAKEFILE=		scripts/makefile.std
-PNG_WRKSRC=		${WRKDIR}/${PNG_DISTNAME}
-
-pre-build:
-	@cd ${PNG_WRKSRC}; \
-	${SETENV} ${MAKE_ENV} ${PNG_MAKE_PROGRAM} ${MAKE_FLAGS} \
-	  -f ${PNG_MAKEFILE}  ${ALL_TARGET}
-
-pre-install:	
-	@cd ${PNG_WRKSRC}; \
-	${SETENV} ${MAKE_ENV} ${PNG_MAKE_PROGRAM} ${MAKE_FLAGS} \
-	  -f ${PNG_MAKEFILE}  ${INSTALL_TARGET}
+CONFIGURE_ENV+=		CPPFLAGS='-I${LOCALBASE}/include -I${LOCALBASE}/include/giflib'
 
 .include "../../mk/bsd.pkg.mk"
