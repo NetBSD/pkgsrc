@@ -1,0 +1,8 @@
+Config::General opens a config file and parses it's contents for
+you. After parsing the module returns a hash structure which contains
+the representation of the config file.
+
+The format of config files supported by Config::General is inspired
+by the well known apache config format, in fact, this module is
+100% read-compatible to apache configs, but you can also just use
+simple name/value pairs in your config files.
