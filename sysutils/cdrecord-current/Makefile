@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/03/04 10:10:10 tron Exp $
+# $NetBSD: Makefile,v 1.9 2000/05/22 02:05:37 hubertf Exp $
 
 DISTNAME=	cdrecord-1.8.1a01
 CATEGORIES=	sysutils
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/pr
 USE_GMAKE=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C/a.*//}
-TARGET_ARCH=	${MACHINE}-netbsd-cc
+TARGET_ARCH=	${MACHINE_ARCH}-netbsd-cc
 TARGET_DIR=	OBJ/${TARGET_ARCH}
 
 do-configure:
