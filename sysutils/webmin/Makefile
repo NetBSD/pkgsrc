@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/23 19:28:32 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/23 19:47:21 jlam Exp $
 
 DISTNAME=	webmin-1.150-minimal
 PKGNAME=	${DISTNAME:S/-minimal$//}
@@ -32,21 +32,18 @@ MESSAGE_SUBST+=		WEBMIN_DIR=${WEBMIN_DIR}
 USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
 RCD_SCRIPTS=		webmin
-OWN_DIRS=		${WEBMIN_ETCDIR} ${WEBMIN_LOGDIR} ${WEBMIN_DIR}
+OWN_DIRS=		${WEBMIN_LOGDIR}
 
-## Don't register any of the files in ${WEBMIN_DIR}.  We'll use Webmin's
-## own uninstall script to remove itself.
-##
-## # Dynamically generate the Webmin PLIST from the installed files.
-## WEBMIN_PLIST_FILES= \
-## 	( cd ${PREFIX}; ${FIND} ${WEBMIN_SUBDIR} \! -type d -print )	\
-## 	| ${SORT} -u
-## WEBMIN_PLIST_DIRS= \
-## 	( cd ${PREFIX}; ${FIND} ${WEBMIN_SUBDIR} -type d -print )	\
-## 	| ${SED} -e "s,^,@unexec ${RMDIR} -p %D/,"			\
-## 		 -e "s,$$, 2>/dev/null || ${TRUE},"			\
-## 	| ${SORT} -ur
-## GENERATE_PLIST+=	${WEBMIN_PLIST_FILES}; ${WEBMIN_PLIST_DIRS};
+# Dynamically generate the Webmin PLIST from the installed files.
+WEBMIN_PLIST_FILES= \
+	( cd ${PREFIX}; ${FIND} ${WEBMIN_SUBDIR} \! -type d -print )	\
+	| ${SORT} -u
+WEBMIN_PLIST_DIRS= \
+	( cd ${PREFIX}; ${FIND} ${WEBMIN_SUBDIR} -type d -print )	\
+	| ${SED} -e "s,^,@unexec ${RMDIR} -p %D/,"			\
+		 -e "s,$$, 2>/dev/null || ${TRUE},"			\
+	| ${SORT} -ur
+GENERATE_PLIST+=	${WEBMIN_PLIST_FILES}; ${WEBMIN_PLIST_DIRS};
 
 do-configure:
 	for file in ${WRKSRC}/setup.sh; do				\
