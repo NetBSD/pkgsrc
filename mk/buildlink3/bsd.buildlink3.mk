@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.141 2004/04/24 15:49:42 minskim Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.142 2004/04/26 16:27:36 minskim Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -175,6 +175,7 @@ _BLNK_DEPMETHOD.${_pkg_}=	_BLNK_ADD_TO.DEPENDS
 _BLNK_RECMETHOD.${_pkg_}=	_BLNK_ADD_TO.RECOMMENDED
 .  elif !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mbuild)
 _BLNK_DEPMETHOD.${_pkg_}=	_BLNK_ADD_TO.BUILD_DEPENDS
+_BLNK_RECMETHOD.${_pkg_}=	_BLNK_ADD_TO.BUILD_DEPENDS
 .  endif
 .  if defined(BUILDLINK_DEPENDS.${_pkg_}) && \
       defined(BUILDLINK_PKGSRCDIR.${_pkg_})
@@ -240,7 +241,7 @@ ${_BLNK_DEPMETHOD.${_pkg_}}+=	${_depend_}:${BUILDLINK_PKGSRCDIR.${_pkg_}}
 .  if defined(BUILDLINK_RECOMMENDED.${_pkg_}) && \
       defined(BUILDLINK_PKGSRCDIR.${_pkg_})
 .    for _rec_ in ${BUILDLINK_RECOMMENDED.${_pkg_}}
-.      if empty(${_BLNK_RECMETHOD.${_pkg_}}:M${_depend_}\:*)
+.      if empty(${_BLNK_RECMETHOD.${_pkg_}}:M${_rec_}\:*)
 ${_BLNK_RECMETHOD.${_pkg_}}+=	${_rec_}:${BUILDLINK_PKGSRCDIR.${_pkg_}}
 .      endif
 .    endfor
