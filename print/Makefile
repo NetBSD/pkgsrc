@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/02/28 17:32:15 frueauf Exp $
+# $NetBSD: Makefile,v 1.16 1999/03/10 17:04:54 jwise Exp $
 # FreeBSD Id: Makefile,v 1.52 1997/12/14 00:58:08 asami Exp
 #
 
@@ -25,6 +25,7 @@
     SUBDIR += gv
 #    SUBDIR += html2latex
 #    SUBDIR += latex
+    SUBDIR += lgrind
 #    SUBDIR += lout
 #    SUBDIR += lprps
     SUBDIR += lyx
