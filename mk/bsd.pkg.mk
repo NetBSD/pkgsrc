@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1317 2003/12/09 13:14:02 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1318 2003/12/11 22:27:40 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -919,7 +919,7 @@ MASTER_SITE_XCONTRIB+=	\
 MASTER_SITE_GNU+=	\
 	ftp://ftp.gnu.org/pub/gnu/ \
 	ftp://ftp.gwdg.de/pub/gnu/ \
-	ftp://ftp.progsoc.uts.edu.au/pub/gnu/ \
+	http://public.planetmirror.com.au/pub/gnu/ \
 	ftp://gatekeeper.dec.com/pub/GNU/ \
 	ftp://ftp.uu.net/archive/systems/gnu/ \
 	ftp://ftp.de.uu.net/pub/gnu/ \
