@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2001/03/19 17:07:16 wennmach Exp $
+@comment $NetBSD: PLIST,v 1.17 2001/04/24 12:40:09 skrll Exp $
 kaffe/bin/appletviewer
 kaffe/bin/install-jar
 kaffe/bin/jar
@@ -36,11 +36,11 @@ kaffe/lib/kaffe/libawt.so
 kaffe/lib/kaffe/libio-1.0.6.so
 kaffe/lib/kaffe/libio.a
 kaffe/lib/kaffe/libio.la
-kaffe/lib/kaffe/libio.so.0.0
+kaffe/lib/kaffe/libio.so
 kaffe/lib/kaffe/libmanagement-1.0.6.so
 kaffe/lib/kaffe/libmanagement.a
 kaffe/lib/kaffe/libmanagement.la
-kaffe/lib/kaffe/libmanagement.so.0.0
+kaffe/lib/kaffe/libmanagement.so
 kaffe/lib/kaffe/libmath-1.0.6.so
 kaffe/lib/kaffe/libmath.a
 kaffe/lib/kaffe/libmath.la
@@ -48,7 +48,7 @@ kaffe/lib/kaffe/libmath.so
 kaffe/lib/kaffe/libmicrosoft-1.0.6.so
 kaffe/lib/kaffe/libmicrosoft.a
 kaffe/lib/kaffe/libmicrosoft.la
-kaffe/lib/kaffe/libmicrosoft.so.0.0
+kaffe/lib/kaffe/libmicrosoft.so
 kaffe/lib/kaffe/libnative-1.0.6.so
 kaffe/lib/kaffe/libnative.a
 kaffe/lib/kaffe/libnative.la
@@ -56,11 +56,11 @@ kaffe/lib/kaffe/libnative.so
 kaffe/lib/kaffe/libnet-1.0.6.so
 kaffe/lib/kaffe/libnet.a
 kaffe/lib/kaffe/libnet.la
-kaffe/lib/kaffe/libnet.so.0.0
+kaffe/lib/kaffe/libnet.so
 kaffe/lib/kaffe/libsecurity-1.0.6.so
 kaffe/lib/kaffe/libsecurity.a
 kaffe/lib/kaffe/libsecurity.la
-kaffe/lib/kaffe/libsecurity.so.0.0
+kaffe/lib/kaffe/libsecurity.so
 kaffe/lib/kaffe/libzip-1.0.6.so
 kaffe/lib/kaffe/libzip.a
 kaffe/lib/kaffe/libzip.la
@@ -69,7 +69,7 @@ kaffe/lib/kaffe/security/java.security
 kaffe/lib/libkaffevm-1.0.6.so
 kaffe/lib/libkaffevm.a
 kaffe/lib/libkaffevm.la
-kaffe/lib/libkaffevm.so.0.0
+kaffe/lib/libkaffevm.so
 kaffe/lib/libkaffexprof-1.0.6.so
 kaffe/lib/libkaffexprof.a
 kaffe/lib/libkaffexprof.la
