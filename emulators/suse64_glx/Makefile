@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/02 01:19:54 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/02 03:14:50 jschauma Exp $
 
 DISTNAME=		suse_glx-${SUSE_VERSION}
 PKGREVISION=		2
@@ -21,12 +21,4 @@ PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 RPMFILES=		glx-000229-53.i386.rpm
 
 .include "../suse64_linux/Makefile.common"
-<<<<<<< Makefile
-<<<<<<< Makefile
 .include "../../mk/bsd.pkg.mk"
-=======
-.include "../../mk.bsd.pkg.mk"
->>>>>>> 1.4
-=======
-.include "../../mk/bsd.pkg.mk"
->>>>>>> 1.5
