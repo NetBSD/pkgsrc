@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/05 23:51:01 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/16 03:45:48 xtraeme Exp $
 
 DISTNAME=	cvsup-gui-static-16.1.h
 PKGNAME=	${DISTNAME:C/-static//}
@@ -11,7 +11,7 @@ MAINTAINER=	motoyuki@bsdclub.org
 HOMEPAGE=	http://www.polstra.com/projects/freeware/CVSup/
 COMMENT=	cvsup GUI client
 
-DEPENDS+=	cvsup-[0-9]*:../../devel/cvsup
+DEPENDS+=	cvsup-gui-bin-[0-9]*:../../devel/cvsup-gui-bin
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
