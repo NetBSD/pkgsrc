@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1952 2003/04/16 15:52:44 salo Exp $
+$NetBSD: CHANGES,v 1.1953 2003/04/16 22:06:25 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1625,3 +1625,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated snort to 2.0.0nb1 [salo 2003-04-16]
 	Updated snort-mysql to 2.0.0nb1 [salo 2003-04-16]
 	Updated snort-pgsql to 2.0.0nb1 [salo 2003-04-16]
+	Updated frozen-bubble to 1.0.0 [salo 2003-04-16]
