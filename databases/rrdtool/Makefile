@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/06/15 18:35:13 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.15 2002/07/31 17:04:07 wiz Exp $
 #
 
 DISTNAME=	rrdtool-1.0.33
@@ -19,6 +19,8 @@ NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
 			NetBSD-1.5.*-alpha NetBSD-1.5[A-U]-alpha
 
 USE_LIBTOOL=	# defined
+LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
+LTCONFIG_OVERRIDE+=	${WRKSRC}/contrib/php4/ltconfig
 USE_GMAKE=	# defined
 USE_X11=	# defined
 GNU_CONFIGURE=	# defined
