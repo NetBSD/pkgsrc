@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/06/30 16:56:30 tron Exp $
+# $NetBSD: Makefile,v 1.7 2001/07/02 14:29:45 drochner Exp $
 #
 
 DISTNAME=       emma-0.8-1
@@ -14,10 +14,13 @@ COMMENT=	Money management program
 BUILD_DEPENDS+=	automake-1.4:../../devel/automake
 DEPENDS+=	gnome-libs-*:../../x11/gnome-libs
 DEPENDS+=	python>=2.0:../../lang/python
+DEPENDS+=	py-mxDateTime-*:../../time/py-mxDateTime
 
 USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
+USE_LIBINTL=	yes
+BUILD_USES_MSGFMT=	yes
 
 WRKSRC=		${WRKDIR}/emma-0.8
 
@@ -27,5 +30,4 @@ post-extract:
 	  ${CP} ${LOCALBASE}/share/automake/$$FILE ${WRKSRC}/$$FILE; \
 	done
 
-.include "../../devel/gettext-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
