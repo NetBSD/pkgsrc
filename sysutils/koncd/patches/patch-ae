@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2001/11/13 21:26:58 jlam Exp $
+
+--- koncd/Makefile.in.orig	Sun Apr  1 12:09:58 2001
++++ koncd/Makefile.in
+@@ -229,7 +229,7 @@
+ #>- METASOURCES = AUTO
+ 
+ # the library search path. 
+-koncd_LDFLAGS = $(all_libraries) $(KDE_RPATH)
++koncd_LDFLAGS = $(all_libraries) $(KDE_RPATH) @LIBUTIL@
+ mkinstalldirs = $(SHELL) $(top_srcdir)/admin/mkinstalldirs
+ CONFIG_HEADER = ../config.h
+ CONFIG_CLEAN_FILES = 
