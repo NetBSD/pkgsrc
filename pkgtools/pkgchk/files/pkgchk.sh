@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.38 2003/05/06 13:14:37 abs Exp $
+# $Id: pkgchk.sh,v 1.39 2003/05/22 16:38:59 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -438,6 +438,7 @@ if [ -n "$opt_r" -a -n "$MISMATCH_TODO" ]; then
     fi
 fi
 
+UPDATE_FETCH_TODO="$UPDATE_TODO"
 if [ -n "$UPDATE_TODO" ];then
     # Generate list including packages which depend on updates
     #
@@ -478,7 +479,7 @@ if [ -n "$UPDATE_TODO" ];then
 fi
 
 if [ -n "$opt_f" ] ; then
-    pkg_fetchlist $UPDATE_TODO
+    pkg_fetchlist $UPDATE_FETCH_TODO
     pkg_fetchlist $MISSING_TODO
 fi
 if [ -n "$opt_u" ] ; then
