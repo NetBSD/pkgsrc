@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/09/29 15:14:29 bouyer Exp $
+# $NetBSD: Makefile,v 1.3 1999/09/30 15:20:37 bouyer Exp $
 # FreeBSD Id: ports/security/crack/Makefile,v 1.11 1999/09/04 19:24:50 obrien Exp
 
 DISTNAME=	crack5.0
@@ -29,6 +29,7 @@ do-build:
 
 do-install:
 	@${MKDIR} ${PREFIX}/crack
+	@${CHMOD} go-rwx ${PREFIX}/crack
 	@${MKDIR} ${PREFIX}/crack/conf ${PREFIX}/crack/dict ${PREFIX}/crack/doc
 	@${MKDIR} ${PREFIX}/crack/extra ${PREFIX}/crack/run
 	@${MKDIR} ${PREFIX}/crack/scripts
