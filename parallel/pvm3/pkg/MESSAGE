@@ -1,12 +1,9 @@
-You must set the environment variables:
-PVM_ROOT to /usr/pkg
-PVM_ARCH to NETBSD
+You must set the environment variable PVM_ROOT to ${PREFIX}/pvm3 in your
+startup files (.cshrc, .profile) on all machines in the cluster.  In 
+addition, you may want to add the lines contained in 
+${PREFIX}/pvm3/lib/cshrc.stub to the system .cshrc.
 
-in your startup files (.cshrc, .profile) on all machines
-in the cluster.
-
-In addition, you can specify each host's run path in your pvmhosts file
-like so:
+You can specify each host's run path in your pvmhosts file like so:
 hostname ep=/usr/pkg/bin
 This allows you to point different achitecture types to various sets of
-shared or local binaries.
+shared or local binaries.  See pvmd(1) for more information.
