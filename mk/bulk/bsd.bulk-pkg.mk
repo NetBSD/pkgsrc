@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.19 2001/02/13 23:02:23 dmcmahill Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.20 2001/02/15 20:13:28 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -183,6 +183,11 @@ bulk-package:
 			${ECHO_MSG} "BULK> Removing old binary package..." ; \
 			${ECHO_MSG} ${RM} -f ${PKGFILE} ; \
 			${DO}       ${RM} -f ${PKGFILE} ; \
+			for cat in ${CATEGORIES} ;\
+			do \
+				${ECHO_MSG} ${RM} -f ${PACKAGES}/$$cat/${PKGNAME}${PKG_SUFX}; \
+				${DO} ${RM} -f ${PACKAGES}/$$cat/${PKGNAME}${PKG_SUFX}; \
+			done ;\
 		fi; \
 		${ECHO_MSG} "BULK> Full rebuild  in progress..." ; \
 		${ECHO_MSG} "BULK> Cleaning package and its depends" ;\
