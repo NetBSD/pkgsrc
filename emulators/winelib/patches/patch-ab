@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2004/05/11 17:38:55 recht Exp $
+$NetBSD: patch-ab,v 1.2 2004/06/26 20:20:00 recht Exp $
 
---- winelib/winelib.c.orig	2004-05-11 19:08:10.000000000 +0200
-+++ winelib/winelib.c	2004-05-11 19:08:44.000000000 +0200
-@@ -69,8 +69,11 @@
+--- winelib/winelib.c.orig	2004-05-27 05:07:04.000000000 +0200
++++ winelib/winelib.c	2004-06-26 19:44:45.000000000 +0200
+@@ -153,8 +153,11 @@
  	unsigned int		SignalList[] = { SIGHUP, SIGINT, SIGQUIT, SIGILL, SIGTRAP, 
  						SIGABRT, SIGIOT, SIGBUS, SIGFPE, SIGUSR1, 
  						SIGSEGV, SIGUSR2, SIGPIPE, SIGALRM, SIGTERM, 
