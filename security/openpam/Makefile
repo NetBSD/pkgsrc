@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/01/17 16:14:23 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/01/17 16:55:21 jlam Exp $
 
 DISTNAME=	openpam-20040210
 CATEGORIES=	security
@@ -12,7 +12,6 @@ CONFLICTS+=	PAM-[0-9]*
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
-USE_PERL5=		build
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-pam-su
@@ -24,7 +23,9 @@ CONFIGURE_ARGS+=	--with-modules-dir=${PREFIX}/lib/security
 # Create a fake perl binary to avoid recreating the man pages.
 post-tools:
 	${RM} -f ${TOOLS_DIR}/bin/perl
-	${LN} -sf ${TRUE} ${TOOLS_DIR}/bin/perl
+	${ECHO} "#!${TOOLS_SHELL}" > ${TOOLS_DIR}/bin/perl
+	${ECHO} "${TRUE}" >> ${TOOLS_DIR}/bin/perl
+	${CHMOD} +x ${TOOLS_DIR}/bin/perl
 
 # Remove a directory that's created for the sample su application that
 # we don't install.
