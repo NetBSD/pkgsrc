@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.286 1999/06/28 11:42:28 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.287 1999/07/01 14:33:36 mrg Exp $
 #
 # This file is in the public domain.
 #
@@ -74,14 +74,13 @@ SCRIPTDIR?=		${.CURDIR}/scripts
 FILESDIR?=		${.CURDIR}/files
 PKGDIR?=		${.CURDIR}/pkg
 
-# USE_LOCALBASE_FOR_X11 is not currently supported.
 .if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11BASE)
-#.if defined(USE_LOCALBASE_FOR_X11)
-#PREFIX=			${LOCALBASE}
-#BUILD_DEPENDS+=		${X11BASE}/lib/X11/config/xpkgwedge.def:${PKGSRCDIR}/pkgtools/xpkgwedge
-#.else
+.if defined(USE_LOCALBASE_FOR_X11)
+PREFIX=			${LOCALBASE}
+BUILD_DEPENDS+=		${X11BASE}/lib/X11/config/xpkgwedge.def:${PKGSRCDIR}/pkgtools/xpkgwedge
+.else
 PREFIX=			${X11BASE}
-#.endif
+.endif
 .elif defined(USE_CROSSBASE)
 PREFIX=			${CROSSBASE}
 NO_MTREE=		yes
@@ -148,9 +147,9 @@ MD5?=			md5
 MD5_FILE?=		${FILESDIR}/md5
 
 .if defined(USE_MOTIF) || defined(USE_X11BASE) || defined(USE_X11)
-LDFLAGS+=		-Wl,-R${X11BASE}/lib
+LDFLAGS+=		-Wl,-R${X11BASE}/lib -L${X11BASE}/lib
 .endif
-LDFLAGS+=		-Wl,-R${LOCALBASE}/lib
+LDFLAGS+=		-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib
 MAKE_ENV+=		LDFLAGS="${LDFLAGS}"
 CONFIGURE_ENV+=		LDFLAGS="${LDFLAGS}"
 
@@ -664,6 +663,9 @@ CONFIGURE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin
 .if defined(GNU_CONFIGURE)
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM} --prefix=${PREFIX}
 HAS_CONFIGURE=		yes
+.if defined(USE_LOCALBASE_FOR_X11)
+CONFIGURE_ARGS+=        --x-libraries=${X11BASE}/lib --x-includes=${X11BASE}/include
+.endif
 .endif
 
 # Passed to most of script invocations
