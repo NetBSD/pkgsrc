@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1414 2004/02/23 19:07:51 wiz Exp $
+$NetBSD: TODO,v 1.1415 2004/02/23 21:59:22 snj Exp $
 
 Suggested new packages
 ======================
@@ -130,7 +130,6 @@ Suggested package updates
 	o ap-python-2.7.10
 	o apache-ant.1.6.1
 	o asc-1.14.0
-	o aspell-0.50.5
 	o autogen-5.5.6
 	o avidemux-2.0.20
 	o avifile-devel-0.7.34-20030319
