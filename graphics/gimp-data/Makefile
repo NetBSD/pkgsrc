@@ -1,23 +1,24 @@
-# $NetBSD: Makefile,v 1.4 2003/05/02 11:55:18 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/23 18:04:33 salo Exp $
+#
 
 DISTNAME=	gimp-data-extras-1.2.0
 PKGNAME=	gimp-data-1.2
 PKGREVISION=	2
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v1.2/v1.2.3/ \
-		ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/v1.2/v1.2.3/ \
-		ftp://ftp.cs.umn.edu/pub/gimp/gimp/v1.2/v1.2.3/
+MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v1.2/v1.2.4/ \
+		ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/v1.2/v1.2.4/ \
+		ftp://ftp.cs.umn.edu/pub/gimp/gimp/v1.2/v1.2.4/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.gimp.org/
-COMMENT=	extra brushes and patterns for the GIMP
+COMMENT=	GNU Image Manipulation Program (extra brushes and patterns)
 
-CONFLICTS+=		gimp<=1.2.3
+CONFLICTS+=	gimp<=1.2.3
 
-USE_BUILDLINK2=		yes
-USE_X11=		yes
-GNU_CONFIGURE=		yes
+USE_BUILDLINK2=	YES
+USE_X11=	YES
+GNU_CONFIGURE=	YES
 
 .include "../../graphics/gimp-base/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
