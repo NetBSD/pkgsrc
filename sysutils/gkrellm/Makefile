@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/02/25 00:36:11 cube Exp $
+# $NetBSD: Makefile,v 1.29 2004/02/25 08:41:56 cube Exp $
 .include "Makefile.common"
 
 GKRELLM_PKGBASE=	gkrellm
@@ -22,9 +22,10 @@ NOT_FOR_PLATFORM=	IRIX-*
 
 MAKE_ENV+=		MODULES=src LINK_FLAGS=${EXPORT_SYMBOLS_LDFLAGS}
 
-pre-build:
-	${SED} -e s,@@PREFIX@@,${PREFIX}, <${WRKSRC}/src/gkrellm.h >${WRKSRC}/src/gkrellm.h.sed
-	${MV} ${WRKSRC}/src/gkrellm.h.sed ${WRKSRC}/src/gkrellm.h
+SUBST_STAGE.gkprefix=	post-patch
+SUBST_FILES.gkprefix=	${WRKSRC}/src/gkrellm.h
+SUBST_SED.gkprefix=	-e '/SYSTEM_/{s!/usr!${PREFIX}!;}'
+SUBST_CLASSES+=		gkprefix
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gkrellm2
