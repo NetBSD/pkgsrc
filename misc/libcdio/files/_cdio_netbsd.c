@@ -1,4 +1,4 @@
-/* $NetBSD: _cdio_netbsd.c,v 1.1 2004/04/08 17:40:06 drochner Exp $ */
+/* $NetBSD: _cdio_netbsd.c,v 1.2 2004/10/05 14:23:18 drochner Exp $ */
 
 /*
  * Copyright (c) 2003
@@ -71,6 +71,35 @@ typedef struct {
 	bool sessionformat_valid;
 	int sessionformat[100]; /* format of the session the track is in */
 } _img_private_t;
+
+static int
+run_scsi_cmd_freebsd(const void *p_user_data, unsigned int i_timeout_ms,
+		     unsigned int i_cdb, const scsi_mmc_cdb_t *p_cdb, 
+		     scsi_mmc_direction_t e_direction, 
+		     unsigned int i_buf, void *p_buf )
+{
+	const _img_private_t *_obj = p_user_data;
+	scsireq_t req;
+
+	memset(&req, 0, sizeof(req));
+	memcpy(&req.cmd[0], p_cdb, i_cdb);
+	req.cmdlen = i_cdb;
+	req.datalen = i_buf;
+	req.databuf = p_buf;
+	req.timeout = i_timeout_ms;
+	req.flags = e_direction == SCSI_MMC_DATA_READ ? SCCMD_READ : SCCMD_WRITE;
+
+	if (ioctl(_obj->gen.fd, SCIOCCOMMAND, &req) < 0) {
+		perror("SCIOCCOMMAND");
+		return -1;
+	}
+	if (req.retsts != SCCMD_OK) {
+		fprintf(stderr, "SCIOCCOMMAND sts %d\n", req.retsts);
+		return -1;
+	}
+
+	return 0;
+}
 
 static int
 _cdio_read_audio_sectors(void *user_data, void *data, lsn_t lsn,
@@ -239,6 +268,13 @@ _cdio_read_toc(_img_private_t *_obj)
 
 	_obj->toc_valid = 1;
 	return true;
+}
+
+static bool
+read_toc_freebsd (void *p_user_data) 
+{
+
+	return _cdio_read_toc(p_user_data);
 }
 
 static int
@@ -437,9 +473,17 @@ _cdio_get_track_msf(void *user_data, track_t track_num, msf_t *msf)
 	return true;
 }
 
+char **
+cdio_get_devices_freebsd (void)
+{
+
+	return 0;
+}
+
 char *
 cdio_get_default_device_freebsd()
 {
+
 	return strdup(DEFAULT_CDIO_DEVICE);
 }
 
@@ -447,8 +491,13 @@ static cdio_funcs _funcs = {
 	.eject_media        = _cdio_eject_media,
 	.free               = cdio_generic_free,
 	.get_arg            = _cdio_get_arg,
+	.get_cdtext         = get_cdtext_generic,
 	.get_default_device = cdio_get_default_device_freebsd,
+	.get_devices        = cdio_get_devices_freebsd,
+	.get_discmode       = get_discmode_generic,
+	.get_drive_cap      = scsi_mmc_get_drive_cap_generic,
 	.get_first_track_num= _cdio_get_first_track_num,
+	.get_mcn            = scsi_mmc_get_mcn_generic,
 	.get_num_tracks     = _cdio_get_num_tracks,
 	.get_track_format   = _cdio_get_track_format,
 	.get_track_green    = _cdio_get_track_green,
@@ -459,6 +508,8 @@ static cdio_funcs _funcs = {
 	.read_audio_sectors = _cdio_read_audio_sectors,
 	.read_mode2_sector  = _cdio_read_mode2_sector,
 	.read_mode2_sectors = _cdio_read_mode2_sectors,
+	.read_toc           = read_toc_freebsd,
+	.run_scsi_mmc_cmd   = run_scsi_cmd_freebsd,
 	.set_arg            = _cdio_set_arg,
 	.stat_size          = _cdio_stat_size
 };
@@ -478,7 +529,7 @@ cdio_open_freebsd(const char *source_name)
 	_cdio_set_arg(_data, "source",
 		      (source_name ? source_name : DEFAULT_CDIO_DEVICE));
 
-	ret = cdio_new(_data, &_funcs);
+	ret = cdio_new(&_data->gen, &_funcs);
 	if (!ret)
 		return NULL;
 
@@ -490,8 +541,16 @@ cdio_open_freebsd(const char *source_name)
 	}
 }
 
+CdIo *
+cdio_open_am_freebsd(const char *source_name, const char *am)
+{
+
+	return (cdio_open_freebsd(source_name));
+}
+
 bool
 cdio_have_freebsd(void)
 {
+
 	return true;
 }
