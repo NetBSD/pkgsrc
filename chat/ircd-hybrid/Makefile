@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/10/10 09:40:07 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/06/19 16:21:08 grant Exp $
 #
 
 DISTNAME=	ircd-hybrid-6.2
@@ -19,7 +19,7 @@ INSTALL_FILE=		${WRKDIR}/INSTALL
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${IRCD_HYBRID_SMALL_NET} == "YES")
+.if ${IRCD_HYBRID_SMALL_NET} == "YES"
 IRCD_HYBRID_LINK_PREALLOCATE?=		64
 IRCD_HYBRID_CLIENTS_PREALLOCATE?=	64
 IRCD_HYBRID_USERS_PREALLOCATE?=		64
@@ -56,11 +56,11 @@ _DEFS+=		-D${def:S|^IRCD_HYBRID_||}=\"${${def}:Q}\"
 	IRCD_HYBRID_IRC_USER IRCD_HYBRID_IRC_GROUP
 _DEFS+=		-D${def:S|^IRCD_HYBRID_||}=\"${${def}}\"
 .endfor
-.if (${IRCD_HYBRID_USE_SYSLOG} == "YES")
+.if ${IRCD_HYBRID_USE_SYSLOG} == "YES"
 _DEFS+=		-DUSE_SYSLOG=1
 _DEFS+=		-DLOG_FACILITY=${IRCD_HYBRID_SYSLOG_FACILITY}
 .endif
-.if (${IRCD_HYBRID_USE_LOGFILE} == "YES")
+.if ${IRCD_HYBRID_USE_LOGFILE} == "YES"
 _DEFS+=		-DUSE_LOGFILE=1
 _DEFS+=		-DLPATH=\"${IRCD_HYBRID_LPATH}\"
 .endif
@@ -92,21 +92,21 @@ BUILD_DEFS+=	IRCD_HYBRID_SYSLOG_FACILITY
 .else
 BUILD_DEFS+=	IRCD_HYBRID_FNAME_USERLOG
 .endif
-.if (${IRCD_HYBRID_USE_LOGFILE} == "YES")
+.if ${IRCD_HYBRID_USE_LOGFILE} == "YES"
 BUILD_DEFS+=	IRCD_HYBRID_USE_LOGFILE
 BUILD_DEFS+=	IRCD_HYBRID_LPATH
 .endif
 
 # to handle user and group creation...
 .if ${OPSYS} == "NetBSD"
-.if exists(/usr/sbin/user)
+.  if exists(/usr/sbin/user)
 ADDUSER=		/usr/sbin/useradd
 ADDGROUP=		/usr/sbin/groupadd
-.else
+.  else
 DEPENDS+=		user>=20000313:../../sysutils/user
 ADDUSER=		${LOCALBASE}/sbin/useradd
 ADDGROUP=		${LOCALBASE}/sbin/groupadd
-.endif
+.  endif
 .elif ${OPSYS} == "SunOS"
 ADDUSER=		useradd
 ADDGROUP=		groupadd
@@ -155,12 +155,12 @@ DOC_SUBST+=		SYSLOG_FACILITY=${IRCD_HYBRID_SYSLOG_FACILITY}
 post-build:
 	${SED} ${SCRIPT_SUBST_SED} ${FILESDIR}/ircd-hybrid > ${WRKDIR}/ircd-hybrid
 	${CP} ${FILESDIR}/pkg-setup.txt ${WRKDIR}/pkg-setup.txt
-.if (${IRCD_HYBRID_USE_LOGFILE} != "YES")
+.if ${IRCD_HYBRID_USE_LOGFILE} != "YES"
 	${MV} ${WRKDIR}/pkg-setup.txt ${WRKDIR}/.pkg-setup.txt
 	${SED} -e '/LPATH/d' -e '/USERLOG/d' ${WRKDIR}/.pkg-setup.txt > ${WRKDIR}/pkg-setup.txt
 	cp ${WRKDIR}/pkg-setup.txt ${WRKDIR}/pkg-setup.txt.1
 .endif
-.if (${IRCD_HYBRID_USE_SYSLOG} != "YES")
+.if ${IRCD_HYBRID_USE_SYSLOG} != "YES"
 	${MV} ${WRKDIR}/pkg-setup.txt ${WRKDIR}/.pkg-setup.txt
 	${SED} -e '/SYSLOG_FACILITY/d' ${WRKDIR}/.pkg-setup.txt > ${WRKDIR}/pkg-setup.txt
 	cp ${WRKDIR}/pkg-setup.txt ${WRKDIR}/pkg-setup.txt.2
