@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 #
-# portlint - lint for package directory
+# pkglint - lint for package directory
 #
 # implemented by:
 #	Jun-ichiro itojun Itoh <itojun@itojun.org>
@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.34 2000/09/04 00:29:52 hubertf Exp $
+# $NetBSD: pkglint.pl,v 1.35 2000/09/05 00:02:17 wiz Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -20,11 +20,13 @@
 #
 
 use Getopt::Std;
-
+use File::Basename;
+use FileHandle;
 
 $err = $warn = 0;
 $extrafile = $parenwarn = $committer = 1;	# -abc
-$verbose = $newport = 0;			# -vN
+$verbose = $newpkg = 0;				# -vN
+$showmakefile = 0;				# -I
 $contblank = 1;
 $portdir = '.';
 
@@ -39,22 +41,24 @@ $manstrict = 0;
 $manchapters = '123456789ln';
 $localbase = "/usr/local";
 
-getopts('habcNB:v');
+getopts('habcINB:v');
 
 if ($opt_h) {
 		($prog) = ($0 =~ /([^\/]+)$/);
 		print STDERR <<EOF;
-usage: $prog [-vN] [-B#] [package_directory]
+usage: $prog [-vIN] [-B#] [package_directory]
 	-v	verbose mode
+	-I	show Makefile (with all included files)
 	-N	writing a new package
 	-B#	allow # contiguous blank lines (default: $contblank line)
 EOF
 		exit 0;
 };
-print "One or more if the given options are on now by default.\n"
+print "One or more of the given options are now on by default.\n"
 	if $opt_a or $opt_b or $opt_c;
 $verbose = 1	if $opt_v;
-$newport = 1	if $opt_N;
+$newpkg = 1	if $opt_N;
+$showmakefile = 1	if $opt_I;
 $contblank = $opt_B	if $opt_B;
 
 $portdir = shift || ".";
@@ -139,15 +143,24 @@ EOF
 	$predefined{$k} = $j;
 }
 
+# we need to handle the Makefile first to get some variables
+print "OK: checking Makefile.\n";
+if (! -f "$portdir/Makefile") {
+	&perror("FATAL: no Makefile in \"$portdir\".");
+} else {
+    	checkmakefile("Makefile") || &perror("Cannot open the file $i\n");
+}
+
+
 #
 # check for files.
 #
-@checker = ('pkg/COMMENT', 'pkg/DESCR', 'Makefile');
-%checker = ('pkg/COMMENT', 'checkdescr',
-	    'pkg/DESCR', 'checkdescr',
-	    'Makefile', 'checkmakefile' );
+@checker = ("$pkgdir/COMMENT", "$pkgdir/DESCR");
+%checker = ("$pkgdir/COMMENT", 'checkdescr',
+	    "$pkgdir/DESCR", 'checkdescr');
+
 if ($extrafile) {
-	foreach $i ((<$portdir/scripts/*>, <$portdir/pkg/*>)) {
+	foreach $i ((<$portdir/$scriptdir/*>, <$portdir/$pkgdir/*>)) {
 		next if (! -T $i);
 		$i =~ s/^\Q$portdir\E\///;
 		next if (defined $checker{$i});
@@ -161,15 +174,15 @@ if ($extrafile) {
 		}
 	}
 }
-foreach $i (<$portdir/patches/patch-*>) {
+foreach $i (<$portdir/$patchdir/patch-*>) {
 	next if (! -T $i);
 	$i =~ s/^\Q$portdir\E\///;
 	next if (defined $checker{$i});
 	push(@checker, $i);
 	$checker{$i} = 'checkpatch';
 }
-if (-f "$portdir/files/patch-sum") {
-	$i="files/patch-sum";
+if (-f "$portdir/$patchsumfile") {
+	$i="$patchsumfile";
 	next if (defined $checker{$i});
 	push(@checker, $i);
 	$checker{$i} = 'checkpatchsum';
@@ -178,18 +191,18 @@ if (-f "$portdir/files/patch-sum") {
 	# Make sure there's a files/patch-sum if there are patches
 	$patches=0;
 	patch:
-    	    foreach $i (<$portdir/patches/patch-*>) {
+    	    foreach $i (<$portdir/$patchdir/patch-*>) {
 		if ( -T "$i" ) { 
 			$patches=1;
 			last patch;
 		}
 	}
-	if ($patches && ! -f "$portdir/files/patch-sum" ) {
-		&perror("WARN: no $portdir/files/patch-sum file. Please run 'make makepatchsum'.");
+	if ($patches && ! -f "$portdir/$patchsumfile" ) {
+		&perror("WARN: no $portdir/$patchsumfile file. Please run 'make makepatchsum'.");
 	}
 }
-if (-e <$portdir/files/md5>) {
-	$i = <files/md5>;
+if (-e <$portdir/$md5file>) {
+	$i = "$md5file";
 	next if (defined $checker{$i});
 	push(@checker, $i);
 	$checker{$i} = 'checkmd5';
@@ -200,24 +213,24 @@ foreach $i (@checker) {
 		&perror("FATAL: no $i in \"$portdir\".");
 	} else {
 		$proc = $checker{$i};
-		&$proc($i) || &perror("Cannot open the file $i\n");
+		&$proc($i) || &perror("WARN: Cannot open the file $i\n");
 		if ($i !~ /^patches\//) {
 			&checklastline($i) ||
-				&perror("Cannot open the file $i\n");
+				&perror("WARN: Cannot open the file $i\n");
 		}
 	}
 }
-if (-e <$portdir/files/md5> ) {
+if (-e <$portdir/$md5file> ) {
 	if ( $seen_NO_CHECKSUM ) {
-		&perror("WARN: NO_CHECKSUM set, but files/md5 exists. Please remove it.");
+		&perror("WARN: NO_CHECKSUM set, but $portdir/$md5file exists. Please remove it.");
 	}
 } else {
 	if ( ! $seen_NO_CHECKSUM ) {
-		&perror("WARN: no $portdir/files/md5 file. Please run 'make makesum'.");
+		&perror("WARN: no $portdir/$md5file file. Please run 'make makesum'.");
 	}
 }
-if (! -f "$portdir/pkg/PLIST"
-    and ! -f "$portdir/pkg/PLIST-mi"
+if (! -f "$portdir/$pkgdir/PLIST"
+    and ! -f "$portdir/$pkgdir/PLIST-mi"
     and ! $seen_PLIST_SRC
     and ! $seen_NO_PKG_REGISTER ) {
 	&perror("WARN: no PLIST or PLIST-mi, and PLIST_SRC and NO_PKG_REGISTER unset.\n     Are you sure PLIST handling is ok?");
@@ -249,43 +262,48 @@ exit $err;
 #
 sub checkdescr {
 	local($file) = @_;
-	local(%maxchars) = ('pkg/COMMENT', 70, 'pkg/DESCR', 80);
-	local(%maxlines) = ('pkg/COMMENT', 1, 'pkg/DESCR', 24);
-	local(%errmsg) = ('pkg/COMMENT', "must be one-liner.",
-			  'pkg/DESCR',	"exceeds $maxlines{'pkg/DESCR'} ".
-					"lines, make it shorter if possible.");
+	local(%maxchars) = ('COMMENT', 70, 'DESCR', 80);
+	local(%maxlines) = ('COMMENT', 1, 'DESCR', 24);
+	local(%errmsg) = ('COMMENT', "must be one-liner",
+			  'DESCR', "exceeds $maxlines{'DESCR'} ".
+			  	   "lines, make it shorter if possible");
 	local($longlines, $linecnt, $tmp) = (0, 0, "");
 
+	$shortname = basename($file);
 	open(IN, "< $portdir/$file") || return 0;
+
 	while (<IN>) {
 		$linecnt++;
-		$longlines++ if ($maxchars{$file} < length($_));
+		$longlines++ if ($maxchars{$shortname} < length($_));
 		$tmp .= $_;
 	}
-	if ($linecnt > $maxlines{$file}) {
-		&perror("WARN: $file $errmsg{$file}".
-			"(currently $linecnt lines)");
+	if ($linecnt > $maxlines{$shortname}) {
+		&perror("WARN: $file $errmsg{$shortname} ".
+			"(currently $linecnt lines).");
 	} else {
 		print "OK: $file has $linecnt lines.\n" if ($verbose);
 	}
 	if ($longlines > 0) {
 		&perror("WARN: $file includes lines that exceed ".
-			"$maxchars{$file} characters.");
+			"$maxchars{$shortname} characters.");
 	}
 	if ($tmp =~ /[\033\200-\377]/) {
 		&perror("WARN: $file includes iso-8859-1, or ".
 			"other local characters.  $file should be ".
 			"plain ascii file.");
 	}
-	if ($file eq 'pkg/COMMENT' && $tmp =~ /\.$/i) {
-		&perror("WARN: $file should not end with a '.' (period).");
-	}
-	if ($file eq 'pkg/COMMENT' && $tmp =~ /^(a|an) /i) {
-		&perror("WARN: $file should not begin with '$1 '.");
-	}
-	if ($file eq 'pkg/COMMENT' && ($tmp =~ /^\s/ || $tmp =~ /\s\n$/)) {
-		&perror("WARN: $file should not not have any leading or ".
-			"trailing whitespace.");
+	if ($shortname eq 'COMMENT') {
+	    	if ($tmp =~ /\.$/i) {
+			&perror("WARN: $file should not end with".
+				" a '.' (period).");
+		}
+		if ($tmp =~ /^(a|an) /i) {
+			&perror("WARN: $file should not begin with '$1 '.");
+		}
+		if ($tmp =~ /^\s/ || $tmp =~ /\s\n$/) {
+			&perror("WARN: $file should not not have any leading".
+				" or trailing whitespace.");
+		}
 	}
 	close(IN);
 }
@@ -296,8 +314,6 @@ sub checkdescr {
 sub checkpatchsum {
 	local($file) = @_;	# files/patch-sum
 	local(%inpatchsumfile);
-
-	undef(%seen);
 
 	open(SUM,"<$portdir/$file") || return 0;
 	while(<SUM>) {
@@ -310,26 +326,26 @@ sub checkpatchsum {
 			&perror("WARN: possible backup file '$patch' in $portdir/$file?");
 		}
 
-		if (-T "$portdir/patches/$patch") {
-			$calcsum=`sed -e '/\$NetBSD.*/d' $portdir/patches/$patch | md5`;
+		if (-T "$portdir/$patchdir/$patch") {
+			$calcsum=`sed -e '/\$NetBSD.*/d' $portdir/$patchdir/$patch | md5`;
 			chomp($calcsum);
 			if ( "$sum" ne "$calcsum" ) {
 				&perror("FATAL: checksum of $patch differs between $portdir/$file and\n"
-				       ."       $portdir/patches/$patch. Rerun 'make makepatchsum'.");
+				       ."       $portdir/$patchdir/$patch. Rerun 'make makepatchsum'.");
 			}
 		} else {
 			&perror("FATAL: patchfile '$patch' is in $file\n"
-			       ."       but not in $portdir/patches/$patch. Rerun 'make makepatchsum'.");
+			       ."       but not in $portdir/$patchdir/$patch. Rerun 'make makepatchsum'.");
 		}
 
 		$inpatchsumfile{$patch} = 1;
 	}
 	close(SUM);
 
-	foreach $patch ( <$portdir/patches/patch-*> ) {
+	foreach $patch ( <$portdir/$patchdir/patch-*> ) {
 		$patch =~ /\/([^\/]+)$/;
 		if (! $inpatchsumfile{$1}) {
-			&perror("FATAL: patchsum of '$1' is in $portdir/patches/$1 but not in\n"
+			&perror("FATAL: patchsum of '$1' is in $portdir/$patchdir/$1 but not in\n"
 			       ."       $file. Rerun 'make makepatchsum'.");
 		}
 	}
@@ -525,7 +541,7 @@ sub checklastline {
 		}
 		if ($whole =~ /\n([ \t]*\n)+$/) {
 			&perror("WARN: $file seems to have unnecessary ".
-				"blank lines at the last part.");
+				"blank lines at the bottom.");
 		}
 	}
 
@@ -577,6 +593,55 @@ sub checkmd5 {
 	close(IN);
 }
 
+sub readmakefile {
+	local ($file) = @_;
+	local $contents = "";
+	local $includefile;
+	local $dirname;
+	local $savedln;
+	local $_;
+	my $handle = new FileHandle;
+
+	$savedln = $.;
+	$. = 0;
+	open($handle, "< $file") || return 0;
+	print("OK: reading Makefile '$file'\n") if ($verbose);
+	while (<$handle>) {
+		if ($_ =~ /[ \t]+\n?$/ && !/^#/) {
+			&perror("WARN: $file $.: whitespace before ".
+				"end of line.");
+		}
+		if ($_ =~ /^        /) {	# 8 spaces here!
+			&perror("WARN: $file $.: use tab (not spaces) to".
+				" make indentation.");
+		}
+		# try to get any included file
+		if ($_ =~ /^.include\s+([^\n]+)\n/) {
+			$includefile = $1;
+			if ($includefile =~ /\"([^\"]+)\"/) {
+				$includefile = $1;
+			}
+			if ($includefile =~ /\/mk\//) {
+				# we don't want to include the whole
+				# bsd.pkg.mk or bsd.prefs.mk files
+				$contents .= $_;
+			} else {
+				$dirname = dirname($file);
+				print("OK: including $dirname/$includefile\n");
+				$contents .= readmakefile("$dirname/$includefile");
+			}
+		} else {
+			# we don't want the include Makefile.common lines
+			# to be pkglinted
+			$contents .= $_;
+		}
+	}
+	close($handle);
+
+	$. = $savedln;
+	return $contents;
+}
+
 #
 # Makefile
 #
@@ -590,51 +655,18 @@ sub checkmakefile {
 	local($bogusdistfiles) = (0);
 	local($realwrksrc, $wrksrc, $nowrksubdir) = ('', '', '');
 	local(@mman, @pman);
+	local($includefile);
 
-	open(IN, "< $portdir/$file") || return 0;
-	$rawwhole = '';
 	$tmp = 0;
-	while (<IN>) {
-		if ($_ =~ /[ \t]+\n?$/ && !/^#/) {
-			&perror("WARN: $file $.: whitespace before ".
-				"end of line.");
-		}
-		if ($_ =~ /^        /) {	# 8 spaces here!
-			&perror("WARN: $file $.: use tab (not space) to make ".
-				"indentation");
-		}
-#
-# I'm still not very convinced, for using this kind of magical word.
-# 1. This kind of items are not important for Makefile;
-#    portlint should not require any additional rule to Makefile.
-#    portlint should simply implement items that are declared in Handbook.
-# 2. If we have LINTSKIP, we can't stop people using LINTSKIP too much.
-#    IMHO it is better to warn the user and let the user think twice,
-#    than let the user escape from portlint.
-# Uncomment this part if you are willing to use these magical words.
-# Thu Jun 26 11:37:56 JST 1997
-# -- itojun
-#
-#		if ($_ =~ /^# LINTSKIP\n?$/) {
-#			print "OK: skipping from line $. in $file.\n"
-#				if ($verbose);
-#			$tmp = 1;
-#			next;
-#		}
-#		if ($_ =~ /^# LINTAGAIN\n?$/) {
-#			print "OK: check start again from line $. in $file.\n"
-#				if ($verbose);
-#			$tmp = 0;
-#			next;
-#		}
-#		if ($_ =~ /# LINTIGNORE/) {
-#			print "OK: ignoring line $. in $file.\n" if ($verbose);
-#			next;
-#		}
-#		next if ($tmp);
-		$rawwhole .= $_;
+	$rawwhole = readmakefile("$portdir/$file");
+	if ($rawwhole eq '') {
+		&perror("FATAL: can't read $portdir/$file");
+		return 0;
 	}
-	close(IN);
+	else {
+		print("OK: whole Makefile (with all included files):\n".
+		      "$rawwhole\n") if ($showmakefile);
+	}
 
 	#
 	# whole file: blank lines.
@@ -658,6 +690,41 @@ sub checkmakefile {
 				"\$(VARIABLE).");
 		}
 	}
+
+	#
+	# whole file: get FILESDIR, PATCHDIR, PKGDIR, SCRIPTDIR,
+	# PATCH_SUM_FILE and MD5_FILE
+	#
+	print "OK: checking for PATCHDIR, SCRIPTDIR, FILESDIR, PKGDIR,".
+	    " MD5_FILE.\n" if ($verbose);
+
+	$filesdir = "files";
+	$filesdir = $1 if ($whole =~ /\nFILESDIR[+?]?=[ \t]*([^\n]+)\n/);
+	$filesdir =~ s/\$\{.CURDIR\}/./;
+
+	$patchdir = "patches";
+	$patchdir = $1 if ($whole =~ /\nPATCHDIR[+?]?=[ \t]*([^\n]+)\n/);
+	$patchdir =~ s/\$\{.CURDIR\}/./;
+
+	$pkgdir = "pkg";
+	$pkgdir = $1 if ($whole =~ /\nPKGDIR[+?]?=[ \t]*([^\n]+)\n/);
+	$pkgdir =~ s/\$\{.CURDIR\}/./;
+
+	$scriptdir = "scripts";
+	$scriptdir = $1 if ($whole =~ /\nSCRIPTDIR[+?]?=[ \t]*([^\n]+)\n/);
+	$scriptdir =~ s/\$\{.CURDIR\}/./;
+
+	$md5file = "$filesdir/md5";
+	$md5file = $1 if ($whole =~ /\nMD5_FILE[+?]?=[ \t]*([^\n]+)\n/);
+	$md5file =~ s/\$\{.CURDIR\}/./;
+
+	$patchsumfile = "$filesdir/patch-sum";
+	$patchsumfile = $1
+	    if ($whole =~ /\nPATCH_SUM_FILE[+?]?=[ \t]*([^\n]+)\n/);
+	$patchsumfile =~ s/\$\{.CURDIR\}/./;
+	print("OK: PATCHDIR: $patchdir, SCRIPTDIR: $scriptdir, ".
+	      "FILESDIR: $filesdir, PKGDIR: $pkgdir, MD5_FILE: $md5file, ".
+	      "PATCH_SUM_FILE: $patchsumfile\n") if ($verbose);
 
 	#
 	# whole file: IS_INTERACTIVE/NOPORTDOCS
@@ -693,7 +760,7 @@ sub checkmakefile {
 	}
 	print "OK: checking USE_PKGLIBTOOL.\n" if ($verbose);
 	if ($whole =~ /\nUSE_PKGLIBTOOL/) {
-		&perror("WARN: use of USE_PKGLIBTOOL discouraged, ".
+		&perror("FATAL: USE_PKGLIBTOOL is deprecated, ".
 			"use USE_LIBTOOL instead.");
 	}
 	print "OK: checking NO_CDROM.\n" if ($verbose);
@@ -730,7 +797,7 @@ EOF
 	foreach $i (keys %cmdnames) {
 		if ($j =~ /[ \t\/@]$i[ \t\n;]/) {
 			&perror("WARN: possible direct use of command \"$i\" ".
-				"found. use $cmdnames{$i} instead.");
+				"found. Use $cmdnames{$i} instead.");
 		}
 	}
 
@@ -810,10 +877,10 @@ EOF
 				"right before \$$rcsidstr\$ tag.");
 		}
 		if ($2 ne '') {
-			if ($verbose || $newport) {	# XXX
+			if ($verbose || $newpkg) {	# XXX
 				&perror("WARN: ".
-				    ($newport ? 'for new port, '
-					      : 'is it a new port? if so, ').
+				    ($newpkg ? 'for new package, '
+					      : 'is it a new package? if so, ').
 				    "make \$$rcsidstr\$ tag in comment ".
 				    "section empty, to make CVS happy.");
 			}
@@ -824,8 +891,10 @@ EOF
 	# for the rest of the checks, comment lines are not important.
 	#
 	for ($i = 0; $i < scalar(@sections); $i++) {
+		$sections[$i] =~ s/^#[^\n]*//g;
 		$sections[$i] =~ s/\n#[^\n]*//g;
 		$sections[$i] =~ s/\n\n+/\n/g;
+		$sections[$i] =~ s/^\n+//g;
 		$sections[$i] =~ s/\\\n/ /g;
 	}
 
@@ -1004,7 +1073,7 @@ EOF
 	#
 	# section 3: PATCH_SITES/PATCHFILES(optional)
 	#
-	print "OK: checking second section of $file, (PATCH*: optinal).\n"
+	print "OK: checking second section of $file, (PATCH*: optional).\n"
 		if ($verbose);
 	$tmp = $sections[$idx];
 
@@ -1018,7 +1087,7 @@ EOF
 			$tmp =~ s/$1[^\n]+\n//;
 		}
 		if ($tmp =~ /\n(PATCH_SITE_SUBDIR)=/) {
-			print "OK: seen PATCH_SITES.\n" if ($verbose);
+			print "OK: seen PATCH_SITE_SUBDIR.\n" if ($verbose);
 			$tmp =~ s/$1[^\n]+\n//;
 		}
 		if ($tmp =~ /\n(PATCHFILES)=/) {
@@ -1071,7 +1140,7 @@ EOF
 		$tmp =~ s/\nMAINTAINER=[^\n]+//;
 	} else {
 		&perror("FATAL: no MAINTAINER listed in $file.");
-                # Why is this fatal? There's a default in bsd.port.mk - HF
+                # Why is this fatal? There's a default in bsd.pkg.mk - HF
 	}
 	$tmp =~ s/\n\n+/\n/g;
 
@@ -1114,14 +1183,14 @@ EOF
 				$l = (split(':', $k))[0];
 				if ($l =~ /^perl5(\.\d+)?$/) {
 					&perror("WARN: dependency to perl5 ".
-						"listed in $j. consider using ".
+						"listed in $j. Consider using ".
 						"USE_PERL5.");
 				}
 
 				# check USE_GMAKE
 				if ($l =~ /^(gmake|\${GMAKE})$/) {
 					&perror("WARN: dependency to $1 ".
-						"listed in $j. consider using ".
+						"listed in $j. Consider using ".
 						"USE_GMAKE.");
 				}
                                 # check for LIB_DEPENDS w/o backslashes
@@ -1131,7 +1200,7 @@ EOF
   	                                }
 	                        }
 
-				# check port dir existence
+				# check pkg dir existence
 				$k = (split(':', $k))[1];
 				$k =~ s/\${PKGSRCDIR}/$ENV{'PKGSRCDIR'}/;
 				if (! -d "$portdir/$k") {
@@ -1211,7 +1280,7 @@ EOF
 				"\"WRKSRC=\${WRKDIR}/$distname\"?");
 			} else {
 			    &perror("WARN: DISTFILES/DISTNAME affects WRKSRC. ".
-				"take caution when changing them.");
+				"Use caution when changing them.");
 			}
 		}
 	} else {
@@ -1351,7 +1420,7 @@ sub checkorder {
 		while ($k < scalar(@order) && $order[$k] ne $i) {
 			$k++;
 		}
-		if (@order[$k] eq $i) {
+		if ($order[$k] eq $i) {
 			if ($k < $j) {
 				&perror("FATAL: $i appears out-of-order.");
 				$invalidorder++;
@@ -1360,8 +1429,8 @@ sub checkorder {
 			}
 			$j = $k;
 		} else {
-			&perror("FATAL: extra item \"$i\" placed in the ".
-				"$section section.");
+			&perror("FATAL: extra item \"$i\" placed in".
+				" the $section section.");
 		}
 	}
 	if ($invalidorder) {
@@ -1376,7 +1445,7 @@ sub checkearlier {
 	local($str, @varnames) = @_;
 	local($i);
 
-	print "OK: checking items that has to appear earlier.\n" if ($verbose);
+	print "OK: checking items that have to appear earlier.\n" if ($verbose);
 	foreach $i (@varnames) {
 		if ($str =~ /\n$i[?+]?=/) {
 			&perror("WARN: \"$i\" has to appear earlier in $file.");

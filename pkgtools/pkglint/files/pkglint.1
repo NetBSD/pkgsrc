@@ -1,17 +1,17 @@
-.\"	$NetBSD: pkglint.1,v 1.4 2000/09/04 00:48:10 wiz Exp $
+.\"	$NetBSD: pkglint.1,v 1.5 2000/09/05 00:02:17 wiz Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
 .\" All Rights Reserved.  Absolutely no warranty.
 .\"
-.Dd September 04, 2000
+.Dd September 05, 2000
 .Dt PKGLINT 1
 .Sh NAME
 .Nm pkglint
 .Nd a verifier for pkgsrc directories
 .Sh SYNOPSIS
 .Nm pkglint
-.Op Fl hvN
+.Op Fl hvIN
 .Op Fl B Ar n
 .Op Ar dir
 .Sh DESCRIPTION
@@ -40,6 +40,10 @@ Show the summary of command line options, then exit.
 .It Fl v
 Be verbose.
 Show the progress report for items that are being checked.
+.It Fl I
+Show the Makefile that is constructed by including all the files that
+are slurped in via .include directives.
+This flag is mainly for debugging.
 .It Fl N
 New package flag.
 Adds several checks specific to newly submitted packages.

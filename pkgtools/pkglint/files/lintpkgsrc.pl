@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.28 2000/08/30 12:54:23 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.29 2000/09/05 00:02:16 wiz Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -56,7 +56,7 @@ if ($opt{'D'})
     {
     my($pkglint_flags);
 
-    $pkglint_flags = '-a -b -c -v';
+    $pkglint_flags = '-v';
     if ($opt{'P'})
 	{ $pkgsrcdir = $opt{'P'}; } # Check /etc/mk.conf for PKGSRCDIR
     else
@@ -658,8 +658,8 @@ sub pkglint_all_pkgsrc
 		if (!open(PKGLINT, "cd $pkg ; pkglint $pkglint_flags|"))
 		    { &fail("Unable to run pkglint: $!"); }
 		@output = grep(!/^OK:/ &&
-			     !/^WARN: be sure to cleanup .* work before/ &&
-			     !/^WARN: is it a new port/ &&
+			     !/^WARN: be sure to cleanup .*work.* before/ &&
+			     !/^WARN: is it a new package/ &&
 			     !/^\d+ fatal errors and \d+ warnings found/
 			     , <PKGLINT> );
 		close(PKGLINT);
