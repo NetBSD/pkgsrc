@@ -1,0 +1,7 @@
+$NetBSD: md5,v 1.1 1998/08/14 00:10:45 tv Exp $
+
+MD5 (glibc-2.0.7-13.i386.rpm) = c3987d385a0f08baa0b151f6ae712827
+MD5 (glibc-devel-2.0.7-13.i386.rpm) = 0740cbffceae93df3178123f7486e921
+MD5 (kernel-headers-2.0.34-0.6.i386.rpm) = c94e310590ba5cdf01bf81ad0e141e25
+MD5 (binutils-2.9.1.tar.gz) = 8f9ad1a6e96742fd3069479171a63c22
+MD5 (egcs-19980803.tar.gz) = 3c6e28dd25140187e322c890231bfc72
