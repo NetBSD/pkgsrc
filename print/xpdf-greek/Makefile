@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2003/08/30 22:51:32 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2003/11/11 09:06:11 wiz Exp $
 #
 
-DISTNAME=	xpdf-greek
-PKGNAME=	${DISTNAME}-20020213
-WRKSRC=		${WRKDIR}/${DISTNAME}
+DISTNAME=	xpdf-greek-2003-jun-28
+PKGNAME=	xpdf-greek-20020628
+WRKSRC=		${WRKDIR}/xpdf-greek
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/
 
@@ -15,7 +15,6 @@ DEPENDS+=	xpdf>=2.02:../../print/xpdf
 
 USE_PKGINSTALL=	yes
 
-DIST_SUBDIR=	${PKGNAME_NOREV}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
@@ -27,6 +26,8 @@ post-patch:
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/xpdf/greek
+	${INSTALL_DATA} ${WRKSRC}/Greek.nameToUnicode \
+		${PREFIX}/share/xpdf/greek
 	${INSTALL_DATA} ${WRKSRC}/ISO-8859-7.unicodeMap \
 		${PREFIX}/share/xpdf/greek
 
