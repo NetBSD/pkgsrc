@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/08/10 21:46:34 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2004/08/10 21:49:04 jlam Exp $
 
 DISTNAME=	mailwrapper-19990412
 PKGREVISION=	4
@@ -25,6 +25,8 @@ MAILWRAPPEES=	/usr/bin/mailq						\
 		/usr/bin/newaliases	/usr/sbin/newaliases		\
 		/usr/sbin/sendmail	/usr/lib/sendmail
 FILES_SUBST+=	MAILWRAPPEES=${MAILWRAPPEES:Q}
+
+INSTALLATION_DIRS=	man/cat5 man/cat8 man/man5 man/man8 sbin
 
 do-configure:
 	cd ${WRKSRC};							\
