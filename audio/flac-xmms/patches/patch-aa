@@ -1,15 +1,31 @@
-$NetBSD: patch-aa,v 1.1 2001/08/13 20:07:17 nra Exp $
+$NetBSD: patch-aa,v 1.2 2002/09/06 06:45:09 jlam Exp $
 
---- Makefile.lite.orig	Thu Jun  7 17:00:48 2001
-+++ Makefile.lite
-@@ -20,8 +20,8 @@
- #
+--- src/plugin_xmms/Makefile.in.orig	Wed Jul  3 14:01:59 2002
++++ src/plugin_xmms/Makefile.in
+@@ -102,7 +102,7 @@ FLaC__USIZE32 = @FLaC__USIZE32@
+ FLaC__USIZE64 = @FLaC__USIZE64@
+ INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
+ # Don't build a static library
+-LIBTOOL = $(top_builddir)/libtool-disable-static
++LIBTOOL = $(top_builddir)/libtool
+ LN_S = @LN_S@
+ NASM = @NASM@
+ OBJDUMP = @OBJDUMP@
+@@ -134,7 +134,7 @@ xmmsinputplugindir = @XMMS_INPUT_PLUGIN_
  
- LIB_NAME  = libxmms-flac
--INCLUDES  = $(shell xmms-config --cflags) -I./include -I../../include
--LIBS = ../../obj/lib/libFLAC.a
-+INCLUDES  = $(shell xmms-config --cflags) -I./include -I${BUILDLINK}/include
-+LIBS = ${LOCALBASE}/lib/libFLAC.a
+ xmmsinputplugin_LTLIBRARIES = libxmms-flac.la
+ libxmms_flac_la_SOURCES = plugin.c
+-libxmms_flac_la_LIBADD = $(top_builddir)/src/libFLAC/libFLAC.la @XMMS_LIBS@
++libxmms_flac_la_LIBADD = $(libdir)/libFLAC.la @XMMS_LIBS@
+ #libxmms_flac_la_LIBADD = -L$(top_builddir)/src/libFLAC/.libs -lFLAC @XMMS_LIBS@
+ libxmms_flac_la_LDFLAGS = -module -avoid-version
+ subdir = src/plugin_xmms
+@@ -142,7 +142,7 @@ mkinstalldirs = $(SHELL) $(top_srcdir)/m
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(xmmsinputplugin_LTLIBRARIES)
  
- OBJS = \
- 	plugin.o
+-libxmms_flac_la_DEPENDENCIES = $(top_builddir)/src/libFLAC/libFLAC.la
++libxmms_flac_la_DEPENDENCIES =
+ am_libxmms_flac_la_OBJECTS = plugin.lo
+ libxmms_flac_la_OBJECTS = $(am_libxmms_flac_la_OBJECTS)
+ 
