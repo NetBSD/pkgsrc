@@ -1,13 +1,17 @@
-# $NetBSD: Makefile.common,v 1.19 2004/04/20 16:15:48 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.20 2004/05/06 11:15:31 jmmv Exp $
 #
 
-DISTNAME?=		libgda-1.0.4
-CATEGORIES?=		databases gnome
-MASTER_SITES?=		${MASTER_SITE_GNOME:=sources/libgda/1.0/}
-EXTRACT_SUFX?=		.tar.bz2
+DISTNAME=		libgda-1.0.4
+CATEGORIES=		databases gnome
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgda/1.0/}
+EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER?=		sab@posix.org.uk
-HOMEPAGE?=		http://www.gnome-db.org/
+MAINTAINER=		sab@posix.org.uk
+HOMEPAGE=		http://www.gnome-db.org/
+COMMENT=		GNU database access library
+
+DISTINFO_FILE=		${.CURDIR}/../../databases/libgda/distinfo
+PATCHDIR=		${.CURDIR}/../../databases/libgda/patches
 
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
@@ -22,9 +26,21 @@ CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir="${PREFIX}/share/doc/html"
 CONFIGURE_ARGS+=	--without-ldap
 
-PKG_SYSCONFSUBDIR=	libgda
-EGDIR=			${PREFIX}/share/examples/libgda
-CONF_FILES+=		${EGDIR}/config ${PKG_SYSCONFDIR}/config
+.if defined(LIBGDA_PROVIDER) && !empty(LIBGDA_PROVIDER)
+PKGNAME=		${DISTNAME:S/libgda-/libgda-${LIBGDA_PROVIDER}-/}
+COMMENT+=		- ${LIBGDA_PROVIDER} provider
+
+BUILD_DIRS=		${WRKSRC}/providers/postgres
+INSTALL_DIRS=		${WRKSRC}/providers/postgres
+
+SUBST_CLASSES+=		libs
+SUBST_STAGE.libs=	pre-configure
+SUBST_MESSAGE.libs=	"Fixing references to installes libraries."
+SUBST_FILES.libs=	providers/${LIBGDA_PROVIDER}/Makefile.in
+SUBST_SED.libs+=	-e 's|$$(top_builddir)/libgda/libgda-2.la|${BUILDLINK_PREFIX.libgda}/lib/libgda-2.la|'
+
+.include "../../databases/libgda/buildlink3.mk"
+.endif
 
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
