@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.17 1998/05/15 21:45:58 tron Exp $
+#	$NetBSD: Makefile,v 1.18 1998/05/26 22:09:20 tron Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/10/13 04:41:07 max Exp
 
     SUBDIR += amanda
@@ -9,6 +9,7 @@
     SUBDIR += colorls
 #   SUBDIR += ctk		# broken w/ tcl/tk V8.0 - HF
 #   SUBDIR += dejagnu		# needs expect - HF
+    SUBDIR += dialog
     SUBDIR += dotfile
 #   SUBDIR += ecc		# broken - HF
 #   SUBDIR += estic		# left for someone w/ an Istec - HF
