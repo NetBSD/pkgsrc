@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2000/08/11 18:47:40 fredb Exp $
+$NetBSD: patch-aa,v 1.5 2000/12/31 14:00:10 wiz Exp $
 
 --- configure.orig	Tue Jul 18 12:58:44 2000
 +++ configure	Fri Aug 11 12:53:21 2000
@@ -28,70 +28,3 @@ $NetBSD: patch-aa,v 1.4 2000/08/11 18:47:40 fredb Exp $
  
  
  
-@@ -2255,8 +2255,8 @@
- if eval "test \"`echo '$''{'gt_cv_func_gettext_libintl'+set}'`\" = set"; then
-   echo $ac_n "(cached) $ac_c" 1>&6
- else
--  echo $ac_n "checking for gettext in -lintl""... $ac_c" 1>&6
--echo "configure:2260: checking for gettext in -lintl" >&5
-+#  echo $ac_n "checking for gettext in -lintl""... $ac_c" 1>&6
-+#echo "configure:2260: checking for gettext in -lintl" >&5
- ac_lib_var=`echo intl'_'gettext | sed 'y%./+-%__p_%'`
- if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
-   echo $ac_n "(cached) $ac_c" 1>&6
-@@ -2298,7 +2298,7 @@
- 
- fi
- 
--echo "$ac_t""$gt_cv_func_gettext_libintl" 1>&6
-+#echo "$ac_t""$gt_cv_func_gettext_libintl" 1>&6
- else
-   echo "$ac_t""no" 1>&6
- fi
-@@ -2466,27 +2466,27 @@
-   echo "$ac_t""no" 1>&6
- fi
- 
--		cat > conftest.$ac_ext <<EOF
--#line 2471 "configure"
--#include "confdefs.h"
--
--int main() {
--extern int _nl_msg_cat_cntr;
--			       return _nl_msg_cat_cntr
--; return 0; }
--EOF
--if { (eval echo configure:2479: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
--  rm -rf conftest*
--  CATOBJEXT=.gmo
-+#		cat > conftest.$ac_ext <<EOF
-+##line 2471 "configure"
-+##include "confdefs.h"
-+#
-+#int main() {
-+#extern int _nl_msg_cat_cntr;
-+#			       return _nl_msg_cat_cntr
-+#; return 0; }
-+#EOF
-+#if { (eval echo configure:2479: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
-+#  rm -rf conftest*
-+#  CATOBJEXT=.gmo
- 		   DATADIRNAME=share
--else
--  echo "configure: failed program was:" >&5
--  cat conftest.$ac_ext >&5
--  rm -rf conftest*
-+#else
-+#  echo "configure: failed program was:" >&5
-+#  cat conftest.$ac_ext >&5
-+#  rm -rf conftest*
-   CATOBJEXT=.mo
--		   DATADIRNAME=lib
--fi
--rm -f conftest*
-+#		   DATADIRNAME=lib
-+#fi
-+#rm -f conftest*
- 		INSTOBJEXT=.mo
- 	      fi
- 	    fi
