@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4659 2004/02/01 14:13:19 jlam Exp $
+$NetBSD: CHANGES,v 1.4660 2004/02/01 17:47:28 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -544,3 +544,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tcl-otcl to 1.0a8nb2 [xtraeme 2004-01-31]
 	Updated xmms-mad to 0.5.5nb1 [jmmv 2004-02-01]
 	Updated gcc3 to 3.3.2 [jlam 2004-02-01]
+	Updated naim to 0.11.6.5 [snj 2004-02-01]
