@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/01/31 05:00:13 taca Exp $
+# $NetBSD: Makefile,v 1.20 2005/03/06 12:58:44 taca Exp $
 
 DISTNAME=		ruby-postgres-${VERSION}
 PKGNAME=		${RUBY_PKGPREFIX}-postgresql-${VERSION}
@@ -33,14 +33,14 @@ pre-install:
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/postgresql
 .for f in ${DOC}
-	${INSTALL_DATA} ${WRKSRC}/$f ${RUBY_DOCDIR}/postgresql
+	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/postgresql
 .endfor
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/postgresql
 .for f in ${EXAMPLE_LIBS}
-	${INSTALL_DATA} ${WRKSRC}/sample/$f ${RUBY_EXAMPLESDIR}/postgresql
+	${INSTALL_DATA} ${WRKSRC}/sample/${f} ${RUBY_EXAMPLESDIR}/postgresql
 .endfor
 .for f in ${EXAMPLE_SCRIPTS}
-	${INSTALL_SCRIPT} ${WRKSRC}/sample/$f ${RUBY_EXAMPLESDIR}/postgresql
+	${INSTALL_SCRIPT} ${WRKSRC}/sample/${f} ${RUBY_EXAMPLESDIR}/postgresql
 .endfor
 
 .include "../../lang/ruby/modules.mk"

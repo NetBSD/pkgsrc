@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/28 05:59:59 taca Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/06 13:02:17 taca Exp $
 # FreeBSD: ports/devel/ruby-racc/Makefile,v 1.20 2001/01/27 09:54:30 knu Exp
 
 DISTNAME=	racc-${RACC_VERSION}-all-2
@@ -33,8 +33,8 @@ pre-configure:
 	${CP} -p ${WRKSRC}/packages/racc/misc/* ${WRKSRC}/packages/racc/bin
 .if ${RUBY_NAME} != "ruby"
 .for f in ${COMMANDS}
-	${MV} ${WRKSRC}/packages/racc/bin/$f \
-		${WRKSRC}/packages/racc/bin/$f-${RUBY_VER}
+	${MV} ${WRKSRC}/packages/racc/bin/${f} \
+		${WRKSRC}/packages/racc/bin/${f}-${RUBY_VER}
 .endfor
 .endif
 

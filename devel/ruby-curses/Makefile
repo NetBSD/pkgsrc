@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/01/23 17:33:19 taca Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/06 13:00:31 taca Exp $
 #
 
 DISTNAME=		${RUBY_DISTNAME}
@@ -23,7 +23,7 @@ REPLACE_RUBY=		${CURSES_EXAMPLES}
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/curses
 .for f in ${CURSES_EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/$f ${RUBY_EXAMPLESDIR}/curses
+	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_EXAMPLESDIR}/curses
 .endfor
 
 .include "../../lang/ruby/modules.mk"
