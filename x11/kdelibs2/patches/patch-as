@@ -1,0 +1,13 @@
+$NetBSD: patch-as,v 1.1.1.1 2001/03/14 15:59:49 skrll Exp $
+
+--- ksgmltools/kdb2html.in.orig	Wed Jun  7 13:28:18 2000
++++ ksgmltools/kdb2html.in
+@@ -1,7 +1,7 @@
+ #! /bin/sh
+ 
+ if test -z "$KDB2HTML_UNINSTALLED"; then
+-ksgmldir=@prefix@/share/apps/ksgmltools
++ksgmldir=@kde_datadir@/ksgmltools
+ else
+ ksgmldir=$KDB2HTML_UNINSTALLED
+ fi

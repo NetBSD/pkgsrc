@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1.1.1 2001/03/14 15:59:45 skrll Exp $
+
+--- khtml/css/Makefile.in.orig	Thu Feb 22 18:17:29 2001
++++ khtml/css/Makefile.in
+@@ -268,7 +268,7 @@
+ noinst_HEADERS =  	css_extensionsimpl.h  css_stylesheetimpl.h  cssparser.h 	css_ruleimpl.h        css_valueimpl.h 	cssstyleselector.h csshelper.h
+ 
+ 
+-INCLUDES = -I$(top_srcdir)/kimgio -I$(top_srcdir)/kio -I$(top_srcdir)/dcop  -I$(top_srcdir)/khtml -I$(top_srcdir)/khtml/misc -I$(top_srcdir)/khtml/css  -I$(top_srcdir)/khtml/dom -I$(top_srcdir)/khtml/xml -I$(top_srcdir)/khtml/html  -I$(top_srcdir)/libltdl -I$(top_srcdir) $(all_includes)
++INCLUDES = -I$(top_srcdir)/kimgio -I$(top_srcdir)/kio -I$(top_srcdir)/dcop  -I$(top_srcdir)/khtml -I$(top_srcdir)/khtml/misc -I$(top_srcdir)/khtml/css  -I$(top_srcdir)/khtml/dom -I$(top_srcdir)/khtml/xml -I$(top_srcdir)/khtml/html -I$(top_srcdir) $(all_includes)
+ 
+ 
+ cssdir = $(kde_datadir)/khtml/css

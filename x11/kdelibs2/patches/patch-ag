@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2001/03/14 15:59:46 skrll Exp $
+
+--- kdecore/klibloader.cpp.orig	Sun Feb 18 15:26:54 2001
++++ kdecore/klibloader.cpp
+@@ -16,6 +16,8 @@
+    the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+    Boston, MA 02111-1307, USA.
+ */
++#include <stdlib.h>
++
+ #include <config.h>
+ #include <qclipboard.h>
+ #include <qwidgetlist.h>
