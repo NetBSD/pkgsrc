@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8752 2005/01/14 13:01:26 adam Exp $
+$NetBSD: CHANGES,v 1.8753 2005/01/14 13:39:24 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -302,3 +302,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated glpk to 4.8 [adam 2005-01-14]
 	Updated ImageMagick to 6.1.8-6 [adam 2005-01-14]
 	Updated wine to 20050111 [adam 2005-01-14]
+	Added afterstep1-1.8.11 [jmmv 2005-01-14]
+	Updated afterstep to 2.00.01 [jmmv 2005-01-14]
