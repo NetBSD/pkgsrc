@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.13 2004/07/26 08:39:57 martti Exp $
+$NetBSD: distinfo,v 1.14 2004/11/09 14:31:51 adam Exp $
 
-SHA1 (doxygen-1.3.8.src.tar.gz) = 9ba5472ef2ddfbf70eca5c5dcb215d4a1c5653f7
-Size (doxygen-1.3.8.src.tar.gz) = 2774925 bytes
-SHA1 (patch-aa) = c5f0e9d025b4d4672a1ad1467bebd76506ca601d
+SHA1 (doxygen-1.3.9.1.src.tar.gz) = 718897a42705f09c43e77a1112b1b9b80e954787
+Size (doxygen-1.3.9.1.src.tar.gz) = 2713070 bytes
+SHA1 (patch-aa) = dd970fa86865ee1eca0d41a86366a608e19b582a
 SHA1 (patch-ab) = 58cb9bf5d97835dc0fdda547795e92df7038d8ff
 SHA1 (patch-af) = b52845ca3d4d58a876538e8b4780a19419aabe75
