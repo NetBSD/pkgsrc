@@ -1,3 +1,0 @@
-nautilus-media provides several multimedia related add-ons for the Nautilus
-file manager.  It contains an audio view, a video view, a thumbnailer and
-some property pages.  It uses gstreamer as the backend for media playback.
