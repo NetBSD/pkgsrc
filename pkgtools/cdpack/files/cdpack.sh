@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cdpack.sh,v 1.5 2002/05/19 07:59:47 dmcmahill Exp $
+# $NetBSD: cdpack.sh,v 1.6 2002/05/22 22:30:45 dmcmahill Exp $
 #
 # Copyright (c) 2001, 2002 Dan McMahill, All rights reserved.
 #
@@ -104,12 +104,22 @@ do
     case "$1"
     in
 	# allow NO_BIN_ON_CDROM packages
-	-a) ALLOW_NO_BIN_ON_CDROM=yes
+	-ac) ALLOW_NO_BIN_ON_CDROM=yes
+	    shift
+	    ;;
+
+	# allow NO_BIN_ON_FTP packages
+	-af) ALLOW_NO_BIN_ON_FTP=yes
 	    shift
 	    ;;
 
 	# enable debugging
 	-d) DEBUG=yes
+	    shift
+	    ;;
+
+	# exclude NO_BIN_ON_CDROM packages
+	-ec) ALLOW_NO_BIN_ON_CDROM=no
 	    shift
 	    ;;
 
@@ -281,22 +291,26 @@ do
 		# check to see if we're allowed to add this package to the CD set
 		NO_BIN_ON_CDROM=`awk -F "=" '/NO_BIN_ON_CDROM/ {print $2}' $TMP/+BUILD_INFO`
 		if [ ! -z "$NO_BIN_ON_CDROM" ]; then
-		    echo "$pkg:  NO_BIN_ON_CDROM=$NO_BIN_ON_CDROM" >> $restricted
 		    if [ "$ALLOW_NO_BIN_ON_CDROM" = "no" ]; then
+		    	echo "EXCLUDED $pkgname:  NO_BIN_ON_CDROM=$NO_BIN_ON_CDROM" >> $restricted
 			if [ "$VERBOSE" = "yes" ]; then
 			    echo "Excluding $pkg because NO_BIN_ON_CDROM=$NO_BIN_ON_CDROM"
 			    echo "$pkgname" >> $exclude
 			fi
+		    else
+		    	echo "INCLUDED $pkgname:  NO_BIN_ON_CDROM=$NO_BIN_ON_CDROM" >> $restricted
 		    fi
 		fi
 		NO_BIN_ON_FTP=`awk -F "=" '/NO_BIN_ON_FTP/ {print $2}' $TMP/+BUILD_INFO`
 		if [ ! -z "$NO_BIN_ON_FTP" ]; then
-		    echo "$pkg:  NO_BIN_ON_FTP=$NO_BIN_ON_FTP" >> $restricted
 		    if [ "$ALLOW_NO_BIN_ON_FTP" = "no" ]; then
+		        echo "EXCLUDED $pkgname:  NO_BIN_ON_FTP=$NO_BIN_ON_FTP" >> $restricted
 			if [ "$VERBOSE" = "yes" ]; then
 			    echo "Excluding $pkg because NO_BIN_ON_FTP=$NO_BIN_ON_FTP"
 			    echo "$pkgname" >> $exclude
 			fi
+		    else
+		        echo "INCLUDED $pkgname:  NO_BIN_ON_FTP=$NO_BIN_ON_FTP" >> $restricted
 		    fi
 		fi
 
@@ -560,6 +574,32 @@ if [ -f $warnings ]; then
 	echo "There were warnings generated:"
 	cat $warnings
 fi
+
+echo "-------------------------------------------------------"
+echo "* Please note:  This CD set was created with          *"
+echo "*                                                     *"
+if [ "$ALLOW_NO_BIN_ON_CDROM" = "no" ]; then
+    echo "*   - NO_BIN_ON_CDROM packages excluded.              *"
+else
+    echo "*   - NO_BIN_ON_CDROM packages INCLUDED.  Please      *"
+    echo "*     verify that you will not violate any licenses   *"
+    echo "*     with this CD set.  Refer to the /.restricted    *"
+    echo "*     file which has been placed on each CD in the    *"
+    echo "*     set for details.                                *"
+fi
+echo "*                                                     *"
+if [ "$ALLOW_NO_BIN_ON_FTP" = "no" ]; then
+    echo "*   - NO_BIN_ON_FTP packages excluded.                *"
+else
+    echo "*   - NO_BIN_ON_FTP packages INCLUDED.  You should    *"
+    echo "*     not make this CD set available via FTP as it    *"
+    echo "*     would violate the license on one or more        *"
+    echo "*     packages.  Refer to the /.restricted file       *"
+    echo "*     which has been placed on each CD in the         *"
+    echo "*     set for details.                                *"
+fi
+echo "*                                                     *"
+echo "-------------------------------------------------------"
 
 echo " "
 echo "$prog finished: `date`" 
