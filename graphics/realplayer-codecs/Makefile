@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2003/04/03 17:01:37 salo Exp $
+# $NetBSD: Makefile,v 1.4 2003/05/24 17:03:35 salo Exp $
 #
 
 DISTNAME=	rp8codecs${RP_ARCH}
 PKGNAME=	realplayer-codecs-8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://mplayerhq.hu/MPlayer/releases/codecs/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://mplayerhq.hu/MPlayer/releases/codecs/
 COMMENT=	RealPlayer 8 shared libraries, primary for use with MPlayer
-
-CONFLICTS=	realplayer-*
 
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-powerpc *-*-alpha
 
@@ -33,7 +31,7 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/RealPlayer8/Codecs
-	${INSTALL_DATA} ${WRKSRC}/* ${PREFIX}/lib/RealPlayer8/Codecs
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/RealPlayer8-Codecs
+	${INSTALL_DATA} ${WRKSRC}/* ${PREFIX}/lib/RealPlayer8-Codecs
 
 .include "../../mk/bsd.pkg.mk"
