@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7833 2004/11/12 06:42:42 erh Exp $
+$NetBSD: CHANGES,v 1.7834 2004/11/12 07:15:42 erh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5245,3 +5245,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-XML-Filter-SAXT-0.01 [erh 2004-11-12]
 	Added p5-XML-Encoding-1.01 [erh 2004-11-12]
 	Added p5-XML-UM-0.01 [erh 2004-11-12]
+	Updated p5-Template-Toolkit to 2.14nb1 [erh 2004-11-12]
+	Removed p5-libxml-enno [erh 2004-11-12]
