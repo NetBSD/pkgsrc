@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/12/09 05:53:39 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2000/12/09 22:18:24 jlam Exp $
 #
 
 DISTNAME=		cups-1.1.4-source
@@ -64,14 +64,27 @@ post-configure:
 post-build:
 	${SED}	-e "s,@PREFIX@,${PREFIX},g" \
 		< ${FILESDIR}/cupsd.sh > ${WRKDIR}/cupsd.sh
+
+pre-install:
 	${SED}	-e "s,@CUPS_USER@,${CUPS_USER},g" \
+		-e "s,@CUPS_GROUP@,${CUPS_GROUP},g" \
+		-e "s,@CAT@,${CAT},g" \
+		-e "s,@RM@,${RM},g" \
+		-e "s,@RMDIR@,${RMDIR},g" \
 		< ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 	${SED}	-e "s,@CUPS_USER@,${CUPS_USER},g" \
 		-e "s,@CUPS_GROUP@,${CUPS_GROUP},g" \
-		-e "s,@USERDIR@,${USERDIR},g" \
+		-e "s,@ADDUSER@,${ADDUSER},g" \
+		-e "s,@CAT@,${CAT},g" \
+		-e "s,@CHGRP@,${CHGRP},g" \
+		-e "s,@CHMOD@,${CHMOD},g" \
+		-e "s,@CHOWN@,${CHOWN},g" \
+		-e "s,@CP@,${CP},g" \
+		-e "s,@GREP@,${GREP},g" \
+		-e "s,@MKDIR@,${MKDIR},g" \
+		-e "s,@RM@,${RM},g" \
+		-e "s,@TOUCH@,${TOUCH},g" \
 		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
-
-pre-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 post-install:
