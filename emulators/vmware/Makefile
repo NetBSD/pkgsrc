@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/07 14:43:40 veego Exp $
+# $NetBSD: Makefile,v 1.2 2002/04/04 12:14:01 tron Exp $
 
 DISTNAME=	VMware-2.0.4-1142
 PKGNAME=	vmware-2.0.4
@@ -18,7 +18,7 @@ HOMEPAGE=	http://www.vmware.com/
 COMMENT=	VMware emulator
 
 DEPENDS+=	vmware-module>=1.0:../../emulators/vmware-module
-DEPENDS+=	suse_vmware>=6.4nb1:../../emulators/suse_vmware
+DEPENDS+=	suse_vmware>=6.4nb1:../../emulators/${SUSE_DIR_PREFIX}_vmware
 
 LICENSE=	vmware-license
 
@@ -83,4 +83,4 @@ post-install:
 	${ECHO} "vmnet1.HostOnlyNetMask = \"255.255.255.0\"";		\
 	) > ${VMWARE_CFG_DIR}/config
 
-.include "../../mk/bsd.pkg.mk"
+.include "../suse_linux/Makefile.application"
