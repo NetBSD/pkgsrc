@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2456 2004/11/25 18:39:51 snj Exp $
+$NetBSD: TODO,v 1.2457 2004/11/25 18:51:41 minskim Exp $
 
 Suggested new packages
 ======================
@@ -588,7 +588,6 @@ Suggested package updates
 	o gsasl-0.2.1
 	o gsed-4.1.2
 	o gss-0.0.15
-	o gthumb-2.6.1
 	o gtk-send-pr-0.4
 	o gtk-systrace-2003-06-23
 	o gtksee-0.5.6 [pkg/26372]
