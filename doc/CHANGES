@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7796 2004/11/09 17:16:38 seb Exp $
+$NetBSD: CHANGES,v 1.7797 2004/11/09 20:12:00 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5193,3 +5193,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated horde to 2.2.7 [adam 2004-11-09]
 	Updated imp to 3.2.6 [adam 2004-11-09]
 	Updated pkglint to 3.97 [seb 2004-11-09]
+	Updated firefox to 1.0 [xtraeme 2004-11-09]
+	Updated firefox-gtk2 to 1.0 [xtraeme 2004-11-09]
