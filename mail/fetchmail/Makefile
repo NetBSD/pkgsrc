@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2002/10/01 06:53:50 tron Exp $
+# $NetBSD: Makefile,v 1.120 2002/10/17 00:43:54 itojun Exp $
 
 DISTNAME=	fetchmail-6.1.0
 CATEGORIES=	mail
@@ -13,7 +13,6 @@ COMMENT=	batch mail retrieval/forwarding utility for pop2, pop3, apop, imap
 BUILD_USES_MSGFMT=	YES
 
 USE_BUILDLINK2=		YES
-USE_GNU_GETTEXT=	YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-hesiod
 
