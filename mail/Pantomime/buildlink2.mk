@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2004/03/26 02:27:43 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2004/04/10 23:52:37 rh Exp $
 #
 # This Makefile fragment is included by packages that use Pantomime.
 #
@@ -9,8 +9,7 @@
 PANTOMIME_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			Pantomime
-BUILDLINK_DEPENDS.Pantomime?=		Pantomime>=1.1.1nb1
-BUILDLINK_RECOMMENDED.Pantomime?=		Pantomime>=1.1.1nb3
+BUILDLINK_DEPENDS.Pantomime?=		Pantomime>=1.1.2
 BUILDLINK_PKGSRCDIR.Pantomime?=		../../mail/Pantomime
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.Pantomime=Pantomime
