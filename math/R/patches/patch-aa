@@ -1,12 +1,15 @@
-$NetBSD: patch-aa,v 1.3 2000/04/19 15:30:06 jlam Exp $
+$NetBSD: patch-aa,v 1.4 2000/08/11 23:02:38 jlam Exp $
 
---- Makeconf.in.orig	Sat Jan 22 15:10:00 2000
-+++ Makeconf.in	Mon Apr 17 16:04:58 2000
-@@ -23,6 +23,7 @@
- INSTALL = @INSTALL@
- INSTALL_DATA = @INSTALL_DATA@
- INSTALL_PROGRAM = @INSTALL_PROGRAM@
-+INSTALL_SCRIPT = @INSTALL_SCRIPT@
- INSTALL_DIR = ${INSTALL} -d
- LATEX = @LATEX@
- LDCMD = @LDCMD@
+--- configure.in.orig	Wed Jun 14 16:51:52 2000
++++ configure.in	Fri Aug 11 18:26:41 2000
+@@ -362,10 +362,6 @@
+ if ${use_libmoto}; then
+   AC_CHECK_LIB(moto, sin)
+ fi
+-AC_CHECK_LIB(ncurses, main,,
+-  AC_CHECK_LIB(termcap, main,,
+-    AC_CHECK_LIB(termlib, main)
+-))
+ AC_CHECK_LIB(dl, dlopen)
+ AC_CHECK_LIB(z, main)
+ 
