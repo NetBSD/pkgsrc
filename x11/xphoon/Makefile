@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/05/21 07:41:39 cjep Exp $
+# $NetBSD: Makefile,v 1.4 2002/09/29 09:34:52 jlam Exp $
 #
 
 DISTNAME=	xphoon.tar
@@ -14,15 +14,16 @@ COMMENT=	Set the root window to the moon in its current phase
 
 WRKSRC=		${WRKDIR}/xphoon
 
-.if (${MACHINE_ARCH} == arm32)
-.include "../../lang/gcc/Makefile.gcc"
-.endif
-
+USE_BUILDLINK2=	yes
 USE_IMAKE=      yes
 
 MAKE_FLAGS+=	EXTRA_LOCAL_LIBS=${EXTRA_LOCAL_LIBS}
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == arm32
+.  include "../../lang/gcc/buildlink2.mk"
+.endif
 
 .if ${OPSYS} == "NetBSD"
 EXTRA_LOCAL_LIBS=	-lcompat
