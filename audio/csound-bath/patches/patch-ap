@@ -1,8 +1,8 @@
-$NetBSD: patch-ap,v 1.3 2003/01/19 21:31:12 hubertf Exp $
+$NetBSD: patch-ap,v 1.4 2004/04/11 21:49:10 ben Exp $
 
---- cs.h.orig	Mon Dec 16 04:28:30 2002
+--- cs.h.orig	2002-12-16 04:28:30.000000000 -0800
 +++ cs.h
-@@ -15,6 +15,24 @@
+@@ -15,6 +15,24 @@ extern "C" {
  
  #include "version.h"
  
@@ -27,17 +27,17 @@ $NetBSD: patch-ap,v 1.3 2003/01/19 21:31:12 hubertf Exp $
  #define VMSGS 1
  #if VMSGS
  #define VMSG(x) if (O.odebug) x
-@@ -782,10 +800,10 @@
+@@ -782,11 +800,8 @@ typedef struct GLOBALS_
  # define POLL_EVENTS() STasks()
  # define __cdecl
  #else
 -#ifdef LINUX
 -  extern int POLL_EVENTS(void);
 -#else
-+#if !defined(LINUX) || defined(__NetBSD__)
- # define POLL_EVENTS()     (1)
-+#else
-+  extern int POLL_EVENTS(void);
- #endif
+-# define POLL_EVENTS()     (1)
+-#endif
++/* #define POLL_EVENTS() csoundYield() */
++#define POLL_EVENTS() (1)
  # if !defined(__BEOS__) || defined(__MWERKS__)
  #  define __cdecl
+ # endif
