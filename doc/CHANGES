@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.682 2002/12/04 17:36:19 salo Exp $
+$NetBSD: CHANGES,v 1.683 2002/12/04 18:52:56 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3810,3 +3810,6 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated mozilla to 1.2.1 [taya 2002-12-04]
 	Updated silc-client to 0.9.9.1 [salo 2002-12-04]
 	Updated silc-server to 0.9.9.1 [salo 2002-12-04]
+	Added metakit-lib-2.4.8 [drochner 2002-12-04]
+	Added py-metakit-2.4.8 [drochner 2002-12-04]
+	Added py-gnuplot-1.6 [drochner 2002-12-04]
