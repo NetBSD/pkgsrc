@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/07/04 09:19:06 mycroft Exp $
+# $NetBSD: Makefile,v 1.5 1998/07/15 10:42:30 agc Exp $
 #
 
 DISTNAME=			Xaw-Xpm-1.1
@@ -16,7 +16,6 @@ CONFLICTS=			Xaw3d-1.3 Xaw3d-1.5
 USE_IMAKE=			yes
 
 post-install:
-	${LDCONFIG} || ${TRUE}
 	${MKDIR} ${PREFIX}/share/doc/Xaw-Xpm
 	${MKDIR} ${PREFIX}/share/pixmaps
 	${CP} ${WRKSRC}/README-XPM ${PREFIX}/share/doc/Xaw-Xpm

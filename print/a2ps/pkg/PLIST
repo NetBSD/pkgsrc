@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 1998/07/02 14:04:55 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.9 1998/07/15 10:39:36 agc Exp $
 bin/a2ps
 bin/card
 bin/compose
@@ -30,8 +30,6 @@ info/regex.info-3
 lib/liba2ps.a
 lib/liba2ps.la
 lib/liba2ps.so.1.0
-@exec /sbin/ldconfig || /usr/bin/true
-@unexec /sbin/ldconfig || /usr/bin/true
 man/man1/a2ps.1
 man/man1/card.1
 man/man1/fixps.1
