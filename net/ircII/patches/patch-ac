@@ -1,7 +1,16 @@
-$NetBSD: patch-ac,v 1.4 1998/08/07 11:10:43 agc Exp $
+$NetBSD: patch-ac,v 1.5 1998/08/09 21:23:29 kim Exp $
 
 --- Makefile.in.orig	Tue Mar 25 22:47:43 1997
-+++ Makefile.in	Thu Mar  5 11:37:54 1998
++++ Makefile.in	Sun Aug  9 17:05:07 1998
+@@ -36,7 +36,7 @@
+ # Where the ircII library will be.  Generally this is the place that
+ # you put the scripts, help pages and translation tables.  It is
+ # very important that you set this correctly.
+-IRCLIB = @IRCLIB@
++IRCLIB = @datadir@/irc
+ 
+ # Set this to the lex you want to use, and if they lex uses a library.
+ 
 @@ -132,8 +132,8 @@
  LN = @LN@
  CP = cp
