@@ -1,6 +1,6 @@
-$NetBSD: patch-bz,v 1.1.1.1 2002/05/31 13:19:01 skrll Exp $
+$NetBSD: patch-bz,v 1.2 2002/06/25 22:14:12 skrll Exp $
 
---- klipper/Makefile.in.orig	Mon May 13 23:57:48 2002
+--- klipper/Makefile.in.orig	Tue Jun 25 19:31:40 2002
 +++ klipper/Makefile.in
 @@ -290,24 +290,26 @@
  INCLUDES = $(all_includes)
@@ -153,6 +153,15 @@ $NetBSD: patch-bz,v 1.1.1.1 2002/05/31 13:19:01 skrll Exp $
  
  distclean-generic:
  	-rm -f Makefile $(CONFIG_CLEAN_FILES) stamp-h stamp-h[0-9]*
+@@ -741,7 +751,7 @@
+ 
+ #>- install-exec-am: install-binPROGRAMS install-libLTLIBRARIES
+ #>+ 1
+-install-exec-am: install-kde_moduleLTLIBRARIES install-binPROGRAMS install-libLTLIBRARIES
++install-exec-am: install-binPROGRAMS install-libLTLIBRARIES install-kde_moduleLTLIBRARIES
+ 
+ install-info: install-info-am
+ 
 @@ -863,19 +873,6 @@
  
  
@@ -258,3 +267,12 @@ $NetBSD: patch-bz,v 1.1.1.1 2002/05/31 13:19:01 skrll Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean
+@@ -953,7 +975,7 @@
+ 	-rm -f *.rpo
+ 
+ #>+ 5
+-$(srcdir)/configdialog.cpp: configdialog.moc 
+ $(srcdir)/urlgrabber.cpp: urlgrabber.moc 
+ $(srcdir)/toplevel.cpp: toplevel.moc 
++$(srcdir)/configdialog.cpp: configdialog.moc 
+ $(srcdir)/applet.cpp: applet.moc 
