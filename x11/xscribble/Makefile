@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.1.1.1 2000/11/01 19:35:09 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2000/11/17 14:40:16 wiz Exp $
 
 DISTNAME=	xscribble
 PKGNAME=	xscribble-20000616
