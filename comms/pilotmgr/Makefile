@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/10/22 23:31:51 tron Exp $
+# $NetBSD: Makefile,v 1.8 1999/12/02 22:00:02 tron Exp $
 
 DISTNAME=	pilotmgr-1.107
 PKGNAME=	${DISTNAME}p1
@@ -9,10 +9,10 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.moshpit.org/pilotmgr/
 
-DEPENDS+=	p5-Data-Dumper-2.10:../../devel/p5-Data-Dumper
-DEPENDS+=	p5-MD5-1.7:../../security/p5-MD5
-DEPENDS+=	p5-Tk-402.002:../../x11/p5-Tk
-DEPENDS+=	p5-pilot-link-0.9.3:../p5-pilot-link
+DEPENDS+=	p5-Data-Dumper-*:../../devel/p5-Data-Dumper
+DEPENDS+=	p5-Digest-MD5-*:../../security/p5-Digest-MD5
+DEPENDS+=	p5-Tk-*:../../x11/p5-Tk
+DEPENDS+=	p5-pilot-link-*:../p5-pilot-link
 
 USE_X11=	yes
 HAS_CONFIGURE=	yes
