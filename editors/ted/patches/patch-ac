@@ -1,6 +1,6 @@
---- Ted/configure.orig	Sun Mar  3 23:24:16 2002
-+++ Ted/configure	Tue Apr  9 12:13:32 2002
-@@ -1946,7 +1946,6 @@
+--- appUtil/configure.orig	Sun Mar  3 23:24:16 2002
++++ appUtil/configure	Tue Apr  9 12:13:56 2002
+@@ -787,7 +787,6 @@
  
      # Includes
      for ac_dir in		\
