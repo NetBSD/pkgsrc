@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1998/12/02 16:53:03 tv Exp $
+# $NetBSD: Makefile,v 1.18 1999/02/04 22:25:02 tv Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/18 06:16:44 markm Exp
 #
 
@@ -14,7 +14,7 @@ HOMEPAGE=		http://language.perl.com/index.html
 HAS_CONFIGURE=		yes
 CONFIGURE_ENV+=		PREFIX=${PREFIX}
 CONFIGURE_SCRIPT=	Configure
-CONFIGURE_ARGS+=	-sde -Dprefix=${PREFIX}  -Dd_bincompat3=undef \
+CONFIGURE_ARGS+=	-sde -Dprefix=${PREFIX} \
 			-Darchname=${MACHINE_ARCH}-netbsd -Dusemymalloc=false
 MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}
 
