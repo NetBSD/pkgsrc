@@ -1,21 +1,50 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/07/31 22:48:50 jlam Exp $
-
 --- Makefile.in.orig	Wed Jun 13 18:37:56 2001
-+++ Makefile.in
-@@ -30,3 +30,3 @@
++++ Makefile.in	Thu Aug 16 01:46:51 2001
+@@ -28,7 +28,7 @@
+ sbindir = @sbindir@
+ libexecdir = @libexecdir@
  datadir = @datadir@
 -sysconfdir = @sysconfdir@
 +sysconfdir = ${prefix}/share/examples/courier
  sharedstatedir = @sharedstatedir@
-@@ -93,3 +93,3 @@
+ localstatedir = @localstatedir@
+ libdir = @libdir@
+@@ -89,9 +89,9 @@
+ databindir = $(datadir)
+ databin_SCRIPTS = mkimapdcert mkpop3dcert vchkpw2userdb makeuserdb pw2userdb
+ 
+-bin_PROGRAMS = imapd pop3d maildirmake
++bin_PROGRAMS = imapd pop3d imapd.maildirmake
  sbin_PROGRAMS = imaplogin pop3login userdbpw
 -man_MANS = makeuserdb.8 userdb.8 userdbpw.8 couriertcpd.8 deliverquota.8 maildirmake.1 imapd.8 mkimapdcert.8 mkpop3dcert.8
-+man_MANS = makeuserdb.8 userdb.8 userdbpw.8 couriertcpd.8 deliverquota.8 maildirmake.1 courier-imapd.8 mkimapdcert.8 mkpop3dcert.8
++man_MANS = makeuserdb.8 userdb.8 userdbpw.8 couriertcpd.8 deliverquota.8 imapd.maildirmake.1 courier-imapd.8 mkimapdcert.8 mkpop3dcert.8
  
-@@ -786,4 +786,4 @@
+ # Added by sysconftoolize: $Id: patch-aa,v 1.2 2001/08/16 06:23:23 jlam Exp $
+ 
+@@ -751,8 +751,8 @@
+ deliverquota: maildir/deliverquota
+ 	cp maildir/deliverquota .
+ 
+-maildirmake: maildir/maildirmake
+-	cp maildir/maildirmake .
++imapd.maildirmake: maildir/maildirmake
++	cp maildir/maildirmake ./imapd.maildirmake
+ 
+ pop3d.dist: imap/pop3d.dist
+ 	cp imap/pop3d.dist .
+@@ -781,11 +781,11 @@
+ deliverquota.8: maildir/deliverquota.8
+ 	cp maildir/deliverquota.8 .
+ 
+-maildirmake.1: maildir/maildirmake.1
+-	cp maildir/maildirmake.1 .
++imapd.maildirmake.1: maildir/maildirmake.1
++	cp maildir/maildirmake.1 ./imapd.maildirmake.1
  
 -imapd.8: imap/imapd.8
 -	cp imap/imapd.8 .
 +courier-imapd.8: imap/imapd.8
 +	cp imap/imapd.8 courier-imapd.8
  
+ mkimapdcert: imap/mkimapdcert
+ 	cp imap/mkimapdcert .
