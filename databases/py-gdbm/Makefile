@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 1999/04/01 14:07:53 agc Exp $
+# $NetBSD: Makefile,v 1.9 1999/04/14 06:17:31 tsarna Exp $
 #
 
-DISTNAME=	pyth151
-PKGNAME=	py-gdbm-1.5.1
-WRKSRC=		${WRKDIR}/Python-1.5.1/Modules
+DISTNAME=	py152
+PKGNAME=	py-gdbm-1.5.2
+WRKSRC=		${WRKDIR}/Python-1.5.2/Modules
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.python.org/pub/python/src/
 EXTRACT_SUFX=	.tgz
@@ -11,18 +11,18 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	dolecek@ics.muni.cz
 HOMEPAGE=	http://www.python.org/doc/lib/module-gdbm.html
 
-DEPENDS+=	python-1.5.1:../../lang/python	\
+DEPENDS+=	python-1.5.2:../../lang/python	\
 		gdbm-1.7.3:../../databases/gdbm
 
 DIST_SUBDIR=	python
 
 ALL_TARGET=	default
 
-EXTRACT_ELEMENTS=	Python-1.5.1/Modules/gdbmmodule.c
+EXTRACT_ELEMENTS=	Python-1.5.2/Modules/gdbmmodule.c
 
 PYTHON_CONFIGDIR=	${LOCALBASE}/lib/python1.5/config/
 
-.if ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "mips" || ${MACHINE_ARCH} == "vax"
+.if ${MACHINE_ARCH} == "sparc64"
 IGNORE="Needs dynamic loading"
 .endif
 
