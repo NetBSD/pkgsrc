@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/02/09 20:20:56 tron Exp $
+# $NetBSD: Makefile,v 1.5 2000/02/12 18:29:24 wiz Exp $
 #
 
 DISTNAME=	ja-vfghostscript-5.50
@@ -78,8 +78,8 @@ SCRIPTS_ENV+= CAT="${CAT}" CP="${CP}" MV="${MV}" \
 
 post-extract:
 	${LN} -s ${BUILD_ROOT}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ${WRKSRC}/jpeg
-	cd ${WRKSRC} && unzip -uLa ${DISTDIR}/${HP850_DRV}
-	${CP} ${DISTDIR}/${PDF_SEC} ${WRKSRC}
+	cd ${WRKSRC} && unzip -uLa ${DISTDIR}/${DIST_SUBDIR}/${HP850_DRV}
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/${PDF_SEC} ${WRKSRC}
 
 pre-patch:
 	cd ${WRKDIR} ; ${PATCH} -s -p0 < gs5.50-vflib-1.0/gs5.50-vflib-1.0.diff
