@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/28 15:37:37 jmmv Exp $
+bin/fooseti
+share/doc/fooseti/AUTHORS
+share/doc/fooseti/BUGS
+share/doc/fooseti/COPYING
+share/doc/fooseti/ChangeLog
+share/doc/fooseti/INSTALL
+share/doc/fooseti/NEWS
+share/doc/fooseti/NOTES
+share/doc/fooseti/README
+share/doc/fooseti/TODO
+@dirrm share/doc/fooseti
