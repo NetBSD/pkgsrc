@@ -1,77 +1,16 @@
-$NetBSD: patch-ai,v 1.4 2001/09/24 13:10:48 wulf Exp $
+$NetBSD: patch-ai,v 1.5 2003/02/16 23:08:58 seb Exp $
 
---- src/rrd_graph.c.orig	Thu Feb 22 12:02:47 2001
-+++ src/rrd_graph.c
-@@ -6,16 +6,26 @@
+--- doc/Makefile.am.orig	Tue May  7 21:51:19 2002
++++ doc/Makefile.am
+@@ -25,9 +25,9 @@ PDF = $(MAN:.1=.pdf)
+ EXTRA_DIST= $(POD) $(HTML) $(TXT)
  
- #include "rrd_tool.h"
- #include <gd.h>
-+#ifdef __NetBSD__
-+#include <gdfonts.h>
-+#include <gdfontt.h>
-+#else
- #include <gdlucidan10.h>
- #include <gdlucidab12.h>
-+#endif
- #include <sys/stat.h>
- #ifdef WIN32
- #include <io.h>
- #include <fcntl.h>
- #endif
- 
-+#ifdef __NetBSD__
-+#define SmallFont gdFontTiny
-+#define LargeFont gdFontSmall
-+#else
- #define SmallFont gdLucidaNormal10
- #define LargeFont gdLucidaBold12
-+#endif
- 
- /* #define DEBUG */
- 
-@@ -45,7 +55,7 @@
- 	    OP_MIN,OP_MAX,OP_LIMIT, OP_FLOOR, OP_CEIL,
- 	    OP_UN,OP_END};
- 
--enum if_en {IF_GIF=0,IF_PNG=1};
-+enum if_en {IF_PNG=0};
- 
- typedef struct rpnp_t {
-     enum op_en   op;
-@@ -354,7 +364,6 @@
- 
- enum if_en if_conv(char *string){
-     
--    conv_if(GIF,IF_GIF)
-     conv_if(PNG,IF_PNG)
- 
-     return (-1);
-@@ -2437,9 +2446,6 @@
-     if ((fd = fopen(im->graphfile,"rb")) == NULL) 
-       return 0; /* the file does not exist */
-     switch (im->imgformat) {
--    case IF_GIF:
--	size = GifSize(fd,&(im->xgif),&(im->ygif));
--	break;
-     case IF_PNG:
- 	size = PngSize(fd,&(im->xgif),&(im->ygif));
- 	break;
-@@ -2703,9 +2709,6 @@
- 	}
-     }
-     switch (im->imgformat) {
--    case IF_GIF:
--	gdImageGif(gif, fo);    
--	break;
-     case IF_PNG:
- 	gdImagePng(gif, fo);    
- 	break;
-@@ -2828,7 +2831,7 @@
-     im.prt_c = 0;
-     im.gdes_c = 0;
-     im.gdes = NULL;
--    im.imgformat = IF_GIF; /* we default to GIF output */
-+    im.imgformat = IF_PNG; /* we default to PNG output */
- 
-     for(i=0;i<DIM(graph_col);i++)
- 	im.graph_col[i].red=-1;
+ # some install rules
+-idocdir = $(prefix)/doc
++idocdir = $(prefix)/share/doc/rrdtool
+ idoc_DATA = $(POD) $(TXT)
+-ihtmldir = $(prefix)/html
++ihtmldir = $(prefix)/share/doc/html/rrdtool
+ ihtml_DATA = $(HTML)
+ imandir = $(prefix)/man/man1
+ iman_DATA = $(MAN)

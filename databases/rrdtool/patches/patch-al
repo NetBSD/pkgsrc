@@ -1,22 +1,37 @@
-$NetBSD: patch-al,v 1.2 2000/05/07 12:50:52 wulf Exp $ 
+$NetBSD: patch-al,v 1.3 2003/02/16 23:08:58 seb Exp $
 
---- examples/cgi-demo.cgi.in.orig	Tue Jan  4 08:36:55 2000
-+++ examples/cgi-demo.cgi.in	Sun Apr  2 09:55:18 2000
-@@ -11,7 +11,7 @@
- <H1>This is NOT traffic</H1>
+--- examples/Makefile.in.orig	Fri Oct 11 18:42:55 2002
++++ examples/Makefile.in
+@@ -93,7 +93,7 @@ ZLIB_LIB_DIR = @ZLIB_LIB_DIR@
  
+ EXTRA_DIST = cgi-demo.cgi.in    piped-demo.pl.in   shared-demo.pl.in stripes.pl.in bigtops.pl.in minmax.pl.in
  
--<P><RRD::GRAPH cgi-demo1.gif 
-+<P><RRD::GRAPH cgi-demo1.png 
- 	    --lower-limit 0
- 	    --start 'end-10h'
- 	    --title "Graph in Localtime <RRD::TIME::NOW %c>"
-@@ -22,7 +22,7 @@
- </P>
+-examplesdir = $(prefix)/examples
++examplesdir = $(prefix)/share/examples/rrdtool
+ examples_SCRIPTS = cgi-demo.cgi piped-demo.pl shared-demo.pl stripes.pl bigtops.pl minmax.pl
+ mkinstalldirs = $(SHELL) $(top_srcdir)/config/mkinstalldirs
+ CONFIG_HEADER = ../config/config.h
+@@ -109,12 +109,12 @@ PACKAGE = @PACKAGE@
  
- <P><RRD::SETENV TZ UTC>
--   <RRD::GRAPH cgi-demo2.gif 
-+   <RRD::GRAPH cgi-demo2.png
- 	    --lower-limit 0
- 	    --start 'end-10h'
- 	    --title "Graph in UTC"
+ DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ 
+-TAR = gtar
++TAR = tar
+ GZIP_ENV = --best
+ all: all-redirect
+ .SUFFIXES:
+ $(srcdir)/Makefile.in: Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4) 
+-	cd $(top_srcdir) && $(AUTOMAKE) --gnu --include-deps examples/Makefile
++	cd $(top_srcdir) && $(AUTOMAKE) --foreign --include-deps examples/Makefile
+ 
+ Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status
+ 	cd $(top_builddir) \
+@@ -163,7 +163,7 @@ distdir: $(DISTFILES)
+ 	@for file in $(DISTFILES); do \
+ 	  d=$(srcdir); \
+ 	  if test -d $$d/$$file; then \
+-	    cp -pr $$d/$$file $(distdir)/$$file; \
++	    cp -pr $$/$$file $(distdir)/$$file; \
+ 	  else \
+ 	    test -f $(distdir)/$$file \
+ 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
