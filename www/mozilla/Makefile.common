@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2003/05/29 23:49:14 grant Exp $
+# $NetBSD: Makefile.common,v 1.19 2003/06/03 19:22:24 epg Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
@@ -128,7 +128,7 @@ CONFIGURE_ARGS+= --without-pthreads
 CONFIGURE_ARGS+= --with-pthreads
 .endif
 
-.if ${MOZILLA_USE_XFT} == "YES"
+.if ${MOZILLA_USE_XFT} == "YES" && exists(${X11BASE}/include/X11/Xdefs.h)
 CONFIGURE_ARGS+=	--enable-xft
 # pkgconfig defaults to a "build" dependancy, which is what we want.
 .include "../../devel/pkgconfig/buildlink2.mk"
