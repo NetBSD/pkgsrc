@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 2004/12/14 00:30:22 kleink Exp $
+
+--- config.c.orig	2001-02-18 22:00:41.000000000 +0100
++++ config.c	2004-12-14 01:28:03.000000000 +0100
+@@ -477,7 +477,8 @@
+ 	}
+ 
+ 	do {
+-		if ((is_hex && !isxdigit(*p)) || (!is_hex && !isdigit(*p)))
++		if ((is_hex && !isxdigit((unsigned char)*p)) ||
++		    (!is_hex && !isdigit((unsigned char)*p)))
+ 			return (config_err(cs, "Invalid integer: %s", arg));
+ 	} while (*(++p) != '\0');
+ 
