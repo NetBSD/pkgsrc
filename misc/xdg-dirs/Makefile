@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/06/05 00:20:05 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2004/06/05 12:18:24 xtraeme Exp $
 #
 
 DISTNAME=	xdg-dirs-1.1
@@ -9,8 +9,6 @@ DISTFILES=	# empty
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	# empty
 COMMENT=	Shared XDG directories
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CONFLICTS=	gnome2-dirs<=1.2
 
@@ -27,7 +25,7 @@ WRKSRC=		${WRKDIR}
 .include "../../mk/bsd.prefs.mk"
 
 _SORTED!=	${ECHO} ${XDG_DIRS} | ${TR} -s ' \t' '\n' | ${SORT}
-MAKE_DIRS+=	${_SORTED:S/^/${LOCALBASE}\//}
+MAKE_DIRS+=	${_SORTED:S/^/${PREFIX}\//}
 
 do-install:	# nothing
 
