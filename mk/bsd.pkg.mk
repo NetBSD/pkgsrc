@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.651 2001/01/26 16:48:17 skrll Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.652 2001/01/28 18:53:58 dmcmahill Exp $
 #
 # This file is in the public domain.
 #
@@ -1311,9 +1311,6 @@ do-fetch:
 # show both build and run depends directories (non-recursively)
 .if !target(show-depends-dirs)
 show-depends-dirs:
-.if defined(IGNORE)
-	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
-.else
 	${_PKG_SILENT}${_PKG_DEBUG}                                     \
 	dlist="";\
 	thisdir=`pwd`;\
@@ -1327,7 +1324,6 @@ show-depends-dirs:
 	done ;\
 	cd $$thisdir ;\
 	${ECHO} "$$dlist"
-.endif
 .endif
 
 .if !target(show-distfiles)
