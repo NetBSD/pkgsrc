@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/05/23 17:20:45 hubertf Exp $
+
+--- doc/Makefile.in.orig	Mon May 22 12:39:51 2000
++++ doc/Makefile.in	Mon May 22 12:39:58 2000
+@@ -99,7 +99,7 @@
+ VERSION = @VERSION@
+ l = @l@
+ 
+-docdir = $(prefix)/doc
++docdir = $(prefix)/share/doc
+ pkgdocdir = $(docdir)/@PACKAGE@
+ 
+ pkgdoc_DATA = archform.htm build.htm catalog.htm charset.htm 	features.htm generic.htm ideas.htm index.htm new.htm nsgmls.htm 	sgmldecl.htm sgmlnorm.htm sgmlsout.htm spam.htm spcat.htm 	spent.htm sx.htm sysdecl.htm sysid.htm xml.htm xmlwarn.htm

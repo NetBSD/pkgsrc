@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/05/23 17:20:45 hubertf Exp $
+
+--- Makefile.in.orig	Mon May 22 13:35:55 2000
++++ Makefile.in	Mon May 22 13:36:03 2000
+@@ -106,7 +106,7 @@
+ 
+ pkginclude_HEADERS = config.h
+ 
+-docdir = $(prefix)/doc
++docdir = $(prefix)/share/doc
+ pkgdocdir = $(docdir)/@PACKAGE@
+ 
+ pkgdoc_DATA = NEWS COPYING AUTHORS ChangeLog
