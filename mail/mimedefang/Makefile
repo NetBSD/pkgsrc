@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2004/04/25 04:03:16 snj Exp $
+# $NetBSD: Makefile,v 1.18 2004/07/18 06:11:14 markd Exp $
 
-DISTNAME=		mimedefang-2.40
-PKGREVISION=		1
+DISTNAME=		mimedefang-2.44
 CATEGORIES=		mail
 MASTER_SITES=		http://www.mimedefang.org/static/
 
@@ -26,7 +25,7 @@ PKG_SYSCONFSUBDIR?=	mimedefang
 USE_PKGINSTALL=		YES
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
-DEFANG_SPOOLDIR?=	/var/spool/MIMEDefang
+DEFANG_SPOOLDIR?=	${VARBASE}/spool/MIMEDefang
 DEFANG_USER?=		defang
 DEFANG_GROUP?=		defang
 
@@ -45,7 +44,7 @@ RCD_SCRIPTS=		mimedefang-multiplexor mimedefang
 OWN_DIRS_PERMS+=	${DEFANG_SPOOLDIR} ${DEFANG_USER} ${DEFANG_GROUP} 0700
 
 CONF_FILES+=		${EGDIR}/mimedefang-filter ${PKG_SYSCONFDIR}/mimedefang-filter
-CONF_FILES+=		${EGDIR}/sa-mimedefang.cf ${PKG_SYSCONFDIR}/spamassassin/sa-mimedefang.cf
+CONF_FILES+=		${EGDIR}/sa-mimedefang.cf ${PKG_SYSCONFDIR}/sa-mimedefang.cf
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-confsubdir=
@@ -67,7 +66,6 @@ PTHREAD_OPTS+=		require native
 
 do-install:
 	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
-	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/spamassassin
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA_DIR} ${SHAREDIR}
 	${INSTALL_DATA} ${WRKSRC}/gen-ip-validator.pl ${SHAREDIR}
