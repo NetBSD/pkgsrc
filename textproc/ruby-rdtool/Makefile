@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/01 00:00:03 taca Exp $
+# $NetBSD: Makefile,v 1.2 2001/07/11 16:34:04 taca Exp $
 # FreeBSD: ports/textproc/ruby-rdtool/Makefile,v 1.15 2001/01/30 19:20:09 knu Exp
 
 DISTNAME=	rdtool-${RUBY_RD_VERSION}
@@ -26,9 +26,6 @@ DOCS_RD_JA=	README.rd.ja doc/dev-note.rd.ja doc/rd-draft.rd.ja
 DOCS_EN=	${DOCS_RD_EN} README.html doc/rd-draft.html
 DOCS_JA=	${DOCS_RD_JA} README.html.ja \
 		doc/dev-note.html.ja doc/rd-draft.html.ja
-DOCS_FORMAT=	optparse/ja/optparse.ja.rd optparse/optparse.en.rd
-#		forwardable/forwardable.rd forwardable/ja/forwardable.rd.ja
-#		amstd/ja/amstd-ja.rd
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${CONFIGURE_ENV} ${RUBY} rdtoolconf.rb
@@ -42,9 +39,6 @@ post-build:
 post-install:
 	${LN} -sf rmi2html.rb ${PREFIX}/bin/rmi2html
 	${INSTALL_SCRIPT} ${WRKSRC}/utils/rdswap.rb ${PREFIX}/bin/rdswap
-.for f in ${DOCS_FORMAT}
-	${RUBY_RD} ${RUBY_DOCDIR}/${f} > ${RUBY_DOCDIR}/${f:S/.rd/.html/}
-.endfor
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/rd/ja
 .for f in ${DOCS_EN}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/rd
