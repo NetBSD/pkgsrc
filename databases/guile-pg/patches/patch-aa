@@ -1,13 +1,22 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/10/27 01:14:10 cjones Exp $
+$NetBSD: patch-aa,v 1.2 2004/12/03 13:41:30 wiz Exp $
 
---- Makefile.am.orig	Sat Oct 26 12:41:49 2002
-+++ Makefile.am
-@@ -43,7 +43,7 @@ libpostgres_la_LDFLAGS = -export-dynamic
+--- libpostgres_lo.c.orig	2004-11-20 12:55:38.000000000 -0500
++++ libpostgres_lo.c
+@@ -247,7 +247,7 @@ lob_mklobport (SCM conn, Oid oid, int al
+     }
+   pt->write_end = pt->write_buf + pt->write_buf_size;
  
- SUFFIXES = .x
- .c.x:
--	guile-snarf $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS) $< > $@
-+	guile-snarf $< $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS) > $@
+-  SCM_SETCAR (port, gh_car (port) & ~SCM_BUF0);
++  SCM_SETCAR (port, SCM_CELL_WORD_0 (port) & ~SCM_BUF0);
  
- ## Add -MG to make the .x magic work with auto-dep code.
- MKDEP = gcc -M -MG $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
+   SCM_ALLOW_INTS;
+ 
+@@ -522,7 +522,7 @@ lob_write (SCM port, const void *data, s
+             lob_flush (port);
+         }
+       /* handle line buffering.  */
+-      if ((gh_car (port) & SCM_BUFLINE)
++      if ((SCM_CELL_WORD_0 (port) & SCM_BUFLINE)
+           && memchr (data, '\n', size))
+         lob_flush (port);
+     }
