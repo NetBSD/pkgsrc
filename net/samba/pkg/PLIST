@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2001/07/13 16:08:41 taca Exp $
+@comment $NetBSD: PLIST,v 1.25 2001/08/22 15:42:18 jlam Exp $
 bin/make_printerdef
 bin/make_smbcodepage
 bin/make_unicodemap
@@ -13,8 +13,7 @@ bin/smbstatus
 bin/smbtar
 bin/testparm
 bin/testprns
-etc/rc.d/nmbd
-etc/rc.d/smbd
+etc/rc.d/samba
 man/man1/findsmb.1
 man/man1/make_smbcodepage.1
 man/man1/make_unicodemap.1
