@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/03/13 17:37:50 fredb Exp $
+# $NetBSD: Makefile,v 1.10 2002/10/09 13:35:24 wiz Exp $
 #
 
 DISTNAME=	chimera-2.0a19
@@ -10,6 +10,7 @@ MAINTAINER=	fredb@netbsd.org
 HOMEPAGE=	http://www.chimera.org/
 COMMENT=	World Wide Web Browser for X Windows
 
+USE_BUILDLINK2=	yes
 USE_IMAKE=	yes
 
 pre-configure:
@@ -24,6 +25,6 @@ post-install:
 	cd ${WRKSRC}/doc && ${INSTALL_DATA}			\
 	    HINTS INFO LICENSE ${X11PREFIX}/share/doc/chimera
 
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
