@@ -1,0 +1,13 @@
+$NetBSD: patch-ar,v 1.7 2004/05/22 11:58:42 wiz Exp $
+
+--- faxd/Class1Send.c++.orig	2003-02-08 23:58:09.000000000 +0100
++++ faxd/Class1Send.c++
+@@ -797,7 +797,7 @@ Class1Modem::sendPage(TIFF* tif, const C
+ 	uint32* stripbytecount;
+ 	(void) TIFFGetField(tif, TIFFTAG_STRIPBYTECOUNTS, &stripbytecount);
+ 	tstrip_t strip;
+-	u_long totdata = 0;
++	uint32 totdata = 0;
+ 	for (strip = 0; strip < nstrips; strip++)
+ 	    totdata += stripbytecount[strip];
+ 	/*
