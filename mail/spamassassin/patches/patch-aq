@@ -1,8 +1,8 @@
-$NetBSD: patch-aq,v 1.3 2004/05/31 12:43:06 heinz Exp $
+$NetBSD: patch-aq,v 1.4 2004/10/12 00:11:10 heinz Exp $
 
---- README.orig	Sun Jan 18 00:56:14 2004
+--- README.orig	Thu Aug  5 22:04:10 2004
 +++ README
-@@ -116,30 +116,30 @@ Mail::SpamAssassin::Conf class (run the 
+@@ -76,30 +76,30 @@ Mail::SpamAssassin::Conf class (run the 
  the standard defaults that people use.  There is an explanation of all the
  default locations that SpamAssassin will look at the end.
  
@@ -32,9 +32,9 @@ $NetBSD: patch-aq,v 1.3 2004/05/31 12:43:06 heinz Exp $
  	set defaults for users' preferences files.  Takes precedence over
  	the above prefs file, if it exists.
  
- 	Do not put system-wide settings in here; put them in the
--	/etc/mail/spamassassin directory.  This file is just a template,
-+	@PKG_SYSCONFDIR@ directory.  This file is just a template,
- 	which will be copied to a user's home directory for them to
- 	change.
+         Do not put system-wide settings in here; put them in a file in the
+-        "/etc/mail/spamassassin" directory ending in ".cf". This file is
++        "@PKG_SYSCONFDIR@" directory ending in ".cf". This file is
+         just a template, which will be copied to a user's home directory
+         for them to change.
  

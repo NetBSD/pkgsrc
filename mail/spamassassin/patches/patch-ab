@@ -1,78 +1,101 @@
-$NetBSD: patch-ab,v 1.7 2004/01/21 22:19:30 heinz Exp $
+$NetBSD: patch-ab,v 1.8 2004/10/12 00:11:10 heinz Exp $
 
---- Makefile.PL.orig	Sun Nov  2 01:42:04 2003
+--- Makefile.PL.orig	Fri Aug 27 18:37:35 2004
 +++ Makefile.PL
-@@ -95,7 +95,7 @@ sub yesno {
+@@ -64,6 +64,8 @@ my @ATT_KEYS = (
+   'ENABLE_SSL',       # Set to 'yes' to build spamc with SSL support.
+   'CONTACT_ADDRESS',  # To not ask for the contact address, use this.
+   'RUN_NET_TESTS',    # To not ask whether net tests should be run, use this.
++  'RUN_AWL_SQL_TESTS',  # To not ask whether sql tests for the awl should be run, use this
++  'RUN_BAYES_SQL_TESTS',# To not ask whether sql tests for bayes should be run, use this
+ );
  
+ 
+@@ -98,8 +100,10 @@ sub yesno {
  my %opt = (
+   'build_spamc'        => undef,
    'enable_ssl'      => undef,
 -  'contact_address' => undef,
 +  'contact_address' => '@SA_CONTACT_ADDRESS@',
-   'run_razor_tests' => undef,
+   'run_net_tests'   => undef,
++  'run_awl_sql_tests'   => undef,
++  'run_bayes_sql_tests' => undef,
    'destdir'         => undef,
    '__cruft'         => undef,
-@@ -333,18 +333,20 @@ if (!defined $opt{'contact_address'}) {
+   'ignore_cruft'    => undef,
+@@ -161,6 +165,7 @@ my %makefile = (
+ 
+     'EXE_FILES'	=> [
+         'spamassassin', 'sa-learn',
++	'spamc/qmail-spamc$(EXE_EXT)',
+         'spamc/spamc$(EXE_EXT)', # must next to last one
+         'spamd/spamd',	# must be the last one
+     ],
+@@ -357,14 +362,16 @@ else {
+ $makefile{'macro'}{'RUN_NET_TESTS'} = yesno($opt{'run_net_tests'});
+ 
+ if (HAS_DBI) {
+-  $opt{'run_awl_sql_tests'} = prompt(
+-    "Run SQL-based Auto-whitelist tests during 'make test' (additional\n".
+-    "information required) (y/n)", "n");
+-  print "\n";
+-
+-  $opt{'run_awl_sql_tests'} = bool($opt{'run_awl_sql_tests'});
++  if (!defined $opt{'run_awl_sql_tests'}) {
++    $opt{'run_awl_sql_tests'} = prompt(
++      "Run SQL-based Auto-whitelist tests during 'make test' (additional\n".
++      "information required) (y/n)", "n");
++    print "\n";
++  }
  }
- $makefile{'macro'}{'CONTACT_ADDRESS'} = $opt{'contact_address'};
  
--if (!defined $opt{'run_razor_tests'}) {
-   my $got_razor2 = eval { require Razor2::Client::Agent };
- 
-   if ($got_razor2) {
--    $opt{'run_razor_tests'} = prompt(
--      "Run Razor v2 tests (these may fail due to network problems)? (y/n)",
--      'n'
--    );
--    print "\n";
-+    if (!defined $opt{'run_razor_tests'}) {
-+       $opt{'run_razor_tests'} = prompt(
-+         "Run Razor v2 tests (these may fail due to network problems)? (y/n)",
-+         'n'
-+       );
-+       print "\n";
-+    }
-+    $opt{'run_razor_tests'} = bool($opt{'run_razor_tests'});
-+    $makefile{'macro'}{'TEST_RUN_RAZOR'} = yesno($opt{'run_razor_tests'});
-   }
--}
--$opt{'run_razor_tests'} = bool($opt{'run_razor_tests'});
++$opt{'run_awl_sql_tests'} = bool($opt{'run_awl_sql_tests'});
 +
- if ($opt{'run_razor_tests'}) {
-   open(FLAG, "> t/do_razor2");
-   close(FLAG);
-@@ -352,7 +354,6 @@ if ($opt{'run_razor_tests'}) {
- else {
-   unlink("t/do_razor2");
+ if ($opt{'run_awl_sql_tests'}) {
+   my $user_awl_dsn = prompt("SQL AWL DSN (user_awl_dsn): ", "dbi:mysql:spamassassin:localhost");
+   my $user_awl_sql_username = prompt("SQL AWL DB username (user_awl_sql_username): ", "");
+@@ -387,14 +394,16 @@ else {
  }
--$makefile{'macro'}{'TEST_RUN_RAZOR'} = yesno($opt{'run_razor_tests'});
  
+ if (HAS_DBI) {
+-  $opt{'run_bayes_sql_tests'} = prompt(
+-    "Run Bayes SQL storage tests during 'make test' (additional\n".
+-    "information required)? (y/n)", 'n');
+-  print "\n";
+-
+-  $opt{'run_bayes_sql_tests'} = bool($opt{'run_bayes_sql_tests'});
++  if (!defined $opt{'run_bayes_sql_tests'}) {
++    $opt{'run_bayes_sql_tests'} = prompt(
++      "Run Bayes SQL storage tests during 'make test' (additional\n".
++      "information required)? (y/n)", 'n');
++    print "\n";
++  }
+ }
  
- # Now dump the Makefile
-@@ -745,7 +746,7 @@ sub MY::libscan {
++$opt{'run_bayes_sql_tests'} = bool($opt{'run_bayes_sql_tests'});
++
+ if ($opt{'run_bayes_sql_tests'}) {
+   my $bayes_sql_dsn = prompt("Bayes SQL DSN (bayes_sql_dsn): ", "dbi:mysql:spamassassin:localhost");
+   my $bayes_sql_username = prompt("Bayes SQL DB username (bayes_sql_username): ", "");
+@@ -1121,17 +1130,18 @@ qmail/qmail-spamc$(EXE_EXT): spamc/qmail
  
-   return q{} if $path =~ m{
-                   (^|/)(\.svn|CVS)(/|$)|
--                  [/.](orig|old|rej|diff|patch|bak|backup|my)$
-+                  [/.](orig|old|rej|diff|patch|bak|backup|my|subst.sav)$
-                 }ix;
- 
-   clean_MY_globals($self);
-@@ -965,15 +966,16 @@ spamd/binaries.mk: spamd/configure
- 	cd spamd; ./configure --prefix="$(I_PREFIX)" --sysconfdir="$(I_SYSCONFDIR)" --datadir="$(I_DATADIR)" --enable-ssl="$(ENABLE_SSL)"
  
  conf__install:
 -	-$(MKPATH) $(B_CONFDIR)
 -	$(PERL) -MFile::Spec -MFile::Copy \
 +	-$(BSD_INSTALL_DATA_DIR) $(B_CONFDIR)
-+	@ # manage local.cf through pkgsrc .mk files
++	@ # manage local.cf and init.pre through pkgsrc .mk files
 +	@ # $(PERL) -MFile::Spec -MFile::Copy \
  	  -e "copy(q{rules/local.cf}, q{$(B_CONFDIR)/local.cf}) unless -f q{$(B_CONFDIR)/local.cf};"
+-	$(PERL) -MFile::Spec -MFile::Copy \
++	@ # $(PERL) -MFile::Spec -MFile::Copy \
+ 	  -e "copy(q{rules/init.pre}, q{$(B_CONFDIR)/init.pre}) unless -f q{$(B_CONFDIR)/init.pre};"
  
  data__install:
 -	-$(MKPATH) $(B_DATADIR)
 +	-$(BSD_INSTALL_DATA_DIR) $(B_DATADIR)
  	$(PERL) -e "map unlink, <$(B_DATADIR)/*>"
- 	$(PREPROCESS) $(FIXVARS) -m$(PERM_RW) -Irules -O$(B_DATADIR) $(RULES)
+ 	$(PREPROCESS) $(FIXVARS) -m$(PERM_RW) -Irules -O$(B_DATADIR) $(DATAFILES)
 -	$(CHMOD) $(PERM_RWX) $(B_DATADIR)
 +	@ # $(CHMOD) $(PERM_RWX) $(B_DATADIR)
  
