@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.205 2001/10/24 22:10:43 jlam Exp $
+# $NetBSD: Packages.txt,v 1.206 2001/10/26 17:15:57 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -1049,7 +1049,33 @@ build in some circumstances. Some common errors are
    LTDL_SET_PRELOADED_SYMBOLS included in executables.
 
 
- 6.4 Feedback to the author
+ 6.4 GNU Autoconf/Automake
+ =========================
+
+If a package needs GNU autoconf or automake to be executed to regenerate
+the configure script and Makefile.in makefile templates, then they should
+be executed in a pre-configure target.  For packages that need only
+autoconf:
+
+	pre-configure:
+		cd ${WRKSRC}; ${LOCALBASE}/bin/autoreconf --force
+
+and for packages that need automake:
+
+	pre-configure:
+		cd ${WRKSRC};						\
+		${LOCALBASE}/bin/aclocal				\
+		${LOCALBASE}/bin/autoheader				\
+		${LOCALBASE}/bin/automake -a --foreign -i		\
+		${LOCALBASE}/bin/autoconf				\
+
+There are times when the configure process makes additional changes to the
+generated files, which then causes the build process to try to re-execute
+the automake sequence.  This may be overridden by setting AUTOMAKE_OVERRIDE
+to YES in the package Makefile.
+
+
+ 6.5 Feedback to the author
  ==========================
 
 If you have found any bugs in the package you make available, if you had to
