@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/02 21:51:58 tron Exp $
+bin/esh
+@unexec install-info --delete --info-dir=%D/info %D/info/esh.info
+info/esh.info
+@exec install-info --info-dir=%D/info %D/info/esh.info
+share/doc/esh/esh.html
+share/doc/esh/esh_toc.html
+share/emacs/site-lisp/esh-mode.el
+share/examples/esh/bold.esh
+share/examples/esh/gaudy.esh
+share/examples/esh/pipes.esh
+share/examples/esh/prepend.esh
+share/examples/esh/prompt.esh
+share/examples/esh/test.esh
+share/examples/esh/test2.esh
+share/examples/esh/test3.esh
+share/examples/esh/test4.esh
+share/examples/esh/test5.esh
+share/examples/esh/test6.esh
+share/examples/esh/test7.esh
+@dirrm share/examples/esh
+@dirrm share/doc/esh
