@@ -1,0 +1,57 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/11/24 20:29:10 rh Exp $
+
+--- Makefile.orig	Thu Oct 28 21:22:36 1999
++++ Makefile	Wed Nov 24 20:42:01 1999
+@@ -25,22 +25,22 @@
+ ## and porting.
+ 
+ 
+-CC = gcc
++#CC = gcc
+ 
+ ######## Choose one of the platforms below 
+ ######## and comment out the others:
+ 
+ ## For Solaris 2.x
+-PLATFORM = SOLARIS2			
+-XLIBDIR = /usr/openwin/lib
+-XINCLUDEDIR = /usr/openwin/include
+-SLEEPLIB = -lposix4   # for nanosleep() only 
++#PLATFORM = SOLARIS2			
++#XLIBDIR = /usr/openwin/lib
++#XINCLUDEDIR = /usr/openwin/include
++#SLEEPLIB = -lposix4   # for nanosleep() only 
+ 
+ ## For Linux, FreeBSD
+-# PLATFORM = BSD
+-# XLIBDIR = /usr/X11R6/lib
+-# XINCLUDEDIR = /usr/X11R6/include
+-# SLEEPLIB = 
++PLATFORM = BSD
++XLIBDIR = ${X11BASE}/lib
++XINCLUDEDIR = ${X11BASE}/include
++SLEEPLIB = 
+ 
+ ## For AIX 3.2.5
+ # PLATFORM = BSD
+@@ -96,9 +96,9 @@
+ 
+ 
+ 
+-LIBS = $(XLIBS) -lm 
++LIBS = ${LDFLAGS} ${XLIBS} -lm 
+ 
+-CFLAGS = -D$(PLATFORM) -DPLOTICUS -DDIST $(XCFLAGS) $(FLAGS)
++CFLAGS+= -D${PLATFORM} -DPLOTICUS -DDIST ${XCFLAGS} ${FLAGS}
+ 
+ OBJ = 	custom.o execplfile.o lib.o areadef.o page.o axis.o getdata.o parsedata.o \
+ 	drawcommands.o annotate.o tabulate.o lineplot.o bars.o bevelrect.o units.o line.o \
+@@ -139,7 +139,7 @@
+ gd16files: 
+ 	$(CC) -c grgd.c -DGDPNG -I./gd16 -I./ -o grgd16.o
+ 	$(CC) -c devstuff.c -DGDPNG -o devstuff16.o
+-	$(CC) -c -I./gd16 -I./ $(GD16H) gd16.c gd_io.c gd_io_dp.c gd_io_file.c gd_png.c
++	$(CC) -c -I./gd16 -I./ -I${PREFIX}/include $(GD16H) gd16.c gd_io.c gd_io_dp.c gd_io_file.c gd_png.c
+ 
+ dev: pl.o $(OBJ) 
+ 	$(CC) pl.o $(FLAGS) $(OBJ) $(GD13) $(GD) $(XOBJ) $(LIBS) -o pl
