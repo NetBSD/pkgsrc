@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2004/10/03 00:18:27 tv Exp $
+# $NetBSD: Makefile,v 1.10 2004/11/20 00:30:29 wiz Exp $
 
-DISTNAME=	snownews-1.5.1
-PKGREVISION=	1
+DISTNAME=	snownews-1.5.5.1
 CATEGORIES=	www
 MASTER_SITES=	http://home.kcore.de/~kiza/software/snownews/download/
 
@@ -16,8 +15,8 @@ USE_GNU_TOOLS+=		make
 USE_NCURSES=		# missing WA_BOLD, WA_REVERSE, KEY_RESIZE
 USE_PKGLOCALEDIR=	YES
 
-MAKE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}" MAKE="${GMAKE}"
-MAKE_ENV+=	EXTRA_CFLAGS="${CFLAGS}" LOCALBASE="${LOCALBASE}"
+MAKE_ENV+=	PKGLOCALEDIR=${PKGLOCALEDIR:Q}
+MAKE_ENV+=	EXTRA_CFLAGS=${CFLAGS:Q} LOCALBASE=${LOCALBASE:Q}
 
 # XXX -lintl hack suggested by Jeremy C. Reed: blocking on PR #23369
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -26,13 +25,13 @@ MAKE_ENV+=	EXTRA_LDFLAGS="${LDFLAGS} ${BUILDLINK_LDADD.gettext}"
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/snownews ${LOCALBASE}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/opml2snow ${LOCALBASE}/bin
-.for M in de fr it nl
+.for M in de fr it nl ru_RU.KOI8-R
 	${INSTALL_DATA_DIR} ${LOCALBASE}/man/${M}/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/man/${M}/snownews.1 ${LOCALBASE}/man/${M}/man1
 .endfor
 	${INSTALL_MAN} ${WRKSRC}/doc/man/snownews.1 ${LOCALBASE}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/man/opml2snow.1 ${LOCALBASE}/man/man1
-.for L in de es fr it nl sl zh_TW
+.for L in de es nl pt_BR ru sl zh_TW
 	${INSTALL_DATA_DIR} ${LOCALBASE}/${PKGLOCALEDIR}/locale/${L}/LC_MESSAGES
 	${INSTALL_DATA} ${WRKSRC}/po/${L}.mo ${LOCALBASE}/${PKGLOCALEDIR}/locale/${L}/LC_MESSAGES/snownews.mo
 .endfor
