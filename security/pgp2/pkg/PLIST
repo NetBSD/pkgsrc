@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/03/18 01:51:14 tv Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/08/26 02:42:03 kim Exp $
 bin/pgp
 man/man1/pgp.1.gz
-lib/pgp/de.hlp
-lib/pgp/en.hlp
-lib/pgp/es.hlp
-lib/pgp/fr.hlp
-lib/pgp/pgp.hlp
-lib/pgp/pgpdoc1.txt
-lib/pgp/pgpdoc2.txt
-lib/pgp/language.txt
-lib/pgp/config.txt
-@dirrm lib/pgp
+share/pgp/de.hlp
+share/pgp/en.hlp
+share/pgp/es.hlp
+share/pgp/fr.hlp
+share/pgp/pgp.hlp
+share/pgp/pgpdoc1.txt
+share/pgp/pgpdoc2.txt
+share/pgp/language.txt
+share/pgp/config.txt
+@dirrm share/pgp
