@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2004/01/20 22:24:35 jlam Exp $
+# $NetBSD: Makefile,v 1.49 2004/11/02 17:42:13 sketch Exp $
 
 DISTNAME=		bison-1.875
 PKGREVISION=		1
@@ -23,5 +23,12 @@ M4=			${LOCALBASE}/bin/gm4
 INFO_FILES=		bison.info
 
 TEST_TARGET=		check
+
+.include "../../mk/compiler.mk"
+
+# quotearg_buffer_restyled() has issues with optimisation
+.if !empty(PKGSRC_COMPILER:Msunpro)
+BUILDLINK_TRANSFORM+=   rm:-O[0-9]*
+.endif
 
 .include "../../mk/bsd.pkg.mk"
