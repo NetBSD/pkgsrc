@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2003/12/08 14:41:39 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2003/12/13 00:45:21 wiz Exp $
 #
 
 DISTNAME=	gaim-0.74
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gaim/}
 EXTRACT_SUFX=	.tar.bz2
