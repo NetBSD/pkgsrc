@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2002/07/17 11:22:39 agc Exp $
+
+--- po/Makefile.in.in	2002/07/17 11:08:47	1.1
++++ po/Makefile.in.in	2002/07/17 11:09:44
+@@ -18,7 +18,7 @@
+ 
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+-datadir = $(prefix)/@DATADIRNAME@
++datadir = $(prefix)/${PKGLOCALEDIR}
+ localedir = $(datadir)/locale
+ gnulocaledir = $(prefix)/share/locale
+ gettextsrcdir = $(prefix)/share/gettext/po
