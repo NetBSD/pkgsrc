@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2003/09/28 15:09:50 tron Exp $
+$NetBSD: distinfo,v 1.14 2004/11/02 15:56:03 gavan Exp $
 
 SHA1 (pilot-link-0.11.7.tar.bz2) = f1ae56d3aad5d793f58fac4d3a51ca0c0f517262
 Size (pilot-link-0.11.7.tar.bz2) = 669470 bytes
-SHA1 (patch-aa) = 87ea9401603bd55d62ac2fa17ad45ff16baeda4d
+SHA1 (patch-aa) = 842f3abe3c9c794206ee21fa835c8da34f6cbc8a
 SHA1 (patch-ab) = add1156600a681cc0ae30c5d9095b4f1bb6739c3
 SHA1 (patch-ac) = 1a5c5946a23850910849d3f58011b2e9086d7641
 SHA1 (patch-ad) = 91e0a72a0f2d313173024c9edacfa0b92fb33b3d
