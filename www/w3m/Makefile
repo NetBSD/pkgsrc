@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/03/02 15:47:35 itojun Exp $
+# $NetBSD: Makefile,v 1.6 2000/03/16 11:19:16 pooka Exp $
 
 DISTNAME=	w3m-0.1.6
 CATEGORIES=	www
@@ -9,12 +9,6 @@ HOMEPAGE=	http://ei5nazha.yz.yamagata-u.ac.jp/~aito/w3m/
 
 DEPENDS=	boehm-gc-5.0a3:../../devel/boehm-gc
 
-.if defined(EXTRACT_USING_PAX)
-EXTRACT_ELEMENTS=	-c w3m/gc\*
-.else
-EXTRACT_ELEMENTS=	--exclude w3m/gc\*
-.endif
-
 WRKSRC=		${WRKDIR}/w3m
 HELPDIR=	share/doc/w3m
 HELPERDIR=	lib/w3m
@@ -23,7 +17,13 @@ HAS_CONFIGURE=	yes
 
 # configure will check IPv6 readiness automatically
 BUILD_DEFS+=	USE_INET6
+
 .include "../../mk/bsd.prefs.mk"
+.if defined(EXTRACT_USING_PAX)
+EXTRACT_ELEMENTS=	-c w3m/gc\*
+.else
+EXTRACT_ELEMENTS=	--exclude w3m/gc\*
+.endif
 
 # Set this to NO for ISO-8859-1 support (exclusive to Japanese).
 W3M_USE_JAPANESE?=	YES
@@ -63,7 +63,7 @@ post-extract:
 
 do-configure:
 	@yes '' | (cd ${WRKSRC} && CC="${CC}" ac_cv_path_CC="${CC}" \
-	    INSTALL="/usr/bin/install -c -o ${BINOWN} -g ${BINGRP}" \
+	    INSTALL="${INSTALL_SCRIPT}"                             \
 	    CFLAGS="${CFLAGS}" INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 	    ${CONFIGURE_ENV} ./${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS})
 
