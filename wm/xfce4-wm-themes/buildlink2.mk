@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/09/27 06:52:41 martti Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/09/27 06:57:16 martti Exp $
 #
 # This Makefile fragment is included by packages that use xfce4-wm-themes.
 #
