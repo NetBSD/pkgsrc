@@ -1,16 +1,16 @@
-$NetBSD: patch-ad,v 1.1 2004/02/27 21:14:08 kristerw Exp $
+$NetBSD: patch-ad,v 1.2 2004/08/14 21:36:22 hubertf Exp $
 
---- scribus/plugins/svgimplugin/svgplugin.cpp.orig	Fri Feb 27 21:24:53 2004
-+++ scribus/plugins/svgimplugin/svgplugin.cpp	Fri Feb 27 21:25:07 2004
+--- scribus/plugins/svgimplugin/svgplugin.cpp.orig	2004-06-04 22:39:11.000000000 +0200
++++ scribus/plugins/svgimplugin/svgplugin.cpp
 @@ -1,3 +1,4 @@
 +#include <cmath>
  #include "svgplugin.h"
  #include "svgplugin.moc"
- #include "config.h"
-@@ -7,7 +8,6 @@
- #include <qfile.h>
+ 
+@@ -15,7 +16,6 @@
  #include <qtextstream.h>
  #include <qregexp.h>
+ #include <qcursor.h>
 -#include <cmath>
  #ifdef HAVE_LIBZ
  #include <zlib.h>

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2004/05/08 20:21:43 reed Exp $
+# $NetBSD: Makefile,v 1.18 2004/08/14 21:36:22 hubertf Exp $
 
-DISTNAME=	scribus-1.1.1
-PKGREVISION=	1
+DISTNAME=	scribus-1.1.7
 CATEGORIES=	print
 MASTER_SITES=	http://scribus.planetmirror.com/
 
