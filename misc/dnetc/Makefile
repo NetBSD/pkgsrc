@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2002/06/18 16:20:21 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2003/04/09 16:16:06 jmmv Exp $
 
 DISTNAME=	${DISTNAME_${OPSYS}_${MACHINE_ARCH}}
 PKGNAME=	dnetc-2.8015.469
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://http.distributed.net/pub/dcti/current-client/
 
@@ -13,6 +14,7 @@ ONLY_FOR_PLATFORM=	Darwin-*-powerpc NetBSD-*-alpha NetBSD-*-arm32 \
 			NetBSD-*-i386 NetBSD-*-m68k NetBSD-*-sparc \
 			SunOS-*-sparc
 NO_BUILD=	YES
+USE_PKGINSTALL=	YES
 
 DISTNAME_Darwin_powerpc=	dnetc-darwin-ppc
 DISTNAME_NetBSD_m68k=		dnetc-netbsd-68k
@@ -21,6 +23,8 @@ DISTNAME_NetBSD_arm32=		dnetc-netbsd-arm32
 DISTNAME_NetBSD_i386=		dnetc-netbsd-i386-elf
 DISTNAME_NetBSD_sparc=		dnetc-netbsd-sparc-elf
 DISTNAME_SunOS_sparc=		dnetc-solaris-sparc
+
+RCD_SCRIPTS=	dnetc
 
 do-extract:
 	@${MKDIR} ${WRKSRC}
