@@ -1,11 +1,11 @@
---- Makefile.PL.orig	Tue Feb 17 06:50:19 1998
-+++ Makefile.PL	Tue Mar 17 14:49:11 1998
-@@ -66,7 +66,7 @@
-   'freebsd'   =>
-   { 'bsd'     => [ ''                       => '-lcurses -ltermcap' ],
-     'ncurses' => [ ''                       => '-lncurses' ],
--    'default' => 'bsd'
-+    'default' => 'ncurses'
+--- Makefile.PL.orig	Mon Feb 16 17:50:19 1998
++++ Makefile.PL	Mon Jul 13 12:17:51 1998
+@@ -76,7 +76,7 @@
+     'ncurses' => [ '-I/usr/include/ncurses' => '-lncurses' ],
+     'default' => 'ncurses'
    },
-   'hpux'      => [ ''                       => '-lcurses -ltermcap' ],
-   'irix'      => [ ''                       => '-lcurses -ltermcap' ],   ##
+-  'netbsd'    => [ ''                       => '-lcurses -ltermcap' ],
++  'netbsd'    => [ "-I$ENV{'PREFIX'}/include" => "-L$ENV{'PREFIX'}/lib -lncurses" ],
+   'next'      => [ ''                       => '-lcurses -ltermcap' ],
+   'os2'       =>
+   { 'bsd'     => [ ''                       => '-lcurses -ltermcap' ],
