@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.917 2002/12/25 16:05:18 jmmv Exp $
+$NetBSD: CHANGES,v 1.918 2002/12/26 01:49:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4265,3 +4265,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated gnome-mime-data to 2.0.1nb1 [jmmv 2002-12-25]
 	Updated libgda to 0.8.199nb1 [jmmv 2002-12-25]
 	Updated bsdpak to 0.52 [jmmv 2002-12-25]
+	Updated openbox to 2.2.3 [wiz 2002-12-26]
