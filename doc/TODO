@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1056 2003/11/21 11:43:44 gavan Exp $
+$NetBSD: TODO,v 1.1057 2003/11/21 13:31:24 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -277,7 +277,7 @@ Suggested package updates
 	o libtiff-3.6.0
 	o libtool-1.5 [skrll]
 	o libxml2-2.6.2 [pkg/23488]
-	o libxslt-1.1.0
+	o libxslt-1.1.0 [pkg/23518]
 	o lilypond-2.0.0
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
