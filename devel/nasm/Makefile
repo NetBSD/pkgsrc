@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/02/25 11:42:17 adam Exp $
+# $NetBSD: Makefile,v 1.16 2005/03/03 16:36:46 drochner Exp $
 
 DISTNAME=	nasm-0.98.39
 CATEGORIES=	devel lang
@@ -13,6 +13,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
+GCC_REQD=		3.3
 USE_MAKEINFO=		yes
 USE_PERL5=		build
 GNU_CONFIGURE=		yes
