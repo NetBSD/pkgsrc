@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.45 2004/07/15 11:57:26 grant Exp $
+# $NetBSD: post-build,v 1.46 2004/11/16 18:34:12 jlam Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -42,10 +42,11 @@ $reportf=basename($REPORT);
 
 chomp($os=`uname -s`);
 
-# Extract the name of the files used for the build log and broken build log.
+# Extract the names of the files used for the build log and broken build logs.
 # These have defaults set by bsd.bulk-pkg.mk and may be overridden in
 # /etc/mk.conf
 chomp($BROKENFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=BROKENFILE )`);
+chomp($BROKENWRKLOG=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=BROKENWRKLOG )`);
 
 # Also extract the names of the cache files used during the bulk build.  We'll
 # save a copy of those to help debug if the build messed up.
@@ -92,7 +93,7 @@ system("mkdir -p ${FTP}");
 
 # Copy over the output from the build process
 chdir($USR_PKGSRC);
-system("find . -name $BROKENFILE -print | $GTAR -T - -plcf - | (cd $FTP; $GTAR -plxf -)");
+system("find . -name $BROKENFILE -o -name $BROKENWRKLOG -print | $GTAR -T - -plcf - | (cd $FTP; $GTAR -plxf -)");
 
 # Copy over the cache files used during the build
 foreach my $f ($BULK_DBFILE, $DEPENDSTREEFILE, $DEPENDSFILE, $SUPPORTSFILE, $INDEXFILE, $ORDERFILE) {
