@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2002/10/26 14:32:49 seb Exp $
+# $NetBSD: Makefile,v 1.50 2002/12/05 05:52:53 grant Exp $
 
 # Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-2.95.3
@@ -40,7 +40,6 @@ ALL_TARGET=		bootstrap
 .  endif
 GCC_PREFIX=		${PREFIX}
 PLIST_SRC=		${PKGDIR}/PLIST.SunOS
-MESSAGE_SRC=		${PKGDIR}/MESSAGE.SunOS
 .else
 GCC_PREFIX=		${PREFIX}/${PKGNAME}
 CONFIGURE_ARGS+=	--with-gnu-as
