@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.9 2001/10/24 22:10:47 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/01/26 02:38:30 dmcmahill Exp $
 #
 
-DISTNAME=	ng-spice-rework-13
-PKGNAME=	ng-spice-13
+DISTNAME=	ng-spice-rework-14
+PKGNAME=	ng-spice-14
 CATEGORIES=	cad
-MASTER_SITES=	ftp://ieee.ing.uniroma1.it/pub/ng-spice/distribution/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ngspice/}
 
 MAINTAINER=	dmcmahill@netbsd.org
-HOMEPAGE=	http://ieee.ing.uniroma1.it/ngspice/
+HOMEPAGE=	http://ngspice.sourceforge.net
 COMMENT=	Next generation circuit simulation program
-
-CONFLICTS+=		spice-[0-9]*
 
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
