@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/03/08 20:27:14 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2004/03/09 23:37:41 minskim Exp $
 #
 
 DISTNAME=	tclticker-1.1
@@ -8,16 +8,21 @@ MASTER_SITES=	http://www.neosoft.com/tcl/ftparchive/sorted/apps/tclticker/1.1/
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Stock-quote ticker tape application
 
-DEPENDS+=	tk>=8.3.2:../../x11/tk83
+DEPENDS+=	tk>=8.3.2:../../x11/tk
 
+PKG_INSTALLATINO_TYPES=	overwrite pkgviews
+
+NO_BUILDLINK=	yes
+NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-post-patch:
-	cd ${WRKSRC}; 							\
-	for f in tclticker mailquote; do				\
-		${MV} $$f $$f-prefix;					\
-		${SED} -e 's|@PREFIX@|${PREFIX}|g' $$f-prefix > $$f;	\
-	done
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	"Fixing hardcoded paths and command names."
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	tclticker mailquote
+SUBST_SED.paths=	-e 's|@PREFIX@|${PREFIX}|g'
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/tclticker ${PREFIX}/bin
