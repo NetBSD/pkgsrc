@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2003/02/13 14:41:37 agc Exp $
+# $NetBSD: Makefile,v 1.14 2003/02/13 21:16:10 fredb Exp $
 #
 
 DISTNAME=	apla-1.0.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	http://pd37.warszawa.sdi.tpnet.pl/NetBSD/
 
@@ -15,8 +15,6 @@ USE_X11=	YES
 MAKE_ENV+=	AVIFILE_CONFIG=avifile-config
 MAKE_ENV+=	SDL_CONFIG=sdl-config
 MAKE_ENV+=	FREETYPE_CONFIG=freetype-config
-
-BROKEN=		Xv compilation problems
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/apla ${PREFIX}/bin
