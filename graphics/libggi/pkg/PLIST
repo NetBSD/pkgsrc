@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/04/16 16:54:56 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/04/16 17:42:26 mycroft Exp $
 man/man7/libggi.7
 man/man6/cube3d.6
 man/man3/ggiResourceMustAcquire.3
@@ -140,7 +140,6 @@ lib/ggi/display/X.so
 lib/ggi/display/mansync.la
 lib/ggi/display/mansync.so
 @dirrm lib/ggi/display
-@dirrm lib/ggi
 include/ggi/misc.h
 include/ggi/ggi-unix.h
 include/ggi/ggi_ext.h
@@ -177,9 +176,7 @@ include/ggi/internal/ggidlinit.h
 include/ggi/internal/ggi-dl.h
 include/ggi/internal/dltypes.h
 include/ggi/internal/debug.h
-@dirrm include/ggi
 etc/ggi/libggi.conf
 etc/ggi/libggimisc.conf
-@dirrm etc/ggi
 bin/monitest
 bin/cube3d
