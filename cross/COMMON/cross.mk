@@ -1,4 +1,4 @@
-#	$NetBSD: cross.mk,v 1.24 2002/09/30 21:23:55 jlam Exp $
+#	$NetBSD: cross.mk,v 1.25 2002/10/03 19:12:47 wiz Exp $
 
 # Shared definitions for building a cross-compile environment.
 
@@ -108,7 +108,9 @@ EGCS_INTVERSION=	egcs-2.91.60
 EGCS_PATCHBUNDLE=	${EGCS_DISTNAME}-NetBSD-19980104.diff.gz
 EGCS_WRKSRC=		${WRKDIR}/${EGCS_DISTNAME}
 EGCS_LANGUAGES=		c # add to these below
-BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
+
+# only using autoheader; 2.13 and 2.54 both work fine
+.include "../../mk/autoconf.mk"
 
 .if defined(EGCS_MULTILIB)
 EGCS_INSTALL_LIB=install-multilib
