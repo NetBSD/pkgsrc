@@ -1,6 +1,6 @@
 # start of install
 #
-# $NetBSD: install,v 1.20 2003/06/25 08:26:51 jlam Exp $
+# $NetBSD: install,v 1.21 2003/09/02 07:00:07 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -108,7 +108,14 @@ PRE-INSTALL)
 			fi
 			if [ "${_PKG_CONFIG}" = "YES" ]; then
 				${MKDIR} "${dir}"
-				${ECHO} "${PKGBASE}" > "${dir}/.pkgsrc"
+				if [ "${PKG_INSTALLATION_TYPE}" = "pkgviews" ]; then
+					case "${dir}" in
+					${PKG_PREFIX}|${PKG_PREFIX}/*)	;;
+					*)	${ECHO} "${PKGBASE}" > "${dir}/.pkgsrc" ;;
+					esac
+				else
+					${ECHO} "${PKGBASE}" > "${dir}/.pkgsrc"
+				fi
 			fi
 		done
 		eval set -- ${MAKE_DIRS_PERMS} ${OWN_DIRS_PERMS}
@@ -118,7 +125,14 @@ PRE-INSTALL)
 			if [ "${_PKG_CONFIG}" = "YES" ]; then
 				if [ ! -d "${dir}" ]; then
 					${MKDIR} "${dir}"
-					${ECHO} "${PKGBASE}" > "${dir}/.pkgsrc"
+					if [ "${PKG_INSTALLATION_TYPE}" = "pkgviews" ]; then
+						case "${dir}" in
+						${PKG_PREFIX}|${PKG_PREFIX}/*)	;;
+						*)	${ECHO} "${PKGBASE}" > "${dir}/.pkgsrc" ;;
+						esac
+					else
+						${ECHO} "${PKGBASE}" > "${dir}/.pkgsrc"
+					fi
 					${CHOWN} -R "${owner}" "${dir}"
 					${CHGRP} -R "${group}" "${dir}"
 					${CHMOD} -R "${mode}" "${dir}"
@@ -346,6 +360,13 @@ EOF
 EOF
 		fi
 	fi
+	if [ "${PKG_INSTALLATION_TYPE}" = "overwrite" ]; then
+		${SETENV} PKG_PREFIX="${PKG_PREFIX}" \
+			$0 ${PKGNAME} VIEW-INSTALL
+	fi
+	;;
+
+VIEW-INSTALL)
 	if [ -n "${PKG_SHELL}" -a "${PKG_REGISTER_SHELLS}" = "YES" ]; then
 		${ECHO} "===> Updating /etc/shells"
 		${TOUCH} /etc/shells
@@ -353,11 +374,16 @@ EOF
 		(${GREP} -v ${PKG_SHELL} /etc/shells.pkgsrc."$$" || ${TRUE}; ${ECHO} ${PKG_SHELL}) > /etc/shells
 		${RM} /etc/shells.pkgsrc."$$"
 	fi
-	;;
-
-*)
-	${ECHO} "Unexpected argument: ${STAGE}"
-	exit 1
+	if [ "${_PKG_CONFIG}" = "YES" -a				\
+	     -n "${PKG_SYSCONFVIEWBASE}" -a				\
+	     -n "${PKG_SYSCONFDEPOTBASE}" ]; then
+		if [ -n "${CONF_FILES}" -o				\
+		     -n "${CONF_FILES_PERMS}" -o			\
+		     -n "${SUPPORT_FILES}" -o				\
+		     -n "${SUPPORT_FILES_PERMS}" ]; then
+			${LINKFARM} -t ${PKG_SYSCONFVIEWBASE} -d ${PKG_SYSCONFDEPOTBASE} ${PKGNAME}
+		fi
+	fi
 	;;
 esac
 

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.121 2003/08/31 11:04:58 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.122 2003/09/02 06:59:44 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -249,6 +249,9 @@ X11PREFIX=		${X11BASE}
 XMKMF_CMD?=		${X11PREFIX}/bin/xmkmf
 .endif
 
+DEPOT_SUBDIR?=		packages
+DEPOTBASE=		${LOCALBASE}/${DEPOT_SUBDIR}
+
 # RPATH_FLAG publicly exports the linker flag used to specify run-time
 # library search paths.
 #
@@ -276,21 +279,58 @@ DIGEST_VERSION!= 	${DIGEST} -V 2>/dev/null
 MAKEFLAGS+=		DIGEST_VERSION="${DIGEST_VERSION}"
 .endif
 
+# Set the style of installation to be performed for the package.  The
+# funky make variable modifiers just select the first word of the value
+# stored in the referenced variable.
+#
+.for _pref_ in ${PKG_INSTALLATION_PREFS}
+.  if !empty(PKG_INSTALLATION_TYPES:M${_pref_})
+PKG_INSTALLATION_TYPE?=	${PKG_INSTALLATION_TYPES:M${_pref_}:S/^/_pkginsttype_/1:M_pkginsttype_*:S/^_pkginsttype_//}
+.  endif
+.endfor
+PKG_INSTALLATION_TYPE?=	none
+
+# This is the package database directory for the default view.
+PKG_DBDIR?=		${DESTDIR}/var/db/pkg
+
+# _PKG_DBDIR is the actual packages database directory where we register
+# packages.
+#
+.if ${PKG_INSTALLATION_TYPE} == "overwrite"
+_PKG_DBDIR=		${PKG_DBDIR}
+.elif ${PKG_INSTALLATION_TYPE} == "pkgviews"
+_PKG_DBDIR=		${DEPOTBASE}
+.endif
+
 PKG_ADD_CMD?=		${PKG_TOOLS_BIN}/pkg_add
 PKG_ADMIN_CMD?=		${PKG_TOOLS_BIN}/pkg_admin
 PKG_CREATE_CMD?=	${PKG_TOOLS_BIN}/pkg_create
 PKG_DELETE_CMD?=	${PKG_TOOLS_BIN}/pkg_delete
 PKG_INFO_CMD?=		${PKG_TOOLS_BIN}/pkg_info
+PKG_VIEW_CMD?=		${PKG_TOOLS_BIN}/pkg_view
+LINKFARM_CMD?=		${PKG_TOOLS_BIN}/linkfarm
 
-PKG_DBDIR?=		${DESTDIR}/var/db/pkg
-PKG_ADD?=		PKG_DBDIR=${PKG_DBDIR} ${PKG_ADD_CMD}
-PKG_ADMIN?=		PKG_DBDIR=${PKG_DBDIR} ${PKG_ADMIN_CMD}
-PKG_CREATE?=		PKG_DBDIR=${PKG_DBDIR} ${PKG_CREATE_CMD}
-PKG_DELETE?=		PKG_DBDIR=${PKG_DBDIR} ${PKG_DELETE_CMD}
-PKG_INFO?=		PKG_DBDIR=${PKG_DBDIR} ${PKG_INFO_CMD}
+# The binary pkg_install tools all need to consistently to refer to the
+# correct package database directory.
+#
+PKGTOOLS_ARGS?=		-K ${_PKG_DBDIR}
+
+# Views are rooted in ${LOCALBASE}, all packages are depoted in
+# ${DEPOTBASE}, and the package database directory for the default view
+# is in ${PKG_DBDIR}.
+#
+PKG_VIEW_ARGS?=		-W ${LOCALBASE} -d ${DEPOTBASE} -k ${PKG_DBDIR}
+
+PKG_ADD?=		${PKG_ADD_CMD} ${PKGTOOLS_ARGS}
+PKG_ADMIN?=		${PKG_ADMIN_CMD} ${PKGTOOLS_ARGS}
+PKG_CREATE?=		${PKG_CREATE_CMD} ${PKGTOOLS_ARGS}
+PKG_DELETE?=		${PKG_DELETE_CMD} ${PKGTOOLS_ARGS}
+PKG_INFO?=		${PKG_INFO_CMD} ${PKGTOOLS_ARGS}
+PKG_VIEW?=		${PKG_VIEW_CMD} ${PKG_VIEW_ARGS}
+LINKFARM?=		${LINKFARM_CMD}
 
 .ifndef PKGTOOLS_VERSION
-PKGTOOLS_VERSION!=	${PKG_INFO} -V 2>/dev/null || echo 20010302
+PKGTOOLS_VERSION!=	${PKG_INFO_CMD} -V 2>/dev/null || echo 20010302
 MAKEFLAGS+=		PKGTOOLS_VERSION="${PKGTOOLS_VERSION}"
 .endif
 

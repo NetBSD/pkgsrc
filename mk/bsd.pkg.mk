@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1251 2003/08/31 10:29:16 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1252 2003/09/02 06:59:42 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -87,14 +87,58 @@ _DISTDIR?=		${DISTDIR}/${DIST_SUBDIR}
 
 INTERACTIVE_STAGE?=	none
 
-# Set the default BUILDLINK_DIR, BUILDLINK_X11PKG_DIR,  BUILDLINK_X11_DIR so
-# that if no buildlink2.mk files are included, then they still point to
-# where headers and libraries for installed packages and X11R6 may be found.
+# PKG_INSTALLATION_TYPE can only be one of two values: "pkgviews" or
+# "overwrite".
 #
-USE_BUILDLINK2?=	no		# default to not using buildlink2
+.if (${PKG_INSTALLATION_TYPE} != "pkgviews") && \
+    (${PKG_INSTALLATION_TYPE} != "overwrite")
+PKG_FAIL_REASON+=	"PKG_INSTALLATION_TYPE must be \`\`pkgviews'' or \`\`overwrite''."
+.endif
+
+.if empty(PKG_INSTALLATION_TYPES:M${PKG_INSTALLATION_TYPE})
+PKG_FAIL_REASON+=	"This package doesn't support PKG_INSTALLATION_TYPE=${PKG_INSTALLATION_TYPE}."
+.endif
+
+# The style of PLISTs that are used by the installed package.
+# Possible: dynamic, static
+#
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+PLIST_TYPE?=		dynamic
+.elif ${PKG_INSTALLATION_TYPE} == "overwrite"
+PLIST_TYPE?=		static
+.else
+PLIST_TYPE?=		static
+.endif
+
+# PLIST_TYPE can only be one of two values: "dynamic" or "static".  If we
+# don't explicitly ask for "static", assume "dynamic".
+#
+.if (${PLIST_TYPE} != "dynamic") && (${PLIST_TYPE} != "static")
+PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`dynamic'' or \`\`static''."
+.endif
+
+.if (${PKG_INSTALLATION_TYPE} == "overwrite") && (${PLIST_TYPE} != "static")
+PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`static'' for \`\`overwrite'' packages."
+.endif
+
+USE_BUILDLINK2?=	no	# default to not using buildlink2
+USE_BUILDLINK3?=	no	# defualt to not using buildlink3
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+USE_BUILDLINK3=		yes	# pkgviews requires buildlink3
+.endif
+.if empty(USE_BUILDLINK2:M[nN][oO]) && empty(USE_BUILDLINK3:M[nN][oO])
+PKG_FAIL_REASON+=	"Please undefine USE_BUILDLINK2 or USE_BUILDLINK3."
+.endif
+
+.if !empty(USE_BUILDLINK3:M[nN][oO])
+#
+# Set the default BUILDLINK_DIR, BUILDLINK_X11_DIR so that if no
+# buildlink2.mk files are included, then they still point to where headers
+# and libraries for installed packages and X11R6 may be found.
+#
 BUILDLINK_DIR?=		${LOCALBASE}
-BUILDLINK_X11PKG_DIR?=	${X11BASE}
 BUILDLINK_X11_DIR?=	${X11BASE}
+.endif
 
 .if defined(USE_IMAKE)
 USE_X11BASE?=		implied
@@ -121,18 +165,42 @@ _OPSYS_NEEDS_XPKGWEDGE?=	yes
 _OPSYS_NEEDS_XPKGWEDGE?=	no
 .endif
 
-.if defined(USE_X11BASE)
-.  if !empty(_OPSYS_NEEDS_XPKGWEDGE:M[yY][eE][sS])
+.if ${PKG_INSTALLATION_TYPE} == "overwrite"
+.  if defined(USE_X11BASE)
+.    if !empty(_OPSYS_NEEDS_XPKGWEDGE:M[yY][eE][sS])
 BUILD_DEPENDS+=		xpkgwedge>=1.5:../../pkgtools/xpkgwedge
-BUILDLINK_X11PKG_DIR=	${LOCALBASE}
-.  endif
+.    endif
 PREFIX=			${X11PREFIX}
-.elif defined(USE_CROSSBASE)
+.  elif defined(USE_CROSSBASE)
 PREFIX=			${CROSSBASE}
 NO_MTREE=		yes
-.else
+.  else
 PREFIX=			${LOCALBASE}
+.  endif
+.elif ${PKG_INSTALLATION_TYPE} == "pkgviews"
+PREFIX=			${DEPOTBASE}/${PKGNAME}
+NO_MTREE=		yes
 .endif
+
+.if empty(DEPOT_SUBDIR)
+PKG_FAIL_REASON+=	"DEPOT_SUBDIR may not be empty."
+.endif
+
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+#
+# _PLIST_IGNORE_FILES basically mirrors the list of ignored files found
+# in pkg_views(1).  It's used by the dynamic PLIST generator to skip
+# adding the named files to the PLIST.
+#
+_PLIST_IGNORE_FILES=	+*			# package metadata files
+_PLIST_IGNORE_FILES+=	info/dir
+.if defined(INFO_DIR) && empty(INFO_DIR:Minfo)
+_PLIST_IGNORE_FILES+=	${INFO_DIR}/dir
+.endif
+_PLIST_IGNORE_FILES+=	*[~\#] *.OLD *.orig *,v # scratch config files
+_PLIST_IGNORE_FILES+=	${PLIST_IGNORE_FILES}
+.endif
+BUILD_DEFS+=		_PLIST_IGNORE_FILES
 
 # We need to make sure the buildlink-x11 package is not installed since it
 # breaks builds that use imake.
@@ -320,13 +388,17 @@ SHCOMMENT?=		${ECHO_MSG} >/dev/null '***'
 DISTINFO_FILE?=		${.CURDIR}/distinfo
 
 FIX_RPATH+=		LIBS
-LDFLAGS+=		-Wl,${RPATH_FLAG}${LOCALBASE}/lib
-LDFLAGS+=		-L${LOCALBASE}/lib
 .if defined(USE_X11)
 X11_LDFLAGS=		# empty
 X11_LDFLAGS+=		-Wl,${RPATH_FLAG}${X11BASE}/lib
 X11_LDFLAGS+=		-L${X11BASE}/lib
+.endif
+.if !empty(USE_BUILDLINK2:M[nN][oO]) && !empty(USE_BUILDLINK3:M[nN][oO])
+LDFLAGS+=		-Wl,${RPATH_FLAG}${LOCALBASE}/lib
+LDFLAGS+=		-L${LOCALBASE}/lib
+.  if defined(USE_X11)
 LDFLAGS+=		${X11_LDFLAGS}
+.  endif
 .endif
 FIX_RPATH+=		LDFLAGS
 MAKE_ENV+=		LDFLAGS="${LDFLAGS}"
@@ -501,21 +573,26 @@ DESCR_SRC?=		${PKGDIR}/DESCR
 .endif
 PLIST=			${WRKDIR}/.PLIST
 
+.if ${PLIST_TYPE} == "static"
 # Automatic platform dependent PLIST handling
-.if !defined(PLIST_SRC)
-.  if exists(${PKGDIR}/PLIST.common)
+.  if !defined(PLIST_SRC)
+.    if exists(${PKGDIR}/PLIST.common)
 PLIST_SRC=		${PKGDIR}/PLIST.common
-.    if exists(${PKGDIR}/PLIST.${OPSYS})
+.      if exists(${PKGDIR}/PLIST.${OPSYS})
 PLIST_SRC+=		${PKGDIR}/PLIST.${OPSYS}
-.    endif
-.    if exists(${PKGDIR}/PLIST.common_end)
+.      endif
+.      if exists(${PKGDIR}/PLIST.common_end)
 PLIST_SRC+=		${PKGDIR}/PLIST.common_end
-.    endif
-.  elif exists(${PKGDIR}/PLIST.${OPSYS})
+.      endif
+.    elif exists(${PKGDIR}/PLIST.${OPSYS})
 PLIST_SRC=		${PKGDIR}/PLIST.${OPSYS}
-.  else
+.    else
 PLIST_SRC=		${PKGDIR}/PLIST
+.    endif
 .  endif
+_PLIST_SRC=		${PLIST_SRC}
+.elif ${PLIST_TYPE} == "dynamic"
+_PLIST_SRC=		# empty, since we're using a dynamic PLIST
 .endif
 
 DLIST=			${WRKDIR}/.DLIST
@@ -640,7 +717,7 @@ uptodate-digest:
 .if defined(_OPSYS_PKGTOOLS_REQD)
 PKGTOOLS_REQD=		${_OPSYS_PKGTOOLS_REQD}
 .else
-PKGTOOLS_REQD=		20021123
+PKGTOOLS_REQD=		20030823
 .endif
 
 # Check that we are using up-to-date pkg_* tools with this file.
@@ -710,6 +787,11 @@ PKG_ARGS_INSTALL=	-p ${PREFIX} ${PKG_ARGS_COMMON}
 PKG_ARGS_BINPKG=	-p ${PREFIX:S/^${DESTDIR}//} -L ${PREFIX} ${PKG_ARGS_COMMON}
 .endif # !PKG_ARGS_COMMON
 
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+PKG_ARGS_INSTALL+=	-U	# don't update the pkgdb.byfile.db
+PKG_ARGS_BINPKG+=	-E	# create an empty views file in the binpkg
+.endif
+
 PKG_SUFX?=		.tgz
 #PKG_SUFX?=		.tbz		# bzip2(1) pkgs
 
@@ -756,7 +838,7 @@ RMAN?=			${X11BASE}/bin/rman
 .if !empty(_USE_RPATH:M[nN][oO])
 .  if defined(FIX_RPATH) && !empty(FIX_RPATH)
 .    for var in ${FIX_RPATH}
-.      for _rpath_flag in ${RPATH_FLAG} -R -rpath -rpath-link
+.      for _rpath_flag in ${RPATH_FLAG} -R -rpath -rpath-link --rpath --rpath-link
 ${var}:=	${${var}:N-Wl,${_rpath_flag}*:N${_rpath_flag}*}
 .      endfor
 .    endfor
@@ -1161,12 +1243,29 @@ PKG_SYSCONFVAR?=	${PKGBASE}
 PKG_SYSCONFBASE?=	${PREFIX}/etc
 .if defined(PKG_SYSCONFDIR.${PKG_SYSCONFVAR})
 PKG_SYSCONFDIR=		${PKG_SYSCONFDIR.${PKG_SYSCONFVAR}}
+PKG_SYSCONFDEPOTBASE=	# empty
+PKG_SYSCONFVIEWBASE=	# empty
 .else
 PKG_SYSCONFSUBDIR?=	# empty
-.  if empty(PKG_SYSCONFSUBDIR)
-PKG_SYSCONFDIR=		${PKG_SYSCONFBASE}
+.  if ${PKG_INSTALLATION_TYPE} == "overwrite"
+PKG_SYSCONFDEPOTBASE=	# empty
+PKG_SYSCONFVIEWBASE=	# empty
+_PKG_SYSCONFBASE=	${PKG_SYSCONFBASE}
 .  else
-PKG_SYSCONFDIR=		${PKG_SYSCONFBASE}/${PKG_SYSCONFSUBDIR}
+PKG_SYSCONFVIEWBASE=	${PKG_SYSCONFBASE}
+.    if !empty(PKG_SYSCONFBASE:M${PREFIX}) || \
+        !empty(PKG_SYSCONFBASE:M${PREFIX}/*)
+PKG_SYSCONFDEPOTBASE=	# empty
+_PKG_SYSCONFBASE=	${PKG_SYSCONFBASE}
+.    else
+PKG_SYSCONFDEPOTBASE=	${PKG_SYSCONFBASE}/${DEPOT_SUBDIR}
+_PKG_SYSCONFBASE=	${PKG_SYSCONFDEPOTBASE}/${PKGNAME}
+.    endif
+.  endif
+.  if empty(PKG_SYSCONFSUBDIR)
+PKG_SYSCONFDIR=		${_PKG_SYSCONFBASE}
+.  else
+PKG_SYSCONFDIR=		${_PKG_SYSCONFBASE}/${PKG_SYSCONFSUBDIR}
 .  endif
 .endif
 
@@ -1186,12 +1285,16 @@ SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR} \
 SCRIPTS_ENV+=	BATCH=yes
 .endif
 
-.if !empty(USE_BUILDLINK2:M[nN][oO])
+.if !empty(USE_BUILDLINK2:M[nN][oO]) && !empty(USE_BUILDLINK3:M[nN][oO])
 NO_BUILDLINK=		# defined
 .endif
 
 .if !defined(NO_BUILDLINK)
-.  include "../../mk/buildlink2/bsd.buildlink2.mk"
+.  if empty(USE_BUILDLINK3:M[nN][oO])
+.    include "../../mk/buildlink3/bsd.buildlink3.mk"
+.  elif empty(USE_BUILDLINK2:M[nN][oO])
+.    include "../../mk/buildlink2/bsd.buildlink2.mk"
+.  endif
 .endif
 
 .include "../../mk/tools.mk"
@@ -2349,7 +2452,8 @@ delete-package:
 
 .PHONY: real-su-install
 real-su-install: ${MESSAGE}
-.if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER)
+.if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER) &&	\
+    (${PKG_INSTALLATION_TYPE} == "overwrite")
 .  if defined(CONFLICTS)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${RM} -f ${WRKDIR}/.CONFLICTS
@@ -2362,7 +2466,7 @@ real-su-install: ${MESSAGE}
 .     endfor
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -s ${WRKDIR}/.CONFLICTS ]; then				\
-		found=`${SED} -e s'|${PKG_DBDIR}/||g' ${WRKDIR}/.CONFLICTS | tr '\012' ' '`; \
+		found=`${SED} -e s'|${_PKG_DBDIR}/||g' ${WRKDIR}/.CONFLICTS | tr '\012' ' '`; \
 		${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} conflicts with installed package(s): $$found found."; \
 		${ECHO_MSG} "*** They install the same files into the same place."; \
 		${ECHO_MSG} "*** Please remove $$found first with pkg_delete(1)."; \
@@ -2381,12 +2485,35 @@ real-su-install: ${MESSAGE}
 		${ECHO_MSG} "***    dependencies, risking various problems."; \
 		exit 1;							\
 	fi
-.endif # !NO_PKG_REGISTER && !NO_FORCE_REGISTER
+.endif # !NO_PKG_REGISTER && !NO_FORCE_REGISTER && overwrite
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	found="`${PKG_INFO} -e ${PKGNAME} || ${TRUE}`";			\
+	if [ "$$found" != "" ]; then					\
+		${ECHO_MSG} "${_PKGSRC_IN}>  $$found is already installed."; \
+		exit 1;							\
+	fi
+.endif
 	${_PKG_SILENT}${_PKG_DEBUG}if [ `${SH} -c umask` -ne ${DEF_UMASK} ]; then \
 		${ECHO_MSG} "${_PKGSRC_IN}>  Warning: your umask is \"`${SH} -c umask`"\".; \
 		${ECHO_MSG} "If this is not desired, set it to an appropriate value (${DEF_UMASK})"; \
 		${ECHO_MSG} "and install this package again by \`\`${MAKE} deinstall reinstall''."; \
 	fi
+.if defined(INSTALLATION_DIRS) && !empty(INSTALLATION_DIRS)
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "${_PKGSRC_IN}> Creating installation directories"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	for dir in ${INSTALLATION_DIRS}; do				\
+		case $$dir in						\
+		/*)	;;						\
+		*bin|*bin/*|*libexec|*libexec/*)			\
+			${INSTALL_PROGRAM_DIR} ${PREFIX}/$$dir ;;	\
+		*man/*)							\
+			${INSTALL_MAN_DIR} ${PREFIX}/$$dir ;;		\
+		*)							\
+			${INSTALL_DATA_DIR} ${PREFIX}/$$dir ;;		\
+		esac;							\
+	done
+.endif	# INSTALLATION_DIRS
 .if !defined(NO_MTREE)
 	${_PKG_SILENT}${_PKG_DEBUG}if [ `${ID} -u` = 0 ]; then		\
 		if [ ! -f ${MTREE_FILE} ]; then				\
@@ -2402,16 +2529,25 @@ real-su-install: ${MESSAGE}
 		${ECHO_MSG} "Warning: not superuser, can't run mtree."; \
 		${ECHO_MSG} "Become root and try again to ensure correct permissions."; \
 	fi
+.else
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${PREFIX}
 .endif # !NO_MTREE
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} pre-install-script
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} pre-install
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} do-install
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} post-install
+	${_PKG_SILENT}#
+	${_PKG_SILENT}# PLIST must be generated at this late point (instead of
+	${_PKG_SILENT}# depending on it somewhere earlier), because it needs
+	${_PKG_SILENT}# to be created _after_ the {pre,do,post}-install
+	${_PKG_SILENT}# targets are run.
+	${_PKG_SILENT}# 
+	${_PKG_SILENT}# We generate _before_ post-install-script is run so
+	${_PKG_SILENT}# that the real config files and rc.d scripts aren't
+	${_PKG_SILENT}# listed in the PLIST.
+	${_PKG_SILENT}#
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} ${PLIST}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} post-install-script
-	@# PLIST must be generated at this late point (instead of
-	@# depending on it somewhere earlier), as the
-	@# pre/do/post-install aren't run then yet:
-	@${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} ${PLIST}
 	${_PKG_SILENT}${_PKG_DEBUG}newmanpages=`${EGREP} -h		\
 		'^([^@/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.0)(\.gz)?$$' \
 		${PLIST} 2>/dev/null || ${TRUE}`;			\
@@ -2454,8 +2590,10 @@ real-su-install: ${MESSAGE}
 		done;							\
 	fi
 .if ${_DO_SHLIB_CHECKS} == "yes"
+.  if ${PKG_INSTALLATION_TYPE} == "overwrite"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${MAKE} ${MAKEFLAGS} do-shlib-handling SHLIB_PLIST_MODE=0
+.  endif
 .endif
 .ifdef MESSAGE
 	@${ECHO_MSG} "${_PKGSRC_IN}> Please note the following:"
@@ -3265,9 +3403,10 @@ lint:
 # Create a binary package from an install package using "pkg_tarup"
 .PHONY: tarup
 tarup:
+.if ${PKG_INSTALLATION_TYPE} == "overwrite"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${RM} -f ${PACKAGES}/All/${PKGNAME}${PKG_SUFX};			\
-	${SETENV} PKG_DBDIR=${PKG_DBDIR} PKG_SUFX=${PKG_SUFX}		\
+	${SETENV} PKG_DBDIR=${_PKG_DBDIR} PKG_SUFX=${PKG_SUFX}	\
 		PKGREPOSITORY=${PACKAGES}/All				\
 		${LOCALBASE}/bin/pkg_tarup ${PKGNAME};			\
 	for CATEGORY in ${CATEGORIES}; do				\
@@ -3276,21 +3415,22 @@ tarup:
 		${RM} -f ${PKGNAME}${PKG_SUFX};				\
 		${LN} -s ../All/${PKGNAME}${PKG_SUFX};			\
 	done
+.endif
 
 # shared code for replace and undo-replace
 _REPLACE=								\
-	if [ -f ${PKG_DBDIR}/$$oldpkgname/+REQUIRED_BY ]; then		\
-		${MV} ${PKG_DBDIR}/$$oldpkgname/+REQUIRED_BY ${WRKDIR}/.req; \
+	if [ -f ${_PKG_DBDIR}/$$oldpkgname/+REQUIRED_BY ]; then	\
+		${MV} ${_PKG_DBDIR}/$$oldpkgname/+REQUIRED_BY ${WRKDIR}/.req; \
 	fi;								\
 	${MAKE} deinstall;						\
 	$$replace_action;						\
 	if [ -f ${WRKDIR}/.req ]; then					\
-		${MV} ${WRKDIR}/.req ${PKG_DBDIR}/$$newpkgname/+REQUIRED_BY; \
-		for pkg in `${CAT} ${PKG_DBDIR}/$$newpkgname/+REQUIRED_BY`; do \
+		${MV} ${WRKDIR}/.req ${_PKG_DBDIR}/$$newpkgname/+REQUIRED_BY; \
+		for pkg in `${CAT} ${_PKG_DBDIR}/$$newpkgname/+REQUIRED_BY`; do \
 			${SETENV} NEWPKGNAME=$$newpkgname		\
 				${AWK} '/^@pkgdep '$$oldpkgname'/ { print "@pkgdep " ENVIRON["NEWPKGNAME"]; next } { print }' \
-				< ${PKG_DBDIR}/$$pkg/+CONTENTS > ${PKG_DBDIR}/$$pkg/+CONTENTS.$$$$ && \
-			${MV} ${PKG_DBDIR}/$$pkg/+CONTENTS.$$$$ ${PKG_DBDIR}/$$pkg/+CONTENTS; \
+				< ${_PKG_DBDIR}/$$pkg/+CONTENTS > ${_PKG_DBDIR}/$$pkg/+CONTENTS.$$$$ && \
+			${MV} ${_PKG_DBDIR}/$$pkg/+CONTENTS.$$$$ ${_PKG_DBDIR}/$$pkg/+CONTENTS; \
 		done;							\
 	fi
 
@@ -3651,8 +3791,14 @@ checksum: fetch uptodate-digest
 BINPKG_SITES?= \
 	ftp://ftp.netbsd.org/pub/NetBSD/packages/$${rel}/$${arch}
 
-# List of flags to pass to pkg_add(8) for bin-install:
+# List of flags to pass to pkg_add(1) for bin-install:
+
 BIN_INSTALL_FLAGS?= 	# -v
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+PKG_ARGS_ADD=		-W ${LOCALBASE}
+.endif
+_BIN_INSTALL_FLAGS=	${BIN_INSTALL_FLAGS}
+_BIN_INSTALL_FLAGS+=	${PKG_ARGS_ADD}
 
 # Install binary pkg, without strict uptodate-check first
 .PHONY: bin-install
@@ -3667,13 +3813,13 @@ bin-install:
 	fi
 	@if [ -f ${PKGFILE} ] ; then 					\
 		${ECHO_MSG} "Installing from binary pkg ${PKGFILE}" ;	\
-		${PKG_ADD} ${PKGFILE} ; 				\
+		${PKG_ADD} ${_BIN_INSTALL_FLAGS} ${PKGFILE} ;		\
 	else 				 				\
 		rel=`${UNAME} -r | ${SED} 's@\.\([0-9]*\)[\._].*@\.\1@'`; \
 		arch=${MACHINE_ARCH}; 					\
 		for site in ${BINPKG_SITES} ; do 			\
 			${ECHO} Trying `eval ${ECHO} $$site`/All ; 	\
-			${SHCOMMENT} ${ECHO} ${SETENV} PKG_PATH="`eval ${ECHO} $$site`/All" ${PKG_ADD} ${BIN_INSTALL_FLAGS} ${PKGNAME}${PKG_SUFX} ; \
+			${SHCOMMENT} ${ECHO} ${SETENV} PKG_PATH="`eval ${ECHO} $$site`/All" ${PKG_ADD} ${_BIN_INSTALL_FLAGS} ${PKGNAME}${PKG_SUFX} ; \
 			if ${SETENV} PKG_PATH="`eval ${ECHO} $$site`/All" ${PKG_ADD} ${BIN_INSTALL_FLAGS} ${PKGNAME}${PKG_SUFX} ; then \
 				${ECHO} "${PKGNAME} successfully installed."; \
 				break ; 				\
@@ -4290,10 +4436,17 @@ print-PLIST:
 	| ${SED} ${SUBST_PLIST_REPLACEMENT2}
 .endif # target(print-PLIST)
 
+# By default, all packages attempt to link into the views.
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+BUILD_VIEWS?=	yes
+.endif
+
+# XXX Only support the standard view.
+PKGVIEWS=	""
 
 # Fake installation of package so that user can pkg_delete it later.
 # Also, make sure that an installed package is recognized correctly in
-# accordance to the @pkgdep directive in the packing lists
+# accordance to the @pkgdep directive in the packing lists.
 
 .PHONY: fake-pkg
 .if !target(fake-pkg)
@@ -4304,13 +4457,15 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		exit 1;							\
 	fi
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ ! -d ${PKG_DBDIR} ]; then					\
-		${RM} -f ${PKG_DBDIR};					\
-		${MKDIR} ${PKG_DBDIR};					\
+	if [ ! -d ${_PKG_DBDIR} ]; then					\
+		${RM} -f ${_PKG_DBDIR};					\
+		${MKDIR} ${_PKG_DBDIR};					\
 	fi
 .  if defined(FORCE_PKG_REGISTER)
 	${_PKG_SILENT}${_PKG_DEBUG}${PKG_DELETE} -O ${PKGNAME}
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${PKG_DBDIR}/${PKGNAME}
+.    if ${PKG_INSTALLATION_TYPE} == "overwrite"
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${_PKG_DBDIR}/${PKGNAME}
+.    endif
 .  endif
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${BUILD_VERSION_FILE} ${BUILD_INFO_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${SIZE_PKG_FILE} ${SIZE_ALL_FILE}
@@ -4394,36 +4549,46 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 	${ECHO} $$size_this >${SIZE_PKG_FILE};				\
 	${ECHO} $$size_this $$size_depends + p | ${DC} >${SIZE_ALL_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ ! -d ${PKG_DBDIR}/${PKGNAME} ]; then			\
+	doit=yes;							\
+	case ${PKG_INSTALLATION_TYPE} in				\
+	overwrite)	if [ -d ${_PKG_DBDIR}/${PKGNAME} ]; then	\
+				doit=no;				\
+			fi ;;						\
+	esac;								\
+	case $$doit in							\
+	yes)								\
 		${ECHO_MSG} "${_PKGSRC_IN}> Registering installation for ${PKGNAME}"; \
-		${MKDIR} ${PKG_DBDIR}/${PKGNAME};			\
-		${PKG_CREATE} ${PKG_ARGS_INSTALL} -O ${PKGFILE} > ${PKG_DBDIR}/${PKGNAME}/+CONTENTS; \
-		${CP} ${DESCR} ${PKG_DBDIR}/${PKGNAME}/+DESC;		\
-		${ECHO} ${COMMENT:Q} > ${PKG_DBDIR}/${PKGNAME}/+COMMENT; \
-		${CP} ${BUILD_VERSION_FILE} ${PKG_DBDIR}/${PKGNAME}/+BUILD_VERSION; \
-		${CP} ${BUILD_INFO_FILE} ${PKG_DBDIR}/${PKGNAME}/+BUILD_INFO; \
+		${MKDIR} ${_PKG_DBDIR}/${PKGNAME};			\
+		${PKG_CREATE} ${PKG_ARGS_INSTALL} -O ${PKGFILE} > ${_PKG_DBDIR}/${PKGNAME}/+CONTENTS; \
+		${CP} ${DESCR} ${_PKG_DBDIR}/${PKGNAME}/+DESC;	\
+		${ECHO} ${COMMENT:Q} > ${_PKG_DBDIR}/${PKGNAME}/+COMMENT; \
+		${CP} ${BUILD_VERSION_FILE} ${_PKG_DBDIR}/${PKGNAME}/+BUILD_VERSION; \
+		${CP} ${BUILD_INFO_FILE} ${_PKG_DBDIR}/${PKGNAME}/+BUILD_INFO; \
 		if ${TEST} -e ${SIZE_PKG_FILE}; then 			\
-			${CP} ${SIZE_PKG_FILE} ${PKG_DBDIR}/${PKGNAME}/+SIZE_PKG; \
+			${CP} ${SIZE_PKG_FILE} ${_PKG_DBDIR}/${PKGNAME}/+SIZE_PKG; \
 		fi ; 							\
 		if ${TEST} -e ${SIZE_ALL_FILE}; then 			\
-			${CP} ${SIZE_ALL_FILE} ${PKG_DBDIR}/${PKGNAME}/+SIZE_ALL; \
+			${CP} ${SIZE_ALL_FILE} ${_PKG_DBDIR}/${PKGNAME}/+SIZE_ALL; \
 		fi ; 							\
 		if ${TEST} -e ${PRESERVE_FILE}; then 			\
-			${CP} ${PRESERVE_FILE} ${PKG_DBDIR}/${PKGNAME}/+PRESERVE; \
+			${CP} ${PRESERVE_FILE} ${_PKG_DBDIR}/${PKGNAME}/+PRESERVE; \
 		fi ; 							\
+		if [ "${PKG_INSTALLATION_TYPE}" = "pkgviews" ]; then	\
+			${TOUCH} ${_PKG_DBDIR}/${PKGNAME}/+VIEWS;	\
+		fi ;							\
 		if [ -n "${INSTALL_FILE}" ]; then			\
 			if ${TEST} -e ${INSTALL_FILE}; then		\
-				${CP} ${INSTALL_FILE} ${PKG_DBDIR}/${PKGNAME}/+INSTALL; \
+				${CP} ${INSTALL_FILE} ${_PKG_DBDIR}/${PKGNAME}/+INSTALL; \
 			fi;						\
 		fi;							\
 		if [ -n "${DEINSTALL_FILE}" ]; then			\
 			if ${TEST} -e ${DEINSTALL_FILE}; then		\
-				${CP} ${DEINSTALL_FILE} ${PKG_DBDIR}/${PKGNAME}/+DEINSTALL; \
+				${CP} ${DEINSTALL_FILE} ${_PKG_DBDIR}/${PKGNAME}/+DEINSTALL; \
 			fi;						\
 		fi;							\
 		if [ -n "${MESSAGE}" ]; then				\
 			if ${TEST} -e ${MESSAGE}; then			\
-				${CP} ${MESSAGE} ${PKG_DBDIR}/${PKGNAME}/+DISPLAY; \
+				${CP} ${MESSAGE} ${_PKG_DBDIR}/${PKGNAME}/+DISPLAY; \
 			fi;						\
 		fi;							\
 		list="`${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true ECHO_MSG=${TRUE} | ${SORT} -u`" ; \
@@ -4435,24 +4600,106 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 				${ECHO} "    Please check if this is really intended!" ; \
 				continue ; 				\
 			fi ; 						\
-		done ; 							\
+		done ;							\
 		for realdep in `${ECHO} $$list | ${XARGS} -n 1 ${SETENV} ${PKG_INFO} -e | ${SORT} -u`; do \
 			if ${TEST} -z "$$realdep"; then			\
 				${ECHO} "$$dep not installed - dependency NOT registered" ; \
-			elif [ -d ${PKG_DBDIR}/$$realdep ]; then	\
-				if ${TEST} ! -e ${PKG_DBDIR}/$$realdep/+REQUIRED_BY; then \
-					${TOUCH} ${PKG_DBDIR}/$$realdep/+REQUIRED_BY; \
+			elif [ -d ${_PKG_DBDIR}/$$realdep ]; then	\
+				if ${TEST} ! -e ${_PKG_DBDIR}/$$realdep/+REQUIRED_BY; then \
+					${TOUCH} ${_PKG_DBDIR}/$$realdep/+REQUIRED_BY; \
 				fi; 					\
 				${AWK} 'BEGIN { found = 0; } 		\
 					$$0 == "${PKGNAME}" { found = 1; } \
 					{ print $$0; } 			\
 					END { if (!found) { printf("%s\n", "${PKGNAME}"); }}' \
-					< ${PKG_DBDIR}/$$realdep/+REQUIRED_BY > ${PKG_DBDIR}/$$realdep/reqby.$$$$; \
-				${MV} ${PKG_DBDIR}/$$realdep/reqby.$$$$ ${PKG_DBDIR}/$$realdep/+REQUIRED_BY; \
+					< ${_PKG_DBDIR}/$$realdep/+REQUIRED_BY > ${_PKG_DBDIR}/$$realdep/reqby.$$$$; \
+				${MV} ${_PKG_DBDIR}/$$realdep/reqby.$$$$ ${_PKG_DBDIR}/$$realdep/+REQUIRED_BY; \
 				${ECHO} "${PKGNAME} requires installed package $$realdep"; \
 			fi;						\
-		done;							\
-	fi
+		done ;;							\
+	esac
+.  if (${PKG_INSTALLATION_TYPE} == "pkgviews") && (${BUILD_VIEWS} == "yes")
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} build-views
+.  endif	# pkgviews
+.endif		# !fake-pkg
+
+.PHONY: build-views
+build-views: do-su-build-views
+
+.PHONY: do-su-build-views
+do-su-build-views:
+	@${ECHO_MSG} "${_PKGSRC_IN}> Building views for ${PKGNAME}"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	realtarget="real-su-build-views";				\
+	action="build-views";						\
+	${_SU_TARGET}
+
+.PHONY: real-su-build-views
+.if !target(real-su-build-views)
+real-su-build-views:
+.  if (${PKG_INSTALLATION_TYPE} == "pkgviews") && defined(PKGVIEWS)
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${MKDIR} ${LOCALBASE};						\
+	for v in ${PKGVIEWS}; do					\
+		case "$$v" in						\
+		"")	dbdir=${PKG_DBDIR}; viewname=standard ;;	\
+		*)	dbdir=${LOCALBASE}/$$v/.dbdir; viewname=$$v ;;	\
+		esac;							\
+		${ECHO} "=> Performing package view clash check for ${PKGNAME} in $$viewname view"; \
+		pkg=`${PKG_INFO_CMD} -K $$dbdir -e ${PKGBASE} || ${TRUE}`; \
+		case "$$pkg" in						\
+		"")	;;						\
+		*)	${ECHO} "*** ${PKGBASE} exists in $$viewname view - package $$pkg ***"; \
+			${ECHO} "*** Not hoisting ${PKGNAME} into $$viewname view"; \
+			continue ;;					\
+		esac;							\
+		${ECHO} "=> Performing package view overwrite check for ${PKGNAME} in $$viewname view"; \
+		dups=`${SETENV} PLIST_IGNORE_FILES="${_PLIST_IGNORE_FILES}" ${PKG_VIEW} --view=$$v check ${PKGNAME} || ${TRUE}`; \
+		case "$$dups" in					\
+		"")	;;						\
+		*)	${ECHO} "***********************************************************"; \
+			${ECHO} "**** The following symbolic links will be overwritten *****"; \
+			for f in $$dups; do				\
+				${LS} -l ${LOCALBASE}/$$v/$$f;		\
+			done;						\
+			${ECHO} "***********************************************************"; \
+			;;						\
+		esac;							\
+		${ECHO} "=> Linking package into $$viewname view";	\
+		${SETENV} PLIST_IGNORE_FILES="${_PLIST_IGNORE_FILES}" ${PKG_VIEW} --view=$$v add ${PKGNAME}; \
+	done
+.  else
+	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
+.  endif
+.endif
+
+.PHONY: remove-views
+remove-views: do-su-remove-views
+
+.PHONY: do-su-remove-views
+do-su-remove-views:
+	@${ECHO_MSG} "${_PKGSRC_IN}> Removing ${PKGNAME} from views"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	realtarget="real-su-remove-views";				\
+	action="remove-views";						\
+	${_SU_TARGET}
+
+.PHONY: real-su-remove-views
+.if !target(real-su-remove-views)
+real-su-remove-views:
+.  if (${PKG_INSTALLATION_TYPE} == "pkgviews") && defined(PKGVIEWS)
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	for v in ${PKGVIEWS}; do					\
+		case "$$v" in						\
+		"")	dbdir=${PKG_DBDIR}; viewname=standard ;;	\
+		*)	dbdir=${LOCALBASE}/$$v/.dbdir; viewname=$$v ;;	\
+		esac;							\
+		${ECHO} "=> Removing package from $$viewname view";	\
+		${SETENV} PLIST_IGNORE_FILES="${_PLIST_IGNORE_FILES}" ${PKG_VIEW} --view=$$v delete ${PKGNAME}; \
+	done
+.else
+	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
+.  endif
 .endif
 
 # Depend is generally meaningless for arbitrary packages, but if someone wants
@@ -4477,7 +4724,7 @@ MANCOMPRESSED=	yes
 MAKE_ENV+=	MANZ="${MANZ}"
 .endif
 
-# generate ${PLIST} from ${PLIST_SRC} by:
+# generate ${PLIST} from ${_PLIST_SRC} by:
 # - fixing list of man-pages according to MANCOMPRESSED/MANZ
 #   (we don't take any notice of MANCOMPRESSED as many packages have .gz
 #   pages in PLIST even when they install manpages without compressing them)
@@ -4577,14 +4824,36 @@ ${MESSAGE}: ${MESSAGE_SRC}
 
 # GENERATE_PLIST is a sequence of commands, terminating in a semicolon,
 #	that outputs contents for a PLIST to stdout and is appended to
-#	the contents of ${PLIST_SRC}.
+#	the contents of ${_PLIST_SRC}.
 #
 GENERATE_PLIST?=	${TRUE};
-_GENERATE_PLIST=	${CAT} ${PLIST_SRC}; ${GENERATE_PLIST}
+.if ${PLIST_TYPE} == "dynamic"
+_PLIST_IGNORE_CMD=							\
+	( while read i; do						\
+		ignore=no;						\
+		for p in ${_PLIST_IGNORE_FILES}; do			\
+	  		case "$$i" in					\
+			$$p)	ignore=yes; break ;;			\
+			esac;						\
+		done;							\
+		[ "$$ignore" = "yes" ] || ${ECHO} "$$i";		\
+	  done )
+_GENERATE_PLIST=							\
+	${FIND} ${PREFIX} \! -type d -print | ${SORT} |			\
+		${SED} -e "s|^${PREFIX}/||" | 				\
+		${_PLIST_IGNORE_CMD};					\
+	${FIND} ${PREFIX} -type d -print | ${SORT} -r |			\
+		${GREP} -v "^${PREFIX}$$" |				\
+		${_PLIST_IGNORE_CMD} |					\
+		${SED} -e "s|^${PREFIX}/|@unexec ${RMDIR} -p %D/|"	\
+		       -e "s,$$, 2>/dev/null || ${TRUE},";
+.else
+_GENERATE_PLIST=	${CAT} ${_PLIST_SRC}; ${GENERATE_PLIST}
+.endif
 
 .PHONY: plist
 plist: ${PLIST}
-${PLIST}: ${PLIST_SRC}
+${PLIST}: ${_PLIST_SRC}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	{ ${_GENERATE_PLIST} } | 					\
 		${_MANINSTALL_CMD}					\
@@ -4594,7 +4863,7 @@ ${PLIST}: ${PLIST_SRC}
 			${_MANZ_EXPRESSION}				\
 		> ${PLIST}; 						\
 	  ${MAKE} ${MAKEFLAGS} do-shlib-handling			\
-		SHLIB_PLIST_MODE=1 ;					\
+		SHLIB_PLIST_MODE=1
 
 # generate ${DESCR} from ${DESCR_SRC} by:
 # - Appending the homepage URL, if any

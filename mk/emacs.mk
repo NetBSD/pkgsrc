@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.15 2003/08/18 13:16:24 minoura Exp $
+# $NetBSD: emacs.mk,v 1.16 2003/09/02 06:59:46 jlam Exp $
 #
 # A Makefile fragment for Emacs Lisp packages.
 #

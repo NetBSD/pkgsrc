@@ -1,4 +1,4 @@
-# $NetBSD: libtool-fix-la,v 1.21 2003/08/31 08:56:39 jlam Exp $
+# $NetBSD: libtool-fix-la,v 1.22 2003/09/02 06:59:51 jlam Exp $
 #
 # For *.la files, in the "relink_command" line, we make the following
 # replacements:
