@@ -4,7 +4,8 @@
 # Date created:         26 June 1995
 # Whom:                 ache
 #
-# $Id: Makefile,v 1.1.1.1 1998/01/23 12:19:45 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 1998/01/23 13:17:11 bouyer Exp $
+# FreeBSD: Makefile,v 1.42 1997/12/24 01:21:07 alex Exp
 #
 
 DISTNAME=       elm-2.4ME+32
@@ -23,6 +24,10 @@ HAS_CONFIGURE=  Yes
 CONFIGURE_SCRIPT= Configure
 CONFIGURE_ENV=  PREFIX="${PREFIX}"
 CONFIGURE_ARGS= -S
+
+pre-configure::
+	${MV} ${WRKSRC}/nls/LANGS ${WRKSRC}/nls/LANGS.tmpl
+	${SED} -e 's:__PREFIX:'${PREFIX}':g'< ${WRKSRC}/nls/LANGS.tmpl > ${WRKSRC}/nls/LANGS
 
 post-install:
 	cd ${WRKSRC}/nls; ${MAKE} install
