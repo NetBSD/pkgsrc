@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink3.mk,v 1.10 2004/07/27 11:28:41 xtraeme Exp $
+# $NetBSD: pthread.buildlink3.mk,v 1.11 2004/07/27 11:30:55 xtraeme Exp $
 #
 # The pthreads strategy for pkgsrc is to "bless" a particular pthread
 # package as the Official Pthread Replacement (OPR).  A package that uses
@@ -165,7 +165,7 @@ BUILDLINK_LDADD.pthread=	-lc_r
 # In OpenBSD there is no libpthread.so, just libpthread.so.X.X.
 .  elif ${OPSYS} == "OpenBSD"
 _CHECK_LIBPTH!=	\
-	if [ -f /usr/lib/libpthread.so.* ]; then \
+	if ${TEST} -f /usr/lib/libpthread.so.*; then \
 		${ECHO} "yes";	\
 	else			\
 		${ECHO} "no";	\
