@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2004/05/17 10:56:17 grant Exp $
+# $NetBSD: Makefile,v 1.53 2004/05/17 11:11:30 grant Exp $
 
 DISTNAME=	pine4.60
 PKGNAME=	pico-4.7
@@ -22,6 +22,7 @@ USE_LIBTOOL=	YES
 BUILDNAME=	so5
 .elif ${OPSYS} == "Darwin"
 BUILDNAME=	osx
+LIBS+=		-lcurses
 .elif ${OPSYS} == "Linux"
 BUILDNAME=	lnx
 .else
@@ -34,7 +35,8 @@ do-build:
 	cd ${WRKSRC} && \
 	${SETENV} ${MAKE_ENV} ./build ${BUILDNAME} \
 	  CC="${LIBTOOL} ${CC}" \
-	  PREFIX=${PREFIX} OPTIMIZE="${CFLAGS}"
+	  PREFIX=${PREFIX} OPTIMIZE="${CFLAGS}" \
+	  EXTRALDFLAGS="${LIBS}"
 
 do-install:
 	${LIBTOOL} --mode=install ${INSTALL_DATA} \
