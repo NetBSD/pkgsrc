@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.6 2001/07/26 16:54:43 hubertf Exp $
+
+--- configure.orig	Thu Jul 26 18:46:19 2001
++++ configure	Thu Jul 26 18:50:12 2001
+@@ -2058,7 +2058,7 @@
+ 	/usr/local/lib \
+ 	/usr/lib/slang \
+         /usr/lib \
+-	/usr/pkg/lib"
++	${PREFIX}/lib"
+   
+       for slang_dir in $slang_library_dirs; do
+         if test -r $slang_dir/libslang.a || test -r $slang_dir/libslang.so; then
+@@ -2126,7 +2126,7 @@
+ 	/usr/local/include \
+ 	/usr/include/slang \
+         /usr/include \
+-	/usr/pkg/include"
++	${PREFIX}/include"
+       
+       for slang_dir in $slang_include_dirs; do
+         if test -r "$slang_dir/slang.h"; then
