@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 22:55:04 grant Exp $
-#
+# $NetBSD: Makefile,v 1.14 2003/11/13 21:13:49 tron Exp $
 
 DISTNAME=	plan-1.8.4
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
@@ -13,6 +12,13 @@ COMMENT=	Schedule planner based on X/Motif
 USE_BUILDLINK2=	YES
 USE_X11BASE=	YES
 ALL_TARGET=	netbsd
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(CC_VERSION:Mgcc-3.*)
+post-configure:
+	${TOUCH} ${BUILDLINK_DIR}/include/varargs.h
+.endif
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/libexec/plan ${PREFIX}/share/plan \
