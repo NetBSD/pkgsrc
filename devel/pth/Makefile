@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2002/07/24 15:28:06 skrll Exp $
+# $NetBSD: Makefile,v 1.43 2002/07/28 16:21:30 schmonz Exp $
 #
 
 DISTNAME=		pth-1.4.1
@@ -16,6 +16,8 @@ USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-pthread
+CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config.guess
+CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub
 .if (${MACHINE_ARCH} == "i386" && ${CFLAGS:M-O2} == "-O2")
 CFLAGS:=		${CFLAGS:S/-O2/-O0/}
 .endif
