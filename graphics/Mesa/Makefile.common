@@ -1,6 +1,5 @@
-# $NetBSD: Makefile.common,v 1.18 2003/08/26 01:43:51 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.19 2003/09/29 21:30:28 jschauma Exp $
 
-MESA_VERSION=		5.0.1
 DISTNAME?=		MesaLib-${MESA_VERSION}
 CATEGORIES?=		graphics
 MASTER_SITES?= 		${MASTER_SITE_SOURCEFORGE:=mesa3d/}
@@ -9,6 +8,7 @@ EXTRACT_SUFX?=		.tar.bz2
 MAINTAINER?=		tech-pkg@NetBSD.org
 HOMEPAGE?=		http://www.mesa3d.org/
 
+AUTOMAKE_REQD=		1.4
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
@@ -16,4 +16,11 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE?=		yes
 CONFIGURE_ARGS+=	--enable-static
 
+.if !target(pre-patch)
+pre-patch:
+	cd ${WRKSRC} && ${ACLOCAL} && ${AUTOMAKE}
+.endif
+
+.include "../../graphics/Mesa/version.mk"
+.include "../../mk/automake.mk"
 .include "../../mk/bsd.prefs.mk"
