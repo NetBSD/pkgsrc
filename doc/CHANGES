@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4830 2004/02/14 20:43:00 recht Exp $
+$NetBSD: CHANGES,v 1.4831 2004/02/14 21:45:53 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -831,3 +831,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated wol to 0.7.0 [uebayasi 2004-02-14]
 	Added shared-mime-info-0.13 [jmmv 2004-02-14]
 	Updated mono to 0.30.1 [recht 2004-02-14]
+	Added gnome-spell-1.0.5 [minskim 2004-02-14]
