@@ -1,0 +1,13 @@
+Hermes is intended for use in graphics libraries or directly in
+graphics programs. In the beginning the goal was to provide the
+fastest possible routines for the purpose Hermes was designed for,
+thus the target were fast graphics libraries for games and the
+sort.  However, lately more and more choice for high-quality
+rendering is being built in so things like photorealistic rendering
+software might profit from the speed of Hermes in the very near
+future.
+
+The library is straight-forward to use. There are about 8 functions
+you will need to know about for a simple application and probably
+twice as many for a more complicated one. It should take about 10
+minutes to build Hermes into your code.
