@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.645 2001/01/21 22:41:03 veego Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.646 2001/01/22 04:00:54 dmcmahill Exp $
 #
 # This file is in the public domain.
 #
@@ -1305,6 +1305,26 @@ do-fetch:
 		${_CHECK_DIST_PATH};					\
 		${_FETCH_FILE}						\
 	 done
+.endif
+.endif
+
+# show both build and run depends directories (non-recursively)
+.if !target(show-depends-dirs)
+show-depends-dirs:
+.if defined(IGNORE)
+	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
+.else
+	${_PKG_SILENT}${_PKG_DEBUG}                                     \
+	dlist="";\
+	for reldir in ${DEPENDS:C/^[^:]*://:C/:.*$//} ${BUILD_DEPENDS:C/^[^:]*://:C/:.*$//} ;\
+	do \
+		cd $$reldir ;\
+		PWD=`pwd` ;\
+		d=`dirname $$PWD` ;\
+		absdir=`basename $$d`/`basename $$PWD` ;\
+		dlist="$$dlist $$absdir";\
+	done ;\
+	${ECHO} "$$dlist"
 .endif
 .endif
 
