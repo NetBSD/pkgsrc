@@ -1,0 +1,17 @@
+$NetBSD: patch-ag,v 1.3 2004/04/28 03:43:02 tv Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=141251
+
+--- glib/gmain.c.orig	Sun Mar 14 12:58:27 2004
++++ glib/gmain.c
+@@ -57,6 +57,10 @@
+ #endif
+    
+ #endif /* GLIB_HAVE_SYS_POLL_H */
++#ifdef __INTERIX
++/* SUS standard location is NOT <sys/poll.h> */
++#include <poll.h>
++#endif
+ #ifdef HAVE_UNISTD_H
+ #include <unistd.h>
+ #endif /* HAVE_UNISTD_H */
