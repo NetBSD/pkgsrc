@@ -1,0 +1,22 @@
+$NetBSD: patch-ah,v 1.1 1998/08/11 07:59:11 agc Exp $
+
+Avoid conflicts with NetBSD ENDIAN macros
+
+--- framewks/stream.in	1998/08/11 07:35:20	1.1
++++ framewks/stream.in	1998/08/11 07:36:01
+@@ -33,11 +33,11 @@
+ 
+ 
+  /* Endianness testing and definitions */
+-#define TestEndianness(variable) {int i=1; variable=BIG_ENDIAN;\
+-                                  if (*((char*)&i)==1) variable=LITTLE_ENDIAN;}
++#define TestEndianness(variable) {int i=1; variable=Py_BIG_ENDIAN;\
++                                  if (*((char*)&i)==1) variable=Py_LITTLE_ENDIAN;}
+ 
+-#define LITTLE_ENDIAN 1
+-#define BIG_ENDIAN 0
++#define Py_LITTLE_ENDIAN 1
++#define Py_BIG_ENDIAN 0
+ 
+ 
+         /*
