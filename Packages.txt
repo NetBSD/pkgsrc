@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.182 2001/08/29 22:55:36 jlam Exp $
+# $NetBSD: Packages.txt,v 1.183 2001/09/04 13:00:44 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -146,8 +146,8 @@ Also note that any prerequisite packages needed to run the package in
 question will be installed, too, assuming they are present where you install
 from.
 
-After you've installed packages, be sure to have /usr/pkg in your $PATH so
-you can actually start the just installed program.
+After you've installed packages, be sure to have /usr/pkg/bin in your $PATH
+so you can actually start the just installed program.
 
 
  1.3 A word of warning
@@ -178,8 +178,8 @@ packages the "xbase" and "xcomp" distribution sets are required, too.
  2.2 Where to get pkgsrc
  =======================
 
-There are three ways to get pkgsrc. Either as tar file, via SUP, or via
-CVS. All three ways are described here. 
+There are three ways to get pkgsrc. Either as a tar file, via SUP, or
+via CVS. All three ways are described here. 
 
 To get the package source going, you need to get the pkgsrc.tar.gz file
 from ftp://ftp.netbsd.org/pub/NetBSD-current/tar_files/pkgsrc.tar.gz and
@@ -231,8 +231,8 @@ Put these distfiles into /usr/pkgsrc/distfiles.
  2.4 How to build and install
  ============================
 
-Assuming that has been done, become root and change into the relevant
-directory. Then you can type
+Assuming that the distfile has been fetched (see previous section), become
+root and change into the relevant directory. Then you can type
 
 	make
 
@@ -383,7 +383,7 @@ specific tasks at the end of the pre-build stage.  If the file
 example use of pre-build.local is to have the line:
 
 	echo "I do not have enough disk space to build this pig." \
-		> games/crafty-book-enormous/$BROKENF
+		> pkgsrc/games/crafty-book-enormous/$BROKENF
 
 to prevent the system from trying to build a particular package
 which requires nearly 3 Gb of disk space.
@@ -391,10 +391,15 @@ which requires nearly 3 Gb of disk space.
  3.2.2 Other environmental considerations
  ========================================
 
-Drop your favourite login shell in /usr/local, or install it from
-/etc/rc.local. Also, if you use a OS version below 1.5 or you still want
-to use the pkgsrc version of ssh for some reason, be sure to install 
-ssh before starting it from rc.local:
+As /usr/pkg wil be completely deleted at the start of bulk builds, 
+make sure your login shell is placed somewhere else. Either drop it into
+/usr/local/bin (and adjust your login shell in the password file), or
+(re-)install it via pkg_add from /etc/rc.local, so you can login after a
+reboot (remember that your current process won't die if the package is
+removed, you just can't start any new instances of the shell any more).
+Also, if you use a OS version below 1.5 or you still want to use the
+pkgsrc version of ssh for some reason, be sure to install ssh before
+starting it from rc.local:
 
     ( cd /usr/pkgsrc/security/ssh ; make bulk-install )
     if [ -f /usr/pkg/etc/rc.d/sshd ]; then
@@ -411,8 +416,8 @@ or crashes. You have been warned! :)
 
 Make sure you don't need any of the packages still installed.
 BEWARE: During the bulk build, ALL packages will be removed!!!
-Be sure to remove all other things (from /usr/local, ...).  Become
-root and type:
+Be sure to remove all other things that might interfer with builds, like 
+some libs installed in /usr/local, etc. then become root and type:
 
         # cd /usr/pkgsrc
         # sh mk/bulk/build
@@ -477,7 +482,7 @@ wasted by recompiling.
 
 After your bulk pkgsrc build has completed, you may wish to create a CD-ROM
 set of the resulting binary packages to assist in installing packages on
-other machines.  The package pkgtools/cdpack provides a simple tool for 
+other machines.  The package pkgsrc/pkgtools/cdpack provides a simple tool for 
 creating the ISO 9660 images.  `cdpack' arranges the packages on the CD-ROM's
 in a way that keeps all the dependencies for given package on the same
 CD as that package.
@@ -648,7 +653,7 @@ At the current time, the algorithms provided are:
 	md5, rmd160, sha1, sha256, sha384 and sha512
 
 Some packages have different sets of distfiles on a per architecture
-basis. (A good example is www/navigator). These are kept in the
+basis. (A good example is pkgsrc/www/navigator). These are kept in the
 same distinfo file and care should be taken when upgrading such a
 package to ensure distfile information is not lost.
 
@@ -674,18 +679,19 @@ can set PATCH_FUZZ_FACTOR=-F2).  Furthermore, do not put changes
 for more than one file into a single patch-file, as this will make
 future modifications more difficult.
 
-Similar, a file should be patches at most once, not several times by
+Similar, a file should be patched at most once, not several times by
 several different patches. If a file needs several patches, they should
 be combined into one file.
 
-One important thing to mention is to pay attention that no RCS IDs get
-stored in the patch files, as these will cause problems when later checked
-into the NetBSD CVS tree. To avoid this, use either the "-U 2" or "-U 1"
-option to diff, or let the 'pkgdiff' command from pkgsrc/pkgdiff help you.
+One important thing to mention is to pay attention that no RCS IDs
+get stored in the patch files, as these will cause problems when
+later checked into the NetBSD CVS tree. To avoid this, use either
+the "-U 2" or "-U 1" option to diff, or let the 'pkgdiff' command
+from pkgsrc/pkgtools/pkgdiff help you.
 
 If you don't want to worry about the problems in the last two paragraphs
-yourself, use pkgdiff from the pkgtools/pkgdiff package, which takes care
-of any RCS Ids by itself.
+yourself, use pkgdiff from the pkgsrc/pkgtools/pkgdiff package, which takes
+care of any RCS Ids by itself.
 
 For even more automation, we recommend using mkpatches from the same
 package to make a whole set of patches. You just have to backup files
@@ -1063,7 +1069,7 @@ Add USE_LIBTOOL=yes and LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig to the
 package Makefile as the quick way to bypass the pkg's own libtool.
 The pkg's own libtool is made by ltconfig script at do-configure target.
 If USE_LIBTOOL and LTCONFIG_OVERRIDE are defined, the specified ltconfig is
-overridden, using the devel/libtool instead of the pkg's own libtool.
+overridden, using the pkgsrc/devel/libtool instead of the pkg's own libtool.
 
 If your package makes use of the platform independant library for loading
 dynamic shared objects, that comes with libtool (libltdl), you should
@@ -1102,9 +1108,10 @@ pre-configure:
 $f.pdone $$f; \
         done
 
-This is taken from the sysutils/rtty package; be sure this works for your
-package - it may actually make sense to look for some things in /usr/local,
-for example. So don't blindly replace all occurrences of /usr/local!
+This is taken from the pkgsrc/sysutils/rtty package; be sure this works for
+your package - it may actually make sense to look for some things in
+/usr/local, for example. So don't blindly replace all occurrences of
+/usr/local!
 
 FreeBSD has decided to list manual pages in the package Makefile, with
 no corresponding entry in the PLIST.  You will thus need to add any
@@ -1351,8 +1358,8 @@ perform the equivalent of:
       Remove all packages that require (depend on) the given package.
       This can be used to remove any packages that may have been pulled in
       by a given package, e.g. if "make deinstall DEINSTALLDEPENDS=1" is
-      done in x11/kde, this is likely to remove whole KDE. Works by adding
-      a "-R" to the pkg_delete command line.
+      done in pkgsrc/x11/kde, this is likely to remove whole KDE. Works by
+      adding a "-R" to the pkg_delete command line.
 
  * update:
    This target causes the current package to be updated to the latest
@@ -1715,7 +1722,7 @@ have to do that yourself, and this may not be what you want.
  =======================================
 
 If your package uses a different distribution method from .tar.gz, take a
-look at the package for editors/sam, which uses a gzipped shell archive
+look at the package for pkgsrc/editors/sam, which uses a gzipped shell archive
 (shar), but the quick solution is to set EXTRACT_SUFX to the name after the
 DISTNAME field, and add the following to your package's Makefile:
 
@@ -1730,7 +1737,7 @@ DISTNAME field, and add the following to your package's Makefile:
 
 Your package doesn't create a subdirectory for itself (like GNU software
 does, for instance), but extracts itself in the current directory: see
-editors/sam again, but the quick answer is:
+pkgsrc/editors/sam again, but the quick answer is:
 
 > NO_WRKSUBDIR=   yes
 
@@ -1890,9 +1897,9 @@ is specified using the BUILD_DEPENDS definition.
 
 	BUILD_DEPENDS+=  autoconf-2.13:../../devel/autoconf
 
-(b) If your package needs a library with which to link, this is
-specified using the DEPENDS definition.  An example of this is the
-print/lyx package, which uses the xpm library, version 3.4j to build.
+(b) If your package needs a library with which to link, this is specified
+using the DEPENDS definition.  An example of this is the pkgsrc/print/lyx
+package, which uses the xpm library, version 3.4j to build.
 
 	DEPENDS+=       xpm-3.4j:../../graphics/xpm
 
@@ -1917,8 +1924,8 @@ and perhaps use version numbers to make certain:
 	BUILD_DEPENDS+=	perl-5.*:../../lang/perl
 
 (c) If your package needs some executable to be able to run correctly, this
-is specified using the DEPENDS definition. The print/lyx package needs to
-be able to execute the latex binary from the teTex package when it runs,
+is specified using the DEPENDS definition. The pkgsrc/print/lyx package needs
+to be able to execute the latex binary from the teTex package when it runs,
 and that is specified:
 
 	DEPENDS+=        teTex-*:../../print/teTeX 
@@ -1927,8 +1934,8 @@ The comment about wildcard dependencies from previous paragraph
 applies here, too.
 
 If your package needs files from another package to build, see the
-first part of the "do-configure" target print/ghostscript5 package (it
-relies on the jpeg sources being present in source form during the
+first part of the "do-configure" target pkgsrc/print/ghostscript5 package
+(it relies on the jpeg sources being present in source form during the
 build):
 
 	if [ ! -e ${BUILD_ROOT}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ]; then \
@@ -1938,9 +1945,9 @@ build):
 Please also note the BUILD_USES_MSGFMT and BUILD_USES_GETTEXT_M4 definitions,
 which are provided as convenience definitions.  The former works out whether
 msgfmt(1) is part of the base system, and, if it isn't, installs the
-devel/gettext package.  The latter adds a build dependency on either an
+pkgsrc/devel/gettext package.  The latter adds a build dependency on either an
 installed version of an older gettext package, or if it isn't, installs the
-devel/gettext-m4 package.
+pkgsrc/devel/gettext-m4 package.
 
 
  10.13 Conflicts with other packages
@@ -2083,7 +2090,7 @@ these files, each occurrence of 'ncurses' is replaced by 'curses' if the
 package doesn't need ncurses. You may need this in some cases if ncurses
 are installed, and the package's configure script prefers ncurses.
 
-For example, in mail/mutt, the relevant lines are:
+For example, in pkgsrc/mail/mutt, the relevant lines are:
 USE_CURSES=		YES
 REPLACE_NCURSES=	configure configure.in
 [...]
@@ -2167,7 +2174,7 @@ commit of that file, it should be copied to
  10.22 What's the proper way to create an account from a package?
  ================================================================
 
-Look at what e.g. sysutils/amanda-common/{Makefile,pkg/INSTALL} do.
+Look at what e.g. pkgsrc/sysutils/amanda-common/{Makefile,pkg/INSTALL} do.
 
 
  11 Submitting & Committing
