@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/30 08:41:43 rh Exp $
+bin/cddbslave
+bin/cddbsubmit
+bin/vumeter
+bin/gmix
+lib/locale/nl/LC_MESSAGES/gnome-media.mo
+lib/locale/ko/LC_MESSAGES/gnome-media.mo
+lib/locale/fr/LC_MESSAGES/gnome-media.mo
+lib/locale/de/LC_MESSAGES/gnome-media.mo
+lib/locale/es/LC_MESSAGES/gnome-media.mo
+lib/locale/no/LC_MESSAGES/gnome-media.mo
+lib/locale/it/LC_MESSAGES/gnome-media.mo
+lib/locale/pt/LC_MESSAGES/gnome-media.mo
+lib/locale/ja/LC_MESSAGES/gnome-media.mo
+lib/locale/fi/LC_MESSAGES/gnome-media.mo
+lib/locale/ga/LC_MESSAGES/gnome-media.mo
+lib/locale/da/LC_MESSAGES/gnome-media.mo
+lib/locale/hu/LC_MESSAGES/gnome-media.mo
+lib/locale/en_GB/LC_MESSAGES/gnome-media.mo
+lib/locale/ru_RU/LC_MESSAGES/gnome-media.mo
+lib/locale/zh_TW.Big5/LC_MESSAGES/gnome-media.mo
+share/gnome/apps/Multimedia/vumeter.desktop
+share/gnome/apps/Multimedia/gmix.desktop
+share/gnome/cddb-submit-methods
+@dirrm share/gnome/apps/Multimedia
