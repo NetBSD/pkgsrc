@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/10/25 17:20:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/02/01 10:09:36 agc Exp $
 #
 
 DISTNAME=	tirc-1.2
@@ -21,6 +21,9 @@ post-patch:
 	${SED} "s,/usr/local/share/tircrc,${PREFIX}/share/tirc/tircrc,g"\
 		${WRKSRC}/main.c > ${WRKSRC}/main.c.done
 	${MV} ${WRKSRC}/main.c.done ${WRKSRC}/main.c
+.if exists(/usr/include/sys/queue.h)
+	${RM} ${WRKSRC}/sys/queue.h
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/tirc
