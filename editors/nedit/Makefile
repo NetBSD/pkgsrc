@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 1999/10/07 17:41:49 tron Exp $
+# $NetBSD: Makefile,v 1.8 1999/12/30 13:13:28 simonb Exp $
 
 DISTNAME=	nedit_source
 PKGNAME=	nedit-5.0.2
 CATEGORIES=	editors
-MASTER_SITES=	ftp://ftp.fnal.gov/pub/nedit/v5_0_2/
+MASTER_SITES=	ftp://ftp.nedit.org/pub/v5_0_2/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www-pat.fnal.gov/nirvana/nedit.html
+HOMEPAGE=	http://www.nedit.org/
 
 USE_MOTIF=	yes
 
