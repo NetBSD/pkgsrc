@@ -1,0 +1,3 @@
+Gattrib is an attribute editor for gEDA. It reads a set of gschem .sch files
+(schematic files) and creates a spreadsheet showing all components/nets in
+rows, with the associated attributes listed in the columns.
