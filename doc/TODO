@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3113 2005/02/25 11:43:13 adam Exp $
+$NetBSD: TODO,v 1.3114 2005/02/25 15:06:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -426,7 +426,6 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enscript-1.6.4
 	o epic4-2.2
-	o eric3-3.6.2
 	o erlang-10b-3
 	o esh-0.8.5
 	o etach-1.4.0
@@ -497,7 +496,6 @@ Suggested package updates
 	o gpsim-devel-20041104
 	o gputils-0.12.4
 	o grace-5.1.18
-	o gramps-1.0.10
 	o grap-1.32
 	o graphviz-2.2 [pkg/28596]
 	o grepmail-5.3030
@@ -587,7 +585,6 @@ Suggested package updates
 	o libcomprex-0.3.3
 	o libetpan-0.34b
 	o libextractor-0.4.2
-	o libgda-1.2.0
 	o libggi-2.1
 	o libggiwmh-0.2.0
 	o libgii-0.9.0
@@ -631,7 +628,6 @@ Suggested package updates
 	o maradns-1.0.23
 	o mathomatic-12.1b
 	o memtest86-3.2
-	o mergeant-0.52
 	o mew-4.2
 	o micq-0.4.12 [pkg/29063]
 	o micq-0.5
@@ -880,10 +876,8 @@ Suggested package updates
 	o py-matplotlib-0.70.1
 	o py-mysqldb-1.1.7
 	o py-psycopg-1.1.18
-	o py-qt3-base-3.14
 	o py-qt3-modules-3.13
 	o py-qt3-qscintilla-3.13
-	o py-qt3-sip-4.2
 	o py-rpy-0.4.0
 	o py-soappy-0.11.6
 	o py-sqlite-1.1.6
