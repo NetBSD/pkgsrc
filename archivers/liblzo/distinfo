@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:10:29 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 11:21:06 agc Exp $
 
-MD5 (lzo-1.06.tar.gz) = 01a56f80a9186383d2183f917e9fe4e9
+SHA1 (lzo-1.06.tar.gz) = 37fec4c1d0e2b2db9d66d5b1a3e484fca40d730a
+Size (lzo-1.06.tar.gz) = 328580 bytes

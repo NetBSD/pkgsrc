@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:10:39 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 11:21:10 agc Exp $
 
-MD5 (xbinunix.c) = 7c66d7418e6011661c8b28ee91c394be
-MD5 (xbin.man) = b02b2a1b2fe9f09bd88ce6579ce601da
+SHA1 (xbinunix.c) = 20db911814c29c5f236d5dc2a27fe25c7a5f61fb
+Size (xbinunix.c) = 18563 bytes
+SHA1 (xbin.man) = 2e223e6a02a2436f29c586fa711ee5ad3bbf591d
+Size (xbin.man) = 3277 bytes
