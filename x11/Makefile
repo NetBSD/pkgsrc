@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.150 2000/05/10 04:13:32 jlam Exp $
+# $NetBSD: Makefile,v 1.151 2000/05/12 05:58:55 rh Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -98,6 +98,7 @@
     SUBDIR += wmfstatus
     SUBDIR += wmthemes
     SUBDIR += wmtime
+    SUBDIR += wmweather
     SUBDIR += wmx
     SUBDIR += wterm
     SUBDIR += x2x
