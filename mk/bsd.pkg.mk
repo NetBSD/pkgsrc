@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.413 2000/03/09 13:54:50 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.414 2000/03/09 14:05:26 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -595,7 +595,7 @@ SIZE_ALL_FILE=		${WRKDIR}/SizeAll
 PKG_ARGS=		-v -c ${COMMENT} -d ${DESCR} -f ${PLIST} -l
 PKG_ARGS+=		-b ${BUILD_VERSION_FILE} -B ${BUILD_INFO_FILE}
 PKG_ARGS+=		-s ${SIZE_PKG_FILE} -S ${SIZE_ALL_FILE}
-PKG_ARGS+=		-p ${PREFIX} -P "`${MAKE} package-depends|sort -u`"
+PKG_ARGS+=		-p ${PREFIX} -P "`${MAKE} package-depends PACKAGE_DEPENDS_QUICK=true|sort -u`"
 .ifdef CONFLICTS
 PKG_ARGS+=		-C "${CONFLICTS}"
 .endif
@@ -2116,12 +2116,17 @@ package-path:
 .endif
 
 # Show (recursively) all the packages this package depends on.
-# if PACKAGE_DEPENDS_WITH_PATTERNS is set, print as pattern (if possible)
+# If PACKAGE_DEPENDS_WITH_PATTERNS is set, print as pattern (if possible)
 PACKAGE_DEPENDS_WITH_PATTERNS?=true
+# To be used (-> true) ONLY if the pkg in question is known to be installed
+# (i.e. when calling for pkg_create args, and for fake-pkg)
+# Will probably not work with PACKAGE_DEPENDS_WITH_PATTERNS=false ...
+PACKAGE_DEPENDS_QUICK?=false
 .if !target(package-depends)
 package-depends:
 .for dep in ${DEPENDS}
-	@pkg="`${ECHO} \"${dep}\" | ${SED} -e 's/:.*//'`";		\
+	${_PKG_SILENT}${_PKG_DEBUG}\
+	pkg="`${ECHO} \"${dep}\" | ${SED} -e 's/:.*//'`";		\
 	dir="`${ECHO} \"${dep}\" | ${SED} -e 's/[^:]*://'`";		\
 	if [ -d $$dir ]; then						\
 		if ${PACKAGE_DEPENDS_WITH_PATTERNS}; then		\
@@ -2129,7 +2134,11 @@ package-depends:
 		else							\
 			(cd $$dir && ${MAKE} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
 		fi;							\
+		if ${PACKAGE_DEPENDS_QUICK} ; then \
+			${PKG_INFO} -qf "$$pkg" | grep ^@pkgdep | awk '{print $$2}' ; \
+		else \
 		(cd $$dir && ${MAKE} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
+		fi ; \
 	else								\
 		${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
 	fi
@@ -2143,7 +2152,11 @@ package-depends:
 		else							\
 			(cd $$dir && ${MAKE} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
 		fi;							\
+		if ${PACKAGE_DEPENDS_QUICK} ; then \
+			${PKG_INFO} -qf "$$pkg" | grep ^@pkgdep | awk '{print $$2}' ; \
+		else \
 		(cd $$dir && ${MAKE} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
+		fi ; \
 	else								\
 		${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
 	fi
@@ -2655,7 +2668,7 @@ fake-pkg: ${PLIST} ${DESCR}
 				${CP} ${MESSAGE_FILE} ${PKG_DBDIR}/${PKGNAME}/+DISPLAY; \
 			fi;						\
 		fi;							\
-		for dep in `${MAKE} package-depends ECHO_MSG=${TRUE} | sort -u`; do \
+		for dep in `${MAKE} package-depends PACKAGE_DEPENDS_QUICK=true ECHO_MSG=${TRUE} | sort -u`; do \
 			realdep="`${PKG_INFO} -e \"$$dep\" || ${TRUE}`" ; \
 			if [ `${ECHO} $$realdep | wc -w` -gt 1 ]; then 				\
 				${ECHO} '***' "WARNING: '$$dep' expands to several installed packages " ; \
