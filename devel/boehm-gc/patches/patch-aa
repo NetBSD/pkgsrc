@@ -1,23 +1,22 @@
-$NetBSD: patch-aa,v 1.3 1998/08/07 10:40:22 agc Exp $
+$NetBSD: patch-aa,v 1.4 1999/09/24 16:42:06 jlam Exp $
 
---- Makefile.orig	Thu Aug 21 01:17:10 1997
-+++ Makefile	Thu Feb 26 16:36:41 1998
-@@ -8,15 +8,35 @@
- #	 c++ interface to gc.a
+--- Makefile.orig	Sat Sep 11 08:49:18 1999
++++ Makefile	Tue Sep 21 02:41:39 1999
+@@ -9,14 +9,33 @@
  # cord/de - builds dumb editor based on cords.
- CC=cc
--CXX=CC
-+CXX=c++
- AS=as
+ ABI_FLAG=
+ CC=cc $(ABI_FLAG)
+-CXX=CC $(ABI_FLAG)
+-AS=as $(ABI_FLAG)
++CXX=c++ $(ABI_FLAG)
++AS=gcc -c -x assembler-with-cpp $(ABI_FLAG)
  #  The above doesn't work with gas, which doesn't run cpp.
  #  Define AS as `gcc -c -x assembler-with-cpp' instead.
- #  Under Irix 6, you will have to specify the ABI for as if you specify
- #  it for the C compiler.
+ #  Under Irix 6, you will have to specify the ABI (-o32, -n32, or -64)
+ #  if you use something other than the default ABI on your machine.
  
--CFLAGS= -O -DNO_SIGNALS -DALL_INTERIOR_POINTERS -DATOMIC_UNCOLLECTABLE -DNO_EXECUTE_PERMISSION -DSILENT
-+CFLAGS= -O -DNO_SIGNALS -DALL_INTERIOR_POINTERS -DATOMIC_UNCOLLECTABLE \
-+	-DNO_EXECUTE_PERMISSION -DSILENT -DREDIRECT_MALLOC=GC_malloc
- 
+ CFLAGS= -O -DATOMIC_UNCOLLECTABLE -DNO_SIGNALS -DNO_EXECUTE_PERMISSION -DALL_INTERIOR_POINTERS -DSILENT
++
 +LEAKFLAGS=$(CFLAGS) -DFIND_LEAK
 +
 +BSD-pkg-all: bsd-libgc.a bsd-libleak.a
@@ -36,20 +35,19 @@ $NetBSD: patch-aa,v 1.3 1998/08/07 10:40:22 agc Exp $
 +	${INSTALL_DATA} libleak.a libgc.a ${PREFIX}/lib
 +	${INSTALL_DATA} gc.h gc_cpp.h ${PREFIX}/include
 +	${INSTALL_MAN} gc.man ${PREFIX}/man/man3/gc.3
-+  
- # Setjmp_test may yield overly optimistic results when compiled
- # without optimization.
- # -DSILENT disables statistics printing, and improves performance.
-@@ -162,8 +182,6 @@
+ 
+ # For dynamic library builds, it may be necessary to add flags to generate
+ # PIC code, e.g. -fPIC on Linux.
+@@ -202,8 +221,6 @@
  # not time-critical anyway.
  # Set SPECIALCFLAGS to -q nodirect_code on Encore.
  
 -all: gc.a gctest
 -
- pcr: PCR-Makefile gc_private.h gc_hdrs.h gc.h config.h mach_dep.o $(SRCS)
+ pcr: PCR-Makefile gc_private.h gc_hdrs.h gc.h gcconfig.h mach_dep.o $(SRCS)
  	make -f PCR-Makefile depend
  	make -f PCR-Makefile
-@@ -210,13 +228,18 @@
+@@ -245,6 +262,12 @@
  	./if_mach HP_PA "" $(CXX) $(CXXFLAGS) -o test_cpp $(srcdir)/test_cpp.cc gc_cpp.o gc.a -ldld
  	./if_not_there test_cpp $(CXX) $(CXXFLAGS) -o test_cpp $(srcdir)/test_cpp.cc gc_cpp.o gc.a `./threadlibs`
  
@@ -60,11 +58,12 @@ $NetBSD: patch-aa,v 1.3 1998/08/07 10:40:22 agc Exp $
 +	@echo "Use ./test_cpp 1 to test the leak library"
 +
  c++: gc_cpp.o $(srcdir)/gc_cpp.h test_cpp
- 	rm -f on_sparc_sunos5
- 	./if_mach SPARC SUNOS5 touch on_sparc_sunos5
- 	./if_mach SPARC SUNOS5 $(AR) rus gc.a gc_cpp.o
- 	./if_not_there on_sparc_sunos5 $(AR) ru gc.a gc_cpp.o
- 	./if_not_there on_sparc_sunos5 $(RANLIB) gc.a || cat /dev/null
+ 	rm -f dont_ar_4
+ 	./if_mach SPARC SUNOS5 touch dont_ar_4
+@@ -253,7 +276,6 @@
+ 	./if_mach M68K AMIGA $(AR) -vrus gc.a gc_cpp.o
+ 	./if_not_there dont_ar_4 $(AR) ru gc.a gc_cpp.o
+ 	./if_not_there dont_ar_4 $(RANLIB) gc.a || cat /dev/null
 -	./test_cpp 1
  	echo > c++
  
