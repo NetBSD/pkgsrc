@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2985 2003/08/04 11:44:53 jmmv Exp $
+$NetBSD: CHANGES,v 1.2986 2003/08/04 12:07:57 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3194,3 +3194,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added python23-2.3 [drochner 2003-08-04]
 	Updated hiawatha to 0.1nb1 [jmmv 2003-08-04]
 	Updated mencoder to 0.90nb8 [jmmv 2003-08-04]
+	Updated cue to 20030714nb1 [itojun 2003-08-04]
