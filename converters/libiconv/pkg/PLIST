@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/01 17:29:20 rh Exp $
+bin/iconv
+include/iconv.h
+include/libcharset.h
+lib/charset.alias
+lib/libcharset.a
+lib/libcharset.la
+lib/libcharset.so.1.0
+lib/libiconv.a
+lib/libiconv.la
+lib/libiconv.so.2.2
+man/man1/iconv.1
+man/man3/iconv.3
+man/man3/iconv_close.3
+man/man3/iconv_open.3
