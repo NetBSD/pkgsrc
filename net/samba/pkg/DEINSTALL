@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1 2000/05/02 15:25:18 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.2 2000/06/26 23:07:37 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -11,8 +11,6 @@ case ${STAGE} in
 DEINSTALL)
 	;;
 POST-DEINSTALL)
-	REQUESTDIR=/var/spool/cups
-
 	cat << EOF
 ===========================================================================
 If you won't be using ${PKGNAME} any longer, you may want to remove the
