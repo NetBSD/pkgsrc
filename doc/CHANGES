@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8559 2005/01/01 16:43:07 jmmv Exp $
+$NetBSD: CHANGES,v 1.8560 2005/01/01 17:02:36 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -20,3 +20,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated automake to 1.9.4 [wiz 2005-01-01]
 	Updated gnumeric14 to 1.4.1nb1 [minskim 2005-01-01]
 	Updated monotone to 0.16 [jmmv 2005-01-01]
+	Updated gramps to 1.0.8nb1 [minskim 2005-01-01]
