@@ -1,8 +1,17 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/04/28 02:36:35 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.2 2005/03/21 17:35:53 dmcmahill Exp $
 
---- plane.cc.orig	Mon Dec  7 03:28:51 1998
-+++ plane.cc	Fri Apr 27 16:48:43 2001
-@@ -335,9 +335,9 @@
+--- plane.cc.orig	1998-12-07 08:28:51.000000000 +0000
++++ plane.cc
+@@ -1,6 +1,7 @@
+ /* Ribbon segmentation on ground plane */
+ #include <math.h>
+ #include <stdio.h>
++#include <stdlib.h>
+ #include "weeks.h"
+ #include "plane.h"
+ #include "../include/linear.h"
+@@ -334,11 +335,11 @@ void filplane(Conductor *c)
+   for (i=1;i<=sis->pc;i++) {
      for (j=1;j<=l[i];j++) {
        if (l[i]!=2) 
 -	if (LX[i][j]!=LX[i][j+1])  fprintf(fo,"below %ld %le\n",i,LX[i][j]);
@@ -14,3 +23,4 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/04/28 02:36:35 dmcmahill Exp $
 +	if (UX[i][j]!=UX[i][j+1]) fprintf(fo,"above %d %e\n",i,UX[i][j]);
      }
    }
+ 

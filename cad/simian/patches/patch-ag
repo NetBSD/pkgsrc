@@ -1,0 +1,29 @@
+$NetBSD: patch-ag,v 1.1 2005/03/21 17:35:53 dmcmahill Exp $
+
+--- linklist.cc.orig	1998-12-07 08:28:51.000000000 +0000
++++ linklist.cc
+@@ -1,12 +1,13 @@
++#include <iostream>
++#include <sstream>
+ #include <stdlib.h>
+ #include <stdio.h>
+-#include <stream.h>
+ #include "weeks.h"
+ 
+ void newCon(Conductor* conduc)
+ {
+   if ((conduc->next=new Conductor)==NULL) {
+-    cerr << "Can't allocate!\n";
++    std::cerr << "Can't allocate!\n";
+     exit(1);
+   }
+ }
+@@ -15,7 +16,7 @@ void newCon(Conductor* conduc)
+ void newFil(Filament* filam)
+ {
+   if ((filam->next=new Filament)==(Filament*)NULL) {
+-    cerr << "Can't allocate!\n";
++    std::cerr << "Can't allocate!\n";
+     exit(1);
+   }
+   filam->next->next = (Filament*) NULL;
