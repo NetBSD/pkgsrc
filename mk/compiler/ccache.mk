@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.4 2004/02/02 10:55:26 jlam Exp $
+# $NetBSD: ccache.mk,v 1.5 2004/02/02 11:04:17 jlam Exp $
 
 .if !defined(COMPILER_CCACHE_MK)
 COMPILER_CCACHE_MK=	defined
@@ -41,9 +41,10 @@ _CCACHEBASE?=		${LOCALBASE}
 
 .if exists(${_CCACHEBASE}/bin/ccache)
 _CCACHE_DIR=	${WRKDIR}/.ccache
-PATH:=		${_CCACHE_DIR}/bin:${PATH}
-
 _CCACHE_LINKS=	# empty
+.  if !empty(_LANGUAGES.ccache)
+PATH:=	${_CCACHE_DIR}/bin:${PATH}
+.  endif
 .  if !empty(_LANGUAGES.ccache:Mc)
 CC:=	${_CCACHE_DIR}/bin/${CC:T}
 _CCACHE_LINKS+=	CC
