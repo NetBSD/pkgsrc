@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.973.2.6 2002/06/30 05:32:52 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.973.2.7 2002/06/30 06:15:33 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1015,8 +1015,13 @@ SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR} \
 SCRIPTS_ENV+=	BATCH=yes
 .endif
 
-.if defined(USE_BUILDLINK2) && \
-    ((${USE_BUILDLINK2} != "NO") && (${USE_BUILDLINK2} != "no"))
+.if !defined(USE_BUILDLINK2)
+NO_BUILDLINK2=		# defined
+.elif (${USE_BUILDLINK2} == "NO") || (${USE_BUILDLINK2} == "no")
+NO_BUILDLINK2=		# defined
+.endif
+
+.if !defined(NO_BUILDLINK2)
 .  include "../../mk/buildlink2/bsd.buildlink2.mk"
 .endif
 
@@ -1203,7 +1208,7 @@ patch: extract
 .endif
 
 # Disable buildlink
-.if !defined(USE_BUILDLINK2) && !target(configure)
+.if defined(NO_BUILDLINK2) && !target(configure)
 buildlink: patch
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${BUILDLINK_COOKIE}
 .endif
