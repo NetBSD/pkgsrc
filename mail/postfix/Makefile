@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2004/01/28 16:03:02 martti Exp $
+# $NetBSD: Makefile,v 1.117 2004/02/16 09:31:06 martti Exp $
 
 DISTNAME=	postfix-2.0.18
 CATEGORIES=	mail
@@ -75,6 +75,19 @@ AUXLIBS+=	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql		\
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.mysql-client}/lib/mysql	\
 		-lmysqlclient -lz -lm
 BUILD_DEFS+=	POSTFIX_USE_MYSQL
+.endif
+
+.if defined(POSTFIX_USE_PGSQL) && ${POSTFIX_USE_PGSQL} == "YES"
+.  include "../../databases/postgresql-lib/buildlink3.mk"
+.  include "../../security/openssl/buildlink3.mk"
+PATCHFILES+=		postfix-pg.postfix-2.0.0.2.patch
+PATCH_SITES+=		http://www.mat.cc/postfix/
+PATCH_DIST_STRIP=	-p1
+
+CCARGS+=	-DHAS_PGSQL -I${BUILDLINK_PREFIX.postgresql-lib}/include/pgsql
+AUXLIBS+=	-L${BUILDLINK_PREFIX.postgresql-lib}/lib -lpq \
+		-L${BUILDLINK_PREFIX.openssl}/lib -lcrypt
+BUILD_DEFS+=	POSTFIX_USE_PGSQL
 .endif
 
 .if defined(USE_SASL2) && ${USE_SASL2} == "YES"
