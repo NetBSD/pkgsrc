@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/08/25 21:50:50 mjl Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/08/26 13:02:16 tron Exp $
 GNUstep/Apps/WPrefs.app/WPrefs
 GNUstep/Apps/WPrefs.app/WPrefs.tiff
 GNUstep/Apps/WPrefs.app/WPrefs.xpm
@@ -348,7 +348,6 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/WindowMaker.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/WindowMaker.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/WPrefs.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/WindowMaker.mo
-${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/WPrefs.mo
 @dirrm share/doc/WindowMaker
 @dirrm share/WindowMaker/Themes
 @dirrm share/WindowMaker/Styles
