@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/02 20:49:18 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/03/16 17:47:28 jmmv Exp $
 lib/gaim/encrypt.la
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gaim-encryption.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gaim-encryption.mo
@@ -15,3 +15,4 @@ ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gaim-encryption.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gaim-encryption.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gaim-encryption.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gaim-encryption.mo
+@comment in gaim: @dirrm lib/gaim
