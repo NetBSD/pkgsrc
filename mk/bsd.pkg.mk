@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1040 2002/08/30 12:54:29 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1041 2002/09/01 16:15:32 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -901,7 +901,7 @@ MASTER_SITE_SOURCEFORGE+=	\
 	http://umn.dl.sourceforge.net/sourceforge/ \
 	http://unc.dl.sourceforge.net/sourceforge/ \
 	ftp://ftp3.sourceforge.net/pub/sourceforge/ \
-	ftp://ftp.tuwien.ac.at/opsys/linux/sourceforge/
+	ftp://ftp.tuwien.ac.at/linux/sourceforge/
 
 MASTER_SITE_MOZILLA+=	\
 	ftp://ftp.mozilla.org/pub/mozilla/releases/ \
