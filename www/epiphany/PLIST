@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/01 18:52:49 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/04/19 14:14:23 jmmv Exp $
 bin/epiphany
 bin/epiphany-bin
 include/epiphany-1.2/epiphany/ephy-bookmarks.h
@@ -25,7 +25,6 @@ include/epiphany-1.2/epiphany/ephy-statusbar.h
 include/epiphany-1.2/epiphany/ephy-tab.h
 include/epiphany-1.2/epiphany/ephy-window.h
 lib/bonobo/servers/GNOME_Epiphany_Automation.server
-lib/bonobo/servers/GNOME_Epiphany_NautilusView.server
 lib/pkgconfig/epiphany-1.2.pc
 share/application-registry/epiphany.applications
 share/applications/bme.desktop
@@ -89,6 +88,7 @@ ${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/epiphany.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/epiphany.mo
@@ -139,7 +139,7 @@ share/pixmaps/epiphany-bookmarks.png
 @dirrm share/gnome/help/epiphany/C
 @dirrm share/gnome/help/epiphany
 @comment in gnome2-dirs: @dirrm share/gnome/help
-@dirrm share/gconf/schemas
+@comment in GConf2: @dirrm share/gconf/schemas
 @dirrm share/epiphany/glade
 @dirrm share/epiphany/art
 @dirrm share/epiphany

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2004/04/01 18:52:49 jmmv Exp $
+$NetBSD: distinfo,v 1.6 2004/04/19 14:14:23 jmmv Exp $
 
-SHA1 (epiphany-1.2.2.tar.bz2) = 4bece22a45521d42c04057e5c90e0ed431ad5a94
-Size (epiphany-1.2.2.tar.bz2) = 2148870 bytes
+SHA1 (epiphany-1.2.3.tar.bz2) = 60f778160fdbb03dabc8671478ddbc16d1855175
+Size (epiphany-1.2.3.tar.bz2) = 2246318 bytes
