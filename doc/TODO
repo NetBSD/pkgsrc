@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2497 2004/11/27 00:06:40 epg Exp $
+$NetBSD: TODO,v 1.2498 2004/11/27 00:13:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1281,7 +1281,6 @@ Suggested package updates
 	o ucl-1.03
 	o unarj-2.65
 	o unix2dos-1.3
-	o uptimec-0.2p3 [pkg/26082]
 	o upx-1.25
 	o userppp-030706
 	o uvscan-4.3.2 [jlam]
