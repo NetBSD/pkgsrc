@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2001/07/16 10:29:51 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/12/13 17:57:50 wiz Exp $
 
 DISTNAME=	unlzx.c
-PKGNAME=	unlzx-1.0
+PKGNAME=	unlzx-1.1
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://de.aminet.net/pub/aminet/misc/unix/ \
 		ftp://us.aminet.net/pub/aminet/misc/unix/
-EXTRACT_SUFX=	.Z
+EXTRACT_SUFX=	.gz
 
 MAINTAINER=	packages@netbsd.org
 COMMENT=	Extracts .lzx archives from Amiga systems
