@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/08/21 08:26:24 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/09/04 22:00:45 agc Exp $
 #
 
 DISTNAME=	ORBit-0.2.1
@@ -12,6 +12,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
 DEPENDS+=	glib-1.1.2:../../devel/glib
+DEPENDS+=	gindent-1.9.1:../../devel/gindent
 
 LIBTOOL_FLAGS=	--install-la
 
