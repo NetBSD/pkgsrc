@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4617 2004/01/28 00:13:41 kim Exp $
+$NetBSD: CHANGES,v 1.4618 2004/01/28 03:57:54 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -502,3 +502,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added unison 2.9.20 as net/unison-devel [jlam 2004-01-27]
 	Added devilspie 0.3.1 [snj 2004-01-27]
 	Updated tmda to 1.0 [kim 2004-01-28]
+	Updated libdvdplay to 1.0.1nb1 [grant 2004-01-28]
