@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.729 2001/04/24 15:30:27 abs Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.730 2001/04/26 08:35:38 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -150,7 +150,8 @@ BUILD_DEFS+=		KERBEROS
 
 PERL5?=			${LOCALBASE}/bin/perl
 .if defined(USE_PERL5)
-DEPENDS+=		perl-5.*:../../lang/perl5
+PERL5_REQD?=		5.0
+DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
 .if exists(${PERL5})
 BUILD_DEPENDS+=		perl-mk-1.1:../../pkgtools/perl-mk
 .if exists(${LOCALBASE}/share/mk/bsd.perl.mk)
