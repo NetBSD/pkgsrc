@@ -1,15 +1,18 @@
-# $NetBSD: Makefile,v 1.9 2003/03/29 12:40:19 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2003/06/17 14:16:33 agc Exp $
 #
 
 DISTNAME=	gkermit
 PKGNAME=	gkermit-1.00
-WRKSRC=		${WRKDIR}
+PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	ftp://kermit.columbia.edu/kermit/archives/
 
 MAINTAINER=	fredb@netbsd.org
 HOMEPAGE=	http://www.columbia.edu/kermit/gkermit.html
 COMMENT=	minimal implementation of the ``kermit'' protocol (GPL'd)
+
+WRKSRC=		${WRKDIR}
+DIST_SUBDIR=	gkermit-1.00
 
 USE_BUILDLINK2=	# defined
 ALL_TARGET=	posix
