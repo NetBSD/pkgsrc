@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2000/12/17 09:19:32 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2000/12/17 17:18:02 jlam Exp $
 
 DISTNAME=		php-${PHP_VERS}
 PHP_VERS=		4.0.3pl1
-CATEGORIES+=		php4
+CATEGORIES+=		www php4
 
 # Note the http address is written this way by purpose, so that bsd.pkg.mk DTRT
 MASTER_SITES=		http://www.php.net/do_download.php?source_site=www.php.net&download_file= \
