@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2004/10/29 14:57:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.70 2004/11/06 18:39:02 jmmv Exp $
 
 DISTNAME=		evolution-2.0.2
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		mail time gnome
 MASTER_SITES=		ftp://ftp.ximian.com/pub/source/evolution/ \
 			${MASTER_SITE_GNOME:=sources/evolution/2.0/}
@@ -19,10 +19,17 @@ BUILDLINK_DEPENDS.glib2+=	glib2>=2.4.0nb2
 BUILDLINK_DEPENDS.gtkhtml3+=	gtkhtml3>=3.2.3
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.evolution
-PKG_SUPPORTED_OPTIONS=	ipv6 ssl
+PKG_SUPPORTED_OPTIONS=	ipv6 krb4 krb5 ssl
 
-.include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mssl) && !empty(PKG_OPTIONS:Mkrb[45])
+# If Kerberos is enabled, the libcrypto library is linked in, which causes
+# function name conflicts with libsoftokn3 provided by Mozilla NSS.  These
+# cause runtime crashes, so don't allow these options to be specified
+# together.
+PKG_FAIL_REASON=	"Kerberos support conflicts with SSL"
+.endif
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
@@ -56,6 +63,19 @@ CONFIGURE_ARGS+=	--with-sub-version=nb${PKGREVISION}
 CONFIGURE_ARGS+=	--enable-ipv6=yes
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
+.endif
+
+.if !empty(PKG_OPTIONS:Mkrb4)
+CONFIGURE_ARGS+=	--with-krb4
+.else
+CONFIGURE_ARGS+=	--without-krb4
+.endif
+
+.if !empty(PKG_OPTIONS:Mkrb5)
+CONFIGURE_ARGS+=	--with-krb5
+.  include "../../mk/krb5.buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-krb5
 .endif
 
 .if !empty(PKG_OPTIONS:Mssl)
