@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.6 2000/07/10 19:57:10 tron Exp $
+$NetBSD: patch-aa,v 1.7 2000/07/10 20:19:28 tron Exp $
 
---- driver/Makefile.in.orig	Mon Jul 10 21:54:54 2000
-+++ driver/Makefile.in	Mon Jul 10 21:55:02 2000
+--- driver/Makefile.in.orig	Mon Apr  3 11:04:08 2000
++++ driver/Makefile.in	Mon Jul 10 22:05:33 2000
 @@ -140,8 +140,8 @@
  DEMO_SRCS	= prefs.c remote.c $(DEMO_UTIL_SRCS)
  DEMO_OBJS	= prefs.o remote.o $(DEMO_UTIL_OBJS)
@@ -13,7 +13,34 @@ $NetBSD: patch-aa,v 1.6 2000/07/10 19:57:10 tron Exp $
  		  $(PASSWD_LIBS)
  
  CMD_LIBS	= $(LIBS) $(X_LIBS) \
-@@ -344,11 +344,11 @@
+@@ -325,30 +325,30 @@
+ install-gnome: screensaver-properties.desktop
+ 	@if [ "$(GNOME_DATADIR)" != "" ]; then				     \
+           echo $(INSTALL_DATA) $(srcdir)/screensaver-properties.desktop      \
+-                          $(GNOME_CCDIR)/screensaver-properties.desktop    ; \
++                          $(GNOME_CCDIR)/xscreensaver-properties.desktop    ; \
+                $(INSTALL_DATA) $(srcdir)/screensaver-properties.desktop      \
+-                          $(GNOME_CCDIR)/screensaver-properties.desktop    ; \
++                          $(GNOME_CCDIR)/xscreensaver-properties.desktop    ; \
+           echo $(INSTALL_DATA) $(srcdir)/screensaver-properties.desktop      \
+-                       $(GNOME_PANELDIR)/screensaver-properties.desktop    ; \
++                       $(GNOME_PANELDIR)/xscreensaver-properties.desktop    ; \
+                $(INSTALL_DATA) $(srcdir)/screensaver-properties.desktop      \
+-                       $(GNOME_PANELDIR)/screensaver-properties.desktop    ; \
++                       $(GNOME_PANELDIR)/xscreensaver-properties.desktop    ; \
+ 	fi
+ 
+ uninstall-gnome:
+ 	@if [ "$(GNOME_DATADIR)" != "" ]; then				      \
+-	  echo rm -f $(GNOME_CCDIR)/screensaver-properties.desktop          ; \
+-	       rm -f $(GNOME_CCDIR)/screensaver-properties.desktop          ; \
+-	  echo rm -f $(GNOME_PANELDIR)/screensaver-properties.desktop       ; \
+-	       rm -f $(GNOME_PANELDIR)/screensaver-properties.desktop       ; \
++	  echo rm -f $(GNOME_CCDIR)/xscreensaver-properties.desktop         ; \
++	       rm -f $(GNOME_CCDIR)/xscreensaver-properties.desktop         ; \
++	  echo rm -f $(GNOME_PANELDIR)/xscreensaver-properties.desktop      ; \
++	       rm -f $(GNOME_PANELDIR)/xscreensaver-properties.desktop      ; \
+         fi
  
  install-kde:
  	@src="$(srcdir)/xscreensaver.kss" ;				      \
