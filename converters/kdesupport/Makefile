@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1998/09/27 18:06:41 tron Exp $
+# $NetBSD: Makefile,v 1.16 1998/11/06 05:15:41 mycroft Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/05 04:19:46 asami Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/1.0/distribution/tar/generic/sour
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.kde.org/
 
-DEPENDS+=	qt-1.40:../../x11/qt
+DEPENDS+=	qt-1.41:../../x11/qt
 
 CONFLICTS=	kdesupport-2.1b kdesupport-3.1b kdesupport-4.1b
 
