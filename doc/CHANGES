@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.743 2002/12/10 09:20:02 rh Exp $
+$NetBSD: CHANGES,v 1.744 2002/12/10 12:47:51 markd Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3887,3 +3887,17 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated suse_base to 7.3nb2 [tron 2002-12-09]
 	Updated galeon to 1.2.7 [hubertf 2002-12-10]
 	Added gtkgo-0.0.10 [rh 2002-12-10]
+	Updated R to 1.6.1 [markd 2002-12-10]
+	Added py-rpy-0.3 [markd 2002-12-10]
+	Removed R-KernSmooth [markd 2002-12-10]
+	Removed R-VR [markd 2002-12-10]
+	Removed R-boot [markd 2002-12-10]
+	Removed R-cluster [markd 2002-12-10]
+	Removed R-foreign [markd 2002-12-10]
+	Removed R-grid [markd 2002-12-10]
+	Removed R-lattice [markd 2002-12-10]
+	Removed R-mgcv [markd 2002-12-10]
+	Removed R-nlme [markd 2002-12-10]
+	Removed R-recommended [markd 2002-12-10]
+	Removed R-rpart [markd 2002-12-10]
+	Removed R-survival [markd 2002-12-10]
