@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.9 1999/07/08 09:46:09 agc Exp $
+# $NetBSD: pkglint.pl,v 1.10 1999/08/10 10:38:10 agc Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -75,7 +75,7 @@ NetBSD	@PORTSDIR@	NetBSD	1	1	1	    0		 1	@PREFIX@
 EOF
 $osname = `uname -s`;
 $osname =~ s/\n$//;
-if ($osname eq "SunOS") {
+if (($osname eq "SunOS") || ($osname eq "Linux")) {
 	$osname = "NetBSD"
 }
 foreach $i (@osdep) {
