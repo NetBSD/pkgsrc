@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.44 2004/07/29 21:54:34 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.45 2004/07/29 21:57:45 agc Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q2 branch:
@@ -84,4 +84,6 @@ Pullup ticket 79, requested by Grant Beattie [agc 2004-07-29]
 	Solaris fixes for fspanel
 Pullup ticket 80, requested by Grant Beattie [agc 2004-07-29]
 	Solaris fixes for cfs
+Pullup ticket 81, requested by Grant Beattie [agc 2004-07-29]
+	Solaris and Linux fixes for apg
 
