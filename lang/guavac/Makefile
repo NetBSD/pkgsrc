@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/08/20 15:17:04 tsarna Exp $
+# $NetBSD: Makefile,v 1.6 1998/08/23 15:12:05 frueauf Exp $
 #
 
 DISTNAME=	guavac-1.0
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://summit.stanford.edu/pub/guavac/ \
      ftp://ftp.unicamp.br/pub/languages/java/guavac/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.cs.berkeley.edu/~engberg/guavac
+HOMEPAGE=	http://www.cs.berkeley.edu/~engberg/guavac/
 
 GNU_CONFIGURE=  yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/08/23 07:34:17 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1998/08/23 15:12:05 frueauf Exp $
 
 DISTNAME=		AfterStep-1.0
 PKGNAME=		fvwm-wharf-1.0
@@ -6,7 +6,7 @@ CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.afterstep.org/pub/
 
 MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://www.afterstep.org
+HOMEPAGE=		http://www.afterstep.org/
 
 DEPENDS=		xpm-3.4k:../../graphics/xpm
 
