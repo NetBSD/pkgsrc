@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6356 2004/06/27 22:48:11 abs Exp $
+$NetBSD: CHANGES,v 1.6357 2004/06/27 23:09:53 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3116,4 +3116,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated uptimec to 0.2p3 [xtraeme 2004-06-27]
 	Added cambevao 2.0 [abs 2004-06-27]
 	Updated pkglint to 3.80 [abs 2004-06-27]
-
+	Updated py-soappy to 0.11.4 [recht 2004-06-27]
+	Updated py-fpconst to 0.7.0 [recht 2004-06-27]
