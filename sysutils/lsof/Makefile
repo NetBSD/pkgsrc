@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 1999/02/18 23:09:45 frueauf Exp $
+# $NetBSD: Makefile,v 1.14 1999/03/28 17:29:53 christos Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/03/08 06:44:48 obrien Exp
 #
 
-DISTNAME=		lsof_4.40_W
-PKGNAME=		lsof-4.40
+DISTNAME=		lsof_4.41_W
+PKGNAME=		lsof-4.41
 WRKSRC=			${WRKDIR}/${SRCBALL_NAME}
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/  \
@@ -12,13 +12,8 @@ MASTER_SITES=		ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/  \
 			ftp://ftp.web.ad.jp/pub/UNIX/tools/lsof/  \
 			ftp://ftp.sunet.se/pub/unix/admin/lsof/
 
-PATCH_SITES=		ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/patches/4.40/
-PATCHFILES=		arg.c.patch
-
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www-rcd.cc.purdue.edu/~abe/
-
-DIST_SUBDIR=		lsof
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	Configure
