@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1575 2003/03/06 09:15:57 martin Exp $
+$NetBSD: CHANGES,v 1.1576 2003/03/06 11:43:27 is Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -973,3 +973,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated postfix to 2.0.6 [martti 2003-03-06]
 	Updated lftp to 2.6.5 [wiz 2003-03-06]
 	Added cvsync-0.14.0 [martin 2003-03-06]
+	Updated bind8 to 8.3.4nb1 [is 2003-03-06]
