@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2002/10/15 02:35:07 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2002/10/18 13:51:27 jschauma Exp $
 #
 
 DISTNAME=	jasmin-1.06
 CATEGORIES=     lang
-MASTER_SITES=	http://www.cat.nyu.edu/meyer/jasmin/
+MASTER_SITES=	http://www.cat.nyu.edu/~meyer/jasmin/
 
 MAINTAINER=	jschauma@netbsd.org
-HOMEPAGE=	http://www.cat.nyu.edu/meyer/jasmin/
+HOMEPAGE=	http://www.cat.nyu.edu/~meyer/jasmin/
 COMMENT=	Java "assembler" interface
 
 USE_JAVA=	run
