@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:51:53 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/10/09 19:09:28 abs Exp $
 #
 
-DISTNAME=	speedtouch-1.1
+DISTNAME=	speedtouch-1.2-beta2
 CATEGORIES=	net
-MASTER_SITES=	http://www.xsproject.org/speedtouch/files/ \
+MASTER_SITES=	http://osdn.dl.sourceforge.net/sourceforge/speedtouch/ \
 		http://www.alcatel.com/consumer/dsl/
 DISTFILES=	${DISTNAME}.tar.bz2 speedmgmt.tar.gz
 
