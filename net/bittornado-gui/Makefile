@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2004/11/26 12:07:26 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/25 20:03:53 wiz Exp $
 #
 
 .include "../../net/bittornado/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/Tornado/Tornado-gui/}
+PKGREVISION=	1
 
 COMMENT+=	(wxGTK GUI)
 
@@ -22,5 +23,5 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/btmaketorrentgui.py ${PREFIX}/bin
 
 .include "../../lang/python/application.mk"
-.include "../../x11/py-wxWindows/buildlink3.mk"
+.include "../../x11/py-wxWidgets/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
