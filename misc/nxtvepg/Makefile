@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/03/22 03:34:35 kristerw Exp $
+# $NetBSD: Makefile,v 1.35 2004/03/30 18:48:44 tron Exp $
 
 DISTNAME=	nxtvepg-2.6.0
 PKGREVISION=	1
@@ -16,16 +16,17 @@ ONLY_FOR_PLATFORM=      NetBSD-1.4[Y-Z]-* NetBSD-1.4Z[A-Z]-* \
 USE_PERL5=	yes
 USE_GNU_TOOLS+=	make
 USE_X11=	yes
-USE_BUILDLINK2= yes
+USE_BUILDLINK3= yes
 
-.include "../../mk/pthread.buildlink2.mk"
-PTHREAD_OPTS=native #only native threads work
-.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "native")
-CFLAGS+=-DUSE_THREADS=1
-LDFLAGS+=-pthread
-MAKE_ENV+=WANT_THREADS=1
+.include "../../mk/pthread.buildlink3.mk"
+
+# Only native threads work.
+.if ${PTHREAD_TYPE} == "native"
+CFLAGS+=	-DUSE_THREADS=1
+MAKE_ENV+=	WANT_THREADS=1
 .endif
-
+# Required for Tcl/Tk 8.4
+LDFLAGS+=	${BUILDLINK_LDADD.pthread}
 
 pre-configure:
 	cd ${WRKSRC};							\
@@ -37,5 +38,5 @@ pre-configure:
 #	cd ${WRKSRC};							\
 #	${GMAKE} depend
 
-.include "../../x11/tk/buildlink2.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
