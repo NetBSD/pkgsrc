@@ -1216,14 +1216,22 @@ wasted by recompiling.
 
 5.3.6. Setting up a sandbox for chroot'ed builds
 
-If you don't want all the pkgs nuked from a machine (rendering it useless for
-anything but pkg compiling), there is the possibility of doing the pkg bulk
+If you don't want all the packages nuked from a machine (rendering it useless
+for anything but pkg compiling), there is the possibility of doing the pkg bulk
 build inside a chroot environment.
 
-The first step to do so is setting up a chroot sandbox, e.g. /usr/sandbox.
-After extracting all the sets from a NetBSD installation or doing a make
-distribution DESTDIR=/usr/sandbox in /usr/src/etc, be sure the following items
-are present and properly configured:
+The first step is to set up a chroot sandbox, e.g. /usr/sandbox. This can be
+done by using null mounts, or manually.
+
+There is a shell script called pkgsrc/mk/bulk/mksandbox which will set up the
+sandbox environment using null mounts. It will also create a script called
+sandbox in the root of the sandbox environment, which will allow the null
+mounts to be activated using the sandbox mount command and deactivated using
+the sandbox umount command.
+
+To set up a sandbox environment by hand, after extracting all the sets from a
+NetBSD installation or doing a make distribution DESTDIR=/usr/sandbox in /usr/
+src/etc, be sure the following items are present and properly configured:
 
  1. Kernel
 
