@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.995 2003/11/05 03:59:16 jschauma Exp $
+$NetBSD: TODO,v 1.996 2003/11/05 04:33:26 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -299,7 +299,6 @@ Suggested package updates
 	o pdmenu-1.2.81
 	o php-4.3.4
 	o postfix-2.0.16
-	o prboom-2.2.4 [pkg/23346]
 	o proftpd-1.2.9
 	o pureftpd-1.0.16c
 	o pygtk-0.6.11
