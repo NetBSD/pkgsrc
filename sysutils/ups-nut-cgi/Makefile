@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.26 2003/07/17 22:53:56 grant Exp $
+# $NetBSD: Makefile,v 1.27 2004/02/15 13:15:43 lukem Exp $
 
-DISTNAME=		nut-1.2.1
-PKGREVISION=		2
-PKGNAME=		ups-nut-cgi-1.2.1
+DISTNAME=		nut-1.4.1
+PKGNAME=		ups-nut-cgi-1.4.1
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.exploits.org/nut/release/1.2/
+MASTER_SITES=		http://random.networkupstools.org/source/1.4/
 
 MAINTAINER=		lukem@NetBSD.org
-HOMEPAGE=		http://www.exploits.org/nut/
+HOMEPAGE=		http://www.networkupstools.org/
 COMMENT=		Network UPS Tools CGI scripts
 
 DEPENDS+=		ups-nut-1.*:../../sysutils/ups-nut
@@ -20,12 +19,15 @@ USE_PKGINSTALL=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${NUT_CONFDIR}			\
+			--datadir=${NUT_DATADIR}			\
+			--localstatedir=${NUT_STATEDIR}			\
 			--with-statepath=${NUT_STATEDIR}		\
 			--with-cgi					\
 			--with-cgipath=${NUT_CGIDIR}
 
 PKG_SYSCONFSUBDIR?=	nut
 NUT_CONFDIR=		${PKG_SYSCONFDIR}
+NUT_DATADIR=		${PREFIX}/share/nut
 NUT_EGDIR=		${PREFIX}/share/examples/nut
 NUT_STATEDIR=		/var/db/nut
 NUT_CGIDIR=		${PREFIX}/libexec/cgi-bin
