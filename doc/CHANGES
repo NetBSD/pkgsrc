@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6719 2004/07/28 21:41:52 shannonjr Exp $
+$NetBSD: CHANGES,v 1.6720 2004/07/29 05:08:36 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3625,3 +3625,17 @@ Changes to the packages collection and infrastructure in 2004:
 	Added jdk12-openjit-1.1.16 [tv 2004-07-28]
 	Updated gcc34 to 3.4.1nb3 [shannonjr 2004-07-28]
 	Updated gcc34-ada to 3.4.1nb3 [shannonjr 2004-07-28]
+	Added xorg-6.7.0 [xtraeme 2004-07-29]
+	Added xorg-imake-6.7.0 [xtraeme 2004-07-29]
+	Added xorg-libs-6.7.0 [xtraeme 2004-07-29]
+	Added xorg-clients-6.7.0 [xtraeme 2004-07-29]
+	Added xorg-server-6.7.0 [xtraeme 2004-07-29]
+	Added xorg-fontserver-6.7.0 [xtraeme 2004-07-29]
+	Added xorg-fontsEncodings-6.7.0 [xtraeme 2004-07-29]
+	Added xorg-fonts100dpi-6.7.0 [xtraeme 2004-07-29]
+	Added xorg-fonts75dpi-6.7.0 [xtraeme 2004-07-29]
+	Added xorg-fontsCyrillic-6.7.0 [xtraeme 2004-07-29]
+	Added xorg-fontsMisc-6.7.0 [xtraeme 2004-07-29]
+	Added xorg-fontsTruetype-6.7.0 [xtraeme 2004-07-29]
+	Added xorg-fontsType1-6.7.0 [xtraeme 2004-07-29]
+	Added xorg-docs-6.7.0 [xtraeme 2004-07-29]
