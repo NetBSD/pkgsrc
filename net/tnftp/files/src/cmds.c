@@ -1,7 +1,7 @@
-/*	$NetBSD: cmds.c,v 1.2 2004/07/27 10:25:09 grant Exp $	*/
+/*	$NetBSD: cmds.c,v 1.3 2005/01/04 23:44:24 lukem Exp $	*/
 
 /*-
- * Copyright (c) 1996-2004 The NetBSD Foundation, Inc.
+ * Copyright (c) 1996-2005 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -52,11 +52,7 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *	This product includes software developed by the University of
- *	California, Berkeley and its contributors.
- * 4. Neither the name of the University nor the names of its contributors
+ * 3. Neither the name of the University nor the names of its contributors
  *    may be used to endorse or promote products derived from this software
  *    without specific prior written permission.
  *
@@ -108,7 +104,7 @@
 #if 0
 static char sccsid[] = "@(#)cmds.c	8.6 (Berkeley) 10/9/94";
 #else
-__RCSID("$NetBSD: cmds.c,v 1.2 2004/07/27 10:25:09 grant Exp $");
+__RCSID("$NetBSD: cmds.c,v 1.3 2005/01/04 23:44:24 lukem Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -137,7 +133,7 @@ struct	types {
 };
 
 sigjmp_buf	 jabort;
-char		*mname;
+const char	*mname;
 
 static int	confirm(const char *, const char *);
 
@@ -157,7 +153,7 @@ confirm(const char *cmd, const char *file)
 			clearerr(stdin);
 			return (0);
 		}
-		switch (tolower(*line)) {
+		switch (tolower((unsigned char)*line)) {
 			case 'a':
 				confirmrest = 1;
 				fprintf(ttyout,
@@ -682,7 +678,14 @@ mget(int argc, char *argv[])
 			mflag = 0;
 			continue;
 		}
-		if (! mflag || !confirm(argv[0], cp))
+		if (! mflag)
+			continue;
+		if (! fileindir(cp, localcwd)) {
+			fprintf(ttyout, "Skipping non-relative filename `%s'\n",
+			    cp);
+			continue;
+		}
+		if (!confirm(argv[0], cp))
 			continue;
 		tp = cp;
 		if (mcase)
@@ -764,13 +767,13 @@ onoff(int bool)
 void
 status(int argc, char *argv[])
 {
-	int i;
 
 	if (argc == 0) {
 		fprintf(ttyout, "usage: %s\n", argv[0]);
 		code = -1;
 		return;
 	}
+#ifndef NO_STATUS
 	if (connected)
 		fprintf(ttyout, "Connected %sto %s.\n",
 		    connected == -1 ? "and logged in" : "", hostname);
@@ -834,13 +837,16 @@ status(int argc, char *argv[])
 	    onoff(editing)
 #endif	/* !def NO_EDITCOMPLETE */
 	    );
-	fprintf(ttyout, "Version: %s %s\n", FTP_PRODUCT, FTP_VERSION);
 	if (macnum > 0) {
+		int i;
+
 		fputs("Macros:\n", ttyout);
 		for (i=0; i<macnum; i++) {
 			fprintf(ttyout, "\t%s\n", macros[i].mac_name);
 		}
 	}
+#endif /* !def NO_STATUS */
+	fprintf(ttyout, "Version: %s %s\n", FTP_PRODUCT, FTP_VERSION);
 	code = 0;
 }
 
@@ -1121,7 +1127,7 @@ cd(int argc, char *argv[])
 	}
 	if (r == COMPLETE) {
 		dirchange = 1;
-		updateremotepwd();
+		updateremotecwd();
 	}
 }
 
@@ -1131,7 +1137,6 @@ cd(int argc, char *argv[])
 void
 lcd(int argc, char *argv[])
 {
-	char buf[MAXPATHLEN];
 	char *locdir;
 
 	code = -1;
@@ -1145,14 +1150,16 @@ lcd(int argc, char *argv[])
 	}
 	if ((locdir = globulize(argv[1])) == NULL)
 		return;
-	if (chdir(locdir) < 0)
-		warn("local: %s", locdir);
+	if (chdir(locdir) == -1)
+		warn("lcd %s", locdir);
 	else {
-		if (getcwd(buf, sizeof(buf)) != NULL) {
-			fprintf(ttyout, "Local directory now %s\n", buf);
+		updatelocalcwd();
+		if (localcwd[0]) {
+			fprintf(ttyout, "Local directory now: %s\n", localcwd);
 			code = 0;
-		} else
-			warn("getcwd: %s", locdir);
+		} else {
+			fprintf(ttyout, "Unable to determine local directory\n");
+		}
 	}
 	(void)free(locdir);
 }
@@ -1163,7 +1170,6 @@ lcd(int argc, char *argv[])
 void
 delete(int argc, char *argv[])
 {
-
 
 	if (argc == 0 || argc > 2 ||
 	    (argc == 1 && !another(&argc, &argv, "remote-file"))) {
@@ -1313,6 +1319,7 @@ ls(int argc, char *argv[])
 		(void)strlcpy(locfile + 1, p, len - 1);
 		freelocfile = 1;
 	} else if ((strcmp(locfile, "-") != 0) && *locfile != '|') {
+		mname = argv[0];
 		if ((locfile = globulize(locfile)) == NULL ||
 		    !confirm("output to local-file:", locfile)) {
 			code = -1;
@@ -1349,6 +1356,7 @@ mls(int argc, char *argv[])
 	}
 	odest = dest = argv[argc - 1];
 	argv[argc - 1] = NULL;
+	mname = argv[0];
 	if (strcmp(dest, "-") && *dest != '|')
 		if (((dest = globulize(dest)) == NULL) ||
 		    !confirm("output to local-file:", dest)) {
@@ -1356,7 +1364,6 @@ mls(int argc, char *argv[])
 			return;
 	}
 	dolist = strcmp(argv[0], "mls");
-	mname = argv[0];
 	mflag = 1;
 	oldintr = xsignal(SIGINT, mintr);
 	if (sigsetjmp(jabort, 1))
@@ -1499,19 +1506,20 @@ user(int argc, char *argv[])
 void
 pwd(int argc, char *argv[])
 {
-	int oldverbose = verbose;
 
-	if (argc == 0) {
+	code = -1;
+	if (argc != 1) {
 		fprintf(ttyout, "usage: %s\n", argv[0]);
-		code = -1;
 		return;
 	}
-	verbose = 1;	/* If we aren't verbose, this doesn't do anything! */
-	if (command("PWD") == ERROR && code == 500) {
-		fputs("PWD command not recognized, trying XPWD.\n", ttyout);
-		(void)command("XPWD");
+	if (! remotecwd[0])
+		updateremotecwd();
+	if (! remotecwd[0])
+		fprintf(ttyout, "Unable to determine remote directory\n");
+	else {
+		fprintf(ttyout, "Remote directory: %s\n", remotecwd);
+		code = 0;
 	}
-	verbose = oldverbose;
 }
 
 /*
@@ -1520,19 +1528,19 @@ pwd(int argc, char *argv[])
 void
 lpwd(int argc, char *argv[])
 {
-	char buf[MAXPATHLEN];
 
-	if (argc == 0) {
+	code = -1;
+	if (argc != 1) {
 		fprintf(ttyout, "usage: %s\n", argv[0]);
-		code = -1;
 		return;
 	}
-	if (getcwd(buf, sizeof(buf)) != NULL) {
-		fprintf(ttyout, "Local directory %s\n", buf);
+	if (! localcwd[0])
+		updatelocalcwd();
+	if (! localcwd[0])
+		fprintf(ttyout, "Unable to determine local directory\n");
+	else {
+		fprintf(ttyout, "Local directory: %s\n", localcwd);
 		code = 0;
-	} else {
-		warn("getcwd");
-		code = -1;
 	}
 }
 
@@ -1877,7 +1885,7 @@ docase(char *name)
 	if (dochange) {
 		for (i = 0; new[i] != '\0'; i++)
 			if (isupper((unsigned char)new[i]))
-				new[i] = tolower(new[i]);
+				new[i] = tolower((unsigned char)new[i]);
 	}
 	return (new);
 }
@@ -2298,7 +2306,7 @@ cdup(int argc, char *argv[])
 	}
 	if (r == COMPLETE) {
 		dirchange = 1;
-		updateremotepwd();
+		updateremotecwd();
 	}
 }
 
