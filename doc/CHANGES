@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7450 2004/10/15 18:39:19 adrianp Exp $
+$NetBSD: CHANGES,v 1.7451 2004/10/15 21:34:24 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4736,3 +4736,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome2-applets to 2.8.1.1 [jmmv 2004-10-15]
 	Updated libgpg-error to 1.0 [minskim 2004-10-15]
 	Added cgiirc-0.5.4 [adrianp 2004-10-15]
+	Updated gal2 to 2.2.3 [jmmv 2004-10-15]
+	Updated libsoup-devel to 2.2.1 [jmmv 2004-10-15]
+	Updated evolution-data-server to 1.0.2 [jmmv 2004-10-15]
+	Updated gtkhtml3 to 3.2.3 [jmmv 2004-10-15]
+	Updated evolution to 2.0.2 [jmmv 2004-10-15]
