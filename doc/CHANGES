@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2933 2003/07/30 11:38:21 jmmv Exp $
+$NetBSD: CHANGES,v 1.2934 2003/07/30 12:02:30 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3067,3 +3067,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated zephyr to 2.0.4nb1 [jmmv 2003-07-30]
 	Updated xconq to 7.4.1nb1 [kleink 2003-07-30]
 	Updated delegate to 8.5.2nb1 [jmmv 2003-07-30]
+	Updated dynipclient to 3.00nb1 [jmmv 2003-07-30]
