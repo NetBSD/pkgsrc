@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.8 2003/08/17 02:03:53 jlam Exp $
+# $NetBSD: tools.mk,v 1.9 2003/08/17 04:06:36 jlam Exp $
 #
 # This Makefile creates a ${TOOLS_DIR} directory and populates the bin
 # subdir with tools that hide the ones outside of ${TOOLS_DIR}.
@@ -115,6 +115,12 @@ ${TOOLS_DIR}/bin/makeinfo: ${_GNU_MISSING}
 
 _TOOLS=		awk grep sed
 
+.if defined(_IGNORE_USE_GNU_TOOLS)
+USE_GNU_TOOLS:=		# empty
+.else
+USE_GNU_TOOLS?=		# empty
+.endif
+
 # These platforms already have GNU versions of the tools in the base
 # system, so no need to pull in the pkgsrc versions; we will use these
 # instead.
@@ -188,6 +194,10 @@ _TOOLS_OVERRIDE.awk=	YES
 _TOOLS_PROGNAME.awk=	${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}awk
 AWK:=			${_TOOLS_PROGNAME.awk}
 .endif
+.if !empty(PKGPATH:Mlang/gawk)
+_TOOLS_OVERRIDE.awk=	NO
+MAKEFLAGS+=		_IGNORE_USE_GNU_TOOLS=
+.endif
 
 .if ${_TOOLS_REPLACE.grep} == "YES"
 _TOOLS_OVERRIDE.grep=	YES
@@ -199,6 +209,10 @@ _TOOLS_OVERRIDE.grep=	YES
 _TOOLS_PROGNAME.grep=	${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}grep
 GREP:=			${_TOOLS_PROGNAME.grep}
 .endif
+.if !empty(PKGPATH:Mtextproc/grep)
+_TOOLS_OVERRIDE.grep=	NO
+MAKEFLAGS+=		_IGNORE_USE_GNU_TOOLS=
+.endif
 
 .if ${_TOOLS_REPLACE.sed} == "YES"
 _TOOLS_OVERRIDE.sed=	YES
@@ -209,6 +223,10 @@ BUILD_DEPENDS+=		gsed>=3.0.2:../../textproc/gsed
 _TOOLS_OVERRIDE.sed=	YES
 _TOOLS_PROGNAME.sed=	${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}sed
 SED:=			${_TOOLS_PROGNAME.sed}
+.endif
+.if !empty(PKGPATH:Mtextproc/gsed)
+_TOOLS_OVERRIDE.sed=	NO
+MAKEFLAGS+=		_IGNORE_USE_GNU_TOOLS=
 .endif
 
 # If _TOOLS_OVERRIDE.<tool> is actually set to "YES", then we override
