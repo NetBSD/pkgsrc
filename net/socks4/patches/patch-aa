@@ -1,7 +1,14 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 11:10:58 agc Exp $
-
---- Makefile.orig	Thu Sep  7 03:24:02 1995
-+++ Makefile	Thu Jun 11 14:50:45 1998
+--- Makefile.orig	Wed Sep  6 19:24:02 1995
++++ Makefile	Tue Jan 19 15:53:43 1999
+@@ -5,7 +5,7 @@
+ 
+ #SOCKS=-DSOCKS
+ # or
+-SOCKS=-Dconnect=Rconnect -Dgetsockname=Rgetsockname -Dlisten=Rlisten -Daccept=Raccept -Drcmd=Rrcmd -Dbind=Rbind -Dselect=Rselect
++SOCKS=-Dconnect=Rconnect -Dgetsockname=Rgetsockname -Dlisten=Rlisten -Daccept=Raccept -Drcmd=Rrcmd -Dbind=Rbind -Dselect=Rselect -Dunix=1
+ # If the second definition of SOCKS is used, you MUST also
+ # define SHORTENED_RBIND
+ 
 @@ -19,7 +19,7 @@
  # It should be this current directory.
  
@@ -49,6 +56,27 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 11:10:58 agc Exp $
  
  # SunOS 4.1.x should use
  #CC=cc
+@@ -103,13 +103,13 @@
+ #GETPASS=getpass.o
+ 
+ # IRIX 5 should use
+-CC=cc
+-RESOLV_LIB=-lsun
+-OTHER_CFLAGS=-cckr $(GETCWD) $(FASCIST) $(SHORTENED_RBIND) -DCOMPAT -DSVR3 -DNCARGS=`sysconf ARG_MAX` -D_BSD_SIGNALS $(TRY_PASV)
+-RANLIB=/bin/true
+-OS=irix5
+-INSTALL=bsdinstall
+-GETPASS=getpass.o
++#CC=cc
++#RESOLV_LIB=-lsun
++#OTHER_CFLAGS=-cckr $(GETCWD) $(FASCIST) $(SHORTENED_RBIND) -DCOMPAT -DSVR3 -DNCARGS=`sysconf ARG_MAX` -D_BSD_SIGNALS $(TRY_PASV)
++#RANLIB=/bin/true
++#OS=irix5
++#INSTALL=bsdinstall
++#GETPASS=getpass.o
+ 
+ # Ultrix 4.0 should use
+ #CC=cc
 @@ -174,13 +174,13 @@
  #RESOLV_LIB=-linet -lc_s
  
@@ -60,7 +88,7 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 11:10:58 agc Exp $
 -#INSTALL=install
 -#GETPASS=
 -#RESOLV_LIB=
-+OTHER_CFLAGS = $(GETCWD) $(SHORTENED_RBIND) $(FASCIST) $(TRY_PASV)
++OTHER_CFLAGS = $(GETCWD) $(SHORTENED_RBIND) $(FASCIST) $(TRY_PASV) -Dunix=1
 +CC=cc
 +RANLIB=ranlib
 +OS=netbsd0.9
