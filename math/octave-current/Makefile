@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/04/18 19:52:17 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.6 2001/04/19 15:10:35 dmcmahill Exp $
 
 DISTNAME=	octave-2.1.33
 CATEGORIES=	math
@@ -20,9 +20,11 @@ DEPENDS+=	readline>=4.0:../../devel/readline
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+USE_FORTRAN=	yes
 USE_GMAKE=	yes
 USE_GTEXINFO=	yes
-CONFIGURE_ARGS+=--with-g77 --enable-shared --enable-rpath
+CONFIGURE_ARGS+=--with-g77
+CONFIGURE_ARGS+=--enable-shared --enable-rpath
 CONFIGURE_ARGS+=-prefix=${PREFIX}
 
 CONFIGURE_ENV+=	FFLAGS="${CFLAGS}" OBJECT_FMT="${OBJECT_FMT}"
