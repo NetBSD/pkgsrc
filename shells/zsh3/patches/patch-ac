@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/06/05 16:30:14 jtb Exp $
+
+--- Doc/zsh.texi.orig	Thu Jan  6 15:44:41 2000
++++ Doc/zsh.texi	Thu Jan  6 15:45:48 2000
+@@ -2,6 +2,10 @@
+ @c %**start of header
+ @setfilename zsh.info
+ @settitle    zsh
++@dircategory Shells
++@direntry
++* Zsh: (zsh).                   The Z shell.
++@end direntry
+ @c %**end of header
+ 
+ @ifinfo
