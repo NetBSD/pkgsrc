@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1961 2003/04/17 12:05:12 salo Exp $
+$NetBSD: CHANGES,v 1.1962 2003/04/17 15:09:52 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1635,3 +1635,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated oroborus to 2.0.12 [salo 2003-04-17]
 	Added dfdisk-1.0 [jmmv 2003-04-17]
 	Added vera-ttf-1.10 [salo 2003-04-17]
+	Updated mserv to 0.33nb6 [abs 2003-04-17]
