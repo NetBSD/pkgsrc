@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4195 2003/12/20 04:24:24 grant Exp $
+$NetBSD: CHANGES,v 1.4196 2003/12/20 04:48:05 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5253,3 +5253,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added profont-1.0 [perry 2003-12-19]
 	Updated subversion to 0.35.0 [epg 2003-12-20]
 	Updated pkg_install to 20031220 [grant 2003-12-20]
+	Updated pax to 20031220 [grant 2003-12-20]
