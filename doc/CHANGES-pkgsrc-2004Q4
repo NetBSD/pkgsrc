@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.34 2005/01/17 21:16:08 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.35 2005/01/17 21:53:26 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -77,3 +77,5 @@ Pullup ticket 222 - requested by Juan RP
 build fix for xorg-libs
 Pullup ticket 223 - requested by Juan RP
 build fix for icewm and friends
+Pullup ticket 228 - requested by Julio M. Merino Vidal
+update (for ease of distfile retrieval and bugfixes) sun-jdk15 and sun-jre15
