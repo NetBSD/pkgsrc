@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/24 21:25:00 nathanw Exp $
+lib/gaim/gaim-otr.so
