@@ -1,26 +1,11 @@
-# $NetBSD: logic,v 1.3 2003/09/19 22:47:34 jlam Exp $
+# $NetBSD: logic,v 1.4 2003/10/03 19:39:19 jlam Exp $
 
 quotedarg=no
 addtocache=no
 addtoprivatecache=no
 cachesettings='arg="$cachearg"; cachehit=yes'
 
-# $qarg contains a correctly-quoted $arg
-case $arg in
-*[\`\"\$\\]*)
-	qarg=`$echo "X$arg" | $Xsed -e "$sed_quote_subst"`
-	quotedarg=yes
-	;;
-*)
-	qarg="$arg"
-	;;
-esac
-case $qarg in
-	*[\[\~\#\^\&\*\(\)\{\}\|\;\<\>\?\'\ \	]*|*]*|"")
-	qarg="\"$qarg\""
-	quotedarg=yes
-	;;
-esac
+. $quotearg
 searcharg="$qarg"
 
 case $arg in
