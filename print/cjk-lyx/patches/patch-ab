@@ -1,0 +1,43 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/07/19 12:32:32 agc Exp $
+
+--- src/Makefile.in.orig	Thu May 23 20:05:19 2002
++++ src/Makefile.in
+@@ -370,6 +370,8 @@
+ 	lyx_main.h \
+ 	lyx_sty.C \
+ 	lyx_sty.h \
++	lyxcodeconv.C \
++	lyxcodeconv.h \
+ 	lyxcursor.C \
+ 	lyxcursor.h \
+ 	lyxfont.C \
+@@ -380,6 +382,8 @@
+ 	lyxfunc.h \
+ 	lyxgluelength.C \
+ 	lyxgluelength.h \
++	lyxim.C \
++	lyxim.h \
+ 	lyxlayout.C \
+ 	lyxlayout.h \
+ 	lyxlength.C \
+@@ -476,6 +480,7 @@
+ 	kbsequence.$(OBJEXT) language.$(OBJEXT) lastfiles.$(OBJEXT) \
+ 	lengthcommon.$(OBJEXT) lyx_cb.$(OBJEXT) lyx_gui.$(OBJEXT) \
+ 	lyx_main.$(OBJEXT) lyx_sty.$(OBJEXT) lyxcursor.$(OBJEXT) \
++	lyxcodeconv.$(OBJEXT) lyxim.$(OBJEXT) \
+ 	lyxfont.$(OBJEXT) lyxfind.$(OBJEXT) lyxfunc.$(OBJEXT) \
+ 	lyxgluelength.$(OBJEXT) lyxlayout.$(OBJEXT) lyxlength.$(OBJEXT) \
+ 	lyxlex.$(OBJEXT) lyxlex_pimpl.$(OBJEXT) lyxlookup.$(OBJEXT) \
+@@ -651,6 +656,12 @@
+ lyx$(EXEEXT): $(lyx_OBJECTS) $(lyx_DEPENDENCIES) 
+ 	@rm -f lyx$(EXEEXT)
+ 	$(CXXLINK) $(lyx_LDFLAGS) $(lyx_OBJECTS) $(lyx_LDADD) $(LIBS)
++
++lyxfunc.o: lyxfunc.C
++	$(CXX) $(DEFS) -I. $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) -O -c $<
++
++lyxfunc.lo: lyxfunc.C
++	$(LIBTOOL) --mode=compile $(CXX) $(DEFS) -I. $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) -O -c $<
+ 
+ mostlyclean-compile:
+ 	-rm -f *.$(OBJEXT) core *.core

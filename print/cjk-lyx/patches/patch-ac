@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/07/19 12:32:32 agc Exp $
+
+--- src/WorkArea.C.porig	Fri Jul 19 13:22:01 2002
++++ src/WorkArea.C
+@@ -420,7 +420,11 @@
+ 		LyXLookupString(ev, dummy, 1, &keysym);
+ #endif
+ #else
++#ifdef I18N
++		int num_bytes = XLookupString(xke, s_r, 256, &keysym, 0);
++#else
+ 		XLookupString(xke, dummy, 1, &keysym, 0);
++#endif
+ //		int num_keys = XLookupString(xke, dummy, 10, &keysym, &xcs);
+ //		lyxerr << "We have " << num_keys << " keys in the returned buffer" << endl;
+ //		lyxerr << "Our dummy string is " << dummy << endl;
