@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2003/07/23 09:41:41 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2003/12/19 15:43:31 skrll Exp $
 qt3/bin/assistant
 qt3/bin/designer
 qt3/bin/linguist
@@ -8,16 +8,16 @@ qt3/bin/qm2ts
 qt3/bin/qmake
 qt3/bin/qtconfig
 qt3/bin/uic
-qt3/lib/libqassistantclient.a
-qt3/lib/libqassistantclient.la
-qt3/lib/libqassistantclient.so
-qt3/lib/libqassistantclient.so.1
-qt3/lib/libqassistantclient.so.1.0
 qt3/lib/libeditor.a
 qt3/lib/libeditor.la
 qt3/lib/libeditor.so
 qt3/lib/libeditor.so.1
 qt3/lib/libeditor.so.1.0
+qt3/lib/libqassistantclient.a
+qt3/lib/libqassistantclient.la
+qt3/lib/libqassistantclient.so
+qt3/lib/libqassistantclient.so.1
+qt3/lib/libqassistantclient.so.1.0
 qt3/lib/libqui.a
 qt3/lib/libqui.la
 qt3/lib/libqui.so
@@ -52,6 +52,10 @@ qt3/mkspecs/hpux-g++-64/qmake.conf
 qt3/mkspecs/hpux-g++-64/qplatformdefs.h
 qt3/mkspecs/hpux-g++/qmake.conf
 qt3/mkspecs/hpux-g++/qplatformdefs.h
+qt3/mkspecs/hpuxi-acc-32/qmake.conf
+qt3/mkspecs/hpuxi-acc-32/qplatformdefs.h
+qt3/mkspecs/hpuxi-acc-64/qmake.conf
+qt3/mkspecs/hpuxi-acc-64/qplatformdefs.h
 qt3/mkspecs/hurd-g++/qmake.conf
 qt3/mkspecs/hurd-g++/qplatformdefs.h
 qt3/mkspecs/irix-cc-64/qmake.conf
@@ -70,14 +74,12 @@ qt3/mkspecs/linux-icc/qmake.conf
 qt3/mkspecs/linux-icc/qplatformdefs.h
 qt3/mkspecs/linux-kcc/qmake.conf
 qt3/mkspecs/linux-kcc/qplatformdefs.h
+qt3/mkspecs/linux-kylix/qmake.conf
+qt3/mkspecs/linux-kylix/qplatformdefs.h
 qt3/mkspecs/linux-pgcc/qmake.conf
 qt3/mkspecs/linux-pgcc/qplatformdefs.h
 qt3/mkspecs/lynxos-g++/qmake.conf
 qt3/mkspecs/lynxos-g++/qplatformdefs.h
-qt3/mkspecs/mac9-mwerks/mwerksapp.xml
-qt3/mkspecs/mac9-mwerks/mwerkslib.xml
-qt3/mkspecs/mac9-mwerks/qmake.conf
-qt3/mkspecs/mac9-mwerks/qplatformdefs.h
 qt3/mkspecs/macx-g++/Info.plist.app
 qt3/mkspecs/macx-g++/qmake.conf
 qt3/mkspecs/macx-g++/qplatformdefs.h
@@ -109,8 +111,6 @@ qt3/mkspecs/solaris-g++-64/qmake.conf
 qt3/mkspecs/solaris-g++-64/qplatformdefs.h
 qt3/mkspecs/solaris-g++/qmake.conf
 qt3/mkspecs/solaris-g++/qplatformdefs.h
-qt3/mkspecs/solaris-kcc/qmake.conf
-qt3/mkspecs/solaris-kcc/qplatformdefs.h
 qt3/mkspecs/tru64-cxx/qmake.conf
 qt3/mkspecs/tru64-cxx/qplatformdefs.h
 qt3/mkspecs/tru64-g++/qmake.conf
@@ -163,7 +163,6 @@ qt3/plugins/designer/libwizards.so
 @dirrm qt3/mkspecs/unixware-cc
 @dirrm qt3/mkspecs/tru64-g++
 @dirrm qt3/mkspecs/tru64-cxx
-@dirrm qt3/mkspecs/solaris-kcc
 @dirrm qt3/mkspecs/solaris-g++-64
 @dirrm qt3/mkspecs/solaris-g++
 @dirrm qt3/mkspecs/solaris-cc-64
@@ -178,7 +177,6 @@ qt3/plugins/designer/libwizards.so
 @dirrm qt3/mkspecs/macx-pbuilder
 @dirrm qt3/mkspecs/macx-mwerks
 @dirrm qt3/mkspecs/macx-g++
-@dirrm qt3/mkspecs/mac9-mwerks
 @dirrm qt3/mkspecs/lynxos-g++
 @dirrm qt3/mkspecs/linux-pgcc
 @dirrm qt3/mkspecs/linux-kcc
@@ -205,6 +203,3 @@ qt3/plugins/designer/libwizards.so
 @dirrm qt3/mkspecs/aix-xlc
 @dirrm qt3/mkspecs/aix-g++
 @dirrm qt3/mkspecs
-@comment dirrm qt3/lib
-@comment dirrm qt3/bin
-@comment dirrm qt3

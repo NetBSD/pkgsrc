@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/11/30 22:58:40 jschauma Exp $
+# $NetBSD: Makefile,v 1.21 2003/12/19 15:43:31 skrll Exp $
 #
 
 LIBQT=			${WRKSRC}/lib/libqt-mt.la
@@ -6,7 +6,6 @@ LIBQT=			${WRKSRC}/lib/libqt-mt.la
 .include "../qt3-libs/Makefile.common"
 
 PKGNAME=		qt3-libs-${QTVERSION}
-PKGREVISION=		3
 COMMENT=		C++ X GUI toolkit
 
 USE_BUILDLINK2=		yes
@@ -17,12 +16,6 @@ ALL_TARGET=		sub-plugins
 PTHREAD_OPTS+=		require
 
 UNLIMIT_RESOURCES=	datasize
-
-post-extract:
-	${RM} -f ${WRKSRC}/include/qmotif.h
-	${RM} -f ${WRKSRC}/include/qmotifdialog.h
-	${RM} -f ${WRKSRC}/include/qmotifwidget.h
-	${RM} -f ${WRKSRC}/include/qxtwidget.h
 
 do-install:
 	${INSTALL_DATA_DIR} ${QTPREFIX}
