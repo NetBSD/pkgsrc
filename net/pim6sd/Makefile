@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/02 05:05:21 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/07 23:53:18 itojun Exp $
 
 DISTNAME=	pim6sd-20010602a
 CATEGORIES=	net
@@ -12,7 +12,12 @@ LICENSE=	no-commercial-use
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/pim6sd/
 
+post-build:
+	(cd ${WRKSRC}/mtrace6; ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS})
+
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/pim6stat.1 ${PREFIX}/man/man1
+	(cd ${WRKSRC}/mtrace6; \
+	 ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} MANDIR=${PREFIX}/man install)
 
 .include "../../mk/bsd.pkg.mk"
