@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.15 2003/08/01 15:31:09 drochner Exp $
+# $NetBSD: buildlink2.mk,v 1.16 2003/08/06 10:45:02 drochner Exp $
 
 .if !defined(QT3_LIBS_BUILDLINK2_MK)
 QT3_LIBS_BUILDLINK2_MK=	# defined
@@ -8,7 +8,7 @@ BUILDLINK_DEPENDS.qt3-libs?=	qt3-libs>=3.1.2nb2
 BUILDLINK_PKGSRCDIR.qt3-libs?=	../../x11/qt3-libs
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.qt3-libs=qt3-libs
-BUILDLINK_PREFIX.qt3-libs_DEFAULT=	${X11PREFIX}
+BUILDLINK_PREFIX.qt3-libs_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.qt3-libs+=	qt3/include/*.h
 BUILDLINK_FILES.qt3-libs+=	qt3/include/private/*.h
 BUILDLINK_FILES.qt3-libs+=	qt3/lib/libqt-mt.*
