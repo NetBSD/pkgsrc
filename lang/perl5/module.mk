@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.30 2004/01/13 00:59:14 jlam Exp $
+# $NetBSD: module.mk,v 1.31 2004/01/13 07:15:41 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -81,26 +81,14 @@ do-configure: perl5-configure
 # module's ${PREFIX}.
 #
 .for _var_ in ${_PERL5_SITEVARS} INSTALLSCRIPT
-PERL5_${_var_}=	${PREFIX}/${PERL5_SUB_${_var_}}
-MAKE_FLAGS+=	${_var_}="${PERL5_${_var_}}"
+PERL5_${_var_}=		${PREFIX}/${PERL5_SUB_${_var_}}
+PERL5_MAKE_FLAGS+=	${_var_}="${PERL5_${_var_}}"
 .endfor
-#
-# The build and install stages require slightly different values for
-# INSTALLARCHLIB.  During the build, INSTALLARCHLIB refers to the
-# directory where libperl.so may be found, which should point into the
-# default view.  During the install, INSTALLARCHLIB refers to the
-# directory where the perllocal.pod file should be installed, which
-# should point into the package prefix.
-#
-BUILD_MAKE_FLAGS=	${MAKE_FLAGS}
-BUILD_MAKE_FLAGS+=	INSTALLARCHLIB="${VIEWBASE}/${PERL5_SUB_INSTALLARCHLIB}"
-INSTALL_MAKE_FLAGS=	${MAKE_FLAGS}
-INSTALL_MAKE_FLAGS+=	INSTALLARCHLIB="${PREFIX}/${PERL5_SUB_INSTALLARCHLIB}"
 #
 # The PREFIX in the generated Makefile will point to ${_PERL5_PREFIX},
 # so override its value to the module's ${PREFIX}.
 #
-MAKE_FLAGS+=		PREFIX="${PREFIX}"
+PERL5_MAKE_FLAGS+=	PREFIX="${PREFIX}"
 
 .if defined(DEFAULT_VIEW.perl)
 DEFAULT_VIEW.${PKGBASE}=	${DEFAULT_VIEW.perl}
@@ -111,17 +99,15 @@ FIX_RPATH+=	PERL5_LDFLAGS
 LDFLAGS+=	${PERL5_LDFLAGS}
 .endif
 
-.include "../../mk/bsd.prefs.mk"
-
 # MakeMaker provides two hooks, PASTHRU_INC and OTHERLDFLAGS, to
 # customize the arguments passed to the preprocessor and linker,
 # respectively.
 #
-MAKE_FLAGS+=	PASTHRU_INC="${CPPFLAGS}"
+PERL5_MAKE_FLAGS+=	PASTHRU_INC="${CPPFLAGS}"
 .if ${OBJECT_FMT} == "a.out"
-MAKE_FLAGS+=	OTHERLDFLAGS="${LDFLAGS:S/-Wl,//g}"
+PERL5_MAKE_FLAGS+=	OTHERLDFLAGS="${LDFLAGS:S/-Wl,//g}"
 .else
-MAKE_FLAGS+=	OTHERLDFLAGS="${LDFLAGS}"
+PERL5_MAKE_FLAGS+=	OTHERLDFLAGS="${LDFLAGS}"
 .endif
 
 # Generate the PLIST from the files listed in PERL5_PACKLIST.
@@ -143,6 +129,21 @@ PERL5_GENERATE_PLIST=	${PERL5_PLIST_COMMENT}; \
 			${PERL5_PLIST_FILES}; \
 			${PERL5_PLIST_DIRS}
 GENERATE_PLIST+=	${PERL5_GENERATE_PLIST};
+.endif
+
+# The build and install stages require slightly different values for
+# INSTALLARCHLIB.  During the build, INSTALLARCHLIB refers to the
+# directory where libperl.so may be found, which should point into the
+# default view.  During the install, INSTALLARCHLIB refers to the
+# directory where the perllocal.pod file should be installed, which
+# should point into the package prefix.
+#
+.if !defined(BUILDING_PERL5)
+MAKE_FLAGS+=		${PERL5_MAKE_FLAGS}
+BUILD_MAKE_FLAGS=	${MAKE_FLAGS}
+BUILD_MAKE_FLAGS+=	INSTALLARCHLIB="${VIEWBASE}/${PERL5_SUB_INSTALLARCHLIB}"
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS}
+INSTALL_MAKE_FLAGS+=	INSTALLARCHLIB="${PREFIX}/${PERL5_SUB_INSTALLARCHLIB}"
 .endif
 
 # Remove the perllocal.pod file from the installation since we don't
