@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/16 13:30:33 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2002/07/02 11:27:44 agc Exp $
 #
 
 DISTNAME=	cddbd-1.3.1
@@ -14,7 +14,7 @@ MAINTAINER=	bjn@visi.com
 HOMEPAGE=	http://www.moonsoft.com/software.html
 COMMENT=	Internet CD Database Server
 
-IS_INTERACTIVE=	yes
+INTERACTIVE_STAGE=	configure install
 NO_PACKAGE=	too interactive
 MAKEFILE=	makefile
 
