@@ -1,0 +1,130 @@
+# $NetBSD: Makefile.in,v 1.1.1.1 2002/01/22 22:00:22 jlam Exp $
+#
+# Makefile to build and to install just the authentication bits of courier.
+# This is mostly extracted from courier/Makefile with the appropriate
+# modifications to deal with directory locations.
+
+srcdir = @srcdir@
+top_srcdir = @top_srcdir@
+VPATH = @srcdir@
+prefix = @prefix@
+exec_prefix = @exec_prefix@
+
+bindir = @bindir@
+sbindir = @sbindir@
+libexecdir = @libexecdir@
+datadir = @datadir@
+sysconfdir = @sysconfdir@
+sharedstatedir = @sharedstatedir@
+localstatedir = @localstatedir@
+libdir = @libdir@
+infodir = @infodir@
+mandir = @mandir@
+includedir = @includedir@
+oldincludedir = /usr/include
+
+DESTDIR =
+
+pkgdatadir = $(datadir)/@PACKAGE@
+pkglibdir = $(libdir)/@PACKAGE@
+pkgincludedir = $(includedir)/@PACKAGE@
+
+top_builddir = .
+
+INSTALL = @INSTALL@
+INSTALL_PROGRAM = @INSTALL_PROGRAM@ $(AM_INSTALL_PROGRAM_FLAGS)
+INSTALL_DATA = @INSTALL_DATA@
+INSTALL_SCRIPT = @INSTALL_SCRIPT@
+transform = @program_transform_name@
+
+authchangepwdir = @authchangepwdir@
+
+libexec_PROGRAMS = makedatprog
+bin_PROGRAMS = maildirmake
+sbin_PROGRAMS = userdbpw
+
+
+databindir = $(datadir)
+databin_SCRIPTS = makedat makeuserdb userdb pw2userdb vchkpw2userdb
+
+install-binPROGRAMS: $(bin_PROGRAMS)
+	@$(NORMAL_INSTALL)
+	$(mkinstalldirs) $(DESTDIR)$(bindir)
+	@list='$(bin_PROGRAMS)'; for p in $$list; do \
+	  if test -f $$p; then \
+	    echo " $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`"; \
+	    $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
+	  else :; fi; \
+	done
+
+install-pkglibexecPROGRAMS: $(pkglibexec_PROGRAMS)
+	@$(NORMAL_INSTALL)
+	$(mkinstalldirs) $(DESTDIR)$(pkglibexecdir)
+	@list='$(pkglibexec_PROGRAMS)'; for p in $$list; do \
+	  if test -f $$p; then \
+	    echo " $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(pkglibexecdir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`"; \
+	    $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(pkglibexecdir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
+	  else :; fi; \
+	done
+
+install-sbinPROGRAMS: $(sbin_PROGRAMS)
+	@$(NORMAL_INSTALL)
+	$(mkinstalldirs) $(DESTDIR)$(sbindir)
+	@list='$(sbin_PROGRAMS)'; for p in $$list; do \
+	  if test -f $$p; then \
+	    echo " $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(sbindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`"; \
+	    $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(sbindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
+	  else :; fi; \
+	done
+
+install-databinSCRIPTS: $(databin_SCRIPTS)
+	@$(NORMAL_INSTALL)
+	$(mkinstalldirs) $(DESTDIR)$(databindir)
+	@list='$(databin_SCRIPTS)'; for p in $$list; do \
+	  if test -f $$p; then \
+	    echo " $(INSTALL_SCRIPT) $$p $(DESTDIR)$(databindir)/`echo $$p|sed '$(transform)'`"; \
+	    $(INSTALL_SCRIPT) $$p $(DESTDIR)$(databindir)/`echo $$p|sed '$(transform)'`; \
+	  else if test -f $(srcdir)/$$p; then \
+	    echo " $(INSTALL_SCRIPT) $(srcdir)/$$p $(DESTDIR)$(databindir)/`echo $$p|sed '$(transform)'`"; \
+	    $(INSTALL_SCRIPT) $(srcdir)/$$p $(DESTDIR)$(databindir)/`echo $$p|sed '$(transform)'`; \
+	  else :; fi; fi; \
+	done
+
+install-exec-hook:
+	for d in $(bindir) $(sbindir) $(libexecdir) $(libexecdir)/courier \
+		$(sysconfdir)/filters $(libexecdir)/authlib \
+		$(localstatedir) $(localstatedir)/tmp\
+		$(webmaildir)\
+		$(localstatedir)/tmp/broken\
+		$(localstatedir)/msgs $(localstatedir)/msgq ; do \
+			$(mkinstalldirs) $(DESTDIR)$$d || exit 1; done
+	for f in `cat ../authlib/installlist`; do test -z "$$f" && continue; \
+		test -f ../authlib/$$f || continue; \
+		$(INSTALL_PROGRAM) $(INSTALL_STRIP_FLAG) ../authlib/$$f \
+			$(DESTDIR)$(libexecdir)/authlib/$$f ; done
+	for f in `cat ../authlib/installlist.sh`; do test -z "$$f" && continue; \
+		test -f ../authlib/$$f || continue; \
+		$(INSTALL_SCRIPT) ../authlib/$$f \
+			$(DESTDIR)$(libexecdir)/authlib/$$f ; done
+	rm -f $(DESTDIR)$(bindir)/makedat
+	$(LN_S) $(datadir)/makedat $(DESTDIR)$(bindir)/makedat
+	for f in makeuserdb userdb \
+		pw2userdb vchkpw2userdb ; do rm -f $(DESTDIR)$(sbindir)/$$f ; \
+		$(LN_S) $(datadir)/$$f $(DESTDIR)$(sbindir)/$$f ; done
+	$(mkinstalldirs) $(DESTDIR)@authchangepwdir@
+	. ../authlib/authpwdprogs ; for f in `echo $$PWPROGS dummy` ; do \
+		test "$$f" = "dummy" && continue ; \
+		$(INSTALL_PROGRAM) ../authlib/$$f \
+			$(DESTDIR)@authchangepwdir@/$$f ; done
+	. ../authlib/authpwdprogs ; for f in `echo $$PWSCRIPTS dummy` ; do \
+		test "$$f" = "dummy" && continue ; \
+		$(INSTALL_SCRIPT) ../authlib/$$f \
+			$(DESTDIR)$(datadir)/$$f ; \
+		rm -f $(DESTDIR)@authchangepwdir@/$$f ; \
+		$(LN_S) $(datadir)/$$f \
+			$(DESTDIR)@authchangepwdir@/$$f ; done
+
+install-data-hook:
+	. ../authlib/authdaemonrc ; \
+		test "$$authdaemonvar" != "" || exit 0 ; \
+		$(mkinstalldirs) $(DESTDIR)$$authdaemonvar
