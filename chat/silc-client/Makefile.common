@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.5 2003/11/18 18:14:32 salo Exp $
+# $NetBSD: Makefile.common,v 1.6 2003/11/27 12:40:53 salo Exp $
 #
 
 # Distribution specific information.
 #
-SILC_CLIENT_VERSION=		0.9.16
+SILC_CLIENT_VERSION=		1.0
 SILC_CLIENT_DISTNAME=		silc-client-${SILC_CLIENT_VERSION}
 SILC_CLIENT_EXTRACT_SUFX=	.tar.bz2
 SILC_CLIENT_DISTFILE=		${SILC_CLIENT_DISTNAME}${SILC_CLIENT_EXTRACT_SUFX}
