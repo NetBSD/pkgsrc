@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/05/13 00:01:58 hubertf Exp $
+$NetBSD: patch-ab,v 1.2 1999/05/15 03:49:14 hubertf Exp $
 
 --- mixer.c.orig	Thu May  6 20:04:04 1999
 +++ mixer.c	Thu May  6 20:10:47 1999
@@ -6,7 +6,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/05/13 00:01:58 hubertf Exp $
  #include <machine/soundcard.h>
  #endif
  
-+#ifdef netbsd
++#ifdef __NetBSD__
 +#include <soundcard.h>
 +#undef _POSIX_SOURCE
 +#endif
@@ -19,7 +19,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/05/13 00:01:58 hubertf Exp $
  static DeviceData *current_device = NULL;
  
 -#if defined (linux) || defined (__FreeBSD__)
-+#if defined (linux) || defined (__FreeBSD__) || defined (netbsd)
++#if defined (linux) || defined (__FreeBSD__) || defined (__NetBSD__)
  void mixer_init(gint init_device_id)
  {
  	char *device_names[] = SOUND_DEVICE_NAMES;
