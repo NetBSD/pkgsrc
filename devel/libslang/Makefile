@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2003/09/28 09:13:56 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2004/01/05 23:34:03 jlam Exp $
 #
 
 DISTNAME=	slang-1.4.9
@@ -17,10 +17,12 @@ MAINTAINER=    	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.s-lang.org/
 COMMENT=	Routines for rapid alpha-numeric terminal applications development
 
-USE_BUILDLINK2=		# defined
-USE_GMAKE=		# defined
-USE_LIBTOOL=		# defined
-GNU_CONFIGURE=		# defined
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		yes
+USE_GMAKE=		yes
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 
 CONFIG_GUESS_OVERRIDE=	${WRKSRC}/autoconf/config.guess
 CONFIG_SUB_OVERRIDE=	${WRKSRC}/autoconf/config.sub
@@ -32,14 +34,10 @@ post-install:
 
 .include "../../mk/bsd.prefs.mk"
 
-# Debian doesn't have ltermcap, use ncurses instead
+# Debian doesn't have -ltermcap, use -lncurses instead
 .if ${OPSYS} == "Linux" && ${LOWER_VENDOR} == "debian"
-post-patch:
-	${SED} -e 's/ -ltermcap / /' ${WRKSRC}/src/Makefile.in > \
-		${WRKSRC}/src/Makefile.in.tmp &&		\
-		${MV} ${WRKSRC}/src/Makefile.in.tmp ${WRKSRC}/src/Makefile.in
-
-. include "../../devel/ncurses/buildlink2.mk"
+BUILDLINK_TRANSFORM+=	S:-liconv:
+.  include "../../devel/ncurses/buildlink3.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
