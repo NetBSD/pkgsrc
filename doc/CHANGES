@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4849 2004/02/15 22:30:44 itojun Exp $
+$NetBSD: CHANGES,v 1.4850 2004/02/15 23:15:18 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -859,3 +859,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added py-ao-0.81 [minskim 2004-02-15]
 	Added py-mad-0.5.1 [minskim 2004-02-15]
 	Updated ex to 20040103 [itojun 2004-02-15]
+	Updated pcb-current to 20040215 [dmcmahill 2004-02-15]
