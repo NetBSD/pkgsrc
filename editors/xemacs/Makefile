@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2002/03/18 21:17:37 tron Exp $
+# $NetBSD: Makefile,v 1.42 2002/03/22 22:23:01 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 
 DISTNAME=	xemacs-21.1.14
@@ -25,8 +25,6 @@ NOT_FOR_PLATFORM=	*-*-mips*	#fails purespace dumping
 
 HAS_CONFIGURE=	YES
 USE_XPM=	YES
-USE_XAW=	YES
-XAW_TYPE?=	3d
 
 BUILD_DEFS+=	USE_LDAP USE_XFACE
 DIST_SUBDIR=	xemacs
@@ -42,11 +40,7 @@ PLIST_SUBST+=	ELSUFX='.gz'
 PLIST_SUBST+=	ELSUFX=''
 .endif
 
-.if (${XAW_TYPE} == "standard")
-WITH_DIALOGS=	--with-dialogs=athena
-.else
-WITH_DIALOGS=	--with-dialogs=athena3d
-.endif
+WITH_DIALOGS=	--with-dialogs=motif
 
 .if defined(USE_LDAP) && ${USE_LDAP} == YES
 WITH_LDAP=	--with-ldap=yes
@@ -96,4 +90,5 @@ post-install:
 		${WRKSRC}/lib-src/gzip-el.sh ${PREFIX}/lib/${DISTNAME}; \
 	fi
 
+.include "../../mk/motif.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
