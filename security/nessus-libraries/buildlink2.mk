@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/10/25 12:22:29 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/12/19 18:30:14 frueauf Exp $
 #
 
 .if !defined(NESSUS_LIBRARIES_BUILDLINK2_MK)
 NESSUS_LIBRARIES_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			nessus-libraries
-BUILDLINK_DEPENDS.nessus-libraries?=		nessus-libraries>=1.2.6
+BUILDLINK_DEPENDS.nessus-libraries?=		nessus-libraries>=1.2.7
 BUILDLINK_PKGSRCDIR.nessus-libraries?=		../../security/nessus-libraries
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.nessus-libraries=nessus-libraries
