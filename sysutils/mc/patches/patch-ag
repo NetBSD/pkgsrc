@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.7 2000/03/03 23:56:42 tron Exp $
+$NetBSD: patch-ag,v 1.8 2000/10/19 23:31:18 jlam Exp $
 
---- vfs/extfs/uzip.in.orig	Tue Dec  7 00:49:56 1999
-+++ vfs/extfs/uzip.in	Thu Mar  2 22:25:30 2000
+--- vfs/extfs/uzip.in.orig	Mon Jul  3 10:32:00 2000
++++ vfs/extfs/uzip.in
 @@ -7,7 +7,7 @@
  #
  #
  
 -DZIP=/usr/bin
-+DZIP=@prefix@/bin
++DZIP=@LOCALBASE@
  XZIP="$DZIP/zip -g"
  XDZIP="$DZIP/zip -d"
  XUNZIP="$DZIP/unzip"
