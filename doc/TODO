@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.634 2003/06/10 21:02:17 jschauma Exp $
+$NetBSD: TODO,v 1.635 2003/06/11 13:29:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -68,6 +68,7 @@ Suggested package updates
 	o TeXmacs-1.0.1.14
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
+	o adom-1.1.1 [pkg/21847]
 	o angband-3.0.3
 	o anjuta-1.0.2
 	o arch-1.0pre17 [pkg/20776]
@@ -80,6 +81,7 @@ Suggested package updates
 	o bidwatcher-1.3.8
 	o biew-5.5.0
 	o bind-8.4.0
+	o boehm-gc-6.2alpha6
 	o bogofilter-0.11.2
 	o bzflag-1.7g0
 	o centericq-4.9.4
@@ -109,7 +111,6 @@ Suggested package updates
 	o fltk-1.1.3
 	o foomatic-2.9.1 [jlam]
 	o fox-1.0.40
-	o freetds-0.61 [pkg/21395]
 	o fsviewer-0.2.5
 	o gabber-0.8.8
 	o galeon-1.2.11
@@ -125,6 +126,7 @@ Suggested package updates
 	o gettext-0.12.1
 	o gftp-2.0.14 [pkg/20250]
 	o ghostscript-8.00 (apfl)
+	o gimageview-0.2.22 [pkg/21851]
 	o gkrellm-2.1.12 [pkgsrc-wip]
 	o gkrellm-volume-2.1.7 [pkgsrc-wip]
 	o gliblib-1.2.3 [pkg/21776]
@@ -196,12 +198,14 @@ Suggested package updates
 	o p0f-1.8.3
 	o p5-Net-SNMP-4.1.0 [pkg/21782]
 	o pcre-4.3
+	o pekwm-0.1.3 [pkg/21852]
 	o php4-4.3.2
 	o pfaedit-20030506
 	o pine-4.56
 	o plib-1.6.0 [pkg/19015]
 	o pnm2ppa-1.12 [pkg/21667]
 	o polsms-1.9.2
+	o postfix-2.0.11
 	o postgresql-7.3.3
 	o povray-3.5
 	o py-soappy-0.10.1 [pkg/21735]
@@ -220,6 +224,7 @@ Suggested package updates
 	o scribus-0.8
 	o scsh-0.6.4
 	o sendfile-20010424
+	o sipcalc-1.1.2 [pkg/21846]
 	o sketch-0.6.15
 	o smalltalk-2.1.2
 	o smarteiffel-1.0 [replacing smalleiffel]
@@ -266,6 +271,7 @@ Suggested package updates
 	o xpuyopuyo-0.9.5
 	o xsidplay-1.6.5pre20
 	o yacas-1.0.55
+	o yasm-0.2.2 [pkg/21850]
 	o ysm-2.9.0
 	o zenicb 1.31 (needs merge with lots of local changes)
 
