@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/08/08 09:31:03 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/08/11 14:16:06 drochner Exp $
 #
 
-PKGNAME=		gcc3${GCC3_PKGMODIF}-objc-3.3
+PKGNAME=		gcc3${GCC3_PKGMODIF}-objc-${GCC_VERSION}
 COMMENT=		GNU Compiler Collection, version 3, objc compiler
 
 .include "../gcc3-c/buildaddon.mk"
