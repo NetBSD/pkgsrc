@@ -1,0 +1,18 @@
+Flyspell enables on-the-fly spell checking in Emacs by the means
+of a minor mode. It is called Flyspell. This facility is hardly
+intrusive. It requires no help. Flyspell highlights incorrect words
+as soon as they are completed or as soon as the cursor hits a new
+word.
+
+Flyspell is language independent because you are free to select
+your own dictionary.
+
+Flyspell is compatible with TeX editing. That is, Flyspell tries,
+as much as possible, to avoid highlighting TeX command.
+
+Flyspell proposes corrections for miss-spelled words by the means
+of pop-up menus. Alternatively you will be able to store the word
+in the global dictionary, to add it to the current document dictionary
+or to ignore the miss-spelling for the current session.
+
+Flyspell also proposes automatic corrections.
