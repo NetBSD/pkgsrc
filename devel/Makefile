@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.479 2004/04/01 18:47:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.480 2004/04/02 09:24:44 jmmv Exp $
 #
 
 COMMENT=	Development utilities
@@ -156,6 +156,7 @@ SUBDIR+=	haskell-mode
 SUBDIR+=	hdf
 SUBDIR+=	hdf5
 SUBDIR+=	hptools
+SUBDIR+=	ht
 SUBDIR+=	id-utils
 SUBDIR+=	idiff
 SUBDIR+=	ipv6socket_scrub
