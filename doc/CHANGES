@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6794 2004/08/04 19:41:15 jlam Exp $
+$NetBSD: CHANGES,v 1.6795 2004/08/04 19:59:59 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3724,3 +3724,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated postgresql74-client to 7.4.3nb1 [recht 2004-08-04]
 	Updated p5-Sendmail-PMilter to 0.94 [tv 2004-08-04]
 	Updated cyrus-sasl2 to 2.1.19 [jlam 2004-08-04]
+	Updated mathomatic to 11.3c [minskim 2004-08-04]
