@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.1.2.2 2002/05/08 08:50:09 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.1.2.3 2002/06/06 06:34:35 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink2.mk files.  This
 # file defines a macro target, _BUILDLINK_USE, that symlinks package files
@@ -53,17 +53,17 @@
 .if !defined(_BSD_BUILDLINK2_MK)
 _BSD_BUILDLINK2_MK=	# defined
 
-# _LIBTOOL_ARCHIVE_TRANSFORM creates $${dest} from $${file}, where
-# $${file} is a libtool archive (*.la).  It allows libtool to properly
-# interact with buildlink at link time by linking against the libraries
-# pointed to by symlinks in ${BUILDLINK_DIR}.
+# _LT_ARCHIVE_TRANSFORM creates $${dest} from $${file}, where $${file} is
+# a libtool archive (*.la).  It allows libtool to properly interact with
+# buildlink at link time by linking against the libraries pointed to by
+# symlinks in ${BUILDLINK_DIR}.
 #
-_LIBTOOL_ARCHIVE_TRANSFORM_SED=						\
+_LT_ARCHIVE_TRANSFORM_SED=						\
 	-e "s|${LOCALBASE}\(/lib/[^ 	]*\.la\)|${BUILDLINK_DIR}\1|g"	\
 	-e "s|${X11BASE}\(/lib/[^ 	]*\.la\)|${BUILDLINK_DIR}\1|g"
 
-_LIBTOOL_ARCHIVE_TRANSFORM=						\
-	${SED} ${_LIBTOOL_ARCHIVE_TRANSFORM_SED} $${file} > $${dest}
+_LT_ARCHIVE_TRANSFORM=							\
+	${SED} ${_LT_ARCHIVE_TRANSFORM_SED} $${file} > $${dest}
 
 _BUILDLINK_USE: .USE
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -73,9 +73,9 @@ _BUILDLINK_USE: .USE
 		${MKDIR} ${BUILDLINK_DIR};				\
 		case "${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}" in	\
 		${X11BASE})						\
-			${RM} -f ${BUILDLINK_X11PKG_DIR} 2>/dev/null;	\
-			${LN} -sf ${BUILDLINK_DIR} ${BUILDLINK_X11PKG_DIR}; \
-			buildlink_dir="${BUILDLINK_X11PKG_DIR}";	\
+			${RM} -f ${_BLNK_X11PKG_DIR} 2>/dev/null;	\
+			${LN} -sf ${BUILDLINK_DIR} ${_BLNK_X11PKG_DIR}; \
+			buildlink_dir="${_BLNK_X11PKG_DIR}";		\
 			;;						\
 		*)							\
 			buildlink_dir="${BUILDLINK_DIR}";		\
@@ -97,7 +97,7 @@ _BUILDLINK_USE: .USE
 				${RM} -f $${dest};			\
 				case $${file} in			\
 				*.la)					\
-					${_LIBTOOL_ARCHIVE_TRANSFORM};	\
+					${_LT_ARCHIVE_TRANSFORM};	\
 					;;				\
 				*)					\
 					${LN} -sf $${file} $${dest};	\

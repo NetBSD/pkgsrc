@@ -1,0 +1,12 @@
+*)
+        newarg=`echo "X$arg" | $Xsed					\
+		-e "$sed_quote_subst"					\
+		-e "$sed_whitespace_subst"				\
+		@_BLNK_TRANSFORM_SED.1@					\
+		@_BLNK_TRANSFORM_SED.2@					\
+		@_BLNK_TRANSFORM_SED.3@`
+	@ECHO@ "'$arg') newarg='$newarg' ;;" >> $cache
+	cacheupdated=yes
+	;;
+esac
+args="$args $newarg"
