@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.10 2003/01/15 09:26:14 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.11 2003/04/15 17:28:05 grant Exp $
 
 transform="@_BLNK_TRANSFORM_SEDFILE@"
 untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
@@ -16,7 +16,7 @@ untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
 #       r:dir			removes "dir" and "dir/*"
 #       S:foo:bar		translates word "foo" into "bar"
 #       s:foo:bar		translates "foo" into "bar"
-#	static:src:dst		translates "src/libfoo.a" info "dst/libfoo.a"
+#	static:src:dst		translates "src/libfoo.a" into "dst/libfoo.a"
 #	no-rpath		removes "-R*", "-Wl,-R", and "-Wl,-rpath,*"
 
 gen() {
