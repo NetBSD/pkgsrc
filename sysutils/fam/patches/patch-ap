@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.7 2004/10/16 14:40:23 jmmv Exp $
+$NetBSD: patch-ap,v 1.8 2004/11/19 12:35:22 sketch Exp $
 
 --- src/mntent_compat.c++.orig	2004-04-30 14:24:58.000000000 +0200
 +++ src/mntent_compat.c++	2004-04-30 14:28:45.000000000 +0200
@@ -42,7 +42,7 @@ $NetBSD: patch-ap,v 1.7 2004/10/16 14:40:23 jmmv Exp $
 +
 +#include "config.h"
 +#include "fam-mntent.h"
-+#if !defined(HAVE_MNTENT_H)
++#if !defined(HAVE_MNTENT_H) && !defined(HAVE_SYS_MNTTAB_H)
 +#include <stdlib.h>
 +#include <string.h>
 +#include <sys/param.h>
