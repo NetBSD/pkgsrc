@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.341 2004/03/08 20:27:16 minskim Exp $
+# $NetBSD: Makefile,v 1.342 2004/03/09 13:45:56 markd Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -83,6 +83,7 @@ SUBDIR+=	imwheel
 SUBDIR+=	kde2
 SUBDIR+=	kde3-i18n-az
 SUBDIR+=	kde3-i18n-bg
+SUBDIR+=	kde3-i18n-bn
 SUBDIR+=	kde3-i18n-bs
 SUBDIR+=	kde3-i18n-ca
 SUBDIR+=	kde3-i18n-cs
@@ -101,10 +102,14 @@ SUBDIR+=	kde3-i18n-gl
 SUBDIR+=	kde3-i18n-he
 SUBDIR+=	kde3-i18n-hi
 SUBDIR+=	kde3-i18n-hu
+SUBDIR+=	kde3-i18n-is
 SUBDIR+=	kde3-i18n-it
+SUBDIR+=	kde3-i18n-ja
+SUBDIR+=	kde3-i18n-lt
 SUBDIR+=	kde3-i18n-mn
 SUBDIR+=	kde3-i18n-ms
 SUBDIR+=	kde3-i18n-nb
+SUBDIR+=	kde3-i18n-nds
 SUBDIR+=	kde3-i18n-nl
 SUBDIR+=	kde3-i18n-nn
 SUBDIR+=	kde3-i18n-pl
@@ -116,8 +121,10 @@ SUBDIR+=	kde3-i18n-se
 SUBDIR+=	kde3-i18n-sk
 SUBDIR+=	kde3-i18n-sl
 SUBDIR+=	kde3-i18n-sr
+SUBDIR+=	kde3-i18n-sr_Latn
 SUBDIR+=	kde3-i18n-sv
 SUBDIR+=	kde3-i18n-ta
+SUBDIR+=	kde3-i18n-tg
 SUBDIR+=	kde3-i18n-tr
 SUBDIR+=	kde3-i18n-uk
 SUBDIR+=	kde3-i18n-uz
