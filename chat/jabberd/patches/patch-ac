@@ -1,14 +1,36 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/12/23 10:16:20 xtraeme Exp $
+$NetBSD: patch-ac,v 1.2 2004/02/21 05:38:29 xtraeme Exp $
 
---- jsm/modules/mod_auth_crypt.c.orig	2003-12-02 21:47:29.000000000 +0100
-+++ jsm/modules/mod_auth_crypt.c	2003-12-02 21:48:19.000000000 +0100
-@@ -28,7 +28,8 @@
-  * 
-  * --------------------------------------------------------------------------*/
- #include "jsm.h"
--#include "crypt.h"
-+#define _XOPEN_SOURCE
-+#include <unistd.h>
+--- jabberd/jabberd.c.orig	2003-12-19 12:17:00.000000000 +0000
++++ jabberd/jabberd.c	2003-12-19 12:17:52.000000000 +0000
+@@ -199,15 +199,6 @@
+     if(home != NULL && chdir(home))
+         fprintf(stderr,"Unable to access home folder %s: %s\n",home,strerror(errno));
  
- #define HASH_CRYPT 1
- #define HASH_SHA1  2
+-    /* background ourselves if we have been flagged to do so */
+-    if(do_background != 0)
+-    {
+-        if (fork() != 0)
+-        {
+-            exit(0);
+-        }
+-    }
+-
+     /* load the config passing the file if it was manually set */
+     cfgfile=ghash_get(cmd__line,"c");
+     if(configurate(cfgfile))
+@@ -234,6 +225,15 @@
+     dynamic_init();
+     deliver_init();
+ 
++    /* background ourselves if we have been flagged to do so */
++    if(do_background != 0)
++    {
++        if (fork() != 0)
++        {
++            exit(0);
++        }
++    }
++
+     /* everything should be registered for the config pass, validate */
+     deliver__flag = 0; /* pause deliver() while starting up */
+     if(configo(0))
