@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2001/02/17 17:07:13 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/27 16:52:38 mjl Exp $
 #
 
-DISTNAME=	xkeycaps-2.44
+DISTNAME=	xkeycaps-2.46
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/} \
 		http://www.jwz.org/xkeycaps/
