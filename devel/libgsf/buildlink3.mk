@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/03/26 02:27:38 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/05/05 14:06:35 jmmv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBGSF_BUILDLINK3_MK:=	${LIBGSF_BUILDLINK3_MK}+
@@ -11,8 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibgsf}
 BUILDLINK_PACKAGES+=	libgsf
 
 .if !empty(LIBGSF_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libgsf+=	libgsf>=1.8.2nb3
-BUILDLINK_RECOMMENDED.libgsf?=	libgsf>=1.8.2nb7
+BUILDLINK_DEPENDS.libgsf+=	libgsf>=1.9.0
 BUILDLINK_PKGSRCDIR.libgsf?=	../../devel/libgsf
 .endif	# LIBGSF_BUILDLINK3_MK
 

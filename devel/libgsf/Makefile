@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2004/03/26 02:27:38 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2004/05/05 14:06:35 jmmv Exp $
 #
 
-DISTNAME=	libgsf-1.8.2
-PKGREVISION=	7
+DISTNAME=	libgsf-1.9.0
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgsf/1.8/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgsf/1.9/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
@@ -19,7 +18,7 @@ PKGCONFIG_OVERRIDE=	libgsf-1.pc.in
 PKGCONFIG_OVERRIDE+=	libgsf-gnome-1.pc.in
 
 CONFIGURE_ARGS+=	--disable-gtk-doc
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html/libgsf
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/libgsf
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
