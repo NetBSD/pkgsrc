@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7154 2004/09/16 15:11:05 minskim Exp $
+$NetBSD: CHANGES,v 1.7155 2004/09/16 19:30:41 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4252,3 +4252,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kanjidic2 to 2004.2.1 [wiz 2004-09-15]
 	Updated lftp to 3.0.8 [salo 2004-09-15]
 	Updated xpm to 3.4knb2 [minskim 2004-09-16]
+	Updated XFree86-libs to 4.4.0nb2 [minskim 2004-09-16]
