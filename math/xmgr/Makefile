@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/03/27 03:20:07 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2001/09/12 04:43:52 jlam Exp $
 # FreeBSD Id: Makefile,v 1.13 1998/12/12 22:27:21 jseger Exp
 #
 
@@ -16,22 +16,21 @@ HOMEPAGE=		http://plasma-gate.weizmann.ac.il/Xmgr/
 COMMENT=		Powerful XY plotting tool for workstations or X-terminals using X
 
 BUILD_DEPENDS=		bison-*:../../devel/bison
-DEPENDS+=		netcdf-3.4:../../devel/netcdf
 
+USE_BUILDLINK_ONLY=	YES
 USE_FORTRAN=		YES
-USE_X11=		YES
-USE_XPM=		YES
-USE_MOTIF=		YES
-
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-acegr-home="${PREFIX}"
 CONFIGURE_ARGS+=	--enable-extra-incpath="${EXTRA_INCDIRS}"
-CONFIGURE_ARGS+=	--enable-extra-ldpath="${LOCALBASE}/lib"
+CONFIGURE_ARGS+=	--enable-extra-ldpath="${BUILDLINK_DIR}/lib"
 
-EVAL_PREFIX+=		XPMDIR=xpm
-EXTRA_INCDIRS=		${XPMDIR}/include/X11:${LOCALBASE}/include
+EXTRA_INCDIRS=		${BUILDLINK_DIR}/include/X11:${BUILDLINK_DIR}/include
 
 ALL_TARGET=		# empty
 INSTALL_TARGET=		install
 
+.include "../../devel/netcdf/buildlink.mk"
+.include "../../graphics/xpm/buildlink.mk"
+.include "../../mk/motif.buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
