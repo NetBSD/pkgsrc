@@ -1,4 +1,4 @@
-# $NetBSD: dlopen.buildlink3.mk,v 1.7 2004/11/26 07:05:19 jlam Exp $
+# $NetBSD: dlopen.buildlink3.mk,v 1.8 2004/11/26 09:32:06 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles and
 # buildlink3.mk files for the packages that use dlopen().
@@ -15,7 +15,7 @@ CHECK_BUILTIN.dl:=	no
 
 DL_AUTO_VARS?=	no
 
-.if !empty(USE_BUILTIN.dl)
+.if !empty(USE_BUILTIN.dl:M[yY][eE][sS])
 BUILDLINK_PACKAGES:=		${BUILDLINK_PACKAGES:Ndl}
 BUILDLINK_PACKAGES+=		dl
 BUILDLINK_BUILTIN_MK.dl=	../../mk/dlopen.builtin.mk
