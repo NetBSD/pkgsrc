@@ -1,0 +1,46 @@
+$NetBSD: patch-al,v 1.1 2001/11/16 09:08:05 jlam Exp $
+
+--- src/tools/qdir_unix.cpp.orig	Wed Jun 13 04:53:47 2001
++++ src/tools/qdir_unix.cpp
+@@ -95,13 +95,39 @@
+ 
+ bool QDir::mkdir( const QString &dirName, bool acceptAbsPath ) const
+ {
+-    return MKDIR( QFile::encodeName(filePath(dirName,acceptAbsPath)), 0777 ) 
++    // Remove trailing slashes from the directory name.
++    QString tmp = QFile::encodeName(filePath(dirName,acceptAbsPath));
++    int pos = tmp.length();
++    if (pos > 0) {
++	while ( (pos - 1) >= 0 && tmp[pos - 1] == '/' ) {
++	    --pos;
++	};
++	if ( pos == 0 ) {
++	    tmp = QDir::rootDirPath();
++	} else {
++	    tmp.truncate( pos );
++	}
++    }
++    return MKDIR( tmp, 0777 ) 
+ 	== 0;
+ }
+ 
+ bool QDir::rmdir( const QString &dirName, bool acceptAbsPath ) const
+ {
+-    return RMDIR( QFile::encodeName(filePath(dirName,acceptAbsPath)) ) == 0;
++    // Remove trailing slashes from the directory name.
++    QString tmp = QFile::encodeName(filePath(dirName,acceptAbsPath));
++    int pos = tmp.length();
++    if (pos > 0) {
++	while ( (pos - 1) >= 0 && tmp[pos - 1] == '/' ) {
++	    --pos;
++	};
++	if ( pos == 0 ) {
++	    tmp = QDir::rootDirPath();
++	} else {
++	    tmp.truncate( pos );
++	}
++    }
++    return RMDIR( tmp ) == 0;
+ }
+ 
+ bool QDir::isReadable() const
