@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.7 2003/12/17 14:55:58 sketch Exp $
+$NetBSD: distinfo,v 1.8 2004/04/10 23:31:39 rh Exp $
 
-SHA1 (gnustep-make-1.8.0.tar.gz) = 7fcac2b059c269ebce2df4fa414658790bb9bb3a
-Size (gnustep-make-1.8.0.tar.gz) = 359394 bytes
+SHA1 (gnustep-make-1.9.1.tar.gz) = c71dde7f8d3fba18526d70f1effe26117a0cb1aa
+Size (gnustep-make-1.9.1.tar.gz) = 370625 bytes
 SHA1 (patch-aa) = 4969ea2cbd61e4bc2dab109abcbbdf5177ebdd8c
-SHA1 (patch-ab) = c8ac2f268ffc046817b074e050964c528d10bb58
 SHA1 (patch-ac) = bdc80e22663848eab3b805d34264c567ad323160
 SHA1 (patch-ad) = 7e480b05aa92340aae18cc1a6837acf87027e4dd
 SHA1 (patch-ae) = b7af49c45fed5fb72a7b455b533a23e78f6f20ce
