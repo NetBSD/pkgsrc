@@ -1,0 +1,21 @@
+$NetBSD: patch-ag,v 1.1 1999/12/24 22:30:01 pooka Exp $
+
+--- src/mail.c.orig	Sat Dec 11 07:20:54 1999
++++ src/mail.c	Thu Dec 23 22:27:40 1999
+@@ -71,12 +71,16 @@
+ #  ifdef LINUX
+ #   define MAILPATH "/var/spool/mail"
+ #  else
++#   ifdef __NetBSD__
++#    define MAILPATH "/var/mail/"
++#   else
+ #   if defined(BSD) || defined(ULTRIX)
+ #    define MAILPATH "/usr/spool/mail/"
+ #   endif
+ #   if defined(SYSV) || defined(HPUX)
+ #    define MAILPATH "/usr/mail/"
+ #   endif
++#  endif
+ #  endif /* LINUX */
+ # endif /* AMS */
+ 

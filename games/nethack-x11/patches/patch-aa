@@ -1,20 +1,33 @@
-$NetBSD: patch-aa,v 1.1 1998/08/27 13:15:01 garbled Exp $
---- include/config.h.orig	Sat Aug  8 01:48:35 1998
-+++ include/config.h	Sat Aug  8 01:53:42 1998
-@@ -212,4 +212,4 @@
+$NetBSD: patch-aa,v 1.2 1999/12/24 22:30:07 pooka Exp $
+
+--- include/config.h.orig	Sat Dec 11 07:20:49 1999
++++ include/config.h	Wed Dec 22 21:41:41 1999
+@@ -42,8 +42,8 @@
+  * Define all of those you want supported in your binary.
+  * Some combinations make no sense.  See the installation document.
   */
 -#define TTY_GRAPHICS	/* good old tty based graphics */
--/* #define X11_GRAPHICS	/* X11 interface */
+-/* #define X11_GRAPHICS */ /* X11 interface */
 +/* #define TTY_GRAPHICS	/* good old tty based graphics */
-+#define X11_GRAPHICS	/* X11 interface */
++#define X11_GRAPHICS /* X11 interface */
+ /* #define QT_GRAPHICS */	/* Qt interface */
  
-@@ -246,3 +246,3 @@
+ /*
+@@ -80,7 +80,7 @@
+ #endif
+ 
  #ifndef DEFAULT_WINDOW_SYS
 -# define DEFAULT_WINDOW_SYS "tty"
-+# define DEFAULT_WINDOW_SYS "X11"
++# define DEFAULT_WINDOW_SYS "x11"
  #endif
-@@ -258,3 +258,3 @@
+ 
+ #ifdef X11_GRAPHICS
+@@ -92,7 +92,7 @@
+  * would allow:
+  *  xpmtoppm <x11tiles.xpm | pnmscale 1.25 | ppmquant 90 >x11tiles_big.xpm
   */
--/* # define USE_XPM		/* Disable if you do not have the XPM library */
-+# define USE_XPM		/* Disable if you do not have the XPM library */
+-/* # define USE_XPM */		/* Disable if you do not have the XPM library */
++# define USE_XPM   		/* Disable if you do not have the XPM library */
  # ifdef USE_XPM
+ #  define GRAPHIC_TOMBSTONE	/* Use graphical tombstone (rip.xpm) */
+ # endif
