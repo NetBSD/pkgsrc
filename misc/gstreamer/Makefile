@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:49:10 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/08/28 17:39:40 wiz Exp $
 #
 
 DISTNAME=		gstreamer-0.6.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		misc gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gstreamer/0.6/}
 EXTRACT_SUFX=		.tar.bz2
@@ -32,7 +32,6 @@ PYTHON_VERSIONS_ACCEPTED=      22 22pth
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../devel/popt/buildlink2.mk"
 .include "../../lang/python/application.mk"
-.include "../../textproc/gtk-doc/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../textproc/libxslt/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
