@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/05/24 17:02:44 abs Exp $
+# $NetBSD: Makefile,v 1.14 2001/05/31 10:24:40 dent Exp $
 #
 
 DISTNAME=		pkgdiff-0.100
@@ -7,7 +7,7 @@ MASTER_SITES=		# empty
 DISTFILES=		# empty
 
 MAINTAINER=		wiz@netbsd.org
-HOMEPAGE=		http://www.netbsd.org/Documentation/netbsd/Packages.txt
+HOMEPAGE=		ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/Packages.txt
 COMMENT=		Tools to ease creating and maintaining patches for pkgsrc
 
 USE_PERL5=		YES
