@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.7 2000/10/15 14:10:20 itojun Exp $
+$NetBSD: patch-aa,v 1.8 2000/10/23 09:38:49 itojun Exp $
 
 --- INSTALL.sh.orig	Wed Sep 20 22:06:06 2000
-+++ INSTALL.sh	Wed Oct 11 11:42:36 2000
++++ INSTALL.sh	Mon Oct 23 18:31:05 2000
 @@ -8,35 +8,35 @@
  
 -cat <<EOF
@@ -90,8 +90,9 @@ $NetBSD: patch-aa,v 1.7 2000/10/15 14:10:20 itojun Exp $
 +#: ${newaliases_path=/usr/bin/newaliases}
 +#: ${mailq_path=/usr/bin/mailq}
  : ${mail_owner=postfix}
- : ${setgid=no}
+-: ${setgid=no}
 -: ${manpages=/usr/local/man}
++: ${setgid=maildrop}
 +: ${manpages=__PREFIX/man}
  
 @@ -126,14 +123,14 @@
