@@ -1,8 +1,60 @@
-$NetBSD: patch-ai,v 1.1 2002/11/14 22:21:15 seb Exp $
+$NetBSD: patch-ai,v 1.2 2003/02/27 13:18:07 seb Exp $
 
---- configure.orig	Wed Nov 13 12:57:20 2002
+--- configure.orig	Mon Feb  3 18:50:30 2003
 +++ configure
-@@ -1949,6 +1949,13 @@ fi
+@@ -673,6 +673,7 @@ host_os=`echo $host | sed 's/^\([^-]*\)-
+ echo "$ac_t""$host" 1>&6
+ 
+ 
++am__api_version="1.4"
+ # Find a good install program.  We prefer a C program (faster),
+ # so one script is as good as another.  But avoid the broken or
+ # incompatible versions:
+@@ -840,16 +841,16 @@ EOF
+ 
+ 
+ missing_dir=`cd $ac_aux_dir && pwd`
+-echo $ac_n "checking for working aclocal""... $ac_c" 1>&6
+-echo "configure:845: checking for working aclocal" >&5
++echo $ac_n "checking for working aclocal-${am__api_version}""... $ac_c" 1>&6
++echo "configure:846: checking for working aclocal-${am__api_version}" >&5
+ # Run test in a subshell; some versions of sh will print an error if
+ # an executable is not found, even if stderr is redirected.
+ # Redirect stdin to placate older versions of autoconf.  Sigh.
+-if (aclocal --version) < /dev/null > /dev/null 2>&1; then
+-   ACLOCAL=aclocal
++if (aclocal-${am__api_version} --version) < /dev/null > /dev/null 2>&1; then
++   ACLOCAL=aclocal-${am__api_version}
+    echo "$ac_t""found" 1>&6
+ else
+-   ACLOCAL="$missing_dir/missing aclocal"
++   ACLOCAL="$missing_dir/missing aclocal-${am__api_version}"
+    echo "$ac_t""missing" 1>&6
+ fi
+ 
+@@ -866,16 +867,16 @@ else
+    echo "$ac_t""missing" 1>&6
+ fi
+ 
+-echo $ac_n "checking for working automake""... $ac_c" 1>&6
+-echo "configure:871: checking for working automake" >&5
++echo $ac_n "checking for working automake-${am__api_version}""... $ac_c" 1>&6
++echo "configure:872: checking for working automake-${am__api_version}" >&5
+ # Run test in a subshell; some versions of sh will print an error if
+ # an executable is not found, even if stderr is redirected.
+ # Redirect stdin to placate older versions of autoconf.  Sigh.
+-if (automake --version) < /dev/null > /dev/null 2>&1; then
+-   AUTOMAKE=automake
++if (automake-${am__api_version} --version) < /dev/null > /dev/null 2>&1; then
++   AUTOMAKE=automake-${am__api_version}
+    echo "$ac_t""found" 1>&6
+ else
+-   AUTOMAKE="$missing_dir/missing automake"
++   AUTOMAKE="$missing_dir/missing automake-${am__api_version}"
+    echo "$ac_t""missing" 1>&6
+ fi
+ 
+@@ -1949,6 +1950,13 @@ fi
  
  target=$save_target
  
@@ -16,14 +68,14 @@ $NetBSD: patch-ai,v 1.1 2002/11/14 22:21:15 seb Exp $
  if test "$ac_cv_can_build_shared" = no; then
  	enable_shared=no
  	enable_static=yes
-@@ -6676,8 +6683,37 @@ LTLIBOBJS=`echo "$LIBOBJS" | sed 's/\.o/
+@@ -6822,8 +6830,37 @@ LTLIBOBJS=`echo "$LIBOBJS" | sed 's/\.o/
  
  
  
 +
 +ac_safe=`echo "/dev/urandom" | sed 'y%./+-%__p_%'`
 +echo $ac_n "checking for /dev/urandom""... $ac_c" 1>&6
-+echo "configure:6690: checking for /dev/urandom" >&5
++echo "configure:6837: checking for /dev/urandom" >&5
 +if eval "test \"`echo '$''{'ac_cv_file_$ac_safe'+set}'`\" = set"; then
 +  echo $ac_n "(cached) $ac_c" 1>&6
 +else
@@ -50,8 +102,8 @@ $NetBSD: patch-ai,v 1.1 2002/11/14 22:21:15 seb Exp $
 +
 +
  echo $ac_n "checking for working const""... $ac_c" 1>&6
--echo "configure:6681: checking for working const" >&5
-+echo "configure:6717: checking for working const" >&5
+-echo "configure:6827: checking for working const" >&5
++echo "configure:6864: checking for working const" >&5
  if eval "test \"`echo '$''{'ac_cv_c_const'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
  else
