@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2002/09/23 09:55:18 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2002/10/19 10:54:52 rh Exp $
 
 DISTNAME=	gnome-chess-0.3.3
 PKGREVISION=	3
 CATEGORIES=	games gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/gnome-chess/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-chess/0.3/}
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://arcavia.com/rd/gnome-chess/
