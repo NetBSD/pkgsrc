@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/17 07:09:52 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/01/25 04:09:15 uebayasi Exp $
 bin/ldcc
 bin/ltcp
 @unexec ${INSTALL_INFO} --delete %D/info/liece.info %D/info/dir
@@ -60,8 +60,8 @@ ${EMACS_LISPPREFIX}/liece/liece-misc.el
 ${EMACS_LISPPREFIX}/liece/liece-misc.elc
 ${EMACS_LISPPREFIX}/liece/liece-nick.el
 ${EMACS_LISPPREFIX}/liece/liece-nick.elc
-${EMACS_LISPPREFIX}/liece/liece-q-ccl.el
-${EMACS_LISPPREFIX}/liece/liece-q-ccl.elc
+@comment ${EMACS_LISPPREFIX}/liece/liece-q-ccl.el
+@comment ${EMACS_LISPPREFIX}/liece/liece-q-ccl.elc
 ${EMACS_LISPPREFIX}/liece/liece-q-el.el
 ${EMACS_LISPPREFIX}/liece/liece-q-el.elc
 ${EMACS_LISPPREFIX}/liece/liece-setup.el
@@ -102,7 +102,7 @@ share/liece/icons/reload.xpm
 share/liece/icons/search.xpm
 share/liece/icons/stop.xpm
 share/liece/locale/ja/LC_MESSAGES/liece.mo
-share/liece/sample.dot.emacs
+@comment share/liece/sample.dot.emacs
 share/liece/styles/bottom
 share/liece/styles/middle
 share/liece/styles/top
