@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/10/11 14:59:58 cube Exp $
+$NetBSD: distinfo,v 1.3 2005/01/18 12:23:33 drochner Exp $
 
-SHA1 (mpgtx-1.3.tgz) = 34b35e347a111826d531eb837ae88d95eaf2f745
-Size (mpgtx-1.3.tgz) = 76471 bytes
-SHA1 (patch-ab) = c7031b2cda4122c3cf123b7c2402332c92b9e513
+SHA1 (mpgtx-1.3.1.tar.gz) = 58b3d18b6dac968e8dd969a7b33c8a8fc31569cd
+Size (mpgtx-1.3.1.tar.gz) = 89170 bytes
