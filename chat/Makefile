@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2004/10/22 10:34:39 adam Exp $
+# $NetBSD: Makefile,v 1.99 2004/10/26 22:59:44 wiz Exp $
 #
 
 COMMENT=	Communication programs
@@ -24,8 +24,6 @@ SUBDIR+=	fisg
 SUBDIR+=	fugu
 SUBDIR+=	gabber
 SUBDIR+=	gaim
-SUBDIR+=	gaim-gnome
-SUBDIR+=	gaim-gtk1
 SUBDIR+=	gale
 SUBDIR+=	gg2
 SUBDIR+=	gnomeicu
