@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2001/08/10 10:37:45 drochner Exp $
+$NetBSD: distinfo,v 1.5 2001/11/17 06:26:44 itohy Exp $
 
 SHA1 (id3lib-3.8.0pre1.tar.gz) = ea4ae07187eaabb3c30de24676a3d8c6a4d3d55f
 Size (id3lib-3.8.0pre1.tar.gz) = 679835 bytes
@@ -6,3 +6,5 @@ SHA1 (patch-aa) = 520d9d30e01993c66f324f5306b7ccb9e3e2909b
 SHA1 (patch-ab) = 98e39e985478adeca539dc094e6d2fdb205fbb3a
 SHA1 (patch-ac) = 85533553c659d3071c1afb58b5ee82f5af45b615
 SHA1 (patch-ae) = 42d93571c413f795af4333ae41cf652c3d3aebdc
+SHA1 (patch-af) = ed166f4d7934531c82fcd8fd13eedaa7b22ab1dd
+SHA1 (patch-ag) = a9bf091af8e3d3c1ff647b85413f4fca35021491
