@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.6 1999/11/01 09:02:05 rh Exp $
+
 --- utils/Makefile.in.orig	Wed Jan 20 06:29:27 1999
 +++ utils/Makefile.in	Mon Feb 22 03:54:05 1999
 @@ -83,10 +83,10 @@
