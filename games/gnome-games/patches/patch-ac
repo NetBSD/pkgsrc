@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2000/04/17 20:02:56 tron Exp $
+$NetBSD: patch-ac,v 1.2 2001/08/13 17:37:24 rh Exp $
 
---- gtali/Makefile.in.orig	Wed Oct  6 07:32:02 1999
-+++ gtali/Makefile.in	Mon Apr 17 21:57:07 2000
-@@ -159,7 +159,7 @@
+--- gtali/Makefile.in.orig	Fri Jul  6 02:06:49 2001
++++ gtali/Makefile.in
+@@ -167,7 +167,7 @@
  
  
  DEFS = @DEFS@ -I. -I$(srcdir) -I..
 -LIBS = @LIBS@
 +LIBS = @LIBS@ -lintl
- gtali_OBJECTS =  gyahtzee.o clist.o yahtzee.o computer.o setup.o
+ gtali_OBJECTS =  gyahtzee.$(OBJEXT) clist.$(OBJEXT) yahtzee.$(OBJEXT) \
+ computer.$(OBJEXT) setup.$(OBJEXT)
  gtali_DEPENDENCIES = 
- gtali_LDFLAGS = 
