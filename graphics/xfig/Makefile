@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2001/08/09 14:34:56 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2001/08/09 15:39:04 tron Exp $
 #
 
 DISTNAME=		xfig.3.2.3d.full
@@ -44,5 +44,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/Doc/FORMAT* ${XFIGDOCDIR}
 
 .include "../../graphics/jpeg/buildlink.mk"
+.include "../../graphics/png/buildlink.mk"
 .include "../../graphics/xpm/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
