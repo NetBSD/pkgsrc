@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 1998/05/05 13:50:31 frueauf Exp $
+# $NetBSD: Makefile,v 1.32 1998/05/06 19:37:02 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -7,8 +7,8 @@
 #    SUBDIR += XFree86-contrib
     SUBDIR += Xaw3d
 #    SUBDIR += Xaw-Xpm		# don't enable this by default unless we
-				# have a CONFLICTS feature (installs same
-				# files like Xaw3d).
+#				  have a CONFLICTS feature (installs same
+#				  files like Xaw3d).
 #    SUBDIR += afterstep
     SUBDIR += amiwm
     SUBDIR += asclock
