@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.11 2001/08/26 16:55:46 rh Exp $
+@comment $NetBSD: PLIST,v 1.12 2001/10/11 12:19:35 abs Exp $
 bin/gconf-config
 bin/gconf-config-1
 bin/gconfd-1
 bin/gconftool
 bin/gconftool-1
 etc/gconf/1/path.example
+@exec test -f %D/etc/gconf/1/path || cp -p %D/%F %D/etc/gconf/1/path
 etc/gconf/schemas/desktop.schemas
 include/gconf/1/gconf/gconf-changeset.h
 include/gconf/1/gconf/gconf-client.h
@@ -66,9 +67,9 @@ share/oaf/gconfd-1.oafinfo
 @dirrm include/gconf/1
 @dirrm include/gconf
 @dirrm etc/gconf/schemas
-@exec /bin/mkdir -p /usr/X11R6/etc/gconf/gconf.xml.mandatory
+@exec /bin/mkdir -p %D/etc/gconf/gconf.xml.mandatory
 @dirrm etc/gconf/gconf.xml.mandatory
-@exec /bin/mkdir -p /usr/X11R6/etc/gconf/gconf.xml.defaults
+@exec /bin/mkdir -p %D/etc/gconf/gconf.xml.defaults
 @dirrm etc/gconf/gconf.xml.defaults
 @dirrm etc/gconf/1
 @dirrm etc/gconf
