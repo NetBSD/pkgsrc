@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.4 2000/10/27 08:01:46 jlam Exp $
+$NetBSD: md5,v 1.5 2000/10/27 17:47:02 jlam Exp $
 
-MD5 (librep-0.13.1.tar.gz) = 7b7613a1ed7d23e7944db75be0bb95dd
+MD5 (librep-0.13.2.tar.gz) = b2a0590111be2bd339cc5c98806e4223
