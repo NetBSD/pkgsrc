@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/08/09 11:27:48 seb Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/06 13:34:19 taca Exp $
 #
 
-DISTNAME=		ipadic-2.4.4
-PKGREVISION=		1
+DISTNAME=		ipadic-2.7.0
 CATEGORIES=		japanese textproc
 MASTER_SITES=		http://chasen.aist-nara.ac.jp/stable/ipadic/
 
@@ -10,18 +9,23 @@ MAINTAINER=     	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=       	http://chasen.aist-nara.ac.jp/
 COMMENT=		Japanese Morphological Dictionary for ChaSen
 
-DEPENDS=		chasen-base>=2.2.5:../../textproc/chasen-base
-
 GNU_CONFIGURE=		yes
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 CONF_FILES=		${CHASEN_DICDIR}/ipadic/chasenrc.example \
-			${CHASEN_CONFDIR}/chasenrc
+			${PKG_SYSCONFDIR}/chasenrc
 
-INFO_FILES=		ipadic-ja.info
+DOCDIR=			${PREFIX}/share/doc/chasen
+DOCS=			AUTHORS COPYING ChangeLog NEWS doc/ipadic-ja.pdf
 
 post-install:
+	${INSTALL_DATA_DIR} ${DOCDIR}
+.for f in ${DOCS}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}
+.endfor
 	${INSTALL_DATA} ${WRKSRC}/chasenrc \
 		${CHASEN_DICDIR}/ipadic/chasenrc.example
 
 .include "../../textproc/chasen/Makefile.common"
+.include "../../textproc/chasen-base/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
