@@ -1,5 +1,5 @@
 # $OpenBSD: Makefile,v 1.5 2000/10/23 16:08:12 espie Exp $
-# $NetBSD: Makefile,v 1.2 2000/10/29 23:16:46 mjl Exp $
+# $NetBSD: Makefile,v 1.3 2000/10/30 10:13:56 mjl Exp $
 
 PKGVER=		2.1.30
 DISTNAME=	openmotif${PKGVER}
@@ -18,6 +18,7 @@ PATCH_DIST_STRIP=-p1
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.opengroup.org/openmotif/
 
+CONFLICTS+=	lesstif-*
 DIST_SUBDIR=	openmotif
 WRKSRC=		${WRKDIR}/motif
 USE_X11BASE=	yes
