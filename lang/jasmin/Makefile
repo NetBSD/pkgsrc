@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/22 13:51:26 agc Exp $
+# $NetBSD: Makefile,v 1.2 2002/04/22 13:54:28 agc Exp $
 #
 
 DISTNAME=	jasmin-1.06
@@ -21,8 +21,6 @@ post-patch:
 		${CHMOD} 755 ${WRKSRC}/bin/jasmin
 	${RM} ${WRKSRC}/bin/jasmin.patch
 
-# This is ugly.  The chown should happen after copying, or tar should have
-# a way to override permissions.
 do-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/jasmin
 	cd ${WRKSRC} && ${PAX} -rw . ${PREFIX}/jasmin
