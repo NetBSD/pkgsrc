@@ -1,40 +1,39 @@
-# $NetBSD: Makefile,v 1.12 2002/04/20 15:04:47 cjep Exp $
+# $NetBSD: Makefile,v 1.13 2002/07/26 22:06:46 jschauma Exp $
 #
 
-DISTNAME=		angband-283
-PKGNAME=		angband-x11-2.8.3
+DISTNAME=		angband-3.0.1
+PKGNAME=		angband-x11-3.0.1
 CATEGORIES=		games x11
-MASTER_SITES=		ftp://export.andrew.cmu.edu/angband/Source/ \
-			ftp://ftp.greyhelm.com/pub/Games/Angband/Angband-2.7.x/Source/
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} angband-spoilers.tar.gz
+MASTER_SITES=	ftp://clockwork.dementia.org/angband/Source/
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${SPOILERFILE}
 
 MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://www.phial.com/angband/
+HOMEPAGE=		http://thangorodrim.angband.org/
 COMMENT=		Tolkien based variant of Moria for X11 displays
 
 CONFLICTS=		angband-tty-[0-9]*
 
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
-WRKSRC=			${WRKDIR}/${DISTNAME}/src
-MAKEFILE=		Makefile.std
-ALL_TARGET=		angband
-USE_X11=		yes
+
+USE_X11=			yes
+USE_NCURSES=		# defined
 
 SPOILERFILE=		angband-spoilers.tar.gz
+
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS=		--with-setgid=games --prefix=${PREFIX}
 
 .if (${MACHINE_ARCH} == arm32)
 . include "../../lang/gcc/Makefile.gcc"
 MAKE_FLAGS+=		CC=${CC}
 .endif
 
-do-install:
-	${INSTALL} -d -o bin -g games -m 0775 ${PREFIX}/share/angband
-	${CP} -R ${WRKDIR}/${DISTNAME}/lib/* ${PREFIX}/share/angband
-	cd ${PREFIX}/share/angband/help && \
-		${PAX} -rzf ${DISTDIR}/${SPOILERFILE}
-	${CHOWN} -R bin:games ${PREFIX}/share/angband
-	${CHMOD} -R 0664 ${PREFIX}/share/angband/*
-	(cd ${PREFIX}/share/angband && ${CHMOD} 0775 apex bone data edit file help info save user xtra)
-	${INSTALL} -c -s -o bin -g games -m 2755 ${WRKSRC}/angband ${PREFIX}/bin
+# add spoiler files and clean up a bit
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/games/angband/lib/info
+	cd ${PREFIX}/share/games/angband/lib/info/ && ${PAX} -rzf ${DISTDIR}/${SPOILERFILE}
+	${CHOWN} -R bin:games ${PREFIX}/share/games/angband
+	${FIND} ${PREFIX}/share/games/angband -name delete.me -exec ${RM} {} \;
 
+.include "../../devel/ncurses/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
