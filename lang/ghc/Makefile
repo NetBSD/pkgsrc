@@ -1,16 +1,21 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 21:44:29 grant Exp $
+# $NetBSD: Makefile,v 1.14 2003/12/31 17:11:57 kristerw Exp $
 
 DISTNAME=	ghc-5.04.3
 CATEGORIES=	lang
 MASTER_SITES=	http://www.haskell.org/ghc/dist/5.04.3/
 DISTFILES=	ghc-5.04.3-src.tar.bz2 ghc-5.04.3-i386-unknown-netbsd-hc.tar.bz2
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	kristerw@NetBSD.org
 HOMEPAGE=	http://www.haskell.org/ghc/
 COMMENT=	Compiler for the functional language Haskell
 
-DEPENDS+=	readline>=4.0:../../devel/readline
-DEPENDS+=	gmp>=2.0.2:../../devel/gmp
+GNU_CONFIGURE=	# defined
+USE_X11=	# defined
+CONFIGURE_SCRIPT=	./distrib/hc-build
+CONFIGURE_ENV+=		LIBS="-L${PREFIX}/lib"
+AUTOCONF_REQD=2.13
+
+USE_BUILDLINK2=	#defined
 
 USE_GNU_READLINE=yes
 USE_PERL5=	yes
@@ -41,14 +46,10 @@ pre-configure:
 	${MV} -f $${file}.fixed $${file};				\
 	${AUTOCONF}
 
-do-configure:
-	: Nothing here, configure is run twice by the hc-build script.
-
 do-build:
-	(cd ${WRKSRC}; \
-	 LIBS="-L${PREFIX}/lib" ./distrib/hc-build --prefix=${PREFIX})
 
 .include "../../devel/readline/buildlink2.mk"
 .include "../../devel/gmp/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
