@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/03/24 21:25:00 nathanw Exp $
+
+SHA1 (gaim-otr-2.0.1.tar.gz) = 617e6c7cf92439c0320b57551ad26b2ccea468a0
+RMD160 (gaim-otr-2.0.1.tar.gz) = 8431bb7bf214f6935dda31c0378eb061eae875ad
+Size (gaim-otr-2.0.1.tar.gz) = 34691 bytes
+SHA1 (patch-aa) = a7ed08cb06ec08aa80439dafb608fb7bffdd4f77
