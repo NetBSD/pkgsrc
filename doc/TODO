@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1861 2004/06/24 23:51:47 ben Exp $
+$NetBSD: TODO,v 1.1862 2004/06/25 00:05:21 snj Exp $
 
 Suggested new packages
 ======================
@@ -391,7 +391,6 @@ Suggested package updates
 	o teapop-0.3.8
 	o texi2html-1.70
 	o texinfo-4.7
-	o thunderbird-0.7
 	o thy-0.9.0 [pkg/25318]
 	o thy-0.9.2
 	o tkdesk-2.0
