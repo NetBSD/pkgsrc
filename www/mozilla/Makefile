@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.54 2001/02/05 09:01:06 tron Exp $
+# $NetBSD: Makefile,v 1.55 2001/02/08 09:51:57 tron Exp $
 
 DISTNAME=	mozilla-source-0.7
 PKGNAME=	mozilla-0.7
 WRKSRC=		${WRKDIR}/mozilla
 CATEGORIES=	www
-MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/releases/mozilla0.7/src/
+MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/releases/mozilla0.7/src/ \
+		ftp://ftp.fu-berlin.de/pub/unix/network/www/mozilla/releases/mozilla0.7/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
