@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2102 2003/05/01 12:00:29 jmmv Exp $
+$NetBSD: CHANGES,v 1.2103 2003/05/01 12:10:55 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1806,3 +1806,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ldapsdk to 12311998nb1 [jmmv 2003-05-01]
 	Updated gnome2-games to 2.2.1nb1 [jmmv 2003-05-01]
 	Updated mailserv to 3.29 [jmmv 2003-05-01]
+	Updated mailwrapper to 19990412nb1 [jmmv 2003-05-01]
