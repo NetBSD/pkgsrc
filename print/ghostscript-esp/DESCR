@@ -5,4 +5,4 @@ and some displays.
 This package contains ESP Ghostscript, which is a separately maintained
 distribution of GNU Ghostscript and distributed under the terms of the GNU
 Public License.  ESP Ghostscript incorporates the CUPS raster printer
-driver, and a large number of contributed Ghostscript printer drivers.
+driver and a large number of contributed Ghostscript printer drivers.
