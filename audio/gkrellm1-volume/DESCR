@@ -1,0 +1,2 @@
+gkrellm-volume is a gkrellm plugin to control all your mixer volumes.
+It also allows to save/restore volumes between sessions.
