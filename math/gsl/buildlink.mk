@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/11/22 12:58:40 agc Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/05/03 21:41:31 jtb Exp $
 #
 # This Makefile fragment is included by packages that use gsl.
 #
@@ -17,7 +17,7 @@ GSL_BUILDLINK_MK=              # defined
 
 .include "../../mk/bsd.buildlink.mk"  
 
-BUILDLINK_DEPENDS.gsl?=        gsl>=1.0
+BUILDLINK_DEPENDS.gsl?=        gsl>=1.1.1
 BUILD_DEPENDS+=                        ${BUILDLINK_DEPENDS.gsl}:../../math/gsl
 
 EVAL_PREFIX+=                  BUILDLINK_PREFIX.gsl=gsl
@@ -42,6 +42,7 @@ BUILDLINK_FILES.gsl+=  include/gsl/gsl_block_ulong.h
 BUILDLINK_FILES.gsl+=  include/gsl/gsl_block_ushort.h
 BUILDLINK_FILES.gsl+=  include/gsl/gsl_cblas.h
 BUILDLINK_FILES.gsl+=  include/gsl/gsl_chebyshev.h
+BUILDLINK_FILES.gsl+=  include/gsl/gsl_combination.h
 BUILDLINK_FILES.gsl+=  include/gsl/gsl_complex.h
 BUILDLINK_FILES.gsl+=  include/gsl/gsl_complex_math.h
 BUILDLINK_FILES.gsl+=  include/gsl/gsl_const.h 
