@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5477 2004/04/07 13:57:52 cube Exp $
+$NetBSD: CHANGES,v 1.5478 2004/04/07 14:01:52 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1835,3 +1835,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mencoder to 1.0rc3nb4 [salo 2004-04-07]
 	Added netbeans-ide-3.5.1 [xtraeme 2004-04-07]
 	Updated nntpclnt to 1.6.1nb4 [cube 2004-04-07]
+	Updated mbmon to 203nb1 [recht 2004-04-07]
+	Updated xmbmon to 203nb1 [recht 2004-04-07]
