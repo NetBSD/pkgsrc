@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9227 2005/02/19 22:47:34 wiz Exp $
+$NetBSD: CHANGES,v 1.9228 2005/02/20 00:07:00 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -972,3 +972,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated boehm-gc to 6.4 [wiz 2005-02-19]
 	Updated nail to 11.21 [cjep 2005-02-19]
 	Updated libsoup to 1.99.28nb3 [wiz 2005-02-19]
+	Updated dspam to 3.2.7 [xtraeme 2005-02-19]
