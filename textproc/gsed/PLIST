@@ -1,6 +1,35 @@
-@comment $NetBSD: PLIST,v 1.3 2002/12/25 18:10:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/06/14 00:04:55 grant Exp $
 bin/${GNU_PROGRAM_PREFIX}sed
-man/man1/${GNU_PROGRAM_PREFIX}sed.1
-@unexec ${INSTALL_INFO} --delete %D/info/sed.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/sed.info
 info/sed.info
-@exec ${INSTALL_INFO} %D/info/sed.info %D/info/dir
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/sed.info
+info/sed.info-1
+info/sed.info-2
+man/man1/${GNU_PROGRAM_PREFIX}sed.1
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/sed.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/sed.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/sed.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/sed.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/sed.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/sed.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/sed.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/sed.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/sed.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/sed.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/sed.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/sed.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/sed.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/sed.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/sed.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/sed.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/sed.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/sed.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/sed.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/sed.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/sed.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/sed.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/sed.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/sed.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/sed.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/sed.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/sed.mo

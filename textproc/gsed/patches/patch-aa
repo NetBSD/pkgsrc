@@ -1,12 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/06/26 12:45:38 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2003/06/14 00:04:56 grant Exp $
 
---- configure.in.orig	Sun Aug  2 02:38:33 1998
-+++ configure.in
-@@ -101,7 +101,6 @@
- AC_REPLACE_FUNCS(memchr memcmp memmove strerror)
- AC_CHECK_FUNCS(isatty  bcopy bzero isascii memcpy)
+--- configure.orig	Fri Apr 11 16:21:09 2003
++++ configure
+@@ -5257,7 +5257,7 @@ else
+ fi
  
--AC_ARG_PROGRAM
- AC_OUTPUT(Makefile djgpp/Makefile doc/Makefile dnl
- lib/Makefile sed/Makefile testsuite/Makefile
- dnl testsuite/version.good:testsuite/version.gin dnl
+ 
+-: ${TEXI2HTML=texi2html -monolithic}
++TEXI2HTML="texi2html -monolithic"
+ 
+ 
+ echo "$as_me:$LINENO: checking how to build HTML documentation" >&5
