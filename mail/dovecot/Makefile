@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2004/12/28 02:47:44 reed Exp $
+# $NetBSD: Makefile,v 1.31 2005/01/08 19:58:16 schmonz Exp $
 
-DISTNAME=		dovecot-0.99.12.1
-PKGREVISION=		1
+DISTNAME=		dovecot-0.99.13
 CATEGORIES=		mail
 MASTER_SITES=		http://www.dovecot.org/releases/
 
@@ -18,17 +17,14 @@ COMMENT=		Secure IMAP and POP3 server
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/.1$//}
-USE_BUILDLINK3=		YES
-USE_LIBTOOL=		YES
-USE_PKGINSTALL= 	YES
-GNU_CONFIGURE=		YES
+USE_BUILDLINK3=		yes
+USE_LIBTOOL=		yes
+USE_PKGINSTALL= 	yes
+GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-ssldir=${SSLCERTS}
-
-# Avoid an ICE in gcc2 on sparc64
-CONFIGURE_ENV+=		F77=${FALSE}
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
