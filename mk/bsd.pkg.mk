@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.273 1999/05/24 20:39:50 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.274 1999/05/24 21:25:00 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -21,7 +21,7 @@
 .include "../../mk/bsd.prefs.mk"
 
 ##### Define __PLATFORM_OK only if the OS matches the pkg's allowed list.
-.if !empty(ONLY_FOR_PLATFORM)
+.if defined(ONLY_FOR_PLATFORM) && !empty(ONLY_FOR_PLATFORM)
 .for __tmp__ in ${ONLY_FOR_PLATFORM}
 .if ${MACHINE_PLATFORM:M${__tmp__}} != ""
 __PLATFORM_OK?=
