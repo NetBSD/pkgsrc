@@ -1,0 +1,5 @@
+The ClanLib Game SDK is a crossplatform game library designed to ease the
+work for game developers. The goal is to provide a common interface to
+classical game problems (loading graphics eg.), so games can share as much
+code as possible. Ideally anyone with small resources should be able to
+write commercial quality games.

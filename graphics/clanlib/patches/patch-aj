@@ -1,0 +1,14 @@
+$NetBSD: patch-aj,v 1.1.1.1 1999/07/21 22:56:35 garbled Exp $
+--- Utils/DatafileCompiler/Makefile.conf.orig	Sat Mar 27 17:05:17 1999
++++ Utils/DatafileCompiler/Makefile.conf	Fri Jul 16 20:03:00 1999
+@@ -1,7 +1,9 @@
+ 
+ COMP_OPTIONS =	-Wall -O2 -I ../.. -fpic
+ 
+-LINK_OPTIONS = -lz -L../.. -Wl,-rpath,../.. -lclan -lclanlayer2
++LINK_OPTIONS = -L../.. $(LDFLAGS) -lclan -lclanlayer2
++
++LINK_OPTIONS+= $(shell if test -f ../../libz.a; then echo "../../libz.a"; else echo " -lz";fi)
+ 
+ %.o : %.cpp
+ 	@echo "Compiling [37m$<[0m"
