@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/03/26 02:27:49 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2004/04/25 20:04:54 snj Exp $
 #
 
 DISTNAME=		soup-0.7.10
@@ -12,17 +12,17 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Callback-based mechanism for sending and servicing SOAP requests
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	soup.pc.in
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
-.include "../../textproc/libxml/buildlink2.mk"
-.include "../../devel/bonobo/buildlink2.mk"
-.include "../../devel/GConf/buildlink2.mk"
-.include "../../devel/popt/buildlink2.mk"
-.include "../../devel/glib/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/libxml/buildlink3.mk"
+.include "../../devel/bonobo/buildlink3.mk"
+.include "../../devel/GConf/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
+.include "../../devel/glib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
