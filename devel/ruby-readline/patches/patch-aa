@@ -1,9 +1,10 @@
-$NetBSD: patch-aa,v 1.2 2005/01/23 17:33:19 taca Exp $
+$NetBSD: patch-aa,v 1.3 2005/02/19 05:12:24 taca Exp $
+
+This patch is generated with "diff -u -U 2".
 
 --- extconf.rb.orig	2004-07-15 23:11:38.000000000 +0900
-+++ extconf.rb
-@@ -5,8 +5,7 @@ dir_config('ncurses')
- dir_config('termcap')
++++ extconf.rb	2005-02-19 01:51:38.000000000 +0900
+@@ -6,6 +6,5 @@
  dir_config("readline")
  have_library("user32", nil) if /cygwin/ === RUBY_PLATFORM
 -have_library("ncurses", "tgetnum") or
@@ -11,4 +12,3 @@ $NetBSD: patch-aa,v 1.2 2005/01/23 17:33:19 taca Exp $
 +have_library("termcap", "tgetnum") or
    have_library("curses", "tgetnum")
  
- if have_header("readline/readline.h") and
