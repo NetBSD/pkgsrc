@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2001/04/02 02:23:48 mjl Exp $
-# FreeBSD Id: Makefile,v 1.10 1997/07/17 15:12:44 max Exp
+# $NetBSD: Makefile,v 1.32 2001/05/21 21:39:13 wiz Exp $
 
-DISTNAME=	libpng-1.0.10
+# On update, don't forget to increase shared library major/minor's in
+# accordance with changes (patch-aa).
+DISTNAME=	libpng-1.0.11
 PKGNAME=	${DISTNAME:S/lib//}
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.libpng.org/pub/png/src/ \
