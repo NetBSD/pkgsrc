@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/11/27 08:47:41 uebayasi Exp $
+# $NetBSD: Makefile,v 1.17 2002/11/29 00:24:48 kei Exp $
 
 DISTNAME=	mule-2.3
 PKGREVISION=	1
@@ -10,8 +10,6 @@ HOMEPAGE=	http://www.m17n.org/mule/MulePage.en.html
 COMMENT=	Multilingual GNU editing macros (editor)
 
 CONFLICTS=	emacs-[0-9]*
-
-BROKEN=		Compilation has some problems
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -26,6 +24,7 @@ WRKSRC=		${WRKDIR}/mule
 GNU_CONFIGURE=	yes
 USE_BUILDLINK2=	yes
 USE_GMAKE=	yes
+USE_X11BASE=	yes
 
 CONFIGURE_ARGS+=	${MACHINE_ARCH}--netbsd --with-x --with-x-toolkit=lucid
 CONFIGURE_ARGS+=	--terminal-face --mcpath
