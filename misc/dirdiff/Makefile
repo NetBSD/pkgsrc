@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2005/01/22 15:42:17 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2005/01/22 15:45:59 minskim Exp $
 #
 
 DISTNAME=	dirdiff-1.6
 PKGREVISION=	2
-CATEGORIES=	misc tk80
+CATEGORIES=	misc tk
 MASTER_SITES=	http://samba.org/ftp/paulus/
 
 DEPENDS=	tk>=8.3.4:../../x11/tk
