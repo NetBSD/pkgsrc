@@ -1,11 +1,9 @@
-$NetBSD: distinfo,v 1.6 2001/08/05 17:04:21 sakamoto Exp $
+$NetBSD: distinfo,v 1.7 2003/08/29 10:16:12 xtraeme Exp $
 
-SHA1 (fox-0.99.174.tar.gz) = 4c9455646e689f5d35b6cb541db20a9646156fa2
-Size (fox-0.99.174.tar.gz) = 1631360 bytes
-SHA1 (xunicode-0.3.3.tar.gz) = 279c7b7990774bf585ffdbb37fdcbb3099354206
-Size (xunicode-0.3.3.tar.gz) = 142790 bytes
-SHA1 (fox-unicode-0.99.174.diff) = cfd394f0032a69d5a4c9918f2b6788f1cb11f5ca
-Size (fox-unicode-0.99.174.diff) = 225018 bytes
-SHA1 (patch-ab) = 959b64df0a5b30e81a09e15e04020b48598a6c39
-SHA1 (patch-ac) = 4558237957c3bcec13cd11c521fa94b8e98fac40
-SHA1 (patch-ae) = 33e70da09da4fa637e6f1aeb89b52b54f454562d
+SHA1 (fox-1.0.43.tar.gz) = 1c56abb70c5d731226754808efa97bdad97a761d
+Size (fox-1.0.43.tar.gz) = 2132787 bytes
+SHA1 (patch-aa) = 0d56368c0d106d944956bfa1a33672f141cae69b
+SHA1 (patch-ab) = 705946d84fd48666479abbd4c59c4e75ca914436
+SHA1 (patch-ac) = c338e3747b5cb717794be526837ffa70330f9069
+SHA1 (patch-ad) = 33f032fcc13c32ab5e31a3224278626b5083838d
+SHA1 (patch-ae) = 5b2ddf420db89c6c0960e891c4778d639f728978

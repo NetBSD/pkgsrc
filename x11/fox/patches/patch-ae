@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2001/02/24 16:56:56 sakamoto Exp $
+$NetBSD: patch-ae,v 1.2 2003/08/29 10:16:13 xtraeme Exp $
 
---- configure.orig	Tue Feb 13 01:25:29 2001
-+++ configure
-@@ -3607,7 +3607,7 @@
+--- configure.orig	2003-08-29 10:26:11.000000000 +0200
++++ configure	2003-08-29 10:26:44.000000000 +0200
+@@ -7782,7 +7782,7 @@
      GL_TESTS="gltest glviewer"
      if test "x$MESA" = "xHAVE_MESA" ; then
        CXXFLAGS="${CXXFLAGS} -DHAVE_MESA"
