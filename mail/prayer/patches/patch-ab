@@ -1,31 +1,25 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/12/27 12:52:07 abs Exp $
+$NetBSD: patch-ab,v 1.2 2003/07/28 15:51:25 adam Exp $
 
---- Makefile.orig	Wed Oct 30 13:56:30 2002
-+++ Makefile
-@@ -12,7 +12,7 @@ endif
- all:
- 	(cd files; $(MAKE) all)
- 	(cd prayer; $(MAKE) all)
--	(cd accountd; $(MAKE) all)
-+#	(cd accountd; $(MAKE) all)
+--- files/install.sh.orig	2003-05-19 14:34:10.000000000 +0200
++++ files/install.sh	2003-07-28 17:18:33.000000000 +0200
+@@ -75,13 +75,16 @@
+     ${INSTALL} -d -o ${RO_USER} -g ${RO_GROUP} -m ${PRIVATE_DIR} ${BIN_DIR}
+ fi
  
- cert:
- 	(cd files; $(MAKE) cert)
-@@ -23,7 +23,7 @@ install-cert:
- install:
- 	(cd files;  $(MAKE) install)
- 	(cd prayer; $(MAKE) install)
--	(cd accountd; $(MAKE) install)
-+# 	(cd accountd; $(MAKE) install)
- ifeq ($(strip $(RPM_BUILD)), true)
- 	(cd files;  $(MAKE) redhat-install-init.d)
- endif
-@@ -44,7 +44,7 @@ clean:
- 	rm -rf docs/*~ docs/\#*\#
- 	(cd prayer; $(MAKE) clean)
- 	(cd files; $(MAKE) clean)
--	(cd accountd; $(MAKE) clean)
-+# 	(cd accountd; $(MAKE) clean)
- 
- distclean: clean
- 	(cd files; $(MAKE) distclean)
++if [ ! -d "${PREFIX}/share/prayer" ]; then
++    mkdir "${PREFIX}/share/prayer"
++fi
+ for i in help icons
+ do
+-    if [ -d "${PREFIX}/${i}" ]; then
++    if [ -d "${PREFIX}/share/prayer/${i}" ]; then
+         echo Removing old ${i}
+-        rm -rf ${PREFIX}/${i}
++        rm -rf ${PREFIX}/share/prayer/${i}
+     fi
+     echo Copying ${i}
+-    (tar cf - ${i}) | (cd ${PREFIX} ; tar xf -)
+-    (cd ${PREFIX}; chown -R ${RO_USER}:${RO_GROUP} ${i})
++    (tar cf - ${i}) | (cd ${PREFIX}/share/prayer ; tar xf -)
++    (cd ${PREFIX}/share/prayer; chown -R ${RO_USER}:${RO_GROUP} ${i})
+ done

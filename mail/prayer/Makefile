@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:46:51 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/28 15:51:23 adam Exp $
 #
 
-DISTNAME=	prayer-1.0.5
-PKGREVISION=	2
+DISTNAME=	prayer-1.0.8
 CATEGORIES=	mail www
 MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/email/prayer/
 
@@ -32,6 +31,9 @@ CONF_FILES+=	${EGDIR}/welcome.html ${PKG_SYSCONFDIR}/welcome.html
 
 pre-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
+
+post-install:
+	${FIND} -d ${PREFIX}/share/prayer -name CVS -type d -exec ${RM} -r {} \;
 
 .include "../../databases/db4/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
