@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/01/14 05:15:40 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/02/07 11:35:47 jlam Exp $
 
 # NOTE:  This package is modeled on ../openssh, but does not share
 # files with it as that package may update faster than the gssapi
@@ -73,8 +73,12 @@ CPPFLAGS+=		-I/usr/include/krb5 -I/usr/include/kerberosIV
 # XXX: PAM authentication causes memory faults, and I haven't tracked down
 # XXX: why yet.  For the moment, disable PAM authentication.
 #
-#.if defined(USE_PAM)
-#.include "../../mk/pam.buildlink3.mk"
+#PKG_OPTIONS_VAR=	PKG_OPTIONS.openssh+gssapi
+#PKG_SUPPORTED_OPTIONS=	PAM
+#.include "../../mk/bsd.options.mk"
+#
+#.if !empty(PKG_OPTIONS:MPAM)
+#.  include "../../mk/pam.buildlink3.mk"
 #CONFIGURE_ARGS+=	--with-pam
 #PLIST_SRC+=		${.CURDIR}/PLIST.pam
 #MESSAGE_SRC+=		${.CURDIR}/MESSAGE.pam
