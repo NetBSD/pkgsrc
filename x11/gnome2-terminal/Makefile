@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.34 2004/10/20 21:13:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.35 2004/12/28 21:50:29 jmmv Exp $
 #
 
-DISTNAME=		gnome-terminal-2.8.0
+DISTNAME=		gnome-terminal-2.8.2
 PKGNAME=		${DISTNAME:S/-/2-/}
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-terminal/2.8/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		sab@posix.org.uk
+MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Xterm like terminal program for GNOME 2
 
