@@ -1,20 +1,16 @@
-# $NetBSD: Makefile.module,v 1.13 2001/11/01 09:41:14 jlam Exp $
+# $NetBSD: Makefile.module,v 1.14 2001/12/03 08:31:05 jlam Exp $
 #
 # This Makefile is provided to ease creating PHP4 packages for the extension
 # modules distributed in the PHP4 sources.
 #
-# Just include this file, define MODNAME, define PHP_PKG_VERS if necessary,
+# Just include this file, define MODNAME, define PKGREVISION if necessary,
 # add dependencies, and add the appropriate --with-configure-arg, then include
 # bsd.pkg.mk.
-#
-# PHP_PKG_VERS should be of the form "nbX" and is used to indicate revisions
-# of the PHP4 module package that don't affect other PHP4 modules.  It is
-# typically left empty.
 
 .include "../../www/php4/Makefile.common"
 
-PKGNAME=		php-${MODNAME}-${PHP_VERS}
-PHP_PKG_VERS?=		# empty
+PKGNAME=		php-${MODNAME}-${PHP_BASE_VERS}
+PKGREVISION?=		# empty
 
 BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 DEPENDS+=		php>=${PHP_BASE_VERS}:../../www/php4
