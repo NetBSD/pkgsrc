@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2002/08/25 20:58:21 mjl Exp $
-# FreeBSD Id: Makefile,v 1.12 1997/11/22 16:01:32 jseger Exp
-#
+# $NetBSD: Makefile,v 1.30 2002/08/26 19:58:30 tron Exp $
 
 DISTNAME=		guile-1.4.1
 CATEGORIES=		lang
@@ -10,15 +8,16 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/guile/guile.html
 COMMENT=		GNU's Ubiquitous Intelligent Language for Extension
 
-USE_BUILDLINK_ONLY=	# defined
-GNU_CONFIGURE=		# defined
+USE_BUILDLINK_ONLY=	YES
+GNU_CONFIGURE=		YES
+USE_GMAKE=		YES
 
-USE_LIBTOOL=		# defined
+USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-USE_GNU_READLINE=	# defined
+USE_GNU_READLINE=	YES
 
-INFO_FILES=		data-rep.info
+INFO_FILES=		guile.info
 
 .include "../../mk/bsd.prefs.mk"
 
