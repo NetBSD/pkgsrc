@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.5 2000/05/31 17:25:55 rh Exp $
+$NetBSD: md5,v 1.6 2001/02/27 08:20:25 skrll Exp $
 
-MD5 (libtool-1.3.5.tar.gz) = fa26a07c978ad05d1f88ed7a472daa49
+MD5 (libtool-ml-20010219.tar.gz) = 6ace0f37e10a09ad837b3455fadab836
