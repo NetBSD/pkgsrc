@@ -1,6 +1,6 @@
 # start of install
 #
-# $NetBSD: install,v 1.1 2001/11/19 16:18:44 jlam Exp $
+# $NetBSD: install,v 1.2 2001/11/19 23:33:53 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -71,7 +71,7 @@ POST-INSTALL)
 	done
 
 	if [ -n "${CONF_FILES}" -o -n "${CONF_FILES_PERMS}" -o	\
-	     -n "${SUPPORT_FILES}" ]
+	     -n "${SUPPORT_FILES}" -o -n "${SUPPORT_FILES_PERMS}" ]
 	then
 		${ECHO} "Installing configuration files:"
 	fi
@@ -81,7 +81,7 @@ POST-INSTALL)
 		samplefile="$1"; file="$2"
 		shift; shift
 
-		if [ -f ${file} ]
+		if [ -e ${file} ]
 		then
 			${ECHO} "    ${file} already exists"
 		else
@@ -90,13 +90,28 @@ POST-INSTALL)
 			${CHMOD} @CONF_FILES_MODE@ ${file}
 		fi
 	done
-	set -- ${CONF_FILES_PERMS}
+	set -- ${SUPPORT_FILES}
+	while [ $# -gt 0 ]
+	do
+		samplefile="$1"; file="$2"
+		shift; shift
+
+		if [ -e ${file} ]
+		then
+			${ECHO} "    ${file} already exists"
+		else
+			${ECHO} "    ${file}"
+			${CP} ${samplefile} ${file}
+			${CHMOD} @SUPPORT_FILES_MODE@ ${file}
+		fi
+	done
+	set -- ${CONF_FILES_PERMS} ${SUPPORT_FILES_PERMS}
 	while [ $# -gt 0 ]
 	do
 		samplefile="$1"; file="$2"; owner="$3"; group="$4"; mode="$5"
 		shift; shift; shift; shift; shift
 
-		if [ -f ${file} ]
+		if [ -e ${file} ]
 		then
 			${ECHO} "    ${file} already exists"
 		else
@@ -107,28 +122,13 @@ POST-INSTALL)
 			${CHMOD} ${mode} ${file}
 		fi
 	done
-	set -- ${SUPPORT_FILES}
-	while [ $# -gt 0 ]
-	do
-		samplefile="$1"; file="$2"
-		shift; shift
-
-		if [ -f ${file} ]
-		then
-			${ECHO} "    ${file} already exists"
-		else
-			${ECHO} "    ${file}"
-			${CP} ${samplefile} ${file}
-			${CHMOD} @SUPPORT_FILES_MODE@ ${file}
-		fi
-	done
 	set -- ${RCD_SCRIPTS}
 	while [ $# -gt 0 ]
 	do
 		samplefile="$1"; file="$2"
 		shift; shift
 
-		if [ -f ${file} ]
+		if [ -e ${file} ]
 		then
 			${ECHO} "    ${file} already exists"
 		else

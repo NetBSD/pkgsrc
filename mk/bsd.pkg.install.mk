@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.1 2001/11/19 16:18:44 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.2 2001/11/19 23:33:52 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -103,7 +103,9 @@ USE_USERGROUP=		YES
 # CONF_FILES_PERMS are lists that look like:
 #		example_file config_file user group mode
 #	and works like CONF_FILES, except the config files are owned by
-#	user:group have mode permissions.
+#	user:group have mode permissions.  SUPPORT_FILES_PERMS is used in the
+#	same way, but the package admin isn't prompted to customize the file
+#	at post-install time.
 #
 # RCD_SCRIPTS works like CONF_FILES but deals with rc.d startup scripts.  The
 #	scripts are copied with ${RCD_SCRIPTS_MODE} permissions.
@@ -113,13 +115,15 @@ CONF_FILES_MODE?=	0644
 CONF_FILES_PERMS?=	# empty
 SUPPORT_FILES?=		# empty
 SUPPORT_FILES_MODE?=	0644
+SUPPORT_FILES_PERMS?=	# empty
 RCD_SCRIPTS?=		# empty
 RCD_SCRIPTS_MODE?=	0755
 FILES_SUBST+=		CONF_FILES=${CONF_FILES:Q}
 FILES_SUBST+=		CONF_FILES_MODE=${CONF_FILES_MODE}
+FILES_SUBST+=		CONF_FILES_PERMS=${CONF_FILES_PERMS:Q}
 FILES_SUBST+=		SUPPORT_FILES=${SUPPORT_FILES:Q}
 FILES_SUBST+=		SUPPORT_FILES_MODE=${SUPPORT_FILES_MODE}
-FILES_SUBST+=		CONF_FILES_PERMS=${CONF_FILES_PERMS:Q}
+FILES_SUBST+=		SUPPORT_FILES_PERMS=${SUPPORT_FILES_PERMS:Q}
 FILES_SUBST+=		RCD_SCRIPTS=${RCD_SCRIPTS:Q}
 FILES_SUBST+=		RCD_SCRIPTS_MODE=${RCD_SCRIPTS_MODE}
 
