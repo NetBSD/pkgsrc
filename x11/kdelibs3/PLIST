@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/06/27 07:15:58 skrll Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/06/28 07:44:32 seb Exp $
 bin/artsmessage
 bin/checkXML
 ${CUPS}bin/cupsdconf
@@ -948,7 +948,7 @@ share/kde/apps/kdeprint/icons/hicolor/32x32/apps/kdeprint_printer_remote_process
 share/kde/apps/kdeprint/icons/hicolor/32x32/apps/kdeprint_printer_remote_stopped.png
 share/kde/apps/kdeprint/icons/hicolor/32x32/apps/kdeprint_printer_stopped.png
 share/kde/apps/kdeprint/icons/hicolor/32x32/apps/kdeprint_printer_users.png
-{CUPS}share/kde/apps/kdeprint/kde_logo.png
+${CUPS}share/kde/apps/kdeprint/kde_logo.png
 share/kde/apps/kdeprint/lprngtooldriver1
 share/kde/apps/kdeprint/pics/kdeprint_collate.png
 share/kde/apps/kdeprint/pics/kdeprint_collate_reverse.png
