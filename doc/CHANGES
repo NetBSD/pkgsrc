@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7854 2004/11/14 19:26:56 jmmv Exp $
+$NetBSD: CHANGES,v 1.7855 2004/11/14 20:34:05 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5273,3 +5273,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gmime to 2.1.9 [jmmv 2004-11-14]
 	Updated balsa2 to 2.2.5 [jmmv 2004-11-14]
 	Updated bmp to 0.9.7rc2nb4 [jmmv 2004-11-14]
+	Updated drivel to 1.2.2nb2 [jmmv 2004-11-14]
