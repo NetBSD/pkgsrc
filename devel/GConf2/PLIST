@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2002/12/09 16:01:16 tron Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/01/05 22:12:33 jmmv Exp $
 bin/gconftool-2
+etc/gconf/2/path
 include/gconf/2/gconf/gconf-changeset.h
 include/gconf/2/gconf/gconf-client.h
 include/gconf/2/gconf/gconf-engine.h
@@ -21,6 +22,36 @@ lib/pkgconfig/gconf-2.0.pc
 libexec/gconf-sanity-check-2
 libexec/gconfd-2
 share/aclocal/gconf-2.m4
+share/doc/html/gconf/c120.html
+share/doc/html/gconf/c21.html
+share/doc/html/gconf/c381.html
+share/doc/html/gconf/c490.html
+share/doc/html/gconf/conventions.html
+share/doc/html/gconf/gconf-client-reference.html
+share/doc/html/gconf/gconf-client.html
+share/doc/html/gconf/gconf-gconf-backend.html
+share/doc/html/gconf/gconf-gconf-changeset.html
+share/doc/html/gconf/gconf-gconf-engine.html
+share/doc/html/gconf/gconf-gconf-error.html
+share/doc/html/gconf/gconf-gconf-internals.html
+share/doc/html/gconf/gconf-gconf-listeners.html
+share/doc/html/gconf/gconf-gconf-locale.html
+share/doc/html/gconf/gconf-gconf-schema.html
+share/doc/html/gconf/gconf-gconf-sources.html
+share/doc/html/gconf/gconf-gconf-value.html
+share/doc/html/gconf/gconf-gconf.html
+share/doc/html/gconf/gconf-internals-reference.html
+share/doc/html/gconf/gconf-reference.html
+share/doc/html/gconf/gconfclient.html
+share/doc/html/gconf/gconftool.html
+share/doc/html/gconf/index.html
+share/doc/html/gconf/index.sgml
+share/doc/html/gconf/x184.html
+share/doc/html/gconf/x236.html
+share/doc/html/gconf/x289.html
+share/doc/html/gconf/x42.html
+share/doc/html/gconf/x462.html
+share/doc/html/gconf/x485.html
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/GConf2.mo
@@ -56,11 +87,15 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/GConf2.mo
-@exec ${MKDIR} %D/share/gtk-doc/html/gconf
-@dirrm share/gtk-doc/html/gconf
-@unexec ${RMDIR} -p %D/gtk-doc/html 2>/dev/null || ${TRUE}
+@dirrm share/doc/html/gconf
 @dirrm lib/GConf/2
 @unexec ${RMDIR} -p %D/lib/GConf 2>/dev/null || ${TRUE}
 @dirrm include/gconf/2/gconf
 @dirrm include/gconf/2
 @unexec ${RMDIR} -p %D/include/gconf 2>/dev/null || ${TRUE}
+@exec ${MKDIR} %D/etc/gconf/gconf.xml.mandatory
+@dirrm etc/gconf/gconf.xml.mandatory
+@exec ${MKDIR} %D/etc/gconf/gconf.xml.defaults
+@dirrm etc/gconf/gconf.xml.defaults
+@dirrm etc/gconf/2
+@dirrm etc/gconf
