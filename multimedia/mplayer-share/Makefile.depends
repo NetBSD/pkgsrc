@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.depends,v 1.9 2004/05/16 08:59:36 grant Exp $
+# $NetBSD: Makefile.depends,v 1.10 2004/05/16 10:15:21 grant Exp $
 #
 
 DEPENDS+=	mplayer-share>=${MPLAYER_PKG_VERSION}:../../multimedia/mplayer-share
@@ -36,7 +36,10 @@ USE_X11=	YES
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
-.include "../../multimedia/xvidcore/buildlink3.mk"
+
+.if ${MACHINE_ARCH} == "i386"
+.  include "../../multimedia/xvidcore/buildlink3.mk"
+.endif
 
 .if defined(USE_OSS)
 .  include "../../mk/ossaudio.buildlink3.mk"
