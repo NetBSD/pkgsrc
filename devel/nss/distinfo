@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2005/02/03 18:05:40 jschauma Exp $
+$NetBSD: distinfo,v 1.3 2005/02/09 16:19:35 jschauma Exp $
 
 SHA1 (nss-3.9.2.tar.gz) = 017b748d92c5f7376bda78915d1b78b260b44133
 Size (nss-3.9.2.tar.gz) = 4734817 bytes
@@ -8,3 +8,4 @@ SHA1 (patch-ac) = f1857c2e7de7746e66602155cc3d10996a62fc6b
 SHA1 (patch-ad) = 0fecd3fc1e5865525bcfce2fc6140622bc7a8f19
 SHA1 (patch-ae) = 89a316ddd87ac65c675beae33fabc5c0c12667f2
 SHA1 (patch-af) = 4c933d1cfb1ec4708b69dec18ea6b3acfbd91cfa
+SHA1 (patch-ag) = e99c7396f4a6b7430321124e7c03528ab6e7681c
