@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2002/08/31 03:57:17 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2002/09/09 19:43:14 wiz Exp $
 #
 
 DISTNAME=	xmms-1.2.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.xmms.org/xmms/1.2.x/ \
 		ftp://ftp.sunet.se/pub/multimedia/xmms/1.2.x/
@@ -18,6 +18,11 @@ GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--without-gnome
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+# Broken configure script assumes that iconv_open lives in libc; work around.  
+CPPFLAGS+=		-DHAVE_ICONV_OPEN=1                                     
+CONFIGURE_ENV+=		ac_cv_func_iconv_open=yes                       
+LIBS+=			-liconv                                                 
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -41,6 +46,7 @@ post-patch:
 .include "../../audio/esound/buildlink2.mk"
 .include "../../audio/libmikmod/buildlink2.mk"
 .include "../../audio/libvorbis/buildlink2.mk"
+.include "../../converters/libiconv/buildlink2.mk"
 .include "../../graphics/Mesa/buildlink2.mk"
 .include "../../textproc/libxml/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
