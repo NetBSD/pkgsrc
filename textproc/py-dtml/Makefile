@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/01/02 04:48:45 tsarna Exp $
+# $NetBSD: Makefile,v 1.2 2000/01/03 16:34:27 tsarna Exp $
 #
 
 DISTNAME=	Zope-2.1.1-src
@@ -36,7 +36,7 @@ post-build:
 do-install:
 	${INSTALL_SCRIPT_DIR} ${PYTHON_LIBDIR}
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	(cd ${WRKSRC}/..; ${PAX} -r -w -v -p e . ${PYTHON_LIBDIR})
+	(cd ${WRKSRC}/..; ${PAX} -r -w -v -p p . ${PYTHON_LIBDIR})
 	(cd ${PREFIX}; ${FIND} ${SITE_PKG}/DocumentTemplate \
 		${SITE_PKG}/StructuredText \
 		-type f -print >>${PLIST_SRC})
