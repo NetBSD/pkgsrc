@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.25 2001/06/14 14:55:46 skrll Exp $
+$NetBSD: patch-aa,v 1.26 2001/10/04 07:58:02 skrll Exp $
 
 --- ltconfig.in.orig	Mon May 21 05:05:06 2001
 +++ ltconfig.in
@@ -11,7 +11,16 @@ $NetBSD: patch-aa,v 1.25 2001/06/14 14:55:46 skrll Exp $
    need_lib_prefix=no
    need_version=no
    library_names_spec='${libname}${release}.so$versuffix ${libname}${release}.so$major $libname.so'
-@@ -1282,7 +1282,7 @@
+@@ -1236,6 +1236,8 @@
+   shlibpath_var=LD_LIBRARY_PATH
+   shlibpath_overrides_runpath=yes
+   hardcode_into_libs=yes
++  sys_lib_dlsearch_path_spec="/usr/lib"
++  sys_lib_search_path_spec="/usr/lib"
+   ;;
+ 
+ newsos6)
+@@ -1282,7 +1284,7 @@
    ;;
  
  solaris*)
