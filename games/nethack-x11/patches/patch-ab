@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.9 2003/03/01 21:12:52 pooka Exp $
+$NetBSD: patch-ab,v 1.10 2003/09/02 00:30:56 pooka Exp $
 
---- sys/unix/Makefile.top.orig	2003-02-23 16:43:39.000000000 +0200
-+++ sys/unix/Makefile.top	2003-03-01 22:06:45.000000000 +0200
+--- sys/unix/Makefile.top.orig	2003-08-30 03:08:04.000000000 +0300
++++ sys/unix/Makefile.top	2003-09-02 02:42:07.000000000 +0300
 @@ -14,18 +14,17 @@
  # MAKE = make
  
@@ -39,8 +39,8 @@ $NetBSD: patch-ab,v 1.9 2003/03/01 21:12:52 pooka Exp $
  # per discussion in Install.X11 and Install.Qt
 -VARDATND = 
 +VARDATND =  pet_mark.xbm rip.xpm
- # VARDATND = x11tiles pet_mark.xbm
- # VARDATND = x11tiles pet_mark.xbm rip.xpm
+ # VARDATND = x11tiles NetHack.ad pet_mark.xbm
+ # VARDATND = x11tiles NetHack.ad pet_mark.xbm rip.xpm
  # for Atari/Gem
 @@ -87,9 +86,12 @@
  $(GAME):
@@ -56,7 +56,7 @@ $NetBSD: patch-ab,v 1.9 2003/03/01 21:12:52 pooka Exp $
  # Note: many of the dependencies below are here to allow parallel make
  # to generate valid output
  
-@@ -180,18 +182,15 @@
+@@ -183,18 +185,15 @@
  		-e '}' 					\
  	  	-e '$$s/.*/nodlb/p' < dat/options` ;	\
  	$(MAKE) dofiles-$${target-nodlb}
@@ -78,7 +78,7 @@ $NetBSD: patch-ab,v 1.9 2003/03/01 21:12:52 pooka Exp $
  	-$(CHOWN) $(GAMEUID) $(SHELLDIR)/$(GAME)
  	$(CHGRP) $(GAMEGRP) $(SHELLDIR)/$(GAME)
  	chmod $(EXEPERM) $(SHELLDIR)/$(GAME)
-@@ -227,16 +226,16 @@
+@@ -230,16 +229,16 @@
  # and a reminder
  	@echo You may also want to install the man pages via the doc Makefile.
  
@@ -98,7 +98,7 @@ $NetBSD: patch-ab,v 1.9 2003/03/01 21:12:52 pooka Exp $
  # set up the game files
  	( $(MAKE) dofiles )
  # set up some additional files
-@@ -244,9 +243,20 @@
+@@ -247,9 +246,20 @@
  	-( cd $(VARDIR) ; $(CHOWN) $(GAMEUID) perm record logfile ; \
  			$(CHGRP) $(GAMEGRP) perm record logfile ; \
  			chmod $(FILEPERM) perm record logfile )

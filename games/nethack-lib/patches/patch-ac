@@ -1,17 +1,17 @@
-$NetBSD: patch-ac,v 1.5 2003/06/25 14:14:30 pooka Exp $
+$NetBSD: patch-ac,v 1.6 2003/09/02 00:30:54 pooka Exp $
 
---- include/system.h.orig	2003-02-23 16:43:22.000000000 +0200
-+++ include/system.h	2003-03-01 16:34:46.000000000 +0200
+--- include/system.h.orig	2003-08-30 03:07:23.000000000 +0300
++++ include/system.h	2003-09-02 02:49:23.000000000 +0300
 @@ -79,10 +79,10 @@
  # if !defined(__SC__) && !defined(LINUX)
  E  long NDECL(random);
  # endif
--# if !defined(SUNOS4) || defined(RANDOM)
-+# if !defined(SUNOS4) && !defined(__NetBSD__) && !defined(__FreeBSD__) || defined(RANDOM)
+-# if (!defined(SUNOS4) && !defined(bsdi) && !defined(__FreeBSD__)) || defined(RANDOM)
++# if (!defined(SUNOS4) && !defined(bsdi) && !defined(__NetBSD__) && !defined(__FreeBSD__)) || defined(RANDOM)
  E void FDECL(srandom, (unsigned int));
  # else
 -#  if !defined(bsdi) && !defined(__FreeBSD__)
-+#  if !defined(bsdi) && !defined(__FreeBSD__) && !defined(__NetBSD__)
++#  if !defined(bsdi) && !defined(__NetBSD__) && !defined(__FreeBSD__)
  E int FDECL(srandom, (unsigned int));
  #  endif
  # endif
@@ -38,7 +38,7 @@ $NetBSD: patch-ac,v 1.5 2003/06/25 14:14:30 pooka Exp $
  # endif
  
 +#ifndef __NetBSD__
- # if defined(ULTRIX) || defined(SYSV) || defined(MICRO) || defined(VMS) || defined(MAC) || (defined(HPUX) && defined(_POSIX_SOURCE))
+ # if defined(ULTRIX) || (defined(BSD) && defined(POSIX_TYPES)) || defined(SYSV) || defined(MICRO) || defined(VMS) || defined(MAC) || (defined(HPUX) && defined(_POSIX_SOURCE))
  E time_t FDECL(time, (time_t *));
  # else
  E long FDECL(time, (time_t *));
