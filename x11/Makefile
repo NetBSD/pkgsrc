@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.215 2001/04/03 08:16:58 agc Exp $
+# $NetBSD: Makefile,v 1.216 2001/04/09 06:51:09 kei Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -78,7 +78,6 @@ SUBDIR+=	unclutter
 SUBDIR+=	wmavgload
 SUBDIR+=	wmessage
 SUBDIR+=	wmfire
-SUBDIR+=	wmfishtime
 SUBDIR+=	wmfstatus
 SUBDIR+=	wmweather
 SUBDIR+=	wterm
