@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.463 2002/11/04 23:08:56 hubertf Exp $
+$NetBSD: CHANGES,v 1.464 2002/11/04 23:11:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3533,3 +3533,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated pkgconfig to 0.14.0 [wiz 2002-11-04]
 	Updated screen to 3.9.13 [hubertf 2002-11-04]
 	Updated ipv6calc to 0.44 [hubertf 2002-11-04]
+	Updated pkgdiff to 0.107 [wiz 2002-11-04]
