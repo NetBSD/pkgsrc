@@ -1,0 +1,45 @@
+$NetBSD: patch-ah,v 1.1 1999/07/26 21:19:27 tron Exp $
+
+--- collect.c.orig	Tue Aug 31 23:05:31 1993
++++ collect.c	Mon Jul 26 23:11:38 1999
+@@ -45,7 +45,7 @@
+     article_number last;
+     register FILE *arc;
+     register int c;
+-    off_t start;
++    long start;
+     static char *arc_header = "Archived-Last: ";
+     /* Header format: Archived-Last: 88888888 group.name */
+     /* Fixed constants length == 15 and offset == 24 are used below */
+@@ -84,9 +84,9 @@
+ 
+     fseek(arc, start, 0);
+     fprintf(arc, "%s%8ld %s\n", arc_header, (long)num, gh->group_name);
+-    fseek(arc, (off_t)0, 2);
++    fseek(arc, (long)0, 2);
+ 
+-    fseek(f, (off_t)0, 0);
++    fseek(f, (long)0, 0);
+     while ((c = getc(f)) != EOF) putc(c, arc);
+     putc(NL, arc);
+     fclose(arc);
+@@ -178,8 +178,8 @@
+     /* get article header */
+ 
+     art_hdr.a_number = art_num;
+-    art_hdr.hpos = (off_t)0;
+-    art_hdr.lpos = (off_t)0;
++    art_hdr.hpos = (long)0;
++    art_hdr.lpos = (long)0;
+     art_hdr.flag = 0;
+ 
+     mode = FILL_NEWS_HEADER | FILL_OFFSETS | SKIP_HEADER;
+@@ -392,7 +392,7 @@
+ 	}
+ #endif
+ #ifndef RENUMBER_DANGER
+-	if (temp == 0 && gh->data_write_offset == (off_t)0) {
++	if (temp == 0 && gh->data_write_offset == (long)0) {
+ 	    gh->first_db_article = gh->last_db_article + 1;
+ 	    continue;
+ 	}

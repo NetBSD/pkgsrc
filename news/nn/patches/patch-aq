@@ -1,0 +1,41 @@
+$NetBSD: patch-aq,v 1.1 1999/07/26 21:19:30 tron Exp $
+
+--- inst.sh.orig	Mon Sep 13 19:42:25 1993
++++ inst.sh	Mon Jul 26 23:11:39 1999
+@@ -1,8 +1,8 @@
+ 
+ # (Large) prefix inserted above by Make
+ 
+-# BSD systems keep chown in /etc
+-PATH="$PATH:/etc"
++# BSD systems keep chown in /usr/sbin
++PATH="$PATH:/usr/sbin"
+ 
+ case "$1" in
+ mkdir)
+@@ -55,7 +55,7 @@
+ 	;;
+ esac
+ 
+-set -u
++#set -u
+ 
+ (
+ if $NNTP
+@@ -365,7 +365,6 @@
+ 
+ 	echo
+ 	echo "Formatting online manual $MAN"
+-	echo ".... (continues in background) ...."
+ 
+ 	rm -f $MAN
+ 
+@@ -380,7 +379,7 @@
+ 	${AWK} -f format.awk - > $MAN
+ 
+ 	./inst chmod 644 $MAN
+-	) &
++	)
+ 	;;
+ 
+ splitdb)
