@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.23 1999/10/09 20:15:48 jlam Exp $
+# $NetBSD: Makefile,v 1.24 1999/11/10 18:03:25 drochner Exp $
 #
 
-DISTNAME=		kaffe-1.0.b4
-WRKSRC=			${WRKDIR}/kaffe-1.0b4
+DISTNAME=		kaffe-1.0.5
 CATEGORIES=		lang
-MASTER_SITES=		ftp://ftp.transvirtual.com/pub/kaffe/
+MASTER_SITES=		ftp://ftp.kaffe.org/pub/kaffe/
 
 MAINTAINER=		packages@netbsd.org
-HOMEPAGE=		http://www.transvirtual.com/
+HOMEPAGE=		http://www.kaffe.org/
 
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		png-1.0.3:../../graphics/png
@@ -28,14 +27,18 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/license.terms \
 		${PREFIX}/kaffe/share
 	if [ -f ${PREFIX}/kaffe/lib/libkaffevm.so ]; then \
-		mv ${PREFIX}/kaffe/lib/libkaffevm.so \
+		${MV} ${PREFIX}/kaffe/lib/libkaffevm.so \
 			${PREFIX}/kaffe/lib/libkaffevm.so.0.0; \
-		mv ${PREFIX}/kaffe/lib/kaffe/libio.so \
+		${MV} ${PREFIX}/kaffe/lib/kaffe/libio.so \
 			${PREFIX}/kaffe/lib/kaffe/libio.so.0.0; \
-		mv ${PREFIX}/kaffe/lib/kaffe/libmanagement.so \
+		${MV} ${PREFIX}/kaffe/lib/kaffe/libmanagement.so \
 			${PREFIX}/kaffe/lib/kaffe/libmanagement.so.0.0; \
-		mv ${PREFIX}/kaffe/lib/kaffe/libnet.so \
+		${MV} ${PREFIX}/kaffe/lib/kaffe/libmicrosoft.so \
+			${PREFIX}/kaffe/lib/kaffe/libmicrosoft.so.0.0; \
+		${MV} ${PREFIX}/kaffe/lib/kaffe/libnet.so \
 			${PREFIX}/kaffe/lib/kaffe/libnet.so.0.0; \
+		${MV} ${PREFIX}/kaffe/lib/kaffe/libsecurity.so \
+			${PREFIX}/kaffe/lib/kaffe/libsecurity.so.0.0; \
 	fi
 
 .include "../../mk/bsd.pkg.mk"

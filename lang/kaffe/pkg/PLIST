@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 1999/08/17 18:09:44 drochner Exp $
+@comment $NetBSD: PLIST,v 1.12 1999/11/10 18:03:26 drochner Exp $
 kaffe/bin/appletviewer
 kaffe/bin/install-jar
 kaffe/bin/jar
@@ -10,14 +10,13 @@ kaffe/bin/javap
 kaffe/bin/jdb
 kaffe/bin/kaffe
 kaffe/bin/kaffeh
+kaffe/bin/kjc
 kaffe/bin/native2ascii
-kaffe/bin/pizza
-kaffe/bin/pizzadoc
-kaffe/bin/report-kaffe-bug
 kaffe/bin/rmic
 kaffe/bin/rmiregistry
 kaffe/bin/serialver
 kaffe/include/kaffe/Arrays.h
+kaffe/include/kaffe/errors.h
 kaffe/include/kaffe/java_lang_Object.h
 kaffe/include/kaffe/java_lang_String.h
 kaffe/include/kaffe/java_lang_Thread.h
@@ -31,35 +30,46 @@ kaffe/include/kaffe/jtypes.h
 kaffe/include/kaffe/native.h
 kaffe/lib/kaffe/libawt.a
 kaffe/lib/kaffe/libawt.la
-kaffe/lib/kaffe/libio-1.0b4.so.0.0
+kaffe/lib/kaffe/libio-1.0.5.so.0.0
 kaffe/lib/kaffe/libio.la
 kaffe/lib/kaffe/libio.so.0.0
-kaffe/lib/kaffe/libmanagement-1.0b4.so.0.0
+kaffe/lib/kaffe/libmanagement-1.0.5.so.0.0
 kaffe/lib/kaffe/libmanagement.la
 kaffe/lib/kaffe/libmanagement.so.0.0
 kaffe/lib/kaffe/libmath.a
 kaffe/lib/kaffe/libmath.la
+kaffe/lib/kaffe/libmicrosoft-1.0.5.so.0.0
+kaffe/lib/kaffe/libmicrosoft.la
+kaffe/lib/kaffe/libmicrosoft.so.0.0
 kaffe/lib/kaffe/libnative.a
 kaffe/lib/kaffe/libnative.la
-kaffe/lib/kaffe/libnet-1.0b4.so.0.0
+kaffe/lib/kaffe/libnet-1.0.5.so.0.0
 kaffe/lib/kaffe/libnet.la
 kaffe/lib/kaffe/libnet.so.0.0
+kaffe/lib/kaffe/libsecurity-1.0.5.so.0.0
+kaffe/lib/kaffe/libsecurity.la
+kaffe/lib/kaffe/libsecurity.so.0.0
 kaffe/lib/kaffe/libzip.a
 kaffe/lib/kaffe/libzip.la
-kaffe/lib/libkaffevm-1.0b4.so.0.0
+kaffe/lib/kaffe/security/java.security
+kaffe/lib/libkaffevm-1.0.5.so.0.0
 kaffe/lib/libkaffevm.la
 kaffe/lib/libkaffevm.so.0.0
 kaffe/libexec/Kaffe
 kaffe/man/man1/kaffe.1
 kaffe/share/kaffe/Klasses.jar
 kaffe/share/kaffe/comm.jar
-kaffe/share/kaffe/pizza.jar
+kaffe/share/kaffe/kjc.jar
+kaffe/share/kaffe/microsoft.jar
 kaffe/share/kaffe/pjava.jar
+kaffe/share/kaffe/rmi.jar
 kaffe/share/kaffe/servlet.jar
+kaffe/share/kaffe/tools.jar
 kaffe/share/license.terms
 @dirrm kaffe/bin
 @dirrm kaffe/include/kaffe
 @dirrm kaffe/include
+@dirrm kaffe/lib/kaffe/security
 @dirrm kaffe/lib/kaffe
 @dirrm kaffe/lib
 @dirrm kaffe/libexec
