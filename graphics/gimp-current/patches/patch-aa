@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2000/07/05 03:39:32 hubertf Exp $
+$NetBSD: patch-aa,v 1.6 2000/11/28 19:32:07 mycroft Exp $
 
---- configure.orig	Thu Jun 22 22:49:05 2000
-+++ configure	Tue Jul  4 04:32:24 2000
+--- configure.orig	Tue Oct 31 04:10:14 2000
++++ configure	Tue Nov 28 18:20:15 2000
 @@ -668,7 +668,7 @@
  # It thinks the first close brace ends the variable substitution.
  test -z "$INSTALL_PROGRAM" && INSTALL_PROGRAM='${INSTALL}'
@@ -48,10 +48,10 @@ $NetBSD: patch-aa,v 1.5 2000/07/05 03:39:32 hubertf Exp $
  
  if test "$GNOME_CONFIG" = "no"; then
      HELPBROWSER=
-@@ -7150,7 +7151,7 @@
- 
- gimpdatadir=$datadir/$PACKAGE/$GIMP_MAJOR_VERSION.$GIMP_MINOR_VERSION
+@@ -7152,7 +7153,7 @@
  gimpplugindir=$libdir/$PACKAGE/$GIMP_MAJOR_VERSION.$GIMP_MINOR_VERSION
+ gimpsysconfdir=$sysconfdir/$PACKAGE/$GIMP_MAJOR_VERSION.$GIMP_MINOR_VERSION
+ 
 -localedir='${prefix}/${DATADIRNAME}/locale'
 +localedir='${prefix}/share/locale'
  
