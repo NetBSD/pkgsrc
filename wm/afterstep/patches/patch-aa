@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:46 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2001/01/25 18:55:07 fredb Exp $
 
---- doc/afterstepdoc.in.orig	Tue Nov 10 10:51:01 1998
-+++ doc/afterstepdoc.in	Tue Dec 29 00:20:54 1998
-@@ -9,9 +9,8 @@
+--- doc/afterstepdoc.in.orig	Mon Jan 10 19:37:03 2000
++++ doc/afterstepdoc.in	Thu Jan 25 12:49:48 2001
+@@ -9,18 +9,15 @@
  # First try standard path, then local, then other possible paths
  #
  
@@ -12,9 +12,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:46 wiz Exp $
 +for netscape in @bindir@/netscape @bindir@/mozilla \
 +       /usr/local/bin/netscape /usr/local/netscape/bin/netscape ; do
     if [ -x $netscape ] ; then
-      $netscape -remote \
-       openurl\(file:///@datadir@/afterstep/doc/afterstep.html\) 2>/dev/null \
-@@ -20,7 +19,7 @@
+-     $netscape -remote \
+-      openurl\(file:///@datadir@/afterstep/doc/afterstep.html\) 2>/dev/null \
+-      || $netscape @datadir@/afterstep/doc/afterstep.html &
++       $netscape @datadir@/afterstep/doc/afterstep.html &
+                exit
     fi
  done
  
