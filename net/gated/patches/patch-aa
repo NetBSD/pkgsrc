@@ -1,0 +1,11 @@
+--- Makefile.orig	Thu Jun 25 17:37:44 1998
++++ Makefile	Thu Jun 25 17:45:38 1998
+@@ -70,7 +70,7 @@
+ #	Makefile for gated root directory
+ #
+ #
+-gated:	src
++all:	src
+ 	(cd src; make)
+ 
+ install:	src man install-man
