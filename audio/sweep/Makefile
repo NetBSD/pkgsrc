@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2003/06/05 20:54:27 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/10 11:12:25 adam Exp $
 #
 
 DISTNAME=	sweep-0.8.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sweep/}
 
@@ -32,7 +32,7 @@ MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS=${EXPORT_SYMBOLS_LDFLAGS}
 .include "../../audio/libvorbis/buildlink2.mk"
 .include "../../audio/libsamplerate/buildlink2.mk"
 .include "../../audio/libsndfile/buildlink2.mk"
-.include "../../audio/mad/buildlink2.mk"
+.include "../../audio/libmad/buildlink2.mk"
 .include "../../audio/speex/buildlink2.mk"
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../databases/tdb/buildlink2.mk"
