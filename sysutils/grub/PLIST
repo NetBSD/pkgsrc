@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/04/11 19:53:25 magick Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/07/20 12:42:36 tron Exp $
 bin/mbchk
 @unexec install-info --delete --info-dir=%D/info %D/info/grub.info
 info/grub.info
@@ -19,6 +19,8 @@ share/grub/${MACHINE_ARCH}-/fat_stage1_5
 share/grub/${MACHINE_ARCH}-/ffs_stage1_5
 share/grub/${MACHINE_ARCH}-/jfs_stage1_5
 share/grub/${MACHINE_ARCH}-/minix_stage1_5
+${NETBOOT}share/grub/${MACHINE_ARCH}-/nbgrub
+${NETBOOT}share/grub/${MACHINE_ARCH}-/pxegrub
 share/grub/${MACHINE_ARCH}-/reiserfs_stage1_5
 share/grub/${MACHINE_ARCH}-/stage1
 share/grub/${MACHINE_ARCH}-/stage2

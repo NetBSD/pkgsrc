@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.70 2002/07/15 16:24:01 schmonz Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.71 2002/07/20 12:42:35 tron Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -564,6 +564,19 @@ GAWK_ENABLE_PORTALS?=	NO
 # Can be enabled to disable russian ID3 tag support
 # Possible: yes, no, not defined
 # Default: not defined (-> Russian support enabled)
+
+#GRUB_NETWORK_CARDS=
+# Compile netboot support for the listed network interface cards into GRUB.
+# Use e.g. "rtl8139" for RealTek 8139 support or "eepro100 epic100" for
+# Intel Etherexpress Pro/100 and SMC EtherPower II support.
+# Default: not defined (-> no netboot support)
+
+#GRUB_SCAN_ARGS=
+# Can be used to supply additional configure arguments for netboot support in
+# GRUB. Set e.g. "GRUB_NETWORK_CARDS" to "ne" and "GRUB_SCAN_ARGS" to
+# "--enable-ne-scan=0x300" to let the boot loader search for an NE 2000 ISA
+# card at I/O offset 0x300.
+# Default: not defined
 
 IMAP_UW_CCLIENT_MBOX_FMT?=	unix
 # Used in imap-uw to set the default format used by c-client programs for
