@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.5 2003/05/22 03:05:40 markd Exp $
+$NetBSD: patch-ak,v 1.6 2003/07/30 14:56:02 markd Exp $
 
---- kmix/Makefile.in.orig	Thu May  8 00:05:28 2003
+--- kmix/Makefile.in.orig	2003-07-15 22:13:58.000000000 +1200
 +++ kmix/Makefile.in
-@@ -379,7 +379,7 @@ SUBDIRS = control pics
+@@ -380,7 +380,7 @@ SUBDIRS = control pics
  INCLUDES = $(all_includes)
  
  bin_PROGRAMS = kmix kmixctrl
@@ -11,7 +11,7 @@ $NetBSD: patch-ak,v 1.5 2003/05/22 03:05:40 markd Exp $
  kde_module_LTLIBRARIES = kmix_panelapplet.la
  
  noinst_HEADERS = kmix.h kmixdockwidget.h kmixprefdlg.h kmixerwidget.h \
-@@ -388,29 +388,37 @@ noinst_HEADERS = kmix.h kmixdockwidget.h
+@@ -389,29 +389,37 @@ noinst_HEADERS = kmix.h kmixdockwidget.h
  
  
  #>- METASOURCES = AUTO
@@ -59,7 +59,7 @@ $NetBSD: patch-ak,v 1.5 2003/05/22 03:05:40 markd Exp $
  kmixctrl_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
  #>- kmix_panelapplet_la_SOURCES = kmixapplet.cpp kmixerwidget.cpp channel.cpp \
-@@ -443,18 +451,11 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -444,18 +452,11 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES) $(lib_LTLIBRARIES)
  
@@ -82,7 +82,7 @@ $NetBSD: patch-ak,v 1.5 2003/05/22 03:05:40 markd Exp $
  kmix_panelapplet_la_DEPENDENCIES =
  am_kmix_panelapplet_la_OBJECTS = kmixapplet.lo kmixerwidget.lo \
  	channel.lo mixer.lo ksmallslider.lo volume.lo kledbutton.lo \
-@@ -467,46 +468,73 @@ kmix_panelapplet_la_nofinal_OBJECTS = km
+@@ -468,46 +469,73 @@ kmix_panelapplet_la_nofinal_OBJECTS = km
  	VerticalText.lo mixdevicewidget.lo mixerIface_skel.lo colorwidget.lo
  @KDE_USE_FINAL_FALSE@kmix_panelapplet_la_OBJECTS = $(kmix_panelapplet_la_nofinal_OBJECTS)
  @KDE_USE_FINAL_TRUE@kmix_panelapplet_la_OBJECTS = $(kmix_panelapplet_la_final_OBJECTS)
@@ -177,7 +177,7 @@ $NetBSD: patch-ak,v 1.5 2003/05/22 03:05:40 markd Exp $
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kmixdockwidget.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kmixerwidget.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kmixprefdlg.Plo \
-@@ -514,9 +542,12 @@ am__depfiles_maybe = depfiles
+@@ -515,9 +543,12 @@ am__depfiles_maybe = depfiles
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/mixdevicewidget.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/mixer.Plo ./$(DEPDIR)/volume.Plo
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/mixerIface_skel.P $(DEPDIR)/colorwidget.P  ./$(DEPDIR)/VerticalText.Plo \
@@ -193,7 +193,7 @@ $NetBSD: patch-ak,v 1.5 2003/05/22 03:05:40 markd Exp $
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kmixdockwidget.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kmixerwidget.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kmixprefdlg.Plo \
-@@ -543,7 +574,9 @@ CXXLD = $(CXX)
+@@ -544,7 +575,9 @@ CXXLD = $(CXX)
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  DIST_SOURCES = $(kmix_la_SOURCES) $(kmix_panelapplet_la_SOURCES) \
@@ -204,7 +204,7 @@ $NetBSD: patch-ak,v 1.5 2003/05/22 03:05:40 markd Exp $
  DATA = $(apps_DATA) $(lnk_DATA) $(rc_DATA) $(services_DATA)
  
  HEADERS = $(noinst_HEADERS)
-@@ -556,7 +589,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+@@ -557,7 +590,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
  	check-recursive installcheck-recursive
  DIST_COMMON = $(noinst_HEADERS) AUTHORS Makefile.am Makefile.in
  DIST_SUBDIRS = $(SUBDIRS)
@@ -213,7 +213,7 @@ $NetBSD: patch-ak,v 1.5 2003/05/22 03:05:40 markd Exp $
  
  #>- all: all-recursive
  #>+ 1
-@@ -638,6 +671,10 @@ kmix.la: $(kmix_la_OBJECTS) $(kmix_la_DE
+@@ -639,6 +672,10 @@ kmix.la: $(kmix_la_OBJECTS) $(kmix_la_DE
  	$(CXXLINK) -rpath $(kde_moduledir) $(kmix_panelapplet_la_LDFLAGS) $(kmix_panelapplet_la_OBJECTS) $(kmix_panelapplet_la_LIBADD) $(LIBS)
  kmixctrl.la: $(kmixctrl_la_OBJECTS) $(kmixctrl_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kmixctrl_la_LDFLAGS) $(kmixctrl_la_OBJECTS) $(kmixctrl_la_LIBADD) $(LIBS)
@@ -224,7 +224,7 @@ $NetBSD: patch-ak,v 1.5 2003/05/22 03:05:40 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -682,11 +719,14 @@ distclean-compile:
+@@ -683,11 +720,14 @@ distclean-compile:
  
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/VerticalText.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/channel.Plo@am__quote@
@@ -240,16 +240,16 @@ $NetBSD: patch-ak,v 1.5 2003/05/22 03:05:40 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kmixdockwidget.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kmixerwidget.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kmixprefdlg.Plo@am__quote@
-@@ -933,7 +973,7 @@ distclean-tags:
+@@ -934,7 +974,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=mixer_hpux.h mixer_irix.h resource.h kmixui.rc kmix-platforms.cpp colorwidget.ui mixer_sun.h mixer_none.cpp mixer_alsa.h mixer_hpux.cpp kmixapplet.desktop mixer_irix.cpp mixer_alsa5.cpp mixer_sun.cpp configure.in.in kmixctrl_restore.desktop mixer_oss.cpp mixer_none.h mixer_alsa9.cpp mixer_oss.h 
-+KDE_DIST=mixer_alsa9.cpp colorwidget.ui kmix-platforms.cpp configure.in.in mixer_hpux.h mixer_irix.h mixer_hpux.cpp kmixui.rc kmixctrl_restore.desktop resource.h mixer_oss.cpp mixer_irix.cpp mixer_sun.h mixer_alsa5.cpp mixer_sun.cpp mixer_none.cpp mixer_none.h mixer_oss.h kmixapplet.desktop mixer_alsa.h 
++KDE_DIST=mixer_alsa9.cpp colorwidget.ui kmix-platforms.cpp configure.in.in mixer_hpux.h mixer_irix.h mixer_hpux.cpp kmixui.rc Makefile.in.rej kmixctrl_restore.desktop resource.h mixer_oss.cpp mixer_irix.cpp mixer_sun.h mixer_alsa5.cpp mixer_sun.cpp mixer_none.cpp mixer_none.h mixer_oss.h kmixapplet.desktop mixer_alsa.h 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -1108,54 +1148,51 @@ $(srcdir)/version.h: VERSION
+@@ -1109,37 +1149,34 @@ $(srcdir)/version.h: VERSION
  
  messages: rc.cpp
  	$(XGETTEXT) *.cpp -o $(podir)/kmix.pot
@@ -262,71 +262,99 @@ $NetBSD: patch-ak,v 1.5 2003/05/22 03:05:40 markd Exp $
  
 -#>+ 5
 -mixerIface.kidl: $(srcdir)/mixerIface.h $(DCOP_DEPENDENCIES)
--	$(DCOPIDL) $(srcdir)/mixerIface.h > mixerIface.kidl || ( rm -f mixerIface.kidl ; /bin/false )
+-	$(DCOPIDL) $(srcdir)/mixerIface.h > mixerIface.kidl || ( rm -f mixerIface.kidl ; false )
 -mixerIface_skel.cpp: mixerIface.kidl
 -	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub mixerIface.kidl
 +#>+ 3
 +kmixdockwidget.moc: $(srcdir)/kmixdockwidget.h
 +	$(MOC) $(srcdir)/kmixdockwidget.h -o kmixdockwidget.moc
  
++#>+ 1
++mocs: kmixdockwidget.moc
  #>+ 3
 -ksmallslider.moc: $(srcdir)/ksmallslider.h
 -	$(MOC) $(srcdir)/ksmallslider.h -o ksmallslider.moc
 +mixdevicewidget.moc: $(srcdir)/mixdevicewidget.h
 +	$(MOC) $(srcdir)/mixdevicewidget.h -o mixdevicewidget.moc
  
+ #>+ 1
+-mocs: ksmallslider.moc
++mocs: mixdevicewidget.moc
  #>+ 3
 -kmixapplet.moc: $(srcdir)/kmixapplet.h
 -	$(MOC) $(srcdir)/kmixapplet.h -o kmixapplet.moc
 +ksmallslider.moc: $(srcdir)/ksmallslider.h
 +	$(MOC) $(srcdir)/ksmallslider.h -o ksmallslider.moc
  
+ #>+ 1
+-mocs: kmixapplet.moc
++mocs: ksmallslider.moc
  #>+ 3
 -kmix.moc: $(srcdir)/kmix.h
 -	$(MOC) $(srcdir)/kmix.h -o kmix.moc
 +kmixprefdlg.moc: $(srcdir)/kmixprefdlg.h
 +	$(MOC) $(srcdir)/kmixprefdlg.h -o kmixprefdlg.moc
  
+ #>+ 1
+-mocs: kmix.moc
++mocs: kmixprefdlg.moc
  #>+ 3
  mixer.moc: $(srcdir)/mixer.h
  	$(MOC) $(srcdir)/mixer.h -o mixer.moc
- 
+@@ -1147,35 +1184,35 @@ mixer.moc: $(srcdir)/mixer.h
+ #>+ 1
+ mocs: mixer.moc
  #>+ 3
 -kmixerwidget.moc: $(srcdir)/kmixerwidget.h
 -	$(MOC) $(srcdir)/kmixerwidget.h -o kmixerwidget.moc
 +kmix.moc: $(srcdir)/kmix.h
 +	$(MOC) $(srcdir)/kmix.h -o kmix.moc
  
+ #>+ 1
+-mocs: kmixerwidget.moc
++mocs: kmix.moc
  #>+ 3
 -kledbutton.moc: $(srcdir)/kledbutton.h
 -	$(MOC) $(srcdir)/kledbutton.h -o kledbutton.moc
 +kmixapplet.moc: $(srcdir)/kmixapplet.h
 +	$(MOC) $(srcdir)/kmixapplet.h -o kmixapplet.moc
  
+ #>+ 1
+-mocs: kledbutton.moc
++mocs: kmixapplet.moc
  #>+ 3
 -kmixdockwidget.moc: $(srcdir)/kmixdockwidget.h
 -	$(MOC) $(srcdir)/kmixdockwidget.h -o kmixdockwidget.moc
 +kledbutton.moc: $(srcdir)/kledbutton.h
 +	$(MOC) $(srcdir)/kledbutton.h -o kledbutton.moc
  
+ #>+ 1
+-mocs: kmixdockwidget.moc
++mocs: kledbutton.moc
  #>+ 3
 -mixdevicewidget.moc: $(srcdir)/mixdevicewidget.h
 -	$(MOC) $(srcdir)/mixdevicewidget.h -o mixdevicewidget.moc
 +kmixerwidget.moc: $(srcdir)/kmixerwidget.h
 +	$(MOC) $(srcdir)/kmixerwidget.h -o kmixerwidget.moc
  
+ #>+ 1
+-mocs: mixdevicewidget.moc
 -#>+ 3
 -kmixprefdlg.moc: $(srcdir)/kmixprefdlg.h
 -	$(MOC) $(srcdir)/kmixprefdlg.h -o kmixprefdlg.moc
++mocs: kmixerwidget.moc
 +#>+ 5
 +mixerIface.kidl: $(srcdir)/mixerIface.h $(DCOP_DEPENDENCIES)
-+	$(DCOPIDL) $(srcdir)/mixerIface.h > mixerIface.kidl || ( rm -f mixerIface.kidl ; /bin/false )
++	$(DCOPIDL) $(srcdir)/mixerIface.h > mixerIface.kidl || ( rm -f mixerIface.kidl ; false )
 +mixerIface_skel.cpp: mixerIface.kidl
 +	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub mixerIface.kidl
  
+-#>+ 1
+-mocs: kmixprefdlg.moc
  #>+ 8
  kmix_panelapplet.la.closure: $(kmix_panelapplet_la_OBJECTS) $(kmix_panelapplet_la_DEPENDENCIES)
-@@ -1183,7 +1220,7 @@ colorwidget.moc: colorwidget.h
+ 	@echo "int main() {return 0;}" > kmix_panelapplet_la_closure.cpp
+@@ -1202,7 +1239,7 @@ colorwidget.moc: colorwidget.h
  
  #>+ 3
  clean-metasources:
@@ -335,7 +363,7 @@ $NetBSD: patch-ak,v 1.5 2003/05/22 03:05:40 markd Exp $
  
  #>+ 6
  clean-idl:
-@@ -1212,19 +1249,7 @@ force-reedit:
+@@ -1231,19 +1268,7 @@ force-reedit:
  
  
  #>+ 11
@@ -356,7 +384,7 @@ $NetBSD: patch-ak,v 1.5 2003/05/22 03:05:40 markd Exp $
  	@echo 'creating kmix_panelapplet_la.all_cpp.cpp ...'; \
  	rm -f kmix_panelapplet_la.all_cpp.files kmix_panelapplet_la.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> kmix_panelapplet_la.all_cpp.final; \
-@@ -1236,33 +1261,45 @@ kmix_panelapplet_la.all_cpp.cpp: $(srcdi
+@@ -1255,33 +1280,45 @@ kmix_panelapplet_la.all_cpp.cpp: $(srcdi
  	rm -f kmix_panelapplet_la.all_cpp.final kmix_panelapplet_la.all_cpp.files
  
  #>+ 11
@@ -415,7 +443,7 @@ $NetBSD: patch-ak,v 1.5 2003/05/22 03:05:40 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -1272,30 +1309,30 @@ kde-rpo-clean:
+@@ -1291,30 +1328,30 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 28
