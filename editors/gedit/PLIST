@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2005/03/22 16:30:57 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.17 2005/03/27 12:29:24 jmmv Exp $
 bin/gedit
 bin/gnome-text-editor
 include/gedit-2.10/gedit/bonobo-mdi-child.h
@@ -196,6 +196,7 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gedit.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gedit.mo
 share/mime-info/gedit.keys
