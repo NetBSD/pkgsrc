@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:29:06 agc Exp $
+$NetBSD: distinfo,v 1.2.6.1 2003/06/19 01:10:44 grant Exp $
 
 SHA1 (mtools-3.9.7.tar.gz) = b54f8a7041854edb5c17b116b3d77e4d088aedfb
 Size (mtools-3.9.7.tar.gz) = 282769 bytes
-SHA1 (patch-aa) = f8e023ba9a6e31f26815b93b73c4e9315b6bbc0e
-SHA1 (patch-ab) = 3cbc521521f4584ef3aeda8ae5bd913b393cb710
+SHA1 (patch-aa) = 9effa09b809b1dc0dce231ea261785d52b51bf0d
+SHA1 (patch-ab) = 7549dceacff03ad9116bb45fd30e60088cf8fa93
 SHA1 (patch-ac) = 3b807b102f832095cb0e7734393655f99a205897
+SHA1 (patch-ad) = 4165cf8850f4e2d8e5d610133f2d776b7f2ccb90
 SHA1 (patch-af) = 0e2e1037be4da5f7c876cb5c9f54950e4726f6d0
