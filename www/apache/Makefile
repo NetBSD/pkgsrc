@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 1999/07/23 18:20:04 itojun Exp $
+# $NetBSD: Makefile,v 1.37 1999/08/18 08:29:10 agc Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -53,6 +53,8 @@ CFLAGS+=		-O6 -fomit-frame-pointer -fexpensive-optimizations
 .endif
 
 PLIST_SRC=		${WRKDIR}/PLIST
+
+BUILD_DEFS+=		APACHE_PERF_TUNING APACHE_SUEXEC 
 
 # Note that there is NO static compile module hook here.  This is intentional.
 # Under Apache 1.3, modules can be compiled to link dynamically to the server

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1999/03/14 15:07:20 tron Exp $
+# $NetBSD: Makefile,v 1.20 1999/08/18 08:31:13 agc Exp $
 
 DISTNAME=	knews-1.0b.1
 PKGNAME=	knews-1.0b1
@@ -16,6 +16,8 @@ DEPENDS+=	xpm-3.4k:../../graphics/xpm
 CONFLICTS=	knews-1.0b0
 
 USE_IMAKE=	yes
+
+BUILD_DEFS+=	DOMAIN_NAME
 
 .include "../../mk/bsd.prefs.mk"
 
