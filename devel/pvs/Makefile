@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/03/31 20:49:36 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/25 21:01:35 seb Exp $
 #
 
 DISTNAME=		pvs-${VERSION}
@@ -24,6 +24,9 @@ NO_BUILD=		# defined
 CHECK_SHLIBS=		NO
 SHLIB_HANDLING=		NO
 USE_BUILDLINK2=		YES
+USE_NEW_TEXINFO=	YES
+INFO_DIR=		pvs/doc/release-notes
+INFO_FILES=		pvs-release-notes.info
 
 LICENSE=        	pvs-license
 # not quite sure about this, but to be on the safe side:
@@ -52,6 +55,7 @@ post-patch:
 		${WRKSRC}/pvs.tmp
 	${MV} ${WRKSRC}/pvs.tmp ${WRKSRC}/pvs
 	${RM} ${WRKSRC}/pvs.orig
+	${RM} ${WRKSRC}/doc/release-notes/pvs-release-notes.info.orig
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pvs ${PREFIX}/bin/pvs
@@ -61,5 +65,4 @@ do-install:
 
 .include "../../x11/tk/buildlink2.mk"
 .include "../../mk/emacs.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
