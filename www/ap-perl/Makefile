@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/05/01 00:42:29 tv Exp $
+# $NetBSD: Makefile,v 1.6 1999/05/04 20:16:35 tv Exp $
 #
 
 DISTNAME=       	mod_perl-1.19
@@ -22,13 +22,5 @@ do-configure:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/htdocs/manual/mod/mod_perl.html \
 		${PREFIX}/share/httpd/htdocs/manual/mod/
-.if exists(/usr/libexec/ld.elf_so)
-	${SED}	-e 's,@@MACHINE_ARCH@@,${MACHINE_ARCH},' \
-		-e 's,@@PERL_EXT@@,,' ${FILESDIR}/httpd.conf.add >${WRKSRC}/httpd.conf.add
-.else
-	${SED}	-e 's,@@MACHINE_ARCH@@,${MACHINE_ARCH},' \
-		-e 's,@@PERL_EXT@@,.4.4,' ${FILESDIR}/httpd.conf.add >${WRKSRC}/httpd.conf.add
-.endif
-	${INSTALL_DATA} ${WRKSRC}/httpd.conf.add ${PREFIX}/etc/httpd/httpd.conf.modperl
 
 .include "../../mk/bsd.pkg.mk"
