@@ -1,3 +1,5 @@
+$NetBSD: patch-ao,v 1.2 1999/10/01 07:49:21 simonb Exp $
+
 diff -ur ../faces-DIST/mon.c ./mon.c
 --- ../faces-DIST/mon.c	Tue Nov 19 15:00:48 1991
 +++ ./mon.c	Fri Oct  1 14:32:18 1999

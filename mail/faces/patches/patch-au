@@ -1,3 +1,5 @@
+$NetBSD: patch-au,v 1.2 1999/10/01 07:49:21 simonb Exp $
+
 diff -ur ../faces-DIST/y.tab.h ./y.tab.h
 --- ../faces-DIST/y.tab.h	Fri Oct  1 14:36:35 1999
 +++ ./y.tab.h	Fri Oct  1 14:32:03 1999

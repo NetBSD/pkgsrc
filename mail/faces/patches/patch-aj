@@ -1,3 +1,5 @@
+$NetBSD: patch-aj,v 1.2 1999/10/01 07:49:20 simonb Exp $
+
 diff -ur ../faces-DIST/filters/Makefile ./filters/Makefile
 --- ../faces-DIST/filters/Makefile	Thu Oct 24 12:26:14 1991
 +++ ./filters/Makefile	Fri Oct  1 14:32:09 1999

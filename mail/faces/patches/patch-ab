@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.4 1999/10/01 07:49:19 simonb Exp $
+
 diff -ur ../faces-DIST/Makefile ./Makefile
 --- ../faces-DIST/Makefile	Fri Oct  1 14:36:38 1999
 +++ ./Makefile	Fri Oct  1 14:32:03 1999
