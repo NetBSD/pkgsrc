@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2004/01/05 22:11:15 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/20 23:47:23 hubertf Exp $
 
-DISTNAME=	spamprobe-0.9e
+DISTNAME=	spamprobe-0.9g2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=spamprobe/}
 
@@ -13,6 +13,7 @@ PKG_INSTALLATION_TYPES= overwrite pkgviews
 USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
+CONFIGURE_ARGS+= --enable-default-8bit
 CONFIGURE_ARGS+= --with-db=${BUILDLINK_PREFIX.db4}/include/db4
 
 .include "../../databases/db4/buildlink3.mk"
