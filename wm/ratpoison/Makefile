@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2002/10/25 13:16:18 agc Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/12 01:37:55 zuntum Exp $
 #
 
-DISTNAME=	ratpoison-1.1.1
+DISTNAME=	ratpoison-1.2.2
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ratpoison/}
 
@@ -13,5 +13,7 @@ USE_BUILDLINK2=	YES
 USE_X11=	YES
 GNU_CONFIGURE=	YES
 
-.include "../../mk/texinfo.mk"
+USE_NEW_TEXINFO=YES
+INFO_FILES=	ratpoison.info
+
 .include "../../mk/bsd.pkg.mk"
