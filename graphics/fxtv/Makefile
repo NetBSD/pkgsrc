@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/05/09 08:32:09 tron Exp $
+# $NetBSD: Makefile,v 1.4 2000/05/14 20:04:13 kim Exp $
 
 DISTNAME=	fxtv-1.02
 CATEGORIES=	graphics
@@ -20,6 +20,10 @@ USE_X11BASE=	yes
 .include "../../mk/bsd.prefs.mk"
 
 XAW_TYPE?=	3d
+
+# The purpose of this check is to make sure that there is a "Xaw3d"
+# compatible widget set installed because normal "Xaw" won't work.
+
 .if (${XAW_TYPE} == standard)
 DEPENDS+=	Xaw3d-1.5:../../x11/Xaw3d
 .endif
