@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/07/14 21:33:11 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2004/07/14 21:43:48 jlam Exp $
 
 PKGNAME=	courier-authpgsql-${BASE_VERS}
 COMMENT=	Courier PostgreSQL authentication module
@@ -31,13 +31,19 @@ post-build:
 		-e "s,MYSQL,PGSQL,g"					\
 		-e "s,MySQL,PostgreSQL,g"				\
 		README.authmysql.html > README.authpgsql.html
+	for file in README.authpostgres.html; do			\
+		${SED}	-e "s,mysql,pgsql,g"				\
+			$$file > $$file.new;				\
+		${MV} -f $$file.new $$file;				\
+	done
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${AUTHLIBDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/authlib/authdaemond.pgsql ${AUTHLIBDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/authlib/authpgsqlrc ${EGDIR}/authpgsqlrc.dist
-	${INSTALL_DATA_DIR} ${HTMLDIR}
-	${INSTALL_DATA} ${WRKSRC}/authlib/README.authpgsql.html ${HTMLDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/authlib/README.authpgsql.html ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/authlib/README.authpostgres.html ${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
