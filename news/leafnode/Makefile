@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/05/05 15:25:40 cjep Exp $
+# $NetBSD: Makefile,v 1.18 2004/05/23 16:01:49 jschauma Exp $
 
 DISTNAME=		leafnode-1.9.52.rel
 PKGNAME=		${DISTNAME:S/.rel//}
@@ -20,11 +20,11 @@ LEAFNODE_SPOOL?=	/var/spool/leafnode
 LEAFNODE_LOCKDIR?=	/var/spool/lock/leafnode
 LEAFNODE_CONFDIR?=	${PKG_SYSCONFDIR}/leafnode
 
-# Use news login and be compatible with inn package
+# Default data dir, login and group are the same as used by inn
 #
-BUILD_DEFS+=		INN_DATA_DIR
-PKG_USERS=		news:news::Internet\\ News:${INN_DATA_DIR}:${SH}
-PKG_GROUPS=		news
+BUILD_DEFS+=		LEAFNODE_DATA_DIR LEAFNODE_GROUP LEAFNODE_USER
+PKG_USERS=		${LEAFNODE_USER}:${LEAFNODE_GROUP}::Internet\\ News:${LEAFNODE_DATA_DIR}:${SH}
+PKG_GROUPS=		${LEAFNODE_GROUP}
 LEAFNODE_HOME?=		${INN_DATA_DIR}
 
 FILES_SUBST+=	LEAFNODE_SPOOL=${LEAFNODE_SPOOL}
@@ -37,6 +37,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-spooldir=${LEAFNODE_SPOOL}
 CONFIGURE_ARGS+=	--with-lockfile=${LEAFNODE_LOCKDIR}/fetchnews.lck
 CONFIGURE_ARGS+=	--sysconfdir=${LEAFNODE_CONFDIR}
+CONFIGURE_ARGS+=	--with-user=${LEAFNODE_USER}
+CONFIGURE_ARGS+=	--with-group=${LEAFNODE_GROUP}
 USE_GNU_TOOLS+=		make
 
 .include "../../mk/bsd.prefs.mk"
