@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/10/12 09:21:15 agc Exp $
-bin/id3
-man/man1/id3.1

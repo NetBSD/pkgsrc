@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2001/08/02 17:48:14 drochner Exp $
-bin/mp3check
-man/man1/mp3check.1

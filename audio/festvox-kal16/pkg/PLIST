@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2001/07/18 15:19:42 wiz Exp $
-share/festival/lib/voices/english/kal_diphone/COPYING
-share/festival/lib/voices/english/kal_diphone/group/kallpc16k.group
-@dirrm share/festival/lib/voices/english/kal_diphone/group
-share/festival/lib/voices/english/kal_diphone/festvox/kal_diphone.scm
-share/festival/lib/voices/english/kal_diphone/festvox/kaldurtreeZ.scm
-@dirrm share/festival/lib/voices/english/kal_diphone/festvox
-@dirrm share/festival/lib/voices/english/kal_diphone

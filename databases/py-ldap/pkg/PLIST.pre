@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.pre,v 1.1.1.1 2000/10/25 19:34:29 tsarna Exp $
-lib/python2.0/site-packages/ldap.pth

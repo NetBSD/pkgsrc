@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/10/16 16:20:08 jlam Exp $
-bin/sqlite
-include/sqlite.h
-lib/libsqlite.a
-lib/libsqlite.la
-lib/libsqlite.so
-lib/libsqlite.so.0
-lib/libsqlite.so.0.0

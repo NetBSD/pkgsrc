@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:12:45 zuntum Exp $
+${PYTHON_LIBDIR}/site-packages/_pgmodule.so
+${PYTHON_LIBDIR}/pg.py
+${PYTHON_LIBDIR}/pg.pyc
+${PYTHON_LIBDIR}/pg.pyo
+${PYTHON_LIBDIR}/pgdb.py
+${PYTHON_LIBDIR}/pgdb.pyc
+${PYTHON_LIBDIR}/pgdb.pyo
+share/doc/py-postgresql/README
+share/doc/py-postgresql/tutorial/advanced.py
+share/doc/py-postgresql/tutorial/basics.py
+share/doc/py-postgresql/tutorial/func.py
+share/doc/py-postgresql/tutorial/syscat.py
+@dirrm share/doc/py-postgresql/tutorial
+@dirrm share/doc/py-postgresql

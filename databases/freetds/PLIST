@@ -1,0 +1,36 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:11:39 zuntum Exp $
+freetds/include/bkpublic.h
+freetds/include/common.h
+freetds/include/cspublic.h
+freetds/include/cstypes.h
+freetds/include/ctlib.h
+freetds/include/ctpublic.h
+freetds/include/dblib.h
+freetds/include/sqldb.h
+freetds/include/sqlfront.h
+freetds/include/sybdb.h
+freetds/include/syberror.h
+freetds/include/sybfront.h
+freetds/include/tds.h
+freetds/include/tdsconvert.h
+freetds/include/tdsutil.h
+freetds/include/tdsver.h
+freetds/interfaces
+freetds/lib/libct.a
+freetds/lib/libct.la
+freetds/lib/libct.so
+freetds/lib/libct.so.0
+freetds/lib/libct.so.0.0
+freetds/lib/libsybdb.a
+freetds/lib/libsybdb.la
+freetds/lib/libsybdb.so
+freetds/lib/libsybdb.so.0
+freetds/lib/libsybdb.so.0.0
+freetds/lib/libtds.a
+freetds/lib/libtds.la
+freetds/lib/libtds.so
+freetds/lib/libtds.so.0
+freetds/lib/libtds.so.0.0
+@dirrm freetds/lib
+@dirrm freetds/include
+@dirrm freetds

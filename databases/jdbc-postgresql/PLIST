@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:11:48 zuntum Exp $
+lib/java/postgresql.jar
+share/examples/java/jdbc-postgresql/ImageViewer.java
+share/examples/java/jdbc-postgresql/Unicode.java
+share/examples/java/jdbc-postgresql/basic.java
+share/examples/java/jdbc-postgresql/blobtest.java
+share/examples/java/jdbc-postgresql/datestyle.java
+share/examples/java/jdbc-postgresql/metadata.java
+share/examples/java/jdbc-postgresql/psql.java
+share/examples/java/jdbc-postgresql/threadsafe.java
+share/doc/java/jdbc-postgresql/CHANGELOG
+share/doc/java/jdbc-postgresql/Implementation
+share/doc/java/jdbc-postgresql/README
+@dirrm share/examples/java/jdbc-postgresql/
+@dirrm share/doc/java/jdbc-postgresql/

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1997/11/06 09:57:40 agc Exp $
-bin/amp
-man/man1/amp.1.gz

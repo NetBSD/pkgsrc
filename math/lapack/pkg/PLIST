@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2001/04/01 15:53:14 dmcmahill Exp $
-lib/liblapack.a

@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:15:38 zuntum Exp $
+bin/dap
+share/doc/dap/COPYING
+share/doc/dap/README
+share/doc/dap/TODO
+@dirrm share/doc/dap

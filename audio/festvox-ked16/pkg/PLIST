@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2001/07/18 15:19:43 wiz Exp $
-share/festival/lib/voices/english/ked_diphone/COPYING
-share/festival/lib/voices/english/ked_diphone/group/kedlpc16k.group
-@dirrm share/festival/lib/voices/english/ked_diphone/group
-share/festival/lib/voices/english/ked_diphone/festvox/ked_diphone.scm
-share/festival/lib/voices/english/ked_diphone/festvox/kddurtreeZ.scm
-@dirrm share/festival/lib/voices/english/ked_diphone/festvox
-@dirrm share/festival/lib/voices/english/ked_diphone
