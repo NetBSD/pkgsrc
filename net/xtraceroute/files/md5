@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.1.1.1 1999/01/20 02:03:40 hubertf Exp $
+$NetBSD: md5,v 1.2 1999/03/02 22:06:02 hubertf Exp $
 
-MD5 (xtraceroute-0.8.12.tar.gz) = c52bb6937c9455ccd550a35923f48f42
-MD5 (ndg_files.tar.gz) = 7e709d671ec8ad6bbb8cf64e74fa4bbc
+MD5 (xtraceroute-0.8.14.tar.gz) = c4f16fecae49b8bfa2a9bc9b036aa442
+MD5 (ndg_files.tar.gz) = 0e2d6ab6a780b49acbd8f706840380d9
