@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.16 1998/02/02 08:58:13 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.17 1998/02/08 18:15:08 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -615,7 +615,7 @@ package Makefile:
 pre-configure:
         for f in `find ${WRKDIR} -type f -print|xargs grep -l '/usr/local'`; do
 \
-                ${SED} -e 's:/usr/local:'${PREFIX}':g' < $$f > $$f.pdone && mv $
+                ${SED} -e 's:/usr/local:'${PREFIX}':g' < $$f > $$f.pdone && ${MV} $
 $f.pdone $$f; \
         done
 
@@ -1226,7 +1226,7 @@ Layout for precompiled binary packages on ftp.netbsd.org:
 To create:
  - cd /usr/pkgsrc ; make install ; make package
  - upload /usr/pkgsrc/packages to
-   ftp://ftp.netbsd.org/pub/NetBSD/packages/`sysctl -n hw.machine_arch`
+   ftp://ftp.netbsd.org/pub/NetBSD/packages/`uname -r`/`sysctl -n hw.machine_arch`
  - if necessary ln -s `sysctl -n hw.machine` `sysctl -n hw.machine_arch`
 
 Disk space needed: unknown.
