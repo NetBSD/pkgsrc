@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2003/05/02 11:54:38 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/15 09:23:29 adam Exp $
 
-DISTNAME=	libsigc++-1.2.3
-PKGREVISION=	1
+DISTNAME=	libsigc++-1.2.5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libsigc/}
 
 MAINTAINER=	bsieker@freenet.de
 HOMEPAGE=	http://libsigc.sourceforge.net/
-COMMENT=	type-safe callback system for C++ programs
+COMMENT=	Type-safe callback system for C++ programs
 
 BUILD_DEPENDS=		m4>=1.4:../../devel/m4
 
