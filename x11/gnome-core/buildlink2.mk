@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.4 2002/09/23 19:57:31 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2002/12/24 06:10:30 wiz Exp $
 
 .if !defined(GNOME_CORE_BUILDLINK2_MK)
 GNOME_CORE_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gnome-core
-BUILDLINK_DEPENDS.gnome-core?=		gnome-core>=1.4.0.6nb1
+BUILDLINK_DEPENDS.gnome-core?=		gnome-core>=1.4.2nb1
 BUILDLINK_PKGSRCDIR.gnome-core?=	../../x11/gnome-core
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.gnome-core=gnome-core

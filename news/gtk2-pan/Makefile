@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2002/10/31 17:57:38 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/12/24 06:10:20 wiz Exp $
 #
 
 DISTNAME=		pan-0.13.1
+PKGREVISION=		1
 CATEGORIES=		news
 MASTER_SITES=		http://pan.rebelbase.com/download/releases/${DISTNAME:C/pan-//}/SOURCE/
 EXTRACT_SUFX=		.tar.bz2

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/12/18 19:26:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2002/12/24 06:09:58 wiz Exp $
 #
 
 DISTNAME=		gedit-2.0.6
+PKGREVISION=		1
 CATEGORIES=		editors gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gedit/2.0/}
 EXTRACT_SUFX=		.tar.bz2

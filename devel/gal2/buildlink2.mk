@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2002/11/02 05:45:30 rh Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/12/24 06:09:53 wiz Exp $
 #
 # This Makefile fragment is included by packages that use gal2.
 #
@@ -9,7 +9,7 @@
 GAL2_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gal2
-BUILDLINK_DEPENDS.gal2?=		gal2>=0.0.7
+BUILDLINK_DEPENDS.gal2?=		gal2>=0.0.7nb1
 BUILDLINK_PKGSRCDIR.gal2?=		../../devel/gal2
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gal2=gal2
