@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5833 2004/05/06 10:05:23 recht Exp $
+$NetBSD: CHANGES,v 1.5834 2004/05/06 10:09:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2369,3 +2369,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ion to 20040407 [cube 2004-05-06]
 	Updated metacity to 2.8.1 [jmmv 2004-05-06]
 	Updated evolution to 1.4.6 [recht 2004-05-06]
+	Updated kanjidic to 20040311 [wiz 2004-05-06]
+	Updated kanjidic2 to 2004.1 [wiz 2004-05-06]
