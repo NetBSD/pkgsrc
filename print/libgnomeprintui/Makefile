@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2004/02/14 17:21:50 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2004/04/01 18:29:40 jmmv Exp $
 #
 
-DISTNAME=	libgnomeprintui-2.4.2
-PKGREVISION=	2
+DISTNAME=	libgnomeprintui-2.6.0
 CATEGORIES=	print gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeprintui/2.4/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeprintui/2.6/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -31,6 +30,7 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
