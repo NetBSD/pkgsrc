@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/07/04 19:37:38 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/07/07 06:47:24 simonb Exp $
 #
 
 DISTNAME=	bins-1.1.10
@@ -33,6 +33,9 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bins_edit ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/doc/bins.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/bins_edit.1 ${PREFIX}/man/man1
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/bins
+	${INSTALL_DATA} ${WRKSRC}/doc/*.html \
+		${PREFIX}/share/doc/html/bins
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.default
 	${INSTALL_DATA} ${WRKSRC}/templates/*.html \
 		${PREFIX}/share/examples/bins/templates.default
