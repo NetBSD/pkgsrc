@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/02/04 01:00:23 schmonz Exp $
+# $NetBSD: Makefile,v 1.8 2005/02/16 18:44:36 schmonz Exp $
 #
 
 DISTNAME=		memtester-4.0.4
@@ -6,7 +6,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		${HOMEPAGE}
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://www.qcc.ca/~charlesc/software/memtester/
+HOMEPAGE=		http://pyropus.ca/software/memtester/
 COMMENT=		Utility for testing the memory subsystem for faults
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
