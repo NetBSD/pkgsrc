@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/07/17 22:51:31 grant Exp $
+# $NetBSD: Makefile,v 1.19 2004/01/11 19:41:39 cjep Exp $
 #
 
 DISTNAME=	openh323_1.10.4
@@ -39,7 +39,7 @@ do-install:
 		cd ${WRKSRC}/src; ${MAKE_ENV} ${GMAKE} install
 		${INSTALL_DATA_DIR} ${PREFIX}/include/openh323
 		cd ${WRKSRC}/include;				\
-                 for f in \*.h ; \
+		for f in \*.h ; \
 			do ${INSTALL_DATA} $$f ${PREFIX}/include/openh323; done
 		cd ${WRKSRC}/samples/simple; ${MAKE_ENV} ${GMAKE} install
 		-${INSTALL_DATA_DIR} ${PREFIX}/share/openh323
