@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/16 14:28:34 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/04 23:35:47 dmcmahill Exp $
 #
 
 DISTNAME=		zoom-1.0.1
@@ -22,6 +22,11 @@ GNU_CONFIGURE=		yes
 USE_X11=		yes
 USE_GMAKE=		yes
 USE_PERL5=		build
+
+.if ${MACHINE_ARCH} == "alpha"
+GCC_REQD=               3.0
+.endif
+UNLIMIT_RESOURCES+=	datasize
 
 DOCDIR=			${LOCALBASE}/share/doc/html/zoom
 post-install:
