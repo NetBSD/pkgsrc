@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.7 2002/09/23 10:10:51 jlam Exp $
+$NetBSD: distinfo,v 1.7.2.1 2003/03/05 14:10:58 agc Exp $
 
-SHA1 (nethack-340.tgz) = db480f5bf94372a8f87ee4d081f83efd99b31523
-Size (nethack-340.tgz) = 3270905 bytes
-SHA1 (patch-aa) = 8d1de91f7bbf5bbd13c882bf8c35c07ba44b3738
-SHA1 (patch-ab) = 3c4fd5e4d9e1bdf685cfafaba74ee158f6d52072
-SHA1 (patch-ac) = 3a88954c950854350938fbec1fef195baaacb2cf
+SHA1 (nethack-341.tgz) = 91eec5d20fb0fe676f92e1149e3b0360470aef77
+Size (nethack-341.tgz) = 3492419 bytes
+SHA1 (patch-aa) = 599c00a5499d8e5eb2910e6953ab5d5c14e22080
+SHA1 (patch-ab) = fa217d8540a550d669a9037c5861ac4d685941ee
+SHA1 (patch-ac) = a2a23324ec9859962064c9f520cad27439442a77
 SHA1 (patch-ae) = b6d0cca1e3d781a2a1f1d4b244e944eaedfec716
 SHA1 (patch-af) = 20c37fd62b05121d834d3c42cf3aa48b018b362d
 SHA1 (patch-ag) = 6aeae6bde079b9c9081f6e32523687010c9bc674
-SHA1 (patch-ah) = 9cb29ef166fefa5672cad337e00fc960b46140eb
+SHA1 (patch-ah) = 516081212db55bbead164264e8bdad25f93ffa7c

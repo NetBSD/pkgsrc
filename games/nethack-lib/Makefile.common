@@ -1,13 +1,14 @@
-# $NetBSD: Makefile.common,v 1.7 2002/03/25 20:32:25 pooka Exp $
+# $NetBSD: Makefile.common,v 1.7.6.1 2003/03/05 14:10:51 agc Exp $
 #
 
-NETHACK_BASEVER=	3.4.0
-NETHACK_VERSION=	${NETHACK_BASEVER}nb1
-NETHACK_DISTVER=	340
+NETHACK_BASEVER=	3.4.1
+NETHACK_VERSION=	${NETHACK_BASEVER}
+NETHACK_DISTVER=	341
+NETHACK_DIR=		nethackdir340
 
 DISTNAME=		nethack-${NETHACK_DISTVER}
 CATEGORIES=		games
-MASTER_SITES=		ftp://ftp.nethack.org/pub/nethack/nh340/src/
+MASTER_SITES=		ftp://ftp.nethack.org/pub/nethack/nh${NETHACK_DISTVER}/src/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pooka@netbsd.org

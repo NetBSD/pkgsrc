@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2002/09/20 21:24:48 jlam Exp $
+# $NetBSD: Makefile,v 1.34.2.1 2003/03/05 14:10:55 agc Exp $
 #
 
 .include		"../nethack-lib/Makefile.common"
@@ -21,8 +21,7 @@ ALLFILES=		${DISTFILES}	# don't checksum shared patches
 
 post-install:
 	@${CP} -f ${WRKSRC}/dat/x11tiles ${WRKSRC}/dat/tiles.xpm
-	@${INSTALL_DATA} ${WRKSRC}/dat/tiles.xpm			\
-	    ${PREFIX}/share/nethackdir${NETHACK_DISTVER}
+	@${INSTALL_DATA} ${WRKSRC}/dat/tiles.xpm ${PREFIX}/share/${NETHACK_DIR}
 
 .include "../../graphics/xpm/buildlink2.mk"
 .include "../../x11/qt2-libs/buildlink2.mk"

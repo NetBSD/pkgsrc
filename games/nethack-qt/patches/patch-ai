@@ -1,13 +1,13 @@
-$NetBSD: patch-ai,v 1.1 2002/03/22 17:26:27 pooka Exp $
+$NetBSD: patch-ai,v 1.1.6.1 2003/03/05 14:10:57 agc Exp $
 
---- win/Qt/qt_win.cpp.orig	Sat Jul 22 03:59:19 2000
-+++ win/Qt/qt_win.cpp	Thu Aug 10 19:59:49 2000
-@@ -3448,7 +3448,7 @@
+--- win/Qt/qt_win.cpp.orig	2003-02-23 16:43:45.000000000 +0200
++++ win/Qt/qt_win.cpp	2003-03-01 22:37:46.000000000 +0200
+@@ -4278,7 +4278,7 @@
  
  NetHackQtGlyphs::NetHackQtGlyphs()
  {
--    const char* tile_file = "x11tiles";
+-    const char* tile_file = "nhtiles.bmp";
 +    const char* tile_file = "tiles.xpm";
+     if ( iflags.wc_tile_file )
+ 	tile_file = iflags.wc_tile_file;
  
-     int tw = TILEWBASE;
-     int th = TILEHBASE;
