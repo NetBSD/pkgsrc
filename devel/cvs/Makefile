@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 1999/01/18 21:11:47 bad Exp $
+# $NetBSD: Makefile,v 1.18 1999/01/19 01:04:44 tv Exp $
 #
 
 DISTNAME=       cvs-1.10
-PKGNAME=	cvs-1.10-nb1
 CATEGORIES=	devel
 MASTER_SITES=   ftp://download.cyclic.com/pub/${DISTNAME}/
 
