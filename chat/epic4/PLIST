@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/12/07 15:32:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/04/04 08:56:54 wiz Exp $
 bin/epic
 bin/epic-EPIC4-${PKGVERSION}
 libexec/wserv4
@@ -40,6 +40,7 @@ share/epic/script/genalias
 share/epic/script/global
 share/epic/script/grep
 share/epic/script/guh
+share/epic/script/help
 share/epic/script/hold_mode
 share/epic/script/hybrid6
 share/epic/script/imap
@@ -58,6 +59,7 @@ share/epic/script/mail
 share/epic/script/man
 share/epic/script/map
 share/epic/script/meta
+share/epic/script/meta-compat
 share/epic/script/mkpdir
 share/epic/script/more
 share/epic/script/motd
@@ -95,6 +97,7 @@ share/epic/script/tabkey.th
 share/epic/script/tc
 share/epic/script/time
 share/epic/script/tls
+share/epic/script/urlgrab
 share/epic/script/utime
 share/epic/script/vi-binds
 share/epic/script/webster

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2005/02/23 15:59:11 agc Exp $
+$NetBSD: distinfo,v 1.9 2005/04/04 08:56:54 wiz Exp $
 
-SHA1 (epic4-1.2.1.tar.bz2) = cfa83293d1c02490975cff746c9f422d1d700cec
-RMD160 (epic4-1.2.1.tar.bz2) = d028b80de0d0f6c1fb07ea986b4eab463622f7e0
-Size (epic4-1.2.1.tar.bz2) = 614937 bytes
+SHA1 (epic4-2.2.tar.bz2) = 88d4140e693b571ceb8148f98d504a5fefa74076
+RMD160 (epic4-2.2.tar.bz2) = 8f1f1b446bd3260e665093864f1becc0b625be32
+Size (epic4-2.2.tar.bz2) = 623254 bytes
