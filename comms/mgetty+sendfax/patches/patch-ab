@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.3 1998/11/16 02:49:48 tron Exp $
+$NetBSD: patch-ab,v 1.4 1999/08/23 21:04:34 tron Exp $
 
---- Makefile.orig	Sun Jul  5 23:24:36 1998
-+++ Makefile	Mon Nov 16 03:36:37 1998
+--- Makefile.orig	Sun Nov 22 00:19:06 1998
++++ Makefile	Mon Aug 23 22:57:53 1999
 @@ -4,8 +4,8 @@
  #
  # this is the C compiler to use (on SunOS, the standard "cc" does not
@@ -18,7 +18,7 @@ $NetBSD: patch-ab,v 1.3 1998/11/16 02:49:48 tron Exp $
  #
  #CFLAGS=-Wall -O2 -pipe -DSECUREWARE -DUSE_POLL
 -CFLAGS=-O2 -Wall -pipe
-+CFLAGS+=-DAUTO_PPP
++CFLAGS+=-DAUTO_PPP -DPREFIX=\"${PREFIX}\"
  #CFLAGS=-O -DSVR4
  #CFLAGS=-O -DSVR4 -DSVR42
  #CFLAGS=-O -DUSE_POLL
