@@ -4,7 +4,7 @@
 # Date created:         17 Nov 1996
 # Whom:                 ache
 #
-# $NetBSD: Makefile,v 1.3 1998/01/19 01:11:51 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/01/26 17:44:56 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/09/07 22:08:13 ache Exp 
 #
 
@@ -19,7 +19,7 @@ DISTFILES=      ${TIINS} ${DISTNAME}.tar.gz
 MAINTAINER=     ache@FreeBSD.ORG
 
 BUILD_DEPENDS=  unzip:${PORTSDIR}/archivers/unzip
-BUILD_DEPENDS+=	${PREFIX}/lib/libncurses.a:${PORTSDIR}/devel/ncurses
+LIB_DEPENDS=	ncurses\\.3:${PORTSDIR}/devel/ncurses
 
 NO_CDROM=       "Uses copyrighted patches"
 
