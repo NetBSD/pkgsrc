@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/16 13:30:33 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/03/27 03:19:45 hubertf Exp $
 
 DISTNAME=	cdd-1.0nb3
 CATEGORIES=	audio
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MAINTAINER=	thorpej@netbsd.org
 COMMENT=	Another program for reading CD digital audio from SCSI or ATAPI CD-ROM drives
 
-BUILD_DEPENDS+=	${PREFIX}/lib/libscsi.a:../../devel/libscsi
+BUILD_DEPENDS+=	libscsi-1.6:../../devel/libscsi
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/07 20:57:48 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/03/27 03:20:06 hubertf Exp $
 
 DISTNAME=		pari-2.1.0
 CATEGORIES=		math
@@ -10,8 +10,8 @@ HOMEPAGE=		http://www.parigp-home.de
 COMMENT=		PARI-GP is a software package for computer-aided number theory
 
 DEPENDS+=		readline>=4.0:../../devel/readline
-BUILD_DEPENDS+=		${LOCALBASE}/bin/emacs:../../editors/emacs
-BUILD_DEPENDS+= 	${LOCALBASE}/bin/tex:../../print/teTeX
+BUILD_DEPENDS+=		{emacs-*,xemacs-*}:../../editors/emacs
+BUILD_DEPENDS+= 	teTeX-*:../../print/teTeX
 
 USE_PERL5=		#defined
 USE_X11=		#defined

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/17 17:49:42 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/03/27 03:20:15 hubertf Exp $
 # $OpenBSD: Makefile,v 1.13 2000/06/19 18:38:55 dugsong Exp $
 
 DISTNAME=	dsniff-2.3
@@ -13,7 +13,7 @@ DEPENDS+=	libnet-*:../../devel/libnet
 # libnids provides static library only, thus it isn't necessary at run-time,
 # only at compile-time.
 #
-BUILD_DEPENDS+=	${LOCALBASE}/lib/libnids.a:../../net/libnids
+BUILD_DEPENDS+=	libnids-1.14:../../net/libnids
 
 GNU_CONFIGURE=	yes
 USE_X11=	yes

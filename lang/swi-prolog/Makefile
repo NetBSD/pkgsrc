@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/03/20 13:43:26 jtb Exp $
+# $NetBSD: Makefile,v 1.4 2001/03/27 03:20:04 hubertf Exp $
 
 DISTNAME=		pl-lite-4.0.0
 PKGNAME=		swi-prolog-4.0.0
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.swi.psy.uva.nl/projects/SWI-Prolog/
 COMMENT=		ISO/Edinburgh-style Prolog compiler
 
 DEPENDS+=		readline-[0-9]*:../../devel/readline
-BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
+BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S,-lite,,}
 DIST_SUBDIR=		swi-prolog

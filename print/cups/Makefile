@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2001/03/07 04:09:58 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2001/03/27 03:20:13 hubertf Exp $
 #
 
 DISTNAME=		cups-${VERS}-3-source
@@ -19,7 +19,7 @@ COMMENT=		Common UNIX Printing System
 
 CONFLICTS+=		LPRng-[0-9]* LPRng-core-[0-9]*
 
-BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
+BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		png>1.0.9:../../graphics/png
 DEPENDS+=		tiff-*:../../graphics/tiff

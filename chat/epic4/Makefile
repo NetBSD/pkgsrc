@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/03/26 15:39:29 zuntum Exp $
+# $NetBSD: Makefile,v 1.9 2001/03/27 03:19:48 hubertf Exp $
 #
 
 DISTNAME=	epic4-0.10.1
@@ -30,7 +30,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 GNU_CONFIGURE=	YES
 
 .if defined(USE_INET6) && ${USE_INET6} == "YES"
-BUILD_DEPENDS+=	autoconf:../../devel/autoconf
+BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
 
 post-patch:
 	cd ${WRKSRC}; ${LOCALBASE}/bin/autoheader; ${LOCALBASE}/bin/autoconf

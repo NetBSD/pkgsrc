@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2001/02/25 04:18:24 hubertf Exp $
+# $NetBSD: Makefile,v 1.43 2001/03/27 03:20:25 hubertf Exp $
 
 DISTNAME=	squid-2.3.STABLE4-src
 PKGNAME=	squid-2.3s4nb3
@@ -24,7 +24,7 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.squid-cache.org/
 COMMENT=	Post-Harvest_cached WWW proxy cache and accelerator
 
-BUILD_DEPENDS+=	${PERL5}:../../lang/perl5-base
+BUILD_DEPENDS+=	perl-5.*:../../lang/perl5
 
 GNU_CONFIGURE=	# defined
 CONFIGURE_ARGS+= --sysconfdir=/etc \
