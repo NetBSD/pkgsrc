@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2002/03/12 22:09:35 tv Exp $
+# $NetBSD: Makefile.common,v 1.26 2002/04/04 07:48:20 jlam Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution.
@@ -9,36 +9,40 @@
 #	<lang>-postgresql	client-side interface to PostgreSQL
 #	postgresql-<lang>	server-side module for PostgreSQL backend
 
-DISTNAME=		postgresql-${PG_DIST_VERS}
+DISTNAME?=		postgresql-${DIST_VERS}
 CATEGORIES+=		databases
-MASTER_SITES=		http://www.postgresql.org/ftpsite/source/v${PG_DIST_VERS}/ \
-			ftp://ftp.PostgreSQL.org/pub/source/v${PG_DIST_VERS}/ \
-			ftp://ftp.de.postgresql.org/pub/source/v${PG_DIST_VERS}/ \
-			ftp://ch.postgresql.org/mirror/postgresql/source/v${PG_DIST_VERS}/ \
-			ftp://gd.tuwien.ac.at/db/www.postgresql.org/pub/source/v${PG_DIST_VERS}/ \
-			ftp://looking-glass.usask.ca/pub/postgresql/source/v${PG_DIST_VERS}/ \
-			ftp://ftp.sunsite.auc.dk/mirrors/postgresql/source/v${PG_DIST_VERS}/ \
-			ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/source/v${PG_DIST_VERS}/
+PGSQL_SITES=		http://www.postgresql.org/ftpsite/ \
+			ftp://ftp.postgresql.org/pub/ \
+			ftp://ftp.de.postgresql.org/pub/ \
+			ftp://ch.postgresql.org/mirror/postgresql/ \
+			ftp://gd.tuwien.ac.at/db/www.postgresql.org/pub/ \
+			ftp://looking-glass.usask.ca/pub/postgresql/ \
+			ftp://ftp.sunsite.auc.dk/mirrors/postgresql/ \
+			ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/
+MASTER_SITES?=		${PGSQL_SITES:=source/v${DIST_VERS}/}
 
-MAINTAINER=		jlam@netbsd.org
-HOMEPAGE=		http://www.postgresql.org/
+MAINTAINER?=		jlam@netbsd.org
+HOMEPAGE?=		http://www.postgresql.org/
 
 CONFLICTS+=		postgresql-[0-6]* postgresql-7.0*
 
-DISTINFO_FILE=		${.CURDIR}/../../databases/postgresql/distinfo
-COMMON_FILESDIR=	${.CURDIR}/../../databases/postgresql/files
-PATCHDIR=		${.CURDIR}/../../databases/postgresql/patches
+DISTINFO_FILE?=		${.CURDIR}/../../databases/postgresql/distinfo
+COMMON_FILESDIR?=	${.CURDIR}/../../databases/postgresql/files
+PATCHDIR?=		${.CURDIR}/../../databases/postgresql/patches
 
 # Version numbering scheme:
 #
-# PG_DIST_VERS		version number on the postgresql distfile
-# PG_BASE_VERS		pkgsrc-mangled version number (convert pl -> .)
+# DIST_VERS		version number on the postgresql distfile
+# BASE_VERS		pkgsrc-mangled version number (convert pl -> .)
 #
-PG_DIST_VERS=		7.1.3
-PG_BASE_VERS=		${PG_DIST_VERS}
+DIST_VERS?=		7.2
+BASE_VERS?=		${DIST_VERS}
 
-USE_GMAKE=		# defined
-GNU_CONFIGURE=		# defined
+BUILDLINK_DEPENDS.postgresql-lib?=	postgresql-lib>=${BASE_VERS}
+BUILDLINK_DEPENDS.tcl-postgresql?=	tcl-postgresql>=${BASE_VERS}
+
+USE_GMAKE=		YES
+GNU_CONFIGURE=		YES
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -63,15 +67,13 @@ CONFIGURE_ARGS+=	--without-tcl
 CONFIGURE_ARGS+=	--without-tk
 
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/pgsql
-CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/html/postgresql
+CONFIGURE_ARGS+=	--with-htmldir=${PREFIX}/share/doc/html/postgresql
 
 CONFIGURE_ARGS+=	--disable-readline
 CONFIGURE_ARGS+=	--enable-locale
 CONFIGURE_ARGS+=	--enable-syslog
 CONFIGURE_ARGS+=	--with-CXX
 CONFIGURE_ARGS+=	--with-template="${LOWER_OPSYS}"
-
-MAKE_ENV+=		CUSTOM_COPT="${CFLAGS}"
 
 post-extract:
 	if [ -d ${WRKSRC}/src ]; then					\

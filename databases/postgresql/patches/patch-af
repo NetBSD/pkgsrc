@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.13 2001/05/14 14:52:38 jlam Exp $
+$NetBSD: patch-af,v 1.14 2002/04/04 07:48:26 jlam Exp $
 
 --- src/interfaces/ecpg/lib/Makefile.orig	Fri Feb 23 13:12:20 2001
 +++ src/interfaces/ecpg/lib/Makefile
@@ -6,8 +6,8 @@ $NetBSD: patch-af,v 1.13 2001/05/14 14:52:38 jlam Exp $
  
  NAME= ecpg
  SO_MAJOR_VERSION= 3
--SO_MINOR_VERSION= 2.0
-+SO_MINOR_VERSION= 2
+-SO_MINOR_VERSION= 3.0
++SO_MINOR_VERSION= 3
  
  override CPPFLAGS := -I$(top_srcdir)/src/interfaces/ecpg/include -I$(libpq_srcdir) $(CPPFLAGS)
  

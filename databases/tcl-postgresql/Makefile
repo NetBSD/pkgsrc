@@ -1,20 +1,18 @@
-# $NetBSD: Makefile,v 1.10 2001/12/03 08:06:28 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2002/04/04 07:41:05 jlam Exp $
 
-.include "../../databases/postgresql/Makefile.common"
-.include "../../databases/postgresql/Makefile.ssl"
-
-PKGNAME=		tcl-postgresql-${PG_BASE_VERS}
+PKGNAME=		tcl-postgresql-${BASE_VERS}
 COMMENT=		Tcl interface to PostgreSQL
 
-USE_BUILDLINK_ONLY=			# defined
-BUILDLINK_DEPENDS.postgresql-lib=	postgresql-lib>=${PG_BASE_VERS}
+USE_BUILDLINK_ONLY=	YES
 
-MAKE_ENV+=		INSTALLED_LIBPQ=1
+.include "../../databases/postgresql/Makefile.common"
 
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--with-tcl
 CONFIGURE_ARGS+=	--with-tclconfig="${BUILDLINK_DIR}/lib"
 CONFIGURE_ENV+=		TCLSH="${TCLSH}"
 TCLSH=			${LOCALBASE}/bin/tclsh
+MAKE_ENV+=		INSTALLED_LIBPQ=1
 
 DIRS_TO_BUILD=		src/interfaces/libpgtcl src/bin/pgtclsh
 

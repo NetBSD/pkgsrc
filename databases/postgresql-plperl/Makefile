@@ -1,26 +1,19 @@
-# $NetBSD: Makefile,v 1.5 2001/12/03 08:06:27 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/04/04 07:41:03 jlam Exp $
 
-.include "../../databases/postgresql/Makefile.common"
-.include "../../databases/postgresql/Makefile.ssl"
-
-PKGNAME=		postgresql-plperl-${PG_BASE_VERS}
+PKGNAME=		postgresql-plperl-${BASE_VERS}
 COMMENT=		PL/Perl procedural language for the PostgreSQL backend
 
-BUILDLINK_DEPENDS.postgresql-lib=	postgresql-lib>=${PG_BASE_VERS}
-DEPENDS+=		postgresql-server>=${PG_BASE_VERS}:../../databases/postgresql-server
+DEPENDS+=		postgresql-server>=${BASE_VERS}:../../databases/postgresql-server
 DEPENDS+=		libperl>=${LIBPERL5_REQD}:../../lang/libperl
 
-USE_BUILDLINK_ONLY=	YES
 LIBPERL5_REQD=		${PERL5_REQD}
+USE_BUILDLINK_ONLY=	YES
 
+.include "../../databases/postgresql/Makefile.common"
+
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--with-perl
 CONFIGURE_ENV+=		PERL="${PERL5}"
-
-.if (${OBJECT_FMT} == "ELF")
-MAKE_ENV+=		RPATH_LDFLAGS="-Wl,-R${PERL5_ARCHLIB}/CORE"
-.else
-MAKE_ENV+=		RPATH_LDFLAGS="-R${PERL5_ARCHLIB}/CORE"
-.endif
 
 DIRS_TO_BUILD=		src/pl/plperl
 

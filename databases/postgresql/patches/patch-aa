@@ -1,11 +1,21 @@
-$NetBSD: patch-aa,v 1.8 2001/05/14 14:52:38 jlam Exp $
+$NetBSD: patch-aa,v 1.9 2002/04/04 07:48:24 jlam Exp $
 
---- configure.in.orig	Sat May  5 16:05:37 2001
+--- configure.in.orig	Sun Feb  3 16:04:12 2002
 +++ configure.in
-@@ -150,6 +150,15 @@
+@@ -150,6 +150,25 @@
  
  
  #
++# Location for HTML documentation
++#
++htmldir='${docdir}/html'
++PGAC_ARG_REQ(with, htmldir,
++             [  --with-htmldir=DIR      HTML documentation in DIR],
++             [htmldir=$withval])
++AC_SUBST(htmldir)
++
++
++#
 +# Readline support
 +#
 +AC_MSG_CHECKING([whether to build with readline support])
@@ -18,8 +28,8 @@ $NetBSD: patch-aa,v 1.8 2001/05/14 14:52:38 jlam Exp $
  # Locale (--enable-locale)
  #
  AC_MSG_CHECKING([whether to build with locale support])
-@@ -401,6 +410,18 @@
- [AC_MSG_RESULT(no)])
+@@ -398,6 +417,18 @@
+ AC_MSG_RESULT([$with_python])
  AC_SUBST(with_python)
  
 +# If python is enabled (above), then optionally byte-compile the modules.
@@ -37,7 +47,7 @@ $NetBSD: patch-aa,v 1.8 2001/05/14 14:52:38 jlam Exp $
  #
  # Optionally build the Java/JDBC tools
  #
-@@ -649,8 +670,10 @@
+@@ -682,8 +713,10 @@
  ## Libraries
  ##
  

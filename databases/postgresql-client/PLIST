@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:12:35 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/04/04 07:41:00 jlam Exp $
 bin/createdb
 bin/createlang
 bin/createuser
@@ -39,6 +39,7 @@ man/manl/abort.l
 man/manl/alter_group.l
 man/manl/alter_table.l
 man/manl/alter_user.l
+man/manl/analyze.l
 man/manl/begin.l
 man/manl/checkpoint.l
 man/manl/close.l
@@ -95,6 +96,7 @@ man/manl/rollback.l
 man/manl/select_into.l
 man/manl/select.l
 man/manl/set_constraints.l
+man/manl/set_session_authorization.l
 man/manl/set.l
 man/manl/set_transaction.l
 man/manl/show.l

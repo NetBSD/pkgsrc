@@ -1,17 +1,19 @@
-$NetBSD: patch-al,v 1.5 2001/07/27 17:52:33 jlam Exp $
+$NetBSD: patch-al,v 1.6 2002/04/04 07:48:30 jlam Exp $
 
---- configure.orig	Thu May 10 18:35:47 2001
+--- configure.orig	Sun Feb  3 16:04:11 2002
 +++ configure
-@@ -19,6 +19,8 @@
+@@ -19,6 +19,10 @@
  ac_help="$ac_help
    --with-libs=DIRS        alternative spelling of --with-libraries"
  ac_help="$ac_help
++  --with-htmldir=DIR      HTML documentation in DIR"
++ac_help="$ac_help
 +  --disable-readline      disable readline support"
 +ac_help="$ac_help
    --enable-locale         enable locale support"
  ac_help="$ac_help
    --enable-recode         enable character set recode support"
-@@ -53,6 +55,8 @@
+@@ -53,6 +57,8 @@
  ac_help="$ac_help
    --with-python           build Python interface module"
  ac_help="$ac_help
@@ -20,14 +22,36 @@ $NetBSD: patch-al,v 1.5 2001/07/27 17:52:33 jlam Exp $
    --with-java             build JDBC interface and Java tools"
  ac_help="$ac_help
    --with-krb4[=DIR]       build with Kerberos 4 support [/usr/athena]"
-@@ -811,10 +815,36 @@
+@@ -817,6 +823,54 @@
  
  
  #
++# Location for HTML documentation
++#
++htmldir='${docdir}/html'
++# Check whether --with-htmldir was given
++if test x"${with_htmldir+set}" = xset; then
++  case $with_htmldir in
++    yes)
++      { echo "configure: error: argument required for --with-htmldir option" 1>&2; exit 1; }
++      ;;
++    no)
++      { echo "configure: error: argument required for --with-htmldir option" 1>&2; exit 1; }
++      ;;
++    *)
++      withval=$with_htmldir
++      htmldir=$withval
++      ;;
++  esac # $with_htmldir
++fi
++
++
++
++#
 +# Readline support
 +#
 +echo $ac_n "checking whether to build with readline support""... $ac_c" 1>&6
-+echo "configure:822: checking whether to build with readline support" >&5
++echo "configure:852: checking whether to build with readline support" >&5
 +# Check whether --enable-readline was given
 +if test x"${enable_readline+set}" = xset; then
 +  case $enable_readline in
@@ -53,18 +77,13 @@ $NetBSD: patch-al,v 1.5 2001/07/27 17:52:33 jlam Exp $
  # Locale (--enable-locale)
  #
  echo $ac_n "checking whether to build with locale support""... $ac_c" 1>&6
--echo "configure:818: checking whether to build with locale support" >&5
-+echo "configure:848: checking whether to build with locale support" >&5
- # Check whether --enable-locale was given
- if test x"${enable_locale+set}" = xset; then
-   case $enable_locale in
-@@ -1905,11 +1935,40 @@
- fi
+@@ -1859,6 +1913,35 @@
+ echo "$ac_t""$with_python" 1>&6
  
  
 +# If python is enabled (above), then optionally byte-compile the modules.
 +echo $ac_n "checking whether to byte-compile Python modules""... $ac_c" 1>&6
-+echo "configure:1941: checking whether to byte-compile Python modules" >&5
++echo "configure:1919: checking whether to byte-compile Python modules" >&5
 +if test "$with_python" = yes; then
 +  # Check whether --with-python_compile was given
 +if test x"${with_python_compile+set}" = xset; then
@@ -94,56 +113,50 @@ $NetBSD: patch-al,v 1.5 2001/07/27 17:52:33 jlam Exp $
  #
  # Optionally build the Java/JDBC tools
  #
- echo $ac_n "checking whether to build Java/JDBC tools""... $ac_c" 1>&6
--echo "configure:1913: checking whether to build Java/JDBC tools" >&5
-+echo "configure:1972: checking whether to build Java/JDBC tools" >&5
- # Check whether --with-java was given
- if test x"${with_java+set}" = xset; then
-   case $with_java in
-@@ -3095,8 +3154,9 @@
+@@ -3282,9 +3365,18 @@
  ## Libraries
  ##
  
 +if test "$enable_readline" = yes; then
+ 
  echo $ac_n "checking for readline""... $ac_c" 1>&6
--echo "configure:3100: checking for readline" >&5
-+echo "configure:3160: checking for readline" >&5
+-echo "configure:3288: checking for readline" >&5
++echo "configure:3372: checking for readline" >&5
++
++case $host_os in netbsd* | openbsd* )
++  if echo __ELF__ | $CPP - 2>/dev/null | grep __ELF__ >/dev/null; then
++    objformat=a.out
++  else
++    objformat=ELF
++  fi
++esac
  
  if eval "test \"`echo '$''{'pgac_cv_check_readline'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -3118,13 +3178,30 @@
+@@ -3306,15 +3398,17 @@
  readline()
  ; return 0; }
  EOF
--if { (eval echo configure:3122: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
-+if { (eval echo configure:3182: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+-if { (eval echo configure:3310: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
++if { (eval echo configure:3402: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
    rm -rf conftest*
-+  if test "$cross_compiling" = yes; then
-+    { echo "configure: error: can not run test program while cross compiling" 1>&2; exit 1; }
-+else
-+  cat > conftest.$ac_ext <<EOF
-+#line 3188 "configure"
-+#include "confdefs.h"
-+int main() { return 0; }
-+EOF
-+if { (eval echo configure:3192: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext} && (./conftest; exit) 2>/dev/null
-+then
-   pgac_cv_check_readline="${pgac_rllib}${pgac_lib}"; break 2
- else
-   echo "configure: failed program was:" >&5
-   cat conftest.$ac_ext >&5
- fi
-+rm -fr conftest*
-+fi
-+
-+else
-+  echo "configure: failed program was:" >&5
-+  cat conftest.$ac_ext >&5
-+fi
- rm -f conftest*
-     LIBS=$pgac_save_LIBS
-   done
-@@ -3208,11 +3285,12 @@
+   
+-      # NetBSD and OpenBSD have a broken linker that does not
++      # NetBSD and OpenBSD have a broken a.out linker that does not
+       # recognize dependent libraries
+       case $host_os in netbsd* | openbsd* )
+-        case $pgac_lib in
+-          *curses*) ;;
+-          *) pgac_lib=" -lcurses" ;;
++        case $objformat in a.out )
++          case $pgac_lib in
++            *termcap*) ;;
++            *) pgac_lib=" -ltermcap" ;;
++          esac
+         esac
+       esac
+ 
+@@ -3408,6 +3502,7 @@
  else :
    
  fi
@@ -151,15 +164,17 @@ $NetBSD: patch-al,v 1.5 2001/07/27 17:52:33 jlam Exp $
  
  if test "$PORTNAME" != "aix" -a "$PORTNAME" != "alpha"
  then
- 	echo $ac_n "checking for main in -lbsd""... $ac_c" 1>&6
--echo "configure:3216: checking for main in -lbsd" >&5
-+echo "configure:3294: checking for main in -lbsd" >&5
- ac_lib_var=`echo bsd'_'main | sed 'y%./+-%__p_%'`
- if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
-   echo $ac_n "(cached) $ac_c" 1>&6
-@@ -8103,6 +8181,7 @@
- s%@python_moduledir@%$python_moduledir%g
- s%@python_extmakefile@%$python_extmakefile%g
+@@ -8991,6 +9086,7 @@
+ s%@host_os@%$host_os%g
+ s%@PORTNAME@%$PORTNAME%g
+ s%@TAS@%$TAS%g
++s%@htmldir@%$htmldir%g
+ s%@MULTIBYTE@%$MULTIBYTE%g
+ s%@enable_nls@%$enable_nls%g
+ s%@WANTED_LANGUAGES@%$WANTED_LANGUAGES%g
+@@ -9007,6 +9103,7 @@
+ s%@with_tk@%$with_tk%g
+ s%@with_perl@%$with_perl%g
  s%@with_python@%$with_python%g
 +s%@with_python_compile@%$with_python_compile%g
  s%@ANT@%$ANT%g

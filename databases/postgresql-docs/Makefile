@@ -1,31 +1,33 @@
-# $NetBSD: Makefile,v 1.2 2001/12/03 08:06:26 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/04/04 07:41:01 jlam Exp $
+
+PKGNAME=		postgresql-docs-${BASE_VERS}
+COMMENT=		PostgreSQL database system documentation
+
+USE_BUILDLINK_ONLY=	YES
 
 .include "../../databases/postgresql/Makefile.common"
 
-PKGNAME=		postgresql-docs-${PG_BASE_VERS}
-COMMENT=		PostgreSQL database system documentation
-
-DOC_DIR=		doc
 DOCDIR=			${PREFIX}/share/doc/postgresql
 
 # The manpage documentation is installed with the relevant packages.
 pre-build:
-	cd ${WRKSRC}/${DOC_DIR} && ${RM} -f man.tar.gz
+	cd ${WRKSRC}/doc && ${RM} -f man.tar.gz
 
 do-build:
-	cd ${WRKSRC}/${DOC_DIR} &&					\
-		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${ALL_TARGET}
+	cd ${WRKSRC}/doc && ${SETENV} ${MAKE_ENV}			\
+		${MAKE_PROGRAM} ${ALL_TARGET}
 
 do-install:
-	cd ${WRKSRC}/${DOC_DIR} &&					\
-		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${INSTALL_TARGET}
+	cd ${WRKSRC}/doc && ${SETENV} ${MAKE_ENV}			\
+		${MAKE_PROGRAM} ${INSTALL_TARGET}
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	cd ${WRKSRC}/${DOC_DIR};					\
-	${INSTALL_DATA}							\
+	cd ${WRKSRC}/doc; for file in					\
 		FAQ* KNOWN_BUGS MISSING_FEATURES README.* TODO		\
-		bug.template internals.ps				\
-		${DOCDIR}
+		bug.template;						\
+	do								\
+		${INSTALL_DATA}	$${file} ${DOCDIR}/$${file};		\
+	done
 
 .include "../../mk/bsd.pkg.mk"
