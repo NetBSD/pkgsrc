@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2002/01/22 14:01:11 kent Exp $
+# $NetBSD: Makefile,v 1.4 2002/01/24 04:56:30 kent Exp $
 
-DISTNAME=		cross-${TARGET_ARCH}-1.2nb1
+DISTNAME=		cross-${TARGET_ARCH}-1.2
+PKGREVISION=		2
 CROSS_DISTFILES=
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.mingw.org/
-COMMENT=		Cross-compile environment for Mingw
+COMMENT=		Cross-compile environment for MinGW
 CATEGORIES+=		cross lang
 
 USE_CROSSBASE=		yes
@@ -55,9 +56,8 @@ TARGET_CONFIGURE_ENV=	CC="${CC_FOR_TARGET}" \
 			DLLTOOL="${BINUTILS_WRKSRC}/binutils/dlltool" \
 			WINDRES="${BINUTILS_WRKSRC}/binutils/windres"
 
-
-
 DISTFILES+=	${CROSS_DISTFILES}
+
 
 do-configure: bu-configure gcc-configure
 bu-configure:
@@ -114,8 +114,10 @@ gcc-install:
 		install-common install-headers install-libgcc install-driver
 	@${MKDIR} ${TARGET_DIR}/include/g++-3
 	@${MKDIR} ${TARGET_DIR}/include/g++-3/std
+	${INSTALL_DATA_DIR} ${TARGET_DIR}/lib
 	@cd ${GCC_WRKSRC}/${TARGET_ARCH} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} \
 		${MAKE_FLAGS} ${GCC_MAKE_FLAGS} prefix="${TARGET_DIR}" \
+		tooldir="${TARGET_DIR}" \
 		libsubdir="${PREFIX}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}" \
 		install-target-libstdc++
 	for file in c++ c++filt g++; do \
