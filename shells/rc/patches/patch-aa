@@ -119,3 +119,23 @@
   	if (errno > sys_nerr)
   		return;
   	if (s != NULL)
+--- proto.h	1997/12/19 09:22:28	1.1
++++ proto.h	1997/12/19 09:23:51
+@@ -13,6 +13,7 @@
+ 	You can override these definitions with compile-line definitions
+ 	of the same macros.
+ */
++#include <sys/param.h>
+ 
+ #ifndef ALIGN_T
+ typedef long ALIGN_T;
+@@ -65,7 +66,8 @@
+ extern int getgroups(int, int *);
+ /*extern int ioctl(int, long,...);*/ /* too much trouble leaving this uncommented */
+ extern int isatty(int);
+-#ifndef SYSVR4 /* declares AND defines this in sys/stat.h!! */
++#if !defined(SYSVR4) && !(defined(BSD) && BSD >= 199306)
++/* SVR4 declares AND defines this in sys/stat.h!! */
+ extern int mknod(const char *, int, int);
+ #endif
+ extern int pipe(int *);
