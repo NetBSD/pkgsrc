@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2001/03/24 19:52:33 kristerw Exp $
+# $NetBSD: Makefile,v 1.44 2001/03/30 14:37:01 dmcmahill Exp $
 #
 
 DISTNAME=		xmame-0.37b12.1
@@ -38,6 +38,22 @@ NETBSD_DGA=		yes
 NETBSD_DGA=		no
 .endif
 
+post-patch:
+	(cd ${WRKSRC}/doc && ${SED} 's|@ROMPATH@|${ROMPATH}|;s|@SPOOLDIR@|${SPOOLDIR}|' \
+		xmamerc.dist >xmamerc)
+
+do-install:
+	(cd ${WRKSRC} && ${INSTALL_PROGRAM} xmame.${DISPLAY_METHOD} \
+		${PREFIX}/bin/xmame)
+	(cd ${WRKSRC}/doc && ${INSTALL_MAN} xmame.6 \
+		${PREFIX}/man/man6/xmame.6)
+	${INSTALL_DATA_DIR} ${ROMPATH}
+	(cd ${WRKSRC}/doc && ${INSTALL_DATA} xmamerc ${ROMPATH}/xmamerc)
+	@${ECHO} Remember to set ROMPATH to ${ROMPATH}.
+
+.include "../../mk/bsd.pkg.mk"
+
+# This has to come after bsd.pkg.mk to make sure we have FILESDIR
 .if ${MACHINE_ARCH} == "m68k"
 MAME_CPU=		m68k
 .elif ${MACHINE_ARCH} == "alpha"
@@ -53,18 +69,3 @@ MAME_CPU=		risc_lsb
 MAME_CPU=		risc
 .endif
 .endif
-
-post-patch:
-	(cd ${WRKSRC}/doc && ${SED} 's|@ROMPATH@|${ROMPATH}|;s|@SPOOLDIR@|${SPOOLDIR}|' \
-		xmamerc.dist >xmamerc)
-
-do-install:
-	(cd ${WRKSRC} && ${INSTALL_PROGRAM} xmame.${DISPLAY_METHOD} \
-		${PREFIX}/bin/xmame)
-	(cd ${WRKSRC}/doc && ${INSTALL_MAN} xmame.6 \
-		${PREFIX}/man/man6/xmame.6)
-	${INSTALL_DATA_DIR} ${ROMPATH}
-	(cd ${WRKSRC}/doc && ${INSTALL_DATA} xmamerc ${ROMPATH}/xmamerc)
-	@${ECHO} Remember to set ROMPATH to ${ROMPATH}.
-
-.include "../../mk/bsd.pkg.mk"
