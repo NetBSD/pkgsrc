@@ -1,42 +1,33 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/08/06 15:05:54 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2004/11/28 23:31:49 wiz Exp $
 
---- amavisd.conf.orig	Thu Jul  1 16:04:36 2004
+--- amavisd.conf.orig	2004-11-02 22:22:48.000000000 +0100
 +++ amavisd.conf
-@@ -9,7 +9,7 @@ use strict;
- # MUST BE SET (no useful default):
- 
- $mydomain = 'example.com';
--$MYHOME   = '/var/amavis';
-+$MYHOME   = '@AMAVIS_DIR@';
- $TEMPBASE = "$MYHOME/tmp";
- 
- 
-@@ -19,8 +19,8 @@ $TEMPBASE = "$MYHOME/tmp";
+@@ -12,15 +12,15 @@ use strict;
  # @bypass_spam_checks_maps  = (1);  # uncomment to DISABLE anti-spam code
  
- $max_servers = 2;         # number of pre-forked children
--$daemon_user  = 'vscan';  # (no default;  customary: vscan or amavis)
--$daemon_group = 'vscan';  # (no default;  customary: vscan or amavis)
-+$daemon_user  = '@AMAVIS_USER@';  # (no default;  customary: vscan or amavis)
-+$daemon_group = '@AMAVIS_GROUP@';  # (no default;  customary: vscan or amavis)
- @local_domains_maps = ( [".$mydomain"] );
+ $max_servers = 2;            # number of pre-forked children (2..15 is common)
+-$daemon_user  = 'vscan';     # (no default;  customary: vscan or amavis)
+-$daemon_group = 'vscan';     # (no default;  customary: vscan or amavis)
++$daemon_user  = '@AMAVIS_USER@';     # (no default;  customary: vscan or amavis)
++$daemon_group = '@AMAVIS_GROUP@';     # (no default;  customary: vscan or amavis)
  
- $log_level = 0;
-@@ -28,7 +28,7 @@ $log_recip_templ = undef;    # disable b
- $DO_SYSLOG = 1;
- $SYSLOG_LEVEL = 'mail.info';
- $ENV{TMPDIR} = $TEMPBASE;
+ $mydomain = 'example.com';   # a convenient default for other settings
+ 
+-$MYHOME   = '/var/amavis';   # a convenient default for other settings
++$MYHOME   = '@AMAVIS_DIR@';   # a convenient default for other settings
+ $TEMPBASE = "$MYHOME/tmp";   # working directory, needs to be created manually
+ $ENV{TMPDIR} = $TEMPBASE;    # environment variable TMPDIR
 -$QUARANTINEDIR = '/var/virusmails';
 +$QUARANTINEDIR = '@AMAVIS_QUARANTINE@';
- # $daemon_chroot_dir = $MYHOME;  # (default is undef, meaning: do not chroot)
  
- $inet_socket_port = 10024;   # accept SMTP on this local TCP port(s) (Postfix)
-@@ -55,7 +55,7 @@ $mailfrom_notify_spamadmin = "spam.polic
- @addr_extension_banned_maps     = ('banned');
- @addr_extension_bad_header_maps = ('badh');
+ # $daemon_chroot_dir = $MYHOME;   # chroot directory or undef
+ 
+@@ -72,7 +72,7 @@ $mailfrom_to_quarantine = ''; # null ret
+ # $recipient_delimiter = '+';  # undef disables address extensions altogether
+ # when enabling addr extensions do also Postfix/main.cf: recipient_delimiter=+
  
 -$path = '/usr/local/sbin:/usr/local/bin:/usr/sbin:/sbin:/usr/bin:/bin';
 +$path = '@PREFIX@/sbin:@PREFIX@/bin:@LOCALBASE@/sbin:@LOCALBASE@/bin:/usr/sbin:/sbin:/usr/bin:/bin';
- $file   = 'file';   # file(1) utility; use 3.41 or later to avoid vulnerability
+ $file   = 'file';   # file(1) utility; use recent versions
  $gzip   = 'gzip';
  $bzip2  = 'bzip2';

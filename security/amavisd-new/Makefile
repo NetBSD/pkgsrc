@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/08/22 19:32:52 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/28 23:31:49 wiz Exp $
 
 DISTNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL:S/-//}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.ijs.si/software/amavisd/ \
 		http://ftp.cfu.net/pub/amavisd-new/ \
 		ftp://ftp.cfu.net/pub/amavisd-new/
 
-VERSION=	20040701
+VERSION=	2.2.0
 PATCHLEVEL=	# empty
 
 MAINTAINER=	jdunn@aquezada.com
@@ -22,10 +22,12 @@ DEPENDS+=	p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
 DEPENDS+=	p5-Convert-TNEF-[0-9]*:../../converters/p5-Convert-TNEF
 DEPENDS+=	p5-Convert-UUlib-[0-9]*:../../converters/p5-Convert-UUlib
 DEPENDS+=	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
-DEPENDS+=	p5-MIME-tools>=5.313:../../mail/p5-MIME-tools
-DEPENDS+=	p5-Net-[0-9]*:../../net/p5-Net
+DEPENDS+=	p5-MIME-tools>=5.415:../../mail/p5-MIME-tools
+DEPENDS+=	p5-MailTools>=1.58:../../mail/p5-MailTools
+DEPENDS+=	p5-IO-stringy-[0-9]*:../../devel/p5-IO-stringy
+DEPENDS+=	p5-Net>=1.16:../../net/p5-Net
 DEPENDS+=	p5-Net-Server-[0-9]*:../../net/p5-Net-Server
-DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
+DEPENDS+=	p5-Time-HiRes>=1.49:../../time/p5-Time-HiRes
 DEPENDS+=	p5-Unix-Syslog-[0-9]*:../../sysutils/p5-Unix-Syslog
 
 WRKSRC=		${WRKDIR}/amavisd-new-${VERSION}
@@ -37,7 +39,7 @@ CONFLICTS+=	amavis-perl-[0-9]*
 
 USE_PERL5=		yes
 PERL5_REQD=		5.8.2
-REPLACE_PERL+=		amavisd
+REPLACE_PERL+=		amavisd amavisd-nanny
 
 USE_PKGINSTALL=		yes
 AMAVIS_USER?=		vscan
@@ -111,6 +113,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/helper-progs/amavis-milter ${PREFIX}/sbin
 .endif
 	${INSTALL_SCRIPT} ${WRKSRC}/amavisd ${PREFIX}/sbin/amavisd
+	${INSTALL_SCRIPT} ${WRKSRC}/amavisd-nanny ${PREFIX}/sbin/amavisd-nanny
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/AAAREADME.first ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DOCDIR}
@@ -118,6 +121,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/MANIFEST ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README_FILES/amavisd-new-docs.html ${DOCDIR}
 	for file in README_FILES/README.*; do				\
 		${INSTALL_DATA} ${WRKSRC}/$$file ${DOCDIR};		\
 	done
