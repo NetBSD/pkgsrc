@@ -1,0 +1,43 @@
+# $NetBSD: libtool-logic,v 1.5.4.2 2003/01/07 07:34:40 jlam Exp $
+
+case $arg in
+-L.|-L./*|-L..*|-L${WRKSRC}*)
+	case $fixlibpath in
+	yes)
+		case $arg in
+		*/.libs)
+			# ignore -L.../.libs
+			;;
+		*)
+			$echo "*** [buildlink2] Warning: libtool detected $arg" >> $wrapperlog
+			$echo "*** [buildlink2] Warning: libtool detected $arg" 1>&2
+			lpath=`$echo "X$arg" | $Xsed -e "s/^-L//"`
+			case "$rellpath" in
+			*"$lpath "*)	;;
+			*"$lpath"*)	;;
+			*)		rellpath="$rellpath $lpath" ;;
+			esac
+			;;
+		esac
+		;;
+	esac
+	;;
+-l*)
+	case $fixlibpath in
+	yes)
+		lib=`$echo "X$arg" | $Xsed -e "s/^-l//"`
+		for dir in $rellpath; do
+			la="$dir/lib$lib.la"
+			if $test -f "$la"; then
+				$echo "*** [buildlink2] Warning: libtool replaced $arg with $la" >> $wrapperlog
+				$echo "*** [buildlink2] Warning: libtool replaced $arg with $la" 1>&2
+				arg="$la"
+				cachesettings='skipcache=yes'
+				break
+			fi
+		done
+		;;
+	esac
+	addtoprivatecache=yes
+	;;
+esac
