@@ -1,0 +1,10 @@
+--- libhtmlw/Makefile.in.orig	Sat Jul 11 23:07:57 1998
++++ libhtmlw/Makefile.in	Sat Jul 11 23:19:38 1998
+@@ -6,6 +6,7 @@
+ 
+ CC= @CC@
+ LIBS = @LIBS@
++CPPFLAGS = @CPPFLAGS@
+ CFLAGS = @CFLAGS@
+ 
+ RANLIB = @RANLIB@
