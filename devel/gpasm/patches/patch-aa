@@ -1,0 +1,97 @@
+$NetBSD: patch-aa,v 1.1 2001/05/07 16:05:08 dmcmahill Exp $
+
+--- gpasm/opcode.c.orig	Sun Apr 22 13:12:54 2001
++++ gpasm/opcode.c	Mon May  7 09:18:28 2001
+@@ -94,5 +94,5 @@
+ struct insn {
+   char *name;
+-  int mask;
++  long int mask;
+   enum insn_class class;
+   int attribs;
+@@ -2672,46 +2672,46 @@
+ 
+ static struct insn  op_0[] = {
+-  { "constant", (int)do_constant, INSN_CLASS_FUNC,	0 },
+-  { "else",	(int)do_else, 	INSN_CLASS_FUNC,	ATTRIB_COND },
+-  { "endif",	(int)do_endif,	INSN_CLASS_FUNC,	ATTRIB_COND },
+-  { "endm",	(int)do_endm,	INSN_CLASS_FUNC,	0 },
+-  { "endw",	(int)do_endw,	INSN_CLASS_FUNC,	0 },
+-  { "equ",	(int)do_equ,  	INSN_CLASS_FUNC,	0 },
+-  { "error",	(int)do_error, 	INSN_CLASS_FUNC,	0 },
+-  { "expand",	(int)do_expand, INSN_CLASS_FUNC,	0 },
+-  { "errorlevel", (int)do_errlvl, INSN_CLASS_FUNC,	0 },
+-  { "if",	(int)do_if,   	INSN_CLASS_FUNC,	ATTRIB_COND },
+-  { "ifdef",	(int)do_ifdef, 	INSN_CLASS_FUNC,	ATTRIB_COND },
+-  { "ifndef",	(int)do_ifndef,	INSN_CLASS_FUNC,	ATTRIB_COND },
+-  { "list",	(int)do_list, 	INSN_CLASS_FUNC,	0 },
+-  { "local",	(int)do_local, 	INSN_CLASS_FUNC,	0 },
+-  { "macro",	(int)do_macro,	INSN_CLASS_FUNC,	0 },
+-  { "messg",	(int)do_messg,	INSN_CLASS_FUNC,	0 },
+-  { "noexpand", (int)do_noexpand, INSN_CLASS_FUNC,	0 },
+-  { "nolist",	(int)do_nolist, INSN_CLASS_FUNC,	0 },
+-  { "page",	(int)do_page,   INSN_CLASS_FUNC,	0 },
+-  { "processor",(int)do_processor,INSN_CLASS_FUNC,	0 },
+-  { "radix",	(int)do_radix, 	INSN_CLASS_FUNC,	0 },
+-  { "set",	(int)do_set, 	INSN_CLASS_FUNC,	0 },
+-  { "variable", (int)do_variable, INSN_CLASS_FUNC,	0 },
+-  { "while",	(int)do_while, 	INSN_CLASS_FUNC,	0 },
++  { "constant", (long int)do_constant, INSN_CLASS_FUNC,	0 },
++  { "else",	(long int)do_else, 	INSN_CLASS_FUNC,	ATTRIB_COND },
++  { "endif",	(long int)do_endif,	INSN_CLASS_FUNC,	ATTRIB_COND },
++  { "endm",	(long int)do_endm,	INSN_CLASS_FUNC,	0 },
++  { "endw",	(long int)do_endw,	INSN_CLASS_FUNC,	0 },
++  { "equ",	(long int)do_equ,  	INSN_CLASS_FUNC,	0 },
++  { "error",	(long int)do_error, 	INSN_CLASS_FUNC,	0 },
++  { "expand",	(long int)do_expand, INSN_CLASS_FUNC,	0 },
++  { "errorlevel", (long int)do_errlvl, INSN_CLASS_FUNC,	0 },
++  { "if",	(long int)do_if,   	INSN_CLASS_FUNC,	ATTRIB_COND },
++  { "ifdef",	(long int)do_ifdef, 	INSN_CLASS_FUNC,	ATTRIB_COND },
++  { "ifndef",	(long int)do_ifndef,	INSN_CLASS_FUNC,	ATTRIB_COND },
++  { "list",	(long int)do_list, 	INSN_CLASS_FUNC,	0 },
++  { "local",	(long int)do_local, 	INSN_CLASS_FUNC,	0 },
++  { "macro",	(long int)do_macro,	INSN_CLASS_FUNC,	0 },
++  { "messg",	(long int)do_messg,	INSN_CLASS_FUNC,	0 },
++  { "noexpand", (long int)do_noexpand, INSN_CLASS_FUNC,	0 },
++  { "nolist",	(long int)do_nolist, INSN_CLASS_FUNC,	0 },
++  { "page",	(long int)do_page,   INSN_CLASS_FUNC,	0 },
++  { "processor",(long int)do_processor,INSN_CLASS_FUNC,	0 },
++  { "radix",	(long int)do_radix, 	INSN_CLASS_FUNC,	0 },
++  { "set",	(long int)do_set, 	INSN_CLASS_FUNC,	0 },
++  { "variable", (long int)do_variable, INSN_CLASS_FUNC,	0 },
++  { "while",	(long int)do_while, 	INSN_CLASS_FUNC,	0 },
+ };
+ 
+ static struct insn  op_1[] = {
+-  { "__badram", (int)do_badram, INSN_CLASS_FUNC,	0 },
+-  { "__config", (int)do_config, INSN_CLASS_FUNC,	0 },
+-  { "__fuses",  (int)do_config, INSN_CLASS_FUNC,	0 },
+-  { "__idlocs", (int)do_idlocs, INSN_CLASS_FUNC,	0 },
+-  { "__maxram", (int)do_maxram, INSN_CLASS_FUNC,	0 },
+-  { "data",     (int)do_data, 	INSN_CLASS_FUNC,	0 },
+-  { "da",       (int)do_da, 	INSN_CLASS_FUNC,	0 },
+-  { "db",       (int)do_db, 	INSN_CLASS_FUNC,	0 },
+-  { "de",       (int)do_de, 	INSN_CLASS_FUNC,	0 },
+-  { "dt",       (int)do_dt, 	INSN_CLASS_FUNC,	0 },
+-  { "dw",       (int)do_dw, 	INSN_CLASS_FUNC,	0 },
+-  { "fill",	(int)do_fill,  	INSN_CLASS_FUNC,	0 },
+-  { "org",	(int)do_org,    INSN_CLASS_FUNC,	0 },
+-  { "res",	(int)do_res,    INSN_CLASS_FUNC,	0 },
+-  { "space",	(int)do_space,  INSN_CLASS_FUNC,	0 }
++  { "__badram", (long int)do_badram, INSN_CLASS_FUNC,	0 },
++  { "__config", (long int)do_config, INSN_CLASS_FUNC,	0 },
++  { "__fuses",  (long int)do_config, INSN_CLASS_FUNC,	0 },
++  { "__idlocs", (long int)do_idlocs, INSN_CLASS_FUNC,	0 },
++  { "__maxram", (long int)do_maxram, INSN_CLASS_FUNC,	0 },
++  { "data",     (long int)do_data, 	INSN_CLASS_FUNC,	0 },
++  { "da",       (long int)do_da, 	INSN_CLASS_FUNC,	0 },
++  { "db",       (long int)do_db, 	INSN_CLASS_FUNC,	0 },
++  { "de",       (long int)do_de, 	INSN_CLASS_FUNC,	0 },
++  { "dt",       (long int)do_dt, 	INSN_CLASS_FUNC,	0 },
++  { "dw",       (long int)do_dw, 	INSN_CLASS_FUNC,	0 },
++  { "fill",	(long int)do_fill,  	INSN_CLASS_FUNC,	0 },
++  { "org",	(long int)do_org,    INSN_CLASS_FUNC,	0 },
++  { "res",	(long int)do_res,    INSN_CLASS_FUNC,	0 },
++  { "space",	(long int)do_space,  INSN_CLASS_FUNC,	0 }
+ };
+ 
