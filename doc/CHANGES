@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6623 2004/07/21 00:06:17 salo Exp $
+$NetBSD: CHANGES,v 1.6624 2004/07/21 01:54:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3480,3 +3480,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pure-ftpd to 1.0.19 [recht 2004-07-20]
 	Updated mkvtoolnix to 0.9.3 [salo 2004-07-21]
 	Updated mmg to 0.9.3 [salo 2004-07-21]
+	Updated xchm to 0.9.3 [minskim 2004-07-21]

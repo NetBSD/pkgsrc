@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1959 2004/07/21 00:06:17 salo Exp $
+$NetBSD: TODO,v 1.1960 2004/07/21 01:54:45 minskim Exp $
 
 Suggested new packages
 ======================
@@ -406,7 +406,6 @@ Suggested package updates
 	o xanim-2.92.0 [pkg/19934]
 	o xbeeb-0.4.1
 	o xboard-4.2.7
-	o xchm-0.9.3
 	o xdaliclock-2.20
 	o xdx-1.2
 	o xerces-c-2.5.0 [heinz?|p5-XML-Xerces requires xerces-c-2.3.0]
