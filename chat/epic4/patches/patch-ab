@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2003/09/19 18:23:21 wiz Exp $
+
+--- source/info.c.sh.in.orig	Fri Sep 19 17:34:41 2003
++++ source/info.c.sh.in	Fri Sep 19 17:35:10 2003
+@@ -19,11 +19,7 @@
+  * This file is auto-magically created.   Changes will be nuked.
+  */
+ 
+-#ifdef __STDC__
+-#define my_paste(x, y, z) x ## y ## z
+-#else
+ #define my_paste(x, y, z) x/**/y/**/z
+-#endif
+ 
+ #include "config.h"
+ #ifdef ANONYMOUS_COMPILE
