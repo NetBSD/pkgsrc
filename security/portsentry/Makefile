@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2002/06/01 12:33:20 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/01 21:32:45 jmmv Exp $
 #
 
 DISTNAME=       portsentry-1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=   http://www.psionic.com/tools/
 
@@ -12,7 +12,14 @@ COMMENT=	detects and respond to port scans against a target host in real-time
 
 LICENSE=	portsentry-license
 
+USE_BUILDLINK2=	YES
+USE_PKGINSTALL=	YES
+
 ALL_TARGET=	${LOWER_OPSYS}
+
+EGDIR=		${PREFIX}/share/examples/portsentry
+CONF_FILES=	${EGDIR}/portsentry.conf ${PKG_SYSCONFDIR}/portsentry.conf
+CONF_FILES+=	${EGDIR}/portsentry.ignore ${PKG_SYSCONFDIR}/portsentry.ignore
 
 post-patch:
 	@cd ${WRKSRC};							\
@@ -23,6 +30,7 @@ post-patch:
 	for f in portsentry.conf portsentry_config.h; do		\
 		${MV} $$f $$f.prefix;					\
 		${SED} -e 's|@PREFIX@|${PREFIX}|g' 			\
+			-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'	\
 			-e 's|@netbsd@|'$$netbsd'|g'			\
 			-e 's|@solaris@|'$$solaris'|g'			\
 						$$f.prefix > $$f;	\
