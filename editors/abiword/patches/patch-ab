@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/09/11 18:27:49 jlam Exp $
+
+--- src/Makefile.orig	Fri Jul  9 15:13:56 1999
++++ src/Makefile	Sat Sep 11 13:53:45 1999
+@@ -47,7 +47,7 @@
+ ## that have work to do.
+ CANON_SubDirs=		wp
+ 
+-canonical:
++canonical:	build
+ 	@$(subst xxxx,$(CANONDIR),$(VERIFY_DIRECTORY))
+ 	@for k in $(CANON_TOPLEVELFILES); do			\
+ 		$(ABICOPY) $$k $(CANONDIR);			\
+@@ -121,7 +121,7 @@
+ endif
+ 
+ # The generic target
+-install: build canonical
++install:
+ ifeq ($(ABI_NATIVE),unix)
+ 	@echo
+ 	@echo Using prefix value of [$(prefix)]...

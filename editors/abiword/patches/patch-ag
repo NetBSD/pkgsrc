@@ -1,0 +1,109 @@
+$NetBSD: patch-ag,v 1.1.1.1 1999/09/11 18:27:49 jlam Exp $
+
+--- src/pkg/common/unix/scripts/makewrapper.sh.orig	Thu Jun 24 16:54:37 1999
++++ src/pkg/common/unix/scripts/makewrapper.sh	Sat Sep 11 13:33:11 1999
+@@ -3,15 +3,20 @@
+ # This script is invoked to create wrapper scripts for AbiSuite
+ # binaries.  One should pass it the _base_ name of the program
+ # to wrap (one would pass "AbiWord" to wrap "AbiWord_s" and 
+-# "AbiWord_d"), and the install base of the tree, to which "bin"
+-# will be appended for binary and script locations.
++# "AbiWord_d"), the install base of the tree, the location of the
++# machine-dependent binaries and scripts, and the base of the X11
++# tree.
+ 
+ # Examples:
+-#     makewrapper.sh AbiWord /usr/local/AbiSuite
+-#     makewrapper.sh AbiCalc /usr/local/AbiSuite
++#     makewrapper.sh AbiWord /usr/pkg/share/AbiSuite \
++#		     /usr/pkg/libexec/AbiSuite /usr/X11R6
++#     makewrapper.sh AbiCalc /usr/pkg/share/AbiSuite \
++#		     /usr/pkg/libexec/AbiSuite /usr/X11R6
+ 
+ PROGRAM_NAME=$1
+ INSTALL_BASE=$2
++LIBEXECDIR=$3
++X11_BASE=$4
+ 
+ # Did they supply any arguments?
+ if [ -z "$PROGRAM_NAME" ]
+@@ -28,11 +33,25 @@
+     echo ""
+     exit 1
+ fi
++if [ -z "$LIBEXECDIR" ]
++then
++    echo ""
++    echo "Error: third argument (MD binaries directory) not specified."
++    echo ""
++    exit 1
++fi
++if [ -z "$X11_BASE" ]
++then
++    echo ""
++    echo "Error: fourth argument (X11 base directory) not specified."
++    echo ""
++    exit 1
++fi
+ 
+ # Make directory path up to program we're creating
+-mkdir -p $INSTALL_BASE/bin
++mkdir -p $LIBEXECDIR
+ 
+-cat >$INSTALL_BASE/bin/$PROGRAM_NAME<<EOF
++cat >$LIBEXECDIR/$PROGRAM_NAME<<EOF
+ #!/bin/sh
+ #
+ # AbiSuite program wrapper script, dynamically generated
+@@ -42,28 +61,31 @@
+ ABISUITE_HOME=$INSTALL_BASE
+ export ABISUITE_HOME
+ 
++# Change this if you move the AbiSuite binaries.
++ABISUITE_LIBEXEC=$LIBEXECDIR
++
+ # Change this if you move your fonts.
+ ABISUITE_FONT_HOME=\$ABISUITE_HOME/fonts
+ 
+ # Set run-time font path
+ if [ -d \$ABISUITE_FONT_HOME ]
+ then
+-    xset fp+ \$ABISUITE_FONT_HOME 1>/dev/null 2>/dev/null
++    $X11_BASE/bin/xset fp+ \$ABISUITE_FONT_HOME 1>/dev/null 2>/dev/null
+ fi
+ 
+ # Figure out which binary to run
+-if [ -f \$ABISUITE_HOME/bin/${PROGRAM_NAME}_d ]
++if [ -f \$ABISUITE_LIBEXEC/${PROGRAM_NAME}_d ]
+ then
+-    \$ABISUITE_HOME/bin/${PROGRAM_NAME}_d "\$@"
+-elif [ -f \$ABISUITE_HOME/bin/${PROGRAM_NAME}_s ]
++    \$ABISUITE_LIBEXEC/${PROGRAM_NAME}_d "\$@"
++elif [ -f \$ABISUITE_LIBEXEC/${PROGRAM_NAME}_s ]
+ then
+-    \$ABISUITE_HOME/bin/${PROGRAM_NAME}_s "\$@"
++    \$ABISUITE_LIBEXEC/${PROGRAM_NAME}_s "\$@"
+ else
+     echo ""
+     echo "Error: can't find ${PROGRAM_NAME} executables:"
+-    echo "    \$ABISUITE_HOME/bin/${PROGRAM_NAME}_d"
++    echo "    \$ABISUITE_LIBEXEC/${PROGRAM_NAME}_d"
+     echo "    -or-"
+-    echo "    \$ABISUITE_HOME/bin/${PROGRAM_NAME}_s"
++    echo "    \$ABISUITE_LIBEXEC/${PROGRAM_NAME}_s"
+     echo ""
+     exit
+ fi
+@@ -71,10 +93,10 @@
+ # Set post run-time font path
+ if [ -d \$ABISUITE_FONT_HOME ]
+ then
+-    xset fp- \$ABISUITE_FONT_HOME 1>/dev/null 2>/dev/null
++    $X11_BASE/bin/xset fp- \$ABISUITE_FONT_HOME 1>/dev/null 2>/dev/null
+ fi
+ EOF
+ 
+-chmod 755 ${INSTALL_BASE}/bin/$PROGRAM_NAME
++chmod 755 $LIBEXECDIR/$PROGRAM_NAME
+ 
+ 

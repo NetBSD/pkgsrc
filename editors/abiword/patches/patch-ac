@@ -1,0 +1,27 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/09/11 18:27:49 jlam Exp $
+
+--- src/config/abi_defs.mk.orig	Tue Jul 27 11:18:52 1999
++++ src/config/abi_defs.mk	Sat Sep 11 13:47:32 1999
+@@ -260,7 +260,7 @@
+ ##			a date stamp in a nightly build system).
+ ##
+ 
+-ABI_BUILD_VERSION	= unnumbered
++ABI_BUILD_VERSION	= 0.7.5
+ ABI_BUILD_ID		=
+ 
+ DIST			= $(ABI_ROOT)/dist
+@@ -310,8 +310,11 @@
+ ## We should change this when get non-gtk versions on unix....
+ 
+ ifeq ($(ABI_NATIVE),unix)
+-CFLAGS 		+=	`gtk-config --cflags`
+-EXTRA_LIBS	+=	`gtk-config --libs`
++GTK_CFLAGS	:=	$(shell gtk-config --cflags)
++GTK_LIBS	:=	$(shell gtk-config --libs)
++
++CFLAGS 		+=	$(GTK_CFLAGS)
++EXTRA_LIBS	+=	$(GTK_LIBS)
+ endif
+ 
+ ##################################################################
