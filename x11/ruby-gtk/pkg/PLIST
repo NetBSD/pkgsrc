@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 1999/09/17 05:00:22 sakamoto Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/09/17 05:21:33 sakamoto Exp $
 lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/gtk.so
-lib/ruby/gtkcompat.rb
+lib/ruby/${RUBY_VERSION}/gtkcompat.rb
 share/examples/ruby/gtk/drawing.rb
 share/examples/ruby/gtk/helloworld.rb
 share/examples/ruby/gtk/text.rb
