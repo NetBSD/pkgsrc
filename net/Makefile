@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.354 2003/02/18 22:12:44 mjl Exp $
+# $NetBSD: Makefile,v 1.355 2003/02/27 05:03:27 lukem Exp $
 #
 
 COMMENT=	Networking tools
@@ -119,7 +119,6 @@ SUBDIR+=	libsscript
 SUBDIR+=	linc
 SUBDIR+=	lopster
 SUBDIR+=	lukemftp
-SUBDIR+=	lukemftpd
 SUBDIR+=	md-whois
 SUBDIR+=	mirror
 SUBDIR+=	mouse-pppoe
@@ -259,6 +258,7 @@ SUBDIR+=	tightvncviewer
 SUBDIR+=	tinyfugue
 SUBDIR+=	tkined
 SUBDIR+=	tn5250
+SUBDIR+=	tnftpd
 SUBDIR+=	totd
 SUBDIR+=	traceroute-as
 SUBDIR+=	trafshow
