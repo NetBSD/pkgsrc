@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2003/06/29 10:22:22 uebayasi Exp $
+$NetBSD: patch-aa,v 1.5 2003/12/23 10:11:23 cube Exp $
 
---- src/Makefile.in.orig	Wed May 28 19:39:59 2003
-+++ src/Makefile.in	Mon Jun  9 08:36:00 2003
-@@ -815,7 +815,7 @@
+--- src/Makefile.in.orig	Mon Dec 22 14:56:28 2003
++++ src/Makefile.in
+@@ -821,7 +821,7 @@ check-am: all-am
+ check: check-am
  all-am: Makefile $(LIBRARIES) $(LTLIBRARIES) $(PROGRAMS) $(SCRIPTS)
- 
  installdirs:
--	$(mkinstalldirs) $(DESTDIR)$(pkgverlibdir) $(DESTDIR)$(bindir) $(DESTDIR)$(bindir) $(DESTDIR)$(pkgdatadir)
-+	$(mkinstalldirs) $(DESTDIR)$(bindir) $(DESTDIR)$(bindir) $(DESTDIR)$(pkgdatadir)
+-	$(mkdir_p) $(DESTDIR)$(pkgverlibdir) $(DESTDIR)$(bindir) $(DESTDIR)$(bindir) $(DESTDIR)$(pkgdatadir)
++	$(mkdir_p) $(DESTDIR)$(bindir) $(DESTDIR)$(bindir) $(DESTDIR)$(pkgdatadir)
  install: install-am
  install-exec: install-exec-am
  install-data: install-data-am
