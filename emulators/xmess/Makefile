@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2002/11/14 03:58:14 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2002/12/07 21:00:08 kristerw Exp $
 #
 
 DISTNAME=		xmame-0.56.2
 PKGNAME=		xmess-0.56.2
+PKGREVISION=		1
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -26,9 +27,7 @@ UNLIMIT_RESOURCES=	datasize
 
 # XXX On arm(32)/sparc, the src/unix/video_drivers/x11_window.c causes problems
 .if (${MACHINE_ARCH} == "arm32" || ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "sparc")
-.  if (${CFLAGS:M-O2} == "-O2")
-CFLAGS:=		${CFLAGS:S/-O2/-O0/}
-.  endif
+CFLAGS+=		-DBROKEN_COMPILER
 .endif
 
 ROMPATH=		${PREFIX}/share/${TARGET}
