@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/01 14:29:22 taca Exp $
+# $NetBSD: Makefile,v 1.2 2002/03/17 15:22:12 taca Exp $
 # FreeBSD: ports/net/ruby-uri/Makefile,v 1.7 2000/12/25 15:54:08 knu Exp
 
 DISTNAME=	uri-4.27
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www02.so-net.ne.jp/~greentea/ruby/uri/
 MAINTAINER=	taca@netbsd.org
 HOMEPAGE=	http://www02.so-net.ne.jp/%7Egreentea/ruby/uri/
 COMMENT=	Ruby interface to parse URIs according to RFC 2396
+
+RUBY_VER=	1.4		# now this is for ruby 1.4 only.
 
 DIST_SUBDIR=	ruby
 USE_RUBY=	yes
