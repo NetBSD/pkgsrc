@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1786 2003/03/27 17:54:06 wiz Exp $
+$NetBSD: CHANGES,v 1.1787 2003/03/27 20:03:14 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1328,3 +1328,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated lsof to 4.67 [atatat 2003-03-27]
 	Updated rxvt to 2.7.10nb1 [salo 2003-03-27]
 	Updated pen to 0.10.0 [wiz 2003-03-27]
+	Updated apcupsd to 3.8.6 [bouyer 2003-03-27]
