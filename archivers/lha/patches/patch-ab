@@ -19,3 +19,14 @@
   			if (cmd_filec >= xfilec) {
   				xfilec += 256;
   				cmd_filev = (char **) realloc(xfilev,
+--- man/Makefile	1997/11/14 16:39:56	1.1
++++ man/Makefile	1997/11/14 16:42:32
+@@ -8,7 +8,7 @@
+ 	nroff -man lha.n > lha.man
+ 
+ install:
+-	$(INSTALL) $(INSTALLMAN) lha.n $(MANDIR)/man$(MANSECT)/lha.$(MANSECT)
++	${INSTALL} -c -m 0444 -o ${BINOWN} -g ${BINGRP} lha.n ${MANDIR}/man${MANSECT}/lha.${MANSECT}
+ 
+ clean:
+ 	rm -f *~
