@@ -1,32 +1,23 @@
-# $NetBSD: Makefile,v 1.14 2004/10/03 00:18:14 tv Exp $
-#
+# $NetBSD: Makefile,v 1.15 2004/11/26 09:10:11 adam Exp $
 
-DISTNAME=	FSViewer.app-0.2.3
-PKGNAME=	FSViewer-0.2.3
-PKGREVISION=	4
+DISTNAME=	FSViewer.app-0.2.5
+PKGNAME=	FSViewer-0.2.5
 CATEGORIES=	sysutils x11 windowmaker
-MASTER_SITES=	http://www.csn.ul.ie/~clernong/download/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} icons.tar.gz
+MASTER_SITES=	http://www.bayernline.de/~gscholz/linux/fsviewer/
+
+PATCH_SITES=	http://www.bayernline.de/~gscholz/linux/fsviewer/
+PATCHFILES=	FSViewer.app-0.2.5-WM-0.81.0.patch.gz
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	johnam@mail.kemper.org
-HOMEPAGE=	http://www.csn.ul.ie/~clernong/projects/fsviewer.html
+HOMEPAGE=	http://www.bayernline.de/~gscholz/linux/fsviewer/
 COMMENT=	NextStep-like Filemanager for WindowMaker
 
-DIST_SUBDIR=	fsviewer
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
-
-# needed for the new location of WINGs include files -- can be removed
-# when the application gets updated for windowmaker>=0.64.0
-CFLAGS+=	-I${BUILDLINK_PREFIX.windowmaker}/include/WINGs
-
-USE_GNU_TOOLS+=		make
-GNU_CONFIGURE=		yes
-USE_X11=		yes
 USE_BUILDLINK3=		yes
-
-post-install:
-	cd ${PREFIX}/GNUstep/Apps/FSViewer.app && \
-		${PAX} -O -zrf ${_DISTDIR}${DISTSUBDIR}/icons.tar.gz *.xpm *.tif
+USE_GNU_TOOLS+=		make
+USE_PKGLOCALEDIR=	yes
+USE_X11=		yes
+GNU_CONFIGURE=		yes
 
 .include "../../wm/windowmaker/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
