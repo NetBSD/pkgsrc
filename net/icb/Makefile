@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.10 1999/11/26 22:16:21 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 1999/11/26 22:43:46 hubertf Exp $
 #
 
+# Note: The file ftp://ftp.icb.net/pub/icb/icb-0.9grok2.tar.gz is way
+#	older than this here. It's got no readline support, tcl, ... - HF
 DISTNAME=		icb-5.0.9
 PKGNAME=		icb-5.0.9pl1
 CATEGORIES=		net
