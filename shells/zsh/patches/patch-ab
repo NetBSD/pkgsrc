@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 11:13:59 agc Exp $
+$NetBSD: patch-ab,v 1.3 2000/01/06 22:42:15 windsor Exp $
 
---- Doc/Makefile.in.orig	Wed Dec 18 05:14:11 1996
-+++ Doc/Makefile.in	Mon Jun 16 20:40:29 1997
-@@ -93,7 +93,8 @@
+--- Doc/Makefile.in.orig	Thu Jan  6 15:40:23 2000
++++ Doc/Makefile.in	Thu Jan  6 15:42:03 2000
+@@ -91,7 +91,8 @@
  everything: all zsh_us.ps zsh_a4.ps zsh_toc.html
  
  zsh.info: zsh.texi
@@ -12,11 +12,11 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:13:59 agc Exp $
  	echo Info documentation cannot be compiled without $(MAKEINFO). ; \
  	echo You can find precompiled info files in zsh-doc.tar.gz. ; }
  
-@@ -127,7 +128,7 @@
+@@ -125,7 +126,7 @@
  # install info pages, creating install directory if necessary
  install.info: zsh.info
  	$(top_srcdir)/mkinstalldirs $(infodir)
--	for file in zsh.info zsh.info-[1-9]; do \
+-	for file in zsh.info zsh.info-[1-9]*; do \
 +	for file in zsh.info*; do \
  	  [ -f "$$file" ] && $(INSTALL_DATA) $$file $(infodir) ; \
  	done
