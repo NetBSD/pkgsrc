@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2002/07/18 02:19:36 rh Exp $
+
+--- pangowin32.pc.in.orig	Wed Mar  6 03:20:57 2002
++++ pangowin32.pc.in
+@@ -7,6 +7,6 @@ Name: Pango Win32
+ Description: Win32 GDI font support for Pango
+ Version: @VERSION@
+ Requires: pango
+-Libs: -L${libdir} -lpangowin32-@PANGO_API_VERSION@ @WIN32_LIBS@
++Libs: -L${libdir} -Wl,-R${libdir} -lpangowin32-@PANGO_API_VERSION@ @WIN32_LIBS@
+ Cflags: -I${includedir}/pango-1.0
+ 

@@ -1,0 +1,11 @@
+$NetBSD: patch-ap,v 1.1 2002/07/18 02:19:29 rh Exp $
+
+--- gtk+-2.0.pc.in.orig	Wed Mar  6 07:03:49 2002
++++ gtk+-2.0.pc.in
+@@ -11,5 +11,5 @@ Name: GTK+
+ Description: GIMP Tool Kit (${target} target)
+ Version: @VERSION@
+ Requires: gdk-${target}-2.0 @GTK_PACKAGES@
+-Libs: -L${libdir} -lgtk-${target}-@GTK_API_VERSION@ @GTK_EXTRA_LIBS@
++Libs: -L${libdir} -Wl,-R${libdir} -lgtk-${target}-@GTK_API_VERSION@ @GTK_EXTRA_LIBS@
+ Cflags: -I${includedir}/gtk-2.0 @GTK_EXTRA_CFLAGS@
