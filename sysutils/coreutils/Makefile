@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/02/22 21:32:18 recht Exp $
+# $NetBSD: Makefile,v 1.16 2004/02/22 21:44:33 recht Exp $
 
 DISTNAME=	coreutils-5.2.0
 CATEGORIES=	sysutils
@@ -28,6 +28,7 @@ CONFIGURE_ARGS=		--program-prefix=${GNU_PROGRAM_PREFIX}
 # GNU_PROGRAM_PREFIX == 'g'
 .if ${GNU_PROGRAM_PREFIX} == "g"
 CONFLICTS+=		id-utils-[0-9]* gnome-utils<1.4.1.2nb2
+CONFLICTS+=		geneweb-[0-9]*
 .endif
 # print/teTeX*-bin installs a 'readlink' program, so conflict with it if
 # GNU_PROGRAM_PREFIX == ''
