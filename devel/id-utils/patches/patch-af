@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.1 2001/08/04 09:52:27 wiz Exp $
+
+--- libidu/Makefile.am.orig	Sun Jul  7 18:36:06 1996
++++ libidu/Makefile.am
+@@ -2,9 +2,9 @@
+ 
+ AUTOMAKE_OPTIONS = ansi2knr
+ 
+-noinst_LIBRARIES = idu
++noinst_LIBRARIES = libidu.a
+ 
+-idu_SOURCES = dynvec.c hash.c idfile.c idread.c idwrite.c fnprint.c \
++libidu_a_SOURCES = dynvec.c hash.c idfile.c idread.c idwrite.c fnprint.c \
+ 	scanners.c walker.c
+ 
+ idudir = $(prefix)/share
