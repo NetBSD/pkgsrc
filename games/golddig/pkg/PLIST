@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 1998/07/26 22:13:17 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/09/13 22:13:08 garbled Exp $
 bin/golddig
 bin/makelev
 man/man6/golddig.6
-share/golddig/scores
 share/golddig/goldlev001
 share/golddig/goldlev002
 share/golddig/goldlev003
