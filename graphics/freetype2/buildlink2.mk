@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/09/26 17:35:09 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2002/09/26 20:24:08 jlam Exp $
 
 .if !defined(FREETYPE2_BUILDLINK2_MK)
 FREETYPE2_BUILDLINK2_MK=	# defined
@@ -58,8 +58,7 @@ freetype2-buildlink-config:
 		${SED}	-e "s|@AWK@|${AWK}|g"				\
 			-e "s|@SED@|${SED}|g"				\
 			-e "s|@X11BASE@|${X11BASE}|g"			\
-			-e "s|@BUILDLINK_DIR@|${BUILDLINK_PREFIX.freetype2}|g" \
-			${.CURDIR}/../../graphics/freetype2/buildlink-freetype-config.in \
+			${.CURDIR}/../../graphics/freetype2/buildlink2-freetype-config.in \
 			> ${_FREETYPE2_BUILDLINK_CONFIG};		\
 		${CHMOD} +x ${_FREETYPE2_BUILDLINK_CONFIG};		\
 	fi
