@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/06/14 14:42:18 mrg Exp $
+bin/xlogout
+lib/X11/app-defaults/XLogout
+man/cat1/xlogout.0
