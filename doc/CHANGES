@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1111 2003/01/13 04:59:10 rh Exp $
+$NetBSD: CHANGES,v 1.1112 2003/01/13 10:55:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -248,3 +248,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xchat-gnome to 1.8.11 [tron 2003-01-12]
 	Updated gnome to 1.4.2.1 [rh 2003-01-13]
 	Updated soup to 0.7.10nb2 [rh 2003-01-13]
+	Updated unrar to 3.1.3 [wiz 2003-01-13]
