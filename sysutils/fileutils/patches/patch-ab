@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2002/03/11 19:35:06 tron Exp $
+
+--- lib/Makefile.in.orig	Sun Mar 10 19:40:15 2002
++++ lib/Makefile.in	Mon Mar 11 20:25:16 2002
+@@ -975,7 +975,7 @@
+ 
+ install-data-am:
+ 
+-install-exec-am: install-exec-local
++install-exec-am:
+ 
+ install-info: install-info-am
+ 
