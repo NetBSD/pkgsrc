@@ -1,6 +1,6 @@
 /*
 
-	$NetBSD: rpm2pkg.c,v 1.1 1999/09/19 23:58:37 tron Exp $
+	$NetBSD: rpm2pkg.c,v 1.2 1999/09/26 11:28:11 tron Exp $
 
 */
 
@@ -382,6 +382,53 @@ int WriteFile(gzFile In,char *Name,mode_t Mode,long Length)
  return FALSE;
 }
 
+void CheckSymLinks(PListEntry **Links,PListEntry **Files,PListEntry **Dirs)
+
+{
+ PListEntry *Link;
+ struct stat Stat;
+
+ while ((Link=*Links)!=NULL)
+  {
+   PListEntry *Ptr;
+   char *Basename;
+
+   if (Link->pe_Left!=NULL)
+    CheckSymLinks(&Link->pe_Left,Files,Dirs);
+
+   if ((stat(Link->pe_Name,&Stat)<0)||!S_ISREG(Stat.st_mode))
+    {
+     Links=&Link->pe_Right;
+     continue;
+    }
+
+   (void)InsertPListEntry(Files,Link->pe_Name);
+   if ((Basename=strrchr(Link->pe_Name,'/'))!=NULL)
+    {
+     *Basename='\0';
+     if ((Ptr=FindPListEntry(*Dirs,Link->pe_Name))!=NULL)
+      Ptr->pe_DirEmpty=FALSE;
+    }
+
+   if (Link->pe_Right==NULL)
+    {
+     *Links=Link->pe_Left;
+     free(Link);
+     break;
+    }
+
+   *Links=Link->pe_Right;
+   Ptr=Link->pe_Left;
+   free(Link);
+
+   if (Ptr==NULL) continue;
+
+   Link=*Links;
+   while (Link->pe_Left!=NULL) Link=Link->pe_Left;
+   Link->pe_Left=Ptr;
+  }
+}
+
 int main(int argc,char **argv)
 
 {
@@ -614,12 +661,7 @@ int main(int argc,char **argv)
            return EXIT_FAILURE;
           }
 
-         if ((stat(Name,&Stat)==0)&&S_ISREG(Stat.st_mode))
-          {
-           (void)InsertPListEntry(&Files,Name);
-           (void)MakeTargetDir(Name,&Dirs,TRUE);
-          }
-         else InsertPListEntry(&Links,Name)->pe_Link=Link;
+         InsertPListEntry(&Links,Name)->pe_Link=Link;
          break;
         }
        case C_ISREG:
