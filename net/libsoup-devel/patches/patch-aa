@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2005/02/19 22:36:20 wiz Exp $
+
+--- libsoup/soup-gnutls.c.orig	2004-09-30 16:49:07.000000000 +0200
++++ libsoup/soup-gnutls.c
+@@ -61,7 +61,6 @@ verify_certificate (gnutls_session sessi
+ 	}
+ 
+ 	if (status & GNUTLS_CERT_INVALID ||
+-	    status & GNUTLS_CERT_NOT_TRUSTED ||
+ 	    status & GNUTLS_CERT_REVOKED)
+ 	{
+ 		g_warning ("The certificate is not trusted.");
