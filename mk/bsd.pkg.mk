@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1054 2002/09/24 13:01:02 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1055 2002/09/24 21:54:49 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -641,12 +641,6 @@ MESSAGE_SUBST+=	PKGNAME=${PKGNAME}					\
 MESSAGE_SUBST_SED=	${MESSAGE_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}
 .endif
 
-PKG_ADD?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_add
-PKG_ADMIN?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_admin
-PKG_CREATE?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_create
-PKG_DELETE?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_delete
-PKG_INFO?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_info
-
 # Latest version of digest(1) required for pkgsrc
 DIGEST_REQD=		20010302
 
@@ -739,8 +733,6 @@ PKG_ARGS_BINPKG=	-p ${PREFIX:S/^${DESTDIR}//} -L ${PREFIX} ${PKG_ARGS_COMMON}
 
 PKG_SUFX?=		.tgz
 #PKG_SUFX?=		.tbz		# bzip2(1) pkgs
-# where pkg_add records its dirty deeds.
-PKG_DBDIR?=		${DESTDIR}/var/db/pkg
 
 # Define SMART_MESSAGES in /etc/mk.conf for messages giving the tree
 # of dependencies for building, and the current target.
