@@ -1,4 +1,4 @@
-# $NetBSD: defs.Interix.mk,v 1.7 2004/03/29 02:27:44 tv Exp $
+# $NetBSD: defs.Interix.mk,v 1.8 2004/03/30 15:29:26 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -121,6 +121,7 @@ _OPSYS_HAS_JAVA=	no	# Java is not standard
 _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no	# libossaudio is available
 _OPSYS_PERL_REQD=		# no base version of perl required
+_OPSYS_PKGTOOLS_REQD=	20040330
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
 _OPSYS_RPATH_NAME=	-R	# name of symbol in rpath directive to linker 
 _OPSYS_SHLIB_TYPE=	ELF	# shared lib type - not exactly true, but near enough
