@@ -1,33 +1,34 @@
-$NetBSD: patch-aa,v 1.9 1999/03/09 22:44:58 tron Exp $
+$NetBSD: patch-aa,v 1.10 1999/04/16 20:09:08 tron Exp $
 
---- configure.orig	Thu Feb 25 12:02:28 1999
-+++ configure	Tue Mar  9 23:23:53 1999
+--- configure.orig	Thu Mar 25 06:24:30 1999
++++ configure	Fri Apr 16 21:30:53 1999
 @@ -22,7 +22,7 @@
  #
  GTK_MAJOR_VERSION=1
  GTK_MINOR_VERSION=2
--GTK_MICRO_VERSION=0
-+GTK_MICRO_VERSION=12
- GTK_INTERFACE_AGE=0
- GTK_BINARY_AGE=0
+-GTK_MICRO_VERSION=1
+-GTK_INTERFACE_AGE=0
++GTK_MICRO_VERSION=13
++GTK_INTERFACE_AGE=1
+ GTK_BINARY_AGE=1
  GTK_VERSION=$GTK_MAJOR_VERSION.$GTK_MINOR_VERSION.$GTK_MICRO_VERSION
-@@ -1600,6 +1600,7 @@
-   ac_tool_prefix=
- fi
+@@ -1599,6 +1599,7 @@
  
+ 
+ # Check for any special flags to pass to ltconfig.
 +if false; then
+ libtool_flags="--cache-file=$cache_file"
+ test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
+ test "$enable_static" = no && libtool_flags="$libtool_flags --disable-static"
+@@ -1894,6 +1895,7 @@
+ 
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
- 
-@@ -1832,6 +1833,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
 +fi
  
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
-@@ -4444,7 +4446,7 @@
+@@ -4506,7 +4508,7 @@
  
  # AM_GTK_GNU_GETTEXT above substs $DATADIRNAME
  # this is the directory where the *.{mo,gmo} files are installed
@@ -36,7 +37,7 @@ $NetBSD: patch-aa,v 1.9 1999/03/09 22:44:58 tron Exp $
  
  
  echo $ac_n "checking for extra flags to get ANSI library prototypes""... $ac_c" 1>&6
-@@ -7356,10 +7358,12 @@
+@@ -7421,10 +7423,12 @@
      top_srcdir="$ac_dots$ac_given_srcdir" ;;
    esac
  
