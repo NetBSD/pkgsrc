@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 1999/09/02 21:29:31 tron Exp $
+
+*** vncviewer/Imakefile.orig	Thu Sep  2 11:45:25 1999
+--- vncviewer/Imakefile	Thu Sep  2 11:45:44 1999
+***************
+*** 35,38 ****
+  
+  OBJS = $(SRCS:.c=.o)
+  
+! ComplexProgramTarget(vncviewer)
+--- 35,38 ----
+  
+  OBJS = $(SRCS:.c=.o)
+  
+! ComplexProgramTargetNoMan(vncviewer)
