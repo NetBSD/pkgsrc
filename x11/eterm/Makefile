@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/10/28 00:31:57 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2000/02/16 10:35:56 agc Exp $
 
 DISTNAME=		Eterm-0.8.9
 PKGNAME=		eterm-0.8.9
@@ -23,16 +23,30 @@ USE_X11BASE=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
+.include "../../mk/bsd.prefs.mk"
+
+pre-build:
+	@if ${PKG_INFO} -qe 'eterm<0.8.9'; then				\
+		${ECHO} "**** An older version of Eterm is installed";	\
+		${ECHO} "**** ${PKGNAME} cannot be built with it installed."; \
+		${ECHO} "**** Please delete it before building";	\
+		${ECHO} "**** or use \"${MAKE} update\".";		\
+		${FALSE};						\
+	fi
+
 post-extract:
 	${LN} -sf ${WRKSRC} ${WRKDIR}/Eterm
-.for FILE in ${PIXMAP_FILES}
-	cd ${WRKDIR}; ${PAX} -zrf ${DISTDIR}/${FILE}
-.endfor
+	cd ${WRKDIR};							\
+	for f in ${PIXMAP_FILES}; do					\
+		${GZCAT} ${DISTDIR}/$$f | ${PAX} -r;			\
+	done
 
+.if ${OPSYS} == "NetBSD"
 post-install:
 	# Make Eterm setuid root so that utmp logging functions correctly.
 	#
 	${CHOWN} 0 ${PREFIX}/bin/Eterm
 	${CHMOD} 4711 ${PREFIX}/bin/Eterm
+.endif
 
 .include "../../mk/bsd.pkg.mk"
