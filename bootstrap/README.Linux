@@ -1,0 +1,7 @@
+$NetBSD: README.Linux,v 1.1.1.1 2004/03/11 13:03:59 grant Exp $
+
+Please read the general README file as well.
+
+Some versions of Linux (for example Debian GNU/Linux) need either libtermcap
+or libcurses (libncurses).  Installing the distributions libncurses-dev
+package (or equivalent) should fix the problem.

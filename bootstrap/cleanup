@@ -1,0 +1,17 @@
+#! /bin/sh
+
+# $NetBSD: cleanup,v 1.1.1.1 2004/03/11 13:03:59 grant Exp $
+#
+
+if [ -d /usr/ccs/bin -a -x /usr/ccs/bin/make ]; then
+        PATH=/usr/ccs/bin:$PATH; export PATH
+fi
+
+(cd bmake; rm -f *.o lst.lib/*.o bmake bmake.boot Makefile confdefs.h config.h config.log config.status config.cache makefile.boot lst.lib/makefile.boot; \
+	[ -f mk/bsd.man.mk.orig ] && mv -f mk/bsd.man.mk.orig mk/bsd.man.mk; \
+	[ -f mk/bsd.lib.mk.orig ] && mv -f mk/bsd.lib.mk.orig mk/bsd.lib.mk; )
+for d in libnbcompat digest tnftp pax pkg_install mtree sed; do
+	(cd $d; [ -f Makefile ] && make distclean)
+done
+
+rm -f Makefile.inc mk.conf.example digest/.size */config.cache
