@@ -1,3 +1,4 @@
+# $NetBSD: Makefile,v 1.2 1997/10/06 15:27:55 agc Exp $
 # New ports collection makefile for:	perl5
 # Version required:	5.004_01
 # Date created:		16 April 1995
@@ -62,7 +63,13 @@ MAN3PREFIX=	${PREFIX}/lib/perl5
 test:
 	@(cd ${WRKSRC}; make test)
 
+OPSYS!= uname -s
+
 post-install:
+	@strip ${PREFIX}/bin/perl
+.if (${OPSYS} != "NetBSD")
+# agc - no suidperl???
 	@strip ${PREFIX}/bin/perl ${PREFIX}/bin/suidperl
+.endif
 
 .include <bsd.port.mk>
