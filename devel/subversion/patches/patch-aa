@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.11 2004/09/30 14:39:33 epg Exp $
+
+--- build-outputs.mk.orig	2004-09-22 21:44:58.000000000 -0400
++++ build-outputs.mk
+@@ -585,11 +585,11 @@ install-swig-java-tests: 
+ 	$(MKDIR) $(DESTDIR)$(swig_java_testsdir)
+ 	$(INSTALL_EXTRA_SWIG_JAVA_TESTS)
+ 
+-install-swig-pl-lib: subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la install-fsmod-lib
++install-swig-pl-lib: subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la
+ 	$(MKDIR) $(DESTDIR)$(swig_pl_libdir)
+ 	cd subversion/bindings/swig/perl/libsvn_swig_perl ; $(INSTALL_SWIG_PL_LIB) libsvn_swig_perl-1.la $(DESTDIR)$(swig_pl_libdir)/libsvn_swig_perl-1.la
+ 
+-install-swig-py: subversion/bindings/swig/python/_client.la subversion/bindings/swig/python/_core.la subversion/bindings/swig/python/_delta.la subversion/bindings/swig/python/_fs.la subversion/bindings/swig/python/_ra.la subversion/bindings/swig/python/_repos.la subversion/bindings/swig/python/_wc.la install-lib install-ramod-lib install-fsmod-lib install-swig-py-lib
++install-swig-py: subversion/bindings/swig/python/_client.la subversion/bindings/swig/python/_core.la subversion/bindings/swig/python/_delta.la subversion/bindings/swig/python/_fs.la subversion/bindings/swig/python/_ra.la subversion/bindings/swig/python/_repos.la subversion/bindings/swig/python/_wc.la install-swig-py-lib
+ 	$(MKDIR) $(DESTDIR)$(swig_pydir)
+ 	cd subversion/bindings/swig/python ; $(INSTALL_SWIG_PY) _client.la $(DESTDIR)$(swig_pydir)/_client.la
+ 	cd subversion/bindings/swig/python ; $(INSTALL_SWIG_PY) _core.la $(DESTDIR)$(swig_pydir)/_core.la
+@@ -600,7 +600,7 @@ install-swig-py: subversion/bindings/swi
+ 	cd subversion/bindings/swig/python ; $(INSTALL_SWIG_PY) _wc.la $(DESTDIR)$(swig_pydir)/_wc.la
+ 	$(INSTALL_EXTRA_SWIG_PY)
+ 
+-install-swig-py-lib: subversion/bindings/swig/python/libsvn_swig_py/libsvn_swig_py-1.la install-fsmod-lib
++install-swig-py-lib: subversion/bindings/swig/python/libsvn_swig_py/libsvn_swig_py-1.la
+ 	$(MKDIR) $(DESTDIR)$(swig_py_libdir)
+ 	cd subversion/bindings/swig/python/libsvn_swig_py ; $(INSTALL_SWIG_PY_LIB) libsvn_swig_py-1.la $(DESTDIR)$(swig_py_libdir)/libsvn_swig_py-1.la
+ 
