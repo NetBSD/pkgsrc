@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1999/02/20 22:48:24 hubertf Exp $
+# $NetBSD: Makefile,v 1.15 1999/04/13 01:25:35 abs Exp $
 #
 
 DISTNAME=	xmcd-2.4
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://mercury.hypersurf.com/~amb/download/xmcd/src/
 
 MAINTAINER=	hubertf@netbsd.org
-HOMEPAGE=	http://sunsite.unc.edu/~cddb/xmcd/index.html
+HOMEPAGE=	http://metalab.unc.edu/tkan/xmcd/
 
 DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
 
