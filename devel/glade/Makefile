@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 1999/10/23 11:08:55 tron Exp $
+# $NetBSD: Makefile,v 1.13 1999/11/08 22:04:42 tron Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/11/18 17:35:16 vanilla Exp
 #
 
-DISTNAME=	glade-0.5.1
+DISTNAME=	glade-0.5.3
 CATEGORIES=	devel
 MASTER_SITES=   http://glade.pn.org/ \
 		http://www.glade.hhips.de/
@@ -10,9 +10,6 @@ MASTER_SITES=   http://glade.pn.org/ \
 MAINTAINER=     packages@netbsd.org
 HOMEPAGE=	http://glade.pn.org/
 
-BUILD_DEPENDS+=	xgettext:../../devel/gettext
-BUILD_DEPENDS+=	msgfmt:../../devel/gettext
-DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	gnome-core-*:../../x11/gnome-core
 
 GNU_CONFIGURE=	yes
