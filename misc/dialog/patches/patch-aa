@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 1998/08/07 11:10:13 agc Exp $
+$NetBSD: patch-aa,v 1.4 1999/01/04 20:47:31 frueauf Exp $
 
 --- Makefile.orig	Thu Jan  9 07:19:34 1997
-+++ Makefile	Tue Jun 30 18:29:59 1998
++++ Makefile	Mon Jan  4 20:39:17 1999
 @@ -17,8 +17,8 @@
  # can be disabled to make dialog a bit smaller (could be done for more things)
  HAVE_GUAGE=true
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.3 1998/08/07 11:10:13 agc Exp $
  
  CFLAGS = $(OPTIM) -DLOCALE -DVERSION=\"0.6z\"
 -LDFLAGS = -L .
-+LDFLAGS = -L . -L${PREFIX}/lib
++LDFLAGS = -Wl,-R${PREFIX}/lib -L . -L${PREFIX}/lib
  LDLIBS = -ldialog
  
  OBJS = checklist.o inputbox.o menubox.o msgbox.o \
