@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.538 2002/11/17 12:00:22 grant Exp $
+$NetBSD: CHANGES,v 1.539 2002/11/17 16:08:45 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3643,3 +3643,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated win32-codecs to 020909 [wiz 2002-11-16]
 	Updated gtexinfo to 4.3 [seb 2002-11-17]
 	Updated libtool to 1.4.20010614nb10 [grant 2002-11-17]
+	Updated bind4 to 4.9.11 [itojun 2002-11-17]
+	Updated bind8 to 8.3.4 [itojun 2002-11-17]
