@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2003/12/15 10:34:33 martti Exp $
+@comment $NetBSD: PLIST,v 1.13 2004/03/31 07:03:30 cube Exp $
 bin/editcap
 bin/ethereal
 bin/idl2eth
@@ -7,20 +7,24 @@ bin/tethereal
 bin/text2pcap
 lib/ethereal/plugins/${PKGVERSION}/acn.la
 lib/ethereal/plugins/${PKGVERSION}/acn.so
-lib/ethereal/plugins/${PKGVERSION}/asn1.la
-lib/ethereal/plugins/${PKGVERSION}/asn1.so
 lib/ethereal/plugins/${PKGVERSION}/artnet.la
 lib/ethereal/plugins/${PKGVERSION}/artnet.so
+lib/ethereal/plugins/${PKGVERSION}/asn1.la
+lib/ethereal/plugins/${PKGVERSION}/asn1.so
 lib/ethereal/plugins/${PKGVERSION}/coseventcomm.la
 lib/ethereal/plugins/${PKGVERSION}/coseventcomm.so
+lib/ethereal/plugins/${PKGVERSION}/ciscosm.la
+lib/ethereal/plugins/${PKGVERSION}/ciscosm.so
 lib/ethereal/plugins/${PKGVERSION}/cosnaming.la
 lib/ethereal/plugins/${PKGVERSION}/cosnaming.so
 lib/ethereal/plugins/${PKGVERSION}/docsis.la
 lib/ethereal/plugins/${PKGVERSION}/docsis.so
-lib/ethereal/plugins/${PKGVERSION}/enttec.so
 lib/ethereal/plugins/${PKGVERSION}/enttec.la
+lib/ethereal/plugins/${PKGVERSION}/enttec.so
 lib/ethereal/plugins/${PKGVERSION}/gryphon.la
 lib/ethereal/plugins/${PKGVERSION}/gryphon.so
+lib/ethereal/plugins/${PKGVERSION}/irda.la
+lib/ethereal/plugins/${PKGVERSION}/irda.so
 lib/ethereal/plugins/${PKGVERSION}/lwres.la
 lib/ethereal/plugins/${PKGVERSION}/lwres.so
 lib/ethereal/plugins/${PKGVERSION}/megaco.la
@@ -29,10 +33,26 @@ lib/ethereal/plugins/${PKGVERSION}/mgcp.la
 lib/ethereal/plugins/${PKGVERSION}/mgcp.so
 lib/ethereal/plugins/${PKGVERSION}/pcli.la
 lib/ethereal/plugins/${PKGVERSION}/pcli.so
-lib/ethereal/plugins/${PKGVERSION}/rdm.so
 lib/ethereal/plugins/${PKGVERSION}/rdm.la
+lib/ethereal/plugins/${PKGVERSION}/rdm.so
+lib/ethereal/plugins/${PKGVERSION}/rlm.la
+lib/ethereal/plugins/${PKGVERSION}/rlm.so
 lib/ethereal/plugins/${PKGVERSION}/rtnet.la
 lib/ethereal/plugins/${PKGVERSION}/rtnet.so
+lib/ethereal/plugins/${PKGVERSION}/rudp.la
+lib/ethereal/plugins/${PKGVERSION}/rudp.so
+lib/ethereal/plugins/${PKGVERSION}/v5ua.la
+lib/ethereal/plugins/${PKGVERSION}/v5ua.so
+lib/libethereal.a
+lib/libethereal.la
+lib/libethereal.so
+lib/libethereal.so.0
+lib/libethereal.so.0.1
+lib/libwiretap.a
+lib/libwiretap.la
+lib/libwiretap.so
+lib/libwiretap.so.0
+lib/libwiretap.so.0.1
 man/man1/editcap.1
 man/man1/ethereal.1
 man/man1/idl2eth.1
@@ -45,8 +65,17 @@ share/ethereal/diameter/dictionary.xml
 share/ethereal/diameter/mobileipv4.xml
 share/ethereal/diameter/nasreq.xml
 share/ethereal/diameter/sunping.xml
+share/ethereal/help/capture_filters.txt
+share/ethereal/help/capturing.txt
+share/ethereal/help/display_filters.txt
+share/ethereal/help/faq.txt
+share/ethereal/help/getting_started.txt
+share/ethereal/help/overview.txt
+share/ethereal/help/toc
+share/ethereal/help/well_known.txt
 share/ethereal/manuf
 @dirrm share/ethereal/diameter
+@dirrm share/ethereal/help
 @dirrm share/ethereal
 @dirrm lib/ethereal/plugins/${PKGVERSION}
 @dirrm lib/ethereal/plugins
