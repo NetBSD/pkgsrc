@@ -1,20 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2001/09/27 23:18:13 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/01/21 21:47:47 wiz Exp $
 #
 
-DISTNAME=	binaries-${CODEC_VERSION}
-PKGNAME=	win32-codecs-${CODEC_VERSION}
+DISTNAME=	w32codec-0.60
+PKGNAME=	win32-codecs-011227
 CATEGORIES=	graphics
-MASTER_SITES=	http://ernie.eit.uni-kl.de/avifile/		\
-		http://divx.euro.ru/				\
-		http://www.toon.eu.org/divx/
-DISTFILES=	${DISTNAME}.zip wmvds32.ax.gz
+MASTER_SITES=	ftp://mplayerhq.hu/MPlayer/releases/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	zuntum@netbsd.org
-COMMENT=	Huge compilation of Win32 binary codecs, including MPEG-4(DivX ;-))
-
-BUILD_DEPENDS=	unzip-[0-9]*:../../archivers/unzip
-
-EXTRACT_ONLY=	#
+COMMENT=	huge compilation of Win32 binary codecs
 
 NO_BUILD=	yes
 
@@ -26,13 +20,8 @@ NO_BIN_ON_FTP=  ${RESTRICTED}
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 
-CODEC_VERSION=	010122
-
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/win32
-	${LOCALBASE}/bin/unzip ${DISTDIR}/binaries-${CODEC_VERSION}.zip \
-		-d ${PREFIX}/lib/win32
-	${GZCAT} ${DISTDIR}/wmvds32.ax.gz > ${PREFIX}/lib/win32/wmvds32.ax
-	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/lib/win32
+	${INSTALL_DATA} ${WRKSRC}/* ${PREFIX}/lib/win32
 
 .include "../../mk/bsd.pkg.mk"
