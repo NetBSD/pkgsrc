@@ -12,5 +12,3 @@ A library of functions written in the Yorick language, including
 Bessel, gamma, and related functions, multiple key sorting, spline,
 rational function, and least squares fitting, and routines to read and
 write netCDF files. 
-
-NetBSD port by John P. Refling <refling@comet.lbl.gov>
