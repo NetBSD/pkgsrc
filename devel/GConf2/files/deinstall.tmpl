@@ -1,4 +1,4 @@
-# $NetBSD: deinstall.tmpl,v 1.1 2003/02/14 20:05:14 jmmv Exp $
+# $NetBSD: deinstall.tmpl,v 1.2 2003/03/17 17:46:49 jmmv Exp $
 #
 # Unregister GConf2 schema files from GConf2's database at install time.
 #
@@ -10,7 +10,7 @@ GCONF2_CONFIG_SOURCE="@GCONF2_CONFIG_SOURCE@"
 
 case ${STAGE} in
 DEINSTALL)
-	${ECHO} "===> Unregistering GConf2 schemas for ${PKGBASE}"
+	${ECHO} "===> Unregistering GConf2 schemas for ${PKGNAME}"
 	for f in ${GCONF2_SCHEMAS}; do
 		GCONF_CONFIG_SOURCE="${GCONF2_CONFIG_SOURCE}" \
 			${GCONFTOOL2} --makefile-deinstall-rule \
