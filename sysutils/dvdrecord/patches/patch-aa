@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/01/17 13:53:11 toshii Exp $
+
+--- Makefile.in.orig	Wed Jan  1 23:32:41 2003
++++ Makefile.in
+@@ -133,8 +133,7 @@ target_os = @target_os@
+ target_vendor = @target_vendor@
+ SRCDIR = $(shell pwd)
+ 
+-SUBDIRS = libdeflt librscg libscg libschily cdrecord cdda2wav \
+-	libhfs_iso libfile libunls mkisofs readcd video
++SUBDIRS = libdeflt librscg libscg libschily cdrecord
+ 
+ subdir = .
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4

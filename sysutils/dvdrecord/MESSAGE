@@ -1,0 +1,6 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/01/17 13:53:11 toshii Exp $
+
+To create DVD filesystem images, you will probably need mkisofs,
+which is contained in pkgsrc/sysutils/cdrecord.
+===========================================================================
