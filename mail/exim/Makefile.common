@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2004/10/07 17:29:16 abs Exp $
+# $NetBSD: Makefile.common,v 1.17 2004/10/11 17:08:41 abs Exp $
 
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
 		ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim4/ \
@@ -16,7 +16,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS=	EXIM_USER EXIM_GROUP EXIM_DB
+BUILD_DEFS=	EXIM_USER EXIM_GROUP EXIM_DB EXIM_USE_LOOKUP_WHOSON
 
 PKG_GROUPS=	${EXIM_GROUP}
 PKG_USERS=	${EXIM_USER}:${EXIM_GROUP}:8:Exim\\ mail\\ server\\ user:/var/mail:/sbin/nologin
@@ -82,6 +82,10 @@ pre-configure:
 		-e 's:@PERL5@:${PERL5}:' \
 	    < ${WRKSRC}/Local/Makefile.pkgsrc \
 	    > ${WRKSRC}/Local/Makefile
+.if defined(EXIM_USE_LOOKUP_WHOSON) && ${EXIM_USE_LOOKUP_WHOSON} == "YES"
+	${ECHO} LOOKUP_WHOSON=YES >> ${WRKSRC}/Local/Makefile
+	${ECHO} LOOKUP_LIBS+=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.whoson} -L${LOCALBASE}/${BUILDLINK_LIBDIRS.whoson} -lwhoson >> ${WRKSRC}/Local/Makefile
+.endif
 	${SED} -e 's:@PREFIX@:${PREFIX}:' \
 		-e 's:@PKG_SYSCONFDIR@:${PKG_SYSCONFDIR}:' \
 	    < ${WRKSRC}/Local/eximon.conf.pkgsrc \
@@ -96,6 +100,10 @@ post-install:
 	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/exim.8 ${PREFIX}/man/man8/exim.8
+
+.if defined(EXIM_USE_LOOKUP_WHOSON) && ${EXIM_USE_LOOKUP_WHOSON} == "YES"
+.include "../../net/whoson/buildlink3.mk"
+.endif
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
