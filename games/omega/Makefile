@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/01/02 03:28:54 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2000/01/06 01:32:04 wiz Exp $
 # FreeBSD Id: ports/games/omega/Makefile,v 1.3 1999/08/25 06:04:09 obrien Exp
 
 DISTNAME=	omega-0.90-pa4
@@ -20,10 +20,9 @@ ALL_TARGET=
 CFLAGS+=	-I${PREFIX}/include
 
 do-install:
-	@ ${INSTALL_PROGRAM} ${WRKSRC}/omega ${PREFIX}/bin
+	@ ${INSTALL_PROGRAM} -o games -g games -m 4711 ${WRKSRC}/omega \
+		 ${PREFIX}/bin
 	@ ${INSTALL_MAN} ${WRKSRC}/docs/omega.6 ${PREFIX}/man/man6
-	@ ${CHOWN} games.games ${PREFIX}/bin/omega
-	@ ${CHMOD} 4711 ${PREFIX}/bin/omega
 	@ ${MKDIR} ${PREFIX}/share/omega
 	@ ${INSTALL_DATA} ${WRKSRC}/lib/* ${PREFIX}/share/omega
 	@ ${RM} ${PREFIX}/share/omega/license.old
