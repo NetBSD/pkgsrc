@@ -1,19 +1,13 @@
-$NetBSD: patch-ao,v 1.4 2002/08/29 14:12:29 martti Exp $
+$NetBSD: patch-ao,v 1.5 2003/01/28 14:21:59 martti Exp $
 
---- srclib/apr/configure.orig	Fri Aug  9 19:47:46 2002
-+++ srclib/apr/configure	Mon Aug 12 15:02:57 2002
-@@ -25353,11 +25353,11 @@
-   elif test "$apr_devrandom" != "no"; then
-     if test -r "$apr_devrandom"; then
-       cat >>confdefs.h <<\_ACEOF
--#define DEV_RANDOM $apr_devrandom
-+#define DEV_RANDOM /dev/urandom
- _ACEOF
- 
--      echo "$as_me:$LINENO: result: $apr_devrandom" >&5
--echo "${ECHO_T}$apr_devrandom" >&6
-+      echo "$as_me:$LINENO: result: /dev/urandom" >&5
-+echo "${ECHO_T}/dev/urandom" >&6
-       rand="1"
-     else
-       { { echo "$as_me:$LINENO: error: $apr_devrandom not found or unreadable." >&5
+--- srclib/apr/configure.orig	2003-01-18 17:20:31.000000000 +0200
++++ srclib/apr/configure	2003-01-28 16:13:11.000000000 +0200
+@@ -24713,7 +24713,7 @@
+   if test "$apr_devrandom" = "yes"; then
+     # /dev/random on OpenBSD doesn't provide random data, so
+     # prefer /dev/arandom, which does; see random(4).
+-    for f in /dev/arandom /dev/random /dev/urandom; do
++    for f in /dev/arandom /dev/urandom /dev/random; do
+       if test -r $f; then
+         apr_devrandom=$f
+         rand=1
