@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/10/11 13:40:19 grant Exp $
+# $NetBSD: Makefile,v 1.20 2003/10/15 15:16:32 jwise Exp $
 
 DISTNAME=		Sablot-1.0
 PKGNAME=		${DISTNAME:S/Sablot/sablotron/}
@@ -34,7 +34,7 @@ LIBS+=			-lCrun -lm
 .elif !empty(CC_VERSION:Mgcc-2*)
 LIBS+=			-lstdc++ -lm
 .elif !empty(CC_VERSION:Mgcc-3*)
-LIBS+=			-lstdc++
+LIBS+=			-lstdc++ -lm
 .endif
 
 .include "../../converters/libiconv/buildlink2.mk"
