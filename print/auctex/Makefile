@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2002/03/13 17:37:33 fredb Exp $
+# $NetBSD: Makefile,v 1.9 2002/09/16 03:31:26 uebayasi Exp $
 
-DISTNAME=		auctex-10.0g
-PKGREVISION=		1
+DISTNAME=		auctex-11.11
 CATEGORIES=		print
 MASTER_SITES=		ftp://ftp.sunsite.auc.dk/pub/emacs/auctex/ftp/auctex/
 
@@ -16,20 +15,18 @@ USE_GMAKE=		#defined
 TEX_PREFIX_DEFAULT=	${LOCALBASE}
 EVAL_PREFIX+=		TEX_PREFIX=teTeX
 
+MAKEFLAGS+=		EMACS=${EMACS_BIN}
+
 .if defined(USE_XEMACS)
-DEPENDS+=		xemacs-[0-9]*:../../editors/xemacs
-MAKE_ENV+=		EMACS=xemacs
-LISPDIR=		lib/xemacs/xemacs-packages/lisp
-INFODIR=		lib/xemacs/xemacs-packages/info
+LISPDIR=		${EMACS_LISPPREFIX}
+INFODIR=		${EMACS_LISPPREFIX}/../info
 .else
-DEPENDS+=		emacs-[0-9]*:../../editors/emacs
-MAKE_ENV+=		EMACS=emacs
-LISPDIR=		share/emacs/site-lisp
+LISPDIR=		${EMACS_LISPPREFIX}
 INFODIR=		info
 INFO_FILES+=		auctex
 .endif
 
-PLIST_SUBST+=		LISPDIR=${LISPDIR} INFODIR=${INFODIR}
+PLIST_SUBST+=		INFODIR=${INFODIR}
 MESSAGE_SUBST+=		LISPDIR=${LISPDIR}
 
 post-patch:
@@ -44,20 +41,21 @@ post-build:
 	cd ${WRKSRC}/doc && ${SETENV} ${MAKE_ENV} ${MAKE} auctex
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/${LISPDIR}/auctex
-	${INSTALL_DATA} ${WRKSRC}/tex-site.el ${PREFIX}/${LISPDIR}
-	${INSTALL_DATA} ${WRKSRC}/tex-site.el.dist ${PREFIX}/${LISPDIR}
-.if !exists(${PREFIX}/${LISPDIR}/tex-site.el)
-	${INSTALL_DATA} ${WRKSRC}/tex-site.el ${PREFIX}/${LISPDIR}
+	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/auctex
+	${INSTALL_DATA} ${WRKSRC}/tex-site.el ${EMACS_LISPPREFIX}/auctex
+	${INSTALL_DATA} ${WRKSRC}/tex-site.el.dist ${EMACS_LISPPREFIX}/auctex
+.if !exists(${EMACS_LISPPREFIX}/auctex/tex-site.el)
+	${INSTALL_DATA} ${WRKSRC}/tex-site.el ${EMACS_LISPPREFIX}/auctex/tex-site.el
 .endif
 	for f in auc-old.el bib-cite.el font-latex.el hilit-LaTeX.el	   \
 	latex.el lpath.el multi-prompt.el tex-buf.el tex-info.el tex-jp.el \
 	tex.el texmathp.el; do						   \
-	${INSTALL_DATA} ${WRKSRC}/$$f* ${PREFIX}/${LISPDIR}/auctex/; 	   \
+	${INSTALL_DATA} ${WRKSRC}/$$f* ${EMACS_LISPPREFIX}/auctex; 	   \
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/${LISPDIR}/auctex/style
-	${INSTALL_DATA} ${WRKSRC}/style/*.el* ${PREFIX}/${LISPDIR}/auctex/style
+	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/auctex/style
+	${INSTALL_DATA} ${WRKSRC}/style/*.el* ${EMACS_LISPPREFIX}/auctex/style
 	${INSTALL_DATA} ${WRKSRC}/doc/auctex* ${PREFIX}/${INFODIR}
 
+.include "../../mk/emacs.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
