@@ -1,3 +1,5 @@
+$NetBSD: patch-i386-aa,v 1.4 2003/03/14 10:15:56 wiz Exp $
+
 --- linuxx86/hinst.orig	Wed Apr 17 18:32:58 2002
 +++ linuxx86/hinst	Wed Jan 15 23:32:15 2003
 @@ -84,7 +84,7 @@
@@ -14,14 +16,14 @@
  		read dummy
  
 -		/bin/false
-+		false
++		! :
  		return 
  	fi
  
  	$ECHO_CMD $calcspace4
  
 -	/bin/true
-+	true
++	:
  	return
  }
  
@@ -30,7 +32,7 @@
  		:
  	else
 -		/bin/false
-+		false
++		! :
  		return 
  	fi
  
