@@ -1,0 +1,12 @@
+======================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2002/01/21 11:56:16 pooka Exp $
+
+You can run Falcon's Eye NetHack by simply typing: "falcons-eye"
+
+To configure music and sound effects, run ${PREFIX}/bin/fe-config, or
+simply edit the text files in ${PREFIX}/share/falcons-eye-dir/config/
+
+If the sound effects sound like static noise, try giving SDL a hint.
+For example: export AUDIODEV=/dev/sound0
+
+======================================================================
