@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/28 05:04:26 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/14 17:21:49 jlam Exp $
 #
 
 DISTNAME=	yaz-2.0
@@ -12,7 +12,6 @@ COMMENT=	C/C++ toolkit for the development of Z39.50v3/SRW clients and servers
 
 USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=	YES
 
 PTHREAD_OPTS+=	native optional

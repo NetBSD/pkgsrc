@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/02/09 19:57:55 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2004/02/14 17:21:53 jlam Exp $
 
 DISTNAME=		Sablot-1.0.1
 PKGNAME=		${DISTNAME:S/Sablot/sablotron/}
@@ -16,8 +16,6 @@ USE_GCC_SHLIB=		YES
 GNU_CONFIGURE=  	YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
-
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 # sablotron needs iconv but assumes it is in libc, so add what
 # buildlink2 finds.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/02/09 06:24:05 xtraeme Exp $
+# $NetBSD: Makefile,v 1.12 2004/02/14 17:21:55 jlam Exp $
 
 DISTNAME=	xrender-0.8.3
 PKGNAME=	${DISTNAME:S/x/X/}
@@ -13,7 +13,6 @@ COMMENT=	Client library for the X Rendering Extension protocol
 USE_BUILDLINK3=		YES
 USE_X11=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	${WRKSRC}/xrender.pc.in
 

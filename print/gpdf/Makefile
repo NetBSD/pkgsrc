@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/02/09 18:47:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2004/02/14 17:21:50 jlam Exp $
 #
 
 DISTNAME=	gpdf-0.112
@@ -21,8 +21,6 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
-
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/libbonobo/buildlink2.mk"

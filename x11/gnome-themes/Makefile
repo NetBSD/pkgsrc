@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/02/11 07:11:28 xtraeme Exp $
+# $NetBSD: Makefile,v 1.12 2004/02/14 17:21:55 jlam Exp $
 #
 
 DISTNAME=		gnome-themes-2.4.1
@@ -20,8 +20,6 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
-
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/24 15:18:32 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/02/14 17:21:53 jlam Exp $
 #
 
 DISTNAME=	whiteBOX-0.5
@@ -14,8 +14,6 @@ USE_BUILDLINK2=	YES
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
-
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 # this prevents us from build-depending on autoconf and automake
 # is it worth it?

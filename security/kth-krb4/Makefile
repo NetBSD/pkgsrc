@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/02/09 17:36:37 wennmach Exp $
+# $NetBSD: Makefile,v 1.31 2004/02/14 17:21:52 jlam Exp $
 #
 
 DISTNAME=		krb4-1.2.1
@@ -23,6 +23,7 @@ CRYPTO=			yes
 
 USE_BUILDLINK2=		yes
 USE_X11=		yes
+USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/kerberosIV
 
@@ -43,9 +44,6 @@ KTH_KRB4_TRANSFORM=	s/^ftp$$/k4&/	# always k4ftp
 PLIST_SUBST+=		KRB4_PREFIX=
 .endif
 CONFIGURE_ARGS+=	--program-transform="${KTH_KRB4_TRANSFORM}"
-
-USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 INFO_FILES=		kth-krb.info
 

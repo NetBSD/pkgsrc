@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2004/02/11 12:20:03 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2004/02/14 17:21:52 jlam Exp $
 
 DISTNAME=		gnome-vfs-1.0.5
 PKGREVISION=		5
@@ -17,9 +17,7 @@ USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
-
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 

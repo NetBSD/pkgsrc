@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/02/11 02:30:49 xtraeme Exp $
+# $NetBSD: Makefile,v 1.16 2004/02/14 17:21:50 jlam Exp $
 #
 
 DISTNAME=	gpgme-0.4.3
@@ -13,6 +13,7 @@ COMMENT=	GnuPG Made Easy
 DEPENDS+=	gnupg>=1.2.2:../../security/gnupg
 
 USE_BUILDLINK3=		YES
+USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 PTHREAD_OPTS+=		require
 
@@ -23,9 +24,6 @@ TEST_TARGET=		check
 .if ${PTHREAD_TYPE} == "native"
 CONFIGURE_ARGS+=	--without-pth --without-pth-test
 .endif
-
-USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 INFO_FILES=		gpgme.info
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/07/17 22:54:31 grant Exp $
+# $NetBSD: Makefile,v 1.18 2004/02/14 17:21:53 jlam Exp $
 #
 
 DISTNAME=	OpenSP-1.5
@@ -15,14 +15,12 @@ CONFLICTS+=     sp-[0-9]*
 
 USE_BUILDLINK2=		yes
 USE_PERL5=		build
+USE_LIBTOOL=		yes
 PTHREAD_OPTS+=		native
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-http \
 			--enable-default-catalog=${PREFIX}/share/sgml/catalog
-
-USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"

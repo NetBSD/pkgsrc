@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/08/29 00:56:25 dan Exp $
+# $NetBSD: Makefile,v 1.14 2004/02/14 17:21:52 jlam Exp $
 
 DISTNAME=	libmcrypt-2.5.7
 CATEGORIES=	security devel
@@ -12,7 +12,6 @@ COMMENT=	Crypto algorithms library
 
 USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 
 post-install:

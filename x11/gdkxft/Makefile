@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/03 18:49:55 reed Exp $
+# $NetBSD: Makefile,v 1.18 2004/02/14 17:21:55 jlam Exp $
 #
 
 DISTNAME=		gdkxft-1.5
@@ -18,9 +18,7 @@ PKG_FAIL_REASON=	"${PKGNAME} requires XFree86-4.0 or higher"
 
 USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
-
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-static

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 22:56:32 grant Exp $
+# $NetBSD: Makefile,v 1.14 2004/02/14 17:21:56 jlam Exp $
 
 DISTNAME=		gtkstep-1.10
 PKGREVISION=		3
@@ -13,7 +13,6 @@ COMMENT=		GTK theme-engine to yield a NEXTSTEP(tm) look and feel
 USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 post-install:
 	${RM} -f ${PREFIX}/share/themes/Step/gtk/gtkrc.in

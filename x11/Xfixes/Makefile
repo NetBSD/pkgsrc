@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/12/30 16:53:35 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/14 17:21:55 jlam Exp $
 #
 
 DISTNAME=		libXfixes-2.0.0
@@ -16,7 +16,6 @@ USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=    ${WRKSRC}/xfixes.pc.in
 
 .include "../../x11/fixesext/buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/03 18:49:59 reed Exp $
+# $NetBSD: Makefile,v 1.8 2004/02/14 17:21:56 jlam Exp $
 #
 
 DISTNAME=		paragui-1.0.4
@@ -13,7 +13,6 @@ COMMENT=		Cross-platform high-level application framework and GUI library
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/src/physfs/libtool
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/paragui.pc.in
 GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require native

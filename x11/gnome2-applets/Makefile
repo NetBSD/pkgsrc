@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/02/11 07:11:28 xtraeme Exp $
+# $NetBSD: Makefile,v 1.19 2004/02/14 17:21:55 jlam Exp $
 #
 
 DISTNAME=		gnome-applets-2.4.2
@@ -20,7 +20,6 @@ USE_X11=		yes
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/01/24 15:23:46 grant Exp $
+# $NetBSD: Makefile,v 1.37 2004/02/14 17:21:54 jlam Exp $
 
 DISTNAME=		gtkhtml-1.1.10
 PKGREVISION=		2
@@ -15,9 +15,7 @@ USE_X11BASE=		YES
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
-
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 

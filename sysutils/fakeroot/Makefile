@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/20 12:26:15 agc Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/14 17:21:52 jlam Exp $
 #
 
 DISTNAME=	fakeroot_0.5.8
@@ -11,7 +11,6 @@ COMMENT=	Creates a fake root environment
 
 WRKSRC=		${WRKDIR}/fakeroot-0.5.8
 USE_LIBTOOL=	YES
-LIBTOOL_OVERRIDE=${WRKSRC}/libtool
 GNU_CONFIGURE=	YES
 
 .include "../../mk/bsd.pkg.mk"

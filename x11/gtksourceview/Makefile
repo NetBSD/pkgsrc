@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/02/11 05:11:07 xtraeme Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/14 17:21:56 jlam Exp $
 #
 
 DISTNAME=	gtksourceview-0.7.0
@@ -19,7 +19,6 @@ USE_PERL5=		build
 USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
 
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	gtksourceview-1.0.pc.in
 
 CONFIGURE_ARGS=		--disable-build-tests

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/24 15:13:20 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/14 17:21:53 jlam Exp $
 #
 
 DISTNAME=		regexx-0.98.1
@@ -12,7 +12,6 @@ COMMENT=		C++ regular expression library
 USE_BUILDLINK2=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
 
 .include "../../devel/pcre/buildlink2.mk"

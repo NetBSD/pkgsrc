@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/21 17:20:11 martti Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/14 17:21:52 jlam Exp $
 
 DISTNAME=	mcrypt-2.6.4
 PKGREVISION=	1
@@ -14,7 +14,6 @@ USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../security/libmcrypt/buildlink2.mk"

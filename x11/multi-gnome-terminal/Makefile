@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/01/24 15:30:33 grant Exp $
+# $NetBSD: Makefile,v 1.17 2004/02/14 17:21:56 jlam Exp $
 
 DISTNAME=	multi-gnome-terminal-1.6.1
 PKGREVISION=	4
@@ -13,9 +13,7 @@ USE_BUILDLINK2=		# defined
 USE_X11BASE=		# defined
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		# defined
-
 USE_LIBTOOL=		# defined
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ENV+=		ac_cv_prog_JADE=no
 CONFIGURE_ARGS+=	--enable-gtk-doc=no

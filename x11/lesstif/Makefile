@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2004/01/24 15:30:33 grant Exp $
+# $NetBSD: Makefile,v 1.69 2004/02/14 17:21:56 jlam Exp $
 
 DISTNAME=	lesstif-0.93.94
 CATEGORIES=	x11
@@ -15,8 +15,6 @@ USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-LIBTOOL_OVERRIDE+=	${WRKSRC}/test/libtool
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--disable-build-12
 CONFIGURE_ARGS+=	--disable-build-20

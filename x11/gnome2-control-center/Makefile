@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/02/14 14:48:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.29 2004/02/14 17:21:55 jlam Exp $
 #
 
 DISTNAME=	control-center-2.4.0
@@ -20,12 +20,10 @@ USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
+USE_LIBTOOL=		yes
 USE_X11=		yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-
-USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GCONF2_SCHEMAS= 	apps_gnome_settings_daemon_default_editor.schemas
 GCONF2_SCHEMAS+=	apps_gnome_settings_daemon_screensaver.schemas
