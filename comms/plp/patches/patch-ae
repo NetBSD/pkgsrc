@@ -1,0 +1,24 @@
+$NetBSD: patch-ae,v 1.1.1.1 1999/05/06 07:39:08 sakamoto Exp $
+
+--- utils/Makefile.orig	Mon Jan 18 01:22:40 1999
++++ utils/Makefile	Mon Apr 19 12:56:10 1999
+@@ -3,14 +3,14 @@
+ 
+ OBJ=$(CCSOURCE:%.cc=%.o) $(CSOURCE:%.c=%.o)
+ 
+-libutils.a : $(OBJ)
+-	$(AR) $@ $(OBJ)
++libplputils.la : $(OBJ)
++	$(LD) -o $@ $(OBJ:.o=.lo) -rpath $(PREFIX)/lib -version-info 1:7
+ 
+ %.o : %.cc
+-	$(CC) -c $< -o $@
++	$(CC) -c $<
+ 
+ %.o : %.c
+-	$(CC) -c $< -o $@
++	$(CC) -c $<
+ 
+ clean :
+-	rm -f *.a core $(OBJ) *~
++	rm -f .libs *.la core $(OBJ) *~
