@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+#	$NetBSD: pxe,v 1.1.1.1 2001/08/06 09:46:47 rh Exp $
+#
+
+# PROVIDE: pxe
+# REQUIRE: DAEMON
+
+. /etc/rc.subr
+
+name="pxe"
+command="@@PREFIX@@/sbin/${name}"
+required_files="@@PREFIX@@/etc/${name}.conf"
+
+load_rc_config $name
+run_rc_command "$1"
