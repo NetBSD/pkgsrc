@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4797 2004/02/12 02:43:37 minskim Exp $
+$NetBSD: CHANGES,v 1.4798 2004/02/12 05:34:31 ben Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -792,3 +792,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated bochs to 2.1 [hubertf 2004-02-12]
 	Updated bochs to 2.1.1 [hubertf 2004-02-12]
 	Added libpathan-1.2.2 [minskim 2004-02-12]
+	Added llnlxdir-2.1.2 [ben 2004-02-12]
