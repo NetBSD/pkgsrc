@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/02/04 18:54:35 agc Exp $
+# $NetBSD: Makefile,v 1.9 1999/04/01 14:07:55 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/09/08 12:23:55 tg Exp
 #
 
@@ -16,9 +16,7 @@ MANCOMPRESSED=		yes
 .endif
 
 NO_WRKSUBDIR=		yes
-EXTRACT_CMD=		zcat
-EXTRACT_BEFORE_ARGS=
-EXTRACT_AFTER_ARGS=	|sh
+EXTRACT_CMD=		${GZCAT} ${DOWNLOADED_DISTFILE} | ${SH}
 
 USE_X11=		yes
 

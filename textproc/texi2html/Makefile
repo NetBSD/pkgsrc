@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/08/20 15:17:29 tsarna Exp $
+# $NetBSD: Makefile,v 1.6 1999/04/01 14:07:56 agc Exp $
 #
 
 DISTNAME=		texi2html
@@ -12,9 +12,7 @@ HOMEPAGE=		http://wwwcn1.cern.ch/dci/texi2html/
 
 USE_PERL5=		YES
 
-EXTRACT_CMD=		${GZCAT}
-EXTRACT_BEFORE_ARGS=
-EXTRACT_AFTER_ARGS=	|sh
+EXTRACT_CMD=		${GZCAT} ${DOWNLOADED_DISTFILE} | ${SH}
 
 NO_WRKSUBDIR=		yes
 NO_CONFIGURE=		yes
