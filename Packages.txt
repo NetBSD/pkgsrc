@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.353 2004/08/31 00:14:51 rh Exp $
+# $NetBSD: Packages.txt,v 1.354 2004/08/31 13:51:23 jmmv Exp $
 ###########################################################################
 
 			==========================
@@ -3367,6 +3367,30 @@ SETGIDGAME=YES will set all the other variables accordingly.
 
 A package should therefor never hard code file ownership or access permissions
 but rely on INSTALL_GAME and INSTALL_GAME_DATA to set these correctly.
+
+
+ 11.49 Packages installing extensions to the MIME database
+ =========================================================
+
+If a package provides extensions to the MIME database by installing .xml
+files inside ${PREFIX}/share/mime/packages, you need to take some extra
+steps to ensure that the database is kept consistent with respect to these
+new files:
+
+ 1) Include "../../databases/shared-mime-info/mimedb.mk" (avoid using
+    the buildlink3.mk file from this same directory, which is reserved
+    for inclusion from other buildlink3.mk files).  It takes care of
+    rebuilding the MIME database at installation and deinstallation time,
+    and disallows any access to it directly from the package.
+
+ 2) Check the PLIST and remove any entries under the share/mime directory,
+    _except_ for files saved under share/mime/packages.  The former are
+    handled automatically by the update-mime-database program, but the
+    later are package-dependent and must be removed by the package that
+    installed them in the first place.
+
+ 3) Remove any share/mime/* directories from the PLIST.  They will be
+    handled by the shared-mime-info package.
 
 
  12 Submitting & Committing
