@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/05/18 11:39:29 rh Exp $
+$NetBSD: patch-aa,v 1.2 2004/01/27 13:40:03 grant Exp $
 
---- Makefile.orig	Mon Nov 16 17:38:32 1998
+--- Makefile.orig	1998-11-17 03:38:32.000000000 +1100
 +++ Makefile
-@@ -19,14 +19,16 @@
+@@ -19,14 +19,15 @@
  
  DEFINES= -DRIPE
  PROG=	 whois cryptpw
@@ -16,7 +16,6 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/05/18 11:39:29 rh Exp $
 +INSTALL_MAN= ${BSD_INSTALL_MAN}
 +
  CFLAGS=  ${DEFINES}
-+LIBS=    ${EXTRA_LIBS}
  #
  # for BSDI
 -CC=shlicc2 -Wall -ansi -pedantic -O6 -m486
@@ -24,7 +23,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/05/18 11:39:29 rh Exp $
  #
  # for Linux
  #CC=gcc -Wall -ansi -pedantic -O6 -m486
-@@ -45,8 +47,10 @@
+@@ -45,8 +46,10 @@ cryptpw: Makefile cryptpw.c
  	$(CC) ${CFLAGS} cryptpw.c -o cryptpw ${LIBS}
  
  install: ${PROG}
