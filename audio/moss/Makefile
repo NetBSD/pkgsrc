@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/08/13 15:09:58 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2004/08/17 15:50:30 minskim Exp $
 
-DISTNAME=	moss-0.1.2
+DISTNAME=	moss-0.1.8
 CATEGORIES=	audio
-MASTER_SITES=	http://kldp.net/download.php/1377/
+MASTER_SITES=	http://kldp.net/download.php/1434/
 
 MAINTAINER=	yongbin@yongbin.com
 HOMEPAGE=	http://moss.kldp.net/
@@ -15,7 +15,7 @@ USE_BUILDLINK3=	yes
 USE_PKGINSTALL= yes
 
 PYTHON_VERSIONS_ACCEPTED=	23pth 22pth 21pth
-PYTHON_PATCH_SCRIPTS=		${WRKSRC}/*.py
+PYTHON_PATCH_SCRIPTS=	${WRKSRC}/*.py
 
 RCD_SCRIPTS=	moss
 CONF_FILES=	${PREFIX}/share/moss/moss.conf.sample	\
@@ -25,7 +25,8 @@ SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	"Fixing hardcoded paths."
 SUBST_STAGE.path=	post-patch
 SUBST_FILES.path=	moss.conf.sample
-SUBST_SED.path=		-e 's,/usr/local,${PREFIX},g' -e 's,/var,${VARBASE},g'
+SUBST_SED.path=		-e 's,$${prefix}/var,${VARBASE},g'	\
+			-e 's,$${prefix}/share,${PREFIX}/share,g'
 
 FILES_SUBST+=	INTERPRETER=${PYTHONBIN}
 

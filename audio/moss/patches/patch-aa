@@ -1,15 +1,99 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/08/10 06:48:21 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2004/08/17 15:50:30 minskim Exp $
 
---- setup.py.orig	2004-08-07 00:35:08.000000000 +0900
+--- setup.py.orig	2004-08-10 17:56:30.000000000 +0900
 +++ setup.py
-@@ -47,8 +47,8 @@ class my_install_data(install_data):
- 			print "creating %s" % os.path.join(self.install_dir, "etc")
- 			os.mkdir(os.path.join(self.install_dir, "etc"))
+@@ -42,50 +42,50 @@ class my_install_data(install_data):
+ 		global installed_lib_dir
+ 		install_data.finalize_options(self)
  		
--		print "copying moss.conf.sample -> %s" % os.path.join(self.install_dir, "etc/moss.conf")
--		shutil.copyfile("moss.conf.sample", os.path.join(self.install_dir, "etc/moss.conf"))
-+		#print "copying moss.conf.sample -> %s" % os.path.join(self.install_dir, "etc/moss.conf")
-+		#shutil.copyfile("moss.conf.sample", os.path.join(self.install_dir, "etc/moss.conf"))
- 		print "changing permission %s to 0755" % (os.path.join(installed_lib_dir, "moss/moss.py"))
- 		os.chmod(os.path.join(installed_lib_dir, "moss/moss.py"), 0755)
- 		
+-		if not os.path.isdir(os.path.join(self.install_dir, "etc")):
+-			print "creating %s" % os.path.join(self.install_dir, "etc")
+-			os.mkdir(os.path.join(self.install_dir, "etc"))
+-	
+-		if not os.path.isfile(os.path.join(self.install_dir, "etc/moss.conf")):
+-			print "creating %s" % os.path.join(self.install_dir, "etc/moss.conf")
+-		
+-			src = open("moss.conf.sample", "r")
+-			dest = open(os.path.join(self.install_dir, "etc/moss.conf"), "w")
+-
+-			for line in src.readlines():
+-				if line.find("${prefix}") != -1:
+-					line = line.replace("${prefix}", self.install_dir)
+-	
+-				dest.write(line)
+-
+-			src.close()
+-			dest.close()
+-		else:
+-			if self.force:
+-				print "creating %s" % os.path.join(self.install_dir, "etc/moss.conf")
+-			
+-				src = open("moss.conf.sample", "r")
+-				dest = open(os.path.join(self.install_dir, "etc/moss.conf"), "w")
+-
+-				for line in src.readlines():
+-					if line.find("${prefix}") != -1:
+-						line = line.replace("${prefix}", self.install_dir)
+-		
+-					dest.write(line)
+-
+-				src.close()
+-				dest.close()
+-					
+-		if not os.path.isdir(os.path.join(self.install_dir, "var")):
+-			os.mkdir(os.path.join(self.install_dir, "var"))
+-		
+-		if not os.path.isdir(os.path.join(self.install_dir, "var/log")):
+-			print "creating %s" % os.path.join(self.install_dir, "var/log")
+-			os.mkdir(os.path.join(self.install_dir, "var/log"))
+-
+-		if not os.path.isdir(os.path.join(self.install_dir, "var/run")):
+-			print "creating %s" % os.path.join(self.install_dir, "var/run")
+-			os.mkdir(os.path.join(self.install_dir, "var/run"))
++#		if not os.path.isdir(os.path.join(self.install_dir, "etc")):
++#			print "creating %s" % os.path.join(self.install_dir, "etc")
++#			os.mkdir(os.path.join(self.install_dir, "etc"))
++#	
++#		if not os.path.isfile(os.path.join(self.install_dir, "etc/moss.conf")):
++#			print "creating %s" % os.path.join(self.install_dir, "etc/moss.conf")
++#		
++#			src = open("moss.conf.sample", "r")
++#			dest = open(os.path.join(self.install_dir, "etc/moss.conf"), "w")
++#
++#			for line in src.readlines():
++#				if line.find("${prefix}") != -1:
++#					line = line.replace("${prefix}", self.install_dir)
++#	
++#				dest.write(line)
++#
++#			src.close()
++#			dest.close()
++#		else:
++#			if self.force:
++#				print "creating %s" % os.path.join(self.install_dir, "etc/moss.conf")
++#			
++#				src = open("moss.conf.sample", "r")
++#				dest = open(os.path.join(self.install_dir, "etc/moss.conf"), "w")
++#
++#				for line in src.readlines():
++#					if line.find("${prefix}") != -1:
++#						line = line.replace("${prefix}", self.install_dir)
++#		
++#					dest.write(line)
++#
++#				src.close()
++#				dest.close()
++#					
++#		if not os.path.isdir(os.path.join(self.install_dir, "var")):
++#			os.mkdir(os.path.join(self.install_dir, "var"))
++#		
++#		if not os.path.isdir(os.path.join(self.install_dir, "var/log")):
++#			print "creating %s" % os.path.join(self.install_dir, "var/log")
++#			os.mkdir(os.path.join(self.install_dir, "var/log"))
++#
++#		if not os.path.isdir(os.path.join(self.install_dir, "var/run")):
++#			print "creating %s" % os.path.join(self.install_dir, "var/run")
++#			os.mkdir(os.path.join(self.install_dir, "var/run"))
+ 
+ 		if not os.path.isdir(os.path.join(self.install_dir, "share")):
+ 			os.mkdir(os.path.join(self.install_dir, "share"))
