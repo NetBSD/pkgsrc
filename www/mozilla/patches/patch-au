@@ -1,8 +1,8 @@
-$NetBSD: patch-au,v 1.5 2001/09/16 14:03:08 taya Exp $
+$NetBSD: patch-au,v 1.6 2001/10/16 15:52:09 taya Exp $
 
 diff -ru ../Orig/mozilla/security/coreconf/NetBSD.mk ./security/coreconf/NetBSD.mk
 --- ../Orig/mozilla/security/coreconf/NetBSD.mk	Sat Sep 30 02:42:36 2000
-+++ ./security/coreconf/NetBSD.mk	Sun Sep 16 20:47:00 2001
++++ ./security/coreconf/NetBSD.mk	Sat Oct 13 19:56:43 2001
 @@ -40,8 +40,13 @@
  CCC			= g++
  RANLIB			= ranlib

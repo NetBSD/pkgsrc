@@ -1,27 +1,26 @@
-$NetBSD: patch-ay,v 1.3 2001/09/16 14:03:09 taya Exp $
+$NetBSD: patch-ay,v 1.4 2001/10/16 15:52:09 taya Exp $
 
 diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.h ./netwerk/base/src/nsSocketTransport.h
---- ../Orig/mozilla/netwerk/base/src/nsSocketTransport.h	Sat May 12 06:03:21 2001
-+++ ./netwerk/base/src/nsSocketTransport.h	Sun Sep 16 20:47:10 2001
-@@ -107,6 +107,11 @@
+--- ../Orig/mozilla/netwerk/base/src/nsSocketTransport.h	Sat Sep 29 05:09:03 2001
++++ ./netwerk/base/src/nsSocketTransport.h	Sat Oct 13 19:56:59 2001
+@@ -123,6 +123,11 @@
    eSocketDNS_Wait             = 0x2020
  };
  
-+typedef struct PRNetAddrList{                    
-+        PRNetAddr mNetAddress;
-+        struct PRNetAddrList *next;
-+} PRNetAddrList;
++struct nsNetAddrList {
++    PRNetAddr addr;
++    struct nsNetAddrList *next;
++};
 +
  //
  // This is the default timeout value (in milliseconds) for sockets which have
  // no activity...
-@@ -231,7 +236,8 @@
+@@ -246,7 +251,7 @@
      PRIntervalTime                  mLastActiveTime;
      PRCList                         mListLink;
      PRMonitor*                      mMonitor;
 -    PRNetAddr                       mNetAddress;
-+    PRNetAddrList                   *mNetAddressList;
-+    PRNetAddrList                   *mNetAddressp;
++    nsNetAddrList                   *mNetAddressList;
      nsSocketOperation               mOperation;
      nsCOMPtr<nsISupports>           mSecurityInfo;
  
