@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.230 2003/04/03 08:28:14 wiz Exp $
+# $NetBSD: Makefile,v 1.231 2003/04/06 11:03:34 rh Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -224,6 +224,7 @@ SUBDIR+=	xplot
 SUBDIR+=	xpm
 SUBDIR+=	xsane
 SUBDIR+=	xv
+SUBDIR+=	xvidcore
 SUBDIR+=	xzgv
 SUBDIR+=	yplot
 
