@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1 1998/08/24 16:55:36 agc Exp $
+
+Make sure that we don't override the PBMDIR definition that was
+carefully set up in config/urt
+
+--- cnv/makefile.src	1998/08/24 15:26:04	1.1
++++ cnv/makefile.src	1998/08/24 15:26:19
+@@ -71,7 +71,7 @@
+ 
+ #ifdef PBMPLUS
+ #emit PBMDIR
+-PBMDIR = 
++#PBMDIR = 
+ # pgmtorle - pgm format to RLE
+ # ppmtorle - ppm format to RLE
+ # rletoppm - RLE to ppm format
