@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1998/07/04 05:53:12 mycroft Exp $
-# FreeBSD Id: Makefile,v 1.14 1997/06/19 09:33:26 asami Exp
+# $NetBSD: Makefile,v 1.16 1998/07/04 09:37:30 mycroft Exp $
 #
 
 DISTNAME=	Xaw3d-1.5

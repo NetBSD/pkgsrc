@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/07/04 04:41:35 mycroft Exp $
-# $FreeBSD Id: Makefile,v 1.55 1998/01/29 17:13:07 ache Exp
+# $NetBSD: Makefile,v 1.11 1998/07/04 09:37:29 mycroft Exp $
 #
 
 DISTNAME=       fetchmail-4.5.1
