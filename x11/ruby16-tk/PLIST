@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/27 14:52:52 taca Exp $
-${RUBY_SITEARCHLIBDIR}/tkutil.so
+@comment $NetBSD: PLIST,v 1.2 2004/12/04 17:20:47 taca Exp $
+${RUBY_SITEARCHLIBDIR}/tkutil.${RUBY_DLEXT}
 ${RUBY_SITELIBDIR}/tk.rb
 ${RUBY_SITELIBDIR}/tkafter.rb
 ${RUBY_SITELIBDIR}/tkbgerror.rb

@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:34:10 zuntum Exp $
-${RUBY_SITEARCHLIBDIR}/bitvector.so
+@comment $NetBSD: PLIST,v 1.2 2004/12/04 17:20:46 taca Exp $
+${RUBY_SITEARCHLIBDIR}/bitvector.${RUBY_DLEXT}
 ${RUBY_SITELIBDIR}/bitvector_extras.rb
 ${RUBY_EXAMPLESDIR}/bitvector/perftest_bitvector.rb
 ${RUBY_EXAMPLESDIR}/bitvector/testscript_from_readme.rb
