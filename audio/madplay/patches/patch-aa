@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2003/07/10 08:46:55 adam Exp $
+$NetBSD: patch-aa,v 1.6 2004/03/01 15:56:58 adam Exp $
 
---- configure.orig	2003-07-09 16:39:08.000000000 +0200
-+++ configure	2003-07-09 16:39:53.000000000 +0200
-@@ -7840,33 +7840,6 @@
+--- configure.orig	2004-02-23 21:36:21.000000000 +0000
++++ configure
+@@ -19037,33 +19037,6 @@ fi
  while test $# -gt 0
  do
      case "$1" in
