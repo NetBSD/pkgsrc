@@ -1,34 +1,32 @@
-# $NetBSD: Makefile,v 1.34 2004/10/16 14:11:23 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.35 2004/11/30 16:44:47 adam Exp $
 
-DISTNAME=		pwlib-v1_8_2-src
-PKGNAME=		${DISTNAME:S/_/./g:S/-src//:S/-v/-/}
-# PKGREVISION=		3
-EXTRACT_SUFX=	-tar.gz
-CATEGORIES=		devel
-# MASTER_SITES=  ${MASTER_SITE_SOURCEFORGE:=openh323/}
+DISTNAME=	pwlib-v1_8_3-src
+PKGNAME=	${DISTNAME:S/_/./g:S/-src//:S/-v/-/}
+CATEGORIES=	devel
 MASTER_SITES+=	http://www.voxgratia.org/releases/
+EXTRACT_SUFX=	-tar.gz
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://sourceforge.net/projects/openh323/
-COMMENT=		Portable Windows Libary
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://sourceforge.net/projects/openh323/
+COMMENT=	Portable Windows Libary
 
 BUILD_DEPENDS=		bison-[0-9]*:../../devel/bison
 
 WRKSRC=			${WRKDIR}/pwlib
 USE_BUILDLINK3=		yes
-USE_PKGINSTALL=		yes
 USE_GNU_TOOLS+=		make
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
-GCC_REQD=		3.0
-
-CONFIGURE_ARHS+=	--disable-sasl --disable-openldap --disable-openssl --disable-expat --disable-video --disable-qos
+CONFIGURE_ARGS+=	--disable-sasl --disable-openldap --disable-openssl
+CONFIGURE_ARGS+=	--disable-expat --disable-video --disable-qos
 PTHREAD_OPTS+=		require
 
-MAKE_ENV+=		PWLIBDIR="${WRKSRC}" CC="${CC}" CPLUS="${CXX}"
+GCC_REQD=		3.0
+
 ALL_TARGET=		opt
+MAKE_ENV+=		PWLIBDIR="${WRKSRC}" CC="${CC}" CPLUS="${CXX}"
 
 FILES_SUBST+=		LIBTOOL="${LIBTOOL}"
 FILES_SUBST+=		PTHREADS_PREFIX="${BUILDLINK_PREFIX.pthread}"
@@ -40,12 +38,12 @@ post-patch:
 	${_PKG_SILENT}cd ${WRKSRC}/make;				\
 	for f in unix.mak lib.mak common.mak; do			\
 		${SED} ${FILES_SUBST_SED} $$f > $$f.sed;		\
-		${MV} -f $$f.sed $$f;						\
+		${MV} -f $$f.sed $$f;					\
 	done
 	${LN} -sf ${WRKDIR} ${WRKSRC}/share
 
 do-install:
-	${_PKG_SILENT}cd ${WRKSRC}/src/ptlib/unix && ${MAKE_ENV} ${GMAKE} install
+	cd ${WRKSRC}/src/ptlib/unix && ${MAKE_ENV} ${GMAKE} install
 	${INSTALL_DATA_DIR} ${PREFIX}/share/pwlib/make
 	${INSTALL_DATA_DIR} ${PREFIX}/include/ptclib
 	${INSTALL_DATA_DIR} ${PREFIX}/include/ptlib/unix/ptlib
