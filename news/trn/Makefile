@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/01/21 15:14:14 agc Exp $
+# $NetBSD: Makefile,v 1.14 2002/09/18 07:09:19 tron Exp $
 
 DISTNAME=		trn4-test74
 PKGNAME=		trn-4.74
@@ -18,7 +18,7 @@ LICENSE=		trn-license
 .if defined(USE_INN) && ${USE_INN} == YES
 DEPENDS=		inn>=2.2:../inn
 .else
-DEPENDS=		nntpclnt-1.6.1:../nntpclnt
+DEPENDS=		nntpclnt>=1.6.1:../nntpclnt
 .endif
 
 # TRN_HOSTBITS determines the number of "name segments" (x.y.z.com), counting
