@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2003/05/06 16:21:26 jmmv Exp $
+$NetBSD: patch-ac,v 1.2 2004/11/08 10:14:33 adam Exp $
 
---- src/rootmenu.c.orig	2000-09-25 20:15:24.000000000 +0200
+--- src/rootmenu.c.orig	2004-01-25 22:20:31.000000000 +0000
 +++ src/rootmenu.c
-@@ -471,7 +471,7 @@ real_rootmenu (GtkTooltips *tooltips, pr
+@@ -470,7 +470,7 @@ real_rootmenu (GtkTooltips *tooltips, pr
  
        if (!file)
        {

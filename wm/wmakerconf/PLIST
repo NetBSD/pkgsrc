@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:59:31 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/11/08 10:14:33 adam Exp $
 bin/mkpreview
 bin/wmakerconf
+man/man1/wmakerconf.1
+man/man1/mkpreview.1
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/wmakerconf.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/wmakerconf.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/wmakerconf-data.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/wmakerconf.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/wmakerconf-data.mo
 ${PKGLOCALEDIR}/locale/es_ES/LC_MESSAGES/wmakerconf-data.mo

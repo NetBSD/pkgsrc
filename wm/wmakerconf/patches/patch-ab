@@ -1,16 +1,23 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/12/15 23:25:17 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2004/11/08 10:14:33 adam Exp $
 
---- Makefile.in.orig	Fri Sep 29 21:05:59 2000
+--- Makefile.in.orig	2004-07-22 03:44:05.000000000 +0000
 +++ Makefile.in
-@@ -124,8 +124,9 @@
- pkgdata_DATA = AUTHORS README COPYING NEWS MANUAL ABOUT-NLS NLS-TEAM1 ChangeLog
- EXTRA_DIST = MANUAL wmakerconf.spec NLS-TEAM1 wmakerconf.desktop.in
- 
--GNOMEDIR = @GNOMEAPPS@
+@@ -112,7 +112,7 @@ GENCAT = @GENCAT@
+ GETSCRIPT = @GETSCRIPT@
+ GLIBC21 = @GLIBC21@
+ GMSGFMT = @GMSGFMT@
 -GNOMEAPP = @GNOMEAPP@
-+# to avoid installing the gnome support file
-+GNOMEDIR = 
 +GNOMEAPP =
- ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
- CONFIG_HEADER = config.h
+ GNOMEAPPS = @GNOMEAPPS@
+ GTK_CFLAGS = @GTK_CFLAGS@
+ GTK_CONFIG = @GTK_CONFIG@
+@@ -229,7 +229,8 @@ DISTCLEANFILES = intl/libintl.h
+ pkgdata_DATA = AUTHORS README COPYING NEWS MANUAL ABOUT-NLS NLS-TEAM1 ChangeLog
+ dist_man_MANS = man/wmakerconf.1 man/mkpreview.1
+ EXTRA_DIST = MANUAL wmakerconf.spec NLS-TEAM1 wmakerconf.desktop.in
+-GNOMEDIR = @GNOMEAPPS@
++# to avoid installing the gnome support file
++GNOMEDIR =
+ all: config.h
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
+ 
