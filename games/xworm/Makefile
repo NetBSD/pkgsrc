@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/01/30 23:18:49 agc Exp $
+# $NetBSD: Makefile,v 1.5 1999/03/28 23:54:41 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.3 1998/08/05 09:31:04 asami Exp
 #
 
@@ -17,7 +17,7 @@ do-install:
 	@ ${INSTALL_PROGRAM} ${WRKSRC}/xworm ${PREFIX}/bin
 	@ ${MKDIR} ${PREFIX}/share/xworm
 .for file in font grid raw
-	# ${INSTALL_DATA} ${WRKSRC}/xworm.${file} ${PREFIX}/share/xworm
+	${INSTALL_DATA} ${WRKSRC}/xworm.${file} ${PREFIX}/share/xworm
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
