@@ -1,0 +1,15 @@
+$NetBSD: patch-av,v 1.1 2005/01/20 21:32:11 recht Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=157275
+
+--- modules/gzip-method.c.orig	Thu Jan 20 21:33:30 2005
++++ modules/gzip-method.c	Thu Jan 20 21:33:36 2005
+@@ -621,7 +621,7 @@
+ 	if (gzip_handle->last_z_result != Z_OK) {
+ 		if (gzip_handle->last_z_result == Z_STREAM_END) {
+ 			*bytes_read = 0;
+-			return GNOME_VFS_OK;
++			return GNOME_VFS_ERROR_EOF;
+ 		} else
+ 			return result_from_z_result (gzip_handle->last_z_result);
+ 	} else if (gzip_handle->last_vfs_result != GNOME_VFS_OK) {
