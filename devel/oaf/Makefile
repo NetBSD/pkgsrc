@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/07/16 19:44:17 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/29 16:26:20 rh Exp $
 #
 
-DISTNAME=		oaf-0.4.0
+DISTNAME=		oaf-0.5.1
 CATEGORIES=		FILLTHISINPLEASE
 MASTER_SITES=		${MASTER_SITE_GNOME:=/unstable/sources/oaf/}
 
@@ -17,6 +17,6 @@ USE_X11BASE=		YES
 USE_LIBTOOL=		YES
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS} -I${X11PREFIX}/include"
+CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS} -I${X11PREFIX}/include -I${LOCALBASE}/include"
 
 .include "../../mk/bsd.pkg.mk"
