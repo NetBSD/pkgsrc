@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2442 2003/06/06 12:01:42 mjl Exp $
+$NetBSD: CHANGES,v 1.2443 2003/06/06 15:32:26 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2356,3 +2356,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated icon to 9.4.2 [jtb 2003-06-06]
 	Updated p5-DBIx-SearchBuilder to 0.84 [mjl 2003-06-06]
 	Updated rplay to 3.3.2nb1 [jmmv 2003-06-06]
+	Updated cpuflags to 0.45 [abs 2003-06-06]
