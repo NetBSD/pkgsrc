@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.692 2002/12/05 15:41:32 tron Exp $
+$NetBSD: CHANGES,v 1.693 2002/12/05 15:43:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3826,3 +3826,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated glut to 5.0 [jschauma 2002-12-05]
 	Added MesaDemos-5.0 [jschauma 2002-12-05]
 	Updated kdelibs2 to 2.2.2nb4 [tron 2002-12-05]
+	Added GutenMark-20020724 [wiz 2002-12-05]
+	Added GutenMark-words-20021124 [wiz 2002-12-05]
