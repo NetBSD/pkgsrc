@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.10 1999/11/02 18:32:27 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.11 1999/12/13 12:55:10 rh Exp $
 bin/pth-config
 bin/pthread-config
 include/pth.h
 include/pthread.h
 lib/libpth.a
-lib/libpth.so.12.0
+lib/libpth.so.12.1
 lib/libpthread.a
-lib/libpthread.so.12.0
+lib/libpthread.so.12.1
 man/man1/pth-config.1
 man/man1/pthread-config.1
 man/man3/pth.3
