@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.2 2004/04/18 05:13:35 snj Exp $
+# $NetBSD: Makefile,v 1.3 2004/08/30 13:39:45 schmonz Exp $
 #
 
-DISTNAME=		safecat-1.11
+DISTNAME=		safecat-1.12
 CATEGORIES=		mail
-MASTER_SITES=		http://budney.homeunix.net:8080/users/budney/linux/software/safecat/
+MASTER_SITES=		http://pobox.com/~lbudney/linux/software/safecat/
 
 MAINTAINER=		zuntum@NetBSD.org
-HOMEPAGE=		http://budney.homeunix.net:8080/users/budney/linux/software/safecat.html
-COMMENT=		Write data safely to a directory (using Bernstein's maildir algorithm)
+HOMEPAGE=		http://pobox.com/~lbudney/linux/software/safecat.html
+COMMENT=		Write data safely to a maildir
 
 USE_BUILDLINK3=		yes
 
-ALL_TARGET=		#
+ALL_TARGET=		it install instcheck
 INSTALL_TARGET=		setup check
 
-post-patch:
+do-configure:
 	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
 	${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
 	${ECHO} ${PREFIX} > ${WRKSRC}/conf-root
