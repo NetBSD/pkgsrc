@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1052 2002/09/22 12:19:36 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1053 2002/09/23 08:35:12 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -392,11 +392,13 @@ M4?=			/usr/bin/m4
 
 .if !defined(X11_BUILDLINK_MK)
 .  if defined(USE_X11BASE) || defined(USE_X11)
+X11_LDFLAGS=		# empty
 .    if ${_USE_RPATH} == "yes"
-LDFLAGS+=		-Wl,-R${X11BASE}/lib
+X11_LDFLAGS+=		-Wl,-R${X11BASE}/lib	
 .    endif
-LDFLAGS+=		-L${X11BASE}/lib
+X11_LDFLAGS+=		-L${X11BASE}/lib
 .  endif
+LDFLAGS+=		${X11_LDFLAGS}
 .endif
 .if ${_USE_RPATH} == "yes"
 LDFLAGS+=		-Wl,-R${LOCALBASE}/lib
