@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/02/26 17:25:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2005/03/15 15:23:37 wiz Exp $
 #
 
 DISTNAME=	gnome-speech-0.3.6
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME 2 text-to-speech API
+
+DIST_SUBDIR=	gnome-speech-0.3.6v2
 
 BUILD_USES_MSGFMT=	yes
 
