@@ -1,5 +1,5 @@
 #     Id: BSD.local.dist,v 1.30 1997/08/01 13:16:39 phk Exp 
-#	$NetBSD: Darwin.pkg.dist,v 1.5 2002/07/12 16:57:40 wiz Exp $
+#	$NetBSD: Darwin.pkg.dist,v 1.6 2002/07/24 17:40:33 kim Exp $
 #
 
 /set type=dir uname=root gname=wheel mode=0755
@@ -432,6 +432,8 @@
             ..
 	    no_NO.ISO_8859-1
             ..
+	    pl_PL.ISO_8859-2
+	    ..
 	    pt_PT.ISO_8859-1
             ..
 	    ru_SU.CP866
