@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2389 2003/06/01 14:30:10 hubertf Exp $
+$NetBSD: CHANGES,v 1.2390 2003/06/01 16:02:40 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2265,4 +2265,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added xmms-liveice-1.0.0 [jmmv 2003-06-01]
 	Updated mminstance to 1.20 [salo 2003-06-01]
 	Updated t1utils to 1.27 [salo 2003-06-01]
-	Updated gaim to 0.64 [hubertf 2003-06-01]
+	Added linuxsms-0.64 [jmmv 2003-06-01]
