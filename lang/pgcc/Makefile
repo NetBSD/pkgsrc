@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/06/11 16:13:33 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2001/06/12 03:02:59 jlam Exp $
 
 DISTNAME=		gcc-2.95.2
 PKGNAME=		pgcc-2.95.2.1
@@ -40,7 +40,7 @@ CONFIGURE_ARGS=		--host=${MACHINE_GCC_PLATFORM} \
 			--prefix=${GCC_PREFIX} \
 			--enable-shared
 CONFIGURE_SCRIPT=	${SRCDIR}/configure
-INFO_FILES=		chill cpp g77 gcc
+INFO_FILES=		chill.info cpp.info g77.info gcc.info
 
 # For pgcc, GCC_VERSION is actually the name of a subdirectory in the gcc
 # library tree.  We keep the odd name to keep this Makefile in-sync with
@@ -57,7 +57,8 @@ WRKSRC=			${WRKDIR}/objdir
 .include "../../mk/bsd.prefs.mk"
 
 .if (${OPSYS} != SunOS)
-CONFIGURE_ARGS+=	--with-gnu-as --with-gnu-ld
+CONFIGURE_ARGS+=	--with-gnu-as --with-gnu-ld --infodir=${PREFIX}/info
+
 GCC_PREFIX=		${LOCALBASE}/${PKGNAME}
 .if ${MACHINE_PLATFORM:MNetBSD-*-sparc}
 PLIST_SRC=		${PKGDIR}/PLIST.NetBSD-sparc
