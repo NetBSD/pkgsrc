@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/10/21 12:39:05 kent Exp $
+# $NetBSD: Makefile,v 1.7 2001/11/02 00:30:10 kent Exp $
 # $PEACE: Makefile,v 1.15 2001/10/20 03:00:07 kent Exp $
 
 DISTNAME=		w32api-1.1-src
@@ -38,6 +38,7 @@ do-build:
 do-install:
 	${INSTALL_DATA_DIR} ${CROSSBASE}/i386-netbsdpe/include
 	${INSTALL_DATA} ${WRKDIR}/include/*.h ${CROSSBASE}/i386-netbsdpe/include
+	${INSTALL_DATA_DIR} ${CROSSBASE}/i386-netbsdpe/lib
 	${INSTALL_DATA} ${WRKSRC}/lib/lib*.a ${CROSSBASE}/i386-netbsdpe/lib
 
 .include "../../mk/bsd.pkg.mk"
