@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2004/03/08 19:52:51 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2004/06/03 16:21:14 minskim Exp $
 #
 
-DISTNAME=		libstroke-0.3
-PKGREVISION=		1
+DISTNAME=		libstroke-0.5.1
 CATEGORIES=		devel
 MASTER_SITES=		http://www.etla.net/libstroke/
 
@@ -16,8 +15,11 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_X11=		YES
 USE_BUILDLINK3=		YES
+USE_GNU_TOOLS=		make
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-.include "../../lang/tcl83/buildlink3.mk"
+CONFIGURE_ENV+=		ac_cv_path_GTK_CONFIG=no
+
+.include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
