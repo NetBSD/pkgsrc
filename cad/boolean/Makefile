@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/04/25 04:16:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.17 2004/08/14 03:52:55 kristerw Exp $
 #
 
 DISTNAME=	boolean
@@ -33,7 +33,7 @@ post-patch:
 		${WRKSRC}/bin/boolean
 
 do-configure:
-	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${LOCALBASE}/bin/cmake
+	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${LOCALBASE}/bin/cmake .
 
 do-install:
 	${INSTALL_DATA_DIR}  ${PREFIX}/share/boolean
