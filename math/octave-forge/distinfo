@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/08/14 13:29:56 dmcmahill Exp $
+
+SHA1 (octave-forge-2004.07.07.tar.gz) = 9dd2352d5b5d6f3b934c34db33baa488bf5eb793
+Size (octave-forge-2004.07.07.tar.gz) = 3535603 bytes
+SHA1 (patch-aa) = 1723f94e7532dd8ddd691bf5a348c5447b4d312b
+SHA1 (patch-ab) = a9a5aebff50b94d7e9d7e5a63592c7cb46971210
+SHA1 (patch-ac) = 1ef1b8c6037c4931910f128781e7329eec79b548
+SHA1 (patch-ad) = 8b16fd05071710499593d83bb6a825c527940ae3
+SHA1 (patch-ae) = c337188b34ed78bd01fe8c1eee65de127e99228f
+SHA1 (patch-af) = 6d530695a953b44aca7ac2152c8105d24223de46
+SHA1 (patch-ag) = a5b82614b0433807dbb3a76bf0c9b7ff51943abf
+SHA1 (patch-ah) = 2ca9ccc5df44cee1d94baaacd512dcf387995970
+SHA1 (patch-ai) = 83f5a09a89fa3171028443e68aa0b2c21a567199

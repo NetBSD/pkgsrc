@@ -1,0 +1,18 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/08/14 13:29:56 dmcmahill Exp $
+
+--- configure.base.orig	Mon Apr 12 01:47:27 2004
++++ configure.base
+@@ -283,10 +283,10 @@ AC_PROG_INSTALL
+ AC_PROG_RANLIB
+ 
+ dnl Use $(COPY_FLAGS) to set options for cp when installing .oct files.
+-COPY_FLAGS="-fdp"
++COPY_FLAGS="-Rfp"
+ case "$canonical_host_type" in
+-    powerpc-apple-darwin*)
+-        COPY_FLAGS="-Rfp"
++    *-*-linux*)
++        COPY_FLAGS="-fdp"
+     ;;
+ esac
+ AC_SUBST(COPY_FLAGS)

@@ -1,0 +1,25 @@
+$NetBSD: patch-ai,v 1.1.1.1 2004/08/14 13:29:57 dmcmahill Exp $
+
+--- octinst.sh.in.orig	Wed Feb 25 05:48:03 2004
++++ octinst.sh.in
+@@ -23,6 +23,7 @@ if test $# -ge 1; then altopath=$1; shif
+ INSTALL="@INSTALL@"
+ INSTALL_DATA="@INSTALL_DATA@"
+ INSTALL_PROGRAM="@INSTALL_PROGRAM@"
++INSTALL_SCRIPT="@INSTALL_SCRIPT@"
+ MKPKGADD="@TOPDIR@/admin/mkpkgadd"
+ COPY_FLAGS="@COPY_FLAGS@"
+ 
+@@ -86,5 +87,12 @@ files=`echo $source/bin/* | sed -e "s/[^
+ if test "$files" != "$source/bin/*" ; then
+     $INSTALL -d $xpath
+     $INSTALL_PROGRAM $files $xpath
++fi
++
++# grab the executable files, skipping the CVS directory
++files=`echo $source/scripts/* | sed -e "s/[^ ]*CVS//"`
++if test "$files" != "$source/scripts/*" ; then
++    $INSTALL -d $xpath
++    $INSTALL_SCRIPT $files $xpath
+ fi
+ 
