@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2004/04/06 09:36:28 jmmv Exp $
+$NetBSD: patch-aa,v 1.5 2004/04/15 21:24:29 jmmv Exp $
 
---- configure.orig	2004-03-16 12:55:09.000000000 +0100
-+++ configure	2004-04-03 15:19:00.000000000 +0200
-@@ -27364,7 +27364,7 @@
- plugindir="\$(libdir)/gstreamer-$GST_MAJORMINOR"
+--- gst/ffmpegcolorspace/gstffmpegcolorspace.c.orig	2004-04-14 18:12:11.000000000 +0200
++++ gst/ffmpegcolorspace/gstffmpegcolorspace.c
+@@ -306,7 +306,7 @@ gst_ffmpegcolorspace_chain (GstPad * pad
+   g_return_if_fail (GST_IS_FFMPEGCOLORSPACE (space));
  
- 
--GST_PLUGIN_LDFLAGS='-module -avoid-version -export-symbols-regex _*{gst_,Gst,GST_}.*'
-+GST_PLUGIN_LDFLAGS="-module -avoid-version -export-symbols-regex '_*(gst_|Gst|GST_).*'"
- 
- 
- GST_PLUGINS_ALL="\
+   if (space->from_pixfmt == PIX_FMT_NB || space->to_pixfmt == PIX_FMT_NB) {
+-    GST_ELEMENT_ERROR (space, CORE, NOT_IMPLEMENTED, NULL,
++    GST_ELEMENT_ERROR (space, CORE, NOT_IMPLEMENTED, (NULL),
+         ("attempting to convert colorspaces between unknown formats"));
+     gst_buffer_unref (inbuf);
+     return;
