@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.95 2002/10/11 20:52:00 jschauma Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.96 2002/10/13 00:36:20 wiz Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1546,6 +1546,28 @@ XCHAT_USE_SSL?=	YES
 # Enable SSL in xchat (for IRC server connections)
 # Possible: YES, NO
 # Default: YES
+
+#XLOCK_DEFAULT_MODE=
+# Set the default display (screen saver) mode for xlockmore.
+# Possible: ant, apollonian, ball, bat, blank, blot, bomb, bouboule, bounce,
+#           braid, bubble, bug, clock, coral, crystal, daisy, dclock, decay,
+#           deco, demon, dilemma, discrete, dragon, drift, euler2d, eyes,
+#           fadeplot, flag, flame, flow, forest, galaxy, goop, grav, helix,
+#           hop, hyper, ico, ifs, image, juggle, julia, kaleid, kumppa, laser,
+#           life, life1d, life3d, lightning, lisa, lissie, loop, lyapunov,
+#           mandelbrot, marquee, matrix, maze, mountain, munch, nose, pacman,
+#           penrose, petal, petri, polyominoes, puzzle, pyro, qix, random,
+#           roll, rotor, scooter, shape, sierpinski, slip, solitare, space,
+#           sphere, spiral, spline, star, starfish, strange, swarm, swirl,
+#           t3d, tetris, thornbird, tik_tak, triangle, tube, turtle, vines,
+#           voters, wator, wire, world, worm, xcl, xjack, not defined
+# Default: not defined
+
+#XLOCK_LIGHT=
+# Used to build xlockmore without support for GL True Text, Motif, OpenGL,
+# Mesa 3D libraries and XPM pixmaps.
+# Possible: defined, not defined
+# Default: not defined
 
 #ZIP_ENCRYPTION=
 # Add encryption code to zip1
