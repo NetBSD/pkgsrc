@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1571 2003/03/05 18:44:18 wiz Exp $
+$NetBSD: CHANGES,v 1.1572 2003/03/05 22:00:39 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -969,3 +969,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added mined-2000.5 [agc 2003-03-05]
 	Updated siag to 3.5.7 [wiz 2003-03-05]
 	Updated mrproject to 0.5.1nb3 [wiz 2003-03-05]
+	Updated fsh to 1.2 [jschauma 2003-03-05]
