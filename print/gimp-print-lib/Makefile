@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/07/21 17:16:21 martti Exp $
+# $NetBSD: Makefile,v 1.16 2003/08/04 21:34:38 seb Exp $
 #
 
 DISTNAME=	gimp-print-4.2.5
@@ -16,7 +16,8 @@ USE_GMAKE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-TEXINFO_OVERRIDE=	YES
+USE_NEW_TEXINFO=	YES
+INFO_FILES=		gimpprint.info
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-cups
@@ -28,5 +29,4 @@ CONFIGURE_ARGS+=	--without-samples
 CONFIGURE_ARGS+=	--disable-escputil
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
