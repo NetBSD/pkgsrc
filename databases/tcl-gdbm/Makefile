@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/08/29 21:05:46 jwise Exp $
+# $NetBSD: Makefile,v 1.6 2000/08/29 21:12:20 jwise Exp $
 #
 
 DISTNAME=	tclgdbm-0.8
@@ -12,6 +12,9 @@ DEPENDS+=	tcl-8.3.2:../../lang/tcl80
 DEPENDS+=	gdbm>=1.7.3:../../databases/gdbm
 
 GNU_CONFIGURE=	yes
+CFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
+CONFIGURE_ENV+=	CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
 USE_LIBTOOL=	yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
