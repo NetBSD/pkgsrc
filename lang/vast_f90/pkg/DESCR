@@ -1,0 +1,7 @@
+vast_f90 is the personal version of the Pacific-Sierra Research VAST/f90
+compiler for Linux/g77.
+
+This compiler uses the Linux toolchain and produces a Linux executable.
+
+vast_f90 is not free software; please read and follow PSR's license:
+${PREFIX}/share/doc/vast_f90/LICENSE.
