@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2622 2003/06/29 22:32:57 jtb Exp $
+$NetBSD: CHANGES,v 1.2623 2003/06/29 22:49:08 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2613,3 +2613,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated zile to 1.6.2 [jtb 2003-06-29]
 	Updated ftnchek to 3.2.2 [jtb 2003-06-29]
 	Updated cweb to 3.64 [jtb 2003-06-29]
+	Updated grap to 1.30 [jtb 2003-06-29]
