@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1777 2004/05/25 16:31:00 epg Exp $
+$NetBSD: TODO,v 1.1778 2004/05/25 21:30:27 reed Exp $
 
 Suggested new packages
 ======================
@@ -399,6 +399,7 @@ Suggested package updates
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.6.2
 	o xfce-4.0.5
+	o xinvest-2.6.9
 	o xisp-2.7 [pkg/19566]
 	o xmcd-3.3.0
 	o xmms-alarm-0.3.5
