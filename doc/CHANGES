@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6057 2004/05/29 01:46:02 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6058 2004/05/29 02:01:22 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2681,3 +2681,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-XML-DOM to 1.43 [xtraeme 2004-05-29]
 	Added p5-XML-LibXML-Iterator-1.00 [xtraeme 2004-05-29]
 	Added p5-XML-NodeFilter-0.01 [xtraeme 2004-05-29]
+	Added p5-XML-LibXML-XPathContext-0.06 [xtraeme 2004-05-29]
+	Added p5-XML-XUpdate-LibXML-0.2.3 [xtraeme 2004-05-29]
