@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/05/25 20:06:01 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2002/06/08 23:49:39 veego Exp $
 
 DISTNAME=		irssi-0.8.4a
 PKGNAME=		irssi-0.8.4.1
@@ -19,11 +19,18 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-terminfo \
 			--enable-ipv6
 
-.if defined(IRSSI_USE_PERL) && ${IRSSI_USE_PERL} == "YES"
-USE_PERL5=	# defined
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(IRSSI_USE_PERL) && (${IRSSI_USE_PERL} == "YES")
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Irssi/.packlist
+PERL5_PACKLIST+=	${PERL5_SITEARCH}/auto/Irssi/Irc/.packlist
+PERL5_PACKLIST+=	${PERL5_SITEARCH}/auto/Irssi/UI/.packlist
+PERL5_PACKLIST+=	${PERL5_SITEARCH}/auto/Irssi/TextUI/.packlist
+.include "../../lang/perl5/buildlink.mk"
 # actually we don't need --with-perl here, irssi is compiled with it by default
 # but who knows what may happen in future versions
 CONFIGURE_ARGS+=	--with-perl
+CONFIGURE_ARGS+=	--with-perl-lib=site
 .else
 CONFIGURE_ARGS+=	--with-perl=no
 .endif
