@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.328 1999/08/31 08:32:16 rh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.329 1999/08/31 09:20:21 sakamoto Exp $
 #
 # This file is in the public domain.
 #
@@ -333,6 +333,16 @@ DESCR=			${WRKDIR}/.DESCR
 PLIST=			${WRKDIR}/.PLIST
 DLIST=			${WRKDIR}/.DLIST
 DDIR=			${WRKDIR}/.DDIR
+
+# Set PLIST_SUB to substitute "${variable}" to "value" in PLIST
+PLIST_SUB+=	OPSYS=${OPSYS}					\
+		OS_VERSION=${OS_VERSION}			\
+		MACHINE_ARCH=${MACHINE_ARCH}			\
+		MACHINE_GNU_ARCH=${MACHINE_GNU_ARCH}		\
+		MACHINE_GNU_PLATFORM=${MACHINE_GNU_PLATFORM}	\
+		LOWER_VENDOR=${LOWER_VENDOR}			\
+		LOWER_OPSYS=${LOWER_OPSYS}			\
+		PKGNAME=${PKGNAME}
 
 # Set INSTALL_FILE to be the name of any INSTALL file
 .if !defined(INSTALL_FILE) && exists(${PKGDIR}/INSTALL)
@@ -2367,7 +2377,7 @@ MANCOMPRESSED=	yes
 # - fixing list of man-pages according to MANCOMPRESSED/MANZ
 #   (we don't take any notice of MANCOMPRESSED as many packages have .gz
 #   pages in PLIST even when they install manpages without compressing them)
-# - substituting ${OPSYS}, ${MACHINE_ARCH} and ${MACHINE_GNU_ARCH}
+# - substituting by ${PLIST_SUB}
 
 .if ${OPSYS} == "NetBSD"
 IMAKE_MAN_CMD=
@@ -2421,14 +2431,7 @@ ${PLIST}: ${PLIST_SRC}
 			${MANZ_NAWK_CMD} 				\
 			${IMAKE_MAN_CMD} 				\
 			${SED} 	${MANZ_EXPRESSION}			\
-				-e 's|\$${OPSYS}|${OPSYS}|g'		\
-				-e 's|\$${OS_VERSION}|${OS_VERSION}|g'	\
-				-e 's|\$${MACHINE_ARCH}|${MACHINE_ARCH}|g' \
-				-e 's|\$${MACHINE_GNU_ARCH}|${MACHINE_GNU_ARCH}|g' \
-				-e 's|\$${MACHINE_GNU_PLATFORM}|${MACHINE_GNU_PLATFORM}|g' \
-				-e 's|\$${LOWER_VENDOR}|${LOWER_VENDOR}|g'\
-				-e 's|\$${LOWER_OPSYS}|${LOWER_OPSYS}|g'\
-				-e 's|\$${PKGNAME}|${PKGNAME}|g'	\
+				${PLIST_SUB:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/} \
 			> ${PLIST}; 					\
 	fi
 
