@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.7 2000/07/03 11:31:04 mjl Exp $
+
 *** Configure.orig	Mon Jan 17 17:44:18 2000
 --- Configure	Mon Jul  3 12:23:05 2000
 ***************
