@@ -1,4 +1,4 @@
-/*	$NetBSD: plist.c,v 1.12 2004/12/29 12:16:56 agc Exp $	*/
+/*	$NetBSD: plist.c,v 1.13 2005/01/07 11:58:12 agc Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: plist.c,v 1.24 1997/10/08 07:48:15 charnier Exp";
 #else
-__RCSID("$NetBSD: plist.c,v 1.12 2004/12/29 12:16:56 agc Exp $");
+__RCSID("$NetBSD: plist.c,v 1.13 2005/01/07 11:58:12 agc Exp $");
 #endif
 #endif
 
@@ -368,8 +368,7 @@ delete_package(Boolean ign_err, Boolean nukedirs, package_t *pkg, Boolean NoDele
 			if (NoDeleteFiles)
 				break;
 			format_cmd(tmp, sizeof(tmp), p->name, Where, last_file);
-			if (Verbose)
-				printf("Execute `%s'\n", tmp);
+			printf("Executing `%s'\n", tmp);
 			if (!Fake && system(tmp)) {
 				warnx("unexec command for `%s' failed", tmp);
 				fail = FAIL;
