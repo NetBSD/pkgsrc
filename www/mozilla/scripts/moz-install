@@ -1,4 +1,6 @@
 #!/bin/sh
+#
+# $NetBSD: moz-install,v 1.6 2000/10/31 10:00:38 jlam Exp $
 
 ${SED} -e "s,@PREFIX@,${PREFIX},g" ${FILESDIR}/mozilla-${OBJECT_FMT}.in > ${PREFIX}/bin/mozilla
 ${CHOWN} ${BINOWN} ${PREFIX}/bin/mozilla
