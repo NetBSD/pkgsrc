@@ -1,0 +1,19 @@
+$NetBSD: patch-ag,v 1.3 1999/07/11 20:00:43 bad Exp $
+
+--- include/port/bsd.h.orig	Sun Jul 19 03:19:53 1998
++++ include/port/bsd.h	Sun Jul 11 21:49:27 1999
+@@ -24,6 +24,14 @@
+ #define HAS_TEST_AND_SET
+ #endif
+ 
++#if defined(__arm32__)
++#define HAS_TEST_AND_SET
++#endif
++
++#if defined(__powerpc__)
++#define HAS_TEST_AND_SET
++#endif
++
+ #if defined(__mips__)
+ /* #	undef HAS_TEST_AND_SET */
+ #endif
