@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/12/20 14:45:25 xtraeme Exp $
+# $NetBSD: Makefile,v 1.10.2.1 2004/12/27 18:30:52 snj Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		xorg-libs-${XORG_VER}
@@ -45,21 +45,6 @@ SUBST_MESSAGE.mkstrs=	"Fixing path of makestrs."
 .if ${OPSYS} == "Linux"
 post-install:
 	@${LDCONFIG} ${X11ROOT}/lib || ${TRUE}
-.endif
-
-.if !empty(MACHINE_PLATFORM:MNetBSD-2.[0-9]*)
-.  if exists(/usr/include/threadlib.h)
-SUBST_CLASSES+=		thr
-SUBST_STAGE.thr=	post-patch
-SUBST_FILES.thr=	config/cf/NetBSD.cf.in
-SUBST_SED.thr=		-e 's|@@NETBSD_THREADLIB@@|-DUSE_NBSD_THREADLIB|'
-SUBST_MESSAGE.thr=	"Fixes for threadlib.h."
-.  else
-SUBST_CLASSES+=		nada
-SUBST_STAGE.nada=	post-patch
-SUBST_FILES.nada=	config/cf/NetBSD.cf.in
-SUBST_SED.nada=		-e 's|@@NETBSD_THREADLIB@@||'
-.  endif
 .endif
 
 pre-install:
