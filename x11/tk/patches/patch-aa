@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2001/12/23 17:11:30 bjoern Exp $
+$NetBSD: patch-aa,v 1.8 2004/01/05 11:24:18 jlam Exp $
 
 --- Makefile.in.orig	Sat Oct 20 02:24:40 2001
 +++ Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.7 2001/12/23 17:11:30 bjoern Exp $
  # for this version of Tk ("srcdir" will be replaced or has already
  # been replaced by the configure script):
 -TCL_GENERIC_DIR		= @TCL_SRC_DIR@/generic
-+TCL_GENERIC_DIR		= ${BUILDLINK_DIR}/include/tcl/generic
++TCL_GENERIC_DIR		= $(TCL_BIN_DIR)/../include/tcl/generic
  
  # The directory containing the Tcl library archive file appropriate
  # for this version of Tk:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2003/08/09 10:44:42 seb Exp $
+# $NetBSD: Makefile,v 1.52 2004/01/05 11:18:13 jlam Exp $
 
 DISTNAME=	make-3.80
 PKGNAME=	gmake-3.80
@@ -10,7 +10,9 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/make/make.html
 COMMENT=	GNU version of 'make' utility
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 TEXINFO_REQD=		4.0
@@ -42,5 +44,5 @@ post-install:
 	${LN} -sf ${GNU_PROGRAM_PREFIX}make ${PREFIX}/bin/gmake
 .endif
 
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
