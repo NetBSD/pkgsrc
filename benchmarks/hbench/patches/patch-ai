@@ -1,0 +1,28 @@
+$NetBSD: patch-ai,v 1.1 1998/09/05 22:02:20 garbled Exp $
+--- Results/Makefile.orig	Sat Sep  5 09:35:16 1998
++++ Results/Makefile	Sat Sep  5 09:36:22 1998
+@@ -41,8 +41,8 @@
+ #       RESULTS! USE WITH CARE!
+ 
+ SHELL=/bin/sh
+-ARCH=`$(SHELL) ../scripts/config.guess | sed 's/-.*-.*$$//'`
+-OS=`$(SHELL) ../scripts/config.guess | sed 's/^.*-.*-//'`
++ARCH=`$(SHELL) XXXPREFIXXXX/bin/hbench/config.guess | sed 's/-.*-.*$$//'`
++OS=`$(SHELL) XXXPREFIXXXX/bin/hbench/config.guess | sed 's/^.*-.*-//'`
+ 
+ default:
+ 	@echo "Select one of the following targets:"
+@@ -78,10 +78,10 @@
+ 	@echo "a graph of the memory hierarchy latency for a given machine."
+ 
+ summaries:
+-	$(SHELL) ../scripts/create-all-summaries
++	$(SHELL) XXXPREFIXXXX/bin/hbench/create-all-summaries
+ 
+ analyses:
+-	$(SHELL) ../scripts/create-all-analyses
++	$(SHELL) XXXPREFIXXXX/bin/hbench/create-all-analyses
+ 
+ latencygraphs:
+-	$(SHELL) ../scripts/create-all-latgraphs
++	$(SHELL) XXXPREFIXXXX/bin/hbench/create-all-latgraphs

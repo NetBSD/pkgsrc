@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST.common,v 1.1 1998/09/05 22:02:21 garbled Exp $
+bin/hbench/argsort
+bin/hbench/config.guess
+bin/hbench/config.sub
+bin/hbench/create-all-analyses
+bin/hbench/create-all-latgraphs
+bin/hbench/create-all-summaries
+bin/hbench/depend
+bin/hbench/gen-analysis
+bin/hbench/gen-latgraph
+bin/hbench/gen-summary
+bin/hbench/getostype
+bin/hbench/interactive-setup
+bin/hbench/maindriver
+bin/hbench/stats-full
+bin/hbench/stats-single
+bin/run-hbench
+share/doc/hbench/README
+share/doc/hbench/benchmark-descriptions
+share/doc/hbench/interpreting-results
+share/doc/hbench/sigmetrics97-paper.ps.gz
+share/doc/hbench/using-hbench
+share/hbench/Results/Makefile
+share/hbench/conf/full.test
+share/hbench/conf/sample.run
+@dirrm bin/hbench
+@dirrm share/doc/hbench

@@ -1,0 +1,19 @@
+$NetBSD: patch-ac,v 1.1 1998/09/05 22:02:19 garbled Exp $
+--- scripts/create-all-latgraphs.orig	Sat Sep  5 09:13:21 1998
++++ scripts/create-all-latgraphs	Sat Sep  5 09:13:57 1998
+@@ -33,13 +33,10 @@
+ #
+ # $Id: patch-ac,v 1.1 1998/09/05 22:02:19 garbled Exp $
+ 
+-# Step 1: Discover hbench root path
+-HBENCHROOT=`(cd \`dirname $0\`/.. ; pwd)`
+-
+-for dir in */*
++for dir in XXXPREFIXXXX/share/hbench/*/*
+ do
+     if [ -d $dir -a -d ${dir}/lat_mem_rd ]; then
+ 	echo "Generating latency graph for $dir..."
+-	${HBENCHROOT}/scripts/gen-latgraph -ps ${dir}/lat_mem_rd
++	XXXPREFIXXXX/bin/hbench/gen-latgraph -ps ${dir}/lat_mem_rd
+     fi
+ done

@@ -1,0 +1,3 @@
+execute "run-hbench" to run the benchmark.
+There is a Makefile in your share/hbench/Results directory
+that can be used to format and summarize your results as well.
