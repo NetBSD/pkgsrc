@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1379 2004/02/08 03:50:43 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1380 2004/02/08 10:39:35 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -2399,7 +2399,7 @@ do-libtool-override:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${libtool} ]; then					\
 		${RM} -f ${libtool};					\
-		${LN} -sf ${PKGSHLIBTOOL} ${libtool};			\
+		${LN} -sf ${PKG_SHLIBTOOL} ${libtool};			\
 	fi
 .    endfor
 .  endif
