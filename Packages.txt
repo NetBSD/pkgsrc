@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.300 2003/07/09 16:14:51 agc Exp $
+# $NetBSD: Packages.txt,v 1.301 2003/07/09 16:59:25 agc Exp $
 ###########################################################################
 
 			==========================
@@ -2520,7 +2520,8 @@ definitions in your Makefile (we shall use tclsh in this example):
 REPLACE_INTERPRETER+=	tcl
 _REPLACE.tcl.old=	.*/bin/tclsh
 _REPLACE.tcl.new=	${PREFIX}/bin/tclsh
-_REPLACE_FILES.tcl=	...list of tcl scripts which need to be fixed
+_REPLACE_FILES.tcl=	...list of tcl scripts which need to be fixed,
+			relative to ${WRKSRC}, just as in REPLACE_PERL
 
 
  11 Submitting & Committing
