@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/05/17 18:39:05 minskim Exp $
+
+SHA1 (eag-2.3.tgz) = 82bc143ea94113c4ba5411e607d288bcc0dec3e2
+Size (eag-2.3.tgz) = 498186 bytes
+SHA1 (patch-aa) = 657c556109d087a66e2dc854e23611ff5cfe4d8c
