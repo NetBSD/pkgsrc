@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/06/09 15:27:21 wiz Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/06/10 00:09:31 jlam Exp $
 #
 # This Makefile fragment is included by packages that use freetype.
 #
@@ -7,16 +7,13 @@
 # (1) Optionally define FREETYPE_REQD to the version of freetype desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Optionally define BUILDLINK_INCDIR and BUILDLINK_LIBDIR,
-# (4) Add ${BUILDLINK_TARGETS} to the prerequisite targets for pre-configure,
-# (5) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
+# (4) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
 #     search path, and
-# (6) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
+# (5) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
 #     path.
 
 .if !defined(FREETYPE_BUILDLINK_MK)
 FREETYPE_BUILDLINK_MK=	# defined
-
-.include "../../devel/gettext-lib/buildlink.mk"
 
 FREETYPE_REQD?=		1.3.1
 DEPENDS+=		freetype-lib>=${FREETYPE_REQD}:../../graphics/freetype-lib
@@ -27,8 +24,17 @@ FREETYPE_LIBS=		${LOCALBASE}/lib/libttf.*
 BUILDLINK_INCDIR?=	${WRKDIR}/include
 BUILDLINK_LIBDIR?=	${WRKDIR}/lib
 
-BUILDLINK_TARGETS+=	link-freetype-headers
-BUILDLINK_TARGETS+=	link-freetype-libs
+.include "../../devel/gettext-lib/buildlink.mk"
+
+FREETYPE_BUILDLINK_COOKIE=	${WRKDIR}/.freetype_buildlink_done
+FREETYPE_BUILDLINK_TARGETS=	link-freetype-headers
+FREETYPE_BUILDLINK_TARGETS+=	link-freetype-libs
+BUILDLINK_TARGETS+=		${FREETYPE_BUILDLINK_COOKIE}
+
+pre-configure: ${FREETYPE_BUILDLINK_COOKIE}
+
+${FREETYPE_BUILDLINK_COOKIE}: ${FREETYPE_BUILDLINK_TARGETS}
+	@${TOUCH} ${TOUCH_FLAGS} ${FREETYPE_BUILDLINK_COOKIE}
 
 # This target links the headers into ${BUILDLINK_INCDIR}, which should
 # be searched first by the C preprocessor.

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/06/09 15:32:16 wiz Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/06/10 00:09:32 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libtiff.
 #
@@ -7,17 +7,13 @@
 # (1) Optionally define TIFF_REQD to the version of libtiff desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Optionally define BUILDLINK_INCDIR and BUILDLINK_LIBDIR,
-# (4) Add ${BUILDLINK_TARGETS} to the prerequisite targets for pre-configure,
-# (5) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
+# (4) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
 #     search path, and
-# (6) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
+# (5) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
 #     path.
 
 .if !defined(TIFF_BUILDLINK_MK)
 TIFF_BUILDLINK_MK=	# defined
-
-.include "../../devel/zlib/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
 
 TIFF_REQD?=		3.5.4
 DEPENDS+=		tiff>=${TIFF_REQD}:../../graphics/tiff
@@ -30,8 +26,18 @@ TIFF_LIBS=		${LOCALBASE}/lib/libtiff.*
 BUILDLINK_INCDIR?=	${WRKDIR}/include
 BUILDLINK_LIBDIR?=	${WRKDIR}/lib
 
-BUILDLINK_TARGETS+=	link-tiff-headers
-BUILDLINK_TARGETS+=	link-tiff-libs
+.include "../../devel/zlib/buildlink.mk"
+.include "../../graphics/jpeg/buildlink.mk"
+
+TIFF_BUILDLINK_COOKIE=		${WRKDIR}/.tiff_buildlink_done
+TIFF_BUILDLINK_TARGETS=		link-tiff-headers
+TIFF_BUILDLINK_TARGETS+=	link-tiff-libs
+BUILDLINK_TARGETS+=		${TIFF_BUILDLINK_COOKIE}
+
+pre-configure: ${TIFF_BUILDLINK_COOKIE}
+
+${TIFF_BUILDLINK_COOKIE}: ${TIFF_BUILDLINK_TARGETS}
+	@${TOUCH} ${TOUCH_FLAGS} ${TIFF_BUILDLINK_COOKIE}
 
 # This target links the headers into ${BUILDLINK_INCDIR}, which should
 # be searched first by the C preprocessor.

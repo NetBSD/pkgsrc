@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/06/09 15:27:20 wiz Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/06/10 00:09:32 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libpng.
 #
@@ -7,16 +7,13 @@
 # (1) Optionally define PNG_REQD to the version of libpng desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Optionally define BUILDLINK_INCDIR and BUILDLINK_LIBDIR,
-# (4) Add ${BUILDLINK_TARGETS} to the prerequisite targets for pre-configure,
-# (5) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
+# (4) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
 #     search path, and
-# (6) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
+# (5) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
 #     path.
 
 .if !defined(PNG_BUILDLINK_MK)
 PNG_BUILDLINK_MK=	# defined
-
-.include "../../devel/zlib/buildlink.mk"
 
 PNG_REQD?=		1.0.11
 DEPENDS+=		png>=${PNG_REQD}:../../graphics/png
@@ -28,8 +25,17 @@ PNG_LIBS=		${LOCALBASE}/lib/libpng.*
 BUILDLINK_INCDIR?=	${WRKDIR}/include
 BUILDLINK_LIBDIR?=	${WRKDIR}/lib
 
-BUILDLINK_TARGETS+=	link-png-headers
-BUILDLINK_TARGETS+=	link-png-libs
+.include "../../devel/zlib/buildlink.mk"
+
+PNG_BUILDLINK_COOKIE=		${WRKDIR}/.png_buildlink_done
+PNG_BUILDLINK_TARGETS=		link-png-headers
+PNG_BUILDLINK_TARGETS+=		link-png-libs
+BUILDLINK_TARGETS+=		${PNG_BUILDLINK_COOKIE}
+
+pre-configure: ${PNG_BUILDLINK_COOKIE}
+
+${PNG_BUILDLINK_COOKIE}: ${PNG_BUILDLINK_TARGETS}
+	@${TOUCH} ${TOUCH_FLAGS} ${PNG_BUILDLINK_COOKIE}
 
 # This target links the headers into ${BUILDLINK_INCDIR}, which should
 # be searched first by the C preprocessor.
