@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1369 2004/02/02 11:34:17 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1370 2004/02/05 03:37:47 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1319,10 +1319,14 @@ SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR} \
 SCRIPTS_ENV+=	BATCH=yes
 .endif
 
+# Get the proper dependencies and set the PATH to use the compiler
+# named in PKGSRC_COMPILER.
+#
+.include "../../mk/compiler/bsd.compiler.mk"
+
 .if !empty(USE_BUILDLINK2:M[nN][oO]) && !empty(USE_BUILDLINK3:M[nN][oO])
 NO_BUILDLINK=		# defined
 .endif
-
 .if !defined(NO_BUILDLINK)
 .  if empty(USE_BUILDLINK3:M[nN][oO])
 .    include "../../mk/buildlink3/bsd.buildlink3.mk"
