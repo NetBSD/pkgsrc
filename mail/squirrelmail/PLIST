@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2002/12/03 06:37:15 martti Exp $
+@comment $NetBSD: PLIST,v 1.10 2003/02/12 07:23:40 martti Exp $
 share/examples/squirrelmail/squirrelmail.conf
 share/squirrelmail/AUTHORS
 share/squirrelmail/COPYING
@@ -23,6 +23,7 @@ share/squirrelmail/data/index.php
 share/squirrelmail/doc/README.russian_apache
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.0.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.1.txt
+share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.10.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.2.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.3.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.4.txt
@@ -239,6 +240,15 @@ share/squirrelmail/help/sl_SI/main_folder.hlp
 share/squirrelmail/help/sl_SI/options.hlp
 share/squirrelmail/help/sl_SI/read_mail.hlp
 share/squirrelmail/help/sl_SI/search.hlp
+share/squirrelmail/help/sr_YU/FAQ.hlp
+share/squirrelmail/help/sr_YU/addresses.hlp
+share/squirrelmail/help/sr_YU/basic.hlp
+share/squirrelmail/help/sr_YU/compose.hlp
+share/squirrelmail/help/sr_YU/folders.hlp
+share/squirrelmail/help/sr_YU/main_folder.hlp
+share/squirrelmail/help/sr_YU/options.hlp
+share/squirrelmail/help/sr_YU/read_mail.hlp
+share/squirrelmail/help/sr_YU/search.hlp
 share/squirrelmail/help/sv_SE/FAQ.hlp
 share/squirrelmail/help/sv_SE/addresses.hlp
 share/squirrelmail/help/sv_SE/basic.hlp
@@ -345,6 +355,8 @@ share/squirrelmail/locale/th_TH/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/timezones.cfg
 share/squirrelmail/locale/tr_TR/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/tr_TR/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/uk_UA/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/uk_UA/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/zh_CN/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/zh_CN/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/zh_TW/LC_MESSAGES/squirrelmail.mo
@@ -578,6 +590,8 @@ share/squirrelmail/themes/spice_of_life_lite.php
 @dirrm share/squirrelmail/locale/zh_TW
 @dirrm share/squirrelmail/locale/zh_CN/LC_MESSAGES
 @dirrm share/squirrelmail/locale/zh_CN
+@dirrm share/squirrelmail/locale/uk_UA/LC_MESSAGES
+@dirrm share/squirrelmail/locale/uk_UA
 @dirrm share/squirrelmail/locale/tr_TR/LC_MESSAGES
 @dirrm share/squirrelmail/locale/tr_TR
 @dirrm share/squirrelmail/locale/th_TH/LC_MESSAGES
@@ -643,6 +657,7 @@ share/squirrelmail/themes/spice_of_life_lite.php
 @dirrm share/squirrelmail/help/zh_CN
 @dirrm share/squirrelmail/help/th_TH
 @dirrm share/squirrelmail/help/sv_SE
+@dirrm share/squirrelmail/help/sr_YU
 @dirrm share/squirrelmail/help/sl_SI
 @dirrm share/squirrelmail/help/ru_RU
 @dirrm share/squirrelmail/help/pt_PT
