@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6108 2004/06/03 15:20:59 uebayasi Exp $
+$NetBSD: CHANGES,v 1.6109 2004/06/03 16:21:14 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2766,3 +2766,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added gdbada [shannonjr 2004-06-03]
 	Updated joe to 3.1 [adam 2004-06-03]
 	Updated exctags to 5.5.4 [uebayasi 2004-06-03]
+	Updated libstroke to 0.5.1 [minskim 2004-06-03]

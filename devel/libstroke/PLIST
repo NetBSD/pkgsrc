@@ -1,12 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:45 zuntum Exp $
-bin/stroke_test
+@comment $NetBSD: PLIST,v 1.2 2004/06/03 16:21:14 minskim Exp $
+include/stroke.h
 lib/libstroke.a
 lib/libstroke.la
 lib/libstroke.so
 lib/libstroke.so.0
-lib/libstroke.so.0.3
-lib/libstroke_tcl.a
-lib/libstroke_tcl.la
-lib/libstroke_tcl.so
-lib/libstroke_tcl.so.0
-lib/libstroke_tcl.so.0.3
+lib/libstroke.so.0.5
+share/aclocal/libgstroke.m4
+share/aclocal/libstroke.m4
