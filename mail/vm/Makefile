@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2002/05/04 02:32:05 jtb Exp $
+# $NetBSD: Makefile,v 1.14 2003/01/11 15:25:38 uebayasi Exp $
 
-DISTNAME=	vm-7.04
+DISTNAME=	vm-7.07
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.uni-mainz.de/pub/gnu/vm/ \
 		ftp://tug.org/vm/ \
@@ -12,28 +12,23 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.wonderworks.com/vm/
 COMMENT=	VM (View Mail) is an advanced mail user agent for Emacs
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/emacs.mk"
 
-.if defined(USE_XEMACS)
-DEPENDS+=	xemacs>=19.14:../../editors/xemacs
-MAKE_ENV+=	EMACS=xemacs
-LISPDIR=	${PREFIX}/lib/xemacs/xemacs-packages/lisp/vm
-INFODIR=	${PREFIX}/lib/xemacs/xemacs-packages/info
-PIXMAPDIR=	${PREFIX}/lib/xemacs/xemacs-packages/etc/vm
+.if ${EMACS_FLAVOR} == "xemacs"
+INFODIR=	${PREFIX}/lib/xemacs/site-packages/info
+PIXMAPDIR=	${PREFIX}/lib/xemacs/site-packages/etc/vm
 BINDIR=		${PREFIX}/bin
 PLIST_SRC=	${PKGDIR}/PLIST.xemacs
-.else
-DEPENDS+=	emacs>=19.34:../../editors/emacs
-MAKE_ENV+=	EMACS=emacs
-LISPDIR=	${PREFIX}/share/emacs/site-lisp/vm
+.elif ${EMACS_FLAVOR} == "emacs"
 INFODIR=	${PREFIX}/info
 PIXMAPDIR=	${PREFIX}/share/emacs/site-lisp/vm/pixmaps
 BINDIR=		${PREFIX}/bin
 INFO_FILES=	vm.info
 PLIST_SRC=	${PKGDIR}/PLIST.emacs
 .endif
+MAKEFLAGS+=	EMACS=${EMACS_BIN}
 
-MAKE_ENV+=	LISPDIR=${LISPDIR}
+MAKE_ENV+=	LISPDIR=${EMACS_LISPPREFIX}/vm
 MAKE_ENV+=	INFODIR=${INFODIR}
 MAKE_ENV+=	PIXMAPDIR=${PIXMAPDIR}
 MAKE_ENV+=	BINDIR=${BINDIR}
@@ -41,6 +36,7 @@ MAKE_ENV+=	BINDIR=${BINDIR}
 do-install:
 	${INSTALL_DATA_DIR} ${LISPDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} *.el* ${LISPDIR}
+	${INSTALL_DATA_DIR} ${INFODIR}
 	${INSTALL_DATA} ${WRKSRC}/*.info* ${INFODIR}
 	${INSTALL_DATA_DIR} ${PIXMAPDIR}
 	${INSTALL_DATA} ${WRKSRC}/pixmaps/*.x[pb]m ${PIXMAPDIR}
