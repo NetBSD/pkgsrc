@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.10 2000/12/08 21:18:36 wiz Exp $
+$NetBSD: md5,v 1.11 2001/01/18 04:04:32 hubertf Exp $
 
-MD5 (gqmpeg-0.8.1.tar.gz) = 5f0b70274c828edac9342e1f05103dbd
+MD5 (gqmpeg-0.8.2.tar.gz) = f839f85533a5817f02fa9402226cd265
