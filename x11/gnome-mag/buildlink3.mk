@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/17 21:57:58 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/02/17 22:09:07 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use gnome-mag.
 #
@@ -18,6 +18,8 @@ BUILDLINK_DEPENDS.gnome-mag?=		gnome-mag>=0.10.4nb1
 BUILDLINK_PKGSRCDIR.gnome-mag?=		../../x11/gnome-mag
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libbonobo/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
 .endif # GNOME_MAG_BUILDLINK3_MK
 
