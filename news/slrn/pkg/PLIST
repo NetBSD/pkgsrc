@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/10/31 21:09:13 hwr Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/10/31 23:04:37 frueauf Exp $
 bin/slrn
 man/man1/slrn.1
-@exec mkdir -p %D/share/slrn
 share/slrn/FAQ
 share/slrn/INSTALL
 share/slrn/README.GroupLens
