@@ -1,0 +1,18 @@
+$NetBSD: patch-ae,v 1.1 2001/05/19 17:31:05 jtb Exp $
+
+--- config/arch-osname.orig	Sun Apr  1 22:10:23 2001
++++ config/arch-osname
+@@ -11,6 +11,13 @@
+   fx2800)   arch=fx2800; osname=concentrix;;
+   hp*)      arch=hppa; osname=hpux;;
+   freebsd|os2)  arch=ix86;;
++  netbsd)   case "`uname -m`" in
++            alpha)     arch=alpha;;
++            i386)      arch=ix86;;
++            sun3)      arch=m68k;;
++            *68k)      arch=m68k;;
++            *)         arch=none;;
++            esac;;
+   ultrix)   arch=mips;;
+   nextstep) arch=`file /bin/sh | sed 's/.*(for architecture \(.*\))/\1/'`;;
+   osf1)     case "$5" in alpha) arch=alpha;; esac;;
