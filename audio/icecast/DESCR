@@ -1,4 +1,6 @@
-Icecast is an Internet based broadcasting system based on the Mpeg
-Layer III streaming technology. It is, however, not limited to
-streaming mp3 files.  It was originally inspired by Nullsoft's
-Shoutcast and also mp3serv by Scott Man ley.
+Icecast is a streaming media server which currently supports Ogg
+Vorbis and MP3 audio streams. It can be used to create an Internet
+radio station or a privately running jukebox and many things in
+between. It is very versatile in that new formats can be added
+relatively easily and supports open standards for commuincation and
+interaction.
