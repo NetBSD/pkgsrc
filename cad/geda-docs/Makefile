@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/01/02 23:00:00 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/01/02 23:28:34 rh Exp $
 #
 
 DISTNAME=		docs-${PKGVERSION}
@@ -12,6 +12,8 @@ MASTER_SITES=		ftp://ftp.geda.seul.org/pub/geda/devel/${PKGVERSION}/ \
 
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.geda.seul.org/
+
+CONFLICTS+=		gEDA<19991011
 
 DIST_SUBDIR=		geda
 PKGVERSION=		19991011
