@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1538 2003/03/04 14:42:27 salo Exp $
+$NetBSD: CHANGES,v 1.1539 2003/03/04 16:23:36 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -913,3 +913,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated wine to 20030219 [wiz 2003-03-04]
 	Removed sendmail88 [seb 2003-03-04]
 	Updated streamtuner to 0.9.1 [salo 2003-03-04]
+	Added slurm-0.2.1 [hubertf 2003-03-04]
