@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/12/30 21:59:17 markd Exp $
+# $NetBSD: Makefile,v 1.12 2005/02/17 05:58:28 uebayasi Exp $
 #
 
 DISTNAME=	ctags-5.5.4
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	--enable-macro-patterns
 CONFIGURE_ARGS+=	--with-readlib
 CONFIGURE_ARGS+=	--enable-custom-config=${PKG_SYSCONFDIR}/ctags.conf
 
-CPPFLAGS+=		-DETAGS='\"exetags\"'
+CPPFLAGS+=		-DETAGS="\"exetags\""
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	post-patch
