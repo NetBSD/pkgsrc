@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/01/05 23:43:06 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/24 15:13:19 grant Exp $
 #
 
 DISTNAME=	expat-1.95.6
@@ -15,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_BUILDLINK3=		YES
 
 DOCDIR=	${PREFIX}/share/doc/html/expat

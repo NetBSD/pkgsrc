@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/03 18:49:53 reed Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/24 15:06:57 grant Exp $
 #
 
 DISTNAME=	idesk-0.3.5
@@ -11,7 +11,7 @@ HOMEPAGE=	http://idesk.timmfin.net/
 COMMENT=	Gives users of minimal WMs icons on their desktop
 
 USE_BUILDLINK2=	yes
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 USE_X11=	yes
 
 do-install:

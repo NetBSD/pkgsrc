@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:53:33 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/24 15:06:57 grant Exp $
 #
 
 DISTNAME=		fam-2.6.9
@@ -13,7 +13,7 @@ HOMEPAGE=		http://oss.sgi.com/projects/fam/
 COMMENT=		File Alteration Monitor
 
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

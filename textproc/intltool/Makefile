@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/12/13 17:19:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/24 15:13:20 grant Exp $
 #
 
 DISTNAME=		intltool-0.28
@@ -14,7 +14,7 @@ DEPENDS=		p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser
 
 CONFLICTS=		xml-i18n-tools<=0.9
 
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 

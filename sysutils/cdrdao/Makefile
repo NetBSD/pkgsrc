@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/20 12:26:15 agc Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/24 15:06:57 grant Exp $
 #
 
 DISTNAME=		${PKGNAME}.src
@@ -12,7 +12,7 @@ COMMENT=		Records audio or data CD-Rs in disk-at-once (DAO) mode
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 CONFIGURE_ARGS+=	--with-pcctsbin=${PREFIX}/bin
 CONFIGURE_ARGS+=	--with-pcctsinc=${PREFIX}/include/pccts
 CONFIGURE_ARGS+=	--without-posix-threads

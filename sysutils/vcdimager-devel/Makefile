@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/23 21:50:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/24 15:06:58 grant Exp $
 #
 
 DISTNAME=	vcdimager-0.7.12
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.gnu.org/software/vcdimager/
 COMMENT=	Mastering suite for Video CDs
 
 USE_BUILDLINK2=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	yes
 LIBTOOL_OVERRIDE= ${WRKSRC}/libtool

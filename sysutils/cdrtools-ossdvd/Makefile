@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/20 12:26:15 agc Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/24 15:06:57 grant Exp $
 
 DISTNAME=	cdrtools-2.01a18
 PKGNAME=	cdrtools-ossdvd-2.01.1.18
@@ -19,7 +19,7 @@ CONFLICTS=	mkisofs-[0-9]* cdrecord-* cdrtools-*
 
 WRKSRC=			${WRKDIR}/cdrtools-2.01
 USE_BUILDLINK2=		# defined
-USE_GMAKE=		# defined
+USE_GNU_TOOLS+=		make
 TBL?=			tbl
 
 .if ${LOCALBASE} != "/opt/schily"

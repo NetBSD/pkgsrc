@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/07/21 17:24:48 martti Exp $
+# $NetBSD: Makefile,v 1.24 2004/01/24 15:06:58 grant Exp $
 
 DISTNAME=	xps-3.14
 CATEGORIES=	sysutils
@@ -9,7 +9,7 @@ HOMEPAGE=	http://www.netwinder.org/~rocky/xps-home/
 COMMENT=	Displays the Unix process list as a hierarchical tree
 
 USE_PERL5=	build
-USE_GMAKE=	# defined
+USE_GNU_TOOLS+=	make
 USE_X11BASE=	# defined
 
 USE_BUILDLINK2=	# defined

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/01/20 12:26:49 agc Exp $
+# $NetBSD: Makefile,v 1.28 2004/01/24 15:13:20 grant Exp $
 #
 
 DISTNAME=	icu-2.6.1
@@ -16,7 +16,7 @@ HOMEPAGE=	http://oss.software.ibm.com/icu/
 COMMENT=	Robust and full-featured Unicode services
 
 WRKSRC=			${WRKDIR}/${PKGBASE}/source
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
 TEST_TARGET=		check

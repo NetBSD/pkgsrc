@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/20 12:26:15 agc Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/24 15:06:57 grant Exp $
 #
 
 DISTNAME=	extipl-5.04
@@ -12,6 +12,6 @@ COMMENT=	IPL compatible OS boot selector
 BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}/src
-USE_GMAKE=	#defined
+USE_GNU_TOOLS+=	make
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/11/19 02:57:43 jschauma Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/24 15:13:20 grant Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/07/17 19:29:07 andreas Exp
 #
 
@@ -16,7 +16,7 @@ RESTRICTED=	"Restrictive copyright (don't sell for profit)"
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	yes
 
 post-install:

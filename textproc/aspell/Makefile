@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/12/03 16:49:06 recht Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/24 15:13:19 grant Exp $
 #
 
 DISTNAME=		aspell-0.50.4.1
@@ -14,7 +14,7 @@ CONFLICTS=		libpspell-[0-9]*
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 USE_GCC_SHLIB=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
