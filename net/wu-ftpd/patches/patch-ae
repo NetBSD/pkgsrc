@@ -1,0 +1,20 @@
+$NetBSD: patch-ae,v 1.5 2000/06/26 20:09:35 rh Exp $
+
+--- src/ftpcmd.y.orig	Wed Oct 13 08:15:28 1999
++++ src/ftpcmd.y	Thu Jun 22 22:44:41 2000
+@@ -1926,13 +1926,13 @@
+ 	}
+ 	if (!maxfound)
+ 	    maxlines = defmaxlines;
+-	lreply(200, cmd);
++	lreply(200, "%s", cmd);
+ 	while (fgets(buf, sizeof buf, cmdf)) {
+ 	    size_t len = strlen(buf);
+ 
+ 	    if (len > 0 && buf[len - 1] == '\n')
+ 		buf[--len] = '\0';
+-	    lreply(200, buf);
++	    lreply(200, "%s", buf);
+ 	    if (maxlines <= 0)
+ 		++lines;
+ 	    else if (++lines >= maxlines) {
