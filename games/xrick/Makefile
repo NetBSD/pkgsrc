@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/01/24 13:30:57 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/07 02:59:42 snj Exp $
 #
 
 DISTNAME=	xrick-021212
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	http://www.bigorno.net/xrick/
 EXTRACT_SUFX=	.tgz
@@ -18,8 +18,14 @@ NO_BIN_ON_FTP=	    ${RESTRICTED}
 NO_SRC_ON_FTP=	    ${RESTRICTED}
 
 USE_GNU_TOOLS+=		make
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_X11=		YES
+
+SUBST_CLASSES+=		data
+SUBST_STAGE.data=	post-patch
+SUBST_MESSAGE.data=	Adjusting path to data.zip
+SUBST_FILES.data=	src/xrick.c
+SUBST_SED.data=		-e "s|data.zip|${PREFIX}/share/xrick/&1|"
 
 post-extract:
 	cd ${WRKSRC} && ${GUNZIP_CMD} xrick.6.gz
@@ -30,5 +36,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/xrick
 	${INSTALL_DATA} ${WRKSRC}/data.zip ${PREFIX}/share/xrick
 
-.include "../../devel/SDL/buildlink2.mk"
+.include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
