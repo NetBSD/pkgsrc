@@ -1,4 +1,4 @@
-/*	$NetBSD: if_tap.c,v 1.2 2005/01/25 10:26:52 cube Exp $	*/
+/*	$NetBSD: if_tap.c,v 1.3 2005/02/15 21:23:07 cube Exp $	*/
 
 /*
  *  Copyright (c) 2003, 2004 The NetBSD Foundation.
@@ -43,7 +43,7 @@
  */
 
 #include <sys/cdefs.h>
-__KERNEL_RCSID(0, "$NetBSD: if_tap.c,v 1.2 2005/01/25 10:26:52 cube Exp $");
+__KERNEL_RCSID(0, "$NetBSD: if_tap.c,v 1.3 2005/02/15 21:23:07 cube Exp $");
 
 #if defined(_KERNEL_OPT)
 #include "bpfilter.h"
@@ -730,7 +730,8 @@ tap_dev_cloner(struct proc *p)
 
 	sc->sc_flags |= TAP_INUSE;
 
-	return tap_fdclone(p, fp, fd, &tap_fileops, (void *)(intptr_t)sc->sc_dev.dv_unit);
+	return tap_fdclone(p, fp, fd, FREAD|FWRITE, &tap_fileops,
+	    (void *)(intptr_t)sc->sc_dev.dv_unit);
 }
 
 /*
