@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.716 2002/12/07 18:55:13 drochner Exp $
+$NetBSD: CHANGES,v 1.717 2002/12/07 20:21:54 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3855,3 +3855,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated py-reportlab to 1.16 [drochner 2002-12-07]
 	Updated zope25-ZWiki to 0.13 [drochner 2002-12-07]
 	Updated htmldoc to 1.8.23 [drochner 2002-12-07]
+	Added tcpreplay-1.2a [cjep 2002-12-07]
