@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/07/20 01:54:47 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/07/25 23:51:38 jlam Exp $
 #
 # This Makefile fragment is included by packages that use f2c.
 #
@@ -33,9 +33,31 @@ BUILDLINK_FILES.f2c+=	lib/libI77_p.a
 BUILDLINK_FILES.f2c+=	lib/libI77_pic.a
 
 BUILDLINK_TARGETS.f2c=	f2c-buildlink
+BUILDLINK_TARGETS.f2c+=	f2c-f77-buildlink
 BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.f2c}
+
+# Set the f2c-f77 script to the buildlink'ed wrapper script.
+PKG_FC=			${BUILDLINK_DIR}/bin/f2c-f77
 
 pre-configure: ${BUILDLINK_TARGETS.f2c}
 f2c-buildlink: _BUILDLINK_USE
+
+f2c-f77-buildlink:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	cookie=${BUILDLINK_DIR}/.f2c_f77_buildlink_done;		\
+	if [ ! -f $${cookie} ]; then					\
+		file=bin/f2c-f77;					\
+		dest=${BUILDLINK_DIR}/$${file};				\
+		${ECHO_MSG} "Creating script $${dest}.";		\
+		dir=`${DIRNAME} $${dest}`;				\
+		if [ ! -d $${dir} ]; then				\
+			${MKDIR} $${dir};				\
+		fi;							\
+		${SED}	-e "s|-I${BUILDLINK_PREFIX.f2c}/include|-I${BUILDLINK_DIR}/include|g" \
+			-e "s|-L${BUILDLINK_PREFIX.f2c}/lib|-L${BUILDLINK_DIR}/lib|g" \
+			${BUILDLINK_PREFIX.f2c}/$${file} > $${dest};	\
+		${CHMOD} +x $${dest};					\
+		${ECHO} $${dest} >> $${cookie};				\
+	fi
 
 .endif	# F2C_BUILDLINK_MK
