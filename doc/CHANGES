@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4282 2003/12/29 12:03:59 grant Exp $
+$NetBSD: CHANGES,v 1.4283 2003/12/29 12:08:18 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5471,3 +5471,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added gnome-themes-extra-0.5 [xtraeme 2003-12-29]
 	Updated p5-Module-Build to 0.21 [grant 2003-12-29]
 	Updated p5-Params-Validate to 0.72 [grant 2003-12-29]
+	Updated gnome2-applets to 2.4.1 [xtraeme 2003-12-29]
