@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3733 2003/10/25 10:23:23 jdolecek Exp $
+$NetBSD: CHANGES,v 1.3734 2003/10/25 13:36:46 fredb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4246,3 +4246,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated nabi to 0.9 [jmmv 2003-10-24]
 	Updated gtksourceview to 0.7.0 [cube 2003-10-24]
 	Updated opera7 to 7.21 [jdolecek 2003-10-24]
+	Updated aterm to 0.4.2nb4 [fredb 2003-10-25]
