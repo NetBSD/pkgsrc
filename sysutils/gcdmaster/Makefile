@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2004/04/26 22:15:28 snj Exp $
+# $NetBSD: Makefile,v 1.19 2004/07/06 20:57:45 drochner Exp $
 #
 
-DISTNAME=		cdrdao-1.1.7.src
-PKGNAME=		gcdmaster-1.1.7
-PKGREVISION=		4
+DISTNAME=		cdrdao-1.1.9
+PKGNAME=		gcdmaster-1.1.9
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cdrdao/}
 
@@ -11,9 +10,9 @@ MAINTAINER=		david@maxwell.net
 HOMEPAGE=		http://cdrdao.sourceforge.net/gcdmaster/index.html
 COMMENT=		GUI for cdrdao with some editing capability
 
-DEPENDS+=		cdrdao-1.1.7:../../sysutils/cdrdao
+DEPENDS+=		cdrdao-1.1.9:../../sysutils/cdrdao
 
-WRKSRC=			${WRKDIR}/cdrdao-1.1.7
+WRKSRC=			${WRKDIR}/cdrdao-1.1.9
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
@@ -36,6 +35,7 @@ post-configure:
 
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/pccts/buildlink3.mk"
-.include "../../x11/gnome--/buildlink3.mk"
-.include "../../x11/gtk--/buildlink3.mk"
+# gtkmm must be 2.0/2.2
+.include "../../x11/gtkmm/buildlink3.mk"
+.include "../../devel/libgnomeuimm20/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
