@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/01 10:24:42 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/28 12:31:42 jmmv Exp $
 bin/geoipexport
+bin/geoipexportlocations
 bin/geoiplookup
 bin/geoipupdate
 include/GeoIP.h
@@ -9,8 +10,8 @@ include/GeoIPUpdate.h
 lib/libGeoIP.a
 lib/libGeoIP.la
 lib/libGeoIP.so
-lib/libGeoIP.so.2
-lib/libGeoIP.so.2.9
+lib/libGeoIP.so.4
+lib/libGeoIP.so.4.1
 lib/libGeoIPBitReader.a
 lib/libGeoIPBitReader.la
 lib/libGeoIPBitReader.so
