@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/03/15 07:00:52 rh Exp $
+# $NetBSD: Makefile,v 1.6 2000/03/16 13:51:43 wiz Exp $
 #
 
 DISTNAME=		so51a_lnx_${LANGNO}
@@ -99,7 +99,7 @@ pre-install:
 		${ECHO} "${DISTNAME} needs to be installed under X11."; \
 		exit 1; \
 	fi
-	@if [ "`/sbin/mount | grep 'on /proc' | cut -d ' ' -f 5`" != "procfs" ]; then \
+	@if [ "`/sbin/mount | ${GREP} 'on /proc' | ${CUT} -d ' ' -f 5`" != "procfs" ]; then \
 		${ECHO} "${DISTNAME} needs procfs to be mounted on /proc."; \
 		exit 1; \
 	fi
