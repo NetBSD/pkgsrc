@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 1999/10/12 08:01:33 jlam Exp $
+
+--- lib_se/frozen_string_list.e.orig	Sat Jun  5 14:51:11 1999
++++ lib_se/frozen_string_list.e	Mon Jun 28 04:00:01 1999
+@@ -111,7 +111,7 @@
+ -----------------------------------------------------------------------------
+ -- Frozen list of other names :
+ 
+-   fz_bin:                     STRING is "bin";
++   fz_bin:                     STRING is "libexec/smalleiffel";
+    fz_bit_foo:                 STRING is "BIT ";
+    fz_char:                    STRING is "char";
+    fz_close_c_comment:         STRING is "*/";

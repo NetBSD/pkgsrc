@@ -1,4 +1,3 @@
-./
 ${SMALLEIFFEL}/lib_std/
 ${SMALLEIFFEL}/lib_rand/
 ${SMALLEIFFEL}/lib_show/
