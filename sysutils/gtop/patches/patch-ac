@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2003/09/30 22:06:04 mycroft Exp $
+
+--- procview.c.orig	2001-02-15 00:57:30.000000000 +0000
++++ procview.c	2003-09-30 22:04:42.000000000 +0000
+@@ -118,7 +118,7 @@
+ \
+ static int cmp_ ## NAME (const ProcProcData **P, const ProcProcData **Q) \
+ { \
+-	  return (*P)->d->sort_order * strcasecmp ((*P)->p-> ## NAME, (*Q)->p-> ## NAME); \
++	  return (*P)->d->sort_order * strcasecmp ((*P)->p->NAME, (*Q)->p->NAME); \
+ }
+ 
+ #define SORT_ASC 1
