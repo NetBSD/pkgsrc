@@ -1,44 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2002/03/13 17:37:13 fredb Exp $
+# $NetBSD: Makefile,v 1.20 2002/04/21 08:05:23 rh Exp $
 
-DISTNAME=	MPlayer-0.60
-PKGNAME=	mplayer-0.60
+.include "Makefile.common"
+
+PKGNAME=	${DISTNAME:S/MP/mp/}
 PKGREVISION=	2
-CATEGORIES=	graphics
 MASTER_SITES=	http://mp.dev.hu/MPlayer/releases/
-EXTRACT_SUFX=	.tar.bz2
-
-MAINTAINER=	svs@ropnet.ru,zuntum@netbsd.org
-HOMEPAGE=	http://www.mplayerhq.hu/
-COMMENT=	Software only MPEG-1/2/4 video decoder
-
-ONLY_FOR_PLATFORM=	NetBSD-1.5[Y-Z]*-i386 NetBSD-1.[6-9]*-i386
-
-DEPENDS+=	win32-codecs>=010122:../../graphics/win32-codecs
-BUILD_DEPENDS+=	nasm>=0.98:../../devel/nasm
-REPLACE_BUILDLINK_PATTERNS+=	*.mak
-
-RESTRICTED=		"unsure of the license"
-NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
-
-USE_X11=		YES
-USE_GMAKE=		YES
-HAS_CONFIGURE=		YES
-
-WRKSRC=			${WRKDIR}/${DISTNAME}
-
-CONFIGURE_ARGS+=	--prefix="${PREFIX}"
-CONFIGURE_ARGS+=	--with-extraincdir="${BUILDLINK_DIR}/include"
-CONFIGURE_ARGS+=	--with-extralibdir="${LOCALBASE}/lib"
-CONFIGURE_ARGS+=	--with-win32libdir="${LOCALBASE}/lib/win32"
-CONFIGURE_ARGS+=	--enable-dvdread
-
-# The configure script attempts to execute compiled programs in /tmp, but
-# /tmp may be mounted with noexec flag set...
-CONFIGURE_ENV+=		TMPDIR=${WRKDIR}
-
-post-configure:
-	${CP} ${FILESDIR}/vcd_read_nbsd.c ${WRKSRC}/libmpdemux/vcd_read_nbsd.h
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mplayer ${PREFIX}/bin
