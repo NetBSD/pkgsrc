@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST-mi,v 1.2 1998/01/24 20:22:40 hubertf Exp $
 @comment this list changes by some files if gdbm is installed - hubertf
 bin/a2p
 bin/c2ph
