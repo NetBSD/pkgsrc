@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.13 2004/04/20 13:52:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2004/08/21 14:27:52 markd Exp $
 bin/kcolorchooser
 bin/kcoloredit
 bin/kdvi
 bin/kfax
 bin/kghostview
 bin/kiconedit
+bin/kolourpaint
 bin/kooka
-bin/kpaint
 bin/kpdf
 bin/kpovmodeler
 bin/kruler
@@ -193,6 +193,8 @@ include/previewer.h
 include/scanparams.h
 include/scansourcedialog.h
 include/sizeindicator.h
+lib/kde3/gsthumbnail.la
+lib/kde3/gsthumbnail.so
 lib/kde3/kcm_kgamma.la
 lib/kde3/kcm_kgamma.${KGAMMA_SUFFIX}
 lib/kde3/kcm_kmrml.la
@@ -231,6 +233,8 @@ lib/kde3/kfile_pnm.la
 lib/kde3/kfile_pnm.so
 lib/kde3/kfile_ps.la
 lib/kde3/kfile_ps.so
+lib/kde3/kfile_rgb.la
+lib/kde3/kfile_rgb.so
 lib/kde3/kfile_tga.la
 lib/kde3/kfile_tga.so
 lib/kde3/kfile_tiff.la
@@ -312,10 +316,11 @@ share/applications/kde/kcolorchooser.desktop
 share/applications/kde/kcoloredit.desktop
 share/applications/kde/kdvi.desktop
 share/applications/kde/kfax.desktop
+share/applications/kde/kgamma.desktop
 share/applications/kde/kghostview.desktop
 share/applications/kde/kiconedit.desktop
+share/applications/kde/kolourpaint.desktop
 share/applications/kde/kooka.desktop
-share/applications/kde/kpaint.desktop
 share/applications/kde/kpdf.desktop
 share/applications/kde/kpovmodeler.desktop
 share/applications/kde/kruler.desktop
@@ -348,6 +353,57 @@ share/doc/kde/HTML/en/kghostview/index.docbook
 share/doc/kde/HTML/en/kiconedit/common
 share/doc/kde/HTML/en/kiconedit/index.cache.bz2
 share/doc/kde/HTML/en/kiconedit/index.docbook
+share/doc/kde/HTML/en/kolourpaint/brush_shapes.png
+share/doc/kde/HTML/en/kolourpaint/color_box.png
+share/doc/kde/HTML/en/kolourpaint/common
+share/doc/kde/HTML/en/kolourpaint/eraser_shapes.png
+share/doc/kde/HTML/en/kolourpaint/fcc_std_text.png
+share/doc/kde/HTML/en/kolourpaint/fcc_trans_text.png
+share/doc/kde/HTML/en/kolourpaint/fill_style.png
+share/doc/kde/HTML/en/kolourpaint/image_balance.png
+share/doc/kde/HTML/en/kolourpaint/image_emboss.png
+share/doc/kde/HTML/en/kolourpaint/image_flatten.png
+share/doc/kde/HTML/en/kolourpaint/image_flip.png
+share/doc/kde/HTML/en/kolourpaint/image_invert.png
+share/doc/kde/HTML/en/kolourpaint/image_reduce_colors.png
+share/doc/kde/HTML/en/kolourpaint/image_resize_scale.png
+share/doc/kde/HTML/en/kolourpaint/image_rotate.png
+share/doc/kde/HTML/en/kolourpaint/image_selection_dimensions.png
+share/doc/kde/HTML/en/kolourpaint/image_skew.png
+share/doc/kde/HTML/en/kolourpaint/image_soften_sharpen.png
+share/doc/kde/HTML/en/kolourpaint/index.cache.bz2
+share/doc/kde/HTML/en/kolourpaint/index.docbook
+share/doc/kde/HTML/en/kolourpaint/kolourpaint-main.png
+share/doc/kde/HTML/en/kolourpaint/line_width.png
+share/doc/kde/HTML/en/kolourpaint/lines_30_45_deg.png
+share/doc/kde/HTML/en/kolourpaint/lines_30_deg.png
+share/doc/kde/HTML/en/kolourpaint/lines_45_deg.png
+share/doc/kde/HTML/en/kolourpaint/rotate_image_30.png
+share/doc/kde/HTML/en/kolourpaint/rotate_selection_30.png
+share/doc/kde/HTML/en/kolourpaint/scale_comparison.png
+share/doc/kde/HTML/en/kolourpaint/selections_opaque_transparent.png
+share/doc/kde/HTML/en/kolourpaint/spraycan_patterns.png
+share/doc/kde/HTML/en/kolourpaint/tool_brush.png
+share/doc/kde/HTML/en/kolourpaint/tool_color_picker.png
+share/doc/kde/HTML/en/kolourpaint/tool_color_washer.png
+share/doc/kde/HTML/en/kolourpaint/tool_curve.png
+share/doc/kde/HTML/en/kolourpaint/tool_ellipse.png
+share/doc/kde/HTML/en/kolourpaint/tool_elliptical_selection.png
+share/doc/kde/HTML/en/kolourpaint/tool_eraser.png
+share/doc/kde/HTML/en/kolourpaint/tool_flood_fill.png
+share/doc/kde/HTML/en/kolourpaint/tool_free_form_selection.png
+share/doc/kde/HTML/en/kolourpaint/tool_line.png
+share/doc/kde/HTML/en/kolourpaint/tool_pen.png
+share/doc/kde/HTML/en/kolourpaint/tool_polygon.png
+share/doc/kde/HTML/en/kolourpaint/tool_polyline.png
+share/doc/kde/HTML/en/kolourpaint/tool_polystar.png
+share/doc/kde/HTML/en/kolourpaint/tool_rect_selection.png
+share/doc/kde/HTML/en/kolourpaint/tool_rectangle.png
+share/doc/kde/HTML/en/kolourpaint/tool_rectangles.png
+share/doc/kde/HTML/en/kolourpaint/tool_rounded_rectangle.png
+share/doc/kde/HTML/en/kolourpaint/tool_selections.png
+share/doc/kde/HTML/en/kolourpaint/tool_spraycan.png
+share/doc/kde/HTML/en/kolourpaint/tool_text.png
 share/doc/kde/HTML/en/kooka/common
 share/doc/kde/HTML/en/kooka/index.cache.bz2
 share/doc/kde/HTML/en/kooka/index.docbook
@@ -360,9 +416,6 @@ share/doc/kde/HTML/en/kooka/shortcut1.png
 share/doc/kde/HTML/en/kooka/toolbar.png
 share/doc/kde/HTML/en/kooka/toolbar1.png
 share/doc/kde/HTML/en/kooka/toolbar2.png
-share/doc/kde/HTML/en/kpaint/common
-share/doc/kde/HTML/en/kpaint/index.cache.bz2
-share/doc/kde/HTML/en/kpaint/index.docbook
 share/doc/kde/HTML/en/kpdf/common
 share/doc/kde/HTML/en/kpdf/index.cache.bz2
 share/doc/kde/HTML/en/kpdf/index.docbook
@@ -442,14 +495,10 @@ share/doc/kde/HTML/en/kview/snapshot6.png
 share/doc/kde/HTML/en/kview/snapshot7.png
 share/doc/kde/HTML/en/kview/snapshot8.png
 share/doc/kde/HTML/en/kview/snapshot9.png
-share/kde/applnk/.hidden/kgamma.desktop
 share/kde/applnk/Graphics/kruler.desktop
 share/kde/apps/kcoloredit/kcoloreditui.rc
 share/kde/apps/kdvi/kdvi_part.rc
 share/kde/apps/kdvi/tips
-share/kde/apps/kdvi/toolbar/forwpage.xpm
-share/kde/apps/kdvi/toolbar/largetext.xpm
-share/kde/apps/kdvi/toolbar/smalltext.xpm
 share/kde/apps/kfax/kfax_part.rc
 share/kde/apps/kfax/kfaxui.rc
 share/kde/apps/kfax/pics/kfax.tif
@@ -465,33 +514,69 @@ share/kde/apps/kghostview/kghostviewui.rc
 share/kde/apps/kghostview/kgv_part.rc
 share/kde/apps/kghostview/pdf_sec.ps
 share/kde/apps/kiconedit/kiconeditui.rc
+share/kde/apps/kiconedit/pics/aim-cursor.xpm
+share/kde/apps/kiconedit/pics/aim.png
+share/kde/apps/kiconedit/pics/airbrush-cursor.xpm
+share/kde/apps/kiconedit/pics/areaselect.png
+share/kde/apps/kiconedit/pics/circle.png
+share/kde/apps/kiconedit/pics/colorpicker-cursor.xpm
 share/kde/apps/kiconedit/pics/compressed.png
+share/kde/apps/kiconedit/pics/ellipse.png
+share/kde/apps/kiconedit/pics/eraser-cursor.xpm
+share/kde/apps/kiconedit/pics/fileclose.png
+share/kde/apps/kiconedit/pics/fill-cursor.xpm
+share/kde/apps/kiconedit/pics/filledcircle.png
+share/kde/apps/kiconedit/pics/filledellipse.png
+share/kde/apps/kiconedit/pics/filledrectangle.png
+share/kde/apps/kiconedit/pics/grayscale.png
+share/kde/apps/kiconedit/pics/grid.png
+share/kde/apps/kiconedit/pics/kdepalette.png
+share/kde/apps/kiconedit/pics/line.png
+share/kde/apps/kiconedit/pics/newwin.png
+share/kde/apps/kiconedit/pics/paintbrush-cursor.xpm
+share/kde/apps/kiconedit/pics/pointer.png
+share/kde/apps/kiconedit/pics/rectangle.png
+share/kde/apps/kiconedit/pics/selectcircle.png
+share/kde/apps/kiconedit/pics/selectrect.png
 share/kde/apps/kiconedit/pics/source.png
 share/kde/apps/kiconedit/pics/standard.png
-share/kde/apps/kiconedit/toolbar/aim-cursor.xpm
-share/kde/apps/kiconedit/toolbar/aim.png
-share/kde/apps/kiconedit/toolbar/airbrush-cursor.xpm
-share/kde/apps/kiconedit/toolbar/areaselect.png
-share/kde/apps/kiconedit/toolbar/circle.png
-share/kde/apps/kiconedit/toolbar/colorpicker-cursor.xpm
-share/kde/apps/kiconedit/toolbar/ellipse.png
-share/kde/apps/kiconedit/toolbar/eraser-cursor.xpm
-share/kde/apps/kiconedit/toolbar/fileclose.png
-share/kde/apps/kiconedit/toolbar/fill-cursor.xpm
-share/kde/apps/kiconedit/toolbar/filledcircle.png
-share/kde/apps/kiconedit/toolbar/filledellipse.png
-share/kde/apps/kiconedit/toolbar/filledrectangle.png
-share/kde/apps/kiconedit/toolbar/grayscale.png
-share/kde/apps/kiconedit/toolbar/grid.png
-share/kde/apps/kiconedit/toolbar/kdepalette.png
-share/kde/apps/kiconedit/toolbar/line.png
-share/kde/apps/kiconedit/toolbar/newwin.png
-share/kde/apps/kiconedit/toolbar/paintbrush-cursor.xpm
-share/kde/apps/kiconedit/toolbar/pointer.png
-share/kde/apps/kiconedit/toolbar/rectangle.png
-share/kde/apps/kiconedit/toolbar/selectcircle.png
-share/kde/apps/kiconedit/toolbar/selectrect.png
-share/kde/apps/kiconedit/toolbar/transform.png
+share/kde/apps/kiconedit/pics/transform.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_brush.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_color_picker.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_color_washer.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_curve.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_ellipse.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_elliptical_selection.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_eraser.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_flood_fill.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_free_form_selection.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_line.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_pen.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_polygon.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_polyline.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_rect_selection.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_rectangle.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_rounded_rectangle.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_spraycan.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_text.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/apps/kolourpaint.png
+share/kde/apps/kolourpaint/icons/hicolor/32x32/apps/kolourpaint.png
+share/kde/apps/kolourpaint/icons/hicolor/48x48/apps/kolourpaint.png
+share/kde/apps/kolourpaint/kolourpaintui.rc
+share/kde/apps/kolourpaint/pics/color_transparent_26x26.png
+share/kde/apps/kolourpaint/pics/colorbutton_swap_16x16.png
+share/kde/apps/kolourpaint/pics/image_rotate_anticlockwise.png
+share/kde/apps/kolourpaint/pics/image_rotate_clockwise.png
+share/kde/apps/kolourpaint/pics/image_skew_horizontal.png
+share/kde/apps/kolourpaint/pics/image_skew_vertical.png
+share/kde/apps/kolourpaint/pics/option_opaque.png
+share/kde/apps/kolourpaint/pics/option_transparent.png
+share/kde/apps/kolourpaint/pics/resize.png
+share/kde/apps/kolourpaint/pics/scale.png
+share/kde/apps/kolourpaint/pics/smooth_scale.png
+share/kde/apps/kolourpaint/pics/tool_spraycan_17x17.png
+share/kde/apps/kolourpaint/pics/tool_spraycan_29x29.png
+share/kde/apps/kolourpaint/pics/tool_spraycan_9x9.png
 share/kde/apps/konqueror/servicemenus/mrml-servicemenu.desktop
 share/kde/apps/kooka/kookaui.rc
 share/kde/apps/kooka/pics/gocr.png
@@ -507,14 +592,6 @@ share/kde/apps/kooka/pics/scaleorig.png
 share/kde/apps/kooka/pics/scaletoheight.png
 share/kde/apps/kooka/pics/scaletowidth.png
 share/kde/apps/kooka/pics/thumbviewtile.png
-share/kde/apps/kpaint/kpaintui.rc
-share/kde/apps/kpaint/toolbar/areaselect.png
-share/kde/apps/kpaint/toolbar/brush.png
-share/kde/apps/kpaint/toolbar/circle.png
-share/kde/apps/kpaint/toolbar/ellipse.png
-share/kde/apps/kpaint/toolbar/line.png
-share/kde/apps/kpaint/toolbar/rectangle.png
-share/kde/apps/kpaint/toolbar/roundangle.png
 share/kde/apps/kpdf/kpdf_shell.rc
 share/kde/apps/kpdfpart/kpdf_part.rc
 share/kde/apps/kpovmodeler/baseinsertrules.xml
@@ -919,7 +996,6 @@ share/kde/icons/crystalsvg/16x16/apps/kdvi.png
 share/kde/icons/crystalsvg/16x16/apps/kfax.png
 share/kde/icons/crystalsvg/16x16/apps/kghostview.png
 share/kde/icons/crystalsvg/16x16/apps/kiconedit.png
-share/kde/icons/crystalsvg/16x16/apps/kpaint.png
 share/kde/icons/crystalsvg/16x16/apps/kpovmodeler.png
 share/kde/icons/crystalsvg/16x16/apps/kruler.png
 share/kde/icons/crystalsvg/16x16/apps/ksnapshot.png
@@ -933,7 +1009,6 @@ share/kde/icons/crystalsvg/32x32/apps/kdvi.png
 share/kde/icons/crystalsvg/32x32/apps/kfax.png
 share/kde/icons/crystalsvg/32x32/apps/kghostview.png
 share/kde/icons/crystalsvg/32x32/apps/kiconedit.png
-share/kde/icons/crystalsvg/32x32/apps/kpaint.png
 share/kde/icons/crystalsvg/32x32/apps/kpovmodeler.png
 share/kde/icons/crystalsvg/32x32/apps/kruler.png
 share/kde/icons/crystalsvg/32x32/apps/ksnapshot.png
@@ -945,17 +1020,19 @@ share/kde/icons/crystalsvg/48x48/apps/kdvi.png
 share/kde/icons/crystalsvg/48x48/apps/kfax.png
 share/kde/icons/crystalsvg/48x48/apps/kghostview.png
 share/kde/icons/crystalsvg/48x48/apps/kiconedit.png
-share/kde/icons/crystalsvg/48x48/apps/kpaint.png
 share/kde/icons/crystalsvg/48x48/apps/kruler.png
 share/kde/icons/crystalsvg/48x48/apps/ksnapshot.png
 share/kde/icons/crystalsvg/48x48/apps/kview.png
 share/kde/icons/crystalsvg/48x48/apps/kviewshell.png
 share/kde/icons/crystalsvg/64x64/apps/kghostview.png
 share/kde/icons/hicolor/16x16/apps/kgamma.png
+share/kde/icons/hicolor/16x16/apps/kolourpaint.png
 share/kde/icons/hicolor/16x16/apps/kpdf.png
 share/kde/icons/hicolor/32x32/apps/kgamma.png
+share/kde/icons/hicolor/32x32/apps/kolourpaint.png
 share/kde/icons/hicolor/32x32/apps/kpdf.png
 share/kde/icons/hicolor/48x48/apps/kgamma.png
+share/kde/icons/hicolor/48x48/apps/kolourpaint.png
 share/kde/icons/hicolor/48x48/apps/kpdf.png
 share/kde/icons/locolor/16x16/apps/kcoloredit.png
 share/kde/icons/locolor/16x16/apps/kpovmodeler.png
@@ -964,6 +1041,7 @@ share/kde/icons/locolor/32x32/apps/kcoloredit.png
 share/kde/icons/locolor/32x32/apps/kpovmodeler.png
 share/kde/icons/locolor/32x32/apps/kuickshow.png
 share/kde/mimelnk/text/mrml.desktop
+share/kde/services/gsthumbnail.desktop
 share/kde/services/kconfiguredialog/kviewcanvasconfig.desktop
 share/kde/services/kconfiguredialog/kviewgeneralconfig.desktop
 share/kde/services/kconfiguredialog/kviewpluginsconfig.desktop
@@ -979,6 +1057,7 @@ share/kde/services/kfile_pdf.desktop
 share/kde/services/kfile_png.desktop
 share/kde/services/kfile_pnm.desktop
 share/kde/services/kfile_ps.desktop
+share/kde/services/kfile_rgb.desktop
 share/kde/services/kfile_tga.desktop
 share/kde/services/kfile_tiff.desktop
 share/kde/services/kfile_xbm.desktop
@@ -995,7 +1074,8 @@ share/kde/servicetypes/kimageviewer.desktop
 share/kde/servicetypes/kimageviewercanvas.desktop
 share/kde/servicetypes/ksvgrenderer.desktop
 @comment dirrm share/kde/servicetypes
-@comment dirrm share/kde/services/kded
+@dirrm share/kde/services/kded
+@dirrm share/kde/services/kconfiguredialog
 @comment dirrm share/kde/services
 @comment dirrm share/kde/mimelnk/text
 @comment dirrm share/kde/icons/locolor/32x32/apps
@@ -1012,6 +1092,7 @@ share/kde/servicetypes/ksvgrenderer.desktop
 @comment dirrm share/kde/icons/crystalsvg/16x16/apps
 @comment dirrm share/kde/icons/crystalsvg/16x16/actions
 @comment dirrm share/kde/icons/crystalsvg/128x128/apps
+@comment dirrm share/kde/config
 @dirrm share/kde/apps/kviewviewer/kpartplugins
 @dirrm share/kde/apps/kviewviewer
 @dirrm share/kde/apps/kviewshell
@@ -1046,12 +1127,20 @@ share/kde/servicetypes/ksvgrenderer.desktop
 @dirrm share/kde/apps/kpovmodeler
 @dirrm share/kde/apps/kpdfpart
 @dirrm share/kde/apps/kpdf
-@dirrm share/kde/apps/kpaint/toolbar
-@dirrm share/kde/apps/kpaint
 @dirrm share/kde/apps/kooka/pics
 @dirrm share/kde/apps/kooka
-@comment dirrm share/kde/apps/konqueror/servicemenus
-@dirrm share/kde/apps/kiconedit/toolbar
+@dirrm share/kde/apps/konqueror/servicemenus
+@dirrm share/kde/apps/kolourpaint/pics
+@dirrm share/kde/apps/kolourpaint/icons/hicolor/48x48/apps
+@dirrm share/kde/apps/kolourpaint/icons/hicolor/48x48
+@dirrm share/kde/apps/kolourpaint/icons/hicolor/32x32/apps
+@dirrm share/kde/apps/kolourpaint/icons/hicolor/32x32
+@dirrm share/kde/apps/kolourpaint/icons/hicolor/16x16/apps
+@dirrm share/kde/apps/kolourpaint/icons/hicolor/16x16/actions
+@dirrm share/kde/apps/kolourpaint/icons/hicolor/16x16
+@dirrm share/kde/apps/kolourpaint/icons/hicolor
+@dirrm share/kde/apps/kolourpaint/icons
+@dirrm share/kde/apps/kolourpaint
 @dirrm share/kde/apps/kiconedit/pics
 @dirrm share/kde/apps/kiconedit
 @dirrm share/kde/apps/kghostview
@@ -1059,21 +1148,19 @@ share/kde/servicetypes/ksvgrenderer.desktop
 @dirrm share/kde/apps/kgamma
 @dirrm share/kde/apps/kfax/pics
 @dirrm share/kde/apps/kfax
-@dirrm share/kde/apps/kdvi/toolbar
 @dirrm share/kde/apps/kdvi
 @dirrm share/kde/apps/kcoloredit
 @comment dirrm share/kde/apps
-@comment dirrm share/kde/applnk/Settings/System
-@dirrm share/kde/applnk/Graphics/More
-@dirrm share/kde/applnk/Graphics
+@comment dirrm share/kde/applnk/Graphics
+@comment dirrm share/kde/applnk/.hidden
 @dirrm share/doc/kde/HTML/en/kview
 @dirrm share/doc/kde/HTML/en/kuickshow
 @dirrm share/doc/kde/HTML/en/ksnapshot
 @dirrm share/doc/kde/HTML/en/kruler
 @dirrm share/doc/kde/HTML/en/kpovmodeler
 @dirrm share/doc/kde/HTML/en/kpdf
-@dirrm share/doc/kde/HTML/en/kpaint
 @dirrm share/doc/kde/HTML/en/kooka
+@dirrm share/doc/kde/HTML/en/kolourpaint
 @dirrm share/doc/kde/HTML/en/kiconedit
 @dirrm share/doc/kde/HTML/en/kghostview
 @dirrm share/doc/kde/HTML/en/kgamma
@@ -1081,5 +1168,8 @@ share/kde/servicetypes/ksvgrenderer.desktop
 @dirrm share/doc/kde/HTML/en/kcoloredit
 @dirrm share/doc/kde/HTML/en/kamera
 @comment dirrm share/doc/kde/HTML/en
+@comment dirrm share/applications/kde
+@comment dirrm lib/kde3
 @dirrm include/libtext2path-0.1
 @dirrm include/ksvg
+@dirrm include/dom
