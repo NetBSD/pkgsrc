@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.2 2003/09/29 21:30:28 jschauma Exp $
+# $NetBSD: version.mk,v 1.3 2003/10/05 21:52:42 atatat Exp $
 #
 # This file computes the version number of the Mesa distributed with
 # XFree86 and stores it in ${_MESA_VERSION}.
@@ -15,12 +15,16 @@ MESA_VERSION=		5.0.2
 _GL_GLEXT_H=		${X11BASE}/include/GL/glext.h
 _MESA_GL_VERSIONS=	1.2 1.3 1.4
 .for _glvers_ in ${_MESA_GL_VERSIONS}
+.if !exists(${_GL_GLEXT_H})
+_MESA_GL_VERSION_${_glvers_}=	NO
+.else
 _MESA_GL_VERSION_${_glvers_}!= \
 	if ${EGREP} -q "\#define[ 	]*GL_VERSION_${_glvers_:S/./_/}[ 	]*1" ${_GL_GLEXT_H}; then \
 		${ECHO} YES;						\
 	else								\
 		${ECHO} NO;						\
 	fi
+.endif
 .endfor
 #
 # According to the Mesa documentation, for stable releases:
