@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1 1998/12/19 22:26:00 christos Exp $
+*** misc.h.orig	Sat Dec 19 13:53:22 1998
+--- misc.h	Sat Dec 19 13:53:09 1998
+***************
+*** 23,29 ****
+  long random(void);
+  #endif
+  
+! #if !defined(linux) & !defined(__EMX__) & !defined(__FreeBSD__)
+  #if defined(BSD4_4) || defined(HPArchitecture) || defined(SGIArchitecture) || defined(_AIX) || defined(_SCO_DS)
+  void srandom(unsigned int);
+  #else
+--- 23,29 ----
+  long random(void);
+  #endif
+  
+! #if !defined(linux) & !defined(__EMX__) & !defined(__FreeBSD__) && !defined(__NetBSD__)
+  #if defined(BSD4_4) || defined(HPArchitecture) || defined(SGIArchitecture) || defined(_AIX) || defined(_SCO_DS)
+  void srandom(unsigned int);
+  #else
