@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1988 2003/04/20 16:27:54 cjep Exp $
+$NetBSD: CHANGES,v 1.1989 2003/04/20 16:59:01 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1671,3 +1671,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnome2-control-center to 2.2.1 [rh 2003-04-20]
 	Updated gnome-session to 2.2.1 [rh 2003-04-20]
 	Added perlsh-1.8 [cjep 2003-04-20]
+	Updated perlsh to 1.8nb1 [cjep 2003-04-20]
