@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/04/20 22:11:48 drochner Exp $
+# $NetBSD: Makefile,v 1.26 2004/04/25 03:02:20 snj Exp $
 
 DISTNAME=	dx-4.3.2
 CATEGORIES=	graphics
@@ -8,7 +8,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.opendx.org/
 COMMENT=	Open Visualization Data Explorer
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_X11BASE=		yes
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
@@ -22,14 +22,14 @@ LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 MAKE_ENV+=		ARCH=""
 CONFIGURE_ENV+=		ARCH=""
 
-.include "../../devel/hdf/buildlink2.mk"
-.include "../../devel/netcdf/buildlink2.mk"
-.include "../../graphics/ImageMagick/buildlink2.mk"
-.include "../../graphics/MesaLib/buildlink2.mk"
-.include "../../graphics/glu/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/tiff/buildlink2.mk"
-.include "../../mk/motif.buildlink2.mk"
+.include "../../devel/hdf/buildlink3.mk"
+.include "../../devel/netcdf/buildlink3.mk"
+.include "../../graphics/ImageMagick/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../mk/motif.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/21 17:20:04 martti Exp $
+# $NetBSD: Makefile,v 1.13 2004/04/25 02:59:29 snj Exp $
 #
 
 DISTNAME=       aide-0.9
@@ -13,11 +13,11 @@ COMMENT=	Free intrusion detection system for checking file integrity
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 BUILDLINK_DEPENDS.mhash?=	mhash>=0.8.17
 
-USE_BUILDLINK2= # defined
+USE_BUILDLINK3= yes
 
 GNU_CONFIGURE=	yes
 #don't set YACC so configure can correctly find bison
 YACC=
 
-.include "../../security/mhash/buildlink2.mk"
+.include "../../security/mhash/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
