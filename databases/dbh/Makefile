@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/14 18:26:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/10 09:46:50 xtraeme Exp $
 
 DISTNAME=		dbh_1.0-15
 PKGNAME=		dbh-1.0.15
@@ -10,7 +10,7 @@ HOMEPAGE=		http://dbh.sourceforge.net/
 COMMENT=		Library to create disk based Hashtables
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	src/dbh-1.0.pc.in
 
@@ -22,4 +22,5 @@ post-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} doc/dbh-hash-tables.html \
 		${PREFIX}/share/doc/dbh/html
 
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
