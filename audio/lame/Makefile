@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/01/22 07:15:00 grant Exp $
+# $NetBSD: Makefile,v 1.34 2004/02/03 01:42:23 xtraeme Exp $
 #
 
 DISTNAME=	lame-${VERS}
@@ -26,6 +26,12 @@ CONFIGURE_ARGS+=	--without-vorbis
 LDFLAGS.SunOS+=		-lm
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "FreeBSD"
+PLIST_SUBST+=		AVAILABLE="@comment "
+.else
+PLIST_SUBST+=		AVAILABLE=
+.endif
 
 .if defined(LAME_USE_GTK)
 CONFIGURE_ENV+=		GTK_CONFIG=${BUILDLINK_PREFIX.gtk}/bin/gtk-config
