@@ -1,145 +1,108 @@
-$NetBSD: patch-ac,v 1.9 2003/12/04 10:11:27 abs Exp $
+$NetBSD: patch-ac,v 1.10 2004/02/20 00:41:16 abs Exp $
 
---- mserv/mserv.c.orig	Sun Aug  3 15:57:20 2003
-+++ mserv/mserv.c
-@@ -62,12 +62,17 @@ met:
- #include <sys/ioctl.h>
- #include <time.h>
+--- mserv/defconf.c.orig	Mon Aug  4 19:25:36 2003
++++ mserv/defconf.c
+@@ -1,54 +1,53 @@
+ #include "defines.h"
  
-+#ifdef PARSE_OGG_INFO
-+#include <vorbis/codec.h>
-+#include <vorbis/vorbisfile.h>
-+#endif
-+
- #include "mserv.h"
- #include "misc.h"
- #include "cmd.h"
- #include "acl.h"
- #include "mp3info.h"
--#include "soundcard.h"
-+#include "mservsoundcard.h"
- #include "defconf.h"
- #include "conf.h"
- #include "opt.h"
-@@ -2019,11 +2024,13 @@ static t_track *mserv_loadtrk(const char
-       alen = strlen(buffer);
-       if (buffer[alen-1] != '\n') {
- 	mserv_log("Line %d too long in '%s'", line, fullpath_trk);
-+	fclose(fd);
- 	return NULL;
-       }
-       buffer[--alen] = '\0';
-       if (!(l = strcspn(buffer, "=")) || l >= 64) {
- 	mserv_log("Invalid track line %d in '%s'", line, fullpath_trk);
-+	fclose(fd);
- 	return NULL;
-       }
-       strncpy(token, buffer, l);
-@@ -2059,6 +2066,7 @@ static t_track *mserv_loadtrk(const char
- 	}
- 	if ((arate = malloc(sizeof(t_rating)+strlen(token)+1)) == NULL) {
- 	  mserv_log("Out of memory creating ratings for '%s'", fullpath_trk);
-+	  fclose(fd);
- 	  return NULL;
- 	}
- 	memset(arate, 0, sizeof(t_rating));
-@@ -2082,15 +2090,18 @@ static t_track *mserv_loadtrk(const char
-     }
-     if (!*author) {
-       mserv_log("No author specified in '%s'", fullpath_trk);
-+      fclose(fd);
-       return NULL;
-     }
-     if (!*name) {
-       mserv_log("No name specified in '%s'", fullpath_trk);
-+      fclose(fd);
-       return NULL;
-     }
-     if (fstat(fileno(fd), &buf) == -1) {
-       perror("fstat");
-       mserv_log("Unable to stat '%s': %s", filename, strerror(errno));
-+      fclose(fd);
-       return NULL;
-     }
-     mtime = buf.st_mtime;
-@@ -2098,8 +2109,17 @@ static t_track *mserv_loadtrk(const char
-   }
-   if (duration == 0 && !*miscinfo) {
-     len = strlen(fullpath_file);
-+#ifdef PARSE_OGG_INFO
-+    if (len > 4 && !stricmp(".mp3", fullpath_file+len-4) ||
-+	!stricmp(".ogg", fullpath_file+len-4)) {
-+      if (!stricmp(".mp3", fullpath_file+len-4))
-+        duration = mserv_mp3info_readlen(fullpath_file, &bitrate, &id3tag);
-+      else
-+        duration = mserv_ogginfo_readlen(fullpath_file, &bitrate, &id3tag);
-+#else
-     if (len > 4 && !stricmp(".mp3", fullpath_file+len-4)) {
-       duration = mserv_mp3info_readlen(fullpath_file, &bitrate, &id3tag);
-+#endif
-       if (duration == -1) {
- 	mserv_log("Unable to determine details of mp3 '%s': %s",
- 		  filename, strerror(errno));
-@@ -3427,6 +3447,62 @@ int mserv_setmixer(t_client *cl, int wha
-   close(mixer_fd);
-   mserv_response(cl, "NAN", NULL);
-   return -1;
-+}
-+
-+#endif
-+
-+#ifdef PARSE_OGG_INFO
-+int mserv_ogginfo_readlen(const char *fname, int *bitrate_ret,
-+			  t_id3tag *id3tag)
-+{
-+  OggVorbis_File    vf;
-+  FILE              *f;
-+  ogg_sync_state    sync;
-+  vorbis_info	    *vi;
-+  vorbis_comment    *vc;
-+  char		    **comment;
-+  double	    duration;
-+
-+  if (id3tag)
-+    memset(id3tag, 0, sizeof(*id3tag));
-+
-+  if ((f = fopen(fname, "rb")) == NULL)
-+    return -1;
-+
-+  if (ov_open(f, &vf, NULL, 0) < 0) {
-+    fclose(f);
-+    return -1;
-+  }
-+
-+  if ( !(vi = ov_info(&vf, -1)) || !(vc = ov_comment(&vf, -1))) {
-+    ov_clear(&vf);
-+    fclose(f);
-+    return -1;
-+    }
-+
-+  if (bitrate_ret)
-+    *bitrate_ret = vi->bitrate_nominal/1024;
-+
-+  for (comment = vc->user_comments ; *comment ; ++comment) {
-+    if (strncasecmp(*comment, "title=", 6) == 0) {
-+	strlcpy(id3tag->title, *comment + 6, MP3ID3_TITLELEN+1);
-+        id3tag->present = 1;
-+    }
-+    else if (strncasecmp(*comment, "artist=", 7) == 0)
-+	strlcpy(id3tag->artist, *comment + 7, MP3ID3_ARTISTLEN+1);
-+    else if (strncasecmp(*comment, "album=", 6) == 0)
-+	strlcpy(id3tag->album, *comment + 6, MP3ID3_ALBUMLEN+1);
-+    else if (strncasecmp(*comment, "date=", 5) == 0)
-+	strlcpy(id3tag->year, *comment + 5, MP3ID3_YEARLEN+1);
-+    else if (strncasecmp(*comment, "genre=", 6) == 0)
-+	strlcpy(id3tag->genre, *comment + 6, 31);
-+    /* tracknumber ignored */
-+  }
-+
-+  duration = ov_time_total(&vf, -1);
-+  ov_clear(&vf);
-+  fclose(f);
-+  return (int)duration * 100;
- }
+-const char defconf_file[] = "# Mserv configuration file for 0.33 and later\n\
+-\n\
+-# File locations, / at start is absolute, otherwise relative to mserv root\n\
+-path_acl=acl\n\
+-path_webacl=webacl\n\
+-path_logfile=log\n\
+-path_tracks=tracks\n\
+-path_trackinfo=trackinfo\n\
+-path_playout=player.out\n\
+-path_idea=idea\n\
+-path_mixer=/dev/mixer\n\
+-path_language=" DATADIR "/english.lang\n\
+-\n\
+-# Define player invokation methods\n\
+-# mservplay is our special wrapper, the first parameter is a 'nice' level\n\
+-# play is part of sox\n\
+-prog_mpg123=/usr/local/bin/mpg123 -b 1024\n\
+-prog_freeamp=/usr/local/bin/freeamp -ui mpg123\n\
+-prog_mservplay=/usr/local/bin/mservplay 0 mpg123 -b 1024\n\
+-prog_play=/usr/local/bin/play\n\
+-prog_ogg123=/usr/local/bin/ogg123\n\
+-\n\
+-# Set players for each file extension we want to support, unknown extensions\n\
+-# are ignored by mserv\n\
+-player_mp3=prog_mpg123\n\
+-player_wav=prog_play\n\
+-player_au=prog_play\n\
+-player_ogg=prog_ogg\n\
+-\n\
+-# Set default random mode, either on or off.  You must still tell mserv to\n\
+-# start playing (PLAY).\n\
+-random=off\n\
+-\n\
+-# Set whether or not you would like play to start as soon as mserv has loaded.\n\
+-play=off\n\
+-\n\
+-# Set default random factor, 0.5 is completely random, 0.6 is less random\n\
+-# and takes into account your ratings, 0.4 plays your worst tunes. 0.99 max.\n\
+-factor=0.60\n\
+-\n\
+-# Set default filter, leave blank for off.  Example: \"!classical\" to\n\
+-# not play classical genre, or \"year>=1980&year<1990\" to only play\n\
+-# 80's songs.\n\
+-filter=\n\
+-\n\
+-# Set gap between songs, in seconds.  0 to start the next song as quick as\n\
+-# possible.\n\
+-gap=1\n\
+-\n\
+-";
++const char defconf_file[] = "# Mserv configuration file for 0.33 and later\n"
++"\n"
++"# File locations, / at start is absolute, otherwise relative to mserv root\n"
++"path_acl=acl\n"
++"path_webacl=webacl\n"
++"path_logfile=log\n"
++"path_tracks=tracks\n"
++"path_trackinfo=trackinfo\n"
++"path_playout=player.out\n"
++"path_idea=idea\n"
++"path_mixer=/dev/mixer\n"
++"path_language=" DATADIR "/english.lang\n"
++"\n"
++"# Define player invokation methods\n"
++"# mservplay is our special wrapper, the first parameter is a 'nice' level\n"
++"# play is part of sox\n"
++"prog_mpg123=" PATH_MPG123 " -b 1024\n"
++"prog_freeamp=/usr/local/bin/freeamp -ui " PATH_MPG123 "\n"
++"prog_mservplay=/usr/local/bin/mservplay 0 " PATH_MPG123 " -b 1024\n"
++"prog_play=/usr/local/bin/play\n"
++"prog_ogg123=/usr/local/bin/ogg123\n"
++"\n"
++"# Set players for each file extension we want to support, unknown extensions\n"
++"# are ignored by mserv\n"
++"player_mp3=prog_mpg123\n"
++"player_wav=prog_play\n"
++"player_au=prog_play\n"
++"player_ogg=prog_ogg123\n"
++"\n"
++"# Set default random mode, either on or off.  You must still tell mserv to\n"
++"# start playing (PLAY).\n"
++"random=off\n"
++"\n"
++"# Set whether or not you would like play to start as soon as mserv has loaded.\n"
++"play=off\n"
++"\n"
++"# Set default random factor, 0.5 is completely random, 0.6 is less random\n"
++"# and takes into account your ratings, 0.4 plays your worst tunes. 0.99 max.\n"
++"factor=0.60\n"
++"\n"
++"# Set default filter, leave blank for off.  Example: \"!classical\" to\n"
++"# not play classical genre, or \"year>=1980&year<1990\" to only play\n"
++"# 80's songs.\n"
++"filter=\n"
++"\n"
++"# Set gap between songs, in seconds.  0 to start the next song as quick as\n"
++"# possible.\n"
++"gap=1\n"
++"\n";
  
- #endif
+ unsigned int defconf_size = sizeof(defconf_file)-1;
