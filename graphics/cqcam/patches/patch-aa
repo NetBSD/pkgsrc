@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2000/08/31 14:43:52 jwise Exp $
+$NetBSD: patch-aa,v 1.5 2001/01/07 04:05:03 thorpej Exp $
 
---- Makefile.orig	Tue Oct 28 00:07:06 1997
-+++ Makefile	Wed Jun 21 00:20:49 2000
+--- Makefile.orig	Mon Oct 27 15:07:06 1997
++++ Makefile	Sat Jan  6 19:59:45 2001
 @@ -13,9 +13,9 @@
  # OS-specific stuff: uncomment all of the lines for your OS of choice
  
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.4 2000/08/31 14:43:52 jwise Exp $
  
  # QNX
  #CFLAGS = -O2 -T1
-@@ -23,10 +23,17 @@
+@@ -23,10 +23,21 @@
  #DEFS += -DQNX
  
  # FreeBSD
@@ -29,13 +29,17 @@ $NetBSD: patch-aa,v 1.4 2000/08/31 14:43:52 jwise Exp $
 +CFLAGS = -O2 -I${X11BASE}/include -I${PREFIX}/include
 +LDFLAGS = -L${PREFIX}/lib -L${X11BASE}/lib -Wl,-R${PREFIX}/lib -Wl,-R${X11BASE}/lib
 +DEFS += -DNETBSD
-+# XXX Until we work out a way to use this on non-x86
++# XXX
++.if (${MACHINE_ARCH} == "alpha")
++LDLIBS += -lalpha
++.elif (${MACHINE_ARCH} == "i386")
 +LDLIBS += -li386
++.endif
 +
  # BSDI 3.0
  #CFLAGS = -O2 -I/usr/X11R6/include -I/usr/local/include
  #LDFLAGS = -L/usr/local/lib -L/usr/X11R6/lib
-@@ -44,15 +51,15 @@
+@@ -44,15 +55,15 @@
  # JPEG stuff: do you want JPEG support?  Where is your JPEG library?
  
  LDLIBS += -ljpeg
@@ -54,7 +58,7 @@ $NetBSD: patch-aa,v 1.4 2000/08/31 14:43:52 jwise Exp $
  LIBS_X = -lX11 -lXext $(REMOTE_LIBS)
  ######################################################################
  
-@@ -67,27 +74,27 @@
+@@ -67,27 +78,27 @@
  #   If you're not compiling xcqcam, this section is irrelevant
  
  # xview remote
@@ -94,7 +98,7 @@ $NetBSD: patch-aa,v 1.4 2000/08/31 14:43:52 jwise Exp $
  ######################################################################
  
  ######################################################################
-@@ -132,13 +139,14 @@
+@@ -132,13 +143,14 @@
  
  bininstall: all
  	@echo -n Installing binaries...
