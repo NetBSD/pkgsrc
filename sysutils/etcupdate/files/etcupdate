@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: etcupdate,v 1.4 2001/11/21 08:45:57 martti Exp $
+# $NetBSD: etcupdate,v 1.5 2001/11/22 13:20:00 martti Exp $
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -373,7 +373,7 @@ if [ ! -z "${NEED_MTREE}" ]; then
 	if yesno "You have created new directories. Run mtree to set" \
 	         "permissions"
 	then
-		mtree -Udef /etc/mtree/NetBSD.dist
+		(cd / && mtree -Udef /etc/mtree/NetBSD.dist)
 	fi
 fi
 if [ ! -z "${NEED_MAKEDEV}" ]; then
