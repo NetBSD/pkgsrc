@@ -1,42 +1,40 @@
---- ltmain.sh.orig	Fri Mar 20 03:00:29 1998
-+++ ltmain.sh	Fri Jul 17 10:41:15 1998
-@@ -1841,11 +1841,6 @@
+--- ltmain.sh.orig	Tue Jul 21 16:59:33 1998
++++ ltmain.sh	Tue Jul 21 17:02:42 1998
+@@ -144,6 +144,8 @@
+     prev=execute_dlfiles
+     ;;
+ 
++  --install-la) install_la="yes" ;;
++
+   -*)
+     $echo "$modename: unrecognized option \`$arg'" 1>&2
+     $echo "$help" 1>&2
+@@ -1841,10 +1843,12 @@
            IFS="$save_ifs"
          fi
  
--        # Install the pseudo-library for information purposes.
--        name=`$echo "X$file" | $Xsed -e 's%^.*/%%'`
--        $show "$install_prog $file $destdir/$name"
--        $run eval "$install_prog $file $destdir/$name" || exit $?
--
++if test -n "$install_la"; then
+         # Install the pseudo-library for information purposes.
+         name=`$echo "X$file" | $Xsed -e 's%^.*/%%'`
+         $show "$install_prog $file $destdir/$name"
+         $run eval "$install_prog $file $destdir/$name" || exit $?
++fi
+ 
          # Maybe install the static library, too.
          test -n "$old_library" && staticlibs="$staticlibs $dir/$old_library"
-         ;;
-@@ -1912,26 +1907,7 @@
+@@ -1912,6 +1916,7 @@
              exit 1
            fi
  
--          finalize=yes
--          for lib in $link_against_libtool_libs; do
--            # Check to see that each library is installed.
--            libdir=
--            if test -f "$lib"; then
--              # If there is no directory component, then add one.
--              case "$lib" in
--              */* | *\\*) . $lib ;;
--              *) . ./$lib ;;
--              esac
--            fi
--            libfile="$libdir/`$echo "X$lib" | $Xsed -e 's%^.*/%%g'`"
--            if test -z "$libdir"; then
--              $echo "$modename: warning: \`$lib' contains no -rpath information" 1>&2
--            elif test -f "$libfile"; then :
--            else
--              $echo "$modename: warning: \`$lib' has not been installed in \`$libdir'" 1>&2
--              finalize=no
--            fi
--          done
-+          finalize=no
++if test -n "$install_la"; then
+           finalize=yes
+           for lib in $link_against_libtool_libs; do
+             # Check to see that each library is installed.
+@@ -1932,6 +1937,7 @@
+               finalize=no
+             fi
+           done
++fi
  
            if test "$hardcode_action" = relink; then
              if test "$finalize" = yes; then
