@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.42 2004/08/06 10:41:51 sketch Exp $
+# $NetBSD: build,v 1.43 2004/09/22 16:42:29 mason Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -125,7 +125,7 @@ esac
 
 export BMAKE
 
-# Set ressource limits as high as possible
+# Set resource limits as high as possible
 ulimit -S -s `ulimit -H -s`
 ulimit -S -d `ulimit -H -d`
 
