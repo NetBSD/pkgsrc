@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/20 12:10:29 agc Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/24 11:25:17 uebayasi Exp $
 # FreeBSD: ports/japanese/qkc/Makefile,v 1.15 2001/05/10 11:42:23 max Exp
 
 DISTNAME=	qkcc100
@@ -10,6 +10,10 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	hiramatu@boreas.dti.ne.jp
 HOMEPAGE=	http://hp.vector.co.jp/authors/VA000501/
 COMMENT=	Quick Kanji code Converter
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+INSTALLATION_DIRS=	bin man/ja_JP.EUC/man1
 
 WRKSRC=		${WRKDIR}
 ALL_TARGET=	qkc
