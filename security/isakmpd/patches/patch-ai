@@ -1,0 +1,92 @@
+$NetBSD: patch-ai,v 1.1 2003/09/21 08:02:24 jmc Exp $
+
+--- crypto.c.orig	2003-09-21 02:46:15.000000000 +0000
++++ crypto.c	2003-09-21 02:54:49.000000000 +0000
+@@ -99,8 +99,13 @@
+ des1_init (struct keystate *ks, u_int8_t *key, u_int16_t len)
+ {
+   /* des_set_key returns -1 for parity problems, and -2 for weak keys */
++#if OPENSSL_VERSION_NUMBER >= 0x0090702fL
++  DES_set_odd_parity (DC key);
++  switch (DES_set_key (DC key, &ks->ks_des[0]))
++#else
+   des_set_odd_parity (DC key);
+   switch (des_set_key (DC key, ks->ks_des[0]))
++#endif
+     {
+     case -2:
+       return EWEAKKEY;
+@@ -112,19 +117,37 @@
+ void
+ des1_encrypt (struct keystate *ks, u_int8_t *d, u_int16_t len)
+ {
++#if OPENSSL_VERSION_NUMBER >= 0x0090702fL
++  DES_cbc_encrypt (DC d, DC d, len, &ks->ks_des[0], DC ks->riv, DES_ENCRYPT);
++#else
+   des_cbc_encrypt (DC d, DC d, len, ks->ks_des[0], DC ks->riv, DES_ENCRYPT);
++#endif
+ }
+ 
+ void
+ des1_decrypt (struct keystate *ks, u_int8_t *d, u_int16_t len)
+ {
++#if OPENSSL_VERSION_NUMBER >= 0x0090702fL
++  DES_cbc_encrypt (DC d, DC d, len, &ks->ks_des[0], DC ks->riv, DES_DECRYPT);
++#else
+   des_cbc_encrypt (DC d, DC d, len, ks->ks_des[0], DC ks->riv, DES_DECRYPT);
++#endif
+ }
+ 
+ #ifdef USE_TRIPLEDES
+ enum cryptoerr
+ des3_init (struct keystate *ks, u_int8_t *key, u_int16_t len)
+ {
++#if OPENSSL_VERSION_NUMBER >= 0x0090702fL
++  DES_set_odd_parity (DC key);
++  DES_set_odd_parity (DC (key + 8));
++  DES_set_odd_parity (DC (key + 16));
++
++  /* As of the draft Tripe-DES does not check for weak keys */
++  DES_set_key (DC key, &ks->ks_des[0]);
++  DES_set_key (DC (key + 8), &ks->ks_des[1]);
++  DES_set_key (DC (key + 16), &ks->ks_des[2]);
++#else
+   des_set_odd_parity (DC key);
+   des_set_odd_parity (DC (key + 8));
+   des_set_odd_parity (DC (key + 16));
+@@ -133,6 +156,7 @@
+   des_set_key (DC key, ks->ks_des[0]);
+   des_set_key (DC (key + 8), ks->ks_des[1]);
+   des_set_key (DC (key + 16), ks->ks_des[2]);
++#endif
+ 
+   return EOKAY;
+ }
+@@ -143,8 +167,13 @@
+   u_int8_t iv[MAXBLK];
+ 
+   memcpy (iv, ks->riv, ks->xf->blocksize);
++#if OPENSSL_VERSION_NUMBER >= 0x0090702fL
++  DES_ede3_cbc_encrypt (DC data, DC data, len, &ks->ks_des[0], &ks->ks_des[1],
++			&ks->ks_des[2], DC iv, DES_ENCRYPT);
++#else
+   des_ede3_cbc_encrypt (DC data, DC data, len, ks->ks_des[0], ks->ks_des[1],
+ 			ks->ks_des[2], DC iv, DES_ENCRYPT);
++#endif
+ }
+ 
+ void
+@@ -153,8 +182,13 @@
+   u_int8_t iv[MAXBLK];
+ 
+   memcpy (iv, ks->riv, ks->xf->blocksize);
++#if OPENSSL_VERSION_NUMBER >= 0x0090702fL
++  DES_ede3_cbc_encrypt (DC data, DC data, len, &ks->ks_des[0], &ks->ks_des[1],
++			&ks->ks_des[2], DC iv, DES_DECRYPT);
++#else
+   des_ede3_cbc_encrypt (DC data, DC data, len, ks->ks_des[0], ks->ks_des[1],
+ 			ks->ks_des[2], DC iv, DES_DECRYPT);
++#endif
+ }
+ #undef DC
+ #endif /* USE_TRIPLEDES */
