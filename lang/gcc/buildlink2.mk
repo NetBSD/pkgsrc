@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2002/10/01 19:24:28 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2002/10/08 09:09:12 jlam Exp $
 
 .if !defined(GCC_BUILDLINK2_MK)
 GCC_BUILDLINK2_MK=	# defined
@@ -60,7 +60,7 @@ _NEED_PKGSRC_GCC!= \
 			${ECHO} "NO";					\
 		fi;							\
 	else								\
-		echo "YES";						\
+		${ECHO} "YES";						\
 	fi
 .endif
 
