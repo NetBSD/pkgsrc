@@ -1,9 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2003/12/02 20:13:38 wennmach Exp $
+# $NetBSD: Makefile,v 1.25 2003/12/03 21:06:17 jschauma Exp $
 
-DISTNAME=		mpich-1.2.5-1a
-PKGNAME=		mpich-1.2.5.1.1
-PKGREVISION=		3
-WRKSRC=			${WRKDIR}/${DISTNAME:C/-1a//}
+DISTNAME=		mpich-1.2.5.2
 CATEGORIES=		parallel
 MASTER_SITES=		ftp://ftp.mcs.anl.gov/pub/mpi/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} mpich-docs.tgz
@@ -22,6 +19,7 @@ INSTALL_TARGET=		install-all
 USE_PERL5=		yes
 HAS_CONFIGURE=		yes
 USE_X11=		yes
+USE_FORTRAN=		yes
 
 MPI_RSH?=		ssh
 
@@ -43,6 +41,10 @@ CONFIGURE_ARGS+=	--disable-weak-symbols
 
 MAKE_ENV+=		RSHCOMMAND="${MPI_RSH}"
 
+BUILD_DEFS+=		MPI_RSH
+
+.include "../../mk/bsd.prefs.mk"
+
 PLIST_SRC+=		${PKGDIR}/PLIST
 
 .if ${MPI_RSH} == "rsh"
@@ -61,6 +63,9 @@ post-build:
 	${SED} -e "s,@PREFIX@,${PREFIX}," ${WRKSRC}/man/man1/MPI.1 >	\
 			${WRKSRC}/man/man1/MPI.1.tmp
 	${MV} ${WRKSRC}/man/man1/MPI.1.tmp ${WRKSRC}/man/man1/MPI.1
+
+post-patch:
+	${RM} -f ${WRKSRC}/man/man1/MPI.1.orig
 
 post-install:
 	cd ${WRKDIR}/docs && ${PAX} -rw . ${PREFIX}/share/doc/html/mpi-ch/
