@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 11:21:04 agc Exp $
+$NetBSD: distinfo,v 1.3 2001/04/28 02:05:57 jtb Exp $
 
 SHA1 (sharutils-4.2.1.tar.gz) = 3f0c0af31bd429cee1e088eb74867f20f8d399ef
 Size (sharutils-4.2.1.tar.gz) = 306022 bytes
@@ -8,4 +8,6 @@ SHA1 (patch-ac) = 76bf1dedc34a462dd05a55511d9caf578cae78d0
 SHA1 (patch-ad) = fe6ba534c9830294c97dd37586aaa2c63d385a4c
 SHA1 (patch-ae) = 8b88d98af2d1f24ba2623e8d56b36061806f5e12
 SHA1 (patch-af) = 50aee8dc24a33892a0f17f7aeb5cfbae1adcb0c9
-SHA1 (patch-ag) = 3c996cc7fa9c40ca3fbe80980a31257238f4844f
+SHA1 (patch-ag) = 0bf292dcd529d84719b06a7ac9b85d43b1c30cc1
+SHA1 (patch-ah) = 3b03c7d96dd062636600634e91ca20b56539e7f0
+SHA1 (patch-ai) = 3be9a75c8623b5d1f1d18cfd70026af48c6ef7b1
