@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/11/26 06:50:37 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/10/27 20:48:56 seb Exp $
 
 DISTNAME=		HTML-Tree-3.11
 PKGNAME=		p5-${DISTNAME}
@@ -12,11 +12,8 @@ COMMENT=		perl5 modules for manipulating HTML syntax trees
 DEPENDS+=		p5-HTML-Parser>=2.19:../../www/p5-HTML-Parser
 DEPENDS+=		p5-HTML-Tagset>=3.02:../../www/p5-HTML-Tagset
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/HTML-Tree/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

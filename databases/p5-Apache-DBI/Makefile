@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/16 20:43:10 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/27 20:48:55 seb Exp $
 #
 
 DISTNAME=	ApacheDBI-0.88
@@ -13,11 +13,8 @@ COMMENT=	DBI support for Apache+mod_perl
 
 DEPENDS+=		p5-DBI>=1.13:../../databases/p5-DBI
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Apache/DBI/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
