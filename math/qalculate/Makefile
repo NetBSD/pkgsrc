@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/11/25 10:03:30 adam Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/17 22:09:51 minskim Exp $
 
 DISTNAME=	qalculate-0.7.1
 CATEGORIES=	math
@@ -26,6 +26,7 @@ UNLIMIT_RESOURCES=	datasize
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../math/cln/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
