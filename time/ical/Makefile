@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 17:32:04 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/01/01 22:23:03 bjoern Exp $
 # $FreeBSD Id: Makefile,v 1.15 1998/02/07 22:59:16 hoek Exp
 #
 
@@ -18,5 +18,11 @@ CONFIGURE_ARGS=	--prefix=${PREFIX} \
 		--with-tclconfig=${PREFIX}/lib \
 		--with-tclsh=${PREFIX}/bin/tclsh \
 		--with-tkconfig=${PREFIX}/lib
+
+post-configure:
+	${TOUCH} ${WRKDIR}/${DISTNAME}/Makefile \
+	         ${WRKDIR}/${DISTNAME}/calendar/Makefile \
+	         ${WRKDIR}/${DISTNAME}/startup.tcl \
+	         ${WRKDIR}/${DISTNAME}/time/Makefile
 
 .include "../../mk/bsd.pkg.mk"
