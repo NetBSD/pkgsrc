@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.3 2003/08/31 18:39:27 mycroft Exp $
+$NetBSD: distinfo,v 1.4 2003/09/19 12:27:08 wiz Exp $
 
 SHA1 (transcode-0.6.9.tar.gz) = cb4f88cb20a8d0baa057fd2ba47d57c4b7320ab9
 Size (transcode-0.6.9.tar.gz) = 2980047 bytes
 SHA1 (patch-aa) = 727be281a865a8c3baab8829c574d4224c072000
-SHA1 (patch-ab) = 58f3796b95639aed6fcae1bef23ce9a926c7e6f6
-SHA1 (patch-ac) = d6595c96ad0cebf34d620df9829365ba9c9f88c6
 SHA1 (patch-ad) = dc3777cbfd86eba3d62c0bfa947e9877c6c44fea
 SHA1 (patch-ae) = f49a155b84edbeb3c93705e6ab15e80f48adbdb1
 SHA1 (patch-af) = ac2060ee599df32cbbad476ad64926411107732d
@@ -14,7 +12,6 @@ SHA1 (patch-ai) = 86f49f23d8af5320be93c8dc475b53b906dff10f
 SHA1 (patch-aj) = f62d0e1e23868b290221cffc367c3f0a5cc5cbc6
 SHA1 (patch-ak) = add9a293ddb73e3f82982d2021a6310f742e45f1
 SHA1 (patch-al) = 797bd770565263452d47e2f4d8942974ef153553
-SHA1 (patch-am) = 79975c482d44018cb058bcd0b3c4b1eee0bc9711
 SHA1 (patch-an) = ee416096f1fc6b8ff74f80f93cc5e40d4ad49223
 SHA1 (patch-ao) = 99f2461e286122b2424970a62b0820ca084bcc68
 SHA1 (patch-ap) = 440ff79bba6147e697d5c061e0a374410b6b54fb
