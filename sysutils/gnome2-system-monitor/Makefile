@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2004/03/26 02:27:54 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/01 19:08:26 jmmv Exp $
 #
 
-DISTNAME=	gnome-system-monitor-2.4.0
+DISTNAME=	gnome-system-monitor-2.6.0
 PKGNAME=	${DISTNAME:S/gnome/gnome2/}
-PKGREVISION=	5
 CATEGORIES=	sysutils gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-system-monitor/2.4/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-system-monitor/2.6/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	xtraeme@NetBSD.org
@@ -24,6 +23,10 @@ USE_X11=		yes
 LIBS+=			-lutil
 GCONF2_SCHEMAS+=	gnome-system-monitor.schemas
 
+pre-configure:
+	cd ${WRKSRC} && ${PREFIX}/bin/libtoolize
+	cd ${WRKSRC} && ${AUTOCONF}
+
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgtop2/buildlink3.mk"
@@ -37,4 +40,5 @@ GCONF2_SCHEMAS+=	gnome-system-monitor.schemas
 .include "../../x11/startup-notification/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
