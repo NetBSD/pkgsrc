@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2003/04/11 12:01:25 darcy Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/04/15 18:14:52 drochner Exp $
 bin/kermit
 share/doc/kermit/ckaaaa.txt
-share/doc/kermit/ckc209.txt
+share/doc/kermit/ckc211.txt
 share/doc/kermit/ckcbwr.txt
 share/doc/kermit/ckccfg.txt
 share/doc/kermit/ckcplm.txt
