@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2002/03/04 14:36:55 martti Exp $
+
+--- libexif/Makefile.in.orig	Mon Mar  4 15:05:18 2002
++++ libexif/Makefile.in	Mon Mar  4 15:06:04 2002
+@@ -313,7 +313,7 @@
+ 
+ install-am: all-am
+ 	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
+-install: install-recursive
++install:
+ uninstall-am:
+ uninstall: uninstall-recursive
+ all-am: Makefile config.h
