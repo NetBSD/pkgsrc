@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2002/04/23 02:08:52 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2002/09/21 08:42:10 jlam Exp $
 #
 
 DISTNAME=	ddd-3.3
@@ -9,7 +9,7 @@ MAINTAINER=     frueauf@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/ddd/
 COMMENT=	Data Display Debugger -- a common graphical front-end for GDB/DBX/XDB
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
@@ -47,8 +47,8 @@ post-install:
 test:
 	(cd ${WRKSRC} ; ${MAKE_PROGRAM} check)
 
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../mk/motif.buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../mk/motif.buildlink2.mk"
+
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
