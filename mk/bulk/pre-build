@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.28 2003/08/26 08:18:09 hubertf Exp $
+# $NetBSD: pre-build,v 1.29 2003/09/02 07:00:06 jlam Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -69,33 +69,37 @@ fi
 # Clean out everything and its mother
 #
 PKG_DBDIR=`(cd ${PKGLINT_PKG_DIR}; ${BMAKE} show-var VARNAME=PKG_DBDIR)`
+DEPOTBASE=`(cd ${PKGLINT_PKG_DIR}; ${BMAKE} show-var VARNAME=DEPOTBASE)`
 
-echo Removing all installed packages in ${PKG_DBDIR}
-
-if [ -d ${PKG_DBDIR} ]; then
-	cd ${PKG_DBDIR}
-	for pkg in *
-	do
-		if `env PKG_DBDIR=${PKG_DBDIR} pkg_info -qe $pkg`; then
-			echo pkg_delete -r $pkg
-			env PKG_DBDIR=${PKG_DBDIR} pkg_delete -r $pkg
-		fi
-	done
-	# this should have removed everything.  Now force any broken pkgs
-	# to deinstall
-	for pkg in *
-	do
-		if `env PKG_DBDIR=${PKG_DBDIR} pkg_info -qe $pkg`; then
-			echo pkg_delete -f $pkg
-			env PKG_DBDIR=${PKG_DBDIR} pkg_delete -f $pkg
-		fi
-	done
+for dbdir in ${PKG_DBDIR} ${DEPOTBASE}; do
+	echo Removing all installed packages in $dbdir
+	if [ -d $dbdir ]; then
+		cd $dbdir
+		for pkg in *
+		do
+			if `pkg_info -K $dbdir -qe $pkg`; then
+				echo pkg_delete -r $pkg
+				pkg_delete -K $dbdir -r $pkg
+			fi
+		done
+		#
+		# this should have removed everything.
+		# Now force any broken pkgs to deinstall.
+		#
+		for pkg in *
+		do
+			if `pkg_info -K $dbdir -qe $pkg`; then
+				echo pkg_delete -f $pkg
+				pkg_delete -K $dbdir -f $pkg
+			fi
+		done
 	
-	# We've tried our best to get rid of the pkgs, now do it the hard way
-	# If it wasn't for stuff in $X11BASE, I wouldn't have hard feelings
-	# about this!
-	rm -fr *
-fi
+		# We've tried our best to get rid of the pkgs, now do it
+		# the hard way.  If it wasn't for stuff in $X11BASE, I
+		# wouldn't have hard feelings about this!
+		rm -fr *
+	fi
+done
 
 cd $LOCALBASE && rm -fr * && rm -fr .??*;
 if [ x"$BMAKE" = x"bmake" ]; then

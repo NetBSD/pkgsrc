@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.12 2003/07/09 16:07:22 salo Exp $
+# $NetBSD: gen-transform.sh,v 1.13 2003/09/02 06:59:51 jlam Exp $
 
 transform="@_BLNK_TRANSFORM_SEDFILE@"
 untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
@@ -140,6 +140,16 @@ EOF
 			@CAT@ >> $sedfile << EOF
 s|-Wl,-R\([^ 	"':;]*\)|@_COMPILER_LD_FLAG@@_OPSYS_RPATH_NAME@\1|g
 s|-Wl,-rpath,\([^ 	"':;]*\)|@_COMPILER_LD_FLAG@@_OPSYS_RPATH_NAME@\1|g
+EOF
+			;;
+		esac
+		;;
+	depot)
+		case "$action" in
+		transform|untransform)
+			@CAT@ >> $sedfile << EOF
+s|$2/[^/ 	\`"':;]*\(/[^ 	\`"':;]\)|$3\1|g
+s|$2/[^/ 	\`"':;]*$|$3|g
 EOF
 			;;
 		esac
