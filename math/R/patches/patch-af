@@ -1,22 +1,21 @@
-$NetBSD: patch-af,v 1.2 1999/08/26 23:52:22 jlam Exp $
+$NetBSD: patch-af,v 1.3 2000/01/12 22:05:33 rh Exp $
 
---- src/scripts/R.sh.in.orig	Wed May 12 03:12:32 1999
-+++ src/scripts/R.sh.in	Thu Aug 26 18:44:22 1999
-@@ -47,7 +47,7 @@
- 	echo "*** (maybe use \`run ${args}'  from *inside* ${deb}"
- 	echo ""
-       fi
--      exec ${deb} ${RHOME}/bin/${R_BINARY} ;;
-+      exec ${deb} @prefix@/bin/${R_BINARY} ;;
-     --no-environ)
-       USE_R_ENVIRON=false ;;
-     --vanilla)
-@@ -107,7 +107,7 @@
- if ${USE_R_ENVIRON}; then
-   [ -r ${HOME}/.Renviron ] && . ${HOME}/.Renviron
+--- src/scripts/R.sh.in.orig	Wed Jan 12 20:12:45 2000
++++ src/scripts/R.sh.in	Wed Jan 12 20:15:02 2000
+@@ -114,14 +114,14 @@
  fi
--exec ${RHOME}/bin/${R_BINARY} @R_BATCHSAVE@ ${ARGS}
-+exec @prefix@/bin/${R_BINARY} @R_BATCHSAVE@ ${ARGS}
+ 
+ if test -z "${DBG}"; then
+-  exec ${R_HOME}/bin/${R_BINARY} @R_BATCHSAVE@ ${ARGS}
++  exec @prefix@/bin/${R_BINARY} @R_BATCHSAVE@ ${ARGS}
+ else
+   if test -n "${ARGS}"; then
+     echo "*** Further command line arguments (\`${ARGS}') disregarded"
+     echo "*** (maybe use \`run ${ARGS}' from *inside* ${DBG})"
+     echo ""
+   fi
+-  exec ${DBG} ${R_HOME}/bin/${R_BINARY}
++  exec ${DBG} @prefix@/bin/${R_BINARY}
+ fi
  
  ### Local Variables: ***
- ### mode: sh ***

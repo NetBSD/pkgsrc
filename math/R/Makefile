@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.10 1999/11/23 17:37:28 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.11 2000/01/12 22:05:30 rh Exp $
 #
 
-DISTNAME=	R-0.64.2
+DISTNAME=	R-0.90.1
 CATEGORIES=	math
-MASTER_SITES=	http://lib.stat.cmu.edu/R/CRAN/src/base/ \
+MASTER_SITES=	http://cran.r-project.org/src/base/ \
+		ftp://cran.r-project.org/pub/R/src/base/ \
+		http://lib.stat.cmu.edu/R/CRAN/src/base/ \
 		ftp://ftp.biostat.washington.edu/mirrors/R/CRAN/src/base/ \
 		http://cran.stat.wisc.edu/src/base/ \
 		http://SunSITE.auc.dk/R/src/base/ \
@@ -12,17 +14,19 @@ MASTER_SITES=	http://lib.stat.cmu.edu/R/CRAN/src/base/ \
 		ftp://dola.snu.ac.kr/pub/R/CRAN/src/base/ \
 		http://stat.ethz.ch/CRAN/src/base/ \
 		http://www.stats.bris.ac.uk/R/src/base/ \
-		ftp://ftp.ci.tuwien.ac.at/pub/R/src/base/
+		http://cran.at.r-project.org/src/base/ \
+		ftp://cran.at.r-project.org/pub/R/src/base/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	jlam@netbsd.org
-HOMEPAGE=	http://lib.stat.cmu.edu/R/CRAN/
+HOMEPAGE=	http://cran.r-project.org/
 
 DEPENDS+=	readline-4.0:../../devel/readline
 
 USE_FORTRAN=	yes
 USE_X11=	yes
 USE_PERL5=	yes
+USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-readline --with-x
 
