@@ -1,4 +1,4 @@
-# $NetBSD: BSDOS.mk,v 1.5 2004/12/27 06:41:50 jlam Exp $
+# $NetBSD: BSDOS.mk,v 1.6 2005/01/25 18:15:58 tv Exp $
 #
 # Variable definitions for the BSD/OS operating system.
 
@@ -162,9 +162,7 @@ PKG_CREATE_USERGROUP=	NO # until it works
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
 # FIXME: Adjust to work on this system and enable the lines below.
-#.if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
-#_OPSYS_MAX_CMDLEN!=	/sbin/sysctl -n kern.argmax
-#.endif
+#_OPSYS_MAX_CMDLEN_CMD=	/sbin/sysctl -n kern.argmax
 
 # If games are to be installed setgid, then SETGIDGAME is set to 'yes'
 # (it defaults to 'no' as per bsd.pkg.defaults.mk).
