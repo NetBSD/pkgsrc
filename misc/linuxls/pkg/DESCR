@@ -1,8 +1,8 @@
 This is a port of the Slackware Linux colorized `ls' program, which is, in
 turn, adapted from the `ls' program that comes with the GNU `fileutils'
 package.  It is based on GNU fileutils version 3.12.  The port installs
-four programs in `/usr/local/bin': `linuxls', `dir', `vdir' and
-`dircolors'.  It also installs man pages for `linuxls' and `dircolors'.
+four programs: `linuxls', `dir', `vdir' and `dircolors'.  It also
+installs man pages for `linuxls' and `dircolors'.
 The programs are compatible with their counterparts in Slackware Linux
 releases.
 
@@ -18,10 +18,10 @@ NOTES:
 
 2. Unlike the Slackware Linux version, this port installs `ls' as `linuxls'
    so it won't conflict with the normal BSD `ls' program or the BSD
-   `colorls' program (the latter available from the ports collection).
+   `colorls' program (the latter available from pkgsrc).
 
 3. This colorized `ls' program is not the same as the `colorls' program 
-   available from the ports collection.
+   available from pkgsrc.
 
 Brian Clapper <bmc@WillsCreek.COM>
 07 January 1996
