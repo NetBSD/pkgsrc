@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.9 1999/12/16 14:04:20 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.10 1999/12/18 14:39:21 abs Exp $
 
 # (Somewhat quickly) Written by David Brownlee <abs@netbsd.org>.
 # Caveats:
@@ -114,29 +114,29 @@ sub check_prebuilt_packages
 sub fail
     { print STDERR @_, "\n"; exit(3); }
 
-# Determine if a packake version is current. If not, report correct version
-# if possible
+# Determine if a package version is current. If not, report correct version
+# if found
 #
 sub invalid_version
     {
-    my($pkg) = @_;
-    my($pkgname, @maybe, $fail, $len);
+    my($pkgver) = @_;
+    my($pkg, $ver, $fail);
 
-    if (!defined($pkgver2dir{$pkg}))
+    if (!defined($pkgver2dir{$pkgver}))
 	{
-	# Handle wildcard package versions
-	if ( $pkg =~ /((.*)-(\d.*|))\*$/ )  # (package)-(ver)*
-	    {
-	    if (defined($pkg2ver{$2}) &&
-				substr($pkg2ver{$2}, 0, length($1)) eq $1)
-		{ return(undef); }
-	    }
-	$pkgname = $pkg;
-	$pkgname =~ s/-[\d*].*$//;
-	if (defined($pkg2ver{$pkgname}))
-	    { $fail = "Incorrect version: '$pkg' ($pkg2ver{$pkgname})\n"; }
+	# Handle wildcard package versions 'package-*' etc
+	if ( $pkgver !~ /^([^*?[]+)-([\d*?[].*)/ )  # (package)-(globver)
+	    { $fail = "Missing version: '$pkgver'\n"; }
 	else
-	    { $fail = "Unknown: '$pkg' ($pkgname)\n"; }
+	    {
+	    ($pkg, $ver) = ($1, $2);
+	    if ( package_globmatch($pkg, $ver) )
+		{ return(undef); }
+	    if (defined($pkg2ver{$pkg}))
+		{ $fail = "Version mismatch: '$pkg' $ver vs $pkg2ver{$pkg}\n"; }
+	    else
+		{ $fail = "Unknown package: '$pkg' version $ver\n"; }
+	    }
 	}
     $fail;
     }
@@ -197,6 +197,43 @@ sub list_pkgsrc_categories
     @categories;
     }
 
+# Perform some (reasonable) subset of 'pkg_info -e' / glob(3)
+#
+sub package_globmatch
+    {
+    my($pkg, $globver) = @_;
+    my($ver, $regexver, @chars, $in_alt);
+
+    # Try to convert $globver into regex version $regexver
+    if (defined($ver = $pkg2ver{$pkg}))
+	{
+	@chars = split(//, $globver);
+	$regexver = '^';
+	while ($_ = shift @chars)
+	    {
+	    if ($_ eq '*')
+		{ $regexver .= '.*'; }
+	    elsif ($_ eq '?')
+		{ $regexver .= '.'; }
+	    elsif ($_ eq '\\')
+		{ $regexver .= $_ . shift @chars; }
+	    elsif ($_ eq '.' || $_ eq '|' )
+		{ $regexver .= quotemeta; }
+	    elsif ($_ eq '{' )
+		{ $regexver .= '('; $in_alt = 1; }
+	    elsif ($_ eq '}' )
+		{ $regexver .= ')'; $in_alt = 0; }
+	    elsif ($_ eq ','  && $in_alt)
+		{ $regexver .= '|'; }
+	    else
+		{ $regexver .= $_; }
+	    }
+	$regexver .= '$';
+	return( $ver =~ /$regexver/ )
+	}
+    undef;
+    }
+
 # Extract variable assignments from Makefile, include pkgname.
 # Much unpalatable magic to avoid having to use make (all for speed)
 #
@@ -214,6 +251,8 @@ sub parse_makefile
     # Some Makefiles depend on these being set
     $vars{'EXTRACT_SUFX'} = 'tar.gz';
     $vars{'OBJECT_FMT'} = '';
+    if ($file =~ m#(.*)/#)
+	{ $vars{'.CURDIR'} = $1; }
 
     while( $_ = shift(@data) )
 	{
@@ -225,12 +264,24 @@ sub parse_makefile
 	    $_ = $1;
 	    if (! m#/mk/#)
 		{
-		my($newfile) = ($file);
+		my($newfile) = ($_);
 
-		$newfile =~ s#[^/]+$#$_#;	# Use old file to
-						# determine path to new
+		# Expand any simple vars in $newfile
+		#
+		while ( $newfile =~ /\$\{([\w.]+)\}/ )
+		    {
+		    if (defined($vars{$1}))
+			{ $newfile = $`.$vars{$1}.$'; }
+		    else
+			{ $newfile = $`.'UNDEFINED'.$'; }
+		    }
+		# Handle relative path newfile
+		#
+		if (substr($newfile, 0, 1) ne '/')
+		    { $newfile = "$vars{'.CURDIR'}/$newfile"; }
+
 		if (!open(FILE, $newfile))
-		    { &verbose("Unable to open '$newfile': $!\n"); }
+		    { &verbose("Cannot open '$newfile' (from $file): $!\n"); }
 		else
 		    {
 		    unshift(@data, <FILE>);
@@ -261,11 +312,13 @@ sub parse_makefile
 	$loop = 0;
 	foreach $key ( keys %vars )
 	    {
-	    foreach $value ( keys %vars )
+	    while ( $vars{$key} =~ /\$\{([\w.]+)\}/ )
 		{
-		($key eq $value) && next;
-		if ($vars{$key} =~ s/\$\{$value\}/$vars{$value}/g)
-		    { $loop = 1; }
+		if (defined($vars{$1}))
+		    { $vars{$key} = $`.$vars{$1}.$'; }
+		else
+		    { $vars{$key} = $`.'UNDEFINED'.$'; }
+		$loop = 1;
 		}
 	    }
 	}
@@ -277,19 +330,22 @@ sub parse_makefile
 	$loop = 0;
 	foreach $key ( keys %vars )
 	    {
+	    if ( index($vars{$key}, '$') == -1 )
+		{ next; }
 	    foreach $value ( keys %vars )
 		{
 		if ($vars{$key} =~ m#\${(\w+):[CS]/([^/]+)/([^/]*)/(g?)}#)
 		    {
-		    my($var, $from, $to, $glob) = ($1, $2, $3, $4);
+		    my($var, $from, $to, $global) = ($1, $2, $3, $4);
 
 		    if (defined($vars{$var}))
 			{
+			$from =~ s/\./\\./g;	# Change . etc to \\.
 			$to =~ s/\\(\d)/\$$1/g; # Change \1 etc to $1
 			$_ = $vars{$var};
-			eval "s/$from/$to/$glob";
+			eval "s/$from/$to/$global";
 			if ($vars{$key} =~
-					s#\${$var:[CS]/[^/]+/[^/]*/$glob}#$_#)
+					s#\${$var:[CS]/[^/]+/[^/]*/$global}#$_#)
 			    { $loop = 1; }
 			}
 		    }
@@ -385,9 +441,10 @@ sub scan_pkgsrc_makefiles
 			    &parse_makefile("$pkgsrcdir/$cat/$pkg/Makefile");
 	    if ($pkgname)
 		{
-		$_ = $pkgname;
-		s/-\d.*//;
-		$pkg2ver{$_} = $pkgname;
+		if ($pkgname !~ /(.*)-(\d.*)/)
+		    { print "Cannot extract $pkgname version ($cat/$pkg)\n"; }
+		else
+		    { $pkg2ver{$1} = $2; }
 		$pkgver2dir{$pkgname} = "$cat/$pkg";
 		if (defined($vars{'DEPENDS'}))
 		    { $depends{$pkgname} = $vars{'DEPENDS'}; }
@@ -409,7 +466,7 @@ sub scan_pkgsrc_makefiles
 		if (($msg = &invalid_version($_)) )
 		    {
 		    if (!defined($err))
-			{ print "DEPENDS errors for $pkgver2dir{$pkg}:\n"; }
+			{ print "$pkgver2dir{$pkg} DEPENDS errors:\n"; }
 		    $err = 1;
 		    print "\t$msg";
 		    }
