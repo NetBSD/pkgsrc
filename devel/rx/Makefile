@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/11/23 22:24:40 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/06/25 11:41:05 seb Exp $
 
 DISTNAME=	rx-1.5
 CATEGORIES=	devel
@@ -13,6 +13,7 @@ USE_BUILDLINK2=	# defined
 USE_LIBTOOL=	# defined
 GNU_CONFIGURE=	# defined
 
+USE_NEW_TEXINFO=	YES
 INFO_FILES=	rx.info
 
 # When the API changes and breaks binary-compatibility with the previous
@@ -26,5 +27,4 @@ MAKE_ENV+=	RX_MAJOR="${RX_MAJOR}" RX_MINOR="${RX_MINOR}"
 post-install:
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} ${INFO_FILES} ${PREFIX}/info
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
