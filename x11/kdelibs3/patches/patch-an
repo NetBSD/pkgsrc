@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.2 2002/08/25 19:23:52 jlam Exp $
+$NetBSD: patch-an,v 1.3 2004/02/04 13:58:39 markd Exp $
 
---- kdecore/kstandarddirs.cpp.orig	Wed May  8 19:27:28 2002
+--- kdecore/kstandarddirs.cpp.orig	2004-01-26 06:24:42.000000000 +1300
 +++ kdecore/kstandarddirs.cpp
-@@ -722,33 +722,33 @@
+@@ -847,33 +847,33 @@ static int tokenize( QStringList& tokens
  
  QString KStandardDirs::kde_default(const char *type) {
      if (!strcmp(type, "data"))
@@ -50,3 +50,20 @@ $NetBSD: patch-an,v 1.2 2002/08/25 19:23:52 jlam Exp $
      if (!strcmp(type, "exe"))
  	return "bin/";
      if (!strcmp(type, "lib"))
+@@ -889,7 +889,7 @@ QString KStandardDirs::kde_default(const
+     if (!strcmp(type, "xdgconf-menu"))
+         return "menus/";
+     if (!strcmp(type, "kcfg"))
+-	return "share/config.kcfg";
++	return "share/kde/config.kcfg";
+     qFatal("unknown resource type %s", type);
+     return QString::null;
+ }
+@@ -1129,6 +1129,7 @@ void KStandardDirs::addKDEDefaults()
+         }
+ 
+         xdgdirList.append("/usr/local/share/");
++        xdgdirList.append(KDEDIR "/share/");
+         xdgdirList.append("/usr/share/");
+     }
+ 
