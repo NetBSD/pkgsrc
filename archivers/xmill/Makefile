@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/03/29 05:12:01 ben Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/29 05:14:27 ben Exp $
 
 DISTNAME=		xmill-0.9.1
 CATEGORIES=		archivers
@@ -26,7 +26,7 @@ do-install:
 		${WRKSRC}/documentation/xmill.ps.gz \
 		${WRKSRC}/documentation/xmill-09-doc.txt \
 		${PREFIX}/share/doc/xmill
-	${INSTALL_PROGRAM} ${WRKSRC}/unix/xmill \
+	${INSTALL_PROGRAM} ${WRKSRC}/unix/xcmill \
 		${WRKSRC}/unix/xdemill \
 		${WRKSRC}/unix/xmillexample \
 		${WRKSRC}/unix/xmillinspect \
