@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1998/11/26 19:04:23 bad Exp $
+# $NetBSD: Makefile,v 1.21 1998/12/03 17:23:51 tv Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -6,10 +6,10 @@
 #    SUBDIR += analog
     SUBDIR += ap-auth-cookie
     SUBDIR += ap-fastcgi
+    SUBDIR += ap-ssl
     SUBDIR += apache
 #    SUBDIR += apache-current
 #    SUBDIR += apache-php
-    SUBDIR += apache-modssl
     SUBDIR += arena
 #    SUBDIR += ashe           # requires Motif
 #    SUBDIR += aswedit
