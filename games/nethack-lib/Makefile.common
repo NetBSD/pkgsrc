@@ -1,0 +1,32 @@
+# $NetBSD: Makefile.common,v 1.1 2000/08/10 17:50:05 pooka Exp $
+#
+
+NETHACK_VERSION=	3.3.1
+NETHACK_DISTVER=	331
+
+DISTNAME=		nethack-${NETHACK_DISTVER}
+CATEGORIES=		games
+MASTER_SITES=		ftp://ftp.nethack.org/pub/nethack/nh331/src/
+EXTRACT_SUFX=		.tgz
+
+MAINTAINER=		root@garbled.net
+HOMEPAGE=		http://www.nethack.org/
+
+WRKSRC=			${WRKDIR}/nethack-${NETHACK_VERSION}
+
+HAS_CONFIGURE=		yes
+CONFIGURE_SCRIPT=	./sys/unix/setup.sh
+
+MD5_FILE=		"${.CURDIR}/../nethack-lib/files/md5"
+
+.include "../../mk/bsd.prefs.mk"
+
+pre-configure:
+	@${CHMOD} 755 ${WRKSRC}/sys/unix/setup.sh
+
+post-patch:
+	@${MV} ${WRKSRC}/include/config.h ${WRKSRC}/config.h-pre
+	@${SED} -e 's@XXXPREFIXXXX@${PREFIX}@g'				\
+		-e 's|@GZIP_PROGRAM@|'`${ECHO} ${GZIP_CMD} | ${AWK} '{ print $$1 }'`'|g' \
+		< ${WRKSRC}/config.h-pre > ${WRKSRC}/include/config.h
+	@${RM} -f ${WRKSRC}/config.h-pre

@@ -1,16 +1,16 @@
-$NetBSD: patch-aa,v 1.4 1999/12/24 22:30:03 pooka Exp $
+$NetBSD: patch-aa,v 1.5 2000/08/10 17:50:11 pooka Exp $
 
---- include/config.h.orig	Wed Dec 22 22:13:56 1999
-+++ include/config.h	Wed Dec 22 22:26:48 1999
+--- include/config.h.orig	Sat Jul 22 04:13:51 2000
++++ include/config.h	Thu Aug 10 19:55:36 2000
 @@ -42,9 +42,9 @@
   * Define all of those you want supported in your binary.
   * Some combinations make no sense.  See the installation document.
   */
 -#define TTY_GRAPHICS	/* good old tty based graphics */
 +/* #define TTY_GRAPHICS	/* good old tty based graphics */
- /* #define X11_GRAPHICS */ /* X11 interface */
+ /* #define X11_GRAPHICS */	/* X11 interface */
 -/* #define QT_GRAPHICS */	/* Qt interface */
-+#define QT_GRAPHICS   	/* Qt interface */
++#define QT_GRAPHICS */	/* Qt interface */
+ /* #define GNOME_GRAPHICS */	/* Gnome interface */
  
  /*
-  * Define the default window system.  This should be one that is compiled

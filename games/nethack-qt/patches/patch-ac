@@ -1,22 +1,22 @@
-$NetBSD: patch-ac,v 1.5 2000/04/28 10:12:44 drochner Exp $
+$NetBSD: patch-ac,v 1.6 2000/08/10 17:50:13 pooka Exp $
 
---- sys/unix/Makefile.src.orig	Sat Dec 11 06:21:05 1999
-+++ sys/unix/Makefile.src	Fri Apr 28 11:50:01 2000
-@@ -132,8 +132,8 @@
+--- sys/unix/Makefile.src.orig	Sat Aug  5 13:52:57 2000
++++ sys/unix/Makefile.src	Thu Aug 10 20:03:19 2000
+@@ -144,8 +144,8 @@
  # flags for debugging:
  # CFLAGS = -g -I../include
  
 -CFLAGS = -O -I../include
--LFLAGS = 
+-LFLAGS =
 +CFLAGS = -O -I../include -I${X11BASE}/include
 +LFLAGS = -Wl,-R${X11BASE}/lib -L${X11BASE}/lib  -Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib
  
- # Only used for Qt interface (other interfaces are standard C)
- CXXFLAGS = -g $(CFLAGS) -I. -I$(QTDIR)/include
-@@ -165,8 +165,8 @@
+ # The Qt and Be window systems are written in C++, while the rest of
+ # NetHack is standard C.  If using Qt, uncomment the LD line here to get
+@@ -203,8 +203,8 @@
  
  #
- # 
+ #
 -WINSRC = $(WINTTYSRC)
 -WINOBJ = $(WINTTYOBJ)
 +WINSRC = $(WINQTSRC)
@@ -24,7 +24,7 @@ $NetBSD: patch-ac,v 1.5 2000/04/28 10:12:44 drochner Exp $
  
  # on some systems the termcap library is in -ltermcap or -lcurses
  # on 386 Xenix, the -ltermlib tputs() seems not to work; use -lcurses instead
-@@ -192,14 +192,14 @@
+@@ -230,7 +230,7 @@
  # WINX11LIB = -lXaw -lXmu -lXpm -lXext -lXt -lX11 -lSM -lICE -lm # BSD/OS 2.0
  #
  # libraries for Qt
@@ -33,8 +33,9 @@ $NetBSD: patch-ac,v 1.5 2000/04/28 10:12:44 drochner Exp $
  #
  # libraries for KDE (with Qt)
  WINKDELIB = -lkdecore -lkdeui -lXext
- #
- #
+@@ -244,7 +244,7 @@
+ # libraries for BeOS 
+ WINBELIB = -lbe
  
 -WINLIB = $(WINTTYLIB)
 +WINLIB = $(WINQTLIB)

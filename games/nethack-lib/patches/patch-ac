@@ -1,17 +1,17 @@
-$NetBSD: patch-ac,v 1.2 1999/12/24 22:30:00 pooka Exp $
+$NetBSD: patch-ac,v 1.3 2000/08/10 17:50:06 pooka Exp $
 
---- include/system.h.orig	Sat Dec 11 07:20:51 1999
-+++ include/system.h	Thu Dec 23 22:12:04 1999
+--- include/system.h.orig	Thu Jan  6 21:20:08 2000
++++ include/system.h	Thu Aug 10 18:16:03 2000
 @@ -77,10 +77,10 @@
  # if !defined(__SC__) && !defined(LINUX)
  E  long NDECL(random);
  # endif
 -# if !defined(SUNOS4) || defined(RANDOM)
-+# if (!defined(SUNOS4) && !defined(__NetBSD__)) || defined(RANDOM)
++# if !defined(SUNOS4) && !defined(__NetBSD__) || defined(RANDOM)
  E void FDECL(srandom, (unsigned int));
  # else
--#  ifndef bsdi
-+#  if !defined(bsdi) && !defined(__NetBSD__)
+-#  if !defined(bsdi) && !defined(__FreeBSD__)
++#  if !defined(bsdi) && !defined(__FreeBSD__) && !defined(__NetBSD__)
  E int FDECL(srandom, (unsigned int));
  #  endif
  # endif
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.2 1999/12/24 22:30:00 pooka Exp $
  		     int(*)(const genericptr,const genericptr)));
  #else
 -# if defined(BSD) || defined(ULTRIX)
-+# if (defined(BSD) || defined(ULTRIX)) && !defined(__NetBSD__)
++# if defined(BSD) || defined(ULTRIX) && !defined(__NetBSD__)
  E  int qsort();
  # else
  #  if !defined(LATTICE) && !defined(AZTEC_50)

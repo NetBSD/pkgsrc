@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2000/07/17 14:31:13 agc Exp $
+$NetBSD: patch-aa,v 1.5 2000/08/10 17:50:06 pooka Exp $
 
---- include/config.h.orig	Sat Dec 11 07:20:49 1999
-+++ include/config.h	Fri Dec 17 13:51:24 1999
-@@ -133,11 +133,11 @@
+--- include/config.h.orig	Sat Jul 22 04:13:51 2000
++++ include/config.h	Thu Aug 10 17:39:35 2000
+@@ -151,11 +151,11 @@
  
  #ifdef UNIX
  /* path and file name extension for compression program */
@@ -13,12 +13,12 @@ $NetBSD: patch-aa,v 1.4 2000/07/17 14:31:13 agc Exp $
  /* An example of one alternative you might want to use: */
 -/* #define COMPRESS "/usr/local/bin/gzip" */	/* FSF gzip compression */
 -/* #define COMPRESS_EXTENSION ".gz" */		/* normal gzip extension */
-+#define COMPRESS "@GZIP_PROGRAM@"	   	/* FSF gzip compression */
-+#define COMPRESS_EXTENSION ".gz" 		/* normal gzip extension */
++#define COMPRESS "@GZIP_PROGRAM@" 		/* FSF gzip compression */
++#define COMPRESS_EXTENSION ".gz"		/* normal gzip extension */
  #endif
  
  #ifndef COMPRESS
-@@ -168,7 +168,7 @@
+@@ -186,7 +186,7 @@
   * otherwise it will be the current directory.
   */
  # ifndef HACKDIR
@@ -27,21 +27,12 @@ $NetBSD: patch-aa,v 1.4 2000/07/17 14:31:13 agc Exp $
  # endif
  
  /*
-@@ -264,7 +264,7 @@
+@@ -282,7 +282,7 @@
   * functions that have been macroized.
   */
  
 -/* #define VISION_TABLES */ /* use vision tables generated at compile time */
-+#define VISION_TABLES  /* use vision tables generated at compile time */
++#define VISION_TABLES /* use vision tables generated at compile time */
  #ifndef VISION_TABLES
  # ifndef NO_MACRO_CPATH
  #  define MACRO_CPATH	/* use clear_path macros instead of functions */
-@@ -302,7 +302,7 @@
- #endif
- 
- #define EXP_ON_BOTL	/* Show experience on bottom line */
--/* #define SCORE_ON_BOTL */	/* added by Gary Erickson (erickson@ucivax) */
-+#define SCORE_ON_BOTL 	/* added by Gary Erickson (erickson@ucivax) */
- 
- #include "global.h"	/* Define everything else according to choices above */
- 
