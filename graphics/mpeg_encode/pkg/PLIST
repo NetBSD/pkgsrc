@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/05/14 23:06:03 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/09/22 17:48:28 hubertf Exp $
 bin/eyuvtojpeg
 bin/jmovie2jpeg
 bin/mpeg_demux
 bin/mpeg_encode
+man/man1/mpeg_encode.1
 share/doc/mpeg_encode/EXTENSIONS
 share/doc/mpeg_encode/INPUT.FORMAT
 share/doc/mpeg_encode/mpeg_encode.1

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/05/14 23:06:03 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/22 17:48:26 hubertf Exp $
 #
 
 DISTNAME=	mpeg_encode-1.5b-src
-PKGNAME=	${DISTNAME:S/-src//}
+PKGNAME=	${DISTNAME:S/-src//}nb1
 CATEGORIES=	graphics net
 MASTER_SITES=	ftp://mm-ftp.cs.berkeley.edu/pub/multimedia/mpeg/encode/
 
@@ -31,5 +31,6 @@ do-install:
 	cd ${WRKSRC}/examples ; for i in * ; do \
 		${INSTALL_DATA} $$i ${LOCALBASE}/share/examples/mpeg_encode; \
 	done
+	${INSTALL_MAN} ${WRKSRC}/docs/mpeg_encode.1 ${LOCALBASE}/man/man1
 
 .include "../../mk/bsd.pkg.mk"
