@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.2.2 2003/03/08 12:31:10 grant Exp $
+
+--- archive/msg2archive.c.orig	Thu Feb 20 18:04:00 2003
++++ archive/msg2archive.c
+@@ -21,7 +21,6 @@
+ #include <ctype.h>
+ #include <fcntl.h>
+ #include <time.h>
+-#include <wait.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include "lists.h"
