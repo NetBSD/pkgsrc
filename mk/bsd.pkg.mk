@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.137 1998/08/06 14:18:35 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.138 1998/08/06 14:49:41 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1576,7 +1576,7 @@ misc-depends:
 		dir="`${ECHO} \"$$dir\" | ${SED} -e s/.\*://`";		\
 		found=`/usr/sbin/pkg_info -e "$$package"`;		\
 		if [ $$? -eq 0 ]; then					\
-			${ECHO_MSG} "===>  ${PKGNAME} depends on installed package: $$package found";	\
+			${ECHO_MSG} "===>  ${PKGNAME} depends on installed package: $$package - $$found found";	\
 		else							\
 			${ECHO_MSG} "===>  ${PKGNAME} depends on package: $$package";	\
 			target=${DEPENDS_TARGET};			\
