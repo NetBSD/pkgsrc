@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/24 08:58:53 wiz Exp $
+bin/speexdec
+bin/speexenc
+include/speex.h
+include/speex_bits.h
+include/speex_callbacks.h
+include/speex_header.h
+include/speex_stereo.h
+lib/libspeex-0.99.so
+lib/libspeex.a
+lib/libspeex.la
+lib/libspeex.so
+man/man1/speexdec.1
+man/man1/speexenc.1
+share/doc/speex/manual.pdf
+@dirrm share/doc/speex

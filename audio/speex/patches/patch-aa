@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/03/24 08:58:53 wiz Exp $
+
+--- doc/Makefile.in.orig	Mon Mar  3 08:13:28 2003
++++ doc/Makefile.in
+@@ -83,7 +83,7 @@ STRIP = @STRIP@
+ VERSION = @VERSION@
+ src = @src@
+ 
+-docdir = $(prefix)/share/doc
++docdir = $(prefix)/share/doc/speex
+ 
+ doc_DATA = manual.pdf
+ 
