@@ -1,0 +1,9 @@
+Mcalc is a JavaScript based calculator for  accurate microstrip
+transmission line analysis and synthesis.
+
+The electrical parameters may be determined from specified physical
+parameters, or the physical parameters required to meet a given set of
+electrical parameters may be found.
+
+Much attention has been given to making mcalc the most accurate online
+based calculator short of a full electromagnetic simulation.
