@@ -1,12 +1,17 @@
-$NetBSD: patch-am,v 1.4 2004/11/19 12:35:22 sketch Exp $
+$NetBSD: patch-am,v 1.5 2004/12/09 18:45:32 minskim Exp $
 
---- lib/fam.c++.orig	2003-01-18 14:18:12.000000000 +0000
-+++ lib/fam.c++	2004-11-08 13:45:48.827971000 +0000
-@@ -22,6 +22,7 @@
+--- lib/fam.c++.orig	2003-01-18 08:18:12.000000000 -0600
++++ lib/fam.c++
+@@ -20,8 +20,12 @@
+ //  with this program; if not, write the Free Software Foundation, Inc., 59
+ //  Temple Place - Suite 330, Boston MA 02111-1307, USA.
  
++#include "config.h"
  #include <sys/types.h>
  #include <rpc/rpc.h>
++#ifdef HAVE_RPC_RCPENT_H
 +#include <rpc/rpcent.h>
++#endif
  #include <sys/time.h>
  #include <unistd.h>
  #include <stdlib.h>

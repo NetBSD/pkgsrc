@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.7 2004/11/19 12:35:22 sketch Exp $
+$NetBSD: patch-aa,v 1.8 2004/12/09 18:45:32 minskim Exp $
 
---- configure.ac.orig	2003-11-26 20:47:59.000000000 +0100
+--- configure.ac.orig	2003-11-26 13:47:59.000000000 -0600
 +++ configure.ac
 @@ -31,7 +31,7 @@ AC_CHECK_LIB([rpcsvc], [pmap_set])
  # Checks for header files.
  AC_HEADER_STDC
  AC_HEADER_DIRENT
 -AC_CHECK_HEADERS([fcntl.h limits.h linux/imon.h netinet/in.h rpc/rpc.h rpcsvc/mount.h stddef.h stdlib.h string.h syslog.h sys/imon.h sys/param.h sys/select.h sys/statvfs.h sys/syssgi.h sys/time.h sys/types.h sys/un.h unistd.h])
-+AC_CHECK_HEADERS([fcntl.h limits.h linux/imon.h netinet/in.h rpc/rpc.h rpcsvc/mount.h stddef.h stdlib.h string.h syslog.h sys/imon.h sys/param.h sys/select.h sys/statvfs.h sys/syssgi.h sys/time.h sys/types.h sys/un.h unistd.h mntent.h sys/mnttab.h sys/sysmacros.h])
++AC_CHECK_HEADERS([fcntl.h limits.h linux/imon.h netinet/in.h rpc/rpc.h rpc/rpcent.h rpcsvc/mount.h stddef.h stdlib.h string.h syslog.h sys/filio.h sys/imon.h sys/param.h sys/select.h sys/statvfs.h sys/syssgi.h sys/time.h sys/types.h sys/un.h unistd.h mntent.h sys/mnttab.h sys/sysmacros.h])
  
  if test "$have_sys_imon_h"; then
  	MONITOR_FUNCS=IMonIRIX
