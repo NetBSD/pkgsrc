@@ -1,4 +1,4 @@
-.\" $NetBSD: mklivecd.8,v 1.7 2004/05/02 02:33:43 xtraeme Exp $
+.\" $NetBSD: mklivecd.8,v 1.8 2004/11/04 16:29:56 xtraeme Exp $
 .\"
 .\" mklivecd - Build a NetBSD Live CD for i386 machines
 .\" Copyright (c) 2004 Juan RP <xtraeme@NetBSD.org>
@@ -93,6 +93,16 @@ target is invoked, the pkgsrc directory will be mounted via
 and you could install any package.
 Defaults to
 .Pa /usr/pkgsrc .
+.It PKGSRCDISTDIR
+The
+.Nx
+distfiles pkgsrc directory.
+When the
+.Ar chroot
+target is invoked, the distfiles directory will be mounted via
+.Xr mount_null 8 .
+Defaults to
+.Pa /usr/pkgsrc/distfiles .
 .It SHAREDIR
 The main directory used to store the Makefiles, kernel, example configuration
 files, etc.
@@ -131,6 +141,10 @@ X11 sets which will be unpacked into
 .Pa $ISODIR .
 Sets used by default are:
 .Pa xbase.tgz xcomp.tgz xfont.tgz xserver.tgz .
+.It CHROOT_SHELL
+Default shell to use with the chroot target.
+Defaults to
+.Sy /bin/ksh 
 .It ENABLE_X11
 If set to
 .Sy yes

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7697 2004/11/04 15:47:12 salo Exp $
+$NetBSD: CHANGES,v 1.7698 2004/11/04 16:29:55 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5072,3 +5072,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated zlib to 1.2.2 [adam 2004-11-04]
 	Added leafpad-0.7.5 [jmmv 2004-11-04]
 	Updated lftp to 3.0.11 [salo 2004-11-04]
+	Updated mklivecd to 0.8 [xtraeme 2004-11-04]
