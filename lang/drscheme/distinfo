@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2002/10/15 11:27:11 kei Exp $
+$NetBSD: distinfo,v 1.8 2003/05/03 20:57:03 jmc Exp $
 
 SHA1 (drscheme/202/plt.src.x.tar.gz) = bb06b6e3f8214db71ebb12e95e744f996622ee06
 Size (drscheme/202/plt.src.x.tar.gz) = 6133563 bytes
@@ -17,3 +17,4 @@ SHA1 (patch-al) = 8ce4ee20d21048bfea9eb74815b259aa690a4631
 SHA1 (patch-am) = afeb2c469b55f1b9fdadf4e064928b59bf28d794
 SHA1 (patch-an) = bca5a79edd48a2670d02496b6da3799c13c0aed6
 SHA1 (patch-ao) = 667593d28a695fd7caee210deb8ee06e72019c40
+SHA1 (patch-ap) = 2395a864a40af34f295e0ed782979d90d75f1ec4
