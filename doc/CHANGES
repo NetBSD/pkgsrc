@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6692 2004/07/27 04:30:24 salo Exp $
+$NetBSD: CHANGES,v 1.6693 2004/07/27 04:37:43 atatat Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3590,3 +3590,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libmatroska to 0.7.1 [salo 2004-07-27]
 	Updated mkvtoolnix to 0.9.4 [salo 2004-07-27]
 	Updated mmg to 0.9.4 [salo 2004-07-27]
+	Updated netscape7 to 7.1nb3 [atatat 2004-07-27]
