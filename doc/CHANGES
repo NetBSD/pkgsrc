@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.702 2002/12/06 14:22:29 wiz Exp $
+$NetBSD: CHANGES,v 1.703 2002/12/06 15:16:44 skrll Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3813,6 +3813,7 @@ Changes to the packages collection and infrastructure in 2002:
 	Added metakit-lib-2.4.8 [drochner 2002-12-04]
 	Added py-metakit-2.4.8 [drochner 2002-12-04]
 	Added py-gnuplot-1.6 [drochner 2002-12-04]
+	Updated kdenetwork3 to 3.0.4nb2 [skrll 2002-12-04]
 	Updated xlockmore to 5.06 [hubertf 2002-12-05]
 	Updated opera6 to 6.11 [tron 2002-12-05]
 	Updated xlife to 5.0nb1 [abs 2002-12-05]
@@ -3834,5 +3835,6 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated dx to 4.2.0 [drochner 2002-12-05]
 	Added pwgen-2.02 [jdolecek 2002-12-05]
 	Updated cyrus-imapd to 2.0.17 [chris 2002-12-05]
+	Updated kdelibs3 to 3.0.4nb1 [skrll 2002-12-06]
 	Updated subversion to 0.3987 [wiz 2002-12-06]
 	Updated mplayer-share to 0.90rc10nb1 [wiz 2002-12-06]
