@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/03/08 08:20:27 tron Exp $
+# $NetBSD: Makefile,v 1.7 2000/01/03 17:26:52 wiz Exp $
 
 DISTNAME=		Maelstrom-1.4.3-L2.0.6-src.tar.gz
 PKGNAME=		maelstrom-2.0.6
@@ -26,13 +26,13 @@ MAKE_ENV+=		BINOWN=${BINOWN} BINGRP=${BINGRP}
 
 post-install:
 	cd ${PREFIX}/share/maelstrom && \
-	pax -rzf ${DISTDIR}/${ESOUND} -p m && \
-	pax -rzf ${DISTDIR}/${STREK} -p m && \
-	pax -rzf ${DISTDIR}/${SWARS} -p m
-	chown ${BINOWN}:games ${PREFIX}/bin/Maelstrom
-	chmod 2755 ${PREFIX}/bin/Maelstrom
-	chown ${BINOWN}:games /var/games/Maelstrom-Scores
-	chmod 0664 /var/games/Maelstrom-Scores
+	${PAX} -rzf ${DISTDIR}/${ESOUND} -p m && \
+	${PAX} -rzf ${DISTDIR}/${STREK} -p m && \
+	${PAX} -rzf ${DISTDIR}/${SWARS} -p m
+	${CHOWN} ${BINOWN}:games ${PREFIX}/bin/Maelstrom
+	${CHMOD} 2755 ${PREFIX}/bin/Maelstrom
+	${CHOWN} ${BINOWN}:games /var/games/Maelstrom-Scores
+	${CHMOD} 0664 /var/games/Maelstrom-Scores
 	${INSTALL_DATA} ${WRKSRC}/README.* ${PREFIX}/share/maelstrom
 	${INSTALL_PROGRAM} ${WRKSRC}/netplayd/netplayd ${PREFIX}/bin/Maelstrom_netplayd
 
