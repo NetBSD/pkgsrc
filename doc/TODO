@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11 2002/11/27 21:12:01 heinz Exp $
+$NetBSD: TODO,v 1.12 2002/11/28 11:47:07 markd Exp $
 
 Suggested new packages
 ======================
@@ -162,8 +162,6 @@ Suggested package updates
 	o multi-gnome-terminal-1.6.1
 	o mysql-4.0.3
 	o naim-0.11.4.12
-	o nas-1.5 [pkg/18684]
-	o nas-1.6
 	o nasm-0.98.35
 	o ncurses-5.3
 	o netpbm-10.8
