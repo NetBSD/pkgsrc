@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2591 2004/11/29 21:04:50 wiz Exp $
+$NetBSD: TODO,v 1.2592 2004/11/29 22:14:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1206,7 +1206,6 @@ Suggested package updates
 	o windowlab-1.24
 	o wine-20041019 [nmap problem on NetBSD]
 	o wmbiff-0.4.26
-	o wmmemmon-1.0.1
 	o wmweather-2.4.3
 	o wol-0.7.1
 	o wxhugo-31
