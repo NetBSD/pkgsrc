@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2003/09/10 04:34:09 epg Exp $
+@comment $NetBSD: PLIST,v 1.10 2003/12/04 17:00:58 recht Exp $
 bin/neon-config
 include/neon/ne_207.h
 include/neon/ne_acl.h
@@ -26,7 +26,7 @@ lib/libneon.a
 lib/libneon.la
 lib/libneon.so
 lib/libneon.so.24
-lib/libneon.so.24.1
+lib/libneon.so.24.4
 lib/pkgconfig/neon.pc
 man/man1/neon-config.1
 man/man3/ne_add_request_header.3
