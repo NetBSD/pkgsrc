@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3717 2003/10/20 16:11:35 tron Exp $
+$NetBSD: CHANGES,v 1.3718 2003/10/20 17:06:40 manu Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4230,3 +4230,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gsharutils to 4.2.1nb2 [agc 2003-10-20]
 	Updated db3 to db3-3.11.2nb1 [agc 2003-10-20]
 	Updated x11-links to 0.18 [tron 2003-10-20]
+	Added milter-regex-0.6 [manu 2003-10-20]
