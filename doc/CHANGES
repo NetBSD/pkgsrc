@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6012 2004/05/23 10:27:09 jmmv Exp $
+$NetBSD: CHANGES,v 1.6013 2004/05/23 11:15:36 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2632,3 +2632,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated sablevm-classpath to 1.1.3nb1 [jmmv 2004-05-23]
 	Updated sablevm-classpath-gui to 1.1.3nb1 [jmmv 2004-05-23]
 	Updated sablevm to 1.1.3nb1 [jmmv 2004-05-23]
+	Updated roundup to 0.7.2 [recht 2004-05-23]
