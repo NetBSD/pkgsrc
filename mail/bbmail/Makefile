@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/30 02:07:34 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2002/07/13 15:35:17 jschauma Exp $
 #
 
 DISTNAME=	bbmail-0.8.2
@@ -10,6 +10,7 @@ HOMEPAGE=	http://bbtools.windsofstorm.net/
 COMMENT=	mailbox monitor (not only) for the blackbox windowmanager
 
 GNU_CONFIGURE=	YES
+LDFLAGS+=	-Wl,-R${X11PREFIX}/lib
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bbmail ${PREFIX}/bin/
