@@ -1,0 +1,46 @@
+$NetBSD: patch-ab,v 1.3 2002/08/11 13:15:26 dmcmahill Exp $
+
+--- src/Makefile.in.orig	Sat Apr 20 06:11:45 2002
++++ src/Makefile.in
+@@ -152,6 +152,10 @@ fluxbox_LDADD = $(LDADD)
+ fluxbox_DEPENDENCIES = 
+ fluxbox_LDFLAGS = 
+ CXXFLAGS = @CXXFLAGS@
++CXXFLAGS_NOOPT = $(CXXFLAGS:C/-O[1-9]*//)
++CPPFLAGS_NOOPT = $(CPPFLAGS:C/-O[1-9]*//)
++CXXCOMPILE_NOOPT = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS_NOOPT) $(AM_CXXFLAGS) $(CXXFLAGS_NOOPT)
++LTCXXCOMPILE_NOOPT = $(LIBTOOL) --mode=compile $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS_NOOPT) $(AM_CXXFLAGS) $(CXXFLAGS_NOOPT)
+ CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ LTCXXCOMPILE = $(LIBTOOL) --mode=compile $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ CXXLD = $(CXX)
+@@ -171,9 +175,12 @@ GZIP_ENV = --best
+ SOURCES = $(fluxbox_SOURCES)
+ OBJECTS = $(fluxbox_OBJECTS)
+ 
++Image.o: Image.C
++Image.lo: Image.C
++
+ all: all-redirect
+ .SUFFIXES:
+-.SUFFIXES: .S .c .cc .lo .o .obj .s
++.SUFFIXES: .S .c .cc .C .lo .o .obj .s
+ $(srcdir)/Makefile.in: Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4) 
+ 	cd $(top_srcdir) && $(AUTOMAKE) --gnu --include-deps src/Makefile
+ 
+@@ -254,10 +261,16 @@ maintainer-clean-libtool:
+ fluxbox$(EXEEXT): $(fluxbox_OBJECTS) $(fluxbox_DEPENDENCIES)
+ 	@rm -f fluxbox$(EXEEXT)
+ 	$(CXXLINK) $(fluxbox_LDFLAGS) $(fluxbox_OBJECTS) $(fluxbox_LDADD) $(LIBS)
++.cc.C:
++	cp -f $< $@
++.C.o:
++	$(CXXCOMPILE_NOOPT) -c $<
+ .cc.o:
+ 	$(CXXCOMPILE) -c $<
+ .cc.obj:
+ 	$(CXXCOMPILE) -c `cygpath -w $<`
++.C.lo:
++	$(LTCXXCOMPILE_NOOPT) -c $<
+ .cc.lo:
+ 	$(LTCXXCOMPILE) -c $<
+ 
