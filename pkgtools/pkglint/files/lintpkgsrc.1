@@ -1,4 +1,4 @@
-.\"	$NetBSD: lintpkgsrc.1,v 1.5 1999/12/18 14:53:33 abs Exp $
+.\"	$NetBSD: lintpkgsrc.1,v 1.6 1999/12/22 21:04:17 abs Exp $
 .\"
 .\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -10,8 +10,9 @@
 .Nd a verifier for the pkgsrc tree
 .Sh SYNOPSIS
 .Nm
-.Op Fl dhilmor
+.Op Fl Rdhilmor
 .Op Fl P Ar pkgsrcdir
+.Op Fl D Ar paths
 .Sh DESCRIPTION
 .Nm
 tries to verify the entire contents of the pkgsrc tree.
@@ -21,19 +22,21 @@ files that make up a pkgsrc directory.
 Note that it does NOT implement complete Makefile parser.
 .Pp
 .Sy Options
-.Bl -tag -width Fl
+.Bl -tag -width xxxxxxxxxxxx
+.It Fl D Ar paths
+Parse Makefiles and output contents (Useful for debugging).
 .It Fl P Ar pkgsrcdir
 Set pkgsrcdir - otherwise
 .Pa /etc/mk.conf is parsed for
 .Em PKGSRCDIR .
-.It Fl h
-Basic help and usage.
-.It Fl D Ar path
-Parse Makefiles and output contents (Useful for debugging).
+.It Fl R
+Report any RESTRICTED binary packages (in any subdirs of PKGSRCDIR/packages).
 .It Fl d
 Extract the 'DEPENDS' listing from each pkgsrc package Makefile, then
 verify the version specified in each DEPEND correctly matches a current
 pkgsrc package.
+.It Fl h
+Basic help and usage.
 .It Fl i
 Check the version of each installed package against the current version in
 pkgsrc.
@@ -46,7 +49,7 @@ the same distfile with a different md5 checksum.
 .It Fl o
 Report any old distfile (not referenced by any package's md5 file).
 .It Fl p
-Report any old binary packages (in any subdirs of PKGSRCDIR/packages)
+Report any old binary packages (in any subdirs of PKGSRCDIR/packages).
 .It Fl r
 Remove distfiles which are not referenced from any package's md5 file,
 or have an incorrect checksum (usually due to an interrupted download),
@@ -56,4 +59,9 @@ specify the -o, -m, or -p flags respectively.
 .Sh AUTHOR
 David Brownlee <abs@netbsd.org>
 .Sh BUGS
-Potentially, but non serious to date.
+The 'Makefile parsing' algorithym used to obtain package versions
+and DEPENDS information is geared towards speed rather than
+perfection, though it has got somewhat better over time, it only
+parses the simplest Makefile conditionals. (a == b, no && etc).
+.Pp
+Potentially others, but non serious to date.
