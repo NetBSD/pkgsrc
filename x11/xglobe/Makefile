@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/01/06 14:02:33 frueauf Exp $
+# $NetBSD: Makefile,v 1.3 1999/01/07 01:03:59 frueauf Exp $
 #
 
 DISTNAME=	xglobe-0.1
@@ -22,8 +22,8 @@ USE_GMAKE=	YES
 MAKE_ENV+=	QTDIR=${X11BASE}
 
 post-install:
-	${INSTALL_DATA} ${DISTDIR}/mggd.gif      ${X11BASE}/lib/X11/xglobe/map.bmp
-	${INSTALL_DATA} ${DISTDIR}/LE.400.gif    ${X11BASE}/lib/X11/xglobe/daymap.gif
-	${INSTALL_DATA} ${DISTDIR}/Brill.400.gif ${X11BASE}/lib/X11/xglobe/nightmap.gif
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/mggd.gif      ${X11BASE}/lib/X11/xglobe/map.bmp
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/LE.400.gif    ${X11BASE}/lib/X11/xglobe/daymap.gif
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/Brill.400.gif ${X11BASE}/lib/X11/xglobe/nightmap.gif
 
 .include "../../mk/bsd.pkg.mk"
