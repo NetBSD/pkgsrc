@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/07/17 23:49:25 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.2 2005/02/12 00:46:58 dmcmahill Exp $
 
---- Makefile.in.orig	Fri May  7 12:47:03 2004
-+++ Makefile.in
-@@ -79,7 +79,7 @@ YACC = @YACC@
- am__include = @am__include@
- am__quote = @am__quote@
- install_sh = @install_sh@
+--- src/hash/Makefile.in.orig	Fri Jul 30 14:39:06 2004
++++ src/hash/Makefile.in
+@@ -141,7 +141,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
 -AM_CFLAGS = -Wall -W -Wno-unused-parameter -Wno-unused-function -DDDR_DEBUG
 +AM_CFLAGS = -DDDR_DEBUG
- 
- SUBDIRS = src doc sym sch test
- 
+ INCLUDES = -I$(srcdir)/../include
+ noinst_LIBRARIES = libhtbl.a
+ libhtbl_a_SOURCES = \

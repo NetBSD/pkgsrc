@@ -1,10 +1,11 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/07/17 23:49:25 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.2 2005/02/12 00:46:58 dmcmahill Exp $
 
---- src/batch/Makefile.am.orig	Sun Jan  4 18:18:52 2004
-+++ src/batch/Makefile.am
-@@ -1,4 +1,4 @@
+--- src/verilog/Makefile.am.orig	Fri Jul 30 14:12:45 2004
++++ src/verilog/Makefile.am
+@@ -2,5 +2,5 @@
+ ##
+ 
 -AM_CFLAGS=-Wall -W -Wno-unused-parameter -Wno-unused-function -DDDR_DEBUG
 +AM_CFLAGS= -DDDR_DEBUG
  
- INCLUDES=-I$(srcdir)/../include
- noinst_LIBRARIES=libbatch.a
+ INCLUDES=	-I$(srcdir)/../include
