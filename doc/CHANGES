@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.609 2002/11/26 12:34:18 jmmv Exp $
+$NetBSD: CHANGES,v 1.610 2002/11/26 13:51:20 pooka Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3729,3 +3729,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated apsfilter to 7.2.2nb2 [jmmv 2002-11-26]
 	Updated opencm to 0.1.0rc18pl2 [jmmv 2002-11-26]
 	Updated imlib to 1.9.14nb2 [jmmv 2002-11-26]
+	Added hackbot-2.15 [pooka 2002-11-26]
