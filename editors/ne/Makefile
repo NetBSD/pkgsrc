@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 1998/11/12 23:03:40 frueauf Exp $
+# $NetBSD: Makefile,v 1.3 1999/11/12 16:26:32 agc Exp $
 
 DISTNAME=	ne
-PKGNAME=	ne-1.25
+PKGNAME=	ne-1.26
 WRKSRC=		${WRKDIR}/src
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.cus.cam.ac.uk/pub/software/programs/NE/
