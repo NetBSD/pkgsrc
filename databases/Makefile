@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.124 2004/03/29 12:53:03 grant Exp $
+# $NetBSD: Makefile,v 1.125 2004/03/31 17:26:00 minskim Exp $
 #
 
 COMMENT=	Databases
 
 SUBDIR+=	abook
+SUBDIR+=	bdb-xml
 SUBDIR+=	cdb
 SUBDIR+=	db
 SUBDIR+=	db3
 SUBDIR+=	db4
 SUBDIR+=	dbh
-SUBDIR+=	dbxml
 SUBDIR+=	edb
 SUBDIR+=	freetds
 SUBDIR+=	gdbm
@@ -89,8 +89,8 @@ SUBDIR+=	pxtools
 SUBDIR+=	py-IndexedCatalog
 SUBDIR+=	py-PgSQL
 SUBDIR+=	py-ZODB
+SUBDIR+=	py-bdb-xml
 SUBDIR+=	py-bsddb3
-SUBDIR+=	py-dbxml
 SUBDIR+=	py-gdbm
 SUBDIR+=	py-ldap
 SUBDIR+=	py-metakit
