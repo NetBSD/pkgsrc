@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2003/10/10 15:02:57 danw Exp $
+# $NetBSD: Makefile,v 1.50 2003/11/07 16:20:26 gavan Exp $
 
 DISTNAME=	teTeX-src-1.0.7
 PKGNAME=	teTeX-bin-1.0.7
@@ -23,6 +23,7 @@ INSTALL_TARGET=		install strip
 
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
+USE_GCC_SHLIB=		yes
 USE_GMAKE=		yes
 USE_X11=		yes
 CFLAGS+=		-Dunix
