@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/01/27 14:39:33 ben Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 18:43:56 wiz Exp $
 
 SHA1 (wmdrawer-0.10.5.tar.gz) = ee3a7dc01fc30fddce0a4618b061e1e5cc8e4570
+RMD160 (wmdrawer-0.10.5.tar.gz) = 5631a658997bdcb97c0435b1dcf14ca8030f2dc3
 Size (wmdrawer-0.10.5.tar.gz) = 49413 bytes
