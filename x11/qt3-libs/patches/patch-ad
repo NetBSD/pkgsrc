@@ -1,22 +1,13 @@
-$NetBSD: patch-ad,v 1.4 2003/10/23 07:48:21 junyoung Exp $
+$NetBSD: patch-ad,v 1.5 2003/12/19 15:43:31 skrll Exp $
 
---- src/kernel/qthread_unix.cpp.orig	2002-12-09 09:40:39.000000000 +0000
-+++ src/kernel/qthread_unix.cpp
-@@ -378,10 +378,17 @@ void QThread::start()
-     int ret;
-     pthread_attr_t attr;
-     pthread_attr_init( &attr );
-+#if defined(_POSIX_THREAD_PRIORITY_SCHEDULING)
-     pthread_attr_setinheritsched( &attr, PTHREAD_INHERIT_SCHED );
-+#endif
-     pthread_attr_setdetachstate( &attr, PTHREAD_CREATE_DETACHED );
-     if ( d->stacksize > 0 ) {
-+#if defined(_POSIX_THREAD_ATTR_STACKSIZE)
- 	ret = pthread_attr_setstacksize( &attr, d->stacksize );
-+#else
-+	ret = 1;
-+#endif
-+
- 	if ( ret ) {
- #ifdef QT_CHECK_STATE
- 	    qWarning( "QThread::start: thread stack size error: %s", strerror( ret ) ) ;
+--- src/kernel/qscriptengine_x11.cpp.orig	2003-11-10 10:22:02.000000000 +0000
++++ src/kernel/qscriptengine_x11.cpp
+@@ -2671,7 +2671,7 @@ static void hangul_shape_syllable( const
+     } else if (syllableLength == 3) {
+ 	int LIndex = ch[0].unicode() - Hangul_LBase;
+ 	int VIndex = ch[1].unicode() - Hangul_VBase;
+-	int TIndex = ch[1].unicode() - Hangul_TBase;
++	int TIndex = ch[2].unicode() - Hangul_TBase;
+ 	if (LIndex >= 0 && LIndex < Hangul_LCount &&
+ 	    VIndex >= 0 && VIndex < Hangul_VCount &&
+ 	    TIndex >= 0 && TIndex < Hangul_TCount )
