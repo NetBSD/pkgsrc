@@ -1,12 +1,15 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/10/19 07:41:15 skrll Exp $
+$NetBSD: patch-ab,v 1.2 2000/11/03 08:40:24 skrll Exp $
 
 --- configs/netbsd-g++-static.orig	Wed Oct  4 10:55:23 2000
 +++ configs/netbsd-g++-static
-@@ -2,19 +2,20 @@
+@@ -1,20 +1,21 @@
+ # Compiling
  INTERFACE_DECL_PATH 	= .
- SYSCONF_CXX		= g++
- SYSCONF_CC		= gcc
-+SYSCONF_CXX_LIB		= ${LIBTOOL} --mode=compile g++
+-SYSCONF_CXX		= g++
+-SYSCONF_CC		= gcc
++SYSCONF_CXX		= c++
++SYSCONF_CC		= cc
++SYSCONF_CXX_LIB		= ${LIBTOOL} --mode=compile c++
  
  # Compiling with support libraries
  SYSCONF_CXXFLAGS_X11	= -I/usr/X11R6/include
@@ -39,7 +42,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/10/19 07:41:15 skrll Exp $
  
  # Linking applications
 -SYSCONF_LINK		= g++
-+SYSCONF_LINK		= $(LIBTOOL) --mode=link g++
++SYSCONF_LINK		= $(LIBTOOL) --mode=link c++
  SYSCONF_LFLAGS		= 
  SYSCONF_LIBS		= 
  
