@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.17 2004/11/02 10:53:15 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.18 2004/11/08 00:05:38 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q3 branch:
@@ -37,4 +37,5 @@ Security Pullup - requested by Havard Eidnes
 security fix for apache2
 Solaris Portability Pullup - requested by Grant Beattie
 portability fix for m4
-
+Pullup ticket 127 - requested by Grant Beattie
+clamav update
