@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/10/19 10:54:59 rh Exp $
+# $NetBSD: Makefile,v 1.7 2002/12/05 12:05:52 jmmv Exp $
 
 DISTNAME=	xml-i18n-tools-0.9
 CATEGORIES=	textproc gnome
@@ -7,6 +7,8 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/xml-i18n-tools/0.9/}
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://news.gnome.org/gnome-news/979851911/
 COMMENT=	XML internationalisation tools
+
+CONFLICTS+=	intltool-[0-9]*
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
