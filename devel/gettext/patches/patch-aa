@@ -1,14 +1,20 @@
-$NetBSD: patch-aa,v 1.4 1998/12/28 20:18:13 tron Exp $
+$NetBSD: patch-aa,v 1.5 1998/12/29 18:10:34 tron Exp $
 
 --- configure.orig	Fri May  1 07:48:25 1998
-+++ configure	Tue Dec 22 23:56:52 1998
-@@ -1319,9 +1319,6 @@
-   echo "$ac_t""no" 1>&6
++++ configure	Tue Dec 29 19:06:57 1998
+@@ -1320,6 +1320,7 @@
  fi
  
--# Always use our own libtool.
--LIBTOOL='$(SHELL) $(top_builddir)/libtool'
--
+ # Always use our own libtool.
++if false; then
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
  # Check for any special flags to pass to ltconfig.
- libtool_flags=
- test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
+@@ -1364,6 +1365,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
+ $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
++fi
+ 
+ # Extract the first word of "gcc", so it can be a program name with args.
+ set dummy gcc; ac_word=$2
