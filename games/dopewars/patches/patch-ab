@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/07/01 08:27:31 garbled Exp $
+--- dopewars.c.orig	Thu Jul  1 01:08:42 1999
++++ dopewars.c	Thu Jul  1 01:09:01 1999
+@@ -1866,7 +1866,7 @@
+    char ConfigFile[800],*pt;
+ 
+ /* First, set hard-coded default values */
+-   strcpy(HiScoreFile,"/var/lib/games/dopewars.sco");
++   strcpy(HiScoreFile,"/var/games/dopewars.sco");
+    strcpy(ServerName,"localhost");
+    strcpy(Pager,"more");
+    Location=ResizeStruct(Location,&NumLocation,
