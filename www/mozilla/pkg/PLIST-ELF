@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST-ELF,v 1.10 2001/03/30 09:37:50 taya Exp $
+@comment $NetBSD: PLIST-ELF,v 1.11 2001/05/11 00:37:46 taya Exp $
 bin/mozilla
 @comment begin PROGRAMS
 lib/mozilla/mozilla-bin
 lib/mozilla/nsinstall
-lib/mozilla/psm
 lib/mozilla/regExport
 lib/mozilla/regchrome
 lib/mozilla/regxpcom
@@ -15,10 +14,10 @@ lib/mozilla/xpcshell
 @comment end PROGRAMS
 @comment begin SCRIPTS
 lib/mozilla/mozilla-config
-lib/mozilla/start-psm
 @comment end SCRIPTS
 @comment begin DSO
 lib/mozilla/components/libabsyncsvc.so
+lib/mozilla/components/libaccessibility.so
 lib/mozilla/components/libaddrbook.so
 lib/mozilla/components/libappcomps.so
 lib/mozilla/components/libcaps.so
@@ -28,6 +27,7 @@ lib/mozilla/components/libcookie.so
 lib/mozilla/components/libdocshell.so
 lib/mozilla/components/libeditor.so
 lib/mozilla/components/libembedcomponents.so
+lib/mozilla/components/libgfx2.so
 lib/mozilla/components/libgfx_gtk.so
 lib/mozilla/components/libgfxps.so
 lib/mozilla/components/libgkcontent.so
@@ -35,6 +35,11 @@ lib/mozilla/components/libgklayout.so
 lib/mozilla/components/libgkplugin.so
 lib/mozilla/components/libgkview.so
 lib/mozilla/components/libhtmlpars.so
+lib/mozilla/components/libimggif.so
+lib/mozilla/components/libimgjpeg.so
+lib/mozilla/components/libimglib2.so
+lib/mozilla/components/libimgpng.so
+lib/mozilla/components/libimgppm.so
 lib/mozilla/components/libimpText.so
 lib/mozilla/components/libimport.so
 lib/mozilla/components/libjar50.so
@@ -48,6 +53,7 @@ lib/mozilla/components/libmimeemitter.so
 lib/mozilla/components/libmork.so
 lib/mozilla/components/libmozbrwsr.so
 lib/mozilla/components/libmozfind.so
+lib/mozilla/components/libmozldap.so
 lib/mozilla/components/libmozucth.so
 lib/mozilla/components/libmozxfer.so
 lib/mozilla/components/libmsgcompose.so
@@ -56,6 +62,7 @@ lib/mozilla/components/libmsgimap.so
 lib/mozilla/components/libmsgnews.so
 lib/mozilla/components/libnecko.so
 lib/mozilla/components/libnecko2.so
+lib/mozilla/components/libnkcache.so
 lib/mozilla/components/libnsappshell.so
 lib/mozilla/components/libnsgif.so
 lib/mozilla/components/libnsjpg.so
@@ -64,9 +71,10 @@ lib/mozilla/components/libnsmng.so
 lib/mozilla/components/libnspng.so
 lib/mozilla/components/libnsprefm.so
 lib/mozilla/components/liboji.so
+lib/mozilla/components/libpipnss.so
+lib/mozilla/components/libpippki.so
 lib/mozilla/components/libpref.so
 lib/mozilla/components/libprofile.so
-lib/mozilla/components/libpsmglue.so
 lib/mozilla/components/librdf.so
 lib/mozilla/components/libregviewer.so
 lib/mozilla/components/libshistory.so
@@ -96,13 +104,14 @@ lib/mozilla/components/libxmlextras.so
 lib/mozilla/components/libxpconnect.so
 lib/mozilla/components/libxpinstall.so
 lib/mozilla/components/libxremote_client.so
-lib/mozilla/libcmt.so
 lib/mozilla/libgkgfx.so
 lib/mozilla/libgtkembedmoz.so
 lib/mozilla/libgtksuperwin.so
 lib/mozilla/libgtkxtbin.so
 lib/mozilla/libjsdom.so
 lib/mozilla/libjsj.so
+lib/mozilla/liblber40.so
+lib/mozilla/libldap40.so
 lib/mozilla/libmozjs.so
 lib/mozilla/libmsgbaseutil.so
 lib/mozilla/libnspr4.so
@@ -110,7 +119,6 @@ lib/mozilla/libnssckbi.so
 lib/mozilla/libnullplugin.so
 lib/mozilla/libplc4.so
 lib/mozilla/libplds4.so
-lib/mozilla/libprotocol.so
 lib/mozilla/libxpcom.so
 lib/mozilla/libxpistub.so
 lib/mozilla/plugins/libnullplugin.so
@@ -124,11 +132,15 @@ lib/mozilla/chrome/comm.jar
 lib/mozilla/chrome/embed.jar
 lib/mozilla/chrome/en-US.jar
 lib/mozilla/chrome/en-unix.jar
+lib/mozilla/chrome/en-win.jar
 lib/mozilla/chrome/installed-chrome.txt
 lib/mozilla/chrome/messenger.jar
 lib/mozilla/chrome/modern.jar
+lib/mozilla/chrome/pipnss.jar
+lib/mozilla/chrome/pippki.jar
 lib/mozilla/chrome/toolkit.jar
 lib/mozilla/components/absync.xpt
+lib/mozilla/components/accessibility.xpt
 lib/mozilla/components/addrbook.xpt
 lib/mozilla/components/appshell.xpt
 lib/mozilla/components/autocomplete.xpt
@@ -138,7 +150,7 @@ lib/mozilla/components/chardet.xpt
 lib/mozilla/components/chatzilla-service.js
 lib/mozilla/components/chrome.xpt
 lib/mozilla/components/content_base.xpt
-lib/mozilla/components/cookieviewer.xpt
+lib/mozilla/components/cookie.xpt
 lib/mozilla/components/directory.xpt
 lib/mozilla/components/docshell.xpt
 lib/mozilla/components/dom.xpt
@@ -146,7 +158,9 @@ lib/mozilla/components/editor.xpt
 lib/mozilla/components/embed_base.xpt
 lib/mozilla/components/exthandler.xpt
 lib/mozilla/components/gfx.xpt
+lib/mozilla/components/gfx2.xpt
 lib/mozilla/components/history.xpt
+lib/mozilla/components/imglib2.xpt
 lib/mozilla/components/import.xpt
 lib/mozilla/components/intl.xpt
 lib/mozilla/components/jar.xpt
@@ -163,6 +177,7 @@ lib/mozilla/components/mimetype.xpt
 lib/mozilla/components/mozbrwsr.xpt
 lib/mozilla/components/mozcomps.xpt
 lib/mozilla/components/mozfind.xpt
+lib/mozilla/components/mozldap.xpt
 lib/mozilla/components/mozucth.xpt
 lib/mozilla/components/mozxfer.xpt
 lib/mozilla/components/msgbase.xpt
@@ -183,17 +198,20 @@ lib/mozilla/components/necko_jar.xpt
 lib/mozilla/components/necko_res.xpt
 lib/mozilla/components/necko_socket.xpt
 lib/mozilla/components/necko_strconv.xpt
+lib/mozilla/components/necko_viewsource.xpt
 lib/mozilla/components/nsDictionary.js
 lib/mozilla/components/nsFilePicker.js
+lib/mozilla/components/nsProxyAutoConfig.js
 lib/mozilla/components/nsSidebar.js
 lib/mozilla/components/nsXmlRpcClient.js
 lib/mozilla/components/oji.xpt
+lib/mozilla/components/pipnss.xpt
+lib/mozilla/components/pippki.xpt
 lib/mozilla/components/plugin.xpt
 lib/mozilla/components/pref.xpt
 lib/mozilla/components/prefmigr.xpt
 lib/mozilla/components/profile.xpt
 lib/mozilla/components/proxyObjInst.xpt
-lib/mozilla/components/psmglue.xpt
 lib/mozilla/components/rdf.xpt
 lib/mozilla/components/regviewer.xpt
 lib/mozilla/components/related.xpt
@@ -255,26 +273,15 @@ lib/mozilla/defaults/wallet/SchemaConcat.tbl
 lib/mozilla/defaults/wallet/SchemaStrings.tbl
 lib/mozilla/defaults/wallet/StateSchema.tbl
 lib/mozilla/defaults/wallet/VcardSchema.tbl
+lib/mozilla/dirver
 lib/mozilla/dtd/mathml.dtd
 lib/mozilla/gtkEmbed
 lib/mozilla/icons/mozicon16.xpm
 lib/mozilla/icons/mozicon50.xpm
-lib/mozilla/psmdata/doc/04digsgn.gif
-lib/mozilla/psmdata/doc/06pcrypt.gif
-lib/mozilla/psmdata/doc/bannerrn.gif
-lib/mozilla/psmdata/doc/cartbanner.gif
-lib/mozilla/psmdata/doc/cmcjavascriptapi.html
-lib/mozilla/psmdata/doc/contents.htm
-lib/mozilla/psmdata/doc/glossary.htm
-lib/mozilla/psmdata/doc/help.htm
-lib/mozilla/psmdata/doc/next.gif
-lib/mozilla/psmdata/doc/prev.gif
-lib/mozilla/psmdata/doc/psmtest.html
-lib/mozilla/psmdata/doc/release_notes.html
-lib/mozilla/psmdata/ui/psm_bin.properties
-lib/mozilla/psmdata/ui/psm_doc.properties
-lib/mozilla/psmdata/ui/psm_text.properties
-lib/mozilla/psmdata/ui/psm_ui.properties
+lib/mozilla/profile/defaults/profile/US/chrome/userChrome.css
+lib/mozilla/profile/defaults/profile/US/chrome/userContent.css
+lib/mozilla/profile/defaults/profile/chrome/userChrome.css
+lib/mozilla/profile/defaults/profile/chrome/userContent.css
 lib/mozilla/res/acceptlanguage.properties
 lib/mozilla/res/arrow.gif
 lib/mozilla/res/builtin/htmlBindings.xml
@@ -291,7 +298,10 @@ lib/mozilla/res/fonts/mathfont.properties
 lib/mozilla/res/fonts/mathfontCMEX10.properties
 lib/mozilla/res/fonts/mathfontCMSY10.properties
 lib/mozilla/res/fonts/mathfontMTExtra.properties
+lib/mozilla/res/fonts/mathfontMath1.properties
+lib/mozilla/res/fonts/mathfontMath2.properties
 lib/mozilla/res/fonts/mathfontMath4.properties
+lib/mozilla/res/fonts/mathfontPUA.properties
 lib/mozilla/res/fonts/mathfontSymbol.properties
 lib/mozilla/res/forms.css
 lib/mozilla/res/gfx/icon_0.gif
@@ -327,6 +337,7 @@ lib/mozilla/res/rdf/folder-open.gif
 lib/mozilla/res/rdf/ignore-test.xul
 lib/mozilla/res/rdf/loading.gif
 lib/mozilla/res/rdf/xpidl-test-1.xul
+lib/mozilla/res/sample.unixpsfonts.properties
 lib/mozilla/res/samples/colorpicker.xul
 lib/mozilla/res/samples/dexopenchrome.xul
 lib/mozilla/res/samples/dexparamdialog.html
@@ -343,6 +354,7 @@ lib/mozilla/res/samples/widgets.xul
 lib/mozilla/res/samples/xpmenu.xul
 lib/mozilla/res/ua.css
 lib/mozilla/res/unixcharset.properties
+lib/mozilla/res/viewsource.css
 lib/mozilla/searchplugins/NetscapeSearch.gif
 lib/mozilla/searchplugins/NetscapeSearch.src
 lib/mozilla/searchplugins/bugzilla.gif
@@ -356,9 +368,11 @@ lib/mozilla/searchplugins/lxrmozilla.src
 lib/mozilla/searchplugins/mozilla.gif
 lib/mozilla/searchplugins/mozilla.src
 lib/mozilla/splash.xpm
+lib/mozilla/startup-test.html
+lib/mozilla/xpicleanup
 @comment end DATA
-@exec env LD_LIBRARY_PATH=%D/lib/mozilla MOZILLA_FIVE_HOME=%D/lib/mozilla %D/lib/mozilla/regxpcom
-@exec env LD_LIBRARY_PATH=%D/lib/mozilla MOZILLA_FIVE_HOME=%D/lib/mozilla %D/lib/mozilla/regchrome
+@exec env LD_LIBRARY_PATH=/usr/X11R6/lib:%D/lib/mozilla MOZILLA_FIVE_HOME=%D/lib/mozilla %D/lib/mozilla/regxpcom
+@exec env LD_LIBRARY_PATH=/usr/X11R6/lib:%D/lib/mozilla MOZILLA_FIVE_HOME=%D/lib/mozilla %D/lib/mozilla/regchrome
 @unexec rm %D/lib/mozilla/component.reg
 @unexec rm %D/lib/mozilla/chrome/user-locales.rdf
 @unexec rm %D/lib/mozilla/chrome/user-skins.rdf
@@ -391,9 +405,12 @@ lib/mozilla/splash.xpm
 @dirrm lib/mozilla/res/entityTables
 @dirrm lib/mozilla/res/builtin
 @dirrm lib/mozilla/res
-@dirrm lib/mozilla/psmdata/ui
-@dirrm lib/mozilla/psmdata/doc
-@dirrm lib/mozilla/psmdata
+@dirrm lib/mozilla/profile/defaults/profile/chrome
+@dirrm lib/mozilla/profile/defaults/profile/US/chrome
+@dirrm lib/mozilla/profile/defaults/profile/US
+@dirrm lib/mozilla/profile/defaults/profile
+@dirrm lib/mozilla/profile/defaults
+@dirrm lib/mozilla/profile
 @dirrm lib/mozilla/plugins
 @dirrm lib/mozilla/icons
 @dirrm lib/mozilla/dtd
