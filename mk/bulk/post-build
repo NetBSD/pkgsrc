@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.9 2001/02/01 08:47:29 dmcmahill Exp $
+# $NetBSD: post-build,v 1.10 2001/02/08 19:17:38 dmcmahill Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -48,6 +48,7 @@ if ($verbose) {
 	print "*** NetBSD $osrev/$arch\n";
 	print "*** Result of bulk pkgsrc build as of $date:\n";
 	print "\n";
+	print "Pkg\tState\tPkgs broken by\t(last modified by, maintainer)\n"
 }
 
 system("mkdir -p ${FTP}");
@@ -79,7 +80,7 @@ print HTML <<EOHTML
     <P>
     
 <TABLE>
-<TR><TH> Package <TH> State <TH> Last touched by <TH> File touched last <TH> Maintainer
+<TR><TH> Package <TH> State <TH> Pkgs Broken by <TH> Last touched by <TH> File touched last <TH> Maintainer
 EOHTML
 ;
 
@@ -88,7 +89,7 @@ $nunpackaged = $nbroken = $nbrokendep = 0;
 chdir("$FTP");
 open(BF,"sort +1 $BROKENFILE |") or die "can't open .broken-file '$BROKENFILE'";
 while (<BF>) {
-    ($nerrors, $bf) = split;
+    ($nerrors, $bf, $nbrokenby) = split;
     $pkg = $bf;
     $pkg =~ s,/$BROKENFILE,,;
 
@@ -122,14 +123,27 @@ while (<BF>) {
     
     print HTML "<TR><TD><A HREF=\"$bf\">$pkg</A>";
     print HTML "    <TD><FONT COLOR=$color>$state</FONT>";
+    if ($nbrokenby > 0){ 
+        print HTML "    <TD><FONT COLOR=$color>$nbrokenby</FONT>";
+    }
+    else {
+        print HTML "    <TD> ";
+    }
     print HTML "    <TD> $who <TD> $file";
     print HTML "    <TD> $maintainer\n";
 
     ($category, $dbfeed_pkg) = split('/', $pkg);
 
     if ($nerrors != 0) {
-    	printf("%-23s $state\t($who, $maintainer)\n", "$pkg:")
-	    if $verbose;
+	if ($nbrokenby > 0){
+    	    printf("%-23s $state\t$nbrokenby\t($who, $maintainer)\n", "$pkg:")
+	        if $verbose;
+	}
+	else {
+    	    printf("%-23s $state\t \t($who, $maintainer)\n", "$pkg:")
+	        if $verbose;
+	}
+
     }
 }
 close(BF);
