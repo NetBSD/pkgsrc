@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/04/24 23:24:25 tron Exp $
+# $NetBSD: Makefile,v 1.8 1999/04/24 23:47:08 tron Exp $
 #
 # Tempted to install another radius package?
 #
@@ -27,7 +27,7 @@ INSTALL_TARGET=	man-install install util-install config-install
 CFLAGS+=	-DHAVE_SETVBUF -DNOSHADOW
 MAKE_ENV+=	RADLIBS="${RADLIBS} -lskey" LIBS=-lcrypt \
 		GNUZIP="`${ECHO} ${GZIP_CMD} | ${AWK} '{print $$1}'`" \
-		INSTALL="${INSTALL} -c" RADDB_INSDIR=${EXAMPLE_DIR}
+		INSTALL="${INSTALL} -c"
 
 # XXX Kerberos IV support is known to be broken.
 #.if exists(/usr/lib/libkrb.a) && \

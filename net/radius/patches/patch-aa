@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 1999/04/24 23:19:05 tron Exp $
+$NetBSD: patch-aa,v 1.3 1999/04/24 23:47:09 tron Exp $
 
---- Makefile.orig	Sun Apr 25 01:03:24 1999
-+++ Makefile	Sun Apr 25 01:08:39 1999
-@@ -51,11 +51,11 @@
+--- Makefile.orig	Sun Apr 25 01:43:46 1999
++++ Makefile	Sun Apr 25 01:44:41 1999
+@@ -51,11 +51,12 @@
  # Where the configuration files live.
  RADDB		= ./raddb
  # Some installation stuff.
@@ -14,12 +14,13 @@ $NetBSD: patch-aa,v 1.2 1999/04/24 23:19:05 tron Exp $
 +DAEMON_INSDIR	= ${PREFIX}/sbin
 +BIN_INSDIR	= ${PREFIX}/sbin
 +MAN_INSDIR	= ${PREFIX}/man
-+RADDB_INSDIR	= ${PREFIX}/share/examples/radius
++RADDB_INSDIR	= /etc/raddb
++RADDB_EXDIR	= ${PREFIX}/share/examples/radius
 +RADACCT_INSDIR	= /var/log
  # The server does not need to be owned by root, unless some shadow password
  # scheme needs it.  You might create a user id "radius" for just this purpose.
  # The O G and M macros are for AIX, OSF/1 and HP-UX, see below.
-@@ -63,12 +63,12 @@
+@@ -63,12 +64,12 @@
  G		= -g
  M		= -m
  RADOWN		= root
@@ -35,7 +36,18 @@ $NetBSD: patch-aa,v 1.2 1999/04/24 23:19:05 tron Exp $
  
  # Define SRV to hold any combination of server names you'd like to override:
  #SRV3	  = -DDEFAULT_TACACS_SERVER=\"vms.dns.name\"
-@@ -90,13 +90,13 @@
+@@ -78,8 +79,8 @@
+ 
+ # Define DIRS to hold any combination of directory names you'd like to override:
+ #DIRS2	  = -DDEFAULT_DIR=\"../raddb\" -DDEFAULT_DIR2=\"$(RADDB_INSDIR)\"
+-#DIRS1	  = -DRADIUS_DIR=\"$(RADDB_INSDIR)\" -DRADACCT_DIR=\"$(RADACCT_INSDIR)\"
+-#DIRS	  = $(DIRS1) $(DIRS2)
++DIRS1	  = -DRADIUS_DIR=\"$(RADDB_INSDIR)\" -DRADACCT_DIR=\"$(RADACCT_INSDIR)\"
++DIRS	  = $(DIRS1) $(DIRS2)
+ 
+ # Define CHK_SHELLS to enable /etc/shells checking:
+ CHK_SHELLS	= -DCHK_SHELLS
+@@ -90,13 +91,13 @@
  # -DBINARY_FILTERS - support for Ascend binary filters
  # -DIP_ADDR_POOL - support for Ascend IP address pools
  #
@@ -51,7 +63,7 @@ $NetBSD: patch-aa,v 1.2 1999/04/24 23:19:05 tron Exp $
  
  STUFF	  = $(DIRS) $(SRV) $(COMPRESS) $(COMPRESS_ARGS) $(CHK_SHELLS) \
  	$(ASCEND) $(USR)
-@@ -122,10 +122,10 @@
+@@ -122,10 +123,10 @@
  # radiusd -- the default
  #
  #--------------------------------------------------------------------------
@@ -65,7 +77,7 @@ $NetBSD: patch-aa,v 1.2 1999/04/24 23:19:05 tron Exp $
  
  #
  # mkerb
-@@ -237,12 +237,12 @@
+@@ -237,12 +238,12 @@
  #
  #--------------------------------------------------------------------------
  
@@ -84,12 +96,49 @@ $NetBSD: patch-aa,v 1.2 1999/04/24 23:19:05 tron Exp $
  
  #
  # Solaris 2.x [[NB: if BIND/named not SMCC, try CFLAGS = ... -DBSD=1 ...]]
-@@ -438,6 +438,8 @@
- #INSTALL	  = /bin/install
+@@ -439,6 +440,8 @@
  
  # You must un-comment one, and only one, of the above sections!
-+
-+CFLAGS+= ${MERIT} ${STUFF}
  
++CFLAGS+= ${MERIT} ${STUFF}
++
  # No modifications are necessary below this line except possibly near line 500.
  
+ all:	notice $(RADIUS) utils
+@@ -697,26 +700,26 @@
+ 						$(MAN_INSDIR)/man8/radpwtst.8
+ 
+ config-install: $(CONFIGS)
+-	-if [ ! -d $(RADDB_INSDIR) ] ;\
++	-if [ ! -d $(RADDB_EXDIR) ] ;\
+ 	then \
+-		/bin/mkdir -p $(RADDB_INSDIR) ;\
++		/bin/mkdir -p $(RADDB_EXDIR) ;\
+ 	fi
+ 	$(INSTALL) $(M) 660 $(O) $(RADOWN) $(G) $(RADGRP) $(RADDB)/authfile \
+-						$(RADDB_INSDIR)/authfile
++						$(RADDB_EXDIR)/authfile
+ 	$(INSTALL) $(M) 660 $(O) $(RADOWN) $(G) $(RADGRP) $(RADDB)/clients \
+-						$(RADDB_INSDIR)/clients
++						$(RADDB_EXDIR)/clients
+ 	$(INSTALL) $(M) 755 $(O) $(RADOWN) $(G) $(RADGRP) $(RADDB)/conversion.pl \
+-						$(RADDB_INSDIR)/conversion.pl
++						$(RADDB_EXDIR)/conversion.pl
+ 	$(INSTALL) $(M) 644 $(O) $(RADOWN) $(G) $(RADGRP) $(RADDB)/dictionary \
+-						$(RADDB_INSDIR)/dictionary
++						$(RADDB_EXDIR)/dictionary
+ 	$(INSTALL) $(M) 644 $(O) $(RADOWN) $(G) $(RADGRP) $(RADDB)/engine.config \
+-						$(RADDB_INSDIR)/engine.config
++						$(RADDB_EXDIR)/engine.config
+ 	$(INSTALL) $(M) 660 $(O) $(RADOWN) $(G) $(RADGRP) $(RADDB)/users \
+-						$(RADDB_INSDIR)/users
++						$(RADDB_EXDIR)/users
+ 	$(INSTALL) $(M) 644 $(O) $(RADOWN) $(G) $(RADGRP) $(RADDB)/vendors \
+-						$(RADDB_INSDIR)/vendors
++						$(RADDB_EXDIR)/vendors
+ 	$(INSTALL) $(M) 644 $(O) $(RADOWN) $(G) $(RADGRP) $(RADDB)/xas.fsm \
+-						$(RADDB_INSDIR)/xas.fsm
++						$(RADDB_EXDIR)/xas.fsm
+ 	-if [ ! -d $(RADACCT_INSDIR) ] ;\
+ 	then \
+ 		/bin/mkdir -p $(RADACCT_INSDIR) ;\
