@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/03/29 10:48:34 wennmach Exp $
+# $NetBSD: Makefile,v 1.11 2001/03/31 13:06:34 zuntum Exp $
 #
 
 DISTNAME=	epic4-0.10.1
@@ -17,7 +17,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}				\
 PATCH_SITES=    http://www.t17.ds.pwr.wroc.pl/~misiek/ipv6/		\
 		http://zuntum.net/patches/				\
 		http://flis.utech.lublin.pl/~zuntum/patches/
-PATCHFILES=     epic4-0.9.16-ipv6-20010217.patch.gz
+PATCHFILES=     epic4-0.10.1-ipv6-20010331.patch.gz
 PATCH_DIST_STRIP=	-p1
 .endif
 
@@ -30,7 +30,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 GNU_CONFIGURE=	YES
 
 .if defined(USE_INET6) && ${USE_INET6} == "YES"
-BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
 
 post-patch:
 	cd ${WRKSRC}; ${LOCALBASE}/bin/autoheader; ${LOCALBASE}/bin/autoconf
