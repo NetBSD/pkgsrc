@@ -1,15 +1,25 @@
-phpPgAdmin is phpMyAdmin (for MySQL) ported to PostgreSQL.  phpPgAdmin
-is a fully functional PostgreSQL administration utility.  You can use
-it to create an maintain multiple databases and even multiple servers.
+phpPgAdmin is a web-based administration tool for PostgreSQL. It is perfect
+for PostgreSQL DBAs, newbies and hosting services.
 
 Features include:
-
-- create and drop databases
-- create, copy, drop and alter table/view/sequence/function/indicie/trigger
-- edit and add fields (to the extent Postgres allows)
-- execute any SQL-statement, even batch-queries
-- manage primary and unique keys
-- create and read dumps of tables
-- administer one single database
-- administer multiple servers
-- administer postgres users and groups
+- Administer multiple servers
+- Support for PostgreSQL 7.0.x, 7.1.x, 7.2.x, 7.3.x, 7.4.x and 8.0.0beta1
+- Manage all aspects of:
+  * Users & groups
+  * Databases
+  * Schemas
+  * Tables, indexes, constraints, triggers, rules & privileges,
+  * Views, sequences & functions
+  * Advanced objects
+  * Reports
+- Easy data manipulation:
+  * Browse tables, views & reports
+  * Execute arbitrary SQL
+  * Select, insert, update and delete
+- Dump table data in a variety of formats: SQL, COPY, XML, XHTML, CSV, Tabbed,
+  pg_dump
+- Import SQL scripts, COPY data, XML, CSV and Tabbed
+- Excellent language support: 
+  * Available in 18 languages
+  * No encoding conflicts. Edit Russian data using a Japanese interface!
+- Easy to install and configure

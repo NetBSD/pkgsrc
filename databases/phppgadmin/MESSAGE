@@ -1,16 +1,18 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2003/05/06 17:40:46 jmmv Exp $
+$NetBSD: MESSAGE,v 1.5 2004/10/09 16:23:43 jdolecek Exp $
 
-Copy required files from ${PREFIX}/share/phppgadmin to your web
-space. Do not edit "config.inc.php-dist", copy it to "config.inc.php" and
-configure it for your needs. Remember that PHP should be configured to
-have "magic_quotes=on".
+In order to use ${PKGNAME} under Apache/PHP, include following in your
+server configuration:
 
-You may want to set the following variables in config.inc.php:
+Include ${EGDIR}/apache.conf
 
-	$cfgDefaultDB                       = "mydb";
-	$cfgSuperUser                       = "pgsql";
-	$cfgServers[1]['host']              = 'localhost';
-	$cfgServers[1]['user']              = 'pgsql'
+This makes ${PKGNAME} available on your server as:
+
+	http://www.yourdomain.com/phppgadmin/
+
+Your Apache server must also be configured to support PHP, and PHP
+must be configured to support PostgreSQL by including this in php.ini:
+
+extension=pgsql.so 
 
 ===========================================================================

@@ -1,0 +1,10 @@
+<IfModule mod_alias.c>
+    Alias /phppgadmin/ "@PHPPGBASE@/"
+</IfModule>
+
+<Directory "@PHPPGBASE@">
+    Options Indexes
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+</Directory>
