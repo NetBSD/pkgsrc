@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/12/14 15:52:39 tv Exp $
+# $NetBSD: Makefile,v 1.5 2000/12/14 15:53:33 tv Exp $
 #
 
 DISTNAME=	plex86
@@ -17,7 +17,7 @@ DIST_SUBDIR=	plex86-20001214
 WRKSRC=		${WRKDIR}/plex86
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-NetBSD \
-		--with-netbsd-source=/sys
+		--with-netbsd-source=${BSDSRCDIR}
 USE_GMAKE=	yes
 NO_PKG_REGISTER=	yes	# ONLY until we really install files!!!
 NO_PACKAGE=	Incomplete	# ONLY until we really install files!!!
