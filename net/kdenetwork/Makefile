@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/04/28 22:55:14 tron Exp $
+# $NetBSD: Makefile,v 1.12 1998/05/04 00:20:02 tron Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:54 asami Exp
 #
 
@@ -31,11 +31,11 @@ USE_X11=	yes
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	"--x-inc=${PREFIX}/include -I${LOCALBASE}/include -I${LOCALBASE}/include/giflib" \
 		"--x-lib=${PREFIX}/lib -L${LOCALBASE}/lib" \
-		"--prefix=${PREFIX}" \
 		"--datadir=${PREFIX}/share/kde" \
 		"--with-qt-dir=${PREFIX}" \
 		"--with-qt-includes=${PREFIX}/include/qt"
-CONFIGURE_ENV=	INSTALL_DATA="${INSTALL_DATA}" \
+CONFIGURE_ENV=	KDEDIR=${PREFIX} \
+		INSTALL_DATA="${INSTALL_DATA}" \
 		INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
