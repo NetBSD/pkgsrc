@@ -1,4 +1,4 @@
-/*	$NetBSD: err.c,v 1.2 2003/09/06 23:03:01 grant Exp $	*/
+/*	$NetBSD: err.c,v 1.3 2003/09/15 07:39:34 grant Exp $	*/
 
 /*
  * Copyright 1997-2000 Luke Mewburn <lukem@netbsd.org>.
@@ -62,6 +62,37 @@ errx(int eval, const char *fmt, ...)
 }
 
 void
+verr(eval, fmt, ap)
+	int eval;
+	const char *fmt;
+	va_list ap;
+{
+	int sverrno;
+
+	sverrno = errno;
+	(void)fprintf(stderr, "%s: ", getprogname());
+	if (fmt != NULL) {
+		(void)vfprintf(stderr, fmt, ap);
+		(void)fprintf(stderr, ": ");
+	}
+	(void)fprintf(stderr, "%s\n", strerror(sverrno));
+	exit(eval);
+}
+
+void
+verrx(eval, fmt, ap)
+	int eval;
+	const char *fmt;
+	va_list ap;
+{
+	(void)fprintf(stderr, "%s: ", getprogname());
+	if (fmt != NULL)
+		(void)vfprintf(stderr, fmt, ap);
+	(void)fprintf(stderr, "\n");
+	exit(eval);
+}
+
+void
 warn(const char *fmt, ...)
 {
 	va_list	ap;
@@ -89,4 +120,31 @@ warnx(const char *fmt, ...)
                 (void)vfprintf(stderr, fmt, ap);
 	va_end(ap);
         (void)fprintf(stderr, "\n");
+}
+
+void
+vwarn(fmt, ap)
+	const char *fmt;
+	va_list ap;
+{
+	int sverrno;
+
+	sverrno = errno;
+	(void)fprintf(stderr, "%s: ", getprogname());
+	if (fmt != NULL) {
+		(void)vfprintf(stderr, fmt, ap);
+		(void)fprintf(stderr, ": ");
+	}
+	(void)fprintf(stderr, "%s\n", strerror(sverrno));
+}
+
+void
+vwarnx(fmt, ap)
+	const char *fmt;
+	va_list ap;
+{
+	(void)fprintf(stderr, "%s: ", getprogname());
+	if (fmt != NULL)
+		(void)vfprintf(stderr, fmt, ap);
+	(void)fprintf(stderr, "\n");
 }
