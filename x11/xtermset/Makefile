@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/17 17:07:27 wiz Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2002/06/24 06:02:09 jlam Exp $
 #
 
 DISTNAME=	xtermset-0.4
@@ -9,6 +9,7 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://xtermset.netpedia.net/
 COMMENT=	Change things like foreground color, size etc. on an xterm
 
+USE_BUILDLINK2=	YES
 USE_X11BASE=	YES
 
 post-extract:

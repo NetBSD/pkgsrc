@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2001/08/29 22:41:32 jlam Exp $
+$NetBSD: patch-aa,v 1.2.2.1 2002/06/24 06:02:07 jlam Exp $
 
 --- Makefile.in.orig	Thu Oct 29 03:01:17 1998
 +++ Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.2 2001/08/29 22:41:32 jlam Exp $
  HTML_DOC = html/xteddy.html html/xteddy_info.html \
             html/images/noise.jpg html/images/xteddy.gif html/images/xteddy.xbm
 -xteddy_LDADD = -L/usr/X11R6/lib
-+xteddy_LDADD = -L${BUILDLINK_X11_DIR}
++xteddy_LDADD = -L${X11BASE}/lib
  LIBS = -lX11 -lXext -lXpm
  man_MANS = xteddy.1
  
