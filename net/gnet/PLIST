@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/04/15 12:19:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/05/07 12:43:46 wiz Exp $
 include/gnet-2.0/base64.h
 include/gnet-2.0/conn.h
 include/gnet-2.0/gnet.h
@@ -20,7 +20,7 @@ lib/libgnet-2.0.a
 lib/libgnet-2.0.la
 lib/libgnet-2.0.so
 lib/libgnet-2.0.so.0
-lib/libgnet-2.0.so.0.0
+lib/libgnet-2.0.so.0.2
 lib/pkgconfig/gnet-2.0.pc
 share/aclocal/gnet-2.0.m4
 share/doc/libgnet2.0-dev/html/gnet/book1.html
