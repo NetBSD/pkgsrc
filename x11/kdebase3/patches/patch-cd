@@ -1,8 +1,8 @@
-$NetBSD: patch-cd,v 1.6 2003/07/30 13:34:59 markd Exp $
+$NetBSD: patch-cd,v 1.7 2004/01/15 10:15:14 markd Exp $
 
---- kmenuedit/Makefile.in.orig	2003-07-15 22:03:38.000000000 +1200
+--- kmenuedit/Makefile.in.orig	2004-01-02 14:06:00.000000000 +1300
 +++ kmenuedit/Makefile.in
-@@ -424,17 +424,19 @@ x_libraries = @x_libraries@
+@@ -425,17 +425,19 @@ x_libraries = @x_libraries@
  INCLUDES = $(all_includes)
  
  bin_PROGRAMS = kmenuedit
@@ -28,7 +28,7 @@ $NetBSD: patch-cd,v 1.6 2003/07/30 13:34:59 markd Exp $
  kmenuedit_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
  noinst_HEADERS = kmenuedit.h menueditview.h treeview.h desktopfileeditor.h basictab.h khotkeys.h
-@@ -458,45 +460,55 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -460,45 +462,55 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -104,7 +104,7 @@ $NetBSD: patch-cd,v 1.6 2003/07/30 13:34:59 markd Exp $
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/menueditview.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/treeview.Plo
  
-@@ -518,7 +530,8 @@ CXXLD = $(CXX)
+@@ -520,7 +532,8 @@ CXXLD = $(CXX)
  #>+ 2
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
@@ -114,7 +114,7 @@ $NetBSD: patch-cd,v 1.6 2003/07/30 13:34:59 markd Exp $
  DATA = $(apps_DATA) $(rc_DATA)
  
  HEADERS = $(noinst_HEADERS)
-@@ -531,7 +544,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+@@ -533,7 +546,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
  	check-recursive installcheck-recursive
  DIST_COMMON = $(noinst_HEADERS) Makefile.am Makefile.in
  DIST_SUBDIRS = $(SUBDIRS)
@@ -123,7 +123,7 @@ $NetBSD: patch-cd,v 1.6 2003/07/30 13:34:59 markd Exp $
  
  #>- all: all-recursive
  #>+ 1
-@@ -578,6 +591,8 @@ clean-libLTLIBRARIES:
+@@ -580,6 +593,8 @@ clean-libLTLIBRARIES:
  	done
  kmenuedit.la: $(kmenuedit_la_OBJECTS) $(kmenuedit_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kmenuedit_la_LDFLAGS) $(kmenuedit_la_OBJECTS) $(kmenuedit_la_LIBADD) $(LIBS)
@@ -132,7 +132,7 @@ $NetBSD: patch-cd,v 1.6 2003/07/30 13:34:59 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -619,9 +634,10 @@ distclean-compile:
+@@ -621,9 +636,10 @@ distclean-compile:
  
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/basictab.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/desktopfileeditor.Plo@am__quote@
@@ -144,16 +144,16 @@ $NetBSD: patch-cd,v 1.6 2003/07/30 13:34:59 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/menueditview.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/treeview.Plo@am__quote@
-@@ -827,7 +843,7 @@ distclean-tags:
+@@ -835,7 +851,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=cr48-app-kmenuedit.png uninstall.desktop kmenuedit.desktop cr16-app-kmenuedit.png kmenueditui.rc cr32-app-kmenuedit.png 
+-KDE_DIST=cr48-app-kmenuedit.png cr16-app-kmenuedit.png kmenueditui.rc uninstall.desktop cr32-app-kmenuedit.png kmenuedit.desktop 
 +KDE_DIST=cr32-app-kmenuedit.png cr16-app-kmenuedit.png cr48-app-kmenuedit.png kmenuedit.desktop Makefile.in.rej kmenueditui.rc uninstall.desktop 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -901,7 +917,6 @@ install-strip:
+@@ -909,7 +925,6 @@ install-strip:
  mostlyclean-generic:
  
  clean-generic:
@@ -161,55 +161,60 @@ $NetBSD: patch-cd,v 1.6 2003/07/30 13:34:59 markd Exp $
  
  distclean-generic:
  	-rm -f Makefile $(CONFIG_CLEAN_FILES)
-@@ -1006,12 +1021,6 @@ dummy.cpp:
+@@ -1014,11 +1029,11 @@ dummy.cpp:
  .NOEXPORT:
  
  #>+ 3
--menueditview.moc: $(srcdir)/menueditview.h
--	$(MOC) $(srcdir)/menueditview.h -o menueditview.moc
--
--#>+ 1
--mocs: menueditview.moc
--#>+ 3
- basictab.moc: $(srcdir)/basictab.h
- 	$(MOC) $(srcdir)/basictab.h -o basictab.moc
+-desktopfileeditor.moc: $(srcdir)/desktopfileeditor.h
+-	$(MOC) $(srcdir)/desktopfileeditor.h -o desktopfileeditor.moc
++basictab.moc: $(srcdir)/basictab.h
++	$(MOC) $(srcdir)/basictab.h -o basictab.moc
  
-@@ -1024,11 +1033,11 @@ treeview.moc: $(srcdir)/treeview.h
+ #>+ 1
+-mocs: desktopfileeditor.moc
++mocs: basictab.moc
+ #>+ 3
+ treeview.moc: $(srcdir)/treeview.h
+ 	$(MOC) $(srcdir)/treeview.h -o treeview.moc
+@@ -1026,18 +1041,18 @@ treeview.moc: $(srcdir)/treeview.h
  #>+ 1
  mocs: treeview.moc
  #>+ 3
--kmenuedit.moc: $(srcdir)/kmenuedit.h
--	$(MOC) $(srcdir)/kmenuedit.h -o kmenuedit.moc
-+menueditview.moc: $(srcdir)/menueditview.h
-+	$(MOC) $(srcdir)/menueditview.h -o menueditview.moc
+-basictab.moc: $(srcdir)/basictab.h
+-	$(MOC) $(srcdir)/basictab.h -o basictab.moc
+-
+-#>+ 1
+-mocs: basictab.moc
+-#>+ 3
+ menueditview.moc: $(srcdir)/menueditview.h
+ 	$(MOC) $(srcdir)/menueditview.h -o menueditview.moc
  
  #>+ 1
--mocs: kmenuedit.moc
-+mocs: menueditview.moc
+ mocs: menueditview.moc
  #>+ 3
- desktopfileeditor.moc: $(srcdir)/desktopfileeditor.h
- 	$(MOC) $(srcdir)/desktopfileeditor.h -o desktopfileeditor.moc
-@@ -1036,8 +1045,14 @@ desktopfileeditor.moc: $(srcdir)/desktop
- #>+ 1
- mocs: desktopfileeditor.moc
- #>+ 3
-+kmenuedit.moc: $(srcdir)/kmenuedit.h
-+	$(MOC) $(srcdir)/kmenuedit.h -o kmenuedit.moc
++desktopfileeditor.moc: $(srcdir)/desktopfileeditor.h
++	$(MOC) $(srcdir)/desktopfileeditor.h -o desktopfileeditor.moc
 +
 +#>+ 1
-+mocs: kmenuedit.moc
++mocs: desktopfileeditor.moc
 +#>+ 3
+ kmenuedit.moc: $(srcdir)/kmenuedit.h
+ 	$(MOC) $(srcdir)/kmenuedit.h -o kmenuedit.moc
+ 
+@@ -1045,7 +1060,7 @@ kmenuedit.moc: $(srcdir)/kmenuedit.h
+ mocs: kmenuedit.moc
+ #>+ 3
  clean-metasources:
--	-rm -f  menueditview.moc basictab.moc treeview.moc kmenuedit.moc desktopfileeditor.moc
+-	-rm -f  desktopfileeditor.moc treeview.moc basictab.moc menueditview.moc kmenuedit.moc
 +	-rm -f  basictab.moc treeview.moc menueditview.moc desktopfileeditor.moc kmenuedit.moc
  
  #>+ 2
  docs-am:
-@@ -1064,33 +1079,33 @@ force-reedit:
+@@ -1072,33 +1087,33 @@ force-reedit:
  
  
  #>+ 11
--kmenuedit_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/basictab.cpp $(srcdir)/treeview.cpp $(srcdir)/desktopfileeditor.cpp $(srcdir)/menueditview.cpp $(srcdir)/kmenuedit.cpp $(srcdir)/main.cpp $(srcdir)/khotkeys.cpp  menueditview.moc treeview.moc basictab.moc desktopfileeditor.moc kmenuedit.moc
+-kmenuedit_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/basictab.cpp $(srcdir)/treeview.cpp $(srcdir)/desktopfileeditor.cpp $(srcdir)/menueditview.cpp $(srcdir)/kmenuedit.cpp $(srcdir)/main.cpp $(srcdir)/khotkeys.cpp  desktopfileeditor.moc treeview.moc kmenuedit.moc menueditview.moc basictab.moc
 -	@echo 'creating kmenuedit_la.all_cpp.cpp ...'; \
 -	rm -f kmenuedit_la.all_cpp.files kmenuedit_la.all_cpp.final; \
 -	echo "#define KDE_USE_FINAL 1" >> kmenuedit_la.all_cpp.final; \
@@ -252,23 +257,23 @@ $NetBSD: patch-cd,v 1.6 2003/07/30 13:34:59 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -1100,13 +1115,13 @@ kde-rpo-clean:
+@@ -1108,13 +1123,13 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 11
--basictab.o: basictab.moc 
+-desktopfileeditor.lo: desktopfileeditor.moc 
 +basictab.lo: basictab.moc 
-+menueditview.lo: menueditview.moc 
- menueditview.o: menueditview.moc 
--treeview.lo: treeview.moc 
--treeview.o: treeview.moc 
--desktopfileeditor.o: desktopfileeditor.moc 
+ menueditview.lo: menueditview.moc 
++menueditview.o: menueditview.moc 
  kmenuedit.lo: kmenuedit.moc 
 +treeview.o: treeview.moc 
- desktopfileeditor.lo: desktopfileeditor.moc 
--basictab.lo: basictab.moc 
++desktopfileeditor.lo: desktopfileeditor.moc 
  kmenuedit.o: kmenuedit.moc 
--menueditview.lo: menueditview.moc 
-+basictab.o: basictab.moc 
+-desktopfileeditor.o: desktopfileeditor.moc 
+-treeview.lo: treeview.moc 
+-basictab.lo: basictab.moc 
+ basictab.o: basictab.moc 
+-treeview.o: treeview.moc 
+-menueditview.o: menueditview.moc 
 +treeview.lo: treeview.moc 
 +desktopfileeditor.o: desktopfileeditor.moc 
