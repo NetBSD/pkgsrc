@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/11/08 08:25:00 sakamoto Exp $
+# $NetBSD: Makefile,v 1.2 1999/12/28 05:28:26 wiz Exp $
 #
 
 DISTNAME=	libnet-1.0
@@ -26,8 +26,8 @@ post-install:
 		${PREFIX}/share/examples/libnet
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	@(cd ${PREFIX};	\
-	  find ${DOCDIR} -type f >> ${PLIST_SRC}; \
-	  find ${DOCDIR} -type d| ${SED} -e 's|^|@dirrm |' | sort -r \
+	  ${FIND} ${DOCDIR} -type f >> ${PLIST_SRC}; \
+	  ${FIND} ${DOCDIR} -type d| ${SED} -e 's|^|@dirrm |' | sort -r \
 		>> ${PLIST_SRC})
 
 .include "../../mk/bsd.pkg.mk"
