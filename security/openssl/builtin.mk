@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.9 2004/12/18 17:14:22 jlam Exp $
+# $NetBSD: builtin.mk,v 1.10 2004/12/18 21:32:51 jlam Exp $
 
 _OPENSSL_PKGSRC_PKGNAME=	openssl-0.9.6m
 _OPENSSL_OPENSSLV_H=		/usr/include/openssl/opensslv.h
@@ -160,7 +160,7 @@ USE_OLD_DES_API?=	no
 #
 .  if !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
 .    if exists(${BUILDLINK_PREFIX.openssl}/include/des.h) && \
-      !empty(_BLNK_LIB_FOUND.des:M[yY][eE][sS])
+        !empty(_BLNK_LIB_FOUND.des:M[yY][eE][sS])
 BUILDLINK_TRANSFORM+=	l:crypto:des:crypto
 WRAPPER_REORDER_CMDS+=	reorder:l:des:crypto
 .    endif
