@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/01/25 17:15:12 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/02/10 20:45:02 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PYTHON21_PTH_BUILDLINK3_MK:=	${PYTHON21_PTH_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	python21-pth
 
 .if !empty(PYTHON21_PTH_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=			python21-pth
-BUILDLINK_DEPENDS.python21-pth+=	python21-pth>=2.1.3
+BUILDLINK_DEPENDS.python21-pth+=	python21-pth>=2.1.3nb2
 BUILDLINK_PKGSRCDIR.python21-pth?=	../../lang/python21-pth
 
 .  if defined(BUILDLINK_DEPMETHOD.python)
