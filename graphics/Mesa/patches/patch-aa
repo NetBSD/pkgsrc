@@ -1,7 +1,10 @@
-$NetBSD: patch-aa,v 1.5 1999/04/22 18:37:26 mycroft Exp $
+$NetBSD: patch-aa,v 1.6 1999/07/15 15:51:43 agc Exp $
 
---- Make-config.orig	Sat Aug 29 20:27:56 1998
-+++ Make-config	Wed Apr 21 23:58:58 1999
+NetBSD mods to rely on X11BASE.
+Solaris mods to rely on X11BASE, and to add the libs that Solaris forgot.
+
+--- Make-config.orig	Sun Aug 30 04:27:56 1998
++++ Make-config	Thu Jul 15 16:37:26 1999
 @@ -773,13 +773,13 @@
  
  netbsd:
@@ -21,4 +24,28 @@ $NetBSD: patch-aa,v 1.5 1999/04/22 18:37:26 mycroft Exp $
  
  next:	
  	$(MAKE)	-f Makefile.NeXT targets \
-
+@@ -1002,9 +1002,9 @@
+ 	"GLU_LIB = libMesaGLU.a" \
+ 	"GLUT_LIB = libglut.a" \
+ 	"CC = gcc" \
+-	"CFLAGS = -O3 -I/usr/openwin/include -DSHM -DSOLARIS_2_4_BUG" \
+-	"MAKELIB = ../mklib.ar-ruv" \
+-	"XLIBS = -L/usr/openwin/lib -lX11 -lXext -lXmu -lXi"
++	"CFLAGS = -O3 -fPIC -I${X11BASE}/include -DSHM -DSOLARIS_2_4_BUG" \
++	"MAKELIB = ../mklib.sunos5" \
++	"XLIBS = -L${X11BASE}/lib -lX11 -lXext -lXmu -lXi -lsocket -lnsl"
+ 
+ sunos5-gcc-sl:
+ 	$(MAKE) $(MFLAGS) targets \
+@@ -1012,9 +1012,9 @@
+ 	"GLU_LIB = libMesaGLU.so" \
+ 	"GLUT_LIB = libglut.so" \
+ 	"CC = gcc" \
+-	"CFLAGS = -fPIC -O3 -I/usr/openwin/include -DSHM -DSOLARIS_2_4_BUG" \
++	"CFLAGS = -fPIC -O3 -I${X11BASE}/include -DSHM -DSOLARIS_2_4_BUG" \
+ 	"MAKELIB = ../mklib.sunos5" \
+-	"XLIBS = -L/usr/openwin/lib -R/usr/openwin/lib -lX11 -lXext -lXmu -lXi"
++	"XLIBS = -L${X11BASE}/lib -R${X11BASE}/lib -lX11 -lXext -lXmu -lXi -lsocket -lnsl"
+ 
+ sunos5-x11r6-gcc-sl:
+ 	$(MAKE) $(MFLAGS) targets \

@@ -1,0 +1,27 @@
+$NetBSD: patch-ad,v 1.1 1999/07/15 15:51:43 agc Exp $
+
+Make Solaris build shared and static libs.
+
+--- mklib.sunos5	1999/07/15 15:15:20	1.1
++++ mklib.sunos5	1999/07/15 15:15:32
+@@ -36,4 +33,19 @@
+ 
+ #--platform-------------------------------------------------------------
+ 
+-ld -G -o $LIBRARY $OBJECTS
++set -x
++
++VERSION=$MAJOR.$MINOR
++
++BASENAME=`echo ${LIBRARY} | sed "s/\.a//g"`
++SHLIB=${BASENAME}.so.${VERSION}
++STLIB=${BASENAME}.a
++
++rm -f ${SHLIB} ${STLIB}
++
++ar cq ${STLIB} ${OBJECTS}
++ranlib ${STLIB}
++#ld -Bshareable -o ${SHLIB} ${OBJECTS}
++ld -G -o ${SHLIB} ${OBJECTS}
++
++mv ${SHLIB} ../lib
