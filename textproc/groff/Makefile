@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/05/25 07:20:05 jmc Exp $
+# $NetBSD: Makefile,v 1.11 2003/06/05 03:31:00 grant Exp $
 #
 
 DISTNAME=	groff-1.19
@@ -14,6 +14,7 @@ DEPENDS+=	netpbm>=10.0:../../graphics/netpbm
 DEPENDS+=	psutils>=1.17:../../print/psutils
 
 GNU_CONFIGURE=	YES
+USE_GCC_SHLIB=	YES
 USE_PERL5=	YES
 USE_BUILDLINK2=	YES
 
