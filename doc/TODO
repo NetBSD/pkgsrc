@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3233 2005/03/19 09:17:15 seb Exp $
+$NetBSD: TODO,v 1.3234 2005/03/19 14:33:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -704,7 +704,7 @@ Suggested package updates
 	o nget-0.27.1
 	o nhc98-1.17
 	o nn-6.6.5
-	o nrg2iso-0.4
+	o nrg2iso-0.4 [pkg/29663]
 	o ns-2.28
 	o ns-plugger-common-5.1.3
 	o nsca-1.2.0
@@ -1029,7 +1029,6 @@ Suggested package updates
 	o snes9x-1.43
 	o snownews-1.5.6.1
 	o sox-12.17.7
-	o spamass-milter-0.3.0 [pkg/29320]
 	o spim-7.1
 	o splint-3.1.1
 	o spruce-0.6.5
