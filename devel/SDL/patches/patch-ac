@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/06/26 01:09:09 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2000/10/15 07:39:44 wulf Exp $
 
---- src/audio/SDL_audio.c.orig	Wed Apr 12 20:44:19 2000
-+++ src/audio/SDL_audio.c	Fri Jun 23 03:53:50 2000
+--- src/audio/SDL_audio.c.orig	Mon Sep 18 08:59:24 2000
++++ src/audio/SDL_audio.c	Mon Oct  2 13:22:55 2000
 @@ -45,6 +45,9 @@
  #ifdef unix
  	&AUDIO_bootstrap,
@@ -12,7 +12,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2000/06/26 01:09:09 wiz Exp $
  #ifdef linux
  	&DMA_bootstrap,
  #endif
-@@ -170,7 +173,7 @@
+@@ -175,7 +178,7 @@
  	/* Select the proper audio driver */
  	audio = NULL;
  	idx = 0;
