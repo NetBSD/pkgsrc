@@ -1,16 +1,16 @@
-# $NetBSD: Makefile.common,v 1.2 2000/03/28 06:28:28 tron Exp $
+# $NetBSD: Makefile.common,v 1.3 2000/08/12 06:34:38 jlam Exp $
 
-DISTNAME=		freeciv-1.10.0
+DISTNAME=		freeciv-${FC_VERS}
+FC_VERS=		1.11.4
 CATEGORIES=		games
-MASTER_SITES=		ftp://ftp.freeciv.org/pub/freeciv/stable_version/ \
-			http://www.freeciv.org/ftp/stable_version/
+MASTER_SITES=		ftp://ftp.freeciv.org/pub/freeciv/stable/ \
+			http://www.freeciv.org/ftp/stable/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.freeciv.org/
 
-BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
-DEPENDS+=		gettext-0.10.*:../../devel/gettext
+BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
 
 FILESDIR=		${.CURDIR}/../../games/freeciv-share/files
 PATCHDIR=		${.CURDIR}/../../games/freeciv-share/patches
@@ -18,9 +18,7 @@ PATCHDIR=		${.CURDIR}/../../games/freeciv-share/patches
 GNU_CONFIGURE=		# defined
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
-CPPFLAGS+=		-I${LOCALBASE}/include		# intl.h
-
 pre-configure:
-	cd ${WRKSRC}; ${LOCALBASE}/bin/autoconf
+	cd ${WRKSRC} && autoreconf
 
 .include "../../mk/bsd.pkg.mk"
