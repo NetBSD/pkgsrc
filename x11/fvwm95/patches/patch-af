@@ -1,7 +1,16 @@
-$NetBSD: patch-af,v 1.3 1998/08/07 11:18:05 agc Exp $
+$NetBSD: patch-af,v 1.4 2000/01/11 01:08:24 simonb Exp $
 
---- configure.orig	Tue Dec 10 17:55:16 1996
-+++ configure	Wed Mar 25 00:22:14 1998
+--- configure.orig	Wed Dec 11 03:55:16 1996
++++ configure	Tue Jan 11 10:23:21 2000
+@@ -2126,7 +2126,7 @@
+ fvwm_icons="$x_includes/X11/bitmaps:$x_includes/X11/pixmaps:$prefix/icons"
+ 
+ if test "x$x_libraries" != x ; then
+-  x_libraries="-L$x_libraries"
++  x_libraries="-L$x_libraries -Wl,-R$x_libraries"
+ fi
+ if test "x$x_includes" != x ; then
+   x_includes="-I$x_includes"
 @@ -2247,7 +2247,6 @@
            libs/Makefile \
            mini-icons/Makefile \
@@ -18,14 +27,3 @@ $NetBSD: patch-af,v 1.3 1998/08/07 11:18:05 agc Exp $
            sample.fvwmrc/Makefile \
            modules/Makefile \
            modules/FvwmAudio/Makefile \
---- Makefile.in.orig	Tue Jun 25 18:26:47 1996
-+++ Makefile.in	Wed Mar 25 00:21:32 1998
-@@ -10,7 +10,7 @@
- 
- prefix=@prefix@
- exec_prefix=@exec_prefix@
--subdirs=libs fvwm modules utils sample.fvwmrc xpmroot icons mini-icons
-+subdirs=libs fvwm modules utils sample.fvwmrc icons mini-icons
- 
- CFLAGS = -O
- 
