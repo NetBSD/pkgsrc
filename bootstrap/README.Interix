@@ -1,4 +1,4 @@
-$NetBSD: README.Interix,v 1.1.1.1 2004/03/11 13:03:59 grant Exp $
+$NetBSD: README.Interix,v 1.2 2004/03/11 17:09:37 tv Exp $
 
 Please read the general README file as well.
 
@@ -33,6 +33,6 @@ KNOWN CAVEATS
   added to pkgsrc/mk.
 
 * On Windows under Interix, the "root" user is actually named
-  "+Administrator".  This may require some modification to pkgsrc to
+  "Administrator".  This may require some modification to pkgsrc to
   introduce a parameterized root user for installation purposes.  
   (Likewise, the bootstrap script sets the root group to "+Administrators".)
