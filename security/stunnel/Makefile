@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2004/12/28 09:09:52 martti Exp $
+# $NetBSD: Makefile,v 1.45 2004/12/29 09:53:17 minskim Exp $
 
 DISTNAME=		stunnel-4.06
 CATEGORIES=		security
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	--with-ssl=${SSLBASE} \
 			--with-pem-dir="${SSLCERTS}" \
 			--with-tcp-wrappers \
 			--sysconfdir="${PKG_SYSCONFDIR}" \
-			--localstatedir=/var
+			--localstatedir=${VARBASE}
 
 PKG_SYSCONFSUBDIR=	stunnel
 
