@@ -1,10 +1,17 @@
-# $NetBSD: Makefile,v 1.75 2003/05/02 11:56:00 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2003/05/05 16:49:49 salo Exp $
+#
 
-DISTNAME=		ethereal-0.9.11
-PKGREVISION=	1
+DISTNAME=		ethereal-0.9.12
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.ethereal.com/pub/ethereal/ \
-			ftp://ftp.sunet.se/pub/network/monitoring/ethereal/
+			ftp://ftp.sunet.se/pub/network/monitoring/ethereal/ \
+			ftp://ftp.planetmirror.com/pub/ethereal/ \
+			ftp://gd.tuwien.ac.at/infosys/security/ethereal/ \
+			http://www.ethereal.com/distribution/ \
+			http://ftp.sunet.se/pub/network/monitoring/ethereal/ \
+			http://ethereal.netarc.jp/distribution/ \
+			ftp://ftp.ethereal.com/pub/ethereal/old-versions/
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		frueauf@netbsd.org
 HOMEPAGE=		http://www.ethereal.com/
@@ -15,9 +22,10 @@ USE_X11=		YES
 USE_PERL5=		build
 
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--enable-static=no
 CONFIGURE_ARGS+=	--with-gtk-prefix=${BUILDLINK_PREFIX.gtk}
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-net-snmp=${BUILDLINK_PREFIX.net-snmp}
