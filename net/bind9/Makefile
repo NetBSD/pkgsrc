@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2003/11/12 03:39:41 jschauma Exp $
+# $NetBSD: Makefile,v 1.54 2003/12/28 10:30:07 tron Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
@@ -45,12 +45,11 @@ post-build:
 
 # include/isc/ipv6.h is installed on non-ipv6 platforms
 .if defined(USE_INET6) && (${USE_INET6} == "YES")
-IPV6H=		"@comment "
+PLIST_SUBST+=	IPV6H="@comment "
 .else
-IPV6H=		""
+PLIST_SUBST+=	IPV6H=
 .endif
 
-PLIST_SUBST+=	IPV6H=${IPV6H}
 PLIST_SRC=	${WRKDIR}/PLIST
 
 post-install:
