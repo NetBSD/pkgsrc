@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2001/12/05 15:00:48 agc Exp $
+# $NetBSD: Makefile,v 1.20 2002/01/19 02:00:44 mjl Exp $
 
-DISTNAME=	bluefish-0.6
+DISTNAME=	bluefish-0.7
 CATEGORIES=	www
 MASTER_SITES=	http://pkedu.fbt.eitn.wau.nl/~olivier/downloads/	\
 		http://student.wau.nl/~olivier/bluefish/download/	\
@@ -14,22 +14,29 @@ MAINTAINER=	wulf@ping.net.au
 HOMEPAGE=	http://bluefish.openoffice.nl/
 COMMENT=	GTK HTML editor for the experienced web designer
 
-BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
-BUILD_USES_MSGFMT=	YES
-DEPENDS+=	gtk+-1.2.*:../../x11/gtk
+DEPENDS+=	gtk+>=1.2.7:../../x11/gtk
 DEPENDS+=	imlib-[0-9]*:../../graphics/imlib
 DEPENDS+=	weblint-[0-9]*:../../www/weblint
+DEPENDS+=	jpeg>=6b:../../graphics/jpeg
+DEPENDS+=	png-[0-9]*:../../graphics/png
+DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
+DEPENDS+=	gnome-libs-[0-9]*:../../x11/gnome-lib
+DEPENDS+=	gdk-pixbuf-[0-9]*:../../graphics/gdk-pixbuf
+
+BUILD_USES_MSGFMT=	YES
 
 USE_X11BASE=	# defined
 USE_GMAKE=	# defined
 USE_LIBINTL=	# defined
 
+CONFIGURE_ARGS+=	--with-autocomplet
+
 GNU_CONFIGURE=	# defined
 
 HTMLDIR=	${PREFIX}/share/doc/html/bluefish
 
-pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf
+# pre-configure:
+# 	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf
 
 post-install:
 	${INSTALL_DATA_DIR} ${HTMLDIR}
