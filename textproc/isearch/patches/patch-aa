@@ -1,0 +1,65 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/02/06 22:09:27 jtb Exp $
+
+--- Makefile.orig	Tue Feb  6 20:52:49 2001
++++ Makefile
+@@ -20,9 +20,9 @@
+ #
+ # Compiler
+ #
+-CC=g++
++CC=$(CXX)
+ 
+-DTCC=g++
++DTCC=$(CXX)
+ #CC=/sw/CenterLine/bin/CC
+ 
+ #
+@@ -36,13 +36,13 @@
+ #
+ # for Solaris, SunOS, Ultrix, OSF
+ #
+-#CFLAGS=-O2 -DUNIX -DMULTI
++CFLAGS+=-DUNIX
+ #CFLAGS=-O2 -DUNIX
+ 
+ #
+ # for Linux
+ #
+-CFLAGS=-O2 -DUNIX -fwritable-strings
++#CFLAGS=-O2 -DUNIX -fwritable-strings
+ #CFLAGS=-g -fwritable-strings -Wall -Wno-unused -DUNIX # -DVERBOSE -DDEBUG
+ 
+ #
+@@ -73,8 +73,8 @@
+ #
+ # Where should I install executables (make install)?
+ #
+-INSTALL=/usr/local/bin
+-CGI_INSTALL=/home/httpd/cgi-bin
++INSTALL=${PREFIX}/bin
++CGI_INSTALL=${PREFIX}/libexec/cgi-bin
+ 
+ #
+ # Executables Directory
+@@ -113,7 +113,7 @@
+ #
+ 
+ RM = rm -f
+-LDFLAGS=
++#LDFLAGS=
+ VER=1.47d
+ #DIST=Isearch-$(VER)
+ DIST=Isearch
+@@ -186,9 +186,9 @@
+ 
+ install:
+ 	@echo "*** Copying Isearch executables to $(INSTALL) ***"
+-	cp $(BIN_DIR)/Iindex $(INSTALL)
+-	cp $(BIN_DIR)/Isearch $(INSTALL)
+-	cp $(BIN_DIR)/Iutil $(INSTALL)
++	$(BSD_INSTALL_PROGRAM) $(BIN_DIR)/Iindex $(INSTALL)
++	$(BSD_INSTALL_PROGRAM) $(BIN_DIR)/Isearch $(INSTALL)
++	$(BSD_INSTALL_PROGRAM) $(BIN_DIR)/Iutil $(INSTALL)
+ 	@echo ""
+ 	@echo "To install Isearch-cgi, cd into the Isearch-cgi directory"
+ 	@echo "Then run the configure script"

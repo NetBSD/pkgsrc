@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/06 22:09:27 jtb Exp $
+bin/Iindex
+bin/Isearch
+bin/Iutil
+share/doc/html/isearch/Isearch-cgi-tutorial.html
+share/doc/html/isearch/IsearchFeatures.html
+share/doc/html/isearch/IsearchTutorial.html
+share/doc/html/isearch/QuickStart.html
+share/doc/isearch/DebugFirewall.doc
+share/doc/isearch/TUTORIAL
+@dirrm share/doc/isearch
+@dirrm share/doc/html/isearch
