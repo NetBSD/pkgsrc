@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/08/13 10:13:59 zuntum Exp $
+# $NetBSD: Makefile,v 1.3 2001/08/13 10:43:20 zuntum Exp $
 #
 
 DISTNAME=	qmail-conf-0.55
@@ -13,6 +13,7 @@ HOMEPAGE=	http://www.din.or.jp/~ushijima/qmail-conf/
 COMMENT=	collection of tools for setting up qmail services
 
 DEPENDS+=	qmail>=1.03:../../mail/qmail
+DEPENDS+=	checkpassword-*:../../sysutils/checkpassword
 
 NO_PACKAGE=	YES
 
