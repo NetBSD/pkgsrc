@@ -1,4 +1,4 @@
-i	$NetBSD: bsd.pkg.mk,v 1.425 2000/04/19 15:02:31 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.426 2000/04/24 03:40:50 kim Exp $
 #
 # This file is in the public domain.
 #
@@ -937,6 +937,8 @@ all: build
 .if !defined(DEPENDS_TARGET)
 .if make(reinstall)
 DEPENDS_TARGET=	reinstall
+.elif make(package)
+DEPENDS_TARGET=	package
 .else
 DEPENDS_TARGET=	install
 .endif
@@ -1352,7 +1354,7 @@ PLIST_SRC=
 
 _PORT_USE: .USE
 .if make(real-extract)
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} build-depends misc-depends
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} build-depends misc-depends DEPENDS_TARGET=${DEPENDS_TARGET}
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${.MAKEFLAGS} ${.TARGET:S/^real-/pre-/}
 	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${SCRIPTDIR}/${.TARGET:S/^real-/pre-/} ]; then		\
@@ -1619,7 +1621,7 @@ package: uptodate-pkgtools install ${PACKAGE_COOKIE}
 .endif
 
 ${EXTRACT_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} real-extract
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} real-extract DEPENDS_TARGET=${DEPENDS_TARGET}
 ${PATCH_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} real-patch
 ${CONFIGURE_COOKIE}:
@@ -2170,7 +2172,7 @@ package-depends:
 		if ${PACKAGE_DEPENDS_QUICK} ; then \
 			${PKG_INFO} -qf "$$pkg" | grep ^@pkgdep | awk '{print $$2}' ; \
 		else \
-		(cd $$dir && ${MAKE} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
+			(cd $$dir && ${MAKE} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
 		fi ; \
 	else								\
 		${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
@@ -2248,7 +2250,7 @@ _DEPENDS_USE:
 		if [ ! -d "$$dir" ]; then				\
 			${ECHO_MSG} "=> No directory for $$prog.  Skipping.."; \
 		else							\
-			(cd $$dir && ${MAKE} ${.MAKEFLAGS} $$target) &&	\
+			(cd $$dir && ${MAKE} ${.MAKEFLAGS} $$target DEPENDS_TARGET=${DEPENDS_TARGET}) &&	\
 			${ECHO_MSG} "${_PKGSRC_IN}> Returning to build of ${PKGNAME}"; \
 		fi;							\
 	fi
