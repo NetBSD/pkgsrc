@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.9 2003/09/10 01:57:07 jlam Exp $
+$NetBSD: patch-ad,v 1.10 2004/03/26 02:22:38 wiz Exp $
 
---- apps/Makefile.ssl.orig	Thu Aug  8 14:13:36 2002
-+++ apps/Makefile.ssl	Sun Aug 24 15:50:06 2003
-@@ -99,11 +99,11 @@
+--- apps/Makefile.ssl.orig	Thu Aug 14 08:30:31 2003
++++ apps/Makefile.ssl
+@@ -100,11 +100,11 @@ install:
  	@for i in $(SCRIPTS); \
  	do  \
  	(echo installing $$i; \

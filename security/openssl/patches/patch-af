@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.8 2003/09/10 01:57:07 jlam Exp $
+$NetBSD: patch-af,v 1.9 2004/03/26 02:22:38 wiz Exp $
 
---- Makefile.org.orig	Fri Aug  9 07:43:56 2002
-+++ Makefile.org	Tue Sep  9 21:37:22 2003
-@@ -169,7 +169,7 @@
+--- Makefile.org.orig	Thu Jul  3 23:43:50 2003
++++ Makefile.org
+@@ -169,7 +169,7 @@ SDIRS=  \
  MAKEFILE= Makefile.ssl
  MAKE=     make -f Makefile.ssl
  
@@ -11,7 +11,7 @@ $NetBSD: patch-af,v 1.8 2003/09/10 01:57:07 jlam Exp $
  MAN1=1
  MAN3=3
  SHELL=/bin/sh
-@@ -262,8 +262,7 @@
+@@ -262,8 +262,7 @@ do_gnu-shared:
  	libs='-L. ${SHLIBDEPS}'; for i in ${SHLIBDIRS}; do \
  	( set -x; ${CC} ${SHARED_LDFLAGS} \
  		-shared -o lib$$i.so.${SHLIB_MAJOR}.${SHLIB_MINOR} \
@@ -21,7 +21,7 @@ $NetBSD: patch-af,v 1.8 2003/09/10 01:57:07 jlam Exp $
  		-Wl,--whole-archive lib$$i.a \
  		-Wl,--no-whole-archive $$libs ${EX_LIBS} -lc ) || exit 1; \
  	libs="$$libs -l$$i"; \
-@@ -632,10 +631,10 @@
+@@ -640,10 +639,10 @@ install: all install_docs
  	@$(PERL) $(TOP)/util/mkdir-p.pl $(INSTALL_PREFIX)$(INSTALLTOP)/bin \
  		$(INSTALL_PREFIX)$(INSTALLTOP)/lib \
  		$(INSTALL_PREFIX)$(INSTALLTOP)/include/openssl \
