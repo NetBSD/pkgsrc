@@ -1,11 +1,11 @@
-$NetBSD: patch-ad,v 1.1 1998/08/24 16:55:36 agc Exp $
+$NetBSD: patch-ad,v 1.2 2001/02/26 16:56:35 agc Exp $
 
 Make sure that we don't override the PBMDIR definition that was
 carefully set up in config/urt
 
 --- cnv/makefile.src	1998/08/24 15:26:04	1.1
 +++ cnv/makefile.src	1998/08/24 15:26:19
-@@ -71,7 +71,7 @@
+@@ -71,18 +71,18 @@
  
  #ifdef PBMPLUS
  #emit PBMDIR
@@ -14,3 +14,48 @@ carefully set up in config/urt
  # pgmtorle - pgm format to RLE
  # ppmtorle - ppm format to RLE
  # rletoppm - RLE to ppm format
+ pgmtorle.out: pgmtorle.c
+-	$(CC) $(CFLAGS) $(INCPBMPLUS) $*.c $(LIBS) $(LIBPBMPLUS) -o $*.new
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} ${INCPBMPLUS} $*.c -o $*.new ${LIBPBMPLUS} ../lib/librle.la -lm
+ 	mv $*.new $@
+ ppmtorle.out: ppmtorle.c
+-	$(CC) $(CFLAGS) $(INCPBMPLUS) $*.c $(LIBS) $(LIBPBMPLUS) -o $*.new
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} ${INCPBMPLUS} $*.c -o $*.new ${LIBPBMPLUS} ../lib/librle.la -lm
+ 	mv $*.new $@
+ rletoppm.out: rletoppm.c
+-	$(CC) $(CFLAGS) $(INCPBMPLUS) $*.c $(LIBS) $(LIBPBMPLUS) -o $*.new
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} ${INCPBMPLUS} $*.c -o $*.new ${LIBPBMPLUS} ../lib/librle.la -lm
+ 	mv $*.new $@
+ #endif
+ 
+@@ -108,10 +108,10 @@
+ # tifftorle - Convert TIFF images to RLE
+ # rletotiff - Convert RLE images to TIFF
+ rletotiff.out: rletotiff.c
+-	$(CC) $(CFLAGS) $(INCTIFF) $*.c $(LIBS) $(LIBTIFF) -lm -o $*.new
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} ${INCTIFF} $*.c -o $*.new ${LIBTIFF} ../lib/librle.la -lm
+ 	mv $*.new $@
+ tifftorle.out: tifftorle.c
+-	$(CC) $(CFLAGS) $(INCTIFF) $*.c $(LIBS) $(LIBTIFF) -lm -o $*.new
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} ${INCTIFF} $*.c -o $*.new ${LIBTIFF} ../lib/librle.la -lm
+ 	mv $*.new $@
+ #endif
+ 
+@@ -125,7 +125,7 @@
+ # Will build with the default rule.
+ # rletorla - RLE to Wavefront RLA
+ rletorla.out: rletorla.c
+-	$(CC) $(CFLAGS) $*.c $(LIBS) $(LIBWAVEFRONT) -lm -o $*.new
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} $*.c -o $*.new ${LIBWAVEFRONT} ../lib/librle.la -lm
+ 	mv $*.new $@
+ #endif WAVEFRONT
+ 
+@@ -144,7 +144,7 @@
+ .SUFFIXES:
+ .SUFFIXES: .out .c
+ .c.out:
+-	$(CC) $(CFLAGS) $*.c $(LIBS) -lm -o $*.new
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} $*.c -o $*.new ../lib/librle.la -lm
+ 	mv $*.new $@
+ 
+ # Dependency lines.  Make sure to #ifdef them.

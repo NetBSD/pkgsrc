@@ -1,22 +1,45 @@
-$NetBSD: patch-an,v 1.1 1999/11/22 11:11:33 agc Exp $
+$NetBSD: patch-an,v 1.2 2001/02/26 16:56:36 agc Exp $
 
 --- tools/makefile.src	Tue Jan 28 15:47:42 1992
 +++ tools/makefile.src	Sat Sep 16 10:33:14 1995
-@@ -68,7 +68,7 @@
+@@ -62,24 +62,24 @@
+ pyrlib.o: pyrlib.c $(RI)/pyramid.h $(RI)/rle.h $(RI)/rle_config.h
+ 	$(CC) $(CFLAGS) pyrlib.c -c
+ pyrmask.out: pyrlib.o pyrmask.c $(RI)/pyramid.h
+-	$(CC) $(CFLAGS) -I$(RI) pyrmask.c pyrlib.o $(LIBS) -lm -o pyrmask.new
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} -I${RI} pyrmask.c pyrlib.o ../lib/librle.la -lm -o pyrmask.new
+ 	mv pyrmask.new pyrmask.out
+ 
  fant.out: fant.o mallocNd.o
- 	$(CC) $(CFLAGS) -I$(RI) fant.o mallocNd.o $(LIBS) -lm -o fant.new
+-	$(CC) $(CFLAGS) -I$(RI) fant.o mallocNd.o $(LIBS) -lm -o fant.new
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} -I${RI} fant.o mallocNd.o ../lib/librle.la -lm -o fant.new
  	mv fant.new fant.out
--	
-+
+ 	
  # rlebox and crop use some common code.
  rle_box.o: $(RI)/rle.h $(RI)/rle_config.h $(RI)/rle_raw.h
  
-@@ -82,7 +82,7 @@
- # rleClock has it's own directory, must be built special
+ crop.out: crop.c rle_box.o
+-	${CC} ${CFLAGS} crop.c rle_box.o ${LIBS} -o crop.new
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} -I${RI} crop.c rle_box.o ../lib/librle.la -lm -o crop.new
+ 	mv crop.new crop.out
+ rlebox.out: rlebox.c rle_box.o
+-	${CC} ${CFLAGS} rlebox.c rle_box.o ${LIBS} -o rlebox.new
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} -I${RI} rlebox.c rle_box.o ../lib/librle.la -lm -o rlebox.new
+ 	mv rlebox.new rlebox.out
+ 
+-# rleClock has it's own directory, must be built special
++# rleClock has its own directory, must be built specially
  
  rleClock.out: clock/font.c clock/font.h clock/font.src clock/rleClock.c
--	(cd clock ; make)
-+	(cd clock ; $(MAKE))
+ 	(cd clock ; make)
+@@ -100,8 +100,8 @@
+ .SUFFIXES:
+ .SUFFIXES: .out .c .o
+ .c.out:
+-	$(CC) $(CFLAGS) $< $(LIBS) -lm -o $*.new
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} -I${RI} $< ../lib/librle.la -lm -o $*.new
+ 	mv $*.new $@
  
- # Incremental install, copies everything ("$?") since last install to DEST dir.
- install: $(PGMS) install-pgm
+ .c.o:
+-	$(CC) -c $(CFLAGS) $<
++	${LIBTOOL} --mode=compile ${CC} ${CFLAGS} -c $<

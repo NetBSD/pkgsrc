@@ -1,4 +1,4 @@
-$NetBSD: patch-ao,v 1.1 2000/05/17 18:50:35 tron Exp $
+$NetBSD: patch-ao,v 1.2 2001/02/26 16:56:36 agc Exp $
 
 --- get/getx11/makefile.src.orig	Wed Jul 15 22:31:20 1992
 +++ get/getx11/makefile.src	Wed May 17 20:48:07 2000
@@ -11,3 +11,12 @@ $NetBSD: patch-ao,v 1.1 2000/05/17 18:50:35 tron Exp $
  
  # -lX11 is X11 support library
  DIRLIBS = $(LIBX11) $(LIBEXT) -lm
+@@ -47,7 +47,7 @@
+ 
+ # getx11 - read RLE file to X11 display
+ getx11.out: $(X_O_FILES) 
+-	${CC} $(CFLAGS) $(X_O_FILES) $(LIBS) -o getx11.new
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} ${X_O_FILES} -o getx11.new ../../lib/librle.la -lm -L${X11BASE}/lib -lXext -lX11
+ 	mv getx11.new getx11.out
+ 
+ # Make prototypes.h and fn_decls.h.  Only happens if HAVE_CPROTO is defined.

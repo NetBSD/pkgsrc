@@ -1,0 +1,15 @@
+$NetBSD: patch-aq,v 1.1 2001/02/26 16:56:36 agc Exp $
+
+Use libtool to make the executable properly
+
+--- tools/clock/makefile.src	2001/02/26 15:27:41	1.1
++++ tools/clock/makefile.src	2001/02/26 15:29:16
+@@ -6,7 +6,7 @@
+ 	mv rleClock ../rleClock.out
+ 
+ rleClock:rleClock.o font.o
+-	${CC} ${CFLAGS} rleClock.o font.o -lm ${LIBS} -o rleClock
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} rleClock.o font.o -o rleClock ../../lib/librle.la -lm
+ 
+ font.c:font.src makeFont
+ 	chmod +x makeFont
