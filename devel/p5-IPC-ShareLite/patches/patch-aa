@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/11/20 08:04:50 mjl Exp $
+
+--- Makefile.PL.orig	Tue Nov 20 08:50:27 2001
++++ Makefile.PL	Tue Nov 20 08:50:34 2001
+@@ -1,6 +1,6 @@
+ use ExtUtils::MakeMaker;
+ 
+-system('./Configure');
++system('./Configure -d');
+ 
+ # See lib/ExtUtils/MakeMaker.pm for details of how to influence
+ # the contents of the Makefile that is written.
