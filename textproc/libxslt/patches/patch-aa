@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.13 2004/04/01 15:15:19 xtraeme Exp $
+$NetBSD: patch-aa,v 1.14 2004/10/31 11:01:23 recht Exp $
 
---- doc/Makefile.in.orig	2004-04-01 17:11:01.000000000 +0200
-+++ doc/Makefile.in	2004-04-01 17:11:07.000000000 +0200
+--- doc/Makefile.in.orig	Fri Oct 29 17:07:05 2004
++++ doc/Makefile.in	Sun Oct 31 11:49:12 2004
 @@ -83,7 +83,7 @@
  EXTRA_LIBS = @EXTRA_LIBS@
  F77 = @F77@
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.13 2004/04/01 15:15:19 xtraeme Exp $
  INSTALL_DATA = @INSTALL_DATA@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
  INSTALL_SCRIPT = @INSTALL_SCRIPT@
-@@ -196,7 +196,7 @@
+@@ -202,7 +202,7 @@
  target_alias = @target_alias@
  
  # The name of the module.
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.13 2004/04/01 15:15:19 xtraeme Exp $
  
  # The top-level SGML file.
  DOC_MAIN_XML_FILE = libxslt.xml
-@@ -206,7 +206,7 @@
+@@ -212,7 +212,7 @@
  
  # A file in win32 depends upon two of the doc files
  WIN32_DIR = $(top_srcdir)/win32
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.13 2004/04/01 15:15:19 xtraeme Exp $
  PAGES = API.html bugs.html contribs.html FAQ.html docs.html \
           downloads.html help.html index.html intro.html news.html \
  	 xsltproc2.html
-@@ -475,9 +475,9 @@
+@@ -483,9 +483,9 @@
  $(EPAGES): EXSLT/exslt.html $(srcdir)/site.xsl
  	 -@(if [ ! -d EXSLT/html ] ; then \
  	   mkdir -p EXSLT/html ; fi )
@@ -41,7 +41,7 @@ $NetBSD: patch-aa,v 1.13 2004/04/01 15:15:19 xtraeme Exp $
  	   	--stringparam dirname EXSLT/ \
  		--stringparam libname libexslt \
  		--stringparam logo_base ../ \
-@@ -488,20 +488,20 @@
+@@ -496,20 +496,20 @@
  	   $(bindir)/xmllint --nonet --valid --noout $(EPAGES) ; fi );
  
  ../NEWS: $(srcdir)/news.xsl news.html
@@ -68,7 +68,7 @@ $NetBSD: patch-aa,v 1.13 2004/04/01 15:15:19 xtraeme Exp $
  			     $(srcdir)/api.xsl \
  			     xslt.html ; fi );
  	-@(if [ -x $(bindir)/xmllint ] ; then \
-@@ -509,9 +509,9 @@
+@@ -517,9 +517,9 @@
  	  $(bindir)/xmllint --nonet --valid --noout API*.html; fi );
  
  $(EAPIPAGES): EXSLT/libexslt-refs.xml site.xsl api.xsl
@@ -80,7 +80,7 @@ $NetBSD: patch-aa,v 1.13 2004/04/01 15:15:19 xtraeme Exp $
  			     --stringparam libname libexslt \
  			     --stringparam dirname EXSLT/ \
  			     --stringparam logo_base ../ \
-@@ -519,9 +519,9 @@
+@@ -527,9 +527,9 @@
  			     EXSLT/exslt.html ; fi );
  
  html/index.html: libxslt-api.xml $(srcdir)/newapi.xsl
@@ -92,7 +92,7 @@ $NetBSD: patch-aa,v 1.13 2004/04/01 15:15:19 xtraeme Exp $
  			     $(srcdir)/newapi.xsl libxslt-api.xml ; fi ); 
  	-@(if [ -x $(bindir)/xmllint ] ; then \
  	  echo "Validating the resulting XHTML pages" ; \
-@@ -529,9 +529,9 @@
+@@ -537,9 +537,9 @@
  
  EXSLT/html/index.html: EXSLT/libexslt-api.xml \
  	$(srcdir)/newapi.xsl
@@ -104,7 +104,7 @@ $NetBSD: patch-aa,v 1.13 2004/04/01 15:15:19 xtraeme Exp $
  	  		     --stringparam libname libexslt \
  			     --stringparam dirname EXSLT/ \
  			     --stringparam logo_base ../../ \
-@@ -553,22 +553,22 @@
+@@ -561,22 +561,22 @@
  # Note that in the following, xmllint output is piped to xsltproc
  search.php: $(srcdir)/api.xsl $(srcdir)/site.xsl $(srcdir)/search.templ \
              $(srcdir)/search.xml $(srcdir)/search.php.inc
