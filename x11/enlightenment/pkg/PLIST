@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/11/04 07:58:50 garbled Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/11/04 10:03:15 frueauf Exp $
 bin/ConfigEdit
 bin/dox
 bin/enlightenment
@@ -474,4 +474,3 @@ enlightenment/E-docs/Edoc_exit1.png
 @dirrm enlightenment/E-docs
 @dirrm enlightenment/themes
 @dirrm enlightenment
-
