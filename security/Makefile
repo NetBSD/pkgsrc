@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2001/03/14 05:17:37 jun Exp $
+# $NetBSD: Makefile,v 1.67 2001/03/16 15:00:24 agc Exp $
 #
 
 COMMENT=	Security tools
@@ -39,7 +39,6 @@ SUBDIR+=	openssl
 SUBDIR+=	p5-Crypt-Blowfish
 SUBDIR+=	p5-Crypt-CBC
 SUBDIR+=	p5-Digest-MD5
-SUBDIR+=	p5-MD5
 SUBDIR+=	p5-SHA
 SUBDIR+=	p5-SSLeay
 SUBDIR+=	pakemon
