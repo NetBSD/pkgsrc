@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2003/06/24 10:22:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2003/09/08 12:11:15 wiz Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-demo
@@ -10,6 +10,7 @@ bin/xscreensaver.kss
 lib/X11/app-defaults/XScreenSaver
 libexec/xscreensaver/anemone
 libexec/xscreensaver/ant
+libexec/xscreensaver/antspotlight
 libexec/xscreensaver/apollonian
 libexec/xscreensaver/atlantis
 libexec/xscreensaver/attraction
@@ -34,6 +35,7 @@ libexec/xscreensaver/compass
 libexec/xscreensaver/config/README
 libexec/xscreensaver/config/anemone.xml
 libexec/xscreensaver/config/ant.xml
+libexec/xscreensaver/config/antspotlight.xml
 libexec/xscreensaver/config/apollonian.xml
 libexec/xscreensaver/config/atlantis.xml
 libexec/xscreensaver/config/attraction.xml
@@ -78,8 +80,10 @@ libexec/xscreensaver/config/eruption.xml
 libexec/xscreensaver/config/euler2d.xml
 libexec/xscreensaver/config/extrusion.xml
 libexec/xscreensaver/config/fadeplot.xml
+libexec/xscreensaver/config/fireflies.xml
 libexec/xscreensaver/config/flag.xml
 libexec/xscreensaver/config/flame.xml
+libexec/xscreensaver/config/flipflop.xml
 libexec/xscreensaver/config/flipscreen3d.xml
 libexec/xscreensaver/config/flow.xml
 libexec/xscreensaver/config/fluidballs.xml
@@ -146,6 +150,7 @@ libexec/xscreensaver/config/phosphor.xml
 libexec/xscreensaver/config/piecewise.xml
 libexec/xscreensaver/config/pipes.xml
 libexec/xscreensaver/config/polyominoes.xml
+libexec/xscreensaver/config/polytopes.xml
 libexec/xscreensaver/config/popsquares.xml
 libexec/xscreensaver/config/pulsar.xml
 libexec/xscreensaver/config/pyro.xml
@@ -231,6 +236,7 @@ libexec/xscreensaver/extrusion
 libexec/xscreensaver/fadeplot
 libexec/xscreensaver/flag
 libexec/xscreensaver/flame
+libexec/xscreensaver/flipflop
 libexec/xscreensaver/flipscreen3d
 libexec/xscreensaver/flow
 libexec/xscreensaver/fluidballs
@@ -274,6 +280,7 @@ libexec/xscreensaver/lavalite
 libexec/xscreensaver/lightning
 libexec/xscreensaver/lisa
 libexec/xscreensaver/lissie
+libexec/xscreensaver/ljlatest
 libexec/xscreensaver/lmorph
 libexec/xscreensaver/loop
 libexec/xscreensaver/maze
@@ -296,6 +303,7 @@ libexec/xscreensaver/phosphor
 libexec/xscreensaver/piecewise
 libexec/xscreensaver/pipes
 libexec/xscreensaver/polyominoes
+libexec/xscreensaver/polytopes
 libexec/xscreensaver/popsquares
 libexec/xscreensaver/pulsar
 libexec/xscreensaver/pyro
@@ -354,6 +362,7 @@ libexec/xscreensaver/xteevee
 libexec/xscreensaver/zoom
 man/man1/anemone.1
 man/man1/ant.1
+man/man1/antspotlight.1
 man/man1/apollonian.1
 man/man1/atlantis.1
 man/man1/attraction.1
@@ -398,6 +407,7 @@ man/man1/extrusion.1
 man/man1/fadeplot.1
 man/man1/flag.1
 man/man1/flame.1
+man/man1/flipflop.1
 man/man1/flipscreen3d.1
 man/man1/flow.1
 man/man1/fluidballs.1
@@ -441,6 +451,7 @@ man/man1/lavalite.1
 man/man1/lightning.1
 man/man1/lisa.1
 man/man1/lissie.1
+man/man1/ljlatest.1
 man/man1/lmorph.1
 man/man1/loop.1
 man/man1/maze.1
@@ -463,6 +474,7 @@ man/man1/phosphor.1
 man/man1/piecewise.1
 man/man1/pipes.1
 man/man1/polyominoes.1
+man/man1/polytopes.1
 man/man1/pulsar.1
 man/man1/pyro.1
 man/man1/qix.1
@@ -524,15 +536,12 @@ man/man1/xspirograph.1
 man/man1/xsublim.1
 man/man1/xteevee.1
 man/man1/zoom.1
-${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/xscreensaver.mo
-${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xscreensaver.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xscreensaver.mo

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.52 2003/07/17 22:57:02 grant Exp $
+# $NetBSD: Makefile.common,v 1.53 2003/09/08 12:11:14 wiz Exp $
 #
 
-DISTNAME=		xscreensaver-4.11
+DISTNAME=		xscreensaver-4.13
 CATEGORIES=		x11
 MASTER_SITES=		${HOMEPAGE} \
 			ftp://ftp.fu-berlin.de/unix/X11/graphics/xscreensaver/
