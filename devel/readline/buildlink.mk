@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.8 2001/06/10 00:09:30 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.9 2001/06/11 01:59:35 jlam Exp $
 #
 # This Makefile fragment is included by packages that use readline().
 #
@@ -7,10 +7,9 @@
 # (1) Optionally define USE_GNU_READLINE to force use of GNU readline.
 # (2) Optionally define READLINE_REQD to the version of GNU readline desired.
 # (3) Include this Makefile fragment in the package Makefile,
-# (4) Optionally define BUILDLINK_INCDIR and BUILDLINK_LIBDIR,
-# (5) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
+# (4) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
-# (6) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
+# (5) Add ${BUILDLINK_DIR}/lib to the front of the linker's library search
 #     path.
 #
 # NOTE:	You may need to do some more work to get libedit recognized over
@@ -50,10 +49,7 @@ HISTORY_LIBS=		/usr/lib/libedit.*
 .endif
 .endif
 
-BUILDLINK_INCDIR?=	${WRKDIR}/include
-BUILDLINK_LIBDIR?=	${WRKDIR}/lib
-
-READLINE_BUILDLINK_COOKIE=	${WRKDIR}/.readline_buildlink_done
+READLINE_BUILDLINK_COOKIE=	${BUILDLINK_DIR}/.readline_buildlink_done
 READLINE_BUILDLINK_TARGETS=	link-readline-headers
 .if defined(HAVE_LIBEDIT_READLINE) && defined(USE_LIBTOOL)
 READLINE_BUILDLINK_TARGETS+=	editline-libtool-archive
@@ -66,30 +62,30 @@ pre-configure: ${READLINE_BUILDLINK_COOKIE}
 ${READLINE_BUILDLINK_COOKIE}: ${READLINE_BUILDLINK_TARGETS}
 	@${TOUCH} ${TOUCH_FLAGS} ${READLINE_BUILDLINK_COOKIE}
 
-# This target links the headers into ${BUILDLINK_INCDIR}, which should
+# This target links the headers into ${BUILDLINK_DIR}/include, which should
 # be searched first by the C preprocessor.
 #
 link-readline-headers:
-	@${ECHO} "Linking readline headers into ${BUILDLINK_INCDIR}."
-	@${MKDIR} ${BUILDLINK_INCDIR}/readline
-	@${RM} -f ${BUILDLINK_INCDIR}/readline/*
+	@${ECHO} "Linking readline headers into ${BUILDLINK_DIR}/include."
+	@${MKDIR} ${BUILDLINK_DIR}/include/readline
+	@${RM} -f ${BUILDLINK_DIR}/include/readline/*
 	@for inc in ${READLINE_HEADERS}; do				\
-		dest=${BUILDLINK_INCDIR}/readline/`${BASENAME} $${inc}`; \
+		dest=${BUILDLINK_DIR}/include/readline/`${BASENAME} $${inc}`; \
 		if [ -f $${inc} ]; then					\
 			${RM} -f $${dest};				\
 			${LN} -sf $${inc} $${dest};			\
 		fi;							\
 	done
 
-# This target links the libraries into ${BUILDLINK_LIBDIR}, which should
+# This target links the libraries into ${BUILDLINK_DIR}/lib, which should
 # be searched first by the linker.
 #
 link-readline-libs:
-	@${ECHO} "Linking readline libraries into ${BUILDLINK_LIBDIR}."
-	@${MKDIR} ${BUILDLINK_LIBDIR}
+	@${ECHO} "Linking readline libraries into ${BUILDLINK_DIR}/lib."
+	@${MKDIR} ${BUILDLINK_DIR}/lib
 	@for lib in ${READLINE_LIBS}; do				\
 		name=`${BASENAME} $${lib} | ${SED} "s|libedit|libreadline|"`; \
-		dest=${BUILDLINK_LIBDIR}/$${name};			\
+		dest=${BUILDLINK_DIR}/lib/$${name};			\
 		if [ -f $${lib} ]; then					\
 			${RM} -f $${dest};				\
 			${LN} -sf $${lib} $${dest};			\
@@ -97,7 +93,7 @@ link-readline-libs:
 	done
 	@for lib in ${HISTORY_LIBS}; do					\
 		name=`${BASENAME} $${lib} | ${SED} "s|libedit|libhistory|"`; \
-		dest=${BUILDLINK_LIBDIR}/$${name};			\
+		dest=${BUILDLINK_DIR}/lib/$${name};			\
 		if [ -f $${lib} ]; then					\
 			${RM} -f $${dest};				\
 			${LN} -sf $${lib} $${dest};			\
@@ -106,20 +102,22 @@ link-readline-libs:
 
 .if defined(HAVE_LIBEDIT_READLINE) && defined(USE_LIBTOOL)
 editline-libtool-archive:
-	@${ECHO} "Creating editline libtool archive in ${BUILDLINK_LIBDIR}."
-	@${MKDIR} ${BUILDLINK_LIBDIR}
+	@${ECHO} "Creating editline libtool archive in ${BUILDLINK_DIR}/lib."
+	@${MKDIR} ${BUILDLINK_DIR}/lib
 	@cd /usr/lib; for lib in libedit.so.*.*; do			\
 		major=`${ECHO} $$lib | ${SED} "s|.*\.so\.||;s|\..*||"`;	\
 		minor=`${ECHO} $$lib | ${SED} "s|.*\.||"`;		\
 	done;								\
-	cd ${BUILDLINK_LIBDIR};						\
+	cd ${BUILDLINK_DIR}/lib;					\
 	${LIBTOOL} --quiet --mode=link ${CC} -o libedit.la		\
 		-version-info $$major:$$minor -rpath /usr/lib;		\
 	${LIBTOOL} --quiet --mode=install ${CP} libedit.la		\
-		${BUILDLINK_LIBDIR} 2>/dev/null;			\
+		${BUILDLINK_DIR}/lib 2>/dev/null;			\
 	${RM} -f libedit.a;						\
 	${RM} -f libreadline.la;					\
 	${LN} -sf libedit.la libreadline.la
 .endif
+
+.include "../../mk/bsd.buildlink.mk"
 
 .endif	# READLINE_BUILDLINK_MK
