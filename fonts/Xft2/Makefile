@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/09/19 15:46:51 markd Exp $
+# $NetBSD: Makefile,v 1.17 2003/09/19 17:23:16 wiz Exp $
 #
 
 DISTNAME=	xft-2.1.2
@@ -24,6 +24,8 @@ USE_GNU_TOOLS+=		awk
 
 #LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 MAKE_ENV+=		EGREP=${EGREP}
+
+BUILDLINK_DEPENDS.Xrender=	Xrender>=0.8.2
 
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../fonts/fontconfig/buildlink2.mk"
