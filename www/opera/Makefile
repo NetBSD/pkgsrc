@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2001/04/03 12:12:58 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2001/04/30 10:23:24 abs Exp $
 
-DISTNAME=	opera-5.0b7
+DISTNAME=	opera-5.0b8
 CATEGORIES=	www
 MASTER_SITES=	http://opera.online.no/linux/tgz/ \
 		ftp://ftp.opera.com/pub/opera/linux/  \
@@ -37,7 +37,7 @@ DEPENDS+=	linuxppc_lib>=2000.q4.2:../../emulators/linuxppc_lib
 OPERA_ARCH=	ppc
 .endif
 
-RPMFILES=	opera-static-5.0b7-20010320.018.1.${OPERA_ARCH}.rpm
+RPMFILES=	opera-static-5.0b8-20010426.023.1.${OPERA_ARCH}.rpm
 
 post-install:
 	${LN} -fs ../${EMULSUBDIR}/usr/bin/opera ${PREFIX}/bin
