@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/01/15 12:48:00 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/04/01 18:42:25 joda Exp $
 bin/afslog
 bin/compile_et
 bin/kauth
@@ -69,7 +69,7 @@ lib/libasn1.a
 lib/libasn1.la
 lib/libasn1.so
 lib/libasn1.so.6
-lib/libasn1.so.6.1
+lib/libasn1.so.6.2
 lib/libcom_err.a
 lib/libcom_err.la
 lib/libcom_err.so
@@ -80,13 +80,13 @@ lib/libeditline.la
 lib/libgssapi.a
 lib/libgssapi.la
 lib/libgssapi.so
-lib/libgssapi.so.4
-lib/libgssapi.so.4.0
+lib/libgssapi.so.5
+lib/libgssapi.so.5.0
 lib/libhdb.a
 lib/libhdb.la
 lib/libhdb.so
 lib/libhdb.so.7
-lib/libhdb.so.7.6
+lib/libhdb.so.7.7
 lib/libkadm5clnt.a
 lib/libkadm5clnt.la
 lib/libkadm5clnt.so
@@ -105,8 +105,8 @@ lib/libkafs.so.4.0
 lib/libkrb5.a
 lib/libkrb5.la
 lib/libkrb5.so
-lib/libkrb5.so.19
-lib/libkrb5.so.19.0
+lib/libkrb5.so.20
+lib/libkrb5.so.20.0
 lib/libotp.a
 lib/libotp.la
 lib/libotp.so
@@ -116,7 +116,7 @@ lib/libroken.a
 lib/libroken.la
 lib/libroken.so
 lib/libroken.so.16
-lib/libroken.so.16.2
+lib/libroken.so.16.3
 lib/libsl.a
 lib/libsl.la
 lib/libsl.so
