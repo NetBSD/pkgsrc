@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1888 2003/04/10 13:17:53 markd Exp $
+$NetBSD: CHANGES,v 1.1889 2003/04/10 13:24:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1532,3 +1532,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated kdebase to 3.1.1nb1 [markd 2003-04-10]
 	Updated kdegraphics to 3.1.1nb2 [markd 2003-04-10]
 	Updated kde to 3.1.1nb1 [markd 2003-04-10]
+	Added coreutils-5.0 [wiz 2003-04-10]
+	Removed fileutils [wiz 2003-04-10]
+	Removed sh-utils [wiz 2003-04-10]
+	Removed textutils [wiz 2003-04-10]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.457 2003/04/10 12:50:17 wiz Exp $
+$NetBSD: TODO,v 1.458 2003/04/10 13:24:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -96,7 +96,6 @@ Suggested package updates
 	o conserver-7.2.6 [pkg/20966]
 	o courier-0.42.0
 	o courier-imap-1.7.0
-	o coreutils-5.0.0 (was fileutils/sh-utils/textutils) [pkgsrc-wip]
 	o crafty-19.1
 	o crossfire-1.5.0
 	o ctwm-3.6 [pkg/20648]
