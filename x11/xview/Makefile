@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/09/13 22:23:11 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2000/09/14 14:07:50 jlam Exp $
 #
 
 DISTNAME=	xview3.2p1-X11R6
@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	jlam@netbsd.org
 
 DEPENDS+=	xview-config>=3.2.1:../xview-config
 DEPENDS+=	xview-lib>=3.2.1:../xview-lib
