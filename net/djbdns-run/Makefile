@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/09/01 20:15:56 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2004/09/02 08:23:02 schmonz Exp $
 #
 
-DISTNAME=		djbdns-run-20040901
+DISTNAME=		djbdns-run-20040902
 CATEGORIES=		net
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -26,10 +26,10 @@ MAKE_DIRS+=		${PKG_SYSCONFDIR}/dnscache/ip
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/dnscache/servers
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/tinydns
 PKG_GROUPS=		djbdns
-PKG_USERS+=		Gdnslog:djbdns::dnslog
-PKG_USERS+=		Gaxfrdns:djbdns::axfrdns
-PKG_USERS+=		Gdnscache:djbdns::dnscache
-PKG_USERS+=		Gtinydns:djbdns::tinydns
+PKG_USERS+=		dnslog:djbdns::dnslog
+PKG_USERS+=		axfrdns:djbdns::axfrdns
+PKG_USERS+=		dnscache:djbdns::dnscache
+PKG_USERS+=		tinydns:djbdns::tinydns
 RCD_SCRIPTS=		axfrdns dnscache tinydns
 FILES_SUBST+=		PKGNAME=${PKGNAME}
 
