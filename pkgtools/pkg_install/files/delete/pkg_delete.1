@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_delete.1,v 1.10 2005/02/04 09:10:13 jlam Exp $
+.\" $NetBSD: pkg_delete.1,v 1.11 2005/02/05 00:28:58 jlam Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -200,7 +200,7 @@ file (see
 then this is executed first as
 .Bd -filled -offset indent -compact
 .Cm require
-.Ar \*[Lt]pkg-name\*[Gt]
+.Aq Ar pkg-name
 .Ar DEINSTALL
 .Ed
 (where
@@ -226,19 +226,19 @@ The
 script is called as:
 .Bd -filled -offset indent -compact
 .Cm deinstall
-.Ar \*[Lt]pkg-name\*[Gt]
+.Aq Ar pkg-name
 .Ar VIEW-DEINSTALL
 .Ed
 before removing the package from a view, and as:
 .Bd -filled -offset indent -compact
 .Cm deinstall
-.Ar \*[Lt]pkg-name\*[Gt]
+.Aq Ar pkg-name
 .Ar DEINSTALL
 .Ed
 before deleting all files and as:
 .Bd -filled -offset indent -compact
 .Cm deinstall
-.Ar \*[Lt]pkg-name\*[Gt]
+.Aq Ar pkg-name
 .Ar POST-DEINSTALL
 .Ed
 after deleting them.
@@ -266,7 +266,7 @@ or
 The scripts are also called with the
 .Ev PKG_METADATA_DIR
 environment variable set to the location of the
-.Ar +*
+.Pa +*
 meta-data files, and with the
 .Ev PKG_REFCOUNT_DBDIR
 environment variable set to the location of the package reference counts
@@ -284,7 +284,7 @@ The default package database directory is
 .It Ev PKG_REFCOUNT_DBDIR
 Location of the package reference counts database directory.
 The default location is the path to the package database directory with
-.Do .refcount Dc
+.Dq .refcount
 appended to the path, e.g.
 .Pa /var/db/pkg.refcount .
 .El

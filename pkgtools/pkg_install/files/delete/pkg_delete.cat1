@@ -114,7 +114,7 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
 
      If the package contains a _r_e_q_u_i_r_e file (see pkg_create(1)), then this is
      executed first as
-           rreeqquuiirree _<_p_k_g_-_n_a_m_e_> _D_E_I_N_S_T_A_L_L
+           rreeqquuiirree <_p_k_g_-_n_a_m_e> _D_E_I_N_S_T_A_L_L
      (where _p_k_g_-_n_a_m_e is the name of the package in question and _D_E_I_N_S_T_A_L_L is a
      keyword denoting that this is a deinstallation) to see whether or not
      deinstallation should continue.  A non-zero exit status means no, unless
@@ -125,11 +125,11 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
      up any additional messy details around the package's installation, since
      all ppkkgg__ddeelleettee knows how to do is delete the files created in the origi-
      nal distribution.  The ddeeiinnssttaallll script is called as:
-           ddeeiinnssttaallll _<_p_k_g_-_n_a_m_e_> _V_I_E_W_-_D_E_I_N_S_T_A_L_L
+           ddeeiinnssttaallll <_p_k_g_-_n_a_m_e> _V_I_E_W_-_D_E_I_N_S_T_A_L_L
      before removing the package from a view, and as:
-           ddeeiinnssttaallll _<_p_k_g_-_n_a_m_e_> _D_E_I_N_S_T_A_L_L
+           ddeeiinnssttaallll <_p_k_g_-_n_a_m_e> _D_E_I_N_S_T_A_L_L
      before deleting all files and as:
-           ddeeiinnssttaallll _<_p_k_g_-_n_a_m_e_> _P_O_S_T_-_D_E_I_N_S_T_A_L_L
+           ddeeiinnssttaallll <_p_k_g_-_n_a_m_e> _P_O_S_T_-_D_E_I_N_S_T_A_L_L
      after deleting them.  Passing the keywords _V_I_E_W_-_D_E_I_N_S_T_A_L_L, _D_E_I_N_S_T_A_L_L and
      _P_O_S_T_-_D_E_I_N_S_T_A_L_L lets you potentially write only one program/script that
      handles all aspects of installation and deletion.
