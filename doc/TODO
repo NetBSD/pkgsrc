@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.155 2003/01/08 23:21:04 jmmv Exp $
+$NetBSD: TODO,v 1.156 2003/01/08 23:25:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -212,6 +212,7 @@ Suggested package updates
 	o qt3-3.1.1
 	o rep-gtk-0.16
 	o rocksndiamonds-2.2.0rc1
+	o rox-1.2.2
 	o rox-session-0.1.17
 	o rrdtool-1.0.39
 	o rt-2.1.15
