@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/09/13 08:30:38 minoura Exp $
+# $NetBSD: Makefile,v 1.5 2004/11/02 00:41:30 uebayasi Exp $
 #
 
 DISTNAME=	ddskk-12.2.0
@@ -31,11 +31,16 @@ ALL_TARGET=	elc
 
 INFO_FILES=	skk.info
 
-do-configure:
+# SKK-CFG was copied from ${FILESDIR} during post-extract.
+SUBST_CLASSES=		cfg
+SUBST_STAGE.cfg=	do-configure
+SUBST_FILES.cfg=	SKK-CFG
+SUBST_SED.cfg=		-e 's|@PREFIX@|${PREFIX}|g' \
+			-e 's|@EMACS_LISPPREFIX@|${EMACS_LISPPREFIX}|g'
+
+# Substitute directory definitions during do-configure.
+post-extract:
 	@${MV} ${WRKSRC}/SKK-CFG ${WRKSRC}/SKK-CFG.orig
-	@${SED} \
-		-e 's|@PREFIX@|${PREFIX}|g' \
-		-e 's|@EMACS_LISPPREFIX@|${EMACS_LISPPREFIX}|g' \
-	${FILESDIR}/SKK-CFG >${WRKSRC}/SKK-CFG
+	@${CP} ${FILESDIR}/SKK-CFG ${WRKSRC}
 
 .include "../../mk/bsd.pkg.mk"
