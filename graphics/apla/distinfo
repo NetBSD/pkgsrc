@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2002/08/28 05:31:00 jlam Exp $
-
-SHA1 (apla-1.0.3.tar.gz) = 7b28dd78644884bb737ff3ada416e838c7f5fe62
-Size (apla-1.0.3.tar.gz) = 6790 bytes
-SHA1 (patch-aa) = 32a3e6db237e5a660241e3cf5224f570a1349060
