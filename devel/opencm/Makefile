@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/01/03 15:26:57 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/01/04 20:39:57 wiz Exp $
 #
 
 DISTNAME=	${OPENCM_VERSION}-1-src
@@ -21,6 +21,7 @@ CONF_FILES=	${PREFIX}/share/examples/opencm/opencm.conf ${PKG_SYSCONFDIR}/opencm
 INFO_FILES=	opencm.info
 
 CPPFLAGS+=	-D__unix__
+MAKE_ENV+=	GZIP_CMD=${GZIP_CMD:Q}
 WRKSRC=		${WRKDIR}/${OPENCM_VERSION}/base
 
 .include "../../devel/boehm-gc/buildlink2.mk"
