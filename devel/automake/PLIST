@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/12/06 18:28:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/12/11 16:32:34 wiz Exp $
 bin/aclocal
 bin/aclocal-${PKG_DIR_VERSION}
 bin/automake
@@ -23,6 +23,7 @@ share/aclocal-${PKG_DIR_VERSION}/maintainer.m4
 share/aclocal-${PKG_DIR_VERSION}/make.m4
 share/aclocal-${PKG_DIR_VERSION}/minuso.m4
 share/aclocal-${PKG_DIR_VERSION}/missing.m4
+share/aclocal-${PKG_DIR_VERSION}/mkdirp.m4
 share/aclocal-${PKG_DIR_VERSION}/multi.m4
 share/aclocal-${PKG_DIR_VERSION}/obsol-gt.m4
 share/aclocal-${PKG_DIR_VERSION}/obsol-lt.m4
@@ -34,9 +35,25 @@ share/aclocal-${PKG_DIR_VERSION}/regex.m4
 share/aclocal-${PKG_DIR_VERSION}/runlog.m4
 share/aclocal-${PKG_DIR_VERSION}/sanity.m4
 share/aclocal-${PKG_DIR_VERSION}/strip.m4
+share/automake-${PKG_DIR_VERSION}/Automake/ChannelDefs.pm
 share/automake-${PKG_DIR_VERSION}/Automake/Channels.pm
+share/automake-${PKG_DIR_VERSION}/Automake/Condition.pm
+share/automake-${PKG_DIR_VERSION}/Automake/Config.pm
+share/automake-${PKG_DIR_VERSION}/Automake/Configure_ac.pm
+share/automake-${PKG_DIR_VERSION}/Automake/DisjConditions.pm
+share/automake-${PKG_DIR_VERSION}/Automake/FileUtils.pm
 share/automake-${PKG_DIR_VERSION}/Automake/General.pm
+share/automake-${PKG_DIR_VERSION}/Automake/Item.pm
+share/automake-${PKG_DIR_VERSION}/Automake/ItemDef.pm
+share/automake-${PKG_DIR_VERSION}/Automake/Location.pm
+share/automake-${PKG_DIR_VERSION}/Automake/Options.pm
+share/automake-${PKG_DIR_VERSION}/Automake/Rule.pm
+share/automake-${PKG_DIR_VERSION}/Automake/RuleDef.pm
 share/automake-${PKG_DIR_VERSION}/Automake/Struct.pm
+share/automake-${PKG_DIR_VERSION}/Automake/VarDef.pm
+share/automake-${PKG_DIR_VERSION}/Automake/Variable.pm
+share/automake-${PKG_DIR_VERSION}/Automake/Version.pm
+share/automake-${PKG_DIR_VERSION}/Automake/Wrap.pm
 share/automake-${PKG_DIR_VERSION}/Automake/XFile.pm
 share/automake-${PKG_DIR_VERSION}/COPYING
 share/automake-${PKG_DIR_VERSION}/INSTALL
