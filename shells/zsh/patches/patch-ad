@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.6 2002/08/25 21:50:53 jlam Exp $
+$NetBSD: patch-ad,v 1.7 2004/02/02 08:48:40 uebayasi Exp $
 
---- configure.orig	Thu Jul 18 17:50:10 2002
-+++ configure	Thu Jul 18 17:59:13 2002
-@@ -5050,7 +5050,7 @@
+--- configure.orig	2003-10-28 08:51:34.000000000 -0600
++++ configure
+@@ -5095,7 +5095,7 @@ for ac_func in strftime difftime gettime
  	       select poll \
  	       readlink lstat lchown faccessx fchdir ftruncate \
  	       fseeko ftello \
