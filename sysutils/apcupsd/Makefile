@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2003/01/28 22:04:15 jlam Exp $
+# $NetBSD: Makefile,v 1.20.2.1 2003/04/20 11:36:31 grant Exp $
 
-DISTNAME=		apcupsd-3.8.5
+DISTNAME=		apcupsd-3.8.6
 CATEGORIES=		sysutils
-MASTER_SITES=		ftp://ftp.oasi.gpa.it/pub/apcupsd/stable/tar/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=apcupsd/}
 
 MAINTAINER=		bouyer@netbsd.org
 HOMEPAGE=		http://www.sibbald.com/apcupsd/
