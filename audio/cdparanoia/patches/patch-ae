@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
+$NetBSD: patch-ae,v 1.2 2000/05/02 11:37:06 hubertf Exp $
 
 --- main.c.orig	Tue Dec 14 17:18:44 1999
 +++ main.c	Mon Jan 17 23:12:58 2000
@@ -6,7 +6,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
  #include <unistd.h>
  #include <string.h>
  #include <fcntl.h>
-+#ifdef __linux__
++#ifdef GETOPT_LONG
  #include <getopt.h>
 +#endif
  #include <errno.h>
