@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2001/09/21 17:24:40 abs Exp $
+@comment $NetBSD: PLIST,v 1.8 2001/10/02 16:52:07 taya Exp $
 bin/galeon
 bin/galeon-bin
 bin/galeon-config-tool
@@ -12,6 +12,10 @@ share/galeon/babelfish.png
 share/galeon/bookmarks.glade
 share/galeon/bookmarks.png
 share/galeon/bug.png
+share/galeon/components/libgaleon-npl.la
+share/galeon/components/libgaleon-npl.so
+share/galeon/components/libgaleon-npl.so.0
+share/galeon/components/libgaleon-npl.so.0.0
 share/galeon/crash.png
 share/galeon/debian.png
 share/galeon/default.xpm
@@ -30,7 +34,9 @@ share/galeon/galeon-watermark.png
 share/galeon/galeon.glade
 share/galeon/galeon.png
 share/galeon/general.png
+share/galeon/gnome_icons.png
 share/galeon/google.png
+share/galeon/google_groups.png
 share/galeon/harddrive.png
 share/galeon/history.png
 share/galeon/i-bookmark.xpm
@@ -40,6 +46,7 @@ share/galeon/logo.png
 share/galeon/mime.png
 share/galeon/mouse.png
 share/galeon/myportal.css
+share/galeon/nautilus_icons.png
 share/galeon/network.png
 share/galeon/new_alias.xpm
 share/galeon/new_alias_small.xpm
@@ -127,6 +134,14 @@ share/galeon/themes/Glass/New.png
 share/galeon/themes/Glass/Refresh.png
 share/galeon/themes/Glass/Stop.png
 share/galeon/themes/Glass/Up.png
+share/galeon/themes/GnomeLarge/Back.png
+share/galeon/themes/GnomeLarge/Forward.png
+share/galeon/themes/GnomeLarge/Go.png
+share/galeon/themes/GnomeLarge/Home.png
+share/galeon/themes/GnomeLarge/New.png
+share/galeon/themes/GnomeLarge/Refresh.png
+share/galeon/themes/GnomeLarge/Stop.png
+share/galeon/themes/GnomeLarge/Up.png
 share/galeon/themes/Konqueror/Back.png
 share/galeon/themes/Konqueror/Forward.png
 share/galeon/themes/Konqueror/Home.png
@@ -139,6 +154,20 @@ share/galeon/themes/Micro/New.png
 share/galeon/themes/Micro/Refresh.png
 share/galeon/themes/Micro/Stop.png
 share/galeon/themes/Micro/Up.png
+share/galeon/themes/MicroPrelight/Back-prelight.png
+share/galeon/themes/MicroPrelight/Back.png
+share/galeon/themes/MicroPrelight/Forward-prelight.png
+share/galeon/themes/MicroPrelight/Forward.png
+share/galeon/themes/MicroPrelight/Home-prelight.png
+share/galeon/themes/MicroPrelight/Home.png
+share/galeon/themes/MicroPrelight/New-prelight.png
+share/galeon/themes/MicroPrelight/New.png
+share/galeon/themes/MicroPrelight/Refresh-prelight.png
+share/galeon/themes/MicroPrelight/Refresh.png
+share/galeon/themes/MicroPrelight/Stop-prelight.png
+share/galeon/themes/MicroPrelight/Stop.png
+share/galeon/themes/MicroPrelight/Up-prelight.png
+share/galeon/themes/MicroPrelight/Up.png
 share/galeon/themes/MozillaModern/Back.png
 share/galeon/themes/MozillaModern/Forward.png
 share/galeon/themes/MozillaModern/Go.png
@@ -195,14 +224,6 @@ share/galeon/themes/Ska/New.png
 share/galeon/themes/Ska/Refresh.png
 share/galeon/themes/Ska/Stop.png
 share/galeon/themes/Ska/Up.png
-share/galeon/themes/gnome-large/Back.png
-share/galeon/themes/gnome-large/Forward.png
-share/galeon/themes/gnome-large/Go.png
-share/galeon/themes/gnome-large/Home.png
-share/galeon/themes/gnome-large/New.png
-share/galeon/themes/gnome-large/Refresh.png
-share/galeon/themes/gnome-large/Stop.png
-share/galeon/themes/gnome-large/Up.png
 share/galeon/toolbars.png
 share/galeon/windows.png
 share/gnome/apps/Internet/galeon.desktop
@@ -282,7 +303,6 @@ share/sounds/galeon/clicked.wav
 @dirrm share/gnome/help/galeon/C/fig
 @dirrm share/gnome/help/galeon/C
 @dirrm share/gnome/help/galeon
-@dirrm share/galeon/themes/gnome-large
 @dirrm share/galeon/themes/Ska
 @dirrm share/galeon/themes/Remembrance
 @dirrm share/galeon/themes/PlastikLarge
@@ -291,14 +311,17 @@ share/sounds/galeon/clicked.wav
 @dirrm share/galeon/themes/Netscape
 @dirrm share/galeon/themes/MozillaModernSmall
 @dirrm share/galeon/themes/MozillaModern
+@dirrm share/galeon/themes/MicroPrelight
 @dirrm share/galeon/themes/Micro
 @dirrm share/galeon/themes/Konqueror
+@dirrm share/galeon/themes/GnomeLarge
 @dirrm share/galeon/themes/Glass
 @dirrm share/galeon/themes
 @dirrm share/galeon/spinners/pipeon
 @dirrm share/galeon/spinners/galeon
 @dirrm share/galeon/spinners/crashcut
 @dirrm share/galeon/spinners
+@dirrm share/galeon/components
 @dirrm share/galeon
 @unexec %D/bin/gconftool --shutdown
 @unexec /bin/rm -rf %D/etc/gconf/gconf.xml.defaults/apps/galeon
