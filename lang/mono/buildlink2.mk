@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.8 2003/10/02 08:41:42 recht Exp $
+# $NetBSD: buildlink2.mk,v 1.9 2003/12/03 17:08:24 recht Exp $
 
 .if !defined(MONO_BUILDLINK2_MK)
 MONO_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			mono
-BUILDLINK_DEPENDS.mono?=		mono>=0.28
+BUILDLINK_DEPENDS.mono?=		mono>=0.29
 BUILDLINK_PKGSRCDIR.mono?=		../../lang/mono
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.mono=mono
@@ -38,7 +38,6 @@ BUILDLINK_FILES.mono+=	lib/Mono.Data.SqliteClient.dll
 BUILDLINK_FILES.mono+=	lib/Mono.Data.SybaseClient.dll
 BUILDLINK_FILES.mono+=	lib/Mono.Data.Tds.dll
 BUILDLINK_FILES.mono+=	lib/Mono.Data.TdsClient.dll
-BUILDLINK_FILES.mono+=	lib/Mono.Directory.LDAP.dll
 BUILDLINK_FILES.mono+=	lib/Mono.GetOptions.dll
 BUILDLINK_FILES.mono+=	lib/Mono.Http.dll
 BUILDLINK_FILES.mono+=	lib/Mono.PEToolkit.dll
@@ -47,6 +46,7 @@ BUILDLINK_FILES.mono+=	lib/Mono.Security.Win32.dll
 BUILDLINK_FILES.mono+=	lib/Mono.Security.dll
 BUILDLINK_FILES.mono+=	lib/NUnit.Framework.dll
 BUILDLINK_FILES.mono+=	lib/NUnit.Util.dll
+BUILDLINK_FILES.mono+=	lib/Novell.Directory.Ldap.dll
 BUILDLINK_FILES.mono+=	lib/Npgsql.dll
 BUILDLINK_FILES.mono+=	lib/PEAPI.dll
 BUILDLINK_FILES.mono+=	lib/System.Configuration.Install.dll
@@ -68,12 +68,13 @@ BUILDLINK_FILES.mono+=	lib/System.Web.dll
 BUILDLINK_FILES.mono+=	lib/System.Windows.Forms.dll
 BUILDLINK_FILES.mono+=	lib/System.Xml.dll
 BUILDLINK_FILES.mono+=	lib/System.dll
-BUILDLINK_FILES.mono+=	lib/corlib.dll
+BUILDLINK_FILES.mono+=	lib/libgdiplus.dll.*
 BUILDLINK_FILES.mono+=	lib/libmono-profiler-cov.*
 BUILDLINK_FILES.mono+=	lib/libmono.*
-BUILDLINK_FILES.mono+=	lib/pkgconfig/mono.pc
+BUILDLINK_FILES.mono+=	lib/mscorlib.dll
 
 .include "../../devel/glib2/buildlink2.mk"
+.include "../../textproc/icu/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	mono-buildlink
 
