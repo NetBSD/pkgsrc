@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/01/21 15:48:46 zuntum Exp $
+# $NetBSD: Makefile,v 1.15 2002/01/21 19:38:40 zuntum Exp $
 
 DISTNAME=	MPlayer-0.60pre1
 PKGNAME=	mplayer-0.60.0.1
@@ -11,7 +11,7 @@ MAINTAINER=	svs@ropnet.ru,zuntum@netbsd.org
 HOMEPAGE=	http://www.mplayerhq.hu/
 COMMENT=	Software only MPEG-1/2/4 video decoder
 
-ONLY_FOR_PLATFORM=	NetBSD-1.5[YZ]-i386 NetBSD-1.5Z[A-Z]*-i386
+ONLY_FOR_PLATFORM=	NetBSD-1.5[Y-Z]*-i386 NetBSD-1.[6-9]*-i386
 
 DEPENDS+=	win32-codecs>=010122:../../graphics/win32-codecs
 BUILD_DEPENDS+=	nasm>=0.98:../../devel/nasm
