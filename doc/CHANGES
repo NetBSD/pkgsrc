@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3494 2003/09/23 12:30:32 recht Exp $
+$NetBSD: CHANGES,v 1.3495 2003/09/23 13:56:16 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3898,3 +3898,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libbonoboui to 2.2.4nb1 [recht 2003-09-23]	
 	Updated libglade to 2.0.1nb10 [recht 2003-09-23]	
 	Updated neon to 0.24.1nb1 [recht 2003-09-23]
+	Updated dovecot to 0.99.10nb1 [salo 2003-09-23]
