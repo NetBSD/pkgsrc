@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2004/01/01 03:34:49 cjep Exp $
+$NetBSD: patch-aa,v 1.2 2004/11/19 10:09:48 adam Exp $
 
---- includes/unzip.h.orig	2003-03-30 14:39:27.000000000 +0100
-+++ includes/unzip.h
+--- src/includes/unzip.h.orig	2003-03-30 14:39:27.000000000 +0100
++++ src/includes/unzip.h
 @@ -49,6 +49,14 @@
  #ifndef _unz_H
  #define _unz_H
