@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/07/28 10:06:43 seb Exp $
+# $NetBSD: Makefile,v 1.16 2003/08/25 18:15:46 jmc Exp $
 #
 
 DISTNAME=	graphviz-1.10
@@ -39,6 +39,11 @@ CONFIGURE_ARGS+=	--with-expatlibdir=${BUILDLINK_PREFIX.expat}/lib
 # Dynagraph is left out for now
 #UNLIMIT_RESOURCES=	datasize stacksize memorysize
 CONFIGURE_ARGS+=	--without-dynagraph
+
+post-configure:
+	${TOUCH} ${WRKSRC}/configure.in ${WRKSRC}/aclocal.m4 \
+		${WRKSRC}/stamp-h.in ${WRKSRC}/configure \
+		${WRKSRC}/config.status ${WRKSRC}/Makefile
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/graphviz
