@@ -1,0 +1,11 @@
+$NetBSD: patch-bi,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- glunix/src/init/glunix.h.orig	Thu Oct  2 12:33:52 1997
++++ glunix/src/init/glunix.h	Thu Apr  9 11:33:20 1998
+@@ -98,4 +98,4 @@
+  */
+-#define GLUNIX_BIN_DIR           "/usr/now/bin"
+-#define GLUNIX_DATA_DIR          "/disks/barad-dur/now/glunix/data"
++#define GLUNIX_BIN_DIR           "%%%NOW_ROOT%%%/bin"
++#define GLUNIX_DATA_DIR          "%%%NOW_ROOT%%%/data"
+ 

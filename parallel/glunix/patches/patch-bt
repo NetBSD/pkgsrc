@@ -1,0 +1,19 @@
+$NetBSD: patch-bt,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+diff -U 1 progs/glush/config_f.h ../old/progs/glush/config_f.h
+--- progs/glush/config_f.h	Thu Jul 20 11:08:43 1995
++++ ../old/progs/glush/config_f.h	Thu Mar 12 01:24:31 1998
+@@ -1,2 +1,2 @@
+-/* $Header: /cvsroot/pkgsrc/parallel/glunix/patches/Attic/patch-bt,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $ */
++/* $Header: /cvsroot/pkgsrc/parallel/glunix/patches/Attic/patch-bt,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $ */
+ /*
+@@ -58,3 +58,3 @@
+  */
+-#undef NLS
++#define NLS
+ 
+@@ -92,3 +92,3 @@
+  */
+-#define AUTOLOGOUT
++#undef AUTOLOGOUT
+ 

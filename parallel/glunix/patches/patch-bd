@@ -1,0 +1,11 @@
+$NetBSD: patch-bd,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- progs/glumake/signame.c~	Fri Aug  2 12:06:04 1996
++++ progs/glumake/signame.c	Mon Mar  2 07:37:03 1998
+@@ -58,6 +58,2 @@
+ 
+-#ifndef SYS_SIGLIST_DECLARED
+-extern char *sys_siglist[];
+-#endif	/* Not SYS_SIGLIST_DECLARED.  */
+-
+ #endif	/* Not HAVE_SYS_SIGLIST.  */

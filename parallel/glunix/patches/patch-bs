@@ -1,0 +1,79 @@
+$NetBSD: patch-bs,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+diff -U 1 progs/glush/config.h ../old/progs/glush/config.h
+--- progs/glush/config.h	Wed Nov  5 13:43:59 1997
++++ ../old/progs/glush/config.h	Thu Mar 12 02:19:30 1998
+@@ -40,3 +40,3 @@
+  */
+-#undef VFORK
++#define VFORK
+ 
+@@ -53,3 +53,3 @@
+  */
+-#undef BSDSIGS
++#define BSDSIGS
+ 
+@@ -60,3 +60,3 @@
+  */
+-#undef BSDTIMES
++#define BSDTIMES
+ 
+@@ -71,3 +71,3 @@
+  */
+-#undef BSDNICE
++#define BSDNICE
+ 
+@@ -85,6 +85,6 @@
+  *		built in a BSD universe.
+- *		Set SYSVREL to 1, 2, or 3, depending the version of System V
++ *		Set SYSVREL to 1, 2, 3, or 4, depending the version of System V
+  *		you are running. Or set it to 0 if you are not SYSV based
+  */
+-#define SYSVREL	4
++#define SYSVREL	0
+ 
+@@ -108,15 +108,5 @@
+ /*
+- * HAVEUTMPX	Define if you have extended utmp (utmpx).
+- *		(common for svr4 systems)
+- */
+-#define HAVEUTMPX
+-
+-/*
+  * UTHOST	Does the utmp file have a host field?
+  */
+-#ifdef HAVEUTMPX
+-# define UTHOST
+-#else
+-# undef UTHOST
+-#endif /* HAVEUTMPX */
++#define UTHOST
+ 
+@@ -126,23 +116,3 @@
+ #define DIRENT
+-
+-/*
+- * ECHO_STYLE	Optionally change the behavior of the builtin echo
+- *		BOTH_ECHO: Support both bsd options (-n) and sysv escapes (\nnn)
+- *		BSD_ECHO:  Support only -n
+- *		SYSV_ECHO: Support only sysv escapes (\nnn)
+- *		NONE_ECHO: Pure echo.
+- */
+-#define ECHO_STYLE BSD_ECHO	/* BSD options only */
+-
+ /****************** local defines *********************/
+-#ifndef BSDTIMES
+-# define NEEDgethostname
+-#endif
+-/*
+- * Shadow passwd file
+- */
+-#define PW_SHADOW
+-
+-#define SOLARIS2 23
+-
+ /****************** configurable hacks ****************/
+@@ -150,3 +120,2 @@
+ #include "config_f.h"
+-
+ #endif /* _h_config */

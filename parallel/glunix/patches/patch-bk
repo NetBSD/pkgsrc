@@ -1,0 +1,19 @@
+$NetBSD: patch-bk,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- progs/tools/run_glunix_agent.pl~	Thu Oct  2 11:42:13 1997
++++ progs/tools/run_glunix_agent.pl	Fri Apr  3 11:22:25 1998
+@@ -62,3 +62,3 @@
+ 
+-    open(FD,"/bin/ps -edaf -p $pid | grep $path | grep -v grep|");
++    open(FD,"/bin/ps -ax -p $pid | grep $path | grep -v grep|");
+     while (<FD>) {
+@@ -190,3 +190,3 @@
+     while (1) {
+-	$str = `/bin/ps -edaf | grep daemon | grep now/glunix/ | grep -v grep`;
++	$str = `/bin/ps -ax | grep '(daemon)' | grep -v grep`;
+ 	$str =~ s/^\s*//;
+@@ -211,3 +211,3 @@
+     while (1) {
+-	$str = `/bin/ps -edaf | grep master | grep now/glunix/ | grep -v grep`;
++	$str = `/bin/ps -ax | grep '(master)' | grep -v grep`;
+ 	$str =~ s/^\s*//;

@@ -1,0 +1,13 @@
+$NetBSD: patch-bq,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- progs/glurun/glurun-wrapper.pl~	Tue Jul  8 16:04:16 1997
++++ progs/glurun/glurun-wrapper.pl	Thu Apr  9 11:42:57 1998
+@@ -54,5 +54,5 @@
+ # helper scripts
+-$glustat = '/usr/now/bin/glustat';
+-$glupart = '/usr/now/bin/glupart_new';
+-$glurun = '/usr/now/bin/glurun_orig';
++$glustat = '%%%NOW_ROOT%%%/bin/glustat';
++$glupart = '%%%NOW_ROOT%%%/bin/glupart_new';
++$glurun = '%%%NOW_ROOT%%%/bin/glurun_orig';
+ 

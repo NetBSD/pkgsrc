@@ -1,0 +1,26 @@
+$NetBSD: patch-ai,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
+
+--- glunix/src/util/cutil.cc~	Fri Sep  5 12:30:13 1997
++++ glunix/src/util/cutil.cc	Fri Feb 27 02:17:05 1998
+@@ -84,3 +84,7 @@
+ #include <stdio.h>
++#ifndef __NetBSD__
+ #include <sys/systeminfo.h>
++#else
++#include <unistd.h>
++#endif
+ #include <string.h>
+@@ -139,3 +143,8 @@
+     }
+-
++#ifdef __NetBSD__
++    if (gethostname(hostname,sizeof(hostname)-1) < 0) {
++      DE("Hostname: %s\n",strerror(errno));
++      return NULL;
++    }
++#else
+     if (sysinfo(SI_HOSTNAME, hostname, sizeof(hostname)-1) < 0) {
+@@ -144,2 +153,3 @@
+     }
++#endif
+     init = True;

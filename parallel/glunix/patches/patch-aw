@@ -1,0 +1,9 @@
+$NetBSD: patch-aw,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- progs/glups/Makefile~	Fri Dec  6 17:19:18 1996
++++ progs/glups/Makefile	Sat Feb 28 07:24:39 1998
+@@ -2,3 +2,3 @@
+ SRCS    = glups.c
+-LIBS    = -lglunix -lsocket -lnsl
++LIBS    = -lglunix
+ 

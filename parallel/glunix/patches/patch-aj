@@ -1,0 +1,284 @@
+$NetBSD: patch-aj,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
+
+--- glunix/src/idle/didle_sysinfo.cc~	Thu Sep 18 12:04:55 1997
++++ glunix/src/idle/didle_sysinfo.cc	Fri Feb 27 06:42:28 1998
+@@ -97,2 +97,12 @@
+ #include <stdio.h>
++
++#ifdef __NetBSD__
++#include <stdlib.h>
++#include <sys/time.h>
++#include <sys/param.h>
++#include <sys/proc.h>
++#include <miscfs/procfs/procfs.h>
++#include <vm/vm_swap.h>
++#include <sys/sysctl.h>
++#else
+ #include <sys/proc.h>
+@@ -102,5 +112,10 @@
+ #include <sys/time.h>
++#endif
++
+ #include <unistd.h>
+ #include <bsd.h>
++
++#ifndef __NetBSD__
+ #include <vm/anon.h>  // Contains defns for swap virtual memory info
++#endif
+ 
+@@ -122,8 +137,47 @@
+ #define HASH(x) ((x) >> 1)
++
++#ifdef __NetBSD__
++int getpsize()
++{
++  FILE *file;
++  char *buf;
++
++  file = fopen("/kern/pagesize","r");
++  fscanf(file,"%s",buf);
++  fclose(file);
++  return atoi(buf);
++}
++#define PAGETOK(size) (size) * getpsize()
++
++#else
+ #define PAGETOK(size) (size) << 3     // 8K pages
++#endif
+ 
++#ifndef __NetBSD__
+ #define MAX(a, b)  (((a) > (b)) ? (a) : (b))
+-
++#endif
+ /*****************************************************************************/
+ 
++#ifdef __NetBSD__
++static struct nlist nlst[] = {
++#define X_CCPU          0
++    { "_ccpu" },                /* 0 */
++#define X_CP_TIME       1
++    { "_cp_time" },             /* 1 */
++#define X_HZ            2
++    { "_hz" },                  /* 2 */
++#define X_STATHZ        3
++    { "_stathz" },              /* 3 */
++#define X_AVENRUN       4
++    { "_averunnable" },         /* 4 */
++#define X_CNT           5
++    { "_cnt" },
++
++    { 0 }
++};
++
++static ulong cp_time_offset,cnt_offset;
++
++#else
++
+ /* definitions for indices in the nlist array */
+@@ -167,3 +221,3 @@
+ static ulong avenrunOffset, availrmemOffset, anoninfoOffset, swapfsOffset;
+-
++#endif
+ /*****************************************************************************/
+@@ -239,2 +293,41 @@
+  *****************************************************************************/
++#ifdef __NetBSD__
++Bool
++Idle_InitializeSysinfo(void)
++{
++    int  notFound;
++    int  i;
++
++    if ((kd = kvm_open(NULL, NULL, NULL, O_RDONLY, "kvm_open")) == NULL) {
++	kd = NULL;
++	perror("(dile)Idle_InitializeSysinfo: kvm_open");
++	return -1;
++    }
++    /* get the list of symbols we want to access in the kernel */
++    if ((notFound = kvm_nlist(kd, nlst)) < 0) {
++	fprintf(stderr, "res: nlist failed\n");
++	return False;
++    }
++    numCpus=1;
++    cp_time_offset = nlst[X_CP_TIME].n_value;
++    cnt_offset = nlst[X_CNT].n_value;
++
++    if (!(procdir = opendir(PROCFS))) {
++	(void) fprintf(stderr, "Unable to open %s\n", PROCFS);
++	return False;
++    }
++    /* handy for later on when we're reading it */
++    if (chdir(PROCFS)) {
++	(void) fprintf(stderr, "Unable to chdir to %s\n", PROCFS);
++	return False;
++    }
++
++    for (i = 0; i < USAGE_TABLE_SIZE; i++) {
++	procUsageTable[i].pid = -1;
++	procUsageTable[i].cpuUsage = 0.0;
++    }
++
++    return True;
++}
++#else
+ Bool
+@@ -303,3 +396,3 @@
+ }
+-
++#endif
+ /******************************************************************************
+@@ -335,4 +428,9 @@
+  *****************************************************************************/
++#ifdef __NetBSD__
++static ProcUsage *
++FindEntry(pid_t pid, double usage)
++#else
+ static ProcUsage *
+ FindEntry(struct prpsinfo *targProc, double usage)
++#endif
+ {
+@@ -340,5 +438,8 @@
+     ProcUsage  *candidate;
++#ifdef __NetBSD__
++    index = HASH(pid);
++#else
+     ASSERT(targProc != NULL);
+-    
+     index = HASH(targProc->pr_pid);
++#endif
+     start = index;
+@@ -346,3 +447,7 @@
+ 	candidate = &(procUsageTable[index]);
++#ifdef __NetBSD__
++	if (candidate->pid == pid) {
++#else
+ 	if (candidate->pid == targProc->pr_pid) {
++#endif
+ 	    /* Has this pid been recycled?  Are we hitting a very old process?
+@@ -355,3 +460,7 @@
+ 	if (candidate->pid == -1) {
++#ifdef __NetBSD__
++	    candidate->pid = pid;
++#else
+ 	    candidate->pid = targProc->pr_pid;
++#endif
+ 	    candidate->cpuUsage = 0;
+@@ -381,2 +490,8 @@
+  *****************************************************************************/
++
++#ifdef __NetBSD__
++static void
++UpdateEntry(ProcUsage *entry, double usage)
++{
++#else
+ static void
+@@ -385,2 +500,3 @@
+     UNUSED_PARAM(proc);
++#endif
+     ASSERT(entry != NULL);
+@@ -410,3 +526,11 @@
+ {
++
++#ifndef __NetBSD__
+     struct prpsinfo  currproc;	/* pointer to current proc structure	*/
++#else
++    struct kinfo_proc *procs;
++    int mib[3],i;
++    size_t size;
++#endif
++
+     int              fd;
+@@ -461,2 +585,29 @@
+     numProcs = 0;
++
++#ifdef __NetBSD__
++    size = 0;
++    mib[0] = CTL_KERN;
++    mib[1] = KERN_PROC;
++    mib[2] = KERN_PROC_ALL;
++
++    sysctl(mib, 3, NULL, &size, NULL, 0);
++    procs = (struct kinfo_proc *)malloc(size);
++    sysctl(mib, 3, procs, &size, NULL, 0);
++    numProcs = size / sizeof(struct kinfo_proc);
++
++    for (i=0; i<numProcs; i++) {
++      activeMemory[TOTAL] += procs[i].kp_eproc.e_xrssize;
++      vmInUse[TOTAL] += procs[i].kp_eproc.e_xsize;
++      currUsage = procs[i].kp_proc.p_rtime.tv_sec * 1.0e9 + procs[i].kp_proc.p_rtime.tv_usec * 1000;
++      oldProc = FindEntry(procs[i].kp_proc.p_pid, currUsage);
++      percentCpu = (currUsage - oldProc->cpuUsage) / timeDiff;
++      UpdateEntry(oldProc, currUsage);
++      cpuUsage[TOTAL] += (int) (percentCpu * 10.0);
++      if (glunixProcs->KeySearch(procs[i].kp_proc.p_pid) == NULL) {
++	activeMemory[SEQUENTIAL] += procs[i].kp_eproc.e_xrssize;
++	vmInUse[SEQUENTIAL] += procs[i].kp_eproc.e_xsize;
++	cpuUsage[SEQUENTIAL] += (int) (percentCpu * 10.0);
++      }
++    }
++#else
+     rewinddir(procdir);
+@@ -495,2 +646,3 @@
+     }
++#endif
+     total->mem = activeMemory[TOTAL];
+@@ -505,6 +657,15 @@
+ {
+-    struct anoninfo anoninfo;
++#ifndef __NetBSD__
++    int      i;
+     long     avenrun[3];
++    struct anoninfo anoninfo;
+     int      ani_max, ani_resv, availrmem, swapfs_minfree;
+-    int      i;
++#else
++    int i;
++    double  avenrun[3];
++    struct  vmmeter sum;
++    struct  swapent *sep;
++    int     totalsize, size, totalinuse, inuse, ncounted;
++    int     rnswap, nswap;
++#endif
+ 
+@@ -517,3 +678,37 @@
+     }
++#ifdef __NetBSD__
+ 
++    getloadavg(avenrun,3);
++    for (i = 0; i < 3; i++) {
++	sysLoad->loadAvg[i] = avenrun[i];
++    }
++
++    kvm_read(kd, cnt_offset, (int *)(&sum), sizeof(sum));
++    sep = NULL;
++    do {
++        nswap = swapctl(SWAP_NSWAP, 0, 0);
++        if (nswap < 1)
++                break;
++        sep = (struct swapent *)malloc(nswap * sizeof(*sep));
++        if (sep == NULL)
++                break;
++        rnswap = swapctl(SWAP_STATS, (void *)sep, nswap);
++        if (nswap != rnswap)
++                break;
++
++        totalsize = totalinuse = ncounted = 0;
++        for (; rnswap-- > 0; sep++) {
++            ncounted++;
++            size = sep->se_nblks;
++            inuse = sep->se_inuse;
++            totalsize += size;
++            totalinuse += inuse;
++        }
++
++    } while (0);
++    if (sep)
++            free(sep);
++
++    sysLoad->memory = PAGETOK(dbtob(totalsize) - dbtob(totalinuse) + sum.v_free_count);
++#else
+     /* get load average array */
+@@ -541,2 +736,3 @@
+ 
++#endif
+     return;

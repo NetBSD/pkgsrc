@@ -1,0 +1,9 @@
+$NetBSD: patch-br,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- progs/tools/run_glunix.c~	Wed Sep 17 14:36:56 1997
++++ progs/tools/run_glunix.c	Thu Apr  9 11:48:05 1998
+@@ -7,3 +7,3 @@
+ 
+-#define BIN_PATH "/usr/now/bin"
++#define BIN_PATH "%%%NOW_ROOT%%%/bin"
+ char *newArgv[2] = { "run_glunix_script", NULL };

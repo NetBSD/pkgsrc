@@ -1,0 +1,95 @@
+$NetBSD: patch-an,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- glunix/src/rexec/lrexec.cc~	Thu Oct  2 12:34:06 1997
++++ glunix/src/rexec/lrexec.cc	Fri Feb 27 17:47:23 1998
+@@ -295,2 +295,5 @@
+ #include <limits.h>
++#ifdef __NetBSD__
++#include <sys/ioctl.h>
++#endif
+ 
+@@ -377,5 +380,4 @@
+ 
+-    (void) ioctl(0, TCGETS, (char *)&saveTermios);
+-
+-    /*    while(tcgetattr(STDIN_FILENO, &saveTermios) == -1) {
++#ifdef __NetBSD__
++        while(tcgetattr(STDIN_FILENO, &saveTermios) == -1) {
+ 	if(errno == EINTR) {
+@@ -386,9 +388,12 @@
+ 	}
+-    }*/
+-
++    }
++#else
++    (void) ioctl(0, TCGETS, (char *)&saveTermios);
++#endif
+     validTermios = True;
+ 
+-    /*    if(ioctl(STDIN_FILENO, TIOCGWINSZ, (char *) windowSize) == -1) {
++    /*
++      if(ioctl(STDIN_FILENO, TIOCGWINSZ, (char *) windowSize) == -1) {
+ 	return False;
+-    }*/
++	}*/
+ 
+@@ -396,16 +401,5 @@
+ 
+-    /**/
+-
+-	buf.c_iflag &= ~(INLCR|IGNCR|ICRNL|IUCLC|IXON);
+-	//	buf.c_oflag &= ~OPOST;
+-	buf.c_lflag &= ~(ICANON|ECHO|ISIG);
+-	buf.c_cc[VMIN] = 1;
+-	buf.c_cc[VTIME] = 0;
+-	(void) ioctl(0, TCSETSF, (char *)&buf);
+-
+-    /**/
+-	
+-	/*
++#ifdef __NetBSD__
+     buf.c_iflag &= ~(BRKINT | ICRNL | INPCK | ISTRIP | IXON);
+-//  buf.c_oflag &= ~(OPOST); on non-ultrasparcs, this loses CR's
++    buf.c_oflag &= ~(OPOST); /*on non-ultrasparcs, this loses CR's*/
+     buf.c_lflag &= ~(ECHO | ICANON | IEXTEN | ISIG);
+@@ -418,20 +412,26 @@
+     while(tcsetattr(STDIN_FILENO, TCSAFLUSH, &buf) == -1) {
+-	if(errno == EINTR) {
++      if(errno == EINTR) {
++	continue;
++      } else {
++	D1("tcsetattr(): %s\n", strerror(errno));
++
++	while(tcsetattr(STDIN_FILENO, TCSAFLUSH, &saveTermios) == -1) {
++	  if(errno == EINTR) {
+ 	    continue;
+-	} else {
++	  } else {
+ 	    D1("tcsetattr(): %s\n", strerror(errno));
+-
+-	    while(tcsetattr(STDIN_FILENO, TCSAFLUSH, &saveTermios) == -1) {
+-		if(errno == EINTR) {
+-		    continue;
+-		} else {
+-		    D1("tcsetattr(): %s\n", strerror(errno));
+-		    return False;
+-		}
+-	    }
+-	    
+ 	    return False;
++	  }
+ 	}
+-    }*/
+-
++	    
++	return False;
++      }
++    }
++#else
++	buf.c_iflag &= ~(INLCR|IGNCR|ICRNL|IUCLC|IXON);
++	buf.c_lflag &= ~(ICANON|ECHO|ISIG);
++	buf.c_cc[VMIN] = 1;
++	buf.c_cc[VTIME] = 0;
++	(void) ioctl(0, TCSETSF, (char *)&buf);
++#endif
+     Comm_SetLineBuffering(False);

@@ -1,0 +1,24 @@
+$NetBSD: patch-bx,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
+
+Use getcwd(3) in preference to getwd(3).
+
+--- progs/glush/sh.dir.c	1998/10/16 09:42:40	1.1
++++ progs/glush/sh.dir.c	1998/10/16 09:44:01
+@@ -71,7 +71,7 @@
+     static char *emsg = "tcsh: Trying to start from \"%s\"\n";
+ 
+     /* Don't believe the login shell home, because it may be a symlink */
+-    tcp = (char *) getwd(path);
++    tcp = (char *) getcwd(path, sizeof(path));
+     if (tcp == NULL || *tcp == '\0') {
+ 	xprintf("tcsh: %s\n", path);
+ 	if (hp && *hp) {
+@@ -524,7 +524,7 @@
+ 	char *dptr, *ptr;
+ 	if (chdir(dptr = short2str(cp)) < 0) 
+ 	    stderror(ERR_SYSTEM, dptr, strerror(errno));
+-	else if ((ptr = getwd(ebuf)) && *ptr != '\0') {
++	else if ((ptr = getcwd(ebuf, sizeof(ebuf))) && *ptr != '\0') {
+ 		xfree((ptr_t) cp);
+ 		cp = Strsave(str2short(ptr));
+ 		return dgoto(cp);

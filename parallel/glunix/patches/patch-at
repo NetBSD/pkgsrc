@@ -1,0 +1,9 @@
+$NetBSD: patch-at,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- progs/gluadmin/Makefile~	Fri Dec  6 17:19:00 1996
++++ progs/gluadmin/Makefile	Sat Feb 28 07:21:31 1998
+@@ -2,3 +2,3 @@
+ SRCS    = gluadmin.c
+-LIBS    = -lglunix -lsocket -lnsl
++LIBS    = -lglunix
+ 

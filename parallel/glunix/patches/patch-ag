@@ -1,0 +1,9 @@
+$NetBSD: patch-ag,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
+
+--- glunix/src/sched/csched.h~	Fri Feb 27 06:54:16 1998
++++ glunix/src/sched/csched.h	Fri Feb 27 06:54:33 1998
+@@ -98,3 +98,3 @@
+ 
+-extern void Sched_SetSchedPriority(pid_t targPid, pri_t offset);
++extern void Sched_SetSchedPriority(pid_t targPid, short offset);
+ 
