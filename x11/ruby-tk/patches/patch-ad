@@ -1,0 +1,21 @@
+$NetBSD: patch-ad,v 1.1 2005/01/23 17:37:48 taca Exp $
+
+--- lib/tk/menu.rb.orig	2004-12-09 03:13:37.000000000 +0900
++++ lib/tk/menu.rb
+@@ -437,14 +437,14 @@ class TkOptionMenubutton<TkMenubutton
+     keys = _symbolkey2str(keys)
+ 
+     parent = nil
+-    if args[0].kind_of?(TkWindow) || args[0] == nil
++    if !args.empty? && (args[0].kind_of?(TkWindow) || args[0] == nil)
+       parent = args.shift 
+     else
+       parent = keys.delete('parent')
+     end
+ 
+     @variable = nil
+-    if args[0].kind_of?(TkVariable) || args[0] == nil
++    if !args.empty? && (args[0].kind_of?(TkVariable) || args[0] == nil)
+       @variable = args.shift 
+     else
+       @variable = keys.delete('variable')

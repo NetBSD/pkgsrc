@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/11/28 06:32:53 taca Exp $
+# $NetBSD: Makefile,v 1.12 2005/01/23 17:37:48 taca Exp $
 # FreeBSD: ports/x11-toolkits/ruby-tk/Makefile,v 1.21 2000/10/20 19:56:04 knu Exp
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -12,6 +12,7 @@ COMMENT=	Ruby interface to the Tk widget set
 
 DEPENDS+=	${RUBY_PKGPREFIX}-tcltklib>=${RUBY_VERSION}:../../x11/ruby-tcltklib
 
+RUBY_HAS_ARCHLIB=	yes
 RUBY_VERSION_SUPPORTED=	18
 USE_BUILDLINK3=		yes
 USE_RUBY_EXTCONF=	yes
@@ -21,7 +22,7 @@ WRKSRC=			${RUBY_WRKSRC}/ext/tk
 
 REPLACE_RUBY_DIRS=	${WRKSRC}/sample
 
-post-patch:
+pre-configure:
 	@${FIND} ${WRKSRC} \( -name '*.orig' -o -name '*.bak' \) \
 		-exec rm -f {} \;
 
