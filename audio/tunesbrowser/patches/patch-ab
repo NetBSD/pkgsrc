@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/06/20 20:41:22 agc Exp $
+
+--- audioplayer.c	2004/06/05 22:56:15	1.1
++++ audioplayer.c	2004/06/05 22:56:28
+@@ -80,8 +80,10 @@
+     gst_init(0, NULL);
+ 
+     pipeline_thread = gst_thread_new ("pipeline");
++#if 0
+     gst_bin_set_post_iterate_function(GST_BIN(pipeline_thread),
+                                       cb_iterate, NULL);
++#endif
+     pipesrc = gst_element_factory_make ("fdsrc", "pipe_source");
+     if (!pipesrc)
+     {
