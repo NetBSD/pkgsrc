@@ -1,0 +1,21 @@
+$NetBSD: patch-ag,v 1.1 1999/03/11 09:48:43 tron Exp $
+
+--- src/cvs.h.orig	Mon Jul 27 04:54:11 1998
++++ src/cvs.h	Thu Mar 11 10:39:14 1999
+@@ -256,6 +256,8 @@
+ #define	CVSREAD_ENV	"CVSREAD"	/* make files read-only */
+ #define	CVSREAD_DFLT	0		/* writable files by default */
+ 
++#define CVSREADONLYFS_ENV "CVSREADONLYFS" /* repository is read-only */
++
+ #define	TMPDIR_ENV	"TMPDIR"	/* Temporary directory */
+ /* #define	TMPDIR_DFLT		   Set by options.h */
+ 
+@@ -383,6 +385,7 @@
+ 
+ extern int trace;		/* Show all commands */
+ extern int noexec;		/* Don't modify disk anywhere */
++extern int readonlyfs;		/* fail on all write locks; succeed all read locks */
+ extern int logoff;		/* Don't write history entry */
+ 
+ extern int top_level_admin;
