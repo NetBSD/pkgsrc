@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2002/07/02 11:38:38 agc Exp $
+# $NetBSD: Makefile,v 1.25 2002/07/03 16:32:49 agc Exp $
 
 DISTNAME=		so51a_lnx_${LANGNO}
 PKGNAME=		staroffice-${LANGUAGE}-5.1a
@@ -71,8 +71,13 @@ LANGSUB=		51AA9999
 PLIST_SUBST+=		LANGNO=${LANGNO}
 PLIST_SRC=		${WRKDIR}/PLIST
 
-do-fetch:
-	@${MKDIR} ${WRKDIR}
+# Since we override the normal do-fetch target, where the distfiles' presence
+# is checked when defined(${BATCH}), replicate same here.
+do-fetch: ${WRKDIR}
+.if defined(BATCH)
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${MAKE} ${MAKEFLAGS} batch-check-distfiles
+.endif # BATCH
 .for file in automate.sh send.agree send.conf send.ord send.resp \
 	     send.submit sendreg.sh
 	@${CP} ${FILESDIR}/${file} ${WRKDIR}
