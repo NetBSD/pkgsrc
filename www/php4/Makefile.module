@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.module,v 1.12 2001/10/16 12:44:16 tron Exp $
+# $NetBSD: Makefile.module,v 1.13 2001/11/01 09:41:14 jlam Exp $
 #
 # This Makefile is provided to ease creating PHP4 packages for the extension
 # modules distributed in the PHP4 sources.
@@ -38,8 +38,8 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 # Ensure we export symbols in the linked shared objects.
 LDFLAGS+=		-Wl,--export-dynamic
 
-PLIST_SRC=		${.CURDIR}/../../www/php4/pkg/PLIST.module
-MESSAGE_SRC=		${.CURDIR}/../../www/php4/pkg/MESSAGE.module
+PLIST_SRC=		${.CURDIR}/../../www/php4/PLIST.module
+MESSAGE_SRC=		${.CURDIR}/../../www/php4/MESSAGE.module
 MESSAGE_SUBST+=		MODNAME=${PKGMODNAME}
 MESSAGE_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR}
 

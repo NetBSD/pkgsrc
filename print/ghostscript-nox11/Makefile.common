@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2001/08/29 12:51:26 itohy Exp $
+# $NetBSD: Makefile.common,v 1.21 2001/11/01 09:41:13 jlam Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -87,8 +87,7 @@ EXTRACT_LIST+=		${PRESCR_DRV}.tar.gz
 DISTINFO_FILE=		${.CURDIR}/../../print/ghostscript-nox11/distinfo
 FILESDIR=		${.CURDIR}/../../print/ghostscript-nox11/files
 PATCHDIR=		${.CURDIR}/../../print/ghostscript-nox11/patches
-SCRIPTDIR=		${.CURDIR}/../../print/ghostscript-nox11/scripts
-PLIST_SRC=		${.CURDIR}/../../print/ghostscript-nox11/pkg/PLIST
+PLIST_SRC=		${.CURDIR}/../../print/ghostscript-nox11/PLIST
 
 EXTRACT_ONLY=		${GS_SOURCES}
 DIST_SUBDIR=		ghostscript
