@@ -1,4 +1,16 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/10/15 11:23:57 grant Exp $
+$NetBSD: distinfo,v 1.1.1.2 2002/10/19 15:38:31 taya Exp $
 
-SHA1 (phoenix-0.3-i686-pc-linux-gnu.tar.gz) = d7c157e3264c9232e41871911a33fba0c1fa6b2b
-Size (phoenix-0.3-i686-pc-linux-gnu.tar.gz) = 9520231 bytes
+SHA1 (mozilla-phoenix-0.3.tar.gz) = 577aab7480f811c129aa4f487e7eef4ee8920da1
+Size (mozilla-phoenix-0.3.tar.gz) = 40280263 bytes
+SHA1 (patch-aa) = d2fa0cd66825ddfe0b983ecd1c80f53599d7786d
+SHA1 (patch-ab) = 13f4e2af0433df5eebbdb839e23389a703594f6c
+SHA1 (patch-ac) = a4e08f78b3780b16a0f69aa22e0e4350fce6db8f
+SHA1 (patch-ad) = 6031284fea1ffbafdb3e69fae9d81ecc22932731
+SHA1 (patch-ae) = 9d160425a4341dd38b4da88c7913de6a95cb6660
+SHA1 (patch-am) = c0246d178c8d1b53a3e945a748116665b3107f8e
+SHA1 (patch-aw) = a6f78b33ddba34c404af0521a23b8eeec3382f3e
+SHA1 (patch-ba) = 71758ae86bd7f57095b5af2f96d5d2c4416bec57
+SHA1 (patch-bb) = 4f8b98e24afdba9b281f7fbfe551837560d75c62
+SHA1 (patch-be) = 768bf48f5a667e51cea9fd83c5cb26cf86e72e18
+SHA1 (patch-bj) = 3690cdca84ad2a721d98156404e8f309ba47b3d6
+SHA1 (patch-bm) = db4d44d9ca3a6ed9eb2ba4604555f80a02f987e8
