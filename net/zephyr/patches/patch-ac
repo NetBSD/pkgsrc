@@ -1,0 +1,212 @@
+$NetBSD: patch-ac,v 1.1 1998/11/24 00:06:35 hubertf Exp $
+
+--- ./configure.BAKKK	Thu Apr  4 01:42:30 1996
++++ ./configure	Tue Nov 24 00:47:01 1998
+@@ -502,7 +502,7 @@
+ fi
+ 
+ ac_ext=c
+-# CFLAGS is not in ac_cpp because -g, -O, etc. are not valid cpp options.
++# CFLAGS is not in ac_cpp because -g, -O6, etc. are not valid cpp options.
+ ac_cpp='echo $CPP $CPPFLAGS 1>&5;
+ $CPP $CPPFLAGS'
+ ac_compile='echo ${CC-cc} -c $CFLAGS $CPPFLAGS conftest.$ac_ext 1>&5;
+@@ -767,9 +767,9 @@
+ 
+ echo "$ac_t""$ac_cv_prog_gcc_g" 1>&6
+     if test $ac_cv_prog_gcc_g = yes; then
+-      CFLAGS="-g -O"
++      CFLAGS="-g -O6"
+     else
+-      CFLAGS="-O"
++      CFLAGS="-O6"
+     fi
+   fi
+ else
+--- ./clients/syslogd/Makefile.in.BAKKK	Fri Jul  7 23:54:11 1995
++++ ./clients/syslogd/Makefile.in	Tue Nov 24 00:47:01 1998
+@@ -19,7 +19,7 @@
+ INSTALL=@INSTALL@
+ SYSLOG_CONFPREFIX=n
+ 
+-DEBUG=-O
++DEBUG=-O6
+ CFLAGS=$(DEBUG) -I$(srcdir) -I$(top_srcdir)/h -I$(BUILDTOP)/h \
+ 	-DCONFPREFIX=\"$(SYSLOG_CONFPREFIX)\" @CPPFLAGS@
+ LDFLAGS=$(DEBUG) -L$(BUILDTOP)/lib/zephyr @ET_LDFLAGS@ @LDFLAGS@
+--- ./clients/xzwrite/Makefile.in.BAKKK	Fri Jul  7 23:55:14 1995
++++ ./clients/xzwrite/Makefile.in	Tue Nov 24 00:47:02 1998
+@@ -18,7 +18,7 @@
+ CC=@CC@
+ INSTALL=@INSTALL@
+ 
+-DEBUG=-O
++DEBUG=-O6
+ CFLAGS=$(DEBUG) -DDATADIR=\"$(datadir)\" -I$(top_srcdir)/h -I$(BUILDTOP)/h \
+ 	@X_CFLAGS@ @CPPFLAGS@
+ LDFLAGS=$(DEBUG) -L$(BUILDTOP)/lib/zephyr -L$(BUILDTOP)/lib/dyn @ET_LDFLAGS@ \
+--- ./clients/zctl/Makefile.in.BAKKK	Fri Jul  7 23:55:38 1995
++++ ./clients/zctl/Makefile.in	Tue Nov 24 00:47:02 1998
+@@ -19,7 +19,7 @@
+ INSTALL=@INSTALL@
+ MK_CMDS=@MK_CMDS@
+ 
+-DEBUG=-O
++DEBUG=-O6
+ CFLAGS=$(DEBUG) -I$(top_srcdir)/h -I$(BUILDTOP)/h @CPPFLAGS@
+ LDFLAGS=$(DEBUG) -L$(BUILDTOP)/lib/zephyr @ET_LDFLAGS@ @SS_LDFLAGS@ @LDFLAGS@
+ LIBS=-lzephyr -lss @LIBS@ -lcom_err
+--- ./clients/zleave/Makefile.in.BAKKK	Fri Jul  7 23:55:52 1995
++++ ./clients/zleave/Makefile.in	Tue Nov 24 00:47:02 1998
+@@ -18,7 +18,7 @@
+ CC=@CC@
+ INSTALL=@INSTALL@
+ 
+-DEBUG=-O
++DEBUG=-O6
+ CFLAGS=$(DEBUG) -I$(top_srcdir)/h -I$(BUILDTOP)/h @CPPFLAGS@
+ LDFLAGS=$(DEBUG) -L$(BUILDTOP)/lib/zephyr @ET_LDFLAGS@ @LDFLAGS@
+ LIBS=-lzephyr @LIBS@ -lcom_err
+--- ./clients/zmailnotify/Makefile.in.BAKKK	Fri Jul  7 23:56:05 1995
++++ ./clients/zmailnotify/Makefile.in	Tue Nov 24 00:47:02 1998
+@@ -18,7 +18,7 @@
+ CC=@CC@
+ INSTALL=@INSTALL@
+ 
+-DEBUG=-O
++DEBUG=-O6
+ CFLAGS=$(DEBUG) -I$(top_srcdir)/h -I$(BUILDTOP)/h -DKPOP @CPPFLAGS@
+ LDFLAGS=$(DEBUG) -L$(BUILDTOP)/lib/zephyr @ET_LDFLAGS@ @LDFLAGS@
+ LIBS=-lzephyr @LIBS@ -lcom_err
+--- ./clients/znol/Makefile.in.BAKKK	Fri Jul  7 23:56:16 1995
++++ ./clients/znol/Makefile.in	Tue Nov 24 00:47:02 1998
+@@ -18,7 +18,7 @@
+ CC=@CC@
+ INSTALL=@INSTALL@
+ 
+-DEBUG=-O
++DEBUG=-O6
+ CFLAGS=$(DEBUG) -I$(top_srcdir)/h -I$(BUILDTOP)/h @CPPFLAGS@
+ LDFLAGS=$(DEBUG) -L$(BUILDTOP)/lib/zephyr @ET_LDFLAGS@ @LDFLAGS@
+ LIBS=-lzephyr @LIBS@ -lcom_err
+--- ./clients/zpopnotify/Makefile.in.BAKKK	Fri Jul  7 23:56:24 1995
++++ ./clients/zpopnotify/Makefile.in	Tue Nov 24 00:47:02 1998
+@@ -18,7 +18,7 @@
+ CC=@CC@
+ INSTALL=@INSTALL@
+ 
+-DEBUG=-O
++DEBUG=-O6
+ CFLAGS=$(DEBUG) -I$(top_srcdir)/h -I$(BUILDTOP)/h @CPPFLAGS@
+ LDFLAGS=$(DEBUG) -L$(BUILDTOP)/lib/zephyr @ET_LDFLAGS@ @LDFLAGS@
+ LIBS=-lzephyr @LIBS@ -lcom_err
+--- ./clients/zshutdown_notify/Makefile.in.BAKKK	Fri Jul  7 23:56:31 1995
++++ ./clients/zshutdown_notify/Makefile.in	Tue Nov 24 00:47:02 1998
+@@ -19,7 +19,7 @@
+ CC=@CC@
+ INSTALL=@INSTALL@
+ 
+-DEBUG=-O
++DEBUG=-O6
+ CFLAGS=$(DEBUG) -I$(top_srcdir)/h -I$(BUILDTOP)/h @CPPFLAGS@
+ LDFLAGS=$(DEBUG) -L$(BUILDTOP)/lib/zephyr @ET_LDFLAGS@ @LDFLAGS@
+ LIBS=-lzephyr @LIBS@ -lcom_err
+--- ./clients/zstat/Makefile.in.BAKKK	Fri Jul  7 23:58:10 1995
++++ ./clients/zstat/Makefile.in	Tue Nov 24 00:47:02 1998
+@@ -18,7 +18,7 @@
+ CC=@CC@
+ INSTALL=@INSTALL@
+ 
+-DEBUG=-O
++DEBUG=-O6
+ CFLAGS=$(DEBUG) -I$(top_srcdir)/h -I$(BUILDTOP)/h @CPPFLAGS@
+ LDFLAGS=$(DEBUG) -L$(BUILDTOP)/lib/zephyr @ET_LDFLAGS@ @LDFLAGS@
+ LIBS=-lzephyr @LIBS@ -lcom_err
+--- ./clients/zwgc/Makefile.in.BAKKK	Fri Jul  7 23:59:07 1995
++++ ./clients/zwgc/Makefile.in	Tue Nov 24 00:47:03 1998
+@@ -20,7 +20,7 @@
+ INSTALL=@INSTALL@
+ INSTANTIATE=$(srcdir)/instantiate
+ 
+-DEBUG=-O
++DEBUG=-O6
+ CFLAGS=	$(DEBUG) -DDATADIR=\"$(datadir)\" -I$(top_srcdir)/h -I$(BUILDTOP)/h \
+ 	-I$(srcdir) -I. @X_CFLAGS@ @CPPFLAGS@
+ YFLAGS=-d
+--- ./clients/zwrite/Makefile.in.BAKKK	Sat Jul  8 00:03:50 1995
++++ ./clients/zwrite/Makefile.in	Tue Nov 24 00:47:03 1998
+@@ -18,7 +18,7 @@
+ CC=@CC@
+ INSTALL=@INSTALL@
+ 
+-DEBUG=-O
++DEBUG=-O6
+ CFLAGS=$(DEBUG) -I$(top_srcdir)/h -I$(BUILDTOP)/h @CPPFLAGS@
+ LDFLAGS=$(DEBUG) -L$(BUILDTOP)/lib/zephyr @ET_LDFLAGS@ @LDFLAGS@
+ LIBS=-lzephyr @LIBS@ -lcom_err
+--- ./lib/dyn/Makefile.in.BAKKK	Tue Jun 18 21:47:03 1996
++++ ./lib/dyn/Makefile.in	Tue Nov 24 00:47:03 1998
+@@ -17,7 +17,7 @@
+ CC=@CC@
+ RANLIB=@RANLIB@
+ 
+-DEBUG=-O
++DEBUG=-O6
+ CFLAGS=$(DEBUG) -I$(top_srcdir)/h -I$(BUILDTOP)/h @CPPFLAGS@
+ 
+ OBJS =	dyn_append.o dyn_create.o dyn_debug.o dyn_delete.o dyn_insert.o \
+--- ./lib/et/Makefile.in.BAKKK	Tue Jun 18 21:47:07 1996
++++ ./lib/et/Makefile.in	Tue Nov 24 00:47:03 1998
+@@ -20,7 +20,7 @@
+ INSTALL=@INSTALL@
+ RANLIB=@RANLIB@
+ 
+-DEBUG=-O
++DEBUG=-O6
+ CFLAGS=$(DEBUG) -I$(top_srcdir)/h -I$(BUILDTOP)/h -I$(srcdir) -I. @CPPFLAGS@
+ 
+ OBJS=	com_err.o error_message.o et_name.o init_et.o
+--- ./lib/ss/Makefile.in.BAKKK	Tue Jun 18 21:47:10 1996
++++ ./lib/ss/Makefile.in	Tue Nov 24 00:47:03 1998
+@@ -20,7 +20,7 @@
+ RANLIB=@RANLIB@
+ COMPILE_ET=@COMPILE_ET@
+ 
+-DEBUG=-O
++DEBUG=-O6
+ CFLAGS=$(DEBUG) -I$(srcdir) -I$(top_srcdir)/h -I$(BUILDTOP)/h -I. @CPPFLAGS@
+ YFLAGS=-d
+ 
+--- ./lib/zephyr/Makefile.in.BAKKK	Tue Jun 18 21:47:16 1996
++++ ./lib/zephyr/Makefile.in	Tue Nov 24 00:47:03 1998
+@@ -19,7 +19,7 @@
+ RANLIB=@RANLIB@
+ COMPILE_ET=@COMPILE_ET@
+ 
+-DEBUG=-O
++DEBUG=-O6
+ CFLAGS= $(DEBUG) -DCONFDIR=\"$(confdir)\" -I$(top_srcdir)/h -I$(BUILDTOP)/h \
+ 	@X_CFLAGS@ @CPPFLAGS@
+ 
+--- ./server/Makefile.in.BAKKK	Thu Apr  4 01:41:13 1996
++++ ./server/Makefile.in	Tue Nov 24 00:47:03 1998
+@@ -19,7 +19,7 @@
+ INSTALL=@INSTALL@
+ COMPILE_ET=@COMPILE_ET@
+ 
+-DEBUG=-O
++DEBUG=-O6
+ CFLAGS=	$(DEBUG) -DCONFDIR=\"$(confdir)\" -I$(top_srcdir)/h -I$(BUILDTOP)/h \
+ 	-I. @CPPFLAGS@
+ LDFLAGS=$(DEBUG) -L$(BUILDTOP)/lib/zephyr @ET_LDFLAGS@ @LDFLAGS@
+--- ./zhm/Makefile.in.BAKKK	Sat Jul  8 00:17:22 1995
++++ ./zhm/Makefile.in	Tue Nov 24 00:47:03 1998
+@@ -18,7 +18,7 @@
+ CC=@CC@
+ INSTALL=@INSTALL@
+ 
+-DEBUG=-O
++DEBUG=-O6
+ CFLAGS=	$(DEBUG) -DCONFDIR=\"$(confdir)\" -I$(top_srcdir)/h -I$(BUILDTOP)/h \
+ 	@CPPFLAGS@
+ LDFLAGS=$(DEBUG) -L$(BUILDTOP)/lib/zephyr @ET_LDFLAGS@ @LDFLAGS@
