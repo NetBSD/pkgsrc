@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 1999/06/06 14:25:45 tv Exp $
+# $NetBSD: Makefile,v 1.35 1999/07/13 17:42:57 bad Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 #
 
@@ -32,11 +32,10 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ARGS= 	--prefix=${PREFIX}/${PGUSER} \
 			--enable-locale \
 			--with-tcl \
-			--with-tclconfig="${PREFIX}/lib/tcl8.0 ${PREFIX}/lib/tk8.0" \
-			--with-includes=${PREFIX}/include \
+			--with-tclconfig="${LOCALBASE}/lib/tcl8.0 ${LOCALBASE}/lib/tk8.0" \
+			--with-includes="${LOCALBASE}/include ${LOCALBASE}/include/tcl8.0 ${LOCALBASE}/include/tk8.0" \
 			--with-libs=${PREFIX}/lib \
 			--with-template=`${ECHO} ${OPSYS} | ${TR} '[A-Z]' '[a-z]'`
-CPPFLAGS+=		-I${LOCALBASE}/include/tcl8.0 -I${LOCALBASE}/include/tk8.0
 
 INSTALL_TARGET=	install install-man
 
