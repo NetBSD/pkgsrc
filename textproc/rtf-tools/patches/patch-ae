@@ -1,8 +1,81 @@
-$NetBSD: patch-ae,v 1.1.1.1 2001/04/27 12:18:33 agc Exp $
+$NetBSD: patch-ae,v 1.2 2001/05/31 11:04:56 agc Exp $
 
---- lib/reader.c.orig	Sun Apr  8 14:53:30 2001
-+++ lib/reader.c	Sun Apr  8 14:54:58 2001
-@@ -1194,6 +1194,7 @@
+--- lib/reader.c.orig	Tue Apr  5 12:14:55 1994
++++ lib/reader.c	Wed May 16 22:10:17 2001
+@@ -587,38 +587,45 @@
+ 	if (autoCharSetFlags == 0)
+ 		return;
+ 
+-	if ((autoCharSetFlags & rtfReadCharSet)
+-		&& RTFCheckCM (rtfControl, rtfCharSet))
++	if (autoCharSetFlags & rtfReadCharSet)
+ 	{
+-		ReadCharSetMaps ();
+-	}
+-	else if ((autoCharSetFlags & rtfSwitchCharSet)
+-		&& RTFCheckCMM (rtfControl, rtfCharAttr, rtfFontNum))
+-	{
+-		if ((fp = RTFGetFont (rtfParam)) != (RTFFont *) NULL)
++		if (RTFCheckCM (rtfControl, rtfCharSet))
+ 		{
+-			if (strncmp (fp->rtfFName, "Symbol", 6) == 0)
+-				curCharSet = rtfCSSymbol;
+-			else
+-				curCharSet = rtfCSGeneral;
+-			RTFSetCharSet (curCharSet);
++			ReadCharSetMaps ();
+ 		}
+-	}
+-	else if ((autoCharSetFlags & rtfSwitchCharSet) && rtfClass == rtfGroup)
+-	{
+-		switch (rtfMajor)
++		else if (RTFCheckCMM (rtfControl, rtfCharAttr, rtfFontNum))
+ 		{
+-		case rtfBeginGroup:
+-			if (csTop >= maxCSStack)
+-				RTFPanic ("_RTFGetToken: stack overflow");
+-			csStack[csTop++] = curCharSet;
+-			break;
+-		case rtfEndGroup:
+-			if (csTop <= 0)
+-				RTFPanic ("_RTFGetToken: stack underflow");
+-			curCharSet = csStack[--csTop];
++			if ((fp = RTFGetFont (rtfParam)) != (RTFFont *) NULL)
++			{
++				if (strncmp (fp->rtfFName, "Symbol", 6) == 0)
++					curCharSet = rtfCSSymbol;
++				else
++					curCharSet = rtfCSGeneral;
++				RTFSetCharSet (curCharSet);
++			}
++		}
++		/* so \plain will revert to normal character set -Ben */
++		else if (RTFCheckCMM (rtfControl, rtfCharAttr, rtfPlain))
++		{
++			curCharSet = rtfCSGeneral;
+ 			RTFSetCharSet (curCharSet);
+-			break;
++		}
++		else if (rtfClass == rtfGroup)
++		{
++			switch (rtfMajor)
++			{
++			case rtfBeginGroup:
++				if (csTop >= maxCSStack)
++					RTFPanic ("_RTFGetToken: stack overflow");
++				csStack[csTop++] = curCharSet;
++				break;
++			case rtfEndGroup:
++				if (csTop <= 0)
++					RTFPanic ("_RTFGetToken: stack underflow");
++				curCharSet = csStack[--csTop];
++				RTFSetCharSet (curCharSet);
++				break;
++			}
+ 		}
+ 	}
+ }
+@@ -1194,6 +1201,7 @@
  char	buf[rtfBufSiz], *bp;
  int	old = -1;
  char	*fn = "ReadFontTbl";
@@ -10,7 +83,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2001/04/27 12:18:33 agc Exp $
  
  	for (;;)
  	{
-@@ -1311,11 +1312,30 @@
+@@ -1311,11 +1319,30 @@
  				RTFPanic ("%s: missing \"}\"", fn);
  		}
  	}
