@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 1998/11/21 18:31:08 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.10 1999/01/06 13:13:37 frueauf Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-demo
@@ -17,6 +17,7 @@ libexec/xscreensaver/crystal
 libexec/xscreensaver/cynosure
 libexec/xscreensaver/decayscreen
 libexec/xscreensaver/deco
+libexec/xscreensaver/demon
 libexec/xscreensaver/discrete
 libexec/xscreensaver/distort
 libexec/xscreensaver/drift
@@ -49,6 +50,7 @@ libexec/xscreensaver/lightning
 libexec/xscreensaver/lisa
 libexec/xscreensaver/lissie
 libexec/xscreensaver/lmorph
+libexec/xscreensaver/loop
 libexec/xscreensaver/maze
 libexec/xscreensaver/moebius
 libexec/xscreensaver/moire
@@ -79,6 +81,7 @@ libexec/xscreensaver/starfish
 libexec/xscreensaver/strange
 libexec/xscreensaver/superquadrics
 libexec/xscreensaver/swirl
+libexec/xscreensaver/t3d
 libexec/xscreensaver/triangle
 libexec/xscreensaver/truchet
 libexec/xscreensaver/vines
@@ -138,6 +141,7 @@ man/man1/spiral.1
 man/man1/starfish.1
 man/man1/strange.1
 man/man1/swirl.1
+man/man1/t3d.1
 man/man1/vines.1
 man/man1/xjack.1
 man/man1/xlyap.1
