@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8496 2004/12/28 21:58:05 xtraeme Exp $
+$NetBSD: CHANGES,v 1.8497 2004/12/28 22:16:05 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6625,3 +6625,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added pfqueue-0.1.4 [xtraeme 2004-12-28]
 	Added uim-0.4.5 [wiz 2004-12-28]
 	Added epeg-0.9.0 [xtraeme 2004-12-28]
+	Updated mantis to 0.19.1nb1 [adrianp 2004-12-28]
