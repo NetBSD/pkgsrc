@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/04/17 04:45:08 fredb Exp $
+# $NetBSD: Makefile,v 1.14 2002/09/21 00:34:57 jlam Exp $
 #
 
 DISTNAME=		xisp-2.6p1
@@ -12,15 +12,16 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://xisp.hellug.gr/
 COMMENT=		User-friendly X11 interface to pppd/chat
 
-DEPENDS+=		jpeg-6b:../../graphics/jpeg
-DEPENDS+=		xforms>=0.9999:../../x11/xforms
-
+USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
-USE_XPM=		YES
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xisp
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/xisp/
 	${INSTALL_DATA} ${WRKSRC}/SECURITY ${PREFIX}/share/doc/xisp/
+
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../x11/xforms/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
