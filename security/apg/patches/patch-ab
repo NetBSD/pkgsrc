@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/03/05 23:21:03 hubertf Exp $
+
+--- apg.c.orig	Thu Feb 22 12:00:10 2001
++++ apg.c
+@@ -35,6 +35,9 @@
+ #include <strings.h>
+ #include <string.h>
+ #include <time.h>
++#ifdef __NetBSD__
++#include <unistd.h>
++#endif
+ #define MAX_MODE_LENGTH   5
+ 
+ #ifndef _XOPEN_SOURCE
