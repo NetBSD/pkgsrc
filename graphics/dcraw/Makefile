@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/25 10:39:18 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/25 00:43:31 snj Exp $
 #
 
 DISTNAME=		dcraw
@@ -15,7 +15,7 @@ HOMEPAGE=		http://www.cybercom.net/~dcoffin/dcraw/
 COMMENT=		Raw digital camera decoder
 
 WRKSRC=		${WRKDIR}
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 do-extract:
 	(cd ${DISTDIR}/${DIST_SUBDIR} && ${CP} ${DISTFILES} ${WRKSRC})
