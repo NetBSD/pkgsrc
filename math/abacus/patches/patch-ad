@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 1998/12/13 00:29:20 frueauf Exp $
+
+--- tcl_interf/Makefile.orig	Sat Dec 12 14:29:00 1998
++++ tcl_interf/Makefile	Sat Dec 12 14:29:00 1998
+@@ -14,7 +14,7 @@
+ OTHERSOURCES = 
+ SOURCES = $(CSOURCES) $(OTHERSOURCES)
+ XXL_LIBS = $(LIBDIR)/libcalc.a $(LIBDIR)/libio.a $(LIBDIR)/libcanvas.a
+-LIBS =  -ltk8.0 -ltcl8.0 -lX11 -ldl -lm 
++LIBS =  -ltk80 -ltcl80 -lX11 -lm 
+ 
+ include ../Makefile.options
+ 
