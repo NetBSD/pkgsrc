@@ -1,0 +1,177 @@
+# start of install
+#
+# $NetBSD: install,v 1.1 2001/11/19 16:18:44 jlam Exp $
+
+case ${STAGE} in
+PRE-INSTALL)
+	if [ -n "${PKG_GROUP}" ]
+	then
+		# We need to check that ${PKG_GROUP} exists before adding the
+		# user.  Do it with chgrp to be able to use NIS.
+		#
+	        ${TOUCH} /tmp/grouptest.$$
+		${CHGRP} ${PKG_GROUP} /tmp/grouptest.$$ >/dev/null 2>&1
+		if [ $? -eq 0 ]
+		then
+			${ECHO} "Group '${PKG_GROUP}' already exists."
+		else
+			groupid_option=
+			if [ -n "${PKG_GROUPID}" ]
+			then
+				groupid_option="-g ${PKG_GROUPID}"
+			fi
+			${ECHO} "Creating '${PKG_GROUP}' group..."
+			${GROUPADD} ${groupid_option} ${PKG_GROUP}
+			${ECHO} "Done."
+		fi
+		${RM} -f /tmp/grouptest.$$
+	fi
+
+	if [ -n "${PKG_USER}" -a -n "${PKG_GROUP}" ]
+	then
+		# Use `id' to be able to use NIS.
+		${ID} ${PKG_USER} >/dev/null 2>&1
+		if [ $? -eq 0 ]
+		then
+			${ECHO} "User '${PKG_USER}' already exists."
+		else
+			userid_option=
+			if [ -n "${PKG_USERID}" ]
+			then
+				userid_option="-u ${PKG_USERID}"
+			fi
+			${ECHO} "Creating '${PKG_USER}' user..."
+			${USERADD} -c "@PKG_USER_DESCR@"		\
+				${userid_option}			\
+				-g ${PKG_GROUP}				\
+				-d @PKG_USER_HOME@			\
+				-s @PKG_USER_SHELL@			\
+				${PKG_USER}
+			${ECHO} "Done."
+		fi
+	fi
+        ;;
+
+POST-INSTALL)
+	# Create package directories.
+	set -- ${MAKE_DIRS} ${OWN_DIRS}
+	for dir
+	do
+		${MKDIR} ${dir}
+	done
+	set -- ${MAKE_DIRS_PERMS} ${OWN_DIRS_PERMS}
+	while [ $# -gt 0 ]
+	do
+		dir="$1"; owner="$2"; group="$3"; mode="$4"
+		shift; shift; shift; shift
+		${MKDIR} ${dir}
+		${CHOWN} ${owner} ${dir}
+		${CHGRP} ${group} ${dir}
+		${CHMOD} ${mode} ${dir}
+	done
+
+	if [ -n "${CONF_FILES}" -o -n "${CONF_FILES_PERMS}" -o	\
+	     -n "${SUPPORT_FILES}" ]
+	then
+		${ECHO} "Installing configuration files:"
+	fi
+	set -- ${CONF_FILES}
+	while [ $# -gt 0 ]
+	do
+		samplefile="$1"; file="$2"
+		shift; shift
+
+		if [ -f ${file} ]
+		then
+			${ECHO} "    ${file} already exists"
+		else
+			${ECHO} "    ${file}"
+			${CP} ${samplefile} ${file}
+			${CHMOD} @CONF_FILES_MODE@ ${file}
+		fi
+	done
+	set -- ${CONF_FILES_PERMS}
+	while [ $# -gt 0 ]
+	do
+		samplefile="$1"; file="$2"; owner="$3"; group="$4"; mode="$5"
+		shift; shift; shift; shift; shift
+
+		if [ -f ${file} ]
+		then
+			${ECHO} "    ${file} already exists"
+		else
+			${ECHO} "    ${file}"
+			${CP} ${samplefile} ${file}
+			${CHOWN} ${owner} ${file}
+			${CHGRP} ${group} ${file}
+			${CHMOD} ${mode} ${file}
+		fi
+	done
+	set -- ${SUPPORT_FILES}
+	while [ $# -gt 0 ]
+	do
+		samplefile="$1"; file="$2"
+		shift; shift
+
+		if [ -f ${file} ]
+		then
+			${ECHO} "    ${file} already exists"
+		else
+			${ECHO} "    ${file}"
+			${CP} ${samplefile} ${file}
+			${CHMOD} @SUPPORT_FILES_MODE@ ${file}
+		fi
+	done
+	set -- ${RCD_SCRIPTS}
+	while [ $# -gt 0 ]
+	do
+		samplefile="$1"; file="$2"
+		shift; shift
+
+		if [ -f ${file} ]
+		then
+			${ECHO} "    ${file} already exists"
+		else
+			${ECHO} "    ${file}"
+			${CP} ${samplefile} ${file}
+			${CHMOD} @RCD_SCRIPTS_MODE@ ${file}
+		fi
+	done
+
+	if [ -n "${CONF_FILES}" -o -n "${CONF_FILES_PERMS}" ]
+	then
+		${CAT} << EOF
+
+===========================================================================
+You may wish to customize the following files:
+
+EOF
+	set -- ${CONF_FILES}
+	while [ $# -gt 0 ]
+	do
+		samplefile="$1"; file="$2"
+		shift; shift
+
+		${ECHO} "	${file}"
+       	done
+	set -- ${CONF_FILES_PERMS}
+	while [ $# -gt 0 ]
+	do
+		samplefile="$1"; file="$2"; owner="$3"; group="$4"; mode="$5"
+		shift; shift; shift; shift; shift
+
+		${ECHO} "	${file}"
+	done
+	${CAT} << EOF
+===========================================================================
+EOF
+	fi
+	;;
+
+*)
+	${ECHO} "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+
+# end of install

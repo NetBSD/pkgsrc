@@ -1,0 +1,153 @@
+# start of deinstall
+#
+# $NetBSD: deinstall,v 1.1 2001/11/19 16:18:44 jlam Exp $
+
+ALL_FILES="${CONF_FILES} ${SUPPORT_FILES} ${RCD_SCRIPTS}"
+set -- ${CONF_FILES_PERMS}
+while [ $# -gt 0 ]
+do
+	samplefile="$1"; file="$2"; owner="$3"; group="$4"; mode="$5"
+	shift; shift; shift; shift; shift 
+	ALL_FILES="${ALL_FILES} ${samplefile} ${file}"
+done
+
+ALL_MAKE_DIRS="${MAKE_DIRS}"
+set -- ${MAKE_DIRS_PERMS}
+while [ $# -gt 0 ]
+do
+	dir="$1"; owner="$2"; group="$3"; mode="$4"
+	shift; shift; shift; shift
+	ALL_MAKE_DIRS="${ALL_MAKE_DIRS} ${dir}"
+done
+ALL_DIRS="${ALL_MAKE_DIRS} ${OWN_DIRS}"
+set -- ${OWN_DIRS_PERMS}
+while [ $# -gt 0 ]
+do
+	dir="$1"; owner="$2"; group="$3"; mode="$4"
+	shift; shift; shift; shift
+	ALL_DIRS="${ALL_DIRS} ${dir}"
+done
+ALL_DIRS=`								\
+	${ECHO} ${ALL_DIRS} |						\
+	${SED} "s,[ 	][ 	]*, ,g" |				\
+	${TR} ' ' "\012" |						\
+	${SORT} -r							\
+`
+
+case ${STAGE} in
+DEINSTALL)
+	# Remove configuration files if they don't differ from the default
+	# config file.
+	#
+	set -- ${ALL_FILES}
+	while [ $# -gt 0 ]
+	do
+		samplefile="$1"; file="$2"
+		shift; shift
+
+		if [ "${file}" != "${samplefile}" -a			\
+		     -f ${file} -a -f ${samplefile} ]
+		then
+			if ${CMP} -s ${file} ${samplefile}
+			then
+				${RM} -f ${file}
+			fi
+		fi
+	done
+	;;
+
+POST-DEINSTALL)
+	modified_files=''
+	set -- ${ALL_FILES}
+	while [ $# -gt 0 ]
+	do
+		samplefile="$1"; file="$2"
+		shift; shift
+
+		if [ -f ${file} ]
+		then
+			modified_files="${modified_files} ${file}"
+		fi
+	done
+
+	existing_dirs=''
+	set -- ${ALL_DIRS}
+	while [ $# -gt 0 ]
+	do
+		dir=$1; shift
+		is_make_dir=0
+		for make_dir in __dummy ${ALL_MAKE_DIRS}
+		do
+			if [ "${make_dir}" != "__dummy" -a		\
+			     "${dir}" = "${make_dir}" ]
+			then
+				is_make_dir=1
+				break
+			fi
+		done
+
+		${RMDIR} -p ${dir} 2>/dev/null || ${TRUE}
+		if [ ${is_make_dir} -eq 0 -a -d ${dir} ]
+		then
+			existing_dirs="${existing_dirs} ${dir}"
+		fi
+	done
+
+	if [ -n "${PKG_USER}" -o -n "${PKG_GROUP}" -o			\
+	     -n "${modified_files}" -o -n "${existing_dirs}" ]
+	then
+		${CAT} << EOF
+===========================================================================
+If you won't be using ${PKGNAME} any longer, you may want to remove
+EOF
+		if [ -n "${PKG_USER}" ]
+		then
+			${CAT} << EOF
+
+  * the \`${PKG_USER}' user
+EOF
+		fi
+		if [ -n "${PKG_GROUP}" ]
+		then
+			${CAT} << EOF
+
+  * the \`${PKG_GROUP}' group
+EOF
+		fi
+		if [ -n "${modified_files}" ]
+		then
+			${CAT} << EOF
+
+  * the following files:
+
+EOF
+			for file in ${modified_files}
+			do
+				${ECHO} "	${file}"
+			done
+		fi
+		if [ -n "${existing_dirs}" ]
+		then
+			${CAT} << EOF
+
+  * the following directories:
+
+EOF
+			for dir in ${existing_dirs}
+			do
+				${ECHO} "	${dir}"
+			done
+		fi
+		${CAT} << EOF
+===========================================================================
+EOF
+	fi
+	;;
+
+*)
+	${ECHO} "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+
+# end of deinstall
