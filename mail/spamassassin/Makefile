@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2002/08/26 16:00:52 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2002/08/30 10:50:51 abs Exp $
 
 DISTNAME=	Mail-SpamAssassin-2.31
 PKGNAME=	spamassassin-2.31
 SVR4_PKGNAME=	sa
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
@@ -12,6 +13,8 @@ COMMENT=	mail filter to identify spam
 
 DEPENDS+=	p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
 DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
+
+RCD_SCRIPTS=	spamd
 
 USE_BUILDLINK_ONLY=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Mail/SpamAssassin/.packlist
@@ -28,6 +31,8 @@ do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 post-install:
+	${SED}  -e 's:@PREFIX@:${PREFIX}:' ${FILESDIR}/spamd.sh \
+	    > ${PREFIX}/etc/rc.d/spamd
 .for d in spamassassin spamassassin/sql spamassassin/spamd
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/$d
 .endfor
@@ -37,4 +42,5 @@ post-install:
 .endfor
 
 .include "../../lang/perl5/buildlink.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2002/08/26 16:00:52 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/08/30 10:50:51 abs Exp $
 @comment bin/spamassassin
 @comment bin/spamc
 @comment bin/spamd
 @comment bin/spamproxyd
+etc/rc.d/spamd
 share/doc/spamassassin/README
 share/doc/spamassassin/procmailrc.example
 share/doc/spamassassin/sample-nonspam.txt
