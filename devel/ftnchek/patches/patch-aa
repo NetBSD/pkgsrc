@@ -1,7 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2002/05/20 17:41:05 cjep Exp $
---- configure.orig	Tue Nov 13 02:32:40 2001
-+++ configure	Mon Apr 29 11:09:02 2002
-@@ -2731,6 +2731,7 @@
+$NetBSD: patch-aa,v 1.6 2003/06/29 22:24:33 jtb Exp $
+
+--- configure.orig
++++ configure
+@@ -5816,6 +5806,7 @@
      if test -n "$GCC"; then
        OPT="-O2";
      fi;;
@@ -9,39 +10,12 @@ $NetBSD: patch-aa,v 1.5 2002/05/20 17:41:05 cjep Exp $
    next*)
      OPT="-O2";;
  
-@@ -2762,26 +2763,6 @@
-     OPT="-O";;
- esac
- 
--if test -n "$GCC"; then
--  case "$host_cpu" in
--  i386*)
--    OPT="$OPT -march=i386"
--    ;;
--  i486*)
--    OPT="$OPT -march=i486"
--    ;;
--  i586*)
--    OPT="$OPT -march=i586"
--    ;;
--  i686*)
--    OPT="$OPT -march=i686"
--    ;;
--  k6*)
--    OPT="$OPT -march=k6"
--    ;;
--  esac
--fi
--
- echo $ac_n "checking whether $CC accepts function prototypes""... $ac_c" 1>&6
- echo "configure:2787: checking whether $CC accepts function prototypes" >&5
- if eval "test \"`echo '$''{'ac_cv_prog_CC_protos'+set}'`\" = set"; then
-@@ -2817,7 +2798,7 @@
+@@ -5931,7 +5922,7 @@
  fi
  
  
 -CFLAGS="-DUNIX \$(OPT) $OS_FLAGS $PROTOFLAG \$(OPTIONS)"
 +CFLAGS="$CFLAGS -DUNIX \$(OPT) $OS_FLAGS $PROTOFLAG \$(OPTIONS)"
- echo "$ac_t""Compile command is $CC $CFLAGS" 1>&6
- echo "$ac_t""\$(OPT) is $OPT" 1>&6
- echo "$ac_t""\$(OPTIONS) is for optional defines, normally blank" 1>&6
+ echo "$as_me:$LINENO: result: Compile command is $CC $CFLAGS" >&5
+ echo "${ECHO_T}Compile command is $CC $CFLAGS" >&6
+ echo "$as_me:$LINENO: result: \$(OPT) is $OPT" >&5
