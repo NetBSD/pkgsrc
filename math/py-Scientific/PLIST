@@ -1,8 +1,22 @@
-@comment $NetBSD: PLIST,v 1.4 2003/09/14 16:43:51 recht Exp $
-bin/mpipython2.0
+@comment $NetBSD: PLIST,v 1.5 2004/01/18 23:57:50 recht Exp $
+bin/mpipython${PYVERSSUFFIX}
+${PYINC}/Scientific/PyBSP_API.h
 ${PYINC}/Scientific/PyMPI_API.h
+${PYINC}/Scientific/bspmodule.h
 ${PYINC}/Scientific/mpimodule.h
 ${PYINC}/Scientific/netcdfmodule.h
+${PYSITELIB}/Scientific/BSP/Console.py
+${PYSITELIB}/Scientific/BSP/Console.pyc
+${PYSITELIB}/Scientific/BSP/Console.pyo
+${PYSITELIB}/Scientific/BSP/IO.py
+${PYSITELIB}/Scientific/BSP/IO.pyc
+${PYSITELIB}/Scientific/BSP/IO.pyo
+${PYSITELIB}/Scientific/BSP/__init__.py
+${PYSITELIB}/Scientific/BSP/__init__.pyc
+${PYSITELIB}/Scientific/BSP/__init__.pyo
+${PYSITELIB}/Scientific/BSP/core.py
+${PYSITELIB}/Scientific/BSP/core.pyc
+${PYSITELIB}/Scientific/BSP/core.pyo
 ${PYSITELIB}/Scientific/DictWithDefault.py
 ${PYSITELIB}/Scientific/DictWithDefault.pyc
 ${PYSITELIB}/Scientific/DictWithDefault.pyo
@@ -24,6 +38,9 @@ ${PYSITELIB}/Scientific/Functions/LeastSquares.pyo
 ${PYSITELIB}/Scientific/Functions/Polynomial.py
 ${PYSITELIB}/Scientific/Functions/Polynomial.pyc
 ${PYSITELIB}/Scientific/Functions/Polynomial.pyo
+${PYSITELIB}/Scientific/Functions/Rational.py
+${PYSITELIB}/Scientific/Functions/Rational.pyc
+${PYSITELIB}/Scientific/Functions/Rational.pyo
 ${PYSITELIB}/Scientific/Functions/Romberg.py
 ${PYSITELIB}/Scientific/Functions/Romberg.pyc
 ${PYSITELIB}/Scientific/Functions/Romberg.pyo
@@ -81,6 +98,9 @@ ${PYSITELIB}/Scientific/MPI/IO.pyo
 ${PYSITELIB}/Scientific/MPI/__init__.py
 ${PYSITELIB}/Scientific/MPI/__init__.pyc
 ${PYSITELIB}/Scientific/MPI/__init__.pyo
+${PYSITELIB}/Scientific/MPI/core.py
+${PYSITELIB}/Scientific/MPI/core.pyc
+${PYSITELIB}/Scientific/MPI/core.pyo
 ${PYSITELIB}/Scientific/Mathematica.py
 ${PYSITELIB}/Scientific/Mathematica.pyc
 ${PYSITELIB}/Scientific/Mathematica.pyo
@@ -96,6 +116,12 @@ ${PYSITELIB}/Scientific/Physics/Potential.pyo
 ${PYSITELIB}/Scientific/Physics/__init__.py
 ${PYSITELIB}/Scientific/Physics/__init__.pyc
 ${PYSITELIB}/Scientific/Physics/__init__.pyo
+${PYSITELIB}/Scientific/Signals/Models.py
+${PYSITELIB}/Scientific/Signals/Models.pyc
+${PYSITELIB}/Scientific/Signals/Models.pyo
+${PYSITELIB}/Scientific/Signals/__init__.py
+${PYSITELIB}/Scientific/Signals/__init__.pyc
+${PYSITELIB}/Scientific/Signals/__init__.pyo
 ${PYSITELIB}/Scientific/Statistics/Histogram.py
 ${PYSITELIB}/Scientific/Statistics/Histogram.pyc
 ${PYSITELIB}/Scientific/Statistics/Histogram.pyo
@@ -150,10 +176,12 @@ ${PYSITELIB}/Scientific/${LOWER_OPSYS}1/Scientific_netcdf.so
 @dirrm ${PYSITELIB}/Scientific/TkWidgets
 @dirrm ${PYSITELIB}/Scientific/Threading
 @dirrm ${PYSITELIB}/Scientific/Statistics
+@dirrm ${PYSITELIB}/Scientific/Signals
 @dirrm ${PYSITELIB}/Scientific/Physics
 @dirrm ${PYSITELIB}/Scientific/MPI
 @dirrm ${PYSITELIB}/Scientific/IO
 @dirrm ${PYSITELIB}/Scientific/Geometry
 @dirrm ${PYSITELIB}/Scientific/Functions
+@dirrm ${PYSITELIB}/Scientific/BSP
 @dirrm ${PYSITELIB}/Scientific
 @dirrm ${PYINC}/Scientific
