@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1395 2004/02/13 12:03:06 sketch Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1396 2004/02/13 19:02:07 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -2017,13 +2017,13 @@ ${WRKDIR}:
 	fi
 .endif # WRKOBJDIR
 
-_EXTRACT_SUFFICES=	.tar.gz .tgz .tar.bz2 .tbz .tar.Z .tar _tar.gz
-_EXTRACT_SUFFICES+=	.shar.gz .shar.bz2 .shar.Z .shar
-_EXTRACT_SUFFICES+=	.zip
-_EXTRACT_SUFFICES+=	.lha .lzh
-_EXTRACT_SUFFICES+=	.Z .bz2 .gz
-_EXTRACT_SUFFICES+=	.zoo
-_EXTRACT_SUFFICES+=	.rar
+_EXTRACT_SUFFIXES=	.tar.gz .tgz .tar.bz2 .tbz .tar.Z .tar _tar.gz
+_EXTRACT_SUFFIXES+=	.shar.gz .shar.bz2 .shar.Z .shar
+_EXTRACT_SUFFIXES+=	.zip
+_EXTRACT_SUFFIXES+=	.lha .lzh
+_EXTRACT_SUFFIXES+=	.Z .bz2 .gz
+_EXTRACT_SUFFIXES+=	.zoo
+_EXTRACT_SUFFIXES+=	.rar
 
 # If the distfile has a tar.bz2 suffix, use bzcat in preference to gzcat,
 # pulling in the "bzip2" package if necessary.  [Note: this is only for
@@ -2077,7 +2077,7 @@ DECOMPRESS_CMD.bz2?=		${BZCAT}
 DECOMPRESS_CMD.gz?=		${GZCAT}
 
 DECOMPRESS_CMD?=		${GZCAT}
-.for __suffix__ in ${_EXTRACT_SUFFICES}
+.for __suffix__ in ${_EXTRACT_SUFFIXES}
 .  if !defined(DECOMPRESS_CMD${__suffix__})
 DECOMPRESS_CMD${__suffix__}?=	${DECOMPRESS_CMD}
 .  endif
@@ -2117,7 +2117,7 @@ _DFLT_EXTRACT_CMD?=	{ ${DECOMPRESS_CMD} $${extract_file} ; dd if=/dev/zero bs=10
 _DFLT_EXTRACT_CMD?=	${DECOMPRESS_CMD} $${extract_file} | ${GTAR} -xf - ${EXTRACT_ELEMENTS}
 .endif
 
-.for __suffix__ in ${_EXTRACT_SUFFICES}
+.for __suffix__ in ${_EXTRACT_SUFFIXES}
 .  if !defined(EXTRACT_CMD${__suffix__})
 .    if defined(EXTRACT_USING_PAX)
 EXTRACT_CMD${__suffix__}?=	{ ${DECOMPRESS_CMD${__suffix__}} $${extract_file} ; dd if=/dev/zero bs=10k count=2; } | ${PAX} -O -r ${EXTRACT_ELEMENTS}
@@ -2132,7 +2132,7 @@ EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${G
 # on the file extension of the archive.
 #
 _SHELL_EXTRACT=		case $${extract_file} in
-.for __suffix__ in ${_EXTRACT_SUFFICES}
+.for __suffix__ in ${_EXTRACT_SUFFIXES}
 _SHELL_EXTRACT+=	*${__suffix__})	${EXTRACT_CMD${__suffix__}} ;;
 .endfor
 _SHELL_EXTRACT+=	*)		${_DFLT_EXTRACT_CMD} ;;
