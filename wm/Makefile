@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/12/18 13:54:39 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/01/18 20:21:56 jlam Exp $
 #
 
     SUBDIR += 9wm
@@ -29,5 +29,7 @@
     SUBDIR += wmextra
     SUBDIR += wmthemes
     SUBDIR += wmx
+    SUBDIR += wmx-current
+    SUBDIR += wmx-gnome-current
 
 .include "../mk/bsd.pkg.subdir.mk"
