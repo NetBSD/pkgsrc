@@ -1,0 +1,93 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/02/09 03:27:02 jtb Exp $
+
+--- configure.orig	Sun Nov 19 23:20:25 2000
++++ configure
+@@ -2020,7 +2020,7 @@
+ for geom_z in $geom_dirs ; do
+   geom_z=`eval echo $geom_z`
+   if test "$geom_z" != "" ; then
+-    geom_l_option="-L$geom_z"
++    geom_l_option="-R$geom_z -L$geom_z"
+   else
+     geom_l_option=""
+   fi
+@@ -2069,7 +2069,7 @@
+ for geom_z in $geom_dirs ; do
+   geom_z=`eval echo $geom_z`
+   if test "$geom_z" != "" ; then
+-    geom_l_option="-L$geom_z"
++    geom_l_option="-R$geom_z -L$geom_z"
+   else
+     geom_l_option=""
+   fi
+@@ -2122,7 +2122,7 @@
+ for geom_z in $geom_dirs ; do
+   geom_z=`eval echo $geom_z`
+   if test "$geom_z" != "" ; then
+-    geom_l_option="-L$geom_z"
++    geom_l_option="-R$geom_z -L$geom_z"
+   else
+     geom_l_option=""
+   fi
+@@ -2190,7 +2190,7 @@
+ for geom_z in $geom_dirs ; do
+   geom_z=`eval echo $geom_z`
+   if test "$geom_z" != "" ; then
+-    geom_l_option="-L$geom_z"
++    geom_l_option="-R$geom_z -L$geom_z"
+   else
+     geom_l_option=""
+   fi
+@@ -2336,7 +2336,7 @@
+ for geom_z in $geom_dirs ; do
+   geom_z=`eval echo $geom_z`
+   if test "$geom_z" != "" ; then
+-    geom_l_option="-L$geom_z"
++    geom_l_option="--R$geom_z L$geom_z"
+   else
+     geom_l_option=""
+   fi
+@@ -2470,7 +2470,7 @@
+ for geom_z in $geom_dirs ; do
+   geom_z=`eval echo $geom_z`
+   if test "$geom_z" != "" ; then
+-    geom_l_option="-L$geom_z"
++    geom_l_option="-R$geom_z -L$geom_z"
+   else
+     geom_l_option=""
+   fi
+@@ -2527,7 +2527,7 @@
+ for geom_z in $geom_dirs ; do
+   geom_z=`eval echo $geom_z`
+   if test "$geom_z" != "" ; then
+-    geom_l_option="-L$geom_z"
++    geom_l_option="-R$geom_z -L$geom_z"
+   else
+     geom_l_option=""
+   fi
+@@ -2690,7 +2690,7 @@
+ for geom_z in $geom_dirs ; do
+   geom_z=`eval echo $geom_z`
+   if test "$geom_z" != "" ; then
+-    geom_l_option="-L$geom_z"
++    geom_l_option="-R$geom_z -L$geom_z"
+   else
+     geom_l_option=""
+   fi
+@@ -3118,6 +3118,7 @@
+ cat > conftest.$ac_ext <<EOF
+ #line 3120 "configure"
+ #include "confdefs.h"
++#include <stdio.h>
+  #include <sys/socket.h> 
+ int main() {
+  int s = socket(AF_UNIX, SOCK_STREAM, 0); 
+@@ -3362,7 +3363,7 @@
+ moduledir="\$(exec_prefix)/bin"
+ 
+ 
+-geomdatadir="\$(prefix)/data"
++geomdatadir="\$(prefix)/share/geomview/data"
+ 
+ 
+ # cache 'moduledir' and 'geomdatadir' so individual module configure scripts

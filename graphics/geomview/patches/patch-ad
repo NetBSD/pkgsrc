@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/02/09 03:27:02 jtb Exp $
+
+--- src/bin/geomview/common/comm.c.orig	Fri Feb  9 02:09:35 2001
++++ src/bin/geomview/common/comm.c
+@@ -624,7 +624,7 @@
+ 	char envbuf[10240];
+ 
+ 	if(otherpgrp) {
+-#if defined(NeXT) || (defined(BSD) && !defined(__osf__)) || defined(__alpha__)
++#if defined(NeXT) || (defined(BSD) && !defined(__osf__)) || defined(__alpha__) || defined(__NetBSD__)
+ 	    setpgrp(0,getpid());
+ #else
+ 	    setpgrp();

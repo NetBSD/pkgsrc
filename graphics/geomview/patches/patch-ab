@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/02/09 03:27:02 jtb Exp $
+
+--- src/lib/oogl/util/error.c.orig	Thu Feb  8 23:58:53 2001
++++ src/lib/oogl/util/error.c
+@@ -102,7 +102,7 @@
+ const char *
+ sperrno(unsigned int err)
+ {
+-#if !defined(__FreeBSD__) && !defined(__GLIBC__)
++#if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__GLIBC__)
+   extern int sys_nerr;
+   extern char *sys_errlist[];
+ #endif
