@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/12/21 11:33:28 agc Exp $
+
+SHA1 (mlterm-2.0.0.tar.gz) = 6381a5f195d858a4ba381c6a63a87256092a9248
+Size (mlterm-2.0.0.tar.gz) = 1346691 bytes
+SHA1 (patch-aa) = bbf05e4c136485d99d2ee5fe78a04e94ff43f00e
+SHA1 (patch-ab) = 5b113fdf21f98e47099a97b14903874bf8ec5c3f
+SHA1 (patch-ac) = 5fdfbd67d21cbc867e948ec3ac669155f7229092
