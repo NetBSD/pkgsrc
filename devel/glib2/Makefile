@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/01/22 08:24:29 grant Exp $
+# $NetBSD: Makefile,v 1.35 2004/02/10 01:56:42 xtraeme Exp $
 
 DISTNAME=		glib-2.2.3
 PKGREVISION=		1
@@ -14,7 +14,7 @@ HOMEPAGE=		http://www.gtk.org/docs/glib_toc.html
 COMMENT=		Some useful routines for C programming
 
 BUILD_USES_MSGFMT=	yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
 USE_PERL5=		yes
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 
-.include "../../converters/libiconv/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 
 .if defined(ICONV_IS_GNU)
 CONFIGURE_ARGS+=	--with-libiconv=gnu
@@ -40,8 +40,8 @@ CONFIGURE_ARGS+=	--with-libiconv=gnu
 
 TEST_TARGET=		check
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
