@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.283 2003/01/28 22:03:00 jlam Exp $
+# $NetBSD: Packages.txt,v 1.284 2003/01/29 08:50:11 grant Exp $
 ###########################################################################
 
 			==========================
@@ -527,17 +527,17 @@ bulk build inside a chroot environment.
 The first step to do so is setting up a chroot sandbox, e.g. /usr/sandbox.
 After extracting all the sets from a NetBSD installation or doing a
 "make distribution DESTDIR=/usr/sandbox" in src/etc, make sure the following
-items are present and properly configures:
+items are present and properly configured:
 
  * kernel:
    cp /netbsd /usr/sandbox
  * /dev/*:
    cd /usr/sandbox/dev ; sh MAKEDEV all
- * /etc/resolv.conf (for security/snmpd and mail):
+ * /etc/resolv.conf (for security/smtpd and mail):
    cp /etc/resolv.conf /usr/sandbox/etc
  * working(!) mail config (hostname, sendmail.cf):
    cp /etc/mail/sendmail.cf /usr/sandbox/etc/mail
- * /etc/localtime (for security/snmpd):
+ * /etc/localtime (for security/smtpd):
    ln -sf /usr/share/zoneinfo/GMT /usr/sandbox/etc/localtime
  * /usr/src (system sources, for sysutils/aperture, net/ppp-mppe):
    ln -s ../disk1/cvs .
