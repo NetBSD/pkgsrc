@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5330 2004/03/29 00:51:48 dillo Exp $
+$NetBSD: CHANGES,v 1.5331 2004/03/29 00:55:11 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1559,3 +1559,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated latex-mk to 1.2 [dmcmahill 2004-03-28]
 	Added py-textile-2.0 [minskim 2004-03-28]
 	Updated xv-3.10anb7 [dillo 2004-03-29]
+	Updated zoom-1.0.1anb2 [dillo 2004-03-29]
