@@ -1,12 +1,14 @@
-$NetBSD: patch-ac,v 1.7 2001/09/17 15:17:32 tron Exp $
+$NetBSD: patch-ac,v 1.8 2002/02/10 12:51:00 abs Exp $
 
---- magick/xwindow.c.orig	Sun Sep  9 04:04:32 2001
-+++ magick/xwindow.c	Mon Sep 17 16:40:54 2001
-@@ -2424,6 +2424,7 @@
-   annotate_info->previous=(XAnnotateInfo *) NULL;
-   annotate_info->next=(XAnnotateInfo *) NULL;
-   (void) setlocale(LC_ALL,"");
-+  (void) setlocale(LC_CTYPE,"C");
-   (void) setlocale(LC_NUMERIC,"C");
-   XSupportsLocale();
-   XSetLocaleModifiers("");
+--- configure.orig	Wed Sep 12 17:39:17 2001
++++ configure
+@@ -4128,9 +4128,6 @@
+ eval "eval INFO_DIR=$infodir"
+ eval "eval MAN_DIR=$mandir"
+ 
+-LDFLAGS="$LDFLAGS -L$LIB_DIR"
+-CPPFLAGS="$CPPFLAGS -I$INCLUDE_DIR"
+-
+ # Extend includedir to include magick subdirectory offset
+ includedir="$includedir/magick"
+ 

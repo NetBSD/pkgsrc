@@ -1,14 +1,12 @@
-$NetBSD: patch-ae,v 1.1 2001/07/02 16:48:32 jlam Exp $
+$NetBSD: patch-ae,v 1.2 2002/02/10 12:51:00 abs Exp $
 
---- configure.in.orig	Sat Jan 27 12:09:13 2001
-+++ configure.in
-@@ -408,9 +408,6 @@
- eval "eval MAN_DIR=$mandir"
- 
- 
--LDFLAGS="$LDFLAGS -L$LIB_DIR"
--CPPFLAGS="$CPPFLAGS -I$INCLUDE_DIR"
--
- # Extend includedir to include magick subdirectory offset
- includedir="$includedir/magick"
- 
+--- magick/magick.c.orig	Sun Sep 16 23:36:12 2001
++++ magick/magick.c
+@@ -421,6 +421,7 @@
+ #endif
+   SetClientName(filename);
+   (void) setlocale(LC_ALL,"");
++  (void) setlocale(LC_CTYPE,"C");
+   (void) setlocale(LC_NUMERIC,"C");
+ }
+ 

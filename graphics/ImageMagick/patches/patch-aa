@@ -1,12 +1,15 @@
-$NetBSD: patch-aa,v 1.16 2001/09/17 15:17:32 tron Exp $
+$NetBSD: patch-aa,v 1.17 2002/02/10 12:51:00 abs Exp $
 
---- magick/magick.c.orig	Mon Sep 17 01:36:12 2001
-+++ magick/magick.c	Mon Sep 17 16:39:26 2001
-@@ -421,6 +421,7 @@
- #endif
-   SetClientName(filename);
-   (void) setlocale(LC_ALL,"");
-+  (void) setlocale(LC_CTYPE,"C");
-   (void) setlocale(LC_NUMERIC,"C");
- }
- 
+--- coders/fits.c.orig	Sun Feb 10 10:31:38 2002
++++ coders/fits.c
+@@ -183,7 +183,9 @@
+     y;
+ 
+   long
+-    count,
++    count;
++
++  int32_t
+     quantum;
+ 
+   register IndexPacket
