@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2601 2003/06/27 12:03:05 agc Exp $
+$NetBSD: CHANGES,v 1.2602 2003/06/27 12:19:54 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2583,3 +2583,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gaim to 0.64nb1 [jmmv 2003-06-27]
 	Updated boehm-gc to 6.2 [jmmv 2003-06-27]
 	Added tob-0.25 [agc 2003-06-27]
+	Updated hylafax to 4.1.5 [hubertf 2003-06-27]
