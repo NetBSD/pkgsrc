@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.14 2004/09/02 21:56:32 xtraeme Exp $
+$NetBSD: distinfo,v 1.15 2005/02/23 18:43:54 wiz Exp $
 
 SHA1 (fluxbox-0.9.10.tar.bz2) = 70bb65327b75c57082d812179e3ec37a9d3f8734
+RMD160 (fluxbox-0.9.10.tar.bz2) = 83a403e7840657ac6c18daaf7d5d33f55f0a8d5a
 Size (fluxbox-0.9.10.tar.bz2) = 556030 bytes
 SHA1 (patch-aa) = 4bb7da68b65c4c83900ef7491db724b3932ef052
 SHA1 (patch-ab) = 23022e4a2cfdb347c294b7ee63c2ace1b32b7925
