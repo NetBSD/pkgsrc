@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2003/01/28 22:03:36 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2003/02/20 13:51:22 salo Exp $
 #
 
-DISTNAME=	popa3d-0.5.9
-PKGREVISION=	1
+DISTNAME=	popa3d-0.6
 CATEGORIES=	mail
 MASTER_SITES=	http://www.openwall.com/popa3d/ \
 		ftp://ftp.openwall.com/pub/projects/popa3d/ \
@@ -34,7 +33,7 @@ post-patch:
 
 do-install:
 	${INSTALL_PROGRAM} -m 500 ${WRKSRC}/popa3d ${PREFIX}/sbin
-	${INSTALL_DATA} -m 644 ${WRKSRC}/popa3d.8 ${PREFIX}/man/man8/
+	${INSTALL_DATA} ${WRKSRC}/popa3d.8 ${PREFIX}/man/man8/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/popa3d
 	cd ${WRKSRC} && ${INSTALL_DATA} DESIGN INSTALL LICENSE \
 		${PREFIX}/share/doc/popa3d
