@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 1999/12/09 09:07:52 he Exp $
+
+Fix a minor glitch in one of the manual pages.
+
+--- src/man/pgp.cfg.5.dist	Sat Feb  7 20:54:57 1998
++++ src/man/pgp.cfg.5	Tue Dec  7 19:36:21 1999
+@@ -17,5 +17,5 @@
+ location by setting the environment variable
+ .IR PGPPATH .
+-SH COMMAND-LINE SPECIFICATION
++.SH COMMAND-LINE SPECIFICATION
+ All PGP applications accept these options as command-line arguments,
+ as well.  Command line arguments always override the configuration
