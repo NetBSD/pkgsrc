@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.43 2002/09/29 14:34:00 lukem Exp $
+# $NetBSD: Makefile,v 1.44 2003/01/03 16:27:09 lukem Exp $
 
-DISTNAME=	cdrtools-1.10
-PKGNAME=	cdrecord-1.10
-WRKSRC=		${WRKDIR}/${DISTNAME:C/a.*//}
+DISTNAME=	cdrtools-2.0
+PKGNAME=	cdrecord-2.0
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://ftp.fokus.gmd.de/pub/unix/cdrecord/
+MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	lukem@netbsd.org
 HOMEPAGE=	http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html
 COMMENT=	This program allows you to create CD's on a CD-Recorder
 
@@ -52,7 +51,12 @@ do-install:
 	cd ${WRKSRC}/mkisofs;						\
 		${INSTALL_PROGRAM} OBJ/*/mkisofs ${PREFIX}/bin;		\
 		${INSTALL_MAN} mkisofs.8 ${PREFIX}/man/man8
-	cd ${WRKSRC}/misc;						\
+	cd ${WRKSRC}/mkisofs/diag;					\
+		for f in devdump isodump isoinfo isovfy; do		\
+			${INSTALL_PROGRAM} OBJ/*/$$f ${PREFIX}/bin;	\
+			${INSTALL_MAN} isoinfo.8 ${PREFIX}/man/man8/$$f.8; \
+		done
+	cd ${WRKSRC}/readcd;						\
 		${INSTALL_PROGRAM} OBJ/*/readcd ${PREFIX}/bin;		\
 		${INSTALL_MAN} readcd.1 ${PREFIX}/man/man1
 

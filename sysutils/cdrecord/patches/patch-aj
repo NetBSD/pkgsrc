@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.4 2002/08/25 21:50:56 jlam Exp $
+$NetBSD: patch-aj,v 1.5 2003/01/03 16:27:10 lukem Exp $
 
---- cdrecord/scsi_cdr.c.orig	Wed Apr 11 00:22:21 2001
-+++ cdrecord/scsi_cdr.c	Wed May 15 19:55:52 2002
-@@ -271,6 +271,12 @@
+--- cdrecord/scsi_cdr.c.orig	Thu Sep 12 22:39:35 2002
++++ cdrecord/scsi_cdr.c
+@@ -282,6 +282,12 @@ EXPORT int
  request_sense(scgp)
  	SCSI	*scgp;
  {
@@ -15,7 +15,7 @@ $NetBSD: patch-aj,v 1.4 2002/08/25 21:50:56 jlam Exp $
  		 char	sensebuf[CCS_SENSE_LEN];
  	register struct	scg_cmd	*scmd = scgp->scmd;
  
-@@ -290,6 +296,7 @@
+@@ -301,6 +307,7 @@ request_sense(scgp)
  	if (scg_cmd(scgp) < 0)
  		return (-1);
  	scg_prsense((Uchar *)sensebuf, CCS_SENSE_LEN - scg_getresid(scgp));
@@ -23,15 +23,3 @@ $NetBSD: patch-aj,v 1.4 2002/08/25 21:50:56 jlam Exp $
  	return (0);
  }
  
-@@ -1741,9 +1748,9 @@
- 
- 	fillbytes(mode, sizeof(mode), '\0');
- 	scgp->silent++;
--	if (mode_sense(scgp, mode, 0xFF, 0x3F, current?0:2) < 0) {	/* All Pages */
-+	if (mode_sense(scgp, mode, 0xFE, 0x3F, current?0:2) < 0) {	/* All Pages */
- 		fillbytes(mode, sizeof(mode), '\0');
--		if (mode_sense(scgp, mode, 0xFF, 0, current?0:2) < 0)	{/* VU (block desc) */
-+		if (mode_sense(scgp, mode, 0xFE, 0, current?0:2) < 0)	{/* VU (block desc) */
- 			scgp->silent--;
- 			return (-1);
- 		}

@@ -1,19 +1,13 @@
-$NetBSD: patch-ai,v 1.2 2001/08/07 11:23:57 drochner Exp $
+$NetBSD: patch-ai,v 1.3 2003/01/03 16:27:10 lukem Exp $
 
-I know this patch is an ugly hack. But at least it makes "cdrecord -scanbus"
-more usefull, which in turn makes xcdroast work. Feel free to implement
-this cleanly however...
-
-Thorsten Frueauf <frueauf@netbsd.org>, 2001.02.10
-
---- libscg/scsi-bsd.c.orig	Sun Mar 18 15:10:21 2001
-+++ libscg/scsi-bsd.c	Mon Aug  6 14:55:09 2001
+--- libscg/scsi-bsd.c.orig	Mon Oct 21 15:57:07 2002
++++ libscg/scsi-bsd.c	Sat Nov 30 18:20:19 2002
 @@ -48,7 +48,7 @@
   *	Choose your name instead of "schily" and make clear that the version
   *	string is related to a modified source.
   */
--LOCAL	char	_scg_trans_version[] = "scsi-bsd.c-1.40";	/* The version for this transport*/
-+LOCAL	char	_scg_trans_version[] = "scsi-bsd.c-1.40nb1";	/* The version for this transport*/
+-LOCAL	char	_scg_trans_version[] = "scsi-bsd.c-1.41";	/* The version for this transport*/
++LOCAL	char	_scg_trans_version[] = "scsi-bsd.c-1.41nb1";	/* The version for this transport*/
  
  #define	MAX_SCG		16	/* Max # of SCSI controllers */
  #define	MAX_TGT		16
@@ -26,7 +20,7 @@ Thorsten Frueauf <frueauf@netbsd.org>, 2001.02.10
  		case SCG_SCCS_ID:
  			return (__sccsid);
  		}
-@@ -130,6 +130,15 @@
+@@ -140,6 +140,15 @@
  	register int	l;
  	register int	nopen = 0;
  	char		devname[64];
@@ -42,7 +36,7 @@ Thorsten Frueauf <frueauf@netbsd.org>, 2001.02.10
  
  	if (busno >= MAX_SCG || tgt >= MAX_TGT || tlun >= MAX_LUN) {
  		errno = EINVAL;
-@@ -156,6 +165,60 @@
+@@ -166,6 +175,60 @@
  	if ((device != NULL && *device != '\0') || (busno == -2 && tgt == -2))
  		goto openbydev;
  
@@ -103,7 +97,7 @@ Thorsten Frueauf <frueauf@netbsd.org>, 2001.02.10
  	if (busno >= 0 && tgt >= 0 && tlun >= 0) {
  
  		js_snprintf(devname, sizeof(devname),
-@@ -192,6 +255,7 @@
+@@ -202,6 +265,7 @@
  			}
  		}
  	}
