@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2002/09/11 22:30:37 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/03/01 14:11:52 jmmv Exp $
 
 .if !defined(GTKMM_BUILDLINK2_MK)
 GTKMM_BUILDLINK2_MK=	# defined
@@ -19,7 +19,7 @@ BUILDLINK_FILES.gtkmm+=		lib/gtkmm/include/*
 BUILDLINK_FILES.gtkmm+=		lib/libgdkmm.*
 BUILDLINK_FILES.gtkmm+=		lib/libgtkmm.*
 
-.include "../../devel/libsigc++/buildlink2.mk"
+.include "../../devel/libsigc++10/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	gtkmm-buildlink
