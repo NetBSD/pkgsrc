@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 1998/09/01 21:44:59 tron Exp $
+$NetBSD: patch-aa,v 1.2 1998/09/02 06:42:13 tron Exp $
 
 --- Imakefile.orig	Wed Mar  4 09:36:44 1998
 +++ Imakefile	Sat Aug 29 11:08:05 1998
