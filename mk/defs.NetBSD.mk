@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.48 2003/04/15 05:29:47 grant Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.49 2003/06/06 17:13:31 drochner Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -131,6 +131,12 @@ _USE_RPATH=		yes	# add rpath to LDFLAGS
 # this is GNU ld.
 _OPSYS_WHOLE_ARCHIVE_FLAG=	-Wl,--whole-archive
 _OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,--no-whole-archive
+
+# for programs which use dlopen()
+# not necessary since 1.6 (shared libs are linked against libgcc_pic)
+.if !empty(OS_VERSION:M1.5*)
+LINK_ALL_LIBGCC_HACK=	-Wl,--whole-archive -lgcc -Wl,--no-whole-archive
+.endif
 
 .if !defined(DEBUG_FLAGS)
 _STRIPFLAG_CC?=		-s	# cc(1) option to strip
