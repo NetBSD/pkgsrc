@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.13 2002/09/03 22:10:17 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.14 2002/09/06 07:20:20 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -246,6 +246,10 @@ _BLNK_TRANSFORM_SED.2+= \
 	-e "s|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\1/} |-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\2/} |g" \
 	-e "s|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\1/}$$|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\2/}|g" \
 	-e "s|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\1/}/\([^	 ]*\)|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\2/}/\1|g"
+_BLNK_UNTRANSFORM_SED.2+= \
+	-e "s|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\2/} |-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\1/} |g" \
+	-e "s|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\2/}$$|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\1/}|g" \
+	-e "s|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\2/}/\([^	 ]*\)|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\1/}/\1|g"
 .endfor
 #
 # Transform "II:/usr/X11R6:/buildlink,/x11-links" into:
@@ -258,6 +262,13 @@ _BLNK_TRANSFORM_SED.2+= \
 	-e "s|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/} |-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/} -I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/} |g" \
 	-e "s|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}$$|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/} -I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/}|g" \
 	-e "s|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}/\([^	 ]*\)|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/}/\1 -I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/}/\1|g"
+_BLNK_UNTRANSFORM_SED.2+= \
+	-e "s|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/} |-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/} |g" \
+	-e "s|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/} |-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/} |g" \
+	-e "s|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/}$$|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}|g" \
+	-e "s|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/}$$|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}|g" \
+	-e "s|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/}/\([^	 ]*\)|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}/\1|g" \
+	-e "s|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/}/\([^	 ]*\)|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}/\1|g"
 .endfor
 #
 # Transform "L:/usr/pkg:/buildlink" into:
@@ -300,7 +311,7 @@ _BLNK_UNTRANSFORM_SED.2+= \
 #	-e "s|-lfoo$|-lbar|g"
 #
 .for _transform_ in ${_BLNK_TRANSFORM:Ml\:*}
-_BLNK_TRANSFORM_SED.2+= \
+_BLNK_TRANSFORM_SED.3+= \
 	-e "s|-l${_transform_:C/^l\:([^\:]*)\:([^\:]*)$/\1/} |-l${_transform_:C/^l\:([^\:]*)\:([^\:]*)$/\2/} |g" \
 	-e "s|-l${_transform_:C/^l\:([^\:]*)\:([^\:]*)$/\1/}$$|-l${_transform_:C/^l\:([^\:]*)\:([^\:]*)$/\2/}|g"
 .endfor
