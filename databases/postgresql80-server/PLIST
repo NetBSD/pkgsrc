@@ -1,0 +1,61 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/06 12:32:06 jdolecek Exp $
+bin/postgres
+bin/postmaster
+lib/postgresql/ascii_and_mic.so
+lib/postgresql/cyrillic_and_mic.so
+lib/postgresql/euc_cn_and_mic.so
+lib/postgresql/euc_jp_and_sjis.so
+lib/postgresql/euc_kr_and_mic.so
+lib/postgresql/euc_tw_and_big5.so
+lib/postgresql/latin2_and_win1250.so
+lib/postgresql/latin_and_mic.so
+lib/postgresql/utf8_and_ascii.so
+lib/postgresql/utf8_and_big5.so
+lib/postgresql/utf8_and_cyrillic.so
+lib/postgresql/utf8_and_euc_cn.so
+lib/postgresql/utf8_and_euc_jp.so
+lib/postgresql/utf8_and_euc_kr.so
+lib/postgresql/utf8_and_euc_tw.so
+lib/postgresql/utf8_and_gb18030.so
+lib/postgresql/utf8_and_gbk.so
+lib/postgresql/utf8_and_iso8859.so
+lib/postgresql/utf8_and_iso8859_1.so
+lib/postgresql/utf8_and_johab.so
+lib/postgresql/utf8_and_sjis.so
+lib/postgresql/utf8_and_tcvn.so
+lib/postgresql/utf8_and_uhc.so
+lib/postgresql/utf8_and_win1250.so
+lib/postgresql/utf8_and_win1256.so
+lib/postgresql/utf8_and_win874.so
+man/man1/postgres.1
+man/man1/postmaster.1
+share/postgresql/conversion_create.sql
+share/postgresql/information_schema.sql
+${PKGLOCALEDIR}/locale/af/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/postgres.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/postgres.mo
+share/postgresql/pg_hba.conf.sample
+share/postgresql/pg_ident.conf.sample
+share/postgresql/postgres.bki
+share/postgresql/postgres.description
+share/postgresql/postgresql.conf.sample
+share/postgresql/recovery.conf.sample
+share/postgresql/sql_features.txt
+share/postgresql/system_views.sql
+@comment in postgresql80-client: @dirrm share
+@comment in postgresql80-lib: @dirrm man/man1
+@comment in postgresql80-lib: @dirrm lib/postgresql
+@comment in postgresql80-lib: @dirrm bin
