@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.405 2002/10/30 00:54:55 rh Exp $
+$NetBSD: CHANGES,v 1.406 2002/10/30 03:35:30 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3441,3 +3441,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated rocksndiamonds to 2.1.1nb1 [heinz 2002-10-29]
 	Updated gtk-gnutella to 0.91 [rh 2002-10-29]
 	Added libgda-0.8.199 [rh 2002-10-30]
+	Updated url2pkg to 1.20 [rh 2002-10-30]
