@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/08/25 12:35:40 veego Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/12/10 09:45:32 jlam Exp $
 bin/cyradm
 bin/imtest
 bin/installsieve
@@ -10,6 +10,7 @@ cyrus/bin/feedcyrus
 cyrus/bin/fud
 cyrus/bin/imapd
 cyrus/bin/mbpath
+cyrus/bin/mkimap
 cyrus/bin/pop3d
 cyrus/bin/quota
 cyrus/bin/reconstruct
@@ -53,6 +54,20 @@ man/man8/reconstruct.8
 man/man8/rmnews.8
 man/man8/syncnews.8
 man/man8/timsieved.8
+share/doc/html/cyrus-imapd/anoncvs.html
+share/doc/html/cyrus-imapd/bugs.html
+share/doc/html/cyrus-imapd/changes.html
+share/doc/html/cyrus-imapd/index.html
+share/doc/html/cyrus-imapd/install.html
+share/doc/html/cyrus-imapd/mailing-list.html
+share/doc/html/cyrus-imapd/overview.html
+share/doc/html/cyrus-imapd/questions.html
+share/doc/html/cyrus-imapd/readme.html
+share/doc/html/cyrus-imapd/sieve-protocol.html
+share/doc/html/cyrus-imapd/sieve.html
+share/examples/cyrus-imapd/imapd.conf
+@dirrm share/examples/cyrus-imapd
+@dirrm share/doc/html/cyrus-imapd
 @dirrm include/cyrus
 @dirrm cyrus/bin
 @dirrm cyrus
