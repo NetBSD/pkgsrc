@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/06/13 22:25:45 thorpej Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/06/14 21:12:42 thorpej Exp $
 rtty/bin/ttysrv
 rtty/bin/rtty
 rtty/bin/locbrok
@@ -9,11 +9,11 @@ rtty/bin/agelogs
 rtty/bin/agelog
 share/doc/rtty/README
 @comment rtty/bin created above
-@exec mkdir rtty/dev
-@exec mkdir rtty/sock
-@exec mkdir rtty/log
-@exec mkdir rtty/pid
-@exec mkdir rtty/opt
+@exec mkdir %D/rtty/dev
+@exec mkdir %D/rtty/sock
+@exec mkdir %D/rtty/log
+@exec mkdir %D/rtty/pid
+@exec mkdir %D/rtty/opt
 @dirrm rtty/dev
 @dirrm rtty/sock
 @dirrm rtty/log
