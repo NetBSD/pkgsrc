@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/19 17:42:41 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/07 01:14:47 xtraeme Exp $
 #
 
 DISTNAME=	ExtUtils-Depends-0.202
@@ -6,7 +6,7 @@ PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=ExtUtils/}
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://gtk2-perl.sourceforge.net/
 COMMENT=	Easily build XS extensions that depend on XS extensions
 

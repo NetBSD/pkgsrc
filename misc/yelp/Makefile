@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/04/14 16:15:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.20 2004/05/07 01:14:49 xtraeme Exp $
 #
 
 DISTNAME=		yelp-2.6.0
@@ -6,7 +6,7 @@ CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/yelp/2.6/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		xtraeme@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Help browser for GNOME 2 desktop
 

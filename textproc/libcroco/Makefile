@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/04/19 15:01:00 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2004/05/07 01:14:50 xtraeme Exp $
 #
 
 DISTNAME=	libcroco-0.5.1
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libcroco/0.5/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.freespiders.org/projects/libcroco/
 COMMENT=	Toolkit to parse and manipulate CSS (Cascading Style Sheets)
 
