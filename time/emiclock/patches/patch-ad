@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2000/12/17 23:32:18 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2001/08/23 04:26:55 jlam Exp $
 
---- Imakefile.orig	Sat Jan 11 11:35:42 1997
-+++ Imakefile	Sun May 23 10:21:04 1999
-@@ -108,6 +108,11 @@
+--- Imakefile.orig	Thu Sep  2 10:33:47 1999
++++ Imakefile
+@@ -106,6 +106,11 @@
  #define	StartupSound	myu.au
  #endif	/* i386BsdArchitecture && (i386FreeBsd || FreeBSDArchitecture) */
  
@@ -14,3 +14,12 @@ $NetBSD: patch-ad,v 1.1.1.1 2000/12/17 23:32:18 wiz Exp $
  #else	/* USE_NETAUDIO */
  
  /* netaudio (NCDaudio) */
+@@ -143,7 +148,7 @@
+ LOCAL_LIBRARIES = XawClientLibs
+ # ifdef	USE_XAW3D
+       DEPXAWLIB = $(USRLIBDIR)/libXaw3d.a
+-         XAWLIB = -lXaw3d
++         XAWLIB = ${LIBXAW}
+ # endif	/* USE_XAW3D */
+ 
+   SYS_LIBRARIES = SoundLibrary -lm

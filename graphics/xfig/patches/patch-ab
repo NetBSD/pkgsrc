@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.4 2001/08/09 15:59:52 tron Exp $
+$NetBSD: patch-ab,v 1.5 2001/08/23 04:26:54 jlam Exp $
 
---- Imakefile.orig	Tue May 29 20:32:11 2001
-+++ Imakefile	Thu Aug  9 17:54:04 2001
+--- Imakefile.orig	Tue May 29 14:32:11 2001
++++ Imakefile
 @@ -47,8 +47,8 @@
  
  #ifdef USEJPEG
@@ -35,8 +35,9 @@ $NetBSD: patch-ab,v 1.4 2001/08/09 15:59:52 tron Exp $
 +#define USEXPM_ICON
  
  #ifdef USEXPM
- XPMLIBDIR = $(USRLIBDIR)
+-XPMLIBDIR = $(USRLIBDIR)
 -XPMINC = -I/usr/include/X11
++XPMLIBDIR = $(BUILDLINK_DIR)/lib
 +XPMINC = -I$(BUILDLINK_DIR)/include/X11
  #endif
  
@@ -46,7 +47,7 @@ $NetBSD: patch-ab,v 1.4 2001/08/09 15:59:52 tron Exp $
  
  #ifdef XAW3D
 -XAW3DINC = -I/usr/include/X11/Xaw3d
-+XAW3DINC = -I$(INCDIR)/X11/Xaw3d
++XAW3DINC = -I$(BUILDLINK_DIR)/include/X11/Xaw3d
  DUSEXAW3D = -DXAW3D
  XAWLIB = -lXaw3d
  #endif
@@ -82,7 +83,7 @@ $NetBSD: patch-ab,v 1.4 2001/08/09 15:59:52 tron Exp $
  
  #ifdef USEINSTALLEDJPEG
 -JPEGLIB = -L$(JPEGLIBDIR) -ljpeg
-+JPEGLIB = -Wl,-R$(PREFIX)/lib -L$(JPEGLIBDIR) -ljpeg
++JPEGLIB = -Wl,-R$(LOCALBASE)/lib -L$(JPEGLIBDIR) -ljpeg
  #else
  JPEGCONF = configure
  JPEGLIB = $(JPEGLIBDIR)/libjpeg.a
@@ -99,7 +100,7 @@ $NetBSD: patch-ab,v 1.4 2001/08/09 15:59:52 tron Exp $
  #ifdef USEXPM
  DUSEXPM = -DUSE_XPM
 -XPMLIBS = -L$(XPMLIBDIR) -lXpm
-+XPMLIBS = -Wl,-R$(BUILDLINK_PREFIX.xpm) -L$(XPMLIBDIR) -lXpm
++XPMLIBS = -Wl,-R$(X11PREFIX)/lib -L$(XPMLIBDIR) -lXpm
  READXPMS = f_readxpm.c
  READXPMO = f_readxpm.o
  #ifdef USEXPM_ICON

@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2001/08/09 15:59:51 tron Exp $
+$NetBSD: distinfo,v 1.5 2001/08/23 04:26:54 jlam Exp $
 
 SHA1 (xfig.3.2.3d.full.tar.gz) = 49806d4e081c722bb35e335b3d34a8ad9f7d78af
 Size (xfig.3.2.3d.full.tar.gz) = 2846844 bytes
 SHA1 (patch-aa) = dd528f771d7b30a7f2504d2e9043cdce7a98f0c1
-SHA1 (patch-ab) = aa4a6b97fd626e668eaf726251a58b9723f91308
+SHA1 (patch-ab) = b47e24ce46894e8c7aa710e3cae8c2559b9676ec
 SHA1 (patch-ac) = 1d18e319873a4aa20d60b477318fd05c951c6b16

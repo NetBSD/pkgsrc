@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/08/20 04:17:43 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2001/08/23 04:26:54 jlam Exp $
 #
 
 DISTNAME=		xfig.3.2.3d.full
@@ -15,16 +15,16 @@ COMMENT=		CAD-like 2D drawing tool, good for colorful scale drawings & ISOs
 DEPENDS+=		transfig>=3.2.3.4:../../print/transfig
 
 USE_IMAKE=		YES
-USE_XAW=		YES
 XAW_TYPE?=		3d
 
 NO_INSTALL_MANPAGES=	YES	# install.all does install.man
 INSTALL_TARGET=		install install.all
 CFLAGS+=		-I${BUILDLINK_DIR}/include/X11
+MAKE_ENV+=		X11PREFIX=${X11PREFIX}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${XAW_TYPE} != "3d"
+.if defined(XAW_TYPE) && (${XAW_TYPE} != "3d" && ${XAW_TYPE} != "xpm")
 pre-configure:
 	cd ${WRKSRC} &&	\
 	  if [ ! -f Imakefile.bak ]; then ${MV} Imakefile Imakefile.bak; fi && \
@@ -46,4 +46,5 @@ post-install:
 .include "../../graphics/jpeg/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
 .include "../../graphics/xpm/buildlink.mk"
+.include "../../mk/xaw.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
