@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/04/15 09:17:30 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2004/04/15 21:54:59 wiz Exp $
 
 DISTNAME=	naim-0.11.6.7
 CATEGORIES=	chat
@@ -15,8 +15,12 @@ USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/man
 
-INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]*
-INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-K]*
+USE_NCURSES=		# compiles fine, but terminates on startup with:
+# assertion "strlen(h->addch.buf) == h->addch.len" failed:
+# file "hwprintf.c", line 41, function "h_zero"
+
+#INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]*
+#INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-K]*
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
