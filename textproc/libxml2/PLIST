@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/11/16 20:59:32 tron Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/12/10 13:29:31 taca Exp $
 bin/xml2-config
 bin/xmlcatalog
 bin/xmllint
@@ -35,7 +35,7 @@ lib/libxml2.a
 lib/libxml2.la
 lib/libxml2.so
 lib/libxml2.so.6
-lib/libxml2.so.6.10
+lib/libxml2.so.6.12
 lib/pkgconfig/libxml-2.0.pc
 lib/xml2Conf.sh
 man/man1/xml2-config.1
@@ -53,6 +53,8 @@ share/doc/libxml2/html/libxml-debugxml.html
 share/doc/libxml2/html/libxml-docbparser.html
 share/doc/libxml2/html/libxml-encoding.html
 share/doc/libxml2/html/libxml-entities.html
+share/doc/libxml2/html/libxml-globals.html
+share/doc/libxml2/html/libxml-hash.html
 share/doc/libxml2/html/libxml-htmlparser.html
 share/doc/libxml2/html/libxml-htmltree.html
 share/doc/libxml2/html/libxml-lib.html
@@ -62,6 +64,7 @@ share/doc/libxml2/html/libxml-notes.html
 share/doc/libxml2/html/libxml-parser.html
 share/doc/libxml2/html/libxml-parserinternals.html
 share/doc/libxml2/html/libxml-sax.html
+share/doc/libxml2/html/libxml-threads.html
 share/doc/libxml2/html/libxml-tree.html
 share/doc/libxml2/html/libxml-uri.html
 share/doc/libxml2/html/libxml-valid.html
@@ -78,4 +81,4 @@ share/doc/libxml2/html/xml.html
 @dirrm share/doc/libxml2
 @dirrm include/libxml2/libxml
 @dirrm include/libxml2
-@unexec rmdir -p %D/lib/pkgconfig 2>/dev/null || true
+@unexec ${RMDIR} -p %D/lib/pkgconfig 2>/dev/null || ${TRUE}
