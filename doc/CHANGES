@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8761 2005/01/15 11:54:16 jmmv Exp $
+$NetBSD: CHANGES,v 1.8762 2005/01/15 12:42:01 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -312,3 +312,16 @@ Changes to the packages collection and infrastructure in 2005:
 	Added kajaani-kombat-0.6 [wiz 2005-01-14]
 	Updated msf to 2.3 [adrianp 2005-01-14]
 	Removed gst-player [jmmv 2005-01-15]
+	Removed suse64_audio 6.4 [jdolecek 2005-01-15]
+	Removed suse64_base 6.4 [jdolecek 2005-01-15]
+	Removed suse64_compat 6.4 [jdolecek 2005-01-15]
+	Removed suse64_devel 6.4 [jdolecek 2005-01-15]
+	Removed suse64_glx 6.4 [jdolecek 2005-01-15]
+	Removed suse64_gtk 6.4 [jdolecek 2005-01-15]
+	Removed suse64_libc5 6.4 [jdolecek 2005-01-15]
+	Removed suse64_libjpeg 6.4 [jdolecek 2005-01-15]
+	Removed suse64_libpng 6.4 [jdolecek 2005-01-15]
+	Removed suse64_linux 6.4 [jdolecek 2005-01-15]
+	Removed suse64_vmware 6.4 [jdolecek 2005-01-15]
+	Removed suse64_x11 6.4 [jdolecek 2005-01-15]
+	Removed suse64_xforms 6.4 [jdolecek 2005-01-15]
