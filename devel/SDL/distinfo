@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.28 2004/06/05 14:04:21 dillo Exp $
+$NetBSD: distinfo,v 1.29 2004/06/22 09:10:12 dillo Exp $
 
 SHA1 (SDL-1.2.7.tar.gz) = 1a840c50668f230df9e9163ef1a282d9f3355383
 Size (SDL-1.2.7.tar.gz) = 2470936 bytes
-SHA1 (patch-aa) = cf5b703aa2ea4c047cfd5ea93b4687382e667b27
+SHA1 (patch-aa) = 37c1dbf04636a74b69f07c9f00bffeb0e3dcbe65
 SHA1 (patch-ab) = 7effcc7f7f1856372692c147521888843810fed5
 SHA1 (patch-af) = f5e824addf308f9c467de02e3b262afbc0ef77c0
 SHA1 (patch-aj) = 02705ec01b70cbfef6520586d799dccd835352dc
