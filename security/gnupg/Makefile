@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2002/12/12 14:34:49 abs Exp $
+# $NetBSD: Makefile,v 1.41 2003/01/10 07:48:48 cjep Exp $
 #
 
 DISTNAME=	gnupg-1.2.1
@@ -21,12 +21,13 @@ COMMENT=	Privacy Guard, public-Key encryption and digital signatures
 
 BUILD_USES_MSGFMT=	yes
 
-CRYPTO=		yes
-GNU_CONFIGURE=	yes
-USE_BUILDLINK2=	yes
-USE_GMAKE=	yes
-CONFIGURE_ARGS+=--enable-tiger --with-static-rnd=auto
-TEST_TARGET=	check
+CRYPTO=			yes
+GNU_CONFIGURE=		yes
+USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
+USE_GMAKE=		yes
+CONFIGURE_ARGS+=	--enable-tiger --with-static-rnd=auto
+TEST_TARGET=		check
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/10/09 00:00:21 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2003/01/10 07:43:31 cjep Exp $
 
 DISTNAME=		samba-${SAMBA_BASE_VERSION}-ja-${SAMBA_JA_VERSION}
 PKGNAME=		ja-samba-${SAMBA_BASE_VERSION}.${SAMBA_JA_VERSION}
@@ -21,6 +21,7 @@ USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 USE_BUILDLINK2=		# defined
+USE_PKGLOCALEDIR=	YES
 USE_GNU_READLINE=	# uses rl_event_hook interface to GNU readline
 
 .include "../../mk/bsd.prefs.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/01/07 03:56:29 uebayasi Exp $
+# $NetBSD: Makefile,v 1.13 2003/01/10 07:48:13 cjep Exp $
 #
 
 DISTNAME=	lilypond-1.4.13
@@ -11,10 +11,11 @@ COMMENT=	GNU Music Typesetter
 
 BUILD_DEPENDS+=	bison>=1.875nb1:../../devel/bison
 
-GNU_CONFIGURE=	YES
-USE_BUILDLINK2=	YES
-USE_GMAKE=	YES
-MAKEFILE=	GNUmakefile
+GNU_CONFIGURE=		YES
+USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
+USE_GMAKE=		YES
+MAKEFILE=		GNUmakefile
 
 TEXINFO_REQD=	4.0
 INFO_FILES=	lilypond.info lilypond-internals.info

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2002/12/20 06:59:58 jlam Exp $
+# $NetBSD: Makefile,v 1.57 2003/01/10 07:46:02 cjep Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -26,6 +26,7 @@ COMMENT=		Common UNIX Printing System
 CONFLICTS+=		LPRng-[0-9]* LPRng-core-[0-9]*
 
 USE_BUILDLINK2=		# defined
+USE_PKGLOCALEDIR=	# defined
 USE_GMAKE=		# defined
 USE_LIBTOOL=		# defined
 GNU_CONFIGURE=		# defined

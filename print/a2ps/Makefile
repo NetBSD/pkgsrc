@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2002/11/28 10:25:32 tron Exp $
+# $NetBSD: Makefile,v 1.39 2003/01/10 07:45:23 cjep Exp $
 
 DISTNAME=		a2ps-4.13b
 PKGNAME=		a2ps-4.13.0.2
@@ -22,6 +22,7 @@ USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/auxdir/ltconfig
 
 USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		LPR=lpr
 CONFIGURE_ARGS+=	--with-medium="${PAPERSIZE}"
