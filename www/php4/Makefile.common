@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2002/11/05 07:33:20 martti Exp $
+# $NetBSD: Makefile.common,v 1.28 2002/11/22 20:16:23 tron Exp $
 
 DISTNAME?=		php-${PHP_DIST_VERS}
 CATEGORIES+=		www php4
@@ -30,10 +30,4 @@ PLIST_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR}
 
 PKG_SYSCONFVAR?=	php
 
-USE_BUILDLINK2=		YES
-
-CONFIGURE_ARGS+=	--enable-experimental-zts
-CONFIGURE_ARGS+=	--with-tsrm-pth
-
-.include "../../devel/pth/buildlink2.mk"
 .include "../../mk/bsd.prefs.mk"
