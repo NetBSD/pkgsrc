@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6424 2004/07/02 20:39:32 jmmv Exp $
+$NetBSD: CHANGES,v 1.6425 2004/07/02 21:42:14 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3214,3 +3214,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated icewm-gnome to 1.2.14nb1 [jmmv 2004-07-02]
 	Updated icewm-imlib to 1.2.14nb1 [jmmv 2004-07-02]
 	Updated drivel to 1.0.2 [jmmv 2004-07-02]
+	Updated GConf2 to 2.6.3 [jmmv 2004-07-02]
+	Updated GConf2-ui to 2.6.3 [jmmv 2004-07-02]
