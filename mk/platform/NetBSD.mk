@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.2 2004/10/13 15:31:31 tv Exp $
+# $NetBSD: NetBSD.mk,v 1.3 2004/11/11 22:29:40 tv Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -137,6 +137,7 @@ _OPSYS_HAS_INET6=	no	# IPv6 is not standard
 _OPSYS_HAS_JAVA=	no	# Java is not standard
 _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	yes	# libossaudio is available
+_OPSYS_LIBTOOL_REQD=	1.5.10nb6
 _OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
 _OPSYS_SHLIB_TYPE=	ELF/a.out	# shared lib type
