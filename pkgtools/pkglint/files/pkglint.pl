@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.5 1998/11/17 17:19:23 agc Exp $
+# $NetBSD: pkglint.pl,v 1.6 1999/02/18 12:27:27 frueauf Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -275,12 +275,8 @@ sub checkplist {
 					"instead of \"\@unexec rmdir\".");
 			} elsif ($_ =~ /^\@exec[ \t]+(.*\/)?install-info/) {
 				$infoinstallseen = $.
-				    if (($osname ne "NetBSD") || ("$1" eq "%D/bin/"));
-				# On NetBSD, we enforce %D/bin/...
 			} elsif ($_ =~ /^\@unexec[ \t]+(.*\/)?install-info[ \t]+--delete/) {
 				$inforemoveseen = $.
-				    if (($osname ne "NetBSD") || ("$1" eq "%D/bin/"));
-				# On NetBSD, we enforce %D/bin/...
 			} elsif ($_ =~ /^\@(exec|unexec)/) {
 				if ($ldconfigwithtrue
 				 && /ldconfig/
@@ -368,21 +364,21 @@ sub checkplist {
 	}
 	if (!$infoinstallseen) {
 		if ($infooverwrite) {
-			&perror("FATAL: \"\@exec ".(($osname eq "NetBSD")?"%D/bin/":"")."install-info must be used to ".
-				"add/delete entries into \"info/dir\".");
+			&perror("FATAL: \"\@exec install-info\" must be used ".
+				"to add/delete entries into \"info/dir\".");
 		}
-		&perror("FATAL: \"\@exec ".(($osname eq "NetBSD")?"%D/bin/":"")."install-info\" must be placed ".
+		&perror("FATAL: \"\@exec install-info\" must be placed ".
 			"after all the info files.");
 	} elsif ($infoafterinstall) {
-		&perror("FATAL: move \"\@exec ".(($osname eq "NetBSD")?"%D/bin/":"")."install-info\" line to make ".
+		&perror("FATAL: move \"\@exec install-info\" line to make ".
 			"sure that it is placed after all the info files. ".
 			"(currently on line $infoinstallseen in $file)");
 	}
 	if (!$inforemoveseen) {
-		&perror("FATAL: \"\@unexec ".(($osname eq "NetBSD")?"%D/bin/":"")."install-info --delete\" must ".
+		&perror("FATAL: \"\@unexec install-info --delete\" must ".
 			"be placed before any of the info files listed.");
 	} elsif ($infobeforeremove) {
-		&perror("FATAL: move \"\@exec ".(($osname eq "NetBSD")?"%D/bin/":"")."install-info --delete\" ".
+		&perror("FATAL: move \"\@exec install-info --delete\" ".
 			"line to make sure ".
 			"that it is placed before any of the info files. ".
 			"(currently on line $inforemoveseen in $file)");
