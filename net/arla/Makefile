@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2001/03/29 21:02:57 wennmach Exp $
+# $NetBSD: Makefile,v 1.17 2001/08/09 13:48:58 wennmach Exp $
 #
 
-DISTNAME=		arla-0.34.5
+DISTNAME=		arla-0.35.5
 CATEGORIES=		net security
 MASTER_SITES=		ftp://ftp.stacken.kth.se/pub/arla/
 
@@ -9,7 +9,7 @@ MAINTAINER=		wennmach@netbsd.org
 HOMEPAGE=		http://www.stacken.kth.se/project/arla/
 COMMENT=		Free AFS implementation from KTH
 
-DEPENDS+=		kth-krb4-1.0.1:../../security/kth-krb4
+DEPENDS+=		kth-krb4>=1.0.9:../../security/kth-krb4
 
 CONFLICTS+=		lwp-* rx-*
 
@@ -19,6 +19,7 @@ INFO_FILES=		arla.info
 
 .include "../../mk/bsd.prefs.mk"
 
+CONFIGURE_ARGS+=	--with-krb4=${PREFIX}
 .if !exists(/sys/lib/libkern/libkern.h)
 .if exists(${BSDSRCDIR}/sys/lib/libkern/libkern.h)
 CONFIGURE_ARGS+=	--with-sys=${BSDSRCDIR}/sys
@@ -27,7 +28,6 @@ IGNORE=			"${PKGNAME} requires kernel sources available under \$$BSDSRCDIR/sys (
 .endif
 .endif
 
-CONFIGURE_ARGS+=	--with-krb4=${PREFIX}
 .if defined(ARLA_CACHE)
 CONFIGURE_ARGS+=	--with-arlacachedir=${ARLA_CACHE}
 .endif
@@ -39,46 +39,6 @@ CACHEDIR=		${LOCALBASE}/cache
 .endif
 MESSAGE_SUBST+=		ARLA_CACHE=${CACHEDIR}
 PLIST_SUBST+=		ARLA_CACHE=${CACHEDIR}
-
-post-patch:
-# This is ugly. Utterly ugly. Sigh.
-# kth-krb4 and arla both have their own, different, versions or libroken.
-# To resolve this conflict, which manifests in the inability to recompile
-# kth-krb4 once it is installed, we rename arla's roken to arla-roken.
-	@${ECHO} "===> Applying more NetBSD patches for ${DISTNAME}"
-	@${ECHO} -n "=> Patching configure,"
-	@${MV} ${WRKSRC}/configure ${WRKSRC}/configure.old
-# Notice, the following sed produces some funny comments in configure :-)
-	@${SED} -e 's/roken/arla-roken/g' ${WRKSRC}/configure.old > ${WRKSRC}/configure
-	@${CHMOD} 755 ${WRKSRC}/configure
-	@${ECHO} -n " Makefile.in,"
-	@for file in `${FIND} ${WRKSRC} -name Makefile.in -print`; {          \
-		${MV} $$file $$file.old;                                      \
-		${SED} -e 's/roken/arla-roken/g' $$file.old > $$file;         \
-	}
-	@${ECHO} -n " .c files,"
-	@for file in `${FIND} ${WRKSRC} -name "*.c" -print`; {                \
-		${MV} $$file $$file.old;                                      \
-		${SED} -e 's/roken.h/arla-roken.h/g' $$file.old > $$file;     \
-	}
-	@${ECHO} -n " .h files,"
-	@for file in `${FIND} ${WRKSRC} -name "*.h" -print`; {                \
-		${MV} $$file $$file.old;                                      \
-		${SED} -e 's/roken.h/arla-roken.h/g' $$file.old > $$file;     \
-	}
-	@${ECHO} -n " .y files,"
-	@for file in `${FIND} ${WRKSRC} -name "*.y" -print`; {                \
-		${MV} $$file $$file.old;                                      \
-		${SED} -e 's/roken.h/arla-roken.h/g' $$file.old > $$file;     \
-	}
-	@${ECHO} -n " .l files"
-	@for file in `${FIND} ${WRKSRC} -name "*.l" -print`; {                \
-		${MV} $$file $$file.old;                                      \
-		${SED} -e 's/roken.h/arla-roken.h/g' $$file.old > $$file;     \
-	}
-	@${ECHO} "."
-	@${MV} ${WRKSRC}/lib/roken/roken.h ${WRKSRC}/lib/roken/arla-roken.h
-	@${MV} ${WRKSRC}/lib/roken ${WRKSRC}/lib/arla-roken
 
 do-configure:
 # *Sometimes* it's bad to try to be too smart:
@@ -103,7 +63,7 @@ post-install:
 		${ECHO} "/sbin/mount_xfs already exists";                     \
 	else                                                                  \
 		${ECHO} "Creating /sbin/mount_xfs";                           \
-		${LN} -s ${PREFIX}/bin/mount_xfs /sbin/mount_xfs;             \
+		${LN} -s ${PREFIX}/sbin/mount_xfs /sbin/mount_xfs;             \
 	fi
 	@-${INSTALL_DATA_DIR} ${PREFIX}/share/examples/arla
 	@${SED} -e 's|@PREFIX@|${PREFIX}|g'                                   \
@@ -114,6 +74,8 @@ post-install:
 	@${INSTALL_DATA}                                                      \
 		 ${FILESDIR}/fstab ${PREFIX}/share/examples/arla
 	@${SED} -e 's|@PREFIX@|${PREFIX}|' ${FILESDIR}/arlad.sh               \
+		> ${PREFIX}/etc/rc.d/arlad.sh
+	@${SED} -e 's|@PREFIX@|${PREFIX}|' ${FILESDIR}/arlad                  \
 		> ${PREFIX}/etc/rc.d/arlad
 	@${ECHO} " "
 
