@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2002/03/13 17:37:50 fredb Exp $
+# $NetBSD: Makefile,v 1.24 2002/03/19 08:52:24 skrll Exp $
 
 DISTNAME=	bluefish-0.7
 PKGREVISION=	1
@@ -35,9 +35,6 @@ CONFIGURE_ARGS+=	--with-autocomplet
 GNU_CONFIGURE=	# defined
 
 HTMLDIR=	${PREFIX}/share/doc/html/bluefish
-
-# pre-configure:
-# 	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf
 
 post-install:
 	${INSTALL_DATA_DIR} ${HTMLDIR}
