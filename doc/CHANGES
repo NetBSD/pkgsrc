@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6003 2004/05/22 05:39:14 sekiya Exp $
+$NetBSD: CHANGES,v 1.6004 2004/05/22 10:12:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2614,3 +2614,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated jwhois to 3.2.2nb5 [kleink 2004-05-21]
 	Updated py-ZODB to 3.2.1nb1 [snj 2004-05-21]
 	Added ifp-line-0.2.4 [sekiya 2004-05-22]
+	Updated libtasn1 to 0.2.10 [adam 2004-05-22]
+	Updated libgcrypt to 1.2.0 [adam 2004-05-22]
+	Updated gnutls to 1.0.13 [adam 2004-05-22]
