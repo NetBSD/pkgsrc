@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/02 17:48:37 tsarna Exp $
+lib/python1.5/site-packages/gdmodule.so
