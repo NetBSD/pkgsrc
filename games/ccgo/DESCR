@@ -1,0 +1,11 @@
+  ccGo is a program allows you to play go with gnugo on your computer or
+with other players on the IGS on the internet.
+
+Features
+
+    * low bandwidth IGS client (works fine in quiet mode)
+    * GMP support, to play go with gnugo
+    * SGF Go game record viewer, works with format version FF4
+    * written in C++ using gtkmm-2.0
+    * picture board and stone images support
+    * auto detect and display Chinese, Japanese characters

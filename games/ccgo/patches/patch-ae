@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1.1.1 2003/03/16 03:56:28 rh Exp $
+
+--- ccgo.cc.orig	2002-11-30 02:31:16.000000000 +1000
++++ ccgo.cc
+@@ -25,6 +25,10 @@
+ #include <iostream>
+ #include <fstream>
+ 
++extern "C" {
++#include <locale.h>
++}
++
+ #define _(String) Glib::locale_to_utf8(gettext(String))
+ 
+ class ccGo :

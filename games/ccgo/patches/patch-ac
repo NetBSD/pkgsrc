@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/03/16 03:56:27 rh Exp $
+
+--- igs/sock.cc.orig	2002-11-27 07:35:46.000000000 +1000
++++ igs/sock.cc
+@@ -16,6 +16,7 @@ extern "C" {
+ #include <sys/socket.h>
+ #include <unistd.h>
+ #include <netdb.h>
++#include <netinet/in.h>
+ }
+ #include <cerrno>
+ 
