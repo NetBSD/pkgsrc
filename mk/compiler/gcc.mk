@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.16 2004/02/03 05:14:03 jlam Exp $
+# $NetBSD: gcc.mk,v 1.17 2004/02/03 20:38:39 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -94,7 +94,7 @@ _GCC_PKGBASE=		gcc
 LANGUAGES.gcc=		c c++ fortran objc
 _LANGUAGES.gcc=		# empty
 .  for _lang_ in ${USE_LANGUAGES}
-_LANGUAGES.gcc=		${LANGUAGES.gcc:M${_lang_}}
+_LANGUAGES.gcc+=		${LANGUAGES.gcc:M${_lang_}}
 .  endfor
 .  if !empty(PKGPATH:Mlang/gcc)
 _IGNORE_GCC=		yes
@@ -115,7 +115,7 @@ _GCC_PKGBASE=		gcc3-c
 LANGUAGES.gcc=		c c++ fortran java objc
 _LANGUAGES.gcc=		# empty
 .  for _lang_ in ${USE_LANGUAGES}
-_LANGUAGES.gcc=		${LANGUAGES.gcc:M${_lang_}}
+_LANGUAGES.gcc+=	${LANGUAGES.gcc:M${_lang_}}
 .  endfor
 .  if !empty(PKGPATH:Mlang/gcc3-c)
 _IGNORE_GCC=		yes
