@@ -1,37 +1,37 @@
-# $NetBSD: Makefile,v 1.33 2004/09/01 20:07:35 schmonz Exp $
+# $NetBSD: Makefile,v 1.34 2004/09/01 20:11:02 schmonz Exp $
 # FreeBSD Id: ports/net/djbdns/Makefile,v 1.4 2000/09/28 18:18:41 nbm Exp
 #
 
-DISTNAME=	djbdns-1.05
-PKGREVISION=	5
-CATEGORIES=	net
-MASTER_SITES=	http://cr.yp.to/djbdns/	ftp://cr.yp.to/djbdns/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${MANPAGES}
+DISTNAME=		djbdns-1.05
+PKGREVISION=		5
+CATEGORIES=		net
+MASTER_SITES=		http://cr.yp.to/djbdns/	ftp://cr.yp.to/djbdns/
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${MANPAGES}
 
-MAINTAINER=	schmonz@NetBSD.org
-HOMEPAGE=	http://cr.yp.to/djbdns.html
-COMMENT=	Collection of secure and reliable DNS tools by Dan Bernstein
+MAINTAINER=		schmonz@NetBSD.org
+HOMEPAGE=		http://cr.yp.to/djbdns.html
+COMMENT=		Collection of secure and reliable DNS tools
 
-MANPAGES=	djbdns-1.05-man-20031023.tar.gz
+MANPAGES=		djbdns-1.05-man-20031023.tar.gz
 SITES_${MANPAGES}=	http://smarden.org/pape/djb/manpages/
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	yes
+USE_BUILDLINK3=		yes
 
-RESTRICTED=	"modified source and binaries may not be distributed"
-NO_BIN_ON_CDROM=${RESTRICTED}
-NO_BIN_ON_FTP=	${RESTRICTED}
+RESTRICTED=		"modified source and binaries may not be distributed"
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
 
-ALL_TARGET=	it
-INSTALL_TARGET=	setup check
+ALL_TARGET=		it
+INSTALL_TARGET=		setup check
 
-EGDIR=		${PREFIX}/share/examples/djbdns
-CFLAGS+=	-DPKG_SYSCONFDIR=\"\\\"${PKG_SYSCONFDIR}\\\"\"
-USE_PKGINSTALL=	yes
-MAKE_DIRS+=	${PKG_SYSCONFDIR}
-SUPPORT_FILES+=	${EGDIR}/dnsroots.global ${PKG_SYSCONFDIR}/dnsroots.global
-PLIST_SRC=	${PKGDIR}/PLIST
+EGDIR=			${PREFIX}/share/examples/djbdns
+CFLAGS+=		-DPKG_SYSCONFDIR=\"\\\"${PKG_SYSCONFDIR}\\\"\"
+USE_PKGINSTALL=		yes
+MAKE_DIRS+=		${PKG_SYSCONFDIR}
+SUPPORT_FILES+=		${EGDIR}/dnsroots.global ${PKG_SYSCONFDIR}/dnsroots.global
+PLIST_SRC=		${PKGDIR}/PLIST
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=	3.0
