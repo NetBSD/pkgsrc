@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/29 23:15:10 wiz Exp $
+bin/pfaedit
+bin/sfddiff
+man/man1/pfaedit.1
+man/man1/sfddiff.1
+share/pfaedit/pfaedit-de.ui
+share/pfaedit/pfaedit-en.ui
+share/pfaedit/pfaedit-es.ui
+share/pfaedit/pfaedit-fr.ui
+share/pfaedit/pfaedit-ja.ui
+share/pfaedit/pfaedit-ru.ui
+@dirrm share/pfaedit
