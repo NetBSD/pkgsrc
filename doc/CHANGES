@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5037 2004/02/29 06:00:23 uebayasi Exp $
+$NetBSD: CHANGES,v 1.5038 2004/02/29 12:05:56 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1090,3 +1090,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cairo to 0.1.17nb1 [recht 2004-02-29]
 	Added iftop-0.16 [xtraeme 2004-02-29]
 	Added acpidump-20020711 [uebayasi 2004-02-29]
+	Updated kdelibs to 3.2.0nb1 [markd 2004-02-29]
