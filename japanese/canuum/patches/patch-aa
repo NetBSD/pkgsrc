@@ -1,0 +1,99 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/08/27 04:09:28 sakamoto Exp $
+
+--- Canna.conf.orig	Thu Nov 28 19:27:01 1996
++++ Canna.conf	Fri Aug 27 10:04:28 1999
+@@ -128,27 +128,27 @@
+  * $Id: patch-aa,v 1.1.1.1 1999/08/27 04:09:28 sakamoto Exp $
+  */
+ 
+-cannaBinDir = /usr/local/canna/bin
+-cannaSrvDir = /usr/local/canna/bin
+-cannaLibDir = /usr/local/canna/lib
+-cannaManDir = /usr/local/canna/man
+-cannaIncDir = /usr/local/canna/include/canna
+-libCannaDir = /usr/lib
++cannaBinDir = ${PREFIX}/bin
++cannaSrvDir = ${PREFIX}/sbin
++cannaLibDir = ${PREFIX}/share/canna
++cannaManDir = ${PREFIX}/man/ja_JP.EUC
++cannaIncDir = ${PREFIX}/include/canna
++libCannaDir = ${PREFIX}/lib
+ 
+-ErrDir  = /usr/spool/canna
++ErrDir  = ${CANNA_SPOOL}
+ 
+ wcharDefinition = -DCANNA_WCHAR
+ Wlib =
+-JapaneseLocale = japanese
++JapaneseLocale = ja_JP.eucJP
+ 
+-cannaOwner = bin
+-cannaGroup = bin
++cannaOwner = ${CANNAOWNER}
++cannaGroup = ${CANNAGROUP}
+ 
+ cannaOwnerGroup = -o $(cannaOwner) -g $(cannaGroup)
+ 
+ pointerIntegerDef =
+ 
+-cannaDsoRev = 1
++cannaDsoRev = 1.0
+     /* SunOS 4.x をお使いの方で shared object を利用する場合には
+             cannaDsoRev = 1.1
+     と指定してください。また、FreeBSD を利用する場合は、
+@@ -201,10 +201,9 @@
+  * インストール済みの共有ライブラリを用いて Canna の
+  * コマンド類をリンクする時は、次を YES にしてくだい。
+  */
+-/* #define UseInstalledLibCanna YES */
+-#define UseInstalledLibCanna NO
++#define UseInstalledLibCanna YES
+ 
+-DicDir   = $(cannaLibDir)/dic
++DicDir   = ${DICT_DIR}/canna
+ 
+ #ifdef NeXT
+ #define NO_X_ENV
+@@ -239,18 +238,18 @@
+     DEPCANNALIB = $(libCannaDir)/libcanna.a
+ #endif
+ # endif
+-       CANNALIB = -L$(libCannaDir) -lcanna $(DLLIB)
++       CANNALIB = -Wl,-rpath,$(libCannaDir) -L$(libCannaDir) -lcanna $(DLLIB)
+ #else /* ! UseInstalledLibCanna */
+ # if DoSharedLib
+-    DEPCANNALIB = $(CANNASRC)/libcanna.$(sharedLibExtension)
++    DEPCANNALIB = $(libCannaDir)/libcanna.$(sharedLibExtension)
+ # else
+ #ifdef __EMX__
+-    DEPCANNALIB = $(CANNASRC)/canna.a
++    DEPCANNALIB = $(libCannaDir)/canna.a
+ #else
+-    DEPCANNALIB = $(CANNASRC)/libcanna.a
++    DEPCANNALIB = $(libCannaDir)/libcanna.a
+ #endif
+ # endif
+-       CANNALIB = -L$(CANNASRC) -lcanna $(DLLIB)
++       CANNALIB = -Wl,-rpath,$(libCannaDir) -L$(libCannaDir) -lcanna $(DLLIB)
+ #endif /* UseInstalledLibCanna */
+ 
+ #if UseInstalledLibCanna
+@@ -259,14 +258,14 @@
+ # else
+     DEPCANNALIB16 = $(libCannaDir)/libcanna16.a
+ # endif
+-       CANNALIB16 = -L$(libCannaDir) -lcanna16 $(DLLIB)
++       CANNALIB16 = -Wl,-rpath,$(libCannaDir) -L$(libCannaDir) -lcanna16 $(DLLIB)
+ #else /* ! UseInstalledLibCanna */
+ # if DoSharedLib
+-    DEPCANNALIB16 = $(CANNASRC)/libcanna16.$(sharedLibExtension)
++    DEPCANNALIB16 = $(libCannaDir)/libcanna16.$(sharedLibExtension)
+ # else
+-    DEPCANNALIB16 = $(CANNASRC)/libcanna16.a
++    DEPCANNALIB16 = $(libCannaDir)/libcanna16.a
+ # endif
+-       CANNALIB16 = -L$(CANNASRC) -lcanna16 $(DLLIB)
++       CANNALIB16 = -Wl,-rpath,$(libCannaDir) -L$(libCannaDir) -lcanna16 $(DLLIB)
+ #endif /* UseInstalledLibCanna */
+ 
+ /*
