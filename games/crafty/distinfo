@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.4 2001/10/23 05:53:53 jlam Exp $
+$NetBSD: distinfo,v 1.5 2002/01/12 05:48:15 jlam Exp $
 
-SHA1 (crafty-18.12/crafty-18.12.tar.gz) = 245d53f51f0cec70f59fffe819b18d0c38ce6c8f
-Size (crafty-18.12/crafty-18.12.tar.gz) = 362565 bytes
-SHA1 (crafty-18.12/start.pgn) = 09de69c698feda46c1ebafa4fa8e908296c66701
-Size (crafty-18.12/start.pgn) = 1347 bytes
-SHA1 (crafty-18.12/read.me) = a2d5f31b3f6c0d3a6b9eb3b390c8db22f285cc8f
-Size (crafty-18.12/read.me) = 6942 bytes
-SHA1 (crafty-18.12/crafty.faq) = 7ba5cc19e190fdcf1697e3130c679ce5e50141db
-Size (crafty-18.12/crafty.faq) = 10252 bytes
+SHA1 (crafty-18.13/crafty-18.13.tar.gz) = 9ec43d2c629eaa6bbb0df53b719764487a9d2be2
+Size (crafty-18.13/crafty-18.13.tar.gz) = 363916 bytes
+SHA1 (crafty-18.13/start.pgn) = 09de69c698feda46c1ebafa4fa8e908296c66701
+Size (crafty-18.13/start.pgn) = 1347 bytes
+SHA1 (crafty-18.13/read.me) = 0591fd3e511c8171270e5bcab085ae98b78b80fb
+Size (crafty-18.13/read.me) = 6942 bytes
+SHA1 (crafty-18.13/crafty.faq) = 7ba5cc19e190fdcf1697e3130c679ce5e50141db
+Size (crafty-18.13/crafty.faq) = 10252 bytes
 SHA1 (patch-aa) = 7e6306d7ba0cc1ac6159c717328bd172785326f1
