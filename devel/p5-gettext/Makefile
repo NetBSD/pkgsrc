@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.9 2004/12/20 11:31:03 grant Exp $
+# $NetBSD: Makefile,v 1.10 2005/02/18 12:53:56 wiz Exp $
 #
 
-DISTNAME=	gettext-1.01
+DISTNAME=	gettext-1.04
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5gtx
-PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Locale/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://search.cpan.org/dist/gettext/
 COMMENT=	Perl5 module interface to C I18N functions
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
