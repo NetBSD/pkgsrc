@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/03/01 23:39:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/03/22 14:05:54 wiz Exp $
 bin/fc-cache
 bin/fc-list
 bin/fc-match
@@ -274,8 +274,11 @@ share/doc/fontconfig/fontconfig-devel/x93.html
 share/doc/fontconfig/fontconfig-user.html
 share/doc/fontconfig/fontconfig-user.pdf
 share/doc/fontconfig/fontconfig-user.txt
+share/examples/fontconfig/conf.d/autohint.conf
 share/examples/fontconfig/conf.d/no-bitmaps.conf
+share/examples/fontconfig/conf.d/no-sub-pixel.conf
 share/examples/fontconfig/conf.d/sub-pixel.conf
+share/examples/fontconfig/conf.d/unhinted.conf
 share/examples/fontconfig/conf.d/yes-bitmaps.conf
 share/examples/fontconfig/fonts.conf
 share/examples/fontconfig/fonts.dtd
