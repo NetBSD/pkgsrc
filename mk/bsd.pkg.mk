@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1402 2004/02/14 15:16:31 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1403 2004/02/14 15:22:42 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1288,8 +1288,10 @@ CONFIGURE_ARGS+=        --x-libraries=${X11BASE}/lib
 # packages. pkgsrc's updated versions of these scripts allows GNU
 # configure to recognise NetBSD ports such as shark.
 #
-CONFIG_GUESS_OVERRIDE?=	${WRKSRC}/config.guess
-CONFIG_SUB_OVERRIDE?=	${WRKSRC}/config.sub
+CONFIG_GUESS_OVERRIDE?=		\
+	config.guess */config.guess */*/config.guess
+CONFIG_SUB_OVERRIDE?=		\
+	config.sub */config.sub */*/config.sub
 #
 # By default, override config.status for GNU configure packages.  We
 # never want it to execute after the configure phase has ended as it
@@ -2356,18 +2358,28 @@ _CONFIGURE_PREREQ+=	do-config-star-override
 .PHONY: do-config-star-override
 do-config-star-override:
 .  if defined(CONFIG_GUESS_OVERRIDE) && !empty(CONFIG_GUESS_OVERRIDE)
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	for g in ${CONFIG_GUESS_OVERRIDE}; do				\
-		${RM} -f $$g;						\
-		${LN} -s ${_PKGSRCDIR}/mk/gnu-config/config.guess $$g;	\
+.    for _pattern_ in ${CONFIG_GUESS_OVERRIDE}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC};			\
+	for file in ${_pattern_}; do					\
+		if [ -f "$$file" ]; then				\
+			${RM} -f $$file;				\
+			${LN} -s ${_PKGSRCDIR}/mk/gnu-config/config.guess \
+				$$file;					\
+		fi;							\
 	done
+.    endfor
 .  endif
 .  if defined(CONFIG_SUB_OVERRIDE) && !empty(CONFIG_SUB_OVERRIDE)
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	for s in ${CONFIG_SUB_OVERRIDE}; do				\
-		${RM} -f $$s;						\
-		${LN} -s ${_PKGSRCDIR}/mk/gnu-config/config.sub $$s;	\
+.    for _pattern_ in ${CONFIG_SUB_OVERRIDE}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC};			\
+	for file in ${_pattern_}; do					\
+		if [ -f "$$file" ]; then				\
+			${RM} -f $$file;				\
+			${LN} -s ${_PKGSRCDIR}/mk/gnu-config/config.sub	\
+				$$file;					\
+		fi;							\
 	done
+.    endfor
 .  endif
 .endif
 
