@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.6 2004/08/07 11:31:14 adrianp Exp $
+$NetBSD: MESSAGE,v 1.7 2004/11/06 13:28:32 jdolecek Exp $
 
 Do *not* edit "${PMDIR}/config.inc.php" to customize
 this package because it is a link which will removed during upgrades.
@@ -9,7 +9,7 @@ You will need to make phpMyAdmin accessible through your HTTP server.
 If you are running Apache and ap-php, then you can add the following line
 to httpd.conf:
        
-	Include ${PKG_SYSCONFDIR}/phpmyadmin.conf
+	Include ${EXDIR}/apache.conf
 
 to make phpMyAdmin accessible through:
 				
