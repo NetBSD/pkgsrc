@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/09 18:47:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/20 17:32:33 jmmv Exp $
 #
 
 DISTNAME=	gmencoder-0.1.0
@@ -17,7 +17,7 @@ DEPENDS+=       	mencoder>=0.90:../../multimedia/mencoder
 DEPENDS+=       	mplayer>=0.90:../../multimedia/mplayer
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
@@ -36,7 +36,8 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/etc/gmencoder_opts ${EGDIR}
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
