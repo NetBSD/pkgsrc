@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1254 2003/12/30 01:59:00 salo Exp $
+$NetBSD: TODO,v 1.1255 2003/12/30 02:08:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -104,11 +104,12 @@ Suggested package updates
 
 	o ImageViewer-0.6.3
 	o SDL_gfx-2.0.10
-	o TeXmacs-1.0.2.10
+	o TeXmacs-1.0.2.11
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o amanda-2.4.4p1
 	o anjuta-1.2.0 [cube]
+	o asc-1.13.9
 	o atari800-1.3.2
 	o autogen-5.5.6
 	o avidemux-2.0.20
@@ -144,6 +145,7 @@ Suggested package updates
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
 	o eclipse-2.1.2
+	o efax-gtk-2.2.3
 	o elinks-0.9.0
 	o elk-3.99.6
 	o elm-me-2.4pl110
@@ -204,7 +206,7 @@ Suggested package updates
 	o libcroco-0.4.0 [pkg/23793]
 	o libmpeg3-1.5.3
 	o libole2-2.2.8
-	o libtiff-3.6.0
+	o libtiff-3.6.1
 	o libtool-1.5 [skrll]
 	o licq-1.2.7
 	o lilypond-2.0.0
@@ -317,6 +319,7 @@ Suggested package updates
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.5.0
 	o xfstt-1.6
+	o xine-lib-1rc3a
 	o xine-ui-0.9.23
 	o xisp-2.7 [pkg/19566]
 	o xmcd-3.2.1
