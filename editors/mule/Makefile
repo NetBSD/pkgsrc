@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/07/24 02:35:09 hubertf Exp $
+# $NetBSD: Makefile,v 1.15 2002/10/13 16:09:32 wiz Exp $
 
 DISTNAME=	mule-2.3
 PKGREVISION=	1
@@ -14,14 +14,15 @@ CONFLICTS=	emacs-[0-9]*
 .include "../../mk/bsd.prefs.mk"
 
 .if !defined(USE_WNN4) || ${USE_WNN4} == YES
-.include "../../inputmethod/ja-freewnn-lib/buildlink.mk"
+.include "../../inputmethod/ja-freewnn-lib/buildlink2.mk"
 .endif
 .if !defined(USE_CANNA) || ${USE_CANNA} == YES
-.include "../../inputmethod/canna-lib/buildlink.mk"
+.include "../../inputmethod/canna-lib/buildlink2.mk"
 .endif
 
 WRKSRC=		${WRKDIR}/mule
 GNU_CONFIGURE=	yes
+USE_BUILDLINK2=	yes
 USE_GMAKE=	yes
 
 CONFIGURE_ARGS+=	${MACHINE_ARCH}--netbsd --with-x --with-x-toolkit=lucid
@@ -32,11 +33,11 @@ CONFIGURE_ARGS+=	--valbits=26
 CONFIGURE_ARGS+=	--bdf-path=${X11PREFIX}/lib/X11/fonts/intlfonts/bdf
 
 .if !defined(USE_WNN4) || ${USE_WNN4} == YES
-CONFIGURE_ARGS+=	--with-wnn4 --wnn-includes=${BUILDLINK_DIR}/include/wnn --wnn-libraries=${BUILDLINK_DIR}/lib
+CONFIGURE_ARGS+=	--with-wnn4 --wnn-includes=${BUILDLINK_PREFIX.ja-freewnn}/include/wnn --wnn-libraries=${BUILDLINK_PREFIX.ja-freewnn}/lib
 .endif
 
 .if !defined(USE_CANNA) || ${USE_CANNA} == YES
-CONFIGURE_ARGS+=	--canna --canna-includes=${BUILDLINK_DIR}/include --canna-libraries=${BUILDLINK_DIR}/lib
+CONFIGURE_ARGS+=	--canna --canna-includes=${BUILDLINK_PREFIX.canna}/include --canna-libraries=${BUILDLINK_PREFIX.canna}/lib
 .endif
 
 INFO_FILES=	antenews-jp canna-jp cl dired-x egg-jp emacs forms gnus mule \
