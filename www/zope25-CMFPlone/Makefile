@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/11/14 16:50:38 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/02 15:17:58 wiz Exp $
 
 DISTNAME=	CMFPlone1.0beta3
 PKGNAME=	zope25-CMFPlone-1.0beta3
@@ -9,8 +9,8 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.plone.org/
 COMMENT=	Content Management System
 
-DEPENDS+=	zope25-CMF-*:../../www/zope25-CMF
-DEPENDS+=	zope25-Formulator-*:../../www/zope25-Formulator
+DEPENDS+=	zope25-CMF-[0-9]*:../../www/zope25-CMF
+DEPENDS+=	zope25-Formulator-[0-9]*:../../www/zope25-Formulator
 
 WRKSRC=		${WRKDIR}/CMFPlone-1.0beta3
 PRODNAMES=	ActivePak CMFPlone DCWorkflow
