@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/02/15 05:56:58 salo Exp $
+# $NetBSD: Makefile,v 1.12 2003/03/01 02:08:16 jlam Exp $
 #
 
 DISTNAME=	centericq-4.9.2
@@ -20,8 +20,8 @@ LIBS=			${LDFLAGS}
 .include "../../devel/glib/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/ncurses/buildlink2.mk"
-.include "../../devel/libsigc++/buildlink2.mk"
 .include "../../lang/gcc/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
 
