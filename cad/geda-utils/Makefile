@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/12/28 07:31:34 uebayasi Exp $
+# $NetBSD: Makefile,v 1.12 2002/12/28 15:58:32 uebayasi Exp $
 #
 
 DISTNAME=		geda-utils-${PKGVERSION}
@@ -11,8 +11,6 @@ MASTER_SITES=		ftp://ftp.geda.seul.org/pub/geda/devel/${PKGVERSION}/ \
 MAINTAINER=		dmcmahill@netbsd.org
 HOMEPAGE=		http://www.geda.seul.org/
 COMMENT=		Set of utilites for gEDA
-
-DEPENDS+=		geda-symbols-${PKGVERSION}:../../cad/geda-symbols
 
 CONFLICTS+=		gEDA<19991011
 
