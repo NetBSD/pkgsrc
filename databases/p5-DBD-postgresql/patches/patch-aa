@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2002/08/21 23:10:39 mjl Exp $
+$NetBSD: patch-aa,v 1.3 2003/01/17 16:41:39 mjl Exp $
 
---- dbdimp.c.orig	Sat Apr 27 22:35:52 2002
-+++ dbdimp.c	Thu Aug 22 01:01:06 2002
+--- dbdimp.c.orig	Wed Jan  8 23:08:17 2003
++++ dbdimp.c	Fri Jan 17 17:23:37 2003
 @@ -40,6 +40,30 @@
  
  
@@ -33,43 +33,49 @@ $NetBSD: patch-aa,v 1.2 2002/08/21 23:10:39 mjl Exp $
  dbd_discon_all (drh, imp_drh)
      SV *drh;
      imp_drh_t *imp_drh;
-@@ -191,6 +215,7 @@
- 
+@@ -192,6 +216,7 @@
      imp_dbh->init_commit = 1;			/* initialize AutoCommit */
      imp_dbh->pg_auto_escape = 1;		/* initialize pg_auto_escape */
+     imp_dbh->pg_bool_tf = 0;                    /* initialize pg_bool_tf */
 +    imp_dbh->need_begin = 1;
  
      DBIc_IMPSET_on(imp_dbh);			/* imp_dbh set up now */
      DBIc_ACTIVE_on(imp_dbh);			/* call disconnect before freeing */
-@@ -241,6 +266,9 @@
+@@ -283,6 +308,9 @@
          PGresult* result = 0;
-         ExecStatusType status;
+         ExecStatusType commitstatus, beginstatus;
  
-+	if (imp_dbh->need_begin)
-+		return 1;
++        if (imp_dbh->need_begin)
++            return 1;
 +
          /* execute commit */
          result = PQexec(imp_dbh->conn, "commit");
-         status = result ? PQresultStatus(result) : -1;
-@@ -252,15 +280,8 @@
-             return 0;
+         commitstatus = result ? PQresultStatus(result) : -1;
+@@ -294,21 +322,12 @@
+ 	    pg_error(dbh, commitstatus, PQerrorMessage(imp_dbh->conn));
          }
  
 -        /* start new transaction.  AutoCommit must be FALSE, ref. 20 lines up */
 -        result = PQexec(imp_dbh->conn, "begin");
--        status = result ? PQresultStatus(result) : -1;
+-        beginstatus = result ? PQresultStatus(result) : -1;
 -        PQclear(result);
--        if (status != PGRES_COMMAND_OK) {
--            pg_error(dbh, status, "begin failed\n");
+-        if (beginstatus != PGRES_COMMAND_OK) {
+-	    /* Maybe add some loud barf here? Raising some very high error? */
+-            pg_error(dbh, beginstatus, "begin failed\n");
 -            return 0;
 -        }
+-
+ 	/* if the initial COMMIT failed, return 0 now */
+ 	if (commitstatus != PGRES_COMMAND_OK) {
+             return 0;
+         }
 -        
-+        imp_dbh->need_begin = 1;
 +
++        imp_dbh->need_begin = 1;
          return 1;
      }
      
-@@ -284,6 +305,9 @@
+@@ -332,6 +351,9 @@
          PGresult* result = 0;
          ExecStatusType status;
          
@@ -79,7 +85,7 @@ $NetBSD: patch-aa,v 1.2 2002/08/21 23:10:39 mjl Exp $
          /* execute rollback */
          result = PQexec(imp_dbh->conn, "rollback");
          status = result ? PQresultStatus(result) : -1;
-@@ -295,15 +319,8 @@
+@@ -343,15 +365,8 @@
              return 0;
          }
  
@@ -97,7 +103,7 @@ $NetBSD: patch-aa,v 1.2 2002/08/21 23:10:39 mjl Exp $
          return 1;
      }
  
-@@ -326,7 +343,8 @@
+@@ -374,7 +389,8 @@
  
      if (NULL != imp_dbh->conn) {
          /* rollback if AutoCommit = off */
@@ -107,7 +113,7 @@ $NetBSD: patch-aa,v 1.2 2002/08/21 23:10:39 mjl Exp $
              PGresult* result = 0;
              ExecStatusType status;
              result = PQexec(imp_dbh->conn, "rollback");
-@@ -402,16 +420,7 @@
+@@ -450,16 +466,7 @@
              if (dbis->debug >= 2) { PerlIO_printf(DBILOGFP, "dbd_db_STORE: switch AutoCommit to on: commit\n"); }
          } else if ((oldval != FALSE && newval == FALSE) || (oldval == FALSE && newval == FALSE && imp_dbh->init_commit)) {
              if (NULL != imp_dbh->conn) {
@@ -125,7 +131,7 @@ $NetBSD: patch-aa,v 1.2 2002/08/21 23:10:39 mjl Exp $
              }
              if (dbis->debug >= 2) { PerlIO_printf(DBILOGFP, "dbd_db_STORE: switch AutoCommit to off: begin\n"); }
          }
-@@ -1080,6 +1089,11 @@
+@@ -1142,6 +1149,11 @@
          return -2;
      }   
      
