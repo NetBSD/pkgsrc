@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6307 2004/06/25 07:00:54 sekiya Exp $
+$NetBSD: CHANGES,v 1.6308 2004/06/25 08:54:32 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3056,3 +3056,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added lcab-1.0b10 [ben 2004-06-24]
 	Updated shorten to 3.6.0 [ben 2004-06-24]
 	Added dvdauthor-0.6.10 [sekiya 2004-06-25]
+	Updated rhythmbox to 0.8.5 [jmmv 2004-06-25]
+	Updated gossip to 0.7.6 [jmmv 2004-06-25]
