@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.210 2003/01/22 10:20:07 wiz Exp $
+$NetBSD: TODO,v 1.211 2003/01/22 22:47:05 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -97,7 +97,6 @@ Suggested package updates
 	o dante-1.1.13
 	o db4-4.1.25
 	o dctc-0.84.0
-	o docbook-xsl-1.59.1
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
 	o elinks-0.4.0
