@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/09 19:13:03 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/15 00:37:08 kristerw Exp $
 #
 
 DISTNAME=		jgrasp164
@@ -14,13 +14,17 @@ COMMENT=		IDE with support for Software Visualizations
 WRKSRC=			${WRKDIR}/jgrasp
 PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14
 
+USE_BUILDLINK3=		yes
+USE_X11=		yes
+
 do-configure:
 	${MKDIR} ${WRKSRC}/bin/${LOWER_OPSYS}
 
 do-build:
 	${CC} ${CFLAGS} -lutil -o ${WRKSRC}/jbin/${LOWER_OPSYS}_run 	\
 		${WRKSRC}/src/linux_run.c
-	${CC} ${CFLAGS} -I${X11PREFIX}/include -L${X11PREFIX}/lib -lX11 \
+	${CC} ${CFLAGS} -I${X11BASE}/include				\
+		-L${X11BASE}/lib -Wl,-R${X11BASE}/lib -lX11 		\
 		-o ${WRKSRC}/bin/${LOWER_OPSYS}/jgrasp 			\
 		${WRKSRC}/src/linux_exec.c
 
