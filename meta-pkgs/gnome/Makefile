@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/07/11 19:44:28 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/07/27 15:04:55 tron Exp $
 
 DISTNAME=	gnome-1.4.0.6
 CATEGORIES=	meta-pkgs x11 gnome
@@ -29,7 +29,7 @@ DEPENDS+=	gtk-->=1.2.5:../../x11/gtk--
 DEPENDS+=	gtk-engines>=0.12:../../x11/gtk-engines
 DEPENDS+=	gtop>=1.0.13:../../sysutils/gtop
 DEPENDS+=	pan>0.10.0:../../news/pan
-DEPENDS+=	xchat>=1.8.7:../../chat/xchat
+DEPENDS+=	xchat-gnome>=1.8.9:../../chat/xchat-gnome
 
 USE_X11=	yes
 EXTRACT_ONLY=	# empty
