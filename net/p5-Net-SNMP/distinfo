@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/01/18 22:50:16 mjl Exp $
+$NetBSD: distinfo,v 1.5 2003/09/18 19:09:52 wiz Exp $
 
-SHA1 (Net-SNMP-4.0.1.tar.gz) = 10f4707cae09619a200b00227cd85be56fb4093f
-Size (Net-SNMP-4.0.1.tar.gz) = 59209 bytes
+SHA1 (Net-SNMP-4.1.2.tar.gz) = 58c6ed92ba32ba7303c6649b95662498f2db89a2
+Size (Net-SNMP-4.1.2.tar.gz) = 71965 bytes
