@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2003/07/13 00:42:17 rh Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/14 10:42:17 rh Exp $
 #
 
-DISTNAME=	cgoban-unix-2.5.0
+DISTNAME=	cgoban-unix-2.5.1
 PKGNAME=	${DISTNAME:S/unix/java/}
 WRKSRC=		${WRKDIR}/cgoban
 CATEGORIES=	games
