@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2004/06/16 16:09:39 minskim Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 15:59:10 agc Exp $
 
 SHA1 (bnc2.8.6.tar.gz) = 19544b83c4e8d558d56621b5001590432de2b4d0
+RMD160 (bnc2.8.6.tar.gz) = e8d0598a22d1c2b324fc087fc9a373398bc4db2d
 Size (bnc2.8.6.tar.gz) = 52569 bytes
 SHA1 (patch-aa) = 089c7ee2523d55404c68ca7ad6f551f6e69f1392
 SHA1 (patch-ab) = 74554135c60b7c18c467e674e1e22778b1fa3b95

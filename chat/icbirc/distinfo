@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.4 2004/11/19 13:03:30 tv Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 15:59:11 agc Exp $
 
 SHA1 (icbirc-1.8.tar.gz) = 99ff8674b189fdf8a86b6acd2bc19418b888c38b
+RMD160 (icbirc-1.8.tar.gz) = 769c35949b79b9e401d99026800e61063e6d1103
 Size (icbirc-1.8.tar.gz) = 11061 bytes

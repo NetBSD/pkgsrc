@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/06/06 14:27:03 manu Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 15:59:10 agc Exp $
 
 SHA1 (emech-2.8.4.tar.gz) = ebc2c21e69f7b54e8657202ee2f72804607b754b
+RMD160 (emech-2.8.4.tar.gz) = 1f68091ec0e75dfda68078c7a026e55eb91286f0
 Size (emech-2.8.4.tar.gz) = 170610 bytes

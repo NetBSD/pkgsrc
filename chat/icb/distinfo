@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2003/11/13 20:59:53 tron Exp $
+$NetBSD: distinfo,v 1.7 2005/02/23 15:59:11 agc Exp $
 
 SHA1 (icb-5.0.9.tar.gz) = 151430ad7fe3e9787627b31f6551bf1f398b1bd8
+RMD160 (icb-5.0.9.tar.gz) = 8184620d7abf71fa38315fa14aa5345b6981c9bf
 Size (icb-5.0.9.tar.gz) = 357565 bytes
 SHA1 (patch-aa) = 1790a2c85ec28fc6b741d56299dc287c29f6bf90
 SHA1 (patch-ab) = 6a5970e1443834e9370c29ace56811f0ba35fa4e

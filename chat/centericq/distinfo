@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.12 2004/12/20 23:24:55 hubertf Exp $
+$NetBSD: distinfo,v 1.13 2005/02/23 15:59:10 agc Exp $
 
 SHA1 (centericq-4.13.0.tar.bz2) = e8d276c689dd2284ed82e4655fe8cbf843e545d6
+RMD160 (centericq-4.13.0.tar.bz2) = bc0f14bffce4777a233508694e0b10391337b320
 Size (centericq-4.13.0.tar.bz2) = 1251118 bytes
 SHA1 (patch-aa) = b3e610a1a3b30a716215889b9f51c6de7e78fb22
 SHA1 (patch-ab) = 6d9beb28024666bbfef2e95cab648d7058f8136c
