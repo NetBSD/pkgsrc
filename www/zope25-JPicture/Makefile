@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:56:12 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/22 04:14:42 martti Exp $
 
 DISTNAME=	JPicture-2_0
 PKGREVISION=	1
@@ -11,7 +11,7 @@ BUILDLINK_DEPENDS.pyimaging= ${PYPKGPREFIX}-imaging>=1.1.3
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.dataflake.org/software/jpicture/
-COMMENT=	present your photos quickly in zope
+COMMENT=	Present your photos quickly in zope
 
 ZOPE_COPYPRODUCT= zope-std-copyproduct-short
 USE_BUILDLINK2=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:56:15 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/22 04:14:45 martti Exp $
 
 DISTNAME=	Silva-0.8.6.1
 PKGREVISION=	1
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.infrae.com/products/silva
-COMMENT=	browser based publication system
+COMMENT=	Browser based publication system
 
 DEPENDS+=	zope25-Formulator-[0-9]*:../../www/zope25-Formulator
 DEPENDS+=	zope25-XMLWidgets-[0-9]*:../../www/zope25-XMLWidgets

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/12 15:11:38 salo Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/22 04:14:35 martti Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}-stable-src
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ijbswa/}
 
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.privoxy.org/
-COMMENT=	web proxy with advanced filtering capabilities
+COMMENT=	Web proxy with advanced filtering capabilities
 
 DEPENDS+=       privoxy-user>=3.0.2:../../www/privoxy-user
 

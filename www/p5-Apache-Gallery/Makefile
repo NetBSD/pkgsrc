@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/13 13:53:51 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/22 04:14:27 martti Exp $
 #
 
 DISTNAME=	Apache-Gallery-0.4.1
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Apache/}
 
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://apachegallery.dk/
-COMMENT=	perl5/Apache module for handling image directories
+COMMENT=	Perl5/Apache module for handling image directories
 
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-Image-Info-[0-9]*:../../graphics/p5-Image-Info

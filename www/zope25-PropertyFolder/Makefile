@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 22:56:14 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/22 04:14:44 martti Exp $
 
 DISTNAME=	PropertyFolder-1.3.3
 PKGNAME=	zope25-PropertyFolder-1.3.3
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.zope.org/Members/mjablonski/PropertyFolder/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.zope.org/Members/mjablonski/PropertyFolder
-COMMENT=	the folderish friend of the PropertyObject
+COMMENT=	The folderish friend of the PropertyObject
 
 BUILDLINK_DEPENDS.zope=	zope>=2.6.1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:56:10 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/22 04:14:41 martti Exp $
 
 DISTNAME=	Calendar-1.0.10
 PKGREVISION=	1
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.zope.org/Members/jdavid/Calendar/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.zope.org/Members/jdavid/Calendar
-COMMENT=	the Calendar Tag
+COMMENT=	The Calendar Tag
 
 ZOPE_COPYPRODUCT= zope-std-copyproduct-short
 USE_BUILDLINK2=	yes

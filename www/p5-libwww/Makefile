@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2003/07/17 22:55:55 grant Exp $
+# $NetBSD: Makefile,v 1.33 2003/07/22 04:14:34 martti Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/09/14 04:00:11 jfitz Exp
 #
 
@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=WWW/}
 
 MAINTAINER=	shell@NetBSD.org
 HOMEPAGE=	http://www.linpro.no/lwp/
-COMMENT=	perl5 library for WWW access
+COMMENT=	Perl5 library for WWW access
 
 DEPENDS+= 	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Net-[0-9]*:../../net/p5-Net

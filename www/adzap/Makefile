@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2003/07/17 22:55:19 grant Exp $
+# $NetBSD: Makefile,v 1.38 2003/07/22 04:14:17 martti Exp $
 #
 
 DISTNAME=	adzap-20030525
@@ -10,7 +10,7 @@ MASTER_SITES=	http://adzapper.sourceforge.net/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://adzapper.sourceforge.net/
-COMMENT=	filter out animated ad banners from web pages
+COMMENT=	Filter out animated ad banners from web pages
 
 NO_BUILD=	# defined
 USE_PERL5=	# defined

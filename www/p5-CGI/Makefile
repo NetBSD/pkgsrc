@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/07/17 22:55:47 grant Exp $
+# $NetBSD: Makefile,v 1.23 2003/07/22 04:14:28 martti Exp $
 #
 
 VERS=			2.91
@@ -10,7 +10,7 @@ MASTER_SITES+=		${MASTER_SITE_PERL_CPAN:=CGI/}
 
 MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://stein.cshl.org/WWW/software/CGI/
-COMMENT=		perl5 module for writing forms-based CGI programs
+COMMENT=		Perl5 module for writing forms-based CGI programs
 
 # Some perl packages install their own versions of this module.
 # Can't simply define USE_PERL5.
