@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 17:21:40 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/28 10:33:52 wiz Exp $
 #
 
 DISTNAME=	amaya-src-4.2.1
@@ -27,7 +27,7 @@ USE_GMAKE=	yes
 
 post-extract:
 	${MKDIR} ${WRKSRC}
-	${RM} -rf ${WRKDIR}/Amaya/libjpeg 
+	${RM} -rf ${WRKDIR}/Amaya/libjpeg
 	${RM} -rf ${WRKDIR}/Amaya/libpng/zlib
 #	${RM} -rf ${WRKDIR}/Amaya/libpng
 

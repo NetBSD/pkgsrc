@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/17 17:51:28 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/28 10:33:53 wiz Exp $
 #
 
 DISTNAME=		pkgdiff-0.96
@@ -30,7 +30,7 @@ NROFF=		nroff
 .endif
 
 do-build:
-.for FILE in mkpatches patchdiff 
+.for FILE in mkpatches patchdiff
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
 		< ${FILESDIR}/${FILE}.pl 		\
 		> ${WRKSRC}/${FILE}

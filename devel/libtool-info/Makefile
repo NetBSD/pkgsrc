@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/27 08:20:26 skrll Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/28 10:33:54 wiz Exp $
 #
 
 .include "../libtool/Makefile.common"
@@ -24,6 +24,5 @@ do-build:
 
 do-install:
 	cd ${WRKSRC}/doc ; ${MAKE_PROGRAM} install
-
 
 .include "../../mk/bsd.pkg.mk"
