@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2002/08/08 13:11:32 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2003/11/11 10:17:39 wiz Exp $
 
---- stop.c.orig	Thu Dec  7 06:42:20 2000
+--- stop.c.orig	Sun Mar 30 22:05:53 2003
 +++ stop.c
-@@ -33,9 +33,11 @@
+@@ -35,17 +35,21 @@ int argc;
  char *argv[];
  {
      unsigned long pid;
@@ -12,5 +12,15 @@ $NetBSD: patch-aa,v 1.5 2002/08/08 13:11:32 wiz Exp $
      char procname[80];
 +#endif
      extern unsigned long lockpid();
+     extern char *make_lock_name();
      extern void quit();
  
+     pid = lockpid(make_lock_name(monfile));
++#ifdef __linux__
+     procname[0] = 0;
+     buf[0] = 0;
+     pidfile = (FILE *) NULL;
++#endif
+ 
+     if( pid == 0 )
+     {
