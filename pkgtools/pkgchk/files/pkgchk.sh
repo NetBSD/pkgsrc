@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.41 2003/06/18 08:58:13 abs Exp $
+# $Id: pkgchk.sh,v 1.42 2003/06/19 13:37:01 tron Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -338,7 +338,7 @@ cd $PKGSRCDIR
 real_pkgsrcdir=`pwd`
 
 if [ -n "$opt_i" ];then
-    PKGDIRLIST=`sh -c "${PKG_INFO} -B \*" | ${AWK} -F= '/PKGPATH=/{printf $2" "}'`
+    PKGDIRLIST=`sh -c "${PKG_INFO} -B \*" | ${AWK} -F= '/PKGPATH=/{print $2" "}'`
 fi
 
 if [ -n "$opt_c" ];then
