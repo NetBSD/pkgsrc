@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/09 19:13:03 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/07/14 13:44:36 wiz Exp $
 bin/jgrasp
 ${PKGNAME}/README.htm
 ${PKGNAME}/README.txt
 ${PKGNAME}/bin/${LOWER_OPSYS}/jgrasp
-${PKGNAME}/data/admin
+${PKGNAME}/data/animate.gif
 ${PKGNAME}/data/applet.gif
 ${PKGNAME}/data/back.gif
 ${PKGNAME}/data/brsdir.gif
@@ -71,6 +71,7 @@ ${PKGNAME}/data/index.jav
 ${PKGNAME}/data/index.obc
 ${PKGNAME}/data/index.txt
 ${PKGNAME}/data/index.vhd
+${PKGNAME}/data/jar.gif
 ${PKGNAME}/data/logo.gif
 ${PKGNAME}/data/make.gif
 ${PKGNAME}/data/numbers.gif
@@ -109,18 +110,79 @@ ${PKGNAME}/data/uml.gif
 ${PKGNAME}/data/uml48.gif
 ${PKGNAME}/data/umlic16.gif
 ${PKGNAME}/data/undo.gif
+${PKGNAME}/examples/Test.class
 ${PKGNAME}/examples/Test.java
+${PKGNAME}/examples/a.exe
+${PKGNAME}/examples/a.out
 ${PKGNAME}/examples/test.asm
 ${PKGNAME}/examples/test.c
 ${PKGNAME}/examples/test.cpp
 ${PKGNAME}/examples/test.for
 ${PKGNAME}/examples/test.gpj
+${PKGNAME}/examples/tutorial/Hello/Hello.class
+${PKGNAME}/examples/tutorial/Hello/Hello.java
+${PKGNAME}/examples/tutorial/Hello/Hello_Project.gpj
+${PKGNAME}/examples/tutorial/OddEven.java
+${PKGNAME}/examples/tutorial/PersonalLibrary/Book.class
+${PKGNAME}/examples/tutorial/PersonalLibrary/Book.java
+${PKGNAME}/examples/tutorial/PersonalLibrary/Fiction.class
+${PKGNAME}/examples/tutorial/PersonalLibrary/Fiction.java
+${PKGNAME}/examples/tutorial/PersonalLibrary/NonFiction.class
+${PKGNAME}/examples/tutorial/PersonalLibrary/NonFiction.java
+${PKGNAME}/examples/tutorial/PersonalLibrary/Novel.class
+${PKGNAME}/examples/tutorial/PersonalLibrary/Novel.java
+${PKGNAME}/examples/tutorial/PersonalLibrary/PersonalLibrary.class
+${PKGNAME}/examples/tutorial/PersonalLibrary/PersonalLibrary.java
+${PKGNAME}/examples/tutorial/PersonalLibrary/PersonalLibraryProject.gpj
 ${PKGNAME}/extensions/README.txt
 ${PKGNAME}/extensions/classes/system/README.txt
 ${PKGNAME}/extensions/classes/system/cs1/Keyboard.class
 ${PKGNAME}/extensions/classes/system/cs1/Keyboard.java
 ${PKGNAME}/extensions/classes/system/cs1/KeyboardDesc.doc
 ${PKGNAME}/extensions/classes/system/cs1/KeyboardDesc.pdf
+${PKGNAME}/extensions/viewers/system/FloatView.class
+${PKGNAME}/extensions/viewers/system/FloatView.java
+${PKGNAME}/extensions/viewers/system/IntView.class
+${PKGNAME}/extensions/viewers/system/IntView.java
+${PKGNAME}/extensions/viewers/system/byte_ByteView.class
+${PKGNAME}/extensions/viewers/system/byte_ByteView.java
+${PKGNAME}/extensions/viewers/system/double_DoubleView.class
+${PKGNAME}/extensions/viewers/system/double_DoubleView.java
+${PKGNAME}/extensions/viewers/system/float_FloatView.class
+${PKGNAME}/extensions/viewers/system/float_FloatView.java
+${PKGNAME}/extensions/viewers/system/int_IntView.class
+${PKGNAME}/extensions/viewers/system/int_IntView.java
+${PKGNAME}/extensions/viewers/system/java__awt__Color_ColorView$1.class
+${PKGNAME}/extensions/viewers/system/java__awt__Color_ColorView.class
+${PKGNAME}/extensions/viewers/system/java__awt__Color_ColorView.java
+${PKGNAME}/extensions/viewers/system/java__lang__Byte_ByteView.class
+${PKGNAME}/extensions/viewers/system/java__lang__Byte_ByteView.java
+${PKGNAME}/extensions/viewers/system/java__lang__Double_DoubleView.class
+${PKGNAME}/extensions/viewers/system/java__lang__Double_DoubleView.java
+${PKGNAME}/extensions/viewers/system/java__lang__Float_FloatView.class
+${PKGNAME}/extensions/viewers/system/java__lang__Float_FloatView.java
+${PKGNAME}/extensions/viewers/system/java__lang__Integer_IntView.class
+${PKGNAME}/extensions/viewers/system/java__lang__Integer_IntView.java
+${PKGNAME}/extensions/viewers/system/java__lang__Long_LongView.class
+${PKGNAME}/extensions/viewers/system/java__lang__Long_LongView.java
+${PKGNAME}/extensions/viewers/system/java__lang__Short_ShortView.class
+${PKGNAME}/extensions/viewers/system/java__lang__Short_ShortView.java
+${PKGNAME}/extensions/viewers/system/java__lang__StringBuffer_FormattedView.class
+${PKGNAME}/extensions/viewers/system/java__lang__StringBuffer_FormattedView.java
+${PKGNAME}/extensions/viewers/system/java__lang__String_FormattedView.class
+${PKGNAME}/extensions/viewers/system/java__lang__String_FormattedView.java
+${PKGNAME}/extensions/viewers/system/java__lang__Throwable_ThrowableView.class
+${PKGNAME}/extensions/viewers/system/java__lang__Throwable_ThrowableView.java
+${PKGNAME}/extensions/viewers/system/java__util__Collection_ToStringView.class
+${PKGNAME}/extensions/viewers/system/java__util__Collection_ToStringView.java
+${PKGNAME}/extensions/viewers/system/java__util__Map_ToStringView.class
+${PKGNAME}/extensions/viewers/system/java__util__Map_ToStringView.java
+${PKGNAME}/extensions/viewers/system/java__util__TreeMap_View.class
+${PKGNAME}/extensions/viewers/system/java__util__TreeMap_View.java
+${PKGNAME}/extensions/viewers/system/long_LongView.class
+${PKGNAME}/extensions/viewers/system/long_LongView.java
+${PKGNAME}/extensions/viewers/system/short_ShortView.class
+${PKGNAME}/extensions/viewers/system/short_ShortView.java
 ${PKGNAME}/help/contents.htm
 ${PKGNAME}/help/control.htm
 ${PKGNAME}/help/cpg.htm
@@ -130,16 +192,17 @@ ${PKGNAME}/help/fixed.htm
 ${PKGNAME}/help/frame.htm
 ${PKGNAME}/help/help.db
 ${PKGNAME}/help/help.zip
-${PKGNAME}/help/howdoi.htm
+${PKGNAME}/help/howto1.htm
 ${PKGNAME}/help/index.htm
 ${PKGNAME}/help/jar.htm
 ${PKGNAME}/help/main.htm
 ${PKGNAME}/help/search.htm
 ${PKGNAME}/help/settings.htm
 ${PKGNAME}/help/uml.htm
-${PKGNAME}/jbin/JGRASP__829J_6h.class
 ${PKGNAME}/jbin/${LOWER_OPSYS}_run
+${PKGNAME}/jbin/JGRASP__829J_6h.class
 ${PKGNAME}/jgrasp.jar
+${PKGNAME}/src/Make.sh
 ${PKGNAME}/src/Makelinux.sh
 ${PKGNAME}/src/Makesolaris.sh
 ${PKGNAME}/src/linux_exec.c
@@ -147,10 +210,15 @@ ${PKGNAME}/src/linux_run.c
 @dirrm ${PKGNAME}/src
 @dirrm ${PKGNAME}/jbin
 @dirrm ${PKGNAME}/help
+@dirrm ${PKGNAME}/extensions/viewers/system
+@dirrm ${PKGNAME}/extensions/viewers
 @dirrm ${PKGNAME}/extensions/classes/system/cs1
 @dirrm ${PKGNAME}/extensions/classes/system
 @dirrm ${PKGNAME}/extensions/classes
 @dirrm ${PKGNAME}/extensions
+@dirrm ${PKGNAME}/examples/tutorial/PersonalLibrary
+@dirrm ${PKGNAME}/examples/tutorial/Hello
+@dirrm ${PKGNAME}/examples/tutorial
 @dirrm ${PKGNAME}/examples
 @dirrm ${PKGNAME}/data
 @dirrm ${PKGNAME}/bin/${LOWER_OPSYS}
