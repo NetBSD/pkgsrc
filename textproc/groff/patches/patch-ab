@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/05/14 14:08:09 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2003/01/04 11:20:14 wiz Exp $
 
---- src/roff/nroff/nroff.sh.orig	Sun May 28 23:46:42 2000
-+++ src/roff/nroff/nroff.sh	Fri May  4 18:28:24 2001
-@@ -5,14 +5,16 @@
+--- src/roff/nroff/nroff.sh.orig	Thu Feb  7 09:36:54 2002
++++ src/roff/nroff/nroff.sh
+@@ -5,14 +5,16 @@ prog="$0"
  # Default device.
  # First try the "locale charmap" command, because it's most reliable.
  # On systems where it doesn't exist, look at the environment variables.
@@ -35,4 +35,4 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/05/14 14:08:09 wiz Exp $
 +#     esac ;;
  esac
  opts=
- safer=-S
+ 
