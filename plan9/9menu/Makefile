@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/06/22 13:01:52 agc Exp $
+# $NetBSD: Makefile,v 1.8 1999/02/04 18:54:35 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/09/08 12:23:55 tg Exp
 #
 
@@ -19,5 +19,7 @@ NO_WRKSUBDIR=		yes
 EXTRACT_CMD=		zcat
 EXTRACT_BEFORE_ARGS=
 EXTRACT_AFTER_ARGS=	|sh
+
+USE_X11=		yes
 
 .include "../../mk/bsd.pkg.mk"
