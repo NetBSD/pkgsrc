@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.246 2002/05/31 15:02:44 seb Exp $
+# $NetBSD: Makefile,v 1.247 2002/06/01 08:21:39 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
 
 SUBDIR+=	9term
 SUBDIR+=	XF86Setup
+SUBDIR+=	XaoS
 SUBDIR+=	Xaw-Xpm
 SUBDIR+=	Xaw3d
-SUBDIR+=	XaoS
 SUBDIR+=	Xbae
 SUBDIR+=	XmHTML
 SUBDIR+=	acidlaunch
@@ -67,9 +67,9 @@ SUBDIR+=	openmotif
 SUBDIR+=	p5-Tk
 SUBDIR+=	p5-gtk
 SUBDIR+=	py-Pmw
+SUBDIR+=	py-Tk
 SUBDIR+=	py-qt2
 SUBDIR+=	py-qt2-sip
-SUBDIR+=	py-Tk
 SUBDIR+=	py-wxWindows
 SUBDIR+=	pygtk
 SUBDIR+=	qt1
