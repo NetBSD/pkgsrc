@@ -1,4 +1,4 @@
-#     $NetBSD: IRIX.x11.dist,v 1.6 2003/12/14 16:02:27 jmmv Exp $
+#     $NetBSD: IRIX.x11.dist,v 1.7 2003/12/14 22:30:51 jmmv Exp $
 #     FreeBSD Id: BSD.x11.dist,v 1.2 1997/06/10 07:55:10 asami Exp
 #
 
@@ -291,6 +291,10 @@
                 ..
             ..
             bg_BG.cp1251
+                LC_MESSAGES
+                ..
+            ..
+            br
                 LC_MESSAGES
                 ..
             ..
