@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2002/10/21 15:43:28 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2002/10/26 19:51:07 bouyer Exp $
 
 DISTNAME=	gdm-2.2.0
 PKGREVISION=	2
@@ -30,8 +30,6 @@ MAKE_ENV+=	GDMOWN=${GDMOWN} GDMGRP=${GDMGRP}
 PLIST_SUBST+=	GDMOWN=${GDMOWN} GDMGRP=${GDMGRP} \
 		INSTALL="${INSTALL}" LOCALSTATEDIR="${LOCALSTATEDIR}"
 
-GDMOWN=		daemon
-GDMGRP=		daemon
 GDMCFGDIR=	${PREFIX}/etc/gdm
 GDMCFGFILES=	Default:Init.default/Default \
 		PostSession:PostSession.default/Default \
@@ -45,6 +43,15 @@ GDMCFGFILES=	Default:Init.default/Default \
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} == "SunOS"
+CFLAGS+= -DSunOS
+GDMOWN=		daemon
+GDMGRP=		other
+.else
+GDMOWN=		daemon
+GDMGRP=		daemon
+.endif
+
 .if defined(USE_PAM)
 DEPENDS+=	PAM-[0-9]*:../../security/PAM
 .else
@@ -52,7 +59,7 @@ DEPENDS+=	PAM-[0-9]*:../../security/PAM
 post-patch:
 	cd ${WRKSRC} &&					\
 	${CP} configure configure.old &&		\
-	${SED} -e 's:security/pam_appl.h::g'		\
+	${SED} -e 's:security/pam_appl.h:nopam:g'	\
 		< configure.old > configure
 .endif
 
