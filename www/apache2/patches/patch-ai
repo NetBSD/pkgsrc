@@ -1,15 +1,12 @@
-$NetBSD: patch-ai,v 1.2 2002/03/05 23:56:24 jlam Exp $
+$NetBSD: patch-ai,v 1.3 2002/04/13 21:35:53 jlam Exp $
 
---- support/apxs.pl.in.orig	Fri Feb  1 14:25:14 2002
-+++ support/apxs.pl.in
-@@ -61,12 +61,13 @@
- ##  Configuration
- ##
+--- support/apxs.in.orig	Wed Mar 13 15:48:05 2002
++++ support/apxs.in
+@@ -63,10 +63,11 @@
  
--my $prefix         = "@prefix@";
-+my $prefix         = "%prefix%";
+ my $prefix         = "@prefix@";
  my $CFG_PREFIX     = $prefix;
-+my $installbuilddir = "%installbuilddir%";
++my $installbuilddir = "@exp_installbuilddir@"
  
  # read the configuration variables once
  my %config_vars = ();
@@ -18,7 +15,7 @@ $NetBSD: patch-ai,v 1.2 2002/03/05 23:56:24 jlam Exp $
  
  my $exec_prefix    = get_vars("exec_prefix");
  my $CFG_TARGET     = get_vars("progname");
-@@ -414,7 +415,7 @@
+@@ -415,7 +416,7 @@
          $la =~ s|\.c$|.la|;
          my $o = $s;
          $o =~ s|\.c$|.o|;
@@ -27,7 +24,7 @@ $NetBSD: patch-ai,v 1.2 2002/03/05 23:56:24 jlam Exp $
          unshift(@objs, $lo);
      }
  
-@@ -439,7 +440,7 @@
+@@ -440,7 +441,7 @@
          $opt .= " -l$opt_l";
      }
  
@@ -36,7 +33,7 @@ $NetBSD: patch-ai,v 1.2 2002/03/05 23:56:24 jlam Exp $
  
      #   execute the commands
      &execute_cmds(@cmds);
-@@ -470,8 +471,8 @@
+@@ -471,8 +472,8 @@
          $t =~ s|^.+/([^/]+)$|$1|;
          $t =~ s|\.la$|\.so|;
          if ($opt_i) {

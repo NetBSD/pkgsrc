@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: apache.sh,v 1.2 2002/03/06 20:21:38 jlam Exp $
+# $NetBSD: apache.sh,v 1.3 2002/04/13 21:35:51 jlam Exp $
 #
 # PROVIDE: apache
 # REQUIRE: DAEMON
@@ -48,5 +48,5 @@ then
 	load_rc_config $name
 	run_rc_command "$1"
 else
-	eval ${start_cmd}
+	apache_doit "$1"
 fi

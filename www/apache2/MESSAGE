@@ -1,9 +1,0 @@
-=============================================================================
-$NetBSD: MESSAGE,v 1.1 2002/03/06 20:19:57 jlam Exp $
-
-If you have a kernel with both IPv4 and IPv6 enabled (options INET + INET6),
-then in order to have httpd listen on IPv4 addresses as well as on IPv6
-addresses, you will need to add the following line to httpd.conf:
-
-	Listen 0.0.0.0:80
-=============================================================================
