@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/02/07 01:37:35 hubertf Exp $
+
+--- Makefile.in.BAK	Fri Feb  4 04:59:50 2000
++++ Makefile.in	Fri Feb  4 05:03:27 2000
+@@ -24,7 +24,7 @@
+ SBIN_DIR = @sbindir@
+ MAN_DIR  = @mandir@
+ ETC_DIR  = @sysconfdir@
+-VAR_DIR  = @localstatedir@
++VAR_DIR  = /var
+ 
+ PID_FILE = ${VAR_DIR}/run/vtund.pid
+ CFG_FILE = ${ETC_DIR}/vtund.conf
+@@ -110,6 +110,7 @@
+ 
+ install_config: 
+ 	$(INSTALL) -d -m 755 -o root -g 0 $(ETC_DIR)
++	$(INSTALL) -m 600 -o root -g 0 vtund.conf $(ETC_DIR)/vtund.conf.example; \
+ 	if [ ! -f $(ETC_DIR)/vtund.conf ]; then \
+ 	  $(INSTALL) -m 600 -o root -g 0 vtund.conf $(ETC_DIR); \
+ 	fi
