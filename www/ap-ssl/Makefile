@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2001/05/14 14:02:47 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2001/06/09 06:50:24 jlam Exp $
 
-DISTNAME=		mod_ssl-2.8.3-1.3.19
-PKGNAME=		ap-ssl-2.8.3
+DISTNAME=		mod_ssl-2.8.4-1.3.20
+PKGNAME=		ap-ssl-2.8.4
 CATEGORIES=		www security
 MASTER_SITES=		http://www.modssl.org/source/
 
@@ -9,7 +9,7 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.modssl.org/
 COMMENT=		SSL/TLS protocols module for Apache
 
-DEPENDS+=		apache>=1.3.19nb2:../../www/apache
+DEPENDS+=		apache>=1.3.20:../../www/apache
 # For "apxs":
 BUILD_DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
 
@@ -31,6 +31,17 @@ SAMPLECONFDIR=		${PREFIX}/share/examples/mod_ssl
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
 
+# Given foo=${bar}, replace @foo@ with ${bar}.
+#
+FILES_SUBST=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
+FILES_SUBST+=		CAT=${CAT:Q}
+FILES_SUBST+=		CHMOD=${CHMOD:Q}
+FILES_SUBST+=		CP=${CP:Q}
+FILES_SUBST+=		MKDIR=${MKDIR:Q}
+FILES_SUBST+=		PREFIX=${PREFIX}
+FILES_SUBST+=		RM=${RM:Q}
+FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/-e s!@/}
+
 post-extract:
 	cd ${WRKSRC}/pkg.contrib; ${MV} -f loadcacert.cgi loadcacert.cgi.in
 	cd ${WRKSRC}/pkg.sslsup; ${MV} -f mkcert.sh mkcert.sh.in
@@ -39,23 +50,14 @@ post-build:
 	${SED}	-e "s|^#!/.*|#!${PERL5}|g"				\
 		${WRKSRC}/pkg.contrib/loadcacert.cgi.in 		\
 		> ${WRKSRC}/pkg.contrib/loadcacert.cgi
-	${SED}	-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
+	${SED} ${FILES_SUBST_SED}					\
 		${WRKSRC}/pkg.sslsup/mkcert.sh.in			\
 		> ${WRKSRC}/pkg.sslsup/mkcert.sh
 
 pre-install:
-	${SED}	-e "s|@CAT@|${CAT}|g"					\
-		-e "s|@RM@|${RM}|g"					\
-		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
-		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED}	-e "s|@CAT@|${CAT}|g"					\
-		-e "s|@CHMOD@|${CHMOD}|g"				\
-		-e "s|@CP@|${CP}|g"					\
-		-e "s|@MKDIR@|${MKDIR}|g"				\
-		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
-		${PKGDIR}/INSTALL > ${INSTALL_FILE}
-	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
-		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	${SED} ${FILES_SUBST_SED}					\
 		${FILESDIR}/README.mkcert > ${WRKDIR}/README.mkcert
 
 post-install:
