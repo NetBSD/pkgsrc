@@ -1,13 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/06/05 14:37:58 rh Exp $
+$NetBSD: patch-aa,v 1.2 2000/10/23 14:57:16 rh Exp $
 
---- configure.orig	Tue Jul 20 19:29:02 1999
-+++ configure	Mon Jun  5 16:06:52 2000
-@@ -2983,7 +2983,7 @@
- 
- 
- 
--deliver=/usr/bin/procmail
-+deliver=/usr/libexec/mail.local
- 
- 
- trap '' 1 2 15
+--- configure.orig	Mon Oct 23 16:11:15 2000
++++ configure
+@@ -2640,10 +2640,10 @@
+   then
+      tnef_arg="-x"
+   else
+-   $tnef -h 2>&1 | grep "put unpacked files in DIR" >/dev/null 2>&1
++   $tnef -h 2>&1 | grep "unpack files into DIR" >/dev/null 2>&1
+    if test $? -eq 0
+    then
+-     tnef_arg="-d"
++     tnef_arg="-C"
+    else
+     { echo "configure: error: Sorry, your tnef binary seems to be insecure. Please use the tnef file from http://world.std.com/~damned/software.html" 1>&2; exit 1; }
+    fi
