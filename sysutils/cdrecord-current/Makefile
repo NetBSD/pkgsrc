@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/07/22 16:20:39 rh Exp $
+# $NetBSD: Makefile,v 1.14 2000/08/21 21:01:33 hubertf Exp $
 
 DISTNAME=	cdrecord-1.9a01
 CATEGORIES=	sysutils
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.fokus.gmd.de/pub/unix/cdrecord/alpha/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html
 
-IGNORE=		"has been superseded by the cdrecord package"
+IGNORE=		"${PKGNAME} has been superseded by the cdrecord package"
 
 USE_GMAKE=	yes
 
