@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1999/11/14 05:23:28 fredb Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/02/08 12:18:16 fredb Exp $
 bin/ntpd
 bin/ntpdate
 bin/ntpdc
@@ -7,8 +7,10 @@ bin/ntptime
 bin/ntptimeset
 bin/ntptrace
 bin/tickadj
+share/doc/ntp4/Oncore-SHMEM.htm
 share/doc/ntp4/accopt.htm
 share/doc/ntp4/assoc.htm
+share/doc/ntp4/audio.htm
 share/doc/ntp4/authopt.htm
 share/doc/ntp4/biblio.htm
 share/doc/ntp4/build.htm
@@ -38,6 +40,9 @@ share/doc/ntp4/driver30.htm
 share/doc/ntp4/driver32.htm
 share/doc/ntp4/driver33.htm
 share/doc/ntp4/driver34.htm
+share/doc/ntp4/driver35.htm
+share/doc/ntp4/driver36.htm
+share/doc/ntp4/driver37.htm
 share/doc/ntp4/driver4.htm
 share/doc/ntp4/driver5.htm
 share/doc/ntp4/driver6.htm
@@ -71,6 +76,7 @@ share/doc/ntp4/patches.htm
 share/doc/ntp4/porting.htm
 share/doc/ntp4/pps.htm
 share/doc/ntp4/prefer.htm
+share/doc/ntp4/qth.htm
 share/doc/ntp4/quick.htm
 share/doc/ntp4/rdebug.htm
 share/doc/ntp4/refclock.htm
@@ -97,12 +103,13 @@ share/doc/ntp4/hints/solaris.xtra.4023118
 share/doc/ntp4/hints/solaris.xtra.4095849
 share/doc/ntp4/hints/solaris.xtra.S99ntpd
 share/doc/ntp4/hints/solaris.xtra.patchfreq
+share/doc/ntp4/hints/solaris-dosynctodr.html
 share/doc/ntp4/hints/sun4
 share/doc/ntp4/hints/svr4-dell
 share/doc/ntp4/hints/svr4_package
 share/doc/ntp4/hints/todo
 share/doc/ntp4/hints/vxworks.html
-share/doc/ntp4/hints/winnt
+share/doc/ntp4/hints/winnt.htm
 share/doc/ntp4/pic/9400n.jpg
 share/doc/ntp4/pic/alautun4a.gif
 share/doc/ntp4/pic/alice11.gif
