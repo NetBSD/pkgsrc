@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.5 2002/05/07 22:19:29 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2002/05/08 08:18:20 wiz Exp $
 
---- configure.orig	Sun Apr 28 23:05:09 2002
-+++ configure	Mon Apr 29 09:40:55 2002
-@@ -263,8 +263,8 @@
+--- configure.orig	Sat May  4 00:13:06 2002
++++ configure
+@@ -31,7 +31,6 @@
+   cat "$TMPC" >> "$TMPLOG"
+   echo >> "$TMPLOG"
+   echo "$_cc $_inc_extra $_ld_static $_ld_extra $TMPC -o $TMPO $@" >> "$TMPLOG"
+-  > "$TMPO"
+   ( "$_cc" $_inc_extra $_ld_static $_ld_extra "$TMPC" -o "$TMPO" "$@" ) >> "$TMPLOG" 2>&1
+   TMP="$?"
+   echo >> "$TMPLOG"
+@@ -264,8 +263,8 @@
      _inc_extra=-I`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -I,g'`
      ;;
    --with-extralibdir=*)
@@ -13,7 +21,7 @@ $NetBSD: patch-aa,v 1.5 2002/05/07 22:19:29 wiz Exp $
      ;;
    --enable-runtime-cpudetection)
      _runtime_cpudetection=yes
-@@ -2626,7 +2626,7 @@
+@@ -2642,7 +2641,7 @@
  echocheck "DVD support (libmpdvdkit)"
  if test "$_dvdkit" = auto ; then
   _dvdkit=no
