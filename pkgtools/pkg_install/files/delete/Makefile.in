@@ -9,7 +9,7 @@ mandircat1=	${mandir}/cat1
 
 CC=		@CC@
 CCLD=		$(CC)
-LIBS=		@LIBS@ -linstall
+LIBS=		-linstall @LIBS@
 CPPFLAGS=	@CPPFLAGS@
 DEFS=		@DEFS@ -I. -I@srcdir@ -I../lib
 CFLAGS=		@CFLAGS@
