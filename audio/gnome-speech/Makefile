@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/30 17:53:27 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/22 07:15:00 grant Exp $
 #
 
 DISTNAME=	gnome-speech-0.2.8
@@ -14,7 +14,7 @@ DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK2=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_X11=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/01/03 18:49:34 reed Exp $
+# $NetBSD: Makefile,v 1.24 2004/01/22 07:21:54 grant Exp $
 #
 
 DISTNAME=		geda-gnetlist-${PKGVERSION}
@@ -25,7 +25,7 @@ CONFLICTS+=		gEDA<19991011
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_BUILDLINK2=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 

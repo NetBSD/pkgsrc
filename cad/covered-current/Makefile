@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/12/30 17:21:55 cjep Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/22 07:21:54 grant Exp $
 #
 
 DISTNAME=	covered-${SNAPDATE}
@@ -18,7 +18,7 @@ CONFLICTS+=     covered-[0-9]*
 
 SNAPDATE=	20021214
 GNU_CONFIGURE=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 TEST_DIRS=	${WRKSRC}/diags/regress
 TEST_TARGET=	#defined
 

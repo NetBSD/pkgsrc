@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/20 12:07:43 agc Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/22 07:15:01 grant Exp $
 # FreeBSD: ports/audio/xamp/Makefile,v 1.5 1999/08/25 04:36:22 obrien Exp
 #
 
@@ -20,7 +20,7 @@ WRKSRC=		${WRKDIR}/xamp-0.8/xamp-0.8g
 DIST_SUBDIR=	xamp
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	CXXFLAGS="${CFLAGS}"
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 USE_X11BASE=	yes
 
 EVAL_PREFIX+=	QT1DIR=qt1

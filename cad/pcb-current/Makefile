@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/17 03:59:08 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/22 07:21:55 grant Exp $
 #
 
 DISTNAME=	pcb-${SNAPDATE}
@@ -17,7 +17,7 @@ CONFLICTS+=	pcb-[0-9]*
 
 SNAPDATE=	20030815
 GNU_CONFIGURE=	yes
-USE_GMAKE=      yes
+USE_GNU_TOOLS+=	make
 
 # install to X11BASE until cad/gnetlist is taught to handle pcb installing
 # to X11BASE and pcb-current installing to LOCALBASE.  Alternatively, once

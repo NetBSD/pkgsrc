@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/20 12:07:43 agc Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/22 07:15:00 grant Exp $
 #
 
 DISTNAME=	openal-20030724
@@ -14,7 +14,7 @@ COMMENT=	3D positional spatialized sound library
 WRKSRC=		${WRKDIR}/${DISTNAME}/linux
 GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 
 USE_MAKEINFO=	YES
 INFO_FILES=	openal.info

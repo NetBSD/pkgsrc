@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/21 16:32:08 martti Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/22 07:21:54 grant Exp $
 #
 
 DISTNAME=	acs-0.29
@@ -9,7 +9,7 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.geda.seul.org/tools/acs/index.html
 COMMENT=	General purpose circuit simulator
 
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 
 do-build:
 	cd ${WRKSRC}/src && ${MAKE_PROGRAM} ${LOWER_OPSYS}
