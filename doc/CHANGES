@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8820 2005/01/19 15:31:59 adam Exp $
+$NetBSD: CHANGES,v 1.8821 2005/01/19 20:55:03 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -424,3 +424,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated squid to 2.5.7nb7 [taca 2005-01-19]
 	Updated dxpc to 3.8.2 [adam 2005-01-19]
 	Updated msmtp to 1.2.4 [adam 2005-01-19]
+	Updated eclipse to 3.0.1 [jschauma 2005-01-19]
