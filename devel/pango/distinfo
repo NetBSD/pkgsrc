@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2004/02/06 22:54:00 wiz Exp $
+$NetBSD: distinfo,v 1.17 2004/04/01 18:15:16 jmmv Exp $
 
-SHA1 (pango-1.2.5.tar.bz2) = a4e351635895e5d53b49d3db71ac6f54cecaae89
-Size (pango-1.2.5.tar.bz2) = 865495 bytes
+SHA1 (pango-1.4.0.tar.bz2) = 10ea96cb05e0ada51e1b81f68dd1cad56cdd6a99
+Size (pango-1.4.0.tar.bz2) = 921472 bytes
