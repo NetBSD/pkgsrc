@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/07/29 07:27:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/30 07:22:19 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-imake-${XORG_VER}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG}
 DISTFILES=	X11R6.7.0-src1.tar.gz X11R6.7.0-src3.tar.gz
@@ -32,9 +33,9 @@ PLIST_SUBST+=	LNDIR=
 .include "../../meta-pkgs/xorg/Makefile.common"
 
 post-extract:
+	@${TOUCH} ${WRKSRC}/config/cf/date.def
 .for F in ${SYSTEMS}
-	@${MV} ${WRKSRC}/config/cf/${F}.cf \
-		${WRKSRC}/config/cf/${F}.cf.in
+	@${MV} ${WRKSRC}/config/cf/${F}.cf  ${WRKSRC}/config/cf/${F}.cf.in
 .endfor
 .undef F
 
@@ -48,18 +49,25 @@ pre-configure:
 		${WRKSRC}/config/cf/${F}.cf
 .endfor
 .undef F
+	@( \
+	${ECHO} "#define XORG_VERSION_MAJOR  6";	\
+	${ECHO} "#define XORG_VERSION_MINOR  7";	\
+	${ECHO} "#define XORG_VERSION_PATCH  0";	\
+	${ECHO} "#define XORG_VERSION_SNAP   0";	\
+	) > ${WRKSRC}/config/cf/version.def
 
 do-build:
-	@${TOUCH} ${WRKSRC}/config/cf/version.def
-	@${TOUCH} ${WRKSRC}/config/cf/date.def
 	@${CP} ${FILESDIR}/xorgsite.def ${WRKSRC}/config/cf
 	@${SED} -e "s|@PREFIX@|${X11ROOT}|g"		\
-		-e "s|@PREFIX@|${X11ROOT}|g"		\
 		-e "s|@BLNK@|${BUILDLINK_DIR}|g"	\
 		-e "s|@LOCALBASE@|${LOCALBASE}|g "	\
 		-e "s|@MAKE@|${MAKE_PROGRAM}|"	${FILESDIR}/host.def > \
 		${WRKSRC}/config/cf/host.def
 	cd ${WRKSRC} && ${MAKE} Makefile.boot && \
 	${MAKE_PROGRAM} -f xmakefile VerifyOS version.def Makefiles includes
+
+# These files are handled by xorg-libs.
+post-install:
+	@${RM} -rf ${X11ROOT}/include
 
 .include "../../mk/bsd.pkg.mk"
