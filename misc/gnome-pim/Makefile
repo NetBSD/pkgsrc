@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2001/03/27 03:20:07 hubertf Exp $
+# $NetBSD: Makefile,v 1.27 2001/04/07 19:23:54 rh Exp $
 #
 
-DISTNAME=		gnome-pim-1.2.0
+DISTNAME=		gnome-pim-1.4.0
 CATEGORIES=		misc x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-pim/}
 
@@ -9,24 +9,16 @@ MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Personal Information Manager for GNOME
 
-BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
-BUILD_DEPENDS+=		automake-1.4:../../devel/automake
 BUILD_DEPENDS+=		bison-*:../../devel/bison
-DEPENDS+=		gnome-core-*:../../x11/gnome-core
+DEPENDS+=		gnome-core>1.4.0:../../x11/gnome-core
 
-USE_GMAKE=		# defined
-USE_LIBTOOL=		# defined
-USE_X11BASE=		# defined
+USE_GMAKE=		YES
+USE_LIBTOOL=		YES
+USE_X11BASE=		YES
 
-GNU_CONFIGURE=		# defined
-CONFIGURE_ENV+=		CPPFLAGS="-I${LOCALBASE}/include" \
-			LOCALEDIR=${LOCALEDIR}
-
-AUTOGEN_ENV=		NOCONFIGURE=1
-AUTOGEN_ENV+=		srcdir=${WRKSRC}
-
-pre-configure:
-	cd ${WRKSRC} && ${SETENV} ${AUTOGEN_ENV} ${SH} macros/autogen.sh
+GNU_CONFIGURE=		YES
+CONFIGURE_ENV+=		CPPFLAGS="-I${LOCALBASE}/include"
+CONFIGURE_ENV+=		LOCALEDIR=${LOCALEDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
