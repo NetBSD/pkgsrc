@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.30 2005/02/15 08:48:34 grant Exp $
+# $NetBSD: bootstrap,v 1.31 2005/02/19 04:07:31 grant Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -101,6 +101,16 @@ get_abi()
 
 		;;
 	esac
+}
+
+get_machine_arch_aix()
+{
+	_cpuid=`/usr/sbin/lsdev -C -c processor -S available | sed 1q | awk '{ print $1 }'`
+	if /usr/sbin/lsattr -El $_cpuid | grep ' POWER' >/dev/null 2>&1; then
+		echo rs6000
+	else
+		echo powerpc
+	fi
 }
 
 check_prog()
@@ -306,6 +316,7 @@ AIX)
 	need_sed=yes
 	need_fixed_strip=yes
 	set_opsys=no
+	machine_arch=`get_machine_arch_aix`
 	;;
 Interix)
 	is_root () {
