@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/07/22 04:14:27 martti Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/06 03:52:07 kim Exp $
 #
 
-DISTNAME=	Apache-Gallery-0.4.1
+DISTNAME=	Apache-Gallery-0.6
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 SVR4_PKGNAME=	p5aga
 CATEGORIES=	www graphics
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Apache/}
@@ -36,6 +35,7 @@ AG_SHAREDIR=		${PREFIX}/share/${AG}
 
 FILES_SUBST+=		AG=${AG}
 FILES_SUBST+=		AG_SHAREDIR=${AG_SHAREDIR}
+FILES_SUBST+=		LDFLAGS=${LDFLAGS:Q}
 
 MESSAGE_SUBST+=		AG=${AG}
 MESSAGE_SUBST+=		AG_DOCDIR=${AG_DOCDIR}
@@ -49,7 +49,7 @@ PLIST_SUBST+=		AG_SHAREDIR=${AG_SHAREDIR:S,${PREFIX}/,,}
 CONF_FILES=		${AG_EGDIR}/${AG}.conf ${PKG_SYSCONFDIR}/${AG}.conf
 
 post-patch:
-	@cd ${WRKSRC}/lib/Apache && \
+	cd ${WRKSRC}/lib/Apache && \
 	${CP} -p Gallery.pm Gallery.pm.orig && \
 	${SED} ${FILES_SUBST_SED} Gallery.pm.orig > Gallery.pm && \
 	${RM} -f Gallery.pm.orig

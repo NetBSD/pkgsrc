@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/01 22:42:49 kim Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/06 03:52:07 kim Exp $
+${AG_SHAREDIR}/htdocs/application-doc.png
+${AG_SHAREDIR}/htdocs/application-mp3.png
+${AG_SHAREDIR}/htdocs/application-ogg.png
+${AG_SHAREDIR}/htdocs/application-pdf.png
+${AG_SHAREDIR}/htdocs/application-rtf.png
+${AG_SHAREDIR}/htdocs/application-wav.png
 ${AG_SHAREDIR}/htdocs/folder.png
 ${AG_SHAREDIR}/htdocs/gallery.css
 ${AG_SHAREDIR}/htdocs/video-asf.png
@@ -6,18 +12,29 @@ ${AG_SHAREDIR}/htdocs/video-avi.png
 ${AG_SHAREDIR}/htdocs/video-mov.png
 ${AG_SHAREDIR}/htdocs/video-mpeg.png
 ${AG_SHAREDIR}/htdocs/video-mpg.png
+${AG_SHAREDIR}/htdocs/video-wmv.png
 @dirrm ${AG_SHAREDIR}/htdocs
+${AG_SHAREDIR}/templates/dircomment.tpl
 ${AG_SHAREDIR}/templates/directory.tpl
 ${AG_SHAREDIR}/templates/error.tpl
+${AG_SHAREDIR}/templates/file.tpl
 ${AG_SHAREDIR}/templates/index.tpl
 ${AG_SHAREDIR}/templates/info.tpl
+${AG_SHAREDIR}/templates/interval.tpl
+${AG_SHAREDIR}/templates/intervalactive.tpl
 ${AG_SHAREDIR}/templates/layout.tpl
-${AG_SHAREDIR}/templates/movie.tpl
 ${AG_SHAREDIR}/templates/navpicture.tpl
+${AG_SHAREDIR}/templates/nodircomment.tpl
+${AG_SHAREDIR}/templates/nopictureinfo.tpl
 ${AG_SHAREDIR}/templates/orig.tpl
 ${AG_SHAREDIR}/templates/picture.tpl
+${AG_SHAREDIR}/templates/pictureinfo.tpl
+${AG_SHAREDIR}/templates/refresh.tpl
 ${AG_SHAREDIR}/templates/scale.tpl
+${AG_SHAREDIR}/templates/scaleactive.tpl
 ${AG_SHAREDIR}/templates/showpicture.tpl
+${AG_SHAREDIR}/templates/slideshowisoff.tpl
+${AG_SHAREDIR}/templates/slideshowoff.tpl
 @dirrm ${AG_SHAREDIR}/templates
 @dirrm ${AG_SHAREDIR}
 ${AG_DOCDIR}/Changes
