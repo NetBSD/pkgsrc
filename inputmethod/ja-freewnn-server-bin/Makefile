@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:43:40 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/29 21:13:21 jmmv Exp $
 #
 
 PKGNAME=	ja-FreeWnn-server-bin-1.10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	japanese inputmethod
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
