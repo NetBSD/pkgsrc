@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2001/06/11 06:34:47 jlam Exp $
+# $NetBSD: Makefile,v 1.58 2001/06/19 09:03:30 jlam Exp $
 
 DISTNAME=		samba-2.2.0
 PKGNAME=		${DISTNAME}nb1
@@ -15,18 +15,18 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.samba.org/
 COMMENT=		SMB/CIFS protocol server suite for UNIX
 
-USE_SSL=		# defined
+#USE_SSL=		# defined
 
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
+USE_BUILDLINK_ONLY=	# defined
 USE_GNU_READLINE=	# uses rl_event_hook interface to GNU readline
-
-CFLAGS+=		-I${SSLBASE}/include/openssl	# ssl.h, err.h
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../devel/readline/buildlink.mk"
+.include "../../security/openssl/buildlink.mk"
 
 SAMBA_LOGDIR=		/var/log
 SAMBA_LOCKDIR=		/var/run/samba
@@ -45,12 +45,13 @@ CONFIGURE_ARGS+=	--with-swatdir=${PREFIX}/share/swat
 
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-ssl
-CONFIGURE_ENV+=		ac_cv_lib_ncurses_tgetent=no
+CONFIGURE_ARGS+=	--with-sslinc=${BUILDLINK_DIR}
+CFLAGS+=		-I${BUILDLINK_DIR}/include/openssl	# ssl.h, err.h
+
 CONFIGURE_ENV+=		ac_cv_lib_curses_tgetent=no
 
 .if defined(SAMBA_WITH_CUPS)
 .include "../../print/cups/buildlink.mk"
-CONFIGURE_ARGS+=	--with-cups
 .endif
 
 .if defined(USE_PAM)
@@ -68,34 +69,33 @@ DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 DOCDIR=			${PREFIX}/share/doc/samba
 HTMLDIR=		${PREFIX}/share/doc/html/samba
 
+FILES_SUBST=		SAMBA_PRIVATE=${SAMBA_PRIVATE}
+FILES_SUBST+=		SAMBA_LOCKDIR=${SAMBA_LOCKDIR}
+FILES_SUBST+=		SAMBA_LOGDIR=${SAMBA_LOGDIR}
+FILES_SUBST+=		SAMBA_ETCDIR=${SAMBA_ETCDIR}
+FILES_SUBST+=		PREFIX=${PREFIX}
+FILES_SUBST+=		CAT=${CAT:Q}
+FILES_SUBST+=		CHMOD=${CHMOD:Q}
+FILES_SUBST+=		CHOWN=${CHOWN:Q}
+FILES_SUBST+=		CP=${CP:Q}
+FILES_SUBST+=		ECHO=${ECHO:Q}
+FILES_SUBST+=		MKDIR=${MKDIR:Q}
+FILES_SUBST+=		RM=${RM:Q}
+FILES_SUBST+=		RMDIR=${RMDIR:Q}
+FILES_SUBST+=		TRUE=${TRUE:Q}
+FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+
 post-extract:
 	${FIND} ${WRKDIR}/${DISTNAME} -name ".cvsignore" -print0 |	\
 		${XARGS} -0 ${RM} -f
 
 pre-install:
 	for file in nmbd.sh smbd.sh; do					\
-		${SED}	-e "s,@PREFIX@,${PREFIX},g"			\
-			-e "s,@ECHO@,${ECHO},g"				\
+		${SED} ${FILES_SUBST_SED}				\
 			${FILESDIR}/$${file} > ${WRKDIR}/$${file};	\
 	done
-	${SED}	-e "s|@SAMBA_PRIVATE@|${SAMBA_PRIVATE}|g"		\
-		-e "s|@SAMBA_LOCKDIR@|${SAMBA_LOCKDIR}|g"		\
-		-e "s|@SAMBA_ETCDIR@|${SAMBA_ETCDIR}|g"			\
-		-e "s|@CAT@|${CAT}|g"					\
-		-e "s|@CHMOD@|${CHMOD}|g"				\
-		-e "s|@CHOWN@|${CHOWN}|g"				\
-		-e "s|@CP@|${CP}|g"					\
-		-e "s|@MKDIR@|${MKDIR}|g"				\
-		-e "s|@RM@|${RM}|g"					\
-		${PKGDIR}/INSTALL > ${INSTALL_FILE}
-	${SED}	-e "s|@SAMBA_PRIVATE@|${SAMBA_PRIVATE}|g"		\
-		-e "s|@SAMBA_LOCKDIR@|${SAMBA_LOCKDIR}|g"		\
-		-e "s|@SAMBA_ETCDIR@|${SAMBA_ETCDIR}|g"			\
-		-e "s|@CAT@|${CAT}|g"					\
-		-e "s|@RM@|${RM}|g"					\
-		-e "s|@RMDIR@|${RMDIR}|g"				\
-		-e "s|@TRUE@|${TRUE}|g"					\
-		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 
 post-install:
 	# Install Samba documentation.
@@ -115,9 +115,7 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/script/mksmbpasswd.sh		\
 		${PREFIX}/sbin/mksmbpasswd
 
-	${SED}	-e "s|@SAMBA_LOGDIR@|${SAMBA_LOGDIR}|g"			\
-		-e "s|@SAMBA_ETCDIR@|${SAMBA_ETCDIR}|g"			\
-		-e "s|@PREFIX@|${PREFIX}|g"				\
+	${SED} ${FILES_SUBST_SED}					\
 		${FILESDIR}/smb.conf.sample > ${WRKDIR}/smb.conf.sample
 	${INSTALL_DATA} ${WRKDIR}/smb.conf.sample ${PREFIX}/share/examples/samba
 
