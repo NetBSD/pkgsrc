@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.44 2001/10/22 18:41:46 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.45 2001/10/24 19:01:00 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -243,11 +243,11 @@ MAKEFILE_PATTERNS+=	*.mk
 
 .if (${OBJECT_FMT} == "a.out")
 REPLACE_LIBNAME_PATTERNS+=	${MAKEFILE_PATTERNS}
-REPLACE_LIBNAME_PATTERNS_FIND=	\
+_REPLACE_LIBNAME_PATTERNS_FIND=	\
 	${REPLACE_LIBNAME_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1}
 
 REPLACE_LIBNAMES+=	\
-	`cd ${WRKSRC}; ${FIND} . ${REPLACE_LIBNAME_PATTERNS_FIND} | ${SED} -e 's|^\./||' | ${SORT}`
+	`cd ${WRKSRC}; ${FIND} . ${_REPLACE_LIBNAME_PATTERNS_FIND} | ${SED} -e 's|^\./||' | ${SORT}`
 .endif
 
 .if defined(REPLACE_LIBNAMES) || defined(REPLACE_LIBNAME_PATTERNS)
@@ -283,11 +283,11 @@ replace-libnames-makefiles:
 .endif	# REPLACE_LIBNAMES
 
 REPLACE_RPATH_PATTERNS+=	${MAKEFILE_PATTERNS}
-REPLACE_RPATH_PATTERNS_FIND=	\
+_REPLACE_RPATH_PATTERNS_FIND=	\
 	${REPLACE_RPATH_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1}
 
 REPLACE_RPATH+=	\
-	`cd ${WRKSRC}; ${FIND} . ${REPLACE_RPATH_PATTERNS_FIND} | ${SED} -e 's|^\./||' | ${SORT}`
+	`cd ${WRKSRC}; ${FIND} . ${_REPLACE_RPATH_PATTERNS_FIND} | ${SED} -e 's|^\./||' | ${SORT}`
 
 REPLACE_RPATH_SED+=	\
 	-e "s|-R[ 	]*${BUILDLINK_DIR}/|-R${LOCALBASE}/|g"
@@ -322,11 +322,11 @@ REPLACE_BUILDLINK_PATTERNS+=	*.lai
 REPLACE_BUILDLINK_PATTERNS+=	*-config
 REPLACE_BUILDLINK_PATTERNS+=	*Conf.sh
 REPLACE_BUILDLINK_PATTERNS+=	*.pc
-REPLACE_BUILDLINK_PATTERNS_FIND=	\
+_REPLACE_BUILDLINK_PATTERNS_FIND=	\
 	${REPLACE_BUILDLINK_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1}
 
 REPLACE_BUILDLINK+=	\
-	`cd ${WRKSRC}; ${FIND} . ${REPLACE_BUILDLINK_PATTERNS_FIND} | ${SED} -e 's|^\./||' | ${SORT}`
+	`cd ${WRKSRC}; ${FIND} . ${_REPLACE_BUILDLINK_PATTERNS_FIND} | ${SED} -e 's|^\./||' | ${SORT}`
 
 .if defined(REPLACE_BUILDLINK)
 post-build: replace-buildlink
