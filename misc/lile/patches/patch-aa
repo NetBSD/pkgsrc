@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2001/05/29 16:16:30 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2004/12/15 06:14:23 minskim Exp $
 
 --- ile.c.orig	Wed Jun  9 05:12:33 1993
 +++ ile.c
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.4 2001/05/29 16:16:30 wiz Exp $
  #include <sys/ioctl.h>
  #include <sys/types.h>
 -#include <sys/dir.h>
-+#include <sys/dirent.h>
++#include <dirent.h>
  #include <sys/file.h>
  #include <sys/time.h>
  #include <sys/wait.h>
