@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.43 2005/03/24 22:19:06 tv Exp $
+# $NetBSD: module.mk,v 1.44 2005/04/01 22:37:44 heinz Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -173,7 +173,7 @@ GENERATE_PLIST+=	${PERL5_GENERATE_PLIST};
 # directory where the perllocal.pod file should be installed, which
 # should point into the package prefix.
 #
-.if !defined(BUILDING_PERL5)
+.if empty(BUILDING_PERL5:M[yY][eE][sS])
 MAKE_FLAGS+=		${PERL5_MAKE_FLAGS}
 BUILD_MAKE_FLAGS=	${MAKE_FLAGS}
 BUILD_MAKE_FLAGS+=	INSTALLARCHLIB="${VIEWBASE}/${PERL5_SUB_INSTALLARCHLIB}"
