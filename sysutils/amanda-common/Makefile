@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/06/11 06:34:49 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2001/06/14 21:54:36 jlam Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -18,6 +18,7 @@ INSTALL_FILE=		${WRKDIR}/INSTALL
 .include "../../sysutils/amanda-common/Makefile.common"
 
 .if ${OPSYS} == "NetBSD"
+CPPFLAGS=		# empty
 .if exists(/usr/sbin/user)
 ADDUSER=		/usr/sbin/useradd
 ADDGROUP=		/usr/sbin/groupadd
@@ -43,22 +44,31 @@ CONFIGURE_ENV+=		ac_cv_lib_ncurses_tgetent=no
 CONFIGURE_ENV+=		ac_cv_lib_ncurses_tgetent=no
 CONFIGURE_ENV+=		ac_cv_lib_readline_readline=no
 
-CPPFLAGS=		# empty
+INSTALL_SUBST+=		AMUSER=${AMANDA_USER}
+INSTALL_SUBST+=		AMGROUP=${AMANDA_GROUP}
+INSTALL_SUBST+=		AMVAR=${AMANDA_VAR}
 
-BUILD_DEFS+=		AMANDA_USER AMANDA_SMB AMANDA_VAR
+INSTALL_SUBST+=		ADDUSER=${ADDUSER:Q}
+INSTALL_SUBST+=		ADDGROUP=${ADDGROUP:Q}
+INSTALL_SUBST+=		CAT=${CAT:Q}
+INSTALL_SUBST+=		CHGRP=${CHGRP:Q}
+INSTALL_SUBST+=		CHMOD=${CHMOD:Q}
+INSTALL_SUBST+=		CHOWN=${CHOWN:Q}
+INSTALL_SUBST+=		ID=${ID:Q}
+INSTALL_SUBST+=		MKDIR=${MKDIR:Q}
+INSTALL_SUBST+=		RM=${RM:Q}
+INSTALL_SUBST+=		RMDIR=${RMDIR:Q}
+INSTALL_SUBST+=		TOUCH=${TOUCH:Q}
+INSTALL_SUBST+=		TRUE=${TRUE:Q}
+
+INSTALL_SUBST_SED=	${INSTALL_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
 pre-install:
-	${SED}  -e 's|@AMUSER@|${AMANDA_USER}|g' \
-		< ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED}  -e 's|@AMUSER@|${AMANDA_USER}|g' \
-		-e 's|@AMGROUP@|${AMANDA_GROUP}|g' \
-		-e 's|@ADDUSER@|${ADDUSER}|g' \
-		-e 's|@ADDGROUP@|${ADDGROUP}|g' \
-		-e 's|@CHGRP@|${CHGRP}|g' \
-		-e 's|@ID@|${ID}|g' \
-		-e 's|@TOUCH@|${TOUCH}|g' \
-		-e 's|@RM@|${RM}|g' \
-		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	${SED} ${INSTALL_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED} ${INSTALL_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
+
+post-install:
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
