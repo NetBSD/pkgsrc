@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/02/03 19:41:04 drochner Exp $
+
+--- Makefile.in.orig	Mon Sep  6 23:18:51 1999
++++ Makefile.in	Thu Feb  3 17:16:15 2000
+@@ -98,9 +98,9 @@
+ 
+ EXTRA_DIST = configure ac_find_xbae.m4 FAQ Imakefile Xbae.tmpl Xbae.rules
+ 
+-aclocaldir = @ACLOCALDIR@
++aclocaldir = ${prefix}/share/aclocal
+ 
+-@Aclocal_TRUE@aclocal_DATA = ac_find_xbae.m4
++aclocal_DATA = ac_find_xbae.m4
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ./include/XbaeConfig.h

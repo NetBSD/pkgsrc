@@ -1,0 +1,167 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/02/03 19:41:04 drochner Exp $
+
+--- examples/add/Makefile.in.orig	Mon Sep  6 23:18:53 1999
++++ examples/add/Makefile.in	Thu Feb  3 15:12:58 2000
+@@ -99,7 +99,7 @@
+ INCLUDES = -I$(top_srcdir)/include                 -I$(top_srcdir)/../../include/Motif@version_suffix@                 -I$(top_builddir)/../../include/Motif@version_suffix@                 @MOTIF_CFLAGS@ @X_CFLAGS@                 -DMWM_DDIR=\"$(libdir)/X11/mwm\"                 -DXLIB_PATH=\"@x_libraries@\"                 -DXINCL_PATH=\"@x_includes@\"
+ 
+ 
+-LDADD = $(top_builddir)/src/libXbae.la 	-L$(top_builddir)/../Xm$(lib_version_suffix)/.libs 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
++LDADD = $(top_builddir)/src/libXbae.la @MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
+ 
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../../include/XbaeConfig.h
+--- examples/caption/Makefile.in.orig	Thu Feb  3 15:14:33 2000
++++ examples/caption/Makefile.in	Thu Feb  3 15:15:54 2000
+@@ -99,7 +99,7 @@
+ INCLUDES = -I$(top_srcdir)/include                 -I$(top_srcdir)/../../include/Motif@version_suffix@                 -I$(top_builddir)/../../include/Motif@version_suffix@                 @MOTIF_CFLAGS@ @X_CFLAGS@                 -DMWM_DDIR=\"$(libdir)/X11/mwm\"                 -DXLIB_PATH=\"@x_libraries@\"                 -DXINCL_PATH=\"@x_includes@\"
+ 
+ 
+-LDADD = $(top_builddir)/src/libXbae.la 	-L$(top_builddir)/../Xm$(lib_version_suffix)/.libs 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
++LDADD = $(top_builddir)/src/libXbae.la 	 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
+ 
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../../include/XbaeConfig.h
+--- examples/choice/Makefile.in.orig	Thu Feb  3 15:14:33 2000
++++ examples/choice/Makefile.in	Thu Feb  3 15:15:55 2000
+@@ -99,7 +99,7 @@
+ INCLUDES = -I$(top_srcdir)/include                 -I$(top_srcdir)/../../include/Motif@version_suffix@                 -I$(top_builddir)/../../include/Motif@version_suffix@                 @MOTIF_CFLAGS@ @X_CFLAGS@                 -DMWM_DDIR=\"$(libdir)/X11/mwm\"                 -DXLIB_PATH=\"@x_libraries@\"                 -DXINCL_PATH=\"@x_includes@\"
+ 
+ 
+-LDADD = $(top_builddir)/src/libXbae.la 	-L$(top_builddir)/../Xm$(lib_version_suffix)/.libs 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
++LDADD = $(top_builddir)/src/libXbae.la 	 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
+ 
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../../include/XbaeConfig.h
+--- examples/colors/Makefile.in.orig	Thu Feb  3 15:14:33 2000
++++ examples/colors/Makefile.in	Thu Feb  3 15:15:55 2000
+@@ -99,7 +99,7 @@
+ INCLUDES = -I$(top_srcdir)/include                 -I$(top_srcdir)/../../include/Motif@version_suffix@                 -I$(top_builddir)/../../include/Motif@version_suffix@                 @MOTIF_CFLAGS@ @X_CFLAGS@                 -DMWM_DDIR=\"$(libdir)/X11/mwm\"                 -DXLIB_PATH=\"@x_libraries@\"                 -DXINCL_PATH=\"@x_includes@\"
+ 
+ 
+-LDADD = $(top_builddir)/src/libXbae.la 	-L$(top_builddir)/../Xm$(lib_version_suffix)/.libs 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
++LDADD = $(top_builddir)/src/libXbae.la 	 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
+ 
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../../include/XbaeConfig.h
+--- examples/draw/Makefile.in.orig	Thu Feb  3 15:14:33 2000
++++ examples/draw/Makefile.in	Thu Feb  3 15:15:55 2000
+@@ -99,7 +99,7 @@
+ INCLUDES = -I$(top_srcdir)/include                 -I$(top_srcdir)/../../include/Motif@version_suffix@                 -I$(top_builddir)/../../include/Motif@version_suffix@                 @MOTIF_CFLAGS@ @X_CFLAGS@                 -DMWM_DDIR=\"$(libdir)/X11/mwm\"                 -DXLIB_PATH=\"@x_libraries@\"                 -DXINCL_PATH=\"@x_includes@\"
+ 
+ 
+-LDADD = $(top_builddir)/src/libXbae.la 	-L$(top_builddir)/../Xm$(lib_version_suffix)/.libs 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
++LDADD = $(top_builddir)/src/libXbae.la 	 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
+ 
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../../include/XbaeConfig.h
+--- examples/dynamic/Makefile.in.orig	Thu Feb  3 15:14:33 2000
++++ examples/dynamic/Makefile.in	Thu Feb  3 15:15:55 2000
+@@ -99,7 +99,7 @@
+ INCLUDES = -I$(top_srcdir)/include                 -I$(top_srcdir)/../../include/Motif@version_suffix@                 -I$(top_builddir)/../../include/Motif@version_suffix@                 @MOTIF_CFLAGS@ @X_CFLAGS@                 -DMWM_DDIR=\"$(libdir)/X11/mwm\"                 -DXLIB_PATH=\"@x_libraries@\"                 -DXINCL_PATH=\"@x_includes@\"
+ 
+ 
+-LDADD = $(top_builddir)/src/libXbae.la 	-L$(top_builddir)/../Xm$(lib_version_suffix)/.libs 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
++LDADD = $(top_builddir)/src/libXbae.la 	 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
+ 
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../../include/XbaeConfig.h
+--- examples/fifteen/Makefile.in.orig	Thu Feb  3 15:14:33 2000
++++ examples/fifteen/Makefile.in	Thu Feb  3 15:15:55 2000
+@@ -99,7 +99,7 @@
+ INCLUDES = -I$(top_srcdir)/include                 -I$(top_srcdir)/../../include/Motif@version_suffix@                 -I$(top_builddir)/../../include/Motif@version_suffix@                 @MOTIF_CFLAGS@ @X_CFLAGS@                 -DMWM_DDIR=\"$(libdir)/X11/mwm\"                 -DXLIB_PATH=\"@x_libraries@\"                 -DXINCL_PATH=\"@x_includes@\"
+ 
+ 
+-LDADD = $(top_builddir)/src/libXbae.la 	-L$(top_builddir)/../Xm$(lib_version_suffix)/.libs 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
++LDADD = $(top_builddir)/src/libXbae.la 	 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
+ 
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../../include/XbaeConfig.h
+--- examples/input/Makefile.in.orig	Thu Feb  3 15:14:33 2000
++++ examples/input/Makefile.in	Thu Feb  3 15:15:55 2000
+@@ -99,7 +99,7 @@
+ INCLUDES = -I$(top_srcdir)/include                 -I$(top_srcdir)/../../include/Motif@version_suffix@                 -I$(top_builddir)/../../include/Motif@version_suffix@                 @MOTIF_CFLAGS@ @X_CFLAGS@                 -DMWM_DDIR=\"$(libdir)/X11/mwm\"                 -DXLIB_PATH=\"@x_libraries@\"                 -DXINCL_PATH=\"@x_includes@\"
+ 
+ 
+-LDADD = $(top_builddir)/src/libXbae.la 	-L$(top_builddir)/../Xm$(lib_version_suffix)/.libs 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
++LDADD = $(top_builddir)/src/libXbae.la 	 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
+ 
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../../include/XbaeConfig.h
+--- examples/list/Makefile.in.orig	Thu Feb  3 15:14:33 2000
++++ examples/list/Makefile.in	Thu Feb  3 15:15:55 2000
+@@ -99,7 +99,7 @@
+ INCLUDES = -I$(top_srcdir)/include                 -I$(top_srcdir)/../../include/Motif@version_suffix@                 -I$(top_builddir)/../../include/Motif@version_suffix@                 @MOTIF_CFLAGS@ @X_CFLAGS@                 -DMWM_DDIR=\"$(libdir)/X11/mwm\"                 -DXLIB_PATH=\"@x_libraries@\"                 -DXINCL_PATH=\"@x_includes@\"
+ 
+ 
+-LDADD = $(top_builddir)/src/libXbae.la 	-L$(top_builddir)/../Xm$(lib_version_suffix)/.libs 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
++LDADD = $(top_builddir)/src/libXbae.la 	 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
+ 
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../../include/XbaeConfig.h
+--- examples/matrix/Makefile.in.orig	Thu Feb  3 15:14:34 2000
++++ examples/matrix/Makefile.in	Thu Feb  3 15:15:55 2000
+@@ -99,7 +99,7 @@
+ INCLUDES = -I$(top_srcdir)/include                 -I$(top_srcdir)/../../include/Motif@version_suffix@                 -I$(top_builddir)/../../include/Motif@version_suffix@                 @MOTIF_CFLAGS@ @X_CFLAGS@                 -DMWM_DDIR=\"$(libdir)/X11/mwm\"                 -DXLIB_PATH=\"@x_libraries@\"                 -DXINCL_PATH=\"@x_includes@\"
+ 
+ 
+-LDADD = $(top_builddir)/src/libXbae.la 	-L$(top_builddir)/../Xm$(lib_version_suffix)/.libs 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
++LDADD = $(top_builddir)/src/libXbae.la 	 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
+ 
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../../include/XbaeConfig.h
+--- examples/multibyte/Makefile.in.orig	Thu Feb  3 15:14:34 2000
++++ examples/multibyte/Makefile.in	Thu Feb  3 15:15:55 2000
+@@ -99,7 +99,7 @@
+ INCLUDES = -I$(top_srcdir)/include                 -I$(top_srcdir)/../../include/Motif@version_suffix@                 -I$(top_builddir)/../../include/Motif@version_suffix@                 @MOTIF_CFLAGS@ @X_CFLAGS@                 -DMWM_DDIR=\"$(libdir)/X11/mwm\"                 -DXLIB_PATH=\"@x_libraries@\"                 -DXINCL_PATH=\"@x_includes@\"
+ 
+ 
+-LDADD = $(top_builddir)/src/libXbae.la 	-L$(top_builddir)/../Xm$(lib_version_suffix)/.libs 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
++LDADD = $(top_builddir)/src/libXbae.la 	 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
+ 
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../../include/XbaeConfig.h
+--- examples/multifixed/Makefile.in.orig	Thu Feb  3 15:14:34 2000
++++ examples/multifixed/Makefile.in	Thu Feb  3 15:15:55 2000
+@@ -99,7 +99,7 @@
+ INCLUDES = -I$(top_srcdir)/include                 -I$(top_srcdir)/../../include/Motif@version_suffix@                 -I$(top_builddir)/../../include/Motif@version_suffix@                 @MOTIF_CFLAGS@ @X_CFLAGS@                 -DMWM_DDIR=\"$(libdir)/X11/mwm\"                 -DXLIB_PATH=\"@x_libraries@\"                 -DXINCL_PATH=\"@x_includes@\"
+ 
+ 
+-LDADD = $(top_builddir)/src/libXbae.la 	-L$(top_builddir)/../Xm$(lib_version_suffix)/.libs 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
++LDADD = $(top_builddir)/src/libXbae.la 	 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
+ 
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../../include/XbaeConfig.h
+--- examples/select-drag/Makefile.in.orig	Thu Feb  3 15:14:34 2000
++++ examples/select-drag/Makefile.in	Thu Feb  3 15:15:55 2000
+@@ -99,7 +99,7 @@
+ INCLUDES = -I$(top_srcdir)/include                 -I$(top_srcdir)/../../include/Motif@version_suffix@                 -I$(top_builddir)/../../include/Motif@version_suffix@                 @MOTIF_CFLAGS@ @X_CFLAGS@                 -DMWM_DDIR=\"$(libdir)/X11/mwm\"                 -DXLIB_PATH=\"@x_libraries@\"                 -DXINCL_PATH=\"@x_includes@\"
+ 
+ 
+-LDADD = $(top_builddir)/src/libXbae.la 	-L$(top_builddir)/../Xm$(lib_version_suffix)/.libs 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
++LDADD = $(top_builddir)/src/libXbae.la 	 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
+ 
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../../include/XbaeConfig.h
+--- examples/select-push/Makefile.in.orig	Thu Feb  3 15:14:34 2000
++++ examples/select-push/Makefile.in	Thu Feb  3 15:15:55 2000
+@@ -99,7 +99,7 @@
+ INCLUDES = -I$(top_srcdir)/include                 -I$(top_srcdir)/../../include/Motif@version_suffix@                 -I$(top_builddir)/../../include/Motif@version_suffix@                 @MOTIF_CFLAGS@ @X_CFLAGS@                 -DMWM_DDIR=\"$(libdir)/X11/mwm\"                 -DXLIB_PATH=\"@x_libraries@\"                 -DXINCL_PATH=\"@x_includes@\"
+ 
+ 
+-LDADD = $(top_builddir)/src/libXbae.la 	-L$(top_builddir)/../Xm$(lib_version_suffix)/.libs 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
++LDADD = $(top_builddir)/src/libXbae.la 	 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
+ 
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../../include/XbaeConfig.h
+--- examples/traversal/Makefile.in.orig	Thu Feb  3 15:14:34 2000
++++ examples/traversal/Makefile.in	Thu Feb  3 15:15:55 2000
+@@ -99,7 +99,7 @@
+ INCLUDES = -I$(top_srcdir)/include                 -I$(top_srcdir)/../../include/Motif@version_suffix@                 -I$(top_builddir)/../../include/Motif@version_suffix@                 @MOTIF_CFLAGS@ @X_CFLAGS@                 -DMWM_DDIR=\"$(libdir)/X11/mwm\"                 -DXLIB_PATH=\"@x_libraries@\"                 -DXINCL_PATH=\"@x_includes@\"
+ 
+ 
+-LDADD = $(top_builddir)/src/libXbae.la 	-L$(top_builddir)/../Xm$(lib_version_suffix)/.libs 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
++LDADD = $(top_builddir)/src/libXbae.la 	 	@MOTIF_LIBS@ -lXm @X_LIBS@ ${X_PRE_LIBS} -lXt -lXext -lX11 ${X_EXTRA_LIBS}
+ 
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../../include/XbaeConfig.h
