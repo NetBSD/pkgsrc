@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.583 2003/05/24 16:48:33 salo Exp $
+$NetBSD: TODO,v 1.584 2003/05/24 19:23:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -87,6 +87,7 @@ Suggested package updates
 	o bogofilter-0.11.2
 	o boolean-6.4
 	o bzflag-1.7g0
+	o calamaris-2.58 [pkg/21662]
 	o canna-3.6p3 [pkg/20208]
 	o centericq-4.9.4
 	o cervisia-2.0
@@ -268,7 +269,7 @@ Suggested package updates
 	o wwwoffle-2.7h
 	o xalan-c-1.4
 	o xanim-2.92.0 [pkg/19934]
-	o xerces-c-2.1.0 [heinz]
+	o xerces-c-2.2.0 [heinz]
 	o xine-lib-0.9.21 [pkg/21625]
 	o xine-ui-0.9.21 [pkg/21625]
 	o xisp-2.7 [pkg/19566]
