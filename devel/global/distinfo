@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:20 wiz Exp $
+$NetBSD: distinfo,v 1.3 2002/11/23 23:09:55 wiz Exp $
 
-SHA1 (global-4.0.1.tar.gz) = 1e972426f51b6eaf70dba4bdb1d4c4f4d1eb501e
-Size (global-4.0.1.tar.gz) = 340273 bytes
+SHA1 (global-4.5.tar.gz) = bea60c4ea41a0e6de4438af92f36e5aa8c569a0d
+Size (global-4.5.tar.gz) = 413262 bytes
