@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2004/01/03 18:49:56 reed Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/08 20:58:39 xtraeme Exp $
 #
 
-DISTNAME=		gnome-terminal-2.0.2
+DISTNAME=		gnome-terminal-2.4.1
 PKGNAME=		${DISTNAME:S/-/2-/}
-PKGREVISION=		5
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-terminal/2.0/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-terminal/2.4/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		sab@posix.org.uk
@@ -28,10 +27,12 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GCONF2_SCHEMAS= 	gnome-terminal.schemas
 
-.include "../../x11/gtk2/buildlink2.mk"
-.include "../../x11/libzvt/buildlink2.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/libglade2/buildlink2.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
+.include "../../x11/gtk2/buildlink2.mk"
+.include "../../x11/libzvt/buildlink2.mk"
+.include "../../x11/startup-notification/buildlink2.mk"
+.include "../../x11/vte/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
