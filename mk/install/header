@@ -2,7 +2,7 @@
 #
 # start of header
 #
-# $NetBSD: header,v 1.15 2002/10/04 23:35:51 jlam Exp $
+# $NetBSD: header,v 1.16 2002/10/08 11:32:34 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -20,6 +20,7 @@ ECHO="@ECHO@"
 EGREP="@EGREP@"
 EXPR="@EXPR@"
 FALSE="@FALSE@"
+FIND="@FIND@"
 GREP="@GREP@"
 GROUPADD="@GROUPADD@"
 GTAR="@GTAR@"
@@ -39,6 +40,7 @@ TOUCH="@TOUCH@"
 TR="@TR@"
 TRUE="@TRUE@"
 USERADD="@USERADD@"
+XARGS="@XARGS@"
 
 PKGBASE="@PKGBASE@"
 
