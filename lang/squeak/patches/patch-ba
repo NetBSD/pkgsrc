@@ -1,7 +1,7 @@
-$NetBSD: patch-ba,v 1.1 2001/08/24 00:30:26 mjl Exp $
+$NetBSD: patch-ba,v 1.2 2001/08/24 14:46:29 mjl Exp $
 
---- src/unix/sqGnu.h.orig	Fri Aug 24 02:24:08 2001
-+++ src/unix/sqGnu.h	Fri Aug 24 02:24:24 2001
+--- ../src/unix/sqGnu.h.orig	Fri Aug 24 02:24:08 2001
++++ ../src/unix/sqGnu.h	Fri Aug 24 02:24:24 2001
 @@ -174,7 +174,7 @@
  # define SP_REG asm("%edi")
  # define CB_REG	/* asm("%ebx") ; avoid undue register pressure */
