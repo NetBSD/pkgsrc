@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.753 2001/06/09 12:15:59 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.754 2001/06/09 12:56:21 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -2544,6 +2544,10 @@ makepatchsum mps: uptodate-digest
 	newfile=${DISTINFO_FILE}.$$$$;					\
 	if [ -f ${DISTINFO_FILE} ]; then					\
 		${AWK} '$$2 !~ /\(patch-[a-z0-9]+\)/ { print $$0 }' < ${DISTINFO_FILE} >> $$newfile; \
+	else \
+		${ECHO} -n "$$" > $$newfile;				\
+		${ECHO} -n "NetBSD" >> $$newfile; 			\
+		${ECHO} "$$" >> $$newfile;				\
 	fi;								\
 	if [ -d ${PATCHDIR} ]; then					\
 		(cd ${PATCHDIR};					\
