@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/05/04 23:46:37 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/11/28 04:30:48 taca Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 RUBY_ERUBY_BUILDLINK3_MK:=	${RUBY_ERUBY_BUILDLINK3_MK}+
@@ -7,12 +7,17 @@ RUBY_ERUBY_BUILDLINK3_MK:=	${RUBY_ERUBY_BUILDLINK3_MK}+
 BUILDLINK_DEPENDS+=	ruby-eruby
 .endif
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nruby-eruby}
-BUILDLINK_PACKAGES+=	ruby-eruby
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:N${RUBY_PKGPREFIX}-eruby}
+BUILDLINK_PACKAGES+=	${RUBY_PKGPREFIX}-eruby
 
 .if !empty(RUBY_ERUBY_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.ruby-eruby+=	ruby-eruby>=0.9.7
-BUILDLINK_PKGSRCDIR.ruby-eruby?=	../../textproc/ruby-eruby
+.if ${RUBY_VER} == "16"
+BUILDLINK_DEPENDS.ruby16-eruby+=	${RUBY_PKGPREFIX}-eruby>=0.9.7
+BUILDLINK_PKGSRCDIR.ruby16-eruby?=	../../textproc/ruby-eruby
+.elif ${RUBY_VER} == "18"
+BUILDLINK_DEPENDS.ruby18-eruby+=	${RUBY_PKGPREFIX}-eruby>=0.9.7
+BUILDLINK_PKGSRCDIR.ruby18-eruby?=	../../textproc/ruby-eruby
+.endif
 .endif	# RUBY_ERUBY_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
