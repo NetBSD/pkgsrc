@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2000/07/11 09:55:51 agc Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/22 09:44:14 rh Exp $
 #
 
-DISTNAME=	plan-1.8.2
+DISTNAME=	plan-1.8.4
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 CATEGORIES=	misc x11
 MASTER_SITES=	ftp://ftp.fu-berlin.de/unix/graphics/plan/
