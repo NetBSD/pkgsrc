@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2000/12/10 09:46:13 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2001/09/18 21:56:30 skrll Exp $
 
---- doc/html/install.html.orig	Thu Dec 30 16:07:24 1999
-+++ doc/html/install.html
-@@ -573,12 +573,12 @@
+--- doc/install-configure.html.orig	Thu Jul  5 16:47:39 2001
++++ doc/install-configure.html
+@@ -142,12 +142,12 @@
  </kbd></pre>
  
  <li>Change to the Cyrus user and use the tool
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.1 2000/12/10 09:46:13 jlam Exp $
  <pre>
  <kbd>   su cyrus
 -   tools/mkimap
-+   /usr/cyrus/bin/mkimap
++   mkimap
+    exit
  </kbd>
  </pre>
- 

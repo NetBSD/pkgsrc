@@ -1,13 +1,17 @@
-$NetBSD: patch-ac,v 1.1 2000/12/10 09:46:13 jlam Exp $
+$NetBSD: patch-ac,v 1.2 2001/09/18 21:56:30 skrll Exp $
 
---- timsieved/Makefile.in.orig	Thu Nov 11 13:30:04 1999
-+++ timsieved/Makefile.in
-@@ -34,7 +34,7 @@
- CYRUS_GROUP=@cyrus_group@
+--- imap/lmtpd.c.orig	Mon May 21 19:21:47 2001
++++ imap/lmtpd.c
+@@ -411,7 +411,12 @@
+     }
+ }
  
- DEFS = @DEFS@ @LOCALDEFS@
--CPPFLAGS = -I. -I$(srcdir) -I$(srcdir)/../sieve -I$(srcdir)/../lib @COM_ERR_CPPFLAGS@ @CPPFLAGS@
-+CPPFLAGS = -I. -I$(srcdir) -I$(srcdir)/../sieve -I$(srcdir)/../lib @COM_ERR_CPPFLAGS@ @CPPFLAGS@ @SASLFLAGS@
- CFLAGS = @CFLAGS@
- LDFLAGS = @LDFLAGS@
++#ifdef __NetBSD__
++#include <paths.h>
++#define DEFAULT_SENDMAIL (_PATH_SENDMAIL)
++#else
+ #define DEFAULT_SENDMAIL ("/usr/lib/sendmail")
++#endif
+ #define DEFAULT_POSTMASTER ("postmaster")
  
+ #define SENDMAIL (config_getstring("sendmail", DEFAULT_SENDMAIL))
