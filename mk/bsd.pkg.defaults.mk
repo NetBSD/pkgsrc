@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.127 2003/01/21 08:24:32 grant Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.128 2003/01/24 10:04:58 agc Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -939,6 +939,18 @@ JSDK_HOME?= ${JAVA_HOME}/jsdk
 # Used in lame package to compile in the graphical analyzer (which uses
 # GTK).
 # Possible: not defined, defined
+# Default: not defined
+
+#LIBDVDCSS_HOMEPAGE=
+# Used in libdvdcss package as the homepage - we are unable to point this
+# to one of the real sites for legal reasons
+# Possible: any libdvdcss site
+# Default: not defined
+
+#LIBDVDCSS_MASTER_SITES=
+# Used in libdvdcss package as the master site - we are unable to point this
+# to one of the real sites for legal reasons
+# Possible: any libdvdcss site
 # Default: not defined
 
 #LIBWRAP_FWD=

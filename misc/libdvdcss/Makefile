@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/01/22 13:51:23 agc Exp $
+# $NetBSD: Makefile,v 1.2 2003/01/24 10:04:23 agc Exp $
 #
 # Unfortunately, some reading of the United States law (DMCA) means
 # that we are not able to provide pointers to the source or homepage
@@ -9,10 +9,10 @@
 
 DISTNAME=	libdvdcss-1.2.4
 CATEGORIES=	misc
-MASTER_SITES=	# defined - see comment above
+MASTER_SITES=	${LIBDVDCSS_MASTER_SITES}
 
 MAINTAINER=	marc@informatik.uni-bremen.de
-HOMEPAGE=	# defined - see comment above
+HOMEPAGE=	${LIBDVDCSS_HOMEPAGE}
 COMMENT=	simple library designed for accessing DVDs
 
 # no source on the ftp server because of the css source code in it
