@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.2 2004/08/04 09:36:16 jlam Exp $
+# $NetBSD: bsd.options.mk,v 1.3 2004/08/04 23:25:14 jlam Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -163,8 +163,8 @@ PKG_FAIL_REASON+=	"\"${_opt_}\" is not a supported build option."
 #
 BUILD_DEFS+=		PKG_OPTIONS
 
-.PHONY: pre-extract supported-options-message
-pre-extract: supported-options-message
+.PHONY: pre-install-depends supported-options-message
+pre-install-depends: supported-options-message
 .if !defined(PKG_SUPPORTED_OPTIONS)
 supported-options-message: # do nothing
 .else
@@ -174,7 +174,23 @@ ${WRKDIR}/.som_done: ${WRKDIR}
 	@${ECHO} "=========================================================================="
 	@${ECHO} "The supported build options for this package are:"
 	@${ECHO} ""
-	@${ECHO} "	${PKG_SUPPORTED_OPTIONS}"
+	@set -- ${PKG_SUPPORTED_OPTIONS};				\
+	printwidth=40;							\
+	while ${TEST} $$# -gt 0; do					\
+		if ${TEST} -z "$$line"; then				\
+			line=$$1;					\
+		else							\
+			line="$$line $$1";				\
+		fi;							\
+		if ${TEST} $${#line} -gt $$printwidth; then		\
+			${ECHO} "	$$line";			\
+			line=;						\
+		fi;							\
+		shift;							\
+	done;								\
+	if ${TEST} $${#line} -le $$printwidth; then			\
+		${ECHO} "	$$line";				\
+	fi
 	@${ECHO} ""
 	@${ECHO} "You can select which build options to use by setting the following"
 	@${ECHO} "variables.  Their curent value is shown:"
