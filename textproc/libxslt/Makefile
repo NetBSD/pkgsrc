@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2003/11/02 07:02:32 xtraeme Exp $
+# $NetBSD: Makefile,v 1.30 2003/12/04 19:33:47 xtraeme Exp $
 
-DISTNAME=	libxslt-1.0.33
+DISTNAME=	libxslt-1.1.0
 PKGNAME=	${DISTNAME}
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxslt/1.0/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxslt/1.1/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	xtraeme@NetBSD.org
