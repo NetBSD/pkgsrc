@@ -1,15 +1,15 @@
-$NetBSD: patch-ab,v 1.5 2000/08/04 01:31:56 jlam Exp $
+$NetBSD: patch-ab,v 1.6 2001/07/14 13:35:13 jlam Exp $
 
---- server/Imakefile.orig	Sat Feb 12 15:22:43 2000
-+++ server/Imakefile	Thu Aug  3 21:03:54 2000
-@@ -207,10 +207,11 @@
+--- server/Imakefile.orig	Tue Dec 12 23:45:48 2000
++++ server/Imakefile
+@@ -217,10 +217,11 @@
  	$(RM) $(ALL)
  
   ETCDIR = NasConfigSearchPath
 +  EGDIR = ${PREFIX}/share/examples/nas
  
  InstallManPage(nasd,$(MANDIR))
- InstallManPage(nasd.conf,$(MANDIR))
+ InstallManPage(nasd.conf,$(RCMANDIR))
 -InstallNonExecFile(nasd.conf.eg,$(ETCDIR))
 +InstallNonExecFile(nasd.conf.eg,$(EGDIR))
  
