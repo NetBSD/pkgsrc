@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2000/09/06 15:02:09 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2000/09/07 09:09:24 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:58:03 gj Exp
 #
 
@@ -36,7 +36,7 @@ EGDIR=			${PREFIX}/share/examples/xvile
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${XAW_TYPE} == "3d"
+.if defined(XAW_TYPE) && ${XAW_TYPE} == "3d"
 CONFIGURE_ARGS+=	--with-screen=Xaw3d
 CONFIGURE_ARGS+=	--with-Xaw3d
 .else
