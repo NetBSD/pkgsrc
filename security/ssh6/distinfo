@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:47:35 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:40:40 agc Exp $
 
-MD5 (ssh-1.2.27.tar.gz) = c22bc000bee0f7d6f4845eab72a81395
+SHA1 (ssh-1.2.27.tar.gz) = 0e7d59c6a62b094bd51818599ae24f7de3462d14
+Size (ssh-1.2.27.tar.gz) = 1022546 bytes
 SHA1 (patch-aa) = 6cf6e5043e1cd230064b73620ce7c86bf5673649
 SHA1 (patch-ab) = 1f2f35b6cf3df997650b1547000d3262735d04e8
 SHA1 (patch-ac) = ded15b71cbf241146fe40265c657ca4e22af697a
