@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.8 2003/09/22 08:38:59 wiz Exp $
+
+--- bozohttpd.c.orig	Wed Jul  9 17:53:47 2003
++++ bozohttpd.c
+@@ -2092,6 +2092,9 @@ static struct content_map content_map[] 
+ 	{ ".ice",	"x-conference/x-cooltalk",	"",		"", NULL },
+ 	{ ".wrl",	"x-world/x-vrml",		"",		"", NULL },
+ 	{ ".vrml",	"x-world/x-vrml",		"",		"", NULL },
++	{ ".xbel",	"text/xml",			"",		"", NULL },
++	{ ".xml",	"text/xml",			"",		"", NULL },
++	{ ".xsl",	"text/xml",			"",		"", NULL },
+ 	{ NULL,		NULL,				NULL,		NULL, NULL, },
+ };
+ 
