@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/04/25 17:39:16 wiz Exp $
+
+--- doc/prc-tools.texi.orig	Thu Mar 22 15:27:40 2001
++++ doc/prc-tools.texi	Thu Mar 22 15:27:56 2001
+@@ -53,7 +53,7 @@
+ @end titlepage
+ 
+ 
+-@ifnottex
++@ifinfo
+ @node Top
+ @top Using PRC-Tools
+ 
+@@ -80,7 +80,7 @@
+ 
+ @c * Index::
+ @end menu
+-@end ifnottex
++@end ifinfo
+ 
+ 
+ @node GCC on Palm OS

@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/04/25 17:39:16 wiz Exp $
+
+--- binutils/libiberty/strerror.c.orig	Thu Jan 18 23:47:31 2001
++++ binutils/libiberty/strerror.c	Thu Jan 18 23:44:32 2001
+@@ -458,7 +458,7 @@
+ #ifdef NEED_sys_errlist
+ 
+ static int sys_nerr;
+-static const char **sys_errlist;
++static const char * const *sys_errlist;
+ 
+ #else
+ 

@@ -1,0 +1,41 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/04/25 17:39:16 wiz Exp $
+
+--- gcc/gcc/Makefile.in.orig	Tue Apr 24 14:07:46 2001
++++ gcc/gcc/Makefile.in
+@@ -486,7 +486,7 @@
+ CPP_INSTALL_NAME = `t='$(program_transform_name)'; echo cpp | sed -e $$t`
+ PROTOIZE_INSTALL_NAME = `t='$(program_transform_name)'; echo protoize | sed -e $$t`
+ UNPROTOIZE_INSTALL_NAME = `t='$(program_transform_name)'; echo unprotoize | sed -e $$t`
+-GCOV_INSTALL_NAME = `t='$(program_transform_name)'; echo gcov | sed -e $$t`
++GCOV_INSTALL_NAME = `t='$(program_transform_cross_name)'; echo gcov | sed -e $$t`
+ 
+ # Actual name to use when installing a cross-compiler.
+ GCC_CROSS_NAME = `t='$(program_transform_cross_name)'; echo gcc | sed -e $$t`
+@@ -2455,7 +2455,7 @@
+ # Install the driver last so that the window when things are
+ # broken is small.
+ install-normal: install-common $(INSTALL_HEADERS) $(INSTALL_LIBGCC) \
+-    $(INSTALL_CPP) install-man install-info intl.install lang.install-normal \
++    $(INSTALL_CPP) install-man intl.install lang.install-normal \
+     install-driver
+ 
+ # Do nothing while making gcc with a cross-compiler. The person who
+@@ -2524,7 +2524,6 @@
+ 	-if [ -d $(gcc_tooldir) ] ; then true ; else mkdir $(gcc_tooldir) ; chmod a+rx $(gcc_tooldir) ; fi
+ 	-if [ -d $(assertdir) ] ; then true ; else mkdir $(assertdir) ; chmod a+rx $(assertdir) ; fi
+ 	-if [ -d $(infodir) ] ; then true ; else mkdir $(infodir) ; chmod a+rx $(infodir) ; fi
+-	-if [ -d $(htmldir) ] ; then true ; else mkdir $(htmldir) ; chmod a+rx $(htmldir) ; fi
+ # We don't use mkdir -p to create the parents of man1dir,
+ # because some systems don't support it.
+ # Instead, we use this technique to create the immediate parent of man1dir.
+@@ -2642,8 +2641,8 @@
+ 	  chmod a-x $(man1dir)/$(GCC_INSTALL_NAME)$(manext); \
+ 	fi
+ 	-rm -f $(man1dir)/cccp$(manext)
+-	-$(INSTALL_DATA) $(srcdir)/cccp.1 $(man1dir)/cccp$(manext)
+-	-chmod a-x $(man1dir)/cccp$(manext)
++	-$(INSTALL_DATA) $(srcdir)/cccp.1 $(man1dir)/$(CPP_CROSS_NAME)$(manext)
++	-chmod a-x $(man1dir)/$(CPP_CROSS_NAME)$(manext)
+ 
+ # Install the library.
+ install-libgcc: libgcc.a installdirs

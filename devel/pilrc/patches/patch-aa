@@ -1,0 +1,36 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/04/25 17:39:16 wiz Exp $
+
+--- configure.in.orig	Thu Feb  8 08:50:24 2001
++++ configure.in	Thu Mar 22 12:11:10 2001
+@@ -34,13 +34,24 @@
+ AC_PROG_CC
+ AC_PROG_RANLIB
+ 
+-AM_PATH_GTK(1.2.0,
+-[
+-AM_CONDITIONAL(PILRCUI, true)
+-],
+-[
+-AM_CONDITIONAL(PILRCUI, false)
+-])
++AC_ARG_ENABLE(pilrcui,
++  [  --enable-pilrcui        build pilrcui (needs gtk; default: enabled)])
++
++AC_MSG_CHECKING([whether pilrcui should be built])
++if test -z "$enable_pilrcui" -o "$enable_pilrcui" = yes
++then
++    AC_MSG_RESULT([yes])
++    AM_PATH_GTK(1.2.0,
++    [
++    AM_CONDITIONAL(PILRCUI, true)
++    ],
++    [
++    AM_CONDITIONAL(PILRCUI, false)
++    ])
++else
++    AC_MSG_RESULT([no])
++    AM_CONDITIONAL(PILRCUI, false)
++fi
+ 
+ # Check for warnings flag if gcc was detected.
+ if test "x$ac_cv_prog_gcc" = "xyes"; then

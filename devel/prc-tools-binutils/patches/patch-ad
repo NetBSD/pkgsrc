@@ -1,0 +1,21 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/04/25 17:39:16 wiz Exp $
+
+--- binutils/Makefile.in.orig	Mon Mar 19 18:07:30 2001
++++ binutils/Makefile.in	Mon Mar 19 18:12:09 2001
+@@ -597,8 +597,6 @@
+ 	install-autoconf \
+ 	install-automake \
+ 	install-bash \
+-	install-bfd \
+-	install-opcodes \
+ 	install-binutils \
+ 	install-bison \
+ 	install-byacc \
+@@ -629,7 +627,6 @@
+ 	install-itcl \
+ 	install-ld \
+ 	install-libgui \
+-	install-libiberty \
+ 	install-m4 \
+ 	install-make \
+ 	install-mmalloc \

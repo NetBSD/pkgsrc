@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/04/25 17:39:16 wiz Exp $
+
+--- gcc/gcc/cp/Make-lang.in.orig	Tue Apr 24 13:17:32 2001
++++ gcc/gcc/cp/Make-lang.in	Tue Apr 24 13:18:09 2001
+@@ -229,17 +229,6 @@
+ 	    rm -f $(bindir)/$(CXX_INSTALL_NAME)$(exeext); \
+ 	    $(LN) $(bindir)/$(GXX_INSTALL_NAME)$(exeext) $(bindir)/$(CXX_INSTALL_NAME)$(exeext); \
+ 	  fi ; \
+-	  if [ x$(DEMANGLER_PROG) != x ] && [ -x "$(DEMANGLER_PROG)" ]; then \
+-	    if [ -f g++-cross$(exeext) ] ; then \
+-	      rm -f $(bindir)/$(DEMANGLER_CROSS_NAME)$(exeext); \
+-	      $(INSTALL_PROGRAM) $(DEMANGLER_PROG) $(bindir)/$(DEMANGLER_CROSS_NAME)$(exeext); \
+-	      chmod a+x $(bindir)/$(DEMANGLER_CROSS_NAME)$(exeext); \
+-	    else \
+-	      rm -f $(bindir)/$(DEMANGLER_INSTALL_NAME)$(exeext); \
+-	      $(INSTALL_PROGRAM) $(DEMANGLER_PROG) $(bindir)/$(DEMANGLER_INSTALL_NAME)$(exeext); \
+-	      chmod a+x $(bindir)/$(DEMANGLER_INSTALL_NAME)$(exeext); \
+-	    fi ; \
+-	  fi ; \
+ 	fi
+ 
+ c++.install-info:
