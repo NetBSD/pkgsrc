@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/20 12:26:16 agc Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/18 23:47:03 snj Exp $
 # FreeBSD Id: ports/x11-fm/xfm/Makefile,v 1.20 2001/02/05 21:00:55 olgeni Exp
 
 DISTNAME=	xfm-1.4.3
@@ -11,10 +11,10 @@ HOMEPAGE=	http://www.musikwissenschaft.uni-mainz.de/~ag/xfm/
 COMMENT=	The X File Manager
 
 WRKSRC=		${WRKDIR}/xfm-1.4.3
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_IMAKE=	YES
 
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../x11/Xaw3d/buildlink2.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/Xaw3d/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
