@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2004/03/26 11:02:14 jlam Exp $
+$NetBSD: patch-aa,v 1.7 2004/06/01 15:34:16 jschauma Exp $
 
 --- Makefile.orig	Mon Aug 21 13:59:52 2000
 +++ Makefile
@@ -20,14 +20,6 @@ $NetBSD: patch-aa,v 1.6 2004/03/26 11:02:14 jlam Exp $
  
  # This is good for many SYSV+BSD hybrids with NIS, probably also for HP-UX 7.x.
  hpux hpux8 hpux9 hpux10:
-@@ -185,6 +185,7 @@ irix5:
- 
- # IRIX 6.2 (tucker@math.unc.edu). Must find a better value than 200000.
- irix6:
-+irix6.5:
- 	@make REAL_DAEMON_DIR=$(REAL_DAEMON_DIR) STYLE=$(STYLE) \
- 	LIBS= RANLIB=echo ARFLAGS=rv VSYSLOG= \
- 	NETGROUP=-DNETGROUP EXTRA_CFLAGS="-DBSD=200000" TLI= all
 @@ -602,7 +603,7 @@ ACCESS	= -DHOSTS_ACCESS
  # look for access control information. Watch out for the quotes and
  # backslashes when you make changes.
