@@ -1,4 +1,4 @@
-.\"	$NetBSD: port2pkg.1,v 1.1.1.1 1999/07/27 11:33:06 sakamoto Exp $
+.\"	$NetBSD: port2pkg.1,v 1.2 2001/12/03 19:03:23 wiz Exp $
 .\"
 .\" Copyright (c) 1999 by Kazuki Sakamoto (sakamoto@netbsd.org)
 .\" Absolutely no warranty.
@@ -7,7 +7,7 @@
 .Dt PORT2PKG 1
 .Sh NAME
 .Nm port2pkg
-.Nd convert FreeBSD ports to NetBSD pkgsrc
+.Nd convert a FreeBSD port to a NetBSD package
 .Sh SYNOPSIS
 .Nm
 .Op Fl m Ar maintainer
@@ -15,38 +15,41 @@
 .Ar pkgsrcdir
 .Sh DESCRIPTION
 .Nm
-tries convet FreeBSD ports to NetBSD pkgsrc.
+tries to convert a
+.Fx
+port to a
+.Nx
+package.
 .Nm
 copies files
 from
 .Ar portsdir
 to
 .Ar pkgsrcdir
-(if noexists, mkdir
-.Ar pkgsrcdir),
-and tries adapting Makefile, patches and some files
-to NetBSD in
-.Ar pkgsrcdir .
-.Pp
-.Sy Options
+(if
+.Ar pkgsrcdir
+doesn't exists, it is created first),
+and tries adapting the Makefile, patches and some other files
+to
+.Nx
+pkgsrc.
+.Ss Options
 .Bl -tag -width Fl
 .It Fl m
-Adjust maintainer this package
+Adjust maintainer of this package
 (default: packages@netbsd.org).
 .El
 .Sh EXAMPLES
-.Pp
 .Dl port2pkg /mnt/ports/<category>/foo /usr/pkgsrc/<category>/foo
 or
 .Dl port2pkg -m your@email /mnt/ports/<category>/foo /usr/pkgsrc/<category>/foo
-.Pp
 .Sh SEE ALSO
 Read
 .Ar Package Constructor's Guide
 in
-.Ar pkgsrc/Packages.txt .
+.Pa pkgsrc/Packages.txt .
+.Sh AUTHORS
+.An Kazuki Sakamoto Aq sakamoto@netbsd.org
 .Sh BUGS
 .Nm
 is not a magic wand, please double-check converted pkgsrc.
-.Sh AUTHOR
-Kazuki Sakamoto <sakamoto@netbsd.org>

@@ -1,4 +1,4 @@
-.\"	$NetBSD: lintpkgsrc.1,v 1.19 2001/07/07 18:21:29 dmcmahill Exp $
+.\"	$NetBSD: lintpkgsrc.1,v 1.20 2001/12/03 19:03:23 wiz Exp $
 .\"
 .\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -7,7 +7,7 @@
 .Dt LINTPKGSRC 1
 .Sh NAME
 .Nm lintpkgsrc
-.Nd a verifier for the pkgsrc tree
+.Nd verifier for the pkgsrc tree
 .Sh SYNOPSIS
 .Nm
 .Op Fl BDLORSVdhilmopru
@@ -23,21 +23,26 @@ tries to verify the entire contents of the pkgsrc tree.
 uses simple regular-expression matching for verifying
 files that make up a pkgsrc directory.
 Note that it does NOT implement complete Makefile parser.
-.Pp
-.Sy Options
+.Ss Options
 .Bl -tag -width xxxxxxxxxxxx
 .It Fl B
 List packages marked as BROKEN.
 .It Fl D Ar paths
-Parse Makefiles and output contents (Useful for debugging).
+Parse Makefiles and output contents (useful for debugging).
 .It Fl K Ar PACKAGES
 Override binary packages base directory, normally set from
 .Pa /etc/mk.conf
-or defaulted to PKGSRCDIR/packages.
+or defaulted to
+.Pa ${PKGSRCDIR}/packages .
 .Pp
 Note: lintpkgsrc treats
 .Em PACKAGES
-slightly differently to the pkgsrc build system. -p, -R and -V check for
+slightly differently to the pkgsrc build system.
+.Fl p ,
+.Fl R
+and
+.Fl V
+check for
 binary packages in any depth of PACKAGES subdirs - this allows packages for all
 architectures/OS versions to be checked simultaneously with an
 .Pa /etc/mk.conf
@@ -49,12 +54,14 @@ PACKAGES=${PKGSRCDIR}/packages
 PACKAGES=${PKGSRCDIR}/packages/${OS_VERSION}/${MACHINE_ARCH}
 \&.endif
 .Pp
-Which would be an alternative to -K.
+Which would be an alternative to
+.Fl K .
 .Ed
 .It Fl L
 List the filenames of Makefiles as they are parsed (for debugging).
 .It Fl M Ar DISTDIR
-Set directory for distfiles, defaults to PKGSRCDIR/distfiles.
+Set directory for distfiles, defaults to
+.Pa ${PKGSRCDIR}/distfiles .
 .It Fl O
 Report any binary packages in any subdirs of
 .Em PACKAGES ,
@@ -82,7 +89,7 @@ lists.
 List any prebuilt packages in any subdirs of
 .Em PACKAGES
 with known vulnerabilities, based on the data in
-PKGSRCDIR/distfiles/vulnerabilities .
+.Pa ${PKGSRCDIR}/distfiles/vulnerabilities .
 .It Fl d
 Extract the
 .Ql DEPENDS
@@ -91,21 +98,22 @@ verify the version specified in each DEPEND correctly matches a current
 pkgsrc package.
 .It Fl g Ar pkgsrcmap
 Generate pkgsrcmap file containing an entry for each package of
-.Ql pkgname pkgdir pkgver
-.
+.Ql pkgname pkgdir pkgver .
 .It Fl h
 Basic help and usage.
 .It Fl i
 Check the version of each installed package against the current version in
 pkgsrc.
 .It Fl l
-Run pkglint on every package in pkgsrc.
+Run
+.Xr pkglint 1
+on every package in pkgsrc.
 .It Fl m
 For each current distfile, verify its checksum against the appropriate
 package's distinfo file. Also report if any package's distinfo file references
 the same distfile with a different distinfo checksum.
 .It Fl o
-Report any old distfile (not referenced by any package's distinfo file).
+Report any old distfiles (not referenced by any package's distinfo file).
 .It Fl p
 Report any old binary packages in any subdirs of
 .Em PACKAGES .
@@ -113,9 +121,14 @@ Report any old binary packages in any subdirs of
 Remove distfiles which are not referenced from any package's distinfo file,
 or have an incorrect checksum (usually due to an interrupted download),
 and any old binary packages. To remove any given type, additionally
-specify the -o, -m, or -p flags respectively.
+specify the
+.Fl o ,
+.Fl m ,
+or
+.Fl p
+flags respectively.
 .It Fl u
-As 
+As
 .Fl i
 plus for mismatched packages, display REQUIRED details and run
 .Ql make fetch-list | sh
@@ -124,9 +137,9 @@ the latest version are present.
 .Pp
 Warning: The behaviour of this command may change in a later version.
 .El
-.Sh AUTHOR
-David Brownlee <abs@netbsd.org>
-.Sh CAVEATS
+.Sh AUTHORS
+.An David Brownlee Aq abs@netbsd.org
+.Sh BUGS
 The
 .Fl R ,
 .Fl V ,
@@ -136,16 +149,16 @@ options default to using
 .Em PACKAGES
 as the base directory from which to
 search for binary packages. If this includes OS or architecture information
-then packages for other OS/architecture combinations will be missed. 
+then packages for other OS/architecture combinations will be missed.
 In this case
 .Em PACKAGES
-can be overridden with 
+can be overridden with
 .Fl K
 or set conditionally in
 .Pa /etc/mk.conf
 based on the value of
 .Em LINTPKGSRC .
-.Sh BUGS
+.Pp
 The
 .Ql Makefile parsing
 algorithm used to obtain package versions

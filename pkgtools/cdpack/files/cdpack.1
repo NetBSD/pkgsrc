@@ -1,4 +1,4 @@
-.\" $NetBSD: cdpack.1,v 1.5 2001/06/24 21:46:34 dmcmahill Exp $
+.\" $NetBSD: cdpack.1,v 1.6 2001/12/03 19:03:22 wiz Exp $
 .\"
 .\" Copyright (c) 2001 Dan McMahill, All rights reserved.
 .\"
@@ -31,7 +31,7 @@
 .\"
 .Dd April 25, 2001
 .Dt CDPACK 1
-.Os NetBSD
+.Os
 .Sh NAME
 .Nm cdpack
 .Nd produce multi-CD binary package images
@@ -59,9 +59,9 @@ used to determine which packages are placed on which CD.  The
 directory
 .Ar cd_image_directory
 is used as a staging area and the final ISO 9660 images are left in
-that directory.  A file, 
+that directory.  A file,
 .Ar .index ,
-which lists the contents of each CD will be left in the root 
+which lists the contents of each CD will be left in the root
 directory of each CD image.
 .Bl -tag -width "-x directory "
 .It Fl l Ar logfile
@@ -70,10 +70,10 @@ Log the output of mkisofs -v -v to the file
 .It Fl n
 Do not duplicate packages in order to prevent inter-CD dependencies.
 The default without the
-.Fl n 
+.Fl n
 option will place a package and all of its dependencies on the same
 CD.  If a particular package is also required by pacakges on other
-CD's, it will be placed there as well.  
+CD's, it will be placed there as well.
 When the
 .Fl n
 option is used packages are not duplicated.  This results in slightly
@@ -102,26 +102,13 @@ to be present on each CD in the set.
 Includes the contents of
 .Ar directory
 on the last CD in the set.  This is useful for adding
-a pkgsrc.tar.gz tarball, i.e. a file which does not 
+a pkgsrc.tar.gz tarball, i.e. a file which does not
 need to be on each CD.
 .El
 .Pp
 The
 .Nm
 utility exits 0 on success, and >0 if an error occurs.
-.Sh EXAMPLES
-This example takes all of the binary packages found in
-/usr/pkgsrc/packages/All and creates cd images in
-/u2/cdimages/cd{1,2,...}.iso.  The directories
-/u2/cdimages/cd{1,2,...} are used to create the ISO 9660 layouts.
-.D1 cdpack /usr/pkgsrc/packages/All /u2/cdimages
-.Pp
-To include a common set of files on all CD's, place them in a
-directory, /tmp/foo, in this example, and pass in the directory name
-with the 
-.Fl x
-option.
-.Dl cdpack -x /tmp/foo /usr/pkgsrc/packages/All /u2/cdimages
 .Sh ENVIRONMENT
 .Nm
 uses the fillowing environment variables if set.
@@ -131,6 +118,19 @@ Directory for holding temporary files during the image creation.
 Defaults to
 .Dq Li /tmp .
 .El
+.Sh EXAMPLES
+This example takes all of the binary packages found in
+/usr/pkgsrc/packages/All and creates cd images in
+/u2/cdimages/cd{1,2,...}.iso.  The directories
+/u2/cdimages/cd{1,2,...} are used to create the ISO 9660 layouts.
+.D1 cdpack /usr/pkgsrc/packages/All /u2/cdimages
+.Pp
+To include a common set of files on all CD's, place them in a
+directory, /tmp/foo, in this example, and pass in the directory name
+with the
+.Fl x
+option.
+.Dl cdpack -x /tmp/foo /usr/pkgsrc/packages/All /u2/cdimages
 .Sh SEE ALSO
 .Xr mkisofs 1
 .Sh HISTORY
@@ -139,7 +139,7 @@ The
 utility first appeared in the
 .Nx
 packages collection in April, 2001.
-.Sh AUTHOR
+.Sh AUTHORS
 The
 .Nm
 utility was written by Dan McMahill (dmcmahill@netbsd.org).  The

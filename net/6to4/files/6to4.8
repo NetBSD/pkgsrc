@@ -1,6 +1,6 @@
-.\"     $NetBSD: 6to4.8,v 1.4 2001/11/22 03:00:07 hubertf Exp $
+.\"     $NetBSD: 6to4.8,v 1.5 2001/12/03 19:03:21 wiz Exp $
 .Dd February 18, 2001
-.Dt 6to4 8
+.Dt 6TO4 8
 .Os
 .Sh NAME
 .Nm 6to4
@@ -38,7 +38,7 @@ Do not. Only print the commands that would be run, but do not execute
 them.
 .It Fl v
 Verbose operation. Print the commands that are about to be run, before
-running them. Displays some additional information.  
+running them. Displays some additional information.
 .It Fl h
 Show usage.
 .El
@@ -69,20 +69,21 @@ sysctl needs to be set to
 You can arrange that by setting
 .Dq ip6mode=autohost
 in
-.Pa /etc/rc.conf . 
+.Pa /etc/rc.conf .
 .It Sy rtadvd-stop
 Stops router advertizement and IPv6 packet forwarding.
 .Xr rtadvd 8
 is stopped, and the
 .Xr rtadvd.conf 5
 config file is removed from
-.Pa /var/run .  
+.Pa /var/run .
 .El
 .Sh REQUIREMENTS
 Besides IPv4 connectivity, you need support for IPv6 and the
 .Xr stf 4
-device in your kernel. While the GENERIC NetBSD 1.5 kernel does
-support IPv6, it does not contain support for the
+device in your kernel. While the GENERIC
+.Nx
+1.5 kernel does support IPv6, it does not contain support for the
 .Xr stf 4
 device.
 .Pp
@@ -93,8 +94,9 @@ options         INET6           # IPV6
 pseudo-device	stf	1	# 6to4 IPv6 over IPv4 encapsulation
 .Ed
 .Pp
-In systems that run past-1.5 NetBSD-current, you will have to
-explicitly create an
+In systems that run past-1.5
+.Nx Ns -current ,
+you will have to explicitly create an
 .Xr stf 4
 device after compiling it in the kernel. You do this by running
 the following command before calling the
@@ -114,15 +116,15 @@ command!
 .Sh CONFIGURATION
 The
 .Nm
-script reads it's configuration from a config file named
-.Pa 6to4.conf. 
+script reads its configuration from a config file named
+.Pa 6to4.conf .
 The
 .Pa 6to4.conf
 file is in
 .Xr perl 1
 syntax, and contains several
 variables that can be tuned to adjust your setup. Default values
-should work for use on a modem dialup. 
+should work for use on a modem dialup.
 .Bl -tag -width rtadvd-stop
 .It Sy out_if
 The outbound interface that has a valid IPv4 address
@@ -132,34 +134,34 @@ addresses from. Usually
 for a modem setup, or your ethernet interface if you have
 IPv4 connectivity via LAN. This
 can't be empty, and is assigned the IPv6 address
-2002:x:x:v6_net:hostbits6, see below. 
+2002:x:x:v6_net:hostbits6, see below.
 .It Sy in_if
 The inside interface. If non-empty, this interface is
 assigned the IPv6 address
 2002:x:x:v6_innernet:hostbits6, see below.
 This is only useful on machines that
 have more than one network interfaces, e.g. with a modem and a
-local ethernet. 
+local ethernet.
 .It Sy v6_net
 The subnet address you want to use on the address of
 your outbound interface. Defaults to
-.Dq 1 . 
+.Dq 1 .
 .It Sy v6_innernet
 The subnet address you want to use on the address of
 your inbound interface. Defaults to
-.Dq 2 . 
+.Dq 2 .
 .It Sy hostbits6
 The lower 64 bits of both the inbound and outbound interface's
-addresses.  
+addresses.
 .It Sy peer
 Name of the remote 6to4 server that'll take our
 IPv6-in-IPv4 encapsulated packets and route them on
-via IPv6. A special value of 
+via IPv6. A special value of
 .Dq 6to4-anycast
 can be used for the anycast service defined in RFC 3068.
 Other possible values are given in the example config file.
 .El
-.Sh EXAMPLE USAGE
+.Sh EXAMPLES
 The
 .Nm
 script can be run automatically by
@@ -181,7 +183,8 @@ To shut down properly, put this into
 .Dq 6to4 IPv6 Explained
 at
 .Pa http://www.feyrer.de/NetBSD/6to4.html ,
-NetBSD IPv6 Documentation at
+.Nx
+IPv6 Documentation at
 .Pa http://www.netbsd.org/Documentation/network/ipv6/ ,
 RFC 3068.
 .Sh HISTORY
@@ -190,6 +193,8 @@ The
 utility and manpage were written by
 Hubert Feyrer <hubert@feyrer.de>.
 .Sh BUGS
-On systems running past-1.5 NetBSD-current, the
+On systems running past-1.5
+.Nx Ns -current ,
+the
 .Dq ifconfig stf0 create
 should be run automatically.

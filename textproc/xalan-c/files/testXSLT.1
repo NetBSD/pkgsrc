@@ -1,6 +1,7 @@
-.Dd November 23rd, 2000
+.\" $NetBSD: testXSLT.1,v 1.2 2001/12/03 19:03:24 wiz Exp $
+.Dd November 23, 2000
 .Dt TESTXSLT 1
-.Os "Xalan XSL engine"
+.Os
 .Sh NAME
 .Nm testXSLT
 .Nd Command line tool for XSL transformations
@@ -13,8 +14,11 @@
 .Op Fl dom
 .Op Fl xml | Fl text | Fl html
 .Sh DESCRIPTION
-.Nm 
-is the command line tool for the Xalan XSLT engine. It is used to make a transformaion described in an XSL stylesheet on an XML file. The output file can be either plain text, HTML, or it can be just another XML file. 
+.Nm
+is the command line tool for the Xalan XSLT engine.
+It is used to make a transformation described in an XSL stylesheet on an
+XML file.  The output file can be either plain text, HTML, or it can be
+just another XML file.
 .Sh OPTIONS
 .Bl -tag -width indent
 .It Fl in Ar xml_file
@@ -26,28 +30,28 @@ Uses
 .Ar xsl_stylesheet
 as the URL for the XSL stylesheet.
 .It Fl out Ar output_file
-write output to 
+write output to
 .Ar output_file .
 .It Fl escape Ar chars
 esape characters
 .Ar chars ,
 the default is <>&"'\en\er.
 .It Fl eer
-Expands entity references. Default is to not expand.
+Expands entity references.  Default is to not expand.
 .It Fl v
 Show version info.
 .It Fl qc
 Quiet Pattern Conflicts Warnings
 .It Fl q
 Quiet mode.
-.It Fl indent Ar space_number 
+.It Fl indent Ar space_number
 Uses
 .Ar space_number
-as the number of spaces to indent each level in output tree. Default is 0. 
+as the number of spaces to indent each level in output tree.  Default is 0.
 .It Fl validate
-Validate XML and XSL input. Default is to not validate.
+Validate XML and XSL input.  Default is to not validate.
 .It Fl tt
-Traces the templates as they are being called.  
+Traces the templates as they are being called.
 .It Fl tg
 Traces each result tree generation event.
 .It Fl ts
@@ -61,15 +65,15 @@ Uses plain text formatter.
 .It Fl html
 Uses HTML formatter
 .It Fl nh
-Suppress XML headers. Require 
+Suppress XML headers.  Require
 .Fl xml .
 .It Fl stripcdata
-Strip CDATA sections of their brackets, but do not escape. Require
+Strip CDATA sections of their brackets, but do not escape.  Require
 .Fl xml
 or
 .Fl html .
 .It Fl escapedata
-Strip CDATA sections of their brackets, and escape. Require
+Strip CDATA sections of their brackets, and escape.  Require
 .Fl xml
 or
 .Fl html .
@@ -78,31 +82,24 @@ Test for well-formed output --format to DOM then to XML for output.
 .It Fl param Ar name Ar expr
 Sets the stylesheet parameter
 .Ar param
-to 
+to
 .Ar expr .
 .El
 .Sh EXAMPLES
 .Bd -litteral -offset indent
 .Nm
 -in input.xml -xsl stylesheet.xsl -out output.html -html
-.Ed 
+.Ed
 .Pp
-Format 
-.Ar input.xml 
-to 
+Format
+.Ar input.xml
+to
 .Ar output.html
 using the stylesheet file
 .Ar stylesheet.xsl ,
-and uing the HTML formatter.
-.Sh DIAGNOSTICS 
-Various diagnostic messages.
-.Sh BUGS
-None known yet.
-.Sh AUTHOR(S)
-.An The Apache Xalan-C project Aq http://xml.apache.org 
+and using the HTML formatter.
+.Sh AUTHORS
+.An The Apache Xalan-C project Aq http://xml.apache.org
 .br
 This man page by
-.An Emmanuel Dreyfus Aq p99dreyf@criens.u-psud.fr
-.Pp
-.Sh SEE ALSO 
-Nothing yet!
+.An Emmanuel Dreyfus Aq p99dreyf@criens.u-psud.fr .
