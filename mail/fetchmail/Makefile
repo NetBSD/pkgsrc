@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2003/09/02 12:27:46 frueauf Exp $
+# $NetBSD: Makefile,v 1.132 2003/09/11 22:58:05 jlam Exp $
 
 DISTNAME=	fetchmail-6.2.4
 CATEGORIES=	mail
@@ -12,6 +12,7 @@ COMMENT=	Batch mail retrieval/forwarding utility for pop2, pop3, apop, imap
 BUILD_USES_MSGFMT=	YES
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-hesiod
@@ -48,7 +49,8 @@ CONFIGURE_ARGS+=	--with-kerberos=no
 CONFIGURE_ARGS+=	--enable-inet6
 .endif
 
-FDOC=	${PREFIX}/share/doc/fetchmail
+FDOC=		${PREFIX}/share/doc/fetchmail
+RCD_SCRIPTS=	fetchmail
 
 post-extract:
 	@${RM} -f ${WRKSRC}/intl/libintl.h
