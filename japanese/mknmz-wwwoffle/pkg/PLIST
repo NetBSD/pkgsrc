@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/20 10:09:02 kei Exp $
+bin/mknmz-wwwoffle
+man/man1/mknmz-wwwoffle.1
+share/namazu/filter/wwwofflecache.pl
