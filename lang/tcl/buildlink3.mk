@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2004/04/09 23:37:28 danw Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2004/06/15 16:17:48 drochner Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 TCL_BUILDLINK3_MK:=	${TCL_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ntcl}
 BUILDLINK_PACKAGES+=	tcl
 
 .if !empty(TCL_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.tcl+=		tcl>=8.4.6nb1
+BUILDLINK_DEPENDS.tcl+=		tcl>=8.4.6nb5
 BUILDLINK_PKGSRCDIR.tcl?=	../../lang/tcl
 
 BUILDLINK_FILES.tcl=	bin/tclsh*
@@ -26,6 +26,7 @@ TCLCONFIG_SH?=		${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
 
 .endif	# TCL_BUILDLINK3_MK
 
-.include "../../mk/pthread.buildlink3.mk"
+# see comment in Makefile
+#.include "../../mk/pthread.buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
