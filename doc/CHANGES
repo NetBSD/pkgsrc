@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1368 2003/02/15 03:50:12 salo Exp $
+$NetBSD: CHANGES,v 1.1369 2003/02/15 04:22:11 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -664,3 +664,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sylpheed to 0.8.10nb1 [salo 2003-02-15]
 	Updated tspc to 0.9.7 [salo 2003-02-15]
 	Updated giram to 0.3.4 [salo 2003-02-15]
+	Updated micq to 0.4.10.1 [salo 2003-02-15]
