@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/03 19:17:11 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/16 12:53:30 seb Exp $
 bin/idn
 include/idn-int.h
 include/idna.h
 include/punycode.h
 include/stringprep.h
-info/libidn.info
 lib/libidn.a
 lib/libidn.la
 lib/libidn.so

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/17 16:40:12 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/02/16 13:12:23 seb Exp $
 bin/nasm
 bin/ndisasm
 bin/rdfdump
@@ -10,21 +10,6 @@ bin/rdf2ihx
 bin/rdf2com
 man/man1/nasm.1
 man/man1/ndisasm.1
-info/nasm.info
-info/nasm.info-1
-info/nasm.info-2
-info/nasm.info-3
-info/nasm.info-4
-info/nasm.info-5
-info/nasm.info-6
-info/nasm.info-7
-info/nasm.info-8
-info/nasm.info-9
-info/nasm.info-10
-info/nasm.info-11
-info/nasm.info-12
-info/nasm.info-13
-info/nasm.info-14
 share/doc/html/nasm/nasmdoc0.html
 share/doc/html/nasm/nasmdoc1.html
 share/doc/html/nasm/nasmdoc2.html
