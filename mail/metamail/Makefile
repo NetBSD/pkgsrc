@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2004/01/20 12:19:43 agc Exp $
+# $NetBSD: Makefile,v 1.25 2004/02/25 03:58:42 snj Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	metamail-2.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	ftp://thumper.bellcore.com/pub/nsb/
 EXTRACT_SUFX=	.tar.Z
@@ -20,18 +20,19 @@ USE_PKGINSTALL=		YES
 USE_X11=		YES
 
 CFLAGS+=	-DPKG_SYSCONFDIR='\\\"${PKG_SYSCONFDIR}\\\"'
-MAKE_ENV+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+CFLAGS.SunOS+=	-DSYSV
+MAKE_ENV+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR} CHMOD=${CHMOD} SED=${SED}
 
 EGDIR=		${PREFIX}/share/examples/metamail
 CONF_FILES=	${EGDIR}/mailcap ${PKG_SYSCONFDIR}/mailcap
 
 INSTALLATION_DIRS=	bin man/man1 man/man4
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-CFLAGS+=	-DSYSV
-.endif
+SUBST_CLASSES+=		awk
+SUBST_STAGE.awk=	post-patch
+SUBST_MESSAGE.awk=	Adjusting the path to awk
+SUBST_FILES.awk=	bin/sun2mime
+SUBST_SED.awk=		-e "s|/bin/nawk|${AWK}|"
 
 post-patch:
 	${RM} -f ${WRKDIR}/mm2.7/src/bin/*.orig
