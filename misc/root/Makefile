@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/02/05 20:02:11 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/23 23:14:30 tron Exp $
 
 DISTNAME=		root_v2.23.08.source
 PKGNAME=		root-2.23
@@ -9,12 +9,13 @@ MASTER_SITES=		ftp://root.cern.ch/root/
 MAINTAINER=		drochner@netbsd.org
 HOMEPAGE=		http://root.cern.ch/
 
-BUILD_DEPENDS+= cint:../../lang/cint
-DEPENDS+= xpm-*:../../graphics/xpm
+BUILD_DEPENDS+=		cint:../../lang/cint
 
-USE_GMAKE= yes
-ALL_TARGET= netbsd
-MAKE_ENV= LD_LIBRARY_PATH=${WRKDIR}/lib ROOTSYS=${WRKDIR}
+USE_GMAKE=		YES
+USE_XPM=		YES
+
+ALL_TARGET=		netbsd
+MAKE_ENV=		LD_LIBRARY_PATH=${WRKDIR}/lib ROOTSYS=${WRKDIR}
 
 do-configure:
 	${CP} ${FILESDIR}/Makefile.netbsd ${WRKDIR}/src

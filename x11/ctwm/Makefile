@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1999/10/07 17:41:59 tron Exp $
+# $NetBSD: Makefile,v 1.14 2000/08/23 23:14:32 tron Exp $
 #
 
 DISTNAME=	ctwm-3.5
@@ -8,8 +8,7 @@ MASTER_SITES=	ftp://slhp1.epfl.ch/pub/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://woland.afti.nsu.ru/~reberger/xwinman/ctwm.html
 
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
-
-USE_IMAKE=	yes
+USE_IMAKE=	YES
+USE_XPM=	YES
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/07/11 10:15:41 agc Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/23 23:14:31 tron Exp $
 #
 
 DISTNAME=	xbatt-1.3pr1
@@ -13,9 +13,8 @@ HOMEPAGE=	http://www2.clave.gr.jp/~eto/xbatt/	# Not really
 IGNORE+=	"APM is not available for ${MACHINE_PLATFORM}"                  
 .endif
 
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
-
-USE_IMAKE=	yes
+USE_IMAKE=	YES
+USE_XPM=	YES
 ALL_TARGET=	xbatt
 
 post-install:

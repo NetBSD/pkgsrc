@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/08/18 22:46:39 hubertf Exp $
+# $NetBSD: Makefile,v 1.12 2000/08/23 23:14:29 tron Exp $
 #
 
 DISTNAME=		xfmail-1.3
@@ -9,7 +9,6 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://Burka.NetVision.net.il/xfmail/xfmail.html
 
 DEPENDS+=		gdbm>=1.7.3:../../databases/gdbm
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
 DEPENDS+=		xforms-0.88:../../x11/xforms
 
 ONLY_FOR_PLATFORM=	*-*-arm32 *-*-i386 *-*-m68k *-*-sparc *-*-ns32k
@@ -19,6 +18,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 USE_X11BASE=		YES
+USE_XPM=		YES
 GNU_CONFIGURE=		YES
 
 post-install:

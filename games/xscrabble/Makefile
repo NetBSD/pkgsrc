@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/01/02 03:20:14 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/23 23:14:26 tron Exp $
 #
 
 DISTNAME=	xscrabble
@@ -9,11 +9,10 @@ MASTER_SITES=	http://www.belgarath.demon.co.uk/programs/
 MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://www.belgarath.demon.co.uk/programs/
 
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
-
 WRKSRC=		${WRKDIR}/xscrabble
-USE_X11BASE=	yes
-USE_IMAKE=	yes
+USE_X11BASE=	YES
+USE_XPM=	YES
+USE_IMAKE=	YES
 
 post-patch:
 	${SED} 's!/usr/local/lib!${PREFIX}/share/games/xscrabble!g' \

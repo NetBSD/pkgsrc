@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/01/07 05:43:21 sakamoto Exp $
-#
+# $NetBSD: Makefile,v 1.2 2000/08/23 23:14:36 tron Exp $
 
 DISTNAME=	wmfstatus-0.3
 CATEGORIES=	x11
@@ -8,9 +7,8 @@ MASTER_SITES=	http://www.finik.net/files/
 MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://www.finik.net/software.html
 
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
-
-USE_X11=	yes
+USE_X11=	YES
+USE_XPM=	YES
 
 CPPFLAGS=	-I${X11BASE}/include
 MAKE_ENV+=	CPPFLAGS="${CPPFLAGS}"

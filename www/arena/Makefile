@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2000/08/06 01:19:21 fredb Exp $
+# $NetBSD: Makefile,v 1.27 2000/08/23 23:14:32 tron Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/05/04 20:22:31 jseger Exp
 #
 
@@ -15,12 +15,12 @@ DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		libwww>=5.2.8:../../www/libwww
 DEPENDS+=		png>=1.0.6:../../graphics/png
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
-GNU_CONFIGURE=		yes
+GNU_CONFIGURE=		YES
 MAKEFILE=		makefile
-USE_GMAKE=		yes
-USE_X11=		yes
+USE_GMAKE=		YES
+USE_X11=		YES
+USE_XPM=		YES
 
 # Comment out the following to build in the debugging symbols.
 CONFIGURE_ARGS+=	--without-debug
