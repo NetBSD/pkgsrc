@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/06/02 01:19:03 jschauma Exp $
+# $NetBSD: Makefile,v 1.19 2003/06/05 16:01:41 grant Exp $
 #
 
 DISTNAME=		gcc-3.3
@@ -49,8 +49,9 @@ ALL_TARGET=		bootstrap
 .endif
 
 # as this is named gcc3, use DISTNAME instead.
-GCC_PREFIX=		${PREFIX}/${DISTNAME}
-PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
+GCC_PREFIX=	${PREFIX}/${DISTNAME}
+PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
+GCC_ARCHDIR=	${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}
 
 pre-configure:
 	${MKDIR} ${BUILD_DIRS}
@@ -60,6 +61,9 @@ post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/gcc3.mk > ${WRKDIR}/gcc3.mk
 
 post-install:
+.if ${OPSYS} == "SunOS"
+	-cd ${GCC_ARCHDIR}/include && ${RM} -f fixed && ${RMDIR} v7 v9
+.endif
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gcc
 	${INSTALL_DATA} ${WRKDIR}/gcc3.mk ${PREFIX}/share/examples/gcc/mk.conf
 	${LN} -f ${GCC_PREFIX}/bin/gcc ${GCC_PREFIX}/bin/cc
