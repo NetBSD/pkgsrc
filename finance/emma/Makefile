@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/06/30 14:42:20 tron Exp $
+# $NetBSD: Makefile,v 1.5 2001/06/30 16:06:06 tron Exp $
 #
 
 DISTNAME=       emma-0.8-1
@@ -15,7 +15,6 @@ BUILD_DEPENDS+=	automake-1.4:../../devel/automake
 DEPENDS+=	gnome-libs-*:../../x11/gnome-libs
 DEPENDS+=	python-*:../../lang/python
 
-USE_LIBINTL=	YES
 USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
@@ -28,4 +27,5 @@ post-extract:
 	  ${CP} ${LOCALBASE}/share/automake/$$FILE ${WRKSRC}/$$FILE; \
 	done
 
+.include "../../devel/gettext-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
