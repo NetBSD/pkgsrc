@@ -1,8 +1,18 @@
-$NetBSD: patch-ab,v 1.5 2003/03/24 14:49:38 taca Exp $
+$NetBSD: patch-ab,v 1.6 2003/03/30 23:45:58 jschauma Exp $
 
---- configure.orig	2002-11-19 20:49:26.000000000 +0900
-+++ configure
-@@ -5516,6 +5516,7 @@ s%@EXTSTATIC@%$EXTSTATIC%g
+--- configure.orig	Tue Nov 19 06:49:26 2002
++++ configure	Sun Mar 30 18:31:40 2003
+@@ -4550,6 +4550,9 @@
+ 	osf*) 		LDSHARED="$CC -shared"
+ 			rb_cv_dlopen=yes ;;
+ 	linux*) 	LDSHARED="$CC -shared"
++			if test "$rb_cv_binary_elf" = yes; then
++				LDFLAGS="-Wl,-rpath,${PREFIX}/lib"
++			fi
+ 			rb_cv_dlopen=yes ;;
+ 	freebsd*)       LDSHARED="$CC -shared"
+ 			if test "$rb_cv_binary_elf" = yes; then
+@@ -5516,6 +5519,7 @@
  s%@setup@%$setup%g
  s%@MINIRUBY@%$MINIRUBY%g
  s%@PREP@%$PREP%g
