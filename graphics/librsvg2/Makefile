@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2003/12/13 00:45:24 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2003/12/14 21:35:11 jmmv Exp $
 #
 
-DISTNAME=		librsvg-2.2.5
+DISTNAME=		librsvg-2.4.0
 PKGNAME=		${DISTNAME:S/-/2-/}
-PKGREVISION=		4
 CATEGORIES=		graphics gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/librsvg/2.2/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/librsvg/2.4/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
@@ -28,8 +27,6 @@ MESSAGE_SUBST+=		PKG_SYSCONFDIR.gtk2="${PKG_SYSCONFBASE}/gtk-2.0"
 .else
 MESSAGE_SUBST+=		PKG_SYSCONFDIR.gtk2="${PKG_SYSCONFDIR.gtk2}"
 .endif
-
-BUILDLINK_DEPENDS.gtk2=	gtk2+>=2.2.2nb1
 
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/libart2/buildlink2.mk"
