@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2003/07/17 22:50:59 grant Exp $
+# $NetBSD: Makefile,v 1.34 2003/08/03 09:55:38 seb Exp $
 
 DISTNAME=		arla-0.35.12
 #PKGREVISION=
@@ -13,6 +13,7 @@ CONFLICTS+=		lwp-[0-9]*
 CONFLICTS+=		rx-[0-9]*
 
 OSVERSION_SPECIFIC=	yes
+USE_NEW_TEXINFO=	YES
 INFO_FILES=		arla.info
 
 USE_BUILDLINK2=		yes
@@ -66,5 +67,4 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/services ${EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/fstab ${EGDIR}
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
