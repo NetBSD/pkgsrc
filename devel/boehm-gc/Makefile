@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/06/27 10:49:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.30 2003/06/29 06:51:45 uebayasi Exp $
 #
 
 DISTNAME=		gc6.2
@@ -17,6 +17,8 @@ USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 MAKE_ENV+=		COPTS="${CFLAGS}"
+
+#TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -37,8 +39,13 @@ pre-build:
 
 post-install:
 	@cd ${WRKSRC}; \
-	${MAKE} -f ${WRKSRC}/Makefile.direct bsd-libleak.a
+	${MAKE_PROGRAM} -f ${WRKSRC}/Makefile.direct bsd-libleak.a
 	${INSTALL_DATA} ${WRKSRC}/bsd-libleak.a ${PREFIX}/lib/libleak.a
 	${INSTALL_MAN} ${WRKSRC}/doc/gc.man ${PREFIX}/man/man3/gc.3
+
+do-test:
+	@cd ${WRKSRC}; \
+	${RM} -f gctest && ${MAKE_PROGRAM} gctest && ./gctest && \
+	${RM} -f test_cpp && ${MAKE_PROGRAM} test_cpp && ./test_cpp 10
 
 .include "../../mk/bsd.pkg.mk"
