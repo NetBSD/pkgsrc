@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/04/01 05:46:36 explorer Exp $
+$NetBSD: distinfo,v 1.2 2004/11/29 23:01:14 explorer Exp $
 
-SHA1 (cdpd-1.0.1.tar.gz) = 4d55b154a1805626759213dbeeb54916bae596eb
-Size (cdpd-1.0.1.tar.gz) = 24806 bytes
+SHA1 (cdpd-1.0.2.tar.gz) = ef4f1ca677bf3f9d8f1a84762a24d6ee992f6fbe
+Size (cdpd-1.0.2.tar.gz) = 25172 bytes
