@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7949 2004/11/22 19:52:44 wiz Exp $
+$NetBSD: CHANGES,v 1.7950 2004/11/22 20:16:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5381,3 +5381,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ImageMagick to 6.1.5-2 [adam 2004-11-22]
 	Updated audacity to 1.2.3 [adam 2004-11-22]
 	Updated mp3splt to 2.1 [wiz 2004-11-22]
+	Updated mbmon to 2.05 [wiz 2004-11-22]
+	Updated xmbmon to 2.05 [wiz 2004-11-22]
