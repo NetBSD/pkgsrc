@@ -1,5 +1,5 @@
-==========================================================================
-$NetBSD: MESSAGE,v 1.1 2001/10/31 19:47:10 zuntum Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/09/12 17:12:38 wiz Exp $
 
 The ${PREFIX}/etc/ircd directory where ircd's configuration files live is
 currently owned by root with world-readable permissions.
@@ -10,4 +10,4 @@ user ID that will be running ircd, and chmod(8) the directory to 0700.
 You should also create an "ircd.motd" MOTD file for local connect users,
 and an "remote.motd" MOTD file for remote users.
 
-==========================================================================
+===========================================================================
