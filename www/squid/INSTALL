@@ -1,10 +1,11 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.2 2001/11/08 06:58:10 tron Exp $
+# $NetBSD: INSTALL,v 1.3 2001/11/23 10:22:53 tron Exp $
 #
 
 PKGNAME=$1
-CONFDIR=${PKG_PREFIX}/etc/squid/
+EXCONFDIR=${PKG_PREFIX}/etc/squid/
+SYSCONFDIR=@SYSCONFDIR@/
 SQUIDCONF=squid.conf
 MIMECONF=mime.conf
 
@@ -19,8 +20,14 @@ case $2 in
 	echo "      configuring your WWW Navigator (Netscape, Mosaic,...)"
 	echo "      to use it as a proxy server."
 	echo ""
-	echo "    o Copy \"${CONFDIR}${SQUIDCONF}.default\" to \"${SQUIDCONF}\""
-	echo "      and \"${CONFDIR}${MIMECONF}.default\" to \"${MIMECONF}\""
+	if [ "${EXCONFDIR}" = "${SYSCONFDIR}" ]
+	then
+		echo "    o Copy \"${EXCONFDIR}${SQUIDCONF}.default\" to \"${SQUIDCONF}\""
+		echo "      and \"${EXCONFDIR}${MIMECONF}.default\" to \"${MIMECONF}\""
+	else
+		echo "    o Copy \"${EXCONFDIR}${SQUIDCONF}.default\" to \"${SYSCONFDIR}${SQUIDCONF}\""
+		echo "      and \"${EXCONFDIR}${MIMECONF}.default\" to \"${SYSCONFDIR}${MIMECONF}\""
+	fi
 	echo "      and edit them as required. You should pay attention to the"
 	echo "      ACTUAL locations of the cache \"spool\" logfiles and pidfile."
 	echo ""
