@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.288 2002/04/15 12:25:02 he Exp $
+# $NetBSD: Makefile,v 1.289 2002/04/19 13:17:33 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -72,8 +72,8 @@ SUBDIR+=	gtksamba
 SUBDIR+=	gtm
 SUBDIR+=	hesiod
 SUBDIR+=	host
-SUBDIR+=	httptunnel
 SUBDIR+=	hping
+SUBDIR+=	httptunnel
 SUBDIR+=	icsi-finger
 SUBDIR+=	ip6_int
 SUBDIR+=	ipa
@@ -193,6 +193,7 @@ SUBDIR+=	sitescooper
 SUBDIR+=	smb2www
 SUBDIR+=	sniffit
 SUBDIR+=	snort
+SUBDIR+=	snort-pgsql
 SUBDIR+=	socks4
 SUBDIR+=	socks5
 SUBDIR+=	speakfreely
