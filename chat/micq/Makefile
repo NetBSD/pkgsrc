@@ -1,22 +1,17 @@
-# $NetBSD: Makefile,v 1.7 2002/10/13 15:03:32 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2002/10/20 03:09:07 shell Exp $
 
-DISTNAME=	micq-0.4.9
+DISTNAME=	micq-0.4.9.4
 CATEGORIES=	chat
 MASTER_SITES=	http://micq.ukeer.de/source/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	shell@shellhung.org
+MAINTAINER=	shell@netbsd.org
 HOMEPAGE=	http://micq.ukeer.de/
 COMMENT=	text-mode ICQ client
 
 USE_BUILDLINK2=	YES
 USE_GMAKE=	YES
 GNU_CONFIGURE=	YES
-
-post-install:
-	${INSTALL_MAN} ${WRKSRC}/doc/micq.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/micq.7 ${PREFIX}/man/man7
-	${INSTALL_MAN} ${WRKSRC}/doc/micqrc.5 ${PREFIX}/man/man5
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
