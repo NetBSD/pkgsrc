@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.53 2001/06/11 19:58:58 zuntum Exp $
+$NetBSD: TODO,v 1.54 2001/06/11 21:01:18 zuntum Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
@@ -51,8 +51,6 @@ packages TODO (Suggested new packages)
 
 package update TODO (Suggested package updates)
 ^^^^^^^^^^^^^^^^^^^
-	o update editors/manedit to recent version
-		(zuntum will do that)
 	o update x11/xfce to 3.8.3
 	o update/add cyrus-imapd 2.0.13
 		(skrll has a new package. Need testers for v1 -> v2
