@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2001/12/07 19:46:07 jmc Exp $
+
+--- ../fftw-2.0.1/config.sub.orig	Fri Dec  7 02:05:59 2001
++++ ../fftw-2.0.1/config.sub	Fri Dec  7 02:06:22 2001
+@@ -182,7 +182,7 @@
+ 	      | sparc64-* | mips64-* | mipsel-* \
+ 	      | mips64el-* | mips64orion-* | mips64orionel-*  \
+ 	      | mipstx39-* | mipstx39el-* \
+-	      | f301-*)
++	      | f301-* | macppc-* )
+ 		;;
+ 	# Recognize the various machine names and aliases which stand
+ 	# for a CPU type and a company and sometimes even an OS.
