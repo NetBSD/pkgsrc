@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/04/02 12:05:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/01/05 00:27:24 xtraeme Exp $
 bin/cube3d
 bin/ggiteleserver
 bin/monitest
@@ -145,7 +145,7 @@ lib/libggi.a
 lib/libggi.la
 lib/libggi.so
 lib/libggi.so.2
-lib/libggi.so.2.3
+lib/libggi.so.2.4
 man/man1/cube3d.1
 man/man1/ggiteleserver.1
 man/man1/monitest.1
