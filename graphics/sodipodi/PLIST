@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2004/03/08 19:40:39 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/03/28 21:02:55 xtraeme Exp $
 bin/sodipodi
 lib/sodipodi/extensions/ill2svg.pl
+lib/sodipodi/modules/libxmleditor.a
+lib/sodipodi/modules/libxmleditor.la
+lib/sodipodi/modules/libxmleditor.so
 man/man1/sodipodi.1
 share/applications/sodipodi.desktop
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/sodipodi.mo
@@ -13,12 +16,16 @@ ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/sodipodi.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/sodipodi.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/sodipodi.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/sodipodi.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/sodipodi.mo
@@ -106,6 +113,7 @@ share/sodipodi/file_import.xpm
 share/sodipodi/file_new.xpm
 share/sodipodi/file_open.xpm
 share/sodipodi/file_print.xpm
+share/sodipodi/file_print_direct.xpm
 share/sodipodi/file_print_preview.xpm
 share/sodipodi/file_save.xpm
 share/sodipodi/file_save_as.xpm
@@ -175,8 +183,11 @@ share/sodipodi/selection_break.xpm
 share/sodipodi/selection_combine.xpm
 share/sodipodi/selection_down.xpm
 share/sodipodi/selection_group.xpm
+share/sodipodi/selection_intersection.xpm
+share/sodipodi/selection_subtraction.xpm
 share/sodipodi/selection_top.xpm
 share/sodipodi/selection_ungroup.xpm
+share/sodipodi/selection_union.xpm
 share/sodipodi/selection_up.xpm
 share/sodipodi/seperate_tool.xpm
 share/sodipodi/set.xpm
@@ -209,4 +220,7 @@ share/sodipodi/zoom_out.xpm
 share/sodipodi/zoom_page.xpm
 share/sodipodi/zoom_select.xpm
 @unexec ${RMDIR} %D/share/oaf 2> /dev/null || ${TRUE}
+@dirrm lib/sodipodi/extensions
+@dirrm lib/sodipodi/modules
+@dirrm lib/sodipodi
 @dirrm share/sodipodi
