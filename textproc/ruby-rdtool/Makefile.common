@@ -1,0 +1,20 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2001/07/01 00:00:03 taca Exp $
+#
+
+# USE_RUBY_RD		- Says that the package uses rd to generate documents.
+#			  (It dosen't mean rd need to run time.)
+#
+# [variables that each package should not define]
+#
+# RUBY_RD		- full path of rd
+# RUBY_RD_VERSION	- rdtool version required.
+#
+RUBY_RD=		${LOCALBASE}/bin/rd2
+RUBY_RD_VERSION =	0.6.10
+RUBY_RD_REQD =		0.6.7
+
+.if defined(USE_RUBY_RD)
+BUILD_DEPENDS+=		${RUBY_PKGNAMEPREFIX}rdtool>=${RUBY_RD_REQD}:../../textproc/ruby-rdtool
+.endif
+
+.include "../../devel/ruby-amstd/Makefile.common"
