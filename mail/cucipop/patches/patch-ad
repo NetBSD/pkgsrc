@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.2 1998/08/07 11:09:31 agc Exp $
+$NetBSD: patch-ad,v 1.3 2000/11/22 13:05:59 itojun Exp $
 
 *** Makefile.orig	Tue May 12 22:09:14 1998
 --- Makefile	Tue Jul 21 11:16:26 1998
@@ -22,7 +22,7 @@ $NetBSD: patch-ad,v 1.2 1998/08/07 11:09:31 agc Exp $
   CUCIPOPBULLETINS=$(CUCIPOPLIB)/bulletins
 --- 12,18 ----
   
-! CFLAGS	= -O #-DUSE_DB $(GCC_WARNINGS)
+! CFLAGS	= -O ${CFLAGS_INET6} #-DUSE_DB $(GCC_WARNINGS)
 ! LDFLAGS = -lcrypt
   
   # If you change this, edit config.h as well
