@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2002/09/30 22:36:08 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2003/02/22 04:31:03 dmcmahill Exp $
 #
 
 DISTNAME=	${SCIBASE}.src
 PKGNAME=	${SCIBASE}
-PKGREVISION=	3
-SCIBASE=	scilab-2.6
+SCIBASE=	scilab-2.7
 WRKSRC=		${WRKDIR}/${DISTNAME:.src=}
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Projects/Meta2/Scilab/distributions/
@@ -12,8 +11,6 @@ MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Projects/Meta2/Scilab/distributions/
 MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://www-rocq.inria.fr/scilab/
 COMMENT=	High-level scientific math programming environment with graphics
-
-DEPENDS+=	xless-[0-9]*:../../x11/xless
 
 #needs FPC code not found in older versions of NetBSD
 NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
@@ -24,10 +21,14 @@ USE_FORTRAN=		yes
 USE_X11BASE=		yes
 
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--without-xless --with-xaw
+CONFIGURE_ARGS+=	--without-xaw3d
+CONFIGURE_ARGS+=	--with-tcl-library=${BUILDLINK_DIR}/lib
+CONFIGURE_ARGS+=	--with-tcl-include=${BUILDLINK_DIR}/include
+CONFIGURE_ARGS+=	--with-tk-library=${BUILDLINK_DIR}/lib
+CONFIGURE_ARGS+=	--with-tk-include=${BUILDLINK_DIR}/include
 
 # override HOME to avoid picking up a bad ${HOME}/.scilab during the build
 MAKE_ENV+=		HOME=${WRKSRC}
@@ -59,33 +60,6 @@ pre-fetch:
 .include "../../lang/gcc/buildlink2.mk"
 .endif
 
-# remove some stuff which is broken in the distfile.  The config's
-# are links to ../config (ie circular).
-post-extract:
-	${RM} -f ${WRKSRC}/examples/callsci/callsciJava/config/config
-	${RM} -f ${WRKSRC}/examples/callsci/callsciFortran/config/config
-	${RM} -f ${WRKSRC}/examples/callsci/callsciC/config/config
-	${RM} -f ${WRKSRC}/examples/callsci/callsciC++/config/config
-
-# make sure that the 'whatis' files in the man directories get rebuilt
-pre-build:
-	cd ${WRKSRC}/man && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} cleanall
-
-post-build:
-	cd ${WRKSRC}/man && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} all
-
-# clean up any possible leftovers from 'make test' so that our PLIST
-# will still be right.  Also clean up .orig files we may have 
-# created during patching so they don't corrupt our PLIST
-#
-pre-install:
-	cd ${WRKSRC}/tests && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} distclean
-	cd ${WRKSRC}/examples && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} distclean
-	${FIND} ${WRKSRC}/ -name \*.orig -print | ${XARGS} ${RM}
-
-post-install:
-	${LN} -sf ${X11PREFIX}/bin/xless ${PREFIX}/${SCIBASE}/bin/xless
-
 # the "SCI=0 && unset SCI" is done because some of the tests really will
 # fail if SCI is set to anything.
 test: build
@@ -97,4 +71,5 @@ test: build
 		tee ${WRKDIR}/examples.log
 
 .include "../../parallel/pvm3/buildlink2.mk"
+.include "../../x11/tk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
