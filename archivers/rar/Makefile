@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.17 1999/11/23 16:54:39 hubertf Exp $
+# $NetBSD: Makefile,v 1.18 1999/12/23 23:39:57 wiz Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:27 fenner Exp 
 #
 
 DISTNAME=		rarbsd
-PKGNAME=		rar-2.01
+PKGNAME=		rar-2.02
 CATEGORIES=		archivers
-MASTER_SITES=		ftp://ftp.inetpros.net/pub/rar/ \
-			ftp://ftp.kiarchive.ru/pub/unix/arcers/
-EXTRACT_SUFX=		.exe
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+MASTER_SITES=		ftp://rarsoft.ti.sk/pub/rar/ \
+			ftp://ftp.elf.stuba.sk/pub/pc/pack/
+EXTRACT_SUFX=		.sfx
 
 MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.rarsoft.com/
+
+ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 RESTRICTED=		Only unmodified original package can be distributed
 NO_PACKAGE=		${RESTRICTED}
@@ -32,12 +34,12 @@ do-build:
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/rar ${PREFIX}/share/rar
 	cd ${WRKSRC} && \
-		${INSTALL_SCRIPT} RAR ${PREFIX}/bin/rar && \
-		${INSTALL_MAN} Rar.Txt Rar_FAQ.Txt TechNote.Txt License.Txt Internet.Txt \
-			${PREFIX}/share/doc/rar && \
+		${INSTALL_SCRIPT} rar ${PREFIX}/bin/rar && \
+		${INSTALL_MAN} Rar.Txt Rar_FAQ.txt TechNote.Txt \
+			License.Txt Internet.Txt ${PREFIX}/share/doc/rar && \
 		${INSTALL_DATA} RarFiles.Lst \
 			${PREFIX}/share/rar/rarfiles.lst && \
-		${INSTALL_DATA} DEFAULT.SFX \
+		${INSTALL_DATA} default.sfx \
 			${PREFIX}/share/rar/default.sfx && \
 		${INSTALL_DATA} Dos.SFX \
 			${PREFIX}/share/rar/dos.sfx
