@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/12/19 12:07:43 recht Exp $
+@comment $NetBSD: PLIST,v 1.4.4.1 2004/07/26 16:45:26 agc Exp $
 bin/bdftops
 bin/dvipdf
 bin/eps2eps
@@ -31,6 +31,7 @@ bin/pv.sh
 bin/sysvlp.sh
 bin/unix-lpr.sh
 bin/wftopfa
+libexec/cups/filter/pstopxl
 libexec/cups/filter/pstoraster
 man/de/man1/ansi2knr.1
 man/de/man1/dvipdf.1
@@ -72,6 +73,8 @@ man/man1/ps2pdf13.1
 man/man1/ps2pdfwr.1
 man/man1/ps2ps.1
 man/man1/wftopfa.1
+share/cups/model/pxlcolor.ppd
+share/cups/model/pxlmono.ppd
 share/doc/html/ghostscript/API.htm
 share/doc/html/ghostscript/Bug-form.htm
 share/doc/html/ghostscript/Bug-info.htm
@@ -384,7 +387,7 @@ share/ghostscript/7.07/lib/wrfont.ps
 share/ghostscript/7.07/lib/zeroline.ps
 @dirrm share/ghostscript/7.07/lib
 @dirrm share/ghostscript/7.07
-@dirrm share/ghostscript
+@comment in ghostscript-fonts: @dirrm share/ghostscript
 @dirrm share/examples/ghostscript/cjk
 @dirrm share/examples/ghostscript
 @dirrm share/doc/html/ghostscript
