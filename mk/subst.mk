@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.10 2004/03/01 09:57:10 uebayasi Exp $
+# $NetBSD: subst.mk,v 1.11 2004/03/07 09:29:25 grant Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a paricular
@@ -32,7 +32,7 @@ ECHO_SUBST_MSG?=	${ECHO}
 
 # _SUBST_IS_TEXT_FILE returns 0 if $${file} is a text file.
 _SUBST_IS_TEXT_FILE?= \
-	${FILE_CMD} $${file} | ${EGREP} "(shell script|text)" >/dev/null 2>&1
+	${FILE_CMD} $${file} | ${EGREP} "(executable .* script|shell script|text)" >/dev/null 2>&1
 
 .for _class_ in ${SUBST_CLASSES}
 _SUBST_COOKIE.${_class_}=	${WRKDIR}/.subst_${_class_}_done
