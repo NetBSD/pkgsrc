@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3948 2003/12/03 23:42:09 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3949 2003/12/03 23:51:41 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4812,3 +4812,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Added gpdf-0.111 [xtraeme 2003-12-03]
 	Added vba-1.6a [xtraeme 2003-12-03]
 	Added zenity-1.6 [xtraeme 2003-12-03]
+	Added tei-4 [xtraeme 2003-12-03]
+	Added teixsl-fo-3.0 [xtraeme 2003-12-03]
+	Added teixsl-html-3.0 [xtraeme 2003-12-03]
