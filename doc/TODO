@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1986 2004/07/31 21:42:44 wiz Exp $
+$NetBSD: TODO,v 1.1987 2004/08/01 02:47:26 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -208,6 +208,7 @@ Suggested package updates
 	o dmalloc-5.3.0
 	o docbook-4.3
 	o docsis-0.9.1
+	o dovecot-0.99.10.9
 	o dvipng-1.1 [http://sourceforge.net/projects/dvipng/]
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
