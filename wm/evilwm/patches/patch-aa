@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2003/01/19 06:07:19 salo Exp $
+$NetBSD: patch-aa,v 1.5 2003/01/23 01:32:56 grant Exp $
 
---- Makefile.orig	Thu Dec  5 21:35:00 2002
-+++ Makefile	Sun Jan 19 06:58:29 2003
-@@ -1,13 +1,13 @@
+--- Makefile.orig	Fri Dec  6 07:35:00 2002
++++ Makefile
+@@ -1,11 +1,11 @@
  # If you don't use CC 
 -CC       = gcc
 +#CC       = gcc
@@ -15,12 +15,9 @@ $NetBSD: patch-aa,v 1.4 2003/01/19 06:07:19 salo Exp $
 -XROOT    = /usr/X11R6
 +XROOT    = ${X11PREFIX}
  INCLUDES = -I$(XROOT)/include
--LDPATH   = -L$(XROOT)/lib
-+LDPATH   = -L$(XROOT)/lib -Wl,-R$(XROOT)/lib
+ LDPATH   = -L$(XROOT)/lib
  LIBS     = -lX11
- 
- # Configure evilwm by editing the following DEFINES lines.
-@@ -22,7 +22,7 @@
+@@ -22,7 +22,7 @@ DEFINES += -DINFOBANNER
  
  # Use Motif hints to find if a window should be borderless.
  # To use this option, you need to have the Motif development files installed.
@@ -29,17 +26,17 @@ $NetBSD: patch-aa,v 1.4 2003/01/19 06:07:19 salo Exp $
  
  # To support virtual desktops, uncomment one or both of the following 2 lines.
  DEFINES += -DVWM
-@@ -66,7 +66,8 @@
+@@ -66,7 +66,8 @@ disttar = evilwm_$(version).$(revision).
  #DEFINES += -DXDEBUG	# show some X calls
  
  DEFINES += -DVERSION=\"$(version).$(revision).$(subrev)\" $(DEBIAN)
 -CFLAGS  += $(INCLUDES) $(DEFINES) -Os -Wall
-+CFLAGS  += $(INCLUDES) $(DEFINES) -Wall
++CFLAGS  += $(INCLUDES) $(DEFINES)
 +#CFLAGS  += $(INCLUDES) $(DEFINES) -Os -Wall
  #CFLAGS  += $(INCLUDES) $(DEFINES) -g -Wall
  LDFLAGS += $(LDPATH) $(LIBS)
  
-@@ -89,10 +90,8 @@
+@@ -89,10 +90,8 @@ allinone:
  
  doinstall:
  	if [ -f evilwm.exe ]; then mv evilwm.exe evilwm; fi
