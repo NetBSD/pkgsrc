@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/02/03 10:07:56 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/02/12 23:24:52 tron Exp $
 lib/libglib.so.1.0
 lib/libglib.la
 lib/libglib.a
@@ -105,13 +105,16 @@ include/gtk/gtkvseparator.h
 include/gtk/gtkwidget.h
 include/gtk/gtkwindow.h
 include/gtk/gtktypebuiltins.h
-info/dir
+@unexec install-info --delete %D/info/gdk.info %D/info/dir
+@unexec install-info --delete %D/info/gtk.info %D/info/dir
 info/gdk.info
 info/gtk.info
 info/gtk.info-1
 info/gtk.info-2
 info/gtk.info-3
 info/gtk.info-4
+@exec install-info %D/info/gdk.info %D/info/dir
+@exec install-info %D/info/gtk.info %D/info/dir
 @exec /sbin/ldconfig || /usr/bin/true
 @unexec /sbin/ldconfig || /usr/bin/true
 @dirrm include/gtk
