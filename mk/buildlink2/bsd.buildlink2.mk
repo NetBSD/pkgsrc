@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.74 2003/01/10 09:59:25 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.75 2003/01/10 18:44:02 thorpej Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -57,8 +57,10 @@ MAKE_ENV+=		BUILDLINK_DIR="${BUILDLINK_DIR}"
 CONFIGURE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
 MAKE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
 _BLNK_CPPFLAGS=		-I${LOCALBASE}/include
-_BLNK_LDFLAGS=		-L${LOCALBASE}/lib				\
-			-Wl,${_OPSYS_RPATH_NAME}${LOCALBASE}/lib
+_BLNK_LDFLAGS=		-L${LOCALBASE}/lib
+.if ${_USE_RPATH} == "yes"
+_BLNK_LDFLAGS+=		-Wl,${_OPSYS_RPATH_NAME}${LOCALBASE}/lib
+.endif
 _BLNK_OPSYS=		${OPSYS}
 
 BUILDLINK_SHELL?=	${SH}
@@ -93,7 +95,10 @@ BUILD_DEPENDS+=		x11-links>=0.10:../../pkgtools/x11-links
 _BLNK_X11_DIR=		${LOCALBASE}/share/x11-links
 .  endif
 _BLNK_CPPFLAGS+=	-I${X11BASE}/include
-_BLNK_LDFLAGS+=		-L${X11BASE}/lib -Wl,${_OPSYS_RPATH_NAME}${X11BASE}/lib
+_BLNK_LDFLAGS+=		-L${X11BASE}/lib
+.if ${_USE_RPATH} == "yes"
+_BLNK_LDFLAGS+=		-Wl,${_OPSYS_RPATH_NAME}${X11BASE}/lib
+.endif
 .endif
 
 CONFIGURE_ENV+=		BUILDLINK_CPPFLAGS="${_BLNK_CPPFLAGS}"
