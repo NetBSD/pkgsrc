@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.8 2004/06/02 13:56:56 minoura Exp $
+
+Patch already submitted to the author.
+
+--- doc/extract.orig	2004-01-19 22:28:35.000000000 +0000
++++ doc/extract	2004-05-24 08:47:17.000000000 +0000
+@@ -67,7 +67,7 @@
+         (process-header cmd header) (in (read-line)))
+       (#/^\* ([^:]+)::(.*)?/ (#f node desc)
+         (process-menu node #f desc) (in (read-line)))
+-      (#/^\* ([^:]+):\s+([^.]+)\.(.*)?/ (#f tag node desc)
++      (#/^\* ([^:]+):\s+([^)]+\))\.(.*)?/ (#f tag node desc)
+         (process-menu node tag desc) (in (read-line)))
+       (else (display
+              (regexp-replace-all #/@VERSION@/
