@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2004/11/14 07:48:30 jlam Exp $
+# $NetBSD: hacks.mk,v 1.2 2004/11/14 07:50:58 jlam Exp $
 
 .include "../../mk/compiler.mk"
 
@@ -23,4 +23,14 @@ PKG_HACKS+=	sparc64-codegen
 CFLAGS+=	-DDEBUGGING -g -msoft-quad-float -O2
 .    endif
 .  endif
+.endif
+
+### [Sun Nov 14 02:35:50 EST 2004 : jlam]
+### On PowerPC, building with optimisation with GCC causes an "attempt
+### to free unreference scalar".  Remove optimisation flags as a
+### workaround until GCC is fixed.
+###
+.if !empty(CC_VERSION:Mgcc*) && (${MACHINE_ARCH} == "powerpc")
+PKG_HACKS+=		powerpc-codegen
+BUILDLINK_TRANSFORM+=	rm:-O[0-9]*
 .endif
