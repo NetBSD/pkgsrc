@@ -1,0 +1,113 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/02/28 15:37:25 hubertf Exp $
+
+--- if.c.orig	Mon Oct 12 04:13:16 1998
++++ if.c	Sat Feb 24 19:48:53 2001
+@@ -12,6 +12,7 @@
+ #include <unistd.h>
+ #include <limits.h>
+ #include <err.h>
++#include <errno.h>
+ #include <sys/param.h>
+ #include <sys/types.h>
+ #include <sys/ioctl.h>
+@@ -89,7 +90,11 @@
+ 			if (!newData) {
+ 				size -= IF_STEP;
+ 				fprintf(stderr, "wmnet: Warning -- low memory; "
++#ifdef __NetBSD__
++						"ignoring %s interface\n", theData->if_xname);
++#else
+ 						"ignoring %s interface\n", theData->if_name);
++#endif /* NetBSD */
+ 				return 0;
+ 			}
+ 
+@@ -118,8 +123,12 @@
+ 		ptr->flags = 0;
+ 
+ #ifndef NDEBUG
++#ifdef __NetBSD__
++		printf("Added '%.*s' to list.\n", IFNAMSIZ, theData->if_xname);
++#else
+ 		printf("Added '%.*s%d' to list.\n", IFNAMSIZ, theData->if_name,
+ 			   theData->if_unit);
++#endif /* NetBSD */
+ #endif
+ 
+ 		// Bump the total.
+@@ -161,6 +170,7 @@
+ 		return &d;
+ 	else if (sizeof(d) == kvm_read(kd, a, &d, sizeof(d))) {
+ 
++#ifndef __NetBSD__
+ 		/* We've read the structure's data, but the 'name' field still
+ 		   points to kernel memory. We transfer the name to a local
+ 		   buffer, and then modify the pointer to point to our
+@@ -178,6 +188,7 @@
+ 			   to look at. While debugging, set these to NULL to trap
+ 			   any attempts. */
+ 
++#endif /* !NetBSD */
+ 			d.if_softc = 0;
+ #if (__FreeBSD_version >= 300003)
+ 			d.if_addrhead.tqh_first = 0;
+@@ -185,15 +196,24 @@
+ 			d.if_addrlist = 0;
+ #endif
+ 			d.if_bpf = 0;
++#ifdef __NetBSD__
++			d.if_addrlist.tqh_first = 0;
++#else
+ 			d.if_linkmib = 0;
+ 			d.if_poll_slowq = 0;
++#endif /* NetBSD */
+ #endif
+ 			c = a;
+ 			return &d;
++#ifndef __NetBSD__
+ 		} else
+ 			return 0;
++#endif /* !NetBSD */
+ 	} else
++	{
++		perror("kvm_read");
+ 		return 0;
++	}
+ }
+ 
+ /*------------------------------------------------------------------------------
+@@ -233,6 +253,9 @@
+ 			{ "" }
+ 		};
+ 
++	if (setgid(getgid()) != 0) { perror("setgid"); return(0); }
++	if (setuid(getuid()) != 0) { perror("seguid"); return(0); }
++
+ 		/* Try to pull the address for the global kernel variable,
+ 		   ifnet. This variable is the root of the singly-linked list
+ 		   of network interfaces. */
+@@ -251,8 +274,12 @@
+ #if (__FreeBSD_version >= 300003)
+ 					current = (unsigned long) dereference(current)->if_link.tqe_next;
+ #else
++#ifdef __NetBSD__
++					current = (unsigned long) dereference(current)->if_list.tqe_next;
++#else
+ 					current = (unsigned long) dereference(current)->if_next;
+ #endif
++#endif
+ 				}
+ 
+ 				/* Try to register our termination function. If it
+@@ -309,7 +336,11 @@
+ 		if (ptr) {
+ 			static char buffer[IFNAMSIZ + 1];
+ 
++#ifdef __NetBSD__
++			sprintf(buffer, "%.*s", IFNAMSIZ - 1, ptr->if_xname);
++#else
+ 			sprintf(buffer, "%.*s%d", IFNAMSIZ - 1, ptr->if_name, ptr->if_unit);
++#endif /* NetBSD */
+ 			return buffer;
+ 		}
+ 	}
