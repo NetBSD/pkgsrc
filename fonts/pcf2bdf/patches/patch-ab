@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1 2004/03/09 14:47:09 agc Exp $
+
+--- Makefile.gcc	2004/03/09 14:42:07	1.1
++++ Makefile.gcc	2004/03/09 14:44:16
+@@ -2,7 +2,7 @@
+ 
+ CC		= gcc
+ CFLAGS		= -Wall -O2
+-CXX		= $(CC)
++CXX		= g++
+ CXXFLAGS	= $(CFLAGS)
+ PREFIX		= /usr/local
+ BINPATH		= $(PREFIX)/bin
+@@ -11,6 +11,10 @@
+ all:		pcf2bdf
+ 
+ pcf2bdf:	pcf2bdf.o
++	${CXX} -o pcf2bdf pcf2bdf.o
++
++pcf2bdf.o: pcf2bdf.cc
++	${CXX} ${CXXFLAGS} -c pcf2bdf.cc
+ 
+ clean:
+ 	-$(RM) pcf2bdf pcf2bdf.exe pcf2bdf.o *~
