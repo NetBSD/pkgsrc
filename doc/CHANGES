@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.632 2002/11/28 11:47:07 markd Exp $
+$NetBSD: CHANGES,v 1.633 2002/11/28 12:57:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3103,7 +3103,7 @@ Changes to the packages collection and infrastructure in 2002:
 	Removed cross-shel-netbsdcoff [wiz 2002-10-03]
 	Removed cross-sparc-netbsdelf [wiz 2002-10-03]
 	Updated autoconf to 2.54 [wiz 2002-10-03]
-	Updated automake to 2.54 [wiz 2002-10-03]
+	Updated automake to 1.7 [wiz 2002-10-03]
 	Added automake14-1.4.6 [wiz 2002-10-03]
 	Added autoconf213-2.13 [wiz 2002-10-03]
 	Removed autoconf-devel [wiz 2002-10-03]
