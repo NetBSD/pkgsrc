@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2339 2004/11/09 12:31:15 adam Exp $
+$NetBSD: TODO,v 1.2340 2004/11/09 13:03:48 adam Exp $
 
 Suggested new packages
 ======================
@@ -295,7 +295,6 @@ Suggested package updates
 	o cyrus-imapd21-2.1.16
 	o daapd-0.2.3
 	o dact-0.8.37
-	o dar-2.1.5
 	o dbench-2.1
 	o dctc-0.85.9
 	o delegate-8.9.2
