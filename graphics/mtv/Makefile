@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/01/11 02:25:29 soren Exp $
+# $NetBSD: Makefile,v 1.12 2000/01/13 11:15:11 soren Exp $
 
 DISTNAME=		mtv-1.1.0.3
 CATEGORIES=		graphics
@@ -10,7 +10,7 @@ ONLY_FOR_PLATFORM=	NetBSD-1.4[K-Z]-i386 NetBSD-1.[5-9]*-i386
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.mpegtv.com/
 
-DEPENDS=		suse_xforms>=6.1p1:../../emulators/suse_xforms
+DEPENDS=		suse_xforms>=6.1:../../emulators/suse_xforms
 
 DIST_SUBDIR=		mtv
 LICENSE=		fee-based-commercial-use
