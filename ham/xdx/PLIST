@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/23 23:01:55 wulf Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/23 09:24:18 wulf Exp $
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xdx.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xdx.mo
 bin/xdx
@@ -11,6 +11,7 @@ share/xdx/pixmaps/xdx.png
 share/xdx/pixmaps/xdx.xcf
 share/xdx/pixmaps/xdx.xpm
 share/xdx/MANUAL
+share/xdx/MANUAL.es
 man/man1/xdx.1
 @dirrm share/xdx/pixmaps
 @dirrm share/xdx
