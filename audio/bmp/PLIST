@@ -1,0 +1,71 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/11 18:10:59 jmmv Exp $
+bin/beep-config
+bin/beep-media-player
+include/beep/beepctrl.h
+include/beep/configfile.h
+include/beep/dirbrowser.h
+include/beep/formatter.h
+include/beep/titlestring.h
+include/beep/util.h
+include/bmp/fullscreen.h
+include/bmp/plugin.h
+lib/bmp/Input/libcdaudio.a
+lib/bmp/Input/libcdaudio.la
+lib/bmp/Input/libcdaudio.so
+lib/bmp/Input/libmpg123.a
+lib/bmp/Input/libmpg123.la
+lib/bmp/Input/libmpg123.so
+lib/bmp/Input/libvorbis.a
+lib/bmp/Input/libvorbis.la
+lib/bmp/Input/libvorbis.so
+lib/bmp/Input/libwav.a
+lib/bmp/Input/libwav.la
+lib/bmp/Input/libwav.so
+lib/bmp/Output/libOSS.a
+lib/bmp/Output/libOSS.la
+lib/bmp/Output/libOSS.so
+lib/bmp/Visualization/libbscope.a
+lib/bmp/Visualization/libbscope.la
+lib/bmp/Visualization/libbscope.so
+lib/libbeep.a
+lib/libbeep.la
+lib/libbeep.so
+lib/libbeep.so.1
+lib/libbeep.so.1.0
+lib/pkgconfig/beep.pc
+man/man1/beep-media-player.1
+share/aclocal/beep.m4
+share/applications/beep.desktop
+share/bmp/Skins/Default/Avs.bmp
+share/bmp/Skins/Default/Balance.bmp
+share/bmp/Skins/Default/Eq_ex.bmp
+share/bmp/Skins/Default/Eqmain.bmp
+share/bmp/Skins/Default/Main.bmp
+share/bmp/Skins/Default/Mb.bmp
+share/bmp/Skins/Default/Monoster.bmp
+share/bmp/Skins/Default/Nums_ex.bmp
+share/bmp/Skins/Default/Pledit.bmp
+share/bmp/Skins/Default/Posbar.bmp
+share/bmp/Skins/Default/Shufrep.bmp
+share/bmp/Skins/Default/Text.bmp
+share/bmp/Skins/Default/Titlebar.bmp
+share/bmp/Skins/Default/Volume.bmp
+share/bmp/Skins/Default/cButtons.bmp
+share/bmp/Skins/Default/pLaypaus.bmp
+share/bmp/Skins/Default/pLedit.txt
+share/bmp/Skins/Default/readme.txt
+share/bmp/Skins/Default/screenshot.bmp
+share/bmp/Skins/Default/vIscolor.txt
+share/bmp/beep.svg
+share/bmp/beep_logo.xpm
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/bmp.mo
+@dirrm share/bmp/Skins/Default
+@dirrm share/bmp/Skins
+@dirrm share/bmp
+@comment in xdg-dirs: @dirrm share/applications
+@dirrm lib/bmp/Visualization
+@dirrm lib/bmp/Output
+@dirrm lib/bmp/Input
+@dirrm lib/bmp
+@dirrm include/bmp
+@dirrm include/beep
