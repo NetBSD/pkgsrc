@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/07/10 01:14:02 wiz Exp $
-bin/tfmxplay
-share/doc/tfmxplay/README
-@dirrm share/doc/tfmxplay

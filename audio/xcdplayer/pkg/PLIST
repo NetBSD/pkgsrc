@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 1998/02/07 02:45:14 hubertf Exp $
-bin/xcdplayer
-lib/X11/app-defaults/XCdplayer
-man/cat1/xcdplayer.0.gz
