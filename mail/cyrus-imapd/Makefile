@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/12/06 09:50:13 martti Exp $
+# $NetBSD: Makefile,v 1.26.2.1 2002/06/23 18:51:02 jlam Exp $
 
 DISTNAME=		cyrus-imapd-2.0.16
 PKGREVISION=		1
@@ -52,7 +52,7 @@ CONFIGURE_ARGS+=	--with-com_err=yes
 .endif
 
 .if defined(KERBEROS) && ${KERBEROS} == 4
-USE_KERBEROS=		# defined
+PKG_USE_KERBEROS=	# defined
 CONFIGURE_ARGS+=	--with-auth=krb
 .else
 CONFIGURE_ARGS+=	--with-auth=unix

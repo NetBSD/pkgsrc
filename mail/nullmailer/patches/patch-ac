@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1.2.2 2002/06/23 18:51:50 jlam Exp $
+
+--- doc/nullmailer-send.8.orig	Tue May 14 01:33:23 2002
++++ doc/nullmailer-send.8	Tue May 14 01:33:55 2002
+@@ -61,10 +61,10 @@
+ .B /var/nullmailer/trigger
+ A trigger file to cause immediate delivery.
+ .TP
+-.B /usr/local/etc/nullmailer
++.B @PKG_SYSCONFDIR@/nullmailer
+ The configuration directory.
+ .TP
+-.B /usr/local/libexec/nullmailer
++.B @PREFIX@/libexec/nullmailer
+ The protocol program directory.
+ .SH SEE ALSO
+ nullmailer-queue(8),

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2002/05/04 00:46:23 jtb Exp $
+# $NetBSD: Makefile,v 1.118.2.1 2002/06/23 18:50:09 jlam Exp $
 #
 
 COMMENT=	Programming languages
@@ -12,7 +12,6 @@ SUBDIR+=	blackdown-jdk13
 SUBDIR+=	brandybasic
 SUBDIR+=	bwbasic
 SUBDIR+=	caml-light
-SUBDIR+=	camlp4
 SUBDIR+=	cilk
 SUBDIR+=	cim
 SUBDIR+=	cint
@@ -41,6 +40,7 @@ SUBDIR+=	hugs
 SUBDIR+=	icon
 SUBDIR+=	inform
 SUBDIR+=	intercal
+SUBDIR+=	ja-gawk
 SUBDIR+=	japhar
 SUBDIR+=	jasmin
 SUBDIR+=	java-lang-spec
@@ -48,6 +48,8 @@ SUBDIR+=	java-vm-spec
 SUBDIR+=	jbuilder-jit
 SUBDIR+=	jdk
 SUBDIR+=	jikes
+SUBDIR+=	jini
+SUBDIR+=	joos
 SUBDIR+=	kaffe
 SUBDIR+=	kali
 SUBDIR+=	libperl
@@ -79,8 +81,6 @@ SUBDIR+=	python21
 SUBDIR+=	python22
 SUBDIR+=	ruby
 SUBDIR+=	ruby-base
-SUBDIR+=	ruby14
-SUBDIR+=	ruby14-base
 SUBDIR+=	sather
 SUBDIR+=	scheme48
 SUBDIR+=	siod
@@ -91,7 +91,9 @@ SUBDIR+=	snobol
 SUBDIR+=	squeak
 SUBDIR+=	stalin
 SUBDIR+=	sun-jdk13
+SUBDIR+=	sun-jdk14
 SUBDIR+=	sun-jre13
+SUBDIR+=	sun-jre14
 SUBDIR+=	swi-prolog
 SUBDIR+=	tcl
 SUBDIR+=	tcl-expect

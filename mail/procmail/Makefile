@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/11/08 12:05:58 bouyer Exp $
+# $NetBSD: Makefile,v 1.26.2.1 2002/06/23 18:52:01 jlam Exp $
 #
 
 DISTNAME=	procmail-3.22
@@ -22,6 +22,12 @@ PROCMAIL_TRUSTED_IDS?=\
 
 pre-configure:
 	${ECHO} "#define TRUSTED_IDS {${PROCMAIL_TRUSTED_IDS:Q}}"	\
+	>> ${WRKSRC}/config.h
+	${ECHO} "#undef ETCRC" >> ${WRKSRC}/config.h
+	${ECHO} "#undef ETCRCS" >> ${WRKSRC}/config.h
+	${ECHO} "#define ETCRC \"${PKG_SYSCONFDIR}/procmailrc\""	\
+	>> ${WRKSRC}/config.h
+	${ECHO} "#define ETCRCS \"${PKG_SYSCONFDIR}/procmailrcs/\""	\
 	>> ${WRKSRC}/config.h
 .ifdef(PROCMAIL_MAILSPOOLHOME)
 	${ECHO} "#define MAILSPOOLHOME \"/${PROCMAIL_MAILSPOOLHOME}\""	\

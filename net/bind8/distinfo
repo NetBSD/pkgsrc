@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2002/03/23 06:18:07 itojun Exp $
+$NetBSD: distinfo,v 1.7.2.1 2002/06/23 18:54:51 jlam Exp $
 
 SHA1 (bind/8.3.1/bind-src.tar.gz) = e2f7fb1dd86dfa58ad6a8a9d2c7c0fd21c8f7640
 Size (bind/8.3.1/bind-src.tar.gz) = 1392391 bytes
@@ -9,3 +9,4 @@ SHA1 (patch-ab) = 0d0e2e1a8cb58fc6c11b60fcc69fe496251f7659
 SHA1 (patch-ac) = fdf75b6b53fe4b9ab6ca74b90400edda54a825b1
 SHA1 (patch-ad) = 6ac74cfd60df2a9eb9b3dc7c74dab1dc68feadad
 SHA1 (patch-ae) = 06268d28805c287721954de0676abf9327f64e13
+SHA1 (patch-af) = 9dacac60b3ad0101330144d29a3f0ee4108fe781

@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1.1.1.10.2 2002/06/23 18:51:22 jlam Exp $
+
+--- ./uip/mhlsbr.c.orig	Tue Feb  9 20:30:00 1999
++++ ./uip/mhlsbr.c	Mon Nov  1 19:13:30 1999
+@@ -21,4 +21,7 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
++#ifdef	UNISTD
++#include <unistd.h>
++#endif
+ 
+ 

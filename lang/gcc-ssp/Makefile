@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/04/05 19:20:53 kent Exp $
+# $NetBSD: Makefile,v 1.11.2.1 2002/06/23 18:50:20 jlam Exp $
 
 DISTNAME=		gcc-2.95.3
 GCC_VERSION=		2.95.3
@@ -125,4 +125,4 @@ post-install:
 .include "../../mk/bsd.pkg.mk"
 
 # Make bootstrap with compiler != gcc possible.
-LDFLAGS=		${STRIPFLAG}
+LDFLAGS=		${_STRIPFLAG_CC}

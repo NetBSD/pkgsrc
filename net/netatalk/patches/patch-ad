@@ -1,13 +1,47 @@
-$NetBSD: patch-ad,v 1.2 1999/08/31 22:09:42 wrstuden Exp $
+$NetBSD: patch-ad,v 1.2.2.1 2002/06/23 18:56:00 jlam Exp $
 
---- etc/afpd/Makefile	Thu Jun 25 07:07:32 1998
-+++ etc/afpd/Makefile	Mon Aug 30 06:47:41 1999
-@@ -32,7 +32,7 @@
- 	    AFSDEFS="-DAFS"; \
- 	fi; \
- 	${MAKE} ${MFLAGS} CC="${CC}" ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" \
--	    OPTOPTS="${OPTOPTS}" DESTDIR="${DESTDIR}" \
-+	    OPTOPTS="${OPTOPTS}" ATALK_DESTDIR="${ATALK_DESTDIR}" \
- 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
- 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
- 	    KRBLIBS="$${KRBLIBS}" KRBLIBDIRS="$${KRBLIBDIRS}" \
+--- include/atalk/paths.h.orig	Thu Dec 20 06:43:20 2001
++++ include/atalk/paths.h	Thu Dec 20 06:44:02 2001
+@@ -19,11 +19,7 @@
+ #  if defined (FHS_COMPATIBILITY)
+ #    define _PATH_LOCKDIR	"/var/run/"
+ #  elif defined (BSD4_4)
+-#    ifdef MACOSX_SERVER
+ #      define _PATH_LOCKDIR	"/var/run/"
+-#    else
+-#      define _PATH_LOCKDIR	"/var/spool/lock/"
+-#    endif
+ #  elif defined (linux)
+ #    define _PATH_LOCKDIR	"/var/lock/"
+ #  else
+@@ -51,30 +47,18 @@
+  */
+ #define _PATH_ATALKDEBUG	"/tmp/atalkd.debug"
+ #define _PATH_ATALKDTMP		"atalkd.tmp"
+-#ifdef FHS_COMPATIBILITY
+ #  define _PATH_ATALKDLOCK	ATALKPATHCAT(_PATH_LOCKDIR,"atalkd.pid")
+-#else
+-#  define _PATH_ATALKDLOCK	ATALKPATHCAT(_PATH_LOCKDIR,"atalkd")
+-#endif
+ 
+ /*
+  * psorder paths
+  */
+ #define _PATH_TMPPAGEORDER	"/tmp/psorderXXXXXX"
+-#ifdef FHS_COMPATIBILITY
+ #  define _PATH_PAPDLOCK	ATALKPATHCAT(_PATH_LOCKDIR,"papd.pid")
+-#else
+-#  define _PATH_PAPDLOCK	ATALKPATHCAT(_PATH_LOCKDIR,"papd")
+-#endif
+ 
+ /*
+  * afpd paths
+  */
+ #define _PATH_AFPTKT		"/tmp/AFPtktXXXXXX"
+-#ifdef FHS_COMPATIBILITY
+ #  define _PATH_AFPDLOCK	ATALKPATHCAT(_PATH_LOCKDIR,"afpd.pid")
+-#else
+-#  define _PATH_AFPDLOCK	ATALKPATHCAT(_PATH_LOCKDIR,"afpd")
+-#endif
+ 
+ #endif /* atalk/paths.h */

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/06 00:01:13 hubertf Exp $
+# $NetBSD: Makefile,v 1.1.1.1.2.1 2002/06/23 18:56:37 jlam Exp $
 #
 
 DISTNAME=	OpenAG-1.1.1
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openags/}
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://homepage.mac.com/macdomeeu/dev/current/openag/
 COMMENT=	Open Audio Galaxy client
+
+DEPENDS+=	wget-[0-9]*:../../net/wget
 
 GNU_CONFIGURE=	yes
 

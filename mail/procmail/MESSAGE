@@ -1,9 +1,9 @@
-=============================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/01 01:01:07 zuntum Exp $
+=======================================================================
+$NetBSD: MESSAGE,v 1.1.2.1 2002/06/23 18:52:01 jlam Exp $
 
 Please note the following:
 
-- The system-wide procmailrc is /etc/procmailrc
-- The system-wide procmailrc directory is /etc/procmailrcs/
+- The system-wide procmailrc is ${PKG_SYSCONFDIR}/procmailrc
+- The system-wide procmailrc directory is ${PKG_SYSCONFDIR}/procmailrcs/
 
-=============================================================
+=======================================================================

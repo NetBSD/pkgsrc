@@ -1,0 +1,15 @@
+$NetBSD: patch-al,v 1.1.1.1.4.2 2002/06/23 18:55:39 jlam Exp $
+
+--- kxmlrpc/kxmlrpcdaemon.cpp.orig	Sun Dec  2 19:03:23 2001
++++ kxmlrpc/kxmlrpcdaemon.cpp
+@@ -358,7 +358,9 @@
+    { 0, 0, 0 }
+ };
+ 
+-int main(int argc, char **argv)
++extern "C" int kdemain(int, char **);
++
++int kdemain(int argc, char **argv)
+ {
+     KAboutData about("kxmlrpcd", I18N_NOOP("KXmlRpc Daemon"),
+                      version, description, KAboutData::License_BSD);

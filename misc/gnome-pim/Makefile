@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2002/03/13 17:37:25 fredb Exp $
+# $NetBSD: Makefile,v 1.30.2.1 2002/06/23 18:53:03 jlam Exp $
 #
 
 DISTNAME=		gnome-pim-1.4.0
@@ -16,6 +16,7 @@ DEPENDS+=		gnome-core>=1.4.0.4nb1:../../x11/gnome-core
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 USE_X11BASE=		YES
+BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
 CPPFLAGS+=		-I${LOCALBASE}/include

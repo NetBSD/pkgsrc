@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/09/09 20:36:37 agc Exp $
+# $NetBSD: Makefile,v 1.8.2.1 2002/06/23 18:54:14 jlam Exp $
 
 DISTNAME=		root_v2.23.08.source
 PKGNAME=		root-2.23
@@ -16,6 +16,10 @@ USE_XPM=		YES
 
 ALL_TARGET=		netbsd
 MAKE_ENV=		LD_LIBRARY_PATH=${WRKDIR}/lib ROOTSYS=${WRKDIR}
+
+.if (${MACHINE_ARCH} == "arm")
+BROKEN= 	Compilation stops due to internal compiler error
+.endif
 
 WRKSRC=			${WRKDIR}
 

@@ -1,0 +1,25 @@
+#! /bin/sh
+#
+# $NetBSD: canna,v 1.2.2.2 2002/06/23 18:47:20 jlam Exp $
+#
+# PROVIDE: canna
+# REQUIRE: DAEMON
+
+name="canna"
+command_start="@PREFIX@/sbin/cannaserver"
+pidfile=""
+
+cmd=${1:-start}
+
+case ${cmd} in
+start)
+    if [ -x ${command_start} ]; then
+        echo "Starting ${name}."
+        ${command_start} >/dev/null 2>&1
+    fi
+    ;;
+*)
+    :
+    ;;
+esac
+exit 0

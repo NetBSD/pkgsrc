@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.2.2 2002/06/23 18:54:48 jlam Exp $
+
+--- ORBit-2.0.pc.in.orig	Sat Apr 27 18:24:08 2002
++++ ORBit-2.0.pc.in
+@@ -9,5 +9,5 @@
+ Description: High-performance CORBA Object Request Broker.
+ Version: @ORBIT_VERSION@
+ Requires: linc glib-2.0 gmodule-2.0
+-Libs: -L${libdir} -lORBit-2 @ORBIT_LIBS@ @LIBS@ -lm
++Libs: -Wl,-R${libdir} -L${libdir} -lORBit-2 @ORBIT_LIBS@ @LIBS@ -lm
+ Cflags: -I${includedir}/orbit-2.0 -DORBIT2=1

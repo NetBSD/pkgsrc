@@ -1,0 +1,66 @@
+$NetBSD: patch-am,v 1.1.1.1.2.2 2002/06/23 18:55:40 jlam Exp $
+
+--- libkdenetwork/kpgpbase.cpp.orig	Sun Jan 20 20:23:35 2002
++++ libkdenetwork/kpgpbase.cpp
+@@ -264,9 +264,28 @@
+               //kdDebug(5100) << "Read " << len << " bytes from pout[0]" << endl;
+               str[len] ='\0';
+               output += str;
+-            }
+-            else
++            } else {
++	      /*
++	       * Apparently, on NetBSD when the child dies, the pipe begins
++	       * receiving empty data packets *before* waitpid() has signaled
++	       * that the child has died.  Also, notice that this happens
++	       * without any error bit being set in pollfd.revents (is this a
++	       * NetBSD bug???).  Notice that these anomalous packets exist
++	       * according to poll(), but have length 0 according to read().
++	       * Thus, kde can remain stuck inside this loop.
++	       *
++	       * A solution to this problem is to get out of the inner loop
++	       * when read() returns <=0.  In this way, kde has another chance
++	       * to call waitpid() to check if the child has died -- and this
++	       * time the call should succeed.
++	       *
++	       * Setting POLLHUP in pollfd.revents is not necessary, but I just
++	       * like the idea of signaling that something strange has
++	       * happened.
++	       */
++              pollout.revents |= POLLHUP;
+               break;
++	    }
+           }
+         }
+         else if (pollstatus == -1) {
+@@ -289,9 +308,28 @@
+               //kdDebug(5100) << "Read " << len << " bytes from perr[0]" << endl;
+               str[len] ='\0';
+               error += str;
+-            }
+-            else
++            } else {
++	      /*
++	       * Apparently, on NetBSD when the child dies, the pipe begins
++	       * receiving empty data packets *before* waitpid() has signaled
++	       * that the child has died.  Also, notice that this happens
++	       * without any error bit being set in pollfd.revents (is this a
++	       * NetBSD bug???).  Notice that these anomalous packets exist
++	       * according to poll(), but have length 0 according to read().
++	       * Thus, kde can remain stuck inside this loop.
++	       *
++	       * A solution to this problem is to get out of the inner loop
++	       * when read() returns <=0.  In this way, kde has another chance
++ 	       * to call waitpid() to check if the child has died -- and this
++	       * time the call should succeed.
++	       *
++	       * Setting POLLHUP in pollfd.revents is not necessary, but I just
++	       * like the idea of signaling that something strange has
++ 	       * happened.
++	       */
++              pollerr.revents |= POLLHUP;
+               break;
++	    }
+           }
+         }
+         else if (pollstatus == -1) {

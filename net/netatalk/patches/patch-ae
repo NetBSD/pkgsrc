@@ -1,31 +1,19 @@
-$NetBSD: patch-ae,v 1.2 1999/08/31 22:09:42 wrstuden Exp $
+$NetBSD: patch-ae,v 1.2.2.1 2002/06/23 18:56:00 jlam Exp $
 
---- etc/atalkd/nbp.c	Mon Oct 27 14:28:43 1997
-+++ etc/atalkd/nbp.c	Mon Aug 30 06:52:31 1999
-@@ -86,7 +86,7 @@
-     nn.nn_sat.sat_port = nt.nt_port;
- 
-     /* object */
--    if ( data >= end || ( *data < 0 || *data > 32 ) || data + *data > end ) {
-+    if ( data >= end || (*(unsigned char *)data > 32 ) || data + *data > end ) {
- 	syslog( LOG_INFO, "nbp_packet: malformed packet" );
- 	return;
-     }
-@@ -95,7 +95,7 @@
-     data += nn.nn_objlen;
- 
-     /* type */
--    if ( data >= end || ( *data < 0 || *data > 32 ) || data + *data > end ) {
-+    if ( data >= end || (*(unsigned char *)data > 32 ) || data + *data > end ) {
- 	syslog( LOG_INFO, "nbp_packet: malformed packet" );
- 	return;
-     }
-@@ -104,7 +104,7 @@
-     data += nn.nn_typelen;
- 
-     /* zone */
--    if ( data >= end || ( *data < 0 || *data > 32 ) || data + *data > end ) {
-+    if ( data >= end || (*(unsigned char *)data > 32 ) || data + *data > end ) {
- 	syslog( LOG_INFO, "nbp_packet: malformed packet" );
- 	return;
-     }
+--- man/man8/psf.8.tmpl.orig	Wed Dec 19 15:19:21 2001
++++ man/man8/psf.8.tmpl	Wed Dec 19 15:21:29 2001
+@@ -93,10 +93,10 @@
+     :sd=/usr/spool/lpd/laser:\\
+     :lp=/usr/spool/lpd/laser/null:\\
+     :lf=/var/adm/lpd-errs:pw#80:hl:\\
+-    :of=:LIBDIR:/filters/ofpap:\\
+-    :if=:LIBDIR:/filters/ifpaprev:\\
+-    :tf=:LIBDIR:/filters/tfpaprev:\\
+-    :df=:LIBDIR:/filters/dfpaprev:
++    :of=:SBINDIR:/filters/ofpap:\\
++    :if=:SBINDIR:/filters/ifpaprev:\\
++    :tf=:SBINDIR:/filters/tfpaprev:\\
++    :df=:SBINDIR:/filters/dfpaprev:
+ .fi
+ .RE
+ .sp

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1.20.2 2002/06/23 18:48:08 jlam Exp $
+bin/skkfep
+man/man1/skkfep.1
+@unexec if [ -f %D/etc/skk.conf ]; then echo 'Remove "%D/etc/skk.conf" if you will not use SKK programs any longer.'; fi

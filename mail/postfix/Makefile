@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2002/05/05 14:46:27 martti Exp $
+# $NetBSD: Makefile,v 1.61.2.1 2002/06/23 18:51:59 jlam Exp $
 
-DISTNAME=	postfix-1.1.8
+DISTNAME=	postfix-1.1.11
 CATEGORIES=	mail
-MASTER_SITES=	ftp://postfix.cloud9.net/official/
+MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.postfix.org/
@@ -57,6 +57,7 @@ BUILD_DEFS+=	USE_SASL
 
 PLIST_SRC+=	${PKGDIR}/PLIST
 ALL_TARGET=	#empty
+MAKE_ENV=	CC="${CC}" OPT="${CFLAGS}"
 
 pre-configure:
 	${CP} ${WRKSRC}/conf/main.cf ${WRKSRC}/conf/main.cf.dist
@@ -89,18 +90,18 @@ post-build:
 	    <${FILESDIR}/mailer.conf >${WRKDIR}/mailer.conf.postfix
 
 pre-install:
-	${INSTALL_DATA_DIR} /etc/postfix 
-	${INSTALL_DATA_DIR} ${PREFIX}/share/postfix 
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/postfix 
+	${INSTALL_DATA_DIR} /etc/postfix
+	${INSTALL_DATA_DIR} ${PREFIX}/share/postfix
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/postfix
 	${INSTALL_DATA_DIR} ${PREFIX}/libexec/postfix
 	${CHOWN} ${ROOT_USER}:${ROOT_GROUP} ${PREFIX}/share/postfix \
 	    ${PREFIX}/libexec/postfix
 	${CHMOD} 755 ${PREFIX}/share/postfix ${PREFIX}/libexec/postfix
 	-${RM} -f ${WRKSRC}/conf/*.orig
 .if defined(USE_SASL) && ${USE_SASL} == "YES"
-	echo "pwcheck_method: sasldb" > ${WRKDIR}/smtpd.conf
+	${ECHO} "pwcheck_method: sasldb" > ${WRKDIR}/smtpd.conf
 	${INSTALL_DATA} ${WRKDIR}/smtpd.conf ${PREFIX}/lib/sasl
-	echo lib/sasl/smtpd.conf > ${WRKDIR}/PLIST.sasl
+	${ECHO} lib/sasl/smtpd.conf > ${WRKDIR}/PLIST.sasl
 .endif
 	${TEST} -f /etc/postfix/postfix-files || \
 		${INSTALL_DATA} ${WRKSRC}/conf/postfix-files /etc/postfix

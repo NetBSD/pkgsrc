@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.70.2.1 2002/05/08 16:09:12 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.70.2.2 2002/06/23 18:54:41 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -124,7 +124,23 @@ NEED_OWN_INSTALL_TARGET=no
 USETOOLS=		no
 MAKE_ENV+=		USETOOLS=no
 
+# Set this before <bsd.own.mk> does, since it doesn't know about Darwin
+.if ${OPSYS} == "Darwin"
+OBJECT_FMT?=		Mach-O
+.endif
+
 .include <bsd.own.mk>
+
+# /usr/share/mk/bsd.own.mk on NetBSD 1.3 does not define OBJECT_FMT
+.if ${MACHINE_PLATFORM:MNetBSD-1.3*} != ""
+.if ${MACHINE_ARCH} == "alpha" || \
+${MACHINE_ARCH} == "mipsel" || ${MACHINE_ARCH} == "mipseb" || \
+${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "sparc64"
+OBJECT_FMT?=		ELF
+.else
+OBJECT_FMT?=		a.out
+.endif
+.endif
 
 # include the defaults file
 .if exists(${.CURDIR}/../../mk/bsd.pkg.defaults.mk)
@@ -133,17 +149,6 @@ MAKE_ENV+=		USETOOLS=no
 .include "${.CURDIR}/../mk/bsd.pkg.defaults.mk"
 .elif exists(${.CURDIR}/mk/bsd.pkg.defaults.mk)
 .include "${.CURDIR}/mk/bsd.pkg.defaults.mk"
-.endif
-
-# /usr/share/mk/bsd.own.mk on NetBSD 1.3 does not define OBJECT_FMT
-.if ${MACHINE_PLATFORM:MNetBSD-1.3*} != ""
-.if ${MACHINE_ARCH} == "alpha" || \
-${MACHINE_ARCH} == "mipsel" || ${MACHINE_ARCH} == "mipseb" || \
-${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "sparc64"
-OBJECT_FMT?=ELF
-.else
-OBJECT_FMT?=a.out
-.endif
 .endif
 
 .if ${OPSYS} == "NetBSD"

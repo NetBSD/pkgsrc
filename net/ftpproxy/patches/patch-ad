@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1.2.2 2002/06/23 18:55:21 jlam Exp $
+
+--- src/main.c.orig	Tue Feb  5 03:00:27 2002
++++ src/main.c
+@@ -46,6 +46,9 @@
+ #include "ip-lib.h"
+ #include "lib.h"
+ 
++#ifndef	LOG_FTP
++#define	LOG_FTP	LOG_DAEMON
++#endif
+ 
+ char	*program =		"";
+ char	progname[80] =		"";

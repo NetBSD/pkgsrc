@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2002/01/13 21:52:32 hubertf Exp $
+# $NetBSD: Makefile,v 1.59.2.1 2002/06/23 18:51:57 jlam Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -77,6 +77,8 @@ do-install:
 .include "../../mk/bsd.pkg.mk"
 .if ${OPSYS} == "SunOS"
 BUILDNAME= gs5
+.elif ${OPSYS} == "Linux"
+BUILDNAME= lrh  
 .else
 BUILDNAME= neb
 .endif

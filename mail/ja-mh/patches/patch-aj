@@ -1,0 +1,12 @@
+$NetBSD: patch-aj,v 1.1.1.1.10.2 2002/06/23 18:51:24 jlam Exp $
+
+--- ./uip/sendsbr.c.orig	Tue Feb  9 20:30:00 1999
++++ ./uip/sendsbr.c	Mon Nov  1 19:13:30 1999
+@@ -10,4 +10,7 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
++#ifdef	UNISTD
++#include <unistd.h>
++#endif
+ 
+ static		alert(), anno(), annoaux();

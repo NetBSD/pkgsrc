@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/10/26 11:46:54 agc Exp $
+# $NetBSD: Makefile,v 1.28.2.1 2002/06/23 18:51:14 jlam Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/02/15 05:36:54 peter Exp
 #
 
@@ -12,7 +12,7 @@ COMMENT=	X11/TK based mail reader front end to MH
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk
 DEPENDS+=	nmh>=1.0:../../mail/nmh
-DEPENDS+=	mm>=2.7:../../mail/metamail
+DEPENDS+=	metamail>=2.7:../../mail/metamail
 
 .include "../../mk/bsd.prefs.mk"
 

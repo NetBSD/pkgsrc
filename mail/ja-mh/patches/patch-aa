@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1.10.2 2002/06/23 18:51:19 jlam Exp $
+
+--- ./sbr/m_getdefs.c.orig	Wed Dec  2 02:05:00 1998
++++ ./sbr/m_getdefs.c	Mon Nov  1 19:13:29 1999
+@@ -7,4 +7,7 @@
+ #include <stdio.h>
+ #include <errno.h>
++#ifdef	UNISTD
++#include <unistd.h>
++#endif
+ #include <sys/types.h>
+ #include <sys/stat.h>

@@ -1,4 +1,25 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/04/08 20:25:03 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1.2.1 2002/06/23 18:55:13 jlam Exp $
+lib/ettercap/ec_H00_lurker.so
+lib/ettercap/ec_H01_zaratan.so
+lib/ettercap/ec_H05_roper.so
+lib/ettercap/ec_H10_phantom.so
+lib/ettercap/ec_H20_dwarf.so
+lib/ettercap/ec_H30_thief.so
+lib/ettercap/ec_H99_dummy.so
+lib/ettercap/ec_arpcop.so
+lib/ettercap/ec_banshee.so
+lib/ettercap/ec_basilisk.so
+lib/ettercap/ec_beholder.so
+lib/ettercap/ec_dummy.so
+lib/ettercap/ec_golem.so
+lib/ettercap/ec_imp.so
+lib/ettercap/ec_lamia.so
+lib/ettercap/ec_leech.so
+lib/ettercap/ec_ooze.so
+lib/ettercap/ec_phantom.so
+lib/ettercap/ec_shadow.so
+lib/ettercap/ec_spectre.so
+lib/ettercap/ec_triton.so
 man/man8/ettercap.8
 sbin/ettercap
 share/doc/ettercap/AUTHORS
@@ -11,10 +32,15 @@ share/doc/ettercap/PORTINGS
 share/doc/ettercap/README
 share/doc/ettercap/README.PLUGINS
 share/doc/ettercap/README.WIN32
+share/doc/ettercap/ROPER.HOWTO
 share/doc/ettercap/THANKS
 share/doc/ettercap/TODO
+share/doc/ettercap/TODO.WIN32
 share/doc/ettercap/ZARATAN.HOWTO
+share/doc/ettercap/debug.txt
+share/doc/ettercap/errors.txt
 share/doc/ettercap/ettercap.fr.8.in
+share/doc/ettercap/threads.txt
 share/ettercap/etter.conf
 share/ettercap/etter.dns
 share/ettercap/etter.filter
@@ -24,5 +50,7 @@ share/ettercap/etter.passive.os.fp
 share/ettercap/etter.ssl.crt
 share/ettercap/mac-fingerprints
 share/ettercap/nmap-os-fingerprints
+share/ettercap/services
 @dirrm share/ettercap
 @dirrm share/doc/ettercap
+@dirrm lib/ettercap

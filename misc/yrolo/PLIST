@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1.2.2 2002/06/23 18:54:35 jlam Exp $
+bin/yrolo
+lib/X11/app-defaults/YRolo
+man/cat1/yrolo.0

@@ -1,0 +1,52 @@
+$NetBSD: patch-aa,v 1.8.2.2 2002/06/23 18:54:18 jlam Exp $
+
+--- pty.c.orig	Mon Feb 11 13:44:18 2002
++++ pty.c	Tue May 21 19:55:36 2002
+@@ -318,6 +318,47 @@
+ 
+ /***************************************************************/
+ 
++#if defined(__NetBSD__) && !defined(PTY_DONE)
++#define PTY_DONE
++
++#include <sys/param.h>
++
++#include <string.h>
++#include <util.h>
++
++int
++OpenPTY(ttyn)
++char **ttyn;
++{
++  int m, s, f;
++  char *t;
++
++  do
++    {
++      if (openpty(&m, &s, TtyName, NULL, NULL) < 0)
++        return -1;
++      close(m);
++      close(s);
++
++      strcpy(PtyName, TtyName);
++      t = strrchr(PtyName, '/');
++      if ((t == NULL ) || (*++t != 't'))
++        return -1;
++      *t = 'p';
++
++      f = open(PtyName, O_RDWR | O_NOCTTY);
++    }
++  while (f < 0);
++
++  initmaster(f);
++  *ttyn = TtyName;
++
++  return f;
++}
++#endif
++
++/***************************************************************/
++
+ #ifndef PTY_DONE
+ int
+ OpenPTY(ttyn)

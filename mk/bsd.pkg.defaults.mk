@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.59 2002/05/07 17:52:18 agc Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.59.2.1 2002/06/23 18:54:37 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -580,6 +580,11 @@ IMAP_UW_CCLIENT_MBOX_FMT?=	unix
 # Possible: not defined, YES
 # Default: not defined
 
+IMDICTDIR?=	/var/dict
+# Specify the directory for input method's dictionary installation.
+# Possible: any valid location
+# Default: /var/dict 
+
 INN_DATA_DIR?= /var/news
 # Used by inn to specify the data directory.
 # Possible: any path you like
@@ -833,6 +838,12 @@ JSDK_HOME?= ${JAVA_HOME}/jsdk
 # Possible: not defined, YES
 # Default: not defined
 
+#LATEX2HTML_ICONPATH=
+# Used in the latex2html package to set URL prefix for where to
+# find latex2html's icons.
+# Possible:  a URL prefix
+# Default: none
+
 LINUX_LOCALES?=								\
 	 af ar bg br ca cs cy da de el en eo es et eu fi fo fr ga gl \
 	    he hr hu hy id is it ja ka kl ko lo lt lv nl no oc pl pt ro \
@@ -888,6 +899,11 @@ MAJORDOMO_USER?= majordom
 # Possible: any
 # Default: majordom
 
+MPLAYER_FONT?= iso-8859-1/arial-18
+# Used by the mplayer-share package to display subtitles and the timer
+# Possible: any font directory which contains the mplayer font.desc
+# Default: iso-8859-1/arial-18
+
 #MOTIF_TYPE?=	openmotif
 # Used by motif.buildlink.mk to choose which Motif-2.0-compatible
 # installation to use.  This value is also automatically set by
@@ -925,15 +941,21 @@ MAJORDOMO_USER?= majordom
 # Possible: defined, not defined
 # Default: not defined
 
-#MUTT_USE_SSL?= YES
-# Enable SSL in mutt (for pop and imap connections)
-# Possible: YES, NO
-# Default: YES
-
-#MUTT_USE_SLANG?= NO
-# Use slang instead of curses in mutt
+MUTT_USE_NCURSES?= NO
+# Force ncurses to be used by mutt. (Older NetBSD and most non-NetBSD
+# platforms get it anyway.)
 # Possible: YES, NO
 # Default: NO
+
+MUTT_USE_SLANG?= NO
+# Use slang instead of curses in mutt.
+# Possible: YES, NO
+# Default: NO
+
+MUTT_USE_SSL?= YES
+# Enable SSL in mutt (for pop and imap connections).
+# Possible: YES, NO
+# Default: YES
 
 NMH_EDITOR?= vi
 # default editor for use in nmh.
@@ -1027,6 +1049,12 @@ PILRC_USE_GTK?=	YES
 # Where audit-packages searchs for the vulnerabilities file.
 # Possible: any path
 # Default: ${DISTDIR}
+
+#POP_WITH_DRAC=
+# Used in the following packages to enable the optional DRAC support:
+# teapop
+# Possible: defined, not defined
+# Default: not defined
 
 #POPTOP_USE_MPPE=
 # Used in poptop package to specify the use of the mppe-ppp package
@@ -1154,6 +1182,22 @@ SDIST_PAWD?= pwd
 # Select SPARC target architecture under Solaris.
 # Possible: sparcv7, sparcv8 or sparcv9.
 # Default: sparcv7
+
+#SPOP3D_ENABLE_APOP= yes
+# Enable APOP support in the mail/solid-pop3d package.
+# Possible: undefined, defined
+# Default: undefined
+
+#SPOP3D_ENABLE_STANDALONE= yes
+# Build mail/solid-pop3d to run standalone instead of via inetd.
+# Possible: undefined, defined
+# Default: undefined 
+
+#SPOP3D_ENABLE_ALIASES= yes
+# Build mail/solid-pop3d with support for user names mapping and non-IP
+# based virtuals.
+# Possible: undefined, defined
+# Default: undefined
 
 #SQUID_CONFIGURE_ARGS=
 # Used in squid package to set build configuration options.
@@ -1403,6 +1447,7 @@ XCHAT_USE_SSL?=	YES
 #MASTER_SITE_XCONTRIB=	ftp://ftp.ring.gr.jp/pub/X/opengroup/contrib/
 #MASTER_SITE_GNOME=	ftp://ftp.ring.gr.jp/pub/X/gnome/
 #MASTER_SITE_GNU=	ftp://ftp.ring.gr.jp/pub/GNU/
+#MASTER_SITE_MOZILLA=	ftp://ftp.ring.gr.jp/pub/net/www/mozilla/mozilla/releases/
 #MASTER_SITE_PERL_CPAN=	ftp://ftp.ring.gr.jp/pub/lang/perl/CPAN/modules/by-module/
 #MASTER_SITE_TEX_CTAN=	ftp://ftp.ring.gr.jp/pub/text/CTAN/
 #MASTER_SITE_SUNSITE=	ftp://sunsite.sut.ac.jp/pub/archives/linux/sunsite-unc/

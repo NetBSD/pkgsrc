@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2002/03/05 21:05:52 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.30.2.1 2002/06/23 18:52:46 jlam Exp $
 #
 
 DISTNAME=	${SCIBASE}.src
@@ -50,6 +50,12 @@ pre-fetch:
 		${ECHO} "   - you have an old /usr/lib/* which was not compiled with -mieee" ;\
 		${ECHO} "   - you have overridden CFLAGS for pkgsrc removing the -mieee flag" ;\
 		${ECHO} "Without fixing this problem ${PKGNAME} will not work." ; ${FALSE} ; fi
+.endif
+
+GCC_VERSION!=           gcc --version
+.if (${GCC_VERSION:C/-.*$$//} == egcs) && (${MACHINE_ARCH} == arm32)
+.include "../../lang/gcc/Makefile.gcc"
+MAKE_FLAGS+=	CC=${CC}
 .endif
 
 # remove some stuff which is broken in the distfile.  The config's

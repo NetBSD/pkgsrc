@@ -1,32 +1,24 @@
-$NetBSD: patch-aa,v 1.8 2001/06/20 05:27:33 jlam Exp $
+$NetBSD: patch-aa,v 1.8.2.1 2002/06/23 18:54:23 jlam Exp $
 
---- build.netbsd.orig	Tue May 23 17:57:08 2000
-+++ build.netbsd
-@@ -4,7 +4,7 @@
+--- install.orig	Sun Oct 28 15:12:15 2001
++++ install
+@@ -16,14 +16,14 @@
+   exit;
+ fi
  
- echo Compiling VSLIB...
- cd vslib
--make CCDEF="-I${LOCALBASE}/include" LDDEF="-Wl,-R${PREFIX}/lib -L${PREFIX}/lib"
-+make CCDEF="${CFLAGS}" LDDEF="${LDFLAGS}"
- if [ -e libvslib.a ]; then
-   echo VSLIB compiled ok.
- else
-@@ -15,7 +15,7 @@
+-echo "Press ENTER to install vfu,ftparc,rx_* to /usr/local/bin"
++echo "Press ENTER to install vfu,ftparc,rx_* to ${PREFIX}/bin"
+ echo "Or press Ctrl+C to cancel"
+ read
  
- echo Compiling VFU...
- cd vfu
--make CCDEF="-I${LOCALBASE}/include -DFILENAME_CONF_GLOBAL0=\"${PREFIX}/etc/\" -DFILENAME_CONF_GLOBAL1=\"${PREFIX}/\" " LDDEF="-L${LOCALBASE}/lib"
-+make CCDEF="${CFLAGS} -DFILENAME_CONF_GLOBAL0=\\\"${PREFIX}/etc/\\\" -DFILENAME_CONF_GLOBAL1=\\\"${PREFIX}/\\\" " LDDEF="${LDFLAGS}"
- if [ -e vfu ]; then
-   echo VFU compiled ok.
- else
-@@ -26,8 +26,8 @@
+-cp vfu/vfu ftparc/ftparc rx/rx_* /usr/local/bin
+-cp vfu.1 /usr/local/man/man1
+-cp vfu.conf /usr/local/etc
+-cd /usr/local/bin
++cp vfu/vfu ftparc/ftparc rx/rx_* ${PREFIX}/bin
++cp vfu.1 ${PREFIX}/man/man1
++cp vfu.conf ${PREFIX}/etc
++cd ${PREFIX}/bin
+ chmod 755 vfu ftparc rx_*
  
- echo Compiling ftparc...
- cd ftparc
--make CCDEF="-I${LOCALBASE}/include -D__unix__" LDDEF="-Wl,-R${PREFIX}/lib -L${PREFIX}/lib"
-+make CCDEF="${CFLAGS} -D__unix__" LDDEF="${LDFLAGS}"
- if [ -e ftparc ]; then
-   echo ftparc compiled ok.
- else
-   echo ftparc compilation failed...
+ echo "done."

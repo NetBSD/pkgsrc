@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink2.mk,v 1.1.2.2 2002/06/21 23:00:35 jlam Exp $
+# $NetBSD: pthread.buildlink2.mk,v 1.1.2.3 2002/06/23 18:54:44 jlam Exp $
 #
 # This Makefile fragment is included by packages that use pthreads.
 # This Makefile fragment is also included directly by bsd.prefs.mk.
@@ -34,7 +34,7 @@
 #	pthread.buildlink2.mk
 #
 .if defined(USE_PTHREAD)
-_PKG_PTHREADS?=		pth ptl2 mit-pthreads unproven-pthreads
+_PKG_PTHREADS?=		pth pth-syscall ptl2 mit-pthreads unproven-pthreads
 
 .for __valid_pthread__ in ${USE_PTHREAD}
 .  if !empty(_PKG_PTHREADS:M${__valid_pthread__})
@@ -82,6 +82,8 @@ pthread-buildlink: _BUILDLINK_USE
 
 .elif ${PTHREAD_TYPE} == "pth"
 .  include "../../devel/pth/buildlink2.mk"
+.elif ${PTHREAD_TYPE} == "pth-syscall"
+.  include "../../devel/pth-syscall/buildlink2.mk"
 #
 # XXX The remaining pthread packages here need to have sensible buildlink.mk
 # XXX created that may all be used more-or-less interchangeably.  This is

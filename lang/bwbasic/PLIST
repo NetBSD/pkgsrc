@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:22:50 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.1.2.1 2002/06/23 18:50:11 jlam Exp $
 bin/bwbasic
 man/man1/bwbasic.1
-share/bwbasic/bwbasic.doc
 share/bwbasic/bwbtest/abs.bas
 share/bwbasic/bwbtest/assign.bas
 share/bwbasic/bwbtest/callfunc.bas

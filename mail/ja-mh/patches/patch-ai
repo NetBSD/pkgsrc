@@ -1,0 +1,12 @@
+$NetBSD: patch-ai,v 1.1.1.1.10.2 2002/06/23 18:51:24 jlam Exp $
+
+--- ./uip/replsbr.c.orig	Fri Sep 10 13:51:41 1999
++++ ./uip/replsbr.c	Mon Nov  1 19:13:30 1999
+@@ -11,4 +11,7 @@
+ #include <sys/types.h>		/* off_t */
+ #include <sys/file.h>		/* L_SET */
++#ifdef	UNISTD
++#include <unistd.h>
++#endif
+ 
+ 

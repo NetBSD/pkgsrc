@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2002/03/21 05:39:18 fredb Exp $
+# $NetBSD: Makefile,v 1.20.2.1 2002/06/23 18:50:33 jlam Exp $
 #
 
 DISTNAME=		librep-${REP_VERS}
 REP_VERS=		0.15.1
 PKGREVISION=		1
 CATEGORIES=		lang devel
-MASTER_SITES=		http://prdownloads.sourceforge.net/librep/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=librep/}
 
 MAINTAINER=		danw@netbsd.org
 HOMEPAGE=		http://librep.sourceforge.net/

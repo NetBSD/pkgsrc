@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2001/10/18 15:20:30 veego Exp $
+# $NetBSD: Makefile,v 1.5.2.1 2002/06/23 18:55:53 jlam Exp $
 #
 
-DISTNAME=		lukemftpd-1.1
+DISTNAME=		lukemftpd-1.2-beta2
+PKGNAME=		lukemftpd-1.2rc2
 SVR4_PKGNAME=		luftd
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.netbsd.org/pub/NetBSD/misc/lukemftp/
@@ -26,6 +27,12 @@ CONFIGURE_ARGS+=	--with-socks4
 DEPENDS+=		socks5-1.0.2:../../net/socks5
 CONFIGURE_ARGS+=	--with-socks5
 .endif
+.endif
+
+.if defined(USE_INET6) && ${USE_INET6} == YES
+CONFIGURE_ARGS+=	--enable-ipv6
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 .if ${OPSYS} == "SunOS"

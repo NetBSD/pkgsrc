@@ -1,0 +1,13 @@
+$NetBSD: patch-as,v 1.1.1.1.6.2 2002/06/23 18:56:25 jlam Exp $
+
+--- libatalk/nbp/nbp_lkup.c	Tue Oct  7 14:21:57 1997
++++ libatalk/nbp/nbp_lkup.c	Mon Aug 30 06:47:43 1999
+@@ -6,7 +6,7 @@
+ #include <sys/types.h>
+ #include <sys/param.h>
+ #include <sys/socket.h>
+-#include <sys/signal.h>
++#include <signal.h>
+ #include <sys/time.h>
+ #include <strings.h>
+ #include <netdb.h>

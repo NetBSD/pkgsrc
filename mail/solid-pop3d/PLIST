@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1.48.2 2002/06/23 18:52:16 jlam Exp $
+man/man5/spop3d.conf.5
+man/man5/dot-spop3d.5
+man/man8/spop3d.8
+sbin/spop3d
+share/examples/spop3d/config.example
+share/doc/solid-pop3d/AUTHORS
+share/doc/solid-pop3d/CONFIGFILE
+share/doc/solid-pop3d/COPYING
+share/doc/solid-pop3d/ChangeLog
+share/doc/solid-pop3d/INSTALL
+share/doc/solid-pop3d/README
+share/doc/solid-pop3d/THANKS
+share/doc/solid-pop3d/VIRTUALS
+@dirrm share/examples/spop3d
+@dirrm share/doc/solid-pop3d

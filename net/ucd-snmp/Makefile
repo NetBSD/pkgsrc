@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41.2.1 2002/06/21 23:05:33 jlam Exp $
+# $NetBSD: Makefile,v 1.41.2.2 2002/06/23 18:57:12 jlam Exp $
 
 DISTNAME=	ucd-snmp-4.2.4
 CATEGORIES=	net
@@ -62,8 +62,13 @@ post-extract:
 	@${LN} ${WRKSRC}/s/netbsd.h ${WRKSRC}/s/netbsdelf.h
 
 pre-configure:
-.if (${OPSYS} == "NetBSD") && (${LOWER_ARCH} == "i386") && \
-    !empty(OS_VERSION:M1.5.[123]*)
+.if (${OPSYS} == NetBSD)
+	if [ -f /usr/include/uvm/uvm_param.h ]; then			\
+		cd ${BUILDLINK_DIR}/include;				\
+		${MKDIR} vm;						\
+		${LN} -s /usr/include/uvm/uvm_param.h vm/vm_param.h;	\
+	fi
+.if (${LOWER_ARCH} == i386 && ${OS_VERSION:M1.5.[123]*} != "")
 	${MKDIR} ${BUILDLINK_DIR}/include/sys
 	${LN} -s ${FILESDIR}/disklabel.h ${BUILDLINK_DIR}/include/sys
 .endif

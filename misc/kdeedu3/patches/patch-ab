@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.1.1.1.2.2 2002/06/23 18:53:28 jlam Exp $
+
+--- kvoctrain/kvoctrain/Makefile.in.orig	Mon May 27 08:01:18 2002
++++ kvoctrain/kvoctrain/Makefile.in
+@@ -578,7 +578,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=kvoctrain.h kvoctrainview.h kvoctrain.lsm.tpl kvoctrain.dtd x-kvtml.desktop kvoctrain.desktop kv_resource.h rowtable.h 
++KDE_DIST=kvoctrainview.h kvoctrain.h spotlight2kvtml x-kvtml.desktop kv_resource.h rowtable.h kvoctrain.lsm.tpl kvoctrain.dtd kvoctrain.desktop kvoctrain 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -712,7 +712,7 @@
+ 
+ install-data-local:
+ 	$(mkinstalldirs) $(DESTDIR)$(kde_bindir)
+-	$(INSTALL_PROGRAM) $(srcdir)/langen2kvtml $(DESTDIR)$(kde_bindir)/langen2kvtml
++	$(INSTALL_SCRIPT) $(srcdir)/langen2kvtml $(DESTDIR)$(kde_bindir)/langen2kvtml
+ 	$(mkinstalldirs) $(DESTDIR)$(kde_appsdir)/Edutainment/
+ 	$(INSTALL_DATA) $(srcdir)/kvoctrain.desktop $(DESTDIR)$(kde_appsdir)/Edutainment/kvoctrain.desktop
+ 	$(mkinstalldirs) $(DESTDIR)$(kde_icondir)/
+@@ -839,7 +839,7 @@
+ 	-rm -f  kvoctrain_meta_unload.cpp
+ 
+ #>+ 11
+-kvoctrain.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kva_io.cpp $(srcdir)/kvoctrain.cpp $(srcdir)/kvoctrainview.cpp $(srcdir)/rowtable.cpp $(srcdir)/main.cpp $(srcdir)/kva_init.cpp $(srcdir)/kva_config.cpp $(srcdir)/kva_header.cpp $(srcdir)/kva_clip.cpp $(srcdir)/kva_query.cpp kvoctrain_meta_unload.cpp   kvoctrainview.moc rowtable.moc kvoctrain.moc 
++kvoctrain.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kva_io.cpp $(srcdir)/kvoctrain.cpp $(srcdir)/kvoctrainview.cpp $(srcdir)/rowtable.cpp $(srcdir)/main.cpp $(srcdir)/kva_init.cpp $(srcdir)/kva_config.cpp $(srcdir)/kva_header.cpp $(srcdir)/kva_clip.cpp $(srcdir)/kva_query.cpp $(srcdir)/kvoctrain_meta_unload.cpp   kvoctrainview.moc rowtable.moc kvoctrain.moc 
+ 	@echo 'creating kvoctrain.all_cpp.cpp ...'; \
+ 	rm -f kvoctrain.all_cpp.files kvoctrain.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kvoctrain.all_cpp.final; \

@@ -1,22 +1,13 @@
-$NetBSD: patch-ab,v 1.2 1999/08/31 22:09:42 wrstuden Exp $
+$NetBSD: patch-ab,v 1.2.2.1 2002/06/23 18:55:59 jlam Exp $
 
---- bin/Makefile	Tue Feb 20 08:36:51 1996
-+++ bin/Makefile	Mon Aug 30 06:47:41 1999
-@@ -9,7 +9,7 @@
- 	    ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
- 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}"\
- 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
--	    DESTDIR="${DESTDIR}"
-+	    ATALK_DESTDIR="${ATALK_DESTDIR}"
+--- configure.orig	Thu Mar 28 10:20:55 2002
++++ configure	Wed May 22 00:04:08 2002
+@@ -8267,7 +8267,7 @@
+ fi
  
- FRC:
  
-@@ -26,7 +26,7 @@
- 		ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
- 	        SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
- 	        ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
--		DESTDIR="${DESTDIR}" INSTALL="${INSTALL}" install); \
-+		ATALK_DESTDIR="${ATALK_DESTDIR}" INSTALL="${INSTALL}" install); \
- 	done
+-	NLSDIR="${PKGCONFDIR}/nls"
++	NLSDIR="${prefix}/share/netatalk/nls"
  
- clean:
+ 	# Check whether --with-nls-dir or --without-nls-dir was given.
+ if test "${with_nls_dir+set}" = set; then

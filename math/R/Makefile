@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2002/05/03 12:34:39 markd Exp $
+# $NetBSD: Makefile,v 1.33.2.1 2002/06/23 18:52:29 jlam Exp $
 
 DISTNAME=		R-1.4.1
 PKGREVISION=		2
@@ -9,6 +9,10 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.R-project.org/
 COMMENT=		Statistical language for data analysis and graphics
+
+#needs FPC code not found in older versions of NetBSD
+NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
+			NetBSD-1.5.*-alpha NetBSD-1.5[A-U]-alpha
 
 USE_BUILDLINK_ONLY=	# defined
 USE_X11=		# defined
@@ -84,6 +88,8 @@ post-install:
 	) | ${GREP} -v "lib/R/doc/html/packages.html" |			\
 	${GREP} -v "lib/R/doc/html/search/index.txt" | 			\
 	${SORT} -u >> ${PLIST_SRC}
+	${ECHO} "@unexec ${RM} -f %D/lib/R/doc/html/packages.html" >> ${PLIST_SRC}
+	${ECHO} "@unexec ${RM} -f %D/lib/R/doc/html/search/index.txt" >> ${PLIST_SRC}
 	( cd ${PREFIX};							\
 	  for dir in ${INSTALL_DIRS}; do				\
 		${FIND} $${dir#${PREFIX}/} -type d -print;		\
@@ -91,8 +97,6 @@ post-install:
 	) | ${SORT} -ur | ${SED} -e "s|^|@dirrm |" >> ${PLIST_SRC}
 	${ECHO} "@exec R CMD ${PERL5} %D/lib/R/share/perl/build-help.pl --htmllists 2>/dev/null" >> ${PLIST_SRC}
 	${ECHO} "@exec ${CAT} %D/lib/R/library/*/CONTENTS > %D/lib/R/doc/html/search/index.txt 2>/dev/null" >> ${PLIST_SRC}
-	${ECHO} "@unexec ${RM} -f %D/lib/R/doc/html/packages.html" >> ${PLIST_SRC}
-	${ECHO} "@unexec ${RM} -f %D/lib/R/doc/html/search/index.txt" >> ${PLIST_SRC}
 
 .include "../../devel/readline/buildlink.mk"
 .include "../../devel/zlib/buildlink.mk"

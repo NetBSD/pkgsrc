@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.2.2.2 2002/06/23 18:47:28 jlam Exp $
+
+SHA1 (Uum4.109.tar.gz) = 9d57fa67fc321c0b1101970b02154b5d6e42e88e
+Size (Uum4.109.tar.gz) = 43738 bytes
+SHA1 (Canna35b2.tar.gz) = 66742205272cbc6bd91f272596381f761feac0a2
+Size (Canna35b2.tar.gz) = 1333329 bytes
+SHA1 (patch-aa) = 45cdfd8107ee0beeae878c9940273fc6bca0385a
+SHA1 (patch-ac) = 9b8cd3f8d93c592f4f97956f77dadf118f4f03eb
+SHA1 (patch-ae) = 1ef38a6651f2f619c15d68032787be694a2fa970
+SHA1 (patch-af) = 5860402e3dc72e0d6ddaffc6cf33c017c7e19a34

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2002/04/23 13:31:44 martti Exp $
+# $NetBSD: Makefile,v 1.48.2.1 2002/06/23 18:52:35 jlam Exp $
 #
 
-DISTNAME=		gnumeric-1.0.6
+DISTNAME=		gnumeric-1.0.7
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnumeric/}
 
@@ -14,6 +14,16 @@ ONLY_FOR_PLATFORM=	NetBSD-1.5[R-Z]-* NetBSD-1.5Z[A-Z]-* NetBSD-1.[6-9]*-*
 
 # for Python support a shared libpython is required but not provided yet
 #BUILD_DEPENDS+=		python>=2.0:../../lang/python
+
+BUILDLINK_DEPENDS.gtk=		gtk+>=1.2.7
+BUILDLINK_DEPENDS.libole2=	libole2>=0.2.4
+BUILDLINK_DEPENDS.gnome-print=	gnome-print>=0.29
+BUILDLINK_DEPENDS.bonobo=	bonobo>=1.0.9
+BUILDLINK_DEPENDS.oaf=		oaf>=0.6.2
+BUILDLINK_DEPENDS.libglade=	libglade>=0.16
+BUILDLINK_DEPENDS.gal=		gal>=0.16
+
+DEPENDS+=		scrollkeeper-[0-9]*:../../textproc/scrollkeeper
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
@@ -37,9 +47,13 @@ pre-configure:
 		${MV} $$i.fixed $$i ;					\
 	done
 
+.include "../../print/gnome-print/buildlink.mk"
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../textproc/libxml/buildlink.mk"
+.include "../../devel/oaf/buildlink.mk"
 .include "../../devel/libglade/buildlink.mk"
+.include "../../devel/gal/buildlink.mk"
+.include "../../devel/bonobo/buildlink.mk"
 .include "../../devel/libole2/buildlink.mk"
 .include "../../devel/oaf/buildlink.mk"
 .include "../../devel/gal/buildlink.mk"

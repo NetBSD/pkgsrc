@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.2 2002/03/02 09:10:55 taca Exp $
+$NetBSD: patch-ab,v 1.2.2.1 2002/06/23 18:50:40 jlam Exp $
 
 --- configure.orig	Mon Feb 11 03:05:48 2002
 +++ configure
+@@ -5054,7 +5054,7 @@
+     darwin*)
+ 	LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).$(MAJOR).$(MINOR).$(TEENY).dylib'
+ 	LIBRUBY_LDSHARED='cc -dynamiclib -undefined suppress -flat_namespace'
+-	LIBRUBY_DLDFLAGS='-install_name lib$(RUBY_INSTALL_NAME).dylib -current_version $(MAJOR).$(MINOR).$(TEENY) -compatibility_version $(MAJOR).$(MINOR)'
++	LIBRUBY_DLDFLAGS='-install_name $(prefix)/lib/lib$(RUBY_INSTALL_NAME).dylib -current_version $(MAJOR).$(MINOR).$(TEENY) -compatibility_version $(MAJOR).$(MINOR)'
+ 	LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).$(MAJOR).$(MINOR).dylib lib$(RUBY_INSTALL_NAME).dylib'
+ 	;;
+     *)
 @@ -5444,6 +5444,7 @@
  s%@setup@%$setup%g
  s%@MINIRUBY@%$MINIRUBY%g

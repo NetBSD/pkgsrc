@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.47 2002/03/04 19:41:05 fredb Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.47.2.1 2002/06/23 18:54:41 jlam Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -7,11 +7,6 @@
 #
 #
 # +++ variables +++
-#
-# STRIPFLAG	The flag passed to the install program to cause the binary
-#		to be stripped.  This is to be used when building your
-#		own install script so that the entire system can be made
-#		stripped/not-stripped using a single knob. [-s]
 #
 # OPSYS		Get the operating system type [`uname -s`]
 #
@@ -43,10 +38,6 @@
 
 
 .MAIN: all
-
-.if !defined(DEBUG_FLAGS)
-STRIPFLAG?=	-s
-.endif
 
 AWK?=		/usr/bin/awk
 CAT?=		/bin/cat

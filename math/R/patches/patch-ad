@@ -1,4 +1,4 @@
-$NetSBD$
+$NetBSD: patch-ad,v 1.3.2.1 2002/06/23 18:52:33 jlam Exp $
 
 --- share/sh/help-links.sh.orig	Wed May 23 02:46:18 2001
 +++ share/sh/help-links.sh

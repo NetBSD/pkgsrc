@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.21 2002/04/09 22:15:41 jlam Exp $
+# $NetBSD: defs.Darwin.mk,v 1.21.2.1 2002/06/23 18:54:42 jlam Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -18,7 +18,7 @@ EGREP?=		/usr/bin/egrep
 FALSE?=		false				# Shell builtin
 FILE_CMD?=	/usr/bin/file
 FIND?=		/usr/bin/find
-GMAKE?=		/usr/bin/make
+GMAKE?=		/usr/bin/gnumake
 GREP?=		/usr/bin/grep
 GTAR?=		/usr/bin/gnutar	
 GUNZIP_CMD?=	/usr/bin/gunzip -f
@@ -55,6 +55,7 @@ TYPE?=		type				# Shell builtin
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs
 
+CPP_PRECOMP_FLAGS?=	-no-cpp-precomp	# use the GNU cpp, not the OS X cpp
 DEF_UMASK?=		0022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
 GROUPADD?=		${FALSE}			# XXX - Fix me!
@@ -66,10 +67,10 @@ ROOT_GROUP?=		wheel
 ROOT_USER?=		root
 SERIAL_DEVICES?=	/dev/null
 USERADD?=		${FALSE}			# XXX - Fix me!
-ZOULARISBASE?=		${DESTDIR}/usr/pkg
+ZOULARISBASE?=		${LOCALBASE}
 
 _DO_LIBINTL_CHECKS=	yes	# perform checks for valid libintl
-_DO_SHLIB_CHECKS=	no	# on installation, fixup PLIST for shared libs
+_DO_SHLIB_CHECKS=	yes	# on installation, fixup PLIST for shared libs
 _IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
 _OPSYS_HAS_GMAKE=	yes	# GNU make is standard
 _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages

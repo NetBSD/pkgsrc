@@ -1,0 +1,12 @@
+$NetBSD: patch-ak,v 1.1.1.1.10.2 2002/06/23 18:51:25 jlam Exp $
+
+--- ./uip/spost.c.orig	Wed Dec  2 02:05:00 1998
++++ ./uip/spost.c	Mon Nov  1 19:13:30 1999
+@@ -23,4 +23,7 @@
+ #include	<locale.h>
+ #endif
++#ifdef	UNISTD
++#include <unistd.h>
++#endif
+ 
+ extern char *getfullname (), *getusr ();

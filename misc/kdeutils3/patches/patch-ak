@@ -1,0 +1,246 @@
+$NetBSD: patch-ak,v 1.1.1.1.2.2 2002/06/23 18:53:45 jlam Exp $
+
+--- klaptopdaemon/Makefile.in.orig	Wed May  8 21:11:42 2002
++++ klaptopdaemon/Makefile.in
+@@ -227,18 +227,22 @@
+ x_includes = @x_includes@
+ x_libraries = @x_libraries@
+ 
+-lib_LTLIBRARIES = klaptopdaemon.la
++lib_LTLIBRARIES = libklaptopdaemon_main.la klaptopdaemon.la
+ kde_module_LTLIBRARIES = kcm_laptop.la
+ bin_PROGRAMS = klaptopdaemon
+ SUBDIRS = pics applnk
+ 
+-klaptopdaemon_la_SOURCES = laptop_daemon.cpp kpcmcia.cpp kpcmciainfo.cpp daemondock.cpp notify.cpp portable.cpp
++libklaptopdaemon_main_la_SOURCES = laptop_daemon.cpp kpcmcia.cpp kpcmciainfo.cpp daemondock.cpp notify.cpp portable.cpp
++libklaptopdaemon_main_la_LDFLAGS = $(all_libraries)
++libklaptopdaemon_main_la_LIBADD = $(LIB_KDEUI)
++
++klaptopdaemon_la_SOURCES = klaptopdaemon_main.cpp
+ klaptopdaemon_la_LDFLAGS = $(all_libraries) -module -avoid-version
+-klaptopdaemon_la_LIBADD = $(LIB_KDEUI)
++klaptopdaemon_la_LIBADD = libklaptopdaemon_main.la
+ 
+-klaptopdaemon_SOURCES = dummy.cpp
++klaptopdaemon_SOURCES = klaptopdaemon_main.cpp
+ klaptopdaemon_LDFLAGS = $(all_libraries)
+-klaptopdaemon_LDADD = klaptopdaemon.la
++klaptopdaemon_LDADD = libklaptopdaemon_main.la
+ 
+ kcm_laptop_la_SOURCES = battery.cpp  main.cpp  pcmcia.cpp  power.cpp  warning.cpp portable.cpp
+ 
+@@ -267,25 +271,31 @@
+ 	kcm_laptop_la_meta_unload.lo 
+ @KDE_USE_FINAL_FALSE@kcm_laptop_la_OBJECTS = $(kcm_laptop_la_nofinal_OBJECTS)
+ @KDE_USE_FINAL_TRUE@kcm_laptop_la_OBJECTS = $(kcm_laptop_la_final_OBJECTS)
+-klaptopdaemon_la_DEPENDENCIES =
+-am_klaptopdaemon_la_OBJECTS = laptop_daemon.lo kpcmcia.lo kpcmciainfo.lo \
+-	daemondock.lo notify.lo portable.lo
++klaptopdaemon_la_DEPENDENCIES = libklaptopdaemon_main.la
++am_klaptopdaemon_la_OBJECTS = klaptopdaemon_main.lo
+ #>- klaptopdaemon_la_OBJECTS = $(am_klaptopdaemon_la_OBJECTS)
++#>+ 1
++klaptopdaemon_la_OBJECTS = klaptopdaemon_main.lo
++libklaptopdaemon_main_la_DEPENDENCIES =
++am_libklaptopdaemon_main_la_OBJECTS = laptop_daemon.lo kpcmcia.lo \
++	kpcmciainfo.lo daemondock.lo notify.lo portable.lo
++#>- libklaptopdaemon_main_la_OBJECTS = \
++#>- $(am_libklaptopdaemon_main_la_OBJECTS)
+ #>+ 6
+-klaptopdaemon_la_final_OBJECTS = klaptopdaemon_la.all_cpp.lo 
+-klaptopdaemon_la_nofinal_OBJECTS = laptop_daemon.lo kpcmcia.lo kpcmciainfo.lo \
+-	daemondock.lo notify.lo portable.lo \
+-	klaptopdaemon_la_meta_unload.lo 
+-@KDE_USE_FINAL_FALSE@klaptopdaemon_la_OBJECTS = $(klaptopdaemon_la_nofinal_OBJECTS)
+-@KDE_USE_FINAL_TRUE@klaptopdaemon_la_OBJECTS = $(klaptopdaemon_la_final_OBJECTS)
++libklaptopdaemon_main_la_final_OBJECTS = libklaptopdaemon_main_la.all_cpp.lo 
++libklaptopdaemon_main_la_nofinal_OBJECTS = laptop_daemon.lo kpcmcia.lo \
++	kpcmciainfo.lo daemondock.lo notify.lo portable.lo \
++	libklaptopdaemon_main_la_meta_unload.lo 
++@KDE_USE_FINAL_FALSE@libklaptopdaemon_main_la_OBJECTS = $(libklaptopdaemon_main_la_nofinal_OBJECTS)
++@KDE_USE_FINAL_TRUE@libklaptopdaemon_main_la_OBJECTS = $(libklaptopdaemon_main_la_final_OBJECTS)
+ bin_PROGRAMS = klaptopdaemon$(EXEEXT)
+ PROGRAMS = $(bin_PROGRAMS)
+ 
+-am_klaptopdaemon_OBJECTS = dummy.$(OBJEXT)
++am_klaptopdaemon_OBJECTS = klaptopdaemon_main.$(OBJEXT)
+ #>- klaptopdaemon_OBJECTS = $(am_klaptopdaemon_OBJECTS)
+ #>+ 1
+-klaptopdaemon_OBJECTS = dummy.$(OBJEXT)
+-klaptopdaemon_DEPENDENCIES = klaptopdaemon.la
++klaptopdaemon_OBJECTS = klaptopdaemon_main.$(OBJEXT)
++klaptopdaemon_DEPENDENCIES = libklaptopdaemon_main.la
+ 
+ DEFS = @DEFS@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+@@ -293,8 +303,9 @@
+ LIBS = @LIBS@
+ depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
+ @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/battery.Plo $(DEPDIR)/daemondock.Plo \
+-	@AMDEP_TRUE@	$(DEPDIR)/dummy.Po $(DEPDIR)/kpcmcia.Plo \
+-	@AMDEP_TRUE@	$(DEPDIR)/kpcmciainfo.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/klaptopdaemon_main.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/klaptopdaemon_main.Po \
++	@AMDEP_TRUE@	$(DEPDIR)/kpcmcia.Plo $(DEPDIR)/kpcmciainfo.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/laptop_daemon.Plo $(DEPDIR)/main.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/notify.Plo $(DEPDIR)/pcmcia.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/portable.Plo $(DEPDIR)/power.Plo \
+@@ -319,7 +330,7 @@
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ CXXFLAGS = @CXXFLAGS@
+ DIST_SOURCES = $(kcm_laptop_la_SOURCES) $(klaptopdaemon_la_SOURCES) \
+-	$(klaptopdaemon_SOURCES)
++	$(libklaptopdaemon_main_la_SOURCES) $(klaptopdaemon_SOURCES)
+ 
+ RECURSIVE_TARGETS = info-recursive dvi-recursive install-info-recursive \
+ 	uninstall-info-recursive all-recursive install-data-recursive \
+@@ -327,7 +338,7 @@
+ 	uninstall-recursive check-recursive installcheck-recursive
+ DIST_COMMON = README Makefile.am Makefile.in
+ DIST_SUBDIRS = $(SUBDIRS)
+-SOURCES = $(kcm_laptop_la_SOURCES) $(klaptopdaemon_la_SOURCES) $(klaptopdaemon_SOURCES)
++SOURCES = $(kcm_laptop_la_SOURCES) $(klaptopdaemon_la_SOURCES) $(libklaptopdaemon_main_la_SOURCES) $(klaptopdaemon_SOURCES)
+ 
+ #>- all: all-recursive
+ #>+ 1
+@@ -400,6 +411,8 @@
+ 	$(CXXLINK) -rpath $(kde_moduledir) $(kcm_laptop_la_LDFLAGS) $(kcm_laptop_la_OBJECTS) $(kcm_laptop_la_LIBADD) $(LIBS)
+ klaptopdaemon.la: $(klaptopdaemon_la_OBJECTS) $(klaptopdaemon_la_DEPENDENCIES) 
+ 	$(CXXLINK) -rpath $(libdir) $(klaptopdaemon_la_LDFLAGS) $(klaptopdaemon_la_OBJECTS) $(klaptopdaemon_la_LIBADD) $(LIBS)
++libklaptopdaemon_main.la: $(libklaptopdaemon_main_la_OBJECTS) $(libklaptopdaemon_main_la_DEPENDENCIES) 
++	$(CXXLINK) -rpath $(libdir) $(libklaptopdaemon_main_la_LDFLAGS) $(libklaptopdaemon_main_la_OBJECTS) $(libklaptopdaemon_main_la_LIBADD) $(LIBS)
+ install-binPROGRAMS: $(bin_PROGRAMS)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+@@ -436,7 +449,8 @@
+ 
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/battery.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/daemondock.Plo@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/klaptopdaemon_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/klaptopdaemon_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kpcmcia.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kpcmciainfo.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/laptop_daemon.Plo@am__quote@
+@@ -564,7 +578,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=pcmcia.h configure.in.in battery.h notify.h power.h warning.h kpcmciainfo.h version.h daemondock.h portable.h kpcmcia.h laptop_daemon.h 
++KDE_DIST=power.h warning.h configure.in.in kpcmciainfo.h battery.h version.h klaptopdaemon portable.h daemondock.h pcmcia.h kcm_laptop.la.closure kpcmcia.h laptop_daemon.h notify.h dummy.cpp 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -708,9 +722,6 @@
+ messages:
+ 	$(XGETTEXT) $(klaptopdaemon_la_SOURCES) -o $(podir)/klaptopdaemon.pot
+ 	$(XGETTEXT) $(kcm_laptop_la_SOURCES) -o $(podir)/kcmlaptop.pot
+-
+-dummy.cpp:
+-	echo >dummy.cpp
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
+@@ -792,24 +803,24 @@
+ 
+ 
+ #>+ 12
+-klaptopdaemon_la_meta_unload.cpp:  daemondock.moc kpcmcia.moc notify.moc kpcmciainfo.moc laptop_daemon.moc
+-	@echo 'creating klaptopdaemon_la_meta_unload.cpp'
+-	@-rm -f klaptopdaemon_la_meta_unload.cpp
++libklaptopdaemon_main_la_meta_unload.cpp:  daemondock.moc kpcmcia.moc notify.moc kpcmciainfo.moc laptop_daemon.moc
++	@echo 'creating libklaptopdaemon_main_la_meta_unload.cpp'
++	@-rm -f libklaptopdaemon_main_la_meta_unload.cpp
+ 	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_klaptopdaemon_la[] = {' > klaptopdaemon_la_meta_unload.cpp ;\
+-		cat  daemondock.moc kpcmcia.moc notify.moc kpcmciainfo.moc laptop_daemon.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> klaptopdaemon_la_meta_unload.cpp ;\
+-		echo '0};' >> klaptopdaemon_la_meta_unload.cpp ;\
+-		echo '#include <kunload.h>' >> klaptopdaemon_la_meta_unload.cpp ;\
+-		echo '_UNLOAD(klaptopdaemon_la)' >> klaptopdaemon_la_meta_unload.cpp ;\
+-	else echo > klaptopdaemon_la_meta_unload.cpp; fi
++		echo 'static const char * _metalist_libklaptopdaemon_main_la[] = {' > libklaptopdaemon_main_la_meta_unload.cpp ;\
++		cat  daemondock.moc kpcmcia.moc notify.moc kpcmciainfo.moc laptop_daemon.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libklaptopdaemon_main_la_meta_unload.cpp ;\
++		echo '0};' >> libklaptopdaemon_main_la_meta_unload.cpp ;\
++		echo '#include <kunload.h>' >> libklaptopdaemon_main_la_meta_unload.cpp ;\
++		echo '_UNLOAD(libklaptopdaemon_main_la)' >> libklaptopdaemon_main_la_meta_unload.cpp ;\
++	else echo > libklaptopdaemon_main_la_meta_unload.cpp; fi
+ 
+ 
+ #>+ 3
+ clean-moc-classes:
+-	-rm -f  kcm_laptop_la_meta_unload.cpp klaptopdaemon_la_meta_unload.cpp
++	-rm -f  kcm_laptop_la_meta_unload.cpp libklaptopdaemon_main_la_meta_unload.cpp
+ 
+ #>+ 11
+-kcm_laptop_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/battery.cpp $(srcdir)/main.cpp $(srcdir)/pcmcia.cpp $(srcdir)/power.cpp $(srcdir)/warning.cpp $(srcdir)/portable.cpp kcm_laptop_la_meta_unload.cpp   kpcmciainfo.moc kpcmcia.moc pcmcia.moc daemondock.moc battery.moc notify.moc power.moc warning.moc laptop_daemon.moc 
++kcm_laptop_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/battery.cpp $(srcdir)/main.cpp $(srcdir)/pcmcia.cpp $(srcdir)/power.cpp $(srcdir)/warning.cpp $(srcdir)/portable.cpp $(srcdir)/kcm_laptop_la_meta_unload.cpp   kpcmciainfo.moc kpcmcia.moc pcmcia.moc daemondock.moc battery.moc notify.moc power.moc warning.moc laptop_daemon.moc 
+ 	@echo 'creating kcm_laptop_la.all_cpp.cpp ...'; \
+ 	rm -f kcm_laptop_la.all_cpp.files kcm_laptop_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kcm_laptop_la.all_cpp.final; \
+@@ -821,11 +832,11 @@
+ 	rm -f kcm_laptop_la.all_cpp.final kcm_laptop_la.all_cpp.files
+ 
+ #>+ 11
+-klaptopdaemon_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/laptop_daemon.cpp $(srcdir)/kpcmcia.cpp $(srcdir)/kpcmciainfo.cpp $(srcdir)/daemondock.cpp $(srcdir)/notify.cpp $(srcdir)/portable.cpp klaptopdaemon_la_meta_unload.cpp  
++klaptopdaemon_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/klaptopdaemon_main.cpp  
+ 	@echo 'creating klaptopdaemon_la.all_cpp.cpp ...'; \
+ 	rm -f klaptopdaemon_la.all_cpp.files klaptopdaemon_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> klaptopdaemon_la.all_cpp.final; \
+-	for file in laptop_daemon.cpp kpcmcia.cpp kpcmciainfo.cpp daemondock.cpp notify.cpp portable.cpp klaptopdaemon_la_meta_unload.cpp ; do \
++	for file in klaptopdaemon_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> klaptopdaemon_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> klaptopdaemon_la.all_cpp.final; \
+ 	done; \
+@@ -833,11 +844,23 @@
+ 	rm -f klaptopdaemon_la.all_cpp.final klaptopdaemon_la.all_cpp.files
+ 
+ #>+ 11
+-klaptopdaemon.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
++libklaptopdaemon_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/laptop_daemon.cpp $(srcdir)/kpcmcia.cpp $(srcdir)/kpcmciainfo.cpp $(srcdir)/daemondock.cpp $(srcdir)/notify.cpp $(srcdir)/portable.cpp libklaptopdaemon_main_la_meta_unload.cpp  
++	@echo 'creating libklaptopdaemon_main_la.all_cpp.cpp ...'; \
++	rm -f libklaptopdaemon_main_la.all_cpp.files libklaptopdaemon_main_la.all_cpp.final; \
++	echo "#define KDE_USE_FINAL 1" >> libklaptopdaemon_main_la.all_cpp.final; \
++	for file in laptop_daemon.cpp kpcmcia.cpp kpcmciainfo.cpp daemondock.cpp notify.cpp portable.cpp libklaptopdaemon_main_la_meta_unload.cpp ; do \
++	  echo "#include \"$$file\"" >> libklaptopdaemon_main_la.all_cpp.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libklaptopdaemon_main_la.all_cpp.final; \
++	done; \
++	cat libklaptopdaemon_main_la.all_cpp.final libklaptopdaemon_main_la.all_cpp.files  > libklaptopdaemon_main_la.all_cpp.cpp; \
++	rm -f libklaptopdaemon_main_la.all_cpp.final libklaptopdaemon_main_la.all_cpp.files
++
++#>+ 11
++klaptopdaemon.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/klaptopdaemon_main.cpp  
+ 	@echo 'creating klaptopdaemon.all_cpp.cpp ...'; \
+ 	rm -f klaptopdaemon.all_cpp.files klaptopdaemon.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> klaptopdaemon.all_cpp.final; \
+-	for file in dummy.cpp ; do \
++	for file in klaptopdaemon_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> klaptopdaemon.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> klaptopdaemon.all_cpp.final; \
+ 	done; \
+@@ -846,20 +869,20 @@
+ 
+ #>+ 3
+ clean-final:
+-	-rm -f kcm_laptop_la.all_cpp.cpp klaptopdaemon_la.all_cpp.cpp klaptopdaemon.all_cpp.cpp
++	-rm -f kcm_laptop_la.all_cpp.cpp klaptopdaemon_la.all_cpp.cpp libklaptopdaemon_main_la.all_cpp.cpp klaptopdaemon.all_cpp.cpp
+ 
+ #>+ 2
+ final:
+-	$(MAKE) kcm_laptop_la_OBJECTS="$(kcm_laptop_la_final_OBJECTS)" klaptopdaemon_la_OBJECTS="$(klaptopdaemon_la_final_OBJECTS)" all-am
++	$(MAKE) kcm_laptop_la_OBJECTS="$(kcm_laptop_la_final_OBJECTS)" libklaptopdaemon_main_la_OBJECTS="$(libklaptopdaemon_main_la_final_OBJECTS)" all-am
+ #>+ 2
+ final-install:
+-	$(MAKE) kcm_laptop_la_OBJECTS="$(kcm_laptop_la_final_OBJECTS)" klaptopdaemon_la_OBJECTS="$(klaptopdaemon_la_final_OBJECTS)" install-am
++	$(MAKE) kcm_laptop_la_OBJECTS="$(kcm_laptop_la_final_OBJECTS)" libklaptopdaemon_main_la_OBJECTS="$(libklaptopdaemon_main_la_final_OBJECTS)" install-am
+ #>+ 2
+ no-final:
+-	$(MAKE) kcm_laptop_la_OBJECTS="$(kcm_laptop_la_nofinal_OBJECTS)" klaptopdaemon_la_OBJECTS="$(klaptopdaemon_la_nofinal_OBJECTS)" all-am
++	$(MAKE) kcm_laptop_la_OBJECTS="$(kcm_laptop_la_nofinal_OBJECTS)" libklaptopdaemon_main_la_OBJECTS="$(libklaptopdaemon_main_la_nofinal_OBJECTS)" all-am
+ #>+ 2
+ no-final-install:
+-	$(MAKE) kcm_laptop_la_OBJECTS="$(kcm_laptop_la_nofinal_OBJECTS)" klaptopdaemon_la_OBJECTS="$(klaptopdaemon_la_nofinal_OBJECTS)" install-am
++	$(MAKE) kcm_laptop_la_OBJECTS="$(kcm_laptop_la_nofinal_OBJECTS)" libklaptopdaemon_main_la_OBJECTS="$(libklaptopdaemon_main_la_nofinal_OBJECTS)" install-am
+ #>+ 3
+ cvs-clean:
+ 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean

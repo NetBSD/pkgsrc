@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1.24.2 2002/06/23 18:47:57 jlam Exp $
+sj3/sj3main.dic
+@dirrm sj3/user
+@dirrm sj3

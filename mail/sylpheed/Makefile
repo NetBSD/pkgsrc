@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2002/05/04 07:44:38 uebayasi Exp $
+# $NetBSD: Makefile,v 1.10.2.1 2002/06/23 18:52:20 jlam Exp $
 
-DISTNAME=		sylpheed-0.7.5
+DISTNAME=		sylpheed-0.7.6
 CATEGORIES=		mail news x11
 MASTER_SITES=		http://sylpheed.good-day.net/sylpheed/
 EXTRACT_SUFX=		.tar.bz2
@@ -9,6 +9,8 @@ MAINTAINER=	oishi@ims.ac.jp
 HOMEPAGE=	http://sylpheed.good-day.net/index.cgi.en
 COMMENT=	X based e-mail and netnews client
 
+CONFLICTS=	sylpheed-claws-*
+
 BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK_ONLY=	yes
@@ -16,9 +18,16 @@ USE_GMAKE=		yes
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-nls
-CONFIGURE_ARGS+=	--enable-ipv6
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-gpgme
+CONFIGURE_ARGS+=	--disable-compface
+
+.include "../../mk/bsd.prefs.mk"
+BUILD_DEFS+=		USE_INET6
+
+.if defined(USE_INET6) && ${USE_INET6} == YES
+CONFIGURE_ARGS+=	--enable-ipv6
+.endif
 
 .include "../../security/gpgme/buildlink.mk"
 .include "../../security/openssl/buildlink.mk"

@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2002/05/07 22:49:19 hubertf Exp $
+# $NetBSD: Makefile,v 1.9.2.1 2002/06/23 18:52:25 jlam Exp $
 
-DISTNAME=	teapop-0.3.4
-PKGREVISION=	1
+DISTNAME=	teapop-0.3.5
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.toontown.org/pub/teapop/			\
 		http://www.toontown.org/pub/teapop/
 
-MAINTAINER=	dawszy@netbsd.org
+MAINTAINER=	dawszy@arhea.net
 HOMEPAGE=	http://www.toontown.org/teapop/
 COMMENT=	Yet another RFC1939 compliant POP3 server
 
@@ -21,6 +20,12 @@ CONF_FILES=	${EGDIR}/teapop.passwd ${PKG_SYSCONFDIR}/teapop.passwd
 
 .include "../../mk/bsd.prefs.mk"
 
+.if defined(POP_WITH_DRAC)
+.include "../../mail/drac/buildlink.mk"
+CONFIGURE_ARGS+=	--with-drac=${BUILDLINK_DIR}/lib
+CONFIGURE_ARGS+=	--with-dracinc=${BUILDLINK_DIR}/include
+.endif
+
 .if defined(TEAPOP_WITHOUT_APOP)
 CONFIGURE_ARGS+=--disable-apop
 .endif
@@ -30,9 +35,9 @@ CONFIGURE_ARGS+=--disable-vpop
 .endif
 
 .if defined(TEAPOP_WITH_MYSQL)
-DEPENDS+=      mysql-client>=3.23:../../databases/mysql-client
-CONFIGURE_ARGS+=       --with-mysql=${LOCALBASE}
-LDFLAGS+=      -L${LOCALBASE}/lib/mysql -Wl,-R${LOCALBASE}/lib/mysql
+.include "../../databases/mysql-client/buildlink.mk"
+CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_DIR}
+LDFLAGS+=	-L${BUILDLINK_DIR}/lib/mysql -Wl,-R${LOCALBASE}/lib/mysql
 .endif
 
 post-build:
