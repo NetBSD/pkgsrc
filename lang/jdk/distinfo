@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:31:23 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:00:52 agc Exp $
 
-MD5 (jdk1.1.8-rc1.tgz) = 117e27c001acb7a474261fb5fa7dced2
-MD5 (jdk1.1.8-rc1-elf.tgz) = 3265a7d843e95e472fabdbebcc01c132
+SHA1 (jdk1.1.8-rc1-elf.tgz) = 88483693d388887daf7e6568af924a8ef565c48e
+Size (jdk1.1.8-rc1-elf.tgz) = 9930832 bytes

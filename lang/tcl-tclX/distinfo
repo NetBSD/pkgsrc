@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:32:23 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:01:00 agc Exp $
 
-MD5 (tclX8.2.0.tar.gz) = dc2b6dbafebc765154570b143c585670
+SHA1 (tclX8.2.0.tar.gz) = 51295ad001d9d057e4ec2f13016f6aa4111fdd28
+Size (tclX8.2.0.tar.gz) = 721198 bytes
 SHA1 (patch-aa) = e12481d4b9318d9e57be0d16b8083247a22122e8
 SHA1 (patch-ab) = cfda1a17f27f4b12d31a069032a98739bd31a244
 SHA1 (patch-ac) = 1a7eee5daadc3447f772230422282d12149fbdf7

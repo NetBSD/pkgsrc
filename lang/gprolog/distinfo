@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:31:09 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:00:51 agc Exp $
 
-MD5 (gprolog-1.1.6.tar.gz) = 3d9faa59f8a2548410875ace66badc4d
+SHA1 (gprolog-1.1.6.tar.gz) = 61578cccaf8fa888dc41519dc3a293658d470219
+Size (gprolog-1.1.6.tar.gz) = 1392424 bytes
 SHA1 (patch-aa) = 30e60e40beeaadff6ec67c0b7f04df6bdb0fd9d7
 SHA1 (patch-ab) = 112857bae84dc0e72a4c31c4131f0ba99d97f817
 SHA1 (patch-ac) = b55718ecfab2b4c817316866bcd3f539ced9218a
