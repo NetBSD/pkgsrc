@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2000/09/12 11:56:24 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2000/11/18 00:40:50 tv Exp $
 #
 .include "../../mk/bsd.prefs.mk"
 
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=     jwise@netbsd.org
 HOMEPAGE=       http://www.quick.com.au/java/
+
+CONFLICTS=	blackdown-j* sun-j*
 
 .include "../../mk/bsd.prefs.mk"
 .if !defined(JDK_HOME)
