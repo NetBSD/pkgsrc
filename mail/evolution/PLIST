@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2005/03/22 16:39:39 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.22 2005/03/26 16:21:12 jmmv Exp $
 bin/evolution-2.2
 include/evolution-2.2/calendar/gui/e-cal-config.h
 include/evolution-2.2/e-conduit/e-pilot-map.h
@@ -123,6 +123,7 @@ lib/evolution/2.2/plugins/liborg-gnome-mail-folder-unsubscribe.la
 lib/evolution/2.2/plugins/liborg-gnome-mail-to-task.la
 lib/evolution/2.2/plugins/liborg-gnome-mailing-list-actions.la
 lib/evolution/2.2/plugins/liborg-gnome-mark-calendar-offline.la
+lib/evolution/2.2/plugins/liborg-gnome-new-mail-notify.la
 lib/evolution/2.2/plugins/liborg-gnome-plugin-manager.la
 lib/evolution/2.2/plugins/liborg-gnome-prefer-plain.la
 lib/evolution/2.2/plugins/liborg-gnome-save-attachments.la
@@ -152,6 +153,7 @@ lib/evolution/2.2/plugins/org-gnome-mail-to-task.eplug
 lib/evolution/2.2/plugins/org-gnome-mailing-list-actions.eplug
 lib/evolution/2.2/plugins/org-gnome-mailing-list-actions.xml
 lib/evolution/2.2/plugins/org-gnome-mark-calendar-offline.eplug
+lib/evolution/2.2/plugins/org-gnome-new-mail-notify.eplug
 lib/evolution/2.2/plugins/org-gnome-plugin-manager.eplug
 lib/evolution/2.2/plugins/org-gnome-plugin-manager.xml
 lib/evolution/2.2/plugins/org-gnome-prefer-plain.eplug
