@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2000/09/15 15:59:33 skrll Exp $
+# $NetBSD: Makefile.common,v 1.5 2001/06/14 21:54:36 jlam Exp $
 #
 # common make file fragment shared by all amanda-* pkgs.
 #
@@ -12,15 +12,17 @@ AMANDA_GROUP=		sysadmin
 AMANDA_USER?=		backup
 AMANDA_VAR?=		/var/amanda
 
+BUILD_DEFS+=		AMANDA_USER AMANDA_GROUP AMANDA_SMB AMANDA_VAR
+
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
+
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-user=${AMANDA_USER} \
-			--with-group=${AMANDA_GROUP} \
-			--with-owner=root \
-			--with-mmap --with-amandahosts \
-			--with-includes=${PREFIX}/include \
-			--with-libraries=${PREFIX}/lib \
-			--localstatedir=${AMANDA_VAR} \
-			--with-gnutar-listdir=${AMANDA_VAR}/gnutar-lists \
-			--with-dump-honor-nodump
+CONFIGURE_ARGS+=	--with-user=${AMANDA_USER}
+CONFIGURE_ARGS+=	--with-group=${AMANDA_GROUP}
+CONFIGURE_ARGS+=	--with-owner=root
+CONFIGURE_ARGS+=	--with-mmap
+CONFIGURE_ARGS+=	--with-amandahosts
+CONFIGURE_ARGS+=	--localstatedir=${AMANDA_VAR}
+CONFIGURE_ARGS+=	--with-gnutar-listdir=${AMANDA_VAR}/gnutar-lists
+CONFIGURE_ARGS+=	--with-dump-honor-nodump

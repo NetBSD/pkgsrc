@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/06/11 06:34:49 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2001/06/14 21:54:35 jlam Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -32,8 +32,6 @@ CONFIGURE_ENV+=         ac_cv_lib_curses_tgetent=no
 CONFIGURE_ENV+=         ac_cv_lib_ncurses_tgetent=no
 CONFIGURE_ENV+=         ac_cv_lib_ncurses_tgetent=no
 CONFIGURE_ENV+=         ac_cv_lib_readline_readline=no
-
-BUILD_DEFS+=		AMANDA_USER AMANDA_SMB AMANDA_VAR
 
 .if defined(AMANDA_SMB)
 CONFIGURE_ARGS+=	--with-smbclient
