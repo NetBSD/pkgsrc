@@ -1,99 +1,129 @@
-$NetBSD: patch-bm,v 1.1 2001/10/15 22:46:02 skrll Exp $
+$NetBSD: patch-bm,v 1.2 2001/12/03 15:37:19 skrll Exp $
 
---- khotkeys/khotkeys/Makefile.in.orig	Sat Sep  8 01:36:32 2001
+--- khotkeys/khotkeys/Makefile.in.orig	Sat Nov 10 07:58:25 2001
 +++ khotkeys/khotkeys/Makefile.in
-@@ -277 +277 @@
+@@ -276,17 +276,21 @@
+ x_libraries = @x_libraries@
+ 
+ bin_PROGRAMS = khotkeys
 -lib_LTLIBRARIES = khotkeys.la
 +lib_LTLIBRARIES = libkhotkeys_main.la khotkeys.la
-@@ -279 +279 @@
+ 
 -#>- khotkeys_la_SOURCES = khkglobalaccel.cpp khotkeys.cpp main.cpp 	khotkeys.skel
 +#>- libkhotkeys_main_la_SOURCES = khkglobalaccel.cpp khotkeys.cpp main.cpp 	khotkeys.skel
-@@ -281 +281 @@
+ #>+ 1
 -khotkeys_la_SOURCES=khkglobalaccel.cpp khotkeys.cpp main.cpp 	 khotkeys_skel.cpp
 +libkhotkeys_main_la_SOURCES=khkglobalaccel.cpp khotkeys.cpp main.cpp 	 khotkeys_skel.cpp
-@@ -283 +283,5 @@
+ 
 -khotkeys_la_LIBADD = ../shared/libshared.la -lksycoca
 +libkhotkeys_main_la_LIBADD = ../shared/libshared.la -lksycoca
 +libkhotkeys_main_la_LDFLAGS = $(all_libraries)
 +
 +khotkeys_la_SOURCES = khotkeys_main.cpp
 +khotkeys_la_LIBADD = libkhotkeys_main.la
-@@ -286,2 +290,2 @@
+ khotkeys_la_LDFLAGS = $(all_libraries) -module -avoid-version
+ 
 -khotkeys_SOURCES = dummy.cpp 
 -khotkeys_LDADD = khotkeys.la
 +khotkeys_SOURCES = khotkeys_main.cpp
 +khotkeys_LDADD = libkhotkeys_main.la
-@@ -310,2 +314,2 @@
+ khotkeys_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ 
+ autostart_DATA = khotkeys.desktop
+@@ -309,21 +313,25 @@
+ LIBS = @LIBS@
+ X_CFLAGS = @X_CFLAGS@
+ X_LIBS = @X_LIBS@
 -khotkeys_la_DEPENDENCIES =  ../shared/libshared.la
 -#>- khotkeys_la_OBJECTS =  khkglobalaccel.lo khotkeys.lo main.lo
 +libkhotkeys_main_la_DEPENDENCIES =  ../shared/libshared.la
 +#>- libkhotkeys_main_la_OBJECTS =  khkglobalaccel.lo khotkeys.lo main.lo
-@@ -313,5 +317,9 @@
+ #>+ 5
 -khotkeys_la_final_OBJECTS = khotkeys_la.all_cpp.lo 
 -khotkeys_la_nofinal_OBJECTS = khkglobalaccel.lo khotkeys.lo main.lo khotkeys_skel.lo \
--khotkeys_la_meta_unload.lo 
+-	khotkeys_la_meta_unload.lo 
 -@KDE_USE_FINAL_FALSE@khotkeys_la_OBJECTS = $(khotkeys_la_nofinal_OBJECTS)
 -@KDE_USE_FINAL_TRUE@khotkeys_la_OBJECTS = $(khotkeys_la_final_OBJECTS)
 +libkhotkeys_main_la_final_OBJECTS = libkhotkeys_main_la.all_cpp.lo 
 +libkhotkeys_main_la_nofinal_OBJECTS = khkglobalaccel.lo khotkeys.lo main.lo khotkeys_skel.lo \
-+libkhotkeys_main_la_meta_unload.lo 
++	libkhotkeys_main_la_meta_unload.lo 
 +@KDE_USE_FINAL_FALSE@libkhotkeys_main_la_OBJECTS = $(libkhotkeys_main_la_nofinal_OBJECTS)
 +@KDE_USE_FINAL_TRUE@libkhotkeys_main_la_OBJECTS = $(libkhotkeys_main_la_final_OBJECTS)
 +khotkeys_la_DEPENDENCIES =  libkhotkeys_main.la
 +#>- khotkeys_la_OBJECTS =  khotkeys_main.lo
 +#>+ 1
 +khotkeys_la_OBJECTS = khotkeys_main.lo
-@@ -321 +329 @@
+ bin_PROGRAMS =  khotkeys$(EXEEXT)
+ PROGRAMS =  $(bin_PROGRAMS)
+ 
 -#>- khotkeys_OBJECTS =  dummy.$(OBJEXT)
 +#>- khotkeys_OBJECTS =  khotkeys_main.$(OBJEXT)
-@@ -323,2 +331,2 @@
+ #>+ 1
 -khotkeys_OBJECTS = dummy.$(OBJEXT)
 -khotkeys_DEPENDENCIES =  khotkeys.la
 +khotkeys_OBJECTS = khotkeys_main.$(OBJEXT)
 +khotkeys_DEPENDENCIES =  libkhotkeys_main.la
-@@ -352,2 +360,2 @@
+ CXXFLAGS = @CXXFLAGS@
+ #>- CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ #>+ 1
+@@ -351,8 +359,8 @@
+ 
+ TAR = tar
+ GZIP_ENV = --best
 -SOURCES = $(khotkeys_la_SOURCES) $(khotkeys_SOURCES)
 -OBJECTS = $(khotkeys_la_OBJECTS) $(khotkeys_OBJECTS)
 +SOURCES = $(libkhotkeys_main_la_SOURCES) $(khotkeys_la_SOURCES) $(khotkeys_SOURCES)
 +OBJECTS = $(libkhotkeys_main_la_OBJECTS) $(khotkeys_la_OBJECTS) $(khotkeys_OBJECTS)
-@@ -439,0 +448,3 @@
+ 
+ #>- all: all-redirect
+ #>+ 1
+@@ -439,6 +447,9 @@
+ 
+ maintainer-clean-libtool:
+ 
 +libkhotkeys_main.la: $(libkhotkeys_main_la_OBJECTS) $(libkhotkeys_main_la_DEPENDENCIES)
 +	$(CXXLINK) -rpath $(libdir) $(libkhotkeys_main_la_LDFLAGS) $(libkhotkeys_main_la_OBJECTS) $(libkhotkeys_main_la_LIBADD) $(LIBS)
 +
-@@ -531,11 +541,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
-@@ -640,3 +639,0 @@
+ khotkeys.la: $(khotkeys_la_OBJECTS) $(khotkeys_la_DEPENDENCIES)
+ 	$(CXXLINK) -rpath $(libdir) $(khotkeys_la_LDFLAGS) $(khotkeys_la_OBJECTS) $(khotkeys_la_LIBADD) $(LIBS)
+ 
+@@ -628,9 +639,6 @@
+ 	maintainer-clean-generic clean mostlyclean distclean maintainer-clean
+ 
+ 
 -dummy.cpp:
 -	echo > dummy.cpp
 -
-@@ -680,8 +677,8 @@
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
+@@ -668,28 +676,40 @@
+ 
+ 
+ #>+ 12
 -khotkeys_la_meta_unload.cpp:  khotkeys.moc khkglobalaccel.moc
 -	@echo 'creating khotkeys_la_meta_unload.cpp'
 -	@-rm -f khotkeys_la_meta_unload.cpp
--	@echo 'static const char * _metalist_khotkeys_la[] = {' > khotkeys_la_meta_unload.cpp
--	@cat  khotkeys.moc khkglobalaccel.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> khotkeys_la_meta_unload.cpp
--	@echo '0};' >> khotkeys_la_meta_unload.cpp
--	@echo '#include <kunload.h>' >> khotkeys_la_meta_unload.cpp
--	@echo '_UNLOAD(khotkeys_la)' >> khotkeys_la_meta_unload.cpp
 +libkhotkeys_main_la_meta_unload.cpp:  khotkeys.moc khkglobalaccel.moc
 +	@echo 'creating libkhotkeys_main_la_meta_unload.cpp'
 +	@-rm -f libkhotkeys_main_la_meta_unload.cpp
-+	@echo 'static const char * _metalist_libkhotkeys_main_la[] = {' > libkhotkeys_main_la_meta_unload.cpp
-+	@cat  khotkeys.moc khkglobalaccel.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkhotkeys_main_la_meta_unload.cpp
-+	@echo '0};' >> libkhotkeys_main_la_meta_unload.cpp
-+	@echo '#include <kunload.h>' >> libkhotkeys_main_la_meta_unload.cpp
-+	@echo '_UNLOAD(libkhotkeys_main_la)' >> libkhotkeys_main_la_meta_unload.cpp
-@@ -692 +689,13 @@
+ 	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_khotkeys_la[] = {' > khotkeys_la_meta_unload.cpp ;\
+-		cat  khotkeys.moc khkglobalaccel.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> khotkeys_la_meta_unload.cpp ;\
+-		echo '0};' >> khotkeys_la_meta_unload.cpp ;\
+-		echo '#include <kunload.h>' >> khotkeys_la_meta_unload.cpp ;\
+-		echo '_UNLOAD(khotkeys_la)' >> khotkeys_la_meta_unload.cpp ;\
+-	else echo > khotkeys_la_meta_unload.cpp; fi
++		echo 'static const char * _metalist_libkhotkeys_main_la[] = {' > libkhotkeys_main_la_meta_unload.cpp ;\
++		cat  khotkeys.moc khkglobalaccel.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkhotkeys_main_la_meta_unload.cpp ;\
++		echo '0};' >> libkhotkeys_main_la_meta_unload.cpp ;\
++		echo '#include <kunload.h>' >> libkhotkeys_main_la_meta_unload.cpp ;\
++		echo '_UNLOAD(libkhotkeys_main_la)' >> libkhotkeys_main_la_meta_unload.cpp ;\
++	else echo > libkhotkeys_main_la_meta_unload.cpp; fi
+ 
+ 
+ #>+ 3
+ clean-moc-classes:
 -	-rm -f  khotkeys_la_meta_unload.cpp
 +	-rm -f  libkhotkeys_main_la_meta_unload.cpp
 +
@@ -108,24 +138,55 @@ $NetBSD: patch-bm,v 1.1 2001/10/15 22:46:02 skrll Exp $
 +	done; \
 +	cat libkhotkeys_main_la.all_cpp.final libkhotkeys_main_la.all_cpp.files  > libkhotkeys_main_la.all_cpp.cpp; \
 +	rm -f libkhotkeys_main_la.all_cpp.final libkhotkeys_main_la.all_cpp.files
-@@ -695 +704 @@
+ 
+ #>+ 11
 -khotkeys_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/khkglobalaccel.cpp $(srcdir)/khotkeys.cpp $(srcdir)/main.cpp khotkeys_skel.cpp khotkeys_la_meta_unload.cpp   khotkeys.moc khkglobalaccel.moc 
 +khotkeys_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/khotkeys_main.cpp  
-@@ -699 +708 @@
+ 	@echo 'creating khotkeys_la.all_cpp.cpp ...'; \
+ 	rm -f khotkeys_la.all_cpp.files khotkeys_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> khotkeys_la.all_cpp.final; \
 -	for file in khkglobalaccel.cpp khotkeys.cpp main.cpp khotkeys_skel.cpp khotkeys_la_meta_unload.cpp ; do \
 +	for file in khotkeys_main.cpp ; do \
-@@ -707 +716 @@
+ 	  echo "#include \"$$file\"" >> khotkeys_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> khotkeys_la.all_cpp.final; \
+ 	done; \
+@@ -697,11 +717,11 @@
+ 	rm -f khotkeys_la.all_cpp.final khotkeys_la.all_cpp.files
+ 
+ #>+ 11
 -khotkeys.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
 +khotkeys.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/khotkeys_main.cpp  
-@@ -711 +720 @@
+ 	@echo 'creating khotkeys.all_cpp.cpp ...'; \
+ 	rm -f khotkeys.all_cpp.files khotkeys.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> khotkeys.all_cpp.final; \
 -	for file in dummy.cpp ; do \
 +	for file in khotkeys_main.cpp ; do \
-@@ -720 +729 @@
+ 	  echo "#include \"$$file\"" >> khotkeys.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> khotkeys.all_cpp.final; \
+ 	done; \
+@@ -710,20 +730,20 @@
+ 
+ #>+ 3
+ clean-final:
 -	-rm -f khotkeys_la.all_cpp.cpp khotkeys.all_cpp.cpp
 +	-rm -f libkhotkeys_main_la.all_cpp.cpp khotkeys_la.all_cpp.cpp khotkeys.all_cpp.cpp
-@@ -724 +733 @@
+ 
+ #>+ 2
+ final:
 -	$(MAKE) khotkeys_la_OBJECTS="$(khotkeys_la_final_OBJECTS)" all-am
 +	$(MAKE) libkhotkeys_main_la_OBJECTS="$(libkhotkeys_main_la_final_OBJECTS)" all-am
-@@ -727 +736 @@
+ #>+ 2
+ final-install:
+-	$(MAKE) khotkeys_la_OBJECTS="$(khotkeys_la_final_OBJECTS)" install-am
++	$(MAKE) libkhotkeys_main_la_OBJECTS="$(libkhotkeys_main_la_final_OBJECTS)" install-am
+ #>+ 2
+ no-final:
 -	$(MAKE) khotkeys_la_OBJECTS="$(khotkeys_la_nofinal_OBJECTS)" all-am
 +	$(MAKE) libkhotkeys_main_la_OBJECTS="$(libkhotkeys_main_la_nofinal_OBJECTS)" all-am
+ #>+ 2
+ no-final-install:
+-	$(MAKE) khotkeys_la_OBJECTS="$(khotkeys_la_nofinal_OBJECTS)" install-am
++	$(MAKE) libkhotkeys_main_la_OBJECTS="$(libkhotkeys_main_la_nofinal_OBJECTS)" install-am
+ #>+ 3
+ cvs-clean:
+ 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean

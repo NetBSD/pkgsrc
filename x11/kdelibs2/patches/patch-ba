@@ -1,116 +1,143 @@
-Cannot strip away RCS IDs, please handle manually!
-$NetBSD: patch-ba,v 1.1 2001/10/15 22:46:24 skrll Exp $
+$NetBSD: patch-ba,v 1.2 2001/12/03 15:37:21 skrll Exp $
 
---- kio/http/kcookiejar/Makefile.in.orig	Wed Sep 12 06:10:13 2001
+--- kio/http/kcookiejar/Makefile.in.orig	Tue Nov 13 20:57:18 2001
 +++ kio/http/kcookiejar/Makefile.in
-@@ -2 +2 @@
--# Makefile.in generated automatically by automake 1.4 from Makefile.am
-+# Makefile.in generated automatically by automake 1.4-p5 from Makefile.am
-@@ -4 +4 @@
--# Copyright (C) 1994, 1995-8, 1999 Free Software Foundation, Inc.
-+# Copyright (C) 1994, 1995-8, 1999, 2001 Free Software Foundation, Inc.
-@@ -272 +272 @@
+@@ -265,18 +265,22 @@
+ ####### Files
+ 
+ bin_PROGRAMS = kcookiejar
 -lib_LTLIBRARIES = kcookiejar.la
 +lib_LTLIBRARIES = libkcookiejar_main.la kcookiejar.la
-@@ -274 +274 @@
+ 
 -#>- kcookiejar_la_SOURCES = kcookiejar.cpp kcookieserver.cpp 			kcookieserver.skel kcookiewin.cpp 			kcookiewin.h main.cpp 
 +#>- libkcookiejar_main_la_SOURCES = kcookiejar.cpp kcookieserver.cpp 			kcookieserver.skel kcookiewin.cpp 			kcookiewin.h main.cpp 
-@@ -276 +276 @@
+ #>+ 1
 -kcookiejar_la_SOURCES=kcookiejar.cpp kcookieserver.cpp 			 kcookiewin.cpp 			kcookiewin.h main.cpp  kcookieserver_skel.cpp
 +libkcookiejar_main_la_SOURCES=kcookiejar.cpp kcookieserver.cpp 			 kcookiewin.cpp 			kcookiewin.h main.cpp  kcookieserver_skel.cpp
-@@ -278 +278,5 @@
+ 
 -#>- kcookiejar_la_METASOURCES = AUTO
 +#>- libkcookiejar_main_la_METASOURCES = AUTO
 +libkcookiejar_main_la_LDFLAGS = $(all_libraries)
 +libkcookiejar_main_la_LIBADD = $(LIB_KIO)
 +
 +kcookiejar_la_SOURCES = kcookiejar_main.cpp
-@@ -280 +284 @@
+ kcookiejar_la_LDFLAGS = $(all_libraries) -module -avoid-version
 -kcookiejar_la_LIBADD = $(LIB_KIO)
 +kcookiejar_la_LIBADD = libkcookiejar_main.la
-@@ -282,2 +286,2 @@
+ 
 -kcookiejar_SOURCES = dummy.cpp
 -kcookiejar_LDADD = kcookiejar.la
 +kcookiejar_SOURCES = kcookiejar_main.cpp
 +kcookiejar_LDADD = libkcookiejar_main.la
-@@ -301,3 +305,3 @@
+ kcookiejar_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ 
+ services_DATA = kcookiejar.desktop
+@@ -294,23 +298,27 @@
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
 -kcookiejar_la_DEPENDENCIES = 
 -#>- kcookiejar_la_OBJECTS =  kcookiejar.lo kcookieserver.lo kcookiewin.lo \
 -#>- main.lo
 +libkcookiejar_main_la_DEPENDENCIES = 
 +#>- libkcookiejar_main_la_OBJECTS =  kcookiejar.lo kcookieserver.lo \
 +#>- kcookiewin.lo main.lo
-@@ -305,6 +309,10 @@
+ #>+ 6
 -kcookiejar_la_final_OBJECTS = kcookiejar_la.all_cpp.lo 
 -kcookiejar_la_nofinal_OBJECTS = kcookiejar.lo kcookieserver.lo kcookiewin.lo \
--main.lo kcookieserver_skel.lo \
--kcookiejar_la_meta_unload.lo 
+-	main.lo kcookieserver_skel.lo \
+-	kcookiejar_la_meta_unload.lo 
 -@KDE_USE_FINAL_FALSE@kcookiejar_la_OBJECTS = $(kcookiejar_la_nofinal_OBJECTS)
 -@KDE_USE_FINAL_TRUE@kcookiejar_la_OBJECTS = $(kcookiejar_la_final_OBJECTS)
 +libkcookiejar_main_la_final_OBJECTS = libkcookiejar_main_la.all_cpp.lo 
 +libkcookiejar_main_la_nofinal_OBJECTS = kcookiejar.lo kcookieserver.lo \
-+kcookiewin.lo main.lo kcookieserver_skel.lo \
-+libkcookiejar_main_la_meta_unload.lo 
++	kcookiewin.lo main.lo kcookieserver_skel.lo \
++	libkcookiejar_main_la_meta_unload.lo 
 +@KDE_USE_FINAL_FALSE@libkcookiejar_main_la_OBJECTS = $(libkcookiejar_main_la_nofinal_OBJECTS)
 +@KDE_USE_FINAL_TRUE@libkcookiejar_main_la_OBJECTS = $(libkcookiejar_main_la_final_OBJECTS)
 +kcookiejar_la_DEPENDENCIES =  libkcookiejar_main.la
 +#>- kcookiejar_la_OBJECTS =  kcookiejar_main.lo
 +#>+ 1
 +kcookiejar_la_OBJECTS = kcookiejar_main.lo
-@@ -314 +322 @@
+ bin_PROGRAMS =  kcookiejar$(EXEEXT)
+ PROGRAMS =  $(bin_PROGRAMS)
+ 
 -#>- kcookiejar_OBJECTS =  dummy.$(OBJEXT)
 +#>- kcookiejar_OBJECTS =  kcookiejar_main.$(OBJEXT)
-@@ -316,2 +324,2 @@
+ #>+ 1
 -kcookiejar_OBJECTS = dummy.$(OBJEXT)
 -kcookiejar_DEPENDENCIES =  kcookiejar.la
 +kcookiejar_OBJECTS = kcookiejar_main.$(OBJEXT)
 +kcookiejar_DEPENDENCIES =  libkcookiejar_main.la
-@@ -341 +349 @@
+ CXXFLAGS = @CXXFLAGS@
+ #>- CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ #>+ 1
+@@ -334,15 +342,15 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
 -KDE_DIST=kcookiescfg.upd kcookiejar.desktop kcookieserver.h kcookiejar.h rfc2965 netscape_cookie_spec.html rfc2109 
 +KDE_DIST=netscape_cookie_spec.html kcookiescfg.upd rfc2965 rfc2109 kcookiejar.desktop kcookieserver.h kcookiejar.h 
-@@ -348,2 +356,2 @@
+ 
+ DISTFILES= $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+ 
+ TAR = tar
+ GZIP_ENV = --best
 -SOURCES = $(kcookiejar_la_SOURCES) $(kcookiejar_SOURCES)
 -OBJECTS = $(kcookiejar_la_OBJECTS) $(kcookiejar_OBJECTS)
 +SOURCES = $(libkcookiejar_main_la_SOURCES) $(kcookiejar_la_SOURCES) $(kcookiejar_SOURCES)
 +OBJECTS = $(libkcookiejar_main_la_OBJECTS) $(kcookiejar_la_OBJECTS) $(kcookiejar_OBJECTS)
-@@ -435,0 +444,3 @@
+ 
+ #>- all: all-redirect
+ #>+ 1
+@@ -429,6 +437,9 @@
+ 
+ maintainer-clean-libtool:
+ 
 +libkcookiejar_main.la: $(libkcookiejar_main_la_OBJECTS) $(libkcookiejar_main_la_DEPENDENCIES)
 +	$(CXXLINK) -rpath $(libdir) $(libkcookiejar_main_la_LDFLAGS) $(libkcookiejar_main_la_OBJECTS) $(libkcookiejar_main_la_LIBADD) $(LIBS)
 +
-@@ -546,11 +556,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
-@@ -656,3 +655,0 @@
+ kcookiejar.la: $(kcookiejar_la_OBJECTS) $(kcookiejar_la_DEPENDENCIES)
+ 	$(CXXLINK) -rpath $(libdir) $(kcookiejar_la_LDFLAGS) $(kcookiejar_la_OBJECTS) $(kcookiejar_la_LIBADD) $(LIBS)
+ 
+@@ -638,9 +649,6 @@
+ 	maintainer-clean-generic clean mostlyclean distclean maintainer-clean
+ 
+ 
 -dummy.cpp:
 -	echo > dummy.cpp
 -
-@@ -696,8 +693,8 @@
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
+@@ -678,28 +686,40 @@
+ 
+ 
+ #>+ 12
 -kcookiejar_la_meta_unload.cpp:  kcookieserver.moc kcookiewin.moc
 -	@echo 'creating kcookiejar_la_meta_unload.cpp'
 -	@-rm -f kcookiejar_la_meta_unload.cpp
--	@echo 'static const char * _metalist_kcookiejar_la[] = {' > kcookiejar_la_meta_unload.cpp
--	@cat  kcookieserver.moc kcookiewin.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kcookiejar_la_meta_unload.cpp
--	@echo '0};' >> kcookiejar_la_meta_unload.cpp
--	@echo '#include <kunload.h>' >> kcookiejar_la_meta_unload.cpp
--	@echo '_UNLOAD(kcookiejar_la)' >> kcookiejar_la_meta_unload.cpp
 +libkcookiejar_main_la_meta_unload.cpp:  kcookieserver.moc kcookiewin.moc
 +	@echo 'creating libkcookiejar_main_la_meta_unload.cpp'
 +	@-rm -f libkcookiejar_main_la_meta_unload.cpp
-+	@echo 'static const char * _metalist_libkcookiejar_main_la[] = {' > libkcookiejar_main_la_meta_unload.cpp
-+	@cat  kcookieserver.moc kcookiewin.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkcookiejar_main_la_meta_unload.cpp
-+	@echo '0};' >> libkcookiejar_main_la_meta_unload.cpp
-+	@echo '#include <kunload.h>' >> libkcookiejar_main_la_meta_unload.cpp
-+	@echo '_UNLOAD(libkcookiejar_main_la)' >> libkcookiejar_main_la_meta_unload.cpp
-@@ -708 +705,13 @@
+ 	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_kcookiejar_la[] = {' > kcookiejar_la_meta_unload.cpp ;\
+-		cat  kcookieserver.moc kcookiewin.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kcookiejar_la_meta_unload.cpp ;\
+-		echo '0};' >> kcookiejar_la_meta_unload.cpp ;\
+-		echo '#include <kunload.h>' >> kcookiejar_la_meta_unload.cpp ;\
+-		echo '_UNLOAD(kcookiejar_la)' >> kcookiejar_la_meta_unload.cpp ;\
+-	else echo > kcookiejar_la_meta_unload.cpp; fi
++		echo 'static const char * _metalist_libkcookiejar_main_la[] = {' > libkcookiejar_main_la_meta_unload.cpp ;\
++		cat  kcookieserver.moc kcookiewin.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkcookiejar_main_la_meta_unload.cpp ;\
++		echo '0};' >> libkcookiejar_main_la_meta_unload.cpp ;\
++		echo '#include <kunload.h>' >> libkcookiejar_main_la_meta_unload.cpp ;\
++		echo '_UNLOAD(libkcookiejar_main_la)' >> libkcookiejar_main_la_meta_unload.cpp ;\
++	else echo > libkcookiejar_main_la_meta_unload.cpp; fi
+ 
+ 
+ #>+ 3
+ clean-moc-classes:
 -	-rm -f  kcookiejar_la_meta_unload.cpp
 +	-rm -f  libkcookiejar_main_la_meta_unload.cpp
 +
@@ -125,24 +152,55 @@ $NetBSD: patch-ba,v 1.1 2001/10/15 22:46:24 skrll Exp $
 +	done; \
 +	cat libkcookiejar_main_la.all_cpp.final libkcookiejar_main_la.all_cpp.files  > libkcookiejar_main_la.all_cpp.cpp; \
 +	rm -f libkcookiejar_main_la.all_cpp.final libkcookiejar_main_la.all_cpp.files
-@@ -711 +720 @@
+ 
+ #>+ 11
 -kcookiejar_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kcookiejar.cpp $(srcdir)/kcookieserver.cpp $(srcdir)/kcookiewin.cpp $(srcdir)/main.cpp kcookieserver_skel.cpp kcookiejar_la_meta_unload.cpp   kcookieserver.moc kcookiewin.moc 
 +kcookiejar_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kcookiejar_main.cpp  
-@@ -715 +724 @@
+ 	@echo 'creating kcookiejar_la.all_cpp.cpp ...'; \
+ 	rm -f kcookiejar_la.all_cpp.files kcookiejar_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kcookiejar_la.all_cpp.final; \
 -	for file in kcookiejar.cpp kcookieserver.cpp kcookiewin.cpp main.cpp kcookieserver_skel.cpp kcookiejar_la_meta_unload.cpp ; do \
 +	for file in kcookiejar_main.cpp ; do \
-@@ -723 +732 @@
+ 	  echo "#include \"$$file\"" >> kcookiejar_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kcookiejar_la.all_cpp.final; \
+ 	done; \
+@@ -707,11 +727,11 @@
+ 	rm -f kcookiejar_la.all_cpp.final kcookiejar_la.all_cpp.files
+ 
+ #>+ 11
 -kcookiejar.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
 +kcookiejar.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kcookiejar_main.cpp  
-@@ -727 +736 @@
+ 	@echo 'creating kcookiejar.all_cpp.cpp ...'; \
+ 	rm -f kcookiejar.all_cpp.files kcookiejar.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kcookiejar.all_cpp.final; \
 -	for file in dummy.cpp ; do \
 +	for file in kcookiejar_main.cpp ; do \
-@@ -736 +745 @@
+ 	  echo "#include \"$$file\"" >> kcookiejar.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kcookiejar.all_cpp.final; \
+ 	done; \
+@@ -720,20 +740,20 @@
+ 
+ #>+ 3
+ clean-final:
 -	-rm -f kcookiejar_la.all_cpp.cpp kcookiejar.all_cpp.cpp
 +	-rm -f libkcookiejar_main_la.all_cpp.cpp kcookiejar_la.all_cpp.cpp kcookiejar.all_cpp.cpp
-@@ -740 +749 @@
+ 
+ #>+ 2
+ final:
 -	$(MAKE) kcookiejar_la_OBJECTS="$(kcookiejar_la_final_OBJECTS)" all-am
 +	$(MAKE) libkcookiejar_main_la_OBJECTS="$(libkcookiejar_main_la_final_OBJECTS)" all-am
-@@ -743 +752 @@
+ #>+ 2
+ final-install:
+-	$(MAKE) kcookiejar_la_OBJECTS="$(kcookiejar_la_final_OBJECTS)" install-am
++	$(MAKE) libkcookiejar_main_la_OBJECTS="$(libkcookiejar_main_la_final_OBJECTS)" install-am
+ #>+ 2
+ no-final:
 -	$(MAKE) kcookiejar_la_OBJECTS="$(kcookiejar_la_nofinal_OBJECTS)" all-am
 +	$(MAKE) libkcookiejar_main_la_OBJECTS="$(libkcookiejar_main_la_nofinal_OBJECTS)" all-am
+ #>+ 2
+ no-final-install:
+-	$(MAKE) kcookiejar_la_OBJECTS="$(kcookiejar_la_nofinal_OBJECTS)" install-am
++	$(MAKE) libkcookiejar_main_la_OBJECTS="$(libkcookiejar_main_la_nofinal_OBJECTS)" install-am
+ #>+ 3
+ cvs-clean:
+ 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean

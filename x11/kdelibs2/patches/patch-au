@@ -1,116 +1,153 @@
-Cannot strip away RCS IDs, please handle manually!
-$NetBSD: patch-au,v 1.3 2001/10/15 22:46:23 skrll Exp $
+$NetBSD: patch-au,v 1.4 2001/12/03 15:37:21 skrll Exp $
 
---- kio/Makefile.in.orig	Wed Sep 12 06:10:12 2001
+--- kio/Makefile.in.orig	Tue Nov 13 20:57:17 2001
 +++ kio/Makefile.in
-@@ -2 +2 @@
--# Makefile.in generated automatically by automake 1.4 from Makefile.am
-+# Makefile.in generated automatically by automake 1.4-p5 from Makefile.am
-@@ -4 +4 @@
--# Copyright (C) 1994, 1995-8, 1999 Free Software Foundation, Inc.
-+# Copyright (C) 1994, 1995-8, 1999, 2001 Free Software Foundation, Inc.
-@@ -287 +287 @@
+@@ -280,7 +280,7 @@
+ SUBDIRS = . klauncher kded file http ftp pics tests ksendbugmail kpac 	gzip kssld $(BZIP2DIR)
+ 
+ 
 -lib_LTLIBRARIES = libkio.la libksycoca.la kio_uiserver.la
 +lib_LTLIBRARIES = libkio.la libksycoca.la libkio_uiserver_main.la kio_uiserver.la
-@@ -311,2 +311,2 @@
+ bin_PROGRAMS = kio_uiserver kmailservice
+ 
+ #libkioslave_la_LDFLAGS = -version-info 3:0
+@@ -304,15 +304,19 @@
+ libkio_la_SOURCES=kshred.cpp 	kprotocolmanager.cpp 	slave.cpp slaveinterface.cpp 	sessiondata.cpp	scheduler.cpp 	connection.cpp 	job.cpp global.cpp 	slaveconfig.cpp 	netaccess.cpp paste.cpp 	kmimemagic.cpp 	tcpslavebase.cpp slavebase.cpp passdlg.cpp 	progressbase.cpp defaultprogress.cpp 	statusbarprogress.cpp 	kdirnotify.cpp   	observer.cpp   	kemailsettings.cpp authinfo.cpp 	kprotocolinfo.cpp kprotocolinfofactory.cpp kdirnotify_skel.cpp kdirnotify_stub.cpp uiserver_stub.cpp observer_skel.cpp
+ 
+ 
 -kio_uiserver_SOURCES = dummy.cpp
 -kio_uiserver_LDADD = kio_uiserver.la
 +kio_uiserver_SOURCES = kio_uiserver_main.cpp
 +kio_uiserver_LDADD = libkio_uiserver_main.la
-@@ -315 +315 @@
+ kio_uiserver_LDFLAGS = $(KDE_RPATH) $(all_libraries)
+ 
 -#>- kio_uiserver_la_SOURCES = uiserver.cpp uiserver.skel observer.stub 	renamedlg.cpp skipdlg.cpp
 +#>- libkio_uiserver_main_la_SOURCES = uiserver.cpp uiserver.skel observer.stub 	renamedlg.cpp skipdlg.cpp
-@@ -317 +317 @@
+ #>+ 1
 -kio_uiserver_la_SOURCES=uiserver.cpp   	renamedlg.cpp skipdlg.cpp uiserver_skel.cpp observer_stub.cpp
 +libkio_uiserver_main_la_SOURCES=uiserver.cpp   	renamedlg.cpp skipdlg.cpp uiserver_skel.cpp observer_stub.cpp
-@@ -319 +319,5 @@
+ 
 -kio_uiserver_la_LIBADD = libksycoca.la ../kssl/libkssl.la ../kdesu/libkdesu.la
 +libkio_uiserver_main_la_LIBADD = libksycoca.la ../kssl/libkssl.la ../kdesu/libkdesu.la
 +libkio_uiserver_main_la_LDFLAGS = $(all_libraries)
 +
 +kio_uiserver_la_SOURCES = kio_uiserver_main.cpp
 +kio_uiserver_la_LIBADD = libkio_uiserver_main.la
-@@ -399 +403 @@
+ kio_uiserver_la_LDFLAGS = $(all_libraries) -module -avoid-version
+ 
+ #>- METASOURCES = AUTO
+@@ -392,22 +396,26 @@
+ 	libksycoca_la_meta_unload.lo 
+ @KDE_USE_FINAL_FALSE@libksycoca_la_OBJECTS = $(libksycoca_la_nofinal_OBJECTS)
+ @KDE_USE_FINAL_TRUE@libksycoca_la_OBJECTS = $(libksycoca_la_final_OBJECTS)
 -kio_uiserver_la_DEPENDENCIES =  libksycoca.la ../kssl/libkssl.la \
 +libkio_uiserver_main_la_DEPENDENCIES =  libksycoca.la ../kssl/libkssl.la \
-@@ -401 +405 @@
+ 	../kdesu/libkdesu.la
 -#>- kio_uiserver_la_OBJECTS =  uiserver.lo renamedlg.lo skipdlg.lo
 +#>- libkio_uiserver_main_la_OBJECTS =  uiserver.lo renamedlg.lo skipdlg.lo
-@@ -403,5 +407,9 @@
+ #>+ 5
 -kio_uiserver_la_final_OBJECTS = kio_uiserver_la.all_cpp.lo 
 -kio_uiserver_la_nofinal_OBJECTS = uiserver.lo renamedlg.lo skipdlg.lo uiserver_skel.lo observer_stub.lo \
--kio_uiserver_la_meta_unload.lo 
+-	kio_uiserver_la_meta_unload.lo 
 -@KDE_USE_FINAL_FALSE@kio_uiserver_la_OBJECTS = $(kio_uiserver_la_nofinal_OBJECTS)
 -@KDE_USE_FINAL_TRUE@kio_uiserver_la_OBJECTS = $(kio_uiserver_la_final_OBJECTS)
 +libkio_uiserver_main_la_final_OBJECTS = libkio_uiserver_main_la.all_cpp.lo 
 +libkio_uiserver_main_la_nofinal_OBJECTS = uiserver.lo renamedlg.lo skipdlg.lo uiserver_skel.lo observer_stub.lo \
-+libkio_uiserver_main_la_meta_unload.lo 
++	libkio_uiserver_main_la_meta_unload.lo 
 +@KDE_USE_FINAL_FALSE@libkio_uiserver_main_la_OBJECTS = $(libkio_uiserver_main_la_nofinal_OBJECTS)
 +@KDE_USE_FINAL_TRUE@libkio_uiserver_main_la_OBJECTS = $(libkio_uiserver_main_la_final_OBJECTS)
 +kio_uiserver_la_DEPENDENCIES =  libkio_uiserver_main.la
 +#>- kio_uiserver_la_OBJECTS =  kio_uiserver_main.lo
 +#>+ 1
 +kio_uiserver_la_OBJECTS = kio_uiserver_main.lo
-@@ -411 +419 @@
+ bin_PROGRAMS =  kio_uiserver$(EXEEXT) kmailservice$(EXEEXT)
+ PROGRAMS =  $(bin_PROGRAMS)
+ 
 -#>- kio_uiserver_OBJECTS =  dummy.$(OBJEXT)
 +#>- kio_uiserver_OBJECTS =  kio_uiserver_main.$(OBJEXT)
-@@ -413,2 +421,2 @@
+ #>+ 1
 -kio_uiserver_OBJECTS = dummy.$(OBJEXT)
 -kio_uiserver_DEPENDENCIES =  kio_uiserver.la
 +kio_uiserver_OBJECTS = kio_uiserver_main.$(OBJEXT)
 +kio_uiserver_DEPENDENCIES =  libkio_uiserver_main.la
-@@ -445 +453 @@
+ #>- kmailservice_OBJECTS =  kmailservice.$(OBJEXT)
+ #>+ 1
+ kmailservice_OBJECTS = kmailservice.$(OBJEXT)
+@@ -438,15 +446,15 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
 -KDE_DIST=DESIGN.metadata kcomprfilter.desktop application.desktop kioslave.upd proxytype.pl DESIGN configure.in.in DESIGN.krun rlogin.protocol kurifilterplugin.desktop lex.l kscan.desktop kio_uiserver.desktop ktypecode.h useragent.pl kmailservice.protocol yacc.y kservicegroupfactory.h design.h telnet.protocol magic DESKTOP_ENTRY_STANDARD 
 +KDE_DIST=DESIGN.metadata kcomprfilter.desktop application.desktop kioslave.upd proxytype.pl DESIGN configure.in.in DESIGN.krun rlogin.protocol kurifilterplugin.desktop lex.l kio_uiserver.desktop kscan.desktop ktypecode.h useragent.pl kmailservice.protocol yacc.y kservicegroupfactory.h design.h telnet.protocol magic DESKTOP_ENTRY_STANDARD 
-@@ -452,2 +460,2 @@
+ 
+ DISTFILES= $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+ 
+ TAR = tar
+ GZIP_ENV = --best
 -SOURCES = $(libkio_la_SOURCES) $(libksycoca_la_SOURCES) $(kio_uiserver_la_SOURCES) $(kio_uiserver_SOURCES) $(kmailservice_SOURCES)
 -OBJECTS = $(libkio_la_OBJECTS) $(libksycoca_la_OBJECTS) $(kio_uiserver_la_OBJECTS) $(kio_uiserver_OBJECTS) $(kmailservice_OBJECTS)
 +SOURCES = $(libkio_la_SOURCES) $(libksycoca_la_SOURCES) $(libkio_uiserver_main_la_SOURCES) $(kio_uiserver_la_SOURCES) $(kio_uiserver_SOURCES) $(kmailservice_SOURCES)
 +OBJECTS = $(libkio_la_OBJECTS) $(libksycoca_la_OBJECTS) $(libkio_uiserver_main_la_OBJECTS) $(kio_uiserver_la_OBJECTS) $(kio_uiserver_OBJECTS) $(kmailservice_OBJECTS)
-@@ -551,0 +560,3 @@
+ 
+ #>- all: all-redirect
+ #>+ 1
+@@ -545,6 +553,9 @@
+ @KDE_USE_CLOSURE_FALSE@libksycoca.la: $(libksycoca_la_OBJECTS) $(libksycoca_la_DEPENDENCIES)
+ 	$(CXXLINK) -rpath $(libdir) $(libksycoca_la_LDFLAGS) $(libksycoca_la_OBJECTS) $(libksycoca_la_LIBADD) $(LIBS)
+ 
 +libkio_uiserver_main.la: $(libkio_uiserver_main_la_OBJECTS) $(libkio_uiserver_main_la_DEPENDENCIES)
 +	$(CXXLINK) -rpath $(libdir) $(libkio_uiserver_main_la_LDFLAGS) $(libkio_uiserver_main_la_OBJECTS) $(libkio_uiserver_main_la_LIBADD) $(LIBS)
 +
-@@ -755 +766 @@
--	  test "$$subdir" = "." && dot_seen=yes; \
-+	  test "$$subdir" != "." || dot_seen=yes; \
-@@ -813,11 +823,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
-@@ -958,3 +957,0 @@
+ kio_uiserver.la: $(kio_uiserver_la_OBJECTS) $(kio_uiserver_la_DEPENDENCIES)
+ 	$(CXXLINK) -rpath $(libdir) $(kio_uiserver_la_LDFLAGS) $(kio_uiserver_la_OBJECTS) $(kio_uiserver_la_LIBADD) $(LIBS)
+ 
+@@ -940,9 +951,6 @@
+ #kdirnotify_stub.h
+ $(srcdir)/kmimetype.cpp: kdirnotify_stub.h
+ 
 -dummy.cpp: uiserver.kidl
 -	echo > dummy.cpp
 -
-@@ -1176,8 +1173,8 @@
+ parser: $(parserfiles)
+ 	cd $(srcdir) ;\
+ 	flex -olex.c -Pkiotrader lex.l ;\
+@@ -1162,21 +1170,21 @@
+ 
+ 
+ #>+ 12
 -kio_uiserver_la_meta_unload.cpp:  renamedlg.moc uiserver.moc skipdlg.moc
 -	@echo 'creating kio_uiserver_la_meta_unload.cpp'
 -	@-rm -f kio_uiserver_la_meta_unload.cpp
--	@echo 'static const char * _metalist_kio_uiserver_la[] = {' > kio_uiserver_la_meta_unload.cpp
--	@cat  renamedlg.moc uiserver.moc skipdlg.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kio_uiserver_la_meta_unload.cpp
--	@echo '0};' >> kio_uiserver_la_meta_unload.cpp
--	@echo '#include <kunload.h>' >> kio_uiserver_la_meta_unload.cpp
--	@echo '_UNLOAD(kio_uiserver_la)' >> kio_uiserver_la_meta_unload.cpp
 +libkio_uiserver_main_la_meta_unload.cpp:  renamedlg.moc uiserver.moc skipdlg.moc
 +	@echo 'creating libkio_uiserver_main_la_meta_unload.cpp'
 +	@-rm -f libkio_uiserver_main_la_meta_unload.cpp
-+	@echo 'static const char * _metalist_libkio_uiserver_main_la[] = {' > libkio_uiserver_main_la_meta_unload.cpp
-+	@cat  renamedlg.moc uiserver.moc skipdlg.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkio_uiserver_main_la_meta_unload.cpp
-+	@echo '0};' >> libkio_uiserver_main_la_meta_unload.cpp
-+	@echo '#include <kunload.h>' >> libkio_uiserver_main_la_meta_unload.cpp
-+	@echo '_UNLOAD(libkio_uiserver_main_la)' >> libkio_uiserver_main_la_meta_unload.cpp
-@@ -1188 +1185 @@
+ 	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_kio_uiserver_la[] = {' > kio_uiserver_la_meta_unload.cpp ;\
+-		cat  renamedlg.moc uiserver.moc skipdlg.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kio_uiserver_la_meta_unload.cpp ;\
+-		echo '0};' >> kio_uiserver_la_meta_unload.cpp ;\
+-		echo '#include <kunload.h>' >> kio_uiserver_la_meta_unload.cpp ;\
+-		echo '_UNLOAD(kio_uiserver_la)' >> kio_uiserver_la_meta_unload.cpp ;\
+-	else echo > kio_uiserver_la_meta_unload.cpp; fi
++		echo 'static const char * _metalist_libkio_uiserver_main_la[] = {' > libkio_uiserver_main_la_meta_unload.cpp ;\
++		cat  renamedlg.moc uiserver.moc skipdlg.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkio_uiserver_main_la_meta_unload.cpp ;\
++		echo '0};' >> libkio_uiserver_main_la_meta_unload.cpp ;\
++		echo '#include <kunload.h>' >> libkio_uiserver_main_la_meta_unload.cpp ;\
++		echo '_UNLOAD(libkio_uiserver_main_la)' >> libkio_uiserver_main_la_meta_unload.cpp ;\
++	else echo > libkio_uiserver_main_la_meta_unload.cpp; fi
+ 
+ 
+ #>+ 3
+ clean-moc-classes:
 -	-rm -f  libkio_la_meta_unload.cpp libksycoca_la_meta_unload.cpp kio_uiserver_la_meta_unload.cpp
 +	-rm -f  libkio_la_meta_unload.cpp libksycoca_la_meta_unload.cpp libkio_uiserver_main_la_meta_unload.cpp
-@@ -1215 +1212,13 @@
+ 
+ #>+ 11
+ libkio_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kshred.cpp $(srcdir)/kprotocolmanager.cpp $(srcdir)/slave.cpp $(srcdir)/slaveinterface.cpp $(srcdir)/sessiondata.cpp $(srcdir)/scheduler.cpp $(srcdir)/connection.cpp $(srcdir)/job.cpp $(srcdir)/global.cpp $(srcdir)/slaveconfig.cpp $(srcdir)/netaccess.cpp $(srcdir)/paste.cpp $(srcdir)/kmimemagic.cpp $(srcdir)/tcpslavebase.cpp $(srcdir)/slavebase.cpp $(srcdir)/passdlg.cpp $(srcdir)/progressbase.cpp $(srcdir)/defaultprogress.cpp $(srcdir)/statusbarprogress.cpp $(srcdir)/kdirnotify.cpp $(srcdir)/observer.cpp $(srcdir)/kemailsettings.cpp $(srcdir)/authinfo.cpp $(srcdir)/kprotocolinfo.cpp $(srcdir)/kprotocolinfofactory.cpp kdirnotify_skel.cpp kdirnotify_stub.cpp uiserver_stub.cpp observer_skel.cpp libkio_la_meta_unload.cpp   jobclasses.moc ktrader.moc passdlg.moc kfilterbase.moc sessiondata.moc statusbarprogress.moc krun.moc slaveconfig.moc kurlcompletion.moc defaultprogress.moc kscan.moc kdirwatch.moc previewjob.moc slaveinterface.moc renamedlg.moc chmodjob.moc kdirlister.moc observer.moc uiserver.moc slave.moc kautomount.moc kurifilter.moc skipdlg.moc netaccess.moc kshred.moc kshellcompletion.moc connection.moc progressbase.moc scheduler.moc 
+@@ -1203,11 +1211,23 @@
+ 	rm -f libksycoca_la.all_cpp.final libksycoca_la.all_cpp.files
+ 
+ #>+ 11
 -kio_uiserver_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/uiserver.cpp $(srcdir)/renamedlg.cpp $(srcdir)/skipdlg.cpp uiserver_skel.cpp observer_stub.cpp kio_uiserver_la_meta_unload.cpp  
 +libkio_uiserver_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/uiserver.cpp $(srcdir)/renamedlg.cpp $(srcdir)/skipdlg.cpp uiserver_skel.cpp observer_stub.cpp libkio_uiserver_main_la_meta_unload.cpp  
 +	@echo 'creating libkio_uiserver_main_la.all_cpp.cpp ...'; \
@@ -125,21 +162,51 @@ $NetBSD: patch-au,v 1.3 2001/10/15 22:46:23 skrll Exp $
 +
 +#>+ 11
 +kio_uiserver_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kio_uiserver_main.cpp  
-@@ -1219 +1228 @@
+ 	@echo 'creating kio_uiserver_la.all_cpp.cpp ...'; \
+ 	rm -f kio_uiserver_la.all_cpp.files kio_uiserver_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kio_uiserver_la.all_cpp.final; \
 -	for file in uiserver.cpp renamedlg.cpp skipdlg.cpp uiserver_skel.cpp observer_stub.cpp kio_uiserver_la_meta_unload.cpp ; do \
 +	for file in kio_uiserver_main.cpp ; do \
-@@ -1227 +1236 @@
+ 	  echo "#include \"$$file\"" >> kio_uiserver_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kio_uiserver_la.all_cpp.final; \
+ 	done; \
+@@ -1215,11 +1235,11 @@
+ 	rm -f kio_uiserver_la.all_cpp.final kio_uiserver_la.all_cpp.files
+ 
+ #>+ 11
 -kio_uiserver.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
 +kio_uiserver.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kio_uiserver_main.cpp  
-@@ -1231 +1240 @@
+ 	@echo 'creating kio_uiserver.all_cpp.cpp ...'; \
+ 	rm -f kio_uiserver.all_cpp.files kio_uiserver.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kio_uiserver.all_cpp.final; \
 -	for file in dummy.cpp ; do \
 +	for file in kio_uiserver_main.cpp ; do \
-@@ -1252 +1261 @@
+ 	  echo "#include \"$$file\"" >> kio_uiserver.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kio_uiserver.all_cpp.final; \
+ 	done; \
+@@ -1240,20 +1260,20 @@
+ 
+ #>+ 3
+ clean-final:
 -	-rm -f libkio_la.all_cpp.cpp libksycoca_la.all_cpp.cpp kio_uiserver_la.all_cpp.cpp kio_uiserver.all_cpp.cpp kmailservice.all_cpp.cpp
 +	-rm -f libkio_la.all_cpp.cpp libksycoca_la.all_cpp.cpp libkio_uiserver_main_la.all_cpp.cpp kio_uiserver_la.all_cpp.cpp kio_uiserver.all_cpp.cpp kmailservice.all_cpp.cpp
-@@ -1256 +1265 @@
+ 
+ #>+ 2
+ final:
 -	$(MAKE) libkio_la_OBJECTS="$(libkio_la_final_OBJECTS)" libksycoca_la_OBJECTS="$(libksycoca_la_final_OBJECTS)" kio_uiserver_la_OBJECTS="$(kio_uiserver_la_final_OBJECTS)" all-am
 +	$(MAKE) libkio_la_OBJECTS="$(libkio_la_final_OBJECTS)" libksycoca_la_OBJECTS="$(libksycoca_la_final_OBJECTS)" libkio_uiserver_main_la_OBJECTS="$(libkio_uiserver_main_la_final_OBJECTS)" all-am
-@@ -1259 +1268 @@
+ #>+ 2
+ final-install:
+-	$(MAKE) libkio_la_OBJECTS="$(libkio_la_final_OBJECTS)" libksycoca_la_OBJECTS="$(libksycoca_la_final_OBJECTS)" kio_uiserver_la_OBJECTS="$(kio_uiserver_la_final_OBJECTS)" install-am
++	$(MAKE) libkio_la_OBJECTS="$(libkio_la_final_OBJECTS)" libksycoca_la_OBJECTS="$(libksycoca_la_final_OBJECTS)" libkio_uiserver_main_la_OBJECTS="$(libkio_uiserver_main_la_final_OBJECTS)" install-am
+ #>+ 2
+ no-final:
 -	$(MAKE) libkio_la_OBJECTS="$(libkio_la_nofinal_OBJECTS)" libksycoca_la_OBJECTS="$(libksycoca_la_nofinal_OBJECTS)" kio_uiserver_la_OBJECTS="$(kio_uiserver_la_nofinal_OBJECTS)" all-am
 +	$(MAKE) libkio_la_OBJECTS="$(libkio_la_nofinal_OBJECTS)" libksycoca_la_OBJECTS="$(libksycoca_la_nofinal_OBJECTS)" libkio_uiserver_main_la_OBJECTS="$(libkio_uiserver_main_la_nofinal_OBJECTS)" all-am
+ #>+ 2
+ no-final-install:
+-	$(MAKE) libkio_la_OBJECTS="$(libkio_la_nofinal_OBJECTS)" libksycoca_la_OBJECTS="$(libksycoca_la_nofinal_OBJECTS)" kio_uiserver_la_OBJECTS="$(kio_uiserver_la_nofinal_OBJECTS)" install-am
++	$(MAKE) libkio_la_OBJECTS="$(libkio_la_nofinal_OBJECTS)" libksycoca_la_OBJECTS="$(libksycoca_la_nofinal_OBJECTS)" libkio_uiserver_main_la_OBJECTS="$(libkio_uiserver_main_la_nofinal_OBJECTS)" install-am
+ #>+ 3
+ cvs-clean:
+ 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean

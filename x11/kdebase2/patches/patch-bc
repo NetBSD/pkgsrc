@@ -1,22 +1,22 @@
-$NetBSD: patch-bc,v 1.1 2001/10/15 22:46:01 skrll Exp $
+$NetBSD: patch-bc,v 1.2 2001/12/03 15:37:19 skrll Exp $
 
---- kcontrol/konqhtml/Makefile.in.orig	Sat Sep  8 01:36:26 2001
+--- kcontrol/konqhtml/Makefile.in.orig	Sat Nov 10 07:58:20 2001
 +++ kcontrol/konqhtml/Makefile.in
-@@ -283 +283 @@
+@@ -282,7 +282,7 @@
+ libkcm_konqhtml_la_SOURCES = htmlopts.cpp jsopts.cpp 			     javaopts.cpp pluginopts.cpp appearance.cpp 			     khttpoptdlg.cpp policydlg.cpp main.cpp
+ 
+ 
 -libkcm_konqhtml_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
 +libkcm_konqhtml_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined ${KDE_RPATH}
-@@ -329 +329 @@
+ libkcm_konqhtml_la_LIBADD = -lkhtml -lkdeui
+ 
+ data_DATA = konqhtml.desktop
+@@ -328,7 +328,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
 -KDE_DIST=javaopts.h jsopts.h appearance.h htmlopts.h khttpoptdlg.h policydlg.h main.h pluginopts.h konqhtml.desktop 
 +KDE_DIST=policydlg.h jsopts.h khttpoptdlg.h konqhtml.desktop main.h htmlopts.h javaopts.h pluginopts.h appearance.h 
-@@ -489,11 +488,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
+ 
+ DISTFILES= $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 

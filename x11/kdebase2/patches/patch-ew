@@ -1,11 +1,14 @@
-$NetBSD: patch-ew,v 1.1 2001/10/15 22:46:11 skrll Exp $
+$NetBSD: patch-ew,v 1.2 2001/12/03 15:37:20 skrll Exp $
 
---- legacyimport/Makefile.in.orig	Sat Sep  8 01:36:51 2001
+--- legacyimport/Makefile.in.orig	Sat Nov 10 07:58:39 2001
 +++ legacyimport/Makefile.in
-@@ -277 +277 @@
+@@ -276,14 +276,18 @@
+ INCLUDES = $(all_includes)
+ 
+ bin_PROGRAMS = klegacyimport
 -lib_LTLIBRARIES = klegacyimport.la
 +lib_LTLIBRARIES = libklegacyimport_main.la klegacyimport.la
-@@ -279,2 +279,6 @@
+ 
 -klegacyimport_la_SOURCES = legacyimport.cpp
 -klegacyimport_la_LIBADD = $(LIB_KDEUI) $(LIB_KFILE)
 +libklegacyimport_main_la_SOURCES = legacyimport.cpp
@@ -14,81 +17,107 @@ $NetBSD: patch-ew,v 1.1 2001/10/15 22:46:11 skrll Exp $
 +
 +klegacyimport_la_SOURCES = klegacyimport_main.cpp
 +klegacyimport_la_LIBADD = libklegacyimport_main.la
-@@ -283,2 +287,2 @@
+ klegacyimport_la_LDFLAGS = $(all_libraries) -module -avoid-version
+ 
 -klegacyimport_SOURCES = dummy.cpp
 -klegacyimport_LDADD = klegacyimport.la
 +klegacyimport_SOURCES = klegacyimport_main.cpp
 +klegacyimport_LDADD = libklegacyimport_main.la
-@@ -306,2 +310,2 @@
+ klegacyimport_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ 
+ noinst_HEADERS = legacyimport.h
+@@ -305,21 +309,25 @@
+ LIBS = @LIBS@
+ X_CFLAGS = @X_CFLAGS@
+ X_LIBS = @X_LIBS@
 -klegacyimport_la_DEPENDENCIES = 
 -#>- klegacyimport_la_OBJECTS =  legacyimport.lo
 +libklegacyimport_main_la_DEPENDENCIES = 
 +#>- libklegacyimport_main_la_OBJECTS =  legacyimport.lo
-@@ -309,5 +313,9 @@
+ #>+ 5
 -klegacyimport_la_final_OBJECTS = klegacyimport_la.all_cpp.lo 
 -klegacyimport_la_nofinal_OBJECTS = legacyimport.lo \
--klegacyimport_la_meta_unload.lo 
+-	klegacyimport_la_meta_unload.lo 
 -@KDE_USE_FINAL_FALSE@klegacyimport_la_OBJECTS = $(klegacyimport_la_nofinal_OBJECTS)
 -@KDE_USE_FINAL_TRUE@klegacyimport_la_OBJECTS = $(klegacyimport_la_final_OBJECTS)
 +libklegacyimport_main_la_final_OBJECTS = libklegacyimport_main_la.all_cpp.lo 
 +libklegacyimport_main_la_nofinal_OBJECTS = legacyimport.lo \
-+libklegacyimport_main_la_meta_unload.lo 
++	libklegacyimport_main_la_meta_unload.lo 
 +@KDE_USE_FINAL_FALSE@libklegacyimport_main_la_OBJECTS = $(libklegacyimport_main_la_nofinal_OBJECTS)
 +@KDE_USE_FINAL_TRUE@libklegacyimport_main_la_OBJECTS = $(libklegacyimport_main_la_final_OBJECTS)
 +klegacyimport_la_DEPENDENCIES =  libklegacyimport_main.la
 +#>- klegacyimport_la_OBJECTS =  klegacyimport_main.lo
 +#>+ 1
 +klegacyimport_la_OBJECTS = klegacyimport_main.lo
-@@ -317 +325 @@
+ bin_PROGRAMS =  klegacyimport$(EXEEXT)
+ PROGRAMS =  $(bin_PROGRAMS)
+ 
 -#>- klegacyimport_OBJECTS =  dummy.$(OBJEXT)
 +#>- klegacyimport_OBJECTS =  klegacyimport_main.$(OBJEXT)
-@@ -319,2 +327,2 @@
+ #>+ 1
 -klegacyimport_OBJECTS = dummy.$(OBJEXT)
 -klegacyimport_DEPENDENCIES =  klegacyimport.la
 +klegacyimport_OBJECTS = klegacyimport_main.$(OBJEXT)
 +klegacyimport_DEPENDENCIES =  libklegacyimport_main.la
-@@ -341 +349 @@
+ CXXFLAGS = @CXXFLAGS@
+ #>- CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ #>+ 1
+@@ -340,15 +348,15 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
 -KDE_DIST=klegacyimport.desktop 
 +KDE_DIST=klegacyimport.desktop dummy.cpp 
-@@ -348,2 +356,2 @@
+ 
+ DISTFILES= $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+ 
+ TAR = tar
+ GZIP_ENV = --best
 -SOURCES = $(klegacyimport_la_SOURCES) $(klegacyimport_SOURCES)
 -OBJECTS = $(klegacyimport_la_OBJECTS) $(klegacyimport_OBJECTS)
 +SOURCES = $(libklegacyimport_main_la_SOURCES) $(klegacyimport_la_SOURCES) $(klegacyimport_SOURCES)
 +OBJECTS = $(libklegacyimport_main_la_OBJECTS) $(klegacyimport_la_OBJECTS) $(klegacyimport_OBJECTS)
-@@ -435,0 +444,3 @@
+ 
+ #>- all: all-redirect
+ #>+ 1
+@@ -435,6 +443,9 @@
+ 
+ maintainer-clean-libtool:
+ 
 +libklegacyimport_main.la: $(libklegacyimport_main_la_OBJECTS) $(libklegacyimport_main_la_DEPENDENCIES)
 +	$(CXXLINK) -rpath $(libdir) $(libklegacyimport_main_la_LDFLAGS) $(libklegacyimport_main_la_OBJECTS) $(libklegacyimport_main_la_LIBADD) $(LIBS)
 +
-@@ -527,11 +537,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
-@@ -661,8 +661,8 @@
+ klegacyimport.la: $(klegacyimport_la_OBJECTS) $(klegacyimport_la_DEPENDENCIES)
+ 	$(CXXLINK) -rpath $(libdir) $(klegacyimport_la_LDFLAGS) $(klegacyimport_la_OBJECTS) $(klegacyimport_la_LIBADD) $(LIBS)
+ 
+@@ -649,28 +660,40 @@
+ 
+ 
+ #>+ 12
 -klegacyimport_la_meta_unload.cpp:  legacyimport.moc
 -	@echo 'creating klegacyimport_la_meta_unload.cpp'
 -	@-rm -f klegacyimport_la_meta_unload.cpp
--	@echo 'static const char * _metalist_klegacyimport_la[] = {' > klegacyimport_la_meta_unload.cpp
--	@cat  legacyimport.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> klegacyimport_la_meta_unload.cpp
--	@echo '0};' >> klegacyimport_la_meta_unload.cpp
--	@echo '#include <kunload.h>' >> klegacyimport_la_meta_unload.cpp
--	@echo '_UNLOAD(klegacyimport_la)' >> klegacyimport_la_meta_unload.cpp
 +libklegacyimport_main_la_meta_unload.cpp:  legacyimport.moc
 +	@echo 'creating libklegacyimport_main_la_meta_unload.cpp'
 +	@-rm -f libklegacyimport_main_la_meta_unload.cpp
-+	@echo 'static const char * _metalist_libklegacyimport_main_la[] = {' > libklegacyimport_main_la_meta_unload.cpp
-+	@cat  legacyimport.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libklegacyimport_main_la_meta_unload.cpp
-+	@echo '0};' >> libklegacyimport_main_la_meta_unload.cpp
-+	@echo '#include <kunload.h>' >> libklegacyimport_main_la_meta_unload.cpp
-+	@echo '_UNLOAD(libklegacyimport_main_la)' >> libklegacyimport_main_la_meta_unload.cpp
-@@ -673 +673,13 @@
+ 	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_klegacyimport_la[] = {' > klegacyimport_la_meta_unload.cpp ;\
+-		cat  legacyimport.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> klegacyimport_la_meta_unload.cpp ;\
+-		echo '0};' >> klegacyimport_la_meta_unload.cpp ;\
+-		echo '#include <kunload.h>' >> klegacyimport_la_meta_unload.cpp ;\
+-		echo '_UNLOAD(klegacyimport_la)' >> klegacyimport_la_meta_unload.cpp ;\
+-	else echo > klegacyimport_la_meta_unload.cpp; fi
++		echo 'static const char * _metalist_libklegacyimport_main_la[] = {' > libklegacyimport_main_la_meta_unload.cpp ;\
++		cat  legacyimport.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libklegacyimport_main_la_meta_unload.cpp ;\
++		echo '0};' >> libklegacyimport_main_la_meta_unload.cpp ;\
++		echo '#include <kunload.h>' >> libklegacyimport_main_la_meta_unload.cpp ;\
++		echo '_UNLOAD(libklegacyimport_main_la)' >> libklegacyimport_main_la_meta_unload.cpp ;\
++	else echo > libklegacyimport_main_la_meta_unload.cpp; fi
+ 
+ 
+ #>+ 3
+ clean-moc-classes:
 -	-rm -f  klegacyimport_la_meta_unload.cpp
 +	-rm -f  libklegacyimport_main_la_meta_unload.cpp
 +
@@ -103,24 +132,55 @@ $NetBSD: patch-ew,v 1.1 2001/10/15 22:46:11 skrll Exp $
 +	done; \
 +	cat libklegacyimport_main_la.all_cpp.final libklegacyimport_main_la.all_cpp.files  > libklegacyimport_main_la.all_cpp.cpp; \
 +	rm -f libklegacyimport_main_la.all_cpp.final libklegacyimport_main_la.all_cpp.files
-@@ -676 +688 @@
+ 
+ #>+ 11
 -klegacyimport_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/legacyimport.cpp klegacyimport_la_meta_unload.cpp   legacyimport.moc 
 +klegacyimport_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/klegacyimport_main.cpp  
-@@ -680 +692 @@
+ 	@echo 'creating klegacyimport_la.all_cpp.cpp ...'; \
+ 	rm -f klegacyimport_la.all_cpp.files klegacyimport_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> klegacyimport_la.all_cpp.final; \
 -	for file in legacyimport.cpp klegacyimport_la_meta_unload.cpp ; do \
 +	for file in klegacyimport_main.cpp ; do \
-@@ -688 +700 @@
+ 	  echo "#include \"$$file\"" >> klegacyimport_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> klegacyimport_la.all_cpp.final; \
+ 	done; \
+@@ -678,11 +701,11 @@
+ 	rm -f klegacyimport_la.all_cpp.final klegacyimport_la.all_cpp.files
+ 
+ #>+ 11
 -klegacyimport.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/dummy.cpp  
 +klegacyimport.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/klegacyimport_main.cpp  
-@@ -692 +704 @@
+ 	@echo 'creating klegacyimport.all_cpp.cpp ...'; \
+ 	rm -f klegacyimport.all_cpp.files klegacyimport.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> klegacyimport.all_cpp.final; \
 -	for file in dummy.cpp ; do \
 +	for file in klegacyimport_main.cpp ; do \
-@@ -701 +713 @@
+ 	  echo "#include \"$$file\"" >> klegacyimport.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> klegacyimport.all_cpp.final; \
+ 	done; \
+@@ -691,20 +714,20 @@
+ 
+ #>+ 3
+ clean-final:
 -	-rm -f klegacyimport_la.all_cpp.cpp klegacyimport.all_cpp.cpp
 +	-rm -f libklegacyimport_main_la.all_cpp.cpp klegacyimport_la.all_cpp.cpp klegacyimport.all_cpp.cpp
-@@ -705 +717 @@
+ 
+ #>+ 2
+ final:
 -	$(MAKE) klegacyimport_la_OBJECTS="$(klegacyimport_la_final_OBJECTS)" all-am
 +	$(MAKE) libklegacyimport_main_la_OBJECTS="$(libklegacyimport_main_la_final_OBJECTS)" all-am
-@@ -708 +720 @@
+ #>+ 2
+ final-install:
+-	$(MAKE) klegacyimport_la_OBJECTS="$(klegacyimport_la_final_OBJECTS)" install-am
++	$(MAKE) libklegacyimport_main_la_OBJECTS="$(libklegacyimport_main_la_final_OBJECTS)" install-am
+ #>+ 2
+ no-final:
 -	$(MAKE) klegacyimport_la_OBJECTS="$(klegacyimport_la_nofinal_OBJECTS)" all-am
 +	$(MAKE) libklegacyimport_main_la_OBJECTS="$(libklegacyimport_main_la_nofinal_OBJECTS)" all-am
+ #>+ 2
+ no-final-install:
+-	$(MAKE) klegacyimport_la_OBJECTS="$(klegacyimport_la_nofinal_OBJECTS)" install-am
++	$(MAKE) libklegacyimport_main_la_OBJECTS="$(libklegacyimport_main_la_nofinal_OBJECTS)" install-am
+ #>+ 3
+ cvs-clean:
+ 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2001/11/16 05:07:14 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/12/03 15:37:18 skrll Exp $
 bin/appletproxy
 bin/chooser
 bin/conttest
@@ -291,8 +291,6 @@ lib/kde2/libkcm_kwinoptions.so
 lib/kde2/libkcm_launch.a
 lib/kde2/libkcm_launch.la
 lib/kde2/libkcm_launch.so
-lib/kde2/libkcm_launch.so.0
-lib/kde2/libkcm_launch.so.0.0
 lib/kde2/libkcm_locale.a
 lib/kde2/libkcm_locale.la
 lib/kde2/libkcm_locale.so
@@ -378,8 +376,6 @@ lib/kde2/libkonqsidebartree_dirtree.so
 lib/kde2/libkonqsidebartree_history.a
 lib/kde2/libkonqsidebartree_history.la
 lib/kde2/libkonqsidebartree_history.so
-lib/kde2/libkonqsidebartree_history.so.0
-lib/kde2/libkonqsidebartree_history.so.0.0
 lib/kde2/libkonqsound.a
 lib/kde2/libkonqsound.la
 lib/kde2/libkonqsound.so
@@ -1816,9 +1812,6 @@ share/kde/apps/konsole/konsole_part.rc
 share/kde/apps/konsole/linux.desktop
 share/kde/apps/konsole/linux.keytab
 share/kde/apps/konsole/mc.desktop
-share/kde/apps/konsole/pics/brightness.png
-share/kde/apps/konsole/pics/colourness.png
-share/kde/apps/konsole/pics/contrast.png
 share/kde/apps/konsole/shell.desktop
 share/kde/apps/konsole/su.desktop
 share/kde/apps/konsole/sumc.desktop
@@ -2422,6 +2415,8 @@ share/kde/locale/l10n/hr/entry.desktop
 share/kde/locale/l10n/hr/flag.png
 share/kde/locale/l10n/hu/entry.desktop
 share/kde/locale/l10n/hu/flag.png
+share/kde/locale/l10n/id/entry.desktop
+share/kde/locale/l10n/id/flag.png
 share/kde/locale/l10n/ie/entry.desktop
 share/kde/locale/l10n/ie/flag.png
 share/kde/locale/l10n/il/entry.desktop
@@ -2740,6 +2735,7 @@ share/kde/wallpapers/vegetative_fog.jpg
 @dirrm share/kde/locale/l10n/is
 @dirrm share/kde/locale/l10n/il
 @dirrm share/kde/locale/l10n/ie
+@dirrm share/kde/locale/l10n/id
 @dirrm share/kde/locale/l10n/hu
 @dirrm share/kde/locale/l10n/hr
 @dirrm share/kde/locale/l10n/hn
@@ -2791,7 +2787,6 @@ share/kde/wallpapers/vegetative_fog.jpg
 @dirrm share/kde/apps/kscreensaver
 @dirrm share/kde/apps/kpersonalizer/pics
 @dirrm share/kde/apps/kpersonalizer
-@dirrm share/kde/apps/konsole/pics
 @dirrm share/kde/apps/konsole
 @dirrm share/kde/apps/konqueror/tiles
 @dirrm share/kde/apps/konqueror/profiles

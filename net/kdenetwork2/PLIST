@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:55:58 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/12/03 15:37:17 skrll Exp $
 bin/dsirc
 bin/kdict
 bin/kit
@@ -493,6 +493,7 @@ share/kde/apps/kppp/Rules/Germany/Addcom.rst
 share/kde/apps/kppp/Rules/Germany/CallOkaynet.rst
 share/kde/apps/kppp/Rules/Germany/Callino_Surf_Basic.rst
 share/kde/apps/kppp/Rules/Germany/Callino_Surf_Plus.rst
+share/kde/apps/kppp/Rules/Germany/Callisa_City.rst
 share/kde/apps/kppp/Rules/Germany/City_Activ_Plus_Option.rst
 share/kde/apps/kppp/Rules/Germany/Cityweb.rst
 share/kde/apps/kppp/Rules/Germany/Freenet_Enterprise.rst
@@ -586,11 +587,17 @@ share/kde/apps/kppp/Rules/Netherlands/NedpointBasis_Lokaal.rst
 share/kde/apps/kppp/Rules/Netherlands/NedpointBelBespaar_Lokaal.rst
 share/kde/apps/kppp/Rules/Norway/Local_Area.rst
 share/kde/apps/kppp/Rules/Norway/Long_Distance.rst
+share/kde/apps/kppp/Rules/Poland/Dialog_Atut.rst
+share/kde/apps/kppp/Rules/Poland/Dialog_Atut_020.rst
+share/kde/apps/kppp/Rules/Poland/Dialog_Efekt.rst
+share/kde/apps/kppp/Rules/Poland/Dialog_Profit.rst
 share/kde/apps/kppp/Rules/Poland/Internetia.rst
 share/kde/apps/kppp/Rules/Poland/Netia_100km_Niebieska.rst
 share/kde/apps/kppp/Rules/Poland/Netia_100km_Zielona.rst
 share/kde/apps/kppp/Rules/Poland/Netia_Lokalne_Niebieska.rst
 share/kde/apps/kppp/Rules/Poland/Netia_Lokalne_Zielona.rst
+share/kde/apps/kppp/Rules/Poland/Netia_Niebieska.rst
+share/kde/apps/kppp/Rules/Poland/Netia_Zielona.rst
 share/kde/apps/kppp/Rules/Poland/TPSA.rst
 share/kde/apps/kppp/Rules/Poland/TP_100km.rst
 share/kde/apps/kppp/Rules/Poland/TP_Lokalne.rst
@@ -603,6 +610,9 @@ share/kde/apps/kppp/Rules/Portugal/PT_YesNET_Ilhas.rst
 share/kde/apps/kppp/Rules/Romania/Telecom_GSM.rst
 share/kde/apps/kppp/Rules/Romania/Telecom_Interurban.rst
 share/kde/apps/kppp/Rules/Romania/Telecom_Local.rst
+share/kde/apps/kppp/Rules/Russia/TEMPLATE.ru
+share/kde/apps/kppp/Rules/Russia/Yamalelectroliaison.rst
+share/kde/apps/kppp/Rules/Russia/mtu-intel_standart.rst
 share/kde/apps/kppp/Rules/Singapore/SingTel_Local.rst
 share/kde/apps/kppp/Rules/Slovakia/Internetovy_tarif_019XY.rst
 share/kde/apps/kppp/Rules/Slovakia/ST_medzimesto.rst
@@ -783,6 +793,7 @@ share/kde/sounds/ktalkd.wav
 @dirrm share/kde/apps/kppp/Rules/South_Afrika
 @dirrm share/kde/apps/kppp/Rules/Slovakia
 @dirrm share/kde/apps/kppp/Rules/Singapore
+@dirrm share/kde/apps/kppp/Rules/Russia
 @dirrm share/kde/apps/kppp/Rules/Romania
 @dirrm share/kde/apps/kppp/Rules/Portugal
 @dirrm share/kde/apps/kppp/Rules/Poland

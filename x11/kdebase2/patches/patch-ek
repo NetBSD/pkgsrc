@@ -1,22 +1,22 @@
-$NetBSD: patch-ek,v 1.1 2001/10/15 22:46:11 skrll Exp $
+$NetBSD: patch-ek,v 1.2 2001/12/03 15:37:20 skrll Exp $
 
---- kwin/clients/web/Makefile.in.orig	Sat Sep  8 01:36:50 2001
+--- kwin/clients/web/Makefile.in.orig	Sat Nov 10 07:58:38 2001
 +++ kwin/clients/web/Makefile.in
-@@ -283 +283 @@
+@@ -282,7 +282,7 @@
+ noinst_HEADERS =    Web.h   WebButton.h   WebButtonClose.h   WebButtonHelp.h   WebButtonIconify.h   WebButtonLower.h   WebButtonMaximize.h   WebButtonSticky.h
+ 
+ 
 -libkwinweb_la_LIBADD = ../../kwin.la
 +libkwinweb_la_LIBADD = ../../libkwin.la
-@@ -302 +302 @@
+ libkwinweb_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN)
+ #>- METASOURCES = AUTO
+ 
+@@ -301,7 +301,7 @@
+ LIBS = @LIBS@
+ X_CFLAGS = @X_CFLAGS@
+ X_LIBS = @X_LIBS@
 -libkwinweb_la_DEPENDENCIES =  ../../kwin.la
 +libkwinweb_la_DEPENDENCIES =  ../../libkwin.la
-@@ -494,11 +493,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
+ #>- libkwinweb_la_OBJECTS =  Web.lo WebButton.lo WebButtonClose.lo \
+ #>- WebButtonHelp.lo WebButtonIconify.lo WebButtonLower.lo \
+ #>- WebButtonMaximize.lo WebButtonSticky.lo

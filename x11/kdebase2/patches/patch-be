@@ -1,16 +1,20 @@
-$NetBSD: patch-be,v 1.1 2001/10/15 22:46:01 skrll Exp $
+$NetBSD: patch-be,v 1.2 2001/12/03 15:37:19 skrll Exp $
 
---- kdeprint/kjobviewer/Makefile.in.orig	Sat Sep  8 01:36:29 2001
+--- kdeprint/kjobviewer/Makefile.in.orig	Sat Nov 10 07:58:23 2001
 +++ kdeprint/kjobviewer/Makefile.in
-@@ -277 +277 @@
+@@ -276,15 +276,20 @@
+ INCLUDES = $(all_includes)
+ 
+ bin_PROGRAMS = kjobviewer
 -lib_LTLIBRARIES = kjobviewer.la
 +lib_LTLIBRARIES = libkjobviewer_main.la kjobviewer.la
-@@ -279,2 +279,2 @@
+ 
 -kjobviewer_SOURCES = dummy.cpp
 -kjobviewer_LDADD = kjobviewer.la
 +kjobviewer_SOURCES = kjobviewer_main.cpp
 +kjobviewer_LDADD = libkjobviewer_main.la
-@@ -283 +283,6 @@
+ kjobviewer_LDFLAGS = $(KDE_RPATH) $(all_libraries)
+ 
 -kjobviewer_la_SOURCES = kjobviewer.cpp main.cpp
 +libkjobviewer_main_la_SOURCES = kjobviewer.cpp main.cpp
 +#>- libkjobviewer_main_la_METASOURCES = AUTO
@@ -18,91 +22,128 @@ $NetBSD: patch-be,v 1.1 2001/10/15 22:46:01 skrll Exp $
 +libkjobviewer_main_la_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 +
 +kjobviewer_la_SOURCES = kjobviewer_main.cpp
-@@ -285 +290 @@
+ #>- kjobviewer_la_METASOURCES = AUTO
 -kjobviewer_la_LIBADD = -lkdeprint_management $(LIB_KDEUI)
 +kjobviewer_la_LIBADD = libkjobviewer_main.la
-@@ -309,2 +314,2 @@
+ kjobviewer_la_LDFLAGS = -module -avoid-version $(all_libraries) $(KDE_RPATH)
+ 
+ noinst_HEADERS = kjobviewer.h
+@@ -308,21 +313,25 @@
+ LIBS = @LIBS@
+ X_CFLAGS = @X_CFLAGS@
+ X_LIBS = @X_LIBS@
 -kjobviewer_la_DEPENDENCIES = 
 -#>- kjobviewer_la_OBJECTS =  kjobviewer.lo main.lo
 +libkjobviewer_main_la_DEPENDENCIES = 
 +#>- libkjobviewer_main_la_OBJECTS =  kjobviewer.lo main.lo
-@@ -312,5 +317,9 @@
+ #>+ 5
 -kjobviewer_la_final_OBJECTS = kjobviewer_la.all_cpp.lo 
 -kjobviewer_la_nofinal_OBJECTS = kjobviewer.lo main.lo \
--kjobviewer_la_meta_unload.lo 
+-	kjobviewer_la_meta_unload.lo 
 -@KDE_USE_FINAL_FALSE@kjobviewer_la_OBJECTS = $(kjobviewer_la_nofinal_OBJECTS)
 -@KDE_USE_FINAL_TRUE@kjobviewer_la_OBJECTS = $(kjobviewer_la_final_OBJECTS)
 +libkjobviewer_main_la_final_OBJECTS = libkjobviewer_main_la.all_cpp.lo 
 +libkjobviewer_main_la_nofinal_OBJECTS = kjobviewer.lo main.lo \
-+libkjobviewer_main_la_meta_unload.lo 
++	libkjobviewer_main_la_meta_unload.lo 
 +@KDE_USE_FINAL_FALSE@libkjobviewer_main_la_OBJECTS = $(libkjobviewer_main_la_nofinal_OBJECTS)
 +@KDE_USE_FINAL_TRUE@libkjobviewer_main_la_OBJECTS = $(libkjobviewer_main_la_final_OBJECTS)
 +kjobviewer_la_DEPENDENCIES =  libkjobviewer_main.la
 +#>- kjobviewer_la_OBJECTS =  kjobviewer_main.lo
 +#>+ 1
 +kjobviewer_la_OBJECTS = kjobviewer_main.lo
-@@ -320 +329 @@
+ bin_PROGRAMS =  kjobviewer$(EXEEXT)
+ PROGRAMS =  $(bin_PROGRAMS)
+ 
 -#>- kjobviewer_OBJECTS =  dummy.$(OBJEXT)
 +#>- kjobviewer_OBJECTS =  kjobviewer_main.$(OBJEXT)
-@@ -322,2 +331,2 @@
+ #>+ 1
 -kjobviewer_OBJECTS = dummy.$(OBJEXT)
 -kjobviewer_DEPENDENCIES =  kjobviewer.la
 +kjobviewer_OBJECTS = kjobviewer_main.$(OBJEXT)
 +kjobviewer_DEPENDENCIES =  libkjobviewer_main.la
-@@ -344 +353 @@
+ CXXFLAGS = @CXXFLAGS@
+ #>- CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ #>+ 1
+@@ -343,15 +352,15 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
 -KDE_DIST=kjobviewerui.rc hi32-app-kjobviewer.png kjobviewer.desktop hi16-app-kjobviewer.png 
 +KDE_DIST=hi32-app-kjobviewer.png hi16-app-kjobviewer.png kjobviewerui.rc kjobviewer.desktop 
-@@ -351,2 +360,2 @@
+ 
+ DISTFILES= $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+ 
+ TAR = tar
+ GZIP_ENV = --best
 -SOURCES = $(kjobviewer_la_SOURCES) $(kjobviewer_SOURCES)
 -OBJECTS = $(kjobviewer_la_OBJECTS) $(kjobviewer_OBJECTS)
 +SOURCES = $(libkjobviewer_main_la_SOURCES) $(kjobviewer_la_SOURCES) $(kjobviewer_SOURCES)
 +OBJECTS = $(libkjobviewer_main_la_OBJECTS) $(kjobviewer_la_OBJECTS) $(kjobviewer_OBJECTS)
-@@ -438,0 +448,3 @@
+ 
+ #>- all: all-redirect
+ #>+ 1
+@@ -438,6 +447,9 @@
+ 
+ maintainer-clean-libtool:
+ 
 +libkjobviewer_main.la: $(libkjobviewer_main_la_OBJECTS) $(libkjobviewer_main_la_DEPENDENCIES)
 +	$(CXXLINK) -rpath $(libdir) $(libkjobviewer_main_la_LDFLAGS) $(libkjobviewer_main_la_OBJECTS) $(libkjobviewer_main_la_LIBADD) $(LIBS)
 +
-@@ -549,11 +560,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
-@@ -664,3 +664,0 @@
+ kjobviewer.la: $(kjobviewer_la_OBJECTS) $(kjobviewer_la_DEPENDENCIES)
+ 	$(CXXLINK) -rpath $(libdir) $(kjobviewer_la_LDFLAGS) $(kjobviewer_la_OBJECTS) $(kjobviewer_la_LIBADD) $(LIBS)
+ 
+@@ -652,9 +664,6 @@
+ 	mostlyclean distclean maintainer-clean
+ 
+ 
 -dummy.cpp:
 -	echo > dummy.cpp
 -
-@@ -678,0 +677,4 @@
+ messages: rc.cpp
+ 	$(XGETTEXT) *.cpp -o $(podir)/kjobviewer.pot
+ 
+@@ -667,8 +676,12 @@
+ 	$(MOC) $(srcdir)/kjobviewer.h -o kjobviewer.moc
+ 
+ #>+ 3
 +kjobviewer.moc: $(srcdir)/kjobviewer.h
 +	$(MOC) $(srcdir)/kjobviewer.h -o kjobviewer.moc
 +
 +#>+ 3
-@@ -680 +682 @@
+ clean-metasources:
 -	-rm -f  kjobviewer.moc
 +	-rm -f  kjobviewer.moc kjobviewer.moc
-@@ -703,8 +705,8 @@
+ 
+ #>+ 2
+ docs-am:
+@@ -691,28 +704,40 @@
+ 
+ 
+ #>+ 12
 -kjobviewer_la_meta_unload.cpp:  kjobviewer.moc
 -	@echo 'creating kjobviewer_la_meta_unload.cpp'
 -	@-rm -f kjobviewer_la_meta_unload.cpp
--	@echo 'static const char * _metalist_kjobviewer_la[] = {' > kjobviewer_la_meta_unload.cpp
--	@cat  kjobviewer.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kjobviewer_la_meta_unload.cpp
--	@echo '0};' >> kjobviewer_la_meta_unload.cpp
--	@echo '#include <kunload.h>' >> kjobviewer_la_meta_unload.cpp
--	@echo '_UNLOAD(kjobviewer_la)' >> kjobviewer_la_meta_unload.cpp
 +libkjobviewer_main_la_meta_unload.cpp:  kjobviewer.moc
 +	@echo 'creating libkjobviewer_main_la_meta_unload.cpp'
 +	@-rm -f libkjobviewer_main_la_meta_unload.cpp
-+	@echo 'static const char * _metalist_libkjobviewer_main_la[] = {' > libkjobviewer_main_la_meta_unload.cpp
-+	@cat  kjobviewer.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkjobviewer_main_la_meta_unload.cpp
-+	@echo '0};' >> libkjobviewer_main_la_meta_unload.cpp
-+	@echo '#include <kunload.h>' >> libkjobviewer_main_la_meta_unload.cpp
-+	@echo '_UNLOAD(libkjobviewer_main_la)' >> libkjobviewer_main_la_meta_unload.cpp
-@@ -715 +717,13 @@
+ 	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_kjobviewer_la[] = {' > kjobviewer_la_meta_unload.cpp ;\
+-		cat  kjobviewer.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kjobviewer_la_meta_unload.cpp ;\
+-		echo '0};' >> kjobviewer_la_meta_unload.cpp ;\
+-		echo '#include <kunload.h>' >> kjobviewer_la_meta_unload.cpp ;\
+-		echo '_UNLOAD(kjobviewer_la)' >> kjobviewer_la_meta_unload.cpp ;\
+-	else echo > kjobviewer_la_meta_unload.cpp; fi
++		echo 'static const char * _metalist_libkjobviewer_main_la[] = {' > libkjobviewer_main_la_meta_unload.cpp ;\
++		cat  kjobviewer.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkjobviewer_main_la_meta_unload.cpp ;\
++		echo '0};' >> libkjobviewer_main_la_meta_unload.cpp ;\
++		echo '#include <kunload.h>' >> libkjobviewer_main_la_meta_unload.cpp ;\
++		echo '_UNLOAD(libkjobviewer_main_la)' >> libkjobviewer_main_la_meta_unload.cpp ;\
++	else echo > libkjobviewer_main_la_meta_unload.cpp; fi
+ 
+ 
+ #>+ 3
+ clean-moc-classes:
 -	-rm -f  kjobviewer_la_meta_unload.cpp
 +	-rm -f  libkjobviewer_main_la_meta_unload.cpp
 +
@@ -117,27 +158,61 @@ $NetBSD: patch-be,v 1.1 2001/10/15 22:46:01 skrll Exp $
 +	done; \
 +	cat libkjobviewer_main_la.all_cpp.final libkjobviewer_main_la.all_cpp.files  > libkjobviewer_main_la.all_cpp.cpp; \
 +	rm -f libkjobviewer_main_la.all_cpp.final libkjobviewer_main_la.all_cpp.files
-@@ -718 +732 @@
+ 
+ #>+ 11
 -kjobviewer_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kjobviewer.cpp $(srcdir)/main.cpp kjobviewer_la_meta_unload.cpp   kjobviewer.moc 
 +kjobviewer_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kjobviewer_main.cpp   kjobviewer.moc 
-@@ -722 +736 @@
+ 	@echo 'creating kjobviewer_la.all_cpp.cpp ...'; \
+ 	rm -f kjobviewer_la.all_cpp.files kjobviewer_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kjobviewer_la.all_cpp.final; \
 -	for file in kjobviewer.cpp main.cpp kjobviewer_la_meta_unload.cpp ; do \
 +	for file in kjobviewer_main.cpp ; do \
-@@ -730 +744 @@
+ 	  echo "#include \"$$file\"" >> kjobviewer_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kjobviewer_la.all_cpp.final; \
+ 	done; \
+@@ -720,11 +745,11 @@
+ 	rm -f kjobviewer_la.all_cpp.final kjobviewer_la.all_cpp.files
+ 
+ #>+ 11
 -kjobviewer.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
 +kjobviewer.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kjobviewer_main.cpp  
-@@ -734 +748 @@
+ 	@echo 'creating kjobviewer.all_cpp.cpp ...'; \
+ 	rm -f kjobviewer.all_cpp.files kjobviewer.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kjobviewer.all_cpp.final; \
 -	for file in dummy.cpp ; do \
 +	for file in kjobviewer_main.cpp ; do \
-@@ -743 +757 @@
+ 	  echo "#include \"$$file\"" >> kjobviewer.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kjobviewer.all_cpp.final; \
+ 	done; \
+@@ -733,20 +758,20 @@
+ 
+ #>+ 3
+ clean-final:
 -	-rm -f kjobviewer_la.all_cpp.cpp kjobviewer.all_cpp.cpp
 +	-rm -f libkjobviewer_main_la.all_cpp.cpp kjobviewer_la.all_cpp.cpp kjobviewer.all_cpp.cpp
-@@ -747 +761 @@
+ 
+ #>+ 2
+ final:
 -	$(MAKE) kjobviewer_la_OBJECTS="$(kjobviewer_la_final_OBJECTS)" all-am
 +	$(MAKE) libkjobviewer_main_la_OBJECTS="$(libkjobviewer_main_la_final_OBJECTS)" all-am
-@@ -750 +764 @@
+ #>+ 2
+ final-install:
+-	$(MAKE) kjobviewer_la_OBJECTS="$(kjobviewer_la_final_OBJECTS)" install-am
++	$(MAKE) libkjobviewer_main_la_OBJECTS="$(libkjobviewer_main_la_final_OBJECTS)" install-am
+ #>+ 2
+ no-final:
 -	$(MAKE) kjobviewer_la_OBJECTS="$(kjobviewer_la_nofinal_OBJECTS)" all-am
 +	$(MAKE) libkjobviewer_main_la_OBJECTS="$(libkjobviewer_main_la_nofinal_OBJECTS)" all-am
-@@ -760 +774 @@
+ #>+ 2
+ no-final-install:
+-	$(MAKE) kjobviewer_la_OBJECTS="$(kjobviewer_la_nofinal_OBJECTS)" install-am
++	$(MAKE) libkjobviewer_main_la_OBJECTS="$(libkjobviewer_main_la_nofinal_OBJECTS)" install-am
+ #>+ 3
+ cvs-clean:
+ 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean
+@@ -756,4 +781,4 @@
+ 	-rm -f *.rpo
+ 
+ #>+ 2
 -$(srcdir)/kjobviewer.cpp: kjobviewer.moc 
 +$(srcdir)/kjobviewer.cpp: kjobviewer.moc kjobviewer.moc 

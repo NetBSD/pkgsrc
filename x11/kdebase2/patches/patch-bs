@@ -1,22 +1,22 @@
-$NetBSD: patch-bs,v 1.1 2001/10/15 22:46:03 skrll Exp $
+$NetBSD: patch-bs,v 1.2 2001/12/03 15:37:19 skrll Exp $
 
---- kicker/applets/launcher/Makefile.in.orig	Sat Sep  8 01:36:33 2001
+--- kicker/applets/launcher/Makefile.in.orig	Sat Nov 10 07:58:25 2001
 +++ kicker/applets/launcher/Makefile.in
-@@ -289 +289 @@
+@@ -288,7 +288,7 @@
+ EXTRA_DIST = $(lnk_DATA)
+ 
+ libquicklauncher_la_LDFLAGS = $(all_libraries) -version-info 1:0:0 -module 
 -libquicklauncher_la_LIBADD = ../../kicker.la $(LIB_KSYCOCA) $(LIB_KDEUI) 
 +libquicklauncher_la_LIBADD = ../../libkicker.la $(LIB_KSYCOCA) $(LIB_KDEUI) 
-@@ -302 +302 @@
+ mkinstalldirs = $(SHELL) $(top_srcdir)/admin/mkinstalldirs
+ CONFIG_HEADER = ../../../config.h
+ CONFIG_CLEAN_FILES = 
+@@ -301,7 +301,7 @@
+ LIBS = @LIBS@
+ X_CFLAGS = @X_CFLAGS@
+ X_LIBS = @X_LIBS@
 -libquicklauncher_la_DEPENDENCIES =  ../../kicker.la
 +libquicklauncher_la_DEPENDENCIES =  ../../libkicker.la
-@@ -489,11 +488,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
+ #>- libquicklauncher_la_OBJECTS =  quicklauncher.lo quickbutton.lo \
+ #>- quickaddappsmenu.lo
+ #>+ 6

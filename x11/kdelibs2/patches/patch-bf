@@ -1,8 +1,8 @@
-$NetBSD: patch-bf,v 1.1 2001/10/15 22:46:25 skrll Exp $
+$NetBSD: patch-bf,v 1.2 2001/12/03 15:37:21 skrll Exp $
 
 --- kio/kded/kbuildsycoca.cpp.orig	Wed Sep  5 00:08:16 2001
 +++ kio/kded/kbuildsycoca.cpp
-@@ -382,7 +382,7 @@
+@@ -376,7 +376,7 @@
  static const char *appName = "kbuildsycoca";
  static const char *appVersion = "1.0";
  

@@ -1,4 +1,4 @@
-$NetBSD: patch-cy,v 1.1 2001/10/15 22:46:07 skrll Exp $
+$NetBSD: patch-cy,v 1.2 2001/12/03 15:37:19 skrll Exp $
 
 --- konsole/src/Makefile.am.orig	Thu Jun 14 19:53:50 2001
 +++ konsole/src/Makefile.am
@@ -14,7 +14,7 @@ $NetBSD: patch-cy,v 1.1 2001/10/15 22:46:07 skrll Exp $
  
 @@ -34,24 +35,32 @@
  libkonsolepart_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN)
- libkonsolepart_la_LIBADD = $(LIB_KPARTS) $(LIBUTEMPTER) $(LIBUTIL)
+ libkonsolepart_la_LIBADD = $(LIB_KPARTS) $(LIBUTIL)
  
 +libkwrited_main_la_SOURCES = kwrited.C
 +libkwrited_main_la_LIBADD  = libkonsolepart.la
@@ -49,7 +49,7 @@ $NetBSD: patch-cy,v 1.1 2001/10/15 22:46:07 skrll Exp $
  konsole_SOURCES	= TEPty.C BlockArray.C main.C konsole.C schema.C session.C TEWidget.C TEmuVt102.C \
 -                  TEScreen.C TEmulation.C TEHistory.C keytrans.C 
 +                  TEScreen.C TEmulation.C TEHistory.C keytrans.C konsole_main.cpp
- konsole_LDADD = $(LIB_KDEUI) $(LIB_KSYCOCA) $(LIBUTEMPTER) $(LIBUTIL)
+ konsole_LDADD = $(LIB_KDEUI) $(LIB_KSYCOCA) $(LIBUTIL)
  konsole_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
 @@ -88,10 +97,6 @@

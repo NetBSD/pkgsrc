@@ -1,25 +1,22 @@
-$NetBSD: patch-dn,v 1.1 2001/10/15 22:46:09 skrll Exp $
+$NetBSD: patch-dn,v 1.2 2001/12/03 15:37:20 skrll Exp $
 
---- kwin/clients/icewm/Makefile.in.orig	Sat Sep  8 01:36:49 2001
+--- kwin/clients/icewm/Makefile.in.orig	Sat Nov 10 07:58:37 2001
 +++ kwin/clients/icewm/Makefile.in
-@@ -281 +281 @@
+@@ -280,7 +280,7 @@
+ kde_module_LTLIBRARIES = libkwinicewm.la
+ 
+ libkwinicewm_la_SOURCES = icewm.cpp 
 -libkwinicewm_la_LIBADD = ../../kwin.la
 +libkwinicewm_la_LIBADD = ../../libkwin.la
-@@ -303 +303 @@
+ libkwinicewm_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN)
+ 
+ #>- METASOURCES = AUTO
+@@ -302,7 +302,7 @@
+ LIBS = @LIBS@
+ X_CFLAGS = @X_CFLAGS@
+ X_LIBS = @X_LIBS@
 -libkwinicewm_la_DEPENDENCIES =  ../../kwin.la
 +libkwinicewm_la_DEPENDENCIES =  ../../libkwin.la
-@@ -493 +493 @@
--	  test "$$subdir" = "." && dot_seen=yes; \
-+	  test "$$subdir" != "." || dot_seen=yes; \
-@@ -551,11 +550,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
+ #>- libkwinicewm_la_OBJECTS =  icewm.lo
+ #>+ 5
+ libkwinicewm_la_final_OBJECTS = libkwinicewm_la.all_cpp.lo 

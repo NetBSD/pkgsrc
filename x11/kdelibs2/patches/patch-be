@@ -1,15 +1,11 @@
-Cannot strip away RCS IDs, please handle manually!
-$NetBSD: patch-be,v 1.1 2001/10/15 22:46:25 skrll Exp $
+$NetBSD: patch-be,v 1.2 2001/12/03 15:37:21 skrll Exp $
 
---- kio/kded/Makefile.in.orig	Wed Sep 12 06:10:13 2001
+--- kio/kded/Makefile.in.orig	Tue Nov 13 20:57:18 2001
 +++ kio/kded/Makefile.in
-@@ -2 +2 @@
--# Makefile.in generated automatically by automake 1.4 from Makefile.am
-+# Makefile.in generated automatically by automake 1.4-p5 from Makefile.am
-@@ -4 +4 @@
--# Copyright (C) 1994, 1995-8, 1999 Free Software Foundation, Inc.
-+# Copyright (C) 1994, 1995-8, 1999, 2001 Free Software Foundation, Inc.
-@@ -285 +285,6 @@
+@@ -278,27 +278,35 @@
+ 
+ INCLUDES = -I$(srcdir)/.. -I$(top_srcdir) $(all_includes)
+ 
 -lib_LTLIBRARIES = kded.la kbuildsycoca.la
 +lib_LTLIBRARIES = libkded_main.la kded.la libkbuildsycoca_main.la kbuildsycoca.la
 +
@@ -17,45 +13,57 @@ $NetBSD: patch-be,v 1.1 2001/10/15 22:46:25 skrll Exp $
 +libkded_main_la_LIBADD = $(LIB_KSYCOCA)
 +libkded_main_la_SOURCES = kded.cpp kbuildservicetypefactory.cpp 			kbuildservicefactory.cpp 			kbuildservicegroupfactory.cpp kdedmodule.cpp
 +
-@@ -288,2 +293,2 @@
+ 
+ kded_la_LDFLAGS = $(all_libraries) -module -avoid-version
 -kded_la_LIBADD = $(LIB_KSYCOCA)
 -kded_la_SOURCES = kded.cpp kbuildservicetypefactory.cpp 			kbuildservicefactory.cpp 			kbuildservicegroupfactory.cpp kdedmodule.cpp
 +kded_la_LIBADD = libkded_main.la
 +kded_la_SOURCES = kded_main.cpp
-@@ -290,0 +296,3 @@
+ 
 +libkbuildsycoca_main_la_LDFLAGS = $(all_libraries)
 +libkbuildsycoca_main_la_LIBADD = $(LIB_KSYCOCA)
 +libkbuildsycoca_main_la_SOURCES = kbuildsycoca.cpp kbuildservicetypefactory.cpp 				kbuildservicefactory.cpp 				kbuildservicegroupfactory.cpp 				kbuildimageiofactory.cpp 				kbuildprotocolinfofactory.cpp 				kctimefactory.cpp
-@@ -292,3 +299,0 @@
+ 
 -kbuildsycoca_la_LDFLAGS = $(all_libraries) -module -avoid-version
 -kbuildsycoca_la_LIBADD = $(LIB_KSYCOCA)
 -kbuildsycoca_la_SOURCES = kbuildsycoca.cpp kbuildservicetypefactory.cpp 				kbuildservicefactory.cpp 				kbuildservicegroupfactory.cpp 				kbuildimageiofactory.cpp 				kbuildprotocolinfofactory.cpp 				kctimefactory.cpp
-@@ -295,0 +301,3 @@
+ 
 +kbuildsycoca_la_LDFLAGS = $(all_libraries) -module -avoid-version
 +kbuildsycoca_la_LIBADD = libkbuildsycoca_main.la
 +kbuildsycoca_la_SOURCES = kbuildsycoca_main.cpp
-@@ -300,2 +308,2 @@
+ 
+ bin_PROGRAMS = kded kbuildsycoca kdontchangethehostname
+ 
+ kded_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 -kded_LDADD = $(LIB_KSYCOCA) kded.la
 -kded_SOURCES = dummy.cpp
 +kded_LDADD = $(LIB_KSYCOCA) libkded_main.la
 +kded_SOURCES = kded_main.cpp
-@@ -304,2 +312,2 @@
+ 
+ kbuildsycoca_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 -kbuildsycoca_LDADD = $(LIB_KSYCOCA) kbuildsycoca.la
 -kbuildsycoca_SOURCES = dummy.cpp
 +kbuildsycoca_LDADD = $(LIB_KSYCOCA) libkbuildsycoca_main.la
 +kbuildsycoca_SOURCES = kbuildsycoca_main.cpp
-@@ -330,2 +338,2 @@
+ 
+ kdontchangethehostname_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ kdontchangethehostname_LDADD = $(LIB_KDECORE)
+@@ -323,40 +331,50 @@
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
 -kded_la_DEPENDENCIES = 
 -#>- kded_la_OBJECTS =  kded.lo kbuildservicetypefactory.lo \
 +libkded_main_la_DEPENDENCIES = 
 +#>- libkded_main_la_OBJECTS =  kded.lo kbuildservicetypefactory.lo \
-@@ -334,2 +342,2 @@
+ #>- kbuildservicefactory.lo kbuildservicegroupfactory.lo kdedmodule.lo
+ #>+ 6
 -kded_la_final_OBJECTS = kded_la.all_cpp.lo 
 -kded_la_nofinal_OBJECTS = kded.lo kbuildservicetypefactory.lo \
 +libkded_main_la_final_OBJECTS = libkded_main_la.all_cpp.lo 
 +libkded_main_la_nofinal_OBJECTS = kded.lo kbuildservicetypefactory.lo \
-@@ -337,15 +345,25 @@
--kded_la_meta_unload.lo 
+ 	kbuildservicefactory.lo kbuildservicegroupfactory.lo kdedmodule.lo \
+-	kded_la_meta_unload.lo 
 -@KDE_USE_FINAL_FALSE@kded_la_OBJECTS = $(kded_la_nofinal_OBJECTS)
 -@KDE_USE_FINAL_TRUE@kded_la_OBJECTS = $(kded_la_final_OBJECTS)
 -kbuildsycoca_la_DEPENDENCIES = 
@@ -65,12 +73,12 @@ $NetBSD: patch-be,v 1.1 2001/10/15 22:46:25 skrll Exp $
 -#>+ 7
 -kbuildsycoca_la_final_OBJECTS = kbuildsycoca_la.all_cpp.lo 
 -kbuildsycoca_la_nofinal_OBJECTS = kbuildsycoca.lo kbuildservicetypefactory.lo \
--kbuildservicefactory.lo kbuildservicegroupfactory.lo \
--kbuildimageiofactory.lo kbuildprotocolinfofactory.lo kctimefactory.lo \
--kbuildsycoca_la_meta_unload.lo 
+-	kbuildservicefactory.lo kbuildservicegroupfactory.lo \
+-	kbuildimageiofactory.lo kbuildprotocolinfofactory.lo kctimefactory.lo \
+-	kbuildsycoca_la_meta_unload.lo 
 -@KDE_USE_FINAL_FALSE@kbuildsycoca_la_OBJECTS = $(kbuildsycoca_la_nofinal_OBJECTS)
 -@KDE_USE_FINAL_TRUE@kbuildsycoca_la_OBJECTS = $(kbuildsycoca_la_final_OBJECTS)
-+libkded_main_la_meta_unload.lo 
++	libkded_main_la_meta_unload.lo 
 +@KDE_USE_FINAL_FALSE@libkded_main_la_OBJECTS = $(libkded_main_la_nofinal_OBJECTS)
 +@KDE_USE_FINAL_TRUE@libkded_main_la_OBJECTS = $(libkded_main_la_final_OBJECTS)
 +kded_la_DEPENDENCIES =  libkded_main.la
@@ -85,98 +93,131 @@ $NetBSD: patch-be,v 1.1 2001/10/15 22:46:25 skrll Exp $
 +#>+ 8
 +libkbuildsycoca_main_la_final_OBJECTS = libkbuildsycoca_main_la.all_cpp.lo 
 +libkbuildsycoca_main_la_nofinal_OBJECTS = kbuildsycoca.lo \
-+kbuildservicetypefactory.lo kbuildservicefactory.lo \
-+kbuildservicegroupfactory.lo kbuildimageiofactory.lo \
-+kbuildprotocolinfofactory.lo kctimefactory.lo \
-+libkbuildsycoca_main_la_meta_unload.lo 
++	kbuildservicetypefactory.lo kbuildservicefactory.lo \
++	kbuildservicegroupfactory.lo kbuildimageiofactory.lo \
++	kbuildprotocolinfofactory.lo kctimefactory.lo \
++	libkbuildsycoca_main_la_meta_unload.lo 
 +@KDE_USE_FINAL_FALSE@libkbuildsycoca_main_la_OBJECTS = $(libkbuildsycoca_main_la_nofinal_OBJECTS)
 +@KDE_USE_FINAL_TRUE@libkbuildsycoca_main_la_OBJECTS = $(libkbuildsycoca_main_la_final_OBJECTS)
 +kbuildsycoca_la_DEPENDENCIES =  libkbuildsycoca_main.la
 +#>- kbuildsycoca_la_OBJECTS =  kbuildsycoca_main.lo
 +#>+ 1
 +kbuildsycoca_la_OBJECTS = kbuildsycoca_main.lo
-@@ -356 +374 @@
+ bin_PROGRAMS =  kded$(EXEEXT) kbuildsycoca$(EXEEXT) \
+ 	kdontchangethehostname$(EXEEXT)
+ PROGRAMS =  $(bin_PROGRAMS)
+ 
 -#>- kded_OBJECTS =  dummy.$(OBJEXT)
 +#>- kded_OBJECTS =  kded_main.$(OBJEXT)
-@@ -358,3 +376,3 @@
+ #>+ 1
 -kded_OBJECTS = dummy.$(OBJEXT)
 -kded_DEPENDENCIES =  kded.la
 -#>- kbuildsycoca_OBJECTS =  dummy.$(OBJEXT)
 +kded_OBJECTS = kded_main.$(OBJEXT)
 +kded_DEPENDENCIES =  libkded_main.la
 +#>- kbuildsycoca_OBJECTS =  kbuildsycoca_main.$(OBJEXT)
-@@ -362,2 +380,2 @@
+ #>+ 1
 -kbuildsycoca_OBJECTS = dummy.$(OBJEXT)
 -kbuildsycoca_DEPENDENCIES =  kbuildsycoca.la
 +kbuildsycoca_OBJECTS = kbuildsycoca_main.$(OBJEXT)
 +kbuildsycoca_DEPENDENCIES =  libkbuildsycoca_main.la
-@@ -388 +406 @@
+ #>- kdontchangethehostname_OBJECTS =  khostname.$(OBJEXT)
+ #>+ 1
+ kdontchangethehostname_OBJECTS = khostname.$(OBJEXT)
+@@ -381,15 +399,15 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
 -KDE_DIST=HOWTO README.kded DESIGN kdedmodule.desktop kded.h kctimefactory.h 
 +KDE_DIST=README.kded DESIGN kdedmodule.desktop kded.h HOWTO kctimefactory.h 
-@@ -395,2 +413,2 @@
+ 
+ DISTFILES= $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+ 
+ TAR = tar
+ GZIP_ENV = --best
 -SOURCES = $(kded_la_SOURCES) $(kbuildsycoca_la_SOURCES) $(kded_SOURCES) $(kbuildsycoca_SOURCES) $(kdontchangethehostname_SOURCES)
 -OBJECTS = $(kded_la_OBJECTS) $(kbuildsycoca_la_OBJECTS) $(kded_OBJECTS) $(kbuildsycoca_OBJECTS) $(kdontchangethehostname_OBJECTS)
 +SOURCES = $(libkded_main_la_SOURCES) $(kded_la_SOURCES) $(libkbuildsycoca_main_la_SOURCES) $(kbuildsycoca_la_SOURCES) $(kded_SOURCES) $(kbuildsycoca_SOURCES) $(kdontchangethehostname_SOURCES)
 +OBJECTS = $(libkded_main_la_OBJECTS) $(kded_la_OBJECTS) $(libkbuildsycoca_main_la_OBJECTS) $(kbuildsycoca_la_OBJECTS) $(kded_OBJECTS) $(kbuildsycoca_OBJECTS) $(kdontchangethehostname_OBJECTS)
-@@ -482,0 +501,3 @@
+ 
+ #>- all: all-redirect
+ #>+ 1
+@@ -476,9 +494,15 @@
+ 
+ maintainer-clean-libtool:
+ 
 +libkded_main.la: $(libkded_main_la_OBJECTS) $(libkded_main_la_DEPENDENCIES)
 +	$(CXXLINK) -rpath $(libdir) $(libkded_main_la_LDFLAGS) $(libkded_main_la_OBJECTS) $(libkded_main_la_LIBADD) $(LIBS)
 +
-@@ -485,0 +507,3 @@
+ kded.la: $(kded_la_OBJECTS) $(kded_la_DEPENDENCIES)
+ 	$(CXXLINK) -rpath $(libdir) $(kded_la_LDFLAGS) $(kded_la_OBJECTS) $(kded_la_LIBADD) $(LIBS)
+ 
 +libkbuildsycoca_main.la: $(libkbuildsycoca_main_la_OBJECTS) $(libkbuildsycoca_main_la_DEPENDENCIES)
 +	$(CXXLINK) -rpath $(libdir) $(libkbuildsycoca_main_la_LDFLAGS) $(libkbuildsycoca_main_la_OBJECTS) $(libkbuildsycoca_main_la_LIBADD) $(LIBS)
 +
-@@ -600,11 +623,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
-@@ -710,3 +722,0 @@
+ kbuildsycoca.la: $(kbuildsycoca_la_OBJECTS) $(kbuildsycoca_la_DEPENDENCIES)
+ 	$(CXXLINK) -rpath $(libdir) $(kbuildsycoca_la_LDFLAGS) $(kbuildsycoca_la_OBJECTS) $(kbuildsycoca_la_LIBADD) $(LIBS)
+ 
+@@ -692,9 +716,6 @@
+ 	maintainer-clean-generic clean mostlyclean distclean maintainer-clean
+ 
+ 
 -dummy.cpp:
 -	echo > dummy.cpp
 -
-@@ -743,8 +753,8 @@
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
+@@ -725,41 +746,53 @@
+ 
+ 
+ #>+ 12
 -kded_la_meta_unload.cpp:  kded.moc kdedmodule.moc
 -	@echo 'creating kded_la_meta_unload.cpp'
 -	@-rm -f kded_la_meta_unload.cpp
--	@echo 'static const char * _metalist_kded_la[] = {' > kded_la_meta_unload.cpp
--	@cat  kded.moc kdedmodule.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kded_la_meta_unload.cpp
--	@echo '0};' >> kded_la_meta_unload.cpp
--	@echo '#include <kunload.h>' >> kded_la_meta_unload.cpp
--	@echo '_UNLOAD(kded_la)' >> kded_la_meta_unload.cpp
 +libkded_main_la_meta_unload.cpp:  kded.moc kdedmodule.moc
 +	@echo 'creating libkded_main_la_meta_unload.cpp'
 +	@-rm -f libkded_main_la_meta_unload.cpp
-+	@echo 'static const char * _metalist_libkded_main_la[] = {' > libkded_main_la_meta_unload.cpp
-+	@cat  kded.moc kdedmodule.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkded_main_la_meta_unload.cpp
-+	@echo '0};' >> libkded_main_la_meta_unload.cpp
-+	@echo '#include <kunload.h>' >> libkded_main_la_meta_unload.cpp
-+	@echo '_UNLOAD(libkded_main_la)' >> libkded_main_la_meta_unload.cpp
-@@ -754,8 +764,8 @@
+ 	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_kded_la[] = {' > kded_la_meta_unload.cpp ;\
+-		cat  kded.moc kdedmodule.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kded_la_meta_unload.cpp ;\
+-		echo '0};' >> kded_la_meta_unload.cpp ;\
+-		echo '#include <kunload.h>' >> kded_la_meta_unload.cpp ;\
+-		echo '_UNLOAD(kded_la)' >> kded_la_meta_unload.cpp ;\
+-	else echo > kded_la_meta_unload.cpp; fi
++		echo 'static const char * _metalist_libkded_main_la[] = {' > libkded_main_la_meta_unload.cpp ;\
++		cat  kded.moc kdedmodule.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkded_main_la_meta_unload.cpp ;\
++		echo '0};' >> libkded_main_la_meta_unload.cpp ;\
++		echo '#include <kunload.h>' >> libkded_main_la_meta_unload.cpp ;\
++		echo '_UNLOAD(libkded_main_la)' >> libkded_main_la_meta_unload.cpp ;\
++	else echo > libkded_main_la_meta_unload.cpp; fi
+ 
+ 
+ #>+ 12
 -kbuildsycoca_la_meta_unload.cpp:  kbuildsycoca.moc
 -	@echo 'creating kbuildsycoca_la_meta_unload.cpp'
 -	@-rm -f kbuildsycoca_la_meta_unload.cpp
--	@echo 'static const char * _metalist_kbuildsycoca_la[] = {' > kbuildsycoca_la_meta_unload.cpp
--	@cat  kbuildsycoca.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kbuildsycoca_la_meta_unload.cpp
--	@echo '0};' >> kbuildsycoca_la_meta_unload.cpp
--	@echo '#include <kunload.h>' >> kbuildsycoca_la_meta_unload.cpp
--	@echo '_UNLOAD(kbuildsycoca_la)' >> kbuildsycoca_la_meta_unload.cpp
 +libkbuildsycoca_main_la_meta_unload.cpp:  kbuildsycoca.moc
 +	@echo 'creating libkbuildsycoca_main_la_meta_unload.cpp'
 +	@-rm -f libkbuildsycoca_main_la_meta_unload.cpp
-+	@echo 'static const char * _metalist_libkbuildsycoca_main_la[] = {' > libkbuildsycoca_main_la_meta_unload.cpp
-+	@cat  kbuildsycoca.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkbuildsycoca_main_la_meta_unload.cpp
-+	@echo '0};' >> libkbuildsycoca_main_la_meta_unload.cpp
-+	@echo '#include <kunload.h>' >> libkbuildsycoca_main_la_meta_unload.cpp
-+	@echo '_UNLOAD(libkbuildsycoca_main_la)' >> libkbuildsycoca_main_la_meta_unload.cpp
-@@ -766 +776,13 @@
+ 	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_kbuildsycoca_la[] = {' > kbuildsycoca_la_meta_unload.cpp ;\
+-		cat  kbuildsycoca.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kbuildsycoca_la_meta_unload.cpp ;\
+-		echo '0};' >> kbuildsycoca_la_meta_unload.cpp ;\
+-		echo '#include <kunload.h>' >> kbuildsycoca_la_meta_unload.cpp ;\
+-		echo '_UNLOAD(kbuildsycoca_la)' >> kbuildsycoca_la_meta_unload.cpp ;\
+-	else echo > kbuildsycoca_la_meta_unload.cpp; fi
++		echo 'static const char * _metalist_libkbuildsycoca_main_la[] = {' > libkbuildsycoca_main_la_meta_unload.cpp ;\
++		cat  kbuildsycoca.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkbuildsycoca_main_la_meta_unload.cpp ;\
++		echo '0};' >> libkbuildsycoca_main_la_meta_unload.cpp ;\
++		echo '#include <kunload.h>' >> libkbuildsycoca_main_la_meta_unload.cpp ;\
++		echo '_UNLOAD(libkbuildsycoca_main_la)' >> libkbuildsycoca_main_la_meta_unload.cpp ;\
++	else echo > libkbuildsycoca_main_la_meta_unload.cpp; fi
+ 
+ 
+ #>+ 3
+ clean-moc-classes:
 -	-rm -f  kded_la_meta_unload.cpp kbuildsycoca_la_meta_unload.cpp
 +	-rm -f  libkded_main_la_meta_unload.cpp libkbuildsycoca_main_la_meta_unload.cpp
 +
@@ -191,13 +232,22 @@ $NetBSD: patch-be,v 1.1 2001/10/15 22:46:25 skrll Exp $
 +	done; \
 +	cat libkded_main_la.all_cpp.final libkded_main_la.all_cpp.files  > libkded_main_la.all_cpp.cpp; \
 +	rm -f libkded_main_la.all_cpp.final libkded_main_la.all_cpp.files
-@@ -769 +791 @@
+ 
+ #>+ 11
 -kded_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kded.cpp $(srcdir)/kbuildservicetypefactory.cpp $(srcdir)/kbuildservicefactory.cpp $(srcdir)/kbuildservicegroupfactory.cpp $(srcdir)/kdedmodule.cpp kded_la_meta_unload.cpp   kded.moc kdedmodule.moc kbuildsycoca.moc 
 +kded_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kded_main.cpp  
-@@ -773 +795 @@
+ 	@echo 'creating kded_la.all_cpp.cpp ...'; \
+ 	rm -f kded_la.all_cpp.files kded_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kded_la.all_cpp.final; \
 -	for file in kded.cpp kbuildservicetypefactory.cpp kbuildservicefactory.cpp kbuildservicegroupfactory.cpp kdedmodule.cpp kded_la_meta_unload.cpp ; do \
 +	for file in kded_main.cpp ; do \
-@@ -781 +803,13 @@
+ 	  echo "#include \"$$file\"" >> kded_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kded_la.all_cpp.final; \
+ 	done; \
+@@ -767,11 +800,23 @@
+ 	rm -f kded_la.all_cpp.final kded_la.all_cpp.files
+ 
+ #>+ 11
 -kbuildsycoca_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kbuildsycoca.cpp $(srcdir)/kbuildservicetypefactory.cpp $(srcdir)/kbuildservicefactory.cpp $(srcdir)/kbuildservicegroupfactory.cpp $(srcdir)/kbuildimageiofactory.cpp $(srcdir)/kbuildprotocolinfofactory.cpp $(srcdir)/kctimefactory.cpp kbuildsycoca_la_meta_unload.cpp  
 +libkbuildsycoca_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kbuildsycoca.cpp $(srcdir)/kbuildservicetypefactory.cpp $(srcdir)/kbuildservicefactory.cpp $(srcdir)/kbuildservicegroupfactory.cpp $(srcdir)/kbuildimageiofactory.cpp $(srcdir)/kbuildprotocolinfofactory.cpp $(srcdir)/kctimefactory.cpp libkbuildsycoca_main_la_meta_unload.cpp  
 +	@echo 'creating libkbuildsycoca_main_la.all_cpp.cpp ...'; \
@@ -212,27 +262,65 @@ $NetBSD: patch-be,v 1.1 2001/10/15 22:46:25 skrll Exp $
 +
 +#>+ 11
 +kbuildsycoca_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kbuildsycoca_main.cpp  
-@@ -785 +819 @@
+ 	@echo 'creating kbuildsycoca_la.all_cpp.cpp ...'; \
+ 	rm -f kbuildsycoca_la.all_cpp.files kbuildsycoca_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kbuildsycoca_la.all_cpp.final; \
 -	for file in kbuildsycoca.cpp kbuildservicetypefactory.cpp kbuildservicefactory.cpp kbuildservicegroupfactory.cpp kbuildimageiofactory.cpp kbuildprotocolinfofactory.cpp kctimefactory.cpp kbuildsycoca_la_meta_unload.cpp ; do \
 +	for file in kbuildsycoca_main.cpp ; do \
-@@ -793 +827 @@
+ 	  echo "#include \"$$file\"" >> kbuildsycoca_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kbuildsycoca_la.all_cpp.final; \
+ 	done; \
+@@ -779,11 +824,11 @@
+ 	rm -f kbuildsycoca_la.all_cpp.final kbuildsycoca_la.all_cpp.files
+ 
+ #>+ 11
 -kded.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
 +kded.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kded_main.cpp  
-@@ -797 +831 @@
+ 	@echo 'creating kded.all_cpp.cpp ...'; \
+ 	rm -f kded.all_cpp.files kded.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kded.all_cpp.final; \
 -	for file in dummy.cpp ; do \
 +	for file in kded_main.cpp ; do \
-@@ -805 +839 @@
+ 	  echo "#include \"$$file\"" >> kded.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kded.all_cpp.final; \
+ 	done; \
+@@ -791,11 +836,11 @@
+ 	rm -f kded.all_cpp.final kded.all_cpp.files
+ 
+ #>+ 11
 -kbuildsycoca.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
 +kbuildsycoca.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kbuildsycoca_main.cpp  
-@@ -809 +843 @@
+ 	@echo 'creating kbuildsycoca.all_cpp.cpp ...'; \
+ 	rm -f kbuildsycoca.all_cpp.files kbuildsycoca.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kbuildsycoca.all_cpp.final; \
 -	for file in dummy.cpp ; do \
 +	for file in kbuildsycoca_main.cpp ; do \
-@@ -830 +864 @@
+ 	  echo "#include \"$$file\"" >> kbuildsycoca.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kbuildsycoca.all_cpp.final; \
+ 	done; \
+@@ -816,20 +861,20 @@
+ 
+ #>+ 3
+ clean-final:
 -	-rm -f kded_la.all_cpp.cpp kbuildsycoca_la.all_cpp.cpp kded.all_cpp.cpp kbuildsycoca.all_cpp.cpp kdontchangethehostname.all_cpp.cpp
 +	-rm -f libkded_main_la.all_cpp.cpp kded_la.all_cpp.cpp libkbuildsycoca_main_la.all_cpp.cpp kbuildsycoca_la.all_cpp.cpp kded.all_cpp.cpp kbuildsycoca.all_cpp.cpp kdontchangethehostname.all_cpp.cpp
-@@ -834 +868 @@
+ 
+ #>+ 2
+ final:
 -	$(MAKE) kded_la_OBJECTS="$(kded_la_final_OBJECTS)" kbuildsycoca_la_OBJECTS="$(kbuildsycoca_la_final_OBJECTS)" all-am
 +	$(MAKE) libkded_main_la_OBJECTS="$(libkded_main_la_final_OBJECTS)" libkbuildsycoca_main_la_OBJECTS="$(libkbuildsycoca_main_la_final_OBJECTS)" all-am
-@@ -837 +871 @@
+ #>+ 2
+ final-install:
+-	$(MAKE) kded_la_OBJECTS="$(kded_la_final_OBJECTS)" kbuildsycoca_la_OBJECTS="$(kbuildsycoca_la_final_OBJECTS)" install-am
++	$(MAKE) libkded_main_la_OBJECTS="$(libkded_main_la_final_OBJECTS)" libkbuildsycoca_main_la_OBJECTS="$(libkbuildsycoca_main_la_final_OBJECTS)" install-am
+ #>+ 2
+ no-final:
 -	$(MAKE) kded_la_OBJECTS="$(kded_la_nofinal_OBJECTS)" kbuildsycoca_la_OBJECTS="$(kbuildsycoca_la_nofinal_OBJECTS)" all-am
 +	$(MAKE) libkded_main_la_OBJECTS="$(libkded_main_la_nofinal_OBJECTS)" libkbuildsycoca_main_la_OBJECTS="$(libkbuildsycoca_main_la_nofinal_OBJECTS)" all-am
+ #>+ 2
+ no-final-install:
+-	$(MAKE) kded_la_OBJECTS="$(kded_la_nofinal_OBJECTS)" kbuildsycoca_la_OBJECTS="$(kbuildsycoca_la_nofinal_OBJECTS)" install-am
++	$(MAKE) libkded_main_la_OBJECTS="$(libkded_main_la_nofinal_OBJECTS)" libkbuildsycoca_main_la_OBJECTS="$(libkbuildsycoca_main_la_nofinal_OBJECTS)" install-am
+ #>+ 3
+ cvs-clean:
+ 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean

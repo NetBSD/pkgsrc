@@ -1,35 +1,34 @@
-$NetBSD: patch-ab,v 1.3 2001/11/13 21:25:55 jlam Exp $
+$NetBSD: patch-ab,v 1.4 2001/12/03 15:37:17 skrll Exp $
 
---- configure.orig	Mon Sep 10 07:18:09 2001
-+++ configure
-@@ -8149,14 +8149,14 @@
+--- configure.orig	Wed Nov 14 14:39:38 2001
++++ configure	Mon Nov 26 12:56:30 2001
+@@ -10832,13 +10832,13 @@
  
+ fi
  
- 
--echo $ac_n "checking for pthread_create in -lpthread""... $ac_c" 1>&6
--echo "configure:8154: checking for pthread_create in -lpthread" >&5
-+echo $ac_n "checking for pthread_create in -lPTL""... $ac_c" 1>&6
-+echo "configure:8154: checking for pthread_create in -lPTL" >&5
- ac_lib_var=`echo pthread'_'pthread_create | sed 'y%./+-%__p_%'`
- if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
-   echo $ac_n "(cached) $ac_c" 1>&6
+-echo "$as_me:10835: checking for pthread_create in -lpthread" >&5
+-echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6
++echo "$as_me:10835: checking for pthread_create in -lPTL" >&5
++echo $ECHO_N "checking for pthread_create in -lPTL... $ECHO_C" >&6
+ if test "${ac_cv_lib_pthread_pthread_create+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-   ac_save_LIBS="$LIBS"
+   ac_check_lib_save_LIBS=$LIBS
 -LIBS="-lpthread  $LIBS"
 +LIBS="-lPTL  $LIBS"
- cat > conftest.$ac_ext <<EOF
- #line 8162 "configure"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line 10843 "configure"
  #include "confdefs.h"
-@@ -8187,7 +8187,7 @@
+@@ -10882,7 +10882,7 @@
+ echo "$as_me:10882: result: $ac_cv_lib_pthread_pthread_create" >&5
+ echo "${ECHO_T}$ac_cv_lib_pthread_pthread_create" >&6
+ if test $ac_cv_lib_pthread_pthread_create = yes; then
+-  LIBPTHREAD="-lpthread"
++  LIBPTHREAD="-lPTL"
  fi
- if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
-   echo "$ac_t""yes" 1>&6
--  LIBPTHREAD="-lpthread" 
-+  LIBPTHREAD="-lPTL" 
- else
-   echo "$ac_t""no" 1>&6
- fi
-@@ -8374,6 +8374,11 @@
+ 
+     # Check whether --enable-kernel-threads or --disable-kernel-threads was given.
+@@ -11086,6 +11086,11 @@
          freebsd*)
                  CPPFLAGS="$CPPFLAGS -D_THREAD_SAFE"
                  echo "Setting FreeBSD pthread compilation options"
