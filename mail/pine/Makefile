@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.49 2001/10/10 13:47:46 martti Exp $
+# $NetBSD: Makefile,v 1.50 2001/10/11 15:35:01 martti Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
-DISTNAME=       pine4.33
-PKGNAME=        pine-4.33
+DISTNAME=       pine4.40
+PKGNAME=        pine-4.40
 CATEGORIES=     mail news
 MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/ \
 		ftp://ftp.fu-berlin.de/unix/mail/pine/
@@ -18,7 +18,7 @@ BUILD_DEFS+=	PINE_USE_LDAP
 
 # This pkg doesn't build pico or libpico; the pico pkg does that part.
 DEPENDS+=	pico>=4.0:../../editors/pico
-DEPENDS+=	imap-uw>=2000.0.3:../../mail/imap-uw
+DEPENDS+=	imap-uw>=2001.0:../../mail/imap-uw
 
 .include "../../mk/bsd.prefs.mk"
 
