@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3050 2003/08/16 09:25:45 recht Exp $
+$NetBSD: CHANGES,v 1.3051 2003/08/16 14:27:47 taya Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3278,4 +3278,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Update subversion to 0.27.0 [recht 2003-08-15]
 	Update cyrus-sasl2 to 2.1.15 [recht 2003-08-16]
 	Update cyrus-imapd21 to 2.1.14 [recht 2003-08-16]
-
+	Removed phoenix (renamed to MozillaFirebird) [taya 2003-08-16]
+	Add MozillaFirebird [taya 2003-08-16]
