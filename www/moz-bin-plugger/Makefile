@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/19 03:50:50 rh Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/19 04:37:47 rh Exp $
 #
 
 DISTNAME=	${PLUGGER}-linux-x86-glibc
@@ -12,6 +12,7 @@ HOMEPAGE=	http://fredrik.hubbe.net/plugger.html
 COMMENT=	streaming multimedia plugin for Mozilla (Linux version)
 
 DEPENDS+=	mozilla-bin-[0-9]*:../../www/mozilla-bin
+
 CONFLICTS+=	moz-linux-plugger-[0-9]*
 
 USE_BUILDLINK2=	YES
