@@ -1,0 +1,5 @@
+sma - Sendmail log analyser 
+
+sma is a very fast sendmail log analyzer and outputs
+standard ascii or html report files. 
+Requires access to mail logs in /var/logs.
