@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.1.1.1 1999/10/11 05:49:03 jlam Exp $
+
+--- speakfree.h.orig	Tue Sep 14 08:17:32 1999
++++ speakfree.h	Mon Oct 11 00:15:13 1999
+@@ -20,6 +20,17 @@
+ #define _BSD_SIGNALS
+ #endif
+ 
++/*
++ * NetBSD is cross-platform, so determine endianness from machine-specific
++ * header files.
++ */
++#if defined(__NetBSD__)
++#include <machine/endian.h>
++#if BYTE_ORDER == LITTLE_ENDIAN
++#define M_LITTLE_ENDIAN
++#endif
++#endif /* __NetBSD__ */
++
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <fcntl.h>
