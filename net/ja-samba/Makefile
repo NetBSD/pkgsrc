@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/04/21 21:09:32 cube Exp $
+# $NetBSD: Makefile,v 1.25 2004/05/05 03:54:59 snj Exp $
 
 .include "Makefile.common"
 
@@ -12,7 +12,7 @@ COMMENT=		Samba supporting I18N swat and L10N for Japanese
 
 CONFLICTS+=		samba-[0-9]*
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
@@ -31,19 +31,19 @@ CFLAGS+=		-I${SSLBASE}/include/openssl	# ssl.h, err.h
 CONFIGURE_ARGS+=	--with-included-gettext
 
 .if defined(USE_CUPS) && (${USE_CUPS} == "YES")
-.  include "../../print/cups/buildlink2.mk"
+.  include "../../print/cups/buildlink3.mk"
 BUILD_DEFS+=		USE_CUPS
 CONFIGURE_ARGS+=	--enable-cups
 .endif
 
 .if defined(USE_PAM)
-.  include "../../security/PAM/buildlink2.mk"
+.  include "../../security/PAM/buildlink3.mk"
 BUILD_DEFS+=		USE_PAM
 CONFIGURE_ARGS+=	--with-pam
 .endif
 
 .if defined(USE_OPENLDAP) && ${USE_OPENLDAP} == "YES"
-.  include "../../databases/openldap/buildlink2.mk"
+.  include "../../databases/openldap/buildlink3.mk"
 BUILD_DEFS+=		USE_OPENLDAP
 CONFIGURE_ARGS+=	--with-ldapsam
 PLIST_SUBST+=		SAMBA_LDAP=""
@@ -104,7 +104,7 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/script/mksmbpasswd.sh		\
 		${PREFIX}/sbin/mksmbpasswd
 
-.include "../../devel/readline/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
