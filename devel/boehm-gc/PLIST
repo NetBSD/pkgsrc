@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/05/22 16:46:49 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/06/27 10:49:42 jmmv Exp $
 include/gc.h
 include/gc/gc.h
 include/gc/gc_alloc.h
@@ -40,6 +40,7 @@ share/doc/gc/README.autoconf
 share/doc/gc/README.changes
 share/doc/gc/README.contributors
 share/doc/gc/README.cords
+share/doc/gc/README.darwin
 share/doc/gc/README.dj
 share/doc/gc/README.environment
 share/doc/gc/README.ews4800
