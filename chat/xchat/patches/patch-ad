@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.4 2002/06/06 12:21:59 tron Exp $
+$NetBSD: patch-ad,v 1.5 2002/06/06 12:31:28 tron Exp $
 
 --- Makefile.in.orig	Thu Jun  6 14:10:54 2002
 +++ Makefile.in	Thu Jun  6 14:17:49 2002
@@ -7,7 +7,7 @@ $NetBSD: patch-ad,v 1.4 2002/06/06 12:21:59 tron Exp $
  
  util_DATA = xchat.desktop
 -utildir = $(sysconfdir)/X11/applnk/Internet
-+utildir = $(datadir)/gnome/apps/Internet/Internet
++utildir = $(datadir)/gnome/apps/Internet
  ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  CONFIG_HEADER = config.h
