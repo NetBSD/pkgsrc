@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.5 2000/06/14 16:40:55 veego Exp $
+
+--- src/Makefile.m4.orig	Wed Jun 30 11:58:18 1999
++++ src/Makefile.m4	Wed Jun 30 11:58:40 1999
+@@ -27,7 +27,7 @@
+ MAPDEF=	ifdef(`confMAPDEF', `confMAPDEF')
+ 
+ # environment definitions (e.g., -D_AIX3)
+-ENVDEF=	ifdef(`confENVDEF', `confENVDEF')
++ENVDEF=	ifdef(`confENVDEF', `confENVDEF') ${TCPD_CONF}
+ 
+ # see also conf.h for additional compilation flags
+ 
+@@ -42,7 +42,7 @@
+ 
+ # libraries required on your system
+ #  delete -l44bsd if you are not running BIND 4.9.x
+-LIBS=	ifdef(`confLIBS', `confLIBS')
++LIBS=	ifdef(`confLIBS', `confLIBS') ${TCPD_LIBS}
+ 
+ # location of sendmail binary (usually /usr/sbin or /usr/lib)
+ BINDIR=	${DESTDIR}ifdef(`confMBINDIR', `confMBINDIR', `/usr/sbin')
