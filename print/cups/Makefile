@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/02/09 20:20:57 tron Exp $
+# $NetBSD: Makefile,v 1.4 2000/03/21 22:40:56 tron Exp $
 #
 
 DISTNAME=	cups-1.0.2-source
@@ -17,7 +17,7 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.cups.org/
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png>=1.0.3:../../graphics/png
+DEPENDS+=	png>=1.0.6:../../graphics/png
 DEPENDS+=	tiff-*:../../graphics/tiff
 
 USE_LIBTOOL=	yes

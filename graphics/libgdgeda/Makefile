@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/02/09 20:20:55 tron Exp $
+# $NetBSD: Makefile,v 1.3 2000/03/21 22:40:53 tron Exp $
 #
 
 DISTNAME=		libgdgeda-1.6
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.geda.seul.org/pub/geda/devel/support/
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.geda.seul.org/
 
-DEPENDS+=		png>=1.0.3:../../graphics/png
+DEPENDS+=		png>=1.0.6:../../graphics/png
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
