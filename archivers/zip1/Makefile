@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/04/01 14:07:52 agc Exp $
+# $NetBSD: Makefile,v 1.6 1999/08/18 09:20:01 agc Exp $
 #
 
 DISTNAME=	zip1-1.1
@@ -20,6 +20,8 @@ ALL_TARGET=	zip
 
 NO_WRKSUBDIR=	yes
 PLIST_SRC=	${WRKSRC}/PLIST
+
+BUILD_DEFS+=	ZIP_ENCRYPTION
 
 .include "../../mk/bsd.prefs.mk"
 

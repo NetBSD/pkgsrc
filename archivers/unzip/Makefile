@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1999/02/20 22:48:24 hubertf Exp $
+# $NetBSD: Makefile,v 1.20 1999/08/18 09:20:00 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 05:30:04 ache Exp 
 #
 
@@ -15,6 +15,8 @@ MAKEFILE=	unix/Makefile
 ALL_TARGET=	unzips
 # we do not use USE_ZLIB because of unknown bugs in 5.40's use of libz
 MAKE_FLAGS=	CF="${CFLAGS} -I. -DBSD -DUNIX -Dunix -DUSE_UNSHRINK"
+
+BUILD_DEFS+=	ZIP_ENCRYPTION
 
 .include "../../mk/bsd.prefs.mk"
 
