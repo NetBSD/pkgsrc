@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.6 2002/08/25 19:21:52 jlam Exp $
+$NetBSD: patch-ac,v 1.7 2002/08/31 03:47:54 wiz Exp $
 
 --- configure.orig	Tue Jan 22 01:21:19 2002
 +++ configure	Thu Jul 11 02:05:35 2002
@@ -18,12 +18,3 @@ $NetBSD: patch-ac,v 1.6 2002/08/25 19:21:52 jlam Exp $
  
  # ====================
  # Check for libraries.
-@@ -2667,7 +2669,7 @@
- if eval "test \"`echo '$''{'libmikmod_cv_esd_needs_alsa'+set}'`\" = set"; then
-   echo $ac_n "(cached) $ac_c" 1>&6
- else
--  if (esd-config --libs 2>&1 |grep asound >/dev/null) 2>/dev/null
-+  if ($ESD_CONFIG --libs 2>&1 |grep asound >/dev/null) 2>/dev/null
- 		then
- 			libmikmod_cv_esd_needs_alsa=yes
- 		else
