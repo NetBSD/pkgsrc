@@ -1,0 +1,43 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/06/19 14:36:58 mrg Exp $
+
+--- Imakefile.orig	Fri Feb  3 11:25:44 1995
++++ Imakefile	Sun Jun 20 00:19:00 1999
+@@ -93,9 +93,9 @@
+                   iconmgr.o cursor.o icons.o vdt.o move.o LocPixmap.o \
+                   regexp.o
+ 
+-AllTarget(tvtwm ssetroot)
++AllTarget(tvtwm ssetroot system.tvtwmrc)
+ 
+-SpecialObjectRule(parse.o,NullParameter,'-DSYSTEM_INIT_FILE="'$(TWMDIR)'/system.twmrc"')
++SpecialObjectRule(parse.o,NullParameter,'-DSYSTEM_INIT_FILE="'$(TWMDIR)'/system.tvtwmrc"')
+ SpecialObjectRule(vdt.o,NullParameter,$(XLOADIM_DEF))
+ SpecialObjectRule(LocPixmap.o,NullParameter,'-DBITMAPDIR="$(INCDIR)/bitmaps"')
+ SpecialObjectRule(twm.o,NullParameter,$(TWM_DEFS))
+@@ -120,11 +120,11 @@
+ XCOMM	ln $(BINDIR)/tvtwm $(BINDIR)/twm
+ 
+ #if (ProjectX < 5)
+-InstallNonExec(system.twmrc,$(TWMDIR))
++InstallNonExec(system.tvtwmrc,$(TWMDIR))
+ /* InstallProgram(ssetroot,$(BINDIR)/xsetroot) */
+ #else
+-InstallNonExecFile(system.twmrc,$(TWMDIR))
+-/* InstallNamedProg(ssetroot,xsetroot,$(BINDIR)) */
++InstallNonExecFile(system.tvtwmrc,$(TWMDIR))
++InstallNamedProg(ssetroot,xsetroot,$(BINDIR))
+ #endif
+ 
+ gram.h gram.c: gram.y
+@@ -135,7 +135,10 @@
+ clean::
+ 	$(RM) y.tab.h y.tab.c lex.yy.c gram.h gram.c lex.c deftwmrc.c 
+ 
+-deftwmrc.c:  system.twmrc
++system.tvtwmrc: system.twmrc
++	cp system.twmrc system.tvtwmrc
++
++deftwmrc.c:  system.tvtwmrc
+ 	$(RM) $@
+ 	@echo '/* ' >>$@
+ 	@echo ' * This file is generated automatically from the default' >>$@
