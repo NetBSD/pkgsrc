@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/11/28 19:19:52 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2004/12/04 03:59:26 jlam Exp $
 
 DISTNAME=	heimdal-0.6.3
 PKGREVISION=	2
@@ -38,6 +38,7 @@ BROKEN_READLINE_DETECTION=	yes
 .include "../../devel/readline/buildlink3.mk"
 
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
+USE_OLD_DES_API=	yes
 .include "../../security/openssl/buildlink3.mk"
 
 .if defined(KERBEROS_PREFIX_CMDS) && !empty(KERBEROS_PREFIX_CMDS:M[yY][eE][sS])
@@ -97,22 +98,6 @@ SUBST_SED.heimdal=							\
 	-e "/PATH_RSH/s,\"/usr/bin/rsh\",BINDIR \"${KRB5_PREFIX}rsh\",g" \
 	-e "/PATH_RSH/s,/rsh,/${KRB5_PREFIX}rsh,g"			\
 	-e "/PATH_LOGIN/s,/login,/${KRB5_PREFIX}login,g"
-
-# The configure script only groks the OpenSSL 0.9.6 DES API, so make the
-# newer OpenSSL releases look more like the old one.
-#
-post-wrapper:
-	if ${GREP} -q des_cblock ${SSLBASE}/include/openssl/des.h 2>/dev/null; then \
-		: ;							\
-	else								\
-		${MKDIR} -p ${BUILDLINK_DIR}/include/openssl;		\
-		if [ -f ${SSLBASE}/include/openssl/des_old.h ]; then	\
-			src="${SSLBASE}/include/openssl/des_old.h";	\
-		else							\
-			src="${SSLBASE}/include/des.h";			\
-		fi;							\
-		${LN} -fs $$src ${BUILDLINK_DIR}/include/openssl;	\
-	fi
 
 pre-configure:
 	cd ${WRKSRC}; for file in lib/hdb/hdb.h; do			\
