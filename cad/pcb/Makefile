@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/08/17 04:00:51 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.24 2004/04/11 05:40:38 snj Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/10/31 18:05:31 jseger Exp
 #
 
@@ -19,7 +19,7 @@ DEPENDS+=	m4>=1.4:../../devel/m4
 
 CONFLICTS+=	pcb-current-[0-9]*
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
 USE_IMAKE=	yes
 
