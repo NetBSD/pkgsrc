@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:07:49 skrll Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 17:36:21 wiz Exp $
 
 SHA1 (xaniroc.src.tar.Z) = d1cc542f17ae852d6ff0e936fcf5d2537d107689
+RMD160 (xaniroc.src.tar.Z) = d7fd3eddf4192857e2e669e56b8d31e8a2eed019
 Size (xaniroc.src.tar.Z) = 16747 bytes

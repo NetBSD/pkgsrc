@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2001/12/28 14:58:02 tron Exp $
+$NetBSD: distinfo,v 1.4 2005/02/23 17:36:26 wiz Exp $
 
 SHA1 (xview3.2p1-X11R6.tar.gz) = 1cd04231b893c3e6c70b56791d527b498e21a27a
+RMD160 (xview3.2p1-X11R6.tar.gz) = 2f21b14cb088aec887683bbc6d4ed9a3bc3fe2bb
 Size (xview3.2p1-X11R6.tar.gz) = 3436814 bytes
 SHA1 (patch-aa) = 43ea440e94f2c122d411b2e06f1c581831733d7d
 SHA1 (patch-ab) = 89b0febb94cee64652a7b275da74562426a173d7

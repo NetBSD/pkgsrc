@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.3 2004/12/29 11:10:56 recht Exp $
+$NetBSD: distinfo,v 1.4 2005/02/23 17:36:18 wiz Exp $
 
 SHA1 (gnome-python-2.6.2.tar.bz2) = d4b79119496c277061b99534a7b4e5bbe8b2ba57
+RMD160 (gnome-python-2.6.2.tar.bz2) = fa49a4afdf61f65f586d09da5243b5089c4cebba
 Size (gnome-python-2.6.2.tar.bz2) = 371945 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/10/30 20:51:51 minskim Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 17:36:18 wiz Exp $
 
 SHA1 (X11-Protocol-0.53.tar.gz) = f14d2d0e8d7a48832fbb25e5d2a0ff64fd5b2d56
+RMD160 (X11-Protocol-0.53.tar.gz) = 102d557c090acb7c5e9c89593d02fa8ee92a13b0
 Size (X11-Protocol-0.53.tar.gz) = 99352 bytes
