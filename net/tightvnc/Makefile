@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/01/20 12:22:22 agc Exp $
+# $NetBSD: Makefile,v 1.12 2004/05/11 04:22:49 snj Exp $
 #
 
 DISTNAME=		tightvnc-1.2.9
@@ -14,7 +14,7 @@ CONFLICTS=		vnc-[0-9]*
 
 WRKSRC=			${WRKDIR}/vnc_unixsrc
 CRYPTO=			yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_IMAKE=		yes
 NO_INSTALL_MANPAGES=	yes
 USE_PERL5=		yes
@@ -46,6 +46,6 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/vncserver.man \
 	    ${PREFIX}/man/man1/vncserver.1
 
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
