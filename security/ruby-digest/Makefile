@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/12/30 15:57:58 taca Exp $
+# $NetBSD: Makefile,v 1.2 2002/01/15 16:43:50 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -16,6 +16,7 @@ DISTINFO_FILE=	${RUBY_DISTINFO}
 WRKSRC=		${RUBY_WRKSRC}/ext/digest
 
 DIST_SUBDIR=	ruby
+RUBY_REQD=	1.6.6
 EXTRACT_ELEMENTS= ${RUBY_DISTNAME}/ext/digest
 USE_RUBY_EXTCONF= yes
 RUBY_EXTCONF_SUBDIRS=	. md5 rmd160 sha1 sha2
