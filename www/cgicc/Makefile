@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/08/09 11:32:30 seb Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/24 15:23:46 grant Exp $
 
 DISTNAME=	cgicc-3.1.5
 CATEGORIES=	www
@@ -8,7 +8,7 @@ MAINTAINER=	shell@shellhung.org
 HOMEPAGE=	http://www.gnu.org/software/cgicc/cgicc.html
 COMMENT=	C++ compliant CGI applications libraries
 
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2003/11/12 03:39:44 jschauma Exp $
+# $NetBSD: Makefile,v 1.47 2004/01/24 15:23:47 grant Exp $
 
 DISTNAME=		w3c-libwww-5.4.0
 PKGNAME=		libwww-5.4.0
@@ -13,7 +13,7 @@ HOMEPAGE=		http://www.w3.org/Library/
 COMMENT=		The W3C Reference Library
 
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 USE_PERL5=		build
 

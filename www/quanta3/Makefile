@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/23 21:50:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/24 15:23:47 grant Exp $
 
 DISTNAME=	quanta-3.1.5
 PKGREVISION=	1
@@ -10,7 +10,7 @@ COMMENT= 	HTML editor suitable for experienced web developers
 USE_BUILDLINK2=		YES
 
 USE_PERL5=		build
-USE_GMAKE=              YES
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=          YES
 USE_LIBTOOL=            YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

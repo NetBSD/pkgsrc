@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/01/23 21:50:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.39 2004/01/24 15:23:46 grant Exp $
 #
 
 DISTNAME=	bluefish-0.12
@@ -22,7 +22,7 @@ BUILD_USES_MSGFMT=	YES
 USE_BUILDLINK2=		# defined
 USE_PKGLOCALEDIR=	# defined
 USE_X11=		# defined
-USE_GMAKE=		# defined
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		# defined
 
 CONFIGURE_ARGS+=	--with-autocomplet

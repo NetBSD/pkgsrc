@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/05 12:49:42 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/24 15:18:32 grant Exp $
 #
 
 DISTNAME=	pwm-20030617
@@ -15,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 USE_X11=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 
 CFLAGS+=	-DPKG_SYSCONFDIR=\"\\\"${PKG_SYSCONFDIR}\\\"\"
 

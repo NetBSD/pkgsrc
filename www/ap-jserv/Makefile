@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/08/23 15:26:25 jschauma Exp $
+# $NetBSD: Makefile,v 1.27 2004/01/24 15:23:46 grant Exp $
 
 DISTNAME=	ApacheJServ-1.1.2
 PKGNAME=	ap-jserv-1.1.2
@@ -14,7 +14,7 @@ DEPENDS+=	{apache-1.3.9*,apache-1.3.[1-9][0-9]*,apache6-1.3.9*,apache6-1.3.[1-9]
 DEPENDS+=	jsdk-2.0:../../www/jsdk20
 USE_PERL5=	build	# for "apxs"
 
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/src/scripts/build/unix/ltconfig
 GNU_CONFIGURE=		yes
