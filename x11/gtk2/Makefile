@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2004/05/19 12:46:10 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2004/05/28 18:16:38 reed Exp $
 #
 
 DISTNAME=		gtk+-2.4.1
@@ -15,6 +15,7 @@ HOMEPAGE=		http://www.gtk.org/
 COMMENT=		The GIMP Toolkit - libraries for building X11 user interfaces
 
 BUILD_USES_MSGFMT=	yes
+BUILDLINK_DEPENDS.Xft2+=	Xft2>=2.1.2nb2
 
 USE_BUILDLINK3=		yes
 USE_DIRS+=		xdg-1.1
@@ -68,6 +69,7 @@ post-install:
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
