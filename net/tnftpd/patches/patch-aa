@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1 2003/12/20 13:38:37 grant Exp $
+
+--- src/Makefile.in.orig	2002-12-09 00:05:36.000000000 +1100
++++ src/Makefile.in
+@@ -10,12 +10,13 @@ exec_prefix = @exec_prefix@
+ bindir	= @bindir@
+ mandir	= @mandir@
+ sbindir	= @sbindir@
++sysconfdir = @sysconfdir@
+ 
+ mandircat5 = ${mandir}/cat5
+ mandircat8 = ${mandir}/cat8
+ 
+ CC	= @CC@
+-CFLAGS	= -I${srcdir} -I${srcdir}/.. -I. -I.. @INCLUDES@ -DHAVE_TNFTPD_H=1 @CFLAGS@
++CFLAGS	= -I${srcdir} -I${srcdir}/.. -I. -I.. @INCLUDES@ -DHAVE_TNFTPD_H=1 @CFLAGS@ -D_DEFAULT_CONFDIR=\"${sysconfdir}\"
+ LIBS	= @LIBS@
+ LDFLAGS	= @LDFLAGS@
+ 
