@@ -1,4 +1,4 @@
-#	$NetBSD: cross.mk,v 1.12 1999/07/16 00:50:04 wrstuden Exp $
+#	$NetBSD: cross.mk,v 1.13 1999/10/27 10:46:55 fredb Exp $
 
 # Shared definitions for building a cross-compile environment.
 
@@ -106,6 +106,7 @@ EGCS_NO_OBJC_RUNTIME=	yes
 .endif
 
 .if !defined(EGCS_NO_CXX)
+CXX_CONFIGURE_ARGS+=	--with-gxx-include-dir=${TARGET_DIR}/include/g++
 EGCS_LANGUAGES+=	c++
 PLIST_PRE+=		${COMMON_DIR}/PLIST-egcs-cxx
 .if !defined(EGCS_NO_CXX_RUNTIME)
@@ -183,7 +184,8 @@ egcs-configure:
 		INSTALL="${INSTALL} -c -o ${BINOWN} -g ${BINGRP}" \
 		INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 		./configure --prefix=${PREFIX} \
-		--host=${MACHINE_GNU_ARCH}--netbsd --target=${TARGET_ARCH}
+		--host=${MACHINE_GNU_ARCH}--netbsd  --target=${TARGET_ARCH} \
+		${CXX_CONFIGURE_ARGS}
 .if defined(EGCS_FAKE_RUNTIME)
 	@${MKDIR} ${SYS_INCLUDE} ${SYS_INCLUDE}/machine ${SYS_INCLUDE}/sys
 	@cd ${SYS_INCLUDE} && ${TOUCH} ${TOUCH_FLAGS} machine/ansi.h \
