@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.184 2003/01/11 17:17:56 grant Exp $
+# $NetBSD: Makefile,v 1.185 2003/01/15 00:33:35 salo Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -7,6 +7,7 @@ SUBDIR+=	GutenMark
 SUBDIR+=	GutenMark-words
 SUBDIR+=	antiword
 SUBDIR+=	aspell
+SUBDIR+=	aspell-english
 SUBDIR+=	aspell-gaeilge
 SUBDIR+=	aspell-slovak
 SUBDIR+=	bibclean
