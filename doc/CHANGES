@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8900 2005/01/24 18:08:32 wulf Exp $
+$NetBSD: CHANGES,v 1.8901 2005/01/24 18:20:28 manu Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -538,3 +538,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated zsnes to 1.42 [xtraeme 2005-01-24]
 	Added radeontool-1.5 [jmcneill 2005-01-24]
 	Added gmfsk-0.6 [wulf 2005-01-24]
+	Updated hobbitmon to 4.0b6 [manu 2005-01-24]
