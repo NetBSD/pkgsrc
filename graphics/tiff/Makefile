@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/02/16 15:22:34 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2001/05/03 13:22:50 skrll Exp $
 
 DISTNAME=	tiff-v3.5.5
 PKGNAME=	tiff-3.5.5
@@ -18,6 +18,7 @@ DEPENDS+=	jpeg-6b:../../graphics/jpeg
 USE_LIBTOOL=	yes
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--noninteractive --site=${FILESDIR}
+CONFIGURE_ENV+=	CC="${CC}"
 
 .include "../../mk/bsd.prefs.mk"
 
