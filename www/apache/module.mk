@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.4 2003/02/17 21:31:09 grant Exp $
+# $NetBSD: module.mk,v 1.5 2003/02/17 22:33:55 grant Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install apache modules.
@@ -31,8 +31,8 @@ APACHE_MODULE_SRC?=	*.c
 
 apache-module-build:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	cd ${APACHE_MODULE_SRCDIR} && ${APXS} ${LDFLAGS} -c -o		\
-		${APACHE_MODULE_NAME} ${APACHE_MODULE_SRC}
+	cd ${APACHE_MODULE_SRCDIR} && ${APXS} ${CPPFLAGS} ${LDFLAGS}	\
+		-c -o ${APACHE_MODULE_NAME} ${APACHE_MODULE_SRC}
 
 do-build: apache-module-build
 	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
