@@ -1,4 +1,4 @@
-/*	$NetBSD: process.c,v 1.5 2004/06/13 13:11:41 grant Exp $	*/
+/*	$NetBSD: process.c,v 1.6 2004/06/13 13:12:09 grant Exp $	*/
 
 /*-
  * Copyright (c) 1992 Diomidis Spinellis.
@@ -47,7 +47,7 @@
 #if 0
 static char sccsid[] = "@(#)process.c	8.6 (Berkeley) 4/20/94";
 #else
-__RCSID("$NetBSD: process.c,v 1.5 2004/06/13 13:11:41 grant Exp $");
+__RCSID("$NetBSD: process.c,v 1.6 2004/06/13 13:12:09 grant Exp $");
 #endif
 #endif /* not lint */
 
@@ -147,10 +147,12 @@ redirect:
 				cp = cp->u.c;
 				goto redirect;
 			case 'a':
-				if (appendx >= appendnum)
+				if (appendx >= appendnum) {
 					appends = xrealloc(appends,
 					    sizeof(struct s_appends) *
-					    (appendnum *= 2));
+					    (appendnum * 2));
+					appendnum *= 2;
+				}
 				appends[appendx].type = AP_STRING;
 				appends[appendx].s = cp->t;
 				appends[appendx].len = strlen(cp->t);
@@ -239,10 +241,12 @@ redirect:
 				flush_appends();
 				exit(0);
 			case 'r':
-				if (appendx >= appendnum)
+				if (appendx >= appendnum) {
 					appends = xrealloc(appends,
 					    sizeof(struct s_appends) *
-					    (appendnum *= 2));
+					    (appendnum * 2));
+					appendnum *= 2;
+				}
 				appends[appendx].type = AP_FILE;
 				appends[appendx].s = cp->t;
 				appends[appendx].len = strlen(cp->t);
@@ -594,8 +598,9 @@ regsub(SPACE *sp, char *string, char *src)
 
 #define	NEEDSP(reqlen)							\
 	if (sp->len + (reqlen) + 1 >= sp->blen) {			\
-		sp->blen += (reqlen) + 1024;				\
-		sp->space = sp->back = xrealloc(sp->back, sp->blen);	\
+		size_t newlen = sp->blen + (reqlen) + 1024;		\
+		sp->space = sp->back = xrealloc(sp->back, newlen);	\
+		sp->blen = newlen;					\
 		dst = sp->space + sp->len;				\
 	}
 
@@ -638,8 +643,9 @@ cspace(SPACE *sp, char *p, size_t len, enum e_spflag spflag)
 	/* Make sure SPACE has enough memory and ramp up quickly. */
 	tlen = sp->len + len + 1;
 	if (tlen > sp->blen) {
-		sp->blen = tlen + 1024;
-		sp->space = sp->back = xrealloc(sp->back, sp->blen);
+		size_t newlen = tlen + 1024;
+		sp->space = sp->back = xrealloc(sp->back, newlen);
+		sp->blen = newlen;
 	}
 
 	if (spflag == REPLACE)
