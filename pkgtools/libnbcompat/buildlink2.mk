@@ -1,9 +1,9 @@
-# $NetBSD: buildlink2.mk,v 1.8 2003/09/02 22:19:03 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.9 2003/09/03 13:11:12 jlam Exp $
 
 .if !defined(LIBNBCOMPAT_BUILDLINK2_MK)
 LIBNBCOMPAT_BUILDLINK2_MK=     # defined
 
-BUILDLINK_DEPENDS.libnbcompat?=		libnbcompat>=20030823
+BUILDLINK_DEPENDS.libnbcompat?=		libnbcompat>=20030826
 BUILDLINK_PKGSRCDIR.libnbcompat?=	../../pkgtools/libnbcompat
 BUILDLINK_DEPMETHOD.libnbcompat?=	build
 
@@ -11,6 +11,7 @@ BUILDLINK_PACKAGES+=		libnbcompat
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libnbcompat=libnbcompat
 BUILDLINK_PREFIX.libnbcompat_DEFAULT=	${LOCALBASE}
 
+BUILDLINK_FILES.libnbcompat=	include/libnbcompat/*/*
 BUILDLINK_FILES.libnbcompat+=	include/libnbcompat/*
 BUILDLINK_FILES.libnbcompat+=	lib/libnbcompat.*
 

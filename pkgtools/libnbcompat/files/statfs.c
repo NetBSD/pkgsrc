@@ -1,4 +1,4 @@
-/*	$NetBSD: statfs.c,v 1.2 2003/09/02 02:05:22 jlam Exp $	*/
+/*	$NetBSD: statfs.c,v 1.3 2003/09/03 13:11:16 jlam Exp $	*/
 /*-
  * Copyright (c) 1998 The NetBSD Foundation, Inc.
  * All rights reserved.
@@ -36,57 +36,14 @@
  */
 
 #if HAVE_CONFIG_H
-#include "nbconfig.h"
+#include "nbcompat/nbconfig.h"
 #endif
 
 #if HAVE_STRING_H
 #include <string.h>
 #endif
 
-#if HAVE_SYS_TYPES_H
-#include <sys/types.h>
-#endif
-
-#if HAVE_SYS_MOUNT_H
-#include <sys/mount.h>
-#endif
-
-#if HAVE_SYS_STATVFS_H
-#include <sys/statvfs.h>
-#endif
-
-#if HAVE_SYS_VFS_H
-#include <sys/vfs.h>
-#endif
-
-#define	MFSNAMELEN	16	/* length of fs type name, including nul */
-#define	MNAMELEN	90	/* length of buffer for returned name */
-
-struct statfs {
-	short	f_type;			/* type of file system */
-	u_short	f_flags;		/* copy of mount flags */
-	long	f_bsize;		/* fundamental file system block size */
-	long	f_iosize;		/* optimal transfer block size */
-	long	f_blocks;		/* total data blocks in file system */
-	long	f_bfree;		/* free blocks in fs */
-	long	f_bavail;		/* free blocks avail to non-superuser */
-	long	f_files;		/* total file nodes in file system */
-	long	f_ffree;		/* free file nodes in fs */
-	fsid_t	f_fsid;			/* file system id */
-	uid_t	f_owner;		/* user that mounted the file system */
-	long	f_spare[4];		/* spare for later */
-	char	f_fstypename[MFSNAMELEN]; /* fs type name */
-	char	f_mntonname[MNAMELEN];	  /* directory on which mounted */
-	char	f_mntfromname[MNAMELEN];  /* mounted file system */
-};
-
-#ifndef MNT_RDONLY
-#define MNT_RDONLY      0x00000001      /* read only filesystem */
-#endif
-
-#ifndef MNT_NOSUID
-#define MNT_NOSUID      0x00000008      /* don't honor setuid bits on fs */
-#endif
+#include "nbcompat/statfs.h"
 
 static void vfs2fs(struct statfs *, const struct statvfs *);
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.12 2003/09/03 03:43:45 jlam Exp $
+# $NetBSD: Makefile.in,v 1.13 2003/09/03 13:11:13 jlam Exp $
 #
 
 srcdir=		@srcdir@
@@ -7,7 +7,7 @@ VPATH=		@srcdir@
 SHELL=		/bin/sh
 
 CC=		@CC@
-CFLAGS=		-I${srcdir} -I. @INCLUDES@ @CFLAGS@
+CFLAGS=		-I$(srcdir) -I. @INCLUDES@ @CFLAGS@
 CPPFLAGS=	@CPPFLAGS@
 DEFS=		@DEFS@
 INSTALL=	@INSTALL@
@@ -19,32 +19,34 @@ RANLIB=		@RANLIB@
 
 LIB=		libnbcompat.a
 
-INCS=		err.h extern.h ftpglob.h fts.h getopt.h md5.h mtree.h \
-		nbcompat.h nbtypes.h pack_dev.h pwcache.h \
-		rmd160.h sha1.h sha2.h stat_flags.h util.h vis.h
+INCS=		extern.h ftpglob.h getopt.h md5.h mtree.h nbcompat.h \
+		nbcompat/err.h nbcompat/fts.h nbcompat/nbtypes.h \
+		nbcompat/poll.h nbcompat/statfs.h nbcompat/vis.h \
+		pack_dev.h pwcache.h rmd160.h sha1.h sha2.h stat_flags.h \
+		util.h
 
 OBJS=		@LIBOBJS@ \
 		md5c.o md5hl.o rmd160.o rmd160hl.o sha1.o sha1hl.o \
-		sha2.o sha2hl.o unvis.o vis.o setmode.o __fts13.o \
-		getid.o misc.o pack_dev.o spec.o setmode.o stat_flags.o \
-		pwcache.o getopt_long.o
+		sha2.o sha2hl.o setmode.o __fts13.o getid.o misc.o \
+		pack_dev.o spec.o setmode.o stat_flags.o pwcache.o \
+		getopt_long.o
 
 LINK=		$(CCLD) $(CFLAGS) $(LDFLAGS) -o $@
 COMPILE=	$(CC) $(CPPFLAGS) $(CFLAGS)
 
 .PHONY: all install clean distclean
 
-all: nbtypes.h nbconfig.hi ${LIB}
+all: nbcompat/nbtypes.h nbcompat/nbconfig.hi $(LIB)
 
-.c.o: nbtypes.h
+.c.o: nbcompat/nbtypes.h
 	$(COMPILE) $(DEFS) -c $<
 
-${LIB}: ${OBJS}
-	${AR} cr $@ ${OBJS}
-	${RANLIB} $@
+$(LIB): $(OBJS)
+	$(AR) cr $@ $(OBJS)
+	$(RANLIB) $@
 
-nbconfig.hi: nbconfig.h
-	${AWK} '							\
+nbcompat/nbconfig.hi: nbcompat/nbconfig.h
+	$(AWK) '							\
 		BEGIN { process = 1 }					\
 		/NBCOMPAT template section follows\./ { process = 0 }	\
 		/^\#[ 	]*define[ 	]+PACKAGE_.*/ { next }		\
@@ -60,27 +62,28 @@ nbconfig.hi: nbconfig.h
 			}						\
 		}							\
 		{ print }						\
-	' nbconfig.h > $@
+	' nbcompat/nbconfig.h > $@
 
-nbtypes.h: bits
-	./bits nbtypes.h
+nbcompat/nbtypes.h: bits
+	./bits $@
 
 bits: bits.c
-	${CC} -o bits bits.c
+	$(CC) -o bits bits.c
 
 install:
-	${INSTALL} -m 555 ${LIB} ${prefix}/lib
-	${RANLIB} ${prefix}/lib/${LIB}
-	${INSTALL} -m 755 -d ${prefix}/include/libnbcompat
-	@for file in ${INCS}; do \
-		echo "${INSTALL} -m 444 $$file ${prefix}/include/libnbcompat/$$file"; \
-		${INSTALL} -m 444 $$file ${prefix}/include/libnbcompat/$$file; \
+	$(INSTALL) -m 555 ${LIB} $(prefix)/lib
+	$(RANLIB) $(prefix)/lib/$(LIB)
+	$(INSTALL) -m 755 -d $(prefix)/include/libnbcompat
+	$(INSTALL) -m 755 -d $(prefix)/include/libnbcompat/nbcompat
+	@for file in $(INCS); do \
+		echo "$(INSTALL) -m 444 $$file $(prefix)/include/libnbcompat/$$file"; \
+		$(INSTALL) -m 444 $$file $(prefix)/include/libnbcompat/$$file; \
 	done
-	${INSTALL} -m 444 nbconfig.hi ${prefix}/include/libnbcompat/nbconfig.h
+	$(INSTALL) -m 444 nbcompat/nbconfig.hi $(prefix)/include/libnbcompat/nbcompat/nbconfig.h
 
 clean:
-	rm -f *.a *.o bits nbtypes.h
+	rm -f *.a *.o bits nbcompat/nbtypes.h nbcompat/nbcompat.hi
 
 distclean: clean
-	rm -f Makefile config.log config.status configure.lineno nbconfig.h
-
+	rm -f Makefile config.log config.status configure.lineno
+	rm -f nbcompat/nbconfig.h

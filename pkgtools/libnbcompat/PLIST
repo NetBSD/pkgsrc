@@ -1,14 +1,17 @@
-@comment $NetBSD: PLIST,v 1.7 2003/09/03 06:16:08 tron Exp $
-include/libnbcompat/err.h
+@comment $NetBSD: PLIST,v 1.8 2003/09/03 13:11:12 jlam Exp $
 include/libnbcompat/extern.h
 include/libnbcompat/ftpglob.h
-include/libnbcompat/fts.h
 include/libnbcompat/getopt.h
 include/libnbcompat/md5.h
 include/libnbcompat/mtree.h
 include/libnbcompat/nbcompat.h
-include/libnbcompat/nbconfig.h
-include/libnbcompat/nbtypes.h
+include/libnbcompat/nbcompat/err.h
+include/libnbcompat/nbcompat/fts.h
+include/libnbcompat/nbcompat/nbconfig.h
+include/libnbcompat/nbcompat/nbtypes.h
+include/libnbcompat/nbcompat/poll.h
+include/libnbcompat/nbcompat/statfs.h
+include/libnbcompat/nbcompat/vis.h
 include/libnbcompat/pack_dev.h
 include/libnbcompat/pwcache.h
 include/libnbcompat/rmd160.h
@@ -16,8 +19,8 @@ include/libnbcompat/sha1.h
 include/libnbcompat/sha2.h
 include/libnbcompat/stat_flags.h
 include/libnbcompat/util.h
-include/libnbcompat/vis.h
 lib/libnbcompat.a
+@dirrm include/libnbcompat/nbcompat
 @dirrm include/libnbcompat
 @unexec ${RMDIR} -p %D/include 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} -p %D/lib 2>/dev/null || ${TRUE}

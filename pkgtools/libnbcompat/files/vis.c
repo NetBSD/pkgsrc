@@ -1,4 +1,4 @@
-/*	$NetBSD: vis.c,v 1.2 2003/09/01 15:31:22 jlam Exp $	*/
+/*	$NetBSD: vis.c,v 1.3 2003/09/03 13:11:16 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1999 The NetBSD Foundation, Inc.
@@ -35,15 +35,17 @@
  */
 
 #if HAVE_CONFIG_H
-#include "nbconfig.h"
+#include "nbcompat/nbconfig.h"
 #endif
+
+#include "nbcompat/nbtypes.h"
 
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
 
 #if defined(LIBC_SCCS) && !defined(lint)
-__RCSID("$NetBSD: vis.c,v 1.2 2003/09/01 15:31:22 jlam Exp $");
+__RCSID("$NetBSD: vis.c,v 1.3 2003/09/03 13:11:16 jlam Exp $");
 #endif /* LIBC_SCCS and not lint */
 
 #include "namespace.h"
@@ -53,10 +55,8 @@ __RCSID("$NetBSD: vis.c,v 1.2 2003/09/01 15:31:22 jlam Exp $");
 #include <assert.h>
 #endif
 
-#include "vis.h"
+#include "nbcompat/vis.h"
 #include <stdlib.h>
-
-#include <nbtypes.h>
 
 #ifndef __ELF__
 #define _strsvis	strsvis

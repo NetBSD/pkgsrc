@@ -1,4 +1,4 @@
-/*	$NetBSD: pack_dev.c,v 1.2 2003/09/01 15:31:19 jlam Exp $	*/
+/*	$NetBSD: pack_dev.c,v 1.3 2003/09/03 13:11:14 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1998, 2001 The NetBSD Foundation, Inc.
@@ -36,17 +36,17 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 #if HAVE_CONFIG_H
-#include "nbconfig.h"
+#include "nbcompat/nbconfig.h"
 #endif
 
-#include <nbtypes.h>
+#include "nbcompat/nbtypes.h"
 
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
 
 #if defined(__RCSID) && !defined(lint)
-__RCSID("$NetBSD: pack_dev.c,v 1.2 2003/09/01 15:31:19 jlam Exp $");
+__RCSID("$NetBSD: pack_dev.c,v 1.3 2003/09/03 13:11:14 jlam Exp $");
 #endif /* not lint */
 
 #include <sys/types.h>

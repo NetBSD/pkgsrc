@@ -1,4 +1,4 @@
-/*	$NetBSD: getopt_long.c,v 1.3 2003/09/01 15:31:17 jlam Exp $	*/
+/*	$NetBSD: getopt_long.c,v 1.4 2003/09/03 13:11:14 jlam Exp $	*/
 
 /*-
  * Copyright (c) 2000 The NetBSD Foundation, Inc.
@@ -37,7 +37,7 @@
  */
 
 #if HAVE_CONFIG_H
-#include "nbconfig.h"
+#include "nbcompat/nbconfig.h"
 #endif
 
 #if HAVE_SYS_CDEFS_H
@@ -45,7 +45,7 @@
 #endif
 
 #if defined(LIBC_SCCS) && !defined(lint)
-__RCSID("$NetBSD: getopt_long.c,v 1.3 2003/09/01 15:31:17 jlam Exp $");
+__RCSID("$NetBSD: getopt_long.c,v 1.4 2003/09/03 13:11:14 jlam Exp $");
 #endif /* LIBC_SCCS and not lint */
 
 /* #include "namespace.h" */
