@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/21 16:30:38 martti Exp $
+# $NetBSD: Makefile,v 1.8 2003/11/16 19:04:02 veego Exp $
 #
 
 DISTNAME=		gogo239b
@@ -11,7 +11,7 @@ MAINTAINER=		uebs@gmx.at
 HOMEPAGE=		http://homepage1.nifty.com/herumi/gogo_e.html
 COMMENT=		Very fast lame-based mp3 encoder, i386 only
 
-BUILD_DEPENDS+=		nasm-0.98:../../devel/nasm
+BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
 ONLY_FOR_PLATFORM=	*-*-i386
 
