@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.6 2005/03/24 10:18:21 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.7 2005/03/24 17:39:00 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -13,3 +13,5 @@ Pullup ticket 382 - requested by Julio M. Merino Vidal
 threading fix for libopendaap
 Pullup ticket 383 - requested by Juan Romero Pardines
 clamsmtp update
+Pullup ticket 384 - requested by Matthias Scheler
+security fix for firefox-gtk2-bin
