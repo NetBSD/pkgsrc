@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2002/01/14 17:18:04 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2002/10/24 06:21:19 martti Exp $
 
---- src/scanner.l.orig	Sun Aug 26 11:18:58 2001
-+++ src/scanner.l
-@@ -4110,5 +4110,5 @@
+--- src/scanner.l.orig	Tue Sep 17 18:59:18 2002
++++ src/scanner.l	Tue Oct 22 14:49:36 2002
+@@ -4634,5 +4634,5 @@
  
  //----------------------------------------------------------------------------
  extern "C" { // some bogus code to keep the compiler happy
