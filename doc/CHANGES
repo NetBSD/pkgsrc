@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8412 2004/12/23 11:48:34 shannonjr Exp $
+$NetBSD: CHANGES,v 1.8413 2004/12/23 12:58:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6478,4 +6478,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mit-krb5 to 1.3.6 [jlam 2004-12-23]
 	Added flac2mp3-20041223 [agc 2004-12-23]
 	Updated gnupg-devel to 1.9.14 [shannonjr 2004-12-23]
-	Updated libbassuan to 0.6.9 [shannonjr 2004-12-23]
+	Updated libassuan to 0.6.9 [shannonjr 2004-12-23]
