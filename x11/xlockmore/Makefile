@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2003/03/17 20:14:19 hubertf Exp $
+# $NetBSD: Makefile,v 1.56 2003/03/24 17:54:01 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/10/10 09:24:38 tg Exp
 #
 
@@ -22,6 +22,7 @@ CONFIGURE_ARGS+=--without-gltt --without-ttf --without-opengl --without-mesa \
 CONFIGURE_ENV+= CXX="${CC}"	# no dependency on libstdc++
 .else
 .include "../../graphics/MesaLib/buildlink2.mk"
+.include "../../graphics/glu/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
 CONFIGURE_ARGS+= --with-mesagl
 .endif
