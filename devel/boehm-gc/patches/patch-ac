@@ -1,0 +1,157 @@
+$NetBSD: patch-ac,v 1.1 1998/09/06 16:06:58 christos Exp $
+
+*** config.h.orig	Wed Aug 20 20:01:31 1997
+--- config.h	Sun Sep  6 10:23:41 1998
+***************
+*** 92,98 ****
+  # endif
+  # if defined(sparc) && defined(unix) && !defined(sun)
+  #   define SPARC
+! #   define DRSNX
+  #   define mach_type_known
+  # endif
+  # if defined(_IBMR2)
+--- 92,102 ----
+  # endif
+  # if defined(sparc) && defined(unix) && !defined(sun)
+  #   define SPARC
+! #   if defined(__NetBSD__)
+! #     define SUNOS4	/* XXX */
+! #   else
+! #     define DRSNX
+! #   endif
+  #   define mach_type_known
+  # endif
+  # if defined(_IBMR2)
+*** dyn_load.c.orig	Sun Sep  6 10:37:47 1998
+--- dyn_load.c	Sun Sep  6 10:58:20 1998
+***************
+*** 62,67 ****
+--- 62,99 ----
+  #endif
+  #ifdef SUNOS4
+  #   include <dlfcn.h>
++ #   ifdef __NetBSD__
++ #	include <nlist.h>
++ #	define link_dynamic _dynamic
++ #	define link_dynamic_2 section_dispatch_table
++ #	define ld_2 d_sdt
++ #	define ld_1 d_sdt
++ #	define ld_version d_version
++ #	define ld_un d_un 
++ 
++ #	define ldd d_debug
++ #	define ldd_cp dd_cc
++ 
++ #	define rtc_symb rt_symbol
++ #	define rtc_next rt_next
++ #	define rtc_sp	rt_sp->nlist
++ #	define RTC_DEREF .
++ 
++ #	define ld_loaded sdt_loaded
++ #	define ld_stab sdt_nzlist  
++ #	define ld_symbols sdt_strings
++ #	define ld_symb_size sdt_str_sz
++ #	define ld_loaded sdt_loaded
++ 
++ 
++ #	define link_map so_map
++ #	define lm_addr som_addr 
++ #	define lm_next som_next
++ #	define lm_ld som_dynamic
++ #	define lm_name som_path
++ #   else
++ #	define RTC_DEREF ->
++ #   endif
+  #   include <link.h>
+  #   include <a.out.h>
+    /* struct link_map field overrides */
+***************
+*** 150,157 ****
+      curr_symbol = _DYNAMIC.ldd -> ldd_cp;
+      for (; curr_symbol != 0; curr_symbol = curr_symbol -> rtc_next) {
+          if (result == 0
+!             || (ptr_t)(curr_symbol -> rtc_sp -> n_value) < result) {
+!             result = (ptr_t)(curr_symbol -> rtc_sp -> n_value);
+          }
+      }
+      return(result);
+--- 184,191 ----
+      curr_symbol = _DYNAMIC.ldd -> ldd_cp;
+      for (; curr_symbol != 0; curr_symbol = curr_symbol -> rtc_next) {
+          if (result == 0
+!             || (ptr_t)(curr_symbol -> rtc_sp RTC_DEREF n_value) < result) {
+!             result = (ptr_t)(curr_symbol -> rtc_sp RTC_DEREF n_value);
+          }
+      }
+      return(result);
+*** mach_dep.c.orig	Wed Aug 20 19:11:03 1997
+--- mach_dep.c	Sun Sep  6 10:19:54 1998
+***************
+*** 347,353 ****
+--- 347,357 ----
+  #   ifdef SVR4
+        asm("	.globl	GC_save_regs_in_stack");
+        asm("GC_save_regs_in_stack:");
++ #    ifdef __NetBSD__
++       asm("	.type GC_save_regs_in_stack,@function");
++ #    else
+        asm("	.type GC_save_regs_in_stack,#function");
++ #    endif
+  #   else
+        asm("	.globl	_GC_save_regs_in_stack");
+        asm("_GC_save_regs_in_stack:");
+***************
+*** 380,386 ****
+--- 384,394 ----
+  # else
+      asm(".globl GC_clear_stack_inner");
+      asm("GC_clear_stack_inner:");
++ #ifdef __NetBSD__
++     asm(".type GC_save_regs_in_stack,@function");
++ #else
+      asm(".type GC_save_regs_in_stack,#function");
++ #endif
+  # endif
+    asm("mov %sp,%o2");		/* Save sp	*/
+    asm("add %sp,-8,%o3");	/* p = sp-8	*/
+*** os_dep.c.orig	Sun Sep  6 10:27:43 1998
+--- os_dep.c	Sun Sep  6 10:35:24 1998
+***************
+*** 1390,1398 ****
+      char * addr;
+  #   ifdef SUNOS4
+  #     define SIG_OK (sig == SIGSEGV || sig == SIGBUS)
+! #     define CODE_OK (FC_CODE(code) == FC_PROT \
+                	    || (FC_CODE(code) == FC_OBJERR \
+                	       && FC_ERRNO(code) == FC_PROT))
+  #   endif
+  #   ifdef FREEBSD
+  #     define SIG_OK (sig == SIGBUS)
+--- 1390,1402 ----
+      char * addr;
+  #   ifdef SUNOS4
+  #     define SIG_OK (sig == SIGSEGV || sig == SIGBUS)
+! #     if defined(__NetBSD__)
+! #	define CODE_OK TRUE
+! #     else
+! #       define CODE_OK (FC_CODE(code) == FC_PROT \
+                	    || (FC_CODE(code) == FC_OBJERR \
+                	       && FC_ERRNO(code) == FC_PROT))
++ #     endif
+  #   endif
+  #   ifdef FREEBSD
+  #     define SIG_OK (sig == SIGBUS)
+***************
+*** 2093,2098 ****
+--- 2097,2106 ----
+  #if defined(SPARC)
+  #   if defined(SUNOS4)
+  #     include <machine/frame.h>
++ #     if defined(__NetBSD__)
++ #	define fr_savpc fr_pc
++ #	define fr_savfp fr_fp
++ #     endif
+  #   else
+  #     if defined (DRSNX)
+  #	include <sys/sparc/frame.h>
