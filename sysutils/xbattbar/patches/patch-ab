@@ -1,14 +1,15 @@
-$NetBSD: patch-ab,v 1.4 2003/11/01 09:25:31 mycroft Exp $
+$NetBSD: patch-ab,v 1.5 2003/11/05 07:26:04 mrg Exp $
 
 --- xbattbar.c.orig	2001-02-02 16:25:29.000000000 +1100
-+++ xbattbar.c	2003-11-01 14:55:10.000000000 +1100
-@@ -27,6 +27,13 @@
++++ xbattbar.c	2003-11-03 17:17:11.000000000 +1100
+@@ -27,6 +27,14 @@
  
  #include <sys/types.h>
  #include <sys/time.h>
 +
 +#ifdef __NetBSD__
 +#define ENVSYSUNITNAMES
++#include <sys/param.h>
 +#include <sys/envsys.h>
 +#include <paths.h>
 +#endif /* __NetBSD__ */
@@ -16,7 +17,7 @@ $NetBSD: patch-ab,v 1.4 2003/11/01 09:25:31 mycroft Exp $
  #include <signal.h>
  #include <stdio.h>
  #include <unistd.h>
-@@ -583,46 +590,165 @@
+@@ -583,39 +590,171 @@
  #define _PATH_APM_CTLDEV       "/dev/apmctl"
  #define _PATH_APM_NORMAL       "/dev/apm"
  
@@ -79,6 +80,10 @@ $NetBSD: patch-ab,v 1.4 2003/11/01 09:25:31 mycroft Exp $
 +static envsys_basic_info_t *ebis;
 +static int *cetds;
 +
++#if defined(_PATH_SYSMON) && __NetBSD_Version__ >= 106110000
++#define HAVE_NETBSD_ACPI
++#endif
++
  int first = 1;
  void battery_check(void)
  {
@@ -92,18 +97,23 @@ $NetBSD: patch-ab,v 1.4 2003/11/01 09:25:31 mycroft Exp $
 +       acpi = 0;
         if ((fd = open(_PATH_APM_NORMAL, O_RDONLY)) == -1) {
 -               fprintf(stderr, "xbattbar: cannot open apm device\n");
+-               exit(1);
++#ifdef HAVE_NETBSD_ACPI
 +	       fd = open(_PATH_SYSMON, O_RDONLY);
 +	       acpi = 1;
-+       }
++#endif
+        }
+-
+-       if (ioctl(fd, APM_IOC_GETPOWER, &info) != 0) {
+-               fprintf(stderr, "xbattbar: ioctl APM_IOC_GETPOWER failed\n");
 +       if (fd < 0) {
 +               fprintf(stderr, "xbattbar: cannot open %s device\n", (acpi) ? _PATH_SYSMON : _PATH_APM_NORMAL);
                 exit(1);
         }
  
--       if (ioctl(fd, APM_IOC_GETPOWER, &info) != 0) {
--               fprintf(stderr, "xbattbar: ioctl APM_IOC_GETPOWER failed\n");
--               exit(1);
+-       close(fd);
 +       if (acpi) {
++#ifdef HAVE_NETBSD_ACPI
 +		if ((ns = numsensors(fd)) == 0) {
 +		       fprintf(stderr, "xbattbar: no sensors found\n");
 +		       exit(1);
@@ -117,10 +127,17 @@ $NetBSD: patch-ab,v 1.4 2003/11/01 09:25:31 mycroft Exp $
 +				err(1, "Out of memory");
 +			}
 +		}
-+
+ 
+-       ++elapsed_time;
 +		fillsensors(fd, etds, ebis, ns);
-+
-+       } else {
+ 
+-       /* get current remoain */
+-       if (info.battery_life > 100) {
+-               /* some APM BIOSes return values slightly > 100 */
+-               r = 100;
++#endif
+        } else {
+-               r = info.battery_life;
 +
 +	       memset(&info, 0, sizeof(info));
 +	       if (ioctl(fd, APM_IOC_GETPOWER, &info) != 0) {
@@ -129,20 +146,17 @@ $NetBSD: patch-ab,v 1.4 2003/11/01 09:25:31 mycroft Exp $
 +	       }
         }
  
-        close(fd);
- 
-        ++elapsed_time;
- 
--       /* get current remoain */
--       if (info.battery_life > 100) {
--               /* some APM BIOSes return values slightly > 100 */
--               r = 100;
--       } else {
--               r = info.battery_life;
--       }
+-       /* get AC-line status */
+-       if (info.ac_state == APM_AC_ON) {
+-               p = APM_AC_ON;
++       close(fd);
++
++       ++elapsed_time;
++
 +       if (acpi) {
++#ifdef HAVE_NETBSD_ACPI
 +		int32_t rtot = 0, maxtot = 0;
-+		p = APM_AC_OFF;
++		p = APM_AC_ON;
 +		for (i = 0 ; i < ns ; i++) {
 +			if ((etds[i].validflags & ENVSYS_FCURVALID) == 0)
 +				continue;
@@ -153,33 +167,27 @@ $NetBSD: patch-ab,v 1.4 2003/11/01 09:25:31 mycroft Exp $
 +				rtot += etds[i].cur.data_s;
 +				maxtot += etds[i].max.data_s;
 +			}
++			/*
++			 * XXX: We should use acpiacad driver and look for
++			 * " connected", but that's broken on some machines
++			 * and we want this to work everywhere.  With this
++			 * we will occasionally catch a machine conditioning
++			 * a battery while connected, while other machines take
++			 * 10-15 seconds to switch from "charging" to
++			 * "discharging" and vice versa, but this is the best
++			 * compromise.
++			 */
 +			if (ebis[i].units == ENVSYS_INDICATOR &&
 +			    etds[i].cur.data_s &&
-+			    strncmp(ebis[i].desc, "acpiacad", 8) == 0 &&
-+			    strcmp(&ebis[i].desc[cc - 10], " connected") == 0) {
-+				p = APM_AC_ON;
++			    strncmp(ebis[i].desc, "acpibat", 7) == 0 &&
++			    strcmp(&ebis[i].desc[cc - 11], "discharging") == 0) {
++				p = APM_AC_OFF;
 +			}
 +		}
 +		r = (rtot * 100.0) / maxtot;
-+	       if (first || ac_line != p || battery_level != r) {
-+		       first = 0;
-+		       ac_line = p;
-+		       battery_level = r;
-+		       redraw();
-+	       }
- 
--       /* get AC-line status */
--       if (info.ac_state == APM_AC_ON) {
--               p = APM_AC_ON;
++#endif
         } else {
 -               p = APM_AC_OFF;
--       }
--
--       if (first || ac_line != p || battery_level != r) {
--               first = 0;
--               ac_line = p;
--               battery_level = r;
--               redraw();
 +	       /* get current remain */
 +	       if (info.battery_life > 100) {
 +		       /* some APM BIOSes return values slightly > 100 */
@@ -194,13 +202,6 @@ $NetBSD: patch-ab,v 1.4 2003/11/01 09:25:31 mycroft Exp $
 +	       } else {
 +		       p = APM_AC_OFF;
 +	       }
-+
-+	       if (first || ac_line != p || battery_level != r) {
-+		       first = 0;
-+		       ac_line = p;
-+		       battery_level = r;
-+		       redraw();
-+	       }
         }
- }
  
+        if (first || ac_line != p || battery_level != r) {
