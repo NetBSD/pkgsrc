@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 1998/08/31 08:12:19 mycroft Exp $
+# $NetBSD: Makefile,v 1.16 1998/09/05 12:27:39 mycroft Exp $
 #
 
-DISTNAME=		xmame-0.34b1.1
+DISTNAME=		xmame-0.34b2.1
 CATEGORIES=		emulators games x11
 MASTER_SITES=		ftp://drake.dit.upm.es/xmame/ftpsite/
 EXTRACT_SUFX=		.tgz
@@ -22,7 +22,7 @@ MAKE_ENV+=		OPSYS=${OPSYS} ARCH=${ARCH} DESTDIR=${DESTDIR} \
 			NETBSD_JOYSTICK="${NETBSD_JOYSTICK}" \
 			DISPLAY_METHOD="${DISPLAY_METHOD}"
 MAKEFILE=		makefile.unix
-DISPLAY_METHOD=		xwindows
+DISPLAY_METHOD=		x11
 ALL_TARGET=		xmame.${DISPLAY_METHOD}
 
 MAMEDIR=		${PREFIX}/share/xmame
