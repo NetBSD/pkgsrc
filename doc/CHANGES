@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7111 2004/09/06 22:30:33 wiz Exp $
+$NetBSD: CHANGES,v 1.7112 2004/09/07 01:47:30 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4209,3 +4209,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added ftplibpp-1.0.1 [cjep 2004-09-06]
 	bsd.pkg.mk: started freeze for pkgsrc-2004Q3 branch [agc 2004-09-06]
 	Updated fox to 1.0.43nb3 [wiz 2004-09-06]
+	Updated mit-krb5 to 1.3.4nb2 [jlam 2004-09-06]
