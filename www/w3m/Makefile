@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2001/09/28 10:10:40 itojun Exp $
+# $NetBSD: Makefile,v 1.29 2001/11/29 01:12:52 hubertf Exp $
 #
 
 DISTNAME=	w3m-0.2.1
-PKGNAME=	w3m-0.2.1.0.19nb2
+PKGNAME=	w3m-0.2.1.0.19
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	ftp://ei5nazha.yz.yamagata-u.ac.jp/w3m/
 

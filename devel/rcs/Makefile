@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2001/11/12 03:06:31 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/11/29 01:12:30 hubertf Exp $
 #
 
 DISTNAME=		rcs-5.7
-PKGNAME=		rcs-5.7nb1
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=rcs/}
 

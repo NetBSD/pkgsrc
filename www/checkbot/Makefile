@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2001/09/27 20:43:04 abs Exp $
+# $NetBSD: Makefile,v 1.11 2001/11/29 01:12:51 hubertf Exp $
 #
 
 DISTNAME=	checkbot-1.64
-PKGNAME=	checkbot-1.64nb1
+PKGREVISION=	1
 CATEGORIES=	www net perl5
 MASTER_SITES=	http://degraaff.org/checkbot/
 
