@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: squid.sh,v 1.10 2001/07/30 07:30:12 tron Exp $
+# $NetBSD: squid.sh,v 1.11 2001/09/18 16:12:11 tron Exp $
 #
 
 # PROVIDE: squid
@@ -34,12 +34,12 @@ stop_nicely ()
 		${kill_command}
 		if [ ${DAEMON_PID} -ne 0 ]; then
 			echo -n '['
-			for WAIT in 0 1 2 3 4 5 6 7 8 9
+			for WAIT in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
 			do
 				if kill -0 ${DAEMON_PID} >/dev/null 2>&1; then
-					sleep 2
+					sleep 4
 					echo -n '.'
-					test $WAIT -lt 9 || kill ${DAEMON_PID}
+					test $WAIT -lt 15 || kill ${DAEMON_PID}
 				else
 					break
 				fi
