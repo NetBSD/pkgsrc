@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.46 2002/03/25 08:04:04 martti Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.47 2002/03/26 08:24:59 martti Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1040,6 +1040,11 @@ PILRC_USE_GTK?=	YES
 
 #POSTFIX_VERP=YES
 # Add support for Variable Envelope Return Paths.
+# Possible: YES, not defined
+# Default: not defined
+
+#PURE_FTPD_USE_MYSQL=YES
+# Add support for MySQL.
 # Possible: YES, not defined
 # Default: not defined
 
