@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 14:05:06 abs Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/06 05:46:22 jtb Exp $
 
 DISTNAME=		gpc-2.1
-PKGREVISION=		1
+PKGREVISION=		2
 WRKSRC=			${WRKDIR}/gcc-2.95.3
 CATEGORIES=		lang
 MASTER_SITES=		http://www.gnu-pascal.de/current/ \
@@ -16,20 +16,25 @@ COMMENT=		GNU Pascal Compiler
 PATCH_SITES=		${MASTER_SITE_LOCAL}
 PATCHFILES=		gcc-2.95.3-diff-2002-08-29.gz
 
-DEPENDS+=		gcc-2.95.3nb1:../../lang/gcc
-DEPENDS+=		gmp-[0-9]*:../../devel/gmp
-DEPENDS+=		ncurses-[0-9]*:../../devel/ncurses
-DEPENDS+=		rx-[0-9]*:../../devel/rx
-
-BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 BUILD_DEPENDS+=		gsed-[0-9]*:../../textproc/gsed
 
 USE_GMAKE=		# defined
 USE_NCURSES=		# defined
-USE_PKGSRC_GCC=		# defined
+PLIST_SRC=		PLIST
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+CFLAGS+=		-DNETBSD_NATIVE
+GPC_PREFIX=		${PREFIX}
+GPC_SUBPREFIX=
+PLIST_SRC+=		PLIST.netbsd
+.else
+DEPENDS+=		gcc-2.95.3*:../../lang/gcc
+USE_PKGSRC_GCC=		# defined
 GPC_PREFIX=		${_GCC_PREFIX}
-GPC_SUBPREFIX=		${_GCC_SUBPREFIX}
+GPC_SUBPREFIX=		${_GCC_SUBPREFIX}/
+.endif
 
 HAS_CONFIGURE=		# defined
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
@@ -48,8 +53,6 @@ INSTALL_DIRS=		${BUILD_DIRS}/gcc
 INSTALL_TARGET=		pascal.install
 
 INFO_FILES=		gpc.info gpcs.info
-
-.include "../../mk/bsd.prefs.mk"
 
 post-extract:
 	${MKDIR} ${WRKSRC}
@@ -70,10 +73,10 @@ pre-patch:
 
 pre-configure:
 	${MKDIR} ${BUILD_DIRS}
-	${TOUCH} ${TOUCH_FLAGS}	${WRKSRC}/gcc/c-gperf.h
-	${ECHO} "bogus" > ${WRKSRC}/gcc/cstamp-h.in
 
+.if ${OPSYS} != "NetBSD"
 .include "../../mk/gcc.buildlink2.mk"
+.endif
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
