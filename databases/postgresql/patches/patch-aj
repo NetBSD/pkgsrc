@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.3 1999/09/19 04:24:55 jlam Exp $
+$NetBSD: patch-aj,v 1.4 1999/09/20 23:38:50 jlam Exp $
 
 --- ./interfaces/ecpg/lib/Makefile.in.orig	Wed Jun 30 19:57:23 1999
-+++ ./interfaces/ecpg/lib/Makefile.in	Sat Sep 18 03:05:04 1999
-@@ -12,7 +12,11 @@
++++ ./interfaces/ecpg/lib/Makefile.in	Mon Sep 20 01:17:03 1999
+@@ -12,12 +12,16 @@
  
  NAME= ecpg
  SO_MAJOR_VERSION= 3
@@ -14,6 +14,12 @@ $NetBSD: patch-aj,v 1.3 1999/09/19 04:24:55 jlam Exp $
  
  SRCDIR= @top_srcdir@
  include $(SRCDIR)/Makefile.global
+ 
+-CFLAGS+= -I../include -I$(SRCDIR)/interfaces/libpq
++CFLAGS+= -I../include -I$(LIBPQDIR)
+ 
+ ifdef KRBVERS
+ CFLAGS+= $(KRBFLAGS)
 @@ -25,7 +29,7 @@
  
  OBJS= ecpglib.o typename.o

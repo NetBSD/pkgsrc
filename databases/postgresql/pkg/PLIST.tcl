@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST.tcl,v 1.1 1999/09/19 04:24:56 jlam Exp $
-${PGUSER}/bin/pgaccess
+@comment $NetBSD: PLIST.tcl,v 1.2 1999/09/20 23:38:51 jlam Exp $
 ${PGUSER}/bin/pgtclsh
 ${PGUSER}/bin/pgtksh
 ${PGUSER}/include/libpgtcl.h
