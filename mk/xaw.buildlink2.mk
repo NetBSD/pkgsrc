@@ -1,4 +1,4 @@
-# $NetBSD: xaw.buildlink2.mk,v 1.2 2002/08/22 08:21:27 jlam Exp $
+# $NetBSD: xaw.buildlink2.mk,v 1.3 2002/08/28 15:20:39 jlam Exp $
 
 .if !defined(XAW_BUILDLINK2_MK)
 XAW_BUILDLINK2_MK=	# defined
@@ -12,6 +12,8 @@ XAW_TYPE?=	standard
 .include "../../x11/Xaw-Xpm/buildlink2.mk"
 .elif ${XAW_TYPE} == "3d"
 .include "../../x11/Xaw3d/buildlink2.mk"
+.elif ${XAW_TYPE} == "neXtaw"
+.include "../../x11/neXtaw/buildlink2.mk"
 .else
 LIBXAW?=	-L${X11BASE}/lib -lXaw
 .endif
