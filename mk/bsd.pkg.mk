@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.38 2003/08/27 01:47:32 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.39 2003/08/27 01:59:45 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -4645,6 +4645,35 @@ real-su-build-views:
 		${SETENV} PLIST_IGNORE_FILES="${_PLIST_IGNORE_FILES}" ${PKG_VIEW} --view=$$v add ${PKGNAME}; \
 	done
 .  else
+	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
+.  endif
+.endif
+
+.PHONY: remove-views
+remove-views: do-su-remove-views
+
+.PHONY: do-su-remove-views
+do-su-remove-views:
+	@${ECHO_MSG} "${_PKGSRC_IN}> Removing ${PKGNAME} from views"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	realtarget="real-su-remove-views";				\
+	action="remove-views";						\
+	${_SU_TARGET}
+
+.PHONY: real-su-remove-views
+.if !target(real-su-remove-views)
+real-su-remove-views:
+.  if (${PKG_INSTALLATION_TYPE} == "pkgviews") && defined(PKGVIEWS)
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	for v in ${PKGVIEWS}; do					\
+		case "$$v" in						\
+		"")	dbdir=${PKG_DBDIR}; viewname=standard ;;	\
+		*)	dbdir=${LOCALBASE}/$$v/.dbdir; viewname=$$v ;;	\
+		esac;							\
+		${ECHO} "=> Removing package from $$viewname view";	\
+		${SETENV} PLIST_IGNORE_FILES="${_PLIST_IGNORE_FILES}" ${PKG_VIEW} --view=$$v delete ${PKGNAME}; \
+	done
+.else
 	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
 .  endif
 .endif
