@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1720 2003/03/22 03:12:10 wiz Exp $
+$NetBSD: CHANGES,v 1.1721 2003/03/22 03:16:20 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1233,3 +1233,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated md-whois to 4.6.3 [wiz 2003-03-22]
 	Updated gcc3 to 3.2.2 [wiz 2003-03-22]
 	Updated webalizer to 2.1.10 [wiz 2003-03-22]
+	Updated mplayer to 0.90rc15 [salo 2003-03-22]
+	Updated mplayer-share to 0.90rc15 [salo 2003-03-22]
+	Updated gmplayer to 0.90rc15 [salo 2003-03-22]
+	Updated mencoder to 0.90rc15 [salo 2003-03-22]
