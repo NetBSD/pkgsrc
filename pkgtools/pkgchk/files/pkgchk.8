@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkgchk.8,v 1.1.1.1 2001/07/02 14:12:30 abs Exp $
+.\"	$NetBSD: pkgchk.8,v 1.2 2001/07/05 21:00:54 abs Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -68,7 +68,7 @@ Verbose - list the tags set, and all packages checked.
 .Sh FILE FORMAT
 .Pp
 Each non comment line in pkgsrc.conf should contain a package directory
-(such as sysutils/skill) followed by a list of 'tags'. If a tag starts with
+(such as sysutils/skill) followed by a list of tags. If a tag starts with
 a hyphen (-), then any machine matching will be excluded, otherwise if any
 tags match the current machine the package will be included. The tag
 .Em *
