@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2004/01/26 12:06:43 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/02/17 05:28:31 xtraeme Exp $
 #
 
 MPLAYER_DIST_VERSION=	1.0pre3
@@ -33,7 +33,8 @@ PTHREAD_OPTS+=		require
 CONFIGURE_ARGS+=	--prefix="${PREFIX}" \
 			--with-extraincdir="${LOCALBASE}/include" \
 			--with-extralibdir="${LOCALBASE}/lib" \
-			--with-extralibdir="${X11BASE}/lib" \
+			--with-x11incdir="${X11BASE}/include" \
+			--with-x11libdir="${X11BASE}/lib" \
 			--disable-mpdvdkit \
 
 # The configure script attempts to test-execute compiled programs in /tmp,
