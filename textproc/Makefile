@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.211 2003/09/17 21:16:31 wiz Exp $
+# $NetBSD: Makefile,v 1.212 2003/09/18 08:34:15 xtraeme Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -150,6 +150,7 @@ SUBDIR+=	p5-XML-RegExp
 SUBDIR+=	p5-XML-SAX
 SUBDIR+=	p5-XML-SAX-Expat
 SUBDIR+=	p5-XML-Simple
+SUBDIR+=	p5-XML-Stream
 SUBDIR+=	p5-XML-Twig
 SUBDIR+=	p5-XML-Writer
 SUBDIR+=	p5-XML-Writer-String
