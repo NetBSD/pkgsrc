@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.39 1999/01/30 22:11:37 is Exp $
+# $NetBSD: mk.conf.example,v 1.40 1999/02/14 12:49:15 tron Exp $
 #
 # Sample /etc/mk.conf file, which can be used to set specific values
 # for building either NetBSD or some of the NetBSD packages collection.
@@ -52,6 +52,10 @@
 
 #UVM=		1		# Use the new UVM virtual memory subsystem
                                 # Possible: defined, not defined
+                                # Default: not defined
+
+#MASTER_SITE_OVERRIDE=	URL	# Search for distfiles at the location
+                                # specified by the URL first.
                                 # Default: not defined
 
 #PASSIVE_FETCH=	1		# Use ftp(1) in passive mode, for use behind
