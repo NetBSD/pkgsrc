@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/10/25 21:43:20 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/01/17 12:11:46 adam Exp $
 bin/icc2ps
 bin/icclink
 bin/icctrans
@@ -7,6 +7,11 @@ include/icc34.h
 include/lcms.h
 lib/liblcms.la
 lib/pkgconfig/lcms.pc
+man/man1/icc2ps.1
+man/man1/icclink.1
+man/man1/jpegicc.1
+man/man1/tifficc.1
+man/man1/wtpt.1
 share/doc/lcms/LCMSAPI.TXT
 share/doc/lcms/TUTORIAL.TXT
 @dirrm share/doc/lcms
