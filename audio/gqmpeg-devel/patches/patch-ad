@@ -1,0 +1,26 @@
+$NetBSD: patch-ad,v 1.1 2004/12/08 08:57:56 minskim Exp $
+
+--- src/cpu_perc.c.orig	2002-05-06 21:50:10.000000000 -0500
++++ src/cpu_perc.c
+@@ -45,6 +45,9 @@
+   #include <fcntl.h>
+   #include <sys/mount.h>
+ #endif
++#ifdef HAVE_SYS_STATVFS_H
++#include <sys/statvfs.h>
++#endif
+ 
+ gfloat check_child_cpu_usage(int childs_pid)
+ {
+@@ -66,7 +69,11 @@ gfloat check_child_cpu_usage(int childs_
+ 	/* find where the proc fs is mounted, some strange people could mount it
+ 	   in another place than /proc, it can even be not mounted at all */
+ 	{
++#ifdef HAVE_SYS_STATVFS_H
++	  struct statvfs *mntbufp;
++#else
+ 	  struct statfs *mntbufp;
++#endif
+ 	  int fs_count;
+ 	  int procfs_found = 0;
+ 	  
