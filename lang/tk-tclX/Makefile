@@ -1,31 +1,31 @@
-# $NetBSD: Makefile,v 1.15 2004/03/08 20:27:14 minskim Exp $
+# $NetBSD: Makefile,v 1.16 2004/03/20 19:28:52 minskim Exp $
 #
 
 DISTNAME=	tclX8.2.0
 PKGNAME=	tk-tclX-8.2.0
+PKGREVISION=	1
 CATEGORIES=	lang tcl tk
 MASTER_SITES=	ftp://ftp.neosoft.com/pub/tcl/TclX/
 
 MAINTAINER=	jwise@NetBSD.org
-HOMEPAGE=	http://www.neosoft.com/TclX/
+HOMEPAGE=	http://tclx.sourceforge.net/
 COMMENT=	Extended Tcl (TclX), a set of Tcl extensions for system programming
-
-DEPENDS+=	tk>=8.3.4:../../x11/tk83
-DEPENDS+=	tcl-tclX-8.2.0:../../lang/tcl-tclX
 
 CONFLICTS+=	tclX-[0-9]*
 
 WRKSRC=		${WRKDIR}/tclX8.2.0/unix
+USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-shared --with-tcl=${PREFIX}/lib \
-			--with-tk=${PREFIX}/lib
+CONFIGURE_ARGS+=	--enable-shared \
+			--with-tcl=${BUILDLINK_PREFIX.tcl}/lib \
+			--with-tk=${BUILDLINK_PREFIX.tk}/lib
 TEST_DIRS=		${WRKSRC}/../tk/unix
 TEST_TARGET=		test
 
 CONFIGURE_ENV+=		\
-	PKGSRC_TCL_SRC_DIR="${_PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.3.4" \
-	PKGSRC_TK_SRC_DIR="${_PKGSRCDIR}/x11/tk/${WRKDIR:T}/tk8.3.4"
+	PKGSRC_TCL_SRC_DIR="${_PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.4.6" \
+	PKGSRC_TK_SRC_DIR="${_PKGSRCDIR}/x11/tk/${WRKDIR:T}/tk8.4.6"
 
 MAKE_ENV+=		GTAR=${GTAR} CHOWN=${CHOWN} CHMOD=${CHMOD} \
 			SHAREMODE=${SHAREMODE} SHAREOWN=${SHAREOWN} \
@@ -34,18 +34,28 @@ MAKE_ENV+=		GTAR=${GTAR} CHOWN=${CHOWN} CHMOD=${CHMOD} \
 FILESDIR=	${.CURDIR}/../../lang/tcl-tclX/files
 PATCHDIR=	${.CURDIR}/../../lang/tcl-tclX/patches
 
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	"Fixing Tcl/Tk library names."
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	${WRKSRC}/../tk/unix/Makefile.in
+SUBST_SED.paths=	-e 's,ltcl83,ltcl,g' -e 's,ltk83,ltk,g'
+
+.include "../../lang/tcl/buildlink2.mk"
+.include "../../lang/tcl-tclX/buildlink2.mk"
+.include "../../x11/tk/buildlink2.mk"
+
 post-extract:
 	${MV} ${WRKSRC}/../doc/Memory.n ${WRKSRC}/../doc/TclXMemory.n
-	@if [ ! -e ${_PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.3.4 ]; then	\
-		cd ../../lang/tcl83 && ${MAKE} extract;			\
+	@if [ ! -e ${_PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.4.6 ]; then	\
+		cd ../../lang/tcl && ${MAKE} extract;			\
 	fi
-	@if [ ! -e ${_PKGSRCDIR}/x11/tk/${WRKDIR:T}/tk8.3.4 ]; then	\
-		cd ../../x11/tk83 && ${MAKE} extract;			\
+	@if [ ! -e ${_PKGSRCDIR}/x11/tk/${WRKDIR:T}/tk8.4.6 ]; then	\
+		cd ../../x11/tk && ${MAKE} extract;			\
 	fi
 
 pre-clean:
-	@cd ../../lang/tcl83 && ${MAKE} clean
-	@cd ../../x11/tk83 && ${MAKE} clean
+	@cd ../../lang/tcl && ${MAKE} clean
+	@cd ../../x11/tk && ${MAKE} clean
 
 do-build:
 	@cd ${WRKSRC}/../tk/unix && ${MAKE_ENV} ${MAKE}
