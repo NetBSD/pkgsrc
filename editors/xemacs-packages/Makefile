@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2002/03/15 00:21:41 uebayasi Exp $
+# $NetBSD: Makefile,v 1.24 2002/03/15 10:06:48 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1999/06/22 22:16:53 gj Exp
 
 DISTNAME=	xemacs-packages
@@ -32,7 +32,7 @@ COMMENT=	Common elisp packages for xemacs 21
 
 DEPENDS+=	xemacs>=21.1.14:../../editors/xemacs
 
-DIST_SUBDIR=	${PKGNAME:S/nb1//}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}
