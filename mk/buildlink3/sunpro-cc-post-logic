@@ -1,4 +1,4 @@
-# $NetBSD: sunpro-cc-post-logic,v 1.5 2004/02/16 12:18:15 grant Exp $
+# $NetBSD: sunpro-cc-post-logic,v 1.6 2004/02/16 22:22:38 grant Exp $
 #
 # Silently accept some GCC compiler arguments by silently converting
 # them to the SunPro compiler equivalents.  This makes the SunPro
@@ -44,6 +44,11 @@ case $arg in
 	# SunPro uses -Kpic to create position indepedent code.
 	#
 	arg=-Kpic
+	addtoprivatecache=yes
+	;;
+-pedantic)
+	# No flag is required for SunPro to be pedantic.
+	arg=
 	addtoprivatecache=yes
 	;;
 -shared)
