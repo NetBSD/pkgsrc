@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.723 2003/07/15 09:24:51 adam Exp $
+$NetBSD: TODO,v 1.724 2003/07/16 08:36:49 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -194,6 +194,7 @@ Suggested package updates
 	o p5-Net-SNMP-4.1.0 [pkg/21782]
 	o p5-XML-LibXML-1.54
 	o pcre-4.3
+	o pdmenu-1.2.81
 	o php4-4.3.2
 	o pine-4.56
 	o plib-1.6.0 [pkg/19015]
