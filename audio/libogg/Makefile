@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/04/05 13:18:51 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/04/11 08:59:09 tron Exp $
 
 DISTNAME=	libogg-1.0beta4
 PKGNAME=	libogg-1.0.0.4
@@ -12,5 +12,7 @@ COMMENT=	Ogg project codecs library
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+
+PLIST_SUBST+=		DISTNAME=${DISTNAME}
 
 .include "../../mk/bsd.pkg.mk"
