@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.29 2004/08/27 06:29:09 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.30 2004/08/28 05:51:30 jlam Exp $
 
 transform="@_BLNK_TRANSFORM_SEDFILE@"
 untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
@@ -272,6 +272,9 @@ EOF
 		gen $action $r:-Wl,-R$2
 		gen $action $r:-R$2
 		;;
+	rmdir)
+		gen $action r:$2
+		;;
 	S)
 		case "$action" in
 		transform|untransform)
@@ -281,6 +284,9 @@ s|$2$|$3|g
 EOF
 			;;
 		esac
+		;;
+	rm)
+		gen $action S:$2:
 		;;
 	s)
 		case "$action" in
@@ -293,7 +299,6 @@ EOF
 		;;
 	*)
 		echo "Unknown arg: $arg" 1>&2
-		exit 1
 		;;
 	esac
 }
