@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2001/08/12 20:32:01 rh Exp $
+@comment $NetBSD: PLIST,v 1.8 2001/10/06 18:29:34 rh Exp $
 bin/another_clock_applet
 bin/asclock_applet
 bin/battery_applet
@@ -996,8 +996,8 @@ share/gnome/help/netload_applet/es/figures/netload-applet-greyed.png
 share/gnome/help/netload_applet/es/figures/netload-applet-properties.png
 share/gnome/help/netload_applet/es/figures/netload-applet.png
 share/gnome/help/netload_applet/es/index.html
-share/gnome/help/netload_applet/es/licencia_es.sgml
-share/gnome/help/netload_applet/es/licencia_nota_es.sgml
+share/gnome/help/netload_applet/es/licencia-es.sgml
+share/gnome/help/netload_applet/es/licencia-nota-es.sgml
 share/gnome/help/netload_applet/es/license.sgml
 share/gnome/help/netload_applet/es/ln10.html
 share/gnome/help/netload_applet/es/netload.sgml
@@ -1185,7 +1185,7 @@ share/locale/tr.mo/LC_MESSAGES/gnome-applets.mo
 share/locale/uk.mo/LC_MESSAGES/gnome-applets.mo
 share/locale/wa.mo/LC_MESSAGES/gnome-applets.mo
 share/locale/zh_CN.GB2312.mo/LC_MESSAGES/gnome-applets.mo
-share/locale/zh_TW.Big5.mo/LC_MESSAGES/gnome-applets.mo
+share/locale/zh_TW.mo/LC_MESSAGES/gnome-applets.mo
 share/odometer/57chevy/57chevy-small-black.png
 share/odometer/57chevy/57chevy-small-red.png
 share/odometer/57chevy/themedata
@@ -1533,76 +1533,6 @@ share/xmodmap/xmodmap.yu
 @dirrm share/odometer/A
 @dirrm share/odometer/57chevy
 @dirrm share/odometer
-@dirrm share/locale/zh_TW.Big5.mo/LC_MESSAGES
-@dirrm share/locale/zh_TW.Big5.mo
-@dirrm share/locale/zh_CN.GB2312.mo/LC_MESSAGES
-@dirrm share/locale/zh_CN.GB2312.mo
-@dirrm share/locale/wa.mo/LC_MESSAGES
-@dirrm share/locale/wa.mo
-@dirrm share/locale/uk.mo/LC_MESSAGES
-@dirrm share/locale/uk.mo
-@dirrm share/locale/tr.mo/LC_MESSAGES
-@dirrm share/locale/tr.mo
-@dirrm share/locale/sv.mo/LC_MESSAGES
-@dirrm share/locale/sv.mo
-@dirrm share/locale/sl.mo/LC_MESSAGES
-@dirrm share/locale/sl.mo
-@dirrm share/locale/sk.mo/LC_MESSAGES
-@dirrm share/locale/sk.mo
-@dirrm share/locale/ru.mo/LC_MESSAGES
-@dirrm share/locale/ru.mo
-@dirrm share/locale/ro.mo/LC_MESSAGES
-@dirrm share/locale/ro.mo
-@dirrm share/locale/pt_BR.mo/LC_MESSAGES
-@dirrm share/locale/pt_BR.mo
-@dirrm share/locale/pt.mo/LC_MESSAGES
-@dirrm share/locale/pt.mo
-@dirrm share/locale/pl.mo/LC_MESSAGES
-@dirrm share/locale/pl.mo
-@dirrm share/locale/no.mo/LC_MESSAGES
-@dirrm share/locale/no.mo
-@dirrm share/locale/nn.mo/LC_MESSAGES
-@dirrm share/locale/nn.mo
-@dirrm share/locale/nl.mo/LC_MESSAGES
-@dirrm share/locale/nl.mo
-@dirrm share/locale/lt.mo/LC_MESSAGES
-@dirrm share/locale/lt.mo
-@dirrm share/locale/ko.mo/LC_MESSAGES
-@dirrm share/locale/ko.mo
-@dirrm share/locale/ja.mo/LC_MESSAGES
-@dirrm share/locale/ja.mo
-@dirrm share/locale/it.mo/LC_MESSAGES
-@dirrm share/locale/it.mo
-@dirrm share/locale/hu.mo/LC_MESSAGES
-@dirrm share/locale/hu.mo
-@dirrm share/locale/gl.mo/LC_MESSAGES
-@dirrm share/locale/gl.mo
-@dirrm share/locale/ga.mo/LC_MESSAGES
-@dirrm share/locale/ga.mo
-@dirrm share/locale/fr.mo/LC_MESSAGES
-@dirrm share/locale/fr.mo
-@dirrm share/locale/fi.mo/LC_MESSAGES
-@dirrm share/locale/fi.mo
-@dirrm share/locale/eu.mo/LC_MESSAGES
-@dirrm share/locale/eu.mo
-@dirrm share/locale/et.mo/LC_MESSAGES
-@dirrm share/locale/et.mo
-@dirrm share/locale/es.mo/LC_MESSAGES
-@dirrm share/locale/es.mo
-@dirrm share/locale/en_GB.mo/LC_MESSAGES
-@dirrm share/locale/en_GB.mo
-@dirrm share/locale/el.mo/LC_MESSAGES
-@dirrm share/locale/el.mo
-@dirrm share/locale/de.mo/LC_MESSAGES
-@dirrm share/locale/de.mo
-@dirrm share/locale/da.mo/LC_MESSAGES
-@dirrm share/locale/da.mo
-@dirrm share/locale/cs.mo/LC_MESSAGES
-@dirrm share/locale/cs.mo
-@dirrm share/locale/ca.mo/LC_MESSAGES
-@dirrm share/locale/ca.mo
-@dirrm share/locale/az.mo/LC_MESSAGES
-@dirrm share/locale/az.mo
 @dirrm share/gweather
 @exec /bin/mkdir -p /usr/X11R6/share/gnome/help/whereami_applet/it/stylesheet-images
 @dirrm share/gnome/help/whereami_applet/it/stylesheet-images
@@ -2004,6 +1934,7 @@ share/xmodmap/xmodmap.yu
 @dirrm share/geyes/Default
 @dirrm share/geyes/Bloodshot
 @dirrm share/geyes/Bizarre
+@dirrm share/geyes
 @dirrm share/clockmail/radar-green
 @dirrm share/clockmail/radar-blue
 @dirrm share/clockmail/odometer
