@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/01/02 17:20:40 grant Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/01/22 22:44:12 jmmv Exp $
 share/doc/docbook-xsl/ChangeLog
 share/doc/docbook-xsl/book.xsl
 share/doc/docbook-xsl/ch01s02.html
@@ -67,6 +67,9 @@ share/doc/docbook-xsl/fo/dingbat.font.family.html
 share/doc/docbook-xsl/fo/double.sided.html
 share/doc/docbook-xsl/fo/draft.mode.html
 share/doc/docbook-xsl/fo/draft.watermark.image.html
+share/doc/docbook-xsl/fo/equation.properties.html
+share/doc/docbook-xsl/fo/example.properties.html
+share/doc/docbook-xsl/fo/figure.properties.html
 share/doc/docbook-xsl/fo/firstterm.only.link.html
 share/doc/docbook-xsl/fo/footer.content.properties.html
 share/doc/docbook-xsl/fo/footer.rule.html
@@ -109,6 +112,7 @@ share/doc/docbook-xsl/fo/headers.on.blank.pages.html
 share/doc/docbook-xsl/fo/html.stylesheet.html
 share/doc/docbook-xsl/fo/html.stylesheet.type.html
 share/doc/docbook-xsl/fo/hyphenate.html
+share/doc/docbook-xsl/fo/ignore.image.scaling.html
 share/doc/docbook-xsl/fo/index.html
 share/doc/docbook-xsl/fo/informal.object.properties.html
 share/doc/docbook-xsl/fo/insert.xref.page.number.html
@@ -127,6 +131,7 @@ share/doc/docbook-xsl/fo/ld-d0e2499.html
 share/doc/docbook-xsl/fo/ld-d0e2576.html
 share/doc/docbook-xsl/fo/ld-d0e2614.html
 share/doc/docbook-xsl/fo/ld-d0e2764.html
+share/doc/docbook-xsl/fo/ld-d0e2907.html
 share/doc/docbook-xsl/fo/line-height.html
 share/doc/docbook-xsl/fo/linenumbering.everyNth.html
 share/doc/docbook-xsl/fo/linenumbering.extension.html
@@ -160,6 +165,8 @@ share/doc/docbook-xsl/fo/part.autolabel.html
 share/doc/docbook-xsl/fo/passivetex.extensions.html
 share/doc/docbook-xsl/fo/pr01.html
 share/doc/docbook-xsl/fo/preface.autolabel.html
+share/doc/docbook-xsl/fo/preferred.mediaobject.role.html
+share/doc/docbook-xsl/fo/procedure.properties.html
 share/doc/docbook-xsl/fo/process.empty.source.toc.html
 share/doc/docbook-xsl/fo/process.source.toc.html
 share/doc/docbook-xsl/fo/profile.arch.html
@@ -240,6 +247,7 @@ share/doc/docbook-xsl/fo/table.frame.border.color.html
 share/doc/docbook-xsl/fo/table.frame.border.style.html
 share/doc/docbook-xsl/fo/table.frame.border.thickness.html
 share/doc/docbook-xsl/fo/table.html
+share/doc/docbook-xsl/fo/table.properties.html
 share/doc/docbook-xsl/fo/tablecolumns.extension.html
 share/doc/docbook-xsl/fo/target.database.document.html
 share/doc/docbook-xsl/fo/tex.math.delims.html
@@ -256,6 +264,7 @@ share/doc/docbook-xsl/fo/ulink.show.html
 share/doc/docbook-xsl/fo/use.extensions.html
 share/doc/docbook-xsl/fo/use.local.olink.style.html
 share/doc/docbook-xsl/fo/use.role.as.xrefstyle.html
+share/doc/docbook-xsl/fo/use.role.for.mediaobject.html
 share/doc/docbook-xsl/fo/use.svg.html
 share/doc/docbook-xsl/fo/variablelist.as.blocks.html
 share/doc/docbook-xsl/fo/verbatim.properties.html
@@ -399,6 +408,7 @@ share/doc/docbook-xsl/html/htmlhelp.show.favorities.html
 share/doc/docbook-xsl/html/htmlhelp.show.menu.html
 share/doc/docbook-xsl/html/htmlhelp.title.html
 share/doc/docbook-xsl/html/htmlhelp.use.hhk.html
+share/doc/docbook-xsl/html/ignore.image.scaling.html
 share/doc/docbook-xsl/html/index.html
 share/doc/docbook-xsl/html/inherit.keywords.html
 share/doc/docbook-xsl/html/l10n.gentext.default.language.html
@@ -440,6 +450,7 @@ share/doc/docbook-xsl/html/pixels.per.inch.html
 share/doc/docbook-xsl/html/points.per.em.html
 share/doc/docbook-xsl/html/pr01.html
 share/doc/docbook-xsl/html/preface.autolabel.html
+share/doc/docbook-xsl/html/preferred.mediaobject.role.html
 share/doc/docbook-xsl/html/process.empty.source.toc.html
 share/doc/docbook-xsl/html/process.source.toc.html
 share/doc/docbook-xsl/html/profile.arch.html
@@ -525,6 +536,7 @@ share/doc/docbook-xsl/html/use.extensions.html
 share/doc/docbook-xsl/html/use.id.as.filename.html
 share/doc/docbook-xsl/html/use.local.olink.style.html
 share/doc/docbook-xsl/html/use.role.as.xrefstyle.html
+share/doc/docbook-xsl/html/use.role.for.mediaobject.html
 share/doc/docbook-xsl/html/use.svg.html
 share/doc/docbook-xsl/html/using.chunker.html
 share/doc/docbook-xsl/html/variablelist.as.table.html
@@ -555,6 +567,7 @@ share/examples/docbook-xsl/titlepage.xsl
 share/xsl/docbook/VERSION
 share/xsl/docbook/common/ChangeLog
 share/xsl/docbook/common/af.xml
+share/xsl/docbook/common/bg.xml
 share/xsl/docbook/common/ca.xml
 share/xsl/docbook/common/common.xsl
 share/xsl/docbook/common/cs.xml
@@ -948,6 +961,9 @@ share/xsl/docbook/params/draft.watermark.image.xml
 share/xsl/docbook/params/ebnf.table.bgcolor.xml
 share/xsl/docbook/params/ebnf.table.border.xml
 share/xsl/docbook/params/emphasis.propagates.style.xml
+share/xsl/docbook/params/equation.properties.xml
+share/xsl/docbook/params/example.properties.xml
+share/xsl/docbook/params/figure.properties.xml
 share/xsl/docbook/params/firstterm.only.link.xml
 share/xsl/docbook/params/footer.content.properties.xml
 share/xsl/docbook/params/footer.rule.xml
@@ -1033,6 +1049,7 @@ share/xsl/docbook/params/htmlhelp.show.menu.xml
 share/xsl/docbook/params/htmlhelp.title.xml
 share/xsl/docbook/params/htmlhelp.use.hhk.xml
 share/xsl/docbook/params/hyphenate.xml
+share/xsl/docbook/params/ignore.image.scaling.xml
 share/xsl/docbook/params/informal.object.properties.xml
 share/xsl/docbook/params/inherit.keywords.xml
 share/xsl/docbook/params/insert.xref.page.number.xml
@@ -1092,6 +1109,8 @@ share/xsl/docbook/params/phrase.propagates.style.xml
 share/xsl/docbook/params/pixels.per.inch.xml
 share/xsl/docbook/params/points.per.em.xml
 share/xsl/docbook/params/preface.autolabel.xml
+share/xsl/docbook/params/preferred.mediaobject.role.xml
+share/xsl/docbook/params/procedure.properties.xml
 share/xsl/docbook/params/process.empty.source.toc.xml
 share/xsl/docbook/params/process.source.toc.xml
 share/xsl/docbook/params/profile.arch.xml
@@ -1156,6 +1175,7 @@ share/xsl/docbook/params/table.entry.padding.xml
 share/xsl/docbook/params/table.frame.border.color.xml
 share/xsl/docbook/params/table.frame.border.style.xml
 share/xsl/docbook/params/table.frame.border.thickness.xml
+share/xsl/docbook/params/table.properties.xml
 share/xsl/docbook/params/tablecolumns.extension.xml
 share/xsl/docbook/params/target.database.document.xml
 share/xsl/docbook/params/targets.filename.xml
@@ -1180,6 +1200,7 @@ share/xsl/docbook/params/use.id.as.filename.xml
 share/xsl/docbook/params/use.id.function.xml
 share/xsl/docbook/params/use.local.olink.style.xml
 share/xsl/docbook/params/use.role.as.xrefstyle.xml
+share/xsl/docbook/params/use.role.for.mediaobject.xml
 share/xsl/docbook/params/use.svg.xml
 share/xsl/docbook/params/variablelist.as.blocks.xml
 share/xsl/docbook/params/variablelist.as.table.xml
