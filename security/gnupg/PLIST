@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/05/07 18:48:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/07/18 20:44:52 heinz Exp $
 bin/gpg
 bin/gpgkeys_mailto
 bin/gpgsplit
@@ -8,7 +8,7 @@ info/gpgv.info
 @exec ${INSTALL_INFO} --info-dir=%D/info %D/info/gpgv.info
 ${IDEA}lib/gnupg/idea
 lib/gnupg/rndegd
-lib/gnupg/rndlinux
+lib/gnupg/rndunix
 lib/gnupg/tiger
 man/man1/gpg.1
 man/man1/gpgv.1
