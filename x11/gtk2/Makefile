@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2003/06/10 10:47:04 jmmv Exp $
+# $NetBSD: Makefile,v 1.29 2003/06/27 18:10:15 jmmv Exp $
 #
 
 DISTNAME=		gtk+-2.2.2
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.2/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.2/ \
@@ -46,6 +47,7 @@ CONF_FILES=		${EGDIR}/gdk-pixbuf.loaders \
 CONF_FILES+=		${EGDIR}/gtk.immodules ${PKG_SYSCONFDIR}/gtk.immodules
 
 post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/gtk-2.0/engines
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gtk-2.0/modules
 
 .include "../../devel/atk/buildlink2.mk"
