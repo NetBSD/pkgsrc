@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.9 2004/04/27 12:30:23 markd Exp $
+$NetBSD: patch-ac,v 1.10 2004/05/10 18:12:24 wiz Exp $
 
---- defines.h.orig	2004-02-10 15:01:14.000000000 +1300
+--- defines.h.orig	2004-04-14 09:24:30.000000000 +0200
 +++ defines.h
-@@ -574,6 +574,24 @@ struct winsize {
+@@ -584,6 +584,24 @@ struct winsize {
  #    endif
  #  endif
  #endif
