@@ -1,14 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:05 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 09:31:31 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 BINUTILS_BUILDLINK3_MK:=	${BINUTILS_BUILDLINK3_MK}+
 
-.if !defined(BINUTILS_BUILDLINK3_MK)
-BINUTILS_BUILDLINK3_MK=	# defined
+.include "../../mk/bsd.prefs.mk"
 
 .if !empty(BINUTILS_BUILDLINK3_MK:M+)
-.  include "../../mk/bsd.prefs.mk"
-
+BUILDLINK_PACKAGES+=			binutils
 BUILDLINK_DEPENDS.binutils?=		binutils>=2.14.0
 BUILDLINK_PKGSRCDIR.binutils?=		../../devel/binutils
 BUILDLINK_DEPMETHOD.binutils?=		build
@@ -21,18 +19,18 @@ BUILDLINK_IS_BUILTIN.binutils=	YES
 .endif
 
 .if defined(USE_BINUTILS)
-_NEED_BINUTILS=	YES
+BUILDLINK_USE_BUILTIN.binutils=	NO
 .endif
 
 .if !empty(BUILDLINK_CHECK_BUILTIN.binutils:M[yY][eE][sS])
-_NEED_BINUTILS=	NO
+BUILDLINK_USE_BUILTIN.binutils=	YES
 .endif
 
-.if !defined(_NEED_BINUTILS)
+.if !defined(BUILDLINK_USE_BUILTIN.binutils)
 .  if !empty(BUILDLINK_IS_BUILTIN.binutils:M[nN][oO])
-_NEED_BINUTILS=	YES
+BUILDLINK_USE_BUILTIN.binutils=	NO
 .  else
-_NEED_BINUTILS=	NO
+BUILDLINK_USE_BUILTIN.binutils=	YES
 #
 # These versions of NetBSD didn't have a toolchain that was capable of
 # replacing binutils.
@@ -46,23 +44,22 @@ _INCOMPAT_BINUTILS+=	NetBSD-1.5.*-* NetBSD-1.5[A-X]-*
 INCOMPAT_BINUTILS?=       # empty
 .    for _pattern_ in ${_INCOMPAT_BINUTILS} ${INCOMPAT_BINUTILS}
 .      if !empty(MACHINE_PLATFORM:M${_pattern_})
-_NEED_BINUTILS=          YES
+BUILDLINK_USE_BUILTIN.binutils=	NO
 .      endif
 .    endfor
 .  endif
-MAKEFLAGS+=	_NEED_BINUTILS="${_NEED_BINUTILS}"
+MAKEFLAGS+=	\
+	BUILDLINK_USE_BUILTIN.binutils="${BUILDLINK_USE_BUILTIN.binutils}"
 .endif
 
-.if ${_NEED_BINUTILS} == "YES"
+.if !empty(BUILDLINK_USE_BUILTIN.binutils:M[nN][oO])
 .  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	binutils
 .  endif
 .endif
 
 .if !empty(BINUTILS_BUILDLINK3_MK:M+)
-.  if ${_NEED_BINUTILS} == "YES"
-BUILDLINK_PACKAGES+=		binutils
-
+.  if !empty(BUILDLINK_USE_BUILTIN.binutils:M[nN][oO])
 AR=	${BUILDLINK_PREFIX.binutils}/bin/ar
 AS=	${BUILDLINK_PREFIX.binutils}/bin/as
 LD=	${BUILDLINK_PREFIX.binutils}/bin/ld
