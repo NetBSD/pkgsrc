@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2001/11/23 02:18:22 simonb Exp $
+$NetBSD: patch-aa,v 1.7 2002/01/10 00:41:46 simonb Exp $
 
---- wrapzap.orig	Fri Nov 23 12:30:44 2001
-+++ wrapzap	Fri Nov 23 12:34:21 2001
-@@ -16,29 +16,9 @@
+--- scripts/wrapzap.orig	Fri Nov 23 12:30:44 2001
++++ scripts/wrapzap	Fri Nov 23 12:34:21 2001
+@@ -16,30 +16,9 @@
  #
  
  # modify this to match your install
@@ -27,6 +27,7 @@ $NetBSD: patch-aa,v 1.6 2001/11/23 02:18:22 simonb Exp $
 -STUBURL_ADPOPUP=$ZAP_BASE/closepopup.html
 -STUBURL_ADSWF=$ZAP_BASE/ad.swf
 -STUBURL_COUNTER=$ZAP_BASE/counter.gif
+-STUBURL_COUNTERJS=$ZAP_BASE/no-op-counter.js
 -STUBURL_WEBBUG=$ZAP_BASE/webbug.gif
 -STUBURL_WEBBUGJS=$ZAP_BASE/webbug.js
 +zapper=@@PREFIX@@/libexec/squid_redirect
