@@ -1,125 +1,68 @@
---- Makefile.orig	Sun Jul 13 02:44:41 1997
-+++ Makefile	Fri Oct 31 06:55:33 1997
-@@ -74,6 +74,22 @@
- #CFLAGS='-DI386_ASSEM -O2 -DREAL_IS_FLOAT -DLINUX -Wall -g'
- #CFLAGS='-DI386_ASSEM -DREAL_IS_FLOAT -DLINUX -Wall -O2 -m486 -fomit-frame-pointer -funroll-all-loops -finline-functions -ffast-math -malign-loops=2 -malign-jumps=2 -malign-functions=2'
- 
-+netbsd-i386:
-+	$(MAKE) CC=cc LDFLAGS= \
-+		OBJECTS='decode_i386.o dct64_i386.o getbits_.o' \
-+		CFLAGS='-Wall -ansi -pedantic -O4 -m486 -fomit-frame-pointer \
-+			-funroll-all-loops -ffast-math -DROT_I386 \
-+			-DI386_ASSEM -DREAL_IS_FLOAT -DUSE_MMAP -DNETBSD' \
-+		mpg123
-+
-+netbsd:
-+	$(MAKE) CC=cc LDFLAGS= \
-+		OBJECTS='decode.o dct64.o' \
-+		CFLAGS='-Wall -ansi -pedantic -O4 -fomit-frame-pointer \
-+			-funroll-all-loops -ffast-math \
-+			-DREAL_IS_FLOAT -DUSE_MMAP -DNETBSD' \
-+		mpg123
-+
- freebsd:
- 	$(MAKE) CC=cc LDFLAGS= \
- 		OBJECTS='decode_i386.o dct64_i386.o getbits_.o' \
---- audio.c.orig	Sat Jul 12 18:12:01 1997
-+++ audio.c	Fri Oct 31 06:58:54 1997
-@@ -214,7 +214,11 @@
-   return 0;
- }
- 
--#elif defined(SOLARIS) || defined(SUNOS)
-+#elif defined(SOLARIS) || defined(SUNOS) || defined(NETBSD)
-+
-+#ifdef NETBSD
-+#include <sys/ioctl.h>
-+#endif
- 
- #include <sys/filio.h>
- #ifdef SUNOS
-@@ -258,9 +262,7 @@
-     return -1;
-   }
- 
--  if(ioctl(ai->fn, AUDIO_GETINFO, &ainfo) == -1)
--    return -1;
--
-+  AUDIO_INITINFO(&ainfo);
-   switch(ai->output)
-   {
-     case AUDIO_OUT_INTERNAL_SPEAKER:
-@@ -305,8 +307,7 @@
- 
-   if(ai->rate != -1)
-   {
--    if(ioctl(ai->fn, AUDIO_GETINFO, &ainfo) == -1)
--      return -1;
-+    AUDIO_INITINFO(&ainfo);
-     ainfo.play.sample_rate = ai->rate;
-     if(ioctl(ai->fn, AUDIO_SETINFO, &ainfo) == -1)
-       return -1;
-@@ -319,8 +320,7 @@
- {
-   audio_info_t ainfo;
- 
--  if(ioctl(ai->fn, AUDIO_GETINFO, &ainfo) == -1)
--    return -1;
-+  AUDIO_INITINFO(&ainfo);
-   ainfo.play.channels = ai->channels;
-   if(ioctl(ai->fn, AUDIO_SETINFO, &ainfo) == -1)
-     return -1;
-@@ -331,8 +331,7 @@
- {
-   audio_info_t ainfo;
- 
--  if(ioctl(ai->fn, AUDIO_GETINFO, &ainfo) == -1)
--    return -1;
-+  AUDIO_INITINFO(&ainfo);
- 
-   switch(ai->format) {
-     case -1:
-@@ -386,6 +385,13 @@
- void audio_queueflush (struct audio_info_struct *ai)
- {
- 	ioctl (ai->fn, I_FLUSH, FLUSHRW);
-+}
-+#endif
-+
-+#ifdef NETBSD
-+void audio_queueflush (struct audio_info_struct *ai)
-+{
-+	ioctl (ai->fn, AUDIO_FLUSH, 0);
- }
- #endif
- 
---- audio.h.orig	Sun Jul 13 02:11:14 1997
-+++ audio.h	Fri Oct 31 06:59:11 1997
-@@ -11,7 +11,7 @@
- #define AUDIO_FORMAT_ULAW_8       0x8
- #define AUDIO_FORMAT_ALAW_8       0x10
- 
--#if defined(HPUX) || defined(SUNOS) || defined(SOLARIS) || defined(VOXWARE)
-+#if defined(HPUX) || defined(SUNOS) || defined(SOLARIS) || defined(VOXWARE) || defined(NETBSD)
- #define AUDIO_USES_FD
- #endif
- 
-@@ -43,6 +43,6 @@
- extern int audio_write_sample(struct audio_info_struct *,short *,int);
- extern int audio_close(struct audio_info_struct *);
- extern void audio_info_struct_init(struct audio_info_struct *);
--#ifdef SOLARIS
-+#if defined(SOLARIS) || defined(NETBSD)
- extern void audio_queueflush(struct audio_info_struct *ai);
- #endif
---- buffer.c.orig	Fri Oct 31 06:59:55 1997
-+++ buffer.c	Fri Oct 31 06:59:21 1997
-@@ -45,7 +45,7 @@
- 	for (;;) {
- 		if (intflag) {
- 			intflag = FALSE;
--#ifdef SOLARIS
-+#if defined(SOLARIS) || defined(NETBSD)
- 			if (outmode == DECODE_AUDIO)
- 				audio_queueflush (ai);
- #endif
+*** Makefile.old	Thu Feb 26 20:21:13 1998
+--- Makefile	Thu Feb 26 20:21:56 1998
+***************
+*** 34,40 ****
+  	@echo "make ultrix          DEC Ultrix (tested: 4.4)"
+  	@echo "make aix             IBM AIX (tested: 4.2)"
+  	@echo "make os2             IBM OS/2"
+! 	@echo "make netbsd          NetBSD"
+  	@echo "make bsdos           BSDI BSD/OS"
+  	@echo "make generic         try this one if your system isn't listed above"
+  	@echo ""
+--- 34,41 ----
+  	@echo "make ultrix          DEC Ultrix (tested: 4.4)"
+  	@echo "make aix             IBM AIX (tested: 4.2)"
+  	@echo "make os2             IBM OS/2"
+! 	@echo "make netbsd          NetBSD generic"
+! 	@echo "make netbsd-i386     NetBSD optimized for i386"
+  	@echo "make bsdos           BSDI BSD/OS"
+  	@echo "make generic         try this one if your system isn't listed above"
+  	@echo ""
+*** audio_sun.c.old	Thu Feb 26 20:10:37 1998
+--- audio_sun.c	Thu Feb 26 20:18:46 1998
+***************
+*** 17,22 ****
+--- 17,24 ----
+  
+  #include "mpg123.h"
+  
++ extern int outburst;
++ 
+  #include <sys/filio.h>
+  #ifdef SUNOS
+  #include <sun/audioio.h>
+***************
+*** 74,79 ****
+--- 76,88 ----
+    }
+  
+  #ifndef NETBSD
++   AUDIO_INITINFO(&ainfo);
++   if (ioctl(ai->fn, AUDIO_SETINFO, &ainfo) == -1)
++     return -1;
++   outburst = ainfo.blocksize;
++   if(outburst > MAXOUTBURST)
++     outburst = MAXOUTBURST;
++ 
+    AUDIO_INITINFO(&ainfo);
+  
+    switch(ai->output) {
+*** buffer.c.old	Thu Feb 26 20:20:37 1998
+--- buffer.c	Thu Feb 26 20:20:45 1998
+***************
+*** 48,54 ****
+  	for (;;) {
+  		if (intflag) {
+  			intflag = FALSE;
+! #if defined(SOLARIS) || defined(__NetBSD__)
+  			if (param.outmode == DECODE_AUDIO)
+  				audio_queueflush (ai);
+  #endif
+--- 48,54 ----
+  	for (;;) {
+  		if (intflag) {
+  			intflag = FALSE;
+! #if defined(SOLARIS) || defined(NETBSD)
+  			if (param.outmode == DECODE_AUDIO)
+  				audio_queueflush (ai);
+  #endif
