@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 1998/11/21 22:56:53 tron Exp $
+# $NetBSD: Makefile,v 1.9 1998/11/28 20:59:58 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.3 1998/04/30 02:38:03 obrien Exp
 #
 
-DISTNAME=       sane-0.74
+DISTNAME=       sane-1.00
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.mostang.com/pub/sane/
 
@@ -10,11 +10,15 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.mostang.com/sane/
 
 DEPENDS+=	gtk+-1.0.6:../../x11/gtk10
+DEPENDS+=	gimp-1.0.2:../../graphics/gimp
 
-CONFLICTS+=	sane-0.72
+CONFLICTS+=	sane-0.72 sane-0.74
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_X11=	yes
+
+# -O to workaorund bug with -O2 and egcs.
+CFLAGS=		-O -I${LOCALBASE}/include
 
 .include "../../mk/bsd.pkg.mk"
