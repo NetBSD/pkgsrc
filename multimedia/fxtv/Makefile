@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/26 11:36:35 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/22 10:00:31 jmmv Exp $
 
 DISTNAME=	fxtv-1.03
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	multimedia
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.tgz
@@ -17,6 +17,13 @@ USE_BUILDLINK2=	YES
 USE_X11BASE=	YES
 USE_GNU_TOOLS+=	make
 XAW_TYPE?=	3d
+
+SUBST_CLASSES+=		ossaudio
+SUBST_MESSAGE.ossaudio=	"Fixing path to audio device."
+SUBST_STAGE.ossaudio=	pre-configure
+SUBST_FILES.ossaudio=	app_rsrc.h
+SUBST_FILES.ossaudio+=	Fxtv
+SUBST_SED.ossaudio=	-e 's|/dev/dsp|${DEVOSSAUDIO}|g'
 
 .include "../../mk/bsd.prefs.mk"
 
