@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.971 2002/04/29 09:12:20 seb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.972 2002/05/03 12:44:01 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -333,7 +333,11 @@ CONFIGURE_ENV+=		LDFLAGS="${LDFLAGS}" M4="${M4}" YACC="${YACC}"
 
 MAKE_FLAGS?=
 MAKEFILE?=		Makefile
-MAKE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin PREFIX=${PREFIX} LOCALBASE=${LOCALBASE} X11BASE=${X11BASE} CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" FFLAGS="${FFLAGS}" X11PREFIX=${X11PREFIX}
+MAKE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin
+MAKE_ENV+=		PREFIX=${PREFIX} LOCALBASE=${LOCALBASE}
+MAKE_ENV+=		X11BASE=${X11BASE} CFLAGS="${CFLAGS}"
+MAKE_ENV+=		CPPFLAGS="${CPPFLAGS}" FFLAGS="${FFLAGS}"
+MAKE_ENV+=		X11PREFIX=${X11PREFIX}
 
 .if exists(${ZOULARISBASE}/bin/ftp)			# Zoularis
 FETCH_CMD?=		${ZOULARISBASE}/bin/ftp
@@ -776,7 +780,7 @@ MASTER_SITE_R_CRAN+=	\
 	http://stat.ethz.ch/CRAN/src/ \
 	http://www.stats.bris.ac.uk/R/src/
 
-MASTER_SITE_TEX_CTAN+=  \
+MASTER_SITE_TEX_CTAN+= \
 	ftp://ftp.wustl.edu/packages/TeX/  \
 	ftp://ftp.funet.fi/pub/TeX/CTAN/  \
 	ftp://ftp.tex.ac.uk/public/ctan/tex-archive/  \
@@ -1329,19 +1333,19 @@ do-fetch:
 # show both build and run depends directories (non-recursively)
 .if !target(show-depends-dirs)
 show-depends-dirs:
-	${_PKG_SILENT}${_PKG_DEBUG}                                     \
-	dlist="";\
-	thisdir=`pwd`;\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	dlist="";							\
+	thisdir=`pwd`;							\
 	for reldir in "" ${DEPENDS:C/^[^:]*://:C/:.*$//} ${BUILD_DEPENDS:C/^[^:]*://:C/:.*$//} ;\
-	do \
-		if [ "X$$reldir" = "X" ]; then continue; fi ;\
-		cd $$thisdir/$$reldir ;\
-		WD=`pwd` ;\
-		d=`dirname $$WD` ;\
-		absdir=`basename $$d`/`basename $$WD` ;\
-		dlist="$$dlist $$absdir";\
-	done ;\
-	cd $$thisdir ;\
+	do								\
+		if [ "X$$reldir" = "X" ]; then continue; fi;		\
+		cd $$thisdir/$$reldir;					\
+		WD=`pwd`;						\
+		d=`dirname $$WD`;					\
+		absdir=`basename $$d`/`basename $$WD`;			\
+		dlist="$$dlist $$absdir";				\
+	done;								\
+	cd $$thisdir;							\
 	${ECHO} "$$dlist"
 .endif
 
@@ -1359,7 +1363,7 @@ show-depends-dirs:
 #
 _RECURSE_DEPENDS_DIRS=							\
 	function append_dirs(dir) {					\
-		command = "cd ../../" dir " && ${MAKE} show-depends-dirs";	\
+		command = "cd ../../" dir " && ${MAKE} show-depends-dirs"; \
 		command | getline tmp_dirs;				\
 		close(command);						\
 		if (tmp_dirs ~ /^$$/)					\
@@ -1399,14 +1403,12 @@ show-all-depends-dirs:
 
 .if make(show-all-depends-dirs-excl)
 show-all-depends-dirs-excl:
-	${_PKG_SILENT}${_PKG_DEBUG}${AWK} -v NonSelf=1 \
-		'${_RECURSE_DEPENDS_DIRS}'
+	${_PKG_SILENT}${_PKG_DEBUG}${AWK} -v NonSelf=1 '${_RECURSE_DEPENDS_DIRS}'
 .endif
 
 .if make(show-root-dirs)
 show-root-dirs:
-	${_PKG_SILENT}${_PKG_DEBUG}${AWK} -v RootsOnly=1 \
-		'${_RECURSE_DEPENDS_DIRS}'
+	${_PKG_SILENT}${_PKG_DEBUG}${AWK} -v RootsOnly=1 '${_RECURSE_DEPENDS_DIRS}'
 .endif
 
 .endif # make(show-{all-depends-dirs{,-excl},root-dirs})
@@ -1434,7 +1436,7 @@ show-downlevel:
 	if [ "X$$found" != "X" -a "X$$found" != "X${PKGNAME}" ]; then	\
 		${ECHO} "${PKGBASE} package: $$found installed, pkgsrc version ${PKGNAME}"; \
 		if [ "X$$STOP_DOWNLEVEL_AFTER_FIRST" != "X" ]; then	\
-			${ECHO} "stoping after first downlevel pkg found";	\
+			${ECHO} "stoping after first downlevel pkg found"; \
 			exit 1;						\
 		fi;							\
 	fi
@@ -1917,20 +1919,20 @@ do-install:
 
 .if !target(real-su-package)
 real-su-package: ${PLIST} ${DESCR}
-	${_PKG_SILENT}${_PKG_DEBUG}\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO_MSG} "${_PKGSRC_IN}> Building binary package for ${PKGNAME}"; \
-	if [ ! -d ${PKGREPOSITORY} ]; then			\
-		${MKDIR} ${PKGREPOSITORY};			\
-		if [ $$? -ne 0 ]; then				\
+	if [ ! -d ${PKGREPOSITORY} ]; then				\
+		${MKDIR} ${PKGREPOSITORY};				\
+		if [ $$? -ne 0 ]; then					\
 			${ECHO_MSG} "=> Can't create directory ${PKGREPOSITORY}."; \
-			exit 1;					\
-		fi;						\
-	fi;							\
-	if ${PKG_CREATE} ${PKG_ARGS_BINPKG} ${PKGFILE}; then	\
-		${MAKE} ${MAKEFLAGS} package-links;		\
-	else							\
-		${MAKE} ${MAKEFLAGS} delete-package;		\
-		exit 1;						\
+			exit 1;						\
+		fi;							\
+	fi;								\
+	if ${PKG_CREATE} ${PKG_ARGS_BINPKG} ${PKGFILE}; then		\
+		${MAKE} ${MAKEFLAGS} package-links;			\
+	else								\
+		${MAKE} ${MAKEFLAGS} delete-package;			\
+		exit 1;							\
 	fi
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${PACKAGE_COOKIE}
 .  if defined(NO_BIN_ON_CDROM)
@@ -1986,7 +1988,7 @@ real-su-install: ${MESSAGE}
 	fi
 .     endfor
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -s ${WRKDIR}/.CONFLICTS ]; then \
+	if [ -s ${WRKDIR}/.CONFLICTS ]; then				\
 		found=`${SED} -e s'|${PKG_DBDIR}/||g' ${WRKDIR}/.CONFLICTS | tr '\012' ' '`; \
 		${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} conflicts with installed package(s): $$found found."; \
 		${ECHO_MSG} "*** They install the same files into the same place."; \
@@ -2071,7 +2073,7 @@ real-su-install: ${MESSAGE}
 		for manpage in $$newmanpages; do			\
 			manpage=`${ECHO} $$manpage | ${SED} -e 's|\.gz$$||'`; \
 			if [ -h ${PREFIX}/$$manpage ]; then		\
-				set - `${FILE_CMD} ${PREFIX}/$$manpage`;	\
+				set - `${FILE_CMD} ${PREFIX}/$$manpage`; \
 				shift `expr $$# - 1`;			\
 				${RM} -f ${PREFIX}/$$manpage.gz; 	\
 				${LN} -s $${1}.gz ${PREFIX}/$$manpage.gz; \
@@ -2246,33 +2248,33 @@ do-shlib-handling:
 #
 check-shlibs:
 .if !defined(NO_PKG_REGISTER)
-	${_PKG_SILENT}${_PKG_DEBUG}\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
 	bins=`${PKG_INFO} -qL ${PKGNAME} | { ${EGREP} -h '/(bin|sbin|libexec)/' || ${TRUE}; }`; \
-	if [ "${OBJECT_FMT}" = "ELF" ]; then \
+	if [ "${OBJECT_FMT}" = "ELF" ]; then				\
 		shlibs=`${PKG_INFO} -qL ${PKGNAME} | { ${EGREP} -h '/lib/lib.*.so' || ${TRUE}; }`; \
-	else \
-		shlibs=""; \
-	fi ; \
-	if [ X${LDD} = X ]; then \
-		ldd=`${TYPE} ldd | ${AWK} '{ print $$NF }'` ; \
-	else \
-		ldd="${LDD}" ; \
-	fi ; \
-	for i in $${bins} $${shlibs} ; do \
+	else								\
+		shlibs="";						\
+	fi;								\
+	if [ X${LDD} = X ]; then					\
+		ldd=`${TYPE} ldd | ${AWK} '{ print $$NF }'`;		\
+	else								\
+		ldd="${LDD}";						\
+	fi;								\
+	for i in $${bins} $${shlibs}; do				\
 		err=`{ $$ldd $$i 2>&1 || ${TRUE}; } | { ${GREP} "not found" || ${TRUE}; }`; \
-		if [ "${PKG_VERBOSE}" != "" ]; then \
-			${ECHO} "$$ldd $$i" ; \
-		fi ; \
-		if [ "$$err" != "" ]; then \
-			${ECHO} "$$i: $$err" ; \
-			error=1; \
-		fi ; \
-	done ; \
-	if [ "$$error" = 1 ]; then \
+		if [ "${PKG_VERBOSE}" != "" ]; then			\
+			${ECHO} "$$ldd $$i";				\
+		fi;							\
+		if [ "$$err" != "" ]; then				\
+			${ECHO} "$$i: $$err";				\
+			error=1;					\
+		fi;							\
+	done;								\
+	if [ "$$error" = 1 ]; then					\
 		${ECHO} "*** The above programs/libs will not find the listed shared libraries"; \
-		${ECHO} "    at runtime. Please fix the package (add -Wl,-R.../lib in the right places)!" ; \
+		${ECHO} "    at runtime. Please fix the package (add -Wl,-R.../lib in the right places)!"; \
 		${SHCOMMENT} Might not error-out for non-pkg-developers; \
-		exit 1 ; \
+		exit 1;							\
 	fi
 .endif # NO_PKG_REGISTER
 
@@ -2534,20 +2536,20 @@ real-su-deinstall-flags+=	-v
 .  endif
 
 real-su-deinstall:
-	${_PKG_SILENT}${_PKG_DEBUG} \
-	found="`${PKG_INFO} -e \"${PKGWILDCARD}\" || ${TRUE}`"; \
-	if [ "$$found" != "" ]; then \
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	found="`${PKG_INFO} -e \"${PKGWILDCARD}\" || ${TRUE}`";		\
+	if [ "$$found" != "" ]; then					\
 		${ECHO} Running ${PKG_DELETE} ${real-su-deinstall-flags} $$found ; \
 		${PKG_DELETE} ${real-su-deinstall-flags} $$found || ${TRUE} ; \
 	fi
 .  if (${DEINSTALLDEPENDS} != "NO") && (${DEINSTALLDEPENDS} != "ALL")
 	@${SHCOMMENT} Also remove BUILD_DEPENDS:
 .    for pkg in ${BUILD_DEPENDS:C/:.*$//}
-	${_PKG_SILENT}${_PKG_DEBUG} \
-	found="`${PKG_INFO} -e \"${pkg}\" || ${TRUE}`"; \
-	if [ "$$found" != "" ]; then \
-		${ECHO} Running ${PKG_DELETE} $$found ; \
-		${PKG_DELETE} ${real-su-deinstall-flags} $$found || ${TRUE} ; \
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	found="`${PKG_INFO} -e \"${pkg}\" || ${TRUE}`";			\
+	if [ "$$found" != "" ]; then					\
+		${ECHO} Running ${PKG_DELETE} $$found;			\
+		${PKG_DELETE} ${real-su-deinstall-flags} $$found || ${TRUE}; \
 	fi
 .    endfor
 .  endif # DEINSTALLDEPENDS
@@ -2580,9 +2582,9 @@ CLEAR_DIRLIST?=	YES
 
 update:
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} ${DDIR}
-	${_PKG_SILENT}${_PKG_DEBUG}if ${PKG_INFO} -qe ${PKGBASE}; then \
-		${MAKE} ${MAKEFLAGS} deinstall DEINSTALLDEPENDS=ALL \
-		|| (${RM} ${DDIR} && ${FALSE}); \
+	${_PKG_SILENT}${_PKG_DEBUG}if ${PKG_INFO} -qe ${PKGBASE}; then	\
+		${MAKE} ${MAKEFLAGS} deinstall DEINSTALLDEPENDS=ALL	\
+		|| (${RM} ${DDIR} && ${FALSE});				\
 	fi
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -2590,7 +2592,7 @@ update:
 			DEPENDS_TARGET=${DEPENDS_TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	[ ! -s ${DDIR} ] || for dep in `${CAT} ${DDIR}` ; do		\
-		(if cd ../.. && cd "$${dep}" ; then				\
+		(if cd ../.. && cd "$${dep}" ; then			\
 			${ECHO_MSG} "${_PKGSRC_IN}> Installing in $${dep}" &&	\
 			if [ "${RESUMEUPDATE}" = "NO" -o 		\
 			     "${REINSTALL}" != "NO" ] ; then		\
@@ -2613,7 +2615,7 @@ clean-update:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -s ${DDIR} ] ; then					\
 		for dep in `${CAT} ${DDIR}` ; do			\
-			(if cd ../.. && cd "$${dep}" ; then			\
+			(if cd ../.. && cd "$${dep}" ; then		\
 				${MAKE} ${MAKEFLAGS} clean ;		\
 			else						\
 				${ECHO_MSG} "${_PKGSRC_IN}> Skipping removed directory $${dep}";\
@@ -2679,16 +2681,16 @@ lint:
 
 # Create a binary package from an install package using "pkg_tarup"
 tarup:
-	${_PKG_SILENT}${_PKG_DEBUG} \
-	${RM} -f ${PACKAGES}/All/${PKGNAME}${PKG_SUFX}; \
-	PKG_DBDIR=${PKG_DBDIR} PKG_SUFX=${PKG_SUFX:S/.//} \
-	  PKGREPOSITORY=${PACKAGES}/All \
-	  ${LOCALBASE}/bin/pkg_tarup ${PKGNAME}; \
-	for CATEGORY in ${CATEGORIES}; do \
-	  ${MKDIR} ${PACKAGES}/$$CATEGORY; \
-	  cd ${PACKAGES}/$$CATEGORY; \
-	  ${RM} -f ${PKGNAME}${PKG_SUFX}; \
-	  ${LN} -s ../All/${PKGNAME}${PKG_SUFX}; \
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RM} -f ${PACKAGES}/All/${PKGNAME}${PKG_SUFX};			\
+	${SETENV} PKG_DBDIR=${PKG_DBDIR} PKG_SUFX=${PKG_SUFX:S/.//}	\
+		PKGREPOSITORY=${PACKAGES}/All				\
+		${LOCALBASE}/bin/pkg_tarup ${PKGNAME};			\
+	for CATEGORY in ${CATEGORIES}; do				\
+		${MKDIR} ${PACKAGES}/$$CATEGORY;			\
+		cd ${PACKAGES}/$$CATEGORY;				\
+		${RM} -f ${PKGNAME}${PKG_SUFX};				\
+		${LN} -s ../All/${PKGNAME}${PKG_SUFX};			\
 	done
 
 # shared code for replace and undo-replace
@@ -2710,7 +2712,7 @@ _REPLACE=								\
 
 # replace a package in place - not for the faint-hearted
 real-su-replace:
-	${_PKG_SILENT}${_PKG_DEBUG}                                     \
+	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO_MSG} "*** WARNING - experimental target - data loss may be experienced ***"; \
 	if [ -x ${LOCALBASE}/bin/pkg_tarup ]; then			\
 		${SETENV} PKGREPOSITORY=${WRKDIR} ${LOCALBASE}/bin/pkg_tarup ${PKGBASE}; \
@@ -2718,7 +2720,7 @@ real-su-replace:
 		${ECHO} "No ${LOCALBASE}/bin/pkg_tarup binary - can't pkg_tarup ${PKGBASE}"; \
 		exit 1;							\
 	fi
-	${_PKG_SILENT}${_PKG_DEBUG}                                     \
+	${_PKG_SILENT}${_PKG_DEBUG}					\
 	oldpkgname=`${PKG_INFO} -e ${PKGBASE}`;				\
 	newpkgname=${PKGNAME};						\
 	${ECHO} "$$oldpkgname" > ${WRKDIR}/.replace;			\
@@ -2727,12 +2729,12 @@ real-su-replace:
 
 # undo the replacement of a package - not for the faint-hearted either
 real-su-undo-replace:
-	${_PKG_SILENT}${_PKG_DEBUG}                                     \
+	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ ! -f ${WRKDIR}/.replace ]; then				\
 		${ECHO_MSG} "No replacement to undo";			\
 		exit 1;							\
 	fi
-	${_PKG_SILENT}${_PKG_DEBUG}                                     \
+	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO_MSG} "*** WARNING - experimental target - data loss may be experienced ***"; \
 	oldpkgname=${PKGNAME};						\
 	newpkgname=`${CAT} ${WRKDIR}/.replace`;				\
@@ -2998,7 +3000,7 @@ makesum: fetch uptodate-digest
 makepatchsum mps: uptodate-digest
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	newfile=${DISTINFO_FILE}.$$$$;					\
-	if [ -f ${DISTINFO_FILE} ]; then					\
+	if [ -f ${DISTINFO_FILE} ]; then				\
 		${AWK} '$$2 !~ /\(patch-[a-z0-9]+\)/ { print $$0 }' < ${DISTINFO_FILE} >> $$newfile; \
 	else \
 		${ECHO} -n "$$" > $$newfile;				\
@@ -3108,13 +3110,13 @@ bin-install:
 		${ECHO_MSG} "Installing from binary pkg ${PKGFILE}" ;	\
 		${PKG_ADD} ${PKGFILE} ; 				\
 	else 				 				\
-		rel=`${UNAME} -r | ${SED} 's@\.\([0-9]*\)[\._].*@\.\1@'`; 	\
+		rel=`${UNAME} -r | ${SED} 's@\.\([0-9]*\)[\._].*@\.\1@'`; \
 		arch=${MACHINE_ARCH}; 					\
 		for site in ${BINPKG_SITE} ; do 			\
 			${ECHO} Trying `eval ${ECHO} $$site`/All ; 	\
 			${SHCOMMENT} ${ECHO} ${SETENV} PKG_PATH="`eval ${ECHO} $$site`/All" ${PKG_ADD} ${BIN_INSTALL_FLAGS} ${PKGNAME}${PKG_SUFX} ; \
 			if ${SETENV} PKG_PATH="`eval ${ECHO} $$site`/All" ${PKG_ADD} ${BIN_INSTALL_FLAGS} ${PKGNAME}${PKG_SUFX} ; then \
-				${ECHO} "${PKGNAME} successfully installed." ; 			\
+				${ECHO} "${PKGNAME} successfully installed."; \
 				break ; 				\
 			fi ; 						\
 		done ; 							\
@@ -3179,9 +3181,9 @@ run-depends-list:
 			${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
 		fi;							\
 	fi;								\
-	if ${PACKAGE_DEPENDS_QUICK} ; then 			\
+	if ${PACKAGE_DEPENDS_QUICK}; then 				\
 		${PKG_INFO} -qf "$$pkg" | ${AWK} '/^@pkgdep/ {print $$2}'; \
-	else 							\
+	else 								\
 		if cd $$dir 2>/dev/null; then				\
 			${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE} PACKAGE_DEPENDS_WITH_PATTERNS=${PACKAGE_DEPENDS_WITH_PATTERNS}; \
 		else 							\
@@ -3228,9 +3230,9 @@ install-depends: uptodate-pkgtools
 	dir="${dep:C/[^:]*://:C/:.*$//}";				\
 	found=`${PKG_INFO} -e "$$pkg" || ${TRUE}`;			\
 	if [ "X$$REBUILD_DOWNLEVEL_DEPENDS" != "X" ]; then		\
-		pkgname=`cd $$dir ; ${MAKE} ${MAKEFLAGS} show-var VARNAME=PKGNAME`;	\
-		if [ "X$$found" != "X" -a "X$$found" != "X$${pkgname}" ]; then		\
-			${ECHO_MSG} "ignoring old installed package \"$$found\"";	\
+		pkgname=`cd $$dir ; ${MAKE} ${MAKEFLAGS} show-var VARNAME=PKGNAME`; \
+		if [ "X$$found" != "X" -a "X$$found" != "X$${pkgname}" ]; then \
+			${ECHO_MSG} "ignoring old installed package \"$$found\""; \
 			found="";					\
 		fi;							\
 	fi;								\
@@ -3571,27 +3573,27 @@ print-pkg-size-depends:
 # Reads MTREE_FILE and extracts a list of sed commands that will
 # sort out which directories NOT to include into the PLIST @dirrm list
 .if make(print-PLIST)
-COMMON_DIRS!= 	${AWK} 'BEGIN  { 				\
-			i=0; 					\
-			stack[i]="${PREFIX}" ; 			\
-			cwd=""; 				\
-		} 						\
-		! ( /^\// || /^\#/ || /^$$/ ) { 		\
-			if ( $$1 == ".." ){ 			\
-				i=i-1;				\
-				cwd = stack[i];			\
-			} else if ( $$1 == "." ){ 		\
-			} else {				\
-				stack[i] = cwd ;		\
-				if ( i == 0 ){ 			\
-					cwd = $$1 ; 		\
-				} else {			\
-					cwd = cwd "\\\\/" $$1 ; \
-				} 				\
-				print "-e \"/^" cwd "$$$$/d\"";	\
-				i=i+1 ; 			\
-			} 					\
-		} 						\
+COMMON_DIRS!= 	${AWK} 'BEGIN  { 					\
+			i=0; 						\
+			stack[i]="${PREFIX}" ; 				\
+			cwd=""; 					\
+		} 							\
+		! ( /^\// || /^\#/ || /^$$/ ) { 			\
+			if ( $$1 == ".." ){ 				\
+				i=i-1;					\
+				cwd = stack[i];				\
+			} else if ( $$1 == "." ){ 			\
+			} else {					\
+				stack[i] = cwd ;			\
+				if ( i == 0 ){ 				\
+					cwd = $$1 ; 			\
+				} else {				\
+					cwd = cwd "\\\\/" $$1 ; 	\
+				} 					\
+				print "-e \"/^" cwd "$$$$/d\"";		\
+				i=i+1 ; 				\
+			} 						\
+		} 							\
 	' <${MTREE_FILE}
 .endif
 
@@ -3690,13 +3692,13 @@ print-PLIST:
 
 .if !target(fake-pkg)
 fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
-	${_PKG_SILENT}${_PKG_DEBUG}\
-	if [ ! -f ${PLIST} -o ! -f ${DESCR} ]; then \
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ ! -f ${PLIST} -o ! -f ${DESCR} ]; then			\
 		${ECHO} "** Missing package files for ${PKGNAME} - installation not recorded."; \
 		exit 1;							\
 	fi
-	${_PKG_SILENT}${_PKG_DEBUG}\
-	if [ ! -d ${PKG_DBDIR} ]; then	\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ ! -d ${PKG_DBDIR} ]; then					\
 		${RM} -f ${PKG_DBDIR};					\
 		${MKDIR} ${PKG_DBDIR};					\
 	fi
