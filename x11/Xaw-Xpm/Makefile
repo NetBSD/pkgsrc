@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/09/27 23:18:58 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2002/10/10 12:58:44 wiz Exp $
 #
 
 DISTNAME=		Xaw-XPM-1.1
@@ -13,6 +13,7 @@ COMMENT=		Enhanced 3-D widgets based on the Athena Widget set and Xaw3d
 
 CONFLICTS=		Xaw3d-[0-9]*
 
+USE_BUILDLINK2=		YES
 USE_IMAKE=		YES
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 
@@ -25,5 +26,5 @@ post-install:
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	cd ${PREFIX} && ${LS} lib/libXaw3d* >> ${PLIST_SRC}
 
-.include "../../graphics/xpm/buildlink.mk"
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/12/11 15:43:15 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2002/10/10 12:55:38 wiz Exp $
 # FreeBSD: Makefile,v 1.3 1997/08/26 07:12:20 tg Exp
 #
 
@@ -10,8 +10,9 @@ MASTER_SITES=		${MASTER_SITE_XCONTRIB:=utilities/}
 MAINTAINER=		packages@netbsd.org
 COMMENT=		View complete directories of X bitmaps and X pixmaps
 
-USE_IMAKE=		YES
+USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
+USE_IMAKE=		YES
 
-.include "../../graphics/xpm/buildlink.mk"
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

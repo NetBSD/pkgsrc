@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/21 15:33:55 agc Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/10 12:50:32 wiz Exp $
 #
 
 DISTNAME=	wmsmixer-0.5
@@ -9,6 +9,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.hibernaculum.net/wmsmixer.html
 COMMENT=	Another mixer designed for WindowMaker (dockapp)
 
+USE_BUILDLINK2=	YES
 USE_IMAKE=	YES
 NO_INSTALL_MANPAGES= YES
 
@@ -21,5 +22,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/home.wmsmixer ${PREFIX}/share/examples/wmsmixer
 	${INSTALL_DATA} ${WRKSRC}/README.wmmixer ${PREFIX}/share/doc/wmsmixer/README.wmsmixer
 
-.include "../../graphics/xpm/buildlink.mk"
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
