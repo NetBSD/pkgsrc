@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.module,v 1.28 2004/10/31 17:43:02 jdolecek Exp $
+# $NetBSD: Makefile.module,v 1.29 2004/11/05 21:40:25 jdolecek Exp $
 #
 # This Makefile is provided to ease creating PHP4 packages for the extension
 # modules distributed in the PHP4 sources.
@@ -35,8 +35,8 @@ USE_LIBTOOL=		YES
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
 
-PLIST_SRC=		${.CURDIR}/../../www/php4/PLIST.module
-MESSAGE_SRC=		${.CURDIR}/../../www/php4/MESSAGE.module
+PLIST_SRC=		${.CURDIR}/../../lang/php/PLIST.module
+MESSAGE_SRC=		${.CURDIR}/../../lang/php/MESSAGE.module
 MESSAGE_SUBST+=		MODNAME=${PKGMODNAME}
 MESSAGE_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR}
 
