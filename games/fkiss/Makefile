@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 16:49:45 martti Exp $
+# $NetBSD: Makefile,v 1.7 2003/12/03 23:45:29 ben Exp $
 #
 
 DISTNAME=		fkiss-0.32
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		http://www.oersted.co.jp/~yav/soft/fkiss/
 
@@ -16,6 +17,7 @@ USE_X11=		yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 CFLAGS+=		-DUSE_STDARG -DHAVE_STDARG_H
+CFLAGS+=		-DDEV_SOUND=\"\\\"${DEVOSSSOUND}\\\"\"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fkiss ${PREFIX}/bin
