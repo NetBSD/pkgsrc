@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/01/05 16:20:54 agc Exp $
+# $NetBSD: Makefile,v 1.6 2002/01/09 11:15:32 agc Exp $
 #
 
 DISTNAME=	tct-1.09
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.porcupine.org/forensics/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.porcupine.org/forensics/tct.html
 COMMENT=	programs to aid post-mortem after a break-in
+
+DEPENDS+=	p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 
 REPLACE_PERL=	bin/grave-robber bin/mactime bin/strip_tct_home
 REPLACE_PERL+=	extras/bdf extras/ils2mac extras/realpath
