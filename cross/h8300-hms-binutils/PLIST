@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/27 22:24:37 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/09/30 11:15:29 jlam Exp $
 bin/h8300-hms-addr2line
 bin/h8300-hms-ar
 bin/h8300-hms-as
@@ -34,6 +34,16 @@ libexec/cross-h8300-hms/bin/h8300-hms-strings
 libexec/cross-h8300-hms/bin/h8300-hms-strip
 libexec/cross-h8300-hms/bin/h8300-hms-sysdump
 libexec/cross-h8300-hms/binutils/as.info
+libexec/cross-h8300-hms/binutils/as.info-1
+libexec/cross-h8300-hms/binutils/as.info-10
+libexec/cross-h8300-hms/binutils/as.info-2
+libexec/cross-h8300-hms/binutils/as.info-3
+libexec/cross-h8300-hms/binutils/as.info-4
+libexec/cross-h8300-hms/binutils/as.info-5
+libexec/cross-h8300-hms/binutils/as.info-6
+libexec/cross-h8300-hms/binutils/as.info-7
+libexec/cross-h8300-hms/binutils/as.info-8
+libexec/cross-h8300-hms/binutils/as.info-9
 libexec/cross-h8300-hms/binutils/bfd.info
 libexec/cross-h8300-hms/binutils/bfd.info-1
 libexec/cross-h8300-hms/binutils/bfd.info-2
@@ -45,6 +55,9 @@ libexec/cross-h8300-hms/binutils/bfd.info-7
 libexec/cross-h8300-hms/binutils/bfd.info-8
 libexec/cross-h8300-hms/binutils/bfd.info-9
 libexec/cross-h8300-hms/binutils/binutils.info
+libexec/cross-h8300-hms/binutils/binutils.info-1
+libexec/cross-h8300-hms/binutils/binutils.info-2
+libexec/cross-h8300-hms/binutils/binutils.info-3
 libexec/cross-h8300-hms/binutils/configure.info
 libexec/cross-h8300-hms/binutils/configure.info-1
 libexec/cross-h8300-hms/binutils/configure.info-2
@@ -52,6 +65,12 @@ libexec/cross-h8300-hms/binutils/configure.info-3
 libexec/cross-h8300-hms/binutils/dir
 libexec/cross-h8300-hms/binutils/gasp.info
 libexec/cross-h8300-hms/binutils/ld.info
+libexec/cross-h8300-hms/binutils/ld.info-1
+libexec/cross-h8300-hms/binutils/ld.info-2
+libexec/cross-h8300-hms/binutils/ld.info-3
+libexec/cross-h8300-hms/binutils/ld.info-4
+libexec/cross-h8300-hms/binutils/ld.info-5
+libexec/cross-h8300-hms/binutils/ld.info-6
 libexec/cross-h8300-hms/binutils/standards.info
 libexec/cross-h8300-hms/h8300-hms/bin/ar
 libexec/cross-h8300-hms/h8300-hms/bin/as
