@@ -1,10 +1,13 @@
-# $NetBSD: Makefile.in,v 1.5 2003/09/23 06:05:13 grant Exp $
+# $NetBSD: Makefile.in,v 1.6 2004/08/31 17:40:41 jlam Exp $
 
 SUBDIRS=	lib add admin create delete info view
 
-.PHONY: all install clean distclean
+all:
+	@for dir in $(SUBDIRS); do \
+		( cd $$dir && $(MAKE) $@ ) || exit 1; \
+	done
 
-all install clean:
+install clean:
 	@for dir in $(SUBDIRS); do \
 		( cd $$dir && $(MAKE) $@ ) || exit 1; \
 	done
