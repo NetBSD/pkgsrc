@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2004/03/12 01:14:00 dmcmahill Exp $
+$NetBSD: distinfo,v 1.11 2004/07/18 18:05:13 dmcmahill Exp $
 
 SHA1 (pvm3.4.4.tgz) = 95bfabee61383fe2223ee2f539129bb54b5afb40
 Size (pvm3.4.4.tgz) = 967852 bytes
@@ -40,3 +40,7 @@ SHA1 (patch-bi) = ba5b187647797cf7eec35e0dcb53fe1d4c64cead
 SHA1 (patch-bj) = 1c2817c77e7acf7876625e4b9989982bb80e345e
 SHA1 (patch-bk) = 753d265149b704e88e2906dedcc9e9ae5a00800f
 SHA1 (patch-bl) = 5faec2ed16c8711da93ad487c301558d36bc7ed8
+SHA1 (patch-bm) = 36502646eb4b591e3900fdf09cb602d86734bbb9
+SHA1 (patch-bn) = 31050e707a27256595f1ecc2fa48b45aabf69be4
+SHA1 (patch-bo) = 69dd03e65ae75cf330a05eedd5507311523acfc1
+SHA1 (patch-bp) = 5820e2ff17c58b2ee0ca7290bb8a259ff080087f
