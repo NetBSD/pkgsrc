@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/02/02 01:24:09 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2003/11/11 11:53:56 wiz Exp $
 
---- make.inc.orig	Tue Feb 15 21:29:45 2000
+--- make.inc.orig	Sat Oct 11 00:24:49 2003
 +++ make.inc
 @@ -16,30 +16,31 @@
  #
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/02/02 01:24:09 jtb Exp $
 -BLASLIB      = ../blas$(PLAT).a
 +TMGLIB       = tmglib.a
 +SUPERLULIB   = libsuperlu.a
-+BLASDEF      = -DUSE_VENDOR_BLAS
++BLASDEF	     = -DUSE_VENDOR_BLAS
 +BLASLIB      = -L${BLAS_PREFIX}/lib -lblas
  
  #
@@ -27,27 +27,27 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/02/02 01:24:09 jtb Exp $
 -ARCH         = ar
 -ARCHFLAGS    = cr
 -RANLIB       = ranlib
-+ARCH         = $(AR)
++ARCH         = ${AR}
 +ARCHFLAGS    = cru
 +#RANLIB       = ranlib
  
 -CC           = cc
--CFLAGS       = -xO3 -xcg92
-+# CC           = cc
-+#CFLAGS       = -xO3 -xcg92
- #CFLAGS       = -Wall -O2 
+-CFLAGS       = -g -DDEBUGlevel=1 #-xO3 -xcg92
++#CC           = cc
++#CFLAGS       = -g -DDEBUGlevel=1 #-xO3 -xcg92
+ #CFLAGS       = -Wall -g #-O2 
 -FORTRAN	     = f77
 -FFLAGS       = -O
 -LOADER       = cc
--LOADOPTS     = #-xO3
-+FORTRAN	     = $(FC)
+-LOADOPTS     = -g #-xO3
++FORTRAN	     = ${FC}
 +#FFLAGS       = -O
-+LOADER       = $(CC)
-+LOADOPTS     = $(LDFLAGS)
++LOADER       = ${CC}
++LOADOPTS     = ${LDFLAGS}
  
  #
  #  C preprocessor defs for compilation (-DNoChange, -DAdd_, or -DUpCase)
-@@ -48,4 +49,4 @@
+@@ -48,4 +49,4 @@ CDEFS        = -DAdd_
  #
  # The directory in which Matlab is installed
  #
