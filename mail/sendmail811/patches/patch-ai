@@ -1,0 +1,9 @@
+$NetBSD: patch-ai,v 1.1 2003/09/18 17:10:40 taca Exp $
+
+--- sendmail/version.c.orig	2003-09-19 00:49:40.000000000 +0900
++++ sendmail/version.c
+@@ -17,3 +17,3 @@ static char Wid[] = "@(#)$Id: version.c,
+ #endif /* ! lint */
+ 
+-char	Version[] = "8.11.6+3.4W";
++char	Version[] = "8.11.6p3+3.4W";
