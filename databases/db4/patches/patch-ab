@@ -1,0 +1,40 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/03/30 05:35:59 uebayasi Exp $
+
+--- ../dist/configure.orig	Sun Nov 18 10:45:49 2001
++++ ../dist/configure	Mon Mar 18 16:19:01 2002
+@@ -4443,6 +4443,7 @@
+ if test "$GXX" = "yes"; then
+ 	GXX_VERSION=`${MAKEFILE_CXX} --version`
+ 	case ${GXX_VERSION} in
++	egcs*)  CXXFLAGS="-fexceptions $CXXFLAGS";;
+ 	1.*|2.[01234567].*|*-1.*|*-2.[01234567].*)
+ 		db_cv_gxx_except=yes;;
+ 	esac
+@@ -8777,7 +8778,8 @@
+ release=""
+ libname=libfoo
+ eval library_names=\"$library_names_spec\"
+-SOSUFFIX=`echo "$library_names" | sed -e 's/.*\.\([a-zA-Z0-9_]*\).*/\1/'`
++SOSUFFIX=`./libtool --config | sed -e '/^library_names_spec=/!d' -e 's/.*\.\([a-zA-Z0-9_]*\).*/\1/'`
++
+ echo "$as_me:8781: result: $SOSUFFIX" >&5
+ echo "${ECHO_T}$SOSUFFIX" >&6
+ 
+@@ -8794,7 +8796,7 @@
+ INSTALLER="\$(LIBTOOL) --mode=install cp"
+ 
+ MAKEFILE_CC="\$(LIBTOOL) --mode=compile ${MAKEFILE_CC}"
+-MAKEFILE_SOLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CCLINK} -avoid-version"
++MAKEFILE_SOLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CCLINK}"
+ MAKEFILE_CCLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CCLINK}"
+ MAKEFILE_CXX="\$(LIBTOOL) --mode=compile ${MAKEFILE_CXX}"
+ MAKEFILE_XSOLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CXXLINK} -avoid-version"
+@@ -9173,7 +9175,7 @@
+ EOF
+ 
+ 	RPC_CLIENT_OBJS="\$(RPC_CLIENT_OBJS)"
+-	ADDITIONAL_PROGS="berkeley_db_svc $ADDITIONAL_PROGS"
++	ADDITIONAL_PROGS="berkeley_db4_svc $ADDITIONAL_PROGS"
+ 
+ 	EMBEDIX_ECD_RPC="/usr/bin/berkeley_db_svc"
+ 
