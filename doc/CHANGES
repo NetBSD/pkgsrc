@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7043 2004/08/30 19:20:46 jmmv Exp $
+$NetBSD: CHANGES,v 1.7044 2004/08/30 21:07:44 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4112,3 +4112,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mrtg to 2.10.15 [martti 2004-08-30]
 	Updated tidy to 20040811 [reed 2004-08-30]
 	Updated gtk2 to 2.4.9 [jmmv 2004-08-30]
+	Updated sendmail to 8.13.1 [adrianp 2004-08-30]
+	Updated libmilter to 8.13.1 [adrianp 2004-08-30]
