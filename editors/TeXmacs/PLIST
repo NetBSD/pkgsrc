@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/12/02 21:34:07 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/12/06 17:04:30 jmmv Exp $
 bin/fig2ps
 bin/texmacs
 include/TeXmacs.h
@@ -390,6 +390,7 @@ share/${PKGNAME}/packages/session/mycas.ts
 share/${PKGNAME}/packages/session/octave.ts
 share/${PKGNAME}/packages/session/pari.ts
 share/${PKGNAME}/packages/session/qcl.ts
+share/${PKGNAME}/packages/session/r.ts
 share/${PKGNAME}/packages/session/reduce.ts
 share/${PKGNAME}/packages/session/scilab.ts
 share/${PKGNAME}/packages/session/yacas.ts
@@ -426,6 +427,7 @@ share/${PKGNAME}/progs/cas/mycas.scm
 share/${PKGNAME}/progs/cas/octave.scm
 share/${PKGNAME}/progs/cas/pari.scm
 share/${PKGNAME}/progs/cas/qcl.scm
+share/${PKGNAME}/progs/cas/r.scm
 share/${PKGNAME}/progs/cas/reduce.scm
 share/${PKGNAME}/progs/cas/scilab.scm
 share/${PKGNAME}/progs/cas/yacas.scm
@@ -519,7 +521,6 @@ share/doc/TeXmacs/about/changes/changes-5.en.tm
 share/doc/TeXmacs/about/changes/changes-main.en.tm
 share/doc/TeXmacs/about/changes/changes-post.en.ptm
 share/doc/TeXmacs/about/changes/changes-pre.en.ptm
-share/doc/TeXmacs/about/changes/changes-recent.en.tm
 share/doc/TeXmacs/about/changes/changes.en.tm
 share/doc/TeXmacs/about/contribute/contribute.en.tm
 share/doc/TeXmacs/about/contribute/converters/converters.en.tm
@@ -575,6 +576,7 @@ share/doc/TeXmacs/devel/style/keyboard/style-kbd.en.tm
 share/doc/TeXmacs/devel/style/standard/standard.en.tm
 share/doc/TeXmacs/devel/style/style-intro.en.tm
 share/doc/TeXmacs/devel/style/style.en.tm
+share/doc/TeXmacs/english/startup/upgrade-hist.tex
 share/doc/TeXmacs/fdl.txt
 share/doc/TeXmacs/index.en.tm
 share/doc/TeXmacs/main/config/man-config-kbd-modkeys.en.tm
@@ -641,6 +643,31 @@ share/doc/TeXmacs/main/start/man-files.en.tm
 share/doc/TeXmacs/main/start/man-getting-started.en.tm
 share/doc/TeXmacs/main/start/man-print.en.tm
 share/doc/TeXmacs/main/start/man-setup.en.tm
+share/doc/TeXmacs/main/styles/std-dtds/common-base-dtd.en.tm
+share/doc/TeXmacs/main/styles/std-dtds/dtds.en.tm
+share/doc/TeXmacs/main/styles/std-dtds/env-default-dtd.en.tm
+share/doc/TeXmacs/main/styles/std-dtds/env-dtd.en.tm
+share/doc/TeXmacs/main/styles/std-dtds/env-float-dtd.en.tm
+share/doc/TeXmacs/main/styles/std-dtds/env-manage-dtd.en.tm
+share/doc/TeXmacs/main/styles/std-dtds/env-math-dtd.en.tm
+share/doc/TeXmacs/main/styles/std-dtds/env-theorem-dtd.en.tm
+share/doc/TeXmacs/main/styles/std-dtds/header-dtd.en.tm
+share/doc/TeXmacs/main/styles/std-dtds/header-dtds.en.tm
+share/doc/TeXmacs/main/styles/std-dtds/header-title-dtd.en.tm
+share/doc/TeXmacs/main/styles/std-dtds/number-dtds.en.tm
+share/doc/TeXmacs/main/styles/std-dtds/number-env-dtd.en.tm
+share/doc/TeXmacs/main/styles/std-dtds/number-section-dtd.en.tm
+share/doc/TeXmacs/main/styles/std-dtds/program-dtd.en.tm
+share/doc/TeXmacs/main/styles/std-dtds/section-latex-dtd.en.tm
+share/doc/TeXmacs/main/styles/std-dtds/std-automatic-dtd.en.tm
+share/doc/TeXmacs/main/styles/std-dtds/std-list-dtd.en.tm
+share/doc/TeXmacs/main/styles/std-dtds/std-markup-dtd.en.tm
+share/doc/TeXmacs/main/styles/std-dtds/std-math-dtd.en.tm
+share/doc/TeXmacs/main/styles/std-dtds/std-symbol-dtd.en.tm
+share/doc/TeXmacs/main/styles/std-dtds/tmdoc-dtd.en.tm
+share/doc/TeXmacs/main/styles/std-dtds/tmdoc-keyboard-dtd.en.tm
+share/doc/TeXmacs/main/styles/std-dtds/tmdoc-markup-dtd.en.tm
+share/doc/TeXmacs/main/styles/std-dtds/tmdoc-traversal-dtd.en.tm
 share/doc/TeXmacs/main/table/man-advanced-features.en.tm
 share/doc/TeXmacs/main/table/man-alignment.en.tm
 share/doc/TeXmacs/main/table/man-create-table.en.tm
@@ -666,6 +693,8 @@ share/doc/TeXmacs/main/text/man-text.en.tm
 @dirrm share/doc/TeXmacs/main/text/keyboard
 @dirrm share/doc/TeXmacs/main/text
 @dirrm share/doc/TeXmacs/main/table
+@dirrm share/doc/TeXmacs/main/styles/std-dtds
+@dirrm share/doc/TeXmacs/main/styles
 @dirrm share/doc/TeXmacs/main/start
 @dirrm share/doc/TeXmacs/main/scheme
 @dirrm share/doc/TeXmacs/main/math/keyboard
@@ -679,6 +708,10 @@ share/doc/TeXmacs/main/text/man-text.en.tm
 @dirrm share/doc/TeXmacs/main/convert
 @dirrm share/doc/TeXmacs/main/config
 @dirrm share/doc/TeXmacs/main
+@exec ${MKDIR} %D/share/doc/TeXmacs/help
+@dirrm share/doc/TeXmacs/help
+@dirrm share/doc/TeXmacs/english/startup
+@dirrm share/doc/TeXmacs/english
 @dirrm share/doc/TeXmacs/devel/style/standard
 @dirrm share/doc/TeXmacs/devel/style/keyboard
 @dirrm share/doc/TeXmacs/devel/style/design
