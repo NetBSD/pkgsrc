@@ -1,8 +1,14 @@
-@comment $NetBSD: PLIST,v 1.8 2001/04/30 20:13:56 jtb Exp $
+@comment $NetBSD: PLIST,v 1.9 2001/05/01 09:16:25 agc Exp $
 bin/sam
 bin/samterm
 bin/samsave
 bin/B
+include/sam/u.h
+include/sam/libc.h
+include/sam/libg.h
+include/sam/frame.h
+lib/libXg.a
+lib/libframe.a
 lib/X11/app-defaults/Sam
 man/man1/sam.1.gz
 man/man3/add.3.gz
@@ -19,3 +25,4 @@ man/man4/keyboard.4.gz
 man/man4/utf.4.gz
 man/man6/bitmap.6.gz
 man/man6/regexp.6.gz
+@dirrm include/sam
