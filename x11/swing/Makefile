@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2000/09/11 14:46:26 jwise Exp $
+# $NetBSD: Makefile,v 1.7 2000/09/11 15:36:26 jwise Exp $
 
 DISTNAME=	swing1_1_1
 PKGNAME=	swing-1.1.1
 CATEGORIES=	devel x11
 MASTER_SITES=	# none
-EXTRACT_SUFX=	.zip
+EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.javasoft.com/products/jfc/
@@ -39,21 +39,23 @@ TEMPFILE!=echo ${TEMPDIR}/swing.location.$$$$
 pre-fetch:
 	@if [ ! -x ${LOCALBASE}/bin/urlget ];\
 	then \
-		${ECHO} "==> Installing urlget to fetch swing" ; \
+		${ECHO} '==> Installing urlget to fetch swing' ; \
 		(cd ../../www/urlget && make install) ; \
 	fi
 
 do-fetch:
-	-${LOCALBASE}/bin/urlget -p http://www.javasoft.com/Download3 \
+	-if [ ! -f ${DISTDIR}/${DISTFILES} ] ; then \
+	${LOCALBASE}/bin/urlget -p http://www.javasoft.com/Download3 \
 		referer=http://www.javasoft.com/products/jfc/download.html \
 		protocol="FTP Download" \
 		download-name=swing1_1_1.tar.Z \
 		config-file=swing111.config \
 		platform=compressed \
 		domain-checked= \
-		> ${TEMPFILE}
+		> ${TEMPFILE} ; \
 	${FETCH_CMD} -o ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} `${GREP} ftp:// ${TEMPFILE} | \
-		${SED} -e 's|.*\(ftp://.*.tar.Z\).*|\1|'`
+		${SED} -e 's|.*\(ftp://.*.tar.Z\).*|\1|'` ; \
+	fi
 
 do-install:
 	${MKDIR} ${PREFIX}/lib/java/swing
