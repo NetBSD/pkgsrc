@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2004/08/22 19:32:52 jlam Exp $
+# $NetBSD: options.mk,v 1.3 2004/08/23 23:22:29 schmonz Exp $
 
 .if ${OPSYS} == "Darwin"
 PKG_DEFAULT_OPTIONS+=	darwin
@@ -10,7 +10,7 @@ PKG_DEFAULT_OPTIONS+=	netqmail	# for the errno patches
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS=	badrcptto bigdns darwin nullenvsender netqmail
-PKG_SUPPORTED_OPTIONS+=	outgoingip qregex realrcptto smtpauth syncdir tls
+PKG_SUPPORTED_OPTIONS+=	outgoingip qregex realrcptto sasl syncdir tls
 .include "../../mk/bsd.options.mk"
 
 ###
@@ -106,14 +106,14 @@ PATCH_DIST_STRIP.${REALRCPTTO_PATCH}=	-p1
 ###
 ### enable STARTTLS and/or SMTP authentication
 ###
-.if !empty(PKG_OPTIONS:Msmtpauth) || !empty(PKG_OPTIONS:Mtls)
-.  if empty(PKG_OPTIONS:Msmtpauth)
-PKG_OPTIONS+=		smtpauth
+.if !empty(PKG_OPTIONS:Msasl) || !empty(PKG_OPTIONS:Mtls)
+.  if empty(PKG_OPTIONS:Msasl)
+PKG_OPTIONS+=		sasl
 .  endif
 .  include "../../security/openssl/buildlink3.mk"
-TLSSMTPAUTH_PATCH=	netqmail-1.05-tls-smtpauth-20040705.patch
-PATCHFILES+=            ${TLSSMTPAUTH_PATCH}
-SITES_${TLSSMTPAUTH_PATCH}=	http://shupp.org/patches/
+TLSSASL_PATCH=		netqmail-1.05-tls-smtpauth-20040705.patch
+PATCHFILES+=            ${TLSSASL_PATCH}
+SITES_${TLSSASL_PATCH}=	http://shupp.org/patches/
 .  if !empty(PKG_OPTIONS:Mtls)
 CFLAGS+=		-DTLS=20040419			# from the patch
 INSTALL_TARGET+=	cert tmprsadh
