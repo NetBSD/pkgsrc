@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.411 2003/09/25 14:20:39 xtraeme Exp $
+# $NetBSD: Makefile,v 1.412 2003/09/30 17:29:00 recht Exp $
 #
 
 COMMENT=	Networking tools
@@ -232,6 +232,7 @@ SUBDIR+=	py-mimelib
 SUBDIR+=	py-soaplib
 SUBDIR+=	py-soappy
 SUBDIR+=	py-xmlrpclib
+SUBDIR+= 	pygopherd
 SUBDIR+= 	pyslsk
 SUBDIR+=	qadsl
 SUBDIR+=	quagga
