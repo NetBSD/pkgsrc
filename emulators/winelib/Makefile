@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/10/03 00:14:41 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/01/23 18:33:07 recht Exp $
 #
 
 DISTNAME=	winelib-0.3
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://mono2.ximian.com/archive/1.0/
 
-MAINTAINER=	recht@NetBSD.com
+MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.mono-project.com/
 COMMENT=	Library to bind Wine as shared library
 
