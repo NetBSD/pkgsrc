@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6001 2004/05/21 21:04:18 kleink Exp $
+$NetBSD: CHANGES,v 1.6002 2004/05/21 22:00:25 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2612,3 +2612,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated rconfig to 0.30 [abs 2004-05-21]
 	Updated LPRng-core to 3.8.27 [adam 2004-05-21]
 	Updated jwhois to 3.2.2nb5 [kleink 2004-05-21]
+	Updated py-ZODB to 3.2.1nb1 [snj 2004-05-21]
