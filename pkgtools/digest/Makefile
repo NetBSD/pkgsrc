@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2004/10/14 03:13:00 atatat Exp $
+# $NetBSD: Makefile,v 1.44 2005/01/06 05:32:29 tv Exp $
 #
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the VERSION definition.
@@ -31,7 +31,7 @@ VERSION!=	${AWK} -F "'" '/^PACKAGE_VERSION=/ {print $$2}' \
 		${FILESDIR}/configure
 
 do-extract:
-	@${CP} -Rp ${FILESDIR} ${WRKSRC}
+	@${CP} -R ${FILESDIR} ${WRKSRC}
 
 pre-install:
 	-@${MKDIR} ${PKG_DBDIR}

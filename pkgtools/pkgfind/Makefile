@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/23 10:48:08 peter Exp $
+# $NetBSD: Makefile,v 1.5 2005/01/06 05:32:29 tv Exp $
 
 DISTNAME=	pkgfind-20041023
 CATEGORIES=	pkgtools
@@ -19,7 +19,7 @@ INSTALLATION_DIRS=	bin man/cat1 man/man1
 NROFF=		nroff -mandoc
 
 do-extract:
-	@${CP} -Rp ${FILESDIR} ${WRKSRC}
+	@${CP} -R ${FILESDIR} ${WRKSRC}
 
 do-build:
 	${CC} ${CFLAGS} -o ${WRKSRC}/pkgfind ${WRKSRC}/pkgfind.c

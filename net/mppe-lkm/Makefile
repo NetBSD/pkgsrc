@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/02 02:52:56 cube Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/06 05:37:21 tv Exp $
 
 DISTNAME=	kernel_ppp_mppe-0.0.4-src
 PKGNAME=	mppe-lkm-0.0.4
@@ -19,7 +19,7 @@ KPM_SRC=	${WRKDIR}/${DISTNAME:C/-src$//}
 INSTALLATION_DIRS=	lkm
 
 post-extract:
-	@${CP} -Rp ${FILESDIR} ${WRKSRC}
+	@${CP} -R ${FILESDIR} ${WRKSRC}
 	@${CHMOD} -R u+w ${KPM_SRC}
 	@${CP} -p ${KPM_SRC}/ppp-comp-local.h ${KPM_SRC}/ppp_mppe_compress.c \
 		${WRKSRC}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/08/21 03:28:56 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/01/06 05:35:14 tv Exp $
 #
 
 DISTNAME=		pax-20040802
@@ -23,7 +23,7 @@ PKG_PRESERVE=           # defined
 .include "../../mk/bsd.prefs.mk"
 
 do-extract:
-	@${CP} -Rp ${FILESDIR} ${WRKSRC}
+	@${CP} -R ${FILESDIR} ${WRKSRC}
 
 .if defined(LIBNBCOMPAT_STYLE) && (${LIBNBCOMPAT_STYLE} == "inplace")
 .  include "../../pkgtools/libnbcompat/inplace.mk"
