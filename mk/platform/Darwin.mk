@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.6 2005/01/25 18:15:58 tv Exp $
+# $NetBSD: Darwin.mk,v 1.7 2005/01/28 21:05:59 jlam Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -15,7 +15,6 @@ CPP=		${CC} -E ${CPP_PRECOMP_FLAGS}
 .endif
 CUT?=		/usr/bin/cut
 DATE?=		/bin/date
-DC?=		/usr/bin/dc
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		echo				# Shell builtin
 ECHO_N?=	${ECHO} -n

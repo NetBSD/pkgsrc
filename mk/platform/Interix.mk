@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.22 2005/01/25 18:15:58 tv Exp $
+# $NetBSD: Interix.mk,v 1.23 2005/01/28 21:05:59 jlam Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -47,7 +47,6 @@ CMP?=		/bin/cmp
 CP?=		/bin/cp
 CUT?=		/bin/cut
 DATE?=		/bin/date
-DC?=		/bin/dc
 DIRNAME?=	/bin/dirname
 ECHO?=		echo				# Shell builtin
 ECHO_N?=	/bin/printf %s			# does not support "echo -n"
