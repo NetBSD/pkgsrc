@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8218 2004/12/02 22:03:01 dillo Exp $
+$NetBSD: CHANGES,v 1.8219 2004/12/03 12:16:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5716,3 +5716,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated liferea to 0.6.4 [minskim 2004-12-02]
 	Added gob2-2.0.11 [dillo 2004-12-02]
 	Updated hugo to 3.1.01 [dillo 2004-12-02]
+	Updated eggdrop to 1.6.17 [adam 2004-12-03]
