@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.324 2003/02/27 13:28:44 seb Exp $
+$NetBSD: TODO,v 1.325 2003/03/01 01:27:10 grant Exp $
 
 Suggested new packages
 ======================
@@ -197,7 +197,7 @@ Suggested package updates
 	o mysql-3.23.54
 	o naim-0.11.5.5
 	o napshare-1.2
-	o nessus-2.0.0
+	o nessus-2.0.0 [pkg/20530]
 	o net-snmp-5.0.7 [pkg/19939]
 	o netpbm-10.8
 	o nethack-3.4.1
