@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/07/08 17:16:39 garbled Exp $
+--- configure.orig	Thu Jul  8 09:06:39 1999
++++ configure	Thu Jul  8 09:06:46 1999
+@@ -1582,7 +1582,7 @@
+ LIBTOOL_DEPS="$ac_aux_dir/ltconfig $ac_aux_dir/ltmain.sh"
+ 
+ # Always use our own libtool.
+-LIBTOOL='$(SHELL) $(top_builddir)/libtool'
++#LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
