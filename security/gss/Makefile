@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/05/07 01:14:49 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2004/07/24 08:33:19 wiz Exp $
 #
 
-DISTNAME=		gss-0.0.10
+DISTNAME=		gss-0.0.11
 CATEGORIES=		security
 MASTER_SITES=		http://josefsson.org/gss/releases/ \
 			${MASTER_SITE_GNU:=gss/}
