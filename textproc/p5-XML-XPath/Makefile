@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/12/30 17:27:31 cjep Exp $
+# $NetBSD: Makefile,v 1.9 2004/04/20 21:00:55 minskim Exp $
 
 DISTNAME=	XML-XPath-1.08
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,9 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sergeant.org/
 COMMENT=	XML XPath software
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XML/XPath/.packlist
 
 .include "../../lang/perl5/module.mk"
