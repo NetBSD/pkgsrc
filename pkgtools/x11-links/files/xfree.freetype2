@@ -1,4 +1,4 @@
-# $NetBSD: xfree.freetype2,v 1.3 2003/09/07 21:53:03 jlam Exp $
+# $NetBSD: xfree.freetype2,v 1.4 2003/10/13 15:55:11 veego Exp $
 #
 include/freetype2/freetype/cache/ftccache.h
 include/freetype2/freetype/cache/ftccmap.h
@@ -20,22 +20,27 @@ include/freetype2/freetype/ftchapters.h
 include/freetype2/freetype/fterrdef.h
 include/freetype2/freetype/fterrors.h
 include/freetype2/freetype/ftglyph.h
+include/freetype2/freetype/ftgzip.h
 include/freetype2/freetype/ftimage.h
+include/freetype2/freetype/ftincrem.h
 include/freetype2/freetype/ftlist.h
 include/freetype2/freetype/ftmac.h
 include/freetype2/freetype/ftmm.h
 include/freetype2/freetype/ftmoderr.h
 include/freetype2/freetype/ftmodule.h
 include/freetype2/freetype/ftoutln.h
+include/freetype2/freetype/ftpfr.h
 include/freetype2/freetype/ftrender.h
 include/freetype2/freetype/ftsizes.h
 include/freetype2/freetype/ftsnames.h
+include/freetype2/freetype/ftstroker.h
 include/freetype2/freetype/ftsynth.h
 include/freetype2/freetype/ftsysio.h
 include/freetype2/freetype/ftsysmem.h
 include/freetype2/freetype/ftsystem.h
 include/freetype2/freetype/fttrigon.h
 include/freetype2/freetype/fttypes.h
+include/freetype2/freetype/ftwinfnt.h
 include/freetype2/freetype/ftxf86.h
 include/freetype2/freetype/internal/autohint.h
 include/freetype2/freetype/internal/bdftypes.h
@@ -55,6 +60,7 @@ include/freetype2/freetype/internal/ftobjs.h
 include/freetype2/freetype/internal/ftstream.h
 include/freetype2/freetype/internal/internal.h
 include/freetype2/freetype/internal/pcftypes.h
+include/freetype2/freetype/internal/pfr.h
 include/freetype2/freetype/internal/psaux.h
 include/freetype2/freetype/internal/psglobal.h
 include/freetype2/freetype/internal/pshints.h
