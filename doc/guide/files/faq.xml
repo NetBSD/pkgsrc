@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.4 2005/01/11 16:05:20 wiz Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.5 2005/02/24 14:24:32 jschauma Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
   <title>Frequently Asked Questions</title>
@@ -9,15 +9,54 @@
     developers. </para>
 
   <sect1>
-    <title>Is there a mailing list for pkg-related discussion?</title>
+    <title>Are there any mailing lists for pkg-related discussion?</title>
 
-    <para> Yes, <email>tech-pkg@NetBSD.org</email> is the list for
-      discussing package related issues. To subscribe do: </para> 
+    <para>
+      The following mailing lists may be of interest to pkgsrc users:
+    </para>
 
-    <programlisting>&cprompt; echo subscribe tech-pkg | mail majordomo@NetBSD.org</programlisting>
+    <itemizedlist>
+      <listitem>
+        <para>
+          <ulink url="http://www.NetBSD.org/MailingLists/index.html#pkgsrc-bugs">pkgsrc-bugs</ulink>
+           -- a list where problem reports related to pkgsrc are sent and
+          discussed
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <ulink
+	  url="http://www.NetBSD.org/MailingLists/index.html#pkgsrc-bulk">pkgsrc-bulk</ulink>
+	  -- a list where the results of pkgsrc bulk builds are sent and
+	  discussed
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <ulink
+	  url="http://www.NetBSD.org/MailingLists/index.html#pkgsrc-changes">pkgsrc-changes</ulink>
+	  -- a list where all commit messages to pkgsrc are sent
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <ulink
+	  url="http://www.NetBSD.org/MailingLists/index.html#tech-pkg">tech-pkg</ulink>
+	  -- a general discussion list for all things related to pkgsrc
+        </para>
+      </listitem>
+    </itemizedlist>
 
-    <para> An archive of the list is available at
-      <ulink url="http://mail-index.NetBSD.org/tech-pkg/">http://mail-index.NetBSD.org/tech-pkg/</ulink>. </para>     
+    <para>
+      To subscribe, do:
+    </para>
+
+    <programlisting>&cprompt; echo subscribe <replaceable>listname</replaceable> | mail majordomo@NetBSD.org</programlisting>
+
+    <para>
+      Archives for all these mailing lists are available from
+      <ulink url="http://mail-index.NetBSD.org/"/>.
+    </para>
 </sect1>
 
 
@@ -550,7 +589,7 @@ CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc</programlisting>
 
     <screen>
 ===========================================================================
-$NetBSD: faq.xml,v 1.4 2005/01/11 16:05:20 wiz Exp $
+$NetBSD: faq.xml,v 1.5 2005/02/24 14:24:32 jschauma Exp $
 
 You may wish to have the vulnerabilities file downloaded daily so that
 it remains current.  This may be done by adding an appropriate entry
