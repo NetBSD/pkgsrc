@@ -1,11 +1,11 @@
-# $NetBSD: db1.builtin.mk,v 1.5 2004/11/17 15:12:08 jlam Exp $
+# $NetBSD: db1.builtin.mk,v 1.6 2004/11/26 01:22:31 jlam Exp $
 
 .for _lib_ in db db1
 .  if !defined(_BLNK_LIB_FOUND.${_lib_})
 _BLNK_LIB_FOUND.${_lib_}!=	\
-	if ${TEST} `${ECHO} /usr/lib/lib${_lib_}.*` = "/usr/lib/lib${_lib_}.*"; then \
+	if ${TEST} "`${ECHO} /usr/lib/lib${_lib_}.*`" = "/usr/lib/lib${_lib_}.*"; then \
 		${ECHO} "no";						\
-	elif ${TEST} `${ECHO} /lib/lib${_lib_}.*` = "/lib/lib${_lib_}.*"; then \
+	elif ${TEST} "`${ECHO} /lib/lib${_lib_}.*`" = "/lib/lib${_lib_}.*"; then \
 		${ECHO} "no";						\
 	else								\
 		${ECHO} "yes";						\
