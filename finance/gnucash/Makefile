@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/01/31 17:12:38 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/16 14:46:34 wiz Exp $
 #
 
 DISTNAME=		gnucash-1.4.10
@@ -9,6 +9,7 @@ MASTER_SITES=		http://www.linas.org/pub/gnucash/gnucash/sources/stable/ \
 
 MAINTAINER=		drankin@bohemians.lexington.ky.us
 HOMEPAGE=		http://www.gnucash.org/
+COMMENT=		Personal double-entry accounting program
 
 DEPENDS+=		gnome-libs>=1.0.40:../../x11/gnome-libs
 DEPENDS+=		eperl-2.2.14:../../textproc/eperl

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/16 13:56:40 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 14:40:51 wiz Exp $
 
 DISTNAME=	mule-2.3
 CATEGORIES=	editors
@@ -6,6 +6,7 @@ MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/
 
 MAINTAINER=	kei@netbsd.org
 HOMEPAGE=	http://www.m17n.org/mule/MulePage.en.html
+COMMENT=	Multilingual GNU editing macros (editor)
 
 CONFLICTS=	emacs-*
 

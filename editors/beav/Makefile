@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/03/08 10:49:24 agc Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 14:40:49 wiz Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/08/23 02:10:57 hoek Exp 
 #
 
@@ -8,6 +8,7 @@ CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.debian.org/debian/hamm/hamm/source/editors/
 
 MAINTAINER=	bad@NetBSD.ORG
+COMMENT=	Binary Editor And Viewer, a full featured binary file editor
 
 WRKSRC=		${WRKDIR}/beav-1.40
 

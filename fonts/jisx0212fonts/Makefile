@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/05/27 14:28:17 agc Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 14:46:06 wiz Exp $
 # Based on FreeBSD Id: Makefile,v 1.6 1999/02/12 17:23:40 motoyuki Exp
 #
 
@@ -10,6 +10,7 @@ MASTER_SITES=	ftp://ginkaku.kudpc.kyoto-u.ac.jp/fonts/ \
 DISTFILES=	${BDF14} ${BDF16} ${BDF24} ${BDF40}
 
 MAINTAINER=	itojun@itojun.org
+COMMENT=	X11 X0212-1990 font.  14, 16, 24 and 40 dots availble
 
 USE_X11BASE=	yes
 NO_WRKSUBDIR=	yes

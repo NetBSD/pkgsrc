@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/12/31 14:00:09 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/16 14:38:41 wiz Exp $
 #
 
 DISTNAME=	maketool-0.6.1
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	-src.tar.gz
 
 MAINTAINER=	fb@enteract.com
 HOMEPAGE=	http://www.alphalink.com.au/~gnb/maketool/
+COMMENT=	Graphical front end to GNU make
 
 BUILD_DEPENDS+=	msgfmt:../../devel/gettext
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk

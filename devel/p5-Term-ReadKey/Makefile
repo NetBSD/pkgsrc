@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/09/04 21:45:27 kim Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 14:38:53 wiz Exp $
 #
 
 DISTNAME=	TermReadKey-2.14
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Term/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/TermReadKey/
+COMMENT=	Change terminal modes and perform non-blocking reads
 
 USE_PERL5=	# defined
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Term/ReadKey/.packlist

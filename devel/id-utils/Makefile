@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/11/02 01:57:38 itojun Exp $
+# $NetBSD: Makefile,v 1.13 2001/02/16 14:38:31 wiz Exp $
 # FreeBSD Id: Makefile,v 1.4 1996/11/18 10:22:47 asami Exp
 #
 
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=id-utils/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/idutils/idutils.html
+COMMENT=	The classic Berkeley gid/lid tools for looking up variables in code
 
 BUILD_DEPENDS+=	msgfmt:../../devel/gettext
 

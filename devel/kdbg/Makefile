@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/01/04 02:55:32 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2001/02/16 14:38:32 wiz Exp $
 
 DISTNAME=	kdbg-1.0.1
 CATEGORIES=	devel kde
@@ -7,6 +7,7 @@ MASTER_SITES=	http://members.telecom.at/~johsixt/ \
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=       http://members.telecom.at/~johsixt/kdbg.html
+COMMENT=	Graphical User Interface around gdb using KDE
 
 BUILD_DEPENDS+= msgfmt:../../devel/gettext
 DEPENDS+=	autoconf-2.13:../autoconf

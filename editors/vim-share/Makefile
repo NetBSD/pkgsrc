@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2000/04/16 07:31:12 mycroft Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/16 14:40:54 wiz Exp $
 
 .include		"Makefile.common"
 
 PKGNAME=		vim-share-${VIM_VERSION}
+
+COMMENT=		Data files for the vim editor (vi clone)
 
 DISTFILES+=		${DISTNAME}-rt${EXTRACT_SUFX}
 

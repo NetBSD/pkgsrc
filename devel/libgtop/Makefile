@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2000/11/27 11:35:45 itojun Exp $
+# $NetBSD: Makefile,v 1.48 2001/02/16 14:38:36 wiz Exp $
 
 DISTNAME=		libgtop-1.0.9
 CATEGORIES=		devel gnome
@@ -6,6 +6,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/libgtop/}
 
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.home-of-linux.org/gnome/libgtop/
+COMMENT=		library to retrieve system information, used in GNOME
 
 BUILD_DEPENDS=		${PERL5}:../../lang/perl5-base
 BUILD_DEPENDS+=		msgfmt:../../devel/gettext
