@@ -1,23 +1,15 @@
-# $NetBSD: Makefile,v 1.4 1999/08/29 12:26:19 kim Exp $
+# $NetBSD: Makefile,v 1.5 2000/01/15 18:09:27 christos Exp $
 #
 
-DISTNAME=	rdist-6.1.4
+DISTNAME=	freerdist-0.91
 CATEGORIES=	net
-MASTER_SITES=	http://www.MagniComp.com/download/rdist/
+MASTER_SITES=	ftp.astron.com:/pub/freerdist/
 
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.MagniComp.com/rdist/
-
+MAINTAINER=	christos@netbsd.org
 RDIST6_NAME=	rdist6
 
 INSTALL_TARGET=	install install.man
 MAKE_ENV+=	RDIST6_NAME=${RDIST6_NAME}
-
-pre-patch:
-	@${CP} \
-	    ${FILESDIR}/mf.netbsd \
-	    ${FILESDIR}/os-netbsd.h \
-	    ${WRKSRC}/config
 
 post-install:
 	@strip ${PREFIX}/bin/${RDIST6_NAME}
