@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.746 2001/05/23 09:18:26 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.747 2001/05/24 13:28:36 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2724,8 +2724,7 @@ PACKAGE_DEPENDS_QUICK?=false
 .if !target(run-depends-list)
 run-depends-list:
 .for dep in ${DEPENDS}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	pkg="${dep:C/:.*//}";						\
+	@pkg="${dep:C/:.*//}";						\
 	dir="${dep:C/[^:]*://}";					\
 	cd ${.CURDIR};							\
 	if ${PACKAGE_DEPENDS_WITH_PATTERNS}; then			\
