@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 1998/10/30 10:56:10 agc Exp $
+# $NetBSD: Makefile,v 1.61 1998/11/04 08:07:10 garbled Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -22,7 +22,7 @@
     SUBDIR += dxpc
 #    SUBDIR += emiclock
 #    SUBDIR += emu
-#    SUBDIR += enlightenment
+    SUBDIR += enlightenment
 #    SUBDIR += etlfonts
 #    SUBDIR += explorer
 #    SUBDIR += fbsd-icons
@@ -51,6 +51,7 @@
 #    SUBDIR += mouseclock
 #    SUBDIR += neXtaw
 #    SUBDIR += olvwm
+    SUBDIR += p5-gtk
 #    SUBDIR += p5-Tcl-Tk
     SUBDIR += p5-Tk
 #    SUBDIR += piewm

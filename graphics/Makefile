@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 1998/10/13 11:15:16 frueauf Exp $
+# $NetBSD: Makefile,v 1.33 1998/11/04 08:07:10 garbled Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -10,6 +10,7 @@
 #    SUBDIR += dc3play
 #    SUBDIR += dore
     SUBDIR += fly
+    SUBDIR += fnlib
 #    SUBDIR += fxtv
     SUBDIR += gd
 #    SUBDIR += geomview
