@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/02 05:50:55 sakamoto Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/09/03 04:31:46 sakamoto Exp $
 @cwd ${DICT_DIR}
 @cwd ${DICT_DIR}
 wnn/ja_JP/pubdic/bio.dic
@@ -23,70 +23,12 @@ wnn/ja_JP/src/fzk.master
 wnn/ja_JP/src/fzk.shuutan
 wnn/ja_JP/wnncons/tankan2.dic
 wnn/ja_JP/wnncons/tankan3.dic
+@dirrm wnn/ja_JP/wnncons
+@dirrm wnn/ja_JP/src
+@dirrm wnn/ja_JP/pubdic
+@dirrm wnn/ja_JP
+@dirrm wnn
 @cwd ${PREFIX}
-share/wnn/cvt_key_empty
-share/wnn/cvt_key_tbl
-share/wnn/cvt_key_tbl.ST
-share/wnn/cvt_key_tbl.gm
-share/wnn/cvt_key_tbl.kt
-share/wnn/cvt_key_tbl.mv
-share/wnn/cvt_key_tbl.vt
-share/wnn/ja_JP/hinsi.data
-share/wnn/ja_JP/jserverrc
-share/wnn/ja_JP/libwnn.msg
-share/wnn/ja_JP/rk.vi/1B_newTOUPPER
-share/wnn/ja_JP/rk.vi/2A_CTRL
-share/wnn/ja_JP/rk.vi/2B_KEISEN
-share/wnn/ja_JP/rk.vi/2B_ROMKANA
-share/wnn/ja_JP/rk.vi/2C_KEISEN1
-share/wnn/ja_JP/rk.vi/2C_VI
-share/wnn/ja_JP/rk.vi/2C_VIEX
-share/wnn/ja_JP/rk.vi/2C_VISH
-share/wnn/ja_JP/rk.vi/2_VITHROW
-share/wnn/ja_JP/rk.vi/3B_ZENASC
-share/wnn/ja_JP/rk.vi/mode
-share/wnn/ja_JP/rk.vi/uumkey
-share/wnn/ja_JP/rk/1B_TOUPPER
-share/wnn/ja_JP/rk/1B_ZENHIRA
-share/wnn/ja_JP/rk/1B_ZENKATA
-share/wnn/ja_JP/rk/1B_newTOUPPER
-share/wnn/ja_JP/rk/2A_CTRL
-share/wnn/ja_JP/rk/2B_DAKUTEN
-share/wnn/ja_JP/rk/2B_JIS
-share/wnn/ja_JP/rk/2B_ROMKANA
-share/wnn/ja_JP/rk/2_TCODE
-share/wnn/ja_JP/rk/3B_HANKATA
-share/wnn/ja_JP/rk/3B_KATAKANA
-share/wnn/ja_JP/rk/3B_ZENKAKU
-share/wnn/ja_JP/rk/autork
-share/wnn/ja_JP/rk/mode
-share/wnn/ja_JP/rk/mode.hankata
-share/wnn/ja_JP/rk/mode.nohankata
-share/wnn/ja_JP/uum.msg
-share/wnn/ja_JP/uumkey
-share/wnn/ja_JP/uumkey.omr
-share/wnn/ja_JP/uumkey_e
-share/wnn/ja_JP/uumrc
-share/wnn/ja_JP/uumrc.omr
-share/wnn/ja_JP/uumrc.rev
-share/wnn/ja_JP/uumrc_e
-share/wnn/ja_JP/uumrc_vi
-share/wnn/ja_JP/wnnenvrc
-share/wnn/ja_JP/wnnenvrc.omr
-share/wnn/ja_JP/wnnenvrc.rem
-share/wnn/ja_JP/wnnenvrc.rev
-share/wnn/ja_JP/wnnenvrc_R
-share/wnn/ja_JP/wnnenvrc_R.omr
-share/wnn/ja_JP/wnnenvrc_R.rem
-share/wnn/ja_JP/wnnstat.msg
-share/wnn/lt_LN/rk/2A_CTRL
-share/wnn/lt_LN/rk/2B_LATIN
-share/wnn/lt_LN/rk/mode
-share/wnn/lt_LN/uum.msg
-share/wnn/lt_LN/uumkey
-share/wnn/lt_LN/uumkey_e
-share/wnn/lt_LN/uumrc
-share/wnn/serverdefs
 man/ja_JP.EUC/man1/atod.1
 man/ja_JP.EUC/man1/atof.1
 man/ja_JP.EUC/man1/dtoa.1
@@ -123,14 +65,5 @@ sbin/wdreg
 sbin/wnnkill
 sbin/wnnstat
 sbin/wnntouch
-@dirrm share/wnn/lt_LN/rk
-@dirrm share/wnn/lt_LN
-@dirrm share/wnn/ja_JP/rk.vi
-@dirrm share/wnn/ja_JP/rk
-@dirrm share/wnn/ja_JP
-@dirrm share/wnn
-@unexec rmdir ${DICT_DIR}/wnn/ja_JP/wnncons
-@unexec rmdir ${DICT_DIR}/wnn/ja_JP/src
-@unexec rmdir ${DICT_DIR}/wnn/ja_JP/pubdic
-@unexec rmdir ${DICT_DIR}/wnn/ja_JP
-@unexec rmdir ${DICT_DIR}/wnn
+@exec ln -s ${DICT_DIR}/wnn/ja_JP %D/share/wnn/ja_JP/dic
+@unexec rm %D/share/wnn/ja_JP/dic
