@@ -1,0 +1,34 @@
+$NetBSD: patch-be,v 1.1 2005/03/09 20:38:26 is Exp $
+
+--- /dev/null	2005-03-09 09:35:53.000000000 +0100
++++ vsuite/quick/ptrstr/pointer.sr
+@@ -0,0 +1,29 @@
++resource hello()
++  type pt = ptr int
++  type pa = ptr [1:2]int
++  var foo: pa
++  var bar: pa
++  var baz: pa
++  var nul: pa
++  var foos: string[20]
++  var bars: string[20]
++  var anint: int
++  
++  write("Testing pointer-string-pointer conversions:")
++
++  nul := null
++  write("Null pointer:", nul, "; string:", string(nul),
++	"; int:", int(nul), "; pt(==null==):", pt("==null=="))
++
++  baz := new([1:2]int)
++
++  foo := new([1:2]int)
++  foos:= string(foo)
++
++  bar := pa(foos||"x")
++  bars:= string(bar)
++
++  write("pointer identity:", foo = bar)
++  write("string  identity:", foos = bars)
++
++end
