@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 1999/08/28 09:41:07 rh Exp $
+# $NetBSD: Makefile,v 1.24 1999/09/29 09:46:41 agc Exp $
 #
 
 DISTNAME=	ORBit-0.4.3
@@ -17,5 +17,11 @@ USE_GMAKE=	yes
 
 LIBTOOL_FLAGS=	--install-la
 INFO_FILES=	libIDL.info
+
+# This package fails to build, with an unterminated macro definition error
+# Calling the build twice seems to workaround this.
+do-build:
+	 -@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} ${.MAKEFLAGS} all
+	 -@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} ${.MAKEFLAGS} all
 
 .include "../../mk/bsd.pkg.mk"
