@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/04/03 17:01:03 taca Exp $
+# $NetBSD: Makefile,v 1.30 2004/04/24 22:25:24 snj Exp $
 
 DISTNAME=	kterm-6.2.0
 PKGREVISION=	7
@@ -14,7 +14,7 @@ MAINTAINER=	sakamoto@NetBSD.org
 HOMEPAGE=	# none
 COMMENT=	Multi-lingual terminal emulator for X
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 USE_IMAKE=	YES
 
@@ -29,11 +29,11 @@ BUILD_DEFS+=	KTERM_USE_WALLPAPER
 .  if ${KTERM_USE_WALLPAPER} == "imlib"
 SITES_KTerm-BGP-Imlib-1.0.patch.gz=	http://delegate.uec.ac.jp:8081/club/mma/%7Etakkun/fun/handling/
 PATCHFILES+=	KTerm-BGP-Imlib-1.0.patch.gz
-.    include "../../graphics/imlib/buildlink2.mk"
+.    include "../../graphics/imlib/buildlink3.mk"
 .  elif ${KTERM_USE_WALLPAPER} == "YES"
 SITES_KTerm-BGP-1.0.patch.gz=	http://delegate.uec.ac.jp:8081/club/mma/%7Etakkun/fun/handling/
 PATCHFILES+=	KTerm-BGP-1.0.patch.gz
-.    include "../../graphics/xpm/buildlink2.mk"
+.    include "../../graphics/xpm/buildlink3.mk"
 .  endif
 .endif
 
@@ -43,5 +43,5 @@ post-patch:
 	@${PATCH} ${PATCH_ARGS} < ${FILESDIR}/patch-xaw3d
 .endif
 
-.include "../../mk/xaw.buildlink2.mk"
+.include "../../mk/xaw.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
