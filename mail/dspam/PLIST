@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/11/15 08:13:13 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/03/21 21:35:52 xtraeme Exp $
 bin/dspam
 bin/dspam_2sql
 bin/dspam_admin
@@ -7,18 +7,20 @@ bin/dspam_corpus
 bin/dspam_crc
 bin/dspam_dump
 bin/dspam_genaliases
+bin/dspam_logrotate
 bin/dspam_merge
 bin/dspam_stats
+bin/dspamc
 include/dspam/buffer.h
 include/dspam/config.h
 include/dspam/decode.h
+include/dspam/diction.h
 include/dspam/error.h
-include/dspam/lht.h
+include/dspam/heap.h
 include/dspam/libdspam.h
 include/dspam/libdspam_objects.h
 include/dspam/nodetree.h
 include/dspam/storage_driver.h
-include/dspam/tbt.h
 lib/libdspam.la
 lib/pkgconfig/dspam.pc
 man/man1/dspam.1
@@ -37,19 +39,22 @@ man/man3/dspam_init.3
 man/man3/dspam_process.3
 man/man3/libdspam.3
 share/doc/dspam/README
-share/doc/dspam/README.courier
-share/doc/dspam/README.exim
-share/doc/dspam/README.pop3filter
-share/doc/dspam/README.postfix
-share/doc/dspam/README.qmail
-share/doc/dspam/README.sendmail
 share/doc/dspam/RELEASE.NOTES
+share/doc/dspam/courier.txt
+share/doc/dspam/exim.txt
+share/doc/dspam/mysql_drv.txt
+share/doc/dspam/ora_drv.txt
+share/doc/dspam/osx.txt
+share/doc/dspam/pgsql_drv.txt
+share/doc/dspam/pop3filter.txt
+share/doc/dspam/postfix.txt
+share/doc/dspam/qmail.txt
+share/doc/dspam/sendmail.txt
+share/doc/dspam/sqlite_drv.txt
+share/doc/dspam/win32.txt
 share/dspam/cgi/admin.cgi
 share/dspam/cgi/admingraph.cgi
-share/dspam/cgi/admins
 share/dspam/cgi/base.css
-share/dspam/cgi/configure.pl
-share/dspam/cgi/default.prefs
 share/dspam/cgi/dspam-logo-small.gif
 share/dspam/cgi/dspam.cgi
 share/dspam/cgi/graph.cgi
@@ -66,7 +71,6 @@ share/dspam/cgi/templates/nav_performance.html
 share/dspam/cgi/templates/nav_preferences.html
 share/dspam/cgi/templates/nav_quarantine.html
 share/dspam/cgi/templates/nav_viewmessage.html
-${MYSQL}share/dspam/mysql/README
 ${MYSQL}share/dspam/mysql/mysql_objects-4.1.sql
 ${MYSQL}share/dspam/mysql/mysql_objects-space.sql
 ${MYSQL}share/dspam/mysql/mysql_objects-speed.sql
@@ -74,15 +78,16 @@ ${MYSQL}share/dspam/mysql/purge.sql
 ${MYSQL}share/dspam/mysql/purge-4.1.sql
 ${MYSQL}share/dspam/mysql/virtual_users.sql
 ${MYSQL}share/dspam/mysql/neural.sql
-${PGSQL}share/dspam/pgsql/README
 ${PGSQL}share/dspam/pgsql/pgsql_objects.sql
 ${PGSQL}share/dspam/pgsql/purge.sql
 ${PGSQL}share/dspam/pgsql/virtual_users.sql
-${SQLITE}share/dspam/sqlite/README
 ${SQLITE}share/dspam/sqlite/purge.sql
 share/dspam/txt/firstrun.txt
 share/dspam/txt/firstspam.txt
 share/dspam/txt/quarantinefull.txt
+share/examples/dspam/cgi-admins
+share/examples/dspam/cgi-default.prefs
+share/examples/dspam/configure.pl
 share/examples/dspam/dspam.conf
 @dirrm share/examples/dspam
 @dirrm share/dspam/txt

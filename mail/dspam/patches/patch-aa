@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2004/10/22 05:43:29 xtraeme Exp $
+$NetBSD: patch-aa,v 1.3 2005/03/21 21:35:52 xtraeme Exp $
 
---- Makefile.in.orig	2004-10-22 07:27:16.000000000 +0200
-+++ Makefile.in	2004-10-22 07:27:35.000000000 +0200
-@@ -261,7 +261,7 @@
+--- src/Makefile.in.orig	2005-02-17 15:16:55.000000000 +0100
++++ src/Makefile.in	2005-02-17 15:17:01.000000000 +0100
+@@ -251,7 +251,7 @@
  pkgconfigdir = $(libdir)/pkgconfig
  pkgconfig_DATA = dspam.pc
  etcdir = $(sysconfdir)
@@ -10,4 +10,4 @@ $NetBSD: patch-aa,v 1.2 2004/10/22 05:43:29 xtraeme Exp $
 +etc_SCRIPTS =
  
  # Defaults from dspam.conf
- EXTRA_DIST = autogen.sh RELEASE.NOTES CHANGELOG LICENSE example.c \
+ EXTRA_DIST = example.c dspam-button.gif dspam.pc.in dspam-uninstalled.pc.in \
