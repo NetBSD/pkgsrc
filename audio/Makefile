@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2000/07/28 14:59:46 ad Exp $
+# $NetBSD: Makefile,v 1.66 2000/07/31 01:56:43 hubertf Exp $
 #
 
     SUBDIR += ac3dec
@@ -84,7 +84,7 @@
     SUBDIR += xmcd
     SUBDIR += xmix
     SUBDIR += xmmix
-#    SUBDIR += xmms
+    SUBDIR += xmms
     SUBDIR += xmradio
     SUBDIR += xsidplay
     SUBDIR += xwave

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2000/07/18 14:01:17 kim Exp $
+# $NetBSD: Makefile,v 1.18 2000/07/31 01:56:44 hubertf Exp $
 #
 
     SUBDIR += gensolpkg
-#    SUBDIR += pax			# only needed on 1.3 systems
-#    SUBDIR += pkg_install		# only install on demand of bsd.pkg.mk
+#   SUBDIR += pax		# Only needed on 1.3 systems
+#   SUBDIR += pkg_install	# Only install on demand of bsd.pkg.mk
     SUBDIR += pkg_tarup
     SUBDIR += pkgdep
     SUBDIR += pkgdiff
@@ -12,6 +12,6 @@
     SUBDIR += pkgmanpages
     SUBDIR += port2pkg
     SUBDIR += url2pkg
-#    SUBDIR += xpkgwedge		# broken
+#   SUBDIR += xpkgwedge		# Experimental - turn on at your own risk!
 
 .include "../mk/bsd.pkg.subdir.mk"
