@@ -1,44 +1,28 @@
-# $NetBSD: Makefile,v 1.4 2004/12/28 23:18:19 reed Exp $
+# $NetBSD: Makefile,v 1.5 2005/01/10 16:26:34 dillo Exp $
 #
 
-DISTNAME=	hugov30_unix_source
-PKGNAME=	wxhugo-3.0.07
-PKGREVISION=	2
+DISTNAME=	hugov31_unix_source
+PKGNAME=	wxhugo-3.1.01
 CATEGORIES=	games
-MASTER_SITES=	http://www.ifarchive.org/if-archive/programming/hugo/source/
+MASTER_SITES=	${MASTER_SITE_IFARCHIVE:=programming/hugo/source/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTFILE_WX}
 
 MAINTAINER=	dillo@NetBSD.org
-HOMEPAGE=	http://161.184.245.22/tessman/gcc/hugo.html
+HOMEPAGE=	http://www.generalcoffee.com/hugo.html
 COMMENT=	Interactive fiction interpreter with sound and graphics support
 
-DISTFILE_WX=	hugov30_wxwin_source${EXTRACT_SUFX}
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+DISTFILE_WX=	hugov31_wxwin_source${EXTRACT_SUFX}
+#EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-DIST_SUBDIR=	hugo-3.0.07
+DIST_SUBDIR=	hugo-3.1.01
 USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
-WRKSRC=		${WRKDIR}/hugov3.0.07/hewx
+WRKSRC=		${WRKDIR}/hugov3.1.0/hewx
 
-LIBDIR=		${PREFIX}/share/hugo
-
-post-extract:
-	extract_file="${DISTDIR}/${DIST_SUBDIR}/${DISTFILE_WX}"; export extract_file;    \
-	cd ${WRKSRC}/.. && ${EXTRACT_CMD.tar.gz}
-	for f in hejpeg.cpp hesound.cpp hesound_SDL.cpp hewxwin.cpp; \
-	do \
-		{ cd ${WRKSRC} && ${MV} $$f $$f.dos \
-			&& ${TR} -d '\015' < $$f.dos > $$f; }; \
-	done
-	for f in hevideo.cpp; \
-	do \
-		{ cd ${WRKSRC} && ${MV} $$f $$f.mac \
-			&& ${TR} '\015' '\012' < $$f.mac > $$f; }; \
-	done
+.include "../../audio/libmikmod/buildlink3.mk"
+.include "../../x11/wxGTK/buildlink3.mk"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hewx ${PREFIX}/bin
 
-.include "../../audio/libmikmod/buildlink3.mk"
-.include "../../x11/wxGTK/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
