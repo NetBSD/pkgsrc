@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/17 09:56:52 martti Exp $
+# $NetBSD: Makefile,v 1.2 2002/11/05 07:33:19 martti Exp $
 
 PKGNAME=		ap2-php-${PHP_BASE_VERS}
 PKGREVISION=		# empty
@@ -8,8 +8,6 @@ DEPENDS+=		php>=${PHP_BASE_VERS}:../../www/php4
 
 USE_BUILDLINK2=		YES
 APACHE_MODULE=		YES
-
-CONFIGURE_ARGS+=	--with-tsrm-pth
 
 .include "../../www/php4/Makefile.php"
 
@@ -21,5 +19,4 @@ do-install:
 		${PREFIX}/lib/httpd/mod_php4.so
 
 .include "../../www/apache2/buildlink2.mk"
-.include "../../devel/pth/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
