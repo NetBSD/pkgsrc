@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.856 2003/09/12 22:17:54 wiz Exp $
+$NetBSD: TODO,v 1.857 2003/09/13 14:42:26 jlam Exp $
 
 Suggested new packages
 ======================
@@ -214,7 +214,6 @@ Suggested package updates
 	o oss-3.9.7l
 	o p5-Apache-Gallery-0.7
 	o p5-GdGraph-1.43 [pkg/22463]
-	o p5-Net-DNS-0.40 [pkg/22750]
 	o p5-Net-SNMP-4.1.0 [pkg/21782]
 	o p5-Net-Server-0.85 [pkg/22542]
 	o p5-XML-LibXML-1.54
