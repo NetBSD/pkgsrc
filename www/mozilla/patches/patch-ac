@@ -1,0 +1,32 @@
+$NetBSD: patch-ac,v 1.5 1999/02/01 11:39:47 frueauf Exp $
+
+--- nsprpub/config/NetBSD.mk-patch	Fri Jan 29 16:42:39 1999
++++ nsprpub/config/NetBSD.mk	Fri Jan 29 16:53:50 1999
+@@ -29,8 +29,12 @@
+ ifeq (86,$(findstring 86,$(OS_TEST)))
+ CPU_ARCH		= x86
+ else
++ifeq ($(OS_TEST),pmax)
++CPU_ARCH		= mips
++else
+ CPU_ARCH		= $(OS_TEST)
+ endif
++endif
+ 
+ OS_CFLAGS		= $(DSO_CFLAGS) $(OS_REL_CFLAGS) -ansi -Wall -pipe -DNETBSD -DHAVE_STRERROR -DHAVE_BSD_FLOCK
+ 
+@@ -53,10 +57,12 @@
+ DSO_LDOPTS		= -shared
+ endif
+ ifeq ($(OS_TEST),mips)
+-DSO_LDOPTS		= -shared
++DSO_LDOPTS		= -shared -soname $(DSO_NAME)
+ endif
+ ifeq ($(OS_TEST),pmax)  
+-DSO_LDOPTS		= -shared
++DSO_LDOPTS		= -soname lib$(LIBRARY_NAME)$(LIBRARY_VERSION).so.1 -shared -rpath /usr/X11R6/lib/mozilla
++# supposed to be so.1.0 --- temp until links working??
++DLL_SUFFIX		= so.1.0
+ endif
+ 
+ ifdef LIBRUNPATH

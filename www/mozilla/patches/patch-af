@@ -1,0 +1,36 @@
+$NetBSD: patch-af,v 1.1 1999/02/01 11:39:49 frueauf Exp $
+
+--- nsprpub/pr/include/md/_netbsd.cfg-patch	Thu Oct  8 22:25:16 1998
++++ nsprpub/pr/include/md/_netbsd.cfg	Fri Jan 29 17:13:29 1999
+@@ -27,11 +27,12 @@
+ #define NETBSD
+ #endif
+ 
+-#if defined(__i386__) || defined(__arm32__)
++#define	HAVE_LONG_LONG
++
++#if defined(__i386__) || defined(__arm32__) || defined(__MIPSEL__)
+ 
+ #define IS_LITTLE_ENDIAN 1
+ #undef  IS_BIG_ENDIAN
+-#define	HAVE_LONG_LONG
+ #undef	HAVE_ALIGNED_DOUBLES
+ #undef	HAVE_ALIGNED_LONGLONGS
+ 
+@@ -77,7 +78,6 @@
+ 
+ #undef IS_LITTLE_ENDIAN 1
+ #define  IS_BIG_ENDIAN 1
+-#define HAVE_LONG_LONG
+ #define  HAVE_ALIGNED_DOUBLES
+ #define  HAVE_ALIGNED_LONGLONGS
+ 
+@@ -163,7 +163,7 @@
+ #define PR_BYTES_PER_WORD_LOG2  3
+ #define PR_BYTES_PER_DWORD_LOG2 3
+ 
+-#elif defined(__powerpc__) || defined(__m68k__)
++#elif defined(__powerpc__) || defined(__m68k__) || defined(__MIPSEB__)
+ 
+ #undef  IS_LITTLE_ENDIAN
+ #define IS_BIG_ENDIAN    1

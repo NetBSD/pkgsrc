@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1999/01/30 23:18:54 agc Exp $
+# $NetBSD: Makefile,v 1.21 1999/02/01 11:39:45 frueauf Exp $
 #
 
 DISTNAME=	mozilla-19981008
@@ -16,9 +16,7 @@ USE_GMAKE=	yes
 USE_PERL5=	yes
 USE_MOTIF=	yes
 
-CONFLICTS=	mozilla-19980429 mozilla-19980603 mozilla-19980728
-
-NOT_FOR_ARCHS=  mips
+CONFLICTS=	mozilla-*
 
 MOZ_OBJDIR=	${OPSYS}${OS_VERSION}_OPT.OBJ
 MOZ_LIBDIR=	${PREFIX}/lib/mozilla
@@ -30,6 +28,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dist/${MOZ_OBJDIR}/bin/mozilla-export ${PREFIX}/bin
 	${LN} -sf ${PREFIX}/bin/moz-export ${PREFIX}/bin/mozilla
 	${INSTALL_PROGRAM_DIR} ${MOZ_LIBDIR}
-	${INSTALL_DATA} ${WRKSRC}/dist/${MOZ_OBJDIR}/bin/*.so* ${MOZ_LIBDIR}
+	${INSTALL_DATA} ${WRKSRC}/dist/${MOZ_OBJDIR}/bin/*.so.?.? ${MOZ_LIBDIR}
 
 .include "../../mk/bsd.pkg.mk"
