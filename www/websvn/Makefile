@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/06/21 01:34:16 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/06 20:44:56 jdolecek Exp $
 #
 
 DISTNAME=	WebSVN_140
 PKGNAME=	websvn-1.40
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://websvn.tigris.org/files/documents/1380/10659/
 
@@ -10,8 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://websvn.tigris.org/
 COMMENT=	Subversion repository web frontend
 
-BUILD_DEPENDS+=	{apache-[0-9]*,apache6-[0-9]*,apache2-[0-9]*}:../../www/apache2
-BUILD_DEPENDS+=	ap-php-[0-9]*:../../www/ap-php4
+DEPENDS+=	ap{,2}-php>=4.0.0:../../www/ap-php
 
 WRKSRC=		${WRKDIR}/WebSVN
 NO_BUILD=	yes
