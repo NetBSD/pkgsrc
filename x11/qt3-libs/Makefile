@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/03/29 09:27:11 recht Exp $
+# $NetBSD: Makefile,v 1.24 2004/04/16 14:30:44 recht Exp $
 #
 
 LIBQT=			${WRKSRC}/lib/libqt-mt.la
@@ -6,7 +6,6 @@ LIBQT=			${WRKSRC}/lib/libqt-mt.la
 .include "../qt3-libs/Makefile.common"
 
 PKGNAME=		qt3-libs-${QTVERSION}
-PKGREVISION=		1
 COMMENT=		C++ X GUI toolkit
 
 USE_BUILDLINK2=		yes
@@ -17,6 +16,8 @@ ALL_TARGET=		sub-plugins
 PTHREAD_OPTS+=		require
 
 UNLIMIT_RESOURCES=	datasize
+
+BUILDLINK_PASSTHRU_DIRS+= ${QTPREFIX}
 
 do-install:
 	${INSTALL_DATA_DIR} ${QTPREFIX}
