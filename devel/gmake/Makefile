@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2002/10/20 16:45:05 seb Exp $
+# $NetBSD: Makefile,v 1.36 2002/11/28 09:43:41 tron Exp $
 
 DISTNAME=       make-3.80
 PKGNAME=        gmake-3.80
@@ -11,7 +11,7 @@ COMMENT=	GNU version of 'make' utility
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--program-prefix="g"
+CONFIGURE_ARGS+=	--program-prefix="g" --without-libiconv-prefix
 CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 TEXINFO_OVERRIDE=	YES
@@ -35,5 +35,6 @@ test: build
 		tee ${WRKDIR}/tests.log
 
 .include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../converters/libiconv/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
