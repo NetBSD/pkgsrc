@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.114 2000/10/11 14:02:27 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.115 2000/10/13 23:21:53 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -753,7 +753,8 @@ to when dealing with the PLIST file (or files, see below!).
    objects are found in the package, they will be dealt with
    automatically, running ldconfig on platforms which need it, and not
    otherwise.  This is usually only a problem when using ports from
-   FreeBSD.
+   FreeBSD.  To prevent this automatic handling from taking place,
+   set SHLIB_HANDLING to NO in the package Makefile.
 
  * ${MACHINE_ARCH}, ${MACHINE_GNU_ARCH}:
    Some packages like emacs and perl embed information about which
