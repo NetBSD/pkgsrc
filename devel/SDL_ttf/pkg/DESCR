@@ -1,0 +1,3 @@
+This is a sample library which allows you to use TrueType fonts in your SDL
+applications. It comes with an example program "showfont" which displays an
+example string for a given TrueType font file.
