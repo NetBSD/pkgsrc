@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2154 2004/09/21 13:04:21 markd Exp $
+$NetBSD: TODO,v 1.2155 2004/09/21 13:12:48 cube Exp $
 
 Suggested new packages
 ======================
@@ -385,7 +385,6 @@ Suggested package updates
 	o pptp-1.5.0 [http://pptpclient.sourceforge.net/]
 	o prc-tools-2.3
 	o privoxy-3.0.3 [kim]
-	o proftpd-1.2.10 [pkg/27012]
 	o psi-0.9.2
 	o pth-2.0.2
 	o pureftpd-1.0.20

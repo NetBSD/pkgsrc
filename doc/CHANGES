@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7196 2004/09/21 13:04:21 markd Exp $
+$NetBSD: CHANGES,v 1.7197 2004/09/21 13:12:48 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4303,3 +4303,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated clamsmtp to 0.8 [xtraeme 2004-09-21]
 	Updated automake to 1.9.2 [wiz 2004-09-21]
 	Updated koffice to 1.3.3 [markd 2004-09-21]
+	Updated proftpd to 1.2.10 [cube 2004-09-21]
