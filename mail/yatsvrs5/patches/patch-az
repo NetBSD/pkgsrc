@@ -1,0 +1,22 @@
+$NetBSD: patch-az,v 1.1.1.1 2001/11/15 16:08:44 taca Exp $
+
+--- yatd/mark.c.orig	Mon Jun  4 15:43:51 2001
++++ yatd/mark.c
+@@ -81,7 +81,7 @@
+ #else
+ 	  "%u %u %s",
+ #endif
+-	  i, pMail->lLength, MarkMkStr(szMark, pMail));
++	  i, LONGLONG_CAST(pMail->lLength), MarkMkStr(szMark, pMail));
+ 
+   return SUCCESS;
+ }
+@@ -140,7 +140,7 @@
+ #else
+ 	  "%u %u %s",
+ #endif
+-	  i, pMail->lLength, MarkMkStr(szMark, pMail));
++	  i, LONGLONG_CAST(pMail->lLength), MarkMkStr(szMark, pMail));
+   
+   return SUCCESS;
+ }

@@ -1,0 +1,13 @@
+YAT servers are extended POP3 server and supoprting servers.
+It contains bellow programs.
+
+	yatd		YAT server; extended POP3 server
+	ascyd		Apop shared Secret changer for Yatsvr
+	yatconfd	YAT configuration daemon
+
+Yatd was was based on Berkeley's popper program and known as
+yatsvr before.  Yatd has own extention to POP3 protocol for
+WinYAT, commercial product from JEPRO Co., Ltd.  But it still
+works as standard POP3 server.  Extention to POP3 is documented
+in attached document but in Japanese.
+

@@ -1,0 +1,19 @@
+$NetBSD: patch-bh,v 1.1.1.1 2001/11/15 16:08:44 taca Exp $
+
+--- yatd/uidl.c.orig	Mon Jun  4 15:43:51 2001
++++ yatd/uidl.c
+@@ -38,12 +38,12 @@
+     if (MailCheckFlags(pMail))
+       return FAILURE;
+ 
+-    Msg2Cli(SUCCESS, "%u %.256s", i, MakeUniqID(Buffer, pFldr, pMail->id));
++    Msg2Cli(SUCCESS, "%d %.256s", i, MakeUniqID(Buffer, pFldr, pMail->id));
+     return SUCCESS;
+   }
+ 
+   /*  begin of scan list  */
+-  Msg2Cli(SUCCESS, "%u messages (%u octets)",
++  Msg2Cli(SUCCESS, "%u messages (%ld octets)",
+ 	  pFldr->nMailAvail, pFldr->sizMailsAvail);
+ 
+   for (i = 0; i < pFldr->nMail; i++) {

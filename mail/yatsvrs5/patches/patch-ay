@@ -1,0 +1,72 @@
+$NetBSD: patch-ay,v 1.1.1.1 2001/11/15 16:08:44 taca Exp $
+
+--- yatd/list.c.orig	Mon Jun  4 15:43:51 2001
++++ yatd/list.c
+@@ -36,12 +36,12 @@
+ #else
+ 	    "%u %u",
+ #endif
+-	    i, pMail->lLength);
++	    i, LONGLONG_CAST(pMail->lLength));
+     return SUCCESS;
+   }
+ 
+   /*  begin of scan list  */
+-  Msg2Cli(SUCCESS, "%u messages (%u octets)",
++  Msg2Cli(SUCCESS, "%u messages (%lu octets)",
+ 	  pFldr->nMailAvail, pFldr->sizMailsAvail);
+ 
+   for (i = 0; i < pFldr->nMail; i++) {
+@@ -56,7 +56,7 @@
+ #else
+ 	    "%u %u",
+ #endif
+-	    i+1, pMail->lLength);
++	    i+1, LONGLONG_CAST(pMail->lLength));
+   }
+ 
+   EOM2Cli();
+@@ -93,12 +93,12 @@
+ #else
+ 	    "%u %u %s",
+ #endif
+-	    i, pMail->lLength, MarkMkStr(szMark, pMail));
++	    i, LONGLONG_CAST(pMail->lLength), MarkMkStr(szMark, pMail));
+     return SUCCESS;
+   }
+ 
+   /*  begin of scan list  */
+-  Msg2Cli(SUCCESS, "%u messages (%u octets)",
++  Msg2Cli(SUCCESS, "%u messages (%ld octets)",
+ 	  pFldr->nMailAvail, pFldr->sizMailsAvail);
+ 
+   for (i = 0; i < pFldr->nMail; i++) {
+@@ -113,7 +113,7 @@
+ #else
+ 	    "%u %lu %s",
+ #endif
+-	    i+1, pMail->lLength, MarkMkStr(szMark, pMail));
++	    i+1, LONGLONG_CAST(pMail->lLength), MarkMkStr(szMark, pMail));
+   }
+ 
+   EOM2Cli();
+@@ -144,7 +144,7 @@
+     iStart = 0;
+ 
+   /*  begin of scan list  */
+-  Msg2Cli(SUCCESS, "%u messages (%u octets)",
++  Msg2Cli(SUCCESS, "%u messages (%ld octets)",
+ 	  pFldr->nMailAvail, pFldr->sizMailsAvail);
+ 
+   for (i = iStart; i <= iEnd; i++) {
+@@ -159,8 +159,8 @@
+ #else
+ 	    "%u %s %lu %s",
+ #endif
+-	    i+1, MakeUniqID(szID, pFldr, pMail->id), pMail->lLength,
+-	    MarkMkStr(szMark, pMail));
++	    i+1, MakeUniqID(szID, pFldr, pMail->id),
++	    LONGLONG_CAST(pMail->lLength), MarkMkStr(szMark, pMail));
+   }
+ 
+   EOM2Cli();

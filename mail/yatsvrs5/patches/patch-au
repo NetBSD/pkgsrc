@@ -1,0 +1,22 @@
+$NetBSD: patch-au,v 1.1.1.1 2001/11/15 16:08:44 taca Exp $
+
+--- yatd/env.c.orig	Tue Jun  5 17:35:24 2001
++++ yatd/env.c
+@@ -277,7 +277,7 @@
+   if (SysData.argc > 1) {
+     if (strcasecmp(SysData.argv[1], YATENV_NOW) == 0) {
+       timeNow = time(NULL);
+-      Msg2Cli(SUCCESS, "%.256s %d", SysData.argv[1], timeNow);
++      Msg2Cli(SUCCESS, "%.256s %ld", SysData.argv[1], timeNow);
+     }
+     else if ((pEnv = GetYatEnv(pFldr, SysData.argv[1])) && pEnv->pszValue)
+       Msg2Cli(SUCCESS, "%.256s %.256s", pEnv->pszName, pEnv->pszValue);
+@@ -291,7 +291,7 @@
+ 	Str2Cli("%.256s %.256s", pEnv->pszName, pEnv->pszValue);
+     }
+     timeNow = time(NULL);
+-    Str2Cli("%.256s %d", YATENV_NOW, timeNow);
++    Str2Cli("%.256s %ld", YATENV_NOW, timeNow);
+     EOM2Cli();
+   }
+   return SUCCESS;

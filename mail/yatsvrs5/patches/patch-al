@@ -1,0 +1,63 @@
+$NetBSD: patch-al,v 1.1.1.1 2001/11/15 16:08:43 taca Exp $
+
+--- yatconfd/yatconfd.c.orig	Tue Jun 26 20:22:07 2001
++++ yatconfd/yatconfd.c
+@@ -259,7 +259,7 @@
+   Msg2Cli(SUCCESS, "%.512s @%.256s",
+ 	  szGreeting , SysData.szMyHost);
+ #else
+-  Msg2Cli(SUCCESS, "%.512s <%u.%u@%.256s>",
++  Msg2Cli(SUCCESS, "%.512s <%u.%ld@%.256s>",
+ 	  szGreeting,
+ 	  SysData.pid, SysData.timeStart, SysData.szMyHost);
+ #endif
+@@ -360,32 +360,26 @@
+ static void SigHandler(iSig)
+      int iSig;
+ {
+-  CONST char * pMsg;
+   int    codeErr;
+ 
+-  /* POSIX シグナルでは，シグナルハンドラが呼び出されている間はシグナ
+-     ルは呼ばれない */
+-  /* 
+-    static int fSigHandled = 0;
+-    if (fSigHandled)
++#if 0
++  static int fSigHandled = 0;
++  if (fSigHandled)
+     return ;
+-    fSigHandled = 1;
+-    SigBlock();
+-  */
++  fSigHandled = 1;
++  SigBlock();
++#endif
+   
+   switch (iSig) {
+   case SIGALRM:
+-    pMsg = NULL;
+     codeErr = ERRYS_TIMEOUT;
++    WARNING(codeErr, 0, NULL, iSig);
+     break;
+-  case SIGHUP:
+-  case SIGTERM:
+   default:
+     codeErr = ERRYS_SIGNAL;
+-    pMsg = "#%d";
++    WARNING(codeErr, 0, "#%d", iSig);
+     break;
+   }
+-  WARNING(codeErr, 0, pMsg, iSig);
+ 
+   UnLockAll();
+ 
+@@ -396,7 +390,7 @@
+   }
+ #endif
+ 
+-  ErrSetData(codeErr, 0, pMsg, iSig);
++  ErrSetData(codeErr, 0, (codeErr == ERRYS_SIGNAL)? "#%d": NULL, iSig);
+   Msg2Cli(FAILURE, NULL);
+ 
+   exit(1);
