@@ -1,0 +1,76 @@
+$NetBSD: egcs-patch-aa,v 1.1 1998/11/29 23:36:29 tron Exp $
+
+--- src/xdiv.cc.orig	Sat Oct 12 00:57:03 1996
++++ src/xdiv.cc	Sat Nov 28 15:15:43 1998
+@@ -112,7 +112,7 @@
+ Matrix
+ xdiv (const Matrix& a, const Matrix& b)
+ {
+-  if (! mx_div_conform (a, b))
++  if (! mx_div_conform<const Matrix&, const Matrix&>  (a, b))
+     return Matrix ();
+ 
+   Matrix atmp = a.transpose ();
+@@ -137,7 +137,7 @@
+ ComplexMatrix
+ xdiv (const Matrix& a, const ComplexMatrix& b)
+ {
+-  if (! mx_div_conform (a, b))
++  if (! mx_div_conform<const Matrix&, const ComplexMatrix&> (a, b))
+     return ComplexMatrix ();
+ 
+   Matrix atmp = a.transpose ();
+@@ -162,7 +162,7 @@
+ ComplexMatrix
+ xdiv (const ComplexMatrix& a, const Matrix& b)
+ {
+-  if (! mx_div_conform (a, b))
++  if (! mx_div_conform<const ComplexMatrix&, const Matrix&> (a, b))
+     return ComplexMatrix ();
+ 
+   ComplexMatrix atmp = a.hermitian ();
+@@ -187,7 +187,7 @@
+ ComplexMatrix
+ xdiv (const ComplexMatrix& a, const ComplexMatrix& b)
+ {
+-  if (! mx_div_conform (a, b))
++  if (! mx_div_conform<const ComplexMatrix&, const ComplexMatrix&>  (a, b))
+     return ComplexMatrix ();
+ 
+   ComplexMatrix atmp = a.hermitian ();
+@@ -290,7 +290,7 @@
+ Matrix
+ xleftdiv (const Matrix& a, const Matrix& b)
+ {
+-  if (! mx_leftdiv_conform (a, b))
++  if (! mx_leftdiv_conform<const Matrix&, const Matrix&> (a, b))
+     return Matrix ();
+ 
+   int info;
+@@ -310,7 +310,7 @@
+ ComplexMatrix
+ xleftdiv (const Matrix& a, const ComplexMatrix& b)
+ {
+-  if (! mx_leftdiv_conform (a, b))
++  if (! mx_leftdiv_conform<const Matrix&, const ComplexMatrix&>  (a, b))
+     return ComplexMatrix ();
+ 
+   int info;
+@@ -330,7 +330,7 @@
+ ComplexMatrix
+ xleftdiv (const ComplexMatrix& a, const Matrix& b)
+ {
+-  if (! mx_leftdiv_conform (a, b))
++  if (! mx_leftdiv_conform<const ComplexMatrix&, const Matrix&>  (a, b))
+     return ComplexMatrix ();
+ 
+   int info;
+@@ -350,7 +350,7 @@
+ ComplexMatrix
+ xleftdiv (const ComplexMatrix& a, const ComplexMatrix& b)
+ {
+-  if (! mx_leftdiv_conform (a, b))
++  if (! mx_leftdiv_conform<const ComplexMatrix&, const ComplexMatrix&> (a, b))
+     return ComplexMatrix ();
+ 
+   int info;
