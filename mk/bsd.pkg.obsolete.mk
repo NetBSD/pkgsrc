@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.obsolete.mk,v 1.13 2004/07/19 20:00:15 jlam Exp $
+# $NetBSD: bsd.pkg.obsolete.mk,v 1.14 2004/07/21 16:19:26 jlam Exp $
 #
 # This file holds make(1) logic to allow obsolete or deprecated variables
 # still to be used.  These may eventually disappear over time as the contents
@@ -50,6 +50,10 @@ ELK_GUI=	xaw
 PKG_SYSCONFDIR.priv?=	${PRIV_CONF_DIR}
 .endif
 
+##
+## The following Postfix-related section will be removed after the
+## pkgsrc-2004Q3 branch is released.
+##
 .if defined(POSTFIX_USE_INET6) || defined(POSTFIX_USE_TLS) || \
     defined(POSTFIX_USE_PCRE) || defined(POSTFIX_USE_MYSQL) || \
     defined(POSTFIX_USE_PGSQL) || defined(POSTFIX_USE_VERP) || \
