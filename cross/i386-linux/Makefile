@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/07/16 13:37:00 fredb Exp $
+# $NetBSD: Makefile,v 1.14 2002/10/03 16:40:11 wiz Exp $
 #
 
 DISTVERSION=		2.0.7.1
@@ -10,7 +10,6 @@ MAINTAINER=		packages@netbsd.org
 COMMENT=		Cross-compile environment for iX86 Linux, libc v6
 
 BUILD_DEPENDS+=		rpm-[0-9]*:../../misc/rpm
-BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 
 CHECK_SHLIBS=		no
 WRKSRC=			${WRKDIR}
