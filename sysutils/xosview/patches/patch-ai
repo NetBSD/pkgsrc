@@ -1,15 +1,17 @@
-$NetBSD: patch-ai,v 1.1 2003/09/30 23:03:59 christos Exp $
+$NetBSD: patch-ai,v 1.2 2003/10/01 01:14:35 christos Exp $
 
 --- bsd/btrymeter.cc.orig	1999-02-16 09:09:22.000000000 -0500
-+++ bsd/btrymeter.cc	2003-09-30 18:39:27.000000000 -0400
-@@ -11,6 +11,7 @@
++++ bsd/btrymeter.cc	2003-09-30 21:07:12.000000000 -0400
+@@ -11,7 +11,8 @@
  //
  #include "btrymeter.h"
  #include "xosview.h"
+-#include <fstream.h>
 +#include <iostream>
- #include <fstream.h>
++#include <fstream>
  #include <stdlib.h>
  
+ #include <fcntl.h>
 @@ -52,7 +53,7 @@
    int loadinfo = open(APMFILENAME, O_RDONLY, 0);
  
