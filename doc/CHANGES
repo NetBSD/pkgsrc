@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3375 2003/09/14 19:12:19 jmmv Exp $
+$NetBSD: CHANGES,v 1.3376 2003/09/14 20:34:09 gson Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3689,3 +3689,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated py-docutils to 0.3 [recht 2003-09-14]
 	Updated py-curl to 7.10.6 [recht 2003-09-14]
 	Added dega-1.07 [jmmv 2003-09-14]
+	Added p5-Set-IntSpan-1.07 [gson 2003-09-14]
