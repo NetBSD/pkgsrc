@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/31 11:32:49 wulf Exp $
+
+bin/7plus
+share/doc/7plus/7plus_g.txt
+share/doc/7plus/asc.txt
+share/doc/7plus/ascbin.txt
+share/doc/7plus/readme.now
+@dirrm share/doc/7plus
