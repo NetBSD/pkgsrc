@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2002/01/21 11:34:56 wiz Exp $
+# $NetBSD: Makefile,v 1.2.2.1 2002/06/23 18:38:27 jlam Exp $
 #
 
 DISTNAME=	mp3_check-1.98
 CATEGORIES=	audio
-MASTER_SITES=	http://prdownloads.sourceforge.net/mp3check/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mp3check/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://mp3check.sourceforge.net/

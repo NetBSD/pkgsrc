@@ -1,3 +1,4 @@
+$NetBSD: patch-ab,v 1.4.2.1 2002/06/23 18:45:21 jlam Exp $
 --- Ted/configure.orig	Sun Mar  3 23:24:16 2002
 +++ Ted/configure	Tue Apr  9 12:13:32 2002
 @@ -1946,7 +1946,6 @@

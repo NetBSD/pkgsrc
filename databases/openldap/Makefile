@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42.2.2 2002/06/21 23:05:02 jlam Exp $
+# $NetBSD: Makefile,v 1.42.2.3 2002/06/23 18:43:27 jlam Exp $
 
 DISTNAME=	openldap-2.0.23
 SVR4_PKGNAME=	oldap
@@ -56,7 +56,7 @@ CONFIGURE_ARGS+=	--enable-spasswd
 .endif
 
 .if defined(KERBEROS)
-USE_KERBEROS=		YES
+PKG_USE_KERBEROS=	YES
 CONFIGURE_ARGS+=	--with-kerberos
 .else
 CONFIGURE_ARGS+=	--without-kerberos

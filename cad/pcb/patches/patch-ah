@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1.2.2 2002/06/23 18:40:21 jlam Exp $
+
+--- src/misc.c.orig	Wed May 13 06:29:49 1998
++++ src/misc.c
+@@ -1066,7 +1066,7 @@
+ {
+ 	static	char	path[MAXPATHLEN+1];
+ 
+-#if defined(SYSV) || defined(linux) 
++#if defined(SYSV) || defined(linux) || defined(__NetBSD__)
+ 	return(getcwd(path, MAXPATHLEN));
+ #else
+ 		/* seems that some BSD releases lack of a prototype for getwd() */

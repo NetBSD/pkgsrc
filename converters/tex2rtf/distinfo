@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1.4.2 2002/06/23 18:42:54 jlam Exp $
+
+SHA1 (tex2rtf164_source.zip) = 553e76b3ffd7e0a670427ea27a4cdaab3cee4d72
+Size (tex2rtf164_source.zip) = 310555 bytes
+SHA1 (patch-aa) = 08b848150d26177e8401a0538fe9ea49395c1a5e
+SHA1 (patch-ab) = fbb7a7733670acc96f86765c7c3d34baeab4a061

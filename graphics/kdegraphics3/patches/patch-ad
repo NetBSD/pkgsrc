@@ -1,0 +1,535 @@
+$NetBSD: patch-ad,v 1.1.1.1.2.2 2002/06/23 18:46:29 jlam Exp $
+
+--- kview/Makefile.in.orig	Wed May  8 20:05:35 2002
++++ kview/Makefile.in
+@@ -246,33 +246,37 @@
+ 
+ #>- METASOURCES = AUTO
+ 
+-lib_LTLIBRARIES = libkviewpart.la kview.la
++lib_LTLIBRARIES = libkviewpart.la libkview_main.la kview.la
+ 
+ libkviewpart_la_SOURCES = canvas.cpp kview_view.cc kview_asyncio.cc
+ libkviewpart_la_LDFLAGS = $(all_libraries) -avoid-version -module -no-undefined
+ libkviewpart_la_LIBADD = $(LIB_KFILE) $(LIB_KPARTS) -lkdeprint
+ 
+-kview_SOURCES = dummy.C
++kview_SOURCES = kview_main.cpp
+ kview_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+-kview_LDADD = kview.la
++kview_LDADD = libkview_main.la
+ 
+-#>- kview_la_SOURCES = main.cpp viewer.cpp kview.cpp colour.cpp \
++#>- libkview_main_la_SOURCES = main.cpp viewer.cpp kview.cpp colour.cpp \
+ #>- filter.cpp filtlist.cpp \
+ #>- kcproc.cpp kviewconfdialog_base.ui kviewconfdialog.cpp \
+ #>- imagelistdialog_base.ui imagelistdialog.cpp \
+ #>- knumdialog_base.ui knumdialog.cpp \
+ #>- kfilteraction.cpp infowin_base.ui infowin.cpp
+ #>+ 6
+-kview_la_SOURCES=main.cpp viewer.cpp kview.cpp colour.cpp \
++libkview_main_la_SOURCES=main.cpp viewer.cpp kview.cpp colour.cpp \
+ 	filter.cpp filtlist.cpp \
+ 	kcproc.cpp  kviewconfdialog.cpp \
+ 	 imagelistdialog.cpp \
+ 	 knumdialog.cpp \
+-	kfilteraction.cpp  infowin.cpp kviewconfdialog_base.C imagelistdialog_base.C knumdialog_base.C infowin_base.C
++	kfilteraction.cpp  infowin.cpp kviewconfdialog_base.cc imagelistdialog_base.cc knumdialog_base.cc infowin_base.cc
+ 
+ 
+-kview_la_LDFLAGS = $(all_libraries) -module -avoid-version
+-kview_la_LIBADD = libkviewpart.la
++libkview_main_la_LDFLAGS = $(all_libraries)
++libkview_main_la_LIBADD = libkviewpart.la
++
++kview_la_SOURCES = kview_main.cpp
++kview_la_LDFLAGS = $(all_libraries) -avoid-version -module
++kview_la_LIBADD = libkview_main.la
+ 
+ test_SOURCES = libkview.la test.cpp
+ test_LDFLAGS = $(all_libraries) -module -avoid-version
+@@ -296,24 +300,29 @@
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+ 
+-kview_la_DEPENDENCIES = libkviewpart.la
+-am_kview_la_OBJECTS = main.lo viewer.lo kview.lo colour.lo filter.lo \
+-	filtlist.lo kcproc.lo kviewconfdialog.lo imagelistdialog.lo \
+-	knumdialog.lo kfilteraction.lo infowin.lo
++kview_la_DEPENDENCIES = libkview_main.la
++am_kview_la_OBJECTS = kview_main.lo
+ #>- kview_la_OBJECTS = $(am_kview_la_OBJECTS)
++#>+ 1
++kview_la_OBJECTS = kview_main.lo
++libkview_main_la_DEPENDENCIES = libkviewpart.la
++am_libkview_main_la_OBJECTS = main.lo viewer.lo kview.lo colour.lo \
++	filter.lo filtlist.lo kcproc.lo kviewconfdialog.lo \
++	imagelistdialog.lo knumdialog.lo kfilteraction.lo infowin.lo
++#>- libkview_main_la_OBJECTS = $(am_libkview_main_la_OBJECTS)
+ #>+ 7
+-kview_la_final_OBJECTS = kview_la.all_cpp.lo kview_la.all_C.lo 
+-kview_la_nofinal_OBJECTS = main.lo viewer.lo kview.lo colour.lo filter.lo \
+-	filtlist.lo kcproc.lo kviewconfdialog.lo imagelistdialog.lo \
+-	knumdialog.lo kfilteraction.lo infowin.lo kviewconfdialog_base.lo imagelistdialog_base.lo knumdialog_base.lo infowin_base.lo \
+-	kview_la_meta_unload.lo 
+-@KDE_USE_FINAL_FALSE@kview_la_OBJECTS = $(kview_la_nofinal_OBJECTS)
+-@KDE_USE_FINAL_TRUE@kview_la_OBJECTS = $(kview_la_final_OBJECTS)
++libkview_main_la_final_OBJECTS = libkview_main_la.all_cpp.lo libkview_main_la.all_cc.lo 
++libkview_main_la_nofinal_OBJECTS = main.lo viewer.lo kview.lo colour.lo \
++	filter.lo filtlist.lo kcproc.lo kviewconfdialog.lo \
++	imagelistdialog.lo knumdialog.lo kfilteraction.lo infowin.lo kviewconfdialog_base.lo imagelistdialog_base.lo knumdialog_base.lo infowin_base.lo \
++	libkview_main_la_meta_unload.lo 
++@KDE_USE_FINAL_FALSE@libkview_main_la_OBJECTS = $(libkview_main_la_nofinal_OBJECTS)
++@KDE_USE_FINAL_TRUE@libkview_main_la_OBJECTS = $(libkview_main_la_final_OBJECTS)
+ libkviewpart_la_DEPENDENCIES =
+ am_libkviewpart_la_OBJECTS = canvas.lo kview_view.lo kview_asyncio.lo
+ #>- libkviewpart_la_OBJECTS = $(am_libkviewpart_la_OBJECTS)
+ #>+ 5
+-libkviewpart_la_final_OBJECTS = libkviewpart_la.all_cpp.lo libkviewpart_la.all_C.lo libkviewpart_la.all_cc.lo 
++libkviewpart_la_final_OBJECTS = libkviewpart_la.all_cpp.lo libkviewpart_la.all_cc.lo 
+ libkviewpart_la_nofinal_OBJECTS = canvas.lo kview_view.lo kview_asyncio.lo \
+ 	libkviewpart_la_meta_unload.lo 
+ @KDE_USE_FINAL_FALSE@libkviewpart_la_OBJECTS = $(libkviewpart_la_nofinal_OBJECTS)
+@@ -322,11 +331,11 @@
+ check_PROGRAMS = test$(EXEEXT)
+ PROGRAMS = $(bin_PROGRAMS)
+ 
+-am_kview_OBJECTS = dummy.$(OBJEXT)
++am_kview_OBJECTS = kview_main.$(OBJEXT)
+ #>- kview_OBJECTS = $(am_kview_OBJECTS)
+ #>+ 1
+-kview_OBJECTS = dummy.$(OBJEXT)
+-kview_DEPENDENCIES = kview.la
++kview_OBJECTS = kview_main.$(OBJEXT)
++kview_DEPENDENCIES = libkview_main.la
+ am_test_OBJECTS = test.$(OBJEXT)
+ #>- test_OBJECTS = $(am_test_OBJECTS)
+ #>+ 1
+@@ -340,12 +349,12 @@
+ LIBS = @LIBS@
+ depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
+ @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/canvas.Plo $(DEPDIR)/colour.Plo \
+-	@AMDEP_TRUE@	$(DEPDIR)/dummy.Po $(DEPDIR)/filter.Plo \
+-	@AMDEP_TRUE@	$(DEPDIR)/filtlist.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/filter.Plo $(DEPDIR)/filtlist.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/imagelistdialog.Plo $(DEPDIR)/infowin.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/kcproc.Plo $(DEPDIR)/kfilteraction.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/knumdialog.Plo $(DEPDIR)/kview.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/kview_asyncio.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/kview_main.Plo $(DEPDIR)/kview_main.Po \
+ 	@AMDEP_TRUE@	$(DEPDIR)/kview_view.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/kviewconfdialog.Plo $(DEPDIR)/main.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/test.Po $(DEPDIR)/viewer.Plo
+@@ -376,8 +385,8 @@
+ CCLD = $(CC)
+ LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+-DIST_SOURCES = $(kview_la_SOURCES) $(libkviewpart_la_SOURCES) \
+-	$(kview_SOURCES) $(test_SOURCES)
++DIST_SOURCES = $(kview_la_SOURCES) $(libkview_main_la_SOURCES) \
++	$(libkviewpart_la_SOURCES) $(kview_SOURCES) $(test_SOURCES)
+ DATA = $(lnk_DATA) $(part_DATA) $(rc_DATA)
+ 
+ 
+@@ -387,14 +396,14 @@
+ 	uninstall-recursive check-recursive installcheck-recursive
+ DIST_COMMON = README AUTHORS Makefile.am Makefile.in TODO
+ DIST_SUBDIRS = $(SUBDIRS)
+-SOURCES = $(kview_la_SOURCES) $(libkviewpart_la_SOURCES) $(kview_SOURCES) $(test_SOURCES)
++SOURCES = $(kview_la_SOURCES) $(libkview_main_la_SOURCES) $(libkviewpart_la_SOURCES) $(kview_SOURCES) $(test_SOURCES)
+ 
+ #>- all: all-recursive
+ #>+ 1
+ all: docs-am  all-recursive
+ 
+ .SUFFIXES:
+-.SUFFIXES: .C .cc .cpp .lo .o .obj
++.SUFFIXES: .cc .cpp .lo .o .obj
+ 
+ mostlyclean-libtool:
+ 	-rm -f *.lo
+@@ -436,6 +445,8 @@
+ 	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
+ kview.la: $(kview_la_OBJECTS) $(kview_la_DEPENDENCIES) 
+ 	$(CXXLINK) -rpath $(libdir) $(kview_la_LDFLAGS) $(kview_la_OBJECTS) $(kview_la_LIBADD) $(LIBS)
++libkview_main.la: $(libkview_main_la_OBJECTS) $(libkview_main_la_DEPENDENCIES) 
++	$(CXXLINK) -rpath $(libdir) $(libkview_main_la_LDFLAGS) $(libkview_main_la_OBJECTS) $(libkview_main_la_LIBADD) $(LIBS)
+ #>- libkviewpart.la: $(libkviewpart_la_OBJECTS) $(libkviewpart_la_DEPENDENCIES) 
+ #>+ 2
+ @KDE_USE_CLOSURE_TRUE@libkviewpart.la: libkviewpart.la.closure $(libkviewpart_la_OBJECTS) $(libkviewpart_la_DEPENDENCIES) 
+@@ -483,7 +494,6 @@
+ 
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/canvas.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/colour.Plo@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/filter.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/filtlist.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/imagelistdialog.Plo@am__quote@
+@@ -493,6 +503,8 @@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/knumdialog.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kview.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kview_asyncio.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kview_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kview_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kview_view.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kviewconfdialog.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/main.Plo@am__quote@
+@@ -502,25 +514,6 @@
+ distclean-depend:
+ 	-rm -rf $(DEPDIR)
+ 
+-.C.o:
+-@AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	$(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+-	$(CXXCOMPILE) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
+-
+-.C.obj:
+-@AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	$(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+-	$(CXXCOMPILE) -c -o $@ `cygpath -w $<`
+-
+-.C.lo:
+-@AMDEP_TRUE@	source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Plo' tmpdepfile='$(DEPDIR)/$*.TPlo' @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	$(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+-	$(LTCXXCOMPILE) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
+-CXXDEPMODE = @CXXDEPMODE@
+-
+ .cc.o:
+ @AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+ @AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
+@@ -538,6 +531,7 @@
+ @AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Plo' tmpdepfile='$(DEPDIR)/$*.TPlo' @AMDEPBACKSLASH@
+ @AMDEP_TRUE@	$(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+ 	$(LTCXXCOMPILE) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
++CXXDEPMODE = @CXXDEPMODE@
+ 
+ .cpp.o:
+ @AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+@@ -703,7 +697,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=filter.h infowin.h viewer.h kview_popup.rc kfilteraction.h imagelistdialog.h kview_part.rc infowin.cpp kview.h kviewconfdialog.cpp kfilteraction.cpp hi32-app-kview.png imagelistdialog.cpp knumdialog.h kviewui.rc kcproc.h knumdialog_base.ui kview_asyncio.h hi16-app-kview.png colour.h kcproc.cpp hi48-app-kview.png kviewconfdialog.h infowin_base.ui filtlist.h canvas.h kviewconfdialog_base.ui filter.cpp kview_view.h filtlist.cpp kview.desktop knumdialog.cpp version.h imagelistdialog_base.ui 
++KDE_DIST=filter.h imagelistdialog_base.cc infowin.h viewer.h kview_popup.rc kfilteraction.h imagelistdialog.h kview_part.rc infowin.cpp kview.h kviewconfdialog.cpp kfilteraction.cpp hi32-app-kview.png imagelistdialog.cpp knumdialog.h imagelistdialog_base.C kviewconfdialog_base.C kviewui.rc kcproc.h knumdialog_base.ui kview_asyncio.h hi16-app-kview.png colour.h kview kcproc.cpp knumdialog_base.cc knumdialog_base.C hi48-app-kview.png kviewconfdialog.h kview_la_closure.C kviewconfdialog_base.h imagelistdialog_base.h infowin_base.ui libkviewpart.la.closure infowin_base.C canvas.h filtlist.h kviewconfdialog_base.ui filter.cpp kview_view.h filtlist.cpp infowin_base.cc kview.desktop knumdialog.cpp knumdialog_base.h dummy.C imagelistdialog_base.ui version.h kviewconfdialog_base.cc infowin_base.h 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -857,9 +851,6 @@
+ srcdoc:
+ 	kdoc -a -p -H -d $(HOME)/web/src/kview kview *.h -lqt -lkdecore -lkdeui -lkfile
+ 
+-dummy.C:
+-	echo > dummy.C
+-
+ ###KMAKE-start (don't edit or delete this block)
+ 
+ ###KMAKE-end
+@@ -867,52 +858,6 @@
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
+ 
+-#>+ 45
+-kviewconfdialog_base.C: $(srcdir)/kviewconfdialog_base.ui kviewconfdialog_base.h kviewconfdialog_base.moc
+-	rm -f kviewconfdialog_base.C
+-	echo '#include <klocale.h>' > kviewconfdialog_base.C
+-	$(UIC) -tr ${UIC_TR} -i kviewconfdialog_base.h $(srcdir)/kviewconfdialog_base.ui | sed -e "s,${UIC_TR}( \"\" ),QString::null,g" | sed -e "s,${UIC_TR}( \"\"\, \"\" ),QString::null,g" | sed -e "s,image\([0-9][0-9]*\)_data,img\1_kviewconfdialog_base,g" >> kviewconfdialog_base.C || rm -f kviewconfdialog_base.C
+-	echo '#include "kviewconfdialog_base.moc"' >> kviewconfdialog_base.C
+-
+-kviewconfdialog_base.h: $(srcdir)/kviewconfdialog_base.ui
+-	$(UIC) -o kviewconfdialog_base.h $(srcdir)/kviewconfdialog_base.ui
+-
+-kviewconfdialog_base.moc: kviewconfdialog_base.h
+-	$(MOC) kviewconfdialog_base.h -o kviewconfdialog_base.moc
+-imagelistdialog_base.C: $(srcdir)/imagelistdialog_base.ui imagelistdialog_base.h imagelistdialog_base.moc
+-	rm -f imagelistdialog_base.C
+-	echo '#include <klocale.h>' > imagelistdialog_base.C
+-	$(UIC) -tr ${UIC_TR} -i imagelistdialog_base.h $(srcdir)/imagelistdialog_base.ui | sed -e "s,${UIC_TR}( \"\" ),QString::null,g" | sed -e "s,${UIC_TR}( \"\"\, \"\" ),QString::null,g" | sed -e "s,image\([0-9][0-9]*\)_data,img\1_imagelistdialog_base,g" >> imagelistdialog_base.C || rm -f imagelistdialog_base.C
+-	echo '#include "imagelistdialog_base.moc"' >> imagelistdialog_base.C
+-
+-imagelistdialog_base.h: $(srcdir)/imagelistdialog_base.ui
+-	$(UIC) -o imagelistdialog_base.h $(srcdir)/imagelistdialog_base.ui
+-
+-imagelistdialog_base.moc: imagelistdialog_base.h
+-	$(MOC) imagelistdialog_base.h -o imagelistdialog_base.moc
+-knumdialog_base.C: $(srcdir)/knumdialog_base.ui knumdialog_base.h knumdialog_base.moc
+-	rm -f knumdialog_base.C
+-	echo '#include <klocale.h>' > knumdialog_base.C
+-	$(UIC) -tr ${UIC_TR} -i knumdialog_base.h $(srcdir)/knumdialog_base.ui | sed -e "s,${UIC_TR}( \"\" ),QString::null,g" | sed -e "s,${UIC_TR}( \"\"\, \"\" ),QString::null,g" | sed -e "s,image\([0-9][0-9]*\)_data,img\1_knumdialog_base,g" >> knumdialog_base.C || rm -f knumdialog_base.C
+-	echo '#include "knumdialog_base.moc"' >> knumdialog_base.C
+-
+-knumdialog_base.h: $(srcdir)/knumdialog_base.ui
+-	$(UIC) -o knumdialog_base.h $(srcdir)/knumdialog_base.ui
+-
+-knumdialog_base.moc: knumdialog_base.h
+-	$(MOC) knumdialog_base.h -o knumdialog_base.moc
+-infowin_base.C: $(srcdir)/infowin_base.ui infowin_base.h infowin_base.moc
+-	rm -f infowin_base.C
+-	echo '#include <klocale.h>' > infowin_base.C
+-	$(UIC) -tr ${UIC_TR} -i infowin_base.h $(srcdir)/infowin_base.ui | sed -e "s,${UIC_TR}( \"\" ),QString::null,g" | sed -e "s,${UIC_TR}( \"\"\, \"\" ),QString::null,g" | sed -e "s,image\([0-9][0-9]*\)_data,img\1_infowin_base,g" >> infowin_base.C || rm -f infowin_base.C
+-	echo '#include "infowin_base.moc"' >> infowin_base.C
+-
+-infowin_base.h: $(srcdir)/infowin_base.ui
+-	$(UIC) -o infowin_base.h $(srcdir)/infowin_base.ui
+-
+-infowin_base.moc: infowin_base.h
+-	$(MOC) infowin_base.h -o infowin_base.moc
+-
+ #>+ 3
+ kviewconfdialog.moc: $(srcdir)/kviewconfdialog.h
+ 	$(MOC) $(srcdir)/kviewconfdialog.h -o kviewconfdialog.moc
+@@ -953,10 +898,56 @@
+ kview_asyncio.moc: $(srcdir)/kview_asyncio.h
+ 	$(MOC) $(srcdir)/kview_asyncio.h -o kview_asyncio.moc
+ 
++#>+ 45
++kviewconfdialog_base.cc: $(srcdir)/kviewconfdialog_base.ui kviewconfdialog_base.h kviewconfdialog_base.moc
++	rm -f kviewconfdialog_base.cc
++	echo '#include <klocale.h>' > kviewconfdialog_base.cc
++	$(UIC) -tr ${UIC_TR} -i kviewconfdialog_base.h $(srcdir)/kviewconfdialog_base.ui | sed -e "s,${UIC_TR}( \"\" ),QString::null,g" | sed -e "s,${UIC_TR}( \"\"\, \"\" ),QString::null,g" | sed -e "s,image\([0-9][0-9]*\)_data,img\1_kviewconfdialog_base,g" >> kviewconfdialog_base.cc || rm -f kviewconfdialog_base.cc
++	echo '#include "kviewconfdialog_base.moc"' >> kviewconfdialog_base.cc
++
++kviewconfdialog_base.h: $(srcdir)/kviewconfdialog_base.ui
++	$(UIC) -o kviewconfdialog_base.h $(srcdir)/kviewconfdialog_base.ui
++
++kviewconfdialog_base.moc: kviewconfdialog_base.h
++	$(MOC) kviewconfdialog_base.h -o kviewconfdialog_base.moc
++imagelistdialog_base.cc: $(srcdir)/imagelistdialog_base.ui imagelistdialog_base.h imagelistdialog_base.moc
++	rm -f imagelistdialog_base.cc
++	echo '#include <klocale.h>' > imagelistdialog_base.cc
++	$(UIC) -tr ${UIC_TR} -i imagelistdialog_base.h $(srcdir)/imagelistdialog_base.ui | sed -e "s,${UIC_TR}( \"\" ),QString::null,g" | sed -e "s,${UIC_TR}( \"\"\, \"\" ),QString::null,g" | sed -e "s,image\([0-9][0-9]*\)_data,img\1_imagelistdialog_base,g" >> imagelistdialog_base.cc || rm -f imagelistdialog_base.cc
++	echo '#include "imagelistdialog_base.moc"' >> imagelistdialog_base.cc
++
++imagelistdialog_base.h: $(srcdir)/imagelistdialog_base.ui
++	$(UIC) -o imagelistdialog_base.h $(srcdir)/imagelistdialog_base.ui
++
++imagelistdialog_base.moc: imagelistdialog_base.h
++	$(MOC) imagelistdialog_base.h -o imagelistdialog_base.moc
++knumdialog_base.cc: $(srcdir)/knumdialog_base.ui knumdialog_base.h knumdialog_base.moc
++	rm -f knumdialog_base.cc
++	echo '#include <klocale.h>' > knumdialog_base.cc
++	$(UIC) -tr ${UIC_TR} -i knumdialog_base.h $(srcdir)/knumdialog_base.ui | sed -e "s,${UIC_TR}( \"\" ),QString::null,g" | sed -e "s,${UIC_TR}( \"\"\, \"\" ),QString::null,g" | sed -e "s,image\([0-9][0-9]*\)_data,img\1_knumdialog_base,g" >> knumdialog_base.cc || rm -f knumdialog_base.cc
++	echo '#include "knumdialog_base.moc"' >> knumdialog_base.cc
++
++knumdialog_base.h: $(srcdir)/knumdialog_base.ui
++	$(UIC) -o knumdialog_base.h $(srcdir)/knumdialog_base.ui
++
++knumdialog_base.moc: knumdialog_base.h
++	$(MOC) knumdialog_base.h -o knumdialog_base.moc
++infowin_base.cc: $(srcdir)/infowin_base.ui infowin_base.h infowin_base.moc
++	rm -f infowin_base.cc
++	echo '#include <klocale.h>' > infowin_base.cc
++	$(UIC) -tr ${UIC_TR} -i infowin_base.h $(srcdir)/infowin_base.ui | sed -e "s,${UIC_TR}( \"\" ),QString::null,g" | sed -e "s,${UIC_TR}( \"\"\, \"\" ),QString::null,g" | sed -e "s,image\([0-9][0-9]*\)_data,img\1_infowin_base,g" >> infowin_base.cc || rm -f infowin_base.cc
++	echo '#include "infowin_base.moc"' >> infowin_base.cc
++
++infowin_base.h: $(srcdir)/infowin_base.ui
++	$(UIC) -o infowin_base.h $(srcdir)/infowin_base.ui
++
++infowin_base.moc: infowin_base.h
++	$(MOC) infowin_base.h -o infowin_base.moc
++
+ #>+ 8
+ libkviewpart.la.closure: $(libkviewpart_la_OBJECTS) $(libkviewpart_la_DEPENDENCIES)
+-	@echo "int main() {return 0;}" > libkviewpart_la_closure.C
+-	@$(LTCXXCOMPILE) -c libkviewpart_la_closure.C
++	@echo "int main() {return 0;}" > libkviewpart_la_closure.cc
++	@$(LTCXXCOMPILE) -c libkviewpart_la_closure.cc
+ 	$(CXXLINK) libkviewpart_la_closure.lo $(libkviewpart_la_LDFLAGS) $(libkviewpart_la_OBJECTS) $(libkviewpart_la_LIBADD) $(LIBS)
+ 	@rm -f libkviewpart_la_closure.* libkviewpart.la.closure
+ 	@echo "timestamp" > libkviewpart.la.closure
+@@ -969,10 +960,10 @@
+ #>+ 7
+ clean-ui:
+ 	-rm -f \
+-	kviewconfdialog_base.C kviewconfdialog_base.h kviewconfdialog_base.moc \
+-	imagelistdialog_base.C imagelistdialog_base.h imagelistdialog_base.moc \
+-	knumdialog_base.C knumdialog_base.h knumdialog_base.moc \
+-	infowin_base.C infowin_base.h infowin_base.moc 
++	kviewconfdialog_base.cc kviewconfdialog_base.h kviewconfdialog_base.moc \
++	imagelistdialog_base.cc imagelistdialog_base.h imagelistdialog_base.moc \
++	knumdialog_base.cc knumdialog_base.h knumdialog_base.moc \
++	infowin_base.cc infowin_base.h infowin_base.moc 
+ 
+ #>+ 3
+ clean-closures:
+@@ -1003,41 +994,41 @@
+ 
+ 
+ #>+ 12
+-kview_la_meta_unload.C:  kfilteraction.moc imagelistdialog.moc kviewconfdialog.moc infowin.moc viewer.moc kview.moc filter.moc
+-	@echo 'creating kview_la_meta_unload.C'
+-	@-rm -f kview_la_meta_unload.C
++libkview_main_la_meta_unload.cc:  kfilteraction.moc imagelistdialog.moc kviewconfdialog.moc infowin.moc viewer.moc kview.moc filter.moc
++	@echo 'creating libkview_main_la_meta_unload.cc'
++	@-rm -f libkview_main_la_meta_unload.cc
+ 	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_kview_la[] = {' > kview_la_meta_unload.C ;\
+-		cat  kfilteraction.moc imagelistdialog.moc kviewconfdialog.moc infowin.moc viewer.moc kview.moc filter.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kview_la_meta_unload.C ;\
+-		echo '0};' >> kview_la_meta_unload.C ;\
+-		echo '#include <kunload.h>' >> kview_la_meta_unload.C ;\
+-		echo '_UNLOAD(kview_la)' >> kview_la_meta_unload.C ;\
+-	else echo > kview_la_meta_unload.C; fi
++		echo 'static const char * _metalist_libkview_main_la[] = {' > libkview_main_la_meta_unload.cc ;\
++		cat  kfilteraction.moc imagelistdialog.moc kviewconfdialog.moc infowin.moc viewer.moc kview.moc filter.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkview_main_la_meta_unload.cc ;\
++		echo '0};' >> libkview_main_la_meta_unload.cc ;\
++		echo '#include <kunload.h>' >> libkview_main_la_meta_unload.cc ;\
++		echo '_UNLOAD(libkview_main_la)' >> libkview_main_la_meta_unload.cc ;\
++	else echo > libkview_main_la_meta_unload.cc; fi
+ 
+ 
+ #>+ 12
+-libkviewpart_la_meta_unload.C:  kview_asyncio.moc canvas.moc kview_view.moc
+-	@echo 'creating libkviewpart_la_meta_unload.C'
+-	@-rm -f libkviewpart_la_meta_unload.C
++libkviewpart_la_meta_unload.cc:  kview_asyncio.moc canvas.moc kview_view.moc
++	@echo 'creating libkviewpart_la_meta_unload.cc'
++	@-rm -f libkviewpart_la_meta_unload.cc
+ 	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_libkviewpart_la[] = {' > libkviewpart_la_meta_unload.C ;\
+-		cat  kview_asyncio.moc canvas.moc kview_view.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkviewpart_la_meta_unload.C ;\
+-		echo '0};' >> libkviewpart_la_meta_unload.C ;\
+-		echo '#include <kunload.h>' >> libkviewpart_la_meta_unload.C ;\
+-		echo '_UNLOAD(libkviewpart_la)' >> libkviewpart_la_meta_unload.C ;\
+-	else echo > libkviewpart_la_meta_unload.C; fi
++		echo 'static const char * _metalist_libkviewpart_la[] = {' > libkviewpart_la_meta_unload.cc ;\
++		cat  kview_asyncio.moc canvas.moc kview_view.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkviewpart_la_meta_unload.cc ;\
++		echo '0};' >> libkviewpart_la_meta_unload.cc ;\
++		echo '#include <kunload.h>' >> libkviewpart_la_meta_unload.cc ;\
++		echo '_UNLOAD(libkviewpart_la)' >> libkviewpart_la_meta_unload.cc ;\
++	else echo > libkviewpart_la_meta_unload.cc; fi
+ 
+ 
+ #>+ 3
+ clean-moc-classes:
+-	-rm -f  kview_la_meta_unload.C libkviewpart_la_meta_unload.C
++	-rm -f  libkview_main_la_meta_unload.cc libkviewpart_la_meta_unload.cc
+ 
+ #>+ 11
+-kview_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/viewer.cpp $(srcdir)/kview.cpp $(srcdir)/colour.cpp $(srcdir)/filter.cpp $(srcdir)/filtlist.cpp $(srcdir)/kcproc.cpp $(srcdir)/kviewconfdialog.cpp $(srcdir)/imagelistdialog.cpp $(srcdir)/knumdialog.cpp $(srcdir)/kfilteraction.cpp $(srcdir)/infowin.cpp   kviewconfdialog_base.moc imagelistdialog_base.moc knumdialog_base.moc infowin_base.moc kviewconfdialog.moc canvas.moc infowin.moc viewer.moc kview_view.moc kfilteraction.moc kview.moc imagelistdialog.moc filter.moc kview_asyncio.moc 
++kview_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kview_main.cpp   kviewconfdialog.moc canvas.moc infowin.moc viewer.moc kview_view.moc kfilteraction.moc kview.moc imagelistdialog.moc filter.moc kview_asyncio.moc 
+ 	@echo 'creating kview_la.all_cpp.cpp ...'; \
+ 	rm -f kview_la.all_cpp.files kview_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kview_la.all_cpp.final; \
+-	for file in main.cpp viewer.cpp kview.cpp colour.cpp filter.cpp filtlist.cpp kcproc.cpp kviewconfdialog.cpp imagelistdialog.cpp knumdialog.cpp kfilteraction.cpp infowin.cpp ; do \
++	for file in kview_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> kview_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kview_la.all_cpp.final; \
+ 	done; \
+@@ -1045,16 +1036,28 @@
+ 	rm -f kview_la.all_cpp.final kview_la.all_cpp.files
+ 
+ #>+ 11
+-kview_la.all_C.C: $(srcdir)/Makefile.in kviewconfdialog_base.C imagelistdialog_base.C knumdialog_base.C infowin_base.C kview_la_meta_unload.C   kviewconfdialog_base.moc imagelistdialog_base.moc knumdialog_base.moc infowin_base.moc kviewconfdialog.moc canvas.moc infowin.moc viewer.moc kview_view.moc kfilteraction.moc kview.moc imagelistdialog.moc filter.moc kview_asyncio.moc 
+-	@echo 'creating kview_la.all_C.C ...'; \
+-	rm -f kview_la.all_C.files kview_la.all_C.final; \
+-	echo "#define KDE_USE_FINAL 1" >> kview_la.all_C.final; \
+-	for file in kviewconfdialog_base.C imagelistdialog_base.C knumdialog_base.C infowin_base.C kview_la_meta_unload.C ; do \
+-	  echo "#include \"$$file\"" >> kview_la.all_C.files; \
+-	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kview_la.all_C.final; \
++libkview_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/viewer.cpp $(srcdir)/kview.cpp $(srcdir)/colour.cpp $(srcdir)/filter.cpp $(srcdir)/filtlist.cpp $(srcdir)/kcproc.cpp $(srcdir)/kviewconfdialog.cpp $(srcdir)/imagelistdialog.cpp $(srcdir)/knumdialog.cpp $(srcdir)/kfilteraction.cpp $(srcdir)/infowin.cpp   kviewconfdialog_base.moc imagelistdialog_base.moc knumdialog_base.moc infowin_base.moc
++	@echo 'creating libkview_main_la.all_cpp.cpp ...'; \
++	rm -f libkview_main_la.all_cpp.files libkview_main_la.all_cpp.final; \
++	echo "#define KDE_USE_FINAL 1" >> libkview_main_la.all_cpp.final; \
++	for file in main.cpp viewer.cpp kview.cpp colour.cpp filter.cpp filtlist.cpp kcproc.cpp kviewconfdialog.cpp imagelistdialog.cpp knumdialog.cpp kfilteraction.cpp infowin.cpp ; do \
++	  echo "#include \"$$file\"" >> libkview_main_la.all_cpp.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkview_main_la.all_cpp.final; \
++	done; \
++	cat libkview_main_la.all_cpp.final libkview_main_la.all_cpp.files  > libkview_main_la.all_cpp.cpp; \
++	rm -f libkview_main_la.all_cpp.final libkview_main_la.all_cpp.files
++
++#>+ 11
++libkview_main_la.all_cc.cc: $(srcdir)/Makefile.in $(srcdir)/kviewconfdialog_base.cc $(srcdir)/imagelistdialog_base.cc $(srcdir)/knumdialog_base.cc $(srcdir)/infowin_base.cc $(srcdir)/libkview_main_la_meta_unload.cc   kviewconfdialog_base.moc imagelistdialog_base.moc knumdialog_base.moc infowin_base.moc
++	@echo 'creating libkview_main_la.all_cc.cc ...'; \
++	rm -f libkview_main_la.all_cc.files libkview_main_la.all_cc.final; \
++	echo "#define KDE_USE_FINAL 1" >> libkview_main_la.all_cc.final; \
++	for file in kviewconfdialog_base.cc imagelistdialog_base.cc knumdialog_base.cc infowin_base.cc libkview_main_la_meta_unload.cc ; do \
++	  echo "#include \"$$file\"" >> libkview_main_la.all_cc.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkview_main_la.all_cc.final; \
+ 	done; \
+-	cat kview_la.all_C.final kview_la.all_C.files  > kview_la.all_C.C; \
+-	rm -f kview_la.all_C.final kview_la.all_C.files
++	cat libkview_main_la.all_cc.final libkview_main_la.all_cc.files  > libkview_main_la.all_cc.cc; \
++	rm -f libkview_main_la.all_cc.final libkview_main_la.all_cc.files
+ 
+ #>+ 11
+ libkviewpart_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/canvas.cpp  
+@@ -1069,23 +1072,11 @@
+ 	rm -f libkviewpart_la.all_cpp.final libkviewpart_la.all_cpp.files
+ 
+ #>+ 11
+-libkviewpart_la.all_C.C: $(srcdir)/Makefile.in libkviewpart_la_meta_unload.C  
+-	@echo 'creating libkviewpart_la.all_C.C ...'; \
+-	rm -f libkviewpart_la.all_C.files libkviewpart_la.all_C.final; \
+-	echo "#define KDE_USE_FINAL 1" >> libkviewpart_la.all_C.final; \
+-	for file in libkviewpart_la_meta_unload.C ; do \
+-	  echo "#include \"$$file\"" >> libkviewpart_la.all_C.files; \
+-	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkviewpart_la.all_C.final; \
+-	done; \
+-	cat libkviewpart_la.all_C.final libkviewpart_la.all_C.files  > libkviewpart_la.all_C.C; \
+-	rm -f libkviewpart_la.all_C.final libkviewpart_la.all_C.files
+-
+-#>+ 11
+-libkviewpart_la.all_cc.cc: $(srcdir)/Makefile.in $(srcdir)/kview_view.cc $(srcdir)/kview_asyncio.cc  
++libkviewpart_la.all_cc.cc: $(srcdir)/Makefile.in $(srcdir)/kview_view.cc $(srcdir)/kview_asyncio.cc $(srcdir)/libkviewpart_la_meta_unload.cc  
+ 	@echo 'creating libkviewpart_la.all_cc.cc ...'; \
+ 	rm -f libkviewpart_la.all_cc.files libkviewpart_la.all_cc.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> libkviewpart_la.all_cc.final; \
+-	for file in kview_view.cc kview_asyncio.cc ; do \
++	for file in kview_view.cc kview_asyncio.cc libkviewpart_la_meta_unload.cc ; do \
+ 	  echo "#include \"$$file\"" >> libkviewpart_la.all_cc.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkviewpart_la.all_cc.final; \
+ 	done; \
+@@ -1093,16 +1084,16 @@
+ 	rm -f libkviewpart_la.all_cc.final libkviewpart_la.all_cc.files
+ 
+ #>+ 11
+-kview.all_C.C: $(srcdir)/Makefile.in dummy.C  
+-	@echo 'creating kview.all_C.C ...'; \
+-	rm -f kview.all_C.files kview.all_C.final; \
+-	echo "#define KDE_USE_FINAL 1" >> kview.all_C.final; \
+-	for file in dummy.C ; do \
+-	  echo "#include \"$$file\"" >> kview.all_C.files; \
+-	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kview.all_C.final; \
++kview.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kview_main.cpp  
++	@echo 'creating kview.all_cpp.cpp ...'; \
++	rm -f kview.all_cpp.files kview.all_cpp.final; \
++	echo "#define KDE_USE_FINAL 1" >> kview.all_cpp.final; \
++	for file in kview_main.cpp ; do \
++	  echo "#include \"$$file\"" >> kview.all_cpp.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kview.all_cpp.final; \
+ 	done; \
+-	cat kview.all_C.final kview.all_C.files  > kview.all_C.C; \
+-	rm -f kview.all_C.final kview.all_C.files
++	cat kview.all_cpp.final kview.all_cpp.files  > kview.all_cpp.cpp; \
++	rm -f kview.all_cpp.final kview.all_cpp.files
+ 
+ #>+ 11
+ test.all_cpp.cpp: $(srcdir)/Makefile.in test.cpp  
+@@ -1118,20 +1109,20 @@
+ 
+ #>+ 3
+ clean-final:
+-	-rm -f kview_la.all_cpp.cpp kview_la.all_C.C libkviewpart_la.all_cpp.cpp libkviewpart_la.all_C.C libkviewpart_la.all_cc.cc kview.all_C.C test.all_cpp.cpp
++	-rm -f kview_la.all_cpp.cpp libkview_main_la.all_cpp.cpp libkview_main_la.all_cc.cc libkviewpart_la.all_cpp.cpp libkviewpart_la.all_cc.cc kview.all_cpp.cpp test.all_cpp.cpp
+ 
+ #>+ 2
+ final:
+-	$(MAKE) kview_la_OBJECTS="$(kview_la_final_OBJECTS)" libkviewpart_la_OBJECTS="$(libkviewpart_la_final_OBJECTS)" all-am
++	$(MAKE) libkview_main_la_OBJECTS="$(libkview_main_la_final_OBJECTS)" libkviewpart_la_OBJECTS="$(libkviewpart_la_final_OBJECTS)" all-am
+ #>+ 2
+ final-install:
+-	$(MAKE) kview_la_OBJECTS="$(kview_la_final_OBJECTS)" libkviewpart_la_OBJECTS="$(libkviewpart_la_final_OBJECTS)" install-am
++	$(MAKE) libkview_main_la_OBJECTS="$(libkview_main_la_final_OBJECTS)" libkviewpart_la_OBJECTS="$(libkviewpart_la_final_OBJECTS)" install-am
+ #>+ 2
+ no-final:
+-	$(MAKE) kview_la_OBJECTS="$(kview_la_nofinal_OBJECTS)" libkviewpart_la_OBJECTS="$(libkviewpart_la_nofinal_OBJECTS)" all-am
++	$(MAKE) libkview_main_la_OBJECTS="$(libkview_main_la_nofinal_OBJECTS)" libkviewpart_la_OBJECTS="$(libkviewpart_la_nofinal_OBJECTS)" all-am
+ #>+ 2
+ no-final-install:
+-	$(MAKE) kview_la_OBJECTS="$(kview_la_nofinal_OBJECTS)" libkviewpart_la_OBJECTS="$(libkviewpart_la_nofinal_OBJECTS)" install-am
++	$(MAKE) libkview_main_la_OBJECTS="$(libkview_main_la_nofinal_OBJECTS)" libkviewpart_la_OBJECTS="$(libkviewpart_la_nofinal_OBJECTS)" install-am
+ #>+ 3
+ cvs-clean:
+ 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean

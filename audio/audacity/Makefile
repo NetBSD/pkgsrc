@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2002/03/13 17:36:35 fredb Exp $
+# $NetBSD: Makefile,v 1.5.2.1 2002/06/23 18:37:36 jlam Exp $
 #
 
 DISTNAME=	audacity-src-0.96
 PKGNAME=	audacity-0.96
 PKGREVISION=	1
 CATEGORIES=	audio
-MASTER_SITES=	http://prdownloads.sourceforge.net/audacity/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=audacity/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org

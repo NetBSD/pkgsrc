@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.5 2001/07/27 13:33:18 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5.2.1 2002/06/23 18:37:19 jlam Exp $
 #
 # This Makefile fragment is included by packages that use bzip2.
 #
@@ -27,7 +27,7 @@ BUILDLINK_DEPENDS.bzip2?=	bzip2>=1.0.1
 #
 _BUILTIN_BZIP2!=	${EGREP} -c "BZ2_" /usr/include/bzlib.h || ${TRUE}
 .else
-_BUILTIN_BZIP2!=	0
+_BUILTIN_BZIP2=		0
 .endif
 
 .if ${_BUILTIN_BZIP2} == "0"

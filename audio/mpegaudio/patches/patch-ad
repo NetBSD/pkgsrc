@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1.22.2 2002/06/23 18:38:36 jlam Exp $
+
+--- musicout.c.orig	Wed Jan  5 05:39:27 1994
++++ musicout.c
+@@ -58,6 +58,8 @@
+ #include        "common.h"
+ #include        "decoder.h"
+ 
++#include <stdlib.h>
++
+ /********************************************************************
+ /*
+ /*        This part contains the MPEG I decoder for Layers I & II.

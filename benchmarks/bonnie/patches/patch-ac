@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.2.2 2002/06/23 18:39:42 jlam Exp $
+
+--- bonnie.c.orig	Thu Aug 29 02:23:49 1996
++++ bonnie.c	Sun Jun  9 10:20:02 2002
+@@ -458,7 +458,7 @@
+ usage()
+ {
+   fprintf(stderr,
+-    "usage: Bonnie [-d scratch-dir] [-s size-in-Mb] [-html] [-m machine-label]\n");
++    "usage: bonnie [-d scratch-dir] [-s size-in-Mb] [-html] [-m machine-label]\n");
+   exit(1);
+ }
+ 

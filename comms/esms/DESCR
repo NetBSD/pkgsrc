@@ -1,0 +1,4 @@
+esms is a simple program which sends SMS (short messages) to cellular
+phones. It splits big messages into many fragments, which are later
+sent with error control. Only works for cellular phones in Spain, but
+support for other countries is planned.

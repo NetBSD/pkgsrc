@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.2.2.2 2002/06/23 18:46:53 jlam Exp $
+
+--- configure.orig	Wed Jun 12 00:11:32 2002
++++ configure	Thu Jun 13 12:02:17 2002
+@@ -7367,7 +7367,7 @@
+ 
+ if test "x$enable_obsdaudio" != xno; then
+     case "$host" in
+-    *-openbsd*)
++    *-netbsd*|*-openbsd*)
+ 
+         cat >> confdefs.h <<\EOF
+ #define LIBOGLEAO_OBSD 
+@@ -7386,7 +7386,7 @@
+ 
+ if test "x$enable_sunaudio" != xno; then
+     case "$host" in
+-    *-sun-solaris*|*-netbsd*)
++    *-sun-solaris*)
+ 
+         cat >> confdefs.h <<\EOF
+ #define LIBOGLEAO_SOLARIS 

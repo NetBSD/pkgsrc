@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.2.2.2 2002/06/23 18:41:27 jlam Exp $
+bin/console
+etc/rc.d/conserver
+man/man1/console.1
+man/man5/conserver.cf.5
+man/man5/conserver.passwd.5
+man/man8/conserver.8
+sbin/conserver
+share/examples/conserver/conserver.cf
+share/examples/conserver/conserver.passwd

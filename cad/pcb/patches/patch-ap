@@ -1,0 +1,11 @@
+$NetBSD: patch-ap,v 1.1.2.2 2002/06/23 18:40:27 jlam Exp $
+
+--- lib/QueryLibrary.sh.raw.orig	Sat May 16 17:11:06 1998
++++ lib/QueryLibrary.sh.raw	Sat Jun  1 14:57:50 2002
+@@ -30,5 +30,5 @@
+ # usage: QueryLibrary.sh template value package
+ 
+-M4=GNUM4
++M4="GNUM4"
+ 
+ Usage()

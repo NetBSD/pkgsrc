@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.2.2.2 2002/06/23 18:44:05 jlam Exp $
+
+--- Makefile.orig	Sun May 12 22:36:53 2002
++++ Makefile
+@@ -19,7 +19,7 @@
+ # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+ # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ 
+-prefix=/usr
++prefix=${PREFIX}
+ DEBUG=0
+ 
+ CC=cc
+@@ -67,10 +67,10 @@
+ 	$(RANLIB) libdl.a
+ 
+ libdl.dylib: libdl.0.dylib
+-	ln -sf $+ $@
++	ln -sf $> $@
+ 
+ libdl.0.dylib: $(OBJS)
+-	$(CC) -dynamiclib -o $@ $+ -install_name $(prefix)/lib/$@
++	$(CC) -dynamiclib -o $@ $> -install_name $(prefix)/lib/$@
+ 
+ clean:
+ 	rm -f $(OBJS) libdl.* *~ *.o

@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.139 2002/05/05 23:02:00 hubertf Exp $
+# $NetBSD: Makefile,v 1.139.2.1 2002/06/23 18:45:54 jlam Exp $
 #
 
 COMMENT=	Games
 
 SUBDIR+=	0verkill
 SUBDIR+=	abuse
+SUBDIR+=	adom
 SUBDIR+=	amor
 SUBDIR+=	an
 SUBDIR+=	angband-tty
@@ -69,8 +70,10 @@ SUBDIR+=	iso-pernangband
 SUBDIR+=	jetpack
 SUBDIR+=	kdegames
 SUBDIR+=	kdegames2
+SUBDIR+=	kdegames3
 SUBDIR+=	kdetoys
 SUBDIR+=	kdetoys2
+SUBDIR+=	kdetoys3
 SUBDIR+=	ketm
 SUBDIR+=	knightcap
 SUBDIR+=	knightcap-brain
@@ -146,6 +149,7 @@ SUBDIR+=	xpilot
 SUBDIR+=	xpipeman
 SUBDIR+=	xpuyopuyo
 SUBDIR+=	xracer
+SUBDIR+=	xrick
 SUBDIR+=	xroach
 SUBDIR+=	xroads
 SUBDIR+=	xscavenger

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/01/24 12:16:14 wiz Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2002/06/23 18:45:37 jlam Exp $
 #
 
 DISTNAME=		xm71010s
@@ -11,7 +11,7 @@ MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=		http://www.ipc-tokai.or.jp/~ytanaka/fm7/xm7.shtml
 COMMENT=		X11-based FM-7 emulator
 
-BUILD_DEPENDS+=		nkf-1.7:../../japanese/nkf
+BUILD_DEPENDS+=		nkf-1.7:../../converters/nkf
 
 WRKSRC=			${WRKDIR}/vm
 RESTRICTED=		source archive is not redistributable

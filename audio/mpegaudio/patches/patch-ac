@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1.22.2 2002/06/23 18:38:35 jlam Exp $
+
+--- musicin.c.orig	Wed Jan  5 02:13:44 1994
++++ musicin.c
+@@ -101,6 +101,8 @@
+ #include "common.h"
+ #include "encoder.h"
+ 
++#include <stdlib.h>
++
+ /* Global variable definitions for "musicin.c" */
+ 
+ FILE               *musicin;

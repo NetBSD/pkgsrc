@@ -1,6 +1,4 @@
-$NetBSD: distinfo,v 1.3 2001/07/17 02:59:06 dmcmahill Exp $
+$NetBSD: distinfo,v 1.3.2.1 2002/06/23 18:40:05 jlam Exp $
 
-SHA1 (geda/geda-gsymcheck-20010708.tar.gz) = e6d9fe274cd77fe6016986b8fdebe56e718a683d
-Size (geda/geda-gsymcheck-20010708.tar.gz) = 69377 bytes
-SHA1 (patch-aa) = 803754998c604d64f97ba21118b86417f7bec0cb
-SHA1 (patch-ab) = 31fc19861993eb007f86690880ef0d4feddff48f
+SHA1 (geda/geda-gsymcheck-20020414.tar.gz) = f8a27263a81ff516bb51cc6a5e2c7d888868ab8e
+Size (geda/geda-gsymcheck-20020414.tar.gz) = 121660 bytes

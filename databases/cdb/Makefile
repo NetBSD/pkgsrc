@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/03/30 13:15:02 yyamano Exp $
+# $NetBSD: Makefile,v 1.2.2.1 2002/06/23 18:43:10 jlam Exp $
 
 DISTNAME=	cdb-0.75
 CATEGORIES=	databases
@@ -10,6 +10,12 @@ COMMENT=	creates and reads constant databases
 
 ALL_TARGET=	it
 INSTALL_TARGET=	setup check
+
+.if (${MACHINE_ARCH} == "arm32" || ${MACHINE_ARCH} == "arm")
+.if (${CFLAGS:M-O2} == "-O2")
+CFLAGS:=	${CFLAGS:S/-O2/-O0/}
+.endif
+.endif
 
 pre-build:
 	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc

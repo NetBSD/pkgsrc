@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1.50.2 2002/06/23 18:39:05 jlam Exp $
+bin/oggasm
+man/man1/oggasm.1

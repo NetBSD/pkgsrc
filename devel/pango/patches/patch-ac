@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.3.2.2 2002/06/23 18:44:50 jlam Exp $
+
+--- pangox.pc.in.orig	Wed Mar  6 03:20:57 2002
++++ pangox.pc.in
+@@ -7,6 +7,6 @@
+ Description: X Window System font support for Pango
+ Version: @VERSION@
+ Requires: pango
+-Libs: -L${libdir} -lpangox-@PANGO_API_VERSION@ @PKGCONFIG_X_LIBS@
++Libs: -Wl,-R${libdir} -L${libdir} -lpangox-@PANGO_API_VERSION@ @PKGCONFIG_X_LIBS@
+ Cflags: -I${includedir}/pango-1.0 @X_CFLAGS@
+ 

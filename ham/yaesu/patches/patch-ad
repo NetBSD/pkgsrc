@@ -1,15 +1,26 @@
-$NetBSD: patch-ad,v 1.1.1.1 2002/05/08 00:02:39 hubertf Exp $
+$NetBSD: patch-ad,v 1.1.1.1.2.1 2002/06/23 18:47:07 jlam Exp $
 
---- main.c.orig	Sat Apr 13 21:07:41 2002
+the addition of the -p flag is required for non-PC machines which
+might use a different serial device.
+
+--- main.c.orig	Sat Nov  4 17:48:33 1995
 +++ main.c
-@@ -100,29 +100,29 @@
+@@ -5,7 +5,6 @@
+ #include <stdlib.h>
+ #include <termios.h>
+ #include <signal.h>
+-#include <asm/io.h>
+ #include <config.h>
+ float freq_to_change_to;
+ char flag_data_return[5];
+@@ -100,29 +99,29 @@
      if (argc == 2) {
         switch(argv[1][0]) {
               case '0':
 -             if ((fdSer = open("/dev/ttyS0", O_RDWR )) < 0) {
 -                perror("open of /dev/ttyS0 failed!!!\n");
-+             if ((fdSer = open("/dev/ttyE0", O_RDWR )) < 0) {
-+                perror("open of /dev/ttyE0 failed!!!\n");
++             if ((fdSer = open("/dev/tty00", O_RDWR )) < 0) {
++                perror("open of /dev/tty00 failed!!!\n");
                  exit(3);
               }
               break;
@@ -17,8 +28,8 @@ $NetBSD: patch-ad,v 1.1.1.1 2002/05/08 00:02:39 hubertf Exp $
               case '1':
 -             if ((fdSer = open("/dev/ttyS1", O_RDWR )) < 0) {
 -                perror("open of /dev/ttyS1 failed!!!\n");
-+             if ((fdSer = open("/dev/ttyE1", O_RDWR )) < 0) {
-+                perror("open of /dev/ttyE1 failed!!!\n");
++             if ((fdSer = open("/dev/tty01", O_RDWR )) < 0) {
++                perror("open of /dev/tty01 failed!!!\n");
                  exit(3);
               }
               break;
@@ -26,8 +37,8 @@ $NetBSD: patch-ad,v 1.1.1.1 2002/05/08 00:02:39 hubertf Exp $
               case '2':
 -             if ((fdSer = open("/dev/ttyS2", O_RDWR )) < 0) {
 -                perror("open of /dev/ttyS2 failed");
-+             if ((fdSer = open("/dev/ttyE2", O_RDWR )) < 0) {
-+                perror("open of /dev/ttyE2 failed");
++             if ((fdSer = open("/dev/tty02", O_RDWR )) < 0) {
++                perror("open of /dev/tty02 failed");
                  exit(3);
               }
               break;
@@ -35,8 +46,24 @@ $NetBSD: patch-ad,v 1.1.1.1 2002/05/08 00:02:39 hubertf Exp $
               case '3':
 -             if ((fdSer = open("/dev/ttyS3", O_RDWR )) < 0) {
 -                perror("open of /dev/ttyS3 failed");
-+             if ((fdSer = open("/dev/ttyE3", O_RDWR )) < 0) {
-+                perror("open of /dev/ttyE3 failed");
++             if ((fdSer = open("/dev/tty03", O_RDWR )) < 0) {
++                perror("open of /dev/tty03 failed");
                  exit(3);
               }
               break;
+@@ -130,6 +129,15 @@
+              printf("Invalid serial port number!!!\n  Remember:  com1 is 0, com2 is 1, etc.\n");
+              return(-1);
+        }
++    } else if (argc == 3) {
++	if (strcmp("-p",argv[1]) != 0) {
++		perror("Invalid flag");
++		exit(3);
++	}
++   	if ((fdSer = open(argv[2], O_RDWR )) < 0) {
++		perror("open of serial port failed");
++		exit(3);
++	}
+     } else {
+        printf("usage:  yaesu [port #]\n");
+        exit(3);

@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.18 2002/05/06 11:46:22 tron Exp $
+$NetBSD: patch-aa,v 1.18.2.1 2002/06/23 18:46:50 jlam Exp $
 
 --- Makefile.config.in.orig	Thu Mar 14 16:25:54 2002
-+++ Makefile.config.in	Mon Apr 29 17:19:59 2002
++++ Makefile.config.in	Tue May 14 19:52:32 2002
 @@ -33,7 +33,7 @@
  #Tru64 (= Digital Unix):
  #CC = cc
@@ -20,6 +20,15 @@ $NetBSD: patch-aa,v 1.18 2002/05/06 11:46:22 tron Exp $
  #Solaris:
  #INSTALL = /usr/ucb/install
  #Tru64:
+@@ -64,7 +64,7 @@
+ 
+ # STRIPFLAG is the option you pass to the above install program to make it
+ # strip unnecessary information out of binaries.
+-STRIPFLAG = -s
++#STRIPFLAG = -s
+ # If you don't want to strip the binaries, just leave it null:
+ #STRIPFLAG = 
+ 
 @@ -137,10 +137,10 @@
  # the directory information in the executable at link time.
  
@@ -34,7 +43,7 @@ $NetBSD: patch-aa,v 1.18 2002/05/06 11:46:22 tron Exp $
  # Eunice users may want to use -noshare so that the executables can
  # run standalone:
  #LDFLAGS = -noshare
-@@ -156,9 +156,9 @@
+@@ -156,16 +156,16 @@
  
  ifeq ($(NEED_RUNTIME_PATH),Y)
  #If the linker is gcc (e.g. NetBSD):
@@ -46,6 +55,14 @@ $NetBSD: patch-aa,v 1.18 2002/05/06 11:46:22 tron Exp $
  endif
  
  # Linker options for created Netpbm shared libraries.
+ 
+ # Here, $(SONAME) resolves to the soname for the shared library being created.
+ # The following are gcc options.  This works on GNU libc systems.
+-LDSHLIB = -shared -Wl,-soname,$(SONAME)
++LDSHLIB = -nostdlib -shared -Wl,-Bshareable,-soname,$(SONAME)
+ # You need -nostart instead of -shared on BeOS.  Though the BeOS compiler is
+ # ostensibly gcc, it has the -nostart option, which is not mentioned in gcc
+ # documentation and doesn't exist in at least one non-BeOS installation.
 @@ -180,11 +180,15 @@
  #Tru64:
  #LDSHLIB = -shared -expect_unresolved "*"

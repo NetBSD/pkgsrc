@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40.2.2 2002/06/21 23:05:10 jlam Exp $
+# $NetBSD: Makefile,v 1.40.2.3 2002/06/23 18:44:54 jlam Exp $
 #
 
 DISTNAME=		pth-1.4.1
@@ -9,7 +9,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/pth/pth.html
 COMMENT=		GNU Portable Thread library
 
-CONFLICTS=		pth-current-[0-9]*
+CONFLICTS=		pth-current-[0-9]* pth-syscall-[0-9]*
 
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES

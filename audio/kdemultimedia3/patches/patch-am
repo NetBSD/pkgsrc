@@ -1,0 +1,15 @@
+$NetBSD: patch-am,v 1.1.1.1.4.2 2002/06/23 18:38:08 jlam Exp $
+
+--- kmix/kmixctrl.cpp.orig	Sun Jan  6 04:17:43 2002
++++ kmix/kmixctrl.cpp
+@@ -44,7 +44,9 @@
+    // INSERT YOUR COMMANDLINE OPTIONS HERE
+ };
+ 
+-int main(int argc, char *argv[])
++extern "C" int kdemain(int argc, char *argv[]);
++
++int kdemain(int argc, char *argv[])
+ {
+    KLocale::setMainCatalogue("kmix");
+    KAboutData aboutData( "kmixctrl", I18N_NOOP("KMixCtrl"),

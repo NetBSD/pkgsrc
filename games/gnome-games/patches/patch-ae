@@ -1,8 +1,13 @@
-$NetBSD: patch-ae,v 1.1 2000/11/26 14:20:38 mycroft Exp $
+$NetBSD: patch-ae,v 1.1.2.1 2002/06/23 18:45:59 jlam Exp $
 
---- gnome-stones/objects/Makefile.am.orig	Sun Nov 26 13:55:25 2000
-+++ gnome-stones/objects/Makefile.am	Sun Nov 26 13:53:34 2000
-@@ -10,5 +10,7 @@
+--- gnome-stones/objects/Makefile.am.orig	Tue Nov 10 14:55:56 1998
++++ gnome-stones/objects/Makefile.am
+@@ -6,9 +6,11 @@
+ 	-I$(GSTONES_SRC_DIR)				\
+ 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" 	\
+ 	-I$(includedir)					\
+-	$(GNOME_INCLUDEDIR)
++	$(GNOME_INCLUDEDIR) $(GDK_PIXBUF_CFLAGS)
  
  object_LTLIBRARIES = libgnome-stones.la libgnomekoban.la
  

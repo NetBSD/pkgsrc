@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2001/06/19 03:28:32 jlam Exp $
+# $NetBSD: Makefile,v 1.10.2.1 2002/06/23 18:45:04 jlam Exp $
 #
 
-DISTNAME=	rpc2-1.10
+DISTNAME=	rpc2-1.13
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.coda.cs.cmu.edu/pub/rpc2/src/ \
 		ftp://ftp.wu-wien.ac.at/pub/systems/coda/src/
@@ -17,7 +17,7 @@ USE_LIBTOOL=		YES
 USE_GMAKE=		YES
 USE_BUILDLINK_ONLY=	YES
 
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 CONFIGURE_ENV+=		PERL=${PERL5}
 
 .include "../../devel/lwp/buildlink.mk"

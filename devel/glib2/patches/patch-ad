@@ -1,0 +1,11 @@
+$NetBSD: patch-ad,v 1.3.2.2 2002/06/23 18:44:14 jlam Exp $
+
+--- gthread-2.0.pc.in.orig	Wed Mar  6 01:37:24 2002
++++ gthread-2.0.pc.in
+@@ -7,5 +7,5 @@
+ Description: Thread support for GLib
+ Requires: glib-2.0
+ Version: @VERSION@
+-Libs: -L${libdir} -lgthread-2.0 @G_THREAD_LIBS@
++Libs: -Wl,-R${libdir} -L${libdir} -lgthread-2.0 @G_THREAD_LIBS@
+ Cflags: @G_THREAD_CFLAGS@

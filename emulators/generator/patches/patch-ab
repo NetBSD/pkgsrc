@@ -1,0 +1,74 @@
+$NetBSD: patch-ab,v 1.1.2.2 2002/06/23 18:45:33 jlam Exp $
+
+--- main/generator.c	2002/05/09 21:34:29	1.1
++++ main/generator.c	2002/05/09 21:34:34
+@@ -3,9 +3,9 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <string.h>
+-#include <sys/stat.h>
+ #include <unistd.h>
+ #include <sys/types.h>
++#include <sys/stat.h>
+ #include <fcntl.h>
+ #include <ctype.h>
+ #include <signal.h>
+@@ -147,7 +147,7 @@
+ char *gen_loadimage(const char *filename)
+ {
+   int file, imagetype, bytes, bytesleft;
+-  struct stat statbuf;
++  off_t	filesize;
+   const char *extension;
+   uint8 *buffer;
+   unsigned int blocks, x, i;
+@@ -162,20 +162,6 @@
+   }
+ 
+   /* Load file */
+-  if (stat(filename, &statbuf) != 0)
+-    return ("Unable to stat file.");
+-  cpu68k_romlen = statbuf.st_size;
+-  if (cpu68k_romlen < 0x200)
+-    return ("File is too small");
+-
+-  /* allocate enough memory plus 16 bytes for disassembler to cope
+-     with the last instruction */
+-  if ((cpu68k_rom = malloc(cpu68k_romlen + 16)) == NULL) {
+-    cpu68k_romlen = 0;
+-    return ("Out of memory!");
+-  }
+-  gen_freerom = 1;
+-  memset(cpu68k_rom, 0, cpu68k_romlen + 16);
+ #ifdef ALLEGRO
+   if ((file = open(filename, O_RDONLY | O_BINARY, 0)) == -1) {
+ #else
+@@ -186,6 +172,28 @@
+     cpu68k_romlen = 0;
+     return ("Unable to open file.");
+   }
++  if ( (filesize = lseek(file, 0, SEEK_END)) == -1 || // get size
++	lseek(file, 0, SEEK_SET) == -1) // then seek to start
++  {
++	perror ("lseek failed");
++	close (file);
++	return ("Error accessing file");
++  }
++	 
++	cpu68k_romlen = filesize;
++  if (cpu68k_romlen < 0x200) {
++    (void) close(file);
++    return ("File is too small");
++  }
++
++  /* allocate enough memory plus 16 bytes for disassembler to cope
++     with the last instruction */
++  if ((cpu68k_rom = malloc(cpu68k_romlen + 16)) == NULL) {
++    cpu68k_romlen = 0;
++    return ("Out of memory!");
++  }
++  gen_freerom = 1;
++  memset(cpu68k_rom, 0, cpu68k_romlen + 16);
+   buffer = cpu68k_rom;
+   bytesleft = cpu68k_romlen;
+   do {

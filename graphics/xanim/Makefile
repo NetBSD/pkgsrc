@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/02/07 09:59:48 agc Exp $
+# $NetBSD: Makefile,v 1.25.2.1 2002/06/23 18:47:01 jlam Exp $
 
 DISTNAME=	xanim2801
 PKGNAME=	xanim-2.80.1
@@ -49,24 +49,28 @@ do-install:
 
 MACHINE_OBJ_ARCH=	${MACHINE_ARCH}-${OBJECT_FMT}
 
-.if (${MACHINE_OBJ_ARCH} == "i386-a.out")
-EXTRA_FILES=	xa2.0_cvid_netbsd386.o.Z \
+.if (${MACHINE_OBJ_ARCH} == "i386-a.out") || make(makesum)
+EXTRA_FILES+=	xa2.0_cvid_netbsd386.o.Z \
 		xa2.0_iv32_netbsd386.o.Z \
 		xa1.0_cyuv_netbsd386.o.Z
-.elif (${MACHINE_OBJ_ARCH} == "i386-ELF")
-EXTRA_FILES=	xa2.0_cvid_linuxELF.o.Z \
+.endif
+.if (${MACHINE_OBJ_ARCH} == "i386-ELF") || make(makesum)
+EXTRA_FILES+=	xa2.0_cvid_linuxELF.o.Z \
 		xa2.0_iv32_linuxELF.o.Z \
 		xa1.0_cyuv_linuxELF.o.Z
-.elif (${MACHINE_OBJ_ARCH} == "m68k-a.out")
-EXTRA_FILES=	xa2.0_cvid_netbsd68k.o.Z \
+.endif
+.if (${MACHINE_OBJ_ARCH} == "m68k-a.out") || make(makesum)
+EXTRA_FILES+=	xa2.0_cvid_netbsd68k.o.Z \
 		xa2.0_iv32_netbsd68k.o.Z \
 		xa1.0_cyuv_netbsd68k.o.Z
-.elif (${MACHINE_OBJ_ARCH} == "sparc-a.out")
-EXTRA_FILES=	xa2.0_cvid_sparcCOFF.o.Z \
+.endif
+.if (${MACHINE_OBJ_ARCH} == "sparc-a.out") || make(makesum)
+EXTRA_FILES+=	xa2.0_cvid_sparcCOFF.o.Z \
 		xa2.0_iv32_sparcCOFF.o.Z \
 		xa1.0_cyuv_sparcAOUT.o.Z
-.elif (${MACHINE_OBJ_ARCH} == "powerpc-ELF")
-EXTRA_FILES=	xa2.0_cvid_linuxPPC.o.Z \
+.endif
+.if (${MACHINE_OBJ_ARCH} == "powerpc-ELF") || make(makesum)
+EXTRA_FILES+=	xa2.0_cvid_linuxPPC.o.Z \
 		xa1.0_cyuv_linuxPPC.o.Z
 .endif
 

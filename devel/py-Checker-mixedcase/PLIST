@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/01/29 16:27:53 drochner Exp $
-bin/pyChecker${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.1.1.1.2.1 2002/06/23 18:45:01 jlam Exp $
+bin/pyChecker
 ${PYSITELIB}/pychecker/CodeChecks.py
 ${PYSITELIB}/pychecker/CodeChecks.pyc
 ${PYSITELIB}/pychecker/Config.py
@@ -30,12 +30,4 @@ ${PYSITELIB}/pychecker/utils.py
 ${PYSITELIB}/pychecker/utils.pyc
 ${PYSITELIB}/pychecker/warn.py
 ${PYSITELIB}/pychecker/warn.pyc
-share/doc/${PYPKGPREFIX}-Checker/CHANGELOG
-share/doc/${PYPKGPREFIX}-Checker/COPYRIGHT
-share/doc/${PYPKGPREFIX}-Checker/KNOWN_BUGS
-share/doc/${PYPKGPREFIX}-Checker/MAINTAINERS
-share/doc/${PYPKGPREFIX}-Checker/README
-share/doc/${PYPKGPREFIX}-Checker/TODO
-share/doc/${PYPKGPREFIX}-Checker/VERSION
 @dirrm ${PYSITELIB}/pychecker
-@dirrm share/doc/${PYPKGPREFIX}-Checker

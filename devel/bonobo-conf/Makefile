@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2002/03/13 17:36:47 fredb Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2002/06/23 18:43:55 jlam Exp $
 
 DISTNAME=		bonobo-conf-0.14
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=unstable/sources/bonobo-conf/}
 
@@ -9,12 +9,16 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Bonobo configuration system
 
+BUILD_DEPENDS+=		autoconf-[0-9]*:../../devel/autoconf
 BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
 USE_GMAKE=		YES
+
+pre-configure:
+	cd ${WRKSRC} && autoconf
 
 post-configure:
 	${RM} -f ${WRKSRC}/libtool
@@ -31,5 +35,6 @@ post-install:
 .include "../../devel/GConf/buildlink.mk"
 .include "../../devel/popt/buildlink.mk"
 .include "../../devel/oaf/buildlink.mk"
+.include "../../graphics/gdk-pixbuf/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

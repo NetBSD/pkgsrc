@@ -1,13 +1,15 @@
-$NetBSD: patch-aa,v 1.1 2001/07/17 03:02:51 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.1.2.1 2002/06/23 18:39:57 jlam Exp $
 
---- src/i_vars.c.orig	Mon Jun 11 18:50:26 2001
-+++ src/i_vars.c	Mon Jul 16 19:51:56 2001
-@@ -21,4 +21,8 @@
- #include <stdio.h>
+needs GNU m4
+
+--- scheme/gnet-PCBboard.scm.orig	Sun Jan 27 13:48:35 2002
++++ scheme/gnet-PCBboard.scm
+@@ -151,7 +151,7 @@
+ ;; Original pipe command commented out by AVH (bugfix by Rich Walker)
+ ;;  (let ((pipe (open-output-pipe (string-append "m4 " *m4-pcbdir* "/common.m4 - >> " output-filename))))
+ ;; Fixed pipe command (AVH 1/27/02)
+-   (let ((pipe (open-output-pipe (string-append "m4 -d -I" *m4-pcbdir* " " *m4-pcbdir* "/common.m4 - >> " output-filename))))
++   (let ((pipe (open-output-pipe (string-append "gm4 -d -I" *m4-pcbdir* " -I@pcb_confdir@ -I$HOME/.pcb -I. " *m4-pcbdir* "/common.m4 - >> " output-filename))))
  
-+#ifdef HAVE_STRINGS_H
-+#include <strings.h>
-+#endif
-+
- #include <libgeda/libgeda.h>
  
+        ;; packages is a list with the different uref value

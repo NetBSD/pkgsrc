@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2002/04/30 12:44:39 wiz Exp $
+# $NetBSD: buildlink.mk,v 1.2.2.1 2002/06/23 18:43:51 jlam Exp $
 #
 # This Makefile fragment is included by packages that use binutils.
 #
@@ -33,7 +33,7 @@ _NEED_BINUTILS=          YES
 
 .if ${_NEED_BINUTILS} == "YES"
 BUILDLINK_DEPENDS.binutils?=		binutils>=2.11.2
-DEPENDS+=	${BUILDLINK_DEPENDS.binutils}:../../devel/binutils
+BUILD_DEPENDS+=	${BUILDLINK_DEPENDS.binutils}:../../devel/binutils
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.binutils=binutils
 BUILDLINK_PREFIX.binutils_DEFAULT=	${LOCALBASE}

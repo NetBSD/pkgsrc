@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1.48.2 2002/06/23 18:39:27 jlam Exp $
+bin/wmsmixer
+share/examples/wmsmixer/home.wmsmixer
+share/doc/wmsmixer/README.wmsmixer
+@dirrm share/examples/wmsmixer
+@dirrm share/doc/wmsmixer

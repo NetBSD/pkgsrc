@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2002/04/05 18:39:18 magick Exp $
+# $NetBSD: Makefile,v 1.47.2.1 2002/06/23 18:45:23 jlam Exp $
 
 DISTNAME=	xemacs-21.1.14
 PKGREVISION=	2
@@ -15,10 +15,10 @@ MAINTAINER=	magick@netbsd.org
 HOMEPAGE=	http://www.xemacs.org/
 COMMENT=	XEmacs text editor version 21
 
-DEPENDS+=	gdbm>=1.7.3:../../databases/gdbm
-DEPENDS+=	png>=1.2.1:../../graphics/png
-DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
-DEPENDS+=	jpeg-[0-9]*:../../graphics/jpeg
+.include "../../databases/gdbm/buildlink.mk"
+.include "../../graphics/png/buildlink.mk"
+.include "../../graphics/tiff/buildlink.mk"
+.include "../../graphics/jpeg/buildlink.mk"
 
 NOT_FOR_PLATFORM=	*-*-mips*	#fails purespace dumping
 
@@ -45,21 +45,21 @@ WITH_DIALOGS=	--with-dialogs=motif
 
 .if defined(USE_LDAP) && ${USE_LDAP} == YES
 WITH_LDAP=	--with-ldap=yes
-DEPENDS+=	openldap-[0-9]*:../../databases/openldap
+.include "../../databases/openldap/buildlink.mk"
 .else
 WITH_LDAP=	--with-ldap=no
 .endif
 
 .if defined(USE_XFACE) && ${USE_XFACE} == YES
 WITH_XFACE=	--with-xface=yes
-DEPENDS+=	faces>=1.6.1:../../mail/faces
+.include "../../mail/faces/buildlink.mk"
 .else
 WITH_XFACE=	--with-xface=no
 .endif
 
 .if defined(EMACS_CANNA) && ${EMACS_CANNA} == YES
+.include "../../inputmethod/canna-lib/buildlink.mk"
 WITH_CANNA=	--with-canna=yes
-DEPENDS+=	Canna-lib-3*:../../japanese/canna-lib
 .else
 WITH_CANNA=	--with-canna=no
 .endif

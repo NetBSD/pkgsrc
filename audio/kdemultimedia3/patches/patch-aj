@@ -1,0 +1,59 @@
+$NetBSD: patch-aj,v 1.1.1.1.2.2 2002/06/23 18:38:07 jlam Exp $
+
+--- kmix/Makefile.am.orig	Wed May  8 19:29:16 2002
++++ kmix/Makefile.am
+@@ -2,7 +2,7 @@
+ INCLUDES= $(all_includes)
+ 
+ bin_PROGRAMS = kmix kmixctrl
+-lib_LTLIBRARIES = kmix.la kmixctrl.la
++lib_LTLIBRARIES = libkmix_main.la kmix.la libkmixctrl_main.la kmixctrl.la
+ kde_module_LTLIBRARIES = kmix_panelapplet.la
+ 
+ 
+@@ -12,22 +12,30 @@
+ 
+ 
+ METASOURCES = AUTO
+-kmix_la_SOURCES = main.cpp kmix.cpp kmixdockwidget.cpp kmixprefdlg.cpp \
++libkmix_main_la_SOURCES = main.cpp kmix.cpp kmixdockwidget.cpp kmixprefdlg.cpp \
+ 	kmixerwidget.cpp channel.cpp mixer.cpp ksmallslider.cpp \
+ 	volume.cpp kledbutton.cpp mixdevicewidget.cpp
+-kmix_la_LIBADD = $(LIB_KDEUI) $(LIBALIB) $(LIBOSSAUDIO) $(LIBASOUND)
++libkmix_main_la_LIBADD = $(LIB_KDEUI) $(LIBALIB) $(LIBOSSAUDIO) $(LIBASOUND)
++libkmix_main_la_LDFLAGS = $(all_libraries)
++
++kmix_la_SOURCES = kmix_main.cpp
++kmix_la_LIBADD = libkmix_main.la
+ kmix_la_LDFLAGS = $(all_libraries) -module -avoid-version
+ 
+-kmix_SOURCES = dummy.cpp
+-kmix_LDADD = kmix.la
++kmix_SOURCES = kmix_main.cpp
++kmix_LDADD = libkmix_main.la
+ kmix_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ 
+-kmixctrl_SOURCES = dummy.cpp
+-kmixctrl_LDADD = kmixctrl.la
++kmixctrl_SOURCES = kmixctrl_main.cpp
++kmixctrl_LDADD = libkmixctrl_main.la
+ kmixctrl_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ 
+-kmixctrl_la_SOURCES = kmixctrl.cpp channel.cpp mixer.cpp volume.cpp 
+-kmixctrl_la_LIBADD = $(LIB_KDEUI) $(LIBALIB) $(LIBOSSAUDIO) $(LIBASOUND)
++libkmixctrl_main_la_SOURCES = kmixctrl.cpp channel.cpp mixer.cpp volume.cpp 
++libkmixctrl_main_la_LIBADD = $(LIB_KDEUI) $(LIBALIB) $(LIBOSSAUDIO) $(LIBASOUND)
++libkmixctrl_main_la_LDFLAGS = $(all_libraries)
++
++kmixctrl_la_SOURCES = kmixctrl_main.cpp
++kmixctrl_la_LIBADD = libkmixctrl_main.la
+ kmixctrl_la_LDFLAGS = $(all_libraries) -module -avoid-version
+ 
+ kmix_panelapplet_la_METASOURCES=AUTO
+@@ -58,6 +66,3 @@
+ 
+ messages: rc.cpp
+ 	$(XGETTEXT) *.cpp -o $(podir)/kmix.pot
+-
+-dummy.cpp:
+-	echo > dummy.cpp

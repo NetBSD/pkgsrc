@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/03/02 02:30:34 rxg Exp $
+# $NetBSD: Makefile,v 1.1.1.1.2.1 2002/06/23 18:39:07 jlam Exp $
 
-DISTNAME=	MP3-Info-1.00
-PKGNAME=	p5-MP3-Info-1.00
+DISTNAME=	MP3-Info-1.01
+PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	audio perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MP3/}
 
-MAINTAINER=	rxg@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://search.cpan.org/search?module=MP3::Info
 COMMENT=	Manipulate / fetch info from MP3 audio files
 

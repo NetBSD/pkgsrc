@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:42 skrll Exp $
+@comment $NetBSD: PLIST,v 1.2.2.1 2002/06/23 18:46:21 jlam Exp $
 bin/gdk-pixbuf-config
-include/gdk-pixbuf/gdk-pixbuf.h
-include/gdk-pixbuf/gdk-pixbuf-loader.h
-include/gdk-pixbuf/gdk-pixbuf-features.h
-include/gdk-pixbuf/gdk-pixbuf-xlib.h
-include/gdk-pixbuf/gdk-pixbuf-xlibrgb.h
+include/gdk-pixbuf-1.0/gdk-pixbuf/gdk-pixbuf-features.h
+include/gdk-pixbuf-1.0/gdk-pixbuf/gdk-pixbuf-loader.h
+include/gdk-pixbuf-1.0/gdk-pixbuf/gdk-pixbuf-xlib.h
+include/gdk-pixbuf-1.0/gdk-pixbuf/gdk-pixbuf-xlibrgb.h
+include/gdk-pixbuf-1.0/gdk-pixbuf/gdk-pixbuf.h
 lib/libgdk_pixbuf.so.2.0
 lib/libgdk_pixbuf.so.2
 lib/libgdk_pixbuf.so
@@ -50,6 +50,7 @@ lib/gdk_pixbuf_xlibConf.sh
 share/aclocal/gdk-pixbuf.m4
 @dirrm lib/gdk-pixbuf/loaders
 @dirrm lib/gdk-pixbuf
-@dirrm include/gdk-pixbuf
+@dirrm include/gdk-pixbuf-1.0/gdk-pixbuf
+@dirrm include/gdk-pixbuf-1.0
 @exec test %D = ${LOCALBASE} || ln -s %D/share/aclocal/gdk-pixbuf.m4 ${LOCALBASE}/share/aclocal/gdk-pixbuf.m4
 @unexec test %D = ${LOCALBASE} || ${RM} -f ${LOCALBASE}/share/aclocal/gdk-pixbuf.m4

@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.5.2.2 2002/06/23 18:41:20 jlam Exp $
+
+--- Makefile.in.orig	Thu Jun  6 14:10:54 2002
++++ Makefile.in	Thu Jun  6 14:17:49 2002
+@@ -114,7 +114,7 @@
+ icondir = $(datadir)/pixmaps
+ 
+ util_DATA = xchat.desktop
+-utildir = $(sysconfdir)/X11/applnk/Internet
++utildir = $(datadir)/gnome/apps/Internet
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = config.h

@@ -1,5 +1,25 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:30 skrll Exp $
+@comment $NetBSD: PLIST,v 1.2.2.1 2002/06/23 18:40:00 jlam Exp $
 bin/gschem
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gschemdoc.info
+info/gschemdoc.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/gschemdoc.info
+info/gschemdoc.info-1
+info/gschemdoc.info-10
+info/gschemdoc.info-11
+info/gschemdoc.info-12
+info/gschemdoc.info-13
+info/gschemdoc.info-14
+info/gschemdoc.info-15
+info/gschemdoc.info-16
+info/gschemdoc.info-17
+info/gschemdoc.info-2
+info/gschemdoc.info-3
+info/gschemdoc.info-4
+info/gschemdoc.info-5
+info/gschemdoc.info-6
+info/gschemdoc.info-7
+info/gschemdoc.info-8
+info/gschemdoc.info-9
 man/man1/gschem.1
 share/gEDA/gschem-gtkrc
 share/gEDA/system-gschemrc

@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:50:51 zuntum Exp $
-include/gdk-pixbuf/gnome-canvas-pixbuf.h
+@comment $NetBSD: PLIST,v 1.1.2.1 2002/06/23 18:46:23 jlam Exp $
+include/gdk-pixbuf-1.0/gdk-pixbuf/gnome-canvas-pixbuf.h
 lib/gnomecanvaspixbufConf.sh
 lib/libgnomecanvaspixbuf.so.1.0
 lib/libgnomecanvaspixbuf.so.1
@@ -9,8 +9,14 @@ lib/libgnomecanvaspixbuf.a
 share/gnome/html/gdk-pixbuf/a2605.html
 share/gnome/html/gdk-pixbuf/a3640.html
 share/gnome/html/gdk-pixbuf/a3652.html
+share/gnome/html/gdk-pixbuf/a3657.html
 share/gnome/html/gdk-pixbuf/a3694.html
+share/gnome/html/gdk-pixbuf/a3696.html
 share/gnome/html/gdk-pixbuf/a3716.html
+share/gnome/html/gdk-pixbuf/x3676.html
+share/gnome/html/gdk-pixbuf/x3715.html
+share/gnome/html/gdk-pixbuf/x3728.html
+share/gnome/html/gdk-pixbuf/x3767.html
 share/gnome/html/gdk-pixbuf/book1.html
 share/gnome/html/gdk-pixbuf/compiling.html
 share/gnome/html/gdk-pixbuf/extra-configuration-options.html
@@ -30,7 +36,6 @@ share/gnome/html/gdk-pixbuf/gdk-pixbuf-util.html
 share/gnome/html/gdk-pixbuf/gdkpixbufloader.html
 share/gnome/html/gdk-pixbuf/gnomecanvaspixbuf.html
 share/gnome/html/gdk-pixbuf/index.html
-share/gnome/html/gdk-pixbuf/index.sgml
 share/gnome/html/gdk-pixbuf/license.html
 share/gnome/html/gdk-pixbuf/r15.html
 share/gnome/html/gdk-pixbuf/r27.html

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/12/18 13:41:29 abs Exp $
+# $NetBSD: Makefile,v 1.12.2.1 2002/06/23 18:45:30 jlam Exp $
 #
 
 DISTNAME=	compat11

@@ -1,41 +1,41 @@
-$NetBSD: patch-aa,v 1.5 2001/12/13 18:03:53 fredb Exp $
+$NetBSD: patch-aa,v 1.5.2.1 2002/06/23 18:45:27 jlam Exp $
 
---- .bochsrc.orig	Mon Nov 19 08:36:26 2001
+--- .bochsrc.orig	Thu Mar 28 01:49:52 2002
 +++ .bochsrc
-@@ -9,10 +9,11 @@
+@@ -9,9 +9,9 @@
  # directory, named BIOS-bochs-yymmdd.  Use the latest one in there.
  #=======================================================================
  #romimage: bios/BIOS-bochs-970717a
 -romimage: file=bios/BIOS-bochs-latest, address=0xf0000
-+#romimage: file=bios/BIOS-bochs-latest, address=0xf0000
- #romimage: file=bios/BIOS-bochs-2-processors, address=0xf0000
- #romimage: file=bios/BIOS-bochs-4-processors, address=0xf0000
- #romimage: file=bios/rombios.bin, address=0xf0000
+-#romimage: file=bios/BIOS-bochs-2-processors, address=0xf0000
+-#romimage: file=bios/BIOS-bochs-4-processors, address=0xf0000
 +romimage: file=XXXPREFIXXXX/share/bochs/bios/BIOS-bochs-latest, address=0xf0000
++#romimage: file=XXXPREFIXXXX/share/bios/BIOS-bochs-2-processors, address=0xf0000
++#romimage: file=XXXPREFIXXXX/share/bios/BIOS-bochs-4-processors, address=0xf0000
+ #romimage: file=bios/rombios.bin, address=0xf0000
  
  #=======================================================================
- # MEGS
-@@ -33,7 +34,8 @@
+@@ -32,8 +32,8 @@
+ # VGAROMIMAGE
  # You now need to load a VGA ROM BIOS into C0000.
  #=======================================================================
- #vgaromimage: bios/VGABIOS-cbothamy-0.2a
+-#vgaromimage: bios/VGABIOS-lgpl-0.3a
 -vgaromimage: bios/VGABIOS-elpin-2.40
-+#vgaromimage: bios/VGABIOS-elpin-2.40
++#vgaromimage: XXXPREFIXXXX/share/bios/VGABIOS-lgpl-0.3a
 +vgaromimage: XXXPREFIXXXX/share/bochs/bios/VGABIOS-elpin-2.40
  
  #=======================================================================
  # FLOPPYA:
-@@ -57,7 +59,8 @@
- #floppya: file=../1.44, status=ejected
- #floppya: 1_44=/dev/fd0H1440, status=ejected
- #floppya: 1_2=../1_2, status=ejected
--floppya: 1_44=a.img, status=inserted
-+#floppya: 1_44=a.img, status=inserted
-+floppya: 1_44=/dev/rfd0a, status=inserted
- 
+@@ -52,7 +52,7 @@
+ # drive letters such as a: or b: as the path.  Raw floppy access is not
+ # supported on Windows 95 and 98.
  #=======================================================================
- # FLOPPYB:
-@@ -78,7 +81,7 @@
+-floppya: 1_44=/dev/fd0, status=inserted
++floppya: 1_44=/dev/rfd0a, status=inserted
+ #floppya: file=../1.44, status=inserted
+ #floppya: 1_44=/dev/fd0H1440, status=inserted
+ #floppya: 1_2=../1_2, status=inserted
+@@ -84,7 +84,7 @@
  #   diskc: file=112M.sample, cyl=900, heads=15, spt=17
  #   diskc: file=483M.sample, cyl=1024, heads=15, spt=63
  #=======================================================================
@@ -44,9 +44,18 @@ $NetBSD: patch-aa,v 1.5 2001/12/13 18:03:53 fredb Exp $
  
  #=======================================================================
  # DISKD:
-@@ -109,8 +112,8 @@
- #   boot: c
+@@ -108,7 +108,7 @@
+ # NOTE: diskd and cdromd must not be used together!
+ #=======================================================================
+ #cdromd: dev=D:, status=inserted             # for win32
+-#cdromd: dev=/dev/cdrom, status=inserted
++cdromd: dev=/dev/rcd0d, status=ejected
+ 
+ #=======================================================================
+ # NEWHARDDRIVESUPPORT: enabled=[0|1]
+@@ -125,8 +125,8 @@
  #   boot: a
+ #   boot: cdrom
  #=======================================================================
 -#boot: a
 -boot: c

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1.50.2 2002/06/23 18:47:00 jlam Exp $
+bin/qiv
+man/man1/qiv.1

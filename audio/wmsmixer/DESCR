@@ -1,0 +1,3 @@
+WMsmixer is a hack to wmmixer which makes some changes to the
+display and adds a few new features, most notably scrollwheel
+support. It also includes a numeric volume indicator.

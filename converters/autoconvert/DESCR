@@ -1,0 +1,6 @@
+AutoConvert is an intelligent Chinese Encoding converter.
+It uses built-in functions to judge the type of the input file's Chinese
+Encoding (such as GB/Big5/HZ), then converts the input file to any
+type of Chinese Encoding you want. You can use autoconvert to
+automatically convert incoming e-mail messages. It can also optionally
+handle the UNI/UTF7/UTF8 encoding.

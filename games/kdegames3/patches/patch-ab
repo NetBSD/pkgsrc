@@ -1,0 +1,249 @@
+$NetBSD: patch-ab,v 1.1.1.1.2.2 2002/06/23 18:46:05 jlam Exp $
+
+--- kbackgammon/Makefile.in.orig	Fri May 10 15:29:29 2002
++++ kbackgammon/Makefile.in
+@@ -229,24 +229,25 @@
+ INCLUDES = -I$(top_srcdir)/libkdegames -I$(top_srcdir)/libkdegames/kgame/ -I$(srcdir)/engines $(all_includes)
+ 
+ bin_PROGRAMS = kbackgammon
+-lib_LTLIBRARIES = kbackgammon.la
++lib_LTLIBRARIES = libkbackgammon_main.la kbackgammon.la
+ 
+-CLEANFILES = dummy.cpp
+-
+-kbackgammon_la_LIBADD = $(LIB_KDEUI) $(LIB_KSYCOCA) -lkdeprint \
++libkbackgammon_main_la_LIBADD = $(LIB_KDEUI) $(LIB_KSYCOCA) -lkdeprint \
+ 	./engines/libkbgengines.la
+ 
+-kbackgammon_la_SOURCES = main.cpp kbg.cpp kbgboard.cpp kbgtextview.cpp \
++libkbackgammon_main_la_SOURCES = main.cpp kbg.cpp kbgboard.cpp kbgtextview.cpp \
+ 	kbgstatus.cpp
+ 
+ 
++kbackgammon_la_LIBADD = libkbackgammon_main.la
++kbackgammon_la_SOURCES = kbackgammon_main.cpp
++
+ #>- kbackgammon_la_METASOURCES = AUTO
+ kbackgammon_la_LDFLAGS = $(all_libraries) $(KDE_RPATH) -module -avoid-version
+ 
+-kbackgammon_LDADD = kbackgammon.la $(top_builddir)/libkdegames/libkdegames.la \
++kbackgammon_LDADD = libkbackgammon_main.la $(top_builddir)/libkdegames/libkdegames.la \
+ 	$(LIB_KSYCOCA)
+ 
+-kbackgammon_SOURCES = dummy.cpp
++kbackgammon_SOURCES = kbackgammon_main.cpp
+ kbackgammon_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ 
+ noinst_HEADERS = version.h kbg.h kbgboard.h kbgtextview.h kbgstatus.h
+@@ -266,25 +267,31 @@
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+ 
+-kbackgammon_la_DEPENDENCIES = ./engines/libkbgengines.la
+-am_kbackgammon_la_OBJECTS = main.lo kbg.lo kbgboard.lo kbgtextview.lo \
+-	kbgstatus.lo
++kbackgammon_la_DEPENDENCIES = libkbackgammon_main.la
++am_kbackgammon_la_OBJECTS = kbackgammon_main.lo
+ #>- kbackgammon_la_OBJECTS = $(am_kbackgammon_la_OBJECTS)
++#>+ 1
++kbackgammon_la_OBJECTS = kbackgammon_main.lo
++libkbackgammon_main_la_LDFLAGS =
++libkbackgammon_main_la_DEPENDENCIES = ./engines/libkbgengines.la
++am_libkbackgammon_main_la_OBJECTS = main.lo kbg.lo kbgboard.lo \
++	kbgtextview.lo kbgstatus.lo
++#>- libkbackgammon_main_la_OBJECTS = $(am_libkbackgammon_main_la_OBJECTS)
+ #>+ 6
+-kbackgammon_la_final_OBJECTS = kbackgammon_la.all_cpp.lo 
+-kbackgammon_la_nofinal_OBJECTS = main.lo kbg.lo kbgboard.lo kbgtextview.lo \
+-	kbgstatus.lo \
+-	kbackgammon_la_meta_unload.lo 
+-@KDE_USE_FINAL_FALSE@kbackgammon_la_OBJECTS = $(kbackgammon_la_nofinal_OBJECTS)
+-@KDE_USE_FINAL_TRUE@kbackgammon_la_OBJECTS = $(kbackgammon_la_final_OBJECTS)
++libkbackgammon_main_la_final_OBJECTS = libkbackgammon_main_la.all_cpp.lo 
++libkbackgammon_main_la_nofinal_OBJECTS = main.lo kbg.lo kbgboard.lo \
++	kbgtextview.lo kbgstatus.lo \
++	libkbackgammon_main_la_meta_unload.lo 
++@KDE_USE_FINAL_FALSE@libkbackgammon_main_la_OBJECTS = $(libkbackgammon_main_la_nofinal_OBJECTS)
++@KDE_USE_FINAL_TRUE@libkbackgammon_main_la_OBJECTS = $(libkbackgammon_main_la_final_OBJECTS)
+ bin_PROGRAMS = kbackgammon$(EXEEXT)
+ PROGRAMS = $(bin_PROGRAMS)
+ 
+-am_kbackgammon_OBJECTS = dummy.$(OBJEXT)
++am_kbackgammon_OBJECTS = kbackgammon_main.$(OBJEXT)
+ #>- kbackgammon_OBJECTS = $(am_kbackgammon_OBJECTS)
+ #>+ 1
+-kbackgammon_OBJECTS = dummy.$(OBJEXT)
+-kbackgammon_DEPENDENCIES = kbackgammon.la \
++kbackgammon_OBJECTS = kbackgammon_main.$(OBJEXT)
++kbackgammon_DEPENDENCIES = libkbackgammon_main.la \
+ 	$(top_builddir)/libkdegames/libkdegames.la
+ 
+ DEFS = @DEFS@
+@@ -293,7 +300,8 @@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+ depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
+-@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/dummy.Po $(DEPDIR)/kbg.Plo \
++@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/kbackgammon_main.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/kbackgammon_main.Po $(DEPDIR)/kbg.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/kbgboard.Plo $(DEPDIR)/kbgstatus.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/kbgtextview.Plo $(DEPDIR)/main.Plo
+ #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+@@ -315,7 +323,8 @@
+ CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ CXXFLAGS = @CXXFLAGS@
+-DIST_SOURCES = $(kbackgammon_la_SOURCES) $(kbackgammon_SOURCES)
++DIST_SOURCES = $(kbackgammon_la_SOURCES) \
++	$(libkbackgammon_main_la_SOURCES) $(kbackgammon_SOURCES)
+ DATA = $(applnk_DATA) $(rc_DATA)
+ 
+ HEADERS = $(noinst_HEADERS)
+@@ -328,7 +337,7 @@
+ DIST_COMMON = README $(noinst_HEADERS) AUTHORS Makefile.am Makefile.in \
+ 	TODO
+ DIST_SUBDIRS = $(SUBDIRS)
+-SOURCES = $(kbackgammon_la_SOURCES) $(kbackgammon_SOURCES)
++SOURCES = $(kbackgammon_la_SOURCES) $(libkbackgammon_main_la_SOURCES) $(kbackgammon_SOURCES)
+ 
+ #>- all: all-recursive
+ #>+ 1
+@@ -377,6 +386,8 @@
+ 	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
+ kbackgammon.la: $(kbackgammon_la_OBJECTS) $(kbackgammon_la_DEPENDENCIES) 
+ 	$(CXXLINK) -rpath $(libdir) $(kbackgammon_la_LDFLAGS) $(kbackgammon_la_OBJECTS) $(kbackgammon_la_LIBADD) $(LIBS)
++libkbackgammon_main.la: $(libkbackgammon_main_la_OBJECTS) $(libkbackgammon_main_la_DEPENDENCIES) 
++	$(CXXLINK) -rpath $(libdir) $(libkbackgammon_main_la_LDFLAGS) $(libkbackgammon_main_la_OBJECTS) $(libkbackgammon_main_la_LIBADD) $(LIBS)
+ install-binPROGRAMS: $(bin_PROGRAMS)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+@@ -411,7 +422,8 @@
+ distclean-compile:
+ 	-rm -f *.tab.c
+ 
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kbackgammon_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kbackgammon_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kbg.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kbgboard.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kbgstatus.Plo@am__quote@
+@@ -569,7 +581,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=kbackgammon.desktop kbackgammonui.rc eventsrc 
++KDE_DIST=kbackgammon.desktop kbackgammonui.rc eventsrc kbackgammon dummy.cpp 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -631,7 +643,6 @@
+ mostlyclean-generic:
+ 
+ clean-generic:
+-	-test -z "$(CLEANFILES)" || rm -f $(CLEANFILES)
+ 
+ distclean-generic:
+ 	-rm -f Makefile $(CONFIG_CLEAN_FILES) stamp-h stamp-h[0-9]*
+@@ -712,9 +723,6 @@
+ 	LIST=`find . -name \*.h -o -name \*.hh -o -name \*.H -o -name \*.hxx -o -name \*.hpp -o -name \*.cpp -o -name \*.cc -o -name \*.cxx -o -name \*.ecpp -o -name \*.C`; \
+ 	$(XGETTEXT) $$LIST -o $(podir)/kbackgammon.pot
+ 
+-dummy.cpp:
+-	echo > dummy.cpp
+-
+ install-data-local:
+ #>- 	rm -rf $(kde_appsdir)/Games/kbackgammon.desktop
+ #>+ 1
+@@ -754,28 +762,28 @@
+ 
+ 
+ #>+ 12
+-kbackgammon_la_meta_unload.cpp:  kbgboard.moc kbgtextview.moc kbg.moc kbgstatus.moc
+-	@echo 'creating kbackgammon_la_meta_unload.cpp'
+-	@-rm -f kbackgammon_la_meta_unload.cpp
++libkbackgammon_main_la_meta_unload.cpp:  kbgboard.moc kbgtextview.moc kbg.moc kbgstatus.moc
++	@echo 'creating libkbackgammon_main_la_meta_unload.cpp'
++	@-rm -f libkbackgammon_main_la_meta_unload.cpp
+ 	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_kbackgammon_la[] = {' > kbackgammon_la_meta_unload.cpp ;\
+-		cat  kbgboard.moc kbgtextview.moc kbg.moc kbgstatus.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kbackgammon_la_meta_unload.cpp ;\
+-		echo '0};' >> kbackgammon_la_meta_unload.cpp ;\
+-		echo '#include <kunload.h>' >> kbackgammon_la_meta_unload.cpp ;\
+-		echo '_UNLOAD(kbackgammon_la)' >> kbackgammon_la_meta_unload.cpp ;\
+-	else echo > kbackgammon_la_meta_unload.cpp; fi
++		echo 'static const char * _metalist_libkbackgammon_main_la[] = {' > libkbackgammon_main_la_meta_unload.cpp ;\
++		cat  kbgboard.moc kbgtextview.moc kbg.moc kbgstatus.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkbackgammon_main_la_meta_unload.cpp ;\
++		echo '0};' >> libkbackgammon_main_la_meta_unload.cpp ;\
++		echo '#include <kunload.h>' >> libkbackgammon_main_la_meta_unload.cpp ;\
++		echo '_UNLOAD(libkbackgammon_main_la)' >> libkbackgammon_main_la_meta_unload.cpp ;\
++	else echo > libkbackgammon_main_la_meta_unload.cpp; fi
+ 
+ 
+ #>+ 3
+ clean-moc-classes:
+-	-rm -f  kbackgammon_la_meta_unload.cpp
++	-rm -f  libkbackgammon_main_la_meta_unload.cpp
+ 
+ #>+ 11
+-kbackgammon_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/kbg.cpp $(srcdir)/kbgboard.cpp $(srcdir)/kbgtextview.cpp $(srcdir)/kbgstatus.cpp kbackgammon_la_meta_unload.cpp   kbgboard.moc kbgtextview.moc kbgstatus.moc kbg.moc 
++kbackgammon_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kbackgammon_main.cpp   kbgboard.moc kbgtextview.moc kbgstatus.moc kbg.moc 
+ 	@echo 'creating kbackgammon_la.all_cpp.cpp ...'; \
+ 	rm -f kbackgammon_la.all_cpp.files kbackgammon_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kbackgammon_la.all_cpp.final; \
+-	for file in main.cpp kbg.cpp kbgboard.cpp kbgtextview.cpp kbgstatus.cpp kbackgammon_la_meta_unload.cpp ; do \
++	for file in kbackgammon_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> kbackgammon_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kbackgammon_la.all_cpp.final; \
+ 	done; \
+@@ -783,11 +791,23 @@
+ 	rm -f kbackgammon_la.all_cpp.final kbackgammon_la.all_cpp.files
+ 
+ #>+ 11
+-kbackgammon.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
++libkbackgammon_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/kbg.cpp $(srcdir)/kbgboard.cpp $(srcdir)/kbgtextview.cpp $(srcdir)/kbgstatus.cpp libkbackgammon_main_la_meta_unload.cpp  
++	@echo 'creating libkbackgammon_main_la.all_cpp.cpp ...'; \
++	rm -f libkbackgammon_main_la.all_cpp.files libkbackgammon_main_la.all_cpp.final; \
++	echo "#define KDE_USE_FINAL 1" >> libkbackgammon_main_la.all_cpp.final; \
++	for file in main.cpp kbg.cpp kbgboard.cpp kbgtextview.cpp kbgstatus.cpp libkbackgammon_main_la_meta_unload.cpp ; do \
++	  echo "#include \"$$file\"" >> libkbackgammon_main_la.all_cpp.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkbackgammon_main_la.all_cpp.final; \
++	done; \
++	cat libkbackgammon_main_la.all_cpp.final libkbackgammon_main_la.all_cpp.files  > libkbackgammon_main_la.all_cpp.cpp; \
++	rm -f libkbackgammon_main_la.all_cpp.final libkbackgammon_main_la.all_cpp.files
++
++#>+ 11
++kbackgammon.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kbackgammon_main.cpp  
+ 	@echo 'creating kbackgammon.all_cpp.cpp ...'; \
+ 	rm -f kbackgammon.all_cpp.files kbackgammon.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kbackgammon.all_cpp.final; \
+-	for file in dummy.cpp ; do \
++	for file in kbackgammon_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> kbackgammon.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kbackgammon.all_cpp.final; \
+ 	done; \
+@@ -796,20 +816,20 @@
+ 
+ #>+ 3
+ clean-final:
+-	-rm -f kbackgammon_la.all_cpp.cpp kbackgammon.all_cpp.cpp
++	-rm -f kbackgammon_la.all_cpp.cpp libkbackgammon_main_la.all_cpp.cpp kbackgammon.all_cpp.cpp
+ 
+ #>+ 2
+ final:
+-	$(MAKE) kbackgammon_la_OBJECTS="$(kbackgammon_la_final_OBJECTS)" all-am
++	$(MAKE) libkbackgammon_main_la_OBJECTS="$(libkbackgammon_main_la_final_OBJECTS)" all-am
+ #>+ 2
+ final-install:
+-	$(MAKE) kbackgammon_la_OBJECTS="$(kbackgammon_la_final_OBJECTS)" install-am
++	$(MAKE) libkbackgammon_main_la_OBJECTS="$(libkbackgammon_main_la_final_OBJECTS)" install-am
+ #>+ 2
+ no-final:
+-	$(MAKE) kbackgammon_la_OBJECTS="$(kbackgammon_la_nofinal_OBJECTS)" all-am
++	$(MAKE) libkbackgammon_main_la_OBJECTS="$(libkbackgammon_main_la_nofinal_OBJECTS)" all-am
+ #>+ 2
+ no-final-install:
+-	$(MAKE) kbackgammon_la_OBJECTS="$(kbackgammon_la_nofinal_OBJECTS)" install-am
++	$(MAKE) libkbackgammon_main_la_OBJECTS="$(libkbackgammon_main_la_nofinal_OBJECTS)" install-am
+ #>+ 3
+ cvs-clean:
+ 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean

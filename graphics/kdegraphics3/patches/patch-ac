@@ -1,0 +1,50 @@
+$NetBSD: patch-ac,v 1.1.1.1.2.2 2002/06/23 18:46:29 jlam Exp $
+
+--- kview/Makefile.am.orig	Tue May 15 20:54:32 2001
++++ kview/Makefile.am
+@@ -7,25 +7,29 @@
+ 
+ METASOURCES = AUTO
+ 
+-lib_LTLIBRARIES = libkviewpart.la kview.la
++lib_LTLIBRARIES = libkviewpart.la libkview_main.la kview.la
+ 
+ libkviewpart_la_SOURCES = canvas.cpp kview_view.cc kview_asyncio.cc
+ libkviewpart_la_LDFLAGS = $(all_libraries) -avoid-version -module -no-undefined
+ libkviewpart_la_LIBADD = $(LIB_KFILE) $(LIB_KPARTS) -lkdeprint
+ 
+-kview_SOURCES = dummy.C
++kview_SOURCES = kview_main.cpp
+ kview_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+-kview_LDADD = kview.la
++kview_LDADD = libkview_main.la
+ 
+-kview_la_SOURCES = main.cpp viewer.cpp kview.cpp colour.cpp \
++libkview_main_la_SOURCES = main.cpp viewer.cpp kview.cpp colour.cpp \
+ 	filter.cpp filtlist.cpp \
+ 	kcproc.cpp kviewconfdialog_base.ui kviewconfdialog.cpp \
+         imagelistdialog_base.ui imagelistdialog.cpp \
+         knumdialog_base.ui knumdialog.cpp \
+         kfilteraction.cpp infowin_base.ui infowin.cpp
+ 
+-kview_la_LDFLAGS = $(all_libraries) -module -avoid-version
+-kview_la_LIBADD = libkviewpart.la
++libkview_main_la_LDFLAGS = $(all_libraries)
++libkview_main_la_LIBADD = libkviewpart.la
++
++kview_la_SOURCES = kview_main.cpp
++kview_la_LDFLAGS = $(all_libraries) -avoid-version -module
++kview_la_LIBADD = libkview_main.la
+ 
+ test_SOURCES = libkview.la test.cpp
+ test_LDFLAGS  = $(all_libraries) -module -avoid-version
+@@ -52,9 +56,6 @@
+ 
+ srcdoc:
+ 	kdoc -a -p -H -d $(HOME)/web/src/kview kview *.h -lqt -lkdecore -lkdeui -lkfile
+-
+-dummy.C:
+-	echo > dummy.C
+ 
+ ###KMAKE-start (don't edit or delete this block)
+ 

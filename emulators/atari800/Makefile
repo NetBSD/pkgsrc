@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2002/02/18 10:40:50 jmc Exp $
+# $NetBSD: Makefile,v 1.13.2.1 2002/06/23 18:45:26 jlam Exp $
 
 DISTNAME=	Atari800-0.9.9a
 PKGNAME=	atari800-0.9.9a
 CATEGORIES=	emulators
-MASTER_SITES=	http://prdownloads.sourceforge.net/atari800/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=atari800/}
 DISTFILES=	a800s099a.zip xf25.zip
 
 MAINTAINER=	packages@netbsd.org

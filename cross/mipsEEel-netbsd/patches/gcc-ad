@@ -1,0 +1,16 @@
+$NetBSD: gcc-ad,v 1.1.2.2 2002/06/23 18:43:05 jlam Exp $
+
+--- config.sub.orig	Wed Apr 24 15:23:34 2002
++++ config.sub
+@@ -880,6 +880,11 @@
+  		basic_machine=c4x-none
+  		os=-coff
+   		;;
++	algor-* | arc-* | cobalt-* | hpcmips-* | playstation2-* | pmax-*)
++		if [ x$os = x-netbsd ]; then
++			basic_machine=mipsel-unknown
++		fi
++		;;
+ 	*)
+ 		echo Invalid configuration \`$1\': machine \`$basic_machine\' not recognized 1>&2
+ 		exit 1

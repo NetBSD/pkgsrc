@@ -1,0 +1,16 @@
+$NetBSD: patch-ax,v 1.1.1.1.2.2 2002/06/23 18:38:16 jlam Exp $
+
+--- mpeglib/lib/util/render/x11/x11Surface.h.orig	Wed Aug  8 13:04:28 2001
++++ mpeglib/lib/util/render/x11/x11Surface.h
+@@ -14,7 +14,11 @@
+ #ifndef __X11SURFACE_H
+ #define __X11SURFACE_H
+ 
++#if defined(__NetBSD__)
++#include <limits.h>
++#else
+ #include <values.h>
++#endif
+ #include "xinit.h"
+ #include "../surface.h"
+ #include "initDisplay.h"

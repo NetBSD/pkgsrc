@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2001/02/16 14:38:23 wiz Exp $
+# $NetBSD: Makefile,v 1.2.2.1 2002/06/23 18:44:07 jlam Exp $
 
-DISTNAME=		doc++-3.3.13
+DISTNAME=		doc++-3.4.9
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_SUNSITE:=apps/doctools/} \
-			http://zeus.imaginator.com/doc++/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=docpp/}
 
 MAINTAINER=		jlam@netbsd.org
-HOMEPAGE=		http://www.imaginator.com/doc++/
+HOMEPAGE=		http://docpp.sourceforge.net/
 COMMENT=		documentation system for C, C++ and Java
 
+USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 
 post-install:

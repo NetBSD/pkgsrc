@@ -1,38 +1,15 @@
-$NetBSD: patch-aa,v 1.3 2002/01/16 14:59:39 tron Exp $
+$NetBSD: patch-aa,v 1.3.2.1 2002/06/23 18:41:16 jlam Exp $
 
-x--- configure.in.orig	Sun Jan  6 07:43:37 2002
-+++ configure.in	Wed Jan 16 15:40:37 2002
-@@ -8,7 +8,7 @@
+--- configure.in.orig	Thu Jun  6 13:02:43 2002
++++ configure.in	Thu Jun  6 13:04:13 2002
+@@ -7,9 +7,9 @@
+ AC_PROG_CC
  AC_PROG_RANLIB
  AC_PROG_CPP
  
--ALL_LINGUAS="ca cs da de el es fi fr he hu it ja ko lt lv nl no pt pt_BR ro ru sk sl sr sv tr uk zh_CN zh_TW.Big5"
+-ALL_LINGUAS="ca cs da de el es fi fr he hu it ja ko lt lv nl no pl pt pt_BR ro ru sk sl sr sv tr uk zh_CN zh_TW.Big5"
 +ALL_LINGUAS="ca cs da de el es fi fr he hu it ja ko lt lv nl no pt pt_BR ro ru sk sl sr sv tr uk zh_CN"
  AM_GNU_GETTEXT
  
  AC_PATH_PROG(sedpath, sed)
-@@ -317,6 +317,7 @@
- 			PY_VERSION=`$pythonpath -c 'import sys ; print sys.version[0:3]'`
- 			PY_MAJOR=`$pythonpath -c 'import sys ; print sys.version[0:2]'`
- 			changequote([, ])dnl
-+				AC_CHECK_LIB(util, openpty, LIBS="$LIBS -lutil")
- 			if test -f $PY_PREFIX/include/python$PY_VERSION/Python.h; then
- 				PY_LIBS="-lpython$PY_VERSION"
- 				PY_LIB_LOC="-L$PY_EXEC_PREFIX/lib/python$PY_VERSION/config"
-@@ -585,6 +586,8 @@
- AC_PATH_PROG(sortpath, sort)
- AC_PATH_PROG(uniqpath, uniq)
- 
-+dnl order matters on the link line....
-+if false; then
- if test "_$trpath" != _; then
- if test "_$sortpath" != _; then
- if test "_$uniqpath" != _; then
-@@ -597,6 +600,7 @@
- GUI_CFLAGS=`cat cflags`
- rm -f cflags cflags2
- 
-+fi
- fi
- fi
- fi
+ if test "_$sedpath" = _; then

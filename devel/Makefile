@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.285 2002/04/30 12:37:11 wiz Exp $
+# $NetBSD: Makefile,v 1.285.2.1 2002/06/23 18:43:38 jlam Exp $
 #
 
 COMMENT=	Development utilities
 
 SUBDIR+=	GConf
+SUBDIR+=	GConf2
 SUBDIR+=	SDL
 SUBDIR+=	SDL_gfx
 SUBDIR+=	SDL_ttf
@@ -56,6 +57,7 @@ SUBDIR+=	cxref
 SUBDIR+=	ddd
 SUBDIR+=	dejagnu
 SUBDIR+=	diffutils
+SUBDIR+=	dlcompat
 SUBDIR+=	dmake
 SUBDIR+=	dmalloc
 SUBDIR+=	doc++
@@ -89,6 +91,7 @@ SUBDIR+=	gnome-objc
 SUBDIR+=	gobo-eiffel
 SUBDIR+=	gpasm
 SUBDIR+=	gperf
+SUBDIR+=	gscope
 SUBDIR+=	gtexinfo
 SUBDIR+=	gtkdiff
 SUBDIR+=	gtl
@@ -116,6 +119,7 @@ SUBDIR+=	lcc
 SUBDIR+=	lclint
 SUBDIR+=	ldapsdk
 SUBDIR+=	libavl
+SUBDIR+=	libbegemot
 SUBDIR+=	libctl
 SUBDIR+=	libdockapp
 SUBDIR+=	libetm
@@ -152,6 +156,7 @@ SUBDIR+=	mrproject
 SUBDIR+=	nana
 SUBDIR+=	nasm
 SUBDIR+=	nasm-devel
+SUBDIR+=	nbitools
 SUBDIR+=	ncurses
 SUBDIR+=	netcdf
 SUBDIR+=	newmkdep
@@ -218,6 +223,7 @@ SUBDIR+=	pango
 SUBDIR+=	pardiff
 SUBDIR+=	patch
 SUBDIR+=	pccts
+SUBDIR+=	pcl-cvs
 SUBDIR+=	pcre
 SUBDIR+=	pedisassem
 SUBDIR+=	php3-pcre
@@ -238,6 +244,7 @@ SUBDIR+=	prc-tools-gcc
 SUBDIR+=	prc-tools-gdb
 SUBDIR+=	prcs
 SUBDIR+=	pth
+SUBDIR+=	pth-syscall
 SUBDIR+=	ptl2
 SUBDIR+=	pwlib
 SUBDIR+=	py-Checker
@@ -270,7 +277,6 @@ SUBDIR+=	ruby-ri
 SUBDIR+=	ruby-strscan
 SUBDIR+=	ruby-textbuf
 SUBDIR+=	ruby-unit
-#SUBDIR+=	ruby14-readline		# only needed for ruby-1.4 package
 SUBDIR+=	rvm
 SUBDIR+=	rx
 SUBDIR+=	sdcc

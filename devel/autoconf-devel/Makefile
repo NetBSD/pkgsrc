@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/04/18 21:36:21 rh Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2002/06/23 18:43:47 jlam Exp $
 
 DISTNAME=		autoconf-2.53
 CATEGORIES=		devel
@@ -19,6 +19,9 @@ CONFIGURE_ENV+=		AWK="${AWK}"
 M4=			${PREFIX}/bin/gm4
 
 INFO_FILES=		autoconf.info standards.info
+
+PERL5_REQD=		5.6
+TEXINFO_REQD=		4.0
 
 .include "../../lang/perl5/buildlink.mk"
 .include "../../mk/texinfo.mk"

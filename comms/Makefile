@@ -1,16 +1,19 @@
-# $NetBSD: Makefile,v 1.41 2002/05/04 02:04:16 jtb Exp $
+# $NetBSD: Makefile,v 1.41.2.1 2002/06/23 18:41:24 jlam Exp $
 #
 
 COMMENT=	Communication utilities
 
 SUBDIR+=	binkd
 SUBDIR+=	birda
+SUBDIR+=	conserver
 SUBDIR+=	dl-ezkit
 SUBDIR+=	efax
 SUBDIR+=	efax-gtk
+SUBDIR+=	esms
 SUBDIR+=	estic
 SUBDIR+=	fidogate
 SUBDIR+=	gkermit
+SUBDIR+=	gsmlib
 SUBDIR+=	hylafax
 SUBDIR+=	ifcico-cm
 SUBDIR+=	jpilot

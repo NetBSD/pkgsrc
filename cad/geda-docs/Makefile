@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2001/07/17 02:56:44 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.5.2.1 2002/06/23 18:39:48 jlam Exp $
 #
 
-DISTNAME=		docs-${PKGVERSION}
-PKGNAME=		geda-${DISTNAME}
-WRKSRC=			${WRKDIR}/docs
+DISTNAME=		geda-docs-${PKGVERSION}
 CATEGORIES=		cad
 MASTER_SITES=		ftp://ftp.geda.seul.org/pub/geda/devel/${PKGVERSION}/ \
 			ftp://ieee.ing.uniroma1.it/pub/geda/devel/${PKGVERSION}/ \
@@ -17,7 +15,7 @@ COMMENT=		HTML documentation for gEDA
 CONFLICTS+=		gEDA<19991011
 
 DIST_SUBDIR=		geda
-PKGVERSION=		20010304
+PKGVERSION=		20020209
 
 NO_PATCH=		YES
 NO_CONFIGURE=		YES
@@ -26,7 +24,9 @@ USE_X11BASE=		YES
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gEDA
-.for file in README fileformats.html keymapping.html symbols.html
+.for file in README attributes.txt hooks_and_scheme.txt keymapping.tex \
+symbols.html README.keymapping fileformats.html keymapping.html \
+netattrib.txt
 	${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/share/doc/gEDA
 .endfor
 

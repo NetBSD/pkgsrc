@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.2.2.2 2002/06/23 18:37:46 jlam Exp $
+
+--- volume.c.orig	Wed Nov 22 21:35:42 2000
++++ volume.c
+@@ -19,6 +19,8 @@
+ 
+ #ifdef __FreeBSD__
+ #include <machine/soundcard.h>
++#elif __NetBSD__
++#include <soundcard.h>
+ #else
+ #include <sys/soundcard.h>
+ #endif

@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1.2.2 2002/06/23 18:46:48 jlam Exp $
+
+--- configure.orig	Mon May 13 22:52:10 2002
++++ configure	Tue May 14 18:57:42 2002
+@@ -269,8 +269,8 @@
+     _inc_extra=-I`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -I,g'`
+     ;;
+   --with-extralibdir=*)
+-    _ld_extra=-L`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -L,g'`
+-#    _ld_extra="${_ld_extra} -Wl,-R"`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -Wl\,-R,g'`" -L"`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -L,g'`
++#    _ld_extra=-L`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -L,g'`
++    _ld_extra="${_ld_extra} -Wl,-R"`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -Wl\,-R,g'`" -L"`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -L,g'`
+     ;;
+   --enable-runtime-cpudetection)
+     _runtime_cpudetection=yes

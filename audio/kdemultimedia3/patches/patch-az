@@ -1,0 +1,342 @@
+$NetBSD: patch-az,v 1.1.1.1.2.2 2002/06/23 18:38:17 jlam Exp $
+
+--- noatun/Makefile.in.orig	Tue May 14 01:53:28 2002
++++ noatun/Makefile.in
+@@ -295,22 +295,25 @@
+ 
+ KDE_ICON = AUTO
+ 
++lib_LTLIBRARIES = libnoatun_main.la
+ kde_module_LTLIBRARIES = noatun.la
+-#>- noatun_la_SOURCES = main.cpp joinhandler.cpp joinhandler.skel
++#>- libnoatun_main_la_SOURCES = main.cpp joinhandler.cpp joinhandler.skel
+ #>+ 1
+-noatun_la_SOURCES=main.cpp joinhandler.cpp  joinhandler_skel.cpp
++libnoatun_main_la_SOURCES=main.cpp joinhandler.cpp  joinhandler_skel.cpp
++libnoatun_main_la_LDFLAGS = $(KDE_RPATH) $(all_libraries)
++libnoatun_main_la_LIBADD = -lqtmcop -lkmedia2_idl -lsoundserver_idl $(top_builddir)/noatun/library/libnoatun.la
++
++noatun_la_SOURCES = noatun_main.cpp
+ noatun_la_LDFLAGS = $(KDE_RPATH) $(all_libraries) -module -avoid-version
+-noatun_la_LIBADD = -lqtmcop -lkmedia2_idl -lsoundserver_idl $(top_builddir)/noatun/library/libnoatun.la
++noatun_la_LIBADD = libnoatun_main.la
+ 
+ bin_PROGRAMS = noatun
+-noatun_SOURCES = dummy.cpp
++noatun_SOURCES = noatun_main.cpp
+ noatun_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+-noatun_LDADD = $(LIB_KIO) noatun.la
++noatun_LDADD = libnoatun_main.la
+ 
+ #>- METASOURCES = AUTO
+ 
+-CLEANFILES = dummy.cpp
+-
+ applnk_DATA = noatun.desktop
+ applnkdir = $(kde_appsdir)/Multimedia
+ 
+@@ -328,25 +331,31 @@
+ mkinstalldirs = $(SHELL) $(top_srcdir)/admin/mkinstalldirs
+ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES =
+-LTLIBRARIES = $(kde_module_LTLIBRARIES)
++LTLIBRARIES = $(kde_module_LTLIBRARIES) $(lib_LTLIBRARIES)
+ 
+-noatun_la_DEPENDENCIES = $(top_builddir)/noatun/library/libnoatun.la
+-am_noatun_la_OBJECTS = main.lo joinhandler.lo
+-#>- noatun_la_OBJECTS = $(am_noatun_la_OBJECTS)
++libnoatun_main_la_DEPENDENCIES = \
++	$(top_builddir)/noatun/library/libnoatun.la
++am_libnoatun_main_la_OBJECTS = main.lo joinhandler.lo
++#>- libnoatun_main_la_OBJECTS = $(am_libnoatun_main_la_OBJECTS)
+ #>+ 4
+-noatun_la_final_OBJECTS = noatun_la.all_cpp.lo 
+-noatun_la_nofinal_OBJECTS = main.lo joinhandler.lo joinhandler_skel.lo
+-@KDE_USE_FINAL_FALSE@noatun_la_OBJECTS = $(noatun_la_nofinal_OBJECTS)
+-@KDE_USE_FINAL_TRUE@noatun_la_OBJECTS = $(noatun_la_final_OBJECTS)
++libnoatun_main_la_final_OBJECTS = libnoatun_main_la.all_cpp.lo 
++libnoatun_main_la_nofinal_OBJECTS = main.lo joinhandler.lo joinhandler_skel.lo
++@KDE_USE_FINAL_FALSE@libnoatun_main_la_OBJECTS = $(libnoatun_main_la_nofinal_OBJECTS)
++@KDE_USE_FINAL_TRUE@libnoatun_main_la_OBJECTS = $(libnoatun_main_la_final_OBJECTS)
++noatun_la_DEPENDENCIES = libnoatun_main.la
++am_noatun_la_OBJECTS = noatun_main.lo
++#>- noatun_la_OBJECTS = $(am_noatun_la_OBJECTS)
++#>+ 1
++noatun_la_OBJECTS = noatun_main.lo
+ bin_PROGRAMS = noatun$(EXEEXT)
+ update_PROGRAMS = noatun20update$(EXEEXT)
+ PROGRAMS = $(bin_PROGRAMS) $(update_PROGRAMS)
+ 
+-am_noatun_OBJECTS = dummy.$(OBJEXT)
++am_noatun_OBJECTS = noatun_main.$(OBJEXT)
+ #>- noatun_OBJECTS = $(am_noatun_OBJECTS)
+ #>+ 1
+-noatun_OBJECTS = dummy.$(OBJEXT)
+-noatun_DEPENDENCIES = noatun.la
++noatun_OBJECTS = noatun_main.$(OBJEXT)
++noatun_DEPENDENCIES = libnoatun_main.la
+ am_noatun20update_OBJECTS = noatun20update.$(OBJEXT)
+ #>- noatun20update_OBJECTS = $(am_noatun20update_OBJECTS)
+ #>+ 1
+@@ -359,8 +368,9 @@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+ depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
+-@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/dummy.Po $(DEPDIR)/joinhandler.Plo \
+-	@AMDEP_TRUE@	$(DEPDIR)/main.Plo $(DEPDIR)/noatun20update.Po
++@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/joinhandler.Plo $(DEPDIR)/main.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/noatun20update.Po \
++	@AMDEP_TRUE@	$(DEPDIR)/noatun_main.Plo $(DEPDIR)/noatun_main.Po
+ #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+ #>- $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ #>+ 2
+@@ -380,8 +390,8 @@
+ CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ CXXFLAGS = @CXXFLAGS@
+-DIST_SOURCES = $(noatun_la_SOURCES) $(noatun_SOURCES) \
+-	$(noatun20update_SOURCES)
++DIST_SOURCES = $(libnoatun_main_la_SOURCES) $(noatun_la_SOURCES) \
++	$(noatun_SOURCES) $(noatun20update_SOURCES)
+ DATA = $(applnk_DATA) $(presets_DATA) $(update_DATA)
+ 
+ 
+@@ -391,7 +401,7 @@
+ 	uninstall-recursive check-recursive installcheck-recursive
+ DIST_COMMON = COPYING Makefile.am Makefile.in TODO
+ DIST_SUBDIRS = $(SUBDIRS)
+-SOURCES = $(noatun_la_SOURCES) $(noatun_SOURCES) $(noatun20update_SOURCES)
++SOURCES = $(libnoatun_main_la_SOURCES) $(noatun_la_SOURCES) $(noatun_SOURCES) $(noatun20update_SOURCES)
+ 
+ #>- all: all-recursive
+ #>+ 1
+@@ -438,6 +448,27 @@
+ 
+ clean-kde_moduleLTLIBRARIES:
+ 	-test -z "$(kde_module_LTLIBRARIES)" || rm -f $(kde_module_LTLIBRARIES)
++install-libLTLIBRARIES: $(lib_LTLIBRARIES)
++	@$(NORMAL_INSTALL)
++	$(mkinstalldirs) $(DESTDIR)$(libdir)
++	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
++	if test -f $$p; then \
++	echo " $(LIBTOOL) --mode=install $(INSTALL) $(INSTALL_STRIP_FLAG) $$p $(DESTDIR)$(libdir)/$$p"; \
++	$(LIBTOOL) --mode=install $(INSTALL) $(INSTALL_STRIP_FLAG) $$p $(DESTDIR)$(libdir)/$$p; \
++	else :; fi; \
++	done
++
++uninstall-libLTLIBRARIES:
++	@$(NORMAL_UNINSTALL)
++	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
++	echo " $(LIBTOOL) --mode=uninstall rm -f $(DESTDIR)$(libdir)/$$p"; \
++	$(LIBTOOL) --mode=uninstall rm -f $(DESTDIR)$(libdir)/$$p; \
++	done
++
++clean-libLTLIBRARIES:
++	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
++libnoatun_main.la: $(libnoatun_main_la_OBJECTS) $(libnoatun_main_la_DEPENDENCIES) 
++	$(CXXLINK) -rpath $(libdir) $(libnoatun_main_la_LDFLAGS) $(libnoatun_main_la_OBJECTS) $(libnoatun_main_la_LIBADD) $(LIBS)
+ noatun.la: $(noatun_la_OBJECTS) $(noatun_la_DEPENDENCIES) 
+ 	$(CXXLINK) -rpath $(kde_moduledir) $(noatun_la_LDFLAGS) $(noatun_la_OBJECTS) $(noatun_la_LIBADD) $(LIBS)
+ install-binPROGRAMS: $(bin_PROGRAMS)
+@@ -501,10 +532,11 @@
+ distclean-compile:
+ 	-rm -f *.tab.c
+ 
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/joinhandler.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/main.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/noatun20update.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/noatun_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/noatun_main.Po@am__quote@
+ 
+ distclean-depend:
+ 	-rm -rf $(DEPDIR)
+@@ -674,7 +706,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=avideoframe.cc hi22-app-noatun.png hi48-app-noatun.png noatun.desktop hi32-app-noatun.png preset.dance CHANGES preset.jazz FILES preset.metal hi16-app-noatun.png preset.trance joinhandler.h noatun.upd configure.in.in avideoframe.h preset.zero artsvideo.idl 
++KDE_DIST=preset.trance artsvideo.idl joinhandler.h CHANGES avideoframe.cc noatun.upd configure.in.in preset.jazz hi22-app-noatun.png noatun hi48-app-noatun.png noatun.desktop FILES avideoframe.h preset.metal joinhandler.kidl hi16-app-noatun.png noatun20update preset.zero hi32-app-noatun.png preset.dance dummy.cpp 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -714,9 +746,11 @@
+ check-am: all-am
+ check: check-recursive
+ all-am: Makefile $(LTLIBRARIES) $(PROGRAMS) $(DATA)
++install-binPROGRAMS: install-libLTLIBRARIES
++
+ installdirs: installdirs-recursive
+ installdirs-am:
+-	$(mkinstalldirs) $(DESTDIR)$(kde_moduledir) $(DESTDIR)$(bindir) $(DESTDIR)$(updatedir) $(DESTDIR)$(applnkdir) $(DESTDIR)$(presetsdir) $(DESTDIR)$(updatedir)
++	$(mkinstalldirs) $(DESTDIR)$(kde_moduledir) $(DESTDIR)$(libdir) $(DESTDIR)$(bindir) $(DESTDIR)$(updatedir) $(DESTDIR)$(applnkdir) $(DESTDIR)$(presetsdir) $(DESTDIR)$(updatedir)
+ 
+ install: install-recursive
+ install-exec: install-exec-recursive
+@@ -734,7 +768,6 @@
+ mostlyclean-generic:
+ 
+ clean-generic:
+-	-test -z "$(CLEANFILES)" || rm -f $(CLEANFILES)
+ 
+ distclean-generic:
+ 	-rm -f Makefile $(CONFIG_CLEAN_FILES) stamp-h stamp-h[0-9]*
+@@ -747,10 +780,12 @@
+ clean: kde-rpo-clean  clean-recursive
+ 
+ #>- clean-am: clean-binPROGRAMS clean-generic clean-kde_moduleLTLIBRARIES \
+-#>- clean-libtool clean-updatePROGRAMS mostlyclean-am
+-#>+ 2
++#>- clean-libLTLIBRARIES clean-libtool clean-updatePROGRAMS \
++#>- mostlyclean-am
++#>+ 3
+ clean-am: clean-idl clean-final  clean-binPROGRAMS clean-generic clean-kde_moduleLTLIBRARIES \
+-	clean-libtool clean-updatePROGRAMS mostlyclean-am
++	clean-libLTLIBRARIES clean-libtool clean-updatePROGRAMS \
++	mostlyclean-am
+ 
+ distclean: distclean-recursive
+ 
+@@ -773,9 +808,9 @@
+ install-data-am: install-kde-icons  install-applnkDATA \
+ 	install-presetsDATA install-updateDATA install-updatePROGRAMS
+ 
+-#>- install-exec-am: install-binPROGRAMS
++#>- install-exec-am: install-binPROGRAMS install-libLTLIBRARIES
+ #>+ 1
+-install-exec-am: install-kde_moduleLTLIBRARIES install-binPROGRAMS
++install-exec-am: install-kde_moduleLTLIBRARIES install-binPROGRAMS install-libLTLIBRARIES
+ 
+ install-info: install-info-recursive
+ 
+@@ -794,43 +829,42 @@
+ 
+ #>- uninstall-am: uninstall-applnkDATA uninstall-binPROGRAMS \
+ #>- uninstall-info-am uninstall-kde_moduleLTLIBRARIES \
+-#>- uninstall-presetsDATA uninstall-updateDATA \
+-#>- uninstall-updatePROGRAMS
++#>- uninstall-libLTLIBRARIES uninstall-presetsDATA \
++#>- uninstall-updateDATA uninstall-updatePROGRAMS
+ #>+ 4
+ uninstall-am: uninstall-kde-icons  uninstall-applnkDATA uninstall-binPROGRAMS \
+ 	uninstall-info-am uninstall-kde_moduleLTLIBRARIES \
+-	uninstall-presetsDATA uninstall-updateDATA \
+-	uninstall-updatePROGRAMS
++	uninstall-libLTLIBRARIES uninstall-presetsDATA \
++	uninstall-updateDATA uninstall-updatePROGRAMS
+ 
+ uninstall-info: uninstall-info-recursive
+ 
+ .PHONY: $(RECURSIVE_TARGETS) GTAGS all all-am check check-am clean \
+ 	clean-binPROGRAMS clean-generic clean-kde_moduleLTLIBRARIES \
+-	clean-libtool clean-recursive clean-updatePROGRAMS distclean \
+-	distclean-compile distclean-depend distclean-generic \
+-	distclean-libtool distclean-recursive distclean-tags distdir \
+-	dvi dvi-am dvi-recursive info info-am info-recursive install \
+-	install-am install-applnkDATA install-binPROGRAMS install-data \
++	clean-libLTLIBRARIES clean-libtool clean-recursive \
++	clean-updatePROGRAMS distclean distclean-compile \
++	distclean-depend distclean-generic distclean-libtool \
++	distclean-recursive distclean-tags distdir dvi dvi-am \
++	dvi-recursive info info-am info-recursive install install-am \
++	install-applnkDATA install-binPROGRAMS install-data \
+ 	install-data-am install-data-recursive install-exec \
+ 	install-exec-am install-exec-recursive install-info \
+ 	install-info-am install-info-recursive \
+-	install-kde_moduleLTLIBRARIES install-man install-presetsDATA \
+-	install-recursive install-strip install-updateDATA \
+-	install-updatePROGRAMS installcheck installcheck-am installdirs \
+-	installdirs-am installdirs-recursive maintainer-clean \
+-	maintainer-clean-generic maintainer-clean-recursive mostlyclean \
+-	mostlyclean-compile mostlyclean-generic mostlyclean-libtool \
+-	mostlyclean-recursive tags tags-recursive uninstall \
+-	uninstall-am uninstall-applnkDATA uninstall-binPROGRAMS \
+-	uninstall-info-am uninstall-info-recursive \
+-	uninstall-kde_moduleLTLIBRARIES uninstall-presetsDATA \
++	install-kde_moduleLTLIBRARIES install-libLTLIBRARIES \
++	install-man install-presetsDATA install-recursive install-strip \
++	install-updateDATA install-updatePROGRAMS installcheck \
++	installcheck-am installdirs installdirs-am \
++	installdirs-recursive maintainer-clean maintainer-clean-generic \
++	maintainer-clean-recursive mostlyclean mostlyclean-compile \
++	mostlyclean-generic mostlyclean-libtool mostlyclean-recursive \
++	tags tags-recursive uninstall uninstall-am uninstall-applnkDATA \
++	uninstall-binPROGRAMS uninstall-info-am \
++	uninstall-info-recursive uninstall-kde_moduleLTLIBRARIES \
++	uninstall-libLTLIBRARIES uninstall-presetsDATA \
+ 	uninstall-recursive uninstall-updateDATA \
+ 	uninstall-updatePROGRAMS
+ 
+ 
+-dummy.cpp:
+-	echo > dummy.cpp
+-
+ messages:
+ 	$(EXTRACTRC) `find . -name "*.rc"` > rc.cpp
+ 	$(XGETTEXT) rc.cpp `find . -name "*.cc" -o -name "*.cpp" -print` -o $(podir)/noatun.pot
+@@ -877,11 +911,23 @@
+ 
+ 
+ #>+ 11
+-noatun_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/joinhandler.cpp joinhandler_skel.cpp  
++libnoatun_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/joinhandler.cpp $(srcdir)/joinhandler_skel.cpp  
++	@echo 'creating libnoatun_main_la.all_cpp.cpp ...'; \
++	rm -f libnoatun_main_la.all_cpp.files libnoatun_main_la.all_cpp.final; \
++	echo "#define KDE_USE_FINAL 1" >> libnoatun_main_la.all_cpp.final; \
++	for file in main.cpp joinhandler.cpp joinhandler_skel.cpp ; do \
++	  echo "#include \"$$file\"" >> libnoatun_main_la.all_cpp.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libnoatun_main_la.all_cpp.final; \
++	done; \
++	cat libnoatun_main_la.all_cpp.final libnoatun_main_la.all_cpp.files  > libnoatun_main_la.all_cpp.cpp; \
++	rm -f libnoatun_main_la.all_cpp.final libnoatun_main_la.all_cpp.files
++
++#>+ 11
++noatun_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/noatun_main.cpp  
+ 	@echo 'creating noatun_la.all_cpp.cpp ...'; \
+ 	rm -f noatun_la.all_cpp.files noatun_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> noatun_la.all_cpp.final; \
+-	for file in main.cpp joinhandler.cpp joinhandler_skel.cpp ; do \
++	for file in noatun_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> noatun_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> noatun_la.all_cpp.final; \
+ 	done; \
+@@ -889,11 +935,11 @@
+ 	rm -f noatun_la.all_cpp.final noatun_la.all_cpp.files
+ 
+ #>+ 11
+-noatun.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
++noatun.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/noatun_main.cpp  
+ 	@echo 'creating noatun.all_cpp.cpp ...'; \
+ 	rm -f noatun.all_cpp.files noatun.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> noatun.all_cpp.final; \
+-	for file in dummy.cpp ; do \
++	for file in noatun_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> noatun.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> noatun.all_cpp.final; \
+ 	done; \
+@@ -914,20 +960,20 @@
+ 
+ #>+ 3
+ clean-final:
+-	-rm -f noatun_la.all_cpp.cpp noatun.all_cpp.cpp noatun20update.all_cpp.cpp
++	-rm -f libnoatun_main_la.all_cpp.cpp noatun_la.all_cpp.cpp noatun.all_cpp.cpp noatun20update.all_cpp.cpp
+ 
+ #>+ 2
+ final:
+-	$(MAKE) noatun_la_OBJECTS="$(noatun_la_final_OBJECTS)" all-am
++	$(MAKE) libnoatun_main_la_OBJECTS="$(libnoatun_main_la_final_OBJECTS)" all-am
+ #>+ 2
+ final-install:
+-	$(MAKE) noatun_la_OBJECTS="$(noatun_la_final_OBJECTS)" install-am
++	$(MAKE) libnoatun_main_la_OBJECTS="$(libnoatun_main_la_final_OBJECTS)" install-am
+ #>+ 2
+ no-final:
+-	$(MAKE) noatun_la_OBJECTS="$(noatun_la_nofinal_OBJECTS)" all-am
++	$(MAKE) libnoatun_main_la_OBJECTS="$(libnoatun_main_la_nofinal_OBJECTS)" all-am
+ #>+ 2
+ no-final-install:
+-	$(MAKE) noatun_la_OBJECTS="$(noatun_la_nofinal_OBJECTS)" install-am
++	$(MAKE) libnoatun_main_la_OBJECTS="$(libnoatun_main_la_nofinal_OBJECTS)" install-am
+ #>+ 3
+ cvs-clean:
+ 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean
