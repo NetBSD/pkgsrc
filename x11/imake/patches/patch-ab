@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/01/24 08:43:27 xtraeme Exp $
+
+--- include/Imakefile.orig	2003-07-03 14:43:15.000000000 +0200
++++ include/Imakefile	2003-07-03 14:44:23.000000000 +0200
+@@ -15,7 +15,7 @@
+ DPSDIR = DPS
+ #endif
+ 
+-SUBDIRS = bitmaps extensions fonts $(GLXDIR) $(DPSDIR)
++SUBDIRS = 
+ 
+ #ifdef Win32Architecture
+ EXTRA_HEADERS = Xw32defs.h Xwinsock.h
+@@ -50,9 +50,6 @@
+ 
+ BuildIncludes($(HEADERS),X11,..)
+ 
+-#if BuildLibraries
+-InstallMultipleFlags($(HEADERS),$(INCDIR)/X11,$(INSTINCFLAGS))
+-#endif
+ MakeSubdirs($(SUBDIRS))
+ DependSubdirs($(SUBDIRS))
+ 
