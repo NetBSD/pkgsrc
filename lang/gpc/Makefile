@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:41:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/10 18:54:53 wiz Exp $
 
 DISTNAME=		gpc-2.1
+PKGREVISION=		1
 WRKSRC=			${WRKDIR}/gcc-2.95.3
 CATEGORIES=		lang
 MASTER_SITES=		http://www.gnu-pascal.de/current/ \
@@ -15,7 +16,7 @@ COMMENT=		GNU Pascal Compiler
 PATCH_SITES=		${MASTER_SITE_LOCAL}
 PATCHFILES=		gcc-2.95.3-diff-2002-08-29.gz
 
-DEPENDS+=		gcc-2.95.3:../../lang/gcc
+DEPENDS+=		gcc-2.95.3nb1:../../lang/gcc
 DEPENDS+=		gmp-[0-9]*:../../devel/gmp
 DEPENDS+=		ncurses-[0-9]*:../../devel/ncurses
 DEPENDS+=		rx-[0-9]*:../../devel/rx
