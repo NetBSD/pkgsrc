@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2004/09/27 11:04:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2004/10/05 12:07:31 adam Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/Wand-config
@@ -112,6 +112,7 @@ lib/libWand.la
 lib/pkgconfig/ImageMagick++.pc
 lib/pkgconfig/ImageMagick.pc
 lib/pkgconfig/Wand.pc
+man/man1/ImageMagick.1
 man/man1/Magick++-config.1
 man/man1/Magick-config.1
 man/man1/Wand-config.1
