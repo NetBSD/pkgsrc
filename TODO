@@ -1,34 +1,43 @@
-$NetBSD: TODO,v 1.5 2001/05/04 13:27:42 skrll Exp $
+$NetBSD: TODO,v 1.6 2001/05/04 14:38:06 wiz Exp $
 
 This file will eventually hold a current 'TODO' list for people
 working on pkgsrc.
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
-    compat_solaris8	Solaris and Intel compat libraries
-    http://www.sun.com/software/solaris/binaries/download.html
+	compat_solaris8
+	Solaris and Intel compat libraries
+	http://www.sun.com/software/solaris/binaries/download.html
 
-    figfonts		More fonts for figlet
-    ftp://ftp.plig.org/pub/figlet/fonts/contributed/
+	figfonts
+	More fonts for figlet
+	ftp://ftp.plig.org/pub/figlet/fonts/contributed/
 
-    kde-i18n		Internationalisation package for KDE 2.
-    ftp://ftp.kde.org/pub/kde/stable/2.1/distribution/tar/generic/src
+	kde-i18n
+	Internationalisation package for KDE 2.
+	ftp://ftp.kde.org/pub/kde/stable/2.1/distribution/tar/generic/src
 
-    qmail		SECURE, reliable, efficient, simple, and FAST MTA for UNIX systems
-    http://www.qmail.org/
-		zuntum already has pkg for this one, but it needs to be fixed first
+	qmail
+	secure, reliable, efficient, simple, and fast MTA for UNIX systems
+	http://www.qmail.org/
+	zuntum already has pkg for this one, but it needs to be fixed first
 
-    sp			very simple divx player, it depends on graphics/avifile
-    http://zuntum.net/sp.tar.gz
-		zuntum will take care of that.
+	sp
+	very simple divx player, it depends on graphics/avifile
+	http://zuntum.net/sp.tar.gz
+	zuntum will take care of that.
 
-    SquirrelMail plugins
-			SquirrelMail has a plugings features and several plugins exist.
-    http://www.squirrelmail.org/index.php3?page=15
+	squirm
+	fast and configurable redirector for Squid
+	http://squirm.foote.com.au/
+
+	SquirrelMail plugins
+	SquirrelMail has a plugings features and several plugins exist.
+	http://www.squirrelmail.org/index.php3?page=15
 
 
-packages TODO (Suggested package updates)
-^^^^^^^^^^^^^
+package update TODO (Suggested package updates)
+^^^^^^^^^^^^^^^^^^^
 	o update www/ap-php4 to 4.0.5
 	o update sysutils/lsof to 4.56
 	o update IPv6 patch in net/wget to 20010418
@@ -39,9 +48,9 @@ packages TODO (Suggested package updates)
 pksgrc TODO (Suggested pkgsrc features and enhancements)
 ^^^^^^^^^^^
 
-     o	Add a default test target to mk/*.mk and override it in any pkgs
-	that have testsuites. Use it in bulk builds/test.
+	o Add a default test target to mk/*.mk and override it in any pkgs
+	  that have testsuites. Use it in bulk builds/test.
 
-     o	Add a USE_PTHREADS variable with ALT_PTHREADS override.
+	o Add a USE_PTHREADS variable with ALT_PTHREADS override.
 
-     o	Add a sort check to pkglint for PLISTs
+	o Add a sort check to pkglint for PLISTs.
