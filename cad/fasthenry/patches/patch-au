@@ -1,0 +1,13 @@
+$NetBSD: patch-au,v 1.1 2004/05/07 01:44:45 danw Exp $
+
+--- src/fasthenry/hole.c.orig	Sun May  2 21:40:28 2004
++++ src/fasthenry/hole.c
+@@ -4,7 +4,7 @@
+ #include <stdio.h>
+ #include <ctype.h>
+ #include <string.h>
+-#include <malloc.h>
++#include <stdlib.h>
+ #include <math.h>
+ #include "induct.h"
+ 
