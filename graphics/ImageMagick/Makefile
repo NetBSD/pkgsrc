@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 1999/10/08 21:12:48 jlam Exp $
+# $NetBSD: Makefile,v 1.52 1999/11/19 11:53:00 agc Exp $
 
 DISTNAME=	ImageMagick-4.2.9
 CATEGORIES=	graphics
@@ -17,6 +17,8 @@ MIRROR_DISTFILE= no
 USE_LIBTOOL=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes
+
+PATCH_FUZZ_FACTOR=2
 
 # Avoid compiler bug on "arm32"
 .if (${MACHINE_ARCH} == arm32)
