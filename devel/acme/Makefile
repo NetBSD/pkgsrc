@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/10/29 18:30:30 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2001/12/05 15:00:44 agc Exp $
 #
 
 DISTNAME=	acme085_linux
@@ -30,6 +30,6 @@ do-install:
 	${INSTALL_DATA} ${WRKTOP}/docs/* ${PREFIX}/share/doc/acme
 	${INSTALL_DATA_DIR} ${ACME_LIB}
 	cd ${WRKDIR}/ACME_Lib && ${PAX} -rw . ${ACME_LIB}
-	${CHOWN} -R root:wheel ${ACME_LIB}
+	${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} ${ACME_LIB}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/09/27 23:18:26 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2001/12/05 15:00:47 agc Exp $
 #
 
 DISTNAME=		arla-0.35.5
@@ -57,7 +57,7 @@ post-install:
 		${ECHO} "Creating arla cache directory ${CACHEDIR}";          \
 		${INSTALL_DATA_DIR} ${CACHEDIR};                              \
 		${CHMOD} 700 ${CACHEDIR};                                     \
-		${CHOWN} root ${CACHEDIR};                                    \
+		${CHOWN} ${ROOT_USER} ${CACHEDIR};                                    \
 	fi
 	@if [ -e /sbin/mount_xfs ]; then                                      \
 		${ECHO} "/sbin/mount_xfs already exists";                     \

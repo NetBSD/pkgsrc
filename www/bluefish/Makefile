@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/09/27 23:18:52 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2001/12/05 15:00:48 agc Exp $
 
 DISTNAME=	bluefish-0.6
 CATEGORIES=	www
@@ -35,7 +35,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${HTMLDIR}
 	${CP} -R ${WRKSRC}/manual/* ${HTMLDIR}
 	@${ECHO} Setting permissions on HTML documentation...
-	${CHOWN} -R root.wheel ${HTMLDIR}
+	${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} ${HTMLDIR}
 	${FIND} ${HTMLDIR} -type d -exec ${CHMOD} 555 {} \;
 	${FIND} ${HTMLDIR} -type f -exec ${CHMOD} 444 {} \;
 

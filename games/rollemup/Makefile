@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/02/16 15:10:58 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2001/12/05 15:00:46 agc Exp $
 #
 
 DISTNAME=	Rollemup
@@ -61,9 +61,9 @@ do-install:
 	  for DIR in `${FIND} ${GAMES_DIR}/Rollemup -type d | sort -r`; do \
 	    ${ECHO} "@dirrm $$DIR" >> ${PLIST_SRC}; \
 	  done)
-	@${CHOWN} root:games ${PREFIX}/bin/Rollemup
+	@${CHOWN} ${ROOT_USER}:games ${PREFIX}/bin/Rollemup
 	@${CHMOD} 2755 ${PREFIX}/bin/Rollemup
-	@${CHOWN} -R root:games ${PREFIX}/${GAMES_DIR}/Rollemup
+	@${CHOWN} -R ${ROOT_USER}:games ${PREFIX}/${GAMES_DIR}/Rollemup
 	@${CHMOD} 775 ${PREFIX}/${GAMES_DIR}/Rollemup/Games
 	@${CHMOD} 775 ${PREFIX}/${GAMES_DIR}/Rollemup/Upload
 	@${CHMOD} 664 ${PREFIX}/${GAMES_DIR}/Rollemup/Rollemup.ini

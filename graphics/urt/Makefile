@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/11/24 08:55:20 tron Exp $
+# $NetBSD: Makefile,v 1.23 2001/12/05 15:00:46 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/02/11 08:48:26 tg Exp
 
 DISTNAME=	urt
@@ -41,7 +41,7 @@ post-install:
 	    ${RM} -rf doc)
 	cd ${PREFIX}/share/examples/urt && (\
 	    ${GTAR} xf ${DISTDIR}/urt-img.tar; \
-	    ${CHOWN} -R root:wheel . ; \
+	    ${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} . ; \
 	    ${FIND} . -type d -exec ${CHMOD} 755 '{}' \; ; \
 	    ${FIND} . -type f -exec ${CHMOD} 644 '{}' \;)
 

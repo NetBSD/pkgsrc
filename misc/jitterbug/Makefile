@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/04/09 11:45:35 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2001/12/05 15:00:47 agc Exp $
 
 DISTNAME=	jitterbug-1.6.2
 WRKSRC=		${WRKDIR}/${PKGNAME}/source
@@ -201,10 +201,10 @@ do-install:
 		${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644             \
 		${CONFIGDIR}/users ${PREFIX}/${JB_DATADIR}
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/${CGIBINDIR}
-	${INSTALL} -c -o root -g nobody -m 4710                               \
+	${INSTALL} -c -o ${ROOT_USER} -g nobody -m 4710                               \
 		${WRKSRC}/jitterbug ${PREFIX}/${CGIBINDIR}/${JB_PACKAGE}
 	${LN} -f ${PREFIX}/${CGIBINDIR}/${JB_PACKAGE} ${PREFIX}/${CGIBINDIR}/${JB_PACKAGE}.private
-	${CHOWN} root ${PREFIX}/${CGIBINDIR}/${JB_PACKAGE}.private
+	${CHOWN} ${ROOT_USER} ${PREFIX}/${CGIBINDIR}/${JB_PACKAGE}.private
 	${CHGRP} nobody ${PREFIX}/${CGIBINDIR}/${JB_PACKAGE}.private
 	${CHMOD} 4710 ${PREFIX}/${CGIBINDIR}/${JB_PACKAGE}.private
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/${JB_USER}/bin
