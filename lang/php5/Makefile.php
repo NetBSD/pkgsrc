@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.3 2004/12/27 20:20:23 jdolecek Exp $
+# $NetBSD: Makefile.php,v 1.4 2005/01/04 13:50:00 manu Exp $
 #
 
 .include "../../lang/php5/Makefile.common"
@@ -19,9 +19,9 @@ PLIST_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR}
 
 CONFIGURE_ARGS+=	--with-config-file-path=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-regex=system
+CONFIGURE_ARGS+=	--with-sqlite
 
 CONFIGURE_ARGS+=	--without-mysql
-CONFIGURE_ARGS+=	--without-sqlite
 CONFIGURE_ARGS+=	--without-iconv
 
 CONFIGURE_ARGS+=	--enable-discard-path
