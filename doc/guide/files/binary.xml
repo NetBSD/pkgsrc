@@ -1,4 +1,4 @@
-<!-- $NetBSD: binary.xml,v 1.3 2005/01/05 14:11:07 agc Exp $ -->
+<!-- $NetBSD: binary.xml,v 1.4 2005/01/05 14:16:59 agc Exp $ -->
 
 <chapter id="binary">
   <title>Creating binary packages</title>
@@ -245,8 +245,8 @@ fi</programlisting>
 	environment using null mounts. It will also create a script
 	called <filename>sandbox</filename> in the root of the sandbox
 	environment, which will allow the null mounts to be activated
-	using the <command>sandbox mount</command> and deactivated using
-	the <command>sandbox umount</command>.</para>
+	using the <command>sandbox mount</command> command and deactivated using
+	the <command>sandbox umount</command> command.</para>
 
       <para>To set up a sandbox environment by hand,
 	after extracting all the sets from a &os; installation or doing a
