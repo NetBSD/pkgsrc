@@ -1,13 +1,8 @@
-$NetBSD: patch-af,v 1.1 2003/03/06 23:50:53 jmc Exp $
+$NetBSD: patch-af,v 1.2 2004/03/02 16:05:01 adam Exp $
 
---- ./vacall/Makefile.in.orig	Thu Mar  6 23:13:48 2003
-+++ ./vacall/Makefile.in	Thu Mar  6 23:14:07 2003
-@@ -108,11 +108,11 @@
- 	case "$(OS)" in \
- 	  aix3*) syntax=aix.old;; \
- 	  aix*) syntax=aix.new;; \
--	  linux*) syntax=linux;; \
-+	  linux* | netbsd*) syntax=linux;; \
+--- vacall/Makefile.in.orig	2004-01-25 13:46:00.000000000 +0000
++++ vacall/Makefile.in
+@@ -116,7 +116,7 @@ vacall-rs6000.o : $(srcdir)/vacall-rs600
  	  *) syntax=sysv4;; \
  	esac; \
  	$(CC) @GCC_X_NONE@ -c $(srcdir)/vacall-rs6000-$${syntax}.s ; \
