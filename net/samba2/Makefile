@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/11/27 12:48:26 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 1998/12/11 12:05:44 bouyer Exp $
 
-DISTNAME=	samba-2.0.0beta2
+DISTNAME=	samba-2.0.0beta3
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.samba.org/pub/samba/beta/
 
 MAINTAINER=	bouyer@netbsd.org
 HOMEPAGE=	http://www.samba.org/
 
-CONFLICTS=      samba-1.9.18p8 samba-1.9.18p10
+CONFLICTS=      samba-1.9.18p8 samba-1.9.18p10 samba-2.0.0beta2
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/source
 GNU_CONFIGURE=	yes
@@ -21,7 +21,7 @@ SAMBA_LOCKDIR=	/var/run/samba
 SAMBA_ETCDIR?=	/etc/samba
 SAMBA_PRIVATE?=	${SAMBA_ETCDIR}/private
 
-MAKE_ENV+=	ETCDIR=${SAMBA_ETCDIR} PRIVDIR=${SAMBA_PRIVATE}
+MAKE_ENV+=	ETCDIR=${SAMBA_ETCDIR} PRIVATEDIR=${SAMBA_PRIVATE}
 MAKE_ENV+=	LOGDIR=${SAMBA_LOGDIR} LOCKDIR=${SAMBA_LOCKDIR}
 
 PLIST_SRC= ${WRKDIR}/.PLIST-src
