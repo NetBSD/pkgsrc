@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6249 2004/06/20 21:05:02 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6250 2004/06/20 21:27:38 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2982,3 +2982,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added tunesbrowser-0.1.5 [agc 2004-06-20]
 	Updated grub to 0.95 [xtraeme 2004-06-20]
 	Updated msmtp to 1.0.0 [xtraeme 2004-06-20]
+	Updated gdm to 2.6.0.3 [jmmv 2004-06-20]
