@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2004/01/23 21:50:50 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/23 21:55:48 jmmv Exp $
 # FreeBSD Id: ports/www/swish-e/Makefile,v 1.3 1999/08/31 02:43:18 peter Exp
 
-DISTNAME=       swish-e-2.4.1
-PKGREVISION=     1
-CATEGORIES=     www textproc
+DISTNAME=	swish-e-2.4.1
+PKGREVISION=	1
+CATEGORIES=	www textproc
 MASTER_SITES=	http://swish-e.org/Download/
 
 MAINTAINER=	dotz@irc.pl
@@ -12,13 +12,13 @@ COMMENT= 	Simple web indexing for humans - enhanced
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-LIBTOOL_OVERRIDE=   ${WRKSRC}/libtool
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-CONFIGURE_ARGS+=    --with-libxml2=${BUILDLINK_PREFIX.libxml2}
-CONFIGURE_ARGS+=    --with-pcre=${BUILDLINK_PREFIX.pcre}
-CONFIGURE_ARGS+=    --with-zlib=${BUILDLINK_PREFIX.zlib}
+CONFIGURE_ARGS+=	--with-libxml2=${BUILDLINK_PREFIX.libxml2}
+CONFIGURE_ARGS+=	--with-pcre=${BUILDLINK_PREFIX.pcre}
+CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 
-REPLACE_PERL=	    prog-bin/*.pl conf/*.pl filter-bin/*.pl html/*.pl
+REPLACE_PERL=		prog-bin/*.pl conf/*.pl filter-bin/*.pl html/*.pl
 
 .include "../../mk/bsd.prefs.mk"
 
