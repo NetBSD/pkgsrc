@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/06/06 05:08:34 schmonz Exp $
+# $NetBSD: Makefile,v 1.20 2004/06/13 10:59:31 schmonz Exp $
 #
 
 DISTNAME=	tmda-1.0.3
@@ -79,6 +79,9 @@ do-install:
 
 	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}/img
 	${INSTALL_DATA} ${WRKSRC}/htdocs/img/*.png ${PREFIX}/${HTMLDIR}/img
+
+post-install:
+	${PREFIX}/bin/tmda-ofmipd -V >/dev/null 2>&1
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
