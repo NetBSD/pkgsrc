@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.92 2002/10/03 20:30:21 jlam Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.93 2002/10/07 14:55:08 hubertf Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -591,6 +591,12 @@ GAWK_ENABLE_PORTALS?=	NO
 # `/p/' as a 4.4 BSD type portal file, i.e., a two-way pipe for `|&'.
 # Possible: YES, NO
 # Default: NO
+
+GIMP_WITH_HELPBROWSER?=	no
+# Set to "yes" to compile gimp against GNOME libs and get a working
+# help browser. Adds quite some bloat in the form of dependencies.
+# Possible: yes, no
+# Default: no
 
 GMAKE_NSEC_TIMESTAMPS?=	NO
 # Used by GNU make to enable/disable support of micro- and nano-second
