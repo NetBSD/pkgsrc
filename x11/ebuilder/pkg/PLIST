@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/04/28 18:14:02 drochner Exp $
+bin/ebuilder

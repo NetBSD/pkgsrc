@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/04/28 18:14:03 drochner Exp $
+
+--- config.mk.orig	Mon Dec 13 09:47:08 1999
++++ config.mk	Fri Apr 28 20:01:32 2000
+@@ -1,18 +1,20 @@
+ # Your very own favorite C++ compiler
+-CXX = CC
++#CXX = CC
+ 
+ # Additional compiler flags for compiling for debugging/optimization
+ DEBUG = -O
+ 
+ # The location of flex. Not all versions of flex seem to work.
+-FLEX = /usr/local/bin/flex -i -t
++FLEX = flex -i -t
+ FLEXLIB = -lfl
+ 
+ # The location of your QT installation (if you don't have it in your env)
+ #QTDIR = /usr/local/qt
+ QTINCL = -I$(QTDIR)/include
+ QTCC = $(QTDIR)/bin/moc
+-QTLIBS = -L$(QTDIR)/lib -lqt
++QTLIBS = -L$(QTDIR)/lib -Wl,-R$(QTDIR)/lib -lqt \
++	-L$(X11BASE)/lib -Wl,-R$(X11BASE)/lib -lX11 -lXext -lSM \
++	-L$(PREFIX)/lib -Wl,-R$(PREFIX)/lib -lpng -lz
+ 
+ # Implicit rules needed to build .o files and Metaobject stuff (_m.o)
+ .SUFFIXES: .cc .o .h _m.o
