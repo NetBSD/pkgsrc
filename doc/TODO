@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3268 2005/03/23 05:05:27 jlam Exp $
+$NetBSD: TODO,v 1.3269 2005/03/23 10:25:07 rxg Exp $
 
 Suggested new packages
 ======================
@@ -944,8 +944,6 @@ Suggested package updates
 	o root-4.03.02
 	o root-tail-1.2
 	o rosegarden4-1.0 [replacing audio/rosegarden|pkgsrc-wip]
-	o rox-2.2.0
-	o rox-lib-1.9.17
 	o rox-session-0.1.25
 	o rox-wrappers-1.0.3
 	o roxirc-2.0
