@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2002/10/06 03:02:07 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/11 03:07:36 salo Exp $
+#
 
-DISTNAME=	etherape-0.8.2
-PKGREVISION=	1
+DISTNAME=	etherape-0.9.0
 CATEGORIES=	gnome net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=etherape/}
 
@@ -9,12 +9,26 @@ MAINTAINER=	damon@netbsd.org
 HOMEPAGE=	http://etherape.sourceforge.net/
 COMMENT=	graphical network monitor
 
-USE_GMAKE=		#defined
-USE_X11BASE=		#defined
-USE_BUILDLINK2=		#defined
-HAS_CONFIGURE=		#defined
-CONFIGURE_ARGS+=	--prefix ${PREFIX}
-PLIST_SUBST+=		MKDIR='${MKDIR}'
+USE_GMAKE=		YES
+USE_X11=		YES
+USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
+GNU_CONFIGURE=		YES
 
-.include "../../devel/libglade/buildlink2.mk"
+PKG_SYSCONFSUBDIR=	etherape
+
+# XXX: $localedir defaults to $libdir/locale
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/${PKGLOCALEDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+EGDIR=		${PREFIX}/share/examples/etherape
+
+CONF_FILES=	${EGDIR}/services ${PKG_SYSCONFDIR}/services
+
+post-install:
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/services ${EGDIR}
+
+.include "../../devel/libglade2/buildlink2.mk"
+.include "../../devel/libgnomeui/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
