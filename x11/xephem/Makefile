@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.5 1999/06/29 12:22:16 agc Exp $
+# $NetBSD: Makefile,v 1.6 2000/03/08 12:01:49 agc Exp $
 
-DISTNAME=	xephem-3.1
+DISTNAME=	xephem-3.2.3
 CATEGORIES=	x11
-MASTER_SITES=	ftp://iraf.noao.edu/contrib/xephem/xephem-3.1/ \
-		ftp://gastro23.physics.uiowa.edu/pub/xephem/ \
+MASTER_SITES=	http://www.clearskyinstitute.com/xephem/xephem/ \
+		ftp://iraf.noao.edu/contrib/xephem/ \
+		ftp://star.rl.ac.uk/pub/iraf/contrib/xephem/ \
 		ftp://iphcip1.physik.uni-mainz.de/pub/xephem/ \
-		ftp://wolf.ifj.edu.pl/mirror/xephem/
+		ftp://ecf.hq.eso.org/iraf/contrib/xephem/ \
+		ftp://sinobu.mtk.nao.ac.jp/NOAO/contrib/xephem/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.clearskyinstitute.com/xephem/xephem.html
-
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
+HOMEPAGE=	http://www.clearskyinstitute.com/xephem/
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/GUI/xephem
 LIBSRC=		${WRKDIR}/${DISTNAME}/libastro
@@ -28,24 +28,26 @@ pre-build:
 	@(cd ${LIBSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} \
 		-f ${MAKEFILE} ${ALL_TARGET})
 
-PERL_SCRIPTS= astorb2edb.pl encke2edb.pl yeomans.pl
+PERL_SCRIPTS= astorb2edb.pl mpcorb2edb.pl tle2edb.pl
 
 post-install:
 	@${SED} s,@PREFIX@,${PREFIX}, ${WRKSRC}/XEphem.ad > ${WRKDIR}/XEphem
 	${INSTALL_DATA} ${WRKDIR}/XEphem ${PREFIX}/lib/X11/app-defaults
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/xephem/auxil \
+	@${MKDIR} ${PREFIX}/share/xephem/auxil \
 		${PREFIX}/share/xephem/catalogs \
 		${PREFIX}/share/xephem/tools \
 		${PREFIX}/share/doc/xephem
-	(cd ${WRKSRC}/auxil; ${INSTALL_DATA} README mars_db marsmap.fts \
-		moon.fts moon_db xephem.hlp xephem_sites \
+	(cd ${WRKSRC}/auxil; ${INSTALL_DATA} README jupiter.9910 logo.gif \
+		mars.9910 mars_db marsmap.fts \
+		moon.fts moon_db saturne.9910 uranus.9910 \
+		xephem.hlp xephem_sites \
 		${PREFIX}/share/xephem/auxil)
-	(cd ${WRKSRC}/catalogs; ${INSTALL_DATA} Messier.edb NGC.edb SAC.edb \
-		YBS.edb asteroids.edb comets.edb mir.edb \
+	(cd ${WRKSRC}/catalogs; ${INSTALL_DATA} ISS.edb Messier.edb NGC.edb \
+		SAC.edb YBS.edb asteroids.edb comets.edb hickson.edb \
 		${PREFIX}/share/xephem/catalogs)
-	(cd ${WRKSRC}/tools; ${INSTALL_DATA} README gps.awk jost2edb.nawk \
+	(cd ${WRKSRC}/tools; ${INSTALL_DATA} README \
 			${PREFIX}/share/xephem/tools; \
-		${INSTALL_SCRIPT} extract.awk tle2edb.awk \
+		${INSTALL_SCRIPT} extract.awk jost2edb.awk\
 			${PREFIX}/share/xephem/tools)
 	@(cd ${WRKSRC}/tools; for file in ${PERL_SCRIPTS}; do \
 		${SED} 1s,@LOCALBASE@,${LOCALBASE}, $$file \
