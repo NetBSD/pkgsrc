@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2004/05/08 00:27:16 xtraeme Exp $
+# $NetBSD: Makefile,v 1.64 2004/05/08 00:32:13 xtraeme Exp $
 #
 
 DISTNAME=	gdm-2.6.0.2
@@ -70,6 +70,8 @@ SUBST_SED.desktop+=	-e 's|@GDMGRP@|${GDMGRP}|g'
 
 .include "../../mk/bsd.prefs.mk"
 
+BUILD_DEFS+=		USE_INET6
+
 .if ${OPSYS} == "SunOS"
 CFLAGS+=	-DSunOS
 GDMOWN=		daemon
@@ -77,6 +79,10 @@ GDMGRP=		other
 .else
 GDMOWN=		daemon
 GDMGRP=		daemon
+.endif
+
+.if !empty(USE_INET6:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
 .if ${OPSYS} == "NetBSD"
