@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3748 2003/10/28 00:51:26 grant Exp $
+$NetBSD: CHANGES,v 1.3749 2003/10/28 12:36:46 cube Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4263,3 +4263,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated slrn to 0.9.8.0 [cube 2003-10-27]
 	Updated vcdimager-devel to 0.7.12nb2 [wiz 2003-10-28]
 	Updated nas to 1.6nb3 [grant 2003-10-28]
+	Updated tidy to 20031002 [cube 2003-10-28]
