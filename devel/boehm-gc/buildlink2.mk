@@ -1,4 +1,9 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/02/14 18:50:50 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/05/09 12:53:26 jmmv Exp $
+#
+# This Makefile fragment is included by packages that use boehm-gc.
+#
+# This file was created automatically using createbuildlink 2.6.
+#
 
 .if !defined(BOEHM_GC_BUILDLINK2_MK)
 BOEHM_GC_BUILDLINK2_MK=	# defined
@@ -9,9 +14,7 @@ BUILDLINK_PKGSRCDIR.boehm-gc?=		../../devel/boehm-gc
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.boehm-gc=boehm-gc
 BUILDLINK_PREFIX.boehm-gc_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.boehm-gc+=	include/gc.h
-BUILDLINK_FILES.boehm-gc+=	include/gc_backptr.h
-BUILDLINK_FILES.boehm-gc+=	include/gc_cpp.h
+BUILDLINK_FILES.boehm-gc+=	include/gc/*
 BUILDLINK_FILES.boehm-gc+=	lib/libgc.*
 BUILDLINK_FILES.boehm-gc+=	lib/libleak.*
 
