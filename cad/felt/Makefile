@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/06/28 07:31:36 agc Exp $
+# $NetBSD: Makefile,v 1.19 2002/09/21 06:31:42 jlam Exp $
 
 DISTNAME=		felt-3.05.src
 PKGNAME=		felt-3.05
@@ -13,6 +13,7 @@ COMMENT=		Free system for introductory level finite element analysis
 EXTRACT_ONLY=		felt-3.05.src.tar.gz
 WRKSRC=			${WRKDIR}/FElt-3.05
 
+USE_BUILDLINK2=		# defined
 USE_X11BASE=		# defined
 XAW_TYPE?=		3d
 
@@ -20,10 +21,7 @@ MAKE_ENV+=		CCOPTS="${CFLAGS}"
 MAKE_ENV+=		LDOPTS="${LDFLAGS}"
 MAKE_ENV+=		SH="${SH}"
 
-USE_BUILDLINK_ONLY=	# defined
 USE_GNU_READLINE=	# uses remove_history() and history_list()
-
-.include "../../mk/bsd.prefs.mk"
 
 post-extract:
 	@${GZCAT} ${DISTDIR}/felt-3.05.ps.gz > ${WRKSRC}/felt.ps
@@ -36,7 +34,7 @@ post-install:
 		COPYING CHANGELOG TODO ${PREFIX}/share/doc/felt
 	${INSTALL_DATA} ${WRKSRC}/examples/* ${PREFIX}/share/examples/felt
 
-.include "../../devel/readline/buildlink.mk"
-.include "../../mk/xaw.buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/readline/buildlink2.mk"
+.include "../../mk/xaw.buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
