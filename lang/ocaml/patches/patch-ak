@@ -1,27 +1,32 @@
-$NetBSD: patch-ak,v 1.2 2004/04/22 09:18:37 tron Exp $
+$NetBSD: patch-ak,v 1.3 2005/02/04 21:35:51 adrianp Exp $
 
---- camlp4/etc/Makefile.orig	Fri Jul 19 16:53:45 2002
-+++ camlp4/etc/Makefile	Thu Apr 22 10:34:37 2004
-@@ -52,14 +52,14 @@
+--- camlp4/etc/Makefile.orig	2004-10-14 16:00:16.000000000 +0100
++++ camlp4/etc/Makefile	2004-10-14 16:05:43.000000000 +0100
+@@ -68,18 +68,19 @@
  get_promote:
  
  install:
--	-$(MKDIR) $(LIBDIR)/camlp4 $(BINDIR)
--	cp $(OBJS) $(LIBDIR)/camlp4/.
--	cp $(INTF) $(LIBDIR)/camlp4/.
--	cp lib.sml $(LIBDIR)/camlp4/.
--	cp camlp4o$(EXE) $(BINDIR)/.
--	if test -f $(COPT); then cp $(COPT) $(BINDIR)/.; fi
--	cp mkcamlp4.sh $(BINDIR)/mkcamlp4
--	chmod a+x $(BINDIR)/mkcamlp4
-+	-${BSD_INSTALL_DATA_DIR} $(LIBDIR)/camlp4
-+	-${BSD_INSTALL_PROGRAM_DIR}  $(BINDIR)
-+	${BSD_INSTALL_DATA} $(OBJS) $(LIBDIR)/camlp4/.
-+	${BSD_INSTALL_DATA} $(INTF) $(LIBDIR)/camlp4/.
-+	${BSD_INSTALL_DATA} lib.sml $(LIBDIR)/camlp4/.
-+	${BSD_INSTALL_SCRIPT} camlp4o$(EXE) $(BINDIR)/.
-+	if test -f $(COPT); then ${BSD_INSTALL_PROGRAM} $(COPT) $(BINDIR)/.; fi
-+	${BSD_INSTALL_SCRIPT} mkcamlp4.sh $(BINDIR)/mkcamlp4
+-	-$(MKDIR) "$(LIBDIR)/camlp4" "$(BINDIR)"
+-	cp $(OBJS) "$(LIBDIR)/camlp4/."
+-	cp $(INTF) "$(LIBDIR)/camlp4/."
+-	cp camlp4o$(EXE) "$(BINDIR)/."
++	-${BSD_INSTALL_DATA_DIR} "$(LIBDIR)/camlp4"
++	-${BSD_INSTALL_PROGRAM_DIR} "$(BINDIR)"
++	${BSD_INSTALL_DATA} $(OBJS) "$(LIBDIR)/camlp4/."
++	${BSD_INSTALL_DATA} $(INTF) "$(LIBDIR)/camlp4/."
++	${BSD_INSTALL_SCRIPT} camlp4o$(EXE) "$(BINDIR)/."
+ 	if test -f camlp4o.opt; then \
+-	  cp camlp4o.opt "$(BINDIR)/camlp4o.opt$(EXE)"; \
+-	  cp $(OBJSX) "$(LIBDIR)/camlp4/."; \
++	  ${BSD_INSTALL_SCRIPT} camlp4o.opt "$(BINDIR)/camlp4o.opt$(EXE)"; \
++	  ${BSD_INSTALL_DATA} $(OBJSX) "$(LIBDIR)/camlp4/."; \
+ 	  for file in $(OBJSX); do \
+-	    cp "`echo $$file | sed -e 's/\.cmx$$/.$(O)/'`" "$(LIBDIR)/camlp4/."; \
++	    ${BSD_INSTALL_DATA} "`echo $$file | sed -e 's/\.cmx$$/.$(O)/'`" "$(LIBDIR)/camlp4/."; \
+ 	  done ; \
+ 	fi
+-	cp mkcamlp4.sh "$(BINDIR)/mkcamlp4"
++	${BSD_INSTALL_SCRIPT} mkcamlp4.sh "$(BINDIR)/mkcamlp4"
+ 	chmod a+x "$(BINDIR)/mkcamlp4"
  
- pa_lisp.cmo: pa_lispr.cmo
- pa_ocamllex.cmo: pa_o.cmo
+ pr_extend.cmo: pa_extfun.cmo

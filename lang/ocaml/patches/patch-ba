@@ -1,21 +1,21 @@
-$NetBSD: patch-ba,v 1.2 2004/12/24 17:16:04 jmmv Exp $
+$NetBSD: patch-ba,v 1.3 2005/02/04 21:35:51 adrianp Exp $
 
---- otherlibs/graph/Makefile.orig	2002-06-27 13:36:01.000000000 +0200
-+++ otherlibs/graph/Makefile
-@@ -19,9 +19,9 @@ include ../../config/Makefile
+--- otherlibs/graph/Makefile.orig	2003-08-05 14:39:33.000000000 +0100
++++ otherlibs/graph/Makefile	2005-01-13 16:14:53.000000000 +0000
+@@ -19,9 +19,9 @@
  
  CC=$(BYTECC)
  CFLAGS=-I../../byterun $(X11_INCLUDES) -O $(BYTECCCOMPOPTS) $(SHAREDCCCOMPOPTS)
 -CAMLC=../../ocamlcomp.sh
 -CAMLOPT=../../ocamlcompopt.sh
 -MKLIB=../../boot/ocamlrun ../../tools/ocamlmklib
-+CAMLC=ocamlc
-+CAMLOPT=ocamlopt
-+MKLIB=ocamlmklib
++CAMLC=${PREFIX}/bin/ocamlc
++CAMLOPT=${PREFIX}/bin/ocamlopt
++MKLIB=${PREFIX}/bin/ocamlrun ${PREFIX}/bin/ocamlmklib
  COMPFLAGS=-warn-error A
  
  OBJS=open.o draw.o fill.o color.o text.o \
-@@ -50,13 +50,13 @@ clean: partialclean
+@@ -50,13 +50,13 @@
  	rm -f *.a *.so *.o
  
  install:
@@ -28,7 +28,7 @@ $NetBSD: patch-ba,v 1.2 2004/12/24 17:16:04 jmmv Exp $
 +	${BSD_INSTALL_DATA} graphics.cm[ia] graphicsX11.cmi graphics.mli graphicsX11.mli $(LIBDIR)
  
  installopt:
--	cp graphics.cmxa graphics.a $(LIBDIR)
+-	cp graphics.cmx graphics.cmxa graphics.a $(LIBDIR)
 +	${BSD_INSTALL_DATA} graphics.cmxa graphics.a $(LIBDIR)
  	cd $(LIBDIR); $(RANLIB) graphics.a
  
