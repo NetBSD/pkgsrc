@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/12/04 14:55:59 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2005/01/28 23:35:59 adrianp Exp $
 #
 
 DISTNAME=	xipdump-1.5.4
@@ -11,6 +11,8 @@ MAINTAINER=	sakamoto@NetBSD.org
 COMMENT=	Displays IP packets using X Window System
 
 USE_BUILDLINK3=	YES
+
+BUILDLINK_DEPENDS.libnet+=	libnet<=1.0.1b
 
 LIBNET_CONFIG=	${LOCALBASE}/bin/libnet-config
 
