@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6379 2004/06/28 15:38:55 jmmv Exp $
+$NetBSD: CHANGES,v 1.6380 2004/06/28 17:47:54 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3142,3 +3142,18 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome-themes to 2.6.2 [jmmv 2004-06-28]
 	Updated gnome2-utils to 2.6.2 [jmmv 2004-06-28]
 	Updated gpdf to 0.132 [jmmv 2004-06-28]
+	Updated gst-plugins to 0.8.2 [jmmv 2004-06-28]
+	Updated gst-plugins-artsd to 0.8.2 [jmmv 2004-06-28]
+	Updated gst-plugins-esound to 0.8.2 [jmmv 2004-06-28]
+	Updated gst-plugins-flac to 0.8.2 [jmmv 2004-06-28]
+	Updated gst-plugins-lame to 0.8.2 [jmmv 2004-06-28]
+	Updated gst-plugins-mad to 0.8.2 [jmmv 2004-06-28]
+	Updated gst-plugins-oss to 0.8.2 [jmmv 2004-06-28]
+	Updated gst-plugins-vorbis to 0.8.2 [jmmv 2004-06-28]
+	Updated gst-plugins-png to 0.8.2 [jmmv 2004-06-28]
+	Updated gst-plugins-dvdnav to 0.8.2 [jmmv 2004-06-28]
+	Updated gst-plugins-dvdread to 0.8.2 [jmmv 2004-06-28]
+	Updated gst-plugins-mpeg2dec to 0.8.2 [jmmv 2004-06-28]
+	Updated gst-plugins-ogg to 0.8.2 [jmmv 2004-06-28]
+	Updated gst-plugins-theora to 0.8.2 [jmmv 2004-06-28]
+	Updated gst-plugins-gnomevfs to 0.8.2 [jmmv 2004-06-28]
