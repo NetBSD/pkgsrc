@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/12/14 19:46:25 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/04/01 18:18:00 jmmv Exp $
 bin/activation-client
 bin/bonobo-activation-run-query
 bin/bonobo-slay
@@ -15,6 +15,8 @@ include/bonobo-activation-2.0/bonobo-activation/bonobo-activation-shlib.h
 include/bonobo-activation-2.0/bonobo-activation/bonobo-activation-version.h
 include/bonobo-activation-2.0/bonobo-activation/bonobo-activation.h
 include/libbonobo-2.0/bonobo/Bonobo.h
+include/libbonobo-2.0/bonobo/bonobo-app-client.h
+include/libbonobo-2.0/bonobo/bonobo-application.h
 include/libbonobo-2.0/bonobo/bonobo-arg.h
 include/libbonobo-2.0/bonobo/bonobo-context.h
 include/libbonobo-2.0/bonobo/bonobo-event-source.h
@@ -75,93 +77,9 @@ lib/pkgconfig/libbonobo-2.0.pc
 libexec/bonobo-activation-server
 man/man1/bonobo-activation-server.1
 sbin/bonobo-activation-sysconf
-share/doc/html/bonobo-activation/api-reference.html
-share/doc/html/bonobo-activation/architecture.html
-share/doc/html/bonobo-activation/async-activation.html
-share/doc/html/bonobo-activation/attribute-tag.html
-share/doc/html/bonobo-activation/bonobo-activation-Debugging.html
-share/doc/html/bonobo-activation/bonobo-activation-Initialization.html
-share/doc/html/bonobo-activation/bonobo-activation-Query-and-Activation.html
-share/doc/html/bonobo-activation/bonobo-activation-Registration.html
-share/doc/html/bonobo-activation/bonobo-activation-Utilities.html
-share/doc/html/bonobo-activation/bonobo-activation.devhelp
-share/doc/html/bonobo-activation/bonobo-activation.png
-share/doc/html/bonobo-activation/checklist.html
-share/doc/html/bonobo-activation/configuring.html
-share/doc/html/bonobo-activation/home.png
-share/doc/html/bonobo-activation/index.html
-share/doc/html/bonobo-activation/index.sgml
-share/doc/html/bonobo-activation/left.png
-share/doc/html/bonobo-activation/lgpl.html
-share/doc/html/bonobo-activation/migrating.html
-share/doc/html/bonobo-activation/query-langage.html
-share/doc/html/bonobo-activation/query-syntax.html
-share/doc/html/bonobo-activation/right.png
-share/doc/html/bonobo-activation/server-arch.html
-share/doc/html/bonobo-activation/server-xml-reference.html
-share/doc/html/bonobo-activation/terms.html
-share/doc/html/bonobo-activation/tutorial.html
-share/doc/html/bonobo-activation/up.png
-share/doc/html/libbonobo/debugging.html
-share/doc/html/libbonobo/factories.html
-share/doc/html/libbonobo/general.html
-share/doc/html/libbonobo/home.png
-share/doc/html/libbonobo/index.html
-share/doc/html/libbonobo/index.sgml
-share/doc/html/libbonobo/left.png
-share/doc/html/libbonobo/libbonobo-bonobo-arg.html
-share/doc/html/libbonobo/libbonobo-bonobo-config-database.html
-share/doc/html/libbonobo/libbonobo-bonobo-context.html
-share/doc/html/libbonobo/libbonobo-bonobo-event-source.html
-share/doc/html/libbonobo/libbonobo-bonobo-exception.html
-share/doc/html/libbonobo/libbonobo-bonobo-generic-factory.html
-share/doc/html/libbonobo/libbonobo-bonobo-i18n.html
-share/doc/html/libbonobo/libbonobo-bonobo-item-container.html
-share/doc/html/libbonobo/libbonobo-bonobo-item-handler.html
-share/doc/html/libbonobo/libbonobo-bonobo-listener.html
-share/doc/html/libbonobo/libbonobo-bonobo-main.html
-share/doc/html/libbonobo/libbonobo-bonobo-moniker-context.html
-share/doc/html/libbonobo/libbonobo-bonobo-moniker-extender.html
-share/doc/html/libbonobo/libbonobo-bonobo-moniker-simple.html
-share/doc/html/libbonobo/libbonobo-bonobo-moniker-util.html
-share/doc/html/libbonobo/libbonobo-bonobo-moniker.html
-share/doc/html/libbonobo/libbonobo-bonobo-object.html
-share/doc/html/libbonobo/libbonobo-bonobo-persist-client.html
-share/doc/html/libbonobo/libbonobo-bonobo-persist-file.html
-share/doc/html/libbonobo/libbonobo-bonobo-persist-stream.html
-share/doc/html/libbonobo/libbonobo-bonobo-persist.html
-share/doc/html/libbonobo/libbonobo-bonobo-property-bag-client.html
-share/doc/html/libbonobo/libbonobo-bonobo-property-bag.html
-share/doc/html/libbonobo/libbonobo-bonobo-running-context.html
-share/doc/html/libbonobo/libbonobo-bonobo-shlib-factory.html
-share/doc/html/libbonobo/libbonobo-bonobo-shutdown.html
-share/doc/html/libbonobo/libbonobo-bonobo-storage-memory.html
-share/doc/html/libbonobo/libbonobo-bonobo-storage.html
-share/doc/html/libbonobo/libbonobo-bonobo-stream-client.html
-share/doc/html/libbonobo/libbonobo-bonobo-stream-memory.html
-share/doc/html/libbonobo/libbonobo-bonobo-types.html
-share/doc/html/libbonobo/libbonobo-faq.html
-share/doc/html/libbonobo/libbonobo.devhelp
-share/doc/html/libbonobo/misc.html
-share/doc/html/libbonobo/monikers-overview.html
-share/doc/html/libbonobo/monikers.html
-share/doc/html/libbonobo/persist-file.png
-share/doc/html/libbonobo/persist-storage.png
-share/doc/html/libbonobo/persist-stream.png
-share/doc/html/libbonobo/persist.html
-share/doc/html/libbonobo/persist.png
-share/doc/html/libbonobo/properties.html
-share/doc/html/libbonobo/property-bags.html
-share/doc/html/libbonobo/refcounting.html
-share/doc/html/libbonobo/right.png
-share/doc/html/libbonobo/running-context.png
-share/doc/html/libbonobo/storage.png
-share/doc/html/libbonobo/stream.png
-share/doc/html/libbonobo/streams.html
-share/doc/html/libbonobo/unknown.png
-share/doc/html/libbonobo/up.png
 share/examples/bonobo-activation/bonobo-activation-config.xml
 share/idl/bonobo-2.0/Bonobo.idl
+share/idl/bonobo-2.0/Bonobo_Application.idl
 share/idl/bonobo-2.0/Bonobo_Canvas.idl
 share/idl/bonobo-2.0/Bonobo_Clipboard.idl
 share/idl/bonobo-2.0/Bonobo_Context.idl
@@ -205,6 +123,7 @@ ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/libbonobo-2.0.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/libbonobo-2.0.mo
@@ -244,7 +163,9 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/libbonobo-2.0.mo
 @dirrm share/idl/bonobo-2.0
 @comment in ORBit2: @dirrm share/idl
 @dirrm share/examples/bonobo-activation
+@exec ${MKDIR} %D/share/doc/html/libbonobo
 @dirrm share/doc/html/libbonobo
+@exec ${MKDIR} %D/share/doc/html/bonobo-activation
 @dirrm share/doc/html/bonobo-activation
 @comment in ORBit2: @dirrm lib/orbit-2.0
 @dirrm lib/bonobo/servers
