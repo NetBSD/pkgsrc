@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/07/02 08:46:52 agc Exp $
+# $NetBSD: Makefile,v 1.4 2000/12/05 15:47:23 veego Exp $
 #
 
 DISTNAME=		libpcap-0.4
@@ -12,7 +12,7 @@ GNU_CONFIGURE=		yes
 
 ONLY_FOR_PLATFORM=	SunOS-*-*	# in NetBSD base system
 
-INSTALL_TARGET+=	install-incl install-man
+INSTALL_TARGET=		install install-incl install-man
 
 pre-install:
 	-${MKDIR} ${LOCALBASE}/include/net
