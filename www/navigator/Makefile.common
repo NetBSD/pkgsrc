@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.61 2003/02/07 13:37:35 tron Exp $
+# $NetBSD: Makefile.common,v 1.62 2003/05/31 14:34:29 wiz Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -117,7 +117,7 @@ MASTER_SITES=	ftp://ftp.riken.go.jp/pub/Linux/linuxppc/linuxppc-halloween/softwa
 		ftp://gd.tuwien.ac.at/linux/linuxppc/linuxppc-halloween/software/
 EXTRACT_SUFX=	.rpm
 HOMEPAGE=	http://linuxppc.org/software/index/linuxppc_stable/software/netscape-4.7-3.ppc.html
-BUILD_DEPENDS=	rpm2pkg-1.2:../../pkgtools/rpm2pkg
+BUILD_DEPENDS=	rpm2pkg>=1.2:../../pkgtools/rpm2pkg
 DESCR_SRC=	${WRKDIR}/DESCR.linux-powerpc
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 SORT=		sort
