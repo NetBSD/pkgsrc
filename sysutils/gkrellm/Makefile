@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/04/10 03:59:50 minskim Exp $
+# $NetBSD: Makefile,v 1.35 2004/05/09 20:47:04 fredb Exp $
 .include "Makefile.common"
 
 PKGREVISION=		# defined
@@ -16,7 +16,7 @@ USE_PKGINSTALL=		YES
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD")
+.if (${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD")
 SPECIAL_PERMS+=		${PREFIX}/bin/gkrellm ${ROOT_USER} kmem 2711
 .endif
 
