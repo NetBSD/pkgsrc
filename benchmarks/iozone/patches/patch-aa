@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2004/05/05 00:43:10 danw Exp $
+$NetBSD: patch-aa,v 1.6 2004/11/10 14:13:21 adam Exp $
 
---- makefile.orig	Sun May  2 21:02:32 2004
+--- makefile.orig	2004-10-29 15:11:36.000000000 +0000
 +++ makefile
-@@ -59,6 +59,7 @@ all:  
+@@ -67,6 +67,7 @@ all:  
  	@echo "        ->   UWIN                 (32bit)   <-"
  	@echo "        ->   Windows (95/98/NT)   (32bit)   <-"
  	@echo ""
