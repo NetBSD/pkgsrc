@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1134 2003/01/28 22:57:53 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1135 2003/01/29 09:34:29 abs Exp $
 #
 # This file is in the public domain.
 #
@@ -677,8 +677,8 @@ MAKEFLAGS+= ${def:C/=.*//}=${_dir_${def:C/=.*//}}
 # and it's value is indirectly set by EVAL_PREFIX.
 #
 .if defined(USE_JAVA)
-.  if exists(${PKG_JAVA_HOME}/lib/classes.zip)
-_JAVA_CLASSES_ZIP=	${PKG_JAVA_HOME}/lib/classes.zip:
+.  if exists(${PKG_JAVA_HOME}/lib/${_JAVA_BASE_CLASSES})
+_JAVA_CLASSES_ZIP=	${PKG_JAVA_HOME}/lib/${_JAVA_BASE_CLASSES}:
 .  endif
 .  if exists(${PKG_JAVA_HOME}/lib/tools.jar)
 _JAVA_TOOLS_JAR=	${PKG_JAVA_HOME}/lib/tools.jar:
