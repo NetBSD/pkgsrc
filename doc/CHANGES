@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7900 2004/11/18 19:38:32 jlam Exp $
+$NetBSD: CHANGES,v 1.7901 2004/11/19 09:14:32 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5329,3 +5329,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tcl-expect to 5.42.1 [adam 2004-11-18]
 	Updated tk-expect to 5.42.1 [adam 2004-11-18]
 	Removed fortify [jlam 2004-11-18]
+	Updated nail to 11.16 [cjep 2004-11-19]
