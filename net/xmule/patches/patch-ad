@@ -1,24 +1,21 @@
-$NetBSD: patch-ad,v 1.1.1.1 2003/06/03 09:17:21 jmmv Exp $
+$NetBSD: patch-ad,v 1.2 2003/06/28 10:55:47 jmmv Exp $
 
---- src/xmule.cpp.orig	2003-06-01 19:33:55.000000000 +0000
-+++ src/xmule.cpp	2003-06-01 19:34:19.000000000 +0000
-@@ -103,8 +103,13 @@
+--- src/xmule.cpp.orig	2003-06-19 12:04:38.000000000 +0200
++++ src/xmule.cpp
+@@ -93,8 +93,10 @@ int CxmuleApp::OnExit() {
    delete clientlist; 
  #endif
  
 -  hashing_mut.Unlock();
 -  pendingMutex.Unlock();
-+  if (hashing_mut.TryLock() == wxMUTEX_NO_ERROR) {
++  if (hashing_mut.TryLock() == wxMUTEX_NO_ERROR)
 +    hashing_mut.Unlock();
-+  }
-+
-+  if (pendingMutex.TryLock() == wxMUTEX_NO_ERROR) {
++  if (pendingMutex.TryLock() == wxMUTEX_NO_ERROR)
 +    pendingMutex.Unlock();
-+  }
  
    printf("xMule shutdown completed.\n");
  }
-@@ -207,6 +212,28 @@
+@@ -197,6 +199,28 @@ public:
  
  extern void InitXmlResource();
  
@@ -47,7 +44,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2003/06/03 09:17:21 jmmv Exp $
  bool CxmuleApp::OnInit()
  {
  	// catch fatal exceptions
-@@ -214,6 +241,8 @@
+@@ -204,6 +228,8 @@ bool CxmuleApp::OnInit()
  
  	//putenv("LANG=en_US");
  
@@ -56,26 +53,3 @@ $NetBSD: patch-ad,v 1.1.1.1 2003/06/03 09:17:21 jmmv Exp $
  	// for resources
  	wxFileSystem::AddHandler(new wxZipFSHandler);
  	wxXmlResource::Get()->InitAllHandlers();
-@@ -641,11 +670,13 @@
-     
- } //End Added By Bouc7
- 
--
-+#if defined(linux)
- #include <execinfo.h>
-+#endif
- 
- void CxmuleApp::OnFatalException()
- {
-+#if defined(linux)
-     // (stkn) create backtrace
-     void * bt_array[100]; // 100 should be enough ?!?
-     char ** bt_strings;
-@@ -666,6 +697,7 @@
-        fprintf(stderr, "[%d] %s\n", i, bt_strings[i]);
-        
-     free(bt_strings);
-+#endif
- }
- 
- #define wxGTK_WINDOW 1
