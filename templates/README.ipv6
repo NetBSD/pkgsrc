@@ -1,13 +1,13 @@
-<!-- $NetBSD: README.ipv6,v 1.1 2000/02/09 03:51:23 hubertf Exp $ -->
+<!-- $NetBSD: README.ipv6,v 1.2 2001/01/16 02:37:47 hubertf Exp $ -->
 <html>
 <head>
 <title>NetBSD: IPv6 enabled Packages</title>
 </head>
-<body bgcolor=#ffffff>
+<body bgcolor="#ffffff">
 
 <a href="http://www.mckusick.com/beastie/mainpage/copyright.html">
-<img align=right src="templates/pkg-daemon.gif" alt="Daemon Power"
-	width=127 height=121 border=0>
+<img align="right" src="templates/pkg-daemon.gif" alt="Daemon Power"
+	width="147" height="121" border="0">
 </a>
 <h1>IPv6 ready packages in the NetBSD Packages Collection</h1>
 
@@ -21,7 +21,7 @@ Please select an entry for more details!
 
 <hr noshade>
 <table>
-<tr><th align=left>Package <th align=left>Category <th align=left> Package description
+<tr><th align="left">Package <th align="left">Category <th align="left"> Package description
 %%TRS%%
 </table>
 
