@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2004/05/03 08:45:44 adam Exp $
+$NetBSD: patch-aa,v 1.5 2005/02/14 09:50:18 adam Exp $
 
---- configure.orig	2004-02-11 16:27:31.000000000 +0000
+--- configure.orig	2005-02-11 01:51:06.000000000 +0000
 +++ configure
-@@ -18534,8 +18534,8 @@ _ACEOF
+@@ -19226,8 +19226,8 @@ _ACEOF
  
      BSD_API=1
      os_support=bsd
@@ -13,3 +13,21 @@ $NetBSD: patch-aa,v 1.4 2004/05/03 08:45:44 adam Exp $
      OSLIBS=""
      ;;
    *-darwin*)
+@@ -21635,17 +21635,11 @@ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ #include <dev/usb/usb.h>
+-int
+-main ()
+-{
+ int main(void)
+      {
+        int a = ((struct usb_ctl_request *)0L)->ucr_addr;
+        return 0;
+      }
+-  ;
+-  return 0;
+-}
+ _ACEOF
+ rm -f conftest.$ac_objext
+ if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
