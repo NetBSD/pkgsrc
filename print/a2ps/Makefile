@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/07/15 10:39:36 agc Exp $
+# $NetBSD: Makefile,v 1.15 1998/07/17 19:08:40 tv Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/02/15 21:24:42 steve Exp
 #
 
@@ -9,13 +9,14 @@ MASTER_SITES=	http://www-inf.enst.fr/~demaille/ftp/a2ps/
 
 MAINTAINER=	packages@netbsd.org
 
-GNU_CONFIGURE=	yes
+BUILD_DEPENDS=	${PREFIX}/bin/libtool:../../devel/libtool
 
 CONFLICTS=	a2ps-A4-4.9.9 a2ps-Letter-4.9.9 a2ps-Letterdj-4.9.9
 
 STRIP=
+GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-medium=${PAPERSIZE}
-CONFIGURE_ENV+=	LPR=lpr
+CONFIGURE_ENV+=	LPR=lpr LIBTOOL=${PREFIX}/bin/libtool
 USE_GTEXINFO=	YES
 INFO_FILES=	a2ps.info ogonkify.info regex.info
 
