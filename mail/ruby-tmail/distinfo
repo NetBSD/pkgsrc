@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/03/07 03:32:37 taca Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 09:59:28 agc Exp $
 
 SHA1 (ruby/tmail-0.10.8.tar.gz) = 179cad68020fb75de8bb34df489cb54a7cd14384
+RMD160 (ruby/tmail-0.10.8.tar.gz) = dadba826fdff0b67d17c4e5fb4e3cf36de5c4118
 Size (ruby/tmail-0.10.8.tar.gz) = 125752 bytes
