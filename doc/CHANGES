@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4821 2004/02/14 01:04:52 grant Exp $
+$NetBSD: CHANGES,v 1.4822 2004/02/14 03:16:59 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -822,3 +822,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated adzap to 20040104 [wiz 2004-02-13]
 	Added atasm-1.04 [minskim 2004-02-13]
 	Updated ns-remote to 1.9nb1 [grant 2004-02-14]
+	Updated cyrus-sasl2 to 2.1.17 [jlam 2004-02-14]
