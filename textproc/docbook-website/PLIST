@@ -1,46 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/01/11 17:16:18 grant Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/01/18 09:16:58 grant Exp $
 share/doc/docbook-website/ChangeLog
 share/doc/docbook-website/README
 share/doc/docbook-website/VERSION
 share/doc/docbook-website/WhatsNew
-share/docbook-website/VERSION
-share/docbook-website/autolayout.dtd
-share/docbook-website/extensions.mod
-share/docbook-website/extensions/ChangeLog
-share/docbook-website/extensions/saxon64.jar
-share/docbook-website/extensions/saxon64/ChangeLog
-share/docbook-website/extensions/saxon64/com/nwalsh/saxon/ChangeLog
-share/docbook-website/extensions/saxon64/com/nwalsh/saxon/Website.java
-share/docbook-website/extensions/saxon64/prj.el
-share/docbook-website/extensions/xalan2.jar
-share/docbook-website/extensions/xalan2/ChangeLog
-share/docbook-website/extensions/xalan2/com/nwalsh/xalan/ChangeLog
-share/docbook-website/extensions/xalan2/com/nwalsh/xalan/Website.java
-share/docbook-website/extensions/xalan2/prj.el
-share/docbook-website/forms.mod
-share/docbook-website/layout.dtd
-share/docbook-website/namespaces.mod
-share/docbook-website/rddl.mod
-share/docbook-website/website-custom.dtd
-share/docbook-website/website-full.dtd
-share/docbook-website/website.dtd
-share/docbook-website/website.mod
-share/docbook-website/xsl/ChangeLog
-share/docbook-website/xsl/VERSION
-share/docbook-website/xsl/autolayout.xsl
-share/docbook-website/xsl/chunk-common.xsl
-share/docbook-website/xsl/chunk-tabular.xsl
-share/docbook-website/xsl/chunk-website.xsl
-share/docbook-website/xsl/head.xsl
-share/docbook-website/xsl/makefile-dep.xsl
-share/docbook-website/xsl/param.xsl
-share/docbook-website/xsl/rss.xsl
-share/docbook-website/xsl/tabular.xsl
-share/docbook-website/xsl/toc-tabular.xsl
-share/docbook-website/xsl/toc.xsl
-share/docbook-website/xsl/website-common.xsl
-share/docbook-website/xsl/website.xsl
-share/docbook-website/xsl/xbel.xsl
 share/examples/docbook-website/.tabular
 share/examples/docbook-website/.textonly
 share/examples/docbook-website/ChangeLog
@@ -138,6 +100,58 @@ share/examples/docbook-website/test2.xml
 share/examples/docbook-website/test3.xml
 share/examples/docbook-website/website.xml
 share/examples/docbook-website/wslayout.xml
+share/xml/website/VERSION
+share/xml/website/autolayout.dtd
+share/xml/website/catalog
+share/xml/website/extensions.mod
+share/xml/website/extensions/ChangeLog
+share/xml/website/extensions/saxon64.jar
+share/xml/website/extensions/saxon64/ChangeLog
+share/xml/website/extensions/saxon64/com/nwalsh/saxon/ChangeLog
+share/xml/website/extensions/saxon64/com/nwalsh/saxon/Website.java
+share/xml/website/extensions/saxon64/prj.el
+share/xml/website/extensions/xalan2.jar
+share/xml/website/extensions/xalan2/ChangeLog
+share/xml/website/extensions/xalan2/com/nwalsh/xalan/ChangeLog
+share/xml/website/extensions/xalan2/com/nwalsh/xalan/Website.java
+share/xml/website/extensions/xalan2/prj.el
+share/xml/website/forms.mod
+share/xml/website/layout.dtd
+share/xml/website/namespaces.mod
+share/xml/website/rddl.mod
+share/xml/website/website-custom.dtd
+share/xml/website/website-full.dtd
+share/xml/website/website.dtd
+share/xml/website/website.mod
+share/xml/website/xsl/ChangeLog
+share/xml/website/xsl/VERSION
+share/xml/website/xsl/autolayout.xsl
+share/xml/website/xsl/chunk-common.xsl
+share/xml/website/xsl/chunk-tabular.xsl
+share/xml/website/xsl/chunk-website.xsl
+share/xml/website/xsl/head.xsl
+share/xml/website/xsl/makefile-dep.xsl
+share/xml/website/xsl/param.xsl
+share/xml/website/xsl/rss.xsl
+share/xml/website/xsl/tabular.xsl
+share/xml/website/xsl/toc-tabular.xsl
+share/xml/website/xsl/toc.xsl
+share/xml/website/xsl/website-common.xsl
+share/xml/website/xsl/website.xsl
+share/xml/website/xsl/xbel.xsl
+@dirrm share/xml/website/xsl
+@dirrm share/xml/website/extensions/xalan2/com/nwalsh/xalan
+@dirrm share/xml/website/extensions/xalan2/com/nwalsh
+@dirrm share/xml/website/extensions/xalan2/com
+@dirrm share/xml/website/extensions/xalan2
+@dirrm share/xml/website/extensions/saxon64/com/nwalsh/saxon
+@dirrm share/xml/website/extensions/saxon64/com/nwalsh
+@dirrm share/xml/website/extensions/saxon64/com
+@dirrm share/xml/website/extensions/saxon64
+@dirrm share/xml/website/extensions
+@exec %D/bin/xmlcatmgr -c %D/share/xml/catalog add CATALOG %D/share/xml/website/catalog
+@unexec %D/bin/xmlcatmgr -c %D/share/xml/catalog remove %D/share/xml/website/catalog
+@dirrm share/xml/website
 @dirrm share/examples/docbook-website/subdir
 @dirrm share/examples/docbook-website/graphics/navicons/triangle/other
 @dirrm share/examples/docbook-website/graphics/navicons/triangle/current
@@ -159,15 +173,4 @@ share/examples/docbook-website/wslayout.xml
 @dirrm share/examples/docbook-website/graphics
 @dirrm share/examples/docbook-website/bookmark
 @dirrm share/examples/docbook-website
-@dirrm share/docbook-website/xsl
-@dirrm share/docbook-website/extensions/xalan2/com/nwalsh/xalan
-@dirrm share/docbook-website/extensions/xalan2/com/nwalsh
-@dirrm share/docbook-website/extensions/xalan2/com
-@dirrm share/docbook-website/extensions/xalan2
-@dirrm share/docbook-website/extensions/saxon64/com/nwalsh/saxon
-@dirrm share/docbook-website/extensions/saxon64/com/nwalsh
-@dirrm share/docbook-website/extensions/saxon64/com
-@dirrm share/docbook-website/extensions/saxon64
-@dirrm share/docbook-website/extensions
-@dirrm share/docbook-website
 @dirrm share/doc/docbook-website
