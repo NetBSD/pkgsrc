@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/07/24 16:01:41 jtb Exp $
+# $NetBSD: Makefile,v 1.30 2004/04/28 05:06:28 snj Exp $
 
 DISTNAME=       	icon.v942src
 PKGNAME=		icon-9.4.2
@@ -10,7 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.cs.arizona.edu/icon/index.htm
 COMMENT=		The Icon programming language
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_X11=		YES
 CONFIGURE_TARGET=	X-Configure
 ALL_TARGET=		All
@@ -22,7 +22,7 @@ TEST_TARGET=		Test
 	(${MACHINE_ARCH} == "m68k") || (${MACHINE_ARCH} == "vax")
 .else
 PTHREAD_OPTS+=		require native
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .endif
 
 pre-build:
