@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2000/03/27 08:54:57 tron Exp $
+# $NetBSD: Makefile,v 1.13 2000/05/27 02:47:13 wiz Exp $
 
-DISTNAME=		clisp-1999-07-22
-PKGNAME=		clisp-19990722
+DISTNAME=		clisp-2000-03-06
+PKGNAME=		clisp-20000306
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp2.cons.org/pub/lisp/clisp/source/ \
 			ftp://ftp.tu-darmstadt.de/pub/programming/languages/lisp/clisp/source/
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		mjl@netbsd.org
 HOMEPAGE=		http://clisp.cons.org/~haible/clisp.html
@@ -15,12 +16,16 @@ MIRROR_DISTFILE=	no
 
 GNU_CONFIGURE=		YES
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
-# USE_LIBTOOL=		yes
+# USE_LIBTOOL=		YES
 
 do-configure:
 	cd ${WRKSRC}; \
 	(cd ..;${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}); \
 	./makemake --prefix=${LOCALBASE} --with-readline --with-gettext \
 	  --with-dynamic-ffi >Makefile
+
+post-install:
+	${CHOWN} -R root:wheel ${PREFIX}/lib/clisp
+	${CHMOD} -R a-w ${PREFIX}/lib/clisp
 
 .include "../../mk/bsd.pkg.mk"
