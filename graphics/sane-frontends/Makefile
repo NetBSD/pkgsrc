@@ -1,14 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2001/10/15 21:28:06 veego Exp $
-#
+# $NetBSD: Makefile,v 1.6 2001/10/16 13:23:56 tron Exp $
 
 DISTNAME=       sane-frontends-1.0.5
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.mostang.com/pub/sane/ \
-		ftp://gd.tuwien.ac.at/hci/sane/ \
-		${MASTER_SITE_SUNSITE:=apps/graphics/capture/} \
-		${MASTER_SITE_SUNSITE:=Incoming/} \
-		ftp://ftp.u-aizu.ac.jp/pub/misc/device/scsi/scanner/sane/ \
-		ftp://ftp.informatik.uni-oldenburg.de/pub/sane/
+MASTER_SITES=	ftp://ftp.mostang.com/pub/sane/sane-1.0.5/ \
+		ftp://ftp.mostang.com/pub/sane/old-versions/sane-1.0.5/ \
+		ftp://gd.tuwien.ac.at/hci/sane/sane-1.0.5/ \
+		ftp://ftp.informatik.uni-oldenburg.de/pub/sane/sane-1.0.5/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.mostang.com/sane/
