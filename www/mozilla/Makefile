@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2002/09/11 11:34:21 jlam Exp $
+# $NetBSD: Makefile,v 1.104 2002/10/02 19:36:28 wiz Exp $
 
 MOZ_VER=	1.1
 DISTNAME=	mozilla-source-${MOZ_VER}
@@ -14,7 +14,6 @@ HOMEPAGE=	http://www.mozilla.org/
 COMMENT=	Open-source version of the Netscape browser
 
 BUILD_DEPENDS+=	zip>=2.3:../../archivers/zip
-BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
 
 USE_BUILDLINK2=	yes
 USE_PERL5=	build
@@ -31,6 +30,8 @@ CONFIGURE_ARGS=	--disable-tests \
 
 SHAREMODE?=	644
 ALL_TARGET=	# empty
+
+AUTOCONF_REQD=	2.13
 
 UNLIMIT_RESOURCES=	datasize memorysize stacksize
 
@@ -93,7 +94,7 @@ post-extract:
 .endfor
 
 pre-configure:
-	cd ${WRKSRC} && autoconf
+	cd ${WRKSRC} && ${AUTOCONF}
 
 post-build:
 	${ECHO} skin,install,select,classic/1.0 >> ${WRKSRC}/dist/bin/chrome/installed-chrome.txt
@@ -108,4 +109,5 @@ do-install:
 CONFIGURE_ARGS+= --without-pthreads
 .endif
 
+.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
