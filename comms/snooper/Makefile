@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/12/28 04:34:52 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2000/09/26 03:16:45 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.3 1998/08/13 09:20:41 itojun Exp $
 
 DISTNAME=	snooper-19991202
@@ -15,6 +15,9 @@ MESSAGE_FILE=	${WRKDIR}/.MESSAGE
 
 pre-install:
 	@${SED} -e 's|$${PREFIX}|${PREFIX}|' ${MESSAGE_SRC} > ${MESSAGE_FILE}
+
+pre-build:
+	cd ${WRKSRC} ; ${MAKE} depend
 
 post-install:
 	${MKDIR} ${PREFIX}/share/doc/snooper
