@@ -1,4 +1,4 @@
-# $NetBSD: ccc.mk,v 1.4 2004/11/23 05:24:28 jlam Exp $
+# $NetBSD: ccc.mk,v 1.5 2004/11/23 05:32:22 jlam Exp $
 
 .if !defined(COMPILER_CCC_MK)
 COMPILER_CCC_MK=	defined
@@ -37,9 +37,9 @@ CXX=		${PKG_CXX:T}
 CXXPATH=	/usr/bin/cxx
 .endif
 
-.if exists(/usr/bin/cc) && !defined(CC_VERSION_STRING)
-CC_VERSION_STRING!=	/usr/bin/cc -V 2>&1 | awk '{print; exit(0);}'
-CC_VERSION!=		/usr/bin/cc -V 2>&1 | awk '{print "CCC-"$3; exit(0);}'
+.if exists(${CCPATH}) && !defined(CC_VERSION_STRING)
+CC_VERSION_STRING!=	${CCPATH} -V 2>&1 | awk '{print; exit(0);}'
+CC_VERSION!=		${CCPATH} -V 2>&1 | awk '{print "CCC-"$3; exit(0);}'
 .else
 CC_VERSION_STRING?=	${CC_VERSION}
 CC_VERSION?=		CCC
