@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/08/20 19:58:58 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/01/22 17:05:34 drochner Exp $
 bin/pydoc2p1
 bin/python2p1
 include/python2p1/Python.h
@@ -628,7 +628,6 @@ lib/python2p1/lib-dynload/cStringIO.so
 lib/python2p1/lib-dynload/cmath.so
 lib/python2p1/lib-dynload/crypt.so
 lib/python2p1/lib-dynload/dbm.so
-lib/python2p1/lib-dynload/errno.so
 lib/python2p1/lib-dynload/fcntl.so
 lib/python2p1/lib-dynload/fpectl.so
 lib/python2p1/lib-dynload/grp.so
