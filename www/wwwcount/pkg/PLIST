@@ -1,17 +1,102 @@
-www/cgi-bin/Count.cgi
-etc/Counter/conf/count.cfg
-etc/Counter/data/sample.dat
-lib/Counter/rgb.txt
-lib/Counter/digits/A/strip.gif
-lib/Counter/digits/B/strip.gif
-lib/Counter/digits/C/strip.gif
-lib/Counter/digits/D/strip.gif
-lib/Counter/digits/D/lenna.gif
-lib/Counter/digits/E/strip.gif
-lib/Counter/digits/mkstrip.sh
+@comment $NetBSD: PLIST,v 1.2 1999/05/14 22:05:23 tron Exp $
 bin/mkstrip
 bin/extdgts
-@exec touch /var/log/Counter.log
-@exec chown nobody.nogroup /var/log/Counter.log
-@exec chmod 644 /var/log/Counter.log
-@unexec rm /var/log/Counter.log
+libdata/wwwcount/rgb.txt
+libdata/wwwcount/digits/A/peng.gif
+libdata/wwwcount/digits/A/strip.gif
+libdata/wwwcount/digits/B/strip.gif
+libdata/wwwcount/digits/C/strip.gif
+libdata/wwwcount/digits/D/lenna.gif
+libdata/wwwcount/digits/D/strip.gif
+libdata/wwwcount/digits/E/strip.gif
+libdata/wwwcount/digits/cd/strip.gif
+libdata/wwwcount/digits/cdd/strip.gif
+libdata/wwwcount/digits/cdr/strip.gif
+libdata/wwwcount/digits/mkstrip.sh
+libexec/cgi-bin/Count.cgi
+share/doc/wwwcount/blues.gif
+share/doc/wwwcount/index.html
+share/doc/wwwcount/Count.html
+share/doc/wwwcount/Count2_5-ex.html
+share/doc/wwwcount/Count_Changelog.html
+share/doc/wwwcount/Count_FAQ.html
+share/doc/wwwcount/Count_download.html
+share/doc/wwwcount/Count_mirrors.html
+share/doc/wwwcount/Count2.5/c-c.txt
+share/doc/wwwcount/Count2.5/gen-c.txt
+share/doc/wwwcount/Count2.5/images/styleA.gif
+share/doc/wwwcount/Count2.5/images/styleB.gif
+share/doc/wwwcount/Count2.5/images/styleC.gif
+share/doc/wwwcount/Count2.5/images/styleD.gif
+share/doc/wwwcount/Count2.5/images/styleE.gif
+share/doc/wwwcount/Count2.5/images/stylecd.gif
+share/doc/wwwcount/Count2.5/images/stylecdd.gif
+share/doc/wwwcount/Count2.5/images/stylecdr.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_51026648.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_51055166.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_51083684.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_51112202.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5114072.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_51140720.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_51169238.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_51197756.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_51226274.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_51254792.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_51283310.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_51311828.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_51340346.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_51368864.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5142590.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5171108.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5199626.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5228144.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5256662.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_528518.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5285180.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5313698.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5342216.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5370734.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5399252.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5427770.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5456288.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5484806.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5513324.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5541842.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_557036.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5570360.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5598878.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5627396.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5655914.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5684432.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5712950.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5741468.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5769986.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5798504.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5827022.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_585554.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5855540.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5884058.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5912576.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5941094.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5969612.gif
+share/doc/wwwcount/Count2.5/eximages/ex2_5998130.gif
+share/examples/wwwcount.conf
+@exec if [ ! -f %D/etc/wwwcount.conf ]; then cp -p %D/share/examples/wwwcount.conf %D/etc/wwwcount.conf; fi
+share/man/man1/mkstrip.1
+var/db/wwwcount/sample.dat
+@exec touch %D/var/log/wwwcount
+@exec chown nobody.nogroup %D/var/log/wwwcount
+@dirrm libdata/wwwcount/digits/A
+@dirrm libdata/wwwcount/digits/B
+@dirrm libdata/wwwcount/digits/C
+@dirrm libdata/wwwcount/digits/D
+@dirrm libdata/wwwcount/digits/E
+@dirrm libdata/wwwcount/digits/cd
+@dirrm libdata/wwwcount/digits/cdd
+@dirrm libdata/wwwcount/digits/cdr
+@dirrm libdata/wwwcount/digits
+@dirrm libdata/wwwcount
+@dirrm share/doc/wwwcount/Count2.5/images
+@dirrm share/doc/wwwcount/Count2.5/eximages
+@dirrm share/doc/wwwcount/Count2.5
+@dirrm share/doc/wwwcount
