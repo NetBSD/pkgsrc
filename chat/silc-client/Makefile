@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2002/09/12 23:05:37 hubertf Exp $
+# $NetBSD: Makefile,v 1.17 2002/11/21 15:40:14 salo Exp $
 
-DISTNAME=		silc-client-0.9.5.1
+DISTNAME=		silc-client-0.9.8
 CATEGORIES=		chat security
 MASTER_SITES=		http://www.silcnet.org/download/client/sources/ \
 			ftp://ftp.silcnet.org/silc/client/sources/ \
@@ -11,7 +11,7 @@ MASTER_SITES=		http://www.silcnet.org/download/client/sources/ \
 			http://www.at.silcnet.org/download/client/sources/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		salo@silcnet.org
+MAINTAINER=		salo@netbsd.org
 HOMEPAGE=		http://www.silcnet.org/
 COMMENT=                Client for the Secure Internet Live Conferencing (SILC) protocol
 
@@ -25,6 +25,7 @@ USE_LIBTOOL=		# defined
 
 PKG_SYSCONFSUBDIR?=	silc
 
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/silc
 CONFIGURE_ARGS+=	--with-helpdir=${PREFIX}/share/silc/help
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/silc
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
@@ -70,6 +71,19 @@ CONFIGURE_ARGS+=	--disable-asm
 #CONFIGURE_ARGS+=	--enable-debug
 
 PLIST_SRC+=		${PKGDIR}/PLIST
+
+# Temporary hack which prevents installation of static libraries
+#
+post-build:
+	for file in \
+	${WRKSRC}/lib/libsilc.la \
+	${WRKSRC}/lib/libsilcclient.la \
+	${WRKSRC}/lib/.libs/libsilc.la \
+	${WRKSRC}/lib/.libs/libsilcclient.la ; \
+	do \
+		${CP} $$file $$file.orig ; \
+		${SED} "s|^old_library|#&|" $$file.orig > $$file ; \
+	done
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/glib/buildlink2.mk"
