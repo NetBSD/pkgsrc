@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.49 2002/06/30 19:07:18 dmcmahill Exp $
+# $NetBSD: Makefile.common,v 1.50 2002/09/20 16:59:27 abs Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -6,11 +6,13 @@
 
 # Note - the version will be overridden for certain architectures which
 #	 do not have the latest version available (eg: SunOS sparc)
-NS_VERS=	4.79
+NS_VERS=	4.8
+PKGNAME=	${BINNAME}-4.80
 NS_ENCRYPTION=	us
 LDAP_VERS=	40
 
-MASTER_SITES=	ftp://ftp.netscape.org/pub/communicator/${SUB}/ \
+MASTER_SITES=	ftp://ftp.netscape.com/pub/communicator/${SUB}/ \
+		ftp://ftp.de.netscape.com/pub/communicator/${SUB}/ \
 		ftp://ftp-uk.netscape.com/pub/communicator/${SUB}/ \
 		ftp://sunsite.utk.edu/pub/netscape/communicator/${SUB}/ \
 		ftp://ftp.informatik.rwth-aachen.de/pub/mirror/ftp.netscape.com/pub/communicator/${SUB}/
@@ -26,6 +28,8 @@ MASTER_SITES=	ftp://ftp.netscape.org/pub/communicator/${SUB}/ \
 PLIST_ARCH=	solaris-sparc
 .if (${OS_VERSION} == 5.5.1) || (${OS_VERSION} == 5.6) || \
     (${OS_VERSION} == 5.7)
+NS_VERS=	4.79
+PKGNAME=	${BINNAME}-${NS_VERS}
 DISTUNAME=	sparc-sun-solaris2.5.1
 DIST_DIR_NAME=	supported/sunos551
 WRKNAME=	sparc-sun-solaris2.5.1
@@ -45,6 +49,7 @@ DEPENDS+=	ns-flash>4.0:../../graphics/ns-flash
 IGNORE=	"${PKGNAME} requires Digital UNIX libraries - see compat_osf1(8)"
 .endif
 NS_VERS=	4.78
+PKGNAME=	${BINNAME}-${NS_VERS}
 PLIST_ARCH=	osf-alpha
 DISTUNAME=	alpha-dec-osf4.0
 DIST_DIR_NAME=	supported/dec_unix40
@@ -53,6 +58,7 @@ VENDOR_NAME=	Tru64 UNIX
 #
 .elif (${MACHINE_ARCH} == "i386" && defined(NS_USE_BSDI))
 NS_VERS=	4.75
+PKGNAME=	${BINNAME}-${NS_VERS}
 PLIST_ARCH=	bsdi-i386
 DISTUNAME=	x86-bsdi-bsd2
 DIST_DIR_NAME=	unsupported/bsdi21
@@ -76,6 +82,7 @@ DEPENDS+=	ns-flash>4.0:../../graphics/ns-flash
 IGNORE=	"${PKGNAME} requires SunOS libraries - see compat_sunos(8)"
 .endif
 NS_VERS=	4.61
+PKGNAME=	${BINNAME}-${NS_VERS}
 NS_ENCRYPTION=	export
 LDAP_VERS=	30
 PLIST_ARCH=	sunos-sparc
@@ -103,8 +110,8 @@ IGNORE+=	"install communicator package instead."
 .endif
 DEPENDS+=	linuxppc_lib>=2000.4.2:../../emulators/linuxppc_lib
 NS_VERS=	4.73
-DISTNAME=	netscape-4.7-3.ppc
 PKGNAME=	${BINNAME}-${NS_VERS}
+DISTNAME=	netscape-4.7-3.ppc
 WRKSRC=		${WRKDIR}
 MASTER_SITES=	ftp://ftp.linuxppc.org/linuxppc-halloween/software/
 EXTRACT_SUFX=	.rpm
@@ -121,7 +128,6 @@ PLIST_ARCH=
 .endif
 #
 
-NO_BUILD=	YES
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE?=	http://home.netscape.com/browsers/index.html
 RESTRICTED=	"No re-distribution without agreement from Netscape"
@@ -137,6 +143,8 @@ PKGNAME?=	${BINNAME}-${NS_VERS}
 DISTNAME?=	${BINNAME}-v${NS_VERS_SHORT}-${NS_ENCRYPTION}.${DISTUNAME}
 
 .if (${BINNAME} != "netscape")
+
+NO_BUILD=	YES
 
 .if (${MACHINE_ARCH} == "powerpc")
 
@@ -219,5 +227,6 @@ do-install:
 .endif
 
 .if (${BINNAME} != "netscape")
+USE_BUILDLINK2=	# defined
 .include "../../emulators/suse_linux/Makefile.application"
 .endif
