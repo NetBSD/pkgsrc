@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/07/30 08:31:22 xtraeme Exp $
+# $NetBSD: Makefile,v 1.10 2004/07/31 02:28:15 xtraeme Exp $
 
 DISTNAME=	XFree86-${XF_VER}-src-4
 PKGNAME=	XFree86-fontsEncodings-${XF_VER}
@@ -6,7 +6,7 @@ CATEGORIES=	fonts x11
 MASTER_SITES=	${MASTER_SITE_XFREE}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	xfree86@blef.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	XFree86 Encoding fonts
 
