@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/08/27 07:11:00 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2000/08/29 20:48:08 jlam Exp $
 
 DISTNAME=		pilot-link.0.9.3
 PKGNAME=		p5-pilot-link-0.9.3
@@ -22,6 +22,10 @@ CONFIGURE_ARGS=		--with-perl5=${PERL5} --without-tcl \
 MAKE_ENV+=		OTHERLDFLAGS="${LDFLAGS}"
 WRKSRC=			${WRKDIR}/${DISTNAME}/Perl5
 
+# Until the source catches up to the current Perl API, we need PERL_POLLUTE
+# to look like an older perl.
+MAKE_PARAMS=		DEFINE="-DPERL_POLLUTE=1"
+
 pre-configure:
 	@cd ${WRKSRC} && \
 	${RM} -f configure && \
@@ -30,6 +34,6 @@ pre-configure:
 	${CHMOD} ${BINMODE} configure
 
 post-configure:
-	cd ${WRKSRC} &&	${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL ${MAKE_PARAMS}
 
 .include "../../mk/bsd.pkg.mk"

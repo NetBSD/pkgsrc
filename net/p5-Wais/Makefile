@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/08/29 01:01:25 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/29 20:48:14 jlam Exp $
 #
 
 DISTNAME=	Wais-2.311
@@ -13,6 +13,9 @@ DEPENDS+=	p5-Curses>=1.02:../../devel/p5-Curses
 
 USE_PERL5=	# defined
 PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Wais/.packlist
+
+post-patch:
+	${FIND} ${WRKSRC} -name "*.orig" -exec ${RM} -f {} \;
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
