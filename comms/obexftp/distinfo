@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/26 12:50:43 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 16:05:30 agc Exp $
 
 SHA1 (obexftp-0.10.3.tar.gz) = 7f8756597e4660f71147a60fd5a5dc79a55e6cc6
+RMD160 (obexftp-0.10.3.tar.gz) = 25fae7ba0da9a3925cd0a405611c0f705676b11e
 Size (obexftp-0.10.3.tar.gz) = 286083 bytes
 SHA1 (patch-aa) = a00bd78a2fe83d7758b7b4b42cf8a09e4167d854
 SHA1 (patch-ab) = 75005d57e2ef1ae2594b2513ab5235018dab0b4f
