@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/04/14 04:51:27 tsarna Exp $
+# $NetBSD: Makefile,v 1.16 1999/05/15 17:00:14 tsarna Exp $
 #
 
 DISTNAME=	py152
@@ -27,15 +27,22 @@ SCRIPTS_ENV+=	'OPT=${CFLAGS}'
 #   - disable a few broken modules on 64 bit platforms (nothing important)
 #   - handle machines with no dynamic loader
 
+.include "../../mk/bsd.prefs.mk"
+
 .if ${MACHINE_ARCH} == "alpha" || ${MACHINE_ARCH} == "sparc64"
 NO64BIT=\#
 .endif
 .if ${MACHINE_ARCH} == "sparc64"
 NOSHARED=\#
 .endif
+.if ${OPSYS} == "SunOS"
+MODADD=-I${ZOULARIS}/include -L${ZOULARIS}/lib -R${ZOULARIS}/lib
+.endif
 
 post-configure:
-	${SED} -e 's/@NO64BIT@/${NO64BIT}/' -e 's/@NOSHARED@/${NOSHARED}/' \
+	${SED}  -e 's,@NO64BIT@,${NO64BIT},g' \
+		-e 's,@NOSHARED@,${NOSHARED},g' \
+		-e 's,@MODADD@,${MODADD},g' \
 		${FILESDIR}/Setup >${WRKSRC}/Modules/Setup
 
 post-install:
