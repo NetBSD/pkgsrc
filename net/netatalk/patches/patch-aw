@@ -1,20 +1,8 @@
-$NetBSD: patch-aw,v 1.3 1999/02/23 22:33:20 wrstuden Exp $
---- etc/papd/session.c.orig	Fri Jan  1 15:05:42 1999
-+++ etc/papd/session.c	Tue Feb 23 14:28:50 1999
-@@ -3,6 +3,7 @@
-  * All Rights Reserved.  See COPYRIGHT.
-  */
- 
-+#include <string.h>
- #include <sys/types.h>
- #include <sys/syslog.h>
- #include <sys/time.h>
-@@ -53,7 +54,7 @@
-     fd_set		fds;
-     char		cbuf[ 578 ];
-     int			i, cc, timeout = 0, readpending = 0;
--    u_short		seq = 1, rseq = 1, netseq;
-+    u_short		seq = 0, rseq = 1, netseq;
-     u_char		readport;
- 
-     infile.pf_state = PF_BOT;
+$NetBSD: patch-aw,v 1.4 1999/08/31 22:09:43 wrstuden Exp $
+
+--- libatalk/util/Makefile.inc	Wed Dec 31 16:00:00 1969
++++ libatalk/util/Makefile.inc	Mon Aug 30 06:47:43 1999
+@@ -0,0 +1,3 @@
++.PATH: ${.CURDIR}/util
++
++SRCS+=	atalk_addr.c strdicasecmp.c

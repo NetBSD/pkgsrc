@@ -1,11 +1,13 @@
-$NetBSD: patch-av,v 1.1 1999/01/01 22:08:26 garbled Exp $
---- libatalk/atp/atp_rsel.c.orig	Fri Jan  1 15:03:25 1999
-+++ libatalk/atp/atp_rsel.c	Fri Jan  1 15:03:39 1999
-@@ -9,6 +9,7 @@
- #include <sys/errno.h>
- #include <sys/uio.h>
- #include <signal.h>
-+#include <string.h>
- 
- #include <netatalk/endian.h>
- #include <netatalk/at.h>
+$NetBSD: patch-av,v 1.2 1999/08/31 22:09:43 wrstuden Exp $
+
+--- libatalk/nbp/nbp_util.c	Tue Oct  7 14:21:38 1997
++++ libatalk/nbp/nbp_util.c	Mon Aug 30 06:47:43 1999
+@@ -6,7 +6,7 @@
+ #include <sys/types.h>
+ #include <sys/param.h>
+ #include <sys/socket.h>
+-#include <sys/signal.h>
++#include <signal.h>
+ #include <sys/time.h>
+ #include <sys/syslog.h>
+ #include <netdb.h>

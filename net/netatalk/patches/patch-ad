@@ -1,39 +1,13 @@
-$NetBSD: patch-ad,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
+$NetBSD: patch-ad,v 1.2 1999/08/31 22:09:42 wrstuden Exp $
 
---- etc/psf/Makefile.orig	Thu Oct  2 19:35:26 1997
-+++ etc/psf/Makefile	Fri Oct 30 11:34:08 1998
-@@ -9,10 +9,10 @@
- INSTALL=	install
- LIBDIRS=
- 
--LINKS=	ofpap ifpap tfpap ifpaprev tfpaprev \
--	ofwpap ifwpap tfwpap ifwpaprev tfwpaprev \
--	ofmpap ifmpap tfmpap ifmpaprev tfmpaprev \
--	ofwmpap ifwmpap tfwmpap ifwmpaprev tfwmpaprev
-+LINKS=	ofpap ifpap tfpap dfpap ifpaprev tfpaprev dfpaprev \
-+	ofwpap ifwpap tfwpap dfwpap ifwpaprev tfwpaprev dfwpaprev \
-+	ofmpap ifmpap tfmpap dfmpap ifmpaprev tfmpaprev dfmpaprev \
-+	ofwmpap ifwmpap tfwmpap dfwmpap ifwmpaprev tfwmpaprev dfwmpaprev
- 
- all : ${TARGETS}
- 
-@@ -32,14 +32,14 @@
- 
- install : all
- 	-mkdir ${RESDIR}
--	-mkdir ${RESDIR}/filters
--	${INSTALL} -c psa ${SBINDIR}
-+	-mkdir ${RESDIR}/psffilters
-+	${INSTALL} -c psa ${LIBEXECDIR}
- 	${INSTALL} -c etc2ps.sh ${SBINDIR}/etc2ps
- 	${INSTALL} -c pagecount.ps ${RESDIR}
--	${INSTALL} -c psf ${SBINDIR}
-+	${INSTALL} -c psf ${LIBEXECDIR}
- 	for i in ${LINKS} ; do \
--	    rm -f ${RESDIR}/filters/$$i; \
--	    ln -s ${SBINDIR}/psf ${RESDIR}/filters/$$i; \
-+	    rm -f ${RESDIR}/psffilters/$$i; \
-+	    ln -s ${LIBEXECDIR}/psf ${RESDIR}/psffilters/$$i; \
- 	done
- 
- clean :
+--- etc/afpd/Makefile	Thu Jun 25 07:07:32 1998
++++ etc/afpd/Makefile	Mon Aug 30 06:47:41 1999
+@@ -32,7 +32,7 @@
+ 	    AFSDEFS="-DAFS"; \
+ 	fi; \
+ 	${MAKE} ${MFLAGS} CC="${CC}" ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" \
+-	    OPTOPTS="${OPTOPTS}" DESTDIR="${DESTDIR}" \
++	    OPTOPTS="${OPTOPTS}" ATALK_DESTDIR="${ATALK_DESTDIR}" \
+ 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
+ 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
+ 	    KRBLIBS="$${KRBLIBS}" KRBLIBDIRS="$${KRBLIBDIRS}" \

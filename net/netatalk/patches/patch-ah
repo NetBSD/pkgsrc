@@ -1,9 +1,39 @@
-$NetBSD: patch-ah,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
+$NetBSD: patch-ah,v 1.2 1999/08/31 22:09:43 wrstuden Exp $
 
---- /dev/null	Mon Oct 26 13:21:23 1998
-+++ libatalk/atp/Makefile.inc	Mon Oct 26 13:20:53 1998
-@@ -0,0 +1,4 @@
-+.PATH: ${.CURDIR}/atp
-+
-+SRCS+= atp_bprint.c atp_bufs.c atp_close.c atp_open.c atp_packet.c
-+SRCS+= atp_rreq.c atp_rresp.c atp_rsel.c atp_sreq.c atp_sresp.c
+--- etc/psf/Makefile	Thu Oct  2 19:35:26 1997
++++ etc/psf/Makefile	Mon Aug 30 06:47:42 1999
+@@ -9,10 +9,10 @@
+ INSTALL=	install
+ LIBDIRS=
+ 
+-LINKS=	ofpap ifpap tfpap ifpaprev tfpaprev \
+-	ofwpap ifwpap tfwpap ifwpaprev tfwpaprev \
+-	ofmpap ifmpap tfmpap ifmpaprev tfmpaprev \
+-	ofwmpap ifwmpap tfwmpap ifwmpaprev tfwmpaprev
++LINKS=	ofpap ifpap tfpap dfpap ifpaprev tfpaprev dfpaprev \
++	ofwpap ifwpap tfwpap dfwpap ifwpaprev tfwpaprev dfwpaprev \
++	ofmpap ifmpap tfmpap dfmpap ifmpaprev tfmpaprev dfmpaprev \
++	ofwmpap ifwmpap tfwmpap dfwmpap ifwmpaprev tfwmpaprev dfwmpaprev
+ 
+ all : ${TARGETS}
+ 
+@@ -32,14 +32,14 @@
+ 
+ install : all
+ 	-mkdir ${RESDIR}
+-	-mkdir ${RESDIR}/filters
+-	${INSTALL} -c psa ${SBINDIR}
++	-mkdir ${RESDIR}/psffilters
++	${INSTALL} -c psa ${LIBEXECDIR}
+ 	${INSTALL} -c etc2ps.sh ${SBINDIR}/etc2ps
+ 	${INSTALL} -c pagecount.ps ${RESDIR}
+-	${INSTALL} -c psf ${SBINDIR}
++	${INSTALL} -c psf ${LIBEXECDIR}
+ 	for i in ${LINKS} ; do \
+-	    rm -f ${RESDIR}/filters/$$i; \
+-	    ln -s ${SBINDIR}/psf ${RESDIR}/filters/$$i; \
++	    rm -f ${RESDIR}/psffilters/$$i; \
++	    ln -s ${LIBEXECDIR}/psf ${RESDIR}/psffilters/$$i; \
+ 	done
+ 
+ clean :

@@ -1,13 +1,8 @@
-$NetBSD: patch-ar,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
+$NetBSD: patch-ar,v 1.2 1999/08/31 22:09:43 wrstuden Exp $
 
---- man/man4/Makefile	1998/10/26 14:09:47	1.1
-+++ man/man4/Makefile	1998/10/26 14:10:00
-@@ -13,7 +13,7 @@
- 	-mkdir ${MANDIR}/man4
- 	for i in ${SRC} ; do \
- 	    rm -f ${MANDIR}/man4/$$i; \
--	    sed -e s@:DESTDIR:@${DESTDIR}@ -e s@:SBINDIR:@${SBINDIR}@ \
-+	    sed -e s@:DESTDIR:@${ATALK_DESTDIR}@ -e s@:SBINDIR:@${SBINDIR}@ \
- 		    -e s@:BINDIR:@${BINDIR}@ -e s@:RESDIR:@${RESDIR}@ \
- 		    -e s@:ETCDIR:@${ETCDIR}@ -e s@:LIBDIR:@${LIBDIR}@ \
- 		    -e s@:INCDIR:@${INCDIR}@ \
+--- libatalk/nbp/Makefile.inc	Wed Dec 31 16:00:00 1969
++++ libatalk/nbp/Makefile.inc	Mon Aug 30 06:47:43 1999
+@@ -0,0 +1,3 @@
++.PATH: ${.CURDIR}/nbp
++
++SRCS+= nbp_util.c nbp_lkup.c nbp_rgstr.c nbp_unrgstr.c

@@ -1,13 +1,22 @@
-$NetBSD: patch-ax,v 1.1 1999/02/23 00:31:40 wrstuden Exp $
+$NetBSD: patch-ax,v 1.2 1999/08/31 22:09:43 wrstuden Exp $
 
---- libatalk/asp/asp_getsess.c.orig	Sat Aug 16 19:20:31 1997
-+++ libatalk/asp/asp_getsess.c	Thu Feb 18 20:19:39 1999
-@@ -6,7 +6,7 @@
- #include <sys/errno.h>
- #include <sys/time.h>
- #include <sys/types.h>
--#include <sys/signal.h>
-+#include <signal.h>
- #include <sys/uio.h>
- #include <sys/wait.h>
- #include <sys/syslog.h>
+--- man/Makefile	Tue Feb 20 08:38:07 1996
++++ man/Makefile	Mon Aug 30 06:47:43 1999
+@@ -7,7 +7,7 @@
+ 
+ ${ALL}: FRC
+ 	cd $@; ${MAKE} ${MFLAGS} CC="${CC}" DEFS="${DEFS}" \
+-	    OPTOPTS="${OPTOPTS}" DESTDIR="${DESTDIR}" MANDIR="${MANDIR}" \
++	    OPTOPTS="${OPTOPTS}" ATALK_DESTDIR="${ATALK_DESTDIR}" MANDIR="${MANDIR}" \
+ 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
+ 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}"
+ 
+@@ -24,7 +24,7 @@
+ 	-mkdir ${MANDIR}
+ 	for i in ${ALL}; \
+ 	    do (cd $$i; ${MAKE} ${MFLAGS} \
+-		DESTDIR="${DESTDIR}"  MANDIR="${MANDIR}" \
++		ATALK_DESTDIR="${ATALK_DESTDIR}"  MANDIR="${MANDIR}" \
+ 		SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
+ 	        ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
+ 		INSTALL="${INSTALL}" install); \
