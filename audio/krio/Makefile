@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/21 16:30:41 martti Exp $
+# $NetBSD: Makefile,v 1.14 2003/10/08 10:06:47 taca Exp $
 
 DISTNAME=	Krio-19990721
 PKGNAME=	krio-19990721
@@ -17,7 +17,7 @@ USE_X11BASE=	yes
 
 RIODIR=		${_PKGSRCDIR}/audio/rio/${WRKDIR:T}/rio107
 
-DEPENDS+=	jpeg-6b:../../graphics/jpeg
+DEPENDS+=	jpeg>=6b:../../graphics/jpeg
 DEPENDS+=	kdelibs-1.1.2nb1:../../x11/kdelibs
 DEPENDS+=	png>=1.2.1:../../graphics/png
 DEPENDS+=	qt1-1.44:../../x11/qt1
