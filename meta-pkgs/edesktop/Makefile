@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/12/12 02:10:17 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2000/12/12 17:52:32 abs Exp $
 #
 
 DISTNAME=	edesktop-1.0
@@ -9,18 +9,18 @@ DISTFILES=	# empty
 MAINTAINER=	root@garbled.net
 
 DEPENDS+=	enlightenment>=0.16.2:../../wm/enlightenment
-DEPENDS+=	eterm-0.8.8:../../x11/eterm
-DEPENDS+=	ethemes-*:../../x11/ethemes
-DEPENDS+=	rxvt-2.6.1:../../x11/rxvt
-DEPENDS+=	mutt-*:../../mail/mutt
-DEPENDS+=	econf-0.15:../../x11/econf
-DEPENDS+=	xv-3.10apl1:../../graphics/xv
-DEPENDS+=	ee-0.3.8:../../graphics/ee
-DEPENDS+=	gimp-1.*:../../graphics/gimp
-DEPENDS+=	xpaint-2.5.6:../../graphics/xpaint
-DEPENDS+=	xfig-3.2.2:../../graphics/xfig
-DEPENDS+=	emacs-20.*:../../editors/emacs
-DEPENDS+=	jed-0.98-7:../../editors/jed
+DEPENDS+=	eterm-[0-9]*:../../x11/eterm
+DEPENDS+=	ethemes-[0-9]*:../../x11/ethemes
+DEPENDS+=	rxvt-[0-9]*:../../x11/rxvt
+DEPENDS+=	mutt-[0-9]*:../../mail/mutt
+DEPENDS+=	econf-[0-9]*:../../x11/econf
+DEPENDS+=	xv-[0-9]*:../../graphics/xv
+DEPENDS+=	ee-[0-9]*:../../graphics/ee
+DEPENDS+=	gimp-[0-9]*:../../graphics/gimp
+DEPENDS+=	xpaint-[0-9]*:../../graphics/xpaint
+DEPENDS+=	xfig-[0-9]*:../../graphics/xfig
+DEPENDS+=	emacs-[0-9]*:../../editors/emacs
+DEPENDS+=	jed-[0-9]*:../../editors/jed
 
 USE_X11=	yes
 EXTRACT_ONLY=	# empty
