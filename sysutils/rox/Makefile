@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/06/01 18:25:46 cjep Exp $
+# $NetBSD: Makefile,v 1.5 2002/06/29 12:51:32 agc Exp $
 #
 
 DISTNAME=	rox-1.2.0
@@ -35,8 +35,8 @@ pre-install:
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/${DISTNAME}/src/ROX-Filer	\
 			${PREFIX}/libexec/rox
-	${CP} -Rf ${WRKDIR}/${DISTNAME}/ROX-Filer			\
-				${PREFIX}/share/rox/ROX-Filer;
+	${INSTALL_DATA_DIR} ${PREFIX}/share/rox/ROX-Filer
+	cd ${WRKDIR}/${DISTNAME}/ROX-Filer && ${PAX} -rw . ${PREFIX}/share/rox/ROX-Filer
 	${SED} -e "s:@PREFIX@:"${PREFIX}":g" <				\
 		${WRKDIR}/${DISTNAME}/ROX-Filer/AppRun > 		\
 		${PREFIX}/share/rox/ROX-Filer/AppRun
