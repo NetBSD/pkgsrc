@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/19 19:53:56 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/02/19 20:39:21 wiz Exp $
 #
 
 DISTNAME=		Lingua-EN-Numbers-Ordinate-1.02
@@ -14,7 +14,7 @@ COMMENT=		Go from cardinal number (3) to ordinal ("3rd")
 
 USE_BUILDLINK3=		yes
 USE_LANGUAGES=		# empty
-PERL5_PACKLIST=		${PERL5_SITEARCH}/Lingua/En/Numbers/Ordinate/.packlist
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Lingua/EN/Numbers/Ordinate/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
