@@ -1,0 +1,45 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/05/04 00:03:29 jtb Exp $
+
+--- Makefile.orig	Mon Jan 21 23:17:58 2002
++++ Makefile	Sat May  4 01:05:33 2002
+@@ -1,14 +1,9 @@
+-CC = cc
+-CFLAGS = -Wall -O2
++DESTDIR = $(PREFIX)
++BINDIR = $(PREFIX)/bin
++MANDIR = $(PREFIX)/man
+ 
+-DESTDIR = /usr/local
+-BINDIR = /usr/local/bin
+-MANDIR = /usr/local/man
+-
+-INSTALL = install -c
+-INST_DIR = install -d
+-INST_BIN = $(INSTALL) -m 755
+-INST_DOC = $(INSTALL) -m 644
++INST_BIN = $(BSD_INSTALL_PROGRAM)
++INST_DOC = $(BSD_INSTALL_MAN)
+ 
+ MAN_BIN = imapfilter.1
+ MAN_RC = imapfilterrc.5
+@@ -19,6 +14,8 @@
+ 
+ LIBS =  -lssl -lcrypto
+ 
++all: imapfilter
++
+ imapfilter: $(OBJ)
+ 	$(CC) $(LIBS) $(CFLAGS) -o $(BIN) $(OBJ)
+ 
+@@ -27,11 +24,8 @@
+ data.o imapfilter.o imap.o file.o request.o socket.o: data.h
+ 
+ install: imapfilter
+-	if test ! -d $(BINDIR); then $(INST_DIR) $(BINDIR); fi
+ 	$(INST_BIN) $(BIN) $(BINDIR)
+-	if test ! -d $(MANDIR)/man1; then $(INST_DIR) $(MANDIR)/man1; fi
+ 	$(INST_DOC) $(MAN_BIN) $(MANDIR)/man1
+-	if test ! -d $(MANDIR)/man5; then $(INST_DIR) $(MANDIR)/man5; fi
+ 	$(INST_DOC) $(MAN_RC) $(MANDIR)/man5
+ 
+ uninstall:

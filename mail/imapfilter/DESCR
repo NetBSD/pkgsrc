@@ -1,0 +1,4 @@
+IMAPFilter is a mail filtering utility. It connects to remote mail
+servers using the Internet Message Access Protocol (IMAP). Based on
+the user defined filters it checks messages residing on a remote IMAP
+mailbox and processes them in various ways.
