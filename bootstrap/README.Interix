@@ -1,4 +1,4 @@
-$NetBSD: README.Interix,v 1.6 2004/03/29 02:22:32 tv Exp $
+$NetBSD: README.Interix,v 1.7 2004/04/21 20:34:16 tv Exp $
 
 Please read the general README file as well.
 
@@ -42,7 +42,7 @@ KNOWN CAVEATS
   group.  Such a user must also be used to run the bootstrap.  This is
   slightly relaxed from the normal pkgsrc requirement of "root".
 
-* The package manager should use a umask of 022.  "make install" will
+* The package manager should use a umask of 002.  "make install" will
   automatically complain if this is not the case.  This ensures that
   directories written in /var/db/pkg are Administrators-group writeable. 
 
