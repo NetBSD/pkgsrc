@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4707 2004/02/06 20:02:16 jmmv Exp $
+$NetBSD: CHANGES,v 1.4708 2004/02/06 20:35:59 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -672,3 +672,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome-vfs2 to 2.4.2 [jmmv 2004-02-06]
 	Updated gpdf to 0.112 [jmmv 2004-02-06]
 	Updated libIDL to 0.8.3 [jmmv 2004-02-06]
+	Updated libbonobo to 2.4.3 [jmmv 2004-02-06]
+	Updated libbonoboui to 2.4.3 [jmmv 2004-02-06]
