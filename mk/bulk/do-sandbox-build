@@ -6,9 +6,9 @@
 #
 
 #
-# Important files in sandbox (after extracting sets):
+# Important files in sandbox (after extracting sets or doing a
+# "make distribution DESTDIR=/usr/sandbox" in src/etc):
 #  * kernel (/netbsd)
-#  * /etc/resolv.conf
 #  * /dev/*
 #  * working(!) mail config (hostname, sendmail.cf)
 #  * /etc/localtime (security/snmpd)
