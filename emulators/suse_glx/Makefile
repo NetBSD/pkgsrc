@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/06 23:24:58 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/16 14:53:38 wiz Exp $
 #
 
 DISTNAME=		suse_glx-6.4
 CATEGORIES=		emulators
-#MASTER_SITES=		${MASTER_SITE_SUSE:=x3d2/}
-MASTER_SITES=		ftp://ftp.suse.com/pub/suse/i386/6.4/suse/x3d1/
+MASTER_SITES=		${MASTER_SITE_SUSE:=x3d1/} \
+			ftp://ftp.suse.com/pub/suse/i386/6.4/suse/x3d1/
 DISTFILES=		${RPMFILES}
 
 MAINTAINER=		packages@netbsd.org
