@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:39:07 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/12/19 07:14:03 jdc Exp $
 
 DISTNAME=		netmaze0.81
 PKGNAME=		netmaze-0.81
-PKGREVISION=		1
+PKGREVISION=		2
 WRKSRC=			${WRKDIR}/netmaze
 CATEGORIES=		games
 MASTER_SITES=  		${MASTER_SITE_XCONTRIB:=games/multiplayer/}
