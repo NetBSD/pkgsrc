@@ -1,8 +1,8 @@
-$NetBSD: patch-bb,v 1.1 2004/06/26 20:19:16 recht Exp $
+$NetBSD: patch-bb,v 1.2 2004/11/22 13:42:42 adam Exp $
 
---- mono/metadata/Makefile.in.orig	2004-06-26 14:05:44.000000000 +0200
-+++ mono/metadata/Makefile.in	2004-06-26 14:05:51.000000000 +0200
-@@ -682,7 +682,7 @@
+--- mono/metadata/Makefile.in.orig	2004-10-29 16:11:20.000000000 +0000
++++ mono/metadata/Makefile.in
+@@ -816,7 +816,7 @@ uninstall-am: uninstall-binPROGRAMS unin
  @WITH_BUNDLE_TRUE@	@if test -f $@; then :; else rm -f mono-bundle.stamp; $(MAKE) mono-bundle.stamp; fi
  @WITH_BUNDLE_TRUE@mono-bundle.stamp: $(BUNDLE_FILE) $(srcdir)/make-bundle.pl
  @WITH_BUNDLE_TRUE@	echo stamp > $@t

@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2004/07/03 23:02:50 recht Exp $
+$NetBSD: patch-ab,v 1.7 2004/11/22 13:42:42 adam Exp $
 
---- runtime/net_1_1/Makefile.in.orig	2004-06-29 18:09:20.000000000 +0200
-+++ runtime/net_1_1/Makefile.in	2004-07-03 23:38:39.000000000 +0200
-@@ -361,17 +361,17 @@
+--- runtime/net_1_1/Makefile.in.orig	2004-10-29 16:11:22.000000000 +0000
++++ runtime/net_1_1/Makefile.in
+@@ -495,17 +495,17 @@ all-local: $(gac_assemblies)
  install-data-local:
  	@if test -n '$(gac_assemblies)'; then \
  	  for i in ''$(gac_assemblies); do \
