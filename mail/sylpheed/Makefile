@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2004/01/03 18:49:45 reed Exp $
+# $NetBSD: Makefile,v 1.57 2004/01/07 01:40:43 xtraeme Exp $
 
 DISTNAME=	sylpheed-0.9.8a
 PKGREVISION=	1
@@ -33,8 +33,10 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 .include "../../mk/bsd.prefs.mk"
 BUILD_DEFS+=		USE_INET6 USE_OPENLDAP USE_JPILOT
 
-.if defined(USE_INET6) && ${USE_INET6} == YES
+.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-ipv6
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 FACES_IS_INSTALLED!=	${PKG_INFO} -e faces || ${ECHO}
