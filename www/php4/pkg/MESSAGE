@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.6 2001/10/18 17:07:10 jlam Exp $
+$NetBSD: MESSAGE,v 1.7 2001/10/30 13:56:55 wiz Exp $
 
 Example configuration files suitable as a basis for a custom php.ini may
 be found at:
@@ -13,8 +13,9 @@ PHP module for your HTTP server, e.g. ap-php4.
 
 Some additional packages you may wish to install are:
 
-	php-dba		DBM databases access
-	php-pcre	Perl-compatible regular expressions
-	php-session	session ID support
-	php-xml		expat XML parser
+	php4-dba	DBM databases access
+	php4-pcre	Perl-compatible regular expressions
+	php4-posix	PHP4 extension for POSIX-like functions
+	php4-session	session ID support
+	php4-xml	expat XML parser
 ===========================================================================
