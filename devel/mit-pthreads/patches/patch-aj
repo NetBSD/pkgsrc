@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.7 1999/08/02 18:18:17 bad Exp $
+$NetBSD: patch-aj,v 1.8 1999/09/10 20:38:23 bad Exp $
 
 --- config/configure.orig	Wed Nov 13 22:03:02 1996
-+++ config/configure	Tue Jul 27 16:25:36 1999
++++ config/configure	Fri Sep 10 20:51:21 1999
 @@ -1049,6 +1049,17 @@
  name=$host_cpu-$host_os
  
@@ -74,17 +74,25 @@ $NetBSD: patch-aj,v 1.7 1999/08/02 18:18:17 bad Exp $
      i386-*-netbsd1.1* | i386-*-netbsd1.2*)
  	name=i386-netbsd-1.0
  	sysincludes=netbsd-1.1
-@@ -1129,6 +1173,9 @@
+@@ -1127,8 +1171,16 @@
+ 	name=i386-netbsd-0.9
+ 	sysincludes=netbsd-0.9
  	;;
-     m68*-*-netbsd*)
+-    m68*-*-netbsd*)
++    m68*-*-netbsd1.3[H-Z]|m68*-*-netbsd1.4*)
  	name=m68000-netbsd
 +	sysincludes=netbsd-1.1
 +	except="lseek ftruncate pipe fstat"
 +	available_syscalls="sigsuspend sigprocmask"
++	;;
++    m68*-*-netbsd1.3*)
++	name=m68000-netbsd
++	sysincludes=netbsd-1.1
++	except="lseek ftruncate pipe fstat sigsuspend sigprocmask"
  	;;
      i386-*-freebsd2.*)
          name=i386-freebsd-2.0
-@@ -1697,6 +1744,39 @@
+@@ -1697,6 +1749,39 @@
  if test $pthreads_cv_timespec_in_time = yes ; then
    cat >> confdefs.h <<\EOF
  #define _OS_HAS_TIMESPEC 1
