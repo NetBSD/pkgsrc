@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.371 2005/02/25 18:18:28 drochner Exp $
+# $NetBSD: Makefile,v 1.372 2005/02/25 19:08:04 drochner Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -64,6 +64,7 @@ SUBDIR+=	eog2
 SUBDIR+=	epeg
 SUBDIR+=	exif
 SUBDIR+=	exiftags
+SUBDIR+=	exiv2
 SUBDIR+=	fbm
 SUBDIR+=	feh
 SUBDIR+=	flphoto
