@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/16 20:50:24 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/04/16 21:57:08 jtb Exp $
 
 DISTNAME=	libxml-enno-1.04
 PKGNAME=	p5-${DISTNAME}
@@ -9,7 +9,7 @@ MAINTAINER=	packages@NetBSD.org
 HOMEPAGE=	http://www.erols.com/enno/
 COMMENT=	Several XML manipulation tools, including XML::DOM
 
-DEPENDS+=	p5-XML-Parser>=2.30:../p5-XML-Parser
+DEPENDS+=	p5-XML-Parser>=2.30:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-Date-Manip>=5.39:../../devel/p5-Date-Manip
 DEPENDS+=	p5-libwww>=5.50:../../www/p5-libwww
 DEPENDS+=	p5-libxml>=0.07:../../textproc/p5-libxml
