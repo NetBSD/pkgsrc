@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-#	$NetBSD: bsd.pkg.mk,v 1.81 1998/05/08 20:30:53 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.82 1998/05/13 13:34:13 tv Exp $
 #
 #	This file is derived from bsd.port.mk - 940820 Jordan K. Hubbard.
 #	This file is in the public domain.
@@ -1810,7 +1810,7 @@ misc-depends:
 	@for dir in ${DEPENDS}; do					\
 		package=`${ECHO} $$dir | ${SED} -e 's/:.*//'`;		\
 		dir=`${ECHO} $$dir | ${SED} -e 's/.*://'`;		\
-		if pkg_info -e $$package; then			\
+		if /usr/sbin/pkg_info -e $$package; then		\
 			${ECHO_MSG} "===>  ${PKGNAME} depends on: installed package $$package";	\
 		else							\
 			${ECHO_MSG} "===>  ${PKGNAME} depends on: package $$package";	\
