@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1 1999/01/04 22:37:31 tv Exp $
+$NetBSD: patch-ac,v 1.2 2000/06/11 23:42:13 mycroft Exp $
 
---- ./bfd/elf32-mips.c.orig	Fri May  1 11:48:09 1998
-+++ ./bfd/elf32-mips.c	Mon Dec 28 17:43:20 1998
+--- bfd/elf32-mips.c.orig	Fri May  1 11:48:09 1998
++++ bfd/elf32-mips.c	Sun Jun 11 19:33:36 2000
 @@ -155,6 +155,11 @@
  #define STUB_LI16 0x34180000	/* ori t8,zero,0 */
  #define MIPS_FUNCTION_STUB_SIZE (16)
@@ -34,7 +34,19 @@ $NetBSD: patch-ac,v 1.1 1999/01/04 22:37:31 tv Exp $
      }
    else if (strcmp (name, ".got") == 0
  	   || strcmp (name, ".sdata") == 0
-@@ -3178,8 +3188,11 @@
+@@ -2884,8 +2894,11 @@
+   bfd_h_put_16 (abfd, in->pcreg, (bfd_byte *) ex->p_pcreg);
+ 
+   bfd_h_put_32 (abfd, in->irpss, (bfd_byte *) ex->p_irpss);
++  bfd_h_put_32 (abfd, 0, (bfd_byte *) ex->p_reserved);
+ #if 0 /* FIXME */
+   ecoff_put_off (abfd, in->exception_info, (bfd_byte *) ex->p_exception_info);
++#else
++  bfd_h_put_32 (abfd, 0, (bfd_byte *) ex->p_exception_info);
+ #endif
+ }
+ 
+@@ -3178,8 +3191,11 @@
  struct mips_elf_link_hash_table
  {
    struct elf_link_hash_table root;
@@ -46,7 +58,7 @@ $NetBSD: patch-ac,v 1.1 1999/01/04 22:37:31 tv Exp $
    /* The number of .rtproc entries.  */
    bfd_size_type procedure_count;
    /* The size of the .compact_rel section (if SGI_COMPAT).  */
-@@ -3264,7 +3277,6 @@
+@@ -3264,7 +3280,6 @@
       bfd *abfd;
  {
    struct mips_elf_link_hash_table *ret;
@@ -54,7 +66,7 @@ $NetBSD: patch-ac,v 1.1 1999/01/04 22:37:31 tv Exp $
  
    ret = ((struct mips_elf_link_hash_table *)
  	 bfd_alloc (abfd, sizeof (struct mips_elf_link_hash_table)));
-@@ -3278,8 +3290,11 @@
+@@ -3278,8 +3293,11 @@
        return NULL;
      }
  
@@ -66,7 +78,7 @@ $NetBSD: patch-ac,v 1.1 1999/01/04 22:37:31 tv Exp $
    ret->procedure_count = 0;
    ret->compact_rel_size = 0;
    ret->use_rld_obj_head = false;
-@@ -6570,15 +6585,20 @@
+@@ -6570,15 +6588,20 @@
       That means we must increment the dynamic symbol index of every
       other dynamic symbol.  */
    {
@@ -90,7 +102,7 @@ $NetBSD: patch-ac,v 1.1 1999/01/04 22:37:31 tv Exp $
  	if (SGI_COMPAT (output_bfd))
  	  {
  	    c = SIZEOF_MIPS_DYNSYM_SECNAMES - 1;
-@@ -6606,6 +6626,7 @@
+@@ -6606,6 +6629,7 @@
  	      }
  	  }
  	else
@@ -98,7 +110,7 @@ $NetBSD: patch-ac,v 1.1 1999/01/04 22:37:31 tv Exp $
  	  {
  	    c = bfd_count_sections (output_bfd);
  	    elf_link_hash_traverse (elf_hash_table (info),
-@@ -6962,8 +6983,11 @@
+@@ -6962,8 +6986,11 @@
  	      break;
  
  	    case DT_MIPS_UNREFEXTNO:
@@ -111,7 +123,7 @@ $NetBSD: patch-ac,v 1.1 1999/01/04 22:37:31 tv Exp $
  	      bfd_elf32_swap_dyn_out (output_bfd, &dyn, dyncon);
  	      break;
  
-@@ -7001,12 +7025,7 @@
+@@ -7001,12 +7028,7 @@
    {
      asection *sdynsym;
      asection *s;
@@ -124,7 +136,7 @@ $NetBSD: patch-ac,v 1.1 1999/01/04 22:37:31 tv Exp $
      Elf32_compact_rel cpt;
  
      /* Set up the section symbols for the output sections. SGI sets
-@@ -7015,6 +7034,16 @@
+@@ -7015,6 +7037,16 @@
      sdynsym = bfd_get_section_by_name (dynobj, ".dynsym");
      if (sdynsym != NULL)
        {
@@ -141,7 +153,7 @@ $NetBSD: patch-ac,v 1.1 1999/01/04 22:37:31 tv Exp $
  	if (SGI_COMPAT (output_bfd))
  	  {
  	    sym.st_size = 0;
-@@ -7059,6 +7088,7 @@
+@@ -7059,6 +7091,7 @@
  	      SIZEOF_MIPS_DYNSYM_SECNAMES;
  	  }
  	else
