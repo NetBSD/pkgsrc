@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.4 1998/08/07 11:10:12 agc Exp $
+$NetBSD: patch-aa,v 1.5 1999/11/27 22:55:07 rh Exp $
 
---- Makefile.orig	Sat Sep 24 04:55:51 1994
-+++ Makefile	Thu May 21 15:44:37 1998
+--- Makefile.orig	Sat Nov 27 23:51:20 1999
++++ Makefile	Sat Nov 27 23:51:22 1999
 @@ -1,7 +1,10 @@
  #	@(#)Makefile	8.1 (Berkeley) 6/2/93
- #	$Id: patch-aa,v 1.4 1998/08/07 11:10:12 agc Exp $
+ #	$Id: patch-aa,v 1.5 1999/11/27 22:55:07 rh Exp $
  
 -PROG=	ls
 +PROG=	colorls
