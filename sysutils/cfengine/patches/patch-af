@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2000/09/13 01:00:48 wiz Exp $
+
+--- src/encrypt.c.orig	Wed Aug 11 11:32:33 1999
++++ src/encrypt.c
+@@ -39,6 +39,8 @@
+ #ifdef HAVE_LIBCRYPTO  /* must be des.h from OpenSSL */
+ # ifdef HAVE_OPENSSL_DES_H
+ #  include <openssl/des.h>
++# else
++#  undef HAVE_LIBCRYPTO
+ # endif
+ #endif
+ 
