@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/02/20 13:42:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2004/02/20 14:25:04 jmmv Exp $
 #
 
 DISTNAME=	gossip-0.7
@@ -23,11 +23,11 @@ GNU_CONFIGURE=		yes
 
 GCONF2_SCHEMAS=		gossip.schemas
 
+.include "../../chat/loudmouth/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/loudmouth/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
