@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8838 2005/01/20 18:51:52 jmmv Exp $
+$NetBSD: CHANGES,v 1.8839 2005/01/20 20:38:22 bad Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -448,3 +448,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added libnet-1.1.2.1 [adrianp 2005-01-20]
 	Updated dia to 0.94nb1 [jmmv 2005-01-20]
 	Added dia-python-0.94 [jmmv 2005-01-20]
+	Updated jdb to 1.12 [bad 2005-01-20]
