@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.6 2000/10/22 09:33:23 rh Exp $
+$NetBSD: md5,v 1.7 2000/12/05 12:11:42 rh Exp $
 
-MD5 (balsa-1.0.pre3.tar.gz) = 2af929b9975659a160057df1609ed087
+MD5 (balsa-1.0.0.tar.gz) = d26e5cc354fa2634f9e2b2c6905777ea
