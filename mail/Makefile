@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.149 2002/11/27 03:31:00 jschauma Exp $
+# $NetBSD: Makefile,v 1.150 2002/12/07 15:13:37 cjep Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -49,6 +49,7 @@ SUBDIR+=	imap-uw-utils
 SUBDIR+=	imapfilter
 SUBDIR+=	imp
 SUBDIR+=	incm
+SUBDIR+=	isync
 SUBDIR+=	ja-mh
 SUBDIR+=	libesmtp
 SUBDIR+=	libmilter
