@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:08 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/05/03 23:14:52 jtb Exp $
 bin/fp2hdf
 bin/hdf24to8
 bin/hdf2jpeg
@@ -66,8 +66,8 @@ include/hdf/mfan.h
 include/hdf/mfhdf.h
 include/hdf/mfgr.h
 include/hdf/mstdio.h
-include/hdf/netcdf_hdf.h
-include/hdf/netcdf_hdf.inc
+include/hdf/netcdf.h
+include/hdf/netcdf.inc
 include/hdf/patchlevel.h
 include/hdf/src.inc
 include/hdf/sys_dir_mac.h

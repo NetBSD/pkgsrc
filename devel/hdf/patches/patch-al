@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.2 2001/03/25 01:09:51 jtb Exp $
+$NetBSD: patch-al,v 1.3 2002/05/03 23:14:52 jtb Exp $
 
---- /dev/null	Sun Mar 25 00:38:11 2001
-+++ hdf/test/Makefile
-@@ -0,0 +1,60 @@
+--- /dev/null	Wed May  1 14:04:01 2002
++++ hdf/test/Makefile	Wed May  1 14:13:47 2002
+@@ -0,0 +1,61 @@
 +CSRCS=	rig.c sdstr.c blocks.c an.c anfile.c extelt.c file.c file1.c	\
 +	vers.c sdmms.c sdnmms.c slab.c litend.c tvset.c comp.c bitio.c	\
 +	tree.c macros.c conv.c nbit.c man.c mgr.c testhdf.c tbv.c	\
@@ -23,8 +23,9 @@ $NetBSD: patch-al,v 1.2 2001/03/25 01:09:51 jtb Exp $
 +CPPFLAGS+= -Dunix
 +CPPFLAGS+= -I${.CURDIR}/../src
 +
-+LDFLAGS+= -Wl,-R${.CURDIR}/../src -L${.CURDIR}/../src
-+LDFLAGS+= -Wl,-R${JPEGBASE}/lib -L${JPEGBASE}/lib
++LDFLAGS+= -L${.CURDIR}/../src
++LDFLAGS+= -Wl,-R${BUILDLINK_PREFIX.jpeg}/lib
++LDFLAGS+= -Wl,-R${BUILDLINK_PREFIX.zlib}/lib
 +
 +LDADD+= -ldf -ljpeg -lz -lm
 +
@@ -57,7 +58,7 @@ $NetBSD: patch-al,v 1.2 2001/03/25 01:09:51 jtb Exp $
 +	${CC} ${CPPFLAGS} ${CFLAGS} -o $@ $? ${LDFLAGS} ${LDADD}
 +
 +clean:
-+	-rm -f testhdf ${COBJS} ${FOBJS} ${FTESTS}			  \
++	${RM} testhdf ${COBJS} ${FOBJS} ${FTESTS}			  \
 +	core *.hdf ptesthdf qtesthdf gentest *.o fortest.arg ${TESTDIR}/* \
 +	.depend
 +

@@ -1,24 +1,23 @@
-$NetBSD: distinfo,v 1.3 2001/04/21 00:44:23 wiz Exp $
+$NetBSD: distinfo,v 1.4 2002/05/03 23:14:52 jtb Exp $
 
-SHA1 (HDF4.1r4.tar.gz) = 3440807b3037caa3ba4ee541402600eb1dcc67e7
-Size (HDF4.1r4.tar.gz) = 4371391 bytes
+SHA1 (HDF4.1r5.tar.gz) = e284b3d14c5a1e6ca75ca581aa7bfa33a27208fb
+Size (HDF4.1r5.tar.gz) = 4423795 bytes
 SHA1 (patch-aa) = dd9c4c44423a8d93226e72331d921b0911cd0e62
 SHA1 (patch-ab) = bc3dcc046aee99ec219d2e01b98dc314f63e25b6
 SHA1 (patch-ac) = 45ba44cbdf00ac0b4b7101d2c1514e34a57dd024
-SHA1 (patch-ad) = 4d3dec99064f5ae3202502fcd71d5499ccee7b08
-SHA1 (patch-ae) = da73e042272bf318e6f631e4ed91cc21897a5711
-SHA1 (patch-af) = 2b50002362a058f2b053293a50d779bb1b7a032c
+SHA1 (patch-ad) = 193fadfb544d876041e636707e54c348e485794b
+SHA1 (patch-ae) = 20cf3ec7d97dc12720e9fdb60c913d729d6e97f2
+SHA1 (patch-af) = d788f52dbc0534310ffa9bffefc5f685206042c5
 SHA1 (patch-ag) = 1a3143fc8508213690a6e5953b30b915b64bf910
-SHA1 (patch-ah) = 50700dada74d56632c49481b05fa5b9313b77cf7
-SHA1 (patch-ai) = 6e7a52ff516eb86caf15441f91c598b2d1d64c95
-SHA1 (patch-aj) = 081f1632289ead661328c7df73ddeb2dff2eb2eb
+SHA1 (patch-ah) = 0b0f14b8f281674e73479c33908c578340f9435b
+SHA1 (patch-ai) = a7b075cd42b28613d98c93e4ecc68818845386a4
+SHA1 (patch-aj) = 86c18e35cc0079ec99982075f1f528cbac975b6e
 SHA1 (patch-ak) = d29cd29382e6775f3bfb353dd745c78ac85b2e1b
-SHA1 (patch-al) = 7ac77a10cab7df20976d912aa8f4aeea9210f3cc
-SHA1 (patch-am) = b51a0705d1130c799663cbf75a938af0cbd0f599
-SHA1 (patch-an) = 3fba432a5bf700b502ecff4ac6c54ca285d740a2
+SHA1 (patch-al) = 719419d45c33134b51105fa63a0e4aad7c05ed03
+SHA1 (patch-an) = d098b92a0bbd78daa979ead386e0d81f12e5f6dd
 SHA1 (patch-ao) = 7b3e02fd7003bc7915c144433151b1eb878effdc
 SHA1 (patch-ap) = 5f6cd95f18ae6cb0c4da1155180abcedfb02abe0
 SHA1 (patch-aq) = 92412e45cf9d85e0c46dbcb7f5b9aa40d2b36991
 SHA1 (patch-ar) = 5fbb6e8c56ccf05db0217e9551a0c72ecd9f5c06
 SHA1 (patch-as) = b4fa7cd3bcafd75c9bfc045c2849bde21becd2de
-SHA1 (patch-at) = 1a4c29206fff6b7dc774372ede52e41a9ae2be4e
+SHA1 (patch-at) = 10348b63c21218eb6336358f756df0ec86b0d95e

@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.6 2001/04/19 00:56:34 jtb Exp $
+$NetBSD: patch-af,v 1.7 2002/05/03 23:14:52 jtb Exp $
 
 --- mfhdf/libsrc/Makefile.orig	Thu Apr 19 00:17:24 2001
 +++ mfhdf/libsrc/Makefile
@@ -25,7 +25,7 @@ $NetBSD: patch-af,v 1.6 2001/04/19 00:56:34 jtb Exp $
 +
 +afterinstall:
 +	${BSD_INSTALL_DATA_DIR} ${PREFIX}/include/hdf
-+	for f in hdf2netcdf.h local_nc.h mfhdf.h netcdf_hdf.h; do	\
++	for f in hdf2netcdf.h local_nc.h mfhdf.h netcdf.h; do	\
 +		${BSD_INSTALL_DATA} $$f ${PREFIX}/include/hdf/;		\
 +	done
 +
