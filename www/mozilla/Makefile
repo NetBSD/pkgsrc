@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2000/10/14 09:24:46 martin Exp $
+# $NetBSD: Makefile,v 1.43 2000/10/25 22:02:35 mycroft Exp $
 
 DISTNAME=	mozilla-source-M18
 PKGNAME=	mozilla-0.m18
@@ -46,6 +46,12 @@ SCRIPTS_ENV+=	BINOWN=${BINOWN}
 SCRIPTS_ENV+=	BINGRP=${BINGRP}
 SCRIPTS_ENV+=	BINMODE=${BINMODE}
 SHAREMODE?=	644
+
+post-extract:
+	${CP} ${FILESDIR}/xptcinvoke_asm_ppc_netbsd.s ${WRKSRC}/xpcom/reflect/xptcall/src/md/unix/
+	${CP} ${FILESDIR}/xptcinvoke_ppc_netbsd.cpp ${WRKSRC}/xpcom/reflect/xptcall/src/md/unix/
+	${CP} ${FILESDIR}/xptcstubs_asm_ppc_netbsd.s ${WRKSRC}/xpcom/reflect/xptcall/src/md/unix/
+	${CP} ${FILESDIR}/xptcstubs_ppc_netbsd.cpp ${WRKSRC}/xpcom/reflect/xptcall/src/md/unix/
 
 pre-configure:
 	(cd ${WRKSRC} && autoconf)

@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.9 2000/10/25 22:02:36 mycroft Exp $
+
+--- xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	Wed Jul 19 19:53:01 2000
++++ xpcom/reflect/xptcall/src/md/unix/Makefile.in	Wed Oct 25 21:39:52 2000
+@@ -181,6 +181,11 @@
+ ASFILES		:= xptcinvoke_asm_ppc_linux.s xptcstubs_asm_ppc_linux.s
+ endif
+ 
++ifneq (,$(filter NetBSDmacppc NetBSDbebox NetBSDofppc NetBSDprep NetBSDamigappc,$(OS_ARCH)$(OS_TEST)))                           
++CPPSRCS		:= xptcinvoke_ppc_netbsd.cpp xptcstubs_ppc_netbsd.cpp
++ASFILES		:= xptcinvoke_asm_ppc_netbsd.s xptcstubs_asm_ppc_netbsd.s
++endif
++
+ ifeq ($(OS_ARCH),Rhapsody)
+ CPPSRCS		:= xptcinvoke_ppc_rhapsody.cpp xptcstubs_ppc_rhapsody.cpp
+ ASFILES		:= xptcinvoke_asm_ppc_rhapsody.s xptcstubs_asm_ppc_rhapsody.s
