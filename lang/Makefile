@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1997/10/06 15:14:53 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/01/28 11:06:21 agc Exp $
 # FreeBSD Id: Makefile,v 1.82 1997/09/30 07:49:24 asami Exp
 #
 
@@ -11,7 +11,7 @@
 #    SUBDIR += eiffel
 #    SUBDIR += elk
 #    SUBDIR += eperl
-#    SUBDIR += expect
+    SUBDIR += expect
 #    SUBDIR += forth
 #    SUBDIR += g77
 #    SUBDIR += gcl
@@ -23,7 +23,7 @@
 #    SUBDIR += itcl
 #    SUBDIR += javac_netscape
 #    SUBDIR += jdk
-#    SUBDIR += kaffe
+    SUBDIR += kaffe
 #    SUBDIR += lcc
 #    SUBDIR += logo
     SUBDIR += mawk
