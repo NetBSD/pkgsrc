@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2003/12/17 14:55:58 sketch Exp $
+$NetBSD: patch-ad,v 1.2 2004/08/18 13:58:27 adam Exp $
 
---- configure.orig	2003-12-16 17:46:09.407424981 +0000
-+++ configure	2003-12-16 17:47:23.653519718 +0000
-@@ -4472,7 +4472,7 @@
+--- configure.orig	2004-03-18 13:17:22.000000000 +0000
++++ configure
+@@ -4545,7 +4545,7 @@ echo $ECHO_N "checking if the compiler s
  
  # What we want to do: set AUTO_DEPENDENCIES to yes if gcc => 3.x
  
