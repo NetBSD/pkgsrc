@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1 1998/09/05 20:19:16 frueauf Exp $
+$NetBSD: md5,v 1.2 1999/01/06 12:27:33 frueauf Exp $
 
-MD5 (zircon-1.18.180.tar.gz) = a6daabf8d8a56f6b7a531c2e279ef0ec
+MD5 (zircon-1.18.205.tar.gz) = 0c5438c0a56ab662b2e5f06944cdd8c9
