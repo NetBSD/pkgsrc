@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.86 2002/12/19 18:03:28 wiz Exp $
+$NetBSD: TODO,v 1.87 2002/12/19 18:59:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -239,6 +239,8 @@ Suggested package updates
 	o texmacs-1.0.0.25
 	o tightvnc-1.2.7
 	o ttf2pt1-3.4.3
+	o tuxpaint-2002.12.10
+	o tuxpaint-stamps-2002.12.03
 	o vfu-4.00
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
 	o wwwoffle-2.7g
