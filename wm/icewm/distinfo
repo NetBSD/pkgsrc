@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:54:34 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 09:19:51 agc Exp $
 
-MD5 (icewm-1.0.4.src.tar.gz) = 31d6fd8b94fd1becab0de15d4a8e4eb4
+SHA1 (icewm-1.0.4.src.tar.gz) = 5a742159daed68b1eee18573aefb6e1991615548
+Size (icewm-1.0.4.src.tar.gz) = 317288 bytes
 SHA1 (patch-aa) = 6b5a64baa1cb9a6581b0820e15c13994e8f01e19
 SHA1 (patch-ab) = 00f276e3be3f3793d2e93ca6af76b2b26cd8618a
 SHA1 (patch-ac) = 342b84b159d56a8e9d61c25a8accb654ac03d0f4
