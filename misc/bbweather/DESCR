@@ -1,0 +1,8 @@
+bbweather is a tool which displays the current weather conditions
+in an decorated window, simulating the look of the Blackbox toolbar
+(Blackbox is a Windowmanager for X11).  This tool is heavily based
+on "bbdate" by John Kennis, almost 90% of the code (rough guess ;)
+were taken over unaltered.  Furthermore, bbweather was inspired by
+wmWeather by Michael G. Henderson, from where I grabbed the
+perl-script that fetches the weather-conditions from your local
+station.
