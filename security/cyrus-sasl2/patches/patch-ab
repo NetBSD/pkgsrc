@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2004/03/29 05:47:31 jlam Exp $
+$NetBSD: patch-ab,v 1.7 2004/08/04 19:41:07 jlam Exp $
 
---- aclocal.m4.orig	Wed Mar 10 10:56:07 2004
+--- aclocal.m4.orig	Fri Jul  2 15:39:50 2004
 +++ aclocal.m4
 @@ -1714,7 +1714,7 @@ AC_DEFUN([CYRUS_BERKELEY_DB_CHK],
  	dnl Note that FreeBSD puts it in a wierd place
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.6 2004/03/29 05:47:31 jlam Exp $
                          dblib="no")
  
  	CPPFLAGS=$cmu_save_CPPFLAGS
-@@ -2908,7 +2908,10 @@ AC_DEFUN([SASL_GSSAPI_CHK],[
+@@ -2910,7 +2910,10 @@ AC_DEFUN([SASL_GSSAPI_CHK],[
    AC_MSG_RESULT(with implementation ${gss_impl})
    AC_CHECK_LIB(resolv,res_search,GSSAPIBASE_LIBS="$GSSAPIBASE_LIBS -lresolv")
    SASL_MECHS="$SASL_MECHS libgssapiv2.la"

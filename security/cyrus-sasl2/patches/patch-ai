@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.8 2004/03/29 05:47:31 jlam Exp $
+$NetBSD: patch-ai,v 1.9 2004/08/04 19:41:07 jlam Exp $
 
---- configure.orig	Wed Mar 10 10:56:10 2004
+--- configure.orig	Fri Jul  2 15:39:54 2004
 +++ configure
-@@ -10762,7 +10762,14 @@ if test $ac_cv_lib_resolv_res_search = y
+@@ -10765,7 +10765,14 @@ if test $ac_cv_lib_resolv_res_search = y
  fi
  
    SASL_MECHS="$SASL_MECHS libgssapiv2.la"
@@ -18,7 +18,7 @@ $NetBSD: patch-ai,v 1.8 2004/03/29 05:47:31 jlam Exp $
  
    cmu_save_LIBS="$LIBS"
    LIBS="$LIBS $GSSAPIBASE_LIBS"
-@@ -10896,14 +10903,6 @@ _ACEOF
+@@ -10899,14 +10906,6 @@ _ACEOF
  echo "${ECHO_T}disabled" >&6
   fi
  
