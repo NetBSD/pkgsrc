@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/10/03 00:18:09 tv Exp $
+# $NetBSD: Makefile,v 1.25 2004/10/19 04:01:13 reed Exp $
 
 DISTNAME=	heimdal-0.6.3
 PKGREVISION=	1
@@ -16,6 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
+USE_GNU_TOOLS+=		yacc
 
 HEIMDAL_STATEDIR?=	${VARBASE}/heimdal
 
