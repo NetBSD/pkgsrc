@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6005 2004/05/22 10:38:38 wiz Exp $
+$NetBSD: CHANGES,v 1.6006 2004/05/22 11:59:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2618,3 +2618,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libgcrypt to 1.2.0 [adam 2004-05-22]
 	Updated gnutls to 1.0.13 [adam 2004-05-22]
 	Updated cvs to 1.11.16 [wiz 2004-05-22]
+	Updated hylafax to 4.1.8nb2 [wiz 2004-05-22]
