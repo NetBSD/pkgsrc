@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 1999/12/25 16:22:03 pooka Exp $
+# $NetBSD: Makefile,v 1.72 1999/12/27 22:38:33 pooka Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -51,7 +51,7 @@
     SUBDIR += moria
     SUBDIR += nethack
     SUBDIR += nethack-lib
-#    SUBDIR += nethack-qt
+#    SUBDIR += nethack-qt	# Waiting for qt >= 2.0
     SUBDIR += nethack-tty
     SUBDIR += nethack-x11
     SUBDIR += nighthawk
