@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/28 14:59:06 ad Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/05/10 09:00:15 agc Exp $
+bin/rio_add_directory
 bin/rio_add_folder
 bin/rio_add_song
 bin/rio_del_song
