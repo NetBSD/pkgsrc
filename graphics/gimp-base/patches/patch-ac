@@ -1,0 +1,41 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/02/15 20:52:36 drochner Exp $
+
+--- gimptool-1.2.in.orig	Fri Feb 15 17:38:29 2002
++++ gimptool-1.2.in	Fri Feb 15 17:41:42 2002
+@@ -90,16 +90,16 @@
+ fi
+ 
+ if test x${GTK_CONFIG+set} != xset ; then
+-  gtk_cflags='@GTK_CFLAGS@'
+-  gtk_libs='@GTK_LIBS@'
++  gtk_cflags='@ORIG_GTK_CFLAGS@'
++  gtk_libs='@ORIG_GTK_LIBS@'
+ else
+   gtk_cflags=`$GTK_CONFIG --cflags`
+   gtk_libs=`$GTK_CONFIG --libs`
+ fi
+ 
+ if test x${GLIB_CONFIG+set} != xset ; then
+-  glib_cflags='@GLIB_CFLAGS@'
+-  glib_libs='@GLIB_LIBS@'
++  glib_cflags='@ORIG_GLIB_CFLAGS@'
++  glib_libs='@ORIG_GLIB_LIBS@'
+ else
+   glib_cflags=`$GLIB_CONFIG --cflags`
+   glib_libs=`$GLIB_CONFIG --libs`
+@@ -120,13 +120,13 @@
+ fi
+ 
+ if test x${CFLAGS+set} != xset ; then
+-  cflags='@CFLAGS@'
++  cflags='@ORIG_CFLAGS@'
+ else
+   cflags="$CFLAGS"
+ fi
+ 
+ if test x${LDFLAGS+set} != xset ; then
+-  ldflags='@LDFLAGS@'
++  ldflags='@ORIG_LDFLAGS@'
+ else
+   ldflags="$LDFLAGS"
+ fi
