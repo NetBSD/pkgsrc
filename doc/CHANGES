@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1281 2003/01/29 21:48:43 jmmv Exp $
+$NetBSD: CHANGES,v 1.1282 2003/01/29 22:08:03 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -492,3 +492,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated dsssl-docbook-modular to 1.57nb2 [jmmv 2003-01-29]
 	Updated jade to 1.2.1nb6 [jmmv 2003-01-29]
 	Updated sp to 1.3.4nb2 [jmmv 2003-01-29]
+	Updated openldap to 2.0.27nb2 [kleink 2003-01-29]
