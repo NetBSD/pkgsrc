@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/12 12:13:34 jmmv Exp $
+bin/gtetrinet
+man/man6/gtetrinet.6
+share/gnome/apps/Games/gtetrinet.desktop
+share/gtetrinet/themes/default/blocks.png
+share/gtetrinet/themes/default/theme.cfg
+share/gtetrinet/themes/small/blocks.png
+share/gtetrinet/themes/small/theme.cfg
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gtetrinet.mo
+share/pixmaps/gtetrinet.png
+@dirrm share/gtetrinet/themes/small
+@dirrm share/gtetrinet/themes/default
+@dirrm share/gtetrinet/themes
+@dirrm share/gtetrinet
