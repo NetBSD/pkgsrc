@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.432 2003/12/02 23:24:47 recht Exp $
+# $NetBSD: Makefile,v 1.433 2003/12/03 19:03:19 xtraeme Exp $
 #
 
 COMMENT=	Development utilities
@@ -76,6 +76,7 @@ SUBDIR+=	cweb
 SUBDIR+=	cxref
 SUBDIR+=	ddd
 SUBDIR+=	dejagnu
+SUBDIR+=	devIL
 SUBDIR+=	devhelp
 SUBDIR+=	device-driver-doc-de
 SUBDIR+=	diffutils
@@ -227,6 +228,8 @@ SUBDIR+=	newmkdep
 SUBDIR+=	noweb
 SUBDIR+=	nqc
 SUBDIR+=	oaf
+SUBDIR+=	ode
+SUBDIR+=	ogre
 SUBDIR+=	opencm
 SUBDIR+=	p4
 SUBDIR+=	p4-docs
