@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3137 2003/08/30 02:58:26 taca Exp $
+$NetBSD: CHANGES,v 1.3138 2003/08/30 06:00:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3380,4 +3380,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated kterm to 6.2.0nb5 [kei 2003-08-29]
 	Added free-1.0 [hubertf 2003-08-29]
 	Updated ja-samba to 2.2.8.1.1.1 [taca 2003-08-30]
-	Updated ruby-fox to 1.0.25 [fredb 2003-08-30]
+	Updated ruby-fox to 1.0.25 [taca 2003-08-30]
+	Updated ruby-amstd to 2.0.0 [taca 2003-08-30]
+	Updated ruby-rdtool to 0.6.13 [taca 2003-08-30]
