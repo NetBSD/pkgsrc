@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/12/03 05:20:48 martti Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/12/13 00:45:27 wiz Exp $
 #
 # This Makefile fragment is included by packages that use xfce4-notes-plugin.
 #
@@ -9,7 +9,7 @@
 XFCE4_NOTES_PLUGIN_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xfce4-notes-plugin
-BUILDLINK_DEPENDS.xfce4-notes-plugin?=		xfce4-notes-plugin>=0.9.7
+BUILDLINK_DEPENDS.xfce4-notes-plugin?=		xfce4-notes-plugin>=0.9.7nb1
 BUILDLINK_PKGSRCDIR.xfce4-notes-plugin?=		../../x11/xfce4-notes-plugin
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xfce4-notes-plugin=xfce4-notes-plugin

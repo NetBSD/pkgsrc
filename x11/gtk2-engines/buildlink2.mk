@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2003/07/23 15:40:52 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/12/13 00:45:26 wiz Exp $
 #
 # This Makefile fragment is included by packages that use gtk2-engines.
 #
@@ -9,7 +9,7 @@
 GTK2_ENGINES_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gtk2-engines
-BUILDLINK_DEPENDS.gtk2-engines?=	gtk2-engines>=2.2.0nb2
+BUILDLINK_DEPENDS.gtk2-engines?=	gtk2-engines>=2.2.0nb3
 BUILDLINK_PKGSRCDIR.gtk2-engines?=	../../x11/gtk2-engines
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gtk2-engines=gtk2-engines

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.9 2003/11/12 01:31:51 salo Exp $
+# $NetBSD: buildlink2.mk,v 1.10 2003/12/13 00:45:25 wiz Exp $
 #
 # This Makefile fragment is included by packages that use libgnomeprintui.
 #
@@ -9,7 +9,7 @@
 LIBGNOMEPRINTUI_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libgnomeprintui
-BUILDLINK_DEPENDS.libgnomeprintui?=	libgnomeprintui>=2.2.1.2nb3
+BUILDLINK_DEPENDS.libgnomeprintui?=	libgnomeprintui>=2.2.1.2nb5
 BUILDLINK_PKGSRCDIR.libgnomeprintui?=	../../print/libgnomeprintui
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libgnomeprintui=libgnomeprintui
