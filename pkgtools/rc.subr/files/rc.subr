@@ -1,4 +1,4 @@
-# $NetBSD: rc.subr,v 1.1.1.1 2003/06/19 16:07:12 grant Exp $
+# $NetBSD: rc.subr,v 1.2 2003/06/23 07:03:50 grant Exp $
 #
 # Copyright (c) 1997-2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -67,11 +67,23 @@ _osname=$(uname -s)
 case $_osname in
 	SunOS)
 		_RCCMD_chown="/bin/chown"
+#		_RCCMD_ci="/usr/bin/ci"			# not in Solaris 9
+#		_RCCMD_co="/usr/bin/co"			# not in Solaris 9
 		_RCCMD_echo="/usr/ucb/echo"
+#		_RCCMD_systrace="/bin/systrace"		# not in Solaris 9
 		_RCCMD_whoami="/usr/ucb/whoami"
 		_RCARG_psformat="-o pid,comm"
 		_RCARG_ps="-ef"
-	;;
+		;;
+	Linux)
+		_RCCMD_chown="/bin/chown"
+#		_RCCMD_ci="/usr/bin/ci"			# not in Slackware 8.1
+#		_RCCMD_co="/usr/bin/co"			# not in Slackware 8.1
+		_RCCMD_nice=$(which nice)
+#		_RCCMD_rcs="/usr/bin/rcs"		# not in Slackware 8.1
+#		_RCCMD_systrace="/bin/systrace"		# not in Slackware 8.1
+		_RCARG_ps="ax"
+		;;
 esac
 
 #
