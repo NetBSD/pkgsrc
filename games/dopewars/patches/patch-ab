@@ -1,12 +1,27 @@
-$NetBSD: patch-ab,v 1.3 2001/06/04 16:14:06 wiz Exp $
+$NetBSD: patch-ab,v 1.4 2002/12/06 16:50:03 jmmv Exp $
 
---- src/dopeos.h.orig	Wed Apr 25 02:27:54 2001
-+++ src/dopeos.h
-@@ -131,6 +131,7 @@
- #include <stdio.h>
- 
- #ifdef NETWORKING
-+#include <sys/types.h>
- #include <sys/socket.h>
- #include <netinet/in.h>
- #include <arpa/inet.h>
+--- src/dopewars.c.orig	Sat Oct 19 22:44:27 2002
++++ src/dopewars.c
+@@ -2789,7 +2789,7 @@ struct CMDLINE *GeneralStartup(int argc,
+ {
+   /* First, open the hard-coded high score file with possibly
+    * elevated privileges */
+-  priv_hiscore = g_strdup_printf("%s/dopewars.sco", DPDATADIR);
++  priv_hiscore = g_strdup_printf("%s/dopewars.sco", DPLOCALSTATEDIR);
+   HiScoreFile = g_strdup(priv_hiscore);
+   OpenHighScoreFile();
+   DropPrivileges();
+@@ -2976,11 +2976,11 @@ int main(int argc, char *argv[])
+     } else
+       switch (cmdline->client) {
+       case CLIENT_AUTO:
+-        if (!GtkLoop(&argc, &argv, cmdline, TRUE))
++        if (!GtkLoop(&argc, &argv, TRUE))
+           CursesLoop(cmdline);
+         break;
+       case CLIENT_WINDOW:
+-        GtkLoop(&argc, &argv, cmdline, FALSE);
++        GtkLoop(&argc, &argv, FALSE);
+         break;
+       case CLIENT_CURSES:
+         CursesLoop(cmdline);

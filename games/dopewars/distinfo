@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.6 2002/10/13 11:35:15 wiz Exp $
+$NetBSD: distinfo,v 1.7 2002/12/06 16:50:03 jmmv Exp $
 
-SHA1 (dopewars-1.5.0.tar.gz) = 44a6263dc004f280af3c29d3aafa29f35fbc6ad2
-Size (dopewars-1.5.0.tar.gz) = 453999 bytes
-SHA1 (patch-aa) = 48798f210217b36b751d2aae263fa2718546551a
-SHA1 (patch-ab) = 1ddd2e66d26ed653da33e5cb85a233b2ed2831f5
-SHA1 (patch-ac) = 279be63a9c771dc6629b42558ead20db302a2e08
-SHA1 (patch-ad) = 88ca65d1a8e2a49eb88b170845467e1e75112997
-SHA1 (patch-ae) = d10c2590013ffb931c23a5e6eaf5cda16d7691c8
-SHA1 (patch-af) = 433cb9ae959a9078f1badada9932c6f0c4b36a2b
+SHA1 (dopewars-1.5.8.tar.gz) = 8528c03c8c5012cbdac4d124322e3cd1eb548107
+Size (dopewars-1.5.8.tar.gz) = 1168140 bytes
+SHA1 (patch-aa) = 3441d372757119a0cb8292638ec1e4a3ac22cb62
+SHA1 (patch-ab) = 99cbc701c0ce4c6d55f94f4bb84e89ee4ef611ae
+SHA1 (patch-ac) = 304ca6d21da3117a7da6b2dc9df56f34b10dd772
+SHA1 (patch-ad) = 471c30b8b8e75d687e7891037f2427cb8ee51c14
+SHA1 (patch-ae) = 935eaef23aef3285249d9aab2d3ffc687fafa3b4
+SHA1 (patch-af) = f39b804dfed2d1e4613aa68b60773540a58e595c
+SHA1 (patch-ah) = e21bf4cb3125a0e9d361a8e96a3ed61d59174554
