@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.22 2003/03/21 08:30:49 tron Exp $
+$NetBSD: patch-aa,v 1.23 2003/04/11 22:45:56 cjep Exp $
 
---- Makefile.config.in.orig	2002-10-15 19:17:21.000000000 +0200
-+++ Makefile.config.in	2003-03-18 10:44:40.000000000 +0100
-@@ -33,7 +33,7 @@
+--- Makefile.config.in.orig	2002-10-15 18:17:21.000000000 +0100
++++ Makefile.config.in
+@@ -33,7 +33,7 @@ BUILD_FIASCO = Y
  #CC = gcc
  # Note that 'cc' is usually an alias for whatever is the main compiler
  # on a system, e.g. the GNU Compiler on Linux.
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.22 2003/03/21 08:30:49 tron Exp $
  
  # The linker.
  LD = $(CC)
-@@ -52,7 +52,7 @@
+@@ -52,7 +52,7 @@ LD_FOR_BUILD = $(LD)
  
  # MAKE is set automatically by Make to what was used to invoke Make.
  
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.22 2003/03/21 08:30:49 tron Exp $
  #Solaris:
  #INSTALL = /usr/ucb/install
  #Tru64:
-@@ -64,7 +64,7 @@
+@@ -64,7 +64,7 @@ INSTALL = $(SRCDIR)/buildtools/install.s
  
  # STRIPFLAG is the option you pass to the above install program to make it
  # strip unnecessary information out of binaries.
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.22 2003/03/21 08:30:49 tron Exp $
  # If you don't want to strip the binaries, just leave it null:
  #STRIPFLAG = 
  
-@@ -131,7 +131,7 @@
+@@ -131,7 +131,7 @@ NEED_RUNTIME_PATH = N
  # Solaris, SunOS, NetBSD:
  #NEED_RUNTIME_PATH = Y
  
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.22 2003/03/21 08:30:49 tron Exp $
  # Eunice users may want to use -noshare so that the executables can
  # run standalone:
  #LDFLAGS = -noshare
-@@ -171,6 +171,10 @@
+@@ -171,6 +171,10 @@ LDSHLIB = -shared -Wl,-soname,$(SONAME)
  #AIX:
  #LDSHLIB = ???
  
@@ -49,7 +49,7 @@ $NetBSD: patch-aa,v 1.22 2003/03/21 08:30:49 tron Exp $
  # On older systems, you have to make shared libraries out of position
  # independent code, so you need -fpic or fPIC here.  (The rule is: if
  # -fpic works, use it.  If it bombs, go to fPIC).  On newer systems,
-@@ -188,7 +192,7 @@
+@@ -188,7 +192,7 @@ LDSHLIB = -shared -Wl,-soname,$(SONAME)
  CFLAGS_SHLIB = 
  # Solaris or SunOS with gcc, and NetBSD:
  #CFLAGS_SHLIB = -fpic
@@ -58,7 +58,7 @@ $NetBSD: patch-aa,v 1.22 2003/03/21 08:30:49 tron Exp $
  # Sun compiler:
  #CFLAGS_SHLIB = -Kpic
  #CFLAGS_SHLIB = -KPIC
-@@ -244,8 +248,8 @@
+@@ -244,8 +248,8 @@ TIFFHDR_DIR =
  #TIFFLIB = libtiff.so
  #TIFFHDR_DIR = /usr/include/libtiff
  #NetBSD:
@@ -69,7 +69,7 @@ $NetBSD: patch-aa,v 1.22 2003/03/21 08:30:49 tron Exp $
  # OSF, Tru64:
  #TIFFLIB = /usr/local1/DEC/lib/libtiff.so
  #TIFFHDR_DIR = /usr/local1/DEC/include
-@@ -273,8 +277,8 @@
+@@ -273,8 +277,8 @@ JPEGHDR_DIR =
  #JPEGLIB = libjpeg.so
  #JPEGHDR_DIR = /usr/include/jpeg
  # Netbsd:
@@ -80,7 +80,7 @@ $NetBSD: patch-aa,v 1.22 2003/03/21 08:30:49 tron Exp $
  # OSF, Tru64:
  #JPEGLIB = /usr/local1/DEC/libjpeg.so
  #JPEGHDR_DIR = /usr/local1/DEC/include
-@@ -297,8 +301,8 @@
+@@ -297,8 +301,8 @@ PNGVER = 
  #PNGLIB = libpng$(PNGVER).so
  #PNGHDR_DIR = /usr/include/libpng$(PNGVER)
  # NetBSD:
@@ -91,7 +91,7 @@ $NetBSD: patch-aa,v 1.22 2003/03/21 08:30:49 tron Exp $
  # OSF/Tru64:
  #PNGLIB = /usr/local1/DEC/lib/libpng$(PNGVER).so
  #PNGHDR_DIR = /usr/local1/DEC/include
-@@ -308,8 +312,8 @@
+@@ -308,8 +312,8 @@ PNGVER = 
  # NONE for the PNG library, it doesn't matter what you specify here --
  # it won't get used.
  
@@ -102,7 +102,7 @@ $NetBSD: patch-aa,v 1.22 2003/03/21 08:30:49 tron Exp $
  #ZLIB = libz.so
  
  # The JBIG lossless image compression library (aka JBIG-KIT):
-@@ -337,7 +341,7 @@
+@@ -337,7 +341,7 @@ LINUXSVGAHDR_DIR = 
  # network functions is the option in ppmtompeg to run it on multiple
  # computers simultaneously.
  
@@ -111,10 +111,3 @@ $NetBSD: patch-aa,v 1.22 2003/03/21 08:30:49 tron Exp $
  # Solaris, SunOS:
  #NETWORKLD = -lsocket -lnsl
  # SCO:
-@@ -450,4 +454,4 @@
- #NETPBM_DOCURL = file:/usr/doc/netpbm/
- 
- # This is where everything goes when you do 'make package':
--PKGDIR = /tmp/netpbm
-\ No newline at end of file
-+PKGDIR = /tmp/netpbm
