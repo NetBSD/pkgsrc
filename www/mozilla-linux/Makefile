@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/12/03 08:59:48 grant Exp $
+# $NetBSD: Makefile,v 1.3 2002/12/05 05:51:19 grant Exp $
 #
 
 DISTNAME=		mozilla-i686-pc-linux-gnu-1.2.1
@@ -14,8 +14,6 @@ ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386
 
 WRKSRC=			${WRKDIR}/mozilla
 NO_CONFIGURE=		# defined
-
-MESSAGE_SRC=		${PKGDIR}/MESSAGE.${OPSYS}
 
 do-build:
 
