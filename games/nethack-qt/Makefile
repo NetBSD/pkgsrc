@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/04/14 21:13:57 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.15 2000/04/28 10:12:43 drochner Exp $
 #
 
 DISTNAME=		nethack-3.3.0
@@ -11,7 +11,7 @@ HOMEPAGE=		http://trolls.troll.no/warwick/nethack/
 
 DEPENDS+=		nethack-lib-3.3.0:../nethack-lib
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
-DEPENDS+=		qt-2.0.2:../../x11/qt
+DEPENDS+=		qt2-2.0.2:../../x11/qt
 
 WRKSRC=			${WRKDIR}/nethack-3.3.0
 
@@ -21,8 +21,8 @@ HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./sys/unix/setup.sh
 ALL_TARGET=		x11tiles nethack
 INSTALL_TARGET=		binfiles
-PATH=   		${X11BASE}/bin/qt2:$$PATH
-MAKE_ENV+=		GTYPE=-qt QTDIR=${X11BASE}
+PATH=   		${X11BASE}/qt2/bin:$$PATH
+MAKE_ENV+=		GTYPE=-qt QTDIR=${X11BASE}/qt2
 
 PATCHFILES+=		${PKGSRCDIR}/games/nethack-lib/patches/patch-*
 ALLFILES=		${DISTFILES}	# don't checksum shared patches

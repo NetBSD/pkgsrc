@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/04/14 21:12:27 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.10 2000/04/28 10:11:02 drochner Exp $
 #
 
 DISTNAME=	vipec-2.0.1
@@ -8,16 +8,15 @@ MASTER_SITES=	http://netfold.com/~vipec/public_ftp/stable/
 MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://www.netfold.com/~vipec/
 
-DEPENDS+=	qt-2.0.2:../../x11/qt
+DEPENDS+=	qt2-2.0.2:../../x11/qt
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_X11=	yes
 
-CONFIGURE_ENV+=	"MOC=${X11BASE}/bin/qt2/moc" \
+CONFIGURE_ENV+=	"QTDIR=${X11BASE}/qt2" \
 		all_libraries="-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -L${X11BASE}/lib"
-CONFIGURE_ARGS+=	"--with-qt-libraries=${X11BASE}/lib/qt2" \
-			"--with-qt-includes=${X11BASE}/include/qt2"
+CONFIGURE_ARGS+=	"--with-qt-dir=${X11BASE}/qt2"
 
 post-extract:
 	${MV} -f ${WRKSRC}/bin/start_vipec_help ${WRKSRC}/bin/start_vipec_help.in
