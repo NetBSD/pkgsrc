@@ -1,3 +1,4 @@
+$NetBSD: patch-ab,v 1.6 2002/11/26 21:39:14 cjep Exp $
 --- pngtest.c.orig	Thu Oct  3 13:32:30 2002
 +++ pngtest.c	Mon Nov  4 14:44:39 2002
 @@ -567,7 +567,7 @@
