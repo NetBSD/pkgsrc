@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/20 07:43:22 tron Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/20 07:44:31 tron Exp $
 
 DISTNAME=	rp-pppoe-2.6
 CATEGORIES=	net
@@ -6,11 +6,11 @@ MASTER_SITES=	${HOMEPAGE}
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.roaringpenguin.com/pppoe/
-COMMENT=	BSD port of Roaring Penguin's PPPoE client
+COMMENT=	Roaring Penguin's PPP over Ethernet client
 
 CONFLICTS+=	mouse_pppoe-*
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PPPD=${PPPD}
 
 post-install:
