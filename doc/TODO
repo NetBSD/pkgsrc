@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.678 2003/07/03 11:18:08 markd Exp $
+$NetBSD: TODO,v 1.679 2003/07/03 17:32:47 seb Exp $
 
 Suggested new packages
 ======================
@@ -144,6 +144,7 @@ Suggested package updates
 	o gtkmm-2.2.2
 	o guile-1.6.4
 	o host-20030604
+	o hp2xx-3.4.4
 	o hpijs-1.4
 	o icepref-2.2
 	o icewm-1.2.8
