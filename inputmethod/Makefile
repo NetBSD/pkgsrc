@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/06/15 09:32:36 shell Exp $
+# $NetBSD: Makefile,v 1.7 2002/09/15 06:32:29 uebayasi Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -22,6 +22,7 @@ SUBDIR+=	sj3-server-bin
 SUBDIR+=	skkfep
 SUBDIR+=	skkinput
 SUBDIR+=	skkserv
+SUBDIR+=	tc
 SUBDIR+=	unicon-im
 SUBDIR+=	xcin
 
