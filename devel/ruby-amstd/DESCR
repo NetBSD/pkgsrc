@@ -13,4 +13,3 @@ protect.rb: protect from exceptions
 timer.rb: timer class
 version.rb: VersionNumber class
 
-Author:	Minero Aoki <aamine@dp.u-netsurf.ne.jp>
