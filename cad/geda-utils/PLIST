@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2003/09/10 23:43:35 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/03/05 13:03:47 dmcmahill Exp $
 bin/convert_sym
+bin/garchive
 bin/gmk_sym
 bin/gsch2pcb
 bin/gschemdoc
@@ -13,4 +14,9 @@ bin/sarlacc_schem
 bin/sarlacc_sym
 bin/smash_megafile
 bin/tragesym
+share/doc/geda-doc/readmes/README.gsch2pcb
+share/doc/geda-doc/readmes/README.olib
+share/doc/geda-doc/readmes/README.tragesym
 share/gEDA/system-gschlasrc
+@unexec ${RMDIR} %D/share/doc/geda-doc/readmes 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/doc/geda-doc 2>/dev/null || ${TRUE}
