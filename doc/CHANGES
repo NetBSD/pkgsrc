@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9458 2005/03/07 14:49:47 minskim Exp $
+$NetBSD: CHANGES,v 1.9459 2005/03/07 14:55:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1331,3 +1331,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated crimsonfields to 0.4.7 [wiz 2005-03-07]
 	Updated asc to 1.15.3.0 [wiz 2005-03-07]
 	Added wdic-3.0 [minskim 2005-03-07]
+	Updated libffi to 2.0betanb2 [wiz 2005-03-07]
