@@ -1,0 +1,123 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/08/25 16:03:42 mjl Exp $
+
+*** make/unix.mak.orig	Mon Jun 26 13:17:20 2000
+--- make/unix.mak	Thu Aug 24 23:01:20 2000
+***************
+*** 494,506 ****
+  STDCCFLAGS	+= -m486
+  endif
+  
+  STDCCFLAGS	+= -DP_NETBSD
+  LDLIBS		+= -lossaudio
+  
+  ifdef P_PTHREADS
+  STDCCFLAGS += -I/usr/pkg/pthreads/include
+! LDFLAGS	+= -L/usr/pkg/pthreads/lib
+! LDLIBS	+= -lpthread
+  CC              := /usr/pkg/pthreads/bin/pgcc
+  CPLUS           := /usr/pkg/pthreads/bin/pg++
+  endif
+--- 494,508 ----
+  STDCCFLAGS	+= -m486
+  endif
+  
++ P_SHAREDLIB=1
++ 
+  STDCCFLAGS	+= -DP_NETBSD
+  LDLIBS		+= -lossaudio
+  
+  ifdef P_PTHREADS
+  STDCCFLAGS += -I/usr/pkg/pthreads/include
+! LDFLAGS	+= 
+! LDLIBS	+= /usr/pkg/pthreads/lib/libpthread.so
+  CC              := /usr/pkg/pthreads/bin/pgcc
+  CPLUS           := /usr/pkg/pthreads/bin/pg++
+  endif
+***************
+*** 667,673 ****
+  endif
+  
+  ifndef INSTALL
+! INSTALL := install
+  endif
+  
+  ifndef AR
+--- 669,675 ----
+  endif
+  
+  ifndef INSTALL
+! INSTALL := ${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM}
+  endif
+  
+  ifndef AR
+***************
+*** 708,714 ****
+  ifeq ($(P_SHAREDLIB),0)
+  LIB_SUFFIX	= a
+  else
+! LIB_SUFFIX	= so
+  endif
+  
+  ifndef LIB_TYPE
+--- 710,716 ----
+  ifeq ($(P_SHAREDLIB),0)
+  LIB_SUFFIX	= a
+  else
+! LIB_SUFFIX	= la
+  endif
+  
+  ifndef LIB_TYPE
+***************
+*** 716,722 ****
+  endif
+  
+  ifndef INSTALL_DIR
+! INSTALL_DIR	= /usr/local
+  endif
+  
+  ifndef INSTALLBIN_DIR
+--- 718,724 ----
+  endif
+  
+  ifndef INSTALL_DIR
+! INSTALL_DIR	= ${PREFIX}
+  endif
+  
+  ifndef INSTALLBIN_DIR
+***************
+*** 785,791 ****
+  PW_LIBDIR	= $(PWLIBDIR)/lib
+  
+  # set name of the PT library
+! PTLIB_BASE	= pt_$(PLATFORM_TYPE)_$(OBJ_SUFFIX)
+  PTLIB_FILE	= lib$(PTLIB_BASE)$(LIB_TYPE).$(LIB_SUFFIX)
+  PT_OBJBASE	= obj_$(PLATFORM_TYPE)_$(OBJ_SUFFIX)
+  PT_OBJDIR	= $(PW_LIBDIR)/$(PT_OBJBASE)
+--- 787,794 ----
+  PW_LIBDIR	= $(PWLIBDIR)/lib
+  
+  # set name of the PT library
+! # PTLIB_BASE	= pt_$(PLATFORM_TYPE)_$(OBJ_SUFFIX)
+! PTLIB_BASE	= pt
+  PTLIB_FILE	= lib$(PTLIB_BASE)$(LIB_TYPE).$(LIB_SUFFIX)
+  PT_OBJBASE	= obj_$(PLATFORM_TYPE)_$(OBJ_SUFFIX)
+  PT_OBJDIR	= $(PW_LIBDIR)/$(PT_OBJBASE)
+***************
+*** 849,856 ****
+  
+  
+  # add library directory to library path and include the library
+! LDFLAGS		+= -L$(PW_LIBDIR)
+  
+! LDLIBS		+= -l$(PTLIB_BASE)$(LIB_TYPE)
+  
+  # End of unix.mak
+--- 852,859 ----
+  
+  
+  # add library directory to library path and include the library
+! LDFLAGS		+= 
+  
+! LDLIBS		+= ../../lib/lib$(PTLIB_BASE)$(LIB_TYPE).la
+  
+  # End of unix.mak
