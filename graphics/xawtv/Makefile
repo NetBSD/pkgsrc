@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/01/20 12:18:17 agc Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/22 16:37:44 jmmv Exp $
 #
 
 DISTNAME=	xawtv_3.90
 PKGNAME=	${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://bytesex.org/xawtv/
 
@@ -20,6 +21,14 @@ CONFIGURE_ARGS+=	--disable-aalib
 CONFIGURE_ARGS+=	--disable-motif
 
 LDFLAGS+=		${LIBOSSAUDIO}
+
+SUBST_CLASSES+=		devoss
+SUBST_MESSAGE.devoss=	"Fixing path to OSS audio device."
+SUBST_STAGE.devoss=	pre-configure
+SUBST_FILES.devoss=	console/record.c libng/devices.c x11/pia.c
+SUBST_FILES.devoss+=	man/motv.1 man/record.1 man/streamer.1 man/xawtv.1
+SUBST_FILES.devoss+=	man/es/streamer.1 man/es/xawtv.1 man/fr/xawtv.1
+SUBST_SED.devoss=	-e 's|/dev/dsp|${DEVOSSAUDIO}|g'
 
 .include "../../mk/bsd.prefs.mk"
 
