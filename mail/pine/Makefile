@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2001/10/26 15:17:38 kleink Exp $
+# $NetBSD: Makefile,v 1.53 2001/11/06 20:04:46 tv Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -28,10 +28,7 @@ LDAPCFLAGS=    LDAPCFLAGS="-DENABLE_LDAP"
 LDAPLIBS=      LDAPLIBS="-lldap -llber"
 .endif
 
-USE_LIBTOOL=	yes
 USE_SSL=	yes
-CONFIGURE_ENV+=	LT=${LIBTOOL}
-MAKE_ENV+=	LT=${LIBTOOL}
 
 pre-patch:
 	# Make sure the imap lib that comes with pine isn't
@@ -39,18 +36,20 @@ pre-patch:
 	${RM} -fr ${WRKSRC}/imap
 
 do-configure:
-	${CP} -f ${WRKSRC}/pine/osdep/os-neb.h ${WRKSRC}/pine/osdep/os-neb.h.orig
+	${CP} -f ${WRKSRC}/pine/osdep/os-${BUILDNAME}.h ${WRKSRC}/pine/osdep/os-${BUILDNAME}.h.orig
 	${SED} \
 		-e 's@/usr/local/lib/@${PREFIX}/etc/@' \
-		<${WRKSRC}/pine/osdep/os-neb.h.orig >${WRKSRC}/pine/osdep/os-neb.h
+		-e 's@DEFAULT_DEBUG.*2@DEFAULT_DEBUG 0@' \
+		<${WRKSRC}/pine/osdep/os-${BUILDNAME}.h.orig >${WRKSRC}/pine/osdep/os-${BUILDNAME}.h
 	@${RM} -rf ${WRKSRC}/pico
 	@${LN} -sf ${LOCALBASE}/include/pico ${WRKSRC}/pico
 
 do-build:
-	cd ${WRKSRC} && ./build ${BUILDNAME} ${LDAPCFLAGS} ${LDAPLIBS} PREFIX=${PREFIX}
+	cd ${WRKSRC} && ./build ${BUILDNAME} ${LDAPCFLAGS} ${LDAPLIBS} PREFIX=${PREFIX} \
+		CC="${CC} ${CFLAGS}"
 
 do-install:
-	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/pine/pine ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/pine/pine ${PREFIX}/bin/
 	${INSTALL_SCRIPT} ${FILESDIR}/pgpencrypt ${PREFIX}/bin/
 	${INSTALL_SCRIPT} ${FILESDIR}/pgpdecode ${PREFIX}/bin/
 	${INSTALL_SCRIPT} ${FILESDIR}/pgpsign ${PREFIX}/bin/
