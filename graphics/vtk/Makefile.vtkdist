@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.vtkdist,v 1.3 2004/09/07 21:25:59 ben Exp $
+# $NetBSD: Makefile.vtkdist,v 1.4 2004/09/10 11:21:24 drochner Exp $
 
 .include "../../graphics/vtk/Makefile.common"
 
@@ -11,7 +11,7 @@ WRKSRC=       		${WRKDIR}/VTK
 DISTINFO_FILE=		${.CURDIR}/../vtk/distinfo
 PATCHDIR=		${.CURDIR}/../vtk/patches
 
-BUILD_DEPENDS+=		cmake>=1.6.6:../../devel/cmake
+USE_BUILDLINK3=		yes
 
 VTK_LIBDIR=	${PREFIX}/lib/vtk
 
@@ -28,3 +28,5 @@ do-configure:
 .if ${MACHINE_ARCH} != "mips" || ${MACHINE_ARCH} != "vax"
 VTK_CMAKE_OPT+=		-DBUILD_SHARED_LIBS:BOOL=ON
 .endif
+
+.include "../../devel/cmake/buildlink3.mk"
