@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2002/10/24 20:55:41 drochner Exp $
-# FreeBSD Id: ports/games/pysol/Makefile,v 1.20 1999/12/08 11:01:01 tg Exp
+# $NetBSD: Makefile,v 1.14 2003/02/25 07:06:12 wiz Exp $
+#
 
-DISTNAME=       pysol-4.72
+DISTNAME=	pysol-4.81
 CATEGORIES=	games
-MASTER_SITES=	http://wildsau.idv.uni-linz.ac.at/mfx/download/pysol/
+MASTER_SITES=	http://www.oberhumer.com/opensource/pysol/download/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${CARDSETS}${EXTRACT_SUFX}
 EXTRACT_SUFX=	.tar.bz2
 
