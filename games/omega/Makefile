@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/03/23 04:41:00 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2004/08/02 03:11:04 jschauma Exp $
 
 DISTNAME=	omega-0.90.4-src
 PKGNAME=	omega-0.90.4
@@ -14,17 +14,24 @@ WRKSRC=			${WRKDIR}/omega
 USE_BUILDLINK3=		yes
 ALL_TARGET=		# empty
 
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(SETGIDGAME:M[yY][eE][sS])
+FILEMODE=	0660
+.else
+FILEMODE=	0600
+.endif
+
 do-install:
-	${INSTALL_PROGRAM} -o games -g games -m 4711 ${WRKSRC}/omega	\
-		 ${PREFIX}/bin/Omega
+	${INSTALL_GAME} ${WRKSRC}/omega ${PREFIX}/bin/Omega
 	${INSTALL_MAN} ${WRKSRC}/docs/omega.6 ${PREFIX}/man/man6
 	${INSTALL_DATA_DIR} ${PREFIX}/share/omega
 	${INSTALL_DATA} ${WRKSRC}/lib/* ${PREFIX}/share/omega
 	${RM} ${PREFIX}/share/omega/license.old
-	${CHMOD} 0600 ${PREFIX}/share/omega/omega.hi
-	${CHMOD} 0600 ${PREFIX}/share/omega/omega.log
+	${CHMOD} ${FILEMODE} ${PREFIX}/share/omega/omega.hi
+	${CHMOD} ${FILEMODE} ${PREFIX}/share/omega/omega.log
 	${CP} ${PREFIX}/share/omega/omega.hi ${PREFIX}/share/omega/omegahi.bak
-	${CHOWN} -R games:games ${PREFIX}/share/omega
+	${CHOWN} -R ${GAMEOWN}:${GAMEGRP} ${PREFIX}/share/omega
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/omega
