@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: url2pkg,v 1.22 2003/04/21 23:31:15 rh Exp $
+# $NetBSD: url2pkg,v 1.23 2003/04/22 00:35:09 rh Exp $
 #
 # url2pkg
 # (c) 1999-2002 Hubert Feyrer <hubert@feyrer.de>
@@ -38,9 +38,18 @@ if [ ! -f w*/.extract_done ]; then
 	else
 		url="$1"
 	fi
-	
-	DISTNAME=`expr "$url" : '.*/\([^/]*\)\$''`
-	MASTER_SITES=`expr "$url" : '\(.*\)/[^/]*\$'`
+
+	sourceforge="http://prdownloads.sourceforge.net/"
+	if [ `expr "$url" : "$sourceforge"` -gt 0 ]; then
+		DISTNAME=`expr "$url" : '.*/\([^/]*\)?'`
+		sfname=`expr "$url" : "${sourceforge}\(.*\)/[^/]*\$"`
+		MASTER_SITES='${MASTER_SITE_SOURCEFORGE:='"$sfname"'/}'
+		HOMEPAGE="http://$sfname.sourceforge.net/"
+	else
+		DISTNAME=`expr "$url" : '.*/\([^/]*\)$'`
+		MASTER_SITES=`expr "$url" : '\(.*/\)[^/]*$'`
+		HOMEPAGE=$MASTER_SITES
+	fi
 	
 	case "$DISTNAME" in
 	*.tgz)		EXTRACT_SUFX=".tgz" 
@@ -63,20 +72,21 @@ if [ ! -f w*/.extract_done ]; then
 	if [ -f Makefile ]; then
 		mv Makefile Makefile.BAK
 	fi
-	
+
+	category=`pwd | sed 's|^.*/\([^/]*\)/[^/]*$|\1|'`
 	(
 	echo '# $'NetBSD'$'
 	echo '#'
 	echo ""
 	echo "DISTNAME=		$DISTNAME"
-	echo "CATEGORIES=		FILLTHISINPLEASE"
-	echo "MASTER_SITES=		$MASTER_SITES/"
+	echo "CATEGORIES=		$category"
+	echo "MASTER_SITES=		$MASTER_SITES"
 	if [ "$EXTRACT_SUFX" != ".tar.gz" ]; then
 		echo "EXTRACT_SUFX=		${EXTRACT_SUFX}"
 	fi
 	echo ""
 	echo "MAINTAINER=		$email_maintainer"
-	echo "HOMEPAGE=		"
+	echo "HOMEPAGE=		$HOMEPAGE"
 	echo "COMMENT=		SHORT_DESCRIPTION_OF_THE_PACKAGE"
 	echo ""
 	echo '.include "../../mk/bsd.pkg.mk"'
@@ -193,6 +203,6 @@ if [ ! -f DESCR ]; then
 	touch DESCR
 fi
 echo ""
-echo "Remember to fill in CATEGORIES, HOMEPAGE, COMMENT, and DESCR when you're done!"
+echo "Remember to correct CATEGORIES, HOMEPAGE, COMMENT, and DESCR when you're done!"
 echo ""
 echo "Good luck! (See pkgsrc/Packages.txt for some more help :-)"
