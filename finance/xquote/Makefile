@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 14:46:37 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/07/02 22:08:35 jlam Exp $
 
 DISTNAME=		xquote-2.2
 CATEGORIES=		finance x11
@@ -9,13 +9,13 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://sunsite.dk/xinvest/xquote.html
 COMMENT=		WWW ticker symbol quote retrieval program
 
+USE_BUILDLINK_ONLY=	YES
 USE_IMAKE=		YES
-USE_MOTIF=		YES
-USE_XPM=		YES
-
 NO_INSTALL_MANPAGES=	YES
 
 post-patch:
 	${TOUCH} ${WRKSRC}/Xquote.man
 
+.include "../../graphics/xpm/buildlink.mk"
+.include "../../x11/lesstif/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
