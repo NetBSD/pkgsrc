@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.3 2002/12/19 14:47:05 jmmv Exp $
+# $NetBSD: pkg_comp.sh,v 1.4 2002/12/24 16:28:34 jmmv Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, Julio Merino <jmmv@netbsd.org>
@@ -194,7 +194,7 @@ USE_XF86_4="yes"
 
 # pkgsrc configuration.
 LOCALBASE="/usr/pkg"
-PKG_SYSCONFBASE="${LOCALBASE}/etc"
+PKG_SYSCONFBASE="\${LOCALBASE}/etc"
 
 # Special directories. They are mounted inside the chroot jail using
 # mount_null. Leave empty to avoid mounting.
@@ -214,6 +214,8 @@ MAKE_PACKAGES=""
 # inside REAL_PACKAGES. You must specify the complete name.
 INSTALL_PACKAGES=""
 
+# Append this file to the generated mk.conf.
+EXTRAMK=
 EOF
 }
 
@@ -325,6 +327,11 @@ makeroot_mkconf()
 
     echo "LOCALBASE=$LOCALBASE" >> $file
     echo "PKG_SYSCONFBASE=$PKG_SYSCONFBASE" >> $file
+
+    if [ ! -f "$EXTRAMK" ]; then
+        err "Cannot find $EXTRAMK"
+    fi
+    cat $EXTRAMK >> $file
 }
 
 makeroot_xpkgwedge()
