@@ -1,0 +1,19 @@
+$NetBSD: patch-au,v 1.3.4.1 2004/08/13 13:05:05 agc Exp $
+
+Index: khtml/khtml_ext.h
+===================================================================
+RCS file: /home/kde/kdelibs/khtml/khtml_ext.h,v
+retrieving revision 1.26.2.1
+diff -u -p -r1.26.2.1 khtml_ext.h
+--- khtml/khtml_ext.h	29 Feb 2004 15:27:43 -0000	1.26.2.1
++++ khtml/khtml_ext.h	3 Aug 2004 14:36:43 -0000
+@@ -98,6 +98,9 @@ public:
+   virtual const QPtrList<KParts::ReadOnlyPart> frames() const;
+ 
+   virtual bool openURLInFrame( const KURL &url, const KParts::URLArgs &urlArgs );
++
++protected:
++  virtual void virtual_hook( int id, void* data );
+ private:
+   KHTMLPart *m_part;
+ };

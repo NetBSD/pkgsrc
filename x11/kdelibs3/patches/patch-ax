@@ -1,0 +1,27 @@
+$NetBSD: patch-ax,v 1.3.6.1 2004/08/13 13:05:05 agc Exp $
+
+Index: kparts/browserextension.cpp
+===================================================================
+RCS file: /home/kde/kdelibs/kparts/browserextension.cpp,v
+retrieving revision 1.60.2.1
+diff -u -p -r1.60.2.1 browserextension.cpp
+--- kparts/browserextension.cpp	10 Apr 2004 15:08:49 -0000	1.60.2.1
++++ kparts/browserextension.cpp	3 Aug 2004 14:36:48 -0000
+@@ -636,6 +636,17 @@ BrowserHostExtension *BrowserHostExtensi
+ void BrowserExtension::virtual_hook( int, void* )
+ { /*BASE::virtual_hook( id, data );*/ }
+ 
++BrowserHostExtension *
++BrowserHostExtension::findFrameParent(KParts::ReadOnlyPart *callingPart, const QString &frame)
++{
++    FindFrameParentParams param;
++    param.parent = 0;
++    param.callingPart = callingPart;
++    param.frame = frame;
++    virtual_hook(VIRTUAL_FIND_FRAME_PARENT, &param);
++    return param.parent;
++}
++
+ void BrowserHostExtension::virtual_hook( int, void* )
+ { /*BASE::virtual_hook( id, data );*/ }
+ 

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.54 2004/07/30 18:32:20 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.55 2004/08/13 13:05:04 agc Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q2 branch:
@@ -104,4 +104,5 @@ Pullup ticket 89, requested by Grant Beattie [agc 2004-07-30]
 	Build fix for gnutls
 Pullup ticket 92, requested by Grant Beattie [agc 2004-07-30]
 	Bulk build fix
-
+Pullup ticket 102, requested by Mark Davies [agc 2004-08-13]
+	Security fix for kdelibs3
