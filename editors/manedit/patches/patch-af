@@ -1,0 +1,18 @@
+$NetBSD: patch-af,v 1.1 2001/02/10 00:07:42 hubertf Exp $
+
+--- ../include/os.h.orig	Fri Feb  9 01:18:26 2001
++++ ../include/os.h
+@@ -58,11 +58,11 @@
+ # define _PATH_DEVNULL		"/dev/null"
+ #endif
+ 
+-#ifndef _AIX
++#if !defined(_AIX) && !defined(__NetBSD__)
+ # ifndef _PATH_MAILDIR
+ #  define _PATH_MAILDIR		"/var/spool/mail"
+ # endif
+-#endif	/* _AIX */
++#endif	/* _AIX || __NetBSD__ */
+ 
+ /* Apparently VI has become the standard editor for UNIX. */
+ #if !defined(_PATH_VI) && !defined(__MSW__)

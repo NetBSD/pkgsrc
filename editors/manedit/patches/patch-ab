@@ -1,31 +1,30 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/01/21 18:18:04 fredb Exp $
+$NetBSD: patch-ab,v 1.2 2001/02/10 00:07:41 hubertf Exp $
 
---- Makefile.orig	Sat Jan 20 12:39:28 2001
+--- Makefile.orig	Fri Feb  9 01:18:25 2001
 +++ Makefile
-@@ -18,7 +18,7 @@
+@@ -18,7 +18,6 @@
  #   You may modify any value as needed. Change only the ones you are
  #   absolutly sure that requires modification.
  #
 -PREFIX = /usr
-+PREFIX = @PREFIX@
  
  
  # ########################################################################
-@@ -49,7 +49,7 @@
+@@ -49,7 +48,7 @@
  #				to debug the program.
  #
  #CFLAGS = `gtk-config --cflags` -g -efence -Wall
 -CFLAGS = `gtk-config --cflags` -O2 -Wall
-+CFLAGS = `gtk-config --cflags` @CFLAGS@
++CFLAGS+= `gtk-config --cflags` -Wall
  
  CPPFLAGS = -D__cplusplus -Dc_plusplus
  
-@@ -95,7 +95,7 @@
+@@ -95,8 +94,6 @@
  #
  include Makefile.srclist
  
 -CC  = gcc
-+CC  = @CC@
- CPP = g++
+-CPP = g++
  BIN = manedit
  OBJ_C = $(SRC_C:.c=.o)
+ OBJ_CPP = $(SRC_CPP:.cpp=.o)
