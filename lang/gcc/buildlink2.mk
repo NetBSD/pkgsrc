@@ -1,9 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.12 2003/06/05 02:20:03 grant Exp $
+# $NetBSD: buildlink2.mk,v 1.13 2003/07/13 13:04:09 grant Exp $
+
+# do not directly include this file. .include "../../mk/gcc.buildlink2.mk"
+# to ensure the correct gcc package is selected based on USE_GCC2 and
+# USE_GCC3.
 
 .if !defined(GCC2_BUILDLINK2_MK)
 GCC2_BUILDLINK2_MK=	# defined
-
-.include "../../mk/bsd.prefs.mk"
 
 # If you want to allow EGCS to satisfy the GCC requirement, then set
 # GCC_REQD to "2.8.0".
@@ -30,37 +32,6 @@ _GCC_ARCHDIR=		${_GCC_PREFIX}${_GCC_ARCHSUBDIR}
 
 BUILDLINK_LDFLAGS.gcc=	-L${_GCC_ARCHDIR} -Wl,${RPATH_FLAG}${_GCC_ARCHDIR} -L${_GCC_PREFIX}lib -Wl,${RPATH_FLAG}${_GCC_PREFIX}lib
 
-_GCC_VERSION!=		( gcc -dumpversion ) 2>/dev/null || ${ECHO} 0
-#
-# GCC_VERSION is the version number of the gcc detected above.  EGCS gcc is
-# considered to be "gcc-2.8.1" so that it will match "gcc>=2.8.0".
-#
-# GCC_PKG is the package name "gcc-${GCC_VERSION} for the gcc detected above.
-#
-.if !empty(_GCC_VERSION:Megcs-[0-9]*)
-GCC_VERSION=		2.8.1
-.else
-GCC_VERSION=		${_GCC_VERSION}
-.endif
-GCC_PKG=		gcc-${GCC_VERSION}
-
-.if defined(USE_PKGSRC_GCC)
-_NEED_PKGSRC_GCC=	YES
-.else
-_NEED_PKGSRC_GCC!= \
-	if ${PKG_ADMIN} pmatch '${BUILDLINK_DEPENDS.gcc}' ${GCC_PKG}; then \
-		gccpath=`${TYPE} gcc | ${AWK} '{ print $$NF }'`;	\
-		if [ "$$gccpath" = "${_GCC_PREFIX}bin/gcc" ]; then \
-			${ECHO} "YES";					\
-		else							\
-			${ECHO} "NO";					\
-		fi;							\
-	else								\
-		${ECHO} "YES";						\
-	fi
-.endif
-
-.if ${_NEED_PKGSRC_GCC} == "YES"
 BUILDLINK_PACKAGES+=	gcc
 PATH:=		${_GCC_PREFIX}bin:${PATH}
 CC=		${_GCC_PREFIX}bin/gcc
@@ -69,12 +40,11 @@ CXX=		${_GCC_PREFIX}bin/g++
 F77=		${_GCC_PREFIX}bin/g77
 PKG_FC=		${F77}
 
-.  if defined(USE_GCC_SHLIB)
+.if defined(USE_GCC_SHLIB)
 LDFLAGS+=		${BUILDLINK_LDFLAGS.gcc}
-.  endif
+.endif
 BUILDLINK_WRAPPER_ENV+=	\
 	COMPILER_PATH="${BUILDLINK_DIR}/bin"; export COMPILER_PATH
-.endif	# _NEED_PKGSRC_GCC == YES
 
 # These files are from gcc>=2.95.3.
 BUILDLINK_FILES.gcc=	${_GCC_SUBPREFIX}include/g++-3/*
