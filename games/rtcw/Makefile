@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/07/07 09:05:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/12/03 13:55:48 wiz Exp $
 
 DISTNAME=	wolf-linux-1.33.x86
 PKGNAME=	rtcw-1.33
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	ftp://ftp.idsoftware.com/idstuff/wolf/linux/
 EXTRACT_SUFX=	.run
 
-MAINTAINER=	david@netbsd-fr.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://games.activision.com/games/wolfenstein/
 COMMENT=	Return to Castle Wolfenstein for Linux
 
