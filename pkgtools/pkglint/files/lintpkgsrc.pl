@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.48 2001/05/16 11:36:47 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.49 2001/05/18 10:38:47 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -49,6 +49,7 @@ if ($opt{'D'} && @ARGV)
 	    { &fail("No such file: $file"); }
 	my($pkgname, $vars);
 	($pkgname, $vars) = &parse_makefile_pkgsrc($file);
+	$pkgname ||= 'UNDEFINED';
 	print "$file -> $pkgname\n";
 	foreach ( sort keys %{$vars} )
 	    { print "\t$_ = $vars->{$_}\n"; }
@@ -179,31 +180,62 @@ if ($opt{'D'} && @ARGV)
 	}
     if ($opt{'i'} || $opt{'u'})
 	{
-	my(@pkgs, @bad, $pkg);
+	my(@pkgs, %update, $pkg);
 
 	@pkgs = &list_installed_packages;
 	&scan_pkgsrc_makefiles($pkgsrcdir);
 
-	foreach $pkg ( sort @pkgs )
+	foreach $pkg (sort @pkgs)
 	    {
 	    if ( $_ = &invalid_version($pkg) )
 		{
-		push(@bad, $pkg);
 		print $_;
+		if ( $pkg =~ /^([^*?[]+)-([\d*?[].*)/ ) 
+		    {
+		    my($ver);
+		    foreach (reverse sort keys %{$pkg{$1}})
+			{
+			$pkg{$1}{$_}->{'dir'} =~ /-current/ && next;
+			$update{$1} = $_;
+			last;
+			}
+		    }
 		}
 	    }
 
 	if ($opt{'u'})
 	    {
-	    foreach $pkg (@bad)
+	    my($pkgname);
+	    print "\nREQUIRED details for packages that could be updated:\n";
+	    foreach $pkgname (sort keys %update)
+		{
+		print "$pkgname:";
+		if (open(PKGINFO, "pkg_info -R $pkgname|"))
+		    {
+		    my($list);
+		    while (<PKGINFO>)
+			{
+			if (/Required by:/)
+			    { $list = 1; }
+			elsif ($list)
+			    {
+			    chomp;
+			    s/-\d.*//;
+			    print " $_";
+			    }
+			}
+		    close(PKGINFO);
+		    }
+		print "\n";
+		}
+	    print "\nRunning 'make fetch-list | sh' for each package:\n";
+	    foreach $pkgname (sort keys %update)
 		{
 		my($pkgdir);
 
-		if ( $pkg =~ /^([^*?[]+)-([\d*?[].*)/ ) 
-		    { $pkgdir = $pkg{$1}{$2}->{'dir'}; }
-
+		$pkgdir = $pkg{$pkgname}{$update{$pkgname}}->{'dir'};
 		if (!defined($pkgdir))
-		    { &fail("Unable to determine directory for '$pkg'"); }
+		    { &fail("Unable to determine directory for '$pkgname'"); }
 		print "$pkgsrcdir/$pkgdir\n";
 		safe_chdir("$pkgsrcdir/$pkgdir");
 		system('make fetch-list | sh');
@@ -372,7 +404,10 @@ sub invalid_version
     if (defined($badver))
 	{
 	if (defined $pkg{$pkg})
-	    { $fail = "Version mismatch: '$pkg' $badver vs ".join(',', sort keys %{$pkg{$pkg}})."\n"; }
+	    {
+	    $fail = "Version mismatch: '$pkg' $badver vs ".
+				join(',', sort keys %{$pkg{$pkg}})."\n";
+	    }
 	else
 	    { $fail = "Unknown package: '$pkg' version $badver\n"; }
 	}
@@ -645,7 +680,8 @@ sub parse_makefile_vars
     close(FILE);
 
     # Some Makefiles depend on these being set
-    %vars = %{$default_vars};
+    if ($file ne '/etc/mk.conf')
+	{ %vars = %{$default_vars}; }
     if ($file =~ m#(.*)/#)
 	{ $vars{'.CURDIR'} = $1; }
     if ($opt{'L'})
@@ -740,9 +776,9 @@ sub parse_makefile_vars
 	    $key = $1;
 	    $plus = $2;
 	    $value = $3;
-	    if ($plus eq '+' && defined($vars{$key}) )
+	    if ($plus eq '+' && defined $vars{$key} )
 		{ $vars{$key} .= " $value"; }
-	    elsif ($plus ne '?' || !defined($vars{$key}) )
+	    elsif ($plus ne '?' || !defined $vars{$key} )
 		{ $vars{$key} = $value; }
 	    } 
 	}
@@ -1067,7 +1103,7 @@ opts:
 
 Installed package options:		Distfile options:
   -i : Check version against pkgsrc	  -m : List distinfo mismatches
-  -u : Fetch distfiles (may change)	  -o : List obsolete (no distinfo)
+  -u : As -i + fetch dist (may change)	  -o : List obsolete (no distinfo)
 
 Prebuilt package options:		Makefile options:
   -p : List old/obsolete		  -B : List packages marked as 'BROKEN'
