@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2004/09/23 13:03:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2004/11/25 12:59:21 adam Exp $
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
@@ -1284,8 +1284,8 @@ share/octave/${PKGVERSION}/m/miscellaneous/unix.m
 share/octave/ls-R
 share/octave/site/m/startup/octaverc
 @dirrm share/octave/site/m/startup
-@dirrm share/octave/site/api-v10/m
-@dirrm share/octave/site/api-v10
+@dirrm share/octave/site/api-v12/m
+@dirrm share/octave/site/api-v12
 @dirrm share/octave/${PKGVERSION}/site/m
 @dirrm share/octave/${PKGVERSION}/site
 @dirrm share/octave/${PKGVERSION}/m/time
@@ -1323,8 +1323,8 @@ share/octave/site/m/startup/octaverc
 @dirrm share/octave/${PKGVERSION}/doc
 @dirrm share/octave/${PKGVERSION}
 @dirrm share/doc/html/octave
-@dirrm libexec/octave/site/oct/api-v10/${MACHINE_GNU_PLATFORM}
-@dirrm libexec/octave/site/oct/api-v10
+@dirrm libexec/octave/site/oct/api-v12/${MACHINE_GNU_PLATFORM}
+@dirrm libexec/octave/site/oct/api-v12
 @dirrm libexec/octave/site/oct/${MACHINE_GNU_PLATFORM}
 @dirrm libexec/octave/site/oct
 @dirrm libexec/octave/site/exec/${MACHINE_GNU_PLATFORM}

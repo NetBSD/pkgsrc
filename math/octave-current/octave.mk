@@ -1,4 +1,4 @@
-# $NetBSD: octave.mk,v 1.1 2004/08/14 01:31:56 dmcmahill Exp $
+# $NetBSD: octave.mk,v 1.2 2004/11/25 12:59:21 adam Exp $
 #
 
 .include "../../mk/bsd.prefs.mk"
@@ -21,5 +21,3 @@ OCT_${_var_}!=  ${OCTAVE_CONFIG} -p ${_var_}
 .    undef _var_
 .  endif 
 .endif 
-
-
