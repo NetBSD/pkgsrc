@@ -1,0 +1,81 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/03/07 20:57:51 jtb Exp $
+
+--- config/Makefile.SH.orig	Mon Mar 27 17:43:42 2000
++++ config/Makefile.SH
+@@ -80,7 +80,7 @@
+ X11)
+   PLOTFILE=plotX.c
+   PLOTCFLAGS=-I$Xincroot
+-  PLOTLIBS="-L$X11 -lX11 $extralib"
++  PLOTLIBS="-R$X11 -L$X11 -lX11 $extralib"
+   if test "$osname" = concentrix; then PLOTLIBS="-lX11"; fi
+   plotrunpath=$X11
+   ;;
+@@ -160,8 +160,9 @@
+ INCLUDEDIR = $includedir
+ 
+ INSTALL = $cfg/install
+-INSTALL_PROGRAM = \$(INSTALL)
+-INSTALL_DATA = \$(INSTALL) -m 644
++INSTALL_PROGRAM = \$(BSD_INSTALL_PROGRAM)
++INSTALL_SCRIPT = \$(BSD_INSTALL_SCRIPT)
++INSTALL_DATA = \$(BSD_INSTALL_DATA)
+ 
+ # Graphic library.
+ PLOTFILE   = $PLOTFILE
+@@ -257,21 +258,21 @@
+ 	   \$(INSTALL_DATA) \$\$i.h                \$(INCLUDEDIR); done
+ 	-for i in $hlist; do \\
+ 	   \$(INSTALL_DATA) $src/headers/\$\$i.h   \$(INCLUDEDIR); done
+-	-\$(RM) \$(INCLUDEDIR)/genpari.h
++#	-\$(RM) \$(INCLUDEDIR)/genpari.h
+ 	-\$(LN) pari.h \$(INCLUDEDIR)/genpari.h
+ 
+ install-bin: install-bin-$dft
+ 
+ install-bin-dyn: gp-dyn
+ 	-mkdir -p \$(BINDIR)
+-	-\$(RM) \$(BINDIR)/gp-$version \$(BINDIR)/gp$exe_suff
++#	-\$(RM) \$(BINDIR)/gp-$version \$(BINDIR)/gp$exe_suff
+ 	-\$(LD) -o \$(BINDIR)/gp-$version \$(LDFLAGS) \$(OBJSGP) \$(RUNPTH_FINAL) \$(TOPLDDYN) \$(LDDYN) \$(PLOTLIBS) \$(LIBS)
+-	strip \$(BINDIR)/gp-$version
++#	strip \$(BINDIR)/gp-$version
+ 	-\$(LN) gp-$version$exe_suff \$(BINDIR)/gp$exe_suff
+ 
+ install-bin-sta: gp-sta
+ 	-mkdir -p \$(BINDIR)
+-	-\$(RM) \$(BINDIR)/gp-$version \$(BINDIR)/gp$exe_suff
++#	-\$(RM) \$(BINDIR)/gp-$version \$(BINDIR)/gp$exe_suff
+ 	\$(INSTALL_PROGRAM) gp-sta$exe_suff \$(BINDIR)/gp-$version$exe_suff
+ 	-\$(LN) gp-$version$exe_suff \$(BINDIR)/gp$exe_suff
+ # Can't strip it if we want install() to work on Linux or OSF.
+@@ -281,17 +282,17 @@
+ 	-mkdir -p \$(MANDIR)
+ 	\$(INSTALL_DATA) $doc/gphelp.1 \$(MANDIR)
+ 	\$(INSTALL_DATA) $doc/gp.1 \$(MANDIR)
+-	-\$(RM) \$(MANDIR)/pari.1
++#	-\$(RM) \$(MANDIR)/pari.1
+ 	-\$(LN) gp.1 \$(MANDIR)/pari.1
+ 
+ install-misc: $install_emacs_files
+-	\$(INSTALL_PROGRAM) $misc/tex2mail \$(BINDIR)
++	\$(INSTALL_SCRIPT) $misc/tex2mail \$(BINDIR)
+ 
+ install-doc:
+ 	-mkdir -p \$(MISCDIR)
+ 	-mkdir -p \$(BINDIR)
+ 	-cd $doc; \$(MAKE) all
+-	-\$(INSTALL_PROGRAM) $doc/gphelp    \$(BINDIR)
++	-\$(INSTALL_SCRIPT) $doc/gphelp    \$(BINDIR)
+ 	-\$(INSTALL_DATA) $doc/translations \$(MISCDIR)
+ 	-\$(INSTALL_DATA) $doc/paricfg.tex  \$(MISCDIR)
+ 	-\$(INSTALL_DATA) $doc/parimacro.tex \$(MISCDIR)
+@@ -311,7 +312,7 @@
+ 
+ install-lib-sta: libpari.a
+ 	-mkdir -p \$(LIBDIR)
+-	-\$(RM) \$(LIBDIR)/libpari.a
++#	-\$(RM) \$(LIBDIR)/libpari.a
+ 	\$(INSTALL_DATA) libpari.a \$(LIBDIR)/libpari.a.$version
+ 	-\$(LN) libpari.a.$version \$(LIBDIR)/libpari.a
+ 
