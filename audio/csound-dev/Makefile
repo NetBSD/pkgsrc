@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/22 07:15:00 grant Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/19 04:49:40 ben Exp $
 #
 
 DISTNAME=		Csound-4.24.1
@@ -22,5 +22,7 @@ USE_GNU_TOOLS+=		make
 USE_BUILDLINK2=		yes
 CONFLICTS=		csound-bath*
 
+.include "../../x11/fltk/buildlink2.mk"
 .include "../../mk/ossaudio.buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
