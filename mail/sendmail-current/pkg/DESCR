@@ -1,0 +1,8 @@
+Sendmail acts a unified "post office" to which all mail can be submitted.
+Address interpretation is controlled by a production system, which can
+parse both domain-based addressing and old-style "ad hoc" addresses.
+The production system is powerful enough to rewrite addresses in the message
+header to conform to the standards of a number of common target networks,
+including old (NCP/RFC733) Arpanet, new (TCP/RFC822) Arpanet, UUCP, and
+Phonenet. Sendmail also implements an SMTP server, message queueing, and
+aliasing.
