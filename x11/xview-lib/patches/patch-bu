@@ -1,0 +1,13 @@
+$NetBSD: patch-bu,v 1.1 2001/12/20 09:20:00 tron Exp $
+
+--- lib/libxview/panel/p_btn.c.orig	Tue Jun 29 07:16:52 1993
++++ lib/libxview/panel/p_btn.c	Thu Dec 20 10:09:16 2001
+@@ -203,7 +203,7 @@
+ 	if (pin_is_default) {
+ 	    image.im_type = PIT_STRING;
+ 	    image_string(&image) = NULL;
+-	    label = "";
++	    label = (Xv_opaque) "";
+ 	} else if (!(image_string(&image) = (char *) xv_get(default_menu_item,
+ 		MENU_STRING))) {
+ 	    olgx_state |= OLGX_LABEL_IS_PIXMAP;

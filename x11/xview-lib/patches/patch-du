@@ -1,0 +1,63 @@
+$NetBSD: patch-du,v 1.1 2001/12/20 09:20:08 tron Exp $
+
+--- lib/libxview/notify/ntfyclient.c.orig	Tue Jun 29 07:18:11 1993
++++ lib/libxview/notify/ntfyclient.c	Thu Dec 20 10:09:16 2001
+@@ -18,7 +18,9 @@
+ #include <xview_private/ntfy.h>
+ #include <xview_private/ndis.h>	/* For ndis_default_prioritizer */
+ #include <xview_private/ndet.h>	
++#if !defined(__FreeBSD__) && !defined(__NetBSD__)
+ #include <search.h>
++#endif
+ #include <xview_private/portable.h>
+ 
+ /* Variables used in paranoid enumerator (see ntfy_condition) */
+@@ -60,6 +62,7 @@
+     if (*client_latest && (*client_latest)->nclient == nclient)
+ 	return (*client_latest);
+ 
++#if !defined(__FreeBSD__) && !defined(__NetBSD__)
+     if(( client_list == ndet_clients ) && ndet_clients ) {
+        dummy_client.nclient = nclient;
+        /* Find client */
+@@ -73,7 +76,9 @@
+            return (client);
+        }
+     }
+-
++#else
++    if(0);
++#endif
+     else 
+         /* Search entire list */
+         for (client = client_list; client; client = next) {
+@@ -100,6 +105,7 @@
+     register NTFY_CLIENT *client;
+     static NTFY_CLIENT *new_client;
+ 
++#if !defined(__FreeBSD__) && !defined(__NetBSD__)
+     if( client_list == &ndet_clients ) {
+         if( new_client  == NTFY_CLIENT_NULL ) {
+             if ((new_client = ntfy_alloc_client()) == NTFY_CLIENT_NULL)
+@@ -119,7 +125,9 @@
+         else
+             return client;
+     }
+-
++#else
++    if(0);
++#endif
+     else if ((client = ntfy_find_nclient(*client_list, nclient,
+ 				    client_latest)) != NTFY_CLIENT_NULL)
+         return client;
+@@ -163,8 +171,10 @@
+ 	ntfy_remove_condition(client, condition, who);
+     }
+     /* Remove & free client from client_list */
++#if !defined(__FreeBSD__) && !defined(__NetBSD__)
+     if( client_list == &ndet_clients )
+         tdelete( client, ndet_root, ndet_compar );
++#endif
+     ntfy_remove_node((NTFY_NODE **) client_list, (NTFY_NODE *) client);
+     /* Invalidate condition hint */
+     *client_latest = NTFY_CLIENT_NULL;

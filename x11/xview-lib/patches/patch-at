@@ -1,63 +1,72 @@
-$NetBSD: patch-at,v 1.1 2001/05/02 21:46:09 dmcmahill Exp $
+$NetBSD: patch-at,v 1.2 2001/12/20 09:19:56 tron Exp $
 
---- ./lib/libxview/color/cms_pblc.c.nbsd	Sat Apr 28 14:01:37 2001
-+++ ./lib/libxview/color/cms_pblc.c	Sat Apr 28 14:35:42 2001
-@@ -316,14 +316,13 @@
- {
-     Cms_info		*cms = CMS_PRIVATE(cms_public);
-     Xv_opaque		value;
--    Attr_avlist     	avlist = (Attr_avlist) args;
-     int			cms_status = 0;
+--- lib/libxview/win/win_input.c.orig	Mon Jun 27 00:27:53 1994
++++ lib/libxview/win/win_input.c	Thu Dec 20 10:09:19 2001
+@@ -56,6 +56,7 @@
+ static int      GetButtonEvent();
+ static int      win_translate_KP_keysym();
+ static int 	translate_key();
++static int	xevent_to_event();
  
-     switch (attr) {
-       case CMS_PIXEL: {
- 	  unsigned long    index;
- 	  
--	  index = (unsigned long)avlist[0];
-+	  index = (unsigned long)va_arg(args, Attr_attribute);
- 	  if (index >= cms->size) {
- 	      index = cms->size - 1;
- 	  } else if (index < 0) {
-@@ -397,30 +396,28 @@
- 	value = (Xv_opaque)cms->cmap->id;
- 	break;
- 	
--      case CMS_COLORS:  
--	if (cms_get_colors(cms, (unsigned long)0, cms->size, 
--			   (Xv_singlecolor *)avlist[0], (XColor *)NULL,
--			   (unsigned char *)NULL, (unsigned char *)NULL,
--			   (unsigned char *)NULL) == XV_OK) {
--	    value = (Xv_opaque)avlist[0];
--	} else {
-+      case CMS_COLORS:
-+	value = (Xv_opaque)va_arg(args,Attr_attribute);
-+	if (!cms_get_colors(cms, (unsigned long)0, cms->size, 
-+			    value, (XColor *)NULL,
-+			    (unsigned char *)NULL, (unsigned char *)NULL,
-+			    (unsigned char *)NULL) == XV_OK) {
- 	    value = NULL;
- 	}
- 	break;
- 	
-       case CMS_X_COLORS:  
--	if (cms_get_colors(cms, (unsigned long)0, cms->size, 
--			   (Xv_singlecolor *)NULL, (XColor *)avlist[0],
--			   (unsigned char *)NULL, (unsigned char *)NULL,
--			   (unsigned char *)NULL) == XV_OK) {
--	    value = (Xv_opaque)avlist[0];
--	} else {
-+	value = (Xv_opaque)va_arg(args, Attr_attribute);
-+	if (!cms_get_colors(cms, (unsigned long)0, cms->size, 
-+			    (Xv_singlecolor *)NULL, value,
-+			    (unsigned char *)NULL, (unsigned char *)NULL,
-+			    (unsigned char *)NULL) == XV_OK) {
- 	    value = NULL;
- 	}
- 	break;
- 	
-       case CMS_CMS_DATA: {
--	  Xv_cmsdata	    *cms_data = (Xv_cmsdata *)avlist[0];
-+	  Xv_cmsdata *cms_data = (Xv_cmsdata *)va_arg(args,Attr_attribute);
- 	  
- 	  cms_data->type = cms->type;
- 	  cms_data->size = cms->size;
+ extern struct rectlist *win_get_damage();
+ extern void     server_set_timestamp();
+@@ -853,7 +854,9 @@
+ #ifdef X11R6
+ 	/* lumpi@dobag.in-berlin.de */
+ 		int ksym_pcc;
+-		XGetKeyboardMapping(display,NoSymbol,0,&ksym_pcc);
++		int tc_min_keycode, tc_max_keycode;
++		XDisplayKeycodes(display, &tc_min_keycode, &tc_max_keycode);
++		XGetKeyboardMapping(display,tc_min_keycode,tc_max_keycode-tc_min_keycode-1,&ksym_pcc);
+ 		for (index = 0; index < ksym_pcc; index++) {
+ #else
+ 		for (index = 0; index < display->keysyms_per_keycode; index++) {
+@@ -861,7 +864,7 @@
+ 		    if ((ksym = XLookupKeysym(ek, index)) != NoSymbol)
+ 			if (IsKeypadKey(ksym)) {
+ 			    /* See if key has been rebound. */
+-			    if (!translate_key(display, ksym, ek->state,
++			    if (translate_key(display, ksym, ek->state,
+ 					       buffer, BUFFERSIZE)) {
+ 			        (void)win_translate_KP_keysym(ksym, buffer);
+ 			    }
+@@ -2720,8 +2723,10 @@
+  * Xlib's.
+  */
+ 
+-#ifdef X11R6
+-/* lumpi@dobag.in-berlin.de */
++#ifdef X11R6 
++/* lumpi@dobag.in-berlin.de  
++   tom@sees.bangor.ac.uk this replacement for X11R6 doesn't work. At least 
++   it should now return sensible values though. */
+ static int
+ translate_key(dpy, symbol, modifiers, buffer, nbytes)
+     Display 		*dpy;
+@@ -2731,11 +2736,18 @@
+     int 		 nbytes;
+ {
+ 	/* This is _very_ rude ! */
+-	strcpy(buffer,XKeysymToString(symbol));
++	char *string;
++	string = XKeysymToString(symbol);
++     	if (string) {
++		strncpy(buffer,XKeysymToString(symbol),nbytes);
++		return(strlen(buffer));
++	}
++	else
++		return 0;
+ }
+ 
+-#else
+ 
++#else
+ static int
+ translate_key(dpy, symbol, modifiers, buffer, nbytes)
+     Display 		*dpy;
+@@ -2761,4 +2773,4 @@
+     }
+     return 0;
+ }
+-#endif
++#endif 

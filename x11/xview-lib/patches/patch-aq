@@ -1,76 +1,25 @@
-$NetBSD: patch-aq,v 1.1 2000/06/16 14:16:55 pooka Exp $
---- lib/libxview/textsw/txt_incl.c.orig	Sat Jan  8 03:59:12 2000
-+++ lib/libxview/textsw/txt_incl.c	Sat Jan  8 04:00:25 2000
-@@ -35,6 +35,12 @@
- #include <string.h>
- #endif /* SVR4 */
+$NetBSD: patch-aq,v 1.2 2001/12/20 09:19:55 tron Exp $
+
+--- lib/libxview/sel/sel_agent.c.orig	Sun Jun 26 20:46:20 1994
++++ lib/libxview/sel/sel_agent.c	Thu Dec 20 10:09:17 2001
+@@ -63,7 +63,7 @@
+ static void     selection_agent_do_function();
+ static Atom 	get_atom();
+ static Seln_attribute save_atom();
+-
++static int	waitforReadableTimeout();
  
-+#include <sys/param.h>
-+
-+#if (defined(SVR4) || (__NetBSD_Version__ >= 103080000))
-+#define GETCWD
+ Xv_private Seln_result seln_convert_request_to_property();
+ /* called by seln_svc.c
+@@ -309,7 +309,11 @@
+     struct stat     stat_buf;
+     int             count, size;
+     char           *destp;
++#if (defined(BSD) && (BSD >= 199306))
++    extern off_t    lseek();
++#else
+     extern long     lseek();
 +#endif
-+
- #define		MAX_DISPLAY_LENGTH	50
- #define   	MAX_STR_LENGTH		1024
  
-@@ -108,18 +114,18 @@
- 
-     /* if "cd" is not disabled and the "cd" dir is not the current dir */
- #ifdef OW_I18N
--#ifdef SVR4
-+#ifdef GETCWD
-     (void) getcwd(curr_dir_mb, MAX_STR_LENGTH);
- #else
-     (void) getwd(curr_dir_mb);
--#endif /* SVR4 */
-+#endif /* GETCWD */
-     (void) mbstowcs(curr_dir, curr_dir_mb, MAX_STR_LENGTH);
- #else /* OW_I18N */
--#ifdef SVR4
-+#ifdef GETCWD
-     (void) getcwd(curr_dir, MAX_STR_LENGTH);
- #else
-     (void) getwd(curr_dir);
--#endif /* SVR4 */
-+#endif /* GETCWD */
- #endif /* OW_I18N */
- 
-     textsw_changed_directory = FALSE;
-@@ -272,11 +278,11 @@
-     include_string[0] = NULL;
-     (void) textsw_get_selection(view, &dummy, &dummy, include_string,
- 				MAX_STR_LENGTH);
--#ifdef SVR4
-+#ifdef GETCWD
-  (void) getcwd(current_dir_include_string, MAX_STR_LENGTH);
- #else
-   (void) getwd(current_dir_include_string);
--#endif /* SVR4 */
-+#endif /* GETCWD */
-     include_panel_items[(int) DIR_STRING_ITEM] =
- 	panel_create_item(panel, PANEL_TEXT,
- 			  PANEL_LABEL_X, ATTR_COL(0),
-@@ -384,18 +390,18 @@
- 
-     /* if "cd" is not disabled and the "cd" dir is not the current dir */
- #ifdef OW_I18N
--#ifdef SVR4
-+#ifdef GETCWD
-     (void) getcwd(curr_dir_mb, MAX_STR_LENGTH);
- #else
-     (void) getwd(curr_dir_mb);
--#endif /* SVR4 */
-+#endif /* GETCWD */
-     (void) mbstowcs(curr_dir, curr_dir_mb, MAX_STR_LENGTH);
- #else /* OW_I18N */
--#ifdef SVR4
-+#ifdef GETCWD
-     (void) getcwd(curr_dir, MAX_STR_LENGTH);
- #else
-     (void) getwd(curr_dir);
--#endif /* SVR4 */
-+#endif /* GETCWD */
- #endif /* OW_I18N */
- 
-     textsw_changed_directory = FALSE;
+     if (fstat(fd, &stat_buf) != 0) {
+ 	perror(XV_MSG("Agent couldn't reply about a file"));
