@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.36 2002/09/23 15:03:12 wiz Exp $
+$NetBSD: CHANGES,v 1.37 2002/09/23 15:20:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2943,3 +2943,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated xlHtml to 0.5 [wiz 2002-09-23]
 	Updated arla to 0.35.9nb1 [wennmach 2002-09-23]
 	Updated esound to 0.2.29 [wiz 2002-09-23]
+	Updated flawfinder to 1.21 [wiz 2002-09-23]
