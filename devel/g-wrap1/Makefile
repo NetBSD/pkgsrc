@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/12/03 16:06:06 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2004/12/04 16:23:42 wiz Exp $
 
 DISTNAME=	g-wrap-1.3.4
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.gnucash.org/pub/g-wrap/source/
 
@@ -9,22 +9,21 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnucash.org/
 COMMENT=	Tool for importing types, functions, and constants into guile 1.4
 
-DEPENDS+=	guile-slib-2.4.2nb[0-5]:../../devel/guile14-slib
+DEPENDS+=	guile-slib>=2.4.2nb6:../../devel/guile14-slib
 
 USE_BUILDLINK3=		YES
 
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
-MAKE_ENV+=		GUILE14_SUBDIR=${GUILE14_SUBDIR:Q}
 
 USE_MAKEINFO=		YES
 INFO_FILES=		g-wrap.info
 
-CONFIGURE_ARGS+=	--with-modules-dir=${PREFIX}/${GUILE14_SUBDIR}/share/guile
+CONFIGURE_ARGS+=	--with-modules-dir=${PREFIX}/share/guile
 CONFIGURE_ENV+=		ac_cv_path_RSCHEME="nope"
 
 .include "../../devel/glib/buildlink3.mk"
-.include "../../lang/guile14/buildlink3.mk"
-.include "../../devel/guile14-gtk/buildlink3.mk"
+.include "../../lang/guile/buildlink3.mk"
+.include "../../devel/guile-gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
