@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2002/09/03 19:26:41 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.6 2002/09/19 08:28:17 wennmach Exp $
 
 # MASTER_SITES is very special, and must end in "=":
 CATEGORIES=	lang
@@ -51,7 +51,7 @@ NO_BUILD=	# defined
 
 post-fetch:
 .	if ${OPSYS} != "Darwin"
-	@${CHMOD} +x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
+	@-${CHMOD} +x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
 .	endif
 
 do-install:
