@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/08/27 14:31:46 rh Exp $
+# $NetBSD: Makefile,v 1.6 1999/08/29 12:48:59 rh Exp $
 #
 
 DISTNAME=	gnumeric-0.32
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnumeric/}
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnome.org/gnumeric/
 
-DEPENDS+=	gnome-core-1.0.7:../../x11/gnome-core
+DEPENDS+=	gnome-core-1.0.9:../../x11/gnome-core
 DEPENDS+=	gnome-print-0.4:../../print/gnome-print
 DEPENDS+=	libglade-0.4:../../devel/libglade
 
