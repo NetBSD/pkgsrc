@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.483 2000/06/25 03:58:17 hubertf Exp $			\
+#	$NetBSD: bsd.pkg.mk,v 1.484 2000/06/25 04:26:56 hubertf Exp $			\
 #
 # This file is in the public domain.
 #
@@ -290,6 +290,9 @@ BUILD_DEPENDS+=		${BZCAT}:../../archivers/bzip2
 DECOMPRESS_CMD?=	${BZCAT}
 .elif ${EXTRACT_SUFX} == ".tar"
 DECOMPRESS_CMD?=	${CAT}
+.elif ${EXTRACT_SUFX} == ".zip"
+BUILD_DEPENDS+=		unzip:../../archivers/unzip
+EXTRACT_CMD=		unzip ${DOWNLOADED_DISTFILE}
 .else
 DECOMPRESS_CMD?=	${GZCAT}
 .endif
@@ -2724,7 +2727,7 @@ COMMON_DIRS!= 	${AWK} 'BEGIN  { 				\
 
 .if !target(print-PLIST)
 print-PLIST:
-	@${ECHO} '@comment $$NetBSD: bsd.pkg.mk,v 1.483 2000/06/25 03:58:17 hubertf Exp $$'
+	@${ECHO} '@comment $$NetBSD: bsd.pkg.mk,v 1.484 2000/06/25 04:26:56 hubertf Exp $$'
 	@${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} \! -type d 	\
 	 | ${SED} s@${PREFIX}/./@@ 				\
 	 | sort							\
