@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2003/03/11 13:10:17 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2003/04/01 12:27:12 markd Exp $
 bin/appletproxy
 bin/chooser
 bin/drkonqi
@@ -1047,19 +1047,28 @@ share/fonts/console8x8.pcf.gz
 share/fonts/fonts.dir
 share/fonts/override/fonts.dir
 share/kde/applnk/.directory
+share/kde/applnk/.hidden/battery.desktop
+share/kde/applnk/.hidden/bwarning.desktop
+share/kde/applnk/.hidden/cwarning.desktop
 share/kde/applnk/.hidden/fileappearance.desktop
 share/kde/applnk/.hidden/filebehavior.desktop
 share/kde/applnk/.hidden/filepreviews.desktop
+share/kde/applnk/.hidden/kcmkonq.desktop
 share/kde/applnk/.hidden/kcmkonsole.desktop
+share/kde/applnk/.hidden/kcmkxmlrpcd.desktop
 share/kde/applnk/.hidden/kicker_config.desktop
 share/kde/applnk/.hidden/kicker_config_appearance.desktop
 share/kde/applnk/.hidden/konqfilemgr.desktop
+share/kde/applnk/.hidden/konqhtml.desktop
 share/kde/applnk/.hidden/kwinactions.desktop
 share/kde/applnk/.hidden/kwinadvanced.desktop
 share/kde/applnk/.hidden/kwinfocus.desktop
 share/kde/applnk/.hidden/kwinmoving.desktop
 share/kde/applnk/.hidden/midi.desktop
+share/kde/applnk/.hidden/power.desktop
 share/kde/applnk/.hidden/smb.desktop
+share/kde/applnk/.hidden/socks.desktop
+share/kde/applnk/.hidden/virtualdesktops.desktop
 share/kde/applnk/Applications/.directory
 share/kde/applnk/Development/.directory
 share/kde/applnk/Editors/.directory
@@ -1087,6 +1096,7 @@ share/kde/applnk/Kfind.desktop
 share/kde/applnk/Multimedia/.directory
 share/kde/applnk/Multimedia/More/.directory
 share/kde/applnk/Office/.directory
+share/kde/applnk/Settings/.directory
 share/kde/applnk/Settings/Accessibility/.directory
 share/kde/applnk/Settings/Accessibility/kcmaccess.desktop
 share/kde/applnk/Settings/Accessibility/keyboard_layout.desktop
@@ -1470,7 +1480,7 @@ share/kde/apps/kconf_update/convertShortcuts.pl
 share/kde/apps/kconf_update/favicons.upd
 share/kde/apps/kconf_update/kaccel.upd
 share/kde/apps/kconf_update/kcmdisplayrc.upd
-share/kde/apps/kconf_update/kicker-${PKGVERSION}-properSizeSetting.pl
+share/kde/apps/kconf_update/kicker-3.1-properSizeSetting.pl
 share/kde/apps/kconf_update/kickerrc.upd
 share/kde/apps/kconf_update/klipper-1-2.pl
 share/kde/apps/kconf_update/klipper-kde31.sh
@@ -2229,6 +2239,7 @@ share/kde/icons/crystalsvg/16x16/apps/xpaint.png
 share/kde/icons/crystalsvg/16x16/apps/xv.png
 share/kde/icons/crystalsvg/16x16/devices/print_printer.png
 share/kde/icons/crystalsvg/16x16/filesystems/folder_print2.png
+share/kde/icons/crystalsvg/22x22/apps/klipper.png
 share/kde/icons/crystalsvg/22x22/apps/kvirc.png
 share/kde/icons/crystalsvg/22x22/apps/nedit.png
 share/kde/icons/crystalsvg/32x32/apps/access.png

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/12 11:01:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/01 12:27:18 markd Exp $
 share/doc/kde/HTML/fi/common/1.png
 share/doc/kde/HTML/fi/common/10.png
 share/doc/kde/HTML/fi/common/2.png
@@ -53,6 +53,7 @@ share/kde/locale/fi/LC_MESSAGES/appletproxy.mo
 share/kde/locale/fi/LC_MESSAGES/ark.mo
 share/kde/locale/fi/LC_MESSAGES/artsbuilder.mo
 share/kde/locale/fi/LC_MESSAGES/artscontrol.mo
+share/kde/locale/fi/LC_MESSAGES/atlantik.mo
 share/kde/locale/fi/LC_MESSAGES/babelfish.mo
 share/kde/locale/fi/LC_MESSAGES/childpanelextension.mo
 share/kde/locale/fi/LC_MESSAGES/clockapplet.mo
@@ -86,6 +87,7 @@ share/kde/locale/fi/LC_MESSAGES/kabc_ldap.mo
 share/kde/locale/fi/LC_MESSAGES/kabc_net.mo
 share/kde/locale/fi/LC_MESSAGES/kabc_sql.mo
 share/kde/locale/fi/LC_MESSAGES/kabcformat_binary.mo
+share/kde/locale/fi/LC_MESSAGES/kaboodle.mo
 share/kde/locale/fi/LC_MESSAGES/kaccess.mo
 share/kde/locale/fi/LC_MESSAGES/kaddressbook.mo
 share/kde/locale/fi/LC_MESSAGES/kandy.mo
@@ -203,6 +205,7 @@ share/kde/locale/fi/LC_MESSAGES/kfloppy.mo
 share/kde/locale/fi/LC_MESSAGES/kfmclient.mo
 share/kde/locale/fi/LC_MESSAGES/kfmexec.mo
 share/kde/locale/fi/LC_MESSAGES/kfontviewpart.mo
+share/kde/locale/fi/LC_MESSAGES/kfouleggs.mo
 share/kde/locale/fi/LC_MESSAGES/kghostview.mo
 share/kde/locale/fi/LC_MESSAGES/khelpcenter.mo
 share/kde/locale/fi/LC_MESSAGES/khexedit.mo
@@ -234,6 +237,7 @@ share/kde/locale/fi/LC_MESSAGES/kjumpingcube.mo
 share/kde/locale/fi/LC_MESSAGES/klaptopdaemon.mo
 share/kde/locale/fi/LC_MESSAGES/klegacyimport.mo
 share/kde/locale/fi/LC_MESSAGES/kless.mo
+share/kde/locale/fi/LC_MESSAGES/klickety.mo
 share/kde/locale/fi/LC_MESSAGES/klines.mo
 share/kde/locale/fi/LC_MESSAGES/klipper.mo
 share/kde/locale/fi/LC_MESSAGES/klock.mo
@@ -253,6 +257,7 @@ share/kde/locale/fi/LC_MESSAGES/knode.mo
 share/kde/locale/fi/LC_MESSAGES/knotes.mo
 share/kde/locale/fi/LC_MESSAGES/knotify.mo
 share/kde/locale/fi/LC_MESSAGES/kodo.mo
+share/kde/locale/fi/LC_MESSAGES/kolf.mo
 share/kde/locale/fi/LC_MESSAGES/kolourpicker.mo
 share/kde/locale/fi/LC_MESSAGES/konqsidebar_mediaplayer.mo
 share/kde/locale/fi/LC_MESSAGES/konqueror.mo
@@ -277,6 +282,7 @@ share/kde/locale/fi/LC_MESSAGES/kppplogview.mo
 share/kde/locale/fi/LC_MESSAGES/kprinter.mo
 share/kde/locale/fi/LC_MESSAGES/krdb.mo
 share/kde/locale/fi/LC_MESSAGES/kreadconfig.mo
+share/kde/locale/fi/LC_MESSAGES/krec.mo
 share/kde/locale/fi/LC_MESSAGES/kregexpeditor.mo
 share/kde/locale/fi/LC_MESSAGES/kreversi.mo
 share/kde/locale/fi/LC_MESSAGES/kruler.mo
@@ -344,10 +350,12 @@ share/kde/locale/fi/LC_MESSAGES/libkickermenu_recentdocs.mo
 share/kde/locale/fi/LC_MESSAGES/libkonq.mo
 share/kde/locale/fi/LC_MESSAGES/libkscan.mo
 share/kde/locale/fi/LC_MESSAGES/libkscreensaver.mo
+share/kde/locale/fi/LC_MESSAGES/libksirtet.mo
 share/kde/locale/fi/LC_MESSAGES/libtaskbar.mo
 share/kde/locale/fi/LC_MESSAGES/libtaskmanager.mo
 share/kde/locale/fi/LC_MESSAGES/lockout.mo
 share/kde/locale/fi/LC_MESSAGES/lskat.mo
+share/kde/locale/fi/LC_MESSAGES/megami.mo
 share/kde/locale/fi/LC_MESSAGES/multiplayers.mo
 share/kde/locale/fi/LC_MESSAGES/naughtyapplet.mo
 share/kde/locale/fi/LC_MESSAGES/noatun.mo

@@ -1,8 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/12 10:53:55 markd Exp $
-share/doc/kde/HTML/ca/glossary/common
-share/doc/kde/HTML/ca/glossary/index.cache.bz2
-share/doc/kde/HTML/ca/glossary/index.docbook
-share/doc/kde/HTML/ca/glossary/kdeprintingglossary.docbook
+@comment $NetBSD: PLIST,v 1.2 2003/04/01 12:27:15 markd Exp $
 share/doc/kde/HTML/ca/kcontrol/common
 share/doc/kde/HTML/ca/kcontrol/index.cache.bz2
 share/doc/kde/HTML/ca/kcontrol/index.docbook
@@ -29,6 +25,10 @@ share/doc/kde/HTML/ca/khelpcenter/faq/notrelated.docbook
 share/doc/kde/HTML/ca/khelpcenter/faq/panel.docbook
 share/doc/kde/HTML/ca/khelpcenter/faq/tips.docbook
 share/doc/kde/HTML/ca/khelpcenter/faq/winmng.docbook
+share/doc/kde/HTML/ca/khelpcenter/glossary/common
+share/doc/kde/HTML/ca/khelpcenter/glossary/index.cache.bz2
+share/doc/kde/HTML/ca/khelpcenter/glossary/index.docbook
+share/doc/kde/HTML/ca/khelpcenter/glossary/kdeprintingglossary.docbook
 share/doc/kde/HTML/ca/khelpcenter/help.docbook
 share/doc/kde/HTML/ca/khelpcenter/index.cache.bz2
 share/doc/kde/HTML/ca/khelpcenter/index.docbook
@@ -65,6 +65,9 @@ share/doc/kde/HTML/ca/khelpcenter/userguide/more-help.docbook
 share/doc/kde/HTML/ca/khelpcenter/userguide/shortcuts.docbook
 share/doc/kde/HTML/ca/khelpcenter/userguide/staff.docbook
 share/doc/kde/HTML/ca/khelpcenter/userguide/ug-faq.docbook
+share/doc/kde/HTML/ca/khelpcenter/visualdict/common
+share/doc/kde/HTML/ca/khelpcenter/visualdict/index.cache.bz2
+share/doc/kde/HTML/ca/khelpcenter/visualdict/index.docbook
 share/doc/kde/HTML/ca/khelpcenter/welcome.docbook
 share/doc/kde/HTML/ca/khelpcenter/whatiskde.docbook
 share/doc/kde/HTML/ca/kioslave/audiocd.docbook
@@ -110,6 +113,7 @@ share/doc/kde/HTML/ca/kioslave/thumbnail.docbook
 share/doc/kde/HTML/ca/kioslave/webdav.docbook
 share/doc/kde/HTML/ca/kioslave/webdavs.docbook
 share/kde/locale/ca/LC_MESSAGES/aktion.mo
+share/kde/locale/ca/LC_MESSAGES/alarmdaemonctrl.mo
 share/kde/locale/ca/LC_MESSAGES/alsaplayerui.mo
 share/kde/locale/ca/LC_MESSAGES/amor.mo
 share/kde/locale/ca/LC_MESSAGES/appletproxy.mo
@@ -152,6 +156,7 @@ share/kde/locale/ca/LC_MESSAGES/htmlsearch.mo
 share/kde/locale/ca/LC_MESSAGES/imagerename_plugin.mo
 share/kde/locale/ca/LC_MESSAGES/imgalleryplugin.mo
 share/kde/locale/ca/LC_MESSAGES/jefferson.mo
+share/kde/locale/ca/LC_MESSAGES/kabc2mutt.mo
 share/kde/locale/ca/LC_MESSAGES/kabc_dir.mo
 share/kde/locale/ca/LC_MESSAGES/kabc_ldap.mo
 share/kde/locale/ca/LC_MESSAGES/kabc_net.mo
@@ -160,6 +165,9 @@ share/kde/locale/ca/LC_MESSAGES/kabcformat_binary.mo
 share/kde/locale/ca/LC_MESSAGES/kaboodle.mo
 share/kde/locale/ca/LC_MESSAGES/kaccess.mo
 share/kde/locale/ca/LC_MESSAGES/kaddressbook.mo
+share/kde/locale/ca/LC_MESSAGES/kalarm.mo
+share/kde/locale/ca/LC_MESSAGES/kalarmdgui.mo
+share/kde/locale/ca/LC_MESSAGES/kandy.mo
 share/kde/locale/ca/LC_MESSAGES/kaphorism.mo
 share/kde/locale/ca/LC_MESSAGES/kappfinder.mo
 share/kde/locale/ca/LC_MESSAGES/karm.mo
@@ -304,6 +312,7 @@ share/kde/locale/ca/LC_MESSAGES/kfile_rpm.mo
 share/kde/locale/ca/LC_MESSAGES/kfile_tga.mo
 share/kde/locale/ca/LC_MESSAGES/kfile_tiff.mo
 share/kde/locale/ca/LC_MESSAGES/kfile_txt.mo
+share/kde/locale/ca/LC_MESSAGES/kfile_vcf.mo
 share/kde/locale/ca/LC_MESSAGES/kfile_wav.mo
 share/kde/locale/ca/LC_MESSAGES/kfile_xbm.mo
 share/kde/locale/ca/LC_MESSAGES/kfind.mo
@@ -313,6 +322,7 @@ share/kde/locale/ca/LC_MESSAGES/kfmclient.mo
 share/kde/locale/ca/LC_MESSAGES/kfmexec.mo
 share/kde/locale/ca/LC_MESSAGES/kfontviewpart.mo
 share/kde/locale/ca/LC_MESSAGES/kfouleggs.mo
+share/kde/locale/ca/LC_MESSAGES/kgantt.mo
 share/kde/locale/ca/LC_MESSAGES/kget.mo
 share/kde/locale/ca/LC_MESSAGES/kghostview.mo
 share/kde/locale/ca/LC_MESSAGES/kgpgcertmanager.mo
@@ -375,6 +385,7 @@ share/kde/locale/ca/LC_MESSAGES/konqsidebar_mediaplayer.mo
 share/kde/locale/ca/LC_MESSAGES/konqueror.mo
 share/kde/locale/ca/LC_MESSAGES/konquest.mo
 share/kde/locale/ca/LC_MESSAGES/konsole.mo
+share/kde/locale/ca/LC_MESSAGES/konsolekalendar.mo
 share/kde/locale/ca/LC_MESSAGES/kooka.mo
 share/kde/locale/ca/LC_MESSAGES/korganizer.mo
 share/kde/locale/ca/LC_MESSAGES/korn.mo
@@ -508,10 +519,11 @@ share/kde/locale/ca/flag.png
 @comment dirrm share/kde/locale/ca
 @comment dirrm share/kde/locale
 @comment dirrm share/doc/kde/HTML/ca/kioslave
+@comment dirrm share/doc/kde/HTML/ca/khelpcenter/visualdict
 @comment dirrm share/doc/kde/HTML/ca/khelpcenter/userguide
+@comment dirrm share/doc/kde/HTML/ca/khelpcenter/glossary
 @comment dirrm share/doc/kde/HTML/ca/khelpcenter/faq
 @comment dirrm share/doc/kde/HTML/ca/khelpcenter
 @comment dirrm share/doc/kde/HTML/ca/kcontrol
-@comment dirrm share/doc/kde/HTML/ca/glossary
 @comment dirrm share/doc/kde/HTML/ca
 @comment dirrm share/doc/kde/HTML

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/12 11:02:17 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/01 12:27:18 markd Exp $
 share/doc/kde/HTML/fr/KRegExpEditor/common
 share/doc/kde/HTML/fr/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/fr/KRegExpEditor/index.docbook
@@ -77,6 +77,9 @@ share/doc/kde/HTML/fr/artsbuilder/modules.docbook
 share/doc/kde/HTML/fr/artsbuilder/porting.docbook
 share/doc/kde/HTML/fr/artsbuilder/references.docbook
 share/doc/kde/HTML/fr/artsbuilder/tools.docbook
+share/doc/kde/HTML/fr/atlantik/common
+share/doc/kde/HTML/fr/atlantik/index.cache.bz2
+share/doc/kde/HTML/fr/atlantik/index.docbook
 share/doc/kde/HTML/fr/cervisia/common
 share/doc/kde/HTML/fr/cervisia/index.cache.bz2
 share/doc/kde/HTML/fr/cervisia/index.docbook
@@ -128,15 +131,24 @@ share/doc/kde/HTML/fr/common/web-docbottom.png
 share/doc/kde/HTML/fr/common/web-doctop.png
 share/doc/kde/HTML/fr/common/x11-license.html
 share/doc/kde/HTML/fr/common/xml.dcl
-share/doc/kde/HTML/fr/helpindex/common
-share/doc/kde/HTML/fr/helpindex/index.cache.bz2
-share/doc/kde/HTML/fr/helpindex/index.docbook
 share/doc/kde/HTML/fr/kaboodle/common
 share/doc/kde/HTML/fr/kaboodle/index.cache.bz2
 share/doc/kde/HTML/fr/kaboodle/index.docbook
 share/doc/kde/HTML/fr/kaddressbook/common
 share/doc/kde/HTML/fr/kaddressbook/index.cache.bz2
 share/doc/kde/HTML/fr/kaddressbook/index.docbook
+share/doc/kde/HTML/fr/kalarm/alarmmessage.png
+share/doc/kde/HTML/fr/kalarm/common
+share/doc/kde/HTML/fr/kalarm/editwindow.png
+share/doc/kde/HTML/fr/kalarm/index.cache.bz2
+share/doc/kde/HTML/fr/kalarm/index.docbook
+share/doc/kde/HTML/fr/kalarm/mainwindow.png
+share/doc/kde/HTML/fr/kalzium/common
+share/doc/kde/HTML/fr/kalzium/index.cache.bz2
+share/doc/kde/HTML/fr/kalzium/index.docbook
+share/doc/kde/HTML/fr/kalzium/screenshot1.png
+share/doc/kde/HTML/fr/kalzium/screenshot3.png
+share/doc/kde/HTML/fr/kalzium/screenshot4.png
 share/doc/kde/HTML/fr/kamera/common
 share/doc/kde/HTML/fr/kamera/index.cache.bz2
 share/doc/kde/HTML/fr/kamera/index.docbook
@@ -266,6 +278,9 @@ share/doc/kde/HTML/fr/kcontrol/filetypes/index.docbook
 share/doc/kde/HTML/fr/kcontrol/fonts/common
 share/doc/kde/HTML/fr/kcontrol/fonts/index.cache.bz2
 share/doc/kde/HTML/fr/kcontrol/fonts/index.docbook
+share/doc/kde/HTML/fr/kcontrol/helpindex/common
+share/doc/kde/HTML/fr/kcontrol/helpindex/index.cache.bz2
+share/doc/kde/HTML/fr/kcontrol/helpindex/index.docbook
 share/doc/kde/HTML/fr/kcontrol/icons/common
 share/doc/kde/HTML/fr/kcontrol/icons/index.cache.bz2
 share/doc/kde/HTML/fr/kcontrol/icons/index.docbook
@@ -1099,6 +1114,7 @@ share/doc/kde/HTML/fr/kuickshow/screenshot.png
 share/doc/kde/HTML/fr/kuser/common
 share/doc/kde/HTML/fr/kuser/index.cache.bz2
 share/doc/kde/HTML/fr/kuser/index.docbook
+share/doc/kde/HTML/fr/kuser/kuser.png
 share/doc/kde/HTML/fr/kview/common
 share/doc/kde/HTML/fr/kview/index.cache.bz2
 share/doc/kde/HTML/fr/kview/index.docbook
@@ -1808,6 +1824,7 @@ share/kde/locale/fr/flag.png
 @dirrm share/doc/kde/HTML/fr/kcontrol/kcmaccess
 @dirrm share/doc/kde/HTML/fr/kcontrol/kalarmd
 @dirrm share/doc/kde/HTML/fr/kcontrol/icons
+@dirrm share/doc/kde/HTML/fr/kcontrol/helpindex
 @dirrm share/doc/kde/HTML/fr/kcontrol/fonts
 @dirrm share/doc/kde/HTML/fr/kcontrol/filetypes
 @dirrm share/doc/kde/HTML/fr/kcontrol/filemanager
@@ -1841,11 +1858,13 @@ share/kde/locale/fr/flag.png
 @dirrm share/doc/kde/HTML/fr/kaphorism
 @dirrm share/doc/kde/HTML/fr/kandy
 @dirrm share/doc/kde/HTML/fr/kamera
+@dirrm share/doc/kde/HTML/fr/kalzium
+@dirrm share/doc/kde/HTML/fr/kalarm
 @dirrm share/doc/kde/HTML/fr/kaddressbook
 @dirrm share/doc/kde/HTML/fr/kaboodle
-@dirrm share/doc/kde/HTML/fr/helpindex
 @dirrm share/doc/kde/HTML/fr/common
 @dirrm share/doc/kde/HTML/fr/cervisia
+@dirrm share/doc/kde/HTML/fr/atlantik
 @dirrm share/doc/kde/HTML/fr/artsbuilder/images
 @dirrm share/doc/kde/HTML/fr/artsbuilder
 @dirrm share/doc/kde/HTML/fr/ark

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/12 11:11:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/01 12:27:22 markd Exp $
 share/doc/kde/HTML/sk/amor/common
 share/doc/kde/HTML/sk/amor/index.cache.bz2
 share/doc/kde/HTML/sk/amor/index.docbook
@@ -122,6 +122,9 @@ share/doc/kde/HTML/sk/kcalc/index.docbook
 share/doc/kde/HTML/sk/kcharselect/common
 share/doc/kde/HTML/sk/kcharselect/index.cache.bz2
 share/doc/kde/HTML/sk/kcharselect/index.docbook
+share/doc/kde/HTML/sk/kcoloredit/common
+share/doc/kde/HTML/sk/kcoloredit/index.cache.bz2
+share/doc/kde/HTML/sk/kcoloredit/index.docbook
 share/doc/kde/HTML/sk/kcontrol/arts/common
 share/doc/kde/HTML/sk/kcontrol/arts/index.cache.bz2
 share/doc/kde/HTML/sk/kcontrol/arts/index.docbook
@@ -556,6 +559,7 @@ share/doc/kde/HTML/sk/klines/index.docbook
 share/doc/kde/HTML/sk/klipper/common
 share/doc/kde/HTML/sk/klipper/index.cache.bz2
 share/doc/kde/HTML/sk/klipper/index.docbook
+share/doc/kde/HTML/sk/kmail/credits-and-licenses.docbook
 share/doc/kde/HTML/sk/kmathtool/common
 share/doc/kde/HTML/sk/kmathtool/index.cache.bz2
 share/doc/kde/HTML/sk/kmathtool/index.docbook
@@ -584,6 +588,9 @@ share/doc/kde/HTML/sk/kmplot/install.docbook
 share/doc/kde/HTML/sk/kmplot/introduction.docbook
 share/doc/kde/HTML/sk/kmplot/menu.docbook
 share/doc/kde/HTML/sk/kmplot/using.docbook
+share/doc/kde/HTML/sk/knode/credits.docbook
+share/doc/kde/HTML/sk/knode/install.docbook
+share/doc/kde/HTML/sk/knode/introduction.docbook
 share/doc/kde/HTML/sk/kodo/common
 share/doc/kde/HTML/sk/kodo/index.cache.bz2
 share/doc/kde/HTML/sk/kodo/index.docbook
@@ -623,9 +630,6 @@ share/doc/kde/HTML/sk/konqueror/sidebar.docbook
 share/doc/kde/HTML/sk/konquest/common
 share/doc/kde/HTML/sk/konquest/index.cache.bz2
 share/doc/kde/HTML/sk/konquest/index.docbook
-share/doc/kde/HTML/sk/konsole/common
-share/doc/kde/HTML/sk/konsole/index.cache.bz2
-share/doc/kde/HTML/sk/konsole/index.docbook
 share/doc/kde/HTML/sk/konsole/konsole.png
 share/doc/kde/HTML/sk/kooka/common
 share/doc/kde/HTML/sk/kooka/index.cache.bz2
@@ -741,9 +745,6 @@ share/doc/kde/HTML/sk/kwin4/index.docbook
 share/doc/kde/HTML/sk/kworldclock/common
 share/doc/kde/HTML/sk/kworldclock/index.cache.bz2
 share/doc/kde/HTML/sk/kworldclock/index.docbook
-share/doc/kde/HTML/sk/kwrite/common
-share/doc/kde/HTML/sk/kwrite/index.cache.bz2
-share/doc/kde/HTML/sk/kwrite/index.docbook
 share/doc/kde/HTML/sk/lskat/common
 share/doc/kde/HTML/sk/lskat/index.cache.bz2
 share/doc/kde/HTML/sk/lskat/index.docbook
@@ -1198,7 +1199,6 @@ share/kde/locale/sk/flag.png
 @dirrm share/doc/kde/HTML/sk/noatun
 @dirrm share/doc/kde/HTML/sk/megami
 @dirrm share/doc/kde/HTML/sk/lskat
-@dirrm share/doc/kde/HTML/sk/kwrite
 @dirrm share/doc/kde/HTML/sk/kworldclock
 @dirrm share/doc/kde/HTML/sk/kwin4
 @dirrm share/doc/kde/HTML/sk/kweather
@@ -1236,6 +1236,7 @@ share/kde/locale/sk/flag.png
 @dirrm share/doc/kde/HTML/sk/kompare
 @dirrm share/doc/kde/HTML/sk/kolf
 @dirrm share/doc/kde/HTML/sk/kodo
+@dirrm share/doc/kde/HTML/sk/knode
 @dirrm share/doc/kde/HTML/sk/kmplot
 @dirrm share/doc/kde/HTML/sk/kmoon
 @dirrm share/doc/kde/HTML/sk/kmix
@@ -1243,6 +1244,7 @@ share/kde/locale/sk/flag.png
 @dirrm share/doc/kde/HTML/sk/kmessedwords
 @dirrm share/doc/kde/HTML/sk/kmenuedit
 @dirrm share/doc/kde/HTML/sk/kmathtool
+@dirrm share/doc/kde/HTML/sk/kmail
 @dirrm share/doc/kde/HTML/sk/klipper
 @dirrm share/doc/kde/HTML/sk/klines
 @dirrm share/doc/kde/HTML/sk/klickety
@@ -1344,6 +1346,7 @@ share/kde/locale/sk/flag.png
 @dirrm share/doc/kde/HTML/sk/kcontrol/background
 @dirrm share/doc/kde/HTML/sk/kcontrol/arts
 @dirrm share/doc/kde/HTML/sk/kcontrol
+@dirrm share/doc/kde/HTML/sk/kcoloredit
 @dirrm share/doc/kde/HTML/sk/kcharselect
 @dirrm share/doc/kde/HTML/sk/kcalc
 @dirrm share/doc/kde/HTML/sk/kbugbuster

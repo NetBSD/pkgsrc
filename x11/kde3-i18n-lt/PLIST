@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/12 11:05:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/01 12:27:20 markd Exp $
 share/doc/kde/HTML/lt/khelpcenter/common
 share/doc/kde/HTML/lt/khelpcenter/contact.docbook
 share/doc/kde/HTML/lt/khelpcenter/help.docbook
@@ -60,6 +60,7 @@ share/kde/locale/lt/LC_MESSAGES/kateinsertcommand.mo
 share/kde/locale/lt/LC_MESSAGES/kateopenheader.mo
 share/kde/locale/lt/LC_MESSAGES/katepart.mo
 share/kde/locale/lt/LC_MESSAGES/kateprojectmanager.mo
+share/kde/locale/lt/LC_MESSAGES/katespell.mo
 share/kde/locale/lt/LC_MESSAGES/katetextfilter.mo
 share/kde/locale/lt/LC_MESSAGES/katexmltools.mo
 share/kde/locale/lt/LC_MESSAGES/kbabel.mo
@@ -150,6 +151,7 @@ share/kde/locale/lt/LC_MESSAGES/kdmgreet.mo
 share/kde/locale/lt/LC_MESSAGES/kedit.mo
 share/kde/locale/lt/LC_MESSAGES/keduca.mo
 share/kde/locale/lt/LC_MESSAGES/kfax.mo
+share/kde/locale/lt/LC_MESSAGES/kfile_avi.mo
 share/kde/locale/lt/LC_MESSAGES/kfile_deb.mo
 share/kde/locale/lt/LC_MESSAGES/kfile_font.mo
 share/kde/locale/lt/LC_MESSAGES/kfile_m3u.mo

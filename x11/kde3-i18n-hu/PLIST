@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/12 11:03:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/01 12:27:19 markd Exp $
 share/doc/kde/HTML/hu/KRegExpEditor/common
 share/doc/kde/HTML/hu/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/hu/KRegExpEditor/index.docbook
@@ -509,9 +509,6 @@ share/doc/kde/HTML/hu/ktron/index.docbook
 share/doc/kde/HTML/hu/ktuberling/common
 share/doc/kde/HTML/hu/ktuberling/index.cache.bz2
 share/doc/kde/HTML/hu/ktuberling/index.docbook
-share/doc/kde/HTML/hu/kuickshow/common
-share/doc/kde/HTML/hu/kuickshow/index.cache.bz2
-share/doc/kde/HTML/hu/kuickshow/index.docbook
 share/doc/kde/HTML/hu/kuser/common
 share/doc/kde/HTML/hu/kuser/index.cache.bz2
 share/doc/kde/HTML/hu/kuser/index.docbook
@@ -978,7 +975,6 @@ share/kde/locale/hu/flag.png
 @dirrm share/doc/kde/HTML/hu/kweather
 @dirrm share/doc/kde/HTML/hu/kview
 @dirrm share/doc/kde/HTML/hu/kuser
-@dirrm share/doc/kde/HTML/hu/kuickshow
 @dirrm share/doc/kde/HTML/hu/ktuberling
 @dirrm share/doc/kde/HTML/hu/ktron
 @dirrm share/doc/kde/HTML/hu/ktouch

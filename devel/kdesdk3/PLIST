@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/03/11 13:30:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/04/01 12:27:07 markd Exp $
 bin/adddebug
 bin/catalogmanager
 bin/cervisia
@@ -437,6 +437,7 @@ share/kde/apps/kbabel/kbabelui.rc
 share/kde/apps/kbabel/pics/broken.png
 share/kde/apps/kbabel/pics/missing.png
 share/kde/apps/kbabel/pics/needwork.png
+share/kde/apps/kbabel/pics/noflag.png
 share/kde/apps/kbabel/pics/ok.png
 share/kde/apps/kbabel/pics/pref_identity.png
 share/kde/apps/kbabel/pics/splash.png
