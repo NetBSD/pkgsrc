@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.426 2002/10/31 12:10:01 wiz Exp $
+$NetBSD: CHANGES,v 1.427 2002/10/31 14:07:02 toshii Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3470,3 +3470,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated aalib-x11 to 1.4.0.4nb2 [jlam 2002-10-31]
 	Updated grepmail to 4.80 [seb 2002-10-31]
 	Updated standalone-tcsh to 6.12.00nb1 [wiz 2002-10-31]
+	Updated monafonts to 2.21 [toshii 2002-10-31]
