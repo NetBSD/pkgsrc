@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2003/01/28 14:21:56 martti Exp $
+@comment $NetBSD: PLIST,v 1.11 2003/03/24 11:08:47 wiz Exp $
 bin/apr-config
 bin/apu-config
 etc/rc.d/apache
@@ -124,6 +124,8 @@ lib/libaprutil.la
 lib/libaprutil.so
 lib/libaprutil.so.9
 lib/libaprutil.so.9.2
+libexec/cgi-bin/printenv
+libexec/cgi-bin/test-cgi
 man/man1/dbmmanage.1
 man/man1/htdigest.1
 man/man1/htpasswd.1
@@ -967,5 +969,6 @@ share/httpd/manual/vhosts/name-based.xml
 @dirrm share/httpd/build
 @dirrm share/httpd
 @dirrm share/examples/httpd
+@unexec ${RMDIR} ${PREFIX}/libexec/cgi-bin 2>/dev/null || ${TRUE}
 @dirrm lib/httpd
 @dirrm include/httpd
