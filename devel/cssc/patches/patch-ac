@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2004/06/12 02:50:46 grant Exp $
+
+--- my-getopt.cc.orig	2002-03-25 11:05:46.000000000 +1100
++++ my-getopt.cc
+@@ -104,7 +104,7 @@ CSSC_Options::next()
+   char c = *cindex++;
+ 
+   // Look for the argument character in the option list.
+-  char *match = strchr(opts, c);
++  const char *match = strchr(opts, c);
+ 	
+   if (0 == c || 0 == match)
+     {
