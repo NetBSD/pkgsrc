@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/12/10 15:35:15 tv Exp $
+# $NetBSD: Makefile,v 1.2 1999/06/30 09:46:45 agc Exp $
 #
 
 DISTNAME=		sdbm
@@ -12,15 +12,12 @@ EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		packages@netbsd.org
 
-MAKEFILE=		makefile
-ALL_TARGET=		sdbm
-MAKE_FLAGS=		CFLAGS="${CFLAGS} -DSDBM -DDUFF"
+MAKE_ENV+=		LIBDIR=${PREFIX}/lib
 
 post-extract:
 	@cd ${WRKDIR} && ${SH} sdbm.shar >/dev/null
 
-do-install:
-	${INSTALL_DATA} ${WRKSRC}/libsdbm.a ${PREFIX}/lib/
+post-install:
 	${INSTALL_DATA} ${WRKSRC}/sdbm.h ${PREFIX}/include/
 	${INSTALL_MAN} ${WRKSRC}/sdbm.3 ${PREFIX}/man/man3/
 
