@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:15:43 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/12/13 18:12:34 wiz Exp $
 share/timidity/acbass.pat
 share/timidity/accordn.pat
 share/timidity/acguitar.pat
@@ -38,6 +38,7 @@ share/timidity/clarinet.pat
 share/timidity/clave.pat
 share/timidity/clavinet.pat
 share/timidity/cleangtr.pat
+share/timidity/concrtbd.pat
 share/timidity/concrtna.pat
 share/timidity/congahi1.pat
 share/timidity/congahi2.pat
