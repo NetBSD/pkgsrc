@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.114 2000/01/15 12:22:30 ad Exp $
+# $NetBSD: mk.conf.example,v 1.115 2000/01/17 14:49:55 agc Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -205,6 +205,14 @@
 # package provides an executable, not a library.
 # Possible: yes, no
 # Default: yes
+
+#WARN_NO_OBJECT_FMT=yes
+# Packages installed on a machine before OBJECT_FMT was added to the
+# BUILD_DEFS definitions (on 29th September 1999) cannot say which 
+# object format they are in.  This will cause a warning to be displayed. 
+# Set this to "no" to stop the warning message being shown.
+# Possible: yes, no
+# Default: yes 
 
 #
 #	Definitions used only in the packages collection

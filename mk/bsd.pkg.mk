@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.395 2000/01/17 14:33:46 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.396 2000/01/17 14:49:55 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2193,6 +2193,7 @@ _DEPENDS_USE:
 
 # Tells whether to halt execution if the object formats differ
 FATAL_OBJECT_FMT_SKEW?= yes
+WARN_NO_OBJECT_FMT?= yes
 
 fetch-depends:	_DEPENDS_USE
 build-depends:	_DEPENDS_USE
@@ -2208,7 +2209,9 @@ misc-depends: uptodate-pkgtools
 	if [ "X$$found" != "X" ]; then					\
 		instobjfmt=`${PKG_INFO} -B "$$package" | ${AWK} '/^OBJECT_FMT/ { print $$2 }'`; \
 		if [ "X$$instobjfmt" = "X" ]; then			\
-			${ECHO} "WARNING: Unknown object format for installed package $$package - continuing"; \
+			if [ "X${WARN_NO_OBJECT_FMT}" != "Xno" ]; then	\
+				${ECHO} "WARNING: Unknown object format for installed package $$package - continuing"; \
+			fi;						\
 		elif [ "X$$instobjfmt" != "X${OBJECT_FMT}" ]; then	\
 			${ECHO} "Installed package $$package is an $$instobjfmt package."; \
 			${ECHO} "You are building an ${OBJECT_FMT} package, which will not inter-operate."; \
