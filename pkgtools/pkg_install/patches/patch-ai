@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.1 2002/08/01 14:43:39 schmonz Exp $
+$NetBSD: patch-ai,v 1.2 2002/08/06 11:51:02 wiz Exp $
 
---- lib/strlcpy.c.orig	Thu Aug  1 10:21:56 2002
+--- lib/strlcpy.c.orig	Mon Aug  5 18:09:56 2002
 +++ lib/strlcpy.c
-@@ -0,0 +1,64 @@
+@@ -0,0 +1,66 @@
 +/*
 + * Copyright (c) 1998 Todd C. Miller <Todd.Miller@courtesan.com>
 + * All rights reserved.
@@ -33,6 +33,8 @@ $NetBSD: patch-ai,v 1.1 2002/08/01 14:43:39 schmonz Exp $
 +#include <sys/types.h>
 +#include <assert.h>
 +#include <string.h>
++
++size_t strlcpy(char *, const char *, size_t);
 +
 +/*
 + * Copy src to string dst of size siz.  At most siz-1 characters

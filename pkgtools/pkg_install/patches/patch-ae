@@ -1,15 +1,26 @@
-$NetBSD: patch-ae,v 1.2 2002/08/01 09:31:16 martti Exp $
+$NetBSD: patch-ae,v 1.3 2002/08/06 11:51:02 wiz Exp $
 
 --- lib/lib.h.orig	Thu Aug  1 10:46:31 2002
-+++ lib/lib.h	Thu Aug  1 10:57:31 2002
-@@ -281,6 +281,10 @@
++++ lib/lib.h
+@@ -40,6 +40,10 @@
+ 
+ #include "path.h"
+ 
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 104000300)
++size_t strlcpy(char *, const char *, size_t);
++#endif
++
+ /* Macros */
+ #define SUCCESS	(0)
+ #define	FAIL	(-1)
+@@ -280,6 +284,10 @@
+ 
  /* For all */
  int     pkg_perform(lpkg_head_t *);
- 
++
 +#ifdef FGETLN_MISSING
 +char   *fgetln(FILE *, size_t *);
 +#endif
-+
+ 
  /* Externs */
  extern Boolean Verbose;
- extern Boolean Fake;
