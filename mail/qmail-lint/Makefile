@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/08/13 14:27:07 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2002/01/21 19:07:39 zuntum Exp $
 #
 
 DISTNAME=	qmail-lint-0.55
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://qmail.obeer.com/
 EXTRACT_SUFX=	#
@@ -17,6 +18,11 @@ WRKSRC=		${WRKDIR}
 USE_PERL5=	yes
 REPLACE_PERL=	${DISTNAME}
 NO_BUILD=	yes
+
+post-patch:
+	${SED} "s,/var/qmail,${QMAILDIR}," ${WRKSRC}/${DISTNAME}	\
+		> ${WRKSRC}/${DISTNAME}.done
+	${MV} ${WRKSRC}/${DISTNAME}.done ${WRKSRC}/${DISTNAME}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${PREFIX}/bin/qmail-lint
