@@ -1,0 +1,3 @@
+It is not neccesary to build both the tty and X11 versions of angband, as
+the X11 version supports both environments. 
+
