@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:53:32 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 14:47:17 agc Exp $
 
-MD5 (wmtime-1.0b2.tar.gz) = 04c03e001aa702cf653b6b6c3f58bf87
+SHA1 (wmtime-1.0b2.tar.gz) = 2a66762d548b9f91415603e8d6a37cfacb9340ad
+Size (wmtime-1.0b2.tar.gz) = 20680 bytes
 SHA1 (patch-aa) = 7aa81077ac43d803dfdf788bd5c4e10824a12368
