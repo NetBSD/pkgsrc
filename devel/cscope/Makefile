@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/02/14 00:54:44 grant Exp $
+# $NetBSD: Makefile,v 1.32 2004/02/14 00:59:28 grant Exp $
 #
 
 DISTNAME=	cscope-15.4
@@ -12,17 +12,10 @@ COMMENT=	Interactive C program browser
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
+USE_GNU_TOOLS+=		lex
 
 CONFIGURE_ARGS+=	--with-ncurses=${BUILDLINK_PREFIX.ncurses}
 CONFIGURE_ARGS+=	--with-flex
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-BUILD_DEPENDS+=		flex-[0-9]*:../../devel/flex
-LEX=			${LOCALBASE}/bin/flex
-.endif
-
 CONFIGURE_ENV+=		LEX=${LEX}
 
 .include "../../devel/ncurses/buildlink2.mk"
