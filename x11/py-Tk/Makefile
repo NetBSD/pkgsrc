@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/08/21 21:01:34 hubertf Exp $
+# $NetBSD: Makefile,v 1.14 2000/08/31 02:35:17 tsarna Exp $
 #
 
 DISTNAME=	py152
@@ -11,8 +11,8 @@ MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.python.org/topics/tkinter/
 
 DEPENDS+=	python-1.5.2:../../lang/python
-DEPENDS+=	tk-8.0.5:../../x11/tk80
-DEPENDS+=	tcl-8.0.5:../../lang/tcl80
+DEPENDS+=	tk-*:../../x11/tk
+DEPENDS+=	tcl-*:../../lang/tcl
 
 DIST_SUBDIR=	python
 
