@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2000/11/30 01:28:08 jtb Exp $
+# $NetBSD: Makefile,v 1.34 2000/11/30 01:48:43 jtb Exp $
 # FreeBSD Id: Makefile,v 1.38 1998/04/13 00:51:58 jseger Exp
 #
 
@@ -9,6 +9,7 @@
     SUBDIR += blas
     SUBDIR += calc
     SUBDIR += cassowary
+    SUBDIR += eispack
     SUBDIR += fftw
     SUBDIR += fftpack
     SUBDIR += geg
