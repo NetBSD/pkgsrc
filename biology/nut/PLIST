@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:28:07 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/07/12 12:23:12 wiz Exp $
 bin/nut
-share/nut/abbrev.txt
+man/man1/nut.1
+share/nut/FOOD_DES.txt
+share/nut/NUT_DATA.txt
+share/nut/WEIGHT.txt
+share/nut/sr15.nut
 @dirrm share/nut
