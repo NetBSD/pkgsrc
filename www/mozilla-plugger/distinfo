@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/09/10 10:48:02 reinoud Exp $
+
+SHA1 (plugger-5.1.3.tar.gz) = 21418c18e0ef5106aa69879fba2ec2cebb7ef052
+Size (plugger-5.1.3.tar.gz) = 90660 bytes
+SHA1 (patch-aa) = 565726bc74197da8681d3d0ac7b582162b4b41ed
