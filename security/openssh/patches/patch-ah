@@ -1,7 +1,9 @@
-$NetBSD: patch-ah,v 1.8 2000/08/11 05:19:44 jlam Exp $
+$NetBSD: patch-ah,v 1.9 2000/11/09 09:18:24 itojun Exp $
 
---- Makefile.in.orig	Tue Jul 11 07:34:34 2000
-+++ Makefile.in	Fri Aug 11 01:10:25 2000
+ssh-askpass: assumes NetBSD 1.5 path, could be wrong
+
+--- Makefile.in.orig	Mon Nov  6 06:13:45 2000
++++ Makefile.in	Thu Nov  9 18:11:16 2000
 @@ -6,6 +6,7 @@
  mandir=@mandir@
  mansubdir=@mansubdir@
@@ -14,12 +16,12 @@ $NetBSD: patch-ah,v 1.8 2000/08/11 05:19:44 jlam Exp $
  VPATH=@srcdir@
  
  SSH_PROGRAM=@bindir@/ssh
--ASKPASS_LOCATION=@libexecdir@/ssh
-+#ASKPASS_LOCATION=@libexecdir@/ssh
- ASKPASS_PROGRAM=$(ASKPASS_LOCATION)/ssh-askpass
+-ASKPASS_PROGRAM=$(libexecdir)/ssh-askpass
++ASKPASS_PROGRAM=/usr/X11R6/bin/ssh-askpass
  
  CC=@CC@
-@@ -115,7 +116,7 @@
+ LD=@LD@
+@@ -119,7 +120,7 @@
  distprep: catman-do
  	autoreconf
  
@@ -27,29 +29,31 @@ $NetBSD: patch-ah,v 1.8 2000/08/11 05:19:44 jlam Exp $
 +install: manpages $(TARGETS) install-files
  
  install-files:
- 	./mkinstalldirs $(DESTDIR)$(bindir)
-@@ -139,14 +140,14 @@
- 	ln -s ssh $(DESTDIR)$(bindir)/slogin
+ 	$(srcdir)/mkinstalldirs $(DESTDIR)$(bindir)
+@@ -147,15 +148,15 @@
  	-rm -f $(DESTDIR)$(mandir)/$(mansubdir)1/slogin.1
  	ln -s ssh.1 $(DESTDIR)$(mandir)/$(mansubdir)1/slogin.1
+ 	@FILEPRIV@ -f dev,filesys,driver $(DESTDIR)$(bindir)/ssh $(DESTDIR)$(bindir)/slogin
 -	if [ ! -f $(DESTDIR)$(sysconfdir)/ssh_config -a ! -f $(DESTDIR)$(sysconfdir)/sshd_config ]; then \
--		./mkinstalldirs $(DESTDIR)$(sysconfdir); \
+-		$(srcdir)/mkinstalldirs $(DESTDIR)$(sysconfdir); \
 -		$(INSTALL) -m 644 ssh_config.out $(DESTDIR)$(sysconfdir)/ssh_config; \
 -		$(INSTALL) -m 644 sshd_config.out $(DESTDIR)$(sysconfdir)/sshd_config; \
 +	if [ ! -f $(DESTDIR)$(examplesdir)/ssh_config -a ! -f $(DESTDIR)$(examplesdir)/sshd_config ]; then \
-+		./mkinstalldirs $(DESTDIR)$(examplesdir); \
++		$(srcdir)/mkinstalldirs $(DESTDIR)$(examplesdir); \
 +		$(INSTALL) -m 644 ssh_config.out $(DESTDIR)$(examplesdir)/ssh_config; \
 +		$(INSTALL) -m 644 sshd_config.out $(DESTDIR)$(examplesdir)/sshd_config; \
  	fi
  	if [ -f ssh_prng_cmds -a ! -z "$(INSTALL_SSH_PRNG_CMDS)" ]; then \
- 		$(PERL) fixprogs ssh_prng_cmds $(ENT); \
--		$(INSTALL) -m 644 ssh_prng_cmds.out $(DESTDIR)$(sysconfdir)/ssh_prng_cmds; \
-+		$(INSTALL) -m 644 ssh_prng_cmds.out $(DESTDIR)$(examplesdir)/ssh_prng_cmds; \
+ 		$(PERL) $(srcdir)/fixprogs ssh_prng_cmds $(ENT); \
+-		if [ ! -f $(DESTDIR)$(sysconfdir)/ssh_prng_cmds ] ; then \
+-			$(INSTALL) -m 644 ssh_prng_cmds.out $(DESTDIR)$(sysconfdir)/ssh_prng_cmds; \
++		if [ ! -f $(DESTDIR)$(examplesdir)/ssh_prng_cmds ] ; then \
++			$(INSTALL) -m 644 ssh_prng_cmds.out $(DESTDIR)$(examplesdir)/ssh_prng_cmds; \
+ 		fi ; \
  	fi
  
- host-key: ssh-keygen
-@@ -168,10 +169,10 @@
- 	./ssh-keygen -d -f $(DESTDIR)$(sysconfdir)/ssh_host_dsa_key -N ""
+@@ -178,10 +179,10 @@
+ 	$(srcdir)/ssh-keygen -d -f $(DESTDIR)$(sysconfdir)/ssh_host_dsa_key -N ""
  
  uninstallall:	uninstall
 -	-rm -f $(DESTDIR)$(sysconfdir)/ssh_config
