@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2003/01/10 19:36:03 jmmv Exp $
+$NetBSD: patch-ab,v 1.2 2004/04/01 18:16:46 jmmv Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=134231
 
 --- Makefile.in.orig	Thu Aug 29 14:53:59 2002
 +++ Makefile.in
