@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/02/19 18:53:55 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2005/02/24 01:27:58 dmcmahill Exp $
 #
 
 DISTNAME=	bins-1.1.27
@@ -61,9 +61,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/templates.jab/*.html			\
 		${PREFIX}/share/examples/bins/templates.jab/
 	# template: joi
-	${INSTALL_DATA_DIR}						\
-		${PREFIX}/share/examples/bins/templates.joi		\
-		${PREFIX}/share/examples/bins/templates.joi/static
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.joi
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.joi/static
 	${INSTALL_DATA} ${WRKSRC}/templates.joi/*.html			\
 		${PREFIX}/share/examples/bins/templates.joi/
 	${INSTALL_DATA}							\
@@ -72,9 +71,8 @@ do-install:
 		${WRKSRC}/templates.joi/static/*.js			\
 		${PREFIX}/share/examples/bins/templates.joi/static/
 	# template: marc
-	${INSTALL_DATA_DIR}						\
-		${PREFIX}/share/examples/bins/templates.marc		\
-		${PREFIX}/share/examples/bins/templates.marc/static
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.marc
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.marc/static
 	${INSTALL_DATA} ${WRKSRC}/templates.marc/*.html			\
 		${PREFIX}/share/examples/bins/templates.marc/
 	${INSTALL_DATA}							\
@@ -87,9 +85,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/templates.new/*.html			\
 		${PREFIX}/share/examples/bins/templates.new/
 	# template: petrus
-	${INSTALL_DATA_DIR}						\
-		${PREFIX}/share/examples/bins/templates.petrus		\
-		${PREFIX}/share/examples/bins/templates.petrus/static
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.petrus
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.petrus/static
 	${INSTALL_DATA} ${WRKSRC}/templates.petrus/*.html		\
 		${PREFIX}/share/examples/bins/templates.petrus/
 	${INSTALL_DATA}							\
@@ -98,9 +95,8 @@ do-install:
 		${WRKSRC}/templates.petrus/static/*.js			\
 		${PREFIX}/share/examples/bins/templates.petrus/static/
 	# template: satyap
-	${INSTALL_DATA_DIR}						\
-		${PREFIX}/share/examples/bins/templates.satyap		\
-		${PREFIX}/share/examples/bins/templates.satyap/static
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.satyap
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.satyap/static
 	${INSTALL_DATA} ${WRKSRC}/templates.satyap/*.html		\
 		${PREFIX}/share/examples/bins/templates.satyap/
 	${INSTALL_DATA}							\
