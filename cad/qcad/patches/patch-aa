@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2003/04/29 21:51:54 jtb Exp $
+$NetBSD: patch-aa,v 1.7 2004/01/02 18:11:06 reinoud Exp $
 
---- Makefile.orig
+--- Makefile.orig	2002-09-20 19:26:57.000000000 +0200
 +++ Makefile
 @@ -8,20 +8,20 @@
  
@@ -33,7 +33,7 @@ $NetBSD: patch-aa,v 1.6 2003/04/29 21:51:54 jtb Exp $
  MOC      = $(QTDIR)/bin/moc
  UIC      = $(QTDIR)/bin/uic
  QMAKE    = qmake
-@@ -1766,10 +1766,16 @@
+@@ -1766,6 +1766,9 @@ moc_ractzoom.o: moc_ractzoom.cpp ractzoo
  
  moc_rappwin.o: moc_rappwin.cpp rappwin.h ractiondef.h \
  		rprgdef.h
@@ -43,14 +43,7 @@ $NetBSD: patch-aa,v 1.6 2003/04/29 21:51:54 jtb Exp $
  
  moc_rattribdialog.o: moc_rattribdialog.cpp rattribdialog.h rcombobox.h \
  		rgraphdef.h \
- 		rprgdef.h
-+.if (${MACHINE_ARCH} == "alpha")
-+	$(CXX) -c $(CXXFLAGS_NOOPT) $(INCPATH) -o $@ moc_rfontdialog.cpp
-+.endif
- 
- moc_rbuttongroup.o: moc_rbuttongroup.cpp rbuttongroup.h 
- 
-@@ -1836,8 +1842,14 @@
+@@ -1836,6 +1839,9 @@ moc_rgraphic.o: moc_rgraphic.cpp rgraphi
  		rtypes.h \
  		rprgdef.h \
  		rmathdef.h
@@ -59,9 +52,4 @@ $NetBSD: patch-aa,v 1.6 2003/04/29 21:51:54 jtb Exp $
 +.endif
  
  moc_rgroupbox.o: moc_rgroupbox.cpp rgroupbox.h 
-+.if (${MACHINE_ARCH} == "alpha")
-+	$(CXX) -c $(CXXFLAGS_NOOPT) $(INCPATH) -o $@ moc_rlayerwidget.cpp
-+.endif
  
- moc_rhatchdialog.o: moc_rhatchdialog.cpp rhatchdialog.h rcombobox.h \
- 		rgraphdef.h \
