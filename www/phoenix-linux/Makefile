@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/03/31 02:38:22 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/03/31 02:39:25 grant Exp $
 #
 
 DISTNAME=		phoenix-0.5-i686-pc-linux-gnu
@@ -9,7 +9,7 @@ MASTER_SITES=		http://ftp.mozilla.org/pub/phoenix/releases/0.5/
 
 MAINTAINER=		grant@netbsd.org
 HOMEPAGE=		http://www.mozilla.org/projects/phoenix/
-COMMENT=		Lightweight gecko-based web browser (nightly binary pkg)
+COMMENT=		Lightweight gecko-based web browser (binary pkg)
 
 ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386
 
