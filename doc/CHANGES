@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7791 2004/11/09 14:48:16 salo Exp $
+$NetBSD: CHANGES,v 1.7792 2004/11/09 14:51:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5188,3 +5188,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ruby-base to 1.6.8.nb7 [taca 2004-11-09]
 	Updated doxygen to 1.3.9.1 [adam 2004-11-09]
 	Updated ogmtools to 1.5 [salo 2004-11-09]
+	Updated gg2 to 2.2.2 [adam 2004-11-09]
