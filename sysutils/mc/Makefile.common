@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.20 2003/07/17 22:53:41 grant Exp $
+# $NetBSD: Makefile.common,v 1.21 2003/09/19 02:27:12 hubertf Exp $
 
 DISTNAME=		mc-4.5.51
 CATEGORIES+=		sysutils
 MASTER_SITES+=		${MASTER_SITE_GNOME:=stable/sources/mc/}
 
 MAINTAINER=		jlam@NetBSD.org
-HOMEPAGE=		http://www.gnome.org/mc/
+HOMEPAGE=		http://www.ibiblio.org/mc/
 
 BUILD_USES_MSGFMT=	yes
 
