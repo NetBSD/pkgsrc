@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/12/06 12:53:52 chris Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/03/28 21:05:04 atatat Exp $
 bin/imtest
 bin/installsieve
 bin/sieveshell
@@ -106,7 +106,32 @@ share/examples/cyrus-imapd/imapd.conf
 share/examples/cyrus-imapd/normal.conf
 share/examples/cyrus-imapd/prefork.conf
 share/examples/cyrus-imapd/small.conf
+share/doc/html/cyrus-imapd/man/arbitron.8.html
+share/doc/html/cyrus-imapd/man/collectnews.8.html
+share/doc/html/cyrus-imapd/man/ctl_deliver.8.html
+share/doc/html/cyrus-imapd/man/ctl_mboxlist.8.html
+share/doc/html/cyrus-imapd/man/cyrus.conf.5.html
+share/doc/html/cyrus-imapd/man/deliver.8.html
+share/doc/html/cyrus-imapd/man/fud.8.html
+share/doc/html/cyrus-imapd/man/idled.8.html
+share/doc/html/cyrus-imapd/man/imapd.8.html
+share/doc/html/cyrus-imapd/man/imapd.conf.5.html
+share/doc/html/cyrus-imapd/man/imclient.3.html
+share/doc/html/cyrus-imapd/man/imtest.1.html
+share/doc/html/cyrus-imapd/man/installsieve.1.html
+share/doc/html/cyrus-imapd/man/ipurge.8.html
+share/doc/html/cyrus-imapd/man/krb.equiv.5.html
+share/doc/html/cyrus-imapd/man/lmtpd.8.html
+share/doc/html/cyrus-imapd/man/master.8.html
+share/doc/html/cyrus-imapd/man/mbpath.8.html
+share/doc/html/cyrus-imapd/man/pop3d.8.html
+share/doc/html/cyrus-imapd/man/quota.8.html
+share/doc/html/cyrus-imapd/man/reconstruct.8.html
+share/doc/html/cyrus-imapd/man/rmnews.8.html
+share/doc/html/cyrus-imapd/man/syncnews.8.html
+share/doc/html/cyrus-imapd/man/timsieved.8.html
 @dirrm share/examples/cyrus-imapd
+@dirrm share/doc/html/cyrus-imapd/man
 @dirrm share/doc/html/cyrus-imapd
 @dirrm include/cyrus
 @dirrm cyrus/bin
