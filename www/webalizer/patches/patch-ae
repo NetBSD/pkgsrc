@@ -1,0 +1,42 @@
+$NetBSD: patch-ae,v 1.1 1999/08/27 09:07:48 agc Exp $
+
+Use the correct gd calls - use PNG, not GIF
+
+--- graphs.c	1999/08/27 08:45:49	1.1
++++ graphs.c	1999/08/27 08:47:58
+@@ -285,7 +285,7 @@
+    /* save gif image */
+    if ((out = fopen(fname, "wb")) != NULL)
+    {
+-      gdImageGif(im, out);
++      gdImagePng(im, out);
+       fclose(out);
+    }
+    /* deallocate memory */
+@@ -501,7 +501,7 @@
+    /* open file for writing */
+    if ((out = fopen(fname, "wb")) != NULL)
+    {
+-      gdImageGif(im, out);
++      gdImagePng(im, out);
+       fclose(out);
+    }
+    /* deallocate memory */
+@@ -614,7 +614,7 @@
+    /* save as gif file */
+    if ( (out = fopen(fname, "wb")) != NULL)
+    {
+-      gdImageGif(im, out);
++      gdImagePng(im, out);
+       fclose(out);
+    }
+    /* deallocate memory */
+@@ -700,7 +700,7 @@
+    /* save gif image */
+    if ((out = fopen(fname, "wb")) != NULL)
+    {
+-      gdImageGif(im, out);
++      gdImagePng(im, out);
+       fclose(out);
+    }
+    /* deallocate memory */
