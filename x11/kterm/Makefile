@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/08/23 23:14:34 tron Exp $
+# $NetBSD: Makefile,v 1.7 2000/09/11 03:53:04 fredb Exp $
 
 DISTNAME=	kterm-6.2.0
 CATEGORIES=	x11
@@ -23,7 +23,6 @@ BUILD_DEFS+=	KTERM_USE_WALLPAPER
 XAW_TYPE?=	standard
 
 .if defined(KTERM_USE_WALLPAPER) && ${KTERM_USE_WALLPAPER} == YES
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
 PATCH_SITES+=	http://delegate.uec.ac.jp:8081/club/mma/%7Etakkun/fun/handling/
 PATCHFILES+=	KTerm-BGP-1.0.patch.gz
 .endif
