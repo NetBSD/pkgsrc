@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/12/11 23:20:48 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2001/02/17 18:38:33 wiz Exp $
 
 DISTNAME=		vice-1.5
 CATEGORIES=		emulators
@@ -11,6 +11,7 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.cs.cmu.edu/~dsladic/vice/vice.html
+COMMENT=		Emulator for C64, C128, CBM-II, PET, and VIC20
 
 RESTRICTED=		"ROM image copyright is questionable"
 NO_BIN_ON_CDROM=	${RESTRICTED}

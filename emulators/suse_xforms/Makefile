@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/12/17 13:05:45 tron Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/17 18:38:31 wiz Exp $
 
 DISTNAME=		xforms
 PKGNAME=		suse_xforms-${SUSE_VERSION}
@@ -8,6 +8,7 @@ EXTRACT_SUFX=		.rpm
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.suse.com/
+COMMENT=		Linux compatibility package for xforms binaries
 
 DEPENDS+=		suse_x11-${SUSE_VERSION}:../suse_x11
 

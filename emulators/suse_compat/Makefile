@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/01/25 09:19:01 tron Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/17 18:38:25 wiz Exp $
 
 DISTNAME=		compat
 PKGNAME=		suse_compat-${SUSE_VERSION}
@@ -8,6 +8,7 @@ EXTRACT_SUFX=		.rpm
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.suse.com/
+COMMENT=		Linux compatibility package with old shared libraries
 
 DEPENDS+=		suse_base>=${SUSE_VERSION}:../suse_base
 

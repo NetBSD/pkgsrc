@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/08/18 22:46:33 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/17 18:38:17 wiz Exp $
 #
 
 DISTNAME=		freebsd_lib-2.2.7
@@ -6,6 +6,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		http://www.flame.org/NetBSD/
 
 MAINTAINER=		packages@netbsd.org
+COMMENT=		libraries necessary for FreeBSD compatibility, including XFree86
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
