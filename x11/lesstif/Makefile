@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2001/07/02 19:58:29 jlam Exp $
+# $NetBSD: Makefile,v 1.57 2001/08/08 07:37:51 jlam Exp $
 
 .include "../../x11/lesstif/Makefile.common"
 
@@ -13,6 +13,8 @@ DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
 
 FILES_SUBST=		LOCALBASE=${LOCALBASE}
+FILES_SUBST+=		CP=${CP:Q}
+FILES_SUBST+=		GREP=${GREP:Q}
 FILES_SUBST+=		LN=${LN:Q}
 FILES_SUBST+=		RM=${RM:Q}
 FILES_SUBST+=		RMDIR=${RMDIR:Q}
