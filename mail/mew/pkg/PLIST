@@ -1,14 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/06 02:58:49 jun Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/02/07 04:08:44 jun Exp $
 bin/mewencode
 bin/mewdecode
 bin/mewcat
 bin/mewls
-@unexec install-info --delete
-info/mew.info-3
-info/mew.info-2
-info/mew.info-1
-info/mew.info
-@exec install-info
 share/emacs/site-lisp/mew/mew-addrbook.el
 share/emacs/site-lisp/mew/mew-thread.el
 share/emacs/site-lisp/mew/mew-key.el
