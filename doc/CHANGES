@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3394 2003/09/16 09:25:46 agc Exp $
+$NetBSD: CHANGES,v 1.3395 2003/09/16 10:04:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3712,3 +3712,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated tsclient to 0.124 [xtraeme 2003-09-16]
 	Updated audit-packages to 1.23 [agc 2003-09-16]
 	Updated jwhois to 3.2.2 [agc 2003-09-16]
+	Added libspectrum-0.2.0 [adam 2003-09-16]
+	Added fuse-0.6.1 [adam 2003-09-16]
+	Added fuse-utils-0.6.1 [adam 2003-09-16]
