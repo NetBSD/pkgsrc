@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2001/02/17 17:06:30 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2001/04/07 19:34:31 rh Exp $
 
-DISTNAME=		gtkglarea-1.2.1
+DISTNAME=		gtkglarea-1.2.2
 CATEGORIES=		x11 graphics
 MASTER_SITES=		http://www.student.oulu.fi/~jlof/gtkglarea/download/
 
@@ -10,12 +10,12 @@ COMMENT=		OpenGL/Mesa widget for GTK+ GUI toolkit
 
 DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 
-USE_X11BASE=		# defined
-USE_MESA=		# defined
-USE_LIBTOOL=		# defined
+USE_X11BASE=		YES
+USE_MESA=		YES
+USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		YES
 EVAL_PREFIX+=		GTKDIR=gtk+ MESADIR=Mesa
 CONFIGURE_ARGS+=	--with-gtk-prefix="${GTKDIR}"
 CONFIGURE_ARGS+=	--with-GL-prefix=${MESADIR}
