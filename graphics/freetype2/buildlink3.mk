@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2004/01/24 01:46:16 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2004/01/24 03:12:32 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 FREETYPE2_BUILDLINK3_MK:=	${FREETYPE2_BUILDLINK3_MK}+
@@ -7,7 +7,7 @@ FREETYPE2_BUILDLINK3_MK:=	${FREETYPE2_BUILDLINK3_MK}+
 
 .if !empty(FREETYPE2_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		freetype2
-BUILDLINK_DEPENDS.freetype2?=	freetype2>=2.0.1
+BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.0.1
 BUILDLINK_PKGSRCDIR.freetype2?=	../../graphics/freetype2
 BUILDLINK_INCDIRS.freetype2?=	include/freetype2
 .endif	# FREETYPE2_BUILDLINK3_MK
@@ -53,13 +53,17 @@ _FREETYPE2_PATCH!=	\
 	${AWK} 'BEGIN { patch=0; } /\#define[ 	]*FREETYPE_PATCH/ { patch=$$3; } END { print "."patch; }' ${_FREETYPE2_FREETYPE_H}
 _FREETYPE2_VERSION=	${_FREETYPE2_MAJOR}${_FREETYPE2_MINOR}${_FREETYPE2_PATCH}
 _FREETYPE2_PKG=		freetype2-${_FREETYPE2_VERSION}
-_FREETYPE2_DEPENDS=	${BUILDLINK_DEPENDS.freetype2}
+BUILDLINK_USE_BUILTIN.freetype2?=	YES
+.    for _depend_ in ${BUILDLINK_DEPENDS.freetype2}
+.      if !empty(BUILDLINK_USE_BUILTIN.freetype2:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.freetype2!=	\
-	if ${PKG_ADMIN} pmatch '${_FREETYPE2_DEPENDS}' ${_FREETYPE2_PKG}; then \
+	if ${PKG_ADMIN} pmatch '${_depend_}' ${_FREETYPE2_PKG}; then	\
 		${ECHO} "YES";						\
 	else								\
 		${ECHO} "NO";						\
 	fi
+.      endif
+.    endfor
 .  endif
 MAKEFLAGS+=	\
 	BUILDLINK_USE_BUILTIN.freetype2="${BUILDLINK_USE_BUILTIN.freetype2}"
@@ -70,7 +74,7 @@ MAKEFLAGS+=	\
 # If we depend on the package, depend on the latest version with a library
 # major number bump.
 #
-BUILDLINK_DEPENDS.freetype2=	freetype2>=2.1.3
+BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.3
 .  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=		freetype2
 .  endif
@@ -86,4 +90,4 @@ FREETYPE_CONFIG?=	${BUILDLINK_PREFIX.freetype2}/bin/freetype-config
 CONFIGURE_ENV+=		FREETYPE_CONFIG="${FREETYPE_CONFIG}"
 .endif	# FREETYPE2_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

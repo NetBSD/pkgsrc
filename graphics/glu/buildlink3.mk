@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2004/01/24 01:53:00 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2004/01/24 03:12:32 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GLU_BUILDLINK3_MK:=	${GLU_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ GLU_BUILDLINK3_MK:=	${GLU_BUILDLINK3_MK}+
 MESA_REQD?=		3.4.2
 
 BUILDLINK_PACKAGES+=		glu
-BUILDLINK_DEPENDS.glu?=		glu>=${MESA_REQD}
+BUILDLINK_DEPENDS.glu+=		glu>=${MESA_REQD}
 BUILDLINK_PKGSRCDIR.glu?=	../../graphics/glu
 .endif	# GLU_BUILDLINK3_MK
 
@@ -47,13 +47,17 @@ BUILDLINK_USE_BUILTIN.glu=	NO
 #
 .    include "../../graphics/Mesa/version.mk"
 _GLU_PKG=	glu-${_MESA_VERSION}
-_GLU_DEPENDS=	${BUILDLINK_DEPENDS.glu}
+BUILDLINK_USE_BUILTIN.glu?=	YES
+.    for _depend_ in ${BUILDLINK_DEPENDS.glu}
+.      if !empty(BUILDLINK_USE_BUILTIN.glu:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.glu!=	\
-	if ${PKG_ADMIN} pmatch '${_GLU_DEPENDS}' ${_GLU_PKG}; then \
+	if ${PKG_ADMIN} pmatch '${_depend_}' ${_GLU_PKG}; then		\
 		${ECHO} "YES";						\
 	else								\
 		${ECHO} "NO";						\
 	fi
+.      endif
+.    endfor
 .  endif
 MAKEFLAGS+=	BUILDLINK_USE_BUILTIN.glu="${BUILDLINK_USE_BUILTIN.glu}"
 .endif	# BUILDLINK_USE_BUILTIN.glu
@@ -63,7 +67,7 @@ MAKEFLAGS+=	BUILDLINK_USE_BUILTIN.glu="${BUILDLINK_USE_BUILTIN.glu}"
 # If we depend on the package, depend on the latest version with a library
 # major number bump.
 #
-BUILDLINK_DEPENDS.glu=	glu>=5.0.2nb3
+BUILDLINK_DEPENDS.glu+=	glu>=5.0.2nb3
 .  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	glu
 .  endif

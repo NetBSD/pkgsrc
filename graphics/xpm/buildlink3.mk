@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2004/01/24 01:51:07 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2004/01/24 03:12:32 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XPM_BUILDLINK3_MK:=	${XPM_BUILDLINK3_MK}+
@@ -7,7 +7,7 @@ XPM_BUILDLINK3_MK:=	${XPM_BUILDLINK3_MK}+
 
 .if !empty(XPM_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		xpm
-BUILDLINK_DEPENDS.xpm?=		xpm>=3.4k
+BUILDLINK_DEPENDS.xpm+=		xpm>=3.4k
 BUILDLINK_PKGSRCDIR.xpm?=	../../graphics/xpm
 .endif	# XPM_BUILDLINK3_MK
 
@@ -64,13 +64,17 @@ _XPM_PATCH!=	\
 	${AWK} 'BEGIN { split("abcdefghijklmnopqrstuvwxyz", alpha, "") } /\#define[ 	]*XpmRevision/ { print alpha[$$3] }' ${_X11_XPM_H}
 _XPM_VERSION=	${_XPM_MAJOR}${_XPM_MINOR}${_XPM_PATCH}
 _XPM_PKG=	xpm-${_XPM_VERSION}
-_XPM_DEPENDS=	${BUILDLINK_DEPENDS.xpm}
+BUILDLINK_USE_BUILTIN.xpm?=	YES
+.    for _depend_ in ${BUILDLINK_DEPENDS.xpm}
+.      if !empty(BUILDLINK_USE_BUILTIN.xpm:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.xpm!=	\
-	if ${PKG_ADMIN} pmatch '${_XPM_DEPENDS}' ${_XPM_PKG}; then	\
+	if ${PKG_ADMIN} pmatch '${_depend_}' ${_XPM_PKG}; then		\
 		${ECHO} "YES";						\
 	else								\
 		${ECHO} "NO";						\
 	fi
+.      endif
+.    endfor
 .  endif
 MAKEFLAGS+=	BUILDLINK_USE_BUILTIN.xpm="${BUILDLINK_USE_BUILTIN.xpm}"
 .endif	# BUILDLINK_USE_BUILTIN.xpm

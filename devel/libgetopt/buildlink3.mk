@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/01/05 11:05:45 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/01/24 03:12:32 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GETOPT_BUILDLINK3_MK:=	${GETOPT_BUILDLINK3_MK}+
 
 .if !empty(GETOPT_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		getopt
-BUILDLINK_DEPENDS.getopt?=	libgetopt>=1.3
+BUILDLINK_DEPENDS.getopt+=	libgetopt>=1.3
 BUILDLINK_PKGSRCDIR.getopt?=	../../devel/libgetopt
 .endif	# GETOPT_BUILDLINK3_MK
 

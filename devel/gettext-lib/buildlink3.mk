@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2004/01/11 06:29:38 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2004/01/24 03:12:32 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GETTEXT_BUILDLINK3_MK:=	${GETTEXT_BUILDLINK3_MK}+
@@ -7,7 +7,7 @@ GETTEXT_BUILDLINK3_MK:=	${GETTEXT_BUILDLINK3_MK}+
 
 .if !empty(GETTEXT_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		gettext
-BUILDLINK_DEPENDS.gettext?=	gettext-lib>=0.10.35nb1
+BUILDLINK_DEPENDS.gettext+=	gettext-lib>=0.10.35nb1
 BUILDLINK_PKGSRCDIR.gettext?=	../../devel/gettext-lib
 .endif	# GETTEXT_BUILDLINK3_MK
 
@@ -36,13 +36,17 @@ BUILDLINK_USE_BUILTIN.gettext=	NO
 # Consider the base system libintl to be gettext-lib-0.10.35nb1.
 #
 _GETTEXT_PKG=		gettext-lib-0.10.35nb1
-_GETTEXT_DEPENDS=	${BUILDLINK_DEPENDS.gettext}
+BUILDLINK_USE_BUILTIN.gettext?=	YES
+.    for _depend_ in ${BUILDLINK_DEPENDS.gettext}
+.      if !empty(BUILDLINK_USE_BUILTIN.gettext:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.gettext!=	\
-	if ${PKG_ADMIN} pmatch '${_GETTEXT_DEPENDS}' ${_GETTEXT_PKG}; then \
+	if ${PKG_ADMIN} pmatch '${_depend_}' ${_GETTEXT_PKG}; then	\
 		${ECHO} "YES";						\
 	else								\
 		${ECHO} "NO";						\
 	fi
+.      endif
+.    endfor
 #
 # The listed platforms have a broken (for the purposes of pkgsrc) version
 # of gettext-lib.  
@@ -70,9 +74,12 @@ BUILDLINK_DEPENDS+=	gettext
 _BLNK_LIBINTL=		-lintl
 _GETTEXT_ICONV_DEPENDS=	gettext-lib>=0.11.5nb1
 .    if !defined(_GETTEXT_NEEDS_ICONV)
+_GETTEXT_NEEDS_ICONV?=	NO
+.      for _depend_ in ${BUILDLINK_DEPENDS.gettext}
+.        if !empty(_GETTEXT_NEEDS_ICONV:M[nN][oO])
 _GETTEXT_NEEDS_ICONV!=	\
-	if ${PKG_INFO} -qe "${BUILDLINK_DEPENDS.gettext}"; then		\
-		pkg=`cd ${_PKG_DBDIR}; ${PKG_ADMIN} -S lsbest '${BUILDLINK_DEPENDS.gettext}'`; \
+	if ${PKG_INFO} -qe '${_depend_}'; then				\
+		pkg=`cd ${_PKG_DBDIR}; ${PKG_ADMIN} -S lsbest '${_depend_}'`; \
 		if ${PKG_INFO} -qN "$$pkg" | ${GREP} -q "libiconv-[0-9]"; then \
 			${ECHO} "YES";					\
 		else							\
@@ -81,11 +88,13 @@ _GETTEXT_NEEDS_ICONV!=	\
 	else								\
 		${ECHO} "YES";						\
 	fi
+.        endif
+.      endfor
 MAKEFLAGS+=	_GETTEXT_NEEDS_ICONV=${_GETTEXT_NEEDS_ICONV}
 .    endif
 .    if ${_GETTEXT_NEEDS_ICONV} == "YES"
 .      include "../../converters/libiconv/buildlink3.mk"
-BUILDLINK_DEPENDS.gettext=	${_GETTEXT_ICONV_DEPENDS}
+BUILDLINK_DEPENDS.gettext+=	${_GETTEXT_ICONV_DEPENDS}
 _BLNK_LIBINTL+=			${BUILDLINK_LDADD.iconv}
 .    endif
 .  else

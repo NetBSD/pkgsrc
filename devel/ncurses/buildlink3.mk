@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2004/01/21 04:28:06 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2004/01/24 03:12:32 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 NCURSES_BUILDLINK3_MK:=	${NCURSES_BUILDLINK3_MK}+
@@ -7,7 +7,7 @@ NCURSES_BUILDLINK3_MK:=	${NCURSES_BUILDLINK3_MK}+
 
 .if !empty(NCURSES_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		ncurses
-BUILDLINK_DEPENDS.ncurses?=	ncurses>=5.0
+BUILDLINK_DEPENDS.ncurses+=	ncurses>=5.0
 BUILDLINK_PKGSRCDIR.ncurses?=	../../devel/ncurses
 .endif	# NCURSES_BUILDLINK3_MK
 
@@ -89,13 +89,17 @@ _NCURSES_VERSION!=							\
 		}							\
 	' ${_NCURSES_H}
 _NCURSES_PKG=		ncurses-${_NCURSES_VERSION}
-_NCURSES_DEPENDS=	${BUILDLINK_DEPENDS.ncurses}
+BUILDLINK_USE_BUILTIN.ncurses?=	YES
+.    for _depend_ in ${BUILDLINK_DEPENDS.ncurses}
+.      if !empty(BUILDLINK_USE_BUILTIN.ncurses:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.ncurses!=						\
-	if ${PKG_ADMIN} pmatch '${_NCURSES_DEPENDS}' ${_NCURSES_PKG}; then \
+	if ${PKG_ADMIN} pmatch '${_depend_}' ${_NCURSES_PKG}; then	\
 		${ECHO} "YES";						\
 	else								\
 		${ECHO} "NO";						\
 	fi
+.      endif
+.    endfor
 .  endif
 MAKEFLAGS+=	\
 	BUILDLINK_USE_BUILTIN.ncurses="${BUILDLINK_USE_BUILTIN.ncurses}"
