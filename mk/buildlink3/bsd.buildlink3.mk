@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.162 2004/11/17 19:40:35 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.163 2004/11/17 21:01:00 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -261,13 +261,14 @@ ${_depmethod_}+=	${_BLNK_ADD_TO.${_depmethod_}}
 #				compiler/linker so that building against
 #				<pkg> will work.
 #
-# BUILDLINK_AUTO_LIBS.<pkg>	"yes" or "no" for whether BUILDLINK_LIBS.<pkg>
-#				should automatically be appended to the LIBS
-#				variable.  Defaults to "yes".
-#
 # BUILDLINK_LIBS.<pkg>		contain -l... (library) options that can be
 #				automatically appended to the LIBS
 #				variable when building against <pkg>.
+#
+# BUILDLINK_AUTO_VARS.<pkg>	"yes" or "no" for whether BUILDLINK_{CFLAGS,
+#				CPPFLAGS,LDFLAGS,LIBS}.<pkg> should
+#				automatically be appended their respective
+#				variables.  Defaults to "yes".
 #
 # BUILDLINK_INCDIRS.<pkg>,
 # BUILDLINK_LIBDIRS.<pkg>,
@@ -348,10 +349,10 @@ WRAPPER_VARS+=	BUILDLINK_PREFIX.${_pkg_}
 .    endif
 .  endif
 
+BUILDLINK_AUTO_VARS.${_pkg_}?=	yes
 BUILDLINK_CPPFLAGS.${_pkg_}?=	# empty
 BUILDLINK_LDFLAGS.${_pkg_}?=	# empty
 BUILDLINK_LIBS.${_pkg_}?=	# empty
-BUILDLINK_AUTO_LIBS.${_pkg_}?=	yes
 BUILDLINK_INCDIRS.${_pkg_}?=	include
 BUILDLINK_LIBDIRS.${_pkg_}?=	lib${LIBABISUFFIX}
 .  if !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mfull)
@@ -373,22 +374,22 @@ BUILDLINK_LIBS=		# empty
 BUILDLINK_CFLAGS=	# empty
 
 .for _pkg_ in ${_BLNK_PACKAGES}
-.  for _flag_ in ${BUILDLINK_CPPFLAGS.${_pkg_}}
-.    if empty(BUILDLINK_CPPFLAGS:M${_flag_})
+.  if !empty(BUILDLINK_AUTO_VARS.${_pkg_}:M[yY][eE][sS])
+.    for _flag_ in ${BUILDLINK_CPPFLAGS.${_pkg_}}
+.      if empty(BUILDLINK_CPPFLAGS:M${_flag_})
 BUILDLINK_CPPFLAGS+=	${_flag_}
-.    endif
-.  endfor
-.  for _flag_ in ${BUILDLINK_LDFLAGS.${_pkg_}}
-.    if empty(BUILDLINK_LDFLAGS:M${_flag_})
+.      endif
+.    endfor
+.    for _flag_ in ${BUILDLINK_LDFLAGS.${_pkg_}}
+.      if empty(BUILDLINK_LDFLAGS:M${_flag_})
 BUILDLINK_LDFLAGS+=	${_flag_}
-.    endif
-.  endfor
-.  for _flag_ in ${BUILDLINK_CFLAGS.${_pkg_}}
-.    if empty(BUILDLINK_CFLAGS:M${_flag_})
+.      endif
+.    endfor
+.    for _flag_ in ${BUILDLINK_CFLAGS.${_pkg_}}
+.      if empty(BUILDLINK_CFLAGS:M${_flag_})
 BUILDLINK_CFLAGS+=	${_flag_}
-.    endif
-.  endfor
-.  if !empty(BUILDLINK_AUTO_LIBS.${_pkg_}:M[yY][eE][sS])
+.      endif
+.    endfor
 .    for _flag_ in ${BUILDLINK_LIBS.${_pkg_}}
 .      if empty(BUILDLINK_LIBS:M${_flag_})
 BUILDLINK_LIBS+=	${_flag_}
