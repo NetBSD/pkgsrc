@@ -1,4 +1,4 @@
-# $NetBSD: defs.Interix.mk,v 1.19 2004/04/27 12:05:16 tv Exp $
+# $NetBSD: defs.Interix.mk,v 1.20 2004/04/28 11:11:19 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -153,6 +153,12 @@ SERIAL_DEVICES?=	/dev/tty00 /dev/tty01 /dev/tty02 /dev/tty03
 # Interix needs -D_ALL_SOURCE everywhere; little compiles without it.
 .if ${CPPFLAGS:M-D_ALL_SOURCE} == ""
 CPPFLAGS+=		-D_ALL_SOURCE
+.endif
+
+# poll(2) is broken; try to work around it by making autoconf believe
+# it's missing.  (Packages without autoconf will need explicit fixing.)
+.ifdef GNU_CONFIGURE
+CONFIGURE_ENV+=		ac_cv_header_poll_h=no ac_cv_func_poll=no
 .endif
 
 # Interix gcc "PIC" is broken, but non-"PIC" is shlib linkable.
