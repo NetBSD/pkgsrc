@@ -1,16 +1,14 @@
-$NetBSD: patch-au,v 1.1.1.1 2005/02/25 15:54:59 is Exp $
+$NetBSD: patch-au,v 1.2 2005/03/01 10:00:47 is Exp $
 
---- csw/netbsd.c.orig	2004-11-03 23:04:48.000000000 +0100
+--- csw/netbsd.c.orig	2005-03-01 09:35:06.000000000 +0000
 +++ csw/netbsd.c
-@@ -0,0 +1,118 @@
+@@ -0,0 +1,116 @@
 +/*
 + *  netbsd.c -- context switch code for NetBSD 2.
 + *
 + *  Some Makefile changes are needed to use this code.
 + */
 +
-+#include <stdio.h>
-+#include <stdlib.h>
 +#include <ucontext.h>
 +
 +static void startup();
