@@ -1,17 +1,15 @@
-$NetBSD: patch-aa,v 1.4 2003/07/12 01:11:00 zuntum Exp $
+$NetBSD: patch-aa,v 1.5 2003/09/06 04:56:29 itojun Exp $
 
---- Makefile.orig	Fri Feb  7 04:30:54 2003
-+++ Makefile
-@@ -4,12 +4,10 @@
- # (C) Copyright 2001 by William Stearns <wstearns@pobox.com>
+--- mk/NetBSD-	2003-09-06 13:52:37.000000000 +0900
++++ mk/NetBSD	2003-09-06 13:52:52.000000000 +0900
+@@ -7,10 +7,8 @@
+ # (C) Copyright 2000-2003 by Michal Zalewski <lcamtuf@coredump.cx>
  #
  
 -CC      = gcc
- CLIBS	= -lpcap -I/usr/include/pcap
- MYSQLCLIBS	= -L/usr/local/mysql/lib -lmysqlclient -lpcap -I/usr/include/pcap -I/usr/local/mysql/include
- SUNLIBS	= -lsocket -lnsl -D_SUN_=1
- STRIP	= strip
--CFLAGS  = -O3 -Wall
+ LIBS	= -lpcap -I/usr/include/pcap -I/usr/local/include/pcap
+ STRIP   = strip
+-CFLAGS  = -O3 -Wall -fomit-frame-pointer -funroll-loops
  FILE	= p0f
- VERSION = 1.8.3
  
+ all: $(FILE) strip	
