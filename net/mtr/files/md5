@@ -1,4 +1,3 @@
-$NetBSD: md5,v 1.3 2000/01/28 14:16:26 sommerfeld Exp $
+$NetBSD: md5,v 1.4 2000/03/17 14:22:49 tron Exp $
 
-MD5 (mtr-0.41.tar.gz) = fd081c7c27fedfcf9de0dc04e632475b
-MD5 (mtr-041-v6-20000127a.diff.gz) = eb97821fb9307bf6dffb0610d37ab1bf
+MD5 (mtr-0.42.tar.gz) = cb4da4e6dbc0b527b7fc2a7199c51c3b
