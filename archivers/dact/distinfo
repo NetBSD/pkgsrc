@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2004/05/10 18:04:02 minskim Exp $
+$NetBSD: distinfo,v 1.4 2005/01/21 02:48:21 tv Exp $
 
 SHA1 (dact-0.8.3.tar.gz) = 850aec889be4174e9f42a3314bf29b1fc5181090
 Size (dact-0.8.3.tar.gz) = 84301 bytes
-SHA1 (patch-aa) = 263234ba4fa0034ee19dc5449213705841b72e68
+SHA1 (patch-aa) = f0040ac3f13305a33943407759d52454dd6d7d37
