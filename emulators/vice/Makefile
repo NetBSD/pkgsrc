@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2004/05/25 21:51:42 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2004/05/25 21:53:11 wiz Exp $
 #
 
 DISTNAME=		vice-1.14
@@ -28,6 +28,8 @@ GNU_CONFIGURE=		YES
 USE_GCC_SHLIB=		YES
 
 INFO_FILES=		vice.info
+
+BUILD_DEFS+=		VICE_USE_FFMPEG
 
 .include "../../mk/bsd.prefs.mk"
 
