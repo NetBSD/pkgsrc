@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.4 2001/07/13 06:16:02 jlam Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.5 2001/07/15 12:40:03 jlam Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -16,7 +16,7 @@ DIRNAME?=	/usr/bin/dirname
 ECHO?=		echo				# Shell builtin
 EGREP?=		/usr/bin/egrep
 FALSE?=		false				# Shell builtin
-FILE?=		/usr/bin/file
+FILE_CMD?=	/usr/bin/file
 FIND?=		/usr/bin/find
 GREP?=		/usr/bin/grep
 GTAR?=		/usr/bin/tar
