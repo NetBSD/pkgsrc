@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:59:17 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/26 09:41:43 martti Exp $
+bin/genpref
+bin/icehelp
+bin/icesh
 bin/icewm
-bin/icewmhint
 bin/icewmbg
+bin/icewmhint
 lib/X11/icewm/icons/app_16x16.xpm
 lib/X11/icewm/icons/app_32x32.xpm
 lib/X11/icewm/icons/bomb_16x16.xpm
@@ -26,8 +29,10 @@ lib/X11/icewm/icons/gimp_16x16.xpm
 lib/X11/icewm/icons/gimp_32x32.xpm
 lib/X11/icewm/icons/gimp_hi_16x16.xpm
 lib/X11/icewm/icons/gimp_hi_32x32.xpm
+lib/X11/icewm/icons/gnome_16x16.xpm
 lib/X11/icewm/icons/java_16x16.xpm
 lib/X11/icewm/icons/java_32x32.xpm
+lib/X11/icewm/icons/kde_16x16.xpm
 lib/X11/icewm/icons/koules_16x16.xpm
 lib/X11/icewm/icons/koules_32x32.xpm
 lib/X11/icewm/icons/navigator_16x16.xpm
@@ -74,6 +79,7 @@ lib/X11/icewm/menu
 lib/X11/icewm/preferences
 lib/X11/icewm/taskbar/bsd-daemon.xpm
 lib/X11/icewm/taskbar/debian.xpm
+lib/X11/icewm/taskbar/icewm.xpm
 lib/X11/icewm/taskbar/linux.xpm
 lib/X11/icewm/taskbar/linux1.xpm
 lib/X11/icewm/taskbar/linux2.xpm
@@ -81,6 +87,66 @@ lib/X11/icewm/taskbar/linux20.xpm
 lib/X11/icewm/taskbar/start.xpm
 lib/X11/icewm/taskbar/windows.xpm
 lib/X11/icewm/taskbar/xfreeos2.xpm
+lib/X11/icewm/themes/Infadel2/Ergonomic.theme
+lib/X11/icewm/themes/Infadel2/Overloaded.theme
+lib/X11/icewm/themes/Infadel2/closeA.xpm
+lib/X11/icewm/themes/Infadel2/closeI.xpm
+lib/X11/icewm/themes/Infadel2/cursors/left.xpm
+lib/X11/icewm/themes/Infadel2/cursors/move.xpm
+lib/X11/icewm/themes/Infadel2/cursors/right.xpm
+lib/X11/icewm/themes/Infadel2/cursors/sizeB.xpm
+lib/X11/icewm/themes/Infadel2/cursors/sizeBL.xpm
+lib/X11/icewm/themes/Infadel2/cursors/sizeBR.xpm
+lib/X11/icewm/themes/Infadel2/cursors/sizeL.xpm
+lib/X11/icewm/themes/Infadel2/cursors/sizeR.xpm
+lib/X11/icewm/themes/Infadel2/cursors/sizeT.xpm
+lib/X11/icewm/themes/Infadel2/cursors/sizeTL.xpm
+lib/X11/icewm/themes/Infadel2/cursors/sizeTR.xpm
+lib/X11/icewm/themes/Infadel2/default.theme
+lib/X11/icewm/themes/Infadel2/depthA.xpm
+lib/X11/icewm/themes/Infadel2/depthI.xpm
+lib/X11/icewm/themes/Infadel2/fonts.dir
+lib/X11/icewm/themes/Infadel2/hideA.xpm
+lib/X11/icewm/themes/Infadel2/hideI.xpm
+lib/X11/icewm/themes/Infadel2/icons/app_16x16.xpm
+lib/X11/icewm/themes/Infadel2/icons/folder_16x16.xpm
+lib/X11/icewm/themes/Infadel2/icons/folder_32x32.xpm
+lib/X11/icewm/themes/Infadel2/mailbox/errmail.xpm
+lib/X11/icewm/themes/Infadel2/mailbox/mail.xpm
+lib/X11/icewm/themes/Infadel2/mailbox/newmail.xpm
+lib/X11/icewm/themes/Infadel2/mailbox/nomail.xpm
+lib/X11/icewm/themes/Infadel2/mailbox/unreadmail.xpm
+lib/X11/icewm/themes/Infadel2/maximizeA.xpm
+lib/X11/icewm/themes/Infadel2/maximizeI.xpm
+lib/X11/icewm/themes/Infadel2/menuButtonA.xpm
+lib/X11/icewm/themes/Infadel2/menuButtonI.xpm
+lib/X11/icewm/themes/Infadel2/minimizeA.xpm
+lib/X11/icewm/themes/Infadel2/minimizeI.xpm
+lib/X11/icewm/themes/Infadel2/restoreA.xpm
+lib/X11/icewm/themes/Infadel2/restoreI.xpm
+lib/X11/icewm/themes/Infadel2/rolldownA.xpm
+lib/X11/icewm/themes/Infadel2/rolldownI.xpm
+lib/X11/icewm/themes/Infadel2/rollupA.xpm
+lib/X11/icewm/themes/Infadel2/rollupI.xpm
+lib/X11/icewm/themes/Infadel2/snap.pcf
+lib/X11/icewm/themes/Infadel2/taskbar/linux.xpm
+lib/X11/icewm/themes/Infadel2/taskbar/windows.xpm
+lib/X11/icewm/themes/Infadel2/titleAB.xpm
+lib/X11/icewm/themes/Infadel2/titleAJ.xpm
+lib/X11/icewm/themes/Infadel2/titleAM.xpm
+lib/X11/icewm/themes/Infadel2/titleAP.xpm
+lib/X11/icewm/themes/Infadel2/titleAQ.xpm
+lib/X11/icewm/themes/Infadel2/titleAR.xpm
+lib/X11/icewm/themes/Infadel2/titleAS.xpm
+lib/X11/icewm/themes/Infadel2/titleAT.xpm
+lib/X11/icewm/themes/Infadel2/titleIB.xpm
+lib/X11/icewm/themes/Infadel2/titleIJ.xpm
+lib/X11/icewm/themes/Infadel2/titleIM.xpm
+lib/X11/icewm/themes/Infadel2/titleIP.xpm
+lib/X11/icewm/themes/Infadel2/titleIQ.xpm
+lib/X11/icewm/themes/Infadel2/titleIR.xpm
+lib/X11/icewm/themes/Infadel2/titleIS.xpm
+lib/X11/icewm/themes/Infadel2/titleIT.xpm
 lib/X11/icewm/themes/gtk2/closeA.xpm
 lib/X11/icewm/themes/gtk2/closeI.xpm
 lib/X11/icewm/themes/gtk2/default.theme
@@ -200,6 +266,7 @@ share/doc/html/icewm/icewm-12.html
 share/doc/html/icewm/icewm-13.html
 share/doc/html/icewm/icewm-14.html
 share/doc/html/icewm/icewm-15.html
+share/doc/html/icewm/icewm-16.html
 share/doc/html/icewm/icewm-2.html
 share/doc/html/icewm/icewm-3.html
 share/doc/html/icewm/icewm-4.html
@@ -215,8 +282,32 @@ share/doc/icewm/COPYING
 share/doc/icewm/FAQ
 share/doc/icewm/README
 share/doc/icewm/TODO
-@dirrm share/doc/icewm
-@dirrm share/doc/html/icewm
+share/locale/ca/LC_MESSAGES/icewm.mo
+share/locale/de/LC_MESSAGES/icewm.mo
+share/locale/en/LC_MESSAGES/icewm.mo
+share/locale/es/LC_MESSAGES/icewm.mo
+share/locale/fi/LC_MESSAGES/icewm.mo
+share/locale/fr/LC_MESSAGES/icewm.mo
+share/locale/hr/LC_MESSAGES/icewm.mo
+share/locale/hu/LC_MESSAGES/icewm.mo
+share/locale/it/LC_MESSAGES/icewm.mo
+share/locale/ja/LC_MESSAGES/icewm.mo
+share/locale/lt/LC_MESSAGES/icewm.mo
+share/locale/pl/LC_MESSAGES/icewm.mo
+share/locale/pt_BR/LC_MESSAGES/icewm.mo
+share/locale/ro/LC_MESSAGES/icewm.mo
+share/locale/ru/LC_MESSAGES/icewm.mo
+share/locale/zh_TW.Big5/LC_MESSAGES/icewm.mo
+@dirrm etc/X11/icewm
+@dirrm lib/X11/icewm/icons
+@dirrm lib/X11/icewm/ledclock
+@dirrm lib/X11/icewm/mailbox
+@dirrm lib/X11/icewm/taskbar
+@dirrm lib/X11/icewm/themes/Infadel2/taskbar
+@dirrm lib/X11/icewm/themes/Infadel2/mailbox
+@dirrm lib/X11/icewm/themes/Infadel2/icons
+@dirrm lib/X11/icewm/themes/Infadel2/cursors
+@dirrm lib/X11/icewm/themes/Infadel2
 @dirrm lib/X11/icewm/themes/win95
 @dirrm lib/X11/icewm/themes/warp4
 @dirrm lib/X11/icewm/themes/warp3
@@ -225,8 +316,6 @@ share/doc/icewm/TODO
 @dirrm lib/X11/icewm/themes/metal2
 @dirrm lib/X11/icewm/themes/gtk2
 @dirrm lib/X11/icewm/themes
-@dirrm lib/X11/icewm/taskbar
-@dirrm lib/X11/icewm/mailbox
-@dirrm lib/X11/icewm/ledclock
-@dirrm lib/X11/icewm/icons
 @dirrm lib/X11/icewm
+@dirrm share/doc/html/icewm
+@dirrm share/doc/icewm
