@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/04/22 23:52:19 minskim Exp $
+# $NetBSD: Makefile,v 1.37 2004/05/15 06:03:11 grant Exp $
 
 DISTNAME=       xpm-3.4k
 PKGREVISION=	1
@@ -19,10 +19,10 @@ CHECK_BUILTIN.xpm=	yes
 .include "builtin.mk"
 
 .if !empty(IS_BUILTIN.xpm:M[yY][eE][sS])
-PKG_SKIP_REASON= "${PKGNAME} is part of your X11 distribution"
+PKG_SKIP_REASON= "${PKGBASE} is part of your X11 distribution"
 .endif
 
-.if (${OPSYS} == SunOS)
+.if ${OPSYS} == "SunOS"
 post-install:
 	cd ${PREFIX}/lib && \
 	${RM} -f libXpm.so.4 && \
