@@ -1,28 +1,14 @@
-@comment $NetBSD: PLIST,v 1.8 2004/02/16 15:06:19 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/09/22 08:09:28 jlam Exp $
 bin/mrproject
 bin/mrproject-engine
 bin/run-mrproject
-lib/mrproject/components/libcalendar-component.a
 lib/mrproject/components/libcalendar-component.la
-lib/mrproject/components/libcalendar-component.so
-lib/mrproject/components/libgantt-component.a
 lib/mrproject/components/libgantt-component.la
-lib/mrproject/components/libgantt-component.so
-lib/mrproject/components/libmpx-file-filter.a
 lib/mrproject/components/libmpx-file-filter.la
-lib/mrproject/components/libmpx-file-filter.so
-lib/mrproject/components/libnetwork-component.a
 lib/mrproject/components/libnetwork-component.la
-lib/mrproject/components/libnetwork-component.so
-lib/mrproject/components/libresource-component.a
 lib/mrproject/components/libresource-component.la
-lib/mrproject/components/libresource-component.so
-lib/mrproject/components/libtask-dialog-component.a
 lib/mrproject/components/libtask-dialog-component.la
-lib/mrproject/components/libtask-dialog-component.so
-lib/mrproject/components/libxml-file-filter.a
 lib/mrproject/components/libxml-file-filter.la
-lib/mrproject/components/libxml-file-filter.so
 man/man1/mrproject-engine.1
 man/man1/mrproject.1
 man/man1/run-mrproject.1

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/09/13 21:01:29 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/09/22 08:09:57 jlam Exp $
 bin/ebrowser
 bin/gnome-gtkhtml-editor-1.1
 bin/gtkhtml-properties-capplet
@@ -89,14 +89,8 @@ include/gtkhtml-1.1/gtkhtml/htmltypes.h
 include/gtkhtml-1.1/gtkhtml/htmlundo-action.h
 include/gtkhtml-1.1/gtkhtml/htmlundo.h
 include/gtkhtml-1.1/gtkhtml/htmlvspace.h
-lib/bonobo/plugin/libstorage_http.a
 lib/bonobo/plugin/libstorage_http.la
-lib/bonobo/plugin/libstorage_http.so
-lib/libgtkhtml-1.1.a
 lib/libgtkhtml-1.1.la
-lib/libgtkhtml-1.1.so
-lib/libgtkhtml-1.1.so.3
-lib/libgtkhtml-1.1.so.3.5
 lib/pkgconfig/gtkhtml-1.1.pc
 share/control-center/Documents/gtkhtml-properties.desktop
 share/gnome/apps/Settings/Documents/gtkhtml-properties.desktop

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2004/09/21 17:11:10 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.13 2004/09/22 08:09:30 jlam Exp $
 bin/gedit
 bin/gnome-text-editor
 include/gedit-2.8/gedit/bonobo-mdi-child.h
@@ -27,40 +27,20 @@ include/gedit-2.8/gedit/recent-files/egg-recent-util.h
 include/gedit-2.8/gedit/recent-files/egg-recent-view-bonobo.h
 include/gedit-2.8/gedit/recent-files/egg-recent-view-gtk.h
 include/gedit-2.8/gedit/recent-files/egg-recent-view.h
-lib/bonobo/libgedit-control.a
 lib/bonobo/libgedit-control.la
-lib/bonobo/libgedit-control.so
 lib/bonobo/servers/GNOME_Gedit.server
 lib/gedit-2/plugins/changecase.gedit-plugin
 lib/gedit-2/plugins/docinfo.gedit-plugin
 lib/gedit-2/plugins/indent.gedit-plugin
-lib/gedit-2/plugins/libchangecase.a
 lib/gedit-2/plugins/libchangecase.la
-lib/gedit-2/plugins/libchangecase.so
-lib/gedit-2/plugins/libdocinfo.a
 lib/gedit-2/plugins/libdocinfo.la
-lib/gedit-2/plugins/libdocinfo.so
-lib/gedit-2/plugins/libindent.a
 lib/gedit-2/plugins/libindent.la
-lib/gedit-2/plugins/libindent.so
-lib/gedit-2/plugins/libsample.a
 lib/gedit-2/plugins/libsample.la
-lib/gedit-2/plugins/libsample.so
-lib/gedit-2/plugins/libshell_output.a
 lib/gedit-2/plugins/libshell_output.la
-lib/gedit-2/plugins/libshell_output.so
-lib/gedit-2/plugins/libsort.a
 lib/gedit-2/plugins/libsort.la
-lib/gedit-2/plugins/libsort.so
-lib/gedit-2/plugins/libspell.a
 lib/gedit-2/plugins/libspell.la
-lib/gedit-2/plugins/libspell.so
-lib/gedit-2/plugins/libtaglist.a
 lib/gedit-2/plugins/libtaglist.la
-lib/gedit-2/plugins/libtaglist.so
-lib/gedit-2/plugins/libtime.a
 lib/gedit-2/plugins/libtime.la
-lib/gedit-2/plugins/libtime.so
 lib/gedit-2/plugins/sample.gedit-plugin
 lib/gedit-2/plugins/shell_output.gedit-plugin
 lib/gedit-2/plugins/sort.gedit-plugin

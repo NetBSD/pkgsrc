@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/14 01:16:39 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:21 jlam Exp $
 bin/fribidi
 bin/fribidi-config
 include/fribidi/fribidi.h
@@ -14,10 +14,6 @@ include/fribidi/fribidi_config.h
 include/fribidi/fribidi_mem.h
 include/fribidi/fribidi_types.h
 include/fribidi/fribidi_unicode.h
-lib/libfribidi.a
 lib/libfribidi.la
-lib/libfribidi.so
-lib/libfribidi.so.0
-lib/libfribidi.so.0.0
 lib/pkgconfig/fribidi.pc
 @dirrm include/fribidi

@@ -1,13 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/19 09:25:25 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:21 jlam Exp $
 bin/autob5
 bin/autogb
 include/hz.h
 include/zhstatis.h
-lib/libhz.a
 lib/libhz.la
-lib/libhz.so
-lib/libhz.so.0
-lib/libhz.so.0.0
 share/examples/autoconvert/procmailrc.example
 share/examples/autoconvert/shed.big5
 share/examples/autoconvert/shed.gb

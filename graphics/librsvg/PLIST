@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:51:53 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:36 jlam Exp $
 bin/librsvg-config
 include/librsvg/art_render.h
 include/librsvg/art_render_gradient.h
@@ -13,11 +13,7 @@ include/librsvg/rsvg-ft.h
 include/librsvg/rsvg-paint-server.h
 include/librsvg/rsvg-path.h
 include/librsvg/rsvg.h
-lib/librsvg.a
 lib/librsvg.la
-lib/librsvg.so
-lib/librsvg.so.1
-lib/librsvg.so.1.1
 lib/librsvgConf.sh
 lib/pkgconfig/librsvg-1.0.pc
 share/aclocal/librsvg.m4

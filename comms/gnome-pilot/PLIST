@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/05/30 16:19:52 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/09/22 08:09:20 jlam Exp $
 bin/gnome-pilot-make-password
 bin/gpilot-applet
 bin/gpilot-install-file
@@ -19,31 +19,13 @@ include/gpilotd/gnome-pilot-structures.h
 include/gpilotd/gnome-pilot.h
 include/libgpilotdCM/gnome-pilot-conduit-config.h
 include/libgpilotdCM/gnome-pilot-conduit-management.h
-lib/gnome-pilot/conduits/libbackup_conduit.a
 lib/gnome-pilot/conduits/libbackup_conduit.la
-lib/gnome-pilot/conduits/libbackup_conduit.so
-lib/gnome-pilot/conduits/libfile_conduit.a
 lib/gnome-pilot/conduits/libfile_conduit.la
-lib/gnome-pilot/conduits/libfile_conduit.so
-lib/gnome-pilot/conduits/libtest_conduit.a
 lib/gnome-pilot/conduits/libtest_conduit.la
-lib/gnome-pilot/conduits/libtest_conduit.so
 lib/gpilotConf.sh
-lib/libgpilotd.a
 lib/libgpilotd.la
-lib/libgpilotd.so
-lib/libgpilotd.so.1
-lib/libgpilotd.so.1.0
-lib/libgpilotdcm.a
 lib/libgpilotdcm.la
-lib/libgpilotdcm.so
-lib/libgpilotdcm.so.1
-lib/libgpilotdcm.so.1.0
-lib/libgpilotdconduit.a
 lib/libgpilotdconduit.la
-lib/libgpilotdconduit.so
-lib/libgpilotdconduit.so.1
-lib/libgpilotdconduit.so.1.1
 man/man1/gpilot-install-file.1
 share/applets/Utility/gpilot-applet.desktop
 share/control-center/Peripherals/gpilotd-control-applet.desktop

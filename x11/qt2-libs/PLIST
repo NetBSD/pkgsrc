@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:11:28 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:10:07 jlam Exp $
 qt2/bin/moc
 qt2/include/jri.h
 qt2/include/jritypes.h
@@ -281,11 +281,7 @@ qt2/include/qwmatrix.h
 qt2/include/qworkspace.h
 qt2/include/qxml.h
 qt2/include/qxt.h
-qt2/lib/libqt.a
 qt2/lib/libqt.la
-qt2/lib/libqt.so
-qt2/lib/libqt.so.2
-qt2/lib/libqt.so.2.3
 @dirrm qt2/lib
 @dirrm qt2/include
 @dirrm qt2/bin

@@ -1,8 +1,5 @@
-@comment $NetBSD: PLIST,v 1.15 2004/06/06 11:47:30 salo Exp $
-lib/silc-server/libsilc-1.0.so.3
-lib/silc-server/libsilc-1.0.so.3.0
+@comment $NetBSD: PLIST,v 1.16 2004/09/22 08:09:20 jlam Exp $
 lib/silc-server/libsilc.la
-lib/silc-server/libsilc.so
 lib/silc-server/modules/aes.sim.so
 lib/silc-server/modules/blowfish.sim.so
 lib/silc-server/modules/cast.sim.so

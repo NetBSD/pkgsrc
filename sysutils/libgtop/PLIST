@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/02 12:10:12 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:53 jlam Exp $
 bin/libgtop-config
 bin/libgtop_daemon
 bin/libgtop_server
@@ -47,37 +47,13 @@ include/libgtop-1.0/glibtop_machine.h
 include/libgtop-1.0/glibtop_server.h
 include/libgtop-1.0/glibtop_suid.h
 lib/libgtop-features.def
-lib/libgtop.a
 lib/libgtop.la
-lib/libgtop.so
-lib/libgtop.so.1
-lib/libgtop.so.1.12
 lib/libgtopConf.sh
-lib/libgtop_common.a
 lib/libgtop_common.la
-lib/libgtop_common.so
-lib/libgtop_common.so.1
-lib/libgtop_common.so.1.12
-lib/libgtop_names.a
 lib/libgtop_names.la
-lib/libgtop_names.so
-lib/libgtop_names.so.1
-lib/libgtop_names.so.1.12
-lib/libgtop_suid_common.a
 lib/libgtop_suid_common.la
-lib/libgtop_suid_common.so
-lib/libgtop_suid_common.so.1
-lib/libgtop_suid_common.so.1.12
-lib/libgtop_sysdeps.a
 lib/libgtop_sysdeps.la
-lib/libgtop_sysdeps.so
-lib/libgtop_sysdeps.so.1
-lib/libgtop_sysdeps.so.1.12
-lib/libgtop_sysdeps_suid.a
 lib/libgtop_sysdeps_suid.la
-lib/libgtop_sysdeps_suid.so
-lib/libgtop_sysdeps_suid.so.1
-lib/libgtop_sysdeps_suid.so.1.12
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/libgtop.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/libgtop.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/libgtop.mo

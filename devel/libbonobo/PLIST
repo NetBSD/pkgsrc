@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/09/21 16:45:12 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/09/22 08:09:26 jlam Exp $
 bin/activation-client
 bin/bonobo-activation-run-query
 bin/bonobo-slay
@@ -50,25 +50,13 @@ include/libbonobo-2.0/bonobo/bonobo-types.h
 include/libbonobo-2.0/bonobo/bonobo-xobject.h
 include/libbonobo-2.0/libbonobo.h
 lib/bonobo-2.0/samples/bonobo-echo-2
-lib/bonobo/monikers/libmoniker_std_2.a
 lib/bonobo/monikers/libmoniker_std_2.la
-lib/bonobo/monikers/libmoniker_std_2.so
 lib/bonobo/servers/Bonobo_CosNaming_NamingContext.server
 lib/bonobo/servers/Bonobo_Moniker_std.server
 lib/bonobo/servers/Bonobo_Sample_Echo.server
-lib/libbonobo-2.a
 lib/libbonobo-2.la
-lib/libbonobo-2.so
-lib/libbonobo-2.so.0
-lib/libbonobo-2.so.0.0
-lib/libbonobo-activation.a
 lib/libbonobo-activation.la
-lib/libbonobo-activation.so
-lib/libbonobo-activation.so.4
-lib/libbonobo-activation.so.4.0
-lib/orbit-2.0/Bonobo_module.a
 lib/orbit-2.0/Bonobo_module.la
-lib/orbit-2.0/Bonobo_module.so
 lib/pkgconfig/bonobo-activation-2.0.pc
 lib/pkgconfig/libbonobo-2.0.pc
 libexec/bonobo-activation-server

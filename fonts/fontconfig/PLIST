@@ -1,15 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2004/06/07 23:37:41 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/09/22 08:09:31 jlam Exp $
 bin/fc-cache
 bin/fc-list
 bin/fc-match
 include/fontconfig/fcfreetype.h
 include/fontconfig/fcprivate.h
 include/fontconfig/fontconfig.h
-lib/libfontconfig.a
 lib/libfontconfig.la
-lib/libfontconfig.so
-lib/libfontconfig.so.1
-lib/libfontconfig.so.1.4
 lib/pkgconfig/fontconfig.pc
 man/man1/fc-match.1
 man/man3/FcAtomicCreate.3
