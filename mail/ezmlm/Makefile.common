@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2004/12/03 15:15:02 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/03/13 03:25:44 schmonz Exp $
 #
 
 EZMLM_VERS=	ezmlm-0.53
@@ -15,8 +15,8 @@ BUILD_TARGET=	it man install
 INSTALL_TARGET=	setup
 
 do-configure:
-	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
-	${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
+	${ECHO} ${CC:Q} ${CFLAGS:Q} > ${WRKSRC}/conf-cc
+	${ECHO} ${CC:Q} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
 	${ECHO} ${PREFIX}/bin > ${WRKSRC}/conf-bin
 	${ECHO} ${PREFIX}/man > ${WRKSRC}/conf-man
 	${ECHO} ${QMAILDIR} > ${WRKSRC}/conf-qmail

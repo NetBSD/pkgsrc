@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/12/21 05:32:56 schmonz Exp $
+# $NetBSD: Makefile,v 1.31 2005/03/13 03:25:44 schmonz Exp $
 #
 
 DISTNAME=		netqmail-1.05
@@ -100,8 +100,8 @@ post-extract:
 	${MV} ${PKGNAME_NOREV} ..; ${MV} ${DISTNAME}.patch ..
 
 do-configure:
-	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
-	${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
+	${ECHO} ${CC:Q} ${CFLAGS:Q} > ${WRKSRC}/conf-cc
+	${ECHO} ${CC:Q} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
 	${ECHO} ${QMAILDIR} > ${WRKSRC}/conf-qmail
 
 post-build:

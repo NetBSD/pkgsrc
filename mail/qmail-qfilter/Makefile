@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/12/21 00:14:13 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2005/03/13 03:25:44 schmonz Exp $
 #
 
 DISTNAME=		qmail-qfilter-2.0
@@ -33,8 +33,8 @@ INSTALLATION_DIRS=	bin man man/man1 share/examples/qmail-qfilter
 .include "../../mk/bsd.prefs.mk"
 
 do-configure:
-	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
-	${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
+	${ECHO} ${CC:Q} ${CFLAGS:Q} > ${WRKSRC}/conf-cc
+	${ECHO} ${CC:Q} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
 	${ECHO} ${PREFIX}/bin > ${WRKSRC}/conf-bin
 	${ECHO} ${PREFIX}/man > ${WRKSRC}/conf-man
 	${ECHO} ${PREFIX}/include/bglibs > ${WRKSRC}/conf-bgincs

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/12/03 15:15:03 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/03/13 03:25:44 schmonz Exp $
 
 DISTNAME=       djbfft-0.76
 CATEGORIES=     math
@@ -16,11 +16,11 @@ USE_BUILDLINK3=	yes
 NOT_FOR_PLATFORM=	IRIX-*-*
 
 do-configure:
-	@${ECHO} '${CC} ${CFLAGS}' > ${WRKSRC}/conf-cc
-	@${ECHO} '${CC}' > ${WRKSRC}/conf-ld
-	@${ECHO} ${PREFIX} > ${WRKSRC}/conf-home
+	${ECHO} ${CC:Q} ${CFLAGS:Q} > ${WRKSRC}/conf-cc
+	${ECHO} ${CC:Q} > ${WRKSRC}/conf-ld
+	${ECHO} ${PREFIX} > ${WRKSRC}/conf-home
 .ifdef(WITH_OPT_PENTIUM)
-	@${ECHO} 'pentium' > ${WRKSRC}/conf-opt
+	${ECHO} pentium > ${WRKSRC}/conf-opt
 .endif
 .ifdef(WITH_OPT_PPRO)
 	@${ECHO} 'ppro' > ${WRKSRC}/conf-opt

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/12/03 15:15:02 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/03/13 03:25:44 schmonz Exp $
 #
 
 DISTNAME=		qmailanalog-0.70
@@ -19,8 +19,8 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
 do-configure:
-	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
-	${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
+	${ECHO} ${CC:Q} ${CFLAGS:Q} > ${WRKSRC}/conf-cc
+	${ECHO} ${CC:Q} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
 	${ECHO} ${PREFIX}/qmailanalog > ${WRKSRC}/conf-home
 
 .include "../../mk/bsd.pkg.mk"
