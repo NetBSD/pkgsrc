@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2004/05/14 09:31:17 tron Exp $
+# $NetBSD: Makefile,v 1.90 2004/05/14 09:36:53 tron Exp $
 
 DISTNAME=       pine4.60
 PKGNAME=        pine-4.60
@@ -35,7 +35,7 @@ BUILDNAME= neb
 BUILDFILE= neb
 .endif
 
-.if !empty(CC_VERSION:Mgcc-3*)
+.if !empty(CC_VERSION:Mgcc-*)
 UNLIMIT_RESOURCES+=	datasize
 .endif
 
