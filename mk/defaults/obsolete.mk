@@ -1,4 +1,4 @@
-# $NetBSD: obsolete.mk,v 1.4 2005/03/06 02:43:05 wiz Exp $
+# $NetBSD: obsolete.mk,v 1.5 2005/03/28 09:39:57 jlam Exp $
 #
 # This file holds make(1) logic to allow obsolete or deprecated variables
 # still to be used.  These may eventually disappear over time as the contents
@@ -9,7 +9,7 @@ PKG_SYSCONFDIR.priv?=	${PRIV_CONF_DIR}
 .endif
 
 ###
-### Set PKG_DEFAULT_OPTIONS based on global variable settings.
+### Set PKG_DEFAULT_OPTIONS based on to-be-deprecated global variables.
 ###
 .if defined(KERBEROS)
 .  if ${KERBEROS} == "4"
@@ -61,7 +61,7 @@ PKG_DEFAULT_OPTIONS+=	rsaref
 PKG_DEFAULT_OPTIONS+=	sasl
 .endif
 .if defined(USE_SASL2) && !empty(USE_SASL2:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	sasl2
+PKG_DEFAULT_OPTIONS+=	sasl
 .endif
 .if defined(USE_SJ3) && !empty(USE_SJ3:M[yY][eE][sS])
 PKG_DEFAULT_OPTIONS+=	sj3
