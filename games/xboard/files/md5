@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 1999/09/12 00:20:01 simonb Exp $
+$NetBSD: md5,v 1.3 2000/10/15 02:14:20 jlam Exp $
 
-MD5 (xboard-4.0.3.tar.gz) = 98162e321ce71adb72eb23e937b50203
+MD5 (xboard-4.1.0.tar.gz) = 7c6e06f6644d308e64a3e5f00ee83f9e
