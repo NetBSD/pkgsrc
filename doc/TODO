@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.250 2003/02/13 08:36:02 wiz Exp $
+$NetBSD: TODO,v 1.249 2003/02/11 21:35:14 grant Exp $
 
 Suggested new packages
 ======================
@@ -84,7 +84,6 @@ Suggested package updates
 	o aumix-2.8
 	o balsa-1.4.2
 	o binutils-2.13.2.1
-	o blender-2.26
 	o bluefish-0.8
 	o bonnie++-1.03c
 	o bzflag-1.7g0
@@ -119,7 +118,7 @@ Suggested package updates
 	o fsviewer-0.2.5
 	o g-wrap-1.3.4 [pkg/20270]
 	o gauche-0.6.7 [kei]
-	o gcc3-3.2.2 [pkg/20308]
+	o gcc3-3.2.2
 	o gcombust-0.1.54
 	o gcvs-1.0
 	o gd-2.0.4
@@ -193,8 +192,10 @@ Suggested package updates
 	o librsvg-2.2.2.1
 	o libslang-1.4.7
 	o libsndfile-1.0.4
-	o libxml-2.5.3 [problems with kde2(?)|pkg/20302]
-	o libxslt-1.0.26 [problems with kde2(?)|pkg/20300]
+	o libxml-2.5.2 [problems with kde2(?)|pkg/20229]
+	o libxml-2.5.3 [pkg/20302]
+	o libxslt-1.0.25 [problems with kde2(?)|pkg/20230]
+	o libxslt-1.0.26 [pkg/20300]
 	o lilypond-1.6.6
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
@@ -211,7 +212,7 @@ Suggested package updates
 	o mkfontscale-20020618
 	o mng-1.0.5rc2
 	o mowitz-0.2.2
-	o mplayer-0.90rc4 [pkg/20307]
+	o mplayer-0.90rc4
 	o mrproject-0.8
 	o mysql-3.23.54
 	o naim-0.11.5.4
@@ -230,8 +231,6 @@ Suggested package updates
 	o opensp-1.5 [pkg/20220]
 	o oss-3.9.7h
 	o p0f-1.8.3
-	o p5-CGI-2.88 [pkg/20323]
-	o p5-Time-HiRes-1.42 [pkg/20321]
 	o pango-1.2.1
 	o pen-0.9.5 [pkg/19216]
 	o php4-4.3.0
@@ -246,7 +245,7 @@ Suggested package updates
 	o pygtk-0.6.11
 	o qt3-3.1.1 [skrll]
 	o rdiff-backup-0.10.2 [pkg/20268]
-	o rep-gtk-0.17
+	o rep-gtk-0.16
 	o rocksndiamonds-2.2.0rc3
 	o rox-1.2.2
 	o rox-session-0.1.17
@@ -263,8 +262,7 @@ Suggested package updates
 	o scrollkeeper-0.3.11
 	o seahorse-0.6.1
 	o sendfile-20010424
-	o sendmail-8.12.7 [pkg/20324]
-	o shorten-3.5.1
+	o sendmail-8.12.7
 	o siag-3.5.5
 	o sketch-0.6.15
 	o slang-1.4.8
@@ -274,9 +272,9 @@ Suggested package updates
 	o sodipodi-0.30
 	o source-highlight-1.6.3 [seb]
 	o speex-1.0rc2
+	o squeak-3.2 [fredb|pkg/17950]
 	o sqlite-2.7.5 [pkg/19719]
 	o sqlite-2.7.6
-	o squeak-3.2 [fredb|pkg/17950]
 	o srp_client-1.7.5 [jlam]
 	o suck-4.3.1
 	o sun-jdk14-1.4.1_01 [pkg/19853]
@@ -288,6 +286,7 @@ Suggested package updates
 	o tcpreplay-1.3.2
 	o ted-2.12
 	o teTeX-2.0
+	o texinfo-4.5
 	o texmacs-1.0.1.3
 	o tightvnc-1.2.7
 	o tscp-0.9.7 [pkg/20166]
@@ -304,12 +303,12 @@ Suggested package updates
 	o wxGTK-2.4.0
 	o xalan-c-1.4
 	o xanim-2.92.0 [pkg/19934]
-	o xchat-2.0.0 [pkg/20298]
+	o xchat-2.0.0
 	o xerces-c-2.1.0 [heinz]
 	o xfstt-1.4
-	o xmame-0.65.1
+	o xmame-0.64.1rc2
 	o xmcd-3.2.0
-	o xmess-0.65.1
+	o xmess-0.64.1rc2
 	o xosview-1.8.0 [pkg/20265]
 	o xpaint-2.6.8
 	o xpuyopuyo-0.9.5
