@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/08/04 08:50:16 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/16 13:37:46 wiz Exp $
 
 DISTNAME=		byte
 PKGNAME=		bytebench-3.6
@@ -6,6 +6,7 @@ CATEGORIES=		benchmarks
 MASTER_SITES=		ftp://ftp.cdrom.com/pub/unix-c/benchmarks/
 
 MAINTAINER=		root@garbled.net
+COMMENT=		BYTE Magazine's Public Domain benchmark for UNIX
 
 BENCHMARK_ENV+=		BINDIR=${WRKSRC}/pgms
 BENCHMARK_ENV+=		SCRPDIR=${WRKSRC}/pgms

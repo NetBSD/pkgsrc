@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2001/01/11 07:39:41 tron Exp $
+# $NetBSD: Makefile,v 1.26 2001/02/16 13:30:47 wiz Exp $
 #
 
 DISTNAME=       mpg123-0.59r
@@ -12,6 +12,7 @@ PATCHFILES=	mpg123-059r-v6-20000713b.diff.gz l3.diff.gz
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.mpg123.de/
+COMMENT=	Command-line player for mpeg layer 1, 2 and 3 audio
 
 BUILD_DEFS+=	USE_INET6
 DIST_SUBDIR=	mpg123

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/10/11 14:00:33 proff Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 13:30:46 wiz Exp $
 
 DISTNAME=		mbr301h
 PKGNAME=		mbrola-301h
@@ -8,6 +8,7 @@ EXTRACT_SUFX=		.zip
 
 MAINTAINER=		proff@iq.org
 HOMEPAGE=		http://tcts.fpms.ac.be/synthesis/
+COMMENT=		MBROLA diphone synthesizer executable (only for i386)
 
 BUILD_DEPENDS=		unzip:../../archivers/unzip
 
