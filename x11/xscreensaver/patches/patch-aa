@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.13 2001/10/24 14:05:48 tron Exp $
+$NetBSD: patch-aa,v 1.14 2002/02/09 21:12:57 wiz Exp $
 
---- configure.orig	Mon Jun  4 01:43:39 2001
-+++ configure	Wed Oct 24 15:59:51 2001
-@@ -1531,7 +1531,7 @@
+--- configure.orig	Wed Jan  2 09:15:22 2002
++++ configure
+@@ -1536,7 +1536,7 @@
  # implement the "install-strip" target properly (strip executables,
  # but do not try to strip scripts.)
  #
@@ -11,3 +11,22 @@ $NetBSD: patch-aa,v 1.13 2001/10/24 14:05:48 tron Exp $
  
  # random libc stuff
  echo $ac_n "checking for ANSI C header files""... $ac_c" 1>&6
+@@ -3790,15 +3790,15 @@
+   # there must be a better way than this...
+   if test -z "`echo $with_configdir | sed 's@^/.*@@'`" ; then
+     # absolute path
+-    CONFIGDIR=$with_configdir
++    HACK_CONF_DIR=$with_configdir
+   else
+     # relative path
+-    CONFIGDIR="\${exec_prefix}$with_configdir"
++    HACK_CONF_DIR="\${exec_prefix}$with_configdir"
+   fi
+ fi
+ 
+ # canonicalize slashes.
+-CONFIGDIR=`echo "${CONFIGDIR}" | sed 's@/$@@;s@//*@/@g'`
++HACK_CONF_DIR=`echo "${HACK_CONF_DIR}" | sed 's@/$@@;s@//*@/@g'`
+ 
+ 
+ 
