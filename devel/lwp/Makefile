@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/12/29 09:45:10 fredb Exp $
+# $NetBSD: Makefile,v 1.2 1999/12/30 09:58:16 fredb Exp $
 #
 
 DISTNAME=	lwp-1.0
@@ -13,5 +13,19 @@ GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 
 LTCONFIG_OVERRIDE= ${WRKSRC}/ltconfig
+
+.include "../../mk/bsd.prefs.mk"
+
+# XXX Not yet
+#.if defined(LWP_USE_PTH)
+#.if ${LWP_USE_PTH} == YES || ${LWP_USE_PTH} == yes
+#BUILD_DEPENDS+=	pth:../../devel/pth
+#BUILD_DEFS+=		LIBS
+#CONFIGURE_ENV+=	LIBS="-lpth -lpthreads"
+#.else
+pre-configure:
+	${CP} ${FILESDIR}/config.cache ${WRKSRC}/
+#.endif
+#.endif
 
 .include "../../mk/bsd.pkg.mk"
