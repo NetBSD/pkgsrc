@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/07/29 22:23:28 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/18 21:33:55 jlam Exp $
 #
 
 DISTNAME=	saxon
@@ -13,9 +13,11 @@ COMMENT=	Michael H. Kay's Java XSLT processor
 
 DIST_SUBDIR=	${PKGNAME}
 USE_JAVA=	run
+USE_BUILDLINK2=
 NO_PATCH=
 NO_CONFIGURE=
 NO_BUILD=
+
 WRKSRC=		${WRKDIR}
 
 do-install:
@@ -26,4 +28,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/java/saxon
 	(cd ${WRKSRC} && ${PAX} -r -w -s '/^samples/saxon/' samples ${PREFIX}/share/examples/java)
 
+.include "../../mk/java.mk"
 .include "../../mk/bsd.pkg.mk"

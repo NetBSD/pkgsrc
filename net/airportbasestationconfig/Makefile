@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/10/10 01:01:11 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2002/10/18 21:24:55 jlam Exp $
 
 DISTNAME=	configurator_152-128
 PKGNAME=	${BINNAME}-1.5.2
@@ -11,8 +11,6 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://edge.mcs.drexel.edu/GICL/people/sevy/airport/
 COMMENT=	Configuration program for Apple's Airport Base Station
 
-USE_JAVA=	run
-
 PLIST_SUBST+=	BINNAME=${BINNAME} JARNAME=${JARNAME}
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-powerpc Darwin-*-*
@@ -24,20 +22,9 @@ LIBDIR=		${PREFIX}/lib/${BINNAME}
 
 .include "../../mk/bsd.prefs.mk"
 
-# "jdk" and "kaffe" packages don't work.
-.if ${MACHINE_ARCH} == i386 || ${OPSYS} == "Darwin"
-PKG_JVM=	sun-jdk
-.elif ${MACHINE_ARCH} == powerpc
-PKG_JVM=	blackdown-jdk13
-.else
-PKG_JVM=	none
-.endif
-
-.if ${PKG_JVM} == blackdown-jdk13
-JVM_OPTS+=	-green -jar
-.else
-JVM_OPTS=	-jar
-.endif
+USE_BUILDLINK2=		# defined
+USE_JAVA=		run
+PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14 blackdown-jdk13
 
 post-extract:
 	${CHMOD} -R g-w,o-w ${WRKSRC}/*
@@ -61,4 +48,11 @@ do-install:
 	${INSTALL_DATA} ReadMe.txt ${DOCDIR}/README && \
 	${INSTALL_DATA} mainscreen.jpg manual.html ${DOCDIR}
 
+.include "../../mk/java.mk"
 .include "../../mk/bsd.pkg.mk"
+
+.if ${PKG_JVM} == "blackdown-jdk13"
+JVM_OPTS+=	-green -jar
+.else
+JVM_OPTS+=	-jar
+.endif
