@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/25 09:07:46 epg Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/06/18 13:26:26 epg Exp $
 bin/svn
 bin/svnadmin
 bin/svndumpfilter
 bin/svnlook
 bin/svnserve
 bin/svnversion
+include/subversion-1/mod_dav_svn.h
 include/subversion-1/svn-revision.txt
 include/subversion-1/svn_auth.h
 include/subversion-1/svn_base64.h
@@ -37,12 +38,6 @@ include/subversion-1/svn_utf.h
 include/subversion-1/svn_version.h
 include/subversion-1/svn_wc.h
 include/subversion-1/svn_xml.h
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/svn-design.info
-info/svn-design.info
-info/svn-design.info-1
-info/svn-design.info-2
-info/svn-design.info-3
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/svn-design.info
 lib/libsvn_client-1.a
 lib/libsvn_client-1.la
 lib/libsvn_client-1.so
