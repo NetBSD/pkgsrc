@@ -1,0 +1,28 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/07/10 13:46:58 agc Exp $
+
+--- Makefile.orig	Tue Jun 11 18:10:11 2002
++++ Makefile
+@@ -0,0 +1,23 @@
++GTK_CFLAGS= `gtk-config --cflags`
++IMLIB_CFLAGS= `imlib-config --cflags-gdk`
++INCLUDE+= -I$(LOCALBASE)/include
++CFLAGS+= -fPIC -Wall -W -g -O2 -shared $(GTK_CFLAGS) $(IMLIB_CFLAGS) $(INCLUDE)
++CC= gcc
++
++all: gkx86info.so
++
++gkx86info.so: MHz.o gkx86info.o
++	$(CC) $(CFLAGS) -o gkx86info.so MHz.o gkx86info.o
++
++MHz.o:
++	$(CC) $(CFLAGS) -o MHz.o -c MHz.c
++
++gkx86info.o:
++	$(CC) $(CFLAGS) -c gkx86info.c
++
++install:
++	$(INSTALL) -d $(LOCALBASE)/lib/gkrellm/plugins
++	$(INSTALL) -c -m 0755 -o root -g wheel gkx86info.so $(LOCALBASE)/lib/gkrellm/plugins/gkx86info.so
++
++clean:
++	$(RM) -f *~ *.o *.so
