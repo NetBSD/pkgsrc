@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/01/19 16:59:52 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2002/02/06 03:29:05 jmc Exp $
 
 DISTNAME=	bluefish-0.7
 CATEGORIES=	www
@@ -20,7 +20,7 @@ DEPENDS+=	weblint-[0-9]*:../../www/weblint
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png-[0-9]*:../../graphics/png
 DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
-DEPENDS+=	gnome-libs-[0-9]*:../../x11/gnome-lib
+DEPENDS+=	gnome-libs-[0-9]*:../../x11/gnome-libs
 DEPENDS+=	gdk-pixbuf-[0-9]*:../../graphics/gdk-pixbuf
 
 BUILD_USES_MSGFMT=	YES
