@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/03/18 22:11:51 bouyer Exp $
+# $NetBSD: Makefile,v 1.22 2002/03/19 09:04:11 bouyer Exp $
 
 DISTNAME=	squirrelmail-1.2.5
 CATEGORIES=	mail www
@@ -15,6 +15,7 @@ CONFLICTS+=	sq-squirrelspell-[0-9]*
 DEPENDS+=	php>=4.0.6:../../www/php4
 DEPENDS+=	php-gettext>=4.0.6:../../devel/php4-gettext
 DEPENDS+=	php-session>=4.0.6:../../devel/php4-session
+DEPENDS+=	php-pcre>=4.0.6:../../devel/php4-pcre
 
 REPLACE_PERL=	config/conf.pl config/ri_once.pl
 
