@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.466 2002/11/05 13:14:12 martti Exp $
+$NetBSD: CHANGES,v 1.467 2002/11/06 07:58:21 tron Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3536,3 +3536,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated pkgdiff to 0.107 [wiz 2002-11-04]
 	Updated LaBrea to 2.3 [wiz 2002-11-05]
 	Updated kannel to 1.2.1 [martti 2002-11-05]
+	libxml2: Downgraded to 2.4.25 [tron 2002-11-06]
