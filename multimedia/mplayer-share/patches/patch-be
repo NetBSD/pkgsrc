@@ -1,0 +1,17 @@
+$NetBSD: patch-be,v 1.1 2004/07/02 17:07:21 drochner Exp $
+
+--- libmenu/menu_console.c.orig	2003-09-13 20:02:20.000000000 +0200
++++ libmenu/menu_console.c
+@@ -150,8 +150,10 @@ static void add_string(struct menu_priv_
+     return;
+   }
+   priv->lines[ll] = realloc(priv->lines[ll],strlen(priv->lines[ll]) + strlen(l) + 1);
+-  strcat(priv->lines[ll],l);
+-  
++  if ( priv->lines[ll] != NULL )
++  {
++    strcat(priv->lines[ll],l);
++  }
+ }
+ 
+ static void draw(menu_t* menu, mp_image_t* mpi) {
