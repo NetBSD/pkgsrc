@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2000/10/21 19:35:45 wiz Exp $
+# $NetBSD: Makefile,v 1.146 2000/10/24 10:13:35 wiz Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -59,7 +59,6 @@
     SUBDIR += kdbg
     SUBDIR += kdevelop
     SUBDIR += ldapsdk
-    SUBDIR += libsigc++
     SUBDIR += libg++
     SUBDIR += libgetopt
     SUBDIR += libglade
@@ -69,6 +68,7 @@
     SUBDIR += libole2
     SUBDIR += libproplist
     SUBDIR += libscsi
+    SUBDIR += libsigc++
     SUBDIR += libslang
     SUBDIR += libsmi
     SUBDIR += libstash
@@ -129,8 +129,8 @@
     SUBDIR += sgi-stl
     SUBDIR += sgi-stl-docs
     SUBDIR += slib
-    SUBDIR += stooop
     SUBDIR += smpeg
+    SUBDIR += stooop
     SUBDIR += swig
     SUBDIR += tkcvs
     SUBDIR += tkdiff
