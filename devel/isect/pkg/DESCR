@@ -6,8 +6,8 @@ multi-tier programming as easy as reading and writing.
 Isect is short for intersect, a kind of table required in relational
 databases to express many-to-many relationships. Distributed processing
 implements process-oriented many-to-many relationships: many clients
-communicating with many services. If it's mathmatically required for
-data relationships then it's mathmatically required for process
+communicating with many services. If it's mathematically required for
+data relationships then it's mathematically required for process
 relationships! This is the proof--and the reason you need isectd. 
 
 Questions and comments should be mailed to tgagne@ix.netcom.com.
