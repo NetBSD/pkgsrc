@@ -1,21 +1,15 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/24 12:29:55 wiz Exp $
+$NetBSD: MESSAGE,v 1.3 2003/09/18 17:35:35 wiz Exp $
 
-To use these fonts with 'dvips' (part of the teTeX package), add the
-line:
+For a system-wide installation, add the line
 
-p +${PREFIX}/share/tex-contrib/BaKoMa/fontmap.map
+Map ${PREFIX}/share/tex-contrib/BaKoMa/fontmap.map
 
-to either your ~/.dvipsrc file or create a file with that line called
-config.bakoma.  When invoking 'dvips' you will need to include the
--j0 flag like:
+at the end of ${PREFIX}/share/texmf/web2c/updmap.cfg. Then,
 
-  dvips -j0 <other dvips args>
+cd ${PREFIX}/share/texmf/dvips/config
+updmap
 
-In addition if you added the fontmap entry to a config.bakoma file
-instead of your ~/.dvipsrc file then you will need to specify that
-as well as a dvips argument:
-
-  dvips -P bakoma -j0 <other dvips args>
+and the BaKoMa fonts will be available by default with dvips.
 
 ===========================================================================
