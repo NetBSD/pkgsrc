@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/02/15 14:38:42 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/17 17:50:15 wiz Exp $
 #
 
 DISTNAME=	dat-4120
@@ -12,6 +12,7 @@ EXTRACT_SUFX=	.tar
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.nai.com/asp_set/download/dats/mcafee_4x.asp
+COMMENT=	AntiVirus DAT file for uvscan
 
 NO_BUILD=	YES
 

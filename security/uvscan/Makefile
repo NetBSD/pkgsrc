@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/09/08 13:33:15 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/17 17:50:14 wiz Exp $
 #
 
 DISTNAME=		vlnx407e
@@ -10,6 +10,7 @@ EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.nai.com/asp_set/buy_try/try/products_evals.asp
+COMMENT=		evaluation version of a DOS/Windows file virus scanner
 
 DEPENDS+=		suse_libc5>=6.1:../../emulators/suse_libc5
 DEPENDS+=		uvscan-dat>=4080:../../security/uvscan-dat

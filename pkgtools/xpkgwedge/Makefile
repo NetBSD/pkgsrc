@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/01/29 11:34:39 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2001/02/17 17:51:35 wiz Exp $
 #
 
 DISTNAME=	xpkgwedge-1.1
@@ -8,6 +8,7 @@ DISTFILES=	# empty
 
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.netbsd.org/Documentation/netbsd/Packages.txt
+COMMENT=	allows X11 pkgs to be built and used outside of /usr/X11R6
 
 EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	# defined
