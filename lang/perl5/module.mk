@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.17 2003/09/13 14:13:14 jlam Exp $
+# $NetBSD: module.mk,v 1.18 2003/09/13 15:04:59 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -72,30 +72,27 @@ _PERL5_SITEVARS=							\
 	INSTALLSITEMAN1DIR INSTALLSITEMAN3DIR				\
 	SITELIBEXP SITEARCHEXP
 
+_PERL5_SITEVAR.INSTALLSITEBIN=		installsitebin
+_PERL5_SITEVAR.INSTALLSITELIB=		installsitelib
+_PERL5_SITEVAR.INSTALLSITEARCH=		installsitearch
+_PERL5_SITEVAR.INSTALLSITEMAN1DIR=	installsiteman1dir
+_PERL5_SITEVAR.INSTALLSITEMAN3DIR=	installsiteman3dir
+_PERL5_SITEVAR.SITELIBEXP=		sitelibexp
+_PERL5_SITEVAR.SITEARCHEXP=		sitearchexp
+
 .if !defined(_PERL5_SITEPREFIX)
 .  if exists(${PERL5})
-_PERL5_PREFIX!=	\
+_PERL5_PREFIX!=		\
 	eval `${PERL5} -V:prefix 2>/dev/null`; ${ECHO} $$prefix
 _PERL5_SITEPREFIX!=	\
 	eval `${PERL5} -V:siteprefix 2>/dev/null`; ${ECHO} $$siteprefix
 MAKEFLAGS+=	_PERL5_PREFIX="${_PERL5_PREFIX}"
 MAKEFLAGS+=	_PERL5_SITEPREFIX="${_PERL5_SITEPREFIX}"
-#
-# Repoint all of the site-specific variables to be under the perl5
-# module's ${PREFIX}.
-#
-_PERL5_VAR.INSTALLSITEBIN=	installsitebin
-_PERL5_VAR.INSTALLSITELIB=	installsitelib
-_PERL5_VAR.INSTALLSITEARCH=	installsitearch
-_PERL5_VAR.INSTALLSITEMAN1DIR=	installsiteman1dir
-_PERL5_VAR.INSTALLSITEMAN3DIR=	installsiteman3dir
-_PERL5_VAR.SITELIBEXP=		sitelibexp
-_PERL5_VAR.SITEARCHEXP=		sitearchexp
 
 .    for _var_ in ${_PERL5_SITEVARS}
 _PERL5_SUB_${_var_}!=	\
-	eval `${PERL5} -V:${_PERL5_VAR.${_var_}} 2>/dev/null`;		\
-	${ECHO} $${${_PERL5_VAR.${_var_}}} |				\
+	eval `${PERL5} -V:${_PERL5_SITEVAR.${_var_}} 2>/dev/null`;	\
+	${ECHO} $${${_PERL5_SITEVAR.${_var_}}} |			\
 	${SED} -e "s,^${_PERL5_SITEPREFIX}/,,"
 MAKEFLAGS+=	_PERL5_SUB_${_var_}="${_PERL5_SUB_${_var_}}"
 .    endfor
@@ -106,11 +103,19 @@ _PERL5_SUB_INSTALLSCRIPT!=	\
 MAKEFLAGS+=	_PERL5_SUB_INSTALLSCRIPT="${_PERL5_SUB_INSTALLSCRIPT}"
 .  endif
 .endif
-
+#
+# Repoint all of the site-specific variables to be under the perl5
+# module's ${PREFIX}.
+#
 .for _var_ in ${_PERL5_SITEVARS} INSTALLSCRIPT
 _PERL5_${_var_}=	${PREFIX}/${_PERL5_SUB_${_var_}}
 MAKE_FLAGS+=		${_var_}="${_PERL5_${_var_}}"
 .endfor
+#
+# The PREFIX in the generated Makefile will point to ${_PERL5_PREFIX},
+# so override its value to the module's ${PREFIX}.
+#
+MAKE_FLAGS+=		PREFIX="${PREFIX}"
 
 .if defined(DEFAULT_VIEW.perl)
 DEFAULT_VIEW.${PKGBASE}=	${DEFAULT_VIEW.perl}
