@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2003/09/06 04:56:29 itojun Exp $
+$NetBSD: patch-aa,v 1.6 2003/11/03 11:45:28 recht Exp $
 
---- mk/NetBSD-	2003-09-06 13:52:37.000000000 +0900
-+++ mk/NetBSD	2003-09-06 13:52:52.000000000 +0900
+--- mk/NetBSD.orig	2003-09-28 23:40:07.000000000 +0200
++++ mk/NetBSD	2003-11-03 12:27:53.000000000 +0100
 @@ -7,10 +7,8 @@
  # (C) Copyright 2000-2003 by Michal Zalewski <lcamtuf@coredump.cx>
  #
@@ -11,5 +11,5 @@ $NetBSD: patch-aa,v 1.5 2003/09/06 04:56:29 itojun Exp $
  STRIP   = strip
 -CFLAGS  = -O3 -Wall -fomit-frame-pointer -funroll-loops
  FILE	= p0f
+ TOOLS   = test/sendack test/sendack2 test/sendsyn
  
- all: $(FILE) strip	
