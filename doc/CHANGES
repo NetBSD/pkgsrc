@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9068 2005/02/07 14:16:11 adam Exp $
+$NetBSD: CHANGES,v 1.9069 2005/02/07 14:18:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -787,3 +787,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated xcursor to 1.1.2 [wiz 2005-02-07]
 	Updated magicpoint to 1.10anb5 [hira 2005-02-07]
 	Updated abiword-plugins to 2.2.3nb1 [adam 2005-02-07]
+	Updated p7zip to 4.14.01 [wiz 2005-02-07]
