@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.9 2004/08/04 03:33:40 minskim Exp $
+$NetBSD: patch-ab,v 1.10 2004/08/16 16:17:39 recht Exp $
 
---- Src/zsh.h.orig	Thu Mar 11 13:20:10 2004
-+++ Src/zsh.h
-@@ -1565,6 +1565,7 @@ struct ttyinfo {
+--- Src/zsh.h.orig	2004-08-13 12:22:47.000000000 +0200
++++ Src/zsh.h	2004-08-16 11:54:07.000000000 +0200
+@@ -1576,6 +1576,7 @@
  #endif
  };
  
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.9 2004/08/04 03:33:40 minskim Exp $
  /* defines for whether tabs expand to spaces */
  #if defined(HAVE_TERMIOS_H) || defined(HAVE_TERMIO_H)
  #define SGTTYFLAG       shttyinfo.tio.c_oflag
-@@ -1580,6 +1581,7 @@ struct ttyinfo {
+@@ -1591,6 +1592,7 @@
  #define SGTABTYPE       XTABS
  #  endif
  # endif

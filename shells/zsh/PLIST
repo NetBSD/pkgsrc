@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2004/03/30 16:09:56 minskim Exp $
+@comment $NetBSD: PLIST,v 1.14 2004/08/16 16:17:39 recht Exp $
 bin/zsh
 bin/${PKGNAME}
 man/man1/zsh.1
@@ -34,6 +34,7 @@ share/zsh/${PKGVERSION}/functions/_apachectl
 share/zsh/${PKGVERSION}/functions/_apm
 share/zsh/${PKGVERSION}/functions/_approximate
 share/zsh/${PKGVERSION}/functions/_apt
+share/zsh/${PKGVERSION}/functions/_apt-move
 share/zsh/${PKGVERSION}/functions/_apt-show-versions
 share/zsh/${PKGVERSION}/functions/_aptitude
 share/zsh/${PKGVERSION}/functions/_arg_compile
@@ -45,10 +46,10 @@ share/zsh/${PKGVERSION}/functions/_assign
 share/zsh/${PKGVERSION}/functions/_attr
 share/zsh/${PKGVERSION}/functions/_auto-apt
 share/zsh/${PKGVERSION}/functions/_autocd
-share/zsh/${PKGVERSION}/functions/_autoload
 share/zsh/${PKGVERSION}/functions/_bash_completions
 share/zsh/${PKGVERSION}/functions/_bindkey
 share/zsh/${PKGVERSION}/functions/_bison
+share/zsh/${PKGVERSION}/functions/_bogofilter
 share/zsh/${PKGVERSION}/functions/_brace_parameter
 share/zsh/${PKGVERSION}/functions/_bsd_pkg
 share/zsh/${PKGVERSION}/functions/_bts
@@ -181,6 +182,7 @@ share/zsh/${PKGVERSION}/functions/_jobs_bg
 share/zsh/${PKGVERSION}/functions/_jobs_builtin
 share/zsh/${PKGVERSION}/functions/_jobs_fg
 share/zsh/${PKGVERSION}/functions/_joe
+share/zsh/${PKGVERSION}/functions/_kfmclient
 share/zsh/${PKGVERSION}/functions/_kill
 share/zsh/${PKGVERSION}/functions/_killall
 share/zsh/${PKGVERSION}/functions/_kld
@@ -218,6 +220,7 @@ share/zsh/${PKGVERSION}/functions/_menu
 share/zsh/${PKGVERSION}/functions/_mere
 share/zsh/${PKGVERSION}/functions/_message
 share/zsh/${PKGVERSION}/functions/_mh
+share/zsh/${PKGVERSION}/functions/_mime_types
 share/zsh/${PKGVERSION}/functions/_mkshortcut
 share/zsh/${PKGVERSION}/functions/_mkzsh
 share/zsh/${PKGVERSION}/functions/_modutils
@@ -265,6 +268,7 @@ share/zsh/${PKGVERSION}/functions/_perl
 share/zsh/${PKGVERSION}/functions/_perl_basepods
 share/zsh/${PKGVERSION}/functions/_perl_modules
 share/zsh/${PKGVERSION}/functions/_perldoc
+share/zsh/${PKGVERSION}/functions/_php
 share/zsh/${PKGVERSION}/functions/_physical_volumes
 share/zsh/${PKGVERSION}/functions/_pick_variant
 share/zsh/${PKGVERSION}/functions/_pids
@@ -444,6 +448,7 @@ share/zsh/${PKGVERSION}/functions/edit-command-line
 share/zsh/${PKGVERSION}/functions/forward-word-match
 share/zsh/${PKGVERSION}/functions/getjobs
 share/zsh/${PKGVERSION}/functions/harden
+share/zsh/${PKGVERSION}/functions/history-pattern-search
 share/zsh/${PKGVERSION}/functions/history-search-end
 share/zsh/${PKGVERSION}/functions/incarg
 share/zsh/${PKGVERSION}/functions/incremental-complete-word
@@ -489,6 +494,7 @@ share/zsh/${PKGVERSION}/functions/url-quote-magic
 share/zsh/${PKGVERSION}/functions/zargs
 share/zsh/${PKGVERSION}/functions/zcalc
 share/zsh/${PKGVERSION}/functions/zed
+share/zsh/${PKGVERSION}/functions/zed-set-file-name
 share/zsh/${PKGVERSION}/functions/zkbd
 share/zsh/${PKGVERSION}/functions/zmv
 share/zsh/${PKGVERSION}/functions/zrecompile
