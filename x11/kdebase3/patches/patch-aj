@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.6 2004/05/26 13:20:53 markd Exp $
+
+--- kdm/kfrontend/Makefile.in.orig	2004-04-06 03:09:12.000000000 +1200
++++ kdm/kfrontend/Makefile.in
+@@ -602,7 +602,7 @@ xdg_directorydir = @xdg_directorydir@
+ xdg_menudir = @xdg_menudir@
+ 
+ # use 'make GENKDMCONF_FLAGS=... install' to override
+-GENKDMCONF_FLAGS = 
++GENKDMCONF_FLAGS = --no-old
+ SUBDIRS = pics sessions
+ AM_CPPFLAGS = -I$(srcdir)/../backend -I$(top_srcdir)/kcontrol/background \
+     $(all_includes) $(XDMCP_DEFINE)
