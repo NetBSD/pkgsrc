@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.13 2005/03/26 10:53:47 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.14 2005/03/26 11:00:11 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -27,3 +27,5 @@ Pullup ticket 390 - requested by Shin'ichiro TAYA
 security fix for thunderbird and thunderbird-gtk2
 Pullup ticket 391 - requested by Thomas Klausner
 security fix for gnupg
+Pullup ticket 393 - requested by Min Sik Kim
+portability fix for generate
