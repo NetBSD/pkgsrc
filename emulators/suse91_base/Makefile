@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2004/08/30 00:00:25 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2004/10/02 01:26:19 wiz Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE91}
 DISTFILES=		${RPMFILES}
@@ -57,11 +57,15 @@ do-install:
 	${RPM2PKG} ${RPM2PKGARGS}
 	${ECHO} "@dirrm ${EMULSUBDIR}" >>${PLIST_SRC}
 	${INSTALL_DATA} ${WRKDIR}/SuSE-release ${EMULDIR}/etc
+	${INSTALL_DATA_DIR} ${EMULDIR}/proc
+	${LN} -fs ${EMULDIR}/proc/mounts ${EMULDIR}/etc/mtab
 .if ${OPSYS} == "FreeBSD"
 	${BRANDELF} -t Linux ${EMULDIR}/sbin/ldconfig
 .endif
 	${EMULDIR}/sbin/ldconfig -r ${EMULDIR}
 	${ECHO} "@exec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR}" \
+	  >>${PLIST_SRC}
+	${ECHO} "@unexec ${RMDIR} %D/${EMULSUBDIR}/etc 2>/dev/null || ${TRUE}" \
 	  >>${PLIST_SRC}
 	${SED}	-e 's:#! :#! /${EMULSUBDIR}:' \
 		-e 's:^RTLD=:RTLD=/${EMULSUBDIR}:' \
