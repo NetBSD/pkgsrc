@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/03/16 13:51:43 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2000/05/03 17:03:20 rh Exp $
 #
 
 DISTNAME=		so51a_lnx_${LANGNO}
@@ -12,7 +12,8 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.sun.com/staroffice/
 
 CONFLICTS=		staroffice-*
-DEPENDS=		unzip-*:../../archivers/unzip
+DEPENDS+=		unzip-*:../../archivers/unzip
+DEPENDS+=		suse_linux>=6.1:../../emulators/suse_linux
 
 NO_CDROM=		"Redistribution not permitted"
 MIRROR_DISTFILE=	NO
@@ -23,10 +24,6 @@ IS_INTERACTIVE=		YES
 NO_BUILD=		YES
 
 DECOMPRESS_CMD=		${CAT}
-
-.if !exists(/emul/linux/lib/ld-linux.so.1)
-IGNORE=		requires Linux glibc2 libraries - see compat_linux(8)
-.endif
 
 .include "../../mk/bsd.prefs.mk"
 
