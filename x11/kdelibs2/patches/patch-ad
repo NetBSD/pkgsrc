@@ -1,63 +1,13 @@
-$NetBSD: patch-ad,v 1.4 2001/09/07 14:32:21 drochner Exp $
+$NetBSD: patch-ad,v 1.5 2001/10/15 22:46:21 skrll Exp $
 
---- configure.orig	Thu Feb 22 13:17:52 2001
-+++ configure
-@@ -5849,7 +5849,7 @@
-    for dir in $kde_use_extra_libs; do
-      kde_extra_libs="$kde_extra_libs $dir"
-      KDE_EXTRA_RPATH="$KDE_EXTRA_RPATH -R $dir"
--     USER_LDFLAGS="$USER_LDFLAGS -L$dir"
-+     #USER_LDFLAGS="$USER_LDFLAGS -L$dir"	# buildlink.mk
-    done
-    IFS=$ac_save_ifs
-    kde_use_extra_libs="added"
-@@ -6790,7 +6790,7 @@
- ac_link='${CXX-g++} -o conftest${ac_exeext} $CXXFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS 1>&5'
- cross_compiling=$ac_cv_prog_cxx_cross
- 
--ac_link='rm -rf SunWS_cache; ${CXX-g++} -o conftest${ac_exeext} $CXXFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS 1>&5'
-+ac_link='rm -rf SunWS_cache; ${LIBTOOL_SHELL} --tag=CXX --mode=link ${CXX-g++} -o conftest${ac_exeext} $CXXFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS 1>&5'
+--- arts/knotify/knotify.cpp.orig	Mon Aug  6 00:28:11 2001
++++ arts/knotify/knotify.cpp
+@@ -73,7 +73,7 @@
+ };
  
  
- 
-@@ -7043,7 +7043,7 @@
- if test "$qt_libraries" = "$x_libraries" || test -z "$qt_libraries"; then
-  QT_LDFLAGS=""
- else
-- QT_LDFLAGS="-L$qt_libraries"
-+ QT_LDFLAGS="-L${QTDIR}/lib -Wl,-R$qt_libraries"		# buildlink.mk
-  all_libraries="$all_libraries $QT_LDFLAGS"
- fi
- 
-@@ -7369,11 +7369,11 @@
- if test "$kde_includes" = "$x_includes" || test "$kde_includes" = "$qt_includes" ; then
-  KDE_INCLUDES=""
- else
-- KDE_INCLUDES="-I$kde_includes"
-+ KDE_INCLUDES="-I${BUILDLINK_DIR}/include"	# buildlink.mk
-  all_includes="$KDE_INCLUDES $all_includes"
- fi
-  
--KDE_LDFLAGS="-L$kde_libraries"
-+KDE_LDFLAGS="-L${BUILDLINK_DIR}/lib"		# buildlink.mk
- if test ! "$kde_libraries" = "$x_libraries" && test ! "$kde_libraries" = "$qt_libraries" ; then 
-  all_libraries="$all_libraries $KDE_LDFLAGS"
- fi
-@@ -13183,7 +13183,7 @@
- 
- 
- 
--all_includes='-I$(top_srcdir)/dcop -I$(top_srcdir)/libltdl -I$(top_srcdir)/kdecore -I$(top_srcdir)/kdeui -I$(top_srcdir)/kssl $(QT_INCLUDES) $(X_INCLUDES) $(KDE_INCLUDES) $(USER_INCLUDES)'
-+all_includes='-I$(top_srcdir)/dcop -I$(top_srcdir)/kdecore -I$(top_srcdir)/kdeui -I$(top_srcdir)/kssl $(QT_INCLUDES) $(X_INCLUDES) $(KDE_INCLUDES) $(USER_INCLUDES)'
- 
- 
- CXXFLAGS="$CXXFLAGS -DQT_CLEAN_NAMESPACE -DQT_NO_COMPAT -DQT_NO_ASCII_CAST"
-@@ -14140,7 +14140,7 @@
-     esac
-   done
- 
--  for ac_config_dir in libltdl; do
-+  for ac_config_dir in ; do
- 
-     # Do not complain, so a configure script can configure whichever
-     # parts of a large source tree are present.
+-int main(int argc, char **argv)
++int knotify_main(int argc, char **argv)
+ {
+     KAboutData aboutdata("knotify", I18N_NOOP("KNotify"),
+                          "2.0pre", I18N_NOOP("KDE Notification Server"),

@@ -1,13 +1,13 @@
-$NetBSD: patch-ai,v 1.1.1.1 2001/03/14 15:59:46 skrll Exp $
+$NetBSD: patch-ai,v 1.2 2001/10/15 22:46:22 skrll Exp $
 
---- kfile/Makefile.in.orig	Thu Feb 22 18:17:27 2001
-+++ kfile/Makefile.in
-@@ -259,7 +259,7 @@
+--- dcop/dcopserver.cpp.orig	Fri Aug  3 21:13:52 2001
++++ dcop/dcopserver.cpp
+@@ -1562,7 +1562,7 @@
+ "Copyright (C) 1999-2000, The KDE Developers <http://www.kde.org>\n"
+ ;
  
- AM_CPPFLAGS = -DQT_NO_CAST_ASCII
- 
--INCLUDES = -I$(top_srcdir) -I$(srcdir)/../libltdl/ -I$(top_srcdir)/kio -I$(top_builddir)/kio $(all_includes)
-+INCLUDES = -I$(top_srcdir) -I$(top_srcdir)/kio -I$(top_builddir)/kio $(all_includes)
- 
- lib_LTLIBRARIES = libkfile.la
- 
+-int main( int argc, char* argv[] )
++int dcopserver_main( int argc, char* argv[] )
+ {
+     bool nofork = false;
+     bool nosid = false;

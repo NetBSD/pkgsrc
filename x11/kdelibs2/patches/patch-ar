@@ -1,13 +1,52 @@
-$NetBSD: patch-ar,v 1.1.1.1 2001/03/14 15:59:44 skrll Exp $
+$NetBSD: patch-ar,v 1.2 2001/10/15 22:46:22 skrll Exp $
 
---- kparts/tests/Makefile.in.orig	Thu Feb 22 18:17:40 2001
-+++ kparts/tests/Makefile.in
-@@ -239,7 +239,7 @@
- x_includes = @x_includes@
- x_libraries = @x_libraries@
+--- kdecore/kstddirs.cpp.orig	Wed Jan 24 22:29:38 2001
++++ kdecore/kstddirs.cpp
+@@ -652,33 +652,33 @@
  
--INCLUDES = -I$(top_srcdir) -I$(top_srcdir)/libltdl -I$(top_srcdir)/kfile -I$(top_srcdir)/kio $(all_includes)
-+INCLUDES = -I$(top_srcdir) -I$(top_srcdir)/kfile -I$(top_srcdir)/kio $(all_includes)
- LDFLAGS = $(all_libraries)
- LDADD = $(top_builddir)/kparts/libkparts.la $(LIB_KDECORE)
- 
+ QString KStandardDirs::kde_default(const char *type) {
+     if (!strcmp(type, "data"))
+-	return "share/apps/";
++	return "share/kde/apps/";
+     if (!strcmp(type, "html"))
+-	return "share/doc/HTML/";
++	return "share/doc/kde/HTML/";
+     if (!strcmp(type, "icon"))
+-	return "share/icons/";
++	return "share/kde/icons/";
+     if (!strcmp(type, "config"))
+-	return "share/config/";
++	return "share/kde/config/";
+     if (!strcmp(type, "pixmap"))
+-	return "share/pixmaps/";
++	return "share/kde/pixmaps/";
+     if (!strcmp(type, "apps"))
+-	return "share/applnk/";
++	return "share/kde/applnk/";
+     if (!strcmp(type, "sound"))
+-	return "share/sounds/";
++	return "share/kde/sounds/";
+     if (!strcmp(type, "locale"))
+-	return "share/locale/";
++	return "share/kde/locale/";
+     if (!strcmp(type, "services"))
+-	return "share/services/";
++	return "share/kde/services/";
+     if (!strcmp(type, "servicetypes"))
+-	return "share/servicetypes/";
++	return "share/kde/servicetypes/";
+     if (!strcmp(type, "mime"))
+-	return "share/mimelnk/";
++	return "share/kde/mimelnk/";
+     if (!strcmp(type, "cgi"))
+-	return "cgi-bin/";
++	return "kde-cgi-bin/";
+     if (!strcmp(type, "wallpaper"))
+-	return "share/wallpapers/";
++	return "share/kde/wallpapers/";
+     if (!strcmp(type, "templates"))
+-	return "share/templates/";
++	return "share/kde/templates/";
+     if (!strcmp(type, "exe"))
+ 	return "bin/";
+     if (!strcmp(type, "lib"))

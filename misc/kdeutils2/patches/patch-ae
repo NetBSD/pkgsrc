@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1.1.1 2001/03/14 16:05:48 skrll Exp $
+$NetBSD: patch-ae,v 1.2 2001/10/15 22:45:58 skrll Exp $
 
---- khexedit/printerdialog.cc.orig	Sun Oct  1 13:14:02 2000
-+++ khexedit/printerdialog.cc
+--- khexedit/exportdialog.cc.orig	Sun Nov 26 11:37:15 2000
++++ khexedit/exportdialog.cc
 @@ -18,7 +18,7 @@
   *
   */
@@ -11,21 +11,21 @@ $NetBSD: patch-ae,v 1.1.1.1 2001/03/14 16:05:48 skrll Exp $
  
  #include <qbuttongroup.h>
  #include <qcombobox.h>
-@@ -590,7 +590,7 @@
-   mOption.pageSpin->setFixedHeight( mOption.pageSpin->sizeHint().height() );
-   mOption.pageSpin->setMinimumWidth( 
-     mOption.pageSpin->fontMetrics().width("M")*10 );
--  mOption.pageSpin->setRange( 1, MAXINT );
-+  mOption.pageSpin->setRange( 1, INT_MAX );
+@@ -321,7 +321,7 @@
  
-   text = i18n("&Number of copies");
-   QLabel *pageLabel = new QLabel( mOption.pageSpin, text, page );
-@@ -707,7 +707,7 @@
-       mLayout.marginSpin[i]->sizeHint().height() );
-     mLayout.marginSpin[i]->setMinimumWidth( 
-       mLayout.marginSpin[i]->fontMetrics().width("M")*10 );
--    mLayout.marginSpin[i]->setRange( 0, MAXINT );
-+    mLayout.marginSpin[i]->setRange( 0, INT_MAX );
- 
-     QLabel *label = new QLabel( mLayout.marginSpin[i], name[i], group );
-     label->setFixedHeight( mLayout.marginSpin[i]->sizeHint().height() );
+   mHtml.lineSpin = new QSpinBox( frame );
+   mHtml.lineSpin->setMinimumWidth( fontMetrics().maxWidth()*10 );
+-  mHtml.lineSpin->setRange( 5, MAXINT );
++  mHtml.lineSpin->setRange( 5, INT_MAX );
+   gbox->addWidget( mHtml.lineSpin, 0, 1 );
+   
+   text = i18n("&Lines per table");
+@@ -432,7 +432,7 @@
+   
+   mArray.lineSizeSpin = new QSpinBox( page );
+   mArray.lineSizeSpin->setMinimumWidth( fontMetrics().maxWidth()*10 );
+-  mArray.lineSizeSpin->setRange( 1, MAXINT );
++  mArray.lineSizeSpin->setRange( 1, INT_MAX );
+   gbox->addWidget( mArray.lineSizeSpin, 2, 1 );
+   text = i18n("Elements per line:"); 
+   label = new QLabel( mArray.lineSizeSpin, text, page );

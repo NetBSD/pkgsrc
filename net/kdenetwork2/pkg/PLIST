@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/14 16:07:30 skrll Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/10/15 22:46:17 skrll Exp $
 bin/dsirc
-bin/keystone
+bin/kdict
 bin/kit
 bin/kmail
 bin/kmailcvt
@@ -18,6 +18,40 @@ bin/lisa
 bin/mail.local
 bin/reslisa
 include/kmailIface.h
+include/mimelib/address.h
+include/mimelib/addrlist.h
+include/mimelib/binhex.h
+include/mimelib/body.h
+include/mimelib/bodypart.h
+include/mimelib/boyermor.h
+include/mimelib/config.h
+include/mimelib/datetime.h
+include/mimelib/debug.h
+include/mimelib/disptype.h
+include/mimelib/entity.h
+include/mimelib/enum.h
+include/mimelib/field.h
+include/mimelib/fieldbdy.h
+include/mimelib/group.h
+include/mimelib/headers.h
+include/mimelib/mailbox.h
+include/mimelib/mboxlist.h
+include/mimelib/mechansm.h
+include/mimelib/mediatyp.h
+include/mimelib/message.h
+include/mimelib/mimepp.h
+include/mimelib/msgcmp.h
+include/mimelib/msgid.h
+include/mimelib/nntp.h
+include/mimelib/param.h
+include/mimelib/pop.h
+include/mimelib/protocol.h
+include/mimelib/smtp.h
+include/mimelib/string.h
+include/mimelib/text.h
+include/mimelib/token.h
+include/mimelib/utility.h
+include/mimelib/uuencode.h
 lib/kde2/libkcm_ktalkd.a
 lib/kde2/libkcm_ktalkd.la
 lib/kde2/libkcm_ktalkd.so
@@ -33,72 +67,49 @@ lib/libkcm_lanbrowser.so
 lib/libkcm_newsticker.a
 lib/libkcm_newsticker.la
 lib/libkcm_newsticker.so
-lib/libknewsticker.a
-lib/libknewsticker.la
-lib/libknewsticker.so
-lib/libknewsticker.so.1
-lib/libknewsticker.so.1.0
-share/doc/kde/HTML/en/keystone/.anchors
-share/doc/kde/HTML/en/keystone/common
-share/doc/kde/HTML/en/keystone/index.docbook
-share/doc/kde/HTML/en/keystone/index.html
-share/doc/kde/HTML/en/keystone/introduction.html
-share/doc/kde/HTML/en/kit/.anchors
+lib/libkdenetwork.a
+lib/libkdenetwork.la
+lib/libkdenetwork.so
+lib/libkdenetwork.so.1
+lib/libkdenetwork.so.1.0
+lib/libkdictapplet.a
+lib/libkdictapplet.la
+lib/libkdictapplet.so
+lib/libkdictapplet.so.1
+lib/libkdictapplet.so.1.0
+lib/libknewstickerapplet.a
+lib/libknewstickerapplet.la
+lib/libknewstickerapplet.so
+lib/libkntsrcfilepropsdlg.a
+lib/libkntsrcfilepropsdlg.la
+lib/libkntsrcfilepropsdlg.so
+lib/libmimelib.a
+lib/libmimelib.la
+lib/libmimelib.so
+lib/libmimelib.so.1
+lib/libmimelib.so.1.1
+share/doc/kde/HTML/en/kdict/applet.png
+share/doc/kde/HTML/en/kdict/common
+share/doc/kde/HTML/en/kdict/conf.png
+share/doc/kde/HTML/en/kdict/index.cache.bz2
+share/doc/kde/HTML/en/kdict/index.docbook
+share/doc/kde/HTML/en/kdict/mainwin.png
+share/doc/kde/HTML/en/kdict/seteditor.png
 share/doc/kde/HTML/en/kit/common
+share/doc/kde/HTML/en/kit/index.cache.bz2
 share/doc/kde/HTML/en/kit/index.docbook
-share/doc/kde/HTML/en/kit/index.html
-share/doc/kde/HTML/en/kit/introduction.html
-share/doc/kde/HTML/en/kmail/.anchors
-share/doc/kde/HTML/en/kmail/appearance-tab.html
 share/doc/kde/HTML/en/kmail/common
-share/doc/kde/HTML/en/kmail/compilation.html
-share/doc/kde/HTML/en/kmail/composer-tab.html
-share/doc/kde/HTML/en/kmail/composer-window-menus.html
-share/doc/kde/HTML/en/kmail/credits-and-licenses.html
-share/doc/kde/HTML/en/kmail/customizing.html
-share/doc/kde/HTML/en/kmail/documentation.html
-share/doc/kde/HTML/en/kmail/faq.html
-share/doc/kde/HTML/en/kmail/filters.html
-share/doc/kde/HTML/en/kmail/folders.html
-share/doc/kde/HTML/en/kmail/getting-started.html
-share/doc/kde/HTML/en/kmail/importing.html
+share/doc/kde/HTML/en/kmail/index.cache.bz2
 share/doc/kde/HTML/en/kmail/index.docbook
-share/doc/kde/HTML/en/kmail/index.html
-share/doc/kde/HTML/en/kmail/installation.html
-share/doc/kde/HTML/en/kmail/intro.html
-share/doc/kde/HTML/en/kmail/menus.html
-share/doc/kde/HTML/en/kmail/mime-tab.html
-share/doc/kde/HTML/en/kmail/misc-tab.html
-share/doc/kde/HTML/en/kmail/multiple-accounts.html
-share/doc/kde/HTML/en/kmail/network-tab.html
-share/doc/kde/HTML/en/kmail/pgp.html
-share/doc/kde/HTML/en/kmail/security-tab.html
-share/doc/kde/HTML/en/kmail/setting-up-your-account.html
-share/doc/kde/HTML/en/kmail/team.html
-share/doc/kde/HTML/en/kmail/testing-your-setup.html
-share/doc/kde/HTML/en/kmail/the-address-book.html
-share/doc/kde/HTML/en/kmail/the-composer-window.html
-share/doc/kde/HTML/en/kmail/using-kmail.html
-share/doc/kde/HTML/en/knewsticker/.anchors
 share/doc/kde/HTML/en/knewsticker/TODO
 share/doc/kde/HTML/en/knewsticker/about-icon.png
 share/doc/kde/HTML/en/knewsticker/checknews-icon.png
 share/doc/kde/HTML/en/knewsticker/common
-share/doc/kde/HTML/en/knewsticker/compilation.html
-share/doc/kde/HTML/en/knewsticker/config-newssources.html
-share/doc/kde/HTML/en/knewsticker/configuration.html
-share/doc/kde/HTML/en/knewsticker/contextmenu-descr.html
 share/doc/kde/HTML/en/knewsticker/contextmenu.png
-share/doc/kde/HTML/en/knewsticker/credits.html
-share/doc/kde/HTML/en/knewsticker/develinfo.html
 share/doc/kde/HTML/en/knewsticker/downarrow-icon.png
-share/doc/kde/HTML/en/knewsticker/faq.html
-share/doc/kde/HTML/en/knewsticker/glossary.html
 share/doc/kde/HTML/en/knewsticker/help-icon.png
+share/doc/kde/HTML/en/knewsticker/index.cache.bz2
 share/doc/kde/HTML/en/knewsticker/index.docbook
-share/doc/kde/HTML/en/knewsticker/index.html
-share/doc/kde/HTML/en/knewsticker/installation.html
-share/doc/kde/HTML/en/knewsticker/introduction.html
 share/doc/kde/HTML/en/knewsticker/kcmnewsticker-general.png
 share/doc/kde/HTML/en/knewsticker/kcmnewsticker-newssources.png
 share/doc/kde/HTML/en/knewsticker/kcontrol-icon.png
@@ -109,26 +120,14 @@ share/doc/kde/HTML/en/knewsticker/newssite-icon.png
 share/doc/kde/HTML/en/knewsticker/noarticles-icon.png
 share/doc/kde/HTML/en/knewsticker/oldarticle-icon.png
 share/doc/kde/HTML/en/knewsticker/preferences-icon.png
-share/doc/kde/HTML/en/knewsticker/requirements.html
-share/doc/kde/HTML/en/knewsticker/starting-knewsticker.html
 share/doc/kde/HTML/en/knewsticker/uparrow-icon.png
-share/doc/kde/HTML/en/knewsticker/using-knewsticker.html
-share/doc/kde/HTML/en/knode/.anchors
-share/doc/kde/HTML/en/knode/commands.html
 share/doc/kde/HTML/en/knode/common
-share/doc/kde/HTML/en/knode/compilation.html
-share/doc/kde/HTML/en/knode/configuration.html
-share/doc/kde/HTML/en/knode/credits.html
 share/doc/kde/HTML/en/knode/eyes.png
-share/doc/kde/HTML/en/knode/faq.html
+share/doc/kde/HTML/en/knode/german_original.docbook
 share/doc/kde/HTML/en/knode/greyball.png
 share/doc/kde/HTML/en/knode/greyballchk.png
+share/doc/kde/HTML/en/knode/index.cache.bz2
 share/doc/kde/HTML/en/knode/index.docbook
-share/doc/kde/HTML/en/knode/index.html
-share/doc/kde/HTML/en/knode/infos-technical.html
-share/doc/kde/HTML/en/knode/infos-testgroups.html
-share/doc/kde/HTML/en/knode/installation.html
-share/doc/kde/HTML/en/knode/introduction.html
 share/doc/kde/HTML/en/knode/knode-cleanup.png
 share/doc/kde/HTML/en/knode/knode-colors-fonts.png
 share/doc/kde/HTML/en/knode/knode-composer-attachments.png
@@ -136,51 +135,40 @@ share/doc/kde/HTML/en/knode/knode-composer-settings.png
 share/doc/kde/HTML/en/knode/knode-edit-filter.png
 share/doc/kde/HTML/en/knode/knode-edit-header1.png
 share/doc/kde/HTML/en/knode/knode-edit-header2.png
-share/doc/kde/HTML/en/knode/knode-editorwindow.html
 share/doc/kde/HTML/en/knode/knode-filters.png
 share/doc/kde/HTML/en/knode/knode-followup.png
 share/doc/kde/HTML/en/knode/knode-header-settings.png
 share/doc/kde/HTML/en/knode/knode-identity.png
-share/doc/kde/HTML/en/knode/knode-journey.html
 share/doc/kde/HTML/en/knode/knode-mail-account.png
-share/doc/kde/HTML/en/knode/knode-more-info.html
 share/doc/kde/HTML/en/knode/knode-new-article.png
 share/doc/kde/HTML/en/knode/knode-news-account.png
 share/doc/kde/HTML/en/knode/knode-post-settings.png
+share/doc/kde/HTML/en/knode/knode-read-news-appearance-dialog.png
 share/doc/kde/HTML/en/knode/knode-read-news-settings.png
 share/doc/kde/HTML/en/knode/knode-reply.png
 share/doc/kde/HTML/en/knode/knode-search.png
 share/doc/kde/HTML/en/knode/knode-start.png
 share/doc/kde/HTML/en/knode/knode-subscribe.png
 share/doc/kde/HTML/en/knode/knode-views.png
-share/doc/kde/HTML/en/knode/more-knode-features.html
-share/doc/kde/HTML/en/knode/nettiquette.html
 share/doc/kde/HTML/en/knode/newsubs.png
 share/doc/kde/HTML/en/knode/redball.png
 share/doc/kde/HTML/en/knode/redballchk.png
-share/doc/kde/HTML/en/knode/requirements.html
-share/doc/kde/HTML/en/knode/subscribing.html
-share/doc/kde/HTML/en/knode/update-installation.html
-share/doc/kde/HTML/en/knode/usenet-slang.html
-share/doc/kde/HTML/en/knode/using-knode.html
-share/doc/kde/HTML/en/korn/.anchors
+share/doc/kde/HTML/en/knode/translation.po
 share/doc/kde/HTML/en/korn/common
+share/doc/kde/HTML/en/korn/index.cache.bz2
 share/doc/kde/HTML/en/korn/index.docbook
-share/doc/kde/HTML/en/korn/index.html
-share/doc/kde/HTML/en/korn/introduction.html
-share/doc/kde/HTML/en/korn/licenses-and-credits.html
-share/doc/kde/HTML/en/korn/the-display-tab.html
-share/doc/kde/HTML/en/korn/the-new-dialog.html
-share/doc/kde/HTML/en/korn/the-preferences-dialog.html
-share/doc/kde/HTML/en/kppp/.anchors
+share/doc/kde/HTML/en/kppp/accounting.docbook
+share/doc/kde/HTML/en/kppp/callback.docbook
+share/doc/kde/HTML/en/kppp/chap.docbook
 share/doc/kde/HTML/en/kppp/common
 share/doc/kde/HTML/en/kppp/costsgraphs.fig
 share/doc/kde/HTML/en/kppp/costsgraphs.png
-share/doc/kde/HTML/en/kppp/finishing-the-wizard.html
-share/doc/kde/HTML/en/kppp/getting-online.html
+share/doc/kde/HTML/en/kppp/dialog-setup.docbook
+share/doc/kde/HTML/en/kppp/getting-online.docbook
+share/doc/kde/HTML/en/kppp/global-settings.docbook
+share/doc/kde/HTML/en/kppp/hayes.docbook
+share/doc/kde/HTML/en/kppp/index.cache.bz2
 share/doc/kde/HTML/en/kppp/index.docbook
-share/doc/kde/HTML/en/kppp/index.html
-share/doc/kde/HTML/en/kppp/introduction.html
 share/doc/kde/HTML/en/kppp/kppp-account-accounting-tab.png
 share/doc/kde/HTML/en/kppp/kppp-account-dial-tab.png
 share/doc/kde/HTML/en/kppp/kppp-account-dns-tab.png
@@ -191,78 +179,61 @@ share/doc/kde/HTML/en/kppp/kppp-account-login-script-tab.png
 share/doc/kde/HTML/en/kppp/kppp-config.png
 share/doc/kde/HTML/en/kppp/kppp-device-tab.png
 share/doc/kde/HTML/en/kppp/kppp-dialler-tab.png
+share/doc/kde/HTML/en/kppp/kppp-faq.docbook
 share/doc/kde/HTML/en/kppp/kppp-graph-tab.png
 share/doc/kde/HTML/en/kppp/kppp-misc-tab.png
 share/doc/kde/HTML/en/kppp/kppp-modem-tab.png
 share/doc/kde/HTML/en/kppp/kppp-wizard.png
 share/doc/kde/HTML/en/kppp/kppp.faq.question
+share/doc/kde/HTML/en/kppp/security.docbook
+share/doc/kde/HTML/en/kppp/tricks.docbook
 share/doc/kde/HTML/en/kppp/ttyS-cua.txt
-share/doc/kde/HTML/en/kppp/wizard.html
-share/doc/kde/HTML/en/ksirc/.anchors
-share/doc/kde/HTML/en/ksirc/addingfilehandlestothemainselectloop.html
-share/doc/kde/HTML/en/ksirc/bots.html
-share/doc/kde/HTML/en/ksirc/colournumbers.html
+share/doc/kde/HTML/en/kppp/wizard.docbook
 share/doc/kde/HTML/en/ksirc/common
-share/doc/kde/HTML/en/ksirc/examplesfilters.html
-share/doc/kde/HTML/en/ksirc/examplessetcolors.html
-share/doc/kde/HTML/en/ksirc/filters.html
-share/doc/kde/HTML/en/ksirc/hooks.html
-share/doc/kde/HTML/en/ksirc/index.cvlog
+share/doc/kde/HTML/en/ksirc/index.cache.bz2
 share/doc/kde/HTML/en/ksirc/index.docbook
-share/doc/kde/HTML/en/ksirc/index.html
-share/doc/kde/HTML/en/ksirc/installation.html
-share/doc/kde/HTML/en/ksirc/keys.html
-share/doc/kde/HTML/en/ksirc/ksirc.png
-share/doc/kde/HTML/en/ksirc/ksircnative.html
-share/doc/kde/HTML/en/ksirc/programmingyoursircclient.html
-share/doc/kde/HTML/en/ksirc/sectcolors.html
-share/doc/kde/HTML/en/ksirc/sendingboldunderlinereverseandcolour.html
-share/doc/kde/HTML/en/ksirc/setvariables.html
-share/doc/kde/HTML/en/ksirc/timers.html
-share/doc/kde/HTML/en/ksirc/userhostrequests.html
-share/doc/kde/HTML/en/ktalkd/.anchors
 share/doc/kde/HTML/en/ktalkd/common
-share/doc/kde/HTML/en/ktalkd/compilationandinstallation.html
-share/doc/kde/HTML/en/ktalkd/copyright.html
-share/doc/kde/HTML/en/ktalkd/howdoigetdebugoutputfromktalkd.html
-share/doc/kde/HTML/en/ktalkd/index.cvlog
+share/doc/kde/HTML/en/ktalkd/index.cache.bz2
 share/doc/kde/HTML/en/ktalkd/index.docbook
-share/doc/kde/HTML/en/ktalkd/index.html
-share/doc/kde/HTML/en/ktalkd/installation.html
-share/doc/kde/HTML/en/ktalkd/introduction.html
-share/doc/kde/HTML/en/ktalkd/questionsandanswers.html
-share/doc/kde/HTML/en/ktalkd/requirements.html
-share/doc/kde/HTML/en/ktalkd/supportedplatforms.html
-share/doc/kde/HTML/en/ktalkd/usage.html
-share/doc/kde/HTML/en/ktalkd/whydontiasanormaluserreceivekdeannouncements.html
+share/doc/kde/HTML/en/lisa/common
+share/doc/kde/HTML/en/lisa/index.cache.bz2
+share/doc/kde/HTML/en/lisa/index.docbook
 share/kde/applnk/.hidden/knewstickerstub.desktop
 share/kde/applnk/Internet/KMail.desktop
 share/kde/applnk/Internet/KNode.desktop
 share/kde/applnk/Internet/KOrn.desktop
 share/kde/applnk/Internet/Kppp.desktop
-share/kde/applnk/Internet/keystone.desktop
 share/kde/applnk/Internet/kit.desktop
 share/kde/applnk/Internet/kppplogview.desktop
 share/kde/applnk/Internet/ksirc.desktop
 share/kde/applnk/Settings/Network/kcmktalkd.desktop
+share/kde/applnk/Settings/Network/kcmnewsticker.desktop
 share/kde/applnk/Settings/Network/lanbrowser.desktop
 share/kde/applnk/Settings/Personalization/kcmnewsticker.desktop
+share/kde/applnk/Utilities/kdict.desktop
 share/kde/applnk/Utilities/kmailcvt.desktop
-share/kde/apps/keystone/keystoneui.rc
+share/kde/apps/kconf_update/knewsticker.upd
+share/kde/apps/kconf_update/knt-0.1-0.2.pl
+share/kde/apps/kdict/icons/hicolor/16x16/actions/define_clip.png
+share/kde/apps/kdict/icons/hicolor/16x16/actions/query_erase.png
+share/kde/apps/kdict/icons/hicolor/22x22/actions/define_clip.png
+share/kde/apps/kdict/icons/hicolor/32x32/actions/define_clip.png
+share/kde/apps/kdict/kdictui.rc
+share/kde/apps/kicker/applets/kdictapplet.desktop
 share/kde/apps/kicker/applets/knewsticker.desktop
 share/kde/apps/kit/eventsrc
-share/kde/apps/kit/icons/locolor/16x16/actions/kit_anonwarning.png
-share/kde/apps/kit/icons/locolor/16x16/actions/kit_away.png
-share/kde/apps/kit/icons/locolor/16x16/actions/kit_bold.png
-share/kde/apps/kit/icons/locolor/16x16/actions/kit_group.png
-share/kde/apps/kit/icons/locolor/16x16/actions/kit_info.png
-share/kde/apps/kit/icons/locolor/16x16/actions/kit_logging.png
-share/kde/apps/kit/icons/locolor/16x16/actions/kit_offline.png
-share/kde/apps/kit/icons/locolor/16x16/actions/kit_online.png
-share/kde/apps/kit/icons/locolor/16x16/actions/kit_sound.png
-share/kde/apps/kit/icons/locolor/16x16/actions/kit_status.png
-share/kde/apps/kit/icons/locolor/16x16/actions/kit_timestamping.png
-share/kde/apps/kit/icons/locolor/16x16/actions/kit_warning.png
+share/kde/apps/kit/icons/hicolor/16x16/actions/kit_anonwarning.png
+share/kde/apps/kit/icons/hicolor/16x16/actions/kit_away.png
+share/kde/apps/kit/icons/hicolor/16x16/actions/kit_bold.png
+share/kde/apps/kit/icons/hicolor/16x16/actions/kit_group.png
+share/kde/apps/kit/icons/hicolor/16x16/actions/kit_info.png
+share/kde/apps/kit/icons/hicolor/16x16/actions/kit_logging.png
+share/kde/apps/kit/icons/hicolor/16x16/actions/kit_offline.png
+share/kde/apps/kit/icons/hicolor/16x16/actions/kit_online.png
+share/kde/apps/kit/icons/hicolor/16x16/actions/kit_sound.png
+share/kde/apps/kit/icons/hicolor/16x16/actions/kit_status.png
+share/kde/apps/kit/icons/hicolor/16x16/actions/kit_timestamping.png
+share/kde/apps/kit/icons/hicolor/16x16/actions/kit_warning.png
 share/kde/apps/kmail/about/background.png
 share/kde/apps/kmail/about/bgtable.png
 share/kde/apps/kmail/about/kdelogo2.png
@@ -288,6 +259,7 @@ share/kde/apps/kmail/pics/kmfolder.png
 share/kde/apps/kmail/pics/kmfolderfull.png
 share/kde/apps/kmail/pics/kminsorgmsg.png
 share/kde/apps/kmail/pics/kmmsgdel.png
+share/kde/apps/kmail/pics/kmmsgflag.png
 share/kde/apps/kmail/pics/kmmsgforwarded.png
 share/kde/apps/kmail/pics/kmmsgnew.png
 share/kde/apps/kmail/pics/kmmsgold.png
@@ -315,7 +287,6 @@ share/kde/apps/knode/headers.rc
 share/kde/apps/knode/icons/hicolor/16x16/actions/message_reply.png
 share/kde/apps/knode/icons/hicolor/22x22/actions/message_reply.png
 share/kde/apps/knode/icons/hicolor/32x32/actions/message_reply.png
-share/kde/apps/knode/icons/locolor/16x16/actions/message_reply.png
 share/kde/apps/knode/kncomposerui.rc
 share/kde/apps/knode/knodeui.rc
 share/kde/apps/knode/knreaderui.rc
@@ -325,6 +296,7 @@ share/kde/apps/knode/pics/greyball.png
 share/kde/apps/knode/pics/greyballchk.png
 share/kde/apps/knode/pics/group.png
 share/kde/apps/knode/pics/group_big.png
+share/kde/apps/knode/pics/ignore.png
 share/kde/apps/knode/pics/mail.png
 share/kde/apps/knode/pics/newsubs.png
 share/kde/apps/knode/pics/pgp-keys.png
@@ -339,6 +311,30 @@ share/kde/apps/knode/pics/stat_sent.png
 share/kde/apps/konqueror/dirtree/remote/lan.desktop
 share/kde/apps/kppp/Provider/Austria/.directory
 share/kde/apps/kppp/Provider/Austria/Simon%032Media
+share/kde/apps/kppp/Provider/Czech_Republic/.directory
+share/kde/apps/kppp/Provider/Czech_Republic/AICOM
+share/kde/apps/kppp/Provider/Czech_Republic/ARsystem
+share/kde/apps/kppp/Provider/Czech_Republic/ASYS
+share/kde/apps/kppp/Provider/Czech_Republic/ApexNet
+share/kde/apps/kppp/Provider/Czech_Republic/BohemiaNet
+share/kde/apps/kppp/Provider/Czech_Republic/Brailcom
+share/kde/apps/kppp/Provider/Czech_Republic/CITYNET
+share/kde/apps/kppp/Provider/Czech_Republic/Contactel
+share/kde/apps/kppp/Provider/Czech_Republic/ES-servis
+share/kde/apps/kppp/Provider/Czech_Republic/Econnect
+share/kde/apps/kppp/Provider/Czech_Republic/Falco_computer
+share/kde/apps/kppp/Provider/Czech_Republic/Fortech
+share/kde/apps/kppp/Provider/Czech_Republic/HP-NET
+share/kde/apps/kppp/Provider/Czech_Republic/INTERNET_OnLine
+share/kde/apps/kppp/Provider/Czech_Republic/INTERNEXT
+share/kde/apps/kppp/Provider/Czech_Republic/IQNET
+share/kde/apps/kppp/Provider/Czech_Republic/KPNQuest
+share/kde/apps/kppp/Provider/Czech_Republic/M-soft
+share/kde/apps/kppp/Provider/Czech_Republic/Nextra
+share/kde/apps/kppp/Provider/Czech_Republic/ProfiNet
+share/kde/apps/kppp/Provider/Czech_Republic/SeverNET
+share/kde/apps/kppp/Provider/Czech_Republic/Video_OnLine
+share/kde/apps/kppp/Provider/Czech_Republic/Volny
 share/kde/apps/kppp/Provider/Denmark/.directory
 share/kde/apps/kppp/Provider/Denmark/Get2Net
 share/kde/apps/kppp/Provider/Germany/.directory
@@ -385,8 +381,8 @@ share/kde/apps/kppp/Provider/Portugal/Clix
 share/kde/apps/kppp/Provider/Portugal/Netc
 share/kde/apps/kppp/Provider/Portugal/OniNet
 share/kde/apps/kppp/Provider/Sweden/.directory
+share/kde/apps/kppp/Provider/Sweden/Tiscali
 share/kde/apps/kppp/Provider/Sweden/Utfors
-share/kde/apps/kppp/Provider/Sweden/World%032Online
 share/kde/apps/kppp/Provider/Taiwan/.directory
 share/kde/apps/kppp/Provider/Taiwan/EraNet
 share/kde/apps/kppp/Provider/Taiwan/HiNet
@@ -396,15 +392,42 @@ share/kde/apps/kppp/Provider/United_Kingdom/Demon%032Green%0322120666
 share/kde/apps/kppp/Provider/United_Kingdom/Demon%032Purple%0322121666
 share/kde/apps/kppp/Provider/United_Kingdom/Demon%032Red%0320798666
 share/kde/apps/kppp/Provider/United_Kingdom/FreeServe
+share/kde/apps/kppp/Provider/Yugoslavia/041Net
+share/kde/apps/kppp/Provider/Yugoslavia/041Net.rst
+share/kde/apps/kppp/Provider/Yugoslavia/9819
+share/kde/apps/kppp/Provider/Yugoslavia/9819.rst
 share/kde/apps/kppp/Provider/Yugoslavia/BeoTelNet
+share/kde/apps/kppp/Provider/Yugoslavia/CG.Bar.yu
+share/kde/apps/kppp/Provider/Yugoslavia/CG.Berane.yu
+share/kde/apps/kppp/Provider/Yugoslavia/CG.BijeloPolje.CG.yu
+share/kde/apps/kppp/Provider/Yugoslavia/CG.Budva.yu
+share/kde/apps/kppp/Provider/Yugoslavia/CG.Cetinje.yu
+share/kde/apps/kppp/Provider/Yugoslavia/CG.HercegNovi.yu
+share/kde/apps/kppp/Provider/Yugoslavia/CG.Kotor.yu
+share/kde/apps/kppp/Provider/Yugoslavia/CG.Niksic.yu
+share/kde/apps/kppp/Provider/Yugoslavia/CG.Pljevlja.yu
+share/kde/apps/kppp/Provider/Yugoslavia/CG.Podgorica.yu
+share/kde/apps/kppp/Provider/Yugoslavia/CG.Tivat.yu
+share/kde/apps/kppp/Provider/Yugoslavia/CG.Ulcinj.yu
 share/kde/apps/kppp/Provider/Yugoslavia/CG.yu
 share/kde/apps/kppp/Provider/Yugoslavia/DrenikNet
-share/kde/apps/kppp/Provider/Yugoslavia/EUnet
-share/kde/apps/kppp/Provider/Yugoslavia/EUnetlite
+share/kde/apps/kppp/Provider/Yugoslavia/EUnet@Full
+share/kde/apps/kppp/Provider/Yugoslavia/EUnet@Lite
+share/kde/apps/kppp/Provider/Yugoslavia/EUnetBeograd
+share/kde/apps/kppp/Provider/Yugoslavia/EUnetCacak
+share/kde/apps/kppp/Provider/Yugoslavia/EUnetKragujevac
+share/kde/apps/kppp/Provider/Yugoslavia/EUnetNis
+share/kde/apps/kppp/Provider/Yugoslavia/EUnetNoviSad
+share/kde/apps/kppp/Provider/Yugoslavia/EUnetPristina
+share/kde/apps/kppp/Provider/Yugoslavia/EUnetSombor
+share/kde/apps/kppp/Provider/Yugoslavia/EUnetSubotica
 share/kde/apps/kppp/Provider/Yugoslavia/InfoSKY
 share/kde/apps/kppp/Provider/Yugoslavia/PTT
 share/kde/apps/kppp/Provider/Yugoslavia/SCnet
 share/kde/apps/kppp/Provider/Yugoslavia/Sezampro
+share/kde/apps/kppp/Provider/Yugoslavia/TelefonZona1.rst
+share/kde/apps/kppp/Provider/Yugoslavia/TelefonZona2.rst
+share/kde/apps/kppp/Provider/Yugoslavia/TelefonZona3.rst
 share/kde/apps/kppp/Provider/Yugoslavia/VeratNet
 share/kde/apps/kppp/Provider/Yugoslavia/YUBCnet
 share/kde/apps/kppp/Rules/Argentina/Argentina_0610.rst
@@ -430,6 +453,8 @@ share/kde/apps/kppp/Rules/Austria/Standard/Online.rst
 share/kde/apps/kppp/Rules/Austria/Standard/UTA_easyinternet.rst
 share/kde/apps/kppp/Rules/Bangladesh/ATT00007.rst
 share/kde/apps/kppp/Rules/Bangladesh/ATT00010.rst
+share/kde/apps/kppp/Rules/Belgium/Belgium_internet_euro.rst
+share/kde/apps/kppp/Rules/Belgium/Belgium_internet_frank.rst
 share/kde/apps/kppp/Rules/Belgium/Belgium_interzonal.rst
 share/kde/apps/kppp/Rules/Belgium/Belgium_zonal.rst
 share/kde/apps/kppp/Rules/Brasil/Brasil.rst
@@ -444,7 +469,7 @@ share/kde/apps/kppp/Rules/Croatia/iskon_medjugradski_poziv.rst
 share/kde/apps/kppp/Rules/Croatia/iskon_optimal.rst
 share/kde/apps/kppp/Rules/Croatia/iskon_zagrebacka_zupanija.rst
 share/kde/apps/kppp/Rules/Czechia/Czech_Telecom_City.rst
-share/kde/apps/kppp/Rules/Czechia/Czech_Telecom_Internet2000.rst
+share/kde/apps/kppp/Rules/Czechia/Czech_Telecom_Internet.rst
 share/kde/apps/kppp/Rules/Denmark/12Move_Analog.rst
 share/kde/apps/kppp/Rules/Denmark/12Move_ISDN.rst
 share/kde/apps/kppp/Rules/Denmark/Cybercity_Friabonnement.rst
@@ -455,43 +480,49 @@ share/kde/apps/kppp/Rules/Denmark/Teledanmark_Basis.rst
 share/kde/apps/kppp/Rules/Denmark/Teledanmark_Favoritinternet.rst
 share/kde/apps/kppp/Rules/Denmark/Worldonline-Analog.rst
 share/kde/apps/kppp/Rules/Denmark/Worldonline-ISDN.rst
-share/kde/apps/kppp/Rules/England/BirminghamCable_Local.rst
-share/kde/apps/kppp/Rules/England/BirminghamCable_National.rst
-share/kde/apps/kppp/Rules/England/BirminghamCable_SameTelco.rst
-share/kde/apps/kppp/Rules/England/BritishTelecom_Local.rst
-share/kde/apps/kppp/Rules/England/BritishTelecom_National.rst
-share/kde/apps/kppp/Rules/England/BritishTelecom_Regional.rst
 share/kde/apps/kppp/Rules/Estonia/Eesti_Telefon.rst
+share/kde/apps/kppp/Rules/Finland/Vaasan_LP.rst
 share/kde/apps/kppp/Rules/France/France_Telecom_Local.rst
 share/kde/apps/kppp/Rules/France/France_Telecom_Local_Area.rst
 share/kde/apps/kppp/Rules/France/France_Telecom_Local_Primaliste_Internet.rst
 share/kde/apps/kppp/Rules/France/France_Telecom_National.rst
+share/kde/apps/kppp/Rules/Germany/2.5min.rst
+share/kde/apps/kppp/Rules/Germany/2.5s.rst
 share/kde/apps/kppp/Rules/Germany/AddCom_by_Call.rst
 share/kde/apps/kppp/Rules/Germany/Addcom.rst
 share/kde/apps/kppp/Rules/Germany/CallOkaynet.rst
 share/kde/apps/kppp/Rules/Germany/Callino_Surf_Basic.rst
 share/kde/apps/kppp/Rules/Germany/Callino_Surf_Plus.rst
 share/kde/apps/kppp/Rules/Germany/City_Activ_Plus_Option.rst
+share/kde/apps/kppp/Rules/Germany/Cityweb.rst
 share/kde/apps/kppp/Rules/Germany/Freenet_Enterprise.rst
+share/kde/apps/kppp/Rules/Germany/Freenet_special_call_by_call.rst
 share/kde/apps/kppp/Rules/Germany/MSN.rst
 share/kde/apps/kppp/Rules/Germany/Mobilcom_Freenet.rst
 share/kde/apps/kppp/Rules/Germany/NGI_Call_By_Call.rst
+share/kde/apps/kppp/Rules/Germany/Netcom_Kassel.rst
 share/kde/apps/kppp/Rules/Germany/Nikoma.rst
 share/kde/apps/kppp/Rules/Germany/Nikoma_Internet_by_Call.rst
 share/kde/apps/kppp/Rules/Germany/Nikoma_Study_and_Surf.rst
 share/kde/apps/kppp/Rules/Germany/Planet-Interkom_Internet_by_call.rst
+share/kde/apps/kppp/Rules/Germany/Telekom_City.rst
 share/kde/apps/kppp/Rules/Germany/Telekom_City_Select_5_30.rst
+share/kde/apps/kppp/Rules/Germany/expressnet.rst
 share/kde/apps/kppp/Rules/Germany/knUUt-by-Call.rst
 share/kde/apps/kppp/Rules/Germany/talkline_by_call.rst
 share/kde/apps/kppp/Rules/Germany/vossnet_fun.rst
 share/kde/apps/kppp/Rules/Germany/vossnet_fun_light.rst
 share/kde/apps/kppp/Rules/Germany/vossnet_kompl.rst
-share/kde/apps/kppp/Rules/Greece/Hellas_EPAK_Zone1.rst
-share/kde/apps/kppp/Rules/Greece/Hellas_EPAK_Zone2.rst
-share/kde/apps/kppp/Rules/Greece/Hellas_EPAK_Zone3.rst
-share/kde/apps/kppp/Rules/Greece/Hellas_EPAK_local.rst
-share/kde/apps/kppp/Rules/Greece/Hellas_analog_local.rst
-share/kde/apps/kppp/Rules/Greece/Hellas_digital_local.rst
+share/kde/apps/kppp/Rules/Greece/Hellas_EPAK_Zone1_in_drs.rst
+share/kde/apps/kppp/Rules/Greece/Hellas_EPAK_Zone1_in_euro.rst
+share/kde/apps/kppp/Rules/Greece/Hellas_EPAK_Zone2_in_drs.rst
+share/kde/apps/kppp/Rules/Greece/Hellas_EPAK_Zone2_in_euro.rst
+share/kde/apps/kppp/Rules/Greece/Hellas_EPAK_local_in_drs.rst
+share/kde/apps/kppp/Rules/Greece/Hellas_EPAK_local_in_euro.rst
+share/kde/apps/kppp/Rules/Greece/Hellas_analog_local_in_drs.rst
+share/kde/apps/kppp/Rules/Greece/Hellas_analog_local_in_euro.rst
+share/kde/apps/kppp/Rules/Greece/Hellas_digital_local_in_drs.rst
+share/kde/apps/kppp/Rules/Greece/Hellas_digital_local_in_euro.rst
 share/kde/apps/kppp/Rules/Hong_Kong/Hong_Kong_Telecom.rst
 share/kde/apps/kppp/Rules/Hungary/Local.rst
 share/kde/apps/kppp/Rules/Hungary/LocalTop_MATAV.rst
@@ -510,20 +541,36 @@ share/kde/apps/kppp/Rules/Ireland/Eircom_National.rst
 share/kde/apps/kppp/Rules/Ireland/Eircom_Special.rst
 share/kde/apps/kppp/Rules/Israel/Bezeq_Interurban.rst
 share/kde/apps/kppp/Rules/Israel/Bezeq_Local.rst
-share/kde/apps/kppp/Rules/Italy/Telecom_0-15_km.rst
-share/kde/apps/kppp/Rules/Italy/Telecom_15-30_km.rst
-share/kde/apps/kppp/Rules/Italy/Telecom_30-60_km.rst
-share/kde/apps/kppp/Rules/Italy/Telecom_60+_km.rst
-share/kde/apps/kppp/Rules/Italy/Telecom_Distrettuali.rst
-share/kde/apps/kppp/Rules/Italy/Telecom_Interurbana_settoriale.rst
-share/kde/apps/kppp/Rules/Italy/Telecom_TAT.rst
-share/kde/apps/kppp/Rules/Italy/Telecom_TUT.rst
-share/kde/apps/kppp/Rules/Italy/Telecom_Urbana.rst
+share/kde/apps/kppp/Rules/Italy/Infostrada_Libero@Sogno.rst
+share/kde/apps/kppp/Rules/Italy/Infostrada_Libero@Sogno_Prima_del_24.10.2000.rst
+share/kde/apps/kppp/Rules/Italy/Infostrada_Locali.rst
+share/kde/apps/kppp/Rules/Italy/Infostrada_Nazionali.rst
+share/kde/apps/kppp/Rules/Italy/Infostrada_Regionali.rst
+share/kde/apps/kppp/Rules/Italy/Infostrada_SpazioZero.rst
+share/kde/apps/kppp/Rules/Italy/Infostrada_SpazioZero_Ridotta.rst
+share/kde/apps/kppp/Rules/Italy/TAT_Distrettuale.rst
+share/kde/apps/kppp/Rules/Italy/TAT_Formula_Urbana.rst
+share/kde/apps/kppp/Rules/Italy/TAT_Interdistrettuale_0-15.rst
+share/kde/apps/kppp/Rules/Italy/TAT_Interdistrettuale_15-30.rst
+share/kde/apps/kppp/Rules/Italy/TAT_Interdistrettuale_30+.rst
+share/kde/apps/kppp/Rules/Italy/TAT_Urbana.rst
+share/kde/apps/kppp/Rules/Italy/Tele2_Urbana.rst
+share/kde/apps/kppp/Rules/Italy/Teleconomy_24.rst
+share/kde/apps/kppp/Rules/Italy/Teleconomy_24_Ridotta.rst
+share/kde/apps/kppp/Rules/Italy/Teleconomy_No_Stop.rst
+share/kde/apps/kppp/Rules/Italy/Wind_Internet_Light_1088.rst
+share/kde/apps/kppp/Rules/Italy/Wind_Internet_Light_1088_24ore.rst
+share/kde/apps/kppp/Rules/Italy/Wind_Regionale_1088_Light.rst
+share/kde/apps/kppp/Rules/Italy/Wind_Urbana.rst
+share/kde/apps/kppp/Rules/Italy/Wind_Urbana_1088_Light.rst
 share/kde/apps/kppp/Rules/Jamaica/CWJ_InterParish.rst
 share/kde/apps/kppp/Rules/Jamaica/CWJ_Local.rst
 share/kde/apps/kppp/Rules/Japan/NTT_Local.rst
 share/kde/apps/kppp/Rules/Kazakhstan/Akparat_Sprint.rst
 share/kde/apps/kppp/Rules/Luxembourg/Local.rst
+share/kde/apps/kppp/Rules/Macedonia/Macedonia_GenericISP_interurban.rst
+share/kde/apps/kppp/Rules/Macedonia/Macedonia_GenericISP_local.rst
+share/kde/apps/kppp/Rules/Macedonia/Macedonia_MTnet.rst
 share/kde/apps/kppp/Rules/Malaysia/TMNet_Jaring.rst
 share/kde/apps/kppp/Rules/Malaysia/malaysia.rst
 share/kde/apps/kppp/Rules/Netherlands/BelBasis_Buiten_Regio.rst
@@ -558,9 +605,9 @@ share/kde/apps/kppp/Rules/Romania/Telecom_Interurban.rst
 share/kde/apps/kppp/Rules/Romania/Telecom_Local.rst
 share/kde/apps/kppp/Rules/Singapore/SingTel_Local.rst
 share/kde/apps/kppp/Rules/Slovakia/Internetovy_tarif_019XY.rst
-share/kde/apps/kppp/Rules/Slovakia/ST_medzimesto_1_pasmo.rst
-share/kde/apps/kppp/Rules/Slovakia/ST_medzimesto_2_pasmo.rst
+share/kde/apps/kppp/Rules/Slovakia/ST_medzimesto.rst
 share/kde/apps/kppp/Rules/Slovakia/ST_mesto.rst
+share/kde/apps/kppp/Rules/Slovakia/Slovenske_Telekomunikacie_Internet.rst
 share/kde/apps/kppp/Rules/South_Afrika/South_Afrika.rst
 share/kde/apps/kppp/Rules/Spain/Infovia.rst
 share/kde/apps/kppp/Rules/Spain/Infovia_IVA.rst
@@ -595,17 +642,28 @@ share/kde/apps/kppp/Rules/Sweden/Telia.rst
 share/kde/apps/kppp/Rules/Sweden/Telia_Telebonus1.rst
 share/kde/apps/kppp/Rules/Sweden/Telia_Telebonus2.rst
 share/kde/apps/kppp/Rules/Sweden/Telitel.rst
+share/kde/apps/kppp/Rules/Sweden/Tiscali.rst
 share/kde/apps/kppp/Rules/Sweden/Transnet.rst
 share/kde/apps/kppp/Rules/Sweden/Universal_Telecom.rst
 share/kde/apps/kppp/Rules/Sweden/Utfors.rst
 share/kde/apps/kppp/Rules/Sweden/Vattenfall.rst
-share/kde/apps/kppp/Rules/Sweden/World_Online.rst
+share/kde/apps/kppp/Rules/Switzerland/Sunrise_Freetime.rst
 share/kde/apps/kppp/Rules/Switzerland/Sunrise_Local.rst
 share/kde/apps/kppp/Rules/Switzerland/Sunrise_Select_Internet.rst
 share/kde/apps/kppp/Rules/Switzerland/Swisscom_Local.rst
 share/kde/apps/kppp/Rules/Switzerland/Swisscom_Remote.rst
 share/kde/apps/kppp/Rules/Switzerland/Swisscom_Surf.rst
 share/kde/apps/kppp/Rules/TEMPLATE
+share/kde/apps/kppp/Rules/Turkey/Turk_Telekom_Internet.rst
+share/kde/apps/kppp/Rules/United_Kingdom/BirminghamCable_Local.rst
+share/kde/apps/kppp/Rules/United_Kingdom/BirminghamCable_National.rst
+share/kde/apps/kppp/Rules/United_Kingdom/BirminghamCable_SameTelco.rst
+share/kde/apps/kppp/Rules/United_Kingdom/BritishTelecom_Local.rst
+share/kde/apps/kppp/Rules/United_Kingdom/BritishTelecom_National.rst
+share/kde/apps/kppp/Rules/United_Kingdom/BritishTelecom_Regional.rst
+share/kde/apps/kppp/Rules/United_Kingdom/British_OneTel.rst
+share/kde/apps/kppp/Rules/United_Kingdom/Connaught_Telecom.rst
+share/kde/apps/kppp/Rules/Uruguay/Adinet_cIVA.rst
 share/kde/apps/kppp/Rules/checkrules
 share/kde/apps/kppp/pics/dock_both.png
 share/kde/apps/kppp/pics/dock_left.png
@@ -671,12 +729,17 @@ share/kde/apps/ksirc/tester.pl
 share/kde/apps/lisa/README
 share/kde/config/ksircrc
 share/kde/config/ktalkdrc
-share/kde/config/protocols/vnc.desktop
+share/kde/icons/hicolor/16x16/apps/kdict.png
+share/kde/icons/hicolor/16x16/apps/kit.png
+share/kde/icons/hicolor/16x16/apps/kmail.png
+share/kde/icons/hicolor/16x16/apps/kmailcvt.png
+share/kde/icons/hicolor/16x16/apps/knewsticker.png
 share/kde/icons/hicolor/16x16/apps/knode.png
+share/kde/icons/hicolor/16x16/apps/korn.png
 share/kde/icons/hicolor/16x16/apps/kppp.png
 share/kde/icons/hicolor/16x16/apps/ksirc.png
-share/kde/icons/hicolor/22x22/actions/message_get.png
-share/kde/icons/hicolor/32x32/apps/keystone.png
+share/kde/icons/hicolor/16x16/apps/ktalkd.png
+share/kde/icons/hicolor/32x32/apps/kdict.png
 share/kde/icons/hicolor/32x32/apps/kit.png
 share/kde/icons/hicolor/32x32/apps/kmail.png
 share/kde/icons/hicolor/32x32/apps/kmailcvt.png
@@ -686,7 +749,7 @@ share/kde/icons/hicolor/32x32/apps/korn.png
 share/kde/icons/hicolor/32x32/apps/kppp.png
 share/kde/icons/hicolor/32x32/apps/ksirc.png
 share/kde/icons/hicolor/32x32/apps/ktalkd.png
-share/kde/icons/hicolor/48x48/apps/keystone.png
+share/kde/icons/hicolor/48x48/apps/kdict.png
 share/kde/icons/hicolor/48x48/apps/kit.png
 share/kde/icons/hicolor/48x48/apps/kmail.png
 share/kde/icons/hicolor/48x48/apps/kmailcvt.png
@@ -696,45 +759,24 @@ share/kde/icons/hicolor/48x48/apps/korn.png
 share/kde/icons/hicolor/48x48/apps/kppp.png
 share/kde/icons/hicolor/48x48/apps/ksirc.png
 share/kde/icons/hicolor/48x48/apps/ktalkd.png
-share/kde/icons/locolor/16x16/apps/keystone.png
-share/kde/icons/locolor/16x16/apps/kit.png
-share/kde/icons/locolor/16x16/apps/kmail.png
-share/kde/icons/locolor/16x16/apps/kmailcvt.png
-share/kde/icons/locolor/16x16/apps/kmailcvt.xpm
-share/kde/icons/locolor/16x16/apps/knewsticker.png
-share/kde/icons/locolor/16x16/apps/knode.png
-share/kde/icons/locolor/16x16/apps/korn.png
-share/kde/icons/locolor/16x16/apps/kppp.png
-share/kde/icons/locolor/16x16/apps/ksirc.png
-share/kde/icons/locolor/16x16/apps/ktalkd.png
-share/kde/icons/locolor/32x32/apps/keystone.png
-share/kde/icons/locolor/32x32/apps/kit.png
-share/kde/icons/locolor/32x32/apps/kmail.png
-share/kde/icons/locolor/32x32/apps/kmailcvt.png
-share/kde/icons/locolor/32x32/apps/knewsticker.png
-share/kde/icons/locolor/32x32/apps/knode.png
-share/kde/icons/locolor/32x32/apps/korn.png
-share/kde/icons/locolor/32x32/apps/kppp.png
-share/kde/icons/locolor/32x32/apps/ksirc.png
-share/kde/icons/locolor/32x32/apps/ktalkd.png
 share/kde/services/knewsservice.protocol
+share/kde/services/kntsrcfilepropsdlg.desktop
 share/kde/services/lan.protocol
 share/kde/services/rlan.protocol
 share/kde/sounds/ktalkd.wav
-@comment kdebase:dirrm share/kde/sounds
-@comment kdebase:dirrm share/kde/services
-@comment kdebase:dirrm share/kde/icons/locolor/32x32/apps
-@comment kdebase:dirrm share/kde/icons/locolor/16x16/apps
-@comment kdebase:dirrm share/kde/icons/hicolor/48x48/apps
-@comment kdebase:dirrm share/kde/icons/hicolor/32x32/apps
-@comment kdelibs:dirrm share/kde/icons/hicolor/22x22/actions
-@comment kdebase:dirrm share/kde/icons/hicolor/16x16/apps
-@dirrm share/kde/config/protocols
-@comment kdelibs:dirrm share/kde/config
+@comment dirrm share/kde/sounds
+@comment dirrm share/kde/services
+@comment dirrm share/kde/icons/hicolor/48x48/apps
+@comment dirrm share/kde/icons/hicolor/32x32/apps
+@comment dirrm share/kde/icons/hicolor/16x16/apps
+@comment dirrm share/kde/config
 @dirrm share/kde/apps/lisa
 @dirrm share/kde/apps/ksirc/pics
 @dirrm share/kde/apps/ksirc
 @dirrm share/kde/apps/kppp/pics
+@dirrm share/kde/apps/kppp/Rules/Uruguay
+@dirrm share/kde/apps/kppp/Rules/United_Kingdom
+@dirrm share/kde/apps/kppp/Rules/Turkey
 @dirrm share/kde/apps/kppp/Rules/Switzerland
 @dirrm share/kde/apps/kppp/Rules/Sweden
 @dirrm share/kde/apps/kppp/Rules/Spain
@@ -747,6 +789,7 @@ share/kde/sounds/ktalkd.wav
 @dirrm share/kde/apps/kppp/Rules/Norway
 @dirrm share/kde/apps/kppp/Rules/Netherlands
 @dirrm share/kde/apps/kppp/Rules/Malaysia
+@dirrm share/kde/apps/kppp/Rules/Macedonia
 @dirrm share/kde/apps/kppp/Rules/Luxembourg
 @dirrm share/kde/apps/kppp/Rules/Kazakhstan
 @dirrm share/kde/apps/kppp/Rules/Japan
@@ -762,8 +805,8 @@ share/kde/sounds/ktalkd.wav
 @dirrm share/kde/apps/kppp/Rules/Greece
 @dirrm share/kde/apps/kppp/Rules/Germany
 @dirrm share/kde/apps/kppp/Rules/France
+@dirrm share/kde/apps/kppp/Rules/Finland
 @dirrm share/kde/apps/kppp/Rules/Estonia
-@dirrm share/kde/apps/kppp/Rules/England
 @dirrm share/kde/apps/kppp/Rules/Denmark
 @dirrm share/kde/apps/kppp/Rules/Czechia
 @dirrm share/kde/apps/kppp/Rules/Croatia
@@ -788,14 +831,12 @@ share/kde/sounds/ktalkd.wav
 @dirrm share/kde/apps/kppp/Provider/Netherlands
 @dirrm share/kde/apps/kppp/Provider/Germany
 @dirrm share/kde/apps/kppp/Provider/Denmark
+@dirrm share/kde/apps/kppp/Provider/Czech_Republic
 @dirrm share/kde/apps/kppp/Provider/Austria
 @dirrm share/kde/apps/kppp/Provider
 @dirrm share/kde/apps/kppp
-@comment kdebase:dirrm share/kde/apps/konqueror/dirtree/remote
+@comment dirrm share/kde/apps/konqueror/dirtree/remote
 @dirrm share/kde/apps/knode/pics
-@dirrm share/kde/apps/knode/icons/locolor/16x16/actions
-@dirrm share/kde/apps/knode/icons/locolor/16x16
-@dirrm share/kde/apps/knode/icons/locolor
 @dirrm share/kde/apps/knode/icons/hicolor/32x32/actions
 @dirrm share/kde/apps/knode/icons/hicolor/32x32
 @dirrm share/kde/apps/knode/icons/hicolor/22x22/actions
@@ -810,19 +851,29 @@ share/kde/sounds/ktalkd.wav
 @dirrm share/kde/apps/kmail/pics
 @dirrm share/kde/apps/kmail/about
 @dirrm share/kde/apps/kmail
-@dirrm share/kde/apps/kit/icons/locolor/16x16/actions
-@dirrm share/kde/apps/kit/icons/locolor/16x16
-@dirrm share/kde/apps/kit/icons/locolor
+@dirrm share/kde/apps/kit/icons/hicolor/16x16/actions
+@dirrm share/kde/apps/kit/icons/hicolor/16x16
+@dirrm share/kde/apps/kit/icons/hicolor
 @dirrm share/kde/apps/kit/icons
 @dirrm share/kde/apps/kit
-@comment kdebase:dirrm share/kde/apps/kicker/applets
-@dirrm share/kde/apps/keystone
-@comment kdelibs:dirrm share/kde/apps
-@comment kdebase:dirrm share/kde/applnk/Utilities
-@comment kdebase:dirrm share/kde/applnk/Settings/Personalization
-@comment kdebase:dirrm share/kde/applnk/Settings/Network
-@comment kdebase:dirrm share/kde/applnk/Internet
-@comment kdebase:dirrm share/kde/applnk/.hidden
+@comment dirrm share/kde/apps/kicker/applets
+@dirrm share/kde/apps/kdict/icons/hicolor/32x32/actions
+@dirrm share/kde/apps/kdict/icons/hicolor/32x32
+@dirrm share/kde/apps/kdict/icons/hicolor/22x22/actions
+@dirrm share/kde/apps/kdict/icons/hicolor/22x22
+@dirrm share/kde/apps/kdict/icons/hicolor/16x16/actions
+@dirrm share/kde/apps/kdict/icons/hicolor/16x16
+@dirrm share/kde/apps/kdict/icons/hicolor
+@dirrm share/kde/apps/kdict/icons
+@dirrm share/kde/apps/kdict
+@comment dirrm share/kde/apps/kconf_update
+@comment dirrm share/kde/apps
+@comment dirrm share/kde/applnk/Utilities
+@comment dirrm share/kde/applnk/Settings/Personalization
+@comment dirrm share/kde/applnk/Settings/Network
+@comment dirrm share/kde/applnk/Internet
+@comment dirrm share/kde/applnk/.hidden
+@dirrm share/doc/kde/HTML/en/lisa
 @dirrm share/doc/kde/HTML/en/ktalkd
 @dirrm share/doc/kde/HTML/en/ksirc
 @dirrm share/doc/kde/HTML/en/kppp
@@ -831,6 +882,7 @@ share/kde/sounds/ktalkd.wav
 @dirrm share/doc/kde/HTML/en/knewsticker
 @dirrm share/doc/kde/HTML/en/kmail
 @dirrm share/doc/kde/HTML/en/kit
-@dirrm share/doc/kde/HTML/en/keystone
-@comment kdelibs:dirrm share/doc/kde/HTML/en
-@comment kdelibs:dirrm lib/kde2
+@dirrm share/doc/kde/HTML/en/kdict
+@comment dirrm share/doc/kde/HTML/en
+@comment dirrm lib/kde2
+@dirrm include/mimelib

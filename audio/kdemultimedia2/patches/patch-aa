@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2001/04/17 16:03:19 skrll Exp $
+$NetBSD: patch-aa,v 1.4 2001/10/15 22:45:55 skrll Exp $
 
---- configure.orig	Wed Feb 21 11:01:31 2001
+--- configure.orig	Sun Sep  9 06:07:45 2001
 +++ configure
-@@ -7906,7 +7906,7 @@
+@@ -8178,7 +8178,7 @@
        au_enable_sun=yes
        ;;
      *-*-netbsd*)
@@ -11,7 +11,16 @@ $NetBSD: patch-aa,v 1.3 2001/04/17 16:03:19 skrll Exp $
        ;;
      *)
        echo "configure: warning: No --enable-audio=default audio for $target" 1>&2
-@@ -11216,6 +11216,7 @@
+@@ -8194,7 +8194,7 @@
+     echo "$ac_t""yes - <sys/soundcard.h>" 1>&6
+   else
+     case "$target" in
+-      *linux*|*freebsd*|*bsdi*)
++      *linux*|*freebsd*|*bsdi*|*netbsd*)
+ 		echo "$ac_t""yes" 1>&6
+ 	;;
+       *)
+@@ -11495,6 +11495,7 @@
  case "$host" in
    *-*-linux*) kscd_compile=yes;;
    *-*-*bsdi*) kscd_compile=yes;; 
@@ -19,16 +28,7 @@ $NetBSD: patch-aa,v 1.3 2001/04/17 16:03:19 skrll Exp $
    *-*-*bsd*) kscd_compile=no;;
    *) kscd_compile=yes;;
  esac
-@@ -11339,7 +11340,7 @@
- #include "confdefs.h"
- #include <$ac_hdr>
- EOF
--ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
-+ac_try="$ac_cpp $all_includes conftest.$ac_ext >/dev/null 2>conftest.out"
- { (eval echo configure:11344: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
- ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
- if test -z "$ac_err"; then
-@@ -11366,7 +11367,7 @@
+@@ -11641,7 +11642,7 @@
  fi
  done
  
@@ -37,31 +37,7 @@ $NetBSD: patch-aa,v 1.3 2001/04/17 16:03:19 skrll Exp $
  do
  ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6
-@@ -11879,13 +11880,16 @@
- 
- 
- case "$ARCH_TYPE" in
--  i?86)
--    echo "$ac_t""Found Intel enable MMX support" 1>&6
--    cat >> confdefs.h <<\EOF
--#define INTEL 1
--EOF
--
--    ;; 
-+#
-+# The MMS code won't compile on NetBSD :-(
-+#
-+#  i?86)
-+#    echo "$ac_t""Found Intel enable MMX support" 1>&6
-+#    cat >> confdefs.h <<\EOF
-+##define INTEL 1
-+#EOF
-+#
-+#    ;; 
- 
-   *)
-     echo "$ac_t""Non Intel." 1>&6
-@@ -11897,6 +11901,9 @@
+@@ -12206,6 +12207,9 @@
  kde_mpeglib_compiles=no
  
  case "$OS_TYPE" in
@@ -71,7 +47,7 @@ $NetBSD: patch-aa,v 1.3 2001/04/17 16:03:19 skrll Exp $
    Linux)
      kde_mpeglib_compiles=yes
      ;;
-@@ -12105,6 +12112,7 @@
+@@ -12416,6 +12420,7 @@
    NetBSD)
      echo "$ac_t""NetBSD :Unknown hardware. You will have problems!!" 1>&6
      OS_TYPE="BSD"
