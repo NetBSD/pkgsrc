@@ -1,6 +1,6 @@
-$NetBSD: patch-as,v 1.1.1.1 2005/02/25 15:54:59 is Exp $
+$NetBSD: patch-as,v 1.2 2005/02/26 18:49:08 is Exp $
 
---- Makefile.orig	2004-09-22 15:20:43.000000000 +0200
+--- Makefile.orig	2005-02-26 19:44:59.000000000 +0100
 +++ Makefile
 @@ -4,7 +4,7 @@
  
@@ -11,3 +11,10 @@ $NetBSD: patch-as,v 1.1.1.1 2005/02/25 15:54:59 is Exp $
  MAKE = make
  SHELL = /bin/sh
  
+@@ -264,3 +264,6 @@ srvdist:
+ 	srv/srv  quick/vm  examples/mbrot  examples/remote  \
+ 	    create/args2  create/chairs  global/3  global/4  global/5  \
+ 	    literal/cap  misc/timeslice2  vm
++
++verify:
++	srv/srv
