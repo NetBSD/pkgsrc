@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/03/12 21:50:54 recht Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/30 05:25:59 snj Exp $
 #
 
 DISTNAME=	awstats-6.0
@@ -10,7 +10,7 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://awstats.sourceforge.net/
 COMMENT=	Free real-time logfile analyzer to get advanced web statistics
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 NO_BUILD=	YES
 USE_PERL5=	run
 
@@ -32,5 +32,5 @@ do-install:
 	cd ${WRKSRC}/wwwroot && ${PAX} -rwpppm . ${PREFIX}/awstats/
 	cd ${WRKSRC}/docs && ${PAX} -rwpppm . ${PREFIX}/share/doc/html/awstats/
 
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

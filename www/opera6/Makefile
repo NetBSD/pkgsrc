@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/07/17 22:55:45 grant Exp $
+# $NetBSD: Makefile,v 1.22 2004/04/30 05:26:00 snj Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION}
 CATEGORIES=	www
@@ -25,7 +25,7 @@ DIST_SUBDIR=	.
 EXTRACT_ONLY=	# empty
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
-USE_BUILDLINK2=	# defined
+USE_BUILDLINK3=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
