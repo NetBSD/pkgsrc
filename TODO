@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7 2001/05/04 15:02:15 wiz Exp $
+$NetBSD: TODO,v 1.8 2001/05/04 19:24:43 jlam Exp $
 
 This file will eventually hold a current 'TODO' list for people
 working on pkgsrc.
@@ -42,11 +42,14 @@ packages TODO (Suggested new packages)
 
 package update TODO (Suggested package updates)
 ^^^^^^^^^^^^^^^^^^^
-	o update www/ap-php4 to 4.0.5
+	o update www/php4 and assorted php4 module packages to 4.0.5
+		(jlam has a new package ready, will update after freeze)
 	o update sysutils/lsof to 4.56
 	o update IPv6 patch in net/wget to 20010418
 	o update devel/pcre to 3.0.8
 		(zuntum has the patch, will update after freeze)
+	o update postgresql to 7.1 and split into -client/-server packages
+		(jlam has these packages ready, will update after freeze)
 	
 
 pksgrc TODO (Suggested pkgsrc features and enhancements)
