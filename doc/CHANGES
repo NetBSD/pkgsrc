@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4819 2004/02/13 22:19:16 wiz Exp $
+$NetBSD: CHANGES,v 1.4820 2004/02/13 23:01:57 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -820,3 +820,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added py-dbxml-1.2.1 [minskim 2004-02-13]
 	Updated naim to 0.11.6.6 [snj 2004-02-13]
 	Updated adzap to 20040104 [wiz 2004-02-13]
+	Added atasm-1.04 [minskim 2004-02-13]
