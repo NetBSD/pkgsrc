@@ -12,17 +12,18 @@ control chars (using quoted-printable encoding) to his signature.
 
 Fix (edited for NetBSD's pkg system):
 
---- pico/display.c.orig	Sun Apr 26 00:16:06 1998
-+++ pico/display.c	Sun Apr 26 00:17:12 1998
-@@ -266,7 +266,7 @@
- 	}
-         while ((vtcol&0x07) != 0);
-     }
--    else if (c.c < 0x20 || c.c == 0x7F) {
-+    else if (c.c < 0x20 || c.c == 0x7F || c.c == 0x9B) {
- 	ac.c = '^';
-         vtputc(ac);
- 	ac.c = (c.c ^ 0x40);
+--- pico/display.c.orig	Fri Jun 19 13:19:53 1998
++++ pico/display.c	Sat Jul 18 23:16:33 1998
+@@ -128,8 +128,7 @@
+ VIDEO   **vscreen;                      /* Virtual screen. */
+ VIDEO   **pscreen;                      /* Physical screen. */
+ 
+-#define	ISCONTROL(C)	((C) < 0x20 || (C) == 0x7F \
+-			 || ((gmode & P_HICTRL) && ((C) > 0x7F && (C) < 0xA0)))
++#define	ISCONTROL(C)	((C) < 0x20 || (C) == 0x7F || ((C) >= 0x80 && (C) < 0xA0))
+ 
+ 
+ /*
 
 (should help, at least in above situation)
 
