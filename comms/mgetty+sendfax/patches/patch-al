@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.1 2003/02/26 21:45:45 fredb Exp $
+$NetBSD: patch-al,v 1.2 2003/02/27 14:42:55 fredb Exp $
 
 --- utmp.c.orig	2001-12-17 16:43:25.000000000 -0600
 +++ utmp.c
@@ -19,7 +19,7 @@ $NetBSD: patch-al,v 1.1 2003/02/26 21:45:45 fredb Exp $
 -
 -#ifndef ENOENT
 -#include <errno.h>
-+#if !defined(SVR4) && !defined(NETBSD_UTMPX) && __GLIBC__ < 2
++#if !defined(SVR4) && !defined(NETBSD_UTMPX) && !defined(__GLIBC__) || __GLIBC__ < 2
 +# include <sys/stat.h>
 +# ifndef ENOENT
 +#  include <errno.h>
@@ -51,7 +51,7 @@ $NetBSD: patch-al,v 1.1 2003/02/26 21:45:45 fredb Exp $
 +char id[4];
 +struct utmpx ut;
 +#else
-+# if !(defined(SVR4) || (defined(__GLIBC__) && __GLIBC__ >= 2)
++# if !defined(SVR4) && !defined(__GLIBC__) || __GLIBC__ < 2
  struct stat	st;
 +# endif
 +#endif
