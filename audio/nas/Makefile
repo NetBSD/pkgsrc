@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/07/29 12:59:08 wulf Exp $
+# $NetBSD: Makefile,v 1.30 2003/09/15 08:08:04 martti Exp $
 
 DISTNAME=	nas-1.6.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -22,6 +22,13 @@ USE_X11BASE=		yes
 PKG_SYSCONFSUBDIR=	nas
 
 REPLACE_PERL=		clients/audio/auscope/auscope
+
+.include "../../mk/bsd.prefs.mk"
+
+# We must use GNU make on Linux
+.if ${OPSYS} == "Linux"
+USE_GNU_TOOLS+=	make
+.endif
 
 pre-configure:
 	cd ${WRKSRC}; for file in					\
