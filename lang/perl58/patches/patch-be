@@ -1,0 +1,24 @@
+$NetBSD: patch-be,v 1.1 2005/01/04 09:50:15 jlam Exp $
+
+--- lib/perl5db.pl.orig	2004-11-17 07:51:18.000000000 -0500
++++ lib/perl5db.pl
+@@ -215,7 +215,7 @@ the TTY to use for debugging i/o.
+ =item * noTTY 
+ 
+ if set, goes in NonStop mode.  On interrupt, if TTY is not set,
+-uses the value of noTTY or F</tmp/perldbtty$$> to find TTY using
++uses the value of noTTY or F<$HOME/.perldbtty$$> to find TTY using
+ Term::Rendezvous.  Current variant is to have the name of TTY in this
+ file.
+ 
+@@ -6004,8 +6004,8 @@ sub setterm {
+             eval "require Term::Rendezvous;" or die;
+ 
+             # See if we have anything to pass to Term::Rendezvous.
+-            # Use /tmp/perldbtty$$ if not.
+-            my $rv = $ENV{PERLDB_NOTTY} || "/tmp/perldbtty$$";
++            # Use $HOME/.perldbtty$$ if not [CAN-2004-0976].
++            my $rv = $ENV{PERLDB_NOTTY} || "$ENV{HOME}/.perldbtty$$";
+ 
+             # Rendezvous and get the filehandles.
+             my $term_rv = new Term::Rendezvous $rv;
