@@ -3,7 +3,7 @@
 # Date created:		1-Aug-1995
 # Whom:			pst
 #
-# $NetBSD: Makefile,v 1.3 1998/02/27 11:18:08 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/03/06 02:48:27 mycroft Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/07/10 15:50:55 pst Exp
 #
 
@@ -20,6 +20,7 @@ CONFIGURE_ARGS+="--with-krb4"
 GNU_CONFIGURE=	yes
 MAN1=		zephyr.1 xzwrite.1 zaway.1 zctl.1 zleave.1 zlocate.1 \
 		zmailnotify.1 znol.1 zwgc.1 zwrite.1
+MAN3=		com_err.3
 MAN8=		syslogd.8 zpopnotify.8 zshutdown_notify.8 zstat.8 \
 		zephyrd.8 zhm.8
 
