@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 1999/09/30 08:21:51 agc Exp $
+# $NetBSD: Makefile,v 1.39 1999/10/17 23:47:37 simonb Exp $
 #
 
 DISTNAME=	ghostscript-5.50
@@ -64,7 +64,7 @@ post-extract:
 	${RM} -f ${WRKSRC}/jpeg
 	${LN} -s ${BUILD_ROOT}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ${WRKSRC}/jpeg
 	cd ${WRKSRC} && unzip -uLa ${_DISTDIR}/${HP850_DRV}
-	${RM} -f ${_DISTDIR}/${PDF_SEC} ${WRKSRC}/${PDF_SEC}
+	${RM} -f ${WRKSRC}/${PDF_SEC}
 	${LN} -s ${_DISTDIR}/${PDF_SEC} ${WRKSRC}/${PDF_SEC}
 
 pre-patch:
