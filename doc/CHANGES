@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2304 2003/05/24 09:52:24 jmmv Exp $
+$NetBSD: CHANGES,v 1.2305 2003/05/24 10:37:40 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2117,3 +2117,9 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-XML-Simple to 2.07 [mjl 2003-05-24]
 	Updated lib3ds to 1.2.0nb2 [salo 2003-05-24]
 	Updated lmule to 1.2.1nb1 [jmmv 2003-05-24]
+	Updated phoenix-bin-acroread to 1.0nb2 [jmmv 2003-05-24]
+	Updated phoenix-bin-acroread3 to 1.0nb1 [jmmv 2003-05-24]
+	Updated phoenix-bin-acroread5 to 1.0nb1 [jmmv 2003-05-24]
+	Updated phoenix-bin-flash to 6.0.79nb1 [jmmv 2003-05-24]
+	Updated phoenix-bin-java to 1.0nb1 [jmmv 2003-05-24]
+	Updated phoenix-bin-realplayer to 1.0nb1 [jmmv 2003-05-24]
