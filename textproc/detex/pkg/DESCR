@@ -1,0 +1,18 @@
+Detex - Version 2.7
+
+Detex is a program to remove TeX constructs from a text file.  It recognizes
+the \input command.
+
+This program assumes it is dealing with LaTeX input if it sees the string
+"\begin{document}" in the text.  It recognizes the \include and \includeonly
+commands.
+
+Feel free to redistribute this program, but distribute the complete contents
+of this directory.  The latest version is available at
+http://www.cs.purdue.edu/homes/trinkle/detex/  Send comments and fixes
+to me via email.
+
+Daniel Trinkle <trinkle@cs.purdue.edu>
+Department of Computer Sciences
+Purdue University
+West Lafayette, IN 47907-1398

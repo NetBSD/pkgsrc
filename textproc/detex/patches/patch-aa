@@ -1,0 +1,9 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/10/18 09:55:53 itojun Exp $
+
+--- Makefile-	Wed Oct 18 18:51:39 2000
++++ Makefile	Wed Oct 18 18:51:54 2000
+@@ -39,3 +39,3 @@
+ #
+-CFLAGS	= -O ${DEFS}
++#CFLAGS	= -O ${DEFS}
+ 
