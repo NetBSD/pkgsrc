@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2000/03/22 13:55:32 mrg Exp $
+
+--- libidu/scanners.c.orig	Thu Jul 18 07:45:52 1996
++++ libidu/scanners.c	Thu Mar 23 00:42:05 2000
+@@ -65,8 +65,10 @@
+ struct language languages_0[] =
+ {
+   { "C", parse_args_c, get_token_c, help_me_c },
++  { "C++", parse_args_c, get_token_c, help_me_c },
+   { "asm", parse_args_asm, get_token_asm, help_me_asm },
+   { "text", parse_args_text, get_token_text, help_me_text },
++  { "make", parse_args_text, get_token_text, help_me_text },
+ };
+ struct language const *languages_N = &languages_0[cardinalityof (languages_0)];
+ 
