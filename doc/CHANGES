@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6656 2004/07/23 16:49:17 taca Exp $
+$NetBSD: CHANGES,v 1.6657 2004/07/23 18:26:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3526,3 +3526,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated speex to 1.0.4 [wiz 2004-07-23]
 	Added orbital_eunuchs_sniper-1.29 [wiz 2004-07-23]
 	Updated ja-samba to 2.2.9.1.0nb1 [taca 2004-07-23]
+	Updated suse_base to 7.3nb6 [wiz 2004-07-23]
