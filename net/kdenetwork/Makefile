@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 1999/02/17 22:44:20 tron Exp $
+# $NetBSD: Makefile,v 1.27 1999/02/19 23:07:20 tron Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:54 asami Exp
 #
 
@@ -15,8 +15,6 @@ DEPENDS+=	gdbm-1.7.3:../../databases/gdbm
 DEPENDS+=	uulib-0.5.13:../../converters/uulib
 DEPENDS+=	kdesupport-1.1:../../converters/kdesupport
 DEPENDS+=	kdebase-1.1:../../x11/kdebase
-
-CONFLICTS=	kdenetwork-*
 
 NOT_FOR_ARCHS=	alpha	# LP64/ELF problems
 
