@@ -1,0 +1,177 @@
+*** ../rumba.0.4.s/./nfs/mount.c	Thu Jan 16 20:31:24 1997
+--- ./nfs/mount.c	Tue Jun 17 00:14:51 1997
+***************
+*** 14,20 ****
+--- 14,22 ----
+  #include "nfs_prot.h"
+  #include <netdb.h>
+  #include <arpa/inet.h>
++ #ifdef DEAL_WITH_MTAB
+  #include <mntent.h>
++ #endif
+  #include "my_defines.h"
+  
+  #define	DPRINTF(arg)	if(debug_mode & DEBUG_NFS)	dprintf arg
+***************
+*** 24,30 ****
+--- 26,34 ----
+  static int	do_exit = 0;
+  static int	do_nfsumount = 0;
+  
++ #ifdef DEAL_WITH_MTAB
+  #define	MTAB_TMP	(MOUNTED ".tmp")
++ #endif
+  
+  /* ------------------------------------------------------------------------- */
+  
+***************
+*** 37,47 ****
+  
+  static void	nfs_unmount(void)
+  {
+  FILE			*fpout, *fpin;
+  struct mntent	*ent;
+  
+  	dprintf("Going to unmount NFS...\n");
+! 	while(unmount(mntdir)){
+  		if(errno != ENOENT)
+  			my_perror(mntdir);
+  		if(errno != EBUSY){
+--- 41,53 ----
+  
+  static void	nfs_unmount(void)
+  {
++ #ifdef DEAL_WITH_MTAB
+  FILE			*fpout, *fpin;
+  struct mntent	*ent;
++ #endif
+  
+  	dprintf("Going to unmount NFS...\n");
+! 	while(syscall_unmount(mntdir)){
+  		if(errno != ENOENT)
+  			my_perror(mntdir);
+  		if(errno != EBUSY){
+***************
+*** 49,54 ****
+--- 55,61 ----
+  		}
+  		sleep(1);
+  	}
++ #ifdef DEAL_WITH_MTAB
+  	/* update mtab */
+  	if((fpout = setmntent(MTAB_TMP, "w")) == NULL){
+  		my_perror(MTAB_TMP);
+***************
+*** 68,73 ****
+--- 75,81 ----
+  			unlink(MTAB_TMP);
+  		}
+  	}
++ #endif
+  	dprintf("NFS unmounted.\n");
+  }
+  
+***************
+*** 130,136 ****
+  
+  void	mount_and_dispatch(char *dir, void (*proc)(), void *root_fh, int bg)
+  {
+! int					sock, port, child_pid, parent_pid, other_pid;
+  struct sockaddr_in	sain;
+  SVCXPRT				*nfsxprt;
+  int					bufsiz = 0xc000;	/* room for a few biods */
+--- 138,144 ----
+  
+  void	mount_and_dispatch(char *dir, void (*proc)(), void *root_fh, int bg)
+  {
+! int					sock, child_pid, parent_pid, other_pid;
+  struct sockaddr_in	sain;
+  SVCXPRT				*nfsxprt;
+  int					bufsiz = 0xc000;	/* room for a few biods */
+***************
+*** 162,180 ****
+  	if(setsockopt(sock, SOL_SOCKET, SO_RCVBUF, (char *)&bufsiz,sizeof(bufsiz)))
+  		my_perror("setsockopt");
+  
+- /* Bind it to a reserved port */
+  	sain.sin_family = AF_INET;
+! 	sain.sin_addr.s_addr = inet_addr("127.0.0.1");
+! 	for(port = IPPORT_RESERVED-1; port > IPPORT_RESERVED/2; port--){
+! 	DPRINTF(("trying to use port %d\n", port));
+! 		sain.sin_port = htons(port);
+! 		if(bind(sock, (struct sockaddr *) &sain, sizeof(sain)) >= 0)
+! 			break;
+  	}
+! 	dprintf("Using port %d for NFS.\n", port);
+! 	if(port <= IPPORT_RESERVED/2){
+! 		my_perror("bind to reserved port"); exit(1);
+!     }
+  	if((nfsxprt = svcudp_create(sock)) == 0){
+  		my_perror("svcudp_create"); exit(1);
+  	}
+--- 170,186 ----
+  	if(setsockopt(sock, SOL_SOCKET, SO_RCVBUF, (char *)&bufsiz,sizeof(bufsiz)))
+  		my_perror("setsockopt");
+  
+  	sain.sin_family = AF_INET;
+! 	sain.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
+! 	if (bind(sock, (struct sockaddr*) &sain, sizeof(sain)) >= 0) {
+! 		int namelen=sizeof(sain);
+! 		if (getsockname(sock, (struct sockaddr*) &sain, &namelen) <0) {
+! 			my_perror("getsockname"); exit(1);
+! 		}
+! 	} else {
+! 		my_perror("bind"); exit(1);
+  	}
+! 	dprintf("Using port %d for NFS.\n", ntohs(sain.sin_port));
+  	if((nfsxprt = svcudp_create(sock)) == 0){
+  		my_perror("svcudp_create"); exit(1);
+  	}
+***************
+*** 198,214 ****
+  	if((child_pid == 0 && bg) || (child_pid != 0 && !bg)){
+  		dispatch_loop();
+  	}else{
+  		DPRINTF(("Going to mount...\n"));
+  		other_pid = child_pid == 0 ? parent_pid : child_pid;
+! 		if(syscall_mount(dir, root_fh, sock, &sain) < 0){
+  			eprintf("nfs mount %s: [%d] %s\n", dir, errno, strerror(errno));
+  			kill(other_pid, SIGKILL);
+  		}else{
+  			FILE			*fp;
+  			struct mntent	mnt;
+- 			char			fsname[256];
+  
+- 			sprintf(fsname, "rumba-%d", other_pid);
+  			mnt.mnt_fsname = fsname;
+  			mnt.mnt_dir = mntdir;
+  			mnt.mnt_type = "nfs";
+--- 204,221 ----
+  	if((child_pid == 0 && bg) || (child_pid != 0 && !bg)){
+  		dispatch_loop();
+  	}else{
++ 		char			fsname[256];
+  		DPRINTF(("Going to mount...\n"));
+  		other_pid = child_pid == 0 ? parent_pid : child_pid;
+! 		sprintf(fsname, "rumba-%d", other_pid);
+! 		if(syscall_mount(dir, root_fh, sock, &sain, fsname) < 0){
+  			eprintf("nfs mount %s: [%d] %s\n", dir, errno, strerror(errno));
+  			kill(other_pid, SIGKILL);
+  		}else{
++ #ifdef DEAL_WITH_MTAB
+  			FILE			*fp;
+  			struct mntent	mnt;
+  
+  			mnt.mnt_fsname = fsname;
+  			mnt.mnt_dir = mntdir;
+  			mnt.mnt_type = "nfs";
+***************
+*** 219,224 ****
+--- 226,232 ----
+  			else
+  				my_perror(MOUNTED);
+  			endmntent(fp);
++ #endif
+  		}
+  		exit(0);
+  	}

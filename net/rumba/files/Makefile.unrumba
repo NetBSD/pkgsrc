@@ -1,0 +1,4 @@
+PROG=unrumba
+NOMAN=sorry
+
+.include <bsd.prog.mk>
