@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.5 2003/04/02 12:05:27 wiz Exp $
+$NetBSD: patch-ab,v 1.6 2004/09/20 22:39:03 wiz Exp $
 
---- Makefile.in.orig	Wed Apr  2 11:09:09 2003
+--- Makefile.in.orig	2004-09-14 21:29:10.000000000 +0200
 +++ Makefile.in
-@@ -117,7 +117,7 @@ AUTOMAKE_OPTIONS = 1.4 foreign
- 
+@@ -221,7 +221,7 @@ x_helper_xf86dga_libs = @x_helper_xf86dg
+ x_helper_xf86vm_libs = @x_helper_xf86vm_libs@
+ AUTOMAKE_OPTIONS = 1.4 foreign
  SUBDIRS = include ggi display default extensions programs doc m4 dist
- 
 -ggiconfdatadir = $(sysconfdir)/$(ggi_subdir)
 +ggiconfdatadir = $(datadir)/examples/ggi
  ggiconfdata_DATA = libggi.conf
- 
- noinst_PROGRAMS = patchlib
+ DISTCLEANFILES = libggi.conf
+ EXTRA_DIST = ChangeLog.1999 ChangeLog FAQ INSTALL.autoconf autogen.sh
