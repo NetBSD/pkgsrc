@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2003/02/16 19:56:06 jschauma Exp $
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_ARCH}.x
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_ARCH}.xbn
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_ARCH}.xn
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_ARCH}.xr
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_ARCH}.xs
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_ARCH}.xu
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/${MACHINE_ARCH}${LOWER_OPSYS}.x
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/${MACHINE_ARCH}${LOWER_OPSYS}.xbn
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/${MACHINE_ARCH}${LOWER_OPSYS}.xn
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/${MACHINE_ARCH}${LOWER_OPSYS}.xr
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/${MACHINE_ARCH}${LOWER_OPSYS}.xu
