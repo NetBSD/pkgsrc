@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/20 12:08:12 agc Exp $
+# $NetBSD: Makefile,v 1.8 2004/05/13 17:57:05 minskim Exp $
 
 DISTNAME=	ttcp
 PKGNAME=	${DISTNAME}-1.12
@@ -12,6 +12,8 @@ HOMEPAGE=	http://www.ccci.com/tools/ttcp/
 COMMENT=	TCP testing and performance measuring tool
 
 WRKSRC=		${WRKDIR}
+MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP}	\
+		MANOWN=${MANOWN} MANGRP=${MANGRP}
 
 .include "../../mk/bsd.prefs.mk"
 
