@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.6 2002/09/20 00:33:13 hubertf Exp $
+$NetBSD: patch-ac,v 1.7 2002/11/29 02:37:22 kim Exp $
 
---- abcde.orig	Mon Jan 28 06:44:02 2002
-+++ abcde
+--- abcde.orig	Mon Jan 28 00:44:02 2002
++++ abcde	Thu Nov 28 20:57:50 2002
 @@ -206,6 +206,11 @@
  			TRACKARTIST="$(echo $DTITLEARTIST | cut -f1 -d~)"
  			TRACKNAME="$(echo $DTITLEARTIST | cut -f2 -d~)"
@@ -93,15 +93,6 @@ $NetBSD: patch-ac,v 1.6 2002/09/20 00:33:13 hubertf Exp $
  			VARIOUSARTISTS=n
  			;;
  		esac
-@@ -894,7 +906,7 @@
- PLAYLISTFORMAT='${ARTISTFILE}_-_${ALBUMFILE}.m3u'
- PLAYLISTDATAPREFIX=''
- COMMENT=''
--ID3TAGV=2
-+ID3TAGV=1
- ENCNICE=10
- READNICE=10
- VARIOUSARTISTS=n
 @@ -931,7 +943,6 @@
  OGGENCOPTS=
  ID3OPTS=
@@ -137,8 +128,8 @@ $NetBSD: patch-ac,v 1.6 2002/09/20 00:33:13 hubertf Exp $
  # Load system defaults
 -if [ -r /etc/abcde.conf ]; then
 -	. /etc/abcde.conf
-+if [ -r /usr/pkg/etc/abcde.conf ]; then
-+	. /usr/pkg/etc/abcde.conf
++if [ -r @PKG_SYSCONFBASE@/abcde.conf ]; then
++	. @PKG_SYSCONFBASE@/abcde.conf
  fi
  # Load user preference defaults
  if [ -r $HOME/.abcde.conf ]; then
