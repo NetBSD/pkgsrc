@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/04/11 22:00:12 ben Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/06/28 13:21:48 ben Exp $
 share/doc/html/csound/a.html
 share/doc/html/csound/abetarand.html
 share/doc/html/csound/abexprnd.html
@@ -165,6 +165,9 @@ share/doc/html/csound/equals.html
 share/doc/html/csound/event.html
 share/doc/html/csound/examples/0dbfs.orc
 share/doc/html/csound/examples/0dbfs.sco
+share/doc/html/csound/examples/CVS/Entries
+share/doc/html/csound/examples/CVS/Repository
+share/doc/html/csound/examples/CVS/Root
 share/doc/html/csound/examples/HRTFcompact
 share/doc/html/csound/examples/a.orc
 share/doc/html/csound/examples/a.sco
@@ -369,8 +372,32 @@ share/doc/html/csound/examples/flanger.orc
 share/doc/html/csound/examples/flanger.sco
 share/doc/html/csound/examples/flashtxt.orc
 share/doc/html/csound/examples/flashtxt.sco
+share/doc/html/csound/examples/flbox.orc
+share/doc/html/csound/examples/flbox.sco
+share/doc/html/csound/examples/flbutton.orc
+share/doc/html/csound/examples/flbutton.sco
+share/doc/html/csound/examples/flcount.orc
+share/doc/html/csound/examples/flcount.sco
+share/doc/html/csound/examples/fljoy.orc
+share/doc/html/csound/examples/fljoy.sco
 share/doc/html/csound/examples/flknob.orc
 share/doc/html/csound/examples/flknob.sco
+share/doc/html/csound/examples/flpanel.orc
+share/doc/html/csound/examples/flpanel.sco
+share/doc/html/csound/examples/flroller.orc
+share/doc/html/csound/examples/flroller.sco
+share/doc/html/csound/examples/flscroll.orc
+share/doc/html/csound/examples/flscroll.sco
+share/doc/html/csound/examples/flsetcolor.orc
+share/doc/html/csound/examples/flsetcolor.sco
+share/doc/html/csound/examples/flslider.orc
+share/doc/html/csound/examples/flslider.sco
+share/doc/html/csound/examples/fltabs.orc
+share/doc/html/csound/examples/fltabs.sco
+share/doc/html/csound/examples/fltext.orc
+share/doc/html/csound/examples/fltext.sco
+share/doc/html/csound/examples/flvalue.orc
+share/doc/html/csound/examples/flvalue.sco
 share/doc/html/csound/examples/fmb3.orc
 share/doc/html/csound/examples/fmb3.sco
 share/doc/html/csound/examples/fmbell.orc
@@ -703,6 +730,8 @@ share/doc/html/csound/examples/printks.orc
 share/doc/html/csound/examples/printks.sco
 share/doc/html/csound/examples/prints.orc
 share/doc/html/csound/examples/prints.sco
+share/doc/html/csound/examples/r.orc
+share/doc/html/csound/examples/r.sco
 share/doc/html/csound/examples/raises.orc
 share/doc/html/csound/examples/raises.sco
 share/doc/html/csound/examples/rand.orc
@@ -1078,6 +1107,9 @@ share/doc/html/csound/igauss.html
 share/doc/html/csound/igoto.html
 share/doc/html/csound/ihold.html
 share/doc/html/csound/ilinrand.html
+share/doc/html/csound/images/CVS/Entries
+share/doc/html/csound/images/CVS/Repository
+share/doc/html/csound/images/CVS/Root
 share/doc/html/csound/images/adsr.png
 share/doc/html/csound/images/caution.gif
 share/doc/html/csound/images/flanger.png
@@ -1771,6 +1803,8 @@ share/doc/html/csound/zkr.html
 share/doc/html/csound/zkw.html
 share/doc/html/csound/zkwm.html
 share/examples/csound
+@dirrm share/doc/html/csound/examples/CVS
 @dirrm share/doc/html/csound/examples
+@dirrm share/doc/html/csound/images/CVS
 @dirrm share/doc/html/csound/images
 @dirrm share/doc/html/csound
