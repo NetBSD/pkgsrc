@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.5 2000/12/11 21:40:54 skrll Exp $
+# $NetBSD: build,v 1.6 2000/12/30 14:53:28 dmcmahill Exp $
 #
 # Do builk build
 #
@@ -35,6 +35,22 @@ echo ""
 unset DISPLAY		# allow sane failure for gimp, xlispstat
 
 cd ${USR_PKGSRC}
+
+# extract the name of the files used for the build log and broken build log.
+# these have defaults set by bsd.bulk-pkg.mk and may be overridden in /etc/mk.conf
+BROKENF=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=BROKENFILE )`;
+export BROKENF
+if [ "$BROKENF" = "" ]; then
+	echo "Had problems determining the name of the .broken.files"
+	exit 1
+fi
+BLDLOG=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=BUILDLOG )`;
+export BLDLOG
+if [ "$BLDLOG" = "" ]; then
+	echo "Had problems determining the name of the .make.files"
+	exit 1
+fi
+
 
 if [ "$1" = "restart" ]; then
 	echo Restarting - skipping pre-build script
