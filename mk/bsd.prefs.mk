@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.117 2003/07/13 13:10:43 grant Exp $
+# $NetBSD: bsd.prefs.mk,v 1.118 2003/07/13 13:27:18 grant Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -342,19 +342,5 @@ _COMPILER_LD_FLAG=		# pattern for Sun compilers
 .else
 _COMPILER_LD_FLAG=	-Wl,	# pattern for GCC and others
 .endif
-
-# Ensure the correct rpath is passed to the linker to enable packages
-# to find shared libraries from gcc. Has no effect when pkgsrc gcc is
-# not being used.
-#
-# Valid compilers are:
-#
-#	USE_GCC2    - GNU Compiler Collection 2.x
-# 	USE_GCC3    - GNU Compiler Collection 3.x
-#	USE_MIPSPRO - Silicon Graphics, Inc. MIPSpro Compiler
-#	USE_SUNPRO  - Sun Microsystems, Inc. WorkShop/Forte/Sun ONE Studio
-#	              Compiler Collection
-#
-.include "../../mk/gcc.buildlink2.mk"
 
 .endif	# BSD_PKG_MK
