@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2001/11/30 13:34:15 taca Exp $
+# $NetBSD: Makefile,v 1.11 2001/12/28 10:32:50 taca Exp $
 # FreeBSD Id: ports/japanese/namazu2/Makefile,v 1.16 2000/10/26 20:56:25 knu Exp
 
-DISTNAME=	namazu-2.0.9
+DISTNAME=	namazu-2.0.10
 CATEGORIES=	japanese textproc www
 MASTER_SITES=	ftp://ftp.namazu.org/namazu/stable/ \
 		http://www.namazu.org/stable/
@@ -50,6 +50,9 @@ post-build:
 post-install:
 	@${TEST} -d ${LOCALBASE}/etc/namazu || ${INSTALL_DATA_DIR} ${LOCALBASE}/etc/namazu
 	@${SH} ${WRKDIR}/INSTALL ${PKGNAME} POST-INSTALL
+
+test:
+	@cd ${WRKSRC}; make check
 
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
