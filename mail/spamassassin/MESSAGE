@@ -1,13 +1,16 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/08/26 16:00:52 hubertf Exp $
+$NetBSD: MESSAGE,v 1.3 2002/10/08 00:49:18 heinz Exp $
 
-The default directory for site-wide config files for SpamAssassin on
-NetBSD has changed from
+***IMPORTANT***
 
-	/etc/mail/spamassassin
-to
-	${PKG_SYSCONFDIR}/spamassassin
+  Starting with version 2.40 SpamAssassin does NOT deliver mail anymore.
+  If you relied on spamassassin to write the mail into your mail folder,
+  you'll have to change your setup to use some local mail delivery agent,
+  e.g. pkgsrc/mail/procmail.
 
-If you have old config files, please move them to the new location.
+More information can be found in 
+  ${PREFIX}/share/doc/spamassassin/
+
+and via 'man spamassassin' and 'perldoc Mail::SpamAssassin::Conf'
 
 ===========================================================================

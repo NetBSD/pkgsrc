@@ -1,47 +1,111 @@
-# $NetBSD: Makefile,v 1.8 2002/09/29 23:44:28 simonb Exp $
+# $NetBSD: Makefile,v 1.9 2002/10/08 00:49:18 heinz Exp $
 
-DISTNAME=	Mail-SpamAssassin-2.41
-PKGNAME=	spamassassin-2.41
+DISTNAME=	Mail-SpamAssassin-2.42
+PKGNAME=	spamassassin-2.42
 SVR4_PKGNAME=	sa
 CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}			\
+		http://www.spamassassin.org/released/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	heinz-sa@netbsd.org
 HOMEPAGE=	http://www.spamassassin.org/
 COMMENT=	mail filter to identify spam
 
-DEPENDS+=	procmail-[0-9]*:../../mail/procmail
+DEPENDS+=	procmail>=3.22:../../mail/procmail
 DEPENDS+=	p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
-DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
-DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
+DEPENDS+=	p5-HTML-Parser>=3.0:../../www/p5-HTML-Parser
+DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
+DEPENDS+=	p5-MIME-Base64>=2.11:../../converters/p5-MIME-Base64
 
-CONFLICTS=	p5-Mail-SpamAssassin-[1-9]*
+BUILDLINK_DEPENDS.perl=	perl>=5.6.0
+USE_BUILDLINK2=		YES
 
-RCD_SCRIPTS=	spamd
+CONFLICTS=		p5-Mail-SpamAssassin-[1-9]*
 
-USE_BUILDLINK_ONLY=	YES
+GNU_CONFIGURE=		YES
+PKG_SYSCONFSUBDIR=	spamassassin
+
+PERL5_CONFIGURE=	NO
+MAKE_PARAMS=		SYSCONFDIR="${PKG_SYSCONFDIR}"
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Mail/SpamAssassin/.packlist
 
-post-patch:
-	@(cd ${WRKSRC};							\
-	for f in README Makefile.PL lib/Mail/SpamAssassin/Conf.pm ; do \
-		${SED} -e "s,/usr/share,${PREFIX}/share," \
-		       -e "s,/etc/mail,${PKG_SYSCONFBASE},g" $$f > $$f.fixed && \
-		${MV} $$f.fixed $$f;					\
-	done)
+RCD_SCRIPTS=		spamd
+RCD_SCRIPT_SRC.spamd=	${WRKSRC}/spamd/netbsd-rc-script.sh
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
+EGDIR=			${PREFIX}/share/examples/spamassassin
+DOCDIR=			${PREFIX}/share/doc/spamassassin
+RULESDIR=		${PREFIX}/share/spamassassin
+
+CONF_FILES+=		${EGDIR}/local.cf  ${PKG_SYSCONFDIR}/local.cf
+CONF_FILES+=		${PREFIX}/share/spamassassin/user_prefs.template\
+			  ${PKG_SYSCONFDIR}/user_prefs.template
+
+.include "../../mk/bsd.prefs.mk"
+# the 'spamd' RCD_SCRIPT behaves differently if we run NetBSD 1.6 or later
+.if ${OS_VERSION:M1.[0-5]*}
+INTERPRETER_SUPPORT=NO
+.else
+INTERPRETER_SUPPORT=YES
+.endif
+FILES_SUBST+=		INTERPRETER_SUPPORT=${INTERPRETER_SUPPORT}
+
+test:	build
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} test
+
+pre-configure: perl5-configure
+
+post-configure:
+.for f in README lib/Mail/SpamAssassin/Conf.pm spamd/README.spamd-vpopmail
+	@${SED} -e "s,/usr/share,${PREFIX}/share,"			\
+		-e "s,/etc/mail,${PKG_SYSCONFBASE},g"			\
+		${WRKSRC}/${f} > ${WRKSRC}/${f}.fixed &&		\
+	  ${MV} ${WRKSRC}/${f}.fixed ${WRKSRC}/${f}
+.endfor
+
+pre-install:
+	${INSTALL_DATA_DIR} ${EGDIR}
+.for d in html masses/lib/Mail spamd sql tools
+	${INSTALL_DATA_DIR}  ${DOCDIR}/$d
+.endfor
+.for f in INSTALL License README TRADEMARK sample-nonspam.txt		\
+	  sample-spam.txt sql/README sql/spamassassin.sql		\
+	  spamd/README.spamd spamd/README.spamd-vpopmail
+	${INSTALL_DATA} ${WRKSRC}/$f ${DOCDIR}/$f
+.endfor
+	${INSTALL_DATA} ${WRKSRC}/rules/STATISTICS.txt ${DOCDIR}/
+	${INSTALL_DATA} ${WRKSRC}/ninjabutton.png ${DOCDIR}/html/
+	${INSTALL_DATA} ${WRKSRC}/masses/lib/Mail/ArchiveIterator.pm	\
+	  ${DOCDIR}/masses/lib/Mail/ArchiveIterator.pm
+	@(cd ${WRKSRC}/masses/;						\
+	  for f in *; do						\
+	    if ${TEST} -f $$f; then					\
+	      if ${TEST} -x $$f ; then					\
+		${SED} -e "1s,/usr/bin/perl,${PERL5}," < $$f		\
+		  > $${f}.fixed && ${MV} $${f}.fixed $$f &&		\
+		  ${CHMOD} +x $$f &&					\
+		  ${INSTALL_SCRIPT} $$f ${DOCDIR}/masses/$$f;		\
+	      else							\
+		${INSTALL_DATA} $$f ${DOCDIR}/masses/$$f;		\
+	      fi;							\
+	    fi;								\
+	  done)
+	${INSTALL_DATA} ${WRKSRC}/procmailrc.example ${EGDIR}/procmailrc.example
+	${INSTALL_DATA} ${WRKSRC}/rules/local.cf ${EGDIR}/local.cf
+.for f in check_whitelist speedtest translation_prep.pl
+	@(cd ${WRKSRC}/tools/;						\
+	  ${SED} -e "1s,/usr/bin/perl,${PERL5},"			\
+		 -e "1s,/usr/local/bin/perl,${PERL5}," < $f		\
+	    > ${f}.fixed && ${MV} ${f}.fixed $f;			\
+	  ${INSTALL_SCRIPT} $f ${DOCDIR}/tools/$f )
+.endfor
+	${INSTALL_DATA} ${WRKSRC}/tools/README.speedtest		\
+	  ${DOCDIR}/tools/README.speedtest
 
 post-install:
-.for d in spamassassin spamassassin/sql spamassassin/spamd
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/$d
-.endfor
-.for f in README procmailrc.example sample-nonspam.txt sample-spam.txt \
-    sql/README sql/spamassassin.sql spamd/README.spamd
-	${INSTALL_DATA} ${WRKSRC}/$f ${PREFIX}/share/doc/spamassassin/$f
-.endfor
+	${CHOWN} ${SHAREOWN} ${RULESDIR}/*
+	${CHGRP} ${SHAREGRP} ${RULESDIR}/*
+	${INSTALL_DATA} ${FILESDIR}/netbsd_lists.cf ${PKG_SYSCONFDIR}/
 
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
