@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/01/03 18:49:39 reed Exp $
+# $NetBSD: Makefile,v 1.17 2004/03/07 04:23:46 snj Exp $
 #
 
 DISTNAME=	SDL_perl-1.19.2
@@ -11,19 +11,19 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sdlperl.org/
 COMMENT=	Perl module for SDL
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/SDL_perl/.packlist
 
-.include "../../audio/SDL_mixer/buildlink2.mk"
-.include "../../devel/SDL/buildlink2.mk"
-.include "../../devel/SDL_gfx/buildlink2.mk"
-.include "../../devel/SDL_ttf/buildlink2.mk"
-.include "../../devel/smpeg/buildlink2.mk"
-.include "../../graphics/SDL_image/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/glu/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
+.include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/SDL_gfx/buildlink3.mk"
+.include "../../devel/SDL_ttf/buildlink3.mk"
+.include "../../devel/smpeg/buildlink3.mk"
+.include "../../graphics/SDL_image/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
-.include "../../net/SDL_net/buildlink2.mk"
+.include "../../net/SDL_net/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
