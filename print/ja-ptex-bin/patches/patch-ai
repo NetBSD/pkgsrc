@@ -1,0 +1,25 @@
+$NetBSD: patch-ai,v 1.1.1.1 2003/03/15 20:00:27 kei Exp $
+
+--- texk/kpathsea/texmf.in.orig	Sun Jan 19 20:58:27 2003
++++ texk/kpathsea/texmf.in	Fri Feb 21 21:31:58 2003
+@@ -58,7 +58,10 @@
+ TEXMFMAIN = @texmf@
+ 
+ % A place for local additions to a "standard" texmf tree.  For example:
+-TEXMFLOCAL = @texmf@-local
++TEXMFLOCAL = @texmflocal@
++
++% Add site-specific configurations as well as above.
++TEXMFSITE = @texmfsite@
+ 
+ % If defined, teTeX's texconfig stores modifications here (instead of the
+ % TEXMFMAIN tree).
+@@ -74,7 +77,7 @@
+ %   - list $VARTEXMF in the TEXMF definition;
+ %   - make sure that $VARTEXMF precedes $TEXMFMAIN in the TEXMF definition.
+ % TEXMF = $TEXMFMAIN
+-TEXMF = {$HOMETEXMF,!!$TEXMFLOCAL,!!$TEXMFMAIN}
++TEXMF = {$HOMETEXMF,!!$TEXMFSITE,!!$TEXMFLOCAL,!!$TEXMFMAIN}
+ 
+ % The system trees.  These are the trees that are shared by all the users.
+ SYSTEXMF = $TEXMF

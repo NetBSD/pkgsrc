@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1.1.1 2003/03/15 20:00:27 kei Exp $
+
+TEXMF=@PREFIX@/share/texmf
+PSTRICKS=$TEXMF/dvips/pstricks
+
+case $STAGE in
+PRE-DEINSTALL)
+	;;
+
+DEINSTALL)
+	;;
+
+POST-DEINSTALL)
+	$MV $TEXMF/web2c/texmf.cnf.orig $TEXMF/web2c/texmf.cnf
+	$MV $PSTRICKS/pst-text.pro.orig $PSTRICKS/pst-text.pro
+	@PREFIX@/bin/mktexlsr
+	;;
+
+*)
+	$ECHO "Unexpected argument: $STAGE"
+	exit 1
+	;;
+
+esac

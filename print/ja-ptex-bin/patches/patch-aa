@@ -1,0 +1,129 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/03/15 20:00:27 kei Exp $
+
+--- texk/web2c/ptex-3.1.2/Makefile.in.orig	Fri Nov 22 14:20:16 2002
++++ texk/web2c/ptex-3.1.2/Makefile.in	Sat Feb 22 05:01:34 2003
+@@ -5,11 +5,16 @@
+ 
+ default: programs formats
+ 
+-programs=ptex tftopl pltotf pdvitype jbibtex
++programs=ptex ptftopl ppltotf pdvitype pjbibtex
+ euc-formats=ptex-euc.fmt platex-euc.fmt
+ sjis-formats=ptex-sjis.fmt platex-sjis.fmt
+ 
+ ac_include ../../make/paths.mk
++# 
++texmflcl = @texmflocal@
++web2c_lcl_dir = $(texmflcl)/web2c
++fmt_lcl_dir = $(web2c_lcl_dir)
++texpool_lcl_dir = $(web2c_lcl_dir)
+ 
+ # Used for triptrap.
+ DIFF = diff
+@@ -94,6 +99,9 @@
+ 	$(srcdir)/tie -c ptex.ch ptex.web ptex-base.ch
+ 
+ ### TFtoPL
++ptftopl: tftopl
++	rm -f pftopl
++	$(LN) tftopl ptftopl
+ tftopl: tftopl.o $(plib_o) $(kpathsea) $(proglib)
+ 	$(kpathsea_link) tftopl.o $(plib_o) $(LOADLIBES)
+ tftopl.o: tftopl.c kanji.h ptexhelp.h
+@@ -105,6 +113,9 @@
+ 
+ 
+ ### PLtoTF
++ppltotf: pltotf
++	rm -f ppltotf
++	$(LN) pltotf ppltotf
+ pltotf: pltotf.o $(plib_o) $(kpathsea) $(proglib)
+ 	$(kpathsea_link) pltotf.o $(plib_o) $(LOADLIBES)
+ pltotf.o: pltotf.c kanji.h ptexhelp.h
+@@ -125,6 +136,9 @@
+ 	$(LN) $(srcdir)/dvitype.web pdvitype.web
+ 
+ ### jBibTeX
++pjbibtex: jbibtex
++	rm -f pjbibtex
++	$(LN) jbibtex pjbibtex
+ jbibtex: jbibtex.o jbibextra.o $(plib_o) $(kpathsea) $(proglib)
+ 	$(kpathsea_link) jbibtex.o jbibextra.o $(plib_o) $(LOADLIBES)
+ jbibtex.o: jbibtex.c jbibextra.h kanji.h ptexhelp.h
+@@ -167,11 +181,16 @@
+ texmf.cnf: $(kpathsea_dir)/texmf.cnf
+ 	$(SHELL) $(thisdir)/mkconf $< > texmf.cnf
+ 
+-dumpenv = TEXMFCNF=$(thisdir) TEXMF=$(texmf)
++#dumpenv = TEXMFCNF=$(thisdir) TEXMF=$(texmf)
++newtexmf = $(srcdir)/../../texmf
++newtexmflcl = $(srcdir)/../../texmf.local
++texin = $(srcdir):{$(newtexmf),$(newtexmflcl)}/ptex//
++texfonts = {$(newtexmf),$(newtexmflcl)}/fonts/tfm/ptex//
++dumpenv = TEXMFCNF=../../kpathsea TEXINPUTS=.:$(texin): TEXFONTS=$(texfonts):
+ 
+ ptex-euc.fmt: ptex texmf.cnf
+ 	$(dumpenv) $(MAKE) $(makeargs) files="--progname=ptex ptex.tex min10.tfm" prereq-check
+-	$(dumpenv) ./ptex -ini --kanji=euc --jobname=ptex-euc \\input ptex \\dump </dev/null
++	$(dumpenv) ./ptex -ini --kanji=euc --jobname=ptex-euc \\input ptex \\dump </dev/null || ${TRUE} # XXX
+ 
+ ptex-sjis.fmt: ptex texmf.cnf
+ 	$(dumpenv) $(MAKE) $(makeargs) files="--progname=ptex ptex.tex min10.tfm" prereq-check
+@@ -179,7 +198,7 @@
+ 
+ platex-euc.fmt: ptex texmf.cnf
+ 	$(dumpenv) $(MAKE) $(makeargs) files="--progname=platex platex.ltx" prereq-check
+-	$(dumpenv) ./ptex -ini --kanji=euc --progname=platex --jobname=platex-euc \\input platex.ltx </dev/null
++	$(dumpenv) ./ptex -ini --kanji=euc --progname=platex --jobname=platex-euc \\input platex.ltx </dev/null || ${TRUE} # XXX
+ 
+ platex-sjis.fmt: ptex texmf.cnf
+ 	$(dumpenv) $(MAKE) $(makeargs) files="--progname=platex platex.ltx" prereq-check
+@@ -212,7 +231,7 @@
+ 
+ # The actual binary executables and pool files.
+ install-programs: $(programs)
+-	$(SHELL) $(top_srcdir)/mkinstalldirs $(bindir) $(texpooldir)
++	$(SHELL) $(top_srcdir)/mkinstalldirs $(bindir) $(texpool_lcl_dir)
+ 	for p in $(programs); do $(INSTALL_LIBTOOL_PROG) $(bindir) $$p; done
+ 
+ # The links to ptex for each format and for {ini,vir}ptex.
+@@ -222,27 +241,28 @@
+ 
+ # Always do plain.*, so examples from the TeXbook (etc.) will work.
+ install-formats: $(formats)
+-	$(SHELL) $(top_srcdir)/mkinstalldirs $(fmtdir)
+-	for f in $(formats); do $(INSTALL_DATA) $$f $(fmtdir)/$$f; done
+-	cd $(fmtdir) && (rm -f ptex-jis.fmt platex-jis.fmt ;\
++	$(SHELL) $(top_srcdir)/mkinstalldirs $(fmt_lcl_dir)
++	for f in $(formats); do $(INSTALL_DATA) $$f $(fmt_lcl_dir)/$$f; done
++	cd $(fmt_lcl_dir) && (rm -f ptex-jis.fmt platex-jis.fmt ;\
+ 		$(LN) ptex-euc.fmt ptex-jis.fmt ;\
+ 		$(LN) platex-euc.fmt platex-jis.fmt)
+-	cd $(fmtdir) && (rm -f ptex.fmt platex.fmt ;\
++	cd $(fmt_lcl_dir) && (rm -f ptex.fmt platex.fmt ;\
+ 		$(LN) ptex-$(configkcode).fmt ptex.fmt ;\
+ 		$(LN) platex-$(configkcode).fmt platex.fmt )
+ 
+ # Auxiliary files.
+ install-data::
+ 	$(SHELL) $(top_srcdir)/mkinstalldirs \
+-		$(texpooldir) $(web2cdir) $(fontnamedir)
+-	$(INSTALL_DATA) ptex.pool $(texpooldir)/ptex.pool
+-	if [ -f $(web2cdir)/texmf.cnf ]; then \
+-		mv -f $(web2cdir)/texmf.cnf $(web2cdir)/texmf.cnf.orig ;\
+-	else true; fi
+-	$(INSTALL_DATA) texmf.cnf $(web2cdir)/texmf.cnf
++		$(texpool_lcl_dir) $(web2c_lcl_dir) $(fontnamedir)
++	$(INSTALL_DATA) ptex.pool $(texpool_lcl_dir)/ptex.pool
++#	package system handles this file in case binary packages.
++#	if [ -f $(web2cdir)/texmf.cnf ]; then \
++#		mv -f $(web2cdir)/texmf.cnf $(web2cdir)/texmf.cnf.orig ;\
++#	else true; fi
++	$(INSTALL_DATA) texmf.cnf $(web2c_lcl_dir)/texmf.cnf
+ # tcx files
+ #	cd $(thisdir)/share && \
+-#	for f in *.tcx; do $(INSTALL_DATA) $$f $(web2cdir)/$$f; done
++#	for f in *.tcx; do $(INSTALL_DATA) $$f $(web2c_lcl_dir)/$$f; done
+ # map files are not provided with pTeX
+ #	cd $(thisdir)/share && \
+ #	for f in *.map; do $(INSTALL_DATA) $$f $(fontnamedir)/$$f; done

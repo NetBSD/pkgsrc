@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/03/15 20:00:27 kei Exp $
+
+--- texk/web2c/ptex-3.1.2/configure.orig	Fri Nov 22 14:20:16 2002
++++ texk/web2c/ptex-3.1.2/configure	Fri Feb 21 21:21:10 2003
+@@ -5,7 +5,7 @@
+ configopt=
+ 
+ printUsage () {
+-	echo "Usage: $progname {EUC|JIS|SJIS}"
++	echo "Usage: $progname {EUC|JIS|SJIS} texmf_local_dir"
+ 	exit 1
+ }
+ 
+@@ -27,6 +27,7 @@
+ CONFIGSED=config.sed 
+ echo "s%@configopt@%$*%g" > $CONFIGSED
+ echo "s%@TERMCODE@%$termcode%g" >> $CONFIGSED
++echo "s%@texmflocal@%$2%g" >> $CONFIGSED
+ case $termcode in
+   "SJIS") echo "s%@configkcode@%sjis%g" >> $CONFIGSED ;;
+   "JIS")  echo "s%@configkcode@%jis%g" >> $CONFIGSED ;;

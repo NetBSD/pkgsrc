@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2003/03/15 20:00:27 kei Exp $
+
+--- texk/web2c/Makefile.in.orig	Sun Feb  2 01:51:16 2003
++++ texk/web2c/Makefile.in	Fri Feb 21 21:29:05 2003
+@@ -479,7 +479,7 @@
+ 
+ latex.fmt: tex
+ 	$(dumpenv) $(MAKE) progname=latex files="latex.ltx" prereq-check
+-	$(dumpenv) ./tex --progname=latex --ini \\input latex.ltx </dev/null
++	$(dumpenv) ./tex --progname=latex --ini \\input latex.ltx </dev/null || ${TRUE} # XXX
+ 
+ etex.efmt: etex
+ 	$(dumpenv) $(MAKE) progname=etex files="etex.src plain.tex cmr10.tfm" prereq-check
