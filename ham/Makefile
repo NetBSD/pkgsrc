@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/09/24 23:40:56 wulf Exp $
+# $NetBSD: Makefile,v 1.14 2005/01/23 20:34:21 wulf Exp $
 #
 
 
@@ -9,6 +9,7 @@ SUBDIR+=	cwtext
 SUBDIR+=	dpbox
 SUBDIR+=	grig
 SUBDIR+=	hamlib
+SUBDIR+=	linpsk
 SUBDIR+=	locator
 SUBDIR+=	tfkiss
 SUBDIR+=	tlf
