@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.408 2003/09/19 11:56:01 wiz Exp $
+# $NetBSD: Makefile,v 1.409 2003/09/19 12:21:43 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -77,7 +77,7 @@ SUBDIR+=	ftpproxy
 SUBDIR+=	gated
 SUBDIR+=	gethost
 SUBDIR+=	gftp
-SUDBIR+=	gftp-gtk1
+SUBDIR+=	gftp-gtk1
 SUBDIR+=	gini
 SUBDIR+=	gkrellm-ping
 SUBDIR+=	gkrellm-snmp
@@ -249,7 +249,6 @@ SUBDIR+=	ruby-drb
 SUBDIR+=	ruby-icmp
 SUBDIR+=	ruby-xmlrpc4r
 SUBDIR+=	samba
-SUBDIR+=	samba20
 SUBDIR+=	scli
 SUBDIR+=	sdig
 SUBDIR+=	sdist
