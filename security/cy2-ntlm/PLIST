@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/08/19 15:52:30 jmc Exp $
-lib/sasl2/libntlm.a
+@comment $NetBSD: PLIST,v 1.4 2003/09/13 19:08:54 jlam Exp $
 lib/sasl2/libntlm.la
 lib/sasl2/libntlm.so
 lib/sasl2/libntlm.so.2
