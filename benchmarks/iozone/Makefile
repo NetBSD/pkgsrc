@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/05/10 16:33:03 jschauma Exp $
+# $NetBSD: Makefile,v 1.26 2004/07/30 15:50:37 minskim Exp $
 
 DISTNAME=		iozone3_217
 PKGNAME=		iozone-3.217
@@ -11,6 +11,8 @@ HOMEPAGE=		http://www.iozone.org/
 COMMENT=		Benchmark for file read and write speed
 
 RESTRICTED=		"Publication of derivative works not allowed"
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/src/current
 MAKEFILE=		makefile
@@ -33,6 +35,8 @@ MAKEFILE=		makefile
   # XXX: generic should work, but specific target would be better
   ALL_TARGET=		generic
 .endif
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/iozone ${PREFIX}/bin

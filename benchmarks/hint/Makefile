@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/01/20 12:08:12 agc Exp $
+# $NetBSD: Makefile,v 1.17 2004/07/30 15:50:37 minskim Exp $
 # FreeBSD: Makefile,v 1.1.1.1 1998/06/15 18:09:43 ghelmer Exp
 #
 
@@ -12,9 +12,13 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.scl.ameslab.gov/Projects/HINT/
 COMMENT=	Scalable benchmark for testing CPU and memory performance
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 ALL_TARGET=	DOUBLE INT
 
 WRKSRC=		${WRKDIR}/unix
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/DOUBLE ${PREFIX}/bin/hint-double
