@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/03/29 02:49:46 snj Exp $
+# $NetBSD: Makefile,v 1.8 2004/04/02 22:21:00 kristerw Exp $
 
 DISTNAME=	ogle-0.9.2
 PKGREVISION=	1
@@ -14,6 +14,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-1.[6-9]*-i386 NetBSD-[2-9]*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-1.6[D-Z]*-powerpc NetBSD-1.[7-9]*-powerpc
 ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-powerpc
 ONLY_FOR_PLATFORM+=	NetBSD-1.6Z*-alpha NetBSD-[2-9]*-alpha
+ONLY_FOR_PLATFORM+=	NetBSD-*-x86_64
 ONLY_FOR_PLATFORM+=	Linux-*-*
 ONLY_FOR_PLATFORM+=	SunOS-*-*
 
