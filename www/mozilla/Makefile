@@ -1,7 +1,9 @@
-# Makefile for mozilla package.
-# Version required: 5.0b1 (3/31/98)
+# New packages collection Makefile for:	mozilla
+# Version required:	5.0b1 (3/31/98)
+# Date created:		08 Apr 1998
+# Whom:			fvdl
 #
-# $NetBSD: Makefile,v 1.1 1998/04/08 22:23:48 fvdl Exp $
+# $NetBSD: Makefile,v 1.2 1998/04/09 08:21:54 frueauf Exp $
 #
 
 DISTNAME=	unix
