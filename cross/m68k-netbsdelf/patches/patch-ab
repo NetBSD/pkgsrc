@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/01/24 12:03:07 tsutsui Exp $
+
+--- gas/configure.orig	Sat Dec  9 22:23:10 2000
++++ gas/configure	Sat Dec  9 22:23:31 2000
+@@ -1535,6 +1535,7 @@
+       m68k-*-linux*aout*)   fmt=aout em=linux ;;
+       m68k-*-linux-gnu*)    fmt=elf em=linux ;;
+       m68k-*-lynxos*)       fmt=coff em=lynx ;;
++      m68k-*-netbsdelf*)    fmt=elf em=nbsd bfd_gas=yes ;;
+       m68k-*-netbsd*)       fmt=aout em=nbsd bfd_gas=yes ;;
+       m68k-*-openbsd*)      fmt=aout em=nbsd bfd_gas=yes ;;
+       m68k-apple-aux*)      fmt=coff em=aux ;;

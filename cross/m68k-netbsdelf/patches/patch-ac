@@ -1,0 +1,19 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/01/24 12:03:07 tsutsui Exp $
+
+--- ../egcs-1.1.1/gcc/configure.orig	Sat Dec  9 21:18:03 2000
++++ ../egcs-1.1.1/gcc/configure	Sat Dec  9 21:27:35 2000
+@@ -3538,6 +3538,14 @@
+ 		extra_headers=math-68881.h
+ 		float_format=m68k
+ 		;;
++	m68k*-*-netbsdelf*)
++		tm_file=m68k/netbsd-elf.h
++		xm_file=m68k/xm-netbsd.h
++		# On NetBSD, the headers are already okay, except for math.h.
++		fixincludes=fixinc.wrap
++		tmake_file=t-netbsd
++		float_format=m68k
++		;;
+ 	m68k*-*-netbsd*)
+ 		tm_file=m68k/netbsd.h
+ 		xm_file=m68k/xm-netbsd.h
