@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/02/14 18:26:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.31 2004/02/14 21:06:43 minskim Exp $
 #
 
 DISTNAME=		gnome-panel-2.4.2
@@ -48,6 +48,7 @@ BUILDLINK_DEPENDS.GConf2+=	GConf2>=2.4.0.1nb1
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
