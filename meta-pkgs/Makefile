@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/11/04 19:49:24 jdolecek Exp $
+# $NetBSD: Makefile,v 1.24 2004/11/18 09:15:38 wiz Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -19,7 +19,6 @@ SUBDIR+=	netbsd-doc-print
 SUBDIR+=	netbsd-www
 SUBDIR+=	php4-extensions
 SUBDIR+=	php5-extensions
-SUBDIR+=	netbsd-www
 SUBDIR+=	suse9
 SUBDIR+=	web-server
 SUBDIR+=	windowmaker-desktop
