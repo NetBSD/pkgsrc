@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2002/09/21 01:00:58 jlam Exp $
+# $NetBSD: Makefile,v 1.13.2.1 2003/04/20 12:07:16 grant Exp $
 
 DISTNAME=       dialog-0.6z
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=   ${MASTER_SITE_SUNSITE:=utils/shell/}
 
@@ -11,6 +12,7 @@ USE_BUILDLINK2=		# defined
 USE_GMAKE=		# defined
 
 INCOMPAT_CURSES=	NetBSD-1.5-* NetBSD-1.5.*-*
+INCOMPAT_CURSES+=	NetBSD-1.6-* NetBSD-1.6.1-* NetBSD-1.6[A-P]-*
 
 EGDIR=			${PREFIX}/share/examples/dialog
 EGFILES=		checklist guage infobox inputbox menubox msgbox
