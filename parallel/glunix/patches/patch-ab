@@ -1,19 +1,29 @@
-$NetBSD: patch-ab,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
+$NetBSD: patch-ab,v 1.2 2003/03/31 03:46:30 jmc Exp $
 
---- glunix/src/comm/ccomm_net.cc.orig	Wed Oct 15 12:24:52 1997
-+++ glunix/src/comm/ccomm_net.cc	Thu Apr  2 08:54:18 1998
-@@ -75,3 +75,4 @@
+--- glunix/src/comm/ccomm_net.cc.orig	Wed Oct 15 19:24:52 1997
++++ glunix/src/comm/ccomm_net.cc	Sun Mar 30 21:48:41 2003
+@@ -73,7 +73,8 @@
+ #include <netinet/tcp.h>
+ #include <sys/socket.h>
  #include <unistd.h>
 -#include <sys/systeminfo.h>
 +/*#include <sys/systeminfo.h>*/
 +#include <sys/uio.h>
  
-@@ -260,3 +261,3 @@
+ #include "glib/types.h"
+ #include "cdebug.h"
+@@ -258,7 +259,7 @@
+ 
+     h = gethostbyname(hostName);
      if (!h) {
 -	DE("Cannot resolve host name: %s\n", strerror(errno));
 +	DE("Cannot resolve host name: %s %s\n",hostName, strerror(errno));
  	// BUGBUG set error code
-@@ -330,10 +331,11 @@
+ 	return 0;
+     }
+@@ -328,14 +329,15 @@
+     }
+ 
      // Get my IP address
 -    if (sysinfo(SI_HOSTNAME, hostName, sizeof(hostName)-1) < 0) {
 -	DE("sysinfo(SI_HOSTNAME): %s\n", strerror(errno));
@@ -31,7 +41,20 @@ $NetBSD: patch-ab,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
 -	DE("Cannot resolve host name: %s\n", strerror(errno));
 +	DE("Cannot resolve host name: %s %s\n",hostName, strerror(errno));
  	// BUGBUG error code
-@@ -378,3 +380,7 @@
+ 	*ipPtr = 0;
+ 	return False;
+@@ -365,7 +367,7 @@
+ Comm_SocketGetPort(int sock, int *port)
+ {
+     struct sockaddr_in  s;
+-    int len;
++    socklen_t len;
+ 
+     ASSERT(port != NULL);
+ 
+@@ -376,7 +378,11 @@
+ 	return False;
+     }
      // use ntohs to convert it back to host order for pc's
 +#ifdef L_ENDIAN
 +    *port = s.sin_port;
@@ -39,7 +62,29 @@ $NetBSD: patch-ab,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
      *port = ntohs(s.sin_port);
 +#endif
      return True;
-@@ -437,4 +443,7 @@
+ }
+ 
+@@ -397,7 +403,7 @@
+ Comm_SocketGetPeerPort(int sock)
+ {
+     struct sockaddr_in  s;
+-    int                 len;
++    socklen_t           len;
+ 
+     len = sizeof(struct sockaddr_in);
+     if (getpeername(sock, (struct sockaddr *)&s, &len)
+@@ -425,7 +431,7 @@
+ Comm_SocketGetPeerIpAddr(int sock, uint *ipAddrPtr)
+ {
+     struct sockaddr_in  s;
+-    int                 len;
++    socklen_t           len;
+ 
+     ASSERT(ipAddrPtr != NULL);
+     *ipAddrPtr = 0;
+@@ -435,8 +441,11 @@
+ 	DE("getpeername: %s\n", strerror(errno));
+ 	return False;
      }
 -
 +#ifdef L_ENDIAN
@@ -48,7 +93,11 @@ $NetBSD: patch-ab,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
      *ipAddrPtr = ntohl(s.sin_addr.s_addr);
 +#endif
      return True;
-@@ -530,4 +539,9 @@
+ }
+ 
+@@ -528,8 +537,13 @@
+ 
+     // Bind the socket to a well-known port
      s.sin_family = AF_INET;
 +#ifdef L_ENDIAN
 +    s.sin_port = port;
@@ -58,7 +107,11 @@ $NetBSD: patch-ab,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
      s.sin_addr.s_addr = htonl(INADDR_ANY);
 +#endif
  
-@@ -639,5 +653,9 @@
+     val = bind(sock, (struct sockaddr *) &s, sizeof(s));
+     if (val < 0) {
+@@ -637,9 +651,13 @@
+ 
+     // Now connect to the requested host
      s.sin_family = AF_INET ;
 +#ifdef L_ENDIAN
 +    s.sin_port = port;
@@ -69,3 +122,50 @@ $NetBSD: patch-ab,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
 -
 +#endif
      if (connect(sock, (struct sockaddr *) &s, sizeof(s)) < 0) {
+ 	if (errno == EINTR) {
+ 	    while(1) {
+@@ -700,7 +718,7 @@
+ {
+     struct sockaddr_in  s;
+     int                 fd;
+-    int                 addrLen;
++    socklen_t           addrLen;
+ 
+     ASSERT(newFd != NULL);
+     *newFd = -1;
+@@ -754,7 +772,7 @@
+     ASSERT(bufLen > 0);
+ 
+     errno = 0; // BUGBUG, we should do this for ALL related funcs
+-    for (; bufLen; bufLen -= val, bufPtr += val) {
++    for (; bufLen; bufLen -= val, (char *)bufPtr += val) {
+ 	val = write(sock, (const char *)bufPtr, bufLen);
+ 
+ 	writeErrno = errno;
+@@ -880,7 +898,7 @@
+ 		vecLen--;
+ 	    } else {
+ 		vecPtr[0].iov_len -= val;
+-		vecPtr[0].iov_base += val;
++		(char *)vecPtr[0].iov_base += val;
+ 		break;
+ 	    }
+ 	}
+@@ -915,7 +933,7 @@
+     ASSERT(bufLen > 0);
+ 
+     errno = 0; // BUGBUG, we should do this for ALL related funcs
+-    for (; bufLen; bufLen -= val, bufPtr += val) {
++    for (; bufLen; bufLen -= val, (char *)bufPtr += val) {
+ 	val = read(sock, (char *)bufPtr, bufLen);
+ 	readErrno = errno;
+ 	D9("Read from sock %d, bufPtr %08x, bufLen %d, bytes %d\n",
+@@ -1045,7 +1063,7 @@
+ 		D3("Read fewer bytes than asked for:%d < %d\n",
+ 		   totRead, vecPtr[currVec].iov_len);
+ 		vecPtr[currVec].iov_len -= val;
+-		vecPtr[currVec].iov_base += val;
++		(char *)vecPtr[currVec].iov_base += val;
+ 		break;
+ 	    }
+ 	}
