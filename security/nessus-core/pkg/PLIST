@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/30 11:13:09 frueauf Exp $
+bin/nessus
+include/nessus/config.h
+include/nessus/includes.h
+include/nessus/nessus-devel.h
+include/nessus/nessusicmp.h
+include/nessus/nessusip.h
+include/nessus/nessusraw.h
+include/nessus/nessustcp.h
+include/nessus/nessusudp.h
+include/nessus/ntcompat.h
+man/man1/nessus.1
+man/man8/nessus-adduser.8
+man/man8/nessusd.8
+sbin/nessus-adduser
+sbin/nessusd
+@exec /bin/mkdir -p %D/lib/nessus/reports
+@unexec /bin/rmdir %D/lib/nessus/reports 2>/dev/null || true
+@unexec /bin/rmdir %D/lib/nessus 2>/dev/null || true
+@exec /bin/mkdir -p %D/etc/nessus
+@unexec /bin/rmdir %D/etc/nessus 2>/dev/null || true
+@exec /bin/mkdir -p /var/nessus
+@unexec /bin/rmdir /var/nessus 2>/dev/null || true
