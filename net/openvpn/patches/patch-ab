@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2005/02/21 23:26:24 bad Exp $
+
+--- syshead.h.orig	Thu Apr  1 13:52:34 2004
++++ syshead.h	Tue Feb 22 00:09:49 2005
+@@ -247,6 +247,8 @@
+ #include <net/if_tun.h>
+ #endif
+ 
++#include <net/if_ether.h>
++
+ #endif /* TARGET_NETBSD */
+ 
+ #ifdef WIN32

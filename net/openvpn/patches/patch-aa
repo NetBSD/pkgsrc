@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.1 2005/02/21 23:26:24 bad Exp $
+
+--- route.c.orig	Sun Mar 14 06:34:20 2004
++++ route.c	Tue Feb 22 00:02:54 2005
+@@ -626,7 +626,7 @@
+   msg (D_ROUTE, "%s", BSTR (&buf));
+   status = system_check (BSTR (&buf), "ERROR: FreeBSD route add command failed", false);
+ 
+-#elif defined(TARGET_OPENBSD)
++#elif defined(TARGET_OPENBSD) || defined(TARGET_NETBSD)
+ 
+   buf_printf (&buf, ROUTE_PATH " add");
+ 
+@@ -641,7 +641,7 @@
+ 	      netmask);
+ 
+   msg (D_ROUTE, "%s", BSTR (&buf));
+-  status = system_check (BSTR (&buf), "ERROR: OpenBSD route add command failed", false);
++  status = system_check (BSTR (&buf), "ERROR: Net/OpenBSD route add command failed", false);
+ 
+ #else
+   msg (M_FATAL, "Sorry, but I don't know how to do 'route' commands on this operating system.  Try putting your routes in a --route-up script");
+@@ -713,7 +713,7 @@
+   msg (D_ROUTE, "%s", BSTR (&buf));
+   system_check (BSTR (&buf), "ERROR: FreeBSD route delete command failed", false);
+ 
+-#elif defined(TARGET_OPENBSD)
++#elif defined(TARGET_OPENBSD) || defined(TARGET_NETBSD)
+ 
+   buf_printf (&buf, ROUTE_PATH " delete -net %s %s -netmask %s",
+ 	      network,
+@@ -721,7 +721,7 @@
+ 	      netmask);
+ 
+   msg (D_ROUTE, "%s", BSTR (&buf));
+-  system_check (BSTR (&buf), "ERROR: OpenBSD route delete command failed", false);
++  system_check (BSTR (&buf), "ERROR: Net/OpenBSD route delete command failed", false);
+ 
+ #else
+   msg (M_FATAL, "Sorry, but I don't know how to do 'route' commands on this operating system.  Try putting your routes in a --route-up script");
