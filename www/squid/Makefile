@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.94 2003/11/12 03:39:44 jschauma Exp $
+# $NetBSD: Makefile,v 1.95 2003/11/30 14:08:31 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE4
 PKGNAME=	squid-2.5.4
-PKGREVISION=	1
+PKGREVISION=	2
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
@@ -10,8 +10,23 @@ MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp1.au.squid-cache.org/pub/squid/squid-2/STABLE/
 EXTRACT_SUFX=	.tar.bz2
 
-#PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
-#PATCHFILES=
+PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
+PATCHFILES=	squid-2.5.STABLE4-reconfigure_message.patch \
+		squid-2.5.STABLE4-digest_auth_pwchange.patch \
+		squid-2.5.STABLE4-redirect_login_space.patch \
+		squid-2.5.STABLE4-fqdnnegcache.patch \
+		pam_auth-2.2.patch \
+		squid-2.5.STABLE4_auth_param_doc.patch \
+		squid-2.5.STABLE4-errorpages.patch \
+		squid-2.5.STABLE4-error_load_text.patch \
+		squid-2.5.STABLE4-xpi_mime.patch \
+		squid-2.5.STABLE4-size_overflow.patch \
+		squid-2.5.STABLE4-extacl_auth_loop.patch \
+		squid-2.5.STABLE4-squid_ldap_group.patch \
+		squid-2.5.STABLE4-positive_dns_ttl.patch \
+		squid-2.5.STABLE4-gopherhtml.patch \
+		squid-2.5.STABLE4-netroute.patch \
+		squid-2.5.STABLE4-synflood.patch
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@NetBSD.org
