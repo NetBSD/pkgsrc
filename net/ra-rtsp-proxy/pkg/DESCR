@@ -1,0 +1,5 @@
+Rtspd is a reference  implementation  of  an  application-
+level  RTSP  proxy.  This is meant to serve as a reference
+for those writing firewall software.   It  currently  sup-
+ports the following unicast transports: X-REAL-RTP/UDP, X-
+REAL-RTP/TCP, RTP/AVP/UDP and RTP/AVP/TCP.
