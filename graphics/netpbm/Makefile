@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1998/07/04 05:11:13 mycroft Exp $
+# $NetBSD: Makefile,v 1.19 1998/07/15 11:45:51 tv Exp $
 #
 
 DISTNAME=	netpbm
@@ -18,7 +18,7 @@ CONFLICTS=	netpbm-94.3.1
 
 DEPENDS+=	tiff-3.4:../../graphics/tiff
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png-0.96:../../graphics/png
+DEPENDS+=	png-1.0.2:../../graphics/png
 
 WRKSRC=		${WRKDIR}/netpbm
 MAKE_ENV +=	PREFIX=${PREFIX} INSTALL_MAN="${INSTALL_MAN}"

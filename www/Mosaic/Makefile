@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/07/12 04:09:55 tv Exp $
+# $NetBSD: Makefile,v 1.4 1998/07/15 11:45:53 tv Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/05/27 08:44:56 dburr Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.ncsa.uiuc.edu/Web/Mosaic/Unix/source/
 MAINTAINER=	tv@netbsd.org
 
 DEPENDS=	jpeg-6b:../../graphics/jpeg \
-		png-0.96:../../graphics/png \
+		png-1.0.2:../../graphics/png \
 		xpm-3.4k:../../graphics/xpm
 
 USE_X11=	yes
