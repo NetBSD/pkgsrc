@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2002/10/03 19:30:58 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2002/10/20 01:53:59 wiz Exp $
 
 DISTNAME=		autoconf-2.54
 CATEGORIES=		devel
@@ -25,6 +25,10 @@ INFO_FILES=		autoconf.info standards.info
 
 PERL5_REQD=		5.6
 TEXINFO_REQD=		4.0
+
+# undo a rather stupid hack in the install step when --without-lispdir is used
+post-install:
+	${RM} -rf ${WRKSRC}/lib/emacs/no
 
 .include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/texinfo.mk"
