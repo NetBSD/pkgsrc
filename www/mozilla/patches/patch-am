@@ -1,9 +1,18 @@
-$NetBSD: patch-am,v 1.10 2003/03/17 16:07:35 taya Exp $
+$NetBSD: patch-am,v 1.10.2.1 2003/12/05 17:05:26 agc Exp $
 
 diff -ru ../Orig/mozilla/nsprpub/pr/src/pthreads/ptio.c ./nsprpub/pr/src/pthreads/ptio.c
---- ../Orig/mozilla/nsprpub/pr/src/pthreads/ptio.c	2003-01-21 05:50:00.000000000 +0900
-+++ ./nsprpub/pr/src/pthreads/ptio.c	2003-03-14 16:58:52.000000000 +0900
-@@ -194,7 +194,7 @@
+--- ../Orig/mozilla/nsprpub/pr/src/pthreads/ptio.c	2003-07-15 06:59:47.000000000 +0900
++++ ./nsprpub/pr/src/pthreads/ptio.c	2003-10-16 15:37:22.000000000 +0900
+@@ -189,7 +189,7 @@
+ #endif
+ #endif
+ 
+-#ifdef DARWIN
++#if defined(DARWIN) || (defined(__NetBSD__) && defined(IPV6_V6ONLY))
+ static PRBool _pr_ipv6_v6only_on_by_default;
+ /* The IPV6_V6ONLY socket option is not defined on Mac OS X 10.1. */
+ #ifndef IPV6_V6ONLY
+@@ -202,7 +202,7 @@
  #elif defined(IRIX) || defined(OSF1) || defined(AIX) || defined(HPUX) \
      || defined(LINUX) || defined(FREEBSD) || defined(BSDI) || defined(VMS) \
      || defined(NTO) || defined(OPENBSD) || defined(DARWIN) \
@@ -12,19 +21,21 @@ diff -ru ../Orig/mozilla/nsprpub/pr/src/pthreads/ptio.c ./nsprpub/pr/src/pthread
  #define _PRSockOptVal_t void *
  #else
  #error "Cannot determine architecture"
-@@ -3428,6 +3428,15 @@
+@@ -1154,7 +1154,7 @@
+     _pr_stderr = pt_SetMethods(2, PR_DESC_FILE, PR_FALSE, PR_TRUE);
+     PR_ASSERT(_pr_stdin && _pr_stdout && _pr_stderr);
+ 
+-#ifdef DARWIN
++#if defined(DARWIN) || (defined(__NetBSD__) && defined(IPV6_V6ONLY))
+     /* In Mac OS X v10.3 Panther Beta the IPV6_V6ONLY socket option
+      * is turned on by default, contrary to what RFC 3493, Section
+      * 5.3 says.  So we have to turn it off.  Find out whether we
+@@ -3462,7 +3462,7 @@
      if (osfd == -1) pt_MapError(_PR_MD_MAP_SOCKET_ERROR, errno);
      else
      {
-+#if defined(__NetBSD__) && defined(_PR_INET6) && defined(IPV6_V6ONLY)
-+	if(domain == PR_AF_INET6) {
-+		int	opt = 0;
-+		if (setsockopt(osfd, IPPROTO_IPV6, IPV6_V6ONLY, &opt, sizeof(opt))){
-+			close(osfd);
-+			return NULL;
-+            	}
-+	}
-+#endif
-         fd = pt_SetMethods(osfd, ftype, PR_FALSE, PR_FALSE);
-         if (fd == NULL) close(osfd);
-     }
+-#ifdef DARWIN
++#if defined(DARWIN) || (defined(__NetBSD__) && defined(IPV6_V6ONLY))
+         if ((domain == AF_INET6) && _pr_ipv6_v6only_on_by_default)
+         {
+             int on = 0;
