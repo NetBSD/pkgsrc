@@ -1,0 +1,18 @@
+$NetBSD: patch-ae,v 1.1 2003/12/17 14:55:58 sketch Exp $
+
+--- GNUmakefile.in.orig	2003-12-16 17:56:20.509350958 +0000
++++ GNUmakefile.in	2003-12-16 17:56:41.441185161 +0000
+@@ -111,11 +111,11 @@
+ # used. (I mean: 'cd core/make; cd ..; mkdir make-build; cd
+ # make-build; ../make/configure --disable-import; make;' must work)
+ which_lib$(EXEEXT): which_lib.c config.h
+-	$(CC) @CFLAGS@ -Wall -I. -o $@ $<
++	$(CC) @CFLAGS@ -I. -o $@ $<
+ 
+ user_home$(EXEEXT): user_home.c config.h
+ 	$(CC) @CFLAGS@ -DGNUSTEP_SYSTEM_ROOT=$(GNUSTEP_SYSTEM_ROOT) \
+-	      -Wall -I. -o $@ $<
++	      -I. -o $@ $<
+ 
+ ifeq ($(messages),yes)
+   EC = 
