@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/01/03 19:56:38 tron Exp $
+# $NetBSD: Makefile,v 1.11 2002/01/14 12:05:14 tron Exp $
 
 DISTNAME=	vorbis-tools-1.0rc3
 PKGNAME=	vorbis-tools-1.0.0.7
@@ -9,7 +9,7 @@ MAINTAINER=	lukem@netbsd.org
 HOMEPAGE=	http://www.vorbis.com/
 COMMENT=	Ogg Vorbis encoder and player
 
-DEPENDS=	curl-7.9.1:../../www/curl
+DEPENDS=	curl>=7.9.1:../../www/curl
 
 CONFLICTS=	vorbis-[0-9]*
 
