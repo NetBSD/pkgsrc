@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/11/29 22:11:50 seb Exp $
+# $NetBSD: Makefile,v 1.25 2004/11/30 10:16:14 seb Exp $
 #
 
 DISTNAME=	graphviz-1.16
@@ -39,15 +39,14 @@ post-extract:
 pre-build:
 	${TOUCH} ${WRKSRC}/Makefile
 
-.include "../../graphics/png/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
-.include "../../x11/tk/buildlink3.mk"
-# .include "../../www/curl/buildlink3.mk"
-.include "../../textproc/expat/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
