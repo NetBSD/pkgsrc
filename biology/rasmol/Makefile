@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/06/07 11:34:40 cjep Exp $
+# $NetBSD: Makefile,v 1.7 2002/09/29 01:32:05 jlam Exp $
 
 DISTNAME=	RasMol_2.7.1
 PKGNAME=	rasmol-2.7.1
@@ -10,16 +10,16 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.bernstein-plus-sons.com/software/rasmol/
 COMMENT=	Molecular Graphics Visualisation Tool
 
+USE_BUILDLINK2=	YES
 USE_IMAKE=	YES
 
 MAKE_ENV+=	DEPTHDEF="${DEPTHDEF}"
 
-.if (${MACHINE_ARCH} == arm32)
-. include "../../lang/gcc/Makefile.gcc"
-MAKE_FLAGS+=	CC=${CC}
-.endif
-
 .include "../../mk/bsd.prefs.mk"
+
+.if (${MACHINE_ARCH} == arm32)
+.  include "../../lang/gcc/buildlink2.mk"
+.endif
 
 .if defined(RASMOL_DEPTH)
 .if ${RASMOL_DEPTH} == 32
