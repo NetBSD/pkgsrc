@@ -1,121 +1,131 @@
-$NetBSD: patch-aa,v 1.8 1999/10/08 21:18:33 jlam Exp $
+$NetBSD: patch-aa,v 1.9 2000/05/17 10:13:20 tron Exp $
 
---- Makefile.orig	Wed Jan 26 06:47:35 1994
-+++ Makefile	Tue May  4 16:51:11 1999
-@@ -21,7 +21,7 @@
- #CC =		gcc -ansi -pedantic -fcombine-regs -fpcc-struct-return
- 
- # CONFIGURE: cc flags go here.
--CFLAGS =	-O
-+CFLAGS =	-O2
- #CFLAGS =	-g
- #CFLAGS =	-g -O
- 
-@@ -48,33 +48,36 @@
- # By the way, you must have at least version 2.4 of libtiff.  Earlier
- # versions will not work.
- TIFFDEF =	-DLIBTIFF
--TIFFINC =	-I../libtiff
--TIFFLIB =	../libtiff/libtiff.a
-+TIFFINC =	-I$(LOCALBASE)/include
-+TIFFLIB =	-Wl,-R$(LOCALBASE)/lib -L$(LOCALBASE)/lib -ltiff -ljpeg -lz
- TIFFBINARIES =	tifftopnm pnmtotiff
- TIFFOBJECTS =	tifftopnm.o pnmtotiff.o
- 
- # CONFIGURE: Define the directory that you want the binaries copied to.
- # If you need scripts and binaries to be in different directories, you
- # can set that up too.
--INSTALLBINARIES =	/usr/local/netpbm
-+INSTALLBINARIES =	$(PREFIX)/bin
- INSTALLSCRIPTS =	$(INSTALLBINARIES)
- 
- # CONFIGURE: Define the directories that you want the manual sources copied to,
- # plus the suffix you want them to have.
--INSTALLMANUALS1 =	/usr/local/man/man1
-+INSTALLMANUALS1 =	$(PREFIX)/man/man1
- SUFFIXMANUALS1 =	1
--INSTALLMANUALS3 =	/usr/local/man/man3
-+INSTALLMANUALS3 =	$(PREFIX)/man/man3
- SUFFIXMANUALS3 =	3
--INSTALLMANUALS5 =	/usr/local/man/man5
-+INSTALLMANUALS5 =	$(PREFIX)/man/man5
- SUFFIXMANUALS5 =	5
- 
- # CONFIGURE: Normally the man pages are installed using "cp".  By changing
- # this define you can use something else, for example a script that calls
- # compress or pack. The ../mantocat is used on systems which use man pages
- # in the "cat" format.
--MANCP =			cp
-+MANCP =			install -c -m 0644
- #MANCP =		../mantocat
- 
-+INSTALLLIBS =		$(PREFIX)/lib
-+INSTALLDEFS =		$(PREFIX)/include
-+
- # CONFIGURE: Normally the Makefiles build and install separate binaries for
- # each program.  However, on some systems (especially those without shared
- # libraries) this can mean a lot of space.  In this case you might try
-@@ -87,10 +90,10 @@
+--- Makefile.config.orig	Tue May  9 02:32:59 2000
++++ Makefile.config	Wed May 17 11:34:31 2000
+@@ -29,8 +29,8 @@
  #
- # Note that if you make a "merge", the executables don't get created
- # until you do the install.
--#all:		binaries
--#install:	install.bin install.man
--all:		merge
--install:	install.merge install.man
-+all:		binaries
-+install:	install.bin install.man
-+#all:		merge
-+#install:	install.merge install.man
+ # For cygwin, only static libraries work, so set STATICLIB = Y  .
  
- # End of configurable definitions.
+-#STATICLIB = Y
+-STATICLIB = N
++STATICLIB = Y
++#STATICLIB = N
  
-@@ -99,10 +102,10 @@
- SUBDIRS =	pbm pgm ppm pnm
+ # The following are commands for the build process to use.  These values
+ # do not get built into anything.
+@@ -38,12 +38,13 @@
+ # The C compiler (including macro preprocessor)
+ #CC =		cc
+ #CC =		gcc
+-CC =		gcc -fpcc-struct-return
++#CC =		gcc -fpcc-struct-return
  
- binaries:
--	./stamp-date
--	( echo "libtiff" ; cd libtiff ; make )
-+#	./stamp-date
-+#	( echo "libtiff" ; cd libtiff ; make )
- 	for i in $(SUBDIRS) ; do \
--	    ( echo $$i ; cd $$i ; $(MAKE) $(MFLAGS) 'CC=$(CC)' 'CFLAGS=$(CFLAGS)' 'TIFFDEF=$(TIFFDEF)' 'TIFFINC=$(TIFFINC)' 'TIFFLIB=$(TIFFLIB)' 'TIFFBINARIES=$(TIFFBINARIES)' 'TIFFOBJECTS=$(TIFFOBJECTS)' 'LDFLAGS=$(LDFLAGS)' binaries ); \
-+	    ( echo "===> $$i" ; cd $$i ; $(MAKE) $(MFLAGS) 'CC=$(CC)' 'CFLAGS=$(CFLAGS)' 'TIFFDEF=$(TIFFDEF)' 'TIFFINC=$(TIFFINC)' 'TIFFLIB=$(TIFFLIB)' 'TIFFBINARIES=$(TIFFBINARIES)' 'TIFFOBJECTS=$(TIFFOBJECTS)' 'LDFLAGS=$(LDFLAGS)' binaries ); \
- 	done
+ # The linker.
+ #LD = ld
+ #LD = cc
+-LD = gcc 
++#LD = gcc 
++LD = $(LIBTOOL) --mode=link $(CC)
  
- merge:
-@@ -113,15 +116,20 @@
- 	done
+ # Normally the man pages are installed using "install".  But via this
+ # variable, you can use something else, for example a script that
+@@ -57,7 +58,7 @@
+ SHELL =	/bin/sh
+ # Solaris:
+ #INSTALL = /usr/ucb/install
+-INSTALL = install
++INSTALL = install -c
+ AR= ar
+ RANLIB=	ranlib
  
- install.bin:
--	-mkdir $(INSTALLBINARIES)
-+#	-mkdir $(INSTALLBINARIES)
-+#	-mkdir $(INSTALLLIBS)
-+#	-mkdir $(INSTALLDEFS)
-+	$(MANCP) pbmplus.h	$(INSTALLDEFS)
- 	for i in $(SUBDIRS) ; do \
--	    ( echo $$i ; cd $$i ; $(MAKE) $(MFLAGS) 'CC=$(CC)' 'CFLAGS=$(CFLAGS)' 'TIFFDEF=$(TIFFDEF)' 'TIFFINC=$(TIFFINC)' 'TIFFLIB=$(TIFFLIB)' 'TIFFBINARIES=$(TIFFBINARIES)' 'TIFFOBJECTS=$(TIFFOBJECTS)' 'LDFLAGS=$(LDFLAGS)' 'INSTALLBINARIES=$(INSTALLBINARIES)' 'INSTALLSCRIPTS=$(INSTALLSCRIPTS)' install.bin ); \
-+	    ( echo $$i ; cd $$i ; $(MAKE) $(MFLAGS) 'CC=$(CC)' 'CFLAGS=$(CFLAGS)' 'TIFFDEF=$(TIFFDEF)' 'TIFFINC=$(TIFFINC)' 'TIFFLIB=$(TIFFLIB)' 'TIFFBINARIES=$(TIFFBINARIES)' 'TIFFOBJECTS=$(TIFFOBJECTS)' 'LDFLAGS=$(LDFLAGS)' 'INSTALLBINARIES=$(INSTALLBINARIES)' 'INSTALLSCRIPTS=$(INSTALLSCRIPTS)' 'INSTALLLIBS=$(INSTALLLIBS)' 'INSTALLDEFS=$(INSTALLDEFS)' install.bin ); \
- 	done
+@@ -66,7 +67,7 @@
  
- install.merge:
--	-mkdir $(INSTALLBINARIES)
-+#	-mkdir $(INSTALLBINARIES)
-+#	-mkdir $(INSTALLLIBS)
-+#	-mkdir $(INSTALLDEFS)
- 	for i in $(SUBDIRS) ; do \
--	    ( echo $$i ; cd $$i ; $(MAKE) $(MFLAGS) 'CC=$(CC)' 'CFLAGS=$(CFLAGS)' 'TIFFDEF=$(TIFFDEF)' 'TIFFINC=$(TIFFINC)' 'TIFFLIB=$(TIFFLIB)' 'TIFFBINARIES=$(TIFFBINARIES)' 'TIFFOBJECTS=$(TIFFOBJECTS)' 'LDFLAGS=$(LDFLAGS)' 'INSTALLBINARIES=$(INSTALLBINARIES)' 'INSTALLSCRIPTS=$(INSTALLSCRIPTS)' install.merge ); \
-+	    ( echo $$i ; cd $$i ; $(MAKE) $(MFLAGS) 'CC=$(CC)' 'CFLAGS=$(CFLAGS)' 'TIFFDEF=$(TIFFDEF)' 'TIFFINC=$(TIFFINC)' 'TIFFLIB=$(TIFFLIB)' 'TIFFBINARIES=$(TIFFBINARIES)' 'TIFFOBJECTS=$(TIFFOBJECTS)' 'LDFLAGS=$(LDFLAGS)' 'INSTALLBINARIES=$(INSTALLBINARIES)' 'INSTALLSCRIPTS=$(INSTALLSCRIPTS)' 'INSTALLLIBS=$(INSTALLLIBS)' 'INSTALLDEFS=$(INSTALLDEFS)' install.merge ); \
- 	done
+ # On DEC Tru64 4.0F (at least), you need -DLONG_32 for ppmtompeg.
+ #CFLAGS = -O2 -std1 DLONG_32 $(CDEBUG)
+-CFLAGS = -pedantic -O2 -Wall -Wno-uninitialized $(CDEBUG)
++CFLAGS += -pedantic -Wall -Wno-uninitialized $(CDEBUG)
  
- install.man:
-@@ -131,7 +139,7 @@
+ # EXE is a suffix that the linker puts on any executable it generates.
+ # In cygwin, this is .exe and most program deal with its existence without
+@@ -89,7 +90,7 @@
+ #LDFLAGS = -R$(INSTALLLIBS)
+ #If the linker is gcc (e.g. NetBSD):
+ #LDFLAGS = -Wl,--rpath,$(INSTALLLIBS)
+-LDFLAGS =
++#LDFLAGS =
  
- clean:
- 	rm -f *.shar *.shar? art.* *~
--	echo "" > compile.h
--	for i in $(SUBDIRS) libtiff ; do \
-+	rm -f compile.h ; echo "" > compile.h
-+	for i in $(SUBDIRS) ; do \
- 	    ( echo $$i ; cd $$i ; $(MAKE) $(MFLAGS) clean ); \
- 	done
+ # Linker options for created Netpbm shared libraries.
+ 
+@@ -126,13 +127,13 @@
+ # but otherwise will not.
+ 
+ #NetBSD:
+-#TIFFHDR_DIR = $(LOCALBASE)/include
+-#TIFFLIB_DIR = $(LOCALBASE)/lib
++TIFFHDR_DIR = $(LOCALBASE)/include
++TIFFLIB_DIR = $(LOCALBASE)/lib
+ # OSF, Tru64:
+ #TIFFHDR_DIR = /usr/local1/DEC/include
+ #TIFFLIB_DIR = /usr/local1/DEC/lib
+-TIFFHDR_DIR = $(SRCDIR)/libtiff
+-TIFFLIB_DIR = $(SRCDIR)/libtiff
++#TIFFHDR_DIR = $(SRCDIR)/libtiff
++#TIFFLIB_DIR = $(SRCDIR)/libtiff
+ 
+ # Put the location of your JPEG library here.
+ # If you want to build the jpeg converters or tiff
+@@ -151,8 +152,8 @@
+ # all.
+ 
+ # Netbsd:
+-#JPEGLIB_DIR = ${LOCALBASE}/lib
+-#JPEGHDR_DIR = ${LOCALBASE}/include
++JPEGLIB_DIR = ${LOCALBASE}/lib
++JPEGHDR_DIR = ${LOCALBASE}/include
+ # OSF, Tru64:
+ #JPEGLIB_DIR = /usr/local1/DEC/lib
+ #JPEGHDR_DIR = /usr/local1/DEC/include
+@@ -160,8 +161,8 @@
+ #JPEGHDR_DIR = /usr/local/include
+ #JPEGLIB_DIR = NONE
+ #JPEGHDR_DIR = NONE
+-JPEGLIB_DIR = /usr/lib/jpeg
+-JPEGHDR_DIR = /usr/include/jpeg
++#JPEGLIB_DIR = /usr/lib/jpeg
++#JPEGHDR_DIR = /usr/include/jpeg
+ 
+ 
+ # Put the location of your PNG library here.  If you want to build the
+@@ -171,8 +172,8 @@
+ # successully build everything else, put NONE for these.
+ 
+ # NetBSD:
+-#PNGLIB_DIR = $(LOCALBASE)/lib
+-#PNGHDR_DIR = $(LOCALBASE)/include
++PNGLIB_DIR = $(LOCALBASE)/lib
++PNGHDR_DIR = $(LOCALBASE)/include
+ # OSF/Tru64:
+ #PNGLIB_DIR = /usr/local1/DEC/lib
+ #PNGHDR_DIR = /usr/local1/DEC/include
+@@ -182,8 +183,8 @@
+ # No PNG:
+ #PNGLIB_DIR = NONE
+ #PNGHDR_DIR = NONE
+-PNGLIB_DIR = /lib
+-PNGHDR_DIR = /usr/include/png
++#PNGLIB_DIR = /lib
++#PNGHDR_DIR = /usr/include/png
+ 
+ 
+ # And the Utah Raster Toolkit (aka URT aka RLE) library:
+@@ -275,8 +276,8 @@
+ #be a rule in the makefiles to make whatever the fliename turns out to be.
+ #Only .a and .so work.
+ ifeq ($(STATICLIB),Y)
+-  NETPBMLIBSUFFIX = a
+-  LIBTIFFSUFFIX = a
++  NETPBMLIBSUFFIX = la
++  LIBTIFFSUFFIX = la
+ else
+   NETPBMLIBSUFFIX = so
+   LIBTIFFSUFFIX = so
