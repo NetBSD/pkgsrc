@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2003/01/13 15:23:11 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/03/07 07:34:44 jmc Exp $
 share/GNUstep/System/Applications/GWorkspace.app/GWorkspace
 share/GNUstep/System/Applications/GWorkspace.app/Resources/AppViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/GWorkspace.app/Resources/AppViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Applications/GWorkspace.app/Resources/AppViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/AppViewer
+share/GNUstep/System/Applications/GWorkspace.app/Resources/AppViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu/AppViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/CVS/Root
 share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/miniwindow.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/preview.tiff
-share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/BrowserViewer
+share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/${ARCH_LOC}/gnu-gnu-gnu/BrowserViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/CVS/Root
@@ -41,7 +41,7 @@ share/GNUstep/System/Applications/GWorkspace.app/Resources/FileIcon_Directory_Op
 share/GNUstep/System/Applications/GWorkspace.app/Resources/FileManager.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/FolderViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/GWorkspace.app/Resources/FolderViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Applications/GWorkspace.app/Resources/FolderViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/FolderViewer
+share/GNUstep/System/Applications/GWorkspace.app/Resources/FolderViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu/FolderViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/French.lproj/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/French.lproj/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/French.lproj/CVS/Root
@@ -57,14 +57,14 @@ share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Re
 share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/miniwindow.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/preview.tiff
-share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/IconsViewer
+share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/${ARCH_LOC}/gnu-gnu-gnu/IconsViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/ImageViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/GWorkspace.app/Resources/ImageViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Applications/GWorkspace.app/Resources/ImageViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/ImageViewer
+share/GNUstep/System/Applications/GWorkspace.app/Resources/ImageViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu/ImageViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/GWorkspace.app/Resources/InspectorViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/GWorkspace.app/Resources/InspectorViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Applications/GWorkspace.app/Resources/InspectorViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/InspectorViewer
+share/GNUstep/System/Applications/GWorkspace.app/Resources/InspectorViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu/InspectorViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj/CVS/Root
@@ -113,10 +113,10 @@ share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/R
 share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/Resources/play.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/Resources/right.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/Resources/stop.tiff
-share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/PdfViewer
+share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu/PdfViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/PlistViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/GWorkspace.app/Resources/PlistViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Applications/GWorkspace.app/Resources/PlistViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/PlistViewer
+share/GNUstep/System/Applications/GWorkspace.app/Resources/PlistViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu/PlistViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Portuguese.lproj/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Portuguese.lproj/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Portuguese.lproj/CVS/Root
@@ -131,7 +131,7 @@ share/GNUstep/System/Applications/GWorkspace.app/Resources/Romanian.lproj/CVS/Ro
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Romanian.lproj/Localizable.strings
 share/GNUstep/System/Applications/GWorkspace.app/Resources/RtfViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/GWorkspace.app/Resources/RtfViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Applications/GWorkspace.app/Resources/RtfViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/RtfViewer
+share/GNUstep/System/Applications/GWorkspace.app/Resources/RtfViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu/RtfViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/SlideMask.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallCellHighlight.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer/Resources/CVS/Entries
@@ -140,7 +140,7 @@ share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.view
 share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer/Resources/miniwindow.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer/Resources/preview.tiff
-share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/SmallIconsViewer
+share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer/${ARCH_LOC}/gnu-gnu-gnu/SmallIconsViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/Resources/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/Resources/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/Resources/CVS/Root
@@ -149,14 +149,14 @@ share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector
 share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/Resources/pause.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/Resources/play.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/Resources/stop.tiff
-share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/SoundViewer
+share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu/SoundViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Spanish.lproj/CVS/Entries
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Spanish.lproj/CVS/Repository
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Spanish.lproj/CVS/Root
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Spanish.lproj/Localizable.strings
 share/GNUstep/System/Applications/GWorkspace.app/Resources/StringsViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/GWorkspace.app/Resources/StringsViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Applications/GWorkspace.app/Resources/StringsViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/StringsViewer
+share/GNUstep/System/Applications/GWorkspace.app/Resources/StringsViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu/StringsViewer
 share/GNUstep/System/Applications/GWorkspace.app/Resources/TileHighlight.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Weekday-0.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/Weekday-1.tiff
@@ -173,34 +173,34 @@ share/GNUstep/System/Applications/GWorkspace.app/Resources/stop.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/switchMultiple.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/switchOff.tiff
 share/GNUstep/System/Applications/GWorkspace.app/Resources/switchOn.tiff
-share/GNUstep/System/Applications/GWorkspace.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/GWorkspace
-share/GNUstep/System/Applications/GWorkspace.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/library_paths.openapp
+share/GNUstep/System/Applications/GWorkspace.app/${ARCH_LOC}/gnu-gnu-gnu/GWorkspace
+share/GNUstep/System/Applications/GWorkspace.app/${ARCH_LOC}/gnu-gnu-gnu/library_paths.openapp
 share/GNUstep/System/Library/Bundles/AppViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/AppViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Library/Bundles/AppViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/AppViewer
+share/GNUstep/System/Library/Bundles/AppViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu/AppViewer
 share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/CVS/Entries
 share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/CVS/Repository
 share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/CVS/Root
 share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/miniwindow.tiff
 share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/preview.tiff
-share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/BrowserViewer
+share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/${ARCH_LOC}/gnu-gnu-gnu/BrowserViewer
 share/GNUstep/System/Library/Bundles/FolderViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/FolderViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Library/Bundles/FolderViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/FolderViewer
+share/GNUstep/System/Library/Bundles/FolderViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu/FolderViewer
 share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/CVS/Entries
 share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/CVS/Repository
 share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/CVS/Root
 share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/miniwindow.tiff
 share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/preview.tiff
-share/GNUstep/System/Library/Bundles/IconsViewer.viewer/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/IconsViewer
+share/GNUstep/System/Library/Bundles/IconsViewer.viewer/${ARCH_LOC}/gnu-gnu-gnu/IconsViewer
 share/GNUstep/System/Library/Bundles/ImageViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/ImageViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Library/Bundles/ImageViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/ImageViewer
+share/GNUstep/System/Library/Bundles/ImageViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu/ImageViewer
 share/GNUstep/System/Library/Bundles/InspectorViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/InspectorViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Library/Bundles/InspectorViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/InspectorViewer
+share/GNUstep/System/Library/Bundles/InspectorViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu/InspectorViewer
 share/GNUstep/System/Library/Bundles/PdfViewer.inspector/Resources/CVS/Entries
 share/GNUstep/System/Library/Bundles/PdfViewer.inspector/Resources/CVS/Repository
 share/GNUstep/System/Library/Bundles/PdfViewer.inspector/Resources/CVS/Root
@@ -213,20 +213,20 @@ share/GNUstep/System/Library/Bundles/PdfViewer.inspector/Resources/pause.tiff
 share/GNUstep/System/Library/Bundles/PdfViewer.inspector/Resources/play.tiff
 share/GNUstep/System/Library/Bundles/PdfViewer.inspector/Resources/right.tiff
 share/GNUstep/System/Library/Bundles/PdfViewer.inspector/Resources/stop.tiff
-share/GNUstep/System/Library/Bundles/PdfViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/PdfViewer
+share/GNUstep/System/Library/Bundles/PdfViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu/PdfViewer
 share/GNUstep/System/Library/Bundles/PlistViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/PlistViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Library/Bundles/PlistViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/PlistViewer
+share/GNUstep/System/Library/Bundles/PlistViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu/PlistViewer
 share/GNUstep/System/Library/Bundles/RtfViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/RtfViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Library/Bundles/RtfViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/RtfViewer
+share/GNUstep/System/Library/Bundles/RtfViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu/RtfViewer
 share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/Resources/CVS/Entries
 share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/Resources/CVS/Repository
 share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/Resources/CVS/Root
 share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/Resources/miniwindow.tiff
 share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/Resources/preview.tiff
-share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/SmallIconsViewer
+share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/${ARCH_LOC}/gnu-gnu-gnu/SmallIconsViewer
 share/GNUstep/System/Library/Bundles/SoundViewer.inspector/Resources/CVS/Entries
 share/GNUstep/System/Library/Bundles/SoundViewer.inspector/Resources/CVS/Repository
 share/GNUstep/System/Library/Bundles/SoundViewer.inspector/Resources/CVS/Root
@@ -235,136 +235,136 @@ share/GNUstep/System/Library/Bundles/SoundViewer.inspector/Resources/InspectorIn
 share/GNUstep/System/Library/Bundles/SoundViewer.inspector/Resources/pause.tiff
 share/GNUstep/System/Library/Bundles/SoundViewer.inspector/Resources/play.tiff
 share/GNUstep/System/Library/Bundles/SoundViewer.inspector/Resources/stop.tiff
-share/GNUstep/System/Library/Bundles/SoundViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/SoundViewer
+share/GNUstep/System/Library/Bundles/SoundViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu/SoundViewer
 share/GNUstep/System/Library/Bundles/StringsViewer.inspector/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/StringsViewer.inspector/Resources/InspectorInfo.plist
-share/GNUstep/System/Library/Bundles/StringsViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/StringsViewer
-share/GNUstep/System/Tools/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/backgrounder
-share/GNUstep/System/Tools/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/wopen
-@dirrm share/GNUstep/System/Tools/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Bundles/StringsViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Bundles/StringsViewer.inspector/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Library/Bundles/StringsViewer.inspector/ix86
+share/GNUstep/System/Library/Bundles/StringsViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu/StringsViewer
+share/GNUstep/System/Tools/${ARCH_LOC}/gnu-gnu-gnu/backgrounder
+share/GNUstep/System/Tools/${ARCH_LOC}/gnu-gnu-gnu/wopen
+@dirrm share/GNUstep/System/Tools/${ARCH_LOC}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Library/Bundles/StringsViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Library/Bundles/StringsViewer.inspector/${ARCH_LOC}
+@dirrm share/GNUstep/System/Library/Bundles/StringsViewer.inspector/%{ARCH}
 @dirrm share/GNUstep/System/Library/Bundles/StringsViewer.inspector/Resources
 @dirrm share/GNUstep/System/Library/Bundles/StringsViewer.inspector
-@dirrm share/GNUstep/System/Library/Bundles/SoundViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Bundles/SoundViewer.inspector/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Library/Bundles/SoundViewer.inspector/ix86
+@dirrm share/GNUstep/System/Library/Bundles/SoundViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Library/Bundles/SoundViewer.inspector/${ARCH_LOC}
+@dirrm share/GNUstep/System/Library/Bundles/SoundViewer.inspector/%{ARCH}
 @dirrm share/GNUstep/System/Library/Bundles/SoundViewer.inspector/Resources/CVS
 @dirrm share/GNUstep/System/Library/Bundles/SoundViewer.inspector/Resources
 @dirrm share/GNUstep/System/Library/Bundles/SoundViewer.inspector
-@dirrm share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/ix86
+@dirrm share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/${ARCH_LOC}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/${ARCH_LOC}
+@dirrm share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/%{ARCH}
 @dirrm share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/Resources/CVS
 @dirrm share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer/Resources
 @dirrm share/GNUstep/System/Library/Bundles/SmallIconsViewer.viewer
-@dirrm share/GNUstep/System/Library/Bundles/RtfViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Bundles/RtfViewer.inspector/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Library/Bundles/RtfViewer.inspector/ix86
+@dirrm share/GNUstep/System/Library/Bundles/RtfViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Library/Bundles/RtfViewer.inspector/${ARCH_LOC}
+@dirrm share/GNUstep/System/Library/Bundles/RtfViewer.inspector/%{ARCH}
 @dirrm share/GNUstep/System/Library/Bundles/RtfViewer.inspector/Resources
 @dirrm share/GNUstep/System/Library/Bundles/RtfViewer.inspector
-@dirrm share/GNUstep/System/Library/Bundles/PlistViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Bundles/PlistViewer.inspector/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Library/Bundles/PlistViewer.inspector/ix86
+@dirrm share/GNUstep/System/Library/Bundles/PlistViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Library/Bundles/PlistViewer.inspector/${ARCH_LOC}
+@dirrm share/GNUstep/System/Library/Bundles/PlistViewer.inspector/%{ARCH}
 @dirrm share/GNUstep/System/Library/Bundles/PlistViewer.inspector/Resources
 @dirrm share/GNUstep/System/Library/Bundles/PlistViewer.inspector
-@dirrm share/GNUstep/System/Library/Bundles/PdfViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Bundles/PdfViewer.inspector/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Library/Bundles/PdfViewer.inspector/ix86
+@dirrm share/GNUstep/System/Library/Bundles/PdfViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Library/Bundles/PdfViewer.inspector/${ARCH_LOC}
+@dirrm share/GNUstep/System/Library/Bundles/PdfViewer.inspector/%{ARCH}
 @dirrm share/GNUstep/System/Library/Bundles/PdfViewer.inspector/Resources/CVS
 @dirrm share/GNUstep/System/Library/Bundles/PdfViewer.inspector/Resources
 @dirrm share/GNUstep/System/Library/Bundles/PdfViewer.inspector
-@dirrm share/GNUstep/System/Library/Bundles/InspectorViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Bundles/InspectorViewer.inspector/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Library/Bundles/InspectorViewer.inspector/ix86
+@dirrm share/GNUstep/System/Library/Bundles/InspectorViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Library/Bundles/InspectorViewer.inspector/${ARCH_LOC}
+@dirrm share/GNUstep/System/Library/Bundles/InspectorViewer.inspector/%{ARCH}
 @dirrm share/GNUstep/System/Library/Bundles/InspectorViewer.inspector/Resources
 @dirrm share/GNUstep/System/Library/Bundles/InspectorViewer.inspector
-@dirrm share/GNUstep/System/Library/Bundles/ImageViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Bundles/ImageViewer.inspector/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Library/Bundles/ImageViewer.inspector/ix86
+@dirrm share/GNUstep/System/Library/Bundles/ImageViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Library/Bundles/ImageViewer.inspector/${ARCH_LOC}
+@dirrm share/GNUstep/System/Library/Bundles/ImageViewer.inspector/%{ARCH}
 @dirrm share/GNUstep/System/Library/Bundles/ImageViewer.inspector/Resources
 @dirrm share/GNUstep/System/Library/Bundles/ImageViewer.inspector
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/ix86
+@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/${ARCH_LOC}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/${ARCH_LOC}
+@dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/%{ARCH}
 @dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources/CVS
 @dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer/Resources
 @dirrm share/GNUstep/System/Library/Bundles/IconsViewer.viewer
-@dirrm share/GNUstep/System/Library/Bundles/FolderViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Bundles/FolderViewer.inspector/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Library/Bundles/FolderViewer.inspector/ix86
+@dirrm share/GNUstep/System/Library/Bundles/FolderViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Library/Bundles/FolderViewer.inspector/${ARCH_LOC}
+@dirrm share/GNUstep/System/Library/Bundles/FolderViewer.inspector/%{ARCH}
 @dirrm share/GNUstep/System/Library/Bundles/FolderViewer.inspector/Resources
 @dirrm share/GNUstep/System/Library/Bundles/FolderViewer.inspector
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/ix86
+@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/${ARCH_LOC}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/${ARCH_LOC}
+@dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/%{ARCH}
 @dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources/CVS
 @dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer/Resources
 @dirrm share/GNUstep/System/Library/Bundles/BrowserViewer.viewer
-@dirrm share/GNUstep/System/Library/Bundles/AppViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Library/Bundles/AppViewer.inspector/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Library/Bundles/AppViewer.inspector/ix86
+@dirrm share/GNUstep/System/Library/Bundles/AppViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Library/Bundles/AppViewer.inspector/${ARCH_LOC}
+@dirrm share/GNUstep/System/Library/Bundles/AppViewer.inspector/%{ARCH}
 @dirrm share/GNUstep/System/Library/Bundles/AppViewer.inspector/Resources
 @dirrm share/GNUstep/System/Library/Bundles/AppViewer.inspector
 @dirrm share/GNUstep/System/Library/Bundles
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/ix86
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/StringsViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/StringsViewer.inspector/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/StringsViewer.inspector/ix86
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/${ARCH_LOC}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/${ARCH_LOC}
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/%{ARCH}
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/StringsViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/StringsViewer.inspector/${ARCH_LOC}
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/StringsViewer.inspector/%{ARCH}
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/StringsViewer.inspector/Resources
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/StringsViewer.inspector
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Spanish.lproj/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Spanish.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/ix86
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/${ARCH_LOC}
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/%{ARCH}
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/Resources/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector/Resources
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SoundViewer.inspector
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer/ix86
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer/${ARCH_LOC}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer/${ARCH_LOC}
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer/%{ARCH}
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer/Resources/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer/Resources
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/SmallIconsViewer.viewer
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/RtfViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/RtfViewer.inspector/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/RtfViewer.inspector/ix86
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/RtfViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/RtfViewer.inspector/${ARCH_LOC}
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/RtfViewer.inspector/%{ARCH}
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/RtfViewer.inspector/Resources
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/RtfViewer.inspector
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Romanian.lproj/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Romanian.lproj
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Portuguese.lproj/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Portuguese.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PlistViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PlistViewer.inspector/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PlistViewer.inspector/ix86
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PlistViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PlistViewer.inspector/${ARCH_LOC}
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PlistViewer.inspector/%{ARCH}
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PlistViewer.inspector/Resources
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PlistViewer.inspector
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/ix86
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/${ARCH_LOC}
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/%{ARCH}
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/Resources/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector/Resources
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/PdfViewer.inspector
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/Italian.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/InspectorViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/InspectorViewer.inspector/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/InspectorViewer.inspector/ix86
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/InspectorViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/InspectorViewer.inspector/${ARCH_LOC}
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/InspectorViewer.inspector/%{ARCH}
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/InspectorViewer.inspector/Resources
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/InspectorViewer.inspector
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/ImageViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/ImageViewer.inspector/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/ImageViewer.inspector/ix86
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/ImageViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/ImageViewer.inspector/${ARCH_LOC}
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/ImageViewer.inspector/%{ARCH}
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/ImageViewer.inspector/Resources
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/ImageViewer.inspector
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/ix86
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/${ARCH_LOC}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/${ARCH_LOC}
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/%{ARCH}
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer/Resources
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/IconsViewer.viewer
@@ -372,23 +372,23 @@ share/GNUstep/System/Tools/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/wopen
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/German.lproj
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/French.lproj/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/French.lproj
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/FolderViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/FolderViewer.inspector/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/FolderViewer.inspector/ix86
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/FolderViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/FolderViewer.inspector/${ARCH_LOC}
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/FolderViewer.inspector/%{ARCH}
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/FolderViewer.inspector/Resources
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/FolderViewer.inspector
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/English.lproj
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/CVS
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/ix86
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/${ARCH_LOC}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/${ARCH_LOC}
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/%{ARCH}
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources/CVS
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer/Resources
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/BrowserViewer.viewer
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/AppViewer.inspector/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/AppViewer.inspector/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/AppViewer.inspector/ix86
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/AppViewer.inspector/${ARCH_LOC}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/AppViewer.inspector/${ARCH_LOC}
+@dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/AppViewer.inspector/%{ARCH}
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/AppViewer.inspector/Resources
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources/AppViewer.inspector
 @dirrm share/GNUstep/System/Applications/GWorkspace.app/Resources
