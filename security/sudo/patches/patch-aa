@@ -1,8 +1,18 @@
-$NetBSD: patch-aa,v 1.7 2000/08/10 02:25:30 thorpej Exp $
+$NetBSD: patch-aa,v 1.8 2000/08/10 16:57:33 thorpej Exp $
 
 --- auth/kerb5.c.orig	Tue Oct 12 19:34:55 1999
-+++ auth/kerb5.c	Wed Aug  9 17:34:11 2000
-@@ -266,8 +266,8 @@
++++ auth/kerb5.c	Thu Aug 10 09:48:06 2000
+@@ -88,9 +88,6 @@
+     auth->data = (VOID *) &sudo_krb5_data; /* Stash all our data here */
+ 
+     if (error = krb5_init_context(&(sudo_krb5_data.sudo_context))) {
+-	log_error(NO_EXIT|NO_MAIL, 
+-		  "%s: unable to initialize context: %s", auth->name,
+-		  error_message(error));
+ 	return(AUTH_FAILURE);
+     }
+     sudo_context = sudo_krb5_data.sudo_context;
+@@ -266,8 +263,8 @@
      }
  
      /* Extract the name directly. Yow. */
@@ -13,7 +23,7 @@ $NetBSD: patch-aa,v 1.7 2000/08/10 02:25:30 thorpej Exp $
      phost[sizeof(phost) - 1] = '\0';
  
      /*
-@@ -276,7 +276,7 @@
+@@ -276,7 +273,7 @@
       * and enctype is currently ignored anyhow.)
       */
      if (error = krb5_kt_read_service_key(sudo_context, NULL, princ, 0,
@@ -22,7 +32,7 @@ $NetBSD: patch-aa,v 1.7 2000/08/10 02:25:30 thorpej Exp $
  	/* Keytab or service key does not exist. */
  	log_error(NO_EXIT,
  		  "%s: host service key not found: %s", auth_name,
-@@ -301,7 +301,7 @@
+@@ -301,7 +298,7 @@
  			    NULL, NULL, NULL);
  cleanup:
      if (packet.data)
