@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/10 19:06:36 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/27 04:59:42 snj Exp $
 
 DISTNAME=	Exception-Class-1.14
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ DEPENDS+=	p5-Class-Data-Inheritable>=0.02:../../devel/p5-Class-Data-Inheritable
 DEPENDS+=	p5-Devel-StackTrace>=1.03:../../devel/p5-Devel-StackTrace
 
 USE_BUILDLINK_ONLY=	YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Exception/Class/.packlist
 
 .include "../../lang/perl5/module.mk"
