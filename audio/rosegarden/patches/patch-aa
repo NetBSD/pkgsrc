@@ -1,60 +1,23 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/05/31 16:40:56 agc Exp $
+$NetBSD: patch-aa,v 1.2 2002/03/19 12:21:07 wiz Exp $
 
---- Makefile.in.orig	Sat Nov 22 10:50:07 1997
-+++ Makefile.in	Thu May 17 16:34:48 2001
+--- Makefile.in.orig	Fri Dec 21 15:12:43 2001
++++ Makefile.in
 @@ -43,7 +43,7 @@
  
  
  # Compile defines
 -DEFINES		= @defines@
-+DEFINES		= -DRGLIBDIR=\"${RGLIBDIR}\" @defines@
++DEFINES		= '-DRGLIBDIR=\"${RGLIBDIR}\"' @defines@
  
  # Name of the compiler, plus any flags common to both compile
  # and link stages; also exported
-@@ -57,7 +57,7 @@
- 
- # Nothing below this line will be exported, so leave it alone
- 
--EXPORTATION	= ROSEGARDEN="$(ROSEGARDEN)" ; SYSINCDIRS="$(SYSINCDIRS)" ; SYSLDFLAGS="$(SYSLDFLAGS)" ; CC="$(CC)" ; DEFINES="$(DEFINES)" ; RANLIB="$(RANLIB)" ; OPTFLAGS="$(OPTFLAGS)" ; MAKEDEPEND="$(MAKEDEPEND)" ; SYSEXTRALIBS="$(SYSEXTRALIBS)" ; export ROSEGARDEN SYSINCDIRS DEFINES SYSLDFLAGS CC RANLIB OPTFLAGS MAKEDEPEND SYSEXTRALIBS
-+EXPORTATION	= ROSEGARDEN="$(ROSEGARDEN)" ; SYSINCDIRS="$(SYSINCDIRS)" ; SYSLDFLAGS="$(SYSLDFLAGS)" ; CC="$(CC)" ; DEFINES='$(DEFINES)' ; RANLIB="$(RANLIB)" ; OPTFLAGS="$(OPTFLAGS)" ; MAKEDEPEND="$(MAKEDEPEND)" ; SYSEXTRALIBS="$(SYSEXTRALIBS)" ; export ROSEGARDEN SYSINCDIRS DEFINES SYSLDFLAGS CC RANLIB OPTFLAGS MAKEDEPEND SYSEXTRALIBS
- 
- LISTLIB		= $(ROSEGARDEN)/lists/lib/libLists.a
- YAWNLIB		= $(ROSEGARDEN)/yawn/lib/libY.a
-@@ -196,3 +196,34 @@
+@@ -197,3 +197,9 @@
  		chmod +x $(ROSEGARDEN)/scripts/make-structure.sh
  		$(ROSEGARDEN)/scripts/make-structure.sh $(ROSEGARDEN)
-
+ 
 +prefix=@prefix@
-+RGBINDIR=${prefix}/bin
-+RGLIBDIR=${prefix}/lib/rosegarden
-+install=/usr/bin/install
-+sed=/usr/bin/sed
-+install: bin/rosegarden
-+	$(install) -d $(RGBINDIR)
-+	$(install) -s -c ./bin/rosegarden $(RGBINDIR)
-+	$(install) -d $(RGLIBDIR)/bin
-+	$(install) -s -c ./bin/sequencer  $(RGLIBDIR)/bin
-+	$(install) -s -c ./bin/editor     $(RGLIBDIR)/bin
-+	$(install) -d $(RGLIBDIR)/example
-+	$(install) -c -m 644 ./common/music/glazunov.rose $(RGLIBDIR)/example
-+	$(install) -d $(RGLIBDIR)/synth-patches
-+	$(install) -c -m 644 ./common/synth-patches/std.sb   $(RGLIBDIR)/synth-patches
-+	$(install) -c -m 644 ./common/synth-patches/drums.sb $(RGLIBDIR)/synth-patches
-+	$(install) -d $(RGLIBDIR)/help
-+	$(install) -c -m 644 ./common/help/rosehelp.info $(RGLIBDIR)/help
-+	$(install) -c -m 644 ./common/help/rosehelp.hnx  $(RGLIBDIR)/help
-+	$(sed) -e s,/usr/local/lib/rosegarden,${RGLIBDIR}, < ./Rosegarden > ${prefix}/lib/X11/app-defaults/Rosegarden
-+
-+# this isn't used yet
-+install-tcl:
-+	$(install) -d $(RGLIBDIR)/petal
-+	$(install) -m 644 ./petal/Petal.so $(RGLIBDIR)/petal
-+	$(install) -c ./petal/Petal.tcl $(RGLIBDIR)/petal
-+	$(install) -c ./petal/petaleditor/PetalEditor.tcl $(RGLIBDIR)/petal
-+	$(install) -c ./petal/petalmidi/PetalMidi.tcl $(RGLIBDIR)/petal
-+	( cd $(RGLIBDIR)/petal ; echo "pkg_mkIndex . Petal.so *.tcl" | tclsh )
-+	$(install) -d $(RGLIBDIR)/rosepetal-filters
-+	$(install) -c ./petal/harmonizer.tcl $(RGLIBDIR)/rosepetal-filters
-+	$(install) -c ./petal/pattern.tcl $(RGLIBDIR)/rosepetal-filters
-+
-+#eof
++iBINDIR=${prefix}/bin
++iLIBDIR=${prefix}/lib
++RGLIBDIR=${iLIBDIR}/rosegarden
++install: do-install
++	(echo ${iBINDIR}; echo ${iLIBDIR})|/bin/sh do-install
