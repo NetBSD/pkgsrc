@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2004/04/12 15:26:11 jmmv Exp $
+# $NetBSD: Makefile,v 1.39 2004/05/15 18:53:21 jmmv Exp $
 
-DISTNAME=	gnome-2.6.0
+DISTNAME=	gnome-2.6.1
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -9,33 +9,33 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Meta-package for the GNU Network Object Model Environment
 
-DEPENDS+=	bug-buddy>=2.6.0:../../net/bug-buddy
-DEPENDS+=	eog>=2.6.0:../../graphics/eog2
-DEPENDS+=	epiphany>=1.2.2:../../www/epiphany
-DEPENDS+=	file-roller>=2.6.0:../../archivers/file-roller
+DEPENDS+=	bug-buddy>=2.6.1:../../net/bug-buddy
+DEPENDS+=	eog>=2.6.1:../../graphics/eog2
+DEPENDS+=	epiphany>=1.2.5:../../www/epiphany
+DEPENDS+=	file-roller>=2.6.1:../../archivers/file-roller
 DEPENDS+=	gcalctool>=4.3.51:../../math/gcalctool
-DEPENDS+=	gconf-editor>=2.6.0:../../editors/gconf-editor
-DEPENDS+=	gedit>=2.6.0:../../editors/gedit
-DEPENDS+=	ggv>=2.6.0:../../print/ggv2
-DEPENDS+=	gnome-accessibility>=2.6.0:../../meta-pkgs/gnome-accessibility
-DEPENDS+=	gnome-applets>=2.6.0:../../x11/gnome2-applets
-DEPENDS+=	gnome-base>=2.6.0:../../meta-pkgs/gnome-base
-DEPENDS+=	gnome-games>=2.6.0:../../games/gnome2-games
-DEPENDS+=	gnome-media>=2.6.0:../../multimedia/gnome2-media
-DEPENDS+=	gnome-netstatus>=2.6.0:../../net/gnome-netstatus
-DEPENDS+=	gnome-themes>=2.6.0:../../x11/gnome-themes
+DEPENDS+=	gconf-editor>=2.6.1:../../editors/gconf-editor
+DEPENDS+=	gedit>=2.6.1:../../editors/gedit
+DEPENDS+=	ggv>=2.6.1:../../print/ggv2
+DEPENDS+=	gnome-accessibility>=2.6.1:../../meta-pkgs/gnome-accessibility
+DEPENDS+=	gnome-applets>=2.6.1:../../x11/gnome2-applets
+DEPENDS+=	gnome-base>=2.6.1:../../meta-pkgs/gnome-base
+DEPENDS+=	gnome-games>=2.6.1:../../games/gnome2-games
+DEPENDS+=	gnome-media>=2.6.2:../../multimedia/gnome2-media
+DEPENDS+=	gnome-netstatus>=2.6.1:../../net/gnome-netstatus
+DEPENDS+=	gnome-themes>=2.6.1:../../x11/gnome-themes
 DEPENDS+=	gnome2-user-docs>=2.6.0:../../misc/gnome2-user-docs
 DEPENDS+=	gnome2-system-monitor>=2.6.0:../../sysutils/gnome2-system-monitor
-DEPENDS+=	gnome-utils>=2.6.0:../../misc/gnome2-utils
+DEPENDS+=	gnome-utils>=2.6.1:../../misc/gnome2-utils
 DEPENDS+=	gpdf>=0.131:../../print/gpdf
-DEPENDS+=	gstreamer>=0.8.0:../../multimedia/gstreamer
-DEPENDS+=	gst-plugins>=0.8.0:../../multimedia/gst-plugins
-DEPENDS+=	gucharmap>=1.4.0:../../fonts/gucharmap
+DEPENDS+=	gstreamer>=0.8.1:../../multimedia/gstreamer
+DEPENDS+=	gst-plugins>=0.8.1:../../multimedia/gst-plugins
+DEPENDS+=	gucharmap>=1.4.1:../../fonts/gucharmap
 DEPENDS+=	gtk2-extras>=2.4.0:../../meta-pkgs/gtk2-extras
-DEPENDS+=	nautilus-cd-burner>=2.6.0:../../sysutils/nautilus-cd-burner
+DEPENDS+=	nautilus-cd-burner>=2.6.1:../../sysutils/nautilus-cd-burner
 DEPENDS+=	nautilus-media>=0.8.0:../../multimedia/nautilus-media
 DEPENDS+=	vera-ttf>=1.10:../../fonts/vera-ttf
-DEPENDS+=	zenity>=2.6.0:../../x11/zenity
+DEPENDS+=	zenity>=2.6.2:../../x11/zenity
 
 USE_X11=	yes
 EXTRACT_ONLY=	# empty
