@@ -1,5 +1,5 @@
 #!/bin/sh
-#	$NetBSD: do-sandbox-build,v 1.8 2005/01/10 20:00:30 hubertf Exp $
+#	$NetBSD: do-sandbox-build,v 1.9 2005/01/25 08:47:55 grant Exp $
 
 #
 # Script to start a sandbox build
@@ -8,4 +8,4 @@
 #
 
 sh=`which sh`
-chroot /usr/sandbox $sh -c "cd /usr/pkgsrc/ ; $sh mk/bulk/build $@"
+chroot /usr/sandbox $sh -c "cd /usr/pkgsrc && $sh mk/bulk/build $@"
