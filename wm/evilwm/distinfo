@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2003/04/24 21:15:17 jmmv Exp $
+$NetBSD: distinfo,v 1.8 2003/09/16 19:17:39 xtraeme Exp $
 
-SHA1 (evilwm_0.99.14.orig.tar.gz) = 79f1fedab90615e3ae39dba321c87512cfc35ec6
-Size (evilwm_0.99.14.orig.tar.gz) = 22887 bytes
-SHA1 (patch-aa) = c30ba1f0a4e0a83ddece5cdb6053828d4d9abf75
+SHA1 (evilwm_0.99.15.orig.tar.gz) = ce969f1f85042c6e3247bcddf0b6c3bbb8e7dbc0
+Size (evilwm_0.99.15.orig.tar.gz) = 22966 bytes
+SHA1 (patch-aa) = b7c0c569cfd1fefdd9b6da3c5139558c19d0bfca
