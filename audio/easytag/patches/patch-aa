@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.7 2002/08/31 02:14:39 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2002/12/17 19:40:08 wiz Exp $
 
---- configure.orig	Sat Aug 31 03:46:09 2002
+--- configure.orig	Mon Nov 11 11:19:08 2002
 +++ configure
-@@ -8016,7 +8016,7 @@ int
+@@ -1373,7 +1373,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+ 
+ 
+ PACKAGE=easytag
+-VERSION=0.25
++VERSION=0.25b
+ 
+ ALL_LINGUAS="cs de es fr hu it ja nl pl ro ru sv uk"
+ 
+@@ -8312,7 +8312,7 @@ int
  main ()
  {
      FILE *output;
@@ -11,7 +20,7 @@ $NetBSD: patch-aa,v 1.7 2002/08/31 02:14:39 wiz Exp $
      fprintf(output,"ID3LIB_MAJOR=%d\nID3LIB_MINOR=%d\nID3LIB_PATCH=%d\n",ID3LIB_MAJOR_VERSION,ID3LIB_MINOR_VERSION,ID3LIB_PATCH_VERSION);
      fclose(output);
      exit(0);
-@@ -8034,7 +8034,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -8330,7 +8330,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then

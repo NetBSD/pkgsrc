@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.3 2002/12/17 19:40:08 wiz Exp $
+
+--- src/setting.c.orig	Sun Nov 10 15:34:57 2002
++++ src/setting.c
+@@ -46,7 +46,7 @@
+  ***************/
+ 
+ // Base directory created into home dir 
+-gchar *EASYTAG_DIR                                 = ".easytag/";
++gchar *EASYTAG_DIR                                 = ".easytag";
+ // File for configuration
+ gchar *CONFIG_FILE                                 = ".easytag/easytagrc";
+ // File of masks for tag scanner

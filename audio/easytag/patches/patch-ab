@@ -1,0 +1,193 @@
+$NetBSD: patch-ab,v 1.3 2002/12/17 19:40:08 wiz Exp $
+
+--- src/cddb.c.orig	Sun Nov 10 15:42:26 2002
++++ src/cddb.c
+@@ -27,6 +27,7 @@
+ #include <stdlib.h>
+ #include <sys/types.h>
+ #include <sys/socket.h>
++#include <arpa/inet.h>
+ #include <netdb.h>
+ #include <errno.h>
+ 
+@@ -80,6 +81,7 @@ gint Cddb_Open_Connection  (gchar *host,
+ void Cddb_Close_Connection (gint socket_id);
+ gint Cddb_Read_Line        (gint socket_id, gchar *cddb_out);
+ gint Cddb_Read_Http_Header (gint socket_id, gchar *cddb_out);
++gint Cddb_Read_Cddb_Header (gint socket_id, gchar *cddb_out);
+ 
+ gboolean Cddb_Search_Album_List_From_String (void);
+ gboolean Cddb_Get_Album_Tracks_List        (GtkCList *clist, gint row, gint column);
+@@ -837,7 +839,7 @@ gint Cddb_Open_Connection (gchar *host, 
+     bzero((void *)&sockaddr,sizeof(sockaddr)); // Initialize with zero
+     memcpy(&sockaddr.sin_addr.s_addr,*(hostent->h_addr_list),sizeof(sockaddr.sin_addr.s_addr));
+     sockaddr.sin_family = AF_INET;
+-    sockaddr.sin_port   = g_htons(port);
++    sockaddr.sin_port   = htons(port);
+ 
+     // Create socket
+     if( (socket_id = socket(AF_INET,SOCK_STREAM,0)) < 0 )
+@@ -893,14 +895,14 @@ void Cddb_Close_Connection (gint socket_
+  * Read one line (of the connection) into cddb_out. And return the number of bytes read.
+  * If bytes_read=0 => no more data.
+  *
+- * Server answser is like this :
++ * Server answser is formated like this :
+  *
+- * HTTP/1.1 200 OK\r\n
+- * Server: Apache/1.3.19 (Unix) PHP/4.0.4pl1\r\n
+- * Connection: close\r\n
++ * HTTP/1.1 200 OK\r\n                              }
++ * Server: Apache/1.3.19 (Unix) PHP/4.0.4pl1\r\n    } "Header"
++ * Connection: close\r\n                            }
+  * \r\n
+- * <html>\n
+- * [...]
++ * <html>\n                                         }
++ * [...]                                            } "Body"
+  */
+ gint Cddb_Read_Line (gint socket_id, gchar *cddb_out)
+ {
+@@ -931,24 +933,57 @@ gint Cddb_Read_Line (gint socket_id, gch
+     return bytes_returned;
+ }
+ 
++
+ /*
++ * Read HTTP header data : from "HTTP/1.1 200 OK" to the blank line
++ */
++
+ gint Cddb_Read_Http_Header (gint socket_id, gchar *cddb_out)
+ {
+     gint bytes_returned = 0;
+     gint bytes_read;
+     
++    if ( (bytes_read=Cddb_Read_Line(socket_id,cddb_out)) < 0 )
++        return -1; // Error!
++    // First line must be "HTTP/1.1 200 OK"
++    if ( strncmp("HTTP",cddb_out,4)!=0 || strstr(cddb_out,"200 OK")==NULL )
++        return -1;
++    // Read until end of the http header
++    while ( (bytes_read=Cddb_Read_Line(socket_id,cddb_out)) > 0 && strlen(cddb_out) > 0 )
++        bytes_returned += bytes_read;
++
++    return bytes_returned;
++}
++
++
++/*
++ * Read CDDB header data when requesting a file (cmd=cddb+read+<album genre>+<discid>)
++ * Must be read after the HTTP header.
++ * Take one line like this : "210 rock 780dfe09 CD database entry follows (until terminating `.')"
++ */
++
++gint Cddb_Read_Cddb_Header (gint socket_id, gchar *cddb_out)
++{
++    gint bytes_read;
++    
++    if ( (bytes_read=Cddb_Read_Line(socket_id,cddb_out)) < 0 )
++        return -1; // Error!
++
++    // Some request receive some strange data at the beginning (2 or 3 characters)... so we read one line more...
++    if ( !cddb_out || strlen(cddb_out) < 10 )
+         if ( (bytes_read=Cddb_Read_Line(socket_id,cddb_out)) < 0 )
+             return -1; // Error!
+-        // First line must be "HTTP/1.1 200 OK"
+-        if ( strncmp("HTTP",cddb_out,4)!=0 )
+-            return bytes_returned;
+-        // Read until end of the http header
+-        while ( (bytes_read=Cddb_Read_Line(socket_id,cddb_out)) > 0 )
+-            bytes_returned += bytes_read;
++    
++    // Read the line
++    // 200 - exact match
++    // 210 - multiple exact matches
++    // 211 - inexact match
++    if ( cddb_out[0] != '2' )
++        return -1;
+ 
+-    return bytes_returned;
++    return bytes_read;
+ }
+-*/
++
+ 
+ 
+ /*
+@@ -1245,15 +1280,15 @@ gboolean Cddb_Search_Album_List_From_Str
+     while (gtk_events_pending()) gtk_main_iteration();
+     cddb_out = g_malloc0(CDDB_ANSWER_LINE_SIZE+1);
+     // Parse server answer : Check returned code in the first line
+-    bytes_read_total = bytes_read = Cddb_Read_Line(socket_id,cddb_out);
+-    if ( !cddb_out || bytes_read <= 0 || strncmp(cddb_out,"HTTP/1.1 200 OK",15) != 0 )
++    if ( !cddb_out || (bytes_read=Cddb_Read_Http_Header(socket_id,cddb_out)) <= 0 )
+     {
+-        msg = g_strdup(_("The server returned a wrong answer!"));
++        msg = g_strdup_printf(_("The server returned a wrong answer! (%s)"),cddb_out);
+         gtk_statusbar_push(GTK_STATUSBAR(CddbStatusBar),CddbStatusBarContext,msg);
+         g_print("%s\n",msg);
+         g_free(msg);
+         return FALSE;
+     }
++    bytes_read_total = bytes_read;
+ 
+     // Read other lines,and get list of matching albums
+     // Composition of a line : 
+@@ -1353,9 +1388,8 @@ gboolean Cddb_Get_Album_Tracks_List (Gtk
+     gint   socket_id;
+     CddbAlbum *cddbalbum = NULL;
+     GList *TrackOffsetList = NULL;
+-    gchar *cddb_in;
+-    gchar *cddb_out;
+-    gint   bytes_written, bytes_read;
++    gchar *cddb_in, *cddb_out, *msg;
++    gint   bytes_written, bytes_read, bytes_read1, bytes_read_total;
+     gboolean read_track_offset = FALSE;
+ 
+ 
+@@ -1405,19 +1439,27 @@ gboolean Cddb_Get_Album_Tracks_List (Gtk
+     gtk_statusbar_push(GTK_STATUSBAR(CddbStatusBar),CddbStatusBarContext,_("Receptionning data ..."));
+     while (gtk_events_pending()) gtk_main_iteration();
+     cddb_out = g_malloc0(CDDB_ANSWER_LINE_SIZE+1);
+-    // Parse server answer : Check returned code in the first line
+-    bytes_read = Cddb_Read_Line(socket_id,cddb_out);
+-    if ( !cddb_out || bytes_read <= 0 || strncmp(cddb_out,"HTTP/1.1 200 OK",15) != 0 )
++    // Parse server answer : Check HTTP Header and CDDB Header
++    if ( !cddb_out
++         || (bytes_read =Cddb_Read_Http_Header(socket_id,cddb_out)) <= 0
++         || (bytes_read1=Cddb_Read_Cddb_Header(socket_id,cddb_out)) <= 0 )
+     {
+-        gchar *msg = g_strdup(_("The server returned a wrong answer!"));
++        gchar *msg = g_strdup_printf(_("The server returned a wrong answer! (%s)"),cddb_out);
+         gtk_statusbar_push(GTK_STATUSBAR(CddbStatusBar),CddbStatusBarContext,msg);
+         g_print("%s\n",msg);
+         g_free(msg);
+         return FALSE;
+     }
++    bytes_read_total = bytes_read + bytes_read1;
+ 
+     while ( !CddbStopSearch && (bytes_read=Cddb_Read_Line(socket_id,cddb_out)) > 0 )
+     {
++        bytes_read_total += bytes_read;
++        msg = g_strdup_printf(_("Receptionning data (%s) ..."),Convert_Size_1(bytes_read_total));
++        gtk_statusbar_push(GTK_STATUSBAR(CddbStatusBar),CddbStatusBarContext,msg);
++        while (gtk_events_pending()) gtk_main_iteration();
++        g_free(msg);
++
+         if (!cddb_out) continue; // Empty line?
+         //g_print("%s\n",cddb_out);
+ 
+@@ -1581,12 +1623,11 @@ gboolean Cddb_Set_Track_Infos_To_File_Li
+ 
+     for (clist_row=0;clist_row<GTK_CLIST(CddbTrackCList)->rows;clist_row++)
+     {
+-        ET_File *etfile;
+         CddbTrackAlbum *cddbtrackalbum = NULL;
+         cddbtrackalbum = gtk_clist_get_row_data(GTK_CLIST(CddbTrackCList),clist_row);
+-        etfile = (ET_File *)etfilelist->data;
+         if (cddbtrackalbum && etfilelist)
+         {
++            ET_File   *etfile   = (ET_File *)etfilelist->data;
+             File_Name *FileName = ET_File_Name_Item_New();
+             File_Tag  *FileTag  = ET_File_Tag_Item_New();
+             ET_Copy_File_Tag_Item(etfilelist->data,FileTag);
