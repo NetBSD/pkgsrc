@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.14 2004/12/31 17:34:10 jlam Exp $
+$NetBSD: patch-af,v 1.15 2005/02/20 05:42:51 grant Exp $
 
---- Makefile.org.orig	2004-09-28 16:52:14.000000000 -0400
+--- Makefile.org.orig	2004-09-29 06:52:14.000000000 +1000
 +++ Makefile.org
 @@ -28,6 +28,7 @@ INSTALLTOP=/usr/local/ssl
  
@@ -43,7 +43,15 @@ $NetBSD: patch-af,v 1.14 2004/12/31 17:34:10 jlam Exp $
  		-Wl,--whole-archive lib$$i.a \
  		-Wl,--no-whole-archive $$libs ${EX_LIBS} -lc ) || exit 1; \
  	libs="-l$$i $$libs"; \
-@@ -548,7 +550,7 @@ do_hpux64-shared:
+@@ -415,6 +417,7 @@ do_solaris-shared:
+ 			-o lib$$i.so.${SHLIB_MAJOR}.${SHLIB_MINOR} \
+ 			-h lib$$i.so.${SHLIB_MAJOR}.${SHLIB_MINOR} \
+ 			-Wl,-Bsymbolic \
++			-Wl,-R${INSTALLTOP}/lib \
+ 			$${MINUSZ}allextract lib$$i.a $${MINUSZ}defaultextract \
+ 			$$libs ${EX_LIBS} -lc ) || exit 1; \
+ 		libs="-l$$i $$libs"; \
+@@ -548,7 +551,7 @@ do_hpux64-shared:
  #  HP/UX-64bit: +forceload
  #  AIX:		-bnogc
  # SHAREDFLAGS would be:
@@ -52,7 +60,7 @@ $NetBSD: patch-af,v 1.14 2004/12/31 17:34:10 jlam Exp $
  #  Tru64 Unix:  -shared \
  #		-set_version "${SHLIB_VERSION_HISTORY}${SHLIB_VERSION_NUMBER}"
  #  Solaris:     -G -h lib$$i.so.${SHLIB_MAJOR}.${SHLIB_MINOR}
-@@ -790,16 +792,14 @@ dist:   
+@@ -790,16 +793,14 @@ dist:   
  dist_pem_h:
  	(cd crypto/pem; $(MAKE) CC='${CC}' SDIRS='${SDIRS}' CFLAG='${CFLAG}' pem.h; $(MAKE) clean)
  
