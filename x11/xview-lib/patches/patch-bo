@@ -1,0 +1,24 @@
+$NetBSD: patch-bo,v 1.1 2001/12/20 09:19:59 tron Exp $
+
+--- lib/libxview/misc/portable.h.orig	Tue Jun 29 07:16:34 1993
++++ lib/libxview/misc/portable.h	Thu Dec 20 10:09:16 2001
+@@ -10,6 +10,7 @@
+ #ifndef xview_portable_h_DEFINED
+ #define xview_portable_h_DEFINED
+ 
++#include <sys/param.h>
+ #include <xview/attr.h>
+ 
+ #if defined(__STDC__) || defined(__cplusplus) || defined(c_plusplus)
+@@ -70,7 +71,11 @@
+ #define	XV_USE_TERMIOS
+ #define	XV_USE_SVR4_PTYS
+ #else	/* SVR4 */
++#if (defined(BSD) && (BSD >= 199103))
++#define XV_USE_TERMIOS
++#else
+ #undef	XV_USE_TERMIOS
++#endif
+ #undef	XV_USE_SVR4_PTYS
+ #endif	/* SVR4 */
+ 

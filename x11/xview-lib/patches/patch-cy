@@ -1,0 +1,59 @@
+$NetBSD: patch-cy,v 1.1 2001/12/20 09:20:05 tron Exp $
+
+--- lib/libxview/textsw/txt_file.c.orig	Tue Jun 29 07:17:48 1993
++++ lib/libxview/textsw/txt_file.c	Thu Dec 20 10:09:41 2001
+@@ -45,13 +45,26 @@
+ 
+ extern CHAR    *STRCAT();
+ extern CHAR    *STRNCAT();
+-#ifdef SVR4
++
++#if (defined(SVR4) || (__NetBSD_Version__ >= 103080000))
++#define GETCWD
++#endif
++
++#ifdef GETCWD
+ extern char    *getcwd();
+ #else
+ extern char    *getwd();
+-#endif /* SVR4 */
++#endif /* GETCWD */
+ extern int      errno, sys_nerr;
++#if (defined(BSD) && (BSD >= 199306))
++#if __NetBSD_Version__ > 103080000
++#include <errno.h>
++#else
++extern const char *const sys_errlist[];
++#endif
++#else
+ extern char    *sys_errlist[];
++#endif
+ 
+ Pkg_private int textsw_change_directory();
+ Pkg_private void textsw_display(), textsw_display_view_margins();
+@@ -354,21 +367,21 @@
+     }
+ 
+ #ifdef		OW_I18N
+-#ifdef SVR4
++#ifdef GETCWD
+     if (getcwd(pathname_mb, MAXPATHLEN) == 0)
+ #else
+     if (getwd(pathname_mb) == 0)
+-#endif /* SVR4 */
++#endif /* GETCWD */
+ 	return (0);
+     (void) mbstowcs(pathname, pathname_mb, MAXPATHLEN-1);
+ 
+ #else		/* OW_I18N */
+ 
+-#ifdef SVR4
++#ifdef GETCWD
+     if (getcwd(pathname, MAXPATHLEN) == 0)
+ #else
+     if (getwd(pathname) == 0)
+-#endif /* SVR4 */
++#endif /* GETCWD */
+ 	return (0);
+ #endif		/* OW_I18N */
+ 

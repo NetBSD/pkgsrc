@@ -1,23 +1,16 @@
-$NetBSD: patch-an,v 1.2 2000/02/05 16:27:25 wiz Exp $
---- ./lib/libxview/wmgr/wmgr_menu.c.orig	Tue Jun 29 01:17:24 1993
-+++ ./lib/libxview/wmgr/wmgr_menu.c	Sun Dec 12 22:12:12 1999
-@@ -11,8 +11,13 @@
-  */
+$NetBSD: patch-an,v 1.3 2001/12/20 09:19:55 tron Exp $
+
+--- lib/libxview/io_stream/othr_strms.c.orig	Tue Jun 29 07:15:05 1993
++++ lib/libxview/io_stream/othr_strms.c	Thu Dec 20 10:09:16 2001
+@@ -17,7 +17,11 @@
  
-+#include <sys/param.h>
- #include <sys/types.h>
- #include <stdio.h>
- #include <ctype.h>
- #include <string.h>
-+
-+#if defined(BSD) && (BSD >= 199306)
-+#include <unistd.h>
+ #define GetFCSData struct xv_filter_comments_stream_data *data = (struct xv_filter_comments_stream_data*) in->client_data
+ 
++#if !defined(__FreeBSD__) && !defined(__NetBSD__)
+ static struct xv_filter_comments_stream_data {
 +#else
- #ifdef sparc
- #ifdef SVR4
-@@ -21,4 +26,5 @@
- #include <vfork.h>
- #endif SVR4
-+#endif sparc
- #endif
- 
++struct xv_filter_comments_stream_data {
++#endif
+     Bool            backed_up;
+     char            backup, lastchar;
+ };

@@ -1,63 +1,12 @@
-$NetBSD: patch-ay,v 1.1 2001/05/11 20:41:32 dmcmahill Exp $
+$NetBSD: patch-ay,v 1.2 2001/12/20 09:19:56 tron Exp $
 
-don't return the address of a local variable
-
---- lib/libxview/canvas/cnvs_input.c.orig       Tue Jun 29 01:14:46 1993
-+++ lib/libxview/canvas/cnvs_input.c    Fri May 11 15:17:51 2001
-@@ -416,7 +416,11 @@
- {
-     Xv_Window       paint_window;
--    Event           tmp_event;
-+    Event           *tmp_event;
-     int             x, y;
+--- lib/libxview/selection/sel_own.c.orig	Sun Jun 26 03:05:22 1994
++++ lib/libxview/selection/sel_own.c	Thu Dec 20 10:09:17 2001
+@@ -35,6 +35,7 @@
+ static int sel_set_ownership(/* sel_owner */);
+ static int (*OldErrorHandler)();
+ static int SelOwnerErrorHandler();
++static int SendIncr();
+ static int ValidatePropertyEvent();
  
-+    if ( (tmp_event = (Event *) malloc(sizeof(Event))) == NULL){
-+	fprintf(stderr,"canvas_window_event: malloc failed\n");
-+	exit(1);
-+    }
-     paint_window = xv_get(canvas_public, CANVAS_NTH_PAINT_WINDOW, 0);
-     if (paint_window == NULL) {
-@@ -424,10 +428,11 @@
- 	return (event);
-     }
--    tmp_event = *event;
-+
-+    memcpy(tmp_event,event,sizeof(Event));
-     win_translate_xy(paint_window, canvas_public,
- 		     event_x(event), event_y(event), &x, &y);
--    event_set_x(&tmp_event, x);
--    event_set_y(&tmp_event, y);
--    return (&tmp_event);
-+    event_set_x(tmp_event, x);
-+    event_set_y(tmp_event, y);
-+    return (tmp_event);
- }
- 
-@@ -441,7 +446,11 @@
- {
-     Xv_Window       paint_window;
--    Event           tmp_event;
-+    Event           *tmp_event;
-     int             x, y;
- 
-+    if ( (tmp_event = (Event *) malloc(sizeof(Event))) == NULL){
-+	fprintf(stderr,"canvas_window_event: malloc failed\n");
-+	exit(1);
-+    }
-     paint_window = xv_get(canvas_public, CANVAS_NTH_PAINT_WINDOW, 0);
-     if (paint_window == NULL) {
-@@ -449,10 +458,10 @@
- 	return (event);
-     }
--    tmp_event = *event;
-+    memcpy(tmp_event,event,sizeof(Event));
-     win_translate_xy(paint_window, canvas_public,
- 		     event_x(event), event_y(event), &x, &y);
--    event_set_x(&tmp_event, x);
--    event_set_y(&tmp_event, y);
--    return (&tmp_event);
-+    event_set_x(tmp_event, x);
-+    event_set_y(tmp_event, y);
-+    return (tmp_event);
- }
- 
+ static void SelClean();

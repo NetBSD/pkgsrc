@@ -1,13 +1,24 @@
-$NetBSD: patch-ax,v 1.1 2001/05/02 21:46:09 dmcmahill Exp $
+$NetBSD: patch-ax,v 1.2 2001/12/20 09:19:56 tron Exp $
 
---- ./lib/libxview/panel/p_mlinetxt.c.nbsd	Sat Apr 28 21:49:11 2001
-+++ ./lib/libxview/panel/p_mlinetxt.c	Sat Apr 28 21:49:49 2001
-@@ -449,7 +449,7 @@
- 	return (Xv_opaque) dp->rows_displayed;
+--- lib/libxview/dnd/site.c.orig	Tue Jun 29 07:15:58 1993
++++ lib/libxview/dnd/site.c	Thu Dec 20 10:09:16 2001
+@@ -19,6 +19,7 @@
+ #ifdef SVR4 
+ #include <stdlib.h> 
+ #endif SVR4
++#include <sys/param.h>
  
-       case PANEL_ITEM_NTH_WINDOW:
--	switch (*(int *) valist) {
-+	switch (va_arg(valist, int)) {
- 	  case 0:
- 	    return dp->view;
- 	  case 1:
+ static     void 	TransCoords();
+ Xv_private Xv_Window	win_get_top_level();
+@@ -246,7 +247,11 @@
+           /* (rectNode->rect) is of the wrong type. */
+           memmove(rect, &(rectNode->rect),  sizeof(Rect));
+ #else
++#if (defined(BSD) && (BSD >= 199103))
++	  bcopy(&(rectNode->rect), rect, sizeof(Rect));
++#else
+ 	  bcopy(rectNode->rect, rect, sizeof(Rect));
++#endif
+ #endif SVR4
+ 
+ 	  return((Xv_opaque)rect);

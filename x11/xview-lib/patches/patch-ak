@@ -1,31 +1,15 @@
-$NetBSD: patch-ak,v 1.1 1999/03/31 14:25:40 hubertf Exp $
+$NetBSD: patch-ak,v 1.2 2001/12/20 09:19:55 tron Exp $
 
---- lib/libxview/textsw/es_file.c.orig	Tue Jun 29 07:17:34 1993
-+++ lib/libxview/textsw/es_file.c	Wed Mar 31 15:32:31 1999
-@@ -88,10 +88,11 @@
- #ifdef SVR4
- #include <stdlib.h>
- #include <dirent.h>
-+#include <sys/errno.h>
- #else
- #include <sys/dir.h>
-+#include <errno.h>
- #endif /* SVR4 */
--#include <sys/errno.h>
- #include <sys/param.h>
- #include <sys/types.h>
- #include <sys/stat.h>
-@@ -110,8 +111,13 @@
+--- lib/libxview/font/font.c.orig	Tue Jun 29 07:15:01 1993
++++ lib/libxview/font/font.c	Thu Dec 20 10:09:16 2001
+@@ -67,6 +67,10 @@
+ Xv_private char *xv_font_scale_cmdline();
+ Xv_private char *xv_font_scale();
  
- 
- extern int      errno, sys_nerr;
-+#if (defined(BSD) && (BSD >= 199306))
-+extern const char *const sys_err_list[];
-+extern off_t	lseek();
-+#else
- extern char    *sys_errlist[];
- extern long     lseek();
-+#endif
- 
- static void update_read_buf();  /* update the read buf if overlaps write buf */
- static Es_status es_file_commit();
++static int font_setup_defaults();
++static int font_construct_name();
++static int font_init_create_attrs();
++
+ /*
+  * delimiters
+  */

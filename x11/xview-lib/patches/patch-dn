@@ -1,0 +1,16 @@
+$NetBSD: patch-dn,v 1.1 2001/12/20 09:20:07 tron Exp $
+
+--- lib/libxview/notify/sys_fcntl.c.orig	Tue Jun 29 07:18:17 1993
++++ lib/libxview/notify/sys_fcntl.c	Thu Dec 20 10:09:16 2001
+@@ -15,7 +15,11 @@
+  */
+ 
+ #ifndef SVR4
++#if !defined(__FreeBSD__) && !defined(__NetBSD__)
+ #include <syscall.h>
++#else
++#include <sys/syscall.h>
++#endif
+ #else SVR4
+ #include <sys/syscall.h>
+ #endif SVR4

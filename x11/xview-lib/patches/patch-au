@@ -1,34 +1,12 @@
-$NetBSD: patch-au,v 1.1 2001/05/02 21:46:09 dmcmahill Exp $
+$NetBSD: patch-au,v 1.2 2001/12/20 09:19:56 tron Exp $
 
---- ./lib/libxview/font/font_get.c.nbsd	Sat Apr 28 21:26:26 2001
-+++ ./lib/libxview/font/font_get.c	Sat Apr 28 21:30:27 2001
-@@ -43,7 +43,6 @@
-     XFontStruct		*x_font_info = (XFontStruct *)font->x_font_info;
-     Xv_opaque       v;
-     int             attr_is_char_width = 0;
--    Attr_avlist     avlist = (Attr_avlist) args;
+--- lib/libxview/win/win_env.c.orig	Tue Jun 29 07:15:40 1993
++++ lib/libxview/win/win_env.c	Thu Dec 20 10:10:47 2001
+@@ -15,6 +15,7 @@
+  * other functions)
+  */
  
- #ifdef OW_I18N
-     if (font->type == FONT_TYPE_TEXT)  {
-@@ -138,8 +137,8 @@
- 	}
- 
-       case FONT_STRING_DIMS:{
--	    char           *string = (char *) avlist[0];
--	    Font_string_dims *size = (Font_string_dims *) avlist[1];
-+	    char *string = (char *)va_arg(args, Attr_attribute);
-+	    Font_string_dims *size = (Font_string_dims *)va_arg(args, Attr_attribute);
- 	    struct pr_size  my_pf_size;
- 	    if (string) {
- 		my_pf_size = xv_pf_textwidth(strlen(string), font_public, string);
-@@ -264,8 +263,8 @@
- 
- #ifdef OW_I18N
-       case FONT_STRING_DIMS_WC:{
--            wchar_t             *ws = (wchar_t *) avlist[0];
--            Font_string_dims    *size = (Font_string_dims *) avlist[1];
-+            wchar_t *ws = (wchar_t *) va_arg(args, Attr_attribute);
-+            Font_string_dims *size = (Font_string_dims *) va_arg(args, Attr_attribute);
-             struct pr_size      my_pf_size;
- 
-             if (ws) {
++#include <string.h>
+ #include <xview/rect.h>
+ #include <xview/win_env.h>
+ #include <xview/win_struct.h>
