@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/01/23 16:55:37 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/02/09 20:24:55 xtraeme Exp $
 bin/scrollkeeper-config
 bin/scrollkeeper-extract
 bin/scrollkeeper-gen-seriesid
@@ -68,7 +68,6 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/scrollkeeper.mo
 share/omf/scrollkeeper/writing_scrollkeeper_omf_files-C.omf
 share/scrollkeeper/Templates/C/scrollkeeper_cl.xml
 share/scrollkeeper/Templates/am/scrollkeeper_cl.xml
-share/scrollkeeper/Templates/az/scrollkeeper_cl.xml
 share/scrollkeeper/Templates/be/scrollkeeper_cl.xml
 share/scrollkeeper/Templates/ca/scrollkeeper_cl.xml
 share/scrollkeeper/Templates/cs/scrollkeeper_cl.xml
@@ -80,7 +79,6 @@ share/scrollkeeper/Templates/fr/scrollkeeper_cl.xml
 share/scrollkeeper/Templates/hu/scrollkeeper_cl.xml
 share/scrollkeeper/Templates/it/scrollkeeper_cl.xml
 share/scrollkeeper/Templates/ja/scrollkeeper_cl.xml
-share/scrollkeeper/Templates/kn/scrollkeeper_cl.xml
 share/scrollkeeper/Templates/ko/scrollkeeper_cl.xml
 share/scrollkeeper/Templates/nl/scrollkeeper_cl.xml
 share/scrollkeeper/Templates/no/scrollkeeper_cl.xml
@@ -94,7 +92,6 @@ share/scrollkeeper/Templates/sr/scrollkeeper_cl.xml
 share/scrollkeeper/Templates/sr@Latn/scrollkeeper_cl.xml
 share/scrollkeeper/Templates/sv/scrollkeeper_cl.xml
 share/scrollkeeper/Templates/tr/scrollkeeper_cl.xml
-share/scrollkeeper/Templates/uk/scrollkeeper_cl.xml
 share/scrollkeeper/Templates/vi/scrollkeeper_cl.xml
 share/scrollkeeper/Templates/zh_CN/scrollkeeper_cl.xml
 share/scrollkeeper/Templates/zh_TW/scrollkeeper_cl.xml
