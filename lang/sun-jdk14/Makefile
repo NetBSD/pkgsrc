@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2004/07/02 14:40:21 jschauma Exp $
+# $NetBSD: Makefile,v 1.20 2004/10/05 22:09:23 tv Exp $
 
 DISTNAME=	j2sdk-1_4_2_05-linux-i586
 PKGNAME=	sun-jdk14-2.5
+PKGREVISION=	1
 MASTER_SITES=	# empty
 
 COMMENT=	Sun's Java(tm) 2 SDK, Standard Edition 1.4.2
@@ -11,7 +12,8 @@ SHORT=		SDK
 DEPENDS=	sun-jre14>=2.5:../../lang/sun-jre14
 
 WRKSRC=		${WRKDIR}/j2sdk1.4.2_05
-JAVA_WRAPPERS=	appletviewer jar javac javadoc javah javap
+JAVA_WRAPPERS=	appletviewer extcheck idlj jar jarsigner \
+		javac javadoc javah javap jdb rmic serialver
 
 # Remove parts that are in common with the JRE
 #
