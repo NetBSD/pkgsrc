@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 11:21:04 agc Exp $
+$NetBSD: distinfo,v 1.2.8.1 2002/12/22 08:29:21 agc Exp $
 
-SHA1 (tar-1.12.shar.gz) = 4cab31f6be9c6803679213a46bb3432670a151fc
-Size (tar-1.12.shar.gz) = 1258219 bytes
+SHA1 (tar-1.13.25.tar.gz) = d27fda27af621a1182bff289d4bfc7b37019effe
+Size (tar-1.13.25.tar.gz) = 1312227 bytes
