@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/09/11 18:27:49 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2000/02/29 18:31:30 jlam Exp $
 
---- Makefile.orig	Thu Jun  3 16:20:55 1999
-+++ Makefile	Sat Sep 11 13:51:58 1999
-@@ -19,7 +19,7 @@
+--- Makefile.orig	Sat Dec 11 01:23:53 1999
++++ Makefile	Tue Feb 29 12:05:03 2000
+@@ -20,7 +20,7 @@
  ## 02111-1307, USA.
  
  ABI_ROOT	:=$(shell pwd)
@@ -11,12 +11,3 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/09/11 18:27:49 jlam Exp $
  
  ##################################################################
  ## Useful options:
-@@ -62,7 +62,7 @@
- ## construct the desired layout and installation script.)
- ## This creates $(OUT)/AbiSuite
- 
--canonical:
-+canonical:	compile
- 	@echo Building AbiSuite Canonical Layout
- 	$(MAKE) ABI_ROOT=$(ABI_ROOT) -C src canonical
- 
