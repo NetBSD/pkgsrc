@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5940 2004/05/15 07:25:28 jmmv Exp $
+$NetBSD: CHANGES,v 1.5941 2004/05/15 11:18:15 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2533,3 +2533,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated opera7 to 7.50 [jdolecek 2004-05-14]
 	Updated xfce4-datetime-plugin to 0.3.0 [minskim 2004-05-14]
 	Updated esound to 0.2.34 [jmmv 2004-05-15]
+	Updated ploticus to 2.21 [grant 2004-05-15]
