@@ -1,0 +1,20 @@
+$NetBSD: patch-ad,v 1.1 2002/07/18 20:44:53 heinz Exp $
+
+--- configure.orig	Mon Apr 29 16:59:16 2002
++++ configure
+@@ -3928,8 +3928,14 @@
+ NAME_OF_DEV_RANDOM="/dev/random"
+ NAME_OF_DEV_URANDOM="/dev/urandom"
+ case "${target}" in
+-    *-openbsd* | *-netbsd*)
++    *-openbsd*)
+         NAME_OF_DEV_RANDOM="/dev/srandom"
++        NAME_OF_DEV_URANDOM="/dev/urandom"
++        DYNLINK_MOD_CFLAGS="-shared -rdynamic $CFLAGS_PIC -Wl,-Bshareable -Wl,-x"
++        ;;
++
++    *-netbsd*)
++        NAME_OF_DEV_RANDOM="/dev/random"
+         NAME_OF_DEV_URANDOM="/dev/urandom"
+         DYNLINK_MOD_CFLAGS="-shared -rdynamic $CFLAGS_PIC -Wl,-Bshareable -Wl,-x"
+         ;;
