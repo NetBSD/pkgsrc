@@ -1,51 +1,52 @@
-$NetBSD: patch-aa,v 1.3 2002/12/01 18:31:42 jdolecek Exp $
+$NetBSD: patch-aa,v 1.4 2004/10/08 21:02:53 mjl Exp $
 
---- make/unix.mak.orig	Tue Nov 12 12:56:46 2002
-+++ make/unix.mak	Sun Dec  1 15:11:09 2002
-@@ -433,7 +433,7 @@
- 
+--- make/unix.mak.orig	2003-07-25 00:01:42.000000000 +0200
++++ make/unix.mak	2004-10-08 21:27:52.000000000 +0200
+@@ -66,7 +66,7 @@
+ #
  
  ifndef PWLIBDIR
 -PWLIBDIR = $(HOME)/pwlib
-+PWLIBDIR = @PREFIX@
++PWLIBDIR = /usr/pkg
  endif
  
- ###############################################################################
-@@ -819,19 +819,15 @@
+ ####################################################
+@@ -381,9 +381,9 @@
  
- P_PTHREADS	:= 1
+ ifeq ($(OSTYPE),OpenBSD)
  
 -ifeq ($(MACHTYPE),x86)
 -STDCCFLAGS	+= -m486
 -endif
--
- STDCCFLAGS	+= -DP_NETBSD
++# ifeq ($(MACHTYPE),x86)
++# STDCCFLAGS	+= -m486
++# endif
+ 
  LDLIBS		+= -lossaudio
  
- ifdef P_PTHREADS
--STDCCFLAGS += -I/usr/pkg/pthreads/include
--LDFLAGS	+= -L/usr/pkg/pthreads/lib
--LDLIBS	+= -lpthread
--CC              := /usr/pkg/pthreads/bin/pgcc
--CPLUS           := /usr/pkg/pthreads/bin/pg++
-+# need to put $(PREFIX)/include after library includes, so that
-+# the build wouldn't pick up potential intalled pwlib headers
-+# from $(PREFIX)
-+STDCCFLAGS += -I$(UNIX_INC_DIR) -I$(PWLIBDIR)/include -I@PTHREADS_PREFIX@/include
-+LDFLAGS	+= -L@PTHREADS_PREFIX@/lib -lpthread
- endif
+@@ -404,9 +404,9 @@
  
- P_USE_RANLIB		:= 1
-@@ -1222,7 +1218,7 @@
+ ifeq ($(OSTYPE),NetBSD)
+ 
+-ifeq ($(MACHTYPE),x86)
+-STDCCFLAGS	+= -m486
+-endif
++# ifeq ($(MACHTYPE),x86)
++# STDCCFLAGS	+= -m486
++# endif
+ 
+ ifndef OSRELASE
+ OSRELEASE   := $(shell /sbin/sysctl -n kern.osrevision)
+@@ -853,7 +853,7 @@
  endif
  
  ifeq ($(P_SHAREDLIB),1)
--LIB_SUFFIX	= so
+-LIB_SUFFIX	= $(SHAREDLIBEXT)
 +LIB_SUFFIX	= la
- else
- LIB_SUFFIX	= a
+ else   
+ LIB_SUFFIX	= a 
  ifndef DEBUG
-@@ -1234,8 +1230,9 @@
+@@ -865,8 +865,9 @@
  LIB_TYPE	=
  endif
  
@@ -56,7 +57,23 @@ $NetBSD: patch-aa,v 1.3 2002/12/01 18:31:42 jdolecek Exp $
  endif
  
  ifndef INSTALLBIN_DIR
-@@ -1303,7 +1300,7 @@
+@@ -891,11 +892,11 @@
+ 
+ # Directories
+ 
+-ifdef PREFIX
+-UNIX_INC_DIR	= $(PREFIX)/include/ptlib/unix
+-else
++#ifdef PREFIX
++#UNIX_INC_DIR	= $(PREFIX)/include/ptlib/unix
++#else
+ UNIX_INC_DIR	= $(PWLIBDIR)/include/ptlib/unix
+-endif
++#endif
+ 
+ ifndef UNIX_SRC_DIR
+ UNIX_SRC_DIR	= $(PWLIBDIR)/src/ptlib/unix
+@@ -904,7 +905,7 @@
  PW_LIBDIR	= $(PWLIBDIR)/lib
  
  # set name of the PT library
@@ -65,7 +82,7 @@ $NetBSD: patch-aa,v 1.3 2002/12/01 18:31:42 jdolecek Exp $
  PTLIB_FILE	= lib$(PTLIB_BASE)$(LIB_TYPE).$(LIB_SUFFIX)
  PT_OBJBASE	= obj_$(PLATFORM_TYPE)_$(OBJDIR_SUFFIX)
  PT_OBJDIR	= $(PW_LIBDIR)/$(PT_OBJBASE)
-@@ -1432,6 +1429,6 @@
+@@ -972,6 +973,6 @@
  # add library directory to library path and include the library
  LDFLAGS		+= -L$(PW_LIBDIR)
  

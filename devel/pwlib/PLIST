@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:29 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/10/08 21:02:53 mjl Exp $
 bin/asnparser
-include/ptclib/cypher.h
+include/ptclib/asnber.h
 include/ptclib/asner.h
+include/ptclib/asnper.h
+include/ptclib/asnxer.h
+include/ptclib/cypher.h
 include/ptclib/delaychan.h
 include/ptclib/dtmf.h
 include/ptclib/ftp.h
@@ -16,8 +19,13 @@ include/ptclib/memfile.h
 include/ptclib/mime.h
 include/ptclib/modem.h
 include/ptclib/pasn.h
+include/ptclib/pdns.h
+include/ptclib/pils.h
+include/ptclib/pldap.h
 include/ptclib/psnmp.h
+include/ptclib/psoap.h
 include/ptclib/pssl.h
+include/ptclib/pstun.h
 include/ptclib/ptts.h
 include/ptclib/pwavfile.h
 include/ptclib/pxml.h
@@ -29,41 +37,9 @@ include/ptclib/shttpsvc.h
 include/ptclib/socks.h
 include/ptclib/telnet.h
 include/ptclib/url.h
+include/ptclib/vsdl.h
 include/ptclib/vxml.h
-include/ptlib/unix/ptlib/channel.h
-include/ptlib/unix/ptlib/conchan.h
-include/ptlib/unix/ptlib/config.h
-include/ptlib/unix/ptlib/contain.h
-include/ptlib/unix/ptlib/dynalink.h
-include/ptlib/unix/ptlib/ethsock.h
-include/ptlib/unix/ptlib/file.h
-include/ptlib/unix/ptlib/filepath.h
-include/ptlib/unix/ptlib/icmpsock.h
-include/ptlib/unix/ptlib/ipdsock.h
-include/ptlib/unix/ptlib/ipsock.h
-include/ptlib/unix/ptlib/mutex.h
-include/ptlib/unix/ptlib/pdirect.h
-include/ptlib/unix/ptlib/pipechan.h
-include/ptlib/unix/ptlib/pmachdep.h
-include/ptlib/unix/ptlib/pprocess.h
-include/ptlib/unix/ptlib/ptime.h
-include/ptlib/unix/ptlib/ptlib.inl
-include/ptlib/unix/ptlib/remconn.h
-include/ptlib/unix/ptlib/semaphor.h
-include/ptlib/unix/ptlib/serchan.h
-include/ptlib/unix/ptlib/sfile.h
-include/ptlib/unix/ptlib/socket.h
-include/ptlib/unix/ptlib/sound.h
-include/ptlib/unix/ptlib/timer.h
-include/ptlib/unix/ptlib/svcproc.h
-include/ptlib/unix/ptlib/syncpoint.h
-include/ptlib/unix/ptlib/tcpsock.h
-include/ptlib/unix/ptlib/textfile.h
-include/ptlib/unix/ptlib/thread.h
-include/ptlib/unix/ptlib/timeint.h
-include/ptlib/unix/ptlib/udpsock.h
-include/ptlib/unix/ptlib/video.h
-include/ptlib/unix/ptlib/videoio.h
+include/ptlib.h
 include/ptlib/MacMainIf.h
 include/ptlib/args.h
 include/ptlib/array.h
@@ -110,26 +86,61 @@ include/ptlib/thread.h
 include/ptlib/timeint.h
 include/ptlib/timer.h
 include/ptlib/udpsock.h
+include/ptlib/unix/ptlib/channel.h
+include/ptlib/unix/ptlib/conchan.h
+include/ptlib/unix/ptlib/config.h
+include/ptlib/unix/ptlib/contain.h
+include/ptlib/unix/ptlib/dynalink.h
+include/ptlib/unix/ptlib/ethsock.h
+include/ptlib/unix/ptlib/file.h
+include/ptlib/unix/ptlib/filepath.h
+include/ptlib/unix/ptlib/icmpsock.h
+include/ptlib/unix/ptlib/ipdsock.h
+include/ptlib/unix/ptlib/ipsock.h
+include/ptlib/unix/ptlib/mutex.h
+include/ptlib/unix/ptlib/pdirect.h
+include/ptlib/unix/ptlib/pipechan.h
+include/ptlib/unix/ptlib/pmachdep.h
+include/ptlib/unix/ptlib/pprocess.h
+include/ptlib/unix/ptlib/ptime.h
+include/ptlib/unix/ptlib/ptlib.inl
+include/ptlib/unix/ptlib/remconn.h
+include/ptlib/unix/ptlib/semaphor.h
+include/ptlib/unix/ptlib/serchan.h
+include/ptlib/unix/ptlib/sfile.h
+include/ptlib/unix/ptlib/socket.h
+include/ptlib/unix/ptlib/sound.h
+include/ptlib/unix/ptlib/svcproc.h
+include/ptlib/unix/ptlib/syncpoint.h
+include/ptlib/unix/ptlib/tcpsock.h
+include/ptlib/unix/ptlib/textfile.h
+include/ptlib/unix/ptlib/thread.h
+include/ptlib/unix/ptlib/timeint.h
+include/ptlib/unix/ptlib/timer.h
+include/ptlib/unix/ptlib/udpsock.h
+include/ptlib/unix/ptlib/video.h
+include/ptlib/unix/ptlib/videoio.h
+include/ptlib/unix/ptlib/videoio1394avc.h
 include/ptlib/vconvert.h
 include/ptlib/vfakeio.h
 include/ptlib/video.h
 include/ptlib/videoio.h
 include/ptlib/videoio1394dc.h
-include/ptlib.h
 lib/libpt.la
 share/pwlib/make/common.mak
 share/pwlib/make/defaultgui.mak
 share/pwlib/make/gui.mak
 share/pwlib/make/lib.mak
 share/pwlib/make/motif.mak
+share/pwlib/make/ptbuildopts.mak
 share/pwlib/make/ptlib.mak
 share/pwlib/make/pwlib.mak
 share/pwlib/make/qt.mak
 share/pwlib/make/unix.mak
 share/pwlib/make/xlib.mak
-@dirrm share/pwlib/make
-@dirrm share/pwlib
+@dirrm include/ptclib
 @dirrm include/ptlib/unix/ptlib
 @dirrm include/ptlib/unix
 @dirrm include/ptlib
-@dirrm include/ptclib
+@dirrm share/pwlib/make
+@dirrm share/pwlib
