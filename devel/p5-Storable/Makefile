@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2004/05/02 00:22:06 heinz Exp $
+# $NetBSD: Makefile,v 1.18 2004/12/20 11:31:02 grant Exp $
 
 DISTNAME=	Storable-2.12
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5sto
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Storable/}
 

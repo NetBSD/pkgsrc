@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2004/04/27 02:24:09 snj Exp $
+# $NetBSD: Makefile,v 1.18 2004/12/20 11:31:05 grant Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/06/27 01:51:12 jfitz Exp
 #
 
 DISTNAME=		Locale-Codes-1.06
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5lco
+PKGREVISION=		1
 CATEGORIES=		misc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Locale/}
 

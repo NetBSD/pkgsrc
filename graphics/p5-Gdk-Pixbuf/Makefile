@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2004/11/30 18:26:39 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2004/12/20 11:31:04 grant Exp $
 #
 
 .include "../../x11/p5-gtk/Makefile.common"
 
 PKGNAME=	p5-Gdk-Pixbuf-${GTKPERL_VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Perl5 Gtk::Gdk::Pixbuf

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2004/07/17 20:12:23 kim Exp $
+# $NetBSD: Makefile,v 1.16 2004/12/20 11:30:57 grant Exp $
 #
 
 DISTNAME=		MLDBM-2.01
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5mld
+PKGREVISION=		1
 CATEGORIES=		databases perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=MLDBM/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/06 21:25:00 epg Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/20 11:31:00 grant Exp $
 
 DISTNAME=	File-Type-0.22
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
 
