@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2 2002/11/23 02:43:58 schmonz Exp $
+$NetBSD: TODO,v 1.3 2002/11/23 09:50:58 dillo Exp $
 
 Suggested new packages
 ======================
@@ -121,7 +121,6 @@ Suggested package updates
 	o id3lib-3.8.1
 	o ivtools-1.0.5
 	o jakarta-ant-1.5 [pkg/18322]
-	o jasper-1.600.0
 	o jed-0.99.16 [pkg/18937]
 	o jgloss-1.0.6
 	o joe-2.9 [pkg/18022]
