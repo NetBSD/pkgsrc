@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/12/28 03:16:27 tv Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/09/13 10:05:58 tron Exp $
 bin/bladeenc
-share/doc/bladeenc.html
+share/doc/bladeenc/bladeenc.html
+@dirrm share/doc/bladeenc
