@@ -1,0 +1,30 @@
+$NetBSD: patch-ar,v 1.1.1.1 1999/07/26 23:38:49 cjs Exp $
+
+--- src/server.c.orig	Tue May 11 16:21:52 1999
++++ src/server.c	Sun Jul 25 16:11:40 1999
+@@ -794,6 +794,8 @@
+        nothing.  But for rsh, we need to do it now.  */
+     parse_config (CVSroot_directory);
+ 
++    if (!nolock)
++    {
+     path = malloc (strlen (CVSroot_directory)
+ 		   + sizeof (CVSROOTADM)
+ 		   + sizeof (CVSROOTADM_HISTORY)
+@@ -824,6 +826,7 @@
+ 	pending_error = save_errno;
+     }
+     free (path);
++    }
+ 
+ #ifdef HAVE_PUTENV
+     env = malloc (strlen (CVSROOT_ENV) + strlen (CVSroot_directory) + 1 + 1);
+@@ -2091,6 +2094,8 @@
+     {
+ 	case 'n':
+ 	    noexec = 1;
++	case 'u':
++	    nolock = 1;
+ 	    break;
+ 	case 'q':
+ 	    quiet = 1;

@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1.1.1 1999/07/26 23:38:49 cjs Exp $
+
+--- src/checkout.c.orig	Sun Jul 26 22:54:04 1998
++++ src/checkout.c	Tue Apr 20 10:15:03 1999
+@@ -180,7 +180,7 @@
+ 	    case 'p':
+ 		pipeout = 1;
+ 		run_module_prog = 0;	/* don't run module prog when piping */
+-		noexec = 1;		/* so no locks will be created */
++		noexec = nolock = 1;	/* so no locks will be created */
+ 		break;
+ 	    case 'c':
+ 		cat = 1;
