@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4560 2004/01/22 18:56:38 jmmv Exp $
+$NetBSD: CHANGES,v 1.4561 2004/01/23 06:04:57 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -411,3 +411,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xawtv to 3.90nb1 [jmmv 2004-01-22]
 	Updated nedit to 5.4 [recht 2004-01-22]
 	Updated kdebase3 to 3.1.5nb1 [jmmv 2004-01-22]
+	Updated liba52 to 0.7.4nb1 [grant 2004-01-23]
