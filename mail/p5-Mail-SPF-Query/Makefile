@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/17 22:48:18 heinz Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/18 00:23:31 heinz Exp $
 
 DISTNAME=		Mail-SPF-Query-1.991
 PKGNAME=                p5-${DISTNAME}
@@ -14,6 +14,8 @@ DEPENDS+=		p5-Net-DNS>=0.33:../../net/p5-Net-DNS
 DEPENDS+=		p5-Net-CIDR-Lite>=0.15:../../net/p5-Net-CIDR-Lite
 # needs URI::Escape >= 3.20
 DEPENDS+=		p5-URI>=1.18:../../www/p5-URI
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Mail/SPF/Query/.packlist
 USE_BUILDLINK3=		yes
