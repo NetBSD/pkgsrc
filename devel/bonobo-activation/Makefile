@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/01/04 22:07:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2003/01/04 23:42:59 jmmv Exp $
 #
 
 DISTNAME=		bonobo-activation-2.1.0
@@ -31,6 +31,9 @@ PKG_SYSCONFSUBDIR=	bonobo-activation
 EGDIR=			${PREFIX}/share/examples/bonobo-activation
 CONF_FILES=		${EGDIR}/bonobo-activation-config.xml \
 			${PKG_SYSCONFDIR}/bonobo-activation-config.xml
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/bonobo/monikers
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
