@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9483 2005/03/15 09:07:48 martti Exp $
+$NetBSD: CHANGES,v 1.9484 2005/03/15 14:06:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1361,3 +1361,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-Image-Imlib2 to 1.04 [wiz 2005-03-14]
 	Updated maradns to 1.0.18nb3 [wiz 2005-03-14]
 	Updated vim to 6.3.064 [martti 2005-03-15]
+	Updated ja-mh6 to 3.05nb1 [wiz 2005-03-15]
