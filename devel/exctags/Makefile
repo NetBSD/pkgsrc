@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/06/03 15:20:59 uebayasi Exp $
+# $NetBSD: Makefile,v 1.11 2004/12/30 21:59:17 markd Exp $
 #
 
 DISTNAME=	ctags-5.5.4
@@ -30,5 +30,11 @@ SUBST_SED.man=	\
 	-e 's|"ctags|"exctags|g' \
 	-e 's|"etags|"exetags|g' \
 	-e 's|/usr/local|${LOCALBASE}|g'
+
+SUBST_CLASSES+=		rename
+SUBST_STAGE.rename=	post-patch
+SUBST_FILES.rename=	c.c eiffel.c general.h lregex.c lua.c main.c \
+			options.c parse.c routines.c
+SUBST_SED.rename=	-e 's|__unused__|__unused_|g'
 
 .include "../../mk/bsd.pkg.mk"
