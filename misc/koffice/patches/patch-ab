@@ -1,0 +1,49 @@
+$NetBSD: patch-ab,v 1.4 2003/10/09 18:38:34 reed Exp $
+
+--- filters/kspread/qpro/libqpro/src/record.cc.orig	2003-09-29 16:45:05.000000000 +0000
++++ filters/kspread/qpro/libqpro/src/record.cc	2003-09-29 16:46:18.000000000 +0000
+@@ -2,7 +2,7 @@
+ 
+ #include <string.h>
+ 
+-#include <iostream.h>
++#include <iostream>
+ 
+ #include <qpro/record.h>
+ #include <qpro/formula.h>
+@@ -10,7 +10,7 @@
+ // -----------------------------------------------------------------------
+ 
+ #include <iomanip.h>
+-#include <strstream.h>
++#include <strstream>
+ 
+ void
+ Charout(ostream& pOut, unsigned char pChar)
+@@ -32,7 +32,7 @@
+ int
+ Hexout(char* pChar, int pLen)
+ {
+-   ostrstream*   lOStr = new ostrstream;
++   std::ostrstream*   lOStr = new std::ostrstream;
+ 
+    while( pLen )
+    {
+@@ -57,7 +57,7 @@
+       cerr << lOStr->rdbuf() << endl;
+ 
+       delete lOStr;
+-      lOStr = new ostrstream;
++      lOStr = new std::ostrstream;
+    }
+ 
+    delete lOStr;
+@@ -200,7 +200,7 @@
+ {
+ //??? cope with relative/absolute references
+ 
+-   strstream lOut(pText, 20, ios::out); // ??? ard coded len
++   std::strstream lOut(pText, 20, ios::out); // ??? ard coded len
+    int       lPageRelative = pRow & 0x8000;
+    int       lColRelative  = pRow & 0x4000;
+    int       lRowRelative  = pRow & 0x2000;

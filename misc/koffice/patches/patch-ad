@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.5 2003/10/09 18:38:34 reed Exp $
+
+--- filters/kspread/qpro/qproimport.cc.orig	2003-09-29 16:51:50.000000000 +0000
++++ filters/kspread/qpro/qproimport.cc	2003-09-29 16:51:57.000000000 +0000
+@@ -18,7 +18,7 @@
+    Boston, MA 02111-1307, USA.
+ */
+ 
+-#include <strstream.h>
++#include <strstream>
+ 
+ #include <kdebug.h>
+ #include <kmessagebox.h>
