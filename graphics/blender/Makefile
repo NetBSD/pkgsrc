@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/05/04 12:42:45 agc Exp $
+# $NetBSD: Makefile,v 1.6 2001/05/11 09:20:55 wiz Exp $
 #
 
 PKGNAME=	blender-2.11.nb2
@@ -40,7 +40,7 @@ EXTRACT_SUFX=	.tar.Z
 .if !exists(/emul/linux/lib/ld.so.1)
 IGNORE=		"${PKGNAME} requires Linux libraries - see compat_linux(8)"
 .endif
-DEPENDS+=	linuxppc_lib>=2000.q4.2:../../emulators/linuxppc_lib
+DEPENDS+=	linuxppc_lib>=2000.4.2:../../emulators/linuxppc_lib
 DISTNAME=	blender2.11-linux-glibc2.1.3-powerpc-static
 PLIST_ARCH=	linux-powerpc
 #
