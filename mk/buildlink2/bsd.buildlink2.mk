@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.1.2.11 2002/06/30 17:25:04 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.1.2.12 2002/06/30 18:03:06 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -490,8 +490,7 @@ ${BUILDLINK_${_wrappee_}}:						\
 	esac;								\
 	${MKDIR} ${.TARGET:H};						\
 	${CAT} ${_BLNK_WRAPPER_SH.${_wrappee_}}	|			\
-		${SED}	-e "s|@WRKDIR@|${WRKDIR}|g"			\
-			-e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g"	\
+		${SED}	-e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g"	\
 			-e "s|@BUILDLINK_SHELL@|${BUILDLINK_SHELL}|g"	\
 			-e "s|@CAT@|${CAT:Q}|g"				\
 			-e "s|@ECHO@|${ECHO:Q}|g"			\
@@ -523,6 +522,7 @@ ${_alias_}: ${BUILDLINK_${_wrappee_}}
 ${_BLNK_WRAP_PRE_CACHE}: ${.CURDIR}/../../mk/buildlink2/pre-cache
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${SED}				\
+		-e "s|@WRKDIR@|${WRKDIR}|g"				\
 		-e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g"		\
 		-e "s|@BUILDLINK_X11_DIR@|${BUILDLINK_X11_DIR}|g"	\
 		-e "s|@_BLNK_X11PKG_DIR@|${_BLNK_X11PKG_DIR}|g"		\
