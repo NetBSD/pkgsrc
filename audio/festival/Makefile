@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2004/12/21 18:12:25 agc Exp $
+# $NetBSD: Makefile,v 1.36 2005/03/07 10:34:07 agc Exp $
 
 DISTNAME=	festival-1.95-beta
 PKGNAME=	festival-1.95beta
 CATEGORIES=	audio
-MASTER_SITES=	http://www.cstr.ed.ac.uk/download/festival/1.95/ \
-		http://festvox.org/packed/festival/1.95/ \
+MASTER_SITES=	http://festvox.org/packed/festival/1.95/ \
 		ftp://cslu.cse.ogi.edu/pub/tts/
 DISTFILES=	${DISTNAME}.tar.gz \
 		speech_tools-1.2.95-beta.tar.gz
@@ -68,10 +67,8 @@ MAKE_ENV+=	PKG_EST_HOME="${SPEECHTOOLS}"				\
 
 post-patch:
 	@${CP} ${FILESDIR}/top-Makefile ${WRKSRC}/Makefile
-	@${CP} ${FILESDIR}/ix86_NetBSD.mak ${SPEECHTOOLS}/config/systems/
-	@${CP} ${FILESDIR}/ix86_NetBSD2.0.mak ${SPEECHTOOLS}/config/systems/
-	@${CP} ${FILESDIR}/ix86_NetBSD.mak ${FESTIVAL}/config/systems/
-	@${CP} ${FILESDIR}/ix86_NetBSD2.0.mak ${FESTIVAL}/config/systems/
+	@${CP} ${FILESDIR}/unknown_${OPSYS}.mak ${SPEECHTOOLS}/config/systems/unknown_${OPSYS}.mak
+	@${CP} ${FILESDIR}/unknown_${OPSYS}.mak ${FESTIVAL}/config/systems/unknown_${OPSYS}.mak
 
 do-configure:
 	cd ${SPEECHTOOLS} && ${ENV} ${CONFIGURE_ENV} ./configure ${CONFIGURE_ARGS}
@@ -80,15 +77,15 @@ do-install:
 	${INSTALL_DATA_DIR} ${FHOME}
 	${CHMOD} -R u+w,a+r,og-w ${FESTIVAL}/lib
 	${FIND} ${FESTIVAL}/lib -type d -print | ${XARGS} ${CHMOD} 755
+	-@${MV} ${FESTIVAL}/lib/etc/unknown_${OPSYS} ${FESTIVAL}/lib/etc/pkgsrc
 	cd ${FESTIVAL} && ${PAX} -rw lib examples ${FHOME}
-	${RM} -f ${FHOME}/lib/etc/NetBSD/audsp
-	${INSTALL_PROGRAM} ${FESTIVAL}/lib/etc/ix86_NetBSD/audsp ${PREFIX}/libexec
+	${RM} -f ${FHOME}/lib/etc/unknown_${OPSYS}/audsp ${FHOME}/lib/etc/pkgsrc/audsp
+	${INSTALL_PROGRAM} ${FESTIVAL}/lib/etc/pkgsrc/audsp ${PREFIX}/libexec
 	${INSTALL_PROGRAM} ${FESTIVAL}/src/main/festival ${PREFIX}/libexec/festival.naked
 	${INSTALL_PROGRAM} ${FESTIVAL}/src/main/festival_client ${PREFIX}/libexec/festival_client.naked
-	for n in festival.sh festival_client.sh sitevars.scm; \
-	do {\
-	  ${SED} "s%@PKG_FESTIVAL_LOCATION@%${FHOME}%; \
-	       s%@PKG_PREFIX@%${PREFIX}%" <${FILESDIR}/$$n > ${WRKDIR}/$$n ;} \
+	for n in festival.sh festival_client.sh sitevars.scm; do	\
+		${SED} "s%@PKG_FESTIVAL_LOCATION@%${FHOME}%;		\
+			s%@PKG_PREFIX@%${PREFIX}%" <${FILESDIR}/$$n > ${WRKDIR}/$$n ; \
 	done
 	${INSTALL_SCRIPT} ${WRKDIR}/festival.sh ${PREFIX}/bin/festival
 	${INSTALL_SCRIPT} ${WRKDIR}/festival_client.sh ${PREFIX}/bin/festival_client
