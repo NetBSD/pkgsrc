@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/02/26 16:25:52 cube Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/04/21 15:01:28 jmmv Exp $
 bin/anjuta
 bin/anjuta_import.sh
 bin/anjuta_launcher
@@ -128,8 +128,8 @@ share/doc/anjuta/INSTALL
 share/doc/anjuta/NEWS
 share/doc/anjuta/README
 share/doc/anjuta/ScintillaDoc.html
-share/doc/anjuta/THANKS
 share/doc/anjuta/TODO
+share/gnome/help/anjuta/C/anjuta-advanced-tutorial.xml
 share/gnome/help/anjuta/C/anjuta-faqs.xml
 share/gnome/help/anjuta/C/anjuta-manual.xml
 share/gnome/help/anjuta/C/anjuta-tutorial.xml
@@ -139,6 +139,14 @@ share/gnome/help/anjuta/C/compileopts.xml
 share/gnome/help/anjuta/C/debugger.xml
 share/gnome/help/anjuta/C/execute.xml
 share/gnome/help/anjuta/C/figures/a2ps.png
+share/gnome/help/anjuta/C/figures/aat_additional_options.png
+share/gnome/help/anjuta/C/figures/aat_config_libraries_lib3ds.png
+share/gnome/help/anjuta/C/figures/aat_config_libraries_libxml2.png
+share/gnome/help/anjuta/C/figures/aat_include_paths.png
+share/gnome/help/anjuta/C/figures/aat_libraries.png
+share/gnome/help/anjuta/C/figures/aat_options_lib3ds.png
+share/gnome/help/anjuta/C/figures/aat_options_libxml2.png
+share/gnome/help/anjuta/C/figures/aat_project_type.png
 share/gnome/help/anjuta/C/figures/arguments.png
 share/gnome/help/anjuta/C/figures/attach.png
 share/gnome/help/anjuta/C/figures/brk_add.png
@@ -315,10 +323,13 @@ ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/anjuta.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/anjuta.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/anjuta.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/anjuta.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/anjuta.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/anjuta.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/anjuta.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/anjuta.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/anjuta.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/anjuta.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/anjuta.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/anjuta.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/anjuta.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/anjuta.mo
@@ -342,6 +353,7 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/anjuta.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/anjuta.mo
 share/mime-info/anjuta.mime
 share/mimelnk/application/x-anjuta-project.desktop
+share/omf/anjuta/anjuta-advanced-tutorial-C.omf
 share/omf/anjuta/anjuta-faqs-C.omf
 share/omf/anjuta/anjuta-faqs-ja_JP.UTF-8.omf
 share/omf/anjuta/anjuta-manual-C.omf
@@ -470,8 +482,12 @@ share/pixmaps/anjuta/undock.png
 share/pixmaps/anjuta/watch.xpm
 share/pixmaps/anjuta/wizard.xpm
 @dirrm share/pixmaps/anjuta
+@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/anjuta
+@comment in scrollkeeper: @dirrm share/omf
 @dirrm share/mimelnk/application
+@dirrm share/mimelnk
+@comment in xdg-dirs: @dirrm share/mime-info
 @dirrm share/gnome/help/anjuta/ja/figures
 @dirrm share/gnome/help/anjuta/ja
 @dirrm share/gnome/help/anjuta/de/images
@@ -479,7 +495,9 @@ share/pixmaps/anjuta/wizard.xpm
 @dirrm share/gnome/help/anjuta/C/figures
 @dirrm share/gnome/help/anjuta/C
 @dirrm share/gnome/help/anjuta
+@comment in gnome2-dirs: @dirrm share/gnome/help
 @dirrm share/doc/anjuta
+@comment in xdg-dirs: @dirrm share/applications
 @dirrm share/anjuta/properties
 @dirrm share/anjuta/gnome2
 @dirrm share/anjuta/gnome
