@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/04/05 04:13:55 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/07/12 23:39:49 mycroft Exp $
 bin/csv2vcard
 bin/evolution
 bin/evolution-addressbook
@@ -219,16 +219,16 @@ lib/evolution/camel-providers/1.0/libcamelsmtp.so
 lib/evolution/camel-providers/1.0/libcamelsmtp.so.0
 lib/evolution/camel-providers/1.0/libcamelsmtp.so.0.0
 lib/evolution/camel-providers/1.0/libcamelsmtp.urls
-lib/evolution/evolution-mail-importers/1.0.3/libmbox.a
-lib/evolution/evolution-mail-importers/1.0.3/libmbox.la
-lib/evolution/evolution-mail-importers/1.0.3/libmbox.so
-lib/evolution/evolution-mail-importers/1.0.3/libmbox.so.0
-lib/evolution/evolution-mail-importers/1.0.3/libmbox.so.0.0
-lib/evolution/evolution-mail-importers/1.0.3/liboutlook.a
-lib/evolution/evolution-mail-importers/1.0.3/liboutlook.la
-lib/evolution/evolution-mail-importers/1.0.3/liboutlook.so
-lib/evolution/evolution-mail-importers/1.0.3/liboutlook.so.0
-lib/evolution/evolution-mail-importers/1.0.3/liboutlook.so.0.0
+lib/evolution/evolution-mail-importers/${PKGVERSION}/libmbox.a
+lib/evolution/evolution-mail-importers/${PKGVERSION}/libmbox.la
+lib/evolution/evolution-mail-importers/${PKGVERSION}/libmbox.so
+lib/evolution/evolution-mail-importers/${PKGVERSION}/libmbox.so.0
+lib/evolution/evolution-mail-importers/${PKGVERSION}/libmbox.so.0.0
+lib/evolution/evolution-mail-importers/${PKGVERSION}/liboutlook.a
+lib/evolution/evolution-mail-importers/${PKGVERSION}/liboutlook.la
+lib/evolution/evolution-mail-importers/${PKGVERSION}/liboutlook.so
+lib/evolution/evolution-mail-importers/${PKGVERSION}/liboutlook.so.0
+lib/evolution/evolution-mail-importers/${PKGVERSION}/liboutlook.so.0.0
 lib/libcal-client.a
 lib/libcal-client.la
 lib/libcal-client.so
@@ -1045,16 +1045,20 @@ share/libical-evolution/zoneinfo/Asia/Kuala_Lumpur.ics
 share/libical-evolution/zoneinfo/Asia/Kuching.ics
 share/libical-evolution/zoneinfo/Asia/Kuwait.ics
 share/libical-evolution/zoneinfo/Asia/Macao.ics
+share/libical-evolution/zoneinfo/Asia/Macau.ics
 share/libical-evolution/zoneinfo/Asia/Magadan.ics
+share/libical-evolution/zoneinfo/Asia/Makassar.ics
 share/libical-evolution/zoneinfo/Asia/Manila.ics
 share/libical-evolution/zoneinfo/Asia/Muscat.ics
 share/libical-evolution/zoneinfo/Asia/Nicosia.ics
 share/libical-evolution/zoneinfo/Asia/Novosibirsk.ics
 share/libical-evolution/zoneinfo/Asia/Omsk.ics
+share/libical-evolution/zoneinfo/Asia/Oral.ics
 share/libical-evolution/zoneinfo/Asia/Phnom_Penh.ics
 share/libical-evolution/zoneinfo/Asia/Pontianak.ics
 share/libical-evolution/zoneinfo/Asia/Pyongyang.ics
 share/libical-evolution/zoneinfo/Asia/Qatar.ics
+share/libical-evolution/zoneinfo/Asia/Qyzylorda.ics
 share/libical-evolution/zoneinfo/Asia/Rangoon.ics
 share/libical-evolution/zoneinfo/Asia/Riyadh.ics
 share/libical-evolution/zoneinfo/Asia/Saigon.ics
@@ -1209,6 +1213,8 @@ share/locale/el/LC_MESSAGES/evolution.mo
 share/locale/en_AU/LC_MESSAGES/evolution.mo
 share/locale/en_GB/LC_MESSAGES/evolution.mo
 share/locale/es/LC_MESSAGES/evolution.mo
+share/locale/et/LC_MESSAGES/evolution.mo
+share/locale/eu/LC_MESSAGES/evolution.mo
 share/locale/fi/LC_MESSAGES/evolution.mo
 share/locale/fr/LC_MESSAGES/evolution.mo
 share/locale/ga/LC_MESSAGES/evolution.mo
@@ -1232,6 +1238,7 @@ share/locale/sl/LC_MESSAGES/evolution.mo
 share/locale/sv/LC_MESSAGES/evolution.mo
 share/locale/tr/LC_MESSAGES/evolution.mo
 share/locale/uk/LC_MESSAGES/evolution.mo
+share/locale/vi/LC_MESSAGES/evolution.mo
 share/locale/zh_CN/LC_MESSAGES/evolution.mo
 share/locale/zh_TW/LC_MESSAGES/evolution.mo
 share/mime-info/evolution.keys
@@ -1317,7 +1324,7 @@ share/pixmaps/evolution.png
 @dirrm share/evolution/default_user/config
 @dirrm share/evolution/default_user
 @dirrm share/evolution
-@dirrm lib/evolution/evolution-mail-importers/1.0.3
+@dirrm lib/evolution/evolution-mail-importers/${PKGVERSION}
 @dirrm lib/evolution/evolution-mail-importers
 @dirrm lib/evolution/camel-providers/1.0
 @dirrm lib/evolution/camel-providers
