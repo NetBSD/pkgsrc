@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST.post,v 1.4 1999/06/04 18:07:40 thorpej Exp $
-@dirrm lib/netscape/communicator-${NS_VERS}/dynfonts
+@comment $NetBSD: PLIST.post,v 1.5 1999/06/14 21:40:25 cgd Exp $
 @dirrm lib/netscape/communicator-${NS_VERS}/spell
 @dirrm lib/netscape/communicator-${NS_VERS}/plugins
 @dirrm lib/netscape/communicator-${NS_VERS}/nethelp/netscape/trouble
