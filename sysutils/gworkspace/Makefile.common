@@ -1,17 +1,17 @@
-# $NetBSD: Makefile.common,v 1.9 2004/04/11 03:20:34 rh Exp $
+# $NetBSD: Makefile.common,v 1.10 2004/11/16 07:58:21 rh Exp $
 #
 
-DISTNAME=		gworkspace-0.6.3
-CATEGORIES?=		sysutils gnustep
-MASTER_SITES=		http://www.gnustep.it/enrico/gworkspace/	\
+DISTNAME=	gworkspace-0.6.5
+CATEGORIES?=	sysutils gnustep
+MASTER_SITES=	http://www.gnustep.it/enrico/gworkspace/	\
 			http://www.imago.ro/gworkspace/
 
-MAINTAINER?=		tech-pkg@NetBSD.org
-HOMEPAGE?=		http://www.gnustep.it/enrico/gworkspace/
+MAINTAINER?=	tech-pkg@NetBSD.org
+HOMEPAGE?=	http://www.gnustep.it/enrico/gworkspace/
 
-WRKSRC=			${WRKDIR}/${DISTNAME:S/gw/GW/}
-USE_BUILDLINK3=		yes
-USE_X11=		yes
+WRKSRC=		${WRKDIR}/${DISTNAME:S/gw/GW/}
+USE_BUILDLINK3=	yes
+USE_X11=	yes
 
 .include "../../x11/gnustep-back/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
