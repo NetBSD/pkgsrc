@@ -24,4 +24,3 @@ library.  The adns library has the following features:
 * Believed to be correct ! For example, will correctly back off to
   TCP in case of long replies or queries, or to other nameservers if
   several are available. It has sensible handling of bad responses etc. 
-
