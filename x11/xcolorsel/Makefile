@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 22:56:52 grant Exp $
+# $NetBSD: Makefile,v 1.13 2003/08/31 16:40:51 kei Exp $
 #
 
 DISTNAME=	xcolorsel-1.1a-src
@@ -18,7 +18,7 @@ XAW_TYPE?=	3d
 .include "../../mk/bsd.prefs.mk"
 
 # We need at least Xaw3d to compile this package.
-.if (${XAW_TYPE} == standard)
+.if (${XAW_TYPE} == standard || ${XAW_TYPE} == neXtaw)
 XAW_TYPE=	3d
 .endif
 
