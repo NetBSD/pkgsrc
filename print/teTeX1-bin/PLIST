@@ -1,22 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/24 12:57:29 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/09 20:08:07 seb Exp $
 @comment There are three files in this package that teTeX-share installs
 @comment and that teTeX-bin modifies. Take care of this:
 lib/libkpathsea.a
-info/latex.info-3
-info/latex.info-2
-info/latex.info-1
-info/latex.info
-info/dvips.info-4
-info/dvips.info-3
-info/dvips.info-2
-info/dvips.info-1
-info/dvips.info
-info/web2c.info-4
-info/web2c.info-3
-info/web2c.info-2
-info/web2c.info-1
-info/web2c.info
-info/kpathsea.info
 include/kpathsea/xstat.h
 include/kpathsea/xopendir.h
 include/kpathsea/win32lib.h
