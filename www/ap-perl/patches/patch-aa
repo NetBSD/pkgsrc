@@ -1,13 +1,21 @@
-$NetBSD: patch-aa,v 1.1.1.1 1998/12/04 00:10:57 tv Exp $
-
---- lib/Apache/src.pm.orig	Thu Oct  1 13:55:29 1998
-+++ lib/Apache/src.pm	Thu Dec  3 15:32:42 1998
-@@ -184,7 +184,7 @@
-     my $src  = $self->dir;
-     my $main = $self->main;
-     my $os = $Is_Win32 ? "win32" : "unix";
--    my @inc = ("-I$src", "-I$src/modules/perl", "-I$main");
-+    my @inc = ("-I../include", "-I../src/modules/perl -DMOD_PERL");
-     for ("src/regex", "$src/os/$os") {
- 	push @inc, "-I$_" if -d $_;
-     }
+--- apaci/Makefile.tmpl.orig	Mon Apr 26 18:22:37 1999
++++ apaci/Makefile.tmpl	Mon Apr 26 18:32:27 1999
+@@ -58,7 +58,7 @@
+ 
+ libperl.so: $(MP_OBJS_PIC)
+ 	$(MP_RM) $@
+-	$(MP_LD) $(MP_LDFLAGS_SHLIB) -o $@ $(MP_OBJS_PIC) $(MP_LIBS)
++	$(MP_LD) $(MP_LDFLAGS_SHLIB) -o $@ $(MP_OBJS_PIC)
+ 
+ .SUFFIXES: .xs .c .o .lo
+ 
+@@ -94,7 +94,8 @@
+ 
+ #   FOR STAND-ALONE BUILDING ONLY
+ install:
+-	$(APXS) -i -a -n perl libperl.so
++	@cp libperl.so mod_perl.so
++	$(APXS) -i -n perl mod_perl.so
+ 
+ depend:
+ 	cp Makefile.tmpl Makefile.tmpl.bak \
