@@ -1,8 +1,8 @@
-# $NetBSD: extension.buildlink.mk,v 1.9 2002/07/14 13:05:23 wiz Exp $
+# $NetBSD: extension.buildlink.mk,v 1.10 2002/09/03 18:14:19 drochner Exp $
 
 # derive a python version from the package name if possible
 .if defined(PKGNAME_REQD)
-PYTHON_VERSION_REQD?= ${PKGNAME_REQD:C/^py([0-9]*)-.*/\1/}
+PYTHON_VERSION_REQD?= ${PKGNAME_REQD:C/^py([^-]*)-.*/\1/}
 .endif
 
 .include "../../lang/python/pyversion.mk"
