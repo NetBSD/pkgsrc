@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.166 2002/11/18 22:34:14 cjep Exp $
+# $NetBSD: Makefile,v 1.167 2002/11/19 07:13:55 cjep Exp $
 
 COMMENT=	System utilities
 
@@ -20,7 +20,6 @@ SUBDIR+=	asapm
 SUBDIR+=	bbsload
 SUBDIR+=	bchunk
 SUBDIR+=	bkpupsd
-SUBDIR+=	bsdgrep
 SUBDIR+=	c++rt0
 SUBDIR+=	cdbkup
 SUBDIR+=	cdrdao
