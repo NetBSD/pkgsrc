@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2003/05/13 00:04:22 hubertf Exp $
+$NetBSD: distinfo,v 1.3 2003/05/13 01:25:24 salo Exp $
 
 SHA1 (BitTorrent-3.2.1b.tar.gz) = 124049e721a8b722af9d3c489b44a8a81789ce68
 Size (BitTorrent-3.2.1b.tar.gz) = 144420 bytes
-SHA1 (patch-aa) = 7f8cc29a28b8c529fe88d80e7a22d3dc9e93e968
+SHA1 (patch-aa) = 91f66b6c788c7989a9bec8ce97c62cb7a01f9a5c
