@@ -1,4 +1,4 @@
-# $NetBSD: dlopen.builtin.mk,v 1.7 2004/12/02 15:04:16 jlam Exp $
+# $NetBSD: dlopen.builtin.mk,v 1.7.2.1 2005/01/29 00:30:08 salo Exp $
 
 .for _lib_ in dl
 .  if !defined(_BLNK_LIB_FOUND.${_lib_})
@@ -36,7 +36,8 @@ USE_BUILTIN.dl=		no	# Darwin uses devel/dlcompat
 # support.
 #
 _DLOPEN_REQUIRE_PTHREAD_PLATFORMS=					\
-	NetBSD-2.[0-9]-* NetBSD-2.[0-9]_*-*				\
+	NetBSD-2.[0-9]_*-*						\
+	NetBSD-2.[0-9]-* NetBSD-2.[0-9].[0-9]*-*			\
 	NetBSD-2.[0-8][0-9]*-* NetBSD-2.9[0-8]*-*			\
 	NetBSD-2.99.[0-9]-* NetBSD-2.99.10-*
 
