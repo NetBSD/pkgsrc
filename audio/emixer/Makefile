@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/04/16 02:57:20 mycroft Exp $
+# $NetBSD: Makefile,v 1.5 2000/04/16 03:59:31 mycroft Exp $
 #
 
 DISTNAME=	emixer-0.05.5
@@ -9,7 +9,6 @@ MASTER_SITES=	http://emixer.linuxbox.com/
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://emixer.linuxbox.com/
 
-DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 DEPENDS+=	mpg123-0.59*:../../audio/mpg123
 
 post-extract:
