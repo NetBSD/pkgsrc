@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/11/13 01:50:21 frueauf Exp $
+# $NetBSD: Makefile,v 1.9 1998/11/19 15:40:47 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/04/27 00:11:48 asami Exp
 #
 
@@ -12,8 +12,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${PATCH1} ${PATCH2}
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www-rn.informatik.uni-bremen.de/software/unroff/
 
-RUN_DEPENDS=	elk:../../lang/elk
-BUILD_DEPENDS=	elk:../../lang/elk
+DEPENDS+=	elk-3.0.2:../../lang/elk
 
 NOT_FOR_ARCHS=	alpha	#needs elk
 

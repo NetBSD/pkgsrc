@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/10/15 19:51:08 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/11/19 15:40:47 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/22 20:10:39 jseger Exp
 #
 
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tcl.gz
 
 MAINTAINER=	sander@haldjas.folklore.ee
 
-RUN_DEPENDS=	wish8.0:../../x11/tk80
+DEPENDS+=	tk-8.0p2:../../x11/tk80
 
 EXTRACT_CMD=	${GZIP_CMD}
 EXTRACT_BEFORE_ARGS= -cd

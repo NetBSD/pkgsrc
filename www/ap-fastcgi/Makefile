@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/10/05 14:27:19 tv Exp $
+# $NetBSD: Makefile,v 1.3 1998/11/19 15:40:47 agc Exp $
 #
 
 DISTNAME=	mod_fastcgi-2.0.17
@@ -9,8 +9,7 @@ MASTER_SITES=	http://www.fastcgi.com/
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.fastcgi.com/
 
-BUILD_DEPENDS+=	${PREFIX}/sbin/apxs:../../www/apache
-RUN_DEPENDS+=	${PREFIX}/sbin/apxs:../../www/apache
+DEPENDS+=	apache-1.3.2:../../www/apache
 
 USE_PERL5=	yes	# for "apxs"
 

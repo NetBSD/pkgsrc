@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1998/08/20 15:16:45 tsarna Exp $
+# $NetBSD: Makefile,v 1.18 1998/11/19 15:40:45 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/06/13 20:00:47 max Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GNU}
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/autoconf/autoconf.html
 
-RUN_DEPENDS=	gm4:../../devel/m4
+DEPENDS=	m4-1.4:../../devel/m4
 
 USE_PERL5=	yes
 

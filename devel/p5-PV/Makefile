@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/10/15 19:51:07 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/11/19 15:40:45 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/06/24 18:43:28 jfitz Exp
 #
 
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
 
-RUN_DEPENDS=	${PREFIX}/lib/perl5/site_perl/Curses.pm:../../devel/p5-Curses
+DEPENDS+=	p5-Curses-1.02:../../devel/p5-Curses
 
 USE_PERL5=	YES
 
