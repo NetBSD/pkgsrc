@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/10/28 22:59:59 seb Exp $
+# $NetBSD: Makefile,v 1.11 2003/02/17 15:28:02 dillo Exp $
 #
 
 DISTNAME=	icu-1.7
@@ -14,6 +14,7 @@ WRKSRC=		${WRKDIR}/icu/source
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
 USE_BUILDLINK2=	YES
+TEST_TARGET=	check
 
 .include "../../mk/endian.mk"
 
@@ -31,8 +32,5 @@ CONFIGURE_ARGS+= --disable-threads
 
 pre-configure:
 	${CHMOD} u+rx ${WRKSRC}/configure
-
-test: build
-	cd ${WRKSRC} && ${MAKE_PROGRAM} check
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/01/10 11:40:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2003/02/17 15:28:01 dillo Exp $
 #
 
 DISTNAME=	tclX8.2.0
@@ -16,6 +16,7 @@ USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared --with-tcl=${PREFIX}/lib --enable-tk=NO
+TEST_TARGET=		test
 
 CONFIGURE_ENV+=		\
 	PKGSRC_TCL_SRC_DIR="${_PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.3.4"
@@ -46,9 +47,6 @@ post-install:
 
 pre-clean:
 	@cd ../../lang/tcl && ${MAKE} clean
-
-test:
-	@(cd ${WRKSRC}; ${MAKE_ENV} ${MAKE} test)
 
 .include "../../lang/tcl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

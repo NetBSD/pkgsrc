@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/12/23 17:32:45 bjoern Exp $
+# $NetBSD: Makefile,v 1.10 2003/02/17 15:28:01 dillo Exp $
 #
 
 DISTNAME=	tclX8.2.0
@@ -19,6 +19,8 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared --with-tcl=${PREFIX}/lib \
 			--with-tk=${PREFIX}/lib
+TEST_DIRS=		${WRKSRC}/../tk/unix
+TEST_TARGET=		test
 
 CONFIGURE_ENV+=		\
 	PKGSRC_TCL_SRC_DIR="${_PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.3.4" \
@@ -64,8 +66,5 @@ post-install:
 # the above links are installed based on the contents of the man page.
 # we don't want to modify the man page, as it is also used by ../tk-tclX,
 # so...
-
-test:
-	@(cd ${WRKSRC}/../tk/unix; ${MAKE_ENV} ${MAKE} test)
 
 .include "../../mk/bsd.pkg.mk"

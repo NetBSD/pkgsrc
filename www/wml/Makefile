@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/01/24 13:36:21 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/02/17 15:28:03 dillo Exp $
 #
 
 DISTNAME=	wml-2.0.3
@@ -23,6 +23,7 @@ CONFIGURE_ARGS=	--with-perl=${PERL5} \
 		--with-tidy=${LOCALBASE}/bin/tidy
 
 USE_BUILDLINK2=	yes
+TEST_TARGET=	test
 
 USE_NCURSES=	# redrawwin()
 
@@ -39,9 +40,6 @@ post-install:
 	do \
 	    ${MV} $${i}.7 $${i}.0 ; \
 	done
-
-test:
-	@cd ${WRKSRC} && ${MAKE} test
 
 .include "../../devel/ncurses/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
