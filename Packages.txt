@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.65 1999/08/31 08:38:57 rh Exp $
+# $NetBSD: Packages.txt,v 1.66 1999/09/08 20:57:22 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -481,9 +481,9 @@ attention to the following things in pkg/PLIST:
    pkg_add(1) and pkg_create(1) for more information.
 
  * pkg/DEINSTALL:
-   This script is executed before any files are removed.  It is this
-   script's responsibility to clean up any additional messy details around
-   the package's installation, since all pkg_delete knows how to do is
+   This script is executed before and after any files are removed.  It is
+   this script's responsibility to clean up any additional messy details
+   around the package's installation, since all pkg_delete knows is how to
    delete the files created in the original distribution. See pkg_delete(1)
    and pkg_create(1) for more information.
 
