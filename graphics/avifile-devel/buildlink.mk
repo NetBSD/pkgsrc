@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/07/27 13:33:27 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/08/10 18:29:35 zuntum Exp $
 #
 # This Makefile fragment is included by packages that use avifile-devel.
 #
@@ -23,7 +23,7 @@ DEPENDS+=	${BUILDLINK_DEPENDS.avifile-devel}:../../graphics/avifile-devel
 EVAL_PREFIX+=			BUILDLINK_PREFIX.avifile-devel=avifile
 BUILDLINK_PREFIX.avifile-devel_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.avifile-devel=	lib/libaviplay.*
-BUILDLINK_FILES.avifile-devel+=	lib/avifile/*
+BUILDLINK_FILES.avifile-devel+=	lib/avifile-0.6/*
 BUILDLINK_FILES.avifile-devel+=	include/avifile/*
 BUILDLINK_FILES.avifile-devel+=	include/avifile/wine/*
 
