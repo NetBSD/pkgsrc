@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/08/20 15:16:47 tsarna Exp $
+# $NetBSD: Makefile,v 1.5 1998/08/25 11:49:53 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -10,6 +10,8 @@ MASTER_SITES=	ftp://ftp.gimp.org/pub/gtk/v1.1/ \
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gtk.org/docs/glib_toc.html
+
+CONFLICTS=	gtk+-1.0.4
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
