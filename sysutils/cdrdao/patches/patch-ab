@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/02/18 15:13:50 wiz Exp $
+
+--- ./dao/main.cc.orig	Tue Oct 26 18:13:46 1999
++++ ./dao/main.cc	Fri Feb 18 14:39:57 2000
+@@ -156,7 +156,7 @@
+ 
+ #else
+ 
+-static const char *SCSI_DEVICE = "0,0,0";
++static const char *SCSI_DEVICE = "/dev/rcd0d";
+ static int FIFO_BUFFERS = 32;
+ 
+ #endif
