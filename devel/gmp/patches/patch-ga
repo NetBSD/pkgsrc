@@ -1,0 +1,25 @@
+$NetBSD: patch-ga,v 1.1 2002/08/24 00:39:07 mjl Exp $
+
+This is a patch for 4.1 from the GNU MP Homepage, it should be
+removed in future versions
+
+Index: randraw.c
+===================================================================
+RCS file: /home/cvsfiles/gmp/randraw.c,v
+retrieving revision 1.18
+retrieving revision 1.19
+diff -u -r1.18 -r1.19
+--- randraw.c	2002/05/14 16:59:44	1.18
++++ randraw.c	2002/06/09 08:12:03	1.19
+@@ -112,10 +112,8 @@
+   if (seedn == 0)
+     {
+       /* Seed is 0.  Result is C % M.  Assume table is sensibly stored,
+-       with C smaller than M*/
++	 with C smaller than M.  */
+       *rp = c;
+-
+-      ASSERT_ALWAYS (((mp_limb_t) 1 << m2exp) > c);
+ 
+       *seedp = c;
+       SIZ (rstate->_mp_seed) = 1;
