@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.3 2004/03/29 09:34:27 kei Exp $
+$NetBSD: patch-ac,v 1.4 2005/01/16 08:57:55 kei Exp $
 
---- src/Makefile.in.orig	2004-01-27 20:08:04.000000000 +0900
-+++ src/Makefile.in	2004-03-29 11:06:50.000000000 +0900
+--- src/Makefile.in.orig	2004-11-22 07:36:28.000000000 +0900
++++ src/Makefile.in	2005-01-16 17:42:25.000000000 +0900
 @@ -46,7 +46,7 @@
  # These are set by configure
  DEFS     = @DEFS@
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.3 2004/03/29 09:34:27 kei Exp $
  RANLIB   = @RANLIB@
  OBJEXT   = @OBJEXT@
  EXEEXT   = @EXEEXT@
-@@ -80,10 +80,7 @@
+@@ -81,10 +81,7 @@
  SITE_ARCH_DIR         = $(GAUCHE_ARCH_DIR)/site/@GAUCHE_VERSION@/@host@
  ARCH = @host@
  
@@ -23,7 +23,7 @@ $NetBSD: patch-ac,v 1.3 2004/03/29 09:34:27 kei Exp $
  INSTALL_SUBHEADERS = gauche/config.h gauche/vm.h gauche/vminsn.h      \
                       gauche/char_euc_jp.h gauche/char_utf_8.h         \
                       gauche/char_sjis.h gauche/char_none.h            \
-@@ -99,7 +96,7 @@
+@@ -108,7 +105,7 @@
  
  # build -----------------------------------------------
  
@@ -32,20 +32,20 @@ $NetBSD: patch-ac,v 1.3 2004/03/29 09:34:27 kei Exp $
  
  gosh_SOURCES = main.c
  gosh_OBJECTS = main.$(OBJEXT)
-@@ -131,7 +128,7 @@
+@@ -140,7 +137,7 @@
  	$(LINK) $(gosh_LDFLAGS) -o gosh$(EXEEXT) $(gosh_OBJECTS) $(gosh_LDADD) $(LIBS)
  
  relink :
--	$(RELINK) $(libgauche_LDFLAGS) libgauche.$(SOEXT) $(libgauche_OBJECTS) ../gc/.libs/*.o $(LIBS)
+-	$(RELINK) $(libgauche_LDFLAGS) libgauche.$(SOEXT) $(libgauche_OBJECTS) ../gc/*.lo $(LIBS)
 +	$(RELINK) $(libgauche_LDFLAGS) libgauche.$(SOEXT) $(libgauche_OBJECTS) @prefix@/lib/libgc.$(SOEXT) $(LIBS)
  	$(RELINK) $(gosh_LDFLAGS) -o gosh$(EXEEXT)  $(gosh_OBJECTS) $(gosh_LDADD) $(LIBS)
  
  $(OBJECTS) : $(HEADERS)
-@@ -153,7 +150,7 @@
+@@ -164,7 +161,7 @@
  load.$(OBJEXT) : dl_dlopen.c dl_dummy.c dl_win.c dl_darwin.c
  
  libgauche.$(SOEXT) : $(libgauche_OBJECTS) $(GCLIB)
--	$(LINK) $(libgauche_LDFLAGS) libgauche.$(SOEXT) $(libgauche_OBJECTS) ../gc/.libs/*.o $(LIBS)
+-	$(LINK) $(libgauche_LDFLAGS) libgauche.$(SOEXT) $(libgauche_OBJECTS) ../gc/*.lo $(LIBS)
 +	$(LINK) $(libgauche_LDFLAGS) libgauche.$(SOEXT) $(libgauche_OBJECTS) @prefix@/lib/libgc.$(SOEXT) $(LIBS)
  	$(POSTBUILD)
  
