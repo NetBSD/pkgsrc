@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/16 18:40:03 tv Exp $
+# $NetBSD: Makefile,v 1.2 2000/11/18 00:43:42 tv Exp $
 #
 
 DISTNAME=	unix_jb35foundation
@@ -10,7 +10,7 @@ MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.inprise.com/jbuilder/linux/download/
 
 # works with both 1.2.2 and 1.3 JVMs
-DEPENDS=	blackdown-jre-*:../../lang/blackdown-jre12
+DEPENDS=	sun-jre-*:../../lang/sun-jre13
 
 WRKSRC=		${WRKDIR}/javacomp-1.2.15
 EXTRACT_ELEMENTS= LinuxJIT/javacomp-1.2.15.tar.gz
