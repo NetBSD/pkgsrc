@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/03/29 14:40:09 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/06 21:51:13 xtraeme Exp $
 #
 
-DISTNAME=	putty-0.57
+DISTNAME=	putty-0.58
 CATEGORIES=	security
 MASTER_SITES=	http://the.earth.li/~sgtatham/putty/latest/
 
