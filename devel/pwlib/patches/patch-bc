@@ -1,4 +1,7 @@
-$NetBSD: patch-bc,v 1.1 2004/10/08 21:02:54 mjl Exp $
+$NetBSD: patch-bc,v 1.2 2004/10/09 06:48:39 mjl Exp $
+
+Fix CAN-2004-0097 vulnerability.
+From: %FreeBSD: /repoman/r/pcvs/ports/devel/pwlib/files/patch-src::ptclib::asner.cxx,v 1.1 2004/06/08 06:27:43 sobomax Exp %
 
 --- src/ptclib/asnper.cxx	2004/06/03 14:44:43	1.1
 +++ src/ptclib/asnper.cxx	2004/06/03 14:50:35
