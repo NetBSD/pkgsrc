@@ -1,3 +1,5 @@
+$NetBSD: acroread.diff,v 1.3 1999/09/26 12:53:51 tron Exp $
+
 --- acroread.orig	Fri Nov 20 17:44:30 1998
 +++ acroread	Fri Nov 20 17:45:11 1998
 @@ -205,7 +205,7 @@
