@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2003/05/05 19:05:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2003/05/23 09:37:27 salo Exp $
 #
 
-DISTNAME=	mplayerplug-in_v0.71
-PKGNAME=	moz-mplayer-0.71
-PKGREVISION=	1
+DISTNAME=	mplayerplug-in-0.80
+PKGNAME=	moz-mplayer-0.80
 WRKSRC=         ${WRKDIR}/mplayerplug-in
 CATEGORIES=	graphics www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mplayerplug-in/}
@@ -16,7 +15,7 @@ DEPENDS+=	mplayer>=0.90rc14:../../graphics/mplayer
 DEPENDS+=	mozilla-[0-9]*:../../www/mozilla
 
 USE_BUILDLINK2=	YES
-USE_X11BASE=	YES
+USE_X11=	YES
 
 MOZ_PLUGDIR=    ${PREFIX}/lib/mozilla/plugins
 
