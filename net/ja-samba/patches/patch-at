@@ -1,0 +1,24 @@
+$NetBSD: patch-at,v 1.1 2003/04/07 18:10:08 taca Exp $
+
+--- smbd/reply.c.orig	2003-02-05 15:15:15.000000000 +0900
++++ smbd/reply.c
+@@ -1490,6 +1490,9 @@ int reply_search(connection_struct *conn
+ 
+         for (i=numentries;(i<maxentries) && !finished;i++)
+         {
++	  /* check to make sure we have room in the buffer */
++	  if ( ((PTR_DIFF(p, outbuf))+DIR_STRUCT_SIZE) > BUFFER_SIZE )
++	  	break;
+           finished = 
+             !get_dir_entry(conn,mask,dirtype,fname,&size,&mode,&date,check_descend);
+           if (!finished)
+@@ -3603,6 +3606,9 @@ int reply_printqueue(connection_struct *
+     
+ 
+ 		for (i=first;i<first+num_to_get;i++) {
++			/* check to make sure we have room in the buffer */
++			if ( (PTR_DIFF(p, outbuf)+28) > BUFFER_SIZE )
++				break;
+ 			put_dos_date2(p,0,queue[i].time);
+ 			SCVAL(p,4,(queue[i].status==LPQ_PRINTING?2:3));
+ 			SSVAL(p,5, queue[i].job);
