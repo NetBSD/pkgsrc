@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2004/04/05 02:31:06 xtraeme Exp $
+$NetBSD: distinfo,v 1.7 2004/05/02 17:40:27 xtraeme Exp $
 
 SHA1 (lua-5.0.2.tar.gz) = a200cfd20a9a4c7da1206ae45dddf26186a9e0e7
 Size (lua-5.0.2.tar.gz) = 190442 bytes
-SHA1 (patch-aa) = c00182becd052a33c8697b13ef818b456d470859
+SHA1 (patch-aa) = 101e3e1700ceae6c6574e1fbdfec0ce3359c775e
 SHA1 (patch-ab) = 788834909e1b1ef990805c334071d9ad8761c36f
