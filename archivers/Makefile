@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2000/06/05 12:37:11 rh Exp $
+# $NetBSD: Makefile,v 1.25 2000/07/20 19:47:21 wiz Exp $
 # FreeBSD Id: Makefile,v 1.18 1997/05/16 01:42:31 asami Exp 
 #
 
@@ -24,6 +24,7 @@
     SUBDIR += ppunpack
     SUBDIR += rar
     SUBDIR += squsq
+    SUBDIR += unace
     SUBDIR += unarj
     SUBDIR += undms
     SUBDIR += unlzx
