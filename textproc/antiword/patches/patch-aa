@@ -1,7 +1,5 @@
-$NetBSD: patch-aa,v 1.2 2000/08/04 13:11:41 agc Exp $
-
---- Makefile	2000/08/02 10:33:55	1.1
-+++ Makefile	2000/08/02 10:34:31
+--- Makefile.orig	Tue Dec  5 06:58:28 2000
++++ Makefile	Wed Jun 13 10:02:47 2001
 @@ -10,7 +10,7 @@
  
  LDLIBS	=
@@ -11,22 +9,36 @@ $NetBSD: patch-aa,v 1.2 2000/08/04 13:11:41 agc Exp $
  LDFLAGS	=
  
  OBJS	=\
-@@ -22,12 +22,16 @@
+@@ -21,20 +21,26 @@
+ 	tabstop.o unix.o word2text.o wordlib.o xmalloc.o
+ 
  PROGS =\
- 	antiword
+-	antiword\
++	antiword
++SCRIPTS =\
+ 	kantiword
  
 -INSTALL_DIR = $(HOME)/bin
 +INSTALL_DIR = ${PREFIX}/bin
  
- all:		$(PROGS)
+-all:		$(PROGS)
++all:		$(PROGS) $(SCRIPTS)
  
  install:	all
+-		[ -d $(INSTALL_DIR) ] || mkdir $(INSTALL_DIR)
 -		cp -pf $(PROGS) $(INSTALL_DIR)
 +		${BSD_INSTALL_PROGRAM} ${PROGS} ${INSTALL_DIR}
++		${BSD_INSTALL_SCRIPT} ${SCRIPTS} ${INSTALL_DIR}
 +		${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/doc/antiword
-+.for file in COPYING Changes History QandA ReadMe
++.for file in COPYING ChangeLog FAQ History Netscape QandA ReadMe
 +		${BSD_INSTALL_DATA} Docs/${file} ${PREFIX}/share/doc/antiword
 +.endfor
++		${BSD_INSTALL_MAN} Docs/antiword.1 ${PREFIX}/man/man1/antiword.1
  
  clean:
  		rm -f $(OBJS)
+-		rm -f $(PROGS)
++		rm -f $(PROGS) $(SCRIPTS)
+ 
+ antiword:	$(OBJS)
+ 		@rm -f $@
