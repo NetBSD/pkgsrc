@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.53 2001/06/21 15:15:02 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.54 2001/06/21 15:53:54 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1009,7 +1009,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo
     my($pkgsrcdir, $pkgdistdir, $check_unref, $check_distinfo) = @_;
     my($cat, @categories, $pkgdir);
     my(%distfiles, %sumfiles, @distwarn, $file, $numpkg);
-    my(@bad_distfiles);
+    my(%bad_distfiles);
 
     @categories = &list_pkgsrc_categories($pkgsrcdir);
 
@@ -1057,7 +1057,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo
 	{
 	my($dist);
 	if (!defined($dist = $distfiles{$file}))
-	    { push(@bad_distfiles, $file); }
+	    { $bad_distfiles{$file} = 1; }
 	else
 	    {
 	    if ($dist->{'sum'} ne 'IGNORE')
@@ -1065,11 +1065,11 @@ sub scan_pkgsrc_distfiles_vs_distinfo
 	    }
 	}
 
-    if ($check_unref && @bad_distfiles)
+    if ($check_unref && %bad_distfiles)
 	{
-	&verbose(scalar(@bad_distfiles),
+	&verbose(scalar(keys %bad_distfiles),
 			" unreferenced file(s) in '$pkgdistdir':\n");
-	print join("\n", sort @bad_distfiles), "\n";
+	print join("\n", sort keys %bad_distfiles), "\n";
 	}
 
     if ($check_distinfo)
@@ -1081,6 +1081,18 @@ sub scan_pkgsrc_distfiles_vs_distinfo
 	&safe_chdir("$pkgdistdir");
 	foreach $sum (keys %sumfiles)
 	    {
+	    if ($sum eq 'Size')
+		{
+		foreach (@{$sumfiles{$sum}})
+		    {
+		    if (! -f $_ || -S $_ != $distfiles{$_}{'sum'})
+			{
+			print $_, " (Size)\n";
+			$bad_distfiles{$_} = 1;
+			}
+		    }
+		next;
+		}
 	    open(DIGEST, "digest $sum @{$sumfiles{$sum}}|") ||
 						&fail("Run digest: $!");
 	    while (<DIGEST>)
@@ -1089,15 +1101,15 @@ sub scan_pkgsrc_distfiles_vs_distinfo
 		    {
 		    if ($distfiles{$1}{'sum'} ne $2)
 			{
-			print $1, "\n";
-			push(@bad_distfiles, $1);
+			print $1, " ($sum)\n";
+			$bad_distfiles{$1} = 1;
 			}
 		    }
 		}
 	    close(DIGEST);
 	    }
 	}
-    @bad_distfiles;
+    (sort keys %bad_distfiles);
     }
 
 # Remember to update manual page when modifying option list
