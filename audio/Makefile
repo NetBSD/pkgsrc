@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.232 2004/05/02 23:00:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.233 2004/05/03 10:06:38 grant Exp $
 #
 
 COMMENT=	Audio tools
@@ -148,6 +148,7 @@ SUBDIR+=	musicbox
 SUBDIR+=	musicbrainz
 SUBDIR+=	musicpd
 SUBDIR+=	nas
+SUBDIR+=	ncmpc
 SUBDIR+=	normalize
 SUBDIR+=	nosefart
 SUBDIR+=	nspmod
