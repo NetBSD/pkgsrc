@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 13:40:50 agc Exp $
-
-SHA1 (apotheke-0.2.tar.gz) = 562b4ba352ff37cb78d7d51fd14adb7d091f9b01
-RMD160 (apotheke-0.2.tar.gz) = 90237489175785f1c14f0db6a0f4c867c77c9ced
-Size (apotheke-0.2.tar.gz) = 124617 bytes
-SHA1 (patch-aa) = 4697d425e7c4d2ebd4de55f92c3ac6de160a292d
