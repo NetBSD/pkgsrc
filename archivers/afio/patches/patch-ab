@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.2.2 2004/07/13 14:24:32 agc Exp $
+
+--- compfile.c.orig	Tue Jun 24 23:32:20 2003
++++ compfile.c	Sat Jul 10 17:26:02 2004
+@@ -210,7 +210,7 @@
+  * version;
+  */
+ 
+-#if ( defined(sun) && defined(__svr4__) )
++#if ( defined(__sun) && defined(__SVR4) )
+ #include <dirent.h>
+ #else
+ #include <sys/dir.h>
