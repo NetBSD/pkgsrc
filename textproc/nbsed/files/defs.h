@@ -1,4 +1,4 @@
-/*	$NetBSD: defs.h,v 1.1.1.1 2003/08/18 17:34:59 agc Exp $	*/
+/*	$NetBSD: defs.h,v 1.2 2003/08/23 22:13:56 jschauma Exp $	*/
 
 /*-
  * Copyright (c) 1992 Diomidis Spinellis.
@@ -37,7 +37,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)defs.h	8.1 (Berkeley) 6/6/93
- *	$NetBSD: defs.h,v 1.1.1.1 2003/08/18 17:34:59 agc Exp $
+ *	$NetBSD: defs.h,v 1.2 2003/08/23 22:13:56 jschauma Exp $
  */
 
 /*
@@ -149,4 +149,8 @@ typedef struct {
 
 #ifndef DEFFILEMODE
 #define DEFFILEMODE     (S_IRUSR|S_IWUSR|S_IRGRP|S_IWGRP|S_IROTH|S_IWOTH)
+#endif
+
+#ifndef HAVE_FGETLN
+char *fgetln(FILE *, size_t *);
 #endif
