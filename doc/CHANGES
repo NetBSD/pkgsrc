@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6880 2004/08/14 17:37:42 kristerw Exp $
+$NetBSD: CHANGES,v 1.6881 2004/08/15 00:47:43 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3836,3 +3836,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added octave-forge-2004.07.07 [dmcmahill 2004-08-14]
 	Updated rsync to 2.6.2nb1 [tron 2004-08-14]
 	Updated licq-gui-qt to 1.2.6nb3 [kristerw 2004-08-14]
+	Added syncdir-1.0 [schmonz 2004-08-15]
