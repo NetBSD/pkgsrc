@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/07/22 11:31:46 agc Exp $
+$NetBSD: patch-aa,v 1.2 2004/09/12 21:47:46 jmmv Exp $
 
 --- Makefile.orig	Fri Apr  9 12:32:26 1999
 +++ Makefile	Fri Jul 19 23:36:04 2002
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/07/22 11:31:46 agc Exp $
 -	./posti $(LANGUAGE)
 +	cp $(LANGUAGE).aff $(INST_LANGUAGE).aff
 +	cp $(LANGUAGE).hash $(INST_LANGUAGE).hash
-+	yes | ./posti $(INST_LANGUAGE)
++	echo y | ./posti $(INST_LANGUAGE)
  
  $(LANGUAGE)-alt.aff:	$(LANGUAGE)-alt.7bit $(FIX8BIT)
  	$(FIX8BIT) -8 < $(LANGUAGE)-alt.7bit > $(LANGUAGE)-alt.aff
