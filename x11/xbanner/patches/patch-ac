@@ -1,0 +1,11 @@
+--- xres.c.orig	Thu May 15 22:38:25 1997
++++ xres.c	Wed Aug 19 00:18:07 1998
+@@ -1196,7 +1196,7 @@
+   /* get the app-defaults */
+ 
+ #ifndef vms
+-  strcpy(line,"/usr/lib/X11/app-defaults/");
++  strcpy(line,X11BASE "/lib/X11/app-defaults/");
+   strcat(line,PRGCLASS);
+   appdefDB = XrmGetFileDatabase(line);
+   if(appdefDB==NULL && getenv("XAPPLRESDIR")!=NULL)
