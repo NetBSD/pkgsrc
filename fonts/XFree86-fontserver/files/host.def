@@ -1,0 +1,33 @@
+/*
+ * $NetBSD: host.def,v 1.1.1.1 2004/01/24 09:00:37 xtraeme Exp $
+ *
+ * XFree86 packages for pkgsrc system
+ */
+
+#define ProjectRoot @PREFIX@
+#define NothingOutsideProjectRoot NO
+#define BuildFonts NO
+#define Build75DpiFonts NO
+#define Build100DpiFonts NO
+#define BuildSpeedoFonts NO
+#define BuildType1Fonts NO
+#define BuildCIDFonts NO
+#define BuildCyrillicFonts NO
+#define BuildLatin2Fonts NO
+#define XF86Server NO
+#define XnestServer NO
+#define XVirtualFramebufferServer NO
+#define XprtServer NO
+#define LibHeaders NO
+#define ForceNormalLib NO
+#define XTrueTypeInstallCConvHeaders NO
+#define SharedLibGLw NO
+#define StandardIncludes -I@BLNK@/include
+#define BuildHtmlManPages YES
+
+#define BuildServer YES
+#define BuildFontServer YES
+#define BuildServersOnly YES
+#define InstallFSConfig YES
+#define UseInstalledPrograms YES
+
