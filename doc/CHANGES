@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8598 2005/01/04 14:05:02 manu Exp $
+$NetBSD: CHANGES,v 1.8599 2005/01/04 14:06:35 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -84,3 +84,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated scummvm to 0.7.0 [adam 2005-01-04]
 	Updated gnupg-devel to 1.9.14nb1 [shannonjr 2005-01-04]
 	Added sqlitemanager-1.0.4 [manu 2005-01-04]
+	Updated generate to 2.2 [darcy 2005-01-04]
+	Updated py-generate to 2.2 [darcy 2005-01-04]
