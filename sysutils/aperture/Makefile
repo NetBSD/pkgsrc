@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/01/05 18:02:18 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/02/05 07:11:47 wiz Exp $
 
 DISTNAME=	apNetBSD
 PKGNAME=	aperture-2.0
@@ -35,4 +35,3 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 .include "../../mk/bsd.pkg.mk"
 
 LDFLAGS=	# empty since we use BSD-style makefiles
-
