@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.8 2000/09/10 22:50:34 wiz Exp $
+$NetBSD: patch-aa,v 1.9 2004/05/31 17:35:14 minskim Exp $
 
---- Makefile.orig	Wed May 21 01:57:17 1997
+--- Makefile.orig	1997-05-20 18:57:17.000000000 -0500
 +++ Makefile
 @@ -5,7 +5,6 @@
  #   Wed May 21 01:51:37 MET DST 1997
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.8 2000/09/10 22:50:34 wiz Exp $
  BINDIR=$(PREFIX)/bin
  MANDIR=$(PREFIX)/man
  SECTION=1
-@@ -16,9 +15,11 @@
+@@ -16,7 +15,7 @@ SECTION=1
  ######                                       ######
  ###################################################
  
@@ -18,25 +18,23 @@ $NetBSD: patch-aa,v 1.8 2000/09/10 22:50:34 wiz Exp $
 +# CFLAGS=-O2 -Wall -ansi
  # CFLAGS=-g -Wall -ansi -pedantic
  
-+CFLAGS = -I${PREFIX}/include -L${PREFIX}/lib -Wl,-R${PREFIX}/lib
-+
  all:	tosha pcmplay pcmfade
- 
- utils.o:	utils.c utils.h
-@@ -28,10 +29,10 @@
+@@ -28,21 +27,18 @@ pcmplay.o:	pcmplay.c utils.h getlopt.h
  pcmfade.o:	pcmfade.c utils.h
  
  tosha:	tosha.o utils.o getlopt.o
 -	$(CC) $(CFLAGS) -o tosha -lscsi tosha.o utils.o getlopt.o
-+	$(CC) $(CFLAGS) -o tosha tosha.o utils.o getlopt.o -lscsi -lutil
++	$(CC) $(CFLAGS) -o tosha tosha.o utils.o getlopt.o ${LDFLAGS} -lscsi -lutil
  
  pcmplay:	pcmplay.o utils.o getlopt.o
 -	$(CC) $(CFLAGS) -o pcmplay pcmplay.o utils.o getlopt.o
-+	$(CC) $(CFLAGS) -o pcmplay pcmplay.o utils.o getlopt.o -lossaudio
++	$(CC) $(CFLAGS) -o pcmplay pcmplay.o utils.o getlopt.o ${LDFLAGS} ${LIBOSSAUDIO}
  
  pcmfade:	pcmfade.o utils.o
- 	$(CC) $(CFLAGS) -o pcmfade pcmfade.o utils.o
-@@ -40,9 +41,6 @@
+-	$(CC) $(CFLAGS) -o pcmfade pcmfade.o utils.o
++	$(CC) $(CFLAGS) -o pcmfade pcmfade.o utils.o ${LDFLAGS}
+ 
+ install:	tosha pcmplay pcmfade
  	install -s -g bin -o bin -m 755 tosha pcmplay pcmfade $(BINDIR)
  	install -c -g bin -o bin -m 644 tosha.1 pcmplay.1 pcmfade.1 \
  		$(MANDIR)/man$(SECTION)
