@@ -1,0 +1,3 @@
+DPBOX is a multi protocol and multi user packet radio BBS. It can
+handle up to 200 simultaneous users and has the capacity of storing
+a maximum of 32767*32767 messages. 

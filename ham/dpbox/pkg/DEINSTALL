@@ -1,0 +1,17 @@
+# $NetBSD: DEINSTALL,v 1.1.1.1 2000/05/15 10:54:44 wulf Exp $
+#
+
+case "$2" in
+        DEINSTALL) cat <<EOF
+
+=============================================================
+Note that the dpbox configuration and BBS server files in
+(@DPBOX_CONF_DIR@/*) and (@DPBOX_SPOOL_DIR@/*) are
+not removed in the deinstallation process.
+
+You should remove those by hand if you no longer need them.
+=============================================================
+
+EOF
+        ;;
+esac
