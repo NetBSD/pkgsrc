@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.21 2003/03/18 12:11:57 tron Exp $
+$NetBSD: patch-aa,v 1.22 2003/03/21 08:30:49 tron Exp $
 
 --- Makefile.config.in.orig	2002-10-15 19:17:21.000000000 +0200
 +++ Makefile.config.in	2003-03-18 10:44:40.000000000 +0100
@@ -91,6 +91,17 @@ $NetBSD: patch-aa,v 1.21 2003/03/18 12:11:57 tron Exp $
  # OSF/Tru64:
  #PNGLIB = /usr/local1/DEC/lib/libpng$(PNGVER).so
  #PNGHDR_DIR = /usr/local1/DEC/include
+@@ -308,8 +312,8 @@
+ # NONE for the PNG library, it doesn't matter what you specify here --
+ # it won't get used.
+ 
+-ZLIB = NONE
+-ZHDR_DIR = 
++ZLIB = $(BUILDLINK_DIR)/lib/libz.so
++ZHDR_DIR = $(BUILDLINK_DIR)/include
+ #ZLIB = libz.so
+ 
+ # The JBIG lossless image compression library (aka JBIG-KIT):
 @@ -337,7 +341,7 @@
  # network functions is the option in ppmtompeg to run it on multiple
  # computers simultaneously.
