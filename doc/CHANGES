@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1523 2003/03/02 19:42:03 mjl Exp $
+$NetBSD: CHANGES,v 1.1524 2003/03/02 20:27:06 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -887,3 +887,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated squid to 2.5.1nb4 [taca 2003-03-02]
 	Added p5-OLE-Storage_Lite-0.11 [mjl 2003-03-02]
 	Added p5-Spreadsheet-ParseExcel-0.2602 [mjl 2003-03-02]
+	Updated p5-CGI-Lite to 2.001 [mjl 2003-03-02]
