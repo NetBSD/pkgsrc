@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/08/29 21:12:20 jwise Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/29 21:17:32 jwise Exp $
 #
 
 DISTNAME=	tclgdbm-0.8
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.graphviz.org/pub/tclgdbm/
 
 MAINTAINER=	bouyer@netbsd.org
 
-DEPENDS+=	tcl-8.3.2:../../lang/tcl80
+DEPENDS+=	tcl-8.3.2:../../lang/tcl
 DEPENDS+=	gdbm>=1.7.3:../../databases/gdbm
 
 GNU_CONFIGURE=	yes
