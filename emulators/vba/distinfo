@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/12/03 23:34:46 xtraeme Exp $
+
+SHA1 (VisualBoyAdvance-src-1.6a.zip) = 81e6763d0a7f9cadfedfb8053fea5f5a9028916a
+Size (VisualBoyAdvance-src-1.6a.zip) = 1206080 bytes
+SHA1 (patch-aa) = 75a970fb59926a299830c2823c5094ff56523ee7
