@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2004/01/21 14:14:13 jlam Exp $
+# $NetBSD: Makefile,v 1.73 2004/01/21 14:31:36 jlam Exp $
 #
 
 DISTNAME=	cvs-1.11.11
@@ -33,9 +33,10 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 .if defined(KERBEROS)
-CONFIGURE_ARGS+=	--with-krb4=/usr --enable-encryption
-CONFIGURE_ARGS+=	--with-gssapi=/usr
-CPPFLAGS+=		-I/usr/include/krb5
+.  include "../../mk/krb5.buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-encryption
+CONFIGURE_ARGS+=	--with-gssapi=${KRB5BASE}
+CONFIGURE_ARGS+=	--with-krb4=${KRB5BASE}
 .  if ${OPSYS} == "Darwin"
 LDFLAGS+=		-framework Kerberos
 .  endif
