@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1 2001/05/31 22:52:17 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2002/06/20 19:28:01 jlam Exp $
 
---- fail/parser.c.orig	Mon Jan 31 17:23:07 2000
-+++ fail/parser.c	Wed May 30 14:40:41 2001
-@@ -30,10 +30,7 @@
+--- fail/parser.c.orig	Tue May 22 12:31:45 2001
++++ fail/parser.c
+@@ -33,10 +33,7 @@
+ #include <assert.h>
  
- #define	READLINE_LIBRARY
  #include <readline/readline.h>
 -
 -extern void using_history();
