@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1 2000/09/06 06:17:56 jlam Exp $
+# $NetBSD: INSTALL,v 1.2 2000/10/13 21:46:46 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -16,7 +16,7 @@ POST-INSTALL)
 	mkdir -p ${SERVERROOT}
 	mkdir -p ${SERVERROOT}/ssl.crl
 	mkdir -p ${SERVERROOT}/ssl.crt
-	mkdir -p ${SERVERROOT}/ssl.crs
+	mkdir -p ${SERVERROOT}/ssl.csr
 	mkdir -p ${SERVERROOT}/ssl.key
 	mkdir -p ${SERVERROOT}/ssl.prm
 	mkdir -p ${LOGDIR}
