@@ -1,11 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 1998/07/04 08:50:42 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/11/05 02:29:18 mycroft Exp $
 bin/lynx
 etc/lynx.cfg
-etc/lynx_help/COPYHEADER
-etc/lynx_help/COPYING
 etc/lynx_help/Lynx_users_guide.html
-etc/lynx_help/PROBLEMS
-etc/lynx_help/README
 etc/lynx_help/about_lynx.html
 etc/lynx_help/keystrokes/bookmark_help.html
 etc/lynx_help/keystrokes/cookie_help.html
@@ -25,23 +21,6 @@ etc/lynx_help/keystrokes/xterm_help.html
 etc/lynx_help/lynx-dev.html
 etc/lynx_help/lynx_help_main.html
 etc/lynx_help/lynx_url_support.html
-etc/lynx_help/samples/jumpsUnix.html
-etc/lynx_help/samples/jumpsVMS.html
-etc/lynx_help/samples/lynx.com
-etc/lynx_help/samples/lynx.lss
-etc/lynx_help/samples/mailcap
-etc/lynx_help/samples/mime.types
-etc/lynx_help/test/ALT88592.html
-etc/lynx_help/test/ISO_LATIN1_test.html
-etc/lynx_help/test/README.txt
-etc/lynx_help/test/TestComment.html
-etc/lynx_help/test/iso8859-1.html
-etc/lynx_help/test/iso88592.html
-etc/lynx_help/test/sgml.html
-etc/lynx_help/test/tabtest.html
-etc/lynx_help/test/unicode.html
-@dirrm etc/lynx_help/keystrokes
-@dirrm etc/lynx_help/samples
-@dirrm etc/lynx_help/test
-@dirrm etc/lynx_help
 man/man1/lynx.1
+@dirrm etc/lynx_help/keystrokes
+@dirrm etc/lynx_help
