@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2003/04/10 08:36:41 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2003/04/15 02:21:22 grant Exp $
 
 DISTNAME=		mod_ssl-2.8.14-1.3.27
 PKGNAME=		ap-ssl-2.8.14
@@ -97,6 +97,7 @@ post-install:
 	cd ${WRKSRC}/pkg.sslcfg; ${INSTALL_DATA} README.PRM *.prm	\
 		${EGDIR}/ssl.prm
 
+.include "../../lang/gcc/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 .include "../../www/apache/buildlink2.mk"
 
