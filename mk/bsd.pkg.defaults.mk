@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.152 2003/05/28 15:53:12 jschauma Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.153 2003/06/05 12:13:34 markd Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -687,6 +687,11 @@ EMACS_USE_POP?= yes
 # appropriate one.  E.g, if X11R5 or later is found, lucid will be used.
 # Possible: yes, no, not defined, athena, lucid, motif
 # Default: not defined
+
+EMACS_USE_XAW3D?= NO
+# Used by emacs package to determine if should use Xaw3D for the scrollbar.
+# Possible: YES, NO
+# Default: NO
 
 FETCHMAIL_USE_SSL?=	YES
 # Enable SSL in fetchmail (for pop and imap connections)
