@@ -1,5 +1,5 @@
-===============================================================================
-$NetBSD: MESSAGE,v 1.1 2001/10/31 22:54:48 zuntum Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/07/12 20:40:31 wiz Exp $
 
 Arla now has been installed on your system.
 
@@ -24,4 +24,5 @@ You also have to enable loading of lkms in /etc/rc.conf (set lkm to YES).
 Start scripts for arlad are provided in ${PREFIX}/etc/rc.d/arlad.sh (for
 NetBSD prior to NetBSD-1.5) and ${PREFIX}/etc/rc.d/arlad (for NetBSD-1.5
 and later).
-===============================================================================
+
+===========================================================================
