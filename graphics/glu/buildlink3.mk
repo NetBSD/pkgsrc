@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2004/02/10 22:23:40 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2004/02/10 22:42:56 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GLU_BUILDLINK3_MK:=	${GLU_BUILDLINK3_MK}+
@@ -82,6 +82,7 @@ BUILDLINK_DEPENDS+=	glu
 .  if !empty(BUILDLINK_USE_BUILTIN.glu:M[yY][eE][sS])
 BUILDLINK_PREFIX.glu=	${X11BASE}
 USE_X11=		yes
+_MESA_REQD=		${_MESA_VERSION}
 .  endif
 .endif	# GLU_BUILDLINK3_MK
 
