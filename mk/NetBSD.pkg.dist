@@ -1,5 +1,5 @@
 #     Id: BSD.local.dist,v 1.30 1997/08/01 13:16:39 phk Exp 
-#	$NetBSD: NetBSD.pkg.dist,v 1.50 2003/07/21 17:50:07 jmmv Exp $
+#	$NetBSD: NetBSD.pkg.dist,v 1.51 2003/07/22 23:21:19 jmmv Exp $
 #
 
 /set type=dir uname=root gname=wheel mode=0755
@@ -412,6 +412,10 @@
 	games
         ..
 	locale
+            af
+                LC_MESSAGES
+                ..
+            ..
             am
                 LC_MESSAGES
                 ..
@@ -721,6 +725,14 @@
                 ..
             ..
             ta
+                LC_MESSAGES
+                ..
+            ..
+            tg
+                LC_MESSAGES
+                ..
+            ..
+            th
                 LC_MESSAGES
                 ..
             ..
