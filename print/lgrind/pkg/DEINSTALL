@@ -1,13 +1,9 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1 1999/09/08 19:29:16 jwise Exp $
+# $NetBSD: DEINSTALL,v 1.2 1999/09/09 02:06:01 jwise Exp $
 #
+if [ "$2" != "POST-DEINSTALL" ]; then
+  exit 0
+fi
 
-echo \
-"===========================================
-When deinstallation is complete, please run
-
-	${PKG_PREFIX}/bin/texconfig rehash
-
-as root to rebuild the teTeX ls-R database.
-==========================================="
+${PKG_PREFIX}/bin/texconfig rehash
