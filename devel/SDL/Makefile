@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/12/03 04:33:10 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2000/12/27 11:54:32 hubertf Exp $
 #
 
 DISTNAME=	SDL-1.1.6
@@ -22,7 +22,7 @@ USE_LIBTOOL=	YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CONFIGURE_ARGS+=	--disable-pthread-sem
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS} -D_POSIX_THREAD_SYSCALL_SOFT=1"
-LDFLAGS+=	-Wl,-R${X11BASE}/lib
+LDFLAGS+=	-Wl,-R${X11BASE}/lib -L${X11BASE}/lib
 #CC=		${LOCALBASE}/pthreads/bin/pgcc
 
 pre-patch:
