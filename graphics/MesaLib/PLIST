@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2003/03/09 19:04:53 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/03/24 18:03:33 jschauma Exp $
 etc/mesa.conf
 include/GL/gl.h
 include/GL/gl_mangle.h
 include/GL/glext.h
 include/GL/glx.h
+include/GL/glxext.h
 include/GL/glx_mangle.h
 include/GL/osmesa.h
 include/GL/xmesa.h
