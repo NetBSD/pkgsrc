@@ -1,0 +1,23 @@
+--- htdocs/index.html.orig	Sat Sep  5 22:09:30 1998
++++ htdocs/index.html	Sat Sep  5 22:37:43 1998
+@@ -39,13 +39,18 @@
+    HREF="manual/index.html"
+   >documentation</A>
+   has been included with this distribution.
++  Information on the NetBSD multiplatform operating system can be found
++  at <A HREF="http://www.netbsd.org/">NetBSD's homepage</A> on the net.
+   </P>
+   <P>
+-  The Webmaster of this site is free to use the image below on
+-  an Apache-powered Web server.  Thanks for using Apache!
++  The Webmaster of this site is free to use the images below on
++  an Apache/NetBSD-powered Web server.  Thanks for using <A HREF="http://www.apache.org/">Apache</A> on <A HREF="http://www.netbsd.org/">NetBSD</A>!
+   </P>
+   <DIV ALIGN="CENTER">
+    <IMG SRC="apache_pb.gif" ALT="">
++   <A HREF="http://www.netbsd.org/">
++        <IMG SRC="sitedrivenby.gif" border=0
++             ALT="Site driven by NetBSD - NetBSD rocks!"></A>
+   </DIV>
+  </BODY>
+ </HTML>
