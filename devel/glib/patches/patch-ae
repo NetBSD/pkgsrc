@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1 1998/12/18 23:52:22 tron Exp $
+
+--- gthread/Makefile.in.orig	Thu Dec 17 06:11:39 1998
++++ gthread/Makefile.in	Fri Dec 18 23:23:06 1998
+@@ -99,8 +99,7 @@
+ 
+ libgthread_la_SOURCES = gthread.c
+ libgthread_la_LDFLAGS = \
+-	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) \
+-	-release $(LT_RELEASE)
++	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)
+ 
+ libgthread_la_LIBADD = @G_THREAD_LIBS@
+ 
