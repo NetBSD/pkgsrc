@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.53 2004/10/03 00:13:31 tv Exp $
+# $NetBSD: Makefile.common,v 1.54 2004/10/14 16:15:26 tv Exp $
 #
 
 DISTNAME=	libtool-1.5.10
@@ -20,3 +20,5 @@ FILESDIR=	${.CURDIR}/../libtool/files
 PATCHDIR=	${.CURDIR}/../libtool/patches
 
 AUTOMAKE_OVERRIDE=	NO
+
+CONFIGURE_ARGS+=	-C # autoconf cache speedup
