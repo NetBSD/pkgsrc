@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.145 2003/05/06 08:40:08 uebayasi Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.146 2003/05/08 14:55:13 jmmv Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1737,11 +1737,11 @@ WINDOWMAKER_OPTIONS?= gnome kde openlook
 # Possible: gnome, kde, openlook, lite
 # Default: gnome kde openlook
 
-WINDOWMAKER_THEMES?=	FreeBSD-theme
-# Used in wm-themes package to specify the themes which will be
+WINDOWMAKER_THEMES?= freebsdtheme-0.52 netbsddrinkingteam-0.60.0 netbsd_-0.52
+# Used in the wmthemes package to specify the themes which will be
 # installed.
 # Possible: see http://wm.themes.org/
-# Default: FreeBSD-theme
+# Default: freebsdtheme-0.52 netbsddrinkingteam-0.60.0 netbsd_-0.52
 
 XAW_TYPE?=standard
 # Used in various packages to specify that libXaw is used.
