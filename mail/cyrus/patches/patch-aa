@@ -1,0 +1,83 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/03/07 00:27:18 kim Exp $
+
+--- configure.orig	Tue Aug  4 01:52:57 1998
++++ configure	Thu Oct 22 21:31:35 1998
+@@ -1269,14 +1269,14 @@
+ fi
+ 
+ echo "$ac_t""$andrew_runpath_switch" 1>&6
+-CPPFLAGS="-I/usr/local/include ${CPPFLAGS}"
+-
+-  # this is ANDREW ADD LIBPATH
+-  if test "$andrew_runpath_switch" = "none" ; then
+-	LDFLAGS="-L"/usr/local/lib" ${LDFLAGS}"
+-  else
+-	LDFLAGS="-L"/usr/local/lib" ${LDFLAGS} $andrew_runpath_switch"/usr/local/lib""
+-  fi
++#CPPFLAGS="-I/usr/local/include ${CPPFLAGS}"
++#
++#  # this is ANDREW ADD LIBPATH
++#  if test "$andrew_runpath_switch" = "none" ; then
++#	LDFLAGS="-L"/usr/local/lib" ${LDFLAGS}"
++#  else
++#	LDFLAGS="-L"/usr/local/lib" ${LDFLAGS} $andrew_runpath_switch"/usr/local/lib""
++#  fi
+ 
+ 
+ for ac_hdr in unistd.h sys/select.h db_185.h sys/param.h
+@@ -2507,8 +2507,9 @@
+ fi
+ 
+ 
+-case "$WITH_LOGIN" in
+-	unix|unix_*) echo $ac_n "checking for crypt in -lcrypt""... $ac_c" 1>&6
++#case "$WITH_LOGIN" in
++#	unix|unix_*) echo $ac_n "checking for crypt in -lcrypt""... $ac_c" 1>&6
++echo $ac_n "checking for crypt in -lcrypt""... $ac_c" 1>&6
+ echo "configure:2513: checking for crypt in -lcrypt" >&5
+ ac_lib_var=`echo crypt'_'crypt | sed 'y%./+-%__p_%'`
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+@@ -2554,7 +2555,8 @@
+ else
+   echo "$ac_t""no" 1>&6
+ fi
+-;;
++#;;
++case "$WITH_LOGIN" in
+ 	krb|krb_*) login_progs=krbck;;
+ esac
+ 
+@@ -3094,11 +3096,11 @@
+   with_krb="${withval}"
+ fi
+ 
+-if test -z "$with_krb"; then
+-     if test -f /usr/local/lib/libkrb.a -a -f /usr/local/lib/libdes.a; then
+-	with_krb="/usr/local"
+-     fi
+-fi
++#if test -z "$with_krb"; then
++#     if test -f /usr/local/lib/libkrb.a -a -f /usr/local/lib/libdes.a; then
++#	with_krb="/usr/local"
++#     fi
++#fi
+ case "$with_krb" in
+ 	no) true;;
+ 	""|yes) echo $ac_n "checking for des_ecb_encrypt in -lkrb""... $ac_c" 1>&6
+@@ -3308,11 +3310,11 @@
+   with_zephyr="${withval}"
+ fi
+ 
+-if test -z "$with_zephyr"; then
+-     if test -f /usr/local/lib/libzephyr.a; then
+-	with_zephyr="/usr/local"
+-     fi
+-fi
++#if test -z "$with_zephyr"; then
++#     if test -f /usr/local/lib/libzephyr.a; then
++#	with_zephyr="/usr/local"
++#     fi
++#fi
+ case "$with_zephyr" in
+ 	no) true;;
+ 	""|yes) echo $ac_n "checking for ZInitialize in -lzephyr""... $ac_c" 1>&6
