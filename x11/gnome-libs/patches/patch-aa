@@ -1,18 +1,26 @@
-$NetBSD: patch-aa,v 1.9 2000/05/02 18:48:43 danw Exp $
+$NetBSD: patch-aa,v 1.10 2000/05/30 19:23:48 drochner Exp $
 
---- configure.orig	Tue Feb 22 15:29:37 2000
-+++ configure	Mon Mar 13 23:08:16 2000
-@@ -2077,7 +2077,9 @@
+--- configure.orig	Sat May 20 20:55:16 2000
++++ configure	Fri May 26 23:39:02 2000
+@@ -2000,7 +2000,7 @@
  fi
+ rm -f confcache
  
- # Always use our own libtool.
+-
 +if false; then
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ # Actually configure libtool.  ac_aux_dir is where install-sh is found.
+ CC="$CC" CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" \
+ LD="$LD" LDFLAGS="$LDFLAGS" LIBS="$LIBS" \
+@@ -2029,7 +2029,7 @@
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+ exec 5>>./config.log
+-
 +fi
  
- # Check for any special flags to pass to ltconfig.
- libtool_flags=
-@@ -5587,7 +5589,7 @@
+ echo $ac_n "checking whether to enable maintainer-specific portions of Makefiles""... $ac_c" 1>&6
+ echo "configure:2036: checking whether to enable maintainer-specific portions of Makefiles" >&5
+@@ -5304,7 +5304,7 @@
    
  # AM_GNOME_GETTEXT above substs $DATADIRNAME
  # this is the directory where the *.{mo,gmo} files are installed
@@ -21,7 +29,7 @@ $NetBSD: patch-aa,v 1.9 2000/05/02 18:48:43 danw Exp $
  
  
  echo $ac_n "checking for floor in -lm""... $ac_c" 1>&6
-@@ -10496,7 +10498,7 @@
+@@ -10213,7 +10213,7 @@
  GTKXMHTML_LIBS="-lgtkxmhtml $LIBGTKXMHTML_LIBS"
  ZVT_LIBS="-lzvt $UTIL_LIBS $GTK_LIBS"
  

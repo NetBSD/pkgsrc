@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2000/03/13 22:25:47 tron Exp $
+@comment $NetBSD: PLIST,v 1.23 2000/05/30 19:23:48 drochner Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -60,6 +60,8 @@ include/libart_lgpl/art_vpath.h
 include/libart_lgpl/art_vpath_bpath.h
 include/libart_lgpl/art_vpath_dash.h
 include/libart_lgpl/art_vpath_svp.h
+include/libart_lgpl/libart.h
+include/libart_lgpl/libart-features.h
 include/libgnome/gnome-config.h
 include/libgnome/gnome-defs.h
 include/libgnome/gnome-dentry.h
@@ -152,6 +154,7 @@ include/libgnomeui/gnome-startup.h
 include/libgnomeui/gnome-stock.h
 include/libgnomeui/gnome-types.h
 include/libgnomeui/gnome-uidefs.h
+include/libgnomeui/gnome-window-icon.h
 include/libgnomeui/gnome-winhints.h
 include/libgnomeui/gnometypebuiltins.h
 include/libgnomeui/gtk-clock.h
@@ -173,12 +176,12 @@ lib/gnome-libs/include/gnomesupport.h
 lib/gnomeConf.sh
 lib/libartConf.sh
 lib/libart_lgpl.a
-lib/libart_lgpl.so.3.0
+lib/libart_lgpl.so.4.0
 lib/libgnome.a
 lib/libgnomesupport.a
 lib/libgnomesupport.so.0.0
 lib/libgnomeui.a
-lib/libgnomeui.so.42.3
+lib/libgnomeui.so.43.2
 lib/libgnorba.a
 lib/libgnorba.so.28.8
 lib/libgnorbagtk.a
@@ -186,7 +189,7 @@ lib/libgnorbagtk.so.0.0
 lib/libgtkxmhtml.a
 lib/libgtkxmhtml.so.1.1
 lib/libzvt.a
-lib/libzvt.so.4.6
+lib/libzvt.so.4.7
 man/man1/gnome-config.1
 man/man1/gnome.1
 man/man5/gnome-mime.5
@@ -309,6 +312,7 @@ share/doc/gnome-libs/html/gnomeui/gnomeui-gnome-properties.html
 share/doc/gnome-libs/html/gnomeui/gnomeui-gnome-property-entries.html
 share/doc/gnome-libs/html/gnomeui/gnomeui-gnome-types.html
 share/doc/gnome-libs/html/gnomeui/gnomeui-gnome-uidefs.html
+share/doc/gnome-libs/html/gnomeui/gnomeui-gnome-window-icon.html
 share/doc/gnome-libs/html/gnomeui/gnomeui-gnome-winhints.html
 share/doc/gnome-libs/html/gnomeui/gnomeui-gtkcauldron.html
 share/doc/gnome-libs/html/gnomeui/gtkclock.html
@@ -468,22 +472,6 @@ share/gnome/html/gnorba/book1.html
 share/gnome/html/gnorba/gnorba-gnorba.html
 share/gnome/html/gnorba/gnorba-goad.html
 share/gnome/html/gnorba/libgnorba.html
-share/gnome/html/zvt/book1.html
-share/gnome/html/zvt/x119.html
-share/gnome/html/zvt/x144.html
-share/gnome/html/zvt/x152.html
-share/gnome/html/zvt/x192.html
-share/gnome/html/zvt/x222.html
-share/gnome/html/zvt/x243.html
-share/gnome/html/zvt/x263.html
-share/gnome/html/zvt/x98.html
-share/gnome/html/zvt/zvtterm-future.html
-share/gnome/html/zvt/zvtterm-input-output.html
-share/gnome/html/zvt/zvtterm-notes.html
-share/gnome/html/zvt/zvtterm-properties.html
-share/gnome/html/zvt/zvtterm-reference.html
-share/gnome/html/zvt/zvtterm-window-hints.html
-share/gnome/html/zvt/zvtterm.html
 share/gtkrc
 share/gtkrc.el
 share/gtkrc.eo
@@ -534,8 +522,10 @@ share/locale/no/LC_MESSAGES/gnome-libs.mo
 share/locale/pl/LC_MESSAGES/gnome-libs.mo
 share/locale/pt/LC_MESSAGES/gnome-libs.mo
 share/locale/pt_BR/LC_MESSAGES/gnome-libs.mo
+share/locale/ro/LC_MESSAGES/gnome-libs.mo
 share/locale/ru/LC_MESSAGES/gnome-libs.mo
 share/locale/sk/LC_MESSAGES/gnome-libs.mo
+share/locale/sl/LC_MESSAGES/gnome-libs.mo
 share/locale/sv/LC_MESSAGES/gnome-libs.mo
 share/locale/wa/LC_MESSAGES/gnome-libs.mo
 share/locale/zh_TW.Big5/LC_MESSAGES/gnome-libs.mo
@@ -573,6 +563,7 @@ share/type-convert/type.convert
 @dirrm share/gnome/html/gnorba
 @dirrm share/gnome/html/zvt
 @dirrm share/gnome/html
+@dirrm share/gnome
 @unexec rmdir %D/etc/httpd 2>/dev/null || true
 @dirrm share/idl
 @dirrm share/mime-info
