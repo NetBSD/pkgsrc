@@ -1,0 +1,9 @@
+This module attempts make using HTML templates simple and natural.  It
+extends standard HTML with a few new HTML-esque tags - <TMPL_VAR>,
+<TMPL_LOOP>, <TMPL_INCLUDE>, <TMPL_IF> and <TMPL_ELSE>.  The file
+written with HTML and these new tags is called a template.  It is
+usually saved separate from your script - possibly even created by
+someone else!  Using this module you fill in the values for the
+variables, loops and branches declared in the template.  This allows
+you to seperate design - the HTML - from the data, which you generate
+in the Perl script.
