@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2004/01/24 14:11:10 grant Exp $
+# $NetBSD: Makefile,v 1.40 2004/05/03 15:58:55 wiz Exp $
 #
 
 DISTNAME=       siag-3.5.7
@@ -18,7 +18,7 @@ CONFLICTS+=	antiword-[0-9]*
 CONFIGURE_ARGS+=--with-x
 CONFIGURE_ARGS+=--with-guile
 CONFIGURE_ARGS+=--with-docdir=${PREFIX}/share/doc/siag
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=  YES
 USE_GNU_TOOLS+=	make
 USE_X11=	YES
@@ -35,9 +35,9 @@ CONFIGURE_ARGS+=--with-xawm=neXtaw
 CONFIGURE_ARGS+=--with-xawm=Xaw
 .endif
 
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../lang/guile14/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../x11/mowitz/buildlink2.mk"
-.include "../../mk/xaw.buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../lang/guile14/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/mowitz/buildlink3.mk"
+.include "../../mk/xaw.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
