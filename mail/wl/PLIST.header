@@ -1,10 +1,6 @@
-@comment $NetBSD: PLIST.header,v 1.1 2003/01/28 02:56:23 uebayasi Exp $
-@unexec ${INSTALL_INFO} --delete %D/info/wl.info %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/wl-ja.info %D/info/dir
+@comment $NetBSD: PLIST.header,v 1.2 2003/07/31 16:45:40 seb Exp $
 info/wl.info
 info/wl-ja.info
-@exec ${INSTALL_INFO} %D/info/wl.info %D/info/dir
-@exec ${INSTALL_INFO} %D/info/wl-ja.info %D/info/dir
 share/doc/wl/en/BUGS
 share/doc/wl/en/NEWS
 share/doc/wl/en/README
