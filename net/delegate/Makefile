@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2003/03/28 09:42:28 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2003/07/30 11:37:02 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/11/09 09:24:20 max Exp
 #
 
-DISTNAME=	${PKGNAME:S/-//}
+DISTNAME=	${PKGNAME_NOREV:S/-//}
 PKGNAME=	delegate-8.5.2
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.delegate.org/pub/DeleGate/ \
 		ftp://etlport.etl.go.jp/pub/DeleGate/ \
@@ -21,19 +22,26 @@ MAINTAINER=	rh@NetBSD.ORG
 HOMEPAGE=	http://www.delegate.org/
 COMMENT=	General purpose TCP/IP proxy system
 
+USE_PKGINSTALL=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=		DELEGATE_MANAGER
 DELEGATE_MANAGER?=	root@localhost
+
+RCD_SCRIPTS=		delegated
+FILES_SUBST+=		ADMIN="${DELEGATE_MANAGER}"
+
+OWN_DIRS_PERMS+=	/var/spool/delegate/cache \
+			${ROOT_USER} ${ROOT_GROUP} 1777
+OWN_DIRS_PERMS+=	/var/spool/delegate-nobody nobody nobody 755
 
 pre-build:
 	@${ECHO} "ADMIN=${DELEGATE_MANAGER}" >> ${WRKSRC}/DELEGATE_CONF
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/delegated ${PREFIX}/sbin
-	${SED} -e 's:__PREFIX__:${PREFIX}:g' \
-	    -e 's:__ADMIN__:${DELEGATE_MANAGER}:g' \
-	    ${WRKSRC}/delegated.sh.template \
-	    > ${WRKSRC}/delegated.sh.sample
-	${INSTALL_SCRIPT} ${WRKSRC}/delegated.sh.sample \
-	   ${PREFIX}/etc/rc.d
+	${INSTALL_SCRIPT} ${WRKDIR}/delegated ${PREFIX}/etc/rc.d
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/delegate
 	${INSTALL_DATA} ${WRKSRC}/doc/Manual.htm \
 	   ${PREFIX}/share/doc/delegate/manual.html
