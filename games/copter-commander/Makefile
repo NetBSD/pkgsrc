@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/03/08 16:45:35 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/09 10:46:09 agc Exp $
 #
 
 DISTNAME=	copter-commander-1.8
@@ -10,10 +10,16 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.speakeasy.org/~morse/copter-commander/
 COMMENT=	Armor Alley/Rescue Raiders clone
 
-DEPENDS+=	gtkglarea>=1.2.2:../../x11/gtkglarea
-DEPENDS+=	gnome-libs>=1.4.0:../../x11/gnome-libs
-
 USE_GMAKE=	yes
 MAKE_ENV+=	X11PREFIX=${X11PREFIX}
+MAKE_ENV+=	GTKGLAREADIR=${BUILDLINK_PREFIX.gtkglarea}
+MAKE_ENV+=	OPENGLDIR=${BUILDLINK_PREFIX.Mesa}
+MAKE_ENV+=	TIFFDIR=${BUILDLINK_PREFIX.tiff}
+MAKE_ENV+=	ESDDIR=${BUILDLINK_PREFIX.esound}
 
+USE_BUILDLINK2=	yes
+
+.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../x11/gnome-libs/buildlink2.mk"
+.include "../../x11/gtkglarea/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
