@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.23 2001/11/28 11:39:44 abs Exp $
+# $Id: pkgchk.sh,v 1.24 2001/12/24 14:15:56 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -197,7 +197,7 @@ run_cmd()
     fi
     }
 
-args=`getopt BD:U:abchiknrsuv $*`
+args=`getopt BC:D:U:abchiknrsuv $*`
 if [ $? != 0 ]; then
     opt_h=1
 fi
@@ -205,6 +205,7 @@ set -- $args
 while [ $# != 0 ]; do
     case "$1" in
 	-B )    opt_B=1 ; opt_i=1 ;;
+	-C )	opt_C="$2" ; shift;;
 	-D )	opt_D="$2" ; shift;;
 	-U )	opt_U="$2" ; shift;;
 	-a )	opt_a=1 ; opt_c=1 ;;
@@ -236,6 +237,7 @@ fi
 if [ -n "$opt_h" -o $# != 1 ];then
     echo 'Usage: pkg_chk [opts]
 	-B      Check the "Build version" of packages (implies -i)
+	-C conf Use pkgchk.conf file 'conf'
 	-D tags Comma separated list of additional pkgchk.conf tags to set
 	-U tags Comma separated list of pkgchk.conf tags to unset
 	-a      Add all missing packages (implies -c)
@@ -274,6 +276,9 @@ else
 fi
 
 extract_variables
+if [ -n "$opt_C" ] ; then
+    PKGCHK_CONF=$opt_C
+fi
 
 cd $PKGSRCDIR
 real_pkgsrcdir=`pwd`
