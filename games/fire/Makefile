@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/17 21:48:31 rh Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/26 10:08:31 zuntum Exp $
 #
 
 DISTNAME=	fire-1.0
@@ -9,9 +9,10 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.libsdl.org/projects/fire/index.html
 COMMENT=	organic fireworks demo
 
-DEPENDS+=	SDL>=1.1.6:../../devel/SDL
+USE_BUILDLINK_ONLY=	YES
+USE_CONFIG_WRAPPER=	YES
+GNU_CONFIGURE=		YES
+USE_X11=		YES
 
-GNU_CONFIGURE=	YES
-USE_X11=	YES
-
+.include "../../devel/SDL/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
