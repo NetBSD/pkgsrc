@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/08/10 13:59:34 skrll Exp $
+# $NetBSD: Makefile,v 1.17 2002/12/08 23:23:42 cjep Exp $
 #
 
 DISTNAME=	rrdtool-1.0.33
@@ -38,8 +38,8 @@ PERL5_PACKLIST+=	${PERL5_SITEARCH}/auto/RRDs/.packlist
 
 post-patch:
 	cd ${WRKSRC};							\
-        files="perl-shared/Makefile.PL";				\
-        for file in $${files}; do					\
+	files="perl-shared/Makefile.PL";				\
+	for file in $${files}; do					\
 		${SED}	-e "s|@X11BASE@|${X11BASE}|"			\
 			-e "s|@LOCALBASE@|${LOCALBASE}|"		\
 			$${file} > $${file}.new;			\
