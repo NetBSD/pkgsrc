@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/11/23 15:05:21 hubertf Exp $
+bin/ethereal
+man/man1/ethereal.1
+etc/manuf
