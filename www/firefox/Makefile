@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2004/06/19 17:37:37 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2004/06/23 16:47:12 taya Exp $
 
 MOZILLA=	firefox
 MOZILLA_BIN=	firefox-bin
 MOZCONFDIR=	.mozilla
-MOZ_VER=	0.8
-PKGREVISION=	3
+MOZ_VER=	0.9
 EXTRACT_SUFX=	.tar.bz2
-DISTNAME=	${MOZILLA}-source-${MOZ_VER}
+DISTNAME=	${MOZILLA}-${MOZ_VER}-source
 MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MOZ_VER}/ \
 		ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MOZ_VER}/ \
 		http://public.planetmirror.com.au/pub/firefox/releases/${MOZ_VER}/ \
@@ -23,5 +22,11 @@ CONFIGURE_ARGS+=	--disable-composer
 CONFIGURE_ARGS+=	--enable-extensions=default,-irc
 
 BUILD_MATHML=	# defined
+
+post-install:
+	${CP} -r ${WRKSRC}/dist/bin/defaults/profile/extensions \
+							${WRKSRC}/dist/bin
+	${MV} ${WRKSRC}/dist/bin/extensions/installed-extensions.txt \
+		${WRKSRC}/dist/bin/extensions/installed-extensions-processed.txt
 
 .include "../../www/mozilla/Makefile.common"

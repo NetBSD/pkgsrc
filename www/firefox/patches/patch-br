@@ -1,7 +1,8 @@
-$NetBSD: patch-br,v 1.1.1.1 2004/02/29 17:45:02 xtraeme Exp $
+$NetBSD: patch-br,v 1.2 2004/06/23 16:47:12 taya Exp $
 
---- nsprpub/pr/src/misc/prnetdb.c.orig	2003-10-31 14:09:29.000000000 +0900
-+++ nsprpub/pr/src/misc/prnetdb.c	2004-02-27 15:09:13.000000000 +0900
+diff -ru ../Orig/mozilla/nsprpub/pr/src/misc/prnetdb.c ./nsprpub/pr/src/misc/prnetdb.c
+--- ../Orig/mozilla/nsprpub/pr/src/misc/prnetdb.c	2004-01-23 07:22:37.000000000 +0900
++++ ./nsprpub/pr/src/misc/prnetdb.c	2004-06-15 23:56:46.000000000 +0900
 @@ -2094,7 +2094,12 @@
           */
          hints.ai_socktype = SOCK_STREAM;
