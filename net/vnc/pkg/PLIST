@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1999/02/17 18:50:50 tls Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/03/29 16:42:53 hubertf Exp $
 bin/Xvnc
 bin/vncviewer
 bin/vncpasswd
@@ -77,4 +77,33 @@ share/doc/vnc/winviewer1.gif
 share/doc/vnc/winviewer1_small.gif
 share/doc/vnc/winvnctray.GIF
 share/doc/vnc/xvnchistory.html
+share/doc/vnc/contribs.html
+share/doc/vnc/docs.html
+share/doc/vnc/download.htm
+share/doc/vnc/faq.html
+share/doc/vnc/free.html
+share/doc/vnc/gpl.html
+share/doc/vnc/help.html
+share/doc/vnc/howitworks.html
+share/doc/vnc/index.html
+share/doc/vnc/internalversion.html
+share/doc/vnc/intouch.html
+share/doc/vnc/javavncviewer.html
+share/doc/vnc/oldcontribs.html
+share/doc/vnc/oldfaq.html
+share/doc/vnc/protocol.html
+share/doc/vnc/rfbproto.pdf
+share/doc/vnc/rfbprotoheader.pdf
+share/doc/vnc/screenshots.html
+share/doc/vnc/start.html
+share/doc/vnc/styles.css
+share/doc/vnc/twmideas.html
+share/doc/vnc/videos.html
+share/doc/vnc/vnchistory.html
+share/doc/vnc/vncpeople.html
+share/doc/vnc/winhistory.html
+share/doc/vnc/winvnc.html
+share/doc/vnc/winvncviewer.html
+share/doc/vnc/xvnc.html
+share/doc/vnc/xvncviewer.html
 @dirrm share/doc/vnc
