@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8839 2005/01/20 20:38:22 bad Exp $
+$NetBSD: CHANGES,v 1.8840 2005/01/20 21:25:01 bad Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -449,3 +449,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated dia to 0.94nb1 [jmmv 2005-01-20]
 	Added dia-python-0.94 [jmmv 2005-01-20]
 	Updated jdb to 1.12 [bad 2005-01-20]
+	Updated p5-CGI_Lite to 2.02 [bad 2005-01-20]
+	Updated p5-Time-HiRes to 1.66 [bad 2005-01-20]
+	Updated p5-Devel-SmallProf to 1.15 [bad 2005-01-20]
