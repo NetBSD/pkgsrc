@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/23 19:02:25 reinoud Exp $
+bin/cd_disect
+bin/cd_sessions
+bin/udfclient
+bin/udfdump
