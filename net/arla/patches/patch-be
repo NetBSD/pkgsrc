@@ -1,6 +1,6 @@
-$NetBSD: patch-be,v 1.4 2005/03/25 17:40:25 wennmach Exp $
+$NetBSD: patch-be,v 1.5 2005/03/26 16:50:59 wennmach Exp $
 
-Shut up gcc.
+From Love.
 
 --- lib/ko/gensysname.c.orig	2005-03-22 14:43:34.000000000 +0100
 +++ lib/ko/gensysname.c	2005-03-22 14:47:20.000000000 +0100
@@ -9,7 +9,7 @@ Shut up gcc.
  usage(void)
  {
 -    arg_printusage(args, NULL, "[sysname]", 0);
-+    arg_printusage(args, 0, "[sysname]", 0);
++    arg_printusage(args, sizeof(args)/sizeof(args[0]), "[sysname]", NULL);
      exit(1);
      
  }
