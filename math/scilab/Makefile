@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/06/01 11:23:35 rh Exp $
+# $NetBSD: Makefile,v 1.17 2000/07/11 01:46:30 dmcmahill Exp $
 #
 # IMPORTANT: Before upgrading this package, please read files/README.next_rev!
 
@@ -23,7 +23,7 @@ USE_X11BASE=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 
-CONFIGURE_ARGS+=	--without-xless
+CONFIGURE_ARGS+=	--without-xless --with-xaw
 #override HOME to avoid picking up a bad ${HOME}/.scilab during the build
 MAKE_ENV+=	HOME=${WRKSRC}
 CONFIGURE_ENV+=	LOCALBASE=${LOCALBASE}
