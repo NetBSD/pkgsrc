@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/04/20 16:32:07 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2000/04/24 14:14:35 dmcmahill Exp $
 #
 
 DISTNAME=		gnome-print-0.18
@@ -18,6 +18,8 @@ USE_X11BASE=		# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ENV+=		GHOSTSCRIPT=${LOCALBASE}/bin/gs
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
+#override HOME to avoid trying to install ${HOME}/.gnome
+MAKE_ENV+=		HOME=${WRKSRC}
 
 CPPFLAGS+=		-I${LOCALBASE}/include
 LDFLAGS+=		-L${LOCALBASE}/lib
