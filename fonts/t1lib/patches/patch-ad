@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2004/04/19 04:30:03 minskim Exp $
+
+--- lib/type1/scanfont.c.orig	2004-03-05 19:58:26.000000000 -0600
++++ lib/type1/scanfont.c
+@@ -1237,7 +1237,7 @@ int scan_font(FontP)
+     }
+     if ( namelen >= MAXPATHLEN ) {
+       /* Hopefully, this will lead to a file open error */
+-      namelen = MAXPATHLEN;
++      namelen = MAXPATHLEN - 1;
+     }
+     strncpy(filename,nameP,namelen);
+     filename[namelen] = '\0';
