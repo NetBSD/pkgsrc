@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2537 2004/11/27 20:45:58 wiz Exp $
+$NetBSD: TODO,v 1.2538 2004/11/27 20:59:23 dmcmahill Exp $
 
 Suggested new packages
 ======================
@@ -341,7 +341,6 @@ Suggested package updates
 	o aspell-ukrainian-0.51.0
 	o ast-ksh-20040229
 	o astyle-1.15.3
-	o atlc-4.2.11
 	o auctex-11.53
 	o avidemux-2.0.34
 	o avl-2.0.1
