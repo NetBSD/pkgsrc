@@ -1,0 +1,12 @@
+What is KDOC?
+
+KDOC is a C++ and IDL interface documentation tool, initially written
+for the specific purpose of generating documentation for the KDE libraries.
+
+KDOC extracts specially formatted documentation and information about
+your classes from the class' header or IDL files, and generates
+cross-referenced HTML, LaTeX or Man pages from it.
+
+KDOC allows groups of classes to be formed into "libraries" and
+documentation from separate libraries can be very easily
+cross-referenced.
