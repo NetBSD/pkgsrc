@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/12 18:16:51 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/11/14 15:33:30 drochner Exp $
 lib/zope/lib/python/Products/Silva/Asset.py
 lib/zope/lib/python/Products/Silva/Asset.pyc
 lib/zope/lib/python/Products/Silva/CREDITS.txt
-lib/zope/lib/python/Products/Silva/ContactInfo.py
-lib/zope/lib/python/Products/Silva/ContactInfo.pyc
+lib/zope/lib/python/Products/Silva/CatalogedDemoObject.py
+lib/zope/lib/python/Products/Silva/CatalogedDemoObject.pyc
 lib/zope/lib/python/Products/Silva/Content.py
 lib/zope/lib/python/Products/Silva/Content.pyc
 lib/zope/lib/python/Products/Silva/Copying.py
@@ -14,6 +14,10 @@ lib/zope/lib/python/Products/Silva/Document.py
 lib/zope/lib/python/Products/Silva/Document.pyc
 lib/zope/lib/python/Products/Silva/EditorSupport.py
 lib/zope/lib/python/Products/Silva/EditorSupport.pyc
+lib/zope/lib/python/Products/Silva/EditorSupportNested.py
+lib/zope/lib/python/Products/Silva/EditorSupportNested.pyc
+lib/zope/lib/python/Products/Silva/File.py
+lib/zope/lib/python/Products/Silva/File.pyc
 lib/zope/lib/python/Products/Silva/Folder.py
 lib/zope/lib/python/Products/Silva/Folder.pyc
 lib/zope/lib/python/Products/Silva/ForgivingParser.py
@@ -21,11 +25,31 @@ lib/zope/lib/python/Products/Silva/ForgivingParser.pyc
 lib/zope/lib/python/Products/Silva/Ghost.py
 lib/zope/lib/python/Products/Silva/Ghost.pyc
 lib/zope/lib/python/Products/Silva/HISTORY.txt
+lib/zope/lib/python/Products/Silva/IAsset.py
+lib/zope/lib/python/Products/Silva/IAsset.pyc
+lib/zope/lib/python/Products/Silva/IContainer.py
+lib/zope/lib/python/Products/Silva/IContainer.pyc
+lib/zope/lib/python/Products/Silva/IContent.py
+lib/zope/lib/python/Products/Silva/IContent.pyc
+lib/zope/lib/python/Products/Silva/IFile.py
+lib/zope/lib/python/Products/Silva/IFile.pyc
 lib/zope/lib/python/Products/Silva/INSTALL.txt
+lib/zope/lib/python/Products/Silva/IPublication.py
+lib/zope/lib/python/Products/Silva/IPublication.pyc
+lib/zope/lib/python/Products/Silva/IPublishable.py
+lib/zope/lib/python/Products/Silva/IPublishable.pyc
+lib/zope/lib/python/Products/Silva/ISecurity.py
+lib/zope/lib/python/Products/Silva/ISecurity.pyc
+lib/zope/lib/python/Products/Silva/ISilvaObject.py
+lib/zope/lib/python/Products/Silva/ISilvaObject.pyc
+lib/zope/lib/python/Products/Silva/IVersion.py
+lib/zope/lib/python/Products/Silva/IVersion.pyc
+lib/zope/lib/python/Products/Silva/IVersionedContent.py
+lib/zope/lib/python/Products/Silva/IVersionedContent.pyc
+lib/zope/lib/python/Products/Silva/IVersioning.py
+lib/zope/lib/python/Products/Silva/IVersioning.pyc
 lib/zope/lib/python/Products/Silva/Image.py
 lib/zope/lib/python/Products/Silva/Image.pyc
-lib/zope/lib/python/Products/Silva/Interfaces.py
-lib/zope/lib/python/Products/Silva/Interfaces.pyc
 lib/zope/lib/python/Products/Silva/LDAPUserManagement.py
 lib/zope/lib/python/Products/Silva/LDAPUserManagement.pyc
 lib/zope/lib/python/Products/Silva/LICENSE.txt
@@ -49,6 +73,8 @@ lib/zope/lib/python/Products/Silva/TocSupport.pyc
 lib/zope/lib/python/Products/Silva/UPGRADE.txt
 lib/zope/lib/python/Products/Silva/UserManagement.py
 lib/zope/lib/python/Products/Silva/UserManagement.pyc
+lib/zope/lib/python/Products/Silva/Version.py
+lib/zope/lib/python/Products/Silva/Version.pyc
 lib/zope/lib/python/Products/Silva/VersionedContent.py
 lib/zope/lib/python/Products/Silva/VersionedContent.pyc
 lib/zope/lib/python/Products/Silva/Versioning.py
@@ -59,13 +85,28 @@ lib/zope/lib/python/Products/Silva/XMLImporter.py
 lib/zope/lib/python/Products/Silva/XMLImporter.pyc
 lib/zope/lib/python/Products/Silva/__init__.py
 lib/zope/lib/python/Products/Silva/__init__.pyc
-lib/zope/lib/python/Products/Silva/doc/apache.txt
-lib/zope/lib/python/Products/Silva/doc/features.txt
-lib/zope/lib/python/Products/Silva/doc/squid.txt
-lib/zope/lib/python/Products/Silva/doc/zeo_cluster_notes.txt
+lib/zope/lib/python/Products/Silva/config.py
+lib/zope/lib/python/Products/Silva/config.pyc
+lib/zope/lib/python/Products/Silva/docs/AccessTab.stx
+lib/zope/lib/python/Products/Silva/docs/ApacheNotes.stx
+lib/zope/lib/python/Products/Silva/docs/AuthorEditorChief.stx
+lib/zope/lib/python/Products/Silva/docs/EditTab.stx
+lib/zope/lib/python/Products/Silva/docs/FeatureList.stx
+lib/zope/lib/python/Products/Silva/docs/FileObject.stx
+lib/zope/lib/python/Products/Silva/docs/GlobalOverview.stx
+lib/zope/lib/python/Products/Silva/docs/MetadataTab.stx
+lib/zope/lib/python/Products/Silva/docs/PreviewTab.stx
+lib/zope/lib/python/Products/Silva/docs/PublishTab.stx
+lib/zope/lib/python/Products/Silva/docs/README.stx
+lib/zope/lib/python/Products/Silva/docs/SilvaDeveloper.stx
+lib/zope/lib/python/Products/Silva/docs/SiteManager.stx
+lib/zope/lib/python/Products/Silva/docs/SquidNotes.stx
+lib/zope/lib/python/Products/Silva/docs/TemplateDesign.stx
+lib/zope/lib/python/Products/Silva/docs/ZeoClusterNotes.stx
 lib/zope/lib/python/Products/Silva/helpers.py
 lib/zope/lib/python/Products/Silva/helpers.pyc
 lib/zope/lib/python/Products/Silva/tests/__init__.py
+lib/zope/lib/python/Products/Silva/tests/test_CatalogedVersioning.py
 lib/zope/lib/python/Products/Silva/tests/test_Container.py
 lib/zope/lib/python/Products/Silva/tests/test_Copy.py
 lib/zope/lib/python/Products/Silva/tests/test_Ghost.py
@@ -76,12 +117,18 @@ lib/zope/lib/python/Products/Silva/tests/test_VersionedContent.py
 lib/zope/lib/python/Products/Silva/tests/test_Versioning.py
 lib/zope/lib/python/Products/Silva/tests/test_all.py
 lib/zope/lib/python/Products/Silva/version.txt
+lib/zope/lib/python/Products/Silva/www/catalogedDemoObjectAdd.zpt
+lib/zope/lib/python/Products/Silva/www/catalogedDemoObjectVersionAdd.zpt
 lib/zope/lib/python/Products/Silva/www/contactInfoAdd.zpt
 lib/zope/lib/python/Products/Silva/www/demoObjectAdd.zpt
 lib/zope/lib/python/Products/Silva/www/demoObjectVersionAdd.zpt
 lib/zope/lib/python/Products/Silva/www/documentAdd.zpt
 lib/zope/lib/python/Products/Silva/www/documentEdit.zpt
 lib/zope/lib/python/Products/Silva/www/documentPreview.zpt
+lib/zope/lib/python/Products/Silva/www/fileAdd.zpt
+lib/zope/lib/python/Products/Silva/www/filesServiceAdd.zpt
+lib/zope/lib/python/Products/Silva/www/filesServiceEdit.zpt
+lib/zope/lib/python/Products/Silva/www/files_service.gif
 lib/zope/lib/python/Products/Silva/www/folderAdd.zpt
 lib/zope/lib/python/Products/Silva/www/folderEdit.zpt
 lib/zope/lib/python/Products/Silva/www/ghostAdd.zpt
@@ -104,5 +151,5 @@ lib/zope/lib/python/Products/Silva/www/viewRegistryAdd.zpt
 lib/zope/lib/python/Products/Silva/www/viewRegistryAssociations.zpt
 @dirrm lib/zope/lib/python/Products/Silva/www
 @dirrm lib/zope/lib/python/Products/Silva/tests
-@dirrm lib/zope/lib/python/Products/Silva/doc
+@dirrm lib/zope/lib/python/Products/Silva/docs
 @dirrm lib/zope/lib/python/Products/Silva
