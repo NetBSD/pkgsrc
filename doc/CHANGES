@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5153 2004/03/08 15:49:21 jmmv Exp $
+$NetBSD: CHANGES,v 1.5154 2004/03/08 16:25:47 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1245,3 +1245,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mldonkey to 2.5.14 [wiz 2004-03-08]
 	Updated sylpheed-claws to 0.9.10 [adam 2004-03-08]
         Updated gossip to 0.7.2 [jmmv 2004-03-08]
+	Removed gnuchess-book-small [minskim 2004-03-08]
