@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.37 2004/07/22 17:02:22 drochner Exp $
+# $NetBSD: tools.mk,v 1.38 2004/08/23 09:33:25 seb Exp $
 #
 # This Makefile creates a ${TOOLS_DIR} directory and populates the bin
 # subdir with tools that hide the ones outside of ${TOOLS_DIR}.
@@ -43,11 +43,13 @@ _HIDE_PROGS.automake=	bin/aclocal	bin/aclocal-1.4			\
 					bin/aclocal-1.6			\
 					bin/aclocal-1.7			\
 					bin/aclocal-1.8			\
+					bin/aclocal-1.9			\
 			bin/automake	bin/automake-1.4		\
 					bin/automake-1.5		\
 					bin/automake-1.6		\
 					bin/automake-1.7		\
-					bin/automake-1.8
+					bin/automake-1.8		\
+					bin/automake-1.9
 
 .if empty(AUTOMAKE_OVERRIDE:M[nN][oO])
 _CONFIGURE_PREREQ+=	override-autotools
