@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 1999/09/24 01:00:05 fredb Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/12/02 21:19:14 fredb Exp $
 bin/type1afm
 bin/xglyph
 include/t1lib.h
 include/t1libx.h
 lib/libt1.a
 lib/libt1x.a
-lib/libt1.so.9.2
-lib/libt1x.so.9.2
+lib/libt1.so.1.0
+lib/libt1x.so.1.0
 share/doc/t1lib/Makefile
 share/doc/t1lib/Makefile.in
 share/doc/t1lib/Tee.eps
@@ -59,6 +59,7 @@ share/t1lib/Fonts/afm/eufm10.afm
 @dirrm share/t1lib/Fonts/afm
 share/t1lib/Fonts/enc/IsoLatin1.enc
 share/t1lib/Fonts/enc/IsoLatin2.enc
+share/t1lib/Fonts/enc/PSLatin1.enc
 @dirrm share/t1lib/Fonts/enc
 share/t1lib/Fonts/type1/README
 share/t1lib/Fonts/type1/bchb.pfb

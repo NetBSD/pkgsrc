@@ -1,16 +1,7 @@
-$NetBSD: patch-aa,v 1.3 1999/11/14 04:45:17 fredb Exp $
+$NetBSD: patch-aa,v 1.4 1999/12/02 21:19:13 fredb Exp $
 
---- configure.orig	Wed Aug  4 05:59:31 1999
-+++ configure	Sat Nov 13 22:25:24 1999
-@@ -635,7 +635,7 @@
- test -z "$CFLAGS"                 
- test -z "$LDFLAGS"                
- 
--T1LIB_DATA_DIR="${datadir}/t1lib-${T1LIB_VERSION}.${T1LIB_REVISION}"
-+T1LIB_DATA_DIR="${datadir}/t1lib"
- 
- 
- 
+--- configure.orig	Sun Oct 24 06:00:22 1999
++++ configure	Thu Dec  2 14:34:33 1999
 @@ -2277,7 +2277,7 @@
  fi
  
@@ -20,12 +11,18 @@ $NetBSD: patch-aa,v 1.3 1999/11/14 04:45:17 fredb Exp $
  
  # Check for any special flags to pass to ltconfig.
  libtool_flags=
-@@ -2384,7 +2384,7 @@
+@@ -2380,11 +2380,11 @@
  
- test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL_PROGRAM}'
+ # Use test -z because SunOS4 sh mishandles braces in ${var-val}.
+ # It thinks the first close brace ends the variable substitution.
+-test -z "$INSTALL_PROGRAM" && INSTALL_PROGRAM='${INSTALL}'
++test -z "$INSTALL_PROGRAM" && INSTALL_PROGRAM='${BSD_INSTALL_PROGRAM}'
+ 
+-test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL_PROGRAM}'
++test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${BSD_INSTALL_SCRIPT}'
  
 -test -z "$INSTALL_DATA" && INSTALL_DATA='${INSTALL} -m 644'
-+test -z "$INSTALL_DATA" && INSTALL_DATA='${INSTALL} -c -m 644'
++test -z "$INSTALL_DATA" && INSTALL_DATA='${BSD_INSTALL_DATA}'
  
  
  
