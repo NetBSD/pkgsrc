@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/06 15:35:23 taca Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/07 03:40:20 taca Exp $
 
 DISTNAME=	installpkg-0.0.1
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
@@ -10,6 +10,7 @@ MAINTAINER=	rasputin@idoru.mine.nu
 HOMEPAGE=	# not available
 COMMENT=	Ruby module for writing install.rb files
 
+DIST_SUBDIR=	ruby
 USE_RUBY=	yes
 NO_BUILD=	yes
 
