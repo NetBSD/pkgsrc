@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2003/09/28 09:13:57 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2004/04/25 01:46:11 snj Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -27,6 +27,8 @@ XAW_TYPE=		standard
 MAKE_ENV+=		XAW_LIB="Xaw"
 .endif
 
+LIBS+=			-lXaw
+
 post-install:
 	for f in gvim.1 gview.1 rgvim.1 rgview.1; do			\
 		${RM} -f ${PREFIX}/man/man1/$$f;			\
@@ -37,8 +39,8 @@ post-install:
 		${LN} -s vim ${PREFIX}/bin/$$f;				\
 	done
 
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../mk/xaw.buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../mk/xaw.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
