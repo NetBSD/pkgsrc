@@ -1,6 +1,6 @@
-# $NetBSD: builtin.mk,v 1.11 2004/12/24 22:02:38 jlam Exp $
+# $NetBSD: builtin.mk,v 1.12 2005/03/23 09:06:38 jlam Exp $
 
-_OPENSSL_PKGSRC_PKGNAME=	openssl-0.9.7e
+_OPENSSL_PKGSRC_PKGNAME=	openssl-0.9.7f
 _OPENSSL_OPENSSLV_H=		/usr/include/openssl/opensslv.h
 
 .for _lib_ in des
