@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1999/05/30 03:21:58 christos Exp $
+# $NetBSD: Makefile,v 1.21 1999/05/30 14:02:52 tv Exp $
 #
 
 # Note to package maintainers:
@@ -16,8 +16,6 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.netbsd.org/
 
-LOCALBASE=		/usr
-PREFIX=			${LOCALBASE}
 WRKSRC=			${WRKDIR}/pkg_install
 MAKE_ENV+=		BINDIR=/usr/sbin MANDIR=/usr/share/man NOLINT=1
 NO_CONFIGURE=		yes
@@ -28,6 +26,7 @@ NO_PACKAGE=		No package registration is done
 
 .include "../../mk/bsd.prefs.mk"
 
+LOCALBASE=		/usr
 .ifdef MANZ
 MANCOMPRESSED=		yes
 .endif
