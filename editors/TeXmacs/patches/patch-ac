@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2003/01/30 00:08:58 jmmv Exp $
+$NetBSD: patch-ac,v 1.2 2004/01/01 12:30:56 recht Exp $
 
---- misc/scripts/texmacs.in.in.orig	Thu Apr 11 15:10:07 2002
-+++ misc/scripts/texmacs.in.in
-@@ -12,7 +12,7 @@ else
+--- misc/scripts/texmacs.in.in.orig	2003-12-28 17:18:08.000000000 +0100
++++ misc/scripts/texmacs.in.in	2003-12-29 18:02:19.000000000 +0100
+@@ -12,7 +12,7 @@
    export TEXMACS_BIN_PATH
  fi
  

@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.4 2002/12/04 09:35:48 jmmv Exp $
+$NetBSD: patch-aa,v 1.5 2004/01/01 12:30:56 recht Exp $
 
---- Makefile.in.orig	Thu Nov 28 00:55:59 2002
-+++ Makefile.in
-@@ -89,7 +89,7 @@ INSTALL:
+--- Makefile.in.orig	2003-12-28 17:18:07.000000000 +0100
++++ Makefile.in	2003-12-29 18:03:37.000000000 +0100
+@@ -136,7 +136,7 @@
  	@echo installed TeXmacs executables in $(DESTDIR)$(tmbin)
  	$(MKDIR) $(DESTDIR)$(tmdata)
  	$(CP) $(tmdir)/LICENSE $(DESTDIR)$(tmdata)
 -	$(CP) $(tmdir)/doc $(DESTDIR)$(tmdata)
 +	$(CP) $(tmdir)/doc $(DESTDIR)$(datadir)/doc/TeXmacs
+ 	$(CP) $(tmdir)/examples $(DESTDIR)$(tmdata)
  	$(CP) $(tmdir)/fonts $(DESTDIR)$(tmdata)
  	$(CP) $(tmdir)/langs $(DESTDIR)$(tmdata)
- 	$(CP) $(tmdir)/misc $(DESTDIR)$(tmdata)
-@@ -112,10 +112,8 @@ INSTALL:
+@@ -166,10 +166,8 @@
  	$(MKDIR) $(DESTDIR)$(mandir)/man1
  	$(CP) misc/man/fig2ps.1 $(DESTDIR)$(mandir)/man1
  	$(CP) misc/man/texmacs.1 $(DESTDIR)$(mandir)/man1
