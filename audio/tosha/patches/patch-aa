@@ -1,53 +1,3 @@
---- Makefile.orig	Wed May 21 01:57:17 1997
-+++ Makefile	Mon Nov 24 23:37:28 1997
-@@ -5,7 +5,6 @@
- #   Wed May 21 01:51:37 MET DST 1997
- #
- 
--PREFIX=/usr/local
- BINDIR=$(PREFIX)/bin
- MANDIR=$(PREFIX)/man
- SECTION=1
-@@ -16,9 +15,11 @@
- ######                                       ######
- ###################################################
- 
--CFLAGS=-O2 -Wall -ansi
-+# CFLAGS=-O2 -Wall -ansi
- # CFLAGS=-g -Wall -ansi -pedantic
- 
-+CFLAGS = -I${PREFIX}/include -L${PREFIX}/lib
-+
- all:	tosha pcmplay pcmfade
- 
- utils.o:	utils.c utils.h
-@@ -26,12 +27,13 @@
- tosha.o:	tosha.c utils.h getlopt.h
- pcmplay.o:	pcmplay.c utils.h getlopt.h
- pcmfade.o:	pcmfade.c utils.h
-+scsi.o:		scsi.c scsi.h
- 
--tosha:	tosha.o utils.o getlopt.o
--	$(CC) $(CFLAGS) -o tosha -lscsi tosha.o utils.o getlopt.o
-+tosha:	tosha.o utils.o getlopt.o scsi.o
-+	$(CC) $(CFLAGS) -o tosha tosha.o utils.o getlopt.o scsi.o
- 
- pcmplay:	pcmplay.o utils.o getlopt.o
--	$(CC) $(CFLAGS) -o pcmplay pcmplay.o utils.o getlopt.o
-+	$(CC) $(CFLAGS) -o pcmplay pcmplay.o utils.o getlopt.o -lossaudio
- 
- pcmfade:	pcmfade.o utils.o
- 	$(CC) $(CFLAGS) -o pcmfade pcmfade.o utils.o
-@@ -40,9 +42,6 @@
- 	install -s -g bin -o bin -m 755 tosha pcmplay pcmfade $(BINDIR)
- 	install -c -g bin -o bin -m 644 tosha.1 pcmplay.1 pcmfade.1 \
- 		$(MANDIR)/man$(SECTION)
--	gzip -f -9 $(MANDIR)/man$(SECTION)/tosha.1 \
--		$(MANDIR)/man$(SECTION)/pcmplay.1 \
--		$(MANDIR)/man$(SECTION)/pcmfade.1
- 
- clean:
- 	rm -f *.o *~ *core tosha pcmplay pcmfade
 --- /dev/null	Mon Nov 24 22:32:47 1997
 +++ scsi.h	Mon Nov 24 23:35:25 1997
 @@ -0,0 +1,86 @@
@@ -1444,18 +1394,19 @@
 +int scsi_open __P((const char *, int ));
 +
 +#endif /* _SCSI_H_ */
---- tosha.c.orig	Wed May 21 02:11:49 1997
-+++ tosha.c	Thu Nov 27 19:09:29 1997
-@@ -49,7 +49,7 @@
+--- tosha.c.orig	Wed May 21 01:11:49 1997
++++ tosha.c	Wed May 13 11:39:09 1998
+@@ -49,7 +49,8 @@
  #include <sys/uio.h>
  #include <sys/scsiio.h>
  #include <unistd.h>
 -#include <scsi.h>
++#include <util.h>
 +#include "scsi.h"
  extern int errno;
  
  /*
-@@ -93,7 +93,7 @@
+@@ -93,7 +94,7 @@
  #include "getlopt.h"
  
  typedef unsigned char byte;
@@ -1464,16 +1415,25 @@
  
  struct scsireq *sreq;	/* SCSI device request structure */
  int scsifd;		/* SCSI device file descriptor */
-@@ -182,7 +182,7 @@
+@@ -182,7 +183,7 @@
  
  char *tracklstr	= "1-100";
  char *outname 	= "track%02d.pcm";
 -char *device	= "/dev/cd0c";
-+char *device	= "/dev/cd0d";
++char device[256];
  int indexonly	= FALSE;
  int quiet	= FALSE;
  int verbose	= FALSE;
-@@ -647,7 +647,8 @@
+@@ -464,6 +465,8 @@
+ 	int singlefile = FALSE;
+ 	int modechange = TRUE, denschange = 0;
+ 
++	(void) snprintf(device, sizeof(device), "/dev/cd0%c", getrawpartition() + 'a');
++
+ 	utils_init (argv[0]);
+ #ifdef DEBUG
+ 	fprintf (stderr, "%s: DEBUG mode is ON.\n", me);
+@@ -647,7 +650,8 @@
  					fprintf (stderr, "  Reading ...\r");
  			}
  			else {
@@ -1483,3 +1443,53 @@
  				if (!quiet)
  					fprintf (stderr, verbose ?
  						"  (output file: %s)\n" :
+--- Makefile.orig	Wed May 21 00:57:17 1997
++++ Makefile	Wed May 13 11:40:21 1998
+@@ -5,7 +5,6 @@
+ #   Wed May 21 01:51:37 MET DST 1997
+ #
+ 
+-PREFIX=/usr/local
+ BINDIR=$(PREFIX)/bin
+ MANDIR=$(PREFIX)/man
+ SECTION=1
+@@ -16,9 +15,11 @@
+ ######                                       ######
+ ###################################################
+ 
+-CFLAGS=-O2 -Wall -ansi
++# CFLAGS=-O2 -Wall -ansi
+ # CFLAGS=-g -Wall -ansi -pedantic
+ 
++CFLAGS = -I${PREFIX}/include -L${PREFIX}/lib
++
+ all:	tosha pcmplay pcmfade
+ 
+ utils.o:	utils.c utils.h
+@@ -26,12 +27,13 @@
+ tosha.o:	tosha.c utils.h getlopt.h
+ pcmplay.o:	pcmplay.c utils.h getlopt.h
+ pcmfade.o:	pcmfade.c utils.h
++scsi.o:		scsi.c scsi.h
+ 
+-tosha:	tosha.o utils.o getlopt.o
+-	$(CC) $(CFLAGS) -o tosha -lscsi tosha.o utils.o getlopt.o
++tosha:	tosha.o utils.o getlopt.o scsi.o
++	$(CC) $(CFLAGS) -o tosha tosha.o utils.o getlopt.o scsi.o -lutil
+ 
+ pcmplay:	pcmplay.o utils.o getlopt.o
+-	$(CC) $(CFLAGS) -o pcmplay pcmplay.o utils.o getlopt.o
++	$(CC) $(CFLAGS) -o pcmplay pcmplay.o utils.o getlopt.o -lossaudio
+ 
+ pcmfade:	pcmfade.o utils.o
+ 	$(CC) $(CFLAGS) -o pcmfade pcmfade.o utils.o
+@@ -40,9 +42,6 @@
+ 	install -s -g bin -o bin -m 755 tosha pcmplay pcmfade $(BINDIR)
+ 	install -c -g bin -o bin -m 644 tosha.1 pcmplay.1 pcmfade.1 \
+ 		$(MANDIR)/man$(SECTION)
+-	gzip -f -9 $(MANDIR)/man$(SECTION)/tosha.1 \
+-		$(MANDIR)/man$(SECTION)/pcmplay.1 \
+-		$(MANDIR)/man$(SECTION)/pcmfade.1
+ 
+ clean:
+ 	rm -f *.o *~ *core tosha pcmplay pcmfade
