@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/05/20 14:19:27 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/11 17:17:19 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -11,12 +11,14 @@ MAINTAINER=		grant@netbsd.org
 HOMEPAGE=		http://www.mozilla.org/
 COMMENT=		Full featured gecko-based browser (binary pkg)
 
-ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386
+ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386 SunOS-5.[789]*-sparc
 
 CONFLICTS+=		mozilla-linux-[0-9]*
 
 NO_CONFIGURE=		# defined
 USE_PKGINSTALL=		YES
+
+.include "../../mk/bsd.prefs.mk"
 
 FILES_SUBST+=		PLATFORM=${PLATFORM}
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
@@ -30,6 +32,9 @@ post-build:
 do-install:
 	${INSTALL_DATA_DIR} ${MOZILLA_LIB}
 	cd ${WRKSRC} && ${PAX} -rw -pm . ${MOZILLA_LIB}
+	cd ${MOZILLA_LIB} && \
+		${FIND} . -perm -u+x | ${XARGS} ${CHMOD} +x; \
+		${FIND} . -perm -u+r | ${XARGS} ${CHMOD} +r
 	${INSTALL_SCRIPT} ${WRKDIR}/mozilla.sh ${PREFIX}/bin/mozilla-${PLATFORM}
 
 post-install:
@@ -38,6 +43,16 @@ post-install:
 	@${FIND} ${MOZILLA_LIB} \( -type f -o -type l \) -print		\
 		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"			\
 		>> ${PLIST_SRC}
+# this build for Solaris wants exactly 'libgtk-1.2.so.0'
+.if ${OPSYS} == "SunOS"
+	@cd ${MOZILLA_LIB} && \
+	${LN} -s ${LOCALBASE}/lib/libglib.so libglib-1.2.so.0; \
+	${LN} -s ${X11BASE}/lib/libgdk.so libgdk-1.2.so.0; \
+	${LN} -s ${X11BASE}/lib/libgtk.so libgtk-1.2.so.0
+.  for _lib_ in glib gdk gtk
+	@${ECHO} lib/mozilla-${PLATFORM}/lib${_lib_}-1.2.so.0 >> ${PLIST_SRC}
+.  endfor
+.endif
 	@${FIND} ${MOZILLA_LIB} -type d -print				\
 		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
 		>> ${PLIST_SRC}
