@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/01/26 10:14:43 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/01/26 10:17:35 tron Exp $
 OpenOffice.org1.1.0/LICENSE
 OpenOffice.org1.1.0/LICENSE.html
 OpenOffice.org1.1.0/README
@@ -189,6 +189,7 @@ OpenOffice.org1.1.0/program/filter/libept645li.so
 OpenOffice.org1.1.0/program/filter/libera645li.so
 OpenOffice.org1.1.0/program/filter/libeti645li.so
 OpenOffice.org1.1.0/program/filter/libexp645li.so
+OpenOffice.org1.1.0/program/filter/libfreetype.so.6
 OpenOffice.org1.1.0/program/filter/libicd645li.so
 OpenOffice.org1.1.0/program/filter/libicg645li.so
 OpenOffice.org1.1.0/program/filter/libidx645li.so
@@ -254,7 +255,6 @@ OpenOffice.org1.1.0/program/libfile645li.so
 OpenOffice.org1.1.0/program/libfileacc.so
 OpenOffice.org1.1.0/program/libflash645li.so
 OpenOffice.org1.1.0/program/libflat645li.so
-OpenOffice.org1.1.0/program/libfreetype.so.6
 OpenOffice.org1.1.0/program/libfrm645li.so
 OpenOffice.org1.1.0/program/libfwe645li.so
 OpenOffice.org1.1.0/program/libfwi645li.so
