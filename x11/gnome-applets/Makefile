@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2003/01/10 07:58:08 cjep Exp $
+# $NetBSD: Makefile,v 1.26 2003/02/18 14:56:03 jmmv Exp $
 #
 
 DISTNAME=		gnome-applets-1.4.0.4
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-applets/1.4/}
 EXTRACT_SUFX=		.tar.bz2
@@ -22,9 +22,8 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=        --localstatedir=${SCROLLKEEPER_DATADIR}
 
-.include "../../textproc/scrollkeeper/buildlink2.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-core/buildlink2.mk"
 .include "../../devel/libgtop/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

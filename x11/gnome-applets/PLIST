@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/10/08 17:50:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/02/18 14:56:03 jmmv Exp $
 bin/another_clock_applet
 bin/asclock_applet
 bin/battery_applet
@@ -1526,6 +1526,7 @@ share/xmodmap/xmodmap.yu
 @dirrm share/pixmaps/gweather
 @dirrm share/pixmaps/gkb
 @dirrm share/omf/gnome-applets
+@comment in scrollkeeper: @dirrm share/omf
 @dirrm share/odometer/smplst
 @dirrm share/odometer/o
 @dirrm share/odometer/default
@@ -1962,5 +1963,3 @@ share/xmodmap/xmodmap.yu
 @dirrm share/asclock/Newstone
 @dirrm share/asclock/Freeamp
 @dirrm share/asclock
-@unexec scrollkeeper-rebuilddb
-@exec scrollkeeper-rebuilddb

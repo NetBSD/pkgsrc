@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/01/27 12:31:29 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/02/18 14:55:55 jmmv Exp $
 bin/cddbslave
 bin/cddbsubmit
 bin/gmix
@@ -70,6 +70,7 @@ share/pixmaps/gnome-vumeter.png
 share/mime-info/grecord.keys
 share/mime-info/grecord.mime
 @dirrm share/omf/gnome-media
+@comment in scrollkeeper: @dirrm share/omf
 @exec ${MKDIR} %D/share/gnome/help/gmix/it/stylesheet-images
 @dirrm share/gnome/help/gmix/it/stylesheet-images
 @dirrm share/gnome/help/gmix/it/figures
@@ -80,5 +81,3 @@ share/mime-info/grecord.mime
 @dirrm share/gnome/help/gmix/C
 @dirrm share/gnome/help/gmix
 @comment in gnome-dirs: @dirrm share/gnome/apps/Multimedia
-@unexec scrollkeeper-rebuilddb
-@exec scrollkeeper-rebuilddb

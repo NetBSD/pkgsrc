@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/02/14 21:13:35 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/02/18 14:56:04 jmmv Exp $
 bin/gnome2-terminal
 lib/bonobo/servers/gnome-terminal.server
 share/applications/gnome-terminal.desktop
@@ -42,6 +42,7 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-terminal.mo
 share/omf/gnome-terminal/gnome-terminal-C.omf
 share/pixmaps/gnome-terminal.png
 @dirrm share/omf/gnome-terminal
+@comment in scrollkeeper: @dirrm share/omf
 @dirrm share/gnome/help/gnome-terminal/C/figures
 @dirrm share/gnome/help/gnome-terminal/C
 @dirrm share/gnome/help/gnome-terminal

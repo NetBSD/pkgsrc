@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/02/14 21:10:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/02/18 14:55:57 jmmv Exp $
 #
 
 DISTNAME=		gedit-2.2.0.1
+PKGREVISION=		1
 CATEGORIES=		editors gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gedit/2.2/}
 EXTRACT_SUFX=		.tar.bz2
@@ -21,11 +22,10 @@ USE_X11=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-CONFIGURE_ARGS+=	--localstatedir=${SCROLLKEEPER_DATADIR}
 
 GCONF2_SCHEMAS=		gedit.schemas
 
-.include "../../textproc/scrollkeeper/buildlink2.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
 .include "../../print/libgnomeprintui/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/GConf2/schemas.mk"
