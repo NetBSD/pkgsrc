@@ -1,0 +1,4 @@
+# $NetBSD: Setup.in,v 1.1.1.1 1999/05/02 17:48:37 tsarna Exp $
+
+*shared*
+gd gdmodule.c -I@PREFIX@/include/gd -L@PREFIX@/lib -R@PREFIX@/lib -lgd
