@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.196 2000/12/15 23:31:15 wiz Exp $
+# $NetBSD: Makefile,v 1.197 2000/12/17 23:40:53 wiz Exp $
 #
 
     SUBDIR += 9term
@@ -7,25 +7,18 @@
     SUBDIR += Xaw3d
     SUBDIR += Xbae
     SUBDIR += XmHTML
-    SUBDIR += asclock
-    SUBDIR += asclock-gtk
-    SUBDIR += asclock-xlib
     SUBDIR += ascp
     SUBDIR += blt
-    SUBDIR += catclock
     SUBDIR += controlcenter
-    SUBDIR += dclock
     SUBDIR += dxpc
     SUBDIR += ebuilder
     SUBDIR += econf
     SUBDIR += egtk
-    SUBDIR += emiclock
     SUBDIR += eterm
     SUBDIR += filerunner
     SUBDIR += fltk
     SUBDIR += fvwm-wharf
     SUBDIR += gdm
-    SUBDIR += glclock
     SUBDIR += gnome
     SUBDIR += gnome-applets
     SUBDIR += gnome-core
@@ -54,7 +47,6 @@
     SUBDIR += openmotif
     SUBDIR += p5-Tk
     SUBDIR += p5-gtk
-    SUBDIR += polclock
     SUBDIR += py-Tk
     SUBDIR += py-wxWindows
     SUBDIR += qt1
@@ -65,16 +57,12 @@
     SUBDIR += qtarch
     SUBDIR += qwspritefield
     SUBDIR += qwt
-    SUBDIR += rclock
     SUBDIR += rep-gtk
     SUBDIR += ruby-Tk
     SUBDIR += ruby-gtk
     SUBDIR += rxvt
     SUBDIR += speyes
-    SUBDIR += sunclock
     SUBDIR += swing
-    SUBDIR += swisswatch
-    SUBDIR += titrax
     SUBDIR += tix
     SUBDIR += tk
     SUBDIR += tkinfo
@@ -82,13 +70,10 @@
     SUBDIR += type1inst
     SUBDIR += unclutter
     SUBDIR += wmavgload
-    SUBDIR += wmcalclock
     SUBDIR += wmessage
     SUBDIR += wmextra
     SUBDIR += wmfire
     SUBDIR += wmfstatus
-    SUBDIR += wmmoonclock
-    SUBDIR += wmtime
     SUBDIR += wmweather
     SUBDIR += wterm
     SUBDIR += wxGTK
@@ -98,15 +83,12 @@
     SUBDIR += xaniroc
     SUBDIR += xautolock
     SUBDIR += xbanner
-    SUBDIR += xbeats
-    SUBDIR += xcal
     SUBDIR += xcb
     SUBDIR += xcolors
     SUBDIR += xcolorsel
     SUBDIR += xcruise
     SUBDIR += xdaemon
     SUBDIR += xdaemon2
-    SUBDIR += xdaliclock
     SUBDIR += xdialog
     SUBDIR += xdm3d
     SUBDIR += xearth
@@ -144,7 +126,6 @@
     SUBDIR += xteddy
     SUBDIR += xteddy2
     SUBDIR += xtermset
-    SUBDIR += xtimer
     SUBDIR += xview
     SUBDIR += xview-clients
     SUBDIR += xview-config
