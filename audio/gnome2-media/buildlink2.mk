@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.7 2003/12/13 00:45:21 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2003/12/31 02:30:22 xtraeme Exp $
 #
 # This Makefile fragment is included by packages that use gnome-media.
 #
@@ -9,7 +9,7 @@
 GNOME_MEDIA_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gnome-media
-BUILDLINK_DEPENDS.gnome-media?=		gnome-media>=2.2.1.1nb5
+BUILDLINK_DEPENDS.gnome-media?=		gnome-media>=2.4.1.1
 BUILDLINK_PKGSRCDIR.gnome-media?=		../../audio/gnome2-media
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gnome-media=gnome-media
@@ -19,12 +19,14 @@ BUILDLINK_FILES.gnome-media+=	lib/bonobo/servers/GNOME_Media_CDDBSlave2.server
 BUILDLINK_FILES.gnome-media+=	lib/libcddb-slave2.*
 
 .include "../../audio/esound/buildlink2.mk"
-.include "../../misc/gst-plugins/buildlink2.mk"
-.include "../../misc/gstreamer/buildlink2.mk"
+.include "../../gnome-2.4/gst-plugins/buildlink2.mk"
+.include "../../gnome-2.4/gstreamer/buildlink2.mk"
 .include "../../devel/GConf2-ui/buildlink2.mk"
 .include "../../devel/gail/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../net/ORBit2/buildlink2.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
+.include "../../devel/libbonobo/buildlink2.mk"
 .include "../../x11/gnome-desktop/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	gnome-media-buildlink
