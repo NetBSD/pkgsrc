@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2004/10/20 19:00:05 adrianp Exp $
+# $NetBSD: Makefile,v 1.58 2004/11/17 02:38:19 xtraeme Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -50,11 +50,14 @@ SUBDIR+=	mkvtoolnix
 SUBDIR+=	mmg
 SUBDIR+=	moz-bin-flash
 SUBDIR+=	moz-flash
-SUBDIR+=	moz-mplayer
 SUBDIR+=	mpeg-lib
 SUBDIR+=	mpeg_encode
 SUBDIR+=	mpeg_play
 SUBDIR+=	mplayer
+SUBDIR+=	mplayer-plugin-firefox
+SUBDIR+=	mplayer-plugin-firefox-gtk2
+SUBDIR+=	mplayer-plugin-mozilla
+SUBDIR+=	mplayer-plugin-mozilla-gtk2
 SUBDIR+=	mplayer-share
 SUBDIR+=	mplex
 SUBDIR+=	nautilus-media
