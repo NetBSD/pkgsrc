@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.72 2001/10/30 14:17:19 damon Exp $
+$NetBSD: TODO,v 1.73 2001/12/08 06:14:09 wiz Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
@@ -72,8 +72,6 @@ pksgrc TODO (Suggested pkgsrc features and enhancements)
 	o Add a USE_PTHREADS variable with ALT_PTHREADS override.
 
 	o Add a sort check to pkglint for PLISTs.
-
-	o Add a method to provide distfile-specific MASTER_SITES  [PR pkg/7471]
 
 	o Make pkgsrc work under HP-UX. (10.20, I mean)  I (IMHO) finished the
 	  modifications for bsd.pkg.mk and will commit them after freeze.  The
