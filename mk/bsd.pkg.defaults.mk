@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.265 2004/07/27 03:59:26 xtraeme Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.266 2004/07/27 10:34:53 xtraeme Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -221,7 +221,11 @@ FETCH_CMD?=             /usr/bin/ftp
 # Default: NetBSD's ftp(1).
 # Possible: any.
 
+.if ${FETCH_CMD:T} == "ftp"
 FETCH_RESUME_ARGS?=	-R
+.else
+FETCH_RESUME_ARGS?=	# empty
+.endif
 # Default argument to resume transferencies on pkgsrc, when using ftp(1)
 # from NetBSD/pkgsrc.
 # Default: -R
