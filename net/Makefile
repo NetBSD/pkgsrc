@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.171 2000/12/12 10:29:19 rh Exp $
+# $NetBSD: Makefile,v 1.172 2000/12/15 00:41:00 wiz Exp $
 #
 
     SUBDIR += airportbasestationconfig
@@ -34,7 +34,6 @@
     SUBDIR += fair-identd
     SUBDIR += fping
     SUBDIR += freewais-sf
-    SUBDIR += gaim
     SUBDIR += gated
     SUBDIR += gnapfetch
     SUBDIR += gnapster
@@ -43,26 +42,18 @@
     SUBDIR += gtk-gnutella
     SUBDIR += gtksamba
     SUBDIR += gtm
-    SUBDIR += icb
-    SUBDIR += icqlib
     SUBDIR += icsi-finger
-    SUBDIR += ircII
-    SUBDIR += ircu
     SUBDIR += irrd
     SUBDIR += isic
     SUBDIR += ispman
     SUBDIR += jwhois
     SUBDIR += kdenetwork
-    SUBDIR += kicq
     SUBDIR += kmap
-    SUBDIR += kxicq
     SUBDIR += lftp
-    SUBDIR += libirc
     SUBDIR += libnids
     SUBDIR += libpcap
     SUBDIR += libsscript
     SUBDIR += lukemftp
-    SUBDIR += micq
     SUBDIR += mirror
     SUBDIR += mouse-pppoe
     SUBDIR += mrt
@@ -110,7 +101,6 @@
     SUBDIR += sdist
     SUBDIR += sendfile
     SUBDIR += sftp
-    SUBDIR += sirc
     SUBDIR += sitescooper
     SUBDIR += sniffit
     SUBDIR += snort
@@ -125,9 +115,7 @@
     SUBDIR += tcpillust
     SUBDIR += tcptrace
     SUBDIR += tinyfugue
-    SUBDIR += tkicb
     SUBDIR += tkined
-    SUBDIR += tkirc
     SUBDIR += tn5250
     SUBDIR += totd
     SUBDIR += trafshow
@@ -146,15 +134,12 @@
     SUBDIR += wmpload
     SUBDIR += wu-ftpd
     SUBDIR += xarchie
-    SUBDIR += xchat
     SUBDIR += xipdump
     SUBDIR += xspeakfree
     SUBDIR += xtraceroute
     SUBDIR += ytalk
     SUBDIR += ywho
     SUBDIR += zebra
-    SUBDIR += zenicb
     SUBDIR += zephyr
-    SUBDIR += zircon
 
 .include "../mk/bsd.pkg.subdir.mk"
