@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2003/06/11 20:50:53 abs Exp $
+# $NetBSD: Makefile,v 1.10 2003/06/18 09:22:18 agc Exp $
 
 DISTNAME=	stella-1.1-src
 PKGNAME=	stella-1.1
-WRKSRC=		${WRKDIR}/${PKGNAME}/src/build
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}/src/build
 CATEGORIES=	emulators
 MASTER_SITES=	ftp://ftp.eos.ncsu.edu/pub/bsvc/stella/1.1/
 

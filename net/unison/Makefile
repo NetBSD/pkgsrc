@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2003/06/02 01:17:39 jschauma Exp $
+# $NetBSD: Makefile,v 1.13 2003/06/18 09:22:24 agc Exp $
 #
 
 DISTNAME=	src
 PKGNAME=	unison-2.9.1
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	net
 MASTER_SITES=	http://www.cis.upenn.edu/~bcpierce/unison/download/stable/latest/
 
@@ -14,7 +14,7 @@ COMMENT=	file-synchronization tool
 BUILD_DEPENDS=	ocaml>=3.00:../../lang/ocaml
 BUILD_DEPENDS+=	bash>=2.05:../../shells/bash2
 
-DIST_SUBDIR=	${PKGNAME}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 # docs: unison-manual.pdf/html/ps/dvi
 USE_GMAKE=	yes
