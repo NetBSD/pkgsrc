@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.8 2003/06/08 23:51:59 fredb Exp $
+# $NetBSD: buildlink2.mk,v 1.9 2003/07/14 19:01:35 fredb Exp $
 
 .if !defined(BINUTILS_BUILDLINK2_MK)
 BINUTILS_BUILDLINK2_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILDLINK_DEPENDS.binutils?=		binutils>=2.13.2.1
+BUILDLINK_DEPENDS.binutils?=		binutils>=2.14.0
 BUILDLINK_PKGSRCDIR.binutils?=		../../devel/binutils
 BUILDLINK_DEPMETHOD.binutils?=		build
 
@@ -52,7 +52,7 @@ BUILDLINK_FILES.binutils+=	include/bfdlink.h
 BUILDLINK_FILES.binutils+=	include/dis-asm.h
 BUILDLINK_FILES.binutils+=	include/symcat.h
 BUILDLINK_FILES.binutils+=	lib/libbfd.*
-#BUILDLINK_FILES.binutils+=	lib/libiberty.*
+BUILDLINK_FILES.binutils+=	lib/libiberty.*
 BUILDLINK_FILES.binutils+=	lib/libopcodes.*
 
 binutils-buildlink: _BUILDLINK_USE
