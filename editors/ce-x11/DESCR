@@ -1,0 +1,5 @@
+This editor is derived most directly from Dave Conroy's original
+MicroEmacs (uEmacs) editor, version 30, and Dan Lawrence's MicroEmacs
+v3.6.  Some stuff from mg, version 2a, has also been used.
+
+This version of ce is intended for use with the X Window System.
