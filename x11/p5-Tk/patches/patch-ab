@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2001/10/02 06:40:00 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2004/03/22 12:27:19 wiz Exp $
 
---- myConfig.orig	Fri Mar 31 05:06:53 2000
+--- myConfig.orig	Sat Feb 28 17:59:28 2004
 +++ myConfig
-@@ -153,7 +153,7 @@
+@@ -160,7 +160,7 @@ sub lX11
         if (-r $lib)
          {
           print "Using -L$_ to find $lib\n";
