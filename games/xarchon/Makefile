@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/10/27 17:14:08 agc Exp $
+# $NetBSD: Makefile,v 1.6 1999/10/27 23:56:41 hubertf Exp $
 #
 
 DISTNAME=	xarchon-0.42
@@ -8,8 +8,6 @@ MASTER_SITES=	http://xarchon.seul.org/ \
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://xarchon.seul.org/
-
-BROKEN=		Compilation problems
 
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
