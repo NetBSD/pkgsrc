@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/02/11 04:02:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.20 2004/02/11 04:36:58 xtraeme Exp $
 #
 
 DISTNAME=		balsa-2.0.16
@@ -16,7 +16,7 @@ BUILD_USES_MSGFMT=	yes
 
 USE_PERL5=		build
 USE_PKGINSTALL=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
@@ -36,20 +36,21 @@ CONF_FILES+=	${EGDIR}/${cnf} ${PKG_SYSCONFDIR}/sound/events/${cnf}
 
 .if defined(USE_OPENLDAP) && ${USE_OPENLDAP} == YES
 CONFIGURE_ARGS+=        --enable-ldap
-.include "../../databases/openldap/buildlink2.mk"
+.include "../../databases/openldap/buildlink3.mk"
 .endif
 
-.include "../../security/gpgme/buildlink2.mk"
-.include "../../devel/pcre/buildlink2.mk"
-.include "../../devel/glib2/buildlink2.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../sysutils/gnome-vfs2/buildlink2.mk"
-.include "../../print/libgnomeprintui/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
-.include "../../textproc/aspell/buildlink2.mk"
+.include "../../security/gpgme/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/libtool/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../print/libgnomeprintui/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/aspell/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../www/gtkhtml3/buildlink2.mk"
-.include "../../mail/libesmtp/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../www/gtkhtml3/buildlink3.mk"
+.include "../../mail/libesmtp/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
