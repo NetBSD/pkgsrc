@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2002/01/17 19:35:41 kleink Exp $
+
+--- common.h.orig	Fri Jan  4 21:43:54 2002
++++ common.h	Thu Jan 17 19:52:24 2002
+@@ -53,6 +53,8 @@
+ void myprintf(int verbose_level, char *output, ...);
+ //from common.c
+ void set_ttyport(char *newttyport);
++void set_ttyspeed(char *newttyspeed);
++int string_to_speed(const char *speedstring_p, speed_t *speed_p);
+ void new_at_command(char *at_command_p, char *addon_p);
+ void add_at_command(char *at_command_p, char *addon_p,...);
+ void com_mytty(char *at_command_p, char *ack_p);
