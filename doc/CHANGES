@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6695 2004/07/27 10:27:05 grant Exp $
+$NetBSD: CHANGES,v 1.6696 2004/07/27 11:49:15 simonb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3592,3 +3592,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mmg to 0.9.4 [salo 2004-07-27]
 	Updated netscape7 to 7.1nb3 [atatat 2004-07-27]
 	Updated tnftp to 20030825nb1 [grant 2004-07-27]
+	Updated clamav to 0.75 [simonb 2004-07-27]
