@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2003/09/12 20:07:16 grant Exp $
+# $NetBSD: Makefile,v 1.24 2003/09/15 13:58:37 wiz Exp $
 #
 
-DISTNAME=	angband-3.0.1
-PKGNAME=	angband-x11-3.0.1
-PKGREVISION=	1
+DISTNAME=	angband-3.0.3
+PKGNAME=	angband-x11-3.0.3
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://clockwork.dementia.org/angband/Source/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${SPOILERFILE}

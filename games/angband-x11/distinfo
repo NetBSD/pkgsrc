@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2002/07/26 22:06:46 jschauma Exp $
+$NetBSD: distinfo,v 1.7 2003/09/15 13:58:37 wiz Exp $
 
-SHA1 (angband-3.0.1.tar.gz) = 99c36a4749046f1e091cd62d62a04a81caca34ec
-Size (angband-3.0.1.tar.gz) = 1323480 bytes
+SHA1 (angband-3.0.3.tar.gz) = 026b66464732a846fe85499e155fa01974a740eb
+Size (angband-3.0.3.tar.gz) = 1374750 bytes
 SHA1 (angband-spoilers.tar.gz) = 6f5db28f686be3f41df6c22990c53f9e46a1c7cd
 Size (angband-spoilers.tar.gz) = 234909 bytes
