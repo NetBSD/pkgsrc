@@ -1,4 +1,4 @@
-# $NetBSD: STATUS,v 1.18 2003/07/06 14:08:29 grant Exp $
+# $NetBSD: STATUS,v 1.19 2003/07/10 16:03:21 grant Exp $
 
 Below is a list of packages known to build on various non-NetBSD
 platforms.  Currently, there are three categories.  If all packages in a given
@@ -49,14 +49,14 @@ audio/mpg123                                 Y      Y                  Y
 devel/cvs                  Y        Y        Y      Y        Y         Y
 devel/gettext              Y        Y        Y      Y        Y         Y
 devel/libtool              Y        Y        Y      Y        Y         Y
-devel/ncurses                                Y      Y        X*        Y
+devel/ncurses                       Y        Y      Y        X*        Y
 editors/vim                Y        Y        Y      Y                  Y
 editors/xemacs                                      Y
 editors/emacs                                Y      Y
 graphics/xfig                                       Y
 graphics/xv                Y                        Y
 lang/perl5                N/A       Y        Y      Y        N         Y
-lang/perl58                Y                 Y      Y        Y         Y
+lang/perl58                Y        Y        Y      Y        Y         Y
 mail/mutt                  Y        Y        Y      Y                  Y
 misc/screen                Y        Y        Y      Y                  Y
 net/wget                   Y        Y        Y      Y
