@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7047 2004/08/31 08:42:13 cjep Exp $
+$NetBSD: CHANGES,v 1.7048 2004/08/31 10:27:45 martti Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4117,3 +4117,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ncftp3 to 3.1.8 [recht 2004-08-30]
 	Updated pango to 1.4.1 [jmmv 2004-08-31]
 	Updated nail to 11.4 [cjep 2004-08-31]
+	Updated dropbear to 0.43 [martti 2004-08-31]
