@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2002/10/19 10:54:53 rh Exp $
+# $NetBSD: Makefile,v 1.71 2002/10/30 03:09:33 rh Exp $
 #
 
 DISTNAME=		imlib-1.9.14
@@ -13,6 +13,7 @@ COMMENT=		image manipulation library for X11
 USE_X11BASE=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+PKGCONFIG_OVERRIDE=	${WRKSRC}/imlib.pc.in
 GNU_CONFIGURE=		yes
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 USE_GMAKE=		yes

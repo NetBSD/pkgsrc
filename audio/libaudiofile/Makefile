@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/10/19 10:54:43 rh Exp $
+# $NetBSD: Makefile,v 1.26 2002/10/30 03:09:26 rh Exp $
 
 DISTNAME=		audiofile-0.2.3
 PKGNAME=		lib${DISTNAME}
@@ -15,6 +15,7 @@ USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+PKGCONFIG_OVERRIDE=	${WRKSRC}/audiofile.pc.in
 
 DOCDIR=			${PREFIX}/share/doc/libaudiofile
 

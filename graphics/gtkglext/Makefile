@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/16 03:37:02 rh Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/30 03:09:32 rh Exp $
 #
 
 DISTNAME=		gtkglext-0.5.1
@@ -17,6 +17,7 @@ USE_GMAKE=		YES
 USE_X11=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+PKGCONFIG_OVERRIDE=	${WRKSRC}/gtkglext.pc.in
 LIBS+=			-lm
 
 .include "../../textproc/gtk-doc/buildlink2.mk"
