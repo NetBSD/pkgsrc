@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.754 2003/07/30 13:50:17 wiz Exp $
+$NetBSD: TODO,v 1.755 2003/07/30 13:50:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -128,7 +128,6 @@ Suggested package updates
 	o global-4.6
 	o gnome-python-1.99.13
 	o gnomeicu-0.99
-	o gnucash-1.8.4
 	o gnuchess-5.06
 	o gnustep-0.8.8
 	o gpa-0.6.1
