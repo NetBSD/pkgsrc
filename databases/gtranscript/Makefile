@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/08/29 12:48:58 rh Exp $
+# $NetBSD: Makefile,v 1.3 1999/09/06 19:04:37 hubertf Exp $
 #
 
 DISTNAME=	gtranscript-0.0.1
@@ -17,6 +17,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://gtranscript.linuxbox.com/
 
 DEPENDS+=	gnome-core-1.0.9:../../x11/gnome-core
+DEPENDS+=	postgresql-6.4.2:../../databases/postgresql
 
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
