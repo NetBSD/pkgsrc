@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.811 2003/08/31 16:47:12 wiz Exp $
+$NetBSD: TODO,v 1.812 2003/08/31 19:21:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -100,7 +100,6 @@ Suggested package updates
 	o distcc-2.10
 	o dnetc-2.9004-482 [pkg/22390]
 	o doxygen-1.3.3
-	o dvdrip-0.50.15
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
 	o echoping-5.0.1
@@ -115,7 +114,6 @@ Suggested package updates
 	o filerunner-2.5.1 [pkg/22412]
 	o findutils-4.1.20
 	o fltk-1.1.3
-	o fontconfig-2.2.0
 	o foomatic-2.9.1 [jlam]
 	o fsviewer-0.2.5
 	o gauche-0.7 [kei]
@@ -272,7 +270,6 @@ Suggested package updates
 	o tkman-2.2
 	o top-3.5b12.7
 	o ttf2pt1-3.4.3
-	o transcode-0.6.9
 	o vfu-4.03
 	o vnc-3.3.7 [http://www.realvnc.com/download.html]
 	o vttest-20030301
