@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.9 2005/03/08 01:22:41 xtraeme Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.10 2005/03/17 15:11:23 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Notes on fixes for packages</title>
@@ -567,13 +567,9 @@ dynamic linker chooses the library with the greater REVISION number. </programli
           <para>The <quote>-rpath argument</quote> is the install
             directory of the library being built.</para>
 
-          <para>In the <filename>PLIST</filename>, include all of the
-            <filename>.a</filename>, <filename>.la</filename>, and
-            <filename>.so</filename>,
-            <filename>.so.<replaceable>major</replaceable></filename>
-            and
-            <filename>.so.<replaceable>major</replaceable>.<replaceable>minor</replaceable></filename>
-            files.</para>
+          <para>In the <filename>PLIST</filename>, include only the
+            <filename>.la</filename> file, the other files will be
+	    added automatically.</para>
         </listitem>
 
         <listitem>
