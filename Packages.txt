@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.157 2001/05/04 15:09:59 agc Exp $
+# $NetBSD: Packages.txt,v 1.158 2001/05/08 14:59:26 abs Exp $
 ###########################################################################
 
 			==========================
@@ -643,6 +643,11 @@ in the distinfo file, and it provides various different algorithms.
 At the current time, the algorithms provided are:
 
 	md5, rmd160, sha1, sha256, sha384 and sha512
+
+Some packages have different sets of distfiles on a per architecture
+basis. (A good example is www/navigator). These are kept in the
+same distinfo file and care should be taken when upgrading such a
+package to ensure distfile information is not lost.
 
 The message digest/checksum for all the official patches found in the
 patches/ directory (see section 4.3) for the package is also stored in
