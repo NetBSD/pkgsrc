@@ -1,19 +1,42 @@
-# $NetBSD: Makefile,v 1.25 2003/01/10 07:36:25 cjep Exp $
+# $NetBSD: Makefile,v 1.26 2003/04/11 15:41:37 jmmv Exp $
 #
 
-.include "Makefile.common"
+DISTNAME=	gaim-0.61
+CATEGORIES=	chat x11
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gaim/} \
+		ftp://ftp.marko.net/pub/gaim/
 
-CONFLICTS+=		gaim-gnome-[0-9]*
+MAINTAINER=	mjl@luckie.org.nz
+HOMEPAGE=	http://gaim.sourceforge.net/
+COMMENT=	GTK2 based client for the AOL Instant Messenger chat system
 
+DEPENDS+=	gnome2-dirs>=1.1:../../misc/gnome2-dirs
+
+CONFLICTS+=	gaim-gtk1-[0-9]* gaim-gnome-[0-9]*
+
+GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
+USE_GMAKE=		YES
+USE_LIBTOOL=		YES
+USE_PKGLOCALEDIR=	YES
+USE_X11=		YES
 
-CONFIGURE_ARGS+=	--disable-gnome
-CONFIGURE_ARGS+=	--disable-panel
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-PLIST_SRC+=		${.CURDIR}/../gaim/PLIST
+CONFIGURE_ARGS+=	--disable-nas
+CONFIGURE_ARGS+=	--enable-perl
 
-.include "../../audio/esound/buildlink2.mk"
-.include "../../graphics/gdk-pixbuf/buildlink2.mk"
+.include "../../mk/bsd.prefs.mk"
+
+.if !exists(${X11BASE}/include/X11/extensions/scrnsaver.h)
+CONFIGURE_ARGS+=	--disable-screensaver
+.endif
+
+.include "../../audio/libao/buildlink2.mk"
+.include "../../audio/libaudiofile/buildlink2.mk"
+.include "../../converters/libiconv/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
-
+.include "../../textproc/gtkspell/buildlink2.mk"
+.include "../../x11/gtk2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
