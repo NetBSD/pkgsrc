@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2375 2003/05/31 13:10:45 uebayasi Exp $
+$NetBSD: CHANGES,v 1.2376 2003/05/31 14:00:39 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2249,3 +2249,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gaim to 0.64 [jmmv 2003-05-31]
 	Updated ap-xslt to 1.1nb5 [grant 2003-05-31]
 	Updated skkinput to 2.06.3 [uebayasi 2003-05-31]
+	Added gnus-5.10.2 [uebayasi 2003-05-31]
