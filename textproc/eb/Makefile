@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/11/29 13:02:42 uebayasi Exp $
+# $NetBSD: Makefile,v 1.26 2004/12/06 09:09:48 uebayasi Exp $
 # FreeBSD Id: ports/japanese/eb/Makefile,v 1.21 2000/08/21 03:39:42 kevlo Exp
 #
 
@@ -75,6 +75,8 @@ SUBST_CLASSES=		runpath
 SUBST_STAGE.runpath=	post-patch
 SUBST_FILES.runpath=	configure configure.ac
 SUBST_SED.runpath=	-e 's|^\(.*LIBS=['\''"]\)-L\(\$$[^[:blank:]][^[:blank:]]*\)\(.*\)$$|\1-Wl,-R\2 -L\2\3|'
+
+INSTALLATION_DIRS=	share/eb/appendix
 
 post-extract:
 	${RM} -rf ${WRKSRC}/zlib
