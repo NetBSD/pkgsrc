@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/20 12:19:16 agc Exp $
+# $NetBSD: Makefile,v 1.15 2004/03/22 03:39:00 kristerw Exp $
 #
 
 DISTNAME=		jini-${SUN_VERSION}-src
@@ -13,6 +13,7 @@ HOMEPAGE=		http://www.sun.com/jini/
 COMMENT=		Suns Jini(tm) Technology Starter Kit
 
 ONLY_FOR_PLATFORM=	Darwin-*-* Linux-*-* NetBSD-1.[6-9]*-*
+ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-*
 # depends on Rev 1.39 of sys/compat/linux/common/linux_socket.c
 ONLY_FOR_PLATFORM+=	NetBSD-1.5Z[D-Z]-*
 
