@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/09/11 00:01:28 jlam Exp $
+
+SHA1 (hpijs-1.2.2.tar.gz) = dbedc99d96fdac5bd3cfe6204ad94119bae0113c
+Size (hpijs-1.2.2.tar.gz) = 302285 bytes
+SHA1 (patch-aa) = b7b5e892205fe901baad1d77a0b97cf80314581b
