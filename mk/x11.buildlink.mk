@@ -1,4 +1,4 @@
-# $NetBSD: x11.buildlink.mk,v 1.5 2001/10/05 00:08:17 jlam Exp $
+# $NetBSD: x11.buildlink.mk,v 1.6 2001/10/05 02:31:19 jlam Exp $
 #
 # This Makefile fragment is included by packages that use X11.
 #
@@ -81,7 +81,9 @@ BUILDLINK_CONFIG_WRAPPER_POST_SED+=					\
 
 REPLACE_BUILDLINK_POST_SED+=						\
 	-e "s|-I${BUILDLINK_X11_DIR}/|-I${X11BASE}/|g"			\
-	-e "s|-L${BUILDLINK_X11_DIR}/|-L${X11BASE}/|g"			\
+	-e "s|-L${BUILDLINK_X11_DIR}/|-L${X11BASE}/|g"
+
+REPLACE_RPATH_SED+=	\
 	-e "s|-R${BUILDLINK_X11_DIR}/|-R${X11BASE}/|g"
 
 .endif	# X11_BUILDLINK_MK
