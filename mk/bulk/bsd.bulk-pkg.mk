@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.59 2004/04/09 18:43:14 jschauma Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.60 2004/04/10 16:23:00 jschauma Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -290,7 +290,7 @@ bulk-package:
 					fi; \
 					if ${PKG_INFO} -qe $$pkgname ; then \
 						${SHCOMMENT} "Remove only unneeded pkgs" ; \
-						if ${EGREP} -q "^${PKGPATH} .* $$pkgdir( |$$)" ${DEPENDSFILE} ; then \
+						if ${EGREP} "^${PKGPATH} .* $$pkgdir( |$$)" ${DEPENDSFILE} >/dev/null 2>&1; then \
 							${ECHO_MSG} "BULK> ${PKGNAME} requires installed package $$pkgname ($$pkgdir) to build." ;\
 						else \
 							case "${BULK_PREREQ}" in \
