@@ -1,1 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/17 19:27:29 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/17 19:58:13 jdolecek Exp $
+share/doc/pear-Log/guide.txt
+share/doc/pear-Log/examples/composite.php
+share/doc/pear-Log/examples/console.php
+share/doc/pear-Log/examples/display.php
+share/doc/pear-Log/examples/error_log.php
+share/doc/pear-Log/examples/file.php
+share/doc/pear-Log/examples/mail.php
+share/doc/pear-Log/examples/observer_mail.php
+share/doc/pear-Log/examples/pear_error_handler.php
+share/doc/pear-Log/examples/php_error_handler.php
+share/doc/pear-Log/examples/sql.php
+share/doc/pear-Log/examples/syslog.php
+share/doc/pear-Log/examples/win.php
+@dirrm share/doc/pear-Log/examples
+@dirrm share/doc/pear-Log
