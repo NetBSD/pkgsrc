@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6812 2004/08/06 16:04:13 schmonz Exp $
+$NetBSD: CHANGES,v 1.6813 2004/08/06 16:55:06 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3748,3 +3748,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added amavisd-new-20040701 [jlam 2004-08-06]
 	Moved amavisd-new to security/amavisd-new [jlam 2004-08-06]
 	Updated getmail to 4.0.8 [schmonz 2004-08-06]
+	Updated libnbcompat to 20040805 [jlam 2004-08-06]

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: src2nbcompat,v 1.4 2003/12/08 13:39:11 grant Exp $
+#	$NetBSD: src2nbcompat,v 1.5 2004/08/06 16:55:09 jlam Exp $
 #
 # Copyright (c) 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -80,6 +80,12 @@ for f in $files; do
 	*Makefile|*Makefile.inc)
 		# Skip copying over the Makefiles since we'll be using
 		# a GNU autoconf-based build infrastructure.
+		;;
+	*.sh)
+		# Assume shell scripts will require variable substitution
+		# by the GNU configure script.
+		#
+		cp $newf $dest/$newf.in
 		;;
 	*.[ch])
 		# Add "#include <nbcompat.h>" before the first system
