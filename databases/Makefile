@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2004/07/08 19:25:23 erh Exp $
+# $NetBSD: Makefile,v 1.138 2004/07/24 22:52:42 recht Exp $
 #
 
 COMMENT=	Databases
@@ -87,13 +87,13 @@ SUBDIR+=	php4-odbc
 SUBDIR+=	php4-pgsql
 SUBDIR+=	phpmyadmin
 SUBDIR+=	phppgadmin
-SUBDIR+=	postgresql
-SUBDIR+=	postgresql-client
-SUBDIR+=	postgresql-docs
-SUBDIR+=	postgresql-lib
-SUBDIR+=	postgresql-plperl
-SUBDIR+=	postgresql-pltcl
-SUBDIR+=	postgresql-server
+SUBDIR+=	postgresql73
+SUBDIR+=	postgresql73-client
+SUBDIR+=	postgresql73-docs
+SUBDIR+=	postgresql73-lib
+SUBDIR+=	postgresql73-plperl
+SUBDIR+=	postgresql73-pltcl
+SUBDIR+=	postgresql73-server
 SUBDIR+=	postgresql74
 SUBDIR+=	postgresql74-client
 SUBDIR+=	postgresql74-contrib
@@ -110,7 +110,7 @@ SUBDIR+=	py-gdbm
 SUBDIR+=	py-ldap
 SUBDIR+=	py-metakit
 SUBDIR+=	py-mysqldb
-SUBDIR+=	py-postgresql
+SUBDIR+=	py-postgresql73
 SUBDIR+=	py-psycopg
 SUBDIR+=	py-sqlite
 SUBDIR+=	py-sybase
@@ -133,9 +133,9 @@ SUBDIR+=	sqsh-motif
 SUBDIR+=	sqsh-x11
 SUBDIR+=	tcl-fbsql
 SUBDIR+=	tcl-gdbm
-SUBDIR+=	tcl-postgresql
+SUBDIR+=	tcl-postgresql73
 SUBDIR+=	tdb
-SUBDIR+=	tk-postgresql
+SUBDIR+=	tk-postgresql73
 SUBDIR+=	unixodbc
 SUBDIR+=	unixodbc-DataManager
 SUBDIR+=	unixodbc-ODBCConfig
