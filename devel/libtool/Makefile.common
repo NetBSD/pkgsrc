@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.34 2003/10/05 08:19:19 grant Exp $
+# $NetBSD: Makefile.common,v 1.35 2003/11/02 19:19:30 skrll Exp $
 #
 
 DISTNAME=	libtool-ml-20010614
@@ -8,7 +8,7 @@ WRKSRC=		${WRKDIR}/libtool-ml
 CATEGORIES=	devel pkgtools
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	skrll@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/libtool/libtool.html
 
 CONFLICTS=	glibtool-[0-9]*
