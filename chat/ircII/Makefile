@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/01/05 11:15:09 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2004/01/05 11:16:31 grant Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
@@ -50,7 +50,6 @@ CONFIGURE_ARGS+=	--with-socks5=${BUILDLINK_PREFIX.socks5}
 CONFIGURE_ARGS+=	${IRCII_CONFIGURE_ARGS}
 CONFIGURE_ENV+=		${IRCII_CONFIGURE_ENV}
 
-# Solaris
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
 pre-install:
