@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.27 2003/08/28 19:12:55 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.28 2003/08/29 11:13:04 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -34,6 +34,7 @@
 
 ECHO_BUILDLINK_MSG?=	${TRUE}
 BUILDLINK_DIR=		${WRKDIR}/.buildlink
+BUILDLINK_X11_DIR=	${BUILDLINK_DIR:H}/.x11-buildlink
 BUILDLINK_SHELL?=	${SH}
 BUILDLINK_OPSYS?=	${OPSYS}
 
@@ -57,24 +58,10 @@ BUILDLINK_DEPENDS+=		x11-links
 BUILDLINK_DEPENDS.x11-links=	x11-links>=0.13
 BUILDLINK_DEPMETHOD.x11-links=	build
 BUILDLINK_PKGSRCDIR.x11-links=	../../pkgtools/x11-links
-
-.  if !defined(BUILDLINK_X11_DIR)
-.    if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-BUILDLINK_X11_DIR!=							\
-	cd ${_PKG_DBDIR};						\
-	dir=`${PKG_ADMIN} -s "" lsbest "${BUILDLINK_DEPENDS.x11-links}" || ${TRUE}`; \
-	case "$$dir" in							\
-	"")	dir="not_found" ;;					\
-	*)	dir="$$dir/${X11_LINKS_SUBDIR}" ;;			\
-	esac;								\
-	${ECHO} $$dir
-.    elif ${PKG_INSTALLATION_TYPE} == "overwrite"
-BUILDLINK_X11_DIR?=	${LOCALBASE}/${X11_LINKS_SUBDIR}
-.    endif
-.    if empty(BUILDLINK_X11_DIR:Mnot_found)
-MAKEFLAGS+=	BUILDLINK_X11_DIR=${BUILDLINK_X11_DIR}
-.    endif
-.  endif
+_BLNK_X11_LINKS_PACKAGE=	x11-links
+_BLNK_X11_LINKS_DIR=	${BUILDLINK_PREFIX.x11-links}/${X11_LINKS_SUBDIR}
+.else
+_BLNK_X11_LINKS_PACKAGE=	# empty
 .endif
 
 .for _pkg_ in ${BUILDLINK_DEPENDS}
@@ -128,7 +115,7 @@ ${_BLNK_DEPMETHOD.${_pkg_}}+= \
 #				exist before they're added to the search
 #				paths.
 #
-.for _pkg_ in ${BUILDLINK_PACKAGES}
+.for _pkg_ in ${BUILDLINK_PACKAGES} ${_BLNK_X11_LINKS_PACKAGE}
 .  if !defined(BUILDLINK_PKG_DBDIR.${_pkg_})
 BUILDLINK_PKG_DBDIR.${_pkg_}!=						\
 	cd ${_PKG_DBDIR};						\
@@ -142,10 +129,20 @@ MAKEFLAGS+=	BUILDLINK_PKG_DBDIR.${_pkg_}=${BUILDLINK_PKG_DBDIR.${_pkg_}}
 .    endif
 .  endif
 BUILDLINK_PKGNAME.${_pkg_}?=	${BUILDLINK_PKG_DBDIR.${_pkg_}:T}
-.  if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+.  if !defined(BUILDLINK_PREFIX.${_pkg_})
+.    if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 BUILDLINK_PREFIX.${_pkg_}?=	${BUILDLINK_PKG_DBDIR.${_pkg_}}
-.  elif ${PKG_INSTALLATION_TYPE} == "overwrite"
-BUILDLINK_PREFIX.${_pkg_}?=	${LOCALBASE}
+.    elif ${PKG_INSTALLATION_TYPE} == "overwrite"
+.      if empty(BUILDLINK_PKG_DBDIR.${_pkg_}:Mnot_found)
+BUILDLINK_PREFIX.${_pkg_}!=	\
+	${PKG_INFO} -qp ${BUILDLINK_PKGNAME.${_pkg_}} | ${SED}  -e "s,^[^/]*,,"
+.      else
+BUILDLINK_PREFIX.${_pkg_}?=	not_found
+.      endif
+.    endif
+.    if empty(BUILDLINK_PREFIX.${_pkg_}:Mnot_found)
+MAKEFLAGS+=	BUILDLINK_PREFIX.${_pkg_}=${BUILDLINK_PREFIX.${_pkg_}}
+.    endif
 .  endif
 .  if exists(${BUILDLINK_PKG_DBDIR.${_pkg_}}/+VIEWS)
 BUILDLINK_IS_DEPOT.${_pkg_}?=	yes
@@ -244,6 +241,16 @@ LDFLAGS+=	${_flag_}
 do-buildlink: buildlink-directories
 buildlink-directories:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}
+.if defined(USE_X11) && empty(PKGPATH:Mpkgtools/x11-links)
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${BUILDLINK_X11_DIR}
+	${_PKG_SILENT}${_PKG_DEBUG}${LN} -sf ${BUILDLINK_DIR} ${BUILDLINK_X11_DIR}
+.  if exists(${_BLNK_X11_LINKS_DIR})
+	${_PKG_SILENT}${_PKG_DEBUG}${CP} -R ${_BLNK_X11_LINKS_DIR}/* ${BUILDLINK_X11_DIR}
+.  else
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "x11-links doesn't seem to be installed."
+	${_PKG_SILENT}${_PKG_DEBUG}${FALSE}
+.  endif
+.endif
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}/include
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}/lib
 
@@ -311,6 +318,10 @@ BUILDLINK_FILES_CMD.${_pkg_}?=						\
 
 ${_BLNK_COOKIE.${_pkg_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
+	case ${BUILDLINK_PREFIX.${_pkg_}} in				\
+	${X11BASE})	buildlink_dir="${BUILDLINK_X11_DIR}" ;;		\
+	*)		buildlink_dir="${BUILDLINK_DIR}" ;;		\
+	esac;								\
 	cd ${BUILDLINK_PREFIX.${_pkg_}};				\
 	pkg_prefix=`							\
 		${PKG_INFO} -qp ${BUILDLINK_PKGNAME.${_pkg_}} |		\
@@ -333,7 +344,7 @@ ${_BLNK_COOKIE.${_pkg_}}:
 				continue;				\
 			fi;						\
 			if [ -z "${BUILDLINK_TRANSFORM.${_pkg_}}" ]; then \
-				dest="${BUILDLINK_DIR}/$$file";		\
+				dest="$$buildlink_dir/$$file";		\
 				msg="$$src";				\
 			else						\
 				dest=`${ECHO} $$dest | ${SED} ${BUILDLINK_TRANSFORM.${_pkg_}}`; \
@@ -377,7 +388,8 @@ _BLNK_LT_ARCHIVE_FILTER=						\
 		/^dependency_libs=/ {					\
 			line = $$0;					\
 			line = gensub("/usr(/lib/lib[^/ 	]*\.la)", "${BUILDLINK_DIR}\\1", "g", line); \
-			line = gensub("${DEPOTBASE}(/[^ 	]*/lib[^/ 	]*\.la)", "${BUILDLINK_DIR}\\1", "g", line); \
+			line = gensub("${DEPOTBASE}/[^/ 	]*(/[^ 	]*/lib[^/ 	]*\.la)", "${BUILDLINK_DIR}\\1", "g", line); \
+			line = gensub("${X11BASE}(/[^ 	]*/lib[^/ 	]*\.la)", "${BUILDLINK_X11_DIR}\\1", "g", line); \
 			line = gensub("${LOCALBASE}(/[^ 	]*/lib[^/ 	]*\.la)", "${BUILDLINK_DIR}\\1", "g", line); \
 			print line;					\
 			next;						\
@@ -385,7 +397,8 @@ _BLNK_LT_ARCHIVE_FILTER=						\
 		/^libdir=/ {						\
 			line = $$0;					\
 			line = gensub("/usr(/lib/[^ 	]*)", "${BUILDLINK_DIR}\\1", "g", line); \
-			line = gensub("${DEPOTBASE}(/[^ 	]*)", "${BUILDLINK_DIR}\\1", "g", line); \
+			line = gensub("${DEPOTBASE}/[^/ 	]*(/[^ 	]*)", "${BUILDLINK_DIR}\\1", "g", line); \
+			line = gensub("${X11BASE}(/[^ 	]*)", "${BUILDLINK_X11_DIR}\\1", "g", line); \
 			line = gensub("${LOCALBASE}(/[^ 	]*)", "${BUILDLINK_DIR}\\1", "g", line); \
 			print line;					\
 			next;						\
