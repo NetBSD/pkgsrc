@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/01/05 17:33:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/07/05 22:08:00 kristerw Exp $
 man/man1/rocksndiamonds.1
 bin/rocksndiamonds
 share/rocksndiamonds/graphics/RocksDC.pcx
@@ -15,7 +15,6 @@ share/rocksndiamonds/graphics/mouse.pcx
 share/rocksndiamonds/graphics/rocks_icon.xbm
 share/rocksndiamonds/graphics/rocks_iconmask.xbm
 @dirrm share/rocksndiamonds/graphics
-share/rocksndiamonds/sounds/alchemy.wav
 share/rocksndiamonds/sounds/amoebe.wav
 share/rocksndiamonds/sounds/antigrav.wav
 share/rocksndiamonds/sounds/autsch.wav
@@ -26,8 +25,6 @@ share/rocksndiamonds/sounds/boom.wav
 share/rocksndiamonds/sounds/booom.wav
 share/rocksndiamonds/sounds/bug.wav
 share/rocksndiamonds/sounds/buing.wav
-share/rocksndiamonds/sounds/chase.wav
-share/rocksndiamonds/sounds/czardasz.wav
 share/rocksndiamonds/sounds/deng.wav
 share/rocksndiamonds/sounds/empty.wav
 share/rocksndiamonds/sounds/exit.wav
@@ -50,7 +47,6 @@ share/rocksndiamonds/sounds/krach.wav
 share/rocksndiamonds/sounds/lachen.wav
 share/rocksndiamonds/sounds/laser.wav
 share/rocksndiamonds/sounds/miep.wav
-share/rocksndiamonds/sounds/network.wav
 share/rocksndiamonds/sounds/njam.wav
 share/rocksndiamonds/sounds/oeffnen.wav
 share/rocksndiamonds/sounds/pling.wav
@@ -69,9 +65,6 @@ share/rocksndiamonds/sounds/schwirr.wav
 share/rocksndiamonds/sounds/sirr.wav
 share/rocksndiamonds/sounds/slurp.wav
 share/rocksndiamonds/sounds/sproing.wav
-share/rocksndiamonds/sounds/twilight.wav
-share/rocksndiamonds/sounds/tyger.wav
-share/rocksndiamonds/sounds/voyager.wav
 share/rocksndiamonds/sounds/warnton.wav
 share/rocksndiamonds/sounds/whoosh.wav
 share/rocksndiamonds/sounds/zisch.wav
