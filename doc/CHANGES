@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1894 2003/04/11 03:58:18 salo Exp $
+$NetBSD: CHANGES,v 1.1895 2003/04/11 07:29:32 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1541,3 +1541,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xmahjongg to 3.61 [salo 2003-04-10]
 	Added gltron-0.62 [salo 2003-04-10]
 	Updated rsync to 2.5.6nb1 [salo 2003-04-11]
+	Added ogmtools-1.0.1 [salo 2003-04-11]
