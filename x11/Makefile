@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 1998/07/19 11:01:46 frueauf Exp $
+# $NetBSD: Makefile,v 1.45 1998/07/31 19:26:40 tv Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -107,7 +107,7 @@
 #    SUBDIR += xmold
     SUBDIR += xmove
     SUBDIR += xneko
-#    SUBDIR += xpkgwedge	# works, but not recommended for bulk builds
+    SUBDIR += xpkgwedge
     SUBDIR += xplot
     SUBDIR += xpmroot
     SUBDIR += xpns
