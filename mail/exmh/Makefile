@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/04/20 11:56:25 frueauf Exp $
+# $NetBSD: Makefile,v 1.8 1998/04/24 09:20:35 agc Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/02/15 05:36:54 peter Exp
 #
 
@@ -26,12 +26,12 @@ PATCH_DIST_ARGS= -d ${WRKSRC}/lib --forward --quiet -E ${PATCH_DIST_STRIP}
 
 MAINTAINER=	packages@netbsd.org
 
-BUILD_DEPENDS=	tclsh8.0:${PORTSDIR}/lang/tcl80
-RUN_DEPENDS=	wish8.0:${PORTSDIR}/x11/tk80
+BUILD_DEPENDS=	tclsh8.0:../../lang/tcl80
+RUN_DEPENDS=	wish8.0:../../x11/tk80
 # exmh is pretty useless without this, but it's not needed to build it.
-RUN_DEPENDS+=   repl:${PORTSDIR}/mail/nmh
+RUN_DEPENDS+=   repl:../../mail/nmh
 # full mime support needs mmencode/mmdecode from metamail
-RUN_DEPENDS+=   mmencode:${PORTSDIR}/mail/metamail
+RUN_DEPENDS+=   mmencode:../../mail/metamail
 
 DIST_SUBDIR=	${PKGNAME}
 
