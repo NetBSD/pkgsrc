@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7840 2004/11/12 14:41:32 he Exp $
+$NetBSD: CHANGES,v 1.7841 2004/11/12 16:48:45 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5258,3 +5258,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Net-XWhois-0.90 [he 2004-11-12]
 	Added p5-Crypt-RandPasswd-0.02 [he 2004-11-12]
 	Updated suse_libjpeg to 7.3nb1 [wiz 2004-11-12]
+	Updated sudo to 1.6.8pl2 [cube 2004-11-12]
