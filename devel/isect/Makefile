@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/03/26 02:27:38 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2004/04/25 04:09:01 snj Exp $
 #
 
 DISTNAME=	isect-1.6.2
@@ -11,7 +11,7 @@ HOMEPAGE=	http://isectd.sourceforge.net/
 COMMENT=	Open source middleware daemon
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 USE_LIBTOOL=		yes
 PTHREAD_OPTS+=		require
@@ -33,6 +33,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${EGDIR}
 
-.include "../../www/libwww/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../www/libwww/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
