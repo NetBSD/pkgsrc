@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/02/01 01:43:28 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2004/02/12 09:00:29 jlam Exp $
 #
 
 DISTNAME=		gmp-4.1.2
@@ -11,14 +11,14 @@ COMMENT=		Library for arbitrary precision arithmetic
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
-GNU_CONFIGURE=		YES
-USE_GCC_SHLIB=		YES
-USE_LIBTOOL=		YES
+USE_BUILDLINK3=		yes
+USE_LANGUAGES=		c c++
 USE_GNU_TOOLS+=		m4
 
+USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-cxx --without-readline
 
 INFO_FILES=		gmp.info
