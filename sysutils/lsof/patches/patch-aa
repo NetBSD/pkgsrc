@@ -1,0 +1,14 @@
+--- dialects/n+obsd/Makefile.orig	Tue Feb 17 01:51:59 1998
++++ dialects/n+obsd/Makefile	Thu Apr  2 11:20:07 1998
+@@ -12,7 +12,11 @@
+ L=/usr/include/local
+ P=
+ 
++.if ${UVM} != ""
++DEBUG=	-O -DUVM
++.else
+ DEBUG=	-O
++.endif
+ 
+ CDEF=
+ CDEFS=  ${CDEF} ${CFGF}

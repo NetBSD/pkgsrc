@@ -1,0 +1,29 @@
+--- dialects/n+obsd/dproc.c.orig	Fri Mar  6 14:24:46 1998
++++ dialects/n+obsd/dproc.c	Thu Apr  2 10:25:22 1998
+@@ -37,6 +37,11 @@
+ 
+ #include "lsof.h"
+ 
++#if defined(UVM) /* this is an ugly hack, but <uvm/uvm.h> is not supposed */
++		 /* to get included by userland programms                 */
++#define UVM_ET_MAP              0x02    /* it is a vm_map */
++#define UVM_ET_SUBMAP           0x04    /* it is a submap (MAP must be 1 too) */
++#endif
+ 
+ _PROTOTYPE(static void enter_vn_text,(KA_T va, int *n));
+ _PROTOTYPE(static void get_kernel_access,(void));
+@@ -365,8 +370,14 @@
+ 		if (kread(ka, (char *)e, sizeof(vmme)))
+ 		    return;
+ 	    }
++#if defined(UVM)	/* part 2 of the ugly UVM hack */
++	    if ((e->etype & UVM_ET_MAP) != 0)
++		continue;
++#else
+ 	    if (e->is_a_map || e->is_sub_map)
+ 		continue;
++#endif
++
+ 	/*
+ 	 * Read the map entry's object and the object's shadow.
+ 	 * Look for a PG_VNODE pager handle.
