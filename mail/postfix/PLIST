@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/07/19 22:04:40 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/07/23 23:39:00 jlam Exp $
 bin/mailq
 bin/newaliases
 libexec/postfix/bounce
@@ -132,6 +132,7 @@ share/examples/postfix/access
 share/examples/postfix/aliases
 share/examples/postfix/canonical
 share/examples/postfix/header_checks
+share/examples/postfix/mailer.conf
 share/examples/postfix/main.cf
 share/examples/postfix/main.cf.default
 share/examples/postfix/makedefs.out
