@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.373 2003/02/13 12:47:26 wiz Exp $
+# $NetBSD: Makefile,v 1.374 2003/02/14 12:48:42 grant Exp $
 #
 
 COMMENT=	Development utilities
@@ -318,6 +318,7 @@ SUBDIR+=	ratfor
 SUBDIR+=	rcs
 SUBDIR+=	rdp
 SUBDIR+=	readline
+SUBDIR+=	roundup
 SUBDIR+=	rpc2
 SUBDIR+=	rt-mysql
 SUBDIR+=	rt-pgsql
