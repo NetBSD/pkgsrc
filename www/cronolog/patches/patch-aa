@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/04/01 20:37:30 zuntum Exp $
+
+--- src/cronoutils.c.orig	Mon Dec 20 09:34:44 1999
++++ src/cronoutils.c
+@@ -71,7 +71,6 @@
+ 
+ #include "cronoutils.h"
+ extern char *tzname[2];
+-extern long int timezone;
+ 
+ 
+ /* debug_file is the file to output debug messages to.  No debug
