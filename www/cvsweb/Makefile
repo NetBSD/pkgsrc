@@ -1,5 +1,5 @@
 #
-# $NetBSD: Makefile,v 1.20 2004/06/09 01:54:16 lukem Exp $
+# $NetBSD: Makefile,v 1.21 2004/06/09 01:56:15 lukem Exp $
 #
 
 DISTNAME=		cvsweb-3.0.1
@@ -23,7 +23,7 @@ USE_PKGINSTALL=		YES
 PERL5_REQD+=		5.6
 REPLACE_PERL=		cvsweb.cgi
 
-PKG_SYSCONFSUBDIR?=	httpd
+PKG_SYSCONFSUBDIR?=	cvsweb
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 
