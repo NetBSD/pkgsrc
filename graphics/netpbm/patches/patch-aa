@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.10 2000/06/05 00:36:31 wiz Exp $
+$NetBSD: patch-aa,v 1.11 2000/07/10 11:12:10 wiz Exp $
 
---- Makefile.config.orig	Thu Jun  1 19:17:32 2000
-+++ Makefile.config	Mon Jun  5 01:35:05 2000
+--- Makefile.config.orig	Thu Jun 22 19:48:03 2000
++++ Makefile.config	Sun Jul  9 23:54:46 2000
 @@ -29,8 +29,8 @@
  #
  # For cygwin, only static libraries work, so set STATICLIB = Y  .
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.10 2000/06/05 00:36:31 wiz Exp $
  
  # The following are commands for the build process to use.  These values
  # do not get built into anything.
-@@ -39,14 +39,15 @@
+@@ -39,19 +39,20 @@
  #Tru64:
  #CC =		cc
  #CC =		gcc
@@ -29,27 +29,33 @@ $NetBSD: patch-aa,v 1.10 2000/06/05 00:36:31 wiz Exp $
  #LD = gcc 
 +LD = $(LIBTOOL) --mode=link $(CC)
  
- # Normally the man pages are installed using "install".  But via this
- # variable, you can use something else, for example a script that
-@@ -59,7 +60,7 @@
  # MAKE is set automatically by Make to what was used to invoke Make.
  SHELL =	/bin/sh
  
--INSTALL = install
-+INSTALL = install -c
+-INSTALL = ginstall
++#INSTALL = ginstall
  # Solaris:
  #INSTALL = /usr/ucb/install
  #Tru64:
-@@ -73,7 +74,7 @@
+@@ -59,7 +60,7 @@
+ #OSF1:
+ #INSTALL = installosf
+ # ?
+-#INSTALL = install
++INSTALL = install -c
  
- # C compiler options
- 
+ # Normally the man pages are installed using "install".  But via this
+ # variable, you can use something else, for example a script that
+@@ -79,7 +80,7 @@
+ # -ansi and -Werror should work too, but are not included
+ # by default because there's no point in daring the build to fail.
+ # -pedantic isn't a problem because it causes at worst a warning.
 -CFLAGS = -pedantic -O2 -Wall -Wno-uninitialized $(CDEBUG)
 +CFLAGS += -pedantic -Wall -Wno-uninitialized $(CDEBUG)
  # On DEC Tru64 4.0F (at least), you need -DLONG_32 for ppmtompeg.
  #Tru64:
  #CFLAGS = -O2 -std1 DLONG_32 $(CDEBUG)
-@@ -87,7 +88,7 @@
+@@ -93,7 +94,7 @@
    
  # linker options.  
  
@@ -58,7 +64,7 @@ $NetBSD: patch-aa,v 1.10 2000/06/05 00:36:31 wiz Exp $
  # Eunice users may want to use -noshare so that the executables can
  # run standalone:
  #LDFLAGS = -noshare
-@@ -139,11 +140,11 @@
+@@ -148,11 +149,11 @@
  # but otherwise will not.
  
  # Use the Tiff library included with Netpbm:
@@ -74,7 +80,7 @@ $NetBSD: patch-aa,v 1.10 2000/06/05 00:36:31 wiz Exp $
  # OSF, Tru64:
  #TIFFHDR_DIR = /usr/local1/DEC/include
  #TIFFLIB_DIR = /usr/local1/DEC/lib
-@@ -164,11 +165,11 @@
+@@ -173,11 +174,11 @@
  # at least JPEGLIB_DIR here, or the tiff converters will not build at
  # all.
  
@@ -90,7 +96,7 @@ $NetBSD: patch-aa,v 1.10 2000/06/05 00:36:31 wiz Exp $
  # OSF, Tru64:
  #JPEGLIB_DIR = /usr/local1/DEC/lib
  #JPEGHDR_DIR = /usr/local1/DEC/include
-@@ -186,11 +187,11 @@
+@@ -195,11 +196,11 @@
  # here.  If you do not have the PNG library, and still want to
  # successully build everything else, put NONE for these.
  
@@ -106,7 +112,7 @@ $NetBSD: patch-aa,v 1.10 2000/06/05 00:36:31 wiz Exp $
  # OSF/Tru64:
  #PNGLIB_DIR = /usr/local1/DEC/lib
  #PNGHDR_DIR = /usr/local1/DEC/include
-@@ -296,8 +297,8 @@
+@@ -305,8 +306,8 @@
  #be a rule in the makefiles to make whatever the fliename turns out to be.
  #Only .a and .so work.
  ifeq ($(STATICLIB),Y)

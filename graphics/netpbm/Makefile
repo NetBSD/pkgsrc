@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2000/06/24 01:48:08 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.45 2000/07/10 11:12:09 wiz Exp $
 
-DISTNAME=	netpbm-9.3
+DISTNAME=	netpbm-${VERS}
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.sourceforge.net/netpbm/
 EXTRACT_SUFX=	.tgz
@@ -16,6 +16,9 @@ USE_LIBTOOL=	yes
 
 INSTALL_TARGET=	install-dev install
 MAKEFILE=	GNUmakefile
+
+VERS=		9.5
+PLIST_SUBST+=	VERS=${VERS}
 
 .include "../../mk/bsd.prefs.mk"
 

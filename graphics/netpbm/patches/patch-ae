@@ -1,13 +1,15 @@
-$NetBSD: patch-ae,v 1.5 2000/06/05 00:36:31 wiz Exp $
+$NetBSD: patch-ae,v 1.6 2000/07/10 11:12:10 wiz Exp $
 
---- pbm/pbmtoppa/Makefile.orig	Thu Jun  1 19:27:29 2000
-+++ pbm/pbmtoppa/Makefile	Mon Jun  5 01:44:49 2000
-@@ -15,7 +15,7 @@
- merge: pbmtoppa
+--- ppm/ppmtompeg/parallel.c.orig	Fri Jun 30 20:04:09 2000
++++ ppm/ppmtompeg/parallel.c	Mon Jul 10 00:37:49 2000
+@@ -70,10 +70,6 @@
+  *
+  */
  
- pbmtoppa: pbmtoppa.o ppa.o pbm.o cutswath.o $(NETPBMLIBS) $(LIBOPT)
--	$(CC) $(LDFLAGS) -o pbmtoppa pbmtoppa.o ppa.o pbm.o cutswath.o \
-+	$(LD) $(LDFLAGS) -o pbmtoppa pbmtoppa.o ppa.o pbm.o cutswath.o \
- 	  `$(LIBOPT) $(NETPBMLIBS)`
- 
- %.o: %.c
+-#define _POSIX_SOURCE
+-#define _POSIX_C_SOURCE 2
+-    /* This makes sure pclose() is in stdio.h */
+-
+ /*==============*
+  * HEADER FILES *
+  *==============*/
