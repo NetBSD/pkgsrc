@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7261 2004/09/26 20:15:18 seb Exp $
+$NetBSD: CHANGES,v 1.7262 2004/09/26 20:43:48 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4452,3 +4452,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Data-UUID-0.11 [epg 2004-09-26]
 	Updated rapidsvn to 0.7.0 [epg 2004-09-26]
 	Updated sympa to 4.1.2 [seb 2004-09-26]
+	Updated cyrus-imapd22 to 2.2.8nb2 [seb 2004-09-26]
