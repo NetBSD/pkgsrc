@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1 2003/09/22 13:43:06 wiz Exp $
+
+--- dgpsip.c.orig	Wed Aug 25 20:20:19 1999
++++ dgpsip.c	Mon Sep 22 14:09:26 2003
+@@ -79,6 +79,14 @@
+ #define BUFSZ     (4 * 1024)
+ #define NMEABUFSZ (4 * 1024)
+ 
++#ifndef AF_INET6		/* for freebsd 2.1.5 */
++#define AF_INET6 0x6666		/* IP version 6 */
++#endif
++
++#ifndef INADDR_NONE		/* for solaris 5.7 */
++#define INADDR_NONE	0xffffffff
++#endif
++
+ int             verbose = 0;
+ 
+ void            usage(void);
