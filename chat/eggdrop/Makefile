@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2003/01/16 08:23:45 salo Exp $
+# $NetBSD: Makefile,v 1.5 2003/04/30 19:43:48 jmmv Exp $
 #
 
 DISTNAME=	eggdrop1.6.13
 PKGNAME=	${DISTNAME:S/eggdrop/eggdrop-/}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.eggheads.org/pub/eggdrop/source/1.6/
 
@@ -11,9 +12,15 @@ HOMEPAGE=	http://www.eggheads.org/
 COMMENT=	IRC robot with TCL scripting and multi-channel ability
 
 USE_BUILDLINK2=	yes
+USE_PKGINSTALL=	yes
 GNU_CONFIGURE=	yes
+
+CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ENV+=	TCLLIB="${PREFIX}/lib" TCLINC="${PREFIX}/include"
 MAKE_ENV+=	_OPSYS_RPATH_NAME=${_OPSYS_RPATH_NAME}
+
+EGDIR=		${PREFIX}/share/examples/eggdrop
+CONF_FILES=	${EGDIR}/eggdrop.conf ${PKG_SYSCONFDIR}/eggdrop.conf
 
 post-patch:
 	cd ${WRKSRC} && ${SED} -e 's,modules/,${PREFIX}/lib/eggdrop/,' \
@@ -26,7 +33,8 @@ do-install: do-install-program
 do-install-program:
 	${INSTALL_PROGRAM} ${WRKSRC}/eggdrop ${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/doc/man1/eggdrop.1 ${PREFIX}/man/man1/
-	${INSTALL_DATA} ${WRKSRC}/eggdrop.conf.dist.new ${PREFIX}/etc/eggdrop.conf.dist
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/eggdrop.conf.dist.new ${EGDIR}/eggdrop.conf
 	${INSTALL_DATA_DIR} ${PREFIX}/share/eggdrop \
 		${PREFIX}/share/eggdrop/help ${PREFIX}/share/eggdrop/language \
 		${PREFIX}/share/eggdrop/scripts ${PREFIX}/share/eggdrop/html \
