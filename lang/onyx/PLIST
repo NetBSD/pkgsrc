@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/11/11 11:10:41 mrg Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/01/04 03:08:03 mrg Exp $
 bin/onyx
 bin/${PKGNAME}
 bin/onyx_config
@@ -12,14 +12,17 @@ include/libonyx/mb.h
 include/libonyx/mem.h
 include/libonyx/nx.h
 include/libonyx/nxa.h
+include/libonyx/nxm.h
 include/libonyx/nxn.h
 include/libonyx/nxo.h
 include/libonyx/nxo_array.h
 include/libonyx/nxo_boolean.h
+include/libonyx/nxo_class.h
 include/libonyx/nxo_dict.h
 include/libonyx/nxo_file.h
 include/libonyx/nxo_fino.h
-include/libonyx/nxo_hook.h
+include/libonyx/nxo_handle.h
+include/libonyx/nxo_instance.h
 include/libonyx/nxo_integer.h
 include/libonyx/nxo_mark.h
 include/libonyx/nxo_name.h
@@ -28,6 +31,8 @@ include/libonyx/nxo_null.h
 include/libonyx/nxo_operator.h
 include/libonyx/nxo_pmark.h
 include/libonyx/nxo_real.h
+include/libonyx/nxo_regex.h
+include/libonyx/nxo_regsub.h
 include/libonyx/nxo_stack.h
 include/libonyx/nxo_string.h
 include/libonyx/nxo_thread.h
@@ -38,16 +43,17 @@ include/libonyx/systemdict.h
 include/libonyx/xep.h
 lib/libonyx.a
 lib/libonyx.so
-lib/libonyx.so.7
+lib/libonyx.so.13
 man/man1/onyx.1
 man/man1/onyx_config.1
-share/onyx
 share/${PKGNAME}/doc/html/contents.png
 share/${PKGNAME}/doc/html/img1.png
 share/${PKGNAME}/doc/html/img10.png
 share/${PKGNAME}/doc/html/img11.png
 share/${PKGNAME}/doc/html/img12.png
 share/${PKGNAME}/doc/html/img13.png
+share/${PKGNAME}/doc/html/img14.png
+share/${PKGNAME}/doc/html/img15.png
 share/${PKGNAME}/doc/html/img2.png
 share/${PKGNAME}/doc/html/img3.png
 share/${PKGNAME}/doc/html/img4.png
@@ -69,8 +75,26 @@ share/${PKGNAME}/doc/html/node103.html
 share/${PKGNAME}/doc/html/node104.html
 share/${PKGNAME}/doc/html/node105.html
 share/${PKGNAME}/doc/html/node106.html
+share/${PKGNAME}/doc/html/node107.html
+share/${PKGNAME}/doc/html/node108.html
+share/${PKGNAME}/doc/html/node109.html
 share/${PKGNAME}/doc/html/node11.html
+share/${PKGNAME}/doc/html/node110.html
+share/${PKGNAME}/doc/html/node111.html
+share/${PKGNAME}/doc/html/node112.html
+share/${PKGNAME}/doc/html/node113.html
+share/${PKGNAME}/doc/html/node114.html
+share/${PKGNAME}/doc/html/node115.html
+share/${PKGNAME}/doc/html/node116.html
+share/${PKGNAME}/doc/html/node117.html
+share/${PKGNAME}/doc/html/node118.html
+share/${PKGNAME}/doc/html/node119.html
 share/${PKGNAME}/doc/html/node12.html
+share/${PKGNAME}/doc/html/node120.html
+share/${PKGNAME}/doc/html/node121.html
+share/${PKGNAME}/doc/html/node122.html
+share/${PKGNAME}/doc/html/node123.html
+share/${PKGNAME}/doc/html/node124.html
 share/${PKGNAME}/doc/html/node13.html
 share/${PKGNAME}/doc/html/node14.html
 share/${PKGNAME}/doc/html/node15.html
@@ -173,14 +197,19 @@ share/${PKGNAME}/doc/html/prev_g.png
 share/${PKGNAME}/doc/html/up.png
 share/${PKGNAME}/doc/html/up_g.png
 share/${PKGNAME}/doc/pdf/onyx.pdf
-share/${PKGNAME}/doc/ps/onyx.ps
+share/${PKGNAME}/libonyx/libonyx_init.nx
+share/${PKGNAME}/nx/modclopt/clopt.nx
+share/${PKGNAME}/nx/modclopt/modclopt.nx
+share/${PKGNAME}/nx/modclopt/modclopt_defs.nx
 share/${PKGNAME}/nx/modprompt/modprompt.nx
 share/${PKGNAME}/nx/modprompt/modprompt_defs.nx
 share/${PKGNAME}/nxm/modprompt.nxm
+share/onyx
 @dirrm share/${PKGNAME}/nxm
 @dirrm share/${PKGNAME}/nx/modprompt
+@dirrm share/${PKGNAME}/nx/modclopt
 @dirrm share/${PKGNAME}/nx
-@dirrm share/${PKGNAME}/doc/ps
+@dirrm share/${PKGNAME}/libonyx
 @dirrm share/${PKGNAME}/doc/pdf
 @dirrm share/${PKGNAME}/doc/html
 @dirrm share/${PKGNAME}/doc
