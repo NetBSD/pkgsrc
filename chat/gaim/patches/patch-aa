@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.3 2001/09/22 08:57:21 jlam Exp $
+$NetBSD: patch-aa,v 1.4 2002/02/17 22:31:21 jlam Exp $
 
---- configure.orig	Thu Sep 20 14:07:04 2001
+--- configure.orig	Sun Feb 17 15:03:26 2002
 +++ configure
-@@ -9514,8 +9514,6 @@
+@@ -9644,8 +9644,6 @@
+ 
  fi
- done
  
 -CFLAGS="$CFLAGS -I/usr/local/include -I/opt/include -I\$(top_srcdir)"
 -
