@@ -1,0 +1,60 @@
+$NetBSD: patch-ab,v 1.3 2003/09/23 08:10:14 wiz Exp $
+
+--- include/Attribute.h.orig	2000-03-09 19:30:56.000000000 +0100
++++ include/Attribute.h
+@@ -31,6 +31,27 @@ class AttributeSemantics;
+ class AttributeContext;
+ class Syntax;
+ 
++class SP_API AttributeValue : public Resource {
++public:
++  enum Type {
++    implied,
++    cdata,
++    tokenized
++    };
++  AttributeValue();
++  virtual ~AttributeValue();
++  virtual AttributeSemantics *makeSemantics(const DeclaredValue *,
++					    AttributeContext &,
++					    const StringC &,
++					    unsigned &,
++					    unsigned &) const;
++  virtual Type info(const Text *&, const StringC *&) const = 0;
++  virtual const Text *text() const;
++  virtual Boolean recoverUnquoted(const StringC &, const Location &,
++				  AttributeContext &, const StringC &);
++  static Boolean handleAsUnterminated(const Text &, AttributeContext &);
++};
++
+ class SP_API AttributeDefinitionDesc {
+ public:
+   AttributeDefinitionDesc() { }
+@@ -380,27 +401,6 @@ private:
+   ConstPtr<Notation> notation_;
+ };
+ 
+-class SP_API AttributeValue : public Resource {
+-public:
+-  enum Type {
+-    implied,
+-    cdata,
+-    tokenized
+-    };
+-  AttributeValue();
+-  virtual ~AttributeValue();
+-  virtual AttributeSemantics *makeSemantics(const DeclaredValue *,
+-					    AttributeContext &,
+-					    const StringC &,
+-					    unsigned &,
+-					    unsigned &) const;
+-  virtual Type info(const Text *&, const StringC *&) const = 0;
+-  virtual const Text *text() const;
+-  virtual Boolean recoverUnquoted(const StringC &, const Location &,
+-				  AttributeContext &, const StringC &);
+-  static Boolean handleAsUnterminated(const Text &, AttributeContext &);
+-};
+-
+ class SP_API ImpliedAttributeValue : public AttributeValue {
+ public:
+   ImpliedAttributeValue();
