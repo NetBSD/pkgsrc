@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if [ "$2" = "POST-DEINSTALL" ]
+then
+    echo
+    echo ========================================================
+    echo If you don\'t need wwwcount\'s logs anymore, please delete
+    echo /var/log/wwwcount.
+    echo ========================================================
+fi
