@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/09/17 08:18:57 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/09/20 23:48:12 jlam Exp $
 #
 
 DISTNAME=       bonnie++-1.02c
@@ -15,7 +15,7 @@ GNU_CONFIGURE=		YES
 REPLACE_PERL=		bon_csv2txt.in bon_csv2html.in
 
 benchmark:
-	@(cd ${WRKSRC}; ./bonnie++ -u 0:0 | tee bonnie.out)
+	@cd ${WRKSRC}; ./bonnie++ -u ${ROOT_USER}:${ROOT_GROUP} | tee bonnie.out
 
 results:
 	@${MKDIR} /tmp/benches/`domainname`
