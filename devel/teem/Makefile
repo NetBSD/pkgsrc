@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/04/01 18:35:35 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/05 13:16:50 jschauma Exp $
 #
 
 DISTNAME=		teem-1.8.0-src
@@ -15,11 +15,19 @@ USE_GNU_TOOLS+=		make
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
-TEEM_ARCH=netbsd.32
+.if ${OPSYS} == "NetBSD"
+.  if ${MACHINE_ARCH} == "i386"
+NARCH=32
+LARCH=32
+.  elif ${MACHINE_ARCH} == "x86_64"
+NARCH=64
+LARCH=amd64
+.  endif
+
+TEEM_ARCH=netbsd.${NARCH}
 
 do-configure:
-	cd ${WRKSRC} && ${CP} -pR linux.32 netbsd.32
+	cd ${WRKSRC} && ${CP} -pR linux.${LARCH} ${TEEM_ARCH}
 
 .elif ${OPSYS} == "Linux" && ${MACHINE_ARCH} == "i386"
 TEEM_ARCH=linux.32
