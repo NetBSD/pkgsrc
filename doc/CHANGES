@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4361 2004/01/05 15:31:34 adam Exp $
+$NetBSD: CHANGES,v 1.4362 2004/01/05 19:18:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -65,3 +65,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated lua to 5.0.1 [cube 2004-01-05]
 	Updated perl58 to 5.8.1nb1 [grant 2004-01-05]
 	Updated gd to 2.0.17 [adam 2004-01-05]
+	Updated sablotron to 1.0.1 [wiz 2004-01-05]
