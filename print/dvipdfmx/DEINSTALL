@@ -1,0 +1,24 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1.1.1 2003/02/24 15:29:25 kei Exp $
+
+TEXMF=@PREFIX@/share/texmf
+
+case ${STAGE} in
+PRE-DEINSTALL)
+	;;
+
+DEINSTALL)
+	;;
+
+POST-DEINSTALL)
+	${MV} $TEXMF/dvipdfm/config.orig $TEXMF/dvipdfm/config
+	@PREFIX@/bin/mktexlsr
+	;;
+
+*)
+	${ECHO} "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+
+esac
