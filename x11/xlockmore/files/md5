@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.15 2000/05/11 16:37:53 hubertf Exp $
+$NetBSD: md5,v 1.16 2000/08/15 03:54:17 hubertf Exp $
 
-MD5 (xlockmore-4.16.1.tar.gz) = ba7af9df46b75e603b4774f76fcb2f3f
+MD5 (xlockmore-4.17.tar.gz) = 6e221dd493bb3fb49c1793c51e7d6e2a

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2000/05/11 16:37:52 hubertf Exp $
+# $NetBSD: Makefile,v 1.30 2000/08/15 03:54:16 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/10/10 09:24:38 tg Exp
 #
 
-DISTNAME=       xlockmore-4.16.1
+DISTNAME=       xlockmore-4.17
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.tux.org/pub/tux/bagleyd/xlockmore/
 
@@ -21,8 +21,8 @@ CONFIGURE_ARGS+= --with-mesagl --without-motif --without-sx \
 post-patch:
 		for i in xlock/sound.c xlock/resource.c ; do \
 			f=${WRKSRC}/$$i ; \
-			[ -f $$f.BAK ] || mv $$f $$f.BAK ; \
-			sed \
+			[ -f $$f.BAK ] || ${MV} $$f $$f.BAK ; \
+			${SED} \
 				-e 's|@PREFIX@|${PREFIX}|g' \
 				<$$f.BAK >$$f ; \
 		done
