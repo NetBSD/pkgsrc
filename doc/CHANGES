@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3067 2003/08/18 17:37:20 agc Exp $
+$NetBSD: CHANGES,v 1.3068 2003/08/18 18:28:10 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3298,3 +3298,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated squid to squid-2.5.3nb3 [taca 2003-08-18]
 	Updated squid to squid-2.5.3nb4 [taca 2003-08-18]
 	Added nbsed-20030818 [agc 2003-08-18]
+	Updated gaim to 0.67 [jmmv 2003-08-18]
