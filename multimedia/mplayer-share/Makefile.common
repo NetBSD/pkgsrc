@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2004/04/10 12:16:12 salo Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/04/10 12:23:55 salo Exp $
 #
 
 MPLAYER_DIST_VERSION=	1.0pre3
@@ -70,6 +70,7 @@ CONFIGURE_ARGS+=	--disable-mlib
 # MPLAYER_DISABLE_DRIVERS is explained.
 MPLAYER_DRIVERS=	arts		audio/arts \
 			esd		audio/esound \
+			matroska	multimedia/libmatroska \
 			nas		audio/nas \
 			sdl		devel/SDL
 
@@ -79,7 +80,7 @@ MPLAYER_DISABLE_DRIVERS=	arts
 .endif
 
 .if defined(PKGNAME) && !empty(PKGNAME:M*encoder*)
-MPLAYER_DISABLE_DRIVERS=arts esd nas sdl
+MPLAYER_DISABLE_DRIVERS=arts esd matroska nas sdl
 .else
 BUILD_DEFS+=		MPLAYER_DISABLE_DRIVERS
 .endif
