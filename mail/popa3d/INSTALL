@@ -1,36 +1,7 @@
-# $NetBSD: INSTALL,v 1.1 2001/11/01 01:01:01 zuntum Exp $
-#
+# $NetBSD: INSTALL,v 1.2 2001/11/25 23:55:35 zuntum Exp $
 
-if [ "$2" != "PRE-INSTALL" ]; then
-    chown popa3d:popa3d ${PKG_PREFIX}/libexec/popa3d
-    exit 0
-fi
-
-if [ -f /usr/sbin/user ]
-then
-    USER_CMD=/usr/sbin/user
-    GROUP_CMD=/usr/sbin/group
-else
-    if [ -f ${PKG_PREFIX}/sbin/user ]
-    then
-	USER_CMD=${PKG_PREFIX}/sbin/user
-	GROUP_CMD=${PKG_PREFIX}/sbin/group
-    else
-	echo
-	echo Please install the sysutils/user first!
-	echo
-	exit 0
-    fi
-fi
-
-if `${GROUP_CMD} info -e popa3d` ; then \
-	${ECHO} Group \'popa3d\' already exists.; \
-else \
-	${GROUP_CMD} add popa3d; \
-fi
-if `${USER_CMD} info -e popa3d` ; then \
-	${ECHO} User \'popa3d\' already exists.; \
-else \
-	${USER_CMD} add -g popa3d -d /nonexistent -s /sbin/nologin \
-		popa3d; \
-fi
+case "${STAGE}" in
+POST-INSTALL)
+	${CHOWN} ${PKG_USER}:${PKG_GROUP} ${PKG_PREFIX}/libexec/popa3d
+	;;
+esac
