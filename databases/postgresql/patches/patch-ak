@@ -1,0 +1,22 @@
+$NetBSD: patch-ak,v 1.4 2001/05/14 14:52:38 jlam Exp $
+
+--- src/pl/plperl/Makefile.PL.orig	Sat Jun 10 14:02:12 2000
++++ src/pl/plperl/Makefile.PL
+@@ -9,7 +9,7 @@
+ # to be position-independent, but that is hard to check for and
+ # seems pretty unlikely anyway.)
+ #
+-if ($Config{'useshrplib'} ne 'true') {
++if ( ! -f $Config{archlibexp} . "/CORE/libperl." . $Config{so}) {
+ 	open(OUT, ">Makefile") or die "Can't write Makefile: $!\n";
+ 	print OUT <<'EndOfMakefile';
+ # Dummy Makefile for use when we can't build plperl
+@@ -52,7 +52,7 @@
+ 
+ }
+ 
+-my $perllib = "-L$Config{archlibexp}/CORE -lperl";
++my $perllib = "-L$Config{archlibexp}/CORE \${RPATH_LDFLAGS} -lperl";
+ 
+ WriteMakefile( 'NAME' => 'plperl', 
+ 	dynamic_lib => { 'OTHERLDFLAGS' => "$opcode $perllib" } ,

@@ -1,15 +1,33 @@
-$NetBSD: patch-ac,v 1.8 2000/07/14 04:44:13 jlam Exp $
+$NetBSD: patch-ac,v 1.9 2001/05/14 14:52:38 jlam Exp $
 
---- configure.in.orig	Wed May 24 18:43:59 2000
-+++ configure.in	Mon Jul 10 22:20:00 2000
-@@ -675,10 +675,6 @@
- AC_SUBST(YFLAGS)
+--- doc/Makefile.orig	Sat Jan  6 21:03:22 2001
++++ doc/Makefile
+@@ -37,7 +37,7 @@
  
- AC_CHECK_LIB(sfio,     main)
--for curses in ncurses curses ; do
--	AC_CHECK_LIB(${curses}, main,
--		[LIBS="-l${curses} $LIBS"; break])
--done
- AC_CHECK_LIB(termcap,  main)
- AC_CHECK_LIB(readline, main)
- AC_CHECK_LIB(readline, using_history, AC_DEFINE(HAVE_HISTORY_IN_READLINE),
+ install: all installdirs
+ ifdef found_html
+-	gzip -d -c postgres.tar.gz | ( cd $(DESTDIR)$(docdir)/html && $(TAR) xf - )
++	gzip -d -c postgres.tar.gz | ( cd $(DESTDIR)$(docdir) && $(TAR) xf - )
+ endif
+ ifdef found_man
+ 	gzip -d -c man.tar.gz | ( cd $(DESTDIR)$(mandir) && $(TAR) xf - )
+@@ -45,12 +45,17 @@
+ 
+ 
+ installdirs:
+-	$(mkinstalldirs) $(DESTDIR)$(mandir) $(DESTDIR)$(docdir)/html
++ifdef found_html
++	$(mkinstalldirs) $(DESTDIR)$(docdir)
++endif
++ifdef found_man
++	$(mkinstalldirs) $(DESTDIR)$(mandir)
++endif
+ 
+ 
+ uninstall:
+ ifdef found_html
+-	-rm -f $(addprefix $(DESTDIR)$(docdir)/html/, $(shell gunzip -c $(srcdir)/postgres.tar.gz | tar tf -))
++	-rm -f $(addprefix $(DESTDIR)$(docdir)/, $(shell gunzip -c $(srcdir)/postgres.tar.gz | tar tf -))
+ endif
+ ifdef found_man
+ 	-rm -f $(addprefix $(DESTDIR)$(mandir)/, $(shell gunzip -c $(srcdir)/man.tar.gz | tar tf -))

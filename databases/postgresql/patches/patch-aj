@@ -1,22 +1,15 @@
-$NetBSD: patch-aj,v 1.7 2000/07/14 04:44:54 jlam Exp $
+$NetBSD: patch-aj,v 1.8 2001/05/14 14:52:38 jlam Exp $
 
---- include/storage/s_lock.h.orig	Wed Apr 12 13:16:51 2000
-+++ include/storage/s_lock.h	Wed Jul 12 02:40:53 2000
-@@ -262,7 +262,17 @@
- #define TAS(lock) tas(lock)
- #define S_UNLOCK(lock) do { __asm__("mb"); *(lock) = 0; } while (0)
+--- src/makefiles/Makefile.netbsd.orig	Sat Jan  6 21:03:41 2001
++++ src/makefiles/Makefile.netbsd
+@@ -3,7 +3,9 @@
+ ifdef ELF_SYSTEM
+ export_dynamic = -Wl,-E
+ rpath = -Wl,-R$(libdir)
+-shlib_symbolic = -Wl,-Bsymbolic
++shlib_symbolic = -Wl,-Bsymbolic -lc
++else
++rpath = -R$(libdir)
+ endif
  
-+#if defined(__GNUC__)
-+/*
-+ * GCC on the Alpha doesn't appear to handle inlining of assembly with
-+ * %0 or %1 properly.  This removes the inlining of the tas (test-and-set)
-+ * function, which probably slows things down considerably, but correctness
-+ * first!
-+ */
-+static int
-+#else
- static __inline__ int
-+#endif
- tas(volatile slock_t *lock)
- {
-  register slock_t _res;
+ DLSUFFIX = .so
