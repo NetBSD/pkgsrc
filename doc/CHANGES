@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9478 2005/03/12 14:58:00 minskim Exp $
+$NetBSD: CHANGES,v 1.9479 2005/03/12 16:12:42 chris Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1352,3 +1352,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gst-plugins to 0.8.7nb2 [jmmv 2005-03-12]
 	Removed gnome-acme [jmmv 2005-03-12]
 	Updated amarok to 1.2.1nb1 [minskim 2005-03-12]
+	Updated sylpheed-claws to 1.0.3 [chris 2005-03-12]
+	Updated sylpheed-claws-dillo-viewer to 1.0.3 [chris 2005-03-12]
+	Updated sylpheed-claws-image-viewer to 1.0.3 [chris 2005-03-12]
+	Updated sylpheed-claws-trayicon to 1.0.3 [chris 2005-03-12]
