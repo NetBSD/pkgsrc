@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/10/22 17:27:21 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2002/11/03 23:14:15 wiz Exp $
 #
 
 DISTNAME=	gimp-print-4.2.3
@@ -20,6 +20,7 @@ USE_LIBTOOL=	yes
 LIBTOOL_OVERRIDE= ${WRKSRC}/libtool
 USE_GMAKE=	yes
 USE_BUILDLINK2=	yes
+USE_X11=	yes
 
 .include "../../print/gimp-print-lib/buildlink2.mk"
 .include "../../graphics/gimp-base/buildlink2.mk"
