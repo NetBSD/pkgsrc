@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.47 2003/08/30 23:05:03 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.48 2003/08/31 05:28:36 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -4457,9 +4457,9 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		exit 1;							\
 	fi
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ ! -d ${_PKG_DBDIR} ]; then				\
-		${RM} -f ${_PKG_DBDIR};				\
-		${MKDIR} ${_PKG_DBDIR};				\
+	if [ ! -d ${_PKG_DBDIR} ]; then					\
+		${RM} -f ${_PKG_DBDIR};					\
+		${MKDIR} ${_PKG_DBDIR};					\
 	fi
 .  if defined(FORCE_PKG_REGISTER)
 	${_PKG_SILENT}${_PKG_DEBUG}${PKG_DELETE} -O ${PKGNAME}
@@ -4711,7 +4711,6 @@ real-su-remove-views:
 depend:
 .endif
 
-.PHONY: tags
 # Same goes for tags
 .PHONY: tags
 .if !target(tags)
