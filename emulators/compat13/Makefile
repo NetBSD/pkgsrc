@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/10/14 00:01:58 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2000/10/14 00:17:19 jlam Exp $
 #
 
 DISTNAME=		compat13-${MACHINE_ARCH}
@@ -23,7 +23,8 @@ INSTALL_FILE=		${WRKDIR}/INSTALL
 .include "../../mk/bsd.prefs.mk"
 
 # This installs in /usr (or /emul/aout/usr) to avoid dynamic linker annoyances
-.if ${MACHINE_ARCH} == "i386" && ${OBJECT_FMT} == "ELF"
+.if ${OBJECT_FMT} == "ELF" && \
+    (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "sparc")
 EMULSUBDIR=		emul/aout
 COMPAT_LIBDIR=		${EMULSUBDIR}/usr/lib
 .else
