@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.1.1.1 1998/08/24 12:33:38 agc Exp $
+$NetBSD: md5,v 1.2 2000/01/04 15:34:53 agc Exp $
 
-MD5 (povuni_s.tgz) = f5f259c49ac8e30373a1eb7b23671360
-MD5 (povuni_d.tgz) = 8b0d2663b9d1f2989f1233d35133a32a
+MD5 (povray-3.1g/povuni_s.tgz) = e3c9427cc7959396265478103e1d72f9
+MD5 (povray-3.1g/povuni_d.tgz) = 87180c234fbd36c182d416e434b77562
