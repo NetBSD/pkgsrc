@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2001/04/12 20:51:09 zuntum Exp $
+# $NetBSD: Makefile,v 1.130 2001/04/12 21:30:40 zuntum Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -12,6 +12,7 @@ SUBDIR+=	MesaLib
 SUBDIR+=	Ngraph
 SUBDIR+=	alevt
 SUBDIR+=	autotrace
+SUBDIR+=	avifile
 SUBDIR+=	blender
 SUBDIR+=	camediaplay
 SUBDIR+=	cdlabelgen
