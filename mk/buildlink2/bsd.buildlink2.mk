@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.34 2002/09/27 12:21:41 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.35 2002/09/28 23:46:42 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -255,13 +255,14 @@ _BLNK_UNPROTECT_SED+=	-e "s|_zOuLaRiSbAsE_|${ZOULARISBASE}|g"
 _BLNK_UNPROTECT_SED+=	-e "s|_bUiLdLiNk_dIr_|${BUILDLINK_DIR}|g"
 _BLNK_UNPROTECT_SED+=	-e "s|_pKgSrCdIr_|${_PKGSRCDIR}|g"
 #
-# Create _BLNK_TRANSFORM_SED.{1,2,3} from _BLNK_TRANSFORM.  We must use
+# Create _BLNK_TRANSFORM_SED.{1,2,3,4} from _BLNK_TRANSFORM.  We must use
 # separate variables instead of just one because the contents are too long
 # for one variable when we substitute into a shell script later on.
 #
 _BLNK_TRANSFORM_SED.1+=		${_BLNK_PROTECT_SED}
 _BLNK_TRANSFORM_SED.2+=		${_BLNK_PROTECT_SED}
 _BLNK_TRANSFORM_SED.3+=		${_BLNK_PROTECT_SED}
+_BLNK_TRANSFORM_SED.4+=		${_BLNK_PROTECT_SED}
 #
 # Change "/usr/lib/libfoo.so"       into "-lfoo",
 #        "/usr/pkg/lib/libfoo.so"   into "-L/usr/pkg/lib -lfoo",
@@ -372,9 +373,9 @@ _BLNK_UNTRANSFORM_SED.3+=	${_BLNK_TRANSFORM_SED.l}
 # Fix up references to the x11-links directory.
 #
 .if defined(USE_X11) || defined(USE_X11BASE) || defined(USE_IMAKE)
-_BLNK_TRANSFORM_SED.3+= \
+_BLNK_TRANSFORM_SED.4+= \
 	-e "s|${BUILDLINK_DIR}/\(${BUILDLINK_X11_DIR:S/^${LOCALBASE}\///}\)|${LOCALBASE}/\1|g"
-_BLNK_UNTRANSFORM_SED.3+= \
+_BLNK_UNTRANSFORM_SED.4+= \
 	-e "s|${BUILDLINK_DIR}/\(${BUILDLINK_X11_DIR:S/^${LOCALBASE}\///}\)|${LOCALBASE}/\1|g"
 .endif
 #
@@ -389,17 +390,17 @@ _BLNK_TRANSFORM_SED.r+= \
 	-e "s|${_transform_:S/^r://}$$||g"				\
 	-e "s|${_transform_:S/^r://}/[^	 ]*||g"
 .endfor
-_BLNK_TRANSFORM_SED.3+=		${_BLNK_TRANSFORM_SED.r}
-_BLNK_UNTRANSFORM_SED.3+=	${_BLNK_TRANSFORM_SED.r}
+_BLNK_TRANSFORM_SED.4+=		${_BLNK_TRANSFORM_SED.r}
+_BLNK_UNTRANSFORM_SED.4+=	${_BLNK_TRANSFORM_SED.r}
 #
 # Remove -Wl,-R* and *-rpath* if _USE_RPATH != "yes"
 #
 .if defined(_USE_RPATH) && empty(_USE_RPATH:M[yY][eE][sS])
-_BLNK_TRANSFORM_SED.3+= \
+_BLNK_TRANSFORM_SED.4+= \
 	-e "s|-Wl,-R/[^ 	]*||g"					\
 	-e "s|-R/[^ 	]*||g"						\
 	-e "s|-Wl,-rpath,[^ 	]*||g"
-_BLNK_UNTRANSFORM_SED.3+= \
+_BLNK_UNTRANSFORM_SED.4+= \
 	-e "s|-Wl,-R/[^ 	]*||g"					\
 	-e "s|-R/[^ 	]*||g"						\
 	-e "s|-Wl,-rpath,[^ 	]*||g"
@@ -407,12 +408,12 @@ _BLNK_UNTRANSFORM_SED.3+= \
 #
 # Explicitly remove "-I/usr/include" and "-L/usr/lib" as they're redundant.
 #
-_BLNK_TRANSFORM_SED.3+= \
+_BLNK_TRANSFORM_SED.4+= \
 	-e "s|-I/usr/include ||g"					\
 	-e "s|-I/usr/include$$||g"					\
 	-e "s|-L/usr/lib ||g"						\
 	-e "s|-L/usr/lib$$||g"
-_BLNK_UNTRANSFORM_SED.3+= \
+_BLNK_UNTRANSFORM_SED.4+= \
 	-e "s|-I/usr/include ||g"					\
 	-e "s|-I/usr/include$$||g"					\
 	-e "s|-L/usr/lib ||g"						\
@@ -421,6 +422,7 @@ _BLNK_UNTRANSFORM_SED.3+= \
 _BLNK_TRANSFORM_SED.1+=		${_BLNK_UNPROTECT_SED}
 _BLNK_TRANSFORM_SED.2+=		${_BLNK_UNPROTECT_SED}
 _BLNK_TRANSFORM_SED.3+=		${_BLNK_UNPROTECT_SED}
+_BLNK_TRANSFORM_SED.4+=		${_BLNK_UNPROTECT_SED}
 
 _BLNK_CHECK_IS_TEXT_FILE?= \
 	${FILE_CMD} $${file} | ${EGREP} "(shell script|text)" >/dev/null 2>&1
@@ -457,6 +459,7 @@ _BUILDLINK_SUBST_USE: .USE
 							${BUILDLINK_SUBST_SED.1.${.TARGET:S/-buildlink-subst//}} \
 							${BUILDLINK_SUBST_SED.2.${.TARGET:S/-buildlink-subst//}} \
 							${BUILDLINK_SUBST_SED.3.${.TARGET:S/-buildlink-subst//}} \
+							${BUILDLINK_SUBST_SED.4.${.TARGET:S/-buildlink-subst//}} \
 							$${file} > $${file}.modified; \
 						if [ -x $${file} ]; then \
 							${CHMOD} +x $${file}.modified; \
@@ -500,6 +503,7 @@ BUILDLINK_SUBST_SED.unbuildlink=	${_REPLACE_BUILDLINK_SED}
 BUILDLINK_SUBST_SED.1.unbuildlink=	${_BLNK_UNTRANSFORM_SED.1}
 BUILDLINK_SUBST_SED.2.unbuildlink=	${_BLNK_UNTRANSFORM_SED.2}
 BUILDLINK_SUBST_SED.3.unbuildlink=	${_BLNK_UNTRANSFORM_SED.3}
+BUILDLINK_SUBST_SED.4.unbuildlink=	${_BLNK_UNTRANSFORM_SED.4}
 
 post-build: unbuildlink-buildlink-subst
 unbuildlink-buildlink-subst: _BUILDLINK_SUBST_USE
@@ -569,7 +573,7 @@ BUILDLINK_SHELL?=	${SH}
 
 # wrapper script that may be customized per wrapper:
 #
-# _BLNK_WRAP_ENV.<wrappee> resets the value of CC, CPP, etc. in the
+# _BLNK_WRAP_SETENV.<wrappee> resets the value of CC, CPP, etc. in the
 #	configure and make environments (CONFIGURE_ENV, MAKE_ENV) so that
 #	they point to the wrappers.
 #
@@ -580,6 +584,9 @@ BUILDLINK_SHELL?=	${SH}
 #	and conversely for the files ending in "-trans".  By default, all
 #	wrappers use the "-trans" scripts.
 #
+# _BLNK_WRAP_ENV.<wrappee> consists of shell commands to export a shell
+#	environment for the wrappee.
+#
 # _BLNK_WRAP_SANITIZE_PATH.<wrappee> sets the PATH for calling executables
 #	from within the wrapper.  By default, it removes the buildlink
 #	directory from the PATH so that sub-invocations of compiler tools
@@ -588,6 +595,7 @@ BUILDLINK_SHELL?=	${SH}
 _BLNK_SANITIZED_PATH!=	${ECHO} ${PATH} | ${SED}			\
 	-e "s|:${BUILDLINK_DIR}[^:]*||" -e "s|${BUILDLINK_DIR}[^:]*:||"
 _BLNK_WRAP_SANITIZE_PATH=		PATH="${_BLNK_SANITIZED_PATH}"
+_BLNK_WRAP_ENV?=			${BUILDLINK_WRAPPER_ENV}
 _BLNK_WRAP_PRE_CACHE=			${BUILDLINK_DIR}/bin/.pre-cache
 _BLNK_WRAP_POST_CACHE=			${BUILDLINK_DIR}/bin/.post-cache
 _BLNK_WRAP_CACHE=			${BUILDLINK_DIR}/bin/.cache
@@ -606,8 +614,9 @@ _BLNK_FAKE_LA=				${BUILDLINK_DIR}/bin/.fake-la
 #	generate the wrapper for the wrappee.
 #
 _BLNK_WRAPPER_SH.${_wrappee_}=	${.CURDIR}/../../mk/buildlink2/wrapper.sh
-_BLNK_WRAP_ENV.${_wrappee_}=	${_wrappee_}="${BUILDLINK_${_wrappee_}:T}"
+_BLNK_WRAP_SETENV.${_wrappee_}=	${_wrappee_}="${BUILDLINK_${_wrappee_}:T}"
 _BLNK_WRAP_SANITIZE_PATH.${_wrappee_}=	${_BLNK_WRAP_SANITIZE_PATH}
+_BLNK_WRAP_ENV.${_wrappee_}=		${_BLNK_WRAP_ENV}
 _BLNK_WRAP_PRE_CACHE.${_wrappee_}=	${_BLNK_WRAP_PRE_CACHE}
 _BLNK_WRAP_POST_CACHE.${_wrappee_}=	${_BLNK_WRAP_POST_CACHE_TRANSFORM}
 _BLNK_WRAP_CACHE.${_wrappee_}=		${_BLNK_WRAP_CACHE_TRANSFORM}
@@ -618,19 +627,19 @@ _BLNK_WRAP_SPECIFIC_LOGIC.${_wrappee_}=	${_BLNK_WRAP_SPECIFIC_LOGIC}
 # Don't bother adding AS, CPP to the configure or make environments as
 # adding them seems to break some GNU configure scripts.
 #
-_BLNK_WRAP_ENV.AS=		# empty
-_BLNK_WRAP_ENV.CPP=		# empty
+_BLNK_WRAP_SETENV.AS=		# empty
+_BLNK_WRAP_SETENV.CPP=		# empty
 
 # Also override any F77 value in the environment when compiling Fortran
 # code.
 #
-_BLNK_WRAP_ENV.FC+=		F77="${BUILDLINK_FC:T}"
+_BLNK_WRAP_SETENV.FC+=		F77="${BUILDLINK_FC:T}"
 
 # Don't override the default LIBTOOL setting in the environment, as
 # it already correctly points to ${PKGLIBTOOL}, and don't sanitize the PATH
 # because we want libtool to invoke the wrapper scripts, too.
 #
-_BLNK_WRAP_ENV.LIBTOOL=		# empty
+_BLNK_WRAP_SETENV.LIBTOOL=	# empty
 _BLNK_WRAPPER_SH.LIBTOOL=	${.CURDIR}/../../mk/buildlink2/libtool.sh
 _BLNK_WRAP_SANITIZE_PATH.LIBTOOL=	# empty
 
@@ -658,8 +667,8 @@ buildlink-wrappers: ${_BLNK_LIBTOOL_FIX_LA}
 buildlink-wrappers: ${_BLNK_FAKE_LA}
 
 .for _wrappee_ in ${_BLNK_WRAPPEES}
-CONFIGURE_ENV+=	${_BLNK_WRAP_ENV.${_wrappee_}}
-MAKE_ENV+=	${_BLNK_WRAP_ENV.${_wrappee_}}
+CONFIGURE_ENV+=	${_BLNK_WRAP_SETENV.${_wrappee_}}
+MAKE_ENV+=	${_BLNK_WRAP_SETENV.${_wrappee_}}
 
 BUILDLINK_${_wrappee_}=	\
 	${BUILDLINK_DIR}/bin/${${_wrappee_}:T:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
@@ -677,7 +686,8 @@ _BLNK_WRAPPER_TRANSFORM_SED.${_wrappee_}=				\
 	-e "s|@_BLNK_WRAP_POST_CACHE@|${_BLNK_WRAP_POST_CACHE.${_wrappee_}:Q}|g" \
 	-e "s|@_BLNK_WRAP_CACHE@|${_BLNK_WRAP_CACHE.${_wrappee_}:Q}|g"	\
 	-e "s|@_BLNK_WRAP_LOGIC@|${_BLNK_WRAP_LOGIC.${_wrappee_}:Q}|g"	\
-	-e "s|@_BLNK_WRAP_SPECIFIC_LOGIC@|${_BLNK_WRAP_SPECIFIC_LOGIC.${_wrappee_}:Q}|g"	\
+	-e "s|@_BLNK_WRAP_SPECIFIC_LOGIC@|${_BLNK_WRAP_SPECIFIC_LOGIC.${_wrappee_}:Q}|g" \
+	-e "s|@_BLNK_WRAP_ENV@|${_BLNK_WRAP_ENV.${_wrappee_}:Q}|g"	\
 	-e "s|@_BLNK_WRAP_SANITIZE_PATH@|${_BLNK_WRAP_SANITIZE_PATH.${_wrappee_}:Q}|g"
 
 buildlink-wrappers: ${BUILDLINK_${_wrappee_}}
@@ -782,6 +792,7 @@ ${_BLNK_WRAP_POST_CACHE}: ${.CURDIR}/../../mk/buildlink2/post-cache
 		-e 's|@_BLNK_TRANSFORM_SED.1@||g'			\
 		-e 's|@_BLNK_TRANSFORM_SED.2@||g'			\
 		-e 's|@_BLNK_TRANSFORM_SED.3@||g'			\
+		-e 's|@_BLNK_TRANSFORM_SED.4@||g'			\
 		${.ALLSRC} > ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
@@ -794,6 +805,7 @@ ${_BLNK_WRAP_POST_CACHE_TRANSFORM}: ${.CURDIR}/../../mk/buildlink2/post-cache
 		-e 's|@_BLNK_TRANSFORM_SED.1@|${_BLNK_TRANSFORM_SED.1:Q}|g' \
 		-e 's|@_BLNK_TRANSFORM_SED.2@|${_BLNK_TRANSFORM_SED.2:Q}|g' \
 		-e 's|@_BLNK_TRANSFORM_SED.3@|${_BLNK_TRANSFORM_SED.3:Q}|g' \
+		-e 's|@_BLNK_TRANSFORM_SED.4@|${_BLNK_TRANSFORM_SED.4:Q}|g' \
 		${.ALLSRC} > ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
@@ -846,6 +858,7 @@ ${_BLNK_LIBTOOL_FIX_LA}: ${.CURDIR}/../../mk/buildlink2/libtool-fix-la
 		-e 's|@_BLNK_UNTRANSFORM_SED.1@|${_BLNK_UNTRANSFORM_SED.1:Q}|g' \
 		-e 's|@_BLNK_UNTRANSFORM_SED.2@|${_BLNK_UNTRANSFORM_SED.2:Q}|g' \
 		-e 's|@_BLNK_UNTRANSFORM_SED.3@|${_BLNK_UNTRANSFORM_SED.3:Q}|g' \
+		-e 's|@_BLNK_UNTRANSFORM_SED.4@|${_BLNK_UNTRANSFORM_SED.4:Q}|g' \
 		${.ALLSRC} > ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 

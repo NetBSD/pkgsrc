@@ -1,4 +1,4 @@
-# $NetBSD: libtool-fix-la,v 1.9 2002/09/24 08:37:53 jlam Exp $
+# $NetBSD: libtool-fix-la,v 1.10 2002/09/28 23:46:42 jlam Exp $
 #
 # For *.la files, in the "relink_command" line, we make the following
 # replacements:
@@ -113,6 +113,7 @@ if [ -f $lafile ]; then
 			@_BLNK_UNTRANSFORM_SED.1@ \
 			@_BLNK_UNTRANSFORM_SED.2@ \
 			@_BLNK_UNTRANSFORM_SED.3@ \
+			@_BLNK_UNTRANSFORM_SED.4@ \
 			$laifile > ${laifile}.tmp
 		. ${laifile}.tmp
 		L=; l=; lexist=; prev=

@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: libtool.sh,v 1.4 2002/09/23 01:11:39 jlam Exp $
+# $NetBSD: libtool.sh,v 1.5 2002/09/28 23:46:42 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
@@ -69,6 +69,7 @@ while [ $# -gt 0 ]; do
 done
 cmd="$cmd $args"
 
+@_BLNK_WRAP_ENV@
 @_BLNK_WRAP_SANITIZE_PATH@
 
 @ECHO@ $cmd >> $wrapperlog
