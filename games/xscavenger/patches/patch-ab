@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/01/08 18:26:00 wiz Exp $
+
+--- Imakefile.orig	Thu Jan  6 06:47:22 2000
++++ Imakefile	Sat Jan  8 18:10:48 2000
+@@ -1,7 +1,7 @@
+ # set this to the path where data files should be stored.  LIBDIR
+ # is automatically defined by imake, usually to /usr/X11R6/lib/X11, so
+ # this should be a good default.
+-LIBNAME = $(LIBDIR)/scavenger
++LIBNAME = ${PREFIX}/share/scavenger
+ 
+ SRCS = anim.c edit.c scav.c x.c sound.c
+ OBJS = $(SRCS:.c=.o)
+@@ -13,8 +13,8 @@
+ 	../data/reddevil.lbm ../data/regularguy.lbm ../data/spiralthing.lbm \
+ 	../data/victory.raw
+ 
+-LOCAL_LIBRARIES = $(XLIB)
++LOCAL_LIBRARIES = $(XLIB) -lossaudio
+ EXTRA_DEFINES = -DLIBNAME=\"$(LIBNAME)\"
+ 
+-ComplexProgramTarget(scavenger)
++ComplexProgramTargetNoMan(scavenger)
+ InstallMultipleFlags($(LIB_DATA),$(LIBNAME),-m 644)
