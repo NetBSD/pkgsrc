@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8546 2004/12/31 15:15:50 jlam Exp $
+$NetBSD: CHANGES,v 1.8547 2004/12/31 16:46:22 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6728,3 +6728,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated squid to 2.5.7nb4 [taca 2004-12-31]
 	Updated bkpupsd to 2.1.2nb3 [taca 2004-12-31]
 	Updated openvpn-current to 2.0rc1 [jlam 2004-12-31]
+	Added easymenu-0.7.2[kristerw 2004-12-31]
