@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2131 2004/09/19 12:50:33 wiz Exp $
+$NetBSD: TODO,v 1.2132 2004/09/19 13:03:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -354,7 +354,6 @@ Suggested package updates
 	o mp3splt-2.0e
 	o mpi-ch-1.2.6
 	o mrproject-0.9.1
-	o msmtp-1.2.3 [pkg/26975]
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.2.2
 	o mummer-3.15
