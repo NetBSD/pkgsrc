@@ -1,5 +1,5 @@
 ======================================================================
-$NetBSD: MESSAGE,v 1.6 2001/03/12 18:05:25 fredb Exp $
+$NetBSD: MESSAGE,v 1.7 2001/03/12 18:08:32 fredb Exp $
 
 1) To enable "wwwwoffled" to start on boot on NetBSD-1.5 or newer,
 please copy "${PREFIX}/etc/rc.d/wwwoffled" to "/etc/rc.d/" and add
@@ -26,8 +26,7 @@ reindex the database for "htdig") periodically, as by the following
 example "crontab fragment":
 
 # wwwoffle proxy maintenance
-01      1       *       *       0-5     /usr/bin/nice /usr/pkg/bin/wwwoffle -purge -c /usr/pkg/etc/wwwoffle/wwwoffle.conf && /bin/sh /var/wwwoffle/html/search/htdig/scripts/wwwoffle-htdig-incr
-01      1       *       *       6       /usr/bin/nice /usr/pkg/bin/wwwoffle -purge -c /usr/pkg/etc/wwwoffle/wwwoffle.conf && /bin/sh /var/wwwoffle/html/search/htdig/scripts/wwwoffle-htdig-full
+01      1       *       *       0-5     /usr/bin/nice ${PREFIX}/bin/wwwoffle -purge -c ${PREFIX}/etc/wwwoffle/wwwoffle.conf && /bin/sh /var/wwwoffle/html/search/htdig/scripts/wwwoffle-htdig-incr
+01      1       *       *       6       /usr/bin/nice ${PREFIX}/bin/wwwoffle -purge -c ${PREFIX}/etc/wwwoffle/wwwoffle.conf && /bin/sh /var/wwwoffle/html/search/htdig/scripts/wwwoffle-htdig-full
 
 ======================================================================
-
