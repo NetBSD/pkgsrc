@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/29 18:51:05 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/29 19:16:47 hubertf Exp $
 #
 
 DISTNAME=		free-1.0
@@ -20,5 +20,6 @@ NO_BUILD=	yes
 
 do-install:
 	${INSTALL_SCRIPT} ${FILESDIR}/free ${PREFIX}/bin/free
+	${INSTALL_MAN} ${FILESDIR}/free.1 ${PREFIX}/man/man1/free.1
 
 .include "../../mk/bsd.pkg.mk"
