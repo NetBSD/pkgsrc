@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/06/29 18:15:30 wiz Exp $
+$NetBSD: distinfo,v 1.2 2001/11/22 13:42:08 agc Exp $
 
-SHA1 (mkttfdir-1.0.tar.gz) = 4115884ab1ed29c01479052f088970d2a7a7b570
-Size (mkttfdir-1.0.tar.gz) = 16887 bytes
+SHA1 (mkttfdir-1.1.tar.gz) = f883be2c9e6093eee61ccbd4c0e04f586eb07dea
+Size (mkttfdir-1.1.tar.gz) = 17148 bytes
