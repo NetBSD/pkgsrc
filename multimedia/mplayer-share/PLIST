@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/26 12:06:41 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/28 15:54:46 wiz Exp $
 man/man1/mplayer.1
+share/mplayer/DOCS/HTML/en/amiga.html
 share/mplayer/DOCS/HTML/en/aspect.html
 share/mplayer/DOCS/HTML/en/bsd.html
 share/mplayer/DOCS/HTML/en/bugreports.html
@@ -28,6 +29,7 @@ share/mplayer/DOCS/HTML/en/gcc-296.html
 share/mplayer/DOCS/HTML/en/gui.html
 share/mplayer/DOCS/HTML/en/history.html
 share/mplayer/DOCS/HTML/en/howtoread.html
+share/mplayer/DOCS/HTML/en/hpux.html
 share/mplayer/DOCS/HTML/en/index.html
 share/mplayer/DOCS/HTML/en/install.html
 share/mplayer/DOCS/HTML/en/intro.html
@@ -37,6 +39,7 @@ share/mplayer/DOCS/HTML/en/linux.html
 share/mplayer/DOCS/HTML/en/macos.html
 share/mplayer/DOCS/HTML/en/mailinglists.html
 share/mplayer/DOCS/HTML/en/menc-feat-divx4.html
+share/mplayer/DOCS/HTML/en/menc-feat-dvd-mpeg4.html
 share/mplayer/DOCS/HTML/en/menc-feat-enc-images.html
 share/mplayer/DOCS/HTML/en/menc-feat-enc-libavcodec.html
 share/mplayer/DOCS/HTML/en/menc-feat-extractsub.html
@@ -44,6 +47,7 @@ share/mplayer/DOCS/HTML/en/menc-feat-fix-avi.html
 share/mplayer/DOCS/HTML/en/menc-feat-mpeg.html
 share/mplayer/DOCS/HTML/en/menc-feat-rescale.html
 share/mplayer/DOCS/HTML/en/menc-feat-streamcopy.html
+share/mplayer/DOCS/HTML/en/menc-feat-telecine.html
 share/mplayer/DOCS/HTML/en/mencoder.html
 share/mplayer/DOCS/HTML/en/mplayer-binary.html
 share/mplayer/DOCS/HTML/en/mpst.html
@@ -65,6 +69,7 @@ share/mplayer/DOCS/HTML/en/usage.html
 share/mplayer/DOCS/HTML/en/users-vs-dev.html
 share/mplayer/DOCS/HTML/en/vcd.html
 share/mplayer/DOCS/HTML/en/windows.html
+share/mplayer/DOCS/HTML/es/amiga.html
 share/mplayer/DOCS/HTML/es/aspect.html
 share/mplayer/DOCS/HTML/es/bsd.html
 share/mplayer/DOCS/HTML/es/bugreports.html
@@ -93,6 +98,7 @@ share/mplayer/DOCS/HTML/es/gcc-296.html
 share/mplayer/DOCS/HTML/es/gui.html
 share/mplayer/DOCS/HTML/es/history.html
 share/mplayer/DOCS/HTML/es/howtoread.html
+share/mplayer/DOCS/HTML/es/hpux.html
 share/mplayer/DOCS/HTML/es/index.html
 share/mplayer/DOCS/HTML/es/install.html
 share/mplayer/DOCS/HTML/es/intro.html
@@ -102,6 +108,7 @@ share/mplayer/DOCS/HTML/es/linux.html
 share/mplayer/DOCS/HTML/es/macos.html
 share/mplayer/DOCS/HTML/es/mailinglists.html
 share/mplayer/DOCS/HTML/es/menc-feat-divx4.html
+share/mplayer/DOCS/HTML/es/menc-feat-dvd-mpeg4.html
 share/mplayer/DOCS/HTML/es/menc-feat-enc-images.html
 share/mplayer/DOCS/HTML/es/menc-feat-enc-libavcodec.html
 share/mplayer/DOCS/HTML/es/menc-feat-extractsub.html
@@ -109,6 +116,7 @@ share/mplayer/DOCS/HTML/es/menc-feat-fix-avi.html
 share/mplayer/DOCS/HTML/es/menc-feat-mpeg.html
 share/mplayer/DOCS/HTML/es/menc-feat-rescale.html
 share/mplayer/DOCS/HTML/es/menc-feat-streamcopy.html
+share/mplayer/DOCS/HTML/es/menc-feat-telecine.html
 share/mplayer/DOCS/HTML/es/mencoder.html
 share/mplayer/DOCS/HTML/es/mplayer-binary.html
 share/mplayer/DOCS/HTML/es/mpst.html
@@ -130,6 +138,7 @@ share/mplayer/DOCS/HTML/es/usage.html
 share/mplayer/DOCS/HTML/es/users-vs-dev.html
 share/mplayer/DOCS/HTML/es/vcd.html
 share/mplayer/DOCS/HTML/es/windows.html
+share/mplayer/DOCS/HTML/fr/amiga.html
 share/mplayer/DOCS/HTML/fr/aspect.html
 share/mplayer/DOCS/HTML/fr/bsd.html
 share/mplayer/DOCS/HTML/fr/bugreports.html
@@ -158,6 +167,7 @@ share/mplayer/DOCS/HTML/fr/gcc-296.html
 share/mplayer/DOCS/HTML/fr/gui.html
 share/mplayer/DOCS/HTML/fr/history.html
 share/mplayer/DOCS/HTML/fr/howtoread.html
+share/mplayer/DOCS/HTML/fr/hpux.html
 share/mplayer/DOCS/HTML/fr/index.html
 share/mplayer/DOCS/HTML/fr/install.html
 share/mplayer/DOCS/HTML/fr/intro.html
@@ -167,6 +177,7 @@ share/mplayer/DOCS/HTML/fr/linux.html
 share/mplayer/DOCS/HTML/fr/macos.html
 share/mplayer/DOCS/HTML/fr/mailinglists.html
 share/mplayer/DOCS/HTML/fr/menc-feat-divx4.html
+share/mplayer/DOCS/HTML/fr/menc-feat-dvd-mpeg4.html
 share/mplayer/DOCS/HTML/fr/menc-feat-enc-images.html
 share/mplayer/DOCS/HTML/fr/menc-feat-enc-libavcodec.html
 share/mplayer/DOCS/HTML/fr/menc-feat-extractsub.html
@@ -174,6 +185,7 @@ share/mplayer/DOCS/HTML/fr/menc-feat-fix-avi.html
 share/mplayer/DOCS/HTML/fr/menc-feat-mpeg.html
 share/mplayer/DOCS/HTML/fr/menc-feat-rescale.html
 share/mplayer/DOCS/HTML/fr/menc-feat-streamcopy.html
+share/mplayer/DOCS/HTML/fr/menc-feat-telecine.html
 share/mplayer/DOCS/HTML/fr/mencoder.html
 share/mplayer/DOCS/HTML/fr/mplayer-binary.html
 share/mplayer/DOCS/HTML/fr/mpst.html
@@ -195,6 +207,7 @@ share/mplayer/DOCS/HTML/fr/usage.html
 share/mplayer/DOCS/HTML/fr/users-vs-dev.html
 share/mplayer/DOCS/HTML/fr/vcd.html
 share/mplayer/DOCS/HTML/fr/windows.html
+share/mplayer/DOCS/HTML/pl/amiga.html
 share/mplayer/DOCS/HTML/pl/aspect.html
 share/mplayer/DOCS/HTML/pl/bsd.html
 share/mplayer/DOCS/HTML/pl/bugreports.html
@@ -223,6 +236,7 @@ share/mplayer/DOCS/HTML/pl/gcc-296.html
 share/mplayer/DOCS/HTML/pl/gui.html
 share/mplayer/DOCS/HTML/pl/history.html
 share/mplayer/DOCS/HTML/pl/howtoread.html
+share/mplayer/DOCS/HTML/pl/hpux.html
 share/mplayer/DOCS/HTML/pl/index.html
 share/mplayer/DOCS/HTML/pl/install.html
 share/mplayer/DOCS/HTML/pl/intro.html
@@ -232,6 +246,7 @@ share/mplayer/DOCS/HTML/pl/linux.html
 share/mplayer/DOCS/HTML/pl/macos.html
 share/mplayer/DOCS/HTML/pl/mailinglists.html
 share/mplayer/DOCS/HTML/pl/menc-feat-divx4.html
+share/mplayer/DOCS/HTML/pl/menc-feat-dvd-mpeg4.html
 share/mplayer/DOCS/HTML/pl/menc-feat-enc-images.html
 share/mplayer/DOCS/HTML/pl/menc-feat-enc-libavcodec.html
 share/mplayer/DOCS/HTML/pl/menc-feat-extractsub.html
@@ -260,6 +275,7 @@ share/mplayer/DOCS/HTML/pl/usage.html
 share/mplayer/DOCS/HTML/pl/users-vs-dev.html
 share/mplayer/DOCS/HTML/pl/vcd.html
 share/mplayer/DOCS/HTML/pl/windows.html
+share/mplayer/DOCS/HTML/ru/amiga.html
 share/mplayer/DOCS/HTML/ru/aspect.html
 share/mplayer/DOCS/HTML/ru/bsd.html
 share/mplayer/DOCS/HTML/ru/bugreports.html
@@ -288,13 +304,16 @@ share/mplayer/DOCS/HTML/ru/gcc-296.html
 share/mplayer/DOCS/HTML/ru/gui.html
 share/mplayer/DOCS/HTML/ru/history.html
 share/mplayer/DOCS/HTML/ru/howtoread.html
+share/mplayer/DOCS/HTML/ru/hpux.html
 share/mplayer/DOCS/HTML/ru/index.html
 share/mplayer/DOCS/HTML/ru/install.html
 share/mplayer/DOCS/HTML/ru/intro.html
 share/mplayer/DOCS/HTML/ru/joe-barr.html
 share/mplayer/DOCS/HTML/ru/linux.html
+share/mplayer/DOCS/HTML/ru/macos.html
 share/mplayer/DOCS/HTML/ru/mailinglists.html
 share/mplayer/DOCS/HTML/ru/menc-feat-divx4.html
+share/mplayer/DOCS/HTML/ru/menc-feat-dvd-mpeg4.html
 share/mplayer/DOCS/HTML/ru/menc-feat-enc-images.html
 share/mplayer/DOCS/HTML/ru/menc-feat-enc-libavcodec.html
 share/mplayer/DOCS/HTML/ru/menc-feat-extractsub.html
@@ -302,6 +321,7 @@ share/mplayer/DOCS/HTML/ru/menc-feat-fix-avi.html
 share/mplayer/DOCS/HTML/ru/menc-feat-mpeg.html
 share/mplayer/DOCS/HTML/ru/menc-feat-rescale.html
 share/mplayer/DOCS/HTML/ru/menc-feat-streamcopy.html
+share/mplayer/DOCS/HTML/ru/menc-feat-telecine.html
 share/mplayer/DOCS/HTML/ru/mencoder.html
 share/mplayer/DOCS/HTML/ru/mplayer-binary.html
 share/mplayer/DOCS/HTML/ru/mpst.html
@@ -363,6 +383,7 @@ share/mplayer/DOCS/man/en/mplayer.1
 share/mplayer/DOCS/man/es/mplayer.1
 share/mplayer/DOCS/man/fr/mplayer.1
 share/mplayer/DOCS/man/hu/mplayer.1
+share/mplayer/DOCS/man/it/mplayer.1
 share/mplayer/DOCS/man/pl/mplayer.1
 share/mplayer/DOCS/man/zh/mplayer.1
 share/mplayer/DOCS/tech/MAINTAINERS
@@ -372,7 +393,6 @@ share/mplayer/DOCS/tech/codecs-in.html
 share/mplayer/DOCS/tech/codecs.conf.txt
 share/mplayer/DOCS/tech/colorspaces.txt
 share/mplayer/DOCS/tech/cvs-howto.txt
-share/mplayer/DOCS/tech/directfb.txt
 share/mplayer/DOCS/tech/dr-methods.txt
 share/mplayer/DOCS/tech/encoding-tips.txt
 share/mplayer/DOCS/tech/formats.txt
@@ -399,6 +419,7 @@ share/mplayer/DOCS/tech/slave.txt
 share/mplayer/DOCS/tech/subcp.txt
 share/mplayer/DOCS/tech/swscaler_filters.txt
 share/mplayer/DOCS/tech/swscaler_methods.txt
+share/mplayer/DOCS/tech/translations.txt
 share/mplayer/DOCS/tech/vidix.txt
 share/mplayer/DOCS/tech/wishlist
 share/mplayer/DOCS/zh/bugreports.html
@@ -496,6 +517,7 @@ share/mplayer/input.conf
 @dirrm share/mplayer/DOCS/tech
 @dirrm share/mplayer/DOCS/man/zh
 @dirrm share/mplayer/DOCS/man/pl
+@dirrm share/mplayer/DOCS/man/it
 @dirrm share/mplayer/DOCS/man/hu
 @dirrm share/mplayer/DOCS/man/fr
 @dirrm share/mplayer/DOCS/man/es

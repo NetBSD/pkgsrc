@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/26 12:09:09 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/28 15:54:46 wiz Exp $
 bin/gmplayer
 share/mplayer/Skin/AlienMind/README
 share/mplayer/Skin/AlienMind/VERSION
@@ -80,7 +80,6 @@ share/mplayer/Skin/CornerMP-aqua/sub.png
 share/mplayer/Skin/CornerMP-aqua/subt.png
 share/mplayer/Skin/CornerMP-aqua/symbols.fnt
 share/mplayer/Skin/CornerMP-aqua/symbols.png
-share/mplayer/Skin/CornerMP-aqua/vol.png
 share/mplayer/Skin/CornerMP/README
 share/mplayer/Skin/CornerMP/VERSION
 share/mplayer/Skin/CornerMP/about.png
@@ -110,7 +109,6 @@ share/mplayer/Skin/CornerMP/sub.png
 share/mplayer/Skin/CornerMP/subt.png
 share/mplayer/Skin/CornerMP/symbols.fnt
 share/mplayer/Skin/CornerMP/symbols.png
-share/mplayer/Skin/CornerMP/vol.png
 share/mplayer/Skin/Cyrus/README
 share/mplayer/Skin/Cyrus/VERSION
 share/mplayer/Skin/Cyrus/eq.png
