@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.557 2000/08/31 02:32:32 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.558 2000/08/31 04:29:53 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1758,7 +1758,6 @@ root-install:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} fake-pkg
 .endif # !NO_PKG_REGISTER
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${INSTALL_COOKIE}
-	echo CHECK_SHLIBS=${CHECK_SHLIBS}
 .if defined(PKG_DEVELOPER) && (${CHECK_SHLIBS} == "YES")
 	@${MAKE} ${MAKEFLAGS} check-shlibs
 .endif
