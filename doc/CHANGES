@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3069 2003/08/19 00:07:45 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.3070 2003/08/19 09:20:54 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3300,3 +3300,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added nbsed-20030818 [agc 2003-08-18]
 	Updated gaim to 0.67 [jmmv 2003-08-18]
 	Updated gerbv to 0.14 [dmcmahill 2003-08-18]
+	Updated tgif to 4.1.43 [dmcmahill 2003-08-19]
