@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/08/14 14:57:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/12/16 00:53:31 wiz Exp $
 lib/ldscripts/armnbsd.x
 lib/ldscripts/armnbsd.xbn
 lib/ldscripts/armnbsd.xn
@@ -101,10 +101,10 @@ lib/ldscripts/sun4.xu
 @unexec rmdir %D/lib/ldscripts 2>/dev/null || true
 include/ansidecl.h
 include/bfd.h
-lib/libbfd-2.9.1.so.0.0
+lib/libbfd-2.9.1.so
 lib/libbfd.a
 lib/libbfd.la
-lib/libopcodes-2.9.1.so.0.0
+lib/libopcodes-2.9.1.so
 lib/libopcodes.a
 lib/libopcodes.la
 lib/libiberty.a
