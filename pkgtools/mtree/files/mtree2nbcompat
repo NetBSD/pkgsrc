@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: mtree2nbcompat,v 1.1 2004/08/21 04:10:45 jlam Exp $
+#	$NetBSD: mtree2nbcompat,v 1.2 2004/08/27 03:19:29 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -37,7 +37,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
-if [ $# -lt 1 ]; then echo "pax2nbcompat dest"; exit 1; fi
+if [ $# -lt 1 ]; then echo "mtree2nbcompat dest"; exit 1; fi
 
 : ${PKGSRCDIR:=/usr/pkgsrc}
 : ${BSDSRCDIR:=/usr/src}
