@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.568 2003/05/20 11:56:04 wiz Exp $
+$NetBSD: TODO,v 1.569 2003/05/21 08:31:41 salo Exp $
 
 Suggested new packages
 ======================
@@ -176,6 +176,7 @@ Suggested package updates
 	o libsigc++-1.2.5
 	o libtool-1.5 [skrll]
 	o lilypond-1.6.10
+	o links-2.1pre10
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
 	o lynx-current-2.8.5dev9
