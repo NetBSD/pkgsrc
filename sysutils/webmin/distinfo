@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/07/23 19:28:32 jlam Exp $
+
+SHA1 (webmin-1.150-minimal.tar.gz) = 2bcc9ae2c9dddce70117d0061d5db3faed349019
+Size (webmin-1.150-minimal.tar.gz) = 955826 bytes
+SHA1 (patch-aa) = 55dbbd25f3d5e3eddcabe86809da6f780703b617

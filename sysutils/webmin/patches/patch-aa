@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/07/23 19:28:32 jlam Exp $
+
+--- setup.sh.orig	Wed Jun  2 01:33:09 2004
++++ setup.sh
+@@ -419,6 +419,7 @@ else
+ 	fi
+ 
+ 	# Ask whether to run at boot time
++	atboot=0
+ 	if [ "$atboot" = "" ]; then
+ 		initsupp=`grep "^os_support=" "$srcdir/init/module.info" | sed -e 's/os_support=//g' | grep $os_type`
+ 		atboot=0
+@@ -535,6 +536,7 @@ EOF
+ 	fi
+ fi
+ 
++noperlpath=yes
+ if [ "$noperlpath" = "" ]; then
+ 	echo "Inserting path to perl into scripts.."
+ 	(find "$wadir" -name '*.cgi' -print ; find "$wadir" -name '*.pl' -print) | $perl "$wadir/perlpath.pl" $perl -
