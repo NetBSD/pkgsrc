@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2003/05/28 08:26:58 jlam Exp $
+# $NetBSD: Makefile,v 1.105 2003/07/28 15:17:20 drochner Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -78,6 +78,7 @@ SUBDIR+=	pscal
 SUBDIR+=	psify
 SUBDIR+=	psutils
 SUBDIR+=	py-reportlab
+SUBDIR+=	py-reportlab-renderPM
 SUBDIR+=	rtf2latex
 SUBDIR+=	scribus
 SUBDIR+=	stylewriter
