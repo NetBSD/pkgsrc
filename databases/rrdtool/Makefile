@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/02/16 23:08:55 seb Exp $
+# $NetBSD: Makefile,v 1.19 2003/06/09 09:38:32 wiz Exp $
 #
 
 DISTNAME=	rrdtool-1.0.40
@@ -6,7 +6,7 @@ CATEGORIES=	databases graphics net
 MASTER_SITES=	http://ee-staff.ethz.ch/~oetiker/webtools/rrdtool/pub/
 
 MAINTAINER=	wulf@ping.net.au
-HOMEPAGE=	http://ee-staff.ethz.ch/~oetiker/webtools/rrdtool
+HOMEPAGE=	http://ee-staff.ethz.ch/~oetiker/webtools/rrdtool/
 COMMENT=	Data analysis tool generating graphical representations
 
 #needs FPC code not found in older versions of NetBSD
