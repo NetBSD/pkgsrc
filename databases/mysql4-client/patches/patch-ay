@@ -1,7 +1,7 @@
-$NetBSD: patch-ay,v 1.1 2005/01/10 15:47:18 xtraeme Exp $
+$NetBSD: patch-ay,v 1.2 2005/01/11 22:44:34 xtraeme Exp $
 
---- strings/Makefile.in.orig	2005-01-10 15:59:35.000000000 +0100
-+++ strings/Makefile.in	2005-01-10 16:00:49.000000000 +0100
+--- strings/Makefile.in.orig	2004-12-27 17:48:04.000000000 +0100
++++ strings/Makefile.in	2005-01-11 23:29:03.000000000 +0100
 @@ -599,7 +599,6 @@
  	  if test -f $$p; then \
  	    f="`echo $$p | sed -e 's|^.*/||'`"; \
@@ -10,7 +10,15 @@ $NetBSD: patch-ay,v 1.1 2005/01/10 15:47:18 xtraeme Exp $
  	  else :; fi; \
  	done
  	@$(POST_INSTALL)
-@@ -616,7 +615,6 @@
+@@ -607,7 +606,6 @@
+ 	  if test -f $$p; then \
+ 	    p="`echo $$p | sed -e 's|^.*/||'`"; \
+ 	    echo " $(RANLIB) '$(DESTDIR)$(pkglibdir)/$$p'"; \
+-	    $(RANLIB) "$(DESTDIR)$(pkglibdir)/$$p"; \
+ 	  else :; fi; \
+ 	done
+ 
+@@ -616,7 +614,6 @@
  	@list='$(pkglib_LIBRARIES)'; for p in $$list; do \
  	  p="`echo $$p | sed -e 's|^.*/||'`"; \
  	  echo " rm -f '$(DESTDIR)$(pkglibdir)/$$p'"; \
