@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.2 2002/09/23 10:10:52 jlam Exp $
+$NetBSD: patch-ah,v 1.2.2.1 2003/03/05 14:11:00 agc Exp $
 
---- sys/unix/Makefile.src.orig	Sat Aug  5 13:52:57 2000
-+++ sys/unix/Makefile.src	Thu Aug 10 19:28:31 2000
+--- sys/unix/Makefile.src.orig	2003-02-23 16:43:39.000000000 +0200
++++ sys/unix/Makefile.src	2003-03-01 22:13:45.000000000 +0200
 @@ -144,8 +144,8 @@
  # flags for debugging:
  # CFLAGS = -g -I../include
@@ -13,7 +13,7 @@ $NetBSD: patch-ah,v 1.2 2002/09/23 10:10:52 jlam Exp $
  
  # The Qt and Be window systems are written in C++, while the rest of
  # NetHack is standard C.  If using Qt, uncomment the LD line here to get
-@@ -203,8 +203,8 @@
+@@ -204,8 +204,8 @@
  
  #
  #
@@ -24,7 +24,7 @@ $NetBSD: patch-ah,v 1.2 2002/09/23 10:10:52 jlam Exp $
  
  # on some systems the termcap library is in -ltermcap or -lcurses
  # on 386 Xenix, the -ltermlib tputs() seems not to work; use -lcurses instead
-@@ -224,7 +224,7 @@
+@@ -225,7 +225,7 @@
  #
  # libraries for X11
  # If USE_XPM is defined in config.h, you will also need -lXpm here.
@@ -33,7 +33,7 @@ $NetBSD: patch-ah,v 1.2 2002/09/23 10:10:52 jlam Exp $
  # WINX11LIB = -lXaw -lXmu -lXt -lX11
  # WINX11LIB = -lXaw -lXmu -lXext -lXt -lXpm -lX11 -lm
  # WINX11LIB = -lXaw -lXmu -lXpm -lXext -lXt -lX11 -lSM -lICE -lm # BSD/OS 2.0
-@@ -244,7 +244,7 @@
+@@ -245,7 +245,7 @@
  # libraries for BeOS 
  WINBELIB = -lbe
  

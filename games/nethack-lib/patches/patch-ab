@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.8 2002/03/25 20:32:26 pooka Exp $
+$NetBSD: patch-ab,v 1.8.6.1 2003/03/05 14:10:53 agc Exp $
 
---- sys/unix/Makefile.top.orig	Fri Mar 22 17:15:28 2002
-+++ sys/unix/Makefile.top	Fri Mar 22 17:24:57 2002
+--- sys/unix/Makefile.top.orig	2003-02-23 16:43:39.000000000 +0200
++++ sys/unix/Makefile.top	2003-03-01 22:06:45.000000000 +0200
 @@ -14,18 +14,17 @@
  # MAKE = make
  
@@ -46,43 +46,23 @@ $NetBSD: patch-ab,v 1.8 2002/03/25 20:32:26 pooka Exp $
  $(GAME):
  	( cd src ; $(MAKE) )
  
--all:	$(GAME) Guidebook $(VARDAT) dungeon spec_levs check-dlb
+-all:	$(GAME) recover Guidebook $(VARDAT) dungeon spec_levs check-dlb
 +all:	$(GAME) datastuff
  	@echo "Done."
  
-+datastuff: Guidebook $(VARDAT) dungeon spec_levs check-dlb recover
++datastuff: recover Guidebook $(VARDAT) dungeon spec_levs check-dlb
 +	@echo "Data Sets Built."
 +
  # Note: many of the dependencies below are here to allow parallel make
  # to generate valid output
  
-@@ -102,6 +104,9 @@
- data: $(GAME)
- 	( cd dat ; $(MAKE) data )
- 
-+recover:
-+	( cd util ; $(MAKE) recover )
-+
- rumors: $(GAME)
- 	( cd dat ; $(MAKE) rumors )
- 
-@@ -164,6 +169,11 @@
- 	( cd util ; $(MAKE) dlb )
- 	( cd dat ; ../util/dlb cf nhdat $(DATDLB) )
- 
-+binfiles: $(GAME)
-+	cp src/$(GAME) $(SHELLDIR)/$(GAME)$(GTYPE)
-+	-( cd $(GAMEDIR) ; $(CHOWN) $(GAMEUID) $(SHELLDIR)/$(GAME)$(GTYPE) ; \
-+		$(CHGRP) $(GAMEGRP) $(SHELLDIR)/$(GAME)$(GTYPE) )
-+	 chmod $(GAMEPERM) $(SHELLDIR)/$(GAME)$(GTYPE)
- 
- dofiles:
- 	target=`sed -n					\
-@@ -173,16 +183,13 @@
+@@ -180,18 +182,15 @@
  		-e '}' 					\
  	  	-e '$$s/.*/nodlb/p' < dat/options` ;	\
  	$(MAKE) dofiles-$${target-nodlb}
 -	cp src/$(GAME) $(GAMEDIR)
+-	cp util/recover $(GAMEDIR)
++	cp util/recover $(PREFIX)/bin
  	-rm -f $(SHELLDIR)/$(GAME)
  	sed -e 's;/usr/games/lib/nethackdir;$(GAMEDIR);' \
  		-e 's;HACKDIR/nethack;HACKDIR/$(GAME);' \
@@ -90,18 +70,20 @@ $NetBSD: patch-ab,v 1.8 2002/03/25 20:32:26 pooka Exp $
  		< sys/unix/nethack.sh \
  		> $(SHELLDIR)/$(GAME)
  # set up their permissions
--	-( cd $(GAMEDIR) ; $(CHOWN) $(GAMEUID) $(GAME) ; \
--			$(CHGRP) $(GAMEGRP) $(GAME) )
+-	-( cd $(GAMEDIR) ; $(CHOWN) $(GAMEUID) $(GAME) recover ; \
+-			$(CHGRP) $(GAMEGRP) $(GAME) recover )
 -	chmod $(GAMEPERM) $(GAMEDIR)/$(GAME)
+-	chmod $(EXEPERM) $(GAMEDIR)/recover
++	chmod $(EXEPERM) $(PREFIX)/bin/recover
  	-$(CHOWN) $(GAMEUID) $(SHELLDIR)/$(GAME)
  	$(CHGRP) $(GAMEGRP) $(SHELLDIR)/$(GAME)
  	chmod $(EXEPERM) $(SHELLDIR)/$(GAME)
-@@ -218,16 +225,16 @@
+@@ -227,16 +226,16 @@
  # and a reminder
  	@echo You may also want to install the man pages via the doc Makefile.
  
--install: $(GAME) $(VARDAT) dungeon spec_levs
-+install-dat: $(VARDAT) dungeon spec_levs
+-install: $(GAME) recover $(VARDAT) dungeon spec_levs
++install-dat: recover $(VARDAT) dungeon spec_levs
  # set up the directories
  # not all mkdirs have -p; those that don't will create a -p directory
  	-mkdir -p $(SHELLDIR)
@@ -116,18 +98,24 @@ $NetBSD: patch-ab,v 1.8 2002/03/25 20:32:26 pooka Exp $
  # set up the game files
  	( $(MAKE) dofiles )
  # set up some additional files
-@@ -235,6 +242,14 @@
+@@ -244,9 +243,20 @@
  	-( cd $(VARDIR) ; $(CHOWN) $(GAMEUID) perm record logfile ; \
  			$(CHGRP) $(GAMEGRP) perm record logfile ; \
  			chmod $(FILEPERM) perm record logfile )
++	-touch -c $(VARDIR)/bones* $(VARDIR)/?lock* $(VARDIR)/wizard*
++	-touch -c $(VARDIR)/save/*
 +	-mkdir -p $(PREFIX)/share/doc/nethack
 +	cp doc/Guidebook $(PREFIX)/share/doc/nethack
 +	chown $(GAMEUID):$(GAMEGRP) $(PREFIX)/share/doc/nethack/Guidebook
 +	chmod $(FILEPERM) $(PREFIX)/share/doc/nethack/Guidebook
-+	cp util/recover $(PREFIX)/bin/recover
-+	chown 0:0 $(PREFIX)/bin/recover
-+	chmod 755 $(PREFIX)/bin/recover
-+
  # and a reminder
  	@echo You may also want to reinstall the man pages via the doc Makefile.
  
++binfiles: $(GAME)
++	cp src/$(GAME) $(SHELLDIR)/$(GAME)$(GTYPE)
++	-( cd $(GAMEDIR) ; $(CHOWN) $(GAMEUID) $(SHELLDIR)/$(GAME)$(GTYPE) ; \
++		$(CHGRP) $(GAMEGRP) $(SHELLDIR)/$(GAME)$(GTYPE) )
++	 chmod $(GAMEPERM) $(SHELLDIR)/$(GAME)$(GTYPE)
+ 
+ # 'make clean' removes all the .o files, but leaves around all the executables
+ # and compiled data files

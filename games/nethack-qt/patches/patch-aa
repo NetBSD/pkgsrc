@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.7 2002/03/25 20:32:27 pooka Exp $
+$NetBSD: patch-aa,v 1.7.6.1 2003/03/05 14:10:56 agc Exp $
 
---- include/config.h.orig	Thu Mar 21 01:42:43 2002
-+++ include/config.h	Fri Mar 22 18:52:27 2002
+--- include/config.h.orig	2003-02-23 16:43:19.000000000 +0200
++++ include/config.h	2003-03-01 22:54:41.000000000 +0200
 @@ -42,9 +42,9 @@
   * Define all of those you want supported in your binary.
   * Some combinations make no sense.  See the installation document.
@@ -14,16 +14,18 @@ $NetBSD: patch-aa,v 1.7 2002/03/25 20:32:27 pooka Exp $
  /* #define GNOME_GRAPHICS */	/* Gnome interface */
  /* #define MSWIN_GRAPHICS */	/* Windows NT, CE, Graphics */
  
-@@ -83,7 +83,7 @@
- #endif
+@@ -84,8 +84,8 @@
  
  #ifdef QT_GRAPHICS
+ # define DEFAULT_WC_TILED_MAP   /* Default to tiles if users doesn't say wc_ascii_map */
 -# define USER_SOUNDS		/* Use sounds */
-+/* # define USER_SOUNDS		/* Use sounds */
+-# define USER_SOUNDS_REGEX
++/* # define USER_SOUNDS		 Use sounds */
++/* # define USER_SOUNDS_REGEX */
  # define USE_XPM		/* Use XPM format for images (required) */
  # define GRAPHIC_TOMBSTONE	/* Use graphical tombstone (rip.ppm) */
  # ifndef DEFAULT_WINDOW_SYS
-@@ -110,7 +110,7 @@
+@@ -112,7 +112,7 @@
  #endif
  
  #ifndef DEFAULT_WINDOW_SYS
@@ -32,7 +34,7 @@ $NetBSD: patch-aa,v 1.7 2002/03/25 20:32:27 pooka Exp $
  #endif
  
  #ifdef X11_GRAPHICS
-@@ -163,11 +163,11 @@
+@@ -167,11 +167,11 @@
  
  #ifdef UNIX
  /* path and file name extension for compression program */
@@ -43,21 +45,21 @@ $NetBSD: patch-aa,v 1.7 2002/03/25 20:32:27 pooka Exp $
  /* An example of one alternative you might want to use: */
 -/* #define COMPRESS "/usr/local/bin/gzip" */	/* FSF gzip compression */
 -/* #define COMPRESS_EXTENSION ".gz" */		/* normal gzip extension */
-+#define COMPRESS "@GZIP_PROGRAM@"		/* FSF gzip compression */
++#define COMPRESS "/usr/bin/gzip"		/* FSF gzip compression */
 +#define COMPRESS_EXTENSION ".gz"		/* normal gzip extension */
  #endif
  
  #ifndef COMPRESS
-@@ -201,7 +201,7 @@
+@@ -205,7 +205,7 @@
  #  ifdef __APPLE__
  #    define HACKDIR "nethackdir"	/* nethack directory */
  #  else
 -#    define HACKDIR "/usr/games/lib/nethackdir"
-+#    define HACKDIR "XXXPREFIXXXX/share/nethackdir340"
++#    define HACKDIR "/usr/pkg/share/nethackdir340"
  #  endif
  # endif
  
-@@ -298,7 +298,7 @@
+@@ -302,7 +302,7 @@
   * functions that have been macroized.
   */
  
