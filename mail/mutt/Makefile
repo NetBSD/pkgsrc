@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2003/11/12 03:39:40 jschauma Exp $
+# $NetBSD: Makefile,v 1.105.2.1 2003/12/11 13:50:04 agc Exp $
 
 DISTNAME=		mutt-1.4.1i
 PKGNAME=                ${DISTNAME:C/i$//}
@@ -26,6 +26,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
 			--enable-pop --enable-imap
 
 LDFLAGS+=		${_STRIPFLAG_CC}
+PLIST_SRC=		${WRKDIR}/PLIST
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -72,9 +73,10 @@ pre-build:
 	       < ${WRKSRC}/doc/mutt.man.in > ${WRKSRC}/doc/mutt.man
 
 post-install:
-	${LN} -s ${EGDIR} ${PREFIX}/share/doc/mutt/samples
+	${LN} -fs ${EGDIR} ${PREFIX}/share/doc/mutt/samples
+	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	@if [ -f ${PREFIX}/bin/mutt_dotlock ]; then \
-		${ECHO} "bin/mutt_dotlock" >> ${PLIST}; \
+		${ECHO} "bin/mutt_dotlock" >> ${PLIST_SRC}; \
 	fi
 
 .include "../../converters/libiconv/buildlink2.mk"
