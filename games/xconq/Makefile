@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/05/05 19:51:14 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/06/25 22:52:25 zuntum Exp $
 
 DISTNAME=		xconq-7.4.1
 CATEGORIES=		games x11
@@ -8,15 +8,14 @@ MAINTAINER=		kleink@netbsd.org
 HOMEPAGE=		http://sources.redhat.com/xconq/
 COMMENT=		Xconq is a general strategy game system
 
-DEPENDS+=		tcl>=8.3.2:../../lang/tcl
-DEPENDS+=		tk>=8.3.2:../../x11/tk
-
+USE_BUILDLINK_ONLY=	YES
 USE_X11BASE=		YES
 USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-tclconfig=${LOCALBASE}/lib \
-			--with-tkconfig=${LOCALBASE}/lib \
-			--enable-alternate-scoresdir=/var/games/xconq/scores
+CONFIGURE_ARGS+=	--enable-alternate-scoresdir=/var/games/xconq/scores	\
+			--with-tclconfig="${BUILDLINK_DIR}/lib"			\
+			--with-tkconfig="${BUILDLINK_DIR}/lib"
+
 MAKE_ENV+=		LOCALBASE="${LOCALBASE}"
 
 INFO_FILES=     	hacking.info xcdesign.info xconq.info
@@ -27,4 +26,6 @@ post-build:
 post-install:
 	cd ${WRKSRC}/doc && ${GMAKE} install-info
 
+.include "../../lang/tcl/buildlink.mk"
+.include "../../x11/tk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
