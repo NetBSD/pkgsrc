@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/03/14 16:14:08 skrll Exp $
+
+--- kmidi/TIMIDITY/Makefile.in.orig	Wed Feb 21 11:00:20 2001
++++ kmidi/TIMIDITY/Makefile.in
+@@ -264,7 +264,7 @@
+ AM_CFLAGS = -DDEFAULT_PATH=\"$(TIMID_DIR)\" $(EXTRATDEFS) $(EXTRATCFLAGS)
+ @GXXOPTIMIZE_TRUE@CFLAGS = -O3 -fomit-frame-pointer -ffast-math
+ LDFLAGS = `$(ARTSCCONFIG) --libs`
+-LDADD = $(LIBALIB) $(LIBAUDIO) $(LIBMME) $(EXTRATLIBS) $(X_LIBS) -lm
++LDADD = $(LIBOSSAUDIO) $(LIBALIB) $(LIBAUDIO) $(LIBMME) $(EXTRATLIBS) $(X_LIBS) -lm
+ 
+ # Where to install the patches, config files, and MIDI files.
+ # If you change this, it's a good idea to recompile the binary,
