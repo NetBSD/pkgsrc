@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/08/15 12:13:53 dillo Exp $
+$NetBSD: distinfo,v 1.3 2004/08/22 11:37:28 kristerw Exp $
 
 SHA1 (gens-rc3.tar.gz) = 6057564665007686c9ea8df364be3220499f9917
 Size (gens-rc3.tar.gz) = 658729 bytes
@@ -11,7 +11,7 @@ SHA1 (patch-af) = 6e641ec6c0ae7fad6997ce70b48d417e2ec7dfd7
 SHA1 (patch-ag) = a80a828b716e3b7e342fb52c583e18305be8c627
 SHA1 (patch-ah) = e8a6264b351c4a7fb3fb1bd4dd5a482dcef763ae
 SHA1 (patch-ai) = 596fe718e5c38091a06198413bcf29b3c668571f
-SHA1 (patch-aj) = 63b9832fde01884631923e16eb0f165815d0704f
+SHA1 (patch-aj) = e550c0708e664b9138d5310cb7aeee6917919c89
 SHA1 (patch-ak) = fbf85318880857783cd98348af627b7c6e444382
 SHA1 (patch-am) = 3e49691329cdfaf60f89136d104ec5e87cd6e255
 SHA1 (patch-an) = 94a6a857238edbf3db0daea59400f5b13fc1ed2f
@@ -19,5 +19,7 @@ SHA1 (patch-ao) = 04bbf581f156cf3f9f119295a00071f29c2b1ab7
 SHA1 (patch-ap) = 634fa5f851b06f09c0a511c65278c002944c29d4
 SHA1 (patch-aq) = af968fb3ce22aa147ac4b47d0739db45977eacf8
 SHA1 (patch-ar) = c97b6dfd255ca64f7a5efc02e2f6b0f4b39706ec
-SHA1 (patch-as) = 9ef67fd99afa9844127f5fbca9b8524e00864aee
+SHA1 (patch-as) = ed6586473668f0226862741ae09bad16278a280b
 SHA1 (patch-at) = 37c78682d91516e0c757993ee29b61437f8e3496
+SHA1 (patch-au) = daae4256b95012356ae0cc4a7fde3509bb7f5964
+SHA1 (patch-av) = 7d6ccfae4f81ed89295a3b8f8aea751bca111600
