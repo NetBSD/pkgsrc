@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2000/08/16 14:21:31 abs Exp $
+# $NetBSD: Makefile,v 1.33 2000/08/16 16:09:10 tron Exp $
 #
 
 DISTNAME=	mozilla-source-M16
-PKGNAME=	mozilla-0.16
+PKGNAME=	mozilla-5.0m16
 WRKSRC=		${WRKDIR}/mozilla
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/releases/m16/src/
