@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/03/27 18:06:23 itojun Exp $
+$NetBSD: patch-aa,v 1.2 2001/04/27 13:40:35 itojun Exp $
 
---- Makefile-	Wed Mar 28 00:09:33 2001
-+++ Makefile	Wed Mar 28 00:09:37 2001
+--- Makefile-	Fri Apr 27 22:37:54 2001
++++ Makefile	Fri Apr 27 22:37:57 2001
 @@ -1,6 +1,6 @@
  PROG   = www6to4
  RM     = rm -f
--CFLAGS  = -O2
-+#CFLAGS  = -O2
- #CFLAGS  = -g
+-CFLAGS  = -O2 -I/usr/pkg/include
++#CFLAGS  = -O2 -I/usr/pkg/include
+ #CFLAGS  = -g -I/usr/pkg/include -DDMALLOC
+ #LDFLAGS = -L/usr/pkg/lib -ldmalloc
  
- OBJS =	www6to4.o parsers.o loaders.o socket.o
