@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.613 2003/06/04 05:18:45 wiz Exp $
+$NetBSD: TODO,v 1.614 2003/06/04 11:34:55 salo Exp $
 
 Suggested new packages
 ======================
@@ -69,7 +69,7 @@ Suggested package updates
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o abcde-2.1.0 [pkg/20633]
-	o abcde-2.1.4
+	o abcde-2.1.4 [pkg/21671]
 	o angband-3.0.3
 	o anjuta-1.0.2
 	o arch-1.0pre17 [pkg/20776]
@@ -80,7 +80,6 @@ Suggested package updates
 	o avifile-devel-0.7.34-20030319
 	o balsa-1.4.4
 	o balsa2-2.0.11
-	o beaver-0.3.0 [pkg/21259]
 	o bidwatcher-1.3.8
 	o binutils-2.13.2.1
 	o bogofilter-0.11.2
