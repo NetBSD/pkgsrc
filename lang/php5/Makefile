@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/29 20:31:54 jdolecek Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/01 19:46:18 jdolecek Exp $
 #
 
 PKGNAME=		php-${PHP5_VERSION}
+PKGREVISION=		1
 CATEGORIES=		lang
 
 MAINTAINER=		pancake@phreaker.net
@@ -15,13 +16,20 @@ LIBTOOL_OVERRIDE=	# empty
 
 .include "Makefile.common"
 
+CGIDIR=			${PREFIX}/libexec/cgi-bin
 EGDIR=			${PREFIX}/share/examples/php
 
 CONF_FILES=		${EGDIR}/php.ini-recommended ${PKG_SYSCONFDIR}/php.ini
 OWN_DIRS=		${PREFIX}/${PHP_EXTENSION_DIR}
 
 post-install:
-	@${INSTALL_DATA_DIR} ${EGDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} php.ini-dist php.ini-recommended ${EGDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cli/php ${PREFIX}/bin/php
+	${INSTALL_DATA} ${WRKSRC}/sapi/cli/php.1 ${PREFIX}/man/man1/php.1
+	${INSTALL_DATA_DIR} ${CGIDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cgi/php ${CGIDIR}
+	${INSTALL_DATA_DIR} ${EGDIR}
+	cd ${WRKSRC}; ${INSTALL_DATA} php.ini-dist php.ini-recommended ${EGDIR}
+	${INSTALL_DATA_DIR} ${PREFIX}/share/php
+	${INSTALL_DATA} ${WRKSRC}/php.gif ${PREFIX}/share/php
 
 .include "../../mk/bsd.pkg.mk"
