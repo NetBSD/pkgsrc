@@ -1,3 +1,5 @@
+$NetBSD: patch-ag,v 1.9 2003/07/12 10:24:17 itojun Exp $
+
 --- ../libipsec/key_debug.c-	Sat Jul 12 18:49:46 2003
 +++ ../libipsec/key_debug.c	Sat Jul 12 18:50:25 2003
 @@ -80,7 +80,9 @@
