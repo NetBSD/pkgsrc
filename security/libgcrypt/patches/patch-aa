@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2003/12/06 00:29:26 xtraeme Exp $
+$NetBSD: patch-aa,v 1.4 2004/02/25 15:51:51 minskim Exp $
 
---- src/libgcrypt-config.in.orig	2003-12-06 00:51:56.000000000 +0100
-+++ src/libgcrypt-config.in	2003-12-06 00:52:51.000000000 +0100
-@@ -152,9 +152,9 @@
+--- src/libgcrypt-config.in.orig	2004-02-18 12:33:53.000000000 -0600
++++ src/libgcrypt-config.in
+@@ -158,9 +158,9 @@ if test "$echo_libs" = "yes"; then
  
      # Set up `libdirs'.
      if test "@libdir@" != "/usr/lib" ; then
