@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/12/20 05:57:40 sakamoto Exp $
+# $NetBSD: Makefile,v 1.2 1999/12/20 21:51:12 soren Exp $
 
 DISTNAME=	bfd-crunchide-1.0
 CATEGORIES=	cross
@@ -23,9 +23,10 @@ MAKE_ENV+=	BFD_VERSION=${BFD_VERSION} \
 
 do-extract:
 	@${MKDIR} ${WRKSRC}
-	@${CP} ${FILESDIR}/* ${WRKSRC}
+	@${CP} ${FILESDIR}/Makefile ${FILESDIR}/crunchide.1 ${FILESDIR}/crunchide.c \
+		${WRKSRC}
 
 pre-install:
-	@if [ ! -d ${PREFIX}/bin ];then ${MKDIR} ${PREFIX}/bin;fi
+	@if [ ! -d ${PREFIX}/bin ]; then ${MKDIR} ${PREFIX}/bin; fi
 
 .include "../../mk/bsd.pkg.mk"
