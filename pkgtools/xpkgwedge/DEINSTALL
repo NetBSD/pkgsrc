@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL,v 1.5 2003/09/19 00:53:58 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.6 2003/11/23 06:46:54 jlam Exp $
 
 FONT_PROGS="@FONT_PROGS@"
 X11BASE=@X11BASE@
@@ -9,7 +9,7 @@ SITEDEF=${PKG_PREFIX}/lib/X11/config/site.def
 SV4LIB=${PKG_PREFIX}/lib/X11/config/sv4Lib.tmpl
 
 case ${STAGE} in
-POST-DEINSTALL)
+VIEW-DEINSTALL)
 	for prog in ${FONT_PROGS}; do
 		if [ -f ${PKG_PREFIX}/bin/$prog -a			\
 		     ${PKG_PREFIX} != ${X11BASE} ]; then
@@ -31,6 +31,18 @@ POST-DEINSTALL)
 		;;
 	esac
 	${ECHO} "done."
+	;;
+
+DEINSTALL)
+	for prog in ${FONT_PROGS}; do
+		if [ -f ${PKG_PREFIX}/bin/$prog -a			\
+		     ${PKG_PREFIX} != ${X11BASE} ]; then
+			${RM} -f ${PKG_PREFIX}/bin/$prog
+		fi
+	done
+	;;
+
+POST-DEINSTALL)
 	${RMDIR} -p ${PKG_PREFIX}/lib/X11/config 2>/dev/null || ${TRUE}
 	;;
 esac

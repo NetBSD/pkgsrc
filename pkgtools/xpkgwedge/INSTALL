@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.6 2003/09/19 00:53:58 jlam Exp $
+# $NetBSD: INSTALL,v 1.7 2003/11/23 06:46:54 jlam Exp $
 
 FONT_PROGS="@FONT_PROGS@"
 X11BASE=@X11BASE@
@@ -23,7 +23,9 @@ POST-INSTALL)
 				${PKG_PREFIX}/bin/$prog
 		fi
 	done
+	;;
 
+VIEW-INSTALL)
 	if [ ${PKG_PREFIX} = ${X11BASE} -o -f ${HOSTDEF} ]; then
 		${ECHO} -n "Updating ${HOSTDEF}..."
 		${CP} -f ${HOSTDEF} ${HOSTDEF}.bak
