@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/09/03 19:30:51 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/04/17 00:15:21 snj Exp $
 bin/sdl-config
 include/SDL/SDL.h
 include/SDL/SDL_active.h
@@ -6,6 +6,7 @@ include/SDL/SDL_audio.h
 include/SDL/SDL_byteorder.h
 include/SDL/SDL_cdrom.h
 include/SDL/SDL_copying.h
+include/SDL/SDL_cpuinfo.h
 include/SDL/SDL_endian.h
 include/SDL/SDL_error.h
 include/SDL/SDL_events.h
@@ -33,7 +34,7 @@ lib/libSDL.a
 lib/libSDL.la
 lib/libSDL.so
 lib/libSDL.so.0
-lib/libSDL.so.0.6
+lib/libSDL.so.0.7
 lib/libSDLmain.a
 man/man3/SDLKey.3
 man/man3/SDL_ActiveEvent.3
