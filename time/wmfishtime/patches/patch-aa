@@ -1,21 +1,19 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/04/09 06:46:12 kei Exp $
-
---- Makefile.orig	Mon Apr  2 23:41:25 2001
-+++ Makefile	Mon Apr  2 23:44:11 2001
-@@ -8,10 +8,10 @@
- # from that window, either. Again, complain to the developers. This is out
- # of my control.
- # 
--# EXTRA = -DI_HAVE_A_BROKEN_WM
-+EXTRA = -DI_HAVE_A_BROKEN_WM
+--- Makefile.orig	Sat May 26 22:49:41 2001
++++ Makefile	Sat Jan 19 05:48:48 2002
+@@ -2,22 +2,22 @@
+ DESTDIR =
  
  # where to install this program
--PREFIX = /usr/local
-+# PREFIX = /usr/local
+-PREFIX = $(DESTDIR)/usr/X11R6
++# PREFIX = $(DESTDIR)/usr/X11R6
  
  # no user serviceable parts below this line
  # optimization cflags
-@@ -22,11 +22,11 @@
+-CFLAGS = -O3 -Wall `gtk-config --cflags` ${EXTRA}
++CFLAGS += -O3 -Wall `gtk-config --cflags` ${EXTRA}
+ # profiling cflags
+ # CFLAGS=-ansi -pedantic -Wall -pg -O3 `gtk-config --cflags` ${EXTRA} -DPRO
+ # test coverage cflags
  # CFLAGS=-fprofile-arcs -ftest-coverage -Wall -ansi -pedantic -g `gtk-config --cflags` ${EXTRA} -DPRO
  
  
@@ -30,9 +28,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/04/09 06:46:12 kei Exp $
  
  all: wmfishtime
  
-@@ -37,4 +37,4 @@
- 	rm -rf wmfishtime *.o *.bb* *.gcov gmon.* *.da *~ .xvpics
+@@ -29,5 +29,5 @@
  
+ # You're going to have to be root to do this!
  install:
 -	install $(INSTALL) wmfishtime $(PREFIX)/bin
-+	$(INSTALL) wmfishtime $(PREFIX)/bin
+-	install $(INSTALL) wmfishtime.1 $(PREFIX)/man/man1
++	$(INSTALL_PROGRAM) wmfishtime $(PREFIX)/bin
++	$(INSTALL_MAN) wmfishtime.1 $(PREFIX)/man/man1

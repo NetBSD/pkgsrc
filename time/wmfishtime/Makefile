@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2001/04/14 20:35:09 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.3 2002/01/19 04:58:49 mjl Exp $
 #
 
-DISTNAME=	wmfishtime-1.1
+DISTNAME=	wmfishtime-1.23
 CATEGORIES=	time x11
 MASTER_SITES=	http://www.ne.jp/asahi/linux/timecop/
 
@@ -13,7 +13,6 @@ DEPENDS+=	gtk+>=1.2.9:../../x11/gtk
 
 USE_X11BASE=	# defined
 
-do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/wmfishtime ${PREFIX}/bin
+MAKE_ENV+=	INSTALL_PROGRAM="${INSTALL_PROGRAM}" INSTALL_MAN="${INSTALL_MAN}"
 
 .include "../../mk/bsd.pkg.mk"
