@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.3 2002/10/23 10:04:16 drochner Exp $
+$NetBSD: patch-ac,v 1.4 2002/11/26 21:42:49 skrll Exp $
 
---- pth_high.c.orig	Sun Jan 27 14:14:36 2002
-+++ pth_high.c	Wed Oct 23 11:38:37 2002
+--- pth_high.c.orig	Sun Jan 27 13:14:36 2002
++++ pth_high.c
 @@ -35,6 +35,42 @@
  
  #include "pth_p.h"
@@ -45,7 +45,7 @@ $NetBSD: patch-ac,v 1.3 2002/10/23 10:04:16 drochner Exp $
  /* Pth variant of usleep(3) */
  int pth_usleep(unsigned int usec)
  {
-@@ -141,8 +177,43 @@
+@@ -141,8 +177,43 @@ int pth_sigwait_ev(const sigset_t *set, 
      return 0;
  }
  
@@ -90,7 +90,7 @@ $NetBSD: patch-ac,v 1.3 2002/10/23 10:04:16 drochner Exp $
  {
      pth_event_t ev;
      static pth_key_t ev_key = PTH_KEY_INIT;
-@@ -167,6 +238,8 @@
+@@ -167,6 +238,8 @@ pid_t pth_waitpid(pid_t wpid, int *statu
      pth_debug2("pth_waitpid: leave to thread \"%s\"", pth_current->name);
      return pid;
  }
@@ -99,7 +99,7 @@ $NetBSD: patch-ac,v 1.3 2002/10/23 10:04:16 drochner Exp $
  
  /* Pth variant of system(3) */
  int pth_system(const char *cmd)
-@@ -195,7 +268,7 @@
+@@ -195,7 +268,7 @@ int pth_system(const char *cmd)
      /* block SIGCHLD signal */
      sigemptyset(&ss_block);
      sigaddset(&ss_block, SIGCHLD);
@@ -108,7 +108,7 @@ $NetBSD: patch-ac,v 1.3 2002/10/23 10:04:16 drochner Exp $
  
      /* fork the current process */
      pstat = -1;
-@@ -207,7 +280,7 @@
+@@ -207,7 +280,7 @@ int pth_system(const char *cmd)
              /* restore original signal dispositions and execute the command */
              sigaction(SIGINT,  &sa_int,  NULL);
              sigaction(SIGQUIT, &sa_quit, NULL);
@@ -117,7 +117,7 @@ $NetBSD: patch-ac,v 1.3 2002/10/23 10:04:16 drochner Exp $
  
              /* stop the Pth scheduling */
              pth_scheduler_kill();
-@@ -227,7 +300,7 @@
+@@ -227,7 +300,7 @@ int pth_system(const char *cmd)
      /* restore original signal dispositions and execute the command */
      sigaction(SIGINT,  &sa_int,  NULL);
      sigaction(SIGQUIT, &sa_quit, NULL);
@@ -126,7 +126,7 @@ $NetBSD: patch-ac,v 1.3 2002/10/23 10:04:16 drochner Exp $
  
      /* return error or child process result code */
      return (pid == -1 ? -1 : pstat);
-@@ -258,6 +331,9 @@
+@@ -258,6 +331,9 @@ int pth_select_ev(int nfd, fd_set *rfds,
      pth_implicit_init();
      pth_debug2("pth_select_ev: called from thread \"%s\"", pth_current->name);
  
@@ -136,7 +136,7 @@ $NetBSD: patch-ac,v 1.3 2002/10/23 10:04:16 drochner Exp $
      /* first deal with the special situation of a plain microsecond delay */
      if (nfd == 0 && rfds == NULL && wfds == NULL && efds == NULL && timeout != NULL) {
          if (timeout->tv_sec < 0 || timeout->tv_usec < 0)
-@@ -280,10 +356,11 @@
+@@ -280,10 +356,11 @@ int pth_select_ev(int nfd, fd_set *rfds,
                      return_errno(-1, EINTR);
              }
          }
@@ -151,7 +151,7 @@ $NetBSD: patch-ac,v 1.3 2002/10/23 10:04:16 drochner Exp $
          return 0;
      }
  
-@@ -295,36 +372,42 @@
+@@ -295,36 +372,42 @@ int pth_select_ev(int nfd, fd_set *rfds,
      delay.tv_sec  = 0;
      delay.tv_usec = 0;
      rtmp = NULL;
@@ -206,7 +206,7 @@ $NetBSD: patch-ac,v 1.3 2002/10/23 10:04:16 drochner Exp $
              return 0;
          }
      }
-@@ -350,10 +433,9 @@
+@@ -350,10 +433,9 @@ int pth_select_ev(int nfd, fd_set *rfds,
          pth_event_isolate(ev_timeout);
          if (pth_event_occurred(ev_timeout)) {
              selected = TRUE;
@@ -220,7 +220,7 @@ $NetBSD: patch-ac,v 1.3 2002/10/23 10:04:16 drochner Exp $
              rc = 0;
          }
      }
-@@ -362,7 +444,7 @@
+@@ -362,7 +444,7 @@ int pth_select_ev(int nfd, fd_set *rfds,
      return rc;
  }
  
@@ -229,7 +229,7 @@ $NetBSD: patch-ac,v 1.3 2002/10/23 10:04:16 drochner Exp $
  int pth_poll(struct pollfd *pfd, nfds_t nfd, int timeout)
  {
      return pth_poll_ev(pfd, nfd, timeout, NULL);
-@@ -373,7 +455,7 @@
+@@ -373,7 +455,7 @@ int pth_poll(struct pollfd *pfd, nfds_t 
             INTERNALLY THE SCHEDULER IS ONLY select(2) BASED!! */
  int pth_poll_ev(struct pollfd *pfd, nfds_t nfd, int timeout, pth_event_t ev_extra)
  {
@@ -238,7 +238,7 @@ $NetBSD: patch-ac,v 1.3 2002/10/23 10:04:16 drochner Exp $
      struct timeval tv, *ptv;
      int maxfd, rc, ok;
      unsigned int i;
-@@ -410,58 +492,64 @@
+@@ -410,58 +492,64 @@ int pth_poll_ev(struct pollfd *pfd, nfds
      FD_ZERO(&rfds);
      FD_ZERO(&wfds);
      FD_ZERO(&efds);
@@ -348,7 +348,17 @@ $NetBSD: patch-ac,v 1.3 2002/10/23 10:04:16 drochner Exp $
      }
      return rc;
  }
-@@ -498,6 +586,13 @@
+@@ -485,7 +573,8 @@ int pth_connect_ev(int s, const struct s
+     pth_debug2("pth_connect_ev: enter from thread \"%s\"", pth_current->name);
+ 
+     /* force filedescriptor into non-blocking mode */
+-    fdmode = pth_fdmode(s, PTH_FDMODE_NONBLOCK);
++    if ((fdmode = pth_fdmode(s, PTH_FDMODE_NONBLOCK)) == PTH_FDMODE_ERROR)
++        return_errno(-1, EBADF);
+ 
+     /* try to connect */
+     while (   (rv = pth_sc(connect)(s, (struct sockaddr *)addr, addrlen)) == -1
+@@ -498,6 +587,13 @@ int pth_connect_ev(int s, const struct s
      /* if it is still on progress wait until socket is really writeable */
      if (rv == -1 && errno == EINPROGRESS && fdmode != PTH_FDMODE_NONBLOCK) {
          ev = pth_event(PTH_EVENT_FD|PTH_UNTIL_FD_WRITEABLE|PTH_MODE_STATIC, &ev_key, s);
@@ -362,3 +372,109 @@ $NetBSD: patch-ac,v 1.3 2002/10/23 10:04:16 drochner Exp $
          if (ev_extra != NULL)
              pth_event_concat(ev, ev_extra, NULL);
          pth_wait(ev);
+@@ -536,7 +632,8 @@ int pth_accept_ev(int s, struct sockaddr
+     pth_debug2("pth_accept_ev: enter from thread \"%s\"", pth_current->name);
+ 
+     /* force filedescriptor into non-blocking mode */
+-    fdmode = pth_fdmode(s, PTH_FDMODE_NONBLOCK);
++    if ((fdmode = pth_fdmode(s, PTH_FDMODE_NONBLOCK)) == PTH_FDMODE_ERROR)
++        return_errno(-1, EBADF);
+ 
+     /* poll socket via accept */
+     ev = NULL;
+@@ -585,6 +682,7 @@ ssize_t pth_read_ev(int fd, void *buf, s
+     pth_event_t ev;
+     static pth_key_t ev_key = PTH_KEY_INIT;
+     fd_set fds;
++    int fdmode;
+     int n;
+ 
+     pth_implicit_init();
+@@ -594,8 +692,12 @@ ssize_t pth_read_ev(int fd, void *buf, s
+     if (nbytes == 0)
+         return 0;
+ 
++    /* check mode of filedescriptor */
++    if ((fdmode = pth_fdmode(fd, PTH_FDMODE_POLL)) == PTH_FDMODE_ERROR)
++        return_errno(-1, EBADF);
++
+     /* poll filedescriptor if not already in non-blocking operation */
+-    if (pth_fdmode(fd, PTH_FDMODE_POLL) == PTH_FDMODE_BLOCK) {
++    if (fdmode == PTH_FDMODE_BLOCK) {
+ 
+         /* now directly poll filedescriptor for readability
+            to avoid unneccessary (and resource consuming because of context
+@@ -662,7 +764,8 @@ ssize_t pth_write_ev(int fd, const void 
+         return 0;
+ 
+     /* force filedescriptor into non-blocking mode */
+-    fdmode = pth_fdmode(fd, PTH_FDMODE_NONBLOCK);
++    if ((fdmode = pth_fdmode(fd, PTH_FDMODE_NONBLOCK)) == PTH_FDMODE_ERROR)
++        return_errno(-1, EBADF);
+ 
+     /* poll filedescriptor if not already in non-blocking operation */
+     if (fdmode != PTH_FDMODE_NONBLOCK) {
+@@ -749,6 +852,7 @@ ssize_t pth_readv_ev(int fd, const struc
+     pth_event_t ev;
+     static pth_key_t ev_key = PTH_KEY_INIT;
+     fd_set fds;
++    int fdmode;
+     int n;
+ 
+     pth_implicit_init();
+@@ -758,8 +862,12 @@ ssize_t pth_readv_ev(int fd, const struc
+     if (iovcnt <= 0 || iovcnt > UIO_MAXIOV)
+         return_errno(-1, EINVAL);
+ 
++    /* check mode of filedescriptor */
++    if ((fdmode = pth_fdmode(fd, PTH_FDMODE_POLL)) == PTH_FDMODE_ERROR)
++        return_errno(-1, EBADF);
++
+     /* poll filedescriptor if not already in non-blocking operation */
+-    if (pth_fdmode(fd, PTH_FDMODE_POLL) == PTH_FDMODE_BLOCK) {
++    if (fdmode == PTH_FDMODE_BLOCK) {
+ 
+         /* first directly poll filedescriptor for readability
+            to avoid unneccessary (and resource consuming because of context
+@@ -881,7 +989,8 @@ ssize_t pth_writev_ev(int fd, const stru
+         return_errno(-1, EINVAL);
+ 
+     /* force filedescriptor into non-blocking mode */
+-    fdmode = pth_fdmode(fd, PTH_FDMODE_NONBLOCK);
++    if ((fdmode = pth_fdmode(fd, PTH_FDMODE_NONBLOCK)) == PTH_FDMODE_ERROR)
++        return_errno(-1, EBADF);
+ 
+     /* poll filedescriptor if not already in non-blocking operation */
+     if (fdmode != PTH_FDMODE_NONBLOCK) {
+@@ -1176,6 +1285,7 @@ ssize_t pth_recvfrom_ev(int fd, void *bu
+     pth_event_t ev;
+     static pth_key_t ev_key = PTH_KEY_INIT;
+     fd_set fds;
++    int fdmode;
+     int n;
+ 
+     pth_implicit_init();
+@@ -1185,8 +1295,12 @@ ssize_t pth_recvfrom_ev(int fd, void *bu
+     if (nbytes == 0)
+         return 0;
+ 
++    /* check mode of filedescriptor */
++    if ((fdmode = pth_fdmode(fd, PTH_FDMODE_POLL)) == PTH_FDMODE_ERROR)
++        return_errno(-1, EBADF);
++
+     /* poll filedescriptor if not already in non-blocking operation */
+-    if (pth_fdmode(fd, PTH_FDMODE_POLL) == PTH_FDMODE_BLOCK) {
++    if (fdmode == PTH_FDMODE_BLOCK) {
+ 
+         /* now directly poll filedescriptor for readability
+            to avoid unneccessary (and resource consuming because of context
+@@ -1265,7 +1379,8 @@ ssize_t pth_sendto_ev(int fd, const void
+         return 0;
+ 
+     /* force filedescriptor into non-blocking mode */
+-    fdmode = pth_fdmode(fd, PTH_FDMODE_NONBLOCK);
++    if ((fdmode = pth_fdmode(fd, PTH_FDMODE_NONBLOCK)) == PTH_FDMODE_ERROR)
++        return_errno(-1, EBADF);
+ 
+     /* poll filedescriptor if not already in non-blocking operation */
+     if (fdmode != PTH_FDMODE_NONBLOCK) {
