@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.429 2003/10/05 09:30:49 taca Exp $
+# $NetBSD: Makefile,v 1.430 2003/10/09 06:21:59 thorpej Exp $
 #
 
 COMMENT=	Development utilities
@@ -262,6 +262,7 @@ SUBDIR+=	p5-Expect
 SUBDIR+=	p5-ExtUtils-F77
 SUBDIR+=	p5-File-FlockDir
 SUBDIR+=	p5-File-PathConvert
+SUBDIR+=	p5-File-Spec
 SUBDIR+=	p5-File-Temp
 SUBDIR+=	p5-FileKGlob
 SUBDIR+=	p5-FreezeThaw
