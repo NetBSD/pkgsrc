@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/11/28 16:01:30 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2004/12/16 07:10:16 taca Exp $
 #
 
 DISTNAME=	newfile-1.0.14
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=newfile/}
 
