@@ -1,0 +1,64 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/12/08 14:11:01 hwr Exp $
+
+--- Imakefile.orig	Tue Oct 17 14:44:48 1995
++++ Imakefile	Tue Dec  8 12:16:34 1998
+@@ -1,10 +1,10 @@
+ # Installation options
+ #=====================
+ # The place where you install local programs (not X)
+-NONXBINDIR = /local/bin
++NONXBINDIR = @LOCALBASE@/bin
+ #
+ # PERLLIBDIR should be the output from perl -e 'print "@INC[0]\n"'
+-PERLLIBDIR = /usr/lib/perl
++PERLLIBDIR = @X11BASE@/libexec/titrax
+ # PERL - where your Perl executable is located (is in sumtitrax)
+ PERL = $(NONXBINDIR)/perl
+ #
+@@ -12,7 +12,7 @@
+ # XAWLIB = -lXaw3d
+ #
+ # If you want to stop UDP packets to the author, uncomment this
+-# CDEBUGFLAGS = -DDO_NOT_TELL_ABOUT_ME
++CDEBUGFLAGS = -DDO_NOT_TELL_ABOUT_ME
+ #
+ # If you have problems with undefined variables, you may have
+ # hit the linker bug with SunOS 4.1.2 and X11R4; uncomment this line
+@@ -44,13 +44,13 @@
+ # functions that are declared, but not used
+ LINTOPTS = -az
+ 
+-all:: titrax sumtitra titrat
++all:: titrax sumtitra titrat weekno.perl
+ depend:: Titrax_ad.h
+ 
+ ComplexProgramTarget(titrax)
+ InstallAppDefaults(Titrax)
+-InstallProgram(sumtitra,$(NONXBINDIR))
+-InstallProgram(titrat,$(NONXBINDIR))
++InstallNamedProg(sumtitra,sumtitra,$(BINDIR))
++InstallNamedProg(titrat,titrat,$(BINDIR))
+ InstallManPage(sumtitra,$(MANDIR))
+ InstallNonExec(weekno.perl,$(PERLLIBDIR))
+ 
+@@ -61,7 +61,7 @@
+ # Modifying PERL scripts - technique courtesy of Lindsay (of Zircon fame)
+ sumtitra: Makefile
+ 	mv sumtitra sumtitra.tmp
+-	echo '#!$(PERL)' > sumtitra
++	echo '#!$(PERL) -I$(PERLLIBDIR)' > sumtitra
+ 	tail +2 sumtitra.tmp >> sumtitra
+ 	rm sumtitra.tmp
+ titrat: Makefile
+@@ -69,6 +69,11 @@
+ 	echo '#!$(PERL)' > titrat
+ 	tail +2 titrat.tmp >> titrat
+ 	rm titrat.tmp
++weekno.perl: Makefile
++	mv weekno.perl weekno.perl.tmp
++	echo '#!$(PERL)' > weekno.perl
++	tail +2 weekno.perl.tmp >> weekno.perl
++	rm weekno.perl.tmp
+ 
+ #------------------------------------------------------------------
+ # Everything below this line should be only for release and debugging,
