@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/16 22:19:01 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/16 22:20:01 grant Exp $
 #
 
 DISTNAME=	xpad-1.12
@@ -19,6 +19,8 @@ USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
+
+LIBS.SunOS=		-lX11
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
