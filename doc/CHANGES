@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9389 2005/03/02 16:06:07 wiz Exp $
+$NetBSD: CHANGES,v 1.9390 2005/03/02 16:19:58 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1231,3 +1231,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated glib2 to 2.6.3 [wiz 2005-03-02]
 	Updated gtk2+ to 2.6.4 [wiz 2005-03-02]
 	Removed libsieve [wiz 2005-03-02]
+	Updated unalz to 0.31 [minskim 2005-03-02]
