@@ -1,9 +1,4 @@
-# New ports collection makefile for:    a2ps
-# Version required:     4.9.9
-# Date created:         18 August 1997
-# Whom:                 Chuck Robey (chuckr@freebsd.org)
-#
-# $NetBSD: Makefile,v 1.6 1998/02/23 11:47:07 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:45 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/02/15 21:24:42 steve Exp
 #
 
@@ -52,4 +47,4 @@ pre-configure:
 		${FALSE}; 						\
 	fi)
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

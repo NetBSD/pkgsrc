@@ -1,9 +1,4 @@
-# New ports collection makefile for:	xmmix
-# Version required:     1.2-pl2
-# Date created:		97-10-24
-# Whom:			augustss@cs.chalmers.se
-#
-# $NetBSD: Makefile,v 1.8 1998/03/26 07:21:20 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 1998/04/15 10:38:15 agc Exp $
 # FreeBSD ID: Makefile,v 1.5 1997/09/08 13:37:47 tg Exp
 #
 
@@ -25,4 +20,4 @@ post-patch:
 		${SED} "s^/usr/lib/X11/xmmix.hlp^${PREFIX}/lib/X11/xmmix.hlp^" $$file.orig > $$file; \
 	done
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:	m4
-# Version required:     1.4
-# Date created:		25 October 1994
-# Whom:			mr
-#
-# $NetBSD: Makefile,v 1.6 1998/01/24 04:20:19 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:20 agc Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/06/16 08:22:35 max Exp
 #
 
@@ -29,4 +24,4 @@ post-install:
 	 fi
 	@install-info ${PREFIX}/info/m4.info ${PREFIX}/info/dir
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:	GNU emacs
-# Version required:	20.2
-# Date created:		11 October 1997
-# Whom:			hubertf
-#
-# $NetBSD: Makefile,v 1.12 1998/04/13 13:46:39 tron Exp $
+# $NetBSD: Makefile,v 1.13 1998/04/15 10:38:22 agc Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 #
 
@@ -41,4 +36,4 @@ post-install:
 	install-info ${PREFIX}/info/${info} ${PREFIX}/info/dir
 .endfor
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

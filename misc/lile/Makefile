@@ -1,9 +1,4 @@
-# New ports collection makefile for:	ile
-# Version required:	2.0
-# Date created:		25 Jun 1997
-# Whom:			jmz
-#
-# $NetBSD: Makefile,v 1.2 1998/01/24 21:12:16 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:36 agc Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/08/15 16:47:08 jmz Exp
 #
 
@@ -22,4 +17,4 @@ do-configure:
 	${SED} -e s:/usr/local:${PREFIX}: <Makefile.old > Makefile; \
 	${ECHO} all: ile >> Makefile; ${ECHO} CC=cc ${CFLAGS} >> Makefile)
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:	xdeview
-# Version Required:	0.5.13
-# Date Created:		9 Feb 1997
-# Whom:			Tim Vanderhoek <ac199@freenet.hamilton.on.ca>
-#
-# $NetBSD: Makefile,v 1.3 1998/03/02 00:37:49 tron Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:18 agc Exp $
 # $FreeBSD Id: Makefile,v 1.11 1998/02/24 21:43:45 jseger Exp
 #
 
@@ -41,4 +36,4 @@ post-install:
 .endif
 	${INSTALL_MAN} ${WRKSRC}/man/xdeview.1 ${PREFIX}/man/man1
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

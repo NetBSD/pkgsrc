@@ -1,9 +1,4 @@
-# New ports collection makefile for:	filerunner
-# Version required:	2.4.2
-# Date created:		24th March 1998
-# Whom:			hubertf
-#
-# $NetBSD: Makefile,v 1.4 1998/03/24 11:00:12 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:53 agc Exp $
 # $FreeBSD Id: Makefile,v 1.12 1998/02/24 21:43:11 jseger Exp
 #
 
@@ -34,4 +29,4 @@ do-install:
 		${INSTALL_DATA} ${WRKSRC}/bitmaps/${map} ${PREFIX}/lib/FileRunner/bitmaps
 .endfor
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:	p5-Tk
-# Version required:			402.002
-# Date created:				October 21st 1996
-# Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
-#
-# $NetBSD: Makefile,v 1.4 1998/01/30 13:57:43 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:54 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/09/14 04:00:00 jfitz Exp
 #
 
@@ -41,4 +36,4 @@ MAN3PREFIX=	${PREFIX}/lib/perl5
 do-configure:
 		@ cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

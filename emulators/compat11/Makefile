@@ -1,9 +1,4 @@
-# New ports collection makefile for:    compat11
-# Version required:	1.1
-# Date created:         17 Mar 1998
-# Whom:                 tv@netbsd.org
-#
-# $NetBSD: Makefile,v 1.3 1998/03/26 17:35:39 tv Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:23 agc Exp $
 #
 
 DISTNAME=	compat11
@@ -34,7 +29,7 @@ pre-configure:
 post-install:
 	${LDCONFIG} || ${TRUE}
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
 
 # for sun3x in 1.3.x, get sun3 package
 .if (${ARCH} == "sun3x")

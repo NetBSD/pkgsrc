@@ -1,9 +1,4 @@
-# New ports collection Makefile for: gimp
-# Version required:	0.99.18
-# Date created:         29 January 1998
-# Whom:                 Bernd Sieker <bsieker@techfak.uni-bielefeld.de>
-#
-# $NetBSD: Makefile,v 1.7 1998/03/11 10:10:31 frueauf Exp $
+# $NetBSD: Makefile,v 1.8 1998/04/15 10:38:25 agc Exp $
 
 DISTNAME=	gimp-0.99.18
 CATEGORIES=	graphics
@@ -83,4 +78,4 @@ post-install:
 		${MAKE_FLAGS} ${MAKEFILE} ${INSTALL_TARGET})
 .endif
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

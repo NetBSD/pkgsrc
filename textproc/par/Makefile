@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Par
-# Version required:     1.50
-# Date created:         6 Aug 1997
-# Whom:                 mark@grondar.za
-#
-# $NetBSD: Makefile,v 1.2 1998/01/12 11:52:16 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:51 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/13 06:33:51 asami Exp
 #
 
@@ -24,4 +19,4 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/par ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/par.1 ${PREFIX}/man/man1
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

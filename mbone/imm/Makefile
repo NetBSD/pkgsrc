@@ -1,9 +1,4 @@
-# New ports collection makefile for:    imm
-# Version required:     3.6a1
-# Date created:         1997/11/24
-# Whom:                 is
-#
-# $NetBSD: Makefile,v 1.6 1998/02/09 00:09:25 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:32 agc Exp $
 #
 # NetBSD "imm" package
 # The original was based on the imm-3.5a1 FreeBSD port maintained
@@ -23,4 +18,4 @@ LIB_DEPENDS=	tk80.1:${PORTSDIR}/x11/tk80
 ALL_TARGET=	netbsd
 MAKE_ENV+=	INSTALL_PROGRAM="${INSTALL_PROGRAM}"
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

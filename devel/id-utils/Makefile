@@ -1,9 +1,4 @@
-# New ports collection makefile for:	id-utils
-# Version required:	3.2
-# Date created:		22 Aug 1996
-# Whom:			pst@freebsd.org
-#
-# $NetBSD: Makefile,v 1.3 1998/01/24 04:15:27 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:20 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1996/11/18 10:22:47 asami Exp
 #
 
@@ -23,4 +18,4 @@ BUILD_DEPENDS=	emacs:${PORTSDIR}/editors/emacs
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

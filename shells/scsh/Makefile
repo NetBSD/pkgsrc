@@ -1,9 +1,4 @@
-# New ports collection makefile for:    scsh
-# Version required:     0.5.1
-# Date created:         Jul, 15, 1997
-# Whom:                 cracauer@cons.org "Martin Cracauer"
-#
-# $NetBSD: Makefile,v 1.4 1998/03/10 16:23:40 frueauf Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:48 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/07/15 15:00:30 cracauer Exp 
 #
 
@@ -31,4 +26,4 @@ post-install:
 	${RM} -f ${PREFIX}/share/doc/scsh
 	${LN} -fs ${PREFIX}/lib/scsh/doc ${PREFIX}/share/doc/scsh
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

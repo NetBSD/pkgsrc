@@ -1,9 +1,4 @@
-# New ports collection makefile for:	scotty
-# Version required:	2.1.6
-# Date created:		18 Februar 1995
-# Whom:			Gennady Sorokopud <gena@netvision.net.il>
-#
-# $NetBSD: Makefile,v 1.6 1998/03/07 22:11:19 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:39 agc Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/08/27 23:01:53 cwt Exp
 #
 
@@ -36,4 +31,4 @@ PLIST_SRC=${PLIST}.tmp
 pre-clean:
 	@${RM} -f ${PKGDIR}/PLIST.tmp
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

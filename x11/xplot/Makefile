@@ -1,9 +1,4 @@
-# Packages collection Makefile for: xplot
-# Version required: 0.90
-# Date created: 10 December 1997
-# Whom: thorpej
-#
-# $NetBSD: Makefile,v 1.4 1998/01/25 00:46:40 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:58 agc Exp $
 #
 
 DISTNAME=	xplot-0.90
@@ -25,4 +20,4 @@ post-install:
 .endfor
 .endif
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:    sam
-# Version required:     4.3
-# Date created:         Sun Aug 13 12:36:14 CDT 1995
-# Whom:                 erich@rrnet.com
-#
-# $NetBSD: Makefile,v 1.4 1998/01/24 22:28:47 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:45 agc Exp $
 # FreeBSD Id: Makefile,v 1.3 1996/11/12 02:19:40 obrien Exp
 #
 
@@ -30,4 +25,4 @@ MAN3=		add.3 balloc.3 bitblt.3 cachechars.3 event.3 frame.3 graphics.3 rgbpix.3 
 MAN4=		font.4 keyboard.4 utf.4
 MAN6=		bitmap.6 regexp.6
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

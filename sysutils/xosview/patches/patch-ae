@@ -4,7 +4,7 @@
  
  CXXFLAGS += -I@top_srcdir@
  
-+.include <bsd.port.subdir.mk>
++.include "../../../../../mk/bsd.pkg.subdir.mk"
 +.if (${ARCH} == "hp300")
 +CXXFLAGS += -D_HP300_CPU_H_
 +.endif

@@ -1,9 +1,4 @@
-# New ports collection makefile for:    asclock
-# Version required:     10
-# Date created:         1997/11/11
-# Whom:                 Hubert Feyrer <hubert.feyrer@rz.uni-regensburg.de>
-#
-# $NetBSD: Makefile,v 1.4 1998/01/30 13:57:40 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:52 agc Exp $
 #
 
 DISTNAME=		asclock
@@ -43,4 +38,4 @@ INSTALL_TARGET=	install install.man
 do-configure:
 		cd ${WRKSRC} ; ( ${ECHO} ${LANG} ; ${ECHO} ${PANEL} ) | ./configure
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

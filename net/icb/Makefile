@@ -1,9 +1,4 @@
-# New ports collection makefile for:	icb client
-# Version required:	5.0.5
-# Date created:		18 March 1998
-# Whom:			cjs
-#
-# $NetBSD: Makefile,v 1.4 1998/03/28 21:59:06 tron Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:38 agc Exp $
 #
 
 DISTNAME=		icb-5.0.5
@@ -26,4 +21,4 @@ do-install:
 		${WRKSRC}/contrib/echofile \
 		${PREFIX}/libdata/icb
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

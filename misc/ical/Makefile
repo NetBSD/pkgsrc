@@ -1,9 +1,4 @@
-# New ports collection makefile for:    ical
-# Version required:     2.1
-# Date created:         Mon Aug 28 13:35:31 CDT 1995
-# Whom:                 erich@rrnet.com
-#
-# $NetBSD: Makefile,v 1.2 1998/02/17 19:33:47 tron Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:35 agc Exp $
 # $FreeBSD Id: Makefile,v 1.15 1998/02/07 22:59:16 hoek Exp
 #
 
@@ -28,4 +23,4 @@ MAN1=		ical.1
 post-install:
 	@strip ${PREFIX}/bin/${DISTNAME}
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

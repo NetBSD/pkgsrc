@@ -1,9 +1,4 @@
-# New ports collection makefile for:	ghostscript
-# Version required:	5.10
-# Date created:		Tue Jun 10 21:58:54 CEST 1997
-# Whom:			Andreas Klemm <andreas@klemm.gtn.com>
-#
-# $NetBSD: Makefile,v 1.10 1998/02/23 11:43:22 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/04/15 10:38:45 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/10/13 11:22:43 asami Exp
 #
 
@@ -90,4 +85,4 @@ pre-clean:
 	@cd ${PORTSDIR}/graphics/jpeg && ${MAKE} clean
 	@cd ${PORTSDIR}/graphics/png && ${MAKE} clean
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

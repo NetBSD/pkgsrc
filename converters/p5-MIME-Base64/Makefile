@@ -1,9 +1,4 @@
-# New ports collection makefile for:    p5-MIME-Base64
-# Version required:                     2.03
-# Date created:                         June 21th 1997
-# Whom:                                 ache@freebsd.org
-#
-# $NetBSD: Makefile,v 1.3 1998/01/24 03:40:55 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:17 agc Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/08/04 22:47:16 ache Exp
 #
 
@@ -23,4 +18,4 @@ MAN3PREFIX=	${PREFIX}/lib/perl5
 do-configure:
 		@ cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

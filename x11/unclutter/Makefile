@@ -1,7 +1,4 @@
-# Makefile for:		unclutter
-# Version required:	8
-#
-# $NetBSD: Makefile,v 1.4 1998/03/20 06:51:55 mycroft Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:56 agc Exp $
 #
 
 DISTNAME=	unclutter-8
@@ -16,4 +13,4 @@ WRKSRC=		${WRKDIR}/unclutter
 USE_IMAKE=	yes
 CAT1=		unclutter.0
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

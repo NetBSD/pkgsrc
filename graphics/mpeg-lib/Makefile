@@ -1,9 +1,4 @@
-# New ports collection makefile for:	mpeg
-# Version required:			1.2.1
-# Date created:				07 December 1997
-# Whom:					tron@lyssa.owl.de
-#
-# $NetBSD: Makefile,v 1.5 1998/02/02 08:59:19 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:26 agc Exp $
 
 DISTNAME=	mpeg_lib-1.2.1
 PKGNAME=	mpeg-1.2.1
@@ -26,4 +21,4 @@ post-install:
 	(cd ${WRKSRC};make PREFIX=${PREFIX} includes)
 	${LDCONFIG} || ${TRUE}
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:   qt
-# Version required:	1.33
-# Date created:		30 Jul 1996
-# Whom:			searle@longacre.demon.co.uk
-#
-# $NetBSD: Makefile,v 1.8 1998/04/14 20:17:03 tron Exp $
+# $NetBSD: Makefile,v 1.9 1998/04/15 10:38:54 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/10/30 05:15:19 jkh Exp
 #
 
@@ -126,4 +121,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${QTDIR}/share/doc/qt
 	${INSTALL_DATA} ${WRKSRC}/README.QT ${QTDIR}/share/doc/qt
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:    tkirc
-# Version required:     1.202
-# Date created:         1997/11/09
-# Whom:                 Hubert Feyrer <hubertf@netbsd.org>
-#
-# $NetBSD: Makefile,v 1.5 1998/03/28 21:41:11 tron Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:55 agc Exp $
 
 DISTNAME=	tkirc1.202
 PKGNAME=	tkirc-1.202
@@ -27,4 +22,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/CHANGES	  ${PREFIX}/share/doc/tkirc
 	${INSTALL_DATA} ${WRKSRC}/COPYING	  ${PREFIX}/share/doc/tkirc
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

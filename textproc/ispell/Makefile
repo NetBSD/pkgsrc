@@ -1,9 +1,4 @@
-# New ports collection makefile for:    ispell
-# Version required:     3.1.20
-# Date created:         6 November 1994
-# Whom:                 jmz
-#
-# $NetBSD: Makefile,v 1.4 1998/02/22 00:14:35 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:50 agc Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/08/13 23:29:52 jmz Exp
 #
 
@@ -60,4 +55,4 @@ french:
 pre-install:
 	@${MKDIR} ${PREFIX}/share/emacs/site-lisp
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,10 +1,4 @@
-# New ports collection makefile for:	pine
-# http://www.washington.edu/pine/
-# Version required:     3.96
-# Date created:		03 September 1994
-# Whom:			mr
-#
-# $NetBSD: Makefile,v 1.9 1998/03/19 02:32:29 cjs Exp $
+# $NetBSD: Makefile,v 1.10 1998/04/15 10:38:31 agc Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 # Note: If you want to have pine's default behaviour of not allowing
@@ -58,4 +52,4 @@ post-install:
 	cd ${WRKSRC} && \
 		${INSTALL_DATA} doc/tech-notes.txt ${PREFIX}/share/doc/pine
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

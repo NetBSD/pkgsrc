@@ -1,13 +1,4 @@
-# New ports collection makefile for:    astrolog
-#
-# http://rpkalf2.mach.uni-karlsruhe.de/~ferber/astrolog/
-# http://www.magitech.com/~cruiser1/astrolog.htm
-#
-# Version required:     5.30
-# Date created:         31 July 1995
-# Whom:                 faulkner@cactus.org
-#
-# $NetBSD: Makefile,v 1.3 1998/01/24 20:55:30 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:33 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/08/10 22:31:15 fenner Exp
 #
 
@@ -51,4 +42,4 @@ do-install:
 	@echo "See the file ${PREFIX}/share/doc/astrolog/Helpfile.530 for help"
 	@echo "and tune ${PREFIX}/lib/astrolog/astrolog.dat"
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

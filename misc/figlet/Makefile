@@ -1,9 +1,4 @@
-# New ports collection makefile for:    figlet
-# Version required:     2.2
-# Date created:         Sat July 20, 1996
-# Whom:                 David O'Brien (obrien@cs.ucdavis.edu)
-#
-# $NetBSD: Makefile,v 1.2 1997/10/24 01:16:23 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:35 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/06/29 09:56:32 obrien Exp
 #
 
@@ -17,4 +12,4 @@ MAINTAINER=     obrien@FreeBSD.org
 
 MAN6=		figlet.6
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

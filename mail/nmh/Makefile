@@ -1,9 +1,4 @@
-# New ports collection makefile for:	nmh
-# Version required:     		0.23
-# Date created:				26 July 1997
-# Whom:					Scott Blachowicz <Scott.Blachowicz@seaslug.org>
-#
-# $NetBSD: Makefile,v 1.13 1998/02/23 14:21:27 agc Exp $
+# $NetBSD: Makefile,v 1.14 1998/04/15 10:38:31 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/04 06:51:28 markm Exp
 #
 
@@ -41,4 +36,4 @@ post-patch:
 post-install:
 	@PKG_PREFIX='${PREFIX}' sh -f ${PKGDIR}/INSTALL
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

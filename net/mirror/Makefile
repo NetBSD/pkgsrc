@@ -1,9 +1,4 @@
-# New ports collection makefile for:	mirror
-# Version required:	2.8
-# Date created:		15 May 1995
-# Whom:			torstenb
-#
-# $NetBSD: Makefile,v 1.3 1998/01/24 21:37:54 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:39 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1996/12/01 01:22:54 obrien Exp 
 #
 
@@ -31,4 +26,4 @@ post-configure:
 pre-install:
 	${MKDIR} ${PREFIX}/lib/mirror
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

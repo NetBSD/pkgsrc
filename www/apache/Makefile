@@ -1,10 +1,5 @@
-# New ports collection makefile for:    apache
-# http://www.apache.org
-# Version required:     1.3b5
-# Date created:         18 Mar 1998
-# Whom:                 cjs@netbsd.org
 #
-# $NetBSD: Makefile,v 1.5 1998/03/24 20:34:57 cjs Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:51 agc Exp $
 # FreeBSD Id: Makefile,v 1.45 1998/02/25 06:23:55 asami Exp
 #
 
@@ -90,4 +85,4 @@ do-install:
 	    ${INSTALL_DATA} $$file ${CONF_DIR}/$${file}-dist ; \
 	done
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

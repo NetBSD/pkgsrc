@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.13 1998/02/17 19:35:57 tron Exp $
+#	$NetBSD: Makefile,v 1.14 1998/04/15 10:38:33 agc Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/10/13 04:41:07 max Exp
 
     SUBDIR += amanda
@@ -47,4 +47,4 @@
 #    SUBDIR += xtar		# needs Motif/Lesstif - HF
     SUBDIR += zorro
 
-.include <bsd.port.subdir.mk>
+.include "../mk/bsd.pkg.subdir.mk"
