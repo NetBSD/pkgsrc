@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/08/15 07:51:31 tron Exp $
+# $NetBSD: Makefile,v 1.13 1998/08/15 08:09:29 tron Exp $
 #
 
 DISTNAME=	mtools-3.9.1
@@ -10,7 +10,6 @@ PATCHFILES=	mtools-3.9.1-0907b.diff.gz
 
 MAINTAINER=	is@netbsd.org
 
-HAS_CONFIGURE=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
