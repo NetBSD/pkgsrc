@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2004/09/17 08:07:12 salo Exp $
+# $NetBSD: Makefile,v 1.10.2.1 2004/12/01 00:59:30 snj Exp $
 #
 
-DISTNAME=	windows-all-20040916
-PKGNAME=	win32-codecs-040916.1
+DISTNAME=	windows-all-20041107
+PKGNAME=	win32-codecs-041107.1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.mplayerhq.hu/MPlayer/releases/codecs/ \
 		http://www2.mplayerhq.hu/MPlayer/releases/codecs/ \
@@ -21,7 +21,8 @@ USE_LANGUAGES=	# empty
 
 ONLY_FOR_PLATFORM=	*-*-i386
 
-NO_BUILD=	YES
+NO_BUILD=	# defined
+NO_CONFIGURE=	# defined
 
 RESTRICTED=	"Unsure of codec's license"
 NO_BIN_ON_CDROM=${RESTRICTED}
