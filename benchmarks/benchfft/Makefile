@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/10/21 19:35:56 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1998/12/03 01:27:04 hubertf Exp $
 
 DISTNAME=		benchfft-2.0
 CATEGORIES=		benchmarks math
@@ -23,7 +23,16 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bench ${PREFIX}/bin/bench-fft
 	${INSTALL_SCRIPT} ${WRKSRC}/submit-script ${PREFIX}/bin/run-fftbench
 
+.include "../../mk/bsd.prefs.mk"
+
 benchmark:
+.if defined(BATCH)
+	@${ECHO} "*** This benchmark may only be run in non-batch mode" ; \
+	exit 1
+.else
 	@${WRKSRC}/submit-script
+	@${ECHO} ${PKGNAME} results:
+	${CAT} submit.txt
+.endif
 
 .include "../../mk/bsd.pkg.mk"
