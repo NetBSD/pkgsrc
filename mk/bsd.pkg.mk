@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-#	$NetBSD: bsd.pkg.mk,v 1.87 1998/05/29 09:21:43 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.88 1998/05/29 22:48:17 hubertf Exp $
 #
 #	This file is derived from bsd.port.mk - 940820 Jordan K. Hubbard.
 #	This file is in the public domain.
@@ -1875,10 +1875,12 @@ binpkg-list:
 		{													\
 			rel=$$1 ; 										\
 			arch=$$2 ; 										\
-			if (arch in f) 									\
-				f[arch] = "%%BIN_PREREL%%" rel "/" arch "%%BIN_MEDREL%%" rel "%%BIN_POSTREL%%, " f[arch];					\
-			else 											\
-				f[arch] = "%%BIN_PREREL%%" rel "/" arch "%%BIN_MEDREL%%" rel "%%BIN_POSTREL%%";								\
+			if (arch != "m68k"){							\
+				if (arch in f) 								\
+					f[arch] = "%%BIN_PREREL%%" rel "/" arch "%%BIN_MEDREL%%" rel "%%BIN_POSTREL%%, " f[arch];					\
+				else 											\
+					f[arch] = "%%BIN_PREREL%%" rel "/" arch "%%BIN_MEDREL%%" rel "%%BIN_POSTREL%%";								\
+			}												\
 		} 													\
 		END 												\
 		{ 													\
