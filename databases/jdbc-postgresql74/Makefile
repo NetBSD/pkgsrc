@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/06/27 16:38:32 recht Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/10 16:19:18 jdolecek Exp $
 #
 
-DIST_VERS=		7.4.3
+DIST_VERS=		7.4.5
 DISTNAME=		postgresql-${DIST_VERS}
 PKGNAME=		jdbc-${DISTNAME}
 CATEGORIES=		databases java
