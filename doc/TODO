@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1010 2003/11/09 23:38:43 heinz Exp $
+$NetBSD: TODO,v 1.1011 2003/11/10 00:16:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -168,7 +168,6 @@ Suggested package updates
 	o dlcompat-20030629 [grant]
 	o dnetc-2.9004-482 [pkg/22390]
 	o dosbox-0.60
-	o dvd+rw-tools-5.9.4.4.4 [pkg/23106]
 	o dvipng-0.7
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
