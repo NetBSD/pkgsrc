@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2003/11/05 00:05:06 recht Exp $
+$NetBSD: distinfo,v 1.3 2003/11/05 11:54:47 tron Exp $
 
 SHA1 (coreutils-5.0.tar.bz2) = ce67aacedfc917a92b5be62dd32095393c2f220c
 Size (coreutils-5.0.tar.bz2) = 3952653 bytes
 SHA1 (patch-aa) = 352b6b8eeff29159ebdbae4929db75d243a19354
-SHA1 (patch-ab) = 8cc6bbef46bdaf163129b06bf65ec2b775c57fe2
-SHA1 (patch-ac) = 761ba2182a191ca215f032228e678c8f0f5549be
+SHA1 (patch-ab) = 28ad6f03c6c116837a1c4754b0dc09c3488b5ca8
+SHA1 (patch-ac) = 323a960e5506876f2222723f7b7dec1446c0c30c

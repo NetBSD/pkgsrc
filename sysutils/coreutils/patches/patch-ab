@@ -1,12 +1,11 @@
-$NetBSD: patch-ab,v 1.1 2003/11/05 00:05:06 recht Exp $
+$NetBSD: patch-ab,v 1.2 2003/11/05 11:54:47 tron Exp $
 
 --- lib/xmalloc.c~	2002-11-21 21:39:59.000000000 +0100
 +++ lib/xmalloc.c	2003-11-05 00:26:39.000000000 +0100
-@@ -22,7 +22,9 @@
+@@ -22,7 +22,8 @@
  #include <sys/types.h>
  
  #if STDC_HEADERS
-+# include <stdbool.h>
  # include <stdlib.h>
 +# include <string.h>
  #else
@@ -30,7 +29,7 @@ $NetBSD: patch-ab,v 1.1 2003/11/05 00:05:06 recht Exp $
 +/* Return true if array of N objects, each of size S, cannot exist due
 +   to arithmetic overflow.  S must be nonzero.  */
 +
-+static inline bool
++static inline int
 +array_size_overflow (size_t n, size_t s)
 +{
 +  return SIZE_MAX / s < n;
