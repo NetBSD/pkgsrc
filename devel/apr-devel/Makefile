@@ -1,21 +1,25 @@
-# $NetBSD: Makefile,v 1.6 2002/10/09 19:00:55 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2002/11/25 19:52:43 wiz Exp $
 
-DISTNAME=	apr_20020725223645
-PKGNAME=	apr-0.20020725223645
+DISTNAME=	apr_20021123173453
+PKGNAME=	apr-0.20021123173453
 CATEGORIES=	devel
-MASTER_SITES=	http://www.apache.org/dist/apr/not-released/
-DISTFILES=	apr_20020725223645.tar.gz apr-util_20020725223700.tar.gz
+MASTER_SITES=	# http://www.apache.org/dist/apr/not-released/
+DISTFILES=	apr_20021123173453.tar.gz apr-util_20021123173519.tar.gz
 
 MAINTAINER=	joelw@unix.se
 HOMEPAGE=	http://apr.apache.org/
 COMMENT=	Apache Portable Run-time, a system portability layer
 
-AUTOCONF_REQD=	2.50
+AUTOCONF_REQD=	2.56
 GNU_CONFIGURE=	yes
 USE_BUILDLINK2=	yes
+# Programs using apr-config --apr-libtool will also need USE_LIBTOOL
+# That's no reason to make it a dependency, though. -- wiz
 USE_LIBTOOL=	yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/build/ldconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/apr/libtool
 WRKSRC=		${WRKDIR}
+
+BUILD_DIRS=	${WRKSRC}/apr ${WRKSRC}/apr-util
 
 pre-configure:
 	(cd ${WRKDIR}/apr && ./buildconf)
@@ -26,15 +30,11 @@ do-configure:
 		--prefix=${PREFIX} \
 		--with-devrandom=/dev/urandom \
 		)
-	(cd ${WRKDIR}/apr-util && ${SETENV} ${CONFIGURE_ENV} ./configure --prefix=${PREFIX} --with-apr=../apr --with-expat=${LOCALBASE})
-
-do-build:
-	(cd ${WRKDIR}/apr && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS})
-	(cd ${WRKDIR}/apr-util && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS})
-
-do-install:
-	(cd ${WRKDIR}/apr && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET})
-	(cd ${WRKDIR}/apr-util && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET})
+	(cd ${WRKDIR}/apr-util && ${SETENV} ${CONFIGURE_ENV} ./configure \
+		--prefix=${PREFIX} \
+		--with-apr=../apr \
+		--with-expat=${BUILDLINK_PREFIX.expat} \
+		)
 
 .include "../../textproc/expat/buildlink2.mk"
 .include "../../mk/autoconf.mk"

@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1 2002/11/25 19:52:45 wiz Exp $
+
+--- apr/Makefile.in.orig	Fri Oct 11 18:35:11 2002
++++ apr/Makefile.in
+@@ -75,12 +75,12 @@ install: $(TARGET_LIB)
+ 	fi;
+ 	$(LIBTOOL) --mode=install cp $(TARGET_LIB) $(DESTDIR)$(libdir)
+ 	$(LIBTOOL) --mode=install cp apr.exp $(DESTDIR)$(libdir)
+-	if [ ! -d $(DESTDIR)$(installbuilddir) ]; then \
+-	   	$(top_srcdir)/build/mkdir.sh $(DESTDIR)$(installbuilddir); \
+-	fi; 
+-	if [ -f libtool ]; then \
+-		$(LIBTOOL) --mode=install cp libtool $(DESTDIR)$(installbuilddir); \
+-	fi;
++#	if [ ! -d $(DESTDIR)$(installbuilddir) ]; then \
++#	   	$(top_srcdir)/build/mkdir.sh $(DESTDIR)$(installbuilddir); \
++#	fi; 
++#	if [ -f libtool ]; then \
++#		$(LIBTOOL) --mode=install cp libtool $(DESTDIR)$(installbuilddir); \
++#	fi;
+ 	if [ -f shlibtool ]; then \
+ 		$(LIBTOOL) --mode=install cp shlibtool $(DESTDIR)$(installbuilddir); \
+ 	fi;
