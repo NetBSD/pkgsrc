@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2000/01/26 22:11:36 jlam Exp $
+$NetBSD: patch-ab,v 1.4 2004/12/22 16:18:42 ben Exp $
 
 --- configure.in.orig	Wed Jun  9 02:26:28 1999
 +++ configure.in	Tue Jan 18 16:20:01 2000
@@ -32,3 +32,28 @@ $NetBSD: patch-ab,v 1.3 2000/01/26 22:11:36 jlam Exp $
  AC_SUBST(RL_LIBS)
  
  AC_CHECK_LIB(gsm, gsm_decode, [HAVE_GSM="yes"])
+@@ -209,6 +223,24 @@
+ AC_MSG_RESULT($is_freebsd)
+ if test $is_freebsd = "yes"; then
+ 	RPLAY_TARGET="FreeBSD"
++fi
++fi
++
++
++dnl
++dnl Check for NetBSD
++dnl
++if test -z "$RPLAY_TARGET"; then
++AC_MSG_CHECKING(for NetBSD)
++AC_EGREP_CPP(yes,
++[
++#ifdef __NetBSD__
++  yes
++#endif
++], is_netbsd=yes, is_netbsd=no)
++AC_MSG_RESULT($is_netbsd)
++if test $is_netbsd = "yes"; then
++	RPLAY_TARGET="NetBSD"
+ fi
+ fi
+
