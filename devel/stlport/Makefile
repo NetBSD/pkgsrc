@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/04/30 20:41:11 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/05/08 01:04:40 jlam Exp $
 
 DISTNAME=	STLport-4.0
 PKGNAME=	stlport-4.0
@@ -56,15 +56,13 @@ do-install:
 
 .include "../../mk/bsd.pkg.mk"
 
-GCC_BINDIR=	# empty
-.if ${GCC_BINDIR} == ""
+.if !defined(GCC_BINDIR)
 PGCC_DEPEND!=	${PKG_INFO} -e "pgcc>=${GCC_VERS}" || ${ECHO}
 GCC_DEPEND!=	${PKG_INFO} -e "gcc>=${GCC_VERS}" || ${ECHO}
 .if ${PGCC_DEPEND} != ""
 GCC_BINDIR=	${PREFIX}/${PGCC_DEPEND}/bin
-MAKEFLAGS+=	GCC_BINDIR="${GCC_BINDIR}"
 .elif ${GCC_DEPEND} != ""
 GCC_BINDIR=	${PREFIX}/${GCC_DEPEND}/bin
-MAKEFLAGS+=	GCC_BINDIR="${GCC_BINDIR}"
 .endif
+MAKEFLAGS+=	GCC_BINDIR="${GCC_BINDIR}"
 .endif
