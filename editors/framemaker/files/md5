@@ -1,0 +1,10 @@
+$NetBSD: md5,v 1.1.1.1 2000/01/27 21:18:56 abs Exp $
+
+MD5 (framemaker/fmlinux.txt) = d9de65e38136257e9065d69f812571cb
+MD5 (framemaker/fmlinux.tar.gz) = 74134ddb25e15b4af9e59ceed43173ee
+MD5 (framemaker/dictionaries.txt) = ee388b1db720ddfcaf0f24308ddbce48
+MD5 (framemaker/dictionaries.tar.gz) = e833783dad7a1d39c1ce5055f0778e06
+MD5 (framemaker/help.txt) = b4faf191bdbb9603fb4f965df89489fe
+MD5 (framemaker/help.tar.gz) = 5508ee06a761f37e63dc0857ad19f544
+MD5 (framemaker/manuals.txt) = 283ce1c269f5f730f8312765b13adf6e
+MD5 (framemaker/manuals.tar.gz) = d1ee35fc81e96ff91bebd14bb4254ee7
