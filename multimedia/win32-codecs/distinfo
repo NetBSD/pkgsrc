@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/26 12:02:33 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2004/06/26 16:14:42 grant Exp $
 
-SHA1 (win32-codecs-031029/win32codecs.tar.bz2) = 9623b24063da269d08b2533fbac9d7a2bb27b91e
-Size (win32-codecs-031029/win32codecs.tar.bz2) = 6803247 bytes
-SHA1 (win32-codecs-031029/qt6dlls.tar.bz2) = 34bcd01742f79df790bda290b94236b5cbd1c007
-Size (win32-codecs-031029/qt6dlls.tar.bz2) = 2628353 bytes
-SHA1 (win32-codecs-031029/qtextras.tar.bz2) = 05ea93ebc43e188ae1c679a9d9c7557edb811e22
-Size (win32-codecs-031029/qtextras.tar.bz2) = 701356 bytes
-SHA1 (win32-codecs-031029/rp9win32codecs.tar.bz2) = c41f2333bed747e868375cfadb0b5da541bd3485
-Size (win32-codecs-031029/rp9win32codecs.tar.bz2) = 528088 bytes
+SHA1 (win32codecs-20040626.tar.bz2) = ba7927c33dd384428071cd7cc7a0443a39edfbe7
+Size (win32codecs-20040626.tar.bz2) = 7093871 bytes
+SHA1 (qt6dlls-20040626.tar.bz2) = 1a9813846e3460a0b25551b24b77d0cb012cc645
+Size (qt6dlls-20040626.tar.bz2) = 2628348 bytes
+SHA1 (qtextras-20040626.tar.bz2) = 05ea93ebc43e188ae1c679a9d9c7557edb811e22
+Size (qtextras-20040626.tar.bz2) = 701356 bytes
+SHA1 (rp9win32codecs-20040626.tar.bz2) = c41f2333bed747e868375cfadb0b5da541bd3485
+Size (rp9win32codecs-20040626.tar.bz2) = 528088 bytes
