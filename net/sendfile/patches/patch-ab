@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/06/06 17:08:37 hwr Exp $
+
+--- src/sendfiled.c	Sun Jun  6 18:31:25 1999
++++ src/sendfiled.c.orig	Thu Oct 29 17:48:08 1998
+@@ -2945,7 +2945,7 @@
+       exit(1);
+     }
+     if (wlock_file(lockf)<0) {
+-      snprintf(MAXS(tmp),"cannot lock %s : %s",lockfn,strerror(errno));
++      snprintf(MAXS(tmp),"cannot lock %s : ",lockfn,strerror(errno));
+       dbgout(tmp);
+       exit(1);
+     }

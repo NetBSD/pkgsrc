@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/06/06 17:08:37 hwr Exp $
+
+--- makeconfig.orig	Tue Jul 14 12:52:25 1998
++++ makeconfig	Sun Jun  6 17:05:23 1999
+@@ -16,10 +16,10 @@
+ 
+ # default installation settings
+ SPOOL=/var/spool/sendfile
+-BINDIR=/usr/local/bin
+-MANDIR=/usr/local/man
+-CONFIG=/usr/local/etc
+-SERVERDIR=/usr/local/sbin
++BINDIR=@PREFIX@/bin
++MANDIR=@PREFIX@/man
++CONFIG=@PREFIX@/etc
++SERVERDIR=@PREFIX@/sbin
+ INETDCONF=/etc/inetd.conf
+ SERVICES=/etc/services
+ 
