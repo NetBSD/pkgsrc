@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/06/02 13:26:20 abs Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/10 20:30:36 jmc Exp $
 
 DISTNAME=	mod_throttle312
-PKGNAME=	ap-throttle-3.1.2
+PKGNAMENOREV=	ap-throttle-3.1.2
+PKGNAME=	${PKGNAMENOREV}
 PKGREVISION=	1
 WRKSRC=         ${WRKDIR}/${PKGNAMENOREV:S/ap-/mod_/}
 CATEGORIES=	www
