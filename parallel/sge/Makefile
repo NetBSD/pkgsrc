@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/03 00:38:34 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/27 14:22:18 grant Exp $
 #
 
 DISTNAME=		sge-5.3p6
@@ -51,8 +51,12 @@ SGE_BUILDARCH!=		${ECHO} "${OPSYS}_${MACHINE_ARCH}" | ${TR} a-z A-Z
 .  if ${MACHINE_ARCH} == "i386"
 SGE_ARCH=		solaris86
 .  else
+_ISAINFO!=		isainfo
+.    if !empty(_ISAINFO:Msparcv9)
+SGE_ARCH=		solaris64
+.    else
 SGE_ARCH=		solaris
-#or solaris64
+.    endif
 .  endif
 SGE_BUILDARCH!=		${ECHO} "${SGE_ARCH}" | ${TR} a-z A-Z
 .elif ${OPSYS} == "Darwin"
