@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2000/07/25 14:44:48 jlam Exp $
+
+Please note that this package is provided for those programs
+which will not work with newer versions of LessTif.  To allow this
+package to coexist with newer versions of LessTif, it has been installed
+in ${PREFIX}/LessTif/1.2/{include,lib}.
+
+You should be able to select this version of LessTif when compiling
+programs which use it by passing the following flags to the compiler:
+
+	-I${PREFIX}/LessTif/1.2/include
+	-L${PREFIX}/LessTif/1.2/lib -Wl,-R${PREFIX}/LessTif/1.2/lib
+===========================================================================
