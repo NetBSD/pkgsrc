@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.515 2002/11/13 20:16:33 jschauma Exp $
+$NetBSD: CHANGES,v 1.516 2002/11/13 22:59:53 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3603,3 +3603,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated make_album to 1.6nb3 [wiz 2002-11-13]
 	Updated p5-PerlMagick to 5.5.1.6nb1 [wiz 2002-11-13]
 	Updated gprolog to 1.2.16 [jschauma 2002-11-13]
+	Updated mhash to 0.8.17 [jschauma 2002-11-13]
+	Updated aide to 0.9 [jschauma 2002-11-13]
