@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2000/07/03 15:13:18 agc Exp $
+# $NetBSD: Makefile,v 1.7 2000/10/11 15:07:47 hubertf Exp $
 
 DISTNAME=		pchar-1.2
 CATEGORIES=		net
 MASTER_SITES=		http://www.employees.org/~bmah/Software/pchar/
 
 MAINTAINER=		soren@netbsd.org
-HOMEPAGE=		http://www.ca.sandia.gov/~bmah/Software/pchar/
+HOMEPAGE=		http://www.employees.org/~bmah/Software/pchar/
 
 GNU_CONFIGURE=		yes
 
