@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/06/23 13:51:41 kent Exp $
+# $NetBSD: Makefile,v 1.7 2002/07/16 08:24:15 agc Exp $
 #
 
 DISTNAME=		cheesetracker-0.5.5
@@ -20,6 +20,7 @@ GNU_CONFIGURE=		yes
 # XXX: This package assumes pthread is pth.
 #      (glib specifies `USE_PTHREAD=native pth.')
 CONFIGURE_ENV=		CXXFLAGS="-O -Dusleep=pth_usleep"
+USE_GMAKE=		yes
 
 post-extract:
 	${RM} -f ${WRKSRC}/install-sh
