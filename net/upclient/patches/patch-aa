@@ -1,0 +1,36 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/04/06 20:10:00 hubertf Exp $
+
+--- Makefile.orig	Sat Apr  3 11:47:04 1999
++++ Makefile	Sun Apr  4 06:31:51 1999
+@@ -1,7 +1,7 @@
+ # Uptime Client Makefile
+ 
+ # Location of config file (for example /etc/upclient.conf)
+-CONFIGFILE = upclient.conf
++CONFIGFILE = ${PREFIX}/etc/upclient.conf
+ 
+ 
+ ################
+@@ -13,7 +13,7 @@
+ 	@echo "You must specify the system which you want to compile for:"
+ 	@echo ""
+ 	@echo "make linux		Linux"
+-	@echo "make freebsd		FreeBSD"
++	@echo "make bsd		FreeBSD, NetBSD, OpenBSD, BSDi
+ 	@echo "make solaris		Solaris"
+ 	@echo ""
+ 
+@@ -24,11 +24,11 @@
+ 		CFLAGS='-DLINUX -DCONFIGFILE=\"$(CONFIGFILE)\"' \
+ 		upclient
+ 
+-freebsd:
++bsd:
+ 	$(MAKE) CC=gcc \
+ 		LDFLAGS= \
+ 		OBJECTS= \
+-		CFLAGS='-DFREEBSD -DCONFIGFILE=\"$(CONFIGFILE)\"' \
++		CFLAGS='-DxxxBSD -DCONFIGFILE=\"$(CONFIGFILE)\"' \
+ 		upclient
+ 
+ solaris:
