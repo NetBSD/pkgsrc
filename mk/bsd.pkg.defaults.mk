@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.12 2001/11/08 12:47:13 agc Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.13 2001/11/12 23:04:26 enami Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1132,7 +1132,7 @@ USE_CRYPTO?=	YES
 # Possible: YES, or NO.
 # Default: YES
 
-USE_DB2= NO
+USE_DB2?= NO
 # Used in sendmail to build with database library 2.x from the db package.
 # Possible: YES, or NO.
 # Default: NO
@@ -1182,7 +1182,7 @@ USE_IDEA?=	NO
 # Possible: YES, or NO.
 # Default: not defined.
 
-USE_SJ3= YES
+USE_SJ3?= YES
 # Used in kinput2 to enable SJ3 kana-kanji converter support.
 # Possible: YES, or NO.
 # Default: YES
@@ -1193,7 +1193,7 @@ USE_SJ3= YES
 # Possible: 4, 5, not defined
 # Default: not defined
 
-USE_WNN4= YES
+USE_WNN4?= YES
 # Used in kinput2 to enable FreeWnn (a.k.a.  Wnn4) kana-kanji
 # converter support.
 # Possible: YES, or NO.
