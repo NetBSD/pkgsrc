@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.2 2005/02/09 15:21:06 ben Exp $
+$NetBSD: patch-aa,v 1.3 2005/03/20 14:14:26 ben Exp $
 
---- tools/check-updates.pl.orig	2005-01-05 23:20:13.000000000 -0800
+--- tools/check-updates.pl.orig	2005-02-09 17:15:33.000000000 -0800
 +++ tools/check-updates.pl
-@@ -294,10 +294,13 @@ sub printHelp
+@@ -247,7 +247,7 @@ sub constructHeaders
+ 	# We assume the default directory structure, therefore this script
+ 	# resides one directory (tools) below the f-prot program 
+ 	# giving this path:  /path/to/this_script/../f-prot 
+-	my $output = `$dir../f-prot -verno` || warn "Error occured:  Can't find f-prot command!";
++	my $output = `$dir../bin/f-prot -verno` || warn "Error occured:  Can't find f-prot command!";
+ 	my ($version) = $output =~ /Program version: (.+)/;
+ 
+ 	$version ||= "4.x"; # Default value if something fails due to improper setup
+@@ -305,10 +305,13 @@ sub printHelp
  # exists, and if it doesn't exist it tries to create it.
  sub checkTemporaryDirectory
  {
