@@ -3,7 +3,7 @@
 # Date created:		20 April 1997
 # Whom:			doconnor@ist.flinders.edu.au
 #
-# $NetBSD: Makefile,v 1.2 1997/10/28 23:53:04 augustss Exp $
+# $NetBSD: Makefile,v 1.3 1998/01/19 00:57:03 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/09/05 17:40:54 max Exp 
 #
 
@@ -12,10 +12,10 @@ PKGNAME=	mikmod-2.14
 CATEGORIES=	audio
 MASTER_SITES=	http://www.chiark.greenend.org.uk/~stevem/mikmod/
 
-BUILD_DEPENDS=	${PREFIX}/lib/libncurses.a:${PORTSDIR}/devel/ncurses
-
 # FreeBSD maintainer
 MAINTAINER=	doconnor@ist.flinders.edu.au
+
+BUILD_DEPENDS=	${PREFIX}/lib/libncurses.a:${PORTSDIR}/devel/ncurses
 
 RESTRICTED=	"Registration required for redistribution and commercial use."
 
@@ -27,7 +27,7 @@ do-install:
 	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/docs/mikmod.1 ${PREFIX}/man/man1
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${PREFIX}/share/doc/mikmod
-.for f in  credits.txt mikmod.txt register.frm 
+.for f in  credits.txt mikmod.txt register.frm
 	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/docs/$f ${PREFIX}/share/doc/mikmod
 .endfor
 .endif
