@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/04/28 13:55:21 adam Exp $
+$NetBSD: distinfo,v 1.2 2004/07/09 10:46:23 adam Exp $
 
-SHA1 (kadu-0.3.8.tar.bz2) = 5395734755db9858a7ecb13ddb8df7aa34f5c59a
-Size (kadu-0.3.8.tar.bz2) = 881198 bytes
-SHA1 (patch-aa) = 0e18cf2994de7dad6c206cd5909db3d5e9d54304
-SHA1 (patch-ab) = 0e86f38182df547ab6f753a33e940e5c30303f46
-SHA1 (patch-ac) = 9b574f800828297ed46f74e44f3bcd4cc3269c7e
-SHA1 (patch-ad) = 76555335b578fa8122519658936b6fc317c68029
+SHA1 (kadu-0.3.9.tar.bz2) = 633faefb53660be80b9f368dcbf837e07cb15cfd
+Size (kadu-0.3.9.tar.bz2) = 942895 bytes
+SHA1 (patch-aa) = 5ed7b1dab199097fa032fee1349e585efa1d0096
+SHA1 (patch-ab) = 2bad6bf94b1f4f39a88914c625bf4a1d6da5ae52
