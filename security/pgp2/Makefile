@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2000/09/09 19:40:22 fredb Exp $
+# $NetBSD: Makefile,v 1.26 2000/09/26 19:59:54 fredb Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -12,6 +12,7 @@ MAINTAINER=	packages@NetBSD.ORG
 HOMEPAGE=	http://www.pgpi.com/
 
 CRYPTO=		yes
+USE_RSAREF2=	NO
 
 .include "../../mk/bsd.prefs.mk"
 

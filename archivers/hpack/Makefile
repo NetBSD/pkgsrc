@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/09/09 19:40:14 fredb Exp $
+# $NetBSD: Makefile,v 1.7 2000/09/26 19:59:53 fredb Exp $
 
 DISTNAME=       hpack79${USE_RSAREF2:S/YES/u/:C/[^u]*//g}src
 PKGNAME=        hpack-0.79
@@ -10,6 +10,7 @@ MAINTAINER=     packages@netbsd.org
 CRYPTO=		yes
 NO_WRKSUBDIR=	yes
 PATCHDIR=	${WRKDIR}/.patches
+USE_RSAREF2=	NO
 
 MAKEFILE=       makefile
 ALL_TARGET=     hpack
