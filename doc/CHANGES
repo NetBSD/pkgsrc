@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5264 2004/03/16 11:04:51 tron Exp $
+$NetBSD: CHANGES,v 1.5265 2004/03/16 11:23:58 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1476,3 +1476,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome-vfs to 1.0.5nb6 [tron 2004-03-16]
 	Updated newsx to 1.6nb1 [cube 2004-03-16]
 	Updated glibwww to 0.2nb6 [tron 2004-03-16]
+	Updated pilot-link to 0.11.7nb2 [tron 2004-03-16]
