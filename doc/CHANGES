@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5139 2004/03/07 19:43:14 martti Exp $
+$NetBSD: CHANGES,v 1.5140 2004/03/07 21:29:19 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1226,3 +1226,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added py-GeoIP-1.2.0 [minskim 2004-03-07]
 	Updated mysql-client to 4.0.18 [martti 2004-03-07]
 	Updated mysql-server to 4.0.18 [martti 2004-03-07]
+	Updated bittorrent to 3.4 [recht 2004-03-07]
+	Updated bittorrent-gui to 3.4 [recht 2004-03-07]
