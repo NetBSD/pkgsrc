@@ -1,7 +1,8 @@
 #!/bin/csh
 #
 # SCCS-info %W% %E%
-# $Id: demo.csh,v 1.2 1999/06/13 12:54:19 sakamoto Exp $
+# $NetBSD: demo.csh,v 1.3 1999/06/13 13:06:08 sakamoto Exp $
+# FreeBSD Id: demo.csh,v 1.1.1.1 1995/02/19 09:25:43 hsu Exp $
 #
 # ====================== Change area ============================
 
