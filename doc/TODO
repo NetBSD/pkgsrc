@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1640 2004/04/19 14:13:28 minskim Exp $
+$NetBSD: TODO,v 1.1641 2004/04/19 14:54:17 minskim Exp $
 
 Suggested new packages
 ======================
@@ -216,7 +216,6 @@ Suggested package updates
 	o gpsim-0.21.0 [bouyer]
 	o gqmpeg-0.91.1
 	o grepmail-5.23
-	o grhino-0.11.0
 	o gsasl-0.1.0
 	o gtetrinet-0.7.4
 	o gtkglext-1.0.6
