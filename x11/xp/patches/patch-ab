@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/08/13 19:35:45 tron Exp $
+
+--- utils.c.orig	Thu Feb 11 13:44:15 1999
++++ utils.c	Fri Aug 13 21:30:56 1999
+@@ -1,13 +1,18 @@
+ #include <errno.h>
++#include <string.h>
+ #define NULL 0
+ 
+ 
+ char *
+ uerror() {
++#ifdef HAS_STRERROR
++	return strerror(errno);
++#else
+ 	extern int sys_nerr;
+ 	extern char *sys_errlist[];
+ 	if (errno > sys_nerr)
+ 	    return NULL;
+ 	else
+ 	    return sys_errlist[errno];
++#endif
+ }
