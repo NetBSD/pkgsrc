@@ -1,0 +1,18 @@
+#!/bin/sh
+# $NetBSD: arlad,v 1.1 2001/08/09 13:48:59 wennmach Exp $
+#
+# start script for arlad (for NetBSD-1.5 and newer)
+
+# PROVIDE: arlad
+# REQUIRE: beforemountlkm
+
+. /etc/rc.subr
+
+name="arlad"
+rcvar=$name
+command="@PREFIX@/libexec/${name}"
+command_args="-z /dev/xfs0"
+required_files="/dev/xfs0"
+
+load_rc_config $name
+run_rc_command "$1"
