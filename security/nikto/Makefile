@@ -1,23 +1,30 @@
-# $NetBSD: Makefile,v 1.2 2004/03/26 02:27:53 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/16 11:55:27 adrianp Exp $
 
-DISTNAME=	nikto-1.32
-PKGREVISION=	1
+DISTNAME=	nikto-1.34
 CATEGORIES=	security www
 MASTER_SITES=	http://www.cirt.net/nikto/
 
-MAINTAINER=	adrianp@stindustries.net
+MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE= 	http://www.cirt.net/code/nikto.shtml
 COMMENT=	URL scanner used to search for known vulnerable CGIs on websites
 
 DEPENDS+=	p5-Net-SSLeay>=1.20:../../security/p5-Net-SSLeay
 DEPENDS+=	nmap>=2.00:../../net/nmap
 
+NO_BUILDLINK=	YES
 USE_PERL5=      YES
 REPLACE_PERL=	nikto.pl
+NO_BUILD=	YES
+USE_PKGINSTALL=	YES
 
-do-build:
-	@${SED} -e 's|@PREFIX@|${PREFIX}|g' < ${WRKSRC}/config.txt > \
-		${WRKSRC}/config.txt.sample
+SUBST_CLASSES=		conf
+SUBST_STAGE.conf=	post-patch
+SUBST_FILES.conf=	config.txt
+SUBST_SED.conf=		-e "s|\#NMAP=/usr|NMAP=${PREFIX}|g" 
+SUBST_MESSAGE.conf=	"Fixing configuration files."
+
+CONF_FILES=	${PREFIX}/share/examples/nikto/config.txt \
+			 ${PREFIX}/share/nikto/config.txt
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/nikto
@@ -28,7 +35,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${PREFIX}/share/doc/nikto
 	${INSTALL_DATA} ${WRKSRC}/docs/CHANGES.txt ${PREFIX}/share/nikto/docs
 	${INSTALL_DATA} ${WRKSRC}/docs/*.html ${PREFIX}/share/doc/nikto
-	${INSTALL_DATA} ${WRKSRC}/config.txt.sample \
+	${INSTALL_DATA} ${WRKSRC}/config.txt \
 		${PREFIX}/share/examples/nikto
 	${INSTALL_SCRIPT} ${WRKSRC}/nikto.pl ${PREFIX}/bin/nikto
 	${INSTALL_DATA} ${WRKSRC}/plugins/*.plugin ${PREFIX}/share/nikto/plugins
