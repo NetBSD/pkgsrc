@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printindex,v 1.14 2004/01/30 10:54:36 grant Exp $
+# $NetBSD: printindex,v 1.15 2004/04/09 18:43:14 jschauma Exp $
 #
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
@@ -90,7 +90,7 @@ do
 	cd $cwd
 done
 
-# get the list of packages which should always be installed during the build
+# Get the list of packages which should always be installed during the build.
 # Make sure these ended up in the index file.  For example, xpkgwedge, might
 # not be enabled for builds in pkgtools/xpkgwedge, but we may want to have
 # it listed in the index file.
