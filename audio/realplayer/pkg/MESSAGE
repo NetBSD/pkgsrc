@@ -1,0 +1,15 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2000/12/25 09:35:59 jlam Exp $
+
+Please be sure to read the licensing terms in
+
+	@REALPLAYER_HOME@/LICENSE
+
+prior to using RealPlayer.  Users may run:
+
+	@REALPLAYER_HOME@/mimeinstall.sh
+
+to install the RealPlayer MIME types into their .mime.types and .mailcap
+files and to install a RealPlayer icon and MIME types into their KDE or
+GNOME desktop.
+===========================================================================

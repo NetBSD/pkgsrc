@@ -1,0 +1,38 @@
+#!/bin/sh
+#
+# $NetBSD: pre-extract,v 1.1.1.1 2000/12/25 09:35:59 jlam Exp $
+
+# The number of seconds to pause before continuing with the extraction
+# process.
+#
+delay=15
+
+${CAT} << EOF
+===========================================================================
+
+    Now running the RealPlayer installation program.
+
+    1) Choose 'Accept' on the end user license agreement (EULA) screen.
+
+    2) Make sure the "Destination Directory" is:
+
+	${WRKSRC}
+
+       (it should be the first choice on the drop-down menu), then press
+       'Finish'.
+
+    3) 'Cancel' and 'Exit' out of the MIME types and plugin install.
+
+    4) 'Cancel' and 'Exit' out of the electronic registration screen. 
+
+    After the introductory clip runs, exit RealPlayer to continue the
+    package installation.
+
+===========================================================================
+
+Be sure to read the above!  Proceeding in ${delay} seconds...
+EOF
+
+sleep ${delay}
+
+${CHMOD} +x ${RP_INSTALLER}
