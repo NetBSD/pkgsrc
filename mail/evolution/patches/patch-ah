@@ -1,17 +1,16 @@
-$NetBSD: patch-ah,v 1.1.1.1 2001/04/26 05:57:22 rh Exp $
+$NetBSD: patch-ah,v 1.2 2001/08/11 18:39:26 rh Exp $
 
---- camel/camel-service.c.orig	Wed Apr 25 20:22:29 2001
-+++ camel/camel-service.c
-@@ -23,6 +23,12 @@
-  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
-  * USA
+--- camel/camel-tcp-stream-openssl.c.orig	Mon Jul  9 00:15:30 2001
++++ camel/camel-tcp-stream-openssl.c
+@@ -20,6 +20,11 @@
+  *
   */
-+
+ 
 +#ifdef	_POSIX_THREAD_SYSCALL_SOFT
 +#undef	_POSIX_THREAD_SYSCALL_SOFT
 +#endif
 +#define	_POSIX_THREAD_SYSCALL_SOFT	0
 +
+ #ifdef HAVE_CONFIG_H
  #include <config.h>
- #include "camel-service.h"
- #include "camel-session.h"
+ #endif
