@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3972 2003/12/04 17:15:34 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3973 2003/12/04 17:27:34 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4848,3 +4848,10 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libIDL to 0.8.2nb1 [xtraeme 2003-12-04]
 	Updated ORBit2 to 2.6.0nb5 [xtraeme 2003-12-04]
 	Updated ORBit to 0.5.15nb6 [xtraeme 2003-12-04]
+	Updated neon to 0.24.4 [recht 2003-12-04]
+	Updated subversion to 0.33.1nb1 [recht 2003-12-04]
+	Updated subversion-base to 0.33.1nb1 [recht 2003-12-04]
+	Updated p5-subversion to 0.33.1nb1 [recht 2003-12-04]
+	Updated ap2-subversion to 0.33.1nb2 [recht 2003-12-04]
+	Renamed subversion-python to py-subversion [recht 2003-12-04]
+	Updated py-subversion to 0.33.1nb1 [recht 2003-12-04]
