@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2003/11/27 13:45:25 markd Exp $
+
+--- src/celestia/kde/data/celestia.desktop.orig	2003-11-28 02:03:58.000000000 +1300
++++ src/celestia/kde/data/celestia.desktop
+@@ -1,7 +1,7 @@
+ [Desktop Entry]
+ Name=Celestia
+ Comment=Celestia
+-Exec=celestia %f
++Exec=kcelestia %f
+ Terminal=false
+ Icon=celestia.png
+ MimeType=application/x-celestia-script
