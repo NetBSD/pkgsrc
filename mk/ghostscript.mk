@@ -1,4 +1,4 @@
-# $NetBSD: ghostscript.mk,v 1.5 2002/09/13 22:30:09 jlam Exp $
+# $NetBSD: ghostscript.mk,v 1.6 2002/09/14 03:17:31 rh Exp $
 #
 # This Makefile fragment is included by packages that require a run-time
 # dependency on a ghostscript Postscript interpreter.
@@ -19,7 +19,7 @@ USE_GHOSTSCRIPT?=	run
 .if defined(NO_X11)
 _GS_PKGSRCDIR?=	../../print/ghostscript-gnu-nox11
 .else
-_GS_PKGSRCDIR?=	../../print/ghostscript-gnu
+_GS_PKGSRCDIR?=	../../print/ghostscript-gnu-x11
 .endif
 
 _VALID_GS=	# empty
