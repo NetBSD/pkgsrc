@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2004/03/10 17:57:14 jlam Exp $
+# $NetBSD: builtin.mk,v 1.2 2004/03/13 18:39:16 jlam Exp $
 
 .if !defined(_BLNK_LIBREADLINE_FOUND)
 _BLNK_LIBREADLINE_FOUND!=	\
@@ -100,7 +100,7 @@ USE_BUILTIN.readline=	no
 .  endif
 
 .  if defined(USE_GNU_READLINE)
-.    if !empty(IS_BUILTIN.readline:M[nN][oO]) && \
+.    if !empty(IS_BUILTIN.readline:M[nN][oO]) || \
         (${PREFER.readline} == "pkgsrc")
 USE_BUILTIN.readline=	no
 .    endif
