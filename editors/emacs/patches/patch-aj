@@ -1,0 +1,16 @@
+$NetBSD: patch-aj,v 1.1 1998/09/04 02:28:54 tron Exp $
+
+--- info/widget~	Mon Mar 30 00:12:27 1998
++++ info/widget	Fri Aug 28 22:14:36 1998
+@@ -1,6 +1,11 @@
+ This is Info file ../info/widget, produced by Makeinfo version 1.68
+ from the input file widget.texi.
+ 
++INFO-DIR-SECTION Editors
++START-INFO-DIR-ENTRY
++* Widget: (widget).	The GNU Emacs text widget package.
++END-INFO-DIR-ENTRY
++
+ 
+ File: widget,  Node: Top,  Next: Introduction,  Prev: (dir),  Up: (dir)
+ 

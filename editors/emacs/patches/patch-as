@@ -1,0 +1,17 @@
+$NetBSD: patch-as,v 1.1 1998/09/04 02:28:55 tron Exp $
+
+--- man/sc.texi.orig	Thu Jul  2 20:48:27 1998
++++ man/sc.texi	Fri Sep  4 01:56:10 1998
+@@ -3,6 +3,12 @@
+ @comment %**start of header (This is for running Texinfo on a region.)
+ @setfilename ../info/sc
+ @settitle Supercite Version 3.1 User's Manual
++@dircategory The Emacs editor and associated tools
++@direntry
++* SC: (sc).			Supercite lets you cite parts of messages
++				you're replying to, in flexible ways.
++@end direntry
++
+ @iftex
+ @finalout
+ @end iftex

@@ -1,0 +1,15 @@
+$NetBSD: patch-an,v 1.1 1998/09/04 02:28:54 tron Exp $
+
+--- man/emacs.texi.orig	Tue Aug 18 10:45:18 1998
++++ man/emacs.texi	Fri Sep  4 01:56:09 1998
+@@ -4,6 +4,10 @@
+ @settitle GNU Emacs Manual
+ @setfilename ../info/emacs
+ @synindex pg cp
++@dircategory The Emacs editor and associated tools
++@direntry
++* Emacs: (emacs).		The extensible self-documenting text editor.
++@end direntry
+ 
+ @ifinfo
+ @c The edition number appears in several places in this file

@@ -1,0 +1,16 @@
+$NetBSD: patch-ao,v 1.1 1998/09/04 02:28:54 tron Exp $
+
+--- man/forms.texi.orig	Sat May 16 20:49:28 1998
++++ man/forms.texi	Fri Sep  4 01:56:09 1998
+@@ -8,6 +8,11 @@
+ @syncodeindex vr cp
+ @syncodeindex fn cp
+ @syncodeindex ky cp
++@dircategory The Emacs editor and associated tools
++@direntry
++* Forms: (forms).		Emacs package for editing data bases
++				by filling in forms.
++@end direntry
+ @iftex
+ @finalout
+ @setchapternewpage odd
