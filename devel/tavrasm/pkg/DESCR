@@ -1,0 +1,4 @@
+tavrasm is an assembler for the Atmel AVR series of microcontrollers.
+It compiles code written for Atmels AVR DOS assembler. Other features
+include macros in macros, 'C' escape characters in char/string
+literals.
