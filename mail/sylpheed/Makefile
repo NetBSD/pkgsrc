@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2003/03/07 21:58:01 salo Exp $
+# $NetBSD: Makefile,v 1.36 2003/03/22 13:47:56 chris Exp $
 
 DISTNAME=	sylpheed-0.8.11
+PKGREVISION=	1
 CATEGORIES=	mail news x11
 MASTER_SITES=	http://sylpheed.good-day.net/sylpheed/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,7 +18,7 @@ CONFLICTS=	sylpheed-claws-[0-9]*
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_X11BASE=		yes
+USE_X11=		yes
 USE_GMAKE=		yes
 
 GNU_CONFIGURE=		yes
