@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9481 2005/03/14 15:47:50 wiz Exp $
+$NetBSD: CHANGES,v 1.9482 2005/03/14 23:42:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1359,3 +1359,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated	ethereal to 0.10.10 [salo 2005-03-14]
 	Updated imlib2 to 1.2.0nb2 [wiz 2005-03-14]
 	Updated p5-Image-Imlib2 to 1.04 [wiz 2005-03-14]
+	Updated maradns to 1.0.18nb3 [wiz 2005-03-14]
