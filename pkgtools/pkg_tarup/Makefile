@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/05/28 14:53:42 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 2003/05/31 17:51:01 cjep Exp $
 
 DISTNAME=	pkg_tarup-1.4
 WRKSRC=		${WRKDIR}
@@ -31,10 +31,10 @@ SCRIPT_SUBST_SED=	${SCRIPT_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 do-configure:
 	${SED} ${SCRIPT_SUBST_SED}			\
 			< ${FILESDIR}/pkg_tarup		\
-			> ${WRKSRC}/pkg_tarup		
+			> ${WRKSRC}/pkg_tarup
 	${SED} ${SCRIPT_SUBST_SED}			\
 			< ${FILESDIR}/pkg_tarup_all	\
-			> ${WRKSRC}/pkg_tarup_all	
+			> ${WRKSRC}/pkg_tarup_all
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pkg_tarup ${PREFIX}/bin
