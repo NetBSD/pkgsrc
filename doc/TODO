@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.350 2003/03/07 18:23:22 salo Exp $
+$NetBSD: TODO,v 1.351 2003/03/07 21:59:14 salo Exp $
 
 Suggested new packages
 ======================
@@ -240,7 +240,6 @@ Suggested package updates
 	o sun-jre14-1.4.1_02 [pkg/20535]
 	o sweep-0.8.1
 	o swig-1.3.17
-	o sylpheed-0.8.11
 	o sylpheed-claws-0.8.9
 	o tcl/tk-8.4.2 [bjoern]
 	o tcpdump-3.7.2
