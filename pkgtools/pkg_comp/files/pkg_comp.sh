@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.14 2004/01/03 10:45:50 jmmv Exp $
+# $NetBSD: pkg_comp.sh,v 1.15 2004/01/08 14:06:15 jmmv Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, 2003, 2004 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -47,7 +47,8 @@ _TEMPLATE_VARS="DESTDIR ROOTSHELL COPYROOTCFG BUILD_TARGET DISTRIBDIR SETS \
                 SETS_X11 USE_XPKGWEDGE REAL_SRC REAL_SRC_OPTS REAL_PKGSRC \
                 REAL_PKGSRC_OPTS REAL_DISTFILES REAL_DISTFILES_OPTS \
                 REAL_PACKAGES REAL_PACKAGES_OPTS REAL_PKGVULNDIR \
-                NETBSD_RELEASE MOUNT_SCRIPT UMOUNT_SCRIPT SYNC_UMOUNT"
+                NETBSD_RELEASE MOUNT_SCRIPT UMOUNT_SCRIPT SYNC_UMOUNT \
+                AUTO_TARGET"
 
 env_clean()
 {
@@ -85,6 +86,7 @@ env_setdefaults()
     : ${DESTDIR:=/var/chroot/pkg_comp/default}
     : ${ROOTSHELL:=/bin/ksh}
     : ${COPYROOTCFG:=no}
+    : ${AUTO_TARGET:=package}
     : ${BUILD_TARGET:=package}
     : ${DISTRIBDIR:=/var/pub/NetBSD}
     : ${SETS:=base.tgz comp.tgz etc.tgz text.tgz}
@@ -401,7 +403,7 @@ pkg_makeroot()
     fi
 
     if [ "$NETBSD_RELEASE" != "no" ]; then
-        BUILD_TARGET=install pkg_build pkgtools/libkver
+        pkg_build pkgtools/libkver
         echo "LD_PRELOAD=${LOCALBASE}/lib/libkver.so; export LD_PRELOAD" >> $DESTDIR/etc/shrc
         echo "setenv LD_PRELOAD ${LOCALBASE}/lib/libkver.so" >> $DESTDIR/etc/csh.login
         echo "setenv LD_PRELOAD ${LOCALBASE}/lib/libkver.so" >> $DESTDIR/etc/csh.cshrc
@@ -767,7 +769,7 @@ case "$target" in
         ;;
     auto)
         readconf
-        BUILD_TARGET="package"
+        BUILD_TARGET="${AUTO_TARGET}"
         if [ -z "$REAL_PACKAGES" ]; then
             err "this is useless without REAL_PACKAGES"
         fi
