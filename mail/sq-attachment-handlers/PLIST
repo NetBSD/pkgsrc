@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:01:24 zuntum Exp $
+share/squirrelmail/plugins/attachment_common/INSTALL
+share/squirrelmail/plugins/attachment_common/README
+share/squirrelmail/plugins/attachment_common/image.php
+share/squirrelmail/plugins/attachment_common/setup.php
+share/squirrelmail/plugins/attachment_common/vcard.php
+@dirrm share/squirrelmail/plugins/attachment_common

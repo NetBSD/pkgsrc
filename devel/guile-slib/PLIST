@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:05 zuntum Exp $
+share/guile/slibcat
+@exec	ln -sf ../slib %D/share/guile/slib
+@unexec	rm -f %D/share/guile/slib

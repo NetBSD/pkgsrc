@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2000/11/16 02:50:15 wiz Exp $
-include/avl.h
-include/avlt.h
-include/avltr.h
-include/rb.h
-@unexec install-info --delete %D/info/avl.info %D/info/dir
-info/avl.info
-@exec install-info %D/info/avl.info %D/info/dir
-lib/libavl.a

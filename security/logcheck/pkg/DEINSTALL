@@ -1,8 +1,0 @@
-#!/bin/sh
-#
-# $NetBSD: DEINSTALL,v 1.1.1.1 2001/07/17 15:00:48 nra Exp $
-#
-
-[ -d /var/adm/tmp ] && rmdir /var/adm/tmp
-[ -d /var/adm ]     && rmdir /var/adm
-exit 0

@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:23:44 zuntum Exp $
+bin/gindent
+man/man1/gindent.1
+@unexec install-info --delete %D/info/indent.info %D/info/dir
+info/indent.info
+@exec install-info %D/info/indent.info %D/info/dir

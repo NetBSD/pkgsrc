@@ -1,0 +1,46 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:25:59 zuntum Exp $
+bin/build-prc
+bin/m68k-palmos-addr2line
+bin/m68k-palmos-ar
+bin/m68k-palmos-as
+bin/m68k-palmos-c++filt
+bin/m68k-palmos-gasp
+bin/m68k-palmos-ld
+bin/m68k-palmos-nm
+bin/m68k-palmos-obj-res
+bin/m68k-palmos-objcopy
+bin/m68k-palmos-objdump
+bin/m68k-palmos-ranlib
+bin/m68k-palmos-size
+bin/m68k-palmos-strings
+bin/m68k-palmos-strip
+bin/multigen
+bin/obj-res
+m68k-palmos/bin/ar
+m68k-palmos/bin/as
+m68k-palmos/bin/ld
+m68k-palmos/bin/nm
+m68k-palmos/bin/ranlib
+m68k-palmos/bin/strip
+m68k-palmos/lib/ldscripts/m68kcoff.x
+m68k-palmos/lib/ldscripts/m68kcoff.xbn
+m68k-palmos/lib/ldscripts/m68kcoff.xn
+m68k-palmos/lib/ldscripts/m68kcoff.xr
+m68k-palmos/lib/ldscripts/m68kcoff.xu
+man/man1/m68k-palmos-addr2line.1
+man/man1/m68k-palmos-ar.1
+man/man1/m68k-palmos-as.1
+man/man1/m68k-palmos-c++filt.1
+man/man1/m68k-palmos-ld.1
+man/man1/m68k-palmos-nlmconv.1
+man/man1/m68k-palmos-nm.1
+man/man1/m68k-palmos-objcopy.1
+man/man1/m68k-palmos-objdump.1
+man/man1/m68k-palmos-ranlib.1
+man/man1/m68k-palmos-size.1
+man/man1/m68k-palmos-strings.1
+man/man1/m68k-palmos-strip.1
+@dirrm m68k-palmos/lib/ldscripts
+@dirrm m68k-palmos/lib
+@dirrm m68k-palmos/bin
+@dirrm m68k-palmos

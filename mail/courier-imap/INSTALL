@@ -1,0 +1,90 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1 2001/11/01 00:59:42 zuntum Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+CAT="@CAT@"
+CHMOD="@CHMOD@"
+CHOWN="@CHOWN@"
+CP="@CP@"
+MKDIR="@MKDIR@"
+RM="@RM@"
+
+SAMPLECONFDIR=${PKG_PREFIX}/share/examples/courier
+CONFDIR=/etc/courier
+CONFFILES_1="imapd.dist imapd-ssl.dist pop3d.dist pop3d-ssl.dist"
+CONFFILES_2="imapd.cnf pop3d.cnf"
+CONFFILES_3="quotawarnmsg"
+
+case ${STAGE} in
+PRE-INSTALL)
+	;;
+
+POST-INSTALL)
+	${MKDIR} ${CONFDIR}
+	echo "Installing configuration files:"
+	for file in ${CONFFILES_2}
+	do
+		FILE=${CONFDIR}/${file}
+		SAMPLEFILE=${SAMPLECONFDIR}/${file}
+		if [ -f ${FILE} ]
+		then
+			echo "    ${FILE} already exists"
+		else
+			echo "    ${FILE}"
+			${CP} ${SAMPLEFILE} ${FILE}
+			${CHMOD} 600 ${FILE}
+		fi
+	done
+	for file in ${CONFFILES_3}
+	do
+		FILE=${CONFDIR}/${file}
+		SAMPLEFILE=${SAMPLECONFDIR}/${file}.example
+		if [ -f ${FILE} ]
+		then
+			echo "    ${FILE} already exists"
+		else
+			echo "    ${FILE}"
+			${CP} ${SAMPLEFILE} ${FILE}
+			${CHMOD} 644 ${FILE}
+		fi
+	done
+
+	echo ""
+	echo "Updating configuration files:"
+	GENERATED_CONFFILES=
+	for file in ${CONFFILES_1}
+	do
+		FILE=${CONFDIR}/${file}
+		GENFILE=${CONFDIR}/${file%.dist}
+		SAMPLEFILE=${SAMPLECONFDIR}/${file}
+		${CP} ${SAMPLEFILE} ${FILE}
+		GENERATED_CONFFILES="${GENERATED_CONFFILES} ${file%.dist}"
+		${PKG_PREFIX}/sbin/sysconftool ${FILE}
+		${CHMOD} 600 ${GENFILE}
+		${RM} -f ${FILE}
+	done
+	${CAT} << EOF
+
+===========================================================================
+Some files you might need to customize include the following:
+
+EOF
+	for file in ${GENERATED_CONFFILES} ${CONFFILES_2} ${CONFFILES_3}
+	do
+		FILE=${CONFDIR}/${file}
+		echo "	${FILE}"
+	done
+	${CAT} << EOF
+===========================================================================
+EOF
+	;;
+
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/04/16 23:19:11 zuntum Exp $
-bin/ktail
-share/doc/kde/HTML/en/ktail/index.html
-share/kde/icons/locolor/32x32/apps/ktail.png
-share/kde/icons/locolor/16x16/apps/ktail.png
-share/kde/locale/de/LC_MESSAGES/ktail.mo
-@dirrm share/doc/kde/HTML/en/ktail
