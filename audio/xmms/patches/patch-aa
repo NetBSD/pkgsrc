@@ -1,0 +1,19 @@
+*** libxmms/configure.org	Wed Feb  2 13:33:43 2000
+--- libxmms/configure	Wed Feb  2 13:33:56 2000
+***************
+*** 589,595 ****
+  # ./install, which can be erroneously created by make from ./install.sh.
+  echo $ac_n "checking for a BSD compatible install""... $ac_c" 1>&6
+  echo "configure:592: checking for a BSD compatible install" >&5
+! if test -z "$INSTALL"; then
+  if eval "test \"`echo '$''{'ac_cv_path_install'+set}'`\" = set"; then
+    echo $ac_n "(cached) $ac_c" 1>&6
+  else
+--- 589,595 ----
+  # ./install, which can be erroneously created by make from ./install.sh.
+  echo $ac_n "checking for a BSD compatible install""... $ac_c" 1>&6
+  echo "configure:592: checking for a BSD compatible install" >&5
+! if test -z "$NO__INSTALL"; then
+  if eval "test \"`echo '$''{'ac_cv_path_install'+set}'`\" = set"; then
+    echo $ac_n "(cached) $ac_c" 1>&6
+  else
