@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/08/18 13:19:37 minoura Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/12/07 03:59:49 uebayasi Exp $
 ${EMACS_LISPPREFIX}/w3m/ChangeLog
 ${EMACS_LISPPREFIX}/w3m/ChangeLog.1
 ${EMACS_LISPPREFIX}/w3m/mew-w3m.el
@@ -58,7 +58,8 @@ ${EMACS_LISPPREFIX}/w3m/w3m.el
 ${EMACS_LISPPREFIX}/w3m/w3m.elc
 ${EMACS_LISPPREFIX}/w3m/w3mhack.el
 ${EMACS_LISPPREFIX}/w3m/mew-shimbun.el
-${EMACS_LISPPREFIX}/w3m/mew-shimbun.elc
+@comment XXX This doesn't seem to work with Mew 4.x.
+@comment ${EMACS_LISPPREFIX}/w3m/mew-shimbun.elc
 ${EMACS_LISPPREFIX}/w3m/sb-2ch.el
 ${EMACS_LISPPREFIX}/w3m/sb-2ch.elc
 ${EMACS_LISPPREFIX}/w3m/sb-airs.el
