@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2004/02/18 21:29:10 kristerw Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 17:15:10 agc Exp $
 
 SHA1 (ex-040103.tar.gz) = 51fa1d613b37a4f3aed1ef2968be691465cdff09
+RMD160 (ex-040103.tar.gz) = 5fc3f222dde5a8d00e1b233281ccf210affdbdf1
 Size (ex-040103.tar.gz) = 284130 bytes
 SHA1 (patch-aa) = 28d07a850482fffa5e0726438868b55a94105e50
