@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.166 2000/07/27 10:14:55 wiz Exp $
+# $NetBSD: Makefile,v 1.167 2000/07/30 00:20:46 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -65,6 +65,7 @@
     SUBDIR += p5-gtk
     SUBDIR += polclock
     SUBDIR += py-Tk
+    SUBDIR += py-wxWindows
     SUBDIR += rep-gtk
     SUBDIR += qt
     SUBDIR += qt1
@@ -108,6 +109,7 @@
     SUBDIR += wmweather
     SUBDIR += wmx
     SUBDIR += wterm
+    SUBDIR += wxGTK
     SUBDIR += x2x
     SUBDIR += x3270
     SUBDIR += xaniroc
