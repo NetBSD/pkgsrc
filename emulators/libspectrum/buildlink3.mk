@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 09:12:11 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/07/20 13:11:25 adam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBSPECTRUM_BUILDLINK3_MK:=	${LIBSPECTRUM_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibspectrum}
 BUILDLINK_PACKAGES+=	libspectrum
 
 .if !empty(LIBSPECTRUM_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libspectrum+=		libspectrum>=0.2.1
+BUILDLINK_DEPENDS.libspectrum+=		libspectrum>=0.2.2
 BUILDLINK_PKGSRCDIR.libspectrum?=	../../emulators/libspectrum
 .endif	# LIBSPECTRUM_BUILDLINK3_MK
 
