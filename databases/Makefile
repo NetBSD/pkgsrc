@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.39 2000/10/15 18:49:02 rh Exp $
+# $NetBSD: Makefile,v 1.40 2000/10/24 10:12:31 wiz Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/30 11:47:51 tg Exp 
 #
 
     SUBDIR += db
     SUBDIR += db3
-    SUBDIR += gdbm
     SUBDIR += freetds
+    SUBDIR += gdbm
     SUBDIR += geneweb
     SUBDIR += gq
     SUBDIR += gtksql
@@ -18,10 +18,12 @@
     SUBDIR += mysql-server
     SUBDIR += openldap
     SUBDIR += oraedit
+    SUBDIR += p5-DBD-CSV
     SUBDIR += p5-DBD-Sybase
     SUBDIR += p5-DBD-mysql
     SUBDIR += p5-DBD-postgresql
     SUBDIR += p5-DBI
+    SUBDIR += p5-SQL-Statement
     SUBDIR += p5-gdbm
     SUBDIR += p5-perl-ldap
     SUBDIR += p5-pgsql
