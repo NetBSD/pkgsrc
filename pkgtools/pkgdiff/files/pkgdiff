@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: pkgdiff,v 1.13 2003/07/07 12:55:17 seb Exp $
+# $NetBSD: pkgdiff,v 1.14 2004/05/23 21:55:47 danw Exp $
 #
 # Usage: pkgdiff newfile
 #        pkgdiff oldfile newfile
@@ -43,7 +43,7 @@ while [ `dodiff "$PKGDIFF_FMT" -$lines "$old" "$new" | egrep -c '\\$(NetBSD|Auth
 do
 	lines=`expr $lines - 1`
 	if [ $lines = 0 ]; then
-		echo "Cannot strip away RCS IDs, please handle manually!"
+		echo "Cannot strip away RCS IDs, please handle manually!" >&2
 		exit 1
 	fi
 done
