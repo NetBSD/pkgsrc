@@ -1,0 +1,664 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/15 11:23:56 grant Exp $
+bin/phoenix
+lib/phoenix/chrome/US.jar
+lib/phoenix/chrome/browser.jar
+lib/phoenix/chrome/chrome.rdf
+lib/phoenix/chrome/chromelist.txt
+lib/phoenix/chrome/classic.jar
+lib/phoenix/chrome/comm.jar
+lib/phoenix/chrome/embed-sample.jar
+lib/phoenix/chrome/en-US.jar
+lib/phoenix/chrome/en-mac.jar
+lib/phoenix/chrome/en-unix.jar
+lib/phoenix/chrome/en-win.jar
+lib/phoenix/chrome/forms.jar
+lib/phoenix/chrome/help.jar
+lib/phoenix/chrome/installed-chrome.txt
+lib/phoenix/chrome/modern.jar
+lib/phoenix/chrome/overlayinfo/communicator/content/overlays.rdf
+lib/phoenix/chrome/overlayinfo/messenger/content/overlays.rdf
+lib/phoenix/chrome/overlayinfo/navigator/content/overlays.rdf
+lib/phoenix/chrome/pipnss.jar
+lib/phoenix/chrome/pippki.jar
+lib/phoenix/chrome/toolkit.jar
+lib/phoenix/components/accessibility.xpt
+lib/phoenix/components/appshell.xpt
+lib/phoenix/components/autocomplete.xpt
+lib/phoenix/components/autoconfig.xpt
+lib/phoenix/components/bookmarks.xpt
+lib/phoenix/components/caps.xpt
+lib/phoenix/components/chardet.xpt
+lib/phoenix/components/chrome.xpt
+lib/phoenix/components/commandhandler.xpt
+lib/phoenix/components/composer.xpt
+lib/phoenix/components/compreg.dat
+lib/phoenix/components/content.xpt
+lib/phoenix/components/content_base.xpt
+lib/phoenix/components/content_html.xpt
+lib/phoenix/components/content_xslt.xpt
+lib/phoenix/components/cookie.xpt
+lib/phoenix/components/directory.xpt
+lib/phoenix/components/docshell.xpt
+lib/phoenix/components/dom.xpt
+lib/phoenix/components/dom_base.xpt
+lib/phoenix/components/dom_core.xpt
+lib/phoenix/components/dom_css.xpt
+lib/phoenix/components/dom_events.xpt
+lib/phoenix/components/dom_html.xpt
+lib/phoenix/components/dom_range.xpt
+lib/phoenix/components/dom_stylesheets.xpt
+lib/phoenix/components/dom_traversal.xpt
+lib/phoenix/components/dom_views.xpt
+lib/phoenix/components/dom_xbl.xpt
+lib/phoenix/components/dom_xpath.xpt
+lib/phoenix/components/dom_xul.xpt
+lib/phoenix/components/downloads.xpt
+lib/phoenix/components/editor.xpt
+lib/phoenix/components/embed_base.xpt
+lib/phoenix/components/exthandler.xpt
+lib/phoenix/components/filepicker.xpt
+lib/phoenix/components/find.xpt
+lib/phoenix/components/gfx.xpt
+lib/phoenix/components/helperAppDlg.xpt
+lib/phoenix/components/history.xpt
+lib/phoenix/components/htmlparser.xpt
+lib/phoenix/components/imglib2.xpt
+lib/phoenix/components/intl.xpt
+lib/phoenix/components/jar.xpt
+lib/phoenix/components/jsconsole-clhandler.js
+lib/phoenix/components/jsconsole.xpt
+lib/phoenix/components/jsdservice.xpt
+lib/phoenix/components/jsurl.xpt
+lib/phoenix/components/layout_base.xpt
+lib/phoenix/components/layout_xul.xpt
+lib/phoenix/components/layout_xul_tree.xpt
+lib/phoenix/components/libaccessibility.so
+lib/phoenix/components/libappcomps.so
+lib/phoenix/components/libautoconfig.so
+lib/phoenix/components/libbrowsercomps.so
+lib/phoenix/components/libcaps.so
+lib/phoenix/components/libchrome.so
+lib/phoenix/components/libcookie.so
+lib/phoenix/components/libdocshell.so
+lib/phoenix/components/libeditor.so
+lib/phoenix/components/libembedcomponents.so
+lib/phoenix/components/libfileview.so
+lib/phoenix/components/libgfx_gtk.so
+lib/phoenix/components/libgfxps.so
+lib/phoenix/components/libgfxxprint.so
+lib/phoenix/components/libgkcontent.so
+lib/phoenix/components/libgklayout.so
+lib/phoenix/components/libgkplugin.so
+lib/phoenix/components/libgkview.so
+lib/phoenix/components/libhtmlpars.so
+lib/phoenix/components/libi18n.so
+lib/phoenix/components/libimglib2.so
+lib/phoenix/components/libimgmng.so
+lib/phoenix/components/libjar50.so
+lib/phoenix/components/libjsd.so
+lib/phoenix/components/libjsdom.so
+lib/phoenix/components/libjsurl.so
+lib/phoenix/components/libmork.so
+lib/phoenix/components/libmozfind.so
+lib/phoenix/components/libnecko.so
+lib/phoenix/components/libnecko2.so
+lib/phoenix/components/libnsappshell.so
+lib/phoenix/components/libnsprefm.so
+lib/phoenix/components/liboji.so
+lib/phoenix/components/libpipboot.so
+lib/phoenix/components/libpipnss.so
+lib/phoenix/components/libpippki.so
+lib/phoenix/components/libpref.so
+lib/phoenix/components/libprofile.so
+lib/phoenix/components/librdf.so
+lib/phoenix/components/libregviewer.so
+lib/phoenix/components/libshistory.so
+lib/phoenix/components/libtoolkitcomps.so
+lib/phoenix/components/libtransformiix.so
+lib/phoenix/components/libtxmgr.so
+lib/phoenix/components/libtypeaheadfind.so
+lib/phoenix/components/libuconv.so
+lib/phoenix/components/libucvmath.so
+lib/phoenix/components/libuniversalchardet.so
+lib/phoenix/components/liburiloader.so
+lib/phoenix/components/libwallet.so
+lib/phoenix/components/libwalletviewers.so
+lib/phoenix/components/libwebbrwsr.so
+lib/phoenix/components/libwidget_gtk.so
+lib/phoenix/components/libxmlextras.so
+lib/phoenix/components/libxpconnect.so
+lib/phoenix/components/libxpinstall.so
+lib/phoenix/components/libxremote_client.so
+lib/phoenix/components/libxremoteservice.so
+lib/phoenix/components/locale.xpt
+lib/phoenix/components/mimetype.xpt
+lib/phoenix/components/mozbrwsr.xpt
+lib/phoenix/components/mozfind.xpt
+lib/phoenix/components/necko.xpt
+lib/phoenix/components/necko_about.xpt
+lib/phoenix/components/necko_cache.xpt
+lib/phoenix/components/necko_cookie.xpt
+lib/phoenix/components/necko_data.xpt
+lib/phoenix/components/necko_dns.xpt
+lib/phoenix/components/necko_file.xpt
+lib/phoenix/components/necko_ftp.xpt
+lib/phoenix/components/necko_http.xpt
+lib/phoenix/components/necko_jar.xpt
+lib/phoenix/components/necko_res.xpt
+lib/phoenix/components/necko_socket.xpt
+lib/phoenix/components/necko_strconv.xpt
+lib/phoenix/components/necko_viewsource.xpt
+lib/phoenix/components/nsDictionary.js
+lib/phoenix/components/nsDownloadProgressListener.js
+lib/phoenix/components/nsFilePicker.js
+lib/phoenix/components/nsHelperAppDlg.js
+lib/phoenix/components/nsKillAll.js
+lib/phoenix/components/nsProgressDialog.js
+lib/phoenix/components/nsProxyAutoConfig.js
+lib/phoenix/components/nsResetPref.js
+lib/phoenix/components/nsSidebar.js
+lib/phoenix/components/nsUpdateNotifier.js
+lib/phoenix/components/nsXmlRpcClient.js
+lib/phoenix/components/oji.xpt
+lib/phoenix/components/pipboot.xpt
+lib/phoenix/components/pipnss.xpt
+lib/phoenix/components/pippki.xpt
+lib/phoenix/components/plugin.xpt
+lib/phoenix/components/pref.xpt
+lib/phoenix/components/prefetch.xpt
+lib/phoenix/components/prefmigr.xpt
+lib/phoenix/components/profile.xpt
+lib/phoenix/components/progressDlg.xpt
+lib/phoenix/components/proxyObjInst.xpt
+lib/phoenix/components/rdf.xpt
+lib/phoenix/components/regviewer.xpt
+lib/phoenix/components/related.xpt
+lib/phoenix/components/satchel.xpt
+lib/phoenix/components/search.xpt
+lib/phoenix/components/shistory.xpt
+lib/phoenix/components/sidebar.xpt
+lib/phoenix/components/signonviewer.xpt
+lib/phoenix/components/timebomb.xpt
+lib/phoenix/components/txmgr.xpt
+lib/phoenix/components/typeaheadfind.xpt
+lib/phoenix/components/uconv.xpt
+lib/phoenix/components/unicharutil.xpt
+lib/phoenix/components/uriloader.xpt
+lib/phoenix/components/util.xpt
+lib/phoenix/components/wallet.xpt
+lib/phoenix/components/walleteditor.xpt
+lib/phoenix/components/walletpreview.xpt
+lib/phoenix/components/webBrowser_core.xpt
+lib/phoenix/components/webbrowserpersist.xpt
+lib/phoenix/components/webshell_idls.xpt
+lib/phoenix/components/widget.xpt
+lib/phoenix/components/windowds.xpt
+lib/phoenix/components/windowwatcher.xpt
+lib/phoenix/components/xml-rpc.xpt
+lib/phoenix/components/xmlextras.xpt
+lib/phoenix/components/xmlschema.xpt
+lib/phoenix/components/xmlsoap.xpt
+lib/phoenix/components/xpcom_base.xpt
+lib/phoenix/components/xpcom_components.xpt
+lib/phoenix/components/xpcom_ds.xpt
+lib/phoenix/components/xpcom_io.xpt
+lib/phoenix/components/xpcom_threads.xpt
+lib/phoenix/components/xpcom_xpti.xpt
+lib/phoenix/components/xpconnect.xpt
+lib/phoenix/components/xpinstall.xpt
+lib/phoenix/components/xpti.dat
+lib/phoenix/components/xremoteservice.xpt
+lib/phoenix/components/xuldoc.xpt
+lib/phoenix/components/xultmpl.xpt
+lib/phoenix/defaults/autoconfig/platform.js
+lib/phoenix/defaults/autoconfig/prefcalls.js
+lib/phoenix/defaults/pref/all.js
+lib/phoenix/defaults/pref/editor.js
+lib/phoenix/defaults/pref/mailnews.js
+lib/phoenix/defaults/pref/security-prefs.js
+lib/phoenix/defaults/pref/unix.js
+lib/phoenix/defaults/pref/xpinstall.js
+lib/phoenix/defaults/profile/US/bookmarks.html
+lib/phoenix/defaults/profile/US/chrome/userChrome-example.css
+lib/phoenix/defaults/profile/US/chrome/userContent-example.css
+lib/phoenix/defaults/profile/US/localstore.rdf
+lib/phoenix/defaults/profile/US/mimeTypes.rdf
+lib/phoenix/defaults/profile/US/panels.rdf
+lib/phoenix/defaults/profile/US/search.rdf
+lib/phoenix/defaults/profile/bookmarks.html
+lib/phoenix/defaults/profile/chrome/userChrome-example.css
+lib/phoenix/defaults/profile/chrome/userContent-example.css
+lib/phoenix/defaults/profile/localstore.rdf
+lib/phoenix/defaults/profile/mimeTypes.rdf
+lib/phoenix/defaults/profile/panels.rdf
+lib/phoenix/defaults/profile/search.rdf
+lib/phoenix/defaults/wallet/DistinguishedSchema.tbl
+lib/phoenix/defaults/wallet/FieldSchema.tbl
+lib/phoenix/defaults/wallet/PositionalSchema.tbl
+lib/phoenix/defaults/wallet/SchemaConcat.tbl
+lib/phoenix/defaults/wallet/SchemaStrings.tbl
+lib/phoenix/defaults/wallet/StateSchema.tbl
+lib/phoenix/defaults/wallet/VcardSchema.tbl
+lib/phoenix/icons/mozicon16.xpm
+lib/phoenix/icons/mozicon50.xpm
+lib/phoenix/libgkgfx.so
+lib/phoenix/libgtkembedmoz.so
+lib/phoenix/libgtksuperwin.so
+lib/phoenix/libgtkxtbin.so
+lib/phoenix/libjsj.so
+lib/phoenix/libmozjs.so
+lib/phoenix/libmozz.so
+lib/phoenix/libnspr4.so
+lib/phoenix/libnss3.so
+lib/phoenix/libnssckbi.so
+lib/phoenix/libplc4.so
+lib/phoenix/libplds4.so
+lib/phoenix/libsmime3.so
+lib/phoenix/libsoftokn3.so
+lib/phoenix/libssl3.so
+lib/phoenix/libxlibrgb.so
+lib/phoenix/libxpcom.so
+lib/phoenix/libxpistub.so
+lib/phoenix/mozilla-xremote-client
+lib/phoenix/phoenix
+lib/phoenix/phoenix-bin
+lib/phoenix/plugins/libnullplugin.so
+lib/phoenix/regchrome
+lib/phoenix/regxpcom
+lib/phoenix/res/arrow.gif
+lib/phoenix/res/arrowd.gif
+lib/phoenix/res/broken-image.gif
+lib/phoenix/res/builtin/htmlBindings.xml
+lib/phoenix/res/builtin/platformHTMLBindings.xml
+lib/phoenix/res/charsetData.properties
+lib/phoenix/res/charsetalias.properties
+lib/phoenix/res/cmessage.txt
+lib/phoenix/res/dtd/mathml.dtd
+lib/phoenix/res/dtd/xhtml11.dtd
+lib/phoenix/res/entityTables/html40Latin1.properties
+lib/phoenix/res/entityTables/html40Special.properties
+lib/phoenix/res/entityTables/html40Symbols.properties
+lib/phoenix/res/entityTables/htmlEntityVersions.properties
+lib/phoenix/res/entityTables/mathml20.properties
+lib/phoenix/res/entityTables/transliterate.properties
+lib/phoenix/res/fonts/mathfont.properties
+lib/phoenix/res/fonts/mathfontCMEX10.properties
+lib/phoenix/res/fonts/mathfontCMSY10.properties
+lib/phoenix/res/fonts/mathfontMTExtra.properties
+lib/phoenix/res/fonts/mathfontMath1.properties
+lib/phoenix/res/fonts/mathfontMath2.properties
+lib/phoenix/res/fonts/mathfontMath4.properties
+lib/phoenix/res/fonts/mathfontPUA.properties
+lib/phoenix/res/fonts/mathfontSymbol.properties
+lib/phoenix/res/forms.css
+lib/phoenix/res/gfx/icon_0.gif
+lib/phoenix/res/gfx/icon_1.gif
+lib/phoenix/res/html.css
+lib/phoenix/res/html/gopher-audio.gif
+lib/phoenix/res/html/gopher-binary.gif
+lib/phoenix/res/html/gopher-find.gif
+lib/phoenix/res/html/gopher-image.gif
+lib/phoenix/res/html/gopher-menu.gif
+lib/phoenix/res/html/gopher-movie.gif
+lib/phoenix/res/html/gopher-sound.gif
+lib/phoenix/res/html/gopher-telnet.gif
+lib/phoenix/res/html/gopher-text.gif
+lib/phoenix/res/html/gopher-unknown.gif
+lib/phoenix/res/langGroups.properties
+lib/phoenix/res/language.properties
+lib/phoenix/res/loading-image.gif
+lib/phoenix/res/mathml.css
+lib/phoenix/res/quirk.css
+lib/phoenix/res/rdf/article.gif
+lib/phoenix/res/rdf/document.gif
+lib/phoenix/res/rdf/dom-test-1.xul
+lib/phoenix/res/rdf/dom-test-2.xul
+lib/phoenix/res/rdf/dom-test-3.xul
+lib/phoenix/res/rdf/dom-test-4.css
+lib/phoenix/res/rdf/dom-test-4.xul
+lib/phoenix/res/rdf/dom-test-5.xul
+lib/phoenix/res/rdf/dom-test-6.xul
+lib/phoenix/res/rdf/dom-test-7.xul
+lib/phoenix/res/rdf/dom-test-8.xul
+lib/phoenix/res/rdf/folder-closed.gif
+lib/phoenix/res/rdf/folder-open.gif
+lib/phoenix/res/rdf/ignore-test.xul
+lib/phoenix/res/rdf/loading.gif
+lib/phoenix/res/rdf/xpidl-test-1.xul
+lib/phoenix/res/sample.unixpsfonts.properties
+lib/phoenix/res/ua.css
+lib/phoenix/res/unixcharset.properties
+lib/phoenix/res/viewer.properties
+lib/phoenix/res/viewsource.css
+lib/phoenix/run-mozilla.sh
+lib/phoenix/searchplugins/dmoz.gif
+lib/phoenix/searchplugins/dmoz.src
+lib/phoenix/searchplugins/google.gif
+lib/phoenix/searchplugins/google.src
+lib/phoenix/timebombgen
+lib/phoenix/xpicleanup
+@dirrm lib/phoenix/searchplugins
+@dirrm lib/phoenix/res/rdf
+@dirrm lib/phoenix/res/html
+@dirrm lib/phoenix/res/gfx
+@dirrm lib/phoenix/res/fonts
+@dirrm lib/phoenix/res/entityTables
+@dirrm lib/phoenix/res/dtd
+@dirrm lib/phoenix/res/builtin
+@dirrm lib/phoenix/res
+@dirrm lib/phoenix/plugins
+@dirrm lib/phoenix/icons
+@dirrm lib/phoenix/defaults/wallet
+@dirrm lib/phoenix/defaults/profile/chrome
+@dirrm lib/phoenix/defaults/profile/US/chrome
+@dirrm lib/phoenix/defaults/profile/US
+@dirrm lib/phoenix/defaults/profile
+@dirrm lib/phoenix/defaults/pref
+@dirrm lib/phoenix/defaults/autoconfig
+@dirrm lib/phoenix/defaults
+@dirrm lib/phoenix/components
+@exec ${MKDIR} %D/lib/phoenix/chrome/toolkit/content/global/widgets
+@dirrm lib/phoenix/chrome/toolkit/content/global/widgets
+@exec ${MKDIR} %D/lib/phoenix/chrome/toolkit/content/global/bindings
+@dirrm lib/phoenix/chrome/toolkit/content/global/bindings
+@exec ${MKDIR} %D/lib/phoenix/chrome/toolkit/content/global-region
+@dirrm lib/phoenix/chrome/toolkit/content/global-region
+@exec ${MKDIR} %D/lib/phoenix/chrome/toolkit/content/global-platform
+@dirrm lib/phoenix/chrome/toolkit/content/global-platform
+@dirrm lib/phoenix/chrome/toolkit/content/global
+@dirrm lib/phoenix/chrome/toolkit/content
+@dirrm lib/phoenix/chrome/toolkit
+@exec ${MKDIR} %D/lib/phoenix/chrome/pippki/content/pippki
+@dirrm lib/phoenix/chrome/pippki/content/pippki
+@dirrm lib/phoenix/chrome/pippki/content
+@dirrm lib/phoenix/chrome/pippki
+@exec ${MKDIR} %D/lib/phoenix/chrome/pipnss/content/pipnss
+@dirrm lib/phoenix/chrome/pipnss/content/pipnss
+@dirrm lib/phoenix/chrome/pipnss/content
+@dirrm lib/phoenix/chrome/pipnss
+@dirrm lib/phoenix/chrome/overlayinfo/navigator/content
+@dirrm lib/phoenix/chrome/overlayinfo/navigator
+@dirrm lib/phoenix/chrome/overlayinfo/messenger/content
+@dirrm lib/phoenix/chrome/overlayinfo/messenger
+@dirrm lib/phoenix/chrome/overlayinfo/communicator/content
+@dirrm lib/phoenix/chrome/overlayinfo/communicator
+@dirrm lib/phoenix/chrome/overlayinfo
+@exec ${MKDIR} %D/lib/phoenix/chrome/modern/skin/modern/communicator/help
+@dirrm lib/phoenix/chrome/modern/skin/modern/communicator/help
+@exec ${MKDIR} %D/lib/phoenix/chrome/modern/skin/modern/communicator/cookie
+@dirrm lib/phoenix/chrome/modern/skin/modern/communicator/cookie
+@dirrm lib/phoenix/chrome/modern/skin/modern/communicator
+@dirrm lib/phoenix/chrome/modern/skin/modern
+@dirrm lib/phoenix/chrome/modern/skin
+@dirrm lib/phoenix/chrome/modern
+@exec ${MKDIR} %D/lib/phoenix/chrome/help/content/help
+@dirrm lib/phoenix/chrome/help/content/help
+@dirrm lib/phoenix/chrome/help/content
+@dirrm lib/phoenix/chrome/help
+@exec ${MKDIR} %D/lib/phoenix/chrome/forms/skin/classic/forms
+@dirrm lib/phoenix/chrome/forms/skin/classic/forms
+@dirrm lib/phoenix/chrome/forms/skin/classic
+@dirrm lib/phoenix/chrome/forms/skin
+@exec ${MKDIR} %D/lib/phoenix/chrome/forms/content/forms
+@dirrm lib/phoenix/chrome/forms/content/forms
+@dirrm lib/phoenix/chrome/forms/content
+@dirrm lib/phoenix/chrome/forms
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-win/locale/en-US/navigator-platform
+@dirrm lib/phoenix/chrome/en-win/locale/en-US/navigator-platform
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-win/locale/en-US/global-platform
+@dirrm lib/phoenix/chrome/en-win/locale/en-US/global-platform
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-win/locale/en-US/communicator-platform/pref
+@dirrm lib/phoenix/chrome/en-win/locale/en-US/communicator-platform/pref
+@dirrm lib/phoenix/chrome/en-win/locale/en-US/communicator-platform
+@dirrm lib/phoenix/chrome/en-win/locale/en-US
+@dirrm lib/phoenix/chrome/en-win/locale
+@dirrm lib/phoenix/chrome/en-win
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-unix/locale/en-US/navigator-platform
+@dirrm lib/phoenix/chrome/en-unix/locale/en-US/navigator-platform
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-unix/locale/en-US/global-platform
+@dirrm lib/phoenix/chrome/en-unix/locale/en-US/global-platform
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-unix/locale/en-US/communicator-platform/pref
+@dirrm lib/phoenix/chrome/en-unix/locale/en-US/communicator-platform/pref
+@dirrm lib/phoenix/chrome/en-unix/locale/en-US/communicator-platform
+@dirrm lib/phoenix/chrome/en-unix/locale/en-US
+@dirrm lib/phoenix/chrome/en-unix/locale
+@dirrm lib/phoenix/chrome/en-unix
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-mac/locale/en-US/navigator-platform
+@dirrm lib/phoenix/chrome/en-mac/locale/en-US/navigator-platform
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-mac/locale/en-US/global-platform
+@dirrm lib/phoenix/chrome/en-mac/locale/en-US/global-platform
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-mac/locale/en-US/communicator-platform/pref
+@dirrm lib/phoenix/chrome/en-mac/locale/en-US/communicator-platform/pref
+@dirrm lib/phoenix/chrome/en-mac/locale/en-US/communicator-platform
+@dirrm lib/phoenix/chrome/en-mac/locale/en-US
+@dirrm lib/phoenix/chrome/en-mac/locale
+@dirrm lib/phoenix/chrome/en-mac
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/wallet
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/wallet
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/pippki
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/pippki
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/pipnss
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/pipnss
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/necko
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/necko
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/navigator
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/navigator
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/help/images
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/help/images
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/help
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/global
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/global
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/forms
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/forms
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/cookie
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/cookie
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/communicator/xpinstall
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/communicator/xpinstall
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/communicator/wallet
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/communicator/wallet
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/communicator/timebomb
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/communicator/timebomb
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/communicator/sidebar
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/communicator/sidebar
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/communicator/security
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/communicator/security
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/communicator/search
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/communicator/search
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/communicator/regviewer
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/communicator/regviewer
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/communicator/profile
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/communicator/profile
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/communicator/pref
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/communicator/pref
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/communicator/layout
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/communicator/layout
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/communicator/history
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/communicator/history
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/communicator/dom
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/communicator/dom
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/communicator/directory
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/communicator/directory
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/communicator/bookmarks
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/communicator/bookmarks
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/communicator
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/browser/pref
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/browser/pref
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/browser/history
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/browser/history
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/browser/downloads
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/browser/downloads
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/browser/console
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/browser/console
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/browser/bookmarks
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/browser/bookmarks
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/browser
+@exec ${MKDIR} %D/lib/phoenix/chrome/en-US/locale/en-US/autoconfig
+@dirrm lib/phoenix/chrome/en-US/locale/en-US/autoconfig
+@dirrm lib/phoenix/chrome/en-US/locale/en-US
+@dirrm lib/phoenix/chrome/en-US/locale
+@dirrm lib/phoenix/chrome/en-US
+@exec ${MKDIR} %D/lib/phoenix/chrome/embed-sample/skin/classic/embed
+@dirrm lib/phoenix/chrome/embed-sample/skin/classic/embed
+@dirrm lib/phoenix/chrome/embed-sample/skin/classic
+@dirrm lib/phoenix/chrome/embed-sample/skin
+@exec ${MKDIR} %D/lib/phoenix/chrome/embed-sample/locale/en-US/embed
+@dirrm lib/phoenix/chrome/embed-sample/locale/en-US/embed
+@dirrm lib/phoenix/chrome/embed-sample/locale/en-US
+@dirrm lib/phoenix/chrome/embed-sample/locale
+@exec ${MKDIR} %D/lib/phoenix/chrome/embed-sample/content/embed
+@dirrm lib/phoenix/chrome/embed-sample/content/embed
+@dirrm lib/phoenix/chrome/embed-sample/content
+@dirrm lib/phoenix/chrome/embed-sample
+@exec ${MKDIR} %D/lib/phoenix/chrome/comm/content/xbl-marquee
+@dirrm lib/phoenix/chrome/comm/content/xbl-marquee
+@exec ${MKDIR} %D/lib/phoenix/chrome/comm/content/wallet
+@dirrm lib/phoenix/chrome/comm/content/wallet
+@exec ${MKDIR} %D/lib/phoenix/chrome/comm/content/necko
+@dirrm lib/phoenix/chrome/comm/content/necko
+@exec ${MKDIR} %D/lib/phoenix/chrome/comm/content/navigator-region
+@dirrm lib/phoenix/chrome/comm/content/navigator-region
+@exec ${MKDIR} %D/lib/phoenix/chrome/comm/content/navigator-platform
+@dirrm lib/phoenix/chrome/comm/content/navigator-platform
+@exec ${MKDIR} %D/lib/phoenix/chrome/comm/content/navigator
+@dirrm lib/phoenix/chrome/comm/content/navigator
+@exec ${MKDIR} %D/lib/phoenix/chrome/comm/content/cookie
+@dirrm lib/phoenix/chrome/comm/content/cookie
+@exec ${MKDIR} %D/lib/phoenix/chrome/comm/content/communicator/xpinstall
+@dirrm lib/phoenix/chrome/comm/content/communicator/xpinstall
+@exec ${MKDIR} %D/lib/phoenix/chrome/comm/content/communicator/xml
+@dirrm lib/phoenix/chrome/comm/content/communicator/xml
+@exec ${MKDIR} %D/lib/phoenix/chrome/comm/content/communicator/wallet
+@dirrm lib/phoenix/chrome/comm/content/communicator/wallet
+@exec ${MKDIR} %D/lib/phoenix/chrome/comm/content/communicator/timebomb
+@dirrm lib/phoenix/chrome/comm/content/communicator/timebomb
+@exec ${MKDIR} %D/lib/phoenix/chrome/comm/content/communicator/sidebar
+@dirrm lib/phoenix/chrome/comm/content/communicator/sidebar
+@exec ${MKDIR} %D/lib/phoenix/chrome/comm/content/communicator/search
+@dirrm lib/phoenix/chrome/comm/content/communicator/search
+@exec ${MKDIR} %D/lib/phoenix/chrome/comm/content/communicator/related
+@dirrm lib/phoenix/chrome/comm/content/communicator/related
+@exec ${MKDIR} %D/lib/phoenix/chrome/comm/content/communicator/regviewer
+@dirrm lib/phoenix/chrome/comm/content/communicator/regviewer
+@exec ${MKDIR} %D/lib/phoenix/chrome/comm/content/communicator/profile
+@dirrm lib/phoenix/chrome/comm/content/communicator/profile
+@exec ${MKDIR} %D/lib/phoenix/chrome/comm/content/communicator/pref
+@dirrm lib/phoenix/chrome/comm/content/communicator/pref
+@exec ${MKDIR} %D/lib/phoenix/chrome/comm/content/communicator/history
+@dirrm lib/phoenix/chrome/comm/content/communicator/history
+@exec ${MKDIR} %D/lib/phoenix/chrome/comm/content/communicator/directory
+@dirrm lib/phoenix/chrome/comm/content/communicator/directory
+@exec ${MKDIR} %D/lib/phoenix/chrome/comm/content/communicator/bookmarks
+@dirrm lib/phoenix/chrome/comm/content/communicator/bookmarks
+@exec ${MKDIR} %D/lib/phoenix/chrome/comm/content/communicator/alerts
+@dirrm lib/phoenix/chrome/comm/content/communicator/alerts
+@exec ${MKDIR} %D/lib/phoenix/chrome/comm/content/communicator-region
+@dirrm lib/phoenix/chrome/comm/content/communicator-region
+@exec ${MKDIR} %D/lib/phoenix/chrome/comm/content/communicator-platform
+@dirrm lib/phoenix/chrome/comm/content/communicator-platform
+@dirrm lib/phoenix/chrome/comm/content/communicator
+@exec ${MKDIR} %D/lib/phoenix/chrome/comm/content/autoconfig
+@dirrm lib/phoenix/chrome/comm/content/autoconfig
+@dirrm lib/phoenix/chrome/comm/content
+@dirrm lib/phoenix/chrome/comm
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/navigator/icons
+@dirrm lib/phoenix/chrome/classic/skin/classic/navigator/icons
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/navigator/btn1
+@dirrm lib/phoenix/chrome/classic/skin/classic/navigator/btn1
+@dirrm lib/phoenix/chrome/classic/skin/classic/navigator
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/messenger/smime/icons
+@dirrm lib/phoenix/chrome/classic/skin/classic/messenger/smime/icons
+@dirrm lib/phoenix/chrome/classic/skin/classic/messenger/smime
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/messenger/messengercompose
+@dirrm lib/phoenix/chrome/classic/skin/classic/messenger/messengercompose
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/messenger/icons
+@dirrm lib/phoenix/chrome/classic/skin/classic/messenger/icons
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/messenger/addressbook/icons
+@dirrm lib/phoenix/chrome/classic/skin/classic/messenger/addressbook/icons
+@dirrm lib/phoenix/chrome/classic/skin/classic/messenger/addressbook
+@dirrm lib/phoenix/chrome/classic/skin/classic/messenger
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/global/tree
+@dirrm lib/phoenix/chrome/classic/skin/classic/global/tree
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/global/toolbar
+@dirrm lib/phoenix/chrome/classic/skin/classic/global/toolbar
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/global/splitter
+@dirrm lib/phoenix/chrome/classic/skin/classic/global/splitter
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/global/scrollbar
+@dirrm lib/phoenix/chrome/classic/skin/classic/global/scrollbar
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/global/radio
+@dirrm lib/phoenix/chrome/classic/skin/classic/global/radio
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/global/progressmeter
+@dirrm lib/phoenix/chrome/classic/skin/classic/global/progressmeter
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/global/menu
+@dirrm lib/phoenix/chrome/classic/skin/classic/global/menu
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/global/icons
+@dirrm lib/phoenix/chrome/classic/skin/classic/global/icons
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/global/filepicker
+@dirrm lib/phoenix/chrome/classic/skin/classic/global/filepicker
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/global/console
+@dirrm lib/phoenix/chrome/classic/skin/classic/global/console
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/global/checkbox
+@dirrm lib/phoenix/chrome/classic/skin/classic/global/checkbox
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/global/arrow
+@dirrm lib/phoenix/chrome/classic/skin/classic/global/arrow
+@dirrm lib/phoenix/chrome/classic/skin/classic/global
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/editor/icons
+@dirrm lib/phoenix/chrome/classic/skin/classic/editor/icons
+@dirrm lib/phoenix/chrome/classic/skin/classic/editor
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/communicator/xpinstall
+@dirrm lib/phoenix/chrome/classic/skin/classic/communicator/xpinstall
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/communicator/taskbar
+@dirrm lib/phoenix/chrome/classic/skin/classic/communicator/taskbar
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/communicator/sidebar
+@dirrm lib/phoenix/chrome/classic/skin/classic/communicator/sidebar
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/communicator/search
+@dirrm lib/phoenix/chrome/classic/skin/classic/communicator/search
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/communicator/related
+@dirrm lib/phoenix/chrome/classic/skin/classic/communicator/related
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/communicator/profile
+@dirrm lib/phoenix/chrome/classic/skin/classic/communicator/profile
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/communicator/icons
+@dirrm lib/phoenix/chrome/classic/skin/classic/communicator/icons
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/communicator/directory
+@dirrm lib/phoenix/chrome/classic/skin/classic/communicator/directory
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/communicator/cookie
+@dirrm lib/phoenix/chrome/classic/skin/classic/communicator/cookie
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/communicator/brand
+@dirrm lib/phoenix/chrome/classic/skin/classic/communicator/brand
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/communicator/bookmarks
+@dirrm lib/phoenix/chrome/classic/skin/classic/communicator/bookmarks
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/communicator/alerts
+@dirrm lib/phoenix/chrome/classic/skin/classic/communicator/alerts
+@dirrm lib/phoenix/chrome/classic/skin/classic/communicator
+@exec ${MKDIR} %D/lib/phoenix/chrome/classic/skin/classic/browser/downloads
+@dirrm lib/phoenix/chrome/classic/skin/classic/browser/downloads
+@dirrm lib/phoenix/chrome/classic/skin/classic/browser
+@dirrm lib/phoenix/chrome/classic/skin/classic
+@dirrm lib/phoenix/chrome/classic/skin
+@dirrm lib/phoenix/chrome/classic
+@exec ${MKDIR} %D/lib/phoenix/chrome/browser/content/browser/pref
+@dirrm lib/phoenix/chrome/browser/content/browser/pref
+@exec ${MKDIR} %D/lib/phoenix/chrome/browser/content/browser/history
+@dirrm lib/phoenix/chrome/browser/content/browser/history
+@exec ${MKDIR} %D/lib/phoenix/chrome/browser/content/browser/downloads
+@dirrm lib/phoenix/chrome/browser/content/browser/downloads
+@exec ${MKDIR} %D/lib/phoenix/chrome/browser/content/browser/console
+@dirrm lib/phoenix/chrome/browser/content/browser/console
+@exec ${MKDIR} %D/lib/phoenix/chrome/browser/content/browser/bookmarks
+@dirrm lib/phoenix/chrome/browser/content/browser/bookmarks
+@dirrm lib/phoenix/chrome/browser/content/browser
+@dirrm lib/phoenix/chrome/browser/content
+@dirrm lib/phoenix/chrome/browser
+@exec ${MKDIR} %D/lib/phoenix/chrome/US/locale/US/navigator-region
+@dirrm lib/phoenix/chrome/US/locale/US/navigator-region
+@exec ${MKDIR} %D/lib/phoenix/chrome/US/locale/US/global-region
+@dirrm lib/phoenix/chrome/US/locale/US/global-region
+@exec ${MKDIR} %D/lib/phoenix/chrome/US/locale/US/communicator-region/wallet
+@dirrm lib/phoenix/chrome/US/locale/US/communicator-region/wallet
+@dirrm lib/phoenix/chrome/US/locale/US/communicator-region
+@exec ${MKDIR} %D/lib/phoenix/chrome/US/locale/US/browser-region
+@dirrm lib/phoenix/chrome/US/locale/US/browser-region
+@dirrm lib/phoenix/chrome/US/locale/US
+@dirrm lib/phoenix/chrome/US/locale
+@dirrm lib/phoenix/chrome/US
+@dirrm lib/phoenix/chrome
+@dirrm lib/phoenix
