@@ -10,3 +10,12 @@ fog, Quake III Arena is the final word in deathmatching mayhem.
 
 This is the free demo version - a full version is available from
 Loki Games at http://quake3.lokigames.com/
+
+Note that this requires that you have a A 100% full OpenGL compliant
+3-D video card and driver is required. Quake III Arena uses the OpenGL
+API for 3-D hardware acceleration. There is no software-only version
+of the game. If your computer is not hardware accelerated with a game
+compatible graphics card, you will NOT be able to run the Q3A demo.
+Currently, only drivers for 3dfx based cards are included in the demo
+install. For updates on GL drivers, in particular for the Matrox
+G200/G400, see http://www.lokigames.com/support/gldrivers/.
