@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.47 2001/05/22 10:59:02 wiz Exp $
+$NetBSD: TODO,v 1.48 2001/05/22 11:49:13 agc Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
@@ -83,7 +83,4 @@ pksgrc TODO (Suggested pkgsrc features and enhancements)
 	  modifications for bsd.pkg.mk and will commit them after freeze.  The
 	  remaining and harder part is to make the cross-environment for HP-UX.
 	  [kei]
-
-	o Have 'make extract' note the package version in ${WRKDIR}/.version,
-	  and 'make install' refuse to run if they do not match.
 
