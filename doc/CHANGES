@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6499 2004/07/08 14:46:55 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6500 2004/07/08 16:20:54 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3310,3 +3310,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ekg to 1.5 [adam 2004-07-08]
 	Added et-2.56 [xtraeme 2004-07-08]
 	Added libetpan-0.32 [xtraeme 2004-07-08]
+	Added wimon-0.2 [xtraeme 2004-07-08]

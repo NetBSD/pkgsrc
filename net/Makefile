@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.482 2004/07/08 10:32:45 xtraeme Exp $
+# $NetBSD: Makefile,v 1.483 2004/07/08 16:20:54 xtraeme Exp $
 #
 
 COMMENT=	Networking tools
@@ -371,6 +371,7 @@ SUBDIR+=	wap-utils
 SUBDIR+=	waste
 SUBDIR+=	wget
 SUBDIR+=	whatmask
+SUBDIR+=	wimon
 SUBDIR+=	wistumbler
 SUBDIR+=	wistumbler2
 SUBDIR+=	wminet
