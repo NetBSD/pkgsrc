@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.340 2002/10/22 15:30:13 wiz Exp $
+$NetBSD: CHANGES,v 1.341 2002/10/22 15:34:14 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3362,3 +3362,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated slib to 2.4.4 [wiz 2002-10-22]
 	Updated ipa to 1.2.8 [wiz 2002-10-22]
 	Renamed xlHtml to xlhtml [wiz 2002-10-22]
+	Updated scmxx to 0.6.1.6 [kleink 2002-10-22]
