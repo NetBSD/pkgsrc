@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/01/06 11:23:44 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/02/09 13:37:17 jmmv Exp $
 bin/gst-complete
 bin/gst-complete-0.8
 bin/gst-compprep
@@ -141,7 +141,6 @@ share/doc/gstreamer-0.8/gstreamer-GstCaps.html
 share/doc/gstreamer-0.8/gstreamer-GstCompat.html
 share/doc/gstreamer-0.8/gstreamer-GstData.html
 share/doc/gstreamer-0.8/gstreamer-GstElementDetails.html
-share/doc/gstreamer-0.8/gstreamer-GstEnumTypes.html
 share/doc/gstreamer-0.8/gstreamer-GstEvent.html
 share/doc/gstreamer-0.8/gstreamer-GstFilter.html
 share/doc/gstreamer-0.8/gstreamer-GstFormat.html
@@ -171,10 +170,16 @@ share/doc/gstreamer-0.8/gstreamer-support.html
 share/doc/gstreamer-0.8/gstreamer.html
 share/doc/gstreamer-0.8/index.html
 share/doc/gstreamer-0.8/index.sgml
+share/doc/gstreamer-libs-0.8/GstDParam.html
+share/doc/gstreamer-libs-0.8/GstDParamLinInterp.html
+share/doc/gstreamer-libs-0.8/GstDParamManager.html
+share/doc/gstreamer-libs-0.8/GstDParamSmooth.html
+share/doc/gstreamer-libs-0.8/GstUnitConvert.html
 share/doc/gstreamer-libs-0.8/api-index.html
+share/doc/gstreamer-libs-0.8/gstreamer-control.html
 share/doc/gstreamer-libs-0.8/gstreamer-libs-0.8.devhelp
+share/doc/gstreamer-libs-0.8/gstreamer-libs-GstControl.html
 share/doc/gstreamer-libs-0.8/gstreamer-libs-gstbytestream.html
-share/doc/gstreamer-libs-0.8/gstreamer-libs-gstcontrol.html
 share/doc/gstreamer-libs-0.8/gstreamer-libs-gstdataprotocol.html
 share/doc/gstreamer-libs-0.8/gstreamer-libs-gstgetbits.html
 share/doc/gstreamer-libs-0.8/gstreamer-libs-hierarchy.html
@@ -185,6 +190,7 @@ ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/gstreamer-0.8.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gstreamer-0.8.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gstreamer-0.8.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gstreamer-0.8.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gstreamer-0.8.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gstreamer-0.8.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gstreamer-0.8.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gstreamer-0.8.mo
@@ -195,6 +201,7 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gstreamer-0.8.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gstreamer-0.8.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gstreamer-0.8.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gstreamer-0.8.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gstreamer-0.8.mo
 @dirrm share/doc/gstreamer-libs-0.8
 @exec ${MKDIR} %D/share/doc/${PKGNAME}/pwg
 @dirrm share/doc/${PKGNAME}/pwg
