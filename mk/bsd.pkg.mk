@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.542 2000/08/16 23:15:15 fredb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.543 2000/08/17 01:42:03 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -2889,8 +2889,14 @@ print-PLIST:
 	${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} \! -type d 	\
 	 | ${SED}							\
 		-e  s@${PREFIX}/./@@ 					\
-		-e  s@${LOWER_OPSYS}@\$${LOWER_OPSYS}@ 			\
+		-e  s@${OPSYS}@\$${OPSYS}@ 				\
+		-e  s@${OS_VERSION}@\$${OS_VERSION}@ 			\
 		-e  s@${MACHINE_ARCH}@\$${MACHINE_ARCH}@ 		\
+		-e  s@${MACHINE_GNU_ARCH}@\$${MACHINE_GNU_ARCH}@	\
+		-e  s@${MACHINE_GNU_PLATFORM}@\$${MACHINE_GNU_PLATFORM}@ \
+		-e  s@${LOWER_VENDOR}@\$${LOWER_VENDOR}@ 		\
+		-e  s@${LOWER_OPSYS}@\$${LOWER_OPSYS}@ 			\
+		-e  s@${PKGNAME}@\$${PKGNAME}@ 				\
 		$$RMELFLIBS 						\
 	 | sort								\
 	 | ${AWK} '							\
@@ -2915,8 +2921,14 @@ print-PLIST:
 		${ECHO} @dirrm $$i ;					\
 	done								\
 	| ${SED}							\
-		-e 's@${LOWER_OPSYS}@\$${LOWER_OPSYS}@' 		\
-		-e 's@${MACHINE_ARCH}@\$${MACHINE_ARCH}@'
+		-e  s@${OPSYS}@\$${OPSYS}@ 				\
+		-e  s@${OS_VERSION}@\$${OS_VERSION}@ 			\
+		-e  s@${MACHINE_ARCH}@\$${MACHINE_ARCH}@ 		\
+		-e  s@${MACHINE_GNU_ARCH}@\$${MACHINE_GNU_ARCH}@	\
+		-e  s@${MACHINE_GNU_PLATFORM}@\$${MACHINE_GNU_PLATFORM}@ \
+		-e  s@${LOWER_VENDOR}@\$${LOWER_VENDOR}@ 		\
+		-e  s@${LOWER_OPSYS}@\$${LOWER_OPSYS}@ 			\
+		-e  s@${PKGNAME}@\$${PKGNAME}@ 
 .endif # target(print-PLIST)
 
 
