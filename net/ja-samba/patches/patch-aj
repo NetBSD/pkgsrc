@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1.1.1 2002/06/25 15:31:34 taca Exp $
+
+--- script/convert_smbpasswd.orig	Sun Sep 24 20:02:55 2000
++++ script/convert_smbpasswd
+@@ -7,7 +7,7 @@
+ # with trying to work out how to get the seconds since 1970
+ # in awk or the shell. JRA.
+ #
+-nawk 'BEGIN {FS=":"} 
++awk 'BEGIN {FS=":"} 
+ {
+ 	if( $0 ~ "^#" ) {
+ 		print $0
