@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1 2002/09/09 00:24:12 heinz Exp $
+
+--- lib/Net/DNS/Resolver.pm.orig	Wed Aug 21 02:11:40 2002
++++ lib/Net/DNS/Resolver.pm
+@@ -815,9 +815,10 @@
+ 	my $sel = Net::DNS::Select->new($os, $sock);
+ 
+ 	# Perform each round of retries.
+-	for (my $i = 0;
++	# length of nameserver array _cannot_ be 0, see the check above
++	for (my $i = 0, my $numns = scalar(@ns);
+ 	     $i < $self->{'retry'};
+-	     ++$i, $retrans *= 2, $timeout = int($retrans / ($#ns + 1))) {
++	     ++$i, $retrans *= 2, $timeout = int($retrans / $numns)) {
+ 
+ 		$timeout = 1 if ($timeout < 1);
+ 
