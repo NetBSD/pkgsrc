@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2005/01/19 08:40:10 frueauf Exp $
+# $NetBSD: Makefile,v 1.24 2005/04/04 09:31:46 adam Exp $
+
+.include	"../nessus/Makefile.common"
 
 DISTNAME=	nessus-${VERS}
 MASTER_SITES=	# empty
 DISTFILES=	# empty
-.include	"../nessus/Makefile.common"
 
 COMMENT=	The Nessus Network Security Scanner
 
