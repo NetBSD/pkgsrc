@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.276 2004/01/26 12:46:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.277 2004/01/26 12:53:39 jmmv Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -158,7 +158,6 @@ SUBDIR+=	mpeg2codec
 SUBDIR+=	mpeg_encode
 SUBDIR+=	mpeg_play
 SUBDIR+=	mpgtx
-SUBDIR+=	mplex
 SUBDIR+=	mtv
 SUBDIR+=	ncview
 SUBDIR+=	netpbm
