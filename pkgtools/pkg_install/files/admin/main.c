@@ -1,9 +1,9 @@
-/*	$NetBSD: main.c,v 1.7 2003/03/29 18:41:56 jschauma Exp $	*/
+/*	$NetBSD: main.c,v 1.8 2003/04/17 14:00:55 grant Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.7 2003/03/29 18:41:56 jschauma Exp $");
+__RCSID("$NetBSD: main.c,v 1.8 2003/04/17 14:00:55 grant Exp $");
 #endif
 #endif
 
@@ -473,7 +473,7 @@ main(int argc, char *argv[])
 			/* args specified */
 			int     rc;
 			const char *basep, *dir;
-			char *cwd;
+			char cwd[MAXPATHLEN];
 			char base[FILENAME_MAX];
 
 			dir = dirname_of(*argv);
@@ -485,12 +485,12 @@ main(int argc, char *argv[])
 			if (rc == -1)
 				err(EXIT_FAILURE, "Cannot chdir to %s", _pkgdb_getPKGDB_DIR());
 
-			cwd = getcwd(NULL, 0);
+			if (getcwd(cwd, sizeof(cwd)) == NULL)
+				err(EXIT_FAILURE, "getcwd");
 			if (findmatchingname(cwd, base, lspattern_fn, cwd) == -1)
 				errx(EXIT_FAILURE, "Error in findmatchingname(\"%s\", \"%s\", ...)",
 				     cwd, base);
-			free(cwd);
-			
+
 			argv++;
 		}
 
@@ -511,7 +511,7 @@ main(int argc, char *argv[])
 			/* args specified */
 			int     rc;
 			const char *basep, *dir;
-			char *cwd;
+			char cwd[MAXPATHLEN];
 			char base[FILENAME_MAX];
 			char *p;
 
@@ -524,13 +524,13 @@ main(int argc, char *argv[])
 			if (rc == -1)
 				err(EXIT_FAILURE, "Cannot chdir to %s", _pkgdb_getPKGDB_DIR());
 
-			cwd = getcwd(NULL, 0);
+			if (getcwd(cwd, sizeof(cwd)) == NULL)
+				err(EXIT_FAILURE, "getcwd");
 			p = findbestmatchingname(cwd, base);
 			if (p) {
 				printf("%s/%s\n", cwd, p);
 				free(p);
 			}
-			free(cwd);
 			
 			argv++;
 		}
