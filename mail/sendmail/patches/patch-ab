@@ -1,0 +1,8 @@
+$NetBSD: patch-ab,v 1.7 2000/07/26 09:31:19 itojun Exp $
+*** devtools/OS/NetBSD-	Wed Jul 26 18:20:07 2000
+--- devtools/OS/NetBSD	Wed Jul 26 18:19:29 2000
+***************
+*** 16 ****
+--- 16,17 ----
+  define(`confMAN8EXT', `0')
++ define(`confLDOPTS', `${LDFLAGS}')
