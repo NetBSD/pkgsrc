@@ -1,16 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/04/24 18:08:13 kim Exp $
+$NetBSD: patch-aa,v 1.2 2004/09/24 01:39:30 kim Exp $
 
---- src/definitions.h.orig	2003-06-19 18:17:27.000000000 -0400
-+++ src/definitions.h	2004-04-17 03:04:00.000000000 -0400
-@@ -53,9 +53,11 @@
- # define __USE_POSIX
- #endif
+--- configure.ac.orig	2004-08-28 14:54:44.000000000 -0400
++++ configure.ac	2004-09-23 21:28:38.000000000 -0400
+@@ -367,7 +367,7 @@
+     LDFLAGS="$LDFLAGS -L$with_flac/lib"
+   fi
  
-+#ifndef __NetBSD__
- #ifndef _POSIX_C_SOURCE
- #define _POSIX_C_SOURCE 199506L
- #endif
-+#endif
- 
- /* This for freebsd (needed on 3.2 at least) */
- #ifdef SOMEBSD
+-  AC_CHECK_HEADER(faad.h, have_flac="maybe")
++  AC_CHECK_HEADER(FLAC/stream_decoder.h, have_flac="maybe")
+   if test "$have_flac" != "no"
+   then
+     AC_CHECK_LIB(FLAC, FLAC__stream_decoder_new, [
