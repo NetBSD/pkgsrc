@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2615 2004/12/01 11:24:23 markd Exp $
+$NetBSD: TODO,v 1.2616 2004/12/01 12:35:56 markd Exp $
 
 Suggested new packages
 ======================
@@ -594,7 +594,6 @@ Suggested package updates
 	o iroffer-1.309
 	o irrd-2.2.2
 	o iselect-1.3.0
-	o ispell-base-3.2.06
 	o ispell-gaeilge-3.5
 	o ispman-1.1.1
 	o isync-1.0.0
