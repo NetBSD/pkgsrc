@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.144 2004/10/24 02:52:15 grant Exp $
+# $NetBSD: Makefile,v 1.145 2004/11/25 19:25:28 xtraeme Exp $
 
 DISTNAME=		openssh-3.9p1
 PKGNAME=		openssh-3.9.1
-PKGREVISION=		2
+PKGREVISION=		3
 SVR4_PKGNAME=		ossh
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
@@ -29,9 +29,8 @@ CRYPTO=			yes
 
 # retain the following line, for IPv6-ready pkgsrc webpage
 BUILD_DEFS+=		USE_INET6
-BUILD_DEFS+=		KERBEROS
 
-.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 INSTALL_TARGET=		install-nokeys
 PLIST_SRC=		# empty
@@ -40,7 +39,7 @@ MESSAGE_SRC=		${.CURDIR}/MESSAGE
 PKG_USERS=		${OPENSSH_USER}:${OPENSSH_GROUP}:${OPENSSH_UID}:sshd\\ privsep:${OPENSSH_CHROOT}:${NOLOGIN}
 PKG_GROUPS=             ${OPENSSH_GROUP}:${OPENSSH_GID}
 
-SSH_PID_DIR=		/var/run	# default directory for PID files
+SSH_PID_DIR=		${VARBASE}/run	# default directory for PID files
 
 PKG_SYSCONFSUBDIR=	ssh
 MANDIR=			man
@@ -59,15 +58,6 @@ CONFIGURE_ARGS+=	--with-tcp-wrappers=${BUILDLINK_PREFIX.tcp_wrappers}
 CONFIGURE_ARGS+=	--with-privsep-path=${OPENSSH_CHROOT}
 CONFIGURE_ARGS+=	--with-privsep-user=${OPENSSH_USER}
 
-# XXX: PAM authentication causes memory faults, and haven't tracked down
-# XXX: why yet.  For the moment, disable PAM authentication for non-Linux.
-.if defined(USE_PAM) && ${OPSYS} == "Linux"
-.include "../../security/PAM/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-pam
-PLIST_SRC+=		${.CURDIR}/PLIST.pam
-MESSAGE_SRC+=		${.CURDIR}/MESSAGE.pam
-.endif
-
 # the openssh configure script finds and uses ${LD} if defined and
 # defaults to ${CC} if not. we override LD here, since running the
 # linker directly results in undefined symbols for obvious reasons.
@@ -84,11 +74,6 @@ CONFIGURE_ENV+=		ac_cv_type_struct_timespec=yes
 CONFIGURE_ARGS+=	--with-skey=${BUILDLINK_PREFIX.skey}
 .else
 CONFIGURE_ARGS+=	--without-skey
-.endif
-
-.if defined(KERBEROS)
-.  include "../../mk/krb5.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-kerberos5=${KRB5BASE}
 .endif
 
 .if (${OPSYS} == "NetBSD") && exists(/usr/include/utmpx.h)
@@ -163,7 +148,7 @@ post-install:
 	cd ${WRKSRC}; for file in ${CONFS} ${SUPPS}; do			\
 		${INSTALL_DATA} $${file}.out ${EGDIR}/$${file};		\
 	done
-.if defined(USE_PAM) && ${OPSYS} == "Linux"
+.if !empty(PKG_OPTIONS:MPAM) && ${OPSYS} == "Linux"
 	${INSTALL_DATA} ${WRKSRC}/contrib/sshd.pam.generic ${EGDIR}/sshd.pam
 .endif
 
