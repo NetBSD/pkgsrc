@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2003/01/28 22:03:57 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2003/02/15 02:02:12 salo Exp $
 #
 
-DISTNAME=	freenet6-0.9.6
-PKGNAME=	tspc-0.9.6
+DISTNAME=	freenet6-0.9.7
+PKGNAME=	${DISTNAME:S/freenet6/tspc/}
 CATEGORIES=	net
 MASTER_SITES=	# empty
 EXTRACT_SUFX=	.tgz
@@ -14,7 +14,7 @@ COMMENT=	freenet6 IPv6 tunnel server protocol client
 USE_PKGINSTALL=		yes
 NO_CONFIGURE=		yes
 INTERACTIVE_STAGE=	fetch
-ONLY_FOR_PLATFORM=	NetBSD-*-* Linux-*-* SunOS-5.[8-9]-*
+ONLY_FOR_PLATFORM=	NetBSD-*-* Linux-*-* SunOS-5.[8-9]-* Darwin-*-*
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "SunOS"
@@ -35,33 +35,32 @@ _FETCH_MESSAGE= \
 	${ECHO} "  ${DOWNLOAD}."; \
 	${ECHO} "==============================================================="
 
-TSP_DIR=	${PREFIX}/share/tspc
-CONF_FILES=	${WRKSRC}/bin/tspc.conf ${PREFIX}/etc/tspc.conf
+FILES_SUBST+=	TSP_DIR=${PREFIX}/share/tspc
+EGDIR=		${PREFIX}/share/examples/tspc
+CONF_FILES=	${EGDIR}/tspc.conf.default ${PKG_SYSCONFDIR}/tspc.conf
 
 pre-build:
-.for file in src/Makefile src/tspc.c man/man8/tspc.8
-	${MV} ${WRKSRC}/${file} ${WRKSRC}/${file}.orig
-	${SED} -e 's|@PREFIX@|${PREFIX}|' ${WRKSRC}/${file}.orig > \
-		${WRKSRC}/${file}
-.endfor
-.for file in src/tspc.c src/tspc.conf.in
-	${MV} ${WRKSRC}/${file} ${WRKSRC}/${file}.orig
-	${SED} -e 's|@TSP_DIR@|${TSP_DIR}|' ${WRKSRC}/${file}.orig > \
-		${WRKSRC}/${file}
+.for f in man/man5/tspc.conf.5 man/man8/tspc.8 src/Makefile	\
+	src/tspc.c src/tspc.c src/tspc.conf.in
+	@${MV} ${WRKSRC}/${f} ${WRKSRC}/${f}.orig
+	@${SED} ${FILES_SUBST_SED} ${WRKSRC}/${f}.orig > ${WRKSRC}/${f}
 .endfor
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/tspc ${PREFIX}/sbin
 	${INSTALL_MAN} ${WRKSRC}/man/man5/tspc.conf.5 ${PREFIX}/man/man5
 	${INSTALL_MAN} ${WRKSRC}/man/man8/tspc.8 ${PREFIX}/man/man8
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/tspc
+	${INSTALL_DATA} ${WRKSRC}/bin/tspc.conf ${EGDIR}/tspc.conf.default
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tspc
 	${INSTALL_DATA} ${WRKSRC}/CONTRIB.txt ${PREFIX}/share/doc/tspc
 	${INSTALL_DATA} ${WRKSRC}/LEGAL ${PREFIX}/share/doc/tspc
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/tspc
 	${INSTALL_DATA_DIR} ${PREFIX}/share/tspc
 	${INSTALL_DATA_DIR} ${PREFIX}/share/tspc/template
-.for template in checktunnel.sh cisco.sh freebsd4.sh freebsd44.sh linux.sh netbsd.sh openbsd.sh solaris8.sh
-	${INSTALL_SCRIPT} ${WRKSRC}/template/${template} ${PREFIX}/share/tspc/template
-.endfor
+	cd ${WRKSRC}/template &&					\
+	${INSTALL_SCRIPT} checktunnel.sh cisco.sh darwin.sh freebsd4.sh	\
+		freebsd44.sh linux.sh netbsd.sh openbsd.sh solaris8.sh	\
+		${PREFIX}/share/tspc/template
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/08/22 18:14:51 grant Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/02/15 02:02:13 salo Exp $
 man/man5/tspc.conf.5
 man/man8/tspc.8
 sbin/tspc
+share/examples/tspc/tspc.conf.default
 share/doc/tspc/CONTRIB.txt
 share/doc/tspc/LEGAL
 share/doc/tspc/README
 share/tspc/template/checktunnel.sh
 share/tspc/template/cisco.sh
+share/tspc/template/darwin.sh
 share/tspc/template/freebsd4.sh
 share/tspc/template/freebsd44.sh
 share/tspc/template/linux.sh
@@ -16,3 +18,4 @@ share/tspc/template/solaris8.sh
 @dirrm share/doc/tspc
 @dirrm share/tspc/template
 @dirrm share/tspc
+@dirrm share/examples/tspc
