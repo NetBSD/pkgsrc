@@ -1,0 +1,253 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/01/23 03:56:11 mellon Exp $
+
+diff -rc2 --exclude=Makefile Makefile.in Makefile.in
+*** Makefile.in	Tue Jan  5 23:58:02 1999
+--- Makefile.in	Fri Jan 22 22:01:40 1999
+***************
+*** 34,46 ****
+  #   install      -- installs everything
+  
+! default:
+! 	@echo " "
+! 	@echo "Please choose one of the following targets:"
+! 	@echo "motif           dynamically linked motif version"
+! 	@echo "motif-static    statically linked motif version"
+! 	@echo "gnome           gnome/gtk version"
+! 	@echo "gnome-static    gnome/gtk statically linked version"
+! 	@echo "qt              kde/qt version"
+! 	@echo " "
+  
+  # This inclusion must come after the first target, and after the
+--- 34,38 ----
+  #   install      -- installs everything
+  
+! all:	motif
+  
+  # This inclusion must come after the first target, and after the
+***************
+*** 84,88 ****
+  DIST_TRASH += config.cache config.log config.status config.h
+  
+! tagsfiles := $(shell find -name "*.[ch]")
+  
+  TAGS: ${tagsfiles}
+--- 84,88 ----
+  DIST_TRASH += config.cache config.log config.status config.h
+  
+! tagsfiles := $(shell find . -name "*.[ch]")
+  
+  TAGS: ${tagsfiles}
+***************
+*** 114,123 ****
+      -e ${GNC_BINDIR}/gnucash.qt \
+    ]
+  	$(INSTALL_DATA) src/quotes/gnc-prices ${GNC_LIBDIR}
+  
+! 	@mkdir -p ${GNC_LIBDIR}
+! 	$(INSTALL_DATA) src/swig/perl5/gnucash.pm ${GNC_LIBDIR}
+! 	$(INSTALL_DATA) src/swig/perl5/gnucash.so ${GNC_LIBDIR}
+! 	$(INSTALL_DATA) src/swig/perl5/Quote.pm ${GNC_LIBDIR}
+  
+  	@mkdir -p ${GNC_DOCDIR}
+--- 114,123 ----
+      -e ${GNC_BINDIR}/gnucash.qt \
+    ]
++ 	@mkdir -p ${GNC_LIBDIR}
+  	$(INSTALL_DATA) src/quotes/gnc-prices ${GNC_LIBDIR}
+  
+! #	$(INSTALL_DATA) src/swig/perl5/gnucash.pm ${GNC_LIBDIR}
+! #	$(INSTALL_DATA) src/swig/perl5/gnucash.so ${GNC_LIBDIR}
+! #	$(INSTALL_DATA) src/swig/perl5/Quote.pm ${GNC_LIBDIR}
+  
+  	@mkdir -p ${GNC_DOCDIR}
+diff -rc2 --exclude=Makefile src/engine/Scrub.c src/engine/Scrub.c
+*** src/engine/Scrub.c	Sat Dec 26 22:07:41 1998
+--- src/engine/Scrub.c	Fri Jan 22 12:10:11 1999
+***************
+*** 29,33 ****
+--- 29,35 ----
+  \********************************************************************/
+  
++ #if 0
+  #include <nana.h>
++ #endif
+  #include <stdio.h>
+  #include <stdlib.h>
+diff -rc2 --exclude=Makefile src/engine/Session.c src/engine/Session.c
+*** src/engine/Session.c	Mon Jan  4 02:31:09 1999
+--- src/engine/Session.c	Fri Jan 22 12:13:16 1999
+***************
+*** 30,34 ****
+--- 30,36 ----
+  #include <fcntl.h>
+  #include <limits.h>
++ #if 0
+  #include <nana.h>
++ #endif
+  #include <stdlib.h>
+  #include <string.h>
+***************
+*** 98,102 ****
+     int retval;
+  
+!    if (!sess) return EBADSLT;
+     retval = sess->errtype;
+     sess->errtype = 0;
+--- 100,104 ----
+     int retval;
+  
+!    if (!sess) return ENOENT;
+     retval = sess->errtype;
+     sess->errtype = 0;
+diff -rc2 --exclude=Makefile src/engine/util.h src/engine/util.h
+*** src/engine/util.h	Mon Dec 14 03:31:25 1998
+--- src/engine/util.h	Fri Jan 22 13:05:55 1999
+***************
+*** 35,38 ****
+--- 35,39 ----
+  /* The debuging macros enable the setting of trace messages */
+  #include <stdio.h>
++ #if 0
+  #include <nana.h>
+  
+***************
+*** 43,56 ****
+  #define assert I
+  
+- #define MOD_ENGINE     1
+- #define MOD_IO         2
+- #define MOD_REGISTER   3
+- #define MOD_LEDGER     4
+- #define MOD_GUI        5
+- #define MOD_SCRUB      6
+- #define MODULE_MAX     7
+- 
+- extern int loglevel[MODULE_MAX];
+- 
+  #define LERR    (1 <= loglevel[module])
+  #define LWARN   (2 <= loglevel[module])
+--- 44,47 ----
+***************
+*** 70,73 ****
+--- 61,85 ----
+  
+  #define DEBUGCMD(x) { if (LINFO) { x; }}
++ #else
++ #define assert(x)
++ #define PERR(x...)
++ #define PWARN(x...)
++ #define PINFO(x...)
++ #define DEBUG(x...)
++ #define ENTER(x...)
++ #define LEAVE(x...)
++ #define DETAIL(x...)
++ #define DEBUGCMD(x)
++ #endif
++ 
++ #define MOD_ENGINE     1
++ #define MOD_IO         2
++ #define MOD_REGISTER   3
++ #define MOD_LEDGER     4
++ #define MOD_GUI        5
++ #define MOD_SCRUB      6
++ #define MODULE_MAX     7
++ 
++ extern int loglevel[MODULE_MAX];
+  
+  #include <errno.h>
+diff -rc2 --exclude=Makefile src/gnome/Makefile.in src/gnome/Makefile.in
+*** src/gnome/Makefile.in	Tue Dec 22 00:43:31 1998
+--- src/gnome/Makefile.in	Fri Jan 22 12:28:31 1999
+***************
+*** 43,47 ****
+             $(shell @GNOME_CONFIG_BIN@ --libs gtk) @X_EXTRA_LIBS@ -lgnomeui \
+  	   $(shell @GNOME_CONFIG_BIN@ --libs gnome gnomeui ) \
+! 	   $(GUILELIBS) -lnana @LIBS@ # -lintl
+  
+  GNOMELIBS = @GNOMELIBS@
+--- 43,47 ----
+             $(shell @GNOME_CONFIG_BIN@ --libs gtk) @X_EXTRA_LIBS@ -lgnomeui \
+  	   $(shell @GNOME_CONFIG_BIN@ --libs gnome gnomeui ) \
+! 	   $(GUILELIBS) @LIBS@ # -lintl
+  
+  GNOMELIBS = @GNOMELIBS@
+diff -rc2 --exclude=Makefile src/motif/FileBox.c src/motif/FileBox.c
+*** src/motif/FileBox.c	Tue Dec 29 03:37:39 1998
+--- src/motif/FileBox.c	Fri Jan 22 13:14:16 1999
+***************
+*** 155,159 ****
+      previous_path = strdup (fileName);
+      slash = strrchr (previous_path, '/');
+!     *(slash+1) = 0x0;
+    }
+  
+--- 155,162 ----
+      previous_path = strdup (fileName);
+      slash = strrchr (previous_path, '/');
+!     if (slash)
+!       *(slash+1) = 0x0;
+!     else
+!       *previous_path = 0x0;
+    }
+  
+diff -rc2 --exclude=Makefile src/motif/Makefile.in src/motif/Makefile.in
+*** src/motif/Makefile.in	Sun Jan  3 01:51:20 1999
+--- src/motif/Makefile.in	Fri Jan 22 12:28:38 1999
+***************
+*** 41,45 ****
+  LIBS     = -L$(prefix)/lib \
+             @X_PRE_LIBS@ @MOTIF_LIBS@ @X_EXTRA_LIBS@ @X_LIBS@ \
+!            $(GUILELIBS) @LIBS@  -lnana
+  
+  # Have to use wildcard here otherwise filters below won't get the expanded
+--- 41,45 ----
+  LIBS     = -L$(prefix)/lib \
+             @X_PRE_LIBS@ @MOTIF_LIBS@ @X_EXTRA_LIBS@ @X_LIBS@ \
+!            $(GUILELIBS) @LIBS@
+  
+  # Have to use wildcard here otherwise filters below won't get the expanded
+diff -rc2 --exclude=Makefile src/swig/Makefile.in src/swig/Makefile.in
+*** src/swig/Makefile.in	Sun Jan  3 03:22:06 1999
+--- src/swig/Makefile.in	Fri Jan 22 22:02:13 1999
+***************
+*** 23,27 ****
+  # See Makefile.common for information about these variables.
+  INDEP_SRCS := helperfuncs.c
+! CLEAN_SUBDIRS := guile perl5
+  ######################################################################
+  
+--- 23,27 ----
+  # See Makefile.common for information about these variables.
+  INDEP_SRCS := helperfuncs.c
+! CLEAN_SUBDIRS := guile # perl5
+  ######################################################################
+  
+***************
+*** 32,36 ****
+  include @top_srcdir@/Makefile.common
+  
+! default: guile perl5
+  
+  ifeq (${HAVE_PLOTUTILS},1)
+--- 32,36 ----
+  include @top_srcdir@/Makefile.common
+  
+! default: guile # perl5
+  
+  ifeq (${HAVE_PLOTUTILS},1)
+diff -rc2 --exclude=Makefile src/swig/perl5/Makefile.in src/swig/perl5/Makefile.in
+*** src/swig/perl5/Makefile.in	Sun Jan  3 15:57:48 1999
+--- src/swig/perl5/Makefile.in	Fri Jan 22 12:49:10 1999
+***************
+*** 51,55 ****
+  
+  gnucash.so: ${OBJS} ../../engine/libengine.a
+! 	gcc -shared ${OBJS} ../../engine/libengine.a -lnana -o gnucash.so
+  
+  SWIG_FILTER    := %P.h %/util.h
+--- 51,55 ----
+  
+  gnucash.so: ${OBJS} ../../engine/libengine.a
+! 	gcc -shared ${OBJS} ../../engine/libengine.a -o gnucash.so
+  
+  SWIG_FILTER    := %P.h %/util.h
