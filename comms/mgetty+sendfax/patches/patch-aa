@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/11/15 20:45:30 tron Exp $
+
 --- fax/faxspool.in.orig	Fri Aug  8 21:43:55 1997
 +++ fax/faxspool.in	Mon Dec 29 22:31:59 1997
 @@ -299,11 +299,11 @@
