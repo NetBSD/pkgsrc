@@ -1,0 +1,21 @@
+$NetBSD: patch-ax,v 1.2.2.2 2003/12/07 16:36:49 agc Exp $
+
+Correct syntax error in configure.
+
+--- src/fortran/configure.orig	Wed Nov 26 23:05:27 2003
++++ src/fortran/configure	Wed Nov 26 23:06:09 2003
+@@ -4601,12 +4601,12 @@
+     ac_fcompileforlib='${F77-f77} -c $FFLAGS conftest1.f 1>&5'
+     if { (eval echo configure:4603: \"$ac_fcompileforlib\") 1>&5; (eval $ac_fcompileforlib) 2>&5; } && test -s conftest1.o ; then
+         if test ! -d conftest ; then mkdir conftest2 ; fi
+-	        { ac_try='${ARCMD-"ar"} cr conftest2/libconftest.a conftest1.o'; { (eval echo configure:4605: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }; }
++	        { ac_try='${ARCMD-ar} cr conftest2/libconftest.a conftest1.o'; { (eval echo configure:4605: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }; }
+         { ac_try='${RANLIB-ranlib} conftest2/libconftest.a'; { (eval echo configure:4606: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }; }
+         ac_fcompileldtest='${F77-f77} -o conftest $FFLAGS ${ldir}conftest2 conftest.f -lconftest $LDFLAGS 1>&5'
+         for ldir in "-L" "-Wl,-L," ; do
+             if { (eval echo configure:4609: \"$ac_fcompileldtest\") 1>&5; (eval $ac_fcompileldtest) 2>&5; } && test -s conftest ; then
+-	        pac_cv_prog_f77_library_dir_flag="$ldir"
++	        pac_cv_prog_f77_library_dir_flag="${ldir}"
+ 	        break
+             fi
+         done
