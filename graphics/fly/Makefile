@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/03/17 23:36:09 tron Exp $
+# $NetBSD: Makefile,v 1.11 2000/07/18 15:20:59 agc Exp $
 #
 
 DISTNAME=	fly-1.6.5
@@ -11,8 +11,9 @@ HOMEPAGE=	http://www.unimelb.edu.au/fly/fly.html
 BUILD_DEPENDS+=	${LOCALBASE}/bin/gif2png:../../graphics/gif2png
 DEPENDS+=	gd>=1.8.1:../../graphics/gd
 
-USE_X11=	yes						# -lXpm
-CPPFLAGS+=	-I${X11BASE}/include -I${X11BASE}/include/X11	# Xpm.h
+EVAL_PREFIX+=	XPMDIR=xpm
+USE_X11=	yes						# (perhaps) -lXpm
+CPPFLAGS+=	-I${XPMDIR}/include -I${XPMDIR}/include/X11	# Xpm.h
 CPPFLAGS+=	-I${LOCALBASE}/include				# gd.h
 MAKE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 
