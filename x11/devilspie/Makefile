@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/27 19:53:11 snj Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/07 05:51:43 snj Exp $
 
 DISTNAME=		devilspie-0.3.1
 CATEGORIES=		x11
@@ -9,7 +9,7 @@ HOMEPAGE=		http://www.burtonini.com/blog/computers/devilspie/
 COMMENT=		Window-matching utility to customize window behavior
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 
@@ -20,7 +20,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/sample-config.xml \
 		${PREFIX}/share/examples/devilspie/
 
-.include "../../devel/libglade2/buildlink2.mk"
-.include "../../devel/libwnck/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libwnck/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
