@@ -1,32 +1,13 @@
-$NetBSD: patch-ad,v 1.3 2004/07/10 16:11:59 minskim Exp $
+$NetBSD: patch-ad,v 1.4 2004/07/10 16:33:01 minskim Exp $
 
 --- ../../work/tracker/Arch/PCux/audio.c.orig	2004-07-10 11:05:07.000000000 -0500
 +++ ../../work/tracker/Arch/PCux/audio.c
-@@ -28,10 +28,18 @@ struct options_set *port_options=0;
- #include "/usr/src/linux/drivers/sound/soundcard.h"
- #else
- #ifndef __FreeBSD__
-+#ifdef __NetBSD__
-+#include <sys/ioctl.h>
-+#include <soundcard.h>
-+#define DEV "/dev/audio"
-+#else
- /*	This should be sys/soundcard.h	*/
- #include <sys/soundcard.h>
-+#define DEV "/dev/dsp"
-+#endif
- #else
- #include <machine/soundcard.h>
-+#define DEV "/dev/dsp"
- #endif
- #endif
- 
 @@ -53,7 +61,7 @@ unsigned long open_audio(unsigned long f
  	int buf_max;
  	unsigned long possible, current;
  
 -   audio = open("/dev/dsp", O_WRONLY, 0);
-+   audio = open(DEV, O_WRONLY, 0);
++   audio = open(DEVOSSAUDIO, O_WRONLY, 0);
     if (audio == -1)
  		end_all("Error opening audio device");
  
