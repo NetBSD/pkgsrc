@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/08/23 16:27:48 tron Exp $
+# $NetBSD: Makefile,v 1.16 2000/02/01 09:44:29 tron Exp $
 
 DISTNAME=	tkirc1.202
 PKGNAME=	tkirc-1.202
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.informatik.uni-oldenburg.de/pub/tkirc/
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.north.de/~atte/tkirc/
 
-DEPENDS+=	ircII-4.4L:../../net/ircII
+DEPENDS+=	ircII-*:../../net/ircII
 DEPENDS+=	tk-8.0.5:../../x11/tk80
 
 USE_X11=	yes
