@@ -1,0 +1,23 @@
+$NetBSD: patch-ae,v 1.3 2005/01/06 14:40:45 drochner Exp $
+
+--- cpudetect.c.orig	2005-01-06 13:37:02.000000000 +0100
++++ cpudetect.c
+@@ -330,6 +330,10 @@ static void check_os_katmai_support( voi
+ 
+ #elif defined(__NetBSD__) || defined (__OpenBSD__)
+ #if __NetBSD_Version__ >= 105250000 || (defined __OpenBSD__)
++#ifdef __x86_64__
++   gCpuCaps.hasSSE=1;
++   gCpuCaps.hasSSE2=1;
++#else
+    int has_sse, has_sse2, ret, mib[2];
+    size_t varlen;
+ 
+@@ -358,6 +362,7 @@ static void check_os_katmai_support( voi
+       gCpuCaps.hasSSE2=1;
+       mp_msg(MSGT_CPUDETECT,MSGL_V, "yes!\n" );
+    }
++#endif /* x86_64 */
+ #else
+    gCpuCaps.hasSSE = 0;
+    mp_msg(MSGT_CPUDETECT,MSGL_WARN, "No OS support for SSE, disabling to be safe.\n" );
