@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2000/06/01 11:23:48 rh Exp $
+# $NetBSD: Makefile,v 1.27 2000/08/01 18:03:36 tron Exp $
 #
 
 DISTNAME=       bxform-088
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ncmir.ucsd.edu/pub/xforms/${ARCH_SUBDIR}/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://world.std.com/~xforms
+HOMEPAGE=	http://world.std.com/~xforms/
 
 .if (${MACHINE_ARCH} == "arm32")
 ARCH_SUBDIR=    netBSD-arm
