@@ -1,19 +1,20 @@
---- magick/magick.h.orig	Wed Feb  4 19:18:20 1998
-+++ magick/magick.h	Thu Feb  5 23:02:25 1998
-@@ -14,6 +14,7 @@
+--- magick/magick.h.orig	Mon Feb  9 01:56:04 1998
++++ magick/magick.h	Mon Feb  9 22:56:49 1998
+@@ -4,6 +4,8 @@
+ #ifndef _MAGICK_H
+ #define _MAGICK_H
  
- #include <stdio.h>
- #include <stdlib.h>
 +#include <paths.h>
- #if defined(_VISUALC_)
- #include <direct.h>
- #else
-@@ -119,7 +120,7 @@
- #define PICTCommand  "|picttoppm %s"
- #define PostscriptMonoDevice  "pbmraw"
- #define ReadBinaryType  "rb"
++
+ #if defined(__cplusplus) || defined(c_plusplus)
+ extern "C" {
+ #endif
+@@ -145,7 +147,7 @@
+ #endif
+ #define ShowImageCommand \
+   "display %s -immutable -window_group 0x%lx -title \"%s of %s\" tmp:%s &"
 -#define TemporaryDirectory  "/usr/tmp"
-+#define TemporaryDirectory  _PATH_VARTMP
- #define UncompressCommand  "|uncompress -c %s"
- #define UndoCache  "16"
- #define WriteBinaryType  "wb"
++#define TemporaryDirectory _PATH_VARTMP
+ #else
+ #if defined(vms)
+ #define ApplicationDefaults  "decw$system_defaults:"
