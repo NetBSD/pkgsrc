@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2003/10/04 20:16:03 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/11/11 10:30:41 kleink Exp $
 bin/karbon
 bin/kchart
 bin/kformula
@@ -3198,6 +3198,7 @@ share/kde/templates/Illustration.desktop
 share/kde/templates/Presentation.desktop
 share/kde/templates/SpreadSheet.desktop
 share/kde/templates/TextDocument.desktop
+@dirrm include/kword
 @dirrm share/kde/icons/locolor/22x22/apps
 @dirrm share/kde/apps/xsltfilter/export/kword/xslfo
 @dirrm share/kde/apps/xsltfilter/export/kword
