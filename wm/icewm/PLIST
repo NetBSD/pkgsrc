@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2003/12/28 16:10:04 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.12 2004/06/26 23:56:21 xtraeme Exp $
 bin/icehelp
 bin/icesh
 bin/icewm
@@ -6,32 +6,32 @@ bin/icewm-session
 bin/icewmbg
 bin/icewmhint
 bin/icewmtray
-share/doc/html/icewm/icewm-1.html
-share/doc/html/icewm/icewm-10.html
-share/doc/html/icewm/icewm-11.html
-share/doc/html/icewm/icewm-12.html
-share/doc/html/icewm/icewm-13.html
-share/doc/html/icewm/icewm-14.html
-share/doc/html/icewm/icewm-15.html
-share/doc/html/icewm/icewm-16.html
-share/doc/html/icewm/icewm-17.html
-share/doc/html/icewm/icewm-18.html
-share/doc/html/icewm/icewm-19.html
-share/doc/html/icewm/icewm-2.html
-share/doc/html/icewm/icewm-3.html
-share/doc/html/icewm/icewm-4.html
-share/doc/html/icewm/icewm-5.html
-share/doc/html/icewm/icewm-6.html
-share/doc/html/icewm/icewm-7.html
-share/doc/html/icewm/icewm-8.html
-share/doc/html/icewm/icewm-9.html
-share/doc/html/icewm/icewm.html
 share/doc/icewm/BUGS
 share/doc/icewm/CHANGES
 share/doc/icewm/COPYING
 share/doc/icewm/README
 share/doc/icewm/README.wm-session
 share/doc/icewm/TODO
+share/doc/icewm/html/icewm-1.html
+share/doc/icewm/html/icewm-10.html
+share/doc/icewm/html/icewm-11.html
+share/doc/icewm/html/icewm-12.html
+share/doc/icewm/html/icewm-13.html
+share/doc/icewm/html/icewm-14.html
+share/doc/icewm/html/icewm-15.html
+share/doc/icewm/html/icewm-16.html
+share/doc/icewm/html/icewm-17.html
+share/doc/icewm/html/icewm-18.html
+share/doc/icewm/html/icewm-19.html
+share/doc/icewm/html/icewm-2.html
+share/doc/icewm/html/icewm-3.html
+share/doc/icewm/html/icewm-4.html
+share/doc/icewm/html/icewm-5.html
+share/doc/icewm/html/icewm-6.html
+share/doc/icewm/html/icewm-7.html
+share/doc/icewm/html/icewm-8.html
+share/doc/icewm/html/icewm-9.html
+share/doc/icewm/html/icewm.html
 share/icewm/icons/app_16x16.xpm
 share/icewm/icons/app_32x32.xpm
 share/icewm/icons/bomb_16x16.xpm
@@ -107,6 +107,7 @@ share/icewm/menu
 share/icewm/preferences
 share/icewm/taskbar/bsd-daemon.xpm
 share/icewm/taskbar/debian.xpm
+share/icewm/taskbar/desktop.xpm
 share/icewm/taskbar/icewm.xpm
 share/icewm/taskbar/linux.xpm
 share/icewm/taskbar/linux1.xpm
@@ -188,15 +189,20 @@ share/icewm/themes/gtk2/restoreA.xpm
 share/icewm/themes/gtk2/restoreI.xpm
 share/icewm/themes/icedesert/closeA.xpm
 share/icewm/themes/icedesert/closeI.xpm
+share/icewm/themes/icedesert/closeO.xpm
 share/icewm/themes/icedesert/default.theme
 share/icewm/themes/icedesert/maximizeA.xpm
 share/icewm/themes/icedesert/maximizeI.xpm
+share/icewm/themes/icedesert/maximizeO.xpm
 share/icewm/themes/icedesert/menuButtonA.xpm
 share/icewm/themes/icedesert/menuButtonI.xpm
+share/icewm/themes/icedesert/menuButtonO.xpm
 share/icewm/themes/icedesert/minimizeA.xpm
 share/icewm/themes/icedesert/minimizeI.xpm
+share/icewm/themes/icedesert/minimizeO.xpm
 share/icewm/themes/icedesert/restoreA.xpm
 share/icewm/themes/icedesert/restoreI.xpm
+share/icewm/themes/icedesert/restoreO.xpm
 share/icewm/themes/icedesert/titleAB.xpm
 share/icewm/themes/icedesert/titleAT.xpm
 share/icewm/themes/icedesert/titleIB.xpm
@@ -315,6 +321,12 @@ share/icewm/themes/win95/default.theme
 share/icewm/themes/win95/maximize.xpm
 share/icewm/themes/win95/minimize.xpm
 share/icewm/themes/win95/restore.xpm
+share/icewm/themes/yellowmotif/close.xpm
+share/icewm/themes/yellowmotif/default.theme
+share/icewm/themes/yellowmotif/maximize.xpm
+share/icewm/themes/yellowmotif/menu.xpm
+share/icewm/themes/yellowmotif/minimize.xpm
+share/icewm/themes/yellowmotif/restore.xpm
 share/icewm/toolbar
 share/icewm/winoptions
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/icewm.mo
@@ -322,6 +334,7 @@ ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/en/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/icewm.mo
@@ -340,9 +353,11 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/icewm.mo
+@dirrm share/icewm/themes/yellowmotif
 @dirrm share/icewm/themes/win95
 @dirrm share/icewm/themes/warp4
 @dirrm share/icewm/themes/warp3
@@ -363,5 +378,5 @@ ${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/icewm.mo
 @dirrm share/icewm/ledclock
 @dirrm share/icewm/icons
 @dirrm share/icewm
+@dirrm share/doc/icewm/html
 @dirrm share/doc/icewm
-@dirrm share/doc/html/icewm
