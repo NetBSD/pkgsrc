@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.13 2000/01/02 01:03:53 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2000/02/05 17:27:20 wiz Exp $
 #
 
-DISTNAME=	wmakerconf-2.4
+DISTNAME=	wmakerconf-2.5
 CATEGORIES=	x11
 MASTER_SITES=	http://ulli.linuxbox.com/wmakerconf/
 EXTRACT_SUFX=	.tar.bz2
 
-PATCHFILES=	wmakerconf-2.4.patch
-PATCH_SITES=	${MASTER_SITES}
-PATCH_DIST_STRIP=	-p1
+PATCHFILES=    wmakerconf.patch
+PATCH_SITES=   ${MASTER_SITES}
+PATCH_DIST_STRIP=      -p1
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://ulli.linuxbox.com/wmakerconf/
 
 DEPENDS+=	imlib-*:../../graphics/imlib
