@@ -3,7 +3,7 @@
 # Date created:		30 Jul 1996
 # Whom:			searle@longacre.demon.co.uk
 #
-# $NetBSD: Makefile,v 1.1.1.1 1997/12/03 10:25:34 drochner Exp $
+# $NetBSD: Makefile,v 1.2 1997/12/03 16:49:02 drochner Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/10/30 05:15:19 jkh Exp
 #
 
@@ -13,8 +13,7 @@ MASTER_SITES=	ftp://ftp.troll.no/qt/source/
 
 MAINTAINER=	searle@longacre.demon.co.uk
 
-USE_GMAKE=	yes
-USE_X11=	yes
+QTDIR=	${PREFIX}
 
 MAN1=		moc.1
 MAN3=		qaccel.3qt qapplication.3qt qarray.3qt qbitarray.3qt \
@@ -98,18 +97,18 @@ MAN3=		qaccel.3qt qapplication.3qt qarray.3qt qbitarray.3qt \
 		QTSManip.3qt QWidget.3qt QWindow.3qt QWMatrix.3qt
 
 post-configure:
-	cd ${WRKSRC} && make freebsd-gcc-shared
+	cd ${WRKSRC} && make netbsd-gcc-shared
 
 do-install:
-	${INSTALL_PROGRAM} $(WRKDIR)/qt-1.31/bin/moc $(X11BASE)/bin
-	${INSTALL_DATA} $(WRKDIR)/qt-1.31/lib/libqt.so.1.31 $(X11BASE)/lib
-	${LDCONFIG} -m $(PREFIX)/lib
-	${MKDIR} $(PREFIX)/include/X11/qt
-	${INSTALL_DATA} $(WRKDIR)/qt-1.31/include/* $(PREFIX)/include/X11/qt
-	${INSTALL_MAN} $(WRKDIR)/qt-1.31/man/man1/* $(PREFIX)/man/man1
-	${INSTALL_MAN} $(WRKDIR)/qt-1.31/man/man3/* $(PREFIX)/man/man3
-	${MKDIR} ${PREFIX}/share/doc/qt
-	${INSTALL_DATA} ${WRKDIR}/qt-1.31/README ${PREFIX}/share/doc/qt
-	${INSTALL_DATA} ${WRKDIR}/qt-1.31/README.QT ${PREFIX}/share/doc/qt
+	${INSTALL_PROGRAM} $(WRKDIR)/qt-1.31/bin/moc $(QTDIR)/bin
+	${INSTALL_DATA} $(WRKDIR)/qt-1.31/lib/libqt.so.1.31 $(QTDIR)/lib
+	${LDCONFIG} -m $(QTDIR)/lib
+	${MKDIR} $(QTDIR)/include/qt
+	${INSTALL_DATA} $(WRKDIR)/qt-1.31/include/* $(QTDIR)/include/qt
+	${INSTALL_MAN} $(WRKDIR)/qt-1.31/man/man1/* $(QTDIR)/man/man1
+	${INSTALL_MAN} $(WRKDIR)/qt-1.31/man/man3/* $(QTDIR)/man/man3
+	${MKDIR} ${QTDIR}/share/doc/qt
+	${INSTALL_DATA} ${WRKDIR}/qt-1.31/README ${QTDIR}/share/doc/qt
+	${INSTALL_DATA} ${WRKDIR}/qt-1.31/README.QT ${QTDIR}/share/doc/qt
 
 .include <bsd.port.mk>
