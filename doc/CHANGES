@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3912 2003/12/03 05:35:51 martti Exp $
+$NetBSD: CHANGES,v 1.3913 2003/12/03 05:40:16 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4755,3 +4755,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xfce4-utils to 4.0.1 [martti 2003-12-03]
 	Updated xfce4-wm to 4.0.1 [martti 2003-12-03]
 	Updated xfce4 to 4.0.1 [martti 2003-12-03]
+	Updated doxygen to 1.3.5 [martti 2003-12-03]
