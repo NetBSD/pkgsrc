@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/31 13:00:24 seb Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/21 17:01:15 martti Exp $
 # FreeBSD Id: Makefile,v 1.13 1998/07/17 20:36:13 steve Exp
 #
 
@@ -13,7 +13,7 @@ PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	komine@cc.meisei-u.ac.jp
 HOMEPAGE=	http://www.io.com/~kazushi/less/
-COMMENT=	less + zcat + ISO-2022 - a pager similar to more and pg
+COMMENT=	Less + zcat + ISO-2022 - a pager similar to more and pg
 
 GNU_CONFIGURE=	yes
 
