@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/09/16 21:00:56 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2002/09/19 09:04:16 jlam Exp $
 
 DISTNAME=	openslp-1.0.9a
 CATEGORIES=	net
@@ -30,17 +30,7 @@ RCD_SCRIPTS=		slpd
 post-extract:
 	${FIND} ${WRKSRC} -name "CVS" -print | ${XARGS} ${RM} -rf
 
-pre-install:
-	@for script in ${RCD_SCRIPTS}; do				\
-		${SED} ${FILES_SUBST_SED} ${FILESDIR}/$${script}.sh	\
-			> ${WRKDIR}/$${script};				\
-	done
-
 post-install:
-	for script in ${RCD_SCRIPTS}; do				\
-		${INSTALL_SCRIPT} ${WRKDIR}/$${script}			\
-			${PREFIX}/etc/rc.d/$${script};			\
-	done
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA_DIR} ${HTMLDIR}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2002/09/18 22:58:46 jlam Exp $
+# $NetBSD: Makefile,v 1.52 2002/09/19 09:04:20 jlam Exp $
 
 DISTNAME=		cups-${DIST_VERS}-source
 PKGNAME=		cups-${VERS}
@@ -90,10 +90,8 @@ OWN_DIRS_PERMS+=	${CUPS_REQUESTS}/tmp ${CUPS_USER} ${CUPS_GROUP} 1700
 
 pre-install:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/cups.pam > ${WRKDIR}/cups.pam
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/cupsd.sh > ${WRKDIR}/cupsd.sh
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/cupsd.sh ${PREFIX}/etc/rc.d/cupsd
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	for file in ENCRYPTION.txt LICENSE.txt README.txt; do		\
 		${INSTALL_DATA} ${WRKSRC}/$${file} ${DOCDIR}/$${file};	\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/09/18 21:15:16 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2002/09/19 09:04:18 jlam Exp $
 
 DISTNAME=		samba-2.0.10
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
@@ -66,12 +66,6 @@ RCD_SCRIPTS=		samba nmbd smbd
 MAKE_DIRS=		${SAMBA_LOCKDIR}
 OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_PRIVATE}
 
-pre-install:
-	for script in ${RCD_SCRIPTS}; do				\
-		${SED} ${FILES_SUBST_SED} ${FILESDIR}/$${script}.sh	\
-			> ${WRKDIR}/$${script};				\
-	done
-
 post-install:
 	# Install Samba documentation.
 	${INSTALL_DATA_DIR} ${DOCDIR} ${HTMLDIR}
@@ -85,10 +79,6 @@ post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${EXAMPLESDIR}
 	${CHMOD} -R ugo-w ${EXAMPLESDIR}
 
-	for script in ${RCD_SCRIPTS}; do				\
-		${INSTALL_SCRIPT} ${WRKDIR}/$${script}			\
-			${PREFIX}/etc/rc.d/$${script};			\
-	done
 	${MV} ${PREFIX}/bin/convert_smbpasswd ${PREFIX}/sbin/convert_smbpasswd
 	${INSTALL_SCRIPT} ${WRKSRC}/script/mksmbpasswd.sh		\
 		${PREFIX}/sbin/mksmbpasswd

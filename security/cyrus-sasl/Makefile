@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2002/09/18 21:15:16 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2002/09/19 09:04:21 jlam Exp $
 
 DISTNAME=		cyrus-sasl-1.5.27
 SVR4_PKGNAME=		csasl
@@ -80,17 +80,7 @@ post-extract:
 	cd ${WRKSRC}; ${RM} -f include/md5.h
 	${CP} ${FILESDIR}/sasl-config.in ${WRKSRC}/plugins
 
-pre-install:
-	@for script in ${RCD_SCRIPTS}; do				\
-		${SED} ${FILES_SUBST_SED} ${FILESDIR}/$${script}.sh	\
-			> ${WRKDIR}/$${script};				\
-	done
-
 post-install:
-	for script in ${RCD_SCRIPTS}; do				\
-		${INSTALL_SCRIPT} ${WRKDIR}/$${script}			\
-			${PREFIX}/etc/rc.d/$${script};			\
-	done
 	${INSTALL_DATA_DIR} ${HTMLDIR}
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html *.txt ${HTMLDIR}
 

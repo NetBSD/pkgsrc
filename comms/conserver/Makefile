@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/06/09 20:37:53 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/19 09:04:05 jlam Exp $
 # FreeBSD Id: ports/comms/conserver-com/Makefile,v 1.1 2001/12/09 14:40:12 kur iyama Exp
 
 DISTNAME=      conserver-7.2.1
@@ -28,17 +28,7 @@ CONF_FILES+=	${EGDIR}/conserver.passwd.example ${PKG_SYSCONFDIR}/conserver.passw
 OWN_DIRS=	/var/consoles
 
 pre-install:
-	@for script in ${RCD_SCRIPTS}; do				\
-		${SED} ${FILES_SUBST_SED} ${FILESDIR}/$${script}.sh	\
-			> ${WRKDIR}/$${script};				\
-	done
 	${INSTALL_DATA_DIR} ${EGDIR}
-
-post-install:
-	for script in ${RCD_SCRIPTS}; do				\
-		${INSTALL_SCRIPT} ${WRKDIR}/$${script}			\
-			${PREFIX}/etc/rc.d/$${script};			\
-	done
 
 .include "../../security/tcp_wrappers/buildlink.mk"
 

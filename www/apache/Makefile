@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2002/08/25 18:40:16 jlam Exp $
+# $NetBSD: Makefile,v 1.105 2002/09/19 09:04:28 jlam Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -172,7 +172,6 @@ pre-configure:
 
 pre-install:
 	${FIND} ${WRKSRC}/htdocs -name '*.orig' -print | ${XARGS} ${RM} -f
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/apache.sh > ${WRKDIR}/apache.sh
 
 post-install:
 .if !defined(NOPIC)
@@ -185,7 +184,6 @@ post-install:
 		${RM} -f ${PKG_SYSCONFDIR}/$${file}.default;		\
 	done
 	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/share/httpd/htdocs
-	${INSTALL_SCRIPT} ${WRKDIR}/apache.sh ${PREFIX}/etc/rc.d/apache
 
 .include "../../devel/libmm/buildlink2.mk"
 .include "../../textproc/expat/buildlink2.mk"
