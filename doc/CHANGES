@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5278 2004/03/19 15:34:18 taca Exp $
+$NetBSD: CHANGES,v 1.5279 2004/03/19 16:08:56 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1490,3 +1490,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated createbuildlink to 3.4 [jlam 2004-03-18]
 	Updated plib to 1.6.0nb1 [xtraeme 2004-03-19]
 	Updated fprot-workstation-bin to 4.4.1 [taca 2004-03-19]
+	Updated eb to 3.3.4 [uebayasi 2004-03-19]
+	Updated eblook to 1.6 [uebayasi 2004-03-19]
+	Updated lookup to 1.4 [uebayasi 2004-03-19]
