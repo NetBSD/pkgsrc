@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.3 2001/06/22 14:05:37 jtb Exp $
+$NetBSD: patch-ab,v 1.4 2003/04/29 22:55:34 jtb Exp $
 
---- Makefile.build.in.orig	Wed Jun 20 03:59:57 2001
+--- Makefile.build.in.orig
 +++ Makefile.build.in
+@@ -27,7 +27,7 @@
+ # so don't use -O option.
+ CFLAGS = -DSTDC_HEADERS=1 -DPAD_ARRAY=1 \
+ 	`$(PLPLOT_PREFIX)/bin/plplot-config --cflags` \
+-	-I$(YORICK_CONTRIB_PREFIX)/h \
++	-I$(YORICK_CONTRIB_PREFIX)/include \
+ 	-DDOUBLE
+ 
+ ##############################################
 @@ -299,19 +299,16 @@
  ##############################################
  
@@ -26,8 +35,8 @@ $NetBSD: patch-ab,v 1.3 2001/06/22 14:05:37 jtb Exp $
 +	$(BSD_INSTALL_DATA_DIR) $(ROOT)$(YPLOT_PREFIX)/share/examples/yplot
 +	$(BSD_INSTALL_DATA) doc/*.i doc/test.dat \
 +	$(ROOT)$(YPLOT_PREFIX)/share/examples/yplot
-+	$(BSD_INSTALL_DATA_DIR) $(PREFIX)/share/yorick/1.4/contrib
-+	$(BSD_INSTALL_DATA) yplot.i yplotl.i $(PREFIX)/share/yorick/1.4/contrib
++	$(BSD_INSTALL_DATA_DIR) $(PREFIX)/share/yorick/1.5/contrib
++	$(BSD_INSTALL_DATA) yplot.i yplotl.i $(PREFIX)/share/yorick/1.5/contrib
  
  ##############################################
  
