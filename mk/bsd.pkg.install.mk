@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.6 2001/11/25 18:59:50 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.7 2001/11/26 20:37:38 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -51,42 +51,40 @@ FILES_SUBST+=		PREFIX=${PREFIX}
 FILES_SUBST+=		LOCALBASE=${LOCALBASE}
 FILES_SUBST+=		X11BASE=${X11BASE}
 FILES_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+FILES_SUBST+=		PKGBASE=${PKGBASE}
 
-# PKG_USER and PKG_GROUP are the user and group that need to be created
-#	before this package is installed.
+# PKG_USERS represents the users to create for the package.  It is a
+#	space-separated list of elements of the form
 #
-# PKG_USERID and PKG_GROUPID are the numeric IDs used in creating the user
-#	and group.  If they're blank, then the default values chosen by the
-#	system is used.
+#		user:group[:[userid][:[descr][:[home][:shell]]]]
 #
-# PKG_USER_DESCR is the description of the user to add to the system.  It
-#	defaults to "foo user" for package "foo".
+#	Only the user and group are required; everything else is optional,
+#	but the colons must be in the right places when specifying optional
+#	bits.  Note that if the description contains spaces, then spaces
+#	should be double backslash-escaped, e.g.
 #
-# PKG_USER_HOME is the home directory of the user to add to the system.  It
-#	defaults to "/".
+#		foo:foogrp::The\\ Foomister
 #
-# PKG_USER_SHELL is the login shell for the user.  For system security
-#	purposes, it defaults to "${NOLOGIN}".
+# PKG_GROUPS represents the groups to create for the package.  It is a
+#	space-separated list of elements of the form
 #
-PKG_USER?=		# empty
-PKG_USERID?=		# empty
-PKG_USER_DESCR?=	${PKGBASE} user
-PKG_USER_HOME?=		/
-PKG_USER_SHELL?=	${NOLOGIN}
-PKG_GROUP?=		# empty
-PKG_GROUPID?=		# empty
-FILES_SUBST+=		PKG_USER=${PKG_USER}
-FILES_SUBST+=		PKG_USERID=${PKG_USERID}
-FILES_SUBST+=		PKG_USER_DESCR=${PKG_USER_DESCR:Q}
-FILES_SUBST+=		PKG_USER_HOME=${PKG_USER_HOME}
-FILES_SUBST+=		PKG_USER_SHELL=${PKG_USER_SHELL}
-FILES_SUBST+=		PKG_GROUP=${PKG_GROUP}
-FILES_SUBST+=		PKG_GROUPID=${PKG_GROUPID}
+#		group[:groupid]
+#
+#	Only the group is required; the groupid is optional.
+#
+PKG_USERS?=		# empty
+_PKG_USER_HOME?=	/nonexistent
+_PKG_USER_SHELL?=	${NOLOGIN}
+PKG_GROUPS?=		# empty
+FILES_SUBST+=		PKG_USERS=${PKG_USERS:Q}
+FILES_SUBST+=		PKG_USER_HOME=${_PKG_USER_HOME}
+FILES_SUBST+=		PKG_USER_SHELL=${_PKG_USER_SHELL}
+FILES_SUBST+=		PKG_GROUPS=${PKG_GROUPS:Q}
 
-.if !empty(PKG_USER)
+.if !empty(PKG_USERS)
 USE_USERADD=		YES
 .endif
-.if !empty(PKG_GROUP)
+.if !empty(PKG_GROUPS)
 USE_USERGROUP=		YES
 .endif
 
