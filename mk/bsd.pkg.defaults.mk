@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.284 2004/09/27 14:44:31 tv Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.285 2004/09/30 15:37:24 epg Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -669,14 +669,10 @@ APACHE_SUEXEC_DOCROOT?=	${LOCALBASE}/share/httpd/htdocs
 # Possible: Any valid directory
 # Default: ${LOCALBASE}/share/httpd/htdocs
 
-.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "powerpc"
 APR_USE_DB4?= NO
-.else
-APR_USE_DB4?= YES
-.endif
-# Used in apr to determine whether to use db4.  This should be the
-# default, but apr is broken on NetBSD/powerpc so it is disabled
-# there.
+# Used in apr to determine whether to use db4.  If this is YES while
+# building apr and subversion-base, the latter will build the db4
+# back-end in addition to the native filesystem back-back.
 # Default: YES
 
 APR_USE_OPENLDAP?=	NO
