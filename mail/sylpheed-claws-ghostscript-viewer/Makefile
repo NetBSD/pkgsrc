@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/01/05 16:53:04 cube Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/29 07:42:23 cube Exp $
 #
 
 DISTNAME=	ghostscript-viewer-0.6
 PKGNAME=	sylpheed-claws-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail news x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sylpheed-claws/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,6 +22,7 @@ PLIST_SUBST+=	PLUGIN_NAME=ghostscript_viewer
 
 .include "../../mail/sylpheed-claws/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../mk/ghostscript.mk"
 
 .include "../../mk/bsd.pkg.mk"
