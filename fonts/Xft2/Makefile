@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 21:36:39 grant Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/30 15:41:10 grant Exp $
 #
 
 DISTNAME=	fcpackage.2_1
@@ -21,7 +21,8 @@ USE_BUILDLINK2=	YES
 USE_GMAKE=	YES
 USE_X11=	YES
 
-.include "../../graphics/freetype2/buildlink2.mk"
 .include "../../fonts/fontconfig/buildlink2.mk"
+.include "../../graphics/freetype2/buildlink2.mk"
+.include "../../lang/gawk/buildlink2.mk"
 .include "../../x11/Xrender/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
