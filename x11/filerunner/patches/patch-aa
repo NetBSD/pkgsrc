@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 1998/08/07 11:17:58 agc Exp $
+$NetBSD: patch-aa,v 1.5 2000/08/31 17:40:48 jwise Exp $
 
 --- Makefile.orig	Tue Mar 24 11:24:06 1998
 +++ Makefile	Tue Mar 24 11:25:50 1998
@@ -7,8 +7,8 @@ $NetBSD: patch-aa,v 1.4 1998/08/07 11:17:58 agc Exp $
 -TCLINC = /usr/local/lib/tcl8.0
 -TKINC  = /usr/local/lib/tk8.0
 -X11INC = /usr/X11/include
-+TCLINC = ${LOCALBASE}/include/tcl8.0
-+TKINC  = ${LOCALBASE}/include/tk8.0
++TCLINC = ${LOCALBASE}/include
++TKINC  = ${LOCALBASE}/include
 +X11INC = ${X11BASE}/include
  
  CFLAGS = -D__FreeBSD__ -Wall -fPIC -O3 -I$(TCLINC) -I$(TKINC) -I$(X11INC)
