@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/31 21:07:13 jdolecek Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/05 17:11:39 jdolecek Exp $
 
 MODNAME=		dbase
 CATEGORIES+=		databases
@@ -7,8 +7,7 @@ COMMENT=		PHP extension for dBase database access
 
 USE_BUILDLINK3=		YES
 
-.include "../../lang/php/ext.mk"
-
 CONFIGURE_ARGS+=	--with-${MODNAME}=shared
 
+.include "../../lang/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"
