@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:56:33 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 17:38:29 martti Exp $
 #
 
 DISTNAME=	imwheel-0.9.9
@@ -7,7 +7,7 @@ MASTER_SITES=	http://jonatkins.org/imwheel/files/
 
 MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://jcatki.dhs.org/imwheel/
-COMMENT=	tool which helps to use mousewheels
+COMMENT=	Tool which helps to use mousewheels
 
 USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
