@@ -1,7 +1,7 @@
-$NetBSD: patch-at,v 1.1 1999/05/23 13:34:14 mycroft Exp $
+$NetBSD: patch-at,v 1.2 1999/05/23 14:01:37 mycroft Exp $
 
---- logmsg.c.orig	Sat Jan 10 12:46:19 1998
-+++ logmsg.c	Sun May 23 09:32:11 1999
+--- src/logmsg.c.orig	Sat Jan 10 12:46:19 1998
++++ src/logmsg.c	Sun May 23 09:32:11 1999
 @@ -587,6 +587,15 @@
  				  strlen (str_list) + strlen (p->key) + 5);
  		    (void) strcat (str_list, p->key);
