@@ -1,4 +1,4 @@
-# $NetBSD: defs.FreeBSD.mk,v 1.24 2003/09/14 16:30:34 danw Exp $
+# $NetBSD: defs.FreeBSD.mk,v 1.25 2003/09/23 07:26:23 grant Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -66,6 +66,11 @@ SHLOCK=		/usr/bin/shlock
 SORT?=		/usr/bin/sort
 SU?=		/usr/bin/su
 TAIL?=		/usr/bin/tail
+.if exists(${LOCALBASE}/bin/tar)
+TAR?=		${LOCALBASE}/bin/tar
+.else
+TAR?=		/usr/bin/tar
+.endif
 TEE?=		/usr/bin/tee
 TEST?=		test				# Shell builtin
 TOUCH?=		/usr/bin/touch
