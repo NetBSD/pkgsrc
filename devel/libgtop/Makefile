@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.8 1999/01/02 19:50:17 tron Exp $
+# $NetBSD: Makefile,v 1.9 1999/01/16 04:10:05 tron Exp $
 #
 
-DISTNAME=	libgtop-0.99.0
+DISTNAME=	libgtop-0.99.2
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.jimpick.com/pub/mirrors/gnome/sources/ \
-		ftp://ftp.gnome.org/pub/GNOME/sources/ \
-		ftp://ftp.geo.net/pub/gnome/sources/
+MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/sources/libgtop/ \
+		ftp://ftp.jimpick.com/pub/mirrors/gnome/sources/libgtop
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 
-DEPENDS+=	gnome-libs-0.99.0:../../x11/gnome-libs
+DEPENDS+=	gnome-libs-0.99.3:../../x11/gnome-libs
 DEPENDS+=	guile-1.3:../../lang/guile
 DEPENDS+=	gettext-0.10.35:../../devel/gettext
 
