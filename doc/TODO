@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2934 2005/01/20 04:29:16 xtraeme Exp $
+$NetBSD: TODO,v 1.2935 2005/01/20 10:29:10 adam Exp $
 
 Suggested new packages
 ======================
@@ -329,7 +329,6 @@ Suggested package updates
 	o bison-2.0
 	o blender-2.36
 	o blitz++-0.8
-	o bluefish-1.0
 	o boaconstructor-0.3.1
 	o boehm-gc-6.4
 	o bomberclone-0.11.5
