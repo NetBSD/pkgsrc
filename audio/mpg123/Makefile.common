@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2003/10/18 11:17:40 grant Exp $ -*- Makefile -*-
+# $NetBSD: Makefile.common,v 1.9 2003/10/18 11:27:11 grant Exp $ -*- Makefile -*-
 DISTNAME=	mpg123-0.59r
 MPG123_VERSION=	0.59.18
 CATEGORIES=	audio
@@ -32,7 +32,7 @@ ALL_TARGET=	linux-ppc
 .  else
 ALL_TARGET=	${LOWER_OPSYS}-${MACHINE_ARCH}
 .  endif
-.else
+.elif ${OPSYS} == "NetBSD"
 .  if ${MACHINE_ARCH} == "i386"
 .    if ${OBJECT_FMT} == "ELF"
 ALL_TARGET=	netbsd-i386-elf${TARGET_SUFFIX}
@@ -47,10 +47,10 @@ ALL_TARGET=	netbsd-arm${TARGET_SUFFIX}
 .    endif # MPG123_ARM_FIXED64
 .  elif ${MACHINE_ARCH} == "m68k"
 ALL_TARGET=	netbsd-m68k${TARGET_SUFFIX}
-.  else
+.  endif
+.else
 ALL_TARGET=	${LOWER_OPSYS}${TARGET_SUFFIX}
-.  endif # MACHINE_ARCH
-.endif # OPSYS
+.endif
 
 .if defined(USE_INET6) && ${USE_INET6} == "YES"
 CPPFLAGS+=	-DINET6
