@@ -1,10 +1,4 @@
-# New ports collection makefile for:	zebra
-# Version required:	0.71
-# Date created:		So  31 Mai 1998 11:00:30 CEST
-# Whom:			Andreas Klemm <andreas@klemm.gtn.com> (FreeBSD)
-#			itojun@itojun.org
-#
-# $NetBSD: Makefile,v 1.7 1999/07/07 09:14:15 itojun Exp $
+# $NetBSD: Makefile,v 1.8 1999/07/08 10:48:00 agc Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -22,11 +16,11 @@ CONFIGURE_ARGS+=--sysconfdir=${PREFIX}/etc/zebra
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !defined(USE_INET6)
+.if defined(USE_INET6)
+PLIST_SRC=	${PKGDIR}/PLIST.v6
+.else
 CONFIGURE_ARGS+=--disable-ospf6d --disable-ripngd
 PLIST_SRC=	${PKGDIR}/PLIST
-.else
-PLIST_SRC=	${PKGDIR}/PLIST.v6
 .endif
 
 .include "../../mk/bsd.pkg.mk"
