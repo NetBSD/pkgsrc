@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2003/11/08 07:40:17 xtraeme Exp $
+$NetBSD: distinfo,v 1.12 2004/05/19 16:23:12 adam Exp $
 
-SHA1 (nessus-core-2.0.9.tar.gz) = 737e3749d65ce68c0ea987c4b9969c0ce3a56d17
-Size (nessus-core-2.0.9.tar.gz) = 648864 bytes
-SHA1 (patch-aa) = 5f652c2c2828dc7de9c6060b4ae1fc237e723cda
+SHA1 (nessus-core-2.0.10a.tar.gz) = 4ff8e800b8f9819f5854c44d9ff7635f46b42d9c
+Size (nessus-core-2.0.10a.tar.gz) = 649493 bytes
+SHA1 (patch-aa) = 9de405b5786aedad69d10eae74b3b8fa7ba0ac84
