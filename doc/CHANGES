@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7673 2004/11/03 15:16:15 adam Exp $
+$NetBSD: CHANGES,v 1.7674 2004/11/03 15:30:01 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5047,3 +5047,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated freeciv-server to 1.14.2 [adam 2004-11-03]
 	Updated rocksndiamonds to 3.1.0 [adam 2004-11-03]
 	Updated rocksndiamonds-sdl to 3.1.0 [adam 2004-11-03]
+	Added p5-Chart-2.3 [adrianp 2004-11-03]
