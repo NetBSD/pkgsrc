@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.309 1999/08/09 05:32:12 sakamoto Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.310 1999/08/10 05:06:36 christos Exp $
 #
 # This file is in the public domain.
 #
@@ -141,6 +141,8 @@ MD5?=			/sbin/md5
 MD5?=			/bin/md5
 .elif exists(/usr/bin/md5)
 MD5?=			/usr/bin/md5
+.elif exists(${LOCALBASE}/bsd/bin/md5)
+MD5?=			${LOCALBASE}/bsd/bin/md5
 .else
 MD5?=			md5
 .endif
@@ -160,6 +162,8 @@ MAKE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin PREFIX=${PREFIX} LOCALB
 
 .if exists(/usr/bin/fetch)
 FETCH_CMD?=		/usr/bin/fetch
+.elif exists(${LOCALBASE}/bsd/bin/ftp)
+FETCH_CMD?=		${LOCALBASE}/bsd/bin/ftp
 .else
 FETCH_CMD?=		/usr/bin/ftp
 .endif
@@ -453,7 +457,7 @@ SETENV?=	/usr/bin/env
 SH?=		/bin/sh
 SU?=		/bin/su
 TAIL?=		/usr/bin/tail
-TEST?=		/bin/test
+TEST?=		/usr/bin/test
 TOUCH?=		/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		/bin/true
