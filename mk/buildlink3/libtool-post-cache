@@ -1,11 +1,14 @@
-# $NetBSD: libtool-post-cache,v 1.3 2004/03/30 17:25:19 jlam Exp $
+# $NetBSD: libtool-post-cache,v 1.4 2004/04/24 22:04:46 jlam Exp $
 #
 # This file implements the default action of the "libtool" private
 # cache.
 
 # Skip the common cache lookup for all directories and library args that
-# may reference a locally-linked libtool archive.
+# may reference a locally-linked libtool archive.  Avoid matching the
+# buildlink directory here for the WRKSRC == WRKDIR case.
 #
+-L${BUILDLINK_DIR}/*)
+	;;
 -L.|-L./*|-L..*|-L[!/]*|-L${WRKSRC}*|-l*)
 	skipcache=yes
 	;;
