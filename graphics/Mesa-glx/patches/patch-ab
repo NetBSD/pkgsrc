@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 1999/10/01 18:43:18 tron Exp $
+
+--- servGL/hwglx/mga/Makefile.in.orig	Sat Jul 31 09:07:55 1999
++++ servGL/hwglx/mga/Makefile.in	Fri Oct  1 19:43:02 1999
+@@ -80,7 +80,7 @@
+ # -------------
+ 
+ mgaregs.h : mgaregs.pl
+-	./mgaregs.pl
++	${PERL} ./mgaregs.pl
+ 
+ #tritmpl.h : tmplgen.sh
+ #	./tmplgen.sh triangle.tmpl
