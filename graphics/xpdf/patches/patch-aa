@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1 1998/12/20 23:05:19 frueauf Exp $
+
+--- Makefile.in.orig	Sat Nov 28 04:40:52 1998
++++ Makefile.in	Sun Dec 20 23:45:40 1998
+@@ -36,20 +36,12 @@
+ dummy:
+ 
+ install:
+-	mkdir -p @bindir@
+ 	$(INSTALL) xpdf/xpdf$(EXE) @bindir@/xpdf$(EXE)
+ 	$(INSTALL) xpdf/pdftops$(EXE) @bindir@/pdftops$(EXE)
+ 	$(INSTALL) xpdf/pdftotext$(EXE) @bindir@/pdftotext$(EXE)
+ 	$(INSTALL) xpdf/pdfinfo$(EXE) @bindir@/pdfinfo$(EXE)
+ 	$(INSTALL) xpdf/pdftopbm$(EXE) @bindir@/pdftopbm$(EXE)
+ 	$(INSTALL) xpdf/pdfimages$(EXE) @bindir@/pdfimages$(EXE)
+-	mkdir -p @mandir@/man1
+-	$(INSTALL_DATA) $(srcdir)/doc/xpdf.1 @mandir@/man1/xpdf.1
+-	$(INSTALL_DATA) $(srcdir)/doc/pdftops.1 @mandir@/man1/pdftops.1
+-	$(INSTALL_DATA) $(srcdir)/doc/pdftotext.1 @mandir@/man1/pdftotext.1
+-	$(INSTALL_DATA) $(srcdir)/doc/pdfinfo.1 @mandir@/man1/pdfinfo.1
+-	$(INSTALL_DATA) $(srcdir)/doc/pdftopbm.1 @mandir@/man1/pdftopbm.1
+-	$(INSTALL_DATA) $(srcdir)/doc/pdfimages.1 @mandir@/man1/pdfimages.1
+ 
+ clean:
+ 	-cd goo; $(MAKE) clean
