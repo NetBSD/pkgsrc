@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/06/01 11:23:27 rh Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/14 18:32:17 wiz Exp $
 #
 
 DISTNAME=	g3d-0.0.2
@@ -12,7 +12,7 @@ DEPENDS+=	gtkglarea-1.2.1:../../x11/gtkglarea
 
 WRKSRC=		${WRKDIR}/g3d
 
-USE_PKGLIBTOOL=	YES
+USE_LIBTOOL=	YES
 USE_GMAKE=	YES
 USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
