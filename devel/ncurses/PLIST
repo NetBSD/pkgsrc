@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/03/04 23:51:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/03/19 21:26:29 bouyer Exp $
 bin/captoinfo
 bin/clear
 bin/infocmp
@@ -2416,9 +2416,9 @@ ${TERMINFODIR}/s/scoansi-old
 ${NOT_SUNOS}${TERMINFODIR}/s/screen
 ${NOT_SUNOS}${TERMINFODIR}/s/screen-w
 ${NOT_SUNOS}${TERMINFODIR}/s/screen.teraterm
-${TERMINFODIR}/s/screen-bce
-${TERMINFODIR}/s/screen-s
-${TERMINFODIR}/s/screen.linux
+${NOT_SUNOS}${TERMINFODIR}/s/screen-bce
+${NOT_SUNOS}${TERMINFODIR}/s/screen-s
+${NOT_SUNOS}${TERMINFODIR}/s/screen.linux
 ${TERMINFODIR}/s/screen.xterm-r6
 ${TERMINFODIR}/s/screen.xterm-xfree86
 ${TERMINFODIR}/s/screen2
