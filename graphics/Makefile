@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.183 2002/03/19 16:19:04 kei Exp $
+# $NetBSD: Makefile,v 1.184 2002/03/22 13:22:53 tron Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -82,6 +82,7 @@ SUBDIR+=	iGMT
 SUBDIR+=	imlib
 SUBDIR+=	imlib2
 SUBDIR+=	impress
+SUBDIR+=	ivtools
 SUBDIR+=	jasper
 SUBDIR+=	jhead
 SUBDIR+=	jpeg
