@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.13 2004/03/02 10:31:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2004/04/21 13:49:09 adam Exp $
 bin/Magick++-config
 bin/Magick-config
+bin/Wand-config
 bin/animate
+bin/compare
 bin/composite
 bin/conjure
 bin/convert
@@ -23,71 +25,110 @@ include/Magick++/Montage.h
 include/Magick++/Pixels.h
 include/Magick++/STL.h
 include/Magick++/TypeMetric.h
+include/magick/ImageMagick.h
 include/magick/PreRvIcccm.h
+include/magick/annotate.h
 include/magick/api.h
 include/magick/attribute.h
 include/magick/blob.h
 include/magick/cache.h
 include/magick/cache_view.h
-include/magick/command.h
+include/magick/client.h
+include/magick/coder.h
+include/magick/color.h
+include/magick/colorspace.h
+include/magick/compare.h
+include/magick/composite.h
 include/magick/compress.h
-include/magick/drawing_wand.h
+include/magick/configure.h
+include/magick/conjure.h
+include/magick/constitute.h
+include/magick/convert.h
+include/magick/decorate.h
 include/magick/delegate.h
 include/magick/deprecate.h
+include/magick/draw.h
+include/magick/effect.h
+include/magick/enhance.h
 include/magick/error.h
+include/magick/fx.h
 include/magick/gem.h
+include/magick/geometry.h
 include/magick/hashmap.h
+include/magick/identify.h
 include/magick/image.h
-include/magick/info.h
+include/magick/import.h
 include/magick/list.h
+include/magick/locale_.h
 include/magick/log.h
 include/magick/magic.h
 include/magick/magick.h
 include/magick/magick_config.h
-include/magick/magick_wand.h
+include/magick/memory_.h
+include/magick/methods.h
 include/magick/module.h
+include/magick/mogrify.h
 include/magick/monitor.h
+include/magick/montage.h
+include/magick/option.h
 include/magick/paint.h
-include/magick/pixel_wand.h
+include/magick/profile.h
 include/magick/quantize.h
+include/magick/random.h
 include/magick/registry.h
-include/magick/render.h
+include/magick/resize.h
 include/magick/resource.h
-include/magick/semaphore.h
+include/magick/segment.h
+include/magick/shear.h
 include/magick/signature.h
+include/magick/stream.h
+include/magick/string_.h
 include/magick/timer.h
+include/magick/token.h
+include/magick/transform.h
+include/magick/type.h
 include/magick/utility.h
 include/magick/version.h
-include/magick/widget.h
 include/magick/xwindow.h
-lib/ImageMagick-${IM_MAJOR_LIB_VER}/colors.mgk
-lib/ImageMagick-${IM_MAJOR_LIB_VER}/delegates.mgk
-lib/ImageMagick-${IM_MAJOR_LIB_VER}/english.mgk
-lib/ImageMagick-${IM_MAJOR_LIB_VER}/locale.mgk
-lib/ImageMagick-${IM_MAJOR_LIB_VER}/log.mgk
-lib/ImageMagick-${IM_MAJOR_LIB_VER}/magic.mgk
-lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules-Q16/coders/modules.mgk
-lib/ImageMagick-${IM_MAJOR_LIB_VER}/type-ghostscript.mgk
-lib/ImageMagick-${IM_MAJOR_LIB_VER}/type-solaris.mgk
-lib/ImageMagick-${IM_MAJOR_LIB_VER}/type-windows.mgk
-lib/ImageMagick-${IM_MAJOR_LIB_VER}/type.mgk
+include/wand/drawing_wand.h
+include/wand/magick_wand.h
+include/wand/pixel_iterator.h
+include/wand/pixel_wand.h
+lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/colors.mgk
+lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/configure.mgk
+lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/delegates.mgk
+lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/english.mgk
+lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/locale.mgk
+lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/type-ghostscript.mgk
+lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/type-solaris.mgk
+lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/type-windows.mgk
+lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/type.mgk
+@exec ${MKDIR} %D/lib/ImageMagick-${IM_MAJOR_VER}/modules-Q16/coders
 @exec ${MKDIR} %D/lib/ImageMagick-${IM_MAJOR_VER}/modules-Q16/filters
 lib/libMagick++.a
 lib/libMagick++.la
 lib/libMagick++.so
 lib/libMagick++.so.6
-lib/libMagick++.so.6.0
+lib/libMagick++.so.6.1
 lib/libMagick.a
 lib/libMagick.la
 lib/libMagick.so
 lib/libMagick.so.6
-lib/libMagick.so.6.0
-lib/pkgconfig/ImageMagick.pc
+lib/libMagick.so.6.1
+lib/libWand.a
+lib/libWand.la
+lib/libWand.so
+lib/libWand.so.6
+lib/libWand.so.6.1
 lib/pkgconfig/ImageMagick++.pc
+lib/pkgconfig/ImageMagick.pc
+lib/pkgconfig/Wand.pc
 man/man1/ImageMagick.1
 man/man1/Magick++-config.1
 man/man1/Magick-config.1
+man/man1/Wand-config.1
 man/man1/animate.1
+man/man1/compare.1
 man/man1/composite.1
 man/man1/conjure.1
 man/man1/convert.1
@@ -98,12 +139,36 @@ man/man1/mogrify.1
 man/man1/montage.1
 man/man4/miff.4
 man/man5/quantize.5
-share/ImageMagick-${IM_MAJOR_VER}/Copyright.txt
+share/ImageMagick-${IM_MAJOR_LIB_VER}/LICENSE
+share/ImageMagick-${IM_MAJOR_LIB_VER}/Magick.pdf
+share/ImageMagick-${IM_MAJOR_LIB_VER}/NOTICE
+share/ImageMagick-${IM_MAJOR_LIB_VER}/config/coder.mgk
+share/ImageMagick-${IM_MAJOR_LIB_VER}/config/log.mgk
+share/ImageMagick-${IM_MAJOR_LIB_VER}/config/magic.mgk
+share/ImageMagick-${IM_MAJOR_LIB_VER}/images/dogwaffle.png
+share/ImageMagick-${IM_MAJOR_LIB_VER}/images/magick-icon.png
+share/ImageMagick-${IM_MAJOR_LIB_VER}/images/star.gif
+share/ImageMagick-${IM_MAJOR_LIB_VER}/images/top.gif
+share/ImageMagick-${IM_MAJOR_LIB_VER}/www/Authors.html
+share/ImageMagick-${IM_MAJOR_LIB_VER}/www/ImageMagick.html
+share/ImageMagick-${IM_MAJOR_LIB_VER}/www/Install-mac.html
+share/ImageMagick-${IM_MAJOR_LIB_VER}/www/Install-unix.html
+share/ImageMagick-${IM_MAJOR_LIB_VER}/www/Install-vms.html
+share/ImageMagick-${IM_MAJOR_LIB_VER}/www/Install-windows.html
+share/ImageMagick-${IM_MAJOR_LIB_VER}/www/News.html
+share/ImageMagick-${IM_MAJOR_LIB_VER}/www/README.html
+share/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/colorspace.html
+share/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/draw.html
+share/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/pixel_iterator.html
+share/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/profile.html
+share/ImageMagick-${IM_MAJOR_LIB_VER}/www/compare.html
+share/ImageMagick-${IM_MAJOR_LIB_VER}/www/download.html
+share/ImageMagick-${IM_MAJOR_LIB_VER}/www/index.html
 share/ImageMagick-${IM_MAJOR_VER}/QuickStart.txt
 share/ImageMagick-${IM_MAJOR_VER}/images/background.gif
 share/ImageMagick-${IM_MAJOR_VER}/images/examples.jpg
-share/ImageMagick-${IM_MAJOR_VER}/images/logo.png
 share/ImageMagick-${IM_MAJOR_VER}/images/granite.png
+share/ImageMagick-${IM_MAJOR_VER}/images/logo.png
 share/ImageMagick-${IM_MAJOR_VER}/images/magick.png
 share/ImageMagick-${IM_MAJOR_VER}/images/networkeleven.png
 share/ImageMagick-${IM_MAJOR_VER}/images/pair.png
@@ -158,19 +223,18 @@ share/ImageMagick-${IM_MAJOR_VER}/images/patterns/verticalleftshingle.png
 share/ImageMagick-${IM_MAJOR_VER}/images/patterns/verticalrightshingle.png
 share/ImageMagick-${IM_MAJOR_VER}/images/patterns/verticalsaw.png
 share/ImageMagick-${IM_MAJOR_VER}/images/promote.png
-share/ImageMagick-${IM_MAJOR_VER}/images/rose.png
 share/ImageMagick-${IM_MAJOR_VER}/images/right_triangle.png
 share/ImageMagick-${IM_MAJOR_VER}/images/right_triangle_option.png
+share/ImageMagick-${IM_MAJOR_VER}/images/rose.png
 share/ImageMagick-${IM_MAJOR_VER}/images/screen.png
 share/ImageMagick-${IM_MAJOR_VER}/images/script.gif
 share/ImageMagick-${IM_MAJOR_VER}/images/sprite.png
-share/ImageMagick-${IM_MAJOR_VER}/images/star.png
-share/ImageMagick-${IM_MAJOR_VER}/images/top.jpg
 share/ImageMagick-${IM_MAJOR_VER}/images/twi.png
 share/ImageMagick-${IM_MAJOR_VER}/index.html
 share/ImageMagick-${IM_MAJOR_VER}/www/Changelog.html
 share/ImageMagick-${IM_MAJOR_VER}/www/Copyright.html
 share/ImageMagick-${IM_MAJOR_VER}/www/FAQ.html
+share/ImageMagick-${IM_MAJOR_VER}/www/ImageMagickObject.html
 share/ImageMagick-${IM_MAJOR_VER}/www/Magick++/Blob.html
 share/ImageMagick-${IM_MAJOR_VER}/www/Magick++/Cache.fig
 share/ImageMagick-${IM_MAJOR_VER}/www/Magick++/Cache.png
@@ -212,18 +276,6 @@ share/ImageMagick-${IM_MAJOR_VER}/www/Magick++/thumbnail-sample-plain.jpg
 share/ImageMagick-${IM_MAJOR_VER}/www/QuickStart.html
 share/ImageMagick-${IM_MAJOR_VER}/www/animate.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api.html
-share/ImageMagick-${IM_MAJOR_VER}/www/INSTALL-mac.html
-share/ImageMagick-${IM_MAJOR_VER}/www/INSTALL-unix.html
-share/ImageMagick-${IM_MAJOR_VER}/www/INSTALL-vms.html
-share/ImageMagick-${IM_MAJOR_VER}/www/INSTALL-windows.html
-share/ImageMagick-${IM_MAJOR_VER}/www/ImageMagickObject.html
-share/ImageMagick-${IM_MAJOR_VER}/www/apis.html
-share/ImageMagick-${IM_MAJOR_VER}/www/objectives.html
-share/ImageMagick-${IM_MAJOR_VER}/www/topics.html
-share/ImageMagick-${IM_MAJOR_VER}/www/api/drawing_wand.html
-share/ImageMagick-${IM_MAJOR_VER}/www/api/magick_wand.html
-share/ImageMagick-${IM_MAJOR_VER}/www/api/pixel_wand.html
-share/ImageMagick-${IM_MAJOR_VER}/www/api/types.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/animate.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/annotate.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/attribute.html
@@ -236,6 +288,7 @@ share/ImageMagick-${IM_MAJOR_VER}/www/api/constitute.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/decorate.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/deprecate.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/display.html
+share/ImageMagick-${IM_MAJOR_VER}/www/api/drawing_wand.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/effect.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/enhance.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/error.html
@@ -243,13 +296,14 @@ share/ImageMagick-${IM_MAJOR_VER}/www/api/fx.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/image.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/list.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/magick.html
+share/ImageMagick-${IM_MAJOR_VER}/www/api/magick_wand.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/memory.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/monitor.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/montage.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/paint.html
+share/ImageMagick-${IM_MAJOR_VER}/www/api/pixel_wand.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/quantize.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/registry.html
-share/ImageMagick-${IM_MAJOR_VER}/www/api/render.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/resize.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/resource.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/segment.html
@@ -257,8 +311,9 @@ share/ImageMagick-${IM_MAJOR_VER}/www/api/shear.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/signature.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/stream.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/transform.html
+share/ImageMagick-${IM_MAJOR_VER}/www/api/types.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/widget.html
-share/ImageMagick-${IM_MAJOR_VER}/www/archives.html
+share/ImageMagick-${IM_MAJOR_VER}/www/apis.html
 share/ImageMagick-${IM_MAJOR_VER}/www/cd.html
 share/ImageMagick-${IM_MAJOR_VER}/www/color.html
 share/ImageMagick-${IM_MAJOR_VER}/www/composite.html
@@ -277,22 +332,26 @@ share/ImageMagick-${IM_MAJOR_VER}/www/miff.html
 share/ImageMagick-${IM_MAJOR_VER}/www/mogrify.html
 share/ImageMagick-${IM_MAJOR_VER}/www/montage.html
 share/ImageMagick-${IM_MAJOR_VER}/www/new.html
+share/ImageMagick-${IM_MAJOR_VER}/www/objectives.html
 share/ImageMagick-${IM_MAJOR_VER}/www/perl.html
 share/ImageMagick-${IM_MAJOR_VER}/www/quantize.html
 share/ImageMagick-${IM_MAJOR_VER}/www/smile.c
 share/ImageMagick-${IM_MAJOR_VER}/www/sponsor.html
 share/ImageMagick-${IM_MAJOR_VER}/www/tools.html
-share/ImageMagick-${IM_MAJOR_VER}/www/utilities.html
+share/ImageMagick-${IM_MAJOR_VER}/www/topics.html
 share/ImageMagick-${IM_MAJOR_VER}/www/windows.html
 @dirrm share/ImageMagick-${IM_MAJOR_VER}/www/api
 @dirrm share/ImageMagick-${IM_MAJOR_VER}/www/Magick++
 @dirrm share/ImageMagick-${IM_MAJOR_VER}/www
 @dirrm share/ImageMagick-${IM_MAJOR_VER}/images/patterns
 @dirrm share/ImageMagick-${IM_MAJOR_VER}/images
+@dirrm share/ImageMagick-${IM_MAJOR_VER}/config
 @dirrm share/ImageMagick-${IM_MAJOR_VER}
 @dirrm lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules-Q16/filters
 @dirrm lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules-Q16/coders
 @dirrm lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules-Q16
+@dirrm lib/ImageMagick-${IM_MAJOR_LIB_VER}/config
 @dirrm lib/ImageMagick-${IM_MAJOR_LIB_VER}
+@dirrm include/wand
 @dirrm include/magick
 @dirrm include/Magick++
