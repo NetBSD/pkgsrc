@@ -1,4 +1,6 @@
-This is Chris Provenzano's MIT Pthreads library.
+This is Chris Provenzano's MIT Pthreads library, hacked on by Michael Graff.
+It will only run on NetBSD-current, and currently only on the i386.  It _may_
+run on other arches, but it will probably fail on 1.4.x and before.
 
 Pthreads stands for POSIX threads and is based on the POSIX 1003.1c 1995 
 thread standard. This standard passed international Standards Organization 
