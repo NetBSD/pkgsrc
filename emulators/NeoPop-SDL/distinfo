@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/01 03:53:51 wiz Exp $
+$NetBSD: distinfo,v 1.2 2004/07/25 12:27:46 wiz Exp $
 
-SHA1 (NeoPop-SDL-0.1.tar.bz2) = ca882d27b36e8a692e24008b29bdce7b09d004dc
-Size (NeoPop-SDL-0.1.tar.bz2) = 180403 bytes
+SHA1 (NeoPop-SDL-0.2.tar.bz2) = b062a9d9f031617ba14e13f265d2deb659a58240
+Size (NeoPop-SDL-0.2.tar.bz2) = 222287 bytes
