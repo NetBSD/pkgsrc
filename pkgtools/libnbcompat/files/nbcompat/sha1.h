@@ -1,4 +1,4 @@
-/*	$NetBSD: sha1.h,v 1.1.1.1 2003/03/31 05:03:00 grant Exp $	*/
+/*	$NetBSD: sha1.h,v 1.1 2003/09/05 18:36:08 jlam Exp $	*/
 
 /*
  * SHA-1 in C

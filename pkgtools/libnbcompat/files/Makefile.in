@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.14 2003/09/03 16:38:38 jlam Exp $
+# $NetBSD: Makefile.in,v 1.15 2003/09/05 18:35:58 jlam Exp $
 #
 
 srcdir=		@srcdir@
@@ -19,16 +19,12 @@ RANLIB=		@RANLIB@
 
 LIB=		libnbcompat.a
 
-INCS=		extern.h ftpglob.h getopt.h md5.h mtree.h nbcompat.h \
-		nbcompat/err.h nbcompat/fts.h nbcompat/nbtypes.h \
-		nbcompat/poll.h nbcompat/statfs.h nbcompat/vis.h \
-		pack_dev.h pwcache.h rmd160.h sha1.h sha2.h stat_flags.h \
-		util.h
+INCS=		nbcompat.h nbcompat/err.h nbcompat/fts.h nbcompat/getopt.h \
+		nbcompat/glob.h nbcompat/md5.h nbcompat/nbtypes.h \
+		nbcompat/poll.h nbcompat/rmd160.h nbcompat/sha1.h \
+		nbcompat/sha2.h nbcompat/statfs.h nbcompat/vis.h
 
-OBJS=		@LIBOBJS@ \
-		md5c.o md5hl.o rmd160.o rmd160hl.o sha1.o sha1hl.o \
-		sha2.o sha2hl.o setmode.o getid.o misc.o pack_dev.o \
-		spec.o setmode.o stat_flags.o pwcache.o getopt_long.o
+OBJS=		@LIBOBJS@
 
 LINK=		$(CCLD) $(CFLAGS) $(LDFLAGS) -o $@
 COMPILE=	$(CC) $(CPPFLAGS) $(CFLAGS)
@@ -73,13 +69,13 @@ install:
 	$(INSTALL) -m 755 -d $(prefix)/lib
 	$(INSTALL) -m 555 ${LIB} $(prefix)/lib
 	$(RANLIB) $(prefix)/lib/$(LIB)
-	$(INSTALL) -m 755 -d $(prefix)/include/libnbcompat
-	$(INSTALL) -m 755 -d $(prefix)/include/libnbcompat/nbcompat
+	$(INSTALL) -m 755 -d $(prefix)/include
+	$(INSTALL) -m 755 -d $(prefix)/include/nbcompat
 	@for file in $(INCS); do \
-		echo "$(INSTALL) -m 444 $$file $(prefix)/include/libnbcompat/$$file"; \
-		$(INSTALL) -m 444 $$file $(prefix)/include/libnbcompat/$$file; \
+		echo "$(INSTALL) -m 444 $$file $(prefix)/include/$$file"; \
+		$(INSTALL) -m 444 $$file $(prefix)/include/$$file; \
 	done
-	$(INSTALL) -m 444 nbcompat/nbconfig.hi $(prefix)/include/libnbcompat/nbcompat/nbconfig.h
+	$(INSTALL) -m 444 nbcompat/nbconfig.hi $(prefix)/include/nbcompat/nbconfig.h
 
 clean:
 	rm -f *.a *.o bits nbcompat/nbtypes.h nbcompat/nbcompat.hi
