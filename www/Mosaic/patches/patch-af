@@ -1,12 +1,17 @@
-$NetBSD: patch-af,v 1.3 1999/11/27 23:50:25 rh Exp $
+$NetBSD: patch-af,v 1.4 2004/05/03 23:30:00 wiz Exp $
 
---- libnut/system.c.orig	Sun Nov 28 00:47:49 1999
-+++ libnut/system.c	Sun Nov 28 00:47:49 1999
-@@ -103,7 +103,6 @@
- 
- #ifndef VMS
- extern int sys_nerr;
--extern char *sys_errlist[];
- extern int errno;
+--- libnut/system.c.orig	1996-06-27 03:08:52.000000000 +0200
++++ libnut/system.c
+@@ -101,12 +101,6 @@
+ extern char *strdup(char *str);
  #endif
  
+-#ifndef VMS
+-extern int sys_nerr;
+-extern char *sys_errlist[];
+-extern int errno;
+-#endif
+-
+ 
+ #ifndef DISABLE_TRACE
+ int nutTrace=0;
