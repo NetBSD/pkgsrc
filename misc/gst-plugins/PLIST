@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/11/26 23:18:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/01/24 16:36:44 jmmv Exp $
 bin/gst-launch-ext
 bin/gst-visualise
 include/gstreamer-0.6/gst/audio/audio.h
@@ -265,6 +265,7 @@ lib/gstreamer-0.6/libgstvideoscale.la
 lib/gstreamer-0.6/libgstvideoscale.so
 lib/gstreamer-0.6/libgstvideosink.a
 lib/gstreamer-0.6/libgstvideosink.la
+lib/gstreamer-0.6/libgstvideosink.so
 lib/gstreamer-0.6/libgstvideotestsrc.a
 lib/gstreamer-0.6/libgstvideotestsrc.la
 lib/gstreamer-0.6/libgstvideotestsrc.so
@@ -288,6 +289,7 @@ lib/gstreamer-0.6/libgstwavparse.la
 lib/gstreamer-0.6/libgstwavparse.so
 lib/gstreamer-0.6/libgstxvideosink.a
 lib/gstreamer-0.6/libgstxvideosink.la
+lib/gstreamer-0.6/libgstxvideosink.so
 lib/gstreamer-0.6/libgsty4menc.a
 lib/gstreamer-0.6/libgsty4menc.la
 lib/gstreamer-0.6/libgsty4menc.so
@@ -297,8 +299,8 @@ lib/gstreamer-0.6/libmixmatrix.so
 lib/libgstgconf-0.6.a
 lib/libgstgconf-0.6.la
 lib/libgstgconf-0.6.so
-lib/libgstgconf-0.6.so.0
-lib/libgstgconf-0.6.so.0.1
+lib/libgstgconf-0.6.so.1
+lib/libgstgconf-0.6.so.1.0
 lib/libgstmedia-info-0.6.a
 lib/libgstmedia-info-0.6.la
 lib/libgstmedia-info-0.6.so
@@ -307,14 +309,16 @@ lib/libgstmedia-info-0.6.so.0.0
 lib/libgstplay-0.6.a
 lib/libgstplay-0.6.la
 lib/libgstplay-0.6.so
-lib/libgstplay-0.6.so.0
-lib/libgstplay-0.6.so.0.1
+lib/libgstplay-0.6.so.1
+lib/libgstplay-0.6.so.1.0
 lib/pkgconfig/gstreamer-gconf-0.6.pc
 lib/pkgconfig/gstreamer-libs-0.6.pc
 lib/pkgconfig/gstreamer-play-0.6.pc
 man/man1/gst-launch-ext.1
 man/man1/gst-visualise.1
 share/gconf/schemas/gstreamer.schemas
+@comment in GConf2: @dirrm share/gconf/schemas
+@comment in gstreamer: @dirrm lib/gstreamer-0.6
 @dirrm include/gstreamer-0.6/gst/video
 @dirrm include/gstreamer-0.6/gst/riff
 @dirrm include/gstreamer-0.6/gst/resample
@@ -324,3 +328,4 @@ share/gconf/schemas/gstreamer.schemas
 @dirrm include/gstreamer-0.6/gst/gconf
 @dirrm include/gstreamer-0.6/gst/floatcast
 @dirrm include/gstreamer-0.6/gst/audio
+@comment in gstreamer: @dirrm include/gstreamer-0.6/gst
