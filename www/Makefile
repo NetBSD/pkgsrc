@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 1999/05/03 15:42:01 tsarna Exp $
+# $NetBSD: Makefile,v 1.32 1999/05/03 19:51:45 tv Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -8,6 +8,7 @@
     SUBDIR += ap-fastcgi
     SUBDIR += ap-ssl
     SUBDIR += ap-perl
+    SUBDIR += ap-php3
     SUBDIR += apache
 #    SUBDIR += apache-current
     SUBDIR += arena
@@ -48,6 +49,7 @@
 #    SUBDIR += p5-HTTPD-Tools
 #    SUBDIR += p5-WWW-Search
     SUBDIR += p5-libwww
+    SUBDIR += php3
     SUBDIR += squid
     SUBDIR += squid-current
     SUBDIR += thttpd
