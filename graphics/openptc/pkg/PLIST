@@ -1,0 +1,32 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/22 09:14:55 garbled Exp $
+bin/ptc-config
+include/ptc/Core/Area.h
+include/ptc/Core/Base.h
+include/ptc/Core/Clear.h
+include/ptc/Core/Clipper.h
+include/ptc/Core/Color.h
+include/ptc/Core/Copy.h
+include/ptc/Core/Error.h
+include/ptc/Core/Format.h
+include/ptc/Core/Index.h
+include/ptc/Core/Palette.h
+include/ptc/Core/Surface.h
+include/ptc/Core/Types.h
+include/ptc/Core/Key.h
+include/ptc/Core/Timer.h
+include/ptc/Core/Hermes.h
+include/ptc/Core/Config.h
+include/ptc/Core/Mode.h
+include/ptc/X11/Console.h
+include/ptc/X11/Display.h
+include/ptc/X11/DGADisplay.h
+include/ptc/X11/WindowDisplay.h
+include/ptc/X11/Image.h
+include/ptc/X11/ptconfig.h
+include/ptc/ptc.h
+lib/libptc.1.0.a
+lib/libptc.so.1.0
+lib/libptc.a
+@dirrm include/ptc/Core
+@dirrm include/ptc/X11
+@dirrm include/ptc

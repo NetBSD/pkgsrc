@@ -1,0 +1,44 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/07/22 09:14:55 garbled Exp $
+--- configure.orig	Wed Mar 31 16:43:45 1999
++++ configure	Thu Jul 22 01:34:25 1999
+@@ -528,9 +528,9 @@
+ 
+ 
+ 
+-PTCVERSION="1.0.0"
++PTCVERSION="1.0"
+ PTCFLAGS=$CXXFLAGS
+-PTCLIBS="-lX11 -lXext"
++PTCLIBS="-lX11 -lXext $LDFLAGS"
+ SAVELIBS=""
+ 
+ 
+@@ -1950,7 +1950,7 @@
+ #include "confdefs.h"
+ #include <$ac_hdr>
+ EOF
+-ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
++ac_try="$ac_cpp -I$LOCALBASE/include conftest.$ac_ext >/dev/null 2>conftest.out"
+ { (eval echo configure:1955: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
+ ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
+ if test -z "$ac_err"; then
+@@ -2019,9 +2019,6 @@
+ 
+ echo
+ echo "Do you want to build a dynamic library too ? (y/n) "
+-read PTC_DYN_JN
+-
+-if  test $PTC_DYN_JN = "y"; then
+ 	echo "Building dynamic library".
+ 	PTC_DYN="dynamic"
+ 	
+@@ -2042,9 +2039,6 @@
+ #	else
+ #	   echo "Skippping Java support."
+ #	fi
+-else
+-	echo "No dynamic library will be built."
+-fi
+ 
+ 
+ 
