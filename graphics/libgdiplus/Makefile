@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/07/03 23:03:21 recht Exp $
+# $NetBSD: Makefile,v 1.10 2004/07/03 23:04:22 recht Exp $
 #
 
 DISTNAME=	libgdiplus-1.0
@@ -16,11 +16,6 @@ USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	libgdiplus.pc.in
 GNU_CONFIGURE=		yes
-
-# XXX gdip_win32.c uses pthread, but
-# configure doesn't check for it...
-#CFLAGS+=	${PTHREAD_CFLAGS}
-#LDFLAGS+=	${PTHREAD_LDFLAGS}
 
 pre-configure:
 	cd ${WRKSRC};			\
