@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 17:22:13 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/06/18 05:56:45 jlam Exp $
 #
 
 DISTNAME=	links-0.95
@@ -14,6 +14,7 @@ HOMEPAGE=	http://artax.karlin.mff.cuni.cz/~mikulas/links/
 COMMENT=	Lynx-like text WWW browser
 
 GNU_CONFIGURE=	YES
-USE_SSL=	YES
+#USE_SSL=	YES
 
+.include "../../security/openssl/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
