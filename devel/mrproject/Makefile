@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2004/02/14 17:21:39 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2004/02/16 15:06:19 jmmv Exp $
 #
 
 DISTNAME=		mrproject-0.5.1
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.codefactory.se/pub/software/mrproject/source/
 
@@ -10,7 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://mrproject.codefactory.se/
 COMMENT=		Project management program
 
-DEPENDS+=		gnome1-dirs>=1.2:../../misc/gnome1-dirs
+DEPENDS+=		gnome1-dirs>=1.4:../../misc/gnome1-dirs
 
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/14 23:01:51 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/02/16 15:06:19 jmmv Exp $
 bin/gnome-help
 bin/yelp
 bin/yelp-pregenerate
@@ -214,4 +214,8 @@ share/yelp/ui/yelp.glade
 @dirrm share/sgml/docbook/yelp/docbook/common
 @dirrm share/sgml/docbook/yelp/docbook
 @dirrm share/sgml/docbook/yelp
+@comment in docbook: @dirrm share/sgml/docbook
 @dirrm share/images/yelp
+@comment in gnome2-dirs: @dirrm share/images
+@comment in gnome2-dirs: @dirrm share/applications
+@comment in libbonobo: @dirrm lib/bonobo/servers

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2004/02/16 13:56:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2004/02/16 15:06:19 jmmv Exp $
 #
 
 DISTNAME=		yelp-2.4.2
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/yelp/2.4/}
 EXTRACT_SUFX=		.tar.bz2
@@ -11,7 +11,7 @@ MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Help browser for GNOME 2 desktop
 
-DEPENDS=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
+DEPENDS=		gnome2-dirs>=1.4:../../misc/gnome2-dirs
 DEPENDS+=		docbook>=4.2:../../textproc/docbook
 BUILD_USES_MSGFMT=	yes
 

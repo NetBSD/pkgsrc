@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/12/24 21:38:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/02/16 15:06:19 jmmv Exp $
 bin/gtkam
 man/man1/gtkam.1
 share/doc/gtkam/AUTHORS
@@ -30,7 +30,7 @@ ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gtkam.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gtkam.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gtkam.mo
 @dirrm share/images/gtkam
-@dirrm share/images
+@comment in gnome-dirs: @dirrm share/images
 @dirrm share/gtkam/pixmaps
 @dirrm share/gtkam
 @dirrm share/doc/gtkam

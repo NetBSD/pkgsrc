@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/05/30 16:19:55 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/02/16 15:06:19 jmmv Exp $
 bin/mrproject
 bin/mrproject-engine
 bin/run-mrproject
@@ -121,6 +121,6 @@ share/pixmaps/mrproject.png
 @dirrm share/mrproject
 @comment in gnome-dirs: @dirrm share/mime-info
 @dirrm share/images/mrproject
-@comment belongs to evolution: share/images
+@comment belongs to gnome-dirs: share/images
 @dirrm lib/mrproject/components
 @dirrm lib/mrproject

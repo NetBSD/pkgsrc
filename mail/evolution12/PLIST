@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/04 21:39:51 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/16 15:06:19 jmmv Exp $
 bin/csv2vcard
 bin/evolution
 bin/evolution-addressbook
@@ -1458,6 +1458,7 @@ share/pixmaps/evolution.png
 @dirrm share/images/evolution/conduits
 @dirrm share/images/evolution/buttons
 @dirrm share/images/evolution
+@comment in gnome-dirs: @dirrm share/images
 @dirrm share/gnome/html/evolution-devel-guide
 @exec ${MKDIR} %D/share/gnome/html/evolution-cal-util
 @dirrm share/gnome/html/evolution-cal-util
