@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:08 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/05/30 23:51:25 seb Exp $
 bin/sccs
 @unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/cssc.info
 info/cssc.info
 info/cssc.info-1
 info/cssc.info-2
 info/cssc.info-3
+info/cssc.info-4
 @exec ${INSTALL_INFO} --info-dir=%D/info %D/info/cssc.info
 libexec/cssc/admin
 libexec/cssc/cdc

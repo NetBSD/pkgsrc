@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/03/29 12:40:31 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/30 23:51:25 seb Exp $
 #
 
-DISTNAME=	CSSC-0.13alpha.pl1a
-PKGNAME=	cssc-0.13a.1
-WRKSRC=		${WRKDIR}/CSSC-0.13alpha.pl1
+DISTNAME=	CSSC-0.15alpha.pl0
+PKGNAME=	cssc-0.15a.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cssc/}
 
@@ -13,9 +12,8 @@ COMMENT=	GNU workalike for the source code control system SCCS
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--enable-binary
-INFO_FILES=		cssc.info
 TEXINFO_REQD=		4.0
-TEXINFO_OVERRIDE=	YES
+TEST_TARGET=		check
 
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
