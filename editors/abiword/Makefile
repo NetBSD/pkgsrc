@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/05/11 09:12:03 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2001/05/11 15:49:53 jlam Exp $
 #
 # According to AbiSource's explanation of their trademark rights,
 # compilations/distributions of AbiWord not provided by AbiSource must
@@ -23,10 +23,10 @@ DEPENDS+=	ispell-base-*:../../textproc/ispell-base
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	png>1.0.9:../../graphics/png
 
-USE_X11=	YES
-USE_XPM=	YES
-USE_GMAKE=	YES
-NO_CONFIGURE=	YES
+USE_X11=	# defined
+USE_XPM=	# defined
+USE_GMAKE=	# defined
+NO_CONFIGURE=	# defined
 ALL_TARGET=	compile canonical
 
 DIST_SUBDIR=	abisuite
@@ -37,17 +37,17 @@ ICONVSRC=	libiconv-${ABIWORD_VERS}${EXTRACT_SUFX}
 UNIXFONTS=	unixfonts-${ABIWORD_VERS}${EXTRACT_SUFX}
 WVSRC=		wv-${ABIWORD_VERS}${EXTRACT_SUFX}
 
-CPPFLAGS+=	-I${WRKDIR}/wv 		# avoid using installed wv includes
-CPPFLAGS+=	-I${LOCALBASE}/include				# png.h
+CPPFLAGS+=	-I${WRKDIR}/wv 		# avoid installed wv headers
+CPPFLAGS+=	-I${LOCALBASE}/include	# png.h
 LDFLAGS+=	-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -liconv
 
-MAKE_ENV+=	ABI_BUILD_VERSION="${ABIWORD_VERS}" \
-		OS_CFLAGS="${CPPFLAGS}" \
-		OS_DLLFLAGS="${LDFLAGS}"
+MAKE_ENV+=	ABI_BUILD_VERSION="${ABIWORD_VERS}"
+MAKE_ENV+=	OS_CFLAGS="${CPPFLAGS}"
+MAKE_ENV+=	OS_DLLFLAGS="${LDFLAGS}"
 
 post-install:
 	${CHMOD} -R a+r ${PREFIX}/share/AbiSuite
-	rm ${PREFIX}/share/AbiSuite/dictionary/american.hash
-	ln -s ../../../lib/american.hash ${PREFIX}/share/AbiSuite/dictionary/american.hash
+	${RM} -f ${PREFIX}/share/AbiSuite/dictionary/american.hash
+	${LN} -sf ../../../lib/american.hash ${PREFIX}/share/AbiSuite/dictionary/american.hash
 
 .include "../../mk/bsd.pkg.mk"
