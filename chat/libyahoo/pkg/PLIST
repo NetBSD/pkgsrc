@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/10/20 22:19:43 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/10/23 01:43:10 jlam Exp $
 bin/libyahoo-config
+include/libyahoo/libyahoo-authors.h
 include/libyahoo/libyahoo-debug.h
 include/libyahoo/libyahoo-proto.h
 include/libyahoo/libyahoo.h
