@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2766 2003/07/13 02:37:51 grant Exp $
+$NetBSD: CHANGES,v 1.2767 2003/07/13 08:26:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2788,3 +2788,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated vorbis-tools to 1.0.0.8nb3 [wiz 2003-07-12]
 	Updated cgoban-java to 2.5.0 [rh 2003-07-13]
 	Updated libnbcompat to 20030713 [grant 2003-07-13]
+	Updated pfaedit to 20030712 [wiz 2003-07-13]
