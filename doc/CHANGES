@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.385 2002/10/28 09:06:41 agc Exp $
+$NetBSD: CHANGES,v 1.386 2002/10/28 11:20:23 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3418,3 +3418,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated tuxpaint to 2002.10.26 [wiz 2002-10-28]
 	Updated tuxpaint-stamps to 2002.10.26 [wiz 2002-10-28]
 	Added tinyscheme-1.31 [agc 2002-10-28]
+	Added qt3-psql-3.0.6 [drochner 2002-10-28]
