@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/11/20 18:13:37 jschauma Exp $
+bin/bsetbg
+bin/bsetroot
+man/man1/bsetbg.1
+man/man1/bsetroot.1
