@@ -1,20 +1,23 @@
-# $NetBSD: Makefile,v 1.3 2001/01/07 13:30:57 taca Exp $
-# FreeBSD Id: Makefile,v 1.3 1998/10/27 14:31:25 kuriyama Exp $
+# $NetBSD: Makefile,v 1.4 2001/01/10 14:52:53 taca Exp $
+#
 
-DISTNAME=	chasen-sys2.02-ipadic2.1
-PKGNAME=	chasen-2.02
-CATEGORIES=	japanese
-MASTER_SITES=	ftp://ftp.aist-nara.ac.jp/pub/lab/nlp/tools/chasen/ \
-		http://cl.aist-nara.ac.jp/lab/nlt/chasen/package/
+DISTNAME=		chasen-2.2.1
+CATEGORIES=		japanese
+MASTER_SITES=		# empty
+DISTFILES=		# empty
 
-MAINTAINER=	tech-pkg-ja@jp.netbsd.org
-HOMEPAGE=	http://cactus.aist-nara.ac.jp/lab/nlt/chasen.html
+MAINTAINER=		tech-pkg-ja@jp.netbsd.org
+HOMEPAGE=		http://chasen.aist-nara.ac.jp/
 
-WRKSRC=		${WRKDIR}/chasen-2.02
-MAKEENV+=	LOCALBASE=\"${LOCALBASE}\"
+DEPENDS+=		chasen-base>=2.2.1:../../japanese/chasen-base
+DEPENDS+=		ipadic>=2.4.1:../../japanese/ipadic
 
-post-build:
-	${ECHO_MSG} "Making dictionaries"
-	(cd ${WRKSRC}; ${MAKE} dic)
+EXTRACT_ONLY=		# empty
+NO_CHECKSUM=		# defined
+NO_PATCH=		# defined
+NO_CONFIGURE=		# defined
+NO_BUILD=		# defined
+
+do-install:		# empty
 
 .include "../../mk/bsd.pkg.mk"
