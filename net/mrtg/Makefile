@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/08/28 23:25:30 kim Exp $
+# $NetBSD: Makefile,v 1.11 1999/11/01 03:37:35 jlam Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/12/16 19:42:17 vanilla Exp
 #
 
@@ -16,11 +16,12 @@ MASTER_SITES=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/pub/ \
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/mrtg.html
 
-DEPENDS=	gd-1.6.3:../../graphics/gd
+DEPENDS=	gd-1.7.3:../../graphics/gd
 
 USE_PERL5=	YES
+USE_X11=	YES
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS=	--with-gd-inc=${PREFIX}/include --with-gd-lib=${PREFIX}/lib
+CONFIGURE_ARGS=	--with-gd-inc=${LOCALBASE}/include
 
 post-build:
 	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/mrtg.conf.example \
