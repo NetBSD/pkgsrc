@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/02/18 01:28:29 minskim Exp $
+
+SHA1 (liteamp-0.2.4.1.tar.gz) = 1d56d4a405c40b50635d6a00b84cd16efab3208d
+Size (liteamp-0.2.4.1.tar.gz) = 480660 bytes
+SHA1 (patch-aa) = bde4fb74419f2f8e8fb3e5551358773727f182c6
