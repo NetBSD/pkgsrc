@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2003/01/11 21:12:02 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2003/01/12 19:48:34 jmmv Exp $
 #
 
 DISTNAME=		libglade-2.0.1
 PKGNAME=		${DISTNAME:S/libglade/libglade2/}
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libglade/2.0/}
 
@@ -14,7 +14,7 @@ COMMENT=		Runtime interpreter for GLADE gui files (v2)
 BUILD_USES_MSGFMT=	YES
 
 USE_BUILDLINK2=		YES
-USE_X11BASE=		YES
+USE_X11=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
