@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/04/01 13:35:28 abs Exp $
+
+SHA1 (jakarta-tomcat-5.5.7.tar.gz) = 42c668fcb65e3a18acbfdef76bbd3aec6f70d7e6
+RMD160 (jakarta-tomcat-5.5.7.tar.gz) = becccfa59b512725e7218022c77d1616570f8582
+Size (jakarta-tomcat-5.5.7.tar.gz) = 5117539 bytes
