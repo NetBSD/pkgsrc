@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/05/23 15:47:43 agc Exp $
+$NetBSD: distinfo,v 1.2 2004/09/22 17:00:33 ben Exp $
 
 SHA1 (helpdc21.zip) = 1a6ca50acb3783674a225764066cd90307806552
 Size (helpdc21.zip) = 222217 bytes
-SHA1 (patch-aa) = 8890da60f28a678714d7d4c8d8140940b122557e
-SHA1 (patch-ab) = 43cb2836955c1541d7d3f57ec9b21ce285ab1c72
+SHA1 (patch-aa) = 3af5ad63eb624420bcde21fd0bfabf5ff5c911b3
+SHA1 (patch-ab) = 6d1c9da92c9eb46007280544da8a75eb695c4137
 SHA1 (patch-ac) = a40ce0a49631ea0d03f4f51f5c12d253d19cd282
 SHA1 (patch-ad) = 7416d09c01df45b8b5fa903d69e77e1b3f204e95
 SHA1 (patch-ae) = 2dd709c96ae22671cfc38892c093f544544ce810
+SHA1 (patch-af) = 4fee85e274fdba16a760782b828a0cd7478a1243

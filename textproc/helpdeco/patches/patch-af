@@ -1,0 +1,19 @@
+$NetBSD: patch-af,v 1.1 2004/09/22 17:00:33 ben Exp $
+
+--- Makefile.orig	Wed Sep 22 09:42:27 2004
++++ Makefile
+@@ -3,11 +3,11 @@ all: splitmrb zapres helpdeco
+ CFLAGS+=-g
+ 
+ splitmrb: splitmrb.c
+-	${CC} ${CFLAGS} -o splitmrb splitmrb.c
++	${CC} ${CFLAGS} -o splitmrb splitmrb.c ${LDFLAGS}
+ zapres: zapres.c compat.o
+-	${CC} ${CFLAGS} -o zapres zapres.c compat.o
++	${CC} ${CFLAGS} -o zapres zapres.c compat.o ${LDFLAGS}
+ helpdeco: helpdeco.c helpdec1.c compat.o
+-	${CC} ${CFLAGS} -o helpdeco helpdeco.c helpdec1.c compat.o
++	${CC} ${CFLAGS} -o helpdeco helpdeco.c helpdec1.c compat.o ${LDFLAGS}
+ compat.o: compat.c
+ 
+ clean:

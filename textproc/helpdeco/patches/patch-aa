@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/05/23 15:47:45 agc Exp $
+$NetBSD: patch-aa,v 1.2 2004/09/22 17:00:33 ben Exp $
 
 --- splitmrb.c.orig	Fri Sep 13 00:11:54 1996
-+++ splitmrb.c	Sat May 12 23:25:04 2001
-@@ -216,14 +216,10 @@
++++ splitmrb.c
+@@ -12,6 +12,7 @@ n is a digit from 0 to 9). Discarded hot
+ This program is freeware. Use at your own risk. No part of it may be used
+ commercially. No fees may be charged on distributing.
+ */
++#include <sys/types.h>
+ #include <stdio.h>
+ #include <string.h>
+ #include <stdlib.h>
+@@ -216,14 +217,10 @@ void PrintHotspotInfo(FILE *f)
      int i,l,n;
      typedef struct
      {
@@ -21,7 +29,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/05/23 15:47:45 agc Exp $
      HOTSPOT *hotspot;
      char name[80];
      char buffer[128];
-@@ -308,7 +304,7 @@
+@@ -308,7 +305,7 @@ int main(int argc,char *argv[])
  	while(l>0&&filename[l-1]!='\\'&&filename[l-1]!='/'&&filename[l-1]!=':') l--;
  	m=l;
  	while(filename[l]!='\0'&&filename[l]!='.') l++;
@@ -30,7 +38,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/05/23 15:47:45 agc Exp $
  	f=fopen(filename,"rb");
  	if(!f)
  	{
-@@ -331,7 +327,7 @@
+@@ -331,7 +328,7 @@ int main(int argc,char *argv[])
  		    fseek(f,offset,SEEK_SET);
  		    byType=getc(f); // type of picture: 5=DDB, 6=DIB, 8=METAFILE
  		    byPacked=getc(f); // packing method: 0=unpacked, 1=RunLen, 2=LZ77
@@ -39,7 +47,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/05/23 15:47:45 agc Exp $
  		    {
  			memset(&bmfh,0,sizeof(bmfh));
  			memset(&bmih,0,sizeof(bmih));
-@@ -378,17 +374,17 @@
+@@ -378,17 +375,17 @@ int main(int argc,char *argv[])
  			    sprintf(filename+l,".%03d",j);
  			    if(w==96&&h==48&&!res[0])
  			    {
@@ -60,7 +68,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/05/23 15:47:45 agc Exp $
  				res[2]=TRUE;
  			    }
  			    else if(w==120&&h==120&&!res[3])
-@@ -398,12 +394,12 @@
+@@ -398,12 +395,12 @@ int main(int argc,char *argv[])
  			    }
  			    else if(w==72&&h==72&&!res[4])
  			    {
@@ -75,7 +83,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/05/23 15:47:45 agc Exp $
  				res[6]=TRUE;
  			    }
  			    fTarget=fopen(filename+m,"wb");
-@@ -472,7 +468,6 @@
+@@ -472,7 +469,6 @@ int main(int argc,char *argv[])
  		    }
  		    else if(byType==8) // Windows MetaFile
  		    {
@@ -83,7 +91,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/05/23 15:47:45 agc Exp $
  			unsigned short *wp;
  
  			memset(&afh,0,sizeof(afh));
-@@ -512,7 +507,7 @@
+@@ -512,7 +508,7 @@ int main(int argc,char *argv[])
  			    for(k=0;k<10;k++) afh.wChecksum^=*wp++;
  			    if(!res[5])
  			    {
