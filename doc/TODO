@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3197 2005/03/05 12:38:44 wiz Exp $
+$NetBSD: TODO,v 1.3198 2005/03/05 13:50:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -851,7 +851,6 @@ Suggested package updates
 	o p5-razor-agents-2.67
 	o p5-sybperl-2.17
 	o pam-smbpass-3.0.11
-	o pango-1.8.1
 	o pari-2.2.7
 	o pbzip2-0.9.1
 	o pcal-4.8
