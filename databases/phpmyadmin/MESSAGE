@@ -1,0 +1,6 @@
+$NetBSD: MESSAGE,v 1.1 2002/01/30 02:15:27 tron Exp $
+
+Do *not* edit "${PREFIX}/share/phpmyadmin/config.inc.php" to customize
+this package because it is a prototype file. Instead link, copy or map
+the required files to your web space and create a local copy of
+"config.inc.php" there.
