@@ -1,28 +1,28 @@
-$NetBSD: patch-ab,v 1.1 2004/08/01 16:13:32 kristerw Exp $
+$NetBSD: patch-ab,v 1.2 2005/03/07 15:30:44 adam Exp $
 
---- discover.c.orig	Sun Aug  1 18:05:09 2004
-+++ discover.c	Sun Aug  1 18:06:16 2004
-@@ -89,9 +89,10 @@
+--- discover.c.orig	2004-10-10 03:49:03.000000000 +0000
++++ discover.c
+@@ -90,9 +90,10 @@ static void NameCallback(mDNS *const m, 
      {
          domainlabel name;
          domainname type, domain;
-+	SDiscover_HostList *new;
-         pthread_mutex_lock(&pDiscover->mtObjectLock);
++        SDiscover_HostList *new;
+         ts_mutex_lock(pDiscover->mtObjectLock);
  
 -        SDiscover_HostList *new = malloc(sizeof(SDiscover_HostList));
 +        new = malloc(sizeof(SDiscover_HostList));
          memset(new, 0, sizeof(SDiscover_HostList));
  
-         new->next = pDiscover->prenamed;
-@@ -193,11 +194,10 @@
+         if (!AddRecord) new->lost = 1;
+@@ -217,11 +218,11 @@ static void CheckoutHostsWorker(void *pv
      SDiscover *pDiscover = (SDiscover *)pvDiscoverThis;
      SDiscover_HostList *cur, *next;
      int cmd;
 +    int finalized = 0;
  
-     pthread_mutex_lock(&pDiscover->mtWorkerLock);
-     pthread_mutex_lock(&pDiscover->mtObjectLock);
--
+     ts_mutex_lock(pDiscover->mtWorkerLock);
+     ts_mutex_lock(pDiscover->mtObjectLock);
+ 
 -    int finalized = 0;
  
      cur = pDiscover->prenamed;

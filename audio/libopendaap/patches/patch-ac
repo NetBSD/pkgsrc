@@ -1,21 +1,12 @@
-$NetBSD: patch-ac,v 1.1 2004/08/01 16:13:32 kristerw Exp $
+$NetBSD: patch-ac,v 1.2 2005/03/07 15:30:44 adam Exp $
 
---- dmap_generics.c.orig	Sun Aug  1 18:06:33 2004
-+++ dmap_generics.c	Sun Aug  1 18:07:00 2004
-@@ -144,6 +144,7 @@
-     dmapGenericContainer *gc = (dmapGenericContainer*)scopeData;
-     const dmap_ContentCode *cc;
-     dmap_DataTypes type = DMAP_DATATYPE_INVALID;
-+    dmapGenericItem *newItem;
- 
-     if ((cc = dmap_lookupCodeFromFOURCC(&dmap_table, code)))
-     {
-@@ -163,7 +164,7 @@
-         return;
-     }
- 
--    dmapGenericItem *newItem = malloc(sizeof(dmapGenericItem));
-+    newItem = malloc(sizeof(dmapGenericItem));
-     newItem->cc = code;
-     newItem->data.type = type;
-     switch(type)
+--- http_client.c.orig	2005-03-07 16:25:15.000000000 +0000
++++ http_client.c
+@@ -36,6 +36,7 @@
+ # include <sys/types.h>
+ # include <sys/socket.h>
+ # include <sys/select.h>
++# include <netinet/in.h>
+ # include <netdb.h>
+ # include <fcntl.h>
+ #elif defined(SYSTEM_WIN32)
