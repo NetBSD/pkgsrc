@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/10/18 15:20:15 veego Exp $
+# $NetBSD: Makefile,v 1.5 2001/11/26 06:49:50 jlam Exp $
 #
 
 DISTNAME=	File-PathConvert-0.85
@@ -11,10 +11,11 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/File-PathConvert/
 COMMENT=	Convert paths and URLs from absolute to relative and vice versa
 
-USE_PERL5=	# defined
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/File/PathConvert/.packlist
+USE_BUILDLINK_ONLY=	YES
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/File/PathConvert/.packlist
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

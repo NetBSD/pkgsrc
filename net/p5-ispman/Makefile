@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/10/18 15:20:33 veego Exp $
+# $NetBSD: Makefile,v 1.6 2001/11/26 06:50:13 jlam Exp $
 #
 
 DISTNAME=		ispman-0.5
@@ -19,7 +19,7 @@ DEPENDS+=		p5-IMAP-Admin>=1.2.5:../../mail/p5-IMAP-Admin
 DEPENDS+=		p5-Convert-ASN1>=0.07:../../textproc/p5-Convert-ASN1
 DEPENDS+=		p5-IO-stringy>=1.213:../../devel/p5-IO-stringy
 
-USE_PERL5=		YES
+USE_BUILDLINK_ONLY=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/ISPMan/.packlist
 PLIST_SRC=		${WRKDIR}/PLIST
 
@@ -47,4 +47,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/../IO-stringy-1.212_patched/lib/IO/Scalar.pm \
 		${PREFIX}/`${TAIL} -n 1 ${PLIST_SRC}`
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

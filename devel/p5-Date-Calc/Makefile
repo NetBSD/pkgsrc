@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/10/18 15:20:14 veego Exp $
+# $NetBSD: Makefile,v 1.6 2001/11/26 06:49:48 jlam Exp $
 #
 
 DISTNAME=     	Date-Calc-4.3
@@ -11,10 +11,11 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.engelschall.com/u/sb/download/
 COMMENT=	perl5 module for Gregorian calendar date calculations
 
-USE_PERL5=	# defined
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Date/Calc/.packlist
+USE_BUILDLINK_ONLY=	YES
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Date/Calc/.packlist
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

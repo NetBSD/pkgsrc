@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2001/11/26 06:49:43 jlam Exp $
+
+--- Makefile.PL.orig	Thu Feb 22 21:57:54 2001
++++ Makefile.PL
+@@ -1,7 +1,7 @@
+ use ExtUtils::MakeMaker;
+ WriteMakefile(
+     NAME => 'GDBM_File',
+-    LIBS => ["-L/usr/local/lib -lgdbm", "-ldbm"],
++    LIBS => ["-lgdbm", "-L/usr/local/lib -lgdbm", "-ldbm"],
+     MAN3PODS 	=> {}, 	# Pods will be built by installman.
+     XSPROTOARG => '-noprototypes', 		# XXX remove later?
+     VERSION_FROM => 'GDBM_File.pm',

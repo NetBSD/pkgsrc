@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2001/11/26 06:50:01 jlam Exp $
+
+--- Makefile.PL.orig	Wed Sep 29 02:55:02 1999
++++ Makefile.PL
+@@ -3,7 +3,7 @@
+ WriteMakefile(
+ 	      'NAME' => 'Text::Kakasi',
+ 	      'VERSION_FROM' => 'Kakasi.pm',
+-	      'INC' => '-I/usr/local/include',
+-	      'LIBS' => ['-L/usr/local/lib -lkakasi'],
++	      'INC' => '',
++	      'LIBS' => ['-lkakasi'],
+ 	      'DEFINE' => '-DWAKATIGAKI',
+ );
