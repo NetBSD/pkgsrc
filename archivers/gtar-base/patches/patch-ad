@@ -1,22 +1,13 @@
-$NetBSD: patch-ad,v 1.4 2002/08/25 21:49:08 jlam Exp $
+$NetBSD: patch-ad,v 1.5 2002/11/20 16:57:55 bouyer Exp $
 
---- configure.orig	Fri Apr 25 16:03:34 1997
-+++ configure	Fri Sep 17 23:08:21 1999
-@@ -4255,7 +4255,7 @@
-   cat conftest.$ac_ext >&5
-   rm -rf conftest*
-   CATOBJEXT=.mo
--		   DATADIRNAME=lib
-+		   DATADIRNAME=${PKGLOCALEDIR}
- fi
- rm -f conftest*
- 		INSTOBJEXT=.mo
-@@ -4509,7 +4509,7 @@
- 		 USE_INCLUDED_LIBINTL=yes
- 		 CATOBJEXT=.cat
- 		 INSTOBJEXT=.cat
--		 DATADIRNAME=lib
-+		 DATADIRNAME=${PKGLOCALEDIR}
- 		 INTLDEPS="../intl/libintl.a"
- 		 INTLLIBS=$INTLDEPS
- 		 LIBS=`echo $LIBS | sed -e 's/-lintl//'`
+--- configure.orig	Wed Sep 26 22:32:51 2001
++++ configure	Sun Nov 17 18:28:49 2002
+@@ -11495,7 +11495,7 @@
+         nls_cv_header_intl=
+     nls_cv_header_libgt=
+ 
+-        DATADIRNAME=share
++        DATADIRNAME=${PKGLOCALEDIR}
+ 
+         INSTOBJEXT=.mo
+ 

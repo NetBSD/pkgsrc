@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.20 2002/08/25 21:49:06 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2002/11/20 16:57:54 bouyer Exp $
 #
 
-DISTNAME=       tar-1.12
-PKGNAME=	gtar-base-1.12
+DISTNAME=       tar-1.13.25
+PKGNAME=	gtar-base-1.13.25
 SVR4_PKGNAME=	gtarb
 CATEGORIES=	archivers
-MASTER_SITES=   ${MASTER_SITE_GNU:=tar/}
-EXTRACT_SUFX=	.shar.gz
+MASTER_SITES=	ftp://alpha.gnu.org/gnu/tar/ \
+		ftp://ftp.sunsite.org.uk/Mirrors/alpha.gnu.org/gnu/tar/ \
+		ftp://ftp.funet.fi/pub/mirrors/alpha.gnu.org/gnu/tar/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/tar/tar.html
@@ -19,9 +20,7 @@ CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
-PLIST_SRC=	${.CURDIR}/PLIST.NetBSD
-.elif ${OPSYS} == "Darwin"
+.if ${OPSYS} == "Darwin"
 PLIST_SRC=	${.CURDIR}/PLIST.Darwin
 EXTRACT_SUFX=	.tar.gz
 .endif
