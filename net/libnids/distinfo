@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.4 2003/10/10 08:44:44 cube Exp $
+$NetBSD: distinfo,v 1.5 2003/10/28 16:57:00 cube Exp $
 
-SHA1 (libnids-1.17.tar.gz) = 4c0f5044a9f8758c5ecfb07af33be8eff5ef2f97
-Size (libnids-1.17.tar.gz) = 98410 bytes
-SHA1 (patch-aa) = 27004fe0f71c64b27e4f0c1f67377ba036f1b735
+SHA1 (libnids-1.18.tar.gz) = 3494e614e5e5d2f60f2ffe738307e60e77e04a81
+Size (libnids-1.18.tar.gz) = 114013 bytes
