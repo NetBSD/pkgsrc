@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.30 2003/06/02 01:21:22 jschauma Exp $
+# $NetBSD: Makefile,v 1.31 2003/06/27 12:18:11 hubertf Exp $
 #
 
-DISTNAME=	hylafax-4.1
-PKGREVISION=	4
+DISTNAME=	hylafax-4.1.5
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.hylafax.org/source/ \
 		ftp://ftp.leo.org/pub/comp/os/unix/networking/fax/hylafax/source/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	hallmanns@surfeu.de
 HOMEPAGE=	http://www.hylafax.org/
 COMMENT=	Telecommunication and fax server system
 
