@@ -1,9 +1,8 @@
 From the home page:
 
-Xplanet is similar to Xearth, where an image of the earth is rendered
-into an X window.  Xplanet can display several different map
-projections, including Azimuthal, Mercator, Mollweide, orthographic,
-or rectangular, as well as a window with a globe the user can rotate
-interactively.  The other planets and some satellites may also be
-displayed.  The latest version can always be found at
-http://xplanet.sourceforge.net.
+XaoS is a fast portable real-time interactive fractal zoomer. It
+displays the Mandelbrot set (among other escape time fractals) and
+allows you zoom smoothly into the fractal. Various coloring modes
+are provided for both the points inside and outside the selected
+set. In addition, switching between Julia and Mandelbrot fractal
+types and on-the-fly plane switching is provided.
