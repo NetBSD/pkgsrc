@@ -1,43 +1,27 @@
-$NetBSD: patch-aa,v 1.18 2001/12/03 08:21:22 martti Exp $
+$NetBSD: patch-aa,v 1.19 2002/02/05 04:17:32 jlam Exp $
 
---- configure.orig	Sun Dec  2 00:38:55 2001
-+++ configure	Mon Dec  3 08:41:49 2001
-@@ -3557,7 +3557,7 @@
- 
+--- configure.orig	Sat Dec  1 18:38:55 2001
++++ configure
+@@ -3587,8 +3587,6 @@
+ 	CFLAGS="$CFLAGS"
  	;;
- *-*-netbsd*)
--	need_dash_r=1
-+	#need_dash_r=1		# buildlink.mk
- 	;;
- *-*-freebsd*)
- 	check_for_libcrypt_later=1
-@@ -3589,7 +3589,7 @@
  *-*-solaris*)
- 	CPPFLAGS="$CPPFLAGS -I/usr/local/include"
- 	LDFLAGS="$LDFLAGS -L/usr/local/lib -R/usr/local/lib"
--	need_dash_r=1
-+	#need_dash_r=1		# buildlink.mk
+-	CPPFLAGS="$CPPFLAGS -I/usr/local/include"
+-	LDFLAGS="$LDFLAGS -L/usr/local/lib -R/usr/local/lib"
+ 	need_dash_r=1
  	cat >>confdefs.h <<\_ACEOF
  #define PAM_SUN_CODEBASE 1
- _ACEOF
-@@ -6216,6 +6216,7 @@
+@@ -4051,6 +4049,9 @@
+ 	;;
+ esac
  
- # Check whether user wants TCP wrappers support
- TCPW_MSG="no"
-+TCPW_LIB=""
++# pkgsrc handles any rpath settings this package needs
++need_dash_r=
++
+ # Allow user to specify flags
  
- # Check whether --with-tcp-wrappers or --without-tcp-wrappers was given.
- if test "${with_tcp_wrappers+set}" = set; then
-@@ -6252,6 +6253,8 @@
- #line 6252 "configure"
- #include "confdefs.h"
- 
-+#include <sys/cdefs.h>
-+#include <stdio.h>
- #include <tcpd.h>
- 					int deny_severity = 0, allow_severity = 0;
- 
-@@ -6289,6 +6292,7 @@
+ # Check whether --with-cflags or --without-cflags was given.
+@@ -6289,17 +6290,20 @@
  _ACEOF
  
  					TCPW_MSG="yes"
@@ -45,19 +29,33 @@ $NetBSD: patch-aa,v 1.18 2001/12/03 08:21:22 martti Exp $
  
  else
    echo "$as_me: failed program was:" >&5
-@@ -6300,6 +6304,7 @@
+ cat conftest.$ac_ext >&5
+ 
++					TCPW_LIB=""
+ 					{ { echo "$as_me:6297: error: *** libwrap missing" >&5
+ echo "$as_me: error: *** libwrap missing" >&2;}
+    { (exit 1); exit 1; }; }
  
  fi
  rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
-+LIBS="$saved_LIBS"
++			LIBS="$saved_LIBS"
  		fi
  
  fi;
-@@ -15590,6 +15595,7 @@
+@@ -15590,6 +15594,7 @@
  s,@TEST_MINUS_S_SH@,$TEST_MINUS_S_SH,;t t
  s,@LOGIN_PROGRAM_FALLBACK@,$LOGIN_PROGRAM_FALLBACK,;t t
  s,@LD@,$LD,;t t
-+s,@TCPW_LIB@,$TCPW_LIB,g
++s,@TCPW_LIB@,$TCPW_LIB,;t t
  s,@NO_SFTP@,$NO_SFTP,;t t
  s,@rsh_path@,$rsh_path,;t t
  s,@xauth_path@,$xauth_path,;t t
+@@ -16069,7 +16074,7 @@
+ echo "                 User binaries: $B"
+ echo "               System binaries: $C"
+ echo "           Configuration files: $D"
+-echo "               Askpass program: $E"
++echo "               Askpass program: ${ASKPASS_PROGRAM}"
+ echo "                  Manual pages: $F"
+ echo "                      PID file: $G"
+ echo "        sshd default user PATH: $H"
