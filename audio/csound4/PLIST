@@ -1,0 +1,35 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/28 17:16:48 ben Exp $
+bin/csound
+bin/csound-config
+bin/cvanal
+bin/dnoise
+bin/envext
+bin/extract
+bin/extractor
+bin/flcsound
+bin/hetro
+bin/lpanal
+bin/mixer
+bin/pvanal
+bin/pvlook
+bin/scale
+bin/scot
+bin/scsort
+bin/sdif2ad
+bin/sndinfo
+bin/srconv
+include/csound/OpcodeBase.hpp
+include/csound/autoheader.h
+include/csound/config.h
+include/csound/cscore.h
+include/csound/csound.h
+include/csound/cwindow.h
+include/csound/opcode.h
+include/csound/sysdep.h
+lib/libcscore.a
+lib/libcsound.la
+share/csound/csound.xmg
+share/csound/csoundgbs.html
+share/csound/flcsound.html
+@dirrm include/csound
+@dirrm share/csound
