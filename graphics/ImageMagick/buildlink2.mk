@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2004/01/03 18:49:41 reed Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2004/03/02 10:31:48 adam Exp $
 
 .if !defined(IMAGEMAGICK_BUILDLINK2_MK)
 IMAGEMAGICK_BUILDLINK2_MK=	# defined
@@ -17,8 +17,8 @@ BUILDLINK_FILES.ImageMagick+=	lib/libMagick++.*
 
 .include "../../archivers/bzip2/buildlink2.mk"
 .include "../../graphics/jasper/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/libexif/buildlink2.mk"
+.include "../../graphics/libwmf/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	ImageMagick-buildlink

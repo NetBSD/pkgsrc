@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.12 2004/02/27 08:51:15 grant Exp $
+@comment $NetBSD: PLIST,v 1.13 2004/03/02 10:31:48 adam Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/animate
 bin/composite
+bin/conjure
 bin/convert
 bin/display
 bin/identify

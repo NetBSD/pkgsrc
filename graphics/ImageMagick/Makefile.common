@@ -1,34 +1,29 @@
-# $NetBSD: Makefile.common,v 1.7 2004/01/20 12:18:15 agc Exp $
+# $NetBSD: Makefile.common,v 1.8 2004/03/02 10:31:48 adam Exp $
 
 IM_MAJOR_VER=		5.5.7
-IM_MINOR_VER=		11
+IM_MINOR_VER=		17
 IM_MAJOR_LIB_VER=	${IM_MAJOR_VER}
 
 .if (${IM_MINOR_VER} != NONE)
-DISTSUFFIX=		${IM_MAJOR_VER}-${IM_MINOR_VER}
+DISTSUFFIX=	${IM_MAJOR_VER}-${IM_MINOR_VER}
 .else
-DISTSUFFIX=		${IM_MAJOR_VER}
+DISTSUFFIX=	${IM_MAJOR_VER}
 .endif
 
-DISTNAME=		ImageMagick-${DISTSUFFIX}
-DISTVERSION=		${DISTSUFFIX:S/-/./}
+DISTNAME=	ImageMagick-${DISTSUFFIX}
+DISTVERSION=	${DISTSUFFIX:S/-/./}
 
-PKGREVISION=		1
+CATEGORIES=	graphics
+MASTER_SITES=	ftp://ftp.imagemagick.net/pub/ImageMagick/ \
+		ftp://ftp.nluug.nl/pub/ImageMagick/ \
+		ftp://ftp.yggdrasil.com/mirrors/site/ftp.simplesystems.org/pub/ImageMagick/ \
+		ftp://ftp.fu-berlin.de/unix/X11/graphics/ImageMagick/ \
+		ftp://ftp.sunet.se/pub/multimedia/graphics/ImageMagick/
+EXTRACT_SUFX=	.tar.bz2
 
-CATEGORIES=		graphics
-MASTER_SITES=		ftp://ftp.nluug.nl/pub/ImageMagick/ \
-			ftp://ftp.yggdrasil.com/mirrors/site/ftp.simplesystems.org/pub/ImageMagick/ \
-			ftp://ftp.fu-berlin.de/unix/X11/graphics/ImageMagick/ \
-			ftp://ftp.sunet.se/pub/multimedia/graphics/ImageMagick/
-EXTRACT_SUFX=		.tar.bz2
-
-WRKSRC=			${WRKDIR}/ImageMagick-${IM_MAJOR_VER}
+WRKSRC=		${WRKDIR}/ImageMagick-${IM_MAJOR_VER}
 
 # For things for which we do not specify an explicit dependency above, disable
-# so that we don't cause implicit "hidden" dependencies.  Users may reenable
-# any of these manually as desired (PerlMagick should probably be a separate
-# pkg, however).
-CONFIGURE_ARGS+=	--without-dps --without-fpx \
-			--without-hdf --without-jbig --without-jp2 \
-			--without-threads --without-ttf --without-wmf \
-			--without-xml --without-lcms
+# so that we don't cause implicit "hidden" dependencies.
+CONFIGURE_ARGS+=	--without-dps --without-fpx --without-hdf \
+			--without-jbig --without-threads --without-lcms

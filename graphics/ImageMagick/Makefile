@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.112 2004/02/27 08:51:44 grant Exp $
+# $NetBSD: Makefile,v 1.113 2004/03/02 10:31:48 adam Exp $
 
 .include "Makefile.common"
 
-PKGNAME=		ImageMagick-${DISTVERSION}
-PKGREVISION=		2
-CATEGORIES=		graphics
+PKGNAME=	ImageMagick-${DISTVERSION}
 
-MAINTAINER=		tron@NetBSD.org
-HOMEPAGE=		http://www.simplesystems.org/ImageMagick/
-COMMENT=		Package for display and interactive manipulation of images
+MAINTAINER=	tron@NetBSD.org
+HOMEPAGE=	http://www.simplesystems.org/ImageMagick/
+COMMENT=	Package for display and interactive manipulation of images
 
-DEPENDS+=		mpeg2codec-1.2:../../graphics/mpeg2codec
+DEPENDS+=	mpeg2codec-1.2:../../graphics/mpeg2codec
 
-CONFLICTS=		geomview<1.8.1nb2  # used to have a program named 'animate'
+CONFLICTS=	geomview<1.8.1nb2  # used to have a program named 'animate'
 
 USE_BUILDLINK3=		YES
 USE_X11=		YES
@@ -41,10 +39,14 @@ CFLAGS=			-O
 # Some configure_args come from Makefile.common
 CONFIGURE_ARGS+=	--without-perl
 
+# Remove the empty directory
+post-install:
+	${RMDIR} ${PREFIX}/share/ImageMagick
+
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/libexif/buildlink3.mk"
+.include "../../graphics/libwmf/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
