@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: dircproxy.sh,v 1.1 2003/06/02 15:20:08 jmmv Exp $
+# $NetBSD: dircproxy.sh,v 1.2 2003/11/21 23:06:12 xtraeme Exp $
 #
 
 # PROVIDE: dircproxy
@@ -11,7 +11,7 @@
 name="dircproxy"
 rcvar=$name
 command="@PREFIX@/bin/${name}"
-command_args="-f @PKG_SYSCONFDIR@/${name}rc -p /var/run/${name}.pid"
+command_args="-f @PKG_SYSCONFDIR@/${name}rc --pid-file=/var/run/${name}.pid"
 pidfile="/var/run/${name}.pid"
 required_files="@PKG_SYSCONFDIR@/${name}rc"
 
