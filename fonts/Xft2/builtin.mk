@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2004/03/10 17:57:14 jlam Exp $
+# $NetBSD: builtin.mk,v 1.2 2004/03/29 05:43:30 jlam Exp $
 
 _X11_TMPL=	${X11BASE}/lib/X11/config/X11.tmpl
 
@@ -47,7 +47,7 @@ _XF86_VERSION=	${_XF86_MAJOR}.${_XF86_MINOR}
 _XF86_VERSION=	${_XF86_MAJOR}.${_XF86_MINOR}.${_XF86_TEENY}
 .          endif
 .        endif
-MAKEFLAGS+=	_XF86_VERSION=${_XF86_VERSION}
+BUILDLINK_VARS+=	_XF86_VERSION
 .      endif
 .      for _xrender_version_ in ${_XFT2_VERSIONS}
 .        for _pattern_ in ${_XFT2_${_xrender_version_}}
@@ -58,15 +58,17 @@ _XFT2_VERSION?=	${_xrender_version_}
 .      endfor
 _XFT2_VERSION?=		0.0
 BUILTIN_PKG.Xft2=	Xft2-${_XFT2_VERSION}
-MAKEFLAGS+=		BUILTIN_PKG.Xft2=${BUILTIN_PKG.Xft2}
+BUILDLINK_VARS+=	BUILTIN_PKG.Xft2
 .    endif
 .  endif
-MAKEFLAGS+=	IS_BUILTIN.Xft2=${IS_BUILTIN.Xft2}
-.endif
+BUILDLINK_VARS+=	IS_BUILTIN.Xft2
+.endif	# IS_BUILTIN.Xft2
 
-CHECK_BUILTIN.Xft2?=	no
-.if !empty(CHECK_BUILTIN.Xft2:M[yY][eE][sS])
-USE_BUILTIN.Xft2=	yes
+.if defined(USE_BUILTIN.fontconfig) && !empty(USE_BUILTIN.fontconfig:M[nN][oO])
+USE_BUILTIN.Xft2=	no
+.endif
+.if defined(USE_BUILTIN.Xrender) && !empty(USE_BUILTIN.Xrender:M[nN][oO])
+USE_BUILTIN.Xft2=	no
 .endif
 
 .if !defined(USE_BUILTIN.Xft2)
@@ -87,6 +89,9 @@ USE_BUILTIN.Xft2!=	\
 .  endif
 .endif	# USE_BUILTIN.Xft2
 
+CHECK_BUILTIN.Xft2?=	no
+.if !empty(CHECK_BUILTIN.Xft2:M[nN][oO])
+
 .if !empty(USE_BUILTIN.Xft2:M[nN][oO])
 BUILDLINK_DEPENDS.Xft2+=	Xft2>=2.1nb1
 .endif
@@ -98,3 +103,5 @@ BUILDLINK_FILES.Xft2+=	lib/pkgconfig/xft.pc
 USE_BUILTIN.Xrender=	yes
 USE_BUILTIN.fontconfig=	yes
 .endif
+
+.endif	# CHECK_BUILTIN.Xft2
