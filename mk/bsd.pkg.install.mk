@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.80 2005/02/03 23:29:08 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.81 2005/02/05 01:17:59 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -477,8 +477,11 @@ FILES_SUBST+=		XARGS=${XARGS:Q}
 
 FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
+PKG_REFCOUNT_DBDIR?=	${PKG_DBDIR}.refcount
+
 INSTALL_SCRIPTS_ENV=	PKG_PREFIX=${PREFIX}
 INSTALL_SCRIPTS_ENV+=	PKG_METADATA_DIR=${_PKG_DBDIR}/${PKGNAME}
+INSTALL_SCRIPTS_ENV+=	PKG_REFCOUNT_DBDIR=${PKG_REFCOUNT_DBDIR}
 
 .PHONY: pre-install-script post-install-script
 
