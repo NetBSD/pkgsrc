@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1325 2003/12/23 11:14:20 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1326 2003/12/23 18:27:24 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -4911,21 +4911,6 @@ GENERATE_PLIST+=	${PERL5_GENERATE_PLIST};
 .  endif
 .endif
 
-.PHONY: message
-message: ${MESSAGE}
-.ifdef MESSAGE
-${MESSAGE}: ${MESSAGE_SRC}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -z "${MESSAGE_SRC}" ]; then				\
-		${ECHO} "${MESSAGE_SRC} not found.";			\
-		${ECHO} "Please set MESSAGE_SRC correctly.";		\
-	else								\
-		${CAT} ${MESSAGE_SRC} |					\
-			${SED} ${MESSAGE_SUBST_SED}			\
-			> ${MESSAGE};					\
-	fi
-.endif
-
 # GENERATE_PLIST is a sequence of commands, terminating in a semicolon,
 #	that outputs contents for a PLIST to stdout and is appended to
 #	the contents of ${_PLIST_SRC}.
@@ -4963,6 +4948,24 @@ ${PLIST}: ${_PLIST_SRC}
 		> ${PLIST}; 						\
 	  ${MAKE} ${MAKEFLAGS} do-shlib-handling			\
 		SHLIB_PLIST_MODE=1
+
+# generate ${MESSAGE} from ${MESSAGE_SRC} by substituting
+# for MESSAGE_SUBST entries 
+
+.PHONY: message
+message: ${MESSAGE}
+.ifdef MESSAGE
+${MESSAGE}: ${MESSAGE_SRC}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ -z "${MESSAGE_SRC}" ]; then				\
+		${ECHO} "${MESSAGE_SRC} not found.";			\
+		${ECHO} "Please set MESSAGE_SRC correctly.";		\
+	else								\
+		${CAT} ${MESSAGE_SRC} |					\
+			${SED} ${MESSAGE_SUBST_SED}			\
+			> ${MESSAGE};					\
+	fi
+.endif
 
 # generate ${DESCR} from ${DESCR_SRC} by:
 # - Appending the homepage URL, if any
