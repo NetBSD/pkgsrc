@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/03/19 02:25:28 xtraeme Exp $
+# $NetBSD: Makefile,v 1.12 2004/06/15 13:08:59 grant Exp $
 #
 
 DISTNAME=	plib-1.6.0
@@ -13,6 +13,7 @@ COMMENT=	Libraries for writing portable games/realtime interactive apps
 USE_BUILDLINK3=	YES
 USE_X11=	YES
 GNU_CONFIGURE=	YES
+USE_LANGUAGES=	c++
 CPPFLAGS+=	-Dunix=1
 
 .include "../../graphics/Mesa/buildlink3.mk"
