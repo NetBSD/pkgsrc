@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.7 2004/01/03 18:49:45 reed Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2004/01/08 08:11:41 martti Exp $
 #
 # This Makefile fragment is included by packages that use xfce4-iconbox.
 #
@@ -9,7 +9,7 @@
 XFCE4_ICONBOX_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xfce4-iconbox
-BUILDLINK_DEPENDS.xfce4-iconbox?=		xfce4-iconbox>=4.0.2nb1
+BUILDLINK_DEPENDS.xfce4-iconbox?=		xfce4-iconbox>=4.0.3
 BUILDLINK_PKGSRCDIR.xfce4-iconbox?=		../../graphics/xfce4-iconbox
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xfce4-iconbox=xfce4-iconbox

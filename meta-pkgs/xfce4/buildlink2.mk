@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2004/01/03 18:49:46 reed Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2004/01/08 08:11:41 martti Exp $
 #
 # This Makefile fragment is included by packages that use xfce4.
 #
@@ -9,7 +9,7 @@
 XFCE4_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xfce4
-BUILDLINK_DEPENDS.xfce4?=		xfce4>=4.0.2nb1
+BUILDLINK_DEPENDS.xfce4?=		xfce4>=4.0.3
 BUILDLINK_PKGSRCDIR.xfce4?=		../../meta-pkgs/xfce4
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xfce4=xfce4

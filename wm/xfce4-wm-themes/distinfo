@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/12/22 08:50:41 martti Exp $
+$NetBSD: distinfo,v 1.3 2004/01/08 08:11:41 martti Exp $
 
-SHA1 (xfwm4-themes-4.0.0.tar.gz) = 27f5934ac6db4b2514e474580c44f5d0002b5e55
-Size (xfwm4-themes-4.0.0.tar.gz) = 641292 bytes
+SHA1 (xfwm4-themes-4.0.3.tar.gz) = 14c6693cf154837b46f74faf24c28bff9b42c313
+Size (xfwm4-themes-4.0.3.tar.gz) = 640949 bytes

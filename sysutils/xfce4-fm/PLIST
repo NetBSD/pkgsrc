@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/12/22 08:50:39 martti Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/01/08 08:11:41 martti Exp $
 bin/fgr
 bin/scramble
 bin/xfapps
@@ -76,6 +76,8 @@ ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xffm.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/xffm.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/xffm.mo
