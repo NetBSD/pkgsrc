@@ -1,21 +1,19 @@
-$NetBSD: patch-ak,v 1.2 2003/08/05 15:12:47 adam Exp $
+$NetBSD: patch-ak,v 1.3 2003/12/15 14:47:37 adam Exp $
 
---- src/libgame/system.c.orig	2003-08-04 23:01:27.000000000 +0200
+--- src/libgame/system.c.orig	2003-12-13 23:30:41.000000000 +0000
 +++ src/libgame/system.c
-@@ -1163,10 +1163,16 @@ inline void InitJoysticks()
+@@ -1162,10 +1162,14 @@ inline void InitJoysticks()
    return;	/* joysticks generally deactivated by compile-time directive */
  #endif
  
 +  /* pkgsrc: InitJoystick will be called more than once, so reset
-+   * the state variable 'joystick' only if there's no joystick available
-+   * (yet).
++   * the state variable 'joystick' only if there's no joystick available (yet)
 +   */
    /* always start with reliable default values */
 -  joystick.status = JOYSTICK_NOT_AVAILABLE;
--  for (i=0; i<MAX_PLAYERS; i++)
+-  for (i = 0; i < MAX_PLAYERS; i++)
 -    joystick.fd[i] = -1;		/* joystick device closed */
-+  if (joystick.status == JOYSTICK_NOT_AVAILABLE)
-+  {
++  if (joystick.status == JOYSTICK_NOT_AVAILABLE) {
 +    for (i=0; i<MAX_PLAYERS; i++)
 +      joystick.fd[i] = -1;		/* joystick device closed */
 +  }
