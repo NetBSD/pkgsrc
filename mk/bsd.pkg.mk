@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.861 2001/11/25 19:04:19 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.862 2001/11/25 19:38:55 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -71,7 +71,11 @@ PKG_SYSCONFDIR=		${PKG_SYSCONFDIR.${PKGBASE}}
 .else
 PKG_SYSCONFSUBDIR?=	# empty
 PKG_SYSCONFBASE?=	${PREFIX}/etc
+.  if empty(PKG_SYSCONFSUBDIR)
+PKG_SYSCONFDIR?=	${PKG_SYSCONFBASE}
+.  else
 PKG_SYSCONFDIR?=	${PKG_SYSCONFBASE}/${PKG_SYSCONFSUBDIR}
+.  endif
 .endif
 
 CONFIGURE_ENV+=		PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
