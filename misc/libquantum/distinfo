@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2005/02/01 20:52:38 augustss Exp $
+$NetBSD: distinfo,v 1.2 2005/02/02 11:22:42 augustss Exp $
 
 SHA1 (libquantum-0.2.4.tar.gz) = dbd76434b7d4026db96aedcd16ae4cd01fb341cd
 Size (libquantum-0.2.4.tar.gz) = 211403 bytes
+SHA1 (patch-aa) = 734170cbc1a30815e89311f0a2d2df5a8d30b3d2
