@@ -1,21 +1,15 @@
---- makefile.orig	Fri May 16 07:53:30 1997
-+++ makefile	Thu Oct  2 16:48:59 1997
-@@ -5,29 +5,41 @@
- # Where the zlib library and include files are located
- #ZLIBLIB=/usr/local/lib
- #ZLIBINC=/usr/local/include
--ZLIBLIB=../zlib
--ZLIBINC=../zlib
-+#ZLIBLIB=../zlib
-+#ZLIBINC=../zlib
+--- scripts/makefile.std.orig	Tue Jul 14 21:39:10 1998
++++ scripts/makefile.std	Tue Jul 14 21:49:54 1998
+@@ -8,41 +8,34 @@
+ ZLIBLIB=../zlib
+ ZLIBINC=../zlib
  
 -CC=cc
--CFLAGS=-I$(ZLIBINC) -O # -g -DPNG_DEBUG=1
+-CFLAGS=-I$(ZLIBINC) -O # -g -DPNG_DEBUG=5
 -LDFLAGS=-L. -L$(ZLIBLIB) -lpng -lz -lm
-+VER=0.96
-+#CC=cc
-+#CFLAGS=-I$(ZLIBINC) -O # -g -DPNG_DEBUG=1
-+LDFLAGS=-L. -lpng -lz -lm -static
++CC=${LIBTOOL} --mode=compile cc
++CFLAGS=-O # -g -DPNG_DEBUG=5
++LDFLAGS=libpng.la -lz -lm
  
  #RANLIB=echo
  RANLIB=ranlib
@@ -29,39 +23,34 @@
  	pngwtran.o pngmem.o pngerror.o pngpread.o
  
 -all: libpng.a pngtest
-+.SUFFIXES: .c .so .o
-+
-+.c.so:
-+	${CC} -fpic -DPIC ${CFLAGS} -c ${.IMPSRC} -o ${.TARGET}
-+
-+all: libpng.a libpng.so.${VER}
++all: libpng.la pngtest
  
- libpng.a: $(OBJS)
- 	ar rc $@  $(OBJS)
- 	$(RANLIB) $@
+-libpng.a: $(OBJS)
+-	ar rc $@  $(OBJS)
+-	$(RANLIB) $@
++libpng.la: $(OBJS)
++	${LIBTOOL} --mode=link cc -o $@ ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:0
  
-+libpng.so.${VER}: $(OBJS:S/o$/so/g)
-+	${LD} -x -Bshareable -o libpng.so.${VER} $(OBJS:S/o$/so/g)
-+
-+# XXX - agc - weird shared library load line
-+#	${CC} -shared -Wl,-x -Wl,-assert -Wl,pure-text -o $@ $(OBJS:S/o$/so/g) -lz
-+
- pngtest: pngtest.o libpng.a
- 	$(CC) -o pngtest $(CCFLAGS) pngtest.o $(LDFLAGS)
+-pngtest: pngtest.o libpng.a
+-	$(CC) -o pngtest $(CFLAGS) pngtest.o $(LDFLAGS)
++pngtest: pngtest.o libpng.la
++	${LIBTOOL} --mode=link cc -o pngtest $(CFLAGS) pngtest.o $(LDFLAGS)
  
-@@ -37,12 +49,9 @@
- install: libpng.a
- 	-@mkdir $(prefix)/include
- 	-@mkdir $(prefix)/lib
+ test: pngtest
+ 	./pngtest
+ 
+-install: libpng.a
+-	-@mkdir $(prefix)/include
+-	-@mkdir $(prefix)/lib
 -	cp png.h $(prefix)/include
 -	cp pngconf.h $(prefix)/include
 -	chmod 644 $(prefix)/include/png.h
 -	chmod 644 $(prefix)/include/pngconf.h
 -	cp libpng.a $(prefix)/lib
 -	chmod 644 $(prefix)/lib/libpng.a
++install: libpng.la
 +	${BSD_INSTALL_DATA} png.h pngconf.h $(prefix)/include
-+	${BSD_INSTALL_DATA} libpng.a libpng.so.${VER} $(prefix)/lib
-+	ranlib $(prefix)/lib/libpng.a
++	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} libpng.la $(prefix)/lib
  
  clean:
  	rm -f *.o libpng.a pngtest pngout.png
