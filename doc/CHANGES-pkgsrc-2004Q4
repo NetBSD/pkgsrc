@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.29 2005/01/11 17:14:34 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.30 2005/01/15 06:39:40 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -67,3 +67,5 @@ Pullup ticket 219 - requested by Manuel Bouyer
 build fix for p5-DBD-mysql
 Pullup ticket 220 - requested by Manuel Bouyer
 runtime fix for horde
+Pullup ticket 226 - requested by Takahiro Kambe
+security fix for squid
