@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2004/11/17 19:33:11 xtraeme Exp $
+# $NetBSD: options.mk,v 1.3 2004/11/21 07:57:38 jlam Exp $
 #
 # XXX Support for the following variables will be removed after the
 # XXX pkgsrc-2004Q4 branch is released:
@@ -11,11 +11,11 @@ PKG_DEFAULT_OPTIONS+=	db4
 .endif
 
 .if defined(APR_USE_OPENLDAP) && !empty(APR_USE_OPENLDAP:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	openldap
+PKG_DEFAULT_OPTIONS+=	ldap
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.apr
-PKG_SUPPORTED_OPTIONS=	db4 openldap
+PKG_SUPPORTED_OPTIONS=	db4 ldap
 
 .include "../../mk/bsd.options.mk"
 
@@ -27,7 +27,7 @@ APU_CONFIGURE_ARGS+=	\
 APU_CONFIGURE_ARGS+=	--with-dbm=sdbm
 .endif
 
-.if !empty(PKG_OPTIONS:Mopenldap)
+.if !empty(PKG_OPTIONS:Mldap)
 APU_CONFIGURE_ARGS+=	--with-ldap
 APR_CONFIGURE_ARGS+=	--with-ldap
 .  include "../../databases/openldap/buildlink3.mk"
