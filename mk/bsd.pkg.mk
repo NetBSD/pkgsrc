@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.550 2000/08/24 23:29:26 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.551 2000/08/27 02:15:49 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -133,8 +133,12 @@ RESTRICTED?=		uses Kerberos encryption code
 BUILD_DEFS+=		KERBEROS
 .endif
 
+PERL5?=			${LOCALBASE}/bin/perl
 .if defined(USE_PERL5)
-DEPENDS+=		perl-*:../../lang/perl5
+DEPENDS+=		perl-5.*:../../lang/perl5
+PERL5_SITELIB!=		eval `${PERL5} -V:installsitelib`; echo $${installsitelib}
+PERL5_SITEARCH!=	eval `${PERL5} -V:installsitearch`; echo $${installsitearch}
+PERL5_ARCHLIB!=		eval `${PERL5} -V:installarchlib`; echo $${installarchlib}
 .endif
 
 .if defined(USE_FORTRAN)
@@ -443,14 +447,17 @@ DLIST=			${WRKDIR}/.DLIST
 DDIR=			${WRKDIR}/.DDIR
 
 # Set PLIST_SUBST to substitute "${variable}" to "value" in PLIST
-PLIST_SUBST+=	OPSYS=${OPSYS}					\
-		OS_VERSION=${OS_VERSION}			\
-		MACHINE_ARCH=${MACHINE_ARCH}			\
-		MACHINE_GNU_ARCH=${MACHINE_GNU_ARCH}		\
-		MACHINE_GNU_PLATFORM=${MACHINE_GNU_PLATFORM}	\
-		LOWER_VENDOR=${LOWER_VENDOR}			\
-		LOWER_OPSYS=${LOWER_OPSYS}			\
-		PKGNAME=${PKGNAME}
+PLIST_SUBST+=	OPSYS=${OPSYS}						\
+		OS_VERSION=${OS_VERSION}				\
+		MACHINE_ARCH=${MACHINE_ARCH}				\
+		MACHINE_GNU_ARCH=${MACHINE_GNU_ARCH}			\
+		MACHINE_GNU_PLATFORM=${MACHINE_GNU_PLATFORM}		\
+		LOWER_VENDOR=${LOWER_VENDOR}				\
+		LOWER_OPSYS=${LOWER_OPSYS}				\
+		PKGNAME=${PKGNAME}					\
+		PERL5_SITELIB=${PERL5_SITELIB:S/^${LOCALBASE}\///}	\
+		PERL5_SITEARCH=${PERL5_SITEARCH:S/^${LOCALBASE}\///}	\
+		PERL5_ARCHLIB=${PERL5_ARCHLIB:S/^${LOCALBASE}\///}
 
 # Set INSTALL_FILE to be the name of any INSTALL file
 .if !defined(INSTALL_FILE) && exists(${PKGDIR}/INSTALL)
@@ -2997,7 +3004,7 @@ fake-pkg: ${PLIST} ${DESCR}
 .endfor
 	@${ECHO} "CC=	${CC}-`${CC} --version`" >> ${BUILD_INFO_FILE}
 .ifdef USE_PERL5
-	@${ECHO} "PERL=	`${LOCALBASE}/bin/perl --version | ${GREP} 'This is perl'`" >> ${BUILD_INFO_FILE}
+	@${ECHO} "PERL=	`${PERL5} --version | ${GREP} 'This is perl'`" >> ${BUILD_INFO_FILE}
 .endif
 .ifdef USE_GMAKE
 	@${ECHO} "GMAKE=	`${GMAKE} --version | ${GREP} version`" >> ${BUILD_INFO_FILE}
@@ -3094,6 +3101,8 @@ MANCOMPRESSED=	yes
 #   (we don't take any notice of MANCOMPRESSED as many packages have .gz
 #   pages in PLIST even when they install manpages without compressing them)
 # - substituting by ${PLIST_SUBST}
+# - adding files and appropriate rmdir statements for perl5 modules if
+#   PERL5_PACKLIST is defined
 
 .if ${OPSYS} == "NetBSD"
 IMAKE_MAN_CMD=
@@ -3137,6 +3146,24 @@ MANZ_NAWK_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?man[1-9ln]\/.*[1-9ln]\.gz$$/
 MANZ_EXPRESSION= 
 .endif # SunOS
 
+.if defined(PERL5_PACKLIST)
+PERL5_COMMENT=		( ${ECHO} "@comment The following lines are automatically generated"; \
+	${ECHO} "@comment from the installed .packlist files." ) >> ${PLIST}
+PERL5_PACKLIST_FILES=	( ${CAT} ${PERL5_PACKLIST}; for f in ${PERL5_PACKLIST}; do [ ! -f $$f ] || echo $$f; done ) \
+	| ${SED} -e "s,/./,/,g" -e "s,${PREFIX}/,," \
+	| sort -u >> ${PLIST}
+PERL5_PACKLIST_DIRS=	( ${CAT} ${PERL5_PACKLIST}; for f in ${PERL5_PACKLIST}; do [ ! -f $$f ] || echo $$f; done ) \
+	| ${SED} -e "s,/./,/,g" -e "s,${PREFIX}/,," \
+		-e "s,^,@unexec rmdir -p %D/," \
+		-e "s,/[^/]*$$, 2>/dev/null || true," \
+	| sort -ur >> ${PLIST}
+PERL5_GENERATE_PLIST=	${PERL5_COMMENT}; \
+			${PERL5_PACKLIST_FILES}; \
+			${PERL5_PACKLIST_DIRS}
+.else
+PERL5_GENERATE_PLIST=	${TRUE}
+.endif
+
 plist: ${PLIST}
 ${PLIST}: ${PLIST_SRC}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -3150,6 +3177,7 @@ ${PLIST}: ${PLIST_SRC}
 			${SED} 	${MANZ_EXPRESSION}			\
 				${PLIST_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}\
 			> ${PLIST}; 					\
+		${PERL5_GENERATE_PLIST};				\
 	fi
 
 # generate ${DESCR} from ${DESCR_SRC} by:
