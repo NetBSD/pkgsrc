@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2001/08/09 19:32:03 wiz Exp $
+# $NetBSD: Makefile,v 1.105 2001/09/05 17:30:40 jlam Exp $
 #
 
 COMMENT=	Programming languages
@@ -60,7 +60,6 @@ SUBDIR+=	nhc98
 SUBDIR+=	ocaml
 SUBDIR+=	p2c
 SUBDIR+=	perl5
-SUBDIR+=	perl5-base
 SUBDIR+=	pforth
 SUBDIR+=	pgcc
 SUBDIR+=	py-extclass
