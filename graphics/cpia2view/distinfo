@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/07 08:15:20 hamajima Exp $
+
+SHA1 (cpia2_driver-1.0.tgz) = 72c70f88fd894118510e761c9c9f5f5a928e7e42
+Size (cpia2_driver-1.0.tgz) = 47375 bytes
+SHA1 (cpia2_driver-1.0-bsd-0.03.patch.gz) = 953a7ae4eafd5e3476b0db617703ff291caab3f2
+Size (cpia2_driver-1.0-bsd-0.03.patch.gz) = 17497 bytes
