@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/10/03 00:13:23 tv Exp $
+# $NetBSD: Makefile,v 1.6 2004/10/29 05:59:24 jdolecek Exp $
 
 DISTNAME=		sqlrelay-0.33.1
 PKGREVISION=		1
@@ -24,7 +24,7 @@ SQLRELAY.${_db_}?=	YES
 .endfor
 
 .if defined(SQLRELAY.mysql) && ${SQLRELAY.mysql} == "YES"
-.  include "../../databases/mysql-client/buildlink3.mk"
+.  include "../../mk/mysql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_DIR}
 .endif
 

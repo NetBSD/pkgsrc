@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/10/03 00:13:22 tv Exp $
+# $NetBSD: Makefile,v 1.24 2004/10/29 05:59:23 jdolecek Exp $
 #
 
 DISTNAME=		DBD-mysql-2.9004
@@ -21,7 +21,7 @@ PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/DBD/mysql/.packlist
 
 MAKE_PARAMS+=		--nocatchstderr
 
-.include "../../databases/mysql-client/buildlink3.mk"
+.include "../../mk/mysql.buildlink3.mk"
 .include "../../databases/p5-DBI/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

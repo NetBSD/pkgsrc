@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/10/03 00:12:55 tv Exp $
+# $NetBSD: Makefile,v 1.19 2004/10/29 05:59:24 jdolecek Exp $
 
 DISTNAME=	teapop-0.3.8
 PKGREVISION=	1
@@ -39,7 +39,7 @@ CONFIGURE_ARGS+=--disable-vpop
 .endif
 
 .if defined(TEAPOP_WITH_MYSQL)
-.include "../../databases/mysql-client/buildlink3.mk"
+.include "../../mk/mysql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
 LDFLAGS+=	${BUILDLINK_LDFLAGS.mysql-client}
 .endif

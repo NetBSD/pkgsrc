@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/10/03 00:17:51 tv Exp $
+# $NetBSD: Makefile,v 1.11 2004/10/29 05:59:24 jdolecek Exp $
 
 DISTNAME=	flow-tools-0.67
 PKGREVISION=	1
@@ -43,7 +43,7 @@ PKG_SUPPORTED_OPTIONS=	mysql postgresql
 
 # MySQL support.
 .if !empty(PKG_OPTIONS:Mmysql)
-.  include "../../databases/mysql-client/buildlink3.mk"
+.  include "../../mk/mysql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
 .endif
 
