@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1403 2004/02/14 15:22:42 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1404 2004/02/14 17:18:49 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -405,6 +405,7 @@ SHLIBTOOL?=		${PKG_SHLIBTOOL}
 BUILD_DEPENDS+=		libtool-base>=${LIBTOOL_REQD}:../../devel/libtool-base
 CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
+LIBTOOL_OVERRIDE?=	libtool */libtool */*/libtool
 .endif
 
 .if defined(BUILD_USES_MSGFMT) && \
@@ -2429,31 +2430,31 @@ _CONFIGURE_POSTREQ+=	do-libtool-override
 .PHONY: do-libtool-override
 do-libtool-override:
 .  if defined(LIBTOOL_OVERRIDE)
-.    for libtool in ${LIBTOOL_OVERRIDE}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -f ${libtool} ]; then					\
-		(${ECHO} '#!${CONFIG_SHELL}';				\
-		 ${ECHO} 'exec ${_LIBTOOL} "$$@"';			\
-		) > ${libtool}.override;				\
-		if [ -x ${libtool} ]; then				\
-			${CHMOD} +x ${libtool}.override;		\
+.    for _pattern_ in ${LIBTOOL_OVERRIDE}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC};			\
+	for file in ${_pattern_}; do					\
+		if [ -f "$$file" ]; then				\
+			${RM} -f $$file;				\
+			(${ECHO} '#!${CONFIG_SHELL}';			\
+		 	 ${ECHO} 'exec ${_LIBTOOL} "$$@"';		\
+			) > $$file;					\
+			${CHMOD} +x $$file;				\
 		fi;							\
-		${MV} -f ${libtool}.override ${libtool};		\
-	fi
+	done
 .    endfor
 .  endif
 .  if defined(SHLIBTOOL_OVERRIDE)
-.    for libtool in ${SHLIBTOOL_OVERRIDE}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -f ${libtool} ]; then					\
-		(${ECHO} '#!${CONFIG_SHELL}';				\
-		 ${ECHO} 'exec ${_SHLIBTOOL} "$$@"';			\
-		) > ${libtool}.override;				\
-		if [ -x ${libtool} ]; then				\
-			${CHMOD} +x ${libtool}.override;		\
+.    for _pattern_ in ${SHLIBTOOL_OVERRIDE}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC};			\
+	for file in ${_pattern_}; do					\
+		if [ -f "$$file" ]; then				\
+			${RM} -f $$file;				\
+			(${ECHO} '#!${CONFIG_SHELL}';			\
+		 	 ${ECHO} 'exec ${_SHLIBTOOL} "$$@"';		\
+			) > $$file;					\
+			${CHMOD} +x $$file;				\
 		fi;							\
-		${MV} -f ${libtool}.override ${libtool};		\
-	fi
+	done
 .    endfor
 .  endif
 .endif
