@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.324 1999/08/25 13:37:34 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.325 1999/08/26 15:29:58 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -358,7 +358,7 @@ BUILD_INFO_FILE=	${WRKDIR}/BuildInfo
 .ifndef PKG_ARGS
 PKG_ARGS=		-v -c ${COMMENT} -d ${DESCR} -f ${PLIST} -l
 PKG_ARGS+=		-b ${BUILD_VERSION_FILE} -B ${BUILD_INFO_FILE}
-PKG_ARGS+=		-p ${PREFIX} -P "`${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=true|sort -u`"
+PKG_ARGS+=		-p ${PREFIX} -P "`${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=false|sort -u`"
 .ifdef CONFLICTS
 PKG_ARGS+=		-C "${CONFLICTS}"
 .endif
