@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1 2001/10/31 22:11:11 zuntum Exp $
+# $NetBSD: DEINSTALL,v 1.2 2003/08/30 20:23:08 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -21,9 +21,6 @@ X11_HOSTDEF=${X11BASE}/lib/X11/config/host.def
 HOSTDEF=${PKG_PREFIX}/lib/X11/config/host.def
 
 case ${STAGE} in
-DEINSTALL)
-	;;
-
 POST-DEINSTALL)
 	${ECHO} -n "Updating ${HOSTDEF}..."
 	${CP} -f ${HOSTDEF} ${HOSTDEF}.bak
@@ -44,11 +41,6 @@ POST-DEINSTALL)
 	fi
 
 	${RMDIR} -p ${PKG_PREFIX}/lib/X11/config 2>/dev/null || ${TRUE}
-	;;
-
-*)
-	${ECHO} "Unexpected argument: ${STAGE}"
-	exit 1
 	;;
 esac
 exit 0

@@ -1,13 +1,8 @@
-#!/bin/sh
-#
-# $NetBSD: INSTALL,v 1.1.1.1 2003/03/15 20:57:50 kei Exp $
+# $NetBSD: INSTALL,v 1.2 2003/08/30 20:22:52 jlam Exp $
 
 ALIAS=@FONTDIR@/fonts.alias
 
 case ${STAGE} in
-PRE-INSTALL)
-	;;
-
 POST-INSTALL)
 	${ECHO} '-- BEGIN shinonome --' >> ${ALIAS}
 	${CAT} @ALIAS_SHINONOME@ >> ${ALIAS}
@@ -19,10 +14,4 @@ POST-INSTALL)
 	${ECHO} '-- END shinonome --' >> ${ALIAS}
 	mkfontdir @FONTDIR@
 	;;
-
-*)
-	${ECHO} "Unexpected argument: ${STAGE}"
-	exit 1
-	;;
-
 esac

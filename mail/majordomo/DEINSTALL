@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1 2001/11/01 01:00:27 zuntum Exp $
+# $NetBSD: DEINSTALL,v 1.2 2003/08/30 20:22:56 jlam Exp $
 #
 
 PKGNAME=$1
@@ -11,8 +11,6 @@ GROUP=@MAJORDOMO_GROUP@
 HOME=@HOME@
 
 case ${STAGE} in
-DEINSTALL)
-	;;
 POST-DEINSTALL)
 	cat << EOF
 ===========================================================================
@@ -24,10 +22,6 @@ If you won't be using ${PKGNAME} any longer, you may want to
           run newaliases
 ===========================================================================
 EOF
-	;;
-*)
-	echo "Unexpected argument: $2"
-	exit 1
 	;;
 esac
 exit 0

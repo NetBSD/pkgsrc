@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.2 2003/05/06 17:43:10 jmmv Exp $
+# $NetBSD: INSTALL,v 1.3 2003/08/30 20:23:08 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -20,9 +20,6 @@ X11_HOSTDEF=${X11BASE}/lib/X11/config/host.def
 HOSTDEF=${PKG_PREFIX}/lib/X11/config/host.def
 
 case ${STAGE} in
-PRE-INSTALL)
-	;;
-
 POST-INSTALL)
 	if [ ${PKG_PREFIX} = ${X11BASE} -o -f ${HOSTDEF} ]
 	then
@@ -48,11 +45,6 @@ POST-INSTALL)
 		${LN} -fs ${PKG_PREFIX}/share/aclocal/ac_find_motif.m4	\
 			${LOCALBASE}/share/aclocal/ac_find_motif.m4
 	fi
-	;;
-
-*)
-	${ECHO} "Unexpected argument: ${STAGE}"
-	exit 1
 	;;
 esac
 exit 0

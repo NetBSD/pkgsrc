@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: INSTALL,v 1.2 2001/12/19 04:11:08 taca Exp $
+# $Id: INSTALL,v 1.3 2003/08/30 20:22:58 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -17,8 +17,6 @@ MIN="@YATSVR_MINGID@"
 MAX="@YATSVR_MAXGID@"
 
 case ${STAGE} in
-PRE-INSTALL)
-	;;
 POST-INSTALL)
 
 	if [ ! -d ${YAT_CONF_DIR} ]; then
@@ -38,10 +36,6 @@ POST-INSTALL)
 	${AWK} -F: '$1 !~ /^no/ { if ($3 < '$MIN' || $3 > '$MAX') print $1}' \
 		/etc/group > ${YAT_CONF_DIR}/.hidden-group
 	${CHMOD} 0600 ${YAT_CONF_DIR}/.hidden-group
-	;;
-*)
-	echo "Unexpected argument: ${STAGE}"
-	exit 1
 	;;
 esac
 exit 0

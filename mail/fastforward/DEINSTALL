@@ -1,17 +1,21 @@
-# $NetBSD: DEINSTALL,v 1.1 2001/11/01 01:00:03 zuntum Exp $
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.2 2003/08/30 20:22:56 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
 
-if [ "$STAGE" != "POST-DEINSTALL" ]; then
-    exit 0
-fi
+case ${STAGE} in
+POST-DEINSTALL)
+	cat << EOF
+===========================================================================
 
-echo ===========================================================================
-echo
-echo Please check the contents of /etc/mailer.conf and make sure there
-echo is an appropriate value defined for newaliases.
-echo
-echo "See mailer.conf(5) and mailwrapper(8) for details."
-echo
-echo ===========================================================================
+Please check the contents of /etc/mailer.conf and make sure there
+is an appropriate value defined for newaliases.
+
+"See mailer.conf(5) and mailwrapper(8) for details."
+
+===========================================================================
+EOF
+	;;
+esac
