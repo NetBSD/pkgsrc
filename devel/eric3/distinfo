@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/22 17:34:44 drochner Exp $
+$NetBSD: distinfo,v 1.2 2003/07/23 09:44:08 drochner Exp $
 
 SHA1 (eric-3.2.tar.gz) = d663626bb048ac09e44bab73560cb20a0a3b7f4d
 Size (eric-3.2.tar.gz) = 911785 bytes
+SHA1 (patch-aa) = 53b19fbf7088217b797ac4091d2ef75245f553b8
