@@ -1,4 +1,4 @@
-# $NetBSD: apache.mk,v 1.5 2003/12/11 13:51:28 grant Exp $
+# $NetBSD: apache.mk,v 1.6 2004/07/06 22:49:16 wiz Exp $
 #
 # This Makefile fragment handles Apache dependencies and make variables,
 # and is meant to be included by packages that require Apache either at
@@ -133,8 +133,6 @@ _APACHE_DEPENDENCY?=	${BUILDLINK_DEPENDS.${_PKG_APACHE}}:${_APACHE_PKGSRCDIR}
 .if defined(_APACHE_PKGSRCDIR)
 .  if defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO])
 .    include "${_APACHE_BL_SRCDIR}/buildlink3.mk"
-.  elif defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
-.    include "${_APACHE_BL_SRCDIR}/buildlink2.mk"
 .  else
 DEPENDS+=		${_APACHE_DEPENDENCY}
 .  endif
@@ -146,8 +144,6 @@ DEPENDS+=		${_APACHE_DEPENDENCY}
 .if defined(_APACHE_PKGSRCDIR)
 .  if defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO])
 .    include "${_APACHE_BL_SRCDIR}/buildlink3.mk"
-.  elif defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
-.    include "${_APACHE_BL_SRCDIR}/buildlink2.mk"
 .  else
 BUILD_DEPENDS+=		${_APACHE_DEPENDENCY}
 .  endif
@@ -157,8 +153,6 @@ BUILD_DEPENDS+=		${_APACHE_DEPENDENCY}
 .  if defined(USE_APR) && !empty(USE_APR:M[yY][eE][sS])
 .    if defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO])
 .      include "../../devel/apr/buildlink3.mk"
-.    elif defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
-.      include "../../devel/apr/buildlink2.mk"
 .    endif
 .  endif
 .endif
