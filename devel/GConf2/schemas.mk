@@ -1,4 +1,4 @@
-# $NetBSD: schemas.mk,v 1.6 2004/02/11 00:53:57 xtraeme Exp $
+# $NetBSD: schemas.mk,v 1.7 2004/02/11 14:11:05 tron Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # GConf2 schema files.  It takes care of registering them in the GConf2
@@ -52,6 +52,12 @@ DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/../../devel/GConf2/files/deinstall.tmpl
 USE_PKGINSTALL=		YES
 .endif
 
+.include "../../mk/bsd.prefs.mk"
+
+.if empty(USE_BUILDLINK3:M[nN][oO])
 .include "../../devel/GConf2/buildlink3.mk"
+.elif empty(USE_BUILDLINK2:M[nN][oO])
+.include "../../devel/GConf2/buildlink2.mk"
+.endif
 
 .endif	# GCONF2_SCHEMAS_MK
