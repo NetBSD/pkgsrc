@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/02/14 23:56:39 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/01 10:17:32 jmc Exp $
 #
 
 DISTNAME=	jakdaw-0.0.4
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.jakdaw.ucam.org/xmms
 COMMENT=	Very customizable XMMS plugin with nice effects
 
 GNU_CONFIGURE=	yes
+USE_BUILDLINK2=	yes
 USE_LIBTOOL=	yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
