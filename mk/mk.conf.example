@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.115 2000/01/17 14:49:55 agc Exp $
+# $NetBSD: mk.conf.example,v 1.116 2000/01/17 16:21:31 jlam Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -515,11 +515,6 @@ PAPERSIZE=	A4
 # Possible: any valid directory
 # Default: /etc
 
-#SSH_DONT_USE_IDEA=
-# Used in ssh package to stop IDEA encryption
-# Possible: defined, not defined
-# Default: not defined
-
 #SSH_RSHPATH=
 # Used in ssh to specify standard rsh path
 # Possible: path to rsh binary
@@ -541,12 +536,23 @@ PAPERSIZE=	A4
 # Possible: YES, or NO.
 # Default: YES
 
+#USE_CRYPTO=	YES
+# Used in speakfreely to choose support for encrypted connections.
+# Possible: YES, or NO.
+# Default: YES
+
 #USE_GIF=
 # Enable GIF support in qt.  (disabled per default due to licensing
 # problems; future revisions might have no support at all)
 # Also used by tiff-library to enable LZW compression support.
 # Possible: defined, not defined
 # Default: not defined
+
+#USE_IDEA=	NO
+# Used in speakfreely and ssh to choose whether to compile using
+# the patented IDEA encryption algorithm.
+# Possible: YES, or NO.
+# Default: package-dependent
 
 #USE_INET6=
 # Enable IPv6 support on certain packages.  Use IPv6-ready kernel if
