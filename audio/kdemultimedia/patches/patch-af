@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.2 1999/12/06 21:01:37 bouyer Exp $
+
 --- configure.old	Mon Dec  6 00:04:57 1999
 +++ configure	Mon Dec  6 00:08:05 1999
 @@ -2521,8 +2521,45 @@
