@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/02/18 00:22:59 grant Exp $
+
+In order to use this module in your Apache installation, you need to
+add the following to your httpd.conf file:
+
+  LoadModule auth_script_module lib/httpd/mod_auth_script.so
+
+===========================================================================
