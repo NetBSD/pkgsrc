@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1998/05/25 21:19:55 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/07/15 12:20:05 agc Exp $
 bin/mwm
 bin/mxmkmf
 bin/uil
@@ -301,8 +301,6 @@ man/man3/XmToggleButtonGadget.3
 man/man3/XmVendorShellExt.3
 man/man3/XmWorld.3
 man/man5/mwmrc.5
-@exec ldconfig || /usr/bin/true
-@unexec ldconfig || /usr/bin/true
 @dirrm lib/X11/mwm
 @dirrm lib/X11/lesstif
 @dirrm include/Xm
