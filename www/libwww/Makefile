@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2004/01/24 15:23:47 grant Exp $
+# $NetBSD: Makefile,v 1.48 2004/02/12 20:31:35 minskim Exp $
 
 DISTNAME=		w3c-libwww-5.4.0
 PKGNAME=		libwww-5.4.0
@@ -15,22 +15,19 @@ COMMENT=		The W3C Reference Library
 USE_BUILDLINK2=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
-USE_PERL5=		build
-
-AUTOMAKE_REQD=		1.4
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS=		--with-zlib --with-regex --without-x
 CONFIGURE_ARGS+=	--with-ssl="${SSLBASE}"
 
 DOCDIR=			${PREFIX}/share/doc/libwww
-LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
 
 pre-configure:
-	cd ${WRKSRC}; \
-	    ${ACLOCAL} && \
-	    ${AUTOMAKE} -i && \
-	    ${AUTOCONF}
+.for f in aclocal.m4 configure stamp-h.in
+	${TOUCH} ${WRKSRC}/$f
+.endfor
+	${TOUCH} `${FIND} ${WRKSRC} -name Makefile.in`
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -62,5 +59,4 @@ CONFIGURE_ARGS+= 	--with-socks5=${BUILDLINK_prefix.socks5}/lib/libsocks5.a
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 
-.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
