@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.21 2002/09/23 13:16:59 abs Exp $
+$NetBSD: distinfo,v 1.22 2002/11/23 22:49:47 jschauma Exp $
 
-SHA1 (pkg_install-20020723.tar.gz) = c16763363a8ff4341c866d50e40dfa2639288009
-Size (pkg_install-20020723.tar.gz) = 81502 bytes
-SHA1 (patch-aa) = 3f0c9b4e8853341c696c02d3f68fe53eae59fbef
+SHA1 (pkg_install-20021123.tar.gz) = 7c67cfd6a6fc3d9b4c6835a7f3e8652637c5597f
+Size (pkg_install-20021123.tar.gz) = 83299 bytes
+SHA1 (patch-aa) = 97e9444d5dff2d614da27c61e0a333768a3e7382
 SHA1 (patch-ab) = 0b5effbb41b34f96877d3f9494d6cf5054795414
 SHA1 (patch-ac) = fb24ffdc0fbf4ca85d588afcfac39a960b763706
-SHA1 (patch-ad) = 6936e8e5d0d6142402e80a024e2d3998e45d6572
+SHA1 (patch-ad) = a8263b96bddfdeed8119b04a791e5c21c69f33f2
 SHA1 (patch-ae) = 1e9ca0cd01c27337fb7ad688b16775cea325d7e6
 SHA1 (patch-af) = b1d9ce8d3c3e592a67db7ac9676a72317a1485c5
 SHA1 (patch-ag) = e30435f0a626a893934c725c605486a145e27690
 SHA1 (patch-ah) = ae0cee4e6f6efd740fc0d4288f8f71dd0039a913
 SHA1 (patch-ai) = 9636b51fdc386cd445684a934f5f77a6612c6bca
-SHA1 (patch-aj) = 7d220018c533849f7d9b7e68828f89bbe67ec68c
+SHA1 (patch-aj) = f87df801155e859bc61e045c13f6b12e25692cf2

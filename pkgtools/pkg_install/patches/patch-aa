@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.10 2002/08/12 01:58:26 schmonz Exp $
+$NetBSD: patch-aa,v 1.11 2002/11/23 22:49:48 jschauma Exp $
 
---- Makefile.inc.orig	Thu Aug  1 04:46:30 2002
-+++ Makefile.inc
+--- Makefile.inc.orig	Sat Nov 23 17:37:17 2002
++++ Makefile.inc	Sat Nov 23 17:39:38 2002
 @@ -3,6 +3,9 @@
  
  .include <bsd.own.mk>
@@ -12,46 +12,12 @@ $NetBSD: patch-aa,v 1.10 2002/08/12 01:58:26 schmonz Exp $
  LIBINSTALL != cd ${.CURDIR}/../lib && ${PRINTOBJDIR}
  CPPFLAGS+=-I${.CURDIR}/../lib ${DEBUG} -DBINDIR='"${BINDIR}"'
  
-@@ -20,11 +23,11 @@ OPSYS="unknown"
- CHMOD?= /bin/chmod
- CHOWN?= /usr/sbin/chown
- CHGRP?= /usr/bin/chgrp
+@@ -29,7 +32,7 @@
+ #CHMOD_CMD?= /bin/chmod
+ #CHOWN_CMD?= /usr/sbin/chown
+ #CHGRP_CMD?= /usr/bin/chgrp
 -WARNS=2
 +WARNS=1
- .elif ${OPSYS} == "SunOS"
- LOCALBASE?= /usr/pkg
- TAR_CMD?= tar
--FTP_CMD?= tar
-+FTP_CMD?= ftp
- ZOULARISBASE?=	${LOCALBASE}/bsd
- TAR_FULLPATHNAME?= ${ZOULARISBASE}/bin/${TAR_CMD}
- FTP_FULLPATHNAME?= ${ZOULARISBASE}/bin/${FTP_CMD}
-@@ -36,9 +39,28 @@ CHOWN?= /usr/bin/chown
- CHGRP?= /usr/bin/chgrp
- WARNS=0
- .elif ${OPSYS} == "Linux"
-+LOCALBASE?= /usr/pkg
- CHMOD?= /bin/chmod
- CHOWN?= /bin/chown
- CHGRP?= /bin/chgrp
-+LDADD+= -ldb1
-+.PATH: ${DIGESTDIR}
-+CPPFLAGS+= -I${DIGESTDIR}
-+MKCATPAGES=     no
-+TAR_CMD?= tar
-+TAR_FULLPATHNAME?= /bin/${TAR_CMD}
-+CPPFLAGS+=-DTAR_CMD='"${TAR_CMD}"' -DTAR_FULLPATHNAME='"${TAR_FULLPATHNAME}"'
-+CPPFLAGS+=-DTAR_MISSING_FAST_READ -DFGETLN_MISSING
-+.elif ${OPSYS} == "Darwin"
-+CHMOD?= /bin/chmod
-+CHOWN?= /usr/sbin/chown
-+CHGRP?= /usr/bin/chgrp
-+TAR_CMD?= gnutar
-+TAR_FULLPATHNAME?= /usr/bin/${TAR_CMD}
-+CPPFLAGS+=-DTAR_CMD='"${TAR_CMD}"' -DTAR_FULLPATHNAME='"${TAR_FULLPATHNAME}"'
-+CPPFLAGS+=-DTAR_MISSING_FAST_READ
-+.PATH: ${DIGESTDIR}
-+CPPFLAGS+= -I${DIGESTDIR}
- .endif
  
- CPPFLAGS+= -DCHMOD='"${CHMOD}"' -DCHOWN='"${CHOWN}"' -DCHGRP='"${CHGRP}"'
+ #CPPFLAGS+= -DCHMOD_CMD='"${CHMOD_CMD}"' -DCHOWN_CMD='"${CHOWN_CMD}"'
+ #CPPFLAGS+= -DCHGRP_CMD='"${CHGRP_CMD}"'
