@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2004/06/25 14:51:23 taca Exp $
+$NetBSD: patch-ac,v 1.2 2004/12/18 16:36:29 jlam Exp $
 
---- configure.orig	Thu Jun 24 10:36:51 2004
+--- configure.orig	2004-10-21 20:26:15.000000000 -0400
 +++ configure
 @@ -337,7 +337,7 @@ localstatedir='${prefix}/var'
  libdir='${exec_prefix}/lib'
@@ -11,3 +11,14 @@ $NetBSD: patch-ac,v 1.1 2004/06/25 14:51:23 taca Exp $
  mandir='${prefix}/man'
  
  ac_prev=
+@@ -4351,9 +4351,7 @@ echo "${ECHO_T}$perl_useshrplib" >&6
+ 
+ echo "$as_me:$LINENO: checking for flags to link embedded Perl" >&5
+ echo $ECHO_N "checking for flags to link embedded Perl... $ECHO_C" >&6
+-pgac_tmp1=`$PERL -MExtUtils::Embed -e ldopts`
+-pgac_tmp2=`$PERL -MConfig -e 'print $Config{ccdlflags}'`
+-perl_embed_ldflags=`echo X"$pgac_tmp1" | sed "s/^X//;s%$pgac_tmp2%%"`
++perl_embed_ldflags=`$PERL -MExtUtils::Embed -e ldopts`
+ echo "$as_me:$LINENO: result: $perl_embed_ldflags" >&5
+ echo "${ECHO_T}$perl_embed_ldflags" >&6
+ fi
