@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.30 1999/01/30 23:18:50 agc Exp $
+# $NetBSD: Makefile,v 1.31 1999/02/19 14:25:30 rh Exp $
 
 DISTNAME=	gimp-1.0.2
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v1.0/v1.0.2/ \
-		ftp://infosoc.uni-koeln.de/pub/ftp.gimp.org/pub/gimp/v1.0/v1.0.2/
+		ftp://infosoc.uni-koeln.de/pub/ftp.gimp.org/pub/gimp/v1.0/v1.0.2/ \
+		ftp://ftp.cs.umn.edu/pub/gimp/gimp/v1.0/v1.0.2/
+
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 		${GIMP_DATA}${EXTRACT_SUFX}
 
@@ -12,13 +14,11 @@ HOMEPAGE=	http://www.gimp.org/
 
 BUILD_DEPENDS=	emacs:../../editors/emacs
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	gtk+-1.0.6:../../x11/gtk10
+DEPENDS+=	gtk10-1.0.6:../../x11/gtk10
 DEPENDS+=	mpeg-1.2.1:../../graphics/mpeg-lib
 DEPENDS+=	png-1.0.2:../../graphics/png
 DEPENDS+=	tiff-3.4:../../graphics/tiff
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
-
-CONFLICTS+=	gimp-0.99.28 gimp-1.0.0
 
 NOT_FOR_ARCHS=	alpha	#illegal instruction, core dumped.
 
@@ -29,7 +29,8 @@ IS_INTERACTIVE=	yes
 .endif
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include"
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		GTK_CONFIG="${X11BASE}/bin/gtk10-config"
 CFLAGS=		-pipe -O2 -I${LOCALBASE}/include
 LDFLAGS=	-L${LOCALBASE}/lib
 
