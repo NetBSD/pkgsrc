@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1 2000/05/07 01:17:55 mycroft Exp $
+
+--- gcc/config/sparc/netbsd.h.orig	Sat May  6 21:01:21 2000
++++ gcc/config/sparc/netbsd.h	Sat May  6 21:05:16 2000
+@@ -12,10 +12,10 @@
+ /* Make gcc agree with <machine/ansi.h> */
+ 
+ #undef SIZE_TYPE
+-#define SIZE_TYPE "unsigned int"
++#define SIZE_TYPE "unsigned long"
+ 
+ #undef PTRDIFF_TYPE
+-#define PTRDIFF_TYPE "int"
++#define PTRDIFF_TYPE "long"
+ 
+ #undef WCHAR_TYPE
+ #define WCHAR_TYPE "int"
