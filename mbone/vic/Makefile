@@ -1,12 +1,19 @@
-# $NetBSD: Makefile,v 1.22 2003/06/18 09:22:23 agc Exp $
+# $NetBSD: Makefile,v 1.23 2003/06/25 10:08:52 uebayasi Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/09/11 03:54:53 fenner Exp
 #
 
 DISTNAME=	vicsrc-2.8
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/src//}
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	mbone tk
 MASTER_SITES=	ftp://ftp.ee.lbl.gov/conferencing/vic/
+
+.include "../../mk/bsd.prefs.mk"
+.if !empty(MACHINE_PLATFORM:MNetBSD-1.[6-9]*)
+PATCH_SITES=    ftp://tink.ims.ac.jp/pub/NetBSD/vic/
+PATCHFILES=     vic-2.8_ov511p0.diff.gz
+.endif
 
 MAINTAINER=	is@netbsd.org
 HOMEPAGE=	http://www-nrg.ee.lbl.gov/vic/
