@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.223 2004/07/07 18:05:04 xtraeme Exp $
+# $NetBSD: Makefile,v 1.224 2004/07/08 14:31:15 xtraeme Exp $
 #
 
 COMMENT=	Games
@@ -47,6 +47,7 @@ SUBDIR+=	digger
 SUBDIR+=	dipmap
 SUBDIR+=	dopewars
 SUBDIR+=	enigma
+SUBDIR+=	et
 SUBDIR+=	eus-demo
 SUBDIR+=	exchess
 SUBDIR+=	exchess-book-medium
