@@ -1,9 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/10 11:07:34 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2001/01/21 02:04:56 jtb Exp $
 
---- /dev/null	Sun Dec 10 10:00:27 2000
+--- /dev/null	Sun Jan 21 00:09:25 2001
 +++ Makefile
 @@ -0,0 +1,30 @@
 +CFLAGS	= -O2 -fomit-frame-pointer -freg-struct-return
++CFLAGS_ALPHA= -O2 -fomit-frame-pointer
 +INCLUDES= -I${GC_PREFIX}/include -I${X11BASE}/include -I${MESA_PREFIX}/include
 +LDFLAGS	= -L${GC_PREFIX}/lib -L${X11BASE}/lib -L${MESA_PREFIX}/lib
 +LIBS	= -lgc -lm
@@ -12,24 +13,23 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/10 11:07:34 jtb Exp $
 +
 +all-alpha: stalin-alpha libstalin.a
 +
-+OPTIONS = -I ./include -On -du -dI -t -c -db \
-+          -clone-size-limit 0 -split-even-if-no-widening \
-+          -do-not-align-strings \
-+          -treat-all-symbols-as-external \
-+          -do-not-index-constant-structure-types-by-expression \
-+          -do-not-index-allocated-structure-types-by-expression
-+
 +stalin-32: stalin-32.o
-+	$(CC) -O -o stalin $@.o $(LDFLAGS) $(LIBS)
++	$(CC) $(CFLAGS) -o stalin $@.o $(LDFLAGS) $(LIBS)
 +
 +stalin-alpha: stalin-alpha.o
-+	$(CC) -O -o stalin $@.o $(LDFLAGS) $(LIBS)
++	$(CC) $(CFLAGS_ALPHA) -o stalin $@.o $(LDFLAGS) $(LIBS)
 +
 +LIBOBJS = xlib-c.o gl-c.o
 +
 +libstalin.a: include/xlib-c.o include/gl-c.o
-+	$(AR) cru $@ $(LIBOBJS)
++	$(AR) $(ARFLAGS) $@ $(LIBOBJS)
 +	$(RANLIB) $@
++
++stalin-32.o:
++	$(CC) $(CFLAGS) $(INCLUDES) -c stalin-32.c
++
++stalin-alpha.o:
++	$(CC) $(CFLAGS_ALPHA) $(INCLUDES) -c stalin-alpha.c
 +
 +.c.o:
 +	$(CC) $(CFLAGS) $(INCLUDES) -c $<

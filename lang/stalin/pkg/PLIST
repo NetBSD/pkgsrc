@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/10 11:07:32 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/21 02:04:57 jtb Exp $
 bin/stalin
 bin/stalinc
-lib/libstalin.a
 lib/stalin/QobiScheme.sc
 lib/stalin/Scheme-to-C-compatibility.sc
 lib/stalin/gl-c.o
 lib/stalin/gl.sc
+lib/stalin/libstalin.a
 lib/stalin/xlib-c.o
 lib/stalin/xlib-original.sc
 lib/stalin/xlib.sc
