@@ -1,0 +1,29 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/05/05 16:34:34 tv Exp $
+
+--- README.orig	Tue Aug  6 12:44:44 2002
++++ README
+@@ -2,18 +2,17 @@ $Id: README,v 1.1 2002/07/25 16:42:06 ki
+ 
+ INSTALLATION
+ 
+-  Copy 'antonym' to a directory in your $PATH.
+-
+   Get a .remailers file if you don't already have one.  An easy way to do
+   this is by asking Antonym to fetch one for you:
+ 
+     antonym update
+ 
+-  Create your configuration file, 'replyblocks.dat'.  See the included
+-  'replyblocks.dat.example' for instructions.  This is probably the hardest
+-  part of using antonym, but it's not really *that* difficult, and you only
+-  have to do it when you're creating a new nym.  Hint: the 'phrase' and
+-  'password' commands can be helpful when writing your new reply block.
++  Create your configuration file, '$HOME/.antonym'.  See the included
++  'dot.antonym' (in PREFIX/share/examples/antonym) for instructions.
++  This is probably the hardest part of using antonym, but it's not really
++  *that* difficult, and you only have to change it again when you're
++  creating a new nym.  Hint: the 'phrase' and 'password' commands can be
++  helpful when writing your new reply block.
+ 
+ 
+ USAGE
