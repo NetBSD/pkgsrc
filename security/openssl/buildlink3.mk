@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2004/08/28 20:38:18 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2004/12/03 20:33:18 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OPENSSL_BUILDLINK3_MK:=	${OPENSSL_BUILDLINK3_MK}+
@@ -19,7 +19,7 @@ BUILDLINK_PKGSRCDIR.openssl?=	../../security/openssl
 # Ensure that -lcrypt comes before -lcrypto when linking so that the
 # system crypt() routine is used.
 #
-BUILDLINK_TRANSFORM+=	reorder:l:crypt:crypto
+WRAPPER_REORDER_CMDS+=	reorder:l:crypt:crypto
 
 SSLBASE=	${BUILDLINK_PREFIX.openssl}
 BUILD_DEFS+=	SSLBASE
