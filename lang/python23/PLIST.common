@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.5 2004/01/26 12:10:24 grant Exp $
+@comment $NetBSD: PLIST.common,v 1.6 2004/06/02 12:29:28 recht Exp $
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
 include/python${PY_VER_SUFFIX}/Python.h
@@ -608,6 +608,7 @@ lib/python${PY_VER_SUFFIX}/email/test/data/msg_32.txt
 lib/python${PY_VER_SUFFIX}/email/test/data/msg_33.txt
 lib/python${PY_VER_SUFFIX}/email/test/data/msg_34.txt
 lib/python${PY_VER_SUFFIX}/email/test/data/msg_35.txt
+lib/python${PY_VER_SUFFIX}/email/test/data/msg_40.txt
 lib/python${PY_VER_SUFFIX}/email/test/test_email.py
 lib/python${PY_VER_SUFFIX}/email/test/test_email.pyc
 lib/python${PY_VER_SUFFIX}/email/test/test_email.pyo
@@ -1556,7 +1557,6 @@ lib/python${PY_VER_SUFFIX}/test/greyrgb.uue
 lib/python${PY_VER_SUFFIX}/test/output/test_MimeWriter
 lib/python${PY_VER_SUFFIX}/test/output/test_asynchat
 lib/python${PY_VER_SUFFIX}/test/output/test_augassign
-lib/python${PY_VER_SUFFIX}/test/output/test_binascii
 lib/python${PY_VER_SUFFIX}/test/output/test_cgi
 lib/python${PY_VER_SUFFIX}/test/output/test_class
 lib/python${PY_VER_SUFFIX}/test/output/test_coercion
