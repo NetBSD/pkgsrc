@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2622 2004/12/01 21:25:40 xtraeme Exp $
+$NetBSD: TODO,v 1.2623 2004/12/01 22:39:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1187,7 +1187,6 @@ Suggested package updates
 	o webmin-1.170
 	o webware-0.8.1 [http://www.webwareforpython.org/]
 	o weechat-0.0.8
-	o wesnoth-0.8.7
 	o windowlab-1.24
 	o wine-20041019 [nmap problem on NetBSD]
 	o wmbiff-0.4.26
