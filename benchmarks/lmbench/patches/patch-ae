@@ -1,7 +1,16 @@
-$NetBSD: patch-ae,v 1.1 1998/08/30 17:46:26 garbled Exp $
---- src/lmdd.c.orig	Sat Aug 29 13:06:05 1998
-+++ src/lmdd.c	Sat Aug 29 13:17:06 1998
-@@ -797,7 +797,9 @@
+$NetBSD: patch-ae,v 1.2 2004/05/23 23:28:29 danw Exp $
+
+--- src/lmdd.c.orig	Fri Jul 31 15:55:18 1998
++++ src/lmdd.c
+@@ -40,7 +40,6 @@ char	*id = "$Id: lmdd.c,v 1.23 1997/12/0
+ #include	<stdlib.h>
+ #include	<signal.h>
+ #include	<string.h>
+-#include	<malloc.h>
+ #include	<unistd.h>
+ #include	<sys/types.h>
+ #include	<sys/wait.h>
+@@ -797,7 +796,9 @@ getfile(char *s, int ac, char **av)
  				oflags |= (notrunc || append) ? 0 : O_TRUNC;
  				oflags |= nocreate ? 0 : O_CREAT;
  				oflags |= append ? O_APPEND : 0;

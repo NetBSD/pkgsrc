@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/01/20 12:21:01 agc Exp $
+# $NetBSD: Makefile,v 1.22 2004/05/23 23:28:29 danw Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/08/10 22:31:15 fenner Exp
 #
 
@@ -25,6 +25,7 @@ EXTRACT_ONLY=	${DISTNAME}.shr
 EXTRACT_CMD=	${EXTRACT_CMD.shar}
 
 USE_X11BASE=	yes
+USE_BUILDLINK3=	yes
 
 DIST_SUBDIR=    astrolog
 ALL_TARGET=     astrolog
