@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 13:59:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/05/14 12:14:47 rh Exp $
 #
 
-DISTNAME=		libiconv-1.5
+DISTNAME=		libiconv-1.6.1
 CATEGORIES=		converters
 MASTER_SITES=		ftp://ftp.ilog.fr/pub/Users/haible/gnu/
 
