@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 1999/10/08 21:14:35 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2000/01/06 01:25:26 wiz Exp $
 bin/fax2ps
 bin/fax2tiff
 bin/gif2tiff
@@ -18,6 +18,7 @@ bin/tiffinfo
 bin/tiffmedian
 bin/tiffsplit
 include/tiff.h
+include/tiffconf.h
 include/tiffio.h
 lib/libtiff.a
 lib/libtiff.so.3.5
@@ -113,6 +114,7 @@ man/man3/TIFFWriteEncodedTile.3
 man/man3/TIFFWriteRawStrip.3
 man/man3/TIFFWriteRawTile.3
 man/man3/TIFFWriteScanline.3
+man/man3/TIFFWriteTile.3
 man/man3/TIFFbuffer.3
 man/man3/TIFFcodec.3
 man/man3/TIFFfree.3
@@ -128,3 +130,48 @@ man/man3/TIFFstrip.3
 man/man3/TIFFswab.3
 man/man3/TIFFtile.3
 man/man3/libtiff.3
+share/doc/tiff/images/back.gif
+share/doc/tiff/images/bali.jpg
+share/doc/tiff/images/cat.gif
+share/doc/tiff/images/cover.jpg
+share/doc/tiff/images/cramps.gif
+share/doc/tiff/images/dave.gif
+share/doc/tiff/images/info.gif
+share/doc/tiff/images/jello.jpg
+share/doc/tiff/images/jim.gif
+share/doc/tiff/images/note.gif
+share/doc/tiff/images/oxford.gif
+share/doc/tiff/images/quad.jpg
+share/doc/tiff/images/ring.gif
+share/doc/tiff/images/smallliz.jpg
+share/doc/tiff/images/strike.gif
+share/doc/tiff/images/warning.gif
+@dirrm share/doc/tiff/images
+share/doc/tiff/bugs.html
+share/doc/tiff/build.html
+share/doc/tiff/contrib.html
+share/doc/tiff/document.html
+share/doc/tiff/images.html
+share/doc/tiff/index.html
+share/doc/tiff/internals.html
+share/doc/tiff/intro.html
+share/doc/tiff/libtiff.html
+share/doc/tiff/misc.html
+share/doc/tiff/support.html
+share/doc/tiff/tools.html
+share/doc/tiff/v3.4beta007.html
+share/doc/tiff/v3.4beta016.html
+share/doc/tiff/v3.4beta018.html
+share/doc/tiff/v3.4beta024.html
+share/doc/tiff/v3.4beta028.html
+share/doc/tiff/v3.4beta029.html
+share/doc/tiff/v3.4beta031.html
+share/doc/tiff/v3.4beta032.html
+share/doc/tiff/v3.4beta033.html
+share/doc/tiff/v3.4beta034.html
+share/doc/tiff/v3.4beta035.html
+share/doc/tiff/v3.4beta036.html
+share/doc/tiff/v3.5.1.html
+share/doc/tiff/v3.5.2.html
+share/doc/tiff/v3.5.3.html
+@dirrm share/doc/tiff
