@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2004/07/06 16:28:52 recht Exp $
+# $NetBSD: Makefile,v 1.31 2004/08/31 14:18:32 jmmv Exp $
 #
 
-DISTNAME=	libgnome-2.6.1.1
-PKGREVISION=	1
+DISTNAME=	libgnome-2.6.1.2
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnome/2.6/}
 EXTRACT_SUFX=	.tar.bz2
@@ -27,7 +26,7 @@ PKGCONFIG_OVERRIDE=	libgnome/libgnome-2.0.pc.in
 
 CONFIGURE_ARGS= 	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 OWN_DIRS=	${PKG_SYSCONFDIR}/sound/events
 
