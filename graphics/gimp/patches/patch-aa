@@ -1,0 +1,20 @@
+--- configure.in.orig	Mon Jan 26 04:44:47 1998
++++ configure.in	Fri Jan 30 03:55:00 1998
+@@ -121,7 +121,7 @@
+ dnl Test for libtiff
+   if test -z "$LIBTIFF_LIB"; then
+     AC_CHECK_LIB(tiff, TIFFReadScanline,
+-      TIFF='tiff'; LIBTIFF_LIB='-ltiff',
++      TIFF='tiff'; LIBTIFF_LIB='-ltiff -lz -ljpeg',
+       AC_CHECK_LIB(tiff, TIFFWriteScanline,
+         TIFF='tiff'; LIBTIFF_LIB='-ltiff -lz -ljpeg',
+         AC_MSG_WARN(*** TIFF plug-in will not be built ***), -lz -ljpeg -lm), -lm)
+@@ -156,7 +156,7 @@
+       GIMPTCL='gimptcl'; LIBTCL_LIB="-l$with_tcl -l$with_tk $DL_LIBRARY",
+       AC_MSG_WARN(*** gimptcl plug-in will not be built ***), -lm $DL_LIBRARY),
+     AC_CHECK_LIB(tcl, Tcl_StaticPackage,
+-      GIMPTCL='gimptcl'; LIBTCL_LIB="-ltcl -ltk $DL_LIBRARY",
++      GIMPTCL='gimptcl'; LIBTCL_LIB="-ltcl80 -ltk80 $DL_LIBRARY",
+       AC_MSG_WARN(*** gimptcl plug-in will not be built ***), -lm $DL_LIBRARY))
+   fi
+ 
