@@ -1,51 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2002/04/09 23:05:43 jlam Exp $
+$NetBSD: patch-aa,v 1.6 2002/09/06 12:09:09 wiz Exp $
 
 --- configure.orig	Thu Sep  6 23:00:42 2001
 +++ configure
-@@ -7145,8 +7145,8 @@
- echo "$as_me: error: Couldn't find xml-config" >&2;}
-    { (exit 1); exit 1; }; }
- fi
--XML_LIBS=`xml-config --libs`
--XML_CFLAGS=`xml-config --cflags`
-+XML_LIBS=`$XML_CONFIG --libs`
-+XML_CFLAGS=`$XML_CONFIG --cflags`
- 
- old_LIBS="$LIBS"
- LIBS="$XML_LIBS $LIBS"
-@@ -7412,8 +7412,8 @@
- fi
- 	if test x$gnome_cv_orbit_found = xyes; then
- 
--		ORBIT_CFLAGS=`orbit-config --cflags client server`
--		ORBIT_LIBS=`orbit-config --use-service=name --libs client server`
-+		ORBIT_CFLAGS=`$ORBIT_CONFIG --cflags client server`
-+		ORBIT_LIBS=`$ORBIT_CONFIG --use-service=name --libs client server`
- 
- 	else
-     		if test x = xfailure; then
-@@ -7431,8 +7431,8 @@
- 
- 		gnome_cv_gnorba_found=no
- 		if test x$gnome_cv_orbit_found = xyes; then
--			GNORBA_CFLAGS="`gnome-config --cflags gnorba gnomeui`"
--			GNORBA_LIBS="`gnome-config --libs gnorba gnomeui`"
-+			GNORBA_CFLAGS="`$GNOME_CONFIG --cflags gnorba gnomeui`"
-+			GNORBA_LIBS="`$GNOME_CONFIG --libs gnorba gnomeui`"
- 			if test -n "$GNORBA_LIBS"; then
- 				gnome_cv_gnorba_found=yes
- 			fi
-@@ -7451,8 +7451,8 @@
- fi
- 	if test x$gnome_cv_orbit_found = xyes; then
- 
--		GNORBA_CFLAGS="`gnome-config --cflags gnorba gnomeui`"
--		GNORBA_LIBS="`gnome-config --libs gnorba gnomeui`"
-+		GNORBA_CFLAGS="`$GNOME_CONFIG --cflags gnorba gnomeui`"
-+		GNORBA_LIBS="`$GNOME_CONFIG --libs gnorba gnomeui`"
- 
- 	else
- 	    	if test x = xfailure; then
 @@ -7643,7 +7643,7 @@
    echo "$as_me:7643: checking for BONOBO - version >= $min_bonobo_version" >&5
  echo $ECHO_N "checking for BONOBO - version >= $min_bonobo_version... $ECHO_C" >&6
@@ -55,14 +11,3 @@ $NetBSD: patch-aa,v 1.5 2002/04/09 23:05:43 jlam Exp $
      no_bonobo=yes
    else
      BONOBO_CFLAGS=`$GNOME_CONFIG $bonoboconf_args --cflags bonobo bonobox`
-@@ -7860,8 +7860,8 @@
- echo $ECHO_N "checking for gnome-db... $ECHO_C" >&6
-   if test x$GNOMEDB_CONFIG != xno; then
-     have_gnomedb=true
--    GNOMEDB_CFLAGS="`gnomedb-config --cflags`"
--    GNOMEDB_LIBS="`gnomedb-config --libs`"
-+    GNOMEDB_CFLAGS="`$GNOMEDB_CONFIG --cflags`"
-+    GNOMEDB_LIBS="`$GNOMEDB_CONFIG --libs`"
-     echo "$as_me:7865: result: found" >&5
- echo "${ECHO_T}found" >&6
-   else
