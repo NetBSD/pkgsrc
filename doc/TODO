@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1556 2004/03/31 04:59:18 xtraeme Exp $
+$NetBSD: TODO,v 1.1557 2004/03/31 05:51:59 snj Exp $
 
 Suggested new packages
 ======================
@@ -328,7 +328,6 @@ Suggested package updates
 	o snes9x-1.42
 	o snort-2.1.1
 	o snownews-1.5.1
-	o sqlite-2.8.12 [pkg/24660]
 	o squeak-3.2 [fredb|pkg/17950]
 	o squeak-3.5
 	o srp_client-1.7.5 [jlam]
