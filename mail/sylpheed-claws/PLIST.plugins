@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.plugins,v 1.1 2004/01/01 21:39:02 cube Exp $
+lib/sylpheed/plugins/${PLUGIN_NAME}.a
+lib/sylpheed/plugins/${PLUGIN_NAME}.la
+lib/sylpheed/plugins/${PLUGIN_NAME}.so
+@unexec ${RMDIR} %D/lib/sylpheed/plugins 2>/dev/null || ${TRUE}
