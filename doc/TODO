@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.493 2003/04/24 11:18:00 mjl Exp $
+$NetBSD: TODO,v 1.494 2003/04/24 13:23:19 abs Exp $
 
 Suggested new packages
 ======================
@@ -191,7 +191,6 @@ Suggested package updates
 	o nessus-2.0.3
 	o net-snmp-5.0.7 [pkg/19939]
 	o net-snmp-5.0.8
-	o netscape-7.02
 	o newscache-0.99.22p1
 	o ns-flash-6.0.79
 	o ntop2-2.2
