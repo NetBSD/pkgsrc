@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2002/05/29 14:45:57 yyamano Exp $
+# $NetBSD: Makefile,v 1.31 2002/07/28 05:39:40 schmonz Exp $
 #
 
 DISTNAME=	pine4.44
@@ -19,6 +19,8 @@ USE_LIBTOOL=	# defined
 
 .if ${OPSYS} == "SunOS"
 BUILDNAME= so5
+.elif ${OPSYS} == "Darwin"
+BUILDNAME= osx
 .else
 BUILDNAME= neb
 .endif
