@@ -1,11 +1,11 @@
-$NetBSD: patch-sum,v 1.15 2001/03/01 13:40:01 wiz Exp $
+$NetBSD: patch-sum,v 1.16 2001/03/13 20:52:28 jlam Exp $
 
-MD5 (patch-aa) = 1f5ddd83cedeaff72df8c6428a8878ba
-MD5 (patch-ab) = 86886e1e816bcc5527072c4027586cd3
-MD5 (patch-ac) = afd85e3188013fa46392ccaa3727d09d
-MD5 (patch-ad) = 40f2b9c12d7ef36bbc842480af61b833
-MD5 (patch-ae) = c260133920eebada06030552c3306c3d
-MD5 (patch-af) = 197a9b91da502834ec5d4cab2c99b2c1
-MD5 (patch-ag) = 8c3021892d56ea8fd6023d7fecfe0f61
-MD5 (patch-ah) = e27e529142e5ee6fc1be0f965e5510e0
-MD5 (patch-ai) = 57b95d04f0ed35252b8ead041017feac
+SHA1 (patch-aa) = aed136dfee27b1fe98892d669d218c1070782b5e
+SHA1 (patch-ab) = ef7300383b4946ba78ffb592c174b5ea683b60f8
+SHA1 (patch-ac) = 4c18bb80f3fbe8d44c941e403ff10fd92b820785
+SHA1 (patch-ad) = 79e9b2adb23e412195f0382b30b56496af735297
+SHA1 (patch-ae) = 29e1da736d6948d550039cc4ddd1e7743e7e0feb
+SHA1 (patch-af) = 3396cbc389cdaad64573e8d99d1a2613a1e5915e
+SHA1 (patch-ag) = 5586719f7fa7b5d670d2735e487943c046533ea6
+SHA1 (patch-ah) = 553f8f2bf4bf7278adb46ff8749be154f10e39d3
+SHA1 (patch-ai) = 6bf9f59849803e2594ef9eaff161b377c6d1071a
