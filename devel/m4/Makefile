@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/07/14 11:54:12 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2001/10/19 09:13:29 veego Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/06/16 08:22:35 max Exp
 #
 
@@ -13,6 +13,9 @@ USE_BUILDLINK_ONLY=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--program-prefix=g
 INFO_FILES=		m4.info
+
+pre-build:
+	${CHMOD} u+w ${WRKSRC}/checks/stamp-checks
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gm4
