@@ -3,7 +3,7 @@
 # Date created:		April 2, 1997
 # Whom:			Marc G. Fournier <scrappy@FreeBSD.ORG>
 #
-# $NetBSD: Makefile,v 1.3 1998/02/18 11:50:33 frueauf Exp $
+# $NetBSD: Makefile,v 1.4 1998/02/18 17:35:25 agc Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 
 DISTNAME=	postgresql-6.2.1
@@ -13,10 +13,9 @@ MASTER_SITES=	ftp://ftp.PostgreSQL.org/pub/ \
 
 MAINTAINER=	andreas@FreeBSD.ORG
 
-.if defined(USE_TCL)
-MAKE_ENV=	USE_TCL=true TCL_INCDIR=${PREFIX}/include/tcl8.0
-LIB_DEPENDS=	tcl80.1.:${PORTSDIR}/lang/tcl80
-.endif
+MAKE_ENV+=	USE_TCL=true
+LIB_DEPENDS+=	tcl80.1.:${PORTSDIR}/lang/tcl80 \
+		tk80.1.:${PORTSDIR}/x11/tk80
 
 NO_PACKAGE=	"Requires pgsql uid"
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
@@ -100,7 +99,7 @@ post-install:
 	@${INSTALL_DATA} ${FILESDIR}/post-install-notes ${PREFIX}/pgsql
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${PREFIX}/share/doc/pgsql
-	${CP} -r ${WRKDIR}/${DISTNAME}/doc/* ${PREFIX}/share/doc/pgsql
+	${CP} -R ${WRKDIR}/${DISTNAME}/doc/* ${PREFIX}/share/doc/pgsql
 .endif
 .if !defined(BATCH)
 	@${CAT} ${FILESDIR}/post-install-notes
