@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.343 2003/03/05 13:19:39 wiz Exp $
+$NetBSD: TODO,v 1.344 2003/03/05 14:02:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -131,7 +131,6 @@ Suggested package updates
 	o gnome-python-1.99.13
 	o gnome2-terminal-2.0.2 [pkg/19415]
 	o gnomeicu-0.99beta
-	o gnuplot-3.7.3 [pkg/19663]
 	o gpa-0.6.1
 	o gpgme-0.4.0
 	o grace-5.1.12
