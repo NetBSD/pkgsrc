@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/09/05 18:37:49 kim Exp $
+# $NetBSD: Makefile,v 1.16 1999/10/05 13:59:57 agc Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/01/08 18:52:13 fenner Exp
 #
 
@@ -18,6 +18,10 @@ USE_PERL5=	yes
 
 PAPERSIZE?=	A4
 MAKE_FLAGS+=	PAPER=`${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'`
+
+.if ${OPSYS} == "SunOS"
+MAKE_ENV+=	CPPFLAGS=
+.endif
 
 pre-configure:
 	@case "X${PAPERSIZE}" in					\
@@ -45,7 +49,7 @@ post-install:
 		strip ${PREFIX}/bin/$$file;				\
 	done
 	low=`${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'`;		\
-	if [ ! -e ${PREFIX}/etc/psutils.cfg ]; then			\
+	if [ ! -f ${PREFIX}/etc/psutils.cfg ]; then			\
 		${ECHO} "PAPERSIZE=$$low" > ${PREFIX}/etc/psutils.cfg;	\
 	fi
 
