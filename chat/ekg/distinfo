@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2003/01/16 08:21:51 salo Exp $
+$NetBSD: distinfo,v 1.8 2003/03/22 01:01:00 salo Exp $
 
-SHA1 (ekg-20030114.tar.gz) = ab94fc616b4660c6077320947bc4c066814a6b3d
-Size (ekg-20030114.tar.gz) = 372881 bytes
+SHA1 (ekg-1.0rc1.tar.gz) = fca2bba1764df5c0702073eb0ab95f3c0d6d8c9c
+Size (ekg-1.0rc1.tar.gz) = 408970 bytes
 SHA1 (patch-aa) = c0d80e90836b7e03ddd5d30be8f64238f7251e25
 SHA1 (patch-ab) = 626765db378e40f08f459df3fb6c4649a5fdc53b
