@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:54:00 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/22 13:08:41 hubertf Exp $
 bin/sk2ps
 bin/sketch
 share/doc/sketch/BUGS
@@ -188,6 +188,7 @@ share/sketch/Resources/Messages/de/LC_MESSAGES/sketch.mo
 share/sketch/Resources/Messages/es/LC_MESSAGES/sketch.mo
 share/sketch/Resources/Messages/fr/LC_MESSAGES/sketch.mo
 share/sketch/Resources/Messages/it/LC_MESSAGES/sketch.mo
+share/sketch/Resources/Messages/ru/LC_MESSAGES/sketch.mo
 share/sketch/Resources/Misc/gamma.spl
 share/sketch/Resources/Misc/mini.spl
 share/sketch/Resources/Misc/pattern.ppm
