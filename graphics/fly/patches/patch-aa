@@ -1,9 +1,7 @@
-$NetBSD: patch-aa,v 1.5 1999/08/27 10:11:02 agc Exp $
+$NetBSD: patch-aa,v 1.6 1999/11/01 03:31:46 jlam Exp $
 
-Makefile changes for gd 1.6.3 (PNG support)
-
---- Makefile.orig	Thu Jan 14 22:42:34 1999
-+++ Makefile	Fri Aug 27 10:15:35 1999
+--- Makefile.orig	Thu Jan 14 17:42:34 1999
++++ Makefile	Sun Oct 31 00:18:17 1999
 @@ -4,13 +4,15 @@
  # If you already have gd installed, use the line below and comment out the
  # following line
@@ -18,8 +16,8 @@ Makefile changes for gd 1.6.3 (PNG support)
 +#    CFLAGS = -O -I$(GD)
 +#   #CFLAGS = -O -pedantic -Wall -I$(GD)
 +#      LIBS = -L$(GD) -lgd -lm
-+CFLAGS= -O -I${PREFIX}/include
-+LIBS=	${LDFLAGS} -lgd -lpng -lz -lm
++CFLAGS += -O ${CPPFLAGS}
++LIBS = ${LDFLAGS} -lgd -lpng -lz -lttf -lintl -lXpm -lX11 -lm
  
 -all: gd fly
 +all: fly

@@ -1,0 +1,16 @@
+$NetBSD: patch-am,v 1.1 1999/11/01 03:31:46 jlam Exp $
+
+--- examples/cgi-perl-example.pl.orig	Thu Jan 14 17:37:31 1999
++++ examples/cgi-perl-example.pl	Sun Oct 31 00:27:09 1999
+@@ -1,8 +1,8 @@
+-#!/usr/local/bin/perl
++#!/usr/pkg/bin/perl
+ 
+-print "Content-type: image/gif\n\n";
++print "Content-type: image/png\n\n";
+ 
+-$flyprog = "/usr/local/web/bin/fly";
++$flyprog = "/usr/pkg/bin/fly";
+ 
+ $infile = "/tmp/fly.$$";
+ 
