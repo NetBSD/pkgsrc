@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2003/06/02 01:15:58 jschauma Exp $
+# $NetBSD: Makefile,v 1.26 2003/06/23 11:20:39 adam Exp $
 #
 
 DISTNAME=	webalizer-2.01-10-src
 PKGNAME=	webalizer-2.1.10
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.mrunix.net/pub/webalizer/ \
@@ -32,5 +33,6 @@ post-build:
 		${MV} -f ${WRKSRC}/$${file}.fixed ${WRKSRC}/$${file};	\
 	done
 
+.include "../../graphics/freetype-lib/buildlink2.mk"
 .include "../../graphics/gd/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
