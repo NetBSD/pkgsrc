@@ -3,7 +3,7 @@
 # Date created:				26 August 1997
 # Whom:					Michael Elbel (me)
 #
-# $NetBSD: Makefile,v 1.14 1998/02/20 12:09:51 frueauf Exp $
+# $NetBSD: Makefile,v 1.15 1998/02/23 08:38:55 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 #
 
@@ -49,10 +49,10 @@ CONFIGURE_ARGS+=	${ARCH}--`echo ${OPSYS}|tr [A-Z] [a-z]` --prefix=${PREFIX} \
 		--sitelispdir="${PREFIX}/lib/xemacs/site-lisp ${PREFIX}/share/xemacs/site-lisp" \
 		${WITH_MULE} ${WITH_DIALOGS}
 
-MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
+MAKE_ENV+=	INSTALL_MAN="${INSTALL_MAN}" INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
-MAN1=		ctags.1 etags.1 gnuattach.1 gnuclient.1 gnudoit.1 \
-		gnuserv.1 xemacs.1
+MAN1=		gnuattach.1 gnuclient.1 gnudoit.1 gnuserv.1 xemacs.1 \
+		xemacs-ctags.1 xemacs-etags.1
 
 # Include local make config file here.  It is essential to have this
 # precede any override targets (those that override defaults in
@@ -82,14 +82,14 @@ pre-configure:
 	@echo "To compile in the MULE features, set the environment variable USE_MULE"
 
 pre-install:
+	${RM} -f ${WRKSRC}/etc/ctags.1.orig
 	sed "s,@.GZ@,${DCOMPRESSUFFIX}," ${PKGDIR}/PLIST \
 		> ${PLIST_SRC}
 
 post-install:
-.for file in b2m ctags etags gnuclient xemacs-20.3
+.for file in xemacs-b2m xemacs-ctags xemacs-etags gnuclient xemacs-20.3
 	strip ${PREFIX}/bin/${file}
 .endfor
-	${MV} ${PREFIX}/bin/send-pr ${PREFIX}/bin/xemacs-send-pr
 .if defined(MANZ)
 	${.CURDIR}/work/xemacs-20.3/lib-src/gzip-el.sh ${PREFIX}/lib/xemacs-20.3/lisp
 .endif
