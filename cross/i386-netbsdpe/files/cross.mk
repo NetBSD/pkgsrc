@@ -1,4 +1,4 @@
-#	$NetBSD: cross.mk,v 1.9 2002/03/18 03:04:40 kent Exp $
+#	$NetBSD: cross.mk,v 1.10 2002/03/20 13:22:12 kent Exp $
 #	$PEACE: cross.mk,v 1.9 2002/03/18 01:18:11 kent Exp $
 #	based on pkgsrc/cross/COMMON/cross.mk
 #	NetBSD: cross.mk,v 1.16 2000/11/09 13:04:55 wiz Exp 
@@ -37,7 +37,7 @@ BINUTILS_WRKSRC=	${WRKDIR}/binutils-2.11.92-20011113
 CROSS_DISTFILES+=	${BINUTILS_DISTNAME}.tar.gz
 #MASTER_SITES+=		${MASTER_SITE_GNU:=binutils/}
 MASTER_SITES+=		http://prdownloads.sourceforge.net/mingw/
-CONFIGURE_ARGS+=	--with-gnu-as --with-gnu-ld
+CONFIGURE_ARGS+=	--with-gnu-as --with-gnu-ld --disable-nls
 #DEPENDS+=		cross-binutils>=2.9.1.1:../../cross/binutils
 PLIST_PRE+=		${COMMON_DIR}/PLIST-binutils
 
@@ -57,7 +57,7 @@ binutils-configure:
 	@cd ${BINUTILS_WRKSRC} && ${SETENV} CC="${CC}" ac_cv_path_CC="${CC}" \
 		CFLAGS="${CFLAGS}" ${CONFIGURE_ENV} ./configure \
 		--prefix=${PREFIX} --host=${MACHINE_GNU_ARCH}--netbsd \
-		--target=${TARGET_ARCH} ${BFD64ARG}
+		--target=${TARGET_ARCH} --disable-nls ${BFD64ARG}
 
 binutils-build:
 	@cd ${BINUTILS_WRKSRC} && ${SETENV} ${MAKE_ENV} \
