@@ -1,8 +1,19 @@
-$NetBSD: patch-aa,v 1.3 2004/09/12 22:25:08 salo Exp $
+$NetBSD: patch-aa,v 1.4 2004/12/01 12:27:44 markd Exp $
 
---- Makefile.orig	2003-02-07 13:40:58.000000000 +0100
-+++ Makefile	2004-09-12 23:25:27.000000000 +0200
-@@ -209,14 +209,14 @@
+--- Makefile.orig	2003-02-08 01:40:58.000000000 +1300
++++ Makefile
+@@ -50,8 +50,8 @@ DESTDIR =
+ MAKE = make
+ BUILDHASH = buildhash
+ ISPELL = ispell
+-SQ = sq
+-UNSQ = unsq
++SQ = ../bin/sq.pl
++UNSQ = ../bin/unsq.pl
+ #   if for some reason you don't have Ispell's unsq use my Perl sq/unsq
+ #  and put it into a directory known by your PATH variable!
+ #UNSQ = unsq.pl
+@@ -209,14 +209,14 @@ clean:
  
  sort:
  	@if grep [‰ˆ¸ƒ÷‹ﬂ] dicts/*.txt ;then echo "!!! wrong characters in dictionay files !!!";exit 1;fi
