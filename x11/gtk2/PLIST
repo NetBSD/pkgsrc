@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/07/12 19:19:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/08/24 02:59:03 dmcmahill Exp $
 bin/gdk-pixbuf-csource
 bin/gtk-demo
 bin/gtk-query-immodules-2.0
@@ -253,22 +253,22 @@ lib/libgdk-x11-2.0.a
 lib/libgdk-x11-2.0.la
 lib/libgdk-x11-2.0.so
 lib/libgdk-x11-2.0.so.0
-lib/libgdk-x11-2.0.so.0.5
+lib/libgdk-x11-2.0.so.0.6
 lib/libgdk_pixbuf-2.0.a
 lib/libgdk_pixbuf-2.0.la
 lib/libgdk_pixbuf-2.0.so
 lib/libgdk_pixbuf-2.0.so.0
-lib/libgdk_pixbuf-2.0.so.0.5
+lib/libgdk_pixbuf-2.0.so.0.6
 lib/libgdk_pixbuf_xlib-2.0.a
 lib/libgdk_pixbuf_xlib-2.0.la
 lib/libgdk_pixbuf_xlib-2.0.so
 lib/libgdk_pixbuf_xlib-2.0.so.0
-lib/libgdk_pixbuf_xlib-2.0.so.0.5
+lib/libgdk_pixbuf_xlib-2.0.so.0.6
 lib/libgtk-x11-2.0.a
 lib/libgtk-x11-2.0.la
 lib/libgtk-x11-2.0.so
 lib/libgtk-x11-2.0.so.0
-lib/libgtk-x11-2.0.so.0.5
+lib/libgtk-x11-2.0.so.0.6
 lib/pkgconfig/gdk-2.0.pc
 lib/pkgconfig/gdk-pixbuf-2.0.pc
 lib/pkgconfig/gdk-pixbuf-xlib-2.0.pc
@@ -305,9 +305,9 @@ share/gtk-2.0/demo/sizegroup.c
 share/gtk-2.0/demo/stock_browser.c
 share/gtk-2.0/demo/textview.c
 share/gtk-2.0/demo/tree_store.c
-share/gtk-doc/html/gdk-pixbuf/a4093.html
-share/gtk-doc/html/gdk-pixbuf/x4112.html
-share/gtk-doc/html/gdk-pixbuf/x4160.html
+share/gtk-doc/html/gdk-pixbuf/a4187.html
+share/gtk-doc/html/gdk-pixbuf/x4206.html
+share/gtk-doc/html/gdk-pixbuf/x4254.html
 share/gtk-doc/html/gdk-pixbuf/gdk-pixbuf-animation.html
 share/gtk-doc/html/gdk-pixbuf/gdk-pixbuf-creating.html
 share/gtk-doc/html/gdk-pixbuf/gdk-pixbuf-file-loading.html
@@ -436,7 +436,7 @@ share/gtk-doc/html/gdk/watch.png
 share/gtk-doc/html/gdk/xterm.png
 share/gtk-doc/html/gtk/abstractobjects.html
 share/gtk-doc/html/gtk/buttonwidgets.html
-share/gtk-doc/html/gtk/c17377.html
+share/gtk-doc/html/gtk/c17328.html
 share/gtk-doc/html/gtk/deprecatedobjects.html
 share/gtk-doc/html/gtk/displaywidgets.html
 share/gtk-doc/html/gtk/gtk-accelerator-maps.html
@@ -676,6 +676,7 @@ share/gtk-doc/html/gtk/treewidgetobjects.html
 share/gtk-doc/html/gtk/windowwidgets.html
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gtk20.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/gtk20.mo
@@ -700,6 +701,7 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gtk20.mo
+${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/gtk20.mo
