@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.258 2002/10/15 10:48:26 agc Exp $
+$NetBSD: CHANGES,v 1.259 2002/10/15 11:26:10 grant Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3262,3 +3262,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated kdbg to 1.2.6 [markd 2002-10-15]
 	Updated popt to 1.7 [martti 2002-10-15]
 	Updated nmh to 1.0.4nb3 [agc 2002-10-15]
+	Added phoenix-0.3 [grant 2002-10-15]
