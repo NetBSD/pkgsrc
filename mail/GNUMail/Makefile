@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2004/04/11 00:03:10 rh Exp $
+# $NetBSD: Makefile,v 1.14 2004/09/25 04:50:01 rh Exp $
 #
 
 DISTNAME=	GNUMail-1.1.2
+PKGREVISION=	2
 CATEGORIES=	mail gnustep
 MASTER_SITES=	http://debian.uni-essen.de/misc/GNUstep/Apps/GNUMail/
 
@@ -13,6 +14,9 @@ WRKSRC=		${WRKDIR}/GNUMail
 USE_BUILDLINK3=	yes
 USE_X11=	yes
 NO_CONFIGURE=	yes
+
+post-extract:
+	${RM} -r ${WRKSRC}/*/*/CVS
 
 .include "../../mail/Pantomime/buildlink3.mk"
 .include "../../misc/Addresses/buildlink3.mk"
