@@ -1,4 +1,4 @@
-$NetBSD: MESSAGE,v 1.1 2000/06/19 14:36:22 rh Exp $
+$NetBSD: MESSAGE,v 1.2 2000/06/19 15:06:18 rh Exp $
 
 ==========================================================================
   AMaViS has now been installed on your system.  In order to integrate
@@ -15,5 +15,5 @@ Mlocal, P=/usr/libexec/mail.local, F=lsDFMAw5:/|@qrmn9, S=10/30, R=20/40,
 
 Mlocal, P=@PREFIX@/sbin/scanmails, F=lsDFMAw5:/|@qrmn9, S=10/30, R=20/40,
 	T=DNS/RFC822/X-Unix,
-	A=scanmails -f $f -d $u
+	A=scanmails -d $u
 ==========================================================================
