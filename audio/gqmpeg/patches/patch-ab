@@ -1,16 +1,10 @@
-$NetBSD: patch-ab,v 1.4 1999/05/27 00:49:45 hubertf Exp $
-
---- mixer.c.orig	Tue May 25 00:15:57 1999
-+++ mixer.c	Thu May 27 02:16:01 1999
-@@ -42,6 +42,11 @@
- #include <audio.h>
+--- mixer.c.orig	Mon Jun  7 02:19:57 1999
++++ mixer.c	Mon Jun  7 02:20:03 1999
+@@ -34,7 +34,6 @@
+ 
+ #ifdef __NetBSD__
+ #include <soundcard.h>
+-#undef _POSIX_SOURCE
  #endif
  
-+#ifdef __NetBSD__
-+#include <soundcard.h>
-+#undef _POSIX_SOURCE
-+#endif
-+
- #define LEFT  1
- #define RIGHT 256
- #define LEFT_MASK 0x00ff
+ #ifdef __sgi
