@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.21 2003/03/04 14:50:11 seb Exp $
+# $NetBSD: defs.IRIX.mk,v 1.22 2003/03/07 16:36:27 jschauma Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -60,7 +60,7 @@ RM?=		/sbin/rm
 RMDIR?=		/usr/bin/rmdir
 SED?=		/sbin/sed
 SETENV?=	/sbin/env
-SH?=		/bin/sh
+SH?=		/bin/ksh
 SHLOCK=		${LOCALBASE}/bin/shlock
 SORT?=		/usr/bin/sort
 SU?=		/sbin/su
