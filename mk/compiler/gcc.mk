@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.70 2004/08/27 06:29:09 jlam Exp $
+# $NetBSD: gcc.mk,v 1.71 2004/09/23 13:49:21 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -132,15 +132,6 @@ _LANGUAGES.gcc+=	${LANGUAGES.gcc:M${_lang_}}
 CFLAGS+=	-Wno-import
 .endif
 
-# Some platforms (such as IRIX) may support different ABIs.  Set the CFLAGS
-# accordingly.
-
-.if defined(ABI)
-MABIFLAG=	-mabi=${ABI:C/^32$/n&/}
-CFLAGS+=	${MABIFLAG}
-LDFLAGS+=	${MABIFLAG}
-.endif
-
 .if !empty(_NEED_GCC2:M[yY][eE][sS])
 #
 # We require gcc-2.x in the lang/gcc directory.
@@ -249,6 +240,17 @@ _LINKER_RPATH_FLAG=	-R
 
 # GCC passes rpath directives to the linker using "-Wl,-R".
 _COMPILER_RPATH_FLAG=	-Wl,${_LINKER_RPATH_FLAG}
+
+.if !empty(MACHINE_ARCH:Mmips*)
+_COMPILER_ABI_FLAG.32=	-mabi=n32	# ABI == "32" == "n32"
+_COMPILER_ABI_FLAG.n32=	-mabi=n32
+_COMPILER_ABI_FLAG.o32=	-mabi=32
+_COMPILER_ABI_FLAG.64=	-mabi=64
+
+.  if defined(ABI) && !empty(ABI)
+MABIFLAG=	${_COMPILER_ABI_FLAG.${ABI}}
+.  endif
+.endif
 
 .if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS])
 #
