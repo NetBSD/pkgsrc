@@ -1,8 +1,7 @@
-SHA1 (patch-aa) = 9e8fa39a708332148bd658d4d04ac687044e96b4
 
 SHA1 (pari-2.1.1.tar.gz) = 358e90e2caf1afbd4440e3a43af827feec019b8d
 Size (pari-2.1.1.tar.gz) = 1530823 bytes
-SHA1 (patch-aa) = 9e8fa39a708332148bd658d4d04ac687044e96b4
+SHA1 (patch-aa) = 005a43e2997ba5ece391f9edb97ac1cfbb2cf805
 SHA1 (patch-ab) = 97951552f9b9836d0375fd41c7abd18a5ce90238
 SHA1 (patch-ac) = 84af235f319ae108aadeedea5a25e005540160ac
 SHA1 (patch-ad) = 82c0532ba6bc23b1c91865591c2bdfbee144bcf9
