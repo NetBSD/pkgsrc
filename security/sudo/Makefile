@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2004/01/05 11:37:13 jlam Exp $
+# $NetBSD: Makefile,v 1.63 2004/03/22 08:45:56 jlam Exp $
 #
 
 DISTNAME=		sudo-1.6.7p5
@@ -33,11 +33,11 @@ CONFIGURE_ARGS+=	--without-skey
 .endif
 
 .if defined(KERBEROS)
-PKG_USE_KERBEROS=	# defined
-CONFIGURE_ARGS+=	--with-kerb4 --with-kerb5
-CPPFLAGS+=		-I/usr/include/krb5
+CONFIGURE_ARGS+=	--without-kerb4
+.  include "../../mk/krb5.buildlink3.mk"
+CONFIGURE_ARGS+=	--with-kerb5
 .else
-CONFIGURE_ARGS+=	--without-kerb4 --without-kerb5
+CONFIGURE_ARGS+=	--without-kerb5
 .endif
 
 CONFIGURE_ARGS+=	--with-nbsdops --disable-path-info
