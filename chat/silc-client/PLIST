@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2003/01/08 23:53:53 salo Exp $
+@comment $NetBSD: PLIST,v 1.12 2003/03/17 20:12:18 salo Exp $
 bin/silc
 lib/silc/libsilc-1.0.so
 lib/silc/libsilc-1.0.so.1
@@ -132,6 +132,7 @@ share/silc/themes/default.theme
 @dirrm share/silc/scripts
 @dirrm share/silc/help
 @dirrm share/silc
+@dirrm share/examples/silc
 @dirrm share/doc/silc
 @dirrm lib/silc/modules
 @dirrm lib/silc
