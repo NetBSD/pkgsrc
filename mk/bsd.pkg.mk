@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.858 2001/11/21 13:44:44 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.859 2001/11/21 18:32:01 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -49,11 +49,7 @@ TEMPLATES?=		${PKGSRCDIR}/templates
 PATCHDIR?=		${.CURDIR}/patches
 SCRIPTDIR?=		${.CURDIR}/scripts
 FILESDIR?=		${.CURDIR}/files
-.if exists(${.CURDIR}/pkg)
-PKGDIR?=		${.CURDIR}/pkg
-.else
 PKGDIR?=		${.CURDIR}
-.endif
 
 .if defined(CONFDIR.${PKGBASE})
 CONFDIR=		${CONFDIR.${PKGBASE}}
@@ -513,19 +509,11 @@ COMMENT!=	(${CAT} ${PKGDIR}/COMMENT || ${ECHO} -n "(no description)") 2>/dev/nul
 
 DESCR=			${WRKDIR}/.DESCR
 .if !defined(DESCR_SRC)
-.  if !exists(${PKGDIR}/DESCR) && exists(${.CURDIR}/DESCR) 
-DESCR_SRC?=		${.CURDIR}/DESCR
-.  else
 DESCR_SRC?=		${PKGDIR}/DESCR
-.  endif
 .endif
 PLIST=			${WRKDIR}/.PLIST
 .if !defined(PLIST_SRC)
-.  if !exists(${PKGDIR}/PLIST) && exists(${.CURDIR}/PLIST) 
-PLIST_SRC?=		${.CURDIR}/PLIST
-.  else
 PLIST_SRC?=		${PKGDIR}/PLIST
-.  endif
 .endif
 DLIST=			${WRKDIR}/.DLIST
 DDIR=			${WRKDIR}/.DDIR
