@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/26 16:33:37 martti Exp $
-bin/xfce4-menueditor
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xfce4-menueditor.mo
