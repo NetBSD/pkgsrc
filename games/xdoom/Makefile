@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/02/24 22:43:33 minskim Exp $
+# $NetBSD: Makefile,v 1.23 2005/02/24 23:07:34 minskim Exp $
 
 DISTNAME=	linuxdoom-1.10
 PKGNAME=	xdoom-1.10
@@ -23,6 +23,12 @@ USE_BUILDLINK3=	yes
 USE_X11BASE=	yes
 USE_GNU_TOOLS+=	make
 MAKE_ENV+=	X11BASE=${X11BASE} INSTALL_PREFIX=${X11PREFIX}
+
+.include "../../mk/endian.mk"
+
+.if ${MACHINE_ENDIAN} == "big"
+CFLAGS+=	-D__BIG_ENDIAN__=1
+.endif
 
 .include "../../mk/ossaudio.buildlink3.mk"
 
