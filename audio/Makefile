@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 1999/08/29 01:35:38 jlam Exp $
+# $NetBSD: Makefile,v 1.40 1999/08/30 08:45:06 rh Exp $
 #
 
     SUBDIR += amp
@@ -31,6 +31,7 @@
     SUBDIR += festvox-rab8
     SUBDIR += festvox-tll
     SUBDIR += freezetag
+    SUBDIR += gnome-media
     SUBDIR += gqmpeg
     SUBDIR += gsm
     SUBDIR += id3ed
