@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2004/02/21 14:43:15 jlam Exp $
+# $NetBSD: Makefile.common,v 1.9 2004/02/22 01:49:31 jlam Exp $
 
 DISTNAME?=	courier-${DIST_VERS}
 CATEGORIES+=	mail
@@ -42,6 +42,13 @@ CONFIGURE_ARGS+=	--with-db=db
 CONFIGURE_ARGS+=	--with-userdb=${PKG_SYSCONFDIR}/userdb
 CONFIGURE_ARGS+=	--with-makedatprog=${LIBEXECDIR}/makedatprog
 CONFIGURE_ARGS+=	--disable-root-check
+
+# Workaround a Solaris bug noted in:
+#	http://www.inter7.com/courierimap/FAQ.html#solarisbug
+#
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--with-waitfunc=wait3
+.endif
 
 # Build authdaemon, but explicitly disable certain methods (ldap, mysql, pgsql)
 # that are built in separate packages.  We also disable authcustom since it's
