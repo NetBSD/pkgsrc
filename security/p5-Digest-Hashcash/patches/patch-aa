@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/28 01:07:58 heinz Exp $
+
+--- Hashcash.xs.orig	Sun Sep  7 02:52:43 2003
++++ Hashcash.xs
+@@ -4,7 +4,7 @@
+ 
+ #include <time.h>
+ #include <stdlib.h>
+-#include <stdint.h>
++#include <inttypes.h>
+ 
+ /* NIST Secure Hash Algorithm */
+ /* heavily modified by Uwe Hollerbach <uh@alumni.caltech edu> */
+@@ -45,7 +45,7 @@ typedef U64TYPE ULONG;
+ #   define BYTEORDER 0x87654321   
+ # endif
+ #else
+-typedef uint_fast32_t ULONG;     /* 32-or-more-bit quantity */
++typedef uint32_t ULONG;     /* 32-or-more-bit quantity */
+ #endif
+ 
+ #if GCCX86ASM
+@@ -356,6 +356,7 @@ _estimate_rounds ()
+ SV *
+ _gentoken (int size, IV timestamp, char *resource, char *trial = "", int extrarand = 0)
+ 	CODE:
++	{
+         SHA_INFO ctx1, ctx;
+         char *token, *seq, *s;
+         int toklen, i;
+@@ -412,6 +413,7 @@ _gentoken (int size, IV timestamp, char 
+           }
+ 
+         RETVAL = newSVpvn (token, toklen);
++	}
+ 	OUTPUT:
+         RETVAL
+ 
