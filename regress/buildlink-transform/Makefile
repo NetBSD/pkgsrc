@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/08/28 08:20:44 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2004/08/28 21:21:12 jlam Exp $
 #
 # Run many buildlink transform tests in a single regression test to avoid
 # having to keep creating the wrapper scripts over and over again.
@@ -51,12 +51,20 @@ post-${WRAPPER_PHASE}:
 
 .PHONY: regress do-regress
 
-regress: ${WRAPPER_PHASE}
-	@cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} do-regress		\
-		PKG_PHASE=${WRAPPER_PHASE}
+regress: ${WRAPPER_PHASE} do-regress
+
+FAILED_TESTS=	${WRKDIR}/failed
 
 do-regress:
-	@${DO_NADA}
+	@if [ -f ${FAILED_TESTS} ]; then				\
+		${ECHO} "FAILED:";					\
+		${CAT} ${FAILED_TESTS} | while read test; do		\
+			${ECHO} "	$$test";			\
+		done;							\
+		exit `${CAT} ${FAILED_TESTS} | ${WC} -l`;		\
+	else								\
+		${DO_NADA};						\
+	fi
 
 TEST_RESULT=	runtest=`${SETENV} ${REGRESS_ENV} regress $$test`;	\
 		${ECHO} "(${.TARGET}) saw:      $$test";		\
@@ -68,7 +76,7 @@ TEST_RESULT=	runtest=`${SETENV} ${REGRESS_ENV} regress $$test`;	\
 			;;						\
 		*)							\
 			${ECHO} "(${.TARGET}) result:   FAIL";		\
-			exit 1;						\
+			${ECHO} "${.TARGET}" >> ${FAILED_TESTS};	\
 			;;						\
 		esac
 
