@@ -1,10 +1,11 @@
-# $NetBSD: autoconf.mk,v 1.1 2002/10/02 18:10:15 dillo Exp $
+# $NetBSD: autoconf.mk,v 1.2 2002/10/02 18:56:47 dillo Exp $
 #
 # makefile fragment for packages that use autoconf
 # AUTOCONF_REQD can be set to the minimum version required.
 # It adds a build dependency on the appropriate autoconf package
 # and sets the following variables:
 #	AUTOCONF:	autoconf binary to use
+#	AUTORECONF:	autoreconf binary to use
 #	AUTOHEADER;	autoheader binary to use
 #
 
@@ -17,10 +18,12 @@ AUTOCONF_REQD?= 2.50
 .if ${AUTOCONF_REQD:M2.1[0-9]*} == ""
 BUILD_DEPENDS+=		autoconf>=${AUTOCONF_REQD}:../../devel/autoconf-devel
 AUTOCONF=		${LOCALBASE}/bin/autoconf
+AUTORECONF=		${LOCALBASE}/bin/autoreconf
 AUTOHEADER=		${LOCALBASE}/bin/autoheader
 .else
 BUILD_DEPENDS+=		autoconf>=${AUTOCONF_REQD}:../../devel/autoconf
 AUTOCONF=		${LOCALBASE}/bin/autoconf
+AUTORECONF=		${LOCALBASE}/bin/autoreconf
 AUTOHEADER=		${LOCALBASE}/bin/autoheader
 .endif
 
