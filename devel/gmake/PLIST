@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:11 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/10/16 00:21:22 dmcmahill Exp $
 bin/gmake
 @unexec ${INSTALL_INFO} --delete %D/info/make.info %D/info/dir
 info/make.info
@@ -12,14 +12,22 @@ info/make.info-7
 info/make.info-8
 info/make.info-9
 info/make.info-10
+info/make.info-11
 @exec ${INSTALL_INFO} %D/info/make.info %D/info/dir
 man/man1/gmake.1
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/make.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/make.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/make.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/make.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/make.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/make.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/make.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/make.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/make.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/make.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/make.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/make.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/make.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/make.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/make.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/make.mo
