@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2002/10/23 16:53:34 bouyer Exp $
+$NetBSD: patch-ab,v 1.2 2002/10/23 21:12:37 bouyer Exp $
 
---- vncviewer/sockets.c.orig	Wed Oct 23 18:48:55 2002
-+++ vncviewer/sockets.c	Wed Oct 23 18:50:54 2002
+--- vncviewer/sockets.c.orig	Wed Oct 23 20:17:57 2002
++++ vncviewer/sockets.c	Wed Oct 23 20:23:48 2002
 @@ -210,7 +210,11 @@
      return -1;
    }
@@ -14,9 +14,15 @@ $NetBSD: patch-ab,v 1.1 2002/10/23 16:53:34 bouyer Exp $
      fprintf(stderr,programName);
      perror(": ConnectToTcpAddr: connect");
      close(sock);
-@@ -374,18 +378,20 @@
+@@ -369,26 +373,27 @@
+ #else
+   /* just for IPv4 */
+   struct hostent *hp;
+-  struct sockaddr_in *sin;
++  struct sockaddr_in *sin  = (struct sockaddr_in *)sa;
+   struct in_addr *addr = &sin->sin_addr;
  
-   sin = (struct sockaddr_in *)sa;
+-  sin = (struct sockaddr_in *)sa;
    sin->sin_family = AF_INET;
 +#ifndef SVR4
    sin->sin_len = sizeof(struct sockaddr_in);
@@ -37,4 +43,8 @@ $NetBSD: patch-ab,v 1.1 2002/10/23 16:53:34 bouyer Exp $
 +    memcpy(addr, hp->h_addr, sizeof(struct in_addr));
    }
  
-   return False;
+-  return False;
++  return True;
+ #endif
+ }
+ 
