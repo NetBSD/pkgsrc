@@ -1,0 +1,40 @@
+$NetBSD: patch-ac,v 1.6 2000/05/17 21:52:23 wiz Exp $
+
+--- frontend/xscanimage.c.orig	Sat Apr  3 06:07:57 1999
++++ frontend/xscanimage.c	Mon May 15 16:09:50 2000
+@@ -75,7 +75,7 @@
+ 
+ enum
+   {
+-    STANDALONE, GIMP_EXTENSION
++    STANDALONE, GIMP_EXTENSION_2
+   };
+ 
+ static struct
+@@ -301,7 +301,7 @@
+   int nargs;
+ 
+   run_mode = param[0].data.d_int32;
+-  scan_win.mode = GIMP_EXTENSION;
++  scan_win.mode = GIMP_EXTENSION_2;
+ 
+   *nreturn_vals = 1;
+   *return_vals = values;
+@@ -456,7 +456,7 @@
+   sane_exit ();
+   gtk_main_quit ();
+ #ifdef HAVE_LIBGIMP_GIMP_H
+-  if (scan_win.mode == GIMP_EXTENSION)
++  if (scan_win.mode == GIMP_EXTENSION_2)
+     gimp_quit ();
+ #endif
+   exit (0);
+@@ -803,7 +803,7 @@
+   gsg_set_sensitivity (dialog, FALSE);
+ 
+ #ifdef HAVE_LIBGIMP_GIMP_H
+-  if (scan_win.mode == GIMP_EXTENSION && scan_win.tile)
++  if (scan_win.mode == GIMP_EXTENSION_2 && scan_win.tile)
+     {
+       int height, remaining;
+ 
