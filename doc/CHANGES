@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1505 2003/03/01 00:07:15 grant Exp $
+$NetBSD: CHANGES,v 1.1506 2003/03/01 02:14:30 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -862,3 +862,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libgnomecanvas to 2.2.0.2 [jmmv 2003-02-28]
 	Updated libiconv to 1.8nb1 [grant 2003-02-28]
 	Updated xv to 3.10anb5 [grant 2003-02-28]
+	Updated centericq to 4.9.2nb1 [jlam 2003-03-01]
