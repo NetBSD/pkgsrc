@@ -1,25 +1,31 @@
-$NetBSD: patch-aa,v 1.5 2001/02/28 12:29:30 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2001/07/03 20:59:40 zuntum Exp $
 
---- doinstall.tcl.orig	Fri Sep 29 06:44:53 2000
+--- doinstall.tcl.orig	Sun Dec 31 04:28:19 2000
 +++ doinstall.tcl
 @@ -2,5 +2,5 @@
  #-*-tcl-*-
  # the next line restarts using wish \
--exec wish "$0" -- ${1+"$@"}
-+exec tclsh "$0" "$@"
+-if [ -z "$DISPLAY" ]; then exec tclsh "$0" -- ${1+"$@"}; else exec wish "$0" -- ${1+"$@"}; fi
++exec tclsh "$0" -- ${1+"$@"}
  
  #
-@@ -19,23 +19,6 @@
+@@ -20,6 +20,6 @@
    } else {
      set BINDIR [file join $INSTALLROOT bin]
 -    set LIBDIR [file join $INSTALLROOT lib]
 -    set MANDIR [file join $INSTALLROOT man mann]
--  }
++    set LIBDIR [file join $INSTALLROOT share]
++    set MANDIR [file join $INSTALLROOT man man1]
+   }
+ }
+@@ -31,21 +31,4 @@
+ 
+   set_paths $INSTALLROOT
 -
 -  set msg(1) [file join $BINDIR $TKCVS]
 -  set msg(2) [file join $BINDIR $TKDIFF]
 -  set msg(3) [file join $LIBDIR tkcvs *.tcl]
--  set msg(4) [file join $LIBDIR tkcvs bitmaps *.gif]
+-  set msg(4) [file join $LIBDIR tkcvs bitmaps *.gif,xbm]
 -  if {$tcl_platform(platform) == "unix"} {
 -     set msg(5) [file join $MANDIR tkcvs.n]
 -  }
@@ -31,11 +37,10 @@ $NetBSD: patch-aa,v 1.5 2001/02/28 12:29:30 wiz Exp $
 -    set var$m $msg($m)
 -    label .messages.$m -text $msg($m) -justify left -textvariable var$m
 -    pack .messages.$m -side top -anchor w
-+    set LIBDIR [file join $INSTALLROOT share]
-+    set MANDIR [file join $INSTALLROOT man man1]
-   }
+-  }
  }
-@@ -76,6 +59,6 @@
+ 
+@@ -84,6 +67,6 @@
      file attributes [file join $BINDIR $TKDIFF] -permissions 0755
      file mkdir $MANDIR
 -    puts "Installing manpage tkcvs.n in $MANDIR"
@@ -44,20 +49,22 @@ $NetBSD: patch-aa,v 1.5 2001/02/28 12:29:30 wiz Exp $
 +    file copy -force [file join tkcvs tkcvs.1] $MANDIR
    }
  
-@@ -95,9 +78,4 @@
+@@ -103,11 +86,4 @@
    cd ..
    puts "Finished!"
 -
--  destroy .bottom.do
--  destroy .bottom.not
--  button .bottom.done -text "Finished!" -command {destroy .}
--  pack .bottom.done
+-  if {$X} {
+-    destroy .bottom.do
+-    destroy .bottom.not
+-    button .bottom.done -text "Finished!" -command {destroy .}
+-    pack .bottom.done
+-  }
  }
  
-@@ -105,10 +83,5 @@
+@@ -122,10 +98,5 @@
  
  # Check Tcl/TK version
--if {$tk_version < 8.1} {
+-if {$tcl_version < 8.1} {
 -   tk_dialog .wrongversion "Tcl/Tk too old" \
 -   "TkCVS requires Tcl/Tk 8.1 or better!" \
 -   error 0 {Bye Bye}
@@ -66,33 +73,3 @@ $NetBSD: patch-aa,v 1.5 2001/02/28 12:29:30 wiz Exp $
 +# This is done by the package Makefile
  
  # Some rational and reasonable defaults.
-@@ -128,27 +101,5 @@
-   set INSTALLROOT [lindex $argv 0]
- }
--frame .title
--label .title.lbl -text "TkCVS Installer" -font {Helvetica -14 bold}
--pack .title -side top
--pack .title.lbl -side top
--frame .entry
--label .entry.instlbl -text "Installation Root"
--entry .entry.instent -textvariable INSTALLROOT
--bind .entry.instent <Return> {show_paths $INSTALLROOT}
--pack .entry -side top -pady 10
--pack .entry.instlbl -side left
--pack .entry.instent -side left
--
--frame .messages -relief groove -bd 2
--pack .messages -side top -expand y -fill x
--label .messages.adv -text "These files will be installed:"
--pack .messages.adv -side top
--show_paths $INSTALLROOT
--
--frame .bottom
--button .bottom.do -text "Install" -command {doinstall $INSTALLROOT}
--button .bottom.not -text "Cancel" -command {destroy .}
--pack .bottom -side top
--pack .bottom.do -side left
--pack .bottom.not -side left
- 
-+show_paths $INSTALLROOT
-+doinstall $INSTALLROOT
