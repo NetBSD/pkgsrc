@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.27 1999/05/17 22:24:15 tron Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.28 1999/05/17 23:34:37 tron Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -54,6 +54,7 @@ OPSYS!=	uname -s
 
 BASENAME?=	/usr/bin/basename
 ECHO?=		/bin/echo
+ECHO_MSG?=	${ECHO}
 MV?=		/bin/mv
 RM?=		/bin/rm
 SED?=		/usr/bin/sed
