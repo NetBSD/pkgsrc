@@ -1,3 +1,4 @@
+$NetBSD: patch-ab,v 1.12 2003/06/13 10:55:26 cjep Exp $
 --- cda_d/Imakefile.orig	Wed Aug  8 01:15:13 2001
 +++ cda_d/Imakefile	Tue Jun 10 13:29:21 2003
 @@ -53,7 +53,13 @@
