@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/08/26 05:12:18 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/29 22:02:48 jlam Exp $
 #
 
 DISTNAME=	get_ds7_1.2.4
@@ -19,11 +19,11 @@ NO_BUILD=	# defined
 DOCDIR=		${PREFIX}/share/doc/get_ds7
 
 post-patch:
-	${SED}	-e 's,@LOCALBASE@,${LOCALBASE},' \
+	${SED}	-e "s,/usr/bin/perl,${PERL5}," \
 		<${WRKSRC}/get_ds7 >${WRKSRC}/get_ds7.exe
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/ds7_lib.pm ${LOCALBASE}/lib/perl5/site_perl
+	${INSTALL_DATA} ${WRKSRC}/ds7_lib.pm ${PERL5_SITELIB}
 	${INSTALL_SCRIPT} ${WRKSRC}/get_ds7.exe ${PREFIX}/bin/get_ds7
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_MAN} ${WRKSRC}/README ${DOCDIR}
