@@ -1,0 +1,499 @@
+--- lib/audio/8svx.c	1998/05/18 10:17:50	1.1
++++ lib/audio/8svx.c	1998/05/18 10:22:13
+@@ -43,7 +43,7 @@
+     char            n;
+ 
+     if ((status = fread(c, sizeof(SvxChunk), 1, fp)))
+-	if (LITTLE_ENDIAN)
++	if (NAS_LITTLE_ENDIAN)
+ 	    swapl(&c->ckSize, n);
+ 
+     return status;
+@@ -87,17 +87,17 @@
+ 	{
+ 	    AuUint8         c;
+ 
+-	    si->numSamples = FileReadL(si->fp, LITTLE_ENDIAN);
+-	    FileReadL(si->fp, LITTLE_ENDIAN);
+-	    FileReadL(si->fp, LITTLE_ENDIAN);
+-	    si->sampleRate = FileReadS(si->fp, LITTLE_ENDIAN);
++	    si->numSamples = FileReadL(si->fp, NAS_LITTLE_ENDIAN);
++	    FileReadL(si->fp, NAS_LITTLE_ENDIAN);
++	    FileReadL(si->fp, NAS_LITTLE_ENDIAN);
++	    si->sampleRate = FileReadS(si->fp, NAS_LITTLE_ENDIAN);
+ 	    readByte(&c);
+ 	    readByte(&c);
+ 
+ 	    if (c)
+ 		Err();
+ 
+-	    FileReadL(si->fp, LITTLE_ENDIAN);
++	    FileReadL(si->fp, NAS_LITTLE_ENDIAN);
+ 	}
+ 	/* sound data chunk */
+ 	else if (!cmpID(&ck.ckID, SVX_BodyID))
+@@ -149,7 +149,7 @@
+ 
+     si->sizeOffset = ftell(si->fp);
+ 
+-    if (!FileWriteL(0, si->fp, LITTLE_ENDIAN) ||
++    if (!FileWriteL(0, si->fp, NAS_LITTLE_ENDIAN) ||
+ 	!fwrite(SVX_8svxID, sizeof(SVX_ID), 1, si->fp))
+ 	Err();
+ 
+@@ -158,7 +158,7 @@
+     if ((n = strlen(si->comment)))
+     {
+ 	if (!fwrite(SVX_NameID, sizeof(SVX_ID), 1, si->fp) ||
+-	    !FileWriteL(n, si->fp, LITTLE_ENDIAN) ||
++	    !FileWriteL(n, si->fp, NAS_LITTLE_ENDIAN) ||
+ 	    !fwrite(si->comment, n, 1, si->fp))
+ 	    Err();
+ 
+@@ -166,13 +166,13 @@
+     }
+ 
+     if (!fwrite(SVX_VhdrID, sizeof(SVX_ID), 1, si->fp) ||
+-	!FileWriteL(SVX_SizeofVhdrChunk, si->fp, LITTLE_ENDIAN) ||
+-	!FileWriteL(si->numSamples, si->fp, LITTLE_ENDIAN) ||
+-	!FileWriteL(0, si->fp, LITTLE_ENDIAN) ||
+-	!FileWriteL(0, si->fp, LITTLE_ENDIAN) ||
+-	!FileWriteS(si->sampleRate, si->fp, LITTLE_ENDIAN) ||
+-	!FileWriteS(0, si->fp, LITTLE_ENDIAN) ||
+-	!FileWriteL(SVX_MaxVolume, si->fp, LITTLE_ENDIAN))
++	!FileWriteL(SVX_SizeofVhdrChunk, si->fp, NAS_LITTLE_ENDIAN) ||
++	!FileWriteL(si->numSamples, si->fp, NAS_LITTLE_ENDIAN) ||
++	!FileWriteL(0, si->fp, NAS_LITTLE_ENDIAN) ||
++	!FileWriteL(0, si->fp, NAS_LITTLE_ENDIAN) ||
++	!FileWriteS(si->sampleRate, si->fp, NAS_LITTLE_ENDIAN) ||
++	!FileWriteS(0, si->fp, NAS_LITTLE_ENDIAN) ||
++	!FileWriteL(SVX_MaxVolume, si->fp, NAS_LITTLE_ENDIAN))
+ 	Err();
+ 
+     si->fileSize += sizeof(SvxChunk) + SVX_SizeofVhdrChunk;
+@@ -182,7 +182,7 @@
+ 
+     si->dataOffset = ftell(si->fp);
+ 
+-    if (!FileWriteL(0, si->fp, LITTLE_ENDIAN))
++    if (!FileWriteL(0, si->fp, NAS_LITTLE_ENDIAN))
+ 	Err();
+ 
+     si->fileSize += sizeof(SvxChunk);
+@@ -202,9 +202,9 @@
+ 	if (si->writing)
+ 	{
+ 	    fseek(si->fp, si->sizeOffset, 0);
+-	    FileWriteL(si->fileSize + si->dataSize, si->fp, LITTLE_ENDIAN);
++	    FileWriteL(si->fileSize + si->dataSize, si->fp, NAS_LITTLE_ENDIAN);
+ 	    fseek(si->fp, si->dataOffset, 0);
+-	    FileWriteL(si->dataSize, si->fp, LITTLE_ENDIAN);
++	    FileWriteL(si->dataSize, si->fp, NAS_LITTLE_ENDIAN);
+ 	}
+ 
+ 	status = fclose(si->fp);
+--- lib/audio/aiff.c	1998/05/18 10:20:15	1.1
++++ lib/audio/aiff.c	1998/05/18 10:23:52
+@@ -218,7 +218,7 @@
+     char            n;
+ 
+     if ((status = fread(c, sizeof(AiffChunk), 1, fp)))
+-	if (LITTLE_ENDIAN)
++	if (NAS_LITTLE_ENDIAN)
+ 	    swapl(&c->ckSize, n);
+ 
+     return status;
+@@ -262,9 +262,9 @@
+ 	{
+ 	    char            rate[AIFF_SizeofExtended];
+ 
+-	    ai->channels = FileReadS(ai->fp, LITTLE_ENDIAN);
+-	    ai->numSamples = FileReadL(ai->fp, LITTLE_ENDIAN);
+-	    ai->bitsPerSample = FileReadS(ai->fp, LITTLE_ENDIAN);
++	    ai->channels = FileReadS(ai->fp, NAS_LITTLE_ENDIAN);
++	    ai->numSamples = FileReadL(ai->fp, NAS_LITTLE_ENDIAN);
++	    ai->bitsPerSample = FileReadS(ai->fp, NAS_LITTLE_ENDIAN);
+ 
+ 	    if (!fread(rate, AIFF_SizeofExtended, 1, ai->fp))
+ 		Err();
+@@ -277,8 +277,8 @@
+ 	    AuInt32            blockSize,
+ 	                    offset;
+ 
+-	    offset = FileReadL(ai->fp, LITTLE_ENDIAN);
+-	    blockSize = FileReadL(ai->fp, LITTLE_ENDIAN);
++	    offset = FileReadL(ai->fp, NAS_LITTLE_ENDIAN);
++	    blockSize = FileReadL(ai->fp, NAS_LITTLE_ENDIAN);
+ 	    ai->dataOffset = ftell(ai->fp) - sizeof(long) * 3 + offset;
+ 	    ai->dataSize = ck.ckSize - 8;
+ 
+@@ -290,7 +290,7 @@
+ 	{
+ 	    unsigned short  numComments;
+ 
+-	    numComments = FileReadS(ai->fp, LITTLE_ENDIAN);
++	    numComments = FileReadS(ai->fp, NAS_LITTLE_ENDIAN);
+ 
+ 	    if (numComments)
+ 	    {
+@@ -298,9 +298,9 @@
+ 		AIFF_MARKER_ID  marker;
+ 		unsigned short  count;
+ 
+-		timeStamp = FileReadL(ai->fp, LITTLE_ENDIAN);
+-		marker = FileReadS(ai->fp, LITTLE_ENDIAN);
+-		count = FileReadS(ai->fp, LITTLE_ENDIAN);
++		timeStamp = FileReadL(ai->fp, NAS_LITTLE_ENDIAN);
++		marker = FileReadS(ai->fp, NAS_LITTLE_ENDIAN);
++		count = FileReadS(ai->fp, NAS_LITTLE_ENDIAN);
+ 
+ 		if (count)
+ 		{
+@@ -353,7 +353,7 @@
+ 
+     ai->sizeOffset = ftell(ai->fp);
+ 
+-    if (!FileWriteL(0, ai->fp, LITTLE_ENDIAN) ||
++    if (!FileWriteL(0, ai->fp, NAS_LITTLE_ENDIAN) ||
+ 	!fwrite(AIFF_AiffID, sizeof(AIFF_ID), 1, ai->fp))
+ 	Err();
+ 
+@@ -367,15 +367,15 @@
+ 	size = AIFF_SizeofCommentChunk + PAD2(n);
+ 
+ 	if (!fwrite(AIFF_CommentID, sizeof(AIFF_ID), 1, ai->fp) ||
+-	    !FileWriteL(size, ai->fp, LITTLE_ENDIAN) ||
++	    !FileWriteL(size, ai->fp, NAS_LITTLE_ENDIAN) ||
+ 	/* one comment */
+-	    !FileWriteS(1, ai->fp, LITTLE_ENDIAN) ||
++	    !FileWriteS(1, ai->fp, NAS_LITTLE_ENDIAN) ||
+ 	/* XXX: maybe we should use the real time */
+-	    !FileWriteL(0, ai->fp, LITTLE_ENDIAN) ||
++	    !FileWriteL(0, ai->fp, NAS_LITTLE_ENDIAN) ||
+ 	/* no marker */
+-	    !FileWriteS(0, ai->fp, LITTLE_ENDIAN) ||
++	    !FileWriteS(0, ai->fp, NAS_LITTLE_ENDIAN) ||
+ 	/* comment length */
+-	    !FileWriteS(n, ai->fp, LITTLE_ENDIAN) ||
++	    !FileWriteS(n, ai->fp, NAS_LITTLE_ENDIAN) ||
+ 	    !fwrite(ai->comment, n, 1, ai->fp))
+ 	    Err();
+ 
+@@ -388,10 +388,10 @@
+     ConvertToIeeeExtended((double) ai->sampleRate, rate);
+ 
+     if (!fwrite(AIFF_CommonID, sizeof(AIFF_ID), 1, ai->fp) ||
+-	!FileWriteL(AIFF_SizeofCommonChunk, ai->fp, LITTLE_ENDIAN) ||
+-	!FileWriteS(ai->channels, ai->fp, LITTLE_ENDIAN) ||
+-	!FileWriteL(ai->numSamples, ai->fp, LITTLE_ENDIAN) ||
+-	!FileWriteS(ai->bitsPerSample, ai->fp, LITTLE_ENDIAN) ||
++	!FileWriteL(AIFF_SizeofCommonChunk, ai->fp, NAS_LITTLE_ENDIAN) ||
++	!FileWriteS(ai->channels, ai->fp, NAS_LITTLE_ENDIAN) ||
++	!FileWriteL(ai->numSamples, ai->fp, NAS_LITTLE_ENDIAN) ||
++	!FileWriteS(ai->bitsPerSample, ai->fp, NAS_LITTLE_ENDIAN) ||
+ 	!fwrite(rate, AIFF_SizeofExtended, 1, ai->fp))
+ 	Err();
+ 
+@@ -402,11 +402,11 @@
+ 
+     ai->dataOffset = ftell(ai->fp);
+ 
+-    if (!FileWriteL(0, ai->fp, LITTLE_ENDIAN) ||
++    if (!FileWriteL(0, ai->fp, NAS_LITTLE_ENDIAN) ||
+     /* offset */
+-	!FileWriteL(0, ai->fp, LITTLE_ENDIAN) ||
++	!FileWriteL(0, ai->fp, NAS_LITTLE_ENDIAN) ||
+     /* block size */
+-	!FileWriteL(0, ai->fp, LITTLE_ENDIAN))
++	!FileWriteL(0, ai->fp, NAS_LITTLE_ENDIAN))
+ 	Err();
+ 
+     ai->fileSize += sizeof(AiffChunk) + AIFF_SizeofSoundDataChunk;
+@@ -430,9 +430,9 @@
+ 
+ 	    fseek(ai->fp, ai->sizeOffset, 0);
+ 	    FileWriteL(ai->fileSize + PAD2(ai->dataSize), ai->fp,
+-		       LITTLE_ENDIAN);
++		       NAS_LITTLE_ENDIAN);
+ 	    fseek(ai->fp, ai->dataOffset, 0);
+-	    FileWriteL(ai->dataSize, ai->fp, LITTLE_ENDIAN);
++	    FileWriteL(ai->dataSize, ai->fp, NAS_LITTLE_ENDIAN);
+ 	}
+ 
+ 	status = fclose(ai->fp);
+--- lib/audio/convutil.c	1998/05/18 10:20:15	1.1
++++ lib/audio/convutil.c	1998/05/18 10:24:44
+@@ -107,7 +107,7 @@
+ 	    convert(char, x << 8);
+ 	    break;
+ 	case AuFormatLinearSigned16MSB:
+-	    if (LITTLE_ENDIAN)
++	    if (NAS_LITTLE_ENDIAN)
+ 		convert(short, ((((unsigned short) x) >> 8) | (x << 8)));
+ #if 0
+ 	    else
+@@ -115,14 +115,14 @@
+ #endif
+ 	    break;
+ 	case AuFormatLinearUnsigned16MSB:
+-	    if (LITTLE_ENDIAN)
++	    if (NAS_LITTLE_ENDIAN)
+ 		convert(short,
+ 			(((((unsigned short) x) >> 8) | (x << 8)) ^ 0x8000));
+ 	    else
+ 		convert(short, x ^ 0x8000);
+ 	    break;
+ 	case AuFormatLinearSigned16LSB:
+-	    if (BIG_ENDIAN)
++	    if (NAS_BIG_ENDIAN)
+ 		convert(short, ((((unsigned short) x) >> 8) | (x << 8)));
+ #if 0
+ 	    else
+@@ -130,7 +130,7 @@
+ #endif
+ 	    break;
+ 	case AuFormatLinearUnsigned16LSB:
+-	    if (BIG_ENDIAN)
++	    if (NAS_BIG_ENDIAN)
+ 		convert(short,
+ 			(((((unsigned short) x) >> 8) | (x << 8)) ^ 0x8000));
+ 	    else
+@@ -266,7 +266,7 @@
+ 	    convert(char, x >> 8);
+ 	    break;
+ 	case AuFormatLinearSigned16MSB:
+-	    if (LITTLE_ENDIAN)
++	    if (NAS_LITTLE_ENDIAN)
+ 		convert(short, ((((unsigned short) x) >> 8) | (x << 8)));
+ #if 0
+ 	    else
+@@ -276,7 +276,7 @@
+ #endif
+ 	    break;
+ 	case AuFormatLinearUnsigned16MSB:
+-	    if (LITTLE_ENDIAN)
++	    if (NAS_LITTLE_ENDIAN)
+ 	    {
+ 		convert(short,
+ 			(((((unsigned short) x) >> 8) | (x << 8)) ^ 0x8000));
+@@ -287,7 +287,7 @@
+ 	    }
+ 	    break;
+ 	case AuFormatLinearSigned16LSB:
+-	    if (BIG_ENDIAN)
++	    if (NAS_BIG_ENDIAN)
+ 		convert(short, ((((unsigned short) x) >> 8) | (x << 8)));
+ #if 0
+ 	    else
+@@ -297,7 +297,7 @@
+ #endif
+ 	    break;
+ 	case AuFormatLinearUnsigned16LSB:
+-	    if (BIG_ENDIAN)
++	    if (NAS_BIG_ENDIAN)
+ 	    {
+ 		convert(short,
+ 			(((((unsigned short) x) >> 8) | (x << 8)) ^ 0x8000));
+--- lib/audio/fileutil.h	1998/05/18 10:18:30	1.1
++++ lib/audio/fileutil.h	1998/05/18 10:25:31
+@@ -58,8 +58,8 @@
+ #endif
+ #endif /* _FUNCPROTOBEGIN */
+ 
+-#define LITTLE_ENDIAN 		(*(char *) &endian)
+-#define BIG_ENDIAN 		(!LITTLE_ENDIAN)
++#define NAS_LITTLE_ENDIAN 	(*(char *) &endian)
++#define NAS_BIG_ENDIAN 		(!NAS_LITTLE_ENDIAN)
+ static int      endian = 1;
+ 
+ /* byte swap a AuInt32 */
+--- lib/audio/snd.c	1998/05/18 10:20:15	1.1
++++ lib/audio/snd.c	1998/05/18 10:25:57
+@@ -62,7 +62,7 @@
+     {
+ 	if (si->writing)
+ 	{
+-	    if (LITTLE_ENDIAN)
++	    if (NAS_LITTLE_ENDIAN)
+ 	    {
+ 		char            n;
+ 
+@@ -136,7 +136,7 @@
+ 	Err();
+ 
+     /* do byte swapping if necessary */
+-    if (LITTLE_ENDIAN)
++    if (NAS_LITTLE_ENDIAN)
+     {
+ 	char            n;
+ 
+@@ -201,7 +201,7 @@
+     {
+ 	h = si->h;
+ 
+-	if (LITTLE_ENDIAN)
++	if (NAS_LITTLE_ENDIAN)
+ 	{			/* header is big-endian */
+ 	    char            n;
+ 
+--- lib/audio/voc.c	1998/05/18 10:20:15	1.1
++++ lib/audio/voc.c	1998/05/18 10:26:31
+@@ -66,9 +66,9 @@
+ 
+     if (!fread(buf, VOC_ID_SIZE, 1, vi->fp) ||
+ 	strncmp(buf, VOC_ID, VOC_ID_SIZE) ||
+-	FileReadS(vi->fp, BIG_ENDIAN) != VOC_DATA_OFFSET ||
+-	FileReadS(vi->fp, BIG_ENDIAN) != VOC_VERSION ||
+-	FileReadS(vi->fp, BIG_ENDIAN) != VOC_VERSION_CHK)
++	FileReadS(vi->fp, NAS_BIG_ENDIAN) != VOC_DATA_OFFSET ||
++	FileReadS(vi->fp, NAS_BIG_ENDIAN) != VOC_VERSION ||
++	FileReadS(vi->fp, NAS_BIG_ENDIAN) != VOC_VERSION_CHK)
+ 	Err();
+ 
+     do
+@@ -153,9 +153,9 @@
+ 
+     if (!(vi->fp = fopen(name, AU_WRITE_BINARY)) ||
+ 	!fwrite(VOC_ID, VOC_ID_SIZE, 1, vi->fp) ||
+-	!FileWriteS(VOC_DATA_OFFSET, vi->fp, BIG_ENDIAN) ||
+-	!FileWriteS(VOC_VERSION, vi->fp, BIG_ENDIAN) ||
+-	!FileWriteS(VOC_VERSION_CHK, vi->fp, BIG_ENDIAN))
++	!FileWriteS(VOC_DATA_OFFSET, vi->fp, NAS_BIG_ENDIAN) ||
++	!FileWriteS(VOC_VERSION, vi->fp, NAS_BIG_ENDIAN) ||
++	!FileWriteS(VOC_VERSION_CHK, vi->fp, NAS_BIG_ENDIAN))
+ 	Err();
+ 
+     if ((n = strlen(vi->comment)))
+--- lib/audio/wave.c	1998/05/18 10:20:15	1.1
++++ lib/audio/wave.c	1998/05/18 10:27:46
+@@ -47,7 +47,7 @@
+     char            n;
+ 
+     if ((status = fread(c, sizeof(RiffChunk), 1, fp)))
+-	if (BIG_ENDIAN)
++	if (NAS_BIG_ENDIAN)
+ 	    swapl(&c->ckSize, n);
+ 
+     return status;
+@@ -130,18 +130,18 @@
+ 	{
+ 	    AuInt32            dummy;
+ 
+-	    wi->format = FileReadS(wi->fp, BIG_ENDIAN);
+-	    wi->channels = FileReadS(wi->fp, BIG_ENDIAN);
+-	    wi->sampleRate = FileReadL(wi->fp, BIG_ENDIAN);
++	    wi->format = FileReadS(wi->fp, NAS_BIG_ENDIAN);
++	    wi->channels = FileReadS(wi->fp, NAS_BIG_ENDIAN);
++	    wi->sampleRate = FileReadL(wi->fp, NAS_BIG_ENDIAN);
+ 
+ 	    /* we don't care about the next two fields */
+-	    dummy = FileReadL(wi->fp, BIG_ENDIAN);
+-	    dummy = FileReadS(wi->fp, BIG_ENDIAN);
++	    dummy = FileReadL(wi->fp, NAS_BIG_ENDIAN);
++	    dummy = FileReadS(wi->fp, NAS_BIG_ENDIAN);
+ 
+ 	    if (wi->format != RIFF_WAVE_FORMAT_PCM)
+ 		Err();
+ 
+-	    wi->bitsPerSample = FileReadS(wi->fp, BIG_ENDIAN);
++	    wi->bitsPerSample = FileReadS(wi->fp, NAS_BIG_ENDIAN);
+ 
+ 	    /* skip any other format specific fields */
+ 	    fseek(wi->fp, PAD2(ck.ckSize - 16), 1);
+@@ -199,7 +199,7 @@
+ 
+     wi->sizeOffset = ftell(wi->fp);
+ 
+-    if (!FileWriteL(0, wi->fp, BIG_ENDIAN) ||
++    if (!FileWriteL(0, wi->fp, NAS_BIG_ENDIAN) ||
+ 	!fwrite(RIFF_WaveID, sizeof(RIFF_FOURCC), 1, wi->fp))
+ 	Err();
+ 
+@@ -213,10 +213,10 @@
+ 	size = sizeof(RiffChunk) + sizeof(RIFF_FOURCC) + PAD2(n);
+ 
+ 	if (!fwrite(RIFF_ListID, sizeof(RIFF_FOURCC), 1, wi->fp) ||
+-	    !FileWriteL(size, wi->fp, BIG_ENDIAN) ||
++	    !FileWriteL(size, wi->fp, NAS_BIG_ENDIAN) ||
+ 	    !fwrite(RIFF_ListInfoID, sizeof(RIFF_FOURCC), 1, wi->fp) ||
+ 	    !fwrite(RIFF_InfoIcmtID, sizeof(RIFF_FOURCC), 1, wi->fp) ||
+-	    !FileWriteL(n, wi->fp, BIG_ENDIAN) ||
++	    !FileWriteL(n, wi->fp, NAS_BIG_ENDIAN) ||
+ 	    !fwrite(wi->comment, n, 1, wi->fp))
+ 	    Err();
+ 
+@@ -227,15 +227,15 @@
+     }
+ 
+     if (!fwrite(RIFF_WaveFmtID, sizeof(RIFF_FOURCC), 1, wi->fp) ||
+-	!FileWriteL(RIFF_WaveFmtSize, wi->fp, BIG_ENDIAN) ||
+-	!FileWriteS(RIFF_WAVE_FORMAT_PCM, wi->fp, BIG_ENDIAN) ||
+-	!FileWriteS(wi->channels, wi->fp, BIG_ENDIAN) ||
+-	!FileWriteL(wi->sampleRate, wi->fp, BIG_ENDIAN) ||
++	!FileWriteL(RIFF_WaveFmtSize, wi->fp, NAS_BIG_ENDIAN) ||
++	!FileWriteS(RIFF_WAVE_FORMAT_PCM, wi->fp, NAS_BIG_ENDIAN) ||
++	!FileWriteS(wi->channels, wi->fp, NAS_BIG_ENDIAN) ||
++	!FileWriteL(wi->sampleRate, wi->fp, NAS_BIG_ENDIAN) ||
+ 	!FileWriteL(wi->channels * wi->sampleRate * (wi->bitsPerSample >> 3),
+-		    wi->fp, BIG_ENDIAN) ||
++		    wi->fp, NAS_BIG_ENDIAN) ||
+ 	!FileWriteS(wi->channels * (wi->bitsPerSample >> 3), wi->fp,
+-		    BIG_ENDIAN) ||
+-	!FileWriteS(wi->bitsPerSample, wi->fp, BIG_ENDIAN))
++		    NAS_BIG_ENDIAN) ||
++	!FileWriteS(wi->bitsPerSample, wi->fp, NAS_BIG_ENDIAN))
+ 	Err();
+ 
+     wi->fileSize += sizeof(RiffChunk) + RIFF_WaveFmtSize;
+@@ -245,7 +245,7 @@
+ 
+     wi->dataOffset = ftell(wi->fp);
+ 
+-    if (!FileWriteL(0, wi->fp, BIG_ENDIAN))
++    if (!FileWriteL(0, wi->fp, NAS_BIG_ENDIAN))
+ 	Err();
+ 
+     wi->fileSize += sizeof(RiffChunk);
+@@ -268,9 +268,9 @@
+ 		fputc(0, wi->fp);	/* pad the data */
+ 
+ 	    fseek(wi->fp, wi->sizeOffset, 0);
+-	    FileWriteL(wi->fileSize + PAD2(wi->dataSize), wi->fp, BIG_ENDIAN);
++	    FileWriteL(wi->fileSize + PAD2(wi->dataSize), wi->fp, NAS_BIG_ENDIAN);
+ 	    fseek(wi->fp, wi->dataOffset, 0);
+-	    FileWriteL(wi->dataSize, wi->fp, BIG_ENDIAN);
++	    FileWriteL(wi->dataSize, wi->fp, NAS_BIG_ENDIAN);
+ 	}
+ 
+ 	status = fclose(wi->fp);
+--- clients/audio/auedit/auedit.c	1998/05/18 10:16:02	1.1
++++ clients/audio/auedit/auedit.c	1998/05/18 10:11:17
+@@ -77,8 +77,8 @@
+ #include "pause.xbm"
+ 
+ #define	APP_CLASS		"Auedit"
+-#define LITTLE_ENDIAN 		(*(char *) &g->endian == 1)
+-#define BIG_ENDIAN 		(!LITTLE_ENDIAN)
++#define NAS_LITTLE_ENDIAN 	(*(char *) &g->endian == 1)
++#define NAS_BIG_ENDIAN 		(!NAS_LITTLE_ENDIAN)
+ #define SELECTION_HEADER_SIZE	4
+ #define DEFAULT_FREQUENCY	8000
+ #define ZOOM_SCALE		2
+@@ -508,7 +508,7 @@
+ 	XtVaSetValues(g->frequency, XtNstring, buf, NULL);
+ 
+ 	s = SoundCreate(SoundFileFormatNone,
+-			LITTLE_ENDIAN ? AuFormatLinearSigned16LSB :
++			NAS_LITTLE_ENDIAN ? AuFormatLinearSigned16LSB :
+ 			AuFormatLinearSigned16MSB, g->numTracks,
+ 			freq, g->numSamples, NULL);
+ 
+@@ -693,7 +693,7 @@
+ 		setTime(g, g->positionTime, start);
+ 
+ 		s = SoundCreate(SoundFileFormatNone,
+-				LITTLE_ENDIAN ? AuFormatLinearSigned16LSB :
++				NAS_LITTLE_ENDIAN ? AuFormatLinearSigned16LSB :
+ 				AuFormatLinearSigned16MSB,
+ 			    g->numTracks, g->sampleRate, end - start, NULL);
+ 
