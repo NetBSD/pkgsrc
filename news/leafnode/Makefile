@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 22:52:08 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/09/05 16:16:23 wiz Exp $
 
-DISTNAME=		leafnode-1.9.39.rel
-PKGNAME=		leafnode-1.9.39
+DISTNAME=		leafnode-1.9.43.rel
+PKGNAME=		${DISTNAME:S/.rel//}
 WRKSRC=			${WRKDIR}/${DISTNAME}
 CATEGORIES=		news
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=leafnode/}
