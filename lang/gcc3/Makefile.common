@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2004/09/08 08:42:35 jlam Exp $
+# $NetBSD: Makefile.common,v 1.11 2004/09/21 15:04:34 jlam Exp $
 
 GCC_VERSION=	3.3.4
 DISTNAME=	gcc-${GCC_VERSION}
@@ -120,13 +120,13 @@ GCC_ARCHSUBDIR=	${GCC_SUBPREFIX}/lib/gcc-lib/${GCC_PLATFORM}/${GCC_VERSION}
 GCC_ARCHDIR=	${PREFIX}/${GCC_ARCHSUBDIR}
 
 .if defined(INSTLIBS)
-BUILDLINK_LIBTOOL=	${BUILDLINK_DIR}/bin/libtool
+_WRAPPEES+=		LIBTOOL
 
 .PHONY: scrub-libtool-archives
 post-build: scrub-libtool-archives
 scrub-libtool-archives:
 .  for lafile in ${INSTLIBS}
-	${BUILDLINK_LIBTOOL} --fix-la ${WRKSRC}/${GCC_PLATFORM}/${lafile}
+	${LIBTOOL} --mode=unwrap -o ${WRKSRC}/${GCC_PLATFORM}/${lafile}
 .  endfor
 .endif
 
