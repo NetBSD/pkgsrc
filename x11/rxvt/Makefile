@@ -1,3 +1,4 @@
+# $NetBSD: Makefile,v 1.2 1997/10/09 11:48:40 agc Exp $
 # New ports collection Makefile for: rxvt
 # Version required:	2.20
 # Date created:         5th December 1994
