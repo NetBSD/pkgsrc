@@ -1,0 +1,40 @@
+$NetBSD: patch-ab,v 1.5 2000/05/20 01:08:32 kim Exp $
+
+--- init.c.orig	Sat Apr 22 05:27:07 2000
++++ init.c	Fri May 19 20:55:47 2000
+@@ -1674,6 +1674,8 @@
+       Realname = mutt_substrdup (pw->pw_gecos, p);
+     else
+       Realname = safe_strdup (pw->pw_gecos);
++    if (strchr (Realname, '&'))
++      Realname = mutt_expand_realname (Realname, Username);
+     Shell = safe_strdup (pw->pw_shell);
+   }
+   else 
+@@ -1890,4 +1892,26 @@
+     if (c->func == mutt_parse_hook && mutt_strcasecmp (c->name, name) == 0)
+       return c->data;
+   return 0;
++}
++
++char *mutt_expand_realname(char *gecos, const char *login)
++{
++    char *buf, *bp, *p;
++
++    buf = bp = safe_malloc(strlen(gecos) + strlen(login));
++
++    /* copy gecos, interpolating & to be full name */
++    for (p = gecos; *p != '\0'; p++) {
++	if (*p == '&') {
++	    sprintf(bp, "%s", login);
++	    *bp = toupper(*bp);
++	    bp += strlen(bp);
++	}
++	else
++	    *bp++ = *p;
++    }
++    *bp = '\0';
++
++    safe_free((void **)&gecos);
++    return(buf);
+ }
