@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.8 2001/10/12 20:39:37 tron Exp $
+$NetBSD: patch-ab,v 1.9 2001/10/21 06:26:27 tron Exp $
 
 --- Imakefile.orig	Sun Mar 21 23:36:26 1999
-+++ Imakefile	Thu Jul  8 00:55:07 1999
++++ Imakefile	Sun Oct 21 08:23:48 2001
 @@ -96,9 +96,9 @@
  XCOMM   to link against symbols inside xanim.
  XCOMM 
@@ -98,12 +98,16 @@ $NetBSD: patch-ab,v 1.8 2001/10/12 20:39:37 tron Exp $
  XCOMM 
  XCOMM  -- QNX 4.2 PC's --------------------------------------------------------
  XCOMM  XA_AUDIO_DEFS = -DXA_LINUX_AUDIO -DXA_SELECT
-@@ -465,7 +487,7 @@
+@@ -465,7 +487,11 @@
  
  PROGRAMS = $(XANIM)
  
 -INCLUDES = -I$(INCDIR) $(XA_INCS)
++.ifdef X11_ROOT
 +INCLUDES = -I$(X11_ROOT)/include/X11 $(XA_INCS)
++.else
++INCLUDES = -I$(INCDIR)/X11 $(XA_INCS)
++.endif
  
     LIBS1 = $(XA_LIBS) $(EXTENSIONLIB) $(XTOOLLIB) $(XLIB) -lm
  DEPLIBS1 = $(DEPEXTENSIONLIB) $(DEPXTOOLLIB) $(DEPXLIB)
