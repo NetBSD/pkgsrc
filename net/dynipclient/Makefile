@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/08/28 13:10:46 tv Exp $
+# $NetBSD: Makefile,v 1.2 2001/08/28 13:23:06 tv Exp $
 #
 
 DISTNAME=	dynip_3.00
@@ -19,5 +19,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dynipadmin ${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/dynipclient ${PREFIX}/bin/
 	${INSTALL_DATA} ${WRKSRC}/*.1 ${PREFIX}/man/man1/
+	${INSTALL_SCRIPT} ${FILESDIR}/dynipclient.sh ${PREFIX}/etc/rc.d/dynipclient
 
 .include "../../mk/bsd.pkg.mk"
