@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2003/11/12 03:39:42 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2003/11/20 04:46:08 grant Exp $
 #
 
-DISTNAME=		rdesktop-1.2.0
-PKGREVISION=		1
+DISTNAME=		rdesktop-1.3.0
 CATEGORIES=		net
+WRKSRC=			${WRKDIR}/rdesktop
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rdesktop/}
 
 MAINTAINER=		grant@NetBSD.org
@@ -16,7 +16,9 @@ HAS_CONFIGURE=		YES
 CONFIGURE_ARGS=		--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--with-x=${X11BASE}
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
-ALL_TARGET=		rdesktop
+
+LDFLAGS+=		${LIBOSSAUDIO}
 
 .include "../../security/openssl/buildlink2.mk"
+.include "../../mk/ossaudio.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
