@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/14 02:34:51 taya Exp $
+# $NetBSD: Makefile,v 1.2 2001/07/20 02:23:11 taya Exp $
 #
 
 DISTNAME=	galeon-0.11.1
@@ -21,11 +21,13 @@ DEPENDS+=	libxml>=1.8.13:../../textproc/libxml
 DEPENDS+=	libiconv>=1.6.1:../../converters/libiconv
 
 USE_X11BASE=	yes
+USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-mozilla-includes=${PREFIX}/include/mozilla \
 		 --with-mozilla-libs=${PREFIX}/lib/mozilla \
 		--with-libiconv=${LOCALBASE} \
 		--disable-applet
+USE_LIBINTL=	yes
 
 MOZ_LIBDIR=     ${PREFIX}/lib/mozilla
 LDFLAGS+=       -Wl,-R${MOZ_LIBDIR}
