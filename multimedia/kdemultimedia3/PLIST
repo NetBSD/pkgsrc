@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/02/15 12:18:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/03/01 13:18:20 markd Exp $
 bin/artsbuilder
 bin/artscontrol
 bin/juk
@@ -237,7 +237,7 @@ lib/libarts_splay.so
 lib/libarts_splay.so.0
 lib/libarts_splay.so.0.0
 lib/libarts_xine.la
-lib/libarts_xine.so
+lib/libarts_xine.${XV_SUFFIX}
 lib/libartsbuilder.la
 lib/libartsbuilder.so
 lib/libartsbuilder.so.0
