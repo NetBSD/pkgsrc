@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/16 18:11:07 rh Exp $
+libexec/netsaint/check_snmp
