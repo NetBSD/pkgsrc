@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2001/02/16 14:38:59 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/10/08 16:20:46 seb Exp $
 #
 
-DISTNAME=		rcs-5.7
+DISTNAME=		rcs-5.7nb1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=rcs/}
 
@@ -15,6 +15,7 @@ DEPENDS=		diffutils-2.7:../../devel/diffutils
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV=		PATH=${LOCALBASE}/bin:$PATH
+CONFIGURE_ARGS+=	--with-diffutils=gdiff
 
 post-install:
 	${RM} -f ${PREFIX}/bin/rcslog
