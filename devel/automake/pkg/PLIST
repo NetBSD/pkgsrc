@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 1999/02/19 08:31:20 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 1999/02/19 08:37:35 tron Exp $
 bin/aclocal
 bin/automake
 @unexec install-info --delete %D/info/automake.info %D/info/dir
@@ -6,16 +6,15 @@ info/automake.info
 @exec install-info %D/info/automake.info %D/info/dir
 share/aclocal/ccstdc.m4
 share/aclocal/cond.m4
-share/aclocal/cygwin.m4
 share/aclocal/dmalloc.m4
 share/aclocal/error.m4
 share/aclocal/header.m4
 share/aclocal/init.m4
-share/aclocal/install.m4
 share/aclocal/lispdir.m4
 share/aclocal/maintainer.m4
 share/aclocal/missing.m4
 share/aclocal/mktime.m4
+share/aclocal/multi.m4
 share/aclocal/obstack.m4
 share/aclocal/protos.m4
 share/aclocal/ptrdiff.m4
@@ -24,9 +23,7 @@ share/aclocal/sanity.m4
 share/aclocal/strtod.m4
 share/aclocal/termios.m4
 share/aclocal/winsz.m4
-share/aclocal/exeext.m4
 share/aclocal/lex.m4
-share/aclocal/mingw.m4
 share/automake/COPYING
 share/automake/INSTALL
 share/automake/acinstall
@@ -64,6 +61,7 @@ share/automake/mans-vars.am
 share/automake/mdate-sh
 share/automake/missing
 share/automake/mkinstalldirs
+share/automake/multilib.am
 share/automake/program.am
 share/automake/progs-clean.am
 share/automake/progs.am
