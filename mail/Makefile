@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2001/01/25 23:01:27 jlam Exp $
+# $NetBSD: Makefile,v 1.61 2001/01/26 21:47:15 jtb Exp $
 #
 
     SUBDIR += balsa
@@ -9,6 +9,7 @@
     SUBDIR += distribute
     SUBDIR += drac
     SUBDIR += elm
+    SUBDIR += etach
     SUBDIR += exim
     SUBDIR += exmh
     SUBDIR += faces
