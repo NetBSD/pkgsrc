@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.120 2002/01/29 12:39:19 wiz Exp $
+# $NetBSD: Makefile,v 1.121 2002/03/01 01:34:53 mjl Exp $
 #
 
 COMMENT=	System utilities
 
+SUBDIR+=	adjustkernel
 SUBDIR+=	amanda
 SUBDIR+=	amanda-client
 SUBDIR+=	amanda-common
