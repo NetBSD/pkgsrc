@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2001/10/26 09:04:49 kleink Exp $
+$NetBSD: distinfo,v 1.7 2001/12/20 22:16:44 kleink Exp $
 
-SHA1 (openldap-2.0.18.tgz) = 31172cdd957c68f9a66188ae150c0aa7cb09f3e4
-Size (openldap-2.0.18.tgz) = 1555816 bytes
+SHA1 (openldap-2.0.19.tgz) = bdb24c9f0f0d3df62a99e048f93e36c2f3d57390
+Size (openldap-2.0.19.tgz) = 1558941 bytes
 SHA1 (patch-aa) = 8577dfc802eda5e789aa7e66ff9bd9cbb1ca1777
 SHA1 (patch-ab) = f2b00ef942da01fda134ac37086f59d371efa152
