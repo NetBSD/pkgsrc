@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.121 2004/04/21 21:09:32 cube Exp $
+# $NetBSD: Makefile,v 1.122 2004/05/13 06:44:56 xtraeme Exp $
 
-DISTNAME=		samba-3.0.2a
-PKGREVISION=		1
+DISTNAME=		samba-3.0.4
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.samba.org/pub/samba/ \
 			ftp://ring.asahi-net.or.jp/pub/net/samba/ \
@@ -11,7 +10,7 @@ COUNTRY_MIRRORS=	au1 ca fi fr de it pl ru sg se us1 us6
 .for COUNTRY in ${COUNTRY_MIRRORS}
 MASTER_SITES+=		ftp://${COUNTRY}.samba.org/pub/samba/
 .endfor
-EXTRACT_SUFX=		.tar.bz2
+#EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://www.samba.org/
@@ -151,15 +150,14 @@ post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/deluser.sh > ${WRKDIR}/deluser.sh
 
 post-install:
-	cd ${PREFIX}/lib && ln -s libsmbclient.so libsmbclient.so.0
-	${RMDIR} ${SAMBA_LIBDIR}/auth
-	${RMDIR} ${SAMBA_LIBDIR}/idmap
-	${RMDIR} ${SAMBA_LIBDIR}/pdb
-	${RMDIR} ${SAMBA_LIBDIR}/rpc
+	-cd ${PREFIX}/lib && ln -s libsmbclient.so libsmbclient.so.0
+.for d in auth idmap pdb rpc
+	${RMDIR} ${SAMBA_LIBDIR}/${d}
+.endfor
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_LIBRARY} ${WRKSRC}/nsswitch/libnss_winbind.so ${PREFIX}/lib
 	${INSTALL_LIBRARY} ${WRKSRC}/nsswitch/libnss_wins.so ${PREFIX}/lib
-	cd ${WRKSRC}/../docs/Registry; for file in *.reg; do		\
+	cd ${WRKSRC}/../docs/registry; for file in *.reg; do		\
 		${INSTALL_DATA} $$file ${DOCDIR}/$$file;		\
 	done
 	${INSTALL_DATA_DIR} ${EGDIR}
