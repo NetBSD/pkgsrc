@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/23 21:50:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/24 15:46:42 grant Exp $
 #
 
 DISTNAME=	ImageViewer-0.6.0
@@ -13,7 +13,7 @@ COMMENT=	GNUstep image display application
 WRKSRC=		${WRKDIR}/ImageViewer
 NO_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 USE_X11=	YES
 MAKEFILE=	GNUmakefile
 

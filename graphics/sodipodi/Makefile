@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/01/23 21:50:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.23 2004/01/24 15:46:44 grant Exp $
 #
 
 DISTNAME=	sodipodi-0.33
@@ -15,7 +15,7 @@ DEPENDS+=	gnome2-dirs>=1.0:../../misc/gnome2-dirs
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 USE_X11=		YES
 
