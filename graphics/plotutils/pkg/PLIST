@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/11/07 15:23:49 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/02/19 04:29:46 tv Exp $
 bin/spline
 bin/double
 bin/ode
@@ -43,8 +43,7 @@ share/tek2plot/ocpred.tek
 share/tek2plot/scale.tek
 share/tek2plot/skymap.tek
 share/tek2plot/usmap.tek
-lib/libplot.so.1.5
-lib/libplot.la
+lib/libplot.so.1.6
 lib/libplot.a
 @unexec install-info --delete %D/info/plotutils.info %D/info/dir
 info/plotutils.info
