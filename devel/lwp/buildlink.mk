@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/05/31 22:51:17 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/09 15:21:03 wiz Exp $
 #
 # This Makefile fragment is included by packages that use lwp.
 #
@@ -41,7 +41,7 @@ link-lwp-headers:
 			${RM} -f $${dest};				\
 			${LN} -sf $${inc} $${dest};			\
 		fi;							\
-        done
+	done
 
 # This target links the libraries into ${BUILDLINK_LIBDIR}, which should
 # be searched first by the linker.
