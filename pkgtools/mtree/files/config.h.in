@@ -236,8 +236,7 @@
 /* Define to `int' if <sys/types.h> doesn't define. */
 #undef uid_t
 
-/* define HAVE_FILE_FLAGS if the user- and root-changeable masks
-were detected */
+/* Define to 1 if the user- and root-changeable masks were detected */
 #if HAVE_STRUCT_STAT_ST_FLAGS && HAVE_DECL_UF_SETTABLE && HAVE_DECL_SF_SETTABLE
 #define HAVE_FILE_FLAGS 1
 #endif
