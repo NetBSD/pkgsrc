@@ -1,0 +1,4 @@
+Bagpipe Music Writer Gold is one of the most popular formats for
+typesetting bagpipe music.  This package provides bww2tex, a program to
+convert such files into BagpipeTex format.  bww2tex also handles files
+created by the earlier DOS program, Bagpipe Music Writer.

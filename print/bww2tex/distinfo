@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/01/23 18:16:41 fredb Exp $
+
+SHA1 (bww2tex200.tar.gz) = 5ff680d5b5d01ec09c3b8631975b3ed972a50035
+Size (bww2tex200.tar.gz) = 274364 bytes
+SHA1 (patch-aa) = 494da8b380d292dc09569d382dd0fd0a8f135542
+SHA1 (patch-ab) = d921a372d3a61642ec92115b112359f776c6b9c2
