@@ -1,12 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/22 23:52:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/07/31 07:37:00 jlam Exp $
 bin/icewm
 bin/icewmhint
 bin/icewmbg
-lib/X11/icewm/preferences
-lib/X11/icewm/menu
-lib/X11/icewm/toolbar
-lib/X11/icewm/winoptions
-lib/X11/icewm/keys
 lib/X11/icewm/icons/app_16x16.xpm
 lib/X11/icewm/icons/app_32x32.xpm
 lib/X11/icewm/icons/bomb_16x16.xpm
@@ -20,8 +15,8 @@ lib/X11/icewm/icons/communicator-composer_32x32.xpm
 lib/X11/icewm/icons/communicator-discussion_16x16.xpm
 lib/X11/icewm/icons/communicator-discussion_32x32.xpm
 lib/X11/icewm/icons/communicator-mail_16x16.xpm
-lib/X11/icewm/icons/file_16x16.xpm
 lib/X11/icewm/icons/communicator-mail_32x32.xpm
+lib/X11/icewm/icons/file_16x16.xpm
 lib/X11/icewm/icons/file_32x32.xpm
 lib/X11/icewm/icons/folder_16x16.xpm
 lib/X11/icewm/icons/folder_32x32.xpm
@@ -52,7 +47,7 @@ lib/X11/icewm/icons/xterm_16x16.xpm
 lib/X11/icewm/icons/xterm_32x32.xpm
 lib/X11/icewm/icons/xv_16x16.xpm
 lib/X11/icewm/icons/xv_32x32.xpm
-@dirrm lib/X11/icewm/icons
+lib/X11/icewm/keys
 lib/X11/icewm/ledclock/a.xpm
 lib/X11/icewm/ledclock/colon.xpm
 lib/X11/icewm/ledclock/dot.xpm
@@ -70,7 +65,13 @@ lib/X11/icewm/ledclock/n9.xpm
 lib/X11/icewm/ledclock/p.xpm
 lib/X11/icewm/ledclock/slash.xpm
 lib/X11/icewm/ledclock/space.xpm
-@dirrm lib/X11/icewm/ledclock
+lib/X11/icewm/mailbox/errmail.xpm
+lib/X11/icewm/mailbox/mail.xpm
+lib/X11/icewm/mailbox/newmail.xpm
+lib/X11/icewm/mailbox/nomail.xpm
+lib/X11/icewm/mailbox/unreadmail.xpm
+lib/X11/icewm/menu
+lib/X11/icewm/preferences
 lib/X11/icewm/taskbar/debian.xpm
 lib/X11/icewm/taskbar/linux.xpm
 lib/X11/icewm/taskbar/linux1.xpm
@@ -79,54 +80,20 @@ lib/X11/icewm/taskbar/linux20.xpm
 lib/X11/icewm/taskbar/start.xpm
 lib/X11/icewm/taskbar/windows.xpm
 lib/X11/icewm/taskbar/xfreeos2.xpm
-@dirrm lib/X11/icewm/taskbar
-lib/X11/icewm/mailbox/errmail.xpm
-lib/X11/icewm/mailbox/mail.xpm
-lib/X11/icewm/mailbox/newmail.xpm
-lib/X11/icewm/mailbox/nomail.xpm
-lib/X11/icewm/mailbox/unreadmail.xpm
-@dirrm lib/X11/icewm/mailbox
-lib/X11/icewm/themes/nice/close.xpm
-lib/X11/icewm/themes/nice/hide.xpm
-lib/X11/icewm/themes/nice/maximize.xpm
-lib/X11/icewm/themes/nice/minimize.xpm
-lib/X11/icewm/themes/nice/restore.xpm
-lib/X11/icewm/themes/nice/rolldown.xpm
-lib/X11/icewm/themes/nice/rollup.xpm
-lib/X11/icewm/themes/nice/blue.theme
-lib/X11/icewm/themes/nice/default.theme
-@dirrm lib/X11/icewm/themes/nice
-lib/X11/icewm/themes/motif/close.xpm
-lib/X11/icewm/themes/motif/maximize.xpm
-lib/X11/icewm/themes/motif/menu.xpm
-lib/X11/icewm/themes/motif/minimize.xpm
-lib/X11/icewm/themes/motif/restore.xpm
-lib/X11/icewm/themes/motif/default.theme
-@dirrm lib/X11/icewm/themes/motif
-lib/X11/icewm/themes/win95/close.xpm
-lib/X11/icewm/themes/win95/maximize.xpm
-lib/X11/icewm/themes/win95/minimize.xpm
-lib/X11/icewm/themes/win95/restore.xpm
-lib/X11/icewm/themes/win95/default.theme
-@dirrm lib/X11/icewm/themes/win95
-lib/X11/icewm/themes/warp3/close.xpm
-lib/X11/icewm/themes/warp3/hide.xpm
-lib/X11/icewm/themes/warp3/maximize.xpm
-lib/X11/icewm/themes/warp3/minimize.xpm
-lib/X11/icewm/themes/warp3/restore.xpm
-lib/X11/icewm/themes/warp3/rolldown.xpm
-lib/X11/icewm/themes/warp3/rollup.xpm
-lib/X11/icewm/themes/warp3/default.theme
-@dirrm lib/X11/icewm/themes/warp3
-lib/X11/icewm/themes/warp4/close.xpm
-lib/X11/icewm/themes/warp4/hide.xpm
-lib/X11/icewm/themes/warp4/maximize.xpm
-lib/X11/icewm/themes/warp4/minimize.xpm
-lib/X11/icewm/themes/warp4/restore.xpm
-lib/X11/icewm/themes/warp4/default.theme
-@dirrm lib/X11/icewm/themes/warp4
+lib/X11/icewm/themes/gtk2/closeA.xpm
+lib/X11/icewm/themes/gtk2/closeI.xpm
+lib/X11/icewm/themes/gtk2/default.theme
+lib/X11/icewm/themes/gtk2/maximizeA.xpm
+lib/X11/icewm/themes/gtk2/maximizeI.xpm
+lib/X11/icewm/themes/gtk2/menuButtonA.xpm
+lib/X11/icewm/themes/gtk2/menuButtonI.xpm
+lib/X11/icewm/themes/gtk2/minimizeA.xpm
+lib/X11/icewm/themes/gtk2/minimizeI.xpm
+lib/X11/icewm/themes/gtk2/restoreA.xpm
+lib/X11/icewm/themes/gtk2/restoreI.xpm
 lib/X11/icewm/themes/metal2/closeA.xpm
 lib/X11/icewm/themes/metal2/closeI.xpm
+lib/X11/icewm/themes/metal2/default.theme
 lib/X11/icewm/themes/metal2/depthA.xpm
 lib/X11/icewm/themes/metal2/depthI.xpm
 lib/X11/icewm/themes/metal2/dframeAB.xpm
@@ -168,12 +135,12 @@ lib/X11/icewm/themes/metal2/maximizeI.xpm
 lib/X11/icewm/themes/metal2/menuButtonA.xpm
 lib/X11/icewm/themes/metal2/menuButtonI.xpm
 lib/X11/icewm/themes/metal2/minimizeA.xpm
-lib/X11/icewm/themes/metal2/rollupA.xpm
 lib/X11/icewm/themes/metal2/minimizeI.xpm
 lib/X11/icewm/themes/metal2/restoreA.xpm
 lib/X11/icewm/themes/metal2/restoreI.xpm
 lib/X11/icewm/themes/metal2/rolldownA.xpm
 lib/X11/icewm/themes/metal2/rolldownI.xpm
+lib/X11/icewm/themes/metal2/rollupA.xpm
 lib/X11/icewm/themes/metal2/rollupI.xpm
 lib/X11/icewm/themes/metal2/titleAB.xpm
 lib/X11/icewm/themes/metal2/titleAL.xpm
@@ -189,42 +156,76 @@ lib/X11/icewm/themes/metal2/titleIP.xpm
 lib/X11/icewm/themes/metal2/titleIR.xpm
 lib/X11/icewm/themes/metal2/titleIS.xpm
 lib/X11/icewm/themes/metal2/titleIT.xpm
-lib/X11/icewm/themes/metal2/default.theme
-@dirrm lib/X11/icewm/themes/metal2
-lib/X11/icewm/themes/gtk2/closeA.xpm
-lib/X11/icewm/themes/gtk2/closeI.xpm
-lib/X11/icewm/themes/gtk2/maximizeA.xpm
-lib/X11/icewm/themes/gtk2/maximizeI.xpm
-lib/X11/icewm/themes/gtk2/menuButtonA.xpm
-lib/X11/icewm/themes/gtk2/menuButtonI.xpm
-lib/X11/icewm/themes/gtk2/minimizeA.xpm
-lib/X11/icewm/themes/gtk2/minimizeI.xpm
-lib/X11/icewm/themes/gtk2/restoreA.xpm
-lib/X11/icewm/themes/gtk2/restoreI.xpm
-lib/X11/icewm/themes/gtk2/default.theme
-@dirrm lib/X11/icewm/themes/gtk2
-@dirrm lib/X11/icewm/themes
-@dirrm lib/X11/icewm
+lib/X11/icewm/themes/motif/close.xpm
+lib/X11/icewm/themes/motif/default.theme
+lib/X11/icewm/themes/motif/maximize.xpm
+lib/X11/icewm/themes/motif/menu.xpm
+lib/X11/icewm/themes/motif/minimize.xpm
+lib/X11/icewm/themes/motif/restore.xpm
+lib/X11/icewm/themes/nice/blue.theme
+lib/X11/icewm/themes/nice/close.xpm
+lib/X11/icewm/themes/nice/default.theme
+lib/X11/icewm/themes/nice/hide.xpm
+lib/X11/icewm/themes/nice/maximize.xpm
+lib/X11/icewm/themes/nice/minimize.xpm
+lib/X11/icewm/themes/nice/restore.xpm
+lib/X11/icewm/themes/nice/rolldown.xpm
+lib/X11/icewm/themes/nice/rollup.xpm
+lib/X11/icewm/themes/warp3/close.xpm
+lib/X11/icewm/themes/warp3/default.theme
+lib/X11/icewm/themes/warp3/hide.xpm
+lib/X11/icewm/themes/warp3/maximize.xpm
+lib/X11/icewm/themes/warp3/minimize.xpm
+lib/X11/icewm/themes/warp3/restore.xpm
+lib/X11/icewm/themes/warp3/rolldown.xpm
+lib/X11/icewm/themes/warp3/rollup.xpm
+lib/X11/icewm/themes/warp4/close.xpm
+lib/X11/icewm/themes/warp4/default.theme
+lib/X11/icewm/themes/warp4/hide.xpm
+lib/X11/icewm/themes/warp4/maximize.xpm
+lib/X11/icewm/themes/warp4/minimize.xpm
+lib/X11/icewm/themes/warp4/restore.xpm
+lib/X11/icewm/themes/win95/close.xpm
+lib/X11/icewm/themes/win95/default.theme
+lib/X11/icewm/themes/win95/maximize.xpm
+lib/X11/icewm/themes/win95/minimize.xpm
+lib/X11/icewm/themes/win95/restore.xpm
+lib/X11/icewm/toolbar
+lib/X11/icewm/winoptions
+share/doc/html/icewm/icewm-1.html
+share/doc/html/icewm/icewm-10.html
+share/doc/html/icewm/icewm-11.html
+share/doc/html/icewm/icewm-12.html
+share/doc/html/icewm/icewm-13.html
+share/doc/html/icewm/icewm-14.html
+share/doc/html/icewm/icewm-15.html
+share/doc/html/icewm/icewm-2.html
+share/doc/html/icewm/icewm-3.html
+share/doc/html/icewm/icewm-4.html
+share/doc/html/icewm/icewm-5.html
+share/doc/html/icewm/icewm-6.html
+share/doc/html/icewm/icewm-7.html
+share/doc/html/icewm/icewm-8.html
+share/doc/html/icewm/icewm-9.html
+share/doc/html/icewm/icewm.html
 share/doc/icewm/BUGS
 share/doc/icewm/CHANGES
 share/doc/icewm/COPYING
 share/doc/icewm/FAQ
 share/doc/icewm/README
 share/doc/icewm/TODO
-share/doc/icewm/icewm.html
-share/doc/icewm/icewm-1.html
-share/doc/icewm/icewm-2.html
-share/doc/icewm/icewm-3.html
-share/doc/icewm/icewm-4.html
-share/doc/icewm/icewm-5.html
-share/doc/icewm/icewm-6.html
-share/doc/icewm/icewm-7.html
-share/doc/icewm/icewm-8.html
-share/doc/icewm/icewm-9.html
-share/doc/icewm/icewm-10.html
-share/doc/icewm/icewm-11.html
-share/doc/icewm/icewm-12.html
-share/doc/icewm/icewm-13.html
-share/doc/icewm/icewm-14.html
-share/doc/icewm/icewm-15.html
 @dirrm share/doc/icewm
+@dirrm share/doc/html/icewm
+@dirrm lib/X11/icewm/themes/win95
+@dirrm lib/X11/icewm/themes/warp4
+@dirrm lib/X11/icewm/themes/warp3
+@dirrm lib/X11/icewm/themes/nice
+@dirrm lib/X11/icewm/themes/motif
+@dirrm lib/X11/icewm/themes/metal2
+@dirrm lib/X11/icewm/themes/gtk2
+@dirrm lib/X11/icewm/themes
+@dirrm lib/X11/icewm/taskbar
+@dirrm lib/X11/icewm/mailbox
+@dirrm lib/X11/icewm/ledclock
+@dirrm lib/X11/icewm/icons
+@dirrm lib/X11/icewm
