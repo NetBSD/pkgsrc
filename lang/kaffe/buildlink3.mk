@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/07/02 12:51:57 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/07/04 15:24:46 jmmv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KAFFE_BUILDLINK3_MK:=	${KAFFE_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nkaffe}
 BUILDLINK_PACKAGES+=	kaffe
 
 .if !empty(KAFFE_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.kaffe+=	kaffe-[0-9]*
+BUILDLINK_DEPENDS.kaffe+=	kaffe>=1.1.4nb2
 BUILDLINK_PKGSRCDIR.kaffe?=	../../lang/kaffe
 BUILDLINK_JAVA_PREFIX.kaffe=	${PREFIX}/java/kaffe
 
