@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 1999/10/10 16:11:00 rh Exp $
+# $NetBSD: Makefile,v 1.120 1999/10/13 19:10:01 jlam Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -27,6 +27,7 @@
     SUBDIR += dclock
     SUBDIR += dxpc
     SUBDIR += econf
+    SUBDIR += egtk
     SUBDIR += emiclock
 #    SUBDIR += emu
     SUBDIR += enlightenment
