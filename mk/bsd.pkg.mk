@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1012 2002/07/23 19:10:27 cjep Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1013 2002/07/24 00:54:23 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -3800,7 +3800,7 @@ print-PLIST:
 		-e  's@${LOWER_OPSYS}@\$${LOWER_OPSYS}@' 		\
 		-e  's@${LOWER_OS_VERSION}@\$${LOWER_OS_VERSION}@' 	\
 		-e  's@${PKGNAME}@\$${PKGNAME}@' 			\
-		-e  's@${PKGVERSION}@\$${PKGVERSION}@'			\
+		-e  's@${PKGVERSION:C/\./\./}@\$${PKGVERSION}@'		\
 		-e  's@${PKGLOCALEDIR}/locale@\$${PKGLOCALEDIR}/locale@' \
 	 | ${AWK} '							\
 		/^@/ { print $$0; next }				\
