@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/12/29 17:46:13 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2004/02/13 16:13:27 jmmv Exp $
 
---- docs/reference/cspi/Makefile.in.orig	2003-12-29 18:12:12.000000000 +0100
-+++ docs/reference/cspi/Makefile.in	2003-12-29 18:12:50.000000000 +0100
-@@ -164,9 +164,9 @@
+--- docs/reference/cspi/Makefile.in.orig	2003-12-05 15:25:11.000000000 +0100
++++ docs/reference/cspi/Makefile.in
+@@ -165,9 +165,9 @@ DOC_SOURCE_DIR = ../../../cspi 
  # Extra options to supply to gtkdoc-mkdb
  MKDB_OPTIONS = --output-format=xml
  
@@ -14,3 +14,16 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/12/29 17:46:13 xtraeme Exp $
  
  TARGET_DIR = $(HTML_DIR)/$(DOC_MODULE)
  
+@@ -362,11 +362,11 @@ maintainer-clean-local: clean
+ 	cd $(srcdir) && rm -rf sgml html $(DOC_MODULE)-decl-list.txt $(DOC_MODULE)-decl.txt
+ 
+ install-data-local:
+-	$(mkinstalldirs) $(DESTDIR)$(TARGET_DIR)
+ 	(installfiles=`echo $(srcdir)/html/*.html`; \
+ 	if test "$$installfiles" = '$(srcdir)/html/*.html'; \
+ 	then echo '-- Nothing to install' ; \
+ 	else \
++	  $(mkinstalldirs) $(DESTDIR)$(TARGET_DIR); \
+ 	  for i in $$installfiles; do \
+ 	echo '-- Installing '$$i ; \
+ 	$(INSTALL_DATA) $$i $(DESTDIR)$(TARGET_DIR); \
