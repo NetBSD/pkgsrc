@@ -1,6 +1,6 @@
 DISTNAME=		httpd-${APACHE_VERSION}
 APACHE_VERSION=		2.0.48
-APR_VERSION=            0.9.4
+APR_VERSION=            0.9.5
 MASTER_SITES=		${MASTER_SITE_APACHE:=httpd/} \
 			${MASTER_SITE_APACHE:=httpd/old/} \
 			http://www.NetBSD.org/images/logos/
