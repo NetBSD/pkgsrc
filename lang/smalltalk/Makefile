@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/07/02 22:35:37 jtb Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/07 21:14:12 seb Exp $
 
 DISTNAME=		smalltalk-2.1.3
 CATEGORIES=		lang
@@ -16,6 +16,9 @@ USE_GNU_READLINE=	YES
 
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+USE_NEW_TEXINFO=	YES
+INFO_FILES=		gst-base.info gst-libs.info gst.info
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}/lib
@@ -37,5 +40,4 @@ TEST_TARGET=		check
 .include "../../lang/tcl/buildlink2.mk"
 .include "../../x11/tk/buildlink2.mk"
 .include "../../databases/gdbm/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,13 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2003/07/02 00:00:22 jtb Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/07/07 21:14:12 seb Exp $
 bin/gst
 bin/gst-config
 bin/gst-package
 include/gst.h
 include/gstpub.h
 include/sigsegv.h
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gst-base.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gst-libs.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gst.info
 info/gst-base.info
 info/gst-base.info-1
 info/gst-base.info-10
@@ -44,9 +41,6 @@ info/gst.info-4
 info/gst.info-5
 info/gst.info-6
 info/gst.info-7
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/gst.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/gst-base.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/gst-libs.info
 lib/libgst.a
 lib/libgst.la
 lib/smalltalk/blox-tk-${PKGVERSION}.so
