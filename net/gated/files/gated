@@ -1,0 +1,18 @@
+#!/bin/sh
+#
+# $NetBSD: gated,v 1.1 2001/04/05 16:58:50 wiz Exp $
+#
+
+# PROVIDE: gated
+# REQUIRE: DAEMON
+
+. /etc/rc.subr
+
+name="@PREFIX@/sbin/gated"
+rcvar=$name
+command="/usr/sbin/${name}"
+pidfile="/var/run/${name}.pid"
+required_files="/etc/${name}.conf"
+
+load_rc_config $name
+run_rc_command "$1"
