@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3074 2005/02/19 22:04:25 wiz Exp $
+$NetBSD: TODO,v 1.3075 2005/02/19 22:36:13 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -324,7 +324,7 @@ Suggested package updates
 	o boaconstructor-0.3.1
 	o bomberclone-0.11.5
 	o bonobo-conf-0.16
-	o boost-1.32.0
+	o boost-1.32.0 [jmmv]
 	o boson-0.10
 	o btparse-0.34
 	o bzflag-2.0.0
