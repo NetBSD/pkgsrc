@@ -1,11 +1,11 @@
-$NetBSD: patch-ac,v 1.1.1.1 1999/08/30 08:41:44 rh Exp $
+$NetBSD: patch-ac,v 1.2 2000/06/01 17:18:01 rh Exp $
 
---- gmix/gmix.c.orig	Thu Apr  8 21:40:37 1999
-+++ gmix/gmix.c	Mon Aug 30 09:38:18 1999
-@@ -46,7 +46,9 @@
- #include <string.h>
- #include <signal.h>
- #include <ctype.h>
+--- gmix/gmix.c.orig	Sun May 21 22:12:50 2000
++++ gmix/gmix.c	Thu Jun  1 18:55:00 2000
+@@ -56,7 +56,9 @@
+ #ifdef ALSA
+ #include <sys/asoundlib.h>
+ #else
 -#ifdef HAVE_LINUX_SOUNDCARD_H 
 +#ifdef HAVE_SOUNDCARD_H
 +#include <soundcard.h>
@@ -13,21 +13,21 @@ $NetBSD: patch-ac,v 1.1.1.1 1999/08/30 08:41:44 rh Exp $
  #include <linux/soundcard.h>
  #else 
  #include <machine/soundcard.h>
-@@ -67,6 +69,13 @@
- void init_devices(void);
- void open_dialog(void);
+@@ -90,6 +92,13 @@
+ GtkWidget *configwin;
+ GtkWidget  *slidernotebook;
  
-+#ifndef HAVE_MIXER_INFO
++#if !defined(HAVE_MIXER_INFO) && !defined(SOUND_MIXER_INFO)
 +typedef struct {
 +	char id[20];
 +	char name[40];
 +} mixer_info;
 +#endif
 +
- /*
-  * Gnome info:
-  */
-@@ -294,12 +303,16 @@
+ typedef struct {
+ 	gboolean set_mixer_on_start;
+ 	gboolean hide_menu;
+@@ -697,12 +706,16 @@
  	/*
  	 * mixer-name
  	 */
