@@ -1,35 +1,35 @@
-# $NetBSD: Makefile,v 1.10 1999/01/30 23:18:57 agc Exp $
+# $NetBSD: Makefile,v 1.11 1999/04/15 20:39:50 tron Exp $
 #
 
-DISTNAME=		bxform-088
-PKGNAME=		xforms-0.88
-WRKSRC=			${WRKDIR}/xforms
-CATEGORIES=		x11
-MASTER_SITES=	ftp://bragg.phys.uwm.edu/pub/xforms/%SUBDIR%/
+DISTNAME=	bxform-088
+PKGNAME=	xforms-0.88
+WRKSRC=		${WRKDIR}/xforms
+CATEGORIES=	x11
+MASTER_SITES=	ftp://bragg.phys.uwm.edu/pub/xforms/${ARCH_SUBDIR}/
 .if (${MACHINE_ARCH} == "arm32")
-MASTER_SITE_SUBDIR=	netBSD-arm
+ARCH_SUBDIR=	netBSD-arm
 .elif (${MACHINE_ARCH} == "i386")
-MASTER_SITE_SUBDIR=	netBSD
+ARCH_SUBDIR=	netBSD
 .elif (${MACHINE_ARCH} == "ns32k")
-MASTER_SITE_SUBDIR=	netBSD-pc532
+ARCH_SUBDIR=	netBSD-pc532
 .else
-MASTER_SITE_SUBDIR=	netBSD-${MACHINE_ARCH}
+ARCH_SUBDIR=	netBSD-${MACHINE_ARCH}
 .endif
-EXTRACT_SUFX=		.tgz
+EXTRACT_SUFX=	.tgz
 
-MAINTAINER=		lamj@stat.cmu.edu
-HOMEPAGE=		http://bragg.phys.uwm.edu/xforms/
+MAINTAINER=	lamj@stat.cmu.edu
+HOMEPAGE=	http://bragg.phys.uwm.edu/xforms/
 
-ONLY_FOR_ARCHS=		arm32 i386 m68k sparc ns32k
+ONLY_FOR_ARCHS=	arm32 i386 m68k sparc ns32k
 
-DIST_SUBDIR=		xforms/${MASTER_SITE_SUBDIR}
+DIST_SUBDIR=	xforms/${ARCH_SUBDIR}
 
 ## Define OBJMACHINE so WRKDIR is defined to be ${MACHINE_ARCH}-specific.
-OBJMACHINE=		yes
+OBJMACHINE=	yes
 
-NO_BUILD=		yes
+NO_BUILD=	yes
 
-USE_X11BASE=		yes
+USE_X11BASE=	yes
 
 post-patch:
 	${MV} ${WRKSRC}/mkconfig.h ${WRKSRC}/mkconfig.h.orig

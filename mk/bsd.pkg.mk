@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.253 1999/04/14 19:44:24 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.254 1999/04/15 20:39:46 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -577,38 +577,30 @@ FETCH_BEFORE_ARGS += -p
 
 # Popular master sites
 MASTER_SITE_XCONTRIB+=	\
-	ftp://crl.dec.com/pub/X11/contrib/%SUBDIR%/ \
-	ftp://ftp.eu.net/X11/contrib/%SUBDIR%/ \
-	ftp://ftp.uni-paderborn.de/pub/X11/contrib/%SUBDIR%/ \
-	ftp://ftp.x.org/contrib/%SUBDIR%/
+	ftp://crl.dec.com/pub/X11/contrib/ \
+	ftp://ftp.eu.net/X11/contrib/ \
+	ftp://ftp.uni-paderborn.de/pub/X11/contrib/ \
+	ftp://ftp.x.org/contrib/
 
 MASTER_SITE_GNU+=	\
-	ftp://ftp.gnu.org/pub/gnu/%SUBDIR%/ \
-	ftp://wuarchive.wustl.edu/systems/gnu/%SUBDIR%/
+	ftp://ftp.gnu.org/pub/gnu/ \
+	ftp://wuarchive.wustl.edu/systems/gnu/
 
 MASTER_SITE_PERL_CPAN+=	\
-	ftp://ftp.digital.com/pub/plan/perl/CPAN/modules/by-module/%SUBDIR%/ \
-	ftp://ftp.cdrom.com/pub/perl/CPAN/modules/by-module/%SUBDIR%/
+	ftp://ftp.digital.com/pub/plan/perl/CPAN/modules/by-module/ \
+	ftp://ftp.cdrom.com/pub/perl/CPAN/modules/by-module/
 
 MASTER_SITE_TEX_CTAN+=  \
-	ftp://ftp.cdrom.com/pub/tex/ctan/%SUBDIR%/  \
-	ftp://wuarchive.wustl.edu/packages/TeX/%SUBDIR%/  \
-	ftp://ftp.funet.fi/pub/TeX/CTAN/%SUBDIR%/  \
-	ftp://ftp.tex.ac.uk/public/ctan/tex-archive/%SUBDIR%/  \
-	ftp://ftp.dante.de/tex-archive/%SUBDIR%/
+	ftp://ftp.cdrom.com/pub/tex/ctan/  \
+	ftp://wuarchive.wustl.edu/packages/TeX/  \
+	ftp://ftp.funet.fi/pub/TeX/CTAN/  \
+	ftp://ftp.tex.ac.uk/public/ctan/tex-archive/  \
+	ftp://ftp.dante.de/tex-archive/
 
 MASTER_SITE_SUNSITE+=	\
-	ftp://sunsite.unc.edu/pub/Linux/%SUBDIR%/ \
-	ftp://ftp.infomagic.com/pub/mirrors/linux/sunsite/%SUBDIR%/ \
-	ftp://ftp.funet.fi/pub/mirrors/sunsite.unc.edu/pub/Linux/%SUBDIR%/
-
-# Empty declaration to avoid "variable MASTER_SITES recursive" error
-MASTER_SITES?=
-PATCH_SITES?=
-
-# Substitute subdirectory names
-MASTER_SITES:=	${MASTER_SITES:S/%SUBDIR%/${MASTER_SITE_SUBDIR}/}
-PATCH_SITES:=	${PATCH_SITES:S/%SUBDIR%/${PATCH_SITE_SUBDIR}/}
+	ftp://sunsite.unc.edu/pub/Linux/ \
+	ftp://ftp.infomagic.com/pub/mirrors/linux/sunsite/ \
+	ftp://ftp.funet.fi/pub/mirrors/sunsite.unc.edu/pub/Linux/
 
 # The primary backup site.
 MASTER_SITE_BACKUP?=	\
@@ -712,7 +704,19 @@ EXTRACT_ONLY?=	${DISTFILES}
 
 .if defined(LIB_DEPENDS)
 .BEGIN:
-	@${ECHO_MSG} "LIB_DEPENDS is deprecated, and must be replaced with DEPENDS."
+	@${ECHO_MSG} "LIB_DEPENDS is deprecated and must be replaced with DEPENDS."
+	@${FALSE}
+.endif
+
+.if defined(MASTER_SITE_SUBDIR)
+.BEGIN:
+	@${ECHO_MSG} 'MASTER_SITE_SUBDIR is deprecated and must be replaced with MASTER_SITES.'
+	@${FALSE}
+.endif
+
+.if defined(PATCH_SITE_SUBDIR)
+.BEGIN:
+	@${ECHO_MSG} 'PATCH_SITE_SUBDIR is deprecated and must be replaced with PATCH_SITES.'
 	@${FALSE}
 .endif
 

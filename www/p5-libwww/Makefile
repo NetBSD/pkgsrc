@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.9 1999/01/13 02:56:11 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 1999/04/15 20:39:48 tron Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/09/14 04:00:11 jfitz Exp
 #
 
 PKGNAME=        	p5-libwww-5.36
 DISTNAME!=       	echo ${PKGNAME} | sed -e 's/^p5-//' -e 's/-/-perl-/'
 CATEGORIES=		www perl5
-MASTER_SITES=		${MASTER_SITE_PERL_CPAN}
-MASTER_SITE_SUBDIR=	URI
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=URI/}
 
 MAINTAINER=		packages@netbsd.org
 

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 1998/11/12 14:58:40 agc Exp $
+# $NetBSD: Makefile,v 1.7 1999/04/15 20:39:49 tron Exp $
 #
 
 DISTNAME=	sunclock-1.4
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_XCONTRIB}
-MASTER_SITE_SUBDIR=	applications
+MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/}
 
 MAINTAINER=	perry@netbsd.org
 

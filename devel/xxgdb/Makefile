@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 1998/06/22 11:27:51 agc Exp $
+# $NetBSD: Makefile,v 1.5 1999/04/15 20:39:41 tron Exp $
 #
 
 DISTNAME=	xxgdb-1.12
 CATEGORIES=	devel x11
-MASTER_SITES=	${MASTER_SITE_XCONTRIB}
-MASTER_SITE_SUBDIR=	utilities
+MASTER_SITES=	${MASTER_SITE_XCONTRIB:=utilities/}
 
 MAINTAINER=	rh@trapdoor.vip.at
 

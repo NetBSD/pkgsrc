@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 1999/01/29 21:21:56 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/04/15 20:39:46 tron Exp $
 
 DISTNAME=		xrolodex.1.5.motif
 PKGNAME=		xrolodex-1.5
 CATEGORIES=		misc x11
-MASTER_SITES=		${MASTER_SITE_XCONTRIB}
-MASTER_SITE_SUBDIR=	applications
+MASTER_SITES=		${MASTER_SITE_XCONTRIB:=applications/}
 EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		root@garbled.net

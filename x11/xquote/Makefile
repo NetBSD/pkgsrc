@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/12/26 16:03:46 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1999/04/15 20:39:50 tron Exp $
 
 DISTNAME=		xquote-1.1
 CATEGORIES=		x11
 MASTER_SITES=		http://www.sunsite.auc.dk/xinvest/ \
-			${MASTER_SITE_XCONTRIB}
-MASTER_SITE_SUBDIR=	applications
+			${MASTER_SITE_XCONTRIB:=applications/}
 DISTFILES=		${DISTNAME}.tar.gz Xquote.ad
 
 MAINTAINER=		root@garbled.net

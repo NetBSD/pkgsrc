@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.18 1999/02/20 22:48:46 hubertf Exp $
+# $NetBSD: Makefile,v 1.19 1999/04/15 20:39:48 tron Exp $
 #
 
 DISTNAME=	Xaw3d-1.5
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_XCONTRIB}
-MASTER_SITE_SUBDIR=	widgets/Xaw3d/R6.3
+MASTER_SITES=	${MASTER_SITE_XCONTRIB:=widgets/Xaw3d/R6.3/}
 
 MAINTAINER=	tron@netbsd.org
 
