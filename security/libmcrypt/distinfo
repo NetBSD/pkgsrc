@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.6 2002/08/25 18:39:54 jlam Exp $
+$NetBSD: distinfo,v 1.7 2003/03/05 08:42:56 wiz Exp $
 
-SHA1 (libmcrypt-2.4.22.tar.gz) = f462cbbcb0c220cb30dead2afa63452c1a5b21e5
-Size (libmcrypt-2.4.22.tar.gz) = 490383 bytes
-SHA1 (patch-aa) = d5a0b2dfbcf32c9b9577c1be6499f1954f9c66a8
+SHA1 (libmcrypt-2.5.6.tar.gz) = 9e3500bb568a2297d8f9763da4556af74ae3e20b
+Size (libmcrypt-2.5.6.tar.gz) = 634589 bytes
