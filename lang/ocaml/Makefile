@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/08/31 14:46:31 jwise Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/17 09:07:23 agc Exp $
 #
 
 DISTNAME=		ocaml-3.00
@@ -7,6 +7,7 @@ MASTER_SITES=		ftp://ftp.inria.fr/lang/caml-light/
 
 MAINTAINER=		groo@netbsd.org
 HOMEPAGE=		http://caml.inria.fr/ocaml/
+COMMENT=		the latest implementation of the Caml dialect of ML
 
 DEPENDS+=		tk-8.3.2:../../x11/tk
 

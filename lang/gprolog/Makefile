@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/07/03 10:34:07 agc Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 09:07:10 agc Exp $
 #
 
 DISTNAME=		gprolog-1.1.6
@@ -7,6 +7,7 @@ MASTER_SITES=		ftp://ftp.inria.fr/INRIA/Projects/contraintes/gnu-prolog/unstable
 
 MAINTAINER=		brook@nmsu.edu
 HOMEPAGE=		http://gnu-prolog.inria.fr/
+COMMENT=		GNU prolog compiler and interpreter
 
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc
 

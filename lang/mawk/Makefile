@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/05/05 06:26:59 tron Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/17 09:07:19 agc Exp $
 #
 
 DISTNAME=       mawk1.3.3
@@ -9,6 +9,7 @@ MASTER_SITES=   ftp://ftp.whidbey.net/pub/brennan/ \
 		ftp://ftp.fu-berlin.de/pub/unix/languages/mawk/
 
 MAINTAINER=	agc@netbsd.org
+COMMENT=	Mike Brennan's fast awk clone
 
 GNU_CONFIGURE=	yes
 

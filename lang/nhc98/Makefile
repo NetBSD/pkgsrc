@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/01/25 04:23:31 jtb Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/17 09:07:22 agc Exp $
 
 DISTNAME=		nhc98src-1.00
 PKGNAME=		nhc98-1.00
@@ -7,6 +7,7 @@ MASTER_SITES=		ftp://ftp.cs.york.ac.uk/pub/haskell/nhc98/
 
 MAINTAINER=		jtb@netbsd.org
 HOMEPAGE=		http://www.cs.york.ac.uk/fp/nhc98/
+COMMENT=		Portable Haskell 98 compiler
 
 NOT_FOR_PLATFORM=	*-*-alpha
 
