@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2000/08/14 14:57:52 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2001/01/04 01:18:07 itojun Exp $
 #
 # GNU binutils configured to hold `as many targets as the cross system is
 # capable of using'.  Configures and builds everything except gas, which
@@ -26,17 +26,24 @@ ALL_TARGET=		all-binutils all-ld
 
 BINDIR=			${PREFIX}/libexec/binutils
 
+# due to /bin/sh restriction, we can accomodate no more archs
 ENABLE_TARGETS+=	alpha-netbsd arm-netbsd \
 			i386-cygwin32 i386-elf i386-go32 i386-linux \
 			i386-netbsd i386-netware \
 			m68k-elf m68k-netbsd m68k-sunos4 \
 			mipseb-netbsd mipsel-netbsd \
 			powerpc-eabi powerpcle-eabi \
-			sparc-netbsd sparc-solaris2 sparc-sunos4
+			sparc-netbsd sparc-solaris2 sparc-sunos4 \
+			sh-netbsdcoff shel-netbsdcoff
 
 # this breaks the `sparc-solaris2' target (which adds sparc_elf32
 # which we use for the `sparc-netbsdelf' target
 #ENABLE_TARGETS+=	sparc64-elf
+
+# make sure configure/Makefile.in is newer than configure.in/Makefile.am
+post-patch:
+	${FIND} ${WRKSRC} -name configure -print | xargs ${TOUCH}
+	${FIND} ${WRKSRC} -name Makefile.in -print | xargs ${TOUCH}
 
 # we use MKDIR, not INSTALL_PROGRAM_DIR, deliberately.
 do-install:
