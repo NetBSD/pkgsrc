@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/05/23 21:32:25 jdolecek Exp $
+# $NetBSD: Makefile,v 1.7 2003/05/31 16:36:47 jdolecek Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.panix.com/opera/files/linux/${OPERA_DIR}/ \
 		ftp://ftp.hu-berlin.de/pub/www/opera/linux/${OPERA_DIR}/ \
@@ -33,11 +34,12 @@ USE_BUILDLINK2=	# defined
 OPERA_PKG_VERSION=	7.11
 
 .if (${MACHINE_ARCH} == i386)
-DEPENDS+=	suse_compat>=6.3:../../emulators/${SUSE_DIR_PREFIX}_compat
-DEPENDS+=	suse_freetype2>=6.3:../../emulators/${SUSE_DIR_PREFIX}_freetype2
-DEPENDS+=	suse_libjpeg>=6.4:../../emulators/${SUSE_DIR_PREFIX}_libjpeg
-DEPENDS+=	suse_libpng>=6.4:../../emulators/${SUSE_DIR_PREFIX}_libpng
-DEPENDS+=	suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
+DEPENDS+=	suse_compat>=7.3:../../emulators/${SUSE_DIR_PREFIX}_compat
+DEPENDS+=	suse_freetype2>=7.3:../../emulators/${SUSE_DIR_PREFIX}_freetype2
+DEPENDS+=	suse_libjpeg>=7.3:../../emulators/${SUSE_DIR_PREFIX}_libjpeg
+DEPENDS+=	suse_libpng>=7.3:../../emulators/${SUSE_DIR_PREFIX}_libpng
+DEPENDS+=	suse_x11>=7.3:../../emulators/${SUSE_DIR_PREFIX}_x11
+DEPENDS+=	suse_openmotif>=7.3:../../emulators/${SUSE_DIR_PREFIX}_openmotif
 
 OPERA_ARCH=		i386
 OPERA_PKG_VERSION=	7.11
