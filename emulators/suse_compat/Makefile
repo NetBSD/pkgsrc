@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/02/17 18:38:25 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/26 21:24:24 tron Exp $
 
 DISTNAME=		compat
 PKGNAME=		suse_compat-${SUSE_VERSION}
@@ -6,7 +6,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE:=a2/}
 EXTRACT_SUFX=		.rpm
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package with old shared libraries
 
@@ -19,5 +19,8 @@ NO_BUILD=		yes
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 RPMFILES=		${DISTNAME}${EXTRACT_SUFX}
+
+post-install:
+	${ECHO} "${EMULSUBDIR}/usr/lib/libncurses.so.2.1" >>${PLIST_SRC}
 
 .include "../suse_linux/Makefile.common"
