@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/04/14 15:13:59 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2002/05/31 15:19:56 seb Exp $
 # FreeBSD Id: Makefile,v 1.11 1999/04/17 10:51:03 itojun Exp
 
 DISTNAME=	nvi-1.79
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=--enable-multibyte --program-prefix=n
 PATCH_FUZZ_FACTOR=	-F1
 
 .if !defined(USE_CANNA) || ${USE_CANNA} == YES
-DEPENDS+=	Canna-lib>=3.5.2:../../japanese/canna-lib
+DEPENDS+=	Canna-lib>=3.5.2:../../inputmethod/canna-lib
 USE_X11=	YES
 CONFIGURE_ARGS+=--enable-canna=${X11PREFIX}
 CANNA_OPT.euc-jp=canna cannactrl cannakey=
