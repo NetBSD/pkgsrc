@@ -1,0 +1,21 @@
+$NetBSD: patch-ag,v 1.1.1.1 1998/10/09 17:49:20 kim Exp $
+
+--- configure.orig	Tue Sep 22 19:46:09 1998
++++ configure	Thu Oct  1 17:39:47 1998
+@@ -636,11 +636,11 @@
+ REGEXLIB=''	# -lregex
+ LIBREGEX=''	# libregex.a
+ 
+-if test "$libexecdir" = '${exec_prefix}/libexec'; then
+-	libexecdir='${bindir}'
+-	localstatedir='${prefix}'
+-
+-fi
++#if test "$libexecdir" = '${exec_prefix}/libexec'; then
++#	libexecdir='${bindir}'
++#	localstatedir='${prefix}'
++#
++#fi
+ 
+ case "$host_os" in
+ cygwin32)

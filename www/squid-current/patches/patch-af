@@ -1,0 +1,30 @@
+$NetBSD: patch-af,v 1.1.1.1 1998/10/09 17:49:20 kim Exp $
+
+--- scripts/Makefile.in.orig	Thu Oct  1 16:06:14 1998
++++ scripts/Makefile.in	Thu Oct  1 16:29:14 1998
+@@ -7,6 +7,7 @@
+ exec_prefix     = @exec_prefix@
+ top_srcdir      = @top_srcdir@
+ bindir          = @bindir@
++sbindir         = @sbindir@
+ sysconfdir      = @sysconfdir@
+ srcdir          = @srcdir@
+ VPATH           = @srcdir@
+@@ -25,12 +26,12 @@
+ 		echo "mkdir $(exec_prefix)"; \
+ 		mkdir $(exec_prefix); \
+ 	fi
+-	@if test ! -d $(bindir); then \
+-		echo "mkdir $(bindir)"; \
+-		mkdir $(bindir); \
++	@if test ! -d $(sbindir); then \
++		echo "mkdir $(sbindir)"; \
++		mkdir $(sbindir); \
+ 	fi
+-	$(INSTALL_SCRIPT) RunCache $(bindir)
+-	$(INSTALL_SCRIPT) RunAccel $(bindir)
++	$(INSTALL_SCRIPT) RunCache $(sbindir)
++	$(INSTALL_SCRIPT) RunAccel $(sbindir)
+ 
+ clean:
+ 

@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/10/09 17:49:20 kim Exp $
+etc/rc.d/squid.sh
+libexec/cachemgr.cgi
+libexec/dnsserver
+libexec/pinger
+libexec/unlinkd
+sbin/RunAccel
+sbin/RunCache
+sbin/client
+sbin/squid

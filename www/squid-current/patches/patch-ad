@@ -1,0 +1,21 @@
+$NetBSD: patch-ad,v 1.1.1.1 1998/10/09 17:49:20 kim Exp $
+
+--- errors/Makefile.in.orig	Fri Apr 24 01:26:39 1998
++++ errors/Makefile.in	Thu Oct  1 16:25:32 1998
+@@ -4,6 +4,7 @@
+ exec_prefix	= @exec_prefix@
+ top_srcdir	= @top_srcdir@
+ bindir		= @bindir@
++datadir		= @datadir@
+ libexecdir      = @libexecdir@
+ sysconfdir	= @sysconfdir@
+ localstatedir   = @localstatedir@
+@@ -15,7 +16,7 @@
+ 
+ INSTALL         	= @INSTALL@
+ INSTALL_FILE    	= @INSTALL_DATA@
+-DEFAULT_ERROR_DIR	= $(sysconfdir)/errors
++DEFAULT_ERROR_DIR	= $(datadir)/squid/errors
+ 
+ LANGUAGE		= @ERR_LANGUAGE@
+ 
