@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/09/06 16:40:03 jwise Exp $
+--- Common.mk.in.orig	Sun Feb  6 19:54:02 2000
++++ Common.mk.in	Tue Sep  5 16:28:43 2000
+@@ -36,7 +36,8 @@
+ #------------------------------------------------------------------------------
+ # Programs and options used by build
+ #
+-CC           = @CC@
++CC           = ${LIBTOOL} --mode=compile @CC@
++LD           = ${LIBTOOL} --mode=link @CC@
+ CFLAGS       = @CFLAGS@ @TCL_EXTRA_CFLAGS@
+ SYSCFLAGS    = @SYSCFLAGS@
+ RANLIB       = @RANLIB@
+@@ -191,13 +192,13 @@
+ #------------------------------------------------------------------------------
+ # Installation directories.
+ 
+-TCLX_INST_RUNTIME  = ${TCLX_PREFIX}/lib/tclX${TCLX_VERSION}
+-TKX_INST_RUNTIME   = ${TKX_PREFIX}/lib/tkX${TKX_VERSION}
++TCLX_INST_RUNTIME  = ${TCLX_PREFIX}/lib/tcl/tclX${TCLX_VERSION}
++TKX_INST_RUNTIME   = ${TKX_PREFIX}/lib/tcl/tkX${TKX_VERSION}
+ TCLX_LIBRARY_PATH  = ${TCLX_INST_RUNTIME}
+ TKX_LIBRARY_PATH   = ${TKX_INST_RUNTIME}
+ 
+-TCLX_EXEC_RUNTIME  = ${TCLX_EXEC_PREFIX}/lib/tclX${TCLX_VERSION}
+-TKX_EXEC_RUNTIME   = ${TKX_EXEC_PREFIX}/lib/tkX${TKX_VERSION}
++TCLX_EXEC_RUNTIME  = ${TCLX_EXEC_PREFIX}/lib/tcl/tclX${TCLX_VERSION}
++TKX_EXEC_RUNTIME   = ${TKX_EXEC_PREFIX}/lib/tcl/tkX${TKX_VERSION}
+ 
+ TCLX_INST_BIN      = ${TCLX_EXEC_PREFIX}/bin
+ TKX_INST_BIN       = ${TKX_EXEC_PREFIX}/bin

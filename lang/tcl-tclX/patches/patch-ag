@@ -1,0 +1,10 @@
+--- ../tk/unix/pkgIndex.tcl.in.orig	Wed Sep  6 11:20:13 2000
++++ ../tk/unix/pkgIndex.tcl.in	Wed Sep  6 11:20:40 2000
+@@ -3,6 +3,6 @@
+ # Package index for TkX @TKX_FULL_VERSION@.
+ #
+ if {[info tclversion] < @TCL_VERSION@} return
+-package ifneeded Tkx @TKX_VERSION@ "package require Tclx @TCLX_VERSION@; package require Tk @TK_VERSION@; load [list $dir/../@TKX_SHLIB_NAME@]"
++package ifneeded Tkx @TKX_VERSION@ "package require Tclx @TCLX_VERSION@; package require Tk @TK_VERSION@; load [list $dir/../../@TKX_SHLIB_NAME@]"
+ 
+ 

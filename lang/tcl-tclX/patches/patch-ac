@@ -1,0 +1,24 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/09/06 16:40:05 jwise Exp $
+--- configure.orig	Sun Feb  6 19:54:02 2000
++++ configure	Tue Sep  5 14:14:35 2000
+@@ -1984,7 +1984,7 @@
+ 		DL_LIBS=""
+ 		LDFLAGS=""
+ 		LD_SEARCH_FLAGS=""
+-		SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so.1.0'
++		SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so'
+ 	    
+ else
+   echo "$ac_t""no" 1>&6
+@@ -2509,11 +2509,7 @@
+ #
+ # Determine suffix to use for the object files for the shared library.
+ #
+-if test "x${TCL_SHLIB_CFLAGS}" != "x"; then
+-    SHOBJ_SUFFIX="..o"
+-else
+     SHOBJ_SUFFIX=".o"
+-fi
+ 
+ #
+ # Determine the arguments for specifying the prefered TclX libraries on the
