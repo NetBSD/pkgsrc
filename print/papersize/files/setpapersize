@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: setpapersize,v 1.8 2003/08/15 12:51:39 reed Exp $
+# $NetBSD: setpapersize,v 1.9 2003/09/08 17:38:34 jmmv Exp $
 #
 # Small shell script to set the default papersize for packages
 #
@@ -46,7 +46,7 @@ set $pkgs
 while [ $# -gt 0 ]; do
 	case $1 in
 	a2ps)
-		a2psfile=@LOCALBASE@/etc/a2ps-site.cfg
+		a2psfile=@PKG_SYSCONFDIR@/a2ps-site.cfg
 		if [ -s "$a2psfile" ]; then
 			@MV@ $a2psfile $a2psfile.old
 			@SED@ -e 's|^Options: --medium=.*|Options: --medium='$papersize'|' $a2psfile.old > $a2psfile && @RM@ $a2psfile.old
@@ -62,7 +62,7 @@ while [ $# -gt 0 ]; do
 		fi
 		;;
 	enscript)
-		enscriptfile=@LOCALBASE@/etc/enscript.cfg
+		enscriptfile=@PKG_SYSCONFDIR@/enscript.cfg
 		if [ -s "$enscriptfile" ]; then
 			@MV@ $enscriptfile $enscriptfile.old
 			@SED@ -e 's|^DefaultMedia:.*|DefaultMedia: '$papersize'|' $enscriptfile.old > $enscriptfile && @RM@ $enscriptfile.old
@@ -97,7 +97,7 @@ while [ $# -gt 0 ]; do
 		fi
 		;;
 	psutils)
-		psutilsfile=@LOCALBASE@/etc/psutils.cfg
+		psutilsfile=@PKG_SYSCONFDIR@/psutils.cfg
 		if [ -s "$psutilsfile" ]; then
 			@MV@ $psutilsfile $psutilsfile.old
 			@SED@ -e 's|^PAPERSIZE.*|PAPERSIZE='$lowpaper'|' $psutilsfile.old > $psutilsfile && @RM@ $psutilsfile.old

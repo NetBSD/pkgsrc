@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: getpapersize,v 1.7 2003/08/15 12:51:39 reed Exp $
+# $NetBSD: getpapersize,v 1.8 2003/09/08 17:38:34 jmmv Exp $
 #
 # Small shell script to show the default papersize for packages
 #
@@ -15,7 +15,7 @@ set $pkgs
 while [ $# -gt 0 ]; do
 	case $1 in
 	a2ps)
-		f=@LOCALBASE@/etc/a2ps-site.cfg
+		f=@PKG_SYSCONFDIR@/a2ps-site.cfg
 		if [ -s "$f" ]; then
 			@ECHO@ -n "$1 has default papersize: "
 			@AWK@ '/^Options: --medium=/ { gsub(".*=", "", $0); print $0; }' $f
@@ -29,7 +29,7 @@ while [ $# -gt 0 ]; do
 		fi
 		;;
 	enscript)
-		f=@LOCALBASE@/etc/enscript.cfg
+		f=@PKG_SYSCONFDIR@/enscript.cfg
 		if [ -s "$f" ]; then
 			@ECHO@ -n "$1 has default papersize: "
 			@AWK@ '/^DefaultMedia:.*/ { gsub(".*:", "", $0); print $0; }' $f
@@ -68,7 +68,7 @@ while [ $# -gt 0 ]; do
 		fi
 		;;
 	psutils)
-		f=@LOCALBASE@/etc/psutils.cfg
+		f=@PKG_SYSCONFDIR@/psutils.cfg
 		if [ -s "$f" ]; then
 			@ECHO@ -n "$1 has default papersize: "
 			@AWK@ '/^PAPERSIZE=/ { gsub(".*=", "", $0); print $0; }' $f
