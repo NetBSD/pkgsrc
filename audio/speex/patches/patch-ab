@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/03/24 08:58:53 wiz Exp $
+
+--- src/Makefile.in.orig	Mon Mar  3 08:13:28 2003
++++ src/Makefile.in
+@@ -89,7 +89,7 @@ src = @src@
+ 
+ INCLUDES = -I$(top_srcdir)/libspeex $(OGG_INCLUDES)
+ 
+-mandir = $(prefix)/share/man
++mandir = $(prefix)/man
+ man_MANS = speexenc.1 speexdec.1
+ 
+ EXTRA_DIST = $(man_MANS) getopt_win.h getopt.c getopt1.c wave_out.c wave_out.h
+@@ -100,10 +100,10 @@ noinst_HEADERS = wav_io.h
+ bin_PROGRAMS = speexenc speexdec
+ 
+ speexenc_SOURCES = speexenc.c wav_io.c
+-speexenc_LDADD = $(top_srcdir)/libspeex/libspeex.la $(OGG_LDFLAGS) $(OGG_LIBS)
++speexenc_LDADD = $(top_srcdir)/libspeex/libspeex.la $(OGG_LDFLAGS) $(OGG_LIBS) ${LIBOSSAUDIO}
+ 
+ speexdec_SOURCES = speexdec.c wav_io.c
+-speexdec_LDADD = $(top_srcdir)/libspeex/libspeex.la $(OGG_LDFLAGS) $(OGG_LIBS)
++speexdec_LDADD = $(top_srcdir)/libspeex/libspeex.la $(OGG_LDFLAGS) $(OGG_LIBS) ${LIBOSSAUDIO}
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_CLEAN_FILES = 
+ bin_PROGRAMS =  speexenc$(EXEEXT) speexdec$(EXEEXT)
