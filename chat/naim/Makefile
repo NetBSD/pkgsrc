@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/02/07 22:52:58 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/08/01 02:37:45 jschauma Exp $
 #
 
 DISTNAME=	naim-0.11.2-2002-02-04-0919
@@ -7,7 +7,7 @@ CATEGORIES=	chat
 MASTER_SITES=	http://dev.n.ml.org/ \
 		http://dev.n.ml.org/naim-snapshots/00-11-02/
 
-MAINTAINER=	tv@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://naim.n.ml.org/
 COMMENT=	ncurses-based AIM/IRC client
 

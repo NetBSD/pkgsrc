@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2002/03/13 17:37:50 fredb Exp $
+# $NetBSD: Makefile,v 1.43 2002/08/01 02:37:41 jschauma Exp $
 
 DISTNAME=		arena-0.3.62
 PKGREVISION=		2
@@ -6,7 +6,7 @@ WRKSRC=			${WRKDIR}/Arena-0.3.62
 CATEGORIES=		www
 MASTER_SITES=		ftp://ftp.yggdrasil.com/pub/dist/web/arena/
 
-MAINTAINER=	tv@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.yggdrasil.com/Products/Arena/
 COMMENT=	Experimental HTML 3 browser, supports math and style sheets
 
