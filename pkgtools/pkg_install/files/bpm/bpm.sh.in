@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: bpm.sh,v 1.2 2004/03/30 15:28:08 tv Exp $
+# $NetBSD: bpm.sh.in,v 1.1 2004/08/06 16:57:03 jlam Exp $
 #
 # Copyright (c) 2003 Alistair G. Crooks.  All rights reserved.
 #
