@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/09 00:30:24 chris Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/08/21 11:30:28 markd Exp $
 bin/taglib-config
+include/taglib/attachedpictureframe.h
 include/taglib/audioproperties.h
 include/taglib/commentsframe.h
 include/taglib/fileref.h
@@ -19,8 +20,10 @@ include/taglib/mpegfile.h
 include/taglib/mpegheader.h
 include/taglib/mpegproperties.h
 include/taglib/oggfile.h
+include/taglib/oggflacfile.h
 include/taglib/oggpage.h
 include/taglib/oggpageheader.h
+include/taglib/relativevolumeframe.h
 include/taglib/tag.h
 include/taglib/tag_c.h
 include/taglib/taglib.h
@@ -43,8 +46,8 @@ include/taglib/xiphcomment.h
 lib/libtag.a
 lib/libtag.la
 lib/libtag.so
-lib/libtag.so.1
-lib/libtag.so.${PKGVERSION}
+lib/libtag.so.3
+lib/libtag.so.3.0
 lib/libtag_c.a
 lib/libtag_c.la
 lib/libtag_c.so
