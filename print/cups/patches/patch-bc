@@ -1,0 +1,13 @@
+$NetBSD: patch-bc,v 1.1 2000/07/12 20:09:40 jlam Exp $
+
+--- filter/Makefile.orig	Fri Jul  7 13:02:42 2000
++++ filter/Makefile	Wed Jul 12 01:53:04 2000
+@@ -69,7 +69,7 @@
+ 	$(INSTALL_DATA) raster.h $(INCLUDEDIR)/cups
+ 	-$(MKDIR) $(LIBDIR)
+ 	$(CHMOD) ugo+rx $(LIBDIR)
+-	$(INSTALL_DATA) $(LIBCUPSIMAGE) $(LIBDIR)
++	$(INSTALL_LIB) $(LIBCUPSIMAGE) $(LIBDIR)
+ 	-if test $(LIBCUPSIMAGE) != "libcupsimage.a" -a $(LIBCUPSIMAGE) != "libcupsimage.la"; then \
+ 		$(RM) `basename $(LIBCUPSIMAGE) .2`; \
+ 		$(LN) $(LIBCUPSIMAGE) `basename $(LIBCUPSIMAGE) .2`; \

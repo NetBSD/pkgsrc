@@ -1,0 +1,47 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1 2000/07/12 20:09:40 jlam Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+case ${STAGE} in
+PRE-INSTALL)
+	;;
+POST-INSTALL)
+	SERVERROOT=/etc/cups
+	LOGDIR=/var/log/cups
+	REQUESTDIR=/var/spool/cups
+
+	mkdir -p ${SERVERROOT}
+	mkdir -p ${SERVERROOT}/certs
+	mkdir -p ${SERVERROOT}/interfaces
+	mkdir -p ${SERVERROOT}/ppd
+	mkdir -p ${LOGDIR}
+	mkdir -p ${REQUESTDIR}
+
+	echo "Installing configuration files:"
+	for file in \
+		classes.conf \
+		client.conf \
+		cupsd.conf \
+		mime.convs \
+		mime.types \
+		printers.conf
+	do
+		if [ ! -f ${SERVERROOT}/${file} ]
+		then
+			echo "	${file}"
+			cp ${PKG_PREFIX}/share/examples/cups/${file} \
+				${SERVERROOT}/${file}
+			chmod 644 ${SERVERROOT}/${file}
+		fi
+	done
+	echo "done."
+	;;
+*)
+	echo "Unexpected argument: $2"
+	exit 1
+	;;
+esac
+exit 0
