@@ -1,4 +1,4 @@
-# $NetBSD: defs.FreeBSD.mk,v 1.36 2004/04/14 11:39:53 xtraeme Exp $
+# $NetBSD: defs.FreeBSD.mk,v 1.37 2004/04/14 15:27:04 xtraeme Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -16,7 +16,7 @@ DATE?=		/bin/date
 DC?=		/usr/bin/dc
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		echo				# Shell builtin
-ECHO?=		${ECHO} -n
+ECHO_N?=	${ECHO} -n
 EGREP?=		/usr/bin/egrep
 EXPR?=		/bin/expr
 FALSE?=		false				# Shell builtin
