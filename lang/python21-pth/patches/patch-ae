@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1.1.1 2002/08/20 19:58:58 drochner Exp $
+
+--- configure.orig	Thu Dec 27 22:55:46 2001
++++ configure	Tue Aug 20 20:12:59 2002
+@@ -569,7 +569,7 @@
+ 
+ # Set VERSION so we only need to edit in one place (i.e., here)
+ 
+-VERSION=2.1
++VERSION=2p1
+ 
+ # Arguments passed to configure.
+ 
+@@ -6456,6 +6456,7 @@
+ trap 'rm -f $CONFIG_STATUS conftest*; exit 1' 1 2 15
+ 
+ DEFS=-DHAVE_CONFIG_H
++DEFS+=-I${BUILDLINK_DIR}/include
+ 
+ # Without the "./", some shells look in PATH for config.status.
+ : ${CONFIG_STATUS=./config.status}
