@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/26 21:41:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/11 18:32:50 jmc Exp $
 #
 
 DISTNAME=		paragui-1.0.4
@@ -16,6 +16,7 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/src/physfs/libtool
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/paragui.pc.in
 GNU_CONFIGURE=		yes
+PTHREAD_OPTS+=		require native
 
 .include "../../devel/SDL/buildlink2.mk"
 .include "../../devel/physfs/buildlink2.mk"
