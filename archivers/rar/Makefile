@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2000/01/11 00:20:54 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2000/02/05 18:17:51 wiz Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:27 fenner Exp 
 #
 
@@ -26,14 +26,14 @@ KERNEL=			/`sysctl -n machdep.booted_kernel`
 pre-extract:
 	@if (${NM} ${KERNEL} | ${GREP} -q compat_12 && \
 		${NM} ${KERNEL} | ${GREP} -q exec_nomid && \
-		${NM} ${KERNEL} | ${GREP} -q exec_aout); then true; \
+		${NM} ${KERNEL} | ${GREP} -q exec_aout); then ${TRUE}; \
 	else \
 		${ECHO} "****************************************************************";\
 		${ECHO} Make can not proceed! In order to extract \(and run\); \
 		${ECHO} this package, you must have have booted from a kernel; \
 		${ECHO} with options COMPAT_NOMID and COMPAT_12 \(and EXEC_AOUT, if ELF\).; \
 		${ECHO} "****************************************************************";\
-		false; \
+		${FALSE}; \
 	fi
 	@${CHMOD} a+x ${DISTDIR}/${DISTFILES}
 
