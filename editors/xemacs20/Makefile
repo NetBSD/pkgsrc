@@ -3,7 +3,7 @@
 # Date created:				26 August 1997
 # Whom:					Michael Elbel (me)
 #
-# $NetBSD: Makefile,v 1.6 1998/01/24 04:59:54 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 1998/01/28 17:03:09 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 #
 
@@ -28,7 +28,8 @@ MAINTAINER=	agc@netbsd.org
 WITH_SOUND=
 .endif
 
-LIB_DEPENDS=	Xpm\\.4\\.:${PORTSDIR}/graphics/xpm \
+LIB_DEPENDS=	Xaw3d\\.6\\.:${PORTSDIR}/x11/Xaw3d \
+		Xpm\\.4\\.:${PORTSDIR}/graphics/xpm \
 		jpeg\\.7\\.:${PORTSDIR}/graphics/jpeg \
 		png\\.0\\.:${PORTSDIR}/graphics/png
 
@@ -36,10 +37,7 @@ LIB_DEPENDS=	Xpm\\.4\\.:${PORTSDIR}/graphics/xpm \
 STRIP=
 HAS_CONFIGURE=	yes
 
-# hack to avoid shipping binaries linked with Motif
-.if defined(MOTIF_STATIC)
-WITH_DIALOGS=	--with-dialogs=athena
-.endif
+WITH_DIALOGS=	--with-dialogs=athena3d
 
 .if defined(USE_MULE)
 WITH_MULE=	--with-mule
