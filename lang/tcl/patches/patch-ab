@@ -1,5 +1,5 @@
 --- configure.orig	Tue Aug  8 15:17:11 2000
-+++ configure	Tue Aug 29 10:10:05 2000
++++ configure	Tue Aug 29 14:15:41 2000
 @@ -5789,7 +5789,7 @@
      if test "x$DL_OBJS" = "xtclLoadAout.o"; then
  	MAKE_LIB="ar cr \${TCL_LIB_FILE} \${OBJS}"
@@ -18,6 +18,18 @@
  else
      TCL_BUILD_EXP_FILE="lib.exp"
      eval "TCL_EXP_FILE=libtcl${TCL_EXPORT_FILE_SUFFIX}"
+@@ -5859,9 +5859,9 @@
+ #--------------------------------------------------------------------
+ 
+ if test "$prefix" != "$exec_prefix"; then
+-    TCL_PACKAGE_PATH="${exec_prefix}/lib ${prefix}/lib"
++    TCL_PACKAGE_PATH="${exec_prefix}/lib/tcl ${prefix}/lib/tcl"
+ else
+-    TCL_PACKAGE_PATH="${prefix}/lib"
++    TCL_PACKAGE_PATH="${prefix}/lib/tcl"
+ fi
+ 
+ #--------------------------------------------------------------------
 @@ -6097,6 +6097,8 @@
  s%@CFLAGS_DEBUG@%$CFLAGS_DEBUG%g
  s%@CFLAGS_OPTIMIZE@%$CFLAGS_OPTIMIZE%g
