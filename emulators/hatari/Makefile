@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/07/26 21:41:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/01 03:18:15 cjep Exp $
 #
 
-DISTNAME=	hatari-0.30
-PKGREVISION=	1
+DISTNAME=	hatari-0.45
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hatari/}
@@ -24,6 +23,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/font8.bmp ${PREFIX}/share/hatari
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/hatari
 	cd ${WRKSRC}/.. && ${INSTALL_DATA} *.txt ${PREFIX}/share/doc/hatari
+	cd ${WRKSRC}/../doc && ${INSTALL_DATA} *.txt manual.html	\
+			${PREFIX}/share/doc/hatari
 
 .include "../../devel/SDL/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
