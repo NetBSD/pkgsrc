@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7235 2004/09/24 19:26:09 abs Exp $
+$NetBSD: CHANGES,v 1.7236 2004/09/24 21:13:02 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4414,4 +4414,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pkglint to 3.91 [wiz 2004-09-24]
 	Updated fbdesk to 1.2.1 [reed 2004-09-24]
 	Updated global to 4.8 [abs 2004-09-24]
-
+	Added tk-BWidget-1.7.0 [dmcmahill 2004-09-24]
