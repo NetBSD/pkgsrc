@@ -1,7 +1,7 @@
-$NetBSD: patch-bo,v 1.1 1999/07/29 16:44:44 bad Exp $
+$NetBSD: patch-bo,v 1.2 2002/04/11 15:43:37 fredb Exp $
 
---- /dev/null	Tue Jul 27 03:18:59 1999
-+++ machdep/syscall-template-m68000-netbsd.S	Wed Jul  7 04:29:09 1999
+--- machdep/syscall-template-m68000-netbsd.S.orig	Thu Apr 11 09:26:27 2002
++++ machdep/syscall-template-m68000-netbsd.S	Thu Apr 11 09:12:45 2002
 @@ -0,0 +1,43 @@
 +#include <machine/asm.h>
 +#include <sys/syscall.h>
@@ -18,13 +18,13 @@ $NetBSD: patch-bo,v 1.1 1999/07/29 16:44:44 bad Exp $
 +#define IMM	#
 +#define SYSCALL(x)      .even; \
 +			ENTRY(machdep_sys_ ## x); \
-+                        movl IMM SYS_ ## x,d0; \
++                        movl IMM SYS_ ## x,%d0; \
 +			trap IMM 0; \
 +			jcs err; \
 +			 rts
 +#else /* !__STDC__ */
 +#define SYSCALL(x)      .even; ENTRY(machdep_sys_/**/x); \
-+                        movl #SYS_/**/x,d0; trap #0; jcs err; rts
++                        movl #SYS_/**/x,%d0; trap #0; jcs err; rts
 +#endif /* !__STDC__ */
 +
 +/*
@@ -40,7 +40,7 @@ $NetBSD: patch-bo,v 1.1 1999/07/29 16:44:44 bad Exp $
 + */
 +
 +err:
-+        negl            d0
++        negl            %d0
 +        rts
 +
 +#define XSYSCALL(NAME)	SYSCALL(NAME)
