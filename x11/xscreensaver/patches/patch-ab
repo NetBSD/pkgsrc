@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.8 2001/05/18 13:26:23 abs Exp $
+
+--- hacks/Makefile.in.orig	Fri May 18 13:27:34 2001
++++ hacks/Makefile.in
+@@ -363,6 +363,12 @@
+ .c.o:
+ 	$(CC) -c $(INCLUDES) $(DEFS) $(CFLAGS) $(X_CFLAGS) $<
+ 
++# Work around gcc codegen bug
++.if $(MACHINE_ARCH) == "arm32"
++distort.o:
++	$(CC) -c $(INCLUDES) $(DEFS) $(CFLAGS) $(X_CFLAGS) -O0 $<
++.endif 
++
+ # Some hacks use a slightly-differently-compiled variant of this file.
+ # This is how to make the the other .o file from it.
+ #
