@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/07/03 14:32:36 taca Exp $
+$NetBSD: distinfo,v 1.2 2002/03/16 03:39:30 taca Exp $
 
-SHA1 (ruby/erb-1.3.3.tar.gz) = 008bc7214feefa53ad2a2f5760859b3c987fcb95
-Size (ruby/erb-1.3.3.tar.gz) = 5128 bytes
+SHA1 (ruby/erb-1.4.0.tar.gz) = 2285b68f52358ce2067242d8cc55e29a5bce4aab
+Size (ruby/erb-1.4.0.tar.gz) = 4294 bytes

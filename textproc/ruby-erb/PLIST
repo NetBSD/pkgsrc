@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:58:36 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/03/16 03:39:30 taca Exp $
 ${RUBY_SITELIBDIR}/erb/compile.rb
 ${RUBY_SITELIBDIR}/erb/erb.rb
 ${RUBY_SITELIBDIR}/erb/erbcgi.rb
@@ -7,10 +7,3 @@ ${RUBY_SITELIBDIR}/erb/erbu.rb
 ${RUBY_SITELIBDIR}/erb/main.rb
 ${RUBY_SITELIBDIR}/erb/strio.rb
 @dirrm ${RUBY_SITELIBDIR}/erb
-${RUBY_EXAMPLESDIR}/erb/cgi_test.rhtml
-${RUBY_EXAMPLESDIR}/erb/dot.htaccess
-${RUBY_EXAMPLESDIR}/erb/erbux.rb
-${RUBY_EXAMPLESDIR}/erb/err.rhtml
-${RUBY_EXAMPLESDIR}/erb/sample.rhtml
-${RUBY_EXAMPLESDIR}/erb/succ.rhtml
-@dirrm ${RUBY_EXAMPLESDIR}/erb
