@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2001/06/11 02:05:11 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2001/06/18 21:32:24 jlam Exp $
 
 DISTNAME=	tiff-v3.5.5
 PKGNAME=	tiff-3.5.5
@@ -22,8 +22,7 @@ CONFIGURE_ENV+=	CC="${CC}"
 .include "../../devel/zlib/buildlink.mk"
 .include "../../graphics/jpeg/buildlink.mk"
 
-ZLIBDIR_DEFAULT=	/usr/lib
-EVAL_PREFIX+=		ZLIBDIR=zlib
+USE_BUILDLINK_ONLY=	# defined
 
 .if defined(USE_GIF)
 DISTFILES+=	libtiff-lzw-compression-kit-1.1.tar.gz
@@ -38,9 +37,7 @@ post-patch:
 
 CPPFLAGS+=	-Dunix
 CONFIGURE_ENV+=	PREFIX="${PREFIX}"
-CONFIGURE_ENV+=	LOCALBASE="${LOCALBASE}"
 CONFIGURE_ENV+=	ENVOPTS="${CFLAGS} ${CPPFLAGS}"
-CONFIGURE_ENV+=	ZLIBDIR="${ZLIBDIR}"
 CONFIGURE_ENV+=	BUILDLINK_DIR="${BUILDLINK_DIR}"
 
 pre-patch:
