@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.3 2000/11/26 21:59:47 ad Exp $
+$NetBSD: patch-ab,v 1.4 2001/06/11 12:15:46 ad Exp $
 
---- Local/Makefile.netbsd.orig	Sun Nov 26 21:52:47 2000
-+++ Local/Makefile.netbsd	Sun Nov 26 21:54:20 2000
+--- Local/Makefile.netbsd.orig	Mon Jun 11 13:11:04 2001
++++ Local/Makefile.netbsd	Mon Jun 11 13:11:40 2001
 @@ -78,7 +78,7 @@
  # CHGRP_COMMAND=/usr/bin/chgrp
  # MV_COMMAND=/bin/mv
@@ -67,7 +67,7 @@ $NetBSD: patch-ab,v 1.3 2000/11/26 21:59:47 ad Exp $
  
  # which results in files with names /var/log/exim_mainlog, etc. The directory
  # in which the log files are placed must exist; Exim does not try to create
-@@ -407,7 +407,7 @@
+@@ -409,7 +409,7 @@
  # the file name, allowing sites that run two separate daemons to distinguish
  # them. Some installations may want something like this
  
@@ -76,7 +76,7 @@ $NetBSD: patch-ab,v 1.3 2000/11/26 21:59:47 ad Exp $
  
  # If PID_FILE_PATH is not defined, Exim writes a file in its spool directory
  # (see SPOOL_DIRECTORY below) with the name "exim-daemon.pid" for the standard
-@@ -456,7 +456,7 @@
+@@ -458,7 +458,7 @@
  # uid and gid.
  
  # Many installations will want something like this:
@@ -85,3 +85,12 @@ $NetBSD: patch-ab,v 1.3 2000/11/26 21:59:47 ad Exp $
  
  # Others may prefer to keep all Exim things under one directory:
  # SPOOL_DIRECTORY=/usr/exim/spool
+@@ -565,7 +565,7 @@
+ # This one is special-purpose, and commonly not required, so do not include
+ # it by default.
+ 
+-# TRANSPORT_LMTP=yes
++TRANSPORT_LMTP=yes
+ 
+ 
+ # TCP wrappers: If you want to use tcpwrappers from within Exim, uncomment
