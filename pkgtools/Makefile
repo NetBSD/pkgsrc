@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.1 1998/08/28 12:25:35 agc Exp $
+# $NetBSD: Makefile,v 1.2 1998/09/03 11:58:25 agc Exp $
 #
 
+#SUBDIR+= ftp
+#SUBDIR+= pax
 #SUBDIR+= pkg_install
 
 .include "../mk/bsd.pkg.subdir.mk"
