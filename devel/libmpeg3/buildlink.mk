@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2002/07/22 09:28:55 agc Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/08/01 05:48:10 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libmpeg3.
 #
@@ -42,9 +42,8 @@ BUILDLINK_FILES.libmpeg3+=	include/mpeg3/video/mpeg3video.h
 BUILDLINK_FILES.libmpeg3+=	include/mpeg3/video/slice.h
 BUILDLINK_FILES.libmpeg3+=	lib/libmpeg3.*
 
-USE_PTHREAD=	native pth
+PTHREAD_OPTS+=	require
 
-.include "../../mk/bsd.prefs.mk"
 .include "../../mk/pthread.buildlink.mk"
 
 BUILDLINK_TARGETS.libmpeg3=	libmpeg3-buildlink

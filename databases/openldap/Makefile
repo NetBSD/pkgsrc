@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2002/06/15 21:19:59 cjep Exp $
+# $NetBSD: Makefile,v 1.44 2002/08/01 05:48:07 jlam Exp $
 
 DISTNAME=	openldap-2.0.23
 SVR4_PKGNAME=	oldap
@@ -28,22 +28,11 @@ CONFIGURE_ARGS+=	--enable-wrappers
 CONFIGURE_ARGS+=	--with-tls=openssl
 CONFIGURE_ARGS+=	--without-readline
 
-# Apparently, only _native_ pthreads are good enough, since compiling
-# OpenLDAP with a userland thread package like GNU pth results in a
-# slapd that isn't capable of passing the regression tests.
-#
-USE_PTHREAD=		native
-
 PKG_SYSCONFSUBDIR=	openldap
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--localstatedir=/var/openldap
 
 .include "../../mk/bsd.prefs.mk"
-
-.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} != "none")
-CONFIGURE_ARGS+=	--with-threads
-PLIST_SRC=		${.CURDIR}/PLIST.slurpd ${.CURDIR}/PLIST
-.endif
 
 .if ${OPSYS} == "SunOS"
 .include "../../databases/db/buildlink.mk"
@@ -116,8 +105,18 @@ post-install:
 		${RM} -f ${PKG_SYSCONFDIR}/$${file}.default;		\
 	done
 
+test:
+	-@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} \
+		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} test
+
 .include "../../security/openssl/buildlink.mk"
 .include "../../security/tcp_wrappers/buildlink.mk"
 .include "../../mk/pthread.buildlink.mk"
+
+.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} != "none")
+CONFIGURE_ARGS+=	--with-threads
+PLIST_SRC=		${.CURDIR}/PLIST.slurpd ${.CURDIR}/PLIST
+.endif
+
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

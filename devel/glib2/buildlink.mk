@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2002/05/10 01:17:28 rh Exp $
+# $NetBSD: buildlink.mk,v 1.4 2002/08/01 05:48:08 jlam Exp $
 #
 # This Makefile fragment is included by packages that use glib2.
 #
@@ -30,12 +30,17 @@ BUILDLINK_FILES.glib2+=	lib/libgmodule-2.0.*
 BUILDLINK_FILES.glib2+=	lib/libgobject-2.0.*
 BUILDLINK_FILES.glib2+=	lib/libgthread-2.0.*
 
+.include "../../converters/libiconv/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/pkgconfig/buildlink.mk"
 
-USE_PTHREAD=	native ptl2
+PTHREAD_OPTS+=	native
 
-.include "../../mk/bsd.prefs.mk"
 .include "../../mk/pthread.buildlink.mk"
+
+.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
+.  include "../../devel/ptl2/buildlink.mk"
+.endif
 
 BUILDLINK_TARGETS.glib2=	glib2-buildlink
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.glib2}
@@ -44,6 +49,4 @@ BUILDLINK_TARGETS+=		${BUILDLINK_PKG_CONFIG}
 pre-configure: ${BUILDLINK_TARGETS}
 glib2-buildlink: _BUILDLINK_USE
 
-.include "../../converters/libiconv/buildlink.mk"
-.include "../../devel/gettext-lib/buildlink.mk"
 .endif	# GLIB2_BUILDLINK_MK

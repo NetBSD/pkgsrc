@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/03/18 14:13:50 rxg Exp $
+# $NetBSD: Makefile,v 1.4 2002/08/01 05:48:05 jlam Exp $
 
 DISTNAME=	mp3blaster-3.1.1
 CATEGORIES=	audio
@@ -9,7 +9,7 @@ MAINTAINER=	rxg@netbsd.org
 HOMEPAGE=	http://www.stack.nl/~brama/mp3blaster.html
 COMMENT=	MP3 console curses-based player
 
-USE_PTHREAD=		native pth
+PTHREAD_OPTS=	require
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+="--with-cxxflags=${CXXFLAGS}" \

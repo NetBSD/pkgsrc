@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/07/31 21:14:04 mrauch Exp $
+# $NetBSD: Makefile,v 1.16 2002/08/01 05:48:17 jlam Exp $
 
 DISTNAME=		openoffice-0.0.0.641
 PKGREVISION=		1
@@ -16,8 +16,7 @@ MAINTAINER=		mrauch@netbsd.org
 HOMEPAGE=		http://www.openoffice.org/
 COMMENT=		Integrated office productivity suite
 
-USE_PTHREAD=		native pth
-BUILDLINK_DEPENDS.pth=	pth>=1.4.0nb1
+PTHREAD_OPTS+=		require
 
 # OpenOffice requires gcc 2.95.2 or better,
 # so for NetBSD<=1.5 we need the package lang/gcc.
@@ -33,10 +32,6 @@ BUILD_DEPENDS+=		stlport>=4.0nb1:../../devel/stlport
 
 USE_JAVA=		build
 PKG_JVM=		sun-jdk
-
-.include "../../lang/perl5/buildlink.mk"
-.include "../../mk/pthread.buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
 
 CONFLICTS=		staroffice-[0-9]*
 
@@ -96,4 +91,7 @@ do-install:
 	    <${FILESDIR}/soffice >${PREFIX}/bin/soffice
 	${CHMOD} +x ${PREFIX}/bin/soffice
 	
+.include "../../lang/perl5/buildlink.mk"
+.include "../../mk/pthread.buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

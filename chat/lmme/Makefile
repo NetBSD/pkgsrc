@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/06/15 20:59:02 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/08/01 05:48:06 jlam Exp $
 #
 
 DISTNAME=	lmme-0.6.4
@@ -11,9 +11,8 @@ COMMENT=	curses-based client for MSN Messenger chat system
 
 USE_BUILDLINK_ONLY=	YES
 USE_GMAKE=		YES
-USE_PTHREAD=		native pth
+PTHREAD_TYPE=		require
 GNU_CONFIGURE=		YES
-CXXFLAGS+=		-Dselect=pth_select -Dsleep=pth_sleep -Dread=pth_read -Dwrite=pth_write
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/lmme ${PREFIX}/bin/lmme

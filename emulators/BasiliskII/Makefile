@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/06/15 21:10:51 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/08/01 05:48:11 jlam Exp $
 #
 
 DISTNAME=	BasiliskII_src_31052001
@@ -14,10 +14,10 @@ WRKSRC=		${WRKDIR}/BasiliskII-0.9/src/Unix
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_PTHREAD=	native pth
+PTHREAD_OPTS+=	require
 
-.include "../../mk/pthread.buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
 .include "../../audio/esound/buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"
+.include "../../mk/pthread.buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/06/01 23:53:34 grant Exp $
+# $NetBSD: Makefile,v 1.3 2002/08/01 05:48:23 jlam Exp $
 
 DISTNAME=	grun-0.9.2
 CATEGORIES=	misc
@@ -11,10 +11,11 @@ COMMENT=	GTK+ based Run dialog
 USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
-USE_PTHREAD=		native pth-syscall pth
+PTHREAD_OPTS+=		require
 
 post-install:
 	${MV} ${LOCALBASE}/man/man1/grun.1x ${LOCALBASE}/man/man1/grun.1
 
 .include "../../x11/gtk/buildlink.mk"
+.include "../../mk/pthread.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

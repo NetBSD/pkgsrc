@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/03/19 07:48:43 lukem Exp $
+# $NetBSD: Makefile,v 1.14 2002/08/01 05:48:05 jlam Exp $
 
 DISTNAME=	vorbis-tools-1.0rc3
 PKGNAME=	vorbis-tools-1.0.0.7
@@ -27,9 +27,7 @@ CONFIGURE_ARGS+=	--with-ogg-prefix=${BUILDLINK_DIR}		\
 
 PLIST_SUBST+=	DISTNAME="${DISTNAME}"
 
-# vorbis-tools needs a working pthreads implementation, and pth is proven
-# to work.
-USE_PTHREAD=	native pth
+PTHREAD_OPTS+=	require
 
 .include "../../audio/libao/buildlink.mk"
 .include "../../audio/libogg/buildlink.mk"

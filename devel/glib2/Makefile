@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/06/30 16:26:45 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.5 2002/08/01 05:48:08 jlam Exp $
 #
 
 DISTNAME=		glib-2.0.4
@@ -22,11 +22,10 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_PERL5=		yes
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
-CPPFLAGS+=		-I${BUILDLINK_DIR}/PTL/include
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 # GLib needs a working pre-emptive pthreads implementation
-USE_PTHREAD=	native ptl2
+PTHREAD_OPTS+=		native
 
 test: build
 	cd ${WRKSRC} &&  ${MAKE_ENV} ${MAKE_PROGRAM} check 2>&1 | \
@@ -36,4 +35,10 @@ test: build
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/pkgconfig/buildlink.mk"
 .include "../../mk/pthread.buildlink.mk"
+
+.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
+CPPFLAGS+=		-I${BUILDLINK_DIR}/PTL/include
+.  include "../../devel/ptl2/buildlink.mk"
+.endif
+
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/02/08 06:29:42 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2002/08/01 05:48:10 jlam Exp $
 #
 
 DISTNAME=		pwlib_min_1.1pl17
@@ -21,9 +21,7 @@ WRKSRC=			${WRKDIR}/pwlib
 USE_BUILDLINK_ONLY=	yes
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
-USE_PTHREAD=		native unproven-pthreads
-
-.include "../../mk/bsd.prefs.mk"
+PTHREAD_OPTS+=		native
 
 MAKE_ENV+=		PWLIBDIR=${WRKSRC}
 MAKE_ENV+=		CC="${CC}"
@@ -51,4 +49,9 @@ post-install:
 	done
 
 .include "../../mk/pthread.buildlink.mk"
+
+.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
+.  include "../../devel/unproven-pthreads/buildlink.mk"
+.endif
+
 .include "../../mk/bsd.pkg.mk"
