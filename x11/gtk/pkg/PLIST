@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 1998/10/04 18:27:47 tron Exp $
+@comment $NetBSD: PLIST,v 1.14 1998/11/21 22:15:15 tron Exp $
 bin/gtk-config
 include/gdk/gdk.h
 include/gdk/gdkrgb.h
@@ -11,32 +11,29 @@ include/gdk/gdkx.h
 include/gtk/gtk.h
 include/gtk/gtkaccelgroup.h
 include/gtk/gtkaccellabel.h
-include/gtk/gtkarg.h
-include/gtk/gtkbindings.h
-include/gtk/gtkctree.h
-include/gtk/gtkfontsel.h
-include/gtk/gtkitemfactory.h
-include/gtk/gtkmarshal.h
-include/gtk/gtkpacker.h
-include/gtk/gtkprogress.h
 include/gtk/gtkadjustment.h
 include/gtk/gtkalignment.h
+include/gtk/gtkarg.h
 include/gtk/gtkarrow.h
 include/gtk/gtkaspectframe.h
 include/gtk/gtkbbox.h
 include/gtk/gtkbin.h
+include/gtk/gtkbindings.h
 include/gtk/gtkbox.h
 include/gtk/gtkbutton.h
+include/gtk/gtkcalendar.h
 include/gtk/gtkcheckbutton.h
 include/gtk/gtkcheckmenuitem.h
 include/gtk/gtkclist.h
 include/gtk/gtkcolorsel.h
 include/gtk/gtkcombo.h
 include/gtk/gtkcontainer.h
+include/gtk/gtkctree.h
 include/gtk/gtkcurve.h
 include/gtk/gtkdata.h
 include/gtk/gtkdebug.h
 include/gtk/gtkdialog.h
+include/gtk/gtkdnd.h
 include/gtk/gtkdrawingarea.h
 include/gtk/gtkeditable.h
 include/gtk/gtkentry.h
@@ -45,6 +42,7 @@ include/gtk/gtkeventbox.h
 include/gtk/gtkfeatures.h
 include/gtk/gtkfilesel.h
 include/gtk/gtkfixed.h
+include/gtk/gtkfontsel.h
 include/gtk/gtkframe.h
 include/gtk/gtkgamma.h
 include/gtk/gtkgc.h
@@ -58,11 +56,14 @@ include/gtk/gtkhscrollbar.h
 include/gtk/gtkhseparator.h
 include/gtk/gtkimage.h
 include/gtk/gtkinputdialog.h
+include/gtk/gtkinvisible.h
 include/gtk/gtkitem.h
+include/gtk/gtkitemfactory.h
 include/gtk/gtklabel.h
 include/gtk/gtklist.h
 include/gtk/gtklistitem.h
 include/gtk/gtkmain.h
+include/gtk/gtkmarshal.h
 include/gtk/gtkmenu.h
 include/gtk/gtkmenubar.h
 include/gtk/gtkmenufactory.h
@@ -72,10 +73,12 @@ include/gtk/gtkmisc.h
 include/gtk/gtknotebook.h
 include/gtk/gtkobject.h
 include/gtk/gtkoptionmenu.h
+include/gtk/gtkpacker.h
 include/gtk/gtkpaned.h
 include/gtk/gtkpixmap.h
 include/gtk/gtkpreview.h
 include/gtk/gtkprivate.h
+include/gtk/gtkprogress.h
 include/gtk/gtkprogressbar.h
 include/gtk/gtkradiobutton.h
 include/gtk/gtkradiomenuitem.h
@@ -112,9 +115,9 @@ include/gtk/gtkvscrollbar.h
 include/gtk/gtkvseparator.h
 include/gtk/gtkwidget.h
 include/gtk/gtkwindow.h
-lib/libgdk.so.2.0
+lib/libgdk.so.3.0
 lib/libgdk.a
-lib/libgtk.so.2.0
+lib/libgtk.so.3.0
 lib/libgtk.a
 man/man1/gtk-config.1
 @unexec install-info --delete %D/info/gdk.info %D/info/dir
