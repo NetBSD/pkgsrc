@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.764 2002/12/13 10:44:54 uebayasi Exp $
+$NetBSD: CHANGES,v 1.765 2002/12/13 12:56:53 grant Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3932,3 +3932,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added ifile-1.2.1 [salo 2002-12-13]
 	Added ifile-procmail-0.3 [salo 2002-12-13]
 	Updated w3m to 0.3.2.2 [uebayasi 2002-12-13]
+	Updated scrollz to 1.8m [grant 2002-12-13]
