@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1 2000/04/07 23:44:37 jlam Exp $
+
+--- texk/xdvik/mksedscript.orig	Sat Nov 21 04:26:29 1998
++++ texk/xdvik/mksedscript	Fri Apr  7 16:33:03 2000
+@@ -6,7 +6,7 @@
+ mk_GREY=
+ mk_BUTTONS=
+ mk_PS_GS=
+-mk_GS_PATH='gs'
++mk_GS_PATH='gsx11'
+ mk_PS_DPS=
+ mk_PS_NEWS=
+ mk_A4=
