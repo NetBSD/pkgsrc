@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/01/08 18:05:07 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2004/01/08 19:18:00 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -184,6 +184,7 @@ PERL5_SITELIB?=		${VIEWBASE}/lib/perl5/site_perl/${PERL5_VERS}
 PERL5_SITEARCH?=	${VIEWBASE}/lib/perl5/site_perl/${PERL5_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
 PERL5_PACKLIST=		${PERL5_ARCHLIB}/.packlist
 PLIST_SUBST+=		PERL5_SITEPERL=${PERL5_SITEPERL:S/^${PREFIX}\///}
+MESSAGE_SUBST+=		PERL5_SITELIB=${PERL5_SITELIB}
 
 # It's tough to guess which hints file will be used, so add our modifications
 # to all of them:
