@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/08/26 06:45:38 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/10/03 20:43:04 jlam Exp $
 #
 
 DISTNAME=	mad-0.14.2b
@@ -19,8 +19,14 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
+.include "../../mk/bsd.prefs.mk"
+
 .include "../../audio/esound/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
+
+.if defined(USE_OSS)
+.  include "../../mk/ossaudio.buildlink2.mk"
+.endif
 
 .include "../../mk/bsd.pkg.mk"
