@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6711 2004/07/28 10:46:09 recht Exp $
+$NetBSD: CHANGES,v 1.6712 2004/07/28 11:55:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3610,3 +3610,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated TeXmacs to 1.0.3.11 [recht 2004-07-28]
 	Updated bpalogin to 2.0.2 [rh 2004-07-28]
 	Updated TeXmacs to 1.0.4 [recht 2004-07-28]
+	Updated xpdf-chinese-simplified to 20040727 [wiz 2004-07-28]
+	Updated xpdf-chinese-traditional to 20040727 [wiz 2004-07-28]
+	Updated xpdf-japanese to 20040727 [wiz 2004-07-28]
+	Updated xpdf-korean to 20040727 [wiz 2004-07-28]
