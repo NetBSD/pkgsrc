@@ -1,4 +1,5 @@
-Eblook provides an interactive, simple command-line interface for electiric
-dictionaries, using EB library as the backend.  Eblook is originally developed
-as a backend of Lookup, an electiric dictionary search agent for Emacs, but
-its useful as a separate tool.
+Eblook provides an interactive, simple command-line interface for
+electric dictionaries, using the EB library as the backend.  Eblook
+was originally developed as a backend of Lookup, an electric
+dictionary search agent for Emacs, but it is also useful as a
+separate tool.
