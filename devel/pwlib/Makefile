@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/10/09 14:01:03 mjl Exp $
+# $NetBSD: Makefile,v 1.34 2004/10/16 14:11:23 wiz Exp $
 #
 
 DISTNAME=		pwlib-v1_8_2-src
@@ -19,8 +19,10 @@ WRKSRC=			${WRKDIR}/pwlib
 USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 USE_GNU_TOOLS+=		make
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+GCC_REQD=		3.0
 
 CONFIGURE_ARHS+=	--disable-sasl --disable-openldap --disable-openssl --disable-expat --disable-video --disable-qos
 PTHREAD_OPTS+=		require
