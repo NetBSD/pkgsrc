@@ -1,60 +1,86 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/27 11:08:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/09/30 12:47:56 wiz Exp $
 share/tuxpaint/stamps/cartoon/tux/tux-drat.png
 share/tuxpaint/stamps/cartoon/tux/tux-kiss1.png
 share/tuxpaint/stamps/cartoon/tux/tux-kiss2.png
 share/tuxpaint/stamps/cartoon/tux/tux-yay2.png
 share/tuxpaint/stamps/cartoon/tux/tux-yes1.png
 share/tuxpaint/stamps/cartoon/tux/tux-yes2.png
+share/tuxpaint/stamps/misc/symbols/faces/excited.dat
+share/tuxpaint/stamps/misc/symbols/faces/excited.png
+share/tuxpaint/stamps/misc/symbols/faces/excited.txt
+share/tuxpaint/stamps/misc/symbols/faces/excited.wav
+share/tuxpaint/stamps/misc/symbols/faces/happy.dat
+share/tuxpaint/stamps/misc/symbols/faces/happy.png
+share/tuxpaint/stamps/misc/symbols/faces/happy.txt
+share/tuxpaint/stamps/misc/symbols/faces/happy.wav
+share/tuxpaint/stamps/misc/symbols/faces/mad.dat
+share/tuxpaint/stamps/misc/symbols/faces/mad.png
+share/tuxpaint/stamps/misc/symbols/faces/mad.txt
+share/tuxpaint/stamps/misc/symbols/faces/mad.wav
+share/tuxpaint/stamps/misc/symbols/faces/sad.dat
+share/tuxpaint/stamps/misc/symbols/faces/sad.png
+share/tuxpaint/stamps/misc/symbols/faces/sad.txt
+share/tuxpaint/stamps/misc/symbols/faces/sad.wav
 share/tuxpaint/stamps/misc/symbols/math/0.dat
 share/tuxpaint/stamps/misc/symbols/math/0.png
 share/tuxpaint/stamps/misc/symbols/math/0.txt
 share/tuxpaint/stamps/misc/symbols/math/0.wav
 share/tuxpaint/stamps/misc/symbols/math/0_es.wav
+share/tuxpaint/stamps/misc/symbols/math/0_nn.wav
 share/tuxpaint/stamps/misc/symbols/math/1.dat
 share/tuxpaint/stamps/misc/symbols/math/1.png
 share/tuxpaint/stamps/misc/symbols/math/1.txt
 share/tuxpaint/stamps/misc/symbols/math/1.wav
 share/tuxpaint/stamps/misc/symbols/math/1_es.wav
+share/tuxpaint/stamps/misc/symbols/math/1_nn.wav
 share/tuxpaint/stamps/misc/symbols/math/2.dat
 share/tuxpaint/stamps/misc/symbols/math/2.png
 share/tuxpaint/stamps/misc/symbols/math/2.txt
 share/tuxpaint/stamps/misc/symbols/math/2.wav
 share/tuxpaint/stamps/misc/symbols/math/2_es.wav
+share/tuxpaint/stamps/misc/symbols/math/2_nn.wav
 share/tuxpaint/stamps/misc/symbols/math/3.dat
 share/tuxpaint/stamps/misc/symbols/math/3.png
 share/tuxpaint/stamps/misc/symbols/math/3.txt
 share/tuxpaint/stamps/misc/symbols/math/3.wav
 share/tuxpaint/stamps/misc/symbols/math/3_es.wav
+share/tuxpaint/stamps/misc/symbols/math/3_nn.wav
 share/tuxpaint/stamps/misc/symbols/math/4.dat
 share/tuxpaint/stamps/misc/symbols/math/4.png
 share/tuxpaint/stamps/misc/symbols/math/4.txt
 share/tuxpaint/stamps/misc/symbols/math/4.wav
 share/tuxpaint/stamps/misc/symbols/math/4_es.wav
+share/tuxpaint/stamps/misc/symbols/math/4_nn.wav
 share/tuxpaint/stamps/misc/symbols/math/5.dat
 share/tuxpaint/stamps/misc/symbols/math/5.png
 share/tuxpaint/stamps/misc/symbols/math/5.txt
 share/tuxpaint/stamps/misc/symbols/math/5.wav
 share/tuxpaint/stamps/misc/symbols/math/5_es.wav
+share/tuxpaint/stamps/misc/symbols/math/5_nn.wav
 share/tuxpaint/stamps/misc/symbols/math/6.dat
 share/tuxpaint/stamps/misc/symbols/math/6.png
 share/tuxpaint/stamps/misc/symbols/math/6.txt
 share/tuxpaint/stamps/misc/symbols/math/6.wav
 share/tuxpaint/stamps/misc/symbols/math/6_es.wav
+share/tuxpaint/stamps/misc/symbols/math/6_nn.wav
 share/tuxpaint/stamps/misc/symbols/math/7.dat
 share/tuxpaint/stamps/misc/symbols/math/7.png
 share/tuxpaint/stamps/misc/symbols/math/7.txt
 share/tuxpaint/stamps/misc/symbols/math/7.wav
 share/tuxpaint/stamps/misc/symbols/math/7_es.wav
+share/tuxpaint/stamps/misc/symbols/math/7_nn.wav
 share/tuxpaint/stamps/misc/symbols/math/8.dat
 share/tuxpaint/stamps/misc/symbols/math/8.png
 share/tuxpaint/stamps/misc/symbols/math/8.txt
 share/tuxpaint/stamps/misc/symbols/math/8.wav
 share/tuxpaint/stamps/misc/symbols/math/8_es.wav
+share/tuxpaint/stamps/misc/symbols/math/8_nn.wav
 share/tuxpaint/stamps/misc/symbols/math/9.dat
 share/tuxpaint/stamps/misc/symbols/math/9.png
 share/tuxpaint/stamps/misc/symbols/math/9.txt
 share/tuxpaint/stamps/misc/symbols/math/9.wav
 share/tuxpaint/stamps/misc/symbols/math/9_es.wav
+share/tuxpaint/stamps/misc/symbols/math/9_nn.wav
 share/tuxpaint/stamps/misc/symbols/math/op0_plus.dat
 share/tuxpaint/stamps/misc/symbols/math/op0_plus.png
 share/tuxpaint/stamps/misc/symbols/math/op0_plus.txt
@@ -121,6 +147,10 @@ share/tuxpaint/stamps/misc/symbols/music/note_100.txt
 share/tuxpaint/stamps/misc/symbols/music/rest_025.dat
 share/tuxpaint/stamps/misc/symbols/music/rest_025.png
 share/tuxpaint/stamps/misc/symbols/music/rest_025.txt
+share/tuxpaint/stamps/misc/symbols/shapes/heart.png
+share/tuxpaint/stamps/misc/symbols/shapes/pawprint.dat
+share/tuxpaint/stamps/misc/symbols/shapes/pawprint.png
+share/tuxpaint/stamps/misc/symbols/shapes/star.png
 share/tuxpaint/stamps/photo/flags/blue-and-yellowflag.png
 share/tuxpaint/stamps/photo/flags/blue-and-yellowflag.txt
 share/tuxpaint/stamps/photo/flags/checkeredflag.png
@@ -159,6 +189,22 @@ share/tuxpaint/stamps/photo/food/vegetables/tomato.png
 share/tuxpaint/stamps/photo/food/vegetables/tomato.txt
 share/tuxpaint/stamps/photo/food/vegetables/yam.png
 share/tuxpaint/stamps/photo/food/vegetables/yam.txt
+share/tuxpaint/stamps/photo/money/euro/coins/001.png
+share/tuxpaint/stamps/photo/money/euro/coins/001.txt
+share/tuxpaint/stamps/photo/money/euro/coins/002.png
+share/tuxpaint/stamps/photo/money/euro/coins/002.txt
+share/tuxpaint/stamps/photo/money/euro/coins/005.png
+share/tuxpaint/stamps/photo/money/euro/coins/005.txt
+share/tuxpaint/stamps/photo/money/euro/coins/010.png
+share/tuxpaint/stamps/photo/money/euro/coins/010.txt
+share/tuxpaint/stamps/photo/money/euro/coins/020.png
+share/tuxpaint/stamps/photo/money/euro/coins/020.txt
+share/tuxpaint/stamps/photo/money/euro/coins/050.png
+share/tuxpaint/stamps/photo/money/euro/coins/050.txt
+share/tuxpaint/stamps/photo/money/euro/coins/100.png
+share/tuxpaint/stamps/photo/money/euro/coins/100.txt
+share/tuxpaint/stamps/photo/money/euro/coins/200.png
+share/tuxpaint/stamps/photo/money/euro/coins/200.txt
 share/tuxpaint/stamps/photo/money/us/coins/001penny.png
 share/tuxpaint/stamps/photo/money/us/coins/001penny.txt
 share/tuxpaint/stamps/photo/money/us/coins/005nickel.png
@@ -199,6 +245,7 @@ share/tuxpaint/stamps/photo/space/8_neptune.png
 share/tuxpaint/stamps/photo/space/8_neptune.txt
 share/tuxpaint/stamps/photo/space/apollo_lander.png
 share/tuxpaint/stamps/photo/space/apollo_lander.txt
+share/tuxpaint/stamps/photo/space/apollo_lander.wav
 share/tuxpaint/stamps/photo/space/moon_3qt.png
 share/tuxpaint/stamps/photo/space/moon_3qt.txt
 share/tuxpaint/stamps/photo/space/moon_crescent.png
@@ -209,23 +256,27 @@ share/tuxpaint/stamps/photo/space/spacewalk.png
 share/tuxpaint/stamps/photo/space/spacewalk.txt
 share/tuxpaint/stamps/photo/space/voyager2.png
 share/tuxpaint/stamps/photo/space/voyager2.txt
+share/tuxpaint/stamps/seasonal/halloween/bat_left.png
+share/tuxpaint/stamps/seasonal/halloween/bat_left.wav
+share/tuxpaint/stamps/seasonal/halloween/bat_right.png
+share/tuxpaint/stamps/seasonal/halloween/bat_right.wav
+share/tuxpaint/stamps/seasonal/halloween/blackcat.png
+share/tuxpaint/stamps/seasonal/halloween/ghost.dat
+share/tuxpaint/stamps/seasonal/halloween/ghost.png
+share/tuxpaint/stamps/seasonal/halloween/ghost.wav
+share/tuxpaint/stamps/seasonal/halloween/jackolantern_mean.png
+share/tuxpaint/stamps/seasonal/halloween/skull.png
+share/tuxpaint/stamps/seasonal/halloween/spider.png
+share/tuxpaint/stamps/seasonal/halloween/spider.wav
+@dirrm share/tuxpaint/stamps/seasonal/halloween
+@dirrm share/tuxpaint/stamps/seasonal
 @dirrm share/tuxpaint/stamps/photo/space
 @dirrm share/tuxpaint/stamps/photo/plants/flowers
 @dirrm share/tuxpaint/stamps/photo/plants
 @dirrm share/tuxpaint/stamps/photo/money/us/coins
 @dirrm share/tuxpaint/stamps/photo/money/us
-@exec ${MKDIR} %D/share/tuxpaint/stamps/photo/money/uk
-@dirrm share/tuxpaint/stamps/photo/money/uk
-@exec ${MKDIR} %D/share/tuxpaint/stamps/photo/money/mx
-@dirrm share/tuxpaint/stamps/photo/money/mx
-@exec ${MKDIR} %D/share/tuxpaint/stamps/photo/money/fr
-@dirrm share/tuxpaint/stamps/photo/money/fr
-@exec ${MKDIR} %D/share/tuxpaint/stamps/photo/money/fi
-@dirrm share/tuxpaint/stamps/photo/money/fi
-@exec ${MKDIR} %D/share/tuxpaint/stamps/photo/money/de
-@dirrm share/tuxpaint/stamps/photo/money/de
-@exec ${MKDIR} %D/share/tuxpaint/stamps/photo/money/ca
-@dirrm share/tuxpaint/stamps/photo/money/ca
+@dirrm share/tuxpaint/stamps/photo/money/euro/coins
+@dirrm share/tuxpaint/stamps/photo/money/euro
 @dirrm share/tuxpaint/stamps/photo/money
 @dirrm share/tuxpaint/stamps/photo/food/vegetables
 @dirrm share/tuxpaint/stamps/photo/food/fruit
@@ -234,8 +285,10 @@ share/tuxpaint/stamps/photo/space/voyager2.txt
 @dirrm share/tuxpaint/stamps/photo/food
 @dirrm share/tuxpaint/stamps/photo/flags
 @dirrm share/tuxpaint/stamps/photo
+@dirrm share/tuxpaint/stamps/misc/symbols/shapes
 @dirrm share/tuxpaint/stamps/misc/symbols/music
 @dirrm share/tuxpaint/stamps/misc/symbols/math
+@dirrm share/tuxpaint/stamps/misc/symbols/faces
 @dirrm share/tuxpaint/stamps/misc/symbols
 @dirrm share/tuxpaint/stamps/misc
 @dirrm share/tuxpaint/stamps/cartoon/tux
