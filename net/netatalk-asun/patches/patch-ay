@@ -1,24 +1,20 @@
-$NetBSD: patch-ak,v 1.2 2000/07/31 18:33:49 abs Exp $
+$NetBSD: patch-ay,v 1.1 2000/07/31 18:33:52 abs Exp $
 
---- etc/Makefile.orig	Mon Dec  7 21:52:29 1998
-+++ etc/Makefile	Mon Jul 31 18:46:19 2000
-@@ -8,6 +8,7 @@
+--- bin/Makefile.orig	Wed Dec 30 07:30:33 1998
++++ bin/Makefile	Mon Jul 31 18:46:20 2000
+@@ -7,6 +7,7 @@
  ${ALL}: FRC
  	cd $@; ${MAKE} ${MFLAGS} CC="${CC}" \
  	    ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
 +	    LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
- 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
+ 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}"\
  	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
- 	    DESTDIR="${DESTDIR}" AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" \
-@@ -25,9 +26,11 @@
- install:
- 	-mkdir ${ETCDIR}
- 	-mkdir ${SBINDIR}
-+	-mkdir ${LIBEXECDIR}
+ 	    DESTDIR="${DESTDIR}"
+@@ -24,6 +25,7 @@
  	for i in ${ALL}; \
  	    do (cd $$i; ${MAKE} ${MFLAGS} CC="${CC}" \
  		ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
 +		LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
  	        SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
  	        ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
- 		DESTDIR="${DESTDIR}" AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" \
+ 		DESTDIR="${DESTDIR}" INSTALL="${INSTALL}" install); \
