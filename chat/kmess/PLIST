@@ -1,0 +1,137 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/16 18:19:01 jmmv Exp $
+bin/kmess
+share/doc/kde/HTML/en/kmess/common
+share/doc/kde/HTML/en/kmess/index.cache.bz2
+share/doc/kde/HTML/en/kmess/index.docbook
+share/doc/kde/HTML/en/kmess/kmesschatwindow.png
+share/doc/kde/HTML/en/kmess/kmesschatwindowcontactsidebaremailbutton.png
+share/doc/kde/HTML/en/kmess/kmesschatwindowcontactsidebarprofilebutton.png
+share/doc/kde/HTML/en/kmess/kmesschatwindowwithsidebar.png
+share/doc/kde/HTML/en/kmess/kmesscompactchat.png
+share/doc/kde/HTML/en/kmess/kmesscontactsidebarbutton.png
+share/doc/kde/HTML/en/kmess/kmesscontactwindowwithsidebar.png
+share/doc/kde/HTML/en/kmess/kmessemoticonbutton.png
+share/doc/kde/HTML/en/kmess/kmessemoticonchooser.png
+share/doc/kde/HTML/en/kmess/kmessmainwindow.png
+share/doc/kde/HTML/en/kmess/kmesspopupbaloon.png
+share/doc/kde/HTML/en/kmess/kmessrightclickmenucontact.png
+share/doc/kde/HTML/en/kmess/kmessstartupscreen.png
+share/doc/kde/HTML/en/kmess/kmesstimestamp.png
+share/kde/applnk/Internet/kmess.desktop
+share/kde/apps/kmess/emoticons/angel.png
+share/kde/apps/kmess/emoticons/angry.png
+share/kde/apps/kmess/emoticons/arrogant.png
+share/kde/apps/kmess/emoticons/asl.png
+share/kde/apps/kmess/emoticons/bad.png
+share/kde/apps/kmess/emoticons/bat.png
+share/kde/apps/kmess/emoticons/beer.png
+share/kde/apps/kmess/emoticons/boy.png
+share/kde/apps/kmess/emoticons/cake.png
+share/kde/apps/kmess/emoticons/camera.png
+share/kde/apps/kmess/emoticons/cat.png
+share/kde/apps/kmess/emoticons/clock.png
+share/kde/apps/kmess/emoticons/cocktail.png
+share/kde/apps/kmess/emoticons/confused.png
+share/kde/apps/kmess/emoticons/cry.png
+share/kde/apps/kmess/emoticons/cup.png
+share/kde/apps/kmess/emoticons/devil.png
+share/kde/apps/kmess/emoticons/dog.png
+share/kde/apps/kmess/emoticons/dude_hug.png
+share/kde/apps/kmess/emoticons/embarrassed.png
+share/kde/apps/kmess/emoticons/emoticonrc
+share/kde/apps/kmess/emoticons/envelope.png
+share/kde/apps/kmess/emoticons/film.png
+share/kde/apps/kmess/emoticons/girl.png
+share/kde/apps/kmess/emoticons/girl_hug.png
+share/kde/apps/kmess/emoticons/handcuffs.png
+share/kde/apps/kmess/emoticons/kiss.png
+share/kde/apps/kmess/emoticons/lightbulb.png
+share/kde/apps/kmess/emoticons/love.png
+share/kde/apps/kmess/emoticons/megasmile.png
+share/kde/apps/kmess/emoticons/messenger.png
+share/kde/apps/kmess/emoticons/moon.png
+share/kde/apps/kmess/emoticons/note.png
+share/kde/apps/kmess/emoticons/omg.png
+share/kde/apps/kmess/emoticons/phone.png
+share/kde/apps/kmess/emoticons/present.png
+share/kde/apps/kmess/emoticons/rainbow.png
+share/kde/apps/kmess/emoticons/regular.png
+share/kde/apps/kmess/emoticons/rose.png
+share/kde/apps/kmess/emoticons/sad.png
+share/kde/apps/kmess/emoticons/shade.png
+share/kde/apps/kmess/emoticons/sorry.png
+share/kde/apps/kmess/emoticons/star.png
+share/kde/apps/kmess/emoticons/sun.png
+share/kde/apps/kmess/emoticons/teeth.png
+share/kde/apps/kmess/emoticons/thumbs_down.png
+share/kde/apps/kmess/emoticons/thumbs_up.png
+share/kde/apps/kmess/emoticons/tongue.png
+share/kde/apps/kmess/emoticons/ugly.png
+share/kde/apps/kmess/emoticons/unlove.png
+share/kde/apps/kmess/emoticons/wilted_rose.png
+share/kde/apps/kmess/emoticons/wink.png
+share/kde/apps/kmess/eventsrc
+share/kde/apps/kmess/icons/hicolor/16x16/apps/gnomemeeting.png
+share/kde/apps/kmess/pics/away.png
+share/kde/apps/kmess/pics/berightback.png
+share/kde/apps/kmess/pics/blocked.png
+share/kde/apps/kmess/pics/busy.png
+share/kde/apps/kmess/pics/email.png
+share/kde/apps/kmess/pics/emoticons.png
+share/kde/apps/kmess/pics/invisible.png
+share/kde/apps/kmess/pics/kmesslogo.png
+share/kde/apps/kmess/pics/lunch.png
+share/kde/apps/kmess/pics/offline.png
+share/kde/apps/kmess/pics/online.png
+share/kde/apps/kmess/pics/onthephone.png
+share/kde/apps/kmess/pics/unknown.png
+share/kde/icons/hicolor/16x16/apps/kmess.png
+share/kde/icons/hicolor/32x32/apps/kmess.png
+share/kde/icons/hicolor/48x48/apps/kmess.png
+share/kde/icons/locolor/16x16/apps/kmess.png
+share/kde/icons/locolor/32x32/apps/kmess.png
+share/kde/icons/locolor/48x48/apps/kmess.png
+share/kde/sounds/kmess_chat.ogg
+share/kde/sounds/kmess_logoff.ogg
+share/kde/sounds/kmess_logon.ogg
+share/kde/sounds/kmess_msg.ogg
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kmess.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/kmess.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kmess.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/kmess.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/kmess.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kmess.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/kmess.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kmess.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmess.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/kmess.mo
+${PKGLOCALEDIR}/locale/th/LC_MESSAGES/kmess.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/kmess.mo
+${PKGLOCALEDIR}/locale/zh_CN.GB18030/LC_MESSAGES/kmess.mo
+${PKGLOCALEDIR}/locale/zh_CN.GB2312/LC_MESSAGES/kmess.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kmess.mo
+@comment in kdelibs3: @dirrm share/kde/sounds
+@comment in kdelibs3: @dirrm share/kde/icons/locolor/48x48/apps
+@comment in kdelibs3: @dirrm share/kde/icons/locolor/48x48
+@comment in kdelibs3: @dirrm share/kde/icons/locolor/32x32/apps
+@comment in kdelibs3: @dirrm share/kde/icons/locolor/16x16/apps
+@comment in kdelibs3: @dirrm share/kde/icons/hicolor/48x48/apps
+@comment in kdelibs3: @dirrm share/kde/icons/hicolor/48x48
+@comment in kdelibs3: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kdelibs3: @dirrm share/kde/icons/hicolor/32x32
+@comment in kdelibs3: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in kdelibs3: @dirrm share/kde/icons/hicolor/16x16
+@dirrm share/kde/apps/kmess/pics
+@dirrm share/kde/apps/kmess/icons/hicolor/16x16/apps
+@dirrm share/kde/apps/kmess/icons/hicolor/16x16
+@dirrm share/kde/apps/kmess/icons/hicolor
+@dirrm share/kde/apps/kmess/icons
+@dirrm share/kde/apps/kmess/emoticons
+@dirrm share/kde/apps/kmess
+@comment in kdelibs3: @dirrm share/kde/apps
+@comment in kdelibs3: @dirrm share/kde/applnk/Internet
+@comment in kdelibs3: @dirrm share/kde
+@dirrm share/doc/kde/HTML/en/kmess
+@comment in kdelibs3: @dirrm share/doc/kde/HTML/en
+@comment in kdelibs3: @dirrm share/doc/kde/HTML
+@comment in kdelibs3: @dirrm share/doc/kde
