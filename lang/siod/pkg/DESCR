@@ -1,0 +1,16 @@
+SIOD is a small-footprint implementation of the Scheme programming
+language that is provided with some database, unix programming and cgi
+scripting extensions.
+
+The motivation behind SIOD remains a small footprint, in every sense
+of the word, at runtime, at compile time, and in cognitive attention
+required to understand how the system works enough to be able to
+extend it as well as the author would have done the work himself. 
+
+About eight years have passed since that initial release.  It has been
+possible to add a feature or two without contributing to the cause of
+software bloat, with the code segment of the libsiod shared library
+remaining under 75K bytes on a prototypical comparison machine like a
+VAX.  Furthermore, as the richness of the C runtime library available
+on most systems has improved over time, SIOD remains a useful kind of
+glue to have in a software engineers toolbox. 
