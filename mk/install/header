@@ -2,7 +2,7 @@
 #
 # start of header
 #
-# $NetBSD: header,v 1.29 2005/01/28 07:37:55 jlam Exp $
+# $NetBSD: header,v 1.30 2005/01/28 18:05:34 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -23,7 +23,6 @@ EXPR="@EXPR@"
 FALSE="@FALSE@"
 FIND="@FIND@"
 GREP="@GREP@"
-GROUPADD="@GROUPADD@"
 GTAR="@GTAR@"
 HEAD="@HEAD@"
 ID="@ID@"
@@ -47,7 +46,6 @@ TEST="@TEST@"
 TOUCH="@TOUCH@"
 TR="@TR@"
 TRUE="@TRUE@"
-USERADD="@USERADD@"
 XARGS="@XARGS@"
 
 : ${PKG_METADATA_DIR=`${PWD_CMD}`}
