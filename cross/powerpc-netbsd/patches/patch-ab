@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1 2001/05/16 18:43:16 simonb Exp $
+
+--- gcc/config/rs6000/netbsd.h.orig	Thu May 17 02:06:07 2001
++++ gcc/config/rs6000/netbsd.h	Thu May 17 02:33:44 2001
+@@ -70,4 +70,5 @@
+ #undef CPP_SPEC
+ #define CPP_SPEC "\
+ %{posix:-D_POSIX_SOURCE} \
++%{msoft-float:-D_SOFT_FLOAT} \
+ %{mcall-sysv: -D_CALL_SYSV} %{mcall-aix: -D_CALL_AIX} %{!mcall-sysv: %{!mcall-aix: -D_CALL_SYSV}}"
