@@ -1,0 +1,4 @@
+An interpreter for the text adventures by Level 9.  Supports versions
+2-4 in many formats, including Spectrum snapshots.
+
+This port uses curses for input/output.
