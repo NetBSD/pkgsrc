@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/04/26 06:36:31 garbled Exp $
+share/doc/quicklist/gtksheet/AUTHORS
+share/doc/quicklist/gtksheet/ChangeLog
+share/doc/quicklist/gtksheet/TODO
+share/doc/quicklist/gtksheet/BUGS
+share/doc/quicklist/gtksheet/CONTRIB
+share/doc/quicklist/gtksheet/COPYING
+share/doc/quicklist/gtksheet/README
+share/doc/quicklist/file_format
+share/doc/quicklist/functionality
+share/doc/quicklist/functions
+bin/quicklist
+@dirrm share/doc/quicklist/gtksheet
+@dirrm share/doc/quicklist
