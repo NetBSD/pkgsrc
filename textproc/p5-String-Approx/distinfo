@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/29 18:48:13 tv Exp $
+$NetBSD: distinfo,v 1.2 2004/03/29 18:51:27 tv Exp $
 
-SHA1 (String-Approx-3.20.tar.gz) = 66bcb703ac28acc470f6b97793fc661446050a54
-Size (String-Approx-3.20.tar.gz) = 43309 bytes
+SHA1 (String-Approx-3.23.tar.gz) = 3eb4ac3cb5607143e76fbc59fe6bbdab55755d69
+Size (String-Approx-3.23.tar.gz) = 43872 bytes
