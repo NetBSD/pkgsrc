@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.5 2002/05/07 22:25:04 hubertf Exp $
+
+--- src/stats-bsd.c.orig	Sat Jun 16 21:12:53 2001
++++ src/stats-bsd.c
+@@ -21,6 +21,7 @@
+ #include <sys/dkstat.h>
+ #include <sys/sysctl.h>
+ #include <sys/utsname.h>
++#include <sys/sched.h>
+ 
+ /**
+  * @desc	Get statistics
