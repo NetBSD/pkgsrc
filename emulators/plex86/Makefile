@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/14 04:34:40 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2000/12/14 15:51:25 tv Exp $
 #
 
 DISTNAME=	plex86
@@ -18,32 +18,36 @@ WRKSRC=		${WRKDIR}/plex86
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-NetBSD \
 		--with-netbsd-source=/sys
-BSDSRCDIR?=	/usr/src
 USE_GMAKE=	yes
 NO_PKG_REGISTER=	yes	# ONLY until we really install files!!!
 NO_PACKAGE=	Incomplete	# ONLY until we really install files!!!
 
+BSDSRCDIR?=	/nonexistent
+.include "../../mk/bsd.prefs.mk"
+
 pre-extract:
-		@if [ ! -f ${BSDSRCDIR}/sys/sys/param.h ]; then \
-			${ECHO_MSG} Need a kernel source tree in ${BSDSRCDIR}/sys ; \
-			${ECHO_MSG} "(set BSDSRCDIR accordingly in /etc/mk.conf!)" ; \
-			exit 1 ; \
-		fi
+.if ${BSDSRCDIR} == "/nonexistent"
+	@${ECHO_MSG} "Please set BSDSRCDIR in /etc/mk.conf."
+	@${FALSE}
+.endif
+.if !exists(${BSDSRCDIR}/sys/sys/param.h)
+	@${ECHO_MSG} "Need a kernel source tree in ${BSDSRCDIR}/sys."
+	@${ECHO_MSG} "(Or set BSDSRCDIR correctly in /etc/mk.conf.)"
+	@${FALSE}
+.endif
 
 pre-patch:
-		cd ${WRKSRC} ; \
+	cd ${WRKSRC} && \
 		${PATCH} ${PATCH_ARGS} <${WRKDIR}/plex86.diff
-		${CP} ${WRKDIR}/kernel/host-netbsd.c ${WRKSRC}/kernel
-		${CP} ${WRKDIR}/misc/netbsd_post.sh ${WRKSRC}/misc
+	${CP} ${WRKDIR}/kernel/host-netbsd.c ${WRKSRC}/kernel
+	${CP} ${WRKDIR}/misc/netbsd_post.sh ${WRKSRC}/misc
 
 pre-configure:
-		cd ${WRKSRC} ; autoconf
+	cd ${WRKSRC} && autoconf
 
 do-install:
 	@${CAT} ${MESSAGE_FILE}
 	@${ECHO_MSG} Package NOT recorded as installed!
-	@# Remove the NO_PKG_REGISTER/NO_PACKAGE above if this does something!!!
-	@# Remove the NO_PKG_REGISTER/NO_PACKAGE above if this does something!!!
 	@# Remove the NO_PKG_REGISTER/NO_PACKAGE above if this does something!!!
 
 .include "../../mk/bsd.pkg.mk"
