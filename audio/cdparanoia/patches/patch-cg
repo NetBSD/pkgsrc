@@ -1,34 +1,64 @@
-$NetBSD: patch-cg,v 1.5 2001/01/08 23:04:58 itohy Exp $
+$NetBSD: patch-cg,v 1.6 2002/03/04 14:45:14 itohy Exp $
 
---- interface/scsi_interface.c.orig	Tue Dec 14 13:28:03 1999
-+++ interface/scsi_interface.c	Mon Jan  8 09:11:38 2001
-@@ -32,6 +32,7 @@
- #endif
+--- interface/scsi_interface.c.orig	Sat Mar 24 10:15:46 2001
++++ interface/scsi_interface.c	Mon Mar  4 00:03:19 2002
+@@ -23,6 +23,7 @@
+   int table,reserved;
+   char buffer[256];
  
- static int look_for_dougg(cdrom_drive *d){
 +#ifdef __linux__
-   /* are we using the new SG driver by Doug Gilbert? If so, our memory
-      strategy will be different. */
-   int reserved,table;
-@@ -78,6 +79,9 @@
+   /* maximum transfer size? */
+   if(ioctl(d->cdda_fd,SG_GET_RESERVED_SIZE,&reserved)){
+     /* Up, guess not. */
+@@ -31,6 +32,10 @@
    }
  
-   return(1);
+   if(ioctl(d->cdda_fd,SG_GET_SG_TABLESIZE,&table))table=1;
 +#else
-+  return(0);
++  reserved = 32*1024;	/* ? */
++  table = 1;
 +#endif
+   {
+     int cur;
+ 
+@@ -53,11 +58,13 @@
+     cdmessage(d,buffer);
+   } 
+ 
++#ifdef __linux__
+   /* Disable command queue; we don't need it, no reason to have it on */
+   reserved=0;
+   if(ioctl(d->cdda_fd,SG_SET_COMMAND_Q,&reserved)){
+     cdmessage(d,"\tCouldn't disable command queue!  Continuing anyway...\n");
+   }
++#endif
+ 
  }
  
- static void find_bloody_big_buff_size(cdrom_drive *d){
-@@ -142,6 +146,7 @@
+@@ -65,8 +72,14 @@
+   int arg;
+   d->enable_cdda(d,0);
  
++#ifdef __linux__
+   cdmessage(d,"sending SG SCSI reset... ");
+   if(ioctl(d->cdda_fd,SG_SCSI_RESET,&arg))
++#endif
++#ifdef __NetBSD__
++  cdmessage(d,"sending SCSI reset... ");
++  if(ioctl(d->cdda_fd,CDIOCRESET,&arg))
++#endif
+     cdmessage(d,"FAILED: EBUSY\n");
+   else
+     cdmessage(d,"OK\n");
+@@ -74,6 +87,7 @@
+   d->enable_cdda(d,1);
  }
  
 +#ifdef __linux__
  static void clear_garbage(cdrom_drive *d){
    fd_set fdset;
    struct timeval tv;
-@@ -172,20 +177,28 @@
+@@ -104,6 +118,7 @@
      flag=1;
    }
  }
@@ -36,11 +66,12 @@ $NetBSD: patch-cg,v 1.5 2001/01/08 23:04:58 itohy Exp $
  
  /* process a complete scsi command. */
  static int handle_scsi_cmd(cdrom_drive *d,
- 			   unsigned int cmd_len, 
+@@ -111,14 +126,21 @@
  			   unsigned int in_size, 
  			   unsigned int out_size,
+ 
 -			   unsigned char bytefill,
-+			   unsigned int bfill,
++ 			   unsigned int bfill,
  			   int bytecheck){
 +  unsigned char bytefill = bfill;
    int status = 0;
@@ -58,12 +89,13 @@ $NetBSD: patch-cg,v 1.5 2001/01/08 23:04:58 itohy Exp $
    /* clear out any possibly preexisting garbage */
    clear_garbage(d);
  
-@@ -291,11 +304,53 @@
+@@ -224,11 +246,53 @@
      if(errno==0)errno=EIO;
      return(TR_EREAD);
    }
 +#endif	/* __linux__ */
-+
+ 
+-  if(sg_hd->sense_buffer[0]){
 +#ifdef __NetBSD__
 +  if (in_size && out_size) {
 +    warnx("handle_scsi_cmd: in and out is not supported");
@@ -86,8 +118,7 @@ $NetBSD: patch-cg,v 1.5 2001/01/08 23:04:58 itohy Exp $
 +  }
 +  sreq->senselen = SENSEBUFLEN;
 +  sreq->timeout = 60000;	/* 60s */
- 
--  if(sg_hd->sense_buffer[0]){
++
 +  status = ioctl(d->cdda_fd, SCIOCCOMMAND, (void *) sreq);
 +  if (status < 0)
 +    return(TR_ILLEGAL);
@@ -113,7 +144,7 @@ $NetBSD: patch-cg,v 1.5 2001/01/08 23:04:58 itohy Exp $
      switch(key){
      case 0:
        if(errno==0)errno=EIO;
-@@ -333,9 +388,20 @@
+@@ -266,9 +330,20 @@
       commands still get through.  Perhaps no data comes back even
       though the target reports success? */
  
@@ -135,7 +166,7 @@ $NetBSD: patch-cg,v 1.5 2001/01/08 23:04:58 itohy Exp $
        if(d->sg_buffer[i]!=bytefill){
  	flag=1;
  	break;
-@@ -667,6 +733,23 @@
+@@ -600,6 +675,23 @@
    return(tracks);
  }
  
@@ -159,7 +190,7 @@ $NetBSD: patch-cg,v 1.5 2001/01/08 23:04:58 itohy Exp $
  /* These do one 'extra' copy in the name of clean code */
  
  static int i_read_28 (cdrom_drive *d, void *p, long begin, long sectors){
-@@ -840,16 +923,29 @@
+@@ -833,16 +925,29 @@
    while(1) {
      if((err=map(d,(p?buffer:NULL),begin,sectors))){
        if(d->report_all){
@@ -190,7 +221,7 @@ $NetBSD: patch-cg,v 1.5 2001/01/08 23:04:58 itohy Exp $
  	cdmessage(d,b);
  	sprintf(b,"                 Transport error: %s\n",strerror_tr[err]);
  	cdmessage(d,b);
-@@ -859,9 +955,17 @@
+@@ -852,9 +957,17 @@
  	fprintf(stderr,"scsi_read error: sector=%ld length=%ld retry=%d\n",
  		begin,sectors,retry_count);
  	fprintf(stderr,"                 Sense key: %x ASC: %x ASCQ: %x\n",
@@ -209,19 +240,53 @@ $NetBSD: patch-cg,v 1.5 2001/01/08 23:04:58 itohy Exp $
  	fprintf(stderr,"                 Transport error: %s\n",strerror_tr[err]);
  	fprintf(stderr,"                 System error: %s\n",strerror(errno));
        }
-@@ -1377,6 +1481,11 @@
-     if(reportp)
-       cdmessage(d,"\tDrive appears to be Mt. Fuji ATAPI C/DVD\n");
-     return(1);
-+  case 0x32:
-+    /* Toshiba DVD */
-+    if(reportp)
-+      cdmessage(d,"\tDrive appears to be Toshiba ATAPI C/DVD\n");
-+    return(1);
-   default:
-     if(reportp)
-       switch(d->inqbytes[3]&0x0f){
-@@ -1537,7 +1646,7 @@
+@@ -1308,21 +1421,43 @@
+ }
+ 
+ static int check_atapi(cdrom_drive *d){
++#ifdef __linux__
+   int atapiret=-1;
++#endif
++#ifdef __NetBSD__
++  struct scsi_addr scaddr;
++#endif
+   int fd = d->cdda_fd; /* this is the correct fd (not ioctl_fd), as the 
+ 			  generic device is the device we need to check */
+ 			  
+   cdmessage(d,"\nChecking for SCSI emulation...\n");
+ 
+-  if (ioctl(fd,SG_EMULATED_HOST,&atapiret)){
++#ifdef __linux__
++  if (ioctl(fd,SG_EMULATED_HOST,&atapiret))
++#endif
++#ifdef __NetBSD__
++  if(ioctl(fd,SCIOCIDENTIFY,&scaddr))
++#endif
++  {
+     cderror(d,"\tSG_EMULATED_HOST ioctl() failed!\n");
+     return(-1);
+   } else {
+-    if(atapiret==1){
++#ifdef __linux__
++    if(atapiret==1)
++#endif
++#ifdef __NetBSD__
++    if(scaddr.type == TYPE_ATAPI)
++#endif
++    {
++#ifdef __linux__
+       cdmessage(d,"\tDrive is ATAPI (using SCSI host adaptor emulation)\n");
+       /* Disable kernel SCSI command translation layer for access through sg */
+       if (ioctl(fd,SG_SET_TRANSFORM,0))
+ 	cderror(d,"\tCouldn't disable kernel command translation layer\n");
++#endif
++#ifdef __NetBSD__
++      cdmessage(d,"\tDrive is ATAPI\n");
++#endif
+       d->is_atapi=1;
+     }else{
+       cdmessage(d,"\tDrive is SCSI\n");
+@@ -1434,7 +1569,7 @@
  
    d->read_toc = (!memcmp(d->drive_model, "IMS", 3) && !d->is_atapi) ? scsi_read_toc2 : 
      scsi_read_toc;
