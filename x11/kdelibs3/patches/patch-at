@@ -1,0 +1,29 @@
+$NetBSD: patch-at,v 1.3.6.1 2004/08/13 13:05:05 agc Exp $
+
+Index: khtml/khtml_ext.cpp
+===================================================================
+RCS file: /home/kde/kdelibs/khtml/khtml_ext.cpp,v
+retrieving revision 1.85.2.2
+diff -u -p -r1.85.2.2 khtml_ext.cpp
+--- khtml/khtml_ext.cpp	24 Apr 2004 08:20:46 -0000	1.85.2.2
++++ khtml/khtml_ext.cpp	3 Aug 2004 14:36:43 -0000
+@@ -646,6 +646,19 @@ bool KHTMLPartBrowserHostExtension::open
+   return m_part->openURLInFrame( url, urlArgs );
+ }
+ 
++void KHTMLPartBrowserHostExtension::virtual_hook( int id, void *data )
++{ 
++  if (id == VIRTUAL_FIND_FRAME_PARENT)
++  {
++    FindFrameParentParams *param = static_cast<FindFrameParentParams*>(data);
++    KHTMLPart *parentPart = m_part->findFrameParent(param->callingPart, param->frame);
++    if (parentPart)
++       param->parent = parentPart->browserHostExtension();
++    return;
++  }
++  BrowserHostExtension::virtual_hook( id, data );
++}
++
+ // BCI: remove in KDE 4
+ KHTMLZoomFactorAction::KHTMLZoomFactorAction( KHTMLPart *part, bool direction, const QString &text, const QString &icon, const QObject *receiver, const char *slot, QObject *parent, const char *name )
+     : KAction( text, icon, 0, receiver, slot, parent, name )
