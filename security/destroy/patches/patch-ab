@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2004/01/23 23:32:43 recht Exp $
+$NetBSD: patch-ab,v 1.2 2004/01/23 23:45:55 kristerw Exp $
 
---- destroy.c.orig	2003-03-25 16:56:34.000000000 +0100
-+++ destroy.c
-@@ -58,6 +58,10 @@ main(int argc, char *argv[]) {
+--- destroy.c.orig	Tue Mar 25 16:56:34 2003
++++ destroy.c	Sat Jan 24 00:38:44 2004
+@@ -58,6 +58,10 @@
  	char		*buf;
  	char		*devrand = "/dev/urandom";
  	char		*devzero = "/dev/zero";
@@ -13,3 +13,12 @@ $NetBSD: patch-ab,v 1.1 2004/01/23 23:32:43 recht Exp $
  
  	if(argc < 2) {
  		usage();
+@@ -90,7 +94,7 @@
+ 		}
+ 
+ 		// Open our user file, and get a file descriptor for it
+-		if((fd_userfile = open(filename, O_WRONLY | O_NOFOLLOW | O_EXCL)) < 0) {
++		if((fd_userfile = open(filename, mode)) < 0) {
+ 			fprintf(stderr, "Open Userfile Error!\n");
+ 			usage();
+ 			exit(1);
