@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.223 2001/12/31 14:09:15 abs Exp $
+# $NetBSD: Packages.txt,v 1.224 2001/12/31 14:58:46 lukem Exp $
 ###########################################################################
 
 			==========================
@@ -2144,7 +2144,7 @@ created at pre-install time, and the admin will be prompted to remove them at
 post-deinstall time.
 
 
- 10.22 How to handle compiler bugs
+ 10.23 How to handle compiler bugs
  =================================
 
 Some source files trigger bugs in the compiler, based on combinations
