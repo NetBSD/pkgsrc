@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.14 2001/10/18 15:20:07 veego Exp $
+# $NetBSD: Makefile,v 1.15 2002/03/20 11:33:04 martti Exp $
 #
 
-DISTNAME=		Msql-Mysql-modules-1.2215
-PKGNAME=		p5-DBD-mysql-1.2215
+DISTNAME=		Msql-Mysql-modules-1.2219
+PKGNAME=		p5-DBD-mysql-1.2219
 SVR4_PKGNAME=		p5dmy
 CATEGORIES=		databases perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=DBD/}
 
 MAINTAINER=		bad@netbsd.org
 HOMEPAGE=		http://www.mysql.com/
-COMMENT=		perl DBI/DBD driver for MySQL databases
+COMMENT=		Perl DBI/DBD driver for MySQL databases
 
-DEPENDS+=		mysql-client>=3.23.35:../../databases/mysql-client
 DEPENDS+=		p5-DBI>=1.13:../../databases/p5-DBI
-DEPENDS+=		{p5-Data-Dumper>=2.101,perl>=5.6.1nb2}:../../lang/perl5
 DEPENDS+=		p5-Data-ShowTable-3.3:../../devel/p5-Data-ShowTable
 
 USE_PERL5=		# defined
@@ -35,4 +33,6 @@ MAKE_PARAMS+=		--mysql-libdir=${MYSQL_LIBDIR}
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL ${MAKE_PARAMS}
 
+.include "../../databases/mysql-client/buildlink.mk"
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
