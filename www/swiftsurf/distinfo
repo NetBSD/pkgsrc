@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/06/29 23:15:08 jtb Exp $
+
+SHA1 (swiftsurf-1.2.5.tar.gz) = bf58a2afcbb8d9ee4cbeb9b8a6ebe00ab6f3d9c8
+Size (swiftsurf-1.2.5.tar.gz) = 31950 bytes
+SHA1 (patch-aa) = 7882d5c8542e8ebab40100462ecfaaf3f282f5a2
