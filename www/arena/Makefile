@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2002/08/01 02:37:41 jschauma Exp $
+# $NetBSD: Makefile,v 1.44 2002/10/02 18:52:38 wiz Exp $
 
 DISTNAME=		arena-0.3.62
 PKGREVISION=		2
@@ -10,11 +10,11 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.yggdrasil.com/Products/Arena/
 COMMENT=	Experimental HTML 3 browser, supports math and style sheets
 
-BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		libwww>=5.3.2nb1:../../www/libwww
 DEPENDS+=		png>=1.2.1:../../graphics/png
 
+AUTOCONF_REQD?=		2.13
 BUILD_USES_MSGFMT=	YES
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
@@ -42,7 +42,7 @@ pre-configure:
 	    ${LN} -sf $$c ${WRKSRC}/config.h; \
  	  fi; \
 	done
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf
+	cd ${WRKSRC} && ${AUTOCONF}
 
 do-install:
 	${INSTALL_PROGRAM} \
@@ -71,4 +71,5 @@ EXTRACT_ELEMENTS=	${GLOBAL_EXCLUDE_ARG}
 EXTRACT_ELEMENTS+=	${EXCLUDE_ARG} Arena-*/Auxiliary/${DONT_EXTRACT_SUBDIR}
 .endfor
 
+.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
