@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2002/08/05 08:57:18 cjs Exp $
+# $NetBSD: Makefile,v 1.11 2002/08/06 15:38:01 jschauma Exp $
 #
 
-DISTNAME=	isect-1.0
+DISTNAME=	isect-1.6.2
 CATEGORIES=	devel
-MASTER_SITES=	ftp://home.netcom.com/pub/users/tgagne/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=isectd/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://isectd.sourceforge.net/
@@ -28,7 +28,6 @@ post-install:
 
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/workers/isdecho.c ${EGDIR}
 
 	${SED}	-e "s#@PREFIX@#${PREFIX}#g" \
 		-e "s#@ECHO@#${ECHO}#g" \
