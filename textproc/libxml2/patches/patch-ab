@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.10 2004/10/31 10:40:51 recht Exp $
+$NetBSD: patch-ab,v 1.11 2004/11/11 21:01:15 recht Exp $
 
---- configure.orig	Wed Oct 27 18:56:12 2004
+--- configure.orig	Wed Nov 10 15:33:00 2004
 +++ configure
-@@ -26380,7 +26380,7 @@ fi
+@@ -26449,7 +26449,7 @@ fi
  fi
  
  
