@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: squid.sh,v 1.11 2001/09/18 16:12:11 tron Exp $
+# $NetBSD: squid.sh,v 1.12 2002/03/18 21:22:24 tron Exp $
 #
 
 # PROVIDE: squid
@@ -17,6 +17,7 @@ pidfile="/var/run/${name}.pid"
 required_files="${conf_file} ${SQUID_CONF_DIR}/mime.conf"
 command_args="-Y -f $conf_file"
 
+start_cmd="${command}"
 stop_cmd="stop_nicely"
 kill_command="${command} -k shutdown"
 reload_cmd="${command} -k reconfigure"
