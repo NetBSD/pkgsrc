@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2002/08/11 15:58:46 jschauma Exp $
+# $NetBSD: Makefile,v 1.38 2002/09/16 07:08:57 uebayasi Exp $
 #
 
 COMMENT=	Fonts
@@ -9,6 +9,11 @@ SUBDIR+=	acroread-chtfont
 SUBDIR+=	acroread-font-share
 SUBDIR+=	acroread-jpnfont
 SUBDIR+=	acroread-korfont
+SUBDIR+=	acroread5-chsfont
+SUBDIR+=	acroread5-chtfont
+SUBDIR+=	acroread5-font-share
+SUBDIR+=	acroread5-jpnfont
+SUBDIR+=	acroread5-korfont
 SUBDIR+=	arphic-ttf
 SUBDIR+=	baekmuk-ttf
 SUBDIR+=	bakoma-fonts
