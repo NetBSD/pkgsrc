@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/11/01 00:52:50 kristerw Exp $
+# $NetBSD: Makefile,v 1.27 2003/11/06 20:32:57 fredb Exp $
 #
 
 DISTNAME=	ntp-4.2.0
@@ -20,15 +20,12 @@ DOCDIR=		${PREFIX}/share/doc/html
 EXAMPLESDIR=	${PREFIX}/share/examples
 
 post-install:
-	cd ${WRKSRC} &&						\
-	    ${RM} conf/.cvsignore* 2> /dev/null || ${TRUE};	\
-	    ${RM} html/.cvsignore* 2> /dev/null || ${TRUE};	\
-	    ${PAX} -rw -s "/html/ntp4/" html ${DOCDIR};		\
-	    ${PAX} -rw -s "/conf/ntp4/" conf ${EXAMPLESDIR}
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DOCDIR}/ntp4 ${EXAMPLESDIR}/ntp4
-	${CHMOD} -R ${SHAREMODE} ${DOCDIR}/ntp4 ${EXAMPLESDIR}/ntp4
-	${CHMOD} a+x ${DOCDIR}/ntp4 ${DOCDIR}/ntp4/hints ${DOCDIR}/ntp4/pic
-	${CHMOD} a+x ${EXAMPLESDIR}/ntp4
+	cd ${WRKSRC} &&								\
+	    ${CHOWN} -R ${SHAREOWN}:${SHAREGRP} conf html;			\
+	    ${FIND} conf html -type d -printx | ${XARGS} ${CHMOD} ${PKGDIRMODE}; \
+	    ${FIND} conf html -type f -printx | ${XARGS} ${CHMOD} ${SHAREMODE};	\
+	    ${PAX} -rw -pe -s "/html/ntp4/" html ${DOCDIR};			\
+	    ${PAX} -rw -pe -s "/conf/ntp4/" conf ${EXAMPLESDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
