@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.1 1998/11/09 21:20:18 garbled Exp $
+--- sound.h.orig	Mon Nov  9 12:36:49 1998
++++ sound.h	Mon Nov  9 12:35:46 1998
+@@ -29,6 +29,14 @@
+ extern void ioctl(long, long, void *);
+ #endif
+ 
++#ifdef __NetBSD__
++#include <sys/ioctl.h>
++#include <soundcard.h>
++#ifndef VOXWARE
++#define VOXWARE
++#endif
++#endif
++
+ #define SND_BLOCKSIZE 4096
+ 
+ #ifdef _HPUX_SOURCE
