@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2001/12/07 10:59:31 skrll Exp $
+# $NetBSD: Makefile,v 1.26 2001/12/18 20:23:00 jlam Exp $
 
 DISTNAME=	kdelibs-2.2.2
 CATEGORIES=	x11
@@ -38,6 +38,11 @@ REPLACE_PERL= \
 
 PLIST_SRC=	${WRKDIR}/PLIST
 
+.if defined(USE_CUPS) && (${USE_CUPS} == "YES")
+.include "../../print/cups/buildlink.mk"
+BUILD_DEFS+=		USE_CUPS
+.endif
+
 # We will create the complete icon directory tree for use by other KDE2
 # packages at post-install time.
 #
@@ -71,7 +76,6 @@ post-install:
 .include "../../devel/pcre/buildlink.mk"
 .include "../../graphics/tiff/buildlink.mk"
 .include "../../lang/perl5/buildlink.mk"
-.include "../../print/cups/buildlink.mk"
 .include "../../security/openssl/buildlink.mk"
 .include "../../textproc/libxml2/buildlink.mk"
 .include "../../textproc/libxslt/buildlink.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.26 2001/12/17 11:45:05 bouyer Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.27 2001/12/18 20:22:59 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1055,12 +1055,6 @@ RASMOL_DEPTH?= 8
 # Possible: 8, 16, 32
 # Default: 8
 
-#SAMBA_WITH_CUPS=
-# Used in the samba package to compile in native support for the UNIX IPP
-# implementation, CUPS.
-# Possible: defined, not defined
-# Default: not defined
-
 #SDL_USE_NAS=
 # Used in SDL package to enable use of the network audio system
 # Possible: defined, not defined
@@ -1152,6 +1146,11 @@ USE_CRYPTO?=	YES
 # Used in speakfreely to choose support for encrypted connections.
 # Possible: YES, or NO.
 # Default: YES
+
+#USE_CUPS= YES
+# Used by packages to compile in support for the UNIX IPP implementation, CUPS.
+# Possible: YES, not defined
+# Default: not defined
 
 USE_DB2?= NO
 # Used in sendmail to build with database library 2.x from the db package.
