@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/09/27 21:04:21 rh Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/10/18 09:23:26 rh Exp $
 #
 
 .if !defined(GNUSTEP_GUI_BUILDLINK2_MK)
 GNUSTEP_GUI_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gnustep-gui
-BUILDLINK_DEPENDS.gnustep-gui?=		gnustep-gui>=0.8.1
+BUILDLINK_DEPENDS.gnustep-gui?=		gnustep-gui>=0.8.2
 BUILDLINK_PKGSRCDIR.gnustep-gui?=	../../x11/gnustep-gui
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gnustep-gui=gnustep-gui
