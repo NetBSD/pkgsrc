@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/08/27 20:43:24 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 18:18:33 wiz Exp $
 #
 
 DISTNAME=	arpd
@@ -7,6 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	ftp://subzero.campus.luth.se/pub/arpd/
 
 MAINTAINER=	hubertf@netbsd.org
+COMMENT=	arp daemon
 
 MAKE_ENV+=	BINDIR=${PREFIX}/sbin
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2001/02/07 05:16:40 fredb Exp $
+# $NetBSD: Makefile,v 1.37 2001/02/17 18:04:37 wiz Exp $
 #
 
 DISTNAME=		vatsrc-4.0b2
@@ -9,6 +9,7 @@ MASTER_SITES=		ftp://ftp.ee.lbl.gov/conferencing/vat/alpha-test/
 
 MAINTAINER=		mycroft@netbsd.org
 HOMEPAGE=		http://www-nrg.ee.lbl.gov/vat/
+COMMENT=		The Visual Audio Tool - multicast audioconferencing
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
 DEPENDS+=		tk-8.3.2:../../x11/tk

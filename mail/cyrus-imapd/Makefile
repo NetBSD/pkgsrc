@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/12/10 19:33:03 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/17 18:24:42 wiz Exp $
 
 DISTNAME=		cyrus-imapd-1.6.24
 PKGNAME=		${DISTNAME}nb1
@@ -8,6 +8,7 @@ MASTER_SITES=		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://asg.web.cmu.edu/cyrus/imapd/
+COMMENT=		IMAP server
 
 DEPENDS+=		tcl>=8.3.2:../../lang/tcl
 DEPENDS+=		cyrus-sasl>=1.5.24nb2:../../security/cyrus-sasl

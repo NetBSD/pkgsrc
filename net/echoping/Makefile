@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/14 16:42:02 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 18:18:49 wiz Exp $
 #
 
 DISTNAME=	echoping-4.1.0
@@ -7,6 +7,7 @@ MASTER_SITES=	ftp://ftp.internatif.org/pub/unix/echoping/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://echoping.sourceforge.net/
+COMMENT=	test performance of a remote TCP service
 
 GNU_CONFIGURE=	YES
 USE_SSL=	YES

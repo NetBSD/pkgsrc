@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/18 23:16:22 tsarna Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 18:09:30 wiz Exp $
 #
 
 DISTNAME=	xtend-1.2beta4
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.jabberwocky.com/pub/xtend/
 
 MAINTAINER=	damon@brodiefamily.org
 HOMEPAGE=	http://www.jabberwocky.com/software/xtend/
+COMMENT=	Monitors X10 commands using heyu to automate UNIX functions
 
 DEPENDS+=	x10_heyu>=1.29:../../misc/heyu
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/18 23:09:53 tsarna Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 18:09:15 wiz Exp $
 #
 
 DISTNAME=	ControlX10-CM11-2.09
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=ControlX10/}
 
 MAINTAINER=	damon@brodiefamily.org
 HOMEPAGE=	http://members.aol.com/Bbirthisel/alpha.html
+COMMENT=	perl5 module for controlling the X10 CM11A controller
 
 DEPENDS+=	p5-Device-SerialPort>=0.070:../../comms/p5-Device-SerialPort
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2001/02/13 11:47:02 tron Exp $
+# $NetBSD: Makefile,v 1.67 2001/02/17 18:24:55 wiz Exp $
 
 DISTNAME=	mutt-1.2.5i
 CATEGORIES=	mail
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://ftp.mutt.org/pub/mutt/ \
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.mutt.org/
+COMMENT=	text-based MIME mail client with PGP support
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
 BUILD_DEPENDS+=	${LOCALBASE}/bin/automake:../../devel/automake

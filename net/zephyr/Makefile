@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/01/26 05:21:47 hubertf Exp $
+# $NetBSD: Makefile,v 1.19 2001/02/17 18:20:01 wiz Exp $
 #
 
 DISTNAME=	zephyr-2.0.4
@@ -7,6 +7,7 @@ MASTER_SITES=	ftp://athena-dist.mit.edu/pub/ATHENA/zephyr/dist/
 
 MAINTAINER=	mycroft@netbsd.org
 HOMEPAGE=	http://web.mit.edu/olh/Zephyr/index.html
+COMMENT=	Zephyr Messaging Service
 
 .include "../../mk/bsd.prefs.mk"
 

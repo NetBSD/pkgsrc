@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/01/10 03:16:16 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 18:19:50 wiz Exp $
 # FreeBSD Id: ports/sysutils/ucspi-tcp/Makefile,v 1.12 2000/07/10 01:41:24 steve Exp
 
 DISTNAME=	ucspi-tcp-0.88
@@ -10,6 +10,7 @@ DISTFILES=	ucspi-tcp-0.88.tar.gz \
 
 MAINTAINER=	zuntum@eik.pl
 HOMEPAGE=	http://cr.yp.to/ucspi-tcp.html
+COMMENT=	Command-line tools for building TCP client-server applications
 
 ALL_TARGET=	prog install instcheck
 

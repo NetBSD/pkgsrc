@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/02/13 12:49:07 is Exp $
+# $NetBSD: Makefile,v 1.19 2001/02/17 17:53:00 wiz Exp $
 
 DISTNAME=		pvm3.4.3
 PKGNAME=		pvm-3.4.3
@@ -8,6 +8,7 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.epm.ornl.gov/pvm/pvm_home.html
+COMMENT=		Parallel Virtual Machine libraries and environment
 
 .if exists(/usr/bin/ssh)
 SSH=		/usr/bin/ssh

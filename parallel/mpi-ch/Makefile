@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/13 12:49:07 is Exp $
+# $NetBSD: Makefile,v 1.13 2001/02/17 17:53:00 wiz Exp $
 
 DISTNAME=		mpich-1.1.1
 CATEGORIES=		parallel
@@ -6,6 +6,7 @@ MASTER_SITES=		ftp://ftp.mcs.anl.gov/pub/mpi/old/
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.mcs.anl.gov/mpi/mpich/index.html
+COMMENT=		Free implementation of the Message Passing Interface
 
 .if !exists(/usr/bin/ssh)
 DEPENDS+=		{openssh-*,ssh{,6}-1.2.27*}:../../security/ssh

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/01/11 04:37:52 itojun Exp $
+# $NetBSD: Makefile,v 1.27 2001/02/17 18:19:55 wiz Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/05/22 07:53:29 tg Exp
 #
 
@@ -12,6 +12,7 @@ PATCH_DIST_STRIP=-p1
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/wget/wget.html
+COMMENT=	Retrieve files from the 'net via HTTP and FTP
 
 BUILD_DEPENDS+=	msgfmt:../../devel/gettext
 

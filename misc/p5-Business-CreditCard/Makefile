@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/08/27 07:11:15 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/17 18:09:15 wiz Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/06/24 18:43:06 jfitz Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Business/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://theory.uwinnipeg.ca/CPAN/data/Business-CreditCard/CreditCard.html
+COMMENT=		perl5 module to validate/generate credit card checksums/names
 
 USE_PERL5=		# defined
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Business/CreditCard/.packlist

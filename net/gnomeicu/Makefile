@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/11/27 06:34:49 tron Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/17 18:18:55 wiz Exp $
 
 DISTNAME=	gnomeicu-0.93
 CATEGORIES=	net gnome
@@ -7,6 +7,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://gnomeicu.gdev.net/
+COMMENT=	GNOME ICQ client
 
 DEPENDS+=	gdbm>=1.8.0:../../databases/gdbm
 DEPENDS+=	gnome-core>=1.2.0:../../x11/gnome-core

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2000/08/23 14:31:47 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.21 2001/02/17 18:22:42 wiz Exp $
 #
 # IMPORTANT: Before upgrading this package, please read files/README.next_rev!
 
@@ -10,6 +10,7 @@ MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Projects/Meta2/Scilab/distributions/
 
 MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://www-rocq.inria.fr/scilab/
+COMMENT=	High-level scientific math programming environment with graphics
 
 DEPENDS+=	xless-*:../../x11/xless
 DEPENDS+=	pvm-3.4.3:../../parallel/pvm3

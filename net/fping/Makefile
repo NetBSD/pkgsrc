@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/01/28 04:03:24 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 18:18:52 wiz Exp $
 # FreeBSD Id: ports/net/fping/Makefile,v 1.10 2000/04/20 20:18:57 mharo Exp
 
 DISTNAME=	part01
@@ -11,6 +11,7 @@ MASTER_SITES=	ftp://ftp.uu.net/usenet/comp.sources.unix/volume26/fping/ \
 EXTRACT_SUFX=	.Z
 
 MAINTAINER=	abs@netbsd.org
+COMMENT=	Quickly ping many hosts w/o flooding the network
 
 DIST_SUBDIR=	fping
 EXTRACT_CMD=	zcat ${DOWNLOADED_DISTFILE} | ${SED} -e '1,/Archive-Name/d' | ${SH}

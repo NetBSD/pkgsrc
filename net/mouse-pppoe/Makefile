@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/09/14 22:51:25 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/17 18:19:08 wiz Exp $
 
 DISTNAME=		pppoe.20000912
 PKGNAME=		mouse_${DISTNAME:S/./-/}
@@ -6,6 +6,7 @@ CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.netbsd.org/pub/NetBSD/misc/mouse/pppoe/
 
 MAINTAINER=		mouse@netbsd.org
+COMMENT=		derMouse's PPP over Ethernet program
 
 CONFLICTS+=		rp-pppoe-*
 

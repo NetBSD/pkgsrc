@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/12/07 13:15:43 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/17 18:22:47 wiz Exp $
 #
 
 DISTNAME=	vista
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://forrest.psych.unc.edu/research/vista.html
+COMMENT=	Visual statistics system
 
 DEPENDS+=	xlispstat>=3.52.9:../../math/xlispstat
 

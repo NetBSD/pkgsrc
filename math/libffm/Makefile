@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/11/15 14:20:22 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 18:22:27 wiz Exp $
 
 DISTNAME=		libffm.0.28
 PKGNAME=		libffm-0.28
@@ -6,6 +6,7 @@ CATEGORIES=		math
 MASTER_SITES=		ftp://ftp.unix-ag.org/user/nils/
 
 MAINTAINER=		root@garbled.net
+COMMENT=		fast alpha-optimized replacement for some libm routines
 
 USE_GMAKE=		yes
 

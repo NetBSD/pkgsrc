@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/04/14 21:39:04 tron Exp $
+# $NetBSD: Makefile,v 1.16 2001/02/17 18:09:03 wiz Exp $
 # FreeBSD Id: Makefile,v 1.8 1996/11/21 11:54:39 asami Exp
 #
 
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=git/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.cs.unh.edu/~tudor/git/
+COMMENT=	GNU Interactive Tools - a file system browser for UNIX systems
 
 GNU_CONFIGURE=	YES
 INFO_FILES=	git.info

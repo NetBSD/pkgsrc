@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/05/04 15:33:13 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 18:19:17 wiz Exp $
 
 DISTNAME=	nmapfe-0.9.5
 CATEGORIES=	net security
@@ -7,6 +7,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=     reinoud@ibbnet.org,hubertf@netbsd.org
 HOMEPAGE=	http://www.insecure.org/nmap/index.html
+COMMENT=	graphical front end to the nmap port scanner
 
 DEPENDS+=	nmap-2.*:../../net/nmap
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/11/11 17:49:27 tron Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 18:19:10 wiz Exp $
 
 DISTNAME=	nap-1.4.3
 CATEGORIES=	net
@@ -6,6 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nap/}
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gis.net/~nite/
+COMMENT=	Terminal based Napster client similar to ircII
 
 DEPENDS+=	ncurses>=5.0:../../devel/ncurses
 

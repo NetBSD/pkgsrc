@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/09/03 08:19:11 agc Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/17 18:24:53 wiz Exp $
 # FreeBSD Id: Makefile,v 1.8 1996/11/21 11:27:26 asami Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://thumper.bellcore.com/pub/nsb/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	packages@netbsd.org
+COMMENT=	Implementation of MIME, the Multipurpose Internet Mail Extensions
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 

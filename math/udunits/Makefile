@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/07 04:31:39 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 18:22:45 wiz Exp $
 
 DISTNAME=		udunits
 PKGNAME=		udunits-1.11.7
@@ -8,6 +8,7 @@ EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		jtb@netbsd.org
 HOMEPAGE=		http://www.unidata.ucar.edu/packages/udunits/
+COMMENT=		Library and program for manipulating units of physical quantities
 
 WRKSRC=			${WRKDIR}/${PKGNAME}/src
 DIST_SUBDIR=		${PKGNAME}

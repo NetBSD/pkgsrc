@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/02/06 03:16:58 fredb Exp $
+# $NetBSD: Makefile,v 1.18 2001/02/17 18:22:10 wiz Exp $
 #
 
 DISTNAME=		R-1.1.1
@@ -18,6 +18,7 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.R-project.org/
+COMMENT=		Statistical language for data analysis and graphics
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/autoreconf:../../devel/autoconf
 DEPENDS+=		readline>=4.0:../../devel/readline

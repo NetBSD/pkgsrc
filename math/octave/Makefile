@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/01/26 22:54:00 veego Exp $
+# $NetBSD: Makefile,v 1.19 2001/02/17 18:22:32 wiz Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/09/27 20:10:45 steve Exp
 
 DISTNAME=	octave-2.0.16
@@ -11,6 +11,7 @@ MASTER_SITES=	ftp://ftp.che.wisc.edu/pub/octave/ \
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.che.wisc.edu/octave/
+COMMENT=	High-level language, primarily intended for numerical computations
 
 BUILD_DEPENDS+=	tex:../../print/teTeX
 BUILD_DEPENDS+=	dvips:../../print/teTeX

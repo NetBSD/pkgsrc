@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/03/27 08:54:59 tron Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/17 18:09:25 wiz Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/04/02 08:39:12 obrien Exp
 #
 
@@ -7,6 +7,7 @@ CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=utils/console/}
 
 MAINTAINER=		packages@netbsd.org
+COMMENT=		run two shells in a split window/terminal
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/08/27 02:46:04 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/17 18:24:50 wiz Exp $
 # FreeBSD: ports/mail/mailagent/Makefile,v 1.28 1999/08/31 06:47:24 mharo Exp
 #
 
@@ -8,6 +8,7 @@ CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:S/by-module/by-authors\/id\/RAM/g}
 
 MAINTAINER=		itojun@itojun.org
+COMMENT=		Sophisticated automatic mail-processing tool
 
 USE_PERL5=		# defined
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/01/29 11:34:38 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/17 18:19:51 wiz Exp $
 #
 
 DISTNAME=	upclient-4.09
@@ -9,6 +9,7 @@ MASTER_SITES=	http://www.atomicvoid.net/uptimes/ \
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.uptimes.net/
+COMMENT=	Keeps track of your server uptime, and compares it to other hosts
 
 ALL_TARGET=	upclient
 

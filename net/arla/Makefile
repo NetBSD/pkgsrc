@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/01/29 11:34:34 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2001/02/17 18:18:33 wiz Exp $
 #
 
 DISTNAME=		arla-0.34.5
@@ -7,6 +7,7 @@ MASTER_SITES=		ftp://ftp.stacken.kth.se/pub/arla/
 
 MAINTAINER=		wennmach@netbsd.org
 HOMEPAGE=		http://www.stacken.kth.se/project/arla/
+COMMENT=		Free AFS implementation from KTH
 
 DEPENDS+=		kth-krb4-1.0.1:../../security/kth-krb4
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/02/12 03:31:34 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2001/02/17 18:24:48 wiz Exp $
 
 DISTNAME=       imap-2000c
 PKGNAME=        imap-uw-2000.0.3nb1
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.washington.edu/imap/
+COMMENT=	University of Washington's IMAP, POP2, and POP3 servers
 
 USE_LIBTOOL=	# defined
 USE_SSL=	# defined

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/08/18 22:46:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/17 18:18:53 wiz Exp $
 # FreeBSD Id: Makefile,v 1.17 1998/04/26 18:47:12 peter Exp 
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=   ftp://ftp.gated.merit.edu/net-research/gated/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gated.org/
+COMMENT=	Routing protocol daemon
 
 RESTRICTED=		"Required license from Merit"
 NO_SRC_ON_FTP=		${RESTRICTED}

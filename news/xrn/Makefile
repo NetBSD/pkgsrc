@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/07/11 10:03:50 agc Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:54:53 wiz Exp $
 #
 
 DISTNAME=	9.01
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.mit.edu/people/jik/software/xrn.html
+COMMENT=	Usenet News reader for the X window system
 
 DIST_SUBDIR=	xrn
 

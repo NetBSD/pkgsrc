@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/07/31 06:58:35 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/17 18:22:17 wiz Exp $
 #
 
 DISTNAME=		cassowary-0.60
@@ -7,6 +7,7 @@ MASTER_SITES=		http://www.cs.washington.edu/research/constraints/cassowary/
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.cs.washington.edu/research/constraints/cassowary/
+COMMENT=		Constraint-solving toolkit for linear equalities and inequalities
 
 BUILD_DEPENDS+=		bison:../../devel/bison
 DEPENDS+=		guile>=1.3.2:../../lang/guile

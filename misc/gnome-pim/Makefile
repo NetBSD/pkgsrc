@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/02/13 11:47:03 tron Exp $
+# $NetBSD: Makefile,v 1.24 2001/02/17 18:09:03 wiz Exp $
 #
 
 DISTNAME=		gnome-pim-1.2.0
@@ -7,6 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-pim/}
 
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
+COMMENT=		Personal Information Manager for GNOME
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
 BUILD_DEPENDS+=		${LOCALBASE}/bin/automake:../../devel/automake

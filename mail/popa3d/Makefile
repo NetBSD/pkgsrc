@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/07/21 00:21:40 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/17 18:25:00 wiz Exp $
 #
 
 DISTNAME=	popa3d-0.4
@@ -14,6 +14,7 @@ PATCH_DIST_ARGS=	-d ${WRKDIR} -s
 
 MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.openwall.com/popa3d/
+COMMENT=	secure, reliable, performant, and small pop3 server
 
 .if exists(/usr/sbin/user)
 USER_CMD=	/usr/sbin/user

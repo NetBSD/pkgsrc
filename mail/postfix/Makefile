@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2000/12/14 02:51:59 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2001/02/17 18:25:00 wiz Exp $
 
 DISTNAME=	postfix-19991231-pl13
 PKGNAME=	postfix-19991231pl13
@@ -15,6 +15,7 @@ PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	christos@netbsd.org
 HOMEPAGE=	http://www.postfix.org/
+COMMENT=	postfix smtp server and tools
 
 DIST_SUBDIR=	postfix
 

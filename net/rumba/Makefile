@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/08/25 21:00:38 tron Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/17 18:19:34 wiz Exp $
 # $FreeBSD Id: Makefile,v 1.2 1997/07/21 19:28:46 max Exp
 #
 
@@ -10,6 +10,7 @@ MASTER_SITES=	ftp://hal.kph.tuwien.ac.at/pub/NeXT/tools/rumba/ \
 EXTRACT_SUFX=	.gnutar.gz
 
 MAINTAINER=	tron@netbsd.org
+COMMENT=	Userland smbfs --- SMB to NFS protocol converter
 
 MAKE_ENV=	PWD=${WRKSRC}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/08/14 12:04:57 itojun Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/17 18:19:03 wiz Exp $
 # $FreeBSD: ports/net/libnids/Makefile,v 1.5 2000/04/24 07:42:58 kris Exp $
 #
 
@@ -8,6 +8,7 @@ MASTER_SITES=	http://www.packetfactory.net/Projects/Libnids/dist/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.packetfactory.net/Projects/Libnids/
+COMMENT=	Network monitoring library with TCP/IP reassembly
 
 DEPENDS=	libnet-*:../../devel/libnet
 

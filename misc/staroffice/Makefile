@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/02/06 10:36:31 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2001/02/17 18:09:26 wiz Exp $
 #
 
 DISTNAME=		so51a_lnx_${LANGNO}
@@ -10,6 +10,7 @@ EXTRACT_SUFX=		.tar
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.sun.com/staroffice/
+COMMENT=		Integrated office suite
 
 CONFLICTS=		staroffice-*
 DEPENDS+=		unzip-*:../../archivers/unzip

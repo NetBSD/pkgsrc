@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/10/02 10:58:51 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 18:22:50 wiz Exp $
 #
 
 DISTNAME=	yorick-1.4
@@ -7,6 +7,7 @@ MASTER_SITES=   ftp://ftp-icf.llnl.gov/pub/Yorick/
 
 MAINTAINER=	refling@comet.lbl.gov
 HOMEPAGE=	ftp://ftp-icf.llnl.gov/pub/Yorick/yorick-ad.html
+COMMENT=	Numerical algebra system (similar to Matlab)
 
 GNU_CONFIGURE=  YES
 USE_X11=        YES

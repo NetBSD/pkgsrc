@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/08/27 02:46:05 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/17 18:19:07 wiz Exp $
 # FreeBSD Id: Makefile,v 1.6 1996/12/01 01:22:54 obrien Exp 
 #
 
@@ -7,6 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	ftp://src.doc.ic.ac.uk/computing/archiving/mirror/
 
 MAINTAINER=	packages@netbsd.org
+COMMENT=	Mirror packages on remote sites
 
 USE_PERL5=	# defined
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/01/29 11:34:32 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 18:25:05 wiz Exp $
 
 DISTNAME=	sendmail.8.8.8
 PKGNAME=	sendmail-8.8.8
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.sendmail.org/
+COMMENT=	The well known Mail Transport Agent
 
 MANCOMPRESSED_IF_MANZ= YES
 WRKSRC=		${WRKDIR}/${PKGNAME}

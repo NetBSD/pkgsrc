@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/01/29 11:34:38 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2001/02/17 18:19:31 wiz Exp $
 #
 # Tempted to install another radius package?
 #
@@ -18,6 +18,7 @@ DISTFILES=	${DISTNAME}.basic.tar.gz \
 
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.merit.edu/aaa/
+COMMENT=	Standard authentication protocol server
 
 DIST_SUBDIR=	radius
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/01/07 14:34:39 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2001/02/17 18:09:28 wiz Exp $
 #
 
 DISTNAME=	vfu-3.01
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.src.tar.gz
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.biscom.net/~cade/away/vfu/
+COMMENT=	Small, handy, easy-to-use file manager
 
 USE_CURSES=	# defined
 REPLACE_NCURSES=	${WRKSRC}/vfu/makefile ${WRKSRC}/vslib/unicon.h \

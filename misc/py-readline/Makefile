@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/10/22 20:01:50 tsarna Exp $
+# $NetBSD: Makefile,v 1.14 2001/02/17 18:09:20 wiz Exp $
 #
 
 DISTNAME=	${PY_DISTNAME}
@@ -9,6 +9,7 @@ MASTER_SITES=	${PY_MASTER_SITES}
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.python.org/doc/tut/interacting.html
+COMMENT=	line editing support for Python
 
 DEPENDS+=	readline>=4.0:../../devel/readline
 

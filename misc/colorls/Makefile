@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/08/18 22:46:43 hubertf Exp $
+# $NetBSD: Makefile,v 1.14 2001/02/17 18:08:55 wiz Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/04/30 03:18:06 asami Exp
 #
 
@@ -8,6 +8,7 @@ CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		packages@netbsd.org
+COMMENT=		Ls that can use color to display file attributes
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 

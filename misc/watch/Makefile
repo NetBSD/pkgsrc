@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/06/16 01:32:51 simonb Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 18:09:29 wiz Exp $
 #
 
 DISTNAME=	procps-2.0.2
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.slackware.org/pub/linux/slackware/source/a/procps/ \
 		${MASTER_SITE_SUNSITE:=slackware/source/a/procps/}
 
 MAINTAINER=	simonb@netbsd.org
+COMMENT=	watch a program with update intervals
 
 MAKEFILE=	${FILESDIR}/Makefile
 

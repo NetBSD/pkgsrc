@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/08/18 22:46:38 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/17 18:24:55 wiz Exp $
 
 DISTNAME=	mush-7.2.5
 PKGNAME=	mush-7.2.6.b4.pl1
@@ -17,6 +17,7 @@ PATCHFILES=	patch-7.2.6-alpha-1 \
 		patch-7.2.6-beta-4
 
 MAINTAINER=	christos@netbsd.org
+COMMENT=	text-based mail client
 
 DIST_SUBDIR=	mush
 

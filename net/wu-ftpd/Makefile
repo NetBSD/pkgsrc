@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/07/08 16:52:04 rh Exp $
+# $NetBSD: Makefile,v 1.15 2001/02/17 18:19:57 wiz Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/12/24 17:45:28 ache Exp
 #
 
@@ -27,6 +27,7 @@ MASTER_SITES=   ftp://ftp.wu-ftpd.org/pub/wu-ftpd/ \
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.wu-ftpd.org/
+COMMENT=	Replacement ftp server for Un*x systems
 
 CONFLICTS+=	wu-ftpd-vr-* beroftpd-*
 

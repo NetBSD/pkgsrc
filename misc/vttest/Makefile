@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/06/10 11:40:10 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 18:09:28 wiz Exp $
 #
 
 DISTNAME=	vttest-20000208
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	drochner@netbsd.org
 HOMEPAGE=	http://dickey.his.com/vttest/vttest.html
+COMMENT=	vt100/vt220/xterm test utility
 
 GNU_CONFIGURE=	YES
 MAKEFILE=	makefile

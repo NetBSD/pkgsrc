@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2000/08/02 06:35:43 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2001/02/17 18:24:57 wiz Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/04 06:51:28 markm Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=		ftp://ftp.mhost.com/pub/nmh/ \
 
 MAINTAINER=		kim@tac.nyc.ny.us
 HOMEPAGE=		http://www.mhost.com/nmh/
+COMMENT=		Cleaned up MH mailer suite
 
 CONFLICTS=		ja-mh-*
 

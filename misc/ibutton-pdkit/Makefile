@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/18 23:33:32 tsarna Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 18:09:07 wiz Exp $
 #
 
 DISTNAME=	ulinuxgnu
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	damon@brodiefamily.org
 HOMEPAGE=	http://ibutton.com
+COMMENT=	1-Wire Public Domain Kit Version 2.00
 
 NO_WRKSUBDIR=   yes
 MAKEFILE=	makefile

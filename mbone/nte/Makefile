@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2000/12/03 06:17:36 mycroft Exp $
+# $NetBSD: Makefile,v 1.25 2001/02/17 18:04:35 wiz Exp $
 #
 
 DISTNAME=		nt.1.5a23
@@ -8,6 +8,7 @@ MASTER_SITES=		http://www-mice.cs.ucl.ac.uk/multimedia/software/nte/1.5a23/
 
 MAINTAINER=		mycroft@netbsd.org
 HOMEPAGE=		http://www-mice.cs.ucl.ac.uk/multimedia/software/nte/
+COMMENT=		Multicast Network Text Editor
 
 DEPENDS+=		tk-8.3.2:../../x11/tk
 

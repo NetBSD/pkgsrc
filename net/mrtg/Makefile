@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/01/29 11:34:36 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2001/02/17 18:19:09 wiz Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/12/16 19:42:17 vanilla Exp
 #
 
@@ -15,6 +15,7 @@ MASTER_SITES=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/pub/ \
 
 MAINTAINER=	bouyer@netbsd.org
 HOMEPAGE=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/mrtg.html
+COMMENT=	The Multi-Router Traffic Grapher
 
 DEPENDS=	gd>=1.8.1:../../graphics/gd
 
