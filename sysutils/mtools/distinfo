@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.8 2005/02/24 13:40:55 agc Exp $
+$NetBSD: distinfo,v 1.9 2005/04/04 08:56:18 adam Exp $
 
-SHA1 (mtools-3.9.9.tar.bz2) = 91198d52fa405eff1ac9eec57cadcc86d06b6ef1
-RMD160 (mtools-3.9.9.tar.bz2) = f21a08fb3cbe9993114b76b2169cea4eac29159f
-Size (mtools-3.9.9.tar.bz2) = 262148 bytes
-SHA1 (patch-aa) = 4c04697a01eefcceef176a7816f367f95b06878c
-SHA1 (patch-ab) = 5193ddef1bce4b4116a39c3565e5729245a04557
+SHA1 (mtools-3.9.10.tar.bz2) = f916e54e1bff599946bb1e72601f99096ea79456
+RMD160 (mtools-3.9.10.tar.bz2) = 566d3f3e3c6201cfe750ba05826f8013778f90b9
+Size (mtools-3.9.10.tar.bz2) = 291876 bytes
+SHA1 (patch-aa) = 5fa8d178bf4da73813a8857412e9369762d3dce1
+SHA1 (patch-ab) = 222ec2dac5cacc8d54eb685ce73124b1c312d93e
 SHA1 (patch-ac) = 84d959c35ec65679e003f50ef6a6fb2e62ff272e
-SHA1 (patch-ad) = 891ed493888708d9fb835d9249852555938a84a0
+SHA1 (patch-ad) = d599f6b184c6da84abf4392b44d243b7b62bac3e
 SHA1 (patch-ae) = 5281829c8c79f95ff4672fabb53acd22685c17bb
 SHA1 (patch-af) = 0e2e1037be4da5f7c876cb5c9f54950e4726f6d0
