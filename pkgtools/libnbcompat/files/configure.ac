@@ -90,6 +90,7 @@ AC_CHECK_FUNCS([bcopy bzero memset memcpy setlocale])
 AC_CHECK_FUNCS([getmode setmode])
 AC_CHECK_FUNCS([gid_from_group group_from_gid pwcache_groupdb pwcache_userdb \
 		uid_from_user user_from_uid])
+AC_CHECK_FUNCS(fts_open, [:], [AC_LIBOBJ(__fts13)])
 
 AC_CHECK_FUNCS([strunvis strvis strsvis],
 	[pkg_use_nbcompat_vis=no],
