@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2000/09/15 23:58:48 tron Exp $
+$NetBSD: patch-af,v 1.2 2001/04/27 10:45:23 skrll Exp $
 
---- ../gcc-2.95.2/gcc/config/sparc/netbsd64.h.orig	Sat Sep 16 00:17:42 2000
-+++ ../gcc-2.95.2/gcc/config/sparc/netbsd64.h	Sat Sep 16 00:17:42 2000
-@@ -0,0 +1,169 @@
+--- ../gcc-2.95.2/gcc/config/sparc/netbsd64.h.orig	Fri Apr 27 10:59:15 2001
++++ ../gcc-2.95.2/gcc/config/sparc/netbsd64.h
+@@ -0,0 +1,172 @@
 +/* NetBSD/sparc64 ELF configuration */
 +
 +/*
@@ -172,3 +172,6 @@ $NetBSD: patch-af,v 1.1 2000/09/15 23:58:48 tron Exp $
 +/* Name the port. */
 +#undef TARGET_NAME
 +#define TARGET_NAME     "sparc64-netbsd"
++
++/* Use sjlj exceptions. */
++#define DWARF2_UNWIND_INFO 0
