@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2004/04/21 21:09:31 cube Exp $
+# $NetBSD: Makefile,v 1.86 2004/05/02 00:22:20 snj Exp $
 
 DISTNAME=       pine4.58
 PKGNAME=        pine-4.58
@@ -15,7 +15,7 @@ COMMENT=	Program for Internet News and E-mail
 LICENSE=	pine-license
 
 BUILD_DEFS+=	USE_OPENLDAP
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 
 CONF_FILES=    ${PREFIX}/share/examples/pine/pine.conf ${PKG_SYSCONFDIR}/pine.conf
@@ -37,7 +37,7 @@ BUILDFILE= neb
 .endif
 
 .if defined(USE_OPENLDAP) && (${USE_OPENLDAP} == "YES")
-.  include "../../databases/openldap/buildlink2.mk"
+.  include "../../databases/openldap/buildlink3.mk"
 LDAPCFLAGS=    LDAPCFLAGS="-DENABLE_LDAP"
 LDAPLIBS=      LDAPLIBS="-lldap -llber"
 .endif
@@ -88,9 +88,9 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/contrib/utils/* ${PREFIX}/share/pine/contrib/utils
 	${CHMOD} +x ${PREFIX}/share/pine/contrib/utils/*.sh
 
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../editors/pico/buildlink2.mk"
-.include "../../mail/imap-uw/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../editors/pico/buildlink3.mk"
+.include "../../mail/imap-uw/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
