@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.alpha,v 1.1 2000/04/18 01:46:18 dmcmahill Exp $
+@comment $NetBSD: PLIST.alpha,v 1.2 2000/09/03 13:04:31 wiz Exp $
 Acrobat4/Reader/help/search.pdf
 Acrobat4/Reader/${PLATFORM}/lib/libAGM.so.3.0
 Acrobat4/Reader/${PLATFORM}/lib/libAGM.so
@@ -23,4 +23,3 @@ Acrobat4/Reader/${PLATFORM}/plug_ins/vdkHome/language/vdk10.stp
 Acrobat4/Reader/${PLATFORM}/plug_ins/vdkHome/language/vdk10.syd
 @dirrm Acrobat4/Reader/${PLATFORM}/plug_ins/vdkHome/language
 @dirrm Acrobat4/Reader/${PLATFORM}/plug_ins/vdkHome
-
