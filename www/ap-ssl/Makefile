@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/02/02 16:41:22 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2001/02/07 15:23:29 tron Exp $
 
 DISTNAME=		mod_ssl-2.8.0-1.3.17
 PKGNAME=		ap-ssl-2.8.0
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.modssl.org/source/
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.modssl.org/
 
-DEPENDS+=		apache-1.3.17:../../www/apache
+DEPENDS+=		apache-1.3.17.1:../../www/apache
 # For "apxs":
 BUILD_DEPENDS+=		${PERL5}:../../lang/perl5-base
 
