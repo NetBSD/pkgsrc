@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2173 2003/05/07 14:23:42 jmmv Exp $
+$NetBSD: CHANGES,v 1.2174 2003/05/07 15:30:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1881,3 +1881,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated graphopt to 0.4 [wiz 2003-05-07]
 	Added SDLmm-0.1.8 [salo 2003-05-07]
 	Added sirius-0.5.0 [jmmv 2003-05-07]
+	Updated graphopt to 0.4.1 [wiz 2003-05-07]
