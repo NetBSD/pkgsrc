@@ -1,0 +1,33 @@
+@comment $NetBSD: PLIST,v 1.1 1998/09/01 21:45:00 tron Exp $
+bin/xephem
+man/cat1/xephem.0
+lib/X11/app-defaults/XEphem
+share/xephem/auxil/README
+share/xephem/auxil/mars_db
+share/xephem/auxil/marsmap.fts
+share/xephem/auxil/moon.fts
+share/xephem/auxil/moon_db
+share/xephem/auxil/xephem.hlp
+share/xephem/auxil/xephem_sites
+share/xephem/catalogs/Messier.edb
+share/xephem/catalogs/NGC.edb
+share/xephem/catalogs/SAC.edb
+share/xephem/catalogs/YBS.edb
+share/xephem/catalogs/asteroids.edb
+share/xephem/catalogs/comets.edb
+share/xephem/catalogs/mir.edb
+share/xephem/tools/README
+share/xephem/tools/gps.awk
+share/xephem/tools/jost2edb.nawk
+share/xephem/tools/extract.awk
+share/xephem/tools/tle2edb.awk
+share/xephem/tools/astorb2edb.pl
+share/xephem/tools/encke2edb.pl
+share/xephem/tools/yeomans.pl
+share/doc/xephem/Copyright
+share/doc/xephem/README
+@dirrm share/xephem/tools
+@dirrm share/xephem/catalogs
+@dirrm share/xephem/auxil
+@dirrm share/xephem
+@dirrm share/doc/xephem
