@@ -1,6 +1,6 @@
 /*
 
-	$NetBSD: rpm2pkg.c,v 1.2 2001/03/20 20:18:07 manu Exp $
+	$NetBSD: rpm2pkg.c,v 1.3 2002/12/09 15:16:27 tron Exp $
 
 */
 
@@ -23,6 +23,7 @@ char CPIOMagic[] = {'0','7','0','7','0','1'};
 #define CPIO_END_MARKER		"TRAILER!!!"
 #define CPIO_FIELD_LENGTH	8
 
+#define CPIO_HDR_INODE		0
 #define CPIO_HDR_MODE		1
 #define CPIO_HDR_FILESIZE	6
 #define CPIO_HDR_NAMESIZE	11
@@ -65,6 +66,7 @@ struct PListEntryStruct
   PListEntry *pe_Childs[2];
   int pe_DirEmpty;
   mode_t pe_DirMode;
+  long pe_INode;
   char *pe_Link;
   char pe_Name[1];
  };
@@ -94,6 +96,7 @@ PListEntry *InsertPListEntry(PListEntry **Tree,char *Name)
  Node->pe_Left=NULL;
  Node->pe_Right=NULL;
  Node->pe_DirEmpty=FALSE;
+ Node->pe_INode=0;
  Node->pe_Link=NULL;
  (void)strcpy(Node->pe_Name,Name);
 
@@ -347,7 +350,7 @@ int MakeSymLink(char *Link,char *Name)
  return ((unlink(Name)==0)&&(symlink(Link,Name)==0));
 }
 
-int WriteFile(gzFile In,char *Name,mode_t Mode,long Length)
+int WriteFile(gzFile In,char *Name,mode_t Mode,long Length,char *Link)
 
 {
  int Out;
@@ -364,7 +367,13 @@ int WriteFile(gzFile In,char *Name,mode_t Mode,long Length)
    if ((Buffer=malloc(BufferSize))==NULL) return FALSE;
   }
 
- if ((Out=open(Name,O_WRONLY|O_CREAT,Mode))<=0) return FALSE;
+ if (Link!=NULL)
+  {
+   if (link(Link,Name)<0) return FALSE;
+   Out=open(Name,O_WRONLY,Mode);
+  }
+ else Out=open(Name,O_WRONLY|O_CREAT,Mode);
+ if (Out<0) return FALSE;
 
  while (Length>0)
   {
@@ -504,6 +513,8 @@ int main(int argc,char **argv)
  Dirs=NULL;
  for (Index=0; Index<argc; Index++)
   {
+   PListEntry *Last;
+
    if ((FD=open(argv[Index],O_RDONLY,0))<0)
     {
      perror(argv[Index]);
@@ -528,6 +539,7 @@ int main(int argc,char **argv)
      return EXIT_FAILURE;
     }
 
+   Last=NULL;
    for (;;)
     {
      long Fields[CPIO_NUM_HEADERS];
@@ -704,7 +716,11 @@ int main(int argc,char **argv)
                         Name);
           return EXIT_FAILURE;
          }
-        if (!WriteFile(In,Name,Mode,Length))
+
+        if ((Last!=NULL)&&(Last->pe_INode!=Fields[CPIO_HDR_INODE]))
+         Last=NULL;
+
+        if (!WriteFile(In,Name,Mode,Length,(Last!=NULL)?Last->pe_Name:NULL))
          {
           (void)fprintf(stderr,
                         "%s: can't write file \"%s\".\n",
@@ -712,7 +728,9 @@ int main(int argc,char **argv)
                         Name);
           return EXIT_FAILURE;
          }
-        (void)InsertPListEntry(&Files,Name);
+
+        Last=InsertPListEntry(&Files,Name);
+	Last->pe_INode=Fields[CPIO_HDR_INODE];
         break;
        default:
         if ((Length>0)&&(gzseek(In,(Length+3)&(~3),SEEK_CUR)<0)) break;
@@ -736,4 +754,3 @@ int main(int argc,char **argv)
 
  return EXIT_SUCCESS;
 }
-
