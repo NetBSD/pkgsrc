@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2001/11/13 21:16:54 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/12/04 16:14:17 skrll Exp $
 
-DISTNAME=	kdesdk-2.2.1
+DISTNAME=	kdesdk-2.2.2
 CATEGORIES=	devel
 COMMENT=	Support applications and tools used by KDE developers
 
