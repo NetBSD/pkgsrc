@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2001/08/23 11:55:16 abs Exp $
+# $NetBSD: Makefile,v 1.12 2001/09/13 17:44:27 abs Exp $
 
-DISTNAME=	pkgchk-1.10
+DISTNAME=	pkgchk-1.11
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
