@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2000/12/14 01:10:43 hubertf Exp $
+
+--- xdu.c.orig	Wed Dec 13 23:18:33 2000
++++ xdu.c
+@@ -24,8 +24,8 @@
+ 
+ extern char *malloc(), *calloc();
+ 
+-#define	MAXDEPTH	80	/* max elements in a path */
+-#define	MAXNAME		1024	/* max pathname element length */
++#define	MAXDEPTH	1024	/* max elements in a path */
++#define	MAXNAME		4096	/* max pathname element length */
+ #define	MAXPATH		4096	/* max total pathname length */
+ #define	NCOLS		5	/* default number of columns in display */
+ 
