@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2002/09/22 10:11:00 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2002/09/29 06:35:20 jlam Exp $
 
 .if !defined(BINUTILS_BUILDLINK2_MK)
 BINUTILS_BUILDLINK2_MK=	# defined
@@ -33,8 +33,17 @@ _NEED_BINUTILS=          YES
 
 .if ${_NEED_BINUTILS} == "YES"
 BUILDLINK_PACKAGES+=		binutils
-EVAL_PREFIX+=	BUILDLINK_PREFIX.binutils=binutils
-BUILDLINK_PREFIX.binutils_DEFAULT=	${LOCALBASE}
+BUILDLINK_PREFIX.binutils=	${LOCALBASE}
+
+PATH:=	${BUILDLINK_PREFIX.binutils}/bin:${PATH}
+
+AR=	${BUILDLINK_PREFIX.binutils}/bin/ar
+AS=	${BUILDLINK_PREFIX.binutils}/bin/as
+LD=	${BUILDLINK_PREFIX.binutils}/bin/ld
+NM=	${BUILDLINK_PREFIX.binutils}/bin/nm
+RANLIB=	${BUILDLINK_PREFIX.binutils}/bin/ranlib
+.endif	# _NEED_BINUTILS == YES
+
 BUILDLINK_FILES.binutils+=	include/ansidecl.h
 BUILDLINK_FILES.binutils+=	include/bfd.h
 BUILDLINK_FILES.binutils+=	include/bfdlink.h
@@ -44,9 +53,6 @@ BUILDLINK_FILES.binutils+=	lib/libopcodes.*
 
 BUILDLINK_TARGETS+=	binutils-buildlink
 
-PATH:=	${BUILDLINK_PREFIX.binutils}/bin:${PATH}
-
 binutils-buildlink: _BUILDLINK_USE
-.endif	# _NEED_BINUTILS == YES
 
 .endif	# BINUTILS_BUILDLINK2_MK
