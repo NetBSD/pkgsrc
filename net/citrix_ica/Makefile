@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/11/26 21:43:49 cjep Exp $
+# $NetBSD: Makefile,v 1.13 2002/12/07 02:39:00 schmonz Exp $
 #
 
 # A default so lintpkgsrc is happy
@@ -46,7 +46,7 @@ BINDIR=         ${PREFIX}/bin
 
 .if (${MACHINE_ARCH} == "sparc")
 .if !exists(/emul/svr4/usr/lib/ld.so)
-IGNORE=         "${PKGNAME} requires SVR4 compability - see compat_svr4(8)"
+PKG_FAIL_REASON= "${PKGNAME} requires SVR4 compability - see compat_svr4(8)"
 .endif
 .endif
 

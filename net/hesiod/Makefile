@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/11/21 10:59:20 grant Exp $
+# $NetBSD: Makefile,v 1.5 2002/12/07 02:39:00 schmonz Exp $
 
 DISTNAME=	hesiod-3.0.2
 CATEGORIES=	net
@@ -10,7 +10,7 @@ COMMENT=	Hesiod network database client and library
 .include "../../mk/bsd.prefs.mk"
 
 .if exists(/usr/include/hesiod.h) && !defined(USE_HESIOD)
-IGNORE=		"${PKGNAME} is part of your ${OPSYS} distribution"
+PKG_SKIP_REASON= "${PKGNAME} is part of your ${OPSYS} distribution"
 .endif
 
 USE_BUILDLINK2=		YES

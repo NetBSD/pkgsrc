@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.intree,v 1.6 2002/08/28 04:02:50 jlam Exp $
+# $NetBSD: Makefile.intree,v 1.7 2002/12/07 02:39:03 schmonz Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -26,7 +26,7 @@ PKG_SYSCONFSUBDIR:=		ssh
 .include "../../security/openssl/buildlink2.mk"
 .if ${_NEED_OPENSSL} == "YES"
 _UPDATE_INTREE_OPENSSH=		NO
-IGNORE=		"OpenSSL>=0.9.6f in the base distribution is required."
+PKG_FAIL_REASON=	"OpenSSL>=0.9.6f in the base distribution is required."
 .endif
 
 .if ${_UPDATE_INTREE_OPENSSH} == "YES"
@@ -39,7 +39,7 @@ PKG_SYSCONFBASE:=	/etc
 MANDIR:=		share/man
 RCD_SCRIPTS_EGDIR:=	share/examples/openssh
 .else
-IGNORE?=	"Unable to update in-tree OpenSSH for ${OPSYS}-${OS_VERSION}."
+PKG_FAIL_REASON?=	"Unable to update in-tree OpenSSH for ${OPSYS}-${OS_VERSION}."
 .endif
 
 real-tarball:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/02/11 18:30:21 fredb Exp $
+# $NetBSD: Makefile,v 1.15 2002/12/07 02:38:59 schmonz Exp $
 #
 
 DISTNAME=	dt-1.1.7
@@ -12,7 +12,7 @@ COMMENT=	Virtual consoles for NetBSD/mac68k (and macppc?)
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
 .if ${MACHINE} != "mac68k"
-IGNORE=		"${PKGNAME} is only useful for mac68k!"
+PKG_FAIL_REASON= "${PKGNAME} is only useful for mac68k!"
 .endif
 
 ALL_TARGET=	depend all

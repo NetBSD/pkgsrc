@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/07/29 05:32:34 tron Exp $
+# $NetBSD: Makefile,v 1.11 2002/12/07 02:38:53 schmonz Exp $
 #
 
 DISTNAME=	libgetopt-${VERS}
@@ -14,7 +14,7 @@ COMMENT=	Library for handling --long options
 NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
 
 .if exists(/usr/include/getopt.h)
-IGNORE=         "${PKGNAME} is part of your NetBSD distribution"
+PKG_SKIP_REASON= "${PKGNAME} is part of your ${OPSYS} distribution"
 .endif
 
 VERS=		1.3

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/09/25 12:53:20 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.15 2002/12/07 02:38:56 schmonz Exp $
 
 PKGNAME=	blender-2.11
 PKGREVISION=	5
@@ -24,7 +24,7 @@ ONLY_FOR_PLATFORM= *-*-i386 *-*-powerpc *-*-sparc
 
 .if (${MACHINE_ARCH} == "alpha")
 .if !exists(/emul/linux/lib/ld.so.1)
-IGNORE=		"${PKGNAME} requires Linux libraries - see compat_linux(8)"
+PKG_FAIL_REASON= "${PKGNAME} requires Linux libraries - see compat_linux(8)"
 .endif
 DISTNAME=	blender2.11-linux-glibc2.1.3-alpha
 #
@@ -36,7 +36,7 @@ PLIST_ARCH=	linux-i386
 .elif (${MACHINE_ARCH} == "sparc")
 .if ${OPSYS} == "NetBSD"
 .if !exists(/emul/svr4/usr/lib/ld.so)
-IGNORE=		"${PKGNAME} requires Solaris libraries - see compat_svr4(8)"
+PKG_FAIL_REASON= "${PKGNAME} requires Solaris libraries - see compat_svr4(8)"
 .endif
 .endif
 DISTNAME=	blender2.11-solaris-2.6-sparc
@@ -45,7 +45,7 @@ EXTRACT_SUFX=	.tar.Z
 #
 .elif (${MACHINE_ARCH} == "powerpc")
 .if !exists(/emul/linux/lib/ld.so.1)
-IGNORE=		"${PKGNAME} requires Linux libraries - see compat_linux(8)"
+PKG_FAIL_REASON= "${PKGNAME} requires Linux libraries - see compat_linux(8)"
 .endif
 DEPENDS+=	linuxppc_lib>=2000.4.2:../../emulators/linuxppc_lib
 DISTNAME=	blender2.11-linux-glibc2.1.3-powerpc-static
@@ -53,7 +53,7 @@ PLIST_ARCH=	linux-powerpc
 #
 .else
 DISTNAME=	# dummy, don't break pkg system
-IGNORE=		"Your platform is not supported and the package is buggy!"
+PKG_FAIL_REASON= "Your platform is not supported and the package is buggy!"
 .endif
 
 PLIST_SRC=	${PKGDIR}/PLIST.${PLIST_ARCH}

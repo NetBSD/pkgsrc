@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/09/01 15:13:42 tron Exp $
+# $NetBSD: Makefile,v 1.26 2002/12/07 02:38:57 schmonz Exp $
 
 DISTNAME=       xpm-3.4k
 CATEGORIES=	graphics x11
@@ -27,7 +27,7 @@ _IS_BUILTIN_XPM!=	(/usr/sbin/pkgchk -l SUNWxwinc | ${EGREP} -c xpm.h) || ${TRUE}
 .endif
 
 .if ${_IS_BUILTIN_XPM} != "0"
-IGNORE=		"The Xpm library is included in your X11 distribution."
+PKG_SKIP_REASON= "${PKGNAME} is part of your X11 distribution"
 .endif
 
 .if (${OPSYS} == SunOS)

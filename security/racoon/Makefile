@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2002/11/20 03:33:49 itojun Exp $
+# $NetBSD: Makefile,v 1.56 2002/12/07 02:39:04 schmonz Exp $
 #
 
 DISTNAME=	racoon-20021120a
@@ -13,7 +13,7 @@ CRYPTO=		yes
 
 # this is not compatible with cross build - there's no other way
 .if !exists(/usr/include/netinet6/ipsec.h)
-IGNORE+=	"${PKGNAME} requires ipsec-ready NetBSD"
+PKG_FAIL_REASON+= "${PKGNAME} requires ipsec-ready ${OPSYS}"
 .endif
 
 BUILD_DEFS+=	USE_INET6

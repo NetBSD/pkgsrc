@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2002/11/23 22:49:47 jschauma Exp $
+# $NetBSD: Makefile,v 1.56 2002/12/07 02:39:01 schmonz Exp $
 
 # Note to package maintainers:
 # To update the distfile of this pkg, cd to /usr/src/usr.sbin,
@@ -35,7 +35,7 @@ LOCALBASE:=	${PKG_TOOLS_BIN:C|/[^/]?bin$||}
 PKG_DBDIR?=		/var/db/pkg
 
 .if ${OPSYS} == "NetBSD" && !exists(/usr/share/tmac/tmac.andoc)
-IGNORE+=		"You need to have the 'text' set installed to build this package!"
+PKG_FAIL_REASON+= "You need to have the 'text' set installed to build this package!"
 .endif
 
 .if ${OPSYS} == "SunOS"

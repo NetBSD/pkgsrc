@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/17 06:28:11 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/07 02:38:53 schmonz Exp $
 
 DISTNAME=	irchat-pj-2.4.24.20
 CATEGORIES=	chat
@@ -18,7 +18,7 @@ ALL_TARGET=	package
 INSTALL_TARGET=	install-package
 PLIST_SRC=	${PKGDIR}/PLIST.xemacs
 .else
-IGNORE+=	"Unknown Emacs flavor"
+PKG_FAIL_REASON+= "Unknown Emacs flavor"
 .endif
 
 .include "../../mk/bsd.pkg.mk"

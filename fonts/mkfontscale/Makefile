@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/08/12 19:58:37 tron Exp $
+# $NetBSD: Makefile,v 1.5 2002/12/07 02:38:55 schmonz Exp $
 
 DISTNAME=	mkfontscale-20020524
 CATEGORIES=	fonts
@@ -15,7 +15,7 @@ WRKSRC=		${WRKDIR}/mkfontscale
 .include "../../mk/bsd.prefs.mk"
 
 .if !exists(${X11BASE}/include/X11/fonts/fontenc.h)
-IGNORE=		"Needs the fontenc.h header file, which comes with newer XFree versions."
+PKG_FAIL_REASON= "Needs the fontenc.h header file, which comes with newer XFree versions."
 .endif
 
 .include "../../mk/bsd.pkg.mk"

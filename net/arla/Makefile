@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2002/11/15 00:06:20 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2002/12/07 02:38:59 schmonz Exp $
 
 DISTNAME=		arla-0.35.9
 PKGREVISION=		2
@@ -38,7 +38,7 @@ CONFIGURE_ARGS+=	--with-roken-include=${BUILDLINK_PREFIX.kth-krb4}/include/kerbe
 .  if exists(${BSDSRCDIR}/sys/lib/libkern/libkern.h)
 CONFIGURE_ARGS+=	--with-sys=${BSDSRCDIR}/sys
 .  else
-IGNORE=			"${PKGNAME} requires kernel sources available under \$$BSDSRCDIR/sys (or /sys)"
+PKG_FAIL_REASON= "${PKGNAME} requires kernel sources available under \$$BSDSRCDIR/sys (or /sys)"
 .  endif
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2002/11/19 07:44:39 schmonz Exp $
+# $NetBSD: Makefile,v 1.33 2002/12/07 02:39:02 schmonz Exp $
 
 PKGNAME=	acroread-4.05
 CATEGORIES=	print
@@ -29,14 +29,14 @@ PLATFORM=	intellinux
 WRKSRC=		${WRKDIR}/ILINXR.install
 . elif (${MACHINE_ARCH} == "alpha")
 .  if !exists(/emul/osf1/sbin/loader)
-IGNORE=	'${PKGNAME} requires Digital UNIX libraries - see compat_osf1(8)'
+PKG_FAIL_REASON= '${PKGNAME} requires Digital UNIX libraries - see compat_osf1(8)'
 .  endif
 DISTNAME=	fdec-rs-405
 PLATFORM=       alphaosf
 WRKSRC=		${WRKDIR}/AOSFRS.install
 . elif (${MACHINE_ARCH} == "sparc")
 .  if !exists(/emul/svr4/usr/lib/ld.so)
-IGNORE=		'${PKGNAME} requires Solaris libraries - see compat_svr4(8)'
+PKG_FAIL_REASON= '${PKGNAME} requires Solaris libraries - see compat_svr4(8)'
 .  endif
 DISTNAME=	sunsparc-rs-405
 WRKSRC=		${WRKDIR}/SSOLRS.install
