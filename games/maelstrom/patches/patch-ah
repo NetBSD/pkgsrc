@@ -1,0 +1,54 @@
+$NetBSD: patch-ah,v 1.1 2001/12/14 09:23:06 martin Exp $
+
+--- netlogic/netplay.cpp.orig	Thu Dec 12 23:14:46 1996
++++ netlogic/netplay.cpp	Tue Dec 11 09:53:18 2001
+@@ -25,6 +25,10 @@
+ #include <arpa/inet.h>
+ #endif /* Win95 */
+ 
++#ifndef socklen_t
++#define	socklen_t unsigned int
++#endif
++
+ int   gNumPlayers;
+ int   gOurPlayer;
+ int   gDeathMatch;
+@@ -352,7 +356,8 @@
+ int SyncNetwork(void)
+ {
+ 	int  nleft;
+-	int  i, clen, len;
++	int  i, len;
++	socklen_t clen;
+ 	struct sockaddr_in from;
+ 	unsigned long frame, seed, newseed;
+ 	struct timeval timeout;
+@@ -567,7 +572,7 @@
+ 	struct timeval timeout;
+ 	fd_set fdset;
+ 	char   netbuf[BUFSIZ];
+-	int    clen;
++	socklen_t clen;
+ 	struct sockaddr_in from;
+ 	
+ 	timeout.tv_sec = 0;
+@@ -807,7 +812,8 @@
+ 	char message[BUFSIZ];
+ 	int  nleft, n;
+ 	int  acked[MAX_PLAYERS];
+-	int  i, clen, len;
++	int  i, len;
++	socklen_t clen;
+ 	struct sockaddr_in from;
+ 	struct timeval timeout;
+ 	fd_set fdset;
+@@ -939,7 +945,8 @@
+ int Await_NewGame(int *Wave, int *Lives, int *Turbo)
+ {
+ 	unsigned char netbuf[BUFSIZ];
+-	int   i, clen, len, gameon;
++	int   i, len, gameon;
++	socklen_t clen;
+ 	struct sockaddr_in from;
+ 	fd_set fdset;
+ 	struct timeval timeout;
