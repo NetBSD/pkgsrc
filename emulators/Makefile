@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2001/04/12 21:54:43 jtb Exp $
+# $NetBSD: Makefile,v 1.54 2001/04/25 21:23:10 tron Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -37,6 +37,7 @@ SUBDIR+=	suse_libc5
 SUBDIR+=	suse_libjpeg
 SUBDIR+=	suse_libpng
 SUBDIR+=	suse_linux
+SUBDIR+=	suse_vmware
 SUBDIR+=	suse_x11
 SUBDIR+=	suse_xforms
 SUBDIR+=	swarm
