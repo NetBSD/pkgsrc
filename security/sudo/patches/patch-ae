@@ -1,17 +1,8 @@
-$NetBSD: patch-ae,v 1.3 1998/09/28 13:10:07 frueauf Exp $
+$NetBSD: patch-ae,v 1.4 1999/08/31 19:26:41 jlam Exp $
 
---- sudoers.man.orig	Mon Sep  7 05:43:40 1998
-+++ sudoers.man	Tue Sep 22 11:33:01 1998
-@@ -297,7 +297,7 @@
- \fB\s-1DO\s0 \s-1NOT\s0\fR define an alias of \fI\s-1ALL\s0\fR, it will \fB\s-1NOT\s0\fR be used.
- Note that \fI\s-1ALL\s0\fR implies the entire universe of hosts/users/commands.
- You can subtract elements from the universe by using the syntax:
--   user  host=\s-1ALL\s0,!\s-1ALIAS1\s0,!/etc/halt...
-+   user  host=\s-1ALL\s0,!\s-1ALIAS1\s0,!/sbin/halt...
- Note that the \*(L"!\*(R" notation only works in a user's command list.  You
- may not use it to subtract elements in a User_Alias, Host_Alias,
- Cmnd_Alias or user list.
-@@ -330,11 +330,11 @@
+--- sudoers.man.orig	Sun Mar 28 23:37:04 1999
++++ sudoers.man	Sun Aug 29 05:48:46 1999
+@@ -333,11 +333,11 @@
  .Ve
  .Vb 6
  \&    # Command alias specification
@@ -25,7 +16,7 @@ $NetBSD: patch-ae,v 1.3 1998/09/28 13:10:07 frueauf Exp $
  .Ve
  .Vb 14
  \&    # User specification
-@@ -344,11 +344,11 @@
+@@ -347,11 +347,11 @@
  \&    +interns    +openlabs=ALL,!SHELLS,!SU
  \&    britt       REMOTE=SHUTDOWN:ALL=LPCS
  \&    jimbo       CUNETS=/bin/su ?*,!/bin/su *root*
@@ -41,7 +32,7 @@ $NetBSD: patch-ae,v 1.3 1998/09/28 13:10:07 frueauf Exp $
  \&                kodiakthorn=NOPASSWD: ALL
  \&    steve       CSNETS=(operator) /usr/op_commands/
  .Ve
-@@ -394,21 +394,21 @@
+@@ -397,21 +397,21 @@
  B network).
  .Ip "nieusma" 16
  The user \f(CWnieusma\fR may run commands in the \f(CWSHUTDOWN\fR alias
@@ -68,14 +59,3 @@ $NetBSD: patch-ae,v 1.3 1998/09/28 13:10:07 frueauf Exp $
  on \f(CWkodiakthorn\fR (no password required on \f(CWkodiakthorn\fR).
  .Ip "steve" 16
  The user \f(CWsteve\fR may run any command in the \fI/usr/op_commands/\fR
-@@ -421,8 +421,8 @@
- .SH "FILES"
- .PP
- .Vb 2
--\& /etc/sudoers           file of authorized users.
--\& /etc/netgroup          list of network groups.
-+\& /usr/pkg/etc/sudoers     file of authorized users.
-+\& /etc/netgroup            list of network groups.
- .Ve
- .SH "SEE ALSO"
- \fIsudo\fR\|(8), \fIvisudo\fR\|(8), \fIsu\fR\|(1), \fIfnmatch\fR\|(3).
