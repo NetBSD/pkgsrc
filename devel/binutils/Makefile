@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/08/25 19:22:22 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/09/29 06:48:22 jlam Exp $
 #
 
 DISTNAME=	binutils-2.11.2
@@ -9,8 +9,8 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/directory/binutils.html
 COMMENT=	GNU binary utilities
 
+USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
-USE_BUILDLINK_ONLY=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -23,7 +23,7 @@ post-install:
 	${FIND} ${PREFIX}/${MACHINE_GNU_PLATFORM}/lib/ldscripts -type f -print | \
 		${SORT} -r | ${SED} 's;${PREFIX}/;;g' > ${WRKDIR}/PLIST_DYNAMIC
 
-.elif ${OPSYS} == "SunOS"
+.else
 PLIST_SRC=	${PKGDIR}/PLIST.${OPSYS}
 .endif
 
