@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/08/06 09:43:30 agc Exp $
+# $NetBSD: Makefile,v 1.2 1999/08/06 10:39:30 agc Exp $
 
 DISTNAME=		siod
 PKGNAME=		siod-3.0
@@ -21,5 +21,9 @@ MAKE_ENV+=		CC=${CC}
 .if ${OPSYS} == "SunOS"
 MAKE_ENV+=		CPPFLAGS=
 .endif
+
+post-patch:
+	${MV} ${WRKSRC}/siod.man ${WRKSRC}/prefix-siod.man
+	${SED} -e 's|@PREFIX@|${PREFIX}|g' ${WRKSRC}/prefix-siod.man > ${WRKSRC}/siod.man
 
 .include "../../mk/bsd.pkg.mk"
