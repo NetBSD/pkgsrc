@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8046 2004/11/27 01:27:26 hamajima Exp $
+$NetBSD: CHANGES,v 1.8047 2004/11/27 01:33:36 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5482,3 +5482,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated liferea to 0.6.3 [minskim 2004-11-27]
 	Updated moss to 0.1.13 [minskim 2004-11-27]
 	Updated dtcp to 20040611 [hamajima 2004-11-27]
+	Updated xmame to 0.88 [kristerw 2004-11-27]
+	Updated xmess to 0.88 [kristerw 2004-11-27]
