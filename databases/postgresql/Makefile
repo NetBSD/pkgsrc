@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 1999/04/01 13:36:55 agc Exp $
+# $NetBSD: Makefile,v 1.31 1999/04/13 15:31:05 agc Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 #
 
@@ -113,7 +113,6 @@ post-install:
 	@/usr/sbin/chown root:${PGGROUP} ${PREFIX}/etc/rc.d/pgsql.sh
 	@${INSTALL} -c -o ${PGUSER} -g ${PGGROUP} -m 444 \
 		${FILESDIR}/post-install-notes ${PREFIX}/${PGUSER}
-.if !defined(NOPORTDOCS)
 	-${MKDIR} ${PREFIX}/share/doc/pgsql
 	${CP} -R ${WRKDIR}/${DISTNAME}/doc/* ${PREFIX}/share/doc/pgsql
 	${RM} -rf ${PREFIX}/share/doc/pgsql/src/CVS \
@@ -121,7 +120,6 @@ post-install:
 		${PREFIX}/share/doc/pgsql/src/sgml/ref/CVS \
 		${PREFIX}/share/doc/pgsql/src/sgml/CVS \
 		${PREFIX}/share/doc/pgsql/CVS
-.endif
 .if !defined(BATCH)
 	@${CAT} ${FILESDIR}/post-install-notes
 .endif
