@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1 2000/12/10 09:46:13 jlam Exp $
+
+--- doc/html/install.html.orig	Thu Dec 30 16:07:24 1999
++++ doc/html/install.html
+@@ -573,12 +573,12 @@
+ </kbd></pre>
+ 
+ <li>Change to the Cyrus user and use the tool
+-"<tt>tools/mkimap</tt>" to create the rest of the directories
++"<tt>mkimap</tt>" to create the rest of the directories
+ (subdirectories of the directories you just created).
+ 
+ <pre>
+ <kbd>   su cyrus
+-   tools/mkimap
++   /usr/cyrus/bin/mkimap
+ </kbd>
+ </pre>
+ 
