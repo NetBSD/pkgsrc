@@ -3,23 +3,23 @@
 # Date created:         Sun Aug 13 12:36:14 CDT 1995
 # Whom:                 erich@rrnet.com
 #
-# $NetBSD: Makefile,v 1.4 1998/01/24 22:12:24 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/03/10 15:48:51 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/05/28 06:18:20 fenner Exp
 #
 
-DISTNAME=	9wm-1.1
-CATEGORIES=	plan9
-MASTER_SITES=	ftp://ftp.mathcs.emory.edu/pub/arnold/
-EXTRACT_SUFX=	.shar.gz
+DISTNAME=		9wm-1.1
+CATEGORIES=		plan9
+MASTER_SITES=		ftp://ftp.mathcs.emory.edu/pub/arnold/
+EXTRACT_SUFX=		.shar.gz
 
-MAINTAINER=	erich@FreeBSD.org
+MAINTAINER=		erich@FreeBSD.org
 
-NO_WRKSUBDIR=	yes
+NO_WRKSUBDIR=		yes
 EXTRACT_CMD=		zcat
 EXTRACT_BEFORE_ARGS=
 EXTRACT_AFTER_ARGS=	|sh
-USE_IMAKE=	yes
+USE_IMAKE=		yes
 
-MAN1=		9wm.0
+CAT1=			9wm.0
 
 .include <bsd.port.mk>
