@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1343 2003/02/13 08:29:25 wiz Exp $
+$NetBSD: CHANGES,v 1.1342 2003/02/13 07:34:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -591,4 +591,3 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated squirrelmail to 1.2.11 [martti 2003-02-12]
 	Updated cdrecord to 2.0nb1 [jlam 2003-02-13]
 	Updated grep to 2.5.1 [wiz 2003-02-13]
-	Updated gtexinfo to 4.5 [wiz 2003-02-13]

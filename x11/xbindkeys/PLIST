@@ -1,2 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.2 2002/07/11 14:23:37 tron Exp $
-bin/xbindkeys_config
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/15 23:35:06 cjep Exp $
+bin/xbindkeys
+bin/xbindkeys_show
+man/man1/xbindkeys.1
+man/man1/xbindkeys_show.1
