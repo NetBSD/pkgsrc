@@ -1,17 +1,24 @@
-$NetBSD: patch-ac,v 1.5 1999/11/23 21:12:13 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.6 1999/12/16 00:58:27 dmcmahill Exp $
 
 Much cleanup of the script.  Added various options such as
 -O for optimization
 -fPIC for PIC support
 -Wall for gcc warnings
 -Wl,  for additional linker arguments
+-v, for verbose output
 
---- ./fc.orig	Tue May 16 17:37:49 1995
-+++ ./fc	Tue Nov 23 16:08:52 1999
-@@ -1,26 +1,54 @@
+--- fc.orig	Fri Apr 16 09:24:46 1999
++++ fc	Tue Dec  7 19:13:04 1999
+@@ -1,101 +1,125 @@
  #!/bin/sh
--PATH=/v/bin:/bin:/usr/bin
-+PATH=/bin:/usr/bin:PREFIX/bin
+-
+-# NOTE: you may need to adjust the references to /usr/local/... below
+-#	(or remove them if they're not needed on your system).
+-#	See also the comments starting with ### below.
+-
+-PATH=/usr/local/bin:/bin:/usr/bin
+-
++PATH=/bin:/usr/bin:@PREFIX@/bin
 +#USAGESTART
  # f77-style shell script to compile and load fortran, C, and assembly codes
 -
@@ -30,19 +37,18 @@ Much cleanup of the script.  Added various options such as
 +#
  #		-C		Check that subscripts are in bounds.
 -
--#		-S		leave assembler output on file.s
--
 +#
 +#		-D def		passed to C compiler (for .c files)
 +#				or to cpp (for .F files)
 +#
 +#		-fPIC		turn on the -fPIC flag to the c compiler
 +#
++#		-g		produce debugging information.
++#
 +#		-I includepath	passed to C compiler (for .c files)
 +#				or to cpp (for .F files), and to f2c
 +#
- #		-l library	(passed to ld).
--
++#		-l library	(passed to ld).
 +#
 +#		-L includepath	passed to ld.  Library include path
 +#
@@ -60,28 +66,52 @@ Much cleanup of the script.  Added various options such as
 +#
 +#		-P		emit .P files
 +#
-+#		-S		leave assembler output on file.s
+ #		-S		leave assembler output on file.s
+-
+-#		-L libdir	(passed to ld)
+-
+-#		-l library	(passed to ld)
+-
 +#
  #		-u		complain about undeclared variables
 -
++#
++#		-U def		passed to C compiler (for .c files) or to
++#				cpp (for .F files) to remove def
++#
++#		-v		be verbose.  Output is produced on the standard
++#				error output.
 +#
  #		-w		omit all warning messages
 -
 +#
  #		-w66		omit Fortran 66 compatibility warning messages
 -
+-#		files		FORTRAN source files ending in .f .
 +#
 +#		-Wall		turn on the -Wall flag to the c compiler
 +#
-+#		-Wl,		Pass options to the linker.  For example, -Wl,-R/usr/X11R6/lib
++#		-Wl,		Pass options to the linker.  For example, 
++#				-Wl,-R/usr/X11R6/lib
 +#				passes "-R/usr/X11R6/lib" to the linker
 +#
- #		files		FORTRAN source files ending in .f .
++#		files		FORTRAN source files ending in .f
  #				FORTRAN with cpp preprocessor directives
-@@ -30,21 +58,18 @@
- #				efl source files ending in .e .
- #				RATFOR files ending in .r .
+-#					ending in .F .
+-#				C source files ending in .c .
+-#				Assembly language files ending in .s .
+-#				efl source files ending in .e .
+-#				RATFOR files ending in .r .
+-#				Object files ending in .o .
+-#				Shared libraries ending in .so .
 -
++#					ending in .F 
++#				C source files ending in .c
++#				Assembly language files ending in .s 
++#				efl source files ending in .e 
++#				RATFOR files ending in .r 
++#				Object files ending in .o
++#				Shared libraries ending in .so
 +#
  #				f2c prototype files ending in .P ; such
  #				files only affect subsequent files.
@@ -91,37 +121,53 @@ Much cleanup of the script.  Added various options such as
 -
 -#		-I includepath	passed to C compiler (for .c files)
 -#				or to cpp (for .F files), and to f2c
+-
+-#		-Ntnnn		allow nnn entries in table t
+-
+-#		-P		emit .P files
 +# if no input arguments, then spit out the help stuff from the beginning
 +# of this file.
 +if [ $# = 0 ]; then
 + cat $0 | awk '$1 == "#USAGESTART", $1 == ""' | tail +2 | sed 's/#//g'
 +fi
  
--#		-Ntnnn		allow nnn entries in table t
--
--#		-P		emit .P files
+-#		-U def		passed to C compiler (for .c files)
+-#				or to cpp (for .F files) to remove def
  
  s=/tmp/stderr_$$
  t=/tmp/f77_$$.o
--CC=${CC_f2c:-'cc -common'}
+-### On some systems (e.g., IRIX), -common prevents complaints
+-### about multiple definitions of COMMON blocks.
+-#CC=${CC_f2c:-'cc -common'}
+-CC=${CC_f2c:-'cc'}
 +CC=${CC_f2c:-'cc '}
  EFL=${EFL:-efl}
  EFLFLAGS=${EFLFLAGS:-'system=portable deltastno=10'}
-@@ -53,30 +78,34 @@
- F2C=${F2C:-f2c}
- F2CFLAGS=${F2CFLAGS:='-ARw8 -Nn802 -Nx400'}
+ RATFOR=${RATFOR:-ratfor}
+ RFLAGS=${RFLAGS:-'-6&'}
+-F2C=${F2C:-/usr/local/bin/f2c}
+-F2CFLAGS=${F2CFLAGS:='-ARw8 -Nn802 -Nq300 -Nx400'}
 -CPP=${CPP:-/lib/cpp}
++F2C=${F2C:-@PREFIX@/bin/f2c}
++F2CFLAGS=${F2CFLAGS:='-ARw8 -Nn802 -Nx400'}
 +CPP=${CPP:-/usr/bin/cpp}
  rc=0
  trap "rm -f $s $t; exit \$rc" 0
  OUTF=a.out
+-OUTO=
  cOPT=1
--set -- `getopt cCD:gI:N:Oo:Suw6 "$@"`
+-set -- `getopt cCD:gI:L:N:OU:o:Suw6 "$@"`
 -case $? in 0);; *) rc=$?; exit;; esac
+-CPPFLAGS=${CPPFLAGS:-'-I/usr/local/include'}
+-CFLAGSF2C=${CFLAGSF2C:-'-I/usr/local/include'}
+-OFILES=
 +ARGS=
- CPPFLAGS=
-+CFLAGS=-IPREFIX/include 
++CPPFLAGS=
++CFLAGS=-I@PREFIX@/include 
 +LIBS=
++FLIBS="-L@PREFIX@/lib -lf2c -lm"
++VERBOSE=no
++
  while
 -	test X"$1" != X--
 +	test -n "$1"
@@ -152,9 +198,12 @@ Much cleanup of the script.  Added various options such as
 +		G="-g"
  		shift;;
  
-@@ -86,11 +115,37 @@
+@@ -105,61 +129,95 @@
  		;;
  
+-	-U)	CPPFLAGS="$CPPFLAGS -U$2"
+-		shift 2
+-		;;
 +        -I*)    CFLAGS="$CFLAGS $1"
 +                shift 1
 +                ;;
@@ -166,14 +215,15 @@ Much cleanup of the script.  Added various options such as
 +        -L*)    LIBS="$LIBS $1"
 +                shift 1
 +                ;;
-+
+ 
  	-o)	OUTF=$2
+-		OUTO=$2
  		shift 2
  		;;
  
 -	-O)	case $2 in -1) O=-O1;; -2) O=-O2;; -3) O=-O3;; *) O=-O;; esac
 -		case $O in -O);; *) shift;; esac
--		CFLAGS="$CFLAGS $O"
+-		CFLAGS="$CFLAGS $O -Olimit 2000"
 +#	-N)	F2CFLAGS="$F2CFLAGS $1""$2"
 +#		shift 2
 +#		;;
@@ -181,38 +231,54 @@ Much cleanup of the script.  Added various options such as
 +
 +	-O|-O1|-O2|-O3)	
 +		CFLAGS="$CFLAGS $1"
-+		shift
-+		;;
-+
+ 		shift
+ 		;;
+ 
+-	-u)	F2CFLAGS="$F2CFLAGS -u"
 +	-P)	F2CFLAGS="$F2CFLAGS $1"
-+		shift
-+		;;
-+
+ 		shift
+ 		;;
+ 
+-	-w)	F2CFLAGS="$F2CFLAGS -w"
+-		case $2 in -6) F2CFLAGS="$F2CFLAGS"66; shift
+-			case $2 in -6) shift;; esac;; esac
 +
 +	-S)	CFLAGS="$CFLAGS -S"
 +		cOPT=0
  		shift
  		;;
-@@ -101,30 +156,38 @@
  
- 	-w)	F2CFLAGS="$F2CFLAGS -w"
--		case $2 in -6) F2CFLAGS="$F2CFLAGS"66; shift
--			case $2 in -6) shift;; esac;; esac
+-	-L)	OFILES="$OFILES $1$2"
+-		shift 2
+-		case $cOPT in 1) cOPT=2;; esac
++	-u)	F2CFLAGS="$F2CFLAGS -u"
++		shift
+ 		;;
+ 
+-	-L*)	OFILES="$OFILES $1"
++	-U*)	CPPFLAGS="$CPPFLAGS $1"
++		shift;;
++
++	-v)	VERBOSE=yes
  		shift
+-		case $cOPT in 1) cOPT=2;; esac
  		;;
  
 -	-N)	F2CFLAGS="$F2CFLAGS $1""$2"
 -		shift 2
-+	-w66)	F2CFLAGS="$F2CFLAGS -w66"
++	-w)	F2CFLAGS="$F2CFLAGS -w"
 +		shift
  		;;
  
 -	-P)	F2CFLAGS="$F2CFLAGS $1"
-+	-Wall)	CFLAGS="$CFLAGS -Wall"
++	-w66)	F2CFLAGS="$F2CFLAGS -w66"
  		shift
  		;;
  
--
++	-Wall)	CFLAGS="$CFLAGS -Wall"
++		shift
++		;;
+ 
 -	-S)	CFLAGS="$CFLAGS -S"
 -		cOPT=0
 +	-Wl*)	CFLAGS="$CFLAGS $1"
@@ -231,6 +297,7 @@ Much cleanup of the script.  Added various options such as
  	esac
  done
 -shift
+-case $cOPT in 0) case $OUTO in '');; *) CFLAGS="$CFLAGS -o $OUTO";; esac;; esac
 +
 +if test $cOPT = 0; then
 +  if test "$OUTF" != "a.out"; then
@@ -239,28 +306,97 @@ Much cleanup of the script.  Added various options such as
 +fi
 +set -- $ARGS
 +
++if test $VERBOSE = "yes"; then
++  F2CVER=`$F2C < /dev/null | awk '/.*version/ {print $6" "$7}'`
++  echo "f2c-f77:"
++  echo "F2C= $F2C, $F2CVER"
++  echo "CC= $CC"
++  echo "CFLAGS= $CFLAGS"
++  echo "CPPFLAGS= $CPPFLAGS"
++  echo "FLIBS= $FLIBS"
++fi
 +
  while
  	test -n "$1"
-@@ -232,5 +295,20 @@
+@@ -171,4 +229,7 @@
+ 		case "$1" in
+ 			*.f)	b=`basename $1 .f`
++				if test $VERBOSE = "yes"; then
++					echo "$F2C $F2CFLAGS $1"
++				fi
+ 				$F2C $F2CFLAGS $1
+ 				rc=$?
+@@ -178,4 +239,7 @@
+ 				rc=$?
+ 				case $rc in 0)
++					if test $VERBOSE="yes"; then
++						echo "$F2C $F2CFLAGS <$b.i >$b.c"
++					fi
+ 					$F2C $F2CFLAGS <$b.i >$b.c
+ 					rc=$?
+@@ -185,5 +249,5 @@
+ 			esac
+ 		case $rc in 0);; *) exit;; esac
+-                $CC -c $CFLAGSF2C $CFLAGS $b.c 2>$s
++                $CC -c $CFLAGS $b.c 2>$s
+ 		rc=$?
+ 		sed '/parameter .* is not referenced/d;/warning: too many parameters/d' $s 1>&2
+@@ -200,5 +264,5 @@
+ 		$F2C $F2CFLAGS $b.f
+ 		case $? in 0);; *) rc=$?; exit;; esac
+-                $CC -c $CFLAGSF2C $CFLAGS $b.c
++                $CC -c $CFLAGS $b.c
+ 		case $? in 0);; *) rc=$?; exit;; esac
+ 		OFILES="$OFILES $b.o"
+@@ -213,5 +277,5 @@
+ 		$F2C $F2CFLAGS $b.f
+ 		case $? in 0);; *) rc=$?; exit;; esac
+-		$CC -c $CFLAGSF2C $CFLAGS $b.c
++		$CC -c $CFLAGS $b.c
+ 		case $? in 0);; *) rc=$?; exit;; esac
+ 		OFILES="$OFILES $b.o"
+@@ -232,5 +296,5 @@
+ 		echo $1: 1>&2
+ 		OFILE=`basename $1 .c`.o
+-                $CC -c $CFLAGSF2C $CPPFLAGS $CFLAGS $1
++                $CC -c $CPPFLAGS $CFLAGS $1
+ 		rc=$?; case $rc in 0);; *) rc=$?; exit;; esac
+ 		OFILES="$OFILES $OFILE"
+@@ -248,10 +312,10 @@
+ 		shift
+ 		;;
+-	-[lL])
+-		OFILES="$OFILES $1$2"
++	-l)
++		OFILES="$OFILES -l$2"
+ 		shift 2
+ 		case $cOPT in 1) cOPT=2;; esac
+ 		;;
+-	-[lL]*)
++	-l*)
+ 		OFILES="$OFILES $1"
+ 		shift
+@@ -259,6 +323,5 @@
+ 		;;
+ 	-o)
+-		case $cOPT in 0) CFLAGS="$CFLAGS -o $2";; *) OUTF=$2;; esac
+-		shift 2;;
++		OUTF=$2; shift 2;;
+ 	*.P)
+ 		F2CFLAGS="$F2CFLAGS $1"
+@@ -273,9 +336,11 @@
  done
  
--case $cOPT in 2) $CC -o $OUTF -u MAIN__ $OFILES -lf2c -lm;; esac
+-### On some (IRIX) systems, -Wl,-dont_warn_unused prevents complaints
+-### about unnecessary -l options.
 +case $cOPT 
 +in 
-+  2) $CC $CFLAGS -o $OUTF -u _MAIN__ $OFILES $LIBS -LPREFIX/lib -lf2c -lm
++  2) $CC $CFLAGS -o $OUTF -u _MAIN__ $OFILES $LIBS $FLIBS 
 +     ;; 
 +esac
-+
+ 
+-#case $cOPT in 2) $CC -Wl,-dont_warn_unused -o $OUTF -u MAIN__ -L/usr/local/lib $OFILES -lf2c -lm;; esac
+-case $cOPT in 2) $CC -o $OUTF -u MAIN__ -L/usr/local/lib $OFILES -lf2c -lm;; esac
  rc=$?
  exit $rc
-+
-+
-+
-+
-+
-+
-+
-+
-+
 +

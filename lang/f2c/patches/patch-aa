@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 1998/08/25 15:22:47 tv Exp $
+$NetBSD: patch-aa,v 1.6 1999/12/16 00:58:27 dmcmahill Exp $
 
 Add a top level Makefile
 
@@ -17,12 +17,12 @@ Add a top level Makefile
 +
 +libF77.a:
 +	#Making all in 'libF77'
-+	cd libF77; make check; make all
++	cd libF77;  make all
 +	cp libF77/libF77.a libF77.a
 +
 +libI77.a:
 +	#Making all in 'libI77'
-+	cd libI77; make check; make libI77.a
++	cd libI77; make libI77.a
 +	cp libI77/libI77.a libI77.a
 +
 +libf2c.a: libI77.a libF77.a
@@ -55,4 +55,4 @@ Add a top level Makefile
 +	${BSD_INSTALL_MAN} ./f2c.0 ${PREFIX}/man/cat1
 +
 +f2c-f77: fc
-+	sed 's!PREFIX!${PREFIX}!g' fc > f2c-f77
++	sed 's!@PREFIX@!${PREFIX}!g' fc > f2c-f77

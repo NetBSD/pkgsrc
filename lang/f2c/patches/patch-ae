@@ -1,28 +1,11 @@
-$NetBSD: patch-ae,v 1.3 1998/08/25 08:54:07 agc Exp $
+$NetBSD: patch-ae,v 1.4 1999/12/16 00:58:27 dmcmahill Exp $
 
-Omit any package-modified files from the distributed checksum
-(the pkgsrc checksum is still valid)
-
---- libF77/makefile.orig	Sun Jul 19 22:58:11 1998
-+++ libF77/makefile	Sun Jul 19 23:11:54 1998
+--- ./libF77/makefile.orig	Tue Dec  7 17:52:36 1999
++++ ./libF77/makefile	Tue Dec  7 18:03:51 1999
 @@ -2,5 +2,5 @@
  CC = cc
  SHELL = /bin/sh
 -CFLAGS = -O
-+CFLAGS = -O2 -DNO_ONEXIT 
++CFLAGS = -Wcast-align -O2 -DNO_ONEXIT 
  
  # If your system lacks onexit() and you are not using an
-@@ -82,5 +82,5 @@
- 
- check:
--	xsum F77_aloc.c Notice README Version.c abort_.c c_abs.c c_cos.c \
-+	../src/xsum F77_aloc.c Notice README Version.c abort_.c c_abs.c c_cos.c \
- 	c_div.c c_exp.c c_log.c c_sin.c c_sqrt.c cabs.c d_abs.c d_acos.c \
- 	d_asin.c d_atan.c d_atn2.c d_cnjg.c d_cos.c d_cosh.c d_dim.c \
-@@ -93,5 +93,5 @@
- 	i_abs.c i_dim.c i_dnnt.c i_indx.c i_len.c i_mod.c i_nint.c \
- 	i_sign.c iargc_.c l_ge.c l_gt.c l_le.c l_lt.c lbitbits.c lbitshft.c \
--	main.c makefile pow_ci.c pow_dd.c pow_di.c pow_hh.c pow_ii.c \
-+	main.c pow_ci.c pow_dd.c pow_di.c pow_hh.c pow_ii.c \
- 	pow_qq.c pow_ri.c pow_zi.c pow_zz.c qbitbits.c qbitshft.c \
- 	r_abs.c r_acos.c r_asin.c r_atan.c r_atn2.c \
