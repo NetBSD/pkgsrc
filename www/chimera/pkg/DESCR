@@ -1,0 +1,7 @@
+Chimera, Version 2, is a World Wide Web browser that runs under X.
+This incarnation, though outwardly similar, is a complete re-write
+of the venerable Chimera, Version 1. For one thing, Chimera now uses
+the jpeg and png shared libraries. [The old Chimera called external
+binaries to render inline images.] Chimera supports jpeg, gif, and
+png images, persistent caching, bookmarks, and Chimera may also be
+extended using the standard mailcap mechanism.
