@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.554 2000/08/28 22:52:08 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.555 2000/08/29 18:48:11 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -136,9 +136,19 @@ BUILD_DEFS+=		KERBEROS
 PERL5?=			${LOCALBASE}/bin/perl
 .if defined(USE_PERL5)
 DEPENDS+=		perl-5.*:../../lang/perl5
-PERL5_SITELIB!=		eval `${PERL5} -V:installsitelib 2>/dev/null`; echo $${installsitelib}
-PERL5_SITEARCH!=	eval `${PERL5} -V:installsitearch 2>/dev/null`; echo $${installsitearch}
-PERL5_ARCHLIB!=		eval `${PERL5} -V:installarchlib 2>/dev/null`; echo $${installarchlib}
+.if exists(${PERL5})
+.if !defined(PERL5_SITELIB) || !defined(PERL5_SITEARCH) || !defined(PERL5_ARCHLIB)
+PERL5_SITELIB!=		eval `${PERL5} -V:installsitelib`; \
+			echo $${installsitelib}
+PERL5_SITEARCH!=	eval `${PERL5} -V:installsitearch`; \
+			echo $${installsitearch}
+PERL5_ARCHLIB!=		eval `${PERL5} -V:installarchlib`; \
+			echo $${installarchlib}
+MAKEFLAGS+=		PERL5_SITELIB=${PERL5_SITELIB}
+MAKEFLAGS+=		PERL5_SITEARCH=${PERL5_SITEARCH}
+MAKEFLAGS+=		PERL5_ARCHLIB=${PERL5_ARCHLIB}
+.endif
+.endif
 .endif
 
 .if defined(USE_FORTRAN)
@@ -455,10 +465,14 @@ PLIST_SUBST+=	OPSYS=${OPSYS}						\
 		LOWER_VENDOR=${LOWER_VENDOR}				\
 		LOWER_OPSYS=${LOWER_OPSYS}				\
 		PKGNAME=${PKGNAME}
-.if defined(USE_PERL5)
-PLIST_SUBST+=	PERL5_SITELIB=${PERL5_SITELIB:S/^${LOCALBASE}\///}	\
-		PERL5_SITEARCH=${PERL5_SITEARCH:S/^${LOCALBASE}\///}	\
-		PERL5_ARCHLIB=${PERL5_ARCHLIB:S/^${LOCALBASE}\///}
+.if defined(PERL5_SITELIB)
+PLIST_SUBST+=	PERL5_SITELIB=${PERL5_SITELIB:S/^${LOCALBASE}\///}
+.endif
+.if defined(PERL5_SITEARCH)
+PLIST_SUBST+=	PERL5_SITEARCH=${PERL5_SITEARCH:S/^${LOCALBASE}\///}
+.endif
+.if defined(PERL5_ARCHLIB)
+PLIST_SUBST+=	PERL5_ARCHLIB=${PERL5_ARCHLIB:S/^${LOCALBASE}\///}
 .endif
 
 # Set INSTALL_FILE to be the name of any INSTALL file
