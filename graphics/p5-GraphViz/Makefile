@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/08/28 19:39:52 seb Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/27 19:34:19 seb Exp $
 #
 
 DISTNAME=	GraphViz-1.5
@@ -18,8 +18,5 @@ USE_BUILDLINK2=		yes
 USE_X11=		yes
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/GraphViz/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/09/20 01:45:27 grant Exp $
+# $NetBSD: Makefile,v 1.20 2002/10/27 19:39:01 seb Exp $
 #
 
 VER=		1.13
@@ -22,10 +22,7 @@ PGPREFIX=	${PREFIX}/${PGUSER}
 MAKE_ENV+=	POSTGRES_INCLUDE=${BUILDLINK_PREFIX.postgresql-lib}/include/pgsql
 MAKE_ENV+=	POSTGRES_LIB=${BUILDLINK_PREFIX.postgresql-lib}/lib
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
 .include "../../databases/p5-DBI/buildlink2.mk"
 .include "../../databases/postgresql-lib/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
