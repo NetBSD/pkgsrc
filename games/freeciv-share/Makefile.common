@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2000/03/28 00:33:37 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2000/03/28 06:28:28 tron Exp $
 
 DISTNAME=		freeciv-1.10.0
 CATEGORIES=		games
-MASTER_SITES=		ftp://ftp.freeciv.org/pub/freeciv/stable_version \
+MASTER_SITES=		ftp://ftp.freeciv.org/pub/freeciv/stable_version/ \
 			http://www.freeciv.org/ftp/stable_version/
 EXTRACT_SUFX=		.tar.bz2
 
