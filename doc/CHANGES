@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2003 2003/04/22 02:20:19 taca Exp $
+$NetBSD: CHANGES,v 1.2004 2003/04/22 08:13:50 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1687,3 +1687,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated url2pkg to 1.21 [rh 2003-04-22]
 	Updated url2pkg to 1.22 [rh 2003-04-22]
 	Updated sudo to 1.6.7.4 [taca 2003-04-22]
+	Updated cpuflags to 0.40 [abs 2003-04-22]
