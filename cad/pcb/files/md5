@@ -1,3 +1,4 @@
-$NetBSD: md5,v 1.1.1.1 1998/11/07 14:30:34 frueauf Exp $
+$NetBSD: md5,v 1.2 2000/09/01 15:05:58 dmcmahill Exp $
 
 MD5 (pcb-1.6.3.tgz) = 2649927fd49b89d71a524082b633849e
+MD5 (pcb-docs-1.6.3.tar.gz) = 28756be714b203533c8bea5c80d0571c
