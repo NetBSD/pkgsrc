@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/10/28 16:59:14 cube Exp $
+# $NetBSD: Makefile,v 1.18 2004/03/10 07:12:09 cube Exp $
 # $OpenBSD: Makefile,v 1.13 2000/06/19 18:38:55 dugsong Exp $
 
 DISTNAME=	dsniff-2.3
@@ -13,6 +13,7 @@ COMMENT=	Password sniffer
 USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
 USE_X11=	yes
+NO_EXPORT_CPP=	yes
 
 .include "../../net/libpcap/buildlink2.mk"
 .include "../../devel/libnet/buildlink2.mk"
