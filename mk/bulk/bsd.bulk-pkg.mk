@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.60 2004/04/10 16:23:00 jschauma Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.61 2004/06/25 13:45:00 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -140,10 +140,10 @@ bulk-cache:
 	@${ECHO} "This file is unused for a full pkgsrc bulk build" >> ${BULK_DBFILE}
 	@${ECHO} "It is only used for a SPECIFIC_PKGS bulk build" >> ${BULK_DBFILE}
 	@${ECHO_MSG} "BULK> Building complete pkgsrc dependency tree (this may take a while)."
-	cd ${_PKGSRCDIR} && ${SH} mk/bulk/printdepends ${BROKENFILE} > ${DEPENDSTREEFILE}
+	cd ${_PKGSRCDIR} && ${SETENV} BMAKE=${MAKE} ${SH} mk/bulk/printdepends ${BROKENFILE} > ${DEPENDSTREEFILE}
 	@${ECHO_MSG} "BULK> Generating package name <=> package directory cross reference file"
 	@${ECHO_MSG} "      (this may take a while)."
-	cd ${_PKGSRCDIR} && ${SH} mk/bulk/printindex ${BROKENFILE} > ${INDEXFILE}
+	cd ${_PKGSRCDIR} && ${SETENV} BMAKE=${MAKE} ${SH} mk/bulk/printindex ${BROKENFILE} > ${INDEXFILE}
 .else
 	@${ECHO_MSG} "BULK> Extracting database for SPECIFIC_PKGS subset of pkgsrc"
 	@${ECHO_MSG} "      along with their dependencies"
