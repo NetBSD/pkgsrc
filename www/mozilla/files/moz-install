@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: moz-install,v 1.4 2002/10/22 11:38:42 wiz Exp $
+# $NetBSD: moz-install,v 1.5 2002/10/22 14:16:33 taya Exp $
 
 ${SED} -e "s,@PREFIX@,${PREFIX},g" -e "s,@MOZILLA@,${MOZILLA}," -e "s,@MOZILLA_BIN@,${MOZILLA_BIN}," ${FILESDIR}/mozilla-${OBJECT_FMT}.in > ${PREFIX}/bin/${MOZILLA}
 ${CHOWN} ${BINOWN} ${PREFIX}/bin/${MOZILLA}
@@ -10,8 +10,8 @@ ${CHMOD} ${BINMODE} ${PREFIX}/bin/${MOZILLA}
 #
 #	Substitute variables
 #
-TMP_PLIST=/tmp/TMP_PLIST.$$
-trap "${RM} -f ${TMP_PLIST}" 1 2 3 10 11
+TMP_PLIST=${WRKDIR}/TMP_PLIST.$$
+trap "${RM} -f ${TMP_PLIST}" 1 2 15
 
 ${SED} -e "s/\${MOZILLA}/${MOZILLA}/g" -e "s/\${SO_SUFFIX}/${SO_SUFFIX}/" -e "s/\${MOZILLA_BIN}/${MOZILLA_BIN}/g" < ${PLIST_SRC} > ${TMP_PLIST}
 
@@ -50,7 +50,7 @@ for i in `${SED} -n -e '/^@comment begin INCLUDE$/,/^@comment end INCLUDE$/p' ${
 	${BSD_INSTALL_DATA} ${WRKSRC}/${src} ${PREFIX}/$i
 done
 
-#${RM} -f ${TMP_PLIST}
+${RM} -f ${TMP_PLIST}
 #
 #
 #
