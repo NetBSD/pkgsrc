@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2000/04/16 09:12:44 mycroft Exp $
+# $NetBSD: Makefile,v 1.21 2000/07/20 15:41:08 tron Exp $
 # FreeBSD Id: Makefile,v 1.39 1998/01/31 17:49:48 jseger Exp
 #
 
@@ -24,7 +24,7 @@ CPPFLAGS+=		-DHAVE_READLINE_H=1 -DHAVE_HISTORY_H=1
 CONFIGURE_ARGS+=	--disable-readline --disable-ncurses
 CONFIGURE_ENV+=		LIBS="-ledit -ltermcap"
 .else
-DEPENDS+=		readline-4.0:../../devel/readline
+DEPENDS+=		readline>=4.0:../../devel/readline
 .endif
 
 # Include SOCKS firewall support

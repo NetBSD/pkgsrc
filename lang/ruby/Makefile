@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/07/03 07:31:35 sakamoto Exp $
+# $NetBSD: Makefile,v 1.16 2000/07/20 15:41:05 tron Exp $
 #
 
 DISTNAME=	ruby-1.4.5
@@ -16,7 +16,7 @@ HOMEPAGE=	http://www.ruby-lang.org/
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/bison:../../devel/bison
 DEPENDS+=	gdbm>=1.7.3:../../databases/gdbm
-DEPENDS+=	readline-4.0:../../devel/readline
+DEPENDS+=	readline>=4.0:../../devel/readline
 
 BUILD_DEFS+=    USE_INET6
 

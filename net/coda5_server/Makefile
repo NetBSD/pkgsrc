@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/02/09 02:30:36 fredb Exp $
+# $NetBSD: Makefile,v 1.22 2000/07/20 15:41:06 tron Exp $
 #
 
 DISTNAME=		coda-5.3.5
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.coda.cs.cmu.edu/
 
 DEPENDS+=		lwp>=1.1:../../devel/lwp
 DEPENDS+=		ncurses>=4.2:../../devel/ncurses
-DEPENDS+=		readline-4.0:../../devel/readline
+DEPENDS+=		readline>=4.0:../../devel/readline
 
 #LICENSE=		GPL
 
