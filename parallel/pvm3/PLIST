@@ -1,56 +1,56 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:58:23 zuntum Exp $
-pvm3/bin/@pvmarch@/dbwtest
-pvm3/bin/@pvmarch@/fgexample
-pvm3/bin/@pvmarch@/fmaster1
-pvm3/bin/@pvmarch@/frsg
-pvm3/bin/@pvmarch@/fslave1
-pvm3/bin/@pvmarch@/fspmd
-pvm3/bin/@pvmarch@/ge
-pvm3/bin/@pvmarch@/gexamp
-pvm3/bin/@pvmarch@/gexample
-pvm3/bin/@pvmarch@/gmbi
-pvm3/bin/@pvmarch@/gs
-pvm3/bin/@pvmarch@/hello
-pvm3/bin/@pvmarch@/hello_other
-pvm3/bin/@pvmarch@/hitc
-pvm3/bin/@pvmarch@/hitc_slave
-pvm3/bin/@pvmarch@/ibwtest
-pvm3/bin/@pvmarch@/inherit1
-pvm3/bin/@pvmarch@/inherit2
-pvm3/bin/@pvmarch@/inherit3
-pvm3/bin/@pvmarch@/inherita
-pvm3/bin/@pvmarch@/inheritb
-pvm3/bin/@pvmarch@/joinleave
-pvm3/bin/@pvmarch@/lmbi
-pvm3/bin/@pvmarch@/master1
-pvm3/bin/@pvmarch@/mhf_server
-pvm3/bin/@pvmarch@/mhf_tickle
-pvm3/bin/@pvmarch@/mtile
-pvm3/bin/@pvmarch@/pbwtest
-pvm3/bin/@pvmarch@/pvm_gstat
-pvm3/bin/@pvmarch@/pvmgroups
-pvm3/bin/@pvmarch@/pvmgs
-pvm3/bin/@pvmarch@/rbwtest
-pvm3/bin/@pvmarch@/rme
-pvm3/bin/@pvmarch@/slave1
-pvm3/bin/@pvmarch@/spmd
-pvm3/bin/@pvmarch@/srm
-pvm3/bin/@pvmarch@/task0
-pvm3/bin/@pvmarch@/task1
-pvm3/bin/@pvmarch@/task_end
-pvm3/bin/@pvmarch@/thb
-pvm3/bin/@pvmarch@/timing
-pvm3/bin/@pvmarch@/timing_slave
-pvm3/bin/@pvmarch@/tjf
-pvm3/bin/@pvmarch@/tjl
-pvm3/bin/@pvmarch@/tnb
-pvm3/bin/@pvmarch@/tracer
-pvm3/bin/@pvmarch@/trcsort
-pvm3/bin/@pvmarch@/trsg
-pvm3/bin/@pvmarch@/tst
-pvm3/bin/@pvmarch@/xep
-pvm3/conf/@pvmarch@.def
-pvm3/conf/@pvmarch@.m4
+@comment $NetBSD: PLIST,v 1.2 2002/09/30 22:18:55 jlam Exp $
+pvm3/bin/${PVM_ARCH}/dbwtest
+pvm3/bin/${PVM_ARCH}/fgexample
+pvm3/bin/${PVM_ARCH}/fmaster1
+pvm3/bin/${PVM_ARCH}/frsg
+pvm3/bin/${PVM_ARCH}/fslave1
+pvm3/bin/${PVM_ARCH}/fspmd
+pvm3/bin/${PVM_ARCH}/ge
+pvm3/bin/${PVM_ARCH}/gexamp
+pvm3/bin/${PVM_ARCH}/gexample
+pvm3/bin/${PVM_ARCH}/gmbi
+pvm3/bin/${PVM_ARCH}/gs
+pvm3/bin/${PVM_ARCH}/hello
+pvm3/bin/${PVM_ARCH}/hello_other
+pvm3/bin/${PVM_ARCH}/hitc
+pvm3/bin/${PVM_ARCH}/hitc_slave
+pvm3/bin/${PVM_ARCH}/ibwtest
+pvm3/bin/${PVM_ARCH}/inherit1
+pvm3/bin/${PVM_ARCH}/inherit2
+pvm3/bin/${PVM_ARCH}/inherit3
+pvm3/bin/${PVM_ARCH}/inherita
+pvm3/bin/${PVM_ARCH}/inheritb
+pvm3/bin/${PVM_ARCH}/joinleave
+pvm3/bin/${PVM_ARCH}/lmbi
+pvm3/bin/${PVM_ARCH}/master1
+pvm3/bin/${PVM_ARCH}/mhf_server
+pvm3/bin/${PVM_ARCH}/mhf_tickle
+pvm3/bin/${PVM_ARCH}/mtile
+pvm3/bin/${PVM_ARCH}/pbwtest
+pvm3/bin/${PVM_ARCH}/pvm_gstat
+pvm3/bin/${PVM_ARCH}/pvmgroups
+pvm3/bin/${PVM_ARCH}/pvmgs
+pvm3/bin/${PVM_ARCH}/rbwtest
+pvm3/bin/${PVM_ARCH}/rme
+pvm3/bin/${PVM_ARCH}/slave1
+pvm3/bin/${PVM_ARCH}/spmd
+pvm3/bin/${PVM_ARCH}/srm
+pvm3/bin/${PVM_ARCH}/task0
+pvm3/bin/${PVM_ARCH}/task1
+pvm3/bin/${PVM_ARCH}/task_end
+pvm3/bin/${PVM_ARCH}/thb
+pvm3/bin/${PVM_ARCH}/timing
+pvm3/bin/${PVM_ARCH}/timing_slave
+pvm3/bin/${PVM_ARCH}/tjf
+pvm3/bin/${PVM_ARCH}/tjl
+pvm3/bin/${PVM_ARCH}/tnb
+pvm3/bin/${PVM_ARCH}/tracer
+pvm3/bin/${PVM_ARCH}/trcsort
+pvm3/bin/${PVM_ARCH}/trsg
+pvm3/bin/${PVM_ARCH}/tst
+pvm3/bin/${PVM_ARCH}/xep
+pvm3/conf/${PVM_ARCH}.def
+pvm3/conf/${PVM_ARCH}.m4
 pvm3/examples/Makefile.aimk
 pvm3/examples/Readme
 pvm3/examples/bwtest.c
@@ -121,13 +121,13 @@ pvm3/lib/pvmgetarch
 pvm3/lib/pvmgetarch.cmd
 pvm3/lib/pvmtmparch
 pvm3/lib/xpvm
-pvm3/lib/@pvmarch@/libfpvm3.a
-pvm3/lib/@pvmarch@/libgpvm3.a
-pvm3/lib/@pvmarch@/libpvm3.a
-pvm3/lib/@pvmarch@/libpvmtrc.a
-pvm3/lib/@pvmarch@/pvm
-pvm3/lib/@pvmarch@/pvmd3
-pvm3/lib/@pvmarch@/pvmgs
+pvm3/lib/${PVM_ARCH}/libfpvm3.a
+pvm3/lib/${PVM_ARCH}/libgpvm3.a
+pvm3/lib/${PVM_ARCH}/libpvm3.a
+pvm3/lib/${PVM_ARCH}/libpvmtrc.a
+pvm3/lib/${PVM_ARCH}/pvm
+pvm3/lib/${PVM_ARCH}/pvmd3
+pvm3/lib/${PVM_ARCH}/pvmgs
 man/man1/PVM.1
 man/man1/aimk.1
 man/man1/pvm.1
@@ -311,12 +311,12 @@ man/man3/pvmftidtoh.3
 man/man3/pvmftrecv.3
 man/man3/pvmfunpack.3
 man/man3/pvmfupkmesg.3
-@dirrm pvm3/bin/@pvmarch@
+@dirrm pvm3/bin/${PVM_ARCH}
 @dirrm pvm3/bin
 @dirrm pvm3/conf
 @dirrm pvm3/examples
 @dirrm pvm3/gexamples
 @dirrm pvm3/include
-@dirrm pvm3/lib/@pvmarch@
+@dirrm pvm3/lib/${PVM_ARCH}
 @dirrm pvm3/lib
 @dirrm pvm3
