@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2004/09/22 08:09:47 jlam Exp $
+@comment $NetBSD: PLIST,v 1.13 2004/10/03 09:20:41 tron Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -6,7 +6,33 @@ bin/nslookup
 bin/nsupdate
 etc/rc.d/lwresd
 etc/rc.d/named9
-include/dns/a6.h
+${IPV6H}include/isc/ipv6.h
+include/bind/arpa/inet.h
+include/bind/arpa/nameser.h
+include/bind/arpa/nameser_compat.h
+include/bind/fd_setsize.h
+include/bind/hesiod.h
+include/bind/irp.h
+include/bind/irs.h
+include/bind/isc/assertions.h
+include/bind/isc/ctl.h
+include/bind/isc/dst.h
+include/bind/isc/eventlib.h
+include/bind/isc/heap.h
+include/bind/isc/irpmarshall.h
+include/bind/isc/list.h
+include/bind/isc/logging.h
+include/bind/isc/memcluster.h
+include/bind/isc/misc.h
+include/bind/isc/tree.h
+include/bind/netdb.h
+include/bind/netgroup.h
+include/bind/res_update.h
+include/bind/resolv.h
+include/bind/sys/bitypes.h
+include/bind9/check.h
+include/bind9/getaddresses.h
+include/bind9/version.h
 include/dns/acl.h
 include/dns/adb.h
 include/dns/byaddr.h
@@ -20,6 +46,7 @@ include/dns/dbtable.h
 include/dns/diff.h
 include/dns/dispatch.h
 include/dns/dnssec.h
+include/dns/ds.h
 include/dns/enumclass.h
 include/dns/enumtype.h
 include/dns/events.h
@@ -35,8 +62,9 @@ include/dns/masterdump.h
 include/dns/message.h
 include/dns/name.h
 include/dns/ncache.h
-include/dns/nxt.h
+include/dns/nsec.h
 include/dns/peer.h
+include/dns/portlist.h
 include/dns/rbt.h
 include/dns/rcode.h
 include/dns/rdata.h
@@ -63,6 +91,7 @@ include/dns/tsig.h
 include/dns/ttl.h
 include/dns/types.h
 include/dns/validator.h
+include/dns/version.h
 include/dns/view.h
 include/dns/xfrin.h
 include/dns/zone.h
@@ -93,7 +122,6 @@ include/isc/hex.h
 include/isc/hmacmd5.h
 include/isc/int.h
 include/isc/interfaceiter.h
-${IPV6H}include/isc/ipv6.h
 include/isc/lang.h
 include/isc/lex.h
 include/isc/lfsr.h
@@ -114,6 +142,7 @@ include/isc/offset.h
 include/isc/once.h
 include/isc/ondestroy.h
 include/isc/os.h
+include/isc/parseint.h
 include/isc/platform.h
 include/isc/print.h
 include/isc/quota.h
@@ -130,6 +159,7 @@ include/isc/sha1.h
 include/isc/sockaddr.h
 include/isc/socket.h
 include/isc/stdio.h
+include/isc/stdlib.h
 include/isc/stdtime.h
 include/isc/string.h
 include/isc/symtab.h
@@ -141,6 +171,7 @@ include/isc/time.h
 include/isc/timer.h
 include/isc/types.h
 include/isc/util.h
+include/isc/version.h
 include/isccc/alist.h
 include/isccc/base64.h
 include/isccc/cc.h
@@ -153,9 +184,12 @@ include/isccc/symtab.h
 include/isccc/symtype.h
 include/isccc/types.h
 include/isccc/util.h
+include/isccc/version.h
 include/isccfg/cfg.h
-include/isccfg/check.h
+include/isccfg/grammar.h
 include/isccfg/log.h
+include/isccfg/namedconf.h
+include/isccfg/version.h
 include/lwres/context.h
 include/lwres/int.h
 include/lwres/ipv6.h
@@ -168,30 +202,17 @@ include/lwres/net.h
 include/lwres/netdb.h
 include/lwres/platform.h
 include/lwres/result.h
+include/lwres/version.h
 lib/libbind.la
+lib/libbind9.la
 lib/libdns.la
 lib/libisc.la
 lib/libisccc.la
 lib/libisccfg.la
 lib/liblwres.la
-sbin/dnssec-keygen
-sbin/dnssec-makekeyset
-sbin/dnssec-signkey
-sbin/dnssec-signzone
-sbin/lwresd
-sbin/named
-sbin/named-checkconf
-sbin/named-checkzone
-sbin/rndc
-sbin/rndc-confgen
-@dirrm include/lwres
-@dirrm include/isccc
-@dirrm include/isccfg
-@dirrm include/isc
-@dirrm include/dst
-@dirrm include/dns
 man/man1/dig.1
 man/man1/host.1
+man/man1/nslookup.1
 man/man3/lwres.3
 man/man3/lwres_addr_parse.3
 man/man3/lwres_buffer.3
@@ -279,40 +300,31 @@ man/man3/lwres_sethostent_r.3
 man/man3/lwres_string_parse.3
 man/man5/rndc.conf.5
 man/man8/dnssec-keygen.8
-man/man8/dnssec-makekeyset.8
-man/man8/dnssec-signkey.8
 man/man8/dnssec-signzone.8
 man/man8/lwresd.8
 man/man8/named-checkconf.8
 man/man8/named-checkzone.8
 man/man8/named.8
+man/man8/named.conf.5
 man/man8/nsupdate.8
-man/man8/rndc.8
 man/man8/rndc-confgen.8
-include/bind/arpa/nameser.h
-include/bind/arpa/inet.h
-include/bind/arpa/nameser_compat.h
+man/man8/rndc.8
+sbin/dnssec-keygen
+sbin/dnssec-signzone
+sbin/lwresd
+sbin/named
+sbin/named-checkconf
+sbin/named-checkzone
+sbin/rndc
+sbin/rndc-confgen
+@dirrm include/lwres
+@dirrm include/isccfg
+@dirrm include/isccc
+@dirrm include/isc
+@dirrm include/dst
+@dirrm include/dns
+@dirrm include/bind9
 @dirrm include/bind/arpa
-include/bind/fd_setsize.h
-include/bind/hesiod.h
-include/bind/irp.h
-include/bind/irs.h
-include/bind/netdb.h
-include/bind/netgroup.h
-include/bind/res_update.h
-include/bind/resolv.h
-include/bind/isc/assertions.h
-include/bind/isc/ctl.h
-include/bind/isc/dst.h
-include/bind/isc/eventlib.h
-include/bind/isc/heap.h
-include/bind/isc/irpmarshall.h
-include/bind/isc/list.h
-include/bind/isc/logging.h
-include/bind/isc/memcluster.h
-include/bind/isc/misc.h
-include/bind/isc/tree.h
 @dirrm include/bind/isc
-include/bind/sys/bitypes.h
 @dirrm include/bind/sys
 @dirrm include/bind
