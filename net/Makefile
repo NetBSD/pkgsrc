@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.537 2005/01/29 14:14:16 wiz Exp $
+# $NetBSD: Makefile,v 1.538 2005/02/05 21:25:33 kristerw Exp $
 #
 
 COMMENT=	Networking tools
@@ -83,7 +83,6 @@ SUBDIR+=	ethereal
 SUBDIR+=	ettercap
 SUBDIR+=	fair-identd
 SUBDIR+=	firewalk
-SUBDIR+=	firewalk-gtk
 SUBDIR+=	flan
 SUBDIR+=	flodo
 SUBDIR+=	flow-tools
