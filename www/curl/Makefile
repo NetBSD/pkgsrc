@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2001/06/29 03:48:41 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/08/13 18:36:13 nra Exp $
 
-DISTNAME=	curl-7.7.1
+DISTNAME=	curl-7.8
 CATEGORIES=	www
 MASTER_SITES=	http://curl.haxx.se/download/
 
@@ -9,6 +9,8 @@ HOMEPAGE=	http://curl.haxx.se/
 COMMENT=	client that groks URLs
 
 USE_BUILDLINK_ONLY=	yes
+REPLACE_BUILDLINK=	curl-config
+
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
