@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2656 2003/07/02 13:16:24 agc Exp $
+$NetBSD: CHANGES,v 1.2657 2003/07/02 13:29:49 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2649,3 +2649,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added bitlbee-0.80 [jmmv 2003-07-02]
 	Updated scrot to 0.8 [jmmv 2003-07-02]
 	Updated wmsmixer to 0.5.1 [agc 2003-07-02]
+	Added multi-aterm-0.0.4 [jmmv 2003-07-02]
