@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: named.sh,v 1.2 2002/09/23 14:40:52 grant Exp $
+# $NetBSD: named9.sh,v 1.1 2005/03/16 13:56:25 tron Exp $
 #
 # PROVIDE: named
 # REQUIRE: SERVERS
@@ -10,7 +10,6 @@
 name="named"
 rcvar=${name}9
 command="@PREFIX@/sbin/${name}"
-pidfile="/var/run/${name}.pid"
 
 extra_commands="reload"
 
