@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.17 2003/09/23 20:56:33 dmcmahill Exp $
+# $NetBSD: java-vm.mk,v 1.18 2003/10/03 16:38:22 kristerw Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -94,9 +94,9 @@ _ONLY_FOR_PLATFORMS.sun-jdk13= \
 _ONLY_FOR_PLATFORMS.sun-jdk14= \
 	NetBSD-1.5Z[A-Z]-i386 NetBSD-1.[6-9]*-i386 Linux-*-i[3-6]86
 _ONLY_FOR_PLATFORMS.kaffe= \
-	*-*-alpha *-*-arm32 *-*-i386 *-*-m68k *-*-mips* *-*-sparc *-*-powerpc
+	*-*-alpha *-*-arm *-*-arm32 *-*-i386 *-*-m68k *-*-mips* *-*-sparc *-*-powerpc
 _ONLY_FOR_PLATFORMS.wonka= \
-	*-*-arm32 *-*-i386
+	*-*-arm *-*-arm32 *-*-i386
 
 # Set the accepted JVMs for this platform.
 .for _jvm_ in ${_PKG_JVMS}
