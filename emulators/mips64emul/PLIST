@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/12/20 23:14:59 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/01/12 23:47:11 xtraeme Exp $
 bin/mips64emul
 man/man1/mips64emul.1
 share/doc/mips64emul/20041024-netbsd-arc-installed.gif
@@ -22,4 +22,7 @@ share/doc/mips64emul/ultrix4.5-20040706.png
 share/doc/mips64emul/ultrix4.5-20040706_small.gif
 share/doc/mips64emul/20041129-redhat_mips.png
 share/doc/mips64emul/20041129-redhat_mips_small.png
+share/doc/mips64emul/20041213-debian_4.png
+share/doc/mips64emul/20041213-debian_4_small.gif
+share/doc/mips64emul/maddr.gif
 @dirrm share/doc/mips64emul
