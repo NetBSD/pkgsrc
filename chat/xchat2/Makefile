@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/10/30 18:19:47 minskim Exp $
+# $NetBSD: Makefile,v 1.39 2004/10/30 18:22:35 minskim Exp $
 #
 
 .include "Makefile.common"
@@ -11,7 +11,7 @@ BUILD_USES_MSGFMT=	YES
 
 CONFLICTS=		xchat-gnome-[0-9]*
 
-USE_DIRS+=		gnome2-1.5
+USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 
