@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.7 2004/02/16 21:05:13 jlam Exp $
+$NetBSD: distinfo,v 1.8 2004/04/27 15:14:53 adam Exp $
 
 SHA1 (xft-2.1.2.tar.gz) = 892d57cac909ef51c3c49b9a6aaf54e6b6ab6b92
 Size (xft-2.1.2.tar.gz) = 243680 bytes
+SHA1 (patch-aa) = c778ef743e228035249ef8a128861c25eab06c4d
