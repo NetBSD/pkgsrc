@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/09/22 08:09:43 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/10/13 12:44:10 markd Exp $
 bin/atlantikdesigner
 bin/exif.py
 bin/fsview
@@ -212,8 +212,6 @@ share/kde/apps/konqlistview/kpartplugins/kimgalleryplugin.rc
 share/kde/apps/konqlistview/kpartplugins/smbmounterplugin.rc
 share/kde/apps/konqsidebartng/add/mplayer_add.desktop
 share/kde/apps/konqsidebartng/add/news_add.desktop
-share/kde/apps/konqsidebartng/entries/mplayer.desktop
-share/kde/apps/konqsidebartng/entries/news.desktop
 share/kde/apps/konqsidebartng/kicker_entries/mplayer.desktop
 share/kde/apps/konqueror/icons/crystalsvg/16x16/actions/google.png
 share/kde/apps/konqueror/kpartplugins/searchbar.rc
