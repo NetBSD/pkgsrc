@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.179 2003/01/12 21:40:06 tron Exp $
+$NetBSD: TODO,v 1.180 2003/01/12 21:49:35 tron Exp $
 
 Suggested new packages
 ======================
@@ -234,7 +234,6 @@ Suggested package updates
 	o wwwoffle-2.7g
 	o wxGTK-2.4.0
 	o xalan-c-1.4
-	o xchat-1.8.11 [tron|pkg/19801]
 	o xerces-c-2.1.0 [heinz]
 	o xfstt-1.4
 	o xmcd-3.2.0
