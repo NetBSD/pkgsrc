@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/11/21 15:53:08 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/11/28 08:18:29 jmc Exp $
 
 DISTNAME=		nut-0.45.2
 PKGNAME=		ups-nut-cgi-0.45.2
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.exploits.org/nut/
 COMMENT=		Network UPS Tools CGI scripts
 
 BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
-DEPENDS+=		ups-nut-0.*:../sysutils/ups-nut
+DEPENDS+=		ups-nut-0.*:../../sysutils/ups-nut
 
 ALL_TARGET=		cgi
 INSTALL_TARGET=		install-cgi
