@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 1999/01/10 22:29:39 tron Exp $
+
+--- config.mk.in.orig	Sat Jun 20 15:22:37 1998
++++ config.mk.in	Sun Jan 10 23:22:48 1999
+@@ -14,7 +14,7 @@
+ @SET_MAKE@
+ CC		= @CC@
+ DEFS		= @DEFS@
+-CFLAGS		= @CFLAGS@
++CFLAGS		= @CFLAGS@ @CPPFLAGS@
+ srcdir		= @srcdir@
+ VPATH		= @srcdir@
+ LDFLAGS		= @LDFLAGS@
