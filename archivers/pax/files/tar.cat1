@@ -54,8 +54,8 @@ DDEESSCCRRIIPPTTIIOONN
                    rmt(8).
 
      --hh, ----ddeerreeffeerreennccee
-                   Follow symbolic links as if they were normal files or di-
-                   rectories.
+                   Follow symbolic links as if they were normal files or
+                   directories.
 
      --jj,, ----bbzziipp22,, ----bbuunnzziipp22
                    Use bzip2(1) for compression of the archive.  This option
@@ -71,8 +71,8 @@ DDEESSCCRRIIPPTTIIOONN
                    Do not preserve modification time.
 
      --OO            When creating and appending to an archive, write old-style
-                   (non-POSIX) archives.  When extracting from an archive, ex-
-                   tract to standard output.
+                   (non-POSIX) archives.  When extracting from an archive,
+                   extract to standard output.
 
      --oo, ----ppoorrttaabbiilliittyy, ----oolldd--aarrcchhiivvee
                    Don't write directory information that the older (V7) style
@@ -92,26 +92,26 @@ DDEESSCCRRIIPPTTIIOONN
                    matched.
 
      --ss _r_e_p_l_s_t_r    Modify the file or archive member names specified by the
-                   _p_a_t_t_e_r_n or _f_i_l_e operands according to the substitution ex-
-                   pression _r_e_p_l_s_t_r, using the syntax of the ed(1) utility
+                   _p_a_t_t_e_r_n or _f_i_l_e operands according to the substitution
+                   expression _r_e_p_l_s_t_r, using the syntax of the ed(1) utility
                    regular expressions.  The format of these regular expres-
                    sions are:
                          /old/new/[gp]
                    As in ed(1), oolldd is a basic regular expression and nneeww can
                    contain an ampersand (&), \n (where n is a digit) back-ref-
-                   erences, or subexpression matching.  The oolldd string may al-
-                   so contain <newline> characters.  Any non-null character
+                   erences, or subexpression matching.  The oolldd string may
+                   also contain <newline> characters.  Any non-null character
                    can be used as a delimiter (/ is shown here).  Multiple --ss
                    expressions can be specified.  The expressions are applied
                    in the order they are specified on the command line, termi-
-                   nating with the first successful substitution.  The option-
-                   al trailing gg continues to apply the substitution expres-
-                   sion to the pathname substring which starts with the first
-                   character following the end of the last successful substi-
-                   tution.  The first unsuccessful substitution stops the op-
-                   eration of the gg option.  The optional trailing pp will
-                   cause the final result of a successful substitution to be
-                   written to standard error in the following format:
+                   nating with the first successful substitution.  The
+                   optional trailing gg continues to apply the substitution
+                   expression to the pathname substring which starts with the
+                   first character following the end of the last successful
+                   substitution.  The first unsuccessful substitution stops
+                   the operation of the gg option.  The optional trailing pp
+                   will cause the final result of a successful substitution to
+                   be written to standard error in the following format:
                          <original pathname> >> <new pathname>
                    File or archive member names that substitute to the empty
                    string are not selected and will be skipped.
@@ -120,8 +120,8 @@ DDEESSCCRRIIPPTTIIOONN
 
      --ww, ----iinntteerraaccttiivvee, ----ccoonnffiirrmmaattiioonn
                    Interactively rename files.  This option causes ttaarr to
-                   prompt the user for the filename to use when storing or ex-
-                   tracting files in an archive.
+                   prompt the user for the filename to use when storing or
+                   extracting files in an archive.
 
      --zz, ----ggzziipp, ----gguunnzziipp
                    Compress archive using gzip.
@@ -141,13 +141,13 @@ DDEESSCCRRIIPPTTIIOONN
      --HH            Follow symlinks given on command line only.
 
      --PP, ----aabbssoolluuttee--ppaatthhss
-                   Do not strip leading slashes (`/') from pathnames.  The de-
-                   fault is to strip leading slashes.
+                   Do not strip leading slashes (`/') from pathnames.  The
+                   default is to strip leading slashes.
 
      --TT _f_i_l_e, ----ffiilleess--ffrroomm _f_i_l_e
-                   Read the names of files to archive or extract from the giv-
-                   en file, one per line.  A line may also specify the posi-
-                   tional argument ``--CC _d_i_r_e_c_t_o_r_y''.
+                   Read the names of files to archive or extract from the
+                   given file, one per line.  A line may also specify the
+                   positional argument ``--CC _d_i_r_e_c_t_o_r_y''.
 
      --XX _f_i_l_e, ----eexxcclluuddee--ffrroomm _f_i_l_e
                    Exclude files listed in the given file.
@@ -164,8 +164,8 @@ DDEESSCCRRIIPPTTIIOONN
      ----uunnlliinnkk      Remove files before creating them.
 
      ----uussee--ccoommpprreessss--pprrooggrraamm _p_r_o_g_r_a_m
-                   Use the named program as the program to decompress the in-
-                   put.
+                   Use the named program as the program to decompress the
+                   input.
 
      ----ffoorrccee--llooccaall
                    Do not interpret filenames that contain a `:' as remote
@@ -190,17 +190,17 @@ DDIIAAGGNNOOSSTTIICCSS
 
      Whenever ttaarr cannot create a file or a link when extracting an archive or
      cannot find a file while writing an archive, or cannot preserve the user
-     ID, group ID, file mode, or access and modification times when the --pp op-
-     tion is specified, a diagnostic message is written to standard error and
-     a non-zero exit value will be returned, but processing will continue.  In
-     the case where ttaarr cannot create a link to a file, ttaarr will not create a
-     second copy of the file.
+     ID, group ID, file mode, or access and modification times when the --pp
+     option is specified, a diagnostic message is written to standard error
+     and a non-zero exit value will be returned, but processing will continue.
+     In the case where ttaarr cannot create a link to a file, ttaarr will not create
+     a second copy of the file.
 
      If the extraction of a file from an archive is prematurely terminated by
-     a signal or error, ttaarr may have only partially extracted the file the us-
-     er wanted.  Additionally, the file modes of extracted files and directo-
-     ries may have incorrect file bits, and the modification and access times
-     may be wrong.
+     a signal or error, ttaarr may have only partially extracted the file the
+     user wanted.  Additionally, the file modes of extracted files and direc-
+     tories may have incorrect file bits, and the modification and access
+     times may be wrong.
 
      If the creation of an archive is prematurely terminated by a signal or
      error, ttaarr may have only partially created the archive which may violate
