@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2004/01/15 13:28:16 mrauch Exp $
+# $NetBSD: Makefile,v 1.96 2004/01/18 01:11:40 jlam Exp $
 
 DISTNAME=		gtk+-1.2.10
 PKGREVISION=		6
@@ -12,9 +12,11 @@ HOMEPAGE=		http://www.gtk.org/
 COMMENT=		The GIMP Toolkit - libraries for building X11 user interfaces
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+USE_BUILDLINK3=		yes
+
+.include "../../mk/bsd.prefs.mk"
 
 BUILD_USES_MSGFMT=	yes
-USE_BUILDLINK3=		yes
 USE_PERL5=		build
 USE_X11BASE=		yes
 USE_GMAKE=		yes
@@ -46,6 +48,12 @@ GTK_MAJOR_VERSION=	${GTK_VERSION:C/\..*//}
 GTK_MINOR_VERSION=	${GTK_VERSION:C/[^.]*\.//:C/\..*//}
 GTK_MICRO_VERSION=	${GTK_VERSION:C/.*\.//}
 
+.if ${PKG_INSTALLATION_TYPE} == "overwrite"
+USE_PKGINSTALL=		yes
+DEINSTALL_EXTRA_TMPL=	${PKGDIR}/INSTALL
+INSTALL_EXTRA_TMPL=	${PKGDIR}/INSTALL
+.endif
+
 # We patch the version info in the configure scripts for reasons related to
 # shared library numbering, but we don't want it to leak into the various
 # installed files.  Explicitly replace the version number with the correct
@@ -63,11 +71,6 @@ pre-configure:
 			$${file}.fixme > $${file};			\
 		${RM} $${file}.fixme;					\
 	done
-
-post-install:
-	${TEST} ${PREFIX} = ${LOCALBASE} || \
-	${LN} -fs ${PREFIX}/share/aclocal/gtk.m4 \
-	  ${LOCALBASE}/share/aclocal/gtk.m4
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"
