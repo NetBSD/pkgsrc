@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2004/10/03 00:13:23 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/01/02 12:43:12 seb Exp $
 #
 
-DISTNAME=	bsddb3-4.2.4
+DISTNAME=	bsddb3-4.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pybsddb/}
 
@@ -11,8 +10,8 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://pybsddb.sourceforge.net/
 COMMENT=	Python extension module for Berkeley DB 4
 
-PYSETUPBUILDARGS=	--berkeley-db=${LOCALBASE}
-PYSETUPINSTALLARGS=	--berkeley-db=${LOCALBASE}
+PYSETUPBUILDARGS=	--berkeley-db=${BUILDLINK_PREFIX.db4}
+PYSETUPINSTALLARGS=	--berkeley-db=${BUILDLINK_PREFIX.db4}
 
 USE_BUILDLINK3=	yes
 PYDISTUTILSPKG=	yes
@@ -24,6 +23,9 @@ BUILDLINK_DEPENDS.db4+=		db4>=4.2.52
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "native"
 PYTHON_VERSIONS_ACCEPTED=	23pth 22pth
 .endif
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} test.py
 
 .include "../../databases/db4/buildlink3.mk"
 .include "../../lang/python/extension.mk"
