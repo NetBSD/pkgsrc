@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/02/14 17:21:46 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2004/02/14 18:26:28 jmmv Exp $
 #
 
 DISTNAME=		ORBit2-2.8.3
@@ -20,10 +20,10 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 
-PKGCONFIG_OVERRIDE=	${WRKSRC}/ORBit-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/ORBit-CosNaming-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/ORBit-imodule-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/src/idl-compiler/ORBit-idl-2.0.pc.in
+PKGCONFIG_OVERRIDE=	ORBit-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	ORBit-CosNaming-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	ORBit-imodule-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	src/idl-compiler/ORBit-idl-2.0.pc.in
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
