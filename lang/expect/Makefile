@@ -3,7 +3,7 @@
 # Whom:			pst
 # Version required:	5.25
 #
-# $NetBSD: Makefile,v 1.2 1998/01/27 17:36:19 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/01/27 18:03:25 agc Exp $
 # FreeBSD Id: Makefile,v 1.29 1998/01/27 01:11:47 fenner Exp
 #
 
@@ -31,6 +31,9 @@ MAN1=		autoexpect.1 cryptdir.1 decryptdir.1 dislocate.1 \
 		tknewsbiff.1 unbuffer.1 xkibitz.1
 MAN3=		libexpect.3
 .endif
+
+post-extract:
+	${MV} ${WRKSRC}/example/rftp ${WRKSRC}/example/expect-rftp
 
 test:
 	@(cd ${WRKSRC}; make test)
