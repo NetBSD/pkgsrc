@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/03/22 08:42:29 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/06 04:34:42 jlam Exp $
 #
 
-DISTNAME=		rp7install
-PKGNAME=		realplayer-7nb1
+DISTNAME=		rp7_linux20_libc6_i386_b2
+PKGNAME=		realplayer-7nb2
 WRKSRC=			${WRKDIR}/RealPlayer7
 CATEGORIES=		audio
-MASTER_SITES=
+MASTER_SITES=		# empty
 EXTRACT_SUFX=		.bin
 
 MAINTAINER=		packages@netbsd.org
@@ -20,15 +20,16 @@ MIRROR_DISTFILE=	no
 IS_INTERACTIVE=		yes
 
 NO_CONFIGURE=		yes
-EXTRACT_CMD=		HOME=${WRKDIR} ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
+RP_INSTALLER=		${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
+EXTRACT_CMD=		HOME=${WRKDIR} ${RP_INSTALLER}
 
-DOWNLOAD=		http://proforma.real.com/real/player/linuxplayer.html
+DOWNLOAD=		${HOMEPAGE}
 REALPLAYER_HOME=	${PREFIX}/lib/RealPlayer7
 
-NS_PLUGINS_DIR=	${PREFIX}/lib/netscape/plugins
+NS_PLUGINS_DIR=		${PREFIX}/lib/netscape/plugins
 
 do-fetch:
-	@if [ ! -f ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then \
+	@if [ ! -f ${RP_INSTALLER} ]; then \
 	    ${ECHO_MSG} "==============================================================="; \
 	    ${ECHO_MSG} "  RealPlayer 7 for Linux 2.0/2.2 must be fetched into"; \
 	    ${ECHO_MSG} "  ${DISTDIR} from"; \
@@ -47,26 +48,28 @@ pre-extract:
 	@${ECHO_MSG} " (it should be the first or second choice on the       "
 	@${ECHO_MSG} " drop-down menu), then press Finish.                   "
 	@${ECHO_MSG} ""
-	@${ECHO_MSG} " Then cancel out of the plugin install, and register   "
-	@${ECHO_MSG} " if you choose to, otherwise cancel.                   "
+	@${ECHO_MSG} " Then cancel and exit out of the plugin install, and   "
+	@${ECHO_MSG} " register if you choose to, otherwise cancel and exit. "
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} " After the introductory clip runs, exit RealPlayer     "
 	@${ECHO_MSG} " to continue the package installation.                 "
 	@${ECHO_MSG} "-------------------------------------------------------"
 	@${ECHO_MSG} ""
-	@${CHMOD} +x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
-
-post-patch:
-	cd ${WRKSRC}; \
-	${MV} -f mimeinstall.sh mimeinstall.sh.old; \
-	${SED} -e 's#@@PREFIX@@#'${PREFIX}'#g' \
-		< mimeinstall.sh.old >mimeinstall.sh; \
-		${CHMOD} +x mimeinstall.sh; \
-	${RM} mimeinstall.sh.orig mimeinstall.sh.old
+	@${CHMOD} +x ${RP_INSTALLER}
 
 do-build:
-	${SED} -e 's#@@REALPLAYER_HOME@@#${REALPLAYER_HOME}#g' \
-	    <${FILESDIR}/realplay.sh >${WRKDIR}/realplay.sh
+	cd ${WRKSRC}; \
+	${MV} -f mimeinstall.sh mimeinstall.sh.old; \
+	${SED}	-e 's#@@PREFIX@@#'${PREFIX}'#g' \
+		-e 's#@@REALPLAYER_HOME@@#'${REALPLAYER_HOME}'#g' \
+		< mimeinstall.sh.old > mimeinstall.sh; \
+		${CHMOD} +x mimeinstall.sh
+	${SED}	-e 's#@@REALPLAYER_HOME@@#${REALPLAYER_HOME}#g' \
+		< ${FILESDIR}/realplay.sh > ${WRKDIR}/realplay.sh
+
+pre-install:
+	${FIND} ${WRKSRC} \
+		\( -name "*.orig" -o -name "*.old" \) -exec ${RM} {} \;
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/realplay.sh ${PREFIX}/bin/realplay
@@ -74,10 +77,9 @@ do-install:
 
 post-install:
 	${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR}
-	${INSTALL_DATA} ${PREFIX}/lib/RealPlayer7/raclass.zip ${NS_PLUGINS_DIR}
-	${INSTALL_DATA} ${PREFIX}/lib/RealPlayer7/rpnp.so ${NS_PLUGINS_DIR}
+	${INSTALL_DATA} ${REALPLAYER_HOME}/raclass.zip ${NS_PLUGINS_DIR}
+	${INSTALL_DATA} ${REALPLAYER_HOME}/rpnp.so ${NS_PLUGINS_DIR}
 	${LN} -sf ../lib/RealPlayer7/rpnphelper ${PREFIX}/bin/rpnphelper
-	${SETENV} PKG_PREFIX=${PREFIX} \
-		${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"

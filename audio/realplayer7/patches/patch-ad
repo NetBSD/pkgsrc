@@ -1,0 +1,10 @@
+$NetBSD: patch-ad,v 1.1 2000/08/06 04:34:44 jlam Exp $
+
+--- pluginstall.sh.orig	Wed Jun  7 19:58:28 2000
++++ pluginstall.sh	Sun Aug  6 00:03:26 2000
+@@ -30,4 +30,4 @@
+ cp ./rpnp.so $HOME/.netscape/plugins
+ cp ./raclass.zip $HOME/.netscape/plugins
+ 
+-echo "The Netscape plugin has been sucessfully installed."
++echo "The Netscape plugin has been successfully installed."
