@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1141 2003/02/16 04:27:26 salo Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1142 2003/02/16 04:43:02 salo Exp $
 #
 # This file is in the public domain.
 #
@@ -712,7 +712,7 @@ MASTER_SITE_XCONTRIB+=	\
 MASTER_SITE_GNU+=	\
 	ftp://ftp.gnu.org/pub/gnu/ \
 	ftp://ftp.gwdg.de/pub/gnu/ \
-	ftp://ftp.progsoc.uts.edu.au/pub/gnu/
+	ftp://ftp.progsoc.uts.edu.au/pub/gnu/ \
 	ftp://gatekeeper.dec.com/pub/GNU/ \
 	ftp://ftp.uu.net/archive/systems/gnu/ \
 	ftp://ftp.de.uu.net/pub/gnu/ \
@@ -776,7 +776,7 @@ MASTER_SITE_TEX_CTAN+= \
 MASTER_SITE_SUNSITE+=	\
 	ftp://sunsite.unc.edu/pub/Linux/ \
 	ftp://ftp.infomagic.com/pub/mirrors/linux/sunsite/ \
-	ftp://ftp.informatik.rwth-aachen.de/pub/comp/Linux/sunsite.unc.edu/
+	ftp://ftp.informatik.rwth-aachen.de/pub/comp/Linux/sunsite.unc.edu/ \
 	ftp://ftp.chg.ru/pub/Linux/sunsite/ \
 	ftp://ftp.is.co.za/linux/sunsite/ \
 	ftp://ftp.kddlabs.co.jp/Linux/metalab.unc.edu/ \
@@ -799,7 +799,7 @@ MASTER_SITE_SUNSITE+=	\
 MASTER_SITE_GNOME+=	\
 	ftp://ftp.gnome.org/pub/GNOME/ \
 	ftp://ftp.sunet.se/pub/X11/GNOME/ \
-	ftp://ftp.tuwien.ac.at/hci/GNOME/
+	ftp://ftp.tuwien.ac.at/hci/GNOME/ \
 	ftp://ftp.cse.buffalo.edu/pub/Gnome/ \
 	ftp://ftp.tuwien.ac.at/linux/gnome.org/ \
 	ftp://ftp.dti.ad.jp/pub/X/gnome/ \
@@ -831,7 +831,7 @@ MASTER_SITE_SUSE+=	\
 
 MASTER_SITE_MOZILLA+=	\
 	ftp://ftp.mozilla.org/pub/mozilla/releases/ \
-	ftp://ftp.fu-berlin.de/pub/unix/network/www/mozilla/releases/
+	ftp://ftp.fu-berlin.de/pub/unix/network/www/mozilla/releases/ \
 	ftp://sunsite.utk.edu/pub/netscape-source/ \
 	ftp://ftp.informatik.uni-bonn.de/pub/www/mozilla/ \
 	ftp://ftp-stud.fht-esslingen.de/pub/Mirrors/ftp.mozilla.org/pub/ \
