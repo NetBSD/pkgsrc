@@ -1,0 +1,41 @@
+$NetBSD: patch-at,v 1.1 2005/02/20 11:31:11 markd Exp $
+
+--- kstars/kstars/indi/lx200gps.cpp.orig	2004-10-03 20:13:39.000000000 +1300
++++ kstars/kstars/indi/lx200gps.cpp
+@@ -133,8 +133,7 @@ void LX200GPS::ISNewNumber (const char *
+       index = getOnSwitch(&GPSPowerSw);
+       index == 0 ? turnGPSOn() : turnGPSOff();
+       GPSPowerSw.s = IPS_OK;
+-      strcpy(msg, index == 0 ? "GPS System is ON" : "GPS System is OFF");
+-      IDSetSwitch (&GPSPowerSw, msg);
++      IDSetSwitch (&GPSPowerSw, index == 0 ? "GPS System is ON" : "GPS System is OFF" );
+       return;
+     }
+ 
+@@ -164,7 +163,7 @@ void LX200GPS::ISNewNumber (const char *
+       }
+ 
+ 	GPSStatusSw.s = IPS_OK;
+-	IDSetSwitch (&GPSStatusSw, msg);
++	IDSetSwitch (&GPSStatusSw, "%s", msg);
+ 	return;
+ 
+     }
+@@ -207,7 +206,7 @@ void LX200GPS::ISNewNumber (const char *
+       }
+ 
+       AltDecPecSw.s = IPS_OK;
+-      IDSetSwitch(&AltDecPecSw, msg);
++      IDSetSwitch(&AltDecPecSw, "%s", msg);
+ 
+       return;
+     }
+@@ -233,7 +232,7 @@ void LX200GPS::ISNewNumber (const char *
+       }
+ 
+       AzRaPecSw.s = IPS_OK;
+-      IDSetSwitch(&AzRaPecSw, msg);
++      IDSetSwitch(&AzRaPecSw, "%s", msg);
+ 
+       return;
+     }
