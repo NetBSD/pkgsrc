@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2003/10/14 20:12:20 cube Exp $
+# $NetBSD: Makefile,v 1.21 2003/11/12 03:39:42 jschauma Exp $
 
 DISTNAME=	ppp-2.3.9
 PKGNAME=	ppp-mppe-2.3.9
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://cs.anu.edu.au/pub/software/ppp/
 
