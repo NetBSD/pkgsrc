@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.39 2004/04/24 01:22:49 dmcmahill Exp $
+# $NetBSD: build,v 1.40 2004/04/29 02:23:26 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -89,7 +89,7 @@ while [ ${#} -ge 1 ] ; do
 		shift
 		;;
 
-	--restart|restart )
+	--restart|-r|restart )
 		restart=yes
 		shift
 		;;
