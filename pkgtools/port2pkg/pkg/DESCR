@@ -1,0 +1,7 @@
+Converter FreeBSD port to NetBSD pkgsrc.
+
+port2pkg tries convet FreeBSD ports to NetBSD pkgsrc.  port2pkg copies
+files from portsdir to pkgsrcdir (if noexists, mkdir pkgsrcdir), and
+tries adapting Makefile, patches and some files to NetBSD in pkgsrcdir.
+
+port2pkg /mnt/ports/<category>/foo /usr/pkgsrc/<category>/foo

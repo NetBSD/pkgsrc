@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/27 11:33:06 sakamoto Exp $
+bin/port2pkg
+man/cat1/port2pkg.0
+man/man1/port2pkg.1

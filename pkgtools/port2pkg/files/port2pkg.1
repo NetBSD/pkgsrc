@@ -1,0 +1,52 @@
+.\"	$NetBSD: port2pkg.1,v 1.1.1.1 1999/07/27 11:33:06 sakamoto Exp $
+.\"
+.\" Copyright (c) 1999 by Kazuki Sakamoto (sakamoto@netbsd.org)
+.\" Absolutely no warranty.
+.\"
+.Dd July 27, 1999
+.Dt PORT2PKG 1
+.Sh NAME
+.Nm port2pkg
+.Nd convert FreeBSD ports to NetBSD pkgsrc
+.Sh SYNOPSIS
+.Nm
+.Op Fl m Ar maintainer
+.Ar portsdir
+.Ar pkgsrcdir
+.Sh DESCRIPTION
+.Nm
+tries convet FreeBSD ports to NetBSD pkgsrc.
+.Nm
+copies files
+from
+.Ar portsdir
+to
+.Ar pkgsrcdir
+(if noexists, mkdir
+.Ar pkgsrcdir),
+and tries adapting Makefile, patches and some files
+to NetBSD in
+.Ar pkgsrcdir .
+.Pp
+.Sy Options
+.Bl -tag -width Fl
+.It Fl m
+Adjust maintainer this package
+(default: packages@netbsd.org).
+.El
+.Sh EXAMPLES
+.Pp
+.Dl port2pkg /mnt/ports/<category>/foo /usr/pkgsrc/<category>/foo
+or
+.Dl port2pkg -m your@email /mnt/ports/<category>/foo /usr/pkgsrc/<category>/foo
+.Pp
+.Sh SEE ALSO
+Read
+.Ar Package Constructor's Guide
+in
+.Ar pkgsrc/Packages.txt .
+.Sh BUGS
+.Nm
+is not a magic wand, please double-check converted pkgsrc.
+.Sh AUTHOR
+Kazuki Sakamoto <sakamoto@netbsd.org>
