@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.authdaemond,v 1.9 2004/02/24 00:22:45 jlam Exp $
+# $NetBSD: Makefile.authdaemond,v 1.10 2004/03/10 18:07:16 jlam Exp $
 
 USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c c++
@@ -49,7 +49,7 @@ BUILD_DIRS=		${WRKSRC_SUBDIRS:S/^/${WRKSRC}\//}
 
 FILES_SUBST+=		SYSCONFTOOL=${SYSCONFTOOL:Q}
 
-.include "../../databases/db/buildlink3.mk"
+.include "../../mk/bdb.buildlink3.mk"
 .if defined(USE_PAM)
 BUILD_DEFS+=		USE_PAM
 .  include "../../security/PAM/buildlink3.mk"
