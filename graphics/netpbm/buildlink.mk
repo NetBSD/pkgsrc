@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.6 2002/03/13 17:37:13 fredb Exp $
+# $NetBSD: buildlink.mk,v 1.7 2002/03/14 22:21:42 wiz Exp $
 #
 # This Makefile fragment is included by packages that use netpbm.
 #
@@ -17,17 +17,21 @@ NETPBM_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.netpbm?=	netpbm>=9.7nb1
+BUILDLINK_DEPENDS.netpbm?=	netpbm>=9.24
 DEPENDS+=	${BUILDLINK_DEPENDS.netpbm}:../../graphics/netpbm
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.netpbm=netpbm
 BUILDLINK_PREFIX.netpbm_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.netpbm=		include/pbm.h
-BUILDLINK_FILES.netpbm+=	include/pbmplus.h
+BUILDLINK_FILES.netpbm=		include/pam.h
+BUILDLINK_FILES.netpbm+=	include/pammap.h
+BUILDLINK_FILES.netpbm+=	include/pbm.h
 BUILDLINK_FILES.netpbm+=	include/pgm.h
+BUILDLINK_FILES.netpbm+=	include/pm.h
+BUILDLINK_FILES.netpbm+=	include/pm_config.h
 BUILDLINK_FILES.netpbm+=	include/pnm.h
 BUILDLINK_FILES.netpbm+=	include/ppm.h
 BUILDLINK_FILES.netpbm+=	include/ppmcmap.h
+BUILDLINK_FILES.netpbm+=	include/ppmfloyd.h
 BUILDLINK_FILES.netpbm+=	include/shhopt.h
 BUILDLINK_FILES.netpbm+=	lib/libpbm.*
 BUILDLINK_FILES.netpbm+=	lib/libpgm.*

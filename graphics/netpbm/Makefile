@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2002/03/13 17:37:13 fredb Exp $
+# $NetBSD: Makefile,v 1.60 2002/03/14 22:21:42 wiz Exp $
 
-DISTNAME=	netpbm-9.7
-PKGREVISION=	1
+DISTNAME=	netpbm-9.24
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netpbm/}
 EXTRACT_SUFX=	.tgz
@@ -12,7 +11,9 @@ COMMENT=	toolkit for conversion of images between different formats
 
 USE_BUILDLINK_ONLY=	yes
 USE_GMAKE=		yes
-USE_LIBTOOL=		yes
+USE_PERL5=		yes
+
+REPLACE_PERL=		pnm/pnmquant ppm/ppmfade ppm/ppmrainbow ppm/ppmshadow
 
 INSTALL_TARGET=	install-dev install
 MAKE_ENV+=	CC="${CC}" INSTALL="${INSTALL}"
@@ -31,8 +32,7 @@ MAKE_ENV+=	NETWORKLD=""
 .endif
 
 post-patch:
-	${MV} -f ${WRKSRC}/pbmplus.h ${WRKSRC}/pbmplus.h.in
-	${SED} -e "s;@X11BASE@;${X11BASE};g" ${WRKSRC}/pbmplus.h.in > ${WRKSRC}/pbmplus.h
+	${CP} ${WRKSRC}/Makefile.config.in ${WRKSRC}/Makefile.config
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/shhopt/shhopt.h ${PREFIX}/include
