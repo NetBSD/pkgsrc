@@ -1,0 +1,45 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1 2000/09/06 06:17:56 jlam Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+case ${STAGE} in
+PRE-INSTALL)
+	;;
+POST-INSTALL)
+	SERVERROOT=${PKG_PREFIX}/etc/httpd
+	LOGDIR=/var/log/httpd
+	SPOOLDIR=/var/spool/httpd
+
+	mkdir -p ${SERVERROOT}
+	mkdir -p ${SERVERROOT}/ssl.crl
+	mkdir -p ${SERVERROOT}/ssl.crt
+	mkdir -p ${SERVERROOT}/ssl.crs
+	mkdir -p ${SERVERROOT}/ssl.key
+	mkdir -p ${SERVERROOT}/ssl.prm
+	mkdir -p ${LOGDIR}
+	mkdir -p ${SPOOLDIR}
+	mkdir -p ${SPOOLDIR}/proxy
+
+	echo "Installing configuration files:"
+	for file in httpd.conf magic mime.types
+	do
+		if [ -f ${SERVERROOT}/${file} ]
+		then
+			echo "  ${SERVERROOT}/${file} already exists"
+		else
+			echo "  ${SERVERROOT}/${file}.default --> ${SERVERROOT}/${file}"
+			cp ${SERVERROOT}/${file}.default ${SERVERROOT}/${file}
+			chmod 644 ${SERVERROOT}/${file}
+		fi
+	done
+	echo "done."
+	;;
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.shared,v 1.1 2000/09/06 06:17:57 jlam Exp $
+lib/httpd/mod_proxy.so
+lib/httpd/httpd.exp
+@dirrm lib/httpd
