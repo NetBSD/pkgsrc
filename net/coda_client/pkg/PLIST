@@ -1,5 +1,4 @@
-@owner bin
-@group bin
+@comment $NetBSD: PLIST,v 1.2 1998/10/02 14:19:21 agc Exp $
 lib/coda/Advice.tcl
 lib/coda/CodaConsole
 lib/coda/Consider.tcl
