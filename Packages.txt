@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.69 1999/09/29 15:23:54 agc Exp $
+# $NetBSD: Packages.txt,v 1.70 1999/10/31 19:45:15 rh Exp $
 ###########################################################################
 
 			==========================
@@ -1029,21 +1029,54 @@ perform the equivalent of:
    then current versions of the corresponding packages get compiled and
    installed.  This is similar to manually noting which packages are
    currently installed, then performing a series of "make deinstall",
-   "make clean", and "make install" for these packages.  The following
-   variables can be used either on the command line or in /etc/mk.conf to
-   alter the behaviour of "make update":
+   "make clean", and "make install" for these packages.
 
-    - REINSTALL:
-      Do not recreate the list of depending packages, and do not
-      "make clean" for every package that gets updated.  This is
-      useful if you want to resume the updating process after an
-      error or pressing Control-C, e.g. through
-      "make update REINSTALL=1".
+   You can use the "update" target to resume package updating in case a
+   previous "make update" was interrupted for some reason.  However, make
+   sure you don't call "make clean" or otherwise remove the list of
+   dependent packages in ${WRKDIR}.  Otherwise you lose the ability to
+   automatically update the current package along with the dependent
+   packages you have installed.
+
+   The following variables can be used either on the command line or in
+   /etc/mk.conf to alter the behaviour of "make update":
 
     - DEPENDS_TARGET:
       Install target to use for the updated package and the
       dependent packages.  Defaults to "install".  E.g.
       "make update DEPENDS_TARGET=package"
+
+    - NOCLEAN:
+      Don't clean up after updating.  Useful if you want to leave the
+      work sources of the updated packages around for inspection or
+      other purposes.  Be sure you eventually clean up the source
+      tree (see the "clean-update" target below) or you may run into
+      troubles with old source code still lying around on your next
+      "make" or "make update".
+
+    - REINSTALL:
+      Use "reinstall" instead of ${DEPENDS_TARGET} for every package
+      that gets updated.  Be sure you know the implications of using
+      the "reinstall" target when using this variable.
+
+ * clean-update:
+   Clean the source tree for all packages that would get updated if
+   "make update" was called from the current directory.  This target
+   should not be used if the current package (or any of its depending
+   packages) have already been deinstalled (e.g., after calling "make
+   update") or you may lose some packages you intended to update.
+   As a rule of thumb: only use this target _before_ the first time
+   you call "make update" and only if you have a dirty package tree
+   (e.g., if you used NOCLEAN).  The following variables can be used
+   either on the command line or in /etc/mk.conf to alter the behaviour
+   of "make clean-update":
+
+    - CLEAR_DIRLIST:
+      After "make clean", do not reconstruct the list of directories to
+      update for this package.  Only use this if "make update" successfully
+      installed all packages you wanted to update.  Normally, this is done
+      automatically on "make update", but may have been suppressed by the
+      NOCLEAN variable (see above).
 
  * readme:
    This target generates a README.html file, which can be viewed using a
