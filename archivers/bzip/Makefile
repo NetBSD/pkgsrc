@@ -3,7 +3,8 @@
 # Date created:         Fr  27 Sep 1996 11:47:35 MET DST
 # Whom:                 Andreas Klemm <andreas@klemm.gtn.com>
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/27 02:18:57 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/10/27 03:22:04 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.9 1996/12/07 09:28:40 max Exp 
 #
 
 DISTNAME=       bzip-0.21

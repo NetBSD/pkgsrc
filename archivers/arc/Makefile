@@ -3,7 +3,8 @@
 # Date created:         31 Dec 1994
 # Whom:                 ache
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/27 02:18:56 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/10/27 03:22:00 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:09 fenner Exp 
 #
 
 DISTNAME=       arc521e.pl8
