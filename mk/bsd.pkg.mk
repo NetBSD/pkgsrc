@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.785 2001/07/10 12:04:43 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.786 2001/07/13 06:16:02 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -2474,7 +2474,7 @@ makesum: fetch uptodate-digest
 	if [ -f ${DISTINFO_FILE} ]; then				\
 		${AWK} '$$2 ~ /\(patch-[a-z0-9]+\)/ { print $$0 }' < ${DISTINFO_FILE} >> $$newfile; \
 	fi;								\
-	if cmp -s $$newfile ${DISTINFO_FILE}; then			\
+	if ${CMP} -s $$newfile ${DISTINFO_FILE}; then			\
 		${RM} -f $$newfile;					\
 		${ECHO_MSG} "=> distinfo: distfiles part unchanged.";	\
 	else								\
@@ -2505,7 +2505,7 @@ makepatchsum mps: uptodate-digest
 			esac;						\
 		done);							\
 	fi;								\
-	if cmp -s $$newfile ${DISTINFO_FILE}; then			\
+	if ${CMP} -s $$newfile ${DISTINFO_FILE}; then			\
 		${RM} -f $$newfile;					\
 		${ECHO_MSG} "=> distinfo: patches part unchanged.";	\
 	else								\
@@ -2959,7 +2959,7 @@ README.html: .PRECIOUS
 		-e '/%%BIN_PKGS%%/r $@.tmp4'				\
 		-e '/%%BIN_PKGS%%/d'					\
 		${README_NAME} >> $@.tmp
-	@cmp -s $@.tmp $@ || 						\
+	@${CMP} -s $@.tmp $@ || 					\
 		{ ${ECHO_MSG} "${_PKGSRC_IN}> Creating README.html for ${_THISDIR_}${PKGNAME}"; \
 		${MV} -f $@.tmp $@; }
 	@${RM} -f $@.tmp $@.tmp1 $@.tmp2 $@.tmp4 $@.tmp5 $@.tmp6

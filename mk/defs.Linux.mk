@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.4 2001/06/18 19:58:55 jlam Exp $
+# $NetBSD: defs.Linux.mk,v 1.5 2001/07/13 06:16:02 jlam Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -8,6 +8,7 @@ CAT?=		/bin/cat
 CHMOD?=		/bin/chmod
 CHOWN?=		/bin/chown
 CHGRP?=		/bin/chgrp
+CMP?=		cmp
 CP?=		/bin/cp
 CUT?=		/bin/cut
 DC?=		/usr/bin/dc
