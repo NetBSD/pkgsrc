@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/24 13:36:43 agc Exp $
+info/hacking.info
+info/vmintegration.info
+lib/awt/font.properties
+lib/security/classpath.security
+share/classpath/glibj.zip
+@exec ${MKDIR} %D/share/classpath/api
+@dirrm share/classpath/api
+@dirrm share/classpath
+@dirrm lib/security
+@dirrm lib/awt
