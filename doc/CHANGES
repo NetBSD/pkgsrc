@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3211 2003/09/02 14:57:09 jmmv Exp $
+$NetBSD: CHANGES,v 1.3212 2003/09/02 17:29:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3483,3 +3483,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated fetchmailconf to 6.2.4 [frueauf 2003-09-02]
 	Added skk 12.2.0 [minoura 2003-09-02]
 	Updated libart2 to 2.3.14 [jmmv 2003-09-02]
+	Updated ftpproxy-1.2.1 [taca 2003-09-02]
