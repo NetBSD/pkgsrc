@@ -1,7 +1,16 @@
-$NetBSD: patch-ad,v 1.1 1998/08/15 00:12:10 tv Exp $
+$NetBSD: patch-ad,v 1.2 1999/09/18 03:36:24 kim Exp $
 
---- configure.orig	Fri Aug 14 19:35:25 1998
-+++ configure	Fri Aug 14 19:35:33 1998
+--- configure.orig	Fri Apr 25 16:03:34 1997
++++ configure	Fri Sep 17 23:08:21 1999
+@@ -4255,7 +4255,7 @@
+   cat conftest.$ac_ext >&5
+   rm -rf conftest*
+   CATOBJEXT=.mo
+-		   DATADIRNAME=lib
++		   DATADIRNAME=share
+ fi
+ rm -f conftest*
+ 		INSTOBJEXT=.mo
 @@ -4509,7 +4509,7 @@
  		 USE_INCLUDED_LIBINTL=yes
  		 CATOBJEXT=.cat
