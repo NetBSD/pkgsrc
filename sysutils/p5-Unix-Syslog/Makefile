@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2004/04/25 03:43:02 snj Exp $
+# $NetBSD: Makefile,v 1.13 2004/12/20 11:31:09 grant Exp $
 
 DISTNAME=	Unix-Syslog-0.99
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5sl
+PKGREVISION=	1
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Unix/}
 
