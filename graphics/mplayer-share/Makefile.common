@@ -1,11 +1,10 @@
-# $NetBSD: Makefile.common,v 1.30 2003/04/09 14:57:32 drochner Exp $
+# $NetBSD: Makefile.common,v 1.31 2003/05/02 13:17:11 wiz Exp $
 #
 
 MPLAYER_DIST_VERSION=	0.90
 #PKGREVISION=		0
 
 # This variable is used in all packages which depend on this package
-# XXX Add 10, as the "rc" version numbers were used up for the "pre" versions.
 MPLAYER_PKG_VERSION=	0.90
 
 DISTNAME=		MPlayer-${MPLAYER_DIST_VERSION}
