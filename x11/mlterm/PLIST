@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.9 2003/06/29 07:59:15 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/02/25 17:15:42 minskim Exp $
+bin/mlcc
 bin/mlclient
 bin/mlterm
 etc/mlterm/aafont
@@ -6,6 +7,7 @@ etc/mlterm/color
 etc/mlterm/font
 etc/mlterm/key
 etc/mlterm/main
+etc/mlterm/menu
 etc/mlterm/taafont
 etc/mlterm/termcap
 etc/mlterm/tfont
