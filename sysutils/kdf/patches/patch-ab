@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/07/03 23:27:47 hubertf Exp $
+
+--- po/Makefile.in.orig	Sun Jul  4 01:02:17 1999
++++ po/Makefile.in	Sun Jul  4 01:02:25 1999
+@@ -119,7 +119,7 @@
+ x_includes = @x_includes@
+ x_libraries = @x_libraries@
+ 
+-GMOFILES = de.gmo fi.gmo po.gmo fr.gmo
++GMOFILES = de.gmo fi.gmo fr.gmo
+ 
+ POFILES = $(GMOFILES:.gmo=.po) 
+ TARGET = kdf
