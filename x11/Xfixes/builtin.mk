@@ -1,7 +1,7 @@
-# $NetBSD: builtin.mk,v 1.2 2004/10/08 05:24:46 xtraeme Exp $
+# $NetBSD: builtin.mk,v 1.3 2004/10/09 06:40:48 xtraeme Exp $
 
 _H_XFIXES=		${X11BASE}/include/X11/extensions/Xfixes.h
-_FIXESEXT_PC=		${X11BASE}/lib/X11/pkgconfig/xfixes.pc
+_FIXESEXT_PC=		${X11BASE}/lib/pkgconfig/xfixes.pc
 
 .if !defined(IS_BUILTIN.Xfixes)
 IS_BUILTIN.Xfixes=     no
