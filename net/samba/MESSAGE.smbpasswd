@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE.smbpasswd,v 1.3 2002/08/25 21:50:10 jlam Exp $
+$NetBSD: MESSAGE.smbpasswd,v 1.4 2003/09/12 06:04:14 jlam Exp $
 
                       *===* SECURITY NOTES *===*
 
@@ -7,7 +7,7 @@ The users' encrypted passwords are stored in
 
 	${SAMBA_PRIVATE}/smbpasswd
 
-with owner ${ROOT_USER}, group ${ROOT_GROUP}), and file mode 0600.
+with owner ${ROOT_USER}, group ${ROOT_GROUP}, and file mode 0600.
 These encrypted passwords are _PASSWORD_EQUIVALENT_ from the viewpoint of
 the SMB protocol.  Do _NOT_ weaken the permissions of this file unless
 there is a very good reason.
