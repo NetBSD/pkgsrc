@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1125 2003/01/09 13:16:38 schmonz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1126 2003/01/10 08:44:19 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -222,10 +222,12 @@ CONFIG_SHELL?=		${SH}
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
 .endif
 
-LIBTOOL_REQD=		${_OPSYS_LIBTOOL_REQD}
+LIBTOOL_REQD?=		1.4.20010614nb11
 LIBTOOL=		${LOCALBASE}/bin/libtool
+SHLIBTOOL=		${LOCALBASE}/bin/shlibtool
 .if defined(USE_LIBTOOL)
 PKGLIBTOOL=		${LIBTOOL}
+PKGSHLIBTOOL=		${SHLIBTOOL}
 BUILD_DEPENDS+=		libtool-base>=${LIBTOOL_REQD}:../../devel/libtool-base
 CONFIGURE_ENV+=		LIBTOOL="${PKGLIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=		LIBTOOL="${PKGLIBTOOL} ${LIBTOOL_FLAGS}"
@@ -1886,14 +1888,25 @@ do-configure: ${_CONFIGURE_PREREQ}
 
 _CONFIGURE_POSTREQ+=	do-libtool-override
 do-libtool-override:
-.if defined(USE_LIBTOOL) && defined(LIBTOOL_OVERRIDE)
-.  for libtool in ${LIBTOOL_OVERRIDE}
+.if defined(USE_LIBTOOL)
+.  if defined(LIBTOOL_OVERRIDE)
+.    for libtool in ${LIBTOOL_OVERRIDE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${libtool} ]; then					\
 		${RM} -f ${libtool};					\
-		${LN} -sf ${PKGLIBTOOL} ${libtool};		\
+		${LN} -sf ${PKGLIBTOOL} ${libtool};			\
 	fi
-.  endfor
+.    endfor
+.  endif
+.  if defined(SHLIBTOOL_OVERRIDE)
+.    for libtool in ${SHLIBTOOL_OVERRIDE}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ -f ${libtool} ]; then					\
+		${RM} -f ${libtool};					\
+		${LN} -sf ${PKGSHLIBTOOL} ${libtool};			\
+	fi
+.    endfor
+.  endif
 .else
 	${_PKG_SILENT}${_PKG_DEBUG}${TRUE}
 .endif

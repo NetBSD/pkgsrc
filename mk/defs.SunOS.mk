@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.50 2003/01/06 22:29:23 grant Exp $
+# $NetBSD: defs.SunOS.mk,v 1.51 2003/01/10 08:44:20 jlam Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -111,7 +111,6 @@ _OPSYS_HAS_INET6=	no		# IPv6 is not standard
 _OPSYS_HAS_JAVA=	no		# Java is not standard
 _OPSYS_HAS_MANZ=	no		# no MANZ for gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no		# libossaudio is available
-_OPSYS_LIBTOOL_REQD=	1.4.20010614nb9 # base version of libtool required
 _OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_RPATH_NAME=	-R		# name of symbol in rpath directive to linker 
 _PATCH_CAN_BACKUP=	yes		# native patch(1) can make backups
