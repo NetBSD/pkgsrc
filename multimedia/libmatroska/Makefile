@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/08/23 23:19:52 salo Exp $
+# $NetBSD: Makefile,v 1.9 2004/10/14 17:04:35 salo Exp $
 #
 
-DISTNAME=	libmatroska-0.7.3
+DISTNAME=	libmatroska-0.7.4
 CATEGORIES=	multimedia devel
 MASTER_SITES=	http://dl.matroska.org/downloads/libmatroska/
 EXTRACT_SUFX=	.tar.bz2
