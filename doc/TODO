@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2031 2004/08/14 20:30:33 ben Exp $
+$NetBSD: TODO,v 1.2032 2004/08/14 20:36:35 ben Exp $
 
 Suggested new packages
 ======================
@@ -341,7 +341,7 @@ Suggested package updates
 	o ns-flash-6.0.79
 	o nslint-2.1a3
 	o nulib2-2.0.2
-	o nut-10.0
+	o nut-10.1
 	o nxtvepg-2.7.0
 	o ocaml-3.07pl2
 	o onyx-5.1.1
