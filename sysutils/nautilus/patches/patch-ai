@@ -1,10 +1,10 @@
-$NetBSD: patch-ai,v 1.1 2004/05/11 12:30:15 danw Exp $
+$NetBSD: patch-ai,v 1.2 2004/09/21 16:54:57 jmmv Exp $
 
---- libnautilus-private/nautilus-program-choosing.c.orig	Tue Apr 13 20:45:27 2004
+--- libnautilus-private/nautilus-program-choosing.c.orig	2004-07-24 16:47:37.000000000 +0200
 +++ libnautilus-private/nautilus-program-choosing.c
-@@ -71,6 +71,11 @@ typedef struct {
- 
- static GHashTable *choose_application_hash_table, *choose_component_hash_table;
+@@ -62,6 +62,11 @@
+ #include <gdk/gdkx.h>
+ #endif
  
 +#if defined(__APPLE__)
 +#include <crt_externs.h>
