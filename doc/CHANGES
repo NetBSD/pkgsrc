@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3449 2003/09/18 21:36:41 cube Exp $
+$NetBSD: CHANGES,v 1.3450 2003/09/18 21:59:15 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3837,3 +3837,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-Net-SNMP to 4.1.2 [wiz 2003-09-18]
 	Updated grep to 2.5.1nb2 [wiz 2003-09-18]
 	Updated p5-perl-ldap to 0.29 [cube 2003-09-18]
+	Updated streamtuner to 0.10.1 [xtraeme 2003-09-18]
