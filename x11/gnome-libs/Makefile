@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2004/04/14 16:15:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.103 2004/05/10 17:46:28 minskim Exp $
 
 DISTNAME=		gnome-libs-1.4.2
 PKGREVISION=		3
@@ -9,10 +9,12 @@ MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Libraries for the GNU Network Object Model Environment
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 BUILD_USES_MSGFMT=	YES
 
 USE_DIRS+=		gnome1-1.5
-USE_X11BASE=		YES
+USE_X11=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 
@@ -20,20 +22,15 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR} \
 			--enable-gtk-doc=no \
 			--with-html-dir=${PREFIX}/share/doc/html \
-			--with-glib-prefix=${LOCALBASE} \
 			--with-kde-datadir=${X11PREFIX}/share/kde
-CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE} \
-			X11BASE=${X11BASE} \
-			PKGLOCALEDIR=${PKGLOCALEDIR}
+CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 CONFIGURE_ENV+=		${CONFIGURE_ENV.db-${BDB_TYPE}}
 
 USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 
 LOCALSTATEDIR=		/var/gnome
-PLIST_SUBST+=		LOCALBASE=${LOCALBASE} \
-			LOCALEDIR=${LOCALEDIR} \
-			LOCALSTATEDIR=${LOCALSTATEDIR}
+PLIST_SUBST+=		LOCALSTATEDIR=${LOCALSTATEDIR}
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -67,8 +64,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/etc/CORBA/servers
 	${TOUCH} ${PREFIX}/etc/CORBA/servers/.directory
 	${INSTALL_DATA_DIR} ${LOCALSTATEDIR}
-	${TEST} ${PREFIX} = ${LOCALBASE} || \
-	${LN} -fs ${PREFIX}/share/aclocal/libart.m4 \
-		${LOCALBASE}/share/aclocal/libart.m4
 
 .include "../../mk/bsd.pkg.mk"
