@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/04/01 13:38:46 agc Exp $
+# $NetBSD: Makefile,v 1.7 1999/04/23 22:51:41 tron Exp $
 # $FreeBSD Id: Makefile,v 1.15 1998/03/17 07:55:17 tg Exp
 
 DISTNAME=	Tix4.1.0.006
@@ -15,8 +15,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-shared --enable-sam \
 		--with-tcl="${PREFIX}/include/tcl8.0" \
 		--with-tk="${PREFIX}/include/tk8.0"
-# this should probably be added to bsd.port.mk
-CONFIGURE_ENV+=	PREFIX=${PREFIX}
 
 pre-configure:
 	@(cd ${WRKSRC}/.. && \
