@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/15 00:36:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:21 agc Exp $
 include/icq.h
 lib/libicq.a
 lib/libicq.la
+lib/libicq.so
+lib/libicq.so.1
 lib/libicq.so.1.0

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2000/09/21 14:34:56 jlam Exp $
+@comment $NetBSD: PLIST,v 1.17 2001/01/04 15:10:24 agc Exp $
 ${PGUSER}/.profile.pgsql
 ${PGUSER}/post-install-notes
 bin/createdb
@@ -56,12 +56,20 @@ include/pgsql/utils/geo_decls.h
 include/pgsql/utils/mcxt.h
 include/pgsql/utils/palloc.h
 lib/libecpg.a
+lib/libecpg.so
+lib/libecpg.so.3
 lib/libecpg.so.3.1
 lib/libpgeasy.a
+lib/libpgeasy.so
+lib/libpgeasy.so.2
 lib/libpgeasy.so.2.1
 lib/libpq++.a
+lib/libpq++.so
+lib/libpq++.so.3
 lib/libpq++.so.3.1
 lib/libpq.a
+lib/libpq.so
+lib/libpq.so.2
 lib/libpq.so.2.1
 lib/plpgsql.so
 man/man1/createdb.1

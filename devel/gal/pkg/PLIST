@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/12/31 09:35:25 rh Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/01/04 15:10:27 agc Exp $
 include/gal/e-paned/e-hpaned.h
 include/gal/e-paned/e-paned.h
 include/gal/e-paned/e-vpaned.h
@@ -85,6 +85,8 @@ include/gal/widgets/widget-pixmap-combo.h
 lib/galConf.sh
 lib/libgal.a
 lib/libgal.la
+lib/libgal.so
+lib/libgal.so.3
 lib/libgal.so.3.1
 @exec mkdir -m 0755 -p %D/share/bonobo/html/gal
 share/bonobo/html/gal-api.sgml

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2000/08/16 01:54:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/01/04 15:10:24 agc Exp $
 bin/msql2mysql
 bin/mysql
 bin/mysql_zap
@@ -36,6 +36,8 @@ info/mysql.info
 @exec install-info %D/info/mysql.info %D/info/dir
 lib/mysql/libmysqlclient.a
 lib/mysql/libmysqlclient.la
+lib/mysql/libmysqlclient.so
+lib/mysql/libmysqlclient.so.6
 lib/mysql/libmysqlclient.so.6.0
 share/mysql/binary-configure
 share/mysql/make_binary_distribution

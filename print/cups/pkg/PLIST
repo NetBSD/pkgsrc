@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2000/12/21 14:59:39 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/01/04 15:10:54 agc Exp $
 bin/cancel
 bin/disable
 bin/enable
@@ -19,9 +19,13 @@ include/cups/ppd.h
 include/cups/raster.h
 lib/libcups.a
 lib/libcups.la
+lib/libcups.so
+lib/libcups.so.2
 lib/libcups.so.2.0
 lib/libcupsimage.a
 lib/libcupsimage.la
+lib/libcupsimage.so
+lib/libcupsimage.so.2
 lib/libcupsimage.so.2.0
 libexec/cups/backend/http
 libexec/cups/backend/ipp

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2000/11/27 17:51:07 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/01/04 15:10:46 agc Exp $
 bin/rep
 bin/rep-config
 bin/rep-remote
@@ -21,6 +21,8 @@ info/librep.info-8
 @exec install-info --info-dir=%D/info %D/info/librep.info
 lib/librep.a
 lib/librep.la
+lib/librep.so
+lib/librep.so.10
 lib/librep.so.10.1
 libexec/rep/${MACHINE_GNU_PLATFORM}/install-aliases
 libexec/rep/${MACHINE_GNU_PLATFORM}/libtool

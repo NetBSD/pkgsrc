@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2000/12/06 17:14:12 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2001/01/04 15:10:38 agc Exp $
 bin/gif2epsn
 bin/gif2ps
 bin/gif2rgb
@@ -30,6 +30,8 @@ bin/gifburst
 include/gif_lib.h
 lib/libgif.a
 lib/libgif.la
+lib/libgif.so
+lib/libgif.so.5
 lib/libgif.so.5.0
 share/doc/giflib/COPYING
 share/doc/giflib/PATENT_PROBLEMS

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2000/11/27 16:13:18 tron Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/01/04 15:10:56 agc Exp $
 bin/gnome-vfs-config
 bin/gnome-vfs-gen-mimedb
 bin/gnome-vfs-slave
@@ -51,12 +51,18 @@ include/libgnomevfs/gnome-vfs-xfer.h
 include/libgnomevfs/gnome-vfs.h
 lib/libgnomevfs-corba.a
 lib/libgnomevfs-corba.la
+lib/libgnomevfs-corba.so
+lib/libgnomevfs-corba.so.0
 lib/libgnomevfs-corba.so.0.0
 lib/libgnomevfs-pthread.a
 lib/libgnomevfs-pthread.la
+lib/libgnomevfs-pthread.so
+lib/libgnomevfs-pthread.so.0
 lib/libgnomevfs-pthread.so.0.0
 lib/libgnomevfs.a
 lib/libgnomevfs.la
+lib/libgnomevfs.so
+lib/libgnomevfs.so.0
 lib/libgnomevfs.so.0.0
 lib/vfs/extfs/README
 lib/vfs/extfs/a

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1999/11/01 04:03:11 sakamoto Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/01/04 15:10:45 agc Exp $
 bin/ali
 bin/anno
 bin/bbc
@@ -33,6 +33,8 @@ bin/show
 bin/sortm
 bin/whatnow
 bin/whom
+lib/libmh.so
+lib/libmh.so.3
 lib/libmh.so.3.2
 libexec/mh/MailAliases
 libexec/mh/ap

@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2000/05/07 11:18:21 msaitoh Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/01/04 15:10:33 agc Exp $
 bin/ptlgcc
 bin/ptlg++
 lib/libPTL.a
+lib/libPTL.so
+lib/libPTL.so.2
 lib/libPTL.so.2.0

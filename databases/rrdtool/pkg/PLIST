@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.8 2000/12/15 19:21:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2001/01/04 15:10:25 agc Exp $
 bin/rrdcgi
 bin/rrdtool
 bin/trytime
 include/rrd.h
 lib/librrd.a
 lib/librrd.la
+lib/librrd.so
+lib/librrd.so.0
 lib/librrd.so.0.0
 man/man1/RRDp.1
 man/man1/RRDs.1
