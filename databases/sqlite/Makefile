@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/01/31 20:04:53 reinoud Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/12 01:17:11 wiz Exp $
 
 DISTNAME=		sqlite-2.2.5
 CATEGORIES=		databases
@@ -10,7 +10,7 @@ COMMENT=		SQL Database Engine In A C Library
 
 WRKSRC=			${WRKDIR}/sqlite-build
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
@@ -25,5 +25,5 @@ CFLAGS+=		-DUINT32_TYPE=u_int32_t -DUINT16_TYPE=u_int16_t \
 post-extract:
 	${MKDIR} ${WRKSRC}
 
-.include "../../devel/readline/buildlink.mk"
+.include "../../devel/readline/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
