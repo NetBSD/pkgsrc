@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.548 2004/10/21 04:22:31 xtraeme Exp $
+# $NetBSD: Makefile,v 1.549 2004/10/23 00:23:20 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -292,6 +292,7 @@ SUBDIR+=	p5-Carp-Assert
 SUBDIR+=	p5-Class-Accessor
 SUBDIR+=	p5-Class-Container
 SUBDIR+=	p5-Class-Data-Inheritable
+SUBDIR+=	p5-Class-Factory
 SUBDIR+=	p5-Class-Fields
 SUBDIR+=	p5-Class-Loader
 SUBDIR+=	p5-Class-MethodMaker
