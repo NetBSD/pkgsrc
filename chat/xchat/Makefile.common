@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2002/11/29 09:02:58 tron Exp $
+# $NetBSD: Makefile.common,v 1.9 2002/11/29 17:17:48 drochner Exp $
 
 DISTNAME=	xchat-1.8.10
 PKGREVISION=	2
@@ -26,12 +26,12 @@ USE_GMAKE=		YES
 USE_PERL5=		YES
 BUILD_USES_MSGFMT=	YES
 CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
+CONFIGURE_ARGS+=	--enable-python
 
 BUILD_DEFS+=		USE_INET6 USE_SOCKS
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ENV+=		ac_cv_lib_intl_bindtextdomain='yes'
 CONFIGURE_ENV+=		pythonpath=${PYTHONBIN}
 
 .include "../../mk/bsd.prefs.mk"
