@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/12 13:40:42 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/24 22:25:31 wiz Exp $
 #
 
 .include "../../multimedia/libflash/Makefile.common"
@@ -12,7 +12,7 @@ COMMENT=	Mozilla open source Flash(tm) plugin
 
 DEPENDS+=	mozilla>=0.9.9:../../www/mozilla
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_X11=	YES
 USE_LIBTOOL=	YES
 
@@ -28,6 +28,6 @@ do-install:
 	cd ${WRKSRC}/Plugin && \
 		${INSTALL_PROGRAM} .libs/npflash.so ${MOZ_PLUGDIR}
 
-.include "../../multimedia/libflash/buildlink2.mk"
+.include "../../multimedia/libflash/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

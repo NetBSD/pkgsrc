@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/18 13:33:41 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/24 22:25:31 wiz Exp $
 #
 
 .include "../../multimedia/libflash/Makefile.common"
@@ -7,7 +7,7 @@ PKGNAME=	${DISTNAME:C/-/player-/}
 PKGREVISION=	2
 COMMENT=	Standalone open source Flash(tm) player
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 BUILD_DIRS=	${WRKSRC}/Player
 CPPFLAGS+=	-DDEV_DSP=\\\"${DEVOSSSOUND}\\\"
 
@@ -19,5 +19,5 @@ MAKE_ENV+=	LIBSTDCPP=-lstdc++
 MAKE_ENV+=	LIBSTDCPP=
 .endif
 
-.include "../../multimedia/libflash/buildlink2.mk"
+.include "../../multimedia/libflash/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

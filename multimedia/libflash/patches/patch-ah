@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.1.1.1 2004/01/26 13:34:46 jmmv Exp $
+$NetBSD: patch-ah,v 1.2 2004/04/24 22:25:31 wiz Exp $
 
---- Plugin/Makefile.orig	Tue Sep 28 05:13:38 1999
+--- Plugin/Makefile.orig	1999-09-28 14:13:38.000000000 +0200
 +++ Plugin/Makefile
 @@ -21,34 +21,30 @@
  
@@ -22,7 +22,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2004/01/26 13:34:46 jmmv Exp $
 -
 -CFLAGS=  $(OPTIMIZER) $(PLUGIN_DEFINES) -I$(FLASH) -I/usr/X11R6/include
 -LDFLAGS= $(FLASH)/libflash.a $(LIBCXX) ../Jpeg/libjpeg.a ../Zlib/libz.a
-+CFLAGS+=  $(OPTIMIZER) $(PLUGIN_DEFINES) $(CPPFLAGS)
++CFLAGS+=  $(OPTIMIZER) $(PLUGIN_DEFINES) $(CPPFLAGS) -I${PREFIX}/include/flash
 +LIBS= -lflash $(LIBSTDCPP) -ljpeg -lz $(LIBOSSAUDIO) -lX11 -lXt
  
  SRC= plugin.c npunix.c
