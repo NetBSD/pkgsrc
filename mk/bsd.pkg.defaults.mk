@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.42 2002/03/06 17:05:30 seb Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.43 2002/03/07 09:00:14 seb Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -180,7 +180,7 @@ PATCH_FUZZ_FACTOR?= -F0
 #ACCEPTABLE_LICENSES+=	jdk-license
 # Enable it if you accept the license terms for jdk
 # and would like to build jdk.  see pkgsrc/lang/jdk.
-#ACCEPTABLE_LICENSES+= jdk13-license
+#ACCEPTABLE_LICENSES+=	jdk13-license
 # Enable it if you accept the download license for Sun JDK1.3 and would
 # like to build Sun JDK13.  see pkgsrc/langun-jre13.
 #ACCEPTABLE_LICENSES+=	kermit-license
