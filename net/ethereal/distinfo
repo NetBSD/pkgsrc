@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.16.2.3 2003/06/19 00:09:31 grant Exp $
+$NetBSD: distinfo,v 1.16.2.4 2003/10/22 22:24:43 jmc Exp $
 
-SHA1 (ethereal-0.9.12.tar.bz2) = ce7a0086d63fd152645319fbad96bc4241b4fc73
-Size (ethereal-0.9.12.tar.bz2) = 3708148 bytes
+SHA1 (ethereal-0.9.14.tar.bz2) = a3aacacdd5306146662dd083a7e2681e7d9d201f
+Size (ethereal-0.9.14.tar.bz2) = 3857550 bytes
 SHA1 (patch-aa) = 05d6fa6113a5d7d69eb3f6a75c31c6cdc4d79603
 SHA1 (patch-ab) = 9967c539e2f2db2d13f804c0afdd9e39844bcf8f
 SHA1 (patch-ac) = 3dfac71275da3199b99bcb38d4200172e9e21cc0
