@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:21:48 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/03/05 12:49:21 wiz Exp $
 
 .if !defined(ID3LIB_BUILDLINK2_MK)
 ID3LIB_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		id3lib
-BUILDLINK_DEPENDS.id3lib?=	id3lib>=3.8.0
+BUILDLINK_DEPENDS.id3lib?=	id3lib>=3.8.3
 BUILDLINK_PKGSRCDIR.id3lib?=	../../audio/id3lib
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.id3lib=id3lib
