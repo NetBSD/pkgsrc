@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2003/11/01 12:26:21 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.9 2004/07/15 04:00:47 dmcmahill Exp $
 
---- configure.in.orig	2003-02-06 02:42:05.000000000 -0500
+--- configure.in.orig	Fri Jul  9 08:28:05 2004
 +++ configure.in
-@@ -427,8 +427,8 @@ case "$host" in
+@@ -450,8 +450,8 @@ case "$host" in
    *-*-solaris*)
      # standard compilers
      CC=cc
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.8 2003/11/01 12:26:21 dmcmahill Exp $
      if test "$WITH_G77" != yes; then    
        #AC_CHECK_PROG(F77,f77,yes,no)
        AC_CHECK_PROGS(F77,f77 f90 f2c-f77,no)
-@@ -438,9 +438,9 @@ case "$host" in
+@@ -461,9 +461,9 @@ case "$host" in
        FC="$F77"
      fi
      #FC="$F77"
@@ -25,7 +25,7 @@ $NetBSD: patch-aa,v 1.8 2003/11/01 12:26:21 dmcmahill Exp $
      LD=ld
      LD_LDFLAGS=
      if test "$enable_debug" = yes; then 
-@@ -459,7 +459,7 @@ case "$host" in
+@@ -482,7 +482,7 @@ case "$host" in
        FC=g77
        FC_OPTIONS=-O2
        FC_OPTIONS_O0=
@@ -34,7 +34,7 @@ $NetBSD: patch-aa,v 1.8 2003/11/01 12:26:21 dmcmahill Exp $
  #     for solaris 2.7 with gcc/g77 2.95.2, binutils 2.9 
  #     the correct value should be 
  #     FC_LDFLAGS='-t -Wl,-export-dynamic'
-@@ -991,7 +991,7 @@ case "$host" in
+@@ -1104,7 +1104,7 @@ case "$host" in
     FC="$F77"
     FC_OPTIONS="${FFLAGS}"
     FC_OPTIONS_O0=`echo $FC_OPTIONS | sed 's/-O[0-9]*//g'`
@@ -43,3 +43,23 @@ $NetBSD: patch-aa,v 1.8 2003/11/01 12:26:21 dmcmahill Exp $
     FC_PICFLAGS='-fPIC'
     # check for --export-dynamic
     ac_save_LDFLAGS="$LDFLAGS"
+@@ -1751,13 +1751,13 @@ case "$host" in
+     ;;
+ esac
+ 
+-GETLIBTK=libtk$TK_MAJOR_VERSION.$TK_MINOR_VERSION.so
++GETLIBTK=libtk$TK_MAJOR_VERSION$TK_MINOR_VERSION.so
+ 
+-case "$host" in
+-  *-*-darwin*)
+-  GETLIBTK=/sw/lib/libtk$TK_MAJOR_VERSION.$TK_MINOR_VERSION.dylib
+-  ;;
+-esac 
++#case "$host" in
++#  *-*-darwin*)
++#  GETLIBTK=/sw/lib/libtk$TK_MAJOR_VERSION.$TK_MINOR_VERSION.dylib
++#  ;;
++#esac 
+ 
+ fi
+ 
