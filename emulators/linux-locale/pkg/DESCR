@@ -1,1 +1,4 @@
-Linux wcsmbs preload libraries and locales
+Locales for Linux
+
+These RPM files are supplementary locales for Linux.
+Many languages are not supproted by default by GNU libc.
