@@ -1,0 +1,8 @@
+Cxref is a program that will produce documentation (in LaTeX, HTML, 
+RTF or SGML) including cross-references from C program source code. 
+It has been designed to work with ANSI C, incorporating K&R, and most
+popular GNU extensions. 
+
+The documentation for the program is produced from comments in the
+code that are appropriately formatted. The cross referencing comes
+from the code itself and requires no extra work. 
