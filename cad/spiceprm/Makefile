@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/06/27 11:41:51 zuntum Exp $
+# $NetBSD: Makefile,v 1.6 2001/11/28 05:20:40 jlam Exp $
 #
 
 DISTNAME=	spiceprm-0.11
@@ -9,10 +9,9 @@ MASTER_SITES=	http://metalab.unc.edu/pub/Linux/apps/circuits/
 MAINTAINER=	packages@netbsd.org
 COMMENT=	Spice preprocessor for parameterized subcircuits
 
-NO_BUILD=	# defined
-NO_CONFIGURE=	# defined
-USE_PERL5=	# defined
-REPLACE_PERL=	spiceprm
+USE_BUILDLINK_ONLY=	YES
+NO_BUILD=		YES
+REPLACE_PERL=		spiceprm
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/spiceprm ${PREFIX}/bin/spiceprm
@@ -21,4 +20,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/spiceprm
 	${INSTALL_DATA} ${WRKSRC}/EXAMPLES ${PREFIX}/share/examples/spiceprm
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

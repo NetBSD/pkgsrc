@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/10/29 19:58:43 hubertf Exp $
+# $NetBSD: Makefile,v 1.29 2001/11/28 05:20:45 jlam Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/06/13 20:00:47 max Exp
 #
 
@@ -12,11 +12,12 @@ COMMENT=	Generates automatic source code configuration scripts
 
 DEPENDS=	m4-1.4:../../devel/m4
 
-USE_PERL5=	yes
-M4=		${PREFIX}/bin/gm4
+USE_BUILDLINK_ONLY=	YES
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ENV+=	AWK="${AWK}"
-INFO_FILES=	autoconf.info standards.info
+GNU_CONFIGURE=		YES
+CONFIGURE_ENV+=		AWK="${AWK}"
+M4=			${PREFIX}/bin/gm4
+
+INFO_FILES=		autoconf.info standards.info
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/25 04:17:41 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2001/11/28 05:20:47 jlam Exp $
 #
 
 DISTNAME=	global-4.0.1
@@ -9,9 +9,9 @@ MAINTAINER=	abs@netbsd.org
 HOMEPAGE=	http://www.tamacom.com/global/
 COMMENT=	Source code tag system including web browser output
 
-USE_PERL5=	yes
-MANCOMPRESSED_IF_MANZ=	yes
-GNU_CONFIGURE=	yes
+USE_BUILDLINK_ONLY=	YES
+MANCOMPRESSED_IF_MANZ=	YES
+GNU_CONFIGURE=		YES
 
 LDFLAGS+=	-L../libutil
 MAKE_ENV+=      LIBDIR="${PREFIX}/lib"
@@ -20,6 +20,7 @@ MAKE_ENV+=      LINTLIBDIR="${PREFIX}/libdata/lint"
 MAKE_ENV+=      BINDIR="${PREFIX}/bin"
 
 pre-install:
-	@if [ ! -d ${PREFIX}/libdata/lint ];then ${INSTALL_DATA_DIR} ${PREFIX}/libdata/lint;fi
+	${INSTALL_DATA_DIR} ${PREFIX}/libdata/lint
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

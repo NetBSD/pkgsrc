@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/03/05 16:40:48 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/11/28 05:20:42 jlam Exp $
 
 DISTNAME=	sirc-2.211
 PKGNAME=	sirc-2.211nb1
@@ -13,8 +13,6 @@ HOMEPAGE=	http://www.iagora.com/~espel/sirc/sirc.html
 COMMENT=	IRC client written and programmable in perl
 
 DEPENDS+=	p5-Socket6>=0.07:../../net/p5-Socket6
-
-USE_PERL5=	# defined
 
 # supports IPv6 (actually, af independent)
 BUILD_DEFS+=	USE_INET6
@@ -76,4 +74,5 @@ do-install:
 		${ECHO} installing $$i ; \
 		${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/$$i ${PREFIX}/lib/sirc/scripts/$$i ; done
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/10/26 12:56:21 agc Exp $
+# $NetBSD: Makefile,v 1.14 2001/11/28 05:20:38 jlam Exp $
 
 DISTNAME=		lmbench-2alpha11
 PKGNAME=		lmbench-2.11a
@@ -10,9 +10,9 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.bitmover.com/lm/lmbench/
 COMMENT=		Complete benchmark that gives a large amount of information
 
+USE_BUILDLINK_ONLY=	YES
+USE_GMAKE=		YES
 ALL_TARGET=		build
-USE_GMAKE=		yes
-USE_PERL5=		yes
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
 post-configure:
@@ -53,4 +53,5 @@ results:
 	-@cd ${PREFIX}/share/lmbench ; \
 	tar -cf /tmp/benches/`domainname`/lmbench.`uname`-`uname -m`-`uname -r`.`hostname`.tar results
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
