@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2002/12/12 04:38:30 kim Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/09/23 01:57:18 kim Exp $
 bin/tmda-address
 bin/tmda-check-address
 bin/tmda-filter
@@ -8,6 +8,10 @@ bin/tmda-ofmipd
 bin/tmda-pending
 bin/tmda-rfilter
 bin/tmda-sendmail
+${PYSITELIB}/TMDA/Address.py
+${PYSITELIB}/TMDA/Address.pyc
+${PYSITELIB}/TMDA/Auth.py
+${PYSITELIB}/TMDA/Auth.pyc
 ${PYSITELIB}/TMDA/AutoResponse.py
 ${PYSITELIB}/TMDA/AutoResponse.pyc
 ${PYSITELIB}/TMDA/Cookie.py
@@ -26,6 +30,8 @@ ${PYSITELIB}/TMDA/MTA.py
 ${PYSITELIB}/TMDA/MTA.pyc
 ${PYSITELIB}/TMDA/MessageLogger.py
 ${PYSITELIB}/TMDA/MessageLogger.pyc
+${PYSITELIB}/TMDA/Pending.py
+${PYSITELIB}/TMDA/Pending.pyc
 ${PYSITELIB}/TMDA/SMTP.py
 ${PYSITELIB}/TMDA/SMTP.pyc
 ${PYSITELIB}/TMDA/Util.py
@@ -79,6 +85,7 @@ ${PYSITELIB}/TMDA/pythonlib/email/base64MIME.pyc
 ${PYSITELIB}/TMDA/pythonlib/email/quopriMIME.py
 ${PYSITELIB}/TMDA/pythonlib/email/quopriMIME.pyc
 ${HTMLDIR}/bugs.html
+${HTMLDIR}/challengeresponse.html
 ${HTMLDIR}/config-client.html
 ${HTMLDIR}/config-filter.html
 ${HTMLDIR}/config-pre.html
@@ -94,12 +101,17 @@ ${HTMLDIR}/howtos.html
 ${HTMLDIR}/index.html
 ${HTMLDIR}/install.html
 ${HTMLDIR}/inuse.html
+${HTMLDIR}/mirrors.html
 ${HTMLDIR}/press.html
 ${HTMLDIR}/requirements.html
 ${HTMLDIR}/resources.html
 ${HTMLDIR}/results.html
+${HTMLDIR}/support-commercial.html
 ${HTMLDIR}/tmda-ofmipd.html
+${HTMLDIR}/tmda-vdomains.html
 ${HTMLDIR}/trouble.html
+${HTMLDIR}/upgrade.html
+${DOCDIR}/CODENAMES
 ${DOCDIR}/COPYING
 ${DOCDIR}/CRYPTO
 ${DOCDIR}/ChangeLog
@@ -113,8 +125,18 @@ ${DOCDIR}/contrib/def2html
 ${DOCDIR}/contrib/printcdb
 ${DOCDIR}/contrib/printdbm
 ${DOCDIR}/contrib/sample.config
+${DOCDIR}/contrib/sendit.sh
+${DOCDIR}/contrib/smtp-check-sender
 ${DOCDIR}/contrib/tmda.el
 ${DOCDIR}/contrib/tmda.spec
+${DOCDIR}/contrib/tofmipd.init
+${DOCDIR}/contrib/tofmipd.sysconfig
+${DOCDIR}/contrib/update-internaldomains
+${DOCDIR}/contrib/vadduser-tmda
+${DOCDIR}/contrib/vmailmgr-vdir.sh
+${DOCDIR}/contrib/vpopmail-vdir.sh
+${DOCDIR}/contrib/vtmdarc
+${DOCDIR}/contrib/wrapfd3.sh
 ${SHAREDIR}/bounce.txt
 ${SHAREDIR}/confirm_accept.txt
 ${SHAREDIR}/confirm_request.txt
