@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/10/18 15:20:25 veego Exp $
+# $NetBSD: Makefile,v 1.21 2001/11/21 22:12:24 wiz Exp $
 
 DISTNAME=		cyrus-imapd-2.0.16
 SVR4_PKGNAME=		cimap
@@ -101,7 +101,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/imapd.conf ${EGDIR}
 	${INSTALL_DATA_DIR} ${HTMLDIR}
-	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html ${HTMLDIR}
+	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html cyrusv2.mc ${HTMLDIR}
 	cd ${WRKSRC}/master/conf; ${INSTALL_DATA} *.conf ${EGDIR}
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:59:46 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/21 22:12:24 wiz Exp $
 bin/imtest
 bin/installsieve
 bin/sieveshell
@@ -73,6 +73,7 @@ share/doc/html/cyrus-imapd/anoncvs.html
 share/doc/html/cyrus-imapd/bugs.html
 share/doc/html/cyrus-imapd/changes.html
 share/doc/html/cyrus-imapd/cyradm.1.html
+share/doc/html/cyrus-imapd/cyrusv2.mc
 share/doc/html/cyrus-imapd/faq.html
 share/doc/html/cyrus-imapd/feedback.html
 share/doc/html/cyrus-imapd/index.html
