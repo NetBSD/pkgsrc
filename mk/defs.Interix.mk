@@ -1,4 +1,4 @@
-# $NetBSD: defs.Interix.mk,v 1.6 2004/03/11 22:57:22 agc Exp $
+# $NetBSD: defs.Interix.mk,v 1.7 2004/03/29 02:27:44 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -81,7 +81,7 @@ USERADD?=	${FALSE}
 GROUPADD?=	${FALSE}
 
 CPP_PRECOMP_FLAGS?=	# unset
-DEF_UMASK?=		0022
+DEF_UMASK?=		002
 EXPORT_SYMBOLS_LDFLAGS?=-Wl,-E	# add symbols to the dynamic symbol table
 
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
