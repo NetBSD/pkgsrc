@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.256 2004/07/06 22:49:16 wiz Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.257 2004/07/10 22:32:28 salo Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -736,6 +736,16 @@ CLAMAV_USER?=	clamav
 # Used in clamav to specify the user to run clamav
 # Possible: any user name
 # Default: clamav
+
+CONSERVER_DEFAULTHOST?=	localhost
+# Used by conserver package to specify the master server hostname.
+# Possible: any hostname
+# Default: localhost
+
+CONSERVER_DEFAULTPORT?=	782
+# Used by conserver package to specify the default listen port.
+# Possible: 1-65535
+# Default: 782
 
 CUE_USE_CANNA?=	NO
 # Used by cue package to determine whether to enable Canna support.
