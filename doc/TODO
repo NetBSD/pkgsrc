@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.450 2003/04/07 09:34:22 seb Exp $
+$NetBSD: TODO,v 1.451 2003/04/07 10:45:06 cjep Exp $
 
 Suggested new packages
 ======================
@@ -243,7 +243,6 @@ Suggested package updates
 	o stella-1.3
 	o subversion-0.20.1 [pkg/20725]
 	o suck-4.3.2
-	o sudo-1.6.7p3
 	o sun-jdk14-1.4.2
 	o sun-jre14-1.4.2
 	o sweep-0.8.1
