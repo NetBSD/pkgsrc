@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/03/10 08:32:20 jmc Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/10 13:07:25 skrll Exp $
 #
 
-DISTNAME=	wonka-src-0.9.4-release
-PKGNAME=	wonka-0.9.4
+DISTNAME=	wonka-src-0.9.5-release
+PKGNAME=	wonka-0.9.5
 CATEGORIES=	lang
 MASTER_SITES=	http://wonka.acunia.com/
 
@@ -15,7 +15,7 @@ ONLY_FOR_PLATFORM=	*-*-i386 *-*-arm32
 
 BUILD_DEPENDS+=	acunia-jam>=1.0nb1:../../devel/acunia-jam
 BUILD_DEPENDS+=	jamjar-[0-9]*:../../archivers/jamjar
-BUILD_DEPENDS+=	jikes-1.12:../../lang/jikes112
+BUILD_DEPENDS+=	jikes>=1.18:../../lang/jikes
 BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
 USE_BUILDLINK2=	# defined
