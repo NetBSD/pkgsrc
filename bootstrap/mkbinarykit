@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mkbinarykit,v 1.3 2004/03/31 23:46:14 jschauma Exp $
+# $NetBSD: mkbinarykit,v 1.4 2004/04/04 01:59:52 grant Exp $
 #
 # Make a binary bootstrap kit and place it in targetdir (or current
 # working directory if not specified). The mk.conf.example file is
@@ -8,8 +8,6 @@
 # may already have a /etc/mk.conf file) or to the location specified
 # by using --mkconf. Run this program from the bootstrap-pkgsrc 
 # directory.
-
-# Based on an e-mail from grant@netbsd.org -- cjep
 
 usage="Usage: $0 "'
 	[ --force ] [ --targetdir=<tar target dir> ] [ --mkconf=<target> ]
