@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2004/03/26 02:27:45 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2004/04/11 03:38:26 rh Exp $
 #
 
-DISTNAME=	gnustep-1.6.0
-PKGREVISION=	5
+DISTNAME=	gnustep-1.9.1
 CATEGORIES=	meta-pkgs x11 gnustep
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -11,22 +10,26 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnustep.org/
 COMMENT=	Meta-package for GNUstep
 
+DEPENDS+=	gnustep-base>=1.9.1:../../devel/gnustep-base
+DEPENDS+=	gnustep-ssl>=1.9.1:../../security/gnustep-ssl
+DEPENDS+=	gnustep-back>=0.9.2:../../x11/gnustep-back
 DEPENDS+=	gnustep-examples>0.9.7:../../devel/gnustep-examples
-DEPENDS+=	gnustep-preferences>=1.2.0nb2:../../x11/gnustep-preferences
-DEPENDS+=	ImageViewer-[0-9]*:../../graphics/ImageViewer
-DEPENDS+=	3DKit-[0-9]*:../../graphics/3DKit
-DEPENDS+=	GNUMail>1.0.3:../../mail/GNUMail
-DEPENDS+=	Gorm>=0.2.0:../../devel/Gorm
+DEPENDS+=	ImageViewer>=0.6.2:../../graphics/ImageViewer
+DEPENDS+=	GNUMail>=1.1.2:../../mail/GNUMail
+DEPENDS+=	Gorm>=0.6.0:../../devel/Gorm
+DEPENDS+=	ProjectCenter>=0.3.6:../../devel/ProjectCenter
+DEPENDS+=	Renaissance>=0.7.0:../../devel/ProjectCenter
+DEPENDS+=	gworkspace>=0.6.3:../../sysutils/gworkspace
 
 USE_X11=	yes
-USE_BUILDLINK2=	yes
-EXTRACT_ONLY=	# empty
+USE_BUILDLINK3=	yes
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 NO_MTREE=	yes
+EXTRACT_ONLY=	# empty
 
 do-install:	# empty
 
-.include "../../x11/gnustep-back/buildlink2.mk"
+.include "../../x11/gnustep-back/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
