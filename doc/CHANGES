@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.281 2002/10/16 10:15:42 rh Exp $
+$NetBSD: CHANGES,v 1.282 2002/10/16 10:30:23 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3294,3 +3294,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added eel2-2.0.7 [rh 2002-10-16]
 	Updated sylpheed to 0.8.5 [chris 2002-10-16]
 	Updated libart2 to 2.3.10nb1 [rh 2002-10-16]
+	Added librsvg2-2.0.1 [rh 2002-10-16]
