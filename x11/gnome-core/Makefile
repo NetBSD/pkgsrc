@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 1999/10/07 17:42:00 tron Exp $
+# $NetBSD: Makefile,v 1.28 1999/10/22 07:54:17 agc Exp $
 #
 
 DISTNAME=		gnome-core-1.0.9
@@ -12,8 +12,6 @@ DEPENDS+=		esound-0.2.8:../../audio/esound
 DEPENDS+=		gnome-libs-1.0.16:../../x11/gnome-libs
 # "libgtop" packages is broken at the moment.
 #DEPENDS+=		libgtop-1.0.2:../../devel/libgtop
-
-NOT_FOR_PLATFORM=	*-*-alpha	# problems with gtk
 
 GNU_CONFIGURE=		yes
 USE_X11BASE=		yes
