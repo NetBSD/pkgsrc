@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.273 2002/10/16 04:32:24 kent Exp $
+$NetBSD: CHANGES,v 1.274 2002/10/16 04:48:20 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3286,3 +3286,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated gnome-vfs2 to 2.0.4nb2 [rh 2002-10-16]
 	Added gtkglext-0.5.1 [rh 2002-10-16]
 	Updated gcc-ssp to 2.95.3.12 [kent 2002-10-16]
+	Added papaya-0.1.7 [rh 2002-10-16]
