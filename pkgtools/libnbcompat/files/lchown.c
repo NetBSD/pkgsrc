@@ -1,4 +1,4 @@
-/*	$NetBSD: lchown.c,v 1.1.1.1 2003/03/31 05:02:52 grant Exp $	*/
+/*	$NetBSD: lchown.c,v 1.2 2004/08/23 03:32:12 jlam Exp $	*/
 
 /*-
  * Copyright (c) 2002 The NetBSD Foundation, Inc.
@@ -39,8 +39,9 @@
 /* Emulate lchown(2), checking path with lstat(2) first to ensure that
  * it's not a symlink, and then call chown(2) */
 
-#include <sys/stat.h>
-#include <unistd.h>
+#include <nbcompat.h>
+#include <nbcompat/stat.h>
+#include <nbcompat/unistd.h>
 
 int
 lchown(const char *path, uid_t owner, gid_t group)

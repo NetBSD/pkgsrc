@@ -1,4 +1,4 @@
-/*	$NetBSD: rmd160.c,v 1.5 2004/08/16 17:24:56 jlam Exp $	*/
+/*	$NetBSD: rmd160.c,v 1.6 2004/08/23 03:32:12 jlam Exp $	*/
 
 /********************************************************************\
  *
@@ -18,36 +18,31 @@
  *
 \********************************************************************/
 
-#include "nbcompat/nbconfig.h"
-#include "nbcompat/nbtypes.h"
+#if HAVE_NBTOOL_CONFIG_H
+#include "nbtool_config.h"
+#endif
 
+#include <nbcompat.h>
+#include <nbcompat/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: rmd160.c,v 1.5 2004/08/16 17:24:56 jlam Exp $");
+__RCSID("$NetBSD: rmd160.c,v 1.6 2004/08/23 03:32:12 jlam Exp $");
 #endif	/* not lint */
 
 /* header files */
+#include <nbcompat/types.h>
+#include <nbcompat/endian.h>
 
-/* #include "namespace.h" */
-
-#include <assert.h>
-#include "nbcompat/rmd160.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-#ifndef _DIAGASSERT
-#define _DIAGASSERT(cond)	assert(cond)
+#if 0
+#include "namespace.h"
 #endif
 
-#if defined(HAVE_MEMSET)
-#define ZEROIZE(d, l)           memset((d), 0, (l)) 
-#else 
-# if defined(HAVE_BZERO)
-#define ZEROIZE(d, l)           bzero((d), (l))
-# else
-#error You need either memset or bzero 
-# endif 
-#endif
+#include <nbcompat/assert.h>
+#include <nbcompat/rmd160.h>
+#include <nbcompat/stdio.h>
+#include <nbcompat/stdlib.h>
+#include <nbcompat/string.h>
+
+#if !HAVE_RMD160_H
 
 #if 0
 #if !defined(_KERNEL) && defined(__weak_alias)
@@ -56,6 +51,16 @@ __weak_alias(RMD160Init,_RMD160Init)
 __weak_alias(RMD160Update,_RMD160Update)
 __weak_alias(RMD160Final,_RMD160Final)
 #endif
+#endif
+
+#if defined(HAVE_MEMSET)
+#define ZEROIZE(d, l)		memset((d), 0, (l)) 
+#else 
+# if defined(HAVE_BZERO)
+#define ZEROIZE(d, l)		bzero((d), (l))
+# else
+#error You need either memset or bzero 
+# endif 
 #endif
 
 /********************************************************************/
@@ -465,3 +470,4 @@ RMD160Final(u_char digest[20], RMD160_CTX *context)
 }
 
 /************************ end of file rmd160.c **********************/
+#endif /* HAVE_RMD160_H */

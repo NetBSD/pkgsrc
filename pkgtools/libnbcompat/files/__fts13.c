@@ -1,4 +1,4 @@
-/*	$NetBSD: __fts13.c,v 1.6 2004/08/16 17:24:56 jlam Exp $	*/
+/*	$NetBSD: __fts13.c,v 1.7 2004/08/23 03:32:12 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1990, 1993, 1994
@@ -29,61 +29,43 @@
  * SUCH DAMAGE.
  */
 
-#include "nbcompat/nbconfig.h"
-
-#if HAVE_SYS_CDEFS_H
-#include <sys/cdefs.h>
+#if HAVE_NBTOOL_CONFIG_H
+#include "nbtool_config.h"
 #endif
 
+#include <nbcompat.h>
+#include <nbcompat/cdefs.h>
 #if defined(LIBC_SCCS) && !defined(lint)
 #if 0
 static char sccsid[] = "@(#)fts.c	8.6 (Berkeley) 8/14/94";
 #else
-__RCSID("$NetBSD: __fts13.c,v 1.6 2004/08/16 17:24:56 jlam Exp $");
+__RCSID("$NetBSD: __fts13.c,v 1.7 2004/08/23 03:32:12 jlam Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
-#if HAVE_SYS_PARAM_H
-#include <sys/param.h>
+#if 0
+#include "namespace.h"
 #endif
-#if HAVE_SYS_STAT_H
-#include <sys/stat.h>
-#endif
+#include <nbcompat/param.h>
+#include <nbcompat/stat.h>
 
-#if HAVE_ASSERT_H
-#include <assert.h>
-#endif
-
-#if HAVE_DIRENT_H
-#include <dirent.h>
-#endif
-
+#include <nbcompat/assert.h>
+#include <nbcompat/dirent.h>
 #if HAVE_ERRNO_H
 #include <errno.h>
 #endif
-
 #if HAVE_FCNTL_H
 #include <fcntl.h>
 #endif
+#include <nbcompat/fts.h>
+#include <nbcompat/stdlib.h>
+#include <nbcompat/string.h>
+#include <nbcompat/unistd.h>
 
-#if HAVE_LIMITS_H
-#include <limits.h>
-#endif
-
-#include "nbcompat/fts.h"
-
-#if HAVE_STDLIB_H
-#include <stdlib.h>
-#endif
-#if HAVE_STRING_H
-#include <string.h>
-#endif
-#if HAVE_UNISTD_H
-#include <unistd.h>
-#endif
-
-#if !HAVE_CONFIG_H
+#if 0
+#if ! HAVE_NBTOOL_CONFIG_H
 #define HAVE_STRUCT_DIRENT_D_NAMLEN 1
+#endif
 #endif
 
 #if 0
@@ -104,6 +86,7 @@ __weak_alias(fts_set,_fts_set)
 #define	STAT	stat
 #endif
 
+#if 0
 #ifdef __LIBC12_SOURCE__
 __warn_references(fts_children,
     "warning: reference to compatibility fts_children();"
@@ -120,6 +103,7 @@ __warn_references(fts_read,
 __warn_references(fts_set,
     "warning: reference to compatibility fts_set();"
     " include <fts.h> for correct reference")
+#endif
 #endif
 
 static FTSENT	*fts_alloc __P((FTS *, const char *, size_t));
@@ -151,18 +135,6 @@ static int	 fts_safe_changedir __P((const FTS *, const FTSENT *, int,
 
 #ifndef DTF_HIDEW
 #undef FTS_WHITEOUT
-#endif
-
-#ifndef _DIAGASSERT
-#define _DIAGASSERT(cond)	assert(cond)
-#endif
-
-#ifndef MAX
-#define MAX(a,b)	(((a) > (b)) ? (a) : (b))
-#endif
-
-#ifndef MIN
-#define MIN(a,b)	(((a) < (b)) ? (a) : (b))
 #endif
 
 FTS *
@@ -647,14 +619,6 @@ fts_children(sp, instr)
 	(void)close(fd);
 	return (sp->fts_child);
 }
-
-#if !defined(HAVE_DIRFD) && !defined(dirfd) && !(defined __GLIBC__ && __GLIBC__ >= 2)
-static int
-dirfd(DIR *dirp)
-{
-	return (dirp == NULL) ? -1 : dirp->dd_fd;
-}
-#endif
 
 /*
  * This is the tricky part -- do not casually change *anything* in here.  The

@@ -1,4 +1,4 @@
-/*	$NetBSD: regex.h,v 1.1 2004/08/16 17:24:57 jlam Exp $	*/
+/*	$NetBSD: regex.h,v 1.2 2004/08/23 03:32:13 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1992, 1993
@@ -74,12 +74,8 @@
 #ifndef _NBCOMPAT_REGEX_H_
 #define	_NBCOMPAT_REGEX_H_
 
-#if HAVE_SYS_CDEFS_H
-#include <sys/cdefs.h>
-#endif
-#if HAVE_SYS_TYPES_H
-#include <sys/types.h>
-#endif
+#include <nbcompat/cdefs.h>
+#include <nbcompat/types.h>
 
 /* types */
 #if 1  /* __LIBC12_SOURCE__ - should go away */
