@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.196 2004/11/10 16:21:06 wiz Exp $
+# $NetBSD: Makefile,v 1.197 2004/11/18 09:15:15 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -105,6 +105,8 @@ SUBDIR+=	perl58
 SUBDIR+=	perl58-thread
 SUBDIR+=	pforth
 SUBDIR+=	pgcc
+#SUBDIR+=	php		# only contains Makefile fragments
+#SUBDIR+=	php5		# only contains Makefile fragments
 SUBDIR+=	pnet
 SUBDIR+=	pnetC
 SUBDIR+=	pnetlib
