@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2002/08/28 05:31:00 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2002/09/10 16:06:42 wiz Exp $
 #
 
 DISTNAME=	apla-1.0.3
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://pd37.warszawa.sdi.tpnet.pl/NetBSD/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2001/10/24 22:10:48 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2002/09/10 16:06:35 wiz Exp $
 
 DISTNAME=		jpilot-0.99
 PKGNAME=		jpilot-expense-0.99
+PKGREVISION=		1
 WRKSRC=			${WRKDIR}/${DISTNAME}/Expense
 CATEGORIES=		comms
 MASTER_SITES=		http://jpilot.org/
