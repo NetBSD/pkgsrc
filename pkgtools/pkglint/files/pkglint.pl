@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.46 2001/04/21 12:54:17 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.47 2001/04/22 16:16:15 wiz Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -335,7 +335,7 @@ sub checkdistinfo {
 	}
 	close(SUM);
 
-	foreach $patch ( <$portdir/$patchdir/patch-[a-z0-9]+> ) {
+	foreach $patch ( <$portdir/$patchdir/patch-*> ) {
 		$patch =~ /\/([^\/]+)$/;
 		if (! $indistinfofile{$1}) {
 			&perror("FATAL: patchsum of '$1' is in $portdir/$patchdir/$1 but not in\n"
