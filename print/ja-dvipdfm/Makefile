@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.6 2003/12/24 13:02:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/12/24 13:02:55 jmmv Exp $
 
 DISTNAME=	dvipdfm-0.13.2c
-PKGNAME=        ja-${DISTNAME}
+PKGNAME=	ja-${DISTNAME}
 PKGREVISION=	1
 WRKSRC=		${WRKDIR}/dvipdfm
 CATEGORIES=	print converters
 MASTER_SITES=	ftp://ftp.kettering.edu/pub/outgoing/mwicks/dvipdfm/
 
 PATCH_SITES=	http://www.nn.iij4u.or.jp/%7Etutimura/hirata/distfiles/
-PATCHFILES=     dvipdfm-0.13.2c-jpatch-p1d.diff.gz
-PATCH_DIST_STRIP= -p1
+PATCHFILES=	dvipdfm-0.13.2c-jpatch-p1d.diff.gz
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://gaspra.kettering.edu/dvipdfm
