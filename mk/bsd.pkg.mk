@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1579 2005/02/04 09:19:41 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1580 2005/02/09 16:03:47 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -3197,7 +3197,7 @@ package: uptodate-pkgtools install acquire-package-lock ${PACKAGE_COOKIE} releas
 
 .PHONY: replace
 .if !target(replace)
-replace: uptodate-pkgtools build real-replace
+replace: uptodate-pkgtools ${_PKGSRC_BUILD_TARGETS} real-replace
 .endif
 
 .PHONY: undo-replace
