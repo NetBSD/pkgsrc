@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2855 2003/07/22 08:26:38 gehenna Exp $
+$NetBSD: CHANGES,v 1.2856 2003/07/22 09:00:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2892,4 +2892,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added ap2-ruby-1.1.1 [epg 2003-07-21]
 	Added tcptraceroute-1.4 [kim 2003-07-21]
 	Updated dbh to 1.0.15 [martti 2003-07-22]
+	Updated gtkmm to 2.2.5 [adam 2003-07-22]
 	Updated cvsync to 0.24.1 [gehenna 2003-07-22]
