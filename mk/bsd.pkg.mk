@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.878 2001/12/10 19:36:10 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.879 2001/12/11 16:28:55 abs Exp $
 #
 # This file is in the public domain.
 #
@@ -367,7 +367,7 @@ PATCH_FUZZ_FACTOR?=	-F0			# Default to zero fuzz
 # the benefit of pre 1.5 NetBSD systems. "gzcat" on newer systems happily
 # decodes bzip2.] Do likewise for ".zip" and ".lha" distfiles.
 EXTRACT_SUFX?=		.tar.gz
-.if ${EXTRACT_SUFX} == ".tar.bz2"
+.if ${EXTRACT_SUFX} == ".tar.bz2" || ${EXTRACT_SUFX} == ".tbz"
 .  if exists(/usr/bin/bzcat)
 BZCAT=			/usr/bin/bzcat <
 .  else
