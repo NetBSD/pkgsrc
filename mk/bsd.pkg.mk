@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.34 2003/08/26 00:14:31 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.35 2003/08/26 21:52:09 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -86,11 +86,6 @@ PKGWILDCARD?=		${PKGBASE}-[0-9]*
 _DISTDIR?=		${DISTDIR}/${DIST_SUBDIR}
 
 INTERACTIVE_STAGE?=	none
-
-# The style of installation to be performed for the package.
-# Possible: overwrite, pkgviews
-#
-PKG_INSTALLATION_TYPE?=	overwrite
 
 # PKG_INSTALLATION_TYPE can only be one of two values: "pkgviews" or
 # "overwrite".
@@ -185,13 +180,7 @@ NO_MTREE=		yes
 PKG_FAIL_REASON+=	"DEPOT_SUBDIR may not be empty."
 .endif
 
-# _PKG_DBDIR is the actual packages database directory where we register
-# packages.
-#
-.if ${PKG_INSTALLATION_TYPE} == "overwrite"
-_PKG_DBDIR=		${PKG_DBDIR}
-.elif ${PKG_INSTALLATION_TYPE} == "pkgviews"
-_PKG_DBDIR=		${DEPOTBASE}
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 #
 # _PLIST_IGNORE_FILES basically mirrors the list of ignored files found
 # in pkg_views(1).  It's used by the dynamic PLIST generator to skip
