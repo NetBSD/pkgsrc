@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.3 2003/03/31 08:41:06 grant Exp $
+# $NetBSD: Makefile.in,v 1.4 2003/06/10 05:59:16 grant Exp $
 #
 
 srcdir	= @srcdir@
@@ -21,7 +21,7 @@ LIB	= libnbcompat.a
 OBJS	= @LIBOBJS@ \
 	md5c.o md5hl.o rmd160.o rmd160hl.o sha1.o sha1hl.o \
 	sha2.o sha2hl.o unvis.o vis.o setmode.o __fts13.o \
-	getid.o misc.o pack_dev.o spec.o stat_flags.o \
+	getid.o misc.o pack_dev.o spec.o setmode.o stat_flags.o \
 	pwcache.o
 
 LINK=   = $(CCLD) $(CFLAGS) $(LDFLAGS) -o $@
