@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2003/08/14 12:08:00 abs Exp $
+$NetBSD: distinfo,v 1.4 2003/09/21 16:42:45 lukem Exp $
 
-SHA1 (rdiff-backup-0.12.3.tar.gz) = 33232de2da1a63b368da5589f4c036b20e8b70b0
-Size (rdiff-backup-0.12.3.tar.gz) = 117136 bytes
+SHA1 (rdiff-backup-0.12.4.tar.gz) = 491094bc05b9df766dc22850226fcd21edfa3c35
+Size (rdiff-backup-0.12.4.tar.gz) = 121848 bytes
 SHA1 (patch-ab) = f6811affdb6c5dda7857ddfeb5965fd6a15ea63e
