@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 13:30:52 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/03/12 10:51:47 tron Exp $
 
 DISTNAME=	WSoundPrefs-0.9.3
 PKGNAME=	wsoundprefs-0.9.3
@@ -11,7 +11,7 @@ COMMENT=	WMSound configuration utility
 
 DEPENDS+=	wmsound-0.9.4:../../audio/wmsound
 
-USE_X11BASE=	yes
-USE_IMAKE=	yes
+USE_X11BASE=	YES
+USE_IMAKE=	YES
 
 .include "../../mk/bsd.pkg.mk"
