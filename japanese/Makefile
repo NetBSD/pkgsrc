@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 1999/05/10 04:39:29 sakamoto Exp $
+# $NetBSD: Makefile,v 1.5 1999/06/07 07:20:48 sakamoto Exp $
 #
 
     SUBDIR += ack
+    SUBDIR += ja-a2ps
     SUBDIR += ja-less
     SUBDIR += micq
     SUBDIR += nkf
