@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 1998/08/07 11:09:31 agc Exp $
+$NetBSD: patch-ac,v 1.3 2003/06/07 17:48:34 jmmv Exp $
 
 --- cucipop.8.orig	Mon May 11 17:35:19 1998
 +++ cucipop.8	Tue Jul 21 11:17:48 1998
@@ -22,18 +22,18 @@ $NetBSD: patch-ac,v 1.2 1998/08/07 11:09:31 agc Exp $
  would be suitable:
  .Sx 1
 -pop-3   stream  tcp     nowait  root    /usr/sbin/cucipop cucipop -Y
-+pop-3   stream  tcp     nowait  root    /usr/pkg/sbin/cucipop cucipop -Y
++pop-3   stream  tcp     nowait  root    @prefix@/sbin/cucipop cucipop -Y
  .Ex
  If your site gets many hits from popclients, it would be preferable
  to start cucipop standalone as in:
  .Sx 1
 -/usr/sbin/cucipop -Y
-+/usr/pkg/sbin/cucipop -Y
++@prefix@/sbin/cucipop -Y
  .Ex
  Your typical BOFH setting would be:
  .Sx 1
 -/usr/sbin/cucipop -YaSE 6w
-+/usr/pkg/sbin/cucipop -YaSE 6w
++@prefix@/sbin/cucipop -YaSE 6w
  .Ex
  .SH FILES
  .TP 2.3i
