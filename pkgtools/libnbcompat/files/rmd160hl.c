@@ -1,4 +1,4 @@
-/*	$NetBSD: rmd160hl.c,v 1.1.1.1 2003/03/31 05:02:57 grant Exp $	*/
+/*	$NetBSD: rmd160hl.c,v 1.2 2003/09/01 15:31:19 jlam Exp $	*/
 
 /* rmd160hl.c
  * ----------------------------------------------------------------------------
@@ -11,30 +11,30 @@
  * from OpenBSD: rmd160hl.c,v 1.2 1999/08/17 09:13:12 millert Exp $
  */  
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
+#if HAVE_CONFIG_H
+#include "nbconfig.h"
 #endif
 
 #include <nbtypes.h>
 
 #ifndef lint
-__RCSID("$NetBSD: rmd160hl.c,v 1.1.1.1 2003/03/31 05:02:57 grant Exp $");
+__RCSID("$NetBSD: rmd160hl.c,v 1.2 2003/09/01 15:31:19 jlam Exp $");
 #endif	/* not lint */
 
 
 /* #include "namespace.h" */
 
 #include <assert.h>
-#ifdef HAVE_ERRNO_H
+#if HAVE_ERRNO_H
 #include <errno.h>
 #endif
-#ifdef HAVE_FCNTL_H
+#if HAVE_FCNTL_H
 #include <fcntl.h>
 #endif
 #include <rmd160.h>
 #include <stdio.h>
 #include <stdlib.h>
-#ifdef HAVE_UNISTD_H
+#if HAVE_UNISTD_H
 #include <unistd.h>
 #endif
 

@@ -1,4 +1,4 @@
-/*	$NetBSD: pack_dev.c,v 1.1.1.1 2003/03/31 05:02:47 grant Exp $	*/
+/*	$NetBSD: pack_dev.c,v 1.2 2003/09/01 15:31:19 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1998, 2001 The NetBSD Foundation, Inc.
@@ -35,8 +35,8 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-#ifdef HAVE_CONFIG_H
-#include <config.h>
+#if HAVE_CONFIG_H
+#include "nbconfig.h"
 #endif
 
 #include <nbtypes.h>
@@ -46,13 +46,13 @@
 #endif
 
 #if defined(__RCSID) && !defined(lint)
-__RCSID("$NetBSD: pack_dev.c,v 1.1.1.1 2003/03/31 05:02:47 grant Exp $");
+__RCSID("$NetBSD: pack_dev.c,v 1.2 2003/09/01 15:31:19 jlam Exp $");
 #endif /* not lint */
 
 #include <sys/types.h>
 #include <sys/stat.h>
 
-#ifdef HAVE_ERR_H
+#if HAVE_ERR_H
 #include <err.h>
 #endif
 
@@ -62,7 +62,7 @@ __RCSID("$NetBSD: pack_dev.c,v 1.1.1.1 2003/03/31 05:02:47 grant Exp $");
 #include <string.h>
 #include <unistd.h>
 
-#ifdef HAVE_SYS_MKDEV_H
+#if HAVE_SYS_MKDEV_H
 #include <sys/mkdev.h>
 #endif
 
