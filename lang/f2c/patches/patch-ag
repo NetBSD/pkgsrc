@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.9 2004/09/14 22:09:40 dmcmahill Exp $
+$NetBSD: patch-ag,v 1.10 2005/01/28 23:37:42 dmcmahill Exp $
 
 --- libI77/makefile.orig	Tue Sep 14 17:11:44 2004
 +++ libI77/makefile
@@ -42,7 +42,7 @@ $NetBSD: patch-ag,v 1.9 2004/09/14 22:09:40 dmcmahill Exp $
 -	cp libI77.a $(LIBDIR)/libI77.a
 -	ranlib $(LIBDIR)/libI77.a || true
 +install:	libI77.la
-+	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} libI77.la ${LIBDIR}
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} libI77.la ${LIBDIR}
  
 -Version.o: Version.c
 -	$(CC) -c Version.c
