@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2003/12/11 16:05:40 adam Exp $
+$NetBSD: patch-ad,v 1.5 2005/04/04 08:56:18 adam Exp $
 
---- devices.c.orig	2002-05-01 10:17:50.000000000 +0000
+--- devices.c.orig	2003-05-24 20:54:27.000000000 +0000
 +++ devices.c
-@@ -799,7 +799,7 @@ struct device devices[] = {
+@@ -807,7 +807,7 @@ struct device devices[] = {
  #endif /* __FreeBSD__ */
   
  /*** /jes -- for ALR 486 DX4/100 ***/
