@@ -1,9 +1,23 @@
+@comment $NetBSD: PLIST,v 1.2 1999/03/07 16:51:45 rh Exp $
+etc/ftpaccess.example
+etc/ftpconversions.example
+etc/ftpgroups.example
+etc/ftphosts.example
+etc/ftpusers.example
 sbin/BeroFTPD
 sbin/ftpshut
 sbin/ftprestart
-bin/ftpcount
-bin/ftpwho
 sbin/ckconfig
 sbin/ftpck
-etc/ftpconversions
-etc/ftpaccess
+bin/ftpcount
+bin/ftpwho
+man/man1/ftpcount.1
+man/man1/ftpwho.1
+man/man5/ftpaccess.5
+man/man5/ftphosts.5
+man/man5/ftpconversions.5
+man/man5/ftpservers.5
+man/man5/xferlog.5
+man/man8/ftpd.8
+man/man8/ftpshut.8
+man/man8/ftprestart.8

@@ -1,29 +1,23 @@
-# New ports collection makefile for:   beroftpd
-# Version required:    1.2.1
-# Date created:        6 November 1998
-# Whom:                Bill Fumerola <billf@chc-chimes.com>
-#
-# $Id: Makefile,v 1.1.1.1 1999/03/07 16:49:17 rh Exp $
+# $NetBSD: Makefile,v 1.2 1999/03/07 16:51:44 rh Exp $
+# FreeBSD Id: Makefile,v 1.3 1999/02/23 22:12:30 billf Exp
 #
 
-DISTNAME=	BeroFTPD-1.3.3
-PKGNAME=	beroftpd-1.3.3
+DISTNAME=	BeroFTPD-1.3.4
+PKGNAME=	beroftpd-1.3.4
 CATEGORIES=	net
-MASTER_SITES=	ftp://beroftpd.unix.eu.org/pub/BeroFTPD/ \
+MASTER_SITES=	ftp://bero.x5.net/pub/ \
 		ftp://ftp.croftj.net/usr/bero/BeroFTPD/ \
 		ftp://ftp.kddlabs.co.jp/.2/inet/ftp/BeroFTPD/ \
 		ftp://ftp.rediris.es/mirror/BeroFTPD/ \
 		ftp://sunsite.cnlab-switch.ch/mirror/BeroFTPD/ \
 		ftp://ftp.startrek.eu.org/pub/BeroFTPD/
 
-MAINTAINER=	billf@FreeBSD.org
+MAINTAINER=	rh@NetBSD.org
+HOMEPAGE=	http://www.landfield.com/wu-ftpd/
+
+CONFLICTS+=	wu-ftpd-*
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS= --with-confdir=${PREFIX}/etc
 
-MAN1=	ftpcount.1 ftpwho.1
-MAN5=	ftpaccess.5 ftpconversions.5 ftphosts.5 xferlog.5 \
-	ftpservers.5
-MAN8=	ftpd.8 ftpshut.8 ftprestart.8
-
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
