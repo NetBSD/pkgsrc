@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.3 1999/12/23 08:07:05 sakamoto Exp $
+$NetBSD: md5,v 1.4 2000/04/13 03:08:45 sakamoto Exp $
 
-MD5 (pysol-3.10.tar.gz) = 463da6bceb2b87457f1d60f6f20002c1
-MD5 (pysol-cardsets-3.10.tar.gz) = aaf9b610ee8425f2d3baaf16da401610
+MD5 (pysol-4.00.tar.gz) = df7417195334ce581557b749c0e466ed
+MD5 (pysol-cardsets-3.40.tar.gz) = e7eda702f3cd1ba319b5f254aeea32b7
