@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.808 2001/09/10 20:03:17 martin Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.809 2001/09/11 16:41:36 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -3111,8 +3111,10 @@ COMMON_DIRS!= 	${AWK} 'BEGIN  { 				\
 
 .if !target(print-PLIST)
 print-PLIST:
-	@${ECHO} '@comment $$'NetBSD'$$'
-	@shlib_type=`${MAKE} ${MAKEFLAGS} show-shlib-type`;		\
+	${_PKG_SILENT}${_PKG_DEBUG}\
+	${ECHO} '@comment $$'NetBSD'$$'
+	${_PKG_SILENT}${_PKG_DEBUG}\
+	shlib_type=`${MAKE} ${MAKEFLAGS} show-shlib-type`;		\
 	case $$shlib_type in 						\
 	"a.out")	genlinks=1 ;;					\
 	*)		genlinks=0 ;;					\
@@ -3128,7 +3130,7 @@ print-PLIST:
 		-e  's@${LOWER_VENDOR}@\$${LOWER_VENDOR}@' 		\
 		-e  's@${LOWER_OPSYS}@\$${LOWER_OPSYS}@' 		\
 		-e  's@${PKGNAME}@\$${PKGNAME}@' 			\
-	 | ${GREP} -v emul/linux/proc					\
+	 | ( ${GREP} -v emul/linux/proc || ${TRUE} )			\
 	 | ${SORT}							\
 	 | ${AWK} '							\
 		/^@/ { print $$0; next }				\
@@ -3159,7 +3161,8 @@ print-PLIST:
 		    print $$0;						\
 		  }							\
 		}'
-	@for i in `${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} -type d	\
+	${_PKG_SILENT}${_PKG_DEBUG}\
+	for i in `${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} -type d	\
 			| ${SED}					\
 				-e s@${PREFIX}/./@@			\
 				-e '/^${PREFIX:S/\//\\\//g}\/.$$/d'	\
@@ -3179,7 +3182,7 @@ print-PLIST:
 		-e  s@${LOWER_VENDOR}@\$${LOWER_VENDOR}@ 		\
 		-e  s@${LOWER_OPSYS}@\$${LOWER_OPSYS}@ 			\
 		-e  s@${PKGNAME}@\$${PKGNAME}@ 				\
-	 | ${GREP} -v emul/linux/proc
+	 | ${GREP} -v emul/linux/proc || ${TRUE}
 .endif # target(print-PLIST)
 
 
