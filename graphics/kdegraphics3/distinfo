@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.24 2004/12/23 13:02:17 markd Exp $
+$NetBSD: distinfo,v 1.25 2005/01/20 12:36:58 markd Exp $
 
 SHA1 (kdegraphics-3.3.2.tar.bz2) = 66193a69d3cf1dc332987f52e6f00ac2e9a3152e
 Size (kdegraphics-3.3.2.tar.bz2) = 6234394 bytes
 SHA1 (patch-aa) = e47443fdb5c737eb7f06fb2ee3bfac2b5602a9dd
 SHA1 (patch-ab) = c8067b0dd514cd7376d6f02ffe3be2d2e705e439
+SHA1 (patch-ac) = 8b4b38f700d7ace1b191866c60c89b3224103a1b
