@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/07/10 01:14:02 wiz Exp $
+$NetBSD: distinfo,v 1.2 2001/08/01 13:55:31 wiz Exp $
 
-SHA1 (tfmxplay-0.4.tgz) = 186e27c231915b609caa4c7630ab3b18b5c009a5
-Size (tfmxplay-0.4.tgz) = 24031 bytes
+SHA1 (tfmxplay-0.5.tgz) = a997452756695929f1e9b76e328f64b7922834f0
+Size (tfmxplay-0.5.tgz) = 24200 bytes
 SHA1 (patch-aa) = 4e218d7727785d001aa7e7c85ae0cd75242ea697
 SHA1 (patch-ab) = e93a0650a9346cc62ac0998081bc8e467229b3ae
 SHA1 (patch-ac) = 02f4608276479c14b1ad2b6a131bea6197b12568
