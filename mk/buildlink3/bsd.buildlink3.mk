@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.120 2004/03/15 17:55:31 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.121 2004/03/16 02:03:31 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -112,9 +112,10 @@ USE_BUILTIN.${_pkg_}?=	no
 .       include "${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk"
 .    endif
 .  endif
-#
+.endfor
+
 # Default fall-through for packages that don't provide a builtin.mk.
-#
+.for _pkg_ in ${BUILDLINK_PACKAGES}
 USE_BUILTIN.${_pkg_}?=	no
 .endfor
 
