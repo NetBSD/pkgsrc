@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1999/10/27 10:43:57 fredb Exp $
+@comment $NetBSD: PLIST,v 1.4 1999/12/18 02:14:39 wrstuden Exp $
 lib/ldscripts/elf32_sparc.x
 lib/ldscripts/elf32_sparc.xbn
 lib/ldscripts/elf32_sparc.xn
@@ -88,10 +88,13 @@ lib/ldscripts/sun4.xn
 lib/ldscripts/sun4.xr
 lib/ldscripts/sun4.xu
 @unexec rmdir %D/lib/ldscripts 2>/dev/null || true
+include/ansidecl.h
+include/bfd.h
 lib/libbfd-2.9.1.so.0.0
 lib/libbfd.a
 lib/libopcodes-2.9.1.so.0.0
 lib/libopcodes.a
+lib/libiberty.a
 libexec/binutils/addr2line
 libexec/binutils/ar
 libexec/binutils/dlltool
