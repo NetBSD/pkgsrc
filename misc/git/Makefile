@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 1999/03/22 16:08:32 bad Exp $
+# $NetBSD: Makefile,v 1.15 1999/04/14 21:39:04 tron Exp $
 # FreeBSD Id: Makefile,v 1.8 1996/11/21 11:54:39 asami Exp
 #
 
 DISTNAME=	git-4.3.17
 CATEGORIES=	misc
-MASTER_SITES=	${MASTER_SITE_GNU:=/git/}
+MASTER_SITES=	${MASTER_SITE_GNU:=git/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.cs.unh.edu/~tudor/git/

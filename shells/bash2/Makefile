@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1999/04/13 15:31:07 agc Exp $
+# $NetBSD: Makefile,v 1.20 1999/04/14 21:39:04 tron Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/06/27 23:03:27 ache Exp 
 #
 
@@ -7,7 +7,7 @@ DV=		2.03
 DISTNAME=       bash-${V}
 CATEGORIES=	shells
 MASTER_SITES=	ftp://slc2.ins.cwru.edu/pub/dist/  \
-		${MASTER_SITE_GNU:=/bash/}
+		${MASTER_SITE_GNU:=bash/}
 DISTFILES=      bash-${V}.tar.gz bash-doc-${DV}.tar.gz
 
 MAINTAINER=	packages@netbsd.org
