@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2831 2003/07/19 11:01:57 jmmv Exp $
+$NetBSD: CHANGES,v 1.2832 2003/07/19 12:31:36 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2864,3 +2864,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added expatobjc-1.0 [rh 2003-07-19]
 	Updated aspell to 0.50.3nb3 [jmmv 2003-07-19]
 	Updated gaim to 0.66 [jmmv 2003-07-19]
+	Updated apache to 1.3.28 [tron 2003-07-19]
