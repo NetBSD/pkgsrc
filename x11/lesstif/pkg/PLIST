@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 1998/07/17 17:18:49 tv Exp $
+@comment $NetBSD: PLIST,v 1.13 1998/08/12 22:44:21 frueauf Exp $
 bin/mwm
 bin/mxmkmf
 bin/uil
@@ -133,8 +133,11 @@ lib/X11/mwm/system.mwmrc
 lib/X11/lesstif/Imake.tmpl
 lib/X11/lesstif/Motif.rules
 lib/X11/lesstif/Motif.tmpl
-lib/libXm.so.1.2
+lib/libMrm.a
 lib/libMrm.so.1.2
+lib/libXm.a
+lib/libXm.so.1.2
+lib/libXm.so.2.0
 share/lesstif/AUTHORS
 share/lesstif/BUG-REPORTING
 share/lesstif/COPYING
@@ -149,22 +152,33 @@ share/lesstif/TODO
 share/lesstif/doc/COPYING.LIB.html
 share/lesstif/doc/FAQ.html
 share/lesstif/doc/INSTALL.html
+share/lesstif/doc/apps.html
 share/lesstif/doc/bug-reporting.html
+share/lesstif/doc/bugs.html
+share/lesstif/doc/button.html
+share/lesstif/doc/cdrom.html
 share/lesstif/doc/core.html
 share/lesstif/doc/current.html
-share/lesstif/doc/get.html
+share/lesstif/doc/cvs.html
+share/lesstif/doc/download.html
 share/lesstif/doc/images/hungry.gif
 share/lesstif/doc/images/lesstif-realsmall.gif
 share/lesstif/doc/images/lesstif-small.gif
 share/lesstif/doc/images/lesstif.gif
 share/lesstif/doc/images/ltsunlogo.gif
-share/lesstif/doc/lesstif.html
+share/lesstif/doc/imgs/lesstif.jpg
+share/lesstif/doc/imgs/ltsunlogo.gif
+share/lesstif/doc/index.html
 share/lesstif/doc/links.html
-share/lesstif/doc/mailing-lists.html
+share/lesstif/doc/lists.html
+share/lesstif/doc/mirrors.html
 share/lesstif/doc/platforms.html
 share/lesstif/doc/release-policy.html
+share/lesstif/doc/test_policy.html
+share/lesstif/doc/test_summary.html
+share/lesstif/doc/testers.html
 share/lesstif/doc/versions.html
-share/lesstif/doc/working.html
+share/lesstif/doc/web_button.html
 man/man1/lesstif.1
 man/man1/mwm.1
 man/man1/xmbind.1
@@ -236,5 +250,6 @@ man/man5/mwmrc.5
 @dirrm include/Xm
 @dirrm include/Mrm
 @dirrm share/lesstif/doc/images
+@dirrm share/lesstif/doc/imgs
 @dirrm share/lesstif/doc
 @dirrm share/lesstif
