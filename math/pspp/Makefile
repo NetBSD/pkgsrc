@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2000/01/10 19:11:09 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2000/01/14 14:01:58 rh Exp $
 #
 
-DISTNAME=	pspp-0.2.3
+DISTNAME=	pspp-0.3.0
 CATEGORIES=	math
 MASTER_SITES=	ftp://franz.stat.wisc.edu/pub/PSPP/ \
 		ftp://alpha.gnu.org/gnu/pspp/ \
@@ -15,7 +15,6 @@ MASTER_SITES=	ftp://franz.stat.wisc.edu/pub/PSPP/ \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/pspp/
 
-BUILD_DEPENDS+=	autoconf:../../devel/autoconf
 DEPENDS+=	gettext-0.10.*:../../devel/gettext
 DEPENDS+=	ncurses-4.2:../../devel/ncurses
 
@@ -27,8 +26,6 @@ GNU_CONFIGURE=	yes
 USE_GTEXINFO=	yes
 CPPFLAGS+=	-Dunix=1 -I${LOCALBASE}/include
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
-
-pre-configure:
-	( cd ${WRKSRC}; autoconf )
+MAKE_ENV+=	pkgsysconfdir="${PREFIX}/etc/pspp"
 
 .include "../../mk/bsd.pkg.mk"
