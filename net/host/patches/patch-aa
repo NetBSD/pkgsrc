@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/03/10 17:06:37 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2003/10/11 14:18:58 grant Exp $
 
---- Makefile.orig	Wed Mar 15 22:51:39 2000
-+++ Makefile
+--- Makefile.orig	2000-03-15 13:51:39.000000000 -0800
++++ Makefile	2003-03-19 14:15:48.000000000 -0800
 @@ -4,11 +4,13 @@
  # Adapt the installation directories to your local standards.
  # ----------------------------------------------------------------------
@@ -18,14 +18,13 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/03/10 17:06:37 wiz Exp $
  
  BINDIR = $(DESTBIN)
  MANDIR = $(DESTMAN)/man1
-@@ -38,7 +40,10 @@
- SYSDEFS = -DNO_YP_LOOKUP
- #endif
+@@ -40,6 +42,9 @@
  
  SYSDEFS =
-+
+ 
 +#if defined(NetBSD) && you have not removed support for $HOSTALIASES
 +SYSDEFS = ${ALLOW_HOSTALIASES}
- 
++
  # ----------------------------------------------------------------------
  # Configuration definitions.
+ # See also the header file conf.h for more configuration definitions.
