@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/04/03 05:10:43 mjl Exp $
+# $NetBSD: Makefile,v 1.39 2005/04/05 11:52:15 wiz Exp $
 
 DISTNAME=		clisp-2.33
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=clisp/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		packages@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://clisp.cons.org/
 COMMENT=		CLISP, a Common Lisp implementation
 
