@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2000/08/02 06:06:10 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2000/08/04 18:35:25 wiz Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/12/28 01:02:05 vanilla Exp
 #
 
@@ -22,5 +22,10 @@ CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 CPPFLAGS+=		-I${LOCALBASE}/include		# libintl.h
+DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
+
+post-build:
+	${SED} -e 's#@PREFIX@#${PREFIX}#g' < ${PKGDIR}/DEINSTALL	\
+		> ${WRKDIR}/DEINSTALL
 
 .include "../../mk/bsd.pkg.mk"
