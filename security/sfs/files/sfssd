@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: sfssd,v 1.1.1.1 2003/03/17 21:01:47 agc Exp $
+# $NetBSD: sfssd,v 1.2 2003/03/25 06:45:01 lukem Exp $
 #
 # start script for SFS server daemon 
 
@@ -11,8 +11,9 @@
 name="sfssd"
 rcvar=$name
 command="@PREFIX@/sbin/${name}"
+pidfile="/var/run/${name}.pid"
 required_files="@PREFIX@/etc/sfs/sfsrwsd_config"
-extra_commands="keygen"
+extra_commands="keygen reload"
 
 sfssd_keygen()
 {
@@ -22,7 +23,8 @@ sfssd_keygen()
                 echo "You already have a host key" \
                     "in @PREFIX@/etc/sfs/sfs_host_key"
         else
-		@PREFIX@/bin/sfskey gen -P @PREFIX@/etc/sfs/sfs_host_key
+		@PREFIX@/bin/sfskey gen -P -K -l sfs_host_key \
+		    @PREFIX@/etc/sfs/sfs_host_key
         fi
         )
 }
