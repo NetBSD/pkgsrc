@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5702 2004/04/21 10:37:07 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5703 2004/04/21 12:09:49 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2205,3 +2205,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated freesci to 0.3.4c [dillo 2004-04-21]
 	Updated aspell-slovak to 0.52.0 [salo 2004-04-21]
 	Updated libevent to 0.8 [xtraeme 2004-04-21]
+	Updated scsh to 0.6.6 [dillo 2004-04-21]
