@@ -1,0 +1,21 @@
+$NetBSD: patch-ad,v 1.4 2003/09/17 14:57:30 jmmv Exp $
+
+--- configure.orig	1999-12-14 11:45:12.000000000 +0100
++++ configure
+@@ -983,7 +983,6 @@ test -z "$manext" && manext=.1
+ test -z "$man1dir" && man1dir=\${prefix}/man/man1
+ installtargets="install-catdoc install-wordview"
+ buildtargets="catdoc xls2csv wordview"
+-if test -n "$WISH"; then
+ # Check whether --enable-wordview or --disable-wordview was given.
+ if test "${enable_wordview+set}" = set; then
+   enableval="$enable_wordview"
+@@ -995,8 +994,6 @@ fi
+ 
+ fi
+ 
+-fi
+-
+ echo $ac_n "checking how to run the C preprocessor""... $ac_c" 1>&6
+ echo "configure:1002: checking how to run the C preprocessor" >&5
+ # On Suns, sometimes $CPP names a directory.

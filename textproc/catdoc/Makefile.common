@@ -1,0 +1,21 @@
+# $NetBSD: Makefile.common,v 1.1 2003/09/17 14:57:26 jmmv Exp $
+#
+
+DISTNAME=	catdoc-0.91.4
+WRKSRC=		${WRKDIR}/catdoc
+CATEGORIES=	textproc
+MASTER_SITES=	http://www.go.dlr.de/fresh/unix/src/misc/
+
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.fe.msk.ru/~vitus/catdoc/
+COMMENT=	Reads MS-Word file and puts out its content as plain text
+
+DISTINFO_FILE=		${.CURDIR}/../../textproc/catdoc/distinfo
+PATCHDIR=		${.CURDIR}/../../textproc/catdoc/patches
+
+USE_BUILDLINK2=		yes
+GNU_CONFIGURE=		yes
+
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/share
+
+CPPFLAGS+=		-Dunix -D__unix
