@@ -1,22 +1,35 @@
-# $NetBSD: Makefile,v 1.15 2003/06/23 07:45:03 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2003/06/30 10:15:25 jlam Exp $
 
-.include "Makefile.common"
+PERL5_SNAPSHOT=	# empty
+PERL5_VERS=	5.8.0
 
-PKGREVISION=		2
-CATEGORIES+=		lang devel
+.if empty(PERL5_SNAPSHOT)
+DISTNAME=	perl-${PERL5_VERS}
+SNAPSHOT_SITES=	# empty
+.else
+DISTNAME=	perl@${PERL5_SNAPSHOT}
+PKGNAME=	perl-${PERL5_VERS}
+SNAPSHOT_SITES=	http://www.iki.fi/jhi/
+.endif
 
-MAINTAINER=		jlam@netbsd.org
-HOMEPAGE=		http://www.perl.com/
-COMMENT=		Practical Extraction and Report Language
+PKGREVISION=	2
+CATEGORIES=	lang devel perl5
+MASTER_SITES=	${SNAPSHOT_SITES} \
+		ftp://ftp.funet.fi/pub/languages/perl/CPAN/src/ \
+		ftp://ftp.ruhr-uni-bochum.de/mirrors/ftp.funet.fi/pub/languages/perl/CPAN/src/
 
-CONFLICTS=		perl-5.00* perl-base-[0-9]* \
-			p5-CGI-2.66 p5-CGI-2.75 p5-CGI-2.75.[0-2] \
-			p5-Data-Dumper-2.1[0-9][0-9] p5-Data-Dumper-[0-9][0-9] \
-			p5-Devel-DProf-[0-9]* p5-Devel-Peek-[0-9]* \
-			perl-mk-[0-9]*
+MAINTAINER=	jlam@netbsd.org
+HOMEPAGE=	http://www.perl.com/
+COMMENT=	Practical Extraction and Report Language
 
-USE_BUILDLINK2=		# defined
-HAS_CONFIGURE=		# defined
+CONFLICTS=	perl-5.00* perl-base-[0-9]* \
+		p5-CGI-2.66 p5-CGI-2.75 p5-CGI-2.75.[0-2] \
+		p5-Data-Dumper-2.1[0-9][0-9] p5-Data-Dumper-[0-9][0-9] \
+		p5-Devel-DProf-[0-9]* p5-Devel-Peek-[0-9]* \
+		perl-mk-[0-9]*
+
+USE_BUILDLINK2=		YES
+HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-sde
 CONFIGURE_ARGS+=	-Dprefix="${PREFIX}"
@@ -41,14 +54,14 @@ CONFIGURE_ARGS+=	-Dinstallsiteman3dir="${PERL5_SITEPERL}/man/man3"
 
 .include "../../mk/bsd.prefs.mk"
 
-MKPIC?=			yes
+MKPIC?=		yes
 
 .if ${OPSYS} == "Darwin"
 #
 # The perl build attempts to work around case-insensitivity problems on
 # HFS filesystems by using GNUmakefiles, so we need to use GNU make.
 #
-USE_GMAKE=	# defined
+USE_GMAKE=	YES
 #
 # Perl is _always_ built using shared libraries on Darwin; there's no
 # way to build a statically-linked perl binary.
@@ -59,8 +72,8 @@ STATIC_PERL=	NO
 # "installarchlib" and "installsitearch" have different forms between
 # Darwin and NetBSD.
 #
-PERL5_ARCHLIB=	${PREFIX}/lib/perl5/${PERL5_DIST_VERS}/${LOWER_OPSYS}
-PERL5_SITEARCH=	${PREFIX}/lib/perl5/site_perl/${PERL5_DIST_VERS}/${LOWER_OPSYS}
+PERL5_ARCHLIB=	${PREFIX}/lib/perl5/${PERL5_VERS}/${LOWER_OPSYS}
+PERL5_SITEARCH=	${PREFIX}/lib/perl5/site_perl/${PERL5_VERS}/${LOWER_OPSYS}
 .endif
 
 # Nail down the needed libraries for each platform here to avoid hidden
@@ -124,11 +137,11 @@ CFLAGS=
 CONFIGURE_ARGS+=	-Duseshrplib
 .endif
 
-PERL5=			${PREFIX}/bin/perl${PERL5_DIST_VERS}
-PERL5_PRIVLIB?=		${PREFIX}/lib/perl5/${PERL5_DIST_VERS}
-PERL5_ARCHLIB?=		${PREFIX}/lib/perl5/${PERL5_DIST_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
+PERL5=			${PREFIX}/bin/perl${PERL5_VERS}
+PERL5_PRIVLIB?=		${PREFIX}/lib/perl5/${PERL5_VERS}
+PERL5_ARCHLIB?=		${PREFIX}/lib/perl5/${PERL5_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
 PERL5_SITEPERL?=	${PREFIX}/lib/perl5/site_perl
-PERL5_SITEARCH?=	${PREFIX}/lib/perl5/site_perl/${PERL5_DIST_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
+PERL5_SITEARCH?=	${PREFIX}/lib/perl5/site_perl/${PERL5_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
 PERL5_PACKLIST=		${PERL5_ARCHLIB}/.packlist
 PLIST_SUBST+=		PERL5_SITEPERL=${PERL5_SITEPERL:S/^${PREFIX}\///}
 
