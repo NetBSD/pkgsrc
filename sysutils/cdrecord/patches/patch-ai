@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.3 2003/01/03 16:27:10 lukem Exp $
+$NetBSD: patch-ai,v 1.4 2005/01/10 15:48:07 hamajima Exp $
 
 --- libscg/scsi-bsd.c.orig	Mon Oct 21 15:57:07 2002
 +++ libscg/scsi-bsd.c	Sat Nov 30 18:20:19 2002
@@ -26,7 +26,7 @@ $NetBSD: patch-ai,v 1.3 2003/01/03 16:27:10 lukem Exp $
  	char		devname[64];
 +#if defined(__NetBSD__)
 +	struct scsi_addr mysaddr;
-+#if defined(__i386__)
++#if defined(__i386__) || defined(__amd64__)
 +	char	slicename[] = "d";	/* i386 is special */
 +#else
 +	char	slicename[] = "c";	/* this is what the rest uses */
