@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2001/03/14 05:13:05 kei Exp $
+
+--- htmllint.html.orig	Mon Jan 29 10:57:18 2001
++++ htmllint.html	Mon Jan 29 10:57:56 2001
+@@ -447,7 +447,7 @@
+ </p>
+ 
+ <hr class="none">
+-<form action="htmllint.cgi" method="post" enctype="multipart/form-data">
++<form action="/cgi-bin/htmllint.cgi" method="post" enctype="multipart/form-data">
+ <input type="hidden" name="Stat" value="on">
+ <h2 class="title">チェック方式</h2>
+ <p>
