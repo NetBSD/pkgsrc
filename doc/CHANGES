@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8916 2005/01/25 16:03:10 wiz Exp $
+$NetBSD: CHANGES,v 1.8917 2005/01/25 16:04:53 cube Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -591,3 +591,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added p5-Set-Infinite-0.61 [cube 2005-01-25]
 	Updated nspr to 4.4.1 [jschauma 2005-01-25]
 	Updated evolution to 2.0.3nb1 [drochner 2005-01-25]
+	Added p5-Class-factory-Util-1.6 [cube 2005-01-25]
