@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1383 2004/02/09 05:42:57 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1384 2004/02/10 02:18:04 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -246,28 +246,49 @@ CRYPTO?=		uses Kerberos encryption code
 BUILD_DEFS+=		KERBEROS
 .endif
 
-PERL5_REQD?=		5.0
-PERL5_PKGSRCDIR?=	../../lang/perl5
+# Distill the PERL5_REQD list into a single _PERL5_REQD value that is the
+# highest version of Perl required.
+#
+PERL5_REQD+=		5.0
+PERL5_REQD+=		${_OPSYS_PERL_REQD}
+
+_PERL5_STRICTEST_REQD?=	none
+.for _version_ in ${PERL5_REQD}
+.  for _pkg_ in perl-${_version_}
+.    if ${_PERL5_STRICTEST_REQD} == "none"
+_PERL5_PKG_SATISFIES_DEP=	YES
+.      for _vers_ in ${PERL5_REQD}
+.        if !empty(_PERL5_PKG_SATISFIES_DEP:M[yY][eE][sS])
+_PERL5_PKG_SATISFIES_DEP!=	\
+	if ${PKG_ADMIN} pmatch 'perl>=${_vers_}' ${_pkg_}; then		\
+		${ECHO} "YES";						\
+	else								\
+		${ECHO} "NO";						\
+	fi
+.        endif
+.      endfor
+.      if !empty(_PERL5_PKG_SATISFIES_DEP:M[yY][eE][sS])
+_PERL5_STRICTEST_REQD=	${_version_}
+.      endif
+.    endif
+.  endfor
+.endfor
+_PERL5_REQD=	${_PERL5_STRICTEST_REQD}
 
 # _PERL58_PATTERNS contains perl versions >=5.8.0 but before 6.0.
 _PERL58_PATTERNS=	5.8* 5.9* 5.[1-9][0-9]*
 
-.if defined(_OPSYS_PERL_REQD) && ${_OPSYS_PERL_REQD} != ""
-_PERL58_REQD?=		${_OPSYS_PERL_REQD}
-.  for _pattern_ in ${_PERL58_PATTERNS}
-.    if !empty(PERL5_REQD:M${_pattern_})
-_PERL58_REQD:=		${PERL5_REQD}
-.    endif
-.  endfor
-PERL5_REQD:=		${_PERL58_REQD}
-.endif
-
-# For perl>=5.8.0, we need to build perl from ../../lang/perl58.
+_NEED_PERL58?=	no
 .for _pattern_ in ${_PERL58_PATTERNS}
-.  if !empty(PERL5_REQD:M${_pattern_})
-PERL5_PKGSRCDIR=	../../lang/perl58
+.  if !empty(_PERL5_REQD:M${_pattern_})
+_NEED_PERL58=	yes
 .  endif
 .endfor
+.if !empty(_NEED_PERL58:M[yY][eE][sS])
+PERL5_PKGSRCDIR?=	../../lang/perl58
+.else
+PERL5_PKGSRCDIR?=	../../lang/perl5
+.endif
 
 # Convert USE_PERL5 to be two-valued: either "build" or "run" to denote
 # whether we want a build-time or run-time dependency on perl.
@@ -279,7 +300,7 @@ _PERL5_DEPMETHOD=	BUILD_DEPENDS
 USE_PERL5:=		run
 _PERL5_DEPMETHOD=	DEPENDS
 .  endif
-_PERL5_DEPENDS=		perl>=${PERL5_REQD}
+_PERL5_DEPENDS=		perl>=${_PERL5_REQD}
 .  if !defined(BUILDLINK_DEPENDS.perl)
 ${_PERL5_DEPMETHOD}+=	${_PERL5_DEPENDS}:${PERL5_PKGSRCDIR}
 .  endif
