@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2003/05/05 13:34:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2003/05/06 16:26:27 jmmv Exp $
 
 DISTNAME=	acroread5	# Overridden below
 PKGNAME=	acroread-5.06
-PKGREVISION=	1
+PKGREVISION=	2
 WRKSRC=		${WRKDIR}
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp-pac.adobe.com/pub/adobe/acrobatreader/unix/5.x/
@@ -68,6 +68,7 @@ post-install:
 	  ${INSTALL_SCRIPT} ${PREFIX}/Acrobat5/bin/acroread \
 	     ${PREFIX}/bin/acroread5 && ${RM} -f acroread.orig
 	${CHMOD} +x ${PREFIX}/bin/acroread5
+	cd ${PREFIX}/bin && ln -s acroread5 acroread
 	${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR}
 	${INSTALL_DATA} ${PREFIX}/Acrobat5/Browsers/${PLATFORM}/nppdf.so \
 		${NS_PLUGINS_DIR}
