@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1 2003/09/16 22:24:16 wiz Exp $
+
+--- po/zh_TW.po.orig	Mon Aug 12 22:49:46 2002
++++ po/zh_TW.po
+@@ -53,9 +53,8 @@ msgstr ""
+ "每次只可執行一個 GNOME 檔案傳送管理程式。"
+ 
+ #: src/main-window.c:76
+-#, fuzzy
+ msgid "Opening multiple files is not implemented yet.\n"
+-msgstr "多執行緒同時下載功能尚未完成"
++msgstr ""
+ 
+ #: src/main-window.c:85
+ msgid "Could not determine MIME type...\n"
+@@ -436,7 +435,7 @@ msgstr "另外指定下載目錄但未填上目錄名稱
+ 
+ #: src/dialog-common-elements.c:244 applet/dialog-new.c:91
+ msgid "Multiple download not implemented yet"
+-msgstr "多執行緒同時下載功能尚未完成"
++msgstr ""
+ 
+ #: src/dialog-about.c:50
+ msgid "GNOME Transfer Manager"
+@@ -597,7 +596,7 @@ msgstr "同時下載檔案數目："
+ 
+ #: src/dialog-prefs.c:638
+ msgid "Manual stop disables auto download"
+-msgstr "手動停止下載會同時停用自動下載功能"
++msgstr ""
+ 
+ #: src/dialog-prefs.c:644
+ msgid "Stop download on link loss"
