@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.38 2000/02/15 10:29:35 agc Exp $
+# $NetBSD: Makefile,v 1.39 2000/03/13 22:47:31 tron Exp $
 
 DISTNAME=		gnome-core-1.0.55
+PKGNAME=		${DISTNAME}.1
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-core/}
 
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 
-DEPENDS+=		libghttp-*:../../www/libghttp
-DEPENDS+=		gnome-libs-*:../../x11/gnome-libs
+DEPENDS+=		libghttp>=1.0.4:../../www/libghttp
+DEPENDS+=		gnome-libs>=1.0.56:../../x11/gnome-libs
 
 GNU_CONFIGURE=		yes
 USE_X11BASE=		yes
