@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2003/06/02 01:15:47 jschauma Exp $
+# $NetBSD: Makefile,v 1.33 2003/06/12 15:46:03 jschauma Exp $
 #
 
 DISTNAME=	Xaw3d-1.5
@@ -16,7 +16,7 @@ PLIST_SRC=	${WRKDIR}/PLIST-src
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(X11BASE:M*openwin)
+.if !empty(X11BASE:M*openwin) #|| ${OPSYS} == "IRIX"
 PLIST_SUBST+=	INCDIR=include/X11/X11
 .else
 PLIST_SUBST+=	INCDIR=include/X11
@@ -29,6 +29,10 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/Xaw3d
 	${INSTALL_DATA} ${WRKSRC}/README.XAW3D ${PREFIX}/share/doc/Xaw3d
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+.if ${OPSYS} == "IRIX"
+	${INSTALL_DATA} /usr/lib${ABI}/libXaw3d* ${PREFIX}/lib/
+	${RM} -f /usr/lib${ABI}/libXaw3d*
+.endif
 	cd ${PREFIX} && ${LS} lib/libXaw3d* >>${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
