@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:30:24 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 16:27:02 agc Exp $
 
-MD5 (sp3f4.kit.tar.Z) = d55eb08a7f523248b1b509092a444aeb
+SHA1 (sp3f4.kit.tar.Z) = bded1e078d0acfef090117490a7ac8a57887f39e
+Size (sp3f4.kit.tar.Z) = 2086528 bytes
 SHA1 (patch-aa) = 35d8d9ecfb2beaa54e0763197b551d5e26fc7f4e
 SHA1 (patch-ab) = 4cbb89af1ef070ea0f5847ee59362aa587db3652
 SHA1 (patch-ac) = 8b271a11bac8ff7fa339ccc169ca3d996adbfeb1

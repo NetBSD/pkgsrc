@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:30:15 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 16:26:58 agc Exp $
 
-MD5 (geda/utils-20000220.tar.gz) = b450605e88101c8bd78f96a1365b2a49
+SHA1 (geda/utils-20000220.tar.gz) = 31da9eb437a8417c743e0fd8d871e05e9ec005e4
+Size (geda/utils-20000220.tar.gz) = 83828 bytes
