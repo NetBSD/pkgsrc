@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2000/03/07 15:08:24 frueauf Exp $
+# $NetBSD: Makefile,v 1.20 2000/04/08 19:27:01 frueauf Exp $
 #
 
-DISTNAME=		ethereal-0.8.4
+DISTNAME=		ethereal-0.8.6
 CATEGORIES=		net
 MASTER_SITES=		http://ethereal.zing.org/distribution/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		frueauf@netbsd.org
 HOMEPAGE=		http://ethereal.zing.org/
 
 DEPENDS=		gtk+-1.2.*:../../x11/gtk
