@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/17 22:54:07 grant Exp $
+# $NetBSD: Makefile,v 1.15 2003/08/03 00:30:43 seb Exp $
 # FreeBSD Id: ports/japanese/eb/Makefile,v 1.21 2000/08/21 03:39:42 kevlo Exp
 #
 
@@ -57,17 +57,19 @@ USE_PKGINSTALL=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
-TEXINFO_OVERRIDE=	YES
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=	YES
+INFO_FILES=	eb-ja.info ebfont-ja.info ebfont.info ebinfo-ja.info
+INFO_FILES+=	ebinfo.info ebrefile-ja.info ebrefile.info ebzip-ja.info
+INFO_FILES+=	ebzip.info
 
 CONFIGURE_ARGS+=	--with-zlib
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 CONF_FILES=		${EGDIR}/eb.conf.default ${PKG_SYSCONFDIR}/eb.conf
-
-# For patterns like '... (install-info ...) ...'
-TEXINFO_SUBST_SED+=	-e "s!^\(	.*\)\([ 	'(]\)install-info\([ 	]\)!\1\2${INSTALL_INFO}\3!g"
 
 EB_APPENDIXDIR=	${PREFIX}/share/eb/appendix
 EGDIR=		${PREFIX}/share/examples/eb/
@@ -88,5 +90,4 @@ post-install:
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
