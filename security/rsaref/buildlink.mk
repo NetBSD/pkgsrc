@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/07/27 13:33:34 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/11/19 20:12:23 jlam Exp $
 #
 # This Makefile fragment is included by packages that use rsaref.
 #
@@ -20,13 +20,13 @@ RSAREF_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.rsaref?=	rsaref-2.0p3
 DEPENDS+=	${BUILDLINK_DEPENDS.rsaref}:../../security/rsaref
 
-EVAL_PREFIX+=			BUILDLINK_PREFIX.rsaref=rsaref
+EVAL_PREFIX+=				BUILDLINK_PREFIX.rsaref=rsaref
 BUILDLINK_PREFIX.rsaref_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.rsaref=		include/rsaref.h
-BUILDLINK_FILES.rsaref+=	lib/librsaref.*
+BUILDLINK_FILES.rsaref=			include/rsaref/*.h
+BUILDLINK_FILES.rsaref+=		lib/librsaref.*
 
 BUILDLINK_TARGETS.rsaref=	rsaref-buildlink
-BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.rsaref}
+BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.rsaref}
 
 pre-configure: ${BUILDLINK_TARGETS.rsaref}
 rsaref-buildlink: _BUILDLINK_USE
