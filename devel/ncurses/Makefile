@@ -3,10 +3,9 @@
 # Date created:				Tue Oct 28 00:12:41 CET 1997
 # Whom:					Hubert Feyrer (hubertf@netbsd.org)
 #
-# $NetBSD: Makefile,v 1.7 1997/12/18 09:58:14 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 1998/01/24 04:26:58 hubertf Exp $
 
 DISTNAME=	ncurses-1.9.9g
-WRKSRC=		${WRKDIR}/ncurses_1.9.9g
 CATEGORIES=	devel
 # XXX this should be moved to ftp.netcom.com:/pub/zm/zmbenhal/ncurses/
 # XXX once upgraded to the latest version - hubertf
@@ -16,6 +15,7 @@ MAINTAINER=	hubertf@netbsd.org
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-normal --with-shared --enable-bsdpad
+WRKSRC=		${WRKDIR}/ncurses_1.9.9g
 
 #MANCOMPRESSED=	yes
 MAN1=		captoinfo.1 infocmp.1 tic.1 toe.1
@@ -43,23 +43,24 @@ MAN3=		curs_addch.3 curs_addchstr.3 curs_addstr.3 curs_attr.3 \
 		menu_post.3 menu_userptr.3 menu_win.3 mitem_current.3 \
 		mitem_name.3 mitem_new.3 mitem_opts.3 mitem_userptr.3 \
 		mitem_value.3 mitem_visible.3 ncurses.3 panel.3 \
-		wresize.3
+		wresize.3 curs_print.3 form_requestname.3 resizeterm.3 \
+		menu_requestname.3 menu_spacing.3
 MAN5=		terminfo.5 term.5
 MAN7=		term.7
 
 post-extract:
-	( cd ${WRKSRC}/man ; rm -f tput.1 tset.1 clear.1 )
+	( cd ${WRKSRC}/man ; ${RM} -f tput.1 tset.1 clear.1 )
 	( cd ${WRKSRC}/man ; for i in *.1m ; do \
-	  mv $$i `basename $$i .1m`.1 ; done )
+	  ${MV} $$i `basename $$i .1m`.1 ; done )
 	( cd ${WRKSRC}/man ; for i in *.3x ; do \
-	  mv $$i `basename $$i .3x`.3 ; done )
+	  ${MV} $$i `basename $$i .3x`.3 ; done )
 
 post-install:
-	mv ${PREFIX}/include/curses.h ${PREFIX}/include/ncurses.h
-	rm -f ${PREFIX}/lib/libcurses.a
+	${MV} ${PREFIX}/include/curses.h ${PREFIX}/include/ncurses.h
+	${RM} -f ${PREFIX}/lib/libcurses.a
 	( cd ${PREFIX}/include ; for i in form.h menu.h panel.h ; do \
-	  sed '/#include/s|curses.h|ncurses.h|g' $$i >$$i.BAK ; \
-	  mv $$i.BAK $$i ; done )
-	ldconfig -m ${PREFIX}/lib
+	  ${SED} '/#include/s|curses.h|ncurses.h|g' $$i >$$i.BAK ; \
+	  ${MV} $$i.BAK $$i ; done )
+	${LDCONFIG} -m ${PREFIX}/lib || /usr/bin/true
 
 .include <bsd.port.mk>
