@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/09/21 01:40:17 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.20 2005/03/19 21:42:32 dmcmahill Exp $
 #
 
 DISTNAME=	fastcap-2.0-18Sep92
@@ -12,6 +12,9 @@ HOMEPAGE=	http://www.rle.mit.edu/cpg/research_codes.htm
 COMMENT=	Fast 3-D capacitance solver
 
 BUILD_DEPENDS+=	teTeX>=1.0.7:../../print/teTeX
+# The distfile cannot be extracted with pax as tar
+BUILD_DEPENDS+= gtar-base-[0-9]*:../../archivers/gtar-base
+GTAR=           ${PREFIX}/bin/${GNU_PROGRAM_PREFIX}tar
 
 WRKSRC=		${WRKDIR}
 USE_BUILDLINK3=		yes
