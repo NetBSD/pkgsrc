@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4473 2004/01/16 02:46:46 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4474 2004/01/16 06:41:52 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -297,3 +297,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome-panel to 2.4.2 [xtraeme 2004-01-16]
 	Updated gnome-session to 2.4.2 [xtraeme 2004-01-16]
 	Updated gcalctool to 4.3.38 [xtraeme 2004-01-16]
+	Updated mono to 0.29nb1 [xtraeme 2004-01-16]
+	Updated pnet to 0.6.2nb1 [xtraeme 2004-01-16]
