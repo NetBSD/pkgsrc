@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.20 1999/11/01 16:09:37 tron Exp $
+# $NetBSD: Makefile,v 1.21 1999/11/08 20:48:22 tron Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
 DISTNAME=	fvwm-1.24r
 PKGNAME=	${DISTNAME:S/fvwm/fvwm1/}
 CATEGORIES=	x11
-MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	cjs@netbsd.org
 HOMEPAGE=	http://www.hpc.uh.edu/fvwm/
@@ -14,6 +14,7 @@ DEPENDS=	xpmroot-2.*:../../x11/xpmroot
 
 CONFLICTS=	fvwm-1.*
 
+MIRROR_DISTFILE= no
 USE_IMAKE=	yes
 # drop -a because we have no `depends' target
 XMKMF=		${SH} -c "xmkmf && ${MAKE} Makefiles"
