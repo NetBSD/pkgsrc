@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/05/31 05:02:55 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.7 2000/12/16 22:37:31 tron Exp $
 
 DISTNAME=		suse_devel-6.3
 CATEGORIES=		emulators
@@ -19,4 +19,4 @@ PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 RPMFILES=		bin86.rpm binutils.rpm egcs.rpm g77.rpm gpp.rpm \
 			libc.rpm linclude.rpm make.rpm
 
-.include "../suse_linux/suse.mk"
+.include "../suse_linux/Makefile.common"
