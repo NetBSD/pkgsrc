@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.81 2004/02/09 03:05:59 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.82 2004/02/12 08:28:58 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -856,7 +856,7 @@ _BLNK_TRANSFORM+=	${BUILDLINK_TRANSFORM}
 # Explicitly remove everything else that's an absolute path, since we've
 # already protected the ones we care about.
 #
-_BLNK_TRANSFORM+=       r:
+_BLNK_TRANSFORM+=       r:/
 #
 # Remove -Wl,-R* and *-rpath* if _USE_RPATH == "no".
 # Transform -Wl,-R* and *-rpath* if Sun compilers are used.
