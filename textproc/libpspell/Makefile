@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 17:37:31 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/01/15 01:05:14 wiz Exp $
 #
 
-DISTNAME=	pspell-.11.2
+DISTNAME=	pspell-.12.2
 PKGNAME=	lib${DISTNAME:S/-./-0./}
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pspell/}
@@ -16,5 +16,7 @@ USE_LIBTOOL=	YES
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CONFIGURE_ARGS+=	--enable-doc-dir=${PREFIX}/share/doc/pspell
+USE_BUILDLINK_ONLY=	YES
 
+.include "../../devel/libtool/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
