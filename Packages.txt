@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.347 2004/08/04 16:14:34 jschauma Exp $
+# $NetBSD: Packages.txt,v 1.348 2004/08/05 20:55:11 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -2105,8 +2105,122 @@ A package _must_ have a builtin.mk file to be listed in PREFER_NATIVE,
 otherwise it is simply ignored in that list.
 
 
- 9 Debugging
- ===========
+ 9 Options handling
+ ==================
+
+Many packages have the ability to be built to support different sets
+of features.  bsd.options.mk is a pkgsrc framework that provides
+generic handling of those options that determine different ways in
+which the packages can be built.  It's possible for the user to specify
+exactly which sets of options will be built into a package or to allow
+a set of global default options apply .
+
+
+ 9.1 Global default options
+ ==========================
+
+Global default options are listed in PKG_DEFAULT_OPTIONS, which is a
+list of the options that should be built into every package if that
+option is supported.  This variable should be set in /etc/mk.conf.
+
+
+ 9.2 Converting packages to use bsd.options.mk
+ =============================================
+
+The following example shows how bsd.options.mk should be use in a package
+Makefile, or in a file, e.g. options.mk, that is included by the main
+package Makefile.
+
+-------------8<-------------8<-------------8<-------------8<-------------
+# Global and legacy options
+.if defined(USE_OPENLDAP) || defined(USE_SASL2)
+.  if !defined(PKG_OPTIONS.wibble)
+.    if defined(USE_OPENLDAP) && !empty(USE_OPENLDAP:M[yY][eE][sS])
+PKG_OPTIONS.wibble+=	ldap
+.    endif
+.    if defined(USE_SASL2) && !empty(USE_SASL2:M[yY][eE][sS])
+PKG_OPTIONS.wibble+=	sasl
+.    endif
+.  endif
+.endif
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.wibble
+PKG_OPTIONS.wibble?=	sasl			# package-specific default
+PKG_SUPPORTED_OPTIONS=	ldap sasl
+.include "../../mk/bsd.options.mk"
+
+# Package-specific option-handling
+
+###
+### LDAP support
+###
+.if !empty(PKG_OPTIONS:Mldap)
+.  include "../../databases/openldap/buildlink3.mk"
+CONFIGURE_ARGS+=      --enable-ldap=${BUILDLINK_PREFIX.openldap}
+.endif
+
+###
+### SASL authentication
+###
+.if !empty(PKG_OPTIONS:Msasl)
+.  include "../../security/cyrus-sasl2/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-sasl=${BUILDLINK_PREFIX.sasl}
+.endif
+# -------------8<-------------8<-------------8<-------------8<-------------
+
+The first section only exists if you are converting a package that
+had its own ad-hoc options handling to use bsd.options.mk.  It converts
+global or legacy options variables into an equivalent PKG_OPTIONS.<pkg>
+value.  These sections will be removed over time as the old options
+are in turn deprecated and removed.
+
+The second section contains the information about which build options
+are supported by the package, and any default options settings if
+needed.
+
+  (1) PKG_OPTIONS_VAR is a list of the name of the make(1) variables
+      that contain the options the user wishes to select.  The
+      recommended value is "PKG_OPTIONS.<pkg>" but any package-specific
+      value may be used.  This variable should be set in a package
+      Makefile.
+
+  (2) PKG_SUPPORTED_OPTIONS is a list of build options supported by
+      the package.  This variable should be set in a package Makefile.
+
+  (3) ${PKG_OPTIONS_VAR} (the variables named in PKG_OPTIONS_VAR) are
+      variables that list the selected build options and override any
+      default options given in PKG_DEFAULT_OPTIONS.  If any of the
+      options begin with a '-', then that option is always removed
+      from the selected build options, e.g.
+
+	PKG_DEFAULT_OPTIONS=	kerberos ldap sasl
+	PKG_OPTIONS_VAR=	WIBBLE_OPTIONS
+	WIBBLE_OPTIONS=		${PKG_DEFAULT_OPTIONS} -sasl
+	# implies PKG_OPTIONS == "kerberos ldap"
+
+      or
+
+	PKG_OPTIONS_VAR=	WIBBLE_OPTIONS
+	WIBBLE_OPTIONS=		kerberos -ldap ldap
+	# implies PKG_OPTIONS == "kerberos"
+
+      This variable should be set in /etc/mk.conf.
+
+After the inclusion of bsd.options.mk, the following variables are set:
+
+    * PKG_OPTIONS contains the list of the selected build options,
+      properly filtered to remove unsupported and duplicate options.
+
+The remaining sections contain the logic that is specific to each
+option.  There should be a check for every option listed in
+PKG_SUPPORTED_OPTIONS, and there should be clear documentation on what
+turning on the option will do in the comments preceding each section.
+The correct way to check for an option is to check whether it is listed
+in PKG_OPTIONS.
+
+
+ 11 Debugging
+ ============
 
 To check out all the gotchas when building a package, here are the steps
 that I do in order to get a package working. Please note this is basically
@@ -2177,10 +2291,10 @@ debugging aids.
  * Submit (or commit, if you have cvs access); see section 11.
 
 
- 10 FAQs & features of the package system
+ 11 FAQs & features of the package system
  ========================================
 
- 10.1 Packages using GNU autoconf
+ 11.1 Packages using GNU autoconf
  ================================
 
 If your package uses GNU autoconf created configure scripts, add the following
@@ -2192,7 +2306,7 @@ Note that this appends --prefix=${PREFIX} to CONFIGURE_ARGS, so you don't
 have to do that yourself, and this may not be what you want.
 
 
- 10.2 Other distrib methods than .tar.gz
+ 11.2 Other distrib methods than .tar.gz
  =======================================
 
 If your package uses a different distribution method from .tar.gz, take a
@@ -2204,7 +2318,7 @@ DISTNAME field, and add the following to your package's Makefile:
 	EXTRACT_CMD=		zcat -d < ${DOWNLOADED_DISTFILE} | ${SH}
 
 
- 10.3 Packages not creating their own subdirectory
+ 11.3 Packages not creating their own subdirectory
  =================================================
 
 Your package doesn't create a subdirectory for itself (like GNU software
@@ -2220,7 +2334,7 @@ Please note that the old
 has been deprecated and should not be used.
 
 
- 10.4 Custom configuration process
+ 11.4 Custom configuration process
  =================================
 
 Your package uses a weird Configure script: See the top package, but the
@@ -2231,7 +2345,7 @@ quick answer is:
 	CONFIGURE_ARGS+=        netbsd13
 
 
- 10.5 Packages not building in their DISTNAME directory
+ 11.5 Packages not building in their DISTNAME directory
  ======================================================
 
 Your package builds in a different directory from its base DISTNAME - see
@@ -2240,7 +2354,7 @@ tcl and tk packages:
 	WRKSRC=         ${WRKDIR}/${DISTNAME}/unix
 
 
- 10.6 How to fetch all distfiles at once
+ 11.6 How to fetch all distfiles at once
  =======================================
 
 You would like to download all the distfiles in a single batch from work or
@@ -2277,7 +2391,7 @@ get all & everything by typing
 	% make fetch NO_SKIP=yes
 
 
- 10.7 How to fetch files from behind a firewall
+ 11.7 How to fetch files from behind a firewall
  ==============================================
 
 If you are sitting behind a firewall which does not allow direct connections
@@ -2291,13 +2405,13 @@ variables look like:
 	http_proxy=http://orpheus.amdahl.com:80/
 
 
- 10.8 If your patch contains an RCS ID
+ 11.8 If your patch contains an RCS ID
  =====================================
 
 See section 4.3 on how to remove RCS IDs from patch files.
 
 
- 10.9 How to pull in variables from /etc/mk.conf
+ 11.9 How to pull in variables from /etc/mk.conf
  ===============================================
 
 The problem with package-defined variables that can be overridden via
@@ -2329,7 +2443,7 @@ the devel/cpuflags package, if you're interested in optimization for the
 current CPU.
 
 
- 10.10 Is there a mailing list for pkg-related discussion?
+ 11.10 Is there a mailing list for pkg-related discussion?
  =========================================================
 
 Yes. We are using tech-pkg@NetBSD.org for discussing package related
@@ -2338,7 +2452,7 @@ issues. To subscribe do:
 	% echo subscribe tech-pkg | mail majordomo@netbsd.org
 
 
- 10.11 How do i tell "make fetch" to do passive FTP?
+ 11.11 How do i tell "make fetch" to do passive FTP?
  ===================================================
 
 This depends on which utility is used to retrieve distfiles. From
@@ -2358,7 +2472,7 @@ Having that option present will prevent /usr/bin/ftp from falling back to
 active transfers.
 
 
- 10.12 Dependencies on other packages
+ 11.12 Dependencies on other packages
  ====================================
 
 Your package may depend on some other package being present - and there are
@@ -2465,7 +2579,7 @@ installed version of an older gettext package, or if it isn't, installs the
 pkgsrc/devel/gettext-m4 package.
 
 
- 10.13 Conflicts with other packages
+ 11.13 Conflicts with other packages
  ===================================
 
 Your package may conflict with other packages a user might already have
@@ -2489,7 +2603,7 @@ and a different version string. "Xaw3d-1.5" e.g. will automatically conflict
 with the older version "Xaw3d-1.3".
 
 
- 10.14 Software which has a WWW Home Page
+ 11.14 Software which has a WWW Home Page
  ========================================
 
 The NetBSD packages system now supports a variable called HOMEPAGE.
@@ -2499,7 +2613,7 @@ of the variable should be placed immediately after the MAINTAINER
 variable.
 
 
- 10.15 How to handle modified distfiles with the 'old' name
+ 11.15 How to handle modified distfiles with the 'old' name
  ==========================================================
 
 Sometimes authors of a software package make some modifications after the
@@ -2514,7 +2628,7 @@ the distfile was really updated on purpose, and that no trojan horse or so
 crept in.
 
 
- 10.16 What does "Don't know how to make /usr/share/tmac/tmac.andoc" mean?
+ 11.16 What does "Don't know how to make /usr/share/tmac/tmac.andoc" mean?
  =========================================================================
 
 When compiling the pkgsrc/pkgtools/pkg_install package, you get the error
@@ -2526,7 +2640,7 @@ In the case of the pkg_install package, you can get away with setting
 NOMAN=YES either in the environment or in /etc/mk.conf.
 
 
- 10.17 How to handle incrementing versions when fixing an existing package
+ 11.17 How to handle incrementing versions when fixing an existing package
  =========================================================================
 
 When making fixes to an existing package it can be useful to change
@@ -2547,7 +2661,7 @@ be like:
 DISTNAME=	foo-17.43
 
 
- 10.18 "Could not find bsd.own.mk" - what's wrong?
+ 11.18 "Could not find bsd.own.mk" - what's wrong?
  =================================================
 
 You didn't install the compiler set, comp.tgz, when you installed your
@@ -2559,7 +2673,7 @@ comp.tgz is part of every NetBSD release, please get the one matching
 the release you have installed (determine via "uname -r").
 
 
- 10.19 Restricted packages
+ 11.19 Restricted packages
  =========================
 
 Some licenses restrict how software may be re-distributed.  In order to
@@ -2596,7 +2710,7 @@ make variables to denote restrictions is deprecated, because they
 unconditionally prevent users from generating binary packages!
 
 
- 10.20 Packages using (n)curses
+ 11.20 Packages using (n)curses
  ==============================
 
 Some packages need curses functionality that wasn't present in NetBSD's own
@@ -2612,7 +2726,7 @@ required, then define USE_NCURSES in the package's Makefile:
 The comment should indicate which functions are missing.
 
 
- 10.21 Automated security check
+ 11.21 Automated security check
  ==============================
 
 Please be aware that there can often be bugs in third-party software,
@@ -2673,7 +2787,7 @@ be considered. See section 8 for more information about writing
 buildlink3.mk files and BUILDLINK_* definitions.
 
 
- 10.22 What's the proper way to create an account from a package?
+ 11.22 What's the proper way to create an account from a package?
  ================================================================
 
 There are two make variables used to control the creation of package-specific
@@ -2706,7 +2820,7 @@ toggled on and off by setting the environment variable PKG_CREATE_USERGROUP
 prior to package installation.
 
 
- 10.23 How to handle compiler bugs
+ 11.23 How to handle compiler bugs
  =================================
 
 Some source files trigger bugs in the compiler, based on combinations
@@ -2720,7 +2834,7 @@ combination, and documenting it in doc/HACKS. See doc/HACKS for
 examples.
 
 
- 10.24 Packages providing info files
+ 11.24 Packages providing info files
  ===================================
 
 Some packages install info files or use the makeinfo or install-info
@@ -2761,7 +2875,7 @@ message. The script overriding makeinfo logs a message and according to the
 value of USE_MAKEINFO and TEXINFO_REQD either run the appropriate makeinfo
 command or exit on error.
 
- 10.25 Packages whose distfiles aren't available for plain downloading
+ 11.25 Packages whose distfiles aren't available for plain downloading
  =====================================================================
 
 If you need to download from a dynamic URL you can set DYNAMIC_MASTER_SITES
@@ -2779,7 +2893,7 @@ emulators/vmare-module, fonts/acroread-jpnfont, sysutils/storage-manager,
 www/ap-aolserver, www/openacs. Try to be consistent with them.
 
 
- 10.26 Using pkgsrc on non-NetBSD (Darwin, FreeBSD, IRIX, Linux, OpenBSD, Solaris)
+ 11.26 Using pkgsrc on non-NetBSD (Darwin, FreeBSD, IRIX, Linux, OpenBSD, Solaris)
  =================================================================================
 
 In order to use pkgsrc on a non-NetBSD operating system, you must first
@@ -2790,7 +2904,7 @@ URL as well.  If your Operating System is not yet supported, we encourage you to
 port the bootstrap-kit and submit your changes.
 
 
- 10.27 Configuration files handling and placement
+ 11.27 Configuration files handling and placement
  ================================================
 
 The global variable PKG_SYSCONFBASE (and some others) can be set by the
@@ -2856,7 +2970,7 @@ the installed file first and then the target file. Users will also get an
 automatic message when files are installed using this method.
 
 
- 10.28 Packages providing login shells
+ 11.28 Packages providing login shells
  =====================================
 
 If the purpose of the package is to provide a login shell, the variable
@@ -2875,7 +2989,7 @@ post-install step by the auto-generated INSTALL script and removed in the
 deinstall step by the DEINSTALL script.
 
 
- 10.29 Packages providing locale catalogues
+ 11.29 Packages providing locale catalogues
  ==========================================
 
 If the package provides its own locale catalogues, the variable
@@ -2885,7 +2999,7 @@ directories (which may vary, depending on OS), if necessary.  See also
 section 5.1 for details about ${PKGLOCALEDIR}.
 
 
- 10.30 Using 'sudo' with pkgsrc
+ 11.30 Using 'sudo' with pkgsrc
  ==============================
 
 When installing packages as non-root user and using the just-in-time
@@ -2898,7 +3012,7 @@ pkgsrc/security/sudo) and then put the following into your /etc/mk.conf:
 	SU_CMD=/usr/pkg/bin/sudo /bin/sh -c
 
 
- 10.31 Packages that cannot or should not be built
+ 11.31 Packages that cannot or should not be built
  =================================================
 
 There are several reasons why a package might be instructed to not
@@ -2915,7 +3029,7 @@ IGNORE is deprecated because it didn't provide enough information
 to determine whether the build should fail.
 
 
- 10.32 Packages which should not be deleted, once installed
+ 11.32 Packages which should not be deleted, once installed
  ==========================================================
 
 To ensure that a package may not be deleted, once it has been installed,
@@ -2924,7 +3038,7 @@ will be carried into any binary package that is made from this pkgsrc
 entry. A "preserved" package will not be deleted using pkg_delete(1),
 unless the "-f" option is used.
 
- 10.33 Packages containing perl scripts
+ 11.33 Packages containing perl scripts
  ======================================
 
 If your package contains interpreted perl scripts, set REPLACE_PERL to
@@ -2932,7 +3046,7 @@ ensure that the proper interpreter path is set. REPLACE_PERL should
 contain a list of scripts, relative to WRKSRC, that you want adjusted.
 
 
- 10.34 Packages with hardcoded paths to other interpreters
+ 11.34 Packages with hardcoded paths to other interpreters
  =========================================================
 
 Your package may also contain scripts with hardcoded paths to other
@@ -2947,7 +3061,7 @@ _REPLACE_FILES.tcl=	...list of tcl scripts which need to be fixed,
 			relative to ${WRKSRC}, just as in REPLACE_PERL
 
 
- 10.35 Utilities for package management (pkgtools)
+ 11.35 Utilities for package management (pkgtools)
  =================================================
 
 The directory pkgtools contains a number of useful utilities.  This section
@@ -2993,7 +3107,7 @@ Utilities for people maintaining pkgsrc (or more obscure pkg utilities)
   libkver - spoof kernel version for chrooted cross builds
 
 
- 10.36 How to use pkgsrc as non-root?
+ 11.36 How to use pkgsrc as non-root?
  ====================================
 
 If you want to use pkgsrc as non-root user, you can set some variables
@@ -3002,7 +3116,7 @@ http://mail-index.netbsd.org/tech-pkg/2003/09/27/0023.html
 for more details.
 
 
- 10.37 Packages installing GConf2 data files
+ 11.37 Packages installing GConf2 data files
  ===========================================
 
 If a package installs .schemas or .entries files, used by GConf2, you need
@@ -3032,7 +3146,7 @@ to take some extra steps to make sure they get registered in the database:
     any directories in them.
 
 
- 10.38 Packages installing scrollkeeper data files
+ 11.38 Packages installing scrollkeeper data files
  =================================================
 
 If a package installs .omf files, used by scrollkeeper, you need to take some
@@ -3050,7 +3164,7 @@ extra steps to make sure they get registered in the database:
     scrollkeeper.
 
 
- 10.39 Packages installing X11 fonts
+ 11.39 Packages installing X11 fonts
  ===================================
 
 If a package installs font files, you will need to rebuild the fonts database
@@ -3068,7 +3182,7 @@ standard ones to avoid the user having the manually configure the X server
 to find them.
 
 
- 10.40 Packages installing GTK2 modules
+ 11.40 Packages installing GTK2 modules
  ======================================
 
 If a package installs gtk2 immodules or loaders, you need to take some extra
@@ -3092,7 +3206,7 @@ steps to get them registered in the GTK2 database properly:
     as they will be handled automatically.
 
 
- 10.41 Packages installing SGML or XML data
+ 11.41 Packages installing SGML or XML data
  ==========================================
 
 If a package installs SGML or XML data files that need to be registered in
@@ -3120,7 +3234,7 @@ extra steps:
     Note that you will normally not use this variable.
 
 
- 10.42 Packages using intltool
+ 11.42 Packages using intltool
  =============================
 
 If a package uses intltool during its build, include the
@@ -3133,8 +3247,8 @@ version; this way, the package benefits of any bug fixes that may have appeared
 since it was released.
 
 
- 10.43 How can I install/use XFree86 from pkgsrc?
- ========================================
+ 11.43 How can I install/use XFree86 from pkgsrc?
+ ================================================
 
 If you want to use XFree86 from pkgsrc instead of your system's own
 X11 (/usr/X11R6, /usr/openwin, ...), you will have to add the following
@@ -3142,8 +3256,8 @@ lines into mk.conf:
 
     X11_TYPE=XFree86
 
- 10.44 How can I install/use X.org from pkgsrc?
- ======================================
+ 11.44 How can I install/use X.org from pkgsrc?
+ ==============================================
 
 If you want to use X.org from pkgsrc instead of your system's own
 X11 (/usr/X11R6, /usr/openwin, ...) you will have to add the following
@@ -3151,14 +3265,14 @@ lines into mk.conf:
 
     X11_TYPE=xorg
 
- 10.45 Where's the pkgviews documentation?
+ 11.45 Where's the pkgviews documentation?
  =========================================
 
 Pkgviews is tightly integrated with buildlink. You can find a
 pkgviews User's Guide in pkgsrc/mk/buildlink3/PKGVIEWS_UG.
 
 
- 10.46 How do I handle common shared directories?
+ 11.46 How do I handle common shared directories?
  ================================================
 
 A "shared directory" is a directory where multiple (and unrelated)
@@ -3207,7 +3321,7 @@ the *-x11-dirs packages.  Just specify the name without that part and pkgsrc
 (in particular, mk/dirs.mk) will take care of it.
 
 
- 10.47 How can I tweak 'make print-PLIST' output?
+ 11.47 How can I tweak 'make print-PLIST' output?
  ================================================
 
 If you have used any of the *-dirs packages, as explained in 10.45, you
@@ -3231,7 +3345,7 @@ converted to @comment's:
     PRINT_PLIST_AWK+= /^@dirrm share\/special/ { print "@comment " $$0; next; }
 
 
- 10.48 Packages that install score files
+ 11.48 Packages that install score files
  =======================================
 
 Certain packages, most of them in the games category, install a score file
@@ -3249,10 +3363,10 @@ A package should therefor never hard code file ownership or access permissions
 but rely on INSTALL_GAME and INSTALL_GAME_DATA to set these correctly.
 
 
- 11 Submitting & Committing
+ 12 Submitting & Committing
  ==========================
 
- 11.1 Submitting your packages
+ 12.1 Submitting your packages
  =============================
 
 You have to separate between binary and "normal" (source) packages here:
@@ -3282,7 +3396,7 @@ You have to separate between binary and "normal" (source) packages here:
    for details.
 
 
- 11.2 Committing: Importing the package into CVS
+ 12.2 Committing: Importing the package into CVS
  ===============================================
 
 This section is only of interest for NetBSD developers with write
@@ -3317,7 +3431,7 @@ the former gets everything with a single command, and provides a
 consistent tag.
 
 
- 11.3 Updating a Package to a Newer Version
+ 12.3 Updating a Package to a Newer Version
  ==========================================
 
 Please always put a concise, appropriate and relevant summary of the
@@ -3344,7 +3458,7 @@ judgement about what should go into pkgsrc, and bear in mind that
 stability is to be preferred above new and possibly untested features.
 
 
- 11.4 Moving a Package in pkgsrc
+ 12.4 Moving a Package in pkgsrc
  ===============================
 
  1. Make a copy of the directory somewhere else.
@@ -3367,7 +3481,7 @@ stability is to be preferred above new and possibly untested features.
     and any packages from step 5, of course.
 
 
- 12 A simple example of a package: bison
+ 13 A simple example of a package: bison
  =======================================
 
 I checked to find a piece of software that wasn't in the packages
@@ -3376,13 +3490,13 @@ bison when Berkeley yacc is already present in the tree is beyond me, but
 it's useful for the purposes of this exercise.
 
 
- 12.1 files
+ 13.1 files
  ==========
 
 The file contents in this section must be used without the "> " prefix.
 
 
- 12.1.1 Makefile
+ 13.1.1 Makefile
  ===============
 
 	# <$>NetBSD<$>
@@ -3400,7 +3514,7 @@ The file contents in this section must be used without the "> " prefix.
 	.include "../../mk/bsd.pkg.mk"
 
 
- 12.1.2 DESCR
+ 13.1.2 DESCR
  ================
 
 	GNU version of yacc.  Can make re-entrant parsers, and numerous other
@@ -3408,7 +3522,7 @@ The file contents in this section must be used without the "> " prefix.
 	of the NetBSD source tree is beyond me.
 
 
- 12.1.3 PLIST
+ 13.1.3 PLIST
  ================
 
 	@comment <$>NetBSD<$>
@@ -3424,7 +3538,7 @@ The file contents in this section must be used without the "> " prefix.
 	share/bison.hairy
 
 
- 12.1.4 Checking a package "pkglint"
+ 13.1.4 Checking a package "pkglint"
  ===================================
 
 The NetBSD package system comes with a tool called "pkglint" (located in the
@@ -3444,7 +3558,7 @@ verbose checks will be performed. Use e.g. "pkglint -v" for a very verbose
 check.
 
 
- 12.2 Steps for building, installing, packaging
+ 13.2 Steps for building, installing, packaging
  ==============================================
 
 Create the directory where the package lives, plus any auxiliary directories:
@@ -3454,8 +3568,7 @@ Create the directory where the package lives, plus any auxiliary directories:
 	# cd bison
 	# mkdir patches pkg
 
-Create Makefile, DESCR and PLIST as in section 11.1,
-then continue with fetching the distfile:
+Create Makefile, DESCR and PLIST, then continue with fetching the distfile:
 
 	# make fetch
 	>> bison-1.25.tar.gz doesn't seem to exist on this system.
