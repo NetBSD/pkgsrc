@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:58:46 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/21 17:17:44 jlam Exp $
 bin/addtosmbpass
 bin/make_printerdef
 bin/make_smbcodepage
@@ -12,7 +12,9 @@ bin/smbstatus
 bin/smbtar
 bin/testparm
 bin/testprns
+etc/rc.d/nmbd
 etc/rc.d/samba
+etc/rc.d/smbd
 man/man1/make_smbcodepage.1
 man/man1/make_unicodemap.1
 man/man1/nmblookup.1

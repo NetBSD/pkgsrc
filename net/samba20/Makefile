@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/08/22 15:42:19 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/11/21 17:17:44 jlam Exp $
 
 DISTNAME=		samba-2.0.10
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
@@ -17,12 +17,11 @@ USE_BUILDLINK_ONLY=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-SAMPLE_CONFIG=		${PREFIX}/share/examples/samba/smb.conf.sample
 SAMBA_LOGDIR?=		/var/log
 SAMBA_LOCKDIR?=		/var/run/samba
-SAMBA_ETCDIR?=		/etc/samba
+SAMBA_ETCDIR?=		${CONFDIR}/samba
 SAMBA_PRIVATE?=		${SAMBA_ETCDIR}/private
-SAMBA_DATADIR?=		${PREFIX}/share
+SAMBA_DATADIR=		${PREFIX}/share
 
 MAKE_ENV+=		CONFIGDIR=${SAMBA_ETCDIR}
 
@@ -49,53 +48,46 @@ CONFIGURE_ARGS+=	--with-pam
 CONFIGURE_ARGS+=	--without-smbwrapper
 CONFIGURE_ARGS+=	--without-smbmount
 
-INSTALL_FILE=		${WRKDIR}/INSTALL
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-
 DOCDIR=			${PREFIX}/share/doc/samba
 HTMLDIR=		${PREFIX}/share/doc/html/samba
 EXAMPLESDIR=		${PREFIX}/share/examples/samba
 
-FILES_SUBST=            SAMBA_PRIVATE=${SAMBA_PRIVATE}
+FILES_SUBST=		SAMBA_PRIVATE=${SAMBA_PRIVATE}
 FILES_SUBST+=		SAMBA_LOCKDIR=${SAMBA_LOCKDIR}
 FILES_SUBST+=		SAMBA_LOGDIR=${SAMBA_LOGDIR}
 FILES_SUBST+=		SAMBA_ETCDIR=${SAMBA_ETCDIR}
-FILES_SUBST+=		PREFIX=${PREFIX}
-FILES_SUBST+=		CAT=${CAT:Q}
-FILES_SUBST+=		CHMOD=${CHMOD:Q}
-FILES_SUBST+=		CHOWN=${CHOWN:Q}
-FILES_SUBST+=		CMP=${CMP:Q}
-FILES_SUBST+=		CP=${CP:Q}
-FILES_SUBST+=		ECHO=${ECHO:Q}
-FILES_SUBST+=		MKDIR=${MKDIR:Q}
-FILES_SUBST+=		RM=${RM:Q}
-FILES_SUBST+=		RMDIR=${RMDIR:Q}
-FILES_SUBST+=		TRUE=${TRUE:Q}
-FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
-
 MESSAGE_SUBST+=		ETCDIR=${SAMBA_ETCDIR}
 
+CONF_FILES=		${EXAMPLESDIR}/smb.conf.sample ${SAMBA_ETCDIR}/smb.conf
+RCD_SCRIPTS=		samba nmbd smbd
+MAKE_DIRS=		${SAMBA_LOCKDIR}
+OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_PRIVATE}
+
+INSTALL_EXTRA_TMPL=	${PKGDIR}/INSTALL
+
 pre-install:
-	${SED} ${FILES_SUBST_SED} ${FILESDIR}/samba.sh > ${WRKDIR}/samba.sh
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	for script in ${RCD_SCRIPTS}; do				\
+		${SED} ${FILES_SUBST_SED} ${FILESDIR}/$${script}.sh	\
+			> ${WRKDIR}/$${script};				\
+	done
 
 post-install:
 	# Install Samba documentation.
-	#
 	${INSTALL_DATA_DIR} ${DOCDIR} ${HTMLDIR}
 	cd ${WRKDIR}/${DISTNAME}/docs;					\
 		${INSTALL_DATA} announce *.reg textdocs/* ${DOCDIR};	\
 		${INSTALL_DATA} faq/*.html ${HTMLDIR}
 
 	# Install Samba examples.
-	#
 	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
 	${CP} -R ${WRKDIR}/${DISTNAME}/examples/* ${EXAMPLESDIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${EXAMPLESDIR}
 	${CHMOD} -R ugo-w ${EXAMPLESDIR}
 
-	${INSTALL_SCRIPT} ${WRKDIR}/samba.sh ${PREFIX}/etc/rc.d/samba
+	for script in ${RCD_SCRIPTS}; do				\
+		${INSTALL_SCRIPT} ${WRKDIR}/$${script}			\
+			${PREFIX}/etc/rc.d/$${script};			\
+	done
 	${MV} ${PREFIX}/bin/convert_smbpasswd ${PREFIX}/sbin/convert_smbpasswd
 	${INSTALL_SCRIPT} ${WRKSRC}/script/mksmbpasswd.sh		\
 		${PREFIX}/sbin/mksmbpasswd
@@ -109,4 +101,5 @@ post-install:
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/readline/buildlink.mk"
 .include "../../security/openssl/buildlink.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
