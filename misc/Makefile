@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.233 2005/02/26 13:12:07 dsainty Exp $
+# $NetBSD: Makefile,v 1.234 2005/03/06 22:23:04 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -118,12 +118,29 @@ SUBDIR+=	koffice-i18n-he
 SUBDIR+=	koffice-i18n-hsb
 SUBDIR+=	koffice-i18n-hu
 SUBDIR+=	koffice-i18n-it
+SUBDIR+=	koffice-i18n-ja
+SUBDIR+=	koffice-i18n-lo
+SUBDIR+=	koffice-i18n-mt
+SUBDIR+=	koffice-i18n-nb
 SUBDIR+=	koffice-i18n-nl
+SUBDIR+=	koffice-i18n-nn
 SUBDIR+=	koffice-i18n-pl
+SUBDIR+=	koffice-i18n-pt
+SUBDIR+=	koffice-i18n-pt_BR
 SUBDIR+=	koffice-i18n-ru
 SUBDIR+=	koffice-i18n-se
 SUBDIR+=	koffice-i18n-sk
+SUBDIR+=	koffice-i18n-sl
+SUBDIR+=	koffice-i18n-sr
 SUBDIR+=	koffice-i18n-sv
+SUBDIR+=	koffice-i18n-tg
+SUBDIR+=	koffice-i18n-th
+SUBDIR+=	koffice-i18n-tr
+SUBDIR+=	koffice-i18n-ven
+SUBDIR+=	koffice-i18n-xh
+SUBDIR+=	koffice-i18n-zh_CN
+SUBDIR+=	koffice-i18n-zh_TW
+SUBDIR+=	koffice-i18n-zu
 SUBDIR+=	kp
 SUBDIR+=	latin-words-bin
 SUBDIR+=	less
