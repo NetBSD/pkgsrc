@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:22:24 agc Exp $
+
+MD5 (ac3dec-0.6.1.tar.gz) = 92b8d3af8d0d06318bb2bb04b8093eef
+SHA1 (patch-aa) = acacbad8d198c4597207a443864456fb32567dc3
+SHA1 (patch-ab) = 85dd077ffc2cc648e4479b43d3c671a4c278fa70
+SHA1 (patch-ac) = 2f0997ad1e9135d213c3f882b55be59e86b05325

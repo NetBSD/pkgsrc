@@ -1,0 +1,24 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:23:39 agc Exp $
+
+MD5 (xamp/xamp-0.8-10.tgz) = 6baec3236fbeaf2de994ec3421d0186e
+MD5 (xamp/bfamp.tar.gz) = 0831c191b987b2f9ce741508b10a3559
+MD5 (xamp/chrome.tar.gz) = bdae4fc85c9f7601a3b6ee9b0d122921
+MD5 (xamp/mmxamp.tar.gz) = 400c441b72ce2b38d7fd75f6e0e7bf3b
+SHA1 (patch-aa) = a178fc8dee38f4e55eff7289577f2f4b36806574
+SHA1 (patch-ab) = e44114a8770cc7065f230932da2c10dab19bd730
+SHA1 (patch-ac) = de83b1fd7b170438f818d76d025838f8aa07c752
+SHA1 (patch-ad) = 3595460ae4f848b60d1c829ebfecff92cd2a8e58
+SHA1 (patch-ae) = 52e96f426238fa9ef6345adf643725a285da09f6
+SHA1 (patch-af) = be56e4d380045d0be4c90c88b263cacd611d0eab
+SHA1 (patch-ag) = c17579b095485510bc5dc99d0c22da2f44e152b8
+SHA1 (patch-ah) = b93e477392003318a835c08f5bd1a7b1ba56c0c8
+SHA1 (patch-ai) = 4b301a05e9884466959abce6c7b8092b467800ea
+SHA1 (patch-aj) = ab841128854cdacceb54b6c7726d07e5f4fb1140
+SHA1 (patch-ak) = 0d32700aad4cdf232bc1c48376ddcbd762b41852
+SHA1 (patch-al) = 82d615beca8919d1a28e6fa6b344013d771afffe
+SHA1 (patch-am) = 880c459e9e1b8a36eedd04bf372f9458b4bad49b
+SHA1 (patch-an) = 19fdd266a633afccf7ec4de18a8fc5aa7975354f
+SHA1 (patch-ao) = c3d125d0498052c1f37ce3a3597ca50827779aca
+SHA1 (patch-ap) = 4b4429e3c4a9e8324808cf7b1443db4dddc14cb9
+SHA1 (patch-aq) = f454b488a1b726318080900efd1f23f2d788022f
+SHA1 (patch-ar) = b788d9ed2c1230c37548c21180a0dcf756a93398

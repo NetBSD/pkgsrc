@@ -1,7 +1,0 @@
-$NetBSD: patch-sum,v 1.4 2001/01/07 03:10:50 wiz Exp $
-
-MD5 (patch-aa) = 35be17da885908004a97f5df45aa6752
-MD5 (patch-ab) = f25b4f123fa22bd9a323a41cfa69ac9e
-MD5 (patch-ac) = 4a66c110f261adbe932e1c7156086d86
-MD5 (patch-ad) = e87d827cf0eff57a177beda009c5a6e6
-MD5 (patch-ae) = b4bbb0d637aaa4143fc8c99402668122

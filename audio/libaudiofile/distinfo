@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:23:09 agc Exp $
+
+MD5 (audiofile-0.2.1.tar.gz) = e0a9205ac868350ab9aee78f1d282aa5
+SHA1 (patch-ab) = cd292a827aa18b9839305b2c62c3dbd526384430

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:22:26 agc Exp $
+
+MD5 (aumix-2.7.tar.gz) = 84ecc331bf6d86d3ac925590fee83af7
+SHA1 (patch-aa) = b375a92d8b014c299e50ff84df5f9ec89d8d40a8
+SHA1 (patch-ab) = 76b501abba29fd5946f312d56a3ca4ec83030fde
+SHA1 (patch-ac) = 59d6a6dd7015b5f55161231946374d75b33b4536

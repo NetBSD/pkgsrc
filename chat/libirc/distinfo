@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:31:46 agc Exp $
+
+MD5 (libirc-0.2.tar.gz) = ed5750c6575850adcdd9b6851a988751
+SHA1 (patch-ab) = a4ad2c1622ec5733f2c2ff9816c4c312d3240e77
+SHA1 (patch-ac) = 2b6cc28c382c89b2ed272d0b2e6ea5935eae66fe
