@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1100 2002/12/03 21:13:37 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1101 2002/12/05 05:41:39 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -556,7 +556,17 @@ DEINSTALL_FILE=		${PKGDIR}/DEINSTALL
 # If MESSAGE hasn't been defined, then set MESSAGE_SRC to be a space-separated
 # list of files to be concatenated together to generate the MESSAGE file.
 #
-.if !defined(MESSAGE_SRC) && !defined(MESSAGE) && exists(${PKGDIR}/MESSAGE)
+.if !defined(MESSAGE_SRC) && !defined(MESSAGE)
+.  if exists(${PKGDIR}/MESSAGE.common)
+MESSAGE_SRC=		${PKGDIR}/MESSAGE.common
+.  endif
+.  if exists(${PKGDIR}/MESSAGE.${OPSYS})
+MESSAGE_SRC+=		${PKGDIR}/MESSAGE.${OPSYS}
+.  endif
+.  if exists(${PKGDIR}/MESSAGE.${OPSYS}.${MACHINE_ARCH:C/i[3-6]86/i386/g})
+MESSAGE_SRC+=	${PKGDIR}/MESSAGE.${OPSYS}.${MACHINE_ARCH:C/i[3-6]86/i386/g}
+.  endif
+.elif exists(${PKGDIR}/MESSAGE)
 MESSAGE_SRC=		${PKGDIR}/MESSAGE
 .endif
 
