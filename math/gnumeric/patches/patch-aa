@@ -1,28 +1,17 @@
-$NetBSD: patch-aa,v 1.4 2000/01/01 14:23:25 rh Exp $
+$NetBSD: patch-aa,v 1.5 2000/04/16 15:11:22 rh Exp $
 
---- configure.orig	Fri Dec 31 01:02:16 1999
-+++ configure	Sat Jan  1 13:54:50 2000
-@@ -2065,8 +2065,10 @@
-   ac_tool_prefix=
- fi
- 
-+if false; then
- # Always use our own libtool.
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
-+fi
- 
- # Check for any special flags to pass to ltconfig.
- libtool_flags=
-@@ -3335,7 +3337,7 @@
+--- configure.orig	Thu Apr 13 03:43:02 2000
++++ configure	Sun Apr 16 08:06:05 2000
+@@ -3052,7 +3052,7 @@
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    ac_save_LIBS="$LIBS"
 -LIBS="-lxml `$GNOME_CONFIG --libs xml` $LIBS"
-+LIBS="-L${LOCALBASE}/lib -lxml -lz ${LIBS}"
++LIBS="`xml-config --libs` ${LIBS}"
  cat > conftest.$ac_ext <<EOF
- #line 3341 "configure"
+ #line 3058 "configure"
  #include "confdefs.h"
-@@ -3365,7 +3367,7 @@
+@@ -3082,7 +3082,7 @@
    echo "$ac_t""yes" 1>&6
    
  		
@@ -31,7 +20,7 @@ $NetBSD: patch-aa,v 1.4 2000/01/01 14:23:25 rh Exp $
  	
  else
    echo "$ac_t""no" 1>&6
-@@ -6556,10 +6558,12 @@
+@@ -6310,10 +6310,12 @@
      top_srcdir="$ac_dots$ac_given_srcdir" ;;
    esac
  
