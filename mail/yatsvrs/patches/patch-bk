@@ -1,0 +1,22 @@
+$NetBSD: patch-bk,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
+
+--- yatd/v2conv.c.orig	Fri Jun 22 12:27:20 2001
++++ yatd/v2conv.c
+@@ -133,7 +133,7 @@
+ 	  goto LBL_CONTINUE;
+ 	V2Fldr.nMailUnseen = atoi(p);
+ #ifdef DEBUG_LOCAL
+-	LogDEBUG("<<<V2 Summary: %.256s %u %u %u",
++	LogDEBUG("<<<V2 Summary: %.256s %ld %u %u",
+ 		 V2Fldr.szName, V2Fldr.mtime,
+ 		 V2Fldr.nMail, V2Fldr.nMailUnseen);
+ #endif
+@@ -549,7 +549,7 @@
+ 
+   if (Cnv2(SysData.argv[1]))
+     return FAILURE;
+-  Msg2Cli(SUCCESS, "You have %d message(s) (%d octets).",
++  Msg2Cli(SUCCESS, "You have %d message(s) (%ld octets).",
+ 	  SysData.pFldrCur->nMailAvail,
+ 	  SysData.pFldrCur->sizMailsAvail);
+   return SUCCESS;

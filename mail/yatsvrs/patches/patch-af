@@ -1,0 +1,41 @@
+$NetBSD: patch-af,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
+
+--- ascyd/sighand.c.orig	Mon Jun 25 14:58:32 2001
++++ ascyd/sighand.c
+@@ -60,7 +60,6 @@
+ void SigHandler(iSig)
+      int iSig;
+ {
+-  CONST char * pMsg;
+   int    codeErr;
+ 
+   /*
+@@ -72,17 +71,14 @@
+ 
+   switch (iSig) {
+   case SIGALRM:
+-    pMsg = NULL;
+     codeErr = ERRYS_TIMEOUT;
++    WARNING(codeErr, 0, NULL, iSig);
+     break;
+-  case SIGHUP:
+-  case SIGTERM:
+   default:
+     codeErr = ERRYS_SIGNAL;
+-    pMsg = "#%d";
++    WARNING(codeErr, 0, "#%d", iSig);
+     break;
+   }
+-  WARNING(codeErr, 0, pMsg, iSig);
+ 
+   if (SysData.Flags.lock)
+     SessionUnlock();
+@@ -94,7 +90,7 @@
+   }
+ #endif
+ 
+-  ErrSetData(codeErr, 0, pMsg, iSig);
++  ErrSetData(codeErr, 0, (codeErr == ERRYS_SIGNAL)? "#%d": NULL, iSig);
+   Msg2Cli(FAILURE, NULL);
+ 
+   exit(1);

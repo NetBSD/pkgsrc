@@ -1,0 +1,13 @@
+$NetBSD: patch-bg,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
+
+--- yatd/tcplib.c.orig	Fri Jun 22 20:05:49 2001
++++ yatd/tcplib.c
+@@ -71,7 +71,7 @@
+ 
+     if ((pHent=gethostbyaddr((char *)&(pSck->inAddr), sizeof (struct in_addr),
+ 			     AF_INET)) == NULL) {
+-      WARNING(ERRYS_DUMMY, 0, "gethostbyaddr(%d) failed", pszHost);
++      WARNING(ERRYS_DUMMY, 0, "gethostbyaddr(%s) failed", pszHost);
+       pSck->pszHost = NULL;
+     }
+     else if ((pSck->pszHost = strdup(pHent->h_name)) == NULL) {

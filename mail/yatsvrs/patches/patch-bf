@@ -1,0 +1,20 @@
+$NetBSD: patch-bf,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
+
+--- yatd/store.c.orig	Mon Jun  4 15:43:51 2001
++++ yatd/store.c
+@@ -168,7 +168,13 @@
+   Msg2Cli(SUCCESS, "Please send message to store.");
+   if (net2Fldr(pFldr, stdin, 0))
+     return FAILURE;
+-  Msg2Cli(SUCCESS, "%d %d",
+-	  pFldr->nMail, (pFldr->pArryMail[pFldr->nMail-1])->lLength);
++  Msg2Cli(SUCCESS,
++#ifdef LONGLONG_OFF_T
++	  "%d %" LONGLONG_OPTC "u",
++#else
++	  "%d %u",
++#endif
++	  pFldr->nMail,
++	  LONGLONG_CAST(((pFldr->pArryMail[pFldr->nMail-1])->lLength)));
+   return SUCCESS;
+ }

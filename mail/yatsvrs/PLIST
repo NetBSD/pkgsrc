@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/11/15 23:21:30 taca Exp $
+libexec/ascyd
+libexec/yatd
+libexec/yatconfd
+share/doc/yatsvr5/IMPORTANT
+share/doc/yatsvr5/README
+share/doc/yatsvr5/UPDATE
+share/doc/yatsvr5/YATCONF
+share/doc/yatsvr5/YATEXT4
+@dirrm share/doc/yatsvr5
+share/examples/yatsvr5/yatrc2.example
+share/examples/yatsvr5/yatsvrrc.example
+@dirrm share/examples/yatsvr5

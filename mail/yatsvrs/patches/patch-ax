@@ -1,0 +1,22 @@
+$NetBSD: patch-ax,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
+
+--- yatd/init.c.orig	Thu Jun 28 16:43:55 2001
++++ yatd/init.c
+@@ -385,7 +385,7 @@
+ #else
+ 		"Invalid %s value : %d",
+ #endif
+-		YSCONF_DFLIMITSIZ, sizLimit);
++		YSCONF_DFLIMITSIZ, LONGLONG_CAST(sizLimit));
+       }
+       else
+ 	SysData.sizLimitFree = sizLimit;
+@@ -400,7 +400,7 @@
+ #endif
+       if ((nodLimit < MINLIMITNODFREE) || (MAXLIMITNODFREE < nodLimit)) {
+ 	WARNING(ERRYS_DUMMY, 0,
+-		"Invalid %s value : %d", YSCONF_DFLIMITNOD, nodLimit);
++		"Invalid %s value : %ld", YSCONF_DFLIMITNOD, nodLimit);
+       }
+       else
+ 	SysData.nodLimitFree = nodLimit;
