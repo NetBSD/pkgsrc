@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5364 2004/03/29 22:25:13 recht Exp $
+$NetBSD: CHANGES,v 1.5365 2004/03/29 22:45:19 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1600,3 +1600,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Renamed gimp-wideangle to gimp1-wideangle [xtraeme 2004-03-29]
 	Updated gimp to 2.0.0 [xtraeme 2004-03-29]
 	Added ttmkfdir2-20021109 [recht 2004-03-29]
+	Updated hot-babe to 0.1.2nb4 [snj 2004-03-29]
