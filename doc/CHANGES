@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8814 2005/01/19 11:09:17 adam Exp $
+$NetBSD: CHANGES,v 1.8815 2005/01/19 12:55:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -418,3 +418,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added gdome2-0.8.1 [adam 2005-01-18]
 	Updated xpdf to 3.00pl3 [drochner 2005-01-19]
 	Updated ntop to 3.1nb2 [adam 2005-01-19]
+	Updated radmind to 1.4.0 [wiz 2005-01-19]
