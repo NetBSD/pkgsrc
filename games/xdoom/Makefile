@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/02/24 23:07:34 minskim Exp $
+# $NetBSD: Makefile,v 1.24 2005/02/24 23:10:44 minskim Exp $
 
 DISTNAME=	linuxdoom-1.10
 PKGNAME=	xdoom-1.10
@@ -23,6 +23,12 @@ USE_BUILDLINK3=	yes
 USE_X11BASE=	yes
 USE_GNU_TOOLS+=	make
 MAKE_ENV+=	X11BASE=${X11BASE} INSTALL_PREFIX=${X11PREFIX}
+
+.include "../../mk/bsd.prefs.mk"
+
+.ifdef ${OPSYS} == "Linux"
+CFLAGS+=	-DLINUX
+.endif
 
 .include "../../mk/endian.mk"
 
