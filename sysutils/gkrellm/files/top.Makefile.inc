@@ -1,4 +1,4 @@
-VERSION=	2.1.27
+VERSION=	2.1.28
 
 # Path options
 PREFIX?=	/usr/local
@@ -57,6 +57,11 @@ PROFILE=	yes
 endif
 ifeq ($(profile),yes)
 PROFILE=	yes
+endif
+
+# Don't strip binaries if in DEBUG mode
+ifeq ($(DEBUG),yes)
+STRIP=
 endif
 
 ifeq ($(GTOP),)
