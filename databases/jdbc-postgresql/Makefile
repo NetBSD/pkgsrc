@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/10/10 17:48:34 jdolecek Exp $
+# $NetBSD: Makefile,v 1.25 2004/10/25 17:40:01 jdolecek Exp $
 #
 
 DISTNAME=		postgresql-${DIST_VERS}
@@ -13,7 +13,7 @@ MASTER_SITES?=		http://www.postgresql.org/ftpsite/source/v${DIST_VERS}/ \
 			ftp://ftp.sunsite.auc.dk/mirrors/postgresql/source/v${DIST_VERS}/ \
 			ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/source/v${DIST_VERS}/
 
-DIST_VERS=		7.3.7
+DIST_VERS=		7.3.8
 MAINTAINER=		jwise@NetBSD.org
 HOMEPAGE=		http://www.postgresql.org/
 COMMENT=		100% Java JDBC driver for PostgreSQL
