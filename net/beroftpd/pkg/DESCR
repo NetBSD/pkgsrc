@@ -1,0 +1,12 @@
+BeroFTPD is a replacement ftp server for Un*x systems based on wu-ftpd.
+In addition to wu-ftpd's features, BeroFTPD includes better support for
+virtual hosts, the possibility to send an e-mail to the FTP administrator
+when an anonymous user uploads a file, better support for on-the-fly 
+[re]compression, support for upload/download ratios, include-directive
+in ftpaccess, an internal ls command (optional, currently experimental),
+the ability to run as standalone daemon, and support for Kerberos5 and
+AFS authentication.
+
+No homepage.
+
+Bill Fumerola <billf@chc-chimes.com>
