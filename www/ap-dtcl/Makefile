@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2001/05/20 05:23:27 jonb Exp $
+# $NetBSD: Makefile,v 1.14 2001/05/24 03:04:05 jlam Exp $
 
-DISTNAME=	mod_dtcl-0.8.12
-PKGNAME=	ap-dtcl-0.8.12
+DISTNAME=	mod_dtcl-0.10.1
+PKGNAME=	ap-dtcl-0.10.1
 WRKSRC=		${WRKDIR}/mod_dtcl
 CATEGORIES=	www
 MASTER_SITES=	http://tcl.apache.org/mod_dtcl/download/
@@ -11,29 +11,32 @@ HOMEPAGE=	http://tcl.apache.org/
 COMMENT=	Simple, fast Tcl server side scripting for apache
 
 DEPENDS+=	apache{,6}-1.3.*:../../www/apache
-DEPENDS+=	tcl>=8.3.2:../../lang/tcl
-# For "apxs":
-BUILD_DEPENDS=	perl>=${PERL5_REQD}:../../lang/perl5
+DEPENDS+=	tcl>=8.3.2nb2:../../lang/tcl
 
-INCLUDES=	-I${PREFIX}/include/
-LIBS=		-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -ltcl83 -lm
+TCLSH=		${LOCALBASE}/bin/tclsh
+CPPFLAGS+=	-I${PREFIX}/include/httpd
+
+MAKE_ENV+=	TCLSH="${TCLSH}"
+MAKE_ENV+=	INCLUDES="${CPPFLAGS}"
+
+APACHEMODDIR=	${PREFIX}/lib/httpd
+HTMLDIR=	${PREFIX}/share/doc/html/mod_dtcl
+EGDIR=		${PREFIX}/share/examples/mod_dtcl
 
 do-build:
-	cd ${WRKSRC} && ${PREFIX}/sbin/apxs -DDTCL_VERSION=\\\"`cat ${WRKSRC}/VERSION`\\\" ${INCLUDES} ${LIBS} -c mod_dtcl.c
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SH} builddtcl.sh
 
 do-install:
-	@cd ${WRKSRC} && ${PREFIX}/sbin/apxs -i mod_dtcl.so
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mod_dtcl
-	${INSTALL_DATA} ${WRKSRC}/docs/*.html ${PREFIX}/share/doc/mod_dtcl
-	${INSTALL_DATA} ${WRKSRC}/docs/*.gif ${PREFIX}/share/doc/mod_dtcl
-	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${PREFIX}/share/doc/mod_dtcl
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mod_dtcl
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mod_dtcl/tests
-	${INSTALL_DATA} ${WRKSRC}/tests/README ${PREFIX}/share/examples/mod_dtcl/tests
-	${INSTALL_DATA} ${WRKSRC}/tests/dtcl-test.ttml ${PREFIX}/share/examples/mod_dtcl/tests
-	${INSTALL_DATA} ${WRKSRC}/tests/dtcl.test ${PREFIX}/share/examples/mod_dtcl/tests
-	${INSTALL_DATA} ${WRKSRC}/contrib/*.ttml ${PREFIX}/share/examples/mod_dtcl
-	${INSTALL_DATA} ${WRKSRC}/contrib/*.tcl ${PREFIX}/share/examples/mod_dtcl
-	${INSTALL_DATA} ${WRKSRC}/docs/examples.ttml ${PREFIX}/share/examples/mod_dtcl
+	${INSTALL_DATA} ${WRKSRC}/mod_dtcl.so ${APACHEMODDIR}
+	${INSTALL_DATA_DIR} ${HTMLDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/*.gif ${HTMLDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/*.html ${HTMLDIR}
+	${INSTALL_DATA_DIR} ${EGDIR}/tests
+	cd ${WRKSRC}; ${INSTALL_DATA} tests/README ${EGDIR}/tests
+	cd ${WRKSRC}; ${INSTALL_DATA} tests/dtcl-test.ttml ${EGDIR}/tests
+	cd ${WRKSRC}; ${INSTALL_DATA} tests/dtcl.test ${EGDIR}/tests
+	cd ${WRKSRC}; ${INSTALL_DATA} contrib/*.ttml ${EGDIR}
+	cd ${WRKSRC}; ${INSTALL_DATA} contrib/*.tcl ${EGDIR}
+	cd ${WRKSRC}; ${INSTALL_DATA} docs/examples.ttml ${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
