@@ -1,4 +1,4 @@
-#	$NetBSD: CHANGES-1.6.1,v 1.1.2.9 2003/03/23 01:01:59 jmc Exp $
+#	$NetBSD: CHANGES-1.6.1,v 1.1.2.10 2003/03/23 01:14:08 jmc Exp $
 
 Changes to the pkgsrc-1-6-1 branch:
 
@@ -317,3 +317,27 @@ sysutils/cdrecord/patches/patch-cc		1.1 (new)
 	Bump PKGREVISION.
 	[grant, ticket #1200]
 
+net/samba/Makefile				1.94
+net/samba/distinfo				1.26
+net/samba/patches/patch-ar			1.1 (new)
+
+	open_file_shared(): when falling back to O_RDONLY open_file() call 
+	after O_RDWR fails in fcbopen case, remember the errno from 
+	previous open_file() call and set errno back to this value if the 
+	second open_file() call fails too.
+
+	This makes samba report EACCESS instead of confusing ENOENT if 
+	creation of file fails due to insufficient permissions for 
+	SMBcreate/SMBmknew call.
+
+	Bump package revision.
+	[bouyer, ticket #1218]
+
+x11/lablgtk/Makefile				1.4
+x11/lablgtk/PLIST.noopt				1.1 (new)
+
+	Make this go on non-i386 systems.  Currently ocamlopt is only available
+	on i386 so avoid using that on non-i386 systems.  Compiles and 
+	seems to work on alpha.
+
+	[dmcmahill, ticket #1219]
