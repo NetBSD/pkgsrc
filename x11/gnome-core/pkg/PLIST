@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1999/03/07 21:17:50 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 1999/03/16 22:29:11 tron Exp $
 bin/gmenu
 bin/jbc_applet
 bin/gnome-edit
@@ -57,6 +57,7 @@ lib/libgkb_applet.so.0.0
 lib/libpanel_applet.a
 lib/libpanel_applet.so.0.0
 lib/appletsConf.sh
+share/default.wm
 share/applets/Monitors/cpumemusage_applet.desktop
 share/applets/Monitors/diskusage_applet.desktop
 share/applets/Monitors/cpuload_applet.desktop
@@ -112,6 +113,30 @@ share/gnome/apps/gnome-help.desktop
 share/default.session
 share/gnome/help/gnome-terminal/C/docbook.css
 share/gnome/help/gnome-terminal/C/topic.dat
+share/gnome/help/gnome-terminal/C/index.html
+share/gnome/help/gnome-terminal/C/authors.html
+share/gnome/help/gnome-terminal/C/classes.html
+share/gnome/help/gnome-terminal/C/config.html
+share/gnome/help/gnome-terminal/C/emulation.html
+share/gnome/help/gnome-terminal/C/enviroment.html
+share/gnome/help/gnome-terminal/C/menus.html
+share/gnome/help/gnome-terminal/C/options.html
+share/gnome/help/gnome-terminal/C/pointerusage.html
+share/gnome/help/gnome-terminal/C/terminal.html
+share/gnome/help/gnome-terminal/C/termtech.html
+share/gnome/help/gnome-terminal/no/index.html
+share/gnome/help/gnome-terminal/no/topic.dat
+share/gnome/help/gnome-terminal/no/authors.html
+share/gnome/help/gnome-terminal/no/classes.html
+share/gnome/help/gnome-terminal/no/config.html
+share/gnome/help/gnome-terminal/no/emulation.html
+share/gnome/help/gnome-terminal/no/enviroment.html
+share/gnome/help/gnome-terminal/no/menus.html
+share/gnome/help/gnome-terminal/no/options.html
+share/gnome/help/gnome-terminal/no/pointerusage.html
+share/gnome/help/gnome-terminal/no/terminal.html
+share/gnome/help/gnome-terminal/no/termtech.html
+share/gnome/help/gnome-terminal/no/docbook.css
 share/gnome/help/help-browser/fr/help-browser.html
 share/gnome/help/help-browser/hu/default-page.html
 share/gnome/help/help-browser/hu/gnome-logo-large.png
@@ -257,6 +282,7 @@ share/pixmaps/gkb/th.xpm
 share/pixmaps/gkb/tr.xpm
 share/pixmaps/gkb/us.xpm
 share/pixmaps/gkb/yu.xpm
+share/pixmaps/gkb/at.xpm
 share/pixmaps/mini-commander/browser-mini.xpm
 share/pixmaps/mini-commander/history-mini.xpm
 share/pixmaps/vnterm.xpm
@@ -393,6 +419,7 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/gnome-intro/C
 @dirrm share/gnome/help/gnome-intro
 @dirrm share/gnome/help/gnome-terminal/C
+@dirrm share/gnome/help/gnome-terminal/no
 @dirrm share/gnome/help/gnome-terminal
 @dirrm share/gnome/help/help-browser/fr
 @dirrm share/gnome/help/help-browser/es
