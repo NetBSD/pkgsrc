@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.2 1999/03/01 20:33:01 hwr Exp $
+# $NetBSD: Makefile,v 1.3 2000/02/03 19:32:59 drochner Exp $
 #
 
-DISTNAME=		pdflib-0.6
+DISTNAME=		pdflib-2.01
 CATEGORIES=		print
-MASTER_SITES=		http://www.ifconnection.de/~tm/software/pdflib/
+MASTER_SITES=		http://www.pdflib.com/pdflib/download/
 
 MAINTAINER=		packages@netbsd.org
-HOMEPAGE=		http://www.ifconnection.de/~tm/software/pdflib/
+HOMEPAGE=		http://www.pdflib.com/pdflib/index.html
 
-#BUILD_DEPENDS+=		gmake-3.77:../../devel/
+DEPENDS+=	tiff-3.5.4:../../graphics/tiff
+DEPENDS+=	jpeg-6b:../../graphics/jpeg
+#DEPENDS+=	zlib-1.1.3:../../devel/zlib
 
 USE_GMAKE=		yes
-
-# the next is a empty target, as pdflib itself does not have a install
-# target. The real install is done by scripts/pre-install
-do-install:
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 
 .include "../../mk/bsd.pkg.mk"
