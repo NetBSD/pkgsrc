@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.6 2003/04/10 15:25:45 kent Exp $
+$NetBSD: distinfo,v 1.7 2003/09/21 16:03:40 kent Exp $
 
-SHA1 (w32api-1.5-src.tar.gz) = 8bbfd451f55e0df2d4bca00af1e22a41f7ee5311
-Size (w32api-1.5-src.tar.gz) = 514129 bytes
-SHA1 (pe-crt-1.2.tar.gz) = b242b836921dba919a9ce6ecefd1a160cb6ef2a6
-Size (pe-crt-1.2.tar.gz) = 4339 bytes
+SHA1 (w32api-2.4-src.tar.gz) = 008bf1b468bedf8a6c538f1e61d8003b0116c84e
+Size (w32api-2.4-src.tar.gz) = 946314 bytes
+SHA1 (pe-crt-1.2.1.tar.gz) = 3468a498cf8e8fa1daf7b437b5c9e88471c1cc6e
+Size (pe-crt-1.2.1.tar.gz) = 4394 bytes
 SHA1 (patch-aa) = 681fa944e43558fa905615f240c26bb8d657eeae
 SHA1 (patch-ab) = 618a2b5adda9f0093c90e9418e69f7ac6d811457
 SHA1 (patch-ac) = b565080d6ce53b98902e659a325d5549203741e8
 SHA1 (patch-ag) = 03b48ea8781815c5a170d9e80fe706dc50d07b04
-SHA1 (patch-ah) = 4d8258d263c512ff4e9e040e60f68878fb59928d
+SHA1 (patch-ah) = 0f2a3a062fbd2505a2c26457e448bd104dd3e7ef
 SHA1 (patch-ai) = 45129bc82dda126fdefbe1c857e14acaeedd7c5c
