@@ -1,13 +1,13 @@
-$NetBSD: patch-ao,v 1.7 2004/01/15 11:12:40 markd Exp $
+$NetBSD: patch-ao,v 1.8 2004/02/04 20:38:00 markd Exp $
 
---- configure.orig	2003-12-17 13:58:48.000000000 +1300
+--- configure.orig	2004-02-01 14:43:19.000000000 +1300
 +++ configure
-@@ -26231,62 +26231,6 @@ _ACEOF
+@@ -24850,63 +24850,6 @@ _ACEOF
  
  
  
--  echo "$as_me:$LINENO: checking sizeof(size_t) == sizeof(unsigned long)" >&5
--echo $ECHO_N "checking sizeof(size_t) == sizeof(unsigned long)... $ECHO_C" >&6
+-  echo "$as_me:$LINENO: checking sizeof size_t == sizeof unsigned long" >&5
+-echo $ECHO_N "checking sizeof size_t == sizeof unsigned long... $ECHO_C" >&6
 -  cat >conftest.$ac_ext <<_ACEOF
 -/* #line $LINENO "configure" */
 -/* confdefs.h.  */
@@ -50,11 +50,11 @@ $NetBSD: patch-ao,v 1.7 2004/01/15 11:12:40 markd Exp $
 -      echo "$as_me:$LINENO: result: no" >&5
 -echo "${ECHO_T}no" >&6
 -      { { echo "$as_me:$LINENO: error:
--       Apparently on your system our assumption sizeof(size_t) == sizeof(unsigned long)
+-       Apparently on your system our assumption sizeof size_t == sizeof unsigned long
 -       does not apply. Please mail kde-devel@kde.org with a description of your system!
 -      " >&5
 -echo "$as_me: error:
--       Apparently on your system our assumption sizeof(size_t) == sizeof(unsigned long)
+-       Apparently on your system our assumption sizeof size_t == sizeof unsigned long
 -       does not apply. Please mail kde-devel@kde.org with a description of your system!
 -      " >&2;}
 -   { (exit 1); exit 1; }; }
@@ -62,6 +62,7 @@ $NetBSD: patch-ao,v 1.7 2004/01/15 11:12:40 markd Exp $
 -fi
 -rm -f conftest.$ac_objext conftest.$ac_ext
 -
- CXXFLAGS="$CXXFLAGS -DQT_CLEAN_NAMESPACE  -DQT_NO_ASCII_CAST"
+-
+ # darwin needs this to initialize the environment
  
- echo "$as_me:$LINENO: checking for MAXPATHLEN" >&5
+ for ac_header in crt_externs.h

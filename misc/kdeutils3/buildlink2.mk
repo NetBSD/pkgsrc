@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.10 2004/01/03 18:49:47 reed Exp $
+# $NetBSD: buildlink2.mk,v 1.11 2004/02/04 20:38:00 markd Exp $
 #
 # This Makefile fragment is included by packages that use kdeutils.
 #
@@ -9,7 +9,7 @@
 KDEUTILS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			kdeutils
-BUILDLINK_DEPENDS.kdeutils?=		kdeutils>=3.1.4nb2
+BUILDLINK_DEPENDS.kdeutils?=		kdeutils>=3.2.0
 BUILDLINK_PKGSRCDIR.kdeutils?=		../../misc/kdeutils3
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.kdeutils=kdeutils
@@ -17,18 +17,20 @@ BUILDLINK_PREFIX.kdeutils_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.kdeutils+=	include/kmultiformlistbox.h
 BUILDLINK_FILES.kdeutils+=	include/kmultiformlistboxentry.h
 BUILDLINK_FILES.kdeutils+=	include/kmultiformlistboxfactory.h
+BUILDLINK_FILES.kdeutils+=	include/ksim/*
 BUILDLINK_FILES.kdeutils+=	include/kwidgetstreamer.h
-BUILDLINK_FILES.kdeutils+=	lib/kcalc.*
+BUILDLINK_FILES.kdeutils+=	lib/kde3/kcalc.*
 BUILDLINK_FILES.kdeutils+=	lib/kde3/kcharselectapplet.*
 BUILDLINK_FILES.kdeutils+=	lib/kde3/kcm_kdf.*
 BUILDLINK_FILES.kdeutils+=	lib/kde3/kcm_laptop.*
 BUILDLINK_FILES.kdeutils+=	lib/kde3/libkregexpeditorgui.*
-BUILDLINK_FILES.kdeutils+=	lib/kedit.*
-BUILDLINK_FILES.kdeutils+=	lib/klaptopdaemon.*
-BUILDLINK_FILES.kdeutils+=	lib/libark.*
-BUILDLINK_FILES.kdeutils+=	lib/libkcalc_main.*
-BUILDLINK_FILES.kdeutils+=	lib/libkedit_main.*
-BUILDLINK_FILES.kdeutils+=	lib/libklaptopdaemon_main.*
+BUILDLINK_FILES.kdeutils+=	lib/kde3/kedit.*
+BUILDLINK_FILES.kdeutils+=	lib/kde3/kded_klaptopdaemon.*
+BUILDLINK_FILES.kdeutils+=	lib/kde3/ark.*
+BUILDLINK_FILES.kdeutils+=	lib/libkcmlaptop.*
+BUILDLINK_FILES.kdeutils+=	lib/libkmilo.*
+BUILDLINK_FILES.kdeutils+=	lib/libkregexpeditorcommon.*
+BUILDLINK_FILES.kdeutils+=	lib/libksimcore.*
 
 .include "../../meta-pkgs/kde3/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"
