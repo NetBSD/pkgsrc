@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1998/07/15 11:45:51 tv Exp $
+# $NetBSD: Makefile,v 1.20 1998/11/12 23:26:58 tron Exp $
 #
 
 DISTNAME=	netpbm
@@ -30,5 +30,11 @@ post-extract:
 	cd ${WRKSRC};\
 	${MV} ../*pcx*.? ppm;\
 	${MV} ../*rle*.? ../*png*.? pnm
+
+post-install:
+.for PBMLIB in pbm pgm pnm ppm
+	${INSTALL_DATA} ${WRKSRC}/${PBMLIB}/lib${PBMLIB}.a ${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/${PBMLIB}/${PBMLIB}.h ${PREFIX}/include
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
