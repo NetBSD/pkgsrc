@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/04/14 14:59:28 ben Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/17 23:10:19 ben Exp $
 #
 
 DISTNAME=		Csound-4.24.1
@@ -24,6 +24,19 @@ USE_BUILDLINK3=		yes
 USE_X11=		yes
 CONFLICTS=		csound-bath*
 USE_LANGUAGES=		c c++
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+SUBST_CLASSES+=		defbsd
+SUBST_MESSAGE.defbsd=	"Configuring to use NetBSD presets."
+SUBST_STAGE.defbsd=	post-patch
+SUBST_FILES.defbsd=	Makefile.defs
+SUBST_SED.defbsd=	-e 's,^\(DEFINES =\),\1 -DBSD,'
+.endif
+
+pre-install:
+			${RM} -f ${WRKSRC}/include/Csound/sysdep.h.orig
 
 .include "../../x11/fltk/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
