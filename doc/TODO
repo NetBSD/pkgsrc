@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.134 2003/01/04 11:09:48 jmmv Exp $
+$NetBSD: TODO,v 1.135 2003/01/04 11:21:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -135,10 +135,10 @@ Suggested package updates
 	o gnomeicu-0.99beta
 	o gnuboy-1.0.3 [pkg/19580]
 	o gnumeric-1.0.11
+	o gnuplot-3.7.3 [pkg/19663]
 	o gpa-0.6.0
 	o gpgme-0.4.0
 	o grepmail-4.91
-	o groff-1.18.1
 	o grub-0.93
 	o gsed-4.0.5
 	o gtk---2.1.0
@@ -185,7 +185,7 @@ Suggested package updates
 	o mkfontscale-20020618
 	o mng-1.0.5rc2
 	o mrproject-0.7
-	o multi-gnome-terminal-1.6.1
+	o multi-gnome-terminal-1.6.1 [pkg/19665]
 	o mysql-3.23.54
 	o naim-0.11.5
 	o nasm-0.98.35
