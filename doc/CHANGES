@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4543 2004/01/22 11:13:58 recht Exp $
+$NetBSD: CHANGES,v 1.4544 2004/01/22 11:21:41 salo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -386,3 +386,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome to 2.4.1nb1 [jmmv 2004-01-22]
 	Updated elinks to 0.9.0 [recht 2004-01-22]
 	Added elinks04-0.4.3 [recht 2004-01-22]
+	Updated nmap to 3.50 [salo 2004-01-22]
