@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.179 2001/03/10 12:04:08 wulf Exp $
+# $NetBSD: Makefile,v 1.180 2001/03/12 17:15:26 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -16,13 +16,13 @@ SUBDIR+=	bison
 SUBDIR+=	boehm-gc
 SUBDIR+=	bonobo
 SUBDIR+=	boost
+SUBDIR+=	c-cpp-reference
 SUBDIR+=	cdecl
 SUBDIR+=	cdk
 SUBDIR+=	cervisia
 SUBDIR+=	cfitsio
 SUBDIR+=	chkpt
 SUBDIR+=	cmdline
-SUBDIR+=	c-cpp-reference
 SUBDIR+=	cscope
 SUBDIR+=	cvs
 SUBDIR+=	cvs2cl
@@ -35,10 +35,11 @@ SUBDIR+=	dmake
 SUBDIR+=	doc++
 SUBDIR+=	electricfence
 SUBDIR+=	ffcall
-SUBDIR+=	flim
 SUBDIR+=	flex
+SUBDIR+=	flim
 SUBDIR+=	fortran-utils
 SUBDIR+=	ftnchek
+SUBDIR+=	g-wrap
 SUBDIR+=	gal
 SUBDIR+=	gdb
 SUBDIR+=	gettext
@@ -58,7 +59,6 @@ SUBDIR+=	gtl
 SUBDIR+=	guile-gtk
 SUBDIR+=	guile-oops
 SUBDIR+=	guile-slib
-SUBDIR+=	g-wrap
 SUBDIR+=	haskell-mode
 SUBDIR+=	hdf
 SUBDIR+=	hdf5
@@ -71,10 +71,11 @@ SUBDIR+=	jlib
 SUBDIR+=	kdbg
 SUBDIR+=	kdevelop
 SUBDIR+=	kdevelop-base
-SUBDIR+=	ldapsdk
 SUBDIR+=	lclint
+SUBDIR+=	ldapsdk
 SUBDIR+=	libavl
 SUBDIR+=	libctl
+SUBDIR+=	libdockapp
 SUBDIR+=	libg++
 SUBDIR+=	libgetopt
 SUBDIR+=	libglade
