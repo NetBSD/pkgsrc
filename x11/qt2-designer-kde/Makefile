@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2001/07/15 10:53:45 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/07/15 20:16:49 jlam Exp $
 #
 
 .include "../qt2-libs/Makefile.common"
 
-PKGNAME=		qt2-designer-kde-${QTVERSION}
+PKGNAME=		qt2-designer-kde-${QTVERSION}nb1
+COMMENT=		Visual (WYSIWYG) QT GUI builder with KDE widget support
 
-COMMENT=		Visual (WYSIWYG) QT GUI builder
+CONFLICTS+=		qt2-designer-[0-9]*
 
 USE_BUILDLINK_ONLY=		yes
-BUILDLINK_DEPENDS.qt2-designer=	qt2-designer-${QTVERSION}
 BUILDLINK_DEPENDS.qt2-libs=	qt2-libs-${QTVERSION}
 
 ALL_TARGET=		sub-tools
@@ -20,9 +20,11 @@ MAKE_ENV+=		QTDIR=${QTPREFIX} \
 			KDEDIR="${BUILDLINK_DIR}"
 
 do-install:
-	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/tools/designer/designer/designer ${QTPREFIX}/bin/designer-kde
+	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/tools/designer/util/libqutil.la ${QTPREFIX}/lib
+	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/tools/designer/uic/uic ${QTPREFIX}/bin
+	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/tools/designer/designer/designer ${QTPREFIX}/bin
 
 .include "../../x11/kdelibs2/buildlink.mk"
-.include "../../x11/qt2-designer/buildlink.mk"
 .include "../../x11/qt2-libs/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
+
