@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 2000/04/03 15:55:23 sakamoto Exp $
+
 *** xengine.c~	Wed Oct  3 10:58:17 1990
 --- xengine.c	Sun Dec  8 22:17:43 1996
 ***************
