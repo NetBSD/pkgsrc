@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/09/12 23:10:03 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/09/13 08:22:07 jlam Exp $
 
 .if !defined(PERL5_BUILDLINK2_MK)
 PERL5_BUILDLINK2_MK=  # defined
@@ -20,16 +20,9 @@ EVAL_PREFIX+=		BUILDLINK_PREFIX.perl=perl
 BUILDLINK_PREFIX.perl_DEFAULT=	${LOCALBASE}
 PERL5?=			${BUILDLINK_PREFIX.perl}/bin/perl
 
-.if !defined(_PERL5_PREFIX)
-.  if exists(${PERL5})
-_PERL5_PREFIX!=	eval `${PERL5} -V:prefix 2>/dev/null`; ${ECHO} $${prefix}
-MAKE_FLAGS+=	_PERL5_PREFIX="${_PERL5_PREFIX}"
-.  endif
-.endif
-
 BUILDLINK_FILES.perl=							\
-	${PERL5_ARCHLIB:S/^${_PERL5_PREFIX}\///}/CORE/*			\
-	${PERL5_ARCHLIB:S/^${_PERL5_PREFIX}\///}/auto/DynaLoader/DynaLoader.a
+	${PERL5_ARCHLIB:S/^${BUILDLINK_PREFIX.perl}\///}/CORE/*		\
+	${PERL5_ARCHLIB:S/^${BUILDLINK_PREFIX.perl}\///}/auto/DynaLoader/DynaLoader.a
 
 BUILDLINK_TARGETS+=	perl-buildlink
 
