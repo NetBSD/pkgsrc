@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1.1.1 2003/03/26 12:55:04 grant Exp $
+
+	Phoenix requires your kernel to include 'COMPAT_LINUX' (plus in
+	NetBSD systems before 1.5 'EXEC_ELF32').
+
+	Please note that if you have INET6 enabled in your kernel, you
+	will need to set net.inet6.ip6.v6only = 0, using sysctl(8).
+
+===========================================================================
