@@ -51,7 +51,7 @@ endif
 
 LIBS = $(PKG_LIB) $(GTOP_LIBS) $(SMC_LIBS) $(SYS_LIBS) $(MD5_LIBS) $(SSL_LIBS)
 
-override CFLAGS += -Wall $(FLAGS)
+override CFLAGS += -Wall -Werror $(FLAGS)
 
 OBJS =	main.o alerts.o battery.o base64.o clock.o cpu.o disk.o fs.o \
 	hostname.o inet.o mail.o mem.o net.o proc.o sensors.o uptime.o \
@@ -140,7 +140,7 @@ IMAGES = \
 
 SYSDEPS_SRC = sysdeps/bsd-common.c sysdeps/bsd-net-open.c sysdeps/freebsd.c \
 	sysdeps/gtop.c sysdeps/linux.c sysdeps/netbsd.c sysdeps/openbsd.c \
-	sysdeps/solaris.c sysdeps/darwin.c
+	sysdeps/solaris.c sysdeps/darwin.c sysdeps/sensors-common.c
 
 GKRELLM_H = gkrellm.h gkrellm-private.h
 GKRELLM_H_SYS = gkrellm.h gkrellm-public-proto.h gkrellm-private.h \

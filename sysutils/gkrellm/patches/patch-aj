@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2005/03/22 14:57:12 cube Exp $
+
+--- src/mail.c.orig	2005-03-19 17:00:16.000000000 +0100
++++ src/mail.c
+@@ -1297,7 +1297,7 @@ check_mh_dir(Mailbox *mbox)
+ 	while ((name = (gchar *) g_dir_read_name(dir)) != NULL)
+ 		{
+ 		/* Files starting with a digit are messages. */
+-		if (isdigit(name[0]))
++		if (isdigit((unsigned char)name[0]))
+ 			mbox->mail_count++;
+ 		}
+ 	g_dir_close(dir);
