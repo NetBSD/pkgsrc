@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.1 2003/08/27 16:07:04 adam Exp $
+$NetBSD: patch-ag,v 1.2 2004/07/05 11:04:34 drochner Exp $
 
---- docs/Makefile.in.orig	2003-08-27 17:06:39.000000000 +0200
+--- docs/Makefile.in.orig	2004-06-03 19:49:17.000000000 +0200
 +++ docs/Makefile.in
-@@ -175,7 +175,7 @@ web_path_gtkmm2 = /home/groups/g/gt/gtkm
+@@ -202,7 +202,7 @@ gtkmm_doc_DATA = index.html
+ web_path_gtkmm2 = /home/groups/g/gt/gtkmm/htdocs/gtkmm2/
  web_path_docs = $(web_path_gtkmm2)docs/
  rsync_args = -vz --rsh ssh --delete --delete-after
- 
 -gtkmm_docdir = $(datadir)/doc/gtkmm-2.0/docs
 +gtkmm_docdir = $(datadir)/doc/gtkmm-2.0
- subdir = docs
- ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
- mkinstalldirs = $(SHELL) $(top_srcdir)/scripts/mkinstalldirs
+ all: all-recursive
+ 
+ .SUFFIXES:
