@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.342 1999/09/21 12:53:14 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.343 1999/09/24 17:13:31 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -2404,11 +2404,11 @@ MANCOMPRESSED=	yes
 .if ${OPSYS} == "NetBSD"
 IMAKE_MAN_CMD=
 .ifdef MANZ
-MANZ_EXPRESSION= -e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}man[1-9ln]/.*[1-9ln]$$\)|\1.gz|' \
-		-e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}cat[1-9ln]/.*[0-9ln]$$\)|\1.gz|'
+MANZ_EXPRESSION= -e 's|\(^\([^@/]*/\)*man/\([^/]*/\)\{0,1\}man[1-9ln]/.*[1-9ln]$$\)|\1.gz|' \
+		-e 's|\(^\([^@/]*/\)*man/\([^/]*/\)\{0,1\}cat[1-9ln]/.*[0-9ln]$$\)|\1.gz|'
 .else
-MANZ_EXPRESSION= -e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}man[1-9ln]/.*[1-9ln]\)\.gz$$|\1|' \
-		-e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}cat[1-9ln]/.*[0-9ln]\)\.gz$$|\1|'
+MANZ_EXPRESSION= -e 's|\(^\([^@/]*/\)*man/\([^/]*/\)\{0,1\}man[1-9ln]/.*[1-9ln]\)\.gz$$|\1|' \
+		-e 's|\(^\([^@/]*/\)*man/\([^/]*/\)\{0,1\}cat[1-9ln]/.*[0-9ln]\)\.gz$$|\1|'
 .endif # MANZ
 MANZ_NAWK_CMD=
 .elif ${OPSYS} == "SunOS"
