@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.10 2002/09/20 22:32:35 jlam Exp $
+# $NetBSD: pyversion.mk,v 1.11 2002/09/20 22:53:22 jlam Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -119,8 +119,6 @@ BUILD_DEPENDS+=	py15-distutils-*:../../devel/py-distutils
 	error: no valid Python version
 .endif
 
-PYTHONBIN=	${LOCALBASE}/bin/python${PYVERSSUFFIX}
-
 .if defined(USE_BUILDLINK2)
 .  if defined(PYTHON_FOR_BUILD_ONLY)
 BUILD_DEPMETHOD.python?=	build
@@ -132,6 +130,17 @@ BUILD_DEPENDS+=	${PYDEPENDENCY}
 .  else
 DEPENDS+=	${PYDEPENDENCY}
 .  endif
+.endif
+
+PYTHONBIN=	${LOCALBASE}/bin/python${PYVERSSUFFIX}
+
+.if exists(${PYTHONBIN})
+PYINC!=	${PYTHONBIN} -c "import distutils.sysconfig; \
+	print distutils.sysconfig.get_python_inc(0, \"\")" || ${ECHO} ""
+PYLIB!=	${PYTHONBIN} -c "import distutils.sysconfig; \
+	print distutils.sysconfig.get_python_lib(0, 1, \"\")" || ${ECHO} ""
+PYSITELIB!=	${PYTHONBIN} -c "import distutils.sysconfig; \
+	print distutils.sysconfig.get_python_lib(0, 0, \"\")" || ${ECHO} ""
 .endif
 
 .endif	# PYTHON_PYVERSION_MK
