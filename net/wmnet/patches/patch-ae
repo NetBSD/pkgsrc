@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1 2000/07/31 17:02:25 tron Exp $
+$NetBSD: patch-ae,v 1.2 2000/08/02 00:01:24 wiz Exp $
 
 --- wmnet.man.orig	Fri May  5 02:43:35 2000
 +++ wmnet.man	Mon Jul 31 19:00:30 2000
@@ -10,8 +10,8 @@ $NetBSD: patch-ae,v 1.1 2000/07/31 17:02:25 tron Exp $
 -a device through the \fI--device\fP option.  By default, it uses ec0 but
 -will accept any valid device name.
 +this driver is available on FreeBSD, OpenBSD and NetBSD systems and must be
-+passed a device through the \fI--device\fP option.  By default, it uses ec0
-+Dbut will accept any valid device name.
++passed a device through the \fI--device\fP option.  By default, it uses ppp0
++but will accept any valid device name.
  .SH FILES
  .TP
  .I /proc/net/ip_acct /proc/net/dev /proc/net/ipchains
