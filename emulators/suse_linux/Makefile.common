@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2003/03/26 04:05:47 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.16 2003/04/17 21:54:37 jmmv Exp $
 
 SUSE_VERSION=		7.3
 
@@ -47,7 +47,7 @@ do-install:
 	fi
 	${RPM2PKG} ${RPM2PKGARGS}
 	@if ${GREP} -q 'lib.*\.so' ${PLIST_SRC}; then \
-	  ${ECHO_MSG} "===>   [Automatic Linux shared object handling]"; \
+	  ${ECHO_MSG} "===> [Automatic Linux shared object handling]"; \
 	  ${EMULDIR}/sbin/ldconfig -r ${EMULDIR}; \
 	  ${ECHO} "@exec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR}" >>${PLIST_SRC}; \
 	  ${ECHO} "@unexec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR} 2>/dev/null" >>${PLIST_SRC}; \
