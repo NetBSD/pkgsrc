@@ -1,0 +1,4 @@
+$NetBSD: md5,v 1.1.1.1 1999/12/10 17:33:39 bouyer Exp $
+
+MD5 (gawk-3.0.4.tar.gz) = 58f904f256b3026c3fe27cf80e6291af
+MD5 (gawkmb112.diff.gz) = f1464efdcacb1088dfe20eae9b338911
