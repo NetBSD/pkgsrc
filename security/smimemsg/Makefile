@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/14 03:05:08 jun Exp $
+# $NetBSD: Makefile,v 1.2 2001/08/17 05:58:07 jun Exp $
 #
 
-DISTNAME=	smimemsg131
-PKGNAME=	smimemsg-1.3.1
+DISTNAME=	smimemsg141
+PKGNAME=	smimemsg-1.4.1
 CATEGORIES=	security
 MASTER_SITES=	http://mars.elcom.nitech.ac.jp/security/
 
