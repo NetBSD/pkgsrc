@@ -1,15 +1,26 @@
-$NetBSD: patch-ak,v 1.1 1998/11/10 22:23:02 tron Exp $
+$NetBSD: patch-ak,v 1.2 1999/10/23 02:06:07 hubertf Exp $
 
---- kdm/kdmshutdown.h.orig	Thu Nov 20 14:08:11 1997
-+++ kdm/kdmshutdown.h	Tue Nov 10 21:41:48 1998
-@@ -36,8 +36,8 @@
+--- kdm/kdmshutdown.h.orig	Fri Sep  4 17:33:00 1998
++++ kdm/kdmshutdown.h	Mon Oct 11 17:17:14 1999
+@@ -49,9 +49,21 @@
+ class KDMShutdown : public FDialog {
       Q_OBJECT
  public:
-      KDMShutdown( int mode, QWidget* _parent=0, const char* _name=0,
--		  const char* _shutdown = "/sbin/halt", 
--		  const char* _restart  = "/sbin/reboot");
++#ifdef    __NetBSD__
++     KDMShutdown( int mode, QWidget* _parent=0, const char* _name=0,
 +		  const char* _shutdown = "/sbin/shutdown -h now", 
 +		  const char* _restart  = "/sbin/shutdown -r now");
++#else /* !__NetBSD__ */
++#ifdef    __SVR4
++     KDMShutdown( int mode, QWidget* _parent=0, const char* _name=0,
++		  const char* _shutdown = "/usr/sbin/halt", 
++		  const char* _restart  = "/usr/sbin/reboot");
++#else /* !__SVR4 */
+      KDMShutdown( int mode, QWidget* _parent=0, const char* _name=0,
+ 		  const char* _shutdown = "/sbin/halt", 
+ 		  const char* _restart  = "/sbin/reboot");
++#endif /* __SVR4 */
++#endif /* __NetBSD__ */
  private slots:
       void rb_clicked(int);
       void pw_entered();
