@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/08/27 12:56:54 drochner Exp $
-# $Id: Makefile,v 1.27 2004/08/27 12:56:54 drochner Exp $
+# $NetBSD: Makefile,v 1.28 2004/08/31 10:47:40 wiz Exp $
 
 DISTNAME=	audacity-src-1.2.2
 PKGNAME=	audacity-1.2.2
