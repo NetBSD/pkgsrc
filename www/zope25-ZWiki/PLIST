@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/01 18:00:42 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/10/23 17:07:13 drochner Exp $
 lib/zope/lib/python/Products/ZWiki/CHANGES.txt
+lib/zope/lib/python/Products/ZWiki/CMF.py
+lib/zope/lib/python/Products/ZWiki/CMF.pyc
+lib/zope/lib/python/Products/ZWiki/CMFInit.py
+lib/zope/lib/python/Products/ZWiki/CMFInit.pyc
 lib/zope/lib/python/Products/ZWiki/CatalogAwareness.py
 lib/zope/lib/python/Products/ZWiki/CatalogAwareness.pyc
 lib/zope/lib/python/Products/ZWiki/ChangeLog
@@ -7,10 +11,17 @@ lib/zope/lib/python/Products/ZWiki/Defaults.py
 lib/zope/lib/python/Products/ZWiki/Defaults.pyc
 lib/zope/lib/python/Products/ZWiki/Diff.py
 lib/zope/lib/python/Products/ZWiki/Diff.pyc
+lib/zope/lib/python/Products/ZWiki/Extensions/CMFInstall.py
+lib/zope/lib/python/Products/ZWiki/Extensions/CMFInstall.pyc
+lib/zope/lib/python/Products/ZWiki/Extensions/README
+lib/zope/lib/python/Products/ZWiki/Extensions/fixprops.py
+lib/zope/lib/python/Products/ZWiki/Extensions/fixprops.pyc
 lib/zope/lib/python/Products/ZWiki/Extensions/mailin.py
 lib/zope/lib/python/Products/ZWiki/Extensions/mailin.pyc
 lib/zope/lib/python/Products/ZWiki/GPL.txt
 lib/zope/lib/python/Products/ZWiki/LICENSE.txt
+lib/zope/lib/python/Products/ZWiki/Mail.py
+lib/zope/lib/python/Products/ZWiki/Mail.pyc
 lib/zope/lib/python/Products/ZWiki/Parents.py
 lib/zope/lib/python/Products/ZWiki/Parents.pyc
 lib/zope/lib/python/Products/ZWiki/Permissions.py
@@ -20,12 +31,10 @@ lib/zope/lib/python/Products/ZWiki/Regexps.py
 lib/zope/lib/python/Products/ZWiki/Regexps.pyc
 lib/zope/lib/python/Products/ZWiki/Regulations.py
 lib/zope/lib/python/Products/ZWiki/Regulations.pyc
-lib/zope/lib/python/Products/ZWiki/SubscriberList.py
-lib/zope/lib/python/Products/ZWiki/SubscriberList.pyc
 lib/zope/lib/python/Products/ZWiki/TextFormatter.py
 lib/zope/lib/python/Products/ZWiki/TextFormatter.pyc
-lib/zope/lib/python/Products/ZWiki/TrackerSupport.py
-lib/zope/lib/python/Products/ZWiki/TrackerSupport.pyc
+lib/zope/lib/python/Products/ZWiki/Tracker.py
+lib/zope/lib/python/Products/ZWiki/Tracker.pyc
 lib/zope/lib/python/Products/ZWiki/Utils.py
 lib/zope/lib/python/Products/ZWiki/Utils.pyc
 lib/zope/lib/python/Products/ZWiki/ZWikiPage.py
@@ -34,6 +43,8 @@ lib/zope/lib/python/Products/ZWiki/ZWikiWeb.py
 lib/zope/lib/python/Products/ZWiki/ZWikiWeb.pyc
 lib/zope/lib/python/Products/ZWiki/__init__.py
 lib/zope/lib/python/Products/ZWiki/__init__.pyc
+lib/zope/lib/python/Products/ZWiki/default_wiki_content/FrontPage.wiki
+lib/zope/lib/python/Products/ZWiki/default_wiki_content/SandBox.wiki
 lib/zope/lib/python/Products/ZWiki/dtml/zwikiPageAdd.dtml
 lib/zope/lib/python/Products/ZWiki/dtml/zwikiWebAdd.dtml
 lib/zope/lib/python/Products/ZWiki/images/ZWikiPage_icon.gif
@@ -44,6 +55,70 @@ lib/zope/lib/python/Products/ZWiki/locale/fr.po
 lib/zope/lib/python/Products/ZWiki/locale/ga.po
 lib/zope/lib/python/Products/ZWiki/locale/locale.pot
 lib/zope/lib/python/Products/ZWiki/refresh.txt
+lib/zope/lib/python/Products/ZWiki/skins/wiki/BackLinks.stx
+lib/zope/lib/python/Products/ZWiki/skins/wiki/HowDoIEdit.stx
+lib/zope/lib/python/Products/ZWiki/skins/wiki/HowDoINavigate.stx
+lib/zope/lib/python/Products/ZWiki/skins/wiki/JumpTo.stx
+lib/zope/lib/python/Products/ZWiki/skins/wiki/RegulatingYourPages.stx
+lib/zope/lib/python/Products/ZWiki/skins/wiki/RemoteWikiLinks.stx
+lib/zope/lib/python/Products/ZWiki/skins/wiki/RemoteWikiURL.stx
+lib/zope/lib/python/Products/ZWiki/skins/wiki/StructuredText.stx
+lib/zope/lib/python/Products/ZWiki/skins/wiki/StructuredTextExample.stx
+lib/zope/lib/python/Products/ZWiki/skins/wiki/StructuredTextRules.stx
+lib/zope/lib/python/Products/ZWiki/skins/wiki/TextFormattingRules.stx
+lib/zope/lib/python/Products/ZWiki/skins/wiki/WikiHelp.stx
+lib/zope/lib/python/Products/ZWiki/skins/wiki/WikiName.stx
+lib/zope/lib/python/Products/ZWiki/skins/wiki/WikiWikiWeb.stx
+lib/zope/lib/python/Products/ZWiki/skins/wiki/ZWiki.stx
+lib/zope/lib/python/Products/ZWiki/skins/wiki/ZWikiLinks.stx
+lib/zope/lib/python/Products/ZWiki/skins/wiki/ZWikiWeb.stx
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wiki_allpages.dtml
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wiki_recentchanges.dtml
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wiki_toc.dtml
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wiki_view.dtml
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wikipage_advanced_form.dtml
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wikipage_advanced_handler.py
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wikipage_advanced_handler.pyc
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wikipage_alternatecreate_form.dtml
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wikipage_backlinks.dtml
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wikipage_comment_form.dtml
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wikipage_compare_versions.dtml
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wikipage_copyhistory_handler.py
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wikipage_copyhistory_handler.pyc
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wikipage_create_form.dtml
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wikipage_create_handler.py
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wikipage_create_handler.pyc
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wikipage_deleterename_handler.py
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wikipage_deleterename_handler.pyc
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wikipage_edit_form.dtml
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wikipage_editcomment_handler.py
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wikipage_editcomment_handler.pyc
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wikipage_header.dtml
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wikipage_history.dtml
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wikipage_icon.gif
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wikipage_recentchanges.py
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wikipage_recentchanges.pyc
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wikipage_reparent_handler.py
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wikipage_reparent_handler.pyc
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wikipage_toc.dtml
+lib/zope/lib/python/Products/ZWiki/skins/wiki/wikipage_view.dtml
+lib/zope/lib/python/Products/ZWiki/skins/zpt_wiki/wiki_allpages.pt
+lib/zope/lib/python/Products/ZWiki/skins/zpt_wiki/wiki_listpages.py
+lib/zope/lib/python/Products/ZWiki/skins/zpt_wiki/wiki_recentchanges.pt
+lib/zope/lib/python/Products/ZWiki/skins/zpt_wiki/wiki_skeleton.pt
+lib/zope/lib/python/Products/ZWiki/skins/zpt_wiki/wiki_toc.pt
+lib/zope/lib/python/Products/ZWiki/skins/zpt_wiki/wikipage_advanced_form.pt
+lib/zope/lib/python/Products/ZWiki/skins/zpt_wiki/wikipage_backlinks.pt
+lib/zope/lib/python/Products/ZWiki/skins/zpt_wiki/wikipage_comment_form.pt
+lib/zope/lib/python/Products/ZWiki/skins/zpt_wiki/wikipage_create_form.pt
+lib/zope/lib/python/Products/ZWiki/skins/zpt_wiki/wikipage_edit_form.pt
+lib/zope/lib/python/Products/ZWiki/skins/zpt_wiki/wikipage_header.pt
+lib/zope/lib/python/Products/ZWiki/skins/zpt_wiki/wikipage_history.pt
+lib/zope/lib/python/Products/ZWiki/skins/zpt_wiki/wikipage_owners_description.py
+lib/zope/lib/python/Products/ZWiki/skins/zpt_wiki/wikipage_regop_description.py
+lib/zope/lib/python/Products/ZWiki/skins/zpt_wiki/wikipage_toc.pt
+lib/zope/lib/python/Products/ZWiki/skins/zpt_wiki/wikipage_topic_report.pt
+lib/zope/lib/python/Products/ZWiki/skins/zpt_wiki/wikipage_view.pt
 lib/zope/lib/python/Products/ZWiki/templates/defaults/backlinks.dtml
 lib/zope/lib/python/Products/ZWiki/templates/defaults/editform.dtml
 lib/zope/lib/python/Products/ZWiki/templates/defaults/standard_wiki_footer.dtml
@@ -75,8 +150,12 @@ lib/zope/lib/python/Products/ZWiki/wwml.pyc
 @dirrm lib/zope/lib/python/Products/ZWiki/templates/zwikidotorg
 @dirrm lib/zope/lib/python/Products/ZWiki/templates/defaults
 @dirrm lib/zope/lib/python/Products/ZWiki/templates
+@dirrm lib/zope/lib/python/Products/ZWiki/skins/zpt_wiki
+@dirrm lib/zope/lib/python/Products/ZWiki/skins/wiki
+@dirrm lib/zope/lib/python/Products/ZWiki/skins
 @dirrm lib/zope/lib/python/Products/ZWiki/locale
 @dirrm lib/zope/lib/python/Products/ZWiki/images
 @dirrm lib/zope/lib/python/Products/ZWiki/dtml
+@dirrm lib/zope/lib/python/Products/ZWiki/default_wiki_content
 @dirrm lib/zope/lib/python/Products/ZWiki/Extensions
 @dirrm lib/zope/lib/python/Products/ZWiki
