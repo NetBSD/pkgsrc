@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/01/24 15:23:47 grant Exp $
+# $NetBSD: Makefile,v 1.23 2004/04/27 05:44:23 snj Exp $
 #
 
 DISTNAME=	gateway-${KANNEL_VER}
@@ -14,7 +14,7 @@ COMMENT=	Open source WAP and SMS gateway
 KANNEL_VER=	1.2.1
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_PERL5=		YES
 PTHREAD_OPTS+=		require
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--disable-docs
 CONFIGURE_ARGS+=	--disable-ssl
 CFLAGS+=		-I${BUILDLINK_PREFIX.libxml2}/include/libxml2/libxml
 
-.include "../../textproc/libxml2/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
