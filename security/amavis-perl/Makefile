@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/07/02 20:47:49 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2004/07/29 00:59:53 wiz Exp $
 
 DISTNAME=	amavisd-${VERSION}
 PKGNAME=	amavis-perl-${VERSION}
@@ -34,6 +34,8 @@ DEPENDS+=	p5-MIME-tools>=5.313:../../mail/p5-MIME-tools
 DEPENDS+=	p5-Net-[0-9]*:../../net/p5-Net
 DEPENDS+=	p5-Unix-Syslog-[0-9]*:../../sysutils/p5-Unix-Syslog
 
+USE_BUILDLINK3=	YES
+
 .include "../../mk/bsd.prefs.mk"
 .if defined(USE_MILTER) && ${USE_MILTER} == "YES"
 DEPENDS+=	sendmail>=8.12.9nb1:../../mail/sendmail
@@ -46,6 +48,7 @@ VIRUSDIR?=	/var/log/virusmails	# where to put contaminated mails
 VIRUSMAILTO?=	security		# whom to notify about viruses
 
 GNU_CONFIGURE=	YES
+PLIST_SRC=	${PKGDIR}/PLIST
 
 CONFIGURE_ENV+=	procmail="/usr/libexec/mail.local"
 # XXX Milter needs pthreads, and configure fails looking for it
@@ -66,19 +69,18 @@ CONFIGURE_ARGS+=--with-milter-libs=${PREFIX}/lib
 CONFIGURE_ARGS+=--with-milter-includes=${PREFIX}/include
 .else
 CONFIGURE_ARGS+=--enable-smtp --with-smtp-port=${SMTPPORT}
+PLIST_SRC+=	${PKGDIR}/PLIST.nomilter
 .endif
 
-PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 post-build:
-	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	${SED} -e "s|/etc/amavisd.conf|${PREFIX}/etc/amavis/amavisd.conf|" \
 		${WRKSRC}/amavis/amavisd > ${WRKDIR}/amavisd
+
 do-install:
 	# Program files
 .if !defined(USE_MILTER) || ${USE_MILTER} != YES
 	${INSTALL_PROGRAM} ${WRKSRC}/amavis/amavis ${PREFIX}/sbin
-	${ECHO} "sbin/amavis" >> ${PLIST_SRC}
 .endif
 	${INSTALL_SCRIPT} ${WRKDIR}/amavisd ${PREFIX}/sbin
 	# Documents
@@ -103,13 +105,13 @@ do-install:
 	# Man pages
 .if !defined(USE_MILTER) || ${USE_MILTER} != YES
 	${INSTALL_DATA} ${WRKSRC}/doc/amavis.1 ${PREFIX}/man/man1
-	${ECHO} "man/man1/amavis.1" >> ${PLIST_SRC}
 .endif
 	${INSTALL_DATA} ${WRKSRC}/doc/amavis-milter.1 ${PREFIX}/man/man1
 	${INSTALL_DATA} ${WRKSRC}/doc/amavisd.conf.5 ${PREFIX}/man/man5
 	${INSTALL_DATA} ${WRKSRC}/doc/amavisd.8 ${PREFIX}/man/man8
 
-.include "../../mk/bsd.pkg.mk"
 .if defined(USE_MILTER) && ${USE_MILTER} == "YES"
 .include "../../mk/pthread.buildlink3.mk"
 .endif
+
+.include "../../mk/bsd.pkg.mk"
