@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2004/06/15 17:12:13 xtraeme Exp $
+# $NetBSD: Makefile,v 1.51 2004/06/20 21:52:08 xtraeme Exp $
 
 DISTNAME=	mrtg-2.10.13
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://people.ee.ethz.ch/~oetiker/webtools/mrtg/pub/ \
 		ftp://ftp.sunet.se/pub/network/monitoring/mrtg/ \
@@ -28,7 +28,6 @@ HOMEPAGE=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/mrtg.html
 COMMENT=	The Multi-Router Traffic Grapher
 
 USE_BUILDLINK3=	YES
-USE_X11=	YES
 USE_PERL5=	YES
 PERL5_REQD+=	5.6.1
 GNU_CONFIGURE=	YES
