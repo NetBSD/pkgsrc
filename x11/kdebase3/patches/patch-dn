@@ -1,8 +1,8 @@
-$NetBSD: patch-dn,v 1.3 2003/01/02 09:12:35 skrll Exp $
+$NetBSD: patch-dn,v 1.4 2003/03/11 13:10:27 markd Exp $
 
---- kwin/clients/icewm/Makefile.in.orig	Fri Dec 27 18:19:11 2002
+--- kwin/clients/icewm/Makefile.in.orig	Fri Jan 17 09:03:11 2003
 +++ kwin/clients/icewm/Makefile.in
-@@ -293,7 +293,7 @@ SUBDIRS = . config icewm-themes
+@@ -291,7 +291,7 @@ SUBDIRS = . config icewm-themes
  kde_module_LTLIBRARIES = kwin_icewm.la
  
  kwin_icewm_la_SOURCES = icewm.cpp 
@@ -11,7 +11,7 @@ $NetBSD: patch-dn,v 1.3 2003/01/02 09:12:35 skrll Exp $
  kwin_icewm_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN) -module
  
  #>- METASOURCES = AUTO
-@@ -309,7 +309,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -307,7 +307,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES)
  
@@ -20,7 +20,7 @@ $NetBSD: patch-dn,v 1.3 2003/01/02 09:12:35 skrll Exp $
  am_kwin_icewm_la_OBJECTS = icewm.lo
  #>- kwin_icewm_la_OBJECTS = $(am_kwin_icewm_la_OBJECTS)
  #>+ 1
-@@ -747,5 +747,5 @@ kde-rpo-clean:
+@@ -763,5 +763,5 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 3

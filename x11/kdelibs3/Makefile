@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2003/02/04 18:06:50 skrll Exp $
+# $NetBSD: Makefile,v 1.22 2003/03/11 13:10:32 markd Exp $
 
-DISTNAME=	kdelibs-3.0.5a
+DISTNAME=	kdelibs-3.1
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
@@ -8,7 +8,7 @@ COMMENT=	Support libraries for the KDE integrated X11 desktop
 
 CONFLICTS+=	koffice3<=1.1.1
 
-BUILDLINK_DEPENDS.qt3-libs=	qt3-libs>=3.0.7
+BUILDLINK_DEPENDS.qt3-libs=	qt3-libs>=3.1.1
 
 USE_BUILDLINK2=		YES
 USE_CXX=		YES
@@ -114,6 +114,7 @@ post-install:
 .include "../../audio/arts/buildlink2.mk"
 .include "../../audio/libaudiofile/buildlink2.mk"
 .include "../../devel/pcre/buildlink2.mk"
+.include "../../graphics/libart2/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
