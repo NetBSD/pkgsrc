@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2001/02/16 15:22:28 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/03/05 20:14:46 abs Exp $
 #
 
-PKGNAME=		ns-flash-4.0r12
 FLASH_VERS=		${PKGNAME:S/ns-flash-//}
 
 ONLY_FOR_PLATFORM=      *-*-i386 SunOS-*-sparc
@@ -9,18 +8,25 @@ ONLY_FOR_PLATFORM=      *-*-i386 SunOS-*-sparc
 .include "../../mk/bsd.prefs.mk"
 
 .if (${MACHINE_ARCH} == "i386")
+PKGNAME=		ns-flash-5.0r47
 DEPENDS+=		suse_linux>=6.1:../../emulators/suse_linux
 DISTUNAME=		linux
-WRKNAME=		Linux
+WRKNAME=		flash_linux
 .elif ${MACHINE_ARCH} == "sparc" && ${OPSYS} == "SunOS"
+PKGNAME=		ns-flash-5.0r52
 DISTUNAME=		solaris
-WRKNAME=		Solaris
+WRKNAME=		flash_solaris
 .endif
 
 DISTNAME=		flash_${DISTUNAME}
+DIST_SUBDIR=		flash/${FLASH_VERS}
 CATEGORIES=		graphics www
 SUB=			english/${DISTUNAME}/${FLASH_VERS}
 MASTER_SITES=		http://download.macromedia.com/pub/shockwave/flash/${SUB}/
+
+# Must update communicator/navigator to at least 4.76nb1
+CONFLICTS+=		communicator<=4.76nb1
+CONFLICTS+=		navigator<=4.76nb1
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.flash.com/
