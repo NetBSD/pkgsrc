@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST.Linux,v 1.2 2004/09/21 17:38:53 xtraeme Exp $
+@comment $NetBSD: PLIST.Linux,v 1.3 2004/10/08 03:35:25 xtraeme Exp $
+${X11ROOT_PREFIX}/etc/init.d/xprint
 ${X11ROOT_PREFIX}/lib/X11/xserver/C/print/models/CANONBJ10E-GS/fonts
 ${X11ROOT_PREFIX}/lib/X11/xserver/C/print/models/CANONBJ10E-GS/model-config
 ${X11ROOT_PREFIX}/lib/X11/xserver/C/print/models/PS2PDFspooldir-GS/fonts
@@ -23,3 +24,4 @@ ${X11ROOT_PREFIX}/${KERNMAN_DIR}/v4l.${KERNMAN_SUFFIX}
 @dirrm ${X11ROOT_PREFIX}/lib/modules/drivers/linux
 @dirrm ${X11ROOT_PREFIX}/lib/modules/input/linux
 @dirrm ${X11ROOT_PREFIX}/lib/modules/linux
+@dirrm ${X11ROOT_PREFIX}/etc/init.d

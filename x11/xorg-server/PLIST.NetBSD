@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST.NetBSD,v 1.1.1.1 2004/07/29 04:52:39 xtraeme Exp $
+@comment $NetBSD: PLIST.NetBSD,v 1.2 2004/10/08 03:35:25 xtraeme Exp $
 ${X11ROOT_PREFIX}/bin/kbd_mode
+${X11ROOT_PREFIX}/etc/init.d/xprint
 ${X11ROOT_PREFIX}/${MAN_DIR}/kbd_mode.${MAN_SUFFIX}
+@dirrm ${X11ROOT_PREFIX}/etc/init.d
