@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/06/09 11:34:01 sakamoto Exp $
+bin/kterm
+lib/X11/app-defaults/KTerm
+man/cat1/kterm.0
