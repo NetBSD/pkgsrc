@@ -1,0 +1,31 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/06/03 16:26:26 tron Exp $
+bin/vipec
+share/examples/vipec/3dbcoup.ckt
+share/examples/vipec/amplifier.ckt
+share/examples/vipec/amplifier2.ckt
+share/examples/vipec/bandpass.ckt
+share/examples/vipec/bandpass2.ckt
+share/examples/vipec/coupled.ckt
+share/examples/vipec/filter.ckt
+share/examples/vipec/mustrip.ckt
+share/examples/vipec/slin_coupled.ckt
+share/examples/vipec/stripline.ckt
+share/examples/vipec/test.ckt
+share/examples/vipec/vhfrx1.ckt
+share/doc/vipec/help0001.gif
+share/doc/vipec/help0002.gif
+share/doc/vipec/help0003.gif
+share/doc/vipec/help0004.gif
+share/doc/vipec/help0005.gif
+share/doc/vipec/help0006.gif
+share/doc/vipec/help0007.gif
+share/doc/vipec/help0008.gif
+share/doc/vipec/help0009.gif
+share/doc/vipec/help0010.gif
+share/doc/vipec/help0011.gif
+share/doc/vipec/help0012.gif
+share/doc/vipec/help0013.gif
+share/doc/vipec/help0014.gif
+share/doc/vipec/vipec.html
+@dirrm share/examples/vipec
+@dirrm share/doc/vipec
