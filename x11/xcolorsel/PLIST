@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:12:00 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/03 04:17:39 jschauma Exp $
 bin/xcolorsel
 lib/X11/app-defaults/Xcolorsel
 lib/X11/app-defaults/Xcolorsel-color
 lib/X11/xcolorsel/Xcolorsel.help
-man/cat1/xcolorsel.0
+${IMAKE_MAN_DIR}/xcolorsel.${IMAKE_MANNEWSUFFIX}
 @dirrm lib/X11/xcolorsel
