@@ -1,114 +1,67 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/01/06 00:26:43 grant Exp $
-
---- Makefile.PL.orig	Tue Apr 16 14:38:22 2002
-+++ Makefile.PL
-@@ -5,137 +5,15 @@ use ExtUtils::MakeMaker;
+--- Makefile.PL.orig	2003-08-19 04:43:01.000000000 +1000
++++ Makefile.PL	2004-05-17 09:05:06.000000000 +1000
+@@ -5,26 +5,6 @@
  require 5.004;
  use strict;
  
--my $prerequisites = <<EOL;
+-my @PREREQS = (
+-# ["<feature>","<installed module>",<dependency hash>,<install by default, 2=always>];
+-  ["Core Package","SOAP::Lite",{"XML::Parser" => "2.23","MIME::Base64" => 0, "URI" => 0},2],
+-  ["Client HTTP support","",{"LWP::UserAgent" => 0},1],
+-  ["Client HTTPS support","SOAP::Transport::HTTPS::Client",{"Crypt::SSLeay" => 0},0],
+-  ["Client SMTP/sendmail support","SOAP::Transport::MAILTO::Client",{"MIME::Lite" => 0},1],
+-  ["Client FTP support","SOAP::Transport::FTP::Client",{"Net::FTP" => 0,"IO::File" => 0},0],
+-  ["Standalone HTTP server","SOAP::Transport::HTTP::Daemon",{"HTTP::Daemon" => 0},1],
+-  ["Apache/mod_perl server","SOAP::Transport::HTTP::Apache",{"Apache" => 0},0],
+-  ["FastCGI server","SOAP::Transport::HTTP::FCGI",{"FCGI" => 0},0],
+-  ["POP3 server","SOAP::Transport::POP3::Server",{"Net::POP3" => 0,"MIME::Parser" => 0},1],
+-  ["IO server","SOAP::Transport::IO::Server",{"IO::File" => 0},0],
+-  ["MQ transport support","SOAP::Transport::MQ",{"MQSeries" => 0},1],
+-  ["JABBER transport support","SOAP::Transport::JABBER",{"Net::Jabber" => 0},0],
+-  ["MIME messages","SOAP::MIMEParser",{"MIME::Parser" => 0},1],
+-  ["SSL Support for TCP Transport","SOAP::Transport::TCP",{"IO::Socket::SSL" => 0},0],
+-  ["Compression support for HTTP","SOAP::Transport::HTTP",{"Compress::Zlib" => 0},0],
+-  ["MIME interoperability w/ Axis","SOAP::Lite",{"MIME::Parser" => "6.106"},0],
+-);
 -
--Module                        Prerequisites     Bundle                  Default
------------------------------- ----------------- ----------------------- -------
--Client HTTP support (SOAP::Transport::HTTP::Client)                      [yes]
--                              LWP::UserAgent
------------------------------- ----------------- ----------------------- -------
--Client HTTPS support (SOAP::Transport::HTTPS::Client, require OpenSSL)   [no]
--                              Crypt::SSLeay
------------------------------- ----------------- ----------------------- -------
--Client SMTP/sendmail support (SOAP::Transport::MAILTO::Client)           [yes]
--                              MIME::Lite
------------------------------- ----------------- ----------------------- -------
--Client FTP support (SOAP::Transport::FTP::Client)                        [yes]
--                              Net::FTP          [libnet]
--                              IO::File          [IO]
------------------------------- ----------------- ----------------------- -------
--Standalone HTTP server (SOAP::Transport::HTTP::Daemon)                   [yes]
--                              HTTP::Daemon
------------------------------- ----------------- ----------------------- -------
--Apache/mod_perl server (SOAP::Transport::HTTP::Apache, require Apache)   [no]
--                              Apache            [mod_perl]
------------------------------- ----------------- ----------------------- -------
--FastCGI server (SOAP::Transport::HTTP::FCGI, require FastCGI)            [no]
--                              FCGI
------------------------------- ----------------- ----------------------- -------
--POP3 server (SOAP::Transport::POP3::Server)                              [yes]
--                              Net::POP3         [libnet]
--                              MIME::Parser 5.22 [MIME Tools]
------------------------------- ----------------- ----------------------- -------
--IO server (SOAP::Transport::IO::Server)                                  [yes]
--                              IO::File          [IO]
------------------------------- ----------------- ----------------------- -------
--MQ transport support (SOAP::Transport::MQ)                               [no]
--                              MQSeries
------------------------------- ----------------- ----------------------- -------
--JABBER transport support (SOAP::Transport::JABBER)                       [no]
--                              Net::Jabber 1.0021
------------------------------- ----------------- ----------------------- -------
--MIME messages [required for POP3, optional for HTTP] (SOAP::MIMEParser)  [no]
--                              MIME::Parser 5.22 [MIME Tools]
------------------------------- ----------------- ----------------------- -------
--SSL support for TCP transport (SOAP::Transport::TCP)                     [no]
--                              IO::Socket::SSL
------------------------------- ----------------- ----------------------- -------
--Compression support for HTTP transport (SOAP::Transport::HTTP)           [no]
--                              Compress::Zlib    
------------------------------- ----------------- ----------------------- -------
--Core package (SOAP::Lite)                                                 yes 
--                              XML::Parser 2.23
--                              MIME::Base64
--                              URI
------------------------------- ----------------- ----------------------- -------
--EOL
--
--use Getopt::Long;
--
--my $helptext = <<EOI;
--Usage: perl Makefile.PL <options>
-- 
--Possible options are:
-- 
--  --noprompt            Disable interactive dialog
--  --alltests            Perform extra testing
--  --help, -?            Display this help text
--
--  [Do not] install prerequisites for appropriate module:
--
--EOI
+ use Getopt::Long;
+ 
+ my $helptext = <<EOI;
+@@ -40,131 +20,10 @@
+ 
+ EOI
+ 
 -
 -# Create config parameters using module names and expand help text
 -# We will create a hash (%config) that has each module => (1|0) for install
--my(%options, %config);
--foreach (split "\n", $prerequisites) {
--  next unless /\((SOAP::[\w:]+).+\[(yes|no)\]/;
--  my $module = do { (my $t = $1) =~ s/::/-/g; $t };
+-my(%options, %config, %has_module_cache);
+-
+-# Initialize the prereq table and all help text
+-foreach my $prereq (@PREREQS) {
+-  my ($feature,$dep,$modules,$default) = @$prereq;
+-  next unless $dep ne "";
+-  $prereq->[3] = has_all_modules($modules) unless $prereq->[3] == 2;
+-
+-  my $module = do { $dep =~ s/::/-/g; $dep };
 -  my $shortcut = do { (my $t = $module) =~ s/SOAP-(?:Transport-)?//; $t };
--  $config{$1} = $2 eq 'yes';
--  $options{"install-$module|$shortcut!"} = \$config{$1};
--  $helptext .= sprintf "  --[no]install-%-28s --[no]%s\n", $module, $shortcut;
+-  $config{$dep} = has_all_modules($modules);
+-  $options{"install-$dep|$shortcut!"} = \$config{$dep};
+-  $helptext .= sprintf "  --[no]install-%-28s --[no]%s\n", $dep, $shortcut;
 -}
 -
 -GetOptions(
--  'prompt!'   => \(my $prompt = 1), 
--  'alltests!' => \(my $alltests = 0), 
+-  'prompt!'   => \(my $prompt = 1),
+-  'alltests!' => \(my $alltests = 0),
 -  'help|?'    => \(my $help = 0),
 -  %options,
-+my %prerequisites = (
-+	"XML::Parser" => "2.23",
-+	"MIME::Base64" => 0,
-+	"URI" => 0,
- );
- 
+-);
+-
 -$help and print($helptext), exit;
 -
--# Now update prerequisites according to command line options
--$prerequisites =~ s/\((SOAP::[\w:]+)([^\)]*)\)(.+)\[(yes|no)\]
--                   /sprintf"(%s%s)%s[%s]",$1,$2,$3,$config{$1}?'yes':'no'/egx;
+-ExtUtils::MakeMaker::prompt(<<EOI . "Press <enter> to see the detailed list.");
 -
--print <<EOI, map {"$_\n"} grep {/\[(?:yes|no)\]/} split "\n", $prerequisites;
--
--We are about to install SOAP::Lite and for your convenience will provide 
--you with list of modules and prerequisites, so you'll be able to choose 
+-We are about to install SOAP::Lite and for your convenience will provide
+-you with list of modules and prerequisites, so you'll be able to choose
 -only modules you need for your configuration.
 -
 -XMLRPC::Lite, UDDI::Lite, and XML::Parser::Lite are included by default.
@@ -116,22 +69,37 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/01/06 00:26:43 grant Exp $
 -
 -EOI
 -
--my %prerequisites;
--my $auto = $prompt ? ExtUtils::MakeMaker::prompt("\nDo you want to proceed with this configuration?" => 'yes') =~ /^\s*y/i : 1;
+-# This hash will contain a list of all perl modules we would like to
+-# explicitly depend upon in our Makefile
+-my %prereqs;
+-my $proceed;
+-do {
+-  print_prereq_table();
+-  # Ask the user if this is the configuration they desire
+-  $proceed = $prompt ?
+-    ExtUtils::MakeMaker::prompt("\nDo you want to proceed with this configuration?" => 'yes') =~ /^\s*y/i : 1;
+-  # Loop through each prerequisite and ask the user if they wish to
+-  # install it or not - reset prereqs, cause they change each time
+-  %prereqs = ();
+-  for my $prereq (@PREREQS) {
+-    my ($feature,$dep,$modules,$default) = @$prereq;
+-    next unless $dep ne "";
+-    unless ($proceed || $prereq->[3] == 2) { # need to use $prereq, because we modify actual value
+-      $prereq->[3] = (ExtUtils::MakeMaker::prompt("Do you plan to use ${feature}?" => ($prereq->[3] ? 'yes' : 'no')) =~ /^\s*(y)/i);
+-    }
+-    (%prereqs = (%prereqs, map { $_,$modules->{$_} } keys %$modules)) if $prereq->[3];
+-  }
+-} while (!$proceed);
 -
--foreach (split /(^[-\s]+$)/m, $prerequisites) {
--  print unless $auto;
--  if (/SOAP::/m &&
--      (/\s+(yes)\s*$/m ||
--        /\[(yes|no)\]/ && 
--          ($auto || ExtUtils::MakeMaker::prompt("\nDo you plan to use this module?", $1) =~ /^\s*(y)/i))) {
--    %prerequisites = (%prerequisites, map {/\s+/? split : ($_ => 0)} /^\s{20,}([\w:]+(?:\s+[\d.]+)?)/mg) if $1 =~ /^y/;
--  } 
--}
+-#foreach my $key (keys %prereqs) {
+-#  print "$key=".$prereqs{$key}."\n";
+-#}
+-#exit;
 -
+-# Warn the user about the testing that will occur
 -my $noncoretests = $prompt ? ExtUtils::MakeMaker::prompt('
--During "make test" phase we may run tests with several SOAP servers 
--that may take long and may fail due to server/connectivity problems. 
+-During "make test" phase we may run tests with several SOAP servers
+-that may take long and may fail due to server/connectivity problems.
 -
 -Do you want to perform these tests in addition to core tests?', $alltests ? 'yes' : 'no') =~ /^\s*(y)/i : $alltests;
 -
@@ -139,8 +107,55 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/01/06 00:26:43 grant Exp $
 -
  WriteMakefile(
      'NAME'	   => 'SOAP::Lite',
-     'VERSION_FROM' => 'lib/SOAP/Lite.pm', 
-     'PREREQ_PM'    => \%prerequisites,
+     'VERSION_FROM' => 'lib/SOAP/Lite.pm',
+-    'PREREQ_PM'    => \%prereqs,
      'EXE_FILES'    => ['bin/SOAPsh.pl', 'bin/XMLRPCsh.pl', 'bin/stubmaker.pl'],
 -    test           => {TESTS => $tests},
  );
+ 
+-######################################################
+-# Supporting subroutines
+-######################################################
+-# Maintains a cache of what 3rd party modules you have
+-# installed
+-sub has_module {
+-  my ($mod, $version) = @_;
+-  $version ||= '';
+-  # use "require Foo; Exporter::require_version('Foo' => 1)" instead of
+-  # obvious "use Foo 1". The later doesn't work with MIME::Parser
+-  # wonder why? --PK
+-  return ($has_module_cache{"$mod$version"} ||= eval("require $mod; Exporter::require_version('$mod', $version); 1"));
+-}
+-
+-# Return 1 if all modules contained in the inputed array
+-# are installed, 0 otherwise
+-sub has_all_modules {
+-  my ($mods) = @_;
+-  foreach my $mod (keys %$mods) {
+-    return 0 if !has_module($mod, $mods->{$mod});
+-  }
+-  return 1;
+-}
+-
+-# Print a single prerequisite to the screen
+-sub print_prereq {
+-  my ($feature,$dep,$modules,$install) = @_;
+-  my $i = 0;
+-  foreach my $module (keys %$modules) {
+-    my $detected = (has_module($module, $modules->{$module}) ? "*" : " ");
+-    printf("%-29s [%s] %-24s %-8s\n",($i++ ? "" : $feature),$detected,$module . ($modules->{$module} ? " (v$modules->{$module})" : ""),($i == 1 ? ($install ? ($install == 2 ? "always" : "[ yes ]") : "[ no ]") : ""));
+-  }
+-}
+-
+-# Print the entire prerequisites table
+-sub print_prereq_table {
+-  printf("%-29s %-28s %-8s\n","Feature","Prerequisites","Install?");
+-  printf("%s %s %s\n","-" x 29,"-" x 28,"-" x 8);
+-  foreach my $pre (@PREREQS) {
+-    my ($feature,$dep,$modules,$default) = @{$pre};
+-    print_prereq(@{$pre});
+-  }
+-  print "--- An asterix '[*]' indicates if the module is currently installed.\n";
+-}
+-
+ 1;
