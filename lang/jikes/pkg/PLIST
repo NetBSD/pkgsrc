@@ -1,3 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/10/19 09:52:39 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/10/16 20:38:22 tv Exp $
 bin/jikes
 man/man1/jikes.1
+share/doc/jikes-1.12/contrib.html
+share/doc/jikes-1.12/jikes.gif
+share/doc/jikes-1.12/jikes.html
+share/doc/jikes-1.12/license.htm
+share/doc/jikes-1.12/news.html
+@dirrm share/doc/jikes-1.12
