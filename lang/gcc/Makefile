@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2003/06/02 01:19:04 jschauma Exp $
+# $NetBSD: Makefile,v 1.61 2003/07/04 16:11:55 seb Exp $
 
 DISTNAME=		gcc-2.95.3
 PKGREVISION=		2
@@ -26,7 +26,6 @@ CONFIGURE_ARGS=		--host=${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX}
 CONFIGURE_ARGS+=	--enable-shared
 
-PLIST_SUBST+=		GCC_VERSION=${PKGVERSION}
 CONFIGURE_DIRS=		${WRKDIR}/objdir
 BUILD_DIRS=		${CONFIGURE_DIRS}
 
@@ -57,6 +56,9 @@ ALL_TARGET=		bootstrap
 
 GCC_ARCHDIR=	${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}
 FILES_SUBST+=	GCC_PREFIX=${GCC_PREFIX}
+FILES_SUBST+=	DISTNAME=${DISTNAME}
+MESSAGE_SUBST+=	DISTNAME=${DISTNAME}
+PLIST_SUBST+=	DISTNAME=${DISTNAME}
 
 post-extract:
 	${MKDIR} ${WRKSRC}
@@ -87,13 +89,13 @@ post-build:
 #	make install; make deinstall; make install
 #
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gcc
-	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/share/examples/gcc/mk.conf
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/${DISTNAME}
+	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/share/examples/${DISTNAME}/mk.conf
 	-cd ${GCC_ARCHDIR}/include && ${RM} -f fixed && ${RMDIR} v7 v9
 .else
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gcc
-	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/share/examples/gcc/mk.conf
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/${DISTNAME}
+	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/share/examples/${DISTNAME}/mk.conf
 .  if exists(/usr/include/g++/FlexLexer.h)
 	${LN} -fs /usr/include/g++/FlexLexer.h				\
 		${GCC_PREFIX}/include/g++-3/FlexLexer.h
