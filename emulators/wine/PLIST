@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2003/06/23 08:12:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2003/07/12 14:33:28 zuntum Exp $
 bin/function_grep.pl
 bin/notepad
 bin/progman
@@ -568,6 +568,7 @@ share/aclocal/wine.m4
 share/examples/wine/generic.ppd
 share/examples/wine/system.ini
 share/examples/wine/wine.conf
+share/examples/wine/winedefault.reg
 @dirrm share/examples/wine
 @dirrm lib/wine
 @dirrm include/wine/windows
