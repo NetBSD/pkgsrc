@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/06/01 11:23:17 rh Exp $
+# $NetBSD: Makefile,v 1.5 2000/07/08 15:21:05 sakamoto Exp $
 #
 
 DISTNAME=	psiconv-0.6.1
@@ -17,14 +17,11 @@ DEPENDS+=	ImageMagick-*:../../graphics/ImageMagick
 MAGICK_CONFIG=	${LOCALBASE}/bin/Magick-config
 
 USE_X11=	YES
-USE_PKGLIBTOOL=	YES
+USE_LIBTOOL=	YES
+LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	CPPFLAGS="`${MAGICK_CONFIG} --cppflags` -DIMAGEMAGICK" \
 		LIBS="${LIBS} `${MAGICK_CONFIG} --libs`"
-
-post-configure:
-	@${RM} -f ${WRKSRC}/libtool
-	@${LN} -s ${LIBTOOL} ${WRKSRC}/libtool
 
 post-install:
 	${MKDIR} ${PREFIX}/share/doc/psiconv
