@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/05/16 20:28:40 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/05/24 08:53:57 jlam Exp $
 #
 
 DISTNAME=	calc-2.11.4t2
@@ -13,12 +13,12 @@ COMMENT=	C arbitrary precision calculator
 
 NO_CONFIGURE=	# defined
 
-.include "../../devel/readline/Makefile.readline"
+.include "../../devel/readline/buildlink.mk"
 
 MAKE_ENV+=	CPPFLAGS="${CPPFLAGS}"
-CPPFLAGS+=	-I${WRKINCDIR}
-LDFLAGS+=	-L${WRKLIBDIR}
+CPPFLAGS+=	-I${BUILDLINK_INCDIR}
+LDFLAGS+=	-L${BUILDLINK_LIBDIR}
 
-pre-build: link-readline-headers link-readline-libs
+pre-build: ${BUILDLINK_TARGETS}
 
 .include "../../mk/bsd.pkg.mk"
