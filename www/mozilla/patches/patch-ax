@@ -1,9 +1,9 @@
-$NetBSD: patch-ax,v 1.5 2001/11/22 16:25:37 taya Exp $
+$NetBSD: patch-ax,v 1.6 2001/12/27 15:02:41 taya Exp $
 
 diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/src/nsSocketTransport.cpp
---- ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp	Tue Oct  9 07:17:25 2001
-+++ ./netwerk/base/src/nsSocketTransport.cpp	Thu Nov 22 12:30:55 2001
-@@ -188,8 +188,7 @@
+--- ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp	Tue Dec  4 11:47:19 2001
++++ ./netwerk/base/src/nsSocketTransport.cpp	Sat Dec 22 13:02:36 2001
+@@ -186,8 +186,7 @@
      //
      // Set up Internet defaults...
      //
@@ -13,7 +13,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
      
      //
      // Initialize the global connect timeout value if necessary...
-@@ -238,6 +237,13 @@
+@@ -236,6 +235,13 @@
          nsAutoMonitor::DestroyMonitor(mMonitor);
          mMonitor = nsnull;
      }
@@ -27,7 +27,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
  }
  
  
-@@ -642,15 +648,7 @@
+@@ -640,15 +646,7 @@
      //
      // The hostname has not been resolved yet...
      //
@@ -41,9 +41,9 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
 -        mNetAddress.ipv6.port = PR_htons(((mProxyPort != -1 && !mProxyTransparent) ? mProxyPort : mPort));
 -
 +    if (mNetAddressList == nsnull) {
-         nsCOMPtr<nsIDNSService> pDNSService(do_GetService(kDNSService, &rv));
-         if (NS_FAILED(rv)) return rv;
+         PR_ExitMonitor(mMonitor);
  
+         nsIDNSService* pDNSService = mService->GetCachedDNSService();
 @@ -673,7 +671,7 @@
              //
              // The DNS lookup has finished...  It has either failed or succeeded.
@@ -106,10 +106,10 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
      //
 -    if (PR_IsNetAddrType(&mNetAddress, PR_IpAddrAny)) {
 +    if (mNetAddressList == nsnull) {
-         nsCOMPtr<nsIDNSService> pDNSService(do_GetService(kDNSService, &rv));
-         if (NS_FAILED(rv)) return rv;
- 
-@@ -937,16 +954,18 @@
+         nsIDNSService* pDNSService = mService->GetCachedDNSService();
+         if (!pDNSService) {
+             return NS_ERROR_UNEXPECTED;
+@@ -939,16 +956,18 @@
              return NS_ERROR_FAILURE;
          }
  
@@ -132,7 +132,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
      }
  
      //
-@@ -1411,21 +1430,27 @@
+@@ -1470,21 +1489,27 @@
      // Enter the socket transport lock...
      nsAutoMonitor mon(mMonitor);
      nsresult rv = NS_OK;
@@ -171,7 +171,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
      } else {
          // XXX: What should happen here?  The GetHostByName(...) succeeded but 
          //      there are *no* A records...
-@@ -1458,7 +1483,7 @@
+@@ -1517,7 +1542,7 @@
      // If the lookup failed, set the status...
      if (NS_FAILED(aStatus))
          mStatus = aStatus;
@@ -180,7 +180,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.cpp ./netwerk/base/s
          mStatus = NS_ERROR_ABORT;
  
      // Start processing the transport again - if necessary...
-@@ -1779,7 +1804,7 @@
+@@ -1838,7 +1863,7 @@
      *_retval = (char*)nsMemory::Alloc(aLen);
      if (!*_retval) return NS_ERROR_FAILURE;
  
