@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/08/04 22:07:21 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2000/08/04 22:10:15 jlam Exp $
 #
 
 DISTNAME=		libwmf-0.1.17
@@ -13,8 +13,8 @@ DEPENDS+=		freetype-lib>=1.3.1:../../graphics/freetype-lib
 DEPENDS+=		png>=1.0.6:../../graphics/png
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
-# uses own gd, which has some extra functionality
-CONFLICTS+=		gd-1.7.3:../../graphics/gd
+# installs own gd, which has some extra functionality
+CONFLICTS+=		gd-*
 
 WRKSRC=			${WRKDIR}/libwmf
 USE_X11=		YES
