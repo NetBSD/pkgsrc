@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/07/31 19:30:49 tv Exp $
+# $NetBSD: Makefile,v 1.7 1998/08/09 23:16:18 tron Exp $
 #
 
 DISTNAME=	xpkgwedge-0.4
@@ -31,7 +31,7 @@ pre-install:
 		> ${PKGDIR}/MESSAGE
 
 pre-clean:
-	@${RM} ${PKGDIR}/MESSAGE
+	@${RM} -f ${PKGDIR}/MESSAGE
 
 .include "../../mk/bsd.pkg.mk"
 
