@@ -1,0 +1,6 @@
+gnofin: a personal checking/savings account management program
+
+gnofin is a very simple program for maintaining your checking or savings
+account.   It uses the GNOME user interface library and gtk+ toolkit to
+present a graphical user interface, and can export its internal database in
+a variety of formats.
