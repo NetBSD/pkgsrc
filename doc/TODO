@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.541 2003/05/10 00:05:58 jtb Exp $
+$NetBSD: TODO,v 1.542 2003/05/10 01:37:10 jtb Exp $
 
 Suggested new packages
 ======================
@@ -131,7 +131,6 @@ Suggested package updates
 	o gnucash-1.8.2
 	o gnuchess-5.06
 	o gpa-0.6.1
-	o gperiodic-2.0.4
 	o gq-0.6.0 [pkg/21284]
 	o grace-5.1.12
 	o gsed-4.0.7
