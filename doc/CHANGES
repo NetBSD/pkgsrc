@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5076 2004/03/03 19:07:37 salo Exp $
+$NetBSD: CHANGES,v 1.5077 2004/03/03 21:09:52 manu Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1141,3 +1141,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mklivecd to 0.3 [xtraeme 2004-03-03]
 	Updated py-ZODB 3.2.1 [recht 2004-03-03]
 	Updated silc-server to 0.9.18 [salo 2004-03-03]
+	Updated milter-regex to 1.2 [manu 2004-03-03]
