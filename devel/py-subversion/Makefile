@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2004/03/26 02:27:39 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/29 18:08:33 epg Exp $
 
 PKGNAME=	${PYPKGPREFIX}-subversion-${SVNVER}
-PKGREVISION=	1
 COMMENT=	Python bindings and tools for Subversion
 
 .include "../../devel/subversion/Makefile.common"
@@ -10,8 +9,7 @@ CONFIGURE_ENV+=		PYTHON2=${PYTHONBIN}
 
 PY_PATCHPLIST=		YES
 PYBINMODULE=		YES
-PYTHON_PATCH_SCRIPTS=	tools/cvs2svn/cvs2svn.py \
-			tools/hook-scripts/mailer/mailer.py
+PYTHON_PATCH_SCRIPTS=	tools/hook-scripts/mailer/mailer.py
 
 ALL_TARGET=		swig-py-lib swig-py
 INSTALL_TARGET=		install-swig-py-lib install-swig-py
@@ -32,13 +30,6 @@ post-install:
 	${INSTALL_DATA} \
 		${WRKSRC}/tools/hook-scripts/mailer/mailer.conf.example \
 		${SVNEXAMPLES}/hook-scripts
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/subversion/cvs2svn
-	${INSTALL_DATA} ${WRKSRC}/tools/cvs2svn/README ${SVNDOC}/cvs2svn
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/cvs2svn/cvs2svn.py \
-		${PREFIX}/bin/cvs2svn
-	${INSTALL_SCRIPT_DIR} ${LOCALBASE}/${PYSITELIB}/rcsparse
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/cvs2svn/rcsparse/*.py \
-		${LOCALBASE}/${PYSITELIB}/rcsparse
 
 .include "../../devel/subversion/buildlink3.mk"
 .include "../../devel/swig-build/buildlink3.mk"
