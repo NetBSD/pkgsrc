@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/07/07 15:15:12 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 1999/07/07 16:10:42 bouyer Exp $
 #
 
 DISTNAME=	cgi.tcl
@@ -6,12 +6,12 @@ PKGNAME=	tcl-cgi-0.8
 WRKSRC=		${WRKDIR}/cgi.tcl-0.8
 CATEGORIES=	www
 MASTER_SITES=	http://expect.nist.gov/cgi.tcl/
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	bouyer@netbsd.org
 HOMEPAGE=	http://expect.nist.gov/cgi.tcl/
 
 DEPENDS+=	tcl-8.0.5:../../lang/tcl80
+
 GNU_CONFIGURE=	yes
 
 post-install:
