@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2004/05/07 01:14:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.17 2004/09/21 17:11:42 jmmv Exp $
 #
 
-DISTNAME=		gok-0.10.2
+DISTNAME=		gok-0.11.8
 CATEGORIES=		misc
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gok/0.10/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gok/0.11/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
@@ -18,7 +18,7 @@ USE_LIBTOOL=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--disable-gtk-doc
 
 PKGCONFIG_OVERRIDE+=    gok-1.0.pc.in
@@ -26,6 +26,7 @@ PKGCONFIG_OVERRIDE+=    gok-1.0.pc.in
 GCONF2_SCHEMAS=		gok.schemas
 
 .include "../../audio/esound/buildlink3.mk"
+.include "../../audio/gnome-speech/buildlink3.mk"
 .include "../../devel/at-spi/buildlink3.mk"
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gail/buildlink3.mk"
