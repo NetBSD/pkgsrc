@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 1998/07/19 15:23:52 tv Exp $
+lib/libimapuw.so.0.0
+libexec/imapd
+libexec/ipop2d
+libexec/ipop3d
+man/man8/imapd.8
+man/man8/ipopd.8
+man/man8/ipop2d.8
+man/man8/ipop3d.8
+sbin/mtest
