@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9432 2005/03/05 16:43:11 minskim Exp $
+$NetBSD: CHANGES,v 1.9433 2005/03/05 20:14:17 fredb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1286,3 +1286,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated tkdiff to 4.0.2 [minskim 2005-03-05]
 	Updated flim to 1.14.6nb2 [minskim 2005-03-05]
 	Updated semi to 1.14.6nb3 [minskim 2005-03-05]
+	Updated xli to 1.17.0nb2 [fredb 2005-03-05]
