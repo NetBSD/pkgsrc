@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2003/06/24 10:22:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2003/09/08 12:11:17 wiz Exp $
 bin/screensaver-properties-capplet
 bin/xscreensaver
 bin/xscreensaver-command
@@ -11,6 +11,7 @@ bin/xscreensaver.kss
 lib/X11/app-defaults/XScreenSaver
 libexec/xscreensaver/anemone
 libexec/xscreensaver/ant
+libexec/xscreensaver/antspotlight
 libexec/xscreensaver/apollonian
 libexec/xscreensaver/atlantis
 libexec/xscreensaver/attraction
@@ -55,6 +56,7 @@ libexec/xscreensaver/extrusion
 libexec/xscreensaver/fadeplot
 libexec/xscreensaver/flag
 libexec/xscreensaver/flame
+libexec/xscreensaver/flipflop
 libexec/xscreensaver/flipscreen3d
 libexec/xscreensaver/flow
 libexec/xscreensaver/fluidballs
@@ -98,6 +100,7 @@ libexec/xscreensaver/lavalite
 libexec/xscreensaver/lightning
 libexec/xscreensaver/lisa
 libexec/xscreensaver/lissie
+libexec/xscreensaver/ljlatest
 libexec/xscreensaver/lmorph
 libexec/xscreensaver/loop
 libexec/xscreensaver/maze
@@ -120,6 +123,7 @@ libexec/xscreensaver/phosphor
 libexec/xscreensaver/piecewise
 libexec/xscreensaver/pipes
 libexec/xscreensaver/polyominoes
+libexec/xscreensaver/polytopes
 libexec/xscreensaver/popsquares
 libexec/xscreensaver/pulsar
 libexec/xscreensaver/pyro
@@ -178,6 +182,7 @@ libexec/xscreensaver/xteevee
 libexec/xscreensaver/zoom
 man/man1/anemone.1
 man/man1/ant.1
+man/man1/antspotlight.1
 man/man1/apollonian.1
 man/man1/atlantis.1
 man/man1/attraction.1
@@ -222,6 +227,7 @@ man/man1/extrusion.1
 man/man1/fadeplot.1
 man/man1/flag.1
 man/man1/flame.1
+man/man1/flipflop.1
 man/man1/flipscreen3d.1
 man/man1/flow.1
 man/man1/fluidballs.1
@@ -265,6 +271,7 @@ man/man1/lavalite.1
 man/man1/lightning.1
 man/man1/lisa.1
 man/man1/lissie.1
+man/man1/ljlatest.1
 man/man1/lmorph.1
 man/man1/loop.1
 man/man1/maze.1
@@ -287,6 +294,7 @@ man/man1/phosphor.1
 man/man1/piecewise.1
 man/man1/pipes.1
 man/man1/polyominoes.1
+man/man1/polytopes.1
 man/man1/pulsar.1
 man/man1/pyro.1
 man/man1/qix.1
@@ -354,6 +362,7 @@ share/control-center/capplets/screensaver-properties.desktop
 share/control-center/screensavers/README
 share/control-center/screensavers/anemone.xml
 share/control-center/screensavers/ant.xml
+share/control-center/screensavers/antspotlight.xml
 share/control-center/screensavers/apollonian.xml
 share/control-center/screensavers/atlantis.xml
 share/control-center/screensavers/attraction.xml
@@ -398,8 +407,10 @@ share/control-center/screensavers/eruption.xml
 share/control-center/screensavers/euler2d.xml
 share/control-center/screensavers/extrusion.xml
 share/control-center/screensavers/fadeplot.xml
+share/control-center/screensavers/fireflies.xml
 share/control-center/screensavers/flag.xml
 share/control-center/screensavers/flame.xml
+share/control-center/screensavers/flipflop.xml
 share/control-center/screensavers/flipscreen3d.xml
 share/control-center/screensavers/flow.xml
 share/control-center/screensavers/fluidballs.xml
@@ -466,6 +477,7 @@ share/control-center/screensavers/phosphor.xml
 share/control-center/screensavers/piecewise.xml
 share/control-center/screensavers/pipes.xml
 share/control-center/screensavers/polyominoes.xml
+share/control-center/screensavers/polytopes.xml
 share/control-center/screensavers/popsquares.xml
 share/control-center/screensavers/pulsar.xml
 share/control-center/screensavers/pyro.xml
@@ -529,15 +541,12 @@ share/control-center/screensavers/xspirograph.xml
 share/control-center/screensavers/xteevee.xml
 share/control-center/screensavers/zoom.xml
 share/gnome/apps/Settings/Desktop/screensaver-properties.desktop
-${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/xscreensaver.mo
-${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xscreensaver.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xscreensaver.mo
