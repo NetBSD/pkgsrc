@@ -1,0 +1,60 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/14 20:26:15 kristerw Exp $
+bin/autogen
+bin/autoopts-config
+bin/columns
+bin/getdefs
+bin/xml2ag
+include/options.h
+@unexec ${INSTALL_INFO} --delete %D/info/autogen.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/snprintfv.info %D/info/dir
+info/autogen.info
+info/snprintfv.info
+@exec ${INSTALL_INFO} %D/info/autogen.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/snprintfv.info %D/info/dir
+lib/libguileopts.a
+lib/libguileopts.la
+lib/libguileopts.so
+lib/libguileopts.so.0
+lib/libguileopts.so.0.1
+lib/libopts.a
+lib/libopts.la
+lib/libopts.so
+lib/libopts.so.18
+lib/libopts.so.18.4
+lib/libsnprintfv.a
+lib/libsnprintfv.la
+lib/libsnprintfv.so
+lib/libsnprintfv.so.1
+lib/libsnprintfv.so.1.0
+man/man1/autogen.1
+man/man1/autoopts-config.1
+man/man1/columns.1
+man/man1/getdefs.1
+man/man1/xml2ag.1
+man/man3/optionFree.3
+man/man3/optionLoadLine.3
+man/man3/optionProcess.3
+man/man3/optionRestore.3
+man/man3/optionSaveFile.3
+man/man3/optionSaveState.3
+man/man3/optionVersion.3
+share/aclocal/autoopts.m4
+share/autogen/aginfo.tpl
+share/autogen/aginfo3.tpl
+share/autogen/agman1.tpl
+share/autogen/agman3.tpl
+share/autogen/confmacs.tpl
+share/autogen/conftest.tpl
+share/autogen/fsm-macro.tpl
+share/autogen/fsm-trans.tpl
+share/autogen/fsm.tpl
+share/autogen/libopts-18.4.9.tar.gz
+share/autogen/optcode.tpl
+share/autogen/opthead.tpl
+share/autogen/options.tpl
+share/autogen/options_h.tpl
+share/autogen/optlib.tpl
+share/autogen/optmain.tpl
+share/autogen/schemedef.scm
+share/autogen/stdoptions.def
+@dirrm share/autogen
