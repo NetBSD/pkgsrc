@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/01/21 12:41:26 rh Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/04/01 08:31:37 rh Exp $
 #
 
 .if !defined(GNUSTEP_OBJC_BUILDLINK2_MK)
 GNUSTEP_OBJC_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gnustep-objc
-BUILDLINK_DEPENDS.gnustep-objc?=		gnustep-objc>1.2.2
+BUILDLINK_DEPENDS.gnustep-objc?=		gnustep-objc>=1.2.3
 BUILDLINK_PKGSRCDIR.gnustep-objc?=		../../devel/gnustep-objc
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gnustep-objc=gnustep-objc
