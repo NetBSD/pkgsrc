@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.13 2002/01/31 17:51:27 jlam Exp $
+$NetBSD: patch-ab,v 1.14 2002/02/18 11:26:16 martti Exp $
 
---- Makefile.orig	Thu Jan 24 13:51:04 2002
-+++ Makefile
+--- Makefile.orig	Tue Feb 12 20:05:36 2002
++++ Makefile	Mon Feb 18 11:44:24 2002
 @@ -61,8 +61,6 @@
  		echo Installing in $$dir... ;\
  		(cd $$dir; $(MAKE) $(MFLAGS) install) || exit 1;\
@@ -30,8 +30,8 @@ $NetBSD: patch-ab,v 1.13 2002/01/31 17:51:27 jlam Exp $
 -	fi
 -	if test "x$(INITDIR)" = "x" -a "x$(INITDDIR)" != "x"; then \
 -		$(INSTALL_DIR) $(BUILDROOT)$(INITDDIR); \
--		if test "$(INITDDIR)" = "/System/Library/StartupItems/CUPS"; then \
--			$(INSTALL_SCRIPT) cups.sh $(BUILDROOT)$(INITDDIR)/CUPS; \
+-		if test "$(INITDDIR)" = "/System/Library/StartupItems/PrintingServices"; then \
+-			$(INSTALL_SCRIPT) cups.sh $(BUILDROOT)$(INITDDIR)/PrintingServices.sh; \
 -			$(INSTALL_DATA) cups.plist $(BUILDROOT)$(INITDDIR)/StartupParameters.plist; \
 -			$(INSTALL_DIR) $(BUILDROOT)$(INITDDIR)/Resources/English.lproj; \
 -			$(INSTALL_DATA) cups.strings $(BUILDROOT)$(INITDDIR)/Resources/English.lproj/Localizable.strings; \
