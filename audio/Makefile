@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.161 2003/02/14 23:57:33 hubertf Exp $
+# $NetBSD: Makefile,v 1.162 2003/02/15 00:46:28 hubertf Exp $
 #
 
 COMMENT=	Audio tools
@@ -172,7 +172,7 @@ SUBDIR+=	xmms-crossfade
 SUBDIR+=	xmms-dflowers
 SUBDIR+=	xmms-dscope
 SUBDIR+=	xmms-dspectogram
-SUBDIR+=	xmms-dspectralizer
+SUBDIR+=	xmms-dspectral
 SUBDIR+=	xmms-fmradio
 SUBDIR+=	xmms-funtimedancer
 SUBDIR+=	xmms-gdancer
