@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/10/16 07:58:56 rh Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/03/04 14:03:04 wiz Exp $
 bin/gnet-config
 include/gnet/conn.h
 include/gnet/gnet.h
@@ -17,7 +17,7 @@ include/gnet/url.h
 lib/gnet/include/gnetconfig.h
 lib/libgnet-1.1.so
 lib/libgnet-1.1.so.7
-lib/libgnet-1.1.so.7.0
+lib/libgnet-1.1.so.7.1
 lib/libgnet.a
 lib/libgnet.la
 lib/libgnet.so
