@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.104 2003/12/19 19:22:28 veego Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.105 2004/01/14 06:57:45 rh Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -6,6 +6,7 @@
 # BUILDLINK_PACKAGES+=		foo
 # BUILDLINK_PKGBASE.foo=	foo-lib
 # BUILDLINK_DEPENDS.foo?=	foo-lib>=1.0
+# BUILDLINK_RECOMMENDED.foo?=	foo-lib>=1.0nb1
 # BUILDLINK_PKGSRCDIR.foo?=	../../category/foo-lib
 #
 # EVAL_PREFIX+=			BUILDLINK_PREFIX.foo=foo-lib
@@ -140,6 +141,7 @@ BUILDLINK_DEPMETHOD.${_pkg_}=	full
 .  endif
 .  if !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mfull)
 _BUILDLINK_DEPMETHOD.${_pkg_}=	DEPENDS
+_BUILDLINK_RECMETHOD.${_pkg_}=	RECOMMENDED
 .  elif !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mbuild)
 _BUILDLINK_DEPMETHOD.${_pkg_}=	BUILD_DEPENDS
 .  endif
@@ -148,6 +150,14 @@ _BUILDLINK_DEPMETHOD.${_pkg_}=	BUILD_DEPENDS
 .    for _depends_ in ${BUILDLINK_DEPENDS.${_pkg_}}
 ${_BUILDLINK_DEPMETHOD.${_pkg_}}+= \
 	${_depends_}:${BUILDLINK_PKGSRCDIR.${_pkg_}}
+.    endfor
+.  endif
+.  if defined(BUILDLINK_RECOMMENDED.${_pkg_}) && \
+      defined(_BUILDLINK_RECMETHOD.${_pkg_}) && \
+      defined(BUILDLINK_PKGSRCDIR.${_pkg_})
+.    for _rec_ in ${BUILDLINK_RECOMMENDED.${_pkg_}}
+${_BUILDLINK_RECMETHOD.${_pkg_}}+= \
+	${_rec_}:${BUILDLINK_PKGSRCDIR.${_pkg_}}
 .    endfor
 .  endif
 #

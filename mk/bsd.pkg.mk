@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1344 2004/01/13 00:40:25 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1345 2004/01/14 06:57:45 rh Exp $
 #
 # This file is in the public domain.
 #
@@ -404,6 +404,14 @@ MAKE_ENV+=		LIBTOOL="${PKGLIBTOOL} ${LIBTOOL_FLAGS}"
 .if defined(BUILD_USES_MSGFMT) && \
     (!exists(/usr/bin/msgfmt) || ${_USE_GNU_GETTEXT} == "yes")
 BUILD_DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
+.endif
+
+.if defined(RECOMMENDED)
+.  if !empty(IGNORE_RECOMMENDED:M[nN][oO])
+DEPENDS+=		${RECOMMENDED}
+.  else
+BUILD_DEFS+=		IGNORE_RECOMMENDED
+.  endif
 .endif
 
 EXTRACT_COOKIE=		${WRKDIR}/.extract_done
@@ -2479,6 +2487,11 @@ real-su-package: ${PLIST} ${DESCR}
 .  if defined(NO_BIN_ON_FTP)
 	@${ECHO_MSG} "${_PKGSRC_IN}> Warning: ${PKGNAME} may not be made available through FTP:"
 	@${ECHO_MSG} "${_PKGSRC_IN}>         " ${NO_BIN_ON_FTP:Q}
+.  endif
+.  if defined(RECOMMENDED) && !empty(IGNORE_RECOMMENDED:M[yY][eE][sS])
+	@${ECHO_MSG} "${_PKGSRC_IN}> Warning: dependency recommendations are being ignored!"
+	@${ECHO_MSG} "${_PKGSRC_IN}>          ${PKGNAME} should not be uploaded nor"
+	@${ECHO_MSG} "${_PKGSRC_IN}>          otherwise be used as a binary package!"
 .  endif
 .endif
 
