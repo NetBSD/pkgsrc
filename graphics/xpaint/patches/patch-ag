@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.1 2002/12/16 09:29:14 tron Exp $
+$NetBSD: patch-ag,v 1.1.2.1 2003/03/17 08:18:43 grant Exp $
 
 --- Imakefile.orig	Sun Nov 17 22:16:53 2002
 +++ Imakefile	Mon Dec 16 10:20:41 2002
@@ -11,7 +11,7 @@ $NetBSD: patch-ag,v 1.1 2002/12/16 09:29:14 tron Exp $
  
  libXaw95.so:
 -	cd xaw95-1.1.4 ; xmkmf -a ; make
-+	cd xaw95-1.1.4 ; ${XMKMF} -a ; make
++	cd xaw95-1.1.4 ; ${XMKMF} ; make
  	-$(RM) libXaw95.so libXaw95.a
  	-$(LN) xaw95-1.1.4/libXaw95.so libXaw95.so
  	-$(LN) xaw95-1.1.4/libXaw95.a libXaw95.a
