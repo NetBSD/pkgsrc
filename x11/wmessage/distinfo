@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/02/23 17:36:21 wiz Exp $
-
-SHA1 (wmessage-0.10.tar.gz) = f50b768f2e8d3c5a4503cbeb3188bde7fa79044f
-RMD160 (wmessage-0.10.tar.gz) = 3c6de36fd5860e51e66562768dc03d5db2116ee6
-Size (wmessage-0.10.tar.gz) = 15844 bytes
-SHA1 (patch-aa) = 29cc5550a62c2ec2e3184db69d4c21d96e4ac2be
-SHA1 (patch-ab) = f0638e8f1d76a27f86502228c9b5fbc5ed4bc477
-SHA1 (patch-ac) = d4b77334fc83954091ad0acb18e216dead7b6e20
-SHA1 (patch-ad) = e21e043041005fdfa728038960f15449a2a43c7f
