@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.12 2004/11/20 04:37:08 grant Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.13 2004/11/30 14:50:37 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -130,11 +130,7 @@ WRAPPER_VARS+=		_WRAP_PATH
 #
 WRAPPEES+=	AS
 WRAPPEES+=	CC
-# XXX The following is a workaround until I can find time to fix this
-# XXX more completely (jlam).
-.if ${CPP:N-*} != ${CC}
 WRAPPEES+=	CPP
-.endif
 WRAPPEES+=	CXX
 WRAPPEES+=	FC
 .if defined(USE_X11)
@@ -143,9 +139,28 @@ WRAPPEES+=	IMAKE
 .endif
 WRAPPEES+=	LD
 
+_WRAPPEE_UNIQUE_CMDS=	# empty
 .for _wrappee_ in ${WRAPPEES}
-_WRAPPEES+=	${_wrappee_}
-.endfor
+_WRAPPEES+=		${_wrappee_}
+_WRAPPEE_${_wrappee_}=	${${_wrappee_}:T:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
+.  if empty(_WRAPPEE_UNIQUE_CMDS:M${_WRAPPEE_${_wrappee_}})
+_WRAPPEE_UNIQUE_CMDS+=	${_WRAPPEE_${_wrappee_}}
+_WRAPPEES_UNIQUE+=	${_wrappee_}
+.  endif
+.endfor	# WRAPPEES
+
+.for _wrappee_ in ${_WRAPPEES}
+#
+# Strip the leading paths from the toolchain variables since we manipulate
+# the PATH to use the correct executable.
+#
+${_wrappee_}:=		${${_wrappee_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//:T} ${${_wrappee_}:C/^/_asdf_/1:N_asdf_*}
+#
+# WRAPPER_<wrappee> is the full path to the wrapper script, plus any
+# trailing arguments to <wrappee>.
+#
+WRAPPER_${_wrappee_}=	${WRAPPER_BINDIR}/${${_wrappee_}}
+.endfor	# _WRAPPEES
 
 _WRAP_ALIASES.AS=	as
 _WRAP_ALIASES.CC=	cc gcc
@@ -211,7 +226,7 @@ _WRAP_SKIP_TRANSFORM.${_wrappee_}?=	no
 .  else
 _WRAP_SKIP_TRANSFORM.${_wrappee_}?=	${_WRAP_SKIP_TRANSFORM}
 .  endif
-.endfor
+.endfor	# _WRAPPEES
 
 .if !empty(PKGSRC_COMPILER:Maix-xlc)
 _WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-aix-xlc
@@ -294,16 +309,6 @@ _WRAP_SUBST_SED=							\
 	-e "s|@_WRAP_SHELL_LIB@|${_WRAP_SHELL_LIB:Q}|g"
 
 .for _wrappee_ in ${_WRAPPEES}
-.  if defined(PKG_${_wrappee_})
-_WRAP_PKG_${_wrappee_}=	${PKG_${_wrappee_}}
-.  else
-_WRAP_PKG_${_wrappee_}=	${${_wrappee_}}
-.  endif
-
-WRAPPER_${_wrappee_}= \
-	${WRAPPER_BINDIR}/${_WRAP_PKG_${_wrappee_}:T:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
-${_wrappee_}:=	${WRAPPER_${_wrappee_}:T}
-
 _WRAP_SUBST_SED.${_wrappee_}=						\
 	-e "s|@_WRAP_ENV@|${_WRAP_ENV.${_wrappee_}:Q}|g"		\
 	-e "s|@_WRAP_EXTRA_ARGS@|${_WRAP_EXTRA_ARGS.${_wrappee_}:Q}|g"	\
@@ -326,7 +331,10 @@ _WRAP_SUBST_SED.${_wrappee_}=						\
 	${_WRAP_SUBST_SED}
 
 _WRAP_COOKIE.${_wrappee_}=	${WRAPPER_DIR}/.wrapper_${_wrappee_}_done
+.endfor	# _WRAPPEES
 
+.for _wrappee_ in ${_WRAPPEES_UNIQUE}
+PKG_${_wrappee_}?=	${${_wrappee_}}
 do-wrapper: ${_WRAP_COOKIE.${_wrappee_}}
 ${_WRAP_COOKIE.${_wrappee_}}:						\
 		${_WRAPPER_SH.${_wrappee_}}				\
@@ -340,49 +348,44 @@ ${_WRAP_COOKIE.${_wrappee_}}:						\
 		${_WRAP_SCAN.${_wrappee_}}				\
 		${_WRAP_SHELL_LIB}					\
 		${_WRAP_TRANSFORM.${_wrappee_}}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_WRAPPER_MSG}			\
-		"=> Creating wrapper: ${WRAPPER_${_wrappee_}}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	wrappee="${_WRAP_PKG_${_wrappee_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}"; \
+	wrapper="${WRAPPER_${_wrappee_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}"; \
+	${ECHO_WRAPPER_MSG} "=> Creating ${_wrappee_} wrapper: $$wrapper"; \
         gen_wrapper=yes;						\
-	case $${wrappee} in						\
-	/*)								\
-		absdir=;						\
-		;;							\
-	*)								\
-		save_IFS="$$IFS";					\
+	wrappee="${PKG_${_wrappee_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}"; \
+	case $$wrappee in						\
+	/*)	;;							\
+	*)	save_IFS="$$IFS";					\
 		IFS=":";						\
 		for dir in $${PATH}; do					\
 			case $${dir} in					\
-			*${BUILDLINK_DIR}*)				\
+			*${WRAPPER_DIR}*)				\
 				;;					\
 			*)						\
-				if [ -f $${dir}/$${wrappee} ] ||	\
-				   [ -h $${dir}/$${wrappee} ] &&	\
-				   [ -x $${dir}/$${wrappee} ]; then	\
-					absdir=$${dir}/;		\
-					wrappee=$${absdir}$${wrappee};	\
+				if ${TEST} -f $${dir}/$$wrappee -o	\
+				   	   -h $${dir}/$$wrappee; then	\
+					wrappee=$${dir}/$$wrappee;	\
 					break;				\
 				fi;					\
 				;;					\
 			esac;						\
 		done;							\
 		IFS="$$save_IFS";					\
-		if [ ! -x "$${wrappee}" ]; then				\
+		if ${TEST} ! -x "$$wrappee"; then			\
 			gen_wrapper=no;					\
-			${ECHO_WRAPPER_MSG} "Warning: unable to create \`$${wrappee}' wrapper script"; \
+			${ECHO_WRAPPER_MSG} "Warning: unable to create ${_wrappee_} wrapper script: \`$$wrappee'"; \
 		fi;							\
 		;;							\
 	esac;								\
 	case $$gen_wrapper in						\
 	yes)								\
-		${MKDIR} ${WRAPPER_${_wrappee_}:H};			\
+		${MKDIR} `${DIRNAME} $$wrapper`;			\
 		${CAT} ${_WRAPPER_SH.${_wrappee_}} |			\
 		${SED}	${_WRAP_SUBST_SED.${_wrappee_}}			\
-			-e "s|@WRAPPEE@|$${absdir}${_WRAP_PKG_${_wrappee_}:Q}|g" | \
+			-e "s|@WRAPPEE@|$$wrappee|g" |			\
 		${_WRAP_SH_CRUNCH_FILTER}				\
-		> ${WRAPPER_${_wrappee_}};				\
-		${CHMOD} +x ${WRAPPER_${_wrappee_}};			\
+		> $$wrapper;						\
+		${CHMOD} +x $$wrapper;					\
 		;;							\
 	esac
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
@@ -392,13 +395,14 @@ ${_WRAP_COOKIE.${_wrappee_}}:						\
 do-wrapper: ${_alias_}
 ${_alias_}: ${_WRAP_COOKIE.${_wrappee_}}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ ! -x ${_alias_} -a -x ${WRAPPER_${_wrappee_}} ]; then	\
-		${ECHO_WRAPPER_MSG} "=> Linking wrapper: ${_alias_}";	\
-		${LN} -f ${WRAPPER_${_wrappee_}} ${_alias_};		\
+	wrapper="${WRAPPER_${_wrappee_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}"; \
+	if [ ! -x ${.TARGET} -a -x $$wrapper ]; then			\
+		${ECHO_WRAPPER_MSG} "=> Linking ${_wrappee_} wrapper: ${.TARGET}"; \
+		${LN} -f $$wrapper ${.TARGET};				\
 	fi
 .    endif
 .  endfor
-.endfor	# _WRAPPEES
+.endfor	# _WRAPPEES_UNIQUE
 
 .for _target_ in ${WRAPPER_TARGETS}
 do-wrapper: ${_target_}
