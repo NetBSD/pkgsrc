@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.ldap,v 1.1 2004/10/02 12:06:03 adrianp Exp $
+lib/rlm_ldap-${PKGVERSION}.so
+lib/rlm_ldap.a
+lib/rlm_ldap.la
+lib/rlm_ldap.so
