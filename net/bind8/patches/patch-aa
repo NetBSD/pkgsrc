@@ -1,24 +1,65 @@
-$NetBSD: patch-aa,v 1.2 1999/11/13 10:02:38 rh Exp $
+$NetBSD: patch-aa,v 1.3 2001/12/24 14:10:55 abs Exp $
 
---- port/netbsd/Makefile.set.orig	Thu Mar 19 20:50:33 1998
-+++ port/netbsd/Makefile.set	Sat Nov 13 10:04:08 1999
-@@ -1,11 +1,13 @@
- 'CC=cc'
- 'CDEBUG=-O2 -g'
--'DESTBIN=/usr/bin'
--'DESTSBIN=/usr/sbin'
--'DESTEXEC=/usr/libexec'
--'DESTMAN=/usr/share/man'
--'DESTHELP=/usr/share/misc'
--'DESTETC=/etc'
-+'DESTBIN=${PREFIX}/bin'
-+'DESTLIB=${PREFIX}/lib'
-+'DESTINC=${PREFIX}/include/bind'
-+'DESTSBIN=${PREFIX}/sbin'
-+'DESTEXEC=${PREFIX}/libexec'
-+'DESTMAN=${PREFIX}/share/man'
-+'DESTHELP=${PREFIX}/share/doc/bind8'
-+'DESTETC=${PREFIX}/etc'
- 'DESTRUN=/var/run'
- 'LEX=lex -I'
- 'YACC=yacc -d'
+--- ../doc/man/Makefile.orig	Mon Nov 29 19:22:07 1999
++++ ../doc/man/Makefile
+@@ -52,12 +52,12 @@
+ # Target directory for the manual directory tree. Eg., may be used to 
+ # specify the path of an NFS-mounted directory for common files.
+ #
+-DESTDIR=
++DESTDIR= ${PREFIX}
+ 
+ #
+ # Default location for manual section directories.
+ #
+-DESTMAN= /usr/share/man
++DESTMAN= /man
+ 
+ #
+ # Install manuals in ${MANDIR}N. For systems that generate catable manual 
+@@ -228,14 +228,12 @@
+ #
+ # User command manual entries
+ #
+-CMD_BASE = 	dig host dnsquery dnskeygen
++CMD_BASE = 	dig dnsquery dnskeygen
+ CMD_SRC_EXT = 	1
+ CMD_SRC = 	dig.${CMD_SRC_EXT} \
+-		host.${CMD_SRC_EXT} \
+ 		dnsquery.${CMD_SRC_EXT} \
+ 		dnskeygen.${CMD_SRC_EXT}
+ CMD_OUT =	dig.${CMD_OUT_EXT} \
+-		host.${CMD_OUT_EXT} \
+ 		dnsquery.${CMD_OUT_EXT} \
+ 		dnskeygen.${CMD_OUT_EXT}
+ 
+@@ -303,7 +301,8 @@
+ #
+ # File format manual entries
+ #
+-FORMAT_BASE =	resolver irs.conf named.conf
++FORMAT_MAIN_BASE =	named.conf
++FORMAT_BASE =	resolver irs.conf
+ FORMAT_SRC_EXT = 5
+ FORMAT_SRC = 	resolver.${FORMAT_SRC_EXT} \
+ 		irs.conf.${FORMAT_SRC_EXT} \
+@@ -393,6 +392,10 @@
+ 		$${f}.${LIB_NETWORK_OUT_EXT} \
+ 		${DESTDIR}${DESTMAN}/${MANDIR}${LIB_NETWORK_EXT_DIR}/$${f}.${CATEXT}; \
+ 	done
++	@set -x; N=${FORMAT_EXT}; for f in ${FORMAT_MAIN_BASE}; do \
++		${INSTALL} -c -m 444 ${MAN_OWNER} ${MAN_GROUP} $${f}.${FORMAT_OUT_EXT} \
++			${DESTDIR}${DESTMAN}/${MANDIR}${FORMAT_EXT_DIR}/$${f}.${CATEXT}; \
++	done
+ 	@set -x; N=${FORMAT_EXT}; for f in ${FORMAT_BASE}; do \
+ 		${INSTALL} -c -m 444 ${MAN_OWNER} ${MAN_GROUP} \
+ 		$${f}.${FORMAT_OUT_EXT} \
+@@ -409,7 +412,7 @@
+ ${DESTDIR}${DESTMAN}/${MANDIR}${LIB_NETWORK_EXT_DIR} \
+ ${DESTDIR}${DESTMAN}/${MANDIR}${FORMAT_EXT_DIR} \
+ ${DESTDIR}${DESTMAN}/${MANDIR}${DESC_EXT_DIR}:
+-	mkdir $@
++	mkdir -p $@
+ 
+ links: FRC
+ 	@set -ex; ln -s SRC/*.[0-9] .
