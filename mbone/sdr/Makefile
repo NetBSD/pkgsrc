@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/11/05 06:35:24 mycroft Exp $
+# $NetBSD: Makefile,v 1.14 1999/01/01 07:58:29 garbled Exp $
 #
 
 DISTNAME=	sdr-2.5.8
@@ -20,7 +20,8 @@ USE_X11=	yes
 _INTTYPES!=	if [ -e /usr/include/sys/inttypes.h ]; then echo "Exists"; else echo "No go"; fi
 
 .if (${_INTTYPES} == "Exists")
-CFLAGS+= -DHAVE_SYS_INTTYPES_H
+EXTRA_FLAGS+= -DHAVE_SYS_INTTYPES_H
+MAKE_FLAGS+=	EXTRA_FLAGS="${EXTRA_FLAGS}"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
