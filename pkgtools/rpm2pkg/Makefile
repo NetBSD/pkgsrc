@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2003/03/29 12:42:12 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/13 13:53:04 wiz Exp $
 
 DISTNAME=	rpm2pkg-1.3
+PKGREVISION=			1
 WRKSRC=		${WRKDIR}
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty

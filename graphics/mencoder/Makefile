@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2003/07/10 17:33:56 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/13 13:52:11 wiz Exp $
 #
 
 .include "../../graphics/mplayer-share/Makefile.common"
 
 PKGNAME=	mencoder-${MPLAYER_PKG_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 COMMENT=	Simple movie encoder for MPlayer-playable movies
 
 USE_BUILDLINK2=		# defined

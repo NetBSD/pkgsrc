@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/05/02 11:54:36 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/07/13 13:51:20 wiz Exp $
 #
 # This Makefile fragment is included by packages that use libgtop.
 #
@@ -9,7 +9,7 @@
 LIBGTOP_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libgtop
-BUILDLINK_DEPENDS.libgtop?=		libgtop>=1.0.13nb2
+BUILDLINK_DEPENDS.libgtop?=		libgtop>=1.0.13nb3
 BUILDLINK_PKGSRCDIR.libgtop?=		../../devel/libgtop
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libgtop=libgtop

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2003/06/02 01:20:47 jschauma Exp $
+# $NetBSD: Makefile,v 1.40 2003/07/13 13:51:10 wiz Exp $
 
 DISTNAME=	glade-0.6.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=   ${MASTER_SITE_GNOME:=sources/glade/0.6/}
 

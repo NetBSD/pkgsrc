@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2003/06/02 01:20:58 jschauma Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/13 13:51:02 wiz Exp $
 #
 
 DISTNAME=		atk-1.2.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.2/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.2/ \

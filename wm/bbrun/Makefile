@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/05/02 11:56:34 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/13 13:53:40 wiz Exp $
 
 DISTNAME=	bbrun-1.3
-PKGREVISION=	1
+PKGREVISION=	2
 WRKSRC=		${WRKDIR}/${DISTNAME}/bbrun
 CATEGORIES=	wm x11
 MASTER_SITES=	http://www.dwave.net/~jking/bbrun/

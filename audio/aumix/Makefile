@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2003/05/02 11:53:38 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2003/07/13 13:50:21 wiz Exp $
 
 DISTNAME=	aumix-2.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aumix/} \
 		http://jpj.net/~trevor/aumix/ \

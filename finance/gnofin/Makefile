@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2003/05/02 11:54:51 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/13 13:51:40 wiz Exp $
 #
 
 DISTNAME=       gnofin-0.8.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnofin/}
 

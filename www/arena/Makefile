@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2003/06/02 01:16:07 jschauma Exp $
+# $NetBSD: Makefile,v 1.49 2003/07/13 13:53:46 wiz Exp $
 
 DISTNAME=		arena-0.3.62
-PKGREVISION=		2
+PKGREVISION=		3
 WRKSRC=			${WRKDIR}/Arena-0.3.62
 CATEGORIES=		www
 MASTER_SITES=		ftp://ftp.yggdrasil.com/pub/dist/web/arena/

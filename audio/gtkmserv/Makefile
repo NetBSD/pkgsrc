@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/05/02 11:53:42 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/13 13:50:25 wiz Exp $
 #
 
 DISTNAME=	gtkmserv-0.5.2
-PKGREVISION=	1
+PKGREVISION=	2
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 CATEGORIES=	audio
 MASTER_SITES=	http://projects.ubertechnique.com/downloads/

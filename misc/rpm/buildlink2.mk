@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/10/20 23:22:37 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/07/13 13:52:46 wiz Exp $
 
 .if !defined(RPM_BUILDLINK2_MK)
 RPM_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		rpm
-BUILDLINK_DEPENDS.rpm?=		rpm>=2.4.3
+BUILDLINK_DEPENDS.rpm?=		rpm>=2.5.4nb1
 BUILDLINK_PKGSRCDIR.rpm?=	../../misc/rpm
 
 # This adds a build-dependency as rpm only has a static library.

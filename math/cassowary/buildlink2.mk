@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2003/01/07 12:24:51 uebayasi Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/07/13 13:52:29 wiz Exp $
 #
 # This Makefile fragment is included by packages that use cassowary.
 #
@@ -7,7 +7,7 @@
 CASSOWARY_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			cassowary
-BUILDLINK_DEPENDS.cassowary?=		cassowary>=0.60
+BUILDLINK_DEPENDS.cassowary?=		cassowary>=0.60nb4
 BUILDLINK_PKGSRCDIR.cassowary?=		../../math/cassowary
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.cassowary=cassowary

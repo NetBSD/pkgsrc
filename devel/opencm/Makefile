@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2003/06/23 23:42:13 seb Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/13 13:51:23 wiz Exp $
 #
 
 DISTNAME=	${OPENCM_VERSION}-1-src
 PKGNAME=	${OPENCM_VERSION:C/alpha/rc/}
+PKGREVISION=			1
 WRKSRC=		${WRKDIR}/${OPENCM_VERSION}/base
 CATEGORIES=	devel
 MASTER_SITES=	http://www.opencm.org/releases/

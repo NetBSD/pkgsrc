@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:16:46 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/13 13:53:29 wiz Exp $
 #
 
 DISTNAME=	aspell-ro-0.50-2
 PKGNAME=	${DISTNAME:C/ro-(.*)-(.*)$/romanian-\1.\2/}
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=aspell/dict/ro/}
 EXTRACT_SUFX=	.tar.bz2

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/05/02 11:56:36 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/13 13:53:42 wiz Exp $
 #
 
 DISTNAME=	icepref-1.1
-PKGREVISION=	2
+PKGREVISION=	3
 WRKSRC=		${WRKDIR}/icepref
 CATEGORIES=	wm
 MASTER_SITES=	ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/

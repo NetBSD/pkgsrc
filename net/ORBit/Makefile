@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.88 2003/07/11 23:38:45 grant Exp $
+# $NetBSD: Makefile,v 1.89 2003/07/13 13:52:47 wiz Exp $
 #
 
 DISTNAME=		ORBit-0.${ORBIT_MAJOR}.${ORBIT_MINOR}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/ORBit/0.${ORBIT_MAJOR}/}
 

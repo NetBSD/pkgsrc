@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/06/09 17:01:25 frueauf Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/07/13 13:53:11 wiz Exp $
 #
 
 .if !defined(NESSUS_CORE_BUILDLINK2_MK)
 NESSUS_CORE_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			nessus-core
-BUILDLINK_DEPENDS.nessus-core?=		nessus-core>=2.0.6a
+BUILDLINK_DEPENDS.nessus-core?=		nessus-core>=2.0.6anb1
 BUILDLINK_PKGSRCDIR.nessus-core?=	../../security/nessus-core
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.nessus-core=nessus-core

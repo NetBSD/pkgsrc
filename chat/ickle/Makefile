@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/05/06 17:40:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/13 13:50:47 wiz Exp $
 
 DISTNAME=	ickle-0.3.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ickle/}
 

@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.6 2003/05/02 11:56:42 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2003/07/13 13:53:48 wiz Exp $
 
 .if !defined(GTKHTML_BUILDLINK2_MK)
 GTKHTML_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gtkhtml
-BUILDLINK_DEPENDS.gtkhtml?=		gtkhtml>=1.1.7nb2
+BUILDLINK_DEPENDS.gtkhtml?=		gtkhtml>=1.1.7nb3
 BUILDLINK_PKGSRCDIR.gtkhtml?=		../../www/gtkhtml
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gtkhtml=gtkhtml

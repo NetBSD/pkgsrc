@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2003/02/15 00:26:19 salo Exp $
+# $NetBSD: Makefile,v 1.16 2003/07/13 13:53:35 wiz Exp $
 #
 
 DISTNAME=	OpenSP-1.5
 PKGNAME=	opensp-1.5
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openjade/}
 

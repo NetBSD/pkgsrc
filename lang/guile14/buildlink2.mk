@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.9 2003/06/05 05:03:58 uebayasi Exp $
+# $NetBSD: buildlink2.mk,v 1.10 2003/07/13 13:52:21 wiz Exp $
 
 .if !defined(GUILE14_BUILDLINK2_MK)
 GUILE14_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		guile14
-BUILDLINK_DEPENDS.guile14?=	guile14>=1.4nb3
+BUILDLINK_DEPENDS.guile14?=	guile14>=1.4.1nb4
 BUILDLINK_PKGSRCDIR.guile14?=	../../lang/guile14
 
 EVAL_PREFIX+=			GUILE14_PREFIX=guile14

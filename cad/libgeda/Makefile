@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2003/06/27 09:03:15 seb Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/13 13:50:42 wiz Exp $
 #
 
 DISTNAME=		libgeda-${PKGVERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		cad
 MASTER_SITES=		ftp://ftp.geda.seul.org/pub/geda/devel/${PKGVERSION}/ \
 			ftp://ieee.ing.uniroma1.it/pub/geda/devel/${PKGVERSION}/ \

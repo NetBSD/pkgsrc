@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:38:59 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/07/13 13:52:00 wiz Exp $
 
 .if !defined(FREETYPE_BUILDLINK2_MK)
 FREETYPE_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		freetype
-BUILDLINK_DEPENDS.freetype?=	freetype-lib>=1.3.1
+BUILDLINK_DEPENDS.freetype?=	freetype-lib>=1.3.1nb1
 BUILDLINK_PKGSRCDIR.freetype?=	../../graphics/freetype-lib
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.freetype=freetype-lib

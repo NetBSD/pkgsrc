@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/10/09 14:13:56 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/13 13:51:41 wiz Exp $
 #
 
 DISTNAME=	oto-0.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts
 MASTER_SITES=	ftp://ftp.sourceforge.net/pub/sourceforge/oto/
 

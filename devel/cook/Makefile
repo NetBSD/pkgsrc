@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/03/04 17:36:16 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/13 13:51:05 wiz Exp $
 
 DISTNAME=	cook-2.22
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.canb.auug.org.au/~millerp/cook/
 

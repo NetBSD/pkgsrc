@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2003/03/29 12:41:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/13 13:52:58 wiz Exp $
 
 DISTNAME=	ncftp-3.0.3-src
 PKGNAME=	ncftp3-3.0.3
+PKGREVISION=			1
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.ncftp.com/ncftp/

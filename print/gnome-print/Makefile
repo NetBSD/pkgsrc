@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2003/05/05 16:46:02 jmmv Exp $
+# $NetBSD: Makefile,v 1.57 2003/07/13 13:53:07 wiz Exp $
 #
 
 DISTNAME=		gnome-print-0.36
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		print gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-print/0.36/}
 

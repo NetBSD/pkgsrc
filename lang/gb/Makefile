@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2003/05/05 16:36:35 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/13 13:52:21 wiz Exp $
 #
 
 DISTNAME=		gb-0.0.20
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		lang gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gb/0.0/}
 

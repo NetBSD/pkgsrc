@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/04/02 12:05:26 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/07/13 13:52:10 wiz Exp $
 
 .if !defined(LIBGGI_BUILDLINK2_MK)
 LIBGGI_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		libggi
-BUILDLINK_DEPENDS.libggi?=	libggi>=2.0.3
+BUILDLINK_DEPENDS.libggi?=	libggi>=2.0.3nb1
 BUILDLINK_PKGSRCDIR.libggi?=	../../graphics/libggi
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libggi=libggi

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/05/09 13:03:21 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/07/13 13:52:22 wiz Exp $
 #
 # This Makefile fragment is included by packages that use mono.
 #
@@ -9,7 +9,7 @@
 MONO_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			mono
-BUILDLINK_DEPENDS.mono?=		mono>=0.24
+BUILDLINK_DEPENDS.mono?=		mono>=0.24nb2
 BUILDLINK_PKGSRCDIR.mono?=		../../lang/mono
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.mono=mono

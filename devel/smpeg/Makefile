@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2003/05/02 11:54:41 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2003/07/13 13:51:27 wiz Exp $
 #
 
 DISTNAME=	smpeg-0.4.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	ftp://sunsite.auc.dk/pub/os/linux/loki/open-source/smpeg/ \
 		ftp://ftp.linuxgames.com/loki/open-source/smpeg/

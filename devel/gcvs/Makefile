@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2003/06/23 10:57:27 seb Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/13 13:51:08 wiz Exp $
 
 DISTNAME=		gcvs-1.0a7
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cvsgui/}
 
