@@ -1,0 +1,14 @@
+This is an ALPHA version, it is far from being fully tested.
+
+What's new in the 3.0.cm releases?
+
+ * a variation of the HYDRA file transfer protocol (some less
+   frequently used features aren't implemented)
+ * better nodelist indices
+ * incorporated tx-patches up to tx8.7
+ * 'ifstat' moved from gating part to ifcico part
+ * 'ifinfo' for querying nodelist information
+ * 'ifreq' implementation in C (instead of Perl)
+
+ * gating part is no longer distributed with this archive (either get
+an 2.x version of ifmail or use FidoGate for gating)

@@ -1,0 +1,93 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/11/23 17:48:23 tv Exp $
+
+--- CONFIG.orig	Fri Jul 10 17:06:34 1998
++++ CONFIG	Mon Nov 23 09:57:21 1998
+@@ -3,10 +3,10 @@
+ VERSION     = "3.0.cm.alpha-4.0"
+ 
+ # Where to put binaries
+-BINDIR = "/usr/lib/ifmail"
++BINDIR = ${PREFIX}/sbin
+ 
+ # Main configuration file. This default may be overwritten by -I key.
+-CONFIGFILE  = "/etc/ifmail/config"
++CONFIGFILE  = "${PREFIX}/etc/ifmail/config"
+ 
+ # Debug messages turned on by -x key are written here.
+ # Some error messages may occationally appear here too.
+@@ -26,7 +26,7 @@
+ CICOLOG    = LOG_LOCAL0
+ 
+ # Directory where UUCP lock files reside.
+-LOCKDIR     = "/var/lock"
++LOCKDIR     = "/var/spool/lock"
+ #LOCKDIR     = "/var/spool/uucp"
+ 
+ # Directory from which file requests are resolved.
+@@ -175,11 +175,11 @@
+ #		-DHAS_SELECT -DREGEX_NEED_CARET -DPRE_21_LINUX
+ 
+ # Linux: (glibc 2 aka libc 6.x)
+-SOPTS        = -DHAS_STATFS -DSTATFS_IN_VFS_H -DHAS_SETSID -DHAS_NDBM_H \
+-		-DDONT_HAVE_TM_GMTOFF -DHAS_TERMIOS_H -DASCII_LOCKFILES \
+-		-DHAS_FSYNC -DHAS_IOCTL_H -DHAS_REGEX_H -DHAS_TCP \
+-		-DHAS_SYSLOG -DNEED_UUCPFROM -DNEED_TRAP -DSETPROCTITLE \
+-		-DHAS_SELECT -DREGEX_NEED_CARET -DPRE_21_LINUX -DBSD_SIGNALS
++#SOPTS        = -DHAS_STATFS -DSTATFS_IN_VFS_H -DHAS_SETSID -DHAS_NDBM_H \
++#		-DDONT_HAVE_TM_GMTOFF -DHAS_TERMIOS_H -DASCII_LOCKFILES \
++#		-DHAS_FSYNC -DHAS_IOCTL_H -DHAS_REGEX_H -DHAS_TCP \
++#		-DHAS_SYSLOG -DNEED_UUCPFROM -DNEED_TRAP -DSETPROCTITLE \
++#		-DHAS_SELECT -DREGEX_NEED_CARET -DPRE_21_LINUX -DBSD_SIGNALS
+ 
+ # 386BSD:
+ #SOPTS        = -DHAS_STATFS -DSTATFS_IN_MOUNT_H -DHAS_SETSID -DHAS_NDBM_H \
+@@ -188,6 +188,13 @@
+ #		-DNEGATIVE_SEEK_BUG -DSETPROCTITLE -DBSD_SIGNALS \
+ #		-DHAS_SELECT -DREGEX_NEED_CARET -DHAS_SYS_ERRLIST
+ 
++# NetBSD:
++SOPTS         = -DHAS_NDBM_H -DHAS_STATFS -DSTATFS_IN_MOUNT_H -DHAS_SETSID \
++		-DHAS_TERMIOS_H -DASCII_LOCKFILES -DHAS_FSYNC \
++		-DHAS_IOCTL_H -DHAS_TCP -DHAS_REGEX_H -DHAS_SYSLOG -DNEWDB \
++		-DSETPROCTITLE -DBSD_SIGNALS -DHAS_SELECT \
++		-DNEGATIVE_SEEK_BUG -DREGEX_NEED_CARET -DHAS_SYS_ERRLIST
++
+ # SVR4:
+ #SOPTS        = -DHAS_STATVFS -DDONT_HAVE_TM_GMTOFF -DHAS_SETSID -DHAS_NDBM_H \
+ #		-DHAS_TERMIOS_H -DHAS_DIAL -DHAS_DIAL_H -DASCII_LOCKFILES \
+@@ -253,8 +260,8 @@
+ SHELL = /bin/sh
+ ECHO = echo -e
+ CC = gcc -pipe
+-#YACC = yacc
+-YACC = bison -y
++YACC = yacc
++#YACC = bison -y
+ #LEX = lex
+ LEX = flex
+ AWK = awk
+@@ -262,7 +269,7 @@
+ 
+ #CFLAGS = -g -Wall
+ # Linux, 386BSD, SunOS:
+-CFLAGS = -D_GNU_SOURCE -O2 -fomit-frame-pointer -Wall
++CFLAGS += -D_GNU_SOURCE
+ # SVR4:
+ #CFLAGS = -O -Xa
+ 
+@@ -272,12 +279,12 @@
+ # If you need TERM also add e.g. "/usr/src/term112/client.a"
+ 
+ # Linux
+-LIBS = -lgdbm
+-LIBRESOLV = -lresolv		# this is needed for glibc 2
++#LIBS = -lgdbm
++#LIBRESOLV = -lresolv		# this is needed for glibc 2
+ # SunOS:
+ #LIBS =
+ # 386BSD:
+-#LIBS = -lcompat
++LIBS = -lcompat
+ # SVR4
+ #LIBS = -ldbm -lform -lnsl -lsocket -lc -L/usr/ucblib -lucb
+ # SCO

@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 1998/11/23 17:48:23 tv Exp $
+
+--- iflib/Makefile.orig	Sun Nov 22 17:00:10 1998
++++ iflib/Makefile	Sun Nov 22 17:00:19 1998
+@@ -21,7 +21,7 @@
+ 		rdconfig.o ftn.o packet.o pktname.o bwrite.o \
+ 		bread.o getheader.o scanout.o matchaka.o atoul.o \
+ 		nodelock.o trap.o rfcaddr.o expipe.o callstat.o \
+-		cspace.o setprocn.o \
++		cspace.o \
+ 		${NEEDED}
+ SRCS = lutil.c xutil.c ulock.c rfcdate.c sequencer.c ftnmsg.c crc.c \
+ 		strncasecmp.c strcasecmp.c \
