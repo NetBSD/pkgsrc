@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2002/02/05 00:36:25 taca Exp $
+# $NetBSD: Makefile,v 1.79 2002/02/05 03:04:20 jlam Exp $
 
 DISTNAME=		samba-2.2.3
 PKGREVISION=		1
@@ -8,8 +8,11 @@ MASTER_SITES=		ftp://ftp.samba.org/pub/samba/ \
 			ftp://ring.asahi-net.or.jp/pub/net/samba/ \
 			ftp://samba.anu.edu.au/pub/samba/ \
 			http://de.samba.org/samba/ftp/ \
-			ftp://se.samba.org/pub/samba/ \
 			ftp://ftp.sunet.se/pub/unix/utilities/samba/
+COUNTRY_MIRRORS=	au1 ca fi fr de it pl ru sg se us1 us6
+.for COUNTRY in ${COUNTRY_MIRRORS}
+MASTER_SITES+=		ftp://${COUNTRY}.samba.org/pub/samba/
+.endfor
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.samba.org/
