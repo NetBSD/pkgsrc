@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.786 2001/07/13 06:16:02 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.787 2001/07/13 11:28:23 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -68,25 +68,35 @@ PKG_JVM?=		kaffe
 .endif
 .endif
 .if ${PKG_JVM} == "jdk"
-DEPENDS+=		{sun-jre,jdk}-*:../../lang/jdk
-BUILD_DEPENDS+=		{sun-jdk,jdk}-*:../../lang/jdk
+DEPENDS+=		jdk-*:../../lang/jdk
 .if defined(JDK_HOME)
 JAVA_HOME?=		${JDK_HOME}
 .else
 JAVA_HOME?=		${LOCALBASE}/java
 .endif
+.elif ${PKG_JVM} == "sun-jdk"
+BUILD_DEPENDS+=		sun-jdk-*:../../lang/sun-jdk13
+DEPENDS+=		sun-jre-*:../../lang/sun-jre13
+
+JAVA_HOME?=		${LOCALBASE}/java/jre
 .elif ${PKG_JVM} == "blackdown-jdk13"
 DEPENDS+=		blackdown-jdk-*:../../lang/blackdown-jdk13
-JAVA_HOME?=		${PREFIX}/java
+JAVA_HOME?=		${LOCALBASE}/java
 .elif ${PKG_JVM} == "kaffe"
 DEPENDS+=		kaffe-[0-9]*:../../lang/kaffe
 JAVA_HOME?=		${LOCALBASE}/kaffe
 .endif
+.if exists(${JAVA_HOME}/lib/classes.zip:)
 CLASSPATH?=		${JAVA_HOME}/lib/classes.zip:.
+
+MAKE_ENV+=		CLASSPATH=${CLASSPATH}
+CONFIGURE_ENV+=		CLASSPATH=${CLASSPATH}
+SCRIPTS_ENV+=		CLASSPATH=${CLASSPATH}
+.endif
 PATH:=			${PATH}:${JAVA_HOME}/bin
-MAKE_ENV+=		CLASSPATH=${CLASSPATH} JAVA_HOME=${JAVA_HOME}
-CONFIGURE_ENV+=		CLASSPATH=${CLASSPATH} JAVA_HOME=${JAVA_HOME}
-SCRIPTS_ENV+=		CLASSPATH=${CLASSPATH} JAVA_HOME=${JAVA_HOME}
+MAKE_ENV+=		JAVA_HOME=${JAVA_HOME}
+CONFIGURE_ENV+=		JAVA_HOME=${JAVA_HOME}
+SCRIPTS_ENV+=		JAVA_HOME=${JAVA_HOME}
 .endif
 
 # Set X11PREFIX to reflect the install directory of X11 packages.
