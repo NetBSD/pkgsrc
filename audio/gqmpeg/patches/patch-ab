@@ -1,25 +1,7 @@
-$NetBSD: patch-ab,v 1.8 1999/06/18 00:46:11 hubertf Exp $
-
-From rxg@ms25.url.com.tw Tue Jun 15 02:49:50 1999
-Date: Mon, 14 Jun 1999 13:58:57 +0100
-From: Rui-Xiang Guo <rxg@ms25.url.com.tw>
-To: Hubert Feyrer <hubert.feyrer@rz.uni-regensburg.de>
-Subject: Re: pkg/7768: new patches for 'gqmpeg'
-
-I send you the patch for saving your time. :)
-Should we need to remove some unnecesarry mixer control(eg. mic)?
-This patch has a small bug. When you choose the mixer control 'master',
-the balance control is unusable. The rest controls are OK.
-We can fix this but I never use balance control except testing this
-patch. :>
-Can you tell me what you think? 
-Thanks!
-    [ Part 2: "Attached Text" ]
-
-$NetBSD: patch-ab,v 1.8 1999/06/18 00:46:11 hubertf Exp $
+$NetBSD: patch-ab,v 1.9 1999/06/29 00:58:30 hubertf Exp $
 
 --- mixer.c.orig	Wed Jun  2 05:50:45 1999
-+++ mixer.c	Wed Jun 16 15:32:50 1999
++++ mixer.c	Sun Jun 20 00:44:06 1999
 @@ -24,7 +24,7 @@
  #include <linux/soundcard.h>
  #endif
@@ -63,7 +45,7 @@ $NetBSD: patch-ab,v 1.8 1999/06/18 00:46:11 hubertf Exp $
   			{
  			DeviceData *device = g_new0(DeviceData, 1);
  			device->device_id = i;
-@@ -186,6 +177,207 @@
+@@ -186,6 +177,166 @@
  	return vol;
  }
  
@@ -108,18 +90,6 @@ $NetBSD: patch-ab,v 1.8 1999/06/18 00:46:11 hubertf Exp $
 +  for (i = 0; i < ndev; i++) {
 +    values[i].dev = i;
 +    values[i].type = infos[i].type;
-+    if (infos[i].type != AUDIO_MIXER_CLASS) {
-+      values[i].un.value.num_channels = 2;
-+      if (ioctl(fd, AUDIO_MIXER_READ, &values[i]) == -1) {
-+        values[i].un.value.num_channels = 1;
-+        if (ioctl(fd, AUDIO_MIXER_READ, &values[i]) == -1)
-+          perror("AUDIO_MIXER_READ");
-+      }
-+    }
-+  }
-+  close(fd);
-+
-+  for (i = 0; i < ndev; i++) {
 +    if (infos[i].type == AUDIO_MIXER_VALUE) {
 +      DeviceData *device = g_new0(DeviceData, 1);
 +      device->device_id = i;
@@ -127,12 +97,21 @@ $NetBSD: patch-ab,v 1.8 1999/06/18 00:46:11 hubertf Exp $
 +      device->stereo = 1;
 +      device_list = g_list_append(device_list, device);
 +
++      values[i].un.value.num_channels = 2;
++      if (ioctl(fd, AUDIO_MIXER_READ, &values[i]) == -1) {
++        values[i].un.value.num_channels = 1;
++        if (ioctl(fd, AUDIO_MIXER_READ, &values[i]) == -1)
++          perror("AUDIO_MIXER_READ");
++      }
++
 +      if (debug_mode) printf("Mixer device added to list: %d, %s, %d\n",
 +                             device->device_id, device->device_name,
 +                             device->stereo);
 +      if (init_device_id == i) current_device = device;
 +    }
 +  }
++
++  close(fd);
 +
 +  if (device_list) {
 +    mixer_enabled = TRUE;
@@ -147,123 +126,85 @@ $NetBSD: patch-ab,v 1.8 1999/06/18 00:46:11 hubertf Exp $
 +static void mixer_set_vol(DeviceData *device, gint vol)
 +{
 +  int fd;
-+  char *audioctl_device;
 +  char *mixer_device;
-+  audio_device_t adev;
-+  audio_info_t ainfo;
 +  mixer_ctrl_t *m;
 +
-+  audioctl_device = getenv("AUDIOCTLDEVICE");
-+  if (audioctl_device == NULL)
-+    audioctl_device = "/dev/audioctl0";
++  mixer_device = getenv("MIXERDEVICE");
++  if (mixer_device == NULL)
++    mixer_device = "/dev/mixer0";
 +
-+  if ((fd = open(audioctl_device, O_RDONLY)) == -1) {
-+    perror(audioctl_device);
-+    mixer_enabled = FALSE;
-+  }
-+
-+  if (ioctl(fd, AUDIO_GETDEV, &adev) == -1) {
-+    perror(audioctl_device);
-+    close(fd);
-+    mixer_enabled = FALSE;
-+  }
-+
-+  AUDIO_INITINFO(&ainfo);
-+  /* from AUDIO_LEFT_BALANCE (0) to AUDIO_RIGHT_BALANCE (64) */
-+  ainfo.play.balance = current_bal * AUDIO_RIGHT_BALANCE / 100;
-+
-+  if (device->device_id == 0)
-+    /* from AUDIO_MIN_GAIN (0) to AUDIO_MAX_GAIN (255) */
-+    ainfo.play.gain = vol * AUDIO_MAX_GAIN / 100;
-+
-+  if (ioctl(fd, AUDIO_SETINFO, &ainfo) == -1) {
-+    perror("AUDIO_SETINFO");
++  if ((fd = open(mixer_device, O_RDWR)) == -1) {
++    perror(mixer_device);
 +    close(fd);
 +  }
++
++  m = &values[device->device_id];
++  if (ioctl(fd, AUDIO_MIXER_WRITE, m) == -1) {
++    perror("AUDIO_MIXER_WRITE");
++    close(fd);
++  }
++
 +  close(fd);
 +
-+  if (device->device_id != 0) {
-+    mixer_device = getenv("MIXERDEVICE");
-+    if (mixer_device == NULL)
-+      mixer_device = "/dev/mixer0";
-+
-+    if ((fd = open(mixer_device, O_RDWR)) == -1) {
-+      perror(mixer_device);
-+      close(fd);
++  if (m->un.value.num_channels == 2) {
++    /* input and output seem to only have one channel?? */
++    if (device->device_id == 13 || device->device_id == 14) {
++      m->un.value.level[0] = vol * AUDIO_MAX_GAIN / 100;
++    } else if (current_bal < 50) {
++      m->un.value.level[0] = vol * AUDIO_MAX_GAIN / 100;
++      m->un.value.level[1] = m->un.value.level[0] * current_bal / 50;
++    } else if (current_bal > 50) {
++      m->un.value.level[1] = vol * AUDIO_MAX_GAIN / 100;
++      m->un.value.level[0] = m->un.value.level[1] * (100 - current_bal) / 50;
++    } else {
++      m->un.value.level[0] = m->un.value.level[1] = vol * AUDIO_MAX_GAIN / 100;
 +    }
-+
-+    m = &values[device->device_id];
-+    if (ioctl(fd, AUDIO_MIXER_WRITE, m) == -1) {
-+      perror("AUDIO_MIXER_WRITE");
-+      close(fd);
-+    }
-+    /* from AUDIO_MIN_GAIN (0) to AUDIO_MAX_GAIN (255) */
-+    m->un.value.level[0] = m->un.value.level[1] = vol * AUDIO_MAX_GAIN / 100;
-+
-+    close(fd);
++  } else {
++    m->un.value.level[0] = vol * AUDIO_MAX_GAIN / 100;
 +  }
++  /* from AUDIO_MIN_GAIN (0) to AUDIO_MAX_GAIN (255) */
++
 +  if (debug_mode) printf("volume set to %d (%d)\n", vol, current_bal);
 +}
 +
 +static gint mixer_get_vol(DeviceData *device)
 +{
 +  int fd;
-+  char *audioctl_device;
 +  char *mixer_device;
-+  audio_device_t adev;
-+  audio_info_t ainfo;
 +  mixer_ctrl_t *m;
 +
-+  audioctl_device = getenv("AUDIOCTLDEVICE");
-+  if (audioctl_device == NULL)
-+    audioctl_device = "/dev/audioctl0";
++  mixer_device = getenv("MIXERDEVICE");
++  if (mixer_device == NULL)
++    mixer_device = "/dev/mixer0";
 +
-+  if ((fd = open(audioctl_device, O_RDONLY)) == -1) {
-+    perror(audioctl_device);
-+    mixer_enabled = FALSE;
-+    return -1;
-+  }
-+
-+  if (ioctl(fd, AUDIO_GETDEV, &adev) == -1) {
-+    perror(audioctl_device);
-+    close(fd);
-+    mixer_enabled = FALSE;
-+    return -1;
-+  }
-+
-+  if (ioctl(fd, AUDIO_GETINFO, &ainfo) == -1) {
-+    perror("AUDIO_GETINFO");
++  if ((fd = open(mixer_device, O_RDWR)) == -1) {
++    perror(mixer_device);
 +    close(fd);
 +    return -1;
 +  }
++
++  m = &values[device->device_id];
++  if (ioctl(fd, AUDIO_MIXER_READ, m) == -1) {
++    perror("AUDIO_MIXER_READ");
++    close(fd);
++    return -1;
++  }
++
 +  close(fd);
 +
-+  if (ainfo.play.balance > AUDIO_RIGHT_BALANCE)
++  if (m->un.value.num_channels == 2) {
++    if (m->un.value.level[0] > m->un.value.level[1]) {
++      current_bal = m->un.value.level[1] * 50 / m->un.value.level[0];
++      return m->un.value.level[0] * 100 / AUDIO_MAX_GAIN;
++    } else if (m->un.value.level[0] < m->un.value.level[1]) {
++      current_bal = 100 - (m->un.value.level[0] * 50 / m->un.value.level[1]);
++      return m->un.value.level[1] * 100 / AUDIO_MAX_GAIN;
++    } else {
++      current_bal = 50;
++      return m->un.value.level[0] * 100 / AUDIO_MAX_GAIN;
++    }
++  } else {
 +    current_bal = 50;
-+  else
-+    current_bal = ainfo.play.balance * 100 / AUDIO_RIGHT_BALANCE;
-+
-+  if (device->device_id == 0)
-+    return ainfo.play.gain * 100 / AUDIO_MAX_GAIN;
-+  else {
-+    mixer_device = getenv("MIXERDEVICE");
-+    if (mixer_device == NULL)
-+      mixer_device = "/dev/mixer0";
-+
-+    if ((fd = open(mixer_device, O_RDWR)) == -1) {
-+      perror(mixer_device);
-+      close(fd);
-+      return -1;
-+    }
-+
-+    m = &values[device->device_id];
-+    if (ioctl(fd, AUDIO_MIXER_READ, m) == -1) {
-+      perror("AUDIO_MIXER_READ");
-+      close(fd);
-+      return -1;
-+    }
-+    close(fd);
-+
 +    return m->un.value.level[0] * 100 / AUDIO_MAX_GAIN;
 +  }
 +}
@@ -271,7 +212,7 @@ $NetBSD: patch-ab,v 1.8 1999/06/18 00:46:11 hubertf Exp $
  #elif defined(sun) && defined(__svr4__)
  static int device_ids[] = { AUDIO_SPEAKER,
  			    AUDIO_LINE_OUT,
-@@ -444,7 +636,7 @@
+@@ -444,7 +595,7 @@
  
  #endif
  
