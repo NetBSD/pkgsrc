@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 1999/06/16 11:08:32 sakamoto Exp $
-Acrobat4/Browsers/intellinux/nppdf.so
+@comment $NetBSD: PLIST,v 1.3 1999/08/02 10:57:54 agc Exp $
+Acrobat4/Browsers/@PLATFORM@/nppdf.so
 Acrobat4/Browsers/netscape
 Acrobat4/Reader/AcroVersion
 Acrobat4/Reader/Acrobat.pdf
@@ -7,23 +7,23 @@ Acrobat4/Reader/License.pdf
 Acrobat4/Reader/MapTypes.pdf
 Acrobat4/Reader/ReadMe
 Acrobat4/Reader/help/reader.pdf
-Acrobat4/Reader/intellinux/app-defaults/AcroRead
-Acrobat4/Reader/intellinux/bin/acroread
-Acrobat4/Reader/intellinux/lib/XKeysymDB
-Acrobat4/Reader/intellinux/lib/libAGM.so
-Acrobat4/Reader/intellinux/lib/libAGM.so.3.0
-Acrobat4/Reader/intellinux/lib/libCoolType.so
-Acrobat4/Reader/intellinux/lib/libCoolType.so.1.0
-Acrobat4/Reader/intellinux/lib/libICC.so
-Acrobat4/Reader/intellinux/lib/libICC.so.1.0
-Acrobat4/Reader/intellinux/lib/libreadcore.so
-Acrobat4/Reader/intellinux/lib/libreadcore.so.4.0
-Acrobat4/Reader/intellinux/plug_ins/AcroForm.api
-Acrobat4/Reader/intellinux/plug_ins/Highlight.api
-Acrobat4/Reader/intellinux/plug_ins/JavaScripts/AFStrENU.js
-Acrobat4/Reader/intellinux/plug_ins/JavaScripts/AForm.js
-Acrobat4/Reader/intellinux/plug_ins/ewh.api
-Acrobat4/Reader/intellinux/plug_ins/wwwlink.api
+Acrobat4/Reader/@PLATFORM@/app-defaults/AcroRead
+Acrobat4/Reader/@PLATFORM@/bin/acroread
+Acrobat4/Reader/@PLATFORM@/lib/XKeysymDB
+Acrobat4/Reader/@PLATFORM@/lib/libAGM.so
+Acrobat4/Reader/@PLATFORM@/lib/libAGM.so.3.0
+Acrobat4/Reader/@PLATFORM@/lib/libCoolType.so
+Acrobat4/Reader/@PLATFORM@/lib/libCoolType.so.1.0
+Acrobat4/Reader/@PLATFORM@/lib/libICC.so
+Acrobat4/Reader/@PLATFORM@/lib/libICC.so.1.0
+Acrobat4/Reader/@PLATFORM@/lib/libreadcore.so
+Acrobat4/Reader/@PLATFORM@/lib/libreadcore.so.4.0
+Acrobat4/Reader/@PLATFORM@/plug_ins/AcroForm.api
+Acrobat4/Reader/@PLATFORM@/plug_ins/Highlight.api
+Acrobat4/Reader/@PLATFORM@/plug_ins/JavaScripts/AFStrENU.js
+Acrobat4/Reader/@PLATFORM@/plug_ins/JavaScripts/AForm.js
+Acrobat4/Reader/@PLATFORM@/plug_ins/ewh.api
+Acrobat4/Reader/@PLATFORM@/plug_ins/wwwlink.api
 Acrobat4/Reader/res/splashScreen11R.xbm
 Acrobat4/Reader/res/splashScreen18R.xpm
 Acrobat4/Reader/res/splashScreen21.xbm
@@ -49,22 +49,22 @@ Acrobat4/Resource/Font/TimesNewRoman-Italic
 Acrobat4/Resource/Font/ZapfDingbats
 Acrobat4/bin/acroread
 bin/acroread4
-@exec ln -sf ../../Resource/Font/ %D/Acrobat4/Reader/intellinux/fonts
-@unexec rm -f %D/Acrobat4/Reader/intellinux/fonts
-@exec ln -sf ../../res %D/Acrobat4/Reader/intellinux/res
-@unexec rm -f %D/Acrobat4/Reader/intellinux/res
+@exec ln -sf ../../Resource/Font/ %D/Acrobat4/Reader/@PLATFORM@/fonts
+@unexec rm -f %D/Acrobat4/Reader/@PLATFORM@/fonts
+@exec ln -sf ../../res %D/Acrobat4/Reader/@PLATFORM@/res
+@unexec rm -f %D/Acrobat4/Reader/@PLATFORM@/res
 @dirrm Acrobat4/bin
 @dirrm Acrobat4/Resource/Font
 @dirrm Acrobat4/Resource
 @dirrm Acrobat4/Reader/res
-@dirrm Acrobat4/Reader/intellinux/plug_ins/JavaScripts
-@dirrm Acrobat4/Reader/intellinux/plug_ins
-@dirrm Acrobat4/Reader/intellinux/lib
-@dirrm Acrobat4/Reader/intellinux/bin
-@dirrm Acrobat4/Reader/intellinux/app-defaults
-@dirrm Acrobat4/Reader/intellinux
+@dirrm Acrobat4/Reader/@PLATFORM@/plug_ins/JavaScripts
+@dirrm Acrobat4/Reader/@PLATFORM@/plug_ins
+@dirrm Acrobat4/Reader/@PLATFORM@/lib
+@dirrm Acrobat4/Reader/@PLATFORM@/bin
+@dirrm Acrobat4/Reader/@PLATFORM@/app-defaults
+@dirrm Acrobat4/Reader/@PLATFORM@
 @dirrm Acrobat4/Reader/help
 @dirrm Acrobat4/Reader
-@dirrm Acrobat4/Browsers/intellinux
+@dirrm Acrobat4/Browsers/@PLATFORM@
 @dirrm Acrobat4/Browsers
 @dirrm Acrobat4
