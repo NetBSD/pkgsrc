@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/09/03 22:15:46 rh Exp $
+
+--- configure.orig	Fri Sep  3 19:11:40 1999
++++ configure	Fri Sep  3 19:11:56 1999
+@@ -1145,7 +1145,7 @@
+ echo "$ac_t""$host" 1>&6
+ 
+ 
+-IMAGE_PATH='${prefix}/share/gdcd'
++IMAGE_PATH='${prefix}/share/pixmaps/gdcd'
+ 
+ 
+ trap '' 1 2 15
