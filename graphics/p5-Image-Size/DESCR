@@ -4,4 +4,4 @@ either HTML or a set of attribute pairs suitable for the CGI.pm
 library by Lincoln Stein.
 
 Currently Image::Size can size images in XPM, XBM, GIF, JPEG, PNG,
-TIFF and the PPM family of formats (PPM/PGM/PBM).
+TIFF, PCD and the PPM family of formats (PPM/PGM/PBM).
