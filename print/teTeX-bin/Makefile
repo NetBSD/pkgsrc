@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2002/11/10 23:18:47 cjep Exp $
+# $NetBSD: Makefile,v 1.38 2002/11/19 02:47:19 mrg Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -70,8 +70,8 @@ OWN_DIRS_PERMS+=	${TEXFONTSDIR}/tfm ${ROOT_USER} ${ROOT_GROUP} 1777
 post-install:
 	@${RM} ${PREFIX}/share/texmf/web2c/*.log
 	### someone needs to adjust papersize to this:
-	#texconfig dvips paper a4
-	#texconfig xdvi a4
+	#${LOCALBASE}/bin/texconfig dvips paper a4
+	#${LOCALBASE}/bin/texconfig xdvi a4
 	${LOCALBASE}/bin/texconfig font ro
 	${LOCALBASE}/bin/texconfig font vardir /var/spool/texfonts
 	${LOCALBASE}/bin/texconfig font options appendonlydir varfonts
