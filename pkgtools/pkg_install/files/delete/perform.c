@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.2 2003/01/06 04:34:16 jschauma Exp $	*/
+/*	$NetBSD: perform.c,v 1.3 2003/01/14 15:18:34 jschauma Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
@@ -6,7 +6,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.15 1997/10/13 15:03:52 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.2 2003/01/06 04:34:16 jschauma Exp $");
+__RCSID("$NetBSD: perform.c,v 1.3 2003/01/14 15:18:34 jschauma Exp $");
 #endif
 #endif
 #endif
@@ -558,6 +558,12 @@ pkg_do(char *pkg)
 	if (chdir(LogDir) == FAIL) {
 		warnx("unable to change directory to %s! deinstall failed", LogDir);
 		return 1;
+	}
+	if (fexists(PRESERVE_FNAME)) {
+		printf("Package `%s' is marked as not for deletion\n", pkg);
+		if (!Force) {
+			return 1;
+		}
 	}
 	if (!isemptyfile(REQUIRED_BY_FNAME)) {
 		/* This package is required by others. Either nuke

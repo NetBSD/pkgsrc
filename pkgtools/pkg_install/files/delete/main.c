@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.4 2003/01/07 16:43:57 jschauma Exp $	*/
+/*	$NetBSD: main.c,v 1.5 2003/01/14 15:18:34 jschauma Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
@@ -6,7 +6,7 @@
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.11 1997/10/08 07:46:48 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.4 2003/01/07 16:43:57 jschauma Exp $");
+__RCSID("$NetBSD: main.c,v 1.5 2003/01/14 15:18:34 jschauma Exp $");
 #endif
 #endif
 #endif
@@ -43,7 +43,7 @@ __RCSID("$NetBSD: main.c,v 1.4 2003/01/07 16:43:57 jschauma Exp $");
 #include "lib.h"
 #include "delete.h"
 
-static char Options[] = "hVvDdnfFp:OrR";
+static char Options[] = "DFORVdfhnp:rv";
 
 char   *Prefix = NULL;
 char   *ProgramPath = NULL;
@@ -65,8 +65,9 @@ usage(void)
 int
 main(int argc, char **argv)
 {
-	int     ch, error;
 	lpkg_t *lpp;
+	int	ex;
+	int     ch;
 
 	setprogname(argv[0]);
 
@@ -132,95 +133,71 @@ main(int argc, char **argv)
 	TAILQ_INIT(&pkgs);
 
 	/* Get all the remaining package names, if any */
-	if (File2Pkg)
-		if (!pkgdb_open(ReadOnly)) {
+	if (File2Pkg && !pkgdb_open(ReadOnly)) {
 			err(EXIT_FAILURE, "cannot open pkgdb");
 		}
+
 	/* Get all the remaining package names, if any */
-	while (*argv) {
+	for ( ; *argv ; argv++) {
 		/* pkgdb: if -F flag given, don't add pkgnames to pkgs but
 		 * rather resolve the given filenames to pkgnames using
 		 * pkgdb_retrieve, then add these. */
 		if (File2Pkg) {
 			char   *s;
 
-			s = pkgdb_retrieve(*argv);
-
-			if (s) {
+			if ((s = pkgdb_retrieve(*argv)) == NULL) {
+				errx(EXIT_FAILURE, "No matching pkg for %s in pkgdb.", *argv);
+			}
 				lpp = alloc_lpkg(s);
 				TAILQ_INSERT_TAIL(&pkgs, lpp, lp_link);
-			} else
-				errx(EXIT_FAILURE, "No matching pkg for %s in pkgdb.", *argv);
-		} else {
-			if (ispkgpattern(*argv)) {
-				int rc;
-				rc = findmatchingname(_pkgdb_getPKGDB_DIR(), *argv, add_to_list_fn, &pkgs);
-				if (rc == 0)
+		} else if (ispkgpattern(*argv)) {
+			switch(findmatchingname(_pkgdb_getPKGDB_DIR(), *argv, add_to_list_fn, &pkgs)) {
+			case 0:
 					errx(EXIT_FAILURE, "No matching pkg for %s.", *argv);
-				else if (rc == -1) 
-					errx(EXIT_FAILURE, "error expanding '%s' ('%s' nonexistant?)", *argv, _pkgdb_getPKGDB_DIR());
+			case -1:
+				errx(EXIT_FAILURE, "error expanding '%s' ('%s' nonexistent?)", *argv, _pkgdb_getPKGDB_DIR());
+			}
 			} else {
 				lpp = alloc_lpkg(*argv);
 				TAILQ_INSERT_TAIL(&pkgs, lpp, lp_link);
 			}
 		}
-		argv++;
+
+	if (File2Pkg) {
+		pkgdb_close();
 	}
 
-	if (File2Pkg)
-		pkgdb_close();
-
 	/* If no packages, yelp */
-	if (TAILQ_FIRST(&pkgs) == NULL)
-		warnx("missing package name(s)"), usage();
-	if (!Fake && getuid() != 0)
+	if (TAILQ_FIRST(&pkgs) == NULL) {
+		warnx("missing package name(s)");
+		usage();
+	}
+	if (!Fake && getuid() != 0) {
 		errx(EXIT_FAILURE, "you must be root to delete packages");
+	}
 	if (OnlyDeleteFromPkgDB) {
 		/* Only delete the given packages' files from pkgdb, do not
 		 * touch the pkg itself. Used by "make reinstall" in
 		 * bsd.pkg.mk */
-		char   *key, *val;
 		char	cachename[FILENAME_MAX];
 
 		if (!pkgdb_open(ReadWrite)) {
 			err(EXIT_FAILURE, "cannot open %s", _pkgdb_getPKGDB_FILE(cachename, sizeof(cachename)));
 		}
-
-		error = 0;
-		while ((key = pkgdb_iter())) {
-			val = pkgdb_retrieve(key);
-			if (val == NULL || *val == '\0')
-				continue;
-
-			lpp = TAILQ_FIRST(&pkgs);
-			if (lpp != NULL) {
-				do {
-					if (strcmp(val, lpp->lp_name) == 0) {
-						if (Verbose)
-							printf("Removing file %s from pkgdb\n", key);
-
-						errno = 0;
-						if (pkgdb_remove(key)) {
-							if (errno)
-								printf("Error removing %s from pkgdb: %s\n", key, strerror(errno));
-							else
-								printf("Key %s not present in pkgdb?!\n", key);
-							error = 1;
+		ex = EXIT_SUCCESS;
+		for (lpp = TAILQ_FIRST(&pkgs); lpp ; lpp = TAILQ_NEXT(lpp, lp_link)) {
+			if (!pkgdb_remove_pkg(lpp->lp_name)) {
+				ex = EXIT_FAILURE;
 						}
 					}
-
-					lpp = TAILQ_NEXT(lpp, lp_link);
-				} while (lpp != NULL);
-			}
-		}
 		pkgdb_close();
-
-		return error;
-
-	} else if ((error = pkg_perform(&pkgs)) != 0) {
-		if (Verbose)
-			warnx("%d package deletion(s) failed", error);
-		return error;
-	} else
-		return 0;
+		return ex;
+			}
+	if ((ex = pkg_perform(&pkgs)) != 0) {
+		if (Verbose) {
+			warnx("%d package deletion(s) failed", ex);
+		}
+		return EXIT_FAILURE;
+	}
+	return EXIT_SUCCESS;
 }
