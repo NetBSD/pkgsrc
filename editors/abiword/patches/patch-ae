@@ -1,0 +1,40 @@
+$NetBSD: patch-ae,v 1.12 2004/06/27 20:06:24 dmcmahill Exp $
+
+--- src/wp/impexp/xp/ie_exp_HTML.cpp.orig	Mon Jan 12 08:31:23 2004
++++ src/wp/impexp/xp/ie_exp_HTML.cpp
+@@ -777,7 +777,7 @@ void s_HTML_Listener::tagClose (UT_uint3
+ 	void * vptr = 0;
+ 	m_tagStack.pop (&vptr);
+ 
+-	if (reinterpret_cast<UT_uint32>(vptr) == tagID) return;
++	if ((UT_uint32)(vptr) == tagID) return;
+ 
+ 	UT_DEBUGMSG(("WARNING: possible tag mis-match in XHTML output!\n"));
+ }
+@@ -821,7 +821,7 @@ void s_HTML_Listener::tagCloseBroken (co
+ UT_uint32 s_HTML_Listener::tagTop ()
+ {
+ 	void * vptr = 0;
+-	if (m_tagStack.viewTop (&vptr)) return reinterpret_cast<UT_uint32>(vptr);
++	if (m_tagStack.viewTop (&vptr)) return (UT_uint32)(vptr);
+ 	return 0;
+ }
+ 
+@@ -1899,7 +1899,7 @@ UT_uint16 s_HTML_Listener::listType ()
+ {
+ 	void * vptr = 0;
+ 	m_utsListType.viewTop (&vptr);
+-	return static_cast<UT_uint16>(reinterpret_cast<UT_uint32>(vptr));
++	return static_cast<UT_uint16>((UT_uint32)(vptr));
+ }
+ 
+ void s_HTML_Listener::listPush (UT_uint16 type, const char * ClassName)
+@@ -1938,7 +1938,7 @@ void s_HTML_Listener::listPop ()
+ 
+ 	void * vptr = 0;
+ 	m_utsListType.pop (&vptr);
+-	UT_uint16 type = static_cast<UT_uint16>(reinterpret_cast<UT_uint32>(vptr));
++	UT_uint16 type = static_cast<UT_uint16>((UT_uint32)(vptr));
+ 
+ 	UT_uint32 tagID;
+ 
