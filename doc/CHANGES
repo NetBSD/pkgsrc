@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3501 2003/09/23 23:30:26 recht Exp $
+$NetBSD: CHANGES,v 1.3502 2003/09/24 03:30:39 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3907,4 +3907,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated hylafax to 4.1.7 [abs 2003-09-23]
 	Updated xchat2 to 2.0.5 [xtraeme 2003-09-23]
 	Updated libsndfile to 1.0.5nb1 [recht 2003-09-23]
+	Updated djbdns to 1.05nb3 [schmonz 2003-09-24]
 
