@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:28:09 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/07/15 18:29:03 mycroft Exp $
 share/texmf/source/README
 share/texmf/source/amstex/00Contents
 share/texmf/source/amstex/READ.ME
@@ -465,6 +465,7 @@ share/texmf/source/latex/afthesis/thesnumb.bst
 share/texmf/source/latex/afthesis/thesnumb.doc
 share/texmf/source/latex/afthesis/usethesis.dvi
 share/texmf/source/latex/afthesis/usethesis.tex
+@exec ${MKDIR} %D/share/texmf/source/latex/aguplus
 share/texmf/source/latex/algorithms/Makefile.tetex
 share/texmf/source/latex/algorithms/algorithm.sty
 share/texmf/source/latex/algorithms/algorithmic.sty
@@ -1576,6 +1577,7 @@ share/texmf/source/latex/jknappen/young.sty
 share/texmf/source/latex/koma-script/00CONTEN
 share/texmf/source/latex/koma-script/Makefile.tetex
 share/texmf/source/latex/koma-script/README
+@exec ${MKDIR} %D/share/texmf/source/latex/koma-script/contrib
 share/texmf/source/latex/koma-script/knownbug.txt
 share/texmf/source/latex/koma-script/komabug.tex
 share/texmf/source/latex/koma-script/liesmich.txt
@@ -2617,6 +2619,7 @@ share/texmf/source/latex/wasysym/wasysym.drv
 share/texmf/source/latex/wasysym/wasysym.dtx
 share/texmf/source/latex/wasysym/wasysym.ins
 share/texmf/source/latex/wasysym/wasysym.upl
+@exec ${MKDIR} %D/share/texmf/source/latex/x
 share/texmf/source/latex/xtab/Makefile.tetex
 share/texmf/source/latex/xtab/README
 share/texmf/source/latex/xtab/tetex.ins
