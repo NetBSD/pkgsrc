@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8477 2004/12/27 22:51:19 wiz Exp $
+$NetBSD: CHANGES,v 1.8478 2004/12/27 23:00:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6596,3 +6596,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-ExtUtils-Depends to 0.204 [xtraeme 2004-12-27]
 	Updated p5-ExtUtils-PkgConfig to 0.106 [xtraeme 2004-12-27]
 	Updated gtksee to 0.5.6 [wiz 2004-12-27]
+	Added mixminion-0.0.7.1 [wiz 2004-12-27]
