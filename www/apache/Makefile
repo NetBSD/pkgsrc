@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 1998/10/05 14:26:01 tv Exp $
+# $NetBSD: Makefile,v 1.24 1998/11/12 23:54:33 frueauf Exp $
 #
 # The apache-modssl pkg .include's us, so that pkg tuning rules work for
 # both without a major duplication of Makefiles.  So we use ?= and += in
@@ -6,8 +6,8 @@
 #
 
 DISTNAME=	apache_1.3.2
-PKGNAME?=	apache-1.3.2
-CATEGORIES?=	www
+PKGNAME=	apache-1.3.2
+CATEGORIES=	www
 MASTER_SITES+=	http://www.apache.org/dist/ \
 		http://www.netbsd.org/images/logos/
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX} \

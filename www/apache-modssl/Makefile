@@ -1,20 +1,23 @@
-# $NetBSD: Makefile,v 1.8 1998/10/05 14:26:01 tv Exp $
+# $NetBSD: Makefile,v 1.9 1998/11/12 23:59:17 frueauf Exp $
 #
 
 PKGNAME=	apache-modssl-1.3.2.2012
 CATEGORIES=	www security
-
 MASTER_SITES+=	http://www.engelschall.com/sw/mod_ssl/distrib/ \
 		ftp://ftp.engelschall.com/sw/mod_ssl/ \
 		ftp://ftp.ulpgc.es/pub/mod_ssl/
 DISTFILES+=	mod_ssl-2.0.12-1.3.2${EXTRACT_SUFX}
-EXTRACT_ONLY+=	mod_ssl-2.0.12-1.3.2${EXTRACT_SUFX}
+
+MAINTAINER=	packages@netbsd.org
 
 DEPENDS+=	SSLeay-0.9.0b:../../security/ssleay
 
 CONFLICTS=	apache-1.3.1 apache-1.3.2 apache-modssl-1.3.2
 
+EXTRACT_ONLY+=	mod_ssl-2.0.12-1.3.2${EXTRACT_SUFX}
+
 RESTRICTED=	"Contains cryptography"
+
 IS_INTERACTIVE=	yes
 
 CONFIGURE_ARGS+=--enable-module=ssl
