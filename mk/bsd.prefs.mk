@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.86 2002/10/21 13:58:18 wiz Exp $
+# $NetBSD: bsd.prefs.mk,v 1.87 2002/10/21 21:46:00 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -82,8 +82,6 @@ MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
 .  endif
 LOWER_VENDOR?=		sun
 LOWER_OPSYS?=		solaris
-# We need to set this early to get "USE_XPM" working.
-X11BASE?=               ${DESTDIR}/usr/openwin
 
 .elif ${OPSYS} == "Linux"
 LOWER_OPSYS?=		linux
@@ -211,7 +209,12 @@ USE_INET6?=		NO
 .endif
 
 LOCALBASE?=		${DESTDIR}/usr/pkg
+.if ${OPSYS} == "SunOS"
+# On Solaris, we default to using OpenWindows for X11.
+X11BASE?=               ${DESTDIR}/usr/openwin
+.else
 X11BASE?=		${DESTDIR}/usr/X11R6
+.endif
 CROSSBASE?=		${LOCALBASE}/cross
 
 # Set X11PREFIX to reflect the install directory of X11 packages.
