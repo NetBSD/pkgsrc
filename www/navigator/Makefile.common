@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42 2001/09/14 01:00:24 abs Exp $
+# $NetBSD: Makefile.common,v 1.43 2001/10/01 15:50:08 abs Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -105,6 +105,8 @@ SORT=		sort
 RPM2PKG=	rpm2pkg
 RPM2PKGARGS=	${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX}
 VENDOR_NAME=	# empty.  what should be here?
+.else
+PLIST_ARCH=
 .endif
 #
 
