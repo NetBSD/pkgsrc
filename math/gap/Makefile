@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2002/12/22 19:20:21 cjep Exp $
+# $NetBSD: Makefile,v 1.7 2002/12/31 13:02:33 cjep Exp $
 #
 
 DISTNAME=	gap4r3
 PKGNAME=	gap-4.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/ \
 		ftp://ftp.math.rwth-aachen.de/pub/gap4/ \
@@ -46,7 +46,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/sysinfo.gap				\
 				${GAP_DIRECTORY}
 
-	for I in cnf doc etc grp lib pkg small tst; do			\
+	for I in cnf doc etc grp lib pkg prim small tst; do		\
 		${CP} -R ${WRKSRC}/$$I ${GAP_DIRECTORY};		\
 	done
 
