@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9.4.1 2005/01/19 13:17:15 salo Exp $
+# $NetBSD: Makefile,v 1.9.4.2 2005/01/27 13:46:34 salo Exp $
 #
 
 DISTNAME=	awstats-6.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://awstats.sourceforge.net/files/
 EXTRACT_SUFX=	.tgz
@@ -11,6 +11,7 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://awstats.sourceforge.net/
 COMMENT=	Free real-time logfile analyzer to get advanced web statistics
 
+DIST_SUBDIR=	${PKGNAME}
 USE_BUILDLINK3=	YES
 NO_BUILD=	YES
 USE_PERL5=	run
