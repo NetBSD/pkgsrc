@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/12/05 21:21:55 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2003/06/09 22:12:35 jmmv Exp $
 
---- config.in.orig	Tue Nov 13 16:05:11 2001
+--- config.in.orig	2003-06-09 13:00:02.000000000 +0200
 +++ config.in
 @@ -4,11 +4,13 @@
  # paths below.
@@ -32,9 +32,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/12/05 21:21:55 jmmv Exp $
 +OPENSSL=@OPENSSL@
  
  # The preferred algorithms to use.  We don't make this a runtime option, to
- # prevent users from loosing data while switching from one algorithm to
+ # prevent users from losing data while switching from one algorithm to
 @@ -45,4 +47,3 @@ ENC="bf|des3|rc2"
  # ================================================
- VERSION=2.2
+ VERSION=2.2a
  PROGNAME=tkpasman
 -OPENSSL_SEARCH_PATH=/usr/ssl/bin:/usr/openssl/bin:/usr/local/ssl/bin:/usr/local/openssl/bin
