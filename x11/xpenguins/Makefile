@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/05/30 01:35:06 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2000/05/31 00:28:56 itohy Exp $
 #
 
 DISTNAME=	xpenguins-1.2
@@ -7,6 +7,8 @@ MASTER_SITES=	http://www.met.rdg.ac.uk/~swrhgnrj/xpenguins/
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.met.rdg.ac.uk/~swrhgnrj/xpenguins/
+
+DEPENDS+=	xpm-*:../../graphics/xpm
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xpenguins	 ${PREFIX}/bin
