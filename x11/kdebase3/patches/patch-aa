@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2003/11/08 13:13:49 jdolecek Exp $
+$NetBSD: patch-aa,v 1.11 2004/01/15 10:15:14 markd Exp $
 
---- configure.orig	2003-09-10 17:00:30.000000000 +0200
-+++ configure	2003-11-04 14:33:06.000000000 +0100
-@@ -23166,7 +23166,7 @@
+--- configure.orig	2003-12-17 14:22:44.000000000 +1300
++++ configure
+@@ -22983,7 +22983,7 @@ if { (eval echo "$as_me:$LINENO: \"$kde_
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; then
@@ -11,14 +11,14 @@ $NetBSD: patch-aa,v 1.10 2003/11/08 13:13:49 jdolecek Exp $
  		kde_cv_uic_plugins=yes
  	fi
  fi
-@@ -31619,63 +31619,6 @@
+@@ -31436,63 +31436,6 @@ _ACEOF
  
  
  
 -  echo "$as_me:$LINENO: checking sizeof(size_t) == sizeof(unsigned long)" >&5
 -echo $ECHO_N "checking sizeof(size_t) == sizeof(unsigned long)... $ECHO_C" >&6
 -  cat >conftest.$ac_ext <<_ACEOF
--#line $LINENO "configure"
+-/* #line $LINENO "configure" */
 -/* confdefs.h.  */
 -_ACEOF
 -cat confdefs.h >>conftest.$ac_ext
@@ -75,7 +75,7 @@ $NetBSD: patch-aa,v 1.10 2003/11/08 13:13:49 jdolecek Exp $
  echo "$as_me:$LINENO: checking if it's safe to enable UTMP" >&5
  echo $ECHO_N "checking if it's safe to enable UTMP... $ECHO_C" >&6
  
-@@ -33816,6 +33759,23 @@
+@@ -33636,6 +33579,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
  
                    ac_cv_have_dpms="-lXdpms"
  
@@ -99,7 +99,7 @@ $NetBSD: patch-aa,v 1.10 2003/11/08 13:13:49 jdolecek Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -38765,6 +38725,7 @@
+@@ -38585,6 +38545,7 @@ fi
  case "$UNAME" in
  	Linux) LIBHOSTS="$LIBSENSORS" ;;
  	FreeBSD) LIBHOSTS="$LIBSENSORS -lkvm" ;;

@@ -1,8 +1,8 @@
-$NetBSD: patch-bs,v 1.5 2003/05/22 02:42:49 markd Exp $
+$NetBSD: patch-bs,v 1.6 2004/01/15 10:15:14 markd Exp $
 
---- kicker/proxy/Makefile.in.orig	Tue May 13 23:07:58 2003
+--- kicker/proxy/Makefile.in.orig	2004-01-02 14:05:59.000000000 +1300
 +++ kicker/proxy/Makefile.in
-@@ -422,27 +422,35 @@ x_includes = @x_includes@
+@@ -424,27 +424,35 @@ x_includes = @x_includes@
  x_libraries = @x_libraries@
  INCLUDES = -I$(srcdir)/../share $(all_includes)
  
@@ -13,15 +13,15 @@ $NetBSD: patch-bs,v 1.5 2003/05/22 02:42:49 markd Exp $
 +lib_LTLIBRARIES = libappletproxy_main.la appletproxy.la \
 +	libextensionproxy_main.la extensionproxy.la
 +
-+
-+libappletproxy_main_la_LIBADD = $(LIB_KDEUI) ../share/libkickermain.la
-+libappletproxy_main_la_SOURCES = appletproxy.cpp
-+#>- libappletproxy_main_la_METASOURCES = appletproxy.moc
-+libappletproxy_main_la_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
 -appletproxy_la_LIBADD = $(LIB_KDEUI) ../share/libkickermain.la
 -appletproxy_la_SOURCES = appletproxy.cpp
 -#>- appletproxy_la_METASOURCES = appletproxy.moc
++libappletproxy_main_la_LIBADD = $(LIB_KDEUI) ../share/libkickermain.la
++libappletproxy_main_la_SOURCES = appletproxy.cpp
++#>- libappletproxy_main_la_METASOURCES = appletproxy.moc
++libappletproxy_main_la_LDFLAGS = $(all_libraries) $(KDE_RPATH)
++
 +appletproxy_la_LIBADD = libappletproxy_main.la
 +appletproxy_la_SOURCES = appletproxy_main.cpp
  appletproxy_la_LDFLAGS = $(all_libraries) $(KDE_RPATH) -module -avoid-version
@@ -51,7 +51,7 @@ $NetBSD: patch-bs,v 1.5 2003/05/22 02:42:49 markd Exp $
  extensionproxy_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
  noinst_HEADERS = appletproxy.h extensionproxy.h
-@@ -453,38 +461,57 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -455,38 +463,57 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -126,7 +126,7 @@ $NetBSD: patch-bs,v 1.5 2003/05/22 02:42:49 markd Exp $
  
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
  #>- 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
-@@ -505,11 +532,13 @@ CXXLD = $(CXX)
+@@ -507,11 +534,13 @@ CXXLD = $(CXX)
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  DIST_SOURCES = $(appletproxy_la_SOURCES) $(extensionproxy_la_SOURCES) \
@@ -142,7 +142,7 @@ $NetBSD: patch-bs,v 1.5 2003/05/22 02:42:49 markd Exp $
  
  #>- all: all-am
  #>+ 1
-@@ -558,6 +587,10 @@ appletproxy.la: $(appletproxy_la_OBJECTS
+@@ -560,6 +589,10 @@ appletproxy.la: $(appletproxy_la_OBJECTS
  	$(CXXLINK) -rpath $(libdir) $(appletproxy_la_LDFLAGS) $(appletproxy_la_OBJECTS) $(appletproxy_la_LIBADD) $(LIBS)
  extensionproxy.la: $(extensionproxy_la_OBJECTS) $(extensionproxy_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(extensionproxy_la_LDFLAGS) $(extensionproxy_la_OBJECTS) $(extensionproxy_la_LIBADD) $(LIBS)
@@ -153,7 +153,7 @@ $NetBSD: patch-bs,v 1.5 2003/05/22 02:42:49 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -601,8 +634,11 @@ distclean-compile:
+@@ -603,8 +636,11 @@ distclean-compile:
  	-rm -f *.tab.c
  
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/appletproxy.Plo@am__quote@
@@ -166,7 +166,21 @@ $NetBSD: patch-bs,v 1.5 2003/05/22 02:42:49 markd Exp $
  
  distclean-depend:
  	-rm -rf ./$(DEPDIR)
-@@ -761,7 +797,6 @@ install-strip:
+@@ -705,7 +741,12 @@ GTAGS:
+ 
+ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+-DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
++#>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
++#>+ 4
++KDE_DIST=Makefile.in.rej 
++
++DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
++
+ 
+ top_distdir = ../..
+ distdir = $(top_distdir)/$(PACKAGE)-$(VERSION)
+@@ -762,7 +803,6 @@ install-strip:
  mostlyclean-generic:
  
  clean-generic:
@@ -174,7 +188,7 @@ $NetBSD: patch-bs,v 1.5 2003/05/22 02:42:49 markd Exp $
  
  distclean-generic:
  	-rm -f Makefile $(CONFIG_CLEAN_FILES)
-@@ -840,9 +875,6 @@ uninstall-am: uninstall-binPROGRAMS unin
+@@ -841,9 +881,6 @@ uninstall-am: uninstall-binPROGRAMS unin
  messages:
  	$(XGETTEXT) appletproxy.cpp -o $(podir)/appletproxy.pot
  	$(XGETTEXT) extensionproxy.cpp -o $(podir)/extensionproxy.pot
@@ -184,12 +198,13 @@ $NetBSD: patch-bs,v 1.5 2003/05/22 02:42:49 markd Exp $
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
-@@ -890,7 +922,7 @@ kde-rpo-clean:
+@@ -895,7 +932,7 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 5
 -appletproxy.lo: appletproxy.moc 
+-extensionproxy.lo: extensionproxy.moc 
  appletproxy.o: appletproxy.moc 
 +appletproxy.lo: appletproxy.moc 
  extensionproxy.o: extensionproxy.moc 
- extensionproxy.lo: extensionproxy.moc 
++extensionproxy.lo: extensionproxy.moc 

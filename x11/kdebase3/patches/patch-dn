@@ -1,8 +1,8 @@
-$NetBSD: patch-dn,v 1.4 2003/03/11 13:10:27 markd Exp $
+$NetBSD: patch-dn,v 1.5 2004/01/15 10:15:14 markd Exp $
 
---- kwin/clients/icewm/Makefile.in.orig	Fri Jan 17 09:03:11 2003
+--- kwin/clients/icewm/Makefile.in.orig	2003-12-17 14:22:30.000000000 +1300
 +++ kwin/clients/icewm/Makefile.in
-@@ -291,7 +291,7 @@ SUBDIRS = . config icewm-themes
+@@ -429,7 +429,7 @@ SUBDIRS = . config icewm-themes
  kde_module_LTLIBRARIES = kwin_icewm.la
  
  kwin_icewm_la_SOURCES = icewm.cpp 
@@ -11,7 +11,7 @@ $NetBSD: patch-dn,v 1.4 2003/03/11 13:10:27 markd Exp $
  kwin_icewm_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN) -module
  
  #>- METASOURCES = AUTO
-@@ -307,7 +307,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -446,7 +446,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES)
  
@@ -20,10 +20,12 @@ $NetBSD: patch-dn,v 1.4 2003/03/11 13:10:27 markd Exp $
  am_kwin_icewm_la_OBJECTS = icewm.lo
  #>- kwin_icewm_la_OBJECTS = $(am_kwin_icewm_la_OBJECTS)
  #>+ 1
-@@ -763,5 +763,5 @@ kde-rpo-clean:
- 	-rm -f *.rpo
+@@ -738,7 +738,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=icewm.desktop 
++KDE_DIST=Makefile.in.rej icewm.desktop 
  
- #>+ 3
--icewm.o: icewm.moc 
- icewm.lo: icewm.moc 
-+icewm.o: icewm.moc 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 

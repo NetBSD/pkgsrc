@@ -1,8 +1,8 @@
-$NetBSD: patch-eq,v 1.6 2003/05/22 02:42:52 markd Exp $
+$NetBSD: patch-eq,v 1.7 2004/01/15 10:15:14 markd Exp $
 
---- legacyimport/Makefile.in.orig	Tue May 13 23:08:03 2003
+--- legacyimport/Makefile.in.orig	2004-01-02 14:06:05.000000000 +1300
 +++ legacyimport/Makefile.in
-@@ -423,14 +423,18 @@ x_libraries = @x_libraries@
+@@ -425,14 +425,18 @@ x_libraries = @x_libraries@
  INCLUDES = $(all_includes)
  
  bin_PROGRAMS = klegacyimport
@@ -26,7 +26,7 @@ $NetBSD: patch-eq,v 1.6 2003/05/22 02:42:52 markd Exp $
  klegacyimport_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
  noinst_HEADERS = legacyimport.h
-@@ -447,27 +451,35 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -449,27 +453,35 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -71,7 +71,7 @@ $NetBSD: patch-eq,v 1.6 2003/05/22 02:42:52 markd Exp $
  @AMDEP_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/legacyimport.Plo
  
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
-@@ -488,13 +500,14 @@ CXXLD = $(CXX)
+@@ -490,13 +502,14 @@ CXXLD = $(CXX)
  #>+ 2
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
@@ -88,7 +88,7 @@ $NetBSD: patch-eq,v 1.6 2003/05/22 02:42:52 markd Exp $
  
  #>- all: all-am
  #>+ 1
-@@ -541,6 +554,8 @@ clean-libLTLIBRARIES:
+@@ -543,6 +556,8 @@ clean-libLTLIBRARIES:
  	done
  klegacyimport.la: $(klegacyimport_la_OBJECTS) $(klegacyimport_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(klegacyimport_la_LDFLAGS) $(klegacyimport_la_OBJECTS) $(klegacyimport_la_LIBADD) $(LIBS)
@@ -97,7 +97,7 @@ $NetBSD: patch-eq,v 1.6 2003/05/22 02:42:52 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -580,7 +595,8 @@ mostlyclean-compile:
+@@ -582,7 +597,8 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
@@ -107,19 +107,12 @@ $NetBSD: patch-eq,v 1.6 2003/05/22 02:42:52 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/legacyimport.Plo@am__quote@
  
  distclean-depend:
-@@ -702,7 +718,7 @@ distclean-tags:
+@@ -704,7 +720,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=configure.in.in klegacyimport.desktop 
-+KDE_DIST=klegacyimport.desktop configure.in.in dummy.cpp 
+-KDE_DIST=klegacyimport.desktop configure.in.in 
++KDE_DIST=klegacyimport.desktop configure.in.in Makefile.in.rej dummy.cpp 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -883,5 +899,5 @@ kde-rpo-clean:
- 	-rm -f *.rpo
- 
- #>+ 3
--legacyimport.lo: legacyimport.moc 
- legacyimport.o: legacyimport.moc 
-+legacyimport.lo: legacyimport.moc 

@@ -1,8 +1,8 @@
-$NetBSD: patch-ct,v 1.7 2003/07/30 13:35:00 markd Exp $
+$NetBSD: patch-ct,v 1.8 2004/01/15 10:15:14 markd Exp $
 
---- konsole/konsole/Makefile.in.orig	2003-07-15 22:03:42.000000000 +1200
+--- konsole/konsole/Makefile.in.orig	2004-01-02 14:06:01.000000000 +1300
 +++ konsole/konsole/Makefile.in
-@@ -438,7 +438,7 @@ INCLUDES = -I. $(all_includes)
+@@ -439,7 +439,7 @@ INCLUDES = -I. $(all_includes)
  
  # you can add here more. This one gets installed
  bin_PROGRAMS = konsole konsole_grantpty kwrited #kcmkonsole
@@ -11,7 +11,7 @@ $NetBSD: patch-ct,v 1.7 2003/07/30 13:35:00 markd Exp $
  
  
  # libkonsolepart is a part, but konsole.la links directly to it, so we can't
-@@ -473,30 +473,38 @@ libkonsolepart_la_LDFLAGS = $(all_librar
+@@ -474,30 +474,38 @@ libkonsolepart_la_LDFLAGS = $(all_librar
  libkonsolepart_la_LIBADD = $(LIBUTIL) $(XTESTLIB) $(LIB_KPARTS)
  
  # kwrited kdeinit module
@@ -59,7 +59,7 @@ $NetBSD: patch-ct,v 1.7 2003/07/30 13:35:00 markd Exp $
  konsole_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
  
-@@ -531,27 +539,32 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -533,27 +541,32 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES) $(lib_LTLIBRARIES)
  
@@ -110,7 +110,7 @@ $NetBSD: patch-ct,v 1.7 2003/07/30 13:35:00 markd Exp $
  libkonsolepart_la_DEPENDENCIES =
  am_libkonsolepart_la_OBJECTS = TEPty.lo BlockArray.lo konsole_part.lo \
  	schema.lo session.lo TEWidget.lo TEmuVt102.lo TEScreen.lo \
-@@ -564,25 +577,30 @@ libkonsolepart_la_nofinal_OBJECTS = TEPt
+@@ -566,25 +579,30 @@ libkonsolepart_la_nofinal_OBJECTS = TEPt
  	konsole_wcwidth.lo TEmulation.lo TEHistory.lo keytrans.lo konsoleiface_skel.lo sessioniface_skel.lo
  @KDE_USE_FINAL_FALSE@libkonsolepart_la_OBJECTS = $(libkonsolepart_la_nofinal_OBJECTS)
  @KDE_USE_FINAL_TRUE@libkonsolepart_la_OBJECTS = $(libkonsolepart_la_final_OBJECTS)
@@ -147,7 +147,7 @@ $NetBSD: patch-ct,v 1.7 2003/07/30 13:35:00 markd Exp $
  
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
-@@ -591,44 +609,56 @@ am__depfiles_maybe = depfiles
+@@ -593,44 +611,56 @@ am__depfiles_maybe = depfiles
  #>- @AMDEP_TRUE@	./$(DEPDIR)/TEHistory.Plo ./$(DEPDIR)/TEPty.Plo \
  #>- @AMDEP_TRUE@	./$(DEPDIR)/TEScreen.Plo ./$(DEPDIR)/TEWidget.Plo \
  #>- @AMDEP_TRUE@	./$(DEPDIR)/TEmuVt102.Plo \
@@ -215,7 +215,7 @@ $NetBSD: patch-ct,v 1.7 2003/07/30 13:35:00 markd Exp $
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/schema.Plo ./$(DEPDIR)/session.Plo
  
  COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
-@@ -657,14 +687,15 @@ CXXLD = $(CXX)
+@@ -659,14 +689,15 @@ CXXLD = $(CXX)
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  DIST_SOURCES = $(konsole_la_SOURCES) $(kwrited_la_SOURCES) \
@@ -233,7 +233,7 @@ $NetBSD: patch-ct,v 1.7 2003/07/30 13:35:00 markd Exp $
  
  #>- all: all-am
  #>+ 1
-@@ -741,11 +772,15 @@ konsole.la: $(konsole_la_OBJECTS) $(kons
+@@ -743,11 +774,15 @@ konsole.la: $(konsole_la_OBJECTS) $(kons
  	$(CXXLINK) -rpath $(libdir) $(konsole_la_LDFLAGS) $(konsole_la_OBJECTS) $(konsole_la_LIBADD) $(LIBS)
  kwrited.la: $(kwrited_la_OBJECTS) $(kwrited_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kwrited_la_LDFLAGS) $(kwrited_la_OBJECTS) $(kwrited_la_LIBADD) $(LIBS)
@@ -249,7 +249,7 @@ $NetBSD: patch-ct,v 1.7 2003/07/30 13:35:00 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -798,16 +833,19 @@ distclean-compile:
+@@ -800,16 +835,19 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/TEWidget.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/TEmuVt102.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/TEmulation.Plo@am__quote@
@@ -270,16 +270,16 @@ $NetBSD: patch-ct,v 1.7 2003/07/30 13:35:00 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/schema.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/session.Plo@am__quote@
-@@ -982,7 +1020,7 @@ distclean-tags:
+@@ -984,7 +1022,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=x-konsole.desktop sessioniface.h MakeDefaults konsole_part.h konsolerc konsoleiface.h 
+-KDE_DIST=MakeDefaults konsole_part.h x-konsole.desktop sessioniface.h konsolerc konsoleiface.h 
 +KDE_DIST=konsoleiface.h konsole_part.h Makefile.in.rej x-konsole.desktop konsolerc sessioniface.h MakeDefaults 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -1154,29 +1192,16 @@ messages: rc.cpp
+@@ -1155,23 +1193,16 @@ messages: rc.cpp
  	$(XGETTEXT) rc.cpp *.cpp -o $(podir)/konsole.pot
  	rm -f schemas.cpp
  	rm -f tips.cpp
@@ -299,90 +299,80 @@ $NetBSD: patch-ct,v 1.7 2003/07/30 13:35:00 markd Exp $
 -	$(DCOPIDL) $(srcdir)/sessioniface.h > sessioniface.kidl || ( rm -f sessioniface.kidl ; false )
 -sessioniface_skel.cpp: sessioniface.kidl
 -	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub sessioniface.kidl
--
- #>+ 3
--kwrited.moc: $(srcdir)/kwrited.h
--	$(MOC) $(srcdir)/kwrited.h -o kwrited.moc
++#>+ 3
 +konsolebookmarkmenu.moc: $(srcdir)/konsolebookmarkmenu.h
 +	$(MOC) $(srcdir)/konsolebookmarkmenu.h -o konsolebookmarkmenu.moc
  
- #>+ 1
--mocs: kwrited.moc
++#>+ 1
 +mocs: konsolebookmarkmenu.moc
  #>+ 3
  TEWidget.moc: $(srcdir)/TEWidget.h
  	$(MOC) $(srcdir)/TEWidget.h -o TEWidget.moc
-@@ -1184,35 +1209,35 @@ TEWidget.moc: $(srcdir)/TEWidget.h
+@@ -1179,17 +1210,11 @@ TEWidget.moc: $(srcdir)/TEWidget.h
  #>+ 1
  mocs: TEWidget.moc
  #>+ 3
--konsole_child.moc: $(srcdir)/konsole_child.h
--	$(MOC) $(srcdir)/konsole_child.h -o konsole_child.moc
+-TEmuVt102.moc: $(srcdir)/TEmuVt102.h
+-	$(MOC) $(srcdir)/TEmuVt102.h -o TEmuVt102.moc
 -
 -#>+ 1
--mocs: konsole_child.moc
+-mocs: TEmuVt102.moc
 -#>+ 3
- TEmulation.moc: $(srcdir)/TEmulation.h
- 	$(MOC) $(srcdir)/TEmulation.h -o TEmulation.moc
+-session.moc: $(srcdir)/session.h
+-	$(MOC) $(srcdir)/session.h -o session.moc
++TEmulation.moc: $(srcdir)/TEmulation.h
++	$(MOC) $(srcdir)/TEmulation.h -o TEmulation.moc
  
  #>+ 1
- mocs: TEmulation.moc
+-mocs: session.moc
++mocs: TEmulation.moc
+ #>+ 3
+ kwrited.moc: $(srcdir)/kwrited.h
+ 	$(MOC) $(srcdir)/kwrited.h -o kwrited.moc
+@@ -1209,17 +1234,23 @@ konsole_part.moc: $(srcdir)/konsole_part
+ #>+ 1
+ mocs: konsole_part.moc
+ #>+ 3
+-TEmulation.moc: $(srcdir)/TEmulation.h
+-	$(MOC) $(srcdir)/TEmulation.h -o TEmulation.moc
++konsole.moc: $(srcdir)/konsole.h
++	$(MOC) $(srcdir)/konsole.h -o konsole.moc
+ 
+ #>+ 1
+-mocs: TEmulation.moc
++mocs: konsole.moc
  #>+ 3
 -konsolebookmarkhandler.moc: $(srcdir)/konsolebookmarkhandler.h
 -	$(MOC) $(srcdir)/konsolebookmarkhandler.h -o konsolebookmarkhandler.moc
-+kwrited.moc: $(srcdir)/kwrited.h
-+	$(MOC) $(srcdir)/kwrited.h -o kwrited.moc
++session.moc: $(srcdir)/session.h
++	$(MOC) $(srcdir)/session.h -o session.moc
  
  #>+ 1
 -mocs: konsolebookmarkhandler.moc
-+mocs: kwrited.moc
++mocs: session.moc
++#>+ 3
++TEmuVt102.moc: $(srcdir)/TEmuVt102.h
++	$(MOC) $(srcdir)/TEmuVt102.h -o TEmuVt102.moc
++
++#>+ 1
++mocs: TEmuVt102.moc
+ #>+ 3
+ konsole_child.moc: $(srcdir)/konsole_child.h
+ 	$(MOC) $(srcdir)/konsole_child.h -o konsole_child.moc
+@@ -1227,17 +1258,21 @@ konsole_child.moc: $(srcdir)/konsole_chi
+ #>+ 1
+ mocs: konsole_child.moc
  #>+ 3
 -konsole.moc: $(srcdir)/konsole.h
 -	$(MOC) $(srcdir)/konsole.h -o konsole.moc
-+TEPty.moc: $(srcdir)/TEPty.h
-+	$(MOC) $(srcdir)/TEPty.h -o TEPty.moc
- 
- #>+ 1
--mocs: konsole.moc
-+mocs: TEPty.moc
- #>+ 3
--konsolebookmarkmenu.moc: $(srcdir)/konsolebookmarkmenu.h
--	$(MOC) $(srcdir)/konsolebookmarkmenu.h -o konsolebookmarkmenu.moc
-+konsole_part.moc: $(srcdir)/konsole_part.h
-+	$(MOC) $(srcdir)/konsole_part.h -o konsole_part.moc
- 
- #>+ 1
--mocs: konsolebookmarkmenu.moc
-+mocs: konsole_part.moc
-+#>+ 3
-+konsole.moc: $(srcdir)/konsole.h
-+	$(MOC) $(srcdir)/konsole.h -o konsole.moc
-+
-+#>+ 1
-+mocs: konsole.moc
- #>+ 3
- session.moc: $(srcdir)/session.h
- 	$(MOC) $(srcdir)/session.h -o session.moc
-@@ -1226,17 +1251,27 @@ TEmuVt102.moc: $(srcdir)/TEmuVt102.h
- #>+ 1
- mocs: TEmuVt102.moc
- #>+ 3
--konsole_part.moc: $(srcdir)/konsole_part.h
--	$(MOC) $(srcdir)/konsole_part.h -o konsole_part.moc
-+konsole_child.moc: $(srcdir)/konsole_child.h
-+	$(MOC) $(srcdir)/konsole_child.h -o konsole_child.moc
- 
- #>+ 1
--mocs: konsole_part.moc
-+mocs: konsole_child.moc
- #>+ 3
--TEPty.moc: $(srcdir)/TEPty.h
--	$(MOC) $(srcdir)/TEPty.h -o TEPty.moc
 +konsolebookmarkhandler.moc: $(srcdir)/konsolebookmarkhandler.h
 +	$(MOC) $(srcdir)/konsolebookmarkhandler.h -o konsolebookmarkhandler.moc
  
  #>+ 1
--mocs: TEPty.moc
+-mocs: konsole.moc
+-#>+ 3
+-konsolebookmarkmenu.moc: $(srcdir)/konsolebookmarkmenu.h
+-	$(MOC) $(srcdir)/konsolebookmarkmenu.h -o konsolebookmarkmenu.moc
 +mocs: konsolebookmarkhandler.moc
 +#>+ 9
 +konsoleiface.kidl: $(srcdir)/konsoleiface.h $(DCOP_DEPENDENCIES)
@@ -393,24 +383,26 @@ $NetBSD: patch-ct,v 1.7 2003/07/30 13:35:00 markd Exp $
 +	$(DCOPIDL) $(srcdir)/sessioniface.h > sessioniface.kidl || ( rm -f sessioniface.kidl ; false )
 +sessioniface_skel.cpp: sessioniface.kidl
 +	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub sessioniface.kidl
-+
+ 
+-#>+ 1
+-mocs: konsolebookmarkmenu.moc
  #>+ 8
  libkonsolepart.la.closure: $(libkonsolepart_la_OBJECTS) $(libkonsolepart_la_DEPENDENCIES)
  	@echo "int main() {return 0;}" > libkonsolepart_la_closure.cpp
-@@ -1248,7 +1283,7 @@ libkonsolepart.la.closure: $(libkonsolep
+@@ -1249,7 +1284,7 @@ libkonsolepart.la.closure: $(libkonsolep
  
  #>+ 3
  clean-metasources:
--	-rm -f  kwrited.moc TEWidget.moc konsole_child.moc TEmulation.moc konsolebookmarkhandler.moc konsole.moc konsolebookmarkmenu.moc session.moc TEmuVt102.moc konsole_part.moc TEPty.moc
+-	-rm -f  TEWidget.moc TEmuVt102.moc session.moc kwrited.moc TEPty.moc konsole_part.moc TEmulation.moc konsolebookmarkhandler.moc konsole_child.moc konsole.moc konsolebookmarkmenu.moc
 +	-rm -f  konsolebookmarkmenu.moc TEWidget.moc TEmulation.moc kwrited.moc TEPty.moc konsole_part.moc konsole.moc session.moc TEmuVt102.moc konsole_child.moc konsolebookmarkhandler.moc
  
  #>+ 7
  clean-idl:
-@@ -1273,19 +1308,19 @@ force-reedit:
+@@ -1274,19 +1309,19 @@ force-reedit:
  
  
  #>+ 11
--konsole_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/TEPty.cpp $(srcdir)/BlockArray.cpp $(srcdir)/main.cpp $(srcdir)/konsole.cpp $(srcdir)/schema.cpp $(srcdir)/session.cpp $(srcdir)/TEWidget.cpp $(srcdir)/TEmuVt102.cpp $(srcdir)/TEScreen.cpp $(srcdir)/TEmulation.cpp $(srcdir)/TEHistory.cpp $(srcdir)/keytrans.cpp $(srcdir)/konsole_wcwidth.cpp $(srcdir)/konsolebookmarkhandler.cpp $(srcdir)/konsolebookmarkmenu.cpp $(srcdir)/konsole_child.cpp konsoleiface_skel.cpp sessioniface_skel.cpp  TEWidget.moc konsole_child.moc konsolebookmarkhandler.moc TEmulation.moc konsole.moc konsolebookmarkmenu.moc TEmuVt102.moc session.moc TEPty.moc
+-konsole_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/TEPty.cpp $(srcdir)/BlockArray.cpp $(srcdir)/main.cpp $(srcdir)/konsole.cpp $(srcdir)/schema.cpp $(srcdir)/session.cpp $(srcdir)/TEWidget.cpp $(srcdir)/TEmuVt102.cpp $(srcdir)/TEScreen.cpp $(srcdir)/TEmulation.cpp $(srcdir)/TEHistory.cpp $(srcdir)/keytrans.cpp $(srcdir)/konsole_wcwidth.cpp $(srcdir)/konsolebookmarkhandler.cpp $(srcdir)/konsolebookmarkmenu.cpp $(srcdir)/konsole_child.cpp konsoleiface_skel.cpp sessioniface_skel.cpp  session.moc TEmuVt102.moc TEWidget.moc TEPty.moc TEmulation.moc konsolebookmarkhandler.moc konsole_child.moc konsole.moc konsolebookmarkmenu.moc
 -	@echo 'creating konsole_la.all_cpp.cpp ...'; \
 -	rm -f konsole_la.all_cpp.files konsole_la.all_cpp.final; \
 -	echo "#define KDE_USE_FINAL 1" >> konsole_la.all_cpp.final; \
@@ -430,12 +422,12 @@ $NetBSD: patch-ct,v 1.7 2003/07/30 13:35:00 markd Exp $
 +	rm -f libkonsole_main_la.all_cpp.final libkonsole_main_la.all_cpp.files
  
  #>+ 11
--libkonsolepart_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/TEPty.cpp $(srcdir)/BlockArray.cpp $(srcdir)/konsole_part.cpp $(srcdir)/schema.cpp $(srcdir)/session.cpp $(srcdir)/TEWidget.cpp $(srcdir)/TEmuVt102.cpp $(srcdir)/TEScreen.cpp $(srcdir)/konsole_wcwidth.cpp $(srcdir)/TEmulation.cpp $(srcdir)/TEHistory.cpp $(srcdir)/keytrans.cpp konsoleiface_skel.cpp sessioniface_skel.cpp  TEWidget.moc TEmulation.moc TEmuVt102.moc session.moc konsole_part.moc TEPty.moc
+-libkonsolepart_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/TEPty.cpp $(srcdir)/BlockArray.cpp $(srcdir)/konsole_part.cpp $(srcdir)/schema.cpp $(srcdir)/session.cpp $(srcdir)/TEWidget.cpp $(srcdir)/TEmuVt102.cpp $(srcdir)/TEScreen.cpp $(srcdir)/konsole_wcwidth.cpp $(srcdir)/TEmulation.cpp $(srcdir)/TEHistory.cpp $(srcdir)/keytrans.cpp konsoleiface_skel.cpp sessioniface_skel.cpp  session.moc TEmuVt102.moc TEWidget.moc konsole_part.moc TEPty.moc TEmulation.moc
 +libkonsolepart_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/TEPty.cpp $(srcdir)/BlockArray.cpp $(srcdir)/konsole_part.cpp $(srcdir)/schema.cpp $(srcdir)/session.cpp $(srcdir)/TEWidget.cpp $(srcdir)/TEmuVt102.cpp $(srcdir)/TEScreen.cpp $(srcdir)/konsole_wcwidth.cpp $(srcdir)/TEmulation.cpp $(srcdir)/TEHistory.cpp $(srcdir)/keytrans.cpp konsoleiface_skel.cpp sessioniface_skel.cpp  TEmulation.moc TEWidget.moc TEPty.moc konsole_part.moc session.moc TEmuVt102.moc
  	@echo 'creating libkonsolepart_la.all_cpp.cpp ...'; \
  	rm -f libkonsolepart_la.all_cpp.files libkonsolepart_la.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> libkonsolepart_la.all_cpp.final; \
-@@ -1298,20 +1333,20 @@ libkonsolepart_la.all_cpp.cpp: $(srcdir)
+@@ -1299,20 +1334,20 @@ libkonsolepart_la.all_cpp.cpp: $(srcdir)
  
  #>+ 3
  clean-final:
@@ -461,44 +453,42 @@ $NetBSD: patch-ct,v 1.7 2003/07/30 13:35:00 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -1321,25 +1356,25 @@ kde-rpo-clean:
- 	-rm -f *.rpo
+@@ -1323,24 +1358,24 @@ kde-rpo-clean:
  
  #>+ 23
-+konsole.o: konsole.moc 
- konsole_child.lo: konsole_child.moc 
+ konsole.o: konsole.moc 
 -kwrited.lo: kwrited.moc 
 -TEmuVt102.o: TEmuVt102.moc 
--TEWidget.o: TEWidget.moc 
 -session.lo: session.moc 
--konsole_child.o: konsole_child.moc 
 -TEPty.lo: TEPty.moc 
-+konsolebookmarkhandler.lo: konsolebookmarkhandler.moc 
++konsole_child.lo: konsole_child.moc 
+ konsolebookmarkhandler.lo: konsolebookmarkhandler.moc 
  session.o: session.moc 
- konsole.lo: konsole.moc 
--konsolebookmarkhandler.lo: konsolebookmarkhandler.moc 
 -TEmulation.lo: TEmulation.moc 
--konsole.o: konsole.moc 
+-TEWidget.lo: TEWidget.moc 
+-konsolebookmarkmenu.lo: konsolebookmarkmenu.moc 
+-kwrited.o: kwrited.moc 
 -konsolebookmarkmenu.o: konsolebookmarkmenu.moc 
--TEPty.o: TEPty.moc 
--TEmuVt102.lo: TEmuVt102.moc 
+ konsole.lo: konsole.moc 
 +TEWidget.lo: TEWidget.moc 
- TEmulation.o: TEmulation.moc 
-+konsolebookmarkhandler.o: konsolebookmarkhandler.moc 
++TEmulation.o: TEmulation.moc 
+ konsolebookmarkhandler.o: konsolebookmarkhandler.moc 
+-konsole_child.lo: konsole_child.moc 
 +TEmuVt102.o: TEmuVt102.moc 
- konsolebookmarkmenu.lo: konsolebookmarkmenu.moc 
++konsolebookmarkmenu.lo: konsolebookmarkmenu.moc 
 +TEmuVt102.lo: TEmuVt102.moc 
 +TEPty.lo: TEPty.moc 
 +session.lo: session.moc 
 +TEmulation.lo: TEmulation.moc 
 +TEPty.o: TEPty.moc 
  konsole_part.lo: konsole_part.moc 
--kwrited.o: kwrited.moc 
--TEWidget.lo: TEWidget.moc 
--konsolebookmarkhandler.o: konsolebookmarkhandler.moc 
- konsole_part.o: konsole_part.moc 
+-TEmulation.o: TEmulation.moc 
++konsole_part.o: konsole_part.moc 
 +kwrited.o: kwrited.moc 
-+konsole_child.o: konsole_child.moc 
+ konsole_child.o: konsole_child.moc 
 +kwrited.lo: kwrited.moc 
-+TEWidget.o: TEWidget.moc 
+ TEWidget.o: TEWidget.moc 
+-TEPty.o: TEPty.moc 
+-TEmuVt102.lo: TEmuVt102.moc 
+-konsole_part.o: konsole_part.moc 
 +konsolebookmarkmenu.o: konsolebookmarkmenu.moc 

@@ -1,8 +1,8 @@
-$NetBSD: patch-dz,v 1.4 2003/03/11 13:10:28 markd Exp $
+$NetBSD: patch-dz,v 1.5 2004/01/15 10:15:14 markd Exp $
 
---- kwin/clients/quartz/Makefile.in.orig	Fri Jan 17 09:03:12 2003
+--- kwin/clients/quartz/Makefile.in.orig	2003-12-17 14:22:32.000000000 +1300
 +++ kwin/clients/quartz/Makefile.in
-@@ -292,7 +292,7 @@ SUBDIRS = . config
+@@ -430,7 +430,7 @@ SUBDIRS = . config
  kde_module_LTLIBRARIES = kwin_quartz.la
  
  kwin_quartz_la_SOURCES = quartz.cpp
@@ -11,7 +11,7 @@ $NetBSD: patch-dz,v 1.4 2003/03/11 13:10:28 markd Exp $
  kwin_quartz_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN) -module
  
  #>- METASOURCES = AUTO
-@@ -308,7 +308,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -447,7 +447,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES)
  
@@ -20,10 +20,12 @@ $NetBSD: patch-dz,v 1.4 2003/03/11 13:10:28 markd Exp $
  am_kwin_quartz_la_OBJECTS = quartz.lo
  #>- kwin_quartz_la_OBJECTS = $(am_kwin_quartz_la_OBJECTS)
  #>+ 1
-@@ -764,5 +764,5 @@ kde-rpo-clean:
- 	-rm -f *.rpo
+@@ -739,7 +739,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=quartz.desktop 
++KDE_DIST=Makefile.in.rej quartz.desktop 
  
- #>+ 3
--quartz.o: quartz.moc 
- quartz.lo: quartz.moc 
-+quartz.o: quartz.moc 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 

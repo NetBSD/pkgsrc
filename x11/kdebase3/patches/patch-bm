@@ -1,16 +1,17 @@
-$NetBSD: patch-bm,v 1.6 2003/07/30 13:34:59 markd Exp $
+$NetBSD: patch-bm,v 1.7 2004/01/15 10:15:14 markd Exp $
 
---- kicker/applets/launcher/Makefile.in.orig	2003-07-15 22:03:33.000000000 +1200
+--- kicker/applets/launcher/Makefile.in.orig	2004-01-02 14:05:58.000000000 +1300
 +++ kicker/applets/launcher/Makefile.in
-@@ -437,14 +437,14 @@ lnk_DATA = quicklauncher.desktop
+@@ -438,7 +438,7 @@ lnk_DATA = quicklauncher.desktop
  EXTRA_DIST = $(lnk_DATA)
  
  launcher_panelapplet_la_LDFLAGS = -module $(KDE_PLUGIN) $(all_libraries)
 -launcher_panelapplet_la_LIBADD = ../../kicker.la $(LIB_KSYCOCA) $(LIB_KDEUI)
 +launcher_panelapplet_la_LIBADD = ../../libkicker_main.la $(LIB_KSYCOCA) $(LIB_KDEUI)
  subdir = kicker/applets/launcher
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
  mkinstalldirs = $(SHELL) $(top_srcdir)/admin/mkinstalldirs
- CONFIG_HEADER = $(top_builddir)/config.h
+@@ -446,7 +446,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES)
  
@@ -19,7 +20,7 @@ $NetBSD: patch-bm,v 1.6 2003/07/30 13:34:59 markd Exp $
  am_launcher_panelapplet_la_OBJECTS = quicklauncher.lo quickbutton.lo \
  	quickaddappsmenu.lo
  #>- launcher_panelapplet_la_OBJECTS = $(am_launcher_panelapplet_la_OBJECTS)
-@@ -673,7 +673,7 @@ distclean-tags:
+@@ -675,7 +675,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
@@ -28,9 +29,9 @@ $NetBSD: patch-bm,v 1.6 2003/07/30 13:34:59 markd Exp $
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -829,12 +829,6 @@ launcher_panelapplet.la.closure: $(launc
- 
- 
+@@ -836,20 +836,20 @@ quickaddappsmenu.moc: $(srcdir)/quickadd
+ #>+ 1
+ mocs: quickaddappsmenu.moc
  #>+ 3
 -quickbutton.moc: $(srcdir)/quickbutton.h
 -	$(MOC) $(srcdir)/quickbutton.h -o quickbutton.moc
@@ -38,10 +39,9 @@ $NetBSD: patch-bm,v 1.6 2003/07/30 13:34:59 markd Exp $
 -#>+ 1
 -mocs: quickbutton.moc
 -#>+ 3
- quickaddappsmenu.moc: $(srcdir)/quickaddappsmenu.h
- 	$(MOC) $(srcdir)/quickaddappsmenu.h -o quickaddappsmenu.moc
+ quicklauncher.moc: $(srcdir)/quicklauncher.h
+ 	$(MOC) $(srcdir)/quicklauncher.h -o quicklauncher.moc
  
-@@ -847,8 +841,14 @@ quicklauncher.moc: $(srcdir)/quicklaunch
  #>+ 1
  mocs: quicklauncher.moc
  #>+ 3
@@ -52,12 +52,12 @@ $NetBSD: patch-bm,v 1.6 2003/07/30 13:34:59 markd Exp $
 +mocs: quickbutton.moc
 +#>+ 3
  clean-metasources:
--	-rm -f  quickbutton.moc quickaddappsmenu.moc quicklauncher.moc
+-	-rm -f  quickaddappsmenu.moc quickbutton.moc quicklauncher.moc
 +	-rm -f  quickaddappsmenu.moc quicklauncher.moc quickbutton.moc
  
  #>+ 3
  clean-closures:
-@@ -865,7 +865,7 @@ force-reedit:
+@@ -866,7 +866,7 @@ force-reedit:
  
  
  #>+ 11
@@ -66,16 +66,15 @@ $NetBSD: patch-bm,v 1.6 2003/07/30 13:34:59 markd Exp $
  	@echo 'creating launcher_panelapplet_la.all_cpp.cpp ...'; \
  	rm -f launcher_panelapplet_la.all_cpp.files launcher_panelapplet_la.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> launcher_panelapplet_la.all_cpp.final; \
-@@ -901,9 +901,9 @@ kde-rpo-clean:
+@@ -902,9 +902,9 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 7
 -quicklauncher.lo: quicklauncher.moc 
-+quicklauncher.o: quicklauncher.moc 
+ quicklauncher.o: quicklauncher.moc 
+-quickbutton.o: quickbutton.moc 
  quickaddappsmenu.lo: quickaddappsmenu.moc 
--quickbutton.lo: quickbutton.moc 
- quickbutton.o: quickbutton.moc 
--quicklauncher.o: quicklauncher.moc 
++quickbutton.o: quickbutton.moc 
  quickaddappsmenu.o: quickaddappsmenu.moc 
 +quicklauncher.lo: quicklauncher.moc 
-+quickbutton.lo: quickbutton.moc 
+ quickbutton.lo: quickbutton.moc 

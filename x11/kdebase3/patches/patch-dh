@@ -1,8 +1,8 @@
-$NetBSD: patch-dh,v 1.6 2003/07/30 13:35:00 markd Exp $
+$NetBSD: patch-dh,v 1.7 2004/01/15 10:15:14 markd Exp $
 
---- kwin/Makefile.in.orig	2003-07-15 22:03:46.000000000 +1200
+--- kwin/Makefile.in.orig	2004-01-02 14:06:04.000000000 +1300
 +++ kwin/Makefile.in
-@@ -427,18 +427,22 @@ INCLUDES = $(all_includes)
+@@ -428,18 +428,22 @@ INCLUDES = $(all_includes)
  SUBDIRS = . kcmkwin pics clients
  
  bin_PROGRAMS = kwin
@@ -29,7 +29,7 @@ $NetBSD: patch-dh,v 1.6 2003/07/30 13:35:00 markd Exp $
  kwin_la_LDFLAGS = $(all_libraries) -module -avoid-version
  
  include_HEADERS = KWinInterface.h
-@@ -447,7 +451,7 @@ kwinincludedir = $(includedir)/kwin
+@@ -448,7 +452,7 @@ kwinincludedir = $(includedir)/kwin
  kwininclude_HEADERS = options.h client.h workspace.h kwinbutton.h
  
  kwin_SOURCES = kwin_main.cpp
@@ -38,7 +38,7 @@ $NetBSD: patch-dh,v 1.6 2003/07/30 13:35:00 markd Exp $
  kwin_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
  KDE_ICON = kwin
-@@ -458,7 +462,6 @@ data_DATA = eventsrc
+@@ -459,7 +463,6 @@ data_DATA = eventsrc
  
  sounddir = $(kde_sounddir)
  sound_DATA = pop.wav
@@ -46,7 +46,7 @@ $NetBSD: patch-dh,v 1.6 2003/07/30 13:35:00 markd Exp $
  update_DATA = kwin.upd pluginlibFix.pl
  updatedir = $(kde_datadir)/kconf_update
  subdir = kwin
-@@ -467,18 +470,23 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -469,18 +472,23 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -77,7 +77,7 @@ $NetBSD: patch-dh,v 1.6 2003/07/30 13:35:00 markd Exp $
  bin_PROGRAMS = kwin$(EXEEXT)
  PROGRAMS = $(bin_PROGRAMS)
  
-@@ -486,33 +494,33 @@ am_kwin_OBJECTS = kwin_main.$(OBJEXT)
+@@ -488,33 +496,33 @@ am_kwin_OBJECTS = kwin_main.$(OBJEXT)
  #>- kwin_OBJECTS = $(am_kwin_OBJECTS)
  #>+ 1
  kwin_OBJECTS = kwin_main.$(OBJEXT)
@@ -128,7 +128,7 @@ $NetBSD: patch-dh,v 1.6 2003/07/30 13:35:00 markd Exp $
  
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
  #>- 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
-@@ -532,7 +540,7 @@ CXXLD = $(CXX)
+@@ -534,7 +542,7 @@ CXXLD = $(CXX)
  #>+ 2
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
@@ -137,7 +137,7 @@ $NetBSD: patch-dh,v 1.6 2003/07/30 13:35:00 markd Exp $
  DATA = $(data_DATA) $(sound_DATA) $(update_DATA)
  
  HEADERS = $(include_HEADERS) $(kwininclude_HEADERS)
-@@ -546,7 +554,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+@@ -548,7 +556,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
  DIST_COMMON = README $(include_HEADERS) $(kwininclude_HEADERS) \
  	Makefile.am Makefile.in
  DIST_SUBDIRS = $(SUBDIRS)
@@ -146,7 +146,7 @@ $NetBSD: patch-dh,v 1.6 2003/07/30 13:35:00 markd Exp $
  
  #>- all: all-recursive
  #>+ 1
-@@ -593,6 +601,8 @@ clean-libLTLIBRARIES:
+@@ -595,6 +603,8 @@ clean-libLTLIBRARIES:
  	done
  kwin.la: $(kwin_la_OBJECTS) $(kwin_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kwin_la_LDFLAGS) $(kwin_la_OBJECTS) $(kwin_la_LIBADD) $(LIBS)
@@ -155,7 +155,7 @@ $NetBSD: patch-dh,v 1.6 2003/07/30 13:35:00 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -636,6 +646,7 @@ distclean-compile:
+@@ -638,6 +648,7 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/client.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/events.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/killwindow.Plo@am__quote@
@@ -163,16 +163,16 @@ $NetBSD: patch-dh,v 1.6 2003/07/30 13:35:00 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kwin_main.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kwinbutton.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Plo@am__quote@
-@@ -901,7 +912,7 @@ distclean-tags:
+@@ -909,7 +920,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=stdclient_bitmaps.h NEWCOLORSCHEME.README killwindow.h cr32-app-kwin.png eventsrc atoms.h main.h kwin.upd pop.wav cr16-app-kwin.png pluginlibFix.pl placement.h plugins.h events.h kwinbindings.cpp LICENSE popupinfo.h cr48-app-kwin.png tabbox.h 
+-KDE_DIST=stdclient_bitmaps.h pluginlibFix.pl pop.wav cr16-app-kwin.png kwinbindings.cpp cr48-app-kwin.png LICENSE plugins.h placement.h atoms.h popupinfo.h kwin.upd eventsrc NEWCOLORSCHEME.README events.h main.h cr32-app-kwin.png killwindow.h tabbox.h 
 +KDE_DIST=pluginlibFix.pl kwin.upd plugins.h placement.h LICENSE killwindow.h cr32-app-kwin.png main.h popupinfo.h Makefile.in.rej NEWCOLORSCHEME.README cr48-app-kwin.png tabbox.h kwinbindings.cpp pop.wav stdclient_bitmaps.h events.h cr16-app-kwin.png atoms.h eventsrc 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -1079,12 +1090,12 @@ messages:
+@@ -1087,24 +1098,30 @@ messages:
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
  
@@ -188,54 +188,70 @@ $NetBSD: patch-dh,v 1.6 2003/07/30 13:35:00 markd Exp $
 +#>+ 1
 +mocs: workspace.moc
  #>+ 3
- client.moc: $(srcdir)/client.h
- 	$(MOC) $(srcdir)/client.h -o client.moc
-@@ -1092,18 +1103,6 @@ client.moc: $(srcdir)/client.h
+-tabbox.moc: $(srcdir)/tabbox.h
+-	$(MOC) $(srcdir)/tabbox.h -o tabbox.moc
++client.moc: $(srcdir)/client.h
++	$(MOC) $(srcdir)/client.h -o client.moc
+ 
  #>+ 1
- mocs: client.moc
+-mocs: tabbox.moc
++mocs: client.moc
  #>+ 3
--plugins.moc: $(srcdir)/plugins.h
--	$(MOC) $(srcdir)/plugins.h -o plugins.moc
--
--#>+ 1
--mocs: plugins.moc
--#>+ 3
 -workspace.moc: $(srcdir)/workspace.h
 -	$(MOC) $(srcdir)/workspace.h -o workspace.moc
--
--#>+ 1
--mocs: workspace.moc
--#>+ 3
- options.moc: $(srcdir)/options.h
- 	$(MOC) $(srcdir)/options.h -o options.moc
++options.moc: $(srcdir)/options.h
++	$(MOC) $(srcdir)/options.h -o options.moc
  
-@@ -1128,8 +1127,20 @@ kwinbutton.moc: $(srcdir)/kwinbutton.h
+ #>+ 1
+-mocs: workspace.moc
++mocs: options.moc
++#>+ 3
++tabbox.moc: $(srcdir)/tabbox.h
++	$(MOC) $(srcdir)/tabbox.h -o tabbox.moc
++
++#>+ 1
++mocs: tabbox.moc
+ #>+ 3
+ popupinfo.moc: $(srcdir)/popupinfo.h
+ 	$(MOC) $(srcdir)/popupinfo.h -o popupinfo.moc
+@@ -1118,26 +1135,20 @@ kwinbutton.moc: $(srcdir)/kwinbutton.h
  #>+ 1
  mocs: kwinbutton.moc
  #>+ 3
-+plugins.moc: $(srcdir)/plugins.h
-+	$(MOC) $(srcdir)/plugins.h -o plugins.moc
-+
-+#>+ 1
-+mocs: plugins.moc
+-client.moc: $(srcdir)/client.h
+-	$(MOC) $(srcdir)/client.h -o client.moc
+-
+-#>+ 1
+-mocs: client.moc
+-#>+ 3
+ plugins.moc: $(srcdir)/plugins.h
+ 	$(MOC) $(srcdir)/plugins.h -o plugins.moc
+ 
+ #>+ 1
+ mocs: plugins.moc
+-#>+ 3
+-options.moc: $(srcdir)/options.h
+-	$(MOC) $(srcdir)/options.h -o options.moc
 +#>+ 5
 +KWinInterface.kidl: $(srcdir)/KWinInterface.h $(DCOP_DEPENDENCIES)
 +	$(DCOPIDL) $(srcdir)/KWinInterface.h > KWinInterface.kidl || ( rm -f KWinInterface.kidl ; false )
 +KWinInterface_skel.cpp: KWinInterface.kidl
 +	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub KWinInterface.kidl
-+
-+#>+ 3
+ 
+-#>+ 1
+-mocs: options.moc
+ #>+ 3
  clean-metasources:
--	-rm -f  client.moc plugins.moc workspace.moc options.moc tabbox.moc popupinfo.moc kwinbutton.moc
+-	-rm -f  tabbox.moc workspace.moc popupinfo.moc kwinbutton.moc client.moc plugins.moc options.moc
 +	-rm -f  workspace.moc client.moc options.moc tabbox.moc popupinfo.moc kwinbutton.moc plugins.moc
  
  #>+ 4
  clean-idl:
-@@ -1161,33 +1172,33 @@ force-reedit:
+@@ -1169,33 +1180,33 @@ force-reedit:
  
  
  #>+ 11
--kwin_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/workspace.cpp $(srcdir)/placement.cpp $(srcdir)/atoms.cpp $(srcdir)/client.cpp $(srcdir)/main.cpp $(srcdir)/popupinfo.cpp $(srcdir)/tabbox.cpp $(srcdir)/options.cpp $(srcdir)/plugins.cpp $(srcdir)/events.cpp $(srcdir)/killwindow.cpp $(srcdir)/kwinbutton.cpp KWinInterface_skel.cpp  client.moc workspace.moc plugins.moc options.moc tabbox.moc popupinfo.moc kwinbutton.moc
+-kwin_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/workspace.cpp $(srcdir)/placement.cpp $(srcdir)/atoms.cpp $(srcdir)/client.cpp $(srcdir)/main.cpp $(srcdir)/popupinfo.cpp $(srcdir)/tabbox.cpp $(srcdir)/options.cpp $(srcdir)/plugins.cpp $(srcdir)/events.cpp $(srcdir)/killwindow.cpp $(srcdir)/kwinbutton.cpp KWinInterface_skel.cpp  workspace.moc tabbox.moc kwinbutton.moc popupinfo.moc plugins.moc client.moc options.moc
 -	@echo 'creating kwin_la.all_cpp.cpp ...'; \
 -	rm -f kwin_la.all_cpp.files kwin_la.all_cpp.final; \
 -	echo "#define KDE_USE_FINAL 1" >> kwin_la.all_cpp.final; \
@@ -278,29 +294,30 @@ $NetBSD: patch-dh,v 1.6 2003/07/30 13:35:00 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -1197,17 +1208,17 @@ kde-rpo-clean:
+@@ -1205,17 +1216,17 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 15
-+workspace.o: workspace.moc 
-+options.lo: options.moc 
-+tabbox.o: tabbox.moc 
-+popupinfo.lo: popupinfo.moc 
-+options.o: options.moc 
- kwinbutton.lo: kwinbutton.moc 
- tabbox.lo: tabbox.moc 
--options.o: options.moc 
--client.lo: client.moc 
--client.o: client.moc 
--options.lo: options.moc 
- kwinbutton.o: kwinbutton.moc 
--tabbox.o: tabbox.moc 
--popupinfo.o: popupinfo.moc 
--workspace.o: workspace.moc 
-+client.o: client.moc 
- plugins.o: plugins.moc 
- workspace.lo: workspace.moc 
 -popupinfo.lo: popupinfo.moc 
++workspace.o: workspace.moc 
+ options.lo: options.moc 
+-popupinfo.o: popupinfo.moc 
+-plugins.lo: plugins.moc 
+-kwinbutton.lo: kwinbutton.moc 
+ tabbox.o: tabbox.moc 
+-workspace.o: workspace.moc 
+-client.o: client.moc 
++popupinfo.lo: popupinfo.moc 
+ options.o: options.moc 
+-plugins.o: plugins.moc 
+-client.lo: client.moc 
+-kwinbutton.o: kwinbutton.moc 
++kwinbutton.lo: kwinbutton.moc 
+ tabbox.lo: tabbox.moc 
++kwinbutton.o: kwinbutton.moc 
++client.o: client.moc 
++plugins.o: plugins.moc 
+ workspace.lo: workspace.moc 
 +client.lo: client.moc 
 +popupinfo.o: popupinfo.moc 
- plugins.lo: plugins.moc 
++plugins.lo: plugins.moc 

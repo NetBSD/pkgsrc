@@ -1,8 +1,8 @@
-$NetBSD: patch-eb,v 1.4 2003/03/11 13:10:28 markd Exp $
+$NetBSD: patch-eb,v 1.5 2004/01/15 10:15:14 markd Exp $
 
---- kwin/clients/redmond/Makefile.in.orig	Fri Jan 17 09:03:12 2003
+--- kwin/clients/redmond/Makefile.in.orig	2003-12-17 14:22:33.000000000 +1300
 +++ kwin/clients/redmond/Makefile.in
-@@ -290,7 +290,7 @@ INCLUDES = $(all_includes)
+@@ -428,7 +428,7 @@ INCLUDES = $(all_includes)
  kde_module_LTLIBRARIES = kwin_redmond.la
  
  kwin_redmond_la_SOURCES = redmond.cpp
@@ -11,7 +11,7 @@ $NetBSD: patch-eb,v 1.4 2003/03/11 13:10:28 markd Exp $
  kwin_redmond_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN) -module
  
  #>- METASOURCES = AUTO
-@@ -306,7 +306,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -445,7 +445,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES)
  
@@ -20,10 +20,12 @@ $NetBSD: patch-eb,v 1.4 2003/03/11 13:10:28 markd Exp $
  am_kwin_redmond_la_OBJECTS = redmond.lo
  #>- kwin_redmond_la_OBJECTS = $(am_kwin_redmond_la_OBJECTS)
  #>+ 1
-@@ -676,5 +676,5 @@ kde-rpo-clean:
- 	-rm -f *.rpo
+@@ -660,7 +660,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=redmond.desktop 
++KDE_DIST=Makefile.in.rej redmond.desktop 
  
- #>+ 3
--redmond.lo: redmond.moc 
- redmond.o: redmond.moc 
-+redmond.lo: redmond.moc 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
