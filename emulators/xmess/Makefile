@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2003/07/17 21:36:32 grant Exp $
+# $NetBSD: Makefile,v 1.39 2003/07/19 21:02:07 kristerw Exp $
 #
 
-DISTNAME=		xmame-0.70.1
-PKGNAME=		xmess-0.70.1
+DISTNAME=		xmame-0.71.1
+PKGNAME=		xmess-0.71.1
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -95,7 +95,7 @@ post-configure:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${TARGET}.${MAME_DISP_METHOD}	\
 		${PREFIX}/bin/${TARGET}
-	${INSTALL_MAN} ${WRKSRC}/doc/xmame.6				\
+	${INSTALL_MAN} ${WRKSRC}/doc/${TARGET}.6			\
 		${PREFIX}/man/man6/${TARGET}.6
 	${INSTALL_DATA_DIR} ${ROMPATH}
 	${INSTALL_DATA} ${WRKSRC}/doc/${TARGET}rc ${ROMPATH}/${TARGET}rc
