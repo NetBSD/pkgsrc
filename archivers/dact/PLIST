@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:24:19 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/12/23 08:05:35 jmmv Exp $
 bin/dact
-etc/dact.conf.sample
 man/man1/dact.1
+share/examples/dact/dact.conf
+@dirrm share/examples/dact
