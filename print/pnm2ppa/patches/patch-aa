@@ -1,59 +1,49 @@
-$NetBSD: patch-aa,v 1.2 2003/01/19 08:45:39 salo Exp $
+$NetBSD: patch-aa,v 1.3 2003/09/17 18:40:48 jmmv Exp $
 
---- Makefile.orig	Thu Nov  2 19:33:08 2000
-+++ Makefile	Sun Jan 19 09:01:19 2003
-@@ -2,16 +2,17 @@
- # Makefile for pnm2ppa
- #
+--- Makefile.orig	2002-11-16 00:29:29.000000000 +0100
++++ Makefile
+@@ -5,14 +5,13 @@
+ # paths to locations where the pnm2ppa binary, the configuration file,
+ # and the man page should be installed.   On some systems (like Solaris)
+ # the install command requires the syntax BINDIR="-f /usr/local/bin".
+-BINDIR="/usr/local/bin"
+-CONFDIR="/etc"
+-MANDIR="/usr/local/man/man1"
++BINDIR="${PREFIX}/bin"
++CONFDIR="${PKG_SYSCONFDIR}"
++MANDIR="${PREFIX}/man/man1"
  
--INSTALLDIR=/usr/local/bin
--CONFDIR=/etc
--MANDIR=/usr/local/man/man1
-+INSTALLDIR=${PREFIX}/bin
-+CONFDIR=${PKG_SYSCONFDIR}
-+MANDIR=${PREFIX}/man/man1
- 
+ #compiler and linker options:
 -CC=gcc
--INSTALL=install
-+#CC=gcc
-+#INSTALL=install
- 
- # production build
-+CPPFLAGS=-I${PREFIX}/include
- CFLAGS=-Wall -pedantic -O2 -g -DNDEBUG 
+-CFLAGS=-Wall -pedantic -O2  
 -LDFLAGS=-lm
-+LDFLAGS=-lm #-L${PREFIX}/lib -R${PREFIX}/lib
- OBJS = pnm2ppa.o syslog.o ppa.o image.o dither.o cutswath.o hash_ink.o gamma.o
- SRC =  pnm2ppa.c syslog.c ppa.c image.c dither.c cutswath.c hash_ink.c gamma.c
++CFLAGS+= $(CPPFLAGS) -DPKG_SYSCONFDIR=\"${PKG_SYSCONFDIR}\"
++LDFLAGS+=-lm
  
-@@ -89,23 +90,21 @@
+ INSTALL=install
+ # Install under Linux and other versions with the -b (backup) option
+@@ -104,19 +103,15 @@ clean:
  
  
- install: pnm2ppa calibrate_ppa 
--	$(INSTALL) -m 755 pnm2ppa $(INSTALLDIR)
+ install: pnm2ppa calibrate_ppa
+-	$(INSTALLD) $(BINDIR)
+-	$(INSTALLD) $(CONFDIR)
 -	$(INSTALLD) $(MANDIR)
+-	$(INSTALL) -m 755 pnm2ppa  $(BINDIR)
 -	$(INSTALL) -m 644 docs/en/pnm2ppa.1 $(MANDIR)
-+	${BSD_INSTALL_PROGRAM} -m 755 pnm2ppa $(INSTALLDIR)
-+	${BSD_INSTALL_MAN} -m 644 docs/en/pnm2ppa.1 $(MANDIR)
++	$(BSD_INSTALL_PROGRAM) -m 755 pnm2ppa  $(BINDIR)
++	$(BSD_INSTALL_MAN) -m 644 docs/en/pnm2ppa.1 $(MANDIR)
  # development only - allows root to edit
--	$(INSTALL) -m 644 pnm2ppa.conf $(CONFDIR)
-+	${BSD_INSTALL_DATA_DIR} $(PREFIX)/share/examples/pnm2ppa
-+	${BSD_INSTALL_DATA} -m 644 pnm2ppa.conf $(PREFIX)/share/examples/pnm2ppa/pnm2ppa.conf.default
+-	$(INSTALL) -m 644 pnm2ppa.conf  $(CONFDIR)
++	$(BSD_INSTALL_DATA_DIR) $(PREFIX)/share/examples/pnm2ppa
++	$(BSD_INSTALL_DATA) -m 644 pnm2ppa.conf  $(PREFIX)/share/examples/pnm2ppa
  # calibration tool
--	$(INSTALL) -m 755 calibrate_ppa $(INSTALLDIR) 
-+	${BSD_INSTALL_PROGRAM} -m 755 calibrate_ppa $(INSTALLDIR)
+-	$(INSTALL) -m 755 calibrate_ppa $(BINDIR) 
++	$(BSD_INSTALL_PROGRAM) -m 755 calibrate_ppa $(BINDIR) 
  # final production - much tighter
--#	$(INSTALL) -m 444 pnm2ppa.conf $(CONFDIR)
+ #	$(INSTALL) -m 444 pnm2ppa.conf $(CONFDIR)
 -	@@echo 
 -	@@echo Now, edit /etc/pnm2ppa.conf to choose your printer
-+#	${BSD_INSTALL_DATA} -m 444 pnm2ppa.conf $(CONFDIR)/pnm2ppa.conf.default
  
  uninstall: 
- 	rm -f $(INSTALLDIR)/pnm2ppa
- 	rm -f $(INSTALLDIR)/calibrate_ppa
- 	rm -f $(MANDIR)/pnm2ppa.1
--	rm -f $(CONFDIR)/pnm2ppa.conf
-+	rm -f $(CONFDIR)/pnm2ppa.conf.default
- 
- pnm2ppa: $(OBJS) 
- 	$(CC) $(LDFLAGS) $(CFLAGS) -o pnm2ppa $(OBJS)
+ 	rm -f $(BINDIR)/pnm2ppa

@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2003/09/17 18:40:45 jmmv Exp $
+
+You *must* edit the default ${PKG_SYSCONFDIR}/pnm2ppa.conf configuration
+file to get this package working.
+
+===========================================================================
