@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/06/20 21:06:21 tron Exp $
+# $NetBSD: Makefile,v 1.17 1999/07/13 01:20:13 jlam Exp $
 #
 
 DISTNAME=		coda-5.2.4
@@ -10,8 +10,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		rvb@cs.cmu.edu
 HOMEPAGE=		http://www.coda.cs.cmu.edu/
 
-DEPENDS=		gdbm-1.7.3:../../databases/gdbm \
-			readline-2.2:../../devel/readline
+DEPENDS+=		gdbm-1.7.3:../../databases/gdbm
+DEPENDS+=		readline-4.0:../../devel/readline
 
 ONLY_FOR_PLATFORM=	NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-ns32k
 
