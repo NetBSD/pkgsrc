@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2461 2004/11/25 19:28:06 minskim Exp $
+$NetBSD: TODO,v 1.2462 2004/11/25 19:34:58 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -1135,6 +1135,7 @@ Suggested package updates
 	o qt2-examples-2.3.2
 	o qt2-libs-2.3.2
 	o quagga-0.97.0
+	o quake2forge-0.3
 	o quakedata-108
 	o qvplay-0.95
 	o qwspritefield-1.7
