@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9613 2005/03/24 19:23:50 wiz Exp $
+$NetBSD: CHANGES,v 1.9614 2005/03/24 21:26:45 nathanw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1721,3 +1721,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated rt3 to 3.2.3 [cube 2005-03-24]
 	Added systrace-policies-1.1 [agc 2005-03-24]
 	Updated p5-HTML-TableExtract to 1.10 [chris 2005-03-24]
+	Added libotr-2.0.1 [nathanw 2005-03-24]
+	Added gaim-otr-2.0.1 [nathanw 2005-03-24]
