@@ -1,4 +1,4 @@
-dnl $Id: configure.ac,v 1.6 2004/08/22 05:51:55 jlam Exp $
+dnl $Id: configure.ac,v 1.7 2004/08/23 02:58:58 jlam Exp $
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.57)
 AC_INIT([nbsed],[20040821],[agc@NetBSD.org])
@@ -32,6 +32,7 @@ dnl Check for functions
 AC_CHECK_FUNCS(fgetln)
 AC_CHECK_FUNCS(regcomp)
 AC_CHECK_FUNCS(regexec)
+AC_CHECK_FUNCS(memcpy)
 AC_CHECK_FUNCS(getprogname)
 AC_CHECK_FUNCS(setprogname)
 
@@ -42,98 +43,6 @@ AC_TYPE_SIZE_T
 
 # Checks for library functions.
 AC_FUNC_STRERROR_R
-AC_FUNC_VPRINTF
-AC_CHECK_FUNCS([bcopy bzero memset memcpy setlocale])
-#
-AH_BOTTOM([
-
-#ifndef HAVE___ATTRIBUTE__
-# define __attribute__(x)
-#endif
-
-#ifdef HAVE_SYS_CDEFS_H
-#include <sys/cdefs.h>
-#endif
-
-#ifndef __IDSTRING
-# define __IDSTRING(name,string) \
-       static const char name[] __attribute__((__unused__)) = string
-#endif
-
-#ifndef  __RCSID
-# define __RCSID(_s)     __IDSTRING(rcsid,_s)
-#endif
-
-#ifndef __COPYRIGHT
-# define __COPYRIGHT(_s) __IDSTRING(copyright,_s)
-#endif
-
-#ifndef __P
-# if defined(__STDC__) || defined(__cplusplus)
-#  define __P(protos)     protos          /* full-blown ANSI C */
-# else
-#  define __P(protos)     ()              /* traditional C preprocessor */
-# endif
-#endif
-
-#ifndef __CONCAT
-#  if defined(__STDC__) || defined(__cplusplus)
-#  define __CONCAT(x,y)   x ## y
-# else
-#  define __CONCAT(x,y)   x/**/y
-# endif
-#endif
-
-#ifndef __BEGIN_DECLS
-# if defined(__cplusplus)
-#  define __BEGIN_DECLS   extern "C" {
-# else
-#  define __BEGIN_DECLS
-# endif
-#endif
-
-#ifndef __END_DECLS
-# if defined(__cplusplus)
-#  define __END_DECLS     };
-# else
-#  define __END_DECLS
-# endif
-#endif
-
-#ifdef HAVE_SYS_PARAM_H
-#include <sys/param.h>
-#endif
-
-#if defined(HAVE_MEMSET)
-#define MEMSET_BZERO(p,l)	memset((p), 0, (l))
-#else
-# if defined(HAVE_BZERO)
-#define MEMSET_BZERO(p,l)	bzero((p), (l))
-# else
-#error You need either memset or bzero
-# endif
-#endif
-
-#if defined(HAVE_MEMCPY)
-#define MEMCPY_BCOPY(d,s,l)	memcpy((d), (s), (l))
-#else
-# if defined(HAVE_BCOPY)
-#define MEMCPY_BCOPY(d,s,l)	bcopy((s), (d), (l))
-# else
-#error You need either memcpy or bcopy
-# endif
-#endif
-
-#ifndef DEFFILEMODE
-# define DEFFILEMODE     (S_IRUSR|S_IWUSR|S_IRGRP|S_IWGRP|S_IROTH|S_IWOTH)
-#endif
-
-#include <stdio.h>
-
-#ifndef HAVE_FGETLN
-char *fgetln(FILE *, size_t *);
-#endif
-])
 
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
