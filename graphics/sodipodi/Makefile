@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2002/09/10 16:06:43 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2002/09/12 00:43:49 wiz Exp $
 #
 
-DISTNAME=	sodipodi-0.23
-PKGREVISION=	2
+DISTNAME=	sodipodi-0.25
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sodipodi/}
 
@@ -11,23 +10,21 @@ HOMEPAGE=	http://www.gnome.org/gnome-office/sodipodi.shtml
 COMMENT=	Open source vector graphics drawing program using SVG as native format
 
 GNU_CONFIGURE=		YES
-# -I/usr/pkg/include is added to CFLAGS somehow
-#USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 USE_X11BASE=		YES
 
 PTHREAD_OPTS+=		require
 
-.include "../../devel/bonobo/buildlink.mk"
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../devel/gal/buildlink.mk"
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../net/ORBit/buildlink.mk"
-.include "../../print/gnome-print/buildlink.mk"
-.include "../../textproc/libxml/buildlink.mk"
-.include "../../x11/gnome-libs/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
-.include "../../mk/pthread.buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/bonobo/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gal/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../net/ORBit/buildlink2.mk"
+.include "../../print/gnome-print/buildlink2.mk"
+.include "../../textproc/libxml/buildlink2.mk"
+.include "../../x11/gnome-libs/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
