@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2001/06/11 06:34:37 jlam Exp $
+# $NetBSD: Makefile,v 1.50 2001/06/16 19:57:12 jlam Exp $
 #
 
 DISTNAME=		imlib-1.9.8.1
@@ -11,12 +11,6 @@ COMMENT=		image manipulation library for X11
 
 BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 BUILD_DEPENDS+=		automake-1.4:../../devel/automake
-DEPENDS+=		gtk+-1.2.*:../../x11/gtk
-DEPENDS+=		libungif-*:../../graphics/libungif
-DEPENDS+=		jpeg-6b:../../graphics/jpeg
-DEPENDS+=		netpbm-*:../../graphics/netpbm
-DEPENDS+=		png>=1.0.11:../../graphics/png
-DEPENDS+=		tiff>=3.5.4:../../graphics/tiff
 
 USE_X11BASE=		yes
 USE_LIBTOOL=		yes
@@ -24,19 +18,29 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		yes
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 USE_GMAKE=		yes
+USE_CONFIG_WRAPPER=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS"
-CPPFLAGS=		-DENABLE_NLS
-.endif
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../graphics/jpeg/buildlink.mk"
+.include "../../graphics/libungif/buildlink.mk"
+.include "../../graphics/netpbm/buildlink.mk"
+.include "../../graphics/png/buildlink.mk"
+.include "../../graphics/tiff/buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"
 
-CPPFLAGS+=		-I${LOCALBASE}/include
+CPPFLAGS+=		-DENABLE_NLS
+CONFIGURE_ENV+=		ac_cv_path_CONVERT_PROG="${LOCALBASE}/bin/convert"
+CONFIGURE_ENV+=		X_LDFLAGS="${X_LDFLAGS}"
+
+# The following ensures that `imlib-config --libs' includes the correct
+# linker flags for linking the X11 libs.
+#
+X_LDFLAGS=		-Wl,-R${X11BASE}/lib -L${X11BASE}/lib
 
 pre-configure:
-	cd ${WRKSRC} && ${SED} "s|@LOCALBASE@|${LOCALBASE}|" configure.in \
-		> configure.in.tmp && ${MV} configure.in.tmp configure.in
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf && ${LOCALBASE}/bin/automake
+	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf --include-deps --force
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/imlib
