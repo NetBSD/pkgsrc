@@ -1,26 +1,28 @@
-# $NetBSD: Makefile,v 1.4 2001/10/12 10:51:51 simonb Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/11 00:47:28 uebayasi Exp $
 
-DISTNAME=       dictd-1.5.5
-PKGNAME=	dict-server-1.5.5
+DISTNAME=       dictd-1.8.0
+PKGNAME=	dict-server-1.8.0
 CATEGORIES=	textproc
-MASTER_SITES=	ftp://ftp.dict.org/pub/dict/ \
-		ftp://ftp.dict.org/pub/dict/pre/
+MASTER_SITES=	ftp://ftp.dict.org/pub/dict/
+#MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=/dict}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
-		dict-gazetteer-1.2-pre.tar.gz \
-		dict-misc-1.5-pre.tar.gz \
-		dict-web1913-1.4-pre.tar.gz \
-		dict-wn-1.5-pre.tar.gz
+		dict-gazetteer-1.3.tar.gz \
+		dict-misc-1.5.tar.gz \
+		dict-web1913-1.4.tar.gz \
+		web1913-0.46-a.tar.gz \
+		dict-wn-1.5.tar.gz
 
 MAINTAINER=	mike@ethmoid.org
 HOMEPAGE=	http://www.dict.org/
 COMMENT=	Dictionary Service Protocol server
 
-USE_GMAKE=		yes
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-etcdir=${PREFIX}/etc
+USE_BUILDLINK2=	# defined
+USE_GMAKE=	# defined
+GNU_CONFIGURE=	# defined
+CONFIGURE_ARGS+=--with-etcdir=${PREFIX}/etc
 
 ALL_TARGET=	dictd dictzip
-INSTALL_TARGET=	install.dictd install.dictzip
+INSTALL_TARGET=	install.dictd install.dictzip install.dictfmt
 
 LEXICONS=	easton.dict.dz \
 		easton.index \
@@ -28,25 +30,60 @@ LEXICONS=	easton.dict.dz \
 		elements.index \
 		foldoc.dict.dz \
 		foldoc.index \
-		gazetteer.dict.dz \
-		gazetteer.index \
 		hitchcock.dict.dz \
 		hitchcock.index \
 		jargon.dict.dz \
 		jargon.index \
-		web1913.dict.dz \
-		web1913.index \
-		wn.dict.dz \
-		wn.index \
 		world95.dict.dz \
 		world95.index
+GAZETTEER=	gazetteer.dict.dz \
+		gazetteer.index
+WEB1913=	web1913.dict.dz \
+		web1913.index
+WN=		wn.dict.dz \
+		wn.index
+
+# A symbol T_USER is defined in trap.h so...
+post-patch:
+	${GREP} -lr T_USER ${WRKSRC} | \
+	while read f; do \
+		${MV} $$f $${f}.orig; \
+		${SED} \
+		    -e 's/T_USER/T_XUSER/g' \
+		    -e 's/DICT_XUSER/DICT_USER/g' \
+		    $${f}.orig >$$f; \
+	done
+
+# Build dictinaries
+post-build:
+	@${LN} -s ${WRKDIR}/web-1913-0.46a ${WRKDIR}/dict-web1913-1.4/web1913
+	@for d in dict-misc-1.5 dict-gazetteer-1.3 dict-web1913-1.4 dict-wn-1.5; do \
+		(cd $$d; \
+		    ${SH} configure; \
+		    ${MAKE_PROGRAM} db; \
+		); \
+	done
 
 post-install:
 	${SED} "s#/usr/lib/dict#${PREFIX}/share/dictd#" \
 		${WRKSRC}/dictd.conf >${PREFIX}/etc/dictd.conf
 	${INSTALL_DATA_DIR} ${PREFIX}/share/dictd
-.for FILE in ${LEXICONS}
-		${INSTALL_DATA} ${WRKDIR}/${FILE} ${PREFIX}/share/dictd
-.endfor
+	for f in ${LEXICONS}; do \
+		${INSTALL_DATA} ${WRKDIR}/dict-misc-1.5/$$f \
+		    ${PREFIX}/share/dictd; \
+	done
+	for f in ${GAZETTEER}; do \
+		${INSTALL_DATA} ${WRKDIR}/dict-gazetteer-1.3/$$f \
+		    ${PREFIX}/share/dictd; \
+	done
+	for f in ${WEB1913}; do \
+		${INSTALL_DATA} ${WRKDIR}/dict-web1913-1.4/$$f \
+		    ${PREFIX}/share/dictd; \
+	done
+	for f in ${WN}; do \
+		${INSTALL_DATA} ${WRKDIR}/dict-wn-1.5/$$f \
+		    ${PREFIX}/share/dictd; \
+	done
 
+.include "../../devel/libtool/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

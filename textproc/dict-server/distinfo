@@ -1,23 +1,24 @@
-$NetBSD: distinfo,v 1.4 2001/10/12 10:51:51 simonb Exp $
+$NetBSD: distinfo,v 1.5 2002/10/11 00:47:29 uebayasi Exp $
 
-SHA1 (dictd-1.5.5.tar.gz) = 542514feaf9a8e0c1050a2faba1ffee3b4150ee0
-Size (dictd-1.5.5.tar.gz) = 531110 bytes
-SHA1 (dict-gazetteer-1.2-pre.tar.gz) = bca7f242a0fac591fd8e271faf0b90e1fe59d106
-Size (dict-gazetteer-1.2-pre.tar.gz) = 2209944 bytes
-SHA1 (dict-misc-1.5-pre.tar.gz) = 169a860058bb6c262f70ca107c77eda5a6001daa
-Size (dict-misc-1.5-pre.tar.gz) = 4682231 bytes
-SHA1 (dict-web1913-1.4-pre.tar.gz) = 2f2a0103d03b91d1df5893339daf86cf3f881709
-Size (dict-web1913-1.4-pre.tar.gz) = 13147422 bytes
-SHA1 (dict-wn-1.5-pre.tar.gz) = 9f8ee64792e4a6a3700f3093ef98f8467c89539d
-Size (dict-wn-1.5-pre.tar.gz) = 8464107 bytes
-SHA1 (patch-aa) = 79bb027b5e0c72dd30e885245c4d9c5a7c11d794
-SHA1 (patch-ab) = eaf3a1899a5ad68461ac32ae4ce0deea494b04c4
-SHA1 (patch-ac) = 997e44984a0e7aa55cc757ae0f9b8a89993b1f1d
+SHA1 (dictd-1.8.0.tar.gz) = c8318ae83a540d336405db126ff04bfc60b60ffc
+Size (dictd-1.8.0.tar.gz) = 574796 bytes
+SHA1 (dict-gazetteer-1.3.tar.gz) = d46d3e0aeb956bb2b49e1ec1cda271017eed94c4
+Size (dict-gazetteer-1.3.tar.gz) = 2857457 bytes
+SHA1 (dict-misc-1.5.tar.gz) = faa183a736da3809719bb513c2df4c6b9814e51f
+Size (dict-misc-1.5.tar.gz) = 4204499 bytes
+SHA1 (dict-web1913-1.4.tar.gz) = 727751063813fbdc67f8f2a42933d8c9bf35689b
+Size (dict-web1913-1.4.tar.gz) = 293649 bytes
+SHA1 (web1913-0.46-a.tar.gz) = 56d6b00b79ab31c4104862b44be8c9287babecb1
+Size (web1913-0.46-a.tar.gz) = 13795530 bytes
+SHA1 (dict-wn-1.5.tar.gz) = 56cfd7200e4149504376b280e36aa37abcbe054e
+Size (dict-wn-1.5.tar.gz) = 6363650 bytes
+SHA1 (patch-ab) = ad9343e6fad32d9c8f6ccc221ff1fe035ace4551
+SHA1 (patch-ac) = 4239819d518ccbe4b279376f7a8b2f52028b18b9
 SHA1 (patch-ad) = 75d08ce1778898edcd52b4b94c974aba54f769a7
 SHA1 (patch-ae) = 1b161f8c52a6029f0af2ddb824fc23ee5f867cff
-SHA1 (patch-af) = 9858bfc0cbed9c32d6b4e15ddc468a584e4916e9
 SHA1 (patch-ag) = 4473d472bddc34c5d5be2d6be6a0cee015717a79
 SHA1 (patch-ah) = d3453553e15858054bce4943a0316d485938806a
 SHA1 (patch-ai) = 21b2c9ace814e005139c64c4b6890e8b7e249f29
 SHA1 (patch-aj) = 76527be1d4ff89aeec72606d9575a99e6a8e2d3b
 SHA1 (patch-ak) = 4167c9007ed7b31ff9a29b368d82154bc95893cf
+SHA1 (patch-al) = 5fe89cafc86aea846f949566739d2dfde2b74adf
