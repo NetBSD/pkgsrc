@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/06/08 17:54:25 bad Exp $
+# $NetBSD: Makefile,v 1.3 1999/06/08 18:04:10 bad Exp $
 
 DISTNAME=		majordomo-1.94.4
 CATEGORIES=		mail
@@ -38,6 +38,40 @@ EXDIRS=			archives archives/example-l digests digests/example-l-digest lists
 EXFILES=		example-l.passwd example-l.info
 EXLISTS=		example-l example-l-digest
 
+require-uid:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if finger ${MAJORDOMO_USER} 2>&1 | ${GREP} "Login: ${MAJORDOMO_USER}" >/dev/null && ${GREP} -s "^${MAJORDOMO_GROUP}\:" /etc/group 2>/dev/null 1>&2 ; \
+	then \
+	:; \
+	else \
+		${MAKE} ${.MAKEFLAGS} su-require-uid; \
+	fi
+
+su-require-uid:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ `${ID} -u` = 0 ]; then					\
+		${MAKE} ${.MAKEFLAGS} root-require-uid;			\
+	elif [ "X${BATCH}" != X"" ]; then				\
+		${ECHO_MSG} "Warning: Batch mode, not superuser, can't create majordomo user."; \
+		${ECHO_MSG} "Become root and try again."; \
+	else								\
+		make=`${TYPE} ${MAKE} | ${AWK} '{ print $$NF }'`;	\
+		args="";						\
+		if [ "X${PKG_DEBUG_LEVEL}" != X"" ]; then		\
+			args="$$args PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL}"; \
+		fi;							\
+		if [ "X${PRE_ROOT_CMD}" != "X${TRUE}" ]; then		\
+			${ECHO} "*** WARNING *** Running: ${PRE_ROOT_CMD}"; \
+			${PRE_ROOT_CMD};				\
+		fi;                                             	\
+		${ECHO_MSG} "===>  Becoming root@`/bin/hostname` to create majordomo user."; \
+		${ECHO_MSG} -n "`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'` ";\
+		${SU_CMD} "cd ${.CURDIR}; $$make $$args ${.MAKEFLAGS} root-require-uid"; \
+	fi
+
+root-require-uid:
+	@${SH} ${REQ_FILE} ${PKGNAME} INSTALL
+
 do-configure:
 	@${SED} \
 		-e 's|@MAJORDOMO_USER@|${MAJORDOMO_USER}|g' \
@@ -45,7 +79,7 @@ do-configure:
 		-e 's|@HOME@|${HOMEDIR}|g' \
 		-e 's|@LOCALBASE@|${LOCALBASE}|g' \
 		< ${PKGDIR}/REQ > ${REQ_FILE}
-	@${SH} ${REQ_FILE} ${PKGNAME} INSTALL
+	@${MAKE} ${.MAKEFLAGS} require-uid
 	@${SED} \
 		-e 's:@PREFIX@:${PREFIX}:g' \
 		-e 's:@LOCALBASE@:${LOCALBASE}:g' \
