@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.2 2003/04/25 21:08:41 seb Exp $
+# $NetBSD: Makefile.common,v 1.3 2003/04/26 08:33:00 seb Exp $
 #
 
-CFENGINE_VERSION= 2.0.4
+CFENGINE_VERSION= 2.0.6
 DISTNAME=	cfengine-${CFENGINE_VERSION}
 CATEGORIES=	sysutils net
 MASTER_SITES=	ftp://ftp.iu.hio.no/pub/cfengine/ \
@@ -9,3 +9,6 @@ MASTER_SITES=	ftp://ftp.iu.hio.no/pub/cfengine/ \
 
 MAINTAINER=	mike@ethmoid.org
 HOMEPAGE=	http://www.cfengine.org/
+
+DISTINFO_FILE=	${.CURDIR}/../../sysutils/cfengine2/distinfo
+PATCHDIR=	${.CURDIR}/../../sysutils/cfengine2/patches
