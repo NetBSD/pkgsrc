@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/08/10 12:51:53 mjl Exp $
+$NetBSD: distinfo,v 1.2 2002/07/26 12:09:20 mjl Exp $
 
-SHA1 (XML-XQL-0.66.tar.gz) = a29b0e1ea949f05da23c78c49d1fd74e5fe7ee01
-Size (XML-XQL-0.66.tar.gz) = 124602 bytes
+SHA1 (XML-XQL-0.67.tar.gz) = 50cb653b152089469db5a0e499eaee5684a9e739
+Size (XML-XQL-0.67.tar.gz) = 124801 bytes
