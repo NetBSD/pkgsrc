@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/04/28 05:06:28 snj Exp $
+# $NetBSD: Makefile,v 1.20 2004/05/03 21:41:36 reed Exp $
 
 DISTNAME=		cilk-5.3.1
 PKGREVISION=		2
@@ -31,7 +31,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/cilk
 	cd ${WRKSRC}/examples && ${INSTALL_DATA} *.cilk *.c *.input	\
 		${PREFIX}/share/examples/cilk
-	${INSTALL_DATA} ${WRKSRC}/FAQ/cilk-faq.info ${PREFIX}/info
+	${INSTALL_DATA} ${WRKSRC}/FAQ/cilk-faq.info ${PREFIX}/${INFO_DIR}
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
