@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/08/23 23:14:35 tron Exp $
+# $NetBSD: Makefile,v 1.4 2000/09/13 22:50:35 jlam Exp $
 #
 
 DISTNAME=	olvwm4.src4
@@ -9,15 +9,14 @@ MASTER_SITES=	http://www.akula.com/~jadler/sdo/olvwm/
 MAINTAINER=	w.wnuk@zodiac.mimuw.edu.pl
 HOMEPAGE=	http://www.akula.com/~jadler/sdo/olvwm/index.html
 
-DEPENDS+=	xview-lib-3.2.*:../xview-lib
-DEPENDS+=	xview-clients-3.2.*:../xview-clients
+DEPENDS+=	xview-lib>=3.2.1:../xview-lib
+DEPENDS+=	xview-clients>=3.2.1:../xview-clients
 
-USE_X11BASE=	YES
-USE_XPM=	YES
-USE_IMAKE=	YES
-NO_WRKSUBDIR=	YES
+USE_X11BASE=	# defined
+USE_XPM=	# defined
+USE_IMAKE=	# defined
+XMKMF=		${X11PREFIX}/bin/xvmkmf -a
 
-post-install:
-	${MV} ${PREFIX}/man/cat1/olvwmrc.1 ${PREFIX}/man/man1/olvwmrc.1
+NO_WRKSUBDIR=	# defined
 
 .include "../../mk/bsd.pkg.mk"

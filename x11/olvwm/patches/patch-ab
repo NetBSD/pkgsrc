@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/06/16 14:18:54 pooka Exp $
+$NetBSD: patch-ab,v 1.2 2000/09/13 22:50:36 jlam Exp $
 
 --- defaults.c.orig	Thu Mar  2 22:44:29 2000
 +++ defaults.c	Tue Jun  6 19:33:36 2000
@@ -27,7 +27,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/06/16 14:18:54 pooka Exp $
      }
  
 -    appDB = XrmGetFileDatabase("/usr/lib/X11/app-defaults/Olwm");
-+    appDB = XrmGetFileDatabase(X11BASE "/lib/X11/app-defaults/Olwm");
++    appDB = XrmGetFileDatabase(PREFIX "/lib/X11/app-defaults/Olwm");
      return appDB;
  }
  
