@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2004,v 1.5 2005/02/26 15:40:26 wiz Exp $
+$NetBSD: CHANGES-2004,v 1.6 2005/03/26 10:04:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5663,6 +5663,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated graphviz to 1.16 [seb 2004-11-29]
 	Updated sudo to 1.6.8pl5 [xtraeme 2004-11-29]
 	Updated transcalc to 0.14 [dmcmahill 2004-11-29]
+	Updated cdpd to 1.0.2 [explorer 2004-11-29]
 	Updated molden to 4.2 [minskim 2004-11-30]
 	Removed liece [uebayasi 2004-11-30]
 	Added riece-1.0.5 [uebayasi 2004-11-30]
