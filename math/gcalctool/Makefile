@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2005/01/12 21:51:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.33 2005/03/22 16:30:14 jmmv Exp $
 #
 
-DISTNAME=		gcalctool-4.4.22
+DISTNAME=		gcalctool-5.5.41
 CATEGORIES=		math gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gcalctool/4.4/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gcalctool/5.5/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		sab@posix.org.uk
@@ -22,6 +22,7 @@ USE_PKGLOCALEDIR=	yes
 GCONF2_SCHEMAS=		gcalctool.schemas
 
 .include "../../devel/GConf2/schemas.mk"
+.include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
