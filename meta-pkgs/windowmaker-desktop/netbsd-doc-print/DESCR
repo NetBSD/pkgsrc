@@ -1,0 +1,8 @@
+Meta-package that includes all packages needed for the NetBSD
+Documentation project to convert SGML/DocBook to PDF/PS.
+
+Excluded from netbsd-doc into a seperate package because it wants
+teTeX, which is rather large in size. 
+
+Nevertheless you'll need external PostScript and PDF previewers,
+e.g. Acrobat Reader, xpdf, gv, etc.
