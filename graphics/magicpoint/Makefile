@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 1999/06/16 16:21:26 itojun Exp $
+# $NetBSD: Makefile,v 1.8 1999/06/17 08:00:31 itojun Exp $
 
-DISTNAME=		magicpoint-1.04a
+DISTNAME=		magicpoint-1.05a
 # question is for localized (i.e. Japanese) version
-PKGNAME?=		magicpoint-1.04a
+PKGNAME?=		magicpoint-1.05a
 CATEGORIES=		x11 graphics
 MASTER_SITES=		ftp://ftp.mew.org/pub/MagicPoint/
 
@@ -15,7 +15,8 @@ CONFLICTS=		mgp-*
 
 GNU_CONFIGURE=		yes
 USE_IMAKE=		yes
-CONFIGURE_ARGS+=	--disable-vflib
+# question is for localized (i.e. Japanese) version
+CONFIGURE_ARGS?=	--disable-vflib
 
 post-configure:
 	(cd ${WRKSRC}/contrib/xmindpath; ./configure --prefix=${PREFIX})
