@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.3 2004/02/28 23:50:59 heinz Exp $
+$NetBSD: patch-ad,v 1.4 2005/01/09 00:07:47 schmonz Exp $
 
---- prayer/Makefile.orig	Wed May 21 16:41:16 2003
+--- prayer/Makefile.orig	2005-01-06 07:24:44.000000000 -0500
 +++ prayer/Makefile
-@@ -89,8 +89,8 @@ ifeq ($(strip $(CCLIENT_KERB_ENABLE)), t
+@@ -94,8 +94,8 @@ ifeq ($(strip $(CCLIENT_KERB_ENABLE)), t
    SESSION_LIBS += $(KERB_LIBS)
  endif
  
@@ -13,7 +13,7 @@ $NetBSD: patch-ad,v 1.3 2004/02/28 23:50:59 heinz Exp $
  
  SHARED_OBJS = \
   pool.o list.o assoc.o memblock.o buffer.o string.o config.o user_agent.o \
-@@ -158,15 +158,15 @@ clean:
+@@ -163,17 +163,17 @@ clean:
  	-rm -f $(BIN) test core *.o *.flc *~ \#*\#
  
  install: all
@@ -29,6 +29,9 @@ $NetBSD: patch-ad,v 1.3 2004/02/28 23:50:59 heinz Exp $
 -	$(INSTALL) -o $(RO_USER) -g $(RO_GROUP) -m $(PUBLIC_EXEC) \
 +	$(BSD_INSTALL_PROGRAM)  \
  	  prayer-ssl-prune $(BROOT)$(BIN_DIR)
+-	$(INSTALL) -o $(RO_USER) -g $(RO_GROUP) -m $(PUBLIC_EXEC) \
++	$(BSD_INSTALL_PROGRAM)  \
+ 	  prayer-sem-prune $(BROOT)$(BIN_DIR)
 -	$(INSTALL) -o $(RO_USER) -g $(RO_GROUP) -m $(PUBLIC_EXEC) \
 +	$(BSD_INSTALL_SCRIPT)  \
  	  prayer-cyclog    $(BROOT)$(BIN_DIR)
