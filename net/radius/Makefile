@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/04/24 23:47:08 tron Exp $
+# $NetBSD: Makefile,v 1.9 1999/04/24 23:53:33 tron Exp $
 #
 # Tempted to install another radius package?
 #
@@ -21,8 +21,9 @@ HOMEPAGE=	http://www.merit.edu/aaa/
 
 DECOMPRESS_CMD=	${GZCAT} -f
 DIST_SUBDIR=	radius
-NO_WRKSUBDIR=	yes
 INSTALL_TARGET=	man-install install util-install config-install
+MESSAGE_FILE=   ${WRKDIR}/MESSAGE
+NO_WRKSUBDIR=	yes
 
 CFLAGS+=	-DHAVE_SETVBUF -DNOSHADOW
 MAKE_ENV+=	RADLIBS="${RADLIBS} -lskey" LIBS=-lcrypt \
@@ -42,5 +43,9 @@ pre-patch:
 .for FILE in prediff rad.ftp rad.simult rad.skey
 	@cd ${WRKSRC}; ${PATCH} -sp <${FILE}.diff
 .endfor
+
+post-build:
+	@${SED} -e 's#@PREFIX@#${PREFIX}#g' <${PKGDIR}/MESSAGE \
+	  >${MESSAGE_FILE}
 
 .include "../../mk/bsd.pkg.mk"
