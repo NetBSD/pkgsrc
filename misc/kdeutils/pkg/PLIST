@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 1999/02/15 21:36:06 tron Exp $
+@comment $NetBSD: PLIST,v 1.9 1999/02/18 23:37:55 tron Exp $
 bin/ark
 bin/kab
 bin/kabapi_test
@@ -471,7 +471,6 @@ share/kde/toolbar/filedel.xpm
 @dirrm share/doc/kde/HTML/en/knotes
 @dirrm share/doc/kde/HTML/en/kwrite
 @dirrm share/doc/kde/HTML/it/khexdit
-@dirrm share/doc/kde/HTML/it
 @dirrm share/kde/apps/kcalc/pics
 @dirrm share/kde/apps/kcalc
 @dirrm share/kde/apps/kedit/pics
