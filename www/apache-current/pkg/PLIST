@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/05/05 16:22:04 skrll Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/09/14 15:38:09 wiz Exp $
 bin/ab
 bin/apachectl
 bin/apxs
@@ -472,4 +472,6 @@ share/httpd/icons/world2.gif
 @dirrm share/httpd/htdocs/manual/developer
 @dirrm share/httpd/htdocs/manual
 @dirrm share/httpd/htdocs
+@unexec rmdir %D/share/httpd 2>/dev/null || true
 @dirrm include/httpd
+@unexec rmdir %D/etc/httpd 2>/dev/null || true
