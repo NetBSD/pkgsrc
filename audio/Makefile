@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2002/04/19 20:24:48 zuntum Exp $
+# $NetBSD: Makefile,v 1.130 2002/04/23 03:34:53 schmonz Exp $
 #
 
 COMMENT=	Audio tools
@@ -131,6 +131,7 @@ SUBDIR+=	wmmixer
 SUBDIR+=	wsoundprefs
 SUBDIR+=	wsoundserver
 SUBDIR+=	xamp
+SUBDIR+=	xanalyser
 SUBDIR+=	xcdplayer
 SUBDIR+=	xhippo
 SUBDIR+=	xmcd
