@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2002/04/15 21:10:27 rh Exp $
+# $NetBSD: Makefile.common,v 1.5 2003/05/01 19:14:12 jmmv Exp $
 #
 
 CATEGORIES=		net sysutils
@@ -21,7 +21,9 @@ USE_GMAKE=		YES
 
 USE_PERL5=		YES
 
-CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/etc/netsaint
+PKG_SYSCONFSUBDIR=	netsaint
+
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=/var
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/netsaint
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec/netsaint
