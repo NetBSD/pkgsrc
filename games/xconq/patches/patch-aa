@@ -1,0 +1,9 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/06/12 20:22:53 kleink Exp $
+
+--- /dev/null	Tue Jun  8 21:38:55 1999
++++ config/mh-netbsd	Tue Jun  8 21:41:47 1999
+@@ -0,0 +1,4 @@
++X11_INCLUDE_FLAGS =	-I${X11BASE}/include
++X11_LIB_FLAGS =		-L${X11BASE}/lib -Wl,-R${X11BASE}/lib
++
++appdefaultsdir = 	${X11BASE}/lib/X11/app-defaults	

@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/06/12 20:22:53 kleink Exp $
+
+--- config.host.orig	Wed Jul  1 06:27:39 1998
++++ config.host	Tue Jun  8 21:57:18 1999
+@@ -37,6 +37,7 @@
+   *-*-linux*)		  host_makefile_frag=config/mh-linux ;;
+   rs6000-*-lynxos*)	  host_makefile_frag=config/mh-lynxrs6k ;;
+   *-*-lynxos*)	  	  host_makefile_frag=config/mh-lynxos ;;
++  *-*-netbsd*)	  	  host_makefile_frag=config/mh-netbsd ;;
+   *-*-sysv4*)             host_makefile_frag=config/mh-sysv4 ;;
+   *-*-sysv*)              host_makefile_frag=config/mh-sysv ;;
+   *-*-freebsd*)           host_makefile_frag=config/mh-freebsd ;;

@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/06/12 20:22:53 kleink Exp $
+
+--- curses/Makefile.in.orig	Tue Apr 21 05:21:47 1998
++++ curses/Makefile.in	Tue Jun  8 22:33:16 1999
+@@ -29,7 +29,7 @@
+ SHELL = /bin/sh
+ 
+ INSTALL = install -c
+-INSTALL_PROGRAM = $(INSTALL)
++INSTALL_PROGRAM = $(INSTALL) -s
+ INSTALL_DATA = $(INSTALL)
+ 
+ CC = cc
