@@ -1,7 +1,16 @@
-$NetBSD: patch-ag,v 1.1 1999/05/15 07:27:50 hubertf Exp $
+$NetBSD: patch-ag,v 1.2 1999/12/24 13:15:06 tron Exp $
 
---- Makefile.in.orig	Sat May 15 09:16:08 1999
-+++ Makefile.in	Sat May 15 09:16:21 1999
+--- Makefile.in.orig	Tue Mar 16 23:17:02 1999
++++ Makefile.in	Fri Dec 24 14:10:56 1999
+@@ -15,7 +15,7 @@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+ 
+-LIBS = @LIBS@ -lhfs -lfile
++LIBS = @LIBS@ $(LIBHFS) $(LIBFILE)
+ 
+ prefix = @prefix@
+ exec_prefix =  @exec_prefix@
 @@ -68,7 +68,7 @@
  apple_driver.o: apple_driver.c mac_label.h
  	$(CC) -c $(CFLAGS) $(srcdir)/apple_driver.c
