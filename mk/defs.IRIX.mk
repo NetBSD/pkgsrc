@@ -1,8 +1,8 @@
-# $NetBSD: defs.IRIX.mk,v 1.48 2004/04/21 16:30:19 jschauma Exp $
+# $NetBSD: defs.IRIX.mk,v 1.49 2004/04/29 20:07:48 jschauma Exp $
 #
 # Variable definitions for the IRIX operating system.
 
-AWK?=		/usr/bin/awk
+AWK?=		/usr/bin/nawk
 BASENAME?=	/sbin/basename
 CAT?=		/sbin/cat
 CHMOD?=		/sbin/chmod
