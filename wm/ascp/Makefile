@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/18 13:50:41 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 17:21:30 wiz Exp $
 #
 
 DISTNAME=		ascp-1.0.3
@@ -8,6 +8,7 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://hubble.colorado.edu/~nwanua/htmldir/ascp.html
+COMMENT=		Configuration utility for AfterStep
 
 DEPENDS+=		afterstep-1.8.*:../../wm/afterstep
 DEPENDS+=		gtk+-1.2.*:../../x11/gtk

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/02/07 15:23:29 tron Exp $
+# $NetBSD: Makefile,v 1.30 2001/02/17 17:21:53 wiz Exp $
 
 DISTNAME=		mod_ssl-2.8.0-1.3.17
 PKGNAME=		ap-ssl-2.8.0
@@ -7,6 +7,7 @@ MASTER_SITES=		http://www.modssl.org/source/
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.modssl.org/
+COMMENT=		SSL/TLS protocols module for Apache
 
 DEPENDS+=		apache-1.3.17.1:../../www/apache
 # For "apxs":

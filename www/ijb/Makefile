@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/02/09 17:44:50 abs Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 17:22:08 wiz Exp $
 #
 
 DISTNAME=	ijb20
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	abs@netbsd.org
 HOMEPAGE=	http://www.junkbuster.com/
+COMMENT=	The Internet Junkbuster Proxy blocks unwanted banner ads and cookies
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/junkbuster ${PREFIX}/bin

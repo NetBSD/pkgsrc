@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/01/07 04:59:58 explorer Exp $
+# $NetBSD: Makefile,v 1.21 2001/02/17 17:22:28 wiz Exp $
 #
 
 DISTNAME=	php-${PHP_VERSION}
@@ -9,6 +9,7 @@ DISTFILES+=	${DISTNAME}.tar.gz
 
 MAINTAINER=	cjs@netbsd.org
 HOMEPAGE=	http://www.php.net/
+COMMENT=	PHP3 HTML-embedded programming language with database connectivity
 
 BUILD_DEPENDS+=	${PERL5}:../../lang/perl5-base
 DEPENDS+=	gdbm>=1.7.3:../../databases/gdbm

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/09/05 09:33:17 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/17 17:21:45 wiz Exp $
 
 DISTNAME=	AuthPG-1.2b2
 PKGNAME=	ap-auth-postgresql-1.2b2
@@ -7,6 +7,7 @@ MASTER_SITES=	http://home.bawi.org/~minskim/authpg/
 
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://home.bawi.org/~minskim/authpg/
+COMMENT=	Module to allow apache authentication against a Postgresql database
 
 DEPENDS+=	apache-1.3.*:../../www/apache
 DEPENDS+=	postgresql-*:../../databases/postgresql

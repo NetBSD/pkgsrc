@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/15 02:24:27 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:21:46 wiz Exp $
 #
 
 DISTNAME=	scwm-0.9
@@ -7,6 +7,7 @@ MASTER_SITES=	ftp://scwm.mit.edu/pub/scwm/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://scwm.sourceforge.net/
+COMMENT=	Window manager with a powerful configuration (Guile Scheme) language
 
 DEPENDS+=	guile>=1.3.2:../../lang/guile
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk

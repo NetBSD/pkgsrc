@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2001/02/05 09:01:05 tron Exp $
+# $NetBSD: Makefile,v 1.31 2001/02/17 17:21:55 wiz Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/05/04 20:22:31 jseger Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=		ftp://ftp.yggdrasil.com/pub/dist/web/arena/
 
 MAINTAINER=		tv@netbsd.org
 HOMEPAGE=		http://www.yggdrasil.com/Products/Arena/
+COMMENT=		Experimental HTML 3 browser, supports math and style sheets
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
 BUILD_DEPENDS+=		msgfmt:../../devel/gettext

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/07 05:09:18 rh Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 17:22:04 wiz Exp $
 #
 
 DISTNAME=	glibwww-0.2
@@ -7,6 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=unstable/sources/glibwww/}
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
+COMMENT=	event register/unregister functions that use the glib event loop
 
 DEPENDS+=	libwww>=5.2.8:../../www/libwww
 DEPENDS+=	gnome-libs>=1.2.3:../../x11/gnome-libs

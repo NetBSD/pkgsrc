@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/11/11 17:49:28 tron Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/17 17:22:45 wiz Exp $
 #
 
 DISTNAME=	waplet
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://waplet.sourceforge.net/
+COMMENT=	java applet-based WAP emulator and WML browser
 
 NO_BUILD=	yes
 
