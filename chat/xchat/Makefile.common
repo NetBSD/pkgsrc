@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2002/09/21 23:46:46 jlam Exp $
+# $NetBSD: Makefile.common,v 1.5 2002/09/21 23:52:55 jlam Exp $
 
 DISTNAME=	xchat-1.8.10
 CATEGORIES=	chat x11
@@ -38,8 +38,8 @@ CONFIGURE_ARGS+=	--enable-ipv6
 
 # SSL support
 .if defined(XCHAT_USE_SSL) && ${XCHAT_USE_SSL} == "YES"
-.include "../../security/openssl/buildlink.mk"
-CONFIGURE_ARGS+=	--enable-openssl=${BUILDLINK_DIR}
+.  include "../../security/openssl/buildlink2.mk"
+CONFIGURE_ARGS+=	--enable-openssl=${SSLBASE}
 .endif
 
 # Socks support
