@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2003/06/23 13:23:36 adam Exp $
+# $NetBSD: Makefile,v 1.19 2003/06/24 08:16:32 adam Exp $
 
 DISTNAME=		ntop-2.2
 PKGNAME=		ntop2-2.2
+PKGREVISION=		1
 WRKSRC=                 ${WRKDIR}/${DISTNAME}/ntop
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ntop/}
@@ -21,17 +22,15 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 # --enable-micro-ntop causes compile to fail 
-# IMPORTANT: gdchart support is broken at the moment
 CONFIGURE_ARGS+=	--enable-automake171
 CONFIGURE_ARGS+=	--enable-sslv3
 CONFIGURE_ARGS+=	--with-pcap-root=${BUILDLINK_PREFIX.libpcap}
 CONFIGURE_ARGS+=	--with-ossl-root=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-gdbm-root=${BUILDLINK_PREFIX.gdbm}
 CONFIGURE_ARGS+=	--with-zlib-root=${BUILDLINK_PREFIX.zlib}
-#CONFIGURE_ARGS+=	--with-gdchart-root=${BUILDLINK_PREFIX.gdchart}
+CONFIGURE_ARGS+=	--with-gdchart-root=${BUILDLINK_PREFIX.gdchart}
 CONFIGURE_ARGS+=	--with-gd-root=${BUILDLINK_PREFIX.gd}
 CONFIGURE_ARGS+=	--with-libpng-root=${BUILDLINK_PREFIX.png}
-CONFIGURE_ARGS+=	--without-gdchart
 
 PTHREAD_OPTS+=		require
 
@@ -43,8 +42,7 @@ pre-configure:
 	cd ${WRKSRC} && ${AUTOCONF}
 
 .include "../../databases/gdbm/buildlink2.mk"
-.include "../../graphics/gd/buildlink2.mk"
-#.include "../../graphics/gdchart/buildlink2.mk"
+.include "../../graphics/gdchart/buildlink2.mk"
 .include "../../net/libpcap/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
