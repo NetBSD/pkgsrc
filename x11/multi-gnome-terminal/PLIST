@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:11:15 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/11 21:52:33 damon Exp $
 bin/multi-gnome-terminal
 etc/CORBA/servers/multi-gnome-terminal.gnorba
 man/man1/multi-gnome-terminal.1
@@ -177,40 +177,44 @@ share/gnome/help/multi-gnome-terminal/no/terminal.html
 share/gnome/help/multi-gnome-terminal/no/termtech.html
 share/gnome/help/multi-gnome-terminal/no/topic.dat
 share/idl/MultiTerminal.idl
-share/omf/gnome-core/gnome-terminal-C.omf
-share/omf/gnome-core/gnome-terminal-de.omf
-share/omf/gnome-core/gnome-terminal-es.omf
-share/pixmaps/mgt/arrow_left2.png
-share/pixmaps/mgt/arrow_right2.png
-share/pixmaps/mgt/gnome-notepad.png
-share/pixmaps/mgt/multignometerm.png
-share/pixmaps/mgt/panel-folder.png
-@dirrm share/pixmaps/mgt
-@dirrm share/omf/gnome-core
+share/omf/mgt/gnome-terminal-C.omf
+share/omf/mgt/gnome-terminal-de.omf
+share/omf/mgt/gnome-terminal-es.omf
+share/pixmaps/arrow_left2.png
+share/pixmaps/arrow_right2.png
+share/pixmaps/gnome-notepad.png
+share/pixmaps/multignometerm.png
+share/pixmaps/panel-folder.png
+@dirrm share/pixmaps
+@dirrm share/omf/mgt
+@dirrm share/omf
+@dirrm share/idl
 @dirrm share/gnome/help/multi-gnome-terminal/no/stylesheet-images
-@exec /bin/mkdir -p /usr/pkg/share/gnome/help/multi-gnome-terminal/no/figures
+@exec ${MKDIR} %D/share/gnome/help/multi-gnome-terminal/no/figures
 @dirrm share/gnome/help/multi-gnome-terminal/no/figures
 @dirrm share/gnome/help/multi-gnome-terminal/no
 @dirrm share/gnome/help/multi-gnome-terminal/it/stylesheet-images
-@exec /bin/mkdir -p /usr/pkg/share/gnome/help/multi-gnome-terminal/it/figures
+@exec ${MKDIR} %D/share/gnome/help/multi-gnome-terminal/it/figures
 @dirrm share/gnome/help/multi-gnome-terminal/it/figures
 @dirrm share/gnome/help/multi-gnome-terminal/it
 @dirrm share/gnome/help/multi-gnome-terminal/es/stylesheet-images
-@exec /bin/mkdir -p /usr/pkg/share/gnome/help/multi-gnome-terminal/es/figures
+@exec ${MKDIR} %D/share/gnome/help/multi-gnome-terminal/es/figures
 @dirrm share/gnome/help/multi-gnome-terminal/es/figures
 @dirrm share/gnome/help/multi-gnome-terminal/es
 @dirrm share/gnome/help/multi-gnome-terminal/de/stylesheet-images
-@exec /bin/mkdir -p /usr/pkg/share/gnome/help/multi-gnome-terminal/de/figures
+@exec ${MKDIR} %D/share/gnome/help/multi-gnome-terminal/de/figures
 @dirrm share/gnome/help/multi-gnome-terminal/de/figures
 @dirrm share/gnome/help/multi-gnome-terminal/de
 @dirrm share/gnome/help/multi-gnome-terminal/da/stylesheet-images
-@exec /bin/mkdir -p /usr/pkg/share/gnome/help/multi-gnome-terminal/da/figures
+@exec ${MKDIR} %D/share/gnome/help/multi-gnome-terminal/da/figures
 @dirrm share/gnome/help/multi-gnome-terminal/da/figures
 @dirrm share/gnome/help/multi-gnome-terminal/da
 @dirrm share/gnome/help/multi-gnome-terminal/C/stylesheet-images
-@exec /bin/mkdir -p /usr/pkg/share/gnome/help/multi-gnome-terminal/C/figures
+@exec ${MKDIR} %D/share/gnome/help/multi-gnome-terminal/C/figures
 @dirrm share/gnome/help/multi-gnome-terminal/C/figures
 @dirrm share/gnome/help/multi-gnome-terminal/C
 @dirrm share/gnome/help/multi-gnome-terminal
+@dirrm share/gnome/help
+@dirrm share/gnome/apps/System
 @dirrm share/gnome-terminal/glade
-@dirrm share/gnome-terminal
+@dirrm etc/CORBA/servers
