@@ -1,17 +1,18 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 11:18:21 agc Exp $
+$NetBSD
 
---- ./Imakefile.org	Mon Jun  6 17:28:45 1994
-+++ ./Imakefile	Sun Dec 22 16:28:05 1996
+--- Imakefile.orig	Fri Dec  7 21:14:34 2001
++++ Imakefile	Fri Dec  7 21:16:36 2001
 @@ -8,12 +8,7 @@
             OBJS = xcolors.o
    SYS_LIBRARIES = -lm
  
 -#if BuildServer
-         DEFINES = -DRGB_TXT=\"$(RGBDBFILE).txt\"
+-        DEFINES = -DRGB_TXT=\"$(RGBDBFILE).txt\"
 -#else
 -	/* rgb.txt will not be installed, so find it in build tree */
 -	DEFINES = -DRGB_TXT=\"$(RGBSRC)/rgb.txt\"
 -#endif
++        DEFINES = -DRGB_TXT=\"$(X11BASE)/lib/X11/rgb.txt\"
  
  ComplexProgramTarget(xcolors)
  InstallAppDefaults(Xcolors)
