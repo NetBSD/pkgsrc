@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/12/19 10:05:08 tron Exp $
+# $NetBSD: Makefile,v 1.6 2002/10/21 12:27:20 wiz Exp $
 #
 
 DISTNAME=	xtux-arena-src-nov-15
@@ -11,7 +11,7 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://xtux.sourceforge.net/
 COMMENT=	2D multi-player shootout using images from the Open Software scene
 
-USE_XPM=	YES
+USE_BUILDLINK2=	YES
 USE_GMAKE=	YES
 
 WRKSRC=		${WRKDIR}/xtux
@@ -28,4 +28,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tux_serv ${PREFIX}/bin/tux_serv
 	${INSTALL_PROGRAM} ${WRKSRC}/xtux ${PREFIX}/bin/xtux
 
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
