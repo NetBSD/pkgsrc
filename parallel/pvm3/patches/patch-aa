@@ -1,32 +1,10 @@
-$NetBSD: patch-aa,v 1.2 1999/11/23 16:05:30 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.3 2000/08/23 14:28:18 dmcmahill Exp $
 
---- ./lib/pvmgetarch.orig	Wed Jul  7 15:54:41 1999
-+++ ./lib/pvmgetarch	Mon Nov  1 19:57:42 1999
-@@ -128,12 +128,19 @@
- 
- 	if [ -f /netbsd ]; then
--		case "`/usr/bin/machine`" in
--		i386)   ARCH=NETBSDI386 ;;
--		amiga)  ARCH=NETBSDAMIGA ;;
--		hp300)  ARCH=NETBSDHP300 ;;
--		mac68k) ARCH=NETBSDMAC68K ;;
--		pmax)   ARCH=NETBSDPMAX ;;
--		sparc)  ARCH=NETBSDSPARC ;;
--		sun3)   ARCH=NETBSDSUN3 ;;
-+		# use the processor type for NetBSD because machines with
-+		# the same processor are binary compatible.
-+		case "`/usr/bin/uname -p`" in
-+		alpha)   ARCH=NETBSDALPHA ;;
-+		arm32)   ARCH=NETBSDARM32 ;;
-+		i386)    ARCH=NETBSDI386 ;;
-+		m68k)    ARCH=NETBSDM68K ;;
-+		mipseb)  ARCH=NETBSDMIPSEB ;;
-+		mipsel)  ARCH=NETBSDMIPSEL ;;
-+		ns32k)   ARCH=NETBSDNS32K ;;
-+		powerpc) ARCH=NETBSDPOWERPC ;;
-+		sh3)     ARCH=NETBSDSH3 ;;
-+		sparc)   ARCH=NETBSDSPARC ;;
-+		sparc64) ARCH=NETBSDSPARC64 ;;
-+		vax)     ARCH=NETBSDVAX ;;
- 		esac
- 	elif [ -f /usr/bin/machine ]; then
+--- conf/NETBSDALPHA.def.orig	Wed Feb 16 16:19:20 2000
++++ conf/NETBSDALPHA.def	Fri Jun 30 16:55:52 2000
+@@ -1,4 +1,4 @@
+-ARCHCFLAGS	=	-DSOCKADHASLEN -DRSHCOMMAND=\"/usr/bin/rsh\" \
++ARCHCFLAGS	=	-DSOCKADHASLEN -DRSHCOMMAND=\"${LOCALBASE}/bin/ssh\" \
+ 				-DHASERRORVARS -DNOREXEC -DNEEDMENDIAN -DSYSERRISCONST
+ ARCHDLIB	=
+ ARCHDOBJ	=

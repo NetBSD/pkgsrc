@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.2 1999/11/23 16:05:30 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.3 2000/08/23 14:28:18 dmcmahill Exp $
 
---- ./xep/imp.c.orig	Tue Mar 16 11:01:44 1999
-+++ ./xep/imp.c	Mon Nov  1 09:39:01 1999
-@@ -73,4 +73,5 @@
- #define	byteswide(w) (((w)+7)/8)
- 
-+static int mkrbow(unsigned int *,unsigned int *,unsigned int *,int,int);
- 
- /***************
+--- conf/NETBSDARM32.def.orig	Wed Feb 16 16:19:21 2000
++++ conf/NETBSDARM32.def	Fri Jun 30 16:55:52 2000
+@@ -1,4 +1,4 @@
+-ARCHCFLAGS	=	-DSOCKADHASLEN -DRSHCOMMAND=\"/usr/bin/rsh\" \
++ARCHCFLAGS	=	-DSOCKADHASLEN -DRSHCOMMAND=\"${LOCALBASE}/bin/ssh\" \
+ 				-DHASERRORVARS -DNOREXEC -DNEEDMENDIAN -DSYSERRISCONST
+ ARCHDLIB	=
+ ARCHDOBJ	=
