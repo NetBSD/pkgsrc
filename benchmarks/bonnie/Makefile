@@ -3,6 +3,7 @@
 # Date created:         26 September 1994
 # Whom:                 se
 #
+# $NetBSD: Makefile,v 1.2 1998/02/26 23:32:16 tron Exp $
 # $FreeBSD Id: Makefile,v 1.5 1997/11/26 23:09:14 jseger Exp
 #
 
@@ -14,8 +15,15 @@ EXTRACT_SUFX=   .tar.Z
 
 MAINTAINER=	se@FreeBSD.org
 
+NO_CONFIGURE=	yes
+
+CAT1=		bonnie.0
 MAN1=		bonnie.1
 
-CFLAGS+=	-static
+# Kludge until "bsd.port.mk" gets fixed.
+MANCOMPRESSED=	1
+
+post-extract:
+	${MV} ${WRKSRC}/Bonnie.c ${WRKSRC}/bonnie.c
 
 .include <bsd.port.mk>
