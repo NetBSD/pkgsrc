@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/08/05 03:51:18 hubertf Exp $
+
+--- xhang.c.orig	Thu Aug  5 05:07:48 1999
++++ xhang.c	Thu Aug  5 05:08:25 1999
+@@ -418,7 +418,7 @@
+   return 0;
+ }
+ 
+-int cmp_nearfar(void *v1, void *v2)
++int cmp_nearfar(const void *v1, const void *v2)
+ {
+   int i1, i2;
+ 
