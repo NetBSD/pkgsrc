@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3352 2005/04/04 08:57:16 adam Exp $
+$NetBSD: TODO,v 1.3353 2005/04/04 09:11:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -422,7 +422,6 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enigma-0.90
 	o enscript-1.6.4
-	o epic4-2.2
 	o erlang-10b-3
 	o esh-0.8.5
 	o et-2.60
