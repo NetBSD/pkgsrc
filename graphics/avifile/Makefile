@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/06/26 08:45:56 zuntum Exp $
+# $NetBSD: Makefile,v 1.10 2001/06/26 08:53:32 zuntum Exp $
 
 DISTNAME=	avifile-0.53.5
 CATEGORIES=	graphics
@@ -22,8 +22,8 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		YES
 
-CONFIGURE_ARGS+=--with-win32-path="${LOCALBASE}/lib/win32"
-CONFIGURE_ARGS+=--without-qt
+CONFIGURE_ARGS+=	--with-win32-path="${LOCALBASE}/lib/win32"
+CONFIGURE_ARGS+=	--without-qt
 
 .include "../../devel/SDL/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
