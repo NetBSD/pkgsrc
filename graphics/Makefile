@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.327 2004/07/28 14:22:08 markd Exp $
+# $NetBSD: Makefile,v 1.328 2004/08/02 14:20:15 drochner Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -158,6 +158,7 @@ SUBDIR+=	libvideogfx
 SUBDIR+=	libwmf
 SUBDIR+=	ljpeg
 SUBDIR+=	magicpoint
+SUBDIR+=	mayavi
 SUBDIR+=	mgl
 SUBDIR+=	mng
 SUBDIR+=	mpeg2codec
@@ -240,6 +241,10 @@ SUBDIR+=	urt
 SUBDIR+=	vcg
 SUBDIR+=	vid
 SUBDIR+=	viewfax
+SUBDIR+=	vtk
+SUBDIR+=	vtk-data
+SUBDIR+=	vtk-docs
+SUBDIR+=	vtk-python
 SUBDIR+=	wmphoto
 SUBDIR+=	xart
 SUBDIR+=	xbmbrowser
