@@ -1,0 +1,9 @@
+--- src/fasthenry/sparse/Makefile.orig	Wed May  6 23:42:03 1998
++++ src/fasthenry/sparse/Makefile	Wed May  6 23:42:12 1998
+@@ -4,5 +4,5 @@
+ #  UC Berkeley
+ #
+-CFLAGS = -O
++CFLAGS = -O2 -w
+ LINTFLAGS = -lc -lm
+ SHELL = /bin/sh
