@@ -1,72 +1,48 @@
-# $NetBSD: Makefile,v 1.69 2004/06/27 17:28:58 jmmv Exp $
+# $NetBSD: Makefile,v 1.70 2004/07/20 17:37:23 abs Exp $
+#
 
-DISTNAME=	galeon-1.2.14
+DISTNAME=	galeon-1.3.16
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=galeon/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	taya@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://galeon.sourceforge.net/
-COMMENT=	GNOME web browser based on gecko (mozilla rendering engine)
+COMMENT=	GNOME2 Web browser based on gecko
 
-CONFLICTS=	galeon-current-[0-9]*
+BUILD_USES_MSGFMT=	yes
 
-EVAL_PREFIX+=	MOZILLA_PREFIX=mozilla
-EVAL_PREFIX+=	ICONV_PREFIX=libiconv
-EVAL_PREFIX+=	GCONF_PREFIX=GConf
+CONFLICTS+=		galeon-devel-[0-9]*
 
-USE_X11BASE=		yes
 USE_BUILDLINK3=		yes
-USE_DIRS+=		xdg-1.1
+USE_DIRS+=		gnome2-1.5
+USE_GNU_TOOLS+=		make
+USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_LANGUAGES=		c c++
-USE_GNU_TOOLS+=		make
+USE_X11=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-mozilla-includes=${BUILDLINK_PREFIX.mozilla}/include/mozilla \
-			--with-mozilla-libs=${BUILDLINK_PREFIX.mozilla}/lib/mozilla \
-			--with-libiconv=${LOCALBASE} \
-			--disable-applet \
-			--disable-werror \
-			--sysconfdir=${PREFIX}/etc \
-			MOZILLA_CONFIG=${MOZ_LIBDIR}/mozilla-config
-CONFIGURE_ARGS+= --with-mozilla=1.7
+WRKSRC=			${WRKDIR}/${DISTNAME:S/14a/14/}
 
-.include	"../../converters/libiconv/buildlink3.mk"
-.include	"../../devel/GConf/buildlink3.mk"
-.include	"../../devel/gettext-lib/buildlink3.mk"
-.include	"../../devel/libglade/buildlink3.mk"
-.include	"../../devel/oaf/buildlink3.mk"
-.include	"../../graphics/gdk-pixbuf-gnome/buildlink3.mk"
-.include	"../../textproc/intltool/buildlink3.mk"
-.include	"../../textproc/libxml/buildlink3.mk"
-.include	"../../textproc/scrollkeeper/omf.mk"
-.include	"../../sysutils/gnome-vfs/buildlink3.mk"
-.include	"../../www/mozilla/buildlink3.mk"
-.include	"../../x11/gnome-libs/buildlink3.mk"
+BUILDLINK_RPATHDIRS.mozilla-gtk2+=  lib/mozilla-gtk2
 
-MOZ_LIBDIR=     ${MOZILLA_PREFIX}/lib/mozilla
-LDFLAGS+=       -Wl,${RPATH_FLAG}${MOZ_LIBDIR}
+GCONF2_SCHEMAS=		galeon.schemas
 
-# Ensure we export symbols in the linked shared object.
-LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
+CONFIGURE_ARGS+=	--enable-nautilus-view=yes
 
-.include "../../mk/compiler.mk"
-.if !empty(CC_VERSION:Mgcc-3*)
-# Workaround for gcc3 build issue
-post-buildlink:
-	${CP} ${BUILDLINK_DIR}/bin/cc ${BUILDLINK_DIR}/bin/cc.orig
-	${SED} 's:\(exec \$$cmd\):\1 -lstdc++ -lm:' ${BUILDLINK_DIR}/bin/cc.orig\
-						> ${BUILDLINK_DIR}/bin/cc
-.endif
+EGDIR=			${PREFIX}/share/examples/galeon
+CONF_FILES=		${EGDIR}/sound/events/galeon.soundlist \
+			${PKG_SYSCONFDIR}/sound/events/galeon.soundlist
 
-pre-install:
-	${GCONF_PREFIX}/bin/gconftool --shutdown
-
-post-install:
-	${SED} -e "s,@PREFIX@,${PREFIX},g" -e "s,@MOZILLA_PREFIX@,${MOZILLA_PREFIX},g" ${FILESDIR}/galeon.in > ${PREFIX}/bin/galeon
-	${CHOWN} ${BINOWN} ${PREFIX}/bin/galeon
-	${CHGRP} ${BINGRP} ${PREFIX}/bin/galeon
-	${CHMOD} ${BINMODE} ${PREFIX}/bin/galeon
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/lib/galeon
-
+.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../sysutils/nautilus/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../www/mozilla-gtk2/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

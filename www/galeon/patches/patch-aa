@@ -1,12 +1,19 @@
-$NetBSD: patch-aa,v 1.10 2003/12/10 18:34:01 agc Exp $
+$NetBSD: patch-aa,v 1.11 2004/07/20 17:37:23 abs Exp $
 
---- configure.in	2003/12/10 18:13:14	1.1
-+++ configure.in	2003/12/10 18:13:26
-@@ -486,6 +486,7 @@
- AC_CHECK_LIB(gtksuperwin, gdk_superwin_get_type, [_mozilla_gtk_super_win_libs="-lgtksuperwin"],[],[$_PTHREAD_LDFLAGS])
+--- configure.in.orig	2004-07-03 17:49:13.000000000 +0100
++++ configure.in
+@@ -213,12 +213,12 @@ AC_ARG_WITH(mozilla-snapshot,
+ AC_MSG_RESULT($MOZILLA_VERSION$autodetect)
  
- dnl gtk moz embed library
-+CC="$CXX"
- LDFLAGS="$_save_ldflags -L$_mozilla_lib_place $_mozilla_all_nspr_flags -lgtkembedmoz $_mozilla_xpcom_libs $_mozilla_gtk_super_win_libs"
- AC_CHECK_LIB(gtkembedmoz, gtk_moz_embed_get_type, [_mozilla_gtk_moz_embed_libs="-lgtkembedmoz"])
+ dnl Test for the "trunk" version
+-if test $MOZILLA_VERSION == "trunk"; then
++if test $MOZILLA_VERSION = "trunk"; then
+ 	MOZILLA_VERSION=99.0 # use a high number
+ fi
+ 
+ dnl Split up the version string ( 1.7rc1 -> 1 7 rc 1 )
+-version=$(echo $MOZILLA_VERSION | sed -e 's/\(@<:@0-9@:>@\+\|@<:@a-z@:>@\+\)/\1 /g' -e 's/\.//g')
++version=$(echo $MOZILLA_VERSION | sed -e 's/\(@<:@0-9@:>@*\)/\1 /g' -e 's/\.//g')
+ 
+ set -- $version;
  
