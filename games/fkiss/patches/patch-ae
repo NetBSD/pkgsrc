@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1.1.1 2002/07/14 09:40:31 rh Exp $
+
+--- sub.c.orig	Tue Oct  3 01:52:27 2000
++++ sub.c
+@@ -38,6 +38,11 @@
+   }
+   if (dsp != NULL)
+     XCloseDisplay(dsp);
++
++  /* kill outstanding subprocesses ie: external audio players */
++  signal(15, NULL);
++  killpg(0, 15);
++
+   exit(code);
+ }
+ 

@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/07/14 09:40:31 rh Exp $
+
+--- configure.in.orig	Mon Oct 16 22:10:10 2000
++++ configure.in
+@@ -8,8 +8,6 @@
+ AC_PROG_CC
+ 
+ dnl Checks for libraries.
+-dnl Replace `main' with a function in -lesd:
+-AC_CHECK_LIB(esd, esd_open_sound)
+ 
+ dnl Checks for header files.
+ AC_HEADER_DIRENT
+@@ -18,7 +16,7 @@
+ 
+ dnl AC_CHECK_HEADERS(fcntl.h strings.h sys/ioctl.h unistd.h)
+ AC_CHECK_HEADERS(fcntl.h strings.h sys/ioctl.h unistd.h\
+- sys/stat.h stat.h signal.h esd.h)
++ sys/stat.h stat.h signal.h)
+ 
+ dnl Checks for X.
+ AC_PATH_X
