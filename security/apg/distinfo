@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:46:47 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:40:29 agc Exp $
 
 SHA1 (apg-1.2.13.tar.gz) = 0619957437e4804ef09a550602aa1655d2d0690f
+Size (apg-1.2.13.tar.gz) = 72243 bytes
 SHA1 (patch-aa) = 90b2a66305d361a650160e0b3fb7cd93632e2b46

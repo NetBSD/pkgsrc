@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:47:11 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:40:35 agc Exp $
 
-MD5 (Crypt-CBC-1.25.tar.gz) = 0f77cf5536381e2face83d67d7d6099f
+SHA1 (Crypt-CBC-1.25.tar.gz) = 8a9c214582d144ffa8d33e44b5764be96b5d9770
+Size (Crypt-CBC-1.25.tar.gz) = 6899 bytes

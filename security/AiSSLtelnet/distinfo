@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:46:44 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:40:29 agc Exp $
 
-MD5 (AiSSLtelnet-0.142.tar.gz) = 442d324bae2f27be594d8d20212a315e
+SHA1 (AiSSLtelnet-0.142.tar.gz) = dd6a55c03c1885f0c52bc51cc841f68a5e9c874b
+Size (AiSSLtelnet-0.142.tar.gz) = 650435 bytes

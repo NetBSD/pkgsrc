@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:47:04 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:40:34 agc Exp $
 
-MD5 (nessus-core-1.0.7a.tar.gz) = 1c20968f12f0bae96ce1bb837a2f1001
+SHA1 (nessus-core-1.0.7a.tar.gz) = b2dbbe75b9bd386fa53c3a217903a758a3eae011
+Size (nessus-core-1.0.7a.tar.gz) = 549642 bytes
 SHA1 (patch-aa) = c4feb71bbd2e8b897bb27c81668c77b489ac625b

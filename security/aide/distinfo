@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:46:45 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:40:29 agc Exp $
 
-MD5 (aide-0.6.tar.gz) = 3697a80834816c022756acdbb4c8ec21
+SHA1 (aide-0.6.tar.gz) = e6d112193ad96bdbbe1e1b685dac644d958a1155
+Size (aide-0.6.tar.gz) = 212475 bytes
 SHA1 (patch-aa) = db675e373464c5127f9bd4cbfd38e6634c950ebf

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:47:31 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:40:39 agc Exp $
 
-MD5 (srp-1.4.4.tar.gz) = 6d4a861ef31d9b5f8a1f1826b57a9526
+SHA1 (srp-1.4.4.tar.gz) = 56b8b3c29bee2b995b74acb5303dab326265f9b3
+Size (srp-1.4.4.tar.gz) = 1183636 bytes
 SHA1 (patch-aa) = fefb8a7540c3c7e91b6c407a463a39bef948e0c8
 SHA1 (patch-ab) = cba14830f3dcae42c814d9ccb19cbdb5464eabb0
 SHA1 (patch-ac) = 1d5d56753ad45361351833b951bf7d1f82575955

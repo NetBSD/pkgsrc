@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:46:52 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:40:31 agc Exp $
 
-MD5 (fsh-1.1.tar.gz) = 5c288b98e9f5901552dfd31feb9c1504
+SHA1 (fsh-1.1.tar.gz) = eb9287bd60aa5d6801cf8038252dc75076849209
+Size (fsh-1.1.tar.gz) = 125008 bytes

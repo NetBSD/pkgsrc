@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:47:01 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:40:33 agc Exp $
 
-MD5 (libnasl-1.0.7a.tar.gz) = 0d881df0c102df4c7b8c714d6a04cd86
+SHA1 (libnasl-1.0.7a.tar.gz) = ee95f7940196cc7915ee0a7f60d110b3c17941dd
+Size (libnasl-1.0.7a.tar.gz) = 229122 bytes

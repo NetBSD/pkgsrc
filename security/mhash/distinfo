@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:47:02 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:40:34 agc Exp $
 
-MD5 (mhash-0.8.3.tar.gz) = 1cb607808273744b1affbcf8a75bf13b
+SHA1 (mhash-0.8.3.tar.gz) = 3a256d99e105db25906b1b95db275f1a650c27b8
+Size (mhash-0.8.3.tar.gz) = 218355 bytes

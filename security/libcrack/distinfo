@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:46:57 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:40:32 agc Exp $
 
-MD5 (cracklib,2.7.tgz) = 7f810e310c7f2df33d1eaa2b41ab2435
+SHA1 (cracklib,2.7.tgz) = 393688e84fbf12b8359f02564211e89ac5be8b68
+Size (cracklib,2.7.tgz) = 20901 bytes
 SHA1 (patch-aa) = 0ccb894dda9faf909b2886aead03f7d15dcb149a
 SHA1 (patch-ab) = d0cd8a2800a50e14825c83d64f311386feecec8a
 SHA1 (patch-ac) = 49bdc2e1b15486edbcb150d78362c0a748d653da
