@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.147 2001/07/13 14:39:09 manu Exp $
+# $NetBSD: Makefile,v 1.148 2001/07/22 01:41:32 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -29,6 +29,7 @@ SUBDIR+=	dvdview
 SUBDIR+=	dx
 SUBDIR+=	dxsamples
 SUBDIR+=	ee
+SUBDIR+=	eog
 SUBDIR+=	fbm
 SUBDIR+=	flashplayer
 SUBDIR+=	fly
