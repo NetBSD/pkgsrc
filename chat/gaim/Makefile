@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2000/12/23 10:55:51 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2000/12/27 22:15:11 hubertf Exp $
 #
 
-DISTNAME=	gaim-0.11.0pre3
+DISTNAME=	gaim-0.11.0pre4
 CATEGORIES=	x11 chat
 MASTER_SITES=	ftp://ftp.marko.net/pub/gaim/
 
