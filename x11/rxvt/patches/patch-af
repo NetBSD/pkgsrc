@@ -1,0 +1,56 @@
+$NetBSD: patch-af,v 1.7 2004/06/20 21:02:01 christos Exp $
+
+--- configure.orig	2003-03-26 01:07:26.000000000 -0500
++++ configure	2004-06-20 13:33:24.000000000 -0400
+@@ -9481,6 +9481,7 @@
+ 
+ 
+ 
++
+ for ac_header in \
+ 	assert.h \
+ 	fcntl.h \
+@@ -9496,6 +9497,7 @@
+ 	sys/ioctl.h \
+ 	sys/select.h \
+ 	sys/sockio.h \
++	sys/stropts.h \
+ 	sys/strredir.h \
+ 	sys/time.h \
+ 	utmp.h \
+
+--- autoconf/configure.in.orig	2004-06-20 13:31:57.000000000 -0400
++++ autoconf/configure.in	2004-06-20 13:32:13.000000000 -0400
+@@ -393,6 +393,7 @@
+ 	sys/ioctl.h \
+ 	sys/select.h \
+ 	sys/sockio.h \
++	sys/stropts.h \
+ 	sys/strredir.h \
+ 	sys/time.h \
+ 	utmp.h \
+
+--- autoconf/config.h.in.orig	2004-06-20 13:31:21.000000000 -0400
++++ autoconf/config.h.in	2004-06-20 13:31:48.000000000 -0400
+@@ -123,6 +123,9 @@
+ /* Define to 1 if you have the <sys/strredir.h> header file. */
+ #undef HAVE_SYS_STRREDIR_H
+ 
++/* Define to 1 if you have the <sys/stropts.h> header file. */
++#undef HAVE_SYS_STROPTS_H
++
+ /* Define to 1 if you have the <sys/time.h> header file. */
+ #undef HAVE_SYS_TIME_H
+ 
+
+--- src/ptytty.c.orig	2002-09-19 03:40:39.000000000 -0400
++++ src/ptytty.c	2004-06-20 13:34:32.000000000 -0400
+@@ -46,7 +46,7 @@
+ #ifdef HAVE_SYS_IOCTL_H
+ # include <sys/ioctl.h>
+ #endif
+-#if defined(PTYS_ARE_PTMX) && !defined(__CYGWIN32__)
++#ifdef HAVE_SYS_STROPTS_H
+ # include <sys/stropts.h>      /* for I_PUSH */
+ #endif
+ 
