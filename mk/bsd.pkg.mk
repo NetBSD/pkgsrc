@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.430 2000/04/26 21:09:02 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.431 2000/04/26 21:16:10 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -183,12 +183,12 @@ MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 
 .if defined(USE_SSL)
 .if exists(/usr/include/openssl/ssl.h)
-SSL_DIR=	/usr
+SSLBASE=	/usr
 .else
 DEPENDS+=	openssl>=0.9.5a:${PKGSRCDIR}/security/openssl
-SSL_DIR=	${LOCALBASE}
+SSLBASE=	${LOCALBASE}
 .endif
-BUILD_DEFS+=	SSL_DIR
+BUILD_DEFS+=	SSLBASE
 .endif
 
 .if defined(USE_XAW)
