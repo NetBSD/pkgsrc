@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2003/08/02 04:24:58 grant Exp $
+# $NetBSD: Makefile,v 1.52 2003/11/23 07:12:01 salo Exp $
 
 DISTNAME=		ncurses-${NC_VERS}
 NC_VERS=		5.3
@@ -52,10 +52,10 @@ post-configure:
 	cd ${WRKSRC}/man;					\
 	${RM} -f ${CURSES_NO_MAN};				\
 	for f in *.1m; do					\
-		${MV} -f $${f} `basename $${f} .1m`.1; 	\
+		${MV} -f $${f} `${BASENAME} $${f} .1m`.1; 	\
 	done;							\
 	for f in *.3x; do					\
-		${MV} -f $${f} `basename $${f} .3x`.3; 	\
+		${MV} -f $${f} `${BASENAME} $${f} .3x`.3; 	\
 	done
 .if ${OPSYS} == "SunOS"
 	${MV} ${TERMINFO_SRC} ${TERMINFO_SRC}.old
