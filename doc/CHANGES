@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9451 2005/03/07 10:14:23 uebayasi Exp $
+$NetBSD: CHANGES,v 1.9452 2005/03/07 10:20:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1323,3 +1323,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gauche to 0.8.3nb1 [uebayasi 2005-03-07]
 	Added wiliki-0.5 [markd 2005-03-07]
 	Added kochi-ttf-20030809 [uebayasi 2005-03-07]
+	Updated abiword to 2.2.5 [adam 2005-03-07]
+	Updated abiword-plugins to 2.2.5 [adam 2005-03-07]
