@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.65 2004/10/11 22:04:19 reed Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.66 2004/12/27 06:41:50 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -118,11 +118,8 @@ BROKEN:=		"User and group '${user:C/:.*//}' cannot have the same name on Interix
 .  endfor
 .endif
 
-.if !empty(PKG_USERS)
-USE_USERADD=		YES
-.endif
-.if !empty(PKG_GROUPS)
-USE_GROUPADD=		YES
+.if !empty(PKG_USERS) || !empty(PKG_GROUPS)
+DEPENDS+=		${_USER_DEPENDS}
 .endif
 
 # SPECIAL_PERMS are lists that look like:

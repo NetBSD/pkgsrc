@@ -1,4 +1,4 @@
-# $NetBSD: DragonFly.mk,v 1.5 2004/12/21 13:52:26 grant Exp $
+# $NetBSD: DragonFly.mk,v 1.6 2004/12/27 06:41:50 jlam Exp $
 #
 # Variable definitions for the DragonFly operating system.
 
@@ -86,15 +86,6 @@ TSORT?=		/usr/bin/tsort
 TYPE?=		type				# Shell builtin
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs
-
-.if exists(/usr/sbin/user)
-USERADD?=	/usr/sbin/useradd
-GROUPADD?=	/usr/sbin/groupadd
-.else
-USERADD?=	${LOCALBASE}/sbin/useradd
-GROUPADD?=	${LOCALBASE}/sbin/groupadd
-_USER_DEPENDS=	user>=20000313:../../sysutils/user
-.endif
 
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		0022
