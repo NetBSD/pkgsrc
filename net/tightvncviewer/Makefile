@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2002/10/09 21:14:40 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/10/17 12:17:14 lukem Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
-DISTNAME=		tightvnc-1.2.2
-PKGNAME=		tightvncviewer-1.2.2
+DISTNAME=		tightvnc-1.2.6
+PKGNAME=		tightvncviewer-1.2.6
 CATEGORIES=		net x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vnc-tight/}
-DISTFILES=		tightvnc-1.2.2_unixsrc.tar.bz2
+DISTFILES=		tightvnc-1.2.6_unixsrc.tar.bz2
 
 MAINTAINER=		mycroft@netbsd.org
 HOMEPAGE=		http://www.tightvnc.com/
@@ -17,15 +17,13 @@ CONFLICTS=		vncviewer-[0-9]*
 CRYPTO=			yes
 USE_BUILDLINK2=		yes
 USE_IMAKE=		yes
-NO_INSTALL_MANPAGES=	yes
 
 WRKSRC=			${WRKDIR}/vnc_unixsrc
 
-post-patch:
-	${TOUCH} ${WRKSRC}/vncviewer/vncviewer.man
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vncviewer/vncviewer ${PREFIX}/bin/vncviewer
+	${INSTALL_MAN} ${WRKSRC}/vncviewer/vncviewer.man ${PREFIX}/man/man1/vncviewer.1
+	${INSTALL_DATA} ${WRKSRC}/vncviewer/Vncviewer ${PREFIX}/lib/X11/app-defaults
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/vncviewer
 	${INSTALL_DATA} ${WRKSRC}/vncviewer/README ${PREFIX}/share/doc/vncviewer/README
 
