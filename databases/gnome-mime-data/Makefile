@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/02/06 18:53:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2004/02/11 00:48:07 xtraeme Exp $
 #
 
 DISTNAME=		gnome-mime-data-2.4.1
@@ -15,7 +15,7 @@ DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 
 CONFLICTS=		gnome-vfs<=1.0.3
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_PERL5=		build
@@ -29,7 +29,7 @@ EGDIR=			${PREFIX}/share/examples/gnome-mime-data
 CONF_FILES=		${EGDIR}/gnome-vfs-mime-magic \
 				${PKG_SYSCONFDIR}/gnome-vfs-mime-magic
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

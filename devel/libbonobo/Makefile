@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/02/06 20:34:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.20 2004/02/11 00:53:57 xtraeme Exp $
 
 DISTNAME=		libbonobo-2.4.3
 CATEGORIES=		devel gnome
@@ -12,7 +12,7 @@ COMMENT=		GNOME2 Object activation framework library
 CONFLICTS=		bonobo-activation-[0-9]*
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
@@ -34,9 +34,9 @@ CONF_FILES=		${EGDIR}/bonobo-activation-config.xml \
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/bonobo/monikers
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/glib2/buildlink2.mk"
-.include "../../devel/popt/buildlink2.mk"
-.include "../../net/ORBit2/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
+.include "../../net/ORBit2/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
