@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/11/21 17:12:54 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/02/04 08:09:03 martti Exp $
 bin/make_printerdef
 bin/make_smbcodepage
 bin/make_unicodemap
@@ -24,7 +24,6 @@ man/man1/rpcclient.1
 man/man1/smbcacls.1
 man/man1/smbclient.1
 man/man1/smbcontrol.1
-man/man1/smbrun.1
 man/man1/smbsh.1
 man/man1/smbstatus.1
 man/man1/smbtar.1
@@ -36,6 +35,7 @@ man/man5/smb.conf.5
 man/man5/smbpasswd.5
 man/man7/samba.7
 man/man8/nmbd.8
+man/man8/pdbedit.8
 man/man8/smbd.8
 man/man8/smbmnt.8
 man/man8/smbmount.8
@@ -86,6 +86,7 @@ share/doc/samba/Passwords.txt
 share/doc/samba/Printing.txt
 share/doc/samba/README.DCEDFS
 share/doc/samba/README.jis
+share/doc/samba/README.NOW
 share/doc/samba/README.sambatar
 share/doc/samba/Recent-FAQs.txt
 share/doc/samba/RoutedNetworks.txt
@@ -152,6 +153,7 @@ share/examples/samba/printer-accounting/printcap
 share/examples/samba/printing/smbprint
 share/examples/samba/printing/smbprint.newer
 share/examples/samba/printing/smbprint.sysv
+share/examples/samba/printing/smbprint-new.sh
 share/examples/samba/simple/README
 share/examples/samba/simple/smb.conf
 share/examples/samba/smb.conf.default
@@ -183,6 +185,7 @@ share/samba/codepages/codepage.932
 share/samba/codepages/codepage.936
 share/samba/codepages/codepage.949
 share/samba/codepages/codepage.950
+share/samba/codepages/unicode_map.1251
 share/samba/codepages/unicode_map.437
 share/samba/codepages/unicode_map.737
 share/samba/codepages/unicode_map.775
@@ -210,7 +213,9 @@ share/samba/swat/help/Integrating-with-Windows.html
 share/samba/swat/help/NT_Security.html
 share/samba/swat/help/OS2-Client-HOWTO.html
 share/samba/swat/help/PAM-Authentication-And-Samba.html
+share/samba/swat/help/Samba-BDC-HOWTO.html
 share/samba/swat/help/Samba-HOWTO-Collection.html
+share/samba/swat/help/Samba-LDAP-HOWTO.html
 share/samba/swat/help/Samba-PDC-HOWTO.html
 share/samba/swat/help/UNIX_INSTALL.html
 share/samba/swat/help/findsmb.1.html
@@ -220,10 +225,9 @@ share/samba/swat/help/make_unicodemap.1.html
 share/samba/swat/help/msdfs_setup.html
 share/samba/swat/help/nmbd.8.html
 share/samba/swat/help/nmblookup.1.html
+share/samba/swat/help/pdbedit.8.html
 share/samba/swat/help/printer_driver2.html
 share/samba/swat/help/rpcclient.1.html
-share/samba/swat/help/samba-pdc-faq.html
-share/samba/swat/help/samba-pdc-howto.html
 share/samba/swat/help/samba.7.html
 share/samba/swat/help/smb.conf.5.html
 share/samba/swat/help/smbcacls.1.html
@@ -234,7 +238,6 @@ share/samba/swat/help/smbmnt.8.html
 share/samba/swat/help/smbmount.8.html
 share/samba/swat/help/smbpasswd.5.html
 share/samba/swat/help/smbpasswd.8.html
-share/samba/swat/help/smbrun.1.html
 share/samba/swat/help/smbsh.1.html
 share/samba/swat/help/smbspool.8.html
 share/samba/swat/help/smbstatus.1.html
