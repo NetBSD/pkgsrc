@@ -1,4 +1,4 @@
-$NetBSD: NOTES,v 1.1 2002/12/22 19:02:43 jlam Exp $
+$NetBSD: NOTES,v 1.2 2002/12/23 03:42:39 jlam Exp $
 
  Caching
  =======
@@ -13,8 +13,8 @@ sed invocation per "special" argument.
 
 The test process for buildlink2 consists of building and installing:
 
-	shells/tcsh	tests handling of specially-quoted arguments
-	devel/gettext	same as above, but uses libtool
+	shells/tcsh		tests handling of specially-quoted arguments
+	devel/gettext-lib	same as above, but uses libtool
 
 Full caching can be tested be adding ${OPSYS} to _BLNK_CACHE_ALL and
 performing the tests above.
@@ -23,6 +23,7 @@ Known working platforms:
 
 	MacOS X 10.1.5 (schmonz)
 	MacOS X 10.2 (grant)
+	NetBSD 1.5.x [full caching] (gendalia)
 	NetBSD 1.6 [full caching] (jlam)
 	OpenBSD (cjep)
 	Solaris 8 (grant)
@@ -31,6 +32,5 @@ Known working platforms:
 Unknown status:
 
 	IRIX
-	NetBSD 1.5.x
 	Solaris 7
 	Linux
