@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8883 2005/01/23 09:05:07 wulf Exp $
+$NetBSD: CHANGES,v 1.8884 2005/01/23 09:25:39 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -506,3 +506,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added dtcpclient-20040923 [hamajima 2005-01-23]
 	Updated squirrelmail to 1.4.4 [martti 2005-01-23]
 	Updated xlog to 1.0 [wulf 2005-01-23]
+	Updated xdx to 1.2 [wulf 2005-01-23]
