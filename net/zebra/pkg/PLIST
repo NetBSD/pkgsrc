@@ -1,9 +1,6 @@
-@comment $NetBSD: PLIST,v 1.12 2001/06/26 11:34:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2001/08/19 11:45:53 itojun Exp $
 @unexec install-info --delete %D/info/zebra.info %D/info/dir
 info/zebra.info
-info/zebra.info-1
-info/zebra.info-2
-info/zebra.info-3
 @exec   install-info          %D/info/zebra.info %D/info/dir
 man/man1/vtysh.1
 man/man8/bgpd.8
