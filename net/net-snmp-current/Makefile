@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1.2.2 2002/07/01 05:46:53 jlam Exp $
+# $NetBSD: Makefile,v 1.1.1.1.2.3 2002/08/25 18:01:06 jlam Exp $
 
 DISTNAME=	net-snmp-5.0.pre2
 PKGNAME=	net-snmp-5.0.0.2
@@ -23,7 +23,7 @@ USE_BUILDLINK2=	yes
 .include "../../mk/bsd.prefs.mk"
 
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-defaults
