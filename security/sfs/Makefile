@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/03/25 06:45:00 lukem Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/25 15:51:50 grant Exp $
 #
 
 DISTNAME=		sfs-0.7.2
@@ -28,6 +28,8 @@ PKG_USERS=		sfs:sfs::Self-certifying\\ file\\ system:/
 PKG_GROUPS=		sfs
 PKG_SYSCONFSUBDIR=	sfs
 
+RCD_SCRIPTS=		sfscd sfssd
+
 .include "../../mk/bsd.prefs.mk"
 
 SFSDIR?=		/var/sfs
@@ -42,12 +44,6 @@ MESSAGE_SUBST+=		SFSDIR=${SFS_ROOT} SFSEXAMPLEDIR=${SFSEXAMPLEDIR}
 INFO_FILES=		sfs.info
 
 post-install:
-	@${SED} -e 's|@PREFIX@|${PREFIX}|g' ${FILESDIR}/sfscd \
-		> ${PREFIX}/etc/rc.d/sfscd
-	@${CHMOD} +x ${PREFIX}/etc/rc.d/sfscd
-	@${SED} -e 's|@PREFIX@|${PREFIX}|g' ${FILESDIR}/sfssd \
-		> ${PREFIX}/etc/rc.d/sfssd
-	@${CHMOD} +x ${PREFIX}/etc/rc.d/sfssd
 	${INSTALL_DATA_DIR} ${SFSEXAMPLEDIR}
 	@${SED} -e 's|@SFSDIR@|${SFS_ROOT}|g' ${FILESDIR}/sfsrwsd_config.sample \
 		> ${SFSEXAMPLEDIR}/sfsrwsd_config.sample
