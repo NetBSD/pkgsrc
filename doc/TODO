@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1819 2004/06/06 23:44:24 xtraeme Exp $
+$NetBSD: TODO,v 1.1820 2004/06/07 02:29:46 snj Exp $
 
 Suggested new packages
 ======================
@@ -179,7 +179,6 @@ Suggested package updates
 	o boehm-gc-6.3alpha6 [recht]
 	o boost-1.31.0
 	o boson-0.10
-	o bzflag-1.10.6
 	o capc-calc-2.11.9.3
 	o centericq-4.9.12
 	o cervisia-2.1.2
