@@ -1,15 +1,13 @@
-$NetBSD: patch-ad,v 1.5 1999/09/19 04:24:54 jlam Exp $
+$NetBSD: patch-ad,v 1.6 2000/03/18 17:43:17 jlam Exp $
 
---- ./bin/pg_encoding/Makefile.orig	Sat Jun  5 06:27:31 1999
-+++ ./bin/pg_encoding/Makefile	Sat Sep 18 03:16:50 1999
-@@ -19,8 +19,8 @@
+--- bin/pg_dump/Makefile.in.orig	Sun Jan 17 01:19:05 1999
++++ bin/pg_dump/Makefile.in	Thu Mar 16 17:49:44 2000
+@@ -29,7 +29,7 @@
+ all: submake pg_dump
  
- all: pg_encoding
+ pg_dump: $(OBJS) $(LIBPQDIR)/libpq.a
+-	$(CC) -o pg_dump -L$(LIBPQDIR) $(OBJS) -lpq $(LDFLAGS)
++	$(CC) -o pg_dump $(OBJS) $(LIBPQ) $(LDFLAGS)
  
--pg_encoding: $(OBJS) $(LIBPQDIR)/libpq.a
--	$(CC) -o pg_encoding $(OBJS) -L$(LIBPQDIR) -lpq $(LDFLAGS)
-+pg_encoding: $(OBJS)
-+	$(CC) -o pg_encoding $(OBJS) $(LIBPQ) $(LDFLAGS)
- 
- install: pg_encoding
- 	$(INSTALL) $(INSTL_EXE_OPTS) pg_encoding$(X) $(BINDIR)/pg_encoding$(X)
+ ../../utils/strdup.o:
+ 	$(MAKE) -C ../../utils strdup.o

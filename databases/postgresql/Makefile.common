@@ -1,0 +1,36 @@
+# $NetBSD: Makefile.common,v 1.1 2000/03/18 17:43:16 jlam Exp $
+
+DISTNAME=		postgresql-6.5.3
+WRKSRC=			${WRKDIR}/${DISTNAME}/src
+CATEGORIES=		databases
+MASTER_SITES=		ftp://ftp.PostgreSQL.org/pub/ \
+			ftp://ftp.sunsite.auc.dk/mirrors/www.postgresql.org/pub/ \
+			ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/
+
+MAINTAINER=		jlam@netbsd.org
+HOMEPAGE=		http://www.PostgreSQL.ORG/
+
+BUILD_DEPENDS+=		${LOCALBASE}/bin/autoreconf:../../devel/autoconf
+
+USE_GMAKE=		yes
+GNU_CONFIGURE=		yes
+
+FILESDIR=		${.CURDIR}/../../databases/postgresql/files
+PATCHDIR=		${.CURDIR}/../../databases/postgresql/patches
+
+.include "../../mk/bsd.prefs.mk"
+
+CONFIGURE_ARGS+=	--with-template="${LOWER_OPSYS}" \
+			--enable-locale
+
+post-extract:
+	@${CP} ${FILESDIR}/Makefile.custom ${WRKSRC}
+	@${LN} -sf bsd.c ${WRKSRC}/backend/port/dynloader/netbsd.c
+	@${LN} -sf bsd.h ${WRKSRC}/backend/port/dynloader/netbsd.h
+	@${LN} -sf bsd.h ${WRKSRC}/include/port/netbsd.h
+	@${LN} -sf Makefile.bsd ${WRKSRC}/makefiles/Makefile.netbsd
+
+pre-configure:
+	cd ${WRKSRC}; ${LOCALBASE}/bin/autoreconf
+
+.include "../../mk/bsd.pkg.mk"

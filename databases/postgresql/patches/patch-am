@@ -1,54 +1,39 @@
-$NetBSD: patch-am,v 1.3 2000/02/04 18:04:35 jlam Exp $
+$NetBSD: patch-am,v 1.4 2000/03/18 17:43:17 jlam Exp $
 
---- ./pl/plpgsql/src/Makefile.in.orig	Wed Jun 30 19:57:31 1999
-+++ ./pl/plpgsql/src/Makefile.in	Mon Sep 20 01:27:23 1999
+--- interfaces/jdbc/Makefile.orig	Wed Jun 23 01:56:17 1999
++++ interfaces/jdbc/Makefile	Thu Mar 16 17:49:44 2000
 @@ -27,7 +27,7 @@
+ # In 6.5, the all rule builds the makeVersion class which then calls make using
+ # the jdbc1 or jdbc2 rules
+ all:	makeVersion.class
+-	make $$($(JAVA) makeVersion)
++	$(MAKE) $$($(JAVA) makeVersion)
+ 	@echo ------------------------------------------------------------
+ 	@echo The JDBC driver has now been built. To make it available to
+ 	@echo other applications, copy the postgresql.jar file to a public
+@@ -45,10 +45,10 @@
+ 	@echo
+ 	@echo ------------------------------------------------------------
+ 	@echo To build the examples, type:
+-	@echo "  make examples"
++	@echo "  $(MAKE) examples"
+ 	@echo
+ 	@echo "To build the CORBA example (requires Java2):"
+-	@echo "  make corba"
++	@echo "  $(MAKE) corba"
+ 	@echo ------------------------------------------------------------
+ 	@echo
  
- OBJS=	pl_parse.o pl_handler.o pl_comp.o pl_exec.o pl_funcs.o
- 
--SHLIB_LINK+= -L$(LIBPQDIR) -lpq
-+SHLIB_LINK+= $(LIBPQ)
- 
- # If crypt is a separate library, rather than part of libc, it may need
- # to be referenced separately to keep (broken) linkers happy.  (This is
-@@ -44,12 +44,18 @@
- # installed, however, so we ignore the install-shlib rule and do this
- # instead:
- 
-+ifneq ($(LIBTOOL),)
-+install: install-lib
-+	rm -f $(LIBDIR)/lib$(NAME).a
-+	$(LN_S) -f lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION).$(SO_MINOR_VERSION) $(LIBDIR)/plpgsql$(DLSUFFIX)
-+else
- install: $(shlib)
- ifneq ($(shlib),)
- 	$(INSTALL) $(INSTL_SHLIB_OPTS) $(shlib) $(LIBDIR)/plpgsql$(DLSUFFIX)
- else
- 	@echo "plpgsql not installed due to lack of shared library support."
- endif
-+endif
- 
- 
- pl_handler.o:	pl_handler.c plpgsql.h pl.tab.h
-@@ -60,8 +66,10 @@
- 
- pl_funcs.o:	pl_funcs.c plpgsql.h pl.tab.h
- 
--pl_parse.o:	pl_gram.c pl_scan.c plpgsql.h
--	$(CC) $(CFLAGS) -c -o $@ pl_gram.c
-+pl_parse.o:	pl_parse.c plpgsql.h pl.tab.h
-+
-+pl_parse.c:	pl_gram.c pl_scan.c plpgsql.h
-+	$(LN_S) -f pl_gram.c pl_parse.c
- 
- pl_gram.c pl.tab.h:	gram.y
- 	$(YACC) $(YFLAGS) $<
-@@ -79,7 +87,7 @@
- 
- clean: clean-shlib
- 	rm -f lib$(NAME).a
--	rm -f *.o pl.tab.h pl_gram.c pl_scan.c
-+	rm -f *.o pl.tab.h pl_parse.c pl_gram.c pl_scan.c
- # And the garbage that might have been left behind by partial build:
- 	rm -f y.tab.c y.tab.h lex.yy.c
- ifeq ($(PORTNAME), win)
+@@ -121,10 +121,10 @@
+ 	@echo JDBC 1 specification, and one to the JDBC 2 specification.
+ 	@echo
+ 	@echo To build the driver for JDBC 1 (usually for JDK 1.1 thru 1.1.7)
+-	@echo then type: make jdbc1
++	@echo then type: $(MAKE) jdbc1
+ 	@echo
+ 	@echo To build the driver for JDBC 2 (usually for JDK 1.2 and later)
+-	@echo then type: make jdbc2
++	@echo then type: $(MAKE) jdbc2
+ 	@echo
+ 	@echo If you still have problems, then please email the interfaces
+ 	@echo or bugs lists, or better still to me direct (peter@retep.org.uk)

@@ -1,4 +1,136 @@
-@comment $NetBSD: PLIST.doc,v 1.1 1999/09/19 04:24:55 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2000/03/18 17:43:18 jlam Exp $
+bin/cleardbdir
+bin/createdb
+bin/createlang
+bin/createuser
+bin/destroydb
+bin/destroylang
+bin/destroyuser
+bin/ecpg
+bin/initdb
+bin/initlocation
+bin/ipcclean
+bin/pg_dump
+bin/pg_dumpall
+bin/pg_id
+bin/pg_passwd
+bin/pg_upgrade
+bin/pg_version
+bin/postgres
+bin/postmaster
+bin/psql
+bin/vacuumdb
+include/access/attnum.h
+include/c.h
+include/commands/trigger.h
+include/config.h
+include/ecpgerrno.h
+include/ecpglib.h
+include/ecpgtype.h
+include/executor/spi.h
+include/fmgr.h
+include/lib/dllist.h
+include/libpq++.h
+include/libpq++/pgconnection.h
+include/libpq++/pgcursordb.h
+include/libpq++/pgdatabase.h
+include/libpq++/pglobject.h
+include/libpq++/pgtransdb.h
+include/libpq-fe.h
+include/libpq-int.h
+include/libpq/libpq-fs.h
+include/libpq/pqcomm.h
+include/os.h
+include/postgres.h
+include/postgres_ext.h
+include/sqlca.h
+include/utils/elog.h
+include/utils/geo_decls.h
+include/utils/mcxt.h
+include/utils/palloc.h
+lib/libecpg.a
+lib/libecpg.so.3.0
+lib/libpq++.a
+lib/libpq++.so.3.0
+lib/libpq.a
+lib/libpq.so.2.0
+lib/plpgsql.so
+man/man1/cleardbdir.1
+man/man1/createdb.1
+man/man1/createuser.1
+man/man1/destroydb.1
+man/man1/destroyuser.1
+man/man1/ecpg.1
+man/man1/initdb.1
+man/man1/initlocation.1
+man/man1/ipcclean.1
+man/man1/pg_dump.1
+man/man1/pg_dumpall.1
+man/man1/pg_passwd.1
+man/man1/pg_upgrade.1
+man/man1/postgres.1
+man/man1/postmaster.1
+man/man1/psql.1
+man/man3/catalogs.3
+man/man3/libpq.3
+man/man5/pg_hba.conf.5
+man/manl/abort.l
+man/manl/alter_table.l
+man/manl/alter_user.l
+man/manl/begin.l
+man/manl/close.l
+man/manl/cluster.l
+man/manl/commit.l
+man/manl/copy.l
+man/manl/create_aggregate.l
+man/manl/create_database.l
+man/manl/create_function.l
+man/manl/create_index.l
+man/manl/create_language.l
+man/manl/create_operator.l
+man/manl/create_rule.l
+man/manl/create_sequence.l
+man/manl/create_table.l
+man/manl/create_trigger.l
+man/manl/create_type.l
+man/manl/create_user.l
+man/manl/create_version.l
+man/manl/create_view.l
+man/manl/declare.l
+man/manl/delete.l
+man/manl/drop.l
+man/manl/drop_aggregate.l
+man/manl/drop_database.l
+man/manl/drop_function.l
+man/manl/drop_index.l
+man/manl/drop_language.l
+man/manl/drop_operator.l
+man/manl/drop_rule.l
+man/manl/drop_sequence.l
+man/manl/drop_table.l
+man/manl/drop_trigger.l
+man/manl/drop_type.l
+man/manl/drop_user.l
+man/manl/drop_view.l
+man/manl/end.l
+man/manl/explain.l
+man/manl/fetch.l
+man/manl/grant.l
+man/manl/insert.l
+man/manl/listen.l
+man/manl/load.l
+man/manl/lock.l
+man/manl/move.l
+man/manl/notify.l
+man/manl/reset.l
+man/manl/revoke.l
+man/manl/rollback.l
+man/manl/select.l
+man/manl/set.l
+man/manl/show.l
+man/manl/sql.l
+man/manl/update.l
+man/manl/vacuum.l
 share/doc/postgresql/FAQ
 share/doc/postgresql/FAQ_DEV
 share/doc/postgresql/README.fsync
@@ -677,8 +809,8 @@ share/doc/postgresql/user/datatype.htm
 share/doc/postgresql/user/datetime-appendix.htm
 share/doc/postgresql/user/environ.htm
 share/doc/postgresql/user/functions.htm
-share/doc/postgresql/user/index.html
 share/doc/postgresql/user/inherit.htm
+share/doc/postgresql/user/index.html
 share/doc/postgresql/user/intro.htm
 share/doc/postgresql/user/keys.htm
 share/doc/postgresql/user/manage.htm
@@ -784,9 +916,23 @@ share/doc/postgresql/user/x684.htm
 share/doc/postgresql/user/x710.htm
 share/doc/postgresql/user/x774.htm
 share/doc/postgresql/user/y2k.htm
+share/postgresql/global1.bki.source
+share/postgresql/global1.description
+share/postgresql/local1_template1.bki.source
+share/postgresql/local1_template1.description
+share/postgresql/pg_geqo.sample
+share/postgresql/pg_hba.conf.sample
+@dirrm share/postgresql
 @dirrm share/doc/postgresql/user
 @dirrm share/doc/postgresql/tutorial
 @dirrm share/doc/postgresql/programmer
 @dirrm share/doc/postgresql/postgres
 @dirrm share/doc/postgresql/admin
 @dirrm share/doc/postgresql
+@dirrm include/utils
+@dirrm include/libpq
+@dirrm include/libpq++
+@dirrm include/lib
+@dirrm include/executor
+@dirrm include/commands
+@dirrm include/access

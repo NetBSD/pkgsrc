@@ -1,31 +1,17 @@
-$NetBSD: patch-aj,v 1.4 1999/09/20 23:38:50 jlam Exp $
+$NetBSD: patch-aj,v 1.5 2000/03/18 17:43:17 jlam Exp $
 
---- ./interfaces/ecpg/lib/Makefile.in.orig	Wed Jun 30 19:57:23 1999
-+++ ./interfaces/ecpg/lib/Makefile.in	Mon Sep 20 01:17:03 1999
-@@ -12,12 +12,16 @@
- 
- NAME= ecpg
- SO_MAJOR_VERSION= 3
-+ifneq ($(LIBTOOL),)
-+SO_MINOR_VERSION= 0	# bump this every time the patchlevel changes
-+else
- SO_MINOR_VERSION= 0.0
-+endif
- 
- SRCDIR= @top_srcdir@
- include $(SRCDIR)/Makefile.global
- 
--CFLAGS+= -I../include -I$(SRCDIR)/interfaces/libpq
-+CFLAGS+= -I../include -I$(LIBPQDIR)
- 
- ifdef KRBVERS
- CFLAGS+= $(KRBFLAGS)
-@@ -25,7 +29,7 @@
- 
- OBJS= ecpglib.o typename.o
- 
--SHLIB_LINK= -L../../libpq -lpq
-+SHLIB_LINK= $(LIBPQ)
- 
- # Shared library stuff, also default 'all' target
- include $(SRCDIR)/Makefile.shlib
+--- configure.in.orig	Mon Nov  1 19:24:29 1999
++++ configure.in	Thu Mar 16 17:49:44 2000
+@@ -23,11 +23,7 @@
+     bsdi*) os=bsdi need_tas=no ;;
+  freebsd1*|freebsd2*) os=freebsd need_tas=no ;;
+  freebsd*) os=freebsd need_tas=no elf=yes ;;
+-  netbsd*)
+-	os=bsd need_tas=no
+-	case "$host_cpu" in
+-	  powerpc) elf=yes ;;
+-	esac ;;
++  netbsd*) os=netbsd need_tas=no ;;
+   openbsd*) os=bsd need_tas=no ;;
+     dgux*) os=dgux need_tas=no ;;
+      aix*) os=aix need_tas=no ;;

@@ -1,15 +1,23 @@
-$NetBSD: post-install-notes,v 1.5 1999/09/21 03:17:37 soren Exp $
+$NetBSD: post-install-notes,v 1.6 2000/03/18 17:43:16 jlam Exp $
 
-Now that PostgreSQL is installed, you should read the documentation and
-implementation guides. These can be found at:
+PostgreSQL has a Web site at http://www.postgresql.org/ which carries details
+on the latest release, upcoming features, and other information to make your
+work or play with PostgreSQL more productive.
 
-		http://www.PostgreSQL.org/docs/
+Please check the following URL for a listing of the current user-support
+mailing lists:
 
-You may wish to subscribe to the PostgreSQL user-support mailing list.
-Send an e-mail to pgsql-questions-request@postgresql.org with the
-text "subscribe" in the message body.
+	http://www.postgresql.org -> Info Central -> Mailing Lists
 
-If you built PostgreSQL with Tcl/Tk support, then you can also install
-the Tcl/Tk database frontend "pgaccess" (databases/pgaccess) for database
-operations with a GUI.
+All of the mailing lists are currently archived and viewable at:
 
+	http://www.postgresql.org -> Info Central -> Mailing Lists
+
+And, so that we have an idea of who is using what, please connect to the
+following registration URL:
+
+	http://www.postgresql.org -> Helping Us -> Survey/Register
+
+
+Thank you for choosing PostgreSQL, the most advanced open source database 
+engine.
