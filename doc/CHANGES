@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6677 2004/07/25 15:36:56 tv Exp $
+$NetBSD: CHANGES,v 1.6678 2004/07/25 16:15:26 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3567,3 +3567,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated dhid to 5.2 [tv 2004-07-25]
 	Updated entropy to 0.8.2.416 [tv 2004-07-25]
 	Updated freenet-tools to 0.2.23 [tv 2004-07-25]
+	Added anise-0beta10 [minskim 2004-07-25]
