@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5910 2004/05/12 15:27:51 recht Exp $
+$NetBSD: CHANGES,v 1.5911 2004/05/12 18:53:24 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2483,3 +2483,13 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tkinfo to 2.8 [minskim 2004-05-12]
 	Updated python23 to 2.3.3nb3 [recht 2004-05-12]
 	Updated python23-pth to 2.3.3nb4 [recht 2004-05-12]
+	Updated amanda to 2.4.4p2 [bouyer 2004-05-12]
+	Updated amanda-common to 2.4.4p2 [bouyer 2004-05-12]
+	Updated amanda-client to 2.4.4p2 [bouyer 2004-05-12]
+	Updated amanda-server to 2.4.4p2 [bouyer 2004-05-12]
+	Updated amanda-plot to 2.4.4p2 [bouyer 2004-05-12]
+	Deleted amanda-dev [bouyer 2004-05-12]
+	Deleted amanda-dev-common [bouyer 2004-05-12]
+	Deleted amanda-dev-client [bouyer 2004-05-12]
+	Deleted amanda-dev-server [bouyer 2004-05-12]
+	Deleted amanda-dev-plot [bouyer 2004-05-12]
