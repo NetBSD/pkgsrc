@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2004/05/18 15:51:21 drochner Exp $
+
+--- dvdread/dvd_reader.c.orig	2004-05-18 15:53:26.000000000 +0200
++++ dvdread/dvd_reader.c
+@@ -282,7 +282,7 @@ static char *bsd_block2char( const char 
+     char *new_path;
+ 
+     /* If it doesn't start with "/dev/" or does start with "/dev/r" exit */ 
+-    if( !strncmp( path, "/dev/",  5 ) || strncmp( path, "/dev/r", 6 ) ) 
++    if( strncmp( path, "/dev/",  5 ) || !strncmp( path, "/dev/r", 6 ) ) 
+       return (char *) strdup( path );
+ 
+     /* Replace "/dev/" with "/dev/r" */
