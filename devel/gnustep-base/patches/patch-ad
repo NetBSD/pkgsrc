@@ -1,0 +1,20 @@
+$NetBSD: patch-ad,v 1.1 2004/04/10 23:41:01 rh Exp $
+
+--- Headers/Foundation/NSCoder.h.orig	2004-01-22 19:37:07.000000000 +1000
++++ Headers/Foundation/NSCoder.h
+@@ -82,9 +82,15 @@
+  * MacOS-X adds some typedefs that GNUstep already has by another name.
+  */
+ #include <GSConfig.h>
++#ifndef	uint8_t
+ #define	uint8_t	gsu8
++#endif
++#ifndef	int32_t
+ #define	int32_t	gss32
++#endif
++#ifndef	int64_t
+ #define	int64_t	gss64
++#endif
+ 
+ 
+ /** <override-subclass />
