@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4713 2004/02/06 22:48:51 jmmv Exp $
+$NetBSD: CHANGES,v 1.4714 2004/02/06 22:58:26 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -678,3 +678,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated zenity to 1.8 [jmmv 2004-02-06]
 	Updated nautilus to 2.4.2 [jmmv 2004-02-06]
 	Updated epiphany to 1.0.7nb1 [jmmv 2004-02-06]
+	Updated gnome-base to 2.4.2 [jmmv 2004-02-06]
+	Updated gnome-accessibility to 2.4.2 [jmmv 2004-02-06]
+	Updated gnome to 2.4.2 [jmmv 2004-02-06]
+	Updated gnome-extras to 2.4.2 [jmmv 2004-02-06]
