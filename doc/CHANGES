@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7849 2004/11/14 09:16:11 jmmv Exp $
+$NetBSD: CHANGES,v 1.7850 2004/11/14 11:02:04 soren Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5268,3 +5268,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kphone to 4.0.5 [tron 2004-11-13]
 	Updated readline to 5.0 [jlam 2004-11-14]
 	Updated rhythmbox to 0.8.8 [jmmv 2004-11-14]
+	Updated gnats to 4.0.1 [soren 2004-11-14]
