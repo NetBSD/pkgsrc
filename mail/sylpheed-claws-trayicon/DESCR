@@ -2,5 +2,3 @@ With the trayicon plugin, Sylpheed-claws will display an icon in the system
 tray.  The desktop environment must be compatible with the system tray
 protocol specification from http://www.freedesktop.org/standards/.  GNOME 2
 and KDE 3.1.1 are known to follow it.
-
-You must manually load the plugin through Configuration/Plugins.
