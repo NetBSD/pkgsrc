@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.422 2002/10/31 00:48:08 grant Exp $
+$NetBSD: CHANGES,v 1.423 2002/10/31 02:06:50 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3464,3 +3464,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated php4-xslt to 4.2.3 [wiz 2002-10-30]
 	Added dnstop-20021030 [itojun 2002-10-30]
 	Updated phoenix-linux to 0.4 [grant 2002-10-31]
+	Updated latex-mk to 0.9.1 [dmcmahill 2002-10-30]
