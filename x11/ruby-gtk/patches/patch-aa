@@ -1,0 +1,36 @@
+--- extconf.rb.orig	Sat Aug  7 02:57:08 1999
++++ extconf.rb	Wed Aug 25 08:44:11 1999
+@@ -8,22 +8,26 @@
+ # detect GTK+ (and Imlib) configurations
+ #
+ if /mswin32/ !~ PLATFORM
+-  config_cmds = [
+-    ["imlib-config", "--libs-gdk", "--cflags-gdk"],
+-    ["gtk-config", "--libs", "--cflags"],
+-  ]
++  config_cmds = ["imlib-config", "gtk-config"]
+   if ARGV.size > 0
+-    config_cmds.unshift([ARGV[0], "--libs", "--cflags"])
++    config_cmds.unshift(ARGV[0])
+   end
+   
+   begin
+-    config_cmds.each do |config_cmd, config_libs, config_cflags|
++    config_cmds.each do |config_cmd|
+       version = `#{config_cmd} --version`
+       if not version.chomp.empty?
++	if /^imlib/ === File.basename(config_cmd)
++	  with_imlib = true
++	  config_libs, config_cflags = "--libs-gdk", "--cflags-gdk"
++	else
++	  with_imlib = false
++	  config_libs, config_cflags = "--libs", "--cflags"
++	end
+ 	$LDFLAGS, *libs = `#{config_cmd} #{config_libs}`.chomp.split(/(-l.*)/)
+ 	$libs = libs.join(' ') + ' ' + $libs
+ 	$CFLAGS = `#{config_cmd} #{config_cflags}`.chomp
+-	if /^imlib/ === config_cmd
++	if with_imlib
+ 	  $CFLAGS = $CFLAGS + " -DHAVE_GDKIMLIB"
+ 	  STDERR.puts("Imlib support enabled.")
+ 	end
