@@ -1,15 +1,21 @@
-# $NetBSD: Makefile,v 1.7 2002/07/18 05:25:54 grant Exp $
+# $NetBSD: Makefile,v 1.8 2002/08/22 02:22:14 grant Exp $
 #
 
-DISTNAME=		xfstt-1.1
-PKGREVISION=		1
+DISTNAME=		xfstt_1.3
+PKGNAME=		${DISTNAME:S/_/-/}
 CATEGORIES=		x11 net
-MASTER_SITES=		${MASTER_SITE_SUNSITE:=X11/fonts/}
+MASTER_SITES=		http://download.berlios.de/xfstt/
 
 MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://developer.berlios.de/projects/xfstt
 COMMENT=		TrueType font server for X11
 
+CXXFLAGS+=		-fomit-frame-pointer -ffast-math
+MAKE_ENV+=		CXXFLAGS="${CXXFLAGS}"
+
 USE_X11BASE=		YES
+USE_GMAKE=		YES
+WRKSRC=			${WRKDIR}/${PKGNAME}
 
 post-patch:
 	@( \
@@ -28,7 +34,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/FAQ ${PREFIX}/share/doc/xfstt
 	${INSTALL_DATA} ${WRKSRC}/CHANGES ${PREFIX}/share/doc/xfstt
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/xfstt
-	${INSTALL_DATA} ${WRKSRC}/THANKS.txt ${PREFIX}/share/doc/xfstt
+	${INSTALL_DATA} ${WRKSRC}/THANKS ${PREFIX}/share/doc/xfstt
 	${SED} -e "/%%PREFIX%%/s##${PREFIX}#g" ${FILESDIR}/xfstt.sh \
 		> ${PREFIX}/etc/rc.d/xfstt
 	${CHMOD} 755 ${PREFIX}/etc/rc.d/xfstt
