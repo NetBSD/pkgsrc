@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2003/03/01 02:08:16 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2003/03/01 02:13:44 jlam Exp $
 #
 
 DISTNAME=	centericq-4.9.2
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://konst.org.ua/download/
 
