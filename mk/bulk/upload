@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.16 2004/03/16 13:55:51 hubertf Exp $
+# $NetBSD: upload,v 1.16.2.1 2004/04/27 08:18:49 agc Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
@@ -73,7 +73,7 @@ distdir=`cd pkgtools/pkglint ; ${BMAKE} show-var VARNAME=DISTDIR`
 ( cd security/audit-packages ; ${BMAKE} bulk-install )
 
 echo "Making sure vulnerability-list is upto date:"
-if [ $UPDATE_VULNERABILITY_LIST = "yes" ]
+if [ -z "$UPDATE_VULNERABILITY_LIST" -o "$UPDATE_VULNERABILITY_LIST" = "yes" ]
 then
 	env PKGVULNDIR=${distdir} download-vulnerability-list
 else
