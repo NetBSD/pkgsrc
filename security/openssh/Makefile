@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.132 2004/04/28 03:54:08 jlam Exp $
+# $NetBSD: Makefile,v 1.133 2004/04/28 04:00:17 jlam Exp $
 
 DISTNAME=		openssh-3.8p1
 PKGNAME=		openssh-3.8.1
-PKGREVISION=		2
+PKGREVISION=		3
 SVR4_PKGNAME=		ossh
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
@@ -74,15 +74,16 @@ CONFIGURE_ARGS+=	--with-privsep-user=${OPENSSH_USER}
 #
 CONFIGURE_ENV+=		LD=${CC:Q}
 
-# s/key support, enabled on Darwin and Solaris. NetBSD s/key has 4 args
-# (4: sslen) to skeychallenge instead of 3, so disable s/key support.
-#
-.if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
+# Enable S/Key support on NetBSD, Darwin, and Solaris.
+.if (${OPSYS} == "NetBSD") || (${OPSYS} == "Darwin") || (${OPSYS} == "SunOS")
 .  include "../../security/skey/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-skey=${BUILDLINK_PREFIX.skey}
-.elif ${OPSYS} == "NetBSD"
-#CONFIGURE_ARGS+=	--with-skey=/usr
-CONFIGURE_ARGS+=	--without-skey
+#
+# NetBSD's skeychallenge() takes 4 args (int: sslen) instead of 3.
+#
+.  if ${OPSYS} == "NetBSD"
+CPPFLAGS+=		-DSKEYCHALLENGE=SKEYCHALLENGE4
+.  endif
 .else
 CONFIGURE_ARGS+=	--without-skey
 .endif
