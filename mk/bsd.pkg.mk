@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.501 2000/07/11 14:53:43 agc Exp $			\
+#	$NetBSD: bsd.pkg.mk,v 1.502 2000/07/13 11:40:04 hubertf Exp $
 #
 # This file is in the public domain.
 #
