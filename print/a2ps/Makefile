@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2004/10/03 00:18:03 tv Exp $
+# $NetBSD: Makefile,v 1.50 2004/12/20 15:02:34 wiz Exp $
 
 DISTNAME=		a2ps-4.13b
 PKGNAME=		a2ps-4.13.0.2
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_GNU:=a2ps/} \
 			ftp://ftp.enst.fr/pub/unix/a2ps/
