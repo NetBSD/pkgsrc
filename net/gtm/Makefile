@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/11/11 17:49:27 tron Exp $
+# $NetBSD: Makefile,v 1.4 2000/11/12 14:48:51 tron Exp $
 
 DISTNAME=	gtm-0.4.5
 CATEGORIES=	net gnome
@@ -13,6 +13,7 @@ DEPENDS+=	wget-*:../../net/wget
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
 USE_GMAKE=	YES
+USE_LIBINTL=	YES
 
 post-install:
 	${RMDIR} ${PREFIX}/share/gnome/help/gtm/C/images
