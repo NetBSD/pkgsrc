@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2001/03/01 20:52:15 tron Exp $
+$NetBSD: patch-aa,v 1.4 2001/06/09 15:14:26 magick Exp $
 
---- Makefile.orig	Mon Feb 26 22:56:48 2001
+--- Makefile.orig	Mon Jun  4 21:25:11 2001
 +++ Makefile
-@@ -32,31 +32,31 @@
+@@ -32,33 +32,33 @@
  include Makefile.win32
  else
  
@@ -15,8 +15,8 @@ $NetBSD: patch-aa,v 1.3 2001/03/01 20:52:15 tron Exp $
 -PERL    = /usr/bin/perl
 +PERL    = $(LOCALBASE)/bin/perl
  
--LDLIBS  = -ltk8.3 -ltcl8.3 -L/usr/X11R6/lib -lX11 -lm -ldl
-+LDLIBS  = -ltk83 -ltcl83 -L$(X11BASE)/lib -lX11 -lm
+-LDLIBS  = -ltk8.3 -ltcl8.3 -L/usr/X11R6/lib -lX11 -lXmu -lm -ldl
++LDLIBS  = -ltk83 -ltcl83 -L$(X11BASE)/lib -lX11 -lm -lXmu
  # use static libraries for debugging only
  #LDLIBS  = dbglib/libtk8.3.a dbglib/libtcl8.3.a -lX11 -lm -ldl -L/usr/X11R6/lib
  
@@ -31,23 +31,24 @@ $NetBSD: patch-aa,v 1.3 2001/03/01 20:52:15 tron Exp $
 +DEFS   += -DTK_LIBRARY_PATH=\"$(LOCALBASE)/lib/tk8.3\"
 +DEFS   += -DTCL_LIBRARY_PATH=\"$(LOCALBASE)/lib/tcl8.3\"
  
+ # path to the directory where the provider database files are kept
+-DEFS   += -DEPG_DB_DIR=\"/usr/tmp/nxtvdb\"
++DEFS   += -DEPG_DB_DIR=_PATH_TMP\"nxtvdb\"
  
  #WARN    = -Wall -Wpointer-arith -Wnested-externs \
  #          -Werror -Wstrict-prototypes -Wmissing-prototypes
  WARN    = -Wall
--CC      = gcc
--CFLAGS  = -pipe $(WARN) $(INCS) $(DEFS) -O
-+#CC      = gcc
+ CC      = gcc
+-CFLAGS  = -pipe $(WARN) $(INCS) $(DEFS) -O2
 +CFLAGS  += $(WARN) $(INCS) $(DEFS)
  
  # ----- don't change anything below ------------------------------------------
  
-@@ -81,7 +81,7 @@
- 	test -d $(BINDIR) || mkdirhier $(BINDIR)
+@@ -85,7 +85,6 @@
  	test -d $(MANDIR) || mkdirhier $(MANDIR)
  	install -c -m 0755 nxtvepg     $(BINDIR)
--	install -c -m 0644 nxtvepg.1x  $(MANDIR)
-+	install -c -m 0644 nxtvepg.1x  $(MANDIR)/nxtvepg.1
+ 	install -c -m 0644 nxtvepg.1   $(MANDIR)
+-	rm -f $(MANDIR)/nxtvepg.1x
  
  ##%.o: %.c
  ##	$(CC) $(CFLAGS) -c *.c -o *.o
