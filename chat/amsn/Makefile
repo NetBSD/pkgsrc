@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/01/22 13:26:20 peter Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/22 19:50:06 peter Exp $
 #
 
 DISTNAME=		amsn-0_94
@@ -23,7 +23,7 @@ do-install:
 	${LN} -sf ${PREFIX}/share/amsn/amsn ${PREFIX}/bin/amsn
 	${CHMOD} +x ${PREFIX}/share/amsn/amsn
 
-.include "../../security/tls/buildlink3.mk"
+.include "../../security/tcl-tls/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
