@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1531 2004/11/02 08:31:45 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1532 2004/11/11 22:32:45 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -387,11 +387,6 @@ CONFIGURE_ENV+=		LIBS=${LIBS:Q}
 CONFIGURE_ENV+=		install_sh=${INSTALL:Q}
 .endif
 
-.if defined(_OPSYS_LIBTOOL_REQD)
-LIBTOOL_REQD=		${_OPSYS_LIBTOOL_REQD}
-.else
-LIBTOOL_REQD?=		1.5.10nb1
-.endif
 #
 # PKG_LIBTOOL is the path to the libtool script installed by libtool-base.
 # _LIBTOOL is the path the libtool used by the build, which could be the
@@ -406,7 +401,10 @@ _SHLIBTOOL?=		${PKG_SHLIBTOOL}
 LIBTOOL?=		${PKG_LIBTOOL}
 SHLIBTOOL?=		${PKG_SHLIBTOOL}
 .if defined(USE_LIBTOOL)
-BUILD_DEPENDS+=		libtool-base>=${LIBTOOL_REQD}:../../devel/libtool-base
+.if defined(_OPSYS_LIBTOOL_REQD)
+BUILD_DEPENDS+=		libtool-base>=${_OPSYS_LIBTOOL_REQD}:../../devel/libtool-base
+.endif
+BUILD_DEPENDS+=		libtool-base>=1.5.10nb6:../../devel/libtool-base
 CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 LIBTOOL_OVERRIDE?=	libtool */libtool */*/libtool
