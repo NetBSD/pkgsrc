@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/09/25 19:35:57 skrll Exp $
+# $NetBSD: Makefile,v 1.18 2001/09/25 21:48:17 skrll Exp $
 
 DISTNAME=		cyrus-imapd-2.0.16
 CATEGORIES=		mail
@@ -11,8 +11,6 @@ COMMENT=		IMAP server
 
 DEPENDS+=		cyrus-sasl>=1.5.24nb2:../../security/cyrus-sasl
 DEPENDS+=		db3>=2.9:../../databases/db3
-
-LICENSE=		cyrus-imapd-license
 
 USE_PERL5=		# defined
 USE_SSL=		# defined
@@ -62,6 +60,11 @@ INSTALL_FILE=		${WRKDIR}/INSTALL
 
 HTMLDIR=		${PREFIX}/share/doc/html/cyrus-imapd
 EGDIR=			${PREFIX}/share/examples/cyrus-imapd
+
+PERL5_PACKLIST= \
+	${PERL5_SITEARCH}/auto/Cyrus/IMAP/.packlist \
+	${PERL5_SITEARCH}/auto/Cyrus/SIEVE/acap/.packlist \
+	${PERL5_SITEARCH}/auto/Cyrus/SIEVE/managesieve/.packlist
 
 post-extract:
 	cd ${WRKSRC}/man; ${MV} imapd.8 cyrus-imapd.8
