@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/08/18 22:46:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2000/10/29 19:59:27 tsarna Exp $
 
 DISTNAME=	mxDateTime-1.3.0
 PKGNAME=	py-mxDateTime-1.3.0
@@ -11,7 +11,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://starship.python.net/~lemburg/mxDateTime.html
 
 BUILD_DEPENDS=  unzip:../../archivers/unzip
-DEPENDS+=	python-1.5.2:../../lang/python
+DEPENDS+=	python-2.0*:../../lang/python
 
 EXTRACT_CMD=	unzip -Laqo ${DOWNLOADED_DISTFILE}
 
@@ -25,19 +25,19 @@ do-configure:
 
 do-build:
 	( cd ${WRKSRC}/mxDateTime; make  )
-	( cd ${WRKSRC}; python ${PREFIX}/lib/python1.5/compileall.py . )
-	( cd ${WRKSRC}; python -O ${PREFIX}/lib/python1.5/compileall.py . )
+	( cd ${WRKSRC}; python ${PREFIX}/lib/python2.0/compileall.py . )
+	( cd ${WRKSRC}; python -O ${PREFIX}/lib/python2.0/compileall.py . )
 
 do-install:
-	@${INSTALL_SCRIPT_DIR} ${PREFIX}/lib/python1.5/site-packages
-	@${INSTALL_SCRIPT_DIR} ${PREFIX}/lib/python1.5/site-packages/DateTime
+	@${INSTALL_SCRIPT_DIR} ${PREFIX}/lib/python2.0/site-packages
+	@${INSTALL_SCRIPT_DIR} ${PREFIX}/lib/python2.0/site-packages/DateTime
 	@${INSTALL_DATA} ${WRKSRC}/*.py* \
-		${PREFIX}/lib/python1.5/site-packages/DateTime
+		${PREFIX}/lib/python2.0/site-packages/DateTime
 	@${INSTALL_SCRIPT_DIR} \
-		${PREFIX}/lib/python1.5/site-packages/DateTime/mxDateTime
+		${PREFIX}/lib/python2.0/site-packages/DateTime/mxDateTime
 	@${INSTALL_DATA} ${WRKSRC}/mxDateTime/*.so \
 		${WRKSRC}/mxDateTime/__init__.py* \
-		 ${PREFIX}/lib/python1.5/site-packages/DateTime/mxDateTime
+		 ${PREFIX}/lib/python2.0/site-packages/DateTime/mxDateTime
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/py-mxDateTime
 	@${INSTALL_SCRIPT} ${WRKSRC}/Doc/*.html \
 		${PREFIX}/share/doc/py-mxDateTime/
