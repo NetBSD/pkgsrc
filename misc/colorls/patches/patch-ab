@@ -1,7 +1,5 @@
-For NetBSD - hubertf
-
---- ls.c.orig	Thu Oct 23 14:12:16 1997
-+++ ls.c	Thu Oct 23 14:13:44 1997
+--- ls.c.orig	Tue May  5 01:15:09 1998
++++ ls.c	Tue May  5 01:16:24 1998
 @@ -59,6 +59,8 @@
  #include <string.h>
  #include <unistd.h>
@@ -11,3 +9,13 @@ For NetBSD - hubertf
  
  #include "ls.h"
  #include "extern.h"
+@@ -170,7 +172,8 @@
+ 			f_type = 1;
+ 			break;
+ 		case 'G':
+-			f_color = 1;
++			if (isatty(STDOUT_FILENO))
++				f_color = 1;
+ 			break;
+ 		case 'L':
+ 			fts_options &= ~FTS_PHYSICAL;
