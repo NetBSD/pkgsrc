@@ -1,0 +1,20 @@
+$NetBSD: patch-ad,v 1.1 2000/11/30 03:45:26 mycroft Exp $
+
+--- modules/Makefile.am.orig	Tue Oct 31 09:55:54 2000
++++ modules/Makefile.am	Thu Nov 30 03:42:24 2000
+@@ -77,6 +77,7 @@
+ 
+ libvfs_test_la_SOURCES =			\
+ 	test-method.c				
++libvfs_test_la_LDFLAGS = $(module_flags)
+ libvfs_test_la_LIBADD = $(XML_LIBS)
+ 
+ ### `gzip' method
+@@ -102,6 +103,7 @@
+ libftp_la_SOURCES = 				\
+ 	ftp-method.c				\
+ 	ftp-method.h
++libftp_la_LDFLAGS = $(module_flags)
+ 
+ ### `gconf' method
+ 
