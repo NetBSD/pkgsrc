@@ -1,9 +1,8 @@
-$NetBSD: patch-aa,v 1.3 1998/08/07 11:10:53 agc Exp $
+$NetBSD: patch-aa,v 1.4 2000/08/22 19:49:13 dmcmahill Exp $
 
---- Makefile.orig	Mon Mar 23 00:09:38 1998
-+++ Makefile	Sun Apr 26 15:27:48 1998
-@@ -13,12 +13,12 @@
- ##############################################################################
+--- Makefile.orig	Sun Mar 22 18:09:38 1998
++++ Makefile	Tue Aug 22 15:38:02 2000
+@@ -14,10 +14,10 @@
  
  # For NEXTSTEP/OPENSTEP:
 -CFLAGS = -Wall -O2 -traditional-cpp -g
@@ -19,9 +18,7 @@ $NetBSD: patch-aa,v 1.3 1998/08/07 11:10:53 agc Exp $
 +#RPC_WARNFLAGS = -Wno-unused -Wno-switch -Wno-uninitialized
  
  # For Linux:
- #CFLAGS = -Wall -O2 -g
-@@ -32,10 +32,10 @@
- #RPC_WARNFLAGS = -Wno-unused -Wno-switch -Wno-uninitialized
+@@ -33,8 +33,8 @@
  
  # For NetBsd
 -#CFLAGS = -Wall -O2 -DNETBSD
@@ -34,4 +31,10 @@ $NetBSD: patch-aa,v 1.3 1998/08/07 11:10:53 agc Exp $
 +RPC_WARNFLAGS = -Wno-unused -Wno-switch -Wno-uninitialized
  
  # For HP-UX:
- # this "CFLAGS" line is for HP's cc, obviously. For gcc try "-Wall -O2"
+@@ -68,5 +68,5 @@
+ 
+ .c.o:
+-	$(CC) $(CFLAGS) $(ARCH) -c -o $*.o $<
++	$(CC) $(CFLAGS) -c -o $*.o $<
+ 
+ all: $(NAME)
