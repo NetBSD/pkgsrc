@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2001/12/20 22:16:44 kleink Exp $
+# $NetBSD: Makefile,v 1.32 2001/12/31 08:36:10 jlam Exp $
 
 DISTNAME=	openldap-2.0.19
 SVR4_PKGNAME=	oldap
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
 EXTRACT_SUFX=	.tgz
@@ -9,9 +10,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.OpenLDAP.org/
 COMMENT=	Lightweight directory access protocol server and client package
-
-# for the moment without threads and thus without slurpd and ldapd
-#DEPENDS+=	../../devel/mit-pthreads
 
 CONFLICTS+=	ldapsdk-[0-9]*
 
@@ -21,17 +19,23 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/build/ltconfig
 
 # unfortunately, --enable-phonetic cannot be disabled by runtime configuration
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--enable-dns
+CONFIGURE_ARGS+=	--enable-dnssrv
 CONFIGURE_ARGS+=	--enable-cldap
 CONFIGURE_ARGS+=	--enable-passwd
 CONFIGURE_ARGS+=	--enable-shell
+CONFIGURE_ARGS+=	--enable-wrappers
 CONFIGURE_ARGS+=	--with-tls=openssl
+CONFIGURE_ARGS+=	--without-readline
+
+USE_PTHREAD=		native pth
+CONFIGURE_ARGS+=	--with-threads
+
+PKG_SYSCONFSUBDIR?=	openldap
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=/var/openldap
+MAKE_FLAGS+=		sysconfdir=${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--enable-wrappers
-.endif
 
 .if ${OPSYS} == "SunOS"
 .include "../../databases/db/buildlink.mk"
@@ -39,17 +43,56 @@ CPPFLAGS+=	-I${BUILDLINK_DIR}/include/db2
 LIBS=		-ldb2 -lpthread -lrt
 .endif
 
-PLIST_SRC=	${PKGDIR}/PLIST.common ${PKGDIR}/PLIST.${LOWER_OPSYS}
-
-post-configure:
-	${ECHO} "SLAPD_LIBS = " >> ${WRKSRC}/servers/slapd/tools/Makefile
-
 .if defined(KERBEROS)
-USE_KERBEROS=	yes
-CONFIGURE_ARGS+=--with-kerberos
+USE_KERBEROS=		YES
+CONFIGURE_ARGS+=	--with-kerberos
 .else
-CONFIGURE_ARGS+=--without-kerberos
+CONFIGURE_ARGS+=	--without-kerberos
 .endif
 
+EGDIR=		${PREFIX}/share/examples/openldap
+MAKE_DIRS=	${PKG_SYSCONFDIR} ${PKG_SYSCONFDIR}/schema
+OWN_DIRS=	/var/openldap
+OWN_DIRS_PERMS=	/var/openldap/openldap-ldbm ${ROOT_USER} ${ROOT_GROUP} 0700
+OWN_DIRS_PERMS+=/var/openldap/openldap-slurp ${ROOT_USER} ${ROOT_GROUP} 0700
+
+CNFS=		ldap.conf ldapfilter.conf ldaptemplates.conf		\
+		ldapsearchprefs.conf
+CNFS_PERMS=	slapd.conf
+SUPPS=		schema/corba.schema schema/core.schema			\
+		schema/cosine.schema schema/inetorgperson.schema	\
+		schema/java.schema schema/krb5-kdc.schema		\
+		schema/misc.schema schema/nadf.schema			\
+		schema/nis.schema schema/openldap.schema
+
+CONF_FILES=		# empty
+CONF_FILES_PERMS=	# empty
+SUPPORT_FILES=		# empty
+.for FILE in ${CNFS}
+CONF_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
+.endfor
+.for FILE in ${CNFS_PERMS}
+CONF_FILES_PERMS+=	${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}	\
+			${ROOT_USER} ${ROOT_GROUP} 0600
+.endfor
+.for FILE in ${SUPPS}
+SUPPORT_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
+.endfor
+
+post-install:
+	${INSTALL_DATA_DIR} ${EGDIR}/schema
+	for file in ${CNFS} ${CNFS_PERMS} ${SUPPS}; do			\
+		if [ ! -e ${PKG_SYSCONFDIR}/$${file}.default ]; then	\
+			${CP} -p ${PKG_SYSCONFDIR}/$${file}		\
+				${PKG_SYSCONFDIR}/$${file}.default;	\
+		fi;							\
+		${INSTALL_DATA} ${PKG_SYSCONFDIR}/$${file}.default	\
+			${EGDIR}/$${file};				\
+		${RM} -f ${PKG_SYSCONFDIR}/$${file}.default;		\
+	done
+
 .include "../../security/openssl/buildlink.mk"
+.include "../../security/tcp_wrappers/buildlink.mk"
+.include "../../mk/pthread.buildlink.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
