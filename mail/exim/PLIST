@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2003/09/02 10:33:38 abs Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/09/02 11:23:31 abs Exp $
 etc/rc.d/exim
 man/man8/exim.8
 sbin/exicyclog
 sbin/exigrep
 sbin/exim
-sbin/${PKGNAME}-1
+sbin/${DISTNAME}-1
 sbin/exim_checkaccess
 sbin/exim_dbmbuild
 sbin/exim_dumpdb
