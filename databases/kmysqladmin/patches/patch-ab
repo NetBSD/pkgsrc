@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/08/01 08:20:45 skrll Exp $
+$NetBSD: patch-ab,v 1.2 2004/12/27 23:35:01 markd Exp $
 
---- acinclude.m4.orig	Thu Jul  5 16:28:05 2001
-+++ acinclude.m4	Thu Jul  5 16:28:24 2001
-@@ -1436,7 +1436,7 @@
-     AC_MSG_CHECKING([for mysql includes])
-     AC_ARG_WITH(mysql-includes, [  --with-mysql-include     where the mysql.h is located],mysql_use_include="$withval",mysql_use_include=NONE)
- 	mysql_include_found=""
--	if test -n "$mysq_use_include" && \
-+	if test -n "$mysql_use_include" && \
- 	test "$mysql_use_include" != "NONE"; then
- 	    mysql_include_found="Setting to $mysql_use_include"
- 	else
+--- kmysqladmin/frontend/browsetable/tableview.cpp.orig	2004-12-28 12:13:38.000000000 +1300
++++ kmysqladmin/frontend/browsetable/tableview.cpp
+@@ -786,7 +786,7 @@ void CTableView::saveHtml(const char*fil
+                         bimagesaved = true;
+                     }
+                 } else {
+-                    iname = QString("%1_%2.jpg").arg(desc->get_name()).arg(number);
++                    iname = QString("%1_%2.jpg").arg(desc->get_name().c_str()).arg(number);
+                     bImage.save(inf.dirPath(true)+"/"+iname,"JPEG");
+                 }
+                 st << iname << "\">\n";
