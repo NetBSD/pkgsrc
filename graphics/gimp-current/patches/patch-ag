@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 1999/11/27 04:08:32 hubertf Exp $
+
+--- plug-ins/common/Makefile.in.orig	Thu Nov 25 21:32:25 1999
++++ plug-ins/common/Makefile.in	Fri Nov 26 21:18:39 1999
+@@ -106,7 +106,7 @@
+ INCLUDE_LOCALE_H = @INCLUDE_LOCALE_H@
+ INSTOBJEXT = @INSTOBJEXT@
+ INTLDEPS = @INTLDEPS@
+-INTLLIBS = @INTLLIBS@
++INTLLIBS = @INTLLIBS@ -lintl	# ENOCLUE why this is not set - HF
+ INTLOBJS = @INTLOBJS@
+ IN_GIMP = @IN_GIMP@
+ JPEG = @JPEG@
