@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/11/16 09:28:49 sakamoto Exp $
+# $NetBSD: Makefile,v 1.5 1999/12/07 09:00:59 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/04/05 04:46:33 max Exp $
 
 DISTNAME=	kakasi-2.3.1
@@ -8,13 +8,10 @@ MASTER_SITES=	ftp://kakasi.namazu.org/pub/kakasi/
 MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=	http://kakasi.namazu.org/
 
+GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
 USE_LIBTOOL=	YES
-GNU_CONFIGURE=	YES
-
-post-configure:
-	@${RM} -f ${WRKSRC}/libtool
-	@${LN} -s ${LIBTOOL} ${WRKSRC}/libtool
+LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/kakasi.1 ${PREFIX}/man/ja_JP.EUC/man1
