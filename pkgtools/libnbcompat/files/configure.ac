@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.43 2004/04/23 11:42:46 grant Exp $
+dnl $NetBSD: configure.ac,v 1.44 2004/08/06 16:55:09 jlam Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -33,69 +33,119 @@ AC_HEADER_STDC
 AC_HEADER_TIME
 
 AC_CHECK_HEADERS([arpa/nameser.h assert.h bind/bitypes.h dirent.h err.h \
-	errno.h fcntl.h fts.h inttypes.h libutil.h limits.h \
+	errno.h fcntl.h fnmatch.h fts.h inttypes.h libutil.h limits.h \
 	machine/endian.h memory.h ndir.h netdb.h netinet/in6_machtypes.h \
 	paths.h pwd.h stdint.h stdlib.h stringlist.h strings.h \
 	string.h sys/bitypes.h sys/byteorder.h sys/cdefs.h sys/dir.h \
 	sys/endian.h sys/file.h sys/mkdev.h sys/ndir.h \
-	sys/param.h sys/queue.h sys/time.h sys/ttycom.h \
+	sys/param.h sys/time.h sys/ttycom.h \
 	sys/stat.h sys/statfs.h sys/statvfs.h sys/vfs.h sys/types.h \
 	sys/vfs.h termcap.h termios.h time.h tzfile.h unistd.h util.h \
-	utmp.h])
-AC_CHECK_HEADERS([sys/mount.h], , , [AC_INCLUDES_DEFAULT
-#ifdef HAVE_SYS_PARAM_H
-#include <sys/param.h>
-#endif
+	utmp.h
+])
+AC_CHECK_HEADERS([sys/mount.h], [:], [:], [
+	AC_INCLUDES_DEFAULT
+	#ifdef HAVE_SYS_PARAM_H
+	#include <sys/param.h>
+	#endif
+])
+
+dnl Always use our own glob().
+AC_CHECK_HEADERS([glob.h])
+AC_DEFINE(HAVE_NBCOMPAT_GLOB)
+AH_TEMPLATE([HAVE_NBCOMPAT_GLOB], [
+	Define to 1 if the `glob' function is built into the library.
+])
+
+dnl Always use our own queue(3) implementation.
+AC_CHECK_HEADERS([sys/queue.h])
+AC_DEFINE(HAVE_NBCOMPAT_QUEUE)
+AH_TEMPLATE([HAVE_NBCOMPAT_QUEUE], [
+	Define to 1 if the `queue' macros are supplied by the library.
+])
+
+AC_CHECK_HEADERS([md5.h], [
+	AC_MSG_TRY_COMPILE([for MD5Init in md5.h], pkg_cv_have_md5init, [
+		#include <sys/types.h>
+		#include <md5.h>
+	], [
+		MD5_CTX *f;
+		MD5Init(f);
+	], [:], [
+        	AC_DEFINE(HAVE_NBCOMPAT_MD5INIT)
+		AH_TEMPLATE([HAVE_NBCOMPAT_MD5INIT], [
+			Define to 1 if the `MD5Init' function is built into
+			the library.
+        	])
+	])
 ])
 
 AC_CHECK_HEADERS([md5.h rmd160.h sha1.h])
-
-pkg_use_nbcompat_md5=yes
-AC_CHECK_HEADERS([md5.h], [
-	AC_MSG_TRY_COMPILE([for MD5Init in md5.h], pkg_cv_have_md5init,
-		[ #include <sys/types.h>
-		  #include <md5.h> ],
-		[ MD5_CTX *f; MD5Init(f); ],
-		pkg_use_nbcompat_md5=no,
-		pkg_use_nbcompat_md5=yes,
-	)
-])
-
-if test $pkg_use_nbcompat_md5 = yes; then
-        AC_DEFINE(HAVE_NBCOMPAT_MD5INIT)
-        AH_TEMPLATE([HAVE_NBCOMPAT_MD5INIT], [
-		Define to 1 if the `MD5Init' function is built into the
+AC_CHECK_FUNC(MD5File, [:], [
+       	AC_DEFINE(HAVE_NBCOMPAT_MD5)
+	AH_TEMPLATE([HAVE_NBCOMPAT_MD5], [
+		Define to 1 if the `MD5*' functions are built into the
 		library.
         ])
-fi
+	AC_LIBOBJ(md5c)
+	AC_LIBOBJ(md5hl)
+])
+AC_CHECK_FUNC(RMD160File, [:], [
+       	AC_DEFINE(HAVE_NBCOMPAT_RMD160)
+	AH_TEMPLATE([HAVE_NBCOMPAT_RMD160], [
+		Define to 1 if the `RMD160*' functions are built into the
+		library.
+        ])
+	AC_LIBOBJ(rmd160)
+	AC_LIBOBJ(rmd160hl)
+])
+AC_CHECK_FUNC(SHA1File, [:], [
+       	AC_DEFINE(HAVE_NBCOMPAT_SHA1)
+	AH_TEMPLATE([HAVE_NBCOMPAT_SHA1], [
+		Define to 1 if the `SHA1*' functions are built into the
+		library.
+        ])
+	AC_LIBOBJ(sha1)
+	AC_LIBOBJ(sha1hl)
+])
 
-pkg_use_nbcompat_getopt_long=yes
 AC_CHECK_HEADERS([getopt.h], [
 	AC_MSG_TRY_COMPILE([for struct option], pkg_cv_have_struct_option,
-		[ #include <getopt.h> ], [ struct option X ],
-		[ pkg_use_nbcompat_getopt_long=no ],
-		[ pkg_use_nbcompat_getopt_long=yes ])
+		[ #include <getopt.h> ], [ struct option X; ],
+		[:], [
+			AC_DEFINE(HAVE_NBCOMPAT_GETOPT_LONG)
+			AH_TEMPLATE([HAVE_NBCOMPAT_GETOPT_LONG], [
+				Define to 1 if the `getopt_long' function is
+				built into the library.
+			])
+			AC_LIBOBJ(getopt_long)
+		])
 ])
-if test $pkg_use_nbcompat_getopt_long = yes; then
-	AC_DEFINE(HAVE_NBCOMPAT_GETOPT_LONG)
-	AH_TEMPLATE([HAVE_NBCOMPAT_GETOPT_LONG], [
-		Define to 1 if the `getopt_long' function is built into the
-		library.
-	])
-	AC_LIBOBJ(getopt_long)
-fi
 
 dnl Check that this vis.h has *vis()-related functions because Solaris'
 dnl vis.h doesn't.  Also, only consider the header found if it defines
 dnl all of the functions that we need.
 dnl
-pkg_use_nbcompat_vis=yes
 AC_CHECK_HEADERS([vis.h], [
-	AC_MSG_TRY_COMPILE([for VIS_WHITE in vis.h], pkg_cv_have_vis_white,
-		[ #include <sys/types.h>
-		  #include <vis.h> ], [ int X = VIS_WHITE ],
-		[ pkg_use_nbcompat_vis=no], [ pkg_use_nbcompat_vis=yes ])
+	AC_MSG_TRY_COMPILE([for VIS_WHITE in vis.h], pkg_cv_have_vis_white, [
+		#include <sys/types.h>
+		#include <vis.h>
+	], [ int X = VIS_WHITE; ], [
+		AC_CHECK_FUNCS([strunvis strvis strsvis])
+		AC_CHECK_FUNCS([strunvis strvis strsvis],
+			[pkg_use_nbcompat_vis=no],
+			[pkg_use_nbcompat_vis=yes; break])
+	], [pkg_use_nbcompat_vis=yes])
 ])
+
+if test $pkg_use_nbcompat_vis = yes; then
+	AC_DEFINE(HAVE_NBCOMPAT_VIS)
+	AH_TEMPLATE([HAVE_NBCOMPAT_VIS], [
+		Define to 1 if the `vis' function is built into the library.
+	])
+	AC_LIBOBJ(vis)
+	AC_LIBOBJ(unvis)
+fi
 
 dnl Checks for typedefs, structures, and compiler characteristics.
 AC_C___ATTRIBUTE__
@@ -135,52 +185,42 @@ AC_FUNC_MALLOC
 AC_FUNC_STRERROR_R
 AC_FUNC_VPRINTF
 
-AC_REPLACE_FUNCS([err fgetln fparseln fseeko getenv inet_ntop \
-	inet_pton isblank lchflags lchmod lchown lutimes mkstemp mkdtemp \
+AC_REPLACE_FUNCS([err fgetln fnmatch fparseln getenv \
+	isblank lchflags lchmod lchown lutimes mkstemp mkdtemp \
 	setprogname snprintf strdup strerror strlcat strlcpy \
-	strmode strptime strsep strtoll timegm usleep utimes])
+	strmode strsep strtoll usleep utimes
+])
 
 AC_CHECK_FUNCS([setgroupent setgrent setpassent setpwent])
 AC_CHECK_FUNCS([bcopy bzero memset memcpy setlocale])
 AC_CHECK_FUNCS([getmode setmode])
-AC_CHECK_FUNCS([getmode setmode],
-	[pkg_use_nbcompat_setmode=no],
-	[pkg_use_nbcompat_setmode=yes; break])
-pkg_use_nbcompat_setenv=no
-AC_CHECK_FUNCS([setenv unsetenv], ,
-	[pkg_use_nbcompat_setenv=yes])
-
-if test $pkg_use_nbcompat_setmode = yes; then
+AC_CHECK_FUNCS([getmode setmode], [:], [
 	AC_LIBOBJ(setmode)
-fi
-if test $pkg_use_nbcompat_setenv = yes; then
+	break
+])
+AC_CHECK_FUNCS([setenv unsetenv])
+AC_CHECK_FUNCS([setenv unsetenv], [:], [
 	AC_LIBOBJ(setenv)
-fi
+	break
+])
 
-AC_CHECK_FUNCS([gid_from_group group_from_gid pwcache_groupdb pwcache_userdb \
-		uid_from_user user_from_uid])
-AC_CHECK_FUNCS([gid_from_group group_from_gid pwcache_groupdb pwcache_userdb \
-		uid_from_user user_from_uid],
-	[pkg_use_nbcompat_pwcache=no],
-	[pkg_use_nbcompat_pwcache=yes; break])
-
-if test $pkg_use_nbcompat_pwcache = yes; then
+AC_CHECK_FUNCS([gid_from_group group_from_gid pwcache_groupdb \
+	pwcache_userdb uid_from_user user_from_uid \
+])
+AC_CHECK_FUNCS([gid_from_group group_from_gid pwcache_groupdb \
+	pwcache_userdb uid_from_user user_from_uid \
+], [:], [
 	AC_LIBOBJ(pwcache)
-fi
-
-AC_CHECK_FUNC(fts_open, [:], [AC_LIBOBJ(__fts13)])
-
-AC_CHECK_FUNC(MD5File, [:], [
-	AC_LIBOBJ(md5c)
-	AC_LIBOBJ(md5hl)
+	break
 ])
-AC_CHECK_FUNC(RMD160File, [:], [
-	AC_LIBOBJ(rmd160)
-	AC_LIBOBJ(rmd160hl)
-])
-AC_CHECK_FUNC(SHA1File, [:], [
-	AC_LIBOBJ(sha1)
-	AC_LIBOBJ(sha1hl)
+
+AC_CHECK_FUNC(fts_open, [:], [
+	AC_DEFINE(HAVE_NBCOMPAT_FTS, 1)
+	AH_TEMPLATE([HAVE_NBCOMPAT_FTS], [
+		Define to 1 if the `fts_*' functions are built into the
+		library.
+	])
+	AC_LIBOBJ(__fts13)
 ])
 
 # handle Darwin 7 having a poll() compatibility function. be
@@ -227,57 +267,21 @@ else
 	])
 fi
 
-AC_CHECK_FUNCS([strunvis strvis strsvis])
-AC_CHECK_FUNCS([strunvis strvis strsvis],
-	[pkg_use_nbcompat_vis=no],
-	[pkg_use_nbcompat_vis=yes; break])
-
-if test $pkg_use_nbcompat_vis = yes; then
-	AC_DEFINE(HAVE_NBCOMPAT_VIS)
-	AH_TEMPLATE([HAVE_NBCOMPAT_VIS], [
-		Define to 1 if the `vis' function is built into the library.
-	])
-	AC_LIBOBJ(vis)
-	AC_LIBOBJ(unvis)
-fi
-
 AC_CHECK_FUNCS([getpassphrase getpgrp memmove select])
 
 AC_CHECK_FUNC(getpgrp, [AC_FUNC_GETPGRP])
 
-AC_CHECK_FUNC(sl_init, [
-	AC_MSG_TRY_COMPILE([if sl_add() returns int],
-		pkg_cv_INT_SL_ADD,
-		[ #include <stringlist.h> ],
-		[ int f = sl_add((StringList *)0, "foo") ],
-		[:] , [AC_LIBOBJ(sl_init)])
-])
-
-dnl Solaris 2.7, 2.8 and UnixWare 7 have statfs(2), but it is deprecated,
-dnl and has a different interface from NetBSD's statfs.
-dnl
-pkg_use_nbcompat_statfs=yes
-AC_CHECK_FUNC(statfs, [
-	case $host_os in
-	irix*|sunos*|solaris*|*UnixWare*)
-		AC_CHECK_FUNC(statvfs, [:], [
-			AC_MSG_ERROR(statfs can't be implemented correctly)
-		])
-		;;
-	*)
-		pkg_use_nbcompat_statfs=no
-		;;
-	esac
-])
-
-if test $pkg_use_nbcompat_statfs = yes; then
-	AC_DEFINE(HAVE_NBCOMPAT_STATFS, 1)
-	AH_TEMPLATE([HAVE_NBCOMPAT_STATFS], [
-		Define to 1 if the `statfs' function is built into the library.
+AC_CHECK_FUNC(statvfs, [:], [
+	AC_DEFINE(HAVE_NBCOMPAT_STATVFS, 1)
+	AH_TEMPLATE([HAVE_NBCOMPAT_STATVFS], [
+		Define to 1 if the `statvfs' function is built into the library.
 	])
-	AC_LIBOBJ(statfs)
-	AC_CHECK_MEMBERS([struct statvfs.f_basetype],[],[],[#include <sys/statvfs.h>])
-fi
+	AC_LIBOBJ(statvfs)
+	AC_CHECK_MEMBERS([struct statfs.f_fsize], [:], [:],
+		[ #include <sys/statfs.h> ])
+	AC_CHECK_MEMBERS([struct statfs.f_iosize], [:], [:],
+		[ #include <sys/statfs.h> ])
+])
 
 if test $ac_cv_type_long_long = yes; then
 
@@ -299,7 +303,7 @@ dnl		support because we don't know how to display it.
 		can_printf_longlong=yes
 	], [
 		AC_MSG_RESULT(no)
-	], [ : ])
+	], [:])
 
 	if test $can_printf_longlong != yes; then
 		AC_MSG_CHECKING(*printf() support for %qd)
@@ -320,7 +324,7 @@ dnl		support because we don't know how to display it.
 			])
 		], [
 			AC_MSG_RESULT(no)
-		], [ : ])
+		], [:])
 	fi
 
 	if test $can_printf_longlong = yes; then
@@ -334,7 +338,7 @@ dnl		support because we don't know how to display it.
 
 fi
 
-AC_MSG_TRY_COMPILE(for optarg declaration, ftp_cv_HAVE_OPTARG_D, [
+AC_MSG_TRY_COMPILE([for optarg declaration], ftp_cv_HAVE_OPTARG_D, [
 	#include <stdlib.h>
 	#include <unistd.h>
 ], [ char *X = optarg ], [:], [
@@ -344,7 +348,7 @@ AC_MSG_TRY_COMPILE(for optarg declaration, ftp_cv_HAVE_OPTARG_D, [
 	])
 ])
 
-AC_MSG_TRY_COMPILE(for optind declaration, ftp_cv_HAVE_OPTIND_D, [
+AC_MSG_TRY_COMPILE([for optind declaration], ftp_cv_HAVE_OPTIND_D, [
 	#include <stdlib.h>
 	#include <unistd.h>
 ], [ int X = optind ], [:] [
