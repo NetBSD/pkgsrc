@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1979 2004/07/28 14:20:51 wiz Exp $
+$NetBSD: TODO,v 1.1980 2004/07/29 10:15:47 martti Exp $
 
 Suggested new packages
 ======================
@@ -341,7 +341,6 @@ Suggested package updates
 	o phppgadmin-3.4 [pkg/26130]
 	o physfs-1.0.0
 	o plib-1.7.0
-	o postfix-2.1.4
 	o povray-3.6.0
 	o prc-tools-2.3
 	o psi-0.9.2
