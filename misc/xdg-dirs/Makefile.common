@@ -1,0 +1,31 @@
+# $NetBSD: Makefile.common,v 1.1 2004/03/08 19:27:53 jmmv Exp $
+#
+
+XDG_DIRS_VERSION=	1.1
+
+WRKSRC=		${WRKDIR}
+USE_LANGUAGES=	# empty
+USE_PKGINSTALL=	yes
+NO_EXTRACT=	# defined
+NO_CHECKSUM=	# defined
+NO_BUILDLINK=	# defined
+NO_CONFIGURE=	# defined
+NO_BUILD=	# defined
+
+XDG_DIRS+=	share/application-registry
+XDG_DIRS+=	share/applications
+XDG_DIRS+=	share/icons
+XDG_DIRS+=	share/images
+XDG_DIRS+=	share/mime-info
+XDG_DIRS+=	share/pixmaps
+XDG_DIRS+=	share/sounds
+XDG_DIRS+=	share/themes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${XDG_DIRS_REGISTER} == "yes"
+_SORTED!=	${ECHO} ${XDG_DIRS} | ${TR} -s ' \t' '\n' | ${SORT}
+MAKE_DIRS+=	${_SORTED:S/^/${PREFIX}\//}
+.endif
+
+do-install:	# nothing
