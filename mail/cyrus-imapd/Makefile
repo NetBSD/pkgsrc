@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/17 18:24:42 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/26 20:55:45 wiz Exp $
 
 DISTNAME=		cyrus-imapd-1.6.24
 PKGNAME=		${DISTNAME}nb1
@@ -25,7 +25,7 @@ GNU_CONFIGURE=		# defined
 CYRUS_USER?=		cyrus
 CYRUS_GROUP?=		mail
 
-BUILD_DEFS+=		CYRUS_USER CYRUS_GROUP 
+BUILD_DEFS+=		CYRUS_USER CYRUS_GROUP
 
 CONFIGURE_ARGS+=	--with-cyrus-user=${CYRUS_USER}
 CONFIGURE_ARGS+=	--with-cyrus-group=${CYRUS_GROUP}
