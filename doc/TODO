@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2860 2005/01/08 07:10:59 minskim Exp $
+$NetBSD: TODO,v 1.2861 2005/01/08 07:48:09 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -352,7 +352,6 @@ Suggested package updates
 	o cdpd-1.0.2
 	o cdrtools-2.01
 	o cdrtools-ossdvd-2.01a32
-	o ce-4.5
 	o centericq-4.13.0
 	o cfengine2-2.1.11
 	o cfengine2-doc-2.1.11
