@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.177 2001/08/13 18:09:06 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.178 2001/08/22 17:53:30 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -1498,9 +1498,11 @@ these files is two-fold:
 
   (1) Cause all headers and libraries used by a particular package to be
       found in a known location during the configure and build process.
+      These packages are said to be "weakly-buildlinked".
 
   (2) Cause _only_ those headers and libraries used by a particular package
       to be found during the configure and build process.
+      These packages are said to be "strongly-buildlinked".
 
 
  8.1 Using buildlink.mk files
