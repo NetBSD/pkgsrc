@@ -191,7 +191,6 @@ Suggested package updates
 	o gdb-6.0
 	o generator-0.35
 	o gettext-0.14.1
-	o gforth-0.6.2
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
 	o gimageview-0.2.25
@@ -236,7 +235,6 @@ Suggested package updates
 	o libole2-2.2.8
 	o licq-1.2.7
 	o lilypond-2.0.3
-	o lincity-1.12.0 [http://lincity.sourceforge.net/]
 	o lmbench-2.0.4
 	o lout-3.29
 	o lwm-1.2.0
