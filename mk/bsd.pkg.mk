@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.560 2000/09/01 13:48:51 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.561 2000/09/01 18:20:06 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -3157,15 +3157,15 @@ MANZ_EXPRESSION=
 
 .if defined(PERL5_PACKLIST)
 PERL5_COMMENT=		( ${ECHO} "@comment The following lines are automatically generated"; \
-	${ECHO} "@comment from the installed .packlist files." ) >> ${PLIST}
+	${ECHO} "@comment from the installed .packlist files." )
 PERL5_PACKLIST_FILES=	( ${CAT} ${PERL5_PACKLIST}; for f in ${PERL5_PACKLIST}; do [ ! -f $$f ] || echo $$f; done ) \
 	| ${SED} -e "s,[ 	].*,," -e "s,/\./,/,g" -e "s,${PREFIX}/,," \
-	| sort -u >> ${PLIST}
+	| sort -u
 PERL5_PACKLIST_DIRS=	( ${CAT} ${PERL5_PACKLIST}; for f in ${PERL5_PACKLIST}; do [ ! -f $$f ] || echo $$f; done ) \
 	| ${SED} -e "s,[ 	].*,," -e "s,/\./,/,g" -e "s,${PREFIX}/,," \
 		-e "s,^,@unexec rmdir -p %D/," \
 		-e "s,/[^/]*$$, 2>/dev/null || true," \
-	| sort -ur >> ${PLIST}
+	| sort -ur
 PERL5_GENERATE_PLIST=	${PERL5_COMMENT}; \
 			${PERL5_PACKLIST_FILES}; \
 			${PERL5_PACKLIST_DIRS}
@@ -3180,13 +3180,13 @@ ${PLIST}: ${PLIST_SRC}
 		${ECHO} "No ${PKGDIR}/PLIST or ${PKGDIR}/PLIST-{mi,md.shared,md.static}" ; \
 		${ECHO} "Please set PLIST_SRC in the package Makefile.";\
 	else								\
-		${CAT} ${PLIST_SRC} |					\
+		( ${CAT} ${PLIST_SRC};					\
+		  ${PERL5_GENERATE_PLIST} ) | 				\
 			${MANZ_NAWK_CMD} 				\
 			${IMAKE_MAN_CMD} 				\
 			${SED} 	${MANZ_EXPRESSION}			\
 				${PLIST_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}\
 			> ${PLIST}; 					\
-		${PERL5_GENERATE_PLIST};				\
 	fi
 
 # generate ${DESCR} from ${DESCR_SRC} by:
