@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.8 2003/12/21 09:49:25 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/01/16 07:09:28 xtraeme Exp $
 bin/distcc
 bin/distccd
 bin/distccmon-text
 man/man1/distcc.1
 man/man1/distccd.1
+man/man1/distccmon-text.1
 share/doc/distcc/AUTHORS
 share/doc/distcc/COPYING
 share/doc/distcc/ChangeLog
