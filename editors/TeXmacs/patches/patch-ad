@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2004/04/06 19:02:49 reinoud Exp $
+$NetBSD: patch-ad,v 1.2 2004/07/03 21:25:53 recht Exp $
 
---- src/Classes/Abstract/basic.hpp.orig	2004-04-05 23:16:59.000000000 +0200
-+++ src/Classes/Abstract/basic.hpp
-@@ -81,7 +81,7 @@ inline SI max (SI i, SI j) { if (i>j) re
+--- src/Classes/Abstract/basic.hpp.orig	2004-06-30 11:19:43.000000000 +0200
++++ src/Classes/Abstract/basic.hpp	2004-07-03 22:55:03.000000000 +0200
+@@ -83,7 +83,7 @@
  inline double min (double i, double j) { if (i<j) return i; else return j; }
  inline double max (double i, double j) { if (i>j) return i; else return j; }
  inline int hash (int i) { return i; }
