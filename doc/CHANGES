@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2853 2003/07/21 22:28:37 kim Exp $
+$NetBSD: CHANGES,v 1.2854 2003/07/22 05:23:13 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2891,3 +2891,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ruby-webrick to 1.2.3nb1 [taca 2003-07-21]
 	Added ap2-ruby-1.1.1 [epg 2003-07-21]
 	Added tcptraceroute-1.4 [kim 2003-07-21]
+	Updated dbh to 1.0.15 [martti 2003-07-22]
