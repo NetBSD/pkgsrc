@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1733 2004/05/11 12:09:11 markd Exp $
+$NetBSD: TODO,v 1.1734 2004/05/11 13:36:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -278,7 +278,7 @@ Suggested package updates
 	o mhonarc-2.6.9
 	o micq-0.4.11
 	o midnight-commander-4.6.0
-	o mimedefang-2.42
+	o mimedefang-2.43
 	o minicom-2.1
 	o mono-0.31
 	o mowitz-0.3.0
@@ -362,6 +362,7 @@ Suggested package updates
 	o thunderbird-0.6
 	o thy-0.9.0 [pkg/25318]
 	o tkdesk-2.0
+	o tkinfo-2.8 [pkg/25528]
 	o tkman-2.2
 	o tmda-1.0.2
 	o top-3.5b12.10
@@ -399,7 +400,6 @@ Suggested package updates
 	o xpad-1.13.1
 	o xps-4.2
 	o xpuyopuyo-0.9.5
-	o xscreensaver-4.15
 	o xsidplay-1.6.5pre20
 	o xzgv-0.8
 	o yacas-1.0.55
