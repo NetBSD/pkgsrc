@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/08/08 08:11:05 grant Exp $
-sbin/6to4
-share/doc/6to4.html
-share/examples/6to4/6to4.conf
-man/man8/6to4.8
-@dirrm share/examples/6to4
