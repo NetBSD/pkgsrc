@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/11 22:34:46 kim Exp $
+bin/yuptime
+bin/yusers
+bin/ywho
+man/man1/yuptime.1
+man/man1/yusers.1
+man/man1/ywho.1

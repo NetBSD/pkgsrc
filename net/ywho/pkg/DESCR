@@ -1,0 +1,4 @@
+ywho is another version of rwho, but it is faster than rwho
+and requires no /usr/spool/rwho/rwhod.*.  Note that rwho
+wastes system resources, but ywho doesn't.  It utilizes SUN
+RPC and XDR protocol.
