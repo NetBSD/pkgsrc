@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2233 2004/10/20 16:37:15 cube Exp $
+$NetBSD: TODO,v 1.2234 2004/10/20 19:00:05 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -61,10 +61,6 @@ Suggested new packages
 	tutos [wip/tutos]
 	the ultimate team organization software
 	http://www.tutos.org/ [agc is looking at this one]
-
-	xmltv
-	TV viewing manager
-	http://xmltv.sourceforge.net/
 
 	MythTV [wip/mythtv]
 	Digital video recorder
