@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1007 2002/07/18 10:21:18 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1008 2002/07/20 17:01:09 jschauma Exp $
 #
 # This file is in the public domain.
 #
@@ -100,7 +100,7 @@ JAVA_HOME?=		${LOCALBASE}/java
 .    endif
 .  elif ${PKG_JVM} == "sun-jdk"
 .    if ${MACHINE_PLATFORM:MNetBSD-1.5Z[A-Z]-i386} != "" || \
-	${MACHINE_PLATFORM:MNetBSD-1.[6-9]-i386} != "" || \
+	${MACHINE_PLATFORM:MNetBSD-1.[6-9]*-i386} != "" || \
 	${MACHINE_PLATFORM:MLinux-*-i386} != ""
 BUILD_DEPENDS+=         sun-jdk-[0-9]*:../../lang/sun-jdk14
 DEPENDS+=               sun-jre-[0-9]*:../../lang/sun-jre14
