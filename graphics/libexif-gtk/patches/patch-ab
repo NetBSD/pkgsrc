@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2004/04/13 05:34:26 reed Exp $
+$NetBSD: patch-ab,v 1.2 2004/10/27 19:46:47 drochner Exp $
 
---- libexif-gtk/Makefile.in.orig	2003-01-07 09:32:35.000000000 -0800
+--- libexif-gtk/Makefile.in.orig	2004-10-18 21:13:46.000000000 +0200
 +++ libexif-gtk/Makefile.in
-@@ -121,8 +121,7 @@ INCLUDES = \
+@@ -251,8 +251,7 @@ INCLUDES = \
  	-I$(top_srcdir)/intl				\
  	-I$(top_srcdir)/gtk-extensions			\
  	$(LIBEXIF_GTK_CFLAGS)				\
@@ -10,5 +10,5 @@ $NetBSD: patch-ab,v 1.1 2004/04/13 05:34:26 reed Exp $
 -	-DGTK_DISABLE_DEPRECATED
 +	-DG_LOG_DOMAIN=\"libexif\"
  
- 
  lib_LTLIBRARIES = libexif-gtk.la
+ libexif_gtkincludedir = $(includedir)/libexif-gtk

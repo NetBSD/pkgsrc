@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2004/04/13 05:34:26 reed Exp $
+$NetBSD: distinfo,v 1.4 2004/10/27 19:46:47 drochner Exp $
 
-SHA1 (libexif-gtk-0.3.3.tar.bz2) = dfba27dff94beb2a01de76e6946628c197c05217
-Size (libexif-gtk-0.3.3.tar.bz2) = 284909 bytes
-SHA1 (patch-aa) = e309d65d364cda3df0fcc4e85e3bc4796b9027a0
-SHA1 (patch-ab) = a2dde11c8f5131d21625da37cc1f76c3cafbb357
+SHA1 (libexif-gtk-0.3.5.tar.bz2) = 76eb91b635c6097fe541ec8a2b14b3a9d844993d
+Size (libexif-gtk-0.3.5.tar.bz2) = 290624 bytes
+SHA1 (patch-aa) = 09a0f395382542d7725d948aa11cea9f06ec5af5
+SHA1 (patch-ab) = 9bda0a646d5b706c046d2819964d743708ac9e44
