@@ -1,20 +1,22 @@
-# $NetBSD: Makefile,v 1.18 2004/05/12 17:56:45 minskim Exp $
+# $NetBSD: Makefile,v 1.19 2004/05/13 22:06:03 minskim Exp $
 #
 
-DISTNAME=	tclX8.2.0
-PKGNAME=	tcl-tclX-8.2.0
-PKGREVISION=	1
+DISTNAME=	tclx8.3.5-src
+PKGNAME=	tcl-tclX-8.3.5
 CATEGORIES=	lang tcl
-MASTER_SITES=	ftp://ftp.neosoft.com/pub/tcl/TclX/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tclx/}
 
 MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://tclx.sourceforge.net/
 COMMENT=	Extended Tcl (TclX), a set of Tcl extensions for system programming
 
-CONFLICTS+=	tclX-[0-9]*
+CONFLICTS+=		tclX-[0-9]*
+BUILDLINK_DEPENDS.tcl+=	tcl>=8.4.6nb4
 
-WRKSRC=			${WRKDIR}/tclX8.2.0/unix
-USE_BUILDLINK2=		yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+WRKSRC=			${WRKDIR}/${DISTNAME:S/-src//}/unix
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared \
@@ -27,9 +29,12 @@ CONFIGURE_ENV+=		PKGSRC_TCL_SRC_DIR="${PKGSRC_TCL_SRC_DIR}"
 
 MAKE_ENV+=		GTAR=${GTAR} CHOWN=${CHOWN} CHMOD=${CHMOD} \
 			SHAREMODE=${SHAREMODE} SHAREOWN=${SHAREOWN} \
-			SHAREGRP=${SHAREGRP}
+			SHAREGRP=${SHAREGRP} \
+			TCLX_PREFIX=${PREFIX}
 
-.include "../../lang/tcl/buildlink2.mk"
+INSTALLATION_DIRS=	bin include
+
+.include "../../lang/tcl/buildlink3.mk"
 
 post-extract:
 	@${MV} ${WRKSRC}/../doc/Memory.n ${WRKSRC}/../doc/TclXMemory.n
@@ -41,8 +46,8 @@ post-build:
 	cd ${WRKSRC}/../tcl/unix && ${MAKE_ENV} ${MAKE} buildhelp
 
 post-install:
-	${FIND} ${PREFIX}/lib/tcl/tclX8.2/help -type d -exec ${CHMOD} 555 '{}' \;
-	${FIND} ${PREFIX}/lib/tcl/tclX8.2/help -type f -exec ${CHMOD} 444 '{}' \;
+	${FIND} ${PREFIX}/lib/tcl/tclX8.3/help -type d -exec ${CHMOD} 555 '{}' \;
+	${FIND} ${PREFIX}/lib/tcl/tclX8.3/help -type f -exec ${CHMOD} 444 '{}' \;
 	@${RM} ${PREFIX}/man/man3/TkX_Main.3
 	@${RM} ${PREFIX}/man/man3/Tkx_Init.3
 # the above links are installed based on the contents of the man page.
