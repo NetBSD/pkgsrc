@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.1.1.1 2004/09/26 01:12:17 dmcmahill Exp $
+
+--- Makefile.in.orig	Thu Jul 29 16:58:46 2004
++++ Makefile.in
+@@ -176,7 +176,7 @@ bin_SCRIPTS = tnt.tcl tnt
+ #---------------------------------------------------------------
+ #  Examples to be installed
+ #---------------------------------------------------------------
+-examplesdir = $(prefix)/examples
++examplesdir = $(pkgdatadir)/examples
+ examples_DATA = \
+ 	examples/9-7-00.xsctn \
+ 	examples/coplanar.xsctn \
+@@ -196,7 +196,7 @@ examples_DATA = \
+ #  a prefix.  If not, then I suppose README will go into
+ #  /usr.
+ #---------------------------------------------------------------
+-appdocsdir = $(prefix)
++appdocsdir = $(pkgdatadir)
+ appdocs_DATA = \
+ 	AUTHORS$(TXTEXT) \
+ 	COPYING$(TXTEXT) \
