@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/09/11 12:40:23 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/03/11 14:01:34 jmmv Exp $
 bin/gnome-database-properties
 include/libgnomedb/gnome-db-browser.h
 include/libgnomedb/gnome-db-combo.h
@@ -164,6 +164,7 @@ share/pixmaps/libgnomedb/gnome-db-views_16x16.png
 share/pixmaps/libgnomedb/gnome-db-within-transaction_24x24.png
 share/pixmaps/libgnomedb/gnome-db.png
 @dirrm share/pixmaps/libgnomedb
+@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/libgnomedb
 @comment in scrollkeeper: @dirrm share/omf
 @comment in gnome-dirs: @dirrm share/mime-info

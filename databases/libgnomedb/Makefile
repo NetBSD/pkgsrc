@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2004/03/08 19:40:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.26 2004/03/11 14:01:34 jmmv Exp $
 #
 
-DISTNAME=		libgnomedb-1.0.0
-PKGREVISION=		8
+DISTNAME=		libgnomedb-1.0.3
 CATEGORIES=		databases gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomedb/1.0/}
 EXTRACT_SUFX=		.tar.bz2
@@ -35,6 +34,8 @@ GCONF2_SCHEMAS=		libgnomedb.schemas
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtksourceview/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
