@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink3.mk,v 1.4 2004/03/29 15:16:58 seb Exp $
+# $NetBSD: pthread.buildlink3.mk,v 1.5 2004/03/31 20:18:46 seb Exp $
 #
 # The pthreads strategy for pkgsrc is to "bless" a particular pthread
 # package as the Official Pthread Replacement (OPR).  A package that uses
@@ -141,9 +141,9 @@ PKG_SKIP_REASON= "${PKGNAME} requires a working pthreads implementation."
 .endif
 
 .if ${PTHREAD_TYPE} == "native"
-BUILDLINK_PACKAGES:=		${BUILDLINK_PACKAGES:Npthread}
-BUILDLINK_PACKAGES+=		pthread
-USE_BUILTIN.pthread=		YES
+#
+# Link the native pthread libraries and headers into ${BUILDLINK_DIR}.
+#
 BUILDLINK_PREFIX.pthread=	/usr
 BUILDLINK_CFLAGS.pthread=	-pthread
 BUILDLINK_LDFLAGS.pthread=	# empty
