@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2001/05/15 15:59:22 jlam Exp $
+# $NetBSD: Makefile,v 1.66 2001/12/03 08:06:25 jlam Exp $
 
 .include "../../databases/postgresql/Makefile.common"
 
-PKGNAME=	postgresql-${PG_VERS}
-PG_PKG_VERS=	# empty
+PKGNAME=	postgresql-${PG_BASE_VERS}
 COMMENT=	Robust, next generation, object-relational DBMS
 
 DEPENDS+=	postgresql-client>=${PG_BASE_VERS}:../../databases/postgresql-client

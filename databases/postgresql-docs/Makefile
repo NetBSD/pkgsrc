@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/05/14 14:46:22 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/12/03 08:06:26 jlam Exp $
 
 .include "../../databases/postgresql/Makefile.common"
 
-PKGNAME=		postgresql-docs-${PG_VERS}
-PG_PKG_VERS=		# empty
+PKGNAME=		postgresql-docs-${PG_BASE_VERS}
 COMMENT=		PostgreSQL database system documentation
 
 DOC_DIR=		doc
