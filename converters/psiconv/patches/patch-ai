@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.1 2002/09/10 12:35:08 markd Exp $
+$NetBSD: patch-ai,v 1.2 2003/09/03 12:18:29 adam Exp $
 
---- program/psiconv/magick-aux.c.orig	Sun Jul  1 01:36:00 2001
-+++ program/psiconv/magick-aux.c	Mon Sep  9 23:11:25 2002
+--- program/psiconv/magick-aux.c.orig	2002-01-29 18:40:50.000000000 +0100
++++ program/psiconv/magick-aux.c
 @@ -23,7 +23,7 @@
  
  #include "magick-aux.h"
@@ -9,5 +9,5 @@ $NetBSD: patch-ai,v 1.1 2002/09/10 12:35:08 markd Exp $
 -#include <magick/config.h>
 +#include <magick/magick_config.h>
  
- /* This used to be very ugly, but nowadays it is much better */
+ #endif
  
