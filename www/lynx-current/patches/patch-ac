@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2000/11/01 17:33:44 itojun Exp $
+
+--- src/LYCurses.c-	Thu Nov  2 02:31:16 2000
++++ src/LYCurses.c	Thu Nov  2 02:31:26 2000
+@@ -1453,6 +1453,5 @@
+     /* touchline() is not available on VMS before version 7.0, and then only on
+-     * Alpha, since prior ports of curses were broken.  BSD touchline() has a
+-     * 4th parameter since it is used internally by touchwin().
++     * Alpha, since prior ports of curses were broken.
+      */
+-    touchline(stdscr, row, 1, 0);
++    touchline(stdscr, row, 1);
+ #else
