@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.23 2004/03/26 02:27:35 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2004/04/01 19:12:26 jmmv Exp $
 #
 
-DISTNAME=	gossip-0.7.2
-PKGREVISION=	2
+DISTNAME=	gossip-0.7.4
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gossip/0.7/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	xtraeme@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	http://gossip.imendio.org/
 COMMENT=	GTK2 Jabber Instant Messaging client
 
 DEPENDS=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
