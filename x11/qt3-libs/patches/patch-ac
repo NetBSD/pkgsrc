@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2003/03/11 13:02:08 markd Exp $
+$NetBSD: patch-ac,v 1.4 2003/03/18 08:36:25 skrll Exp $
 
 --- src/tools/qdir_unix.cpp.orig	Mon Dec  9 22:40:32 2002
 +++ src/tools/qdir_unix.cpp
@@ -39,10 +39,10 @@ $NetBSD: patch-ac,v 1.3 2003/03/11 13:02:08 markd Exp $
 +	   name.truncate( pos );
 +       }
 +    }
-     return ::mkdir( QFile::encodeName(filePath(name,acceptAbsPath)), 0777 )
- 	== 0;
+     int status =
+ 	::mkdir( QFile::encodeName(filePath(name,acceptAbsPath)), 0777 );
  #else
-@@ -100,7 +119,24 @@
+@@ -101,7 +120,24 @@ bool QDir::mkdir( const QString &dirName
  
  bool QDir::rmdir( const QString &dirName, bool acceptAbsPath ) const
  {
