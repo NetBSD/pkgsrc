@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/01/11 07:26:54 tron Exp $
+# $NetBSD: Makefile,v 1.24 2001/01/11 07:38:03 tron Exp $
 #
 
 DISTNAME=       mpg123-0.59r
@@ -34,7 +34,8 @@ ALL_TARGET=	${LOWER_OPSYS}
 .endif
 
 .if ${OPSYS} == "SunOS"
-MAKE_ENV+=	CPPFLAGS=""
+ALL_TARGET=	solaris-gcc
+#MAKE_ENV+=	CPPFLAGS=""
 .endif
 
 .if defined(USE_INET6) && ${USE_INET6} == "YES"
@@ -47,6 +48,7 @@ pre-patch:
 	${LN} -s . ${WRKSRC}/mpg123
 
 post-patch:
+	${RM} -f ${WRKSRC}/mpg123
 	${CP} ${FILESDIR}/decode_i586_.s ${WRKSRC}/
 	cd ${WRKSRC} ; ${MV} decode_i586.s decode_i586.s.orig ;\
 	${SED} \
