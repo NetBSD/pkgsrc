@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/10/10 15:02:14 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.11 2000/10/21 22:53:00 wiz Exp $
 
 DISTNAME=		mpich-1.1.1
 CATEGORIES=		parallel
@@ -7,7 +7,7 @@ MASTER_SITES=		ftp://ftp.mcs.anl.gov/pub/mpi/old/
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.mcs.anl.gov/mpi/mpich/index.html
 
-.if !exists(/usr/bin/ssh)                 
+.if !exists(/usr/bin/ssh)
 DEPENDS+=		{openssh-*,ssh{,6}-1.2.27}:../../security/ssh
 .endif
 
