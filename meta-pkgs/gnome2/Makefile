@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/22 10:53:31 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/22 13:02:39 jmmv Exp $
 
 DISTNAME=	gnome-2.4.1
 PKGREVISION=	1
@@ -33,7 +33,9 @@ DEPENDS+=	gnome2-system-monitor>=2.4.0:../../sysutils/gnome2-system-monitor
 DEPENDS+=	gnome-utils>=2.4.1:../../misc/gnome2-utils
 DEPENDS+=	gnome-vfs2>=2.4.1:../../sysutils/gnome-vfs2
 DEPENDS+=	gtk2-engines>=2.2.0:../../x11/gtk2-engines
+DEPENDS+=	librsvg2-gtk2>=2.5.0:../../graphics/librsvg2-gtk2
 DEPENDS+=	nautilus>=2.4.1:../../sysutils/nautilus
+DEPENDS+=	swfdec-gtk2>=0.2.1:../../graphics/swfdec-gtk2
 DEPENDS+=	xscreensaver>=4.14nb1:../../x11/xscreensaver
 DEPENDS+=	yelp>=2.4.2:../../misc/yelp
 
