@@ -1,0 +1,22 @@
+$NetBSD: patch-ah,v 1.1 1999/03/15 01:54:32 sommerfe Exp $
+
+*** linuxdoom-1.10/info.h.orig	Sun Mar 14 17:14:18 1999
+--- linuxdoom-1.10/info.h	Sun Mar 14 17:14:46 1999
+***************
+*** 1156,1162 ****
+  } state_t;
+  
+  extern state_t	states[NUMSTATES];
+! extern char *sprnames[NUMSPRITES];
+  
+  
+  
+--- 1156,1163 ----
+  } state_t;
+  
+  extern state_t	states[NUMSTATES];
+! /* R_InitSpriteDefs insists on a NULL terminated list, add one for NULL. (jfw) */
+! extern char *sprnames[NUMSPRITES+1];
+  
+  
+  
