@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2002/03/15 04:09:14 markd Exp $
+# $NetBSD: Makefile,v 1.35 2002/03/28 08:57:39 skrll Exp $
 
 DISTNAME=	kdelibs-2.2.2
 PKGREVISION=	1
@@ -56,6 +56,14 @@ PLIST_SUBST+=		CUPS=
 PLIST_SUBST+=		CUPS="@comment "
 .endif
 
+.if ${OPSYS} == "NetBSD"
+.  if ${OS_VERSION:M1.5.[12]*} || ${OS_VERSION:M1.[0-4]*}
+PLIST_SUBST+=		KDED_WORKAROUND="@comment "
+.  else
+PLIST_SUBST+=		KDED_WORKAROUND=""
+.  endif
+.endif
+
 # Add a newline to EOF so patch on Solaris succeeds with patch-bk
 
 pre-patch:
@@ -70,6 +78,11 @@ ICONDIRS=	actions/kde actions apps devices filesystems mimetypes
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/kde/locale
+.if ${OPSYS} == "NetBSD"
+.  if ${OS_VERSION:M1.5.[12]*} || ${OS_VERSION:M1.[0-4]*}
+	@${RM} ${PREFIX}/lib/kded.*
+.  endif
+.endif
 	@( ${CAT} ${PKGDIR}/PLIST;					\
 	   for color in ${ICONCOLORS}; do				\
 		colordir=share/kde/icons/$${color};			\
