@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/05/17 02:24:27 tron Exp $
+# $NetBSD: Makefile,v 1.6 1999/05/21 00:09:27 tron Exp $
 
 DISTNAME=	suse_base-6.1
 CATEGORIES=	emulators
@@ -34,7 +34,8 @@ do-build:
 		  ${SCRIPTDIR}/*.sh; do \
 		  ${SED} -e 's#@@EMULDIR@@#${EMULDIR}#g' \
 		         -e 's#@@EMULSUBDIR@@#${EMULSUBDIR}#g' \
-		         -e 's#@@GTAR@@#${GTAR}#g' \
+		         -e 's#@@AWK@@#${AWK}#g' \
+		         -e 's#@@PAX@@#${PAX}#g' \
 		         -e 's#@@PREFIX@@#${PREFIX}#g' \
 		    <$$FILE >${WRKDIR}/`basename $$FILE`; \
 		done
@@ -53,7 +54,7 @@ do-install:
 		${EGREP} -v '${EMULSUBDIR}/(tmp|usr/tmp|var)' >>${PLIST_SRC}
 		@cd ${EMULDIR} && ${RM} -rf tmp usr/tmp var
 		${INSTALL_DATA} ${FILESDIR}/ld.so.conf ${EMULDIR}/etc
-		@${ECHO} "@dirrm ${EMULSUBDIR}" >>${PLIST_SRC}
+		@${ECHO} "@unexec rm -rf %D/${EMULSUBDIR}" >>${PLIST_SRC}
 		@${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 show-shlib-type:
