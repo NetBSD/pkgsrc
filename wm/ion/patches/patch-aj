@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2005/02/05 00:00:11 cube Exp $
+
+--- man/Makefile.orig	2004-07-29 05:10:32.000000000 +0200
++++ man/Makefile
+@@ -22,7 +22,7 @@ include $(TOPDIR)/rules.mk
+ _install:
+ 	$(INSTALLDIR) $(MANDIR)/man1
+ 	$(INSTALL) -m $(DATA_MODE) ion.1 $(MANDIR)/man1
+-	$(INSTALL) -m $(DATA_MODE) pwm.1 $(MANDIR)/man1
++	$(INSTALL) -m $(DATA_MODE) pwm.1 $(MANDIR)/man1/pwm2.1
+ 
+ #
+ # Awful hack that may not work on the user's system. This is rule is
