@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5136 2004/03/07 17:18:58 minskim Exp $
+$NetBSD: CHANGES,v 1.5137 2004/03/07 17:43:16 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1222,3 +1222,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ruby-racc to 1.4.4 [taca 2004-03-07]
 	Deleted ruby-racc-runtime [taca 2004-03-07]
 	Added ccsh-0.0.4 [minskim 2004-03-07]
+        Updated gnome-session to 2.4.2nb4 [jmmv 2004-03-07]
