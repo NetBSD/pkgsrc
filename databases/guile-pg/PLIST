@@ -1,5 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:22 jlam Exp $
-share/guile/database/postgres.scm
-@dirrm share/guile/database
-lib/libpostgres.la
-bin/guile-pg
+@comment $NetBSD: PLIST,v 1.5 2004/12/03 13:41:30 wiz Exp $
+lib/guile/site/database/libpostgres.la
+lib/guile/site/database/postgres-col-defs.scm
+lib/guile/site/database/postgres-meta.scm
+lib/guile/site/database/postgres-resx.scm
+lib/guile/site/database/postgres-table.scm
+lib/guile/site/database/postgres-types.scm
+lib/guile/site/database/postgres.la
+share/guile/site/database
+@dirrm lib/guile/site/database
+@dirrm lib/guile/site
+@dirrm lib/guile
