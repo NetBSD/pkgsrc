@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/01/01 17:29:20 rh Exp $
+
+--- libcharset/lib/config.charset.orig	Sun Dec 10 18:07:10 2000
++++ libcharset/lib/config.charset
+@@ -204,7 +204,7 @@
+ 	#echo "sun_eu_greek ?" # what is this?
+ 	echo "UTF-8 UTF-8"
+ 	;;
+-    freebsd*)
++    *bsd*)
+ 	# FreeBSD 3.3 doesn't have nl_langinfo(CODESET); therefore
+ 	# localcharset.c falls back to using the full locale name
+ 	# from the environment variables.
