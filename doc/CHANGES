@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8574 2005/01/03 01:59:59 minskim Exp $
+$NetBSD: CHANGES,v 1.8575 2005/01/03 02:23:59 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -36,3 +36,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gnucash to 1.8.10nb2 [wiz 2005-01-02]
 	Updated apache2 to 2.0.52nb8 [minskim 2005-01-02]
 	Updated xhfs to 3.2.6nb1 [minskim 2005-01-02]
+	Updated ezmlm-idx to 0.432 [schmonz 2005-01-03]
+	Updated getmail to 4.2.6 [schmonz 2005-01-03]
