@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.Linux,v 1.8 2004/08/04 11:39:44 abs Exp $
+# $NetBSD: cpuflags.Linux,v 1.9 2004/09/23 11:41:10 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 if [ "$1" = -v ] ; then
@@ -14,6 +14,7 @@ fi
 
 display_hw_details()
     {
+    echo "  OS              : '$(uname)'"
     echo "  proc model      : '$hw_model'"
     echo "  machine_arch    : '$hw_machine_arch'"
     echo "  proc flags      : '$hw_flags'"
@@ -37,6 +38,7 @@ case $hw_machine_arch in
 	"AMD Duron(TM)")		FLAGS='-march=athlon'		;;
 	"AMD Athlon(tm) XP "*)		FLAGS='-march=athlon-xp'	;;
 	"Celeron (Coppermine)")		FLAGS='-march=pentium3'		;;
+	"Intel(R) Pentium(R) M processor"*) FLAGS='-march=pentium3m'	;;
 	"Intel(R) Celeron(R) CPU "*)
 	    case "$hw_flags" in
 		*" sse2 "*)
