@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 1999/01/04 02:40:16 abs Exp $
+$NetBSD: patch-aa,v 1.5 1999/04/27 20:33:58 tron Exp $
 
 --- Imakefile.orig	Thu Mar  5 04:19:56 1998
 +++ Imakefile	Sun Jun 28 18:56:38 1998
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.4 1999/01/04 02:40:16 abs Exp $
  #endif
  
 +EXTINCSRC=	$(X11BASE)/include/X11/extensions
-+SERVERSRC=	..
++SERVERSRC=	../../..
 +XINCLUDESRC=	$(X11BASE)/include/X11
 +
 +TCLLIBDIR=	$(LOCALBASE)/lib
@@ -28,7 +28,7 @@ $NetBSD: patch-aa,v 1.4 1999/01/04 02:40:16 abs Exp $
   XF86SETUPLIBDIR = $(LIBDIR)/XF86Setup
           DEFINES = -DCARD_DATABASE_FILE='"$(CARDDBFILE)"' \
 -		   $(XCONFIG_DEFINES)
-+		   $(XCONFIG_DEFINES) `cat ./res_cpp_symbol`
++		   $(XCONFIG_DEFINES) `cat res_cpp_symbol`
          INCLUDES = -I../os-support -I../common \
  		   -I$(SERVERSRC)/include -I$(XINCLUDESRC) -I$(INCLUDESRC) \
  		   -I$(EXTINCSRC) $(USEINSTALLEDINC) \
