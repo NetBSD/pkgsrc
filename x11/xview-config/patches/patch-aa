@@ -1,0 +1,20 @@
+diff -rc ../old/xview3.2p1-X11R6/config/Imakefile Imakefile
+*** ../old/xview3.2p1-X11R6/config/Imakefile	Tue Jun 29 01:13:19 1993
+--- Imakefile	Sun Nov 20 13:38:58 1994
+***************
+*** 8,14 ****
+  /**/# config directory
+  /**/# @(#)Imakefile	1.9 28 Jun 1993 SMI
+  
+! XVFILES = XView.cf XView.lib XView.obj XView.rules XView.tmpl library.tmpl
+  CFFILES = $(XVFILES) $(HEADERS)
+  
+  InstallMultipleDestFlags(install,$(CFFILES),$(CONFIGDIR),$(INSTDATFLAGS))
+--- 8,14 ----
+  /**/# config directory
+  /**/# @(#)Imakefile	1.9 28 Jun 1993 SMI
+  
+! XVFILES = XView.cf XView.lib XView.obj XView.rules XView.tmpl XView.prog
+  CFFILES = $(XVFILES) $(HEADERS)
+  
+  InstallMultipleDestFlags(install,$(CFFILES),$(CONFIGDIR),$(INSTDATFLAGS))
