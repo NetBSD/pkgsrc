@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/08/18 23:03:44 ben Exp $
+# $NetBSD: Makefile,v 1.9 2004/09/23 22:50:59 ben Exp $
 #
 
 .include "../../sysutils/cfengine2/Makefile.common"
@@ -23,6 +23,8 @@ pre-configure:
 		${WRKSRC}/contrib/vicf.in.orig > ${WRKSRC}/contrib/vicf.in
 
 post-install:
+	${INSTALL_MAN_DIR} ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/doc/*.8 ${PREFIX}/man/man8
 	${INSTALL_DATA} ${WRKSRC}/inputs/*.example \
 		${PREFIX}/share/examples/cfengine
 	${INSTALL_DATA_DIR} /var/cfengine/inputs
