@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2002/09/21 00:40:54 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2002/10/02 23:01:43 wiz Exp $
 
 DISTNAME=		xfmail-1.4.7
 PKGREVISION=		1
@@ -10,8 +10,6 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://xfmail.slappy.org/
 COMMENT=		Xforms based mail application for Unix operating systems
 
-BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
-
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-m68k \
 			NetBSD-*-mipsel NetBSD-*-ns32k NetBSD-*-sparc NetBSD-*-powerpc
 
@@ -19,6 +17,7 @@ RESTRICTED=		"Selling this software requires permission of the authors."
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
+AUTOCONF_REQD=		2.13
 USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
@@ -26,7 +25,7 @@ CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE} X11BASE=${X11BASE}
 
 pre-configure:
 	cd ${WRKSRC} && ( ${LN} -sf config/configure.in . && ${LN} -sf config/acconfig.h . )
-	cd ${WRKSRC} && ( ${LOCALBASE}/bin/autoheader && ${LOCALBASE}/bin/autoconf )
+	cd ${WRKSRC} && ( ${AUTOHEADER} && ${AUTOCONF} )
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xfmail
@@ -38,4 +37,5 @@ post-install:
 .include "../../graphics/xpm/buildlink2.mk"
 .include "../../x11/xforms/buildlink2.mk"
 
+.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
