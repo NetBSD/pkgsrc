@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4652 2004/01/31 22:02:55 recht Exp $
+$NetBSD: CHANGES,v 1.4653 2004/01/31 22:15:19 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -537,3 +537,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Mail-IMAPClient to 2.2.9 [toshii 2004-01-31]
 	Updated ccache to 2.3 [jlam 2004-01-31]
 	Updated x11-links to 0.20 [recht 2004-01-31]
+	Updated libxml2 to 2.6.5 [xtraeme 2004-01-31]
