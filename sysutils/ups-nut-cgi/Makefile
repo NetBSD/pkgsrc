@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/08/25 21:51:07 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2002/10/02 23:36:06 dillo Exp $
 
 DISTNAME=		nut-0.50.0
 PKGNAME=		ups-nut-cgi-0.50.0
@@ -9,7 +9,6 @@ MAINTAINER=		lukem@netbsd.org
 HOMEPAGE=		http://www.exploits.org/nut/
 COMMENT=		Network UPS Tools CGI scripts
 
-BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 DEPENDS+=		ups-nut-0.*:../../sysutils/ups-nut
 
 ALL_TARGET=		cgi
@@ -27,9 +26,6 @@ CONFIGURE_ARGS+=	--sysconfdir=${NUT_CONFDIR}			\
 			--with-statepath=${NUT_STATEDIR}		\
 			--with-cgipath=${NUT_CGIDIR}			\
 			--with-graphics=${LOCALBASE}
-
-pre-configure:
-	cd ${WRKSRC}; ${LOCALBASE}/bin/autoreconf --force
 
 .include "../../graphics/gd/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
