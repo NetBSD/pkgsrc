@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 22:51:40 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/09/23 18:26:05 kim Exp $
 
-DISTNAME=	proftpd-1.2.8
-PKGREVISION=	1
+PKGNAME=	proftpd-1.2.8
+DISTNAME=	proftpd-1.2.8p
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.proftpd.org/distrib/source/
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.proftpd.org/
 COMMENT=	FTP server with Apache like configuration
+
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 GNU_CONFIGURE=	# defined
 USE_GMAKE=	# defined
