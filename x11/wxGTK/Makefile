@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/03/31 17:44:21 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2003/03/31 18:48:43 jmmv Exp $
 #
 
 DISTNAME=		wxGTK-2.4.0
@@ -19,7 +19,6 @@ CONFIGURE_ARGS+=	--with-libjpeg=sys
 CONFIGURE_ARGS+=	--with-zlib=sys
 CONFIGURE_ARGS+=	--with-libpng=sys
 CONFIGURE_ARGS+=	--with-libtiff=sys
-CONFIGURE_ARGS+=	--disable-threads
 
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 CPPFLAGS+=		-Dunix=1	# src/common/unzip.c needs this
@@ -34,5 +33,5 @@ post-install:
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
-
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
