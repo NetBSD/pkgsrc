@@ -1,0 +1,5 @@
+Chinput is a Chinese input server. It supports XIM(X Input Method)
+Protocol and its own protocol for Chinese platform. XIM is the
+standard input protocol for DBCS input in X11. All the clients can
+use it if they support XIM.  Chinput now use the input engine(IME)
+from Unicon, and it can support both GB and Big5 charset.
