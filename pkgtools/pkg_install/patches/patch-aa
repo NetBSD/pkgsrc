@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.9 2002/08/05 15:11:35 fredb Exp $
+$NetBSD: patch-aa,v 1.10 2002/08/12 01:58:26 schmonz Exp $
 
---- Makefile.inc.orig	Thu Aug  1 03:46:30 2002
+--- Makefile.inc.orig	Thu Aug  1 04:46:30 2002
 +++ Makefile.inc
 @@ -3,6 +3,9 @@
  
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.9 2002/08/05 15:11:35 fredb Exp $
  LIBINSTALL != cd ${.CURDIR}/../lib && ${PRINTOBJDIR}
  CPPFLAGS+=-I${.CURDIR}/../lib ${DEBUG} -DBINDIR='"${BINDIR}"'
  
-@@ -20,11 +23,11 @@
+@@ -20,11 +23,11 @@ OPSYS="unknown"
  CHMOD?= /bin/chmod
  CHOWN?= /usr/sbin/chown
  CHGRP?= /usr/bin/chgrp
@@ -26,7 +26,7 @@ $NetBSD: patch-aa,v 1.9 2002/08/05 15:11:35 fredb Exp $
  ZOULARISBASE?=	${LOCALBASE}/bsd
  TAR_FULLPATHNAME?= ${ZOULARISBASE}/bin/${TAR_CMD}
  FTP_FULLPATHNAME?= ${ZOULARISBASE}/bin/${FTP_CMD}
-@@ -36,9 +39,27 @@
+@@ -36,9 +39,28 @@ CHOWN?= /usr/bin/chown
  CHGRP?= /usr/bin/chgrp
  WARNS=0
  .elif ${OPSYS} == "Linux"
@@ -49,6 +49,7 @@ $NetBSD: patch-aa,v 1.9 2002/08/05 15:11:35 fredb Exp $
 +TAR_CMD?= gnutar
 +TAR_FULLPATHNAME?= /usr/bin/${TAR_CMD}
 +CPPFLAGS+=-DTAR_CMD='"${TAR_CMD}"' -DTAR_FULLPATHNAME='"${TAR_FULLPATHNAME}"'
++CPPFLAGS+=-DTAR_MISSING_FAST_READ
 +.PATH: ${DIGESTDIR}
 +CPPFLAGS+= -I${DIGESTDIR}
  .endif
