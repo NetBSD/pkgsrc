@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2001/06/18 20:33:09 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2001/06/18 21:34:02 jlam Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -15,6 +15,7 @@ COMMENT=		Some useful routines for C programming
 
 CONFLICTS=		gtk+-1.0.*
 
+USE_BUILDINK_ONLY=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
