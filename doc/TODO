@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2489 2004/11/26 21:21:28 snj Exp $
+$NetBSD: TODO,v 1.2490 2004/11/26 21:37:20 snj Exp $
 
 Suggested new packages
 ======================
@@ -1362,7 +1362,6 @@ Suggested package updates
 	o xmms-spectogram-1.2.1
 	o xmmsctrl-1.8
 	o xmon-1.5.6
-	o xmountains-2.7
 	o xnap-2.5r3
 	o xpad-2.0
 	o xpat2-1.0.7
