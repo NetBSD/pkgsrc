@@ -1,22 +1,82 @@
-$NetBSD: patch-ad,v 1.11 2003/05/28 02:34:00 jlam Exp $
+$NetBSD: patch-ad,v 1.12 2004/05/17 10:40:45 jlam Exp $
 
---- config-scripts/cups-libtool.m4.orig	Tue Dec 17 13:56:39 2002
-+++ config-scripts/cups-libtool.m4
-@@ -24,7 +24,7 @@ dnl
+--- config-scripts/cups-sharedlibs.m4.orig	Wed Jul 23 16:07:34 2003
++++ config-scripts/cups-sharedlibs.m4
+@@ -27,6 +27,24 @@ DSOFLAGS="${DSOFLAGS:=}"
  
- AC_ARG_ENABLE(libtool_unsupported, [  --enable-libtool-unsupported=LIBTOOL_PATH
-                           turn on building with libtool (UNSUPPORTED!), default=no],
--	[if test x$enable_libtool_unsupported != xno; then
-+	[if test x"$enable_libtool_unsupported" != xno; then
- 		LIBTOOL="$enable_libtool_unsupported"
- 		enable_shared=no
- 		echo "WARNING: libtool is not supported or endorsed by Easy Software Products."
-@@ -36,7 +36,7 @@ AC_ARG_ENABLE(libtool_unsupported, [  --
+ AC_ARG_ENABLE(shared, [  --enable-shared         turn on shared libraries, default=yes])
  
- AC_SUBST(LIBTOOL)
++AC_ARG_ENABLE(libtool, [  --enable-libtool[=LIBTOOL_PATH]
++                          turn on building with libtool (UNSUPPORTED!), default=no])
++
++if test x$enable_libtool != xno; then
++	echo "WARNING: libtool is not supported or endorsed by Easy Software Products."
++	echo "         WE DO NOT PROVIDE TECHNICAL SUPPORT FOR LIBTOOL PROBLEMS."
++	echo "         (even if you have a support contract)"
++	enable_shared=no
++	if test x$enable_libtool = xyes; then
++		LIBTOOL=libtool
++	else
++		LIBTOOL=$enable_libtool
++	fi
++else
++	LIBTOOL=
++fi
++AC_SUBST(LIBTOOL)
++
+ if test x$enable_shared != xno; then
+ 	case "$uname" in
+ 		SunOS* | UNIX_S*)
+@@ -74,6 +92,10 @@ if test x$enable_shared != xno; then
+ 			DSOFLAGS="$DSOFLAGS -Wl,-soname,\$@ -shared \$(OPTIM)"
+ 			;;
+ 	esac
++elif test x$enable_libtool != xno; then
++	LIBCUPS="libcups.la"
++	LIBCUPSIMAGE="libcupsimage.la"
++	DSO="\$(CC)"
+ else
+ 	PICFLAG=0
+ 	LIBCUPS="libcups.a"
+@@ -87,8 +109,13 @@ AC_SUBST(LIBCUPS)
+ AC_SUBST(LIBCUPSIMAGE)
  
--if test x$LIBTOOL != x; then
-+if test x"$LIBTOOL" != x; then
- 	LIBCUPS="libcups.la"
- 	LIBCUPSIMAGE="libcupsimage.la"
- 	LINKCUPS="../cups/\$(LIBCUPS)"
+ if test x$enable_shared = xno; then
+-	LINKCUPS="../cups/libcups.a \$(SSLLIBS)"
+-	LINKCUPSIMAGE="../filter/libcupsimage.a"
++	if test x$enable_libtool = xno; then
++		LINKCUPS="../cups/libcups.a \$(SSLLIBS)"
++		LINKCUPSIMAGE="../filter/libcupsimage.a"
++	else
++		LINKCUPS="../cups/\$(LIBCUPS)"
++		LINKCUPSIMAGE="../filter/\$(LIBCUPSIMAGE)"
++	fi
+ else
+ 	if test $uname = AIX; then
+ 		LINKCUPS="-lcups_s"
+@@ -113,10 +140,11 @@ if test "$DSO" != ":"; then
+ 	DSOLIBS="\$(LIBPNG) \$(LIBTIFF) \$(LIBJPEG) \$(LIBZ)"
+ 	IMGLIBS=""
+ 
+-	# The *BSD, HP-UX, and Solaris run-time linkers need help when
+-	# deciding where to find a DSO.  Add linker options to tell them
+-	# where to find the DSO (usually in /usr/lib...  duh!)
+-	case $uname in
++	if test x$enable_libtool = xno; then
++		# The *BSD, HP-UX, and Solaris run-time linkers need help when
++		# deciding where to find a DSO.  Add linker options to tell them
++		# where to find the DSO (usually in /usr/lib...  duh!)
++		case $uname in
+                 HP-UX*)
+ 			# HP-UX
+                 	DSOFLAGS="+s +b $libdir $DSOFLAGS"
+@@ -141,7 +169,8 @@ if test "$DSO" != ":"; then
+                         LDFLAGS="$LDFLAGS -Wl,-rpath,$libdir"
+                         EXPORT_LDFLAGS="-Wl,-rpath,$libdir"
+                         ;;
+-	esac
++		esac
++	fi
+ else
+ 	DSOLIBS=""
+ 	IMGLIBS="\$(LIBPNG) \$(LIBTIFF) \$(LIBJPEG) \$(LIBZ)"

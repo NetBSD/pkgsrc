@@ -1,14 +1,11 @@
-$NetBSD: distinfo,v 1.24 2004/01/10 03:32:09 jlam Exp $
+$NetBSD: distinfo,v 1.25 2004/05/17 10:40:45 jlam Exp $
 
 SHA1 (cups-1.1.20-source.tar.bz2) = aa0fd35fb4b17ad3311801284295e2693a6e220b
 Size (cups-1.1.20-source.tar.bz2) = 3741510 bytes
-SHA1 (patch-aa) = 931a6f35ec0d4f41240031abb98be3e7e4b6de38
 SHA1 (patch-ab) = 29c205c31a70229f46f0c99775e70fc9c56af1e8
-SHA1 (patch-ad) = a426a03e67800a66fc819e79762e64fd2a73c646
-SHA1 (patch-af) = b6f8a67e1c837ef2e674af886d80e5d16643b500
+SHA1 (patch-ac) = 45388ca8b1bfeaf5d3649b766f65ac7f3108af74
+SHA1 (patch-ad) = 166749eb9fc7b4b20e123d81cd3b2cf96db27677
+SHA1 (patch-af) = f60f9f9087d9802bbcb2870ca35030b9ddfd60a7
 SHA1 (patch-ag) = bb33db57dd0cfec78fd6110436d91c26615f5bf6
-SHA1 (patch-am) = 67446886161f3062b89f3d9da56edc7faca4ad18
 SHA1 (patch-an) = c4266134f66868f59978ca513f8e3f68dc10f07f
 SHA1 (patch-ao) = c4c8f833cf4a09a686a338df6c209cebec36c6ef
-SHA1 (patch-ap) = b117e9fedee45bea544c0ec1ea1b8b4e60483aa9
-SHA1 (patch-at) = 331bfe986dbb1e7f894ec6f0a6baaa86b36307a5
