@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/24 15:23:47 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/04/19 04:58:48 snj Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}-stable-src
@@ -30,7 +30,7 @@ AUTOCONF_REQD=		2.13
 CPPFLAGS+=		-Dunix
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}-stable
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 
 USE_GNU_TOOLS+=		make
 MAKEFILE=		GNUmakefile
@@ -70,6 +70,6 @@ post-install:
 	${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} ${EGDIR}
 	${CHMOD} -R a+r ${EGDIR}
 
-.include "../../devel/pcre/buildlink2.mk"
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
