@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7125 2004/09/09 07:14:16 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7126 2004/09/09 22:27:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4223,3 +4223,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ical to 2.3.1 [wulf 2004-09-08]
 	Updated gcvs to 1.0 [wiz 2004-09-08]
 	Updated jakarta-tomcat to 5.0.27nb1 [xtraeme 2004-09-09]
+	Updated cvs to 1.11.17nb1 [wiz 2004-09-09]
