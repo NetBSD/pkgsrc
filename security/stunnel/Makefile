@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/12/28 07:22:29 tron Exp $
+# $NetBSD: Makefile,v 1.30 2002/06/17 10:47:56 wiz Exp $
 
 DISTNAME=		stunnel-3.22
 CATEGORIES=		security
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.stunnel.org/
 COMMENT=		Universal SSL tunnel
 
 USE_BUILDLINK_ONLY=	# defined
-USE_SSL=		# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE} \
 			--with-cert-dir="${SSLCERTS}" \
