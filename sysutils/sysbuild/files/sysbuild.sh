@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: sysbuild.sh,v 1.4 2002/12/08 11:37:18 jmmv Exp $
+# $NetBSD: sysbuild.sh,v 1.5 2002/12/14 23:23:08 jmmv Exp $
 #
 # sysbuild - Automatic NetBSD system builds
 # Copyright (c) 2002, Julio Merino <jmmv@netbsd.org>
@@ -145,7 +145,7 @@ sysbuild_build_kernels() {
         elif [ "$fast" = "yes" -a -d $BUILDDIR/kernel/$_k ]; then
             cd $BUILDDIR/kernel/$_k
             printf "Buildling kernel $_k (fast mode):"
-            $BUILDDIR/tools/bin/nbmake-`uname -m` >> $_log 2>&1
+            $BUILDDIR/tools/bin/nbmake-`uname -m` BSDSRCDIR=$SRCDIR OBJMACHINE=yes MKOBJDIRS=yes >> $_log 2>&1
             if [ $? -ne 0 ]; then
                 echo " failed."
             else
@@ -163,18 +163,18 @@ sysbuild_build_kernels() {
                 cd $BUILDDIR/kernel/$_k
 
                 printf "Cleaning kernel $_k:"
-                $BUILDDIR/tools/bin/nbmake-`uname -m` cleandir >> $_log 2>&1
+                $BUILDDIR/tools/bin/nbmake-`uname -m` BSDSRCDIR=$SRCDIR OBJMACHINE=yes MKOBJDIRS=yes cleandir >> $_log 2>&1
                 echo " done."
 
                 printf "Depending kernel $_k:"
-                $BUILDDIR/tools/bin/nbmake-`uname -m` depend >> $_log 2>&1
+                $BUILDDIR/tools/bin/nbmake-`uname -m` BSDSRCDIR=$SRCDIR OBJMACHINE=yes MKOBJDIRS=yes depend >> $_log 2>&1
                 if [ $? -ne 0 ]; then
                     echo " failed."
                 else
                     echo " done."
 
                     printf "Buildling kernel $_k:"
-                    $BUILDDIR/tools/bin/nbmake-`uname -m` >> $_log 2>&1
+                    $BUILDDIR/tools/bin/nbmake-`uname -m` BSDSRCDIR=$SRCDIR OBJMACHINE=yes MKOBJDIRS=yes >> $_log 2>&1
                     if [ $? -ne 0 ]; then
                         echo " failed."
                     else
@@ -210,7 +210,7 @@ sysbuild_install_kernel() {
         cd $BUILDDIR/kernel/$_conf
         echo "Kernel MD5: `md5 netbsd`"
         echo "Installing $_conf kernel:"
-        $BUILDDIR/tools/bin/nbmake-`uname -m` install
+        $BUILDDIR/tools/bin/nbmake-`uname -m` BSDSRCDIR=$SRCDIR OBJMACHINE=yes MKOBJDIRS=yes install
     fi
 }
 
@@ -237,9 +237,9 @@ sysbuild_build_release() {
     mkdir -p $RELEASEDIR
     cd $SRCDIR
     if [ "$fast" = "yes" ]; then
-        BSDOBJDIR=$BUILDDIR/obj ./build.sh -T $BUILDDIR/tools -D $BUILDDIR/root -R $RELEASEDIR -U -u >> $_log 2>&1
+        BSDSRCDIR=$SRCDIR BSDOBJDIR=$BUILDDIR/obj OBJMACHINE=yes MKOBJDIRS=yes ./build.sh -T $BUILDDIR/tools -D $BUILDDIR/root -R $RELEASEDIR -U -u >> $_log 2>&1
     else
-        BSDOBJDIR=$BUILDDIR/obj ./build.sh -T $BUILDDIR/tools -D $BUILDDIR/root -R $RELEASEDIR -U >> $_log 2>&1
+        BSDSRCDIR=$SRCDIR BSDOBJDIR=$BUILDDIR/obj OBJMACHINE=yes MKOBJDIRS=yes ./build.sh -T $BUILDDIR/tools -D $BUILDDIR/root -R $RELEASEDIR -U >> $_log 2>&1
     fi
     if [ $? -ne 0 ]; then
         echo " failed."
@@ -272,9 +272,9 @@ sysbuild_build_sets() {
     printf "Building system:"
     cd $SRCDIR
     if [ "$fast" = "yes" ]; then
-        BSDOBJDIR=$BUILDDIR/obj ./build.sh -T $BUILDDIR/tools -d -D $BUILDDIR/root -U >> $_log 2>&1
+        BSDSRCDIR=$SRCDIR BSDOBJDIR=$BUILDDIR/obj OBJMACHINE=yes MKOBJDIRS=yes ./build.sh -T $BUILDDIR/tools -d -D $BUILDDIR/root -U >> $_log 2>&1
     else
-        BSDOBJDIR=$BUILDDIR/obj ./build.sh -T $BUILDDIR/tools -d -D $BUILDDIR/root -U -u >> $_log 2>&1
+        BSDSRCDIR=$SRCDIR BSDOBJDIR=$BUILDDIR/obj OBJMACHINE=yes MKOBJDIRS=yes ./build.sh -T $BUILDDIR/tools -d -D $BUILDDIR/root -U -u >> $_log 2>&1
     fi
     if [ $? -ne 0 ]; then
         echo " failed."
@@ -284,7 +284,7 @@ sysbuild_build_sets() {
         printf "Making sets:"
         mkdir -p $RELEASEDIR/binary/sets
         cd $SRCDIR/distrib/sets
-        $BUILDDIR/tools/bin/nbmake-`uname -m` sets TOOLDIR=$BUILDDIR/tools DESTDIR=$BUILDDIR/root RELEASEDIR=$RELEASEDIR UNPRIVED=yes >> $_log 2>&1
+        $BUILDDIR/tools/bin/nbmake-`uname -m` sets BSDSRCDIR=$SRCDIR OBJMACHINE=yes MKOBJDIRS=yes TOOLDIR=$BUILDDIR/tools DESTDIR=$BUILDDIR/root RELEASEDIR=$RELEASEDIR UNPRIVED=yes >> $_log 2>&1
         if [ $? -ne 0 ]; then
             echo " failed."
         else
@@ -339,7 +339,7 @@ sysbuild_build_tools() {
     printf "Building tools (toolchain):"
     cd $SRCDIR
     rm -rf $BUILDDIR/tools/*
-    BSDOBJDIR=$BUILDDIR/obj ./build.sh -T $BUILDDIR/tools -t >> $_log 2>&1
+    BSDSRCDIR=$SRCDIR BSDOBJDIR=$BUILDDIR/obj OBJMACHINE=yes MKOBJDIRS=yes ./build.sh -T $BUILDDIR/tools -t >> $_log 2>&1
     if [ $? -ne 0 ]; then
         echo " failed."
     else
