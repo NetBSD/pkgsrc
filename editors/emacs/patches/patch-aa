@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.7 1998/09/04 02:28:53 tron Exp $
+$NetBSD: patch-aa,v 1.8 1999/12/28 14:08:55 tron Exp $
 
---- man/Makefile.in.orig	Sat May 16 21:00:22 1998
-+++ man/Makefile.in	Mon Aug 31 00:53:10 1998
+--- man/Makefile.in.orig	Sat Dec  5 08:33:16 1998
++++ man/Makefile.in	Fri Aug  6 08:34:06 1999
 @@ -14,7 +14,7 @@
  MAKEINFO = makeinfo
- INFO_TARGETS = ../info/emacs ../info/ccmode ../info/cl ../info/customize \
+ INFO_TARGETS = ../info/emacs ../info/ccmode ../info/cl \
  	        ../info/dired-x ../info/ediff ../info/forms ../info/gnus \
 -		../info/info ../info/message ../info/mh-e ../info/reftex \
 +		../info/message ../info/mh-e ../info/reftex \
  		../info/sc ../info/vip ../info/viper ../info/widget
- DVI_TARGETS = emacs.dvi cc-mode.dvi cl.dvi  customize.dvi dired-x.dvi \
+ DVI_TARGETS = emacs.dvi cc-mode.dvi cl.dvi dired-x.dvi \
  		 ediff.dvi forms.dvi gnus.dvi message.dvi mh-e.dvi \
 @@ -70,6 +70,7 @@
  	${srcdir}/glossary.texi \

@@ -1,20 +1,26 @@
-$NetBSD: patch-ab,v 1.8 1999/06/15 13:59:15 bad Exp $
+$NetBSD: patch-ab,v 1.9 1999/12/28 14:08:56 tron Exp $
 
---- configure.orig	Mon Jul 27 04:17:07 1998
-+++ configure	Thu Jun  3 22:49:02 1999
-@@ -751,12 +751,15 @@
-     opsys=netbsd
-     case "${canonical}" in
-       alpha*-*-netbsd*)	machine=alpha ;;
-+      arm*-*-netbsd*)	machine=arm ;;
-       i[3456]86-*-netbsd*) machine=intel386 ;;
-       m68k-*-netbsd*)
- 			# This is somewhat bogus.
+--- configure.orig	Fri Dec  3 16:41:15 1999
++++ configure	Fri Dec 17 15:23:49 1999
+@@ -715,9 +715,12 @@
  			machine=hp9000s300 ;;
+       powerpc-apple-netbsd*) machine=macppc ;;
        mips-*-netbsd*)	machine=pmax ;;
 +      mipsel-*-netbsd*)	machine=pmax ;;
        ns32k-*-netbsd*)	machine=ns32000 ;;
 +      powerpc-*-netbsd*) machine=powerpc ;;
        sparc-*-netbsd*)	machine=sparc ;;
        vax-*-netbsd*)	machine=vax ;;
++      arm*-*-netbsd*)	machine=arm ;;
      esac
+   ;;
+ 
+@@ -4277,7 +4280,7 @@
+ rename closedir mkdir rmdir sysinfo \
+ random lrand48 bcopy bcmp logb frexp fmod rint cbrt ftime res_init setsid \
+ strerror fpathconf select mktime euidaccess getpagesize tzset setlocale \
+-utimes setrlimit setpgid getcwd shutdown strftime
++utimes setrlimit setpgid getcwd shutdown strftime getaddrinfo
+ do
+ echo $ac_n "checking for $ac_func""... $ac_c" 1>&6
+ echo "configure:4284: checking for $ac_func" >&5

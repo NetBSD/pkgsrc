@@ -1,21 +1,22 @@
-$NetBSD: patch-az,v 1.5 1999/11/05 11:04:28 mrg Exp $
+$NetBSD: patch-az,v 1.6 1999/12/28 14:09:14 tron Exp $
 
---- src/unexelf.c.orig	Mon Aug 10 12:33:12 1998
-+++ src/unexelf.c	Fri Nov  5 21:35:39 1999
-@@ -473,6 +473,12 @@
- # else
- #  define ELFSIZE	32
+--- src/unexelf.c.orig	Fri Dec 17 15:48:53 1999
++++ src/unexelf.c	Fri Dec 17 15:55:21 1999
+@@ -478,6 +478,13 @@
  # endif
-+
+ # include <sys/exec_elf.h>
+ 
 +#include <sys/param.h>
 +
 +/* NetBSD 1.4M has sane <elf.h> */
 +
 +#if !defined(__NetBSD_Version__) || __NetBSD_Version__ < 104130000
- # include <sys/exec_elf.h>
- 
++# include <sys/exec_elf.h>
++
  # define PT_LOAD	Elf_pt_load
-@@ -487,6 +493,10 @@
+ # define SHT_SYMTAB	Elf_sht_symtab
+ # define SHT_DYNSYM	Elf_sht_dynsym
+@@ -490,6 +497,10 @@
  # define SHN_ABS	Elf_eshn_absolute
  # define SHN_COMMON	Elf_eshn_common
  
@@ -26,25 +27,23 @@ $NetBSD: patch-az,v 1.5 1999/11/05 11:04:28 mrg Exp $
  /*
   * The magic of picking the right size types is handled by the ELFSIZE
   * definition above.
-@@ -501,9 +511,16 @@
+@@ -504,9 +515,14 @@
  #  include <sys/exec_ecoff.h>
  #  define HDRR		struct ecoff_symhdr
  #  define pHDRR		HDRR *
 -# endif
-+# endif /* __alpha__*/
-+
++# endif /* __alpha__ */
+ #endif /* __NetBSD__ */
+ 
 +# ifdef __mips__
 +#  define SHT_MIPS_DEBUG	DT_MIPS_FLAGS
 +#  define HDRR		struct Elf_Shdr
 +# endif /* __mips__ */
 +
- #endif /* __NetBSD__ */
- 
-+
  #ifdef __OpenBSD__
  # include <sys/exec_elf.h>
  #endif
-@@ -527,6 +544,14 @@
+@@ -530,6 +546,14 @@
  extern void fatal (char *, ...);
  #endif
  
@@ -52,14 +51,14 @@ $NetBSD: patch-az,v 1.5 1999/11/05 11:04:28 mrg Exp $
 +# define HAVE_MIPS_SBSS
 +#endif
 +
-+#if (defined (__mips__) || defined (__powerpc__)) && (defined(__NetBSD__) || defined(__OpenBSD__))
++#if defined (__mips__) && (defined(__NetBSD__) || defined(__OpenBSD__))
 +# define HAVE_MIPS_SBSS
 +#endif
 +
  #ifndef ELF_BSS_SECTION_NAME
  #define ELF_BSS_SECTION_NAME ".bss"
  #endif
-@@ -585,6 +610,47 @@
+@@ -588,6 +612,47 @@
    return x - rem + y;
  }
  
@@ -89,7 +88,7 @@ $NetBSD: patch-az,v 1.5 1999/11/05 11:04:28 mrg Exp $
 +void
 +relocate_elf_proghdr(p, diff)
 +    HDRR *symhdr;
-+    ElfW(Word) diff;
++    Elfw(Word) diff;
 +{
 +	phdr->sh_name  += diff;
 +	phdr->sh_type  += diff;
@@ -107,72 +106,7 @@ $NetBSD: patch-az,v 1.5 1999/11/05 11:04:28 mrg Exp $
  /* ****************************************************************
   * unexec
   *
-@@ -620,9 +686,10 @@
-   ElfW(Addr) new_data2_addr;
- 
-   int n, nn, old_bss_index, old_data_index, new_data2_index;
--#if defined ( __sony_news) && defined (_SYSTYPE_SYSV)
-+#ifdef HAVE_MIPS_SBSS
-   int old_sbss_index, old_mdebug_index;
--#endif /* __sony_news && _SYSTYPE_SYSV */
-+  int bss_phdr_index;
-+#endif /* HAVE_MIPS_SBSS */
-   struct stat stat_buf;
- 
-   /* Open the old file & map it into the address space. */
-@@ -672,7 +739,7 @@
-   if (old_bss_index == old_file_h->e_shnum)
-     fatal ("Can't find .bss in %s.\n", old_name, 0);
- 
--#if defined (__sony_news) && defined (_SYSTYPE_SYSV)
-+#ifdef HAVE_MIPS_SBSS
-   for (old_sbss_index = 1; old_sbss_index < (int) old_file_h->e_shnum;
-        old_sbss_index++)
-     {
-@@ -713,10 +780,10 @@
-     }
-     if (old_mdebug_index == old_file_h->e_shnum)
- 	old_mdebug_index = 0;
--#else /* not (__sony_news && _SYSTYPE_SYSV) */	    
-+#else /* not HAVE_MIPS_SBSS */
-   old_bss_addr = OLD_SECTION_H (old_bss_index).sh_addr;
-   old_bss_size = OLD_SECTION_H (old_bss_index).sh_size;
--#endif /* not (__sony_news && _SYSTYPE_SYSV) */	    
-+#endif /* not HAVE_MIPS_SBSS */
- #if defined (emacs) || !defined (DEBUG)
-   new_bss_addr = (ElfW(Addr)) sbrk (0);
- #else
-@@ -724,9 +791,9 @@
- #endif
-   new_data2_addr = old_bss_addr;
-   new_data2_size = new_bss_addr - old_bss_addr;
--#if !defined (__sony_news) || !defined (_SYSTYPE_SYSV)
-+#ifndef HAVE_MIPS_SBSS
-   new_data2_offset = OLD_SECTION_H (old_bss_index).sh_offset;
--#endif /*  not (__sony_news && _SYSTYPE_SYSV) */
-+#endif /*  not HAVE_MIPS_SBSS */
- 
- #ifdef DEBUG
-   fprintf (stderr, "old_bss_index %d\n", old_bss_index);
-@@ -811,14 +878,14 @@
-       if ((OLD_SECTION_H (old_bss_index)).sh_addralign > alignment)
- 	alignment = OLD_SECTION_H (old_bss_index).sh_addralign;
- 
--#if defined (__sony_news) && defined (_SYSTYPE_SYSV)
-+#ifdef HAVE_MIPS_SBSS
-       if (NEW_PROGRAM_H (n).p_vaddr + NEW_PROGRAM_H (n).p_filesz
- 	  > round_up (old_bss_addr, alignment))
- 	fatal ("Program segment above .bss in %s\n", old_name, 0);
--#else /* not (__sony_news && _SYSTYPE_SYSV) */
-+#else /* not HAVE_MIPS_SBSS */
-       if (NEW_PROGRAM_H (n).p_vaddr + NEW_PROGRAM_H (n).p_filesz > old_bss_addr)
- 	fatal ("Program segment above .bss in %s\n", old_name, 0);
--#endif /* not (__sony_news && _SYSTYPE_SYSV) */
-+#endif /* not HAVE_MIPS_SBSS */
- 
-       if (NEW_PROGRAM_H (n).p_type == PT_LOAD
- 	  && (round_up ((NEW_PROGRAM_H (n)).p_vaddr
-@@ -830,11 +897,16 @@
+@@ -829,6 +894,10 @@
    if (n < 0)
      fatal ("Couldn't find segment next to .bss in %s\n", old_name, 0);
  
@@ -183,46 +117,7 @@ $NetBSD: patch-az,v 1.5 1999/11/05 11:04:28 mrg Exp $
    /* Make sure that the size includes any padding before the old .bss
       section.  */
    NEW_PROGRAM_H (n).p_filesz = new_bss_addr - NEW_PROGRAM_H (n).p_vaddr;
-   NEW_PROGRAM_H (n).p_memsz = NEW_PROGRAM_H (n).p_filesz;
- 
-+
- #if 0 /* Maybe allow section after data2 - does this ever happen? */
-   for (n = new_file_h->e_phnum - 1; n >= 0; n--)
-     {
-@@ -867,15 +939,15 @@
-     {
-       caddr_t src;
-       int temp_index;
--#if defined (__sony_news) && defined (_SYSTYPE_SYSV)
-+#ifdef HAVE_MIPS_SBSS
-       /* If it is (s)bss section, insert the new data2 section before it.  */
-       /* new_data2_index is the index of either old_sbss or old_bss, that was
- 	 chosen as a section for new_data2.   */
-       temp_index = new_data2_index;
--#else /* not (__sony_news && _SYSTYPE_SYSV) */
-+#else /* not HAVE_MIPS_SBSS */
-       /* If it is bss section, insert the new data2 section before it.  */
-       temp_index = old_bss_index;
--#endif /* not (__sony_news && _SYSTYPE_SYSV) */
-+#endif /* not HAVE_MIPS_SBSS */
-       if (n == temp_index)
- 	{
- 	  /* Steal the data section header for this data2 section. */
-@@ -901,11 +973,11 @@
- 	      old_file_h->e_shentsize);
-       
-       if (n == old_bss_index
--#if defined (__sony_news) && defined (_SYSTYPE_SYSV)
-+#ifdef HAVE_MIPS_SBSS
- 	  /* The new bss and sbss section's size is zero, and its file offset
- 	     and virtual address should be off by NEW_DATA2_SIZE.  */
- 	  || n == old_sbss_index
--#endif /* __sony_news and _SYSTYPE_SYSV */
-+#endif /* HAVE_MIPS_SBSS */
- 	  )
- 	{
- 	  /* NN should be `old_bss_index + 1' at this point. */
-@@ -916,6 +988,28 @@
+@@ -908,6 +977,28 @@
  	     this section will be placed in exactly the same place. */
  	  NEW_SECTION_H (nn).sh_addralign = OLD_SECTION_H (nn).sh_addralign;
  	  NEW_SECTION_H (nn).sh_size = 0;
@@ -251,24 +146,7 @@ $NetBSD: patch-az,v 1.5 1999/11/05 11:04:28 mrg Exp $
  	}
        else
  	{
-@@ -970,14 +1064,14 @@
- 	  || !strcmp ((old_section_names + NEW_SECTION_H(n).sh_name),
- 		      ".sdata")
- #endif
--#if defined (__sony_news) && defined (_SYSTYPE_SYSV)
-+#ifdef HAVE_MIPS_SBSS
- 	  || !strcmp ((old_section_names + NEW_SECTION_H (n).sh_name),
- 		      ".sdata")
- 	  || !strcmp ((old_section_names + NEW_SECTION_H (n).sh_name),
- 		      ".lit4")
- 	  || !strcmp ((old_section_names + NEW_SECTION_H (n).sh_name),
- 		      ".lit8")
--#endif /* __sony_news && _SYSTYPE_SYSV */
-+#endif /* HAVE_MIPS_SBSS */
- 	  || !strcmp ((old_section_names + NEW_SECTION_H (n).sh_name),
- 		      ".data1"))
- 	src = (caddr_t) OLD_SECTION_H (n).sh_addr;
-@@ -993,18 +1087,7 @@
+@@ -983,22 +1074,11 @@
  	  == 0)
  	{
  	  pHDRR symhdr = (pHDRR) (NEW_SECTION_H (nn).sh_offset + new_base);
@@ -288,7 +166,12 @@ $NetBSD: patch-az,v 1.5 1999/11/05 11:04:28 mrg Exp $
  	}
  #endif /* __alpha__ */
  
-@@ -1017,20 +1100,11 @@
+-#if defined (__sony_news) && defined (_SYSTYPE_SYSV)
++#ifdef HAVE_MIPS_SBSS
+       if (NEW_SECTION_H (nn).sh_type == SHT_MIPS_DEBUG && old_mdebug_index) 
+         {
+ 	  int diff = NEW_SECTION_H(nn).sh_offset 
+@@ -1007,20 +1087,17 @@
  
  	  if (diff)
  	    {
@@ -303,12 +186,18 @@ $NetBSD: patch-az,v 1.5 1999/11/05 11:04:28 mrg Exp $
 -	      phdr->cbFdOffset   += diff;
 -	      phdr->cbRfdOffset  += diff;
 -	      phdr->cbExtOffset  += diff;
++#if defined ( __sony_news) && defined (_SYSTYPE_SYSV)
 +	      relocate_ecoff_symhdr(phdr, diff);
++#else
++	      /* xxxBSD with  GNU binutils has .mdebug, but not ecoff(???)  */
++#ifdef DEBUG
++	      printf("Dont know how to relocate mdebug syms by %0x\n", diff);
++#endif
++#endif
  	    }
  	}
 -#endif /* __sony_news && _SYSTYPE_SYSV */
-+#endif /* __sony_news and systype_sysv */
-+
-       /* If it is the symbol table, its st_shndx field needs to be patched.  */
-       if (NEW_SECTION_H (nn).sh_type == SHT_SYMTAB
- 	  || NEW_SECTION_H (nn).sh_type == SHT_DYNSYM)
++#endif /* HAVE_MIPS_SBSS */
+ 
+ #if __sgi
+       /* Adjust  the HDRR offsets in .mdebug and copy the 
