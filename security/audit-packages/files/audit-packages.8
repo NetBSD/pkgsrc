@@ -1,5 +1,5 @@
-.\" $NetBSD: audit-packages.8,v 1.1 2003/06/12 06:59:31 wiz Exp $
-.Dd June 11, 2003
+.\" $NetBSD: audit-packages.8,v 1.2 2003/09/16 14:46:52 grant Exp $
+.Dd September 16, 2003
 .Os
 .Dt AUDIT-PACKAGES 8
 .Sh NAME
@@ -13,7 +13,7 @@
 The
 .Nm
 program compares the installed packages with the
-.Pa vulnerabilities
+.Pa pkg-vulnerabilities
 file and reports any known security issues to standard output.
 This output contains the name and version of the package, the
 type of vulnerability, and an URL for further information for each
@@ -22,7 +22,7 @@ vulnerable package.
 The
 .Nm download-vulnerability-list
 program downloads this file from
-.Pa ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/vulnerabilities
+.Pa ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/pkg-vulnerabilities
 using
 .Xr @FETCH_CMD_SHORT@ 1 .
 This vulnerabilities file documents all known security issues in
@@ -118,7 +118,7 @@ Specifies the directory containing the
 file.
 .El
 .Sh FILES
-.Pa @PKGVULNDIR@/vulnerabilities
+.Pa @PKGVULNDIR@/pkg-vulnerabilities
 .\" .Sh EXAMPLES
 .Sh EXAMPLES
 The
@@ -126,8 +126,8 @@ The
 command can be run via
 .Xr cron 8
 to update the
-.Pa vulnerabilities
-daily.
+.Pa pkg-vulnerabilities
+file daily.
 And
 .Nm
 can be run via
