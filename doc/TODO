@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.505 2003/04/27 17:05:57 cjep Exp $
+$NetBSD: TODO,v 1.506 2003/04/27 20:55:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -69,10 +69,11 @@ Suggested package updates
 	o Xbae-4.50.0
 	o abcde-2.1.0 [pkg/20633]
 	o abcde-2.1.2
-	o amaya-8.0
+	o amaya-8.0 [pkg/21312]
 	o angband-3.0.3
 	o anjuta-1.0.2
 	o arch-1.0pre17 [pkg/20776]
+	o asm2html-1.4 [pkg/21319]
 	o asp2php-0.76.15 [pkg/20506]
 	o atari800-1.3
 	o avifile-devel-0.7.34-20030319
@@ -94,14 +95,14 @@ Suggested package updates
 	o cyrus-sasl-2.1.13
 	o db4-4.1.25 [pkg/20289]
 	o dctc-0.85.1
-	o dia-0.91 [pkg/20750]
+	o dia-0.91 [pkg/20750,21308]
 	o disc-cover-1.5.0
 	o distcc-2.0.1
 	o doxygen-1.3
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
 	o easytag-0.27.1
-	o elm-me-2.4pl101
+	o elm-me-2.4pl101b
 	o exim-4.12 [pkg/19850]
 	o exim-4.14
 	o exmh-2.6.2
@@ -112,6 +113,7 @@ Suggested package updates
 	o fsviewer-0.2.5
 	o gauche-0.6.7 [kei]
 	o gawk-3.1.2
+	o gcc-3.2.3 [pkg/21316]
 	o gcpio-2.5 [pkg/20799]
 	o gcvs-1.0-1
 	o gd-2.0.12
@@ -134,12 +136,14 @@ Suggested package updates
 	o graphopt-0.4
 	o gsed-4.0.7
 	o gtetrinet-0.7.1
+	o gtkglext-0.7.1 [pkg/21309]
 	o guile-1.6.4
 	o hatari-0.30
 	o icepref-2.2
 	o icewm-1.2.7
 	o inform-6.21.3 [pkg/19298]
 	o inn 2.3.5
+	o iozone-3.169
 	o jakarta-ant-1.5 [pkg/18322]
 	o jakarta-ant-1.5.2
 	o jakarta-tomcat-3.3.1a
@@ -154,6 +158,7 @@ Suggested package updates
 	o libole2-2.2.8
 	o librsvg-2.2.2.1
 	o libtool-1.5 [skrll]
+	o libxml-2.5.7
 	o lilypond-1.6.8
 	o lmbench-2.0.4
 	o lmule-1.2.0 [pkg/21273]
@@ -167,7 +172,7 @@ Suggested package updates
 	o mgetty-1.1.30
 	o mhonarc-2.6.3 [pkg/21306]
 	o midnight-commander-4.6.0
-	o mimedefang-2.32
+	o mimedefang-2.33
 	o mixer.app-1.8.0
 	o mpgtx-1.3 [pkg/19082]
 	o mrproject-0.9.1
@@ -181,11 +186,14 @@ Suggested package updates
 	o nessus-2.0.3
 	o net-snmp-5.0.7 [pkg/19939]
 	o net-snmp-5.0.8
+	o netatalk-1.6.2 [pkg/21341]
 	o netpbm-10.14 [pkg/21271]
 	o newscache-0.99.22p1
 	o ns-flash-6.0.79
 	o ntop2-2.2
 	o nut-7.22
+	o nxtvepg-2.5.1
+	o openbox-2.3.1 [devel]
 	o openh323-1.11.2
 	o openldap-2.1.17
 	o openoffice-1.0.3.1 [skrll]
@@ -210,7 +218,7 @@ Suggested package updates
 	o rt-3.0
 	o sablotron-0.97
 	o sane-backends-1.0.11
-	o sane-frontends-1.0.10
+	o sane-frontends-1.0.11
 	o sawfish-1.3
 	o scribus-0.8
 	o scsh-0.6.4
@@ -234,7 +242,7 @@ Suggested package updates
 	o swig-1.3.17
 	o t1lib-5.0.0
 	o tcl/tk-8.4.2 [bjoern]
-	o texmacs-1.0.1.11
+	o texmacs-1.0.1.12
 	o tightvnc-1.2.8
 	o tkman-2.2
 	o ttf2pt1-3.4.3
