@@ -1,0 +1,40 @@
+# $NetBSD: Makefile,v 1.1.1.1 2003/07/24 16:47:52 jschauma Exp $
+
+DISTNAME=       djbfft-0.76
+CATEGORIES=     math
+MASTER_SITES=   http://cr.yp.to/djbfft/
+
+MAINTAINER=     tech-pkg@netbsd.org
+HOMEPAGE=       http://pobox.com/~djb/djbfft.html
+COMMENT=        Extremely fast library for floating-point convolution
+
+ALL_TARGET=
+INSTALL_TARGET=	setup check
+
+NOT_FOR_PLATFORM=	IRIX-*-*
+
+do-configure:
+	@${ECHO} '${CC} ${CFLAGS}' > ${WRKSRC}/conf-cc
+	@${ECHO} '${CC}' > ${WRKSRC}/conf-ld
+	@${ECHO} ${PREFIX} > ${WRKSRC}/conf-home
+.ifdef(WITH_OPT_PENTIUM)
+	@${ECHO} 'pentium' > ${WRKSRC}/conf-opt
+.endif
+.ifdef(WITH_OPT_PPRO)
+	@${ECHO} 'ppro' > ${WRKSRC}/conf-opt
+.endif
+.if (${MACHINE_ARCH} == "sparc")
+	@${ECHO} 'sparc' > ${WRKSRC}/conf-opt
+.endif
+
+post-extract:
+.if (${MACHINE_ARCH} == "i386" && !WITH_OPT_PENTIUM)
+	@${ECHO} '===> Set WITH_OPT_PENTIUM to optimize for both Pentium and Pentium MMX'
+	@${ECHO} '     like processors.'
+.endif
+.if (${MACHINE_ARCH} == "i386" && !WITH_OPT_PPRO)
+	@${ECHO} '===> Set WITH_OPT_PPRO to optimize for Pentium Pro, Pentium II, and'
+	@${ECHO} '     Pentium III like processors.'
+.endif
+
+.include "../../mk/bsd.pkg.mk"
