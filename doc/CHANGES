@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1747 2003/03/23 02:04:00 rh Exp $
+$NetBSD: CHANGES,v 1.1748 2003/03/23 04:51:41 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1264,3 +1264,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added latex-ttf-fonts-0.1 [jmmv 2003-03-22]
 	Added coq-7.4 [kristerw 2003-03-22]
 	Updated cdlabelgen to 2.5.0 [rh 2003-03-23]
+	Updated lbreakout2 to 2.4.1 [rh 2003-03-23]
