@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.74 1999/12/04 18:00:08 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.75 1999/12/07 08:58:59 sakamoto Exp $
 ###########################################################################
 
 			==========================
@@ -783,10 +783,13 @@ Here's how to use libtool in a pkg in seven simple steps:
    include the ELF symlink files; those are automatic. 
 
 FOR GNU PKGS THAT ALREADY SUPPORT LIBTOOL: 
-Add USE_LIBTOOL=yes to the package Makefile.  You may possibly have to
-modify the "configure" script not to check for or configure its own
-libtool.  See the libwww pkg, patch-ab, for the quick way to bypass
-the pkg's own libtool.
+Add USE_LIBTOOL=yes and LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig to the
+package Makefile for the quick way to bypass the pkg's own libtool.
+The pkg's own libtool is made by ltconfig script at do-configure target.
+If USE_LIBTOOL and LTCONFIG_OVERRIDE defined, specified ltconfig is
+overrided for using libtool-pkg instead of the pkg's own libtool.
+If pkg has already original "libtool" which we can substitute by libtool-pkg,
+you may possibly have to specify LIBTOOL_OVERRIDE to the package Makefile.
 
 
  6.3 Gotchas of FreeBSD ports
