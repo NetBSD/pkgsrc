@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/02/16 23:50:18 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/05/23 07:19:41 seb Exp $
 bin/flow-capture
 bin/flow-cat
 bin/flow-dscan
@@ -49,19 +49,17 @@ man/man1/flow-tag.1
 man/man1/flow-tools-examples.1
 man/man1/flow-tools.1
 man/man1/flow-xlate.1
-share/examples/flow-tools/bin/flow-mirror
-share/examples/flow-tools/bin/flow-rsync
-share/examples/flow-tools/bin/flow-search
-share/examples/flow-tools/cfg/filter
-share/examples/flow-tools/cfg/flow.acl
-share/examples/flow-tools/cfg/map
-share/examples/flow-tools/cfg/stats
-share/examples/flow-tools/sym/asn
-share/examples/flow-tools/sym/ip-prot
-share/examples/flow-tools/sym/ip-type
-share/examples/flow-tools/sym/tcp-port
+share/examples/flow-tools/cfg/filter.cfg
+share/examples/flow-tools/cfg/map.cfg
+share/examples/flow-tools/cfg/mask.cfg
+share/examples/flow-tools/cfg/stat.cfg
+share/examples/flow-tools/cfg/tag.cfg
+share/examples/flow-tools/sym/asn.sym
+share/examples/flow-tools/sym/ip-prot.sym
+share/examples/flow-tools/sym/ip-type.sym
+share/examples/flow-tools/sym/tag.sym
+share/examples/flow-tools/sym/tcp-port.sym
 @dirrm share/examples/flow-tools/sym
 @dirrm share/examples/flow-tools/cfg
-@dirrm share/examples/flow-tools/bin
 @dirrm share/examples/flow-tools
 @dirrm include/flow-tools
