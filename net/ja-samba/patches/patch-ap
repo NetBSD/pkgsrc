@@ -1,42 +1,40 @@
-$NetBSD: patch-ap,v 1.2 2003/03/31 16:33:22 taca Exp $
+$NetBSD: patch-ap,v 1.3 2004/06/05 13:16:35 taca Exp $
 
 Expand & in the gecos field to a capitalized login name.
 
---- lib/system.c.orig	2003-02-05 15:14:52.000000000 +0900
+--- lib/system.c.orig	2003-07-17 20:23:53.000000000 +0900
 +++ lib/system.c
-@@ -776,6 +776,11 @@ static int num_lookups; /* Counter so we
+@@ -776,12 +776,47 @@ static int num_lookups; /* Counter so we
  
  static void copy_pwent(struct saved_pw *dst, struct passwd *pass)
  {
 +#ifdef BSD
-+	char *bp, *gecos, *p, buf[PSTRING_LEN];
++# define BUFLEN 1024
++	char *bp, *gecos, *p, buf[BUFLEN];
 +	int buflen;
 +#endif
 +
  	memcpy((char *)&dst->pass, pass, sizeof(struct passwd));
  
  	unix_to_dos(dst->pw_name, pass->pw_name);
-@@ -785,6 +790,35 @@ static void copy_pwent(struct saved_pw *
- 	dst->pass.pw_passwd = dst->pw_passwd;
+ 	dst->pass.pw_name = dst->pw_name;
  
- 	unix_to_dos(dst->pw_gecos, pass->pw_gecos);
 +#ifdef BSD
-+	gecos = dst->pw_gecos;
++	gecos = pass->pw_gecos;
 +	if (*gecos == '*')
 +		gecos++;
 +	bp = buf;
 +
 +	/* copy gecos, interpolating & to be full name */
 +	for (p = gecos; *p != '\0'; p++) {
-+		if (bp >= &buf[PSTRING_LEN - 1]) {
++		if (bp >= &buf[BUFLEN - 1]) {
 +			/* buffer overflow */
 +			gecos = pass->pw_name;
 +			goto gecos_done;
 +		}
 +		if (*p == '&') {
 +			/* interpolate full name */
-+			snprintf(bp, PSTRING_LEN - (bp - buf), "%s",
-+				 pass->pw_name);
++			snprintf(bp, BUFLEN - (bp - buf), "%s", pass->pw_name);
 +			*bp = toupper(*bp);
 +			bp += strlen(bp);
 +		}
@@ -48,7 +46,9 @@ Expand & in the gecos field to a capitalized login name.
 +
 +  gecos_done:
 +	fstrcpy(dst->pw_gecos, gecos);
++#else
+ 	fstrcpy(dst->pw_passwd, pass->pw_passwd);
 +#endif
- 	dst->pass.pw_gecos = dst->pw_gecos;
+ 	dst->pass.pw_passwd = dst->pw_passwd;
  
- 	unix_to_dos(dst->pw_dir, pass->pw_dir);
+ 	unix_to_dos(dst->pw_gecos, pass->pw_gecos);

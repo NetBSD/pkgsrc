@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2003/08/30 01:31:13 taca Exp $
+$NetBSD: patch-aa,v 1.6 2004/06/05 13:16:35 taca Exp $
 
---- Makefile.in.orig	2003-08-22 17:45:57.000000000 +0900
+--- Makefile.in.orig	2004-01-22 20:24:22.000000000 +0900
 +++ Makefile.in
 @@ -117,6 +117,8 @@ LDSHFLAGSPO = @LDSHFLAGS@ @ARCHFLAGPO@
  LDSHFLAGS32 = @LDSHFLAGS@ @ARCHFLAG32@
@@ -15,8 +15,8 @@ $NetBSD: patch-aa,v 1.5 2003/08/30 01:31:13 taca Exp $
  
  bin/pam_smbpass.@SHLIBEXT@: $(PAM_SMBPASS_OBJ) bin/.dummy
  	@echo Linking shared library $@
--	$(SHLD) $(LDSHFLAGS) -o $@ $(PAM_SMBPASS_OBJ) $(LDFLAGS) -lpam $(SHDYNEXP) $(SOLIBS) $(LDAPLIBS) -lc \
-+	$(SHLD) $(LDSHFLAGS) -o $@ $(PAM_SMBPASS_OBJ) $(LDFLAGS) -lpam $(SHDYNEXP) $(SOLIBS) $(LDAPLIBS) $(PAM_NEEDS_LIBC) \
+-	@$(SHLD) $(LDSHFLAGS) -o $@ $(PAM_SMBPASS_OBJ) -lpam $(SHDYNEXP) $(SOLIBS) $(LDAPLIBS) -lc \
++	@$(SHLD) $(LDSHFLAGS) -o $@ $(PAM_SMBPASS_OBJ) -lpam $(SHDYNEXP) $(SOLIBS) $(LDAPLIBS) $(PAM_NEEDS_LIBC) \
  		@SONAMEFLAG@`basename $@`
  
  nsswitch/libnss_wins.@SHLIBEXT@: $(NSS_OBJ)
