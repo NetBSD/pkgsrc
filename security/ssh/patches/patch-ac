@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.8 1999/09/18 22:04:57 kim Exp $
+$NetBSD: patch-ac,v 1.9 1999/12/01 20:48:17 bouyer Exp $
 
 --- Makefile.in.orig	Wed May 12 07:19:31 1999
 +++ Makefile.in	Sat Sep 18 17:25:37 1999
@@ -103,23 +103,22 @@ $NetBSD: patch-ac,v 1.8 1999/09/18 22:04:57 kim Exp $
  	  rm -f $(install_prefix)$(man8dir)/$$p.8 ; \
  	  $(LN_S) $${p}1.8 $(install_prefix)$(man8dir)/$$p.8 ; \
  	  if test "`echo $$p | sed '$(transform)'`" '!=' $$p; then \
-@@ -636,12 +637,13 @@
+@@ -636,12 +637,12 @@
  
  install-configs:
  	-if test '!' -f $(install_prefix)$(HOST_CONFIG_FILE); then \
 -	  $(INSTALL_DATA) -m 0644 $(srcdir)/host_config.sample \
-+	  /usr/bin/install -c -o root -g wheel -m 0644 \
-+	    $(srcdir)/host_config.sample \
++	  $(INSTALL_DATA) $(srcdir)/host_config.sample \
  	    $(install_prefix)$(HOST_CONFIG_FILE); fi
  	-if test '!' -f $(install_prefix)$(SERVER_CONFIG_FILE); then \
  	  cat $(srcdir)/server_config.sample | \
  	  sed "s#_ETCDIR_#$(etcdir)#g" >/tmp/ssh_inst.$$$$; \
 -	  $(INSTALL_DATA) -m 0644 /tmp/ssh_inst.$$$$ \
-+	  /usr/bin/install -c -o root -g wheel -m 0644 /tmp/ssh_inst.$$$$ \
++	  $(INSTALL_DATA) /tmp/ssh_inst.$$$$ \
  	    $(install_prefix)$(SERVER_CONFIG_FILE); \
  	  rm -f /tmp/ssh_inst.$$$$; fi
  
-@@ -681,13 +683,13 @@
+@@ -681,13 +682,13 @@
  	-rm -f *.o gmon.out *core $(PROGRAMS) rfc-pg
  	cd $(GMPDIR); $(MAKE) clean
  #	cd $(RSAREFSRCDIR); rm -f *.o *.a
@@ -135,7 +134,7 @@ $NetBSD: patch-ac,v 1.8 1999/09/18 22:04:57 kim Exp $
  
  dist: dist-free
  
-@@ -720,8 +722,8 @@
+@@ -720,8 +721,8 @@
  	gzip -cd $(GMPDIR)/$(GMPDIR).tar.gz | (cd $(DISTNAME); tar pxf - )
  #	tar cf - $(RSAREFDIR) | (cd $(DISTNAME); tar xf -)
  #	cd $(DISTNAME)/$(RSAREFSRCDIR); rm -f *.o *.a
@@ -146,7 +145,7 @@ $NetBSD: patch-ac,v 1.8 1999/09/18 22:04:57 kim Exp $
  
  #ifdef F_SECURE_COMMERCIAL
  #
-@@ -749,7 +751,7 @@
+@@ -749,7 +750,7 @@
  	 (echo "s/\.$$old_version\"/.$$new_version\"/g"; echo w; echo q) | ed $(srcdir)/version.h >/dev/null
  
  depend:
