@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2002/08/26 13:45:37 mjl Exp $
+# $NetBSD: Makefile,v 1.20 2002/09/03 14:33:47 wiz Exp $
 
 DISTNAME=		sylpheed-0.8.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail news x11
 MASTER_SITES=		http://sylpheed.good-day.net/sylpheed/
 EXTRACT_SUFX=		.tar.bz2
@@ -32,8 +32,6 @@ BUILD_DEFS+=		USE_INET6
 .if defined(USE_INET6) && ${USE_INET6} == YES
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
-
-SUPPORT_FILES=		${FILESDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
 
 .include "../../graphics/compface/buildlink.mk"
 .include "../../graphics/gdk-pixbuf/buildlink.mk"
