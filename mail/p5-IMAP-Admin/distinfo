@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 13:10:00 agc Exp $
+$NetBSD: distinfo,v 1.3 2001/06/05 09:43:10 wiz Exp $
 
-SHA1 (IMAP-Admin-1.3.7.tar.gz) = 7f79c16510387d93524d105308b62ec67d928986
-Size (IMAP-Admin-1.3.7.tar.gz) = 8399 bytes
+SHA1 (IMAP-Admin-1.4.3.tar.gz) = ad1aa6dfa2ffe3d40f2a90bf94bbbc0b85c9c885
+Size (IMAP-Admin-1.4.3.tar.gz) = 12188 bytes
