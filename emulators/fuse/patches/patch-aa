@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2004/02/13 13:40:15 adam Exp $
+
+--- osssound.c.orig	2004-02-13 13:59:02.000000000 +0000
++++ osssound.c
+@@ -21,7 +21,7 @@
+ 
+ #include <config.h>
+ 
+-#if !defined(UI_SDL) && defined(HAVE_SYS_SOUNDCARD_H)	/* OSS sound */
++#if !defined(UI_SDL) && defined(HAVE_SYS_SOUNDCARD_H) && !defined(HAVE_SYS_AUDIOIO_H)	/* OSS sound */
+ 
+ #include <stdio.h>
+ #include <string.h>
