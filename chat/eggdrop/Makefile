@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/09/25 18:32:10 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/01/16 08:23:45 salo Exp $
 #
 
-DISTNAME=	eggdrop1.6.10
-PKGNAME=	eggdrop-1.6.10
-PKGREVISION=	1
+DISTNAME=	eggdrop1.6.13
+PKGNAME=	${DISTNAME:S/eggdrop/eggdrop-/}
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.eggheads.org/pub/eggdrop/source/1.6/
 
@@ -11,14 +10,14 @@ MAINTAINER=     packages@netbsd.org
 HOMEPAGE=	http://www.eggheads.org/
 COMMENT=	IRC robot with TCL scripting and multi-channel ability
 
-DEPENDS+=	tcl>=8.3.2:../../lang/tcl
-
+USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	TCLLIB="${PREFIX}/lib" TCLINC="${PREFIX}/include"
+MAKE_ENV+=	_OPSYS_RPATH_NAME=${_OPSYS_RPATH_NAME}
 
 post-patch:
 	cd ${WRKSRC} && ${SED} -e 's,modules/,${PREFIX}/lib/eggdrop/,' \
-		< eggdrop.complete.conf > eggdrop.conf.dist.new
+		< eggdrop.conf > eggdrop.conf.dist.new
 
 post-configure:
 	cd ${WRKSRC} && ${MAKE} config
@@ -46,6 +45,7 @@ do-install-program:
 		klined.tcl notes2.tcl ques5.tcl sentinel.tcl userinfo.tcl weed \
 		${PREFIX}/share/eggdrop/scripts/
 
+.include "../../lang/tcl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
 
 .if defined(NOPIC)
