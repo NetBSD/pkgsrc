@@ -1,0 +1,8 @@
+bin/lgrind
+share/texmf/tex/latex/lgrind/lgrindef
+share/texmf/doc/latex/lgrind/lgrind.dvi
+share/texmf/tex/latex/lgrind/lgrind.sty
+man/man1/lgrind.1
+man/man5/lgrindef.5
+@dirrm share/texmf/tex/latex/lgrind
+@dirrm share/texmf/doc/latex/lgrind

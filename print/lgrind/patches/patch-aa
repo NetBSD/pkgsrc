@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/03/10 17:03:13 jwise Exp $
+--- Makefile.orig	Tue Aug  4 05:02:14 1998
++++ Makefile	Mon Mar  8 16:42:46 1999
+@@ -3,13 +3,13 @@
+ # $Id: patch-aa,v 1.1.1.1 1999/03/10 17:03:13 jwise Exp $
+ 
+ # You will almost certainly want to change these
+-BASEDIR=/usr/TeX
+-DESTDIR=${BASEDIR}/bin
++BASEDIR=${PREFIX}/share
++DESTDIR=${PREFIX}/bin
+ #DEFSFILE=/home/mike/LGrind/lgrindef
+ DEFSFILE=${BASEDIR}/texmf/tex/latex/lgrind/lgrindef
+ TEXINPUTS=${BASEDIR}/texmf/tex/latex/lgrind
+ DOC=${BASEDIR}/texmf/doc/latex/lgrind
+-MAN=${BASEDIR}/man
++MAN=${PREFIX}/man
+ 
+ CC=gcc
+ INSTALL=install
