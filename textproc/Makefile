@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.113 2001/07/24 13:54:05 wiz Exp $
+# $NetBSD: Makefile,v 1.114 2001/07/24 14:31:52 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
 
 SUBDIR+=	antiword
+SUBDIR+=	bibclean
 SUBDIR+=	biblook
 SUBDIR+=	bibparse
 SUBDIR+=	catdoc
