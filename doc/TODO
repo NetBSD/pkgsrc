@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2874 2005/01/10 16:28:26 dillo Exp $
+$NetBSD: TODO,v 1.2875 2005/01/11 04:35:19 kim Exp $
 
 Suggested new packages
 ======================
@@ -634,7 +634,6 @@ Suggested package updates
 	o lavaps-2.7
 	o lcab-1.0b11
 	o lcc-4.2
-	o leafnode-1.10.7
 	o leafpad-0.7.9
 	o libast-0.6
 	o libcdio-0.71
