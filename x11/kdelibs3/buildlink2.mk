@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.19 2003/08/04 21:48:02 drochner Exp $
+# $NetBSD: buildlink2.mk,v 1.20 2003/08/05 13:46:58 drochner Exp $
 
 .if !defined(KDELIBS3_BUILDLINK2_MK)
 KDELIBS3_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		kdelibs3
 BUILDLINK_PKGBASE.kdelibs3?=	kdelibs
-BUILDLINK_DEPENDS.kdelibs3?=	kdelibs>=3.1.3
+BUILDLINK_DEPENDS.kdelibs3?=	kdelibs>=3.1.3nb1
 BUILDLINK_PKGSRCDIR.kdelibs3?=	../../x11/kdelibs3
 
 .include "../../mk/bsd.prefs.mk"
