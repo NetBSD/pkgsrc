@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2004/12/31 13:31:35 taca Exp $
+# $NetBSD: Makefile,v 1.123 2005/01/01 15:57:41 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE7
 PKGNAME=	squid-2.5.7
@@ -36,7 +36,7 @@ DATADIR=	${VARBASE}/squid
 
 # Update this time stamp pattern if any of official distfiles has changed.
 #
-DIST_STAMP=	2004101300
+DIST_STAMP=	2005010100
 
 DOCFILES=	ChangeLog RELEASENOTES.html doc/debug-sections.txt
 
