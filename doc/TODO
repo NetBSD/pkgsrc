@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2226 2004/10/18 18:51:39 seb Exp $
+$NetBSD: TODO,v 1.2227 2004/10/18 19:16:23 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -103,10 +103,6 @@ Suggested new packages
 	moz-plugger
 	http://mozplugger.mozdev.org/
 	source version of www/moz-bin-plugger
-
-	prngd [wip/prngd, PR 23998]
-	http://www.aet.tu-cottbus.de/personen/jaenicke/postfix_tls/prngd.html
-	Pseudo Random Number Generator Daemon
 
 	moji
 	http://moji.mozdev.org/
