@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 2000/11/06 18:11:40 wennmach Exp $
+$NetBSD: md5,v 1.2 2001/03/15 23:48:23 jtb Exp $
 
-MD5 (ftnchek.tgz) = efbd686e1a35d0fb3a4dd237f05f23ce
+SHA1 (ftnchek-3.0.3.tar.gz) = e85f28a3cff4b44ff14da06edde221a1a4b421c8
