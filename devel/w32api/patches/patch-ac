@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/01/30 03:20:51 minoura Exp $
+
+--- include/shellapi.h.orig	Thu Oct 19 04:35:30 2000
++++ include/shellapi.h
+@@ -183,7 +183,7 @@
+ 	WCHAR szTypeName[80];
+ } SHFILEINFOW;
+ 
+-LPWSTR *CommandLineToArgvW(LPCWSTR,int*);
++LPWSTR * WINAPI CommandLineToArgvW(LPCWSTR,int*);
+ void WINAPI DragAcceptFiles(HWND,BOOL);
+ void WINAPI DragFinish(HDROP);
+ UINT WINAPI DragQueryFileA(HDROP,UINT,LPSTR,UINT);

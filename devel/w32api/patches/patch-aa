@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/01/30 03:20:51 minoura Exp $
+--- lib/dinput.c.orig	Mon May 15 01:20:35 2000
++++ lib/dinput.c	Mon Nov 20 05:55:28 2000
+@@ -23,6 +23,7 @@
+ 
+ #if defined(__LCC__) || defined(__GNUC__)
+ #include <windows.h>
++#undef _BSD_WCHAR_T_
+ #include <objbase.h>
+ #else
+ #include <basetyps.h>
