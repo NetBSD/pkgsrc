@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1390 2003/02/15 23:07:31 kei Exp $
+$NetBSD: CHANGES,v 1.1391 2003/02/15 23:56:06 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -691,3 +691,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added mini_sendmail-1.3.2 [is 2003-02-15]
 	Upgraded mini_sendmail to 1.3.2nb1 [is 2003-02-15]
 	Added kochi-cidfonts-0.0.0.20030101 [kei 2003-02-15]
+	Updated tcpreplay to 1.3.2 [salo 2003-02-15]
