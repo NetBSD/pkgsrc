@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.6 2004/08/20 14:22:16 tv Exp $
+$NetBSD: patch-ad,v 1.7 2004/10/08 20:03:43 tv Exp $
 
 --- flist.c.orig	Fri Aug 20 10:16:28 2004
 +++ flist.c
@@ -6,7 +6,7 @@ $NetBSD: patch-ad,v 1.6 2004/08/20 14:22:16 tv Exp $
  
  #include "rsync.h"
  
-+#ifdef __INTERIX
++#if !defined(makedev) && defined(mkdev)
 +#define makedev mkdev
 +#endif
 +
