@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/08/20 06:21:29 garbled Exp $
+# $NetBSD: Makefile,v 1.8 1999/09/06 19:30:20 bad Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -11,32 +11,17 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.amanda.org/
 
 .include "../../mk/bsd.prefs.mk"
+.include "../../sysutils/amanda-common/Makefile.common"
 
 .if ${OPSYS} == "NetBSD"
 DEPENDS+=		addnerd-1.6:../../sysutils/addnerd
 ADDUSER_PROG=		${PREFIX}/sbin/addnerd
-AMANDA_GROUP=		operator
 .elif ${OPSYS} == "SunOS"
 ADDUSER_PROG=		useradd
 MAKE_ENV+=		CPPFLAGS=-D_LARGEFILE64_SOURCE
-AMANDA_GROUP=		sysadmin
 .endif
 
-AMANDA_USER?=		backup
-AMANDA_VAR?=		/var/amanda
-
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-user=${AMANDA_USER} \
-			--with-group=${AMANDA_GROUP} \
-			--with-owner=root \
-			--with-mmap --with-amandahosts \
-			--with-includes=${PREFIX}/include \
-			--with-libraries=${PREFIX}/lib \
-			--localstatedir=${AMANDA_VAR} \
-			--with-gnutar-listdir=${AMANDA_VAR}/gnutar-lists \
-			--with-dump-honor-nodump \
-			--without-server --without-restore --without-client
+CONFIGURE_ARGS+=	--without-server --without-restore --without-client
 
 CPPFLAGS=		
 
