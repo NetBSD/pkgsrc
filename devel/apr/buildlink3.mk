@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2004/11/22 23:43:25 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2004/11/26 19:31:33 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 APR_BUILDLINK3_MK:=	${APR_BUILDLINK3_MK}+
@@ -33,5 +33,6 @@ PKG_OPTIONS.apr?=	${PKG_DEFAULT_OPTIONS}
 .endif
 
 .include "../../textproc/expat/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
