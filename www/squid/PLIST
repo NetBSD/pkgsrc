@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:18:53 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/17 23:47:24 kim Exp $
 etc/rc.d/squid
-etc/squid/mime.conf.default
-etc/squid/squid.conf.default
-@unexec rmdir %D/etc/squid 2>/dev/null || true
+share/squid/mime.conf.default
+share/squid/squid.conf.default
+@unexec rmdir %D/share/squid 2>/dev/null || true
 libexec/cachemgr.cgi
 sbin/RunAccel
 sbin/RunCache

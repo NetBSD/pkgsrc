@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2001/11/06 07:22:13 tron Exp $
+# $NetBSD: Makefile,v 1.55 2001/11/17 23:47:24 kim Exp $
 
 DISTNAME=	squid-2.4.STABLE2-src
 PKGNAME=	squid-2.4.2
@@ -14,12 +14,13 @@ COMMENT=	Post-Harvest_cached WWW proxy cache and accelerator
 BUILD_DEPENDS+=	perl>=${PERL5_REQD}:../../lang/perl5
 
 GNU_CONFIGURE=	# defined
-CONFIGURE_ARGS+= --sysconfdir=${PREFIX}/etc/squid \
+SQUID_SYSCONFDIR?= ${PREFIX}/etc/squid
+CONFIGURE_ARGS+= --sysconfdir=${SQUID_SYSCONFDIR} \
 		--localstatedir=/var/squid \
 		${SQUID_CONFIGURE_ARGS}
 CONFIGURE_ENV+=	PERL=${PERL5}
 
-BUILD_DEFS+=	SQUID_CONFIGURE_ARGS
+BUILD_DEFS+=	SQUID_CONFIGURE_ARGS SQUID_SYSCONFDIR
 MAKEFILE=	makefile
 MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}" PKG_PREFIX="${PREFIX}"
 PLIST_SRC=	${WRKDIR}/PLIST
@@ -53,6 +54,10 @@ pre-install:
 
 post-install:
 	cd ${WRKSRC}/src; ${TEST} ! -x pinger || ${MAKE} install-pinger
+	@for i in mime squid; do				\
+	  ${MV} ${SQUID_SYSCONFDIR}/$$i.conf.default 		\
+	  ${PREFIX}/share/squid;				\
+	done
 	${INSTALL_SCRIPT} ${WRKDIR}/squid.sh ${PREFIX}/etc/rc.d/squid
 	@${SETENV} ${MAKE_ENV} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
