@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2142 2003/05/04 20:41:30 salo Exp $
+$NetBSD: CHANGES,v 1.2143 2003/05/04 21:44:54 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1849,3 +1849,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated acroread5 to 5.06nb1 [jmmv 2003-05-04]
 	Updated hugs98 to 200112nb1 [jtb 2003-05-04]
 	Added elf-0.5.3 [salo 2003-05-04]
+	Updated elib to 1.0nb1 [seb 2003-05-04]
