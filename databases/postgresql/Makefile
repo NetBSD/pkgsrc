@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 1999/01/17 00:59:37 frueauf Exp $
+# $NetBSD: Makefile,v 1.27 1999/02/06 20:06:32 hwr Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 
 DISTNAME=	postgresql-6.4.2
@@ -73,8 +73,7 @@ pre-install:
 .if defined(PACKAGE_BUILDING)
 	${RM} -rf ${PREFIX}/${PGUSER}
 .endif
-	-@${MKDIR} ${PREFIX}/${PGUSER}
-	@${SETENV} ${MAKE_ENV} addnerd -h ${PREFIX} -g ${PGGROUP} ${PGUSER}
+	@${SETENV} ${MAKE_ENV} ${PREFIX}/sbin/addnerd -h ${PREFIX} -g ${PGGROUP} ${PGUSER}
 	@${SED} -e 's|@PGUSER@|${PGUSER}|g' ${PKGDIR}/PLIST > ${PLIST_SRC}
 
 post-install:
