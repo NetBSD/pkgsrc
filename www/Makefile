@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2000/05/14 11:40:02 wulf Exp $
+# $NetBSD: Makefile,v 1.81 2000/05/30 12:47:23 rh Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -36,6 +36,7 @@
 #    SUBDIR += jsdk20
 # disabled because it depends on jsdk20
 #    SUBDIR += jssi
+    SUBDIR += kannel
     SUBDIR += libghttp
     SUBDIR += libwww
     SUBDIR += links
