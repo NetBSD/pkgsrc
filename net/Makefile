@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.455 2004/03/29 16:30:52 cube Exp $
+# $NetBSD: Makefile,v 1.456 2004/03/29 18:41:08 tv Exp $
 #
 
 COMMENT=	Networking tools
@@ -65,6 +65,7 @@ SUBDIR+=	dynipclient
 SUBDIR+=	echoping
 SUBDIR+=	ed2k-gtk-gui
 SUBDIR+=	edonkey2k
+SUBDIR+=	entropy
 SUBDIR+=	etherape
 SUBDIR+=	ethereal
 SUBDIR+=	ettercap
