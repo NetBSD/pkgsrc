@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3316 2005/03/28 10:18:40 wiz Exp $
+$NetBSD: TODO,v 1.3317 2005/03/28 10:42:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -633,7 +633,7 @@ Suggested package updates
 	o mantis-0.19.2
 	o mapserver-4.2.5
 	o maradns-1.0.26
-	o mathomatic-12.1e
+	o mathomatic-12.2b
 	o mdd-20050318
 	o memcached-1.2
 	o memtest86-3.2
@@ -997,6 +997,7 @@ Suggested package updates
 	o seahorse-0.7.6
 	o semantic-1.4.4
 	o sendfile-20010424
+	o sendmail-8.13.4
 	o ser-0.8.14
 	o shared-mime-info-0.16
 	o sharity-light-1.3
