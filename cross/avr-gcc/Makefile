@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/16 20:14:20 wennmach Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 19:19:34 wennmach Exp $
 # FreeBSD Id: ports/devel/avr-gcc/Makefile,v 1.24 2003/05/11 19:32:20 joerg Exp
 
 DISTNAME=		gcc-3.3.2003.05.11
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 DISTFILES=		gcc-core+g++-3.3.2003.05.11${EXTRACT_SUFX} \
 			${MAN_AUX}
 
-MAINTAINER=		karl@mdstud.chalmers.se
+MAINTAINER=		karlj@mdstud.chalmers.se
 COMMENT=		FSF gcc-3.3 for Atmel AVR 8-bit RISC microcontrollers
 
 BUILD_DEPENDS+=		avr-binutils:../../cross/avr-binutils
