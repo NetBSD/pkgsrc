@@ -1,0 +1,4 @@
+mod_dtcl is a free/open source implementation of server side
+Tcl, under Apache.  It allows you to tightly integrate html
+with Tcl, a widely used scripting language with many years of
+development invested in it. 
