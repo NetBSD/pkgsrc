@@ -1,22 +1,28 @@
-$NetBSD: patch-ah,v 1.10 2000/05/25 15:25:44 drochner Exp $
+$NetBSD: patch-ah,v 1.11 2000/07/25 14:42:05 jlam Exp $
 
---- doc/www.lesstif.org/Makefile.in.orig	Mon May 15 02:47:15 2000
-+++ doc/www.lesstif.org/Makefile.in	Thu May 18 20:03:22 2000
-@@ -128,7 +128,7 @@
+--- doc/www.lesstif.org/Makefile.am.orig	Wed May  3 14:35:13 2000
++++ doc/www.lesstif.org/Makefile.am	Tue Jul 25 08:18:13 2000
+@@ -11,7 +11,6 @@
  # Lets put the informational stuff in a sub directory to avoid 
  # polluting /usr/local for default installs.
  #
--docdir = $(exec_prefix)/LessTif/doc
-+docdir = $(exec_prefix)/share/doc/lesstif
- doc_DATA = COPYING.LIB.html FAQ.html INSTALL.html apps.html \
+-docdir=	$(exec_prefix)/LessTif/doc
+ doc_DATA=	COPYING.LIB.html FAQ.html INSTALL.html apps.html \
  		bugs.html cdrom.html core.html current.html \
  		cvs.html download.html index.html links.html lists.html \
-@@ -138,7 +138,7 @@
+@@ -20,7 +19,7 @@
+ 		versions.html web_button.html known.html help.html \
  		Advocacy.html Xbae.html Xlt.html
  
+-rootdir=	$(exec_prefix)/LessTif
++rootdir=	$(docdir)
+ root_DATA=	Install
  
--rootdir = $(exec_prefix)/LessTif
-+rootdir = $(docdir)
- root_DATA = Install
+ all-local:      FAQ
+@@ -43,5 +42,5 @@
  
- root2dir = $(exec_prefix)/LessTif
+ endif
+ 
+-root2dir=	$(exec_prefix)/LessTif
++root2dir=	$(docdir)
+ root2_DATA=	FAQ

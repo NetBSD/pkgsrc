@@ -1,21 +1,32 @@
-$NetBSD: patch-an,v 1.7 2000/05/25 15:25:44 drochner Exp $
+$NetBSD: patch-an,v 1.8 2000/07/25 14:42:08 jlam Exp $
 
---- lib/Mrm-2.0/Makefile.in.orig	Mon May 15 02:47:10 2000
-+++ lib/Mrm-2.0/Makefile.in	Thu May 18 20:32:06 2000
-@@ -160,7 +160,7 @@
- @Version_2_0_TRUE@		-DLESSTIFHOME=\"@prefix@\"
- 
- @Version_2_0_TRUE@libdir = \
--@Version_2_0_TRUE@$(prefix)/LessTif/Motif2.0/lib
-+@Version_2_0_TRUE@$(prefix)/lib
- 
- @Version_2_0_TRUE@lib_LTLIBRARIES = \
- @Version_2_0_TRUE@libMrm.la
-@@ -338,7 +338,6 @@
- 
- install-data-am:
- 	@$(NORMAL_INSTALL)
--	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
- install-data: install-data-am
- 
- install-am: all-am
+--- lib/Makefile.am.orig	Tue May  2 17:05:15 2000
++++ lib/Makefile.am	Tue Jul 25 08:18:13 2000
+@@ -2,6 +2,22 @@
+ # $Header: /cvsroot/pkgsrc/x11/lesstif/patches/patch-an,v 1.8 2000/07/25 14:42:08 jlam Exp $
+ #
+ MAINTAINERCLEANFILES=Makefile.in
++
++if Version_1_2
++SUBDIRS= \
++		Xm Mrm Uil \
++		Xm-2.0 Mrm-2.0 Uil-2.0 \
++		Xm-2.1 Mrm-2.1 \
++		Xm-CDE Mrm-CDE \
++		@BuildXltDir@ @BuildXbaeDir@
++
++DIST_SUBDIRS= \
++		Xm Mrm Uil \
++		Xm-2.0 Mrm-2.0 Uil-2.0 \
++		Xm-2.1 Mrm-2.1 \
++		Xm-CDE Mrm-CDE \
++		Xlt Xbae
++else
+ SUBDIRS=	config \
+ 		Xm Mrm Uil \
+ 		Xm-2.0 Mrm-2.0 Uil-2.0 \
+@@ -15,3 +31,4 @@
+ 		Xm-2.1 Mrm-2.1 \
+ 		Xm-CDE Mrm-CDE \
+ 		Xlt Xbae
++endif
