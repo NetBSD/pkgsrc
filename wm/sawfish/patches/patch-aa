@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
+
+--- configure.orig	Thu Oct 19 17:48:32 2000
++++ configure
+@@ -657,7 +657,7 @@
+ 
+ sawfishdir='${datadir}/sawfish'
+ lispdir='${sawfishdir}/${version}/lisp'
+-localedir='${sawfishdir}/${version}/locale'
++localedir='${prefix}/${LOCALEBASE}/locale'
+ sawfishexecdir='${libexecdir}/sawfish/${version}/${host_type}'
+ 
+ # Extract the first word of "gcc", so it can be a program name with args.

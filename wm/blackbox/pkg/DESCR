@@ -1,0 +1,5 @@
+Blackbox is yet another addition to the list of window managers
+For X11R6. Blackbox is built with C++, sharing no common code with
+any other window manager. It is designed to be small and fast, with 
+a built in graphics class, near complete ICCCM compliance, and 
+support for multple desktop environments.

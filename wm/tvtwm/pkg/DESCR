@@ -1,0 +1,24 @@
+  tvtwm is a superset of the X11R5 release of twm (Tom's Window Manager),
+written by Tom LaStrange.  Much of the early functionality, which is
+described in more detail in README.old, was added by Tom LaStrange himself.
+Since then, tvtwm has fallen under my control, and I've added some things
+myself.
+
+  Why doesn't tvtwm have version numbers, and only has patchlevels?  I
+don't know.  History, I suppose.  But, for information's sake, that is
+effectually the version number.  In this case, pl11.
+
+  The major benefit of tvtwm over twm is the "Virtual Desktop".  This
+allows you do define a substitute root window that is larger than your
+display area.  This new virtual root window is the parent for all of your
+X clients.  tvtwm provides a "Panner" which will let you see a scaled down
+representation of the whole virtual desktop.  Using this panner, and keys
+bound to functions added to tvtwm, you can move around this desktop to
+have your physical display showing only part of the whole desktop.  Thus,
+you can have sections of your desktop assigned to particular tasks, or
+just use it to keep from having 20 million layers of windows.  :-)
+
+  Many other things are discussed in README.old.  Please look there for
+further information.  The more recent changes have been documented on an
+item-by-item basis, and these changes can be found, not surprisingly, in
+the CHANGES file.

@@ -1,0 +1,85 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
+
+--- Imakefile.orig	Thu Feb  2 19:25:44 1995
++++ Imakefile
+@@ -51,12 +51,12 @@
+ XCOMM                                 <cross@eng.umd.edu>
+ XCOMM
+ XCOMM   Also note, if you install your libXpm.a in a strange place, you'll
+-XCOMM have to adjust $(XPMLIB) below.  You may also have to change the
++XCOMM have to adjust $(XPM_LIB) below.  You may also have to change the
+ XCOMM include path of the compile, so that the code can include from
+ XCOMM <X11/xpm.h>.
+ XCOMM
+ 
+-         XPMLIB = -lXpm
++        XPM_LIB = -lXpm
+         XPM_DEF = -DXPM
+     XLOADIM_DEF = -DXLOADIMAGE=\"$(BINDIR)/xloadimage\"
+ 
+@@ -71,7 +71,7 @@
+ 
+ XCOMM   Various defines to pass into twm.c
+ 
+-#if DefaultToM4
++#ifdef DefaultToM4
+          M4_DEF = -DM4_DEFAULT
+ #endif
+ #ifdef No_waitpid
+@@ -79,7 +79,7 @@
+ #endif
+        TWM_DEFS = $(XLOADIM_DEF) $(M4_DEF) $(WAITPID_DEF)
+ 
+-LOCAL_LIBRARIES = $(XMULIB) $(EXTENSIONLIB) $(XPMLIB) $(XLIB)
++LOCAL_LIBRARIES = $(XMULIB) $(EXTENSIONLIB) $(XPM_LIB) $(XLIB)
+        LINTLIBS = $(LINTXMU) $(LINTEXTENSIONLIB) $(LINTXLIB)
+         DEFINES = -DSHAPE $(RELEASE_DEFINES) $(LOCAL_DEFINES) $(SIGNAL_DEFINES)
+ 
+@@ -93,14 +93,15 @@
+                   iconmgr.o cursor.o icons.o vdt.o move.o LocPixmap.o \
+                   regexp.o
+ 
+-AllTarget(tvtwm ssetroot)
++AllTarget(tvtwm ssetroot system.tvtwmrc)
+ 
+-SpecialObjectRule(parse.o,NullParameter,'-DSYSTEM_INIT_FILE="'$(TWMDIR)'/system.twmrc"')
++SpecialObjectRule(parse.o,NullParameter,'-DSYSTEM_INIT_FILE="'$(TWMDIR)'/system.tvtwmrc"')
+ SpecialObjectRule(vdt.o,NullParameter,$(XLOADIM_DEF))
+-SpecialObjectRule(LocPixmap.o,NullParameter,'-DBITMAPDIR="$(INCDIR)/bitmaps"')
++SpecialObjectRule(LocPixmap.o,NullParameter,'-DBITMAPDIR="$(INCDIR)/X11/bitmaps"')
+ SpecialObjectRule(twm.o,NullParameter,$(TWM_DEFS))
+ 
+-#if defined(UltrixArchitecture) || defined(AlphaArchitecture)
++/* The following rule is only applicable to a specific compiler on Ultrix. */
++#if defined(UltrixArchitecture)
+ SpecialObjectRule(menus.o,NullParameter,-Olimit 700)
+ #endif
+ 
+@@ -120,11 +121,12 @@
+ XCOMM	ln $(BINDIR)/tvtwm $(BINDIR)/twm
+ 
+ #if (ProjectX < 5)
+-InstallNonExec(system.twmrc,$(TWMDIR))
++InstallNonExec(system.tvtwmrc,$(TWMDIR))
+ /* InstallProgram(ssetroot,$(BINDIR)/xsetroot) */
+ #else
+-InstallNonExecFile(system.twmrc,$(TWMDIR))
+-/* InstallNamedProg(ssetroot,xsetroot,$(BINDIR)) */
++InstallNonExecFile(system.tvtwmrc,$(TWMDIR))
++/* Install ssetroot as ssetroot so we don't overwrite the real xsetroot */
++InstallNamedProg(ssetroot,ssetroot,$(BINDIR))
+ #endif
+ 
+ gram.h gram.c: gram.y
+@@ -135,7 +137,10 @@
+ clean::
+ 	$(RM) y.tab.h y.tab.c lex.yy.c gram.h gram.c lex.c deftwmrc.c 
+ 
+-deftwmrc.c:  system.twmrc
++system.tvtwmrc: system.twmrc
++	cp system.twmrc system.tvtwmrc
++
++deftwmrc.c:  system.tvtwmrc
+ 	$(RM) $@
+ 	@echo '/* ' >>$@
+ 	@echo ' * This file is generated automatically from the default' >>$@

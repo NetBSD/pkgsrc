@@ -1,0 +1,48 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
+bin/blackbox
+bin/bsetbg
+bin/bsetroot
+man/man1/blackbox.1
+man/man1/bsetroot.1
+share/Blackbox/menu
+share/Blackbox/nls/C/blackbox.cat
+share/Blackbox/nls/POSIX
+share/Blackbox/nls/US_ASCII
+share/Blackbox/nls/da_DK/blackbox.cat
+share/Blackbox/nls/en
+share/Blackbox/nls/en_US
+share/Blackbox/nls/es
+share/Blackbox/nls/es_ES/blackbox.cat
+share/Blackbox/nls/et_EE/blackbox.cat
+share/Blackbox/nls/fr
+share/Blackbox/nls/fr_FR/blackbox.cat
+share/Blackbox/nls/pt_BR/blackbox.cat
+share/Blackbox/nls/ru_RU/blackbox.cat
+share/Blackbox/nls/sv_SE/blackbox.cat
+share/Blackbox/nls/tr_TR/blackbox.cat
+share/Blackbox/styles/Artwiz
+share/Blackbox/styles/Cthulhain
+share/Blackbox/styles/Flux
+share/Blackbox/styles/Minimal
+share/Blackbox/styles/Nyz
+share/Blackbox/styles/Operation
+share/Blackbox/styles/Outcomes
+share/Blackbox/styles/Rampage
+share/Blackbox/styles/Rancor
+share/Blackbox/styles/Results
+share/Blackbox/styles/Shade
+share/Blackbox/styles/Spiff
+share/Blackbox/styles/TDF
+share/Blackbox/styles/Twice
+@dirrm share/Blackbox/styles
+@dirrm share/Blackbox/nls/tr_TR
+@dirrm share/Blackbox/nls/sv_SE
+@dirrm share/Blackbox/nls/ru_RU
+@dirrm share/Blackbox/nls/pt_BR
+@dirrm share/Blackbox/nls/fr_FR
+@dirrm share/Blackbox/nls/et_EE
+@dirrm share/Blackbox/nls/es_ES
+@dirrm share/Blackbox/nls/da_DK
+@dirrm share/Blackbox/nls/C
+@dirrm share/Blackbox/nls
+@dirrm share/Blackbox

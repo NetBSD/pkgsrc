@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
+
+--- src/aapm.h.orig	Sun Dec  5 11:47:02 1999
++++ src/aapm.h	Mon Mar  6 22:20:48 2000
+@@ -3,6 +3,10 @@
+ #include "ytimer.h"
+ 
+ #ifdef CONFIG_APM
++#if defined(__NetBSD__)
++#define APMDEV "/dev/apm"
++#endif
++
+ class YApm: public YWindow, public YTimerListener {
+ public:
+     YApm(YWindow *aParent = 0);

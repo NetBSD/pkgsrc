@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
+
+--- Imakefile.orig	Wed Oct 20 10:33:03 1999
++++ Imakefile	Mon Feb 28 01:22:33 2000
+@@ -7,6 +7,6 @@
+ SRCS = lwm.c manage.c mouse.c client.c cursor.c error.c disp.c shape.c resource.c
+ OBJS = ${SRCS:.c=.o}
+ 
+-ComplexProgramTarget(lwm)
++ComplexProgramTargetNoMan(lwm)
+ 
+ ${OBJS}: ${HEADERS}

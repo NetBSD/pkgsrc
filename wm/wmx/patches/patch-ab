@@ -1,0 +1,40 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
+
+This patch was culled from the wmx mailing list,
+
+http://ml.42.org/wmx/msg00200.html
+
+
+--- Border.C.orig	Wed Jan 13 04:28:43 1999
++++ Border.C	Fri Sep  1 12:53:46 2000
+@@ -23,8 +23,6 @@
+ unsigned long Border::m_borderPixel;
+ Pixmap Border::m_backgroundPixmap = None;
+ 
+-static int borderCounter = 0;
+-
+ 
+ class BorderRectangle // must resemble XRectangle in storage
+ {
+@@ -70,7 +68,6 @@
+ {
+     m_parent = root();
+     if (m_tabFont == 0) initialiseStatics(c->windowManager());
+-    ++borderCounter;
+ 
+ //#if CONFIG_MAD_FEEDBACK != 0
+     m_feedback = 0;
+@@ -94,13 +91,6 @@
+     }
+ 
+     if (m_label) free(m_label);
+-
+-    if (--borderCounter == 0) {
+-	XFreeGC(display(), m_drawGC);
+-	if (m_backgroundPixmap != None) {
+-	    XFreePixmap(display(), m_backgroundPixmap);
+-	}
+-    }
+ }
+ 
+ 

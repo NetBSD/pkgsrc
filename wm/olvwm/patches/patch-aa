@@ -1,0 +1,53 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
+
+--- Imakefile.orig	Tue Jan 13 16:23:54 1998
++++ Imakefile
+@@ -48,7 +48,11 @@
+ /**/#MORECCFLAGS=-DOW_I18N_L3 -DSHAPE -DIDENT
+ 
+ /**/# For a generic Solaris 2.x system, I'd suggest
+-MORECCFLAGS=-DOW_I18N_L3 -DSHAPE -DSVR4 -DSYSV -DIDENT -x O4
++/**/#MORECCFLAGS=-DOW_I18N_L3 -DSHAPE -DSVR4 -DSYSV -DIDENT -x O4
++
++/**/# For NetBSD the following is fine
++MORECCFLAGS=-DOW_I18N_L3 -DSHAPE -DREGEXP -DXPM -DIDENT -DMAXPID=30000 \
++	-DPREFIX=\"${PREFIX}\"
+ 
+ /**/#
+ /**/# Set MORELDFLAGS to any link options you want.  Be sure to add -lxpm if you
+@@ -57,8 +61,10 @@
+ /**/#MORELDFLAGS=-L${OPENWINHOME}/lib
+ /**/#
+ /**/# For Solaris 2.x, I'd suggest
+-MORELDFLAGS=-L${OPENWINHOME}/lib -R ${OPENWINHOME}/lib -lintl
++/**/#MORELDFLAGS=-L${OPENWINHOME}/lib -R ${OPENWINHOME}/lib -lintl
+ 
++/**/# For NetBSD the following is fine
++MORELDFLAGS=-lcompat -lXpm
+ 
+ /**/# No more changes needed
+ 
+@@ -93,7 +99,7 @@
+ SRCS	= atom.c client.c cmdstream.c cursors.c debug.c defaults.c dsdm.c \
+        environ.c error.c evbind.c events.c fontset.c gettext.c gif.c group.c \
+        helpsend.c i18n.c images.c info.c kbdfuncs.c list.c mem.c menu.c \
+-       moveresize.c notice.c ol_button.413.c ol_button.svr4.c olvwmrc.c \
++       moveresize.c notice.c ol_button.413.c ol_button.svr4.c \
+        olwm.c pixmap.c properties.c reduce.c resources.c screen.c \
+        selection.c services.c slave.c slots.c st.c states.c usermenu.c \
+        usleep.c virtual.c win.c winbusy.c winbutton.c wincolor.c winframe.c \
+@@ -136,13 +142,6 @@
+ clean::
+ 	/bin/rm -f parse.c olvwmrc.c version.c
+ 
+-install.man:: $(MANPAGES)
+-	@if [ -d $(DESTDIR)$(MANDIR) ]; then set +x; \
+-	else (set -x; $(MKDIRHIER) $(DESTDIR)$(MANDIR)); fi
+-	@for i in $(MANPAGES) ;\
+-	do \
+-	echo "installing $$i"; \
+-	$(INSTALL) -c $(INSTMANFLAGS) $$i $(DESTDIR)$(MANDIR)/`basename $$i .man`.$(MANSUFFIX) ; \
+-	done
++InstallManPage(olvwmrc,$(FILEMANDIR))
+ 
+ #include <XView.prog>

@@ -1,0 +1,40 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
+
+--- wrlib/x86_specific.c.orig	Wed Feb 16 19:22:46 2000
++++ wrlib/x86_specific.c	Sat Apr  8 08:28:23 2000
+@@ -175,7 +175,11 @@
+ 	 "movl 16(%ebp), %eax		\n" //
+ 	 "movl %eax, -32(%ebp)		\n" // [-32] = eerr
+ 
++#ifdef __ELF__
+ 	 ".align 16			\n"
++#else
++	 ".align 4			\n"
++#endif
+ ".LoopXa:				\n"
+ 
+ 	 // calculate errors and pixel components
+@@ -382,7 +386,11 @@
+ 	 "movl 16(%ebp), %eax		\n" //
+ 	 "movl %eax, -32(%ebp)		\n" // [-32] = eerr
+ 
++#ifdef __ELF__
+ 	 ".align 16			\n"
++#else
++	 ".align 4			\n"
++#endif
+ 
+ 	 "movl %eax, -4(%ebp)		\n" // x = w1
+ ".LoopX_1c:				\n"
+@@ -502,7 +510,11 @@
+ 	 "movl $0, (%ecx)		\n" // init error of nerr[0] to 0
+ 
+ 	 
++#ifdef __ELF__
+ 	 ".align 16			\n"
++#else
++	 ".align 4			\n"
++#endif
+ ".LoopXb:				\n"
+ 	 
+ 
