@@ -1,5 +1,9 @@
---- mod_xslt.c.orig	Tue Sep 25 15:15:15 2001
-+++ mod_xslt.c	Tue Sep 25 15:15:42 2001
+$NetBSD: patch-ab,v 1.2 2001/10/23 17:21:57 jwise Exp $
+This patch incorporates a patch from the mod_xslt project page on sourceforge
+in order to have a valid base URI set during xslt processing, so that document
+inclusion will DTRT.
+--- mod_xslt.c.orig	Wed Aug 23 22:05:28 2000
++++ mod_xslt.c	Tue Oct 23 12:43:12 2001
 @@ -43,7 +43,7 @@
  #include "http_protocol.h"
  #include "ap_config.h"
@@ -9,3 +13,27 @@
  #include "http_core.h"
  #include "sablot.h"
  #include "http_log.h"
+@@ -195,6 +195,8 @@
+ 
+ int transform(request_rec *r, char *styleSheetStr, char *inputStr, char **resultStr) {
+   int se;
++  char *cwd = NULL;
++  char *baseURI = NULL;
+   char *argums[] =
+   {
+     "/_stylesheet", styleSheetStr,
+@@ -209,6 +211,14 @@
+     se = SablotCreateProcessor (&theproc);
+     if (cfg->debug)
+       se |= SablotRegHandler(theproc, HLR_MESSAGE, &sablotMH, (void*)r);
++
++    /* get current working directory */
++    cwd = ap_palloc(r->pool, MAXCHAR +1);
++    getcwd(cwd, MAXCHAR);
++
++    /* set base URI to cwd */
++    baseURI = ap_pstrcat(r->pool, "file://", cwd, "/", NULL);
++    se |= SablotSetBase(theproc, baseURI);
+     se |= SablotRunProcessor(theproc,"arg:/_stylesheet","arg:/_xmlinput","arg:/_output",NULL,argums);
+     se |= SablotGetResultArg(theproc,"arg:/_output", resultStr);
+     se |= SablotDestroyProcessor(theproc);
