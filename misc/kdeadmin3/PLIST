@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/11 13:22:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/04/01 12:27:09 markd Exp $
 bin/kcron
 bin/kpackage
 bin/kuser
-bin/kwuftpd
 bin/kxconfig
 bin/secpolicy
 lib/kde3/kfile_deb.la
@@ -45,11 +44,9 @@ share/doc/kde/HTML/en/kxconfig/common
 share/doc/kde/HTML/en/kxconfig/index.cache.bz2
 share/doc/kde/HTML/en/kxconfig/index.docbook
 share/kde/applnk/Settings/Peripherals/kxconfig.desktop
-share/kde/applnk/System/More/kwuftpd.desktop
 share/kde/applnk/System/kcron.desktop
 share/kde/applnk/System/kpackage.desktop
 share/kde/applnk/System/kuser.desktop
-share/kde/applnk/System/kwuftpd.desktop
 share/kde/apps/kpackage/kpackageui.rc
 share/kde/apps/kpackage/pics/bnew.png
 share/kde/apps/kpackage/pics/bsd.png

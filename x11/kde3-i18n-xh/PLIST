@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/12 11:17:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/01 12:27:25 markd Exp $
 share/doc/kde/HTML/xh/amor/common
 share/doc/kde/HTML/xh/amor/index.cache.bz2
 share/doc/kde/HTML/xh/amor/index.docbook
@@ -9,6 +9,9 @@ share/doc/kde/HTML/xh/kate-plugins/htmltools.docbook
 share/doc/kde/HTML/xh/kate-plugins/openheader.docbook
 share/doc/kde/HTML/xh/kate-plugins/projectmanager.docbook
 share/doc/kde/HTML/xh/kate-plugins/textfilter.docbook
+share/doc/kde/HTML/xh/kdeprint/extensions.docbook
+share/doc/kde/HTML/xh/kdeprint/lpr-bsd.docbook
+share/doc/kde/HTML/xh/kdeprint/lprng.docbook
 share/doc/kde/HTML/xh/kdeprint/rlpr.docbook
 share/doc/kde/HTML/xh/khelpcenter/common
 share/doc/kde/HTML/xh/khelpcenter/contact.docbook
