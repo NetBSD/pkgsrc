@@ -6,9 +6,9 @@ set.  The package is designed to make it easy to quickly get graphical
 output; only a handful of function calls is typically required.  For
 more advanced use, virtually all aspects of plotting are configurable.
 
-PLplot includes device drivers for postscript, xfig, HPGL, impress,
-native meta-file, X-Window, Xterm, Tcl/Tk, Tektronix terminals,
-vt100/tek and vt320/tek emulators, and others.
+PLplot includes drivers for postscript, xfig, HPGL, impress, native
+meta-file, X-Window, Xterm, Tcl/Tk, Tektronix terminals, vt100/tek and
+vt320/tek emulators, and others.
 
 The PLplot package includes interfaces for the Fortran, C, C++, and
 Tcl languages. There is also a Tcl based interpreter (pltcl), allowing

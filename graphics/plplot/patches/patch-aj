@@ -1,14 +1,23 @@
-$NetBSD: patch-aj,v 1.1 2001/01/29 01:15:35 jtb Exp $
+$NetBSD: patch-aj,v 1.2 2001/02/14 11:19:17 jtb Exp $
 
---- cf/pkg_f77.in.orig	Mon Jan 29 00:15:31 2001
+--- cf/pkg_f77.in.orig	Wed Feb 14 07:51:15 2001
 +++ cf/pkg_f77.in
+@@ -15,7 +15,7 @@
+ 
+ FDEMOS_SOURCES = x01f.f x02f.f x03f.f x04f.f x05f.f x06f.f x07f.f \
+ 	x08f.f x09f.f x10f.f x11f.f x12f.f x13f.f x16f.f
+-	
++
+ x01f.f: x01f.fm4 fmacs.m4
+ 
+ x02f.f: x02f.fm4 fmacs.m4
 @@ -46,7 +46,7 @@
  
  # Require dependency on FDEMOS_SOURCES because these are generated files
  install_f77: $(FDEMOS_SOURCES)
 -	@-if test ! -d $(DEMOS_DIR)/f77; then mkdir -p $(DEMOS_DIR)/f77; fi; \
 +	-$(BSD_INSTALL_DATA_DIR) $(DEMOS_DIR)/f77; \
- 	  $(LN) $(DEMOS_DIR)/Makefile $(DEMOS_DIR)/f77; \
+ 	  $(LN) ../Makefile $(DEMOS_DIR)/f77; \
 -	  cd $(top_srcdir)/examples/f77; $(CP) *.f $(DEMOS_DIR)/f77
 +	  $(BSD_INSTALL_DATA) $(top_srcdir)/examples/f77/*.f $(DEMOS_DIR)/f77
  

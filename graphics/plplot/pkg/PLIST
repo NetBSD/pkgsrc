@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/01/29 01:24:41 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/02/14 11:19:17 jtb Exp $
 bin/plplot_linkage
 bin/plrender
 bin/plserver
@@ -19,15 +19,9 @@ include/plplot/pltcl.h
 include/plplot/pltk.h
 include/plplot/plxwd.h
 include/plplot/tclMatrix.h
-lib/plplot/cglobe.map
-lib/plplot/globe.map
-lib/plplot/libplcxxd.a
-lib/plplot/libplmatrix.a
-lib/plplot/libplplotd.a
-lib/plplot/plstnd5.fnt
-lib/plplot/plxtnd5.fnt
-lib/plplot/usa.map
-lib/plplot/usaglobe.map
+lib/libplcxxd.a
+lib/libplmatrix.a
+lib/libplplotd.a
 lib/tcl/plplot/FileSelector.tcl
 lib/tcl/plplot/PLWin.itk
 lib/tcl/plplot/PLXWin.itk
@@ -50,6 +44,12 @@ lib/tcl/plplot/plserver.tcl
 lib/tcl/plplot/pltools.tcl
 lib/tcl/plplot/plwidget.tcl
 lib/tcl/plplot/tclIndex
+libdata/plplot/cglobe.map
+libdata/plplot/globe.map
+libdata/plplot/plstnd5.fnt
+libdata/plplot/plxtnd5.fnt
+libdata/plplot/usa.map
+libdata/plplot/usaglobe.map
 share/doc/plplot/CHANGES
 share/doc/plplot/COPYING.LIB
 share/doc/plplot/Copyright
@@ -152,8 +152,8 @@ share/examples/plplot/tk/xtk01.c
 share/examples/plplot/tk/xtk02.c
 share/examples/plplot/tk/xtk04.c
 @dirrm include/plplot
-@dirrm lib/plplot
 @dirrm lib/tcl/plplot
+@dirrm libdata/plplot
 @dirrm share/doc/plplot
 @dirrm share/examples/plplot/c
 @dirrm share/examples/plplot/c++
