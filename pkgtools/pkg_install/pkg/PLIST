@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 1998/08/28 12:25:36 agc Exp $
+sbin/pkg_add
+sbin/pkg_create
+sbin/pkg_delete
+sbin/pkg_info
+man/cat1/pkg_add.0
+man/cat1/pkg_create.0
+man/cat1/pkg_delete.0
+man/cat1/pkg_info.0
+man/man1/pkg_add.1
+man/man1/pkg_create.1
+man/man1/pkg_delete.1
+man/man1/pkg_info.1
