@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/15 14:17:39 wulf Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/27 00:18:09 wulf Exp $
 #
 
 DISTNAME=	kpsql-1.0
@@ -11,6 +11,11 @@ HOMEPAGE=	http://www.mutinybaysoftware.com/kpsql.html
 
 DEPENDS+=	kdebase>=1.1:../../x11/kdebase
 DEPENDS+=	postgresql>=6.4:../../databases/postgresql
+
+#
+# PostgreSQL is currently not supported by all platforms
+#
+NOT_FOR_PLATFORM=       *-*-alpha *-*-mips
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
