@@ -1,0 +1,40 @@
+$NetBSD: patch-al,v 1.1 2003/10/02 12:31:30 mycroft Exp $
+
+--- src/libw32dll/wine/win32.c.orig	2003-10-02 12:25:52.000000000 +0000
++++ src/libw32dll/wine/win32.c	2003-10-02 12:21:50.000000000 +0000
+@@ -440,9 +442,8 @@
+ 
+     alccnt--;
+ 
+-    if (last_alloc)
+-	pthread_mutex_unlock(&memmut);
+-    else
++    pthread_mutex_unlock(&memmut);
++    if (!last_alloc)
+ 	pthread_mutex_destroy(&memmut);
+ 
+     //if (alccnt < 40000) printf("MY_RELEASE: %p\t%ld    (%d)\n", header, header->size, alccnt);
+@@ -1349,11 +1350,10 @@
+ #endif
+ 	printf("wine/win32: Win32 Warning: Accessed uninitialized Critical Section (%p)!\n", c);
+     }
+-    if(cs->locked)
++    if(cs->locked++)
+ 	if(cs->id==pthread_self())
+ 	    return;
+     pthread_mutex_lock(&(cs->mutex));
+-    cs->locked=1;
+     cs->id=pthread_self();
+     return;
+ }
+@@ -1371,8 +1371,8 @@
+ 	printf("Win32 Warning: Leaving uninitialized Critical Section %p!!\n", c);
+ 	return;
+     }
+-    cs->locked=0;
+-    pthread_mutex_unlock(&(cs->mutex));
++    if (!--cs->locked)
++        pthread_mutex_unlock(&(cs->mutex));
+     return;
+ }
+ static void WINAPI expDeleteCriticalSection(CRITICAL_SECTION *c)
