@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/11/04 10:32:25 adam Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/04 10:35:56 adam Exp $
 
 DISTNAME=	libsigc++-2.0.6
 PKGNAME=	libsigc++2-2.0.6
@@ -27,9 +27,9 @@ CONFIGURE_ARGS+=	--disable-threads
 .endif
 
 pre-install:
-	${MKDIR} -p ${PREFIX}/include/sigc++-2.0/sigc++/adaptors/lambda/macros
-	${MKDIR} -p ${PREFIX}/include/sigc++-2.0/sigc++/adaptors/macros
-	${MKDIR} -p ${PREFIX}/include/sigc++-2.0/sigc++/functors/macros
-	${MKDIR} -p ${PREFIX}/include/sigc++-2.0/sigc++/macros
+	${INSTALL_DATA_DIR} ${PREFIX}/include/sigc++-2.0/sigc++/adaptors/lambda/macros
+	${INSTALL_DATA_DIR} ${PREFIX}/include/sigc++-2.0/sigc++/adaptors/macros
+	${INSTALL_DATA_DIR} ${PREFIX}/include/sigc++-2.0/sigc++/functors/macros
+	${INSTALL_DATA_DIR} ${PREFIX}/include/sigc++-2.0/sigc++/macros
 
 .include "../../mk/bsd.pkg.mk"
