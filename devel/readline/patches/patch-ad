@@ -1,0 +1,39 @@
+--- terminal.c.orig	Tue Apr 21 08:53:08 1998
++++ terminal.c	Tue Apr 21 08:54:31 1998
+@@ -468,7 +468,7 @@
+ #if !defined (__GO32__)
+   if (term_backspace)
+     for (i = 0; i < count; i++)
+-      tputs (term_backspace, 1, _rl_output_character_function);
++      tputs (term_backspace, 1, (void *)_rl_output_character_function);
+   else
+ #endif /* !__GO32__ */
+     for (i = 0; i < count; i++)
+@@ -503,7 +503,7 @@
+ 	case VISIBLE_BELL:
+ 	  if (visible_bell)
+ 	    {
+-	      tputs (visible_bell, 1, _rl_output_character_function);
++	      tputs (visible_bell, 1, (void *)_rl_output_character_function);
+ 	      break;
+ 	    }
+ 	  /* FALLTHROUGH */
+@@ -531,7 +531,7 @@
+ _rl_enable_meta_key ()
+ {
+   if (term_has_meta && term_mm)
+-    tputs (term_mm, 1, _rl_output_character_function);
++    tputs (term_mm, 1, (void *)_rl_output_character_function);
+ }
+ 
+ void
+@@ -539,7 +539,7 @@
+      int on;
+ {
+   if (on && term_ks)
+-    tputs (term_ks, 1, _rl_output_character_function);
++    tputs (term_ks, 1, (void *)_rl_output_character_function);
+   else if (!on && term_ke)
+-    tputs (term_ke, 1, _rl_output_character_function);
++    tputs (term_ke, 1, (void *)_rl_output_character_function);
+ }
