@@ -1,21 +1,21 @@
-# $NetBSD: Makefile.common,v 1.9 2001/06/21 05:06:17 jlam Exp $
+# $NetBSD: Makefile.common,v 1.10 2001/08/15 19:50:31 jlam Exp $
 
 DISTNAME=		freeciv-${FC_VERS}
-FC_VERS=		1.11.4
+FC_VERS=		1.12.0
 CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.freeciv.org/pub/freeciv/stable/ \
-			http://www.freeciv.org/ftp/stable/
+			http://www.freeciv.org/ftp/stable/ \
+			ftp://ftp.freeciv.org/pub/freeciv/beta/ \
+			http://www.freeciv.org/ftp/beta/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.freeciv.org/
 
 BUILD_USES_MSGFMT=	# defined
+GNU_CONFIGURE=		# defined
 
 DISTINFO_FILE=		${.CURDIR}/../../games/freeciv-share/distinfo
 PATCHDIR=		${.CURDIR}/../../games/freeciv-share/patches
-
-GNU_CONFIGURE=		# defined
-#USE_LIBINTL=		# defined
 
 .include "../../devel/gettext-lib/buildlink.mk"
