@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/16 12:55:21 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/16 13:14:01 jlam Exp $
 
 DISTNAME=	ddclient-3.6.2
 CATEGORIES=	net
@@ -17,7 +17,6 @@ DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 DOCDIR=			${PREFIX}/share/doc/ddclient
 EGDIR=			${PREFIX}/share/examples/ddclient
 RCD_SCRIPTS=		ddclient
-FILES_SUBST+=		PERL5_PATH=${PERL5_PATH}
 CONF_FILES_PERMS=	${EGDIR}/sample-etc_ddclient.conf		\
 			${PKG_SYSCONFDIR}/ddclient.conf			\
 			${ROOT_USER} ${ROOT_GROUP} 0600
