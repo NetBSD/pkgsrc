@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2003/08/03 08:14:46 seb Exp $
+# $NetBSD: Makefile,v 1.46 2003/08/09 11:14:08 seb Exp $
 
 DISTNAME=	screen-3.9.15
 CATEGORIES=	misc
@@ -11,7 +11,6 @@ COMMENT=	Multi-screen window manager
 
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
-USE_NEW_TEXINFO=	YES
 INFO_FILES=		screen.info
 PLIST_SUBST=		DISTNAME=${DISTNAME}
 

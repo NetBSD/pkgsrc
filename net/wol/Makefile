@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/08/04 14:22:42 seb Exp $
+# $NetBSD: Makefile,v 1.6 2003/08/09 11:16:23 seb Exp $
 #
 
 DISTNAME=	wol-0.6.0
@@ -15,7 +15,6 @@ GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
 USE_GNU_GETTEXT=	YES
 USE_PKGLOCALEDIR=	YES
-USE_NEW_TEXINFO=	YES
 INFO_FILES=		wol.info
 
 .include "../../converters/libiconv/buildlink2.mk"

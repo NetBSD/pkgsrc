@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2003/08/08 18:57:04 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2003/08/09 11:21:55 seb Exp $
 
 DISTNAME=	gnupg-1.2.2
 PKGREVISION=	1
@@ -28,7 +28,6 @@ TEST_TARGET=		check
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	gpg.info gpgv.info
 
 .include "../../mk/bsd.prefs.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:44:36 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/09 10:59:09 seb Exp $
 # FreeBSD Id: Makefile,v 1.13 1999/01/27 07:41:14 fenner Exp $
 
 DISTNAME=	gawk-3.0.4
@@ -16,7 +16,6 @@ COMMENT=	GNU awk + multi-byte extension
 
 CONFLICTS=	gawk-[0-9]*
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	gawk.info
 
 GNU_CONFIGURE=	yes

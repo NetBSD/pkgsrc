@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2003/07/17 21:44:27 grant Exp $
+# $NetBSD: Makefile.common,v 1.5 2003/08/09 10:59:13 seb Exp $
 #
 
 GCC_VERSION=	3.3
@@ -35,7 +35,6 @@ FILES_SUBST+=		PKGNAME=${PKGNAME}
 MESSAGE_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
 
 .if defined(INFO_FILES)
-USE_NEW_TEXINFO=	yes
 INFO_DIR=	${GCC_SUBPREFIX}/info
 .endif
 

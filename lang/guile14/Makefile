@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/07/17 21:44:34 grant Exp $
+# $NetBSD: Makefile,v 1.12 2003/08/09 10:59:12 seb Exp $
 
 DISTNAME=		guile-1.4.1
 PKGNAME=		guile14-1.4.1
@@ -22,7 +22,6 @@ LIBTOOL_OVERRIDE+=	${WRKSRC}/libltdl/libtool
 
 USE_GNU_READLINE=	YES
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=		guile.info
 
 # Link the native thread so that Guile processes won't die when libpthread.so

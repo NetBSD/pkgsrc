@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/08/04 22:24:21 seb Exp $
+# $NetBSD: Makefile,v 1.18 2003/08/09 11:20:37 seb Exp $
 #
 
 DISTNAME=	lilypond-1.4.13
@@ -18,7 +18,6 @@ USE_PKGLOCALEDIR=	YES
 USE_GMAKE=		YES
 MAKEFILE=		GNUmakefile
 
-USE_NEW_TEXINFO=	YES
 USE_MAKEINFO=	YES
 TEXINFO_REQD=	4.0
 INFO_FILES=	lilypond.info lilypond-internals.info
