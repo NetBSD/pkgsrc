@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.437 2000/05/19 21:07:00 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.438 2000/05/30 15:01:44 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -38,7 +38,7 @@ __PLATFORM_OK?=
 .endfor
 
 .if !defined(__PLATFORM_OK)
-IGNORE=			"does not work on ${MACHINE_PLATFORM}"
+IGNORE=			"is not available for ${MACHINE_PLATFORM}"
 .endif
 
 ##### Some overrides of defaults below on a per-OS basis.
