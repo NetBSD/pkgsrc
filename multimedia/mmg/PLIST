@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/08 18:22:14 salo Exp $
+bin/mmg
+man/man1/mmg.1
+share/doc/html/mmg/guide.html
+share/doc/html/mmg/images/addingremovingattachments.png
+share/doc/html/mmg/images/addremovefiles.png
+share/doc/html/mmg/images/attachmentoptions.png
+share/doc/html/mmg/images/audiotrackoptions.png
+share/doc/html/mmg/images/chaptereditor.png
+share/doc/html/mmg/images/movietitle.png
+share/doc/html/mmg/images/muxingwindow.png
+share/doc/html/mmg/images/selectmkvmergeexecutable.png
+share/doc/html/mmg/images/splitting.png
+share/doc/html/mmg/images/textsubtitlestrackoptions.png
+share/doc/html/mmg/images/trackselection.png
+share/doc/html/mmg/images/videotrackoptions.png
+@dirrm share/doc/html/mmg/images
+@dirrm share/doc/html/mmg
