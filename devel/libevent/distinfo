@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2004/12/26 01:20:36 wiz Exp $
+$NetBSD: distinfo,v 1.5 2005/01/05 14:13:22 wiz Exp $
 
-SHA1 (libevent-1.0.tar.gz) = 4389f2c9790d501c40265f4e9c2a03bc871dddbe
-Size (libevent-1.0.tar.gz) = 100906 bytes
+SHA1 (libevent-1.0a.tar.gz) = 3ad06ed89c45f0db11f3120e95097e27175d82fb
+Size (libevent-1.0a.tar.gz) = 101152 bytes
