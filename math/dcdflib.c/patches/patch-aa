@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/01/29 06:13:54 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2001/01/29 21:43:14 jtb Exp $
 
 --- ipmpar.c.orig	Mon Jan 29 05:01:11 2001
 +++ ipmpar.c
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/01/29 06:13:54 jtb Exp $
  static int ipmpar;
 +
 +   imach[1] = 2;
-+   imach[2] = (long) sizeof(int)*(CHAR_BIT) -1;
++   imach[2] = sizeof(int)*(CHAR_BIT) - 1;
 +   imach[3] = INT_MAX;
 +   imach[4] = FLT_RADIX;
 +   imach[5] = FLT_MANT_DIG;
