@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 1999/10/10 19:43:09 dmcmahill Exp $
+$NetBSD: md5,v 1.3 2000/04/22 11:08:46 dmcmahill Exp $
 
-MD5 (ted-2.6.src.tar.gz) = c29061bda9c904c1b71eaa20d7038b7f
+MD5 (ted-2.8.src.tar.gz) = 63dea345629eda6eb4208e1221f06e9a
