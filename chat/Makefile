@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2001/03/06 18:40:50 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/03/10 15:04:15 wiz Exp $
 #
 
 COMMENT=	communication programs
 
 SUBDIR+=	bitchx
+SUBDIR+=	blackened
 SUBDIR+=	bnc
 SUBDIR+=	epic4
 SUBDIR+=	fugu
