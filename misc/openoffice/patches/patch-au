@@ -1,7 +1,7 @@
-$NetBSD: patch-au,v 1.3 2004/05/08 11:52:52 jdolecek Exp $
+$NetBSD: patch-au,v 1.4 2004/05/09 00:12:13 jdolecek Exp $
 
---- setup2/mow/source/loader/loader.c.orig	2004-05-07 17:13:38.000000000 +0200
-+++ setup2/mow/source/loader/loader.c
+--- ../setup2/mow/source/loader/loader.c.orig	2004-05-07 17:13:38.000000000 +0200
++++ ../setup2/mow/source/loader/loader.c
 @@ -83,10 +83,20 @@
  #ifdef LINUX
  # include <sys/vfs.h>
