@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/04/14 16:15:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2004/04/15 11:32:50 xtraeme Exp $
 #
 
 DISTNAME=	vte-0.11.10
@@ -26,6 +26,12 @@ CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 
 PKGCONFIG_OVERRIDE+=    vte.pc.in
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "FreeBSD"
+CPPFLAGS+=		-D_XOPEN_SOURCE_EXTENDED=1
+.endif
 
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
