@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.6 1999/07/10 10:42:04 tron Exp $
+# $NetBSD: Makefile,v 1.7 1999/07/12 00:53:52 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/12/28 01:02:05 vanilla Exp
 #
 
-DISTNAME=	gqmpeg-0.6.2
+DISTNAME=	gqmpeg-0.6.3
 CATEGORIES=	audio
 MASTER_SITES=	http://www.geocities.com/SiliconValley/Haven/5235/
 EXTRACT_SUFX=	.src.tgz
 
 MAINTAINER=	rxg@ms25.url.com.tw
-HOMEPAGE=	http://www.geocities.com/SiliconValley/Haven/5235/
+HOMEPAGE=	http://www.geocities.com/SiliconValley/Haven/5235/mpeg-over.html
 
 DEPENDS+=	gtk+-1.2.2:../../x11/gtk
 DEPENDS+=	imlib-1.9.4:../../graphics/imlib
