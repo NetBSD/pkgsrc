@@ -1,0 +1,3 @@
+This package contains GNU java2html version 1.9 and GNU cpp2html version 1.5:
+- java2html highlights the syntax of a Java source file into a HTML document,
+- cpp2html highlights the syntax of a C or C++ source file into a HTML document.
