@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/03/28 00:12:29 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.4 2000/04/23 15:28:06 kim Exp $
 
 DISTNAME=	kdemultimedia-1.1.2
 CATEGORIES=	audio kde
@@ -20,5 +20,8 @@ CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	KDEDIR=${PREFIX} \
 		CXXFLAGS="${CFLAGS}" \
 		all_libraries="-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -L${X11BASE}/lib -Wl,-R${X11BASE}/lib"
+
+post-install:
+	@${CHMOD} -R go-w ${PREFIX}/share/kde/apps/kscd/cddb
 
 .include "../../mk/bsd.pkg.mk"
