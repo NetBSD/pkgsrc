@@ -20,15 +20,5 @@ AC_CHECK_HEADERS([sys/ioctl.h sys/mtio.h sys/resource.h sys/uio.h sys/wait.h])
 # Checks for library functions.
 AC_CHECK_FUNCS([getrlimit setrlimit])
 
-AH_BOTTOM([
-#ifndef _PATH_DEFTAPE
-# ifdef DEFTAPE
-#  define _PATH_DEFTAPE DEFTAPE
-# else
-#  define _PATH_DEFTAPE "/dev/tape"
-# endif /* DEFTAPE */
-#endif /* _PATH_DEFTAPE */
-])
-
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT

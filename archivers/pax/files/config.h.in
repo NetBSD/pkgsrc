@@ -86,13 +86,3 @@
 
 /* Define to 1 if you have the ANSI C header files. */
 #undef STDC_HEADERS
-
-
-#ifndef _PATH_DEFTAPE
-# ifdef DEFTAPE
-#  define _PATH_DEFTAPE DEFTAPE
-# else
-#  define _PATH_DEFTAPE "/dev/tape"
-# endif /* DEFTAPE */
-#endif /* _PATH_DEFTAPE */
-
