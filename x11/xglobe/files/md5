@@ -1,6 +1,6 @@
-$NetBSD: md5,v 1.4 1999/05/24 23:02:13 wrstuden Exp $
+$NetBSD: md5,v 1.5 2000/04/03 03:24:48 hubertf Exp $
 
 MD5 (xglobe/LE.400.gif) = 2950d9d315db019f8ce9142ddbfc992a
 MD5 (xglobe/Brill.400.gif) = da9f9061201b9da2ace1d988e9f99954
 MD5 (xglobe/mggd.gif) = 7980806c25a35c2801a89a7d1223cf49
-MD5 (xglobe/xglobe-0.2.tar.gz) = edd3958237e6eeb20e2720342350bd7b
+MD5 (xglobe/xglobe-0.5.tar.gz) = 87caf7803f1d71a0b024188e3a2c759c
