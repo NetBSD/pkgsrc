@@ -1,0 +1,2 @@
+This is an authentication module for Apache that allows you to
+authenticate HTTP clients using user entries in an LDAP directory.
