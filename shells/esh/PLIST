@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2002/12/09 16:01:42 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/08/05 11:43:17 seb Exp $
 bin/esh
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/esh.info
 info/esh.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/esh.info
 share/doc/esh/esh.html
 share/doc/esh/esh_toc.html
 share/emacs/site-lisp/esh-mode.el
