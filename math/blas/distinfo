@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2003/12/04 09:13:58 adam Exp $
+$NetBSD: distinfo,v 1.4 2005/02/23 12:06:54 agc Exp $
 
 SHA1 (blas.tgz) = ab73fcc69d0c74888aea67a698f60cd91b0d3af2
+RMD160 (blas.tgz) = d2cea3ae6156b6f583fae5e590695ffb306abb80
 Size (blas.tgz) = 94981 bytes
 SHA1 (patch-aa) = 3cd451255a12bb50ab6247c9431f3f6c176fe46b

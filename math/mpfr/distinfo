@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/06/05 22:11:38 rh Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 12:06:56 agc Exp $
 
 SHA1 (mpfr-2.0.3.tar.gz) = 9874f54673589550e7367fe4437f9c84196b9ef0
+RMD160 (mpfr-2.0.3.tar.gz) = d6ae0002554b727adc6864b934f1a5491421a78d
 Size (mpfr-2.0.3.tar.gz) = 484084 bytes
 SHA1 (gmp-4.1.2.tar.gz) = 68a6ee6488e9c660f201be70bc55b8e2c40b16b1
+RMD160 (gmp-4.1.2.tar.gz) = 4c7248c029a9cf6ae80c4223bb7efdaad81c3b60
 Size (gmp-4.1.2.tar.gz) = 2159329 bytes
 SHA1 (patch-aa) = 96aa278bce01738d4c7446278cec0650cf33b15e

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2002/07/02 12:58:55 wiz Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 12:06:55 agc Exp $
 
 SHA1 (linpack-20010510.tar.gz) = b10aca3f0232719c1fa3de455f91230393829b12
+RMD160 (linpack-20010510.tar.gz) = 72015366e8f9342d58c2429896fd75810f2df6f3
 Size (linpack-20010510.tar.gz) = 334832 bytes
 SHA1 (patch-aa) = 07195ee4920fe53559ef68f8fe696d7728b67337
 SHA1 (patch-ab) = 2c6ea54300b0bca78268d5ca6e23637e8059b201

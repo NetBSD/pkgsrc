@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2002/05/03 23:32:12 jtb Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 12:06:58 agc Exp $
 
 SHA1 (tela-1.34.tar.gz) = b600db15563be48418ea1a5ba90e30acc9dcadb5
+RMD160 (tela-1.34.tar.gz) = 6e81f12321af3f89d3189a849bc52ea8f467d069
 Size (tela-1.34.tar.gz) = 1894352 bytes
 SHA1 (patch-aa) = 2a2033c3d3bddbfcfaebb189223fc320fb82c4cc
 SHA1 (patch-ab) = b8e60e92716c35432e3c991c0c871e29968e2df6

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2004/12/31 12:36:44 kristerw Exp $
+$NetBSD: distinfo,v 1.4 2005/02/23 12:06:54 agc Exp $
 
 SHA1 (eukleides.1.0.1.tar.gz) = 6ece226caec7bb452daa86b5bef08c00bd046c37
+RMD160 (eukleides.1.0.1.tar.gz) = 91c2092782a9cb969583ef35b0dc505a2b2559d6
 Size (eukleides.1.0.1.tar.gz) = 50635 bytes
 SHA1 (patch-aa) = 5bae9eb5d1411ffddf5ea0a438e412ff3d89aab6
