@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2001/10/26 16:02:31 kleink Exp $
+# $NetBSD: Makefile,v 1.37 2001/12/02 14:42:25 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 
 DISTNAME=	xemacs-21.1.14
@@ -55,7 +55,7 @@ WITH_LDAP=	--with-ldap=no
 
 .if defined(USE_XFACE) && ${USE_XFACE} == YES
 WITH_XFACE=	--with-xface=yes
-DEPENDS+=	faces-1.6.1:../../mail/faces
+DEPENDS+=	faces>=1.6.1:../../mail/faces
 .else
 WITH_XFACE=	--with-xface=no
 .endif
