@@ -1,16 +1,16 @@
-$NetBSD: patch-aa,v 1.10 2000/10/17 18:03:26 jlam Exp $
+$NetBSD: patch-aa,v 1.11 2002/11/04 00:48:33 rh Exp $
 
---- configure.orig	Thu May 25 10:35:06 2000
+--- configure.orig	Mon Nov  4 10:12:53 2002
 +++ configure
-@@ -8433,6 +8433,11 @@
+@@ -15379,6 +15379,11 @@ fi
+    sed -e "/^#/d" -e "/^\$/d" -e "s,.*,	$posrcprefix& \\\\," -e "\$s/\(.*\) \\\\/\1/" \
  	< $srcdir/po/POTFILES.in > po/POTFILES
-   
  
-+# NetBSD: set DATADIRNAME to "share"
-+DATADIRNAME="share"
-+INTLDEPS=
-+INTLLIBS="-lintl"
++#
++# override DATADIRNAME with PKGLOCALEDIR if set
++#
++[ -z "$PKGLOCALEDIR" ] || DATADIRNAME=$PKGLOCALEDIR
 +
- # If we find X, set shell vars x_includes and x_libraries to the
- # paths, otherwise set no_x=yes.
- # Uses ac_ vars as temps to allow command line to override cache and checks.
+ echo "$as_me:15382: checking for X" >&5
+ echo $ECHO_N "checking for X... $ECHO_C" >&6
+ 
