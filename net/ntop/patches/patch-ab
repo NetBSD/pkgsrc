@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 1998/10/13 03:46:07 kim Exp $
+$NetBSD: patch-ab,v 1.5 1998/12/01 13:50:44 hwr Exp $
 
 --- ntop.h.orig	Mon Oct  5 12:18:41 1998
 +++ ntop.h	Mon Oct 12 22:44:29 1998
@@ -17,6 +17,9 @@ $NetBSD: patch-ab,v 1.4 1998/10/13 03:46:07 kim Exp $
 +#ifndef ETHERTYPE_ATALK
 +#define ETHERTYPE_ATALK		0x809b
 +#endif
++#ifndef ETHERTYPE_AARP 
++#define ETHERTYPE_AARP         0x80f3
++#endif 
  
  #include "interface.h"
  #include "setsignal.h"
