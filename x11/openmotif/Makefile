@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/04/11 18:21:32 xtraeme Exp $
+# $NetBSD: Makefile,v 1.27 2004/07/09 12:34:53 drochner Exp $
 # FreeBSD: /c/ncvs/ports/x11-toolkits/open-motif/Makefile,v 1.18 2000/10/09 01:40:02 asami Exp
 # OpenBSD: Makefile,v 1.5 2000/10/23 16:08:12 espie Exp
 
@@ -102,7 +102,7 @@ do-configure:
 post-build:
 	cd ${WRKSRC}/doc/man;						\
 	for file in man1/*.1 man3/*.3 man4/*.4 man5/*.5; do		\
-		tbl $${file} > $${file}.tblized;			\
+		${TBL} $${file} > $${file}.tblized;			\
 		${MV} -f $${file}.tblized $${file};			\
 	done
 
@@ -119,4 +119,5 @@ post-install:
 		${INSTALL_MAN} $${file} ${PREFIX}/man/$${file};		\
 	done
 
+.include "../../textproc/groff/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
