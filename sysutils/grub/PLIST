@@ -1,19 +1,23 @@
-@comment $NetBSD: PLIST,v 1.4 2002/08/25 21:51:01 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/01/24 23:49:54 jmmv Exp $
 bin/mbchk
-@unexec install-info --delete --info-dir=%D/info %D/info/grub.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/grub.info
 info/grub.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/grub.info
 info/grub.info-1
 info/grub.info-2
 info/grub.info-3
-@unexec install-info --delete --info-dir=%D/info %D/info/multiboot.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/multiboot.info
 info/multiboot.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/multiboot.info
 man/man1/mbchk.1
 man/man8/grub-install.8
 man/man8/grub-md5-crypt.8
+man/man8/grub-terminfo.8
 man/man8/grub.8
 sbin/grub
 sbin/grub-install
 sbin/grub-md5-crypt
+sbin/grub-terminfo
 ${NETBOOT}share/doc/grub/README.netboot
 share/grub/${MACHINE_ARCH}-/e2fs_stage1_5
 share/grub/${MACHINE_ARCH}-/fat_stage1_5
@@ -27,8 +31,6 @@ share/grub/${MACHINE_ARCH}-/stage1
 share/grub/${MACHINE_ARCH}-/stage2
 share/grub/${MACHINE_ARCH}-/vstafs_stage1_5
 share/grub/${MACHINE_ARCH}-/xfs_stage1_5
-@exec install-info --info-dir=%D/info %D/info/grub.info
-@exec install-info --info-dir=%D/info %D/info/multiboot.info
 @dirrm share/grub/${MACHINE_ARCH}-
 @dirrm share/grub
 ${NETBOOT}@dirrm share/doc/grub
