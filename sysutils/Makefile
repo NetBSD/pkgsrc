@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.275 2004/12/28 14:09:22 wiz Exp $
+# $NetBSD: Makefile,v 1.276 2005/01/11 18:09:22 skrll Exp $
 
 COMMENT=	System utilities
 
@@ -93,6 +93,7 @@ SUBDIR+=	hfsutils
 SUBDIR+=	i2ocfg
 SUBDIR+=	idesk
 SUBDIR+=	ipw-firmware
+SUBDIR+=	iwi-firmware
 SUBDIR+=	isapnptools
 SUBDIR+=	kdirstat
 SUBDIR+=	krusader
