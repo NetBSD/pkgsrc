@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2004/04/19 04:45:07 snj Exp $
+# $NetBSD: Makefile,v 1.25 2004/04/24 22:46:13 jlam Exp $
 #
 
 DISTNAME=	surfraw-1.0.7
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/proff/
 
-MAINTAINER=	jlam@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://surfraw.sourceforge.net/
 COMMENT=	Shell Users' Revolutionary Front Rage Against the Web
 

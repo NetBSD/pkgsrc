@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 22:52:20 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/24 22:46:11 jlam Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/10/21 00:57:27 steve Exp
 #
 
@@ -7,7 +7,7 @@ CATEGORIES=	print
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	jlam@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.lprng.com/
 COMMENT=	"meta-package" for LPRng, Enhanced Printer Spooler
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2004/02/14 17:21:37 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2004/04/24 22:46:09 jlam Exp $
 
 DISTNAME=		GTL-0.3.3
 PKGNAME=		gtl-0.3.3
 CATEGORIES=		devel
 MASTER_SITES=		http://infosun.fmi.uni-passau.de/GTL/archive/
 
-MAINTAINER=		jlam@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.fmi.uni-passau.de/Graphlet/GTL/
 COMMENT=		C++ graph data structure library based on the STL
 

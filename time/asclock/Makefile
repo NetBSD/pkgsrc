@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2004/04/11 16:35:43 snj Exp $
+# $NetBSD: Makefile,v 1.17 2004/04/24 22:46:12 jlam Exp $
 
 DISTNAME=	asclock-classic-1.0
 PKGNAME=	asclock-1.0
 CATEGORIES=	x11 time
 MASTER_SITES=	${MASTER_SITE_LOCAL}	# www.asclock.org is no more
 
-MAINTAINER=	jlam@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	NeXTstep-like clock and calendar
 
 NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL

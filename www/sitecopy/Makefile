@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2004/04/15 21:44:47 snj Exp $
+# $NetBSD: Makefile,v 1.27 2004/04/24 22:46:13 jlam Exp $
 
 DISTNAME=		sitecopy-0.13.4
 PKGREVISION=		4
 CATEGORIES=		www
 MASTER_SITES=		http://www.lyra.org/sitecopy/
 
-MAINTAINER=		jlam@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.lyra.org/sitecopy/
 COMMENT=		Utility for synchronizing remote and local web sites
 

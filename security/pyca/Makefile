@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/04/15 18:10:06 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/24 22:46:11 jlam Exp $
 
 # Date-based distfile name for pre-releases leading to 0.6.6.
 DISTNAME=	pyca-20031021
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://www.pyca.de/download/
 
-MAINTAINER=	jlam@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.pyca.de/
 COMMENT=	Administration tools for X.509/PKIX CA
 

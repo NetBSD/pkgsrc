@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/20 12:13:28 agc Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/24 22:46:09 jlam Exp $
 #
 
 DISTNAME=	gobo15
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.gobosoft.com/download/ \
 		ftp://ftp.eiffel.com/pub/shelf/bezault/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	jlam@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gobosoft.com/
 COMMENT=	Portable Eiffel structure libraries and tools
 

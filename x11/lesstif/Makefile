@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.72 2004/04/12 02:15:40 grant Exp $
+# $NetBSD: Makefile,v 1.73 2004/04/24 22:46:13 jlam Exp $
 
 DISTNAME=	lesstif-0.93.94
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lesstif/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jlam@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.lesstif.org/
 COMMENT=	API compatible clone of the OSF/Motif toolkit
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2004/04/14 16:15:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.23 2004/04/24 22:46:11 jlam Exp $
 
 DISTNAME=		gperiodic-2.0.7
 PKGREVISION=		2
 CATEGORIES=		misc x11
 MASTER_SITES=		http://www.acclab.helsinki.fi/~frantz/software/
 
-MAINTAINER=		jlam@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.acclab.helsinki.fi/~frantz/software/gperiodic.php
 COMMENT=		Displays a periodic table of the elements
 

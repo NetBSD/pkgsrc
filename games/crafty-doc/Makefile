@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 16:49:42 martti Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/24 22:46:10 jlam Exp $
 
 DISTNAME=		crafty-doc-18.0
 CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.cis.uab.edu/pub/hyatt/v18/
 DISTFILES=		crafty.doc.ps
 
-MAINTAINER=		jlam@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Documentation for Crafty chess engine
 
 DIST_SUBDIR=		${PKGNAME}

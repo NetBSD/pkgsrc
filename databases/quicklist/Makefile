@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/04/17 19:17:38 snj Exp $
+# $NetBSD: Makefile,v 1.14 2004/04/24 22:46:09 jlam Exp $
 #
 
 DISTNAME=	quicklist-0.8.6
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	databases x11
 MASTER_SITES=	ftp://ftp.quicklist.org/
 
-MAINTAINER=	jlam@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.quicklist.org/
 COMMENT=	Simple database like AppleWorks & MS Works
 

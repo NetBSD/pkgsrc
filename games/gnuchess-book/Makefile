@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/08 05:52:34 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/24 22:46:10 jlam Exp $
 #
 
 DISTNAME=		book_1.01.pgn
@@ -7,7 +7,7 @@ CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_GNU:=chess/}
 EXTRACT_SUFX=		.gz
 
-MAINTAINER=		jlam@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/chess/
 COMMENT=		Chess opening book for GNU Chess (default)
 
