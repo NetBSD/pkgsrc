@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/04/27 17:16:15 sommerfeld Exp $
+# $NetBSD: Makefile,v 1.5 2003/12/24 13:02:01 jmmv Exp $
 #
 
 DISTNAME=	musixtex-109
@@ -13,7 +13,7 @@ MAINTAINER=	dgriffi@cs.csubak.edu
 HOMEPAGE=	http://icking-music-archive.sunsite.dk/
 COMMENT=	TeX macros to typeset music
 
-DEPENDS+=       teTeX-1.0*:../../print/teTeX
+DEPENDS+=       teTeX-1.0*:../../print/teTeX1
 
 NO_CONFIGURE=	yes
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/12/15 13:45:07 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/12/24 13:02:01 jmmv Exp $
 #
 
 DISTNAME=		dvipng-0.8
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		textproc converters
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=preview-latex/}
 
@@ -22,5 +22,5 @@ BUILDLINK_DEPENDS.freetype2?=	freetype2>=2.1.3
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/gd/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
-.include "../../print/teTeX2-bin/kpathsea.buildlink2.mk"
+.include "../../print/teTeX-bin/kpathsea.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

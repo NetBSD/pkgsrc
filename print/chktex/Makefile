@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2003/09/14 18:13:50 recht Exp $
+# $NetBSD: Makefile,v 1.3 2003/12/24 13:02:00 jmmv Exp $
 #
 
 DISTNAME=	chktex-1.6.1
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://savannah.nongnu.org/download/chktex/chktex.pkg/1.6.1/
 
@@ -18,5 +19,5 @@ GNU_CONFIGURE=	YES
 CFLAGS+=	-D__unix__
 MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
-.include "../../print/teTeX2-bin/kpathsea.buildlink2.mk"
+.include "../../print/teTeX-bin/kpathsea.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

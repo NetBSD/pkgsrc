@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2003/12/23 10:39:30 sketch Exp $
+# $NetBSD: Makefile,v 1.41 2003/12/24 13:02:00 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/09/27 20:10:45 steve Exp
 
 DISTNAME=	octave-2.0.17
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.che.wisc.edu/pub/octave/ \
 		ftp://ftp.math.uni-hamburg.de/pub/soft/math/octave/ \
@@ -14,7 +15,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.che.wisc.edu/octave/
 COMMENT=	High-level language, primarily intended for numerical computations
 
-BUILD_DEPENDS+=	teTeX{,2}>=1.0.7:../../print/teTeX
+BUILD_DEPENDS+=	teTeX>=1.0.7:../../print/teTeX
 DEPENDS+=	gnuplot{,-nox11}>=3.7:../../graphics/gnuplot
 
 CONFLICTS+=	octave-2.1.*

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2003/10/05 02:00:43 kei Exp $
+# $NetBSD: Makefile,v 1.7 2003/12/24 13:02:01 jmmv Exp $
 
 DISTNAME=	xdvik-${XDVIK_ORIGINAL_VERS}
 PKGNAME=	ja-vfxdvik-${XDVIK_ORIGINAL_VERS}.${XDVIK_JP_PATCH_VERS}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	japanese print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xdvi/} # not xdvik
 
@@ -73,9 +73,9 @@ do-install:
 	cd ${XDVI_DIR} && ${MAKE_PROGRAM} install
 
 .if defined(USE_TEXFAMILY)
-.include "../../print/teTeX-bin/kpathsea.buildlink2.mk"
+.include "../../print/teTeX1-bin/kpathsea.buildlink2.mk"
 .else
-.include "../../print/teTeX2-bin/kpathsea.buildlink2.mk"
+.include "../../print/teTeX-bin/kpathsea.buildlink2.mk"
 .endif
 .include "../../www/libwww/buildlink2.mk"
 .include "../../print/ja-vflib-lib/buildlink2.mk"

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 22:52:42 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/12/24 13:02:01 jmmv Exp $
 #
 
 DISTNAME=	eurosym-1.0
 PKGNAME=	tex-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 WRKSRC=		${WRKDIR}/eurosym
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_LOCAL}
@@ -13,7 +13,7 @@ HOMEPAGE=	ftp://ftp.univie.ac.at/packages/tex/fonts/eurosym/
 COMMENT=	Euro symbols for LaTeX
 
 # included in teTeX2
-DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX-bin
+DEPENDS+=	teTeX-bin-1.0.*:../../print/teTeX1-bin
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

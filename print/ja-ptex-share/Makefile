@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/07/21 17:16:24 martti Exp $
+# $NetBSD: Makefile,v 1.6 2003/12/24 13:02:01 jmmv Exp $
 
 DISTNAME=	ptex-texmf-2.1
 PKGNAME=	ja-ptex-share-2.1
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}
 CATEGORIES=	print japanese
 MASTER_SITES=	ftp://ftp.ascii.co.jp/pub/TeX/ascii-ptex/tetex/ \
@@ -18,7 +19,7 @@ MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://www.ascii.co.jp/pb/ptex/
 COMMENT=	Library files for pTeX
 
-DEPENDS+=	teTeX2>=2.0.1:../../print/teTeX2
+DEPENDS+=	teTeX>=2.0.1:../../print/teTeX
 
 DIST_SUBDIR=		teTeX
 NO_CONFIGURE=		YES
