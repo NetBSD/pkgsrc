@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/11/01 16:45:13 salo Exp $
+# $NetBSD: Makefile,v 1.30 2003/11/27 12:40:53 salo Exp $
 #
 
 DISTNAME=		${SILC_CLIENT_DISTNAME}
@@ -61,7 +61,11 @@ CONFIGURE_ARGS+=	--enable-ipv6
 # Optional support for perl scripting.
 # If you want to disable it, set SILC_CLIENT_WITH_PERL to NO
 # in your /etc/mk.conf
+
+# XXX: perl support is currently broken (bug in perl) so disable it.
 #
+SILC_CLIENT_WITH_PERL=	NO
+
 .if defined(SILC_CLIENT_WITH_PERL) && !empty(SILC_CLIENT_WITH_PERL:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--with-perl-lib=${PREFIX}/lib/silc/perl5
 .include "../../lang/perl5/buildlink2.mk"
