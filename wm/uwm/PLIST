@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:59:29 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/03 03:32:36 jschauma Exp $
 bin/uwm
-man/cat1/uwm.0
+${IMAKE_MAN_DIR}/uwm.${IMAKE_MANNEWSUFFIX}
 lib/X11/uwm/system.uwmrc
 @dirrm lib/X11/uwm
