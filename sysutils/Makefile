@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.231 2004/04/08 14:19:17 drochner Exp $
+# $NetBSD: Makefile,v 1.232 2004/04/17 13:24:04 minskim Exp $
 
 COMMENT=	System utilities
 
@@ -137,6 +137,7 @@ SUBDIR+=	rox-wrappers
 SUBDIR+=	rtty
 SUBDIR+=	ruby-quota
 SUBDIR+=	safetynet
+SUBDIR+=	same
 SUBDIR+=	sarah
 SUBDIR+=	screentest
 SUBDIR+=	scsiinfo
