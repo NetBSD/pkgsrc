@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2004/10/03 00:17:55 tv Exp $
+# $NetBSD: Makefile,v 1.56 2004/12/31 10:08:42 minskim Exp $
 
 DISTNAME=	mrtg-2.10.15
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://people.ee.ethz.ch/~oetiker/webtools/mrtg/pub/ \
 		ftp://ftp.sunet.se/pub/network/monitoring/mrtg/ \
@@ -43,6 +43,7 @@ CONFIGURE_ARGS+=	--with-png-lib=${LOCALBASE}/lib
 CONFIGURE_ARGS+=	--with-png-inc=${LOCALBASE}/include
 .endif
 
+REPLACE_PERL=	bin/cfgmaker bin/indexmaker bin/mrtg
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 
 CONF_FILES=	${EGDIR}/mrtg.conf ${PKG_SYSCONFDIR}/mrtg.conf
