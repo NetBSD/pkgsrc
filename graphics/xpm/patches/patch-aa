@@ -1,0 +1,26 @@
+--- lib/Imakefile	1997/11/06 11:09:44	1.1
++++ lib/Imakefile	1997/11/06 11:10:29
+@@ -34,8 +34,12 @@
+ #define XpmLibDir $(USRLIBDIR)
+ #endif
+ #ifndef XpmIncDir
++#if defined(NetBSDArchitecture)
++#define XpmIncDir $(INCROOT)
++#else
+ #define XpmIncDir $(INCDIR)
+ #endif
++#endif
+ 
+ XCOMM If not already set in top dir,
+ XCOMM you can uncomment the following line to avoid building the shared lib
+@@ -44,6 +48,10 @@
+ #ifndef SharedLibXpm
+ # define SharedLibXpm (HasSharedLibraries && \
+ 	!(defined(SGIArchitecture) && !SystemV4))
++#endif
++
++#if defined(NetBSDArchitecture)
++#define NormalLibXpm 1
+ #endif
+ 
+ #ifndef NormalLibXpm
