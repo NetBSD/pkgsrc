@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/01 20:40:06 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/03/01 20:57:59 jlam Exp $
 
 DISTNAME=		jpilot-syncmal_0.60
 PKGNAME=		jpilot-syncmal-0.60
@@ -16,6 +16,7 @@ MALDIR=			${PKGSRCDIR}/comms/malsync
 MALSRC=			${MALDIR}/${WRKDIR:T}/malsync
 
 GNU_CONFIGURE=		# defined
+USE_X11=		# defined
 USE_GMAKE=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
