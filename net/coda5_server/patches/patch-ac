@@ -1,16 +1,40 @@
-$NetBSD: patch-ac,v 1.5 2001/05/31 22:58:08 jlam Exp $
+$NetBSD: patch-ac,v 1.6 2002/06/20 19:28:35 jlam Exp $
 
---- lib-src/base/parser.c.orig	Sun Jan 30 19:01:28 2000
-+++ lib-src/base/parser.c	Wed May 30 22:00:39 2001
-@@ -34,10 +34,7 @@
+--- coda-src/vtools/Makefile.in.orig	Fri Jan 25 16:24:46 2002
++++ coda-src/vtools/Makefile.in
+@@ -26,15 +26,16 @@
+ include $(TOPDIR)/Makeconf
  
- #define	READLINE_LIBRARY
- #include <readline/readline.h>
--
--extern void using_history();
--extern void stifle_history(int);
--extern void add_history(char *);
-+#include <readline/history.h>
+ LOGSCRIPTS = # logbandwidth logcmls logreintegration logprogress
+-EXECUTABLES = codacon cfs hoard spy coda_replay
++CEXECUTABLES = codacon cfs hoard spy coda_replay
+ ifneq ($(SYS),cygwin32)
+-EXECUTABLES += cmon $(LOGSCRIPTS)
++CEXECUTABLES += cmon $(LOGSCRIPTS)
+ endif
++EXECUTABLES = $(CEXECUTABLES)
  
- #ifdef __cplusplus
- }
+-CBINS  = $(EXECUTABLES)
+-CSBINS = codaconfedit
+-SSBINS = codaconfedit
+-EXECUTABLES += codaconfedit
++CBINS  = $(CEXECUTABLES)
++CSBINS = venus-codaconfedit
++SSBINS = vice-codaconfedit
++EXECUTABLES += venus-codaconfedit vice-codaconfedit
+ 
+ CMON_LIBS   = $(LIBVICEDEP) $(LIBBASE)
+ CFS_LIBS    = $(LIBKERNDEP) $(LIBUTIL) $(LIBBASE)
+@@ -53,6 +54,12 @@
+ 
+ codaconfedit: codaconfedit.o $(LIBBASE)
+ 	$(CXX) $(LDFLAGS) codaconfedit.o $(LIBBASE) $(LIBS) -o codaconfedit
++
++venus-codaconfedit: codaconfedit.o $(LIBBASE)
++	$(CXX) $(LDFLAGS) codaconfedit.o $(LIBBASE) $(LIBS) -o venus-codaconfedit
++
++vice-codaconfedit: codaconfedit.o $(LIBBASE)
++	$(CXX) $(LDFLAGS) codaconfedit.o $(LIBBASE) $(LIBS) -o vice-codaconfedit
+ 
+ cfs:  cfs.o $(CFS_LIBS)
+ 	$(CXX) $(LDFLAGS) cfs.o $(CFS_LIBS) $(STD_LIBS) -o cfs

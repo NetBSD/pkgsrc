@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.3 2002/06/20 19:28:36 jlam Exp $
+
+--- configure.orig	Tue Mar 12 15:25:53 2002
++++ configure
+@@ -1246,6 +1246,7 @@
+     fi
+ 
+ echo $ac_n "checking configuration file location""... $ac_c" 1>&6
++if false; then
+ echo "configure:1250: checking configuration file location" >&5
+ case ${prefix} in
+     /usr )
+@@ -1272,6 +1273,9 @@
+ 	initsuffix='etc'
+ 	;;
+ esac
++else
++	initsuffix=etc
++fi
+ echo "$ac_t""${sysconfdir}" 1>&6
+ 
+ 

@@ -1,46 +1,27 @@
-# $NetBSD: Makefile,v 1.31 2001/06/19 03:47:31 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.32 2002/06/20 19:28:35 jlam Exp $
 
-DISTNAME=		coda-5.3.13
-PKGNAME=		coda-server-5.3.13
-CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.coda.cs.cmu.edu/pub/coda/src/
+PKGNAME=	coda-server-${DIST_VERS}
+COMMENT=	server programs for a replicated high-performance network file system
 
-MAINTAINER=		phil@cs.wwu.edu
-HOMEPAGE=		http://www.coda.cs.cmu.edu/
-COMMENT=		server programs for a replicated high-performance network file system
+USE_BUILDLINK_ONLY=	yes
 
-# Only enable platforms that can build "lwp".
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-m68k NetBSD-*-sparc
+.include "Makefile.common"
 
 ALL_TARGET=		coda
 INSTALL_TARGET=		server-install
+INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
+DEINSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
 
-USE_PERL5=		yes
-GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
-USE_BUILDLINK_ONLY=	yes
-
-.include "../../devel/lwp/buildlink.mk"
-.include "../../devel/readline/buildlink.mk"
-.include "../../devel/rpc2/buildlink.mk"
-.include "../../devel/rvm/buildlink.mk"
-
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-INSTALL_FILE=		${WRKDIR}/INSTALL
-
-INSTALL_SUBST=		CAT=${CAT:Q}
-INSTALL_SUBST+=		LN=${LN:Q}
-INSTALL_SUBST+=		RM=${RM:Q}
-INSTALL_SUBST+=		RMDIR=${RMDIR:Q}
-INSTALL_SUBST+=		TRUE=${TRUE:Q}
-INSTALL_SUBST_SED=	${INSTALL_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
-
-pre-install:
-	${SED} ${INSTALL_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED} ${INSTALL_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
+CONF_FILES+=	${EGDIR}/server.conf.ex ${PKG_SYSCONFDIR}/server.conf
 
 post-install:
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
+	cd ${PREFIX}; ${PAX} -zr					\
+		-s "/usr\/\(man\/man.\/\)au.8/\1vice-au.8/"		\
+		-s "/usr\///"						\
+		-f ${_DISTDIR}/${CODADOC_DISTFILE}			\
+		`${GREP} "^man/" ${PLIST_SRC} |				\
+			${SED}	-e "s|^|usr/|"				\
+				-e "s|vice-au\.8|au.8|"`
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

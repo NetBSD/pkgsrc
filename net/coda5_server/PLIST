@@ -1,9 +1,40 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:55:04 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/06/20 19:28:35 jlam Exp $
+bin/getvolinfo
 bin/norton
 bin/norton-reinit
 bin/reinit
-etc/coda/server.conf.ex
+bin/rpc2ping
+bin/smon2
 etc/rc.d/rc.vice
+man/man5/backuplogs.5
+man/man5/dumpfile.5
+man/man5/dumplist.5
+man/man5/maxgroupid.5
+man/man5/passwd.coda.5
+man/man5/servers.5
+man/man5/vicetab.5
+man/man5/volumelist.5
+man/man5/vrdb.5
+man/man5/vrlist.5
+man/man5/vsgdb.5
+man/man8/auth2.8
+man/man8/backup.8
+man/man8/bldvldb.8
+man/man8/codasrv.8
+man/man8/createvol.8
+man/man8/createvol_rep.8
+man/man8/initpw.8
+man/man8/merge.8
+man/man8/norton.8
+man/man8/pdbtool.8
+man/man8/purgevol.8
+man/man8/purgevol_rep.8
+man/man8/readdump.8
+man/man8/startserver.8
+man/man8/updateclnt.8
+man/man8/updatesrv.8
+man/man8/vice-au.8
+man/man8/volutil.8
 sbin/auth2
 sbin/backup
 sbin/backup.sh
@@ -28,6 +59,7 @@ sbin/tape.pl
 sbin/updateclnt
 sbin/updatefetch
 sbin/updatesrv
+sbin/vice-au
 sbin/vice-coda-setup-ports
 sbin/vice-codaconfedit
 sbin/vice-killvolumes
@@ -37,3 +69,5 @@ sbin/vice-setup-scm
 sbin/vice-setup-srvdir
 sbin/vice-setup-user
 sbin/volutil
+share/examples/coda/server.conf.ex
+@unexec ${RMDIR} %D/share/examples/coda 2>/dev/null || ${TRUE}
