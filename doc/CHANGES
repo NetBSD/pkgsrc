@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2543 2003/06/19 18:09:19 wiz Exp $
+$NetBSD: CHANGES,v 1.2544 2003/06/19 20:40:52 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2502,3 +2502,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xmame to 0.70.1 [kristerw 2003-06-19]
 	Updated xmess to 0.70.1 [kristerw 2003-06-19]
 	Updated galeon to 1.2.11 [taya 2003-06-19]
+	Added ssmtp-2.60.3 [jlam 2003-06-19]
