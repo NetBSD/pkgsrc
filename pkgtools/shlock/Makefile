@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/01/15 13:20:27 agc Exp $
+# $NetBSD: Makefile,v 1.2 2002/02/15 11:56:18 seb Exp $
 #
 
 DISTNAME=	shlock-20020114
 CATEGORIES=	pkgtools sysutils
-MASTER_SITES=	#
+MASTER_SITES=	# empty
+DISTFILES=	# empty
 
 MAINTAINER=	packages@netbsd.org
 #HOMEPAGE=
@@ -19,6 +20,14 @@ PLIST_SRC=	${WRKDIR}/PLIST
 BUILD_DEFS+=	MANINSTALL
 
 MAKE_ENV+=	BINDIR=${LOCALBASE}/bin MANDIR=${LOCALBASE}/man
+
+.include "../../mk/bsd.prefs.mk"
+
+PKGSRC_LOCKTYPE=	none	# avoid "bootstrapping problem"
+
+.if ${OPSYS} == "SunOS"
+MANINSTALL=
+.endif
 
 post-extract:
 	@for FILE in Makefile shlock.c shlock.1; do			\
