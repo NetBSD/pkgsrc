@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9516 2005/03/19 16:49:25 wiz Exp $
+$NetBSD: CHANGES,v 1.9517 2005/03/19 16:55:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1418,3 +1418,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated irssi to 0.8.9nb3 [jmmv 2005-03-19]
 	Updated fltk to 1.1.6nb1 [ben 2005-03-19]
 	Updated crypto++ to 5.2.1 [wiz 2005-03-19]
+	Updated ncmpc to 0.11.1 [wiz 2005-03-19]
