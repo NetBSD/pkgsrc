@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1147 2003/02/25 15:23:55 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1148 2003/02/28 03:41:39 jschauma Exp $
 #
 # This file is in the public domain.
 #
@@ -2732,7 +2732,7 @@ _SU_TARGET=								\
 			${ECHO} "*** WARNING *** Running: ${PRE_ROOT_CMD}"; \
 			${PRE_ROOT_CMD};				\
 		fi;                                             	\
-		${ECHO_MSG} "${_PKGSRC_IN}> Becoming root@`/bin/hostname` to $$action ${PKGNAME}."; \
+		${ECHO_MSG} "${_PKGSRC_IN}> Becoming root@`${HOSTNAME_CMD}` to $$action ${PKGNAME}."; \
 		${ECHO_MSG} -n "`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'` ";\
 		${SU_CMD} "cd ${.CURDIR}; ${SETENV} PATH=$${PATH}:${SU_CMD_PATH_APPEND} ${MAKE} $$args ${MAKEFLAGS} $$realtarget $$realflags"; \
 	fi
