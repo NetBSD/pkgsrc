@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2004/05/30 07:52:08 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/30 08:14:48 minskim Exp $
 
 DISTNAME=		ed2k-gtk-gui-0.6.2
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ed2k-gtk-gui/}
 
@@ -13,6 +14,7 @@ USE_DIRS+=		xdg-1.1
 USE_X11=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+CONFIGURE_ENV+=		CONFIGURE_LDFLAGS=${LDFLAGS:Q}
 
 SUBST_CLASSES+=		shell
 SUBST_MESSAGE.shell=	"Fixing hardcoded shell."
