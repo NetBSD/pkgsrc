@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 18:18:49 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/06/17 10:06:52 drochner Exp $
 #
 
 DISTNAME=	echoping-4.1.0
@@ -10,8 +10,10 @@ HOMEPAGE=	http://echoping.sourceforge.net/
 COMMENT=	test performance of a remote TCP service
 
 GNU_CONFIGURE=	YES
-USE_SSL=	YES
 CONFIGURE_ARGS+=--enable-icp
 CONFIGURE_ARGS+=--with-ssl=${SSLBASE}
 
+USE_BUILDLINK_ONLY=	yes
+
+.include "../../security/openssl/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

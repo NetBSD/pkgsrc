@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2002/05/13 02:13:48 itojun Exp $
+# $NetBSD: Makefile,v 1.50 2002/06/17 10:06:50 drochner Exp $
 #
 
 DISTNAME=	racoon-20020507a
@@ -19,13 +19,7 @@ IGNORE+=		"${PKGNAME} requires ipsec-ready NetBSD"
 .include "../../mk/bsd.prefs.mk"
 BUILD_DEFS+=	USE_INET6
 
-# we rely upon 1.5-based /usr/lib/libcrypto, or pkgsrc/security/openssl.
-# between 1.4 and 1.5, there were period where we had RSA-less
-# /usr/lib/libcrypto.  we do not support that configuration in the pkgsrc.
-USE_SSL=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-CFLAGS+=	-I${LOCALBASE}/include
-LIBPATH=	-L${LOCALBASE}/lib
+USE_BUILDLINK_ONLY=	yes
 
 CONFLICTS+=	racoon-[0-9]*
 
@@ -57,4 +51,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/samples/racoon.conf.sample \
 		${PREFIX}/share/examples/racoon
 
+.include "../../security/openssl/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
