@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2004/03/28 02:26:42 grant Exp $
+# $NetBSD: Makefile,v 1.99 2004/03/29 02:24:11 tv Exp $
 
 # Notes to package maintainers:
 #
@@ -69,7 +69,8 @@ do-extract:
 	@${CP} -Rp ${FILESDIR} ${WRKSRC}
 
 pre-configure:
-	cd ${LIBNBCOMPAT_SRCDIR} && ${SETENV} CC="${CC}" ./configure &&	\
+	cd ${LIBNBCOMPAT_SRCDIR} && ${SETENV}				\
+		CC="${CC}" CPPFLAGS="${CPPFLAGS:M*}" ./configure &&	\
 		${MAKE_PROGRAM}
 
 post-install:
