@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.2 1999/12/13 20:36:22 bad Exp $
+$NetBSD: patch-aa,v 1.3 2000/02/15 04:46:24 bad Exp $
 
---- Makefile.in.orig	Thu Jul  8 06:33:18 1999
-+++ Makefile.in	Tue Aug 17 00:06:35 1999
-@@ -141,7 +141,7 @@
+--- Makefile.in.orig	Sun Feb 13 04:06:45 2000
++++ Makefile.in	Tue Feb 15 04:09:49 2000
+@@ -144,7 +144,7 @@
  # These are built from source in the Docs directory
  EXTRA_DIST = INSTALL-SOURCE-GENERIC README 			PUBLIC INSTALL-SOURCE MIRRORS
  
--SUBDIRS = @docs_dirs@ @readline_dir@ client @sql_server_dirs@ 			scripts include tests man @bench_dirs@ support-files
+-SUBDIRS = include @docs_dirs@ @readline_dir@ client 			@sql_server_dirs@ scripts tests man 			@bench_dirs@ support-files
 +SUBDIRS = @sql_server_dirs@ tests @bench_dirs@
  
  
