@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/09/03 13:08:04 atatat Exp $
+# $NetBSD: Makefile,v 1.26 2003/09/13 14:29:30 jlam Exp $
 
 DISTNAME=	Mail-SpamAssassin-2.55
 PKGNAME=	spamassassin-2.55
@@ -94,11 +94,11 @@ post-extract:
 
 post-patch:
 .for f in INSTALL README USAGE lib/Mail/SpamAssassin/Conf.pm		\
-	  spamd/README.spamd spamd/README.spamd-vpopmail sql/README
+		spamd/README.spamd spamd/README.spamd-vpopmail sql/README
 	@${SED} -e "s,/usr/share,${PREFIX}/share,g"			\
 		-e "s,/usr/bin,${PREFIX}/bin,g"				\
 		-e "s,/usr/lib,${PREFIX}/lib,g"				\
-		-e "s,/etc/mail,${PKG_SYSCONFBASE},g"			\
+		-e "s,/etc/mail/spamassassin,${PKG_SYSCONFDIR},g"	\
 		${WRKSRC}/${f} > ${WRKSRC}/${f}.fixed &&		\
 	  ${MV} ${WRKSRC}/${f}.fixed ${WRKSRC}/${f}
 .endfor
