@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:35 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/20 11:56:27 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/04/02 07:58:25 obrien Exp
 #
 
-DISTNAME=	jive-1.1
-CATEGORIES=	misc
-MASTER_SITES=	${MASTER_SITE_SUNSITE}
-MASTER_SITE_SUBDIR= games/amusements
+DISTNAME=		jive-1.1
+CATEGORIES=		misc
+MASTER_SITES=		${MASTER_SITE_SUNSITE}
+MASTER_SITE_SUBDIR=	games/amusements
 
-MAINTAINER=     obrien@FreeBSD.org
+MAINTAINER=		packages@netbsd.org
 
-WRKSRC=		${WRKDIR}/jive
-MAN1=		jive.1
+WRKSRC=			${WRKDIR}/jive
+MAN1=			jive.1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/jive ${PREFIX}/bin

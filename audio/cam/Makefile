@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:09 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/20 11:56:19 frueauf Exp $
 #
 
 DISTNAME=	cam-1.02
@@ -7,8 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE}
 MASTER_SITE_SUBDIR=	apps/sound/mixers
 EXTRACT_SUFX=	.tgz
 
-# FreeBSD maintainer
-MAINTAINER=	erich@FreeBSD.org
+MAINTAINER=	packages@netbsd.org
 
 BUILD_DEPENDS=	${PREFIX}/lib/libncurses.a:${PORTSDIR}/devel/ncurses
 

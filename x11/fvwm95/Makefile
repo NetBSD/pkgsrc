@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:53 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/04/20 11:56:35 frueauf Exp $
 # FreeBSD: Makefile,v 1.17 1997/12/24 01:21:18 alex Exp
 #
 
@@ -8,7 +8,7 @@ CATEGORIES=	x11
 MASTER_SITES=	ftp://mitac11.uia.ac.be/pub/fvwm95/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	andreas@FreeBSD.ORG
+MAINTAINER=	packages@netbsd.org
 
 LIB_DEPENDS=	Xpm.4.:${PORTSDIR}/graphics/xpm
 BUILD_DEPENDS=	${LOCALBASE}/lib/librplay.a:${PORTSDIR}/audio/rplay

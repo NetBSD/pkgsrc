@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:25 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/20 11:56:23 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/09/24 06:55:01 tg Exp
 #
 
@@ -6,7 +6,7 @@ DISTNAME=	giflib-3.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.ccil.org/~esr/giflib/
 
-MAINTAINER=	tg@FreeBSD.ORG
+MAINTAINER=	packages@netbsd.org
 
 post-install:
 .if !defined(NOPORTDOCS)

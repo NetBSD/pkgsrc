@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.9 1998/04/15 10:38:30 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/04/20 11:56:25 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/08/20 10:33:35 jkh Exp
 #
 
-DISTNAME=	tcl8.0p2
-PKGNAME=	tcl-8.0p2
-CATEGORIES=	lang
-MASTER_SITES=	ftp://ftp.sunlabs.com/pub/tcl/
+DISTNAME=		tcl8.0p2
+PKGNAME=		tcl-8.0p2
+CATEGORIES=		lang
+MASTER_SITES=		ftp://ftp.sunlabs.com/pub/tcl/
 
-MAINTAINER=	jkh@freebsd.org
+MAINTAINER=		packages@netbsd.org
 
-WRKSRC=		${WRKDIR}/tcl8.0/unix
-GNU_CONFIGURE=	yes
+WRKSRC=			${WRKDIR}/tcl8.0/unix
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
-CONFIGURE_ENV+=  PORTSDIR=${PORTSDIR}
+CONFIGURE_ENV+=		PORTSDIR=${PORTSDIR}
 
-MAN1=		tclsh.1
-MAN3= Alloc.3 AddErrInfo.3 AllowExc.3 AppInit.3 AssocData.3 Async.3 \
+MAN1=	tclsh.1
+MAN3=	Alloc.3 AddErrInfo.3 AllowExc.3 AppInit.3 AssocData.3 Async.3 \
 	BackgdErr.3 Backslash.3 BoolObj.3 CallDel.3 CmdCmplt.3 Concat.3 \
 	CrtChannel.3 CrtChnlHdlr.3 CrtCloseHdlr.3 Eval.3 CrtCommand.3 \
 	CrtFileHdlr.3 CrtInterp.3 CrtMathFnc.3 CrtObjCmd.3 CrtSlave.3 \
@@ -97,7 +97,7 @@ MAN3= Alloc.3 AddErrInfo.3 AllowExc.3 AppInit.3 AssocData.3 Async.3 \
 	Tcl_UntraceVar2.3 Tcl_UpVar.3 Tcl_UpVar2.3 Tcl_UpdateLinkedVar.3 \
 	Tcl_VarEval.3 Tcl_VarTraceInfo.3 Tcl_VarTraceInfo2.3 Tcl_WaitForEvent.3 \
 	Tcl_Write.3 Tcl_WrongNumArgs.3
-MANN= Tcl.n after.n append.n array.n bgerror.n binary.n break.n case.n \
+MANN=	Tcl.n after.n append.n array.n bgerror.n binary.n break.n case.n \
 	catch.n cd.n clock.n close.n concat.n continue.n eof.n error.n eval.n \
 	exec.n exit.n expr.n fblocked.n fconfigure.n fcopy.n if.n file.n \
 	fileevent.n filename.n flush.n for.n foreach.n format.n gets.n glob.n \

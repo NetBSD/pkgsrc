@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/04/15 10:38:24 agc Exp $
+# $NetBSD: Makefile,v 1.9 1998/04/20 11:56:23 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:49 asami Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.net.lut.ac.uk/kde/stable/Beta3/distribution/tgz/source/ 
  		ftp://ftp.caldera.com/pub/mirrors/kde/stable/Beta3/distribution/tgz/source/
 EXTRACT_SUFX=	.src.tar.gz
 
-MAINTAINER=	se@freebsd.org
+MAINTAINER=	packages@netbsd.org
 
 BUILD_DEPENDS=	moc:${PORTSDIR}/x11/qt
 LIB_DEPENDS=	qt.1.3[0-9]:${PORTSDIR}/x11/qt \

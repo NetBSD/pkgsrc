@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:36 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/20 11:56:27 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/04/20 13:19:32 wosch Exp
 #
 
@@ -6,7 +6,7 @@ DISTNAME=       kp-0.96
 CATEGORIES=	misc tk80
 MASTER_SITES=   ftp://stampede.cs.berkeley.edu/pub/kp/
 
-MAINTAINER=	asami@FreeBSD.org
+MAINTAINER=	packages@netbsd.org
 
 RUN_DEPENDS=	wish8.0:${PORTSDIR}/x11/tk80
 
