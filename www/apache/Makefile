@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.87 2002/01/01 06:12:05 jlam Exp $
+# $NetBSD: Makefile,v 1.88 2002/02/01 16:04:39 jlam Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
 
-DISTNAME=		apache_1.3.22
-PKGNAME=		apache-1.3.22
+DISTNAME=		apache_1.3.23
+PKGNAME=		apache-1.3.23
 CATEGORIES=		www
 MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
 			http://www.apache.de/dist/httpd/ \
@@ -15,7 +15,7 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 MASTER_SITES+=		http://www.modssl.org/source/ \
 			ftp://ftp.uni-trier.de/pub/unix/security/mod_ssl/source/
 DISTFILES+=		${MODSSL_DISTNAME}${EXTRACT_SUFX}
-MODSSL_DISTNAME=	mod_ssl-2.8.5-1.3.22
+MODSSL_DISTNAME=	mod_ssl-2.8.6-1.3.23
 MODSSL_SRC=		${WRKDIR}/${MODSSL_DISTNAME}
 
 MAINTAINER=		jlam@netbsd.org
