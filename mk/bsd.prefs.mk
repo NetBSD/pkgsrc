@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.91 2002/11/17 22:35:23 grant Exp $
+# $NetBSD: bsd.prefs.mk,v 1.92 2002/11/30 16:49:00 grant Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -189,11 +189,14 @@ SHAREMODE?=		${DOCMODE}
 	@${FALSE}
 .endif
 
-# if the system is IPv6-ready NetBSD, compile with IPv6 support turned on.
+# if the system is IPv6-ready, compile with IPv6 support turned on.
 .if (${OPSYS} == "NetBSD") && !defined(USE_SOCKS) && \
     exists(/usr/include/netinet6)
 USE_INET6?=		YES
 .elif ${OPSYS} == "SunOS" && exists(/usr/include/netinet/ip6.h)
+USE_INET6?=		YES
+# other KAME
+.elif exists(/usr/include/netinet6)
 USE_INET6?=		YES
 .else
 USE_INET6?=		NO
