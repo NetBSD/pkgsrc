@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1667 2003/03/17 08:52:05 seb Exp $
+$NetBSD: CHANGES,v 1.1668 2003/03/17 14:24:03 skrll Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1060,7 +1060,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Added quanta-3.1 [markd 2003-03-11]
 	Added kbiff-3.6.3 [markd 2003-03-11]
 	Updated mimedefang to 2.30 [markd 2003-03-11]
-	Added biznet-iso8859-2-1.0 [salo 2003-03-11]
+	Added biznet-iso8859_2-1.0 [salo 2003-03-11]
 	Added tex-ocrb-1.0 [mjl 2003-03-12]
 	Added aewm++-1.0.22 [jschauma 2003-03-12]
 	Added kde-i18n-af-3.1 [markd 2003-03-12]
