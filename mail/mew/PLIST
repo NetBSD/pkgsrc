@@ -1,10 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:28 seb Exp $
-bin/incdir
-bin/incmbox
+@comment $NetBSD: PLIST,v 1.3 2002/02/28 02:41:28 jun Exp $
 bin/mewcat
 bin/mewdecode
 bin/mewencode
-bin/mewinc
 bin/mewls
 @unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/mew.info
 info/mew.info
@@ -57,7 +54,6 @@ man/man1/mewencode.1
 man/man1/mewls.1
 share/emacs/site-lisp/mew/contrib/00readme
 share/emacs/site-lisp/mew/contrib/00readme-namazu.jis
-share/emacs/site-lisp/mew/contrib/README-mewinc.jis
 share/emacs/site-lisp/mew/contrib/mew-browse.el
 share/emacs/site-lisp/mew/contrib/mew-caesar.el
 share/emacs/site-lisp/mew/contrib/mew-fancy-summary.el
