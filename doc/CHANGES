@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4796 2004/02/12 01:57:52 hubertf Exp $
+$NetBSD: CHANGES,v 1.4797 2004/02/12 02:43:37 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -791,3 +791,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added gnuls-5.0 [jmmv 2004-02-11]
 	Updated bochs to 2.1 [hubertf 2004-02-12]
 	Updated bochs to 2.1.1 [hubertf 2004-02-12]
+	Added libpathan-1.2.2 [minskim 2004-02-12]
