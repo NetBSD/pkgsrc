@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1586 2003/03/07 16:19:26 bouyer Exp $
+$NetBSD: CHANGES,v 1.1587 2003/03/07 18:23:20 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -985,3 +985,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated tuxpaint to 0.9.10 [wiz 2003-03-07]
 	Updated tuxpaint-stamps to 2003.02.22 [wiz 2003-03-07]
 	Added tcl-fbsql-1.05 [bouyer 2003-03-07]
+	Updated pureftpd to 1.0.14 [salo 2003-03-07]
