@@ -1,16 +1,16 @@
-$NetBSD: patch-af,v 1.5 2001/10/23 09:55:01 jlam Exp $
+$NetBSD: patch-af,v 1.6 2001/12/23 17:02:32 bjoern Exp $
 
---- tcl.m4.orig	Tue Aug  8 21:17:11 2000
-+++ tcl.m4	Sun Jul 29 08:54:14 2001
-@@ -595,6 +595,7 @@
+--- tcl.m4.orig	Sat Oct 20 02:24:15 2001
++++ tcl.m4
+@@ -601,6 +601,7 @@
+     # Step 3: set configuration options based on system name and version.
  
      do64bit_ok=no
-     fullSrcDir=`cd $srcdir; pwd`
 +    TCL_LIB_SPEC_RPATH=""
      EXTRA_CFLAGS=""
      TCL_EXPORT_FILE_SUFFIX=""
      UNSHARED_LIB_SUFFIX=""
-@@ -790,28 +791,36 @@
+@@ -910,28 +911,36 @@
  	    LD_SEARCH_FLAGS=""
  	    ;;
  	NetBSD-*|FreeBSD-[[1-2]].*|OpenBSD-*)
@@ -52,7 +52,7 @@ $NetBSD: patch-af,v 1.5 2001/10/23 09:55:01 jlam Exp $
  	    ], [
  		SHLIB_CFLAGS=""
  		SHLIB_LD="echo tclLdAout $CC \{$SHLIB_CFLAGS\} | `pwd`/tclsh -r"
-@@ -973,6 +982,9 @@
+@@ -1129,6 +1138,9 @@
  	    DL_LIBS="-ldl"
  	    LDFLAGS=""
  	    LD_SEARCH_FLAGS='-Wl,-R,${LIB_RUNTIME_DIR}'
@@ -61,8 +61,8 @@ $NetBSD: patch-af,v 1.5 2001/10/23 09:55:01 jlam Exp $
 +	    TCL_LIB_VERSIONS_OK=nodots
  	    ;;
  	SunOS-5*)
- 	    SHLIB_CFLAGS="-KPIC"
-@@ -1012,6 +1024,9 @@
+ 
+@@ -1173,6 +1185,9 @@
  	    else
  		LD_SEARCH_FLAGS='-R ${LIB_RUNTIME_DIR}'
  	    fi
