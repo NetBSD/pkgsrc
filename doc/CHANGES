@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6614 2004/07/20 13:20:15 adam Exp $
+$NetBSD: CHANGES,v 1.6615 2004/07/20 13:59:54 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3468,3 +3468,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libspectrum to 0.2.2 [adam 2004-07-20]
 	Updated fuse to 0.7.0 [adam 2004-07-20]
 	Updated fuse-utils to 0.7.0 [adam 2004-07-20]
+	Updated bidwatcher to 1.3.15nb1 [tron 2004-07-20]
