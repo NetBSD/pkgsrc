@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 1998/05/06 19:37:02 frueauf Exp $
+# $NetBSD: Makefile,v 1.33 1998/05/11 01:57:28 mycroft Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -40,7 +40,8 @@
     SUBDIR += kde
     SUBDIR += kdebase
     SUBDIR += kdelibs
-    SUBDIR += lesstif
+#    SUBDIR += lesstif
+    SUBDIR += lesstif-current	# conflicts with lesstif, above
 #    SUBDIR += libdnd
 #    SUBDIR += libsx
 #    SUBDIR += lupe
