@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/05/02 11:55:38 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/05/05 16:39:18 jmmv Exp $
 
 PKGNAME=		courier-authldap-${BASE_VERS}
-PKGREVISION?=	1
+PKGREVISION?=		1
 COMMENT=		Courier LDAP authentication module
 
 CONFLICTS=		courier-imap-ldap-[0-9]*
