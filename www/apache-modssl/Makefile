@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.5 1998/10/03 21:01:15 tv Exp $
+# $NetBSD: Makefile,v 1.6 1998/10/03 22:00:23 tv Exp $
 #
 
-PKGNAME=	apache-modssl-1.3.1
+PKGNAME=	apache-1.3.2-modssl-2.0.12
 CATEGORIES=	www security
 
 MASTER_SITES+=	http://www.engelschall.com/sw/mod_ssl/distrib/ \
 		ftp://ftp.engelschall.com/sw/mod_ssl/ \
 		ftp://ftp.ulpgc.es/pub/mod_ssl/
-DISTFILES+=	mod_ssl-2.0.6-1.3.1${EXTRACT_SUFX}
-EXTRACT_ONLY+=	mod_ssl-2.0.6-1.3.1${EXTRACT_SUFX}
+DISTFILES+=	mod_ssl-2.0.12-1.3.2${EXTRACT_SUFX}
+EXTRACT_ONLY+=	mod_ssl-2.0.12-1.3.2${EXTRACT_SUFX}
 
 DEPENDS+=	SSLeay-0.9.0b:../../security/ssleay
 
-CONFLICTS=	apache-1.3.1
+CONFLICTS=	apache-1.3.1 apache-1.3.2 apache-modssl-1.3.2
 
 RESTRICTED=	"Contains cryptography"
 IS_INTERACTIVE=	yes
@@ -40,8 +40,8 @@ fetch-depends:
 
 pre-patch: pre-patch-modssl
 pre-patch-modssl:
-	@cd ${WRKDIR}/mod_ssl-2.0.6-1.3.1 \
-		&& ${ECHO_MSG} "===>  Applying mod_ssl-2.0.6 extension" \
+	@cd ${WRKDIR}/mod_ssl-2.0.12-1.3.2 \
+		&& ${ECHO_MSG} "===>  Applying mod_ssl-2.0.12 extension" \
 		&& ./configure --with-apache=../${DISTNAME}
 
 pre-install: certificate
