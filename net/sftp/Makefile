@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 1999/12/21 22:39:30 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1999/12/27 23:53:43 hubertf Exp $
 #
 
-DISTNAME=	sftp-0.4
+DISTNAME=	sftp-0.5
 CATEGORIES=	net security
 MASTER_SITES=	ftp://ftp.xbill.org/pub/sftp/
 
