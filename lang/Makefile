@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2000/11/22 16:53:49 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2000/11/23 12:48:21 skrll Exp $
 # FreeBSD Id: Makefile,v 1.82 1997/09/30 07:49:24 asami Exp
 #
 
@@ -36,7 +36,7 @@
     SUBDIR += kaffe
     SUBDIR += kali
     SUBDIR += libperl
-#   SUBDIR += libperl-current
+#   SUBDIR += libperl-current		# libperl is newer
     SUBDIR += librep
     SUBDIR += mawk
     SUBDIR += minischeme
@@ -47,7 +47,7 @@
     SUBDIR += p2c
     SUBDIR += perl5
     SUBDIR += perl5-base
-#   SUBDIR += perl5-current
+#   SUBDIR += perl5-current		# perl-base is newer
     SUBDIR += py-extclass
     SUBDIR += py-html-docs
     SUBDIR += python
