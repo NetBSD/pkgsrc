@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/06/20 14:38:16 tron Exp $
+# $NetBSD: Makefile,v 1.12 1998/06/22 12:27:10 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:58:03 gj Exp
 #
 
@@ -17,7 +17,6 @@ GNU_CONFIGURE=	yes
 USE_PERL5=	yes
 CONFIGURE_ARGS+= --with-screen=${SCREEN_TYPE}
 INSTALL_TARGET=	install install-perl
-MAN1=		xvile.1
 
 .include "../../mk/bsd.prefs.mk"
 
