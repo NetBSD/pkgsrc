@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:46:20 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/30 15:41:48 markd Exp $
 
 DISTNAME=	kbiff-3.6.3
 PKGREVISION=	2
@@ -14,6 +14,6 @@ USE_BUILDLINK2=		yes
 USE_GMAKE=              yes
 GNU_CONFIGURE=          yes
 
-.include "../../x11/kde3/buildlink2.mk"
+.include "../../meta-pkgs/kde3/buildlink2.mk"
 .include "../../x11/kdelibs3/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
