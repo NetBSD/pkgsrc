@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6558 2004/07/14 18:09:00 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6559 2004/07/14 20:12:34 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3393,3 +3393,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated neon to 0.24.7 [epg 2004-07-14]
 	Updated pkglint to 3.88 [wiz 2004-07-14]
 	Updated dovecot to 0.99.10.7 [xtraeme 2004-07-14]
+	Removed courier-maildirmake [jlam 2004-07-14]
+	Added courier-maildir-0.45.6 [jlam 2004-07-14]
+	Updated courier-auth to 0.45.6 [jlam 2004-07-14]
+	Updated courier-imap to 3.0.5 [jlam 2004-07-14]
+	Updated sqwebmail to 4.0.5 [jlam 2004-07-14]
