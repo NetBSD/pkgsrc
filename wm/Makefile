@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2002/03/18 09:28:44 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2002/03/18 23:04:41 wiz Exp $
 #
 
 COMMENT=	window managers (for X)
@@ -7,6 +7,7 @@ SUBDIR+=	9wm
 SUBDIR+=	afterstep
 SUBDIR+=	amaterus
 SUBDIR+=	amiwm
+SUBDIR+=	bbconf
 SUBDIR+=	bbkeys
 SUBDIR+=	bbpager
 SUBDIR+=	blackbox
