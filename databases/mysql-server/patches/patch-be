@@ -1,7 +1,7 @@
 $NetBSD$
 
 --- mit-pthreads/machdep/engine-m68000-netbsd.h.orig	Sun Oct 12 14:07:37 1997
-+++ mit-pthreads/machdep/engine-m68000-netbsd.h	Mon Nov 15 18:25:36 1999
++++ mit-pthreads/machdep/engine-m68000-netbsd.h	Mon Nov 15 18:37:19 1999
 @@ -3,6 +3,9 @@
   *
   * $Id: engine-m68000-netbsd.h,v 1.51 1994/11/08 15:39:15 proven Exp $
