@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/02/13 14:57:20 adam Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/17 19:12:31 wiz Exp $
 #
 
 DISTNAME=	libsndfile-1.0.6
@@ -9,10 +9,9 @@ MAINTAINER=	dillo@giga.or.at
 HOMEPAGE=	http://www.mega-nerd.com/libsndfile/
 COMMENT=	Library for reading and writing audio files
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 PKGCONFIG_OVERRIDE=	sndfile.pc.in
 
 .include "../../mk/bsd.prefs.mk"
