@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2000/09/09 17:33:13 wiz Exp $
+
+--- libdi_d/config.sh.orig	Sat Feb  5 08:26:23 2000
++++ libdi_d/config.sh
+@@ -1770,7 +1770,7 @@
+ # Get platform information
+ OS_SYS=`(uname -s) 2>/dev/null`
+ OS_REL=`(uname -r) 2>/dev/null`
+-OS_MACH=`(uname -m) 2>/dev/null`
++OS_MACH=@MACHINE_ARCH@
+ OS_NODE=`(uname -n) 2>/dev/null`
+ 
+ if [ -z "$OS_SYS" ]
