@@ -1,7 +1,8 @@
-Parse::Yapp 
+Parse::Yapp
 
-Yet Another Perl Parser compiler.  Compiles yacc-like LALR grammars to
-generate Perl OO parser modules.  It lets you create Perl OO fully
-reentrant LALR(1) parser modules (see the Yapp.pm pod pages for more
-details) and has been designed to be functionally as close as possible
-to yacc, but using the full power of Perl and opened for enhancements.
+Yet Another Perl Parser compiler.  Compiles yacc-like LALR grammars
+to generate Perl OO parser modules.  It lets you create Perl OO
+fully reentrant LALR(1) parser modules (see the Yapp.pm pod pages
+for more details) and has been designed to be functionally as close
+as possible to yacc, but using the full power of Perl and opened
+for enhancements.
