@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/17 21:30:50 grant Exp $
+# $NetBSD: Makefile,v 1.15 2003/09/17 19:41:30 grant Exp $
 #
 
 DISTNAME=	gnome-objc-1.0.40
@@ -16,12 +16,14 @@ USE_X11=		YES
 PTHREAD_OPTS+=		require
 
 GNU_CONFIGURE=		YES
+USE_PKGLOCALEDIR=	YES
 CONFIGURE_ENV+=		OBJC="${CC}"
 
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
+GCC_REQD=		3.0
+
 .include "../../x11/gnome-libs/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
-
 .include "../../mk/bsd.pkg.mk"
