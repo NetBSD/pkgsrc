@@ -1,7 +1,4 @@
-@comment $NetBSD: PLIST.NetBSD,v 1.7 2000/07/25 05:15:00 jlam Exp $
-bin/cpumemusage_applet
-bin/deskguide_applet
-bin/diskusage_applet
+@comment $NetBSD: PLIST,v 1.17 2000/07/31 10:41:56 jlam Exp $
 bin/gmenu
 bin/gnome-about
 bin/gnome-convert
@@ -19,19 +16,15 @@ bin/gnome-session
 bin/gnome-smproxy
 bin/gnome-terminal
 bin/gnome-wm
-bin/multiload_applet
 bin/panel
 bin/save-session
 bin/session-properties
 bin/tasklist_applet
-etc/CORBA/servers/cpumemusage_applet.gnorba
 etc/CORBA/servers/deskguide_applet.gnorba
-etc/CORBA/servers/diskusage_applet.gnorba
 etc/CORBA/servers/fish_applet.gnorba
 etc/CORBA/servers/gen_util.gnorba
 etc/CORBA/servers/gnome-terminal.gnorba
 etc/CORBA/servers/help-browser.gnorba
-etc/CORBA/servers/multiload_applet.gnorba
 etc/CORBA/servers/panel.gnorba
 etc/CORBA/servers/tasklist_applet.gnorba
 etc/sound/events/mailcheck.soundlist
@@ -62,11 +55,6 @@ share/applets/Amusements/fish_applet.desktop
 share/applets/Clocks/.directory
 share/applets/Clocks/clock_applet.desktop
 share/applets/Monitors/.directory
-share/applets/Monitors/cpuload_applet.desktop
-share/applets/Monitors/cpumemusage_applet.desktop
-share/applets/Monitors/diskusage_applet.desktop
-share/applets/Monitors/memload_applet.desktop
-share/applets/Monitors/swapload_applet.desktop
 share/applets/Multimedia/.directory
 share/applets/Network/.directory
 share/applets/Network/mailcheck_applet.desktop
@@ -838,19 +826,14 @@ share/pixmaps/vnterm.xpm
 @dirrm share/gnome/help/gen_util_applet/no
 @dirrm share/gnome/help/gen_util_applet
 @dirrm share/gnome/help/gnome-terminal/de
-@dirrm share/gnome/help/gnome-terminal/es/figures
 @dirrm share/gnome/help/gnome-terminal/es/stylesheet-images
 @dirrm share/gnome/help/gnome-terminal/es
-@dirrm share/gnome/help/gnome-terminal/it/figures
 @dirrm share/gnome/help/gnome-terminal/it/stylesheet-images
 @dirrm share/gnome/help/gnome-terminal/it
-@dirrm share/gnome/help/gnome-terminal/da/figures
 @dirrm share/gnome/help/gnome-terminal/da/stylesheet-images
 @dirrm share/gnome/help/gnome-terminal/da
-@dirrm share/gnome/help/gnome-terminal/no/figures
 @dirrm share/gnome/help/gnome-terminal/no/stylesheet-images
 @dirrm share/gnome/help/gnome-terminal/no
-@dirrm share/gnome/help/gnome-terminal/C/figures
 @dirrm share/gnome/help/gnome-terminal/C/stylesheet-images
 @dirrm share/gnome/help/gnome-terminal/C
 @dirrm share/gnome/help/gnome-terminal
@@ -874,7 +857,6 @@ share/pixmaps/vnterm.xpm
 @dirrm share/gnome/help/printer_applet/da/stylesheet-images
 @dirrm share/gnome/help/printer_applet/da
 @dirrm share/gnome/help/printer_applet
-@dirrm share/gnome/help/session/C/figures
 @dirrm share/gnome/help/session/C/stylesheet-images
 @dirrm share/gnome/help/session/C
 @dirrm share/gnome/help/session
