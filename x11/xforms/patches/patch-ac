@@ -1,17 +1,32 @@
-$NetBSD: patch-ac,v 1.1 2002/04/17 04:40:42 fredb Exp $
+$NetBSD: patch-ac,v 1.2 2002/04/17 18:18:53 fredb Exp $
 
 --- fd2ps/Imakefile.orig	Tue Apr  2 11:34:02 2002
 +++ fd2ps/Imakefile
-@@ -32,7 +32,7 @@
+@@ -30,9 +30,13 @@
  
+ OBJS	= $(SRCS:.c=.o)
+ 
++LDPRELIBS	=
++JPEGLIBLOC	= ${BUILDLINK_DIR}/lib
++JPEGLIB		= -L${JPEGLIBLOC} -ljpeg
++
  FORMSLIBDIR     = $(TOP)/lib
  FORMSINCDIR     = $(FORMSLIBDIR)       
 -FORMSLIB        = -L$(FORMSLIBDIR) -lforms
-+FORMSLIB        = -L$(FORMSLIBDIR) -lforms -ljpeg -lXpm $(LDFLAGS)
++FORMSLIB        = -L$(FORMSLIBDIR) -lforms $(JPEGLIB) $(XPMLIB) $(LDFLAGS)
  DEPFORMSLIB     = $(FORMSLIBDIR)/libforms.a
  
  #if !UseSystemXpm
-@@ -55,7 +55,7 @@
+@@ -41,6 +45,8 @@
+ XPMLIB		= -L$(XPMLIBDIR)/lib -lXpm
+ DEPXPMLIB	= $(XPMLIBDIR)/lib/libXpm.a
+ XPMINCLUDE	= -I$(XPMINCDIR)
++#else	
++XPMLIB		= -L$(USRLIBDIR) -lXpm
+ #endif
+ 
+ #if Solaris64Bit
+@@ -55,7 +61,7 @@
  		  -Ispec \
  		  -Ixpm \
  		  -I. \
