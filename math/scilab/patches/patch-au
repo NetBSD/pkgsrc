@@ -1,7 +1,7 @@
-$NetBSD: patch-au,v 1.3 1999/10/20 13:16:59 dmcmahill Exp $
+$NetBSD: patch-au,v 1.4 1999/11/23 16:12:40 dmcmahill Exp $
 
---- configure.orig	Thu Sep 17 09:06:23 1998
-+++ configure	Mon Oct  4 21:53:01 1999
+--- ./configure.orig	Thu Sep 17 09:06:23 1998
++++ ./configure	Mon Nov 22 19:55:23 1999
 @@ -44,5 +44,5 @@
  
  # Guess values for system-dependent variables and create Makefiles.
@@ -655,7 +655,7 @@ $NetBSD: patch-au,v 1.3 1999/10/20 13:16:59 dmcmahill Exp $
 +       { echo "configure: error: Unable to configure: Fortran compiler f2c-f77 not found" 1>&2; exit 1; }
 +     fi
 +   else         
-+     for ac_prog in f77 f2c-f77
++     for ac_prog in "${FC}" f77 f2c-f77
 +do
 +# Extract the first word of "$ac_prog", so it can be a program name with args.
 +set dummy $ac_prog; ac_word=$2
@@ -695,7 +695,7 @@ $NetBSD: patch-au,v 1.3 1999/10/20 13:16:59 dmcmahill Exp $
 +     fi
 +   fi
 + 
-+   FC=$F77
++   FC="$F77"
 +   FC_OPTIONS='-O2'
 +   FC_LDFLAGS="-Wl,-R${X11BASE}/lib"
 +   FC_PICFLAGS='-fPIC'
@@ -1457,40 +1457,20 @@ $NetBSD: patch-au,v 1.3 1999/10/20 13:16:59 dmcmahill Exp $
 +if { (eval echo configure:4009: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
-@@ -3738,30 +4050,52 @@
+@@ -3738,29 +4050,29 @@
  if test "$with_pvm" != no; then
  
 -echo $ac_n "checking "for PVM architecture"""... $ac_c" 1>&6
 -echo "configure:3742: checking "for PVM architecture"" >&5
-+case "$host" in
-+  *-*-netbsd*)
-+  ## with NetBSD, use the version of pvm3 which is part of the package collection
 +  echo $ac_n "checking "for PVM architecture"""... $ac_c" 1>&6
-+echo "configure:4057: checking "for PVM architecture"" >&5
-+  echo "$ac_t"""NETBSD"" 1>&6
-+  cat >> confdefs.h <<\EOF
-+#define WITH_PVM 1
-+EOF
-+
-+  PVMARCH=NETBSD
-+  PVMLIB=${LOCALBASE}/lib/libpvm3.a
-+  PVMGLIB=${LOCALBASE}/lib/libgpvm3.a
-+  PVMSCIDIR=pvm
-+  PVMSCILIB=libs/pvm.a
-+  PVMTARGET=pvm-no-build
-+  ;;
-+
-+  *)
-+
-+  echo $ac_n "checking "for PVM architecture"""... $ac_c" 1>&6
-+echo "configure:4074: checking "for PVM architecture"" >&5
++echo "configure:4054: checking "for PVM architecture"" >&5
  if eval "test \"`echo '$''{'ac_cv_PVM_arch'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    
 -ac_cv_PVM_arch=`./pvm3/lib/pvmgetarch`
 -
-+  ac_cv_PVM_arch=`./pvm3/lib/pvmgetarch`
++  ac_cv_PVM_arch=`${LOCALBASE}/pvm3/lib/pvmgetarch`
 +  
  fi
  
@@ -1514,109 +1494,106 @@ $NetBSD: patch-au,v 1.3 1999/10/20 13:16:59 dmcmahill Exp $
 -  PVMTARGET=scilex-lib
 -fi
 +    PVMARCH="$ac_cv_PVM_arch"
-+    PVMGLIB="\$(SCIDIR)/pvm3/lib/$ac_cv_PVM_arch/libgpvm3.a"
-+    PVMLIB="\$(SCIDIR)/pvm3/lib/$ac_cv_PVM_arch/libpvm3.a"
++    PVMGLIB="\$(LOCALBASE)/pvm3/lib/$ac_cv_PVM_arch/libgpvm3.a"
++    PVMLIB="\$(LOCALBASE)/pvm3/lib/$ac_cv_PVM_arch/libpvm3.a"
 +    PVMSCIDIR=pvm
 +    PVMSCILIB=libs/pvm.a
-+    PVMTARGET=scilex-lib
++    PVMTARGET=pvm-no-build
 +  fi
-+  ;;
  
-+esac
  fi
- 
-@@ -3822,5 +4156,5 @@
+@@ -3822,5 +4134,5 @@
  
  echo $ac_n "checking for main in -ldl""... $ac_c" 1>&6
 -echo "configure:3825: checking for main in -ldl" >&5
-+echo "configure:4159: checking for main in -ldl" >&5
++echo "configure:4137: checking for main in -ldl" >&5
  ac_lib_var=`echo dl'_'main | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
-@@ -3830,5 +4164,5 @@
+@@ -3830,5 +4142,5 @@
  LIBS="-ldl  $LIBS"
  cat > conftest.$ac_ext <<EOF
 -#line 3833 "configure"
-+#line 4167 "configure"
++#line 4145 "configure"
  #include "confdefs.h"
  
-@@ -3837,5 +4171,5 @@
+@@ -3837,5 +4149,5 @@
  ; return 0; }
  EOF
 -if { (eval echo configure:3840: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
-+if { (eval echo configure:4174: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
++if { (eval echo configure:4152: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
-@@ -3878,5 +4212,5 @@
+@@ -3878,5 +4190,5 @@
  echo $ac_n "  Testing version (need $CHK_TCL_MAJOR.$CHK_TCL_MINOR or later)... " $ac_c
  cat > conftest.$ac_ext <<EOF
 -#line 3881 "configure"
-+#line 4215 "configure"
++#line 4193 "configure"
  #include "confdefs.h"
  
-@@ -3963,5 +4297,5 @@
+@@ -3963,5 +4275,5 @@
  echo $ac_n "  ""$ac_c"
  echo $ac_n "checking for Tcl_DoOneEvent in -lm""... $ac_c" 1>&6
 -echo "configure:3966: checking for Tcl_DoOneEvent in -lm" >&5
-+echo "configure:4300: checking for Tcl_DoOneEvent in -lm" >&5
++echo "configure:4278: checking for Tcl_DoOneEvent in -lm" >&5
  ac_lib_var=`echo m'_'Tcl_DoOneEvent | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
-@@ -3971,5 +4305,5 @@
+@@ -3971,5 +4283,5 @@
  LIBS="-lm $m $X_LIBS $X_EXTRA_LIBS $TCLTK_LIBS $LIBS"
  cat > conftest.$ac_ext <<EOF
 -#line 3974 "configure"
-+#line 4308 "configure"
++#line 4286 "configure"
  #include "confdefs.h"
  /* Override any gcc2 internal prototype to avoid an error.  */
-@@ -3982,5 +4316,5 @@
+@@ -3982,5 +4294,5 @@
  ; return 0; }
  EOF
 -if { (eval echo configure:3985: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
-+if { (eval echo configure:4319: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
++if { (eval echo configure:4297: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
-@@ -4045,5 +4379,5 @@
+@@ -4045,5 +4357,5 @@
  echo $ac_n "  Testing version (need $CHK_TK_MAJOR.$CHK_TK_MINOR or later)... " $ac_c
  cat > conftest.$ac_ext <<EOF
 -#line 4048 "configure"
-+#line 4382 "configure"
++#line 4360 "configure"
  #include "confdefs.h"
  
-@@ -4126,5 +4460,5 @@
+@@ -4126,5 +4438,5 @@
  echo $ac_n "  ""$ac_c"
  echo $ac_n "checking for Tk_BindEvent in -lm""... $ac_c" 1>&6
 -echo "configure:4129: checking for Tk_BindEvent in -lm" >&5
-+echo "configure:4463: checking for Tk_BindEvent in -lm" >&5
++echo "configure:4441: checking for Tk_BindEvent in -lm" >&5
  ac_lib_var=`echo m'_'Tk_BindEvent | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
-@@ -4134,5 +4468,5 @@
+@@ -4134,5 +4446,5 @@
  LIBS="-lm $m -lX11 $X_LIBS $X_EXTRA_LIBS $TCLTK_LIBS $LIBS"
  cat > conftest.$ac_ext <<EOF
 -#line 4137 "configure"
-+#line 4471 "configure"
++#line 4449 "configure"
  #include "confdefs.h"
  /* Override any gcc2 internal prototype to avoid an error.  */
-@@ -4145,5 +4479,5 @@
+@@ -4145,5 +4457,5 @@
  ; return 0; }
  EOF
 -if { (eval echo configure:4148: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
-+if { (eval echo configure:4482: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
++if { (eval echo configure:4460: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=yes"
-@@ -4286,5 +4620,5 @@
+@@ -4286,5 +4598,5 @@
  # and sets the high bit in the cache file unless we assign to the vars.
  (set) 2>&1 |
 -  case `(ac_space=' '; set) 2>&1` in
 +  case `(ac_space=' '; set | grep ac_space) 2>&1` in
    *ac_space=\ *)
      # `set' does not quote correctly, so add quotes (double-quote substitution
-@@ -4353,5 +4687,5 @@
+@@ -4353,5 +4665,5 @@
      exec \${CONFIG_SHELL-/bin/sh} $0 $ac_configure_args --no-create --no-recursion ;;
    -version | --version | --versio | --versi | --vers | --ver | --ve | --v)
 -    echo "$CONFIG_STATUS generated by autoconf version 2.12"
 +    echo "$CONFIG_STATUS generated by autoconf version 2.13"
      exit 0 ;;
    -help | --help | --hel | --he | --h)
-@@ -4372,7 +4706,9 @@
+@@ -4372,7 +4684,9 @@
  $ac_vpsub
  $extrasub
 +s%@SHELL@%$SHELL%g
