@@ -73,9 +73,13 @@ AC_SEARCH_LIBS(tgetent, [termcap termlib curses ncurses])
 
 dnl Checks for header files.
 AC_HEADER_STDC
+AC_CHECK_HEADERS([assert.h ctype.h dirent.h errno.h err.h fnctl.h fnmatch.h \
+	glob.h limits.h md5.h netdb.h pwd.h regext.h signal.h stdarg.h \
+	stdio.h stdlib.h string.h termcap.h termios.h time.h unistd.h vis.h])
 AC_CHECK_HEADERS([db1/db.h db.h])
-AC_CHECK_HEADERS([fnmatch.h regex.h])
-AC_CHECK_HEADERS([sys/ioctl.h sys/resource.h sys/utsname.h sys/wait.h])
+AC_CHECK_HEADERS([sys/cdefs.h sys/file.h sys/ioctl.h sys/mount.h sys/param.h \
+	sys/poll.h sys/queue.h sys/resource.h sys/signal.h sys/statvfs.h \
+	sys/stat.h sys/time.h sys/types.h sys/utsname.h sys/vfs.h sys/wait.h])
 
 # Checks for library functions.
 AC_CHECK_FUNCS([chflags dbopen tgetent vfork])
