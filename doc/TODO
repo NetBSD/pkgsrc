@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2176 2004/09/27 20:43:44 cube Exp $
+$NetBSD: TODO,v 1.2177 2004/09/28 12:53:12 adam Exp $
 
 Suggested new packages
 ======================
@@ -303,7 +303,6 @@ Suggested package updates
 	o lavaps-2.5
 	o lbreakout-2.5.1
 	o leafnode-1.10.6
-	o lesstif-0.93.96
 	o libmpeg3-1.5.4
 	o libnet-1.1.2.1
 	o libnids-1.19
