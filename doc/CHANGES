@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4324 2004/01/02 12:04:24 itojun Exp $
+$NetBSD: CHANGES,v 1.4325 2004/01/02 17:04:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -23,3 +23,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xjdic to 2.4 [wiz 2004-01-02]
 	Added sylpheed-claws-ghostscript-viewer-0.6 [cube 2004-01-02]
 	Updated cue to 20031201 [itojun 2004-01-02]
+	Updated ftpproxy to 1.2.2 [taca 2004-01-02]
