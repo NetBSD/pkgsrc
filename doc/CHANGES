@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5700 2004/04/21 01:05:51 dillo Exp $
+$NetBSD: CHANGES,v 1.5701 2004/04/21 08:43:35 salo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2203,3 +2203,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated subversion to 1.0.2 [epg 2004-04-20]
 	Updated trac to 0.6.1 [epg 2004-04-20]
 	Updated freesci to 0.3.4c [dillo 2004-04-21]
+	Updated aspell-slovak to 0.52.0 [salo 2004-04-21]
