@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 1998/11/07 10:52:29 tron Exp $
+$NetBSD: patch-aa,v 1.5 1999/02/15 21:36:05 tron Exp $
 
---- configure.orig	Fri Jul 10 20:40:11 1998
-+++ configure	Sat Nov  7 10:11:11 1998
-@@ -501,9 +501,9 @@
+--- configure.orig	Sat Feb  6 18:57:29 1999
++++ configure	Mon Feb 15 21:10:42 1999
+@@ -506,9 +506,9 @@
  # Prefer explicitly selected file to automatically selected ones.
  if test -z "$CONFIG_SITE"; then
    if test "x$prefix" != xNONE; then
@@ -14,17 +14,8 @@ $NetBSD: patch-aa,v 1.4 1998/11/07 10:52:29 tron Exp $
    fi
  fi
  for ac_site_file in $CONFIG_SITE; do
-@@ -1609,7 +1609,7 @@
- CC=$CXX
- CFLAGS="$CXXFLAGS"
- # Always use our own libtool.
--LIBTOOL='$(SHELL) $(top_builddir)/libtool'
-+LIBTOOL='$(top_builddir)/libtool'
- 
- # Check for any special flags to pass to ltconfig.
- libtool_flags=
-@@ -3447,37 +3447,37 @@
- echo "configure:3448: checking for KDE paths" >&5
+@@ -3939,37 +3941,37 @@
+ echo "configure:3940: checking for KDE paths" >&5
  
    if test -z "$kde_htmldir"; then
 -    kde_htmldir="\$(prefix)/share/doc/HTML"
