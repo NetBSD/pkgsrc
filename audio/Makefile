@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.229 2004/04/30 10:49:57 grant Exp $
+# $NetBSD: Makefile,v 1.230 2004/05/02 04:01:26 grant Exp $
 #
 
 COMMENT=	Audio tools
@@ -69,6 +69,7 @@ SUBDIR+=	gkrellm1-volume
 SUBDIR+=	gkrellm1-xmms
 SUBDIR+=	gmodplay
 SUBDIR+=	gmp3info
+SUBDIR+=	gmpc
 SUBDIR+=	gnome-audio
 SUBDIR+=	gnome-speech
 SUBDIR+=	gnome-vfs2-cdda
