@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2002/10/19 03:04:37 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2002/10/25 11:17:24 drochner Exp $
 
-PKGNAME=		${PYPKGPREFIX}-postgresql-3.2
+PKGNAME=		${PYPKGPREFIX}-postgresql-3.3
 COMMENT=		Python interface to PostgreSQL
 MAINTAINER=		darcy@netbsd.org
 
