@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/08/14 23:14:08 tron Exp $
+# $NetBSD: Makefile,v 1.12 1998/08/15 07:51:31 tron Exp $
 #
 
 DISTNAME=	mtools-3.9.1
@@ -16,7 +16,7 @@ USE_GMAKE=	yes
 
 INFO_FILES=	mtools.info
 
-post-extract:
+pre-patch:
 	@${LN} -s . ${WRKSRC}/mtools
 
 post-patch:
