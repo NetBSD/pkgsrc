@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2000/05/30 20:38:08 jwise Exp $
+# $NetBSD: Makefile,v 1.5 2000/05/31 21:33:50 jwise Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of Xerces-J,
 # because although Xerces runs fine under JDK 1.1, JDK 1.2 or greater is
 # required to build it.
 
-DISTNAME=	Xerces-J-bin.1.1.0
-PKGNAME=	xerces-j-1.1.0
+DISTNAME=	Xerces-J-bin.1.0.3
+PKGNAME=	xerces-j-1.0.3
 CATEGORIES=	textproc www
 MASTER_SITES=	http://xml.apache.org/dist/xerces-j/
 
@@ -18,7 +18,7 @@ NO_BUILD=
 
 USE_JAVA=	yes
 
-WRKSRC=		${WRKDIR}/xerces-1_1_0
+WRKSRC=		${WRKDIR}/xerces-1_0_3
 
 do-install:
 	${MKDIR} ${PREFIX}/lib/java
