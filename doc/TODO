@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.189 2003/01/15 22:50:19 wiz Exp $
+$NetBSD: TODO,v 1.190 2003/01/16 08:26:42 salo Exp $
 
 Suggested new packages
 ======================
@@ -98,8 +98,6 @@ Suggested package updates
 	o dctc-0.84.0
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
-	o eggdrop-1.6.13
-	o ekg-0.20030114
 	o elinks-0.4.0
 	o elm-me-2.4pl100
 	o evilwm-0.99.11 [pkg/19257]
