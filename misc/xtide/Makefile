@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/05/31 15:48:05 agc Exp $
+# $NetBSD: Makefile,v 1.2 2002/01/21 14:01:23 dmcmahill Exp $
 
 DISTNAME=	xtide-2.4
 PKGNAME=	${DISTNAME}
@@ -17,6 +17,7 @@ XTIDE_SRC=	${DISTNAME}${EXTRACT_SUFX}
 
 GNU_CONFIGURE=	yes
 USE_X11=	yes
+USE_XPM=	yes
 
 post-patch:
 	@cd ${WRKSRC}/DOCUMENTATION;					\
