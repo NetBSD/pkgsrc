@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2002/03/13 17:37:22 fredb Exp $
+# $NetBSD: Makefile,v 1.23 2003/04/26 09:49:36 jmmv Exp $
 
 DISTNAME=	WMMail.app-0.64
 PKGNAME=	wmmail-0.64
 PKGREVISION=	1
-CATEGORIES=	mail x11
+CATEGORIES=	mail x11 windowmaker
 MASTER_SITES=	http://www.eecg.utoronto.ca/~chanb/WMMail.app/
 
 MAINTAINER=	tron@netbsd.org
