@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/12/25 12:05:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.22 2005/02/04 14:21:00 wiz Exp $
 #
 
 DISTNAME=		intltool-0.32.1
@@ -12,7 +12,7 @@ COMMENT=		Toolbox for internationalisation
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-DEPENDS=		p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser
+DEPENDS+=		p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser
 
 CONFLICTS=		xml-i18n-tools-[0-9]*
 
