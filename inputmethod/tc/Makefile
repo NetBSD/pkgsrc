@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/24 13:41:27 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/24 13:42:22 grant Exp $
 #
 
 DISTNAME=	tc-2.3
@@ -11,8 +11,7 @@ COMMENT=	T-Code driver for Emacs
 
 .include "../../mk/emacs.mk"
 
-.if ${EMACS_FLAVOR} == "emacs"
-.elif ${EMACS_FLAVOR} == "xemacs"
+.if ${EMACS_FLAVOR} == "xemacs"
 CONFIGURE_ARGS+=--with-emacs=xemacs
 CONFIGURE_ARGS+=--with-lispdir=${EMACS_LISPPREFIX}/tc
 .endif
