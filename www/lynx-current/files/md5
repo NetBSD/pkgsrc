@@ -1,6 +1,6 @@
-$NetBSD: md5,v 1.6 2000/08/11 13:18:45 fredb Exp $
+$NetBSD: md5,v 1.7 2000/10/18 03:55:47 fredb Exp $
 
-MD5 (lynx/lynx2.8.4dev.7.tar.bz2) = bb44496c4ba2d90958a0548054c8b529
+MD5 (lynx/lynx2.8.4dev.10.tar.bz2) = b0f7b58fc8742b126fb78189cb13b948
 MD5 (lynx/lynx-2.8.3.rel1.cs.po) = af4f8890fe06500f878a664bf3eba362
 MD5 (lynx/lynx-2.8.4.da.po) = 8a9a5e30b655ef6bb4541b0fd60d552b
 MD5 (lynx/lynx-2.8.3.rel1.de.po) = 0ed4a1d0a09a6c1742a2808f22c747db
