@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.681 2001/03/07 15:47:33 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.682 2001/03/07 16:04:55 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -1265,7 +1265,6 @@ _FETCH_FILE=								\
 				if [ -n "${FAILOVER_FETCH}" -a -f ${DIGEST_FILE} -a -f ${_DISTDIR}/$$bfile ]; then \
 					alg=`${AWK} 'NF == 4 && $$2 == "('$$file')" && $$3 == "=" {print $$1;}' ${DIGEST_FILE}`; \
 					CKSUM=`${DIGEST} $$alg < ${_DISTDIR}/$$bfile`; \
-set -x ; \
 					CKSUM2=`${AWK} '$$1 == "'$$alg'" && $$2 == "('$$file')" {print $$4;}' <${DIGEST_FILE}`; \
 					if [ "$$CKSUM" = "$$CKSUM2" -o "$$CKSUM2" = "IGNORE" ]; then \
 						continue 2;		\
