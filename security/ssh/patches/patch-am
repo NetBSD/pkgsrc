@@ -1,0 +1,39 @@
+$NetBSD: patch-am,v 1.1 1999/03/02 02:25:53 simonb Exp $
+
+--- sshd.c.orig	Tue Mar  2 12:24:50 1999
++++ sshd.c	Tue Mar  2 12:25:46 1999
+@@ -2510,7 +2510,7 @@
+ 	    
+ 	    if (!strncmp(buf, "challenge ", 10) ||
+ 		!strncmp(buf, "chalnecho ", 10)) {
+-	      sprintf(prompt,"Challenge \"%.100s\": ",&buf[10]);
++	      sprintf(prompt,"%.100s" ,&buf[10]);
+ 	      debug("TIS challenge %s", buf);
+ 	      packet_start(SSH_SMSG_AUTH_TIS_CHALLENGE);
+ 	      packet_put_string(prompt, strlen(prompt));
+--- configure.in.orig	Thu Jul  9 02:41:10 1998
++++ configure.in	Tue Mar  2 12:46:58 1999
+@@ -909,8 +909,8 @@
+     fi
+     AC_MSG_RESULT(Assuming TIS headers and libraries are in $withval.)
+     AC_DEFINE(HAVE_TIS)
+-    CFLAGS="$CFLAGS -I$withval -DHAVE_TIS"
+-    LIBS="-L$withval -lauth -lfwall $LIBS"
++    CFLAGS="$CFLAGS -I$withval/include -DHAVE_TIS"
++    LIBS="-L$withval/lib -lauth -lfwall $LIBS"
+     AC_MSG_WARN(Remember to read README.TIS. The connection between sshd and TIS authentication
+ server is clear text!)
+     ;;
+--- configure.orig	Tue Mar  2 12:55:14 1999
++++ configure	Tue Mar  2 12:58:22 1999
+@@ -6605,8 +6605,8 @@
+ #define HAVE_TIS 1
+ EOF
+ 
+-    CFLAGS="$CFLAGS -I$withval -DHAVE_TIS"
+-    LIBS="-L$withval -lauth -lfwall $LIBS"
++    CFLAGS="$CFLAGS -I$withval/include -DHAVE_TIS"
++    LIBS="-L$withval/lib -lauth -lfwall $LIBS"
+     echo "configure: warning: Remember to read README.TIS. The connection between sshd and TIS authentication
+ server is clear text!" 1>&2
+     ;;
