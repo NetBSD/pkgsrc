@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.11 2005/01/13 01:31:53 xtraeme Exp $
+$NetBSD: patch-af,v 1.12 2005/01/20 04:27:49 xtraeme Exp $
 
---- src/ylocale.cc.orig	2004-08-16 06:58:31.000000000 +0200
-+++ src/ylocale.cc	2005-01-13 02:25:55.000000000 +0100
+--- src/ylocale.cc.orig	2005-01-20 05:16:50.000000000 +0100
++++ src/ylocale.cc	2005-01-20 05:18:15.000000000 +0100
 @@ -15,6 +15,7 @@
  
  #include "intl.h"
@@ -19,6 +19,6 @@ $NetBSD: patch-af,v 1.11 2005/01/13 01:31:53 xtraeme Exp $
 +#else
      if (0 > (int) iconv(instance->toUnicode, &inbuf, &inlen, &outbuf, &outlen))
 +#endif
- 	warn(_("Invalid multibyte string \"%s\": %s"), lStr, strerror(errno));
+         warn(_("Invalid multibyte string \"%s\": %s"), lStr, strerror(errno));
  
      *((YUChar *) outbuf) = 0;
