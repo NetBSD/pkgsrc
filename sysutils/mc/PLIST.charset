@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.charset,v 1.1.2.2 2005/02/21 17:08:00 snj Exp $
+share/mc/mc.charsets
