@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/16 20:24:00 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/23 09:50:51 drochner Exp $
 #
 
 PKGNAME=		gcc3${GCC3_PKGMODIF}-java-3.3
@@ -8,7 +8,7 @@ INFO_FILES=		gcj.info
 
 .include "../../lang/gcc3-c/buildaddon.mk"
 
-BUILD_DEPENDS+=		gcc3${GCC3_PKGMODIF}-c++-3.3:../../lang/gcc3-c++
+BUILD_DEPENDS+=		gcc3${GCC3_PKGMODIF}-c++-3.3nb1:../../lang/gcc3-c++
 CONFIGURE_ARGS+=	--enable-languages="java"
 CONFIGURE_ARGS+=	--with-system-zlib
 # done manually in do-build
