@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/02/14 17:21:44 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/16 15:06:19 jmmv Exp $
 
 DISTNAME=		evolution-1.2.4
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		mail time gnome
 MASTER_SITES=		ftp://ftp.ximian.com/pub/ximian-evolution/source/ \
 			ftp://ximian.netnitco.net/pub/mirrors/ximian/ximian-evolution/source/ \
@@ -21,7 +21,7 @@ HOMEPAGE=		http://ximian.com/products/evolution/
 COMMENT=		GNOME mailer, calendar, contact manager, and communications tool
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
-DEPENDS+=		gnome1-dirs>=1.2:../../misc/gnome1-dirs
+DEPENDS+=		gnome1-dirs>=1.4:../../misc/gnome1-dirs
 DEPENDS+=		psmisc-[0-9]*:../../sysutils/psmisc
 BUILD_USES_MSGFMT=	YES
 
