@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7001 2004/08/26 10:21:49 seb Exp $
+$NetBSD: CHANGES,v 1.7002 2004/08/26 11:08:32 gavan Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4051,3 +4051,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated suse91_openmotif to 9.1nb1 [wiz 2004-08-26]
 	Updated less to 382 [wiz 2004-08-26]
 	Updated offlineimap to 4.0.6 [seb 2004-08-26]
+	Updated gaim to 0.82 [gavan 2004-08-26]
