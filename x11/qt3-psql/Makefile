@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/04/16 14:30:45 recht Exp $
+# $NetBSD: Makefile,v 1.13 2004/07/06 16:59:55 wiz Exp $
 #
 
 .include "../qt3-libs/Makefile.common"
@@ -10,7 +10,7 @@ CONFIGURE_ARGS+=	-I${QTDIR}/include \
 			-I${BUILDLINK_PREFIX.postgresql-lib}/include/postgresql/server \
 			-L${QTDIR}/lib
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 BUILD_QT3=		yes
 
 do-build:
@@ -24,6 +24,6 @@ do-install:
 	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/plugins/sqldrivers/libqsqlpsql.la \
 		${SQLDRVDIR}
 
-.include "../../x11/qt3-libs/buildlink2.mk"
-.include "../../databases/postgresql-lib/buildlink2.mk"
+.include "../../x11/qt3-libs/buildlink3.mk"
+.include "../../databases/postgresql-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
