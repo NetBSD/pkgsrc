@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/24 15:30:34 grant Exp $
+# $NetBSD: Makefile,v 1.15 2004/03/08 20:27:17 minskim Exp $
 #
 
 DISTNAME=		xplanet-1.0.1
@@ -29,6 +29,6 @@ MAKE_ENV+=		LIBS="${LIBS}"
 .include "../../graphics/netpbm/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
-.include "../../x11/tk/buildlink2.mk"
+.include "../../x11/tk83/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"

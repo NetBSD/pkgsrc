@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/03/08 19:52:52 minskim Exp $
+# $NetBSD: Makefile,v 1.26 2004/03/08 20:27:17 minskim Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-Tk-0
@@ -33,6 +33,6 @@ do-patch:
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/srcdist.mk"
 .include "../../lang/tcl83/buildlink2.mk"
-.include "../../x11/tk/buildlink2.mk"
+.include "../../x11/tk83/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
