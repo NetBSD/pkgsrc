@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/09/03 07:22:55 rh Exp $
+# $NetBSD: Makefile,v 1.6 1999/10/07 06:29:31 rh Exp $
 #
 
 DISTNAME=       gnofin-0.6.0
@@ -10,6 +10,7 @@ HOMEPAGE=	http://jagger.me.berkeley.edu/~dfisher/gnofin/
 
 DEPENDS+=	glib-1.2.4:../../devel/glib
 DEPENDS+=	gtk+-1.2.4:../../x11/gtk
+DEPENDS+=	esound-0.2.8:../../audio/esound
 DEPENDS+=	gnome-libs-1.0.16:../../x11/gnome-libs
 
 USE_X11=	yes
