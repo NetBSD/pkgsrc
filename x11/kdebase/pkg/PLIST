@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 1999/11/14 19:53:42 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.19 1999/11/15 00:53:14 hubertf Exp $
 bin/kappfinder
 bin/kappfinder_restart
 bin/kattraction.kss
@@ -221,6 +221,8 @@ share/doc/kde/HTML/en/kdm/index-3.html
 share/doc/kde/HTML/en/kdm/index-4.html
 share/doc/kde/HTML/en/kdm/index.html
 share/doc/kde/HTML/en/kdm/logotp3.gif
+@comment The following is not part of the KDE distrib:
+share/doc/kde/HTML/en/kdm/Daemon.README
 share/doc/kde/HTML/en/kfind/index-1.html
 share/doc/kde/HTML/en/kfind/index-2.html
 share/doc/kde/HTML/en/kfind/index-3.html
