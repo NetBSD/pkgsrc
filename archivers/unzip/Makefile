@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/02/20 22:43:08 martin Exp $
+# $NetBSD: Makefile,v 1.29 2001/06/21 21:08:49 jlam Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 05:30:04 ache Exp 
 #
 
@@ -14,6 +14,8 @@ MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/ \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.info-zip.org/pub/infozip/UnZip.html
 COMMENT=	List, test and extract compressed files in a ZIP archive
+
+USE_BUILDLINK_ONLY=	# defined
 
 MAKEFILE=	unix/Makefile
 ALL_TARGET=	unzips
