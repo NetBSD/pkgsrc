@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/12/09 00:24:51 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/17 11:33:50 grant Exp $
 #
 
 DISTNAME=		phoenix-0.5-i686-pc-linux-gnu
@@ -15,6 +15,9 @@ ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386
 WRKSRC=			${WRKDIR}/phoenix
 NO_CONFIGURE=		# defined
 
+PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
+PHOENIX_LIB=		${PREFIX}/lib/phoenix-linux
+
 do-build:
 
 post-build:
@@ -22,9 +25,18 @@ post-build:
 		${WRKDIR}/phoenix.sh
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/phoenix-linux
-	cd ${WRKSRC}; && ${PAX} -rw . ${PREFIX}/lib/phoenix-linux
+	${INSTALL_DATA_DIR} ${PHOENIX_LIB}
+	cd ${WRKSRC}; && ${CP} -r . ${PHOENIX_LIB}
 	${INSTALL_SCRIPT} ${WRKDIR}/phoenix.sh ${PREFIX}/bin/phoenix-linux
+
+post-install:
+	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
+	${FIND} ${PHOENIX_LIB} \( -type f -o -type l \) -print		\
+		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"			\
+		>> ${PLIST_SRC}
+	${FIND} ${PHOENIX_LIB} -type d -print				\
+		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
+		>> ${PLIST_SRC}
 
 .include "../../mk/bsd.prefs.mk"
 
