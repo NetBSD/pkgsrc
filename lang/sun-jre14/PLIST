@@ -1,10 +1,20 @@
-@comment $NetBSD: PLIST,v 1.5 2003/01/29 11:13:30 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/03/17 18:29:58 jschauma Exp $
 .systemPrefs/.system.lock
 .systemPrefs/.systemRootModFile
 CHANGES
 COPYRIGHT
 ControlPanel.html
 LICENSE
+LICENSE_de
+LICENSE_en
+LICENSE_es
+LICENSE_fr
+LICENSE_it
+LICENSE_ja
+LICENSE_ko
+LICENSE_sv
+LICENSE_zh_CN
+LICENSE_zh_TW
 README
 Welcome.html
 bin/ControlPanel
@@ -20,7 +30,7 @@ bin/rmid
 bin/rmiregistry
 bin/servertool
 bin/tnameserv
-javaws-1_2_0_01-linux-i586-i.zip
+javaws-1_2_0_02-linux-i586-i.zip
 lib/audio/soundbank.gm
 lib/charsets.jar
 lib/cmm/CIEXYZ.pf
