@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/10/30 09:39:30 seb Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/03/22 00:40:50 salo Exp $
 #
 # This Makefile fragment is included by packages that use xerces-c.
 #
@@ -9,7 +9,7 @@
 XERCES_C_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xerces-c
-BUILDLINK_DEPENDS.xerces-c?=		xerces-c>=1.3.0
+BUILDLINK_DEPENDS.xerces-c?=		xerces-c>=1.3.0nb1
 BUILDLINK_PKGSRCDIR.xerces-c?=		../../textproc/xerces-c
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xerces-c=xerces-c
