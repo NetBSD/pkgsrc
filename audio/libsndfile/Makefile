@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/05/23 09:30:10 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/21 16:30:42 martti Exp $
 #
 
 DISTNAME=	libsndfile-1.0.5
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.zipworld.com.au/~erikd/libsndfile/
 
 MAINTAINER=	dillo@giga.or.at
 HOMEPAGE=	http://www.zipworld.com.au/~erikd/libsndfile/
-COMMENT=	library for reading and writing audio files
+COMMENT=	Library for reading and writing audio files
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES

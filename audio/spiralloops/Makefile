@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/19 08:54:27 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 16:30:47 martti Exp $
 #
 
 DISTNAME=		SpiralLoops-2.0.0
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.pawfal.org/SpiralLoops/dload/
 
 MAINTAINER=		collver1@comcast.net
 HOMEPAGE=		http://www.pawfal.org/SpiralLoops/
-COMMENT=		loop based sampler
+COMMENT=		Loop based sampler
 
 # only runs correctly on little-endian machines
 ONLY_FOR_PLATFORM=	*-*-alpha *-*-arc *-*-cobalt *-*-dreamcast \

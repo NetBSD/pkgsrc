@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2003/07/19 18:51:41 jmmv Exp $
+# $NetBSD: Makefile,v 1.74 2003/07/21 16:34:29 martti Exp $
 #
 
-COMMENT=	communication programs
+COMMENT=	Communication programs
 
 SUBDIR+=	aim
 SUBDIR+=	bitchx

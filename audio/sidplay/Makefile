@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 21:23:20 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/21 16:30:45 martti Exp $
 #
 
 DISTNAME=	sidplay-base-1.0.9
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pooka@NetBSD.org
 HOMEPAGE=	http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/
-COMMENT=	tools for playing sidtunes
+COMMENT=	Tools for playing sidtunes
 
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes

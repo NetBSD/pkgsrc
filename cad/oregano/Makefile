@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/07/17 21:25:16 grant Exp $
+# $NetBSD: Makefile,v 1.19 2003/07/21 16:32:12 martti Exp $
 #
 
 DISTNAME=		oregano-0.20
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.dtek.chalmers.se/~d4hult/oregano/download/
 
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.dtek.chalmers.se/~d4hult/oregano/
-COMMENT=		application for schematic capture/simulation of electrical circuits
+COMMENT=		Application for schematic capture/simulation of electrical circuits
 
 DEPENDS+=		gnome1-dirs>=1.2:../../misc/gnome1-dirs
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:23:09 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 16:30:43 martti Exp $
 #
 
 DISTNAME=	CDDB-1.3
@@ -8,7 +8,7 @@ MASTER_SITES=	http://ftp1.sourceforge.net/cddb-py/
 
 MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://cddb-py.sourceforge.net/
-COMMENT=	python module to access the CDDB online database
+COMMENT=	Python module to access the CDDB online database
 
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes
