@@ -1,22 +1,24 @@
-$NetBSD: patch-ah,v 1.1 2004/01/20 02:48:33 jschauma Exp $
+$NetBSD: patch-ah,v 1.2 2004/10/26 13:57:47 adam Exp $
 
---- progs/redbook/Makefile.X11.orig	2003-10-03 10:03:15.000000000 -0400
-+++ progs/redbook/Makefile.X11	2004-01-19 20:47:35.000000000 -0500
-@@ -7,7 +7,7 @@
- INCDIR = $(TOP)/include
- LIBDIR = $(TOP)/lib
+--- configs/default.orig	2004-10-25 17:21:49.000000000 +0000
++++ configs/default
+@@ -14,10 +14,6 @@ MESA_TINY=0
+ DRM_SOURCE_PATH=$(TOP)/../drm
  
--LIBS = -L$(LIBDIR) $(APP_LIB_DEPS)
-+LIBS+= -L$(LIBDIR) $(APP_LIB_DEPS) -lGL -lGLU -lglut
+ # Compiler and flags
+-CC = cc
+-CXX = CC
+-CFLAGS = -O
+-CXXFLAGS = -O
+ GLU_CFLAGS = 
  
- LIB_DEP = $(LIBDIR)/$(GL_LIB) $(LIBDIR)/$(GLU_LIB) $(LIBDIR)/$(GLUT_LIB)
+ # Misc tools and flags
+@@ -52,7 +48,7 @@ GLW_SOURCES = GLwDrawA.c
  
-@@ -28,7 +28,7 @@
- .SUFFIXES: .c
- 
- .c: $(LIB_DEP)
--	$(CC) -I$(INCDIR) $(CFLAGS) $< $(LIBS) -o $@
-+	$(CXX) -I$(INCDIR) $(CFLAGS) $< $(LIBS) -o $@
- 
- 
- 
+ # Directories
+ LIB_DIR = $(TOP)/lib
+-INSTALL_PREFIX = /usr/local
++INSTALL_PREFIX = ${PREFIX}
+ SRC_DIRS = mesa glu glut/glx glw
+ GLU_DIRS = sgi
+ DRIVER_DIRS = x11 osmesa

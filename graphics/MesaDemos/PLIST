@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2004/04/09 13:08:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/10/26 13:57:47 adam Exp $
+share/examples/${PKGNAME}/beos/GLInfo.cpp
+share/examples/${PKGNAME}/beos/demo.cpp
+share/examples/${PKGNAME}/beos/sample.cpp
 share/examples/${PKGNAME}/demos/README
 share/examples/${PKGNAME}/demos/Windows/all.dsp
 share/examples/${PKGNAME}/demos/Windows/bounce.dsp
@@ -58,6 +61,8 @@ share/examples/${PKGNAME}/demos/drawpix
 share/examples/${PKGNAME}/demos/drawpix.c
 share/examples/${PKGNAME}/demos/fire
 share/examples/${PKGNAME}/demos/fire.c
+share/examples/${PKGNAME}/demos/fogcoord
+share/examples/${PKGNAME}/demos/fogcoord.c
 share/examples/${PKGNAME}/demos/fplight
 share/examples/${PKGNAME}/demos/fplight.c
 share/examples/${PKGNAME}/demos/gamma
@@ -90,6 +95,9 @@ share/examples/${PKGNAME}/demos/occlude
 share/examples/${PKGNAME}/demos/occlude.c
 share/examples/${PKGNAME}/demos/osdemo
 share/examples/${PKGNAME}/demos/osdemo.c
+share/examples/${PKGNAME}/demos/osdemo16.c
+share/examples/${PKGNAME}/demos/osdemo32.c
+share/examples/${PKGNAME}/demos/paltex
 share/examples/${PKGNAME}/demos/paltex.c
 share/examples/${PKGNAME}/demos/particles.cxx
 share/examples/${PKGNAME}/demos/particles.h
@@ -288,6 +296,7 @@ share/examples/${PKGNAME}/samples/bitmap2
 share/examples/${PKGNAME}/samples/bitmap2.c
 share/examples/${PKGNAME}/samples/blendeq
 share/examples/${PKGNAME}/samples/blendeq.c
+share/examples/${PKGNAME}/samples/blendxor
 share/examples/${PKGNAME}/samples/blendxor.c
 share/examples/${PKGNAME}/samples/copy
 share/examples/${PKGNAME}/samples/copy.c
@@ -308,7 +317,6 @@ share/examples/${PKGNAME}/samples/logo
 share/examples/${PKGNAME}/samples/logo.c
 share/examples/${PKGNAME}/samples/nurb
 share/examples/${PKGNAME}/samples/nurb.c
-share/examples/${PKGNAME}/samples/oglinfo
 share/examples/${PKGNAME}/samples/oglinfo.c
 share/examples/${PKGNAME}/samples/olympic
 share/examples/${PKGNAME}/samples/olympic.c
@@ -348,6 +356,7 @@ share/examples/${PKGNAME}/util/glstate.h
 share/examples/${PKGNAME}/util/glutskel.c
 share/examples/${PKGNAME}/util/idproj.c
 share/examples/${PKGNAME}/util/imagesgi.h
+share/examples/${PKGNAME}/util/matrix.c
 share/examples/${PKGNAME}/util/mwmborder.c
 share/examples/${PKGNAME}/util/readtex.c
 share/examples/${PKGNAME}/util/readtex.h
@@ -378,10 +387,13 @@ share/examples/${PKGNAME}/xdemos/glxdemo
 share/examples/${PKGNAME}/xdemos/glxdemo.c
 share/examples/${PKGNAME}/xdemos/glxgears
 share/examples/${PKGNAME}/xdemos/glxgears.c
+share/examples/${PKGNAME}/xdemos/glxgears_fbconfig.c
 share/examples/${PKGNAME}/xdemos/glxheads
 share/examples/${PKGNAME}/xdemos/glxheads.c
 share/examples/${PKGNAME}/xdemos/glxinfo
 share/examples/${PKGNAME}/xdemos/glxinfo.c
+share/examples/${PKGNAME}/xdemos/glxpbdemo
+share/examples/${PKGNAME}/xdemos/glxpbdemo.c
 share/examples/${PKGNAME}/xdemos/glxpixmap
 share/examples/${PKGNAME}/xdemos/glxpixmap.c
 share/examples/${PKGNAME}/xdemos/glxswapcontrol
@@ -390,12 +402,14 @@ share/examples/${PKGNAME}/xdemos/manywin
 share/examples/${PKGNAME}/xdemos/manywin.c
 share/examples/${PKGNAME}/xdemos/offset
 share/examples/${PKGNAME}/xdemos/offset.c
+share/examples/${PKGNAME}/xdemos/opencloseopen.c
+share/examples/${PKGNAME}/xdemos/pbdemo
 share/examples/${PKGNAME}/xdemos/pbdemo.c
+share/examples/${PKGNAME}/xdemos/pbinfo
 share/examples/${PKGNAME}/xdemos/pbinfo.c
 share/examples/${PKGNAME}/xdemos/pbutil.c
 share/examples/${PKGNAME}/xdemos/pbutil.h
 share/examples/${PKGNAME}/xdemos/shape.c
-share/examples/${PKGNAME}/xdemos/testgl5.c
 share/examples/${PKGNAME}/xdemos/vgears.c
 share/examples/${PKGNAME}/xdemos/vindex.c
 share/examples/${PKGNAME}/xdemos/vtest.c
@@ -405,6 +419,10 @@ share/examples/${PKGNAME}/xdemos/xdemo
 share/examples/${PKGNAME}/xdemos/xdemo.c
 share/examples/${PKGNAME}/xdemos/xfont
 share/examples/${PKGNAME}/xdemos/xfont.c
+share/examples/${PKGNAME}/xdemos/xrotfontdemo
+share/examples/${PKGNAME}/xdemos/xrotfontdemo.c
+share/examples/${PKGNAME}/xdemos/xuserotfont.c
+share/examples/${PKGNAME}/xdemos/xuserotfont.h
 @dirrm share/examples/${PKGNAME}/xdemos
 @dirrm share/examples/${PKGNAME}/windml
 @dirrm share/examples/${PKGNAME}/util
@@ -414,4 +432,5 @@ share/examples/${PKGNAME}/xdemos/xfont.c
 @dirrm share/examples/${PKGNAME}/ggi
 @dirrm share/examples/${PKGNAME}/demos/Windows
 @dirrm share/examples/${PKGNAME}/demos
+@dirrm share/examples/${PKGNAME}/beos
 @dirrm share/examples/${PKGNAME}

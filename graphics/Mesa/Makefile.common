@@ -1,5 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2004/10/13 18:00:08 tv Exp $
-#
+# $NetBSD: Makefile.common,v 1.32 2004/10/26 13:55:17 adam Exp $
 
 DISTNAME=	MesaLib-${MESA_VERSION}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -9,7 +8,7 @@ CATEGORIES=	graphics
 MASTER_SITES= 	${MASTER_SITE_SOURCEFORGE:=mesa3d/}
 EXTRACT_SUFX=	.tar.bz2
 
-MESA_VERSION=	6.0.1
+MESA_VERSION=	6.2
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.mesa3d.org/
@@ -21,8 +20,8 @@ USE_X11=		yes
 BUILDING_MESA=		yes
 NO_CONFIGURE=		yes
 DIST_SUBDIR=		Mesa-${MESA_VERSION}
-PATCHDIR?=		${.CURDIR}/../../graphics/MesaLib/patches
-DISTINFO_FILE?=		${.CURDIR}/../../graphics/MesaLib/distinfo
+PATCHDIR?=		${.CURDIR}/../MesaLib/patches
+DISTINFO_FILE?=		${.CURDIR}/../MesaLib/distinfo
 
 INSTALLATION_DIRS+=	lib
 
