@@ -1,30 +1,27 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:46:03 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/07/21 23:31:24 schmonz Exp $
 #
 
 DISTNAME=		fastforward-0.51
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		http://cr.yp.to/software/
 
-MAINTAINER=		zuntum@NetBSD.org
+MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://cr.yp.to/fastforward.html
-COMMENT=		/etc/aliases support for qmail
+COMMENT=		Sendmail-style /etc/aliases support for qmail
 
-DEPENDS+=		qmail>=1.03nb1:../../mail/qmail
+DEPENDS+=		{qmail>=1.03nb7,netqmail>=1.05}:../../mail/qmail
 
-ALL_TARGET=		it
+CONFLICTS+=		postfix-[0-9]* sendmail-[0-9]*
+
+ALL_TARGET=		it install instcheck
 INSTALL_TARGET=		setup check
 
-.include "../../mk/bsd.prefs.mk"
-
-NO_MTREE=	YES
-LOCALBASE=	/
-
-RESTRICTED=		"unsure of djb's license"
+RESTRICTED=		"modified source and binaries may not be distributed"
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-post-patch:
+do-configure:
 	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
 	${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
 	${ECHO} ${QMAILDIR} > ${WRKSRC}/conf-qmail
