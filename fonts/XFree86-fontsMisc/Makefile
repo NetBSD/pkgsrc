@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/07/29 05:54:11 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/07/29 06:36:33 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-fontsMisc-${XF_VER}
@@ -9,8 +9,6 @@ DISTFILES=	XFree86-4.4.0-src-1.tgz XFree86-4.4.0-src-4.tgz
 MAINTAINER=	xfree86@blef.org
 HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	XFree86 default bitmap fonts
-
-CONFLICTS=	xorg-fontsMisc-[0-9]*
 
 NO_XFREE86_TARGETS=	# defined
 FONTS_MISC=		# defined
