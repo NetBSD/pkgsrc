@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/08/26 17:18:22 sakamoto Exp $
+# $NetBSD: Makefile,v 1.5 2000/11/30 15:48:09 itojun Exp $
 #
 
 DISTNAME=	Canna35b2
@@ -16,12 +16,19 @@ HOMEPAGE=	http://www.nec.co.jp/japanese/product/computer/soft/canna/
 
 INSTALL_TARGET=	install install.man
 
+BUILD_DEFS+=	USE_INET6
+
 .include "../../mk/bsd.prefs.mk"
+.if ${USE_INET6} == "YES"
+INET6=		-DINET6
+.else
+INET6=		# empty
+.endif
 CANNAOWNER?=    daemon
 CANNAGROUP?=    daemon
 DICT_DIR?=	/var/dict
 MAKE_ENV+=      CANNAOWNER=${CANNAOWNER} CANNAGROUP=${CANNAGROUP} \
-		DICT_DIR=${DICT_DIR}
+		DICT_DIR=${DICT_DIR} INET6=${INET6}
 PLIST_SUBST=	CANNAOWNER=${CANNAOWNER}	\
 		CANNAGROUP=${CANNAGROUP}	\
 		DICT_DIR=${DICT_DIR}		\
