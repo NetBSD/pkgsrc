@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1469 2003/02/23 05:03:44 kei Exp $
+$NetBSD: CHANGES,v 1.1470 2003/02/23 11:29:49 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -811,3 +811,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added teTeX2-bin-2.0.1 [kei 2003-02-23]
 	Added teTeX2-share-2.0.1 [kei 2003-02-23]
 	Added teTeX2-sharesrc-2.0.1 [kei 2003-02-23]
+	Updated star to 1.4.3 [salo 2003-02-23]
