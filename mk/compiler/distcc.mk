@@ -1,4 +1,4 @@
-# $NetBSD: distcc.mk,v 1.19 2004/03/17 06:07:06 jlam Exp $
+# $NetBSD: distcc.mk,v 1.20 2004/11/17 17:14:43 tv Exp $
 
 .if !defined(COMPILER_DISTCC_MK)
 COMPILER_DISTCC_MK=	defined
@@ -32,25 +32,22 @@ _USE_DISTCC=	YES
 .endif
 
 .if !empty(_USE_DISTCC:M[yY][eE][sS])
-EVAL_PREFIX+=	_DISTCCBASE=distcc
+EVAL_PREFIX+=		_DISTCCBASE=distcc
 _DISTCCBASE_DEFAULT=	${LOCALBASE}
-_DISTCCBASE?=		${LOCALBASE}
 
-.  if exists(${_DISTCCBASE}/bin/distcc)
 _DISTCC_DIR=	${WRKDIR}/.distcc
 _DISTCC_LINKS=	# empty
-.    if !empty(_LANGUAGES.distcc:Mc)
+.  if !empty(_LANGUAGES.distcc:Mc)
 _DISTCC_CC:=	${_DISTCC_DIR}/bin/${PKG_CC:T}
 _DISTCC_LINKS+=	_DISTCC_CC
 PKG_CC:=	${_DISTCC_CC}
 CC=		${PKG_CC:T}
-.    endif
-.    if !empty(_LANGUAGES.distcc:Mc++)
+.  endif
+.  if !empty(_LANGUAGES.distcc:Mc++)
 _DISTCC_CXX:=	${_DISTCC_DIR}/bin/${PKG_CXX:T}
 _DISTCC_LINKS+=	_DISTCC_CXX
 PKG_CXX:=	${_DISTCC_CXX}
 CXX=		${PKG_CXX:T}
-.    endif
 .  endif
 
 # Prepend the path to the compiler to the PATH.
@@ -72,17 +69,15 @@ BUILD_ENV+=	DISTCC_VERBOSE=${DISTCC_VERBOSE:Q}
 .endif
 
 # Create symlinks for the compiler into ${WRKDIR}.
-.  if exists(${_DISTCCBASE}/bin/distcc)
-.    for _target_ in ${_DISTCC_LINKS}
-.      if !target(${${_target_}})
+.  for _target_ in ${_DISTCC_LINKS}
+.    if !target(${${_target_}})
 override-tools: ${${_target_}}
 ${${_target_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${LN} -fs ${_DISTCCBASE}/bin/distcc ${.TARGET}
-.      endif
-.    endfor
-.  endif
+.    endif
+.  endfor
 .endif	# _USE_DISTCC == "yes"
 
 .endif # COMPILER_DISTCC_MK
