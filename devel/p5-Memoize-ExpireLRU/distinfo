@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/12/19 06:45:19 grant Exp $
+
+SHA1 (Memoize-ExpireLRU-0.55.tar.gz) = 1bbae0c555d570a19513c3b0a67fc5b064a2f51e
+Size (Memoize-ExpireLRU-0.55.tar.gz) = 5887 bytes
