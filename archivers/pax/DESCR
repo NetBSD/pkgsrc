@@ -1,0 +1,7 @@
+NetBSD pax is the POSIX standard archiver with many extensions.
+
+pax will read, write, and list the members of an archive file, and will
+copy directory hierarchies.
+
+pax operation is independent of the specific archive format, and supports
+a wide variety of different archive formats.
