@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2255 2003/05/17 18:29:54 jtb Exp $
+$NetBSD: CHANGES,v 1.2256 2003/05/17 19:00:46 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1984,3 +1984,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated nxtvepg to 2.5.1 [magick 2003-05-17]
 	Updated cue to 20030421 [itojun 2003-05-17]
 	Updated vm to 7.15 [jtb 2003-05-17]
+	Added p5-Set-Scalar-1.17 [dmcmahill 2003-05-17]
