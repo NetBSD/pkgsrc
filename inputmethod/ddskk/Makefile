@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2002/11/14 03:53:37 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2002/11/30 13:29:21 taca Exp $
 #
 
-DISTNAME=	ddskk-20020929
+DISTNAME=	ddskk-20021124
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	http://openlab.ring.gr.jp/skk/maintrunk/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,8 +11,6 @@ HOMEPAGE=	http://openlab.ring.gr.jp/skk/index.html
 COMMENT=	Japanese input methods for Emacs
 
 DEPENDS=	${PKGNAME_PREFIX}apel>=10.2:../../devel/apel
-
-DISTFILES=	ddskk20020929${EXTRACT_SUFX}
 
 MAKEFLAGS=	EMACS=${EMACS_BIN}
 ALL_TARGET=	elc
