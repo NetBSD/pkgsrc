@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2004/03/09 11:22:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2004/04/20 12:22:22 markd Exp $
 bin/artsmessage
 bin/checkXML
 ${CUPS}bin/cupsdconf
@@ -1271,6 +1271,7 @@ share/kde/apps/khtml/khtml_popupmenu.rc
 share/kde/apps/kio_uiserver/icons/crystalsvg/16x16/apps/kio_uiserver.png
 share/kde/apps/kjava/kjava.jar
 share/kde/apps/kjava/kjava.policy
+share/kde/apps/kjava/pluginsinfo
 share/kde/apps/knotify/eventsrc
 share/kde/apps/ksgmltools2/customization/README
 share/kde/apps/ksgmltools2/customization/af/catalog
@@ -2534,7 +2535,9 @@ share/kde/icons/crystalsvg/128x128/filesystems/folder.png
 share/kde/icons/crystalsvg/128x128/filesystems/folder_crystal.png
 share/kde/icons/crystalsvg/128x128/filesystems/folder_favorite.png
 share/kde/icons/crystalsvg/128x128/filesystems/folder_green.png
+share/kde/icons/crystalsvg/128x128/filesystems/folder_green_open.png
 share/kde/icons/crystalsvg/128x128/filesystems/folder_grey.png
+share/kde/icons/crystalsvg/128x128/filesystems/folder_grey_open.png
 share/kde/icons/crystalsvg/128x128/filesystems/folder_home.png
 share/kde/icons/crystalsvg/128x128/filesystems/folder_home2.png
 share/kde/icons/crystalsvg/128x128/filesystems/folder_html.png
@@ -2543,6 +2546,8 @@ share/kde/icons/crystalsvg/128x128/filesystems/folder_important.png
 share/kde/icons/crystalsvg/128x128/filesystems/folder_locked.png
 share/kde/icons/crystalsvg/128x128/filesystems/folder_man.png
 share/kde/icons/crystalsvg/128x128/filesystems/folder_open.png
+share/kde/icons/crystalsvg/128x128/filesystems/folder_orange.png
+share/kde/icons/crystalsvg/128x128/filesystems/folder_orange_open.png
 share/kde/icons/crystalsvg/128x128/filesystems/folder_print.png
 share/kde/icons/crystalsvg/128x128/filesystems/folder_red.png
 share/kde/icons/crystalsvg/128x128/filesystems/folder_red_open.png
@@ -2551,7 +2556,9 @@ share/kde/icons/crystalsvg/128x128/filesystems/folder_tar.png
 share/kde/icons/crystalsvg/128x128/filesystems/folder_txt.png
 share/kde/icons/crystalsvg/128x128/filesystems/folder_video.png
 share/kde/icons/crystalsvg/128x128/filesystems/folder_violet.png
+share/kde/icons/crystalsvg/128x128/filesystems/folder_violet_open.png
 share/kde/icons/crystalsvg/128x128/filesystems/folder_yellow.png
+share/kde/icons/crystalsvg/128x128/filesystems/folder_yellow_open.png
 share/kde/icons/crystalsvg/128x128/filesystems/lockoverlay.png
 share/kde/icons/crystalsvg/128x128/filesystems/network.png
 share/kde/icons/crystalsvg/128x128/filesystems/network_local.png
@@ -2873,11 +2880,14 @@ share/kde/icons/crystalsvg/16x16/devices/zip_unmount.png
 share/kde/icons/crystalsvg/16x16/filesystems/chardevice.png
 share/kde/icons/crystalsvg/16x16/filesystems/desktop.png
 share/kde/icons/crystalsvg/16x16/filesystems/exec.png
+share/kde/icons/crystalsvg/16x16/filesystems/file_broken.png
 share/kde/icons/crystalsvg/16x16/filesystems/folder.png
 share/kde/icons/crystalsvg/16x16/filesystems/folder_crystal.png
 share/kde/icons/crystalsvg/16x16/filesystems/folder_favorite.png
 share/kde/icons/crystalsvg/16x16/filesystems/folder_green.png
+share/kde/icons/crystalsvg/16x16/filesystems/folder_green_open.png
 share/kde/icons/crystalsvg/16x16/filesystems/folder_grey.png
+share/kde/icons/crystalsvg/16x16/filesystems/folder_grey_open.png
 share/kde/icons/crystalsvg/16x16/filesystems/folder_home.png
 share/kde/icons/crystalsvg/16x16/filesystems/folder_home2.png
 share/kde/icons/crystalsvg/16x16/filesystems/folder_html.png
@@ -2887,6 +2897,8 @@ share/kde/icons/crystalsvg/16x16/filesystems/folder_inbox.png
 share/kde/icons/crystalsvg/16x16/filesystems/folder_locked.png
 share/kde/icons/crystalsvg/16x16/filesystems/folder_man.png
 share/kde/icons/crystalsvg/16x16/filesystems/folder_open.png
+share/kde/icons/crystalsvg/16x16/filesystems/folder_orange.png
+share/kde/icons/crystalsvg/16x16/filesystems/folder_orange_open.png
 share/kde/icons/crystalsvg/16x16/filesystems/folder_outbox.png
 share/kde/icons/crystalsvg/16x16/filesystems/folder_print.png
 share/kde/icons/crystalsvg/16x16/filesystems/folder_red.png
@@ -2897,7 +2909,9 @@ share/kde/icons/crystalsvg/16x16/filesystems/folder_tar.png
 share/kde/icons/crystalsvg/16x16/filesystems/folder_txt.png
 share/kde/icons/crystalsvg/16x16/filesystems/folder_video.png
 share/kde/icons/crystalsvg/16x16/filesystems/folder_violet.png
+share/kde/icons/crystalsvg/16x16/filesystems/folder_violet_open.png
 share/kde/icons/crystalsvg/16x16/filesystems/folder_yellow.png
+share/kde/icons/crystalsvg/16x16/filesystems/folder_yellow_open.png
 share/kde/icons/crystalsvg/16x16/filesystems/link.png
 share/kde/icons/crystalsvg/16x16/filesystems/lockoverlay.png
 share/kde/icons/crystalsvg/16x16/filesystems/network.png
@@ -3514,11 +3528,14 @@ share/kde/icons/crystalsvg/32x32/devices/zip_unmount.png
 share/kde/icons/crystalsvg/32x32/filesystems/chardevice.png
 share/kde/icons/crystalsvg/32x32/filesystems/desktop.png
 share/kde/icons/crystalsvg/32x32/filesystems/exec.png
+share/kde/icons/crystalsvg/32x32/filesystems/file_broken.png
 share/kde/icons/crystalsvg/32x32/filesystems/folder.png
 share/kde/icons/crystalsvg/32x32/filesystems/folder_crystal.png
 share/kde/icons/crystalsvg/32x32/filesystems/folder_favorite.png
 share/kde/icons/crystalsvg/32x32/filesystems/folder_green.png
+share/kde/icons/crystalsvg/32x32/filesystems/folder_green_open.png
 share/kde/icons/crystalsvg/32x32/filesystems/folder_grey.png
+share/kde/icons/crystalsvg/32x32/filesystems/folder_grey_open.png
 share/kde/icons/crystalsvg/32x32/filesystems/folder_home.png
 share/kde/icons/crystalsvg/32x32/filesystems/folder_home2.png
 share/kde/icons/crystalsvg/32x32/filesystems/folder_html.png
@@ -3527,6 +3544,8 @@ share/kde/icons/crystalsvg/32x32/filesystems/folder_important.png
 share/kde/icons/crystalsvg/32x32/filesystems/folder_locked.png
 share/kde/icons/crystalsvg/32x32/filesystems/folder_man.png
 share/kde/icons/crystalsvg/32x32/filesystems/folder_open.png
+share/kde/icons/crystalsvg/32x32/filesystems/folder_orange.png
+share/kde/icons/crystalsvg/32x32/filesystems/folder_orange_open.png
 share/kde/icons/crystalsvg/32x32/filesystems/folder_print.png
 share/kde/icons/crystalsvg/32x32/filesystems/folder_red.png
 share/kde/icons/crystalsvg/32x32/filesystems/folder_red_open.png
@@ -3535,7 +3554,9 @@ share/kde/icons/crystalsvg/32x32/filesystems/folder_tar.png
 share/kde/icons/crystalsvg/32x32/filesystems/folder_txt.png
 share/kde/icons/crystalsvg/32x32/filesystems/folder_video.png
 share/kde/icons/crystalsvg/32x32/filesystems/folder_violet.png
+share/kde/icons/crystalsvg/32x32/filesystems/folder_violet_open.png
 share/kde/icons/crystalsvg/32x32/filesystems/folder_yellow.png
+share/kde/icons/crystalsvg/32x32/filesystems/folder_yellow_open.png
 share/kde/icons/crystalsvg/32x32/filesystems/link.png
 share/kde/icons/crystalsvg/32x32/filesystems/lockoverlay.png
 share/kde/icons/crystalsvg/32x32/filesystems/network.png
@@ -3677,11 +3698,14 @@ share/kde/icons/crystalsvg/48x48/devices/zip_unmount.png
 share/kde/icons/crystalsvg/48x48/filesystems/chardevice.png
 share/kde/icons/crystalsvg/48x48/filesystems/desktop.png
 share/kde/icons/crystalsvg/48x48/filesystems/exec.png
+share/kde/icons/crystalsvg/48x48/filesystems/file_broken.png
 share/kde/icons/crystalsvg/48x48/filesystems/folder.png
 share/kde/icons/crystalsvg/48x48/filesystems/folder_crystal.png
 share/kde/icons/crystalsvg/48x48/filesystems/folder_favorite.png
 share/kde/icons/crystalsvg/48x48/filesystems/folder_green.png
+share/kde/icons/crystalsvg/48x48/filesystems/folder_green_open.png
 share/kde/icons/crystalsvg/48x48/filesystems/folder_grey.png
+share/kde/icons/crystalsvg/48x48/filesystems/folder_grey_open.png
 share/kde/icons/crystalsvg/48x48/filesystems/folder_home.png
 share/kde/icons/crystalsvg/48x48/filesystems/folder_home2.png
 share/kde/icons/crystalsvg/48x48/filesystems/folder_html.png
@@ -3691,6 +3715,8 @@ share/kde/icons/crystalsvg/48x48/filesystems/folder_inbox.png
 share/kde/icons/crystalsvg/48x48/filesystems/folder_locked.png
 share/kde/icons/crystalsvg/48x48/filesystems/folder_man.png
 share/kde/icons/crystalsvg/48x48/filesystems/folder_open.png
+share/kde/icons/crystalsvg/48x48/filesystems/folder_orange.png
+share/kde/icons/crystalsvg/48x48/filesystems/folder_orange_open.png
 share/kde/icons/crystalsvg/48x48/filesystems/folder_outbox.png
 share/kde/icons/crystalsvg/48x48/filesystems/folder_print.png
 share/kde/icons/crystalsvg/48x48/filesystems/folder_red.png
@@ -3700,7 +3726,9 @@ share/kde/icons/crystalsvg/48x48/filesystems/folder_tar.png
 share/kde/icons/crystalsvg/48x48/filesystems/folder_txt.png
 share/kde/icons/crystalsvg/48x48/filesystems/folder_video.png
 share/kde/icons/crystalsvg/48x48/filesystems/folder_violet.png
+share/kde/icons/crystalsvg/48x48/filesystems/folder_violet_open.png
 share/kde/icons/crystalsvg/48x48/filesystems/folder_yellow.png
+share/kde/icons/crystalsvg/48x48/filesystems/folder_yellow_open.png
 share/kde/icons/crystalsvg/48x48/filesystems/link.png
 share/kde/icons/crystalsvg/48x48/filesystems/lockoverlay.png
 share/kde/icons/crystalsvg/48x48/filesystems/network.png
@@ -3834,11 +3862,14 @@ share/kde/icons/crystalsvg/64x64/devices/zip_unmount.png
 share/kde/icons/crystalsvg/64x64/filesystems/chardevice.png
 share/kde/icons/crystalsvg/64x64/filesystems/desktop.png
 share/kde/icons/crystalsvg/64x64/filesystems/exec.png
+share/kde/icons/crystalsvg/64x64/filesystems/file_broken.png
 share/kde/icons/crystalsvg/64x64/filesystems/folder.png
 share/kde/icons/crystalsvg/64x64/filesystems/folder_crystal.png
 share/kde/icons/crystalsvg/64x64/filesystems/folder_favorite.png
 share/kde/icons/crystalsvg/64x64/filesystems/folder_green.png
+share/kde/icons/crystalsvg/64x64/filesystems/folder_green_open.png
 share/kde/icons/crystalsvg/64x64/filesystems/folder_grey.png
+share/kde/icons/crystalsvg/64x64/filesystems/folder_grey_open.png
 share/kde/icons/crystalsvg/64x64/filesystems/folder_home.png
 share/kde/icons/crystalsvg/64x64/filesystems/folder_home2.png
 share/kde/icons/crystalsvg/64x64/filesystems/folder_html.png
@@ -3847,6 +3878,8 @@ share/kde/icons/crystalsvg/64x64/filesystems/folder_important.png
 share/kde/icons/crystalsvg/64x64/filesystems/folder_locked.png
 share/kde/icons/crystalsvg/64x64/filesystems/folder_man.png
 share/kde/icons/crystalsvg/64x64/filesystems/folder_open.png
+share/kde/icons/crystalsvg/64x64/filesystems/folder_orange.png
+share/kde/icons/crystalsvg/64x64/filesystems/folder_orange_open.png
 share/kde/icons/crystalsvg/64x64/filesystems/folder_print.png
 share/kde/icons/crystalsvg/64x64/filesystems/folder_red.png
 share/kde/icons/crystalsvg/64x64/filesystems/folder_red_open.png
@@ -3855,7 +3888,9 @@ share/kde/icons/crystalsvg/64x64/filesystems/folder_tar.png
 share/kde/icons/crystalsvg/64x64/filesystems/folder_txt.png
 share/kde/icons/crystalsvg/64x64/filesystems/folder_video.png
 share/kde/icons/crystalsvg/64x64/filesystems/folder_violet.png
+share/kde/icons/crystalsvg/64x64/filesystems/folder_violet_open.png
 share/kde/icons/crystalsvg/64x64/filesystems/folder_yellow.png
+share/kde/icons/crystalsvg/64x64/filesystems/folder_yellow_open.png
 share/kde/icons/crystalsvg/64x64/filesystems/lockoverlay.png
 share/kde/icons/crystalsvg/64x64/filesystems/network.png
 share/kde/icons/crystalsvg/64x64/filesystems/network_local.png
@@ -4173,11 +4208,9 @@ share/kde/mimelnk/application/x-kontour.desktop
 share/kde/mimelnk/application/x-kpovmodeler.desktop
 share/kde/mimelnk/application/x-kpresenter.desktop
 share/kde/mimelnk/application/x-krita.desktop
-share/kde/mimelnk/application/x-kspread-crypt.desktop
 share/kde/mimelnk/application/x-kspread.desktop
 share/kde/mimelnk/application/x-kudesigner.desktop
 share/kde/mimelnk/application/x-kugar.desktop
-share/kde/mimelnk/application/x-kword-crypt.desktop
 share/kde/mimelnk/application/x-kword.desktop
 share/kde/mimelnk/application/x-lha.desktop
 share/kde/mimelnk/application/x-linguist.desktop

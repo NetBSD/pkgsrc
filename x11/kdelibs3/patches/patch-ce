@@ -1,20 +1,20 @@
-$NetBSD: patch-ce,v 1.4 2004/03/09 11:22:23 markd Exp $
+$NetBSD: patch-ce,v 1.5 2004/04/20 12:22:23 markd Exp $
 
---- kioslave/file/Makefile.in.orig	2004-03-05 01:30:03.000000000 +1300
+--- kioslave/file/Makefile.in.orig	2004-04-06 03:12:31.000000000 +1200
 +++ kioslave/file/Makefile.in
-@@ -475,7 +475,7 @@ SOURCES = $(kio_file_la_SOURCES)
+@@ -482,7 +482,7 @@ kdelnk_DATA = file.protocol
  all: docs-am  all-am
  
  .SUFFIXES:
 -.SUFFIXES: .cc .lo .o .obj
 +.SUFFIXES: .cpp .cc .lo .o .obj
- $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
- #>- 	cd $(top_srcdir) && \
- #>- 	  $(AUTOMAKE) --foreign  kioslave/file/Makefile
-@@ -892,3 +892,34 @@ file.lo: file.moc 
- nmcheck: 
- file.o: file.moc 
+ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am  $(am__configure_deps)
+ #>- 	@for dep in $?; do \
+ #>- 	  case '$(am__configure_deps)' in \
+@@ -917,3 +917,34 @@ nmcheck: 
+ file.lo: file.moc 
  nmcheck-am: nmcheck
+ file.o: file.moc 
 +
 +# no optimization rules
 +
