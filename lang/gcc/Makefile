@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2003/01/28 22:03:27 jlam Exp $
+# $NetBSD: Makefile,v 1.54 2003/04/14 00:20:50 grant Exp $
 
 # Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-2.95.3
@@ -38,17 +38,32 @@ INFO_FILES=		chill.info cpp.info g77.info gcc.info
 
 .if ${OPSYS} == "SunOS"
 CONFLICTS+=		gcc-[0-9]* pgcc-[0-9]*
-.  if defined(CC) && (${CC} != "gcc")
-ALL_TARGET=		bootstrap
-.  endif
 GCC_PREFIX=		${PREFIX}
 PLIST_SRC=		${PKGDIR}/PLIST.SunOS
-.else
-GCC_PREFIX=		${PREFIX}/${PKGNAME}
+.  if ${CC:M*gcc*} == ""
+ALL_TARGET=		bootstrap
+.  endif
+# we know it's a GNU toolchain on Linux and the BSDs.
+.elif
+      ${OPSYS} == "FreeBSD" || \
+      ${OPSYS} == "Linux" || \
+      ${OPSYS} == "NetBSD" || \
+      ${OPSYS} == "OpenBSD"
 CONFIGURE_ARGS+=	--with-gnu-as
 CONFIGURE_ARGS+=	--with-gnu-ld
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
-PLIST_SRC=              ${WRKDIR}/PLIST_DYNAMIC
+GCC_PREFIX=		${PREFIX}/${PKGNAME}
+PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
+.else
+# try to use some sane defaults if we have no idea about the platform.
+CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
+GCC_PREFIX=		${PREFIX}/${PKGNAME}
+PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
+# play it safe, force a bootstrap build if we don't know for sure it
+# is gcc.
+.  if (${OPSYS} != "FreeBSD" && ${OPSYS} != "OpenBSD") && ${CC:M*gcc*} == ""
+ALL_TARGET=		bootstrap
+.  endif
 .endif
 
 GCC_ARCHDIR=	${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}
@@ -78,7 +93,7 @@ pre-configure:
 post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/gcc.mk > ${WRKDIR}/gcc.mk
 
-.if (${OPSYS} == SunOS)
+.if ${OPSYS} == "SunOS"
 #
 # remove empty file and directories that show up when one does:
 #	make install; make deinstall; make install
