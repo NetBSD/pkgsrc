@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2002/08/25 18:38:47 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2003/08/25 10:28:43 drochner Exp $
 #
 
-DISTNAME=	rpc2-1.13
+DISTNAME=	rpc2-1.19
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.coda.cs.cmu.edu/pub/rpc2/src/ \
 		ftp://ftp.wu-wien.ac.at/pub/systems/coda/src/
