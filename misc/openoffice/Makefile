@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2004/01/20 12:21:02 agc Exp $
+# $NetBSD: Makefile,v 1.43 2004/01/22 08:57:03 grant Exp $
 
 DISTNAME=		openoffice-0.0.0.641
 PKGREVISION=		2
@@ -19,24 +19,8 @@ USE_BUILDLINK2=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
-# OpenOffice requires gcc 2.95.2 or better,
-GCC_VERSION!=		${CC} --version
-.if (${GCC_VERSION} != "2.95.2") && (${GCC_VERSION} != "2.95.3")
-BUILD_DEPENDS+= gcc>=2.95.3:../../lang/gcc
-.  if ${OPSYS} == "SunOS"
-GCCPREFIX=		${LOCALBASE}
-CC=			${GCCPREFIX}/bin/gcc
-CXX=			${GCCPREFIX}/bin/g++
-.  else
-GCCPREFIX=		${LOCALBASE}/gcc-2.95.3
-CC=			${GCCPREFIX}/bin/cc
-CXX=			${GCCPREFIX}/bin/c++
-.  endif
-CPP=			${GCCPREFIX}/bin/cpp
-F77=			${GCCPREFIX}/bin/g77
-PKG_FC=			${GCCPREFIX}/bin/g77
-LDFLAGS+=		${RPATH_FLAG}${GCCPREFIX}/lib
-.endif
+# OpenOffice requires gcc 2.95.2 or better.
+GCC_REQD=		2.95.2
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 BUILD_DEPENDS+=		{standalone-tcsh,tcsh}-[0-9]*:../../shells/tcsh
