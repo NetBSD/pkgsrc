@@ -1,0 +1,29 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/05/06 23:22:27 tv Exp $
+
+--- configure.orig	Wed Apr 28 21:03:38 1999
++++ configure	Mon May  3 18:27:59 1999
+@@ -1691,6 +1691,7 @@
+   echo "$ac_t""no" 1>&6
+ fi
+ 
++if false; then
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+@@ -1736,6 +1737,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
+ $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
++fi
+ 
+ # AC_PROG_INSTALL We should only need a AM_PROG_INSTALL
+ 
+@@ -6950,7 +6952,7 @@
+   # This requires readline to be in a standard place. Mosty for linux
+   # there readline may be a shared library.
+   readline_dir=""
+-  readline_link="-lreadline"
++  readline_link="-ledit"
+ fi
+ 
+ 
