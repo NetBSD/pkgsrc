@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5689 2004/04/20 18:05:06 ben Exp $
+$NetBSD: CHANGES,v 1.5690 2004/04/20 19:19:23 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2191,3 +2191,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mathomatic to 11.0bnb1 [minskim 2004-04-20]
 	Added portaudio-18.1 [ben 2004-04-20]
 	Updated audacity to 1.2.0 [ben 2004-04-20]
+	Update php4 to 4.3.6 [jdolecek 2003-04-20]
