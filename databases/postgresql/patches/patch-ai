@@ -1,0 +1,41 @@
+$NetBSD: patch-ai,v 1.5 2000/03/18 17:43:55 jlam Exp $
+
+--- bin/psql/psql.c.orig	Fri Jun  4 17:21:13 1999
++++ bin/psql/psql.c	Thu Mar 16 17:49:44 2000
+@@ -45,28 +45,23 @@
+ #endif
+ 
+ #ifdef HAVE_LIBREADLINE
+-#ifdef HAVE_READLINE_H
+-#include <readline.h>
+-#define USE_READLINE 1
+-#if defined(HAVE_HISTORY_H)
+-#include <history.h>
+-#define USE_HISTORY 1
+-#endif
+-#else
+ #if defined(HAVE_READLINE_READLINE_H)
+ #include <readline/readline.h>
+ #define USE_READLINE 1
++#elif defined(HAVE_READLINE_H)
++#include <readline.h>
++#define USE_READLINE 1
++#endif
++#endif
++#if defined(HAVE_HISTORY)
+ #if defined(HAVE_READLINE_HISTORY_H)
+ #include <readline/history.h>
+ #define USE_HISTORY 1
+-#endif
+-#endif
+-#endif
+-#if defined(HAVE_HISTORY) && !defined(USE_HISTORY)
++#elif defined(HAVE_HISTORY_H)
++#include <history.h>
+ #define USE_HISTORY 1
+ #endif
+ #endif
+-
+ 
+ #ifdef WIN32
+ #define popen(x,y) _popen(x,y)
