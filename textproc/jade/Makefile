@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2001/10/05 10:02:53 tron Exp $
-# FreeBSD Id: Makefile,v 1.15 1999/01/31 11:15:57 dirk Exp
-#
+# $NetBSD: Makefile,v 1.16 2001/10/14 12:19:16 tron Exp $
 
 DISTNAME=	jade-1.2.1
-PKGNAME=	jade-1.2.1nb3
+PKGNAME=	jade-1.2.1nb4
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.jclark.com/pub/jade/ \
 		ftp://ftp.funet.fi/pub/mirrors/ftp.jclark.com/pub/jade/ \
@@ -14,12 +12,17 @@ MAINTAINER=	rh@NetBSD.ORG
 HOMEPAGE=	http://www.jclark.com/jade/
 COMMENT=	Object-oriented SGML/XML parser toolkit and DSSSL engine
 
+PATCH_SITES=		http://ftp.debian.org/debian/pool/main/j/jade/
+PATCHFILES=		jade_1.2.1-18.diff.gz
+PATCH_DIST_STRIP=	-p1
+
 CONFLICTS+=	sp-[0-9]*
 
-USE_BUILDLINK_ONLY=	yes
-GNU_CONFIGURE=		yes
-#USE_LIBINTL=		yes
-USE_LIBTOOL=		yes
+USE_BUILDLINK_ONLY=	YES
+USE_GMAKE=		YES
+GNU_CONFIGURE=		YES
+#USE_LIBINTL=		YES
+USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
 
 JADE_CATALOG_DIR=	${PREFIX}/share/sgml/jade/catalog
@@ -30,18 +33,24 @@ CONFIGURE_ARGS+=	--enable-mif
 
 CXXFLAGS+=		${CFLAGS}
 
+post-patch:
+	@${CHMOD} -R +w ${WRKSRC}
+	@${FIND} ${WRKSRC} -name '*.orig' -size 0c -type f | ${XARGS} ${RM}
+
 post-install:
 	@for prog in jade nsgmls sgmlnorm spam spent sx; do		\
 		${ECHO_MSG} "strip ${PREFIX}/bin/$${prog}";		\
 		strip ${PREFIX}/bin/$${prog};				\
 	done
 	${INSTALL_DATA_DIR} ${PREFIX}/include/sp
-	${INSTALL_DATA} ${WRKSRC}/include/* ${PREFIX}/include/sp
+	${INSTALL_DATA} ${WRKSRC}/include/*.cxx ${WRKSRC}/include/*.h \
+	  ${PREFIX}/include/sp
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/jade
 	${INSTALL_DATA} ${WRKSRC}/jadedoc/*.htm ${PREFIX}/share/doc/jade
 	${INSTALL_DATA_DIR} ${PREFIX}/share/sgml/jade
-	${RM} ${WRKSRC}/dsssl/*jadetex.*	# installed by print/tex-jadetex!!!
 	${INSTALL_DATA} ${WRKSRC}/dsssl/* ${PREFIX}/share/sgml/jade
+# Installed by print/tex-jadetex
+	${RM} ${PREFIX}/share/sgml/jade/*jadetex.*
 
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
