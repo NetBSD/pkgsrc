@@ -1,0 +1,2 @@
+  This is the sieve library from the cyrus imapd distribution.  It helps
+writing programs that parse RFC3028 mail filtering sieve scripts.
