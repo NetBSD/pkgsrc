@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/05/09 04:42:46 minskim Exp $
+
+--- xmmsctrl.c~	Wed Nov 21 18:45:56 2001
++++ xmmsctrl.c	Sun Sep 21 22:34:00 2003
+@@ -38,7 +38,7 @@
+ /* This declaration seems to be missing on my system
+  * Comment it if your are running Debian
+  */
+-void usleep(unsigned long usec);
++/* void usleep(unsigned long usec); */
+ 
+ /* returns true if xmms is playing a stream */
+ static gboolean is_stream_playing(gint);
