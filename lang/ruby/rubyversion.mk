@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.7 2005/01/23 17:33:19 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.8 2005/01/28 13:30:15 minskim Exp $
 #
 
 .ifndef _RUBYVERSION_MK
@@ -121,11 +121,7 @@ RDOC?=			${LOCALBASE}/bin/rdoc${RUBY_VER}
 #
 # RUBY_ARCH is used architecture depended direcotry name.
 #
-.if ${OPSYS} != "Linux"
 RUBY_ARCH?= ${LOWER_ARCH}-${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}
-.else
-RUBY_ARCH?= ${LOWER_ARCH}-${LOWER_OPSYS}-gnu
-.endif
 
 #
 # RUBY_DLEXT is suffix of extention library.
