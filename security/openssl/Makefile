@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2002/08/25 19:23:17 jlam Exp $
+# $NetBSD: Makefile,v 1.61 2002/09/07 07:17:00 jlam Exp $
 
 DISTNAME=		openssl-0.9.6g
 SVR4_PKGNAME=		ossl
@@ -19,6 +19,7 @@ CRYPTO=			YES
 # openssl supplies IDEA/RC5.  IDEA/RC5 need license for commercial use.
 LICENCE=		fee-based-commercial-use
 
+USE_BUILDLINK2=		YES
 CONFIGURE_SCRIPT=	config
 CONFIGURE_ARGS=		shared --openssldir=${PKG_SYSCONFDIR} --prefix=${PREFIX}
 CONFIGURE_ENV=		CC="${CC}"
@@ -76,8 +77,8 @@ LD_PATH_VARNAME=	LD_LIBRARY_PATH
 .endif
 
 .if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
-DEPENDS=		rsaref-2.0p3:../../security/rsaref
-CONFIGURE_ARGS+=	rsaref
+.  include "../../security/rsaref/buildlink2.mk"
+CONFIGURE_ARGS+=	rsaref -L${BUILDLINK_PREFIX.rsaref}/lib
 PLIST_RSAREF=		${PKGDIR}/PLIST.rsaref
 .endif
 
