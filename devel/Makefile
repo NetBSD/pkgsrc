@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.249 2001/10/16 07:13:58 jlam Exp $
+# $NetBSD: Makefile,v 1.250 2001/10/17 12:33:24 agc Exp $
 #
 
 COMMENT=	Development utilities
@@ -88,6 +88,7 @@ SUBDIR+=	ipv6socket_scrub
 SUBDIR+=	isect
 SUBDIR+=	its4
 SUBDIR+=	jakarta-ant
+SUBDIR+=	javadeps
 SUBDIR+=	jlib
 SUBDIR+=	kdbg
 SUBDIR+=	kdebindings2
