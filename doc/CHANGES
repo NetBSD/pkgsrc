@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7677 2004/11/03 15:55:42 adam Exp $
+$NetBSD: CHANGES,v 1.7678 2004/11/03 16:43:02 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5051,3 +5051,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gentoo to 0.11.52 [adam 2004-11-03]
 	Updated gpgme to 1.0.1nb1 [jmmv 2004-11-03]
 	Updated xpaint to 2.7.2 [adam 2004-11-03]
+	Updated py-libxml2 to 2.6.15 [minskim 2004-11-03]
