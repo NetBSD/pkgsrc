@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.66 2001/12/12 12:31:15 abs Exp $
+# $NetBSD: bsd.prefs.mk,v 1.67 2001/12/12 16:30:06 wiz Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -242,21 +242,6 @@ HAVE_BUILTIN_XPM=	YES
 .endif
 .undef __BUILTIN_XPM
 .endif	# CHECK_XPM
-
-.if defined(USE_CURSES) && !defined(NEED_NCURSES)
-NEED_NCURSES=		NO
-.if ${OPSYS} == "NetBSD"
-_INCOMPAT_CURSES=	0.* 1.[0123]* 1.4.* 1.4[A-X]
-.for PATTERN in ${_INCOMPAT_CURSES}
-.if ${OS_VERSION:M${PATTERN}} != ""
-NEED_NCURSES=   	YES
-.endif
-.endfor
-.endif
-# we can NOT pass the NEED_NCURSES flag down as every required package
-# will start to require ncurses, which is not true (and raises some
-# recursive dependency problems!)
-.endif # USE_CURSES
 
 LOCALBASE?=		${DESTDIR}/usr/pkg
 X11BASE?=		${DESTDIR}/usr/X11R6
