@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 22:53:20 grant Exp $
+# $NetBSD: Makefile,v 1.14 2003/09/19 13:26:12 agc Exp $
 #
 
 DISTNAME=	tripwire-1.2
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cerias.purdue.edu/coast/coast-library.html
 COMMENT=	File and directory integrity checker
+
+ONLY_FOR_PLATFORM=	NetBSD-*-* SunOS-*-*
 
 USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES
