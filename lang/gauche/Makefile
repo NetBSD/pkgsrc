@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/08/09 10:59:07 seb Exp $
+# $NetBSD: Makefile,v 1.18 2003/09/17 16:52:10 yyamano Exp $
 #
 
 DISTNAME=	Gauche-0.6.3
@@ -18,7 +18,7 @@ DEPENDS+=	slib-[0-9]*:../../devel/slib
 # Due to GC dynamic loading support, this package runs on limited platforms
 # Plus, it is not LP64-safe
 ONLY_FOR_PLATFORM= NetBSD-*-i386 NetBSD-*-sparc NetBSD-*-mipsel NetBSD-*-powerpc
-ONLY_FOR_PLATFORM+= Linux-*-* SunOS-*-*
+ONLY_FOR_PLATFORM+= Linux-*-* SunOS-*-* Darwin-*-*
 .include "../../mk/bsd.prefs.mk"
 .if (${MACHINE_ARCH} == "i386" && ${OPSYS} == "NetBSD")
 .  if ${OBJECT_FMT} != "ELF"
@@ -43,6 +43,9 @@ INFO_FILES=		gauche-refe.info gauche-refj.info
 CONFIGURE_ARGS+=	--enable-multibyte=${GAUCHE_MULTIBYTE}
 .endif
 
+.if ${OPSYS} == "Darwin"
+.  include "../../devel/dlcompat/buildlink2.mk"
+.endif
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
 
