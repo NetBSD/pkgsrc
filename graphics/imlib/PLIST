@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/04/23 16:24:14 minskim Exp $
+@comment $NetBSD: PLIST,v 1.7.4.1 2004/12/13 18:03:27 salo Exp $
 bin/imlib_config
 bin/imlib-config
 include/gdk_imlib.h
@@ -11,12 +11,12 @@ lib/libImlib.a
 lib/libImlib.la
 lib/libImlib.so
 lib/libImlib.so.10
-lib/libImlib.so.10.14
+lib/libImlib.so.10.15
 lib/libgdk_imlib.a
 lib/libgdk_imlib.la
 lib/libgdk_imlib.so
 lib/libgdk_imlib.so.10
-lib/libgdk_imlib.so.10.14
+lib/libgdk_imlib.so.10.15
 lib/libimlib-bmp.a
 lib/libimlib-bmp.la
 lib/libimlib-bmp.so
