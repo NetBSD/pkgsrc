@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2005/01/29 17:45:35 kim Exp $
+# $NetBSD: Makefile,v 1.49 2005/01/29 18:10:05 kim Exp $
 #
 
 DISTNAME=		jwhois-3.2.2
-PKGREVISION=		13
+PKGREVISION=		14
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GNU:=jwhois/}
 
@@ -25,13 +25,16 @@ BUILD_DEFS+=		JWHOIS_ENABLE_CACHE
 
 .if defined(JWHOIS_ENABLE_CACHE)
 CONFIGURE_ARGS+=	--with-cache
+CONF_FILES_PERMS=	/dev/null /${VARBASE}/db/jwhois.db	\
+			${ROOT_USER} nogroup 0666
+.else
+CONFIGURE_ARGS+=	--without-cache
 .endif
 
 EGDIR=			${PREFIX}/share/examples/jwhois
 CONF_FILES=		${EGDIR}/jwhois.conf.default	\
 			${PKG_SYSCONFDIR}/jwhois.conf
-CONF_FILES_PERMS=	/dev/null /var/db/jwhois.db	\
-			${ROOT_USER} nogroup 0664
+
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/example/jwhois.conf	\
