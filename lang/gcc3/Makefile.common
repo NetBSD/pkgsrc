@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2004/07/03 06:49:18 grant Exp $
+# $NetBSD: Makefile.common,v 1.8 2004/07/03 12:15:22 grant Exp $
 
 GCC_VERSION=	3.3.4
 DISTNAME=	gcc-${GCC_VERSION}
@@ -96,6 +96,13 @@ CONFIGURE_ARGS+=	--with-as=${BINUTILS_PREFIX}/${MACHINE_GNU_PLATFORM}/bin/as
 CONFIGURE_ARGS+=	--enable-shared
 .else
 CONFIGURE_ARGS+=	--disable-shared
+.endif
+
+# gcc3 sub-packages must be built with gcc3.
+.if defined(PKGNAME) && empty(PKGNAME:Mgcc3-c-[0-9]*)
+ONLY_FOR_COMPILER+=	gcc
+PKGSRC_COMPILER:=	gcc ${PKGSRC_COMPILER}
+GCC_REQD+=		${GCC_VERSION}
 .endif
 
 .include "../../mk/compiler.mk"
