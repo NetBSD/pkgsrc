@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:40:03 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/04/25 18:29:22 jmmv Exp $
 #
 
 DISTNAME=	linunace22
@@ -6,10 +6,10 @@ PKGNAME=	unace22-2.20
 WRKSRC=		${WRKDIR}
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.servidas.net/winace/ \
-	http://www.maxeline.com/winace/ \
-	http://www.winace.mewa.net/mirror/ \
-	http://hem.passagen.se/vanlid/winace/ \
-	http://ace.imptech.net/
+		http://www.maxeline.com/winace/ \
+		http://www.winace.mewa.net/mirror/ \
+		http://hem.passagen.se/vanlid/winace/ \
+		http://ace.imptech.net/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	dillo@giga.or.at
