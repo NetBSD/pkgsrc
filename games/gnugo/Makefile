@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/03/20 13:06:59 schwarz Exp $
+# $NetBSD: Makefile,v 1.18 2005/03/21 14:34:34 agc Exp $
 
 DISTNAME=	gnugo-3.6
 CATEGORIES=	games
@@ -16,5 +16,4 @@ INFO_FILES=	gnugo.info
 
 TEST_TARGET=	check
 
-.include "../../devel/glib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
