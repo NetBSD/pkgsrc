@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/06/19 22:45:59 pooka Exp $
+# $NetBSD: Makefile,v 1.2 2000/06/20 21:33:50 pooka Exp $
 #
 
 DISTNAME=	libsidplay-1_36_38
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pooka@netbsd.org
 HOMEPAGE=	http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/
+
+CONFLICTS=	sidplay-1.36.*
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
