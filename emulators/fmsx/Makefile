@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/20 12:14:40 agc Exp $
+# $NetBSD: Makefile,v 1.11 2004/11/27 00:33:32 martin Exp $
 
 DISTNAME=	fMSX24.tar
 PKGNAME=	fmsx-2.4
@@ -6,7 +6,7 @@ CATEGORIES=	emulators x11
 MASTER_SITES=	http://www.komkon.org/fms/fMSX/
 EXTRACT_SUFX=	.Z
 
-MAINTAINER=	martin@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.komkon.org/fms/fMSX/
 COMMENT=	MSX (Z80-based computer) emulator
 
