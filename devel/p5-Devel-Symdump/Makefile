@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2003/07/21 16:43:37 martti Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/09 11:27:15 grant Exp $
 #
 
-DISTNAME=	Devel-Symdump-2.01
+DISTNAME=	Devel-Symdump-2.03
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5dsd
 CATEGORIES=	devel perl5
