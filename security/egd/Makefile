@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/09/27 23:18:38 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/28 00:07:56 seb Exp $
 #
 
 DISTNAME=	egd-0.8
@@ -12,10 +12,8 @@ COMMENT=	EGD: Entropy Gathering Daemon
 
 DEPENDS+=	p5-SHA-[0-9]*:../../security/p5-SHA
 
-USE_PERL5=	YES
+USE_BUILDLINK2=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/egd/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
