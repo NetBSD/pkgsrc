@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2000/11/27 20:16:56 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.11 2000/11/29 04:02:01 mycroft Exp $
 bin/editcap
 bin/ethereal
 bin/tethereal
@@ -6,6 +6,9 @@ etc/manuf
 lib/ethereal/plugins/${ETHEREAL_VERSION}/gryphon.la
 lib/ethereal/plugins/${ETHEREAL_VERSION}/gryphon.a
 lib/ethereal/plugins/${ETHEREAL_VERSION}/gryphon.so
+lib/ethereal/plugins/${ETHEREAL_VERSION}/mgcp.la
+lib/ethereal/plugins/${ETHEREAL_VERSION}/mgcp.a
+lib/ethereal/plugins/${ETHEREAL_VERSION}/mgcp.so
 man/man1/editcap.1
 man/man1/ethereal.1
 man/man1/tethereal.1
