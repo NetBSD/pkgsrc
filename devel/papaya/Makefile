@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2004/04/22 05:38:32 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2005/01/01 03:18:40 minskim Exp $
 #
 
 DISTNAME=	papaya-0.1.7
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.asahi-net.or.jp/~em7t-hmd/papaya/		\
 		${MASTER_SITE_SOURCEFORGE:=papaya-utils/}
@@ -19,6 +20,8 @@ NO_BUILDLINK=	YES
 USE_LANGUAGES=	# empty
 GNU_CONFIGURE=	YES
 INFO_FILES=	papaya.info
+
+CONFIGURE_ENV+=	perl_command=${PERL5:Q}
 
 pre-configure:
 	cd ${WRKSRC}/src &&						\
