@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/20 12:10:29 agc Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/11 07:41:05 snj Exp $
 # FreeBSD Id: Makefile,v 1.2 1999/01/17 10:56:40 vanilla Exp $
 
 DISTNAME=	jcode.pl-2.13
@@ -14,7 +14,7 @@ HOMEPAGE=	# not available
 COMMENT=	Perl library for Japanese character code conversion
 
 WRKSRC=			${WRKDIR}
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 
 NO_BUILD=		# defined
 NO_CONFIGURE=		# defined
