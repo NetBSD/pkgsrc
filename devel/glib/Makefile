@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/08/19 09:29:25 agc Exp $
+# $NetBSD: Makefile,v 1.2 1998/08/19 09:41:38 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -11,6 +11,7 @@ MASTER_SITES=	ftp://ftp.gimp.org/pub/gtk/v1.1/ \
 MAINTAINER=	packages@netbsd.org
 
 GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
 CONFIGURE_ENV+=		LIBTOOL="${LOCALBASE}/bin/libtool --install-la"
