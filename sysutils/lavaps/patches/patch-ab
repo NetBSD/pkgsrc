@@ -1,14 +1,29 @@
-$NetBSD: patch-ab,v 1.1 2000/03/13 14:14:47 agc Exp $
-
-Manage tcl and tk on Solaris in a sane manner
-
---- configure	2000/03/13 14:04:35	1.1
-+++ configure	2000/03/13 14:06:13
+$NetBSD: patch-ab,v 1.2 2000/08/30 20:07:47 jwise Exp $
+--- configure.orig	Sat Feb 12 00:12:48 2000
++++ configure	Wed Aug 30 15:50:44 2000
+@@ -2383,7 +2383,7 @@
+   withval="$with_tcl_ver"
+   TCL_VERS=$withval
+ else
+-  TCL_VERS=8.0.4
++  TCL_VERS=8.3.2
+ fi
+ 
+ TCL_DOTTED_HI_VERS=`echo $TCL_VERS | sed "s/\([^\.]*\)\.\([^\.]*\).*/\1.\2/"`
+@@ -2401,7 +2401,7 @@
+   withval="$with_tk_ver"
+   TK_VERS=$withval
+ else
+-  TK_VERS=8.0.4
++  TK_VERS=8.3.2
+ fi
+ 
+ TK_DOTTED_HI_VERS=`echo $TK_VERS | sed "s/\([^\.]*\)\.\([^\.]*\).*/\1.\2/"`
 @@ -2473,6 +2473,8 @@
  	if test `uname -r | cut -c 3` -lt 6 ; then
              { echo "configure: error: Sorry - only know how to build for Solaris 2.6 or later..." 1>&2; exit 1; }
  	fi	
-+	TCLTK_INCLUDES="-I${ac_default_prefix}/include/tk$TK_DOTTED_HI_VERS -I${ac_default_prefix}/include/tcl$TCL_DOTTED_HI_VERS"
++	TCLTK_INCLUDES="-I${ac_default_prefix}/include -I${ac_default_prefix}/include"
 +	TCLTK_LIBS="-ltcl$TCL_NODOT_HI_VERS -ltk$TK_NODOT_HI_VERS"
  	PLATFORM_INCLUDES="-DUSE_PROCESS_SCAN_SOLARIS"
  	PLATFORM_LIBS=""
