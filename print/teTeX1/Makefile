@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/24 12:58:35 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/26 19:54:27 wiz Exp $
 #
 
 DISTNAME=	teTeX-1.0.7
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.tug.org/tetex/
 COMMENT=	Thomas Esser's TeX distribution for UNIX compatible systems
 
 DEPENDS+=	teTeX-bin-1.0.[7-9]*:../teTeX1-bin
-DEPENDS+=	teTeX-sharesrc-1.0.[2-9]*:../teTeX1-sharesrc
+DEPENDS+=	teTeX-sharesrc-1.0.[1-9]*:../teTeX1-sharesrc
 DEPENDS+=	texi2html>=1.52:../../textproc/texi2html
 
 USE_BUILDLINK2=	yes
