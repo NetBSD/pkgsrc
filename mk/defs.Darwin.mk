@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.11 2001/11/21 13:44:44 agc Exp $
+# $NetBSD: defs.Darwin.mk,v 1.12 2001/11/21 13:54:14 agc Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -53,6 +53,8 @@ XARGS?=		/usr/bin/xargs
 
 DEF_UMASK?=	0022
 GROUPADD?=	${FALSE}			# XXX - Fix me!
+MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
+MOTIF12_TYPE_DEFAULT?=	lesstif12	# default 1.2 compatible libs type
 NOLOGIN?=	${FALSE}
 USERADD?=	${FALSE}			# XXX - Fix me!
 
