@@ -1,4 +1,4 @@
-# $NetBSD: kde3.mk,v 1.1 2004/04/20 12:08:19 markd Exp $
+# $NetBSD: kde3.mk,v 1.2 2004/07/05 12:26:01 markd Exp $
 #
 # This Makefile fragment is included by packages that use the KDE3
 # configure-and-build process.
@@ -32,8 +32,7 @@
 # guesses wrong on odd setups, and since we already pass all of the required
 # flags through USER_LDFLAGS.
 #
-# The qt3-tools and qt3-libs buildlink2.mk files are also pulled in as all
-# KDE3 pkgs need them.
+# The qt3-tools buildlink3.mk file is also pulled in as all KDE3 pkgs need it.
 
 .if !defined(KDE3_MK)
 KDE3_MK=	# defined
