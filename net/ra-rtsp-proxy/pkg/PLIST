@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2001/01/26 05:21:46 hubertf Exp $
-etc/rc.d/rtspd
+@comment $NetBSD: PLIST,v 1.5 2001/02/04 16:58:57 tron Exp $
+etc/rc.d/rtspd.sh
 man/man8/rtspd.8
 sbin/rtspd
 share/doc/ra-rtsp-proxy/README
