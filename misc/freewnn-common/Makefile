@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/17 18:09:03 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/03/16 18:32:47 wiz Exp $
 #
 
 DISTNAME=	FreeWnn-1.10
@@ -28,10 +28,7 @@ SEDSCRIPT+=	-e 's|([CK]*WNNJLIBSRC)/\(lib[ck]*wnn.a\)|{PREFIX}/lib/\1|'
 SEDSCRIPT+=	-e 's|\([JCKT]\)\(WNNDICDIR = \).*|\1\2${DICT_DIR}/wnn/$$(\1WNNLANG)|'
 INSTALL_FILE=	${WRKDIR}/INSTALL
 INSTALL_SRC=	${FILESDIR}/INSTALL
-PLIST_TMP=	${PKGDIR}/PLIST
-PLIST_SRC=	${WRKDIR}/PLIST
 PLIST_SUBST=	DICT_DIR=${DICT_DIR} PREFIX=${PREFIX} WNN_LANG=${WNN_LANG}
-STARTUP_SCRIPT_SRC=${WRKDIR}/STARTUP
 .else
 MAKE_ENV+=	"WNN_TARGET=LIBRARY"
 .endif
@@ -75,14 +72,8 @@ post-patch:
 post-build:
 	@${SED} -e 's|$${WNNOWNER}|${WNNOWNER}|g'	\
 		${INSTALL_SRC} > ${INSTALL_FILE}
-	@${ECHO} '#!/bin/sh' > ${STARTUP_SCRIPT_SRC}
-	@${ECHO} 'freewnn=${JSERVER}' >> ${STARTUP_SCRIPT_SRC}
-	@${ECHO} 'if [ -f $$freewnn ]; then' >> ${STARTUP_SCRIPT_SRC}
-	@${ECHO} "    echo -n ' ${SCTITLE}'" >> ${STARTUP_SCRIPT_SRC}
-	@${ECHO} '     $$freewnn' >> ${STARTUP_SCRIPT_SRC}
-	@${ECHO} "fi" >> ${STARTUP_SCRIPT_SRC}
-	@${CP} ${PLIST_TMP} ${PLIST_SRC}
-	@${ECHO} ${STARTUP_SCRIPT} >> ${PLIST_SRC}
+	@${SED} -e 's|@PREFIX@|${PREFIX}|g' ${FILESDIR}/ja-freewnn \
+		> ${WRKDIR}/ja-freewnn
 
 pre-install:
 	@${SETENV} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
@@ -90,7 +81,7 @@ pre-install:
 post-install:
 	@${LN} -s ${DICT_DIR}/wnn/${WNN_LANG} \
 		${PREFIX}/share/wnn/${WNN_LANG}/dic
-	@${INSTALL_SCRIPT} ${STARTUP_SCRIPT_SRC} ${PREFIX}/${STARTUP_SCRIPT}
+	@${INSTALL_SCRIPT} ${WRKDIR}/ja-freewnn ${PREFIX}/etc/rc.d/ja-freewnn
 .endif
 
 .include "../../mk/bsd.pkg.mk"

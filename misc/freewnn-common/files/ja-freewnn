@@ -1,0 +1,20 @@
+#!/bin/sh
+#
+# $NetBSD: ja-freewnn,v 1.1 2001/03/16 18:32:47 wiz Exp $
+#
+# PROVIDE: freewnn
+# REQUIRE: DAEMON
+
+. /etc/rc.subr
+
+name="freewnn"
+command_start="@PREFIX@/sbin/jserver"
+command_stop="@PREFIX@/sbin/wnnkill"
+pidfile=""
+
+cmd=${1:-start}
+
+case ${cmd} in
+start)
+    if [ -x ${command_start} ]; then
+	echo "Start
