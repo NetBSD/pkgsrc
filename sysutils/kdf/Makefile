@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/07/15 20:39:24 agc Exp $
+# $NetBSD: Makefile,v 1.10 2000/07/17 13:58:22 agc Exp $
 #
 
 DISTNAME=	kdf-0.5.1
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=--datadir=${KDEBASEDIR}/share/kde \
 		--with-qt-dir=${QT1DIR}/qt1 \
 		--enable-path-check
 CFLAGS+=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	KDEDIR=${PREFIX} \
+CONFIGURE_ENV=	KDEDIR=${KDEBASEDIR} \
 		QTDIR=${QT1DIR}/qt1 \
 		MOC=${QT1DIR}/qt1/bin/moc \
 		CXXFLAGS="${CFLAGS}" \
