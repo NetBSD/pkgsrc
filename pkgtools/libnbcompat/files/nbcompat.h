@@ -1,4 +1,4 @@
-/*	$NetBSD: nbcompat.h,v 1.15 2003/09/05 18:36:02 jlam Exp $	*/
+/*	$NetBSD: nbcompat.h,v 1.16 2003/09/06 01:35:08 jlam Exp $	*/
 
 /*-
  * Copyright (c) 2003 The NetBSD Foundation, Inc.
@@ -336,12 +336,6 @@ void	 tputs(const char *, int, int (*)(int));
 # include <sha1.h>
 #else
 # include <nbcompat/sha1.h>
-#endif
-
-#if HAVE_SHA2_H
-# include <sha2.h>
-#else
-# include <nbcompat/sha2.h>
 #endif
 
 #if HAVE_NBCOMPAT_VIS
