@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.129 2002/10/01 12:54:01 dillo Exp $
+$NetBSD: CHANGES,v 1.130 2002/10/01 14:44:54 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3059,3 +3059,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated mplayer to 0.90rc8nb1 [dillo 2002-10-01]
 	Updated mplayer-share to 0.90rc8nb1 [dillo 2002-10-01]
 	Updated mencoder to 0.90rc8nb1 [dillo 2002-10-01]
+	Updated ddskk to 20020929 [uebayasi 2002-10-01]
