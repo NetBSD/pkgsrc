@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/12/10 20:48:17 veego Exp $
+$NetBSD: distinfo,v 1.2 2001/12/23 00:03:56 mycroft Exp $
 
 SHA1 (ogle-0.8.2.tar.gz) = 84f3505eaa8f6d002f663bfe036c533a4a83f714
 Size (ogle-0.8.2.tar.gz) = 480190 bytes
+SHA1 (patch-aa) = 8fca6c2af2d4ab0ba39001314d5f496266241e37
