@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2003/01/07 11:43:12 uebayasi Exp $
+# $NetBSD: Makefile,v 1.10 2003/01/25 12:34:41 jlam Exp $
 #
 
 DISTNAME=		guile-gtk-0.19
+PKGREVISION=		1
 CATEGORIES=		devel x11
 MASTER_SITES=		http://www.ping.de/sites/zagadka/guile-gtk/download/ \
 			http://erin.netpedia.net/download/ \
@@ -18,6 +19,15 @@ USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		# defined
+CONFIGURE_ARGS+=	--datadir=${GUILE14_PREFIX}/share
+PLIST_SUBST+=		GUILE14_SUBDIR=${GUILE14_SUBDIR}
+
+pre-build:
+	cd ${WRKSRC}; for file in build-guile-gtk; do			\
+		${SED}	-e "s,^exec guile,exec ${GUILE14},"		\
+			$$file > $$file.new;				\
+		${MV} -f $$file.new $$file;				\
+	done
 
 .include "../../lang/guile14/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
