@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/16 11:28:19 jdolecek Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/16 11:49:15 jdolecek Exp $
 #
 
 DISTNAME=		libapache-mod-auth-mysql_4.3.1
@@ -17,8 +17,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-mysql-includes=${BUILDLINK_PREFIX.mysql-client}/include/mysql	\
 			--with-mysql-libs=${BUILDLINK_PREFIX.mysql-client}/lib/mysql
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.mysql-client}/include/mysql
-LDFLAGS+=		-lmysqlclient -L${BUILDLINK_PREFIX.mysql-client}/lib/mysql		\
-			-Wl,${RPATH_FLAG} -Wl,${BUILDLINK_PREFIX.mysql-client}/lib/mysql
 
 APACHE_MODULE_NAME=	mod_auth_mysql.so
 
