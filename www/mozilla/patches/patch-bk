@@ -1,0 +1,14 @@
+$NetBSD: patch-bk,v 1.1 2002/04/25 15:52:47 taya Exp $
+
+diff -ru ../mozilla-current.orig/mozilla/directory/c-sdk/build.mk ./directory/c-sdk/build.mk
+--- ../mozilla-current.orig/mozilla/directory/c-sdk/build.mk	Thu Apr  4 20:00:46 2002
++++ ./directory/c-sdk/build.mk	Sun Apr  7 11:21:34 2002
+@@ -396,7 +396,7 @@
+ SO_FILES_TO_REMOVE=so_locations
+ endif
+ 
+-ifneq (,$(filter BeOS Darwin,$(OS_ARCH)))
++ifneq (,$(filter BeOS Darwin NetBSD,$(OS_ARCH)))
+ LINK_DLL	= $(MKSHLIB) $(OBJS)
+ endif
+ 

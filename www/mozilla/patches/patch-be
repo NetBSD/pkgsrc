@@ -1,8 +1,8 @@
-$NetBSD: patch-be,v 1.5 2002/03/13 16:13:49 taya Exp $
+$NetBSD: patch-be,v 1.6 2002/04/25 15:52:46 taya Exp $
 
-diff -ru ../Orig/mozilla/nsprpub/pr/src/io/prsocket.c ./nsprpub/pr/src/io/prsocket.c
---- ../Orig/mozilla/nsprpub/pr/src/io/prsocket.c	Tue Feb 19 10:09:46 2002
-+++ ./nsprpub/pr/src/io/prsocket.c	Sun Mar  3 12:09:22 2002
+diff -ru ../mozilla-current.orig/mozilla/nsprpub/pr/src/io/prsocket.c ./nsprpub/pr/src/io/prsocket.c
+--- ../mozilla-current.orig/mozilla/nsprpub/pr/src/io/prsocket.c	Sun Mar 17 20:00:21 2002
++++ ./nsprpub/pr/src/io/prsocket.c	Sun Apr  7 01:18:55 2002
 @@ -1299,6 +1299,15 @@
  	if (osfd == -1) {
  		return 0;

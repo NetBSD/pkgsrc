@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2002/03/24 15:05:16 taya Exp $
+# $NetBSD: Makefile,v 1.83 2002/04/25 15:52:44 taya Exp $
 
-MOZ_VER=	0.9.9
-DISTNAME=	mozilla-source-${MOZ_VER}
+MOZ_VER=	1.0rc1
+DISTNAME=	mozilla-source-1.0.rc1
 PKGNAME=	mozilla-${MOZ_VER}
 WRKSRC=		${WRKDIR}/mozilla
 CATEGORIES=	www
@@ -15,6 +15,7 @@ COMMENT=	Open-source version of the Netscape browser
 
 BUILD_DEPENDS+=	perl>=5.6:../../lang/perl5
 BUILD_DEPENDS+=	zip>=2.3:../../archivers/zip
+BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
 
 USE_GMAKE=	yes
 USE_X11BASE=	yes
@@ -24,7 +25,9 @@ CONFIGURE_ARGS=	--disable-tests \
 		--with-system-jpeg=${BUILDLINK_DIR} \
 		--with-system-png=${BUILDLINK_DIR} \
 		--enable-mathml \
-		--enable-crypto
+		--enable-crypto \
+		--enable-svg
+
 SHAREMODE?=	644
 ALL_TARGET=
 
@@ -33,6 +36,7 @@ ALL_TARGET=
 .include	"../../net/ORBit/buildlink.mk"
 .include	"../../graphics/jpeg/buildlink.mk"
 .include	"../../graphics/png/buildlink.mk"
+.include	"../../graphics/freetype2/buildlink.mk"
 
 ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-i386 NetBSD-1.4Z[A-Z]-i386 \
 			NetBSD-1.5_ALPHA-i386 NetBSD-1.5_BETA-* \
@@ -41,6 +45,8 @@ ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-i386 NetBSD-1.4Z[A-Z]-i386 \
 MOZ_LIBDIR=	${PREFIX}/lib/mozilla
 MAKE_ENV+=	LIBRUNPATH=${MOZ_LIBDIR}
 CONFIGURE_ENV+=	LIBRUNPATH=${MOZ_LIBDIR}
+MAKE_ENV+=	MOZ_INTERNAL_LIBART_LGPL=1
+CONFIGURE_ENV+=	MOZ_INTERNAL_LIBART_LGPL=1
 LDFLAGS+=	-Wl,-R${MOZ_LIBDIR}
 
 PLIST_SRC=      ${PKGDIR}/PLIST-${OBJECT_FMT}
@@ -76,6 +82,9 @@ post-extract:
 .for F in ${XPTCFILES}
 	${CP} ${FILESDIR}/${F} ${WRKSRC}/xpcom/reflect/xptcall/src/md/unix/${F}
 .endfor
+
+pre-configure:
+	(cd ${WRKSRC} && autoconf)
 
 post-build:
 	${ECHO} skin,install,select,classic/1.0 >> ${WRKSRC}/dist/bin/chrome/installed-chrome.txt
