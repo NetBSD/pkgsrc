@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2000/04/12 06:38:23 rh Exp $
+# $NetBSD: Makefile,v 1.5 2000/05/26 05:55:11 rh Exp $
 #
 
 DISTNAME=	plsrc13
-PKGNAME=	ploticus-1.36
+PKGNAME=	ploticus-1.37
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.sgpr.net/download/ \
 		http://gd.tuwien.ac.at/visual/ploticus/download/
