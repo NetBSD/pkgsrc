@@ -1,8 +1,7 @@
-$NetBSD: patch-ab,v 1.5 1999/11/15 19:16:36 rh Exp $
-
---- Util/Makefile.in.orig	Mon Nov 15 20:12:32 1999
-+++ Util/Makefile.in	Mon Nov 15 20:12:32 1999
-@@ -293,7 +293,6 @@
+$NetBSD: patch-ab,v 1.6 2000/05/07 11:18:20 msaitoh Exp $
+--- Util/Makefile.in.orig	Thu Feb  3 12:44:33 2000
++++ Util/Makefile.in	Mon Feb 21 00:12:18 2000
+@@ -292,7 +292,6 @@
  	@echo "Loading $@ ... "
  	$(MKSHLIBCMD) -o $@ $(LIBRARY_OBJS_PIC) $(LIBC_R_OBJS_PIC) $(NET_R_OBJS_PIC) $(altsysdir)/*.po
  	-rm -f $(SHARED_LIBRARY)
