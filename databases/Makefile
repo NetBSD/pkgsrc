@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2003/12/14 14:07:45 jdolecek Exp $
+# $NetBSD: Makefile,v 1.109 2003/12/20 16:00:55 martti Exp $
 #
 
 COMMENT=	Databases
@@ -33,6 +33,8 @@ SUBDIR+=	metakit-lib
 SUBDIR+=	myodbc
 SUBDIR+=	mysql-client
 SUBDIR+=	mysql-server
+SUBDIR+=	mysql4-client
+SUBDIR+=	mysql4-server
 SUBDIR+=	mytop
 SUBDIR+=	odbc-postgresql
 SUBDIR+=	openldap
