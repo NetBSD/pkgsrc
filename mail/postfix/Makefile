@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.43 2001/08/19 17:59:28 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2001/11/12 05:07:19 itojun Exp $
 
 DISTNAME=	postfix-20010228-pl04
-PKGNAME=	postfix-20010228pl4
+PKGNAME=	postfix-20010228pl4nb1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://postfix.cloud9.net/official/
 
-PATCHFILES=	postfix-20010228pl04-v6-20010809a.diff.gz \
-		postfix-20010228release-ercpt.diff
-PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/ \
-		ftp://ftp.gw.com/pub/people/kim/patches/
+PATCHFILES=	postfix-20010228release-ercpt.diff
+PATCH_SITES=	ftp://ftp.gw.com/pub/people/kim/patches/
 PATCH_DIST_STRIP+=	-p1
 
 MAINTAINER=	packages@netbsd.org
@@ -20,8 +18,6 @@ DIST_SUBDIR=	postfix
 POSTFIX_SPOOL=	/var/spool/postfix
 
 .include "../../mk/bsd.prefs.mk"
-# automagically determines IPv6 support
-BUILD_DEFS+=	USE_INET6
 
 .if defined(POSTFIX_PCRE) && ${POSTFIX_PCRE} == YES
 DEPENDS+=	pcre>=2.08:../../devel/pcre
