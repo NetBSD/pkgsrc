@@ -1,25 +1,29 @@
-# $NetBSD: Makefile,v 1.11 2000/03/28 00:12:30 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.12 2000/05/05 13:54:10 wulf Exp $
 
-DISTNAME=	kdevelop-1.0
+DISTNAME=	kdevelop-1.2
 CATEGORIES=	devel kde
 MASTER_SITES=	ftp://ftp.e-technik.fh-muenchen.de/pub/unix/ide/KDevelop/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	wulf@netbsd.org
 HOMEPAGE=       http://www.kdevelop.org/
 
-BUILD_DEPENDS+=	msgfmt:../../devel/gettext
-DEPENDS+=	a2ps-*:../../print/a2ps
-DEPENDS+=	gdbm-1.*:../../databases/gdbm
-DEPENDS+=	glimpse-*:../../textproc/glimpse
-DEPENDS+=	kdegraphics-1.*:../../graphics/kdegraphics
-DEPENDS+=	libungif-*:../../graphics/libungif
+BUILD_DEPENDS+= ${LOCALBASE}/bin/msgfmt:../../devel/gettext
+DEPENDS+=       autoconf-*:../../devel/autoconf
+DEPENDS+=       automake-*:../../devel/automake
+DEPENDS+=       a2ps-*:../../print/a2ps
+DEPENDS+=       kdebase-1.*:../../x11/kdebase
+DEPENDS+=       kdoc-2*:../../textproc/kdoc
 
 USE_PERL5=	yes
 USE_X11BASE=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-qt-dir=${X11BASE}/qt1 
+CONFIGURE_ARGS=	--with-extra-includes=${LOCALBASE}/include \
+		--with-extra-libs=${LOCALBASE}/lib \
+		--with-qt-dir=${X11BASE}/qt1
+
 CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	"KDEDIR=${PREFIX} QTDIR=${X11BASE}/qt1"
 
