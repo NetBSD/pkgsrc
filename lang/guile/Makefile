@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/08/20 15:17:04 tsarna Exp $
+# $NetBSD: Makefile,v 1.6 1998/09/14 19:36:10 garbled Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/11/22 16:01:32 jseger Exp
 #
 
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.gnu.org/software/guile/guile.html
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	YES
-CONFIGURE_ENV=	CPPFLAGS="-Uunix -Dunix" \
+CONFIGURE_ENV=	CPPFLAGS="-Dunix" \
 		INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 		INSTALL_DATA="${INSTALL_DATA}" \
 		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
