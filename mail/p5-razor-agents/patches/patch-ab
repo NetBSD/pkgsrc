@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2003/09/27 13:20:25 heinz Exp $
+$NetBSD: patch-ab,v 1.2 2003/12/01 00:24:15 heinz Exp $
 
---- lib/Razor2/Client/Agent.pm.orig	Wed Nov 20 01:26:05 2002
+--- lib/Razor2/Client/Agent.pm.orig	Wed May  7 02:00:38 2003
 +++ lib/Razor2/Client/Agent.pm
-@@ -969,6 +969,7 @@ sub loadservercache {
+@@ -981,6 +981,7 @@ sub loadservercache {
      my @fns;
      if (opendir D,$self->{razorhome}) {
          @fns = map "$self->{razorhome}/$_", grep /^server\.[\S]+\.conf$/, readdir D;
