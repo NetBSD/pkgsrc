@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2002/07/19 12:33:21 agc Exp $
+# $NetBSD: Makefile,v 1.80 2002/08/01 11:59:43 grant Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -9,6 +9,7 @@ SUBDIR+=	LPRng-doc
 SUBDIR+=	a2ps
 SUBDIR+=	acroread
 SUBDIR+=	acroread3
+SUBDIR+=	acroread5
 SUBDIR+=	apsfilter
 SUBDIR+=	auctex
 SUBDIR+=	bg5pdf
