@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4001 2003/12/06 19:31:56 ben Exp $
+$NetBSD: CHANGES,v 1.4002 2003/12/06 19:47:13 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4998,3 +4998,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated automake to 1.7.9 [wiz 2003-12-06]
 	Updated bkedit to 0.6.22 [wiz 2003-12-06]
 	Updated ularn to 6.12.92nb1 [ben 2003-12-06]
+	Added py-Lupy-0.1.5.5.1 [recht 2003-12-06]
