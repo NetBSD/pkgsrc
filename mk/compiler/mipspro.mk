@@ -1,7 +1,7 @@
-# $NetBSD: mipspro.mk,v 1.8 2004/02/05 01:57:38 jlam Exp $
+# $NetBSD: mipspro.mk,v 1.9 2004/02/05 03:35:20 jlam Exp $
 
 .if !defined(COMPILER_MIPSPRO_MK)
-COMPILER_MIPSPRO_MK=	defined
+COMPILER_MIPSPRO_MK=	one
 
 MIPSPROBASE?=	/usr
 
@@ -11,25 +11,35 @@ MIPSPROBASE?=	/usr
 # 
 LANGUAGES.mipspro=	c c++
 _LANGUAGES.mipspro=	# empty
-.for _lang_ in ${USE_LANGUAGES}
+.  for _lang_ in ${USE_LANGUAGES}
 _LANGUAGES.mipspro+=	${LANGUAGES.mipspro:M${_lang_}}
-.endfor
+.  endfor
 
-.if !empty(_LANGUAGES.mipspro)
-PATH:=	${MIPSPROBASE}/bin:${PATH}
-.endif
-.if !empty(_LANGUAGES.mipspro:Mc)
+.  if !empty(_LANGUAGES.mipspro:Mc)
 CC=	${MIPSPROBASE}/bin/cc
 CPP=	${MIPSPROBASE}/bin/cc -E
-.endif
-.if !empty(_LANGUAGES.mipspro:Mc++)
+.  endif
+.  if !empty(_LANGUAGES.mipspro:Mc++)
 CXX=	${MIPSPROBASE}/bin/CC
-.endif
+.  endif
 
-if exists(${CC})
+.  if exists(${CC})
 CC_VERSION!=	${CC} -V 2>&1 | ${GREP} '^cc'
-.else
+.  else
 CC_VERSION=	mipspro
-.endif
-
+.  endif
 .endif	# COMPILER_MIPSPRO_MK
+
+# The following section is included only if we're not being included by
+# bsd.prefs.mk.
+#
+.if empty(BSD_PREFS_MK:M+*)
+.  if empty(COMPILER_MIPSPRO_MK:Mtwo)
+COMPILER_MIPSPRO_MK+=	two
+
+# Prepend the path to the compiler to the PATH.
+.    if !empty(_LANGUAGES.mipspro)
+PATH:=	${MIPSPROBASE}/bin:${PATH}
+.    endif
+.  endif # COMPILER_MIPSPRO_MK
+.endif	 # BSD_PREFS_MK
