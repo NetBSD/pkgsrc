@@ -1,41 +1,63 @@
-$NetBSD: patch-aa,v 1.3 2002/01/22 22:09:42 jlam Exp $
+$NetBSD: patch-aa,v 1.4 2005/02/18 22:12:53 jlam Exp $
 
---- Makefile.in.orig	Sat Jan  5 13:28:01 2002
+--- Makefile.in.orig	2004-12-08 21:36:41.000000000 -0500
 +++ Makefile.in
-@@ -87,7 +87,7 @@
- EXTRA_DIST = UPGRADE.html UPGRADE.txt INSTALL.txt README README.postfix maildroptips.txt maildropldap.config maildropmysql.config
- 
+@@ -230,21 +230,18 @@ HTML2TXT = `which lynx 2>/dev/null && ec
+ SUBDIRS = numlib liblock unicode rfc822 rfc2045 gdbmobj bdbobj maildir maildrop
+ EXTRA_DIST = README.html INSTALL.html UPGRADE.html README.postfix maildroptips.txt automake.fix COPYING.GPL manpage.css
  scriptdir = $(pkgdatadir)/scripts
 -htmldir = $(pkgdatadir)/html
-+htmldir = $(prefix)/share/doc/html/@PACKAGE@
- @INSTALL_USERDB_TRUE@USERDBHTML = @INSTALL_USERDB_TRUE@userdb.html makeuserdb.html userdbpw.html
- @INSTALL_USERDB_FALSE@USERDBHTML = 
- @INSTALL_USERDB_TRUE@USERDBMAN = @INSTALL_USERDB_TRUE@userdb.8 makeuserdb.8 userdbpw.8
-@@ -108,9 +108,8 @@
++htmldir = $(prefix)/share/doc/courier
+ DELIVERQUOTAHTMLSOURCE = maildirquota.html deliverquota.html
+-@INSTALL_DELIVERQUOTA_FALSE@DELIVERQUOTAHTML = 
+-@INSTALL_DELIVERQUOTA_TRUE@DELIVERQUOTAHTML = $(DELIVERQUOTAHTMLSOURCE)
+-@INSTALL_DELIVERQUOTA_FALSE@DELIVERQUOTAMAN = 
+-@INSTALL_DELIVERQUOTA_TRUE@DELIVERQUOTAMAN = maildirquota.7 deliverquota.8
+-MAILDROPHTML = lockmail.html maildirmake.html maildropex.html \
+-	maildir.html \
++DELIVERQUOTAHTML = 
++#DELIVERQUOTAHTML = $(DELIVERQUOTAHTMLSOURCE)
++DELIVERQUOTAMAN = 
++#DELIVERQUOTAMAN = maildirquota.7 deliverquota.8
++MAILDROPHTML = lockmail.html maildropex.html \
+ 	maildropfilter.html maildropgdbm.html maildrop.html mailbot.html \
  	makemime.html reformail.html reformime.html
  
- 
--MAILDROPMAN = dotlock.1 maildirmake.1 maildrop.1 mailbot.1 maildropex.5 \
--	maildropfilter.5 maildropgdbm.5 makemime.1 reformail.1 reformime.1 \
+-MAILDROPMAN = lockmail.1 maildirmake.1 maildrop.1 mailbot.1 maildropex.7 \
+-	maildir.5 \
+-	maildropfilter.7 maildropgdbm.7 makemime.1 reformail.1 reformime.1 \
 -	maildirquota.7 deliverquota.8
-+MAILDROPMAN = dotlock.1 maildrop.1 mailbot.1 maildropex.5 \
-+	maildropfilter.5 maildropgdbm.5 makemime.1 reformail.1 reformime.1
- 
++MAILDROPMAN = lockmail.1 maildrop.1 mailbot.1 maildropex.7 \
++	maildropfilter.7 maildropgdbm.7 makemime.1 reformail.1 reformime.1
  
  EXTRA_LIBRARIES = librfc822.a librfc2045.a
-@@ -836,14 +835,13 @@
- 	for f in maildrop mailbot reformail dotlock ; do \
+ @DEVEL_TRUE@DEVEL_MAN = rfc822.3 rfc2045.3
+@@ -1007,15 +1004,15 @@ uninstall-man: uninstall-man1 uninstall-
+ #  where deliverquota will be installed.
+ #  Create a soft link from bindir/deliverquota to libdir/bin/deliverquota
+ 
+-@INSTALL_DELIVERQUOTA_TRUE@install-deliverquota:
+-@INSTALL_DELIVERQUOTA_TRUE@	$(mkinstalldirs) $(DESTDIR)$(bindir)
+-@INSTALL_DELIVERQUOTA_TRUE@	$(INSTALL_PROGRAM) maildir/deliverquota $(DESTDIR)$(bindir)/deliverquota
+-@INSTALL_DELIVERQUOTA_TRUE@	cd $(DESTDIR)$(bindir); rm -f maildrop.deliverquota
++#install-deliverquota:
++#	$(mkinstalldirs) $(DESTDIR)$(bindir)
++#	$(INSTALL_PROGRAM) maildir/deliverquota $(DESTDIR)$(bindir)/deliverquota
++#	cd $(DESTDIR)$(bindir); rm -f maildrop.deliverquota
+ 
+ @INSTALL_DELIVERQUOTA_TRUE@uninstall-deliverquota:
+ @INSTALL_DELIVERQUOTA_TRUE@	rm -f $(DESTDIR)$(bindir)/deliverquota
+ 
+-@INSTALL_DELIVERQUOTA_FALSE@install-deliverquota:
++install-deliverquota:
+ 
+ @INSTALL_DELIVERQUOTA_FALSE@uninstall-deliverquota:
+ 
+@@ -1051,7 +1048,6 @@ install-maildrop:
  		$(INSTALL_PROGRAM) maildrop/$$f $(DESTDIR)$(bindir)/$$f ; \
  	done
--	$(INSTALL_PROGRAM) maildir/maildirmake $(DESTDIR)$(bindir)/$$f
+ 	$(INSTALL_PROGRAM) liblock/lockmail $(DESTDIR)$(bindir)/lockmail
+-	$(INSTALL_PROGRAM) maildir/maildirmake $(DESTDIR)$(bindir)/maildirmake
  	$(INSTALL_PROGRAM) rfc2045/reformime $(DESTDIR)$(bindir)/reformime
  	$(INSTALL_PROGRAM) rfc2045/makemime $(DESTDIR)$(bindir)/makemime
- 	. maildrop/uidgid ; test -z "$$gid" && exit 0; test -w /etc || exit 0; cd $(DESTDIR)$(bindir) && chgrp $$gid maildrop dotlock
- 	. maildrop/uidgid ; test -z "$$uid" && exit 0; test -w /etc || exit 0; cd $(DESTDIR)$(bindir) && chown $$uid maildrop dotlock && chmod 755 maildrop dotlock
- 
- uninstall-maildrop:
--	for f in maildrop mailbot maildirmake reformail dotlock makemime reformime ; do \
-+	for f in maildrop mailbot reformail dotlock makemime reformime ; do \
- 		rm -f $(DESTDIR)$(bindir)/$$f ; \
- 	done
- 
+ 	. maildrop/uidgid ; test -z "$$gid" && exit 0; test -w /etc || exit 0; cd $(DESTDIR)$(bindir) && chgrp $$gid maildrop lockmail
