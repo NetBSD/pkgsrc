@@ -1,4 +1,4 @@
-SHA1 (patch-aa) = db6ec387f49feffdc02d6a495c14c8bef4433d16
+$NetBSD: distinfo.i386,v 1.2 2001/05/06 13:14:41 dmcmahill Exp $
 
 SHA1 (citrix/linuxx86.tar.gz) = d30a8b151c7503a61005b00c5d2a0e77301df259
 Size (citrix/linuxx86.tar.gz) = 1507974 bytes
