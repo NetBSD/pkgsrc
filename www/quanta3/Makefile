@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/07/30 13:48:32 markd Exp $
+# $NetBSD: Makefile,v 1.7 2003/08/05 13:40:33 drochner Exp $
 
 DISTNAME=	quanta-3.1.3
+PKGREVISION=	1
 CATEGORIES=	www
 COMMENT= 	HTML editor suitable for experienced web developers
 
