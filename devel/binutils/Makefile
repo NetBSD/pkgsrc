@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/08/12 14:15:38 seb Exp $
+# $NetBSD: Makefile,v 1.17 2003/09/19 13:00:43 wiz Exp $
 #
 
 DISTNAME=	binutils-2.14
@@ -18,6 +18,8 @@ USE_PKGLOCALEDIR=	YES
 TEXINFO_REQD=		4.0
 
 CONFIGURE_ARGS+=	--with-lib-path='/lib:/usr/lib'
+
+CONFLICTS=	avr-binutils<2.13.2.1nb1
 
 PLIST_SRC=	${PKGDIR}/PLIST.common
 PLIST_SRC+=	${WRKDIR}/PLIST_DYNAMIC
