@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:43:28 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 14:53:32 agc Exp $
 
-MD5 (esh-0.8.tar.gz) = b59022b88bae24420156d25869b8be54
+SHA1 (esh-0.8.tar.gz) = 3a4e5237c476d90f68e1cc572a2ba8648efb7fbd
+Size (esh-0.8.tar.gz) = 73619 bytes
 SHA1 (patch-aa) = ea1926ff4f4d1483b9604fa77cf3547a9d7fb91e

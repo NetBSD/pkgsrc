@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:43:32 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 14:53:32 agc Exp $
 
-MD5 (scsh-0.5.2.tar.gz) = 6661518731117eb21eda644aa5babe46
+SHA1 (scsh-0.5.2.tar.gz) = 64fa18f41cac69f72fd605aef4a8407385c71772
+Size (scsh-0.5.2.tar.gz) = 1758064 bytes
 SHA1 (patch-aa) = 13858d98dd707609ba8affbf54183f3604f1944f
 SHA1 (patch-ab) = da18166513216043ccd0d0c0c9ecec06d71ae8a9
 SHA1 (patch-ac) = 79796d35cd5dcfd5df98b085cf54b0aed09144c9
