@@ -1,0 +1,43 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/01/28 11:27:06 agc Exp $
+
+--- Makefile	2002/01/28 11:06:09	1.1
++++ Makefile	2002/01/28 11:10:15
+@@ -504,16 +504,16 @@
+ # ${LIBDIR}		where *.a files are installed
+ #
+ #BINDIR= /usr/local/bin
+-BINDIR= /usr/bin
++BINDIR= ${PREFIX}/bin
+ 
+ #SHAREDIR= /usr/local/lib
+-SHAREDIR= /usr/share
++SHAREDIR= ${PREFIX}/share
+ 
+ #INCDIR= /usr/local/include
+-INCDIR= /usr/include
++INCDIR= ${PREFIX}/include
+ 
+ #LIBDIR= /usr/local/lib
+-LIBDIR= /usr/lib
++LIBDIR= ${PREFIX}/lib
+ 
+ # By default, these values are based on the above 4 values
+ # --------------------------------------------------------
+@@ -540,7 +540,7 @@
+ #MANDIR=
+ #MANDIR= /usr/local/man/man1
+ #MANDIR= /usr/man/man1
+-MANDIR= /usr/share/man/man1
++MANDIR= ${PREFIX}/man/man1
+ #MANDIR= /usr/man/u_man/man1
+ #MANDIR= /usr/contrib/man/man1
+ 
+@@ -637,7 +637,7 @@
+ #USE_READLINE= -DUSE_READLINE
+ #
+ #READLINE_LIB=
+-READLINE_LIB= -lreadline -lhistory -lncurses
++READLINE_LIB= -L${PREFIX}/lib -Wl,-R${PREFIX}/lib -lreadline -lhistory -lncurses
+ #READLINE_LIB= -L/usr/gnu/lib -lreadline -lhistory -lncurses
+ #READLINE_LIB= -L/usr/local/lib -lreadline -lhistory -lncurses
+ #

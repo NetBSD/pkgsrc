@@ -1,0 +1,14 @@
+Calc is an arbitrary precision C-like programmable calculator with many
+builtin functions.  The basic data types are integers, fractions,
+complex numbers, strings, matrices, associations, lists, files, and
+user-definable "objects".  You can use it interactively to evaluate
+expressions line by line, or else you can write complicated programs in
+its C-like language.  There are many features which I will not bother
+to describe here.
+
+Calc is written entirely in C, and runs on many different platforms and
+variants of UNIX.
+
+The low-level arbitrary precision math routines have been organized into
+three libraries for handling integers, fractions, and complex numbers.
+You can call the routines in these libraries from your own C programs.
