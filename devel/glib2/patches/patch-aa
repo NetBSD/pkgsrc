@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.15 2004/07/09 15:30:16 jmmv Exp $
+$NetBSD: patch-aa,v 1.16 2004/11/12 06:42:19 jlam Exp $
 
 http://bugzilla.gnome.org/show_bug.cgi?id=140329
 http://bugzilla.gnome.org/show_bug.cgi?id=141256
 
---- configure.orig	2004-04-30 15:05:01.000000000 +0200
+--- configure.orig	2004-10-08 13:59:07.000000000 -0400
 +++ configure
 @@ -465,7 +465,7 @@ ac_includes_default="\
  # include <unistd.h>
@@ -14,7 +14,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141256
  ac_subst_files=''
  
  # Initialize some variables set by options.
-@@ -30442,6 +30442,7 @@ else
+@@ -30430,6 +30430,7 @@ else
  fi
  G_MODULE_NEED_USCORE=0
  G_MODULE_BROKEN_RTLD_GLOBAL=0
@@ -22,7 +22,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141256
  G_MODULE_HAVE_DLERROR=0
  if test -z "$G_MODULE_IMPL"; then
    case "$host" in
-@@ -31091,6 +31092,72 @@ echo "${ECHO_T}$glib_cv_rtldglobal_broke
+@@ -31083,6 +31084,72 @@ echo "${ECHO_T}$glib_cv_rtldglobal_broke
  	else
    		G_MODULE_BROKEN_RTLD_GLOBAL=0
  	fi
@@ -95,16 +95,58 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141256
  	echo "$as_me:$LINENO: checking for preceeding underscore in symbols" >&5
  echo $ECHO_N "checking for preceeding underscore in symbols... $ECHO_C" >&6
  if test "${glib_cv_uscore+set}" = set; then
-@@ -31720,7 +31787,7 @@ if test x"$have_threads" != xno; then
+@@ -31712,9 +31779,33 @@ if test x"$have_threads" != xno; then
           # skip cygwin -pthread or -pthreads test
           ;;
        *)
 -        for flag in pthread pthreads; do
-+        for flag in pthreads pthread; do
++         case $LDFLAGS in
++           -lpthread|*" -lpthread"|*" -lpthread "*)
++              G_THREAD_LIBS=-lpthread
++         esac
++         case $LIBS in
++           -lpthread|*" -lpthread"|*" -lpthread "*)
++              G_THREAD_LIBS=-lpthread
++         esac
++         case $CFLAGS in
++           -pthread|*" -pthread"|*" -pthread "*)
++              G_THREAD_CFLAGS=-pthread
++              G_THREAD_LIBS=-pthread
++              ;;
++           -pthreads|*" -pthreads"|*" -pthreads "*)
++              G_THREAD_CFLAGS=-pthreads
++              G_THREAD_LIBS=-pthreads
++              ;;
++         esac
++         if test x"$G_THREAD_CFLAGS" = x; then
++
++        for flag in pthreads pthread ""; do
++          case $flag in
++            "") flag= ;;
++            *) flag="-$flag" ;;
++          esac
            glib_save_CFLAGS="$CFLAGS"
-           CFLAGS="$CFLAGS -$flag"
+-          CFLAGS="$CFLAGS -$flag"
++          CFLAGS="$CFLAGS $flag"
            if test "$cross_compiling" = yes; then
-@@ -31877,6 +31944,15 @@ fi
+   cat >conftest.$ac_ext <<_ACEOF
+ 
+@@ -31803,10 +31894,12 @@ rm -f core *.core gmon.out bb.out confte
+ fi
+           CFLAGS="$glib_save_CFLAGS"
+           if test $glib_flag_works = yes ; then
+-             G_THREAD_CFLAGS=-$flag
+-	     G_THREAD_LIBS=-$flag
++             G_THREAD_CFLAGS=$flag
++	     G_THREAD_LIBS=$flag
+           fi
+         done
++
++         fi
+          ;;
+     esac
+   fi
+@@ -31869,6 +31962,15 @@ fi
  
    fi
  
@@ -120,16 +162,18 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141256
      # if we are not finding the localtime_r function, then we probably are
      # not using the proper multithread flag
  
-@@ -34189,7 +34265,7 @@ fi
- #  b) libtool doesn't recognize -pthread as a library dependency.
- #
- case $host in
--  *-*-linux*)
-+  *-*-linux* | *-*-netbsd*)
+@@ -34184,6 +34286,10 @@ case $host in
+   *-*-linux*)
      G_THREAD_LIBS_FOR_GTHREAD="`echo $G_THREAD_LIBS | sed s/-pthread/-lpthread/`"
      ;;
++  *-*-netbsd*)
++    # On NetBSD, pkgsrc's libtool does the right thing.
++    G_THREAD_LIBS_FOR_GTHREAD="$G_THREAD_LIBS"
++    ;;
    *)
-@@ -38414,6 +38490,7 @@ s,@G_MODULE_PLUGIN_LIBS@,$G_MODULE_PLUGI
+     G_THREAD_LIBS_FOR_GTHREAD="`echo $G_THREAD_LIBS | sed s/-pthread/-Wc,-pthread/`"
+     ;;
+@@ -38406,6 +38512,7 @@ s,@G_MODULE_PLUGIN_LIBS@,$G_MODULE_PLUGI
  s,@G_MODULE_LDFLAGS@,$G_MODULE_LDFLAGS,;t t
  s,@G_MODULE_HAVE_DLERROR@,$G_MODULE_HAVE_DLERROR,;t t
  s,@G_MODULE_BROKEN_RTLD_GLOBAL@,$G_MODULE_BROKEN_RTLD_GLOBAL,;t t
