@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/11/12 23:36:24 frueauf Exp $
+
 --- doc/index.html.orig	Mon Sep 14 20:18:13 1998
 +++ doc/index.html	Mon Sep 14 20:18:25 1998
 @@ -25,7 +25,7 @@
