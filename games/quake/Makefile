@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/01/24 13:30:56 grant Exp $
+# $NetBSD: Makefile,v 1.30 2004/04/10 04:13:27 snj Exp $
 
 DISTNAME=	q1source
 PKGNAME=	quake-2.30
@@ -17,7 +17,7 @@ DEPENDS+=	quakedata-[0-9]*:../../games/quakedata
 ONLY_FOR_PLATFORM=	*-*-i386
 
 WRKSRC=		${WRKDIR}
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 MAKE_ENV+=	MAINDIR=${WRKSRC}
 
@@ -48,6 +48,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/winquake/release_version/bin/glquake.glx ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/winquake/release_version/bin/quake.x11 ${PREFIX}/bin
 
-.include "../../graphics/MesaLib/buildlink2.mk"
-.include "../../graphics/glu/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
