@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1916 2003/04/12 12:17:48 jmmv Exp $
+$NetBSD: CHANGES,v 1.1917 2003/04/12 13:51:51 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1567,3 +1567,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated emacs to 21.3 [uebayasi 2003-04-12]
 	Updated xosd to 2.2.0nb1 [jmmv 2003-04-12]
 	Added xmms-osd-2.2.0 [jmmv 2003-04-12]
+	Updated mew3 to 3.2 [uebayasi 2003-04-12]
