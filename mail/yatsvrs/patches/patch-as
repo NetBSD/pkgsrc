@@ -1,8 +1,8 @@
-$NetBSD: patch-as,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
+$NetBSD: patch-as,v 1.2 2003/10/05 04:25:15 taca Exp $
 
---- yatd/dfree.c.orig	Mon Jul  9 11:13:56 2001
+--- yatd/dfree.c.orig	2001-07-09 12:32:52.000000000 +0900
 +++ yatd/dfree.c
-@@ -72,12 +72,6 @@
+@@ -72,12 +72,6 @@ quota_get_inode_current __P(( struct dqb
  
  #define DEBUG_LOCAL
  
@@ -15,7 +15,7 @@ $NetBSD: patch-as,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
  int DFreeCheck(pPath, pSizFree, pNodFree)
       char   * pPath;    /* ユーザーのホームディレクトリの位置 */
       OFF_T  * pSizFree; /* 空きブロック数 */
-@@ -99,7 +93,7 @@
+@@ -99,7 +93,7 @@ int DFreeCheck(pPath, pSizFree, pNodFree
    nodLimit = *pNodFree; /* リミットのノード数を指定する */
  
  #ifdef DEBUG_LOCAL
@@ -24,7 +24,7 @@ $NetBSD: patch-as,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
  	   sizLimit, nodLimit, sizeof (OFF_T));
  #endif /* DEBUG_LOCAL */
  
-@@ -123,22 +117,21 @@
+@@ -123,22 +117,21 @@ int DFreeCheck(pPath, pSizFree, pNodFree
  # ifdef BSD44 
    LogDEBUG("statfs() returns:");
    LogDEBUG("  type: %d", statfsBuf.f_type);
@@ -52,11 +52,11 @@ $NetBSD: patch-as,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
 +  LogDEBUG("  bavail: %ld", statfsBuf.f_bavail);
 +  LogDEBUG("  files: %ld", statfsBuf.f_files);
 +  LogDEBUG("  ffree: %ld", statfsBuf.f_ffree);
-+  LogDEBUG("  fsid: %" LONGLONG_OPTC "u", statfsBuf.f_fsid);
++  LogDEBUG("  fsid: %d-%d", statfsBuf.f_fsid.val[0], statfsBuf.f_fsid.val[1]);
  #ifdef STRUCT_STATFS_HAVE_F_FSTYPENAME
    LogDEBUG("  fstypename: %.256s", statfsBuf.f_fstypename);
  #endif
-@@ -311,7 +304,7 @@
+@@ -311,7 +304,7 @@ int FuncDFree()
    nodFree = SysData.nodLimitFree;
  
  #ifdef DEBUG_LOCAL
@@ -65,7 +65,7 @@ $NetBSD: patch-as,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
  	     sizFree, nodFree);
  #endif
      
-@@ -325,7 +318,7 @@
+@@ -325,7 +318,7 @@ int FuncDFree()
      if (DFreeCheck(SysData.szUserFldrDir, &sizFree, &nodFree)){
        return FAILURE;
      }
@@ -74,7 +74,16 @@ $NetBSD: patch-as,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
  #endif /* DONT_CHECKDFREE */
    return SUCCESS;
  }
-@@ -449,12 +442,12 @@
+@@ -427,7 +420,7 @@ static inline quota_size_t quota_get_ino
+ 
+ #ifdef STRUCT_DQBLK_CURRENT_FILES
+   retval = (quota_size_t)quota_block->dqb_curfiles;
+-#endif STRUCT_DQBLK_CURRENT_FILES
++#endif /* STRUCT_DQBLK_CURRENT_FILES */
+ 
+   return retval;
+ }
+@@ -449,12 +442,12 @@ static int quotactl_wrapper(pPath,quota_
    switch( status ){
    case SUCCESS:
      LogDEBUG("quotactl() returns:");
