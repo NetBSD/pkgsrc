@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6554 2004/07/14 13:27:15 wiz Exp $
+$NetBSD: CHANGES,v 1.6555 2004/07/14 16:10:02 erh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3389,3 +3389,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added vip-19971113 [agc 2004-07-14]
 	Added wesnoth-0.8 [manu 2004-07-14]
 	Removed jlib [wiz 2004-07-14]
+	Update pkg_tarup to 1.6 [erh 2004-07-14]
