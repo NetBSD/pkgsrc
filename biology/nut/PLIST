@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2003/08/11 07:26:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/08/15 12:06:34 wiz Exp $
 bin/nut
 man/man1/nut.1
 share/nut/FOOD_DES.txt
 share/nut/NUT_DATA.txt
+share/nut/WEIGHT.lib
 share/nut/WEIGHT.txt
-share/nut/sr16.nut
+share/nut/sr17.nut
 @dirrm share/nut
