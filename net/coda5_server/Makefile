@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2001/05/15 08:32:48 phil Exp $
+# $NetBSD: Makefile,v 1.28 2001/05/31 22:58:08 jlam Exp $
 #
 
 DISTNAME=		coda-5.3.13
@@ -10,11 +10,6 @@ MAINTAINER=		phil@cs.wwu.edu
 HOMEPAGE=		http://www.coda.cs.cmu.edu/
 COMMENT=		server programs for a replicated high-performance network file system
 
-DEPENDS+=		lwp>=1.6:../../devel/lwp
-DEPENDS+=		rvm>=1.3:../../devel/rvm
-DEPENDS+=		rpc2>=1.10:../../devel/rpc2
-DEPENDS+=		readline>=4.0:../../devel/readline
-
 # Only enable platforms that can build "lwp".
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-m68k NetBSD-*-sparc
 
@@ -25,7 +20,33 @@ USE_PERL5=		yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 
-CONFIGURE_ENV+=		CFLAGS="${CFLAGS} -I${WRKSRC}/include"
-CONFIGURE_ENV+=		CXXFLAGS="${CXXFLAGS} -I${WRKSRC}/include"
+.include "../../devel/lwp/buildlink.mk"
+.include "../../devel/readline/buildlink.mk"
+.include "../../devel/rpc2/buildlink.mk"
+.include "../../devel/rvm/buildlink.mk"
+
+CFLAGS+=		-I${BUILDLINK_INCDIR}
+CXXFLAGS+=		-I${BUILDLINK_INCDIR}
+LDFLAGS+=		-L${BUILDLINK_LIBDIR}
+
+DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
+INSTALL_FILE=		${WRKDIR}/INSTALL
+
+INSTALL_SUBST=		CAT=${CAT}
+INSTALL_SUBST+=		LN=${LN}
+INSTALL_SUBST+=		RM=${RM}
+INSTALL_SUBST+=		RMDIR=${RMDIR}
+INSTALL_SUBST+=		TRUE=${TRUE}
+
+pre-configure: ${BUILDLINK_TARGETS}
+
+pre-install:
+	${SED} ${INSTALL_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}		\
+		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED} ${INSTALL_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}		\
+		${PKGDIR}/INSTALL > ${INSTALL_FILE}
+
+post-install:
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
